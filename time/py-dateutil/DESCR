@@ -17,3 +17,5 @@ Features
 * Computing of Easter Sunday dates for any given year, using Western, Orthodox
   or Julian algorithms;
 * More than 400 test cases.
+
+This package contains the Python-2.x version of the module.
