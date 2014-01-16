@@ -1,4 +1,4 @@
-# $NetBSD: libgnutls-config.mk,v 1.2 2009/09/01 17:48:14 joerg Exp $
+# $NetBSD: libgnutls-config.mk,v 1.3 2014/01/16 10:14:09 wiz Exp $
 
 # Makefile intended to be included by packages that need "libgnutls-config"
 # during build time.
@@ -7,6 +7,7 @@ USE_TOOLS+=	pkg-config
 
 pre-configure: hack-libgnutls-config
 
+.PHONY: hack-libgnutls-config
 hack-libgnutls-config:
 	${PRINTF} "#! ${SH}\\n\
 	  case \$$1 in\\n\
