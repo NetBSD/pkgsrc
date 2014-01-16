@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2013/12/06 13:23:46 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.63 2014/01/16 10:41:53 wiz Exp $
 
 DISTNAME=	calibre-0.9.7
 PKGREVISION=	15
@@ -18,7 +17,6 @@ DEPENDS+=	xdg-utils>=1.0.2:../../misc/xdg-utils
 DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
 DEPENDS+=	${PYPKGPREFIX}-dns>=1.6.0:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-lxml>=2.2.1:../../textproc/py-lxml
-DEPENDS+=	${PYPKGPREFIX}-dateutil>=1.4.1:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup>=3.0.5:../../www/py-beautifulsoup
 DEPENDS+=	${PYPKGPREFIX}-mechanize>=0.1.11nb1:../../www/py-mechanize
 DEPENDS+=	${PYPKGPREFIX}-cssselect>=0.7.1:../../textproc/py-cssselect
@@ -29,6 +27,8 @@ DEPENDS+=	${PYPKGPREFIX}-cherrypy-[0-9]*:../../www/py-cherrypy
 DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
 DEPENDS+=	${PYPKGPREFIX}-netifaces-[0-9]*:../../net/py-netifaces
+
+PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config pax
@@ -179,6 +179,7 @@ post-install:
 	    ${DESTDIR}${PREFIX}/share/doc/calibre
 
 .include "../../lang/python/application.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/chmlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libusb+=	libusb>=0.1.12
