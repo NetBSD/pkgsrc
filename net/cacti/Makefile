@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2014/01/08 20:51:28 tron Exp $
+# $NetBSD: Makefile,v 1.22 2014/01/16 21:10:00 tron Exp $
 
 DISTNAME=		cacti-0.8.8b
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://www.cacti.net/downloads/
 
@@ -46,19 +47,22 @@ REPLACE_FILES.php=      cli/*.php
 REPLACE_PERL+=         scripts/*.pl
 
 MESSAGE_SUBST+=         CACTIDIR=${CACTIDIR}
-MESSAGE_SUBST+=         CACTI_LOGDIR=${CACTI_LOGDIR}
 MESSAGE_SUBST+=         CACTI_USER=${CACTI_USER}
 MESSAGE_SUBST+=         EGDIR=${EGDIR}
 MESSAGE_SUBST+=         PREFIX=${PREFIX}
 MESSAGE_SUBST+=         PKG_SYSCONFBASE=${PKG_SYSCONFBASE}
 FILES_SUBST+=		CACTIDIR=${CACTIDIR}
+FILES_SUBST+=		CACTI_GROUP=${CACTI_GROUP}
+FILES_SUBST+=		CACTI_USER=${CACTI_USER}
+FILES_SUBST+=		CACTI_LOGDIR=${CACTI_LOGDIR}
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	${WRKDIR}/httpd-cacti.conf install/index.php
 SUBST_FILES.paths+=	include/global.php include/global_settings.php
+SUBST_FILES.paths+=	${WRKDIR}/cacti-poller
 SUBST_VARS.paths=	CACTIDIR PREFIX CACTI_USER CACTI_LOGDIR CACTI_RRADIR
-SUBST_VARS.paths+=	PKG_PHP_MAJOR_VERS
+SUBST_VARS.paths+=	PKG_PHP_MAJOR_VERS SH
 
 SUBST_CLASSES+=		docs
 SUBST_STAGE.docs=	pre-configure
@@ -67,22 +71,33 @@ SUBST_SED.docs=		-e 's,/var/www/html/cacti,${CACTIDIR},g'
 
 OWN_DIRS_PERMS+=	${CACTI_LOGDIR} ${CACTI_USER} ${CACTI_GROUP} 755
 OWN_DIRS_PERMS+=	${CACTI_RRADIR} ${CACTI_USER} ${CACTI_GROUP} 755
-SPECIAL_PERMS+=		share/cacti/log/cacti.log ${CACTI_USER} ${CACTI_GROUP} 755
 
-INSTALLATION_DIRS=      share/examples/cacti
+INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS+=	share/examples/cacti
 INSTALLATION_DIRS+=	share/cacti
+
+PLIST_VARS+=	localmemory
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux" || \
+    ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
+PLIST.localmemory=	yes
+.endif
 
 post-extract:
 	${CP} ${FILESDIR}/httpd-cacti.conf ${WRKDIR}/
+	${CP} ${FILESDIR}/cacti-poller ${WRKDIR}/
 	${CP} ${FILESDIR}/freebsd_memory.pl ${WRKSRC}/scripts/
 	${CP} ${FILESDIR}/netbsd_memory.pl ${WRKSRC}/scripts/
 	${CP} ${FILESDIR}/solaris_memory.pl ${WRKSRC}/scripts/
+	cd ${WRKSRC}/scripts;					\
+	if [ -f ${LOWER_OPSYS}_memory.pl ]; then		\
+	  ${LN} -fs ${LOWER_OPSYS}_memory.pl local_memory.pl;	\
+	fi
 
 do-install:
 	${INSTALL_DATA} ${WRKDIR}/httpd-cacti.conf ${DESTDIR}${EGDIR}/httpd-cacti.conf
 	${FIND} ${WRKSRC} -type f -name '*.orig' -exec ${RM} -f {} \;
 	cd ${WRKSRC} && ${PAX} -wr * ${DESTDIR}${CACTIDIR}
-
+	${INSTALL_SCRIPT} ${WRKDIR}/cacti-poller ${DESTDIR}${PREFIX}/bin
 
 .include "../../databases/rrdtool/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
