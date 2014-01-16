@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.252 2014/01/16 15:55:52 taca Exp $
+$NetBSD: CHANGES-2014,v 1.253 2014/01/16 15:57:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -311,3 +311,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated inputmethod/ibus-chewing to 1.4.5 [obache 2014-01-16]
 	Updated www/drupal6 to 6.30 [taca 2014-01-16]
 	Updated www/drupal7 to 7.26 [taca 2014-01-16]
+	Updated mail/postfix to 2.10.3 [taca 2014-01-16]
