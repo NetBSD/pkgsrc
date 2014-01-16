@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.248 2014/01/16 10:26:30 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.249 2014/01/16 10:47:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -305,5 +305,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/suse131_x11 to 13.1nb3 [obache 2014-01-16]
 	Updated lang/icc11 to 11.1.080nb2 [wiz 2014-01-16]
 	Updated security/clamav to 0.98.1 [adam 2014-01-16]
-	Updated nih/gnutls to 3.2.8.1 [wiz 2014-01-16]
+	Updated security/gnutls to 3.2.8.1 [wiz 2014-01-16]
 	Added time/py-dateutil2 version 2.0 [wiz 2014-01-16]
