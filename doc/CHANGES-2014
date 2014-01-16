@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.254 2014/01/16 18:12:47 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.255 2014/01/16 21:10:22 tron Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -313,3 +313,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/drupal7 to 7.26 [taca 2014-01-16]
 	Updated mail/postfix to 2.10.3 [taca 2014-01-16]
 	Updated sysutils/agedu to 9723 [schmonz 2014-01-16]
+	Updated net/cacti to 0.8.8bnb1 [tron 2014-01-16]
