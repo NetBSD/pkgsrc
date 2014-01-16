@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/10/23 18:16:35 asau Exp $
+# $NetBSD: Makefile,v 1.4 2014/01/16 13:32:10 drochner Exp $
 
 DISTNAME=	crypt-1.17
 PKGNAME=	libtom${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://libtom.org/files/
 EXTRACT_SUFX=	.tar.bz2
