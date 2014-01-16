@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2013/07/25 15:11:59 wen Exp $
+$NetBSD: distinfo,v 1.6 2014/01/16 02:40:15 rodent Exp $
 
-SHA1 (pip-1.4.tar.gz) = 3149dc77c66b77d02497205fca5df56ae9d3e753
-RMD160 (pip-1.4.tar.gz) = 09f74d192e6ba58fc35aff0bbe0983c67e831f16
-Size (pip-1.4.tar.gz) = 443790 bytes
+SHA1 (pip-1.5.tar.gz) = 02d3506e97c88a306d0802a00186c1ecd6c8fc08
+RMD160 (pip-1.5.tar.gz) = 86601d0f22920108f7077422ad23bfc062727510
+Size (pip-1.5.tar.gz) = 898803 bytes
