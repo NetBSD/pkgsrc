@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/02/25 16:11:38 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/16 09:37:01 wiz Exp $
 
 ICC_MAJOR_VERSION=	11.1
 ICC_MINOR_VERSION=	080
@@ -6,7 +6,7 @@ ICC_VERSION=		${ICC_MAJOR_VERSION}.${ICC_MINOR_VERSION}
 CATEGORIES=		lang
 DISTNAME=		l_cproc_p_${ICC_VERSION}
 PKGNAME=		icc11-${ICC_VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 MASTER_SITES=		# empty
 EXTRACT_SUFX=		.tgz
 EXTRACT_ELEMENTS=	${ICC_EXTRACT_RPMS}
@@ -35,10 +35,10 @@ USE_LANGUAGES+=	c
 
 BUILD_DEPENDS+=		rpm2pkg>=2.1:../../pkgtools/rpm2pkg
 
-DEPENDS+=		gcc47>=4.7:../../lang/gcc47
+DEPENDS+=		gcc48>=4.8:../../lang/gcc48
 DEPENDS+=		binutils>=2.17:../../devel/binutils
 
-GCC_PREFIX=		${BUILDLINK_PREFIX.gcc47}
+GCC_PREFIX=		${BUILDLINK_PREFIX.gcc48}
 BINUTILS_PREFIX=	${PREFIX}/${MACHINE_GNU_PLATFORM}
 
 EMUL_PLATFORMS=		linux-i386 linux-x86_64
@@ -107,7 +107,7 @@ do-install:
 	cd ${WRKSRC} && make install-${LOWER_OPSYS}-${ICC_ARCH} \
 		PREFIX=${DESTDIR}${PREFIX} PKGMANDIR=${PKGMANDIR}
 
-.include "../../lang/gcc47/buildlink3.mk"
+.include "../../lang/gcc48/buildlink3.mk"
 .include "../../devel/binutils/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
