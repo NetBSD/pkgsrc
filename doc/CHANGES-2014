@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.242 2014/01/16 02:56:22 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.243 2014/01/16 02:59:39 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -301,3 +301,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated converters/py-simplejson to 3.3.2 [rodent 2014-01-16]
 	Updated devel/py-pip to 1.5 [rodent 2014-01-16]
 	Updated devel/py-requests to 2.2.0 [rodent 2014-01-16]
+	Updated devel/py-virtualenv to 1.11 [rodent 2014-01-16]
