@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.245 2014/01/16 09:37:09 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.246 2014/01/16 09:52:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -304,3 +304,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-virtualenv to 1.11 [rodent 2014-01-16]
 	Updated emulators/suse131_x11 to 13.1nb3 [obache 2014-01-16]
 	Updated lang/icc11 to 11.1.080nb2 [wiz 2014-01-16]
+	Updated security/clamav to 0.98.1 [adam 2014-01-16]
