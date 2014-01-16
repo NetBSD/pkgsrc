@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.251 2014/01/16 11:15:58 obache Exp $
+$NetBSD: CHANGES-2014,v 1.252 2014/01/16 15:55:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -309,3 +309,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Added time/py-dateutil2 version 2.0 [wiz 2014-01-16]
 	Updated inputmethod/ibus to 1.5.5 [obache 2014-01-16]
 	Updated inputmethod/ibus-chewing to 1.4.5 [obache 2014-01-16]
+	Updated www/drupal6 to 6.30 [taca 2014-01-16]
+	Updated www/drupal7 to 7.26 [taca 2014-01-16]
