@@ -1,0 +1,16 @@
+$NetBSD: patch-tests_Makefile.in,v 1.1 2014/01/16 10:14:09 wiz Exp $
+
+Disable dsa test. Hangs on NetBSD-6.99.28/amd64 in gnutls-3.8.2.1.
+Please retest during updates.
+
+--- tests/Makefile.in.orig	2013-12-20 18:30:47.000000000 +0000
++++ tests/Makefile.in
+@@ -2063,7 +2063,7 @@ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ SUBDIRS = . rsa-md5-collision pkcs1-padding pkcs8-decode pkcs12-decode \
+-	userid cert-tests key-id sha2 safe-renegotiation dsa scripts \
++	userid cert-tests key-id sha2 safe-renegotiation scripts \
+ 	ecdsa slow dtls srp $(am__append_1) $(am__append_2)
+ EXTRA_DIST = suppressions.valgrind eagain-common.h
+ AM_CFLAGS = $(WARN_CFLAGS) $(WERROR_CFLAGS)
