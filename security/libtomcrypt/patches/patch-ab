@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2011/03/10 10:02:34 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2014/01/16 13:32:10 drochner Exp $
 
 --- makefile.shared.orig	2007-05-12 14:46:25.000000000 +0000
 +++ makefile.shared
@@ -11,6 +11,15 @@ $NetBSD: patch-ab,v 1.1 2011/03/10 10:02:34 drochner Exp $
  
  # ranlib tools
  ifndef RANLIB
+@@ -17,7 +17,7 @@ ifndef RANLIB
+ endif
+ 
+ # Compilation flags. Note the += does not write over the user's CFLAGS!
+-CFLAGS += -c -I./src/headers/ -Wall -Wsign-compare -W -Wshadow -DLTC_SOURCE
++CFLAGS += -c -I./src/headers/ -Wall -Wsign-compare -W -Wshadow -DLTC_SOURCE ${CFLAGS_OPTS}
+ 
+ # additional warnings (newer GCC 3.4 and higher)
+ ifdef GCC_34
 @@ -75,13 +75,13 @@ ifndef DESTDIR
     DESTDIR=
  endif
