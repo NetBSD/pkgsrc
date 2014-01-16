@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/10/23 19:50:50 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/16 18:11:36 schmonz Exp $
 #
 
-DISTNAME=	agedu-r8590
+DISTNAME=	agedu-r9723
 PKGNAME=	${DISTNAME:S/-r/-/}
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.chiark.greenend.org.uk/~sgtatham/agedu/
+MASTER_SITES=	${HOMEPAGE}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.chiark.greenend.org.uk/~sgtatham/agedu/
