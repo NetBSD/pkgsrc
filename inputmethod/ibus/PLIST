@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/10/23 11:50:04 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/01/16 11:04:26 obache Exp $
 bin/ibus
 bin/ibus-daemon
 bin/ibus-setup
@@ -154,6 +154,7 @@ share/icons/hicolor/scalable/apps/ibus.svg
 share/locale/ar/LC_MESSAGES/ibus10.mo
 share/locale/as/LC_MESSAGES/ibus10.mo
 share/locale/bg/LC_MESSAGES/ibus10.mo
+share/locale/bn/LC_MESSAGES/ibus10.mo
 share/locale/bn_IN/LC_MESSAGES/ibus10.mo
 share/locale/ca/LC_MESSAGES/ibus10.mo
 share/locale/da/LC_MESSAGES/ibus10.mo
