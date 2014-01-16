@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/01/05 17:47:10 rodent Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/16 02:52:19 rodent Exp $
 
-DISTNAME=	v2.1.0
+DISTNAME=	v2.2.0
 EGG_NAME=	requests-${DISTNAME:S/v//}
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
 CATEGORIES=	devel www
@@ -14,7 +14,7 @@ LICENSE=	apache-2.0
 
 WRKSRC=		${WRKDIR}/${EGG_NAME}
 USE_LANGUAGES=	c
-REPLACE_PYTHON=	requests/certs.py
+REPLACE_PYTHON=	requests/certs.py requests/packages/chardet/chardetect.py
 
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.10:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
