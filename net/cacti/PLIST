@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2014/01/08 20:51:28 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/01/16 21:10:00 tron Exp $
+bin/cacti-poller
 share/cacti/LICENSE
 share/cacti/README
 share/cacti/about.php
@@ -444,7 +445,6 @@ share/cacti/lib/utility.php
 share/cacti/lib/variables.php
 share/cacti/lib/xml.php
 share/cacti/log/.htaccess
-share/cacti/log/cacti.log
 share/cacti/logout.php
 share/cacti/plugins.php
 share/cacti/plugins/index.php
@@ -473,6 +473,7 @@ share/cacti/scripts/freebsd_memory.pl
 share/cacti/scripts/linux_memory.pl
 share/cacti/scripts/loadavg.pl
 share/cacti/scripts/loadavg_multi.pl
+${PLIST.localmemory}share/cacti/scripts/local_memory.pl
 share/cacti/scripts/netbsd_memory.pl
 share/cacti/scripts/ping.pl
 share/cacti/scripts/query_host_cpu.php

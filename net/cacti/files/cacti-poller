@@ -1,0 +1,7 @@
+#!@SH@
+#
+#	$NetBSD: cacti-poller,v 1.1 2014/01/16 21:10:00 tron Exp $
+#
+
+LOGFILE=@CACTI_LOGDIR@/cacti.log
+exec @PREFIX@/bin/php @CACTIDIR@/poller.php >>$LOGFILE 2>&1
