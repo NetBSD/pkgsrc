@@ -1,9 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2013/09/09 13:54:44 wiz Exp $
+$NetBSD: MESSAGE,v 1.2 2014/01/16 09:34:27 wiz Exp $
 
 NOTE:	Pristine templates are located in:
 	${GIT_TEMPLATE_INSTDIR}.
 
-To use the git-svn interface to Subversion you must also install the
-p5-subversion package in devel/p5-subversion.
+To use the git-svn interface to Subversion, install git-svn.
+
 ===========================================================================
