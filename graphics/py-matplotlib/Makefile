@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2013/07/24 11:13:11 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.40 2014/01/16 10:41:53 wiz Exp $
 
 DISTNAME=		matplotlib-1.2.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +10,8 @@ HOMEPAGE=		http://matplotlib.sourceforge.net/
 COMMENT=		Matlab-style plotting package for Python
 
 DEPENDS+=		${PYPKGPREFIX}-pytz>=2008b:../../time/py-pytz
-DEPENDS+=		${PYPKGPREFIX}-dateutil>=1.2:../../time/py-dateutil
+
+PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
@@ -36,7 +36,7 @@ post-patch:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
-
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
