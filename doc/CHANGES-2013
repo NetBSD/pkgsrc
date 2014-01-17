@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4618 2013/12/31 23:21:47 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.4619 2014/01/17 14:15:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1621,6 +1621,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/phpldapadmin to 1.2.3 [taca 2013-04-02]
 	Updated net/rabbitmq to 3.0.4 [fhajny 2013-04-02]
 	Updated misc/tmux to 1.8 [fhajny 2013-04-02]
+	Added audio/py-audioread version 1.0.0 [drochner 2013-04-02]
 	Updated textproc/saxon to 9.4.0.7j [rodent 2013-04-03]
 	Updated www/p5-Plack to 1.0022 [wen 2013-04-03]
 	Updated devel/p5-Moose to 2.0801 [wen 2013-04-03]
