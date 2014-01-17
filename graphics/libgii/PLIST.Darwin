@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2014/01/17 08:13:29 pho Exp $
+lib/ggi/input/cocoa.la
+lib/ggi/input/quartz.la
