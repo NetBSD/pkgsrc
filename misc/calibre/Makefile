@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2014/01/16 10:41:53 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2014/01/17 23:11:27 wiz Exp $
 
 DISTNAME=	calibre-0.9.7
 PKGREVISION=	15
@@ -15,7 +15,6 @@ DEPENDS+=	help2man>=1.36.4:../../converters/help2man
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	xdg-utils>=1.0.2:../../misc/xdg-utils
 DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
-DEPENDS+=	${PYPKGPREFIX}-dns>=1.6.0:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-lxml>=2.2.1:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup>=3.0.5:../../www/py-beautifulsoup
 DEPENDS+=	${PYPKGPREFIX}-mechanize>=0.1.11nb1:../../www/py-mechanize
@@ -28,7 +27,7 @@ DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
 DEPENDS+=	${PYPKGPREFIX}-netifaces-[0-9]*:../../net/py-netifaces
 
-PYTHON_VERSIONED_DEPENDENCIES=	dateutil
+PYTHON_VERSIONED_DEPENDENCIES=	dateutil dns
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config pax
