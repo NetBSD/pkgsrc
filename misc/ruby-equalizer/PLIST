@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/17 12:57:28 obache Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.reek.yml
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.rubocop.yml
+${GEM_LIBDIR}/.ruby-gemset
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/.yardstick.yml
+${GEM_LIBDIR}/CONTRIBUTING.md
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/equalizer.gemspec
+${GEM_LIBDIR}/lib/equalizer.rb
+${GEM_LIBDIR}/lib/equalizer/version.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/support/config_alias.rb
+${GEM_LIBDIR}/spec/unit/equalizer/included_spec.rb
+${GEM_LIBDIR}/spec/unit/equalizer/methods/eql_predicate_spec.rb
+${GEM_LIBDIR}/spec/unit/equalizer/methods/equality_operator_spec.rb
+${GEM_LIBDIR}/spec/unit/equalizer/universal_spec.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
