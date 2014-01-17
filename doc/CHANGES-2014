@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.264 2014/01/17 12:54:40 obache Exp $
+$NetBSD: CHANGES-2014,v 1.265 2014/01/17 12:57:43 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -328,3 +328,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/dovecot2 to 2.2.10 [adam 2014-01-17]
 	Added textproc/ruby-buftok version 0.2.0 [obache 2014-01-17]
 	Added misc/ruby-descendants_tracker version 0.0.3 [obache 2014-01-17]
+	Added misc/ruby-equalizer version 0.0.9 [obache 2014-01-17]
