@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12881 2014/01/16 15:56:12 taca Exp $
+$NetBSD: TODO,v 1.12882 2014/01/17 09:07:21 adam Exp $
 
 Suggested new packages
 ======================
@@ -1089,7 +1089,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o websvn-2.3.2
 	o weechat-0.4.2
 	o windowlab-1.40
-	o wine-1.6.1 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
 	o wine-devel-1.7.10 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
