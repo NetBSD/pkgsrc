@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2014/01/16 10:14:09 wiz Exp $
+# $NetBSD: Makefile,v 1.138 2014/01/17 19:13:37 tron Exp $
 
 DISTNAME=	gnutls-3.2.8.1
 CATEGORIES=	security devel
@@ -42,6 +42,11 @@ DOCDIR=		${PREFIX}/share/doc/gnutls
 EGDIR=		${PREFIX}/share/examples/gnutls
 
 .include "../../mk/bsd.prefs.mk"
+
+# Assembler support is broken for Mac OS X in 3.2.8.1.
+.if ${OPSYS} == "Darwin"
+CONFIGURE_ARGS+=	--disable-hardware-acceleration
+.endif
 
 INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} include/gnutls
 
