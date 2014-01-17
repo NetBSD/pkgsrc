@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2013/09/15 14:10:09 taca Exp $
+# $NetBSD: Makefile,v 1.12 2014/01/17 18:13:34 tsutsui Exp $
 
-DISTNAME=	launchy-2.3.0
+DISTNAME=	launchy-2.4.2
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://copiousfreetime.rubyforge.org/launchy/
+HOMEPAGE=	https://github.com/copiousfreetime/launchy
 COMMENT=	Ruby class for launching applications
 LICENSE=	isc
 
