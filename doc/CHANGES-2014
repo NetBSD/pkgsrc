@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.272 2014/01/17 16:34:23 adam Exp $
+$NetBSD: CHANGES-2014,v 1.273 2014/01/17 18:26:36 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -336,3 +336,8 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/py-audioread to 1.0.1 [wiz 2014-01-17]
 	Updated devel/py-pexpect to 3.0 [wiz 2014-01-17]
 	Updated multimedia/ffmpeg2 to 2.1.3 [adam 2014-01-17]
+	Updated misc/ruby-launchy to 2.4.2 [tsutsui 2014-01-17]
+	Updated misc/ruby-parallel to 0.9.2 [tsutsui 2014-01-17]
+	Updated misc/ruby-rainbow to 1.99.1 [tsutsui 2014-01-17]
+	Updated net/ruby-twitter to 5.5.1 [tsutsui 2014-01-17]
+	Updated net/ruby-tw to 1.0.6 [tsutsui 2014-01-17]
