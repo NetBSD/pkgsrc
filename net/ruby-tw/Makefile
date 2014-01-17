@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2014/01/17 08:41:05 obache Exp $
+# $NetBSD: Makefile,v 1.11 2014/01/17 18:19:38 tsutsui Exp $
 
-DISTNAME=	tw-0.5.2
+DISTNAME=	tw-1.0.6
 CATEGORIES=	net
 
 MAINTAINER=	tsutsui@NetBSD.org
@@ -9,9 +9,10 @@ COMMENT=	CUI Twitter Client
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-args_parser>=0.2.0:../../misc/ruby-args_parser
-DEPENDS+=	${RUBY_PKGPREFIX}-parallel>=0.8.2:../../misc/ruby-parallel
-DEPENDS+=	${RUBY_PKGPREFIX}-rainbow>=1.1.4:../../misc/ruby-rainbow
-DEPENDS+=	${RUBY_PKGPREFIX}-twitter>=4.4.0:../../net/ruby-twitter
+DEPENDS+=	${RUBY_PKGPREFIX}-launchy>=2.4.2:../../misc/ruby-launchy
+DEPENDS+=	${RUBY_PKGPREFIX}-parallel>=0.9.1:../../misc/ruby-parallel
+DEPENDS+=	${RUBY_PKGPREFIX}-rainbow>=1.99.1:../../misc/ruby-rainbow
+DEPENDS+=	${RUBY_PKGPREFIX}-twitter>=5.5.1:../../net/ruby-twitter
 DEPENDS+=	${RUBY_PKGPREFIX}-userstream>=1.2.0:../../net/ruby-userstream
 
 RUBY_VERSION_SUPPORTED=	200 193
