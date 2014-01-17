@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.275 2014/01/17 22:49:02 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.276 2014/01/17 23:03:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -343,3 +343,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/ruby-tw to 1.0.6 [tsutsui 2014-01-17]
 	Updated lang/py-basicproperty to 0.6.9a [wiz 2014-01-17]
 	Updated net/py-dns to 1.11.1 [wiz 2014-01-17]
+	Added net/py-dns3 version 1.11.1 [wiz 2014-01-17]
