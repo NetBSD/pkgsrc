@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.260 2014/01/17 09:07:21 adam Exp $
+$NetBSD: CHANGES-2014,v 1.261 2014/01/17 09:54:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -320,3 +320,8 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/ruby-faraday to 0.9.0 [obache 2014-01-17]
 	Updated wm/windowmaker to 0.95.5 [adam 2014-01-17]
 	Updated emulators/wine to 1.6.2 [adam 2014-01-17]
+	Updated devel/git to 1.8.5.3 [adam 2014-01-17]
+	Updated devel/git-base to 1.8.5.3 [adam 2014-01-17]
+	Updated devel/git-docs to 1.8.5.3 [adam 2014-01-17]
+	Updated devel/git-svn to 1.8.5.3 [adam 2014-01-17]
+	Updated www/gitweb to 1.8.5.3 [adam 2014-01-17]
