@@ -1,26 +1,26 @@
-# $NetBSD: Makefile,v 1.179 2014/01/01 11:52:14 wiz Exp $
+# $NetBSD: Makefile,v 1.180 2014/01/17 09:01:58 adam Exp $
 
-DISTNAME=	wine-1.2.3
-PKGREVISION=	16
+DISTNAME=	wine-1.6.2
 CATEGORIES=	emulators
 MASTER_SITES=	http://ibiblio.org/pub/linux/system/emulators/wine/ \
 		${MASTER_SITE_SOURCEFORGE:=wine/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://www.winehq.com/
+HOMEPAGE=	http://www.winehq.org/
 COMMENT=	Free implementation of Windows on Unix
 LICENSE=	gnu-lgpl-v2.1
 
 BUILD_DEPENDS+=	fontforge-[0-9]*:../../fonts/fontforge
 
-ONLY_FOR_PLATFORM+=	*-*-i386
-#ONLY_FOR_PLATFORM+=	*-*-x86_64
+ONLY_FOR_PLATFORM+=	*-*-i386 #*-*-x86_64
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
 USE_NCURSES=		yes
-USE_TOOLS+=		bison flex gmake mktemp
+USE_TOOLS+=		bison flex gmake mktemp msgfmt
 FLEX_REQD=		2.5.33
 GNU_CONFIGURE=		yes
 UNLIMIT_RESOURCES=	datasize
@@ -46,21 +46,15 @@ CONFIGURE_ENV+=		ac_cv_prog_AS=${AS:Q}\ --32
 CONFIGURE_ENV+=		ac_cv_prog_LD=${LD:Q}\ -m\ elf_i386
 .endif
 # Needs GCC >= 4.4
-#.if !empty(MACHINE_ARCH:Mx86_64)
-#CONFIGURE_ARGS+=	--disable-win16
-#CONFIGURE_ARGS+=	--enable-win64
-#.endif
+.if !empty(MACHINE_ARCH:Mx86_64)
+CONFIGURE_ARGS+=	--disable-win16
+CONFIGURE_ARGS+=	--enable-win64
+.endif
 
 .include "options.mk"
 
-post-install:
-.for tool in fnt2bdf
-	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/tools/${tool} \
-		${DESTDIR}${PREFIX}/bin
-.endfor
-
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../graphics/lcms/buildlink3.mk"
+.include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
