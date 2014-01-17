@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.13 2013/12/28 04:59:36 obache Exp $
+$NetBSD: distinfo,v 1.13.2.1 2014/01/17 14:29:29 tron Exp $
 
-SHA1 (ibus-chewing-1.4.4-Source.tar.gz) = a7b653737f69881b9ba33fc238ad52a5a550358b
-RMD160 (ibus-chewing-1.4.4-Source.tar.gz) = 9957af85797e98dc985055ffb6003180696f0cdc
-Size (ibus-chewing-1.4.4-Source.tar.gz) = 100601 bytes
+SHA1 (ibus-chewing-1.4.5-Source.tar.gz) = 528b8f6714a55c6e1ee1342a8d7f26dbcb7fdc9e
+RMD160 (ibus-chewing-1.4.5-Source.tar.gz) = ccb6206a29030b1739aa4b2a49bce217af66f68b
+Size (ibus-chewing-1.4.5-Source.tar.gz) = 111622 bytes
 SHA1 (patch-Modules_DateTimeFormat.cmake) = 588068914de5db765c1c5d1a623e3b73f720a64f
 SHA1 (patch-Modules_ManageEnvironment.cmake) = 333c7aa542d0555c7bb9cd3913e73a205c0dea94
 SHA1 (patch-Modules_ManageGConf.cmake) = 54e0059fbbea29add90740222d8b7dc81eb6f63f
 SHA1 (patch-Modules_ManageTranslation.cmake) = 5fd818a2a089eb9885fc749a60ded8e478f6be64
-SHA1 (patch-po_zh__CN.po) = 76edc659eadd2eb175001b8d6e1635e45ab55141
+SHA1 (patch-po_zh__CN.po) = 8818c423d3096e5d527c6e9034b876c2a4eba5d3
 SHA1 (patch-src_generate-gconf-schemas.c) = 8800a1ab67dce1848dc516e26c38cece46b9ffab
 SHA1 (patch-src_main.c) = cd160807386097de5bee3e24f8bbaae3c420d2d5
