@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.414 2014/01/01 07:16:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.415 2014/01/17 13:02:45 obache Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -249,14 +249,18 @@ SUBDIR+=	ruby-columnize
 SUBDIR+=	ruby-commander
 SUBDIR+=	ruby-configuration
 SUBDIR+=	ruby-daemons
+SUBDIR+=	ruby-descendants_tracker
+SUBDIR+=	ruby-equalizer
 SUBDIR+=	ruby-gem_plugin
 SUBDIR+=	ruby-hashie
 SUBDIR+=	ruby-launchy
+SUBDIR+=	ruby-memoizable
 SUBDIR+=	ruby-parallel
 SUBDIR+=	ruby-progressbar
 SUBDIR+=	ruby-rainbow
 SUBDIR+=	ruby-sprockets
 SUBDIR+=	ruby-sprockets22
+SUBDIR+=	ruby-thread_safe
 SUBDIR+=	ruby-transaction-simple
 SUBDIR+=	ruby-typed-array
 SUBDIR+=	rubygems
