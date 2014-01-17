@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2012/10/25 06:56:47 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2014/01/17 23:26:42 wiz Exp $
 
-DISTNAME=		Tempita-0.4
+DISTNAME=		Tempita-0.5.2
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 EGG_NAME=		${DISTNAME}
 CATEGORIES=		textproc python
