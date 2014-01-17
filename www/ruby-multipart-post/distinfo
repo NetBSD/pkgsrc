@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/04/07 11:06:19 obache Exp $
+$NetBSD: distinfo,v 1.3 2014/01/17 08:32:07 obache Exp $
 
-SHA1 (multipart-post-1.2.0.gem) = 600b753fdeffb3c069bfbadb4a35b111da855d20
-RMD160 (multipart-post-1.2.0.gem) = 7d145e67ac2ce020ca492a05e88b94cbfcecfbee
-Size (multipart-post-1.2.0.gem) = 10240 bytes
+SHA1 (multipart-post-2.0.0.gem) = 15f1fee5557716868726ec23f389938e7957bf63
+RMD160 (multipart-post-2.0.0.gem) = 6041f669b79200ec3dfc20bcde19462517de58b0
+Size (multipart-post-2.0.0.gem) = 11264 bytes
