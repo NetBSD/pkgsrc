@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.5 2013/05/30 15:18:28 hans Exp $
+$NetBSD: patch-ak,v 1.6 2014/01/17 08:48:06 adam Exp $
 
---- util/Makefile.in.orig	2013-01-09 21:43:07.000000000 +0000
+--- util/Makefile.in.orig	2013-09-12 22:00:17.000000000 +0000
 +++ util/Makefile.in
-@@ -374,21 +374,21 @@ AM_CPPFLAGS = -DLOCALEDIR=\"$(NLSDIR)\" 
+@@ -375,21 +375,21 @@ AM_CPPFLAGS = -DLOCALEDIR=\"$(NLSDIR)\" 
  	-DETCDIR=\"sysconfdir\" -DDATADIR=\"pkgdatadir\"
  
  liblist = @LIBRARY_SEARCH_PATH@ @INTLIBS@
@@ -14,15 +14,15 @@ $NetBSD: patch-ak,v 1.5 2013/05/30 15:18:28 hans Exp $
  wxpaste_LDADD = @XLFLAGS@ @XLIBS@
 -getstyle_LDADD = $(top_builddir)/WINGs/libWUtil.la $(liblist)
 +getstyle_LDADD = $(top_builddir)/WINGs/libWUtil.la @XLFLAGS@ @XLIBS@ $(liblist)
- getstyle_SOURCES = getstyle.c fontconv.c
+ getstyle_SOURCES = getstyle.c fontconv.c common.h
  setstyle_LDADD = \
  	$(top_builddir)/WINGs/libWUtil.la \
  	@XLFLAGS@ @XLIBS@ $(liblist)
  
- setstyle_SOURCES = setstyle.c fontconv.c
+ setstyle_SOURCES = setstyle.c fontconv.c common.h
 -convertfonts_LDADD = $(top_builddir)/WINGs/libWUtil.la $(liblist)
 +convertfonts_LDADD = $(top_builddir)/WINGs/libWUtil.la @XLFLAGS@ @XLIBS@ $(liblist)
- convertfonts_SOURCES = convertfonts.c fontconv.c
+ convertfonts_SOURCES = convertfonts.c fontconv.c common.h
 -seticons_LDADD = $(top_builddir)/WINGs/libWUtil.la $(liblist)
 -geticonset_LDADD = $(top_builddir)/WINGs/libWUtil.la $(liblist)
 +seticons_LDADD = $(top_builddir)/WINGs/libWUtil.la @XLFLAGS@ @XLIBS@ $(liblist)

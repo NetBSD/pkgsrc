@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.104 2013/07/05 13:29:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.105 2014/01/17 08:48:06 adam Exp $
 
-DISTNAME=	WindowMaker-0.95.4
+DISTNAME=	WindowMaker-0.95.5
 PKGNAME=	${DISTNAME:S/WindowMaker/windowmaker/}
-PKGREVISION=	5
 CATEGORIES=	x11 wm windowmaker
 MASTER_SITES=	http://windowmaker.info/pub/source/release/
-EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.windowmaker.info/
 COMMENT=	GNUStep-compliant NEXTSTEP(tm) window manager clone
+LICENSE=	gnu-gpl-v2
 
 BROKEN_GETTEXT_DETECTION=	yes
 
@@ -65,7 +64,18 @@ BUILD_DEFS+=		WINDOWMAKER_OPTIONS
 CONFIGURE_ARGS+=	--enable-${option}
 .endfor
 
-post-extract:
+SUBST_CLASSES+=		fix-path
+SUBST_STAGE.fix-path=	pre-configure
+SUBST_MESSAGE.fix-path=	Fixing absolute paths.
+SUBST_FILES.fix-path=	WINGs/wapplication.c
+SUBST_FILES.fix-path+=	WindowMaker/Defaults/WindowMaker.in
+SUBST_FILES.fix-path+=	WPrefs.app/Paths.c
+SUBST_FILES.fix-path+=	WindowMaker/menu*
+SUBST_FILES.fix-path+=	WindowMaker/plmenu*
+SUBST_SED.fix-path=	-e 's,/usr/local,${PREFIX},g'
+SUBST_SED.fix-path+=	-e 's,${PREFIX}/GNUstep,${PREFIX}/share/GNUstep,g'
+
+pre-configure:
 	${RM} -f ${WRKSRC}/WindowMaker/Defaults/WMState \
 		 ${WRKSRC}/WindowMaker/Defaults/WMWindowAttributes \
 		 ${WRKSRC}/WindowMaker/Defaults/WindowMaker \
@@ -75,22 +85,12 @@ post-extract:
 	do \
 		${MV} "$$manfile" `${ECHO} "$$manfile" | ${SED} "s/1x$$/1/"`; \
 	done;
-	set -e; \
-	cd ${WRKSRC} && \
-	for f in WINGs/wapplication.c WindowMaker/Defaults/WindowMaker.in \
-		WPrefs.app/Paths.c WindowMaker/menu* WindowMaker/plmenu*; do \
-		${SED}	-e "s|/usr/local|${PREFIX}|g" \
-			-e "s|${PREFIX}/GNUstep|${PREFIX}/share/GNUstep|g" \
-			"$$f" > "$$f".new && \
-		${MV} "$$f".new "$$f"; \
-	done
 
 post-install:
 	${TOUCH} ${DESTDIR}${PREFIX}/share/WindowMaker/SoundSets/.directory
 	${TOUCH} ${DESTDIR}${PREFIX}/share/WindowMaker/Sounds/.directory
 	cd ${WRKSRC} && \
-	${INSTALL_DATA} \
-		README README.definable-cursor FAQ FAQ.I18N \
+	${INSTALL_DATA} README README.definable-cursor FAQ FAQ.I18N \
 		${DESTDIR}${PREFIX}/share/doc/WindowMaker
 
 .include "../../converters/libiconv/buildlink3.mk"
