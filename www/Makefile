@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1013 2014/01/10 01:50:04 rodent Exp $
+# $NetBSD: Makefile,v 1.1014 2014/01/17 13:24:06 obache Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -656,6 +656,7 @@ SUBDIR+=	ruby-fcgi
 SUBDIR+=	ruby-gnome2-webkit-gtk
 SUBDIR+=	ruby-gnome2-webkit-gtk2
 SUBDIR+=	ruby-htmlsplit
+SUBDIR+=	ruby-http
 SUBDIR+=	ruby-http-cookie
 SUBDIR+=	ruby-http_parser.rb
 SUBDIR+=	ruby-http_router
