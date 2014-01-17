@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/07 21:24:07 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.6 2014/01/17 14:47:25 wiz Exp $
 
 DISTNAME=	python-mpd-0.3.0
 PKGNAME=	${PYPKGPREFIX}-mpd-0.3.0
