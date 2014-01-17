@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.257 2014/01/17 07:55:35 obache Exp $
+$NetBSD: CHANGES-2014,v 1.258 2014/01/17 08:32:24 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -316,3 +316,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/cacti to 0.8.8bnb1 [tron 2014-01-16]
 	Added net/py-hatop version 0.7.7 [rodent 2014-01-17]
 	Updated inputmethod/ibus-chewing to 1.4.7 [obache 2014-01-17]
+	Updated www/ruby-multipart-post to 2.0.0 [obache 2014-01-17]
