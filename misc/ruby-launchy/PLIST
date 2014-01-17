@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/09/15 14:10:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/01/17 18:13:34 tsutsui Exp $
 bin/launchy
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -11,6 +11,7 @@ ${GEM_LIBDIR}/bin/launchy
 ${GEM_LIBDIR}/lib/launchy.rb
 ${GEM_LIBDIR}/lib/launchy/application.rb
 ${GEM_LIBDIR}/lib/launchy/applications/browser.rb
+${GEM_LIBDIR}/lib/launchy/argv.rb
 ${GEM_LIBDIR}/lib/launchy/cli.rb
 ${GEM_LIBDIR}/lib/launchy/deprecated.rb
 ${GEM_LIBDIR}/lib/launchy/descendant_tracker.rb
