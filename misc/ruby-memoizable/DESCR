@@ -1,0 +1,2 @@
+Memoization is an optimization that saves the return value of a method
+so it doesn't need to be re-computed every time that method is called.
