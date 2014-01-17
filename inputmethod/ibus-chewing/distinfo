@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.14 2014/01/16 11:14:51 obache Exp $
+$NetBSD: distinfo,v 1.15 2014/01/17 07:54:54 obache Exp $
 
-SHA1 (ibus-chewing-1.4.5-Source.tar.gz) = 528b8f6714a55c6e1ee1342a8d7f26dbcb7fdc9e
-RMD160 (ibus-chewing-1.4.5-Source.tar.gz) = ccb6206a29030b1739aa4b2a49bce217af66f68b
-Size (ibus-chewing-1.4.5-Source.tar.gz) = 111622 bytes
+SHA1 (ibus-chewing-1.4.7-Source.tar.gz) = 9e2a9792db374be2575f5dd6998755a699d9011d
+RMD160 (ibus-chewing-1.4.7-Source.tar.gz) = a5e6f83c1675c42aa445bbbeff0beffb67e20438
+Size (ibus-chewing-1.4.7-Source.tar.gz) = 108078 bytes
 SHA1 (patch-Modules_DateTimeFormat.cmake) = 588068914de5db765c1c5d1a623e3b73f720a64f
 SHA1 (patch-Modules_ManageEnvironment.cmake) = 333c7aa542d0555c7bb9cd3913e73a205c0dea94
 SHA1 (patch-Modules_ManageGConf.cmake) = 54e0059fbbea29add90740222d8b7dc81eb6f63f
