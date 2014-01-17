@@ -1,0 +1,32 @@
+$NetBSD: patch-configure,v 1.1 2014/01/17 09:01:58 adam Exp $
+
+Configure for OSS v3 support for NetBSD.
+
+--- configure.orig	2013-11-15 19:30:24.000000000 +0000
++++ configure
+@@ -11395,14 +11395,25 @@ then
+ if test "x$ac_cv_header_sys_soundcard_h" = xyes; then :
+   ac_fn_c_check_member "$LINENO" "oss_sysinfo" "numaudioengines" "ac_cv_member_oss_sysinfo_numaudioengines" "#include <sys/soundcard.h>
+ "
++if test x`echo "$host_alias" | grep -iv netbsd` = x; then :
+ if test "x$ac_cv_member_oss_sysinfo_numaudioengines" = xyes; then :
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define HAVE_OSS_SYSINFO_NUMAUDIOENGINES 1
++#define HAVE_OSSv4 1
+ _ACEOF
+ 
+ OSS4INCL="$ac_oss_incl"
+ 
++else
++ac_cv_member_oss_sysinfo_numaudioengines=yes
++cat >>confdefs.h <<_ACEOF
++#define HAVE_OSS_SYSINFO_NUMAUDIOENGINES 1
++_ACEOF
++
++OSS4INCL="$ac_oss_incl"
++
++fi
+ fi
+ 
+ fi
