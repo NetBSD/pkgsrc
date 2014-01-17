@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/05/09 15:53:32 mef Exp $
+$NetBSD: distinfo,v 1.2 2014/01/17 18:16:27 tsutsui Exp $
 
-SHA1 (rainbow-1.1.4.gem) = 28dec847c69f244a93de9f2593ef42b9dfc3146d
-RMD160 (rainbow-1.1.4.gem) = 67ebbc881ba281b5756109fc11209991903e9087
-Size (rainbow-1.1.4.gem) = 7680 bytes
+SHA1 (rainbow-1.99.1.gem) = c5d74415b9ea9fc83eb6f6e819e2bdce3f40c32d
+RMD160 (rainbow-1.99.1.gem) = abd518ac2d30ea29ccc83fd43ea5c908256b2f17
+Size (rainbow-1.99.1.gem) = 14336 bytes

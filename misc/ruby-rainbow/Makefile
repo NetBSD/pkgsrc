@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/05/09 15:53:32 mef Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/17 18:16:27 tsutsui Exp $
 #
 
-DISTNAME=	rainbow-1.1.4
+DISTNAME=	rainbow-1.99.1
 CATEGORIES=	misc
 
 MAINTAINER=	tsutsui@NetBSD.org
