@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.273 2014/01/17 18:26:36 tsutsui Exp $
+$NetBSD: CHANGES-2014,v 1.274 2014/01/17 22:44:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -341,3 +341,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/ruby-rainbow to 1.99.1 [tsutsui 2014-01-17]
 	Updated net/ruby-twitter to 5.5.1 [tsutsui 2014-01-17]
 	Updated net/ruby-tw to 1.0.6 [tsutsui 2014-01-17]
+	Updated lang/py-basicproperty to 0.6.9a [wiz 2014-01-17]
