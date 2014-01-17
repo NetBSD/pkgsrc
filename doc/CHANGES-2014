@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.256 2014/01/17 03:40:48 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.257 2014/01/17 07:55:35 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -315,3 +315,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/agedu to 9723 [schmonz 2014-01-16]
 	Updated net/cacti to 0.8.8bnb1 [tron 2014-01-16]
 	Added net/py-hatop version 0.7.7 [rodent 2014-01-17]
+	Updated inputmethod/ibus-chewing to 1.4.7 [obache 2014-01-17]
