@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/08/28 02:01:39 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/01/17 13:19:18 obache Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.gitmodules
@@ -7,6 +7,7 @@ ${GEM_LIBDIR}/Gemfile.lock
 ${GEM_LIBDIR}/LICENSE-MIT
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/bench/standalone.rb
 ${GEM_LIBDIR}/bench/thin.rb
 ${GEM_LIBDIR}/ext/ruby_http_parser/.gitignore
 ${GEM_LIBDIR}/ext/ruby_http_parser/RubyHttpParserService.java
@@ -15,21 +16,25 @@ ${GEM_LIBDIR}/ext/ruby_http_parser/extconf.rb
 ${GEM_LIBDIR}/ext/ruby_http_parser/org/ruby_http_parser/RubyHttpParser.java
 ${GEM_LIBDIR}/ext/ruby_http_parser/ruby_http_parser.c
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/.gitkeep
+${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/AUTHORS
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/LICENSE-MIT
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/Makefile
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/README.md
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/TODO
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/build.xml
-${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/compile
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/ext/primitives.jar
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/http_parser.c
+${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/http_parser.gyp
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/http_parser.h
+${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/src/Http-parser.java.iml
+${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/src/impl/http_parser/FieldData.java
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/src/impl/http_parser/HTTPCallback.java
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/src/impl/http_parser/HTTPDataCallback.java
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/src/impl/http_parser/HTTPErrorCallback.java
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/src/impl/http_parser/HTTPException.java
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/src/impl/http_parser/HTTPMethod.java
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/src/impl/http_parser/HTTPParser.java
+${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/src/impl/http_parser/HTTPParserUrl.java
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/src/impl/http_parser/ParserSettings.java
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/src/impl/http_parser/ParserType.java
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/src/impl/http_parser/Util.java
@@ -39,6 +44,7 @@ ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/src/impl/http_parser/
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/src/impl/http_parser/lolevel/HTTPParser.java
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/src/impl/http_parser/lolevel/ParserSettings.java
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/src/test/http_parser/lolevel/Message.java
+${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/src/test/http_parser/lolevel/ParseUrl.java
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/src/test/http_parser/lolevel/Requests.java
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/src/test/http_parser/lolevel/Responses.java
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/src/test/http_parser/lolevel/Test.java
@@ -47,23 +53,23 @@ ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/src/test/http_parser/
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/src/test/http_parser/lolevel/TestNoOverflowLongBody.java
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/src/test/http_parser/lolevel/UnitTest.java
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/src/test/http_parser/lolevel/Upgrade.java
+${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/src/test/http_parser/lolevel/Url.java
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/src/test/http_parser/lolevel/Util.java
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/src/test/http_parser/lolevel/WrongContentLength.java
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/test.c
-${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/test_permutations
-${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/test_unit
-${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/test_utf8
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/tests.dumped
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/tests.utf8
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/tools/byte_constants.rb
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/tools/const_char.rb
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/tools/lowcase.rb
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/tools/parse_tests.rb
+${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser/AUTHORS
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser/CONTRIBUTIONS
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser/LICENSE-MIT
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser/Makefile
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser/README.md
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser/http_parser.c
+${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser/http_parser.gyp
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser/http_parser.h
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser/test.c
 ${GEM_LIBDIR}/http_parser.rb.gemspec

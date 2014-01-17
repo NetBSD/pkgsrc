@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2013/12/07 08:46:24 obache Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/17 13:19:18 obache Exp $
 
-DISTNAME=	http_parser.rb-0.5.3
+DISTNAME=	http_parser.rb-0.6.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
