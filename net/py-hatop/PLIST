@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/17 03:40:35 rodent Exp $
+bin/hatop${PYVERSSUFFIX}
+man/man1/hatop${PYVERSSUFFIX}.1
