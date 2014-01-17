@@ -1,4 +1,5 @@
-$NetBSD: patch-ad,v 1.2 2006/06/04 12:57:11 joerg Exp $
+$NetBSD: patch-ad,v 1.3 2014/01/17 02:33:20 asau Exp $
+
 --- SRC/h.h.orig	Fri Jul 25 23:21:58 2003
 +++ SRC/h.h	Fri Jul 25 23:24:06 2003
 @@ -195,7 +195,7 @@
@@ -6,7 +7,7 @@ $NetBSD: patch-ad,v 1.2 2006/06/04 12:57:11 joerg Exp $
  #include <nlist.h>
  #endif
 -#if ( defined(i386) || defined(__MACH__) ||  defined(sun) || defined(solaris) || defined (SOLARIS23) || defined (SOLARIS24) || defined (SOLARIS25) || defined(NeXT) )
-+#if ( defined(i386) || defined(__MACH__) ||  defined(sun) || defined(solaris) || defined (SOLARIS23) || defined (SOLARIS24) || defined (SOLARIS25) || defined(NeXT) || defined(__NetBSD__) || defined(__DragonFly__))
++#if ( defined(i386) || defined(__MACH__) ||  defined(sun) || defined(solaris) || defined (SOLARIS23) || defined (SOLARIS24) || defined (SOLARIS25) || defined(NeXT) || defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__))
  /*   empty */
  #else
  #include <sys/sysinfo.h>
