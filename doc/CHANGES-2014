@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.266 2014/01/17 13:00:13 obache Exp $
+$NetBSD: CHANGES-2014,v 1.267 2014/01/17 13:01:22 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -330,3 +330,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added misc/ruby-descendants_tracker version 0.0.3 [obache 2014-01-17]
 	Added misc/ruby-equalizer version 0.0.9 [obache 2014-01-17]
 	Added misc/ruby-thread_safe version 0.1.3 [obache 2014-01-17]
+	Added misc/ruby-memoizable version 0.4.0 [obache 2014-01-17]
