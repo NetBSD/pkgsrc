@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/01/17 23:00:30 wiz Exp $
+
+SHA1 (dnspython3-1.11.1.tar.gz) = a9b0326ae27b03bf28ba9cff4fa50a108c87c39d
+RMD160 (dnspython3-1.11.1.tar.gz) = 8c8d8acd5e3fa0eebba6494ed05dee6c26484113
+Size (dnspython3-1.11.1.tar.gz) = 129165 bytes
