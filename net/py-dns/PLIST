@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2012/04/08 20:21:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/01/17 22:48:53 wiz Exp $
 ${PYSITELIB}/dns/__init__.py
 ${PYSITELIB}/dns/__init__.pyc
 ${PYSITELIB}/dns/__init__.pyo
@@ -20,6 +20,9 @@ ${PYSITELIB}/dns/exception.pyo
 ${PYSITELIB}/dns/flags.py
 ${PYSITELIB}/dns/flags.pyc
 ${PYSITELIB}/dns/flags.pyo
+${PYSITELIB}/dns/grange.py
+${PYSITELIB}/dns/grange.pyc
+${PYSITELIB}/dns/grange.pyo
 ${PYSITELIB}/dns/hash.py
 ${PYSITELIB}/dns/hash.pyc
 ${PYSITELIB}/dns/hash.pyo
@@ -98,9 +101,6 @@ ${PYSITELIB}/dns/rdtypes/ANY/HIP.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/ISDN.py
 ${PYSITELIB}/dns/rdtypes/ANY/ISDN.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/ISDN.pyo
-${PYSITELIB}/dns/rdtypes/ANY/KEY.py
-${PYSITELIB}/dns/rdtypes/ANY/KEY.pyc
-${PYSITELIB}/dns/rdtypes/ANY/KEY.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/LOC.py
 ${PYSITELIB}/dns/rdtypes/ANY/LOC.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/LOC.pyo
@@ -119,9 +119,6 @@ ${PYSITELIB}/dns/rdtypes/ANY/NSEC3.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/NSEC3PARAM.py
 ${PYSITELIB}/dns/rdtypes/ANY/NSEC3PARAM.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/NSEC3PARAM.pyo
-${PYSITELIB}/dns/rdtypes/ANY/NXT.py
-${PYSITELIB}/dns/rdtypes/ANY/NXT.pyc
-${PYSITELIB}/dns/rdtypes/ANY/NXT.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/PTR.py
 ${PYSITELIB}/dns/rdtypes/ANY/PTR.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/PTR.pyo
@@ -134,9 +131,6 @@ ${PYSITELIB}/dns/rdtypes/ANY/RRSIG.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/RT.py
 ${PYSITELIB}/dns/rdtypes/ANY/RT.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/RT.pyo
-${PYSITELIB}/dns/rdtypes/ANY/SIG.py
-${PYSITELIB}/dns/rdtypes/ANY/SIG.pyc
-${PYSITELIB}/dns/rdtypes/ANY/SIG.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/SOA.py
 ${PYSITELIB}/dns/rdtypes/ANY/SOA.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/SOA.pyo
@@ -146,6 +140,9 @@ ${PYSITELIB}/dns/rdtypes/ANY/SPF.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/SSHFP.py
 ${PYSITELIB}/dns/rdtypes/ANY/SSHFP.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/SSHFP.pyo
+${PYSITELIB}/dns/rdtypes/ANY/TLSA.py
+${PYSITELIB}/dns/rdtypes/ANY/TLSA.pyc
+${PYSITELIB}/dns/rdtypes/ANY/TLSA.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/TXT.py
 ${PYSITELIB}/dns/rdtypes/ANY/TXT.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/TXT.pyo
@@ -200,18 +197,12 @@ ${PYSITELIB}/dns/rdtypes/__init__.pyo
 ${PYSITELIB}/dns/rdtypes/dsbase.py
 ${PYSITELIB}/dns/rdtypes/dsbase.pyc
 ${PYSITELIB}/dns/rdtypes/dsbase.pyo
-${PYSITELIB}/dns/rdtypes/keybase.py
-${PYSITELIB}/dns/rdtypes/keybase.pyc
-${PYSITELIB}/dns/rdtypes/keybase.pyo
 ${PYSITELIB}/dns/rdtypes/mxbase.py
 ${PYSITELIB}/dns/rdtypes/mxbase.pyc
 ${PYSITELIB}/dns/rdtypes/mxbase.pyo
 ${PYSITELIB}/dns/rdtypes/nsbase.py
 ${PYSITELIB}/dns/rdtypes/nsbase.pyc
 ${PYSITELIB}/dns/rdtypes/nsbase.pyo
-${PYSITELIB}/dns/rdtypes/sigbase.py
-${PYSITELIB}/dns/rdtypes/sigbase.pyc
-${PYSITELIB}/dns/rdtypes/sigbase.pyo
 ${PYSITELIB}/dns/rdtypes/txtbase.py
 ${PYSITELIB}/dns/rdtypes/txtbase.pyc
 ${PYSITELIB}/dns/rdtypes/txtbase.pyo
@@ -248,6 +239,9 @@ ${PYSITELIB}/dns/update.pyo
 ${PYSITELIB}/dns/version.py
 ${PYSITELIB}/dns/version.pyc
 ${PYSITELIB}/dns/version.pyo
+${PYSITELIB}/dns/wiredata.py
+${PYSITELIB}/dns/wiredata.pyc
+${PYSITELIB}/dns/wiredata.pyo
 ${PYSITELIB}/dns/zone.py
 ${PYSITELIB}/dns/zone.pyc
 ${PYSITELIB}/dns/zone.pyo

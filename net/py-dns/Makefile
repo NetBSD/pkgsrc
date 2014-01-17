@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2012/10/23 17:19:01 asau Exp $
+# $NetBSD: Makefile,v 1.23 2014/01/17 22:48:53 wiz Exp $
 
-DISTNAME=	dnspython-1.9.4
-PKGNAME=	${PYPKGPREFIX}-dns-1.9.4
-PKGREVISION=	1
+DISTNAME=	dnspython-1.11.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-/-/}
 CATEGORIES=	net python
 MASTER_SITES=	http://www.dnspython.org/kits/${PKGVERSION}/
 
@@ -12,6 +11,7 @@ COMMENT=	Python DNS toolkit
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
+PYTHON_VERSIONS_INCOMPATIBLE=	33
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
