@@ -1,0 +1,3 @@
+The HTTP Gem is an easy-to-use client library for making requests from Ruby.
+It uses a simple method chaining system for building requests, similar to
+libraries like JQuery or Python's Requests.
