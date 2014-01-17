@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/12/31 15:47:24 rodent Exp $
+# $NetBSD: Makefile,v 1.7 2014/01/17 13:13:28 wiz Exp $
 
 DISTNAME=	billiard-3.3.0.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,8 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES+=	c
 REPLACE_PYTHON+=	funtests/setup.py funtests/tests/test_multiprocessing.py
+
+PYTHON_VERSIONS_INCOMPATIBLE=	26
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
