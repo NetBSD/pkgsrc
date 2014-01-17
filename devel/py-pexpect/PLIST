@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/04/08 20:21:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/01/17 14:50:52 wiz Exp $
 ${PYSITELIB}/ANSI.py
 ${PYSITELIB}/ANSI.pyc
 ${PYSITELIB}/ANSI.pyo
@@ -9,9 +9,27 @@ ${PYSITELIB}/fdpexpect.py
 ${PYSITELIB}/fdpexpect.pyc
 ${PYSITELIB}/fdpexpect.pyo
 ${PYSITELIB}/${EGG_FILE}
-${PYSITELIB}/pexpect.py
-${PYSITELIB}/pexpect.pyc
-${PYSITELIB}/pexpect.pyo
+${PYSITELIB}/pexpect/ANSI.py
+${PYSITELIB}/pexpect/ANSI.pyc
+${PYSITELIB}/pexpect/ANSI.pyo
+${PYSITELIB}/pexpect/FSM.py
+${PYSITELIB}/pexpect/FSM.pyc
+${PYSITELIB}/pexpect/FSM.pyo
+${PYSITELIB}/pexpect/__init__.py
+${PYSITELIB}/pexpect/__init__.pyc
+${PYSITELIB}/pexpect/__init__.pyo
+${PYSITELIB}/pexpect/fdpexpect.py
+${PYSITELIB}/pexpect/fdpexpect.pyc
+${PYSITELIB}/pexpect/fdpexpect.pyo
+${PYSITELIB}/pexpect/psh.py
+${PYSITELIB}/pexpect/psh.pyc
+${PYSITELIB}/pexpect/psh.pyo
+${PYSITELIB}/pexpect/pxssh.py
+${PYSITELIB}/pexpect/pxssh.pyc
+${PYSITELIB}/pexpect/pxssh.pyo
+${PYSITELIB}/pexpect/screen.py
+${PYSITELIB}/pexpect/screen.pyc
+${PYSITELIB}/pexpect/screen.pyo
 ${PYSITELIB}/pxssh.py
 ${PYSITELIB}/pxssh.pyc
 ${PYSITELIB}/pxssh.pyo
