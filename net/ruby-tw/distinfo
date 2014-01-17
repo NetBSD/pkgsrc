@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2013/12/14 14:58:23 tsutsui Exp $
+$NetBSD: distinfo,v 1.7 2014/01/17 18:19:38 tsutsui Exp $
 
-SHA1 (tw-0.5.2.gem) = 4de8f6fc5744a1604eef556c6bc1b93a6c748954
-RMD160 (tw-0.5.2.gem) = 501930008428d996b14157d098d67ffcbe22cc7c
-Size (tw-0.5.2.gem) = 14336 bytes
+SHA1 (tw-1.0.6.gem) = b75ba23c0f867ddb97669fd0e3505e5f0ce70089
+RMD160 (tw-1.0.6.gem) = ba32f9c3929dc5d592c5cad5a9e616026cb30239
+Size (tw-1.0.6.gem) = 14336 bytes
