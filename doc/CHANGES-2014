@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.262 2014/01/17 11:52:18 adam Exp $
+$NetBSD: CHANGES-2014,v 1.263 2014/01/17 12:50:18 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -326,3 +326,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/git-svn to 1.8.5.3 [adam 2014-01-17]
 	Updated www/gitweb to 1.8.5.3 [adam 2014-01-17]
 	Updated mail/dovecot2 to 2.2.10 [adam 2014-01-17]
+	Added textproc/ruby-buftok version 0.2.0 [obache 2014-01-17]
