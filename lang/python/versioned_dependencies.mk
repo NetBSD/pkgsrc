@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.1 2014/01/16 10:27:36 wiz Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.2 2014/01/17 23:10:05 wiz Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -18,6 +18,7 @@
 _SUPPORTED_PACKAGES=# empty
 #_SUPPORTED_PACKAGES+=cairo graphics/py-cairo graphics/py-cairo3
 _SUPPORTED_PACKAGES+=dateutil time/py-dateutil time/py-dateutil2
+_SUPPORTED_PACKAGES+=dns net/py-dns net/py-dns3
 
 .for pkg in ${PYTHON_VERSIONED_DEPENDENCIES}
 _PKG_MATCHED=	no
