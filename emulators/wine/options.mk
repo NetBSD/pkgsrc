@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2011/05/04 20:31:39 adam Exp $
+# $NetBSD: options.mk,v 1.14 2014/01/17 09:01:58 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wine
 PKG_SUPPORTED_OPTIONS=	cups dbus esound hal ldap opengl sane ssl x11
