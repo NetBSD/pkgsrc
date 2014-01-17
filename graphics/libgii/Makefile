@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2012/10/06 14:11:04 asau Exp $
+# $NetBSD: Makefile,v 1.33 2014/01/17 08:06:07 pho Exp $
 
 DISTNAME=	libgii-1.0.2.src
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.ggi-project.org/ftp/ggi/v2.2/ \
@@ -39,4 +40,5 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXxf86dga/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
