@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2012/10/02 20:11:50 asau Exp $
-#
+# $NetBSD: Makefile,v 1.13 2014/01/17 22:44:16 wiz Exp $
 
-DISTNAME=	basicproperty-0.6.3a
-PKGNAME=	${PYPKGPREFIX}-basicproperty-0.6.3a
-PKGREVISION=	3
+DISTNAME=	basicproperty-0.6.9a
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=basicproperty/}
 
@@ -12,7 +10,15 @@ HOMEPAGE=	http://basicproperty.sourceforge.net/
 COMMENT=	Python RDBMS wrapper for various databases
 LICENSE=	original-bsd
 
-USE_LANGUAGES=	# none
+USE_LANGUAGES=	c
 
-.include "../../lang/python/distutils.mk"
+REPLACE_PYTHON=	basicproperty/tests/test.py
+PYTHON_VERSIONS_INCOMPATIBLE=	33
+
+post-extract:
+	# wrong architecture binary
+	rm ${WRKSRC}/basicproperty/propertyaccel.so
+
+.include "../../lang/python/application.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
