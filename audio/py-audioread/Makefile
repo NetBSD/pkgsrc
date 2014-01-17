@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2013/04/02 10:44:41 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.2 2014/01/17 14:35:06 wiz Exp $
 
-DISTNAME=	v1.0.0
-PKGNAME=	${PYPKGPREFIX}-audioread-1.0.0
+VERSION=	1.0.1
+DISTNAME=	v${VERSION}
+PKGNAME=	${PYPKGPREFIX}-audioread-${VERSION}
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/sampsyo/audioread/archive/
 DIST_SUBDIR=	audioread
@@ -12,9 +12,9 @@ HOMEPAGE=	https://github.com/sampsyo/audioread
 COMMENT=	Audio file decoder
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR}/audioread-1.0.0
+WRKSRC=		${WRKDIR}/audioread-${VERSION}
 USE_LANGUAGES=	# none
-EGG_NAME=	audioread-1.0.0
+EGG_NAME=	audioread-${VERSION}
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
