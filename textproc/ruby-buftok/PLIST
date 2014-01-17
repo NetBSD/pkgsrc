@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/17 12:49:50 obache Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CONTRIBUTING.md
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE.md
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/buftok.gemspec
+${GEM_LIBDIR}/lib/buftok.rb
+${GEM_LIBDIR}/test/test_buftok.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
