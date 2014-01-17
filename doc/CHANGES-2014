@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.270 2014/01/17 14:35:15 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.271 2014/01/17 14:51:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -334,3 +334,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/ruby-http_parser.rb to 0.6.0 [obache 2014-01-17]
 	Added www/ruby-http version 0.5.0 [obache 2014-01-17]
 	Updated audio/py-audioread to 1.0.1 [wiz 2014-01-17]
+	Updated devel/py-pexpect to 3.0 [wiz 2014-01-17]
