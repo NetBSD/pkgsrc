@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.750 2014/01/03 03:50:26 rodent Exp $
+# $NetBSD: Makefile,v 1.751 2014/01/17 12:50:59 obache Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -654,6 +654,7 @@ SUBDIR+=	rubber
 SUBDIR+=	ruby-albino
 SUBDIR+=	ruby-amrita
 SUBDIR+=	ruby-bluecloth
+SUBDIR+=	ruby-buftok
 SUBDIR+=	ruby-builder
 SUBDIR+=	ruby-cabocha
 SUBDIR+=	ruby-classifier
