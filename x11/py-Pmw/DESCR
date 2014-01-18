@@ -5,3 +5,5 @@ It consists of a set of base classes and a library of flexible and
 extensible megawidgets built on this foundation. These megawidgets
 include notebooks, comboboxes, selection widgets, paned widgets,
 scrolled widgets and dialog windows.
+
+This is the python-2.x version of the module.
