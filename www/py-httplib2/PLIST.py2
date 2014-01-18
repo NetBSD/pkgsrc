@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.py2,v 1.1 2014/01/18 07:43:44 wiz Exp $
+${PYSITELIB}/httplib2/socks.py
+${PYSITELIB}/httplib2/socks.pyc
+${PYSITELIB}/httplib2/socks.pyo

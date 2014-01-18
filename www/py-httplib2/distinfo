@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2012/12/16 16:16:37 wiz Exp $
+$NetBSD: distinfo,v 1.3 2014/01/18 07:43:44 wiz Exp $
 
-SHA1 (httplib2-0.7.7.tar.gz) = 6c5b748676518e1162a10f1c3c63ca960a30a7a0
-RMD160 (httplib2-0.7.7.tar.gz) = 8b34577f317d63c6008227c6f06e81d30cb81983
-Size (httplib2-0.7.7.tar.gz) = 144020 bytes
+SHA1 (httplib2-0.8.tar.gz) = 169815e9417bfe0fdbb74644a3d3b892c0647612
+RMD160 (httplib2-0.8.tar.gz) = c5f812da928fbd5bd80c3134ba29a5e7654e3673
+Size (httplib2-0.8.tar.gz) = 148284 bytes
