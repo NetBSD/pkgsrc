@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.725 2014/01/01 08:58:18 obache Exp $
+# $NetBSD: Makefile,v 1.726 2014/01/18 19:49:43 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -348,6 +348,7 @@ SUBDIR+=	pixman
 SUBDIR+=	presentproto
 SUBDIR+=	printproto
 SUBDIR+=	py-Pmw
+SUBDIR+=	py-Pmw2
 SUBDIR+=	py-Tk
 SUBDIR+=	py-Xlib
 SUBDIR+=	py-gnome2
