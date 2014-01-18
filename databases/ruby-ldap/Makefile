@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2013/07/07 15:20:16 taca Exp $
+# $NetBSD: Makefile,v 1.16 2014/01/18 12:58:59 obache Exp $
 
-DISTNAME=	ruby-ldap-0.9.13
+DISTNAME=	ruby-ldap-0.9.16
 PKGNAME=	${DISTNAME:S/^ruby-/${RUBY_PKGPREFIX}-/}
-PKGREVISION=	1
 CATEGORIES=	databases ruby
 
 MAINTAINER=	obache@NetBSD.org
@@ -15,6 +14,8 @@ CONFIGURE_ARGS+=	--with-ldap-dir=${BUILDLINK_PREFIX.openldap-client}
 
 GEM_CLEANBUILD=	Makefile *.o *.time ldap.${RUBY_DLEXT} mkmf.log
 
+# for LDAP_OPT_X_SASL_NOCANON
+BUILDLINK_API_DEPENDS.openldap-client+=	openldap-client>=2.4.14
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../security/cyrus-sasl/buildlink3.mk"
 .include "../../lang/ruby/gem.mk"
