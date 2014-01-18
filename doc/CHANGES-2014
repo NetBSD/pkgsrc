@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.278 2014/01/17 23:32:10 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.279 2014/01/18 07:43:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -346,3 +346,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added net/py-dns3 version 1.11.1 [wiz 2014-01-17]
 	Updated textproc/py-Tempita to 0.5.2 [wiz 2014-01-17]
 	Updated textproc/py-html5lib to 0.999 [wiz 2014-01-17]
+	Updated www/py-httplib2 to 0.8 [wiz 2014-01-18]
