@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.751 2014/01/17 12:50:59 obache Exp $
+# $NetBSD: Makefile,v 1.752 2014/01/18 15:46:06 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -615,6 +615,7 @@ SUBDIR+=	py-iniparse
 SUBDIR+=	py-jinja
 SUBDIR+=	py-jinja2
 SUBDIR+=	py-jsonlib
+SUBDIR+=	py-jsonlib3
 SUBDIR+=	py-libxml2
 SUBDIR+=	py-libxslt
 SUBDIR+=	py-lxml
