@@ -1,4 +1,4 @@
-<!-- $NetBSD: creating.xml,v 1.14 2014/01/12 09:43:30 wiz Exp $ -->
+<!-- $NetBSD: creating.xml,v 1.15 2014/01/18 20:17:10 wiz Exp $ -->
 
 <chapter id="creating">
 <title>Creating a new pkgsrc package from scratch</title>
@@ -136,23 +136,12 @@ settings that are typical of KDE packages.</para>
 <para>Python modules and programs packages are easily created using a
 set of predefined variables.</para>
 
-<para>Most Python packages use either <quote>distutils</quote> or
-easy-setup (<quote>eggs</quote>).
-If the software uses <quote>distutils</quote>, set the
-<varname>PYDISTUTILSPKG</varname> variable to <quote>yes</quote> so
-pkgsrc will make use of this framework.
-<quote>distutils</quote> uses a script called <filename>setup.py</filename>,
-if the <quote>distutils</quote> driver is not called
-<filename>setup.py</filename>, set the <varname>PYSETUP</varname> variable
-to the name of the script.</para>
-
 <para>
-If the default Python versions are not supported by the software, set the
-<varname>PYTHON_VERSIONS_ACCEPTED</varname> variable to the Python versions
-the software is known to work with, from the most recent to the older
-one, e.g.
+If some Python versions are not supported by the software, set the
+<varname>PYTHON_VERSIONS_INCOMPATIBLE</varname> variable to the Python versions
+that are not supported, e.g.
 <programlisting>
-PYTHON_VERSIONS_ACCEPTED=       33 27 26
+PYTHON_VERSIONS_ACCEPTED=       26
 </programlisting></para>
 
 <para>
@@ -166,22 +155,43 @@ DISTNAME=   foopymodule-1.2.10
 PKGNAME=    ${PYPKGPREFIX}-${DISTNAME}
 </programlisting></para>
 
-<para>If it is an application, also include
-<quote><filename>../../lang/python/application.mk</filename></quote>
-before <quote>extension.mk</quote>.</para>
-
-<para>If the packaged software, either it is an application or a module, is
-egg-aware, you only need to include
-<quote><filename>../../lang/python/egg.mk</filename></quote>.</para>
-
-<para>In order to correctly set the path to the Python interpreter, use the
+<para>If it is an application, include
+<quote><filename>../../lang/python/application.mk</filename></quote>.
+In order to correctly set the path to the Python interpreter, use the
 <varname>REPLACE_PYTHON</varname> variable and set it to the list of files
 (paths relative to <varname>WRKSRC</varname>) that must be corrected.
-For example :
+For example:
 <programlisting>
 REPLACE_PYTHON=   *.py
 </programlisting></para>
 
+<para>Most Python packages use either <quote>distutils</quote> or
+easy-setup (<quote>eggs</quote>).
+If the software uses <quote>distutils</quote>, include 
+<quote><filename>../../lang/python/distutils.mk</filename></quote>.
+so pkgsrc will use this framework.
+<quote>distutils</quote> uses a script called <filename>setup.py</filename>,
+if the <quote>distutils</quote> driver is not called
+<filename>setup.py</filename>, set the <varname>PYSETUP</varname> variable
+to the name of the script.</para>
+
+<para>Otherwise, if the packaged software is egg-aware, you only need
+to include
+<quote><filename>../../lang/python/egg.mk</filename></quote>.</para>
+
+<para>Some Python modules have separate distributions for Python-2.x
+and Python-3.x support. In pkgsrc this is handled by the
+<filename>versioned_dependencies.mk</filename> file. Set
+<varname>PYTHON_VERSIONED_DEPENDENCIES</varname> to the list of
+packages that should be depended upon and include
+<quote><filename>../../lang/python/versioned_dependencies.mk</filename></quote>,
+then the pkgsrc infrastructure will depend on the appropriate package
+version. For example:
+<programlisting>
+PYTHON_VERSIONED_DEPENDENCIES=dateutil dns
+</programlisting>
+Look inside <filename>versioned_dependencies.mk</filename> for a list
+of supported packages.</para>
 </sect2>
 
 </sect1>
