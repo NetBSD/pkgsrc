@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2013/12/31 12:02:53 adam Exp $
+# $NetBSD: Makefile,v 1.48 2014/01/18 19:07:57 wiz Exp $
 
 DISTNAME=	Django-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -12,9 +12,6 @@ LICENSE=	modified-bsd
 
 PREV_PKGPATH=	www/py-django-devel
 
-# depends are not ready for Python 3.x
-#PYTHON_VERSIONS_INCLUDE_3X=	yes
-
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 USE_LANGUAGES=		# empty
@@ -24,7 +21,7 @@ REPLACE_PYTHON+=	${WRKSRC}/django/contrib/admin/bin/*.py
 REPLACE_PYTHON+=	${WRKSRC}/django/contrib/admin/static/admin/js/*.py
 REPLACE_PYTHON+=	${WRKSRC}/django/conf/project_template/*.py
 
-DEPENDS+=	${PYPKGPREFIX}-flup-[0-9]*:../../www/py-flup
+PYTHON_VERSIONED_DEPENDENCIES=	flup
 
 .include "options.mk"
 
@@ -52,4 +49,5 @@ PRINT_PLIST_AWK+=	{ gsub("^${BACKEND_PATH}/sqlite3/", "$${PLIST.sqlite}${BACKEND
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
