@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.282 2014/01/18 15:46:15 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.283 2014/01/18 19:05:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -349,3 +349,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-httplib2 to 0.8 [wiz 2014-01-18]
 	Updated databases/ruby-ldap to 0.9.16 [obache 2014-01-18]
 	Added textproc/py-jsonlib3 version 1.6.1 [wiz 2014-01-18]
+	Added www/py-flup3 version 1.0.3pre1 [wiz 2014-01-18]
