@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/01/18 07:40:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/01/18 08:08:59 obache Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -8,6 +8,8 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/genshi/__init__.py
 ${PYSITELIB}/genshi/__init__.pyc
 ${PYSITELIB}/genshi/__init__.pyo
+${PLIST.py3x}${PYSITELIB}/genshi/_speedups.c
+${PLIST.py2x}${PYSITELIB}/genshi/_speedups.so
 ${PYSITELIB}/genshi/builder.py
 ${PYSITELIB}/genshi/builder.pyc
 ${PYSITELIB}/genshi/builder.pyo
@@ -110,6 +112,12 @@ ${PYSITELIB}/genshi/template/tests/plugin.pyo
 ${PYSITELIB}/genshi/template/tests/templates/__init__.py
 ${PYSITELIB}/genshi/template/tests/templates/__init__.pyc
 ${PYSITELIB}/genshi/template/tests/templates/__init__.pyo
+${PLIST.py3x}${PYSITELIB}/genshi/template/tests/templates/functions.html
+${PLIST.py3x}${PYSITELIB}/genshi/template/tests/templates/functions.txt
+${PLIST.py3x}${PYSITELIB}/genshi/template/tests/templates/new_syntax.txt
+${PLIST.py3x}${PYSITELIB}/genshi/template/tests/templates/test.html
+${PLIST.py3x}${PYSITELIB}/genshi/template/tests/templates/test.txt
+${PLIST.py3x}${PYSITELIB}/genshi/template/tests/templates/test_no_doctype.html
 ${PYSITELIB}/genshi/template/tests/text.py
 ${PYSITELIB}/genshi/template/tests/text.pyc
 ${PYSITELIB}/genshi/template/tests/text.pyo

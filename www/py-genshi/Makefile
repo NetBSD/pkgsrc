@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/01/18 07:40:24 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2014/01/18 08:08:59 obache Exp $
 
 DISTNAME=	Genshi-0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -14,14 +14,6 @@ DEPENDS+=	${PYPKGPREFIX}-babel>=0.8:../../devel/py-babel
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 USE_LANGUAGES=	c
-
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYPKGPREFIX} == "py33"
-PLIST_SRC+=	PLIST PLIST.py3
-.else
-PLIST_SRC+=	PLIST PLIST.py2
-.endif
 
 do-test:
 		${RUN}cd ${WRKSRC};${PYTHONBIN} setup.py test
