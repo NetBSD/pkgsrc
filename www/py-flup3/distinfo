@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2014/01/18 19:05:13 wiz Exp $
+
+SHA1 (py-flup/cc23b715b120.tar.gz) = 8243c29a0554f3e5849bef769a54c8ebf1a8e59e
+RMD160 (py-flup/cc23b715b120.tar.gz) = ca55fbe9476cd589563224774975a38ed4454c6d
+Size (py-flup/cc23b715b120.tar.gz) = 54519 bytes
+SHA1 (patch-setup.cfg) = 29adf78d9d3c7d28de28a374b5bf6fe771b5159b
