@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2014/01/02 01:16:35 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.13 2014/01/18 06:11:37 ryoon Exp $
 bin/openjdk7-jar
 bin/openjdk7-java
 bin/openjdk7-javac
@@ -356,9 +356,7 @@ java/openjdk7/jre/bin/servertool
 java/openjdk7/jre/bin/tnameserv
 java/openjdk7/jre/bin/unpack200
 ${PLIST.i386}java/openjdk7/jre/lib/${ARCH}/client/Xusage.txt
-${PLIST.i386}java/openjdk7/jre/lib/${ARCH}/client/libjsig.diz
 ${PLIST.i386}java/openjdk7/jre/lib/${ARCH}/client/libjsig.so
-${PLIST.i386}java/openjdk7/jre/lib/${ARCH}/client/libjvm.diz
 ${PLIST.i386}java/openjdk7/jre/lib/${ARCH}/client/libjvm.so
 java/openjdk7/jre/lib/${ARCH}/headless/libmawt.so
 java/openjdk7/jre/lib/${ARCH}/jexec
