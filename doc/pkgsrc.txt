@@ -3559,17 +3559,11 @@ numerous settings that are typical of KDE packages.
 Python modules and programs packages are easily created using a set of
 predefined variables.
 
-Most Python packages use either "distutils" or easy-setup ("eggs"). If the
-software uses "distutils", set the PYDISTUTILSPKG variable to "yes" so pkgsrc
-will make use of this framework. "distutils" uses a script called setup.py, if
-the "distutils" driver is not called setup.py, set the PYSETUP variable to the
-name of the script.
+If some Python versions are not supported by the software, set the
+PYTHON_VERSIONS_INCOMPATIBLE variable to the Python versions that are not
+supported, e.g.
 
-If the default Python versions are not supported by the software, set the
-PYTHON_VERSIONS_ACCEPTED variable to the Python versions the software is known
-to work with, from the most recent to the older one, e.g.
-
-PYTHON_VERSIONS_ACCEPTED=       33 27 26
+PYTHON_VERSIONS_ACCEPTED=       26
 
 If the packaged software is a Python module, include "../../lang/python/
 extension.mk". In this case, the package directory should be called "
@@ -3578,17 +3572,31 @@ py-software" and PKGNAME should be set to "${PYPKGPREFIX}-${DISTNAME}", e.g.
 DISTNAME=   foopymodule-1.2.10
 PKGNAME=    ${PYPKGPREFIX}-${DISTNAME}
 
-If it is an application, also include "../../lang/python/application.mk" before
-"extension.mk".
-
-If the packaged software, either it is an application or a module, is
-egg-aware, you only need to include "../../lang/python/egg.mk".
-
-In order to correctly set the path to the Python interpreter, use the
-REPLACE_PYTHON variable and set it to the list of files (paths relative to
-WRKSRC) that must be corrected. For example :
+If it is an application, include "../../lang/python/application.mk". In order
+to correctly set the path to the Python interpreter, use the REPLACE_PYTHON
+variable and set it to the list of files (paths relative to WRKSRC) that must
+be corrected. For example:
 
 REPLACE_PYTHON=   *.py
+
+Most Python packages use either "distutils" or easy-setup ("eggs"). If the
+software uses "distutils", include "../../lang/python/distutils.mk". so pkgsrc
+will use this framework. "distutils" uses a script called setup.py, if the "
+distutils" driver is not called setup.py, set the PYSETUP variable to the name
+of the script.
+
+Otherwise, if the packaged software is egg-aware, you only need to include "..
+/../lang/python/egg.mk".
+
+Some Python modules have separate distributions for Python-2.x and Python-3.x
+support. In pkgsrc this is handled by the versioned_dependencies.mk file. Set
+PYTHON_VERSIONED_DEPENDENCIES to the list of packages that should be depended
+upon and include "../../lang/python/versioned_dependencies.mk", then the pkgsrc
+infrastructure will depend on the appropriate package version. For example:
+
+PYTHON_VERSIONED_DEPENDENCIES=dateutil dns
+
+Look inside versioned_dependencies.mk for a list of supported packages.
 
 10.2. Examples
 
