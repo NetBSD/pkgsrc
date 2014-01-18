@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.2 2014/01/17 23:10:05 wiz Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.3 2014/01/18 15:13:26 wiz Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -23,7 +23,7 @@ _SUPPORTED_PACKAGES+=dns net/py-dns net/py-dns3
 .for pkg in ${PYTHON_VERSIONED_DEPENDENCIES}
 _PKG_MATCHED=	no
 .for name py2dir py3dir in ${_SUPPORTED_PACKAGES}
-.if ${pkg} == ${name}
+.if "${pkg}" == "${name}"
 _PKG_MATCHED=	yes
 .if ${PYPKGPREFIX} == "py26" || ${PYPKGPREFIX} == "py27"
 DEPENDS+=	${PYPKGPREFIX}-${pkg}-[0-9]*:../../${py2dir}
