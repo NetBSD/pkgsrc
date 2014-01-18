@@ -1,4 +1,4 @@
-<!-- $NetBSD: creating.xml,v 1.15 2014/01/18 20:17:10 wiz Exp $ -->
+<!-- $NetBSD: creating.xml,v 1.16 2014/01/18 20:18:50 wiz Exp $ -->
 
 <chapter id="creating">
 <title>Creating a new pkgsrc package from scratch</title>
@@ -141,7 +141,7 @@ If some Python versions are not supported by the software, set the
 <varname>PYTHON_VERSIONS_INCOMPATIBLE</varname> variable to the Python versions
 that are not supported, e.g.
 <programlisting>
-PYTHON_VERSIONS_ACCEPTED=       26
+PYTHON_VERSIONS_INCOMPATIBLE=       26
 </programlisting></para>
 
 <para>
