@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/01/18 15:45:30 wiz Exp $
+
+SHA1 (jsonlib-python3-1.6.1.tar.gz) = f4cdf3222d35f495a064b55a895a9c42a4faa8b1
+RMD160 (jsonlib-python3-1.6.1.tar.gz) = 4eaf63352e2242f54204e3ed9a7df8ef7e1c7f37
+Size (jsonlib-python3-1.6.1.tar.gz) = 43482 bytes

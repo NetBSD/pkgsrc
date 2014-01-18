@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/18 15:45:30 wiz Exp $
+${PYSITELIB}/_jsonlib.so
+${PYSITELIB}/jsonlib.py
+${PYSITELIB}/jsonlib.pyc
+${PYSITELIB}/jsonlib.pyo
+${PYSITELIB}/${EGG_FILE}
