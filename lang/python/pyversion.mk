@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.110 2014/01/12 09:01:50 wiz Exp $
+# $NetBSD: pyversion.mk,v 1.111 2014/01/18 19:50:27 wiz Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -30,19 +30,11 @@
 #	Possible values: 33 27 26
 #	Default: (33) 27 26
 #
-# PYTHON_VERSIONS_INCLUDE_3X
-#	Wether the default PYTHON_VERSIONS_ACCEPTED should include
-#	3.x versions for for this package or not.
-#	This variable must be set before including bsd.prefs.mk.
-#
-#	Possible values: yes no
-#	Default: no
-#
 # PYTHON_VERSIONS_INCOMPATIBLE
 #	The Python versions that are NOT acceptable for the package.
 #
 #	Possible values: 26 27 33
-#	Default: (depends on the platform)
+#	Default: (empty)
 #
 # PYTHON_FOR_BUILD_ONLY
 #	Whether Python is needed only at build time or at run time.
@@ -93,11 +85,7 @@ BUILD_DEFS+=		PYTHON_VERSION_DEFAULT
 BUILD_DEFS_EFFECTS+=	PYPACKAGE
 
 PYTHON_VERSION_DEFAULT?=		27
-.if ${PYTHON_VERSIONS_INCLUDE_3X:U:tl} == "yes"
 PYTHON_VERSIONS_ACCEPTED?=		33 27 26
-.else
-PYTHON_VERSIONS_ACCEPTED?=		27 26
-.endif
 PYTHON_VERSIONS_INCOMPATIBLE?=		# empty by default
 
 BUILDLINK_API_DEPENDS.python26?=		python26>=2.6
