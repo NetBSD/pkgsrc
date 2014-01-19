@@ -1,7 +1,7 @@
-$NetBSD: patch-mintlib-CVS-20130415_configvars,v 1.1 2013/09/12 14:02:01 ryoon Exp $
+$NetBSD: patch-mintlib-CVS-20130415_configvars,v 1.2 2014/01/19 07:43:14 ryoon Exp $
 
---- mintlib-CVS-20130415/configvars.orig	2013-04-15 21:27:28.000000000 +0000
-+++ mintlib-CVS-20130415/configvars
+--- mintlib-CVS-20131219/configvars.orig	2013-04-15 21:27:28.000000000 +0000
++++ mintlib-CVS-20131219/configvars
 @@ -12,7 +12,7 @@ VERSION=0.59.2
  # get installed.  You have to take car yourself that the libraries
  # and include files and so on will get installed in the right place
