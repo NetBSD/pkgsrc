@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.284 2014/01/18 19:50:08 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.285 2014/01/19 00:18:50 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -351,3 +351,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added textproc/py-jsonlib3 version 1.6.1 [wiz 2014-01-18]
 	Added www/py-flup3 version 1.0.3pre1 [wiz 2014-01-18]
 	Added x11/py-Pmw2 version 2.0.0rc1 [wiz 2014-01-18]
+	Updated textproc/py-jinja2 to 2.7.2 [rodent 2014-01-19]
