@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/10/27 21:58:30 kleink Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/01/19 17:38:12 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -225,10 +225,6 @@ ${PYSITELIB}/flask_admin/tests/.coverage
 ${PYSITELIB}/flask_admin/tests/__init__.py
 ${PYSITELIB}/flask_admin/tests/__init__.pyc
 ${PYSITELIB}/flask_admin/tests/__init__.pyo
-${PYSITELIB}/flask_admin/tests/__pycache__/__init__.cpython-33.pyc
-${PYSITELIB}/flask_admin/tests/__pycache__/test_base.cpython-33.pyc
-${PYSITELIB}/flask_admin/tests/__pycache__/test_form_upload.cpython-33.pyc
-${PYSITELIB}/flask_admin/tests/__pycache__/test_model.cpython-33.pyc
 ${PYSITELIB}/flask_admin/tests/data/copyleft.jpg
 ${PYSITELIB}/flask_admin/tests/data/copyleft.png
 ${PYSITELIB}/flask_admin/tests/data/copyleft.tiff
@@ -236,8 +232,6 @@ ${PYSITELIB}/flask_admin/tests/dump.rdb
 ${PYSITELIB}/flask_admin/tests/fileadmin/__init__.py
 ${PYSITELIB}/flask_admin/tests/fileadmin/__init__.pyc
 ${PYSITELIB}/flask_admin/tests/fileadmin/__init__.pyo
-${PYSITELIB}/flask_admin/tests/fileadmin/__pycache__/__init__.cpython-33.pyc
-${PYSITELIB}/flask_admin/tests/fileadmin/__pycache__/test_fileadmin.cpython-33.pyc
 ${PYSITELIB}/flask_admin/tests/fileadmin/files/dummy.txt
 ${PYSITELIB}/flask_admin/tests/fileadmin/test_fileadmin.py
 ${PYSITELIB}/flask_admin/tests/fileadmin/test_fileadmin.pyc
@@ -248,34 +242,24 @@ ${PYSITELIB}/flask_admin/tests/mock.pyo
 ${PYSITELIB}/flask_admin/tests/mongoengine/__init__.py
 ${PYSITELIB}/flask_admin/tests/mongoengine/__init__.pyc
 ${PYSITELIB}/flask_admin/tests/mongoengine/__init__.pyo
-${PYSITELIB}/flask_admin/tests/mongoengine/__pycache__/__init__.cpython-33.pyc
-${PYSITELIB}/flask_admin/tests/mongoengine/__pycache__/test_basic.cpython-33.pyc
 ${PYSITELIB}/flask_admin/tests/mongoengine/test_basic.py
 ${PYSITELIB}/flask_admin/tests/mongoengine/test_basic.pyc
 ${PYSITELIB}/flask_admin/tests/mongoengine/test_basic.pyo
 ${PYSITELIB}/flask_admin/tests/peeweemodel/__init__.py
 ${PYSITELIB}/flask_admin/tests/peeweemodel/__init__.pyc
 ${PYSITELIB}/flask_admin/tests/peeweemodel/__init__.pyo
-${PYSITELIB}/flask_admin/tests/peeweemodel/__pycache__/__init__.cpython-33.pyc
-${PYSITELIB}/flask_admin/tests/peeweemodel/__pycache__/test_basic.cpython-33.pyc
 ${PYSITELIB}/flask_admin/tests/peeweemodel/test_basic.py
 ${PYSITELIB}/flask_admin/tests/peeweemodel/test_basic.pyc
 ${PYSITELIB}/flask_admin/tests/peeweemodel/test_basic.pyo
 ${PYSITELIB}/flask_admin/tests/pymongo/__init__.py
 ${PYSITELIB}/flask_admin/tests/pymongo/__init__.pyc
 ${PYSITELIB}/flask_admin/tests/pymongo/__init__.pyo
-${PYSITELIB}/flask_admin/tests/pymongo/__pycache__/__init__.cpython-33.pyc
-${PYSITELIB}/flask_admin/tests/pymongo/__pycache__/test_basic.cpython-33.pyc
 ${PYSITELIB}/flask_admin/tests/pymongo/test_basic.py
 ${PYSITELIB}/flask_admin/tests/pymongo/test_basic.pyc
 ${PYSITELIB}/flask_admin/tests/pymongo/test_basic.pyo
 ${PYSITELIB}/flask_admin/tests/sqlamodel/__init__.py
 ${PYSITELIB}/flask_admin/tests/sqlamodel/__init__.pyc
 ${PYSITELIB}/flask_admin/tests/sqlamodel/__init__.pyo
-${PYSITELIB}/flask_admin/tests/sqlamodel/__pycache__/__init__.cpython-33.pyc
-${PYSITELIB}/flask_admin/tests/sqlamodel/__pycache__/test_basic.cpython-33.pyc
-${PYSITELIB}/flask_admin/tests/sqlamodel/__pycache__/test_form_rules.cpython-33.pyc
-${PYSITELIB}/flask_admin/tests/sqlamodel/__pycache__/test_inlineform.cpython-33.pyc
 ${PYSITELIB}/flask_admin/tests/sqlamodel/templates/another_macro.html
 ${PYSITELIB}/flask_admin/tests/sqlamodel/templates/macro.html
 ${PYSITELIB}/flask_admin/tests/sqlamodel/test_basic.py
@@ -292,7 +276,6 @@ ${PYSITELIB}/flask_admin/tests/templates/mock.html
 ${PYSITELIB}/flask_admin/tests/test_base.py
 ${PYSITELIB}/flask_admin/tests/test_base.pyc
 ${PYSITELIB}/flask_admin/tests/test_base.pyo
-${PYSITELIB}/flask_admin/tests/test_form.pyc
 ${PYSITELIB}/flask_admin/tests/test_form_upload.py
 ${PYSITELIB}/flask_admin/tests/test_form_upload.pyc
 ${PYSITELIB}/flask_admin/tests/test_form_upload.pyo
@@ -307,7 +290,6 @@ ${PYSITELIB}/flask_admin/tools.pyo
 ${PYSITELIB}/flask_admin/translations/__init__.py
 ${PYSITELIB}/flask_admin/translations/__init__.pyc
 ${PYSITELIB}/flask_admin/translations/__init__.pyo
-${PYSITELIB}/flask_admin/translations/__pycache__/__init__.cpython-33.pyc
 ${PYSITELIB}/flask_admin/translations/cs/LC_MESSAGES/admin.mo
 ${PYSITELIB}/flask_admin/translations/cs/LC_MESSAGES/admin.po
 ${PYSITELIB}/flask_admin/translations/de/LC_MESSAGES/admin.mo
