@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2012/04/07 11:32:30 joerg Exp $
-
-SHA1 (pyfits-2.4.0.tar.gz) = 5a0c9c7fd058fc44a22f1c00682461ecf4ebc3c1
-RMD160 (pyfits-2.4.0.tar.gz) = 3256f2111db7c994f1deb7d6ec37cb6a2a003fb0
-Size (pyfits-2.4.0.tar.gz) = 284236 bytes
-SHA1 (patch-aa) = b1d6964efdee73628f716e37e0dc1c18d17e7610
-SHA1 (patch-stsci_distutils_hack.py) = de3664947c9f194f518d6a3d45d778104cbce7a0
