@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12897 2014/01/19 14:07:24 ryoon Exp $
+$NetBSD: TODO,v 1.12898 2014/01/19 14:17:35 rumko Exp $
 
 Suggested new packages
 ======================
@@ -769,7 +769,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lsh-2.1
 	o ltris-1.0.19
 	o lwm-1.2.3
-	o lyx-2.0.6
 	o m17n-db-1.6.5
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
