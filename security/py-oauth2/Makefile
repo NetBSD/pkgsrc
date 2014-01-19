@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/05/12 19:55:42 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/19 18:55:26 wiz Exp $
 
 DISTNAME=	oauth2-1.5.211
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,13 +6,13 @@ CATEGORIES=	python security www
 MASTER_SITES=	http://pypi.python.org/packages/source/o/oauth/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pypi.python.org/pypi/oauth/
+HOMEPAGE=	https://pypi.python.org/pypi/oauth2/
 COMMENT=	Python OAuth2 library
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.7.7:../../www/py-httplib2
 
-PYDISTUTILSPKG=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.5.211
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
