@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2012/10/04 09:19:20 asau Exp $
-#
+# $NetBSD: Makefile,v 1.14 2014/01/19 20:00:29 wiz Exp $
 
-DISTNAME=		pyproj-1.8.3
+DISTNAME=		pyproj-1.9.3
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/pyproj/proj/}
-PKGREVISION=		1
 CATEGORIES=		geography
 MASTER_SITES=		http://pyproj.googlecode.com/files/
 
@@ -18,6 +16,5 @@ post-install:
 	${INSTALL} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/${PKGNAME_NOREV}
 
 .include "../../lang/python/distutils.mk"
-
 .include "../../geography/proj/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
