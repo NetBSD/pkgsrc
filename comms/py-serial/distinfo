@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/12/09 15:26:34 tsarna Exp $
+$NetBSD: distinfo,v 1.2 2014/01/19 09:49:55 wiz Exp $
 
-SHA1 (pyserial-2.6.tar.gz) = 39e6d9a37b826c48eab6959591a174135fc2873c
-RMD160 (pyserial-2.6.tar.gz) = a544cb4ac0dad2c7f93855f1db1be102cdb1e9cc
-Size (pyserial-2.6.tar.gz) = 116289 bytes
+SHA1 (pyserial-2.7.tar.gz) = f15694b1bea9e4369c1931dc5cf09e37e5c562cf
+RMD160 (pyserial-2.7.tar.gz) = b86758d74e8f3cd61430bf7d76db496ae732f257
+Size (pyserial-2.7.tar.gz) = 122081 bytes
