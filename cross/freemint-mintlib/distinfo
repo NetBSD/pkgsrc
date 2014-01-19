@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2013/09/12 14:02:01 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2014/01/19 07:43:14 ryoon Exp $
 
 SHA1 (gcc-4.6.4-mint-20130415.patch.bz2) = bd2e88f2b862cc404f47144fb67375b1fe17291b
 RMD160 (gcc-4.6.4-mint-20130415.patch.bz2) = d3cafafb1caa1a1eb915c5f15f4063d6a70ac4ee
@@ -6,7 +6,7 @@ Size (gcc-4.6.4-mint-20130415.patch.bz2) = 11059 bytes
 SHA1 (gcc-4.6.4.tar.bz2) = 63933a8a5cf725626585dbba993c8b0f6db1335d
 RMD160 (gcc-4.6.4.tar.bz2) = 6a58b053812cf75622bc4579e020cd9471f46916
 Size (gcc-4.6.4.tar.bz2) = 72006076 bytes
-SHA1 (mintlib-CVS-20130415.tar.gz) = 7c6fe3e1e837b7e3e12bb8af4bdcb7b31234b557
-RMD160 (mintlib-CVS-20130415.tar.gz) = 873b551a70ba3500601d7c674735088fa6edbf8f
-Size (mintlib-CVS-20130415.tar.gz) = 1881345 bytes
-SHA1 (patch-mintlib-CVS-20130415_configvars) = d4ccc201450fe8102db68c2a3806e2f222cc4e5c
+SHA1 (mintlib-CVS-20131219.tar.gz) = c49107b07c775daa5028ac964ea1c558eede9cd1
+RMD160 (mintlib-CVS-20131219.tar.gz) = 949b0d3abe28f26539198da27d2dd7c7bd544f29
+Size (mintlib-CVS-20131219.tar.gz) = 1888097 bytes
+SHA1 (patch-mintlib-CVS-20130415_configvars) = f1d0f2e1fe244c475634cd1ab4dd5ddc2b9a73f3
