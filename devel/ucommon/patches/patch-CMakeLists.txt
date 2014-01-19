@@ -1,10 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2013/04/17 00:51:20 rodent Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2014/01/19 00:49:06 rodent Exp $
 
 Fix INSTALL_MANDIR overwriting itself.
 
---- CMakeLists.txt.orig	2011-11-12 15:24:39.000000000 +0000
+--- CMakeLists.txt.orig	2014-01-04 17:15:36.000000000 +0000
 +++ CMakeLists.txt
-@@ -36,15 +36,7 @@ if(WIN32)
+@@ -42,15 +42,7 @@ if(WIN32)
      set(SYSCONFDIR "etc" CACHE PATH "config directory")
      set(STATEDIR "var" CACHE PATH "state directory")
  else()
