@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/09/12 14:06:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/19 07:36:18 ryoon Exp $
 
-DISTNAME=	 	ldg-SVN-20121005
+DISTNAME=	 	ldg-SVN-20131104
 PKGNAME=		cross-freemint-${DISTNAME:S/SVN-//}
 CATEGORIES=		cross
 MASTER_SITES=		http://vincent.riviere.free.fr/soft/m68k-atari-mint/archives/
@@ -8,6 +8,15 @@ MAINTAINER=		ryoon@NetBSD.org
 HOMEPAGE=		http://vincent.riviere.free.fr/soft/m68k-atari-mint/
 COMMENT=		LDG for FreeMiNT
 EXTRACT_SUFX=		.tar.bz2
+LICENSE=		gnu-lgpl-v2.1
+
+SUBST_CLASSES+=		dos_eol
+SUBST_MESSAGE.dos_eol=	Removing DOS line-ends
+SUBST_STAGE.dos_eol=	post-extract
+SUBST_FILES.dos_eol=	src/ldgmgr/gcc.mak
+SUBST_FILES.dos_eol+=	src/ldgd/gcc.mak
+SUBST_FILTER_CMD.dos_eol=	${TR} -d '\r'
+
 
 DEPENDS+=	cross-freemint-gcc-[0-9]*:../../cross/freemint-gcc
 
@@ -18,6 +27,7 @@ FREEMINT_PREFIX=	${PREFIX}/cross-freemint
 BUILD_DIRS=		src/devel
 
 MAKE_FLAGS+=		FREEMINT_PREFIX=${FREEMINT_PREFIX}
+BUILD_TARGET=		cross
 
 COMMON_CFLAGS=		-W -Wall -O2 -fomit-frame-pointer -I../../include -I.. -I.
 
