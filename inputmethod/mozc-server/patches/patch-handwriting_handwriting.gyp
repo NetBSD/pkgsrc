@@ -1,9 +1,9 @@
-$NetBSD: patch-handwriting_handwriting.gyp,v 1.2 2013/07/20 04:34:53 ryoon Exp $
+$NetBSD: patch-handwriting_handwriting.gyp,v 1.3 2014/01/19 01:18:50 ryoon Exp $
 
---- handwriting/handwriting.gyp.orig	2013-07-17 02:38:04.000000000 +0000
+--- handwriting/handwriting.gyp.orig	2014-01-06 07:10:31.000000000 +0000
 +++ handwriting/handwriting.gyp
 @@ -43,12 +43,12 @@
-         '../gui/zinnia.gyp:zinnia',
+         'zinnia.gyp:zinnia',
        ],
        'conditions': [
 -        ['target_platform=="Linux" and use_libzinnia==1', {

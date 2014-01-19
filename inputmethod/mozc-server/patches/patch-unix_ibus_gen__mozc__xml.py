@@ -1,8 +1,8 @@
-$NetBSD: patch-unix_ibus_gen__mozc__xml.py,v 1.3 2013/09/07 18:42:14 ryoon Exp $
+$NetBSD: patch-unix_ibus_gen__mozc__xml.py,v 1.4 2014/01/19 01:18:50 ryoon Exp $
 
 * Fix for pkgsrc installation.
 
---- unix/ibus/gen_mozc_xml.py.orig	2013-08-28 05:25:59.000000000 +0000
+--- unix/ibus/gen_mozc_xml.py.orig	2014-01-06 07:10:26.000000000 +0000
 +++ unix/ibus/gen_mozc_xml.py
 @@ -47,7 +47,7 @@ import sys
  IBUS_COMPONENT_PROPS = {
@@ -42,20 +42,21 @@ $NetBSD: patch-unix_ibus_gen__mozc__xml.py,v 1.3 2013/09/07 18:42:14 ryoon Exp $
 +        'longname': ['%(product_name)s'],
 +        'layout': ['default'],
 +    },
-     # On Chrome/Chromium OS, we provide three engines.
-     'ChromeOS': {
-         # DO NOT change the engine name 'mozc-jp'. The names is referenced by
-@@ -225,13 +241,21 @@ def main():
-   platform = options.platform
-   common_props = IBUS_ENGINE_COMMON_PROPS
-   if platform == 'Linux':
--    setup_arg.append(os.path.join(options.server_dir, 'mozc_tool'))
-+    setup_arg.append(os.path.join("@PREFIX@/libexec", 'mozc_tool'))
-     setup_arg.append('--mode=config_dialog')
-     if IsIBus15OrGreater(options):
-       # A tentative workaround against IBus 1.5
-       platform = 'Linux-IBus1.5'
-       common_props = IBUS_1_5_ENGINE_COMMON_PROPS
+ }
+ 
+ # A dictionary from --branding to a product name which is embedded into the
+@@ -209,7 +225,7 @@ def main():
+   (options, unused_args) = parser.parse_args()
+ 
+   setup_arg = []
+-  setup_arg.append(os.path.join(options.server_dir, 'mozc_tool'))
++  setup_arg.append(os.path.join("@PREFIX@/libexec", 'mozc_tool'))
+   setup_arg.append('--mode=config_dialog')
+   if IsIBus15OrGreater(options):
+     # A tentative workaround against IBus 1.5
+@@ -219,6 +235,14 @@ def main():
+     platform = 'Linux'
+     common_props = IBUS_ENGINE_COMMON_PROPS
  
 +  if platform == 'NetBSD':
 +    setup_arg.append(os.path.join("@PREFIX@/libexec", 'mozc_tool'))
