@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.21 2013/07/09 08:11:05 richard Exp $
+$NetBSD: distinfo,v 1.22 2014/01/19 14:06:41 ryoon Exp $
 
-SHA1 (cfe-3.3.src.tar.gz) = ccd6dbf2cdb1189a028b70bcb8a22509c25c74c8
-RMD160 (cfe-3.3.src.tar.gz) = ff5d684c83b0c1aa36595dcb457da80b58eaf58f
-Size (cfe-3.3.src.tar.gz) = 9425539 bytes
-SHA1 (llvm-3.3.src.tar.gz) = c6c22d5593419e3cb47cbcf16d967640e5cce133
-RMD160 (llvm-3.3.src.tar.gz) = 22878ad746c50b02a7ac8713dd6f8c95c7af4220
-Size (llvm-3.3.src.tar.gz) = 13602421 bytes
+SHA1 (clang-3.4.src.tar.gz) = a6a3c815dd045e9c13c7ae37d2cfefe65607860d
+RMD160 (clang-3.4.src.tar.gz) = 4fbd7e735edc96e224a82ebe2277c69efc488e6b
+Size (clang-3.4.src.tar.gz) = 10619607 bytes
+SHA1 (llvm-3.4.src.tar.gz) = 10b1fd085b45d8b19adb9a628353ce347bc136b8
+RMD160 (llvm-3.4.src.tar.gz) = 67e3f7baa679ca95d944b9cc3528d1ffbe3cdee0
+Size (llvm-3.4.src.tar.gz) = 15920544 bytes
 SHA1 (patch-ab) = 8dd0da6d47a57ac25eea358996cf874dd3289e08
-SHA1 (patch-ac) = d94fdd7508302e6fb6acbf58f7b2305c3db5cf08
+SHA1 (patch-ac) = 0f0cc98d443ec957fc5374fb491809d27e4f9d4e
 SHA1 (patch-ad) = ad1f6720e4c73e57fce10ba968b03637a133602d
-SHA1 (patch-include_llvm_Support_Host.h) = 102a76575b94f3d1b5fe0b138eb0ad54efd08b05
+SHA1 (patch-include_llvm_Support_Host.h) = 545f9542cd2aaa6cea58d3653902b4e1a9e7189a
 SHA1 (patch-utils_lit_utils_check-coverage) = aec7c140d5b9e8cc38a0022533a5848d6b1ff0b8
 SHA1 (patch-utils_lit_utils_check-sdist) = df63c41b07f7531e787b54f6994458869023b66c
