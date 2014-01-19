@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.3 2013/12/20 22:42:38 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2014/01/19 22:44:14 wiz Exp $
 
-DISTNAME=	renpy-6.15.7-source
+DISTNAME=	renpy-6.16.5-source
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-source//}
-PKGREVISION=	1
 CATEGORIES=	games
-MASTER_SITES=	http://www.renpy.org/dl/6.15.7/
+MASTER_SITES=	http://www.renpy.org/dl/6.16.5/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://www.renpy.org/dl/6.15.7/
+HOMEPAGE=	http://www.renpy.org/
 COMMENT=	Visual Novel Engine written in Python
 LICENSE=	mit
 
 USE_TOOLS+=	pax
 
-PYDISTUTILSPKG=	yes
 PYSETUPSUBDIR=	module
+EGG_NAME=	Ren_Py-${PKGVERSION}.525
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 6.16.5
 
 RENPY_DEPS_INSTALL+=	${BUILDLINK_PREFIX.SDL}
 RENPY_DEPS_INSTALL+=	${BUILDLINK_PREFIX.freetype2}
@@ -26,7 +26,7 @@ MAKE_ENV+=	RENPY_DEPS_INSTALL=${RENPY_DEPS_INSTALL:ts;:S,;,::,g:Q}
 
 INSTALLATION_DIRS=	bin
 
-REPLACE_PYTHON=		renpy.py
+REPLACE_PYTHON=		renpy.py launcher/game/tkaskdir.py
 
 RENPY_DIR=		share/renpy
 
@@ -47,6 +47,6 @@ post-install:
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../multimedia/ffmpeg010/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
