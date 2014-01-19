@@ -1,6 +1,6 @@
-$NetBSD: patch-inc_ucommon_string.h,v 1.1 2013/07/13 19:22:27 joerg Exp $
+$NetBSD: patch-inc_ucommon_string.h,v 1.2 2014/01/19 00:49:06 rodent Exp $
 
---- inc/ucommon/string.h.orig	2013-07-12 14:12:23.000000000 +0000
+--- inc/ucommon/string.h.orig	2014-01-04 17:30:39.000000000 +0000
 +++ inc/ucommon/string.h
 @@ -1627,7 +1627,7 @@ public:
   * @param string2 to compare.
