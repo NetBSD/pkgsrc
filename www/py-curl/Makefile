@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2013/02/06 23:24:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.46 2014/01/19 09:31:33 wiz Exp $
 
-DISTNAME=	pycurl-7.19.0
+DISTNAME=	pycurl-7.19.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	http://pycurl.sourceforge.net/download/
 
@@ -14,6 +13,8 @@ LICENSE=	gnu-lgpl-v2.1 OR mit
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 BUILDLINK_API_DEPENDS.curl+=	curl>=7.19.0
+
+PYSETUPARGS=	--with-ssl
 
 .include "../../www/curl/buildlink3.mk"
 .include "../../lang/python/distutils.mk"
