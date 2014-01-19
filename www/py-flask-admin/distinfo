@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/10/27 21:58:30 kleink Exp $
+$NetBSD: distinfo,v 1.5 2014/01/19 19:57:39 kleink Exp $
 
-SHA1 (Flask-Admin-1.0.7.tar.gz) = f7d599117d3725aaf93327d3b40102531d1d4cbd
-RMD160 (Flask-Admin-1.0.7.tar.gz) = c3797ee04aff4486d652f3caeebd98c79df5a2d2
-Size (Flask-Admin-1.0.7.tar.gz) = 389112 bytes
+SHA1 (Flask-Admin-1.0.7.tar.gz) = 9979ec5599a300f6d82cff3ad13f956a453571fb
+RMD160 (Flask-Admin-1.0.7.tar.gz) = f93694810adbb8fda3ddd576078f4428bfde289f
+Size (Flask-Admin-1.0.7.tar.gz) = 330572 bytes
