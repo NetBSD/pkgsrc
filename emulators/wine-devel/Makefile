@@ -1,26 +1,26 @@
-# $NetBSD: Makefile,v 1.43 2014/01/01 11:52:15 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2014/01/19 10:58:23 adam Exp $
 
-DISTNAME=	wine-1.3.26
-PKGREVISION=	17
+DISTNAME=	wine-1.7.11
 CATEGORIES=	emulators
 MASTER_SITES=	http://ibiblio.org/pub/linux/system/emulators/wine/ \
 		${MASTER_SITE_SOURCEFORGE:=wine/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://www.winehq.com/
+HOMEPAGE=	http://www.winehq.org/
 COMMENT=	Free implementation of Windows on Unix
 LICENSE=	gnu-lgpl-v2.1
 
 BUILD_DEPENDS+=	fontforge-[0-9]*:../../fonts/fontforge
 
-ONLY_FOR_PLATFORM+=	*-*-i386
-#ONLY_FOR_PLATFORM+=	*-*-x86_64
+ONLY_FOR_PLATFORM+=	*-*-i386 *-*-x86_64
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
 USE_NCURSES=		yes
-USE_TOOLS+=		bison flex gmake mktemp
+USE_TOOLS+=		bison flex gmake mktemp msgfmt
 FLEX_REQD=		2.5.33
 GNU_CONFIGURE=		yes
 UNLIMIT_RESOURCES=	datasize
@@ -30,7 +30,6 @@ REPLACE_PERL+=		tools/winemaker tools/winedump/function_grep.pl
 # The Wine configure script has problems locating the libraries in the
 # buildlink directory, so prepend all of the LDFLAGS necessary to link
 # against the libraries.
-#
 CONFIGURE_ENV+=		X_LIBS=${LDFLAGS:M*:Q}
 CONFIGURE_ENV+=		CFLAGS=${CFLAGS:M*:Q}\ -DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
 CONFIGURE_ENV+=		LDD=${LDD:Q}
@@ -47,21 +46,15 @@ CONFIGURE_ENV+=		ac_cv_prog_AS=${AS:Q}\ --32
 CONFIGURE_ENV+=		ac_cv_prog_LD=${LD:Q}\ -m\ elf_i386
 .endif
 # Needs GCC >= 4.4
-#.if !empty(MACHINE_ARCH:Mx86_64)
-#CONFIGURE_ARGS+=	--disable-win16
-#CONFIGURE_ARGS+=	--enable-win64
-#.endif
+.if !empty(MACHINE_ARCH:Mx86_64)
+CONFIGURE_ARGS+=	--disable-win16
+CONFIGURE_ARGS+=	--enable-win64
+.endif
 
 .include "options.mk"
 
-post-install:
-.for tool in fnt2bdf
-	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/tools/${tool} \
-		${DESTDIR}${PREFIX}/bin
-.endfor
-
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../graphics/lcms/buildlink3.mk"
+.include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
