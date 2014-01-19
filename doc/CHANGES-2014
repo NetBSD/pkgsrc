@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.301 2014/01/19 13:43:48 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.302 2014/01/19 14:07:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -371,3 +371,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/omniORB to 4.1.7 [wiz 2014-01-19]
 	Updated net/libsoup24 to 2.44.2 [wiz 2014-01-19]
 	Updated graphics/py-biggles to 1.6.6 [wiz 2014-01-19]
+	Updated lang/clang to 3.4 [ryoon 2014-01-19]
