@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/06/03 21:29:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/01/19 19:56:32 wiz Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/bs4/__init__.py
 ${PYSITELIB}/bs4/__init__.pyc
@@ -18,6 +18,9 @@ ${PYSITELIB}/bs4/builder/_lxml.pyo
 ${PYSITELIB}/bs4/dammit.py
 ${PYSITELIB}/bs4/dammit.pyc
 ${PYSITELIB}/bs4/dammit.pyo
+${PYSITELIB}/bs4/diagnose.py
+${PYSITELIB}/bs4/diagnose.pyc
+${PYSITELIB}/bs4/diagnose.pyo
 ${PYSITELIB}/bs4/element.py
 ${PYSITELIB}/bs4/element.pyc
 ${PYSITELIB}/bs4/element.pyo
