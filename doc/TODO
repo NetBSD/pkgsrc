@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12901 2014/01/19 18:51:28 wiz Exp $
+$NetBSD: TODO,v 1.12902 2014/01/19 19:55:03 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -1035,7 +1035,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rp-l2tp-0.4
 	o rp-pppoe-3.11
 	o rpm-5.3.6 [rpm5.org]
-	o rss2email-3.8
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o ruby-tw-1.0.2 [pkg/48447]
