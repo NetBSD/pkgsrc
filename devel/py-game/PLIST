@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/10/24 12:08:22 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/01/19 16:26:51 wiz Exp $
 ${PYINC}/pygame/bitmask.h
 ${PYINC}/pygame/camera.h
 ${PYINC}/pygame/fastevents.h
@@ -25,8 +25,8 @@ ${PYSITELIB}/pygame/_camera_opencv_highgui.pyo
 ${PYSITELIB}/pygame/_camera_vidcapture.py
 ${PYSITELIB}/pygame/_camera_vidcapture.pyc
 ${PYSITELIB}/pygame/_camera_vidcapture.pyo
-${PYSITELIB}/pygame/_numericsndarray.so
-${PYSITELIB}/pygame/_numericsurfarray.so
+${PLIST.py2x}${PYSITELIB}/pygame/_numericsndarray.so
+${PLIST.py2x}${PYSITELIB}/pygame/_numericsurfarray.so
 ${PYSITELIB}/pygame/_numpysndarray.py
 ${PYSITELIB}/pygame/_numpysndarray.pyc
 ${PYSITELIB}/pygame/_numpysndarray.pyo
@@ -311,7 +311,7 @@ ${PYSITELIB}/pygame/pygame_icon.tiff
 ${PYSITELIB}/pygame/readme.html
 ${PYSITELIB}/pygame/rect.so
 ${PYSITELIB}/pygame/rwobject.so
-${PYSITELIB}/pygame/scrap.so
+${PLIST.py2x}${PYSITELIB}/pygame/scrap.so
 ${PYSITELIB}/pygame/sndarray.py
 ${PYSITELIB}/pygame/sndarray.pyc
 ${PYSITELIB}/pygame/sndarray.pyo
