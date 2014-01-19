@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.4 2012/10/08 13:04:28 asau Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/19 19:52:44 wiz Exp $
 
-DISTNAME=	parsedatetime-0.8.7
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
+DISTNAME=	v1.1.2
+PKGNAME=	${PYPKGPREFIX}-parsedatetime-${DISTNAME:S/v//}
 CATEGORIES=	time python
-MASTER_SITES=	${HOMEPAGE}
+MASTER_SITES=	https://github.com/bear/parsedatetime/archive/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code-bear.com/code/parsedatetime/
+HOMEPAGE=	https://github.com/bear/parsedatetime
 COMMENT=	Python module for parsing human-readable date/time text
 LICENSE=	apache-2.0
 
-.include "../../mk/bsd.prefs.mk"
+DIST_SUBDIR=	py-parsedatetime
+WRKSRC=		${WRKDIR}/parsedatetime-${DISTNAME:S/v//}
+EGG_NAME=	parsedatetime-${DISTNAME:S/v//}
 
-post-extract:
-	${FIND} ${WRKSRC} -name "._*" -type f -print | ${XARGS} ${RM} -f
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
