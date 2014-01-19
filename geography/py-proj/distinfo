@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/01/03 13:40:45 gdt Exp $
+$NetBSD: distinfo,v 1.3 2014/01/19 20:00:29 wiz Exp $
 
-SHA1 (pyproj-1.8.3.tar.gz) = 5fef90288135708fc22b6a1b89e35b4f9116ada4
-RMD160 (pyproj-1.8.3.tar.gz) = d1f1fb47bffbf223e30e4e545d6adf38481e8fb5
-Size (pyproj-1.8.3.tar.gz) = 317072 bytes
+SHA1 (pyproj-1.9.3.tar.gz) = 3f290241e113ea63d0487a48e7e054cc1c3e19f8
+RMD160 (pyproj-1.9.3.tar.gz) = 5bcc667a24d3697cfcaf54d0eb9fff9193ffbfb7
+Size (pyproj-1.9.3.tar.gz) = 2687498 bytes
