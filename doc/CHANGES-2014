@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.286 2014/01/19 01:19:48 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.287 2014/01/19 07:24:52 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -355,3 +355,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated inputmethod/mozc-server to 1.13.1651.102 [ryoon 2014-01-19]
 	Updated inputmethod/mozc-tool to 1.13.1651.102 [ryoon 2014-01-19]
 	Updated inputmethod/ibus-mozc to 1.13.1651.102 [ryoon 2014-01-19]
+	Updated cross/freemint-binutils to 2.24 [ryoon 2014-01-19]
