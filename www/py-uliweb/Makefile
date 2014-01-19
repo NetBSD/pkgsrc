@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/19 08:45:16 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/19 13:12:30 wiz Exp $
 
 DISTNAME=	Uliweb-0.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/U/u/}
@@ -9,6 +9,8 @@ MAINTAINER=	wen@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/Uliweb/
 COMMENT=	Easy python web framework
 LICENSE=	2-clause-bsd
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.2.3
 
 REPLACE_PYTHON=		uliweb/contrib/csrf/*.py
 REPLACE_PYTHON+=	uliweb/core/*.py
