@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/01/19 17:14:02 wiz Exp $
+$NetBSD: distinfo,v 1.2 2014/01/19 17:16:56 wiz Exp $
 
-SHA1 (py-gd/v0.58.tar.gz) = 99513a36e601b983aba268860e09c205a6c54b9a
-RMD160 (py-gd/v0.58.tar.gz) = 014aeb3f1e417cf168e43c4f8b75d2269e073311
-Size (py-gd/v0.58.tar.gz) = 76670 bytes
-SHA1 (patch-aa) = 2349484cc6a150e2feef9b51eb9d481dc24410db
+SHA1 (py-gdmodule/v0.58.tar.gz) = 99513a36e601b983aba268860e09c205a6c54b9a
+RMD160 (py-gdmodule/v0.58.tar.gz) = 014aeb3f1e417cf168e43c4f8b75d2269e073311
+Size (py-gdmodule/v0.58.tar.gz) = 76670 bytes
