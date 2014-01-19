@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/01/12 12:11:40 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.3 2014/01/19 18:51:18 wiz Exp $
 
-DISTNAME=	bleach-1.1.5
-PKGREVISION=	1
+DISTNAME=	bleach-1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	http://pypi.python.org/packages/source/b/bleach/
@@ -13,7 +11,6 @@ COMMENT=	Easy whitelist-based HTML-sanitizing tool
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 
 USE_LANGUAGES=	# none
