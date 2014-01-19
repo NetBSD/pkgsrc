@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/01/19 17:14:02 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/19 17:16:56 wiz Exp $
 
 DISTNAME=	v0.58
 PKGNAME=	${PYPKGPREFIX}-gdmodule-${DISTNAME:S/v//}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/Solomoriah/gdmodule
 COMMENT=	Python interface to gd graphics library
 LICENSE=	original-bsd
 
-DIST_SUBDIR=	py-gd
+DIST_SUBDIR=	py-gdmodule
 WRKSRC=		${WRKDIR}/gdmodule-${DISTNAME:S/v//}
 
 EGG_NAME=	gdmodule-${DISTNAME:S/v//}
