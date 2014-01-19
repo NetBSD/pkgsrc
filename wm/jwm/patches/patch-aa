@@ -1,26 +1,26 @@
-$NetBSD: patch-aa,v 1.3 2012/05/20 06:42:01 tsutsui Exp $
+$NetBSD: patch-aa,v 1.4 2014/01/19 15:27:16 tsutsui Exp $
 
---- Makefile.in.orig	2011-09-25 22:28:02.000000000 +0000
+--- Makefile.in.orig	2014-01-05 15:06:33.000000000 +0000
 +++ Makefile.in
 @@ -1,5 +1,5 @@
- 
--SYSCONF = @SYSCONF@
-+SYSCONF = @@EGDIR@@
- MANDIR = @MANDIR@
+ PACKAGE = jwm
+-SYSCONF = $(DESTDIR)@SYSCONF@
++SYSCONF = $(DESTDIR)@@EGDIR@@
+ MANDIR = $(DESTDIR)@MANDIR@
  VERSION ?= @VERSION@
- 
-@@ -8,10 +8,10 @@ all:
- 
+ USE_NLS = @USE_NLS@
+@@ -11,10 +11,10 @@ all:
  install: all
  	cd src ; $(MAKE) install ; cd ..
--	install -d $(SYSCONF)
+ 	cd po ; $(MAKE) install ; cd ..
+-	install -d -m 0755 $(SYSCONF)
 -	install -m 644 example.jwmrc $(SYSCONF)/system.jwmrc
--	install -d $(MANDIR)/man1
+-	install -d -m 0755 $(MANDIR)/man1
 -	install -m 644 jwm.1 $(MANDIR)/man1/jwm.1
-+	${BSD_INSTALL_DATA_DIR} ${DESTDIR}$(SYSCONF)
-+	${BSD_INSTALL_DATA} example.jwmrc ${DESTDIR}$(SYSCONF)/system.jwmrc
-+	${BSD_INSTALL_MAN_DIR} ${DESTDIR}$(MANDIR)/man1
-+	${BSD_INSTALL_MAN} jwm.1 ${DESTDIR}$(MANDIR)/man1/jwm.1
++	${BSD_INSTALL_DATA_DIR} $(SYSCONF)
++	${BSD_INSTALL_DATA} example.jwmrc $(SYSCONF)/system.jwmrc
++	${BSD_INSTALL_MAN_DIR} $(MANDIR)/man1
++	${BSD_INSTALL_MAN} jwm.1 $(MANDIR)/man1/jwm.1
  
  depend:
  	cd src ; $(MAKE) depend
