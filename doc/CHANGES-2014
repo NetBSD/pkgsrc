@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.306 2014/01/19 17:38:20 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.307 2014/01/19 17:45:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -377,3 +377,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added graphics/py-gdmodule version 0.58 [wiz 2014-01-19]
 	Removed graphics/py-gd successor graphics/py-gdmodule [wiz 2014-01-19]
 	Updated www/py-flask-admin to 1.0.7nb1 [wiz 2014-01-19]
+	Updated fonts/py-fonttools to 2.4 [wiz 2014-01-19]
