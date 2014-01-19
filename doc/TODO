@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12889 2014/01/19 00:18:50 rodent Exp $
+$NetBSD: TODO,v 1.12890 2014/01/19 09:09:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -934,7 +934,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-cssselect-0.9.1
 	o py-cssutils-1.0
 	o py-cups-1.9.66
-	o py-daemon-1.6
 	o py-darcsver-1.7.4
 	o py-datapkg-0.9
 	o py-decorator-3.4.0
