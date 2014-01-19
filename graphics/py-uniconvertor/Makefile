@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2012/10/06 14:11:18 asau Exp $
+# $NetBSD: Makefile,v 1.7 2014/01/19 22:18:53 wiz Exp $
 
 DISTNAME=	uniconvertor-1.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics python
 MASTER_SITES=	http://uniconvertor.googlecode.com/files/
 
@@ -11,11 +11,14 @@ HOMEPAGE=	http://sk1project.org/
 COMMENT=	Universal vector graphics translator
 LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2
 
+DEPENDS+=	${PYPKGPREFIX}-sk1libs-[0-9]*:../../graphics/py-sk1libs
+
 USE_LANGUAGES=		c
 PYDISTUTILSPKG=		yes
 PYTHON_SELF_CONFLICT=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-sk1libs
+REPLACE_PYTHON+=	src/__init__.py
 
-DEPENDS+=	${PYPKGPREFIX}-sk1libs-[0-9]*:../../graphics/py-sk1libs
-
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
