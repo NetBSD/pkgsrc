@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.311 2014/01/19 19:55:03 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.312 2014/01/19 19:56:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -382,3 +382,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-bleach to 1.4 [wiz 2014-01-19]
 	Updated time/py-parsedatetime to 1.1.2 [wiz 2014-01-19]
 	Updated mail/rss2email to 3.8 [schmonz 2014-01-19]
+	Updated www/py-beautifulsoup4 to 4.3.2 [wiz 2014-01-19]
