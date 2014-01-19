@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.319 2014/01/19 22:15:23 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.320 2014/01/19 22:19:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -391,3 +391,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-quixote to 2.7 [wiz 2014-01-19]
 	Updated www/py-flask-admin to 1.0.7nb3 [kleink 2014-01-19]
 	Updated graphics/py-sk1libs to 0.9.1nb5 [wiz 2014-01-19]
+	Updated graphics/py-uniconvertor to 1.1.5nb2 [wiz 2014-01-19]
