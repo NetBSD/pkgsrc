@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/12/09 15:26:33 tsarna Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/01/19 09:49:55 wiz Exp $
 bin/miniterm.py
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/serial/__init__.py
@@ -31,6 +31,12 @@ ${PYSITELIB}/serial/tools/__init__.pyo
 ${PYSITELIB}/serial/tools/list_ports.py
 ${PYSITELIB}/serial/tools/list_ports.pyc
 ${PYSITELIB}/serial/tools/list_ports.pyo
+${PYSITELIB}/serial/tools/list_ports_linux.py
+${PYSITELIB}/serial/tools/list_ports_linux.pyc
+${PYSITELIB}/serial/tools/list_ports_linux.pyo
+${PYSITELIB}/serial/tools/list_ports_osx.py
+${PYSITELIB}/serial/tools/list_ports_osx.pyc
+${PYSITELIB}/serial/tools/list_ports_osx.pyo
 ${PYSITELIB}/serial/tools/list_ports_posix.py
 ${PYSITELIB}/serial/tools/list_ports_posix.pyc
 ${PYSITELIB}/serial/tools/list_ports_posix.pyo
