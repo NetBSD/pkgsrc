@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12891 2014/01/19 09:12:26 wiz Exp $
+$NetBSD: TODO,v 1.12892 2014/01/19 09:26:04 mef Exp $
 
 Suggested new packages
 ======================
@@ -643,7 +643,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gtk-systrace-20030623
 	o gtkmm-3.10.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
-	o gtkwave-3.3.53 [wip]
 	o gtl-3.6
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
