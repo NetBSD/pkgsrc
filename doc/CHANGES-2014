@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.298 2014/01/19 10:59:21 adam Exp $
+$NetBSD: CHANGES-2014,v 1.299 2014/01/19 11:29:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -368,3 +368,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated print/py-reportlab to 2.7 [wiz 2014-01-19]
 	Updated security/py-xmlsec to 0.3.1 [wiz 2014-01-19]
 	Updated emulators/wine-devel to 1.7.11 [adam 2014-01-19]
+	Updated net/omniORB to 4.1.7 [wiz 2014-01-19]
