@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.303 2014/01/19 14:17:35 rumko Exp $
+$NetBSD: CHANGES-2014,v 1.304 2014/01/19 15:28:19 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -373,3 +373,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/py-biggles to 1.6.6 [wiz 2014-01-19]
 	Updated lang/clang to 3.4 [ryoon 2014-01-19]
 	Updated editors/lyx to 2.0.6 [rumko 2014-01-19]
+	Updated wm/jwm to 2.2.0 [tsutsui 2014-01-19]
