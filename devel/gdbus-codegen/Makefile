@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/08/17 13:52:55 drochner Exp $
+# $NetBSD: Makefile,v 1.10 2014/01/19 09:00:23 wiz Exp $
 
 .include "../../devel/glib2/Makefile.common"
 
@@ -20,4 +20,5 @@ DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 .include "../../devel/glib2/modules.mk"
 .include "../../lang/python/application.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
