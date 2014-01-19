@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/03/03 10:12:38 manu Exp $
+$NetBSD: distinfo,v 1.2 2014/01/19 20:37:43 wiz Exp $
 
-SHA1 (Quixote-2.6.tar.gz) = f89b727a2cec12648abc08119de6ccc622120df5
-RMD160 (Quixote-2.6.tar.gz) = a9f0fc472dea74f486b3a5c8cb08d3d3b509a0a3
-Size (Quixote-2.6.tar.gz) = 197321 bytes
+SHA1 (Quixote-2.7.tar.gz) = 964dead6cf9cb8a99b20b283ed58599cec08d85d
+RMD160 (Quixote-2.7.tar.gz) = 5b4d1a52022e3635641121bade23c8d610b962d8
+Size (Quixote-2.7.tar.gz) = 208400 bytes
