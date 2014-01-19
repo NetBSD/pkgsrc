@@ -1,17 +1,19 @@
-$NetBSD: patch-aa,v 1.8 2011/12/16 10:58:14 drochner Exp $
+$NetBSD: patch-aa,v 1.9 2014/01/19 09:25:18 mef Exp $
 
---- configure.orig	2011-11-13 22:58:22.000000000 +0000
-+++ configure
-@@ -5567,7 +5567,7 @@ $as_echo "$EXZ" >&6; }
+ERROR: [check-portability.awk] => Found test ... == ...:
+
+--- configure~	2013-12-21 16:23:25.000000000 +0900
++++ configure	2013-12-21 16:24:48.000000000 +0900
+@@ -6834,7 +6834,7 @@ $as_echo "$EXZ" >&6; }
  
  LIBXZ_LDADD=
  LIBXZ_CFLAGS=
 -if test "X$EXZ" == "Xyes"; then
 +if test "X$EXZ" = "Xyes"; then
  	have_liblzma=no
- 	cat >conftest.$ac_ext <<_ACEOF
- /* confdefs.h.  */
-@@ -5714,7 +5714,7 @@ fi
+ 	cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+@@ -6924,7 +6924,7 @@ fi
  $as_echo "$FASTTREE" >&6; }
  
  FASTTREE_CFLAGS=
@@ -20,12 +22,12 @@ $NetBSD: patch-aa,v 1.8 2011/12/16 10:58:14 drochner Exp $
  	FASTTREE_CFLAGS='-DWAVE_DISABLE_FAST_TREE'
  fi
  
-@@ -5741,7 +5741,7 @@ $as_echo "$EJUDY" >&6; }
+@@ -6951,7 +6951,7 @@ $as_echo "$EJUDY" >&6; }
  
  LIBJUDY_LDADD=
  LIBJUDY_CFLAGS=
 -if test "X$EJUDY" == "Xyes"; then
 +if test "X$EJUDY" = "Xyes"; then
  	have_libjudy=no
- 	cat >conftest.$ac_ext <<_ACEOF
- /* confdefs.h.  */
+ 	cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
