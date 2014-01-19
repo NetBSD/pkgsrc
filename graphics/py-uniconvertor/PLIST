@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/12 07:59:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/01/19 22:18:53 wiz Exp $
 bin/uniconvertor
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/uniconvertor/COPYRIGHTS
 ${PYSITELIB}/uniconvertor/GNU_GPL_v2
 ${PYSITELIB}/uniconvertor/GNU_LGPL_v2
