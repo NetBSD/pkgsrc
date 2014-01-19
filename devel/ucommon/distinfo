@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.7 2014/01/10 02:32:50 rodent Exp $
+$NetBSD: distinfo,v 1.8 2014/01/19 00:49:06 rodent Exp $
 
 SHA1 (ucommon-6.1.0.tar.gz) = c20dc9c5ec53131284cbc523148302b6e135a9ac
 RMD160 (ucommon-6.1.0.tar.gz) = 93e175c0970e335acb2df2b8ee2433720ba69fdd
 Size (ucommon-6.1.0.tar.gz) = 826742 bytes
-SHA1 (patch-CMakeLists.txt) = 4d4c11a89111161bc8d8fe3715f643290ecb6149
-SHA1 (patch-commoncpp_address.cpp) = 13fc4a7073b6c2de6329a90269045fc3dbb0e389
-SHA1 (patch-commoncpp_udp.cpp) = 17d61b4f3a885d897b222b179b714dc5a8b1e906
-SHA1 (patch-inc_ucommon_string.h) = e878aefcf3a6e0b21eecdcef1f561c7f68c7a6c5
+SHA1 (patch-CMakeLists.txt) = 53e9ffad15d45a89eb1b992da3d6a965a46d0447
+SHA1 (patch-commoncpp_address.cpp) = 64cbb5ae5f43b994a36d65d893cf58309e7324df
+SHA1 (patch-commoncpp_udp.cpp) = 6950168df08702bb5aed023682e8a73e73b6f965
+SHA1 (patch-inc_ucommon_string.h) = 334e9a71dfbf94f81ced34e0af7074c67f65b8da
+SHA1 (patch-utils_keywait.cpp) = 7f5a595b080f3e61097cf99680602d8fcc84bafa
