@@ -1,6 +1,6 @@
-$NetBSD: patch-commoncpp_udp.cpp,v 1.1 2013/11/08 21:14:37 joerg Exp $
+$NetBSD: patch-commoncpp_udp.cpp,v 1.2 2014/01/19 00:49:06 rodent Exp $
 
---- commoncpp/udp.cpp.orig	2013-11-07 12:53:49.000000000 +0000
+--- commoncpp/udp.cpp.orig	2014-01-04 17:32:41.000000000 +0000
 +++ commoncpp/udp.cpp
 @@ -409,7 +409,7 @@ Socket::Error UDPSocket::join(const IPV4
      setsockopt(so, IPPROTO_IP, IP_ADD_MEMBERSHIP, (char *)&group, sizeof(group));
