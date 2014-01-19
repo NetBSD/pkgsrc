@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.667 2014/01/05 09:17:07 obache Exp $
+# $NetBSD: Makefile,v 1.668 2014/01/19 17:14:51 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -380,8 +380,8 @@ SUBDIR+=	py-actdiag
 SUBDIR+=	py-biggles
 SUBDIR+=	py-blockdiag
 SUBDIR+=	py-cairo
-SUBDIR+=	py-gd
 SUBDIR+=	py-gdchart
+SUBDIR+=	py-gdmodule
 SUBDIR+=	py-gnuplot
 SUBDIR+=	py-goocanvas
 SUBDIR+=	py-gtkglext
