@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.2 2014/01/01 14:27:55 mef Exp $
+$NetBSD: distinfo,v 1.3 2014/01/19 07:23:49 ryoon Exp $
 
-SHA1 (binutils-2.23.2-mint-20130327.patch.bz2) = d6c21353905e24e3f3f410e4251866dc3ed6af8c
-RMD160 (binutils-2.23.2-mint-20130327.patch.bz2) = b15d44a702fdcab776682ac7730be1c852e4141d
-Size (binutils-2.23.2-mint-20130327.patch.bz2) = 21762 bytes
-SHA1 (binutils-2.23.2.tar.bz2) = 042c51073205ebaf88c272d6168f9deb71984b56
-RMD160 (binutils-2.23.2.tar.bz2) = 9788e2a8c4a7c74360919347c3bc72040e87b898
-Size (binutils-2.23.2.tar.bz2) = 21440347 bytes
-SHA1 (patch-bfd_doc_bfd.texinfo) = 2820fac73f1b2abf61240d49f377dc7df4dbb02e
+SHA1 (binutils-2.24-mint-20131217.patch.bz2) = f45ee0ce2d52f1e68eac4178db92def72e5fbf2b
+RMD160 (binutils-2.24-mint-20131217.patch.bz2) = dcd38d8c7a52a9380cb6131e5ebcdf46fbc517ed
+Size (binutils-2.24-mint-20131217.patch.bz2) = 21656 bytes
+SHA1 (binutils-2.24.tar.bz2) = 7ac75404ddb3c4910c7594b51ddfc76d4693debb
+RMD160 (binutils-2.24.tar.bz2) = b4aa3ea5ba9d0d9f817b2cf136e7f911f692af8d
+Size (binutils-2.24.tar.bz2) = 22716802 bytes

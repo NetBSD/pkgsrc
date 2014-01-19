@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/09/12 13:58:24 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/01/19 07:23:49 ryoon Exp $
 bin/m68k-atari-mint-addr2line
 bin/m68k-atari-mint-ar
 bin/m68k-atari-mint-as
@@ -36,7 +36,6 @@ cross-freemint/info/configure.info
 cross-freemint/info/gprof.info
 cross-freemint/info/ld.info
 cross-freemint/info/standards.info
-cross-freemint/lib/libiberty_binutils.a
 cross-freemint/m68k-atari-mint/bin/ar
 cross-freemint/m68k-atari-mint/bin/as
 cross-freemint/m68k-atari-mint/bin/ld
@@ -102,6 +101,7 @@ cross-freemint/share/locale/fr/LC_MESSAGES/opcodes.mo
 cross-freemint/share/locale/ga/LC_MESSAGES/gprof.mo
 cross-freemint/share/locale/ga/LC_MESSAGES/ld.mo
 cross-freemint/share/locale/ga/LC_MESSAGES/opcodes.mo
+cross-freemint/share/locale/hr/LC_MESSAGES/binutils.mo
 cross-freemint/share/locale/id/LC_MESSAGES/bfd.mo
 cross-freemint/share/locale/id/LC_MESSAGES/binutils.mo
 cross-freemint/share/locale/id/LC_MESSAGES/gas.mo
