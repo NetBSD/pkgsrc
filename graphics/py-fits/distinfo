@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/01/19 20:30:06 wiz Exp $
+
+SHA1 (pyfits-3.2.tar.gz) = 9257d0fd96e8fd5b8423d6859b16528ae52c0735
+RMD160 (pyfits-3.2.tar.gz) = 1b77e7f731e1370a2ca64ad6298d350ac4cf2eef
+Size (pyfits-3.2.tar.gz) = 1606650 bytes
