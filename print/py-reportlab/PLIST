@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2012/04/08 20:21:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2014/01/19 09:59:47 wiz Exp $
 ${PYSITELIB}/_renderPM.so
 ${PYSITELIB}/_rl_accel.so
 ${PYSITELIB}/pyHnj.so
@@ -13,14 +13,10 @@ ${PYSITELIB}/reportlab/fonts/DarkGarden-readme.txt
 ${PYSITELIB}/reportlab/fonts/DarkGarden.sfd
 ${PYSITELIB}/reportlab/fonts/DarkGardenMK.afm
 ${PYSITELIB}/reportlab/fonts/DarkGardenMK.pfb
-${PYSITELIB}/reportlab/fonts/Sy______.pfb
 ${PYSITELIB}/reportlab/fonts/Vera.ttf
 ${PYSITELIB}/reportlab/fonts/VeraBI.ttf
 ${PYSITELIB}/reportlab/fonts/VeraBd.ttf
 ${PYSITELIB}/reportlab/fonts/VeraIt.ttf
-${PYSITELIB}/reportlab/fonts/Zd______.pfb
-${PYSITELIB}/reportlab/fonts/Zx______.pfb
-${PYSITELIB}/reportlab/fonts/Zy______.pfb
 ${PYSITELIB}/reportlab/fonts/_a______.pfb
 ${PYSITELIB}/reportlab/fonts/_ab_____.pfb
 ${PYSITELIB}/reportlab/fonts/_abi____.pfb
@@ -34,6 +30,10 @@ ${PYSITELIB}/reportlab/fonts/cob_____.pfb
 ${PYSITELIB}/reportlab/fonts/cobo____.pfb
 ${PYSITELIB}/reportlab/fonts/com_____.pfb
 ${PYSITELIB}/reportlab/fonts/coo_____.pfb
+${PYSITELIB}/reportlab/fonts/sy______.pfb
+${PYSITELIB}/reportlab/fonts/zd______.pfb
+${PYSITELIB}/reportlab/fonts/zx______.pfb
+${PYSITELIB}/reportlab/fonts/zy______.pfb
 ${PYSITELIB}/reportlab/graphics/__init__.py
 ${PYSITELIB}/reportlab/graphics/__init__.pyc
 ${PYSITELIB}/reportlab/graphics/__init__.pyo

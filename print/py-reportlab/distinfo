@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.16 2014/01/08 09:15:58 obache Exp $
+$NetBSD: distinfo,v 1.17 2014/01/19 09:59:47 wiz Exp $
 
 SHA1 (pfbfer.zip) = 38753493035ee5b96746051df63ce4884763622d
 RMD160 (pfbfer.zip) = 70097e97f2fccc7f4df6b276b21a0fa765a57f55
 Size (pfbfer.zip) = 676909 bytes
-SHA1 (reportlab-2.5.tar.gz) = 49bd7c2c0b42569323fe4726cac696d4249cd1a5
-RMD160 (reportlab-2.5.tar.gz) = adc6db9f724c18988acbc85595acc95b8511f40b
-Size (reportlab-2.5.tar.gz) = 1917306 bytes
-SHA1 (patch-src_rl__addons_renderPM___renderPM.c) = 97672612c2da8c54f7fe7a5fddd52d520f41e45e
+SHA1 (reportlab-2.7.tar.gz) = be1014c6407c62323ed8d13b00cde0bd20d52099
+RMD160 (reportlab-2.7.tar.gz) = 0ff90be737e925bc156c36dabb25b183834cf537
+Size (reportlab-2.7.tar.gz) = 1951460 bytes
