@@ -1,12 +1,11 @@
-$NetBSD: patch-src_support_debug.h,v 1.1 2013/05/09 13:56:58 joerg Exp $
+$NetBSD: patch-src_support_debug.h,v 1.2 2014/01/19 14:04:39 rumko Exp $
 
---- src/support/debug.h.orig	2013-05-09 11:37:52.000000000 +0000
+--- src/support/debug.h.orig	2013-04-29 15:58:31.000000000 +0000
 +++ src/support/debug.h
-@@ -19,17 +19,8 @@
+@@ -16,16 +16,8 @@
  #define LYXDEBUG_H
  
  #include "support/strfwd.h"
--
 -
 -namespace std {
 -
