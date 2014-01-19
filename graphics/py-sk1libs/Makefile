@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2013/06/04 22:16:26 tron Exp $
+# $NetBSD: Makefile,v 1.9 2014/01/19 22:15:13 wiz Exp $
 
 DISTNAME=	sk1libs-0.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics python
 MASTER_SITES=	http://uniconvertor.googlecode.com/files/
 
@@ -12,10 +12,10 @@ COMMENT=	Set of python non-GUI extensions for sK1 Project
 LICENSE=	gnu-lgpl-v2
 
 USE_LANGUAGES=		c
-PYDISTUTILSPKG=		yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.9.1
 
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
