@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2013/07/07 15:57:59 taca Exp $
+# $NetBSD: Makefile,v 1.8 2014/01/19 12:57:42 taca Exp $
 
-DISTNAME=	rdoc-${RUBY_RDOC_VERSION}
+DISTNAME=	rdoc-4.0.1
 PKGREVISION=	1
 CATEGORIES=	devel
 
