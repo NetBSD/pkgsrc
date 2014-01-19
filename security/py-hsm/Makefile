@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2013/10/08 15:21:37 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/19 09:51:12 wiz Exp $
 
 DISTNAME=	pyhsm-1.0.4g
-PKGNAME=	${PYPKGPREFIX}-pyhsm-1.0.4g
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://opensource.yubico.com/python-pyhsm/releases/
 
@@ -10,7 +11,7 @@ HOMEPAGE=	http://opensource.yubico.com/python-pyhsm/
 COMMENT=	Python package that talk to a YubiHSM
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-pyserial-[0-9]*:../../comms/py-serial
+DEPENDS+=	${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
 DEPENDS+=	${PYPKGPREFIX}-crypto-[0-9]*:../../security/py-crypto
 
 PYDISTUTILSPKG= yes
@@ -18,6 +19,8 @@ PYDISTUTILSPKG= yes
 PYSETUP=                setup.py
 
 USE_LANGUAGES=	# none
+
+CONFLICTS+=	${PYPKGPREFIX}-pyhsm-[0-9]*
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
