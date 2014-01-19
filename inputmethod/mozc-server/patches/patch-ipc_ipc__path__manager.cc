@@ -1,6 +1,6 @@
-$NetBSD: patch-ipc_ipc__path__manager.cc,v 1.3 2013/09/15 12:30:23 joerg Exp $
+$NetBSD: patch-ipc_ipc__path__manager.cc,v 1.4 2014/01/19 01:18:50 ryoon Exp $
 
---- ipc/ipc_path_manager.cc.orig	2013-08-28 05:25:59.000000000 +0000
+--- ipc/ipc_path_manager.cc.orig	2014-01-06 07:10:26.000000000 +0000
 +++ ipc/ipc_path_manager.cc
 @@ -44,6 +44,11 @@
  #endif  // OS_MACOSX
@@ -13,8 +13,8 @@ $NetBSD: patch-ipc_ipc__path__manager.cc,v 1.3 2013/09/15 12:30:23 joerg Exp $
 +
  #include <cstdlib>
  #include <map>
- 
-@@ -410,6 +415,23 @@ bool IPCPathManager::IsValidServer(uint3
+ #ifdef OS_WIN
+@@ -407,6 +412,23 @@ bool IPCPathManager::IsValidServer(uint3
      return true;
    }
  

@@ -1,19 +1,19 @@
-$NetBSD: patch-base_crash__report__handler.cc,v 1.2 2013/09/07 18:42:14 ryoon Exp $
+$NetBSD: patch-base_crash__report__handler.cc,v 1.3 2014/01/19 01:18:50 ryoon Exp $
 
---- base/crash_report_handler.cc.orig	2013-08-28 05:26:13.000000000 +0000
+--- base/crash_report_handler.cc.orig	2014-01-06 07:10:31.000000000 +0000
 +++ base/crash_report_handler.cc
-@@ -321,7 +321,7 @@ void CrashReportHandler::SetCriticalSect
- }
+@@ -346,7 +346,7 @@ void CrashReportHandler::SetCriticalSect
+ 
  }  // namespace mozc
  
--#elif defined(OS_LINUX)  // OS_WIN
+-#else
 +#elif defined(OS_LINUX) || defined(OS_NETBSD)  // OS_WIN
  
  namespace mozc {
  
-@@ -341,4 +341,4 @@ bool CrashReportHandler::Uninitialize() 
+@@ -372,4 +372,4 @@ void CrashReportHandler::SetCriticalSect
  
  }  // namespace mozc
  
--#endif  // OS_WIN OS_LINUX
+-#endif
 +#endif  // OS_WIN OS_LINUX OS_NETBSD

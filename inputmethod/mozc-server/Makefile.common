@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.3 2013/09/07 18:42:14 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.4 2014/01/19 01:18:50 ryoon Exp $
 # used by inputmethod/ibus-mozc/Makefile
 # used by inputmethod/mozc-elisp/Makefile
 # used by inputmethod/mozc-server/Makefile
 # used by inputmethod/mozc-tool/Makefile
 #
 
-DISTNAME=	mozc-1.11.1522.102
+DISTNAME=	mozc-1.13.1651.102
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://mozc.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -21,6 +21,9 @@ PATCHDIR=	${.CURDIR}/../../inputmethod/mozc-server/patches
 BUILD_DEPENDS+=	${PYPKGPREFIX}-gyp-[0-9]*:../../devel/gyp
 
 USE_LANGUAGES=	c c++
+# nullptr requires -std=c++11, and -std=c++11 requires gcc 4.7 or later
+GCC_REQD=	4.7
+CXXFLAGS+=	-std=c++11
 
 USE_TOOLS+=	gmake pkg-config
 
@@ -59,7 +62,7 @@ MOZC_BUILD_MODE=	Release # or Debug
 do-configure:
 	cd ${WRKSRC} && env ${MAKE_ENV} \
 		GYP_DEFINES="use_libprotobuf=1" \
-		${PYTHONBIN} build_mozc.py gyp --os=${LOWER_OPSYS} \
+		${PYTHONBIN} build_mozc.py gyp \
 		--gypdir=${GYPDIR}/bin && \
 		${PYTHONBIN} build_mozc.py build_tools -c ${MOZC_BUILD_MODE} \
 		${_MAKE_JOBS}
