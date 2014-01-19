@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2010/12/23 11:44:57 dsainty Exp $
+# $NetBSD: options.mk,v 1.5 2014/01/19 15:27:16 tsutsui Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.jwm
 PKG_SUPPORTED_OPTIONS=	debug fribidi jpeg png
@@ -12,6 +12,7 @@ CONFIGURE_ARGS+=	--enable-debug
 
 .if !empty(PKG_OPTIONS:Mfribidi)
 .include "../../converters/fribidi/buildlink3.mk"
+BUILDLINK_API_DEPENDS.fribidi+=   fribidi>=0.19.2
 .endif
 
 .if !empty(PKG_OPTIONS:Mjpeg)
