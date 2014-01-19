@@ -1,8 +1,0 @@
-$NetBSD: patch-aa,v 1.1 2009/02/16 16:49:16 joerg Exp $
-
---- setup.py.orig	2009-02-16 17:43:32.000000000 +0100
-+++ setup.py
-@@ -1,2 +1,3 @@
- #!/usr/bin/env python
-+# -*- coding: latin-1
- #
