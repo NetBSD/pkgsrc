@@ -1,28 +1,9 @@
-$NetBSD: distinfo,v 1.20 2012/05/25 18:45:26 marino Exp $
+$NetBSD: distinfo,v 1.21 2014/01/19 10:58:23 adam Exp $
 
-SHA1 (wine-1.3.26.tar.bz2) = a609ebb1f8c0908fb86948edcb1f7f9ccca47e7f
-RMD160 (wine-1.3.26.tar.bz2) = c1d98690ff16a63cea6c04c64444c075ad7ab472
-Size (wine-1.3.26.tar.bz2) = 19540784 bytes
-SHA1 (patch-aa) = d3dfe9fe061271e83b75fcfd10fb0ed85e6549b1
-SHA1 (patch-ab) = fec11cd5dda20d326b35e36178e2ac0ac22ac9ae
-SHA1 (patch-ac) = e6c17647c0102c686814880c1bc372d1fedf7730
-SHA1 (patch-ad) = 84e7965539f47aca8dca88080466114c0226d7be
-SHA1 (patch-ae) = 9d216294340483f37223c186e5d76ae34880b0a6
-SHA1 (patch-af) = 32a23d042a2d4f76898dff76e981166ade9e0275
-SHA1 (patch-ai) = 54453ed21f52d1da6a7f89bc437f7b318db5058f
-SHA1 (patch-ak) = ff41f617d2ae7bbff57af52dda85647bc4fba354
-SHA1 (patch-ba) = 6a8756059b07278398cf6ee83ec94c50e25b6a67
-SHA1 (patch-bc) = 8132bdc30e665ecf8dacad52a2b06c48d4aa553f
-SHA1 (patch-bd) = a60f7353f838bb3bf5e554bf80b1751b7d9d2138
-SHA1 (patch-be) = f4d11193a364f3ebcd33825e850addb1638cef30
-SHA1 (patch-bf) = 75c37d9889d535a2c46c0a21f0c9cd49271d96a4
-SHA1 (patch-ca) = 90df667407765c473f1331ec8113088fdddc58e5
-SHA1 (patch-cd) = aec27ca5616625e80123e92b3db1abdd90d212a0
-SHA1 (patch-ce) = 23088aac01e74164ec6d4a42f96ab7fa34d002c3
-SHA1 (patch-cf) = 6a1c8ce2c77de0eebb9aad9cd5078cf18538d8d8
-SHA1 (patch-cg) = a4ed965470b150f619e5ca673138fe07094963b2
-SHA1 (patch-dlls_kernel32_heap.c) = 46faf6b31182b88de2260190113098512f00c108
-SHA1 (patch-dlls_ntdll_file.c) = df3aa27b5d4ffc24b9bd0f8272ab273a3d4cb559
-SHA1 (patch-dlls_ntdll_nt.c) = 4e47a00b3f7303425a8f64825a23675acf1325d1
-SHA1 (patch-dlls_ntdll_server.c) = 7c7051fdae3f5c6b4671219932c517f460e05dda
-SHA1 (patch-libs_wine_ldt.c) = f2575c80599229eda197726797b2432d2fba0228
+SHA1 (wine-1.7.11.tar.bz2) = ebe30cf1a93782a958e8b1e3ed898310c37676fe
+RMD160 (wine-1.7.11.tar.bz2) = ea565f9f46eeabf803cc5ab319469831a4afa93d
+Size (wine-1.7.11.tar.bz2) = 21359534 bytes
+SHA1 (patch-configure) = 2d540b149e59298ca0fcc43d50873c986fbe0140
+SHA1 (patch-dlls_wbemprox_builtin.c) = a11f910d8b94047f2dcf8b45c27fb1c6c3f3ce59
+SHA1 (patch-dlls_wineoss.drv_mmdevdrv.c) = fc44346b889ee7486a92e9704a8447334f48f4d1
+SHA1 (patch-dlls_ws2__32_socket.c) = 98ebaa7b0831e558f49a484ffb3a1b28adb9bcf2
