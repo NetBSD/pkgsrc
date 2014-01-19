@@ -1,8 +1,8 @@
-$NetBSD: patch-gyp_common.gypi,v 1.3 2013/09/07 18:42:14 ryoon Exp $
+$NetBSD: patch-gyp_common.gypi,v 1.4 2014/01/19 01:18:50 ryoon Exp $
 
---- gyp/common.gypi.orig	2013-08-28 05:26:13.000000000 +0000
+--- gyp/common.gypi.orig	2014-01-06 07:10:31.000000000 +0000
 +++ gyp/common.gypi
-@@ -101,6 +101,7 @@
+@@ -92,6 +92,7 @@
        '-include base/namespace.h',
        '-pipe',
        '-pthread',
@@ -10,49 +10,34 @@ $NetBSD: patch-gyp_common.gypi,v 1.3 2013/09/07 18:42:14 ryoon Exp $
      ],
      # linux_cflags will be used in Linux except for NaCl.
      'linux_cflags': [
-@@ -150,7 +151,7 @@
+@@ -137,7 +138,7 @@
+         'clang_bin_dir': '/Applications/Xcode.app/Contents/Developer/Toolchains'
+                          '/XcodeDefault.xctoolchain/usr/bin/',
        }],
-       # enable_gtk_renderer represents if mozc_renderer is supported on Linux
-       # or not.
--      ['target_platform=="Linux" and language=="japanese"', {
-+      ['(target_platform=="Linux" or target_platform=="NetBSD") and language=="japanese"', {
+-      ['target_platform=="Linux"', {
++      ['target_platform=="Linux" or target_platform=="NetBSD"', {
+         # enable_gtk_renderer represents if mozc_renderer is supported on Linux
+         # or not.
          'enable_gtk_renderer%': 1,
-       }, { # else
-         'enable_gtk_renderer%': 0,
-@@ -206,7 +207,7 @@
+@@ -195,7 +196,7 @@
  
      # server_dir represents the directory where mozc_server is
      # installed. This option is only for Linux.
 -    'server_dir%': '/usr/lib/mozc',
 +    'server_dir%': '@PREFIX@/libexec',
  
-     # use_libprotobuf represents if protobuf library is used or not.
-     # This option is only for Linux.
-@@ -300,7 +301,7 @@
+     # Represents the directory where the source code of protobuf is
+     # extracted. This value is ignored when 'use_libprotobuf' is 1.
+@@ -286,7 +287,7 @@
            ['channel_dev==1', {
              'defines': ['CHANNEL_DEV'],
-           }],
--          ['not(OS=="linux" and use_libprotobuf!=0)', {
-+          ['not((OS=="linux" or OS=="netbsd") and use_libprotobuf!=0)', {
-             'include_dirs': [
-               '../protobuf/files/src',
-             ],
-@@ -309,12 +310,12 @@
-           # additional suffix except for Japanese so that multiple
-           # converter processes can coexist. Note that Mozc on ChromeOS does
-           # not use IPC so this kind of special treatment is not required.
--          ['language!="japanese" and target_platform=="Linux"', {
-+          ['language!="japanese" and (target_platform=="Linux" or target_platform=="NetBSD")', {
-             'defines': [
-               'MOZC_LANGUAGE_SUFFIX_FOR_LINUX="_<(language)"',
-             ],
            }],
 -          ['OS=="linux"', {
 +          ['OS=="linux" or OS=="netbsd"', {
              'ldflags': [
                '<@(linux_ldflags)',
              ],
-@@ -485,7 +486,7 @@
+@@ -451,7 +452,7 @@
            },
          },
          'conditions': [
@@ -61,7 +46,7 @@ $NetBSD: patch-gyp_common.gypi,v 1.3 2013/09/07 18:42:14 ryoon Exp $
              'cflags': [
                '<@(debug_extra_cflags)',
              ],
-@@ -523,7 +524,7 @@
+@@ -489,7 +490,7 @@
            },
          },
          'conditions': [
@@ -70,7 +55,7 @@ $NetBSD: patch-gyp_common.gypi,v 1.3 2013/09/07 18:42:14 ryoon Exp $
              'cflags': [
                '<@(release_extra_cflags)',
              ],
-@@ -832,6 +833,22 @@
+@@ -753,6 +754,22 @@
            }],
          ],
        }],
