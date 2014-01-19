@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/01/03 14:04:46 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2014/01/19 18:51:18 wiz Exp $
 
-SHA1 (bleach-1.1.5.tar.gz) = c9c5ea22a1a2ef4c6804f9ed8138c2d9ad6a23d4
-RMD160 (bleach-1.1.5.tar.gz) = e04d88113f96f3612611d2919d1894f33ef10c3e
-Size (bleach-1.1.5.tar.gz) = 18344 bytes
+SHA1 (bleach-1.4.tar.gz) = a53274c39f9fd8753e3d522f897ad17bb7cf74c9
+RMD160 (bleach-1.4.tar.gz) = 8b507825d337231537d140b13c9821da77c9d853
+Size (bleach-1.4.tar.gz) = 17454 bytes
