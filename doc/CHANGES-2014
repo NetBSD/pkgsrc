@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.299 2014/01/19 11:29:11 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.300 2014/01/19 13:05:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -369,3 +369,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/py-xmlsec to 0.3.1 [wiz 2014-01-19]
 	Updated emulators/wine-devel to 1.7.11 [adam 2014-01-19]
 	Updated net/omniORB to 4.1.7 [wiz 2014-01-19]
+	Updated net/libsoup24 to 2.44.2 [wiz 2014-01-19]
