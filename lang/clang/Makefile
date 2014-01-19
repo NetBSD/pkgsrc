@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.23 2013/12/24 05:57:44 richard Exp $
+# $NetBSD: Makefile,v 1.24 2014/01/19 14:06:41 ryoon Exp $
 
-DISTNAME=	clang-3.3
+DISTNAME=	clang-3.4
 CATEGORIES=	lang
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 DISTFILES=	llvm-${PKGVERSION_NOREV}.src.tar.gz \
-		cfe-${PKGVERSION_NOREV}.src.tar.gz
+		clang-${PKGVERSION_NOREV}.src.tar.gz
 
 MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://llvm.org/
 COMMENT=	Low Level Virtual Machine compiler infrastructure
 LICENSE=	modified-bsd
 
-WRKSRC=			${WRKDIR}/llvm-${PKGVERSION_NOREV}.src
+WRKSRC=			${WRKDIR}/llvm-${PKGVERSION_NOREV}
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		chown gmake groff pod2html pod2man
@@ -81,7 +81,7 @@ SUBST_SED.fix-paths+=		-e 's,^.*cxa_finalize.*$$,		; //cxa_finalize.o,g'
 .endif
 
 post-extract:
-	mv ${WRKDIR}/cfe-${PKGVERSION_NOREV}.src ${WRKSRC}/tools/clang
+	mv ${WRKDIR}/clang-${PKGVERSION_NOREV} ${WRKSRC}/tools/clang
 .if ${OPSYS} == "SunOS"
 	${ECHO} "int sun_ld_needs_a_symbol=0;" >> ${WRKSRC}/lib/Target/NVPTX/InstPrinter/NVPTXInstPrinter.cpp
 .endif
