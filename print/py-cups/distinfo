@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/05/28 09:02:55 wiz Exp $
+$NetBSD: distinfo,v 1.5 2014/01/19 09:33:53 wiz Exp $
 
-SHA1 (pycups-1.9.61.tar.bz2) = e1b87ac5c87412a6548a6b6fb62bdb3e678393eb
-RMD160 (pycups-1.9.61.tar.bz2) = 413275b55a650837463f1c8e9acf0d23e1b384c7
-Size (pycups-1.9.61.tar.bz2) = 52018 bytes
+SHA1 (pycups-1.9.66.tar.bz2) = a7569a1d3644da7283599e230db1e689d52b08e3
+RMD160 (pycups-1.9.66.tar.bz2) = fec06557e0179e7d894d2a419ea65e8732e5deba
+Size (pycups-1.9.66.tar.bz2) = 55436 bytes
