@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/10/31 11:19:29 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2014/01/19 09:09:13 wiz Exp $
 
-DISTNAME=	python-daemon-1.5.5
-EGG_NAME=	python_daemon-1.5.5
+DISTNAME=	python-daemon-1.6
+EGG_NAME=	${DISTNAME:S/-/_/}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/python-daemon/
@@ -14,8 +13,9 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-lockfile>=0.9:../../devel/py-lockfile
 
-WRKSRC=		${WRKDIR}/python-daemon-1.5.5
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.6
 
 REPLACE_INTERPRETER+=	python
 REPLACE.python.old=	/usr/bin/env
