@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/02/12 20:02:53 gls Exp $
+$NetBSD: distinfo,v 1.4 2014/01/19 22:22:56 wiz Exp $
 
-SHA1 (zbase32-1.1.3.tar.gz) = f670104ca3baec60530151951116eb9cd7ef3542
-RMD160 (zbase32-1.1.3.tar.gz) = 7e009b5a2c35d75eb21a2a78284e4e557e027c04
-Size (zbase32-1.1.3.tar.gz) = 21241 bytes
-SHA1 (patch-aa) = de191fe27ff8d6c8472bca38d5e368daa8cc3496
+SHA1 (zbase32-1.1.5.tar.gz) = 1cbf1144b953fb299e189ef9d06066456f30a1e3
+RMD160 (zbase32-1.1.5.tar.gz) = 78cfa5baf90699392653080380f5ab42f6e405c1
+Size (zbase32-1.1.5.tar.gz) = 21745 bytes
