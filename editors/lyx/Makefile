@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.36 2013/06/06 12:54:17 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2014/01/19 14:04:39 rumko Exp $
 #
 
-DISTNAME=		lyx-1.6.10
-PKGREVISION=		12
+DISTNAME=		lyx-2.0.6
 CATEGORIES=		editors
-MASTER_SITES=		ftp://ftp.lyx.org/pub/lyx/stable/1.6.x/ \
-			http://gd.tuwien.ac.at/publishing/tex/lyx/stable/1.6.x/ \
-			ftp://gd.tuwien.ac.at/publishing/tex/lyx/stable/1.6.x/ \
-			ftp://ftp.sdsc.edu/pub/other/lyx/stable/1.6.x/ \
-			ftp://ftp.lip6.fr/pub/lyx/stable/1.6.x/ \
-			ftp://ftp.ntua.gr/pub/X11/LyX/stable/1.6.x/
-EXTRACT_SUFX=		.tar.bz2
+MASTER_SITES=		ftp://ftp.lyx.org/pub/lyx/stable/2.0.x/ \
+			http://gd.tuwien.ac.at/publishing/tex/lyx/stable/2.0.x/ \
+			ftp://gd.tuwien.ac.at/publishing/tex/lyx/stable/2.0.x/ \
+			ftp://ftp.sdsc.edu/pub/other/lyx/stable/2.0.x/ \
+			ftp://ftp.lip6.fr/pub/lyx/stable/2.0.x/ \
+			ftp://ftp.ntua.gr/pub/X11/LyX/stable/2.0.x/
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.lyx.org/
 COMMENT=		Document processor and graphical frontend for LaTeX
+LICENSE=		gnu-gpl-v2
 
 CONFLICTS+=		lyx-xforms-[0-9]* lyx-qt-[0-9]*
 SUPERSEDES=		lyx-xforms-[0-9]* lyx-qt-[0-9]*
@@ -65,18 +65,15 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake perl:run pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-GCC_REQD+=		2.95
 
 CXXFLAGS.Linux+=	-fpermissive
+
+CONFIGURE_ARGS+=	--without-included-mythes
 
 CONFIGURE_ARGS+=	--with-extra-prefix=${BUILDLINK_PREFIX.qt4-libs} \
 			--with-qt4-dir=${QTDIR:Q} \
 			--with-qt4-includes=${BUILDLINK_PREFIX.qt4-libs}/qt4/include \
 			--with-qt4-libraries=${BUILDLINK_PREFIX.qt4-libs}/qt4/lib
-
-CONFIGURE_ARGS+=	--with-pspell-lib=${BUILDLINK_PREFIX.aspell}/lib \
-			--with-pspell-include=${BUILDLINK_PREFIX.aspell}/include/pspell \
-			--with-pspell
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -93,13 +90,13 @@ PLIST_SUBST+=		BIN_DIR=bin \
 			SHARE_DIR=share/lyx
 .endif
 
-PYTHON_PATCH_SCRIPTS=	development/tools/convert_kmap.py \
+PYTHON_PATCH_SCRIPTS=	development/cmake/doc/ReplaceValues.py \
+			development/cmake/po/cat.py \
+			development/tools/convert_kmap.py \
+			development/tools/gen_lfuns.py \
 			development/tools/generate_symbols_list.py \
-			development/tools/lyxpak.py \
-			development/tools/lyxpak.py \
 			development/tools/unicodesymbols.py \
 			lib/configure.py \
-			lib/doc/depend.py \
 			lib/lyx2lyx/lyx2lyx \
 			lib/lyx2lyx/profiling.py \
 			lib/scripts/TeXFiles.py \
@@ -112,13 +109,19 @@ PYTHON_PATCH_SCRIPTS=	development/tools/convert_kmap.py \
 			lib/scripts/fig2pdftex.py \
 			lib/scripts/fig2pstex.py \
 			lib/scripts/fig_copy.py \
+			lib/scripts/include_bib.py \
 			lib/scripts/layout2layout.py \
 			lib/scripts/legacy_lyxpreview2ppm.py \
 			lib/scripts/listerrors \
+			lib/scripts/lyxpak.py \
+			lib/scripts/lyxpreview-lytex2bitmap.py \
 			lib/scripts/lyxpreview-platex2bitmap.py \
 			lib/scripts/lyxpreview2bitmap.py \
 			lib/scripts/lyxpreview_tools.py \
 			lib/scripts/tex_copy.py \
+			lib/scripts/prefs2prefs.py \
+			lib/scripts/prefs2prefs_lfuns.py \
+			lib/scripts/prefs2prefs_prefs.py \
 			po/lyx_pot.py \
 			po/postats.py
 
@@ -128,7 +131,7 @@ SUBST_FILES.python=	lib/configure.py
 SUBST_SED.python=	-e "s,python ,${PYTHONBIN} ,"
 SUBST_FILES.python+=	src/graphics/GraphicsConverter.cpp
 SUBST_SED.python+=	-e "s,\#!/usr/bin/env python,\#!${PYTHONBIN},"
-SUBST_FILES.python+=	development/tools/lyxpak.py
+SUBST_FILES.python+=	lib/scripts/lyxpak.py
 SUBST_FILES.python+=	development/scons/SConstruct
 SUBST_SED.python+=	-e "s, = 'python, = '${PYTHONBIN},"
 SUBST_FILES.python+=	src/support/os.cpp
@@ -137,10 +140,10 @@ SUBST_SED.python+=	-e 's,command("python -tt,command("${PYTHONBIN} -tt,'
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../textproc/aiksaurus/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
+.include "../../textproc/mythes/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
