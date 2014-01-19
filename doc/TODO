@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12892 2014/01/19 09:26:04 mef Exp $
+$NetBSD: TODO,v 1.12893 2014/01/19 09:34:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -932,7 +932,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-creole-1.1.1
 	o py-cssselect-0.9.1
 	o py-cssutils-1.0
-	o py-cups-1.9.66
 	o py-darcsver-1.7.4
 	o py-datapkg-0.9
 	o py-decorator-3.4.0
