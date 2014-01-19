@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.322 2014/01/19 22:44:22 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.323 2014/01/19 22:50:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -394,3 +394,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/py-uniconvertor to 1.1.5nb2 [wiz 2014-01-19]
 	Updated converters/py-zbase32 to 1.1.5 [wiz 2014-01-19]
 	Updated games/py-renpy to 6.16.5 [wiz 2014-01-19]
+	Updated math/py-rpy to 2.3.0 [wiz 2014-01-19]
