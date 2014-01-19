@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.1 2013/09/12 14:06:21 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2014/01/19 07:36:18 ryoon Exp $
 
-SHA1 (ldg-SVN-20121005.tar.bz2) = 071d1b5fe8c1ba8db70b17e0ab36a2ba56962034
-RMD160 (ldg-SVN-20121005.tar.bz2) = a82aaccdb8616c40a80fac39b559688277e6f441
-Size (ldg-SVN-20121005.tar.bz2) = 142657 bytes
-SHA1 (patch-src_devel_gcc.mak) = f37437fc0518f5dd3288aa1e939df7aaf4575c13
+SHA1 (ldg-SVN-20131104.tar.bz2) = dba60d648e57f4b979ed68436ae2e68cf552e402
+RMD160 (ldg-SVN-20131104.tar.bz2) = 36b0bf23a7e2cc16236d2b2f20bb1cb1afa7270e
+Size (ldg-SVN-20131104.tar.bz2) = 142828 bytes
+SHA1 (patch-src_devel_gcc.mak) = 7730c5657ca8343bd7fcffee859d3611311ae208
+SHA1 (patch-src_devel_gccm5475.mak) = 1074b3855e4e5266b3804e42f68e4fc4b09eb303
+SHA1 (patch-src_devel_gccm68020-60.mak) = 6c7701a7b2963d442d18ab9b46ff77fec578b48e
+SHA1 (patch-src_ldgd_gcc.mak) = 55df9f0ee030420cdd82cee5d3200949cfcb81cd
+SHA1 (patch-src_ldgmgr_gcc.mak) = d9732699efbefb0ca987247e9c0687d980ce2df9
