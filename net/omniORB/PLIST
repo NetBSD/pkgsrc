@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/04/21 16:34:17 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/01/19 11:28:59 wiz Exp $
 bin/catior
 bin/convertior
 bin/genior
@@ -152,6 +152,7 @@ include/omniORB4/omniServer.h
 include/omniORB4/omniTransport.h
 include/omniORB4/omniTypedefs.hh
 include/omniORB4/omniURI.h
+include/omniORB4/omniZIOP.h
 include/omniORB4/omniutilities.h
 include/omniORB4/optionalFeatures.h
 include/omniORB4/poa.h
@@ -183,6 +184,7 @@ include/omniORB4/valueTemplatedecls.h
 include/omniORB4/valueTemplatedefns.h
 include/omniORB4/valueType.h
 include/omniORB4/wstringtypes.h
+include/omniORB4/ziopStubs.h
 include/omniconfig.h
 include/omnithread.h
 include/omnithread/mach.h
@@ -193,27 +195,27 @@ include/omnithread/solaris.h
 lib/libCOS4.a
 lib/libCOS4.so
 lib/libCOS4.so.1
-lib/libCOS4.so.1.5
+lib/libCOS4.so.1.7
 lib/libCOSDynamic4.a
 lib/libCOSDynamic4.so
 lib/libCOSDynamic4.so.1
-lib/libCOSDynamic4.so.1.5
+lib/libCOSDynamic4.so.1.7
 lib/libomniCodeSets4.a
 lib/libomniCodeSets4.so
 lib/libomniCodeSets4.so.1
-lib/libomniCodeSets4.so.1.5
+lib/libomniCodeSets4.so.1.7
 lib/libomniConnectionMgmt4.a
 lib/libomniConnectionMgmt4.so
 lib/libomniConnectionMgmt4.so.1
-lib/libomniConnectionMgmt4.so.1.5
+lib/libomniConnectionMgmt4.so.1.7
 lib/libomniDynamic4.a
 lib/libomniDynamic4.so
 lib/libomniDynamic4.so.1
-lib/libomniDynamic4.so.1.5
+lib/libomniDynamic4.so.1.7
 lib/libomniORB4.a
 lib/libomniORB4.so
 lib/libomniORB4.so.1
-lib/libomniORB4.so.1.5
+lib/libomniORB4.so.1.7
 lib/libomnithread.a
 lib/libomnithread.so
 lib/libomnithread.so.3
@@ -425,9 +427,12 @@ share/idl/omniORB/COS/TimeBase.idl
 share/idl/omniORB/Naming.idl
 share/idl/omniORB/bootstrap.idl
 share/idl/omniORB/boxes.idl
+share/idl/omniORB/compression.idl
 share/idl/omniORB/corbaidl.idl
 share/idl/omniORB/echo.idl
 share/idl/omniORB/ir.idl
+share/idl/omniORB/messaging.idl
 share/idl/omniORB/orb.idl
 share/idl/omniORB/poa.idl
 share/idl/omniORB/poa_include.idl
+share/idl/omniORB/ziop.idl
