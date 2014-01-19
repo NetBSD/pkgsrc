@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.316 2014/01/19 20:31:19 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.317 2014/01/19 20:37:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -388,3 +388,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Renamed graphics/py-pydot to graphics/py-dot [wiz 2014-01-19]
 	Renamed graphics/py-pyfits to graphics/py-fits [wiz 2014-01-19]
 	Updated graphics/py-fits to 3.2 [wiz 2014-01-19]
+	Updated devel/py-quixote to 2.7 [wiz 2014-01-19]
