@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2014/01/11 14:42:02 adam Exp $
+# $NetBSD: Makefile,v 1.37 2014/01/20 19:20:08 joerg Exp $
 
 DISTNAME=		gcvs-1.0
 PKGREVISION=		9
@@ -21,6 +21,8 @@ INFO_FILES=	yes
 CONFIGURE_ARGS+=	--with-tclinclude="${BUILDLINK_PREFIX.tcl}/include"
 CONFIGURE_ARGS+=	--with-tcllib="${BUILDLINK_PREFIX.tcl}/lib"
 CONFIGURE_ARGS+=	perl_path=${PERL5}
+
+CPPFLAGS+=	-DUSE_INTERP_RESULT
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"

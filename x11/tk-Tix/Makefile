@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2014/01/11 14:42:06 adam Exp $
+# $NetBSD: Makefile,v 1.24 2014/01/20 19:20:09 joerg Exp $
 #
 
 DISTNAME=	Tix${TIX_VERSION}-src
@@ -33,6 +33,8 @@ TEST_TARGET=		test
 INSTALLATION_DIRS+= 	${PKGMANDIR}/mann
 INSTALLATION_DIRS+=	lib/Tix${TIX_VERSION}/docs
 USE_TOOLS+=		tar
+
+CPPFLAGS+=	-DUSE_INTERP_RESULT
 
 post-install:
 	for f in ${WRKSRC}/man/*.n; do \

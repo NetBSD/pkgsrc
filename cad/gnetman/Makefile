@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/01/11 14:42:01 adam Exp $
+# $NetBSD: Makefile,v 1.15 2014/01/20 19:20:08 joerg Exp $
 #
 
 DISTNAME=		gnetman-11Feb05
@@ -18,6 +18,8 @@ CONFIGURE_ENV+=		TCL_CONFIG_SH=${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh
 post-extract:
 	${RM} ${WRKSRC}/src/include/tcl.h
 	${RM} ${WRKSRC}/src/include/tk.h
+
+CPPFLAGS+=	-DUSE_INTERP_RESULT -DUSE_INTERP_ERRORLINE
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"

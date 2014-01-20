@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/01/11 14:42:02 adam Exp $
+# $NetBSD: Makefile,v 1.13 2014/01/20 19:20:08 joerg Exp $
 #
 
 DISTNAME=	pgtcl1.5
@@ -16,6 +16,8 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	SHLIB_LD_FLAGS=${COMPILER_RPATH_FLAG}${PREFIX}/lib
+
+CPPFLAGS+=	-DUSE_INTERP_ERRORLINE
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"

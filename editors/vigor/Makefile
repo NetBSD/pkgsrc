@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2014/01/11 14:42:03 adam Exp $
+# $NetBSD: Makefile,v 1.43 2014/01/20 19:20:08 joerg Exp $
 #
 
 DISTNAME=	vigor-0.016
@@ -45,6 +45,8 @@ SUBST_SED.db185=	-e '/^\#include <db\.h>/s/db\.h/db_185.h/'
 BDB_ACCEPTED=		db1
 .include "../../mk/bdb.buildlink3.mk"
 .endif
+
+CPPFLAGS+=	-DUSE_INTERP_RESULT
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"

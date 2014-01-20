@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/01/11 14:42:05 adam Exp $
+# $NetBSD: Makefile,v 1.23 2014/01/20 19:20:08 joerg Exp $
 #
 
 DISTNAME=	hfsutils-3.2.6
@@ -16,6 +16,7 @@ CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
 CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}/lib
 CONFIGURE_ARGS+=	--disable-cli
 CPPFLAGS+=	-I${BUILDLINK_PREFIX.libhfs}/include/libhfs
+CPPFLAGS+=	-DUSE_INTERP_RESULT
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
