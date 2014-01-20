@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.40 2014/01/16 10:41:53 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2014/01/20 19:53:05 wiz Exp $
 
-DISTNAME=		matplotlib-1.2.1
+DISTNAME=		matplotlib-1.3.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		graphics python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=matplotlib/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://matplotlib.sourceforge.net/
+HOMEPAGE=		http://matplotlib.org/
 COMMENT=		Matlab-style plotting package for Python
 
 DEPENDS+=		${PYPKGPREFIX}-pytz>=2008b:../../time/py-pytz
@@ -16,7 +16,6 @@ PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 PY_PATCHPLIST=		yes
-PYDISTUTILSPKG=		yes
 
 REPLACE_PYTHON=		lib/matplotlib/dates.py
 REPLACE_PYTHON+=	lib/matplotlib/sankey.py
@@ -35,7 +34,7 @@ post-patch:
 	${ECHO} "wxagg = False" ) > ${WRKSRC}/setup.cfg
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
