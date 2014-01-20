@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.332 2014/01/20 12:18:32 obache Exp $
+$NetBSD: CHANGES-2014,v 1.333 2014/01/20 12:23:43 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -405,3 +405,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/py-cdb to 0.35 [wiz 2014-01-20]
 	Updated audio/py-audiotools to 2.20 [wiz 2014-01-20]
 	Updated emulators/suse131_openssl to 13.1nb2 [obache 2014-01-20]
+	Updated emulators/suse131_libpng to 13.1nb1 [obache 2014-01-20]
