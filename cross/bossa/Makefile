@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2014/01/14 15:36:59 reinoud Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/20 22:10:37 reinoud Exp $
 
 PKGNAME=	bossa-20140109
 DISTNAME=	b-o-s-s-a-code-05bfcc39bc0453c3028b1161175b95a81af7a901
 CATEGORIES=	comms
-MASTER_SITES=	http://sourceforge.net/code-snapshots/git/b/b-/b-o-s-s-a/code.git/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	pkgsrc@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/code-snapshots/git/b/b-/b-o-s-s-a/code.git/
+MAINTAINER=	reinoud@NetBSD.org
+HOMEPAGE=	http://sourceforge.net/projects/b-o-s-s-a/
 COMMENT=	Open source SAM-BA compatible Atmel ARM programmer
 LICENSE=	gnu-gpl-v3
 
