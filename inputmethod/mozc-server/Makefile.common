@@ -1,8 +1,9 @@
-# $NetBSD: Makefile.common,v 1.4 2014/01/19 01:18:50 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.5 2014/01/20 10:39:29 ryoon Exp $
 # used by inputmethod/ibus-mozc/Makefile
 # used by inputmethod/mozc-elisp/Makefile
 # used by inputmethod/mozc-server/Makefile
 # used by inputmethod/mozc-tool/Makefile
+# used by inputmethod/mozc-renderer/Makefile
 #
 
 DISTNAME=	mozc-1.13.1651.102
@@ -71,7 +72,6 @@ do-configure:
 .include "../../devel/protobuf/buildlink3.mk"
 # gmock is not used yet...
 #.include "../../devel/gmock/buildlink3.mk"
-.include "../../inputmethod/ibus/buildlink3.mk"
 .include "../../inputmethod/zinnia/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
