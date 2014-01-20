@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/01/20 12:50:31 wiz Exp $
+
+SHA1 (ephem-3.7.5.1.tar.gz) = 47b53eb85662a2c5e1db791ea0348b109db1dfb6
+RMD160 (ephem-3.7.5.1.tar.gz) = 20532a52ea5610c7b65cf32485d9668af710bcd6
+Size (ephem-3.7.5.1.tar.gz) = 731749 bytes
