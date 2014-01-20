@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2014/01/20 10:45:03 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.22 2014/01/20 13:26:54 ryoon Exp $
 ${PLIST.qt3}bin/uim-chardict-qt
 ${PLIST.qt}bin/uim-chardict-qt4
 ${PLIST.uim-dict-gtk}bin/uim-dict-gtk
@@ -363,6 +363,27 @@ share/uim/pixmaps/zm.svg
 share/uim/pixmaps/zm_dark_background.png
 share/uim/pixmaps/zm_dark_background.svg
 share/uim/plugin.scm
+share/uim/pkgsrc/ajax-ime
+${PLIST.anthy}share/uim/pkgsrc/anthy
+share/uim/pkgsrc/baidu-olime-jp
+share/uim/pkgsrc/byeoru
+${PLIST.canna}share/uim/pkgsrc/canna
+share/uim/pkgsrc/elatin
+share/uim/pkgsrc/google-cgiapi-jp
+share/uim/pkgsrc/look
+share/uim/pkgsrc/ipa-x-sampa
+share/uim/pkgsrc/latin
+${PLIST.m17nlib}share/uim/pkgsrc/m17nlib
+${PLIST.prime}share/uim/pkgsrc/prime
+share/uim/pkgsrc/pyload
+${PLIST.sj3}share/uim/pkgsrc/sj3
+share/uim/pkgsrc/skk
+share/uim/pkgsrc/social-ime
+share/uim/pkgsrc/tutcode
+share/uim/pkgsrc/viqr
+${PLIST.wnn}share/uim/pkgsrc/wnn
+share/uim/pkgsrc/xmload
+${PLIST.expat}share/uim/pkgsrc/yahoo-jp
 share/uim/predict-custom.scm
 share/uim/predict-google-suggest.scm
 share/uim/predict-look-skk.scm
