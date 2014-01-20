@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/01/11 14:42:04 adam Exp $
+# $NetBSD: Makefile,v 1.16 2014/01/20 19:20:08 joerg Exp $
 #
 
 DISTNAME=	hanzim-1.3
@@ -26,6 +26,8 @@ INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+
+CFLAGS+=	-DUSE_INTERP_RESULT
 
 pre-install:
 	@if ${TEST} -z "$$DISPLAY"; then				\

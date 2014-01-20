@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/01/11 14:42:06 adam Exp $
+# $NetBSD: Makefile,v 1.30 2014/01/20 19:20:09 joerg Exp $
 
 VER=		3.0.2
 DISTNAME=	ical-${VER}
@@ -21,6 +21,8 @@ CONFIGURE_ARGS+= --prefix=${PREFIX:Q} \
 		--with-tclconfig=${BUILDLINK_PREFIX.tcl}/lib \
 		--with-tclsh=${BUILDLINK_PREFIX.tcl}/bin/tclsh \
 		--with-tkconfig=${BUILDLINK_PREFIX.tk}/lib
+
+CPPFLAGS+=	-DUSE_INTERP_RESULT
 
 USE_TOOLS+=	gmake gsed
 
