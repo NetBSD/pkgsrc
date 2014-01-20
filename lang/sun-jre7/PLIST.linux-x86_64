@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-x86_64,v 1.3 2013/12/31 16:46:56 christos Exp $
+@comment $NetBSD: PLIST.linux-x86_64,v 1.4 2014/01/20 19:21:31 joerg Exp $
 bin/sun7-java
 bin/sun7-javaws
 bin/sun7-keytool
@@ -98,6 +98,7 @@ java/sun-7/lib/content-types.properties.default
 java/sun-7/lib/currency.data
 java/sun-7/lib/deploy.jar
 java/sun-7/lib/deploy/MixedCodeMainDialog.ui
+java/sun-7/lib/deploy/MixedCodeMainDialogJs.ui
 java/sun-7/lib/deploy/cautionshield.icns
 java/sun-7/lib/deploy/ffjcext.zip
 java/sun-7/lib/deploy/java-icon.ico
@@ -213,6 +214,8 @@ java/sun-7/lib/javafx.properties.default
 java/sun-7/lib/javaws.jar
 java/sun-7/lib/jce.jar
 java/sun-7/lib/jexec
+java/sun-7/lib/jfr/default.jfc
+java/sun-7/lib/jfr/profile.jfc
 java/sun-7/lib/jfr.jar
 java/sun-7/lib/jfxrt.jar
 java/sun-7/lib/jsse.jar
