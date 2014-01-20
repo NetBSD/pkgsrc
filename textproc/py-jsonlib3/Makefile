@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/01/18 15:45:30 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/20 11:10:05 wiz Exp $
 
 DISTNAME=	jsonlib-python3-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python3//}
@@ -15,6 +15,7 @@ USE_LANGUAGES=	c
 EGG_NAME=	${DISTNAME:S/b-p/b_p/}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	26 27
+PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
