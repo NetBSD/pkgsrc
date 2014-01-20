@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/31 11:19:32 asau Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/01/20 20:22:28 wiz Exp $
 
 DISTNAME=	multiprocessing-2.6.2.1
 PKGNAME=	${PYPKGPREFIX}-multiprocessing-2.6.2.1
@@ -9,9 +8,9 @@ MASTER_SITES=	http://pypi.python.org/packages/source/m/multiprocessing/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pypi.python.org/pypi/multiprocessing/
 COMMENT=	Python threading package
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	modified-bsd
 
-PYDISTUTILSPKG=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # does not make sense, python-3.x has it included
 
 do-test:
 	${PYTHONBIN} -c "from multiprocessing import tests;tests.test_main()"
