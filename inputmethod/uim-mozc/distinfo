@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2014/01/20 10:45:57 ryoon Exp $
+
+SHA1 (mozc-1.13.1651.102.tar.bz2) = 24680b3d350e5332f2235b9c1342127f6ef0fd63
+RMD160 (mozc-1.13.1651.102.tar.bz2) = 260a23c2f9f3b909aefe63c865f3b87013d2fb53
+Size (mozc-1.13.1651.102.tar.bz2) = 31635636 bytes
+SHA1 (uim-mozc-331.tar.xz) = 760d1deb5964358d1dc064e44d45eec38d94d9ec
+RMD160 (uim-mozc-331.tar.xz) = db4df92b8adc0e6202cf7f61c326b1503e157d9b
+Size (uim-mozc-331.tar.xz) = 30580 bytes
