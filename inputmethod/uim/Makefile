@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.88 2014/01/01 11:52:21 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2014/01/20 10:45:03 ryoon Exp $
 #
 
 .include "../../inputmethod/uim/Makefile.common"
 
-PKGREVISION=		5
+PKGREVISION=		6
 COMMENT=		Multilingual input method library
 #LICENSE=		See ${WRKSRC}/COPYING
 
@@ -26,7 +26,13 @@ CFLAGS.SunOS+=	-std=c99 -D__EXTENSIONS__
 
 .include "options.mk"
 
-INSTALLATION_DIRS+=	share/doc/uim
+INSTALLATION_DIRS+=	share/doc/uim share/examples/uim
+
+EGDIR=			${PREFIX}/share/examples/uim
+CONF_FILES=		${EGDIR}/loader.scm.example \
+			${PREFIX}/share/uim/loader.scm
+CONF_FILES+=		${EGDIR}/installed-modules.scm.example \
+			${PREFIX}/share/uim/installed-modules.scm
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/uim
@@ -39,6 +45,11 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/PLUGIN ${DESTDIR}${PREFIX}/share/doc/uim
 	${INSTALL_DATA} ${WRKSRC}/doc/UIM-SCM ${DESTDIR}${PREFIX}/share/doc/uim
 	${INSTALL_DATA} ${WRKSRC}/doc/UIM-SH ${DESTDIR}${PREFIX}/share/doc/uim
+# loader.scm and installed-modules.scm is updated by uim-module-manager.
+	${MV} ${DESTDIR}${PREFIX}/share/uim/loader.scm \
+		${DESTDIR}${EGDIR}/loader.scm.example
+	${MV} ${DESTDIR}${PREFIX}/share/uim/installed-modules.scm \
+		${DESTDIR}${EGDIR}/installed-modules.scm.example
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
