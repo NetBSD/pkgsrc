@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2014/01/11 14:42:04 adam Exp $
+# $NetBSD: Makefile,v 1.82 2014/01/20 19:20:08 joerg Exp $
 
 DISTNAME=	smalltalk-3.2.4
 PKGREVISION=	18
@@ -43,6 +43,8 @@ REPLACE.sys-sed.new=	${SED}
 REPLACE_FILES.sys-sed=	${REPLACE_SED}
 
 .include "../../mk/bsd.prefs.mk"
+
+CPPFLAGS+=	-DUSE_INTERP_RESULT
 
 # for backtrace
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/execinfo.h)

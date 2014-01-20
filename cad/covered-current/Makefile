@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2014/01/11 14:42:01 adam Exp $
+# $NetBSD: Makefile,v 1.24 2014/01/20 19:20:08 joerg Exp $
 #
 
 DISTNAME=	covered-${SNAPDATE}
@@ -35,6 +35,8 @@ REPLACE_FILES.WISH+=	scripts/summary.tcl
 # the execute bit set.
 CONFIGURE_ENV+=	r_cv_path_TCL_CONFIG=${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh
 CONFIGURE_ENV+=	r_cv_path_TK_CONFIG=${BUILDLINK_PREFIX.tk}/lib/tkConfig.sh
+
+CPPFLAGS+=	-DUSE_INTERP_RESULT
 
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
