@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.329 2014/01/20 11:23:09 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.330 2014/01/20 11:35:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -402,3 +402,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added inputmethod/uim-mozc version 1.13.1651.102 [ryoon 2014-01-20]
 	Updated databases/py-ckanclient to 0.10 [wiz 2014-01-20]
 	Updated devel/py-cheetah to 2.4.4nb1 [wiz 2014-01-20]
+	Updated databases/py-cdb to 0.35 [wiz 2014-01-20]
