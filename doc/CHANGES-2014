@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.331 2014/01/20 12:16:02 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.332 2014/01/20 12:18:32 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -404,3 +404,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-cheetah to 2.4.4nb1 [wiz 2014-01-20]
 	Updated databases/py-cdb to 0.35 [wiz 2014-01-20]
 	Updated audio/py-audiotools to 2.20 [wiz 2014-01-20]
+	Updated emulators/suse131_openssl to 13.1nb2 [obache 2014-01-20]
