@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/07/01 01:56:16 jakllsch Exp $
+$NetBSD: distinfo,v 1.2 2014/01/20 11:54:21 wiz Exp $
 
-SHA1 (audiotools-2.18.tar.gz) = d080dd2e470dc711a89777833a92d83fc2cb6614
-RMD160 (audiotools-2.18.tar.gz) = c503bf49dec30c7d0e1c535483aa5afe84140695
-Size (audiotools-2.18.tar.gz) = 6450713 bytes
+SHA1 (audiotools-2.20.tar.gz) = 0ed9c286f21101dc4ff9fa702b5d4d52f6826ea8
+RMD160 (audiotools-2.20.tar.gz) = d879fa9acc83e059b5aa124b36fda0d57479c4f6
+Size (audiotools-2.20.tar.gz) = 6471831 bytes
+SHA1 (patch-audiotools_player.py) = cf6a8884ca976c188ab13cf4acfb23c775c61c7f
