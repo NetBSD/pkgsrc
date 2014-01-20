@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.39 2014/01/14 17:24:42 abs Exp $
+$NetBSD: distinfo,v 1.40 2014/01/20 19:25:11 joerg Exp $
 
 SHA1 (openjdk7/UnlimitedJCEPolicyJDK7.zip) = 7d3c9ee89536b82cd21c680088b1bced16017253
 RMD160 (openjdk7/UnlimitedJCEPolicyJDK7.zip) = a4a6a284579f43d2df3532d279e143d2f03c2c3f
@@ -88,8 +88,10 @@ SHA1 (patch-bg) = 90328bd927c52e62d97c72fade2ceb70d42fe273
 SHA1 (patch-bh) = 33b56c77da352e710350a9e210660a78b11930a6
 SHA1 (patch-bi) = 9323d54054e5b3112e96ba311014c8228009de1a
 SHA1 (patch-bn) = e90012a3acbdeec1fe97d53ffa11816379ac90e9
+SHA1 (patch-corba_make_common_shared_Defs-java.gmk) = 548718a351fe6159d3de4120cba90701c064ddda
 SHA1 (patch-corba_make_common_shared_Defs-utils.gmk) = e3b6d4683f1128bc1b2e5d8453608228da54e3d2
 SHA1 (patch-corba_make_common_shared_Platform.gmk) = 057af9ea52ca257750267289e4f1a950df0ed756
+SHA1 (patch-hotspot_make_bsd_makefiles_buildtree.make) = 2605e4f684abb026be91b4993bb2f741822cf169
 SHA1 (patch-hotspot_make_bsd_makefiles_defs.make) = 85eda2125ef39c5fe5fcfbc072bd8a3591d5c4bf
 SHA1 (patch-hotspot_make_solaris_makefiles_adlc.make) = 1d1be862ed0d8fc3da4710da169ad5a965d9df14
 SHA1 (patch-hotspot_make_solaris_makefiles_build__vm__def.sh) = 54d197a94d27406f2957b5c2a7a7982866f99239
@@ -115,6 +117,8 @@ SHA1 (patch-hotspot_src_os_posix_vm_os__posix.cpp) = da6017447c5537048fcf04198c4
 SHA1 (patch-hotspot_src_os_solaris_dtrace_jhelper.d) = 43ae9934ce7cf477f7968bcf9ba3c57e98f65cc8
 SHA1 (patch-hotspot_src_os_solaris_vm_decoder__solaris.cpp) = 3be8a96525ead1df18a40b18dccfad4ef2765d47
 SHA1 (patch-hotspot_src_os_solaris_vm_os__solaris.cpp) = ea09ffd080fcf4c12b0b69cb622ee3945000cb68
+SHA1 (patch-hotspot_src_share_vm_code_relocInfo.hpp) = c02b2bb64129113b5812feb02033e12969bafe04
+SHA1 (patch-hotspot_src_share_vm_opto_node.cpp) = 869d8ec9dc6dae6e0b8a23fe44f2583747059553
 SHA1 (patch-hotspot_src_share_vm_utilities_globalDefinitions__gcc.hpp) = fe40909864fc561495b1e15a5bc6c7c6373830b2
 SHA1 (patch-hotspot_src_share_vm_utilities_hashtable.cpp) = 30084c64570e420fbda8fbd36fcd4aa2641eab8e
 SHA1 (patch-jdk_make_com_sun_Makefile) = 5826c64eb1971d69e8b874d6b8a60d25e0d02c5b
@@ -126,6 +130,7 @@ SHA1 (patch-jdk_make_common_Defs-solaris.gmk) = ea0bef0fd67a1ff809a17005458dadae
 SHA1 (patch-jdk_make_common_Mapfile-vers.gmk) = 7115ec8e0fc25f952a6c72ee78df33901040a7b6
 SHA1 (patch-jdk_make_common_Program.gmk) = 66edaf69cb12c1e024ba1145c98b667d54ea9239
 SHA1 (patch-jdk_make_common_shared_Compiler-gcc.gmk) = e180383490d6c0a8bec4626ed96ad1741c8fb3a2
+SHA1 (patch-jdk_make_common_shared_Defs-java.gmk) = f7c11d33da19e9f255fde7cab387c91e0287509c
 SHA1 (patch-jdk_make_common_shared_Defs-utils.gmk) = d0ae37a032be6bf60da4be11bd38185e89d4ee91
 SHA1 (patch-jdk_make_common_shared_Defs-versions.gmk) = 20a9492180db88cf78bc107f1e2fc4a9101d2eab
 SHA1 (patch-jdk_make_java_Makefile) = c670455f8979b14fe44f0a285d0adfb2666d0005
@@ -154,8 +159,9 @@ SHA1 (patch-jdk_src_solaris_bin_ergo__i586.c) = 7b1d1c7f84e752ef7c53d5419dc3ab52
 SHA1 (patch-jdk_src_solaris_classes_sun_nio_ch_DefaultAsynchronousChannelProvider.java) = 86ce16bd53c85bc3830ef3f21d52f9a8107b5350
 SHA1 (patch-jdk_src_solaris_classes_sun_nio_fs_BsdFileSystemProvider.java) = b57411309b8d46de6a9ab3606d72690908989d50
 SHA1 (patch-jdk_src_solaris_native_java_net_NetworkInterface.c) = d509a6ed567493024e3ce5de8986912da99f4a9d
+SHA1 (patch-jdk_src_solaris_native_java_net_net__util__md.c) = 883fb8cf76f9a6d47e1c96badb07be162add80f7
 SHA1 (patch-jdk_src_solaris_native_sun_awt_X11Color.c) = 928e9fbc11d8e64a69e27573efa13482acb62480
-SHA1 (patch-jdk_test_Makefile) = d747987549c2f6e9eb42233edae02d8eae6b4584
+SHA1 (patch-jdk_test_Makefile) = 62618854251a5fe139310fc443af3f2f0103f63c
 SHA1 (patch-jdk_test_java_beans_Introspector_4168475_Test4168475.java) = a2a13434a4e87730fa96f53efa176fa91d3c1eeb
 SHA1 (patch-jdk_test_java_beans_Introspector_4520754_Test4520754.java) = 98a7c2fbccd50da0c879940131901b3937d72c0d
 SHA1 (patch-jdk_test_java_beans_Introspector_Test4144543.java) = e003869d924ac3cb326c4093891bd0cfc0f7ff9c
