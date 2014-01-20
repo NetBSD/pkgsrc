@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2004,v 1.20 2006/08/14 09:06:47 wiz Exp $
+$NetBSD: CHANGES-2004,v 1.21 2014/01/20 11:30:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3016,6 +3016,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xmess to 0.83.1 [kristerw 2004-06-21]
 	Updated rconfig to 0.33 [abs 2004-06-21]
 	Added ap2-auth-pgsql-2.0.2b [darcy 2004-06-21]
+	Updated py-cddb to 0.4 [drochner 2004-06-21]
 	Updated wmi to 8 [salo 2004-06-22]
 	Updated screws to 0.54 [xtraeme 2004-06-22]
 	Updated p5-Device-Modem to 1.36 [grant 2004-06-22]
