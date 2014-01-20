@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.14 2014/01/17 14:29:50 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.15 2014/01/20 23:17:01 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q4 branch:
@@ -53,3 +53,7 @@ Pullup ticket #4303 - requested by obache
 emulators/suse131_x11: security update
 Pullup ticket #4305 - requested by obache
 inputmethod/ibus-chewing: security update
+Pullup ticket #4306 - requested by obache
+emulators/suse131_openssl: security update
+Pullup ticket #4307 - requested by obache
+emulators/suse131_libpng: security update
