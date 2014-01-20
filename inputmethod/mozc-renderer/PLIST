@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/20 10:35:43 ryoon Exp $
+libexec/mozc_renderer
+share/icons/mozc-alpha_full.png
+share/icons/mozc-alpha_half.png
+share/icons/mozc-dictionary.png
+share/icons/mozc-direct.png
+share/icons/mozc-hiragana.png
+share/icons/mozc-katakana_full.png
+share/icons/mozc-katakana_half.png
+share/icons/mozc-properties.png
+share/icons/mozc-tool.png
+share/icons/mozc.png
