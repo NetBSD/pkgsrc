@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/01/11 14:42:00 adam Exp $
+# $NetBSD: Makefile,v 1.13 2014/01/20 19:20:08 joerg Exp $
 #
 
 DISTNAME=	idzebra-2.0.47
@@ -14,6 +14,8 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 TEST_TARGET=	check
+
+CPPFLAGS+=	-DUSE_INTERP_RESULT -DUSE_INTERP_ERRORLINE
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"

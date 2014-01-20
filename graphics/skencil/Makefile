@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/01/11 14:42:04 adam Exp $
+# $NetBSD: Makefile,v 1.30 2014/01/20 19:20:08 joerg Exp $
 
 DISTNAME=	skencil-0.6.17
 PKGREVISION=	12
@@ -18,6 +18,8 @@ SK_CONF_ARGS=	--imaging-include=${BUILDLINK_PREFIX.pyimaging}/${PYINC}/PIL
 SK_TKFLAGS=	-L${BUILDLINK_PREFIX.tk}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.tk}/lib -ltk -ltcl
 SK_TKFLAGS+=	${COMPILER_RPATH_FLAG}${X11BASE}/lib
 SK_CONF_ARGS+=	--tk-flags=${SK_TKFLAGS:Q}
+
+CPPFLAGS+=	-DUSE_INTERP_RESULT
 
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
