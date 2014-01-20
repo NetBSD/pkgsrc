@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2012/12/09 20:35:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/01/20 16:29:30 wiz Exp $
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/tagging/__init__.py
 ${PYSITELIB}/tagging/__init__.pyc
 ${PYSITELIB}/tagging/__init__.pyo
