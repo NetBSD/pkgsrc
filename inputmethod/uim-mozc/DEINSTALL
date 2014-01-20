@@ -1,6 +1,6 @@
-# $NetBSD: DEINSTALL,v 1.1 2014/01/20 10:45:57 ryoon Exp $
+# $NetBSD: DEINSTALL,v 1.2 2014/01/20 12:32:49 ryoon Exp $
 case ${STAGE} in
-POST-INSTALL)
+POST-DEINSTALL)
 	${PREFIX}/bin/uim-module-manager --unregister mozc
 	;;
 esac
