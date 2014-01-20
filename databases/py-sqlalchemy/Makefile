@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2013/12/14 08:47:18 obache Exp $
+# $NetBSD: Makefile,v 1.11 2014/01/20 22:27:00 wiz Exp $
 
 DISTNAME=	SQLAlchemy-0.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 EGG_NAME=	${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	http://pypi.python.org/packages/source/S/SQLAlchemy/
@@ -14,9 +15,10 @@ LICENSE=	mit
 BUILD_DEPENDS+=	${PYPKGPREFIX}-nose>=0.11:../../devel/py-nose
 BUILD_DEPENDS+=	${PYPKGPREFIX}-mock>=0:../../devel/py-mock
 
-#PYTHON_VERSIONS_INCLUDE_3X=	yes
+REPLACE_PYTHON=	lib/sqlalchemy/testing/runner.py
 
 .include "options.mk"
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
