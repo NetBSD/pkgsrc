@@ -1,0 +1,7 @@
+# $NetBSD: DEINSTALL,v 1.1 2014/01/20 13:26:54 ryoon Exp $
+
+case ${STAGE} in
+DEINSTALL)
+	${PREFIX}/bin/uim-module-manager --unregister-all
+	;;
+esac

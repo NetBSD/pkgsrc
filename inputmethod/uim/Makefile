@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.89 2014/01/20 10:45:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.90 2014/01/20 13:26:54 ryoon Exp $
 #
 
 .include "../../inputmethod/uim/Makefile.common"
 
-PKGREVISION=		6
+PKGREVISION=		7
 COMMENT=		Multilingual input method library
 #LICENSE=		See ${WRKSRC}/COPYING
 
@@ -35,6 +35,11 @@ CONF_FILES+=		${EGDIR}/installed-modules.scm.example \
 			${PREFIX}/share/uim/installed-modules.scm
 
 post-install:
+# Register uim module infomation
+	${MKDIR} ${DESTDIR}${PREFIX}/share/uim/pkgsrc
+.for m in ${UIM_MODULES}
+	${TOUCH} ${DESTDIR}${PREFIX}/share/uim/pkgsrc/${m}
+.endfor
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/uim
 	${INSTALL_DATA} ${WRKSRC}/doc/COMPATIBILITY ${DESTDIR}${PREFIX}/share/doc/uim
 	${INSTALL_DATA} ${WRKSRC}/doc/CUSTOM ${DESTDIR}${PREFIX}/share/doc/uim

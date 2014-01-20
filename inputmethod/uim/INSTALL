@@ -1,0 +1,10 @@
+# $NetBSD: INSTALL,v 1.1 2014/01/20 13:26:54 ryoon Exp $
+
+case ${STAGE} in
+POST-INSTALL)
+	cd ${PREFIX}/share/uim/pkgsrc
+	for m in *
+		do ${PREFIX}/bin/uim-module-manager --register ${m}
+	done
+	;;
+esac
