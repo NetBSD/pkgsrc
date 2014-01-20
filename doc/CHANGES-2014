@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.349 2014/01/20 20:46:54 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.350 2014/01/20 22:17:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -422,3 +422,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/py-mxDateTime to 3.2.7 [wiz 2014-01-20]
 	Updated databases/py-PgSQL to 2.4nb8 [wiz 2014-01-20]
 	Updated databases/py-sqlite to 1.0.1nb3 [wiz 2014-01-20]
+	Updated cad/py-simpy to 2.3nb1 [wiz 2014-01-20]
