@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/10/14 17:57:30 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/01/20 22:27:00 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -23,7 +23,7 @@ ${PYSITELIB}/sqlalchemy/connectors/zxJDBC.pyc
 ${PYSITELIB}/sqlalchemy/connectors/zxJDBC.pyo
 ${PLIST.py2x}${PYSITELIB}/sqlalchemy/cprocessors.so
 ${PLIST.py2x}${PYSITELIB}/sqlalchemy/cresultproxy.so
-${PYSITELIB}/sqlalchemy/cutils.so
+${PLIST.py2x}${PYSITELIB}/sqlalchemy/cutils.so
 ${PYSITELIB}/sqlalchemy/databases/__init__.py
 ${PYSITELIB}/sqlalchemy/databases/__init__.pyc
 ${PYSITELIB}/sqlalchemy/databases/__init__.pyo
