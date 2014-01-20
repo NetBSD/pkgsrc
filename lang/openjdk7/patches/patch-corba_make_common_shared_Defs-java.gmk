@@ -1,0 +1,13 @@
+$NetBSD: patch-corba_make_common_shared_Defs-java.gmk,v 1.1 2014/01/20 19:25:11 joerg Exp $
+
+--- corba/make/common/shared/Defs-java.gmk.orig	2014-01-05 23:11:01.000000000 +0000
++++ corba/make/common/shared/Defs-java.gmk
+@@ -59,7 +59,7 @@ endif
+ # Options for hotspot to turn off printing of options with fastdebug version
+ #   and creating the hotspot.log file.
+ JAVA_HOTSPOT_DISABLE_PRINT_VMOPTIONS = \
+-   -XX:-PrintVMOptions -XX:+UnlockDiagnosticVMOptions -XX:-LogVMOutput
++   -XX:-PrintVMOptions -XX:+UnlockDiagnosticVMOptions -XX:-LogVMOutput -Xms256m -XX:+UseSerialGC
+ 
+ # JVM options
+ JAVA_JVM_FLAGS = $(JAVA_HOTSPOT_DISABLE_PRINT_VMOPTIONS)
