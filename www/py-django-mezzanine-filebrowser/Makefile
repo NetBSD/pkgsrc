@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2013/04/06 03:45:27 rodent Exp $
-#
+# $NetBSD: Makefile,v 1.4 2014/01/20 16:25:17 wiz Exp $
 
 DISTNAME=	filebrowser-safe-0.2.13
 PKGNAME=	${PYPKGPREFIX}-django-mezzanine-${DISTNAME:S/-safe//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,11 +12,12 @@ HOMEPAGE=	https://github.com/stephenmcd/filebrowser-safe/
 COMMENT=	Mezzanine CMS django filebrowser
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.2.13
 
 EGG_NAME=	${DISTNAME:S/-/_/}
 
