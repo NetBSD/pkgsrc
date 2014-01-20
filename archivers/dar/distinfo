@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2013/06/28 15:03:55 ryoon Exp $
+$NetBSD: distinfo,v 1.29 2014/01/20 19:29:34 joerg Exp $
 
 SHA1 (dar-2.4.10.tar.gz) = bf02ba10bfcd2ad959017706f167fc390aafe932
 RMD160 (dar-2.4.10.tar.gz) = 26161a09a60e36a3094f94d8831a157b7c3e4d0a
@@ -6,7 +6,7 @@ Size (dar-2.4.10.tar.gz) = 1760827 bytes
 SHA1 (patch-aa) = 734ec162dbc339b2015a169bb9fe723e45d0a29b
 SHA1 (patch-ab) = f07d55861f21545b0ae8ac6b187a94526e44e345
 SHA1 (patch-ac) = dcbf4e31071c83a167a60a20e4980b35f055a46e
-SHA1 (patch-ad) = df21f72b12ab19123f1c61e8e1645519c43d7f7b
+SHA1 (patch-ad) = e32c33d5670f39a04f8ceef94d6e9d5a6b524016
 SHA1 (patch-ae) = 54220384bf2031df64c38f5abea038382ca37e8e
 SHA1 (patch-af) = 414e58277c946b59f57352e260ac5d49673ef008
 SHA1 (patch-src_dar__suite_command__line.cpp) = 63d3004bf7d49277c1508fe5d9ac52ec0d5bf11f
@@ -17,8 +17,9 @@ SHA1 (patch-src_dar__suite_line__tools.cpp) = 076c5213aaa3e6dfa471322b6597c0ce8c
 SHA1 (patch-src_examples_factoriel.cpp) = 6c9e038b7a3bbfdc96dbbdf1b7e100c159353f87
 SHA1 (patch-src_examples_formula.cpp) = 583ceeba0a232e657ab0696711f630476ec2e495
 SHA1 (patch-src_examples_prime.cpp) = 09fc3b96642945042a2d13bb4c1995546cdb7607
-SHA1 (patch-src_libdar_mask__list.hpp) = b16686706cb7ad7065467decfd93271f01d9c663
+SHA1 (patch-src_libdar_mask__list.hpp) = b3b6eaa36875784432e53d5dfbfb33d7623054a3
 SHA1 (patch-src_libdar_secu__string.hpp) = 6793cb79bf5f8c4d3ac83ba4f2cd2fd9f452afb1
+SHA1 (patch-src_testing_Makefile.in) = e8d48b5fa9fcdd2f5bef3fca240850c0787f6647
 SHA1 (patch-src_testing_test__catalogue.cpp) = 2d1a8299f01776e3fa9996819aa8be523b73b4cc
 SHA1 (patch-src_testing_test__deci.cpp) = 053e2123a5219dc0cb827743e348f9463ce84615
 SHA1 (patch-src_testing_test__escape.cpp) = b7959b2e5e3675d2e64f232face3b18384f8e3da
