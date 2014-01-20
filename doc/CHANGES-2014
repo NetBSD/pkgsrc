@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.340 2014/01/20 15:47:01 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.341 2014/01/20 16:25:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -413,3 +413,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated inputmethod/uim to 1.8.6nb7 [ryoon 2014-01-20]
 	Updated www/py-django-easy-thumbnails to 1.2nb1 [wiz 2014-01-20]
 	Updated cad/py-MyHDL to 0.7nb1 [wiz 2014-01-20]
+	Updated www/py-django-mezzanine-filebrowser to 0.2.13nb2 [wiz 2014-01-20]
