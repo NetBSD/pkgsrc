@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.3 2013/04/06 03:45:08 rodent Exp $
-#
+# $NetBSD: Makefile,v 1.4 2014/01/20 11:35:00 wiz Exp $
 
-DISTNAME=	python-cdb-0.34
+DISTNAME=	python-cdb-0.35
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 CATEGORIES=	databases
-MASTER_SITES=	http://pilcrow.madison.wi.us/python-cdb/
+MASTER_SITES=	https://pypi.python.org/packages/source/p/python-cdb/
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://pilcrow.madison.wi.us/
 COMMENT=	Python extension module for cdb
 LICENSE=	gnu-gpl-v2
 
-PYDISTUTILSPKG=		yes
+EGG_NAME=	${DISTNAME:S/-/_/}
 
-.include "../../lang/python/extension.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.35
+
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
