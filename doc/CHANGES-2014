@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.324 2014/01/20 10:37:03 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.325 2014/01/20 10:41:28 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -396,3 +396,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated games/py-renpy to 6.16.5 [wiz 2014-01-19]
 	Updated math/py-rpy to 2.3.0 [wiz 2014-01-19]
 	Added inputmethod/mozc-renderer version 1.13.1651.102 [ryoon 2014-01-20]
+	Updated inputmethod/mozc-server to 1.13.1651.102nb1 [ryoon 2014-01-20]
