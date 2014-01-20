@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2012/10/25 06:56:48 asau Exp $
-#
+# $NetBSD: Makefile,v 1.15 2014/01/20 12:37:04 wiz Exp $
 
-DISTNAME=	PyX-0.9
-PKGNAME=	${PYPKGPREFIX}-X-0.9
-PKGREVISION=	4
+DISTNAME=	PyX-0.13
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyx/}
 
@@ -19,25 +17,12 @@ DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
 
 USE_LANGUAGES=	#none
 
-CONF_FILES=	${PREFIX}/share/examples/PyX/pyxrc \
+CONF_FILES=	${PYSITELIB}/pyx/data/pyxrc \
 		${PKG_SYSCONFDIR}/pyxrc
 
-SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	post-patch
-SUBST_MESSAGE.conf=	Fixing configuration files.
-SUBST_FILES.conf=	setup.py
-SUBST_SED.conf+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
-
-INSTALLATION_DIRS=	share/examples/PyX
-
 PYTHON_SELF_CONFLICT=	yes
-
-pre-install:
-	${CP} ${WRKSRC}/pyxrc ${WRKSRC}/pyxrc.default
-
-post-install:
-	${CP} ${WRKSRC}/pyxrc ${DESTDIR}${PREFIX}/share/examples/PyX/pyxrc
+PYTHON_VERSIONS_INCOMPATIBLE=	26 27
+PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 .include "../../lang/python/distutils.mk"
-.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
