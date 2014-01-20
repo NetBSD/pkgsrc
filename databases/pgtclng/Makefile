@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/01/11 14:42:02 adam Exp $
+# $NetBSD: Makefile,v 1.14 2014/01/20 19:20:08 joerg Exp $
 #
 
 VER=		1.5.3
@@ -19,6 +19,8 @@ GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--with-postgres-include=${PREFIX:Q}/include
 CONFIGURE_ARGS+=	--with-postgres-lib=${PREFIX:Q}/lib
+
+CPPFLAGS+=	-DUSE_INTERP_ERRORLINE
 
 PGTCLLIBNAME		= libpgtcl${VER:C/\.//g}.so
 

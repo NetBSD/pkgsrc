@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2006/10/08 11:43:06 obache Exp $
+$NetBSD: distinfo,v 1.5 2014/01/20 19:20:08 joerg Exp $
 
 SHA1 (dirdiff-2.1.tar.gz) = baa355b2eae4886de57a47cb69d8214c7545c0e8
 RMD160 (dirdiff-2.1.tar.gz) = 280ead77db4371eee2d6cc6d5df3ee362585fbb0
 Size (dirdiff-2.1.tar.gz) = 43105 bytes
-SHA1 (patch-aa) = 3d82bc63fe30b8c4eed2a84571d56f769d93a56a
+SHA1 (patch-aa) = 03b27f19ec415638ae02813e2a02ec139be27719
+SHA1 (patch-filecmp.c) = dd56255289746eacc4804d11f2fb1880c9272411
