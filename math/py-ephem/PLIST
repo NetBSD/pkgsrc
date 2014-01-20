@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/09/20 09:52:14 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/01/20 12:47:40 wiz Exp $
 ${PYSITELIB}/ephem/__init__.py
 ${PYSITELIB}/ephem/__init__.pyc
 ${PYSITELIB}/ephem/__init__.pyo
@@ -17,6 +17,8 @@ ${PYSITELIB}/ephem/doc/index.rst
 ${PYSITELIB}/ephem/doc/newton.rst
 ${PYSITELIB}/ephem/doc/quick.rst
 ${PYSITELIB}/ephem/doc/radec.rst
+${PYSITELIB}/ephem/doc/reference.rst
+${PYSITELIB}/ephem/doc/rise-set.rst
 ${PYSITELIB}/ephem/doc/tutorial.rst
 ${PYSITELIB}/ephem/stars.py
 ${PYSITELIB}/ephem/stars.pyc
@@ -24,9 +26,6 @@ ${PYSITELIB}/ephem/stars.pyo
 ${PYSITELIB}/ephem/tests/__init__.py
 ${PYSITELIB}/ephem/tests/__init__.pyc
 ${PYSITELIB}/ephem/tests/__init__.pyo
-${PYSITELIB}/ephem/tests/ephem_test.py
-${PYSITELIB}/ephem/tests/ephem_test.pyc
-${PYSITELIB}/ephem/tests/ephem_test.pyo
 ${PYSITELIB}/ephem/tests/jpl/europa.txt
 ${PYSITELIB}/ephem/tests/jpl/hyperion.txt
 ${PYSITELIB}/ephem/tests/jpl/jupiter.txt
@@ -36,18 +35,15 @@ ${PYSITELIB}/ephem/tests/jpl/oberon.txt
 ${PYSITELIB}/ephem/tests/jpl/phobos.txt
 ${PYSITELIB}/ephem/tests/jpl/saturn.txt
 ${PYSITELIB}/ephem/tests/jpl/uranus.txt
-${PYSITELIB}/ephem/tests/launchpad_236872.py
-${PYSITELIB}/ephem/tests/launchpad_236872.pyc
-${PYSITELIB}/ephem/tests/launchpad_236872.pyo
-${PYSITELIB}/ephem/tests/launchpad_244811.py
-${PYSITELIB}/ephem/tests/launchpad_244811.pyc
-${PYSITELIB}/ephem/tests/launchpad_244811.pyo
 ${PYSITELIB}/ephem/tests/test_angles.py
 ${PYSITELIB}/ephem/tests/test_angles.pyc
 ${PYSITELIB}/ephem/tests/test_angles.pyo
 ${PYSITELIB}/ephem/tests/test_bodies.py
 ${PYSITELIB}/ephem/tests/test_bodies.pyc
 ${PYSITELIB}/ephem/tests/test_bodies.pyo
+${PYSITELIB}/ephem/tests/test_cities.py
+${PYSITELIB}/ephem/tests/test_cities.pyc
+${PYSITELIB}/ephem/tests/test_cities.pyo
 ${PYSITELIB}/ephem/tests/test_constants.py
 ${PYSITELIB}/ephem/tests/test_constants.pyc
 ${PYSITELIB}/ephem/tests/test_constants.pyo
@@ -57,6 +53,12 @@ ${PYSITELIB}/ephem/tests/test_dates.pyo
 ${PYSITELIB}/ephem/tests/test_jpl.py
 ${PYSITELIB}/ephem/tests/test_jpl.pyc
 ${PYSITELIB}/ephem/tests/test_jpl.pyo
+${PYSITELIB}/ephem/tests/test_launchpad_236872.py
+${PYSITELIB}/ephem/tests/test_launchpad_236872.pyc
+${PYSITELIB}/ephem/tests/test_launchpad_236872.pyo
+${PYSITELIB}/ephem/tests/test_launchpad_244811.py
+${PYSITELIB}/ephem/tests/test_launchpad_244811.pyc
+${PYSITELIB}/ephem/tests/test_launchpad_244811.pyo
 ${PYSITELIB}/ephem/tests/test_observers.py
 ${PYSITELIB}/ephem/tests/test_observers.pyc
 ${PYSITELIB}/ephem/tests/test_observers.pyo
@@ -66,6 +68,9 @@ ${PYSITELIB}/ephem/tests/test_rst.pyo
 ${PYSITELIB}/ephem/tests/test_satellite.py
 ${PYSITELIB}/ephem/tests/test_satellite.pyc
 ${PYSITELIB}/ephem/tests/test_satellite.pyo
+${PYSITELIB}/ephem/tests/test_stars.py
+${PYSITELIB}/ephem/tests/test_stars.pyc
+${PYSITELIB}/ephem/tests/test_stars.pyo
 ${PYSITELIB}/ephem/tests/test_usno.py
 ${PYSITELIB}/ephem/tests/test_usno.pyc
 ${PYSITELIB}/ephem/tests/test_usno.pyo
@@ -87,7 +92,4 @@ ${PYSITELIB}/ephem/tests/usno/riset_moon.txt
 ${PYSITELIB}/ephem/tests/usno/riset_sun.txt
 ${PYSITELIB}/ephem/tests/usno/risettran_moon.txt
 ${PYSITELIB}/ephem/tests/usno/risettran_rigel.txt
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_FILE}

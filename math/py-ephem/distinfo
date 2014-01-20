@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/09/20 09:52:14 obache Exp $
+$NetBSD: distinfo,v 1.3 2014/01/20 12:47:40 wiz Exp $
 
-SHA1 (pyephem-3.7.3.4.tar.gz) = d1be94b2f0314a6ec572787c6d1b39ffbbb8ea5c
-RMD160 (pyephem-3.7.3.4.tar.gz) = 798b79bebf094bd3d5b22a598281c564e974e89e
-Size (pyephem-3.7.3.4.tar.gz) = 704097 bytes
+SHA1 (pyephem-3.7.5.1.tar.gz) = 00a055af2422092401e50861a167c56232e1be91
+RMD160 (pyephem-3.7.5.1.tar.gz) = 3db09b2fb82d59d25db05d7842b9d90df62ba8b1
+Size (pyephem-3.7.5.1.tar.gz) = 703441 bytes
