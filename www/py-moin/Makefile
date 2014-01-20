@@ -1,11 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2013/05/31 12:42:54 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.25 2014/01/20 20:17:05 wiz Exp $
 
-VER=		1.9.6
+VER=		1.9.7
 DISTNAME=	moin-${VER}
 PKGNAME=	${PYPKGPREFIX}-moin-${VER}
-#PKGREVISION=	1
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	http://static.moinmo.in/files/
 
@@ -15,6 +12,8 @@ COMMENT=	MoinMoin, a Python clone of WikiWiki
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.9.7
 
 REPLACE_PYTHON=	jabberbot/bot.py \
 		MoinMoin/version.py \
@@ -38,9 +37,9 @@ REPLACE_PYTHON=	jabberbot/bot.py \
 		wiki/server/moin* \
 		wiki/server/test.wsgi
 
-REPLACE_PERL=	MoinMoin/web/static/htdocs/applets/FCKeditor/editor/dialog/fck_spellerpages/spellerpages/server-scripts/spellchecker.pl \
-		MoinMoin/web/static/htdocs/applets/FCKeditor/editor/filemanager/connectors/perl/connector.cgi \
-		MoinMoin/web/static/htdocs/applets/FCKeditor/editor/filemanager/connectors/perl/upload.cgi
+REPLACE_PERL=	MoinMoin/web/static/htdocs/applets/FCKeditor/editor/dialog/fck_spellerpages/spellerpages/server-scripts/spellchecker.pl
+REPLACE_PERL+=	MoinMoin/web/static/htdocs/applets/FCKeditor/editor/filemanager/connectors/perl/connector.cgi
+REPLACE_PERL+=	MoinMoin/web/static/htdocs/applets/FCKeditor/editor/filemanager/connectors/perl/upload.cgi
 
 PYTHON_SELF_CONFLICT=	yes
 
