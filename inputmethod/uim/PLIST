@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2012/07/22 06:15:22 obache Exp $
+@comment $NetBSD: PLIST,v 1.21 2014/01/20 10:45:03 ryoon Exp $
 ${PLIST.qt3}bin/uim-chardict-qt
 ${PLIST.qt}bin/uim-chardict-qt4
 ${PLIST.uim-dict-gtk}bin/uim-dict-gtk
@@ -158,7 +158,7 @@ share/uim/im-switcher.scm
 share/uim/im.scm
 share/uim/init.scm
 share/uim/input-parse.scm
-share/uim/installed-modules.scm
+share/examples/uim/installed-modules.scm.example
 share/uim/ipa-x-sampa.scm
 share/uim/iso-639-1.scm
 share/uim/japanese-act.scm
@@ -183,7 +183,7 @@ share/uim/lib/srfi-95.scm
 share/uim/lib/unittest.scm
 share/uim/light-record.scm
 share/uim/load-action.scm
-share/uim/loader.scm
+share/examples/uim/loader.scm.example
 share/uim/lolevel.scm
 share/uim/look-custom.scm
 share/uim/look.scm
