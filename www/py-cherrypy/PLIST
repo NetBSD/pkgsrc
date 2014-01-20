@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/11/12 19:24:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/01/20 11:19:09 wiz Exp $
 bin/cherryd
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -14,9 +14,9 @@ ${PYSITELIB}/cherrypy/_cpchecker.pyo
 ${PYSITELIB}/cherrypy/_cpcompat.py
 ${PYSITELIB}/cherrypy/_cpcompat.pyc
 ${PYSITELIB}/cherrypy/_cpcompat.pyo
-${PYSITELIB}/cherrypy/_cpcompat_subprocess.py
-${PYSITELIB}/cherrypy/_cpcompat_subprocess.pyc
-${PYSITELIB}/cherrypy/_cpcompat_subprocess.pyo
+${PLIST.py2x}${PYSITELIB}/cherrypy/_cpcompat_subprocess.py
+${PLIST.py2x}${PYSITELIB}/cherrypy/_cpcompat_subprocess.pyc
+${PLIST.py2x}${PYSITELIB}/cherrypy/_cpcompat_subprocess.pyo
 ${PYSITELIB}/cherrypy/_cpconfig.py
 ${PYSITELIB}/cherrypy/_cpconfig.pyc
 ${PYSITELIB}/cherrypy/_cpconfig.pyo
@@ -333,9 +333,12 @@ ${PYSITELIB}/cherrypy/wsgiserver/__init__.pyo
 ${PYSITELIB}/cherrypy/wsgiserver/ssl_builtin.py
 ${PYSITELIB}/cherrypy/wsgiserver/ssl_builtin.pyc
 ${PYSITELIB}/cherrypy/wsgiserver/ssl_builtin.pyo
-${PYSITELIB}/cherrypy/wsgiserver/ssl_pyopenssl.py
-${PYSITELIB}/cherrypy/wsgiserver/ssl_pyopenssl.pyc
-${PYSITELIB}/cherrypy/wsgiserver/ssl_pyopenssl.pyo
-${PYSITELIB}/cherrypy/wsgiserver/wsgiserver2.py
-${PYSITELIB}/cherrypy/wsgiserver/wsgiserver2.pyc
-${PYSITELIB}/cherrypy/wsgiserver/wsgiserver2.pyo
+${PLIST.py2x}${PYSITELIB}/cherrypy/wsgiserver/ssl_pyopenssl.py
+${PLIST.py2x}${PYSITELIB}/cherrypy/wsgiserver/ssl_pyopenssl.pyc
+${PLIST.py2x}${PYSITELIB}/cherrypy/wsgiserver/ssl_pyopenssl.pyo
+${PLIST.py2x}${PYSITELIB}/cherrypy/wsgiserver/wsgiserver2.py
+${PLIST.py2x}${PYSITELIB}/cherrypy/wsgiserver/wsgiserver2.pyc
+${PLIST.py2x}${PYSITELIB}/cherrypy/wsgiserver/wsgiserver2.pyo
+${PLIST.py3x}${PYSITELIB}/cherrypy/wsgiserver/wsgiserver3.py
+${PLIST.py3x}${PYSITELIB}/cherrypy/wsgiserver/wsgiserver3.pyc
+${PLIST.py3x}${PYSITELIB}/cherrypy/wsgiserver/wsgiserver3.pyo
