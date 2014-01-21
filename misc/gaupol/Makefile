@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2012/10/08 09:57:22 asau Exp $
-#
+# $NetBSD: Makefile,v 1.22 2014/01/21 21:26:41 wiz Exp $
 
 DISTNAME=	gaupol-0.19.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://download.gna.org/gaupol/0.19/
 
@@ -16,13 +15,13 @@ DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
 DEPENDS+=	${PYPKGPREFIX}-enchant>=1.4:../../textproc/py-enchant
 DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.16:../../x11/py-gtk2
 
-PYDISTUTILSPKG= 		yes
 USE_LANGUAGES=			# none
 USE_TOOLS+=			intltool msgfmt
 
-PYSETUPARGS=		--mandir=${PREFIX}/${PKGMANDIR}
+PYSETUPARGS=			--mandir=${PREFIX}/${PKGMANDIR}
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
