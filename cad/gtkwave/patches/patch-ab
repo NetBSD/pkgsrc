@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.4 2014/01/21 15:07:38 drochner Exp $
+
+--- src/tcl_helper.c.orig	2012-03-09 21:50:21.000000000 +0000
++++ src/tcl_helper.c
+@@ -2924,6 +2924,7 @@ void make_tcl_interpreter(char *argv[])
+ 	}
+   }
+ #else
++#ifdef WAVE_TCL_STUBIFY /* path used in set_globals_interp() */
+ #ifdef WIN32
+   if(!GetModuleFileName(NULL, commandName, 256))
+     n = -1 ;
+@@ -2936,6 +2937,7 @@ void make_tcl_interpreter(char *argv[])
+   } else {
+     commandName[n] = '\0' ;
+   }
++#endif /* STUBIFY */
+   set_globals_interp(commandName, 0);
+ #endif
+ 
