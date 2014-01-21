@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.373 2014/01/21 21:25:33 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.374 2014/01/21 21:26:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -448,3 +448,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated math/py-pytables to 3.0.0 [wiz 2014-01-21]
 	Updated x11/driconf to 0.9.1nb10 [wiz 2014-01-21]
 	Updated databases/gourmet to 0.8.5.14nb29 [wiz 2014-01-21]
+	Updated misc/gaupol to 0.19.2nb2 [wiz 2014-01-21]
