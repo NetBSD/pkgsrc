@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.53 2013/10/06 19:55:38 joerg Exp $
+# $NetBSD: Makefile.common,v 1.54 2014/01/21 13:08:19 ryoon Exp $
 #
 # used by databases/libgda/Makefile
 # used by databases/libgda-mysql
 # used by databases/libgda-postgres
 
-DISTNAME=		libgda-5.1.2
+DISTNAME=		libgda-5.2.2
 CATEGORIES=		databases gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgda/5.1/}
 EXTRACT_SUFX=		.tar.xz
