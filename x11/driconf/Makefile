@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2012/10/29 05:06:10 asau Exp $
-#
+# $NetBSD: Makefile,v 1.21 2014/01/21 21:25:06 wiz Exp $
 
 DISTNAME=	driconf-0.9.1
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
@@ -19,8 +18,8 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt msgmerge xgettext
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
-PYDISTUTILSPKG=		yes
 REPLACE_PYTHON=		*.py
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 
 SUBST_CLASSES+=		fix-paths
 SUBST_FILES.fix-paths=	driconf driconf.desktop
@@ -42,7 +41,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/driconf.desktop \
 		${DESTDIR}${PREFIX}/share/applications/
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-
 .include "../../mk/bsd.pkg.mk"
