@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2011/08/06 11:36:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/01/21 21:26:41 wiz Exp $
 bin/gaupol
 ${PYSITELIB}/aeidon/__init__.py
 ${PYSITELIB}/aeidon/__init__.pyc
@@ -222,6 +222,7 @@ ${PYSITELIB}/aeidon/unittest.pyo
 ${PYSITELIB}/aeidon/util.py
 ${PYSITELIB}/aeidon/util.pyc
 ${PYSITELIB}/aeidon/util.pyo
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/gaupol/__init__.py
 ${PYSITELIB}/gaupol/__init__.pyc
 ${PYSITELIB}/gaupol/__init__.pyo
