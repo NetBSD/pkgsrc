@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.351 2014/01/20 22:27:09 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.352 2014/01/21 08:38:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -424,3 +424,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/py-sqlite to 1.0.1nb3 [wiz 2014-01-20]
 	Updated cad/py-simpy to 2.3nb1 [wiz 2014-01-20]
 	Updated databases/py-sqlalchemy to 0.8.2nb1 [wiz 2014-01-20]
+	Updated math/py-sympy to 0.7.4.1 [wiz 2014-01-21]
