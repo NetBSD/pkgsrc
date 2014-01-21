@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.10 2013/09/08 03:10:14 manu Exp $
+# $NetBSD: options.mk,v 1.11 2014/01/21 23:28:46 tron Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.apache
 PKG_OPTIONS_REQUIRED_GROUPS=	mpm
 PKG_OPTIONS_GROUP.mpm=		apache-mpm-event apache-mpm-prefork apache-mpm-worker
 PKG_SUPPORTED_OPTIONS=		apache-shared-modules suexec ecc
-PKG_SUGGESTED_OPTIONS=		apache-shared-modules apache-mpm-prefork
+PKG_SUGGESTED_OPTIONS=		apache-shared-modules apache-mpm-prefork ecc
 
 .include "../../mk/bsd.options.mk"
 
