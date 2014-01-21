@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2013/09/01 12:14:07 obache Exp $
-#
+# $NetBSD: Makefile,v 1.30 2014/01/21 16:32:42 wiz Exp $
 
-DISTNAME=		tables-2.4.0
+DISTNAME=		tables-3.0.0
 PKGNAME=		${PYPKGPREFIX}-py${DISTNAME}
-PKGREVISION=		1
 CATEGORIES=		math python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pytables/}
 
@@ -12,37 +10,28 @@ HOMEPAGE=		http://www.pytables.org/
 COMMENT=		Database package for large amounts of data
 LICENSE=		modified-bsd
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.pytables
-PKG_SUPPORTED_OPTIONS=	lzo
-PKG_SUGGESTED_OPTIONS=
-.include "../../mk/bsd.options.mk"
-
-PYDISTUTILSPKG=		yes
-PYSETUPBUILDARGS=	--hdf5=${BUILDLINK_PREFIX.hdf5}
-.if !empty(PKG_OPTIONS:Mlzo)
-PYSETUPBUILDARGS+=	--lzo=${BUILDLINK_PREFIX.lzo}
-.include "../../archivers/lzo/buildlink3.mk"
-.else
-PYSETUPBUILDARGS+=	--lzo=XXX
-.endif
+PYSETUPBUILDARGS+=	--hdf5=${BUILDLINK_PREFIX.hdf5}
 PYSETUPINSTALLARGS=	${PYSETUPBUILDARGS}
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
-post-extract:
-	cd ${WRKSRC}/utils; \
-	${MV} ptdump ptdump${PYVERSSUFFIX}; \
-	${MV} ptrepack ptrepack${PYVERSSUFFIX}; \
-	${MV} nctoh5 nctoh5${PYVERSSUFFIX}
+.include "options.mk"
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+		mv pt2to3 pt2to3${PYVERSSUFFIX} && \
+		mv ptdump ptdump${PYVERSSUFFIX} && \
+		mv ptrepack ptrepack${PYVERSSUFFIX}
 
 do-test:
 	(cd ${WRKSRC}/tables/tests && ${PYTHONBIN} test_all.py)
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../devel/hdf5/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-BUILDLINK_API_DEPENDS.pycython+= ${PYPKGPREFIX}-cython>=0.13
+BUILDLINK_API_DEPENDS.pycython+=	${PYPKGPREFIX}-cython>=0.13
 .include "../../devel/py-cython/buildlink3.mk"
+BUILDLINK_API_DEPENDS.pynumexpr+=	${PYPKGPREFIX}-numexpr>=2.0
 .include "../../math/py-numexpr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
