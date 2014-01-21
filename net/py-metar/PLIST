@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/21 13:33:31 wiz Exp $
+bin/pymetar${PYVERSSUFFIX}
+man/man1/pymetar.1
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/pymetar.py
+${PYSITELIB}/pymetar.pyc
+${PYSITELIB}/pymetar.pyo
+share/doc/pymetar-${PYVERSSUFFIX}-${PKGVERSION}/COPYING
+share/doc/pymetar-${PYVERSSUFFIX}-${PKGVERSION}/README
+share/doc/pymetar-${PYVERSSUFFIX}-${PKGVERSION}/THANKS
+share/doc/pymetar-${PYVERSSUFFIX}-${PKGVERSION}/librarydoc.txt
