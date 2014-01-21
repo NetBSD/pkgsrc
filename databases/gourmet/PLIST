@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:43:15 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/01/21 21:23:33 wiz Exp $
 bin/gourmet
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/gourmet/FauxActionGroups.py
 ${PYSITELIB}/gourmet/FauxActionGroups.pyc
 ${PYSITELIB}/gourmet/FauxActionGroups.pyo
