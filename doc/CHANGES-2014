@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.369 2014/01/21 16:20:56 taca Exp $
+$NetBSD: CHANGES-2014,v 1.370 2014/01/21 16:31:38 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -444,3 +444,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated editors/gtranslator to 2.91.6 [ryoon 2014-01-21]
 	Updated www/mediawiki to 1.21.4 [wen 2014-01-21]
 	Updated www/contao32 to 3.2.4 [taca 2014-01-21]
+	Updated pkgtools/pkgin to 0.6.4nb4 [jperkin 2014-01-21]
