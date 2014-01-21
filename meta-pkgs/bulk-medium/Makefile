@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2014/01/12 09:01:51 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2014/01/21 10:55:15 wiz Exp $
 
-DISTNAME=	bulk-medium-20140112
+DISTNAME=	bulk-medium-20140121
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -81,7 +81,6 @@ BUILD_DEPENDS+=	gnuplot-[0-9]*:../../graphics/gnuplot
 BUILD_DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 BUILD_DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 BUILD_DEPENDS+=	${PYPKGPREFIX}-matplotlib-gtk-[0-9]*:../../graphics/py-matplotlib-gtk2
-BUILD_DEPENDS+=	${PYPKGPREFIX}-matplotlib-tk-[0-9]*:../../graphics/py-matplotlib-tk
 BUILD_DEPENDS+=	gawk-[0-9]*:../../lang/gawk
 BUILD_DEPENDS+=	php>=5.3<5.4:../../lang/php53
 BUILD_DEPENDS+=	php>=5.4<5.5:../../lang/php54
