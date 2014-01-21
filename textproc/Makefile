@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.752 2014/01/18 15:46:06 wiz Exp $
+# $NetBSD: Makefile,v 1.753 2014/01/21 10:27:25 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -612,7 +612,6 @@ SUBDIR+=	py-gnosis-utils
 SUBDIR+=	py-html2text
 SUBDIR+=	py-html5lib
 SUBDIR+=	py-iniparse
-SUBDIR+=	py-jinja
 SUBDIR+=	py-jinja2
 SUBDIR+=	py-jsonlib
 SUBDIR+=	py-jsonlib3
