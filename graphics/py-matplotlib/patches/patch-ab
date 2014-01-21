@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.7 2014/01/21 21:14:06 drochner Exp $
+
+--- setup.py.orig	2013-10-10 12:42:48.000000000 +0000
++++ setup.py
+@@ -88,12 +88,12 @@ mpl_packages = [
+     # work will be selected as the default backend.
+     setupext.BackendMacOSX(),
+     setupext.BackendQt4(),
+-    setupext.BackendGtk3Agg(),
+-    setupext.BackendGtk3Cairo(),
+-    setupext.BackendGtkAgg(),
+-    setupext.BackendTkAgg(),
+-    setupext.BackendWxAgg(),
+-    setupext.BackendGtk(),
++#    setupext.BackendGtk3Agg(),
++#    setupext.BackendGtk3Cairo(),
++#    setupext.BackendGtkAgg(),
++#    setupext.BackendTkAgg(),
++#    setupext.BackendWxAgg(),
++#    setupext.BackendGtk(),
+     setupext.BackendAgg(),
+     setupext.BackendCairo(),
+     setupext.Windowing(),
