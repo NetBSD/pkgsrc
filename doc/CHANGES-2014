@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.375 2014/01/21 22:29:59 gdt Exp $
+$NetBSD: CHANGES-2014,v 1.376 2014/01/21 23:29:54 tron Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -450,3 +450,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/gourmet to 0.8.5.14nb29 [wiz 2014-01-21]
 	Updated misc/gaupol to 0.19.2nb2 [wiz 2014-01-21]
 	Updated www/trac to 1.0.1 [gdt 2014-01-21]
+	Updated www/apache22 to 2.2.25nb2 [tron 2014-01-21]
