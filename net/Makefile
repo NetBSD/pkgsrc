@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1001 2014/01/17 23:02:58 wiz Exp $
+# $NetBSD: Makefile,v 1.1002 2014/01/21 13:34:05 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -533,7 +533,6 @@ SUBDIR+=	pure-ftpd
 SUBDIR+=	pxe
 SUBDIR+=	py-GeoIP
 SUBDIR+=	py-IP
-SUBDIR+=	py-METAR
 SUBDIR+=	py-ORBit
 SUBDIR+=	py-adns
 SUBDIR+=	py-amqp
@@ -551,6 +550,7 @@ SUBDIR+=	py-kombu
 SUBDIR+=	py-libdnet
 SUBDIR+=	py-libpcap
 SUBDIR+=	py-medusa
+SUBDIR+=	py-metar
 SUBDIR+=	py-netifaces
 SUBDIR+=	py-netlib
 SUBDIR+=	py-omniORBpy
