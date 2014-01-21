@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.42 2013/10/19 09:07:11 adam Exp $
+# $NetBSD: Makefile,v 1.43 2014/01/21 16:31:27 jperkin Exp $
 
 GHCOMMIT=		3859170568fbe4fe21b5660dbaeca8d65ac10f1b
 DISTNAME=		${GHCOMMIT}
 PKGNAME=		pkgin-0.6.4
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		pkgtools
 MASTER_SITES=		https://github.com/NetBSDfr/pkgin/archive/
 FETCH_USING=		curl
@@ -18,7 +18,7 @@ CONF_FILES=		${EGDIR}/repositories.conf.example		\
 			${PKG_SYSCONFDIR}/${PKGBASE}/repositories.conf
 
 OWN_DIRS+=		${PKG_SYSCONFDIR}/${PKGBASE}
-INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${EGDIR}
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1 ${EGDIR}
 
 WRKSRC=			${WRKDIR}/pkgin-${GHCOMMIT}
 
@@ -63,6 +63,15 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pkgin ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/pkgin.1				\
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+.if !empty(MANINSTALL:Mcatinstall)
+.  if defined(CATMAN_SECTION_SUFFIX) && !empty(CATMAN_SECTION_SUFFIX:M[Yy][Ee][Ss])
+	${INSTALL_MAN} ${WRKSRC}/pkgin.cat1				\
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1/pkgin.1
+.  else
+	${INSTALL_MAN} ${WRKSRC}/pkgin.cat1				\
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1/pkgin.0
+.  endif
+.endif
 	${INSTALL_DATA} ${WRKSRC}/repositories.conf			\
 		${DESTDIR}${EGDIR}/repositories.conf.example
 
