@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/05/15 22:38:50 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.2 2014/01/21 11:38:03 wiz Exp $
 
-DISTNAME=	netlib-0.9
+DISTNAME=	netlib-0.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	https://pypi.python.org/packages/source/n/netlib/
@@ -12,6 +11,8 @@ COMMENT=	Network utilities used by pathod and mitmproxy
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.9.2
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
