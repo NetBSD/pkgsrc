@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/01/21 10:15:09 wiz Exp $
-${PYSITELIB}/PIL/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.7 2014/01/21 11:24:56 wiz Exp $
 ${PYSITELIB}/PIL/_imagingtk.so
 share/examples/${PYPKGPREFIX}-imaging/enhancer.py
 share/examples/${PYPKGPREFIX}-imaging/painter.py
