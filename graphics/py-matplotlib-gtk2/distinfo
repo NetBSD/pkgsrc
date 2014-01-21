@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.12 2013/07/24 11:13:56 drochner Exp $
+$NetBSD: distinfo,v 1.13 2014/01/21 21:16:02 drochner Exp $
 
-SHA1 (matplotlib-1.2.1.tar.gz) = 82fc44d0047a713c1b0b1b4ea2503e6a41c57f98
-RMD160 (matplotlib-1.2.1.tar.gz) = c27142f1d6665bc6a748f601558045e7d801dbef
-Size (matplotlib-1.2.1.tar.gz) = 38446200 bytes
-SHA1 (patch-aa) = 7ff4d7f4bbd9a2b19b839f92e0a7b568db4d4fb9
-SHA1 (patch-ab) = d6b69b74d74a67c90b09f821ffe7da8eec79a855
+SHA1 (matplotlib-1.3.1.tar.gz) = 8578afc86424392591c0ee03f7613ffa9b6f68ee
+RMD160 (matplotlib-1.3.1.tar.gz) = 7c2647ae1d6aafdc1c32e47183239c7da0d91956
+Size (matplotlib-1.3.1.tar.gz) = 42163182 bytes
+SHA1 (patch-ab) = 447e2cfd0bf2571fe8e1b77f47a5de9563ec45ee
