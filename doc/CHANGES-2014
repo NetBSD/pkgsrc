@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.357 2014/01/21 10:45:31 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.358 2014/01/21 10:53:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -430,3 +430,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Removed devel/py-ipython012 [wiz 2014-01-21]
 	Updated devel/py-libmc to 1.2.3nb1 [wiz 2014-01-21]
 	Updated audio/py-libmtag to 0.3.1 [wiz 2014-01-21]
+	Removed graphics/py-matplotlib-tk [wiz 2014-01-21]
