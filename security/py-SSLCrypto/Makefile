@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2013/02/06 23:21:02 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.11 2014/01/21 13:59:06 wiz Exp $
 
 DISTNAME=	SSLCrypto-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	security python
 MASTER_SITES=	http://www.freenet.org.nz/python/SSLCrypto/
 
@@ -13,9 +12,8 @@ COMMENT=	Python bindings for openssl
 
 DEPENDS+=	${PYPKGPREFIX}-pyrex>=0.9.4.1:../../lang/py-pyrex
 
-PYDISTUTILSPKG=		yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-pyrex
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../security/openssl/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
