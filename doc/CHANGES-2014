@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.354 2014/01/21 10:27:25 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.355 2014/01/21 10:28:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -427,3 +427,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated math/py-sympy to 0.7.4.1 [wiz 2014-01-21]
 	Updated graphics/py-imagingtk to 1.1.7nb7 [wiz 2014-01-21]
 	Removed textproc/py-jinja [wiz 2014-01-21]
+	Removed devel/py-ipython012 [wiz 2014-01-21]
