@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.670 2014/01/19 20:30:49 wiz Exp $
+# $NetBSD: Makefile,v 1.671 2014/01/21 10:53:21 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -391,7 +391,6 @@ SUBDIR+=	py-imaging
 SUBDIR+=	py-imagingtk
 SUBDIR+=	py-matplotlib
 SUBDIR+=	py-matplotlib-gtk2
-SUBDIR+=	py-matplotlib-tk
 SUBDIR+=	py-nwdiag
 SUBDIR+=	py-piddle
 SUBDIR+=	py-pycha
