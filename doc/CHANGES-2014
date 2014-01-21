@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.371 2014/01/21 16:32:53 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.372 2014/01/21 21:25:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -446,3 +446,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/contao32 to 3.2.4 [taca 2014-01-21]
 	Updated pkgtools/pkgin to 0.6.4nb4 [jperkin 2014-01-21]
 	Updated math/py-pytables to 3.0.0 [wiz 2014-01-21]
+	Updated x11/driconf to 0.9.1nb10 [wiz 2014-01-21]
