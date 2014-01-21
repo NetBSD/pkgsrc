@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2014/01/21 13:33:31 wiz Exp $
+
+SHA1 (pymetar-0.19.tar.gz) = 968c4ec413f034e1ba7da99e91bd5e048fbf53c0
+RMD160 (pymetar-0.19.tar.gz) = 81332aaa30573b8fa8ef8f9b53186f58b0bb8287
+Size (pymetar-0.19.tar.gz) = 22123 bytes
+SHA1 (patch-aa) = bd82eddff9a3c52bdf04a538dd8c4c81f3d37d2f

@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1 2014/01/21 13:33:31 wiz Exp $
+
+--- setup.py.orig	2012-01-25 14:01:19.000000000 +0000
++++ setup.py
+@@ -16,6 +16,7 @@
+ from distutils.core import setup
+ 
+ import pymetar
++import sys
+ 
+ setup(name = "pymetar", version = pymetar.__version__,
+       license = "GNU GPL",
+@@ -25,8 +26,8 @@ setup(name = "pymetar", version = pymeta
+       url = "http://www.schwarzvogel.de/software-pymetar.shtml",
+       packages= [ "" ],
+       py_modules=["pymetar"],
+-      scripts = [ "bin/pymetar" ], 
+-      data_files = [("share/doc/pymetar-%s"%pymetar.__version__,
++      scripts = [ "bin/pymetar" + sys.version[0:3] ], 
++      data_files = [("share/doc/pymetar-%s-%s"%(sys.version[0:3],pymetar.__version__),
+        ['README', 'COPYING', 'THANKS', 'librarydoc.txt']),
+        ("share/man/man1", ['pymetar.1'])]
+       )
