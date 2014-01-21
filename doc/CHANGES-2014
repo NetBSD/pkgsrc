@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.364 2014/01/21 13:39:15 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.365 2014/01/21 13:49:42 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -439,3 +439,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated math/py-numexpr to 2.2.2 [wiz 2014-01-21]
 	Updated net/py-METAR to 0.19 [wiz 2014-01-21]
 	Renamed net/py-METAR to net/py-metar [wiz 2014-01-19]
+	Updated devel/p5-Moose to 2.1202 [wen 2014-01-21]
