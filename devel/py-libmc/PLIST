@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2013/09/13 08:09:46 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/01/21 10:40:19 wiz Exp $
 ${PYSITELIB}/_pylibmc.so
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/pylibmc/__init__.py
 ${PYSITELIB}/pylibmc/__init__.pyc
 ${PYSITELIB}/pylibmc/__init__.pyo
