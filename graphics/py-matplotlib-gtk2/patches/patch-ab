@@ -1,55 +1,13 @@
-$NetBSD: patch-ab,v 1.8 2013/07/24 11:13:56 drochner Exp $
+$NetBSD: patch-ab,v 1.9 2014/01/21 21:16:02 drochner Exp $
 
---- setup.py.orig	2013-03-26 13:04:37.000000000 +0000
+--- setup.py.orig	2014-01-21 18:50:49.000000000 +0000
 +++ setup.py
-@@ -141,12 +141,12 @@ if not check_for_numpy(__version__numpy_
- if not check_for_freetype():
-     sys.exit(1)
+@@ -139,7 +139,7 @@ if __name__ == '__main__':
  
--build_ft2font(ext_modules, packages)
--build_ttconv(ext_modules, packages)
--build_contour(ext_modules, packages)
--build_delaunay(ext_modules, packages)
--build_path(ext_modules, packages)
--build_tri(ext_modules, packages)
-+#build_ft2font(ext_modules, packages)
-+#build_ttconv(ext_modules, packages)
-+#build_contour(ext_modules, packages)
-+#build_delaunay(ext_modules, packages)
-+#build_path(ext_modules, packages)
-+#build_tri(ext_modules, packages)
- 
- print_raw("")
- print_raw("OPTIONAL BACKEND DEPENDENCIES")
-@@ -176,13 +176,13 @@ if options['build_tkagg']:
-         build_tkagg(ext_modules, packages)
-         rc['backend'] = 'TkAgg'
- 
--hasgtk = check_for_gtk()
-+hasgtk = 1
- if options['build_gtk']:
-     if hasgtk or (options['build_gtk'] is True):
-         build_gdk(ext_modules, packages)
- if options['build_gtkagg']:
-     if hasgtk or (options['build_gtkagg'] is True):
--        options['build_agg'] = 1
-+        options['build_agg'] = 0
-         build_gtkagg(ext_modules, packages)
-         rc['backend'] = 'GTKAgg'
- 
-@@ -323,12 +323,12 @@ distrib = setup(name="matplotlib",
-       which emulates matlab graphics
-       """,
-       download_url="https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-{0}/matplotlib-{0}.tar.gz".format(__version__),
--      packages = packages,
-+#      packages = packages,
-       platforms='any',
--      py_modules = py_modules,
-+#      py_modules = py_modules,
-       ext_modules = ext_modules,
-       package_dir = package_dir,
--      package_data = package_data,
-+#      package_data = package_data,
-       classifiers = classifiers,
-       cmdclass = {'build_py': build_py},
-       **additional_params
+     required_failed = []
+     good_packages = []
+-    for package in mpl_packages:
++    for package in [setupext.Numpy(),setupext.CXX(),setupext.LibAgg(),setupext.BackendGtkAgg(),setupext.BackendGtk()]:
+         if isinstance(package, str):
+             print_raw('')
+             print_raw(package.upper())
