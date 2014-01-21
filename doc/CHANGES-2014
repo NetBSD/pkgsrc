@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.368 2014/01/21 15:17:01 wen Exp $
+$NetBSD: CHANGES-2014,v 1.369 2014/01/21 16:20:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -443,3 +443,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-MooseX-NonMoose to 0.24 [wen 2014-01-21]
 	Updated editors/gtranslator to 2.91.6 [ryoon 2014-01-21]
 	Updated www/mediawiki to 1.21.4 [wen 2014-01-21]
+	Updated www/contao32 to 3.2.4 [taca 2014-01-21]
