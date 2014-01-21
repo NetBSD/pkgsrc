@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.361 2014/01/21 13:09:15 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.362 2014/01/21 13:27:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -436,3 +436,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/libgda to 5.2.2 [ryoon 2014-01-21]
 	Updated databases/libgda-mysql to 5.2.2 [ryoon 2014-01-21]
 	Updated databases/libgda-postgres to 5.2.2 [ryoon 2014-01-21]
+	Updated math/py-numexpr to 2.2.2 [wiz 2014-01-21]
