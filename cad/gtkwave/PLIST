@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2014/01/19 09:25:17 mef Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/01/21 15:07:38 drochner Exp $
 bin/evcd2vcd
 bin/fst2vcd
 bin/fstminer
@@ -83,25 +83,6 @@ share/icons/gnome/48x48/mimetypes/gtkwave.png
 share/icons/gtkwave_256x256x32.png
 share/icons/gtkwave_files_256x256x32.png
 share/icons/gtkwave_savefiles_256x256x32.png
-share/mime/XMLnamespaces
-share/mime/aliases
-share/mime/application/vnd.gtkwave-ae2.xml
-share/mime/application/vnd.gtkwave-aet.xml
-share/mime/application/vnd.gtkwave-evcd.xml
-share/mime/application/vnd.gtkwave-fst.xml
-share/mime/application/vnd.gtkwave-ghw.xml
-share/mime/application/vnd.gtkwave-gtkw.xml
-share/mime/application/vnd.gtkwave-lx2.xml
-share/mime/application/vnd.gtkwave-lxt.xml
-share/mime/application/vnd.gtkwave-lxt2.xml
-share/mime/application/vnd.gtkwave-vcd.xml
-share/mime/application/vnd.gtkwave-vzt.xml
-share/mime/generic-icons
-share/mime/globs
-share/mime/globs2
-share/mime/icons
-share/mime/magic
-share/mime/mime.cache
 share/mime/packages/x-gtkwave-extension-ae2.xml
 share/mime/packages/x-gtkwave-extension-aet.xml
 share/mime/packages/x-gtkwave-extension-evcd.xml
@@ -113,7 +94,3 @@ share/mime/packages/x-gtkwave-extension-lxt.xml
 share/mime/packages/x-gtkwave-extension-lxt2.xml
 share/mime/packages/x-gtkwave-extension-vcd.xml
 share/mime/packages/x-gtkwave-extension-vzt.xml
-share/mime/subclasses
-share/mime/treemagic
-share/mime/types
-share/mime/version

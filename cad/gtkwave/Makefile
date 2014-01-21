@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2014/01/19 09:25:17 mef Exp $
+# $NetBSD: Makefile,v 1.53 2014/01/21 15:07:38 drochner Exp $
 #
 
 DISTNAME=		gtkwave-3.3.53
@@ -14,11 +14,23 @@ LICENSE=		gnu-gpl-v3
 BUILD_DEPENDS+=		gperf-[0-9]*:../../devel/gperf
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-tcl
 USE_TOOLS+=		gmake pkg-config
 USE_LANGUAGES+=		c c++
 
 PTHREAD_AUTO_VARS=	yes
+CHECK_PORTABILITY_SKIP+= contrib/bundle_for_osx/launcher.sh
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gtkwave
+PKG_SUPPORTED_OPTIONS=	gtkwave-tcl
+#PKG_SUGGESTED_OPTIONS=	gtkwave-tcl
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mgtkwave-tcl)
+.include "../../lang/tcl/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-tcl
+.endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
@@ -26,6 +38,7 @@ PTHREAD_AUTO_VARS=	yes
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 
