@@ -1,21 +1,22 @@
-# $NetBSD: Makefile,v 1.3 2012/09/11 23:04:31 asau Exp $
-#
+# $NetBSD: Makefile,v 1.4 2014/01/21 13:26:52 wiz Exp $
 
-DISTNAME=	numexpr-1.4.1
-PKGNAME=	${PYPKGPREFIX}-numexpr-1.4.1
+DISTNAME=	numexpr-2.2.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
 MASTER_SITES=	http://numexpr.googlecode.com/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://numexpr.googlecode.com/
+HOMEPAGE=	https://code.google.com/p/numexpr/
 COMMENT=	Numerical expression evaluator for NumPy
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	mit
 
-PYDISTUTILSPKG=		yes
+USE_LANGUAGES=	c++
+REPLACE_PYTHON=	numexpr/cpuinfo.py
 
 do-test:
 	${PYTHONBIN} -c "import numexpr; numexpr.test()"
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
