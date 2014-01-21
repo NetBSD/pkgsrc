@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2012/12/02 12:33:23 wen Exp $
+$NetBSD: distinfo,v 1.8 2014/01/21 08:38:04 wiz Exp $
 
-SHA1 (sympy-0.7.2.tar.gz) = cc1a030acb40c273a104d10b5fb0123841c98236
-RMD160 (sympy-0.7.2.tar.gz) = 5daa92e94a63f582b7739c214925cfd1a09a01ac
-Size (sympy-0.7.2.tar.gz) = 5487284 bytes
-SHA1 (patch-aa) = 60a7bb72006cf53ff9c83315abf7b660a4686090
+SHA1 (sympy-0.7.4.1.tar.gz) = 073b2ddf7ee8bc2b9e3687660d59e8848d6fce6c
+RMD160 (sympy-0.7.4.1.tar.gz) = 087661c59a8f75bee74241ff952dc3ca5f9a84e1
+Size (sympy-0.7.4.1.tar.gz) = 6824862 bytes
