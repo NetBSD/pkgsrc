@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2011/01/16 09:56:01 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2014/01/22 09:18:40 ryoon Exp $
 
 The fop script needs JAVA_HOME set, so prepare a variable to sed into.
 
@@ -8,7 +8,7 @@ The fop script needs JAVA_HOME set, so prepare a variable to sed into.
             ;;
  esac
  
-+JAVA_HOME=@JAVA_HOME@
++JAVA_HOME=@PKG_JAVA_HOME@
 +
  if [ -z "$FOP_HOME" -o ! -d "$FOP_HOME" ] ; then
    ## resolve links - $0 may be a link to fop's home
