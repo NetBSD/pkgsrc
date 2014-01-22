@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2014/01/12 15:30:12 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/22 06:21:30 cheusov Exp $
 #
 
 DISTNAME=	dsh-0.25.10
+PKGREVISION=	1
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.netfort.gr.jp/~dancer/software/downloads/
 
@@ -16,6 +17,8 @@ USE_TOOLS+=		msgfmt
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 CONF_FILES=		${EGDIR}/dsh.conf ${PKG_SYSCONFDIR}/dsh.conf
+
+INSTALL_MAKE_FLAGS=	sysconfdir=${EGDIR}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libdshconfig/buildlink3.mk"
