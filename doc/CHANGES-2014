@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.382 2014/01/22 09:43:57 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.383 2014/01/22 12:40:06 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -458,3 +458,11 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated filesystems/fuse-wikipediafs to 0.3nb5 [wiz 2014-01-22]
 	Updated textproc/fop to 1.1 [ryoon 2014-01-22]
 	Added games/klavaro version 2.01 [ryoon 2014-01-22]
+	Added emulators/suse131_libffi version 13.1 [obache 2014-01-22]
+	Added emulators/suse131_32_libffi version 13.1 [obache 2014-01-22]
+	Added emulators/suse131_glib2 version 13.1 [obache 2014-01-22]
+	Added emulators/suse131_32_glib2 version 13.1 [obache 2014-01-22]
+	Added emulators/suse131_dbus-glib version 13.1 [obache 2014-01-22]
+	Added emulators/suse131_32_dbus-glib version 13.1 [obache 2014-01-22]
+	Updated emulators/suse131_gtk2 to 13.1nb1 [obache 2014-01-22]
+	Updated emulators/suse131_32_gtk2 to 13.1nb1 [obache 2014-01-22]
