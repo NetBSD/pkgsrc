@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.378 2014/01/22 01:23:46 gdt Exp $
+$NetBSD: CHANGES-2014,v 1.379 2014/01/22 01:32:45 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -453,3 +453,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/apache22 to 2.2.25nb2 [tron 2014-01-21]
 	Updated devel/fann to 2.2.0 [gdt 2014-01-22]
 	Removed devel/fann-devel successor devel/fann [gdt 2014-01-22]
+	Updated print/tex-url to 3.4 [minskim 2014-01-22]
+	Updated print/tex-url-doc to 3.4 [minskim 2014-01-22]
