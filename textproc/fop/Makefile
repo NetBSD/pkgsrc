@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.33 2012/10/25 06:55:50 asau Exp $
+# $NetBSD: Makefile,v 1.34 2014/01/22 09:18:40 ryoon Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of FOP,
 #
 
 DISTNAME=	fop-${VERSION}-bin
 PKGNAME=	fop-${VERSION}
-VERSION=	1.0
+VERSION=	1.1
 CATEGORIES=	textproc www
 MASTER_SITES=	${MASTER_SITE_APACHE:=xmlgraphics/fop/binaries/}
 
@@ -28,14 +28,22 @@ SUBST_CLASSES+=			java_home
 SUBST_STAGE.java_home=		post-patch
 SUBST_MESSAGE.java_home=	Setting JAVA_HOME to a sane value.
 SUBST_FILES.java_home=		fop
-SUBST_SED.java_home=		-e 's,@JAVA_HOME@,${PKG_JAVA_HOME},g'
+SUBST_FILES.java_home+=		fop-ttfreader.sh
+SUBST_VARS.java_home=		PKG_JAVA_HOME PREFIX SH
 
 .include "options.mk"
+
+fop-ttfreader:
+	${CP} ${FILESDIR}/fop-ttfreader.sh \
+		${WRKSRC}/fop-ttfreader.sh
 
 do-install:
 	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${PREFIX}/share/java/fop
 	${LN} -sf ../share/java/fop/fop ${DESTDIR}${PREFIX}/bin
 	${RM} -f ${DESTDIR}${PREFIX}/share/java/fop/fop.orig
+	${RM} -f ${DESTDIR}${PREFIX}/share/java/fop/fop-ttfreader.sh
+	${INSTALL_SCRIPT} ${WRKSRC}/fop-ttfreader.sh \
+		${DESTDIR}${PREFIX}/bin/fop-ttfreader
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
