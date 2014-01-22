@@ -1,4 +1,4 @@
-# $NetBSD: emulator.mk,v 1.2 2013/12/12 02:34:28 obache Exp $
+# $NetBSD: emulator.mk,v 1.3 2014/01/22 12:34:22 obache Exp $
 #
 # This file is included by linux-suse.mk in the emulator framework.
 #
@@ -29,6 +29,8 @@ DEPENDS_suse-13.1.curl?=	suse_libcurl${_SUSE_VERSION_REQD}:../../emulators/suse1
 DEPENDS_suse-13.1.cyrus-sasl?=	suse_cyrus-sasl${_SUSE_VERSION_REQD}:../../emulators/suse131_cyrus-sasl
 DEPENDS_suse-13.1.drm?=		suse_libdrm${_SUSE_VERSION_REQD}:../../emulators/suse131_libdrm
 DEPENDS_suse-13.1.dbus?=	suse_libdbus${_SUSE_VERSION_REQD}:../../emulators/suse131_libdbus
+DEPENDS_suse-13.1.dbus-glib?=	suse_dbus-glib${_SUSE_VERSION_REQD}:../../emulators/suse131_dbus-glib
+DEPENDS_suse-13.1.glib2?=	suse_glib2${_SUSE_VERSION_REQD}:../../emulators/suse131_glib2
 DEPENDS_suse-13.1.expat?=	suse_expat${_SUSE_VERSION_REQD}:../../emulators/suse131_expat
 DEPENDS_suse-13.1.fontconfig?=	suse_fontconfig${_SUSE_VERSION_REQD}:../../emulators/suse131_fontconfig
 DEPENDS_suse-13.1.freetype2?=	suse_freetype2${_SUSE_VERSION_REQD}:../../emulators/suse131_freetype2
@@ -36,6 +38,7 @@ DEPENDS_suse-13.1.glx?=		suse_glx${_SUSE_VERSION_REQD}:../../emulators/suse131_g
 DEPENDS_suse-13.1.gtk2?=	suse_gtk2${_SUSE_VERSION_REQD}:../../emulators/suse131_gtk2
 DEPENDS_suse-13.1.jpeg?=	suse_libjpeg${_SUSE_VERSION_REQD}:../../emulators/suse131_libjpeg
 DEPENDS_suse-13.1.krb5?=	suse_krb5${_SUSE_VERSION_REQD}:../../emulators/suse131_krb5
+DEPENDS_suse-13.1.libffi?=	suse_libffi${_SUSE_VERSION_REQD}:../../emulators/suse131_libffi
 DEPENDS_suse-13.1.libidn?=	suse_libidn${_SUSE_VERSION_REQD}:../../emulators/suse131_libidn
 DEPENDS_suse-13.1.libjson?=	suse_libjson${_SUSE_VERSION_REQD}:../../emulators/suse131_libjson
 DEPENDS_suse-13.1.libsigc++2?=	suse_libsigc++2${_SUSE_VERSION_REQD}:../../emulators/suse131_libsigc++2
