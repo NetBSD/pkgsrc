@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2013/12/11 07:56:26 wiz Exp $
+# $NetBSD: Makefile.common,v 1.29 2014/01/22 15:21:23 jperkin Exp $
 # used by www/webkit-gtk/Makefile
 # used by www/webkit-gtk3/Makefile
 
@@ -51,6 +51,10 @@ CXXFLAGS.SunOS+=	-fpermissive
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 CXXFLAGS+=	-std=c++11 -Wno-c++11-narrowing
+.endif
+
+.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64)
+CONFIGURE_ARGS+=	--disable-fast-malloc
 .endif
 
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.32.1
