@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.208 2013/12/12 02:36:46 obache Exp $
+# $NetBSD: Makefile,v 1.209 2014/01/22 12:32:44 obache Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -216,9 +216,11 @@ SUBDIR+=	suse131_32_aspell
 SUBDIR+=	suse131_32_base
 SUBDIR+=	suse131_32_compat
 SUBDIR+=	suse131_32_cyrus-sasl
+SUBDIR+=	suse131_32_dbus-glib
 SUBDIR+=	suse131_32_expat
 SUBDIR+=	suse131_32_fontconfig
 SUBDIR+=	suse131_32_freetype2
+SUBDIR+=	suse131_32_glib2
 SUBDIR+=	suse131_32_glx
 SUBDIR+=	suse131_32_gtk2
 SUBDIR+=	suse131_32_krb5
@@ -226,6 +228,7 @@ SUBDIR+=	suse131_32_libcups
 SUBDIR+=	suse131_32_libcurl
 SUBDIR+=	suse131_32_libdbus
 SUBDIR+=	suse131_32_libdrm
+SUBDIR+=	suse131_32_libffi
 SUBDIR+=	suse131_32_libidn
 SUBDIR+=	suse131_32_libjpeg
 SUBDIR+=	suse131_32_libjson
@@ -251,9 +254,11 @@ SUBDIR+=	suse131_aspell
 SUBDIR+=	suse131_base
 SUBDIR+=	suse131_compat
 SUBDIR+=	suse131_cyrus-sasl
+SUBDIR+=	suse131_dbus-glib
 SUBDIR+=	suse131_expat
 SUBDIR+=	suse131_fontconfig
 SUBDIR+=	suse131_freetype2
+SUBDIR+=	suse131_glib2
 SUBDIR+=	suse131_glx
 SUBDIR+=	suse131_gtk2
 SUBDIR+=	suse131_krb5
@@ -261,6 +266,7 @@ SUBDIR+=	suse131_libcups
 SUBDIR+=	suse131_libcurl
 SUBDIR+=	suse131_libdbus
 SUBDIR+=	suse131_libdrm
+SUBDIR+=	suse131_libffi
 SUBDIR+=	suse131_libidn
 SUBDIR+=	suse131_libjpeg
 SUBDIR+=	suse131_libjson
