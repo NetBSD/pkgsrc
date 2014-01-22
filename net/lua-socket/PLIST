@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2013/09/01 04:45:58 ryoon Exp $
-lib/lua/5.2/mime/core.so
-lib/lua/5.2/socket/core.so
-share/lua/5.2/ltn12.lua
-share/lua/5.2/mime.lua
-share/lua/5.2/socket.lua
-share/lua/5.2/socket/ftp.lua
-share/lua/5.2/socket/headers.lua
-share/lua/5.2/socket/http.lua
-share/lua/5.2/socket/smtp.lua
-share/lua/5.2/socket/tp.lua
-share/lua/5.2/socket/url.lua
+@comment $NetBSD: PLIST,v 1.3 2014/01/22 16:20:51 jperkin Exp $
+${LUA_CDIR}/mime/core.so
+${LUA_CDIR}/socket/core.so
+${LUA_LDIR}/ltn12.lua
+${LUA_LDIR}/mime.lua
+${LUA_LDIR}/socket.lua
+${LUA_LDIR}/socket/ftp.lua
+${LUA_LDIR}/socket/headers.lua
+${LUA_LDIR}/socket/http.lua
+${LUA_LDIR}/socket/smtp.lua
+${LUA_LDIR}/socket/tp.lua
+${LUA_LDIR}/socket/url.lua
