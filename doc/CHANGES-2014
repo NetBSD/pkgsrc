@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.379 2014/01/22 01:32:45 minskim Exp $
+$NetBSD: CHANGES-2014,v 1.380 2014/01/22 07:19:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -455,3 +455,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Removed devel/fann-devel successor devel/fann [gdt 2014-01-22]
 	Updated print/tex-url to 3.4 [minskim 2014-01-22]
 	Updated print/tex-url-doc to 3.4 [minskim 2014-01-22]
+	Updated filesystems/fuse-wikipediafs to 0.3nb5 [wiz 2014-01-22]
