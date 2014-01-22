@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.384 2014/01/22 13:18:53 obache Exp $
+$NetBSD: CHANGES-2014,v 1.385 2014/01/22 14:13:04 is Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -424,6 +424,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/py-sqlite to 1.0.1nb3 [wiz 2014-01-20]
 	Updated cad/py-simpy to 2.3nb1 [wiz 2014-01-20]
 	Updated databases/py-sqlalchemy to 0.8.2nb1 [wiz 2014-01-20]
+	Updated x11/xf86-video-wsfb to 0.4.0nb1 [is 2014-01-20]
 	Updated math/py-sympy to 0.7.4.1 [wiz 2014-01-21]
 	Updated graphics/py-imagingtk to 1.1.7nb7 [wiz 2014-01-21]
 	Removed textproc/py-jinja [wiz 2014-01-21]
