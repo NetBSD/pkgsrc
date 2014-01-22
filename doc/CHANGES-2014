@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.381 2014/01/22 09:19:52 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.382 2014/01/22 09:43:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -457,3 +457,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated print/tex-url-doc to 3.4 [minskim 2014-01-22]
 	Updated filesystems/fuse-wikipediafs to 0.3nb5 [wiz 2014-01-22]
 	Updated textproc/fop to 1.1 [ryoon 2014-01-22]
+	Added games/klavaro version 2.01 [ryoon 2014-01-22]
