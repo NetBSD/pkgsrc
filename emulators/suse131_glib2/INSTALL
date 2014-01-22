@@ -1,0 +1,16 @@
+# $NetBSD: INSTALL,v 1.1 2014/01/22 12:27:43 obache Exp $
+#
+# Initialize glib2 module configuration.
+#
+case ${STAGE} in
+POST-INSTALL)
+	GNOME_BINDIR="${PKG_PREFIX}/@EMULSUBDIR@/usr/bin"
+	GNOME_LIBDIR="${PKG_PREFIX}/@EMULSUBDIR@/usr/lib@ABISUFFIX@"
+	GNOME_ETCDIR="${PKG_PREFIX}/@EMULSUBDIR@/etc"
+	SUSECONFIG="${PKG_PREFIX}/@EMULSUBDIR@/sbin/SuSEconfig"
+
+	${ECHO} "${PKGNAME}: initializing GLib2 module configuration"
+	${GNOME_BINDIR}/gio-querymodules@BINSUFFIX@ ${GNOME_LIBDIR}/gio/modules
+	${MKDIR} -p ${PKG_PREFIX}/@EMULSUBDIR@/var/lock
+	;;
+esac
