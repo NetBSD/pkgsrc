@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1842 2014/01/22 01:22:26 gdt Exp $
+# $NetBSD: Makefile,v 1.1843 2014/01/22 11:00:06 drochner Exp $
 #
 
 COMMENT=	Development utilities
@@ -1450,6 +1450,7 @@ SUBDIR+=	py-hgtools
 SUBDIR+=	py-idle
 SUBDIR+=	py-ipython
 SUBDIR+=	py-ipython013
+SUBDIR+=	py-ipython1
 SUBDIR+=	py-jersey
 SUBDIR+=	py-kjbuckets
 SUBDIR+=	py-kqueue
