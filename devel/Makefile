@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1841 2014/01/21 10:28:52 wiz Exp $
+# $NetBSD: Makefile,v 1.1842 2014/01/22 01:22:26 gdt Exp $
 #
 
 COMMENT=	Development utilities
@@ -205,7 +205,6 @@ SUBDIR+=	etrace
 SUBDIR+=	exctags
 SUBDIR+=	exempi
 SUBDIR+=	fann
-SUBDIR+=	fann-devel
 SUBDIR+=	fastdep
 SUBDIR+=	ffcall
 SUBDIR+=	fhist
