@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2013/01/19 10:35:05 obache Exp $
+# $NetBSD: Makefile,v 1.6 2014/01/22 13:18:19 obache Exp $
 #
 
-DISTNAME=	markdown2-2.1.0
+DISTNAME=	markdown2-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	http://pypi.python.org/packages/source/m/markdown2/
@@ -17,8 +17,11 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCLUDE_3X=	yes
 PYTHON_SELF_CONFLICT=		yes
 
+REPLACE_PYTHON=		lib/markdown2.py
+
 do-test:
 	${RUN}cd ${WRKSRC}/test; ${SETENV} ${TEST_ENV} ${PYTHONBIN} test.py
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
