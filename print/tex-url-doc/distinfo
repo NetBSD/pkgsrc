@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/02/02 22:16:28 minskim Exp $
+$NetBSD: distinfo,v 1.2 2014/01/22 01:31:04 minskim Exp $
 
-SHA1 (tex-url-doc-3.2/url.doc.tar.xz) = b6a33c0a550708cad866cbe4bc9019c9569389bc
-RMD160 (tex-url-doc-3.2/url.doc.tar.xz) = 87cb90ff8a2b1b568c06c00b4ca2745125e5a1fe
-Size (tex-url-doc-3.2/url.doc.tar.xz) = 240788 bytes
+SHA1 (tex-url-32528/url.doc.tar.xz) = 396f1024fe7779765a5c07762faefb98124710d2
+RMD160 (tex-url-32528/url.doc.tar.xz) = e7d8cec26f5ce9ecd81b9d605510c9bd0e12f0f2
+Size (tex-url-32528/url.doc.tar.xz) = 266852 bytes
