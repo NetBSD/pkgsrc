@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/23 17:18:15 asau Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/01/22 07:13:22 wiz Exp $
 
 DISTNAME=	CoilMQ-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,25 +16,14 @@ DEPENDS+=	${PYPKGPREFIX}-daemon>=1.5.5:../../devel/py-daemon
 
 USE_LANGUAGES=	# none
 
-REPLACE_INTERPRETER+=	python
-REPLACE.python.old=	python
-REPLACE.python.new=	${PYTHONBIN}
-REPLACE_FILES.python=	distribute_setup.py coilmq/start.py
+REPLACE_PYTHON+=	distribute_setup.py coilmq/start.py
 
 SUBST_CLASSES+=		cfg
 SUBST_STAGE.cfg=	post-patch
 SUBST_FILES.cfg=	coilmq/config/__init__.py
 SUBST_SED.cfg=		-e 's,/path/to/config.cfg,${PKG_SYSCONFDIR}/coilmq/defaults.cfg,'
 
-.include "../../lang/python/egg.mk"
-
-# setup.py has python distribute as a dependency
-.if ${_PYTHON_VERSION} < 31
-SUBST_CLASSES+=		setup
-SUBST_STAGE.setup=	post-patch
-SUBST_FILES.setup=	setup.py
-SUBST_SED.setup=	-e 's,distribute,setuptools,'
-.endif
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-stompclient, py-daemon
 
 EGDIR=			${PREFIX}/share/examples/coilmq
 
@@ -52,4 +40,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/coilmq/config/coilmq.cfg-sample	\
 		${DESTDIR}${EGDIR}
 
+.include "../../lang/python/application.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
