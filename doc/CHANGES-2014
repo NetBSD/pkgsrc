@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.385 2014/01/22 14:13:04 is Exp $
+$NetBSD: CHANGES-2014,v 1.386 2014/01/22 16:16:30 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -468,3 +468,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/suse131_gtk2 to 13.1nb1 [obache 2014-01-22]
 	Updated emulators/suse131_32_gtk2 to 13.1nb1 [obache 2014-01-22]
 	Updated textproc/py-markdown2 to 2.2.0 [obache 2014-01-22]
+	Updated devel/lua-gi to 0.7.1nb1 [jperkin 2014-01-22]
