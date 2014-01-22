@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.383 2014/01/22 12:40:06 obache Exp $
+$NetBSD: CHANGES-2014,v 1.384 2014/01/22 13:18:53 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -466,3 +466,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added emulators/suse131_32_dbus-glib version 13.1 [obache 2014-01-22]
 	Updated emulators/suse131_gtk2 to 13.1nb1 [obache 2014-01-22]
 	Updated emulators/suse131_32_gtk2 to 13.1nb1 [obache 2014-01-22]
+	Updated textproc/py-markdown2 to 2.2.0 [obache 2014-01-22]
