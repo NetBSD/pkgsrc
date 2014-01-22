@@ -1,7 +1,9 @@
-# $NetBSD: Makefile.common,v 1.1 2006/10/05 14:55:21 gdt Exp $
+# $NetBSD: Makefile.common,v 1.2 2014/01/22 01:17:27 gdt Exp $
 
-FANNVERSION=		2.0.0
-DISTNAME=		fann-${FANNVERSION}
+FANNVERSION=		2.2.0
+DISTNAME=		FANN-${FANNVERSION}-Source
+EXTRACT_SUFX=		.zip
+PKGNAME=		fann-${FANNVERSION}
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fann/}
 
