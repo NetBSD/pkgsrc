@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.1 2013/07/22 19:38:07 degroote Exp $
+$NetBSD: patch-Makefile,v 1.2 2014/01/22 16:16:21 jperkin Exp $
 
 Don't hardcode PREFIX
 Fix the LUA version to match the one installed by pkgsrc
@@ -12,7 +12,7 @@ Don't use mkdir and cp directly, use BSD_INSTALL_* abstraction instead
  
 -PREFIX = /usr/local
 -LUA_VERSION=5.1
-+LUA_VERSION=5.2
++LUA_VERSION=@_LUA_DOT_VERSION@
  LUA_LIBDIR = $(PREFIX)/lib/lua/$(LUA_VERSION)
  LUA_SHAREDIR = $(PREFIX)/share/lua/$(LUA_VERSION)
  

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2013/07/25 13:05:18 degroote Exp $
+$NetBSD: distinfo,v 1.3 2014/01/22 16:16:21 jperkin Exp $
 
 SHA1 (lgi-0.7.1.tar.gz) = 53affb0a82bb1537d7ecef4d6f2a65bdd4d9e3bc
 RMD160 (lgi-0.7.1.tar.gz) = af49608d6af76c468fef0ab67f2a065ed8730152
 Size (lgi-0.7.1.tar.gz) = 268357 bytes
-SHA1 (patch-Makefile) = ecba51fb9bc78c08e89bebfc981206a2587e63f4
+SHA1 (patch-Makefile) = 0ff1b55df7e7c6c236a4ca7f3109439b69f85e4a
