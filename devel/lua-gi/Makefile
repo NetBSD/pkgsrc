@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2013/10/30 06:03:37 dholland Exp $
+# $NetBSD: Makefile,v 1.4 2014/01/22 16:16:21 jperkin Exp $
 #
 
 DISTNAME=	lgi-${VERSION}
 PKGNAME=	${LUA_PKGPREFIX}-gi-${VERSION}
 VERSION=	0.7.1
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	-https://codeload.github.com/pavouk/lgi/tar.gz/${VERSION}
 
@@ -16,6 +17,11 @@ USE_LANGUAGES+=	c
 USE_TOOLS+=	pkg-config gmake
 FETCH_USING=	curl
 WRKSRC=		${WRKDIR}/pavouk-lgi-1bbf1bc
+
+SUBST_CLASSES+=	v
+SUBST_STAGE.v=	pre-build
+SUBST_FILES.v=	lgi/Makefile
+SUBST_VARS.v=	_LUA_DOT_VERSION
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
