@@ -3,4 +3,4 @@ Please visit http://www.opensuse.org/ for more information about openSUSE
 Linux.
 
 This package supports running ELF binaries linked with glibc2 that
-require GTK+-2.x shared libraries.
+require GLib-2.x shared libraries.
