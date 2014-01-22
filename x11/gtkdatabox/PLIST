@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/22 20:22:42 ryoon Exp $
+include/gtkdatabox.h
+include/gtkdatabox_bars.h
+include/gtkdatabox_cross_simple.h
+include/gtkdatabox_graph.h
+include/gtkdatabox_grid.h
+include/gtkdatabox_lines.h
+include/gtkdatabox_markers.h
+include/gtkdatabox_marshal.h
+include/gtkdatabox_offset_bars.h
+include/gtkdatabox_points.h
+include/gtkdatabox_regions.h
+include/gtkdatabox_ruler.h
+include/gtkdatabox_scale.h
+include/gtkdatabox_typedefs.h
+include/gtkdatabox_xyc_graph.h
+include/gtkdatabox_xyyc_graph.h
+lib/libgtkdatabox.la
+lib/pkgconfig/gtkdatabox.pc
