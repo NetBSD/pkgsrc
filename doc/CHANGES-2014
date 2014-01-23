@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.411 2014/01/23 18:56:52 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.412 2014/01/23 19:18:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -495,3 +495,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/mixminion to 0.0.8alpha3nb5 [wiz 2014-01-23]
 	Updated devel/qbzr to 0.22.1nb3 [wiz 2014-01-23]
 	Updated sysutils/rdiff-backup to 1.2.8nb6 [wiz 2014-01-23]
+	Updated sysutils/virtinst to 0.600.3nb1 [wiz 2014-01-23]
