@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.54 2014/01/21 13:08:19 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.55 2014/01/23 23:42:38 ryoon Exp $
 #
 # used by databases/libgda/Makefile
 # used by databases/libgda-mysql
@@ -6,7 +6,7 @@
 
 DISTNAME=		libgda-5.2.2
 CATEGORIES=		databases gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgda/5.1/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgda/5.2/}
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
