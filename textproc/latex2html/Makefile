@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2013/05/31 12:42:07 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2014/01/23 12:16:59 is Exp $
 
 DISTNAME=	latex2html-2008
 PKGREVISION=	4
@@ -14,6 +14,7 @@ DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
+DEPENDS+=	tex-url>=1.4:../../print/tex-url
 DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 DEPENDS+=	netpbm>=10.29nb2:../../graphics/netpbm
 
@@ -35,6 +36,8 @@ MAKE_ENV+=		DESTDIR=${DESTDIR}
 
 REPLACE_PERL+=		l2hconf.pin cweb2html/cweb2html cweb2html/makemake.pl
 REPLACE_PERL+=		makemap makeseg/makeseg
+
+post-extract:	; ${RM} ${WRKSRC}/texinputs/url.sty ${WRKSRC}/docs/url.sty
 
 .include "../../print/kpathsea/texmf.mk"
 .include "../../print/kpathsea/buildlink3.mk"
