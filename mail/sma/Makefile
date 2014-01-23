@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2012/10/08 12:19:31 asau Exp $
+# $NetBSD: Makefile,v 1.16 2014/01/23 11:58:39 tron Exp $
 
 DISTNAME=	sma-1.4
 CATEGORIES=	mail
 MASTER_SITES=	http://www.klake.org/sma/dl/
 
-MAINTAINER=	markus@core.de
+MAINTAINER=	markus@marsrakete.de
 HOMEPAGE=	http://www.klake.org/sma/
 COMMENT=	Sendmail log analyser
 
