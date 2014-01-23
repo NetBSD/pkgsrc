@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/12/04 06:23:27 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2014/01/23 18:30:20 wiz Exp $
 
 DISTNAME=	polysh-0.4
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://guichaz.free.fr/polysh/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -13,7 +13,8 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.4
+REPLACE_PYTHON=	polysh/rb_tree.py
 
 SUBST_CLASSES+=		setup
 SUBST_STAGE.setup=	post-patch
@@ -21,5 +22,5 @@ SUBST_FILES.setup=	setup.py
 SUBST_SED.setup+=	-e 's,share/man,${PKGMANDIR},'
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
