@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.9 2014/01/23 11:14:15 wiz Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.10 2014/01/23 16:18:42 wiz Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -39,10 +39,10 @@ dir:=	${py3dir}
 .endif
 .if "${type}" == ":link"
 .include "../../${dir}/buildlink3.mk"
-.elsif "${type}" == ":build"
-BUILD_DEPENDS+=	${PYPKGPREFIX}-${pkg}-[0-9]*:../../${dir}
+.elif "${type}" == ":build"
+BUILD_DEPENDS:=	${BUILD_DEPENDS} ${PYPKGPREFIX}-${pkg}-[0-9]*:../../${dir}
 .else
-DEPENDS+=	${PYPKGPREFIX}-${pkg}-[0-9]*:../../${dir}
+DEPENDS:=	${DEPENDS} ${PYPKGPREFIX}-${pkg}-[0-9]*:../../${dir}
 .endif
 .endif
 .endfor
