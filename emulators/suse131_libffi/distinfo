@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.1 2014/01/22 12:26:04 obache Exp $
+$NetBSD: distinfo,v 1.2 2014/01/23 10:52:36 obache Exp $
 
 SHA1 (suse131/libffi4-4.8.1_20130909-3.2.1.i586.rpm) = 3c93b6db77a041fa39c797cd0fb5be36b1df94ac
 RMD160 (suse131/libffi4-4.8.1_20130909-3.2.1.i586.rpm) = 592f39685bc8f56e7d0f8f0f057a4fbf82b79efe
 Size (suse131/libffi4-4.8.1_20130909-3.2.1.i586.rpm) = 18472 bytes
+SHA1 (suse131/libffi4-4.8.1_20130909-3.2.1.x86_64.rpm) = 040389c6f43f64b6281090edd65e0960d64bd112
+RMD160 (suse131/libffi4-4.8.1_20130909-3.2.1.x86_64.rpm) = 801025c454d445ecaee401e0f77a8287b50d9706
+Size (suse131/libffi4-4.8.1_20130909-3.2.1.x86_64.rpm) = 21348 bytes
