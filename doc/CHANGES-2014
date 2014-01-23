@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.393 2014/01/23 09:40:51 obache Exp $
+$NetBSD: CHANGES-2014,v 1.394 2014/01/23 11:11:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -476,3 +476,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/py-Pillow to 2.3.0 [obache 2014-01-23]
 	Updated devel/msgpack to 0.5.8 [obache 2014-01-23]
 	Updated devel/py-msgpack to 0.4.0 [obache 2014-01-23]
+	Added graphics/py-cairo3 version 1.10.0 [wiz 2014-01-23]
