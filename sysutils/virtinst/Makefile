@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/10/23 19:51:29 asau Exp $
-#
+# $NetBSD: Makefile,v 1.6 2014/01/23 19:18:07 wiz Exp $
 
 DISTNAME=	virtinst-0.600.3
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://virt-manager.org/download/sources/virtinst/
 
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	msgfmt xgettext
 
 USE_LANGUAGES=	# none
-PYDISTUTILSPKG=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.600.3
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure
@@ -22,5 +22,5 @@ SUBST_FILES.man=	setup.py
 SUBST_SED.man=		-e 's,@@PKGMANDIR@@,${PKGMANDIR},'
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
