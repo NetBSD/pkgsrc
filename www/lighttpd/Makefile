@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.43 2014/01/23 13:20:12 adam Exp $
+# $NetBSD: Makefile,v 1.44 2014/01/23 13:21:04 joerg Exp $
 
 DISTNAME=	lighttpd-1.4.34
 CATEGORIES=	www
 MASTER_SITES=	http://download.lighttpd.net/lighttpd/releases-1.4.x/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.lighttpd.net/
 COMMENT=	Fast, light-footprint HTTP server
 LICENSE=	modified-bsd
