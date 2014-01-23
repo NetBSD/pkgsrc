@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2014/01/19 20:12:16 wiz Exp $
-${PYSITELIB}/dot_parser.py
-${PYSITELIB}/dot_parser.pyc
-${PYSITELIB}/dot_parser.pyo
-${PYSITELIB}/${EGG_FILE}
-${PYSITELIB}/pydot.py
-${PYSITELIB}/pydot.pyc
-${PYSITELIB}/pydot.pyo
