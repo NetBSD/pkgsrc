@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libdrm,v 1.6 2012/04/08 05:55:48 obache Exp $
+# $NetBSD: xorg.libdrm,v 1.7 2014/01/23 21:05:18 ryoon Exp $
 #
 include/libdrm/drm.h
 include/libdrm/drm_mode.h
@@ -33,6 +33,7 @@ lib/libdrm.so.2.6
 lib/libdrm.so.3
 lib/libdrm.so.3.1
 lib/libdrm.so.3.2
+lib/libdrm.so.3.3
 lib/libdrm_intel.a
 lib/libdrm_intel.so
 lib/libdrm_intel.so.0

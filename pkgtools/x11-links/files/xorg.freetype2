@@ -1,4 +1,4 @@
-# $NetBSD: xorg.freetype2,v 1.11 2013/01/11 10:37:58 ryoon Exp $
+# $NetBSD: xorg.freetype2,v 1.12 2014/01/23 21:05:18 ryoon Exp $
 #
 bin/freetype-config
 include/freetype2/freetype/config/ftconfig.h
@@ -66,5 +66,6 @@ lib/libfreetype.so.17.0
 lib/libfreetype.so.18.0
 lib/libfreetype.so.18.1
 lib/libfreetype.so.18.3
+lib/libfreetype.so.20.0
 lib/pkgconfig/freetype2.pc
 share/aclocal/freetype2.m4
