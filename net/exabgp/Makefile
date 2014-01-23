@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2013/12/24 11:21:55 pettai Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/23 16:50:06 wiz Exp $
 
 DISTNAME=	exabgp-exabgp-3.2.19
 PKGNAME=	exabgp-3.2.19
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	-https://github.com/Exa-Networks/exabgp/tarball/3.2.19
 
@@ -9,8 +10,6 @@ MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	https://github.com/Exa-Networks/exabgp/
 COMMENT=	ExaBGP is a userspace BGP daemon written in python
 LICENSE=	modified-bsd
-
-FETCH_USING=    curl
 
 WRKSRC=		${WRKDIR}/Exa-Networks-exabgp-d1b60dd
 
@@ -29,9 +28,8 @@ REPLACE_PYTHON+=	etc/exabgp/processes/read-write.py
 REPLACE_PYTHON+=	etc/exabgp/processes/tcp-server
 REPLACE_PYTHON+=	etc/exabgp/processes/syslog-1.py
 
-PYDISTUTILSPKG=	yes
-
-PYSETUP=	setup.py
+EGG_NAME=	${PKGNAME_NOREV}
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 3.2.19
 
 USE_LANGUAGES=  # none
 
@@ -41,6 +39,6 @@ post-install:
 	${LN} -s ${DESTDIR}${PREFIX}/bin/exabgp/exabgp \
 			${DESTDIR}${PREFIX}/sbin/
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
