@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2012/11/25 11:14:14 imil Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/01/23 18:30:20 wiz Exp $
 bin/polysh
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/polysh/__init__.py
 ${PYSITELIB}/polysh/__init__.pyc
 ${PYSITELIB}/polysh/__init__.pyo
