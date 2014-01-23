@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/09/13 08:51:09 fhajny Exp $
-#
+# $NetBSD: Makefile,v 1.2 2014/01/23 17:39:32 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/^M/m/}
 DISTNAME=	Manifold-0.2.0
@@ -15,10 +14,10 @@ DEPENDS+=	${PYPKGPREFIX}-genshi-[0-9]*:../../www/py-genshi
 
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=  33 # not yet ported as of 0.2.0
 
 post-extract:
 	${CHMOD} -R g-w ${WRKSRC}/*
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
