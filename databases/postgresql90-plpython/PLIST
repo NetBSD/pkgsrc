@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2012/03/03 14:01:11 adam Exp $
-lib/postgresql/plpython.so
-lib/postgresql/plpython2.so
+@comment $NetBSD: PLIST,v 1.7 2014/01/23 18:37:06 wiz Exp $
+${PLIST.py2x}lib/postgresql/plpython.so
+${PLIST.py2x}lib/postgresql/plpython2.so
+${PLIST.py3x}lib/postgresql/plpython3.so
 share/locale/cs/LC_MESSAGES/plpython-9.0.mo
 share/locale/de/LC_MESSAGES/plpython-9.0.mo
 share/locale/es/LC_MESSAGES/plpython-9.0.mo
