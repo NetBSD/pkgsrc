@@ -1,4 +1,4 @@
-# $NetBSD: xfree.MesaLib,v 1.8 2012/05/03 13:55:45 obache Exp $
+# $NetBSD: xfree.MesaLib,v 1.9 2014/01/23 21:05:18 ryoon Exp $
 #
 include/GL/GLwDrawA.h
 include/GL/GLwDrawAP.h
@@ -29,6 +29,7 @@ lib/libGL.so.9.0
 lib/libGL.so.9.1
 lib/libGL.so.10.0
 lib/libGL.so.12.0
+lib/libGL.so.13.0
 lib/libGL.dylib
 lib/libGL.1.dylib
 lib/libGL.1.2.dylib
