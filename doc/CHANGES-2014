@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.409 2014/01/23 18:35:58 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.410 2014/01/23 18:53:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -493,3 +493,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated games/jools to 0.20nb4 [wiz 2014-01-23]
 	Updated sysutils/polysh to 0.4nb1 [wiz 2014-01-23]
 	Updated security/mixminion to 0.0.8alpha3nb5 [wiz 2014-01-23]
+	Updated devel/qbzr to 0.22.1nb3 [wiz 2014-01-23]
