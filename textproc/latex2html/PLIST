@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2011/10/19 19:28:49 minskim Exp $
+@comment $NetBSD: PLIST,v 1.10 2014/01/23 12:16:59 is Exp $
 bin/latex2html
 bin/pstoimg
 bin/texexpand
@@ -119,7 +119,6 @@ share/latex2html/docs/psfiles/figure.ps
 share/latex2html/docs/psfiles/table.ps
 share/latex2html/docs/psfiles/up.gif
 share/latex2html/docs/support.tex
-share/latex2html/docs/url.sty
 share/latex2html/docs/userman.tex
 share/latex2html/dot.latex2html-init
 share/latex2html/example/Makefile
@@ -301,7 +300,6 @@ share/latex2html/texinputs/justify.sty
 share/latex2html/texinputs/latin9.def
 share/latex2html/texinputs/ldump.sty
 share/latex2html/texinputs/techexplHTML.tex
-share/latex2html/texinputs/url.sty
 share/latex2html/texinputs/verbatimfiles.sty
 share/latex2html/versions/cp1252.pl
 share/latex2html/versions/decmulti.pl
@@ -342,5 +340,4 @@ share/texmf-dist/tex/latex/html/justify.sty
 share/texmf-dist/tex/latex/html/latin9.def
 share/texmf-dist/tex/latex/html/ldump.sty
 share/texmf-dist/tex/latex/html/techexplHTML.tex
-share/texmf-dist/tex/latex/html/url.sty
 share/texmf-dist/tex/latex/html/verbatimfiles.sty
