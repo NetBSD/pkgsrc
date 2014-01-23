@@ -1,4 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2009/10/15 07:29:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/01/23 15:44:15 wiz Exp $
 lib/libboost_python.a
 lib/libboost_python.so
 lib/libboost_python.so.${BOOST_VERSION}
+${PLIST.py3x}lib/libboost_python3.a
+${PLIST.py3x}lib/libboost_python3.so
+${PLIST.py3x}lib/libboost_python3.so.${BOOST_VERSION}
