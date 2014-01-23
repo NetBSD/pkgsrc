@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/23 11:11:09 wiz Exp $
+include/pycairo/py3cairo.h
+lib/pkgconfig/py3cairo.pc
+${PYSITELIB}/cairo/__init__.py
+${PYSITELIB}/cairo/__init__.pyc
+${PYSITELIB}/cairo/__init__.pyo
+${PYSITELIB}/cairo/_cairo.so
