@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.399 2014/01/23 14:15:12 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.400 2014/01/23 14:38:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -483,3 +483,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/sma to 1.4nb1 [tron 2014-01-23]
 	Updated www/lighttpd to 1.4.34 [adam 2014-01-23]
 	Removed editors/vim-gtk successor editors/vim-gtk2 [wiz 2014-01-23]
+	Updated print/py-Pdf to 1.13nb1 [wiz 2014-01-23]
