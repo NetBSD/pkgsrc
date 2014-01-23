@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.396 2014/01/23 12:24:08 tron Exp $
+$NetBSD: CHANGES-2014,v 1.397 2014/01/23 13:21:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -479,3 +479,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added graphics/py-cairo3 version 1.10.0 [wiz 2014-01-23]
         Updated textproc/latex2html to 2008nb5 [is 2014-01-23]
 	Updated mail/sma to 1.4nb1 [tron 2014-01-23]
+	Updated www/lighttpd to 1.4.34 [adam 2014-01-23]
