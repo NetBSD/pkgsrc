@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.407 2014/01/23 17:24:53 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.408 2014/01/23 18:30:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -491,3 +491,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/exabgp to 3.2.19nb1 [wiz 2014-01-23]
 	Updated emulators/gns3 to 0.8.3.1nb2 [wiz 2014-01-23]
 	Updated games/jools to 0.20nb4 [wiz 2014-01-23]
+	Updated sysutils/polysh to 0.4nb1 [wiz 2014-01-23]
