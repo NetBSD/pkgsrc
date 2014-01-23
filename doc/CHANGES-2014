@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.395 2014/01/23 12:21:05 is Exp $
+$NetBSD: CHANGES-2014,v 1.396 2014/01/23 12:24:08 tron Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -478,3 +478,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-msgpack to 0.4.0 [obache 2014-01-23]
 	Added graphics/py-cairo3 version 1.10.0 [wiz 2014-01-23]
         Updated textproc/latex2html to 2008nb5 [is 2014-01-23]
+	Updated mail/sma to 1.4nb1 [tron 2014-01-23]
