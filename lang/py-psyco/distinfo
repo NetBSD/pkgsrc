@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2008/04/25 17:16:40 tnn Exp $
-
-SHA1 (psyco-1.6-src.tar.gz) = 3c1ffa70b1a37bd855454d41d41a830e9ea82e7d
-RMD160 (psyco-1.6-src.tar.gz) = 472669a7a3714aae63710fd9bc5322b4b5214944
-Size (psyco-1.6-src.tar.gz) = 355914 bytes
