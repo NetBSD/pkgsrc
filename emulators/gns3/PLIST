@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2013/03/01 21:29:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/01/23 17:07:16 wiz Exp $
 bin/gns3
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/GNS3/Annotation.py
 ${PYSITELIB}/GNS3/Annotation.pyc
 ${PYSITELIB}/GNS3/Annotation.pyo
