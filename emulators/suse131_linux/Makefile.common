@@ -1,5 +1,42 @@
-# $NetBSD: Makefile.common,v 1.1 2013/12/05 11:42:16 obache Exp $
+# $NetBSD: Makefile.common,v 1.2 2014/01/23 11:10:17 obache Exp $
+# used by emulators/suse131_alsa/Makefile
+# used by emulators/suse131_aspell/Makefile
 # used by emulators/suse131_base/Makefile
+# used by emulators/suse131_compat/Makefile
+# used by emulators/suse131_cyrus-sasl/Makefile
+# used by emulators/suse131_dbus-glib/Makefile
+# used by emulators/suse131_expat/Makefile
+# used by emulators/suse131_fontconfig/Makefile
+# used by emulators/suse131_freetype2/Makefile
+# used by emulators/suse131_glib2/Makefile
+# used by emulators/suse131_glx/Makefile
+# used by emulators/suse131_gtk2/Makefile
+# used by emulators/suse131_krb5/Makefile
+# used by emulators/suse131_libcups/Makefile
+# used by emulators/suse131_libcurl/Makefile
+# used by emulators/suse131_libdbus/Makefile
+# used by emulators/suse131_libdrm/Makefile
+# used by emulators/suse131_libffi/Makefile
+# used by emulators/suse131_libidn/Makefile
+# used by emulators/suse131_libjpeg/Makefile
+# used by emulators/suse131_libjson/Makefile
+# used by emulators/suse131_libpng/Makefile
+# used by emulators/suse131_libsigc++2/Makefile
+# used by emulators/suse131_libsndfile/Makefile
+# used by emulators/suse131_libssh/Makefile
+# used by emulators/suse131_libtiff/Makefile
+# used by emulators/suse131_libwrap/Makefile
+# used by emulators/suse131_libxml2/Makefile
+# used by emulators/suse131_locale/Makefile
+# used by emulators/suse131_motif/Makefile
+# used by emulators/suse131_mozilla-nspr/Makefile
+# used by emulators/suse131_mozilla-nss/Makefile
+# used by emulators/suse131_openldap/Makefile
+# used by emulators/suse131_openssl/Makefile
+# used by emulators/suse131_pulseaudio/Makefile
+# used by emulators/suse131_qt4/Makefile
+# used by emulators/suse131_slang/Makefile
+# used by emulators/suse131_x11/Makefile
 
 SUSE_PKG=		yes
 SUSE_VERSION=		13.1
