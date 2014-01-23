@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2012/10/31 11:19:36 asau Exp $
+# $NetBSD: Makefile,v 1.19 2014/01/23 18:53:03 wiz Exp $
 
 DISTNAME=	qbzr-${VER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://launchpad.net/qbzr/${VER:R}/${VER}/+download/
 VER=		0.22.1
@@ -17,8 +17,10 @@ USE_TOOLS+=	msgfmt
 
 WRKSRC=		${WRKDIR}/qbzr
 
-PYDISTUTILSPKG=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.22.1
+REPLACE_PYTHON=		lib/uifactory.py
 
 .include "../../devel/bzr/plugin.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
