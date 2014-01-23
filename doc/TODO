@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12918 2014/01/23 14:47:16 wiz Exp $
+$NetBSD: TODO,v 1.12919 2014/01/23 16:29:29 morr Exp $
 
 Suggested new packages
 ======================
@@ -1165,7 +1165,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wml-2.0.11
 	o wmweather-2.4.4
 	o wmx-7
-	o wordpress-3.8
 	o worker-3.2.0
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9i
