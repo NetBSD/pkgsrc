@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.405 2014/01/23 16:50:15 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.406 2014/01/23 17:07:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -489,3 +489,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Removed lang/py-psyco successor devel/py-py [wiz 2014-01-23]
 	Updated www/wordpress to 3.8 [morr 2014-01-23]
 	Updated net/exabgp to 3.2.19nb1 [wiz 2014-01-23]
+	Updated emulators/gns3 to 0.8.3.1nb2 [wiz 2014-01-23]
