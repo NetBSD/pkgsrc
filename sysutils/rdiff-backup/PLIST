@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:16:12 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/01/23 18:56:44 wiz Exp $
 bin/rdiff-backup
 bin/rdiff-backup-statistics
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/rdiff_backup/C.so
 ${PYSITELIB}/rdiff_backup/FilenameMapping.py
 ${PYSITELIB}/rdiff_backup/FilenameMapping.pyc
@@ -105,8 +106,8 @@ ${PYSITELIB}/rdiff_backup/user_group.pyo
 ${PYSITELIB}/rdiff_backup/win_acls.py
 ${PYSITELIB}/rdiff_backup/win_acls.pyc
 ${PYSITELIB}/rdiff_backup/win_acls.pyo
-${PKGMANDIR}/man1/rdiff-backup.1
-${PKGMANDIR}/man1/rdiff-backup-statistics.1
+man/man1/rdiff-backup-statistics.1
+man/man1/rdiff-backup.1
 share/doc/${PKGNAME}/CHANGELOG
 share/doc/${PKGNAME}/COPYING
 share/doc/${PKGNAME}/FAQ.html
