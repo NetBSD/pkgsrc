@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.671 2014/01/21 10:53:21 wiz Exp $
+# $NetBSD: Makefile,v 1.672 2014/01/23 11:11:36 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -380,6 +380,7 @@ SUBDIR+=	py-actdiag
 SUBDIR+=	py-biggles
 SUBDIR+=	py-blockdiag
 SUBDIR+=	py-cairo
+SUBDIR+=	py-cairo3
 SUBDIR+=	py-dot
 SUBDIR+=	py-fits
 SUBDIR+=	py-gdchart
@@ -391,6 +392,7 @@ SUBDIR+=	py-imaging
 SUBDIR+=	py-imagingtk
 SUBDIR+=	py-matplotlib
 SUBDIR+=	py-matplotlib-gtk2
+SUBDIR+=	py-matplotlib-tk
 SUBDIR+=	py-nwdiag
 SUBDIR+=	py-piddle
 SUBDIR+=	py-pycha
