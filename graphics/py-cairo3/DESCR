@@ -3,4 +3,4 @@ devices.  Currently supported output targets include the X Window
 System, win32, and image buffers. Experimental backends include OpenGL
 (through glitz), Quartz, XCB, PostScript and PDF file output.
 
-This package contains the Python bindings for Cairo.
+This package contains the Python bindings for Cairo for Python 3.x.
