@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.389 2014/01/23 00:08:50 mef Exp $
+$NetBSD: CHANGES-2014,v 1.390 2014/01/23 06:51:32 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -472,3 +472,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/lua-socket to 3.0rc1nb2 [jperkin 2014-01-22]
 	Added x11/gtkdatabox version 0.9.2.0 [ryoon 2014-01-22]
 	Updated fonts/ghostscript-cidfonts to 20000901nb6 [mef 2014-01-23]
+	Updated meta-pkgs/suse131 to 13.1nb2 [obache 2014-01-23]
