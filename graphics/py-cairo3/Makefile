@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/01/23 11:11:09 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/23 11:12:43 wiz Exp $
 
 DISTNAME=		pycairo-1.10.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -8,7 +8,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		leuzi@trash.net
 HOMEPAGE=		http://cairographics.org/pycairo/
-COMMENT=		Python bindings for cairo
+COMMENT=		Python bindings for cairo (python-3.x version)
 LICENSE=		gnu-lgpl-v2.1 OR mpl-1.1
 
 USE_PKGLOCALEDIR=	yes
