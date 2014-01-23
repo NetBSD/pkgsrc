@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.403 2014/01/23 15:24:48 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.404 2014/01/23 16:29:29 morr Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -487,3 +487,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-uwsgi to 2.0 [wiz 2014-01-23]
 	Updated print/hplip to 3.14.1 [schnoebe 2014-01-23]
 	Removed lang/py-psyco successor devel/py-py [wiz 2014-01-23]
+	Updated www/wordpress to 3.8 [morr 2014-01-23]
