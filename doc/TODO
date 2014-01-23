@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12915 2014/01/23 08:55:10 obache Exp $
+$NetBSD: TODO,v 1.12916 2014/01/23 09:40:51 obache Exp $
 
 Suggested new packages
 ======================
@@ -958,7 +958,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-markdown-2.3.1
 	o py-mezzanine-3.0.5
 	o py-mpmath-0.18
-	o py-msgpack-0.4.0
 	o py-musicbrainz-0.7.4
 	o py-networkx-1.8.1
 	o py-notify-0.3.1
