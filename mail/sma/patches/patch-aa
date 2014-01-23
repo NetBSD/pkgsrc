@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2005/01/04 15:34:23 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2014/01/23 12:20:47 tron Exp $
+
+Fix build under IRIX. See PR pkg/28818.
 
 --- Makefile.orig	2002-11-14 18:09:54.000000000 +0100
 +++ Makefile
