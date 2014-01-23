@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.16 2013/11/29 12:58:52 joerg Exp $
+$NetBSD: distinfo,v 1.17 2014/01/23 19:12:27 wiz Exp $
 
+SHA1 (enigmail-1.4.tar.gz) = 1ee4bcd8d38685af44c1aeeea4fbba7bf30513e4
+RMD160 (enigmail-1.4.tar.gz) = b3c717e150c826faae1daa09806e07dd16619c51
+Size (enigmail-1.4.tar.gz) = 1323467 bytes
 SHA1 (thunderbird-10.0.12esr.source.tar.bz2) = 260a3baca5eaa80bcc075b08c9f12016d61877de
 RMD160 (thunderbird-10.0.12esr.source.tar.bz2) = 63586fc3460f4522900b84f58805c3a3a9cfe7a6
 Size (thunderbird-10.0.12esr.source.tar.bz2) = 97703324 bytes
