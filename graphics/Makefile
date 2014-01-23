@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.672 2014/01/23 11:11:36 wiz Exp $
+# $NetBSD: Makefile,v 1.673 2014/01/23 20:03:55 jnemeth Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -396,6 +396,7 @@ SUBDIR+=	py-matplotlib-tk
 SUBDIR+=	py-nwdiag
 SUBDIR+=	py-piddle
 SUBDIR+=	py-pycha
+SUBDIR+=	py-pydot
 SUBDIR+=	py-seqdiag
 SUBDIR+=	py-sk1libs
 SUBDIR+=	py-uniconvertor
