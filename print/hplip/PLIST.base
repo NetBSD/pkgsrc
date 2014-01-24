@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.base,v 1.11 2013/11/24 20:05:41 schnoebe Exp $
+@comment $NetBSD: PLIST.base,v 1.11.2.1 2014/01/24 14:27:11 tron Exp $
 bin/hp-align
 bin/hp-check
 bin/hp-clean
@@ -150,6 +150,8 @@ share/hplip/base/tui.py
 share/hplip/base/tui.pyc
 share/hplip/base/utils.py
 share/hplip/base/utils.pyc
+share/hplip/base/validation.py
+share/hplip/base/validation.pyc
 share/hplip/base/vcard.py
 share/hplip/base/vcard.pyc
 share/hplip/base/wifi.py
