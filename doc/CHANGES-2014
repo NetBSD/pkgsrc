@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.414 2014/01/24 11:15:46 jperkin Exp $
+$NetBSD: CHANGES-2014,v 1.415 2014/01/24 11:30:10 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -498,3 +498,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/virtinst to 0.600.3nb1 [wiz 2014-01-23]
 	Updated pkgtools/x11-links to 0.81 [ryoon 2014-01-23]
 	Updated databases/percona-toolkit to 2.2.6 [jperkin 2014-01-24]
+	Updated mail/milter-manager to 2.0.1 [obache 2014-01-24]
