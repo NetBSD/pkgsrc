@@ -1,4 +1,4 @@
-# $NetBSD: print-plist.mk,v 1.25 2014/01/18 19:48:57 wiz Exp $
+# $NetBSD: print-plist.mk,v 1.26 2014/01/24 12:42:52 obache Exp $
 
 ###
 ### Automatic PLIST generation
@@ -29,9 +29,6 @@ _PRINT_PLIST_AWK_SUBST+=						\
 	gsub("^${PKGGNUDIR:S/\/$$//}/", "gnu/");			\
 	gsub("^${PKGINFODIR}/", "info/");				\
 	gsub("^${PKGMANDIR}/", "man/");
-# for Python packages
-_PRINT_PLIST_AWK_SUBST+=	gsub(/__pycache__\//, "");
-_PRINT_PLIST_AWK_SUBST+=	gsub(/\.cpython-[0-9]+/, "")
 
 _PRINT_PLIST_AWK_SUBST+=}
 
