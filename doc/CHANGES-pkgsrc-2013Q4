@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.16 2014/01/24 00:50:12 schnoebe Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.17 2014/01/24 14:27:38 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q4 branch:
@@ -59,3 +59,5 @@ Pullup ticket #4307 - requested by obache
 emulators/suse131_libpng: security update
 Pullup ticket #4299 - requested by tron
 Build fix for "ngrep" for GNU make 4.0.
+Pullup ticket #4308 - requested by schnoebe
+print/hplip: security update
