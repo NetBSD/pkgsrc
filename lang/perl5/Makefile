@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.215 2014/01/13 09:59:16 adam Exp $
+# $NetBSD: Makefile,v 1.216 2014/01/24 16:37:19 ryoon Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -281,6 +281,8 @@ post-extract:
 		cp ${FILESDIR}/Policy.sh ${WRKSRC}/Policy.sh
 		cp ${FILESDIR}/cpan-DB_File-hints-netbsd.pl \
 			${WRKSRC}/cpan/DB_File/hints/netbsd.pl
+		cp ${FILESDIR}/cpan-DB_File-hints-openbsd.pl \
+			${WRKSRC}/cpan/DB_File/hints/openbsd.pl
 
 pre-configure:
 	cd ${WRKSRC} && find `pwd` -name "*.orig" -type f -exec ${RM} -f {} \;
