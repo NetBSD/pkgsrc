@@ -1,18 +1,17 @@
-$NetBSD: patch-configure,v 1.1 2013/08/19 04:47:58 taca Exp $
+$NetBSD: patch-configure,v 1.2 2014/01/24 11:29:30 obache Exp $
 
-* Not all Gem have source_index method.
+* rbconfig_vendorarchhdr dir may not be defined even if rbconfig_hdrdir exists
 
---- configure.orig	2013-06-28 02:06:00.000000000 +0000
+--- configure.orig	2014-01-23 02:36:54.000000000 +0000
 +++ configure
-@@ -13935,7 +13935,10 @@ fi
-         rescue LoadError
-           ruby_glib2_gem = nil
-         else
--          ruby_glib2_gem = Gem.source_index.find_name("glib2").first
-+          begin
-+            ruby_glib2_gem = Gem.source_index.find_name("glib2").first
-+          rescue NoMethodError
-+          end
-         end
- 	if ruby_glib2_gem.nil?
- 	  begin
+@@ -13989,6 +13989,10 @@ if test "$ruby_available" = "yes"; then
+     fi
+     if test -d "$rbconfig_vendorarchhdrdir"; then
+       RUBY_CFLAGS="$RUBY_CFLAGS -I$rbconfig_vendorarchhdrdir"
++    else
++      if test "$rbconfig_vendorarchdir" != ""; then
++        RUBY_CFLAGS="$RUBY_CFLAGS -I$rbconfig_vendorarchdir"
++      fi
+     fi
+     if test -d "$rbconfig_rubyarchhdrdir"; then
+       RUBY_CFLAGS="$RUBY_CFLAGS -I$rbconfig_rubyarchhdrdir"
