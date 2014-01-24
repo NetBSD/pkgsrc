@@ -1,1 +1,4 @@
-Library for arbitrary precision arithmetic wirtten by Python
+GMPY and GMPY2 are C-coded Python extension modules that support fast
+multiple-precision arithmetic.  GMPY only supports the GMP library and
+provides fast multiple-precision integer and rational arithmetic.  The
+limited mpf type from GMP is also supported.
