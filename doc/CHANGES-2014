@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.415 2014/01/24 11:30:10 obache Exp $
+$NetBSD: CHANGES-2014,v 1.416 2014/01/24 13:22:35 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -499,3 +499,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated pkgtools/x11-links to 0.81 [ryoon 2014-01-23]
 	Updated databases/percona-toolkit to 2.2.6 [jperkin 2014-01-24]
 	Updated mail/milter-manager to 2.0.1 [obache 2014-01-24]
+	Updated devel/py-testtools to 0.9.34 [obache 2014-01-24]
