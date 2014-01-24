@@ -1,9 +1,14 @@
-@comment $NetBSD: PLIST,v 1.5 2013/01/19 11:03:17 obache Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.6 2014/01/24 13:22:22 obache Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/testtools/__init__.py
 ${PYSITELIB}/testtools/__init__.pyc
 ${PYSITELIB}/testtools/__init__.pyo
-${PYSITELIB}/testtools/_compat2x.py
+${PLIST.py2x}${PYSITELIB}/testtools/_compat2x.py
 ${PLIST.py2x}${PYSITELIB}/testtools/_compat2x.pyc
 ${PLIST.py2x}${PYSITELIB}/testtools/_compat2x.pyo
 ${PYSITELIB}/testtools/_compat3x.py
