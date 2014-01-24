@@ -1,10 +1,11 @@
-$NetBSD: patch-ab,v 1.6 2006/10/07 07:24:49 rillig Exp $
+$NetBSD: patch-ab,v 1.6.62.1 2014/01/24 00:48:51 schnoebe Exp $
 
-Tags: not-for-upstream
+1.) Install manual pages in correct directory.
+2.) Fix build with version 4.0 of GNU make.
 
---- Makefile.in.orig	2005-02-25 10:20:17.000000000 +0000
-+++ Makefile.in
-@@ -25,7 +25,7 @@ exec_prefix = @exec_prefix@
+--- Makefile.in.orig	2006-11-28 13:35:37.000000000 +0000
++++ Makefile.in	2014-01-14 22:40:38.000000000 +0000
+@@ -25,7 +25,7 @@
  
  bindir      = $(prefix)/bin
  datadir     = $(prefix)/share
@@ -13,3 +14,12 @@ Tags: not-for-upstream
  
  BINDIR_INSTALL = $(prefix)/bin
  MANDIR_INSTALL = $(mandir)/man8
+@@ -63,7 +63,7 @@
+ 	rm -f config.status config.cache config.log config.h Makefile 
+ 
+ $(REGEX_OBJS): $(REGEX_OBJS:.o=.c) $(REGEX_DIR)/*.h
+-	$(MAKE) $(MAKEFLAGS) -C $(REGEX_DIR) $(notdir $(REGEX_OBJS))
++	$(MAKE) -C $(REGEX_DIR) $(notdir $(REGEX_OBJS))
+ 
+ $(OBJS): Makefile ngrep.c ngrep.h
+ 
