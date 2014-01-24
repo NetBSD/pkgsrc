@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/23 11:12:43 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/24 15:59:41 wiz Exp $
 
 DISTNAME=		pycairo-1.10.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -20,6 +20,7 @@ CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 PKGCONFIG_OVERRIDE+=	py3cairo.pc.in
 PYTHON_SELF_CONFLICT=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	26 27
+PYTHON_VERSIONS_INCLUDE_3X=	yes
 PY_PATCHPLIST=		yes
 # waf is not smart enough for this as of 1.10.0
 PY_PEP3147=		no
