@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/06/19 14:03:41 gdt Exp $
-#
+# $NetBSD: Makefile,v 1.9 2014/01/25 09:16:52 wiz Exp $
 
 DISTNAME=	xen-2.0.7-install-x86_32
 PKGNAME=	xenkernel20-2.0.7
@@ -8,11 +7,10 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://www.cl.cam.ac.uk/Research/SRG/netos/xen/downloads/
 EXTRACT_SUFX=	.tgz
 
-LICENSE=	gnu-gpl-v2
-
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/ports/xen/
 COMMENT=	Xen Kernel
+LICENSE=	gnu-gpl-v2
 
 ONLY_FOR_PLATFORM=	Linux-2.[46]*-i386 NetBSD-*-i386
 
