@@ -1,11 +1,10 @@
-$NetBSD: patch-aw,v 1.2 2013/06/02 06:12:28 ryoon Exp $
+$NetBSD: patch-aw,v 1.3 2014/01/25 13:53:22 ryoon Exp $
 
---- jdk/src/share/lib/security/java.policy.orig	2012-08-10 17:30:16.000000000 +0000
+--- jdk/src/share/lib/security/java.policy.orig	2014-01-25 07:34:09.000000000 +0000
 +++ jdk/src/share/lib/security/java.policy
-@@ -45,5 +45,6 @@ grant { 
- 	permission java.util.PropertyPermission "java.vm.version", "read";
- 	permission java.util.PropertyPermission "java.vm.vendor", "read";
- 	permission java.util.PropertyPermission "java.vm.name", "read";
-+	permission java.util.PropertyPermission "sun.java2d.debugfonts", "read";
- };
- 
+@@ -48,5 +48,3 @@ grant {
+         permission java.util.PropertyPermission "java.vm.version", "read";
+         permission java.util.PropertyPermission "java.vm.vendor", "read";
+         permission java.util.PropertyPermission "java.vm.name", "read";
+-};
+-
