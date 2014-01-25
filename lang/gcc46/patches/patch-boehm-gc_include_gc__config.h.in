@@ -1,0 +1,14 @@
+$NetBSD: patch-boehm-gc_include_gc__config.h.in,v 1.1 2014/01/25 13:38:48 ryoon Exp $
+
+--- boehm-gc/include/gc_config.h.in.orig	2012-03-02 18:21:41.000000000 +0000
++++ boehm-gc/include/gc_config.h.in
+@@ -30,6 +30,9 @@
+ /* support FreeBSD threads */
+ #undef GC_FREEBSD_THREADS
+ 
++/* support OpenBSD threads */
++#undef GC_OPENBSD_THREADS
++
+ /* include support for gcj */
+ #undef GC_GCJ_SUPPORT
+ 
