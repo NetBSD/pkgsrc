@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/01/01 11:52:36 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2014/01/25 10:30:24 wiz Exp $
 
 DISTNAME=	lxml-3.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,6 @@ COMMENT=	Python binding for libxml2 and libxslt
 LICENSE=	modified-bsd
 
 TEST_TARGET=	test_inplace
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 .include "../../lang/python/egg.mk"
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.7.8

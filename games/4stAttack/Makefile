@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/10/24 12:32:38 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.24 2014/01/25 10:30:08 wiz Exp $
 
 DISTNAME=		4stAttack-2.1.4
 PKGREVISION=		17
@@ -15,6 +14,7 @@ INSTALLATION_DIRS=	bin share/${PKGBASE}
 USE_TOOLS+=	pax
 
 PYTHON_PATCH_SCRIPTS=	4stattack.py
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.1.4
 
 FIND_EXCLUDE=	\( -name \*.orig -or -name \*.txt -or -name \*.pre -or -name GPL -or -name \*~ -or -name 4stattack \)
 

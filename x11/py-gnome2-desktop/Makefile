@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2014/01/01 11:52:43 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.86 2014/01/25 10:30:31 wiz Exp $
 
 DISTNAME=	gnome-python-desktop-2.32.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python/2/}
@@ -21,6 +20,9 @@ USE_TOOLS+=	pkg-config gmake
 
 PKGCONFIG_OVERRIDE+=	gnome-python-desktop-2.0.pc.in
 
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ORBit via py-gnome2, py-gtk2
+PYTHON_VERSIONED_DEPENDENCIES=	cairo:link
+
 .include "../../lang/python/pyversion.mk"
 
 # The "real" value here is: 27 26
@@ -35,7 +37,7 @@ PYTHON_VERSIONS_ACCEPTED+=	${PYTHON_VERSION_DEFAULT:M26}
 .include "../../lang/python/extension.mk"
 .include "../../devel/libwnck/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
-.include "../../graphics/py-cairo/buildlink3.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../multimedia/gnome-media/buildlink3.mk"
 .include "../../multimedia/totem-pl-parser/buildlink3.mk"
 # works, but should better be in its own pkg to limit dependencies

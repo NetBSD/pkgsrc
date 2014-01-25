@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/08/19 10:09:51 obache Exp $
+# $NetBSD: Makefile,v 1.16 2014/01/25 10:30:26 wiz Exp $
 
 DISTNAME=	mod_wsgi-${VERSION}
 PKGNAME=	${APACHE_PKG_PREFIX}-${PYPKGPREFIX}-wsgi-${VERSION}
@@ -9,8 +9,6 @@ MAINTAINER=	jan.m.danielsson@gmail.com
 HOMEPAGE=	http://modwsgi.googlecode.com/
 COMMENT=	WSGI module for apache
 LICENSE=	apache-2.0
-
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 APACHE_MODULE=	yes
 VERSION=	3.4

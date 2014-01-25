@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/31 11:16:31 asau Exp $
-#
+# $NetBSD: Makefile,v 1.4 2014/01/25 10:30:00 wiz Exp $
 
 DISTNAME=	RBTools-0.2
 PKGREVISION=	1
@@ -15,6 +14,7 @@ USE_LANGUAGES=	# none
 
 REPLACE_PYTHON=		ez_setup.py setup.py rbtools/postreview.py
 REPLACE_PYTHON+=	contrib/internal/release.py
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.2
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

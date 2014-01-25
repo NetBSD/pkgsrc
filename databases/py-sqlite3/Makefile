@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2013/10/19 09:07:01 adam Exp $
+# $NetBSD: Makefile,v 1.19 2014/01/25 10:30:00 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-sqlite3-${PY_DISTVERSION}
 PKGREVISION=	2
@@ -12,8 +12,8 @@ USE_TOOLS+=		patch
 
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/_sqlite
 
+# part of python itself; using distutils.mk will install a useless egg
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 PY_SETUP_SUBST+= 	SQLITE_PREFIX=${BUILDLINK_PREFIX.sqlite3}
 PYSETUPINSTALLARGS+=	--install-lib ${PREFIX}/${PYLIB}/lib-dynload
 

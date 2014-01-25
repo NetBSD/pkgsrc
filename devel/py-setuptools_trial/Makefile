@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/31 11:19:34 asau Exp $
-#
+# $NetBSD: Makefile,v 1.6 2014/01/25 10:30:05 wiz Exp $
 
 DISTNAME=	setuptools_trial-0.5.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +13,8 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=	# none
 
 DEPENDS+=       ${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-twisted
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
