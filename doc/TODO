@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12923 2014/01/25 10:49:53 wiz Exp $
+$NetBSD: TODO,v 1.12924 2014/01/25 10:51:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -629,6 +629,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
 	o gnuchess-6.1.1
+	o gnutls-3.2.9
 	o gob-2.0.19
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
@@ -931,6 +932,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-METAR-0.19
 	o py-PDF2-1.19
 	o py-PasteDeploy-1.5.2
+	o py-Scientific-2.8.1
 	o py-Scientific-doc-2.5.5
 	o py-Unidecode-0.04.14
 	o py-Whoosh-2.5.6
@@ -1194,6 +1196,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
 	o xf86-input-ws-1.3.0 [successor to openbsd-input-ws, only builds on OpenBSD]
+	o xf86-video-ati-7.3.0
 	o xf86-video-geode-2.11.9 [wip]
 	o xf86-video-glide-1.2.2
 	o xf86-video-intel-2.21.15
