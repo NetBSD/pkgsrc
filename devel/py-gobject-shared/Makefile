@@ -1,12 +1,17 @@
-# $NetBSD: Makefile,v 1.36 2013/09/02 19:50:59 adam Exp $
+# $NetBSD: Makefile,v 1.37 2014/01/25 08:53:53 wiz Exp $
 
 PKGNAME=		py-gobject-shared-2.28.6
-PKGREVISION=		10
+PKGREVISION=		11
 
 .include "../../devel/py-gobject/Makefile.common"
 
 PYTHON_FOR_BUILD_ONLY=	yes
 INSTALLATION_DIRS=	include/pygtk-2.0 lib/pkgconfig
+# we do not really need py-cairo's pkg-config flags
+# just some non-empty valid arguments so py-cairo is detected
+# as found
+CONFIGURE_ARGS+=	PYCAIRO_CFLAGS="`pkg-config --cflags cairo`"
+CONFIGURE_ARGS+=	PYCAIRO_LIBS="`pkg-config --libs cairo`"
 
 do-build:
 
@@ -19,11 +24,11 @@ do-install:
 		${DESTDIR:Q}${PREFIX:Q}/lib/pkgconfig
 
 .include "../../lang/python/application.mk"
-BUILDLINK_DEPMETHOD.pycairo=	build
-.include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gobject-introspection=	gobject-introspection>=0.9.5
 BUILDLINK_DEPMETHOD.gobject-introspection=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
+BUILDLINK_DEPMETHOD.cairo=	build
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
