@@ -1,12 +1,28 @@
-@comment $NetBSD: PLIST,v 1.1 2014/01/22 10:58:37 drochner Exp $
-bin/ipcluster
-bin/ipcontroller
-bin/ipengine
-bin/iplogger
-bin/iptest
-bin/ipython
-bin/irunner
-bin/pycolor
+@comment $NetBSD: PLIST,v 1.2 2014/01/25 08:19:44 wiz Exp $
+${PLIST.py2x}bin/ipcluster
+${PLIST.py2x}bin/ipcontroller
+${PLIST.py2x}bin/ipengine
+${PLIST.py2x}bin/iplogger
+${PLIST.py2x}bin/iptest
+${PLIST.py2x}bin/ipython
+${PLIST.py2x}bin/irunner
+${PLIST.py2x}bin/pycolor
+${PLIST.py3x}bin/ipcluster3
+${PLIST.py3x}bin/ipcontroller3
+${PLIST.py3x}bin/ipengine3
+${PLIST.py3x}bin/iplogger3
+${PLIST.py3x}bin/iptest3
+${PLIST.py3x}bin/ipython3
+${PLIST.py3x}bin/irunner3
+${PLIST.py3x}bin/pycolor3
+${PLIST.py2x}${PYSITELIB}/${EGG_FILE}
+${PLIST.py3x}${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PLIST.py3x}${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_FILE}/entry_points.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_FILE}/not-zip-safe
+${PLIST.py3x}${PYSITELIB}/${EGG_FILE}/requires.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_FILE}/top_level.txt
 ${PYSITELIB}/IPython/__init__.py
 ${PYSITELIB}/IPython/__init__.pyc
 ${PYSITELIB}/IPython/__init__.pyo
@@ -2282,7 +2298,6 @@ ${PYSITELIB}/IPython/utils/wildcard.pyo
 ${PYSITELIB}/IPython/utils/zmqrelated.py
 ${PYSITELIB}/IPython/utils/zmqrelated.pyc
 ${PYSITELIB}/IPython/utils/zmqrelated.pyo
-${PYSITELIB}/${EGG_FILE}
 man/man1/ipcluster.1
 man/man1/ipcontroller.1
 man/man1/ipengine.1
