@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2013/06/06 12:54:15 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2014/01/25 10:45:17 wiz Exp $
 
 DISTNAME=		TeXmacs-1.0.7.19-src
 PKGNAME=		${DISTNAME:S/-src//}
@@ -21,9 +21,9 @@ CONFIGURE_ARGS+=	--with-qt=${QTDIR}/bin
 MAKE_ENV+=		QT_QTDIR=${QTDIR}
 TEX_ACCEPTED=		teTeX3
 
-PYTHON_PATCH_SCRIPTS=	plugins/python/bin/tm_python
-PYTHON_PATCH_SCRIPTS+=	plugins/mathematica/bin/realpath.py
-PYTHON_PATCH_SCRIPTS+=	plugins/sage/bin/tm_sage
+REPLACE_PYTHON=	plugins/python/bin/tm_python
+REPLACE_PYTHON+=	plugins/mathematica/bin/realpath.py
+REPLACE_PYTHON+=	plugins/sage/bin/tm_sage
 
 SUBST_CLASSES+=		init
 SUBST_STAGE.init=	post-patch

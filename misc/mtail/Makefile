@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/08 09:57:31 asau Exp $
+# $NetBSD: Makefile,v 1.17 2014/01/25 10:45:20 wiz Exp $
 #
 
 DISTNAME=	mtail-1.1.1
@@ -13,7 +13,7 @@ COMMENT=	Small tail workalike that performs output coloring
 
 NO_BUILD=	yes
 
-PYTHON_PATCH_SCRIPTS=	mtail
+REPLACE_PYTHON=	mtail
 INSTALLATION_DIRS=	bin share/doc share/examples
 
 do-install:

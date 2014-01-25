@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2014/01/25 10:30:02 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2014/01/25 10:45:17 wiz Exp $
 
 DISTNAME=		meld-1.8.3
 CATEGORIES=		devel
@@ -17,7 +17,7 @@ USE_TOOLS+=			gmake msgfmt intltool
 MAKE_FLAGS+=			prefix=${PREFIX}
 MAKE_FLAGS+=			localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 MAKE_FLAGS+=			PYTHON=${PYTHONBIN}
-PYTHON_PATCH_SCRIPTS=		bin/meld
+REPLACE_PYTHON=		bin/meld
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 
 # remove unnecessarily created empty dirs
