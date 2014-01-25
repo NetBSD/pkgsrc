@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.98 2013/06/14 07:40:15 wiz Exp $
+# $NetBSD: sites.mk,v 1.99 2014/01/25 09:29:42 obache Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -395,6 +395,9 @@ MASTER_SITE_NETLIB+= \
 MASTER_SITE_RUBYGEMS+= \
 	http://rubygems.org/gems/ \
 	http://gems.rubyforge.org/gems/
+
+MASTER_SITE_HASKELL_HACKAGE+=	\
+	http://hackage.haskell.org/package/
 
 # The primary backup site.
 MASTER_SITE_BACKUP?=	\
