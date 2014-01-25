@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/12/31 11:03:12 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2014/01/25 10:30:21 wiz Exp $
 
 DISTNAME=	bup-0.25
 CATEGORIES=	sysutils
@@ -16,6 +16,8 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	par2-[0-9]*:../../archivers/par2
 DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-fuse-bindings
 
 DOCDIR=		${WRKDIR}/bup-man
 

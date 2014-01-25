@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/04/02 10:44:41 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.2 2014/01/25 10:29:56 wiz Exp $
 
 DISTNAME=	v1.0.0
 PKGNAME=	${PYPKGPREFIX}-acoustid-1.0.0
@@ -12,12 +11,13 @@ HOMEPAGE=	https://github.com/sampsyo/pyacoustid
 COMMENT=	Audio fingerprinting
 LICENSE=	mit
 
+DEPENDS+=	${PYPKGPREFIX}-audioread-[0-9]*:../../audio/py-audioread
+DEPENDS+=	chromaprint-[0-9]*:../../audio/chromaprint
+
 WRKSRC=		${WRKDIR}/pyacoustid-1.0.0
 USE_LANGUAGES=	# none
 EGG_NAME=	pyacoustid-1.0.0
-
-DEPENDS+=	${PYPKGPREFIX}-audioread-[0-9]*:../../audio/py-audioread
-DEPENDS+=	chromaprint-[0-9]*:../../audio/chromaprint
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.0.0
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

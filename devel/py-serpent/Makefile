@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/12/04 16:34:31 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/25 10:30:04 wiz Exp $
 
 DISTNAME=	serpent-1.4
 PKGNAME=	${PYPKGPREFIX}-serpent-1.4
@@ -11,7 +11,6 @@ COMMENT=	Simple serialization library
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCLUDE_3X= yes
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

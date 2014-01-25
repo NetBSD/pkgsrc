@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/07/21 12:15:29 richard Exp $
-#
+# $NetBSD: Makefile,v 1.2 2014/01/25 10:30:25 wiz Exp $
 
 DISTNAME=	relatorio-0.5.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,16 +8,17 @@ MASTER_SITES=	http://pypi.python.org/packages/source/r/relatorio/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://relatorio.openhex.org/
 COMMENT=	Templating library able to output odt and pdf files
-
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=		${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
-DEPENDS+=		${PYPKGPREFIX}-genshi>=0.5:../../www/py-genshi
-DEPENDS+=		${PYPKGPREFIX}-lxml>=2.0:../../textproc/py-lxml
-DEPENDS+=		${PYPKGPREFIX}-pycha-[0-9]*:../../graphics/py-pycha
-DEPENDS+=		${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-genshi>=0.5:../../www/py-genshi
+DEPENDS+=	${PYPKGPREFIX}-lxml>=2.0:../../textproc/py-lxml
+DEPENDS+=	${PYPKGPREFIX}-pycha-[0-9]*:../../graphics/py-pycha
+DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_LANGUAGES=		#none
+PYTHON_VERSIONED_DEPENDENCIES=	cairo
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2 via py-pycha
 
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

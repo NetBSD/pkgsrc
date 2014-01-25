@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/10/19 09:06:56 adam Exp $
-#
+# $NetBSD: Makefile,v 1.24 2014/01/25 10:29:58 wiz Exp $
 
 DISTNAME=	telepathy-logger-0.2.7
 PKGREVISION=	12
@@ -24,6 +23,7 @@ PKGCONFIG_OVERRIDE+=	telepathy-logger/telepathy-logger-0.1.pc.in
 BUILD_DEPENDS=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 PYTHON_FOR_BUILD_ONLY=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.2.7
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"

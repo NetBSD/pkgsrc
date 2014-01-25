@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2013/10/10 00:06:19 joerg Exp $
+# $NetBSD: Makefile.common,v 1.13 2014/01/25 10:30:07 wiz Exp $
 #
 # used by emulators/mame/Makefile
 # used by emulators/mess/Makefile
@@ -59,6 +59,7 @@ SUBST_STAGE.exe=	post-patch
 SUBST_MESSAGE.exe=	Fixing executable name.
 
 PYTHON_FOR_BUILD_ONLY=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.151
 
 .include "../../lang/python/application.mk"
 .include "../../devel/GConf/buildlink3.mk"

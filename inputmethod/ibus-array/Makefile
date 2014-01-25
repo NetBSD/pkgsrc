@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/10/23 12:11:14 obache Exp $
-#
+# $NetBSD: Makefile,v 1.10 2014/01/25 10:30:11 wiz Exp $
 
 DISTNAME=	ibus-array-0.0.2
 PKGREVISION=	7
@@ -21,6 +20,8 @@ SUBST_CLASSES+=		epython
 SUBST_STAGE.epython=	pre-configure
 SUBST_FILES.epython=	setup/ibus-setup-array.in
 SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2 via py-ibus-python
 
 .include "../../inputmethod/ibus/buildlink3.mk"
 .include "../../lang/python/application.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2014/01/15 18:26:20 wiz Exp $
+# $NetBSD: Makefile,v 1.122 2014/01/25 10:30:07 wiz Exp $
 
 DISTNAME=	qemu-1.7.0
 CATEGORIES=	emulators
@@ -44,6 +44,8 @@ INSTALL_MAKE_FLAGS=	egdir=${EGDIR}
 PKG_SYSCONFSUBDIR=	qemu
 
 REPLACE_PERL+=		scripts/texi2pod.pl
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported yet as of 1.7.0
 
 BUILDLINK_PASSTHRU_DIRS+= /usr/lib
 BUILDLINK_PASSTHRU_RPATHDIRS+= /usr/lib
