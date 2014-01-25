@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.430 2014/01/25 11:11:31 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.431 2014/01/25 12:38:24 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -514,3 +514,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/xf86-video-ati to 7.3.0 [wiz 2014-01-25]
 	Updated security/gnutls to 3.2.9 [wiz 2014-01-25]
 	Updated finance/moneyguru to 2.7.1 [wiz 2014-01-25]
+	Added math/gnome-calculator version 3.10.2 [prlw1 2014-01-25]
