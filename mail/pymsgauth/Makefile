@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/08 12:19:28 asau Exp $
+# $NetBSD: Makefile,v 1.12 2014/01/25 10:45:19 wiz Exp $
 #
 
 DISTNAME=		pymsgauth-2.1.0
@@ -21,14 +21,14 @@ HTMLDOCDIR=		share/doc/html/pymsgauth
 EGDIR=			share/examples/pymsgauth
 
 NO_BUILD=		yes
-PYTHON_PATCH_SCRIPTS=	${PYMSGAUTH_PROGRAMS} *.py
+REPLACE_PYTHON=	${PYMSGAUTH_PROGRAMS} *.py
 
 FILES_SUBST+=		SHAREDIR=${SHAREDIR:Q}
 
 INSTALLATION_DIRS=	${SHAREDIR} ${DOCDIR} ${HTMLDOCDIR} ${EGDIR} bin
 
 do-install:
-	for f in ${PYTHON_PATCH_SCRIPTS}; do \
+	for f in ${REPLACE_PYTHON}; do \
 		${INSTALL_SCRIPT} ${WRKSRC}/$${f} ${DESTDIR}${PREFIX}/${SHAREDIR}; \
 	done
 

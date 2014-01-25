@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2014/01/25 10:30:30 wiz Exp $
+# $NetBSD: Makefile,v 1.125 2014/01/25 10:45:22 wiz Exp $
 
 DISTNAME=		gnome-applets-2.32.1.1
 PKGREVISION=		35
@@ -54,8 +54,8 @@ PRINT_PLIST_AWK+=	/examples/ { print "$${PLIST.battstat}"$$0; next; }
 .include "../../devel/GConf/schemas.mk"
 
 PY_PATCHPLIST=	yes
-PYTHON_PATCH_SCRIPTS+=	invest-applet/invest/invest-applet.py
-PYTHON_PATCH_SCRIPTS+=	invest-applet/invest/invest-chart
+REPLACE_PYTHON+=	invest-applet/invest/invest-applet.py
+REPLACE_PYTHON+=	invest-applet/invest/invest-chart
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=			glib2>=2.18.0
