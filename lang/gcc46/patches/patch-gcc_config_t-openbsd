@@ -1,0 +1,13 @@
+$NetBSD: patch-gcc_config_t-openbsd,v 1.1 2014/01/25 13:38:48 ryoon Exp $
+
+--- gcc/config/t-openbsd.orig	2003-09-23 18:56:00.000000000 +0000
++++ gcc/config/t-openbsd
+@@ -1,2 +1,7 @@
+ # We don't need GCC's own include files.
+-USER_H =
++USER_H = $(EXTRA_HEADERS)
++# Use unwind-dw2-fde-glibc
++LIB2ADDEH = $(srcdir)/unwind-dw2.c $(srcdir)/unwind-dw2-fde-openbsd.c \
++  $(srcdir)/unwind-sjlj.c $(srcdir)/unwind-c.c
++LIB2ADDEHDEP = unwind.inc unwind-dw2-fde.h unwind-dw2-fde.c \
++  unwind-dw2-fde-glibc.c

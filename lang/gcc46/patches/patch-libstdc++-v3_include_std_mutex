@@ -1,0 +1,13 @@
+$NetBSD: patch-libstdc++-v3_include_std_mutex,v 1.1 2014/01/25 13:38:48 ryoon Exp $
+
+--- libstdc++-v3/include/std/mutex.orig	2012-07-07 18:35:52.000000000 +0000
++++ libstdc++-v3/include/std/mutex
+@@ -789,7 +789,7 @@ _GLIBCXX_BEGIN_NAMESPACE_VERSION
+   __get_once_mutex();
+ #endif
+ 
+-  extern "C" void __once_proxy();
++  extern "C" void __once_proxy(void);
+ 
+   /// call_once
+   template<typename _Callable, typename... _Args>
