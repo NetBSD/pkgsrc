@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/01/25 10:29:56 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2014/01/25 10:45:16 wiz Exp $
 
 DISTNAME=	moss-0.1.13
 PKGREVISION=	6
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-vorbis>=1.3:../../audio/py-vorbis
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ogg, py-vorbis
 
-PYTHON_PATCH_SCRIPTS=	${WRKSRC}/*.py
+REPLACE_PYTHON=	${WRKSRC}/*.py
 
 RCD_SCRIPTS=	moss
 CONF_FILES=	${PREFIX}/share/moss/moss.conf.sample	\

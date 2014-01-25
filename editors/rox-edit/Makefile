@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 11:43:42 asau Exp $
+# $NetBSD: Makefile,v 1.9 2014/01/25 10:45:18 wiz Exp $
 #
 
 DISTNAME=	edit-2.0
@@ -21,7 +21,7 @@ DIST_SUBDIR=	rox
 
 NO_BUILD=	yes
 
-PYTHON_PATCH_SCRIPTS=	AppRun tests/testreplace.py
+REPLACE_PYTHON=	AppRun tests/testreplace.py
 
 INSTALLATION_DIRS=	share/rox/Edit
 

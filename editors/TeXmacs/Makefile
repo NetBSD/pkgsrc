@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2013/06/04 22:15:57 tron Exp $
+# $NetBSD: Makefile,v 1.101 2014/01/25 10:45:17 wiz Exp $
 
 DISTNAME=		TeXmacs-1.0.6.15-src
 PKGNAME=		${DISTNAME:S/-src//}
@@ -20,9 +20,9 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
 TEX_ACCEPTED=		teTeX3
 
-PYTHON_PATCH_SCRIPTS=	plugins/python/bin/tm_python
-PYTHON_PATCH_SCRIPTS+=	plugins/sage/bin/tm_sage
-PYTHON_PATCH_SCRIPTS+=	plugins/mathematica/bin/realpath.py
+REPLACE_PYTHON=	plugins/python/bin/tm_python
+REPLACE_PYTHON+=	plugins/sage/bin/tm_sage
+REPLACE_PYTHON+=	plugins/mathematica/bin/realpath.py
 
 SUBST_CLASSES+=		init
 SUBST_STAGE.init=	post-patch

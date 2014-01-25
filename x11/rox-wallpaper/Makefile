@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/29 05:06:50 asau Exp $
+# $NetBSD: Makefile,v 1.9 2014/01/25 10:45:22 wiz Exp $
 #
 
 DISTNAME=	wallpaper-2.0
@@ -19,7 +19,7 @@ DIST_SUBDIR=	rox
 
 NO_BUILD=	yes
 
-PYTHON_PATCH_SCRIPTS=	AppRun
+REPLACE_PYTHON=	AppRun
 
 INSTALLATION_DIRS=	share/rox/Wallpaper
 

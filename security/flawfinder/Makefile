@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/23 18:16:27 asau Exp $
+# $NetBSD: Makefile,v 1.22 2014/01/25 10:45:20 wiz Exp $
 
 DISTNAME=	flawfinder-1.27
 PKGREVISION=	3
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.dwheeler.com/flawfinder/
 COMMENT=	Python program to find flaws in C/C++ programs
 
 NO_BUILD=		yes
-PYTHON_PATCH_SCRIPTS=	flawfinder
+REPLACE_PYTHON=	flawfinder
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:

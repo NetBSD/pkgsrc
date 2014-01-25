@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/01/25 10:30:15 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2014/01/25 10:45:20 wiz Exp $
 
 DISTNAME=	pitivi-0.15.2
 PKGREVISION=	5
@@ -15,7 +15,7 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config intltool gmake msgfmt
 
 CONFIGURE_ENV+=	ac_cv_path_PYTHON=${PYTHONBIN}
-PYTHON_PATCH_SCRIPTS=	bin/pitivi.in
+REPLACE_PYTHON=	bin/pitivi.in
 PYTHON_VERSIONED_DEPENDENCIES=	cairo
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2, py-gstreamer0.10
 

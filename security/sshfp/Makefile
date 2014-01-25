@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/01/17 23:11:28 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2014/01/25 10:45:21 wiz Exp $
 
 DISTNAME=	sshfp-1.1.3
 PKGREVISION=	3
@@ -14,7 +14,7 @@ PYTHON_VERSIONED_DEPENDENCIES=	dns
 
 MANCOMPRESSED=			yes
 NO_BUILD=			yes
-PYTHON_PATCH_SCRIPTS=		sshfp
+REPLACE_PYTHON=		sshfp
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/versioned_dependencies.mk"

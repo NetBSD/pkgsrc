@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/11/20 20:04:38 adam Exp $
+# $NetBSD: Makefile,v 1.14 2014/01/25 10:45:18 wiz Exp $
 
 PKGNAME=	gnuradio-audio-portaudio-${VERSION}
 PKGREVISION=	9
@@ -10,7 +10,7 @@ CONF_FILES+=    ${EGDIR}/gr-audio-portaudio.conf ${PKG_SYSCONFDIR}/gr-audio-port
 CONFIGURE_ARGS+=--enable-gr-audio-portaudio
 CONFIGURE_ARGS+=--with-gnuradio-core --with-omnithread --with-gruel
 
-PYTHON_PATCH_SCRIPTS+=	gr-audio-portaudio/src/qa_portaudio.py
+REPLACE_PYTHON+=	gr-audio-portaudio/src/qa_portaudio.py
 
 .include "../../audio/portaudio-devel/buildlink3.mk"
 .include "../../ham/gnuradio-core/buildlink3.mk"
