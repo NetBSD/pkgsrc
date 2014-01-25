@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2014/01/19 14:06:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2014/01/25 12:26:14 ryoon Exp $
 
 DISTNAME=	clang-3.4
 CATEGORIES=	lang
@@ -67,7 +67,8 @@ LIBGCCDIR!=	${CC} -print-libgcc-file-name
 ARCHDIR:=	${LIBGCCDIR:H}
 SUBST_SED.fix-paths=		-e 's,/usr/gcc/4.5/lib/gcc/,${ARCHDIR}/,g'
 .  endif
-SUBST_SED.fix-paths+=		-e '/^.*i386.*getVendorName.*$$/{N;d;}'
+SUBST_SED.fix-paths+=		-e '/^.*i386.*getVendorName.*$$/{d;}'
+SUBST_SED.fix-paths+=		-e '/^.*GCCLibPath +=$$/d'
 SUBST_SED.fix-paths+=		-e 's,/4.5.2/amd64/,amd64/,g'
 SUBST_SED.fix-paths+=		-e 's,"as","gas",g'
 .  if exists(/usr/bin/ld)
