@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.432 2014/01/25 12:54:48 prlw1 Exp $
+$NetBSD: CHANGES-2014,v 1.433 2014/01/25 13:39:35 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -516,3 +516,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated finance/moneyguru to 2.7.1 [wiz 2014-01-25]
 	Added math/gnome-calculator version 3.10.2 [prlw1 2014-01-25]
 	Removed math/gcalctool-gtk3 successor math/gnome-calculator [prlw1 2014-01-25]
+	Updated lang/gcc46 to 4.6.4 [ryoon 2014-01-25]
