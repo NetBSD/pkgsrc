@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/10/27 19:43:18 wiz Exp $
+$NetBSD: distinfo,v 1.2 2014/01/25 11:11:20 wiz Exp $
 
-SHA1 (moneyguru_2.6.1~quantal.tar.gz) = f8ad80d76b540a896f3c13a484b4327e9d6647fc
-RMD160 (moneyguru_2.6.1~quantal.tar.gz) = fe18dfd133a26fd2d341789d7fc41271c47ec38f
-Size (moneyguru_2.6.1~quantal.tar.gz) = 2092947 bytes
+SHA1 (moneyguru/2.7.1.tar.gz) = 3920ac8ba29f83cb9684755efa88a8dd9436dd65
+RMD160 (moneyguru/2.7.1.tar.gz) = 940d964302dcd318cd90b47fdedb6aa839b955dc
+Size (moneyguru/2.7.1.tar.gz) = 3128081 bytes

@@ -1,43 +1,50 @@
-# $NetBSD: Makefile,v 1.3 2014/01/25 10:30:07 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/01/25 11:11:20 wiz Exp $
 #
 # any of ~* is fine, they are the same and just there for Ubuntu
 # so moneyguru's built for all releases
-DISTNAME=	moneyguru_2.6.1~quantal
-PKGNAME=	${DISTNAME:S/_/-/:S/~quantal//}
+DISTNAME=	2.7.1
+PKGNAME=	moneyguru-${DISTNAME}
 CATEGORIES=	finance
-MASTER_SITES=	https://launchpad.net/~hsoft/+archive/ppa/+files/
+MASTER_SITES=	https://github.com/hsoft/moneyguru/archive/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.hardcoded.net/moneyguru/
 COMMENT=	Personal finance management application
-LICENSE=	fairware-license
+LICENSE=	modified-bsd
 
+DEPENDS+=	${PYPKGPREFIX}-polib-[0-9]*:../../devel/py-polib
 DEPENDS+=	${PYPKGPREFIX}-qt4-[0-9]*:../../x11/py-qt4
 DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 
-FETCH_USING=	curl
+DIST_SUBDIR=	moneyguru
+EXTRACT_USING=	bsdtar
 
-WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_LANGUAGES=	c
 USE_TOOLS=	pax
 
-PY_PATCHPLIST=			yes
-REPLACE_PYTHON=			src/run.py
+PYTHON_VERSIONS_INCOMPATIBLE=	26 27 # 3.x only
+PY_PATCHPLIST=		yes
+REPLACE_PYTHON+=	cocoa/waf
+REPLACE_PYTHON+=	cocoa/wscript
+REPLACE_PYTHON+=	psmtabbarcontrol/waf
+REPLACE_PYTHON+=	psmtabbarcontrol/wscript
+REPLACE_PYTHON+=	run_template_cocoa.py
+REPLACE_PYTHON+=	run_template_qt.py
 
 INSTALLATION_DIRS=	bin share/applications share/moneyguru
 
-# remove pre-compiled file for wrong architecture
-post-extract:
-	${RM} ${WRKSRC}/src/core/model/_amount.cpython-32mu.so
+do-configure:
+	cd ${WRKSRC} && ${PYTHONBIN} configure.py
 
 do-build:
-	cd ${WRKSRC} && ${PYTHONBIN} build_modules.py
-	${CHMOD} +x ${WRKSRC}/src/run.py
+	cd ${WRKSRC} && ${PYTHONBIN} build.py
+	${CHMOD} +x ${WRKSRC}/run.py
 
 do-install:
-	cd ${WRKSRC}/src && pax -pe -rw * ${DESTDIR}${PREFIX}/share/moneyguru
+	cd ${WRKSRC} && pax -pe -rw ambuttonbar build cocoa cocoalib core data help hscommon images locale plugin_examples psmtabbarcontrol qt qtlib run.py ${DESTDIR}${PREFIX}/share/moneyguru
 	${INSTALL_DATA} ${WRKSRC}/debian/moneyguru.desktop ${DESTDIR}${PREFIX}/share/applications
 	${LN} -s ${DESTDIR}${PREFIX}/share/moneyguru/run.py ${DESTDIR}${PREFIX}/bin/moneyguru
 
