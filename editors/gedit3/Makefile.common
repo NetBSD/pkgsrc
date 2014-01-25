@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2013/12/12 01:30:04 prlw1 Exp $
+# $NetBSD: Makefile.common,v 1.5 2014/01/25 08:57:54 wiz Exp $
 # used by editors/gedit3/Makefile
 # used by editors/gedit3-spell/Makefile
 
@@ -20,6 +20,9 @@ USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE+=	data/gedit.pc.in
 PY_PATCHPLIST=		yes
+# __pycache__ installation not properly supported as of 3.6.1
+PY_PEP3147=		no
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 3.6.1
 
 CONFIGURE_ARGS+=	--disable-updater
 CONFIGURE_ARGS+=	--disable-deprecations
