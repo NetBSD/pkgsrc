@@ -1,48 +1,44 @@
-@comment $NetBSD: PLIST,v 1.3 2012/09/04 21:30:51 gls Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/01/25 02:54:27 agc Exp $
 bin/virsh
+bin/virt-host-validate
 bin/virt-pki-validate
 bin/virt-xml-validate
-share/examples/libvirt/libvirtd.conf
-share/examples/libvirt/nwfilter/allow-arp.xml
-share/examples/libvirt/nwfilter/allow-dhcp-server.xml
-share/examples/libvirt/nwfilter/allow-dhcp.xml
-share/examples/libvirt/nwfilter/allow-incoming-ipv4.xml
-share/examples/libvirt/nwfilter/allow-ipv4.xml
-share/examples/libvirt/nwfilter/clean-traffic.xml
-share/examples/libvirt/nwfilter/no-arp-spoofing.xml
-share/examples/libvirt/nwfilter/no-ip-multicast.xml
-share/examples/libvirt/nwfilter/no-ip-spoofing.xml
-share/examples/libvirt/nwfilter/no-mac-broadcast.xml
-share/examples/libvirt/nwfilter/no-mac-spoofing.xml
-share/examples/libvirt/nwfilter/no-other-l2-traffic.xml
-share/examples/libvirt/nwfilter/no-other-rarp-traffic.xml
-share/examples/libvirt/nwfilter/qemu-announce-self-rarp.xml
-share/examples/libvirt/nwfilter/qemu-announce-self.xml
-share/examples/libvirt/qemu/networks/autostart/default.xml
-share/examples/libvirt/qemu/networks/default.xml
-share/examples/logrotate.d/libvirtd
-share/examples/logrotate.d/libvirtd.lxc
-share/examples/logrotate.d/libvirtd.qemu
-share/examples/logrotate.d/libvirtd.uml
-share/examples/rc.d/libvirtd
-share/examples/sasl2/libvirt.conf
+include/libvirt/libvirt-lxc.h
 include/libvirt/libvirt-qemu.h
 include/libvirt/libvirt.h
 include/libvirt/virterror.h
+lib/charset.alias
+lib/libvirt-lxc.la
 lib/libvirt-qemu.la
 lib/libvirt.la
+lib/libvirt/connection-driver/libvirt_driver_network.la
+lib/libvirt/connection-driver/libvirt_driver_qemu.la
+lib/libvirt/connection-driver/libvirt_driver_secret.la
+lib/libvirt/connection-driver/libvirt_driver_storage.la
+lib/libvirt/lock-driver/lockd.la
 lib/pkgconfig/libvirt.pc
-${PYSITELIB}/libvirt.py
-${PYSITELIB}/libvirtmod.la
+libexec/libvirt-guests.sh
 libexec/libvirt_iohelper
 man/man1/virsh.1
+man/man1/virt-host-validate.1
 man/man1/virt-pki-validate.1
 man/man1/virt-xml-validate.1
 man/man8/libvirtd.8
+man/man8/virtlockd.8
 sbin/libvirtd
+sbin/virtlockd
+share/augeas/lenses/libvirt_lockd.aug
 share/augeas/lenses/libvirtd.aug
+share/augeas/lenses/libvirtd_qemu.aug
+share/augeas/lenses/tests/test_libvirt_lockd.aug
 share/augeas/lenses/tests/test_libvirtd.aug
+share/augeas/lenses/tests/test_libvirtd_qemu.aug
+share/augeas/lenses/tests/test_virtlockd.aug
+share/augeas/lenses/virtlockd.aug
 share/doc/${PKGNAME}/html/32favicon.png
+share/doc/${PKGNAME}/html/404.html
+share/doc/${PKGNAME}/html/acl.html
+share/doc/${PKGNAME}/html/aclpolkit.html
 share/doc/${PKGNAME}/html/api.html
 share/doc/${PKGNAME}/html/api_extension.html
 share/doc/${PKGNAME}/html/apps.html
@@ -52,10 +48,11 @@ share/doc/${PKGNAME}/html/architecture.html
 share/doc/${PKGNAME}/html/archnetwork.html
 share/doc/${PKGNAME}/html/archnode.html
 share/doc/${PKGNAME}/html/archstorage.html
+share/doc/${PKGNAME}/html/auditlog.html
 share/doc/${PKGNAME}/html/auth.html
 share/doc/${PKGNAME}/html/bindings.html
 share/doc/${PKGNAME}/html/bugs.html
-share/doc/${PKGNAME}/html/command.html
+share/doc/${PKGNAME}/html/cgroups.html
 share/doc/${PKGNAME}/html/compiling.html
 share/doc/${PKGNAME}/html/contact.html
 share/doc/${PKGNAME}/html/csharp.html
@@ -65,8 +62,11 @@ share/doc/${PKGNAME}/html/docs.html
 share/doc/${PKGNAME}/html/downloads.html
 share/doc/${PKGNAME}/html/drivers.html
 share/doc/${PKGNAME}/html/drvesx.html
+share/doc/${PKGNAME}/html/drvhyperv.html
 share/doc/${PKGNAME}/html/drvlxc.html
 share/doc/${PKGNAME}/html/drvopenvz.html
+share/doc/${PKGNAME}/html/drvparallels.html
+share/doc/${PKGNAME}/html/drvphyp.html
 share/doc/${PKGNAME}/html/drvqemu.html
 share/doc/${PKGNAME}/html/drvremote.html
 share/doc/${PKGNAME}/html/drvtest.html
@@ -103,6 +103,9 @@ share/doc/${PKGNAME}/html/html/up.png
 share/doc/${PKGNAME}/html/hvsupport.html
 share/doc/${PKGNAME}/html/index.html
 share/doc/${PKGNAME}/html/internals.html
+share/doc/${PKGNAME}/html/internals/command.html
+share/doc/${PKGNAME}/html/internals/locking.html
+share/doc/${PKGNAME}/html/internals/rpc.html
 share/doc/${PKGNAME}/html/intro.html
 share/doc/${PKGNAME}/html/java.html
 share/doc/${PKGNAME}/html/libvirt-daemon-arch.png
@@ -118,12 +121,21 @@ share/doc/${PKGNAME}/html/locking.html
 share/doc/${PKGNAME}/html/logging.html
 share/doc/${PKGNAME}/html/madeWith.png
 share/doc/${PKGNAME}/html/main.css
+share/doc/${PKGNAME}/html/migration-managed-direct.png
+share/doc/${PKGNAME}/html/migration-managed-p2p.png
+share/doc/${PKGNAME}/html/migration-native.png
+share/doc/${PKGNAME}/html/migration-tunnel.png
+share/doc/${PKGNAME}/html/migration-unmanaged-direct.png
+share/doc/${PKGNAME}/html/migration.html
 share/doc/${PKGNAME}/html/news.html
 share/doc/${PKGNAME}/html/node.gif
+share/doc/${PKGNAME}/html/pending.html
 share/doc/${PKGNAME}/html/php.html
 share/doc/${PKGNAME}/html/python.html
 share/doc/${PKGNAME}/html/relatedlinks.html
 share/doc/${PKGNAME}/html/remote.html
+share/doc/${PKGNAME}/html/secureusage.html
+share/doc/${PKGNAME}/html/securityprocess.html
 share/doc/${PKGNAME}/html/sitemap.html
 share/doc/${PKGNAME}/html/storage.html
 share/doc/${PKGNAME}/html/testapi.html
@@ -133,12 +145,19 @@ share/doc/${PKGNAME}/html/todo.html
 share/doc/${PKGNAME}/html/uri.html
 share/doc/${PKGNAME}/html/virshcmdref.html
 share/doc/${PKGNAME}/html/windows.html
-share/doc/libvirt-python-${PKGVERSION}/TODO
-share/doc/libvirt-python-${PKGVERSION}/examples/basic.py
-share/doc/libvirt-python-${PKGVERSION}/examples/create.py
-share/doc/libvirt-python-${PKGVERSION}/examples/error.py
-share/doc/libvirt-python-${PKGVERSION}/examples/node.py
-share/doc/libvirt-python-${PKGVERSION}/examples/uuid.py
+share/examples/libvirt/libvirt.conf
+share/examples/libvirt/libvirtd.conf
+share/examples/libvirt/qemu-lockd.conf
+share/examples/libvirt/qemu.conf
+share/examples/libvirt/qemu/networks/autostart/default.xml
+share/examples/libvirt/qemu/networks/default.xml
+share/examples/libvirt/virtlockd.conf
+share/examples/logrotate.d/libvirtd
+share/examples/logrotate.d/libvirtd.lxc
+share/examples/logrotate.d/libvirtd.qemu
+share/examples/logrotate.d/libvirtd.uml
+share/examples/rc.d/libvirtd
+share/examples/sasl2/libvirt.conf
 share/gtk-doc/html/libvirt/general.html
 share/gtk-doc/html/libvirt/home.png
 share/gtk-doc/html/libvirt/index.html
@@ -149,16 +168,24 @@ share/gtk-doc/html/libvirt/libvirt.devhelp
 share/gtk-doc/html/libvirt/right.png
 share/gtk-doc/html/libvirt/style.css
 share/gtk-doc/html/libvirt/up.png
+share/libvirt/api/libvirt-api.xml
+share/libvirt/api/libvirt-lxc-api.xml
+share/libvirt/api/libvirt-qemu-api.xml
 share/libvirt/cpu_map.xml
+share/libvirt/libvirtLogo.png
+share/libvirt/schemas/basictypes.rng
 share/libvirt/schemas/capability.rng
 share/libvirt/schemas/domain.rng
+share/libvirt/schemas/domaincommon.rng
 share/libvirt/schemas/domainsnapshot.rng
 share/libvirt/schemas/interface.rng
 share/libvirt/schemas/network.rng
+share/libvirt/schemas/networkcommon.rng
 share/libvirt/schemas/nodedev.rng
 share/libvirt/schemas/nwfilter.rng
 share/libvirt/schemas/secret.rng
 share/libvirt/schemas/storageencryption.rng
+share/libvirt/schemas/storagefilefeatures.rng
 share/libvirt/schemas/storagepool.rng
 share/libvirt/schemas/storagevol.rng
 share/locale/af/LC_MESSAGES/libvirt.mo
@@ -169,6 +196,7 @@ share/locale/be/LC_MESSAGES/libvirt.mo
 share/locale/bg/LC_MESSAGES/libvirt.mo
 share/locale/bn/LC_MESSAGES/libvirt.mo
 share/locale/bn_IN/LC_MESSAGES/libvirt.mo
+share/locale/bo/LC_MESSAGES/libvirt.mo
 share/locale/bs/LC_MESSAGES/libvirt.mo
 share/locale/ca/LC_MESSAGES/libvirt.mo
 share/locale/cs/LC_MESSAGES/libvirt.mo
@@ -235,19 +263,4 @@ share/locale/vi_VN/LC_MESSAGES/libvirt.mo
 share/locale/zh_CN/LC_MESSAGES/libvirt.mo
 share/locale/zh_TW/LC_MESSAGES/libvirt.mo
 share/locale/zu/LC_MESSAGES/libvirt.mo
-@pkgdir var/run/libvirt/network
-@pkgdir var/log/libvirt/uml
-@pkgdir var/log/libvirt/qemu
-@pkgdir var/log/libvirt/lxc
-@pkgdir var/lib/libvirt/network
-@pkgdir var/lib/libvirt/images
-@pkgdir var/lib/libvirt/dnsmasq
-@pkgdir var/lib/libvirt/boot
-@pkgdir var/cache/libvirt
-@pkgdir lib/libvirt/connection-driver
-@pkgdir etc/sasl2
-@pkgdir etc/logrotate.d
-@pkgdir etc/libvirt/qemu/networks/autostart
-@pkgdir etc/libvirt/qemu/networks
-@pkgdir etc/libvirt/nwfilter
-@pkgdir etc/libvirt
+@pkgdir share/examples/libvirt/nwfilter
