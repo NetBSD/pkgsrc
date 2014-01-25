@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2014/01/25 10:30:13 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2014/01/25 10:45:20 wiz Exp $
 
 DISTNAME=	tmda-1.1.12
 PKGREVISION=	5
@@ -11,7 +11,7 @@ MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://tmda.net/
 COMMENT=	Python-based SPAM reduction system
 
-PYTHON_PATCH_SCRIPTS=	${TMDA_PROGRAMS}
+REPLACE_PYTHON=	${TMDA_PROGRAMS}
 PY_PATCHPLIST=		yes
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.1.12
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2014/01/25 10:30:26 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2014/01/25 10:45:21 wiz Exp $
 
 # Package version reflects icecc version, with PKGREVISION incremented
 # for any tool updates, according to the authors scheme.
@@ -35,9 +35,9 @@ WRKSRC=			${WRKDIR}
 CONFIGURE_DIRS=		icecc-2.9 icebgset-1.3 iceked-1.5 icemc-2.1
 CONFIGURE_DIRS+=	icesndcfg-1.3 icets-1.4 icewoed-1.8
 
-PYTHON_PATCH_SCRIPTS=	icecursorscfg-0.6/icecurcfg.py iceiconcvt-1.0/iceiconcvt.py
-PYTHON_PATCH_SCRIPTS+=	icemergeprefs-0.5/icemergeprefs.py icerrun-0.5/icerrrun.py
-PYTHON_PATCH_SCRIPTS+=	icerrun-0.5/icerrun.py
+REPLACE_PYTHON=	icecursorscfg-0.6/icecurcfg.py iceiconcvt-1.0/iceiconcvt.py
+REPLACE_PYTHON+=	icemergeprefs-0.5/icemergeprefs.py icerrun-0.5/icerrrun.py
+REPLACE_PYTHON+=	icerrun-0.5/icerrun.py
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-qt3-base
 
@@ -67,7 +67,7 @@ post-build:
 	cd ${WRKSRC}/icewm4vim && ${SETENV} ${MAKE_ENV} ${GMAKE} QTDIR=${QTDIR:Q}
 
 post-install:
-.   for script in ${PYTHON_PATCH_SCRIPTS}
+.   for script in ${REPLACE_PYTHON}
 	${INSTALL_SCRIPT} ${WRKSRC}/${script:Q} ${DESTDIR}${PREFIX}/bin
 .   endfor
 	${INSTALL_PROGRAM} ${WRKSRC}/icewm4vim/icecolsel ${DESTDIR}${PREFIX}/bin

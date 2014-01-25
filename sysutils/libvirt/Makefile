@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/01/25 10:30:21 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2014/01/25 10:45:21 wiz Exp $
 
 DISTNAME=	libvirt-1.2.1
 CATEGORIES=	sysutils
@@ -18,24 +18,24 @@ USE_LIBTOOL=		yes
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-xml
 
 PY_PATCHPLIST=		yes
-PYTHON_PATCH_SCRIPTS+=	examples/python/domstart.py
-PYTHON_PATCH_SCRIPTS+=	examples/python/domrestore.py
-PYTHON_PATCH_SCRIPTS+=	examples/python/dominfo.py
-PYTHON_PATCH_SCRIPTS+=	examples/python/domsave.py
-PYTHON_PATCH_SCRIPTS+=	examples/python/esxlist.py
-PYTHON_PATCH_SCRIPTS+=	examples/domain-events/events-python/event-test.py
-PYTHON_PATCH_SCRIPTS+=	python/tests/create.py
-PYTHON_PATCH_SCRIPTS+=	python/tests/error.py
-PYTHON_PATCH_SCRIPTS+=	python/tests/uuid.py
-PYTHON_PATCH_SCRIPTS+=	python/tests/basic.py
-PYTHON_PATCH_SCRIPTS+=	python/tests/node.py
-PYTHON_PATCH_SCRIPTS+=	python/libvirt-override.py
-PYTHON_PATCH_SCRIPTS+=	python/libvirt-override-virStream.py
-PYTHON_PATCH_SCRIPTS+=	python/libvirt-override-virConnect.py
-PYTHON_PATCH_SCRIPTS+=	python/generator.py
-PYTHON_PATCH_SCRIPTS+=	python/libvirt.py
-PYTHON_PATCH_SCRIPTS+=	src/esx/esx_vi_generator.py
-PYTHON_PATCH_SCRIPTS+=	docs/apibuild.py
+REPLACE_PYTHON+=	examples/python/domstart.py
+REPLACE_PYTHON+=	examples/python/domrestore.py
+REPLACE_PYTHON+=	examples/python/dominfo.py
+REPLACE_PYTHON+=	examples/python/domsave.py
+REPLACE_PYTHON+=	examples/python/esxlist.py
+REPLACE_PYTHON+=	examples/domain-events/events-python/event-test.py
+REPLACE_PYTHON+=	python/tests/create.py
+REPLACE_PYTHON+=	python/tests/error.py
+REPLACE_PYTHON+=	python/tests/uuid.py
+REPLACE_PYTHON+=	python/tests/basic.py
+REPLACE_PYTHON+=	python/tests/node.py
+REPLACE_PYTHON+=	python/libvirt-override.py
+REPLACE_PYTHON+=	python/libvirt-override-virStream.py
+REPLACE_PYTHON+=	python/libvirt-override-virConnect.py
+REPLACE_PYTHON+=	python/generator.py
+REPLACE_PYTHON+=	python/libvirt.py
+REPLACE_PYTHON+=	src/esx/esx_vi_generator.py
+REPLACE_PYTHON+=	docs/apibuild.py
 
 EGDIR=			${PREFIX}/share/examples
 CONF_FILES+=		${EGDIR}/libvirt/libvirtd.conf ${PKG_SYSCONFDIR}/libvirt/libvirtd.conf

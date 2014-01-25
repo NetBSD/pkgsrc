@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2013/10/13 21:52:44 sbd Exp $
+# $NetBSD: Makefile,v 1.33 2014/01/25 10:45:20 wiz Exp $
 
 DISTNAME=	flow-tools-0.68
 PKGREVISION=	6
@@ -49,7 +49,7 @@ PLIST_VARS+=		python
 .if !empty(PKG_OPTIONS:Mpython)
 .  include "../../lang/python/application.mk"
 
-PYTHON_PATCH_SCRIPTS=	bin/flow-rpt2rrd bin/flow-log2rrd bin/flow-rptfmt
+REPLACE_PYTHON=	bin/flow-rpt2rrd bin/flow-log2rrd bin/flow-rptfmt
 PLIST.python=		yes
 
 post-install:

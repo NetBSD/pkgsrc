@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2013/02/16 11:21:54 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2014/01/25 10:45:18 wiz Exp $
 
 DISTNAME=	gif2png-2.5.8
 PKGREVISION=	1
@@ -12,7 +12,7 @@ LICENSE=	zlib
 
 GNU_CONFIGURE=		YES
 
-PYTHON_PATCH_SCRIPTS+=	web2png
+REPLACE_PYTHON+=	web2png
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/application.mk"

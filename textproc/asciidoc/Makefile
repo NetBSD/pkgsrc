@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2014/01/25 10:30:23 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2014/01/25 10:45:21 wiz Exp $
 
 DISTNAME=		asciidoc-8.6.9
 PKGREVISION=		1
@@ -14,12 +14,12 @@ DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 DEPENDS+=		getopt-[0-9]*:../../misc/getopt
 
 USE_TOOLS+=		pax
-PYTHON_PATCH_SCRIPTS=	a2x.py asciidoc.py asciidocapi.py
-PYTHON_PATCH_SCRIPTS+=	filters/code/code-filter.py
-PYTHON_PATCH_SCRIPTS+=	filters/latex/latex2png.py
-PYTHON_PATCH_SCRIPTS+=	filters/music/music2png.py
-PYTHON_PATCH_SCRIPTS+=	filters/graphviz/graphviz2png.py
-PYTHON_PATCH_SCRIPTS+=	tests/testasciidoc.py tests/asciidocapi.py
+REPLACE_PYTHON=	a2x.py asciidoc.py asciidocapi.py
+REPLACE_PYTHON+=	filters/code/code-filter.py
+REPLACE_PYTHON+=	filters/latex/latex2png.py
+REPLACE_PYTHON+=	filters/music/music2png.py
+REPLACE_PYTHON+=	filters/graphviz/graphviz2png.py
+REPLACE_PYTHON+=	tests/testasciidoc.py tests/asciidocapi.py
 
 NO_BUILD=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/10/25 06:55:47 asau Exp $
+# $NetBSD: Makefile,v 1.26 2014/01/25 10:45:21 wiz Exp $
 #
 
 DISTNAME=	doclifter-2.3
@@ -12,7 +12,7 @@ COMMENT=	Translates documents written in troff macros to DocBook
 
 NO_BUILD=	yes
 
-PYTHON_PATCH_SCRIPTS=		doclifter manlifter
+REPLACE_PYTHON=		doclifter manlifter
 
 SUBST_CLASSES+=		bin-path
 SUBST_STAGE.bin-path=	pre-configure

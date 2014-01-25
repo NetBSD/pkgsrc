@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/10/17 16:47:41 shattered Exp $
+# $NetBSD: Makefile,v 1.22 2014/01/25 10:45:21 wiz Exp $
 #
 
 DISTNAME=	tdir-1.69
@@ -12,7 +12,7 @@ LICENSE=	tdir-license
 NOT_FOR_BULK_PLATFORM=	HPUX-*-*
 
 USE_TOOLS+=		gunzip
-PYTHON_PATCH_SCRIPTS=	tdir
+REPLACE_PYTHON=	tdir
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/tdir
 
 do-install:

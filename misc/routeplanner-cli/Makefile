@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/01/25 10:30:14 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2014/01/25 10:45:20 wiz Exp $
 #
 
 DISTNAME=		routeplanner_0.11
@@ -15,7 +15,7 @@ WRKSRC=			${WRKDIR}/routeplanner-0.11
 NO_BUILD=		yes
 USE_TOOLS+=		gzip
 
-PYTHON_PATCH_SCRIPTS=	rpcli
+REPLACE_PYTHON=	rpcli
 RPLIBDIR=		${PREFIX}/lib/routeplanner
 RPPY= rpcli.py rpcountry.py rpdbase.py rpunits.py rpcity.py rproute.py
 RPDB= Basic-USA.rpl3 NorthAmerica.rpl3

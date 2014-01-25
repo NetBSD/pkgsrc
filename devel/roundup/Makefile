@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2014/01/25 10:30:05 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2014/01/25 10:45:17 wiz Exp $
 
 DISTNAME=	roundup-1.4.19
 PKGREVISION=	2
@@ -14,19 +14,19 @@ USE_LANGUAGES=	# empty
 USE_TOOLS+=	pax
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.4.19
-PYTHON_PATCH_SCRIPTS+=	cgi-bin/roundup.cgi demo.py roundup/admin.py
-PYTHON_PATCH_SCRIPTS+=	frontends/roundup.cgi
-PYTHON_PATCH_SCRIPTS+=	roundup/backends/locking.py
-PYTHON_PATCH_SCRIPTS+=	roundup/cgi/TAL/talgettext.py
-PYTHON_PATCH_SCRIPTS+=	roundup/msgfmt.py
-PYTHON_PATCH_SCRIPTS+=	roundup/scripts/roundup_demo.py
-PYTHON_PATCH_SCRIPTS+=	roundup/scripts/roundup_gettext.py
-PYTHON_PATCH_SCRIPTS+=	roundup/scripts/roundup_xmlrpc_server.py
-PYTHON_PATCH_SCRIPTS+=	roundup/version_check.py run_tests.py
-PYTHON_PATCH_SCRIPTS+=	scripts/add-issue scripts/copy-user.py
-PYTHON_PATCH_SCRIPTS+=	scripts/imapServer.py scripts/roundup-reminder
-PYTHON_PATCH_SCRIPTS+=	scripts/schema_diagram.py tools/load_tracker.py
-PYTHON_PATCH_SCRIPTS+=	tools/migrate-queries.py tools/pygettext.py
+REPLACE_PYTHON+=	cgi-bin/roundup.cgi demo.py roundup/admin.py
+REPLACE_PYTHON+=	frontends/roundup.cgi
+REPLACE_PYTHON+=	roundup/backends/locking.py
+REPLACE_PYTHON+=	roundup/cgi/TAL/talgettext.py
+REPLACE_PYTHON+=	roundup/msgfmt.py
+REPLACE_PYTHON+=	roundup/scripts/roundup_demo.py
+REPLACE_PYTHON+=	roundup/scripts/roundup_gettext.py
+REPLACE_PYTHON+=	roundup/scripts/roundup_xmlrpc_server.py
+REPLACE_PYTHON+=	roundup/version_check.py run_tests.py
+REPLACE_PYTHON+=	scripts/add-issue scripts/copy-user.py
+REPLACE_PYTHON+=	scripts/imapServer.py scripts/roundup-reminder
+REPLACE_PYTHON+=	scripts/schema_diagram.py tools/load_tracker.py
+REPLACE_PYTHON+=	tools/migrate-queries.py tools/pygettext.py
 
 ROUNDUPDOCDIR=	${PREFIX}/share/doc/roundup
 

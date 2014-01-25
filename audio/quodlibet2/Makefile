@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/25 10:29:57 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/25 10:45:16 wiz Exp $
 
 DISTNAME=	quodlibet-2.6.3
 CATEGORIES=	audio
@@ -20,7 +20,7 @@ USE_PKGLOCALEDIR=	yes
 
 PYDISTUTILSPKG= yes
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-mutagen, py-gtk2, py-gstreamer0.10
-PYTHON_PATCH_SCRIPTS=	exfalso.py quodlibet.py operon.py
+REPLACE_PYTHON=	exfalso.py quodlibet.py operon.py
 
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2014/01/25 10:30:26 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2014/01/25 10:45:22 wiz Exp $
 
 DISTNAME=	browser-bookmarks-menu-0.6
 PKGREVISION=	28
@@ -10,7 +10,7 @@ HOMEPAGE=	http://browserbookapp.sourceforge.net/
 COMMENT=	Easy access to web bookmarks through a GNOME Panel Applet
 
 NO_BUILD=	yes
-PYTHON_PATCH_SCRIPTS=	browser-bookmarks-menu.py
+REPLACE_PYTHON=	browser-bookmarks-menu.py
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ORBit via py-gnome2
 
 SUBST_CLASSES+=		paths

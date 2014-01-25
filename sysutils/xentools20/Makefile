@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2014/01/25 10:30:22 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2014/01/25 10:45:21 wiz Exp $
 
 DISTNAME=		xen-2.0.7-src
 PKGNAME=		xentools20-2.0.7
@@ -33,18 +33,18 @@ MAKE_ENV+=		EGDIR=${EGDIR:Q}
 MAKE_ENV+=		MV=${MV:Q} PYTHON=${PYTHONBIN:Q} SED=${SED:Q}
 
 PY_PATCHPLIST=		yes
-PYTHON_PATCH_SCRIPTS=	python/xen/util/console_client.py
-PYTHON_PATCH_SCRIPTS+=	python/xen/xend/server/SrvServer.py
-PYTHON_PATCH_SCRIPTS+=	python/xen/xend/XendClient.py
-PYTHON_PATCH_SCRIPTS+=	python/xen/xend/sxp.py
-PYTHON_PATCH_SCRIPTS+=	xfrd/xfrdClient.py
-PYTHON_PATCH_SCRIPTS+=	misc/xensymoops
-PYTHON_PATCH_SCRIPTS+=	misc/xencons
-PYTHON_PATCH_SCRIPTS+=	misc/xm
-PYTHON_PATCH_SCRIPTS+=	misc/xensv
-PYTHON_PATCH_SCRIPTS+=	misc/netfix
-PYTHON_PATCH_SCRIPTS+=	misc/xend
-PYTHON_PATCH_SCRIPTS+=	xentrace/xentrace_format
+REPLACE_PYTHON=	python/xen/util/console_client.py
+REPLACE_PYTHON+=	python/xen/xend/server/SrvServer.py
+REPLACE_PYTHON+=	python/xen/xend/XendClient.py
+REPLACE_PYTHON+=	python/xen/xend/sxp.py
+REPLACE_PYTHON+=	xfrd/xfrdClient.py
+REPLACE_PYTHON+=	misc/xensymoops
+REPLACE_PYTHON+=	misc/xencons
+REPLACE_PYTHON+=	misc/xm
+REPLACE_PYTHON+=	misc/xensv
+REPLACE_PYTHON+=	misc/netfix
+REPLACE_PYTHON+=	misc/xend
+REPLACE_PYTHON+=	xentrace/xentrace_format
 
 SUBST_CLASSES+=          paths py conf
 SUBST_STAGE.paths=	pre-configure

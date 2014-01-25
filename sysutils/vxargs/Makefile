@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/06/04 07:38:49 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/01/25 10:45:21 wiz Exp $
 
 DISTNAME=	vxargs-0.3.3
 PKGREVISION=	2
@@ -18,7 +18,7 @@ WRKSRC=		${WRKDIR}
 
 INSTALLATION_DIRS=	bin
 
-PYTHON_PATCH_SCRIPTS=	vxargs.py
+REPLACE_PYTHON=	vxargs.py
 
 .include "../../lang/python/application.mk"
 

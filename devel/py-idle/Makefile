@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2014/01/25 10:30:03 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2014/01/25 10:45:17 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-idle-0
 PKGREVISION=	2
@@ -34,7 +34,7 @@ IDLE_NAME=	idle
 .endif
 
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Tools/scripts/${IDLE_NAME}
-PYTHON_PATCH_SCRIPTS= Tools/scripts/${IDLE_NAME}
+REPLACE_PYTHON= Tools/scripts/${IDLE_NAME}
 NO_BUILD=	yes
 INSTALLATION_DIRS=	bin
 

@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.239 2014/01/12 09:01:50 wiz Exp $
+# $NetBSD: makevars.map,v 1.240 2014/01/25 10:45:20 wiz Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -640,7 +640,7 @@ PTHREAD_TYPE		Identifier [$system]
 PY_PATCHPLIST		Yes [$package]
 PYPKGPREFIX		{ py26 py27 py33 } [*:pu, pyversion.mk:s, *:]
 PYTHON_FOR_BUILD_ONLY	Yes [$package]
-PYTHON_PATCH_SCRIPTS	List of Pathmask [$package_list]
+REPLACE_PYTHON	List of Pathmask [$package_list]
 PYTHON_VERSIONS_ACCEPTED List of Version [$package]
 PYTHON_VERSIONS_INCOMPATIBLE List of Version [$package]
 PYTHON_VERSION_DEFAULT	Version [$user]

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/08 12:19:29 asau Exp $
+# $NetBSD: Makefile,v 1.9 2014/01/25 10:45:19 wiz Exp $
 #
 
 DISTNAME=		queue-repair-0.9.0
@@ -12,7 +12,7 @@ COMMENT=		Check or correct most corruptions of the queue in qmail
 
 NO_BUILD=		YES
 
-PYTHON_PATCH_SCRIPTS=	queue_repair.py
+REPLACE_PYTHON=	queue_repair.py
 INSTALLATION_DIRS=	bin
 
 do-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/23 19:51:11 asau Exp $
+# $NetBSD: Makefile,v 1.11 2014/01/25 10:45:21 wiz Exp $
 #
 
 DISTNAME=		logfinder-0.1
@@ -14,7 +14,7 @@ DEPENDS+=		lsof>=4.72:../../sysutils/lsof
 
 NO_BUILD=		YES
 
-PYTHON_PATCH_SCRIPTS+=	${WRKSRC}/logfinder.py
+REPLACE_PYTHON+=	${WRKSRC}/logfinder.py
 INSTALLATION_DIRS=	sbin
 
 do-install:
