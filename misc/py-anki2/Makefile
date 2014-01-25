@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/12/31 17:47:21 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2014/01/25 10:30:14 wiz Exp $
 
 DISTNAME=	anki-2.0.20
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:C/anki/anki2/}
@@ -18,6 +18,7 @@ DEPENDS+=	portaudio-devel-[0-9]*:../../audio/portaudio-devel
 # Actually, these hurt more than they help.
 # anki comes with its own version of the two, and if the pkgsrc versions
 # are newer, it might break
+#PYTHON_VERSIONS_INCOMPATIBLE=33 # py-beautifulsoup
 #DEPENDS+=	${PYPKGPREFIX}-beautifulsoup>=3.2:../../www/py-beautifulsoup
 #DEPENDS+=	${PYPKGPREFIX}-httplib2-[0-9]*:../../www/py-httplib2
 # XXX: python portaudio

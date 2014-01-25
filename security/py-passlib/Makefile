@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/01 17:46:20 kleink Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/25 10:30:20 wiz Exp $
 
 DISTNAME=	passlib-1.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,8 +12,6 @@ COMMENT=	Comprehensive password hashing framework supporting over 30 schemes
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# empty
-
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

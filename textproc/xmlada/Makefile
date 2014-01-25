@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/07/02 22:13:56 marino Exp $
-#
+# $NetBSD: Makefile,v 1.7 2014/01/25 10:30:25 wiz Exp $
 
 DISTNAME=	xmlada-${XMLADA_VERS}
 CATEGORIES=	textproc
@@ -39,6 +38,7 @@ SUBST_SED.docs=		-e 's/^all: \(.*\)/all: \1 docs/g'
 
 DESTSTATIC=	${DESTDIR}${PREFIX}/lib/xmlada/static
 DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 4.4.0.0
 
 post-install:
 	# There is no reason to install sphinx source files

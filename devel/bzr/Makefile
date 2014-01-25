@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2012/10/31 11:16:43 asau Exp $
+# $NetBSD: Makefile,v 1.61 2014/01/25 10:30:00 wiz Exp $
 
 DISTNAME=	bzr-2.5.1
 CATEGORIES=	devel scm
@@ -18,6 +18,7 @@ USE_TOOLS+=		gmake msgfmt
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-pyrex, py-paramiko
 
 PYTHON_PATCH_SCRIPTS=		bzr bzrlib/weave.py
 PYTHON_PATCH_SCRIPTS+=		bzrlib/patiencediff.py bzrlib/_patiencediff_py.py

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/01/12 09:45:24 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2014/01/25 10:30:28 wiz Exp $
 
 DISTNAME=	Frozen-Flask-0.11
 PKGNAME=	${PYPKGPREFIX}-flask-frozen-0.11
@@ -11,8 +11,6 @@ COMMENT=	Freezes a Flask application into a set of static files
 LICENSE=	modified-bsd
 
 EGG_NAME=	${DISTNAME:S/-/_/}
-
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 USE_LANGUAGES=	# empty
 

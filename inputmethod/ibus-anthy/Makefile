@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2013/11/26 11:22:15 obache Exp $
-#
+# $NetBSD: Makefile,v 1.15 2014/01/25 10:30:11 wiz Exp $
 
 DISTNAME=	ibus-anthy-1.5.4
 PKGREVISION=	1
@@ -14,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	kasumi>=2.1:../../inputmethod/kasumi
 DEPENDS+=	ibus>=1.5.4:../../inputmethod/ibus
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # ibus
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

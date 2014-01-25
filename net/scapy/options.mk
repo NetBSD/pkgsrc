@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2011/10/16 04:16:49 obache Exp $
+# $NetBSD: options.mk,v 1.3 2014/01/25 10:30:18 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.scapy
 
@@ -18,11 +18,13 @@ DEPENDS+=	${PYPKGPREFIX}-amkCrypto-[0-9]*:../../security/py-amkCrypto
 ###
 .if !empty(PKG_OPTIONS:Mgnuplot)
 DEPENDS+=	${PYPKGPREFIX}-gnuplot-[0-9]*:../../graphics/py-gnuplot
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gnuplot
 .endif
 
 ###
 ### Add in TeX support for psdump() and/or pdfdump()
 ###
 .if !empty(PKG_OPTIONS:Mscapy-pyx)
-DEPENDS+=	${PYPKGPREFIX}-X-[0-9]*:../../textproc/py-X
+PYTHON_VERSIONED_DEPENDENCIES=	X
+.include "../../lang/python/versioned_dependencies.mk"
 .endif

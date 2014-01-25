@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2013/04/08 11:17:23 rodent Exp $
-#
+# $NetBSD: Makefile,v 1.15 2014/01/25 10:30:23 wiz Exp $
 
 DISTNAME=	dblatex-0.3.2
 PKGREVISION=	2
@@ -21,6 +20,7 @@ DEPENDS+=	tex-ifxetex-[0-9]*:../../print/tex-ifxetex
 USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=	scripts/dblatex lib/dbtexmf/dblatex/xetex/*.py
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.3.2
 
 SUBST_CLASSES+=		man
 SUBST_MESSAGE.man=	Fixing man page installation path.

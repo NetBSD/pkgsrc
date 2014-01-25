@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2013/10/10 14:42:08 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.19 2014/01/25 10:30:07 wiz Exp $
 
 DISTNAME=	zim-0.59
 PKGREVISION=	7
@@ -12,15 +11,15 @@ HOMEPAGE=	http://zim-wiki.org/
 COMMENT=	Zim brings the concept of a wiki to your desktop
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	# none
-
-REPLACE_PYTHON=	${WRKSRC}/zim.py
-PYDISTUTILSPKG=	YES
-
 DEPENDS+=	${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
+
+USE_LANGUAGES=	# none
+
+REPLACE_PYTHON=	${WRKSRC}/zim.py
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 
 SUBST_CLASSES+=		data-path
 SUBST_STAGE.data-path=	pre-configure

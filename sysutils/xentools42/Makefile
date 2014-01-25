@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/01/07 12:59:35 prlw1 Exp $
-#
+# $NetBSD: Makefile,v 1.14 2014/01/25 10:30:23 wiz Exp $
 
 VERSION=	4.2.3
 VERSION_IPXE=	1.0.0
@@ -25,6 +24,8 @@ BUILD_DEPENDS+= dev86-[0-9]*:../../devel/dev86 # needed to build firmware
 BUILD_DEPENDS+= acpica-utils-[0-9]*:../../sysutils/acpica-utils
 .endif
 DEPENDS+=		${PYPKGPREFIX}-curses>=0nb4:../../devel/py-curses
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-xml
 
 PKG_SYSCONFSUBDIR=	xen
 

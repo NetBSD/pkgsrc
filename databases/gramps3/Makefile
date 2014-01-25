@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2014/01/02 19:01:54 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2014/01/25 10:29:59 wiz Exp $
 
 DISTNAME=		gramps-3.4.4
 CATEGORIES=		databases
@@ -14,6 +14,8 @@ LICENSE=		gnu-gpl-v2
 USE_TOOLS+=		msgfmt pkg-config intltool msgconv
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ORBit via py-gnome2, py-gtk2
 
 REPLACE_PYTHON=		src/DateHandler/_Date_fr.py
 REPLACE_PYTHON+=	src/plugins/quickview/Reporef.py

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/20 11:10:04 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/25 10:30:31 wiz Exp $
 
 DISTNAME=	Pmw_2_0_0-rc1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/:S/_/./g:S/-rc/rc/}
@@ -22,7 +22,6 @@ REPLACE_PYTHON+=	Pmw/Pmw_2_0_0/demos/All.py
 REPLACE_PYTHON+=	Pmw/Pmw_2_0_0/tests/All.py
 
 PYTHON_VERSIONS_INCOMPATIBLE=	26 27
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"

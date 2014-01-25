@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/01/01 11:52:13 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.30 2014/01/25 10:30:06 wiz Exp $
 
 DISTNAME=	valide-0.4.0
 PKGREVISION=	23
@@ -16,6 +15,7 @@ PYTHON_FOR_BUILD_ONLY=	yes
 REPLACE_PYTHON+=	wscript waf \
 			*/wscript_build \
 			*/*/wscript_build
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.4.0
 
 WAF_ENV=	PATH=${PATH} CC=${CC:Q} CXX=${CXX:Q} PREFIX=${PREFIX:Q} \
 		CFLAGS=${CFLAGS:Q} CXXFLAGS=${CXXFLAGS:Q} \

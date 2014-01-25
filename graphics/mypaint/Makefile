@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/02/16 11:22:18 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.16 2014/01/25 10:30:09 wiz Exp $
 
 DISTNAME=	mypaint-1.0.0
 PKGREVISION=	5
@@ -12,13 +11,15 @@ HOMEPAGE=	http://mypaint.intilinux.com/
 COMMENT=	Fast and easy open-source graphics application for digital painters
 LICENSE=	gnu-gpl-v2
 
+BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
+DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
+
 USE_LANGUAGES=	c++
 
 USE_TOOLS+=	bash:run msgfmt pkg-config
 
-BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
-DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
-DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
+PYTHON_VERSIONED_DEPENDENCIES=	cairo
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 
 FIND_PREFIX:=	SCONSDIR=scons
 .include "../../mk/find-prefix.mk"
@@ -53,6 +54,7 @@ do-install:
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../devel/swig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

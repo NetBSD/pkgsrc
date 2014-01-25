@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/12/04 16:41:01 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.17 2014/01/25 10:30:02 wiz Exp $
 
 DISTNAME=		Pyro4-4.22
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +10,6 @@ HOMEPAGE=		http://pyro.sourceforge.net/
 COMMENT=		Distributed Object Technology system in Python
 LICENSE=		mit
 
-PYTHON_VERSIONS_INCLUDE_3X= yes
 DEPENDS+= ${PYPKGPREFIX}-serpent-[0-9]*:../../devel/py-serpent
 
 # only needed for test

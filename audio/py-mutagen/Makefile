@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/12/04 16:47:32 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.13 2014/01/25 10:29:57 wiz Exp $
 
 DISTNAME=	mutagen-1.22
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +11,7 @@ COMMENT=	Audio metadata handling for Python
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.22
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

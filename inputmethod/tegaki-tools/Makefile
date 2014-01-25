@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/06 14:25:19 asau Exp $
-#
+# $NetBSD: Makefile,v 1.4 2014/01/25 10:30:12 wiz Exp $
 
 DISTNAME=	tegaki-tools-0.3.1
 PKGREVISION=	1
@@ -16,6 +15,7 @@ DEPENDS+=	tegaki-pygtk>=0.3:../../inputmethod/tegaki-pygtk
 
 USE_LANGUAGES=	c c++
 
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.3.1
 EGG_NAME=	${DISTNAME:S/-/_/}
 
 .include "../../lang/python/application.mk"

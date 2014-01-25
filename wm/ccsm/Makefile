@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/08 12:42:18 asau Exp $
-#
+# $NetBSD: Makefile,v 1.16 2014/01/25 10:30:26 wiz Exp $
 
 PKGVER=			0.8.4
 DISTNAME=		ccsm-${PKGVER}
@@ -12,16 +11,17 @@ HOMEPAGE=		http://compiz.org/
 COMMENT=		CompizConfig Settings Manager
 LICENSE=		gnu-gpl-v2
 
+DEPENDS+=		compizconfig-backend-gconf>=0.6.0:../../devel/compizconfig-backend-gconf
+DEPENDS+=		${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
+
 USE_TOOLS+=		pkg-config gmake msgfmt intltool
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 REPLACE_PYTHON=		${WRKSRC}/setup.py ${WRKSRC}/ccm/*.py
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 
 MAKE_ENV+=	PYTHONBIN=${PYTHONBIN:Q}
-
-DEPENDS+=	compizconfig-backend-gconf>=0.6.0:../../devel/compizconfig-backend-gconf
-DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
 
 .include "../../devel/py-compizconfig/buildlink3.mk"
 .include "../../lang/python/application.mk"

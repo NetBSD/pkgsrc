@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2014/01/02 23:51:45 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2014/01/25 10:30:02 wiz Exp $
 
 DISTNAME=	mercurial-2.8.2
 CATEGORIES=	devel scm
@@ -16,6 +16,15 @@ USE_TOOLS+=			gmake msgfmt
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 INSTALLATION_DIRS+=	share/doc/mercurial
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.8.2
+# the following setup argument was requested by 2.8.2 when compiling
+# for python-3.x
+#.include "../../lang/python/pyversion.mk"
+#
+#.if ("${PYPKGPREFIX}" != "py26") && ("${PYPKGPREFIX}" != "py27")
+#PYSETUPARGS+=	--c2to3
+#.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/*.1  ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1

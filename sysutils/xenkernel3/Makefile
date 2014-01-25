@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2013/11/07 00:47:39 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.28 2014/01/25 10:30:22 wiz Exp $
 
 VERSION=	3.1.4
 DISTNAME=	xen-${VERSION}
@@ -24,6 +23,7 @@ USE_TOOLS+=	gmake
 
 PYTHON_FOR_BUILD_ONLY=	YES
 PY_PATCHPLIST=		NO
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 3.1.4
 
 SUBST_CLASSES+=		py
 SUBST_STAGE.py=		pre-build
@@ -38,7 +38,7 @@ SUBST_FILES.py2=	xen/tools/compat-build-source.py
 SUBST_FILES.py2+=	xen/tools/compat-build-header.py
 SUBST_SED.py2=		-e "s,/usr/bin/python,${PYTHONBIN},g"
 
-.if  ${MACHINE_ARCH} == "x86_64"
+.if ${MACHINE_ARCH} == "x86_64"
 USE_TOOLS+=		bash
 SUBST_CLASSES+=		bash
 SUBST_STAGE.bash=	pre-build
@@ -46,7 +46,7 @@ SUBST_FILES.bash=	xen/include/Makefile
 SUBST_SED.bash=		-e "s,/bin/bash,${PREFIX}/bin/bash,g"
 .endif
 
-.if  ${MACHINE_ARCH} == "i386"
+.if ${MACHINE_ARCH} == "i386"
 PLIST_SRC=		PLIST.i386 PLIST
 .else
 PLIST_SRC=		PLIST

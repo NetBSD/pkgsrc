@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/10/12 13:38:38 obache Exp $
-#
+# $NetBSD: Makefile,v 1.4 2014/01/25 10:30:03 wiz Exp $
 
 DISTNAME=	funcparserlib-0.3.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,8 +11,6 @@ COMMENT=	Recursive descent parsing library based on functional combinators
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.26 2012/10/25 06:56:55 asau Exp $
-#
+# $NetBSD: Makefile,v 1.27 2014/01/25 10:30:25 wiz Exp $
 
-DISTNAME=		rubber-1.1
-PKGREVISION=		5
-CATEGORIES=		textproc
-MASTER_SITES=		http://ebeffara.free.fr/pub/
+DISTNAME=	rubber-1.1
+PKGREVISION=	5
+CATEGORIES=	textproc
+MASTER_SITES=	http://ebeffara.free.fr/pub/
 
-MAINTAINER=		tonio@NetBSD.org
-HOMEPAGE=		https://launchpad.net/rubber
-COMMENT=		Automated system for building LaTeX documents
+MAINTAINER=	tonio@NetBSD.org
+HOMEPAGE=	https://launchpad.net/rubber
+COMMENT=	Automated system for building LaTeX documents
 
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 
@@ -26,6 +25,8 @@ CONFIGURE_ARGS+=	--infodir=${PREFIX:Q}/${PKGINFODIR:Q}
 
 PLIST_SUBST+=		RUBBERVERSUFFIX=${PKGVERSION_NOREV}
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.1
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2014/01/01 11:52:35 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.38 2014/01/25 10:30:23 wiz Exp $
 
 DISTNAME=		asciidoc-8.6.9
 PKGREVISION=		1
@@ -30,10 +29,8 @@ SUBST_MESSAGE.ad=	Fixing hard-coded config file paths.
 SUBST_FILES.ad=		a2x.py asciidoc.py
 SUBST_SED.ad=		-e 's,^\(CONF_DIR\).*=.*,\1="${PREFIX}/share/asciidoc",'
 
-REPLACE_INTERPRETER+=	python
-REPLACE.python.old=	/usr/bin/env python
-REPLACE.python.new=	${PYTHONBIN}
-REPLACE_FILES.python=	a2x.py asciidoc.conf html5.conf xhtml11.conf xhtml11-quirks.conf
+REPLACE_PYTHON=		a2x.py asciidoc.conf html5.conf xhtml11.conf xhtml11-quirks.conf
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 8.6.9 (as seen e.g. in git-docs)
 
 INSTALLATION_DIRS=	bin share/asciidoc share/asciidoc/filters \
 			share/asciidoc/docbook-xsl share/asciidoc/stylesheets \

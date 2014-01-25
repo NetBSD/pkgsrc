@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/12/03 01:40:14 mef Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/25 10:30:01 wiz Exp $
 
 DISTNAME=	libftdi1-1.0
 CATEGORIES=	devel
@@ -16,6 +16,8 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config cmake
 USE_LANGUAGES=	c c++
 
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.0
+
 BUILD_DEPENDS+=libusb1-[0-9]*:../../devel/libusb1
 # It is better off to have doxygen, but
 # clang segfaults while packaging print/luatex
@@ -27,7 +29,7 @@ CONFIGURE_ARGS+=	--without-docs
 PKGCONFIG_OVERRIDE+=	libftdi1.pc.in
 PKGCONFIG_OVERRIDE+=	libftdipp1.pc.in
 
-PLIST_SUBST+=   PYSITELIB=${PYSITELIB}
+PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 
 do-configure:
 	(cd $(WRKSRC) ; \
@@ -38,7 +40,7 @@ do-configure:
 	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=FALSE \
 	-DLIBUSB_INCLUDE_DIR=${PREFIX}/include/libusb-1.0 \
 	.)
-# -DCMAKE_INSTALL_PREFIX=${PREFIX}  converts /usr/local to ${PREFIX}
+# -DCMAKE_INSTALL_PREFIX=${PREFIX} converts /usr/local to ${PREFIX}
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"

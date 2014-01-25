@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2013/10/10 14:42:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.113 2014/01/25 10:30:26 wiz Exp $
 
 DISTNAME=	bluefish-2.2.4
 PKGREVISION=	6
@@ -27,6 +27,8 @@ REPLACE_PYTHON+=	data/lorem-ipsum-generator data/jsbeautify
 REPLACE_PYTHON+=	data/cssmin.py data/jsmin.py
 CHECK_INTERPRETER_SKIP+= share/bluefish/plugins/*/*.py
 CHECK_INTERPRETER_SKIP+= share/bluefish/plugins/*/*/*.py
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.2.4
 
 # XXX this doesn't work
 #XML_CATALOGS=	${PREFIX}/share/xml/bluefish/catalog.xml

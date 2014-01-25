@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/28 06:30:05 asau Exp $
+# $NetBSD: Makefile,v 1.11 2014/01/25 10:30:26 wiz Exp $
 #
 
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME}
@@ -12,6 +12,8 @@ APACHE_MODULE= yes
 
 # does not compile with apache24
 PKG_APACHE_ACCEPTED=	apache13 apache2 apache22
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-quixote via py-scgi
 
 .include "../../mk/apache.mk"
 .include "../../www/apache/module.mk"

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2013/12/31 20:02:38 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/25 10:30:17 wiz Exp $
 
 DISTNAME=	socketpool-0.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	https://pypi.python.org/packages/source/s/socketpool/
-FETCH_USING=	curl
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	https://github.com/benoitc/socketpool
@@ -15,6 +14,8 @@ USE_LANGUAGES=	# none
 
 DOCDIR=			share/doc/${PKGBASE:S/${PYPKGPREFIX}/py/1}
 INSTALLATION_DIRS+=	${DOCDIR}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.5.3
 
 post-install:
 	${INSTALL_DATA} ${DESTDIR}${PREFIX}/socketpool/README.rst \

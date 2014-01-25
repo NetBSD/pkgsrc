@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/31 11:19:39 asau Exp $
-#
+# $NetBSD: Makefile,v 1.19 2014/01/25 10:30:06 wiz Exp $
 
 DISTNAME=	rox-lib-2.0.2
 PKGREVISION=	14
@@ -25,6 +24,7 @@ USE_TOOLS+=	pax
 PYTHON_PATCH_SCRIPTS=	AppRun MakeDist
 PYTHON_PATCH_SCRIPTS+=	python/make_docs.py
 PYTHON_PATCH_SCRIPTS+=	tests/python/*.py
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 
 INSTALLATION_DIRS=	share/rox/ROX-Lib2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/04/24 13:34:28 obache Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/25 10:30:04 wiz Exp $
 
 DISTNAME=	polib-1.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,8 +11,6 @@ COMMENT=	Python library to parse and manage gettext catalogs
 LICENSE=	mit
 
 USE_LANGUAGES=		# empty
-
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

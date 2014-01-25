@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/01/12 09:45:25 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2014/01/25 10:30:30 wiz Exp $
 
 DISTNAME=	WTForms-1.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -12,8 +12,6 @@ COMMENT=	Flexible forms validation and rendering library
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# empty
-
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 post-extract:
 	${FIND} ${WRKSRC} -type f -exec ${CHMOD} -x {} \;

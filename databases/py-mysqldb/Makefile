@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2013/03/02 20:33:24 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2014/01/25 10:29:59 wiz Exp $
 
 DISTNAME=	MySQL-python-${DIST_VERSION}
 PKGNAME=	${PYPKGPREFIX}-mysqldb-${DIST_VERSION:S/c/rc/}
@@ -13,6 +13,7 @@ COMMENT=	MySQL interface for Python
 LICENSE=	gnu-gpl-v2
 
 EGG_NAME=	${DISTNAME:S/MySQL-/MySQL_/}
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.2.3
 
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../lang/python/egg.mk"

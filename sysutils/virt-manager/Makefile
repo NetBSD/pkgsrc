@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/10/10 14:42:33 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.16 2014/01/25 10:30:22 wiz Exp $
 
 DISTNAME=	virt-manager-0.9.4
 PKGREVISION=	12
@@ -11,6 +10,14 @@ HOMEPAGE=	http://virt-manager.org/
 COMMENT=	GUI to manage virtual machines
 LICENSE=	gnu-gpl-v2
 
+DEPENDS=	libvirt>=0.9.3:../../sysutils/libvirt
+DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.24:../../x11/py-gtk2
+DEPENDS+=	virtinst>=0.600.3:../../sysutils/virtinst
+DEPENDS+=	${PYPKGPREFIX}-libxml2>=2.8.0:../../textproc/py-libxml2
+DEPENDS+=	urlgrabber>=3.1.0:../../www/urlgrabber
+DEPENDS+=	${PYPKGPREFIX}-dbus>=1.1.1:../../sysutils/py-dbus
+DEPENDS+=	gtk-vnc>=0.5.1:../../net/gtk-vnc
+
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-libvirt-package-names=libvirt
 
@@ -19,13 +26,7 @@ USE_PKGLOCALEDIR=	yes
 
 GCONF_SCHEMAS+=	virt-manager.schemas
 
-DEPENDS=	libvirt>=0.9.3:../../sysutils/libvirt
-DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.24:../../x11/py-gtk2
-DEPENDS+=	virtinst>=0.600.3:../../sysutils/virtinst
-DEPENDS+=	${PYPKGPREFIX}-libxml2>=2.8.0:../../textproc/py-libxml2
-DEPENDS+=	urlgrabber>=3.1.0:../../www/urlgrabber
-DEPENDS+=	${PYPKGPREFIX}-dbus>=1.1.1:../../sysutils/py-dbus
-DEPENDS+=	gtk-vnc>=0.5.1:../../net/gtk-vnc
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ORBit via py-gnome2, py-gtk2
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-configure

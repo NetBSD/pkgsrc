@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/02/06 19:31:00 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.4 2014/01/25 10:30:17 wiz Exp $
 
 DISTNAME=	pypcap-1.1
 PKGNAME=	${PYPKGPREFIX}-pcap-1.1
@@ -24,6 +23,7 @@ SUBST_SED.prefix=       -e "s|@PREFIX@|${PREFIX}|g"
 SUBST_STAGE.prefix=     post-patch
 
 PYDISTUTILSPKG= yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-pyrex
 
 FILES_SUBST+=   PYTHONBIN=${PYTHONBIN:Q}
 

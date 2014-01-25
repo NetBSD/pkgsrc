@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 16:08:31 asau Exp $
-#
+# $NetBSD: Makefile,v 1.8 2014/01/25 10:30:07 wiz Exp $
 
 DISTNAME=	gmailfs-0.7.2
 PKGREVISION=	3
@@ -13,6 +12,7 @@ COMMENT=	FUSE filesystem which uses Google mail for free space
 
 NO_BUILD=			yes
 PYTHON_PATCH_SCRIPTS=		gmailfs.py mount.gmailfs
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-fuse-bindings
 
 CONF_FILES=		${PREFIX}/share/examples/gmailfs/gmailfs.conf \
 			${PKG_SYSCONFDIR}/gmailfs.conf

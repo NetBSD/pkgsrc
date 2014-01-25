@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/28 06:31:02 asau Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/01/25 10:30:30 wiz Exp $
 
 DISTNAME=	webcolors-1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,8 +10,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.bitbucket.org/ubernostrum/webcolors/overview/
 COMMENT=	Library for working with color specifications for HTML and CSS
 LICENSE=	modified-bsd
-
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 USE_LANGUAGES=	# none
 

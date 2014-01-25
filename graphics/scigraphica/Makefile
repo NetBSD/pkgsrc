@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2013/10/10 14:42:16 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.71 2014/01/25 10:30:10 wiz Exp $
 
 DISTNAME=	scigraphica-2.1.0
 PKGREVISION=	24
@@ -22,6 +21,8 @@ CONFIGURE_ENV+=		PYTHONBIN=${PYTHONBIN:Q}
 
 USE_LIBTOOL=		YES
 PTHREAD_AUTO_VARS=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=  33 # py-numarray via libscigraphica
 
 pre-configure:
 	ln -s ${PYTHONBIN} ${TOOLS_DIR}/bin/python

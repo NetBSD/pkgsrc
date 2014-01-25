@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2012/10/02 23:48:06 asau Exp $
-#
+# $NetBSD: Makefile,v 1.13 2014/01/25 10:29:57 wiz Exp $
 
 DISTNAME=		pyvorbis-1.3
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	2
+PKGREVISION=		2
 CATEGORIES=		audio python
 MASTER_SITES=		http://vorbis.com/files/1.0.1/unix/py/
 
@@ -13,6 +12,7 @@ COMMENT=		Python bindings for Vorbis library
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ogg, and itself not ported as of 1.3
 
 HAS_CONFIGURE=		yes
 CONFIG_SHELL=		${PYTHONBIN}

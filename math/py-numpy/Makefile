@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2013/05/20 05:59:58 adam Exp $
+# $NetBSD: Makefile,v 1.26 2014/01/25 10:30:13 wiz Exp $
 
 DISTNAME=	numpy-1.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Array processing for numbers, strings, records, and objects
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=		c fortran
-PYTHON_VERSIONS_INCLUDE_3X= yes
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 MAKE_ENV+=		ATLAS=None
 

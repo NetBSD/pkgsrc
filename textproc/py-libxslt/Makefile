@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2014/01/01 11:52:36 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2014/01/25 10:30:24 wiz Exp $
 
 DISTNAME=	libxslt-1.1.28
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +14,8 @@ LICENSE=	mit # with no-advertising clause
 
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=	${PYPKGPREFIX}-libxml2>=2.6.8:../../textproc/py-libxml2
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.1.28
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/python
 PYDISTUTILSPKG=	yes

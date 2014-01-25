@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/10/23 17:19:02 asau Exp $
-#
+# $NetBSD: Makefile,v 1.32 2014/01/25 10:30:17 wiz Exp $
 
 DISTNAME=	pygoogle-0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -14,6 +13,8 @@ COMMENT=	Call the Google web API from Python
 DEPENDS+=	${PYPKGPREFIX}-SOAPpy-[0-9]*:../../net/py-soappy
 
 EGG_NAME=	pygoogle-0.5
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-xml via py-soappy
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/10/10 14:42:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.16 2014/01/25 10:30:16 wiz Exp $
 
 DISTNAME=		gitso-0.6
 PKGREVISION=		11
@@ -17,6 +17,8 @@ DEPENDS+=		x11vnc-[0-9]*:../../x11/x11vnc
 WRKSRC=			${WRKDIR}/Gitso
 
 PY_PATCHPLIST=		yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-wxWidgets
+
 USE_TOOLS+=		bash:run
 
 REPLACE_BASH+=		run-gitso.sh.local

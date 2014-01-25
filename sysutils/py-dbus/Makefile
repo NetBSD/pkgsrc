@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2013/05/26 19:51:25 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2014/01/25 10:30:21 wiz Exp $
 
 DISTNAME=	dbus-python-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python//}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/Software/dbus
 COMMENT=	Python bindings for the D-BUS message bus system
 LICENSE=	mit
-
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 USE_TOOLS+=	pkg-config gmake
 GNU_CONFIGURE=	yes

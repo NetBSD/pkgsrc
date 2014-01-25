@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/04 00:22:00 cheusov Exp $
-#
+# $NetBSD: Makefile,v 1.8 2014/01/25 10:30:07 wiz Exp $
 
 VERSION=	0.4.0
 DISTNAME=	fs-${VERSION}
@@ -16,6 +15,7 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=	# none
 
 PYTHON_SELF_CONFLICT=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.4.0
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

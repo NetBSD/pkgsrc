@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2013/06/06 01:57:55 schmonz Exp $
-#
+# $NetBSD: Makefile,v 1.26 2014/01/25 10:30:24 wiz Exp $
 
 DISTNAME=		feedparser-5.1.3
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -12,8 +11,6 @@ COMMENT=		Parse RSS and Atom feeds in Python
 LICENSE=		2-clause-bsd
 
 USE_LANGUAGES=		#none
-
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 do-test:
 	cd ${WRKSRC}/feedparser && ${PYTHONBIN} feedparsertest.py

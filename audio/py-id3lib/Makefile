@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/02 23:48:05 asau Exp $
-#
+# $NetBSD: Makefile,v 1.6 2014/01/25 10:29:56 wiz Exp $
 
 DISTNAME=	pyid3lib-0.5.1
 PKGNAME=	${PYPKGPREFIX}-id3lib-0.5.1
@@ -14,6 +13,8 @@ COMMENT=	Python module for editing ID3v2 tags of MP3 audio files
 LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=	c c++
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.5.1
 
 .include "../../lang/python/distutils.mk"
 .include "../../audio/id3lib/buildlink3.mk"

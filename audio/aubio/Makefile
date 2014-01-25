@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/02/09 22:11:31 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/01/25 10:29:56 wiz Exp $
 
 DISTNAME=	aubio-0.3.2
 PKGREVISION=	2
@@ -20,6 +19,7 @@ PKGCONFIG_OVERRIDE+=	aubio.pc.in
 # Python related variables:
 PY_PATCHPLIST=			yes
 PYTHON_PATCH_SCRIPTS=	python/aubiocut python/aubiopitch
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.3.2
 
 .include "options.mk"
 

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2013/06/06 01:52:01 schmonz Exp $
-#
+# $NetBSD: Makefile,v 1.27 2014/01/25 10:30:24 wiz Exp $
 
 DISTNAME=		html2text-3.200.3
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +10,6 @@ HOMEPAGE=		http://www.aaronsw.com/2002/html2text/
 COMMENT=		Convert HTML into easy-to-read plain ASCII text
 LICENSE=		gnu-gpl-v2
 
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 PYTHON_SELF_CONFLICT=		yes
 
 NO_BUILD=		yes

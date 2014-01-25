@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2013/10/06 12:47:13 darcy Exp $
-#
+# $NetBSD: Makefile,v 1.21 2014/01/25 10:30:03 wiz Exp $
 
 DISTNAME=	generate-2.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,8 +9,6 @@ EXTRACT_SUFX=	.tgz
 OWNER=		darcy@NetBSD.org
 HOMEPAGE=	http://www.druid.net/darcy/readme-generate.html
 COMMENT=	Python interface to Generate
-
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 MAKE_ENV+=		MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
 MAKE_ENV+=		BINDIR=${DESTDIR}${PREFIX}/bin

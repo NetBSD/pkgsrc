@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/02/06 23:22:02 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.16 2014/01/25 10:29:59 wiz Exp $
 
 DISTNAME=		pymssql-1.0.2
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -19,6 +18,8 @@ SUBST_FILES.crlf=	mssqldbmodule.c pymssql.py
 SUBST_FILTER_CMD.crlf=	${TR} -d '\r'
 
 BUILDLINK_API_DEPENDS.freetds+=	freetds>=0.63
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.0.2; v2 might be better.
 
 .include "../../databases/freetds/buildlink3.mk"
 .include "../../lang/python/distutils.mk"

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2013/07/12 10:45:03 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.38 2014/01/25 10:30:20 wiz Exp $
 
 DISTNAME=		prewikka-${VERSION}
 PKGNAME=		${PYPKGPREFIX}-prewikka-${VERSION}
@@ -8,15 +7,15 @@ CATEGORIES=		security
 MASTER_SITES=		http://www.prelude-ids.org/download/releases/prewikka/ \
 			http://www.prelude-ids.org/download/releases/old/
 
-VERSION=		0.9.17.1
-
-CONFLICTS=		prewikka-[0-9]*
-
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://prelude-ids.org/download/releases/
 COMMENT=		Prelude-IDS console
 
 DEPENDS+=		${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
+
+VERSION=		0.9.17.1
+
+CONFLICTS=		prewikka-[0-9]*
 
 USE_TOOLS+=		msgfmt
 
@@ -25,6 +24,8 @@ USE_TOOLS+=		msgfmt
 PYDISTUTILSPKG=		yes
 PYSETUP=		setup.py
 PYTHON_PATCH_SCRIPTS=	scripts/prewikka-httpd
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-cheetah
+
 PREWIKKA_USER?=		prewikka
 PREWIKKA_GROUP?=	prewikka
 PREWIKKA_HOME=		/nonexistent

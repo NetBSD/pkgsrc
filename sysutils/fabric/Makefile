@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2013/10/21 18:09:30 gls Exp $
+# $NetBSD: Makefile,v 1.32 2014/01/25 10:30:21 wiz Exp $
 
 VERSION=		1.8.0
 DISTNAME=		Fabric-${VERSION}
@@ -13,6 +13,8 @@ COMMENT=		Simple Pythonic remote deployment tool
 LICENSE=		2-clause-bsd
 
 DEPENDS+=		${PYPKGPREFIX}-paramiko>=1.10.0:../../security/py-paramiko
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-paramiko
 
 USE_TOOLS+=		pax
 

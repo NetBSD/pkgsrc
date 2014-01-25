@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/01/01 07:15:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/25 10:30:14 wiz Exp $
 
 DISTNAME=	byobu_5.69.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -22,6 +22,7 @@ REPLACE_BASH+=	usr/share/byobu/tests/*
 
 REPLACE_PERL+=	usr/lib/byobu/include/*
 REPLACE_PYTHON+=	usr/lib/byobu/include/*
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-newt
 
 EGDIR=			share/examples/byobu
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/${EGDIR}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/31 11:16:55 asau Exp $
+# $NetBSD: Makefile,v 1.18 2014/01/25 10:30:01 wiz Exp $
 
 DISTNAME=	epydoc-2.1
 PKGREVISION=	7
@@ -14,6 +14,8 @@ DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
 USE_LANGUAGES=	#none
 USE_TOOLS+=	pax
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.1
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/doc/epydoc
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/08/21 15:26:56 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/25 10:29:56 wiz Exp $
 
 DISTNAME=	v1.1.1
 PKGNAME=	${PYPKGPREFIX}-discogs_client-1.1.1
@@ -11,11 +11,13 @@ HOMEPAGE=	https://github.com/discogs/discogs_client/
 COMMENT=	Python Client for the Discogs API
 LICENSE=	modified-bsd
 
+DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+
 WRKSRC=		${WRKDIR}/discogs_client-1.1.1
 USE_LANGUAGES=	# none
 EGG_NAME=	discogs_client-1.1.1
 
-DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+PYTHON_VERSIONS_INCOMPATIBLE=	33
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

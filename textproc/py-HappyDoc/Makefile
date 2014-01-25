@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/25 06:56:47 asau Exp $
+# $NetBSD: Makefile,v 1.23 2014/01/25 10:30:23 wiz Exp $
 
 DISTNAME=	HappyDoc_r2_1
 PKGNAME=	${PYPKGPREFIX}-HappyDoc-2.1
@@ -15,6 +15,8 @@ USE_LANGUAGES=	#none
 WRKSRC=		${WRKDIR}/HappyDoc-r2_1
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 EGG_NAME=	${DISTNAME:S/_r/-/:S/_/./g}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.1
 
 post-extract:
 	${MV} ${WRKSRC}/happydoc ${WRKSRC}/happydoc${PYVERSSUFFIX}

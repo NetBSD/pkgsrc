@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/02 21:25:49 asau Exp $
-#
+# $NetBSD: Makefile,v 1.16 2014/01/25 10:29:59 wiz Exp $
 
 DISTNAME=	pgnotify-0.1
 PKGNAME=	${PYPKGPREFIX}-pgnotify-0.1
@@ -20,6 +19,7 @@ USE_TOOLS+=		gmake
 
 PYDISTUTILSPKG=	yes
 PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-postgresql
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

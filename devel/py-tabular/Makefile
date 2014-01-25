@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/06/02 01:47:54 dholland Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/25 10:30:05 wiz Exp $
 
 DISTNAME=	tabular-0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,8 @@ COMMENT=	Tabular data tools for Python
 LICENSE=	mit
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.1
 
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"

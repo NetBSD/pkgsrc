@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/10/31 11:19:28 asau Exp $
-#
+# $NetBSD: Makefile,v 1.26 2014/01/25 10:30:02 wiz Exp $
 
 DISTNAME=		at-spi-1.32.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -20,6 +19,8 @@ USE_LANGUAGES=		#none
 
 NO_BUILD=	yes
 PY_PATCHPLIST=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ORBit, py-gnome2
 
 PYATSPIDIR=		${PREFIX}/${PYSITELIB}/pyatspi
 INSTALLATION_DIRS=	${PYATSPIDIR}

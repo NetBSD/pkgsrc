@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.139 2014/01/04 13:46:55 obache Exp $
+# $NetBSD: Makefile,v 1.140 2014/01/25 10:30:08 wiz Exp $
 
 DISTNAME=		gnome-games-2.32.1
 PKGREVISION=		24
@@ -10,6 +10,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME2 games collection
 #LICENSE=		gnu-gpl-v2 AND gnu-fdl-v1.1
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ORBit via py-gnome2
 
 CONFLICTS=		xbill-[0-9]*
 SUPERSEDES=		glchess-[0-9]*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/05/22 11:52:43 kleink Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/25 10:30:24 wiz Exp $
 
 DISTNAME=	MarkupSafe-0.18
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -9,8 +9,6 @@ MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	http://www.pocoo.org/projects/markupsafe/
 COMMENT=	Implements a XML/HTML/XHTML Markup safe string for Python
 LICENSE=	modified-bsd
-
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

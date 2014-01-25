@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/10/31 11:16:56 asau Exp $
-#
+# $NetBSD: Makefile,v 1.26 2014/01/25 10:30:01 wiz Exp $
 
 DISTNAME=	eric-3.8.1
 PKGREVISION=	3
@@ -18,6 +17,8 @@ NO_BUILD=		yes
 USE_LANGUAGES=
 
 PY_PATCHPLIST=		yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-xml, py-qt3-modules
 
 .include "../../mk/bsd.prefs.mk"
 

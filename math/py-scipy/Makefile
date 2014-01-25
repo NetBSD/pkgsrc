@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/10/16 19:35:40 markd Exp $
+# $NetBSD: Makefile,v 1.14 2014/01/25 10:30:13 wiz Exp $
 
 DISTNAME=	scipy-0.12.1
 PKGNAME=	${PYPKGPREFIX}-scipy-0.12.1
@@ -13,7 +13,6 @@ LICENSE=	modified-bsd
 PYDISTUTILSPKG=	yes
 PLIST_SUBST+=   PYPKGPREFIX=${PYPKGPREFIX}
 USE_LANGUAGES+=	c c++ fortran
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 MAKE_ENV+=	ATLAS=None
 
 # XXX Avoid picking up other compilers when installed

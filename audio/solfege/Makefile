@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2013/10/10 14:42:00 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.48 2014/01/25 10:29:57 wiz Exp $
 
 DISTNAME=		solfege-3.14.1
 PKGREVISION=		22
@@ -27,6 +26,7 @@ USE_TOOLS+=		gmake gm4 makeinfo pkg-config msgfmt bash:run
 REPLACE_BASH=		lesson-files/bin/csound-play-harmonic-interval.sh
 
 PYTHON_PATCH_SCRIPTS=	*.py *.py.in */*.py */*.py.in
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 
 SUBST_CLASSES+=		sound
 SUBST_STAGE.sound=	do-configure
