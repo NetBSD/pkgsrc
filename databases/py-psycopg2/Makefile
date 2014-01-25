@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2013/07/04 13:01:36 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2014/01/25 10:29:59 wiz Exp $
 
 DISTNAME=	psycopg2-2.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=	http://initd.org/psycopg/
 COMMENT=	PostgreSQL database adapter for Python
 LICENSE=	gnu-lgpl-v3
 
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 REPLACE_PYTHON+=		tests/*.py
 
 .include "../../lang/python/application.mk"

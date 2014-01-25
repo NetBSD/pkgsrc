@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/08/17 18:30:02 imil Exp $
-#
+# $NetBSD: Makefile,v 1.16 2014/01/25 10:30:22 wiz Exp $
 
 DISTNAME=	salt-0.16.3
 CATEGORIES=	sysutils
@@ -10,6 +9,16 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://saltstack.org/
 COMMENT=	Remote execution and configuration management system
 LICENSE=	apache-2.0
+
+DEPENDS+= zeromq>=2.1.9:../../net/zeromq
+DEPENDS+= ${PYPKGPREFIX}-zmq>=2.1.9:../../net/py-zmq
+DEPENDS+= ${PYPKGPREFIX}-m2crypto-[0-9]*:../../security/py-m2crypto
+DEPENDS+= ${PYPKGPREFIX}-crypto-[0-9]*:../../security/py-crypto
+DEPENDS+= ${PYPKGPREFIX}-msgpack-[0-9]*:../../devel/py-msgpack
+DEPENDS+= ${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+DEPENDS+= ${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-m2crypto
 
 SUBST_CLASSES+=		fix-paths
 SUBST_STAGE.fix-paths=	post-patch
@@ -52,12 +61,4 @@ post-install:
 #
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
-DEPENDS+= zeromq>=2.1.9:../../net/zeromq
-DEPENDS+= ${PYPKGPREFIX}-zmq>=2.1.9:../../net/py-zmq
-DEPENDS+= ${PYPKGPREFIX}-m2crypto-[0-9]*:../../security/py-m2crypto
-DEPENDS+= ${PYPKGPREFIX}-crypto-[0-9]*:../../security/py-crypto
-DEPENDS+= ${PYPKGPREFIX}-msgpack-[0-9]*:../../devel/py-msgpack
-DEPENDS+= ${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
-DEPENDS+= ${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
-
 .include "../../mk/bsd.pkg.mk"

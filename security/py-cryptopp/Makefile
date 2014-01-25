@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/23 18:16:53 asau Exp $
-#
+# $NetBSD: Makefile,v 1.10 2014/01/25 10:30:19 wiz Exp $
 
 VERSION=	0.6.0
 VERSION_EXCESSIVE=	1206569328141510525648634803928199668821045408958
@@ -11,17 +10,14 @@ MASTER_SITES=	http://pypi.python.org/packages/source/p/pycryptopp/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tahoe-lafs.org/trac/pycryptopp
 COMMENT=	Python wrapper for (and copy of parts of) crypto++
-
 # GPL v2 or later.
 # or Transitive Grace Period Public Licence, version 1.0 or later.
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
 
-REPLACE_INTERPRETER+=  python
-REPLACE.python.old=    /usr/bin/env python
-REPLACE.python.new=    ${PYTHONBIN}
-REPLACE_FILES.python=  pycryptopp/test/*.py
+REPLACE_PYTHON=		pycryptopp/test/*.py
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.6.0.120...
 
 # It would be nice if egg.mk had support for this.
 #TEST_TARGET=	@python@ setup.py test

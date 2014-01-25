@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2014/01/23 14:58:28 schnoebe Exp $
-#
+# $NetBSD: Makefile,v 1.31 2014/01/25 10:30:18 wiz Exp $
 
 DISTNAME=		hplip-3.14.1
 CATEGORIES=		print
@@ -17,6 +16,8 @@ FILES_SUBST+=           CUPS_GROUP=${CUPS_GROUP}
 
 PKG_GROUPS_VARS+=       CUPS_GROUP
 PKG_USERS_VARS+=        CUPS_USER
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-xml
 
 BUILD_DEFS+=            CUPS_USER CUPS_GROUP VARBASE
 

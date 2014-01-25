@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2013/11/20 20:04:35 adam Exp $
+# $NetBSD: Makefile,v 1.38 2014/01/25 10:30:10 wiz Exp $
 
 PKGNAME=	gnuradio-core-${VERSION}
 PKGREVISION=	10
@@ -7,6 +7,7 @@ COMMENT=	Runtime system and DSP blocks for GNU Radio
 LDFLAGS.DragonFly+=	-lboost_system
 LDFLAGS.SunOS+=		-lboost_system
 
+PYTHON_VERSIONS_INCOMPATIBLE=   33 # not yet ported as of 3.3.0
 .include "../../meta-pkgs/gnuradio/Makefile.common"
 
 CONF_FILES+=	${EGDIR}/gnuradio-core.conf ${PKG_SYSCONFDIR}/gnuradio-core.conf

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2013/05/15 00:41:42 rodent Exp $
+# $NetBSD: options.mk,v 1.2 2014/01/25 10:30:15 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libkate
 PKG_SUPPORTED_OPTIONS=	debug doc oggz python valgrind vorbis
@@ -24,6 +24,7 @@ CONFIGURE_ARGS+=	--disable-doc
 .if !empty(PKG_OPTIONS:Mpython)
 REPLACE_PYTHON=		tools/KateDJ/KateDJ
 PY_PATCHPLIST=		yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-wxWidgets
 .include "../../x11/py-wxWidgets/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

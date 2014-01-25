@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/01/28 20:17:43 adam Exp $
+# $NetBSD: Makefile,v 1.11 2014/01/25 10:30:29 wiz Exp $
 
 DISTNAME=	Paste-1.7.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,8 @@ COMMENT=	Middleware for Python WSGI applications
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
