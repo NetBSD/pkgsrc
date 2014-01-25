@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.48 2013/09/02 19:50:59 adam Exp $
-#
+# $NetBSD: Makefile,v 1.49 2014/01/25 08:51:49 wiz Exp $
 
 PKGNAME=		${PYPKGPREFIX}-gobject-2.28.6
 PKGREVISION=		11
+
+# only noticeable by running codegen.py
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.28.6
 
 .include "Makefile.common"
 
@@ -26,13 +28,17 @@ REPLACE_PYTHON+=	codegen/scanvirtuals.py
 REPLACE_PYTHON+=	codegen/scmexpr.py
 REPLACE_PYTHON+=	docs/xsl/fixxref.py.in
 
+PYTHON_VERSIONED_DEPENDENCIES=	cairo
+
+PY_PEP3147=	no
+
 BUILDLINK_API_DEPENDS.py-gobject-shared+= py-gobject-shared>=${PKGVERSION_NOREV}
 
 CONFIGURE_ARGS+=	--disable-introspection
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
-.include "../../graphics/py-cairo/buildlink3.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../devel/py-gobject-shared/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
