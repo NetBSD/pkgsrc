@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/03/03 07:31:30 obache Exp $
-#
+# $NetBSD: Makefile,v 1.14 2014/01/25 10:30:25 wiz Exp $
 
 DISTNAME=	Pygments-1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -12,8 +11,6 @@ COMMENT=	Python syntax highlighter
 LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=		#none
-
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 .include "../../mk/bsd.prefs.mk"
 

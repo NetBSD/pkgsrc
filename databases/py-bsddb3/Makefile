@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2013/12/18 13:37:25 joerg Exp $
+# $NetBSD: Makefile,v 1.49 2014/01/25 10:29:59 wiz Exp $
 
 DISTNAME=	bsddb3-6.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,8 +16,6 @@ PYSETUPBUILDARGS=	--berkeley-db=${BDBBASE}
 PYSETUPINSTALLARGS=	--berkeley-db=${BDBBASE}
 PYSETUPBUILDARGS+=	--berkeley-db-incdir=${BDBBASE}/include/${BDB_TYPE}
 PYSETUPINSTALLARGS+=	--berkeley-db-incdir=${BDBBASE}/include/${BDB_TYPE}
-
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 REPLACE_PYTHON=		Lib/bsddb/dbshelve.py
 REPLACE_PYTHON+=	Lib3/bsddb/dbshelve.py

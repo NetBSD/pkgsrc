@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2014/01/06 22:15:31 joerg Exp $
+# $NetBSD: Makefile,v 1.42 2014/01/25 10:30:22 wiz Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 .include		"version.mk"
@@ -27,6 +27,8 @@ BUILD_DEPENDS+= dev86-[0-9]*:../../devel/dev86 # needed to build firmware
 .if !exists(/usr/bin/iasl)
 BUILD_DEPENDS+= acpica-utils-[0-9]*:../../sysutils/acpica-utils
 .endif
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-xml
 
 PKG_SYSCONFSUBDIR=	xen
 

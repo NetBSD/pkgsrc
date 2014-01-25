@@ -1,20 +1,23 @@
-# $NetBSD: Makefile,v 1.1 2013/07/08 05:44:21 richard Exp $
-VERSION=		0.9.8
-DISTNAME=		PyWebDAV-${VERSION}
-PKGNAME=		${PYPKGPREFIX}-${DISTNAME:tl}
-CATEGORIES=		www python
+# $NetBSD: Makefile,v 1.2 2014/01/25 10:30:29 wiz Exp $
+
+VERSION=	0.9.8
+DISTNAME=	PyWebDAV-${VERSION}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+CATEGORIES=	www python
 MASTER_SITES=	http://pywebdav.googlecode.com/files/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://code.google.com/p/pywebdav/
-COMMENT=		Standards compliant Python WebDAV server and library
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://code.google.com/p/pywebdav/
+COMMENT=	Standards compliant Python WebDAV server and library
+LICENSE=	gnu-gpl-v2
 
 DOCDIR=			share/doc/${PKGBASE}
 
 PLIST_SUBST+=	DOCDIR=${DOCDIR:Q}
 
 INSTALLATION_DIRS+=	${DOCDIR}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.9.8
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/${DOCDIR}

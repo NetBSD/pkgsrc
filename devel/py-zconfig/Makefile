@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/31 11:19:36 asau Exp $
-#
+# $NetBSD: Makefile,v 1.10 2014/01/25 10:30:05 wiz Exp $
 
 DISTNAME=		ZConfig-2.6.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:tl}
@@ -14,6 +13,8 @@ COMMENT=		Configuration library
 USE_LANGUAGES=		# empty
 
 INSTALLATION_DIRS+=	share/doc/py-zconfig
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/zconfig.pdf \

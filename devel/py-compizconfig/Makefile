@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2014/01/01 11:52:13 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.34 2014/01/25 10:30:03 wiz Exp $
 
 PKGVER=			0.8.4
 DISTNAME=		compizconfig-python-${PKGVER}
@@ -13,13 +12,14 @@ HOMEPAGE=		http://compiz.org/
 COMMENT=		Python bindings for libcompizconfig
 LICENSE=		gnu-gpl-v2
 
+BUILD_DEPENDS+=		${PYPKGPREFIX}-pyrex>=0.9.3:../../lang/py-pyrex
+
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config gmake
 
 PY_PATCHPLIST=		yes
-
-BUILD_DEPENDS+=		${PYPKGPREFIX}-pyrex>=0.9.3:../../lang/py-pyrex
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-pyrex
 
 .include "../../wm/compiz/buildlink3.mk"
 .include "../../devel/libcompizconfig/buildlink3.mk"

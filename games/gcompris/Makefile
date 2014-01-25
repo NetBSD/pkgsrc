@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2014/01/01 11:52:15 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2014/01/25 10:30:08 wiz Exp $
 
 DISTNAME=	gcompris-12.11
 PKGREVISION=	12
@@ -11,6 +11,8 @@ HOMEPAGE=	http://gcompris.net/
 COMMENT=	Educational games for children
 LICENSE=	gnu-gpl-v3
 
+DEPENDS+=	gnuchess-[0-9]*:../../games/gnuchess
+
 USE_TOOLS+=		gmake intltool gtar pkg-config msgfmt texi2html
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
@@ -19,9 +21,10 @@ USE_LIBTOOL=		YES
 CHECK_PORTABILITY_SKIP+= macosx/build-gtk.sh
 INFO_FILES=	yes
 
-DEPENDS+=	gnuchess-[0-9]*:../../games/gnuchess
-
 PTHREAD_AUTO_VARS=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-sqlite2, py-gtk2
+PYTHON_VERSIONED_DEPENDENCIES=	cairo:link
 
 PKG_SUPPORTED_OPTIONS=	gnet
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcompris
@@ -50,7 +53,7 @@ post-install:
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
-.include "../../graphics/py-cairo/buildlink3.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/application.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

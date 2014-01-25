@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.2 2014/01/12 09:41:07 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/25 10:30:07 wiz Exp $
 #
-
 # any of ~* is fine, they are the same and just there for Ubuntu
 # so moneyguru's built for all releases
 DISTNAME=	moneyguru_2.6.1~quantal
@@ -24,7 +23,6 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/}
 USE_LANGUAGES=	c
 USE_TOOLS=	pax
 
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 PY_PATCHPLIST=			yes
 REPLACE_PYTHON=			src/run.py
 
