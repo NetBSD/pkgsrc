@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2013/02/12 04:35:24 hiramatsu Exp $
-#
+# $NetBSD: Makefile,v 1.27 2014/01/25 08:44:28 wiz Exp $
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 4.0.1
 
 .include "../../databases/libpqxx/Makefile.common"
 
@@ -12,14 +13,7 @@ USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	libpqxx.pc.in
 GNU_CONFIGURE=		yes
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-# No strerror_r
-CONFIGURE_ARGS+=	--disable-thread-safety
-.endif
-
-PYTHON_FOR_BUILD_ONLY=  yes
+PYTHON_FOR_BUILD_ONLY=	yes
 REPLACE_PYTHON+=	tools/splitconfig
 
 .include "../../lang/python/application.mk"
