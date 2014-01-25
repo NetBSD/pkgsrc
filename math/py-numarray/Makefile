@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/09/11 23:04:31 asau Exp $
-#
+# $NetBSD: Makefile,v 1.18 2014/01/25 09:06:42 wiz Exp $
 
 DISTNAME=	numarray-1.5.2
 PKGNAME=	${PYPKGPREFIX}-numarray-1.5.2
@@ -8,7 +7,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=numpy/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.stsci.edu/resources/software_hardware/numarray
+HOMEPAGE=	http://www.numpy.org/old_array_packages.html
 COMMENT=	Array manipulation
 
 PLIST_VARS+=	blas
@@ -16,6 +15,8 @@ PLIST_VARS+=	blas
 BUILDLINK_PASSTHRU_DIRS+=	/System/Library/Frameworks/vecLib.framework/Headers
 PLIST.blas=	yes
 .endif
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.5.2; use py-numpy
 
 do-test:
 	(cd ${WRKSRC}/Lib && ${PYTHONBIN} testall.py)
