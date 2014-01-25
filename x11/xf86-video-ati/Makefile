@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2013/09/09 19:29:55 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2014/01/25 10:56:49 wiz Exp $
 
-DISTNAME=	xf86-video-ati-7.2.0
+DISTNAME=	xf86-video-ati-7.3.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,6 +10,8 @@ HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg ATI Radeon video driver
 
 CONFIGURE_ARGS+=	--enable-dri
+# not packaged yet as of 20140125
+CONFIGURE_ARGS+=	--disable-glamor
 
 CONFLICTS+=	xf86-video-ati6-[0-9]*
 
