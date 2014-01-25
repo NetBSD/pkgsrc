@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.421 2014/01/25 08:19:54 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.422 2014/01/25 08:54:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -505,3 +505,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/libvirt to 1.2.1 [agc 2014-01-24]
 	Updated emulators/suse131_qt4 to 13.1nb1 [obache 2014-01-25]
 	Updated devel/py-ipython1 to 1.1.0nb1 [wiz 2014-01-25]
+	Updated devel/py-gobject-shared to 2.28.6nb11 [wiz 2014-01-25]
