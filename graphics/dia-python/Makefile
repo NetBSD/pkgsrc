@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2014/01/01 11:52:19 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.39 2014/01/25 10:30:09 wiz Exp $
 
 DIA_SUBPKG=		-python
 .include "../../graphics/dia/Makefile.common"
@@ -14,6 +13,7 @@ CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 PYTHON_PATCH_SCRIPTS=	po-checktrans.py
 PYTHON_PATCH_SCRIPTS+=	plug-ins/python/gtkcons.py
 PYTHON_PATCH_SCRIPTS+=	sheets/checktrans.py
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 
 BUILD_DIRS+=		plug-ins/python
 INSTALL_DIRS+=		plug-ins/python

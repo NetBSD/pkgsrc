@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/04 00:22:00 cheusov Exp $
+# $NetBSD: Makefile,v 1.12 2014/01/25 10:29:57 wiz Exp $
 
 DISTNAME=	python-musicbrainz2-0.4.1
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
@@ -11,11 +11,10 @@ HOMEPAGE=	http://musicbrainz.org/doc/PythonMusicBrainz2
 COMMENT=	Python interface to the MusicBrainz XML web service
 LICENSE=	modified-bsd
 
-PYTHON_SELF_CONFLICT=	yes
-
-.include "../../lang/python/pyversion.mk"
-
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+
+PYTHON_SELF_CONFLICT=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33
 
 EGG_NAME=	${DISTNAME:S/-/_/}
 

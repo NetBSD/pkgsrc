@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/01/24 13:22:22 obache Exp $
-#
+# $NetBSD: Makefile,v 1.10 2014/01/25 10:30:05 wiz Exp $
 
 DISTNAME=	testtools-0.9.34
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,8 +11,6 @@ COMMENT=	Extensions to the Python standard library unit testing framework
 LICENSE=	mit AND python-software-foundation
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

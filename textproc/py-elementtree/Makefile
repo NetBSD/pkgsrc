@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/25 06:56:49 asau Exp $
-#
+# $NetBSD: Makefile,v 1.13 2014/01/25 10:30:24 wiz Exp $
 
 DISTNAME=		elementtree-1.2.6-20050316
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/-20050316//}
@@ -16,6 +15,8 @@ DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 USE_LANGUAGES=		# empty
 
 EGG_NAME=		elementtree-1.2.6_20050316
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

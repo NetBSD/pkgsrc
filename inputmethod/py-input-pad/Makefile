@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2013/12/07 11:32:31 obache Exp $
-#
+# $NetBSD: Makefile,v 1.31 2014/01/25 10:30:11 wiz Exp $
 
 .include "../../inputmethod/input-pad/Makefile.common"
 
@@ -27,6 +26,7 @@ post-configure:
 	${LN} -s ${BUILDLINK_DIR}/lib/libinput-pad.la ${WRKSRC}/input-pad
 
 PY_PATCHPLIST=		yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 
 BUILDLINK_API_DEPENDS.input-pad+=	input-pad>=${PKGVERSION_NOREV}
 .include "../../inputmethod/input-pad/buildlink3.mk"

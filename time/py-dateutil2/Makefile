@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/01/16 10:26:00 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/25 10:30:26 wiz Exp $
 
 DISTNAME=	python-dateutil-2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -12,7 +12,6 @@ LICENSE=	modified-bsd
 
 EGG_NAME=	${DISTNAME:S/-/_/}
 
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	26 27
 
 .include "../../lang/python/egg.mk"

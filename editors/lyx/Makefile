@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2014/01/19 14:04:39 rumko Exp $
-#
+# $NetBSD: Makefile,v 1.38 2014/01/25 10:30:06 wiz Exp $
 
 DISTNAME=		lyx-2.0.6
 CATEGORIES=		editors
@@ -65,6 +64,7 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake perl:run pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.6.10
 
 CXXFLAGS.Linux+=	-fpermissive
 

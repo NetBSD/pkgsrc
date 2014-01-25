@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2014/01/06 14:36:57 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2014/01/25 10:30:26 wiz Exp $
 
 DISTNAME=	pytz-2013.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,8 +12,6 @@ COMMENT=	World timezone definitions, modern and historical
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 REPLACE_PYTHON=	pytz/tzfile.py
 

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/05/09 13:49:10 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.8 2014/01/25 10:30:01 wiz Exp $
 
 DISTNAME=	gtest-1.6.0
 PKGNAME=	${DISTNAME:S/gtest/googletest/}
@@ -25,11 +24,9 @@ SUBST_MESSAGE.rpathfix=	Adding rpath to gtest-config
 SUBST_SED.rpathfix=	-e 's/-L$${libdir}/${COMPILER_RPATH_FLAG}$${libdir} -L$${libdir}/g'
 SUBST_STAGE.rpathfix=	pre-configure
 
-SUBST_CLASSES+=			fix-python
-SUBST_STAGE.fix-python=		pre-configure
-SUBST_MESSAGE.fix-python=	Fixing dynamic python
-SUBST_FILES.fix-python+=	scripts/*py
-SUBST_SED.fix-python+=		-e 's,/usr/bin/env python,${PYTHONBIN},'
+REPLACE_PYTHON+=	scripts/*py
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.6.0
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
@@ -40,4 +37,5 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/gtest-config ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/python/extension.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

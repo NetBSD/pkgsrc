@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/01/16 02:24:02 rodent Exp $
-#
+# $NetBSD: Makefile,v 1.20 2014/01/25 10:29:58 wiz Exp $
 
 DISTNAME=	simplejson-3.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,9 +12,6 @@ COMMENT=	Simplejson is a simple, fast, extensible JSON encoder/decoder
 LICENSE=	mit
 
 USE_LANGUAGES=	c
-
-PYTHON_VERSIONS_ACCEPTED=	33 27 26
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} setup.py test -q

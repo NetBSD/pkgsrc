@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/28 06:31:02 asau Exp $
-#
+# $NetBSD: Makefile,v 1.8 2014/01/25 10:30:29 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
@@ -7,6 +6,8 @@ PKGREVISION=	1
 COMMENT=	Simple Common Gateway Interface
 
 DEPENDS+=	${PYPKGPREFIX}-quixote-[0-9]*:../../devel/py-quixote
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-quixote
 
 .include "../../lang/python/distutils.mk"
 

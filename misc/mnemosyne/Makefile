@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2013/10/24 12:32:38 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.28 2014/01/25 10:30:14 wiz Exp $
 
 DISTNAME=	mnemosyne-1.2.2
 PKGREVISION=	16
@@ -15,6 +14,7 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	# none
 
 EGG_NAME=	${DISTNAME:S/^m/M/}
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-qt3-base, py-imaging
 
 SUBST_CLASSES+=			installpath
 SUBST_SED.installpath=		-e 's,/usr/share,${PREFIX}/share,'

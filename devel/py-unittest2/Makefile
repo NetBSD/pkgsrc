@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/07/08 16:17:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/25 10:30:05 wiz Exp $
 
 DISTNAME=		unittest2-0.5.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -10,12 +10,11 @@ HOMEPAGE=		http://pypi.python.org/pypi/unittest2
 COMMENT=		Unittest features for Python 2.7 backported to Python 2.3+
 LICENSE=		original-bsd
 
-PYTHON_VERSIONS_INCLUDE_3X = no
-
 DOCDIR=			share/doc/${PKGBASE}
 INSTALLATION_DIRS+=	${DOCDIR}
 PLIST_SUBST+=		DOCDIR=${DOCDIR}
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # separate package exists: unittest2py3k and could be packaged
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.txt ${DESTDIR}${PREFIX}/${DOCDIR}

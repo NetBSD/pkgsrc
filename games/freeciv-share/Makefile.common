@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.39 2012/07/31 15:49:37 prlw1 Exp $
+# $NetBSD: Makefile.common,v 1.40 2014/01/25 10:30:08 wiz Exp $
 
 # used by games/freeciv-share/Makefile
 # used by games/freeciv-client/Makefile
@@ -25,6 +25,7 @@ DISTINFO_FILE=		${.CURDIR}/../../games/freeciv-share/distinfo
 PATCHDIR=		${.CURDIR}/../../games/freeciv-share/patches
 
 PYTHON_PATCH_SCRIPTS=	${WRKSRC}/common/generate_packets.py
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.3.2
 
 SUBST_CLASSES+=		data
 SUBST_STAGE.data=	post-patch
