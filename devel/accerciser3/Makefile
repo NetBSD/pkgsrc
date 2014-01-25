@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/10/10 14:42:03 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.9 2014/01/25 08:47:17 wiz Exp $
 
 DISTNAME=	accerciser-3.6.0
 PKGREVISION=	6
@@ -20,13 +19,17 @@ REPLACE_PYTHON=		plugins/ipython_view.py
 REPLACE_PYTHON+=	src/accerciser.in
 
 BUILD_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
-
-# correct dependency:
 DEPENDS+=	${PYPKGPREFIX}-at-spi2-[0-9]*:../../devel/py-at-spi2
 DEPENDS+=	libwnck3-[0-9]*:../../devel/libwnck3
-#USE_LANGUAGES=	# none
+
 # dependencies to keep package's configure script happy:
 USE_LANGUAGES=	c
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 3.6.0
+
+# does not install into proper __pycache__ dir as of 3.6.0
+PY_PEP3147=	no
+
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../devel/at-spi2-core/buildlink3.mk"
 .include "../../devel/py-gobject3/buildlink3.mk"
