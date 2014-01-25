@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.418 2014/01/24 23:01:05 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.419 2014/01/25 02:55:27 agc Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -502,3 +502,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-testtools to 0.9.34 [obache 2014-01-24]
 	Updated devel/jenkins to 1.532.1 [ryoon 2014-01-24]
 	Updated graphics/MesaLib to 7.11.2nb4 [ryoon 2014-01-24]
+	Updated sysutils/libvirt to 1.2.1 [agc 2014-01-24]
