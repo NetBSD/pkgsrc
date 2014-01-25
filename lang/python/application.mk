@@ -1,4 +1,4 @@
-# $NetBSD: application.mk,v 1.10 2010/07/24 18:12:11 gdt Exp $
+# $NetBSD: application.mk,v 1.11 2014/01/25 10:45:50 wiz Exp $
 #
 # Replace the #! interpreter for Python scripts.
 #
@@ -12,17 +12,14 @@
 # REPLACE_PYTHON
 #	A list of Python scripts to be installed, relative to ${WRKSRC}.
 #
-# PYTHON_PATCH_SCRIPTS
-#	The same as REPLACE_PYTHON.
-#
 # Keywords: python
 #
 
 .include "../../lang/python/pyversion.mk"
 
-.if defined(PYTHON_PATCH_SCRIPTS) || defined(REPLACE_PYTHON)
+.if defined(REPLACE_PYTHON)
 REPLACE_INTERPRETER+=	python
 REPLACE.python.old=	.*python[^ ]*
 REPLACE.python.new=	${PYTHONBIN}
-REPLACE_FILES.python=	${PYTHON_PATCH_SCRIPTS} ${REPLACE_PYTHON}
+REPLACE_FILES.python=	${REPLACE_PYTHON}
 .endif
