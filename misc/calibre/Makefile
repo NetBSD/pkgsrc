@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2014/01/17 23:11:27 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2014/01/25 10:30:14 wiz Exp $
 
 DISTNAME=	calibre-0.9.7
 PKGREVISION=	15
@@ -32,6 +32,7 @@ PYTHON_VERSIONED_DEPENDENCIES=	dateutil dns
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config pax
 PYTHON_VERSIONS_ACCEPTED=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-mechanize, py-beautifulsoup, py-imaging, py-netifaces
 PYDISTUTILSPKG=	yes
 PYSETUPOPTARGS=	# empty
 PYSETUPINSTALLARGS=	--prefix=${PREFIX} --root=${DESTDIR:Q}${PREFIX}

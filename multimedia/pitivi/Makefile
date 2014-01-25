@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2013/10/10 14:42:25 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.29 2014/01/25 10:30:15 wiz Exp $
 
 DISTNAME=	pitivi-0.15.2
 PKGREVISION=	5
@@ -17,11 +16,13 @@ USE_TOOLS+=	pkg-config intltool gmake msgfmt
 
 CONFIGURE_ENV+=	ac_cv_path_PYTHON=${PYTHONBIN}
 PYTHON_PATCH_SCRIPTS=	bin/pitivi.in
+PYTHON_VERSIONED_DEPENDENCIES=	cairo
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2, py-gstreamer0.10
 
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
-.include "../../graphics/py-cairo/buildlink3.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../multimedia/py-gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-gnonlin/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/12 09:45:25 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/25 10:30:28 wiz Exp $
 
 DISTNAME=	Flask-Principal-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,8 +11,6 @@ COMMENT=	Identity management for Flask
 LICENSE=	mit
 
 USE_LANGUAGES=	# empty
-
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 EGG_NAME=	${DISTNAME:S/-/_/}
 

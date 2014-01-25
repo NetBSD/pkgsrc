@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2013/10/10 14:41:58 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.44 2014/01/25 10:29:56 wiz Exp $
 
 DISTNAME=	exaile_0.2.14
 PKGNAME=	${DISTNAME:S/_/-/1}
@@ -18,6 +17,8 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config gmake intltool msgfmt
 
 PYTHON_PATCH_SCRIPTS=	exaile.py
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-mutagen, py-sqlite2, py-gtk2, py-gstreamer0.10
+
 MAKE_ENV+=	PYTHONBIN=${PYTHONBIN}
 MAKE_FLAGS+=	PKGLOCALEDIR=${PKGLOCALEDIR}
 

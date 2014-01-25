@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2013/10/10 14:42:28 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.31 2014/01/25 10:30:16 wiz Exp $
 
 VERSION=	0.9.9
 DISTNAME=	nagstamon_${VERSION}
@@ -13,6 +12,10 @@ HOMEPAGE=	http://nagstamon.ifw-dresden.de/
 COMMENT=	Nagios status monitor which takes place in systray or on desktop
 LICENSE=	gnu-gpl-v2
 
+DEPENDS+=	${PYPKGPREFIX}-lxml>=2.2.4:../../textproc/py-lxml
+DEPENDS+=	${PYPKGPREFIX}-libxslt>=1.1.24:../../textproc/py-libxslt
+DEPENDS+=	sox>=14.0.1:../../audio/sox
+
 USE_LANGUAGES=		# none
 PYDISTUTILSPKG=		yes
 
@@ -22,9 +25,7 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 REPLACE_PYTHON=		${WRKSRC}/*.py
 REPLACE_PYTHON+=	${WRKSRC}/Nagstamon/Server/Multisite.py
 
-DEPENDS+=	${PYPKGPREFIX}-lxml>=2.2.4:../../textproc/py-lxml
-DEPENDS+=	${PYPKGPREFIX}-libxslt>=1.1.24:../../textproc/py-libxslt
-DEPENDS+=	sox>=14.0.1:../../audio/sox
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-libxslt, py-ORBit via py-gnome2, py-gtk2
 
 SUBST_CLASSES+=		mandir
 SUBST_STAGE.mandir=	pre-configure

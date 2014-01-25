@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2013/07/12 10:45:00 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.25 2014/01/25 10:30:18 wiz Exp $
 
 DISTNAME=	pygopherd_2.0.16
 PKGREVISION=	4
@@ -34,6 +33,7 @@ RCD_SCRIPTS=	pygopherd
 FILES_SUBST+=	RUNTIMEDIR=${RUNTIMEDIR:Q}
 FILES_SUBST+=	PYTHONBIN=${PYTHONBIN:Q}
 
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.0.16
 PYTHON_PATCH_SCRIPTS=	bin/pygopherd
 PYTHON_PATCH_SCRIPTS+=	pygopherd/GopherExceptionsTest.py
 PYTHON_PATCH_SCRIPTS+=	pygopherd/fileextTest.py

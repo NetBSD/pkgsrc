@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/02 23:48:06 asau Exp $
-#
+# $NetBSD: Makefile,v 1.15 2014/01/25 10:29:57 wiz Exp $
 
 DISTNAME=		pymad-0.6
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -16,6 +15,8 @@ HAS_CONFIGURE=		yes
 CONFIG_SHELL=		${PYTHONBIN}
 CONFIGURE_SCRIPT=	config_unix.py
 CONFIGURE_ARGS+=	--prefix ${PREFIX}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.6
 
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../lang/python/distutils.mk"

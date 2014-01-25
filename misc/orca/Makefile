@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2012/10/08 09:57:32 asau Exp $
-#
+# $NetBSD: Makefile,v 1.36 2014/01/25 10:30:14 wiz Exp $
 
 DISTNAME=	orca-2.32.1
 PKGREVISION=	1
@@ -16,7 +15,6 @@ LICENSE=	gnu-lgpl-v2
 DEPENDS+=	${PYPKGPREFIX}-at-spi>=1.32:../../devel/py-at-spi
 DEPENDS+=	${PYPKGPREFIX}-gobject>=2.26:../../devel/py-gobject
 DEPENDS+=	${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
-DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 DEPENDS+=	${PYPKGPREFIX}-ORBit>=2.24:../../net/py-ORBit
 DEPENDS+=	${PYPKGPREFIX}-dbus-[0-9]*:../../sysutils/py-dbus
 DEPENDS+=	${PYPKGPREFIX}-gnome2>=2.28:../../x11/py-gnome2
@@ -32,6 +30,9 @@ USE_PKGLOCALEDIR=	yes
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 PY_PATCHPLIST=	yes
 
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ORBit, py-gnome2, py-gtk2
+PYTHON_VERSIONED_DEPENDENCIES=	cairo
+
 .include "../../mk/bsd.prefs.mk"
 .if ${X11_TYPE} == "modular" || !exists(${X11BASE}/bin/xmodmap)
 DEPENDS+=	xmodmap-[0-9]*:../../x11/xmodmap
@@ -41,4 +42,5 @@ DEPENDS+=	xmodmap-[0-9]*:../../x11/xmodmap
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

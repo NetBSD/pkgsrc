@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2013/10/09 17:39:13 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2014/01/25 10:30:14 wiz Exp $
 
 DISTNAME=	kodos-2.4.9
 PKGREVISION=	6
@@ -10,7 +10,8 @@ HOMEPAGE=	http://kodos.sourceforge.net/
 COMMENT=	GUI for creating, testing and debugging Python REs
 
 PYDISTUTILSPKG=	yes
-USE_LANGUAGES=
+USE_LANGUAGES=	# empty
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-qt3-modules
 
 SUBST_CLASSES+=		libpath
 SUBST_STAGE.libpath=	pre-configure

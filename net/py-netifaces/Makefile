@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/11/26 13:55:00 ryoon Exp $
-#
+#y$NetBSD: Makefile,v 1.2 2014/01/25 10:30:17 wiz Exp $
 
 DISTNAME=	netifaces-0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +10,7 @@ HOMEPAGE=	http://alastairs-place.net/projects/netifaces/
 COMMENT=	Portable access to network interfaces from Python
 LICENSE=	mit
 
-PYDISTUTILSPKG=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.8
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

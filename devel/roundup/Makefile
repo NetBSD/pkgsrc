@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2012/10/31 11:19:39 asau Exp $
+# $NetBSD: Makefile,v 1.44 2014/01/25 10:30:05 wiz Exp $
 
 DISTNAME=	roundup-1.4.19
 PKGREVISION=	2
@@ -10,9 +10,10 @@ HOMEPAGE=	http://roundup.sourceforge.net/
 COMMENT=	Issue tracking system with command-line, web and email clients
 LICENSE=	mit AND zpl
 
-USE_LANGUAGES=
+USE_LANGUAGES=	# empty
 USE_TOOLS+=	pax
 
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.4.19
 PYTHON_PATCH_SCRIPTS+=	cgi-bin/roundup.cgi demo.py roundup/admin.py
 PYTHON_PATCH_SCRIPTS+=	frontends/roundup.cgi
 PYTHON_PATCH_SCRIPTS+=	roundup/backends/locking.py

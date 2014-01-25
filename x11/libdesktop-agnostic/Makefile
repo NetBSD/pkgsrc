@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2013/10/10 14:41:48 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.19 2014/01/25 10:30:31 wiz Exp $
 
 DISTNAME=	libdesktop-agnostic-0.3.92
 PKGREVISION=	13
@@ -11,9 +10,6 @@ HOMEPAGE=	https://launchpad.net/libdesktop-agnostic
 COMMENT=	Desktop-agnostic library, apis and tools
 LICENSE=	gnu-lgpl-v2
 
-# Needed for launchpad
-FETCH_USING=	curl
-
 USE_TOOLS+=	intltool pkg-config msgfmt
 
 PKGCONFIG_OVERRIDE+=	data/desktop-agnostic.pc.in
@@ -23,6 +19,7 @@ CONFIGURE_ARGS=	--config-backends=keyfile,gconf	\
 		--desktop-entry-backends=glib
 
 PY_PATCHPLIST=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.3.92
 
 EGDIR=			${PREFIX}/share/examples/libdesktop-agnostic
 PKG_SYSCONFSUBDIR=	xdg

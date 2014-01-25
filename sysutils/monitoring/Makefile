@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2013/04/22 09:39:21 imil Exp $
-#
+# $NetBSD: Makefile,v 1.2 2014/01/25 10:30:21 wiz Exp $
 
 VERSION=		e518a90eade4ca538468b6640dccb651e6034b9e
 DISTNAME=		${VERSION}
 PKGNAME=		monitoring-0.9.5
 CATEGORIES=		sysutils
 MASTER_SITES=		https://github.com/sebastien/monitoring/archive/
-FETCH_USING=		curl
 
 MAINTAINER=		imil@NetBSD.org
 HOMEPAGE=		https://github.com/sebastien/monitoring
@@ -16,6 +14,7 @@ LICENSE=		modified-bsd
 WRKSRC=			${WRKDIR}/monitoring-${VERSION}
 
 REPLACE_PYTHON+=	Sources/monitoring.py Scripts/monitoring
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.9.5
 
 DOCDIR=			${PREFIX}/share/doc/monitoring
 EXPDIR=			${PREFIX}/share/examples/monitoring

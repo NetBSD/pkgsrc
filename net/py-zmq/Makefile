@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/07/31 12:16:57 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.12 2014/01/25 10:30:17 wiz Exp $
 
 DISTNAME=	pyzmq-13.1.0
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -18,8 +17,6 @@ REPLACE_PYTHON+=	zmq/eventloop/minitornado/platform/auto.py
 REPLACE_PYTHON+=	zmq/eventloop/minitornado/platform/interface.py
 REPLACE_PYTHON+=	zmq/eventloop/minitornado/platform/posix.py
 REPLACE_PYTHON+=	zmq/eventloop/minitornado/stack_context.py
-
-PYTHON_VERSIONS_INCLUDE_3X= yes
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/01/23 09:40:29 obache Exp $
-#
+# $NetBSD: Makefile,v 1.9 2014/01/25 10:30:04 wiz Exp $
 
 DISTNAME=	msgpack-python-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python-/-/}
@@ -12,8 +11,6 @@ COMMENT=	MessagePack (de)serializer for Python
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=	c c++
-
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 EGG_NAME=	${DISTNAME:S/-/_/}
 

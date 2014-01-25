@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 22:14:00 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/01/25 10:29:57 wiz Exp $
 
 DISTNAME=	pylast-0.5.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -12,7 +11,6 @@ COMMENT=	Python interface to Last.fm
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=			# none
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

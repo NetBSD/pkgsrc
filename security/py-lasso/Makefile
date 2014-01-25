@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2014/01/20 16:40:25 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2014/01/25 10:30:20 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	11
 COMMENT=	Liberty Alliance Single Sign On binding for Python
-
-.include "../../lang/python/pyversion.mk"
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
@@ -15,6 +13,7 @@ INSTALL_DIRS=	bindings/python
 
 PY_PATCHPLIST=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.3.6
+
 .include "../../lang/python/extension.mk"
 
 .include "../../security/lasso/buildlink3.mk"

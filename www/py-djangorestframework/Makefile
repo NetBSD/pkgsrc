@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/28 06:31:00 asau Exp $
+# $NetBSD: Makefile,v 1.4 2014/01/25 10:30:28 wiz Exp $
 
 DISTNAME=	djangorestframework-0.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,10 +10,11 @@ HOMEPAGE=	http://django-rest-framework.org/
 COMMENT=	Lightweight REST framework for Django
 LICENSE=	modified-bsd
 
+DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
+
 EGG_NAME=		${DISTNAME}
 USE_LANGUAGES=		# empty
-
-DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.2.3
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

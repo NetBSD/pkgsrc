@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/25 06:56:51 asau Exp $
-#
+# $NetBSD: Makefile,v 1.8 2014/01/25 10:30:24 wiz Exp $
 
 .include "../../textproc/mecab/Makefile.common"
 
@@ -22,6 +21,8 @@ do-test:
 	env ${TEST_ENV} ${PYTHONBIN} test.py
 
 BUILDLINK_API_DEPENDS.mecab+=	mecab>=${MECAB_VERSION}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.996
 
 .include "../../textproc/mecab/buildlink3.mk"
 .include "../../lang/python/distutils.mk"

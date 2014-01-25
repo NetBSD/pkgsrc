@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/23 18:16:53 asau Exp $
-#
+# $NetBSD: Makefile,v 1.12 2014/01/25 10:30:19 wiz Exp $
 
 DISTNAME=	pycrack-0.01
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:C/py//}
@@ -11,8 +10,6 @@ MAINTAINER=	darcy@NetBSD.org
 HOMEPAGE=	http://www.digitalevacuation.org/
 COMMENT=	Python interface to cracklib
 LICENSE=	gnu-gpl-v2
-
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 DEPENDS+=			crack>=5.0:../../security/crack
 

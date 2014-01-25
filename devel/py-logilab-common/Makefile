@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.5 2013/06/04 07:35:14 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.6 2014/01/25 10:30:04 wiz Exp $
 
-VERS=			0.53.0
-DISTNAME=		logilab-common-${VERS}
-PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-EGG_NAME=		logilab_common-${VERS}
-CATEGORIES=		devel python
+VERS=		0.53.0
+DISTNAME=	logilab-common-${VERS}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+EGG_NAME=	logilab_common-${VERS}
+CATEGORIES=	devel python
 MASTER_SITES=	http://ftp.logilab.org/pub/common/
 
-MAINTAINER=		kamel.derouiche@gmail.com
-HOMEPAGE=		http://www.logilab.org/project/logilab-common
-COMMENT=		Useful miscellaneous modules used by Logilab projects
-LICENSE=		gnu-lgpl-v2.1
+MAINTAINER=	kamel.derouiche@gmail.com
+HOMEPAGE=	http://www.logilab.org/project/logilab-common
+COMMENT=	Useful miscellaneous modules used by Logilab projects
+LICENSE=	gnu-lgpl-v2.1
 
 #comment this out to avoid problems to find the binary by other programs
 PLIST_SUBST+=   PYVERSSUFFIX=${PYVERSSUFFIX}
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-mxDateTime
 
 INSTALLATION_DIRS=  ${PKGMANDIR}/man1
 

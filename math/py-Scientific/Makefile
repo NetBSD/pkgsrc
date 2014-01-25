@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2013/09/01 12:14:07 obache Exp $
+# $NetBSD: Makefile,v 1.35 2014/01/25 10:30:13 wiz Exp $
 
 DISTNAME=	ScientificPython-2.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Python//}
@@ -13,6 +13,7 @@ COMMENT=	Python modules for scientific computing
 CONFLICTS+=	py-Scientific-[0-9]*
 
 PYDISTUTILSPKG=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.8
 
 MAKE_ENV+=	NETCDF_PREFIX=${BUILDLINK_PREFIX.netcdf}
 

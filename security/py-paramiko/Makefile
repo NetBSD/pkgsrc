@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2013/10/20 17:02:02 gls Exp $
+# $NetBSD: Makefile,v 1.19 2014/01/25 10:30:20 wiz Exp $
 
 DISTNAME=		paramiko-1.12.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,8 @@ DEPENDS+=		${PYPKGPREFIX}-ecdsa>=0.9:../../security/py-ecdsa
 
 PYDISTUTILSPKG=	yes
 REPLACE_PYTHON=	paramiko/rng*.py
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33
 
 do-test:
 	(cd ${WRKSRC} && ${PYTHONBIN} test.py)

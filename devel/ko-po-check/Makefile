@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/31 11:17:09 asau Exp $
+# $NetBSD: Makefile,v 1.12 2014/01/25 10:30:01 wiz Exp $
 
 DISTNAME=	ko-po-check-0.8
 PKGREVISION=	3
@@ -13,7 +13,8 @@ GNU_CONFIGURE=	yes
 
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
 
-PYTHON_PATCH_SCRIPTS=	${WRKSRC}/scripts/ko-po-check.in
+REPLACE_PYTHON=	scripts/ko-po-check.in
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.8
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

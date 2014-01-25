@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2013/12/07 12:57:54 obache Exp $
-#
+# $NetBSD: Makefile,v 1.15 2014/01/25 10:30:09 wiz Exp $
 
 DISTNAME=	blockdiag-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-funcparserlib>=0.3.6:../../devel/py-funcparserlib
 DEPENDS+=	${PYPKGPREFIX}-webcolors-[0-9]*:../../www/py-webcolors
 
 PYTHON_SELF_CONFLICT=		yes
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 USE_LANGUAGES=	# none
 

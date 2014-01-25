@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/07/03 08:37:43 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2014/01/25 10:30:29 wiz Exp $
 
 DISTNAME=	gdata-2.0.18
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,8 @@ COMMENT=	Google Data API Python client library
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.0.18
 
 REPLACE_PYTHON=		src/atom/__init__.py
 REPLACE_PYTHON+=	src/atom/auth.py

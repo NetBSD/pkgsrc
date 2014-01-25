@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2013/09/05 15:27:42 drochner Exp $
+# $NetBSD: Makefile,v 1.42 2014/01/25 10:30:32 wiz Exp $
 
 DISTNAME=	sip-4.14.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyqt/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.riverbankcomputing.com/software/sip/intro
 COMMENT=	Tool to create Python bindings for C++ libraries
-
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 CONFLICTS+=	${PYPKGPREFIX}-qt2-sip-* ${PYPKGPREFIX}-qt3-sip-*
 

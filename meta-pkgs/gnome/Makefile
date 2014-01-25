@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2013/06/26 22:06:17 joerg Exp $
+# $NetBSD: Makefile,v 1.129 2014/01/25 10:30:14 wiz Exp $
 
 DISTNAME=	gnome-2.26.2
 PKGREVISION=	4
@@ -10,6 +10,8 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Meta-package for the GNOME desktop
 
 META_PACKAGE=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ORBit via py-gnome2
 
 .include "../../lang/python/pyversion.mk"
 

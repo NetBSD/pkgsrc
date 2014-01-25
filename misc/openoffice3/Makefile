@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2014/01/01 11:52:26 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2014/01/25 10:30:14 wiz Exp $
 
 OO_VER=			3.1.1
 OO_TAG=			OOO310_m19
@@ -31,6 +31,8 @@ WRKSRC=			${WRKDIR}/${OO_TAG}
 # Cannot compile with 3.3.x (GCC Bugzilla Bug 16879).
 GCC_REQD+=		3.4
 USE_LANGUAGES+=		c c++
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 3.1.1
 
 CONFLICTS+=		staroffice-[0-9]*
 CONFLICTS+=		openoffice-[0-9]*

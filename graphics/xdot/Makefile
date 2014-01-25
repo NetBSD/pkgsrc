@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/01/05 22:12:33 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.2 2014/01/25 10:30:10 wiz Exp $
 
 DISTNAME=	xdot
 PKGNAME=	xdot-20121124
@@ -18,6 +17,7 @@ WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
 DIST_SUBDIR=	${PKGNAME_NOREV}
 REPLACE_PYTHON=	xdot.py
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 INSTALLATION_DIRS=	bin
 
 do-build:

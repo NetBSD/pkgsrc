@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/10/11 09:59:54 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/01/25 10:30:15 wiz Exp $
 
 DISTNAME=	Radicale-0.8
 PKGREVISION=	1
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v3
 PYDISTUTILSPKG=		yes
 EGDIR=			share/examples/radicale
 
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 INSTALLATION_DIRS=	${EGDIR}
 OWN_DIRS=		${PKG_SYSCONFDIR}/radicale
 CONF_FILES+=		${EGDIR}/config ${PKG_SYSCONFDIR}/radicale/config

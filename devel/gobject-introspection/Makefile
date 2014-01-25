@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2014/01/02 12:32:19 obache Exp $
-#
+# $NetBSD: Makefile,v 1.37 2014/01/25 10:30:01 wiz Exp $
 
 DISTNAME=	gobject-introspection-1.38.0
 PKGREVISION=	1
@@ -13,6 +12,8 @@ COMMENT=	GObject Introspection
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.38.0
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

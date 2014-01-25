@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2009/07/22 09:19:37 wiz Exp $
+# $NetBSD: Makefile.common,v 1.14 2014/01/25 10:30:31 wiz Exp $
 #
 # used by x11/py-qt3-base/Makefile
 # used by x11/py-qt3-modules/Makefile
@@ -33,6 +33,7 @@ CONFIGURE_ARGS+=	-v ${PREFIX}/share/sip${PYVERSSUFFIX}
 
 PY_PATCHPLIST=	yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 3.18.1
 
 do-configure:
 	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \

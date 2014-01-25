@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/11/23 13:58:13 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.2 2014/01/25 10:29:57 wiz Exp $
 
 DISTNAME=	quodlibet-2.6.3
 CATEGORIES=	audio
@@ -20,6 +19,7 @@ USE_PKGLOCALEDIR=	yes
 #BUILD_TARGET=		_trayicon.so _mmkeys.so
 
 PYDISTUTILSPKG= yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-mutagen, py-gtk2, py-gstreamer0.10
 PYTHON_PATCH_SCRIPTS=	exfalso.py quodlibet.py operon.py
 
 .include "../../devel/py-gobject/buildlink3.mk"

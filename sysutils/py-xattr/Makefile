@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/11/26 20:25:42 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/25 10:30:22 wiz Exp $
 
 DISTNAME=	v0.7.2
 PROPERNAME=	${DISTNAME:S/v/xattr-/}
@@ -21,6 +21,8 @@ WRKSRC=		${WRKDIR}/${PROPERNAME}
 EGG_NAME=	${PROPERNAME}
 USE_LANGUAGES=	c
 REPLACE_PYTHON=	xattr/tool.py
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33
 
 .include "../../lang/python/pyversion.mk"
 

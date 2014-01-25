@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2013/12/09 23:12:31 prlw1 Exp $
+# $NetBSD: Makefile,v 1.23 2014/01/25 10:30:03 wiz Exp $
 
 DISTNAME=		pygobject-3.10.2
 PKGNAME=		${PYPKGPREFIX}-gobject3-3.10.2
@@ -18,7 +18,6 @@ USE_TOOLS+=		pkg-config gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
-#PYTHON_VERSIONS_INCLUDE_3X=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	26
 PYTHON_SELF_CONFLICT=		yes
 
@@ -30,7 +29,8 @@ CONFLICTS+=		${PYPKGPREFIX}-gobject<2.28.6nb4
 
 # needed for tests only
 # https://bugzilla.gnome.org/show_bug.cgi?id=685094
-.include "../../graphics/cairo/buildlink3.mk"
+PYTHON_VERSIONED_DEPENDENCIES=	cairo:link
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../graphics/cairo-gobject/buildlink3.mk"
 TEST_TARGET=    check
 
@@ -48,5 +48,4 @@ BUILDLINK_API_DEPENDS.glib2=	glib2>=2.35.9
 BUILDLINK_API_DEPENDS.gobject-introspection=	gobject-introspection>=1.35.9
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
-.include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

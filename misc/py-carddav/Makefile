@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2013/11/26 13:46:30 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2014/01/25 10:30:14 wiz Exp $
 
 DISTNAME=	pyCardDAV-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyCardDAV/carddav/}
@@ -16,6 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-vobject-[0-9]*:../../textproc/py-vobject
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-vobject
 
 REPLACE_PYTHON=		pycarddav/ui.py
 REPLACE_PYTHON+=	pycarddav/controllers.py

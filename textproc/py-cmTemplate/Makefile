@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.5 2012/10/25 06:56:48 asau Exp $
-#
+# $NetBSD: Makefile,v 1.6 2014/01/25 10:30:23 wiz Exp $
 
-DISTNAME=		cmTemplate-0.3.2
+DISTNAME=	cmTemplate-0.3.2
 PKGNAME=	${PYPKGPREFIX}-cmTemplate-0.3.2
-CATEGORIES=		textproc python
-MASTER_SITES=		http://www.bouncingchairs.net/oss/
+CATEGORIES=	textproc python
+MASTER_SITES=	http://www.bouncingchairs.net/oss/
 
-MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://www.bouncingchairs.net/oss/
-COMMENT=		Simple and fast Python template engine
+MAINTAINER=	joerg@NetBSD.org
+HOMEPAGE=	http://www.bouncingchairs.net/oss/
+COMMENT=	Simple and fast Python template engine
 
 PY_PATCHPLIST=	# empty
 PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.3.2
 
 INSTALLATION_DIRS=	${PYSITELIB} share/doc/${PYPKGPREFIX}-cmTemplate
 

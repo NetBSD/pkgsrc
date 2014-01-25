@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2013/12/16 01:03:02 gdt Exp $
-#
+# $NetBSD: Makefile,v 1.34 2014/01/25 10:30:19 wiz Exp $
 
 DISTNAME=	pycrypto-2.6.1
 PKGNAME=	${DISTNAME:S/^py/${PYPKGPREFIX}-/}
@@ -14,8 +13,6 @@ LICENSE=	python-software-foundation
 
 CONFLICTS+=	${PYPKGPREFIX}-amkCrypto-[0-9]*
 SUPERSEDES+=	${PYPKGPREFIX}-amkCrypto-[0-9]*
-
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 GNU_CONFIGURE=	yes
 

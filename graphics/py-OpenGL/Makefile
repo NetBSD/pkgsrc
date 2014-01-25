@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/01/11 14:42:03 adam Exp $
+# $NetBSD: Makefile,v 1.17 2014/01/25 10:30:09 wiz Exp $
 
 DISTNAME=	PyOpenGL-3.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^Py//}
@@ -12,11 +12,9 @@ COMMENT=	Python bindings for OpenGL
 
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
-PYDISTUTILSPKG=	yes
-#PY_PATCHPLIST=	YES
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-Numeric
 
-#.include "../../lang/python/egg.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
 .include "../../math/py-Numeric/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"

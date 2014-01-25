@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/03 03:50:26 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/25 10:30:24 wiz Exp $
 
 DISTNAME=	iniparse-0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,8 @@ COMMENT=	Better INI parser for Python
 LICENSE=	mit AND python-software-foundation
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33
 
 post-install:
 	${CHMOD} -x ${DESTDIR}${PREFIX}/share/doc/iniparse-0.4/index.html

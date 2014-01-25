@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/31 11:19:27 asau Exp $
+# $NetBSD: Makefile,v 1.17 2014/01/25 10:30:02 wiz Exp $
 
 DISTNAME=	optik-1.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/optik/Optik/}
@@ -12,6 +12,8 @@ COMMENT=	Command line parsing library for Python
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	#none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} test/test_optik.py

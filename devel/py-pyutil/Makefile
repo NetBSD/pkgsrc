@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/31 11:19:34 asau Exp $
-#
+# $NetBSD: Makefile,v 1.10 2014/01/25 10:30:04 wiz Exp $
 
 DISTNAME=	pyutil-1.9.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-zbase32-[0-9]*:../../converters/py-zbase32
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-twisted via py-setuptools_trial, py-zbase32
 
 REPLACE_INTERPRETER+=	python
 REPLACE.python.old=	/usr/bin/env python

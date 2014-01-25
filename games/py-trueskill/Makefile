@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/06/12 20:33:29 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2014/01/25 10:30:08 wiz Exp $
 
 DISTNAME=	trueskill-0.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python module implementing the TrueSkill rating system
 LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=			# none
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

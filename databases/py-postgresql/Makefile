@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2013/01/08 15:09:59 darcy Exp $
+# $NetBSD: Makefile,v 1.69 2014/01/25 10:29:59 wiz Exp $
 
 DISTNAME=		PyGreSQL-4.1.1
 PKGNAME=		${PYPKGPREFIX}-postgresql-4.1.1
@@ -9,11 +9,11 @@ EXTRACT_SUFX=		.tgz
 OWNER=			darcy@NetBSD.org
 HOMEPAGE=		http://www.PyGreSQL.org/
 COMMENT=		Python interface to PostgreSQL
+LICENSE=        	postgresql-license
 
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
 MAKE_ENV+=		BINDIR=${PREFIX}/bin
 USE_TOOLS+=		gmake
-LICENSE=        postgresql-license
 
 MAKE_FILE=		GNUmakefile
 MAKE_ENV+=		INSTALLED_LIBPQ=1
@@ -21,8 +21,8 @@ MAKE_ENV+=		INSTALLED_LIBPQ=1
 PY_PATCHPLIST=		yes
 PLIST_SUBST+=		PYPKGPREFIX=${PYPKGPREFIX:Q}
 REPLACE_PYTHON=		pg.py pgdb.py
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 4.1.1
 
-PYDISTUTILSPKG=		yes
 DOCDIR=			${PREFIX}/share/doc/${PYPKGPREFIX}-postgresql
 
 INSTALLATION_DIRS=	${DOCDIR}/tutorial ${DOCDIR}/docs

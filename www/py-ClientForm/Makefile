@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/28 06:30:58 asau Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/01/25 10:30:27 wiz Exp $
 
 DISTNAME=	ClientForm-0.2.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +11,7 @@ COMMENT=	Python module for handling HTML forms on the client side
 LICENSE=	modified-bsd OR zpl
 
 USE_LANGUAGES=	# none
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.2.10
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

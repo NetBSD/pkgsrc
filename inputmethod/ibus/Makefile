@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2014/01/16 11:04:26 obache Exp $
-#
+# $NetBSD: Makefile,v 1.35 2014/01/25 10:30:11 wiz Exp $
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.5.4
 
 .include "Makefile.common"
 

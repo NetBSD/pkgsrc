@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/08 12:19:19 asau Exp $
-#
+# $NetBSD: Makefile,v 1.24 2014/01/25 10:30:12 wiz Exp $
 
 DISTNAME=	offlineimap-v6.5.2.1
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -20,6 +19,7 @@ WRKSRC=		${WRKDIR}/offlineimap
 INSTALLATION_DIRS=	share/examples/offlineimap
 
 EGG_NAME=	${PKGNAME_NOREV}
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 6.5.2.1
 
 post-install:
 .for f in offlineimap.conf offlineimap.conf.minimal

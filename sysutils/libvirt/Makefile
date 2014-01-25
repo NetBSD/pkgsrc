@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/01/25 02:54:27 agc Exp $
+# $NetBSD: Makefile,v 1.16 2014/01/25 10:30:21 wiz Exp $
 
 DISTNAME=	libvirt-1.2.1
 CATEGORIES=	sysutils
@@ -14,6 +14,8 @@ CONFIGURE_ARGS+=	--with-vbox=no --sysconfdir=${EGDIR} --localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--without-macvtap
 USE_TOOLS+=		gmake pkg-config perl
 USE_LIBTOOL=		yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-xml
 
 PY_PATCHPLIST=		yes
 PYTHON_PATCH_SCRIPTS+=	examples/python/domstart.py

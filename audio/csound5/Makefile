@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2014/01/09 16:55:16 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.29 2014/01/25 10:29:56 wiz Exp $
 
 DISTNAME=		Csound${CSOUND_VERSION}_src
 PKGNAME=		csound5-${CSOUND_VERSION}
@@ -25,6 +24,8 @@ SCONS_ARGS+=		buildDSSI=0 buildLoris=0 buildRelease=1
 SCONS_ARGS+=		useALSA=0 useJack=0 useOSC=0 usePortMIDI=0
 SCONS_ARGS+=		usePortAudio=0
 SCONS_ARGS+=		buildInterfaces=0
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 5.01
 
 INSTALLATION_DIRS=	bin
 

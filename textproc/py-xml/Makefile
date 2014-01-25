@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/06/17 13:33:47 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2014/01/25 10:30:25 wiz Exp $
 
 DISTNAME=	PyXML-0.8.4
 PKGNAME=	${PYPKGPREFIX}-xml-0.8.4
@@ -17,6 +17,8 @@ PYSETUPBUILDARGS+=	--with-libexpat=${BUILDLINK_DIR}
 PYSETUPBUILDARGS+=	--ldflags="${EXPAT_LDFLAGS}"
 EXPAT_LDFLAGS=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.expat}/lib
 FIX_RPATH+=		EXPAT_LDFLAGS
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # dead upstream, no plans of porting
 
 PYXML_SCRIPTS=	scripts/xmlproc_parse \
 		scripts/xmlproc_val
