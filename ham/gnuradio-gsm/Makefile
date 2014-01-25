@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2013/11/20 20:04:38 adam Exp $
+# $NetBSD: Makefile,v 1.19 2014/01/25 10:45:19 wiz Exp $
 
 PKGNAME=	gnuradio-gsm-${VERSION}
 PKGREVISION=	8
@@ -9,8 +9,8 @@ COMMENT=	GNU Radio GSM 06.10 13kbit/sec voice encoder/decoder
 CONFIGURE_ARGS+=--enable-gr-gsm-fr-vocoder
 CONFIGURE_ARGS+=--with-gnuradio-core --with-omnithread --with-gruel
 
-PYTHON_PATCH_SCRIPTS+=	gr-gsm-fr-vocoder/src/python/encdec.py
-PYTHON_PATCH_SCRIPTS+=	gr-gsm-fr-vocoder/src/python/qa_gsm_full_rate.py
+REPLACE_PYTHON+=	gr-gsm-fr-vocoder/src/python/encdec.py
+REPLACE_PYTHON+=	gr-gsm-fr-vocoder/src/python/qa_gsm_full_rate.py
 
 post-install:
 	${MKDIR} ${DESTDIR}${PREFIX}/${PYSITELIB}/gnuradio/vocoder

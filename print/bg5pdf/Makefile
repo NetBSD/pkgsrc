@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2013/02/16 11:24:06 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2014/01/25 10:45:20 wiz Exp $
 
 DISTNAME=	bg5pdf-1.0.0
 PKGREVISION=	15
@@ -20,7 +20,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=				${WRKDIR}/bg5pdf
 PY_PATCHPLIST=			yes
-PYTHON_PATCH_SCRIPTS=		bg5pdf
+REPLACE_PYTHON=		bg5pdf
 
 INSTALLATION_DIRS=	bin ${PYSITELIB}
 

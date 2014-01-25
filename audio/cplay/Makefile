@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/04/13 07:55:04 ghen Exp $
+# $NetBSD: Makefile,v 1.18 2014/01/25 10:45:16 wiz Exp $
 
 DISTNAME=		cplay-1.49
 PKGREVISION=		4
@@ -12,7 +12,7 @@ LICENSE=		gnu-gpl-v2
 
 DEPENDS+=		${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 
-PYTHON_PATCH_SCRIPTS=	cplay
+REPLACE_PYTHON=	cplay
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
