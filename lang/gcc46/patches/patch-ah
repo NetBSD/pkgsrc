@@ -1,11 +1,11 @@
-$NetBSD: patch-ah,v 1.2 2012/04/17 07:48:13 sbd Exp $
+$NetBSD: patch-ah,v 1.3 2014/01/25 13:38:48 ryoon Exp $
 
 On NetBSD the 'cabs' and 'cabsf' functions are are __RENAME so that
 thay have '__c99_' prefixes.
 
---- gcc/fortran/f95-lang.c.orig	2011-02-24 09:53:26.000000000 +0000
+--- gcc/fortran/f95-lang.c.orig	2011-04-05 08:13:16.000000000 +0000
 +++ gcc/fortran/f95-lang.c
-@@ -824,10 +824,17 @@ gfc_init_builtin_functions (void)
+@@ -823,10 +823,17 @@ gfc_init_builtin_functions (void)
  
    gfc_define_builtin ("__builtin_cabsl", func_clongdouble_longdouble, 
  		      BUILT_IN_CABSL, "cabsl", ATTR_CONST_NOTHROW_LEAF_LIST);
@@ -23,3 +23,15 @@ thay have '__c99_' prefixes.
   
    gfc_define_builtin ("__builtin_copysignl", mfunc_longdouble[1], 
  		      BUILT_IN_COPYSIGNL, "copysignl",
+@@ -1163,6 +1170,11 @@ gfc_maybe_initialize_eh (void)
+   using_eh_for_cleanups ();
+ }
+ 
++const char *
++fname_as_string(int pretty_p)
++{
++	return NULL;
++}
+ 
+ #include "gt-fortran-f95-lang.h"
+ #include "gtype-fortran.h"
