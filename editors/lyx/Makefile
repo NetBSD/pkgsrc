@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2014/01/25 10:30:06 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2014/01/25 10:45:18 wiz Exp $
 
 DISTNAME=		lyx-2.0.6
 CATEGORIES=		editors
@@ -90,7 +90,7 @@ PLIST_SUBST+=		BIN_DIR=bin \
 			SHARE_DIR=share/lyx
 .endif
 
-PYTHON_PATCH_SCRIPTS=	development/cmake/doc/ReplaceValues.py \
+REPLACE_PYTHON=	development/cmake/doc/ReplaceValues.py \
 			development/cmake/po/cat.py \
 			development/tools/convert_kmap.py \
 			development/tools/gen_lfuns.py \
