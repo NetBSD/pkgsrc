@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2014/01/25 10:30:25 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2014/01/25 10:45:21 wiz Exp $
 
 DISTNAME=	gDeskCal-0_57_1
 PKGNAME=	gdeskcal-0.57.1
@@ -13,7 +13,7 @@ COMMENT=	Desktop calendar
 WRKSRC=		${WRKDIR}/gDeskCal-0.57.1
 NO_BUILD=	yes
 
-PYTHON_PATCH_SCRIPTS=	gdeskcal
+REPLACE_PYTHON=	gdeskcal
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-xml, py-gtk2
 

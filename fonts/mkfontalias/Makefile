@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/03 18:28:27 asau Exp $
+# $NetBSD: Makefile,v 1.14 2014/01/25 10:45:18 wiz Exp $
 #
 
 DISTNAME=	mkfontalias.py
@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# empty
 NO_BUILD=	yes
 
-PYTHON_PATCH_SCRIPTS=	${DISTNAME}
+REPLACE_PYTHON=	${DISTNAME}
 INSTALLATION_DIRS=	bin
 
 do-extract:
