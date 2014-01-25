@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.2 2012/03/08 01:12:51 joerg Exp $
+$NetBSD: distinfo,v 1.3 2014/01/25 02:54:27 agc Exp $
 
-SHA1 (libvirt-0.9.3.tar.gz) = e25850d270a24441305dd92935209efa993b479d
-RMD160 (libvirt-0.9.3.tar.gz) = a01dbe29e23225706afcff74146aa3b224ba04bb
-Size (libvirt-0.9.3.tar.gz) = 15958983 bytes
-SHA1 (patch-aa) = 12269e5e0dd650423df5e31dd6f8069af04532c3
-SHA1 (patch-ab) = 66757963d769cc7a12c5dfa4fe035ec9417a0512
-SHA1 (patch-ac) = af670f3e9af0dc4053c3e8584ed815f03bb7bb56
-SHA1 (patch-gnulib-lib-fflush.c) = dce77a7b18bdf9fb20b31dcf6d473bd51a63dba9
-SHA1 (patch-gnulib-lib-fseeko.c) = d8e4107166baba980e20add7d267510d7da9be9a
+SHA1 (libvirt-1.2.1.tar.gz) = ea8e237e0df9f1828ff4a7a649c42aa45af7ecd7
+RMD160 (libvirt-1.2.1.tar.gz) = bd308fa30c530f877494a1fe3b2ddc862cf48e76
+Size (libvirt-1.2.1.tar.gz) = 27228694 bytes
+SHA1 (patch-configure) = d01bd0cf7336d4c0ec0050301095ae0cfac26b7c
+SHA1 (patch-gnulib-lib-base64.h) = 7b7f3738fbeb52ba8e8c5ef2b8926008a4585c4b
+SHA1 (patch-gnulib-lib-fflush.c) = abfd289afd87d993bbf13cc815443f938cacf7ef
+SHA1 (patch-gnulib-lib-fseeko.c) = 1dc0c761d3285da5a418690bfc2e37de90f0e870
+SHA1 (patch-src-rpc-virnetmessage.c) = 5a09402a71c1f7082d775503ce3ef17e7c41424c
+SHA1 (patch-src-util-virutil.c) = 64710144c4e1c7e1d9f5ca84c47be6f8b01a70f8
+SHA1 (patch-tools--virsh-secret.c) = 424f53edabf535be73e08addea3b4310de08cf8e

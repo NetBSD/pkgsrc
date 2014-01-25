@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2014/01/01 11:52:35 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2014/01/25 02:54:27 agc Exp $
 
-DISTNAME=	libvirt-0.9.3
-PKGREVISION=	10
+DISTNAME=	libvirt-1.2.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://libvirt.org/sources/
 
@@ -13,7 +12,7 @@ LICENSE=	gnu-lgpl-v2
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-vbox=no --sysconfdir=${EGDIR} --localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--without-macvtap
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake pkg-config perl
 USE_LIBTOOL=		yes
 
 PY_PATCHPLIST=		yes
