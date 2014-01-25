@@ -1,0 +1,12 @@
+$NetBSD: patch-gcc_configure,v 1.1 2014/01/25 13:38:48 ryoon Exp $
+
+--- gcc/configure.orig	2013-01-14 16:35:23.000000000 +0000
++++ gcc/configure
+@@ -25814,6 +25814,7 @@ else
+ fi
+ 
+         ;;
++  *-*-openbsd*) gcc_cv_libc_provides_ssp=no ;;
+   *) gcc_cv_libc_provides_ssp=no ;;
+     esac
+ fi
