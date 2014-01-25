@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.431 2014/01/25 12:38:24 prlw1 Exp $
+$NetBSD: CHANGES-2014,v 1.432 2014/01/25 12:54:48 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -479,7 +479,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/msgpack to 0.5.8 [obache 2014-01-23]
 	Updated devel/py-msgpack to 0.4.0 [obache 2014-01-23]
 	Added graphics/py-cairo3 version 1.10.0 [wiz 2014-01-23]
-        Updated textproc/latex2html to 2008nb5 [is 2014-01-23]
+	Updated textproc/latex2html to 2008nb5 [is 2014-01-23]
 	Updated mail/sma to 1.4nb1 [tron 2014-01-23]
 	Updated www/lighttpd to 1.4.34 [adam 2014-01-23]
 	Removed editors/vim-gtk successor editors/vim-gtk2 [wiz 2014-01-23]
@@ -515,3 +515,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/gnutls to 3.2.9 [wiz 2014-01-25]
 	Updated finance/moneyguru to 2.7.1 [wiz 2014-01-25]
 	Added math/gnome-calculator version 3.10.2 [prlw1 2014-01-25]
+	Removed math/gcalctool-gtk3 successor math/gnome-calculator [prlw1 2014-01-25]
