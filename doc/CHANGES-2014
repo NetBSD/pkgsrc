@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.427 2014/01/25 10:52:20 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.428 2014/01/25 10:56:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -511,3 +511,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/libdrm to 2.4.52 [wiz 2014-01-25]
 	Updated sysutils/cdrtools to 3.01alpha22 [wiz 2014-01-25]
 	Updated x11/xterm to 301 [wiz 2014-01-25]
+	Updated x11/xf86-video-ati to 7.3.0 [wiz 2014-01-25]
