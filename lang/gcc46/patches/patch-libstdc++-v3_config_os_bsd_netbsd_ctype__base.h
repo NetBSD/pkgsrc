@@ -1,17 +1,17 @@
-$NetBSD: patch-libstdc++-v3_config_os_bsd_netbsd_ctype__base.h,v 1.2 2013/04/30 22:24:16 joerg Exp $
+$NetBSD: patch-libstdc++-v3_config_os_bsd_netbsd_ctype__base.h,v 1.3 2014/01/25 13:38:48 ryoon Exp $
 
---- libstdc++-v3/config/os/bsd/netbsd/ctype_base.h.orig	2011-01-30 22:39:36.000000000 +0000
+--- libstdc++-v3/config/os/bsd/netbsd/ctype_base.h.orig	2012-06-20 08:30:55.000000000 +0000
 +++ libstdc++-v3/config/os/bsd/netbsd/ctype_base.h
-@@ -30,8 +30,6 @@
+@@ -30,7 +30,7 @@
  // Full details can be found from the CVS files at:
  //   anoncvs@anoncvs.netbsd.org:/cvsroot/basesrc/include/ctype.h
  // See www.netbsd.org for details of access.
 -  
--#include <sys/param.h>
- 
++
  namespace std _GLIBCXX_VISIBILITY(default)
  {
-@@ -45,21 +43,21 @@ _GLIBCXX_BEGIN_NAMESPACE_VERSION
+ _GLIBCXX_BEGIN_NAMESPACE_VERSION
+@@ -43,21 +43,21 @@ _GLIBCXX_BEGIN_NAMESPACE_VERSION
  
      // NB: Offsets into ctype<char>::_M_table force a particular size
      // on the mask type. Because of this, we don't use an enum.
@@ -31,7 +31,7 @@ $NetBSD: patch-libstdc++-v3_config_os_bsd_netbsd_ctype__base.h,v 1.2 2013/04/30 
 +#elif defined(_CTYPE_U)
      typedef unsigned char      	mask;
 -
--#if __NetBSD_Version__ < 599004100
+-#ifndef _CTYPE_U
 -    static const mask upper    	= _U;
 -    static const mask lower 	= _L;
 -    static const mask alpha 	= _U | _L;
@@ -47,7 +47,7 @@ $NetBSD: patch-libstdc++-v3_config_os_bsd_netbsd_ctype__base.h,v 1.2 2013/04/30 
      static const mask upper    	= _CTYPE_U;
      static const mask lower 	= _CTYPE_L;
      static const mask alpha 	= _CTYPE_U | _CTYPE_L;
-@@ -71,6 +69,19 @@ _GLIBCXX_BEGIN_NAMESPACE_VERSION
+@@ -69,6 +69,19 @@ _GLIBCXX_BEGIN_NAMESPACE_VERSION
      static const mask cntrl 	= _CTYPE_C;
      static const mask punct 	= _CTYPE_P;
      static const mask alnum 	= _CTYPE_U | _CTYPE_L | _CTYPE_N;

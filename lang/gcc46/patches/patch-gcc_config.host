@@ -1,0 +1,15 @@
+$NetBSD: patch-gcc_config.host,v 1.1 2014/01/25 13:38:48 ryoon Exp $
+
+--- gcc/config.host.orig	2011-02-15 09:49:14.000000000 +0000
++++ gcc/config.host
+@@ -268,6 +268,10 @@ case ${host} in
+     out_host_hook_obj=host-solaris.o
+     host_xmake_file="${host_xmake_file} x-solaris"
+     ;;
++  *-*-openbsd*)
++    out_host_hook_obj=host-openbsd.o
++    host_xmake_file="${host_xmake_file} x-openbsd"
++    ;;
+   *-*-linux*)
+     out_host_hook_obj=host-linux.o
+     host_xmake_file="${host_xmake_file} x-linux"
