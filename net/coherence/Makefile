@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/23 17:18:15 asau Exp $
-#
+# $NetBSD: Makefile,v 1.8 2014/01/25 10:30:15 wiz Exp $
 
 DISTNAME=	Coherence-0.6.6.2
 PKGNAME=	coherence-0.6.6.2
@@ -14,6 +13,8 @@ COMMENT=	Media server framework
 USE_LANGUAGES=	# none
 
 DEPENDS+= ${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-twisted
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

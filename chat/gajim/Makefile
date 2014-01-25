@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/10/10 14:42:02 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.24 2014/01/25 10:29:57 wiz Exp $
 
 DISTNAME=	gajim-0.15
 PKGREVISION=	11
@@ -15,6 +14,8 @@ LICENSE=	gnu-gpl-v3
 DEPENDS=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS=	${PYPKGPREFIX}-dbus>=0.81:../../sysutils/py-dbus
 DEPENDS=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 
 .include "options.mk"
 

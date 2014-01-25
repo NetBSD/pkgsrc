@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/12/06 11:30:53 obache Exp $
-#
+# $NetBSD: Makefile,v 1.10 2014/01/25 10:30:10 wiz Exp $
 
 DISTNAME=	seqdiag-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +13,6 @@ LICENSE=	apache-2.0
 DEPENDS+=	${PYPKGPREFIX}-blockdiag>=1.3.0:../../graphics/py-blockdiag
 
 PYTHON_SELF_CONFLICT=		yes
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 USE_LANGUAGES=	# none
 

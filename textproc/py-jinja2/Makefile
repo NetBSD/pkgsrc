@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/01/19 08:39:00 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2014/01/25 10:30:24 wiz Exp $
 
 DISTNAME=	Jinja2-2.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,8 +11,6 @@ COMMENT=	Small but fast and easy to use stand-alone template engine
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=		# none
-
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 DEPENDS+=	${PYPKGPREFIX}-markupsafe-[0-9]*:../../textproc/py-markupsafe
 

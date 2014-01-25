@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2013/08/09 13:02:02 prlw1 Exp $
+# $NetBSD: Makefile,v 1.30 2014/01/25 10:30:26 wiz Exp $
 
 DISTNAME=	mod_python-${VERSION}
 PKGNAME=	${APACHE_PKG_PREFIX}-${PYPKGPREFIX}-python-${VERSION}
@@ -24,6 +24,8 @@ CONFIGURE_ARGS+=--with-python=${PYTHONBIN:Q}
 PY_PATCHPLIST=	YES
 
 PKG_APACHE_ACCEPTED=	apache2 apache22
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 3.3.1; 3.5.0 is supposed to work
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/apache.mk"

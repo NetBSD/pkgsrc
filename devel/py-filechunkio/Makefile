@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/11/18 02:25:37 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2014/01/25 10:30:03 wiz Exp $
 
 DISTNAME=	filechunkio-1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +11,7 @@ COMMENT=	Chunck files for input/output
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.5
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

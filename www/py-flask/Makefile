@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/01/12 09:45:25 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2014/01/25 10:30:28 wiz Exp $
 
 DISTNAME=	Flask-0.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,8 +11,6 @@ COMMENT=	Python web microframework
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# empty
-
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 DEPENDS+=	${PYPKGPREFIX}-itsdangerous-[0-9]*:../../security/py-itsdangerous
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2

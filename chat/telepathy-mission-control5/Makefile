@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/01/01 11:52:10 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.14 2014/01/25 10:29:58 wiz Exp $
 
 DISTNAME=	telepathy-mission-control-5.7.9
 PKGNAME=	telepathy-mission-control5-5.7.9
@@ -19,6 +18,8 @@ USE_TOOLS+=	gmake pkg-config
 PKGCONFIG_OVERRIDE+=	mission-control-plugins.pc.in
 #PKGCONFIG_OVERRIDE+=	libmcclient.pc.in
 #PKGCONFIG_OVERRIDE+=	mission-control.pc.in
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 5.7.9
 
 #.include "../../lang/python/pyversion.mk"
 CONFIGURE_ENV+=		ac_cv_prog_PYTHON=${PYTHONBIN}

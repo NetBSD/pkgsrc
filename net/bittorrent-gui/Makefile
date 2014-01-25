@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/10/23 17:18:12 asau Exp $
+# $NetBSD: Makefile,v 1.33 2014/01/25 10:30:15 wiz Exp $
 
 .include "../../net/bittorrent/Makefile.common"
 
@@ -11,6 +11,7 @@ DEPENDS+=	bittorrent>=${PKGVERSION_NOREV}:../../net/bittorrent
 DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.6:../../x11/py-gtk2
 
 PYTHON_PATCH_SCRIPTS= bittorrent maketorrent
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 
 CONFLICTS+=	bittornado-gui-[0-9]*
 

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/01/22 13:18:19 obache Exp $
-#
+# $NetBSD: Makefile,v 1.7 2014/01/25 10:30:24 wiz Exp $
 
 DISTNAME=	markdown2-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +13,6 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 PYTHON_SELF_CONFLICT=		yes
 
 REPLACE_PYTHON=		lib/markdown2.py

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/02 23:48:12 asau Exp $
-#
+# $NetBSD: Makefile,v 1.17 2014/01/25 10:29:57 wiz Exp $
 
 DISTNAME=	tunapie-2.1.18
 PKGREVISION=	1
@@ -12,6 +11,8 @@ COMMENT=	Directory browser for Internet radio and TV streams
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-wxWidgets>=2.6:../../x11/py-wxWidgets
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-wxWidgets
 
 USE_LANGUAGES=	# none
 

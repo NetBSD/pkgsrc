@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2013/10/10 14:42:11 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.47 2014/01/25 10:30:08 wiz Exp $
 
 DISTNAME=		kye-1.0
 PKGREVISION=		18
@@ -15,6 +14,8 @@ SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	kye/common.py
 SUBST_SED.prefix=	's|@PREFIX@|${PREFIX}|g'
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

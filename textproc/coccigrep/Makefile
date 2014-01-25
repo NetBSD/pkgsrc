@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/06/11 14:05:24 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.8 2014/01/25 10:30:23 wiz Exp $
 
 DISTNAME=	coccigrep-1.12
 CATEGORIES=	textproc
@@ -15,6 +14,8 @@ DEPENDS=	coccinelle-[0-9]*:../../devel/coccinelle
 USE_LANGUAGES=	# none
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.12
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/coccigrep.1 \

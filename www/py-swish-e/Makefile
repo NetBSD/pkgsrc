@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/28 06:31:02 asau Exp $
-#
+# $NetBSD: Makefile,v 1.7 2014/01/25 10:30:29 wiz Exp $
 
 DISTNAME=		swish-e-0.5
 PKGNAME=		${PYPKGPREFIX}-swish-e-0.5
@@ -15,6 +14,8 @@ COMMENT=		Simple Python binding for Swish-E
 LICENSE=		2-clause-bsd
 
 EGG_NAME=		SwishE-${PKGVERSION_NOREV}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.5
 
 .include "../../lang/python/distutils.mk"
 .include "../../www/swish-e/buildlink3.mk"
