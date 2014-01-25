@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2013/09/01 12:14:06 obache Exp $
+# $NetBSD: Makefile,v 1.36 2014/01/25 08:59:57 wiz Exp $
 
 DISTNAME=	qgis-1.7.4
 PKGREVISION=	20
@@ -16,7 +16,6 @@ USE_LANGUAGES=		c c++ fortran77
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		bison perl
-USE_X11=		yes
 
 .include "options.mk"
 
