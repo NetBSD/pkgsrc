@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2014/01/01 11:52:07 wiz Exp $
+# $NetBSD: Makefile,v 1.142 2014/01/25 10:45:19 wiz Exp $
 
 DISTNAME=	evolution-data-server-2.32.3
 PKGREVISION=	27
@@ -19,7 +19,7 @@ USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 
 PYTHON_FOR_BUILD_ONLY=	YES
-PYTHON_PATCH_SCRIPTS=	addressbook/libebook/gen-western-table.py
+REPLACE_PYTHON=	addressbook/libebook/gen-western-table.py
 
 .include "options.mk"
 

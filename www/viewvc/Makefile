@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/01/25 10:30:30 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2014/01/25 10:45:22 wiz Exp $
 
 DISTNAME=	viewvc-1.1.20
 CATEGORIES=	devel www
@@ -9,7 +9,7 @@ HOMEPAGE=	http://www.viewvc.org/
 COMMENT=	Viewing the content of CVS/SVN repositories with a Webbrowser
 LICENSE=	2-clause-bsd
 
-PYTHON_PATCH_SCRIPTS=	viewvc-install bin/* bin/cgi/*.cgi lib/*.py
+REPLACE_PYTHON=	viewvc-install bin/* bin/cgi/*.cgi lib/*.py
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.1.20
 
 .if !exists(/usr/bin/rlog)

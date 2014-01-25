@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/09/11 23:59:23 asau Exp $
+# $NetBSD: Makefile,v 1.10 2014/01/25 10:45:15 wiz Exp $
 #
 
 DISTNAME=		amaroc-0.3
@@ -14,7 +14,7 @@ COMMENT=		Command line interface to Amarok
 DEPENDS+=		${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 
 INSTALLATION_DIRS=	bin share/doc/amaroc
-PYTHON_PATCH_SCRIPTS=	amaroc.py
+REPLACE_PYTHON=	amaroc.py
 
 NO_BUILD=		yes
 
