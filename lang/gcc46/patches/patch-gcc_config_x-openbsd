@@ -1,0 +1,9 @@
+$NetBSD: patch-gcc_config_x-openbsd,v 1.1 2014/01/25 13:38:48 ryoon Exp $
+
+--- gcc/config/x-openbsd.orig	2014-01-25 06:53:23.000000000 +0000
++++ gcc/config/x-openbsd
+@@ -0,0 +1,4 @@
++host-openbsd.o : $(srcdir)/config/host-openbsd.c $(CONFIG_H) $(SYSTEM_H) \
++  coretypes.h hosthooks.h hosthooks-def.h $(HOOKS_H)
++	$(COMPILER) -c $(ALL_COMPILERFLAGS) $(ALL_CPPFLAGS) $(INCLUDES) \
++		$(srcdir)/config/host-openbsd.c
