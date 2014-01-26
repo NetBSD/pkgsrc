@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/05/20 11:15:17 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/01/26 00:22:29 wiz Exp $
 ${PYSITELIB}/OpenGL/AGL/__init__.py
 ${PYSITELIB}/OpenGL/AGL/__init__.pyc
 ${PYSITELIB}/OpenGL/AGL/__init__.pyo
@@ -2618,3 +2618,4 @@ ${PYSITELIB}/OpenGL/version.pyo
 ${PYSITELIB}/OpenGL/wrapper.py
 ${PYSITELIB}/OpenGL/wrapper.pyc
 ${PYSITELIB}/OpenGL/wrapper.pyo
+${PYSITELIB}/${EGG_FILE}
