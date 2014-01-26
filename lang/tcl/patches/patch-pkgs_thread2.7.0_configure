@@ -1,0 +1,12 @@
+$NetBSD: patch-pkgs_thread2.7.0_configure,v 1.1 2014/01/26 03:51:12 ryoon Exp $
+
+--- pkgs/thread2.7.0/configure.orig	2012-11-14 17:20:24.000000000 +0000
++++ pkgs/thread2.7.0/configure
+@@ -9295,7 +9295,6 @@ fi
+ fi
+ 
+ 		LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
+-		SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so.${SHLIB_VERSION}'
+ 		;;
+ 	    esac
+ 	    case "$arch" in
