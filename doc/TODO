@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12934 2014/01/26 13:14:38 obache Exp $
+$NetBSD: TODO,v 1.12935 2014/01/26 13:18:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -523,7 +523,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o etm-891
 	o etm2-2.3.21 [etm successor]
 	o ettercap-0.7.6
-	o evince-3.8.3
 	o evolution-3.0.0
 	o evolution-couchdb-0.4.5
 	o evolution-mapi-0.32.2 [GNOME 2.32]
