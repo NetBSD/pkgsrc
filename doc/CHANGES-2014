@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.449 2014/01/26 14:51:21 mspo Exp $
+$NetBSD: CHANGES-2014,v 1.450 2014/01/26 16:34:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -532,3 +532,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/p5-cairo to 1.104 [obache 2014-01-26]
 	Updated devel/p5-pango to 1.225 [obache 2014-01-26]
 	Updated print/evince3 to 3.10.3 [wiz 2014-01-26]
+	Updated finance/gnucash to 2.6.0nb1 [wiz 2014-01-26]
