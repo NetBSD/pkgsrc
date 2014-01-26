@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2014/01/25 10:30:01 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2014/01/26 12:01:44 obache Exp $
 
 DISTNAME=	gobject-introspection-1.38.0
 PKGREVISION=	1
@@ -49,6 +49,7 @@ CONFIGURE_ARGS+=	--disable-doctool --disable-tests
 
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.36.0
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libffi+= libffi>=3.0.0
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
