@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2014/01/25 10:30:12 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2014/01/26 00:30:02 wiz Exp $
 
 DISTNAME=	Pyrex-0.9.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/P/p/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang python
 MASTER_SITES=	http://www.cosc.canterbury.ac.nz/greg.ewing/python/Pyrex/
 
