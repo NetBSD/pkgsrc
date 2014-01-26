@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.448 2014/01/26 13:18:07 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.449 2014/01/26 14:51:21 mspo Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -460,7 +460,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated filesystems/fuse-wikipediafs to 0.3nb5 [wiz 2014-01-22]
 	Updated textproc/fop to 1.1 [ryoon 2014-01-22]
 	Added games/klavaro version 2.01 [ryoon 2014-01-22]
-	Added devel/ipython1 version 1.1.0 [drochner 2014-01-22]
+	Added devel/py-ipython1 version 1.1.0 [drochner 2014-01-22]
 	Added emulators/suse131_libffi version 13.1 [obache 2014-01-22]
 	Added emulators/suse131_32_libffi version 13.1 [obache 2014-01-22]
 	Added emulators/suse131_glib2 version 13.1 [obache 2014-01-22]
