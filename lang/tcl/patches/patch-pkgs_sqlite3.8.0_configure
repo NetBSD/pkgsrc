@@ -1,0 +1,12 @@
+$NetBSD: patch-pkgs_sqlite3.8.0_configure,v 1.1 2014/01/26 03:51:12 ryoon Exp $
+
+--- pkgs/sqlite3.8.0/configure.orig	2013-08-27 18:50:58.000000000 +0000
++++ pkgs/sqlite3.8.0/configure
+@@ -6473,7 +6473,6 @@ fi
+ 		CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
+ fi
+ 	    LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
+-	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so.${SHLIB_VERSION}'
+ 	    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for ELF" >&5
+ $as_echo_n "checking for ELF... " >&6; }
+ if ${tcl_cv_ld_elf+:} false; then :
