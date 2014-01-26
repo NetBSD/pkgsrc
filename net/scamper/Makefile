@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2013/08/26 20:46:02 markd Exp $
+# $NetBSD: Makefile,v 1.15 2014/01/26 10:28:49 markd Exp $
 #
 
-DISTNAME=	scamper-cvs-20130824
+DISTNAME=	scamper-cvs-20140122
 PKGNAME=	${DISTNAME:S/-cvs//}
 CATEGORIES=	net
 MASTER_SITES=	http://www.caida.org/tools/measurement/scamper/code/
