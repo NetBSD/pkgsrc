@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2014/01/13 15:06:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.57 2014/01/26 03:49:01 ryoon Exp $
 
 DISTNAME=	binutils-2.24
 CATEGORIES=	devel
@@ -57,6 +57,8 @@ EXTRA_FILES+=	gprof
 PLIST.ld=	yes
 EXTRA_FILES+=	ld
 .endif
+
+CFLAGS.OpenBSD+=	-Wno-bounded
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
