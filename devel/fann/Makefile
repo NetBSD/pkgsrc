@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/01/22 01:49:21 gdt Exp $
+# $NetBSD: Makefile,v 1.7 2014/01/26 10:28:53 wiz Exp $
 
 .include "Makefile.common"
 
@@ -10,7 +10,7 @@ USE_TOOLS+=		cmake
 USE_CMAKE=		yes
 
 USE_LANGUAGES+=		c99
-# Perhaps not, but camke complains
+# Perhaps not, but cmake complains
 USE_LANGUAGES+=		 c++
 
 USE_TOOLS+=		pkg-config
