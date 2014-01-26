@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2014/01/01 11:52:19 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2014/01/26 02:11:47 jakllsch Exp $
 
 DISTNAME=	darktable-1.2.3
 PKGREVISION=	1
@@ -66,6 +66,7 @@ BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=3.7.14.1nb1
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/GraphicsMagick/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/gegl/buildlink3.mk"
 .include "../../graphics/lensfun/buildlink3.mk"
