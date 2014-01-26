@@ -1,7 +1,7 @@
-$NetBSD: patch-mksh.1,v 1.4 2013/08/18 10:00:12 bsiegert Exp $
+$NetBSD: patch-mksh.1,v 1.5 2014/01/26 08:57:32 bsiegert Exp $
 
 Kill the .Dt override and restore installation a normal man page.
---- mksh.1.orig	2013-08-10 14:12:04.000000000 +0000
+--- mksh.1.orig	2014-01-11 18:10:06.000000000 +0000
 +++ mksh.1
 @@ -59,22 +59,7 @@
  .	ds ha ^
@@ -22,8 +22,8 @@ Kill the .Dt override and restore installation a normal man page.
 -.\" with -mandoc, it might implement .Mx itself, but we want to
 -.\" use our own definition. And .Dd must come *first*, always.
 -.\"
--.Dd $Mdocdate: August 10 2013 $
-+.Dd August 10 2013
+-.Dd $Mdocdate: January 11 2014 $
++.Dd January 11 2014
  .\"
  .\" Check which macro package we use, and do other -mdoc setup.
  .\"
