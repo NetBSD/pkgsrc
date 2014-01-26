@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2012/02/17 18:19:30 drochner Exp $
-bin/coverage${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.3 2014/01/26 00:52:04 wiz Exp $
+${PLIST.py2x}bin/coverage-2.7
+${PLIST.py2x}bin/coverage2
+${PLIST.py3x}bin/coverage-3.3
+${PLIST.py3x}bin/coverage3
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -39,6 +42,9 @@ ${PYSITELIB}/coverage/control.pyo
 ${PYSITELIB}/coverage/data.py
 ${PYSITELIB}/coverage/data.pyc
 ${PYSITELIB}/coverage/data.pyo
+${PYSITELIB}/coverage/debug.py
+${PYSITELIB}/coverage/debug.pyc
+${PYSITELIB}/coverage/debug.pyo
 ${PYSITELIB}/coverage/execfile.py
 ${PYSITELIB}/coverage/execfile.pyc
 ${PYSITELIB}/coverage/execfile.pyo
@@ -50,9 +56,9 @@ ${PYSITELIB}/coverage/html.pyc
 ${PYSITELIB}/coverage/html.pyo
 ${PYSITELIB}/coverage/htmlfiles/coverage_html.js
 ${PYSITELIB}/coverage/htmlfiles/index.html
-${PYSITELIB}/coverage/htmlfiles/jquery-1.4.3.min.js
 ${PYSITELIB}/coverage/htmlfiles/jquery.hotkeys.js
 ${PYSITELIB}/coverage/htmlfiles/jquery.isonscreen.js
+${PYSITELIB}/coverage/htmlfiles/jquery.min.js
 ${PYSITELIB}/coverage/htmlfiles/jquery.tablesorter.min.js
 ${PYSITELIB}/coverage/htmlfiles/keybd_closed.png
 ${PYSITELIB}/coverage/htmlfiles/keybd_open.png
@@ -80,6 +86,9 @@ ${PYSITELIB}/coverage/templite.py
 ${PYSITELIB}/coverage/templite.pyc
 ${PYSITELIB}/coverage/templite.pyo
 ${PYSITELIB}/coverage/tracer.so
+${PYSITELIB}/coverage/version.py
+${PYSITELIB}/coverage/version.pyc
+${PYSITELIB}/coverage/version.pyo
 ${PYSITELIB}/coverage/xmlreport.py
 ${PYSITELIB}/coverage/xmlreport.pyc
 ${PYSITELIB}/coverage/xmlreport.pyo
