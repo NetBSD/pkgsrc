@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2014/01/03 12:32:24 obache Exp $
+# $NetBSD: options.mk,v 1.3 2014/01/26 08:43:29 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cogl
@@ -23,6 +23,7 @@ CONFIGURE_ARGS+=	--enable-introspection=no
 PLIST.x11=		yes
 CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ARGS+=	--enable-gdk-pixbuf
+CONFIGURE_ARGS+=	--with-gl-libname=libGL
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
