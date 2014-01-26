@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.79 2013/11/29 12:59:51 joerg Exp $
+$NetBSD: distinfo,v 1.80 2014/01/26 21:33:06 spz Exp $
 
 SHA1 (net-snmp-5.7.2.tar.gz) = c493027907f32400648244d81117a126aecd27ee
 RMD160 (net-snmp-5.7.2.tar.gz) = 392d643e9f2f42ee4fa688b4702329ad005ee12e
@@ -6,6 +6,8 @@ Size (net-snmp-5.7.2.tar.gz) = 6281352 bytes
 SHA1 (patch-ac) = 59987ecb9467b1cead9af3d4432a4dd69be93480
 SHA1 (patch-af) = 4fb96b79f9126dedb8a132d44894ea23c9e8c101
 SHA1 (patch-ag) = d9595eceeb5ee986ab4365f62e3c3ab339e605aa
+SHA1 (patch-agent_mibgroup_agentx_master.c) = c2b3f145280e3fecc26a431ec914cf89d87a17f4
+SHA1 (patch-agent_mibgroup_agentx_master_admin.c) = 3c233c1e3113fbc9c1de34cb4cbacca9ef4a6fe2
 SHA1 (patch-agent_mibgroup_hardware_cpu_cpu__sysctl.c) = 346bb4cb0e905821aa3bbdda4ae0fd8526d35854
 SHA1 (patch-agent_mibgroup_hardware_fsys_fsys_getfsstats.c) = 7fc48c58c8f5bc73caaf3990ef61a94fb856e208
 SHA1 (patch-agent_mibgroup_hardware_memory_memory__netbsd.c) = f04d66f823bf2b49401e6d9a62db4b39ed679907
@@ -14,6 +16,7 @@ SHA1 (patch-agent_mibgroup_mibII_ipAddr.c) = cd3345a4b30fe2280d0555ee38feb5f957a
 SHA1 (patch-agent_mibgroup_mibII_ipv6.c) = d6a271145e6ba774cbc1e93caa14e3d22dc43075
 SHA1 (patch-agent_mibgroup_mibII_tcpTable.c) = f547f3fd08848803cbf7ce08a41ba463c4d02992
 SHA1 (patch-agent_mibgroup_mibII_udpTable.c) = 2eb5e5c05ecb23f69cbb0d38a31e14d5b5ddc6b7
+SHA1 (patch-agent_snmp__agent.c) = 2dbfea907d0e1881f5d55c5b270984fc3a562da9
 SHA1 (patch-ai) = 04c2a487bad8705c9725ef4a62016051d3898970
 SHA1 (patch-aj) = d110e996d0538d17251d39a5eed46df6944ba0fa
 SHA1 (patch-ak) = 50ac67db8a9ffc16d983b4192e74db25ef439321
@@ -27,5 +30,6 @@ SHA1 (patch-dt) = 452fee78b37f8ce0eb30049f9f18b04cff9b6e6e
 SHA1 (patch-du) = 89a77e82d881207500fb45c422b66710e44c0eb4
 SHA1 (patch-el) = b85dbef28e14fe29c9fb944508a08e7423a37152
 SHA1 (patch-es) = 7336d905bac315f344f93664e4118332f88fb6ee
+SHA1 (patch-include_net-snmp_agent_snmp__agent.h) = 2139d849b0ffe004a72f3276a98c0d2cb72dca18
 SHA1 (patch-include_net-snmp_system_netbsd.h) = 7880fded678147b2cc75e035234b89727e213d00
 SHA1 (patch-perl_agent_Makefile.PL) = 722380debeda1552b74b60ff91cea3cbbc716e74
