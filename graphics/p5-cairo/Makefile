@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2013/09/02 19:50:38 adam Exp $
+# $NetBSD: Makefile,v 1.26 2014/01/26 13:04:14 obache Exp $
 #
 
-DISTNAME=	Cairo-${DIST_VER}
-PKGNAME=	p5-cairo-${DIST_VER}
-PKGREVISION=	1
+DISTNAME=	Cairo-1.104
+PKGNAME=	p5-${DISTNAME:tl}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk2-perl/}
 
@@ -14,10 +13,8 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	pkg-config
 
-DIST_VER=	1.103
-
-DEPENDS+=	p5-ExtUtils-Depends>=0.2:../../devel/p5-ExtUtils-Depends
-DEPENDS+=	p5-ExtUtils-PkgConfig>=1:../../devel/p5-ExtUtils-PkgConfig
+BUILD_DEPENDS+=	p5-ExtUtils-Depends>=0.2:../../devel/p5-ExtUtils-Depends
+BUILD_DEPENDS+=	p5-ExtUtils-PkgConfig>=1:../../devel/p5-ExtUtils-PkgConfig
 
 PERL5_PACKLIST=	auto/Cairo/.packlist
 
