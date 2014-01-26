@@ -1,0 +1,42 @@
+$NetBSD: patch-ld_Makefile.am,v 1.1 2014/01/26 03:49:01 ryoon Exp $
+
+--- ld/Makefile.am.orig	2013-11-26 11:37:33.000000000 +0000
++++ ld/Makefile.am
+@@ -268,6 +268,7 @@ ALL_EMULATION_SOURCES = \
+ 	eelf_i386_fbsd.c \
+ 	eelf_i386_ldso.c \
+ 	eelf_i386_nacl.c \
++	eelf_i386_obsd.c \
+ 	eelf_i386_sol2.c \
+ 	eelf_i386_vxworks.c \
+ 	eelf_s390.c \
+@@ -525,6 +526,7 @@ ALL_64_EMULATION_SOURCES = \
+ 	eelf_x86_64.c \
+ 	eelf_x86_64_fbsd.c \
+ 	eelf_x86_64_nacl.c \
++	eelf_x86_64_obsd.c \
+ 	eelf_x86_64_sol2.c \
+ 	ehppa64linux.c \
+ 	emmo.c \
+@@ -1268,6 +1270,10 @@ eelf32xtensa.c: $(srcdir)/emulparams/elf
+ eelf_i386.c: $(srcdir)/emulparams/elf_i386.sh \
+   $(ELF_DEPS) $(srcdir)/scripttempl/elf.sc ${GEN_DEPENDS}
+ 	${GENSCRIPTS} elf_i386 "$(tdir_elf_i386)"
++eelf_x86_64_obsd.c: $(srcdir)/emulparams/elf_x86_64_obsd.sh \
++  $(srcdir)/emulparams/elf_x86_64.sh \
++  $(srcdir)/emultempl/elf32.em $(srcdir)/scripttempl/elf.sc ${GEN_DEPENDS}
++	${GENSCRIPTS} elf_x86_64_obsd "$(tdir_elf_x86_64_obsd)"
+ eelf_i386_be.c: $(srcdir)/emulparams/elf_i386_be.sh \
+   $(ELF_DEPS) $(srcdir)/scripttempl/elf.sc ${GEN_DEPENDS}
+ 	${GENSCRIPTS} elf_i386_be "$(tdir_elf_i386_be)"
+@@ -1291,6 +1297,10 @@ eelf_i386_sol2.c: $(srcdir)/emulparams/e
+   $(srcdir)/emultempl/solaris2.em \
+   $(ELF_DEPS) $(srcdir)/scripttempl/elf.sc ${GEN_DEPENDS}
+ 	${GENSCRIPTS} elf_i386_sol2 "$(tdir_elf_i386_sol2)"
++eelf_i386_obsd.c: $(srcdir)/emulparams/elf_i386_obsd.sh \
++  $(srcdir)/emulparams/elf_i386.sh \
++  $(srcdir)/emultempl/elf32.em $(srcdir)/scripttempl/elf.sc ${GEN_DEPENDS}
++	${GENSCRIPTS} elf_i386_obsd "$(tdir_elf_i386_obsd)"
+ eelf_i386_vxworks.c: $(srcdir)/emulparams/elf_i386_vxworks.sh \
+   $(srcdir)/emulparams/vxworks.sh $(srcdir)/emultempl/vxworks.em \
+   $(ELF_DEPS) $(srcdir)/scripttempl/elf.sc ${GEN_DEPENDS}
