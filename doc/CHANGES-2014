@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.443 2014/01/26 10:37:44 markd Exp $
+$NetBSD: CHANGES-2014,v 1.444 2014/01/26 11:57:22 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -527,3 +527,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/clutter to 1.16.4 [obache 2014-01-26]
 	Updated shells/mksh to 49 [bsiegert 2014-01-26]
 	Updated net/scamper to 20140122 [markd 2014-01-26]
+	Updated devel/p5-glib2 to 1.304 [obache 2014-01-26]
