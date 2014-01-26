@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.450 2014/01/26 16:34:33 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.451 2014/01/26 17:00:29 tron Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -533,3 +533,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-pango to 1.225 [obache 2014-01-26]
 	Updated print/evince3 to 3.10.3 [wiz 2014-01-26]
 	Updated finance/gnucash to 2.6.0nb1 [wiz 2014-01-26]
+	Updated security/stunnel to 4.56 [tron 2014-01-26]
