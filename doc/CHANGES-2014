@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.447 2014/01/26 13:14:38 obache Exp $
+$NetBSD: CHANGES-2014,v 1.448 2014/01/26 13:18:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -531,3 +531,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/p5-Glib-Object-Introspection version 0.019 [obache 2014-01-26]
 	Updated graphics/p5-cairo to 1.104 [obache 2014-01-26]
 	Updated devel/p5-pango to 1.225 [obache 2014-01-26]
+	Updated print/evince3 to 3.10.3 [wiz 2014-01-26]
