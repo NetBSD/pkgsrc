@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2014/01/25 10:45:21 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2014/01/26 08:18:29 wiz Exp $
 
 DISTNAME=		asciidoc-8.6.9
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=asciidoc/}
 
@@ -29,7 +29,17 @@ SUBST_MESSAGE.ad=	Fixing hard-coded config file paths.
 SUBST_FILES.ad=		a2x.py asciidoc.py
 SUBST_SED.ad=		-e 's,^\(CONF_DIR\).*=.*,\1="${PREFIX}/share/asciidoc",'
 
-REPLACE_PYTHON=		a2x.py asciidoc.conf html5.conf xhtml11.conf xhtml11-quirks.conf
+REPLACE_PYTHON+=	a2x.py
+REPLACE_PYTHON+=	asciidoc.py
+REPLACE_PYTHON+=	asciidocapi.py
+REPLACE_PYTHON+=	filters/code/code-filter.py
+REPLACE_PYTHON+=	filters/latex/latex2png.py
+REPLACE_PYTHON+=	filters/music/music2png.py
+REPLACE_PYTHON+=	filters/graphviz/graphviz2png.py
+REPLACE_PYTHON+=	tests/testasciidoc.py
+REPLACE_PYTHON+=	tests/asciidocapi.py
+REPLACE_PYTHON+=	html5.conf xhtml11.conf xhtml11-quirks.conf
+
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 8.6.9 (as seen e.g. in git-docs)
 
 INSTALLATION_DIRS=	bin share/asciidoc share/asciidoc/filters \
