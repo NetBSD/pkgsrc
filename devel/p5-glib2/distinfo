@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.18 2012/09/09 12:48:50 abs Exp $
+$NetBSD: distinfo,v 1.19 2014/01/26 11:56:45 obache Exp $
 
-SHA1 (Glib-1.262.tar.gz) = 32745ebc97817c4be162efed7824cd469e191479
-RMD160 (Glib-1.262.tar.gz) = 5505c6f0847206a8721bdf1f4171a1f3253fa7d6
-Size (Glib-1.262.tar.gz) = 283989 bytes
-SHA1 (patch-Makefile.PL) = d94e71e30ab8971db756eff8037deabaf0003492
+SHA1 (Glib-1.304.tar.gz) = f66615b386f33a74eab62271dab0e09730fcf632
+RMD160 (Glib-1.304.tar.gz) = c7795ecabf80d87fc416ff4267b30db292b78c5e
+Size (Glib-1.304.tar.gz) = 285931 bytes
