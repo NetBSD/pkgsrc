@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2014/01/25 10:59:22 wiz Exp $
+# $NetBSD: Makefile,v 1.141 2014/01/26 09:38:33 tron Exp $
 
 DISTNAME=	gnutls-3.2.9
 CATEGORIES=	security devel
@@ -41,7 +41,7 @@ EGDIR=		${PREFIX}/share/examples/gnutls
 
 .include "../../mk/bsd.prefs.mk"
 
-# Assembler support is broken for Mac OS X and SunOS in 3.2.8.1.
+# Assembler support is broken for Mac OS X and SunOS in 3.2.9.
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
 CONFIGURE_ARGS+=	--disable-hardware-acceleration
 .endif
