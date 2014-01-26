@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2014/01/19 23:00:05 markd Exp $
+# $NetBSD: Makefile,v 1.107 2014/01/26 04:22:03 ryoon Exp $
 
 DISTNAME=	doxygen-1.8.6.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 UNLIMIT_RESOURCES+=	datasize
+# doxygen upstream uses this version of flex
+FLEX_REQD=		2.5.35
 USE_TOOLS+=		gmake gs:run perl:run bison flex
 USE_LANGUAGES=		c c++
 HAS_CONFIGURE=		yes
@@ -27,6 +29,7 @@ MAKE_ENV+=		PKGSRC_CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=		MAN1DIR=${PKGMANDIR}/man1
 
 LDFLAGS.FreeBSD=	-liconv
+LDFLAGS.OpenBSD=	-liconv
 
 REPLACE_PERL=		tmake/bin/tmake
 
@@ -69,6 +72,9 @@ PLIST.cs=		yes	# case-sensitive
 .if ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	-platform freebsd-g++
 .endif
+
+LDFLAGS.FreeBSD+=	${BUILDLINK_LDADD.iconv}
+LDFLAGS.OpenBSD+=	${BUILDLINK_LDADD.iconv}
 
 post-patch:
 	touch ${WRKSRC}/src/doxytag.l
