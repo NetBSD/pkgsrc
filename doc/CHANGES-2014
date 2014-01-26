@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.437 2014/01/26 00:52:14 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.438 2014/01/26 05:17:14 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -521,3 +521,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Removed devel/py-fann [wiz 2014-01-26]
 	Updated graphics/py-OpenGL to 3.0.1nb5 [wiz 2014-01-26]
 	Updated devel/py-coverage to 3.7.1 [wiz 2014-01-26]
+	Updated www/ikiwiki to 3.20140125 [schmonz 2014-01-26]
