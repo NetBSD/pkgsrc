@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/31 11:19:29 asau Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/01/26 00:39:40 wiz Exp $
 
 DISTNAME=	coverage-3.5.1
 PKGNAME=	${PYPKGPREFIX}-coverage-3.5.1
