@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2014/01/26 00:39:40 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2014/01/26 00:52:04 wiz Exp $
 
-DISTNAME=	coverage-3.5.1
-PKGNAME=	${PYPKGPREFIX}-coverage-3.5.1
+DISTNAME=	coverage-3.7.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/c/coverage/
 
@@ -15,6 +15,9 @@ PLIST_SUBST=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-extract:
 	${CHMOD} +r ${WRKSRC}/coverage.egg-info/*
+
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/bin/coverage
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
