@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2010/05/02 13:51:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/01/26 00:30:02 wiz Exp $
 bin/pyrexc
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/Pyrex/Compiler/Builtin.py
 ${PYSITELIB}/Pyrex/Compiler/Builtin.pyc
 ${PYSITELIB}/Pyrex/Compiler/Builtin.pyo
