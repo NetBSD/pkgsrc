@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12928 2014/01/25 11:11:31 wiz Exp $
+$NetBSD: TODO,v 1.12929 2014/01/26 00:52:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -939,7 +939,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-bottle-0.11.6
 	o py-cassa-1.11.0
 	o py-cffi-0.20
-	o py-coverage-3.7
 	o py-creole-1.1.1
 	o py-cssselect-0.9.1
 	o py-cssutils-1.0
