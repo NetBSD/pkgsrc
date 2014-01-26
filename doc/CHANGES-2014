@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.438 2014/01/26 05:17:14 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.439 2014/01/26 08:18:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -522,3 +522,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/py-OpenGL to 3.0.1nb5 [wiz 2014-01-26]
 	Updated devel/py-coverage to 3.7.1 [wiz 2014-01-26]
 	Updated www/ikiwiki to 3.20140125 [schmonz 2014-01-26]
+	Updated textproc/asciidoc to 8.6.9nb2 [wiz 2014-01-26]
