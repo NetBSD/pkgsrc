@@ -1,8 +1,31 @@
-$NetBSD: patch-aa,v 1.2 2012/02/17 18:19:30 drochner Exp $
+$NetBSD: patch-aa,v 1.3 2014/01/26 00:39:40 wiz Exp $
+
+Do not insist on distutils, by now an obsolete version of setuptools.
+Add python version to binary to allow paralle installation of the
+package for different python versions.
 
 --- setup.py.orig	2011-06-29 12:22:52.000000000 +0000
 +++ setup.py
-@@ -85,7 +85,7 @@ setup_args = dict(
+@@ -38,18 +38,8 @@ Topic :: Software Development :: Testing
+ # Pull in the tools we need.
+ import sys, traceback
+ 
+-# Distribute is a new fork of setuptools.  It's supported on Py3.x, so we use
+-# it there, but stick with classic setuptools on Py2.x until Distribute becomes
+-# more accepted.
+-if sys.version_info >= (3, 0):
+-    from distribute_setup import use_setuptools
+-else:
+-    from ez_setup import use_setuptools
+-
+-use_setuptools()
+-
+ from setuptools import setup
+ from distutils.core import Extension    # pylint: disable=E0611,F0401
+ 
+ # Get or massage our metadata.
+ 
+@@ -85,7 +74,7 @@ setup_args = dict(
  
      entry_points = {
          'console_scripts': [
