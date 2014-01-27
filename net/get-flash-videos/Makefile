@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/12/09 14:17:50 obache Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/01/27 18:41:14 wiz Exp $
 
 DISTNAME=	${GHACCOUNT}-${GHNAME}-${GHDESCRIBE}-g${GHCOMMIT}
 PKGNAME=	${GHNAME}-0.0.${GHDATE}
@@ -20,8 +19,6 @@ MAINTAINER=	dsainty@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/get-flash-videos/
 COMMENT=	Tool for using various Flash-based video hosting sites
 LICENSE=	apache-2.0
-
-FETCH_USING=	curl # For https:
 
 DEPENDS+=	p5-Data-AMF-[0-9]*:../../comms/p5-Data-AMF
 DEPENDS+=	p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree

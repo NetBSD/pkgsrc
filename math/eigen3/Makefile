@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/10/06 16:16:17 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/27 18:41:13 wiz Exp $
 
 DISTNAME=	3.1.4
 PKGNAME=	eigen3-3.1.4
@@ -17,7 +17,6 @@ USE_CMAKE= yes
 CMAKE_ARG_PATH= ..
 CONFIGURE_DIRS= _build
 WRKSRC=		${WRKDIR}/eigen-eigen-36bf2ceaf8f5
-FETCH_USING=	curl
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/_build
