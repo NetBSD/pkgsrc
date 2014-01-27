@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.459 2014/01/27 19:00:27 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.460 2014/01/27 19:08:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -542,3 +542,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/nsd to 4.0.1 [pettai 2014-01-27]
 	Updated finance/gnucash to 2.6.1 [wiz 2014-01-27]
 	Updated devel/py-xdg to 0.25 [wiz 2014-01-27]
+	Updated textproc/py-lxml to 3.3.0 [wiz 2014-01-27]
