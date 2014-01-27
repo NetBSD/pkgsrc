@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 18:28:25 asau Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/01/27 18:41:12 wiz Exp $
 
 DISTNAME=	KanjiStrokeOrders_v${KSOVER}
 PKGNAME=	${DISTNAME:tl:S/_v/-ttf-/}
@@ -11,10 +10,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://sites.google.com/site/nihilistorguk/
 COMMENT=	Japanese Kanji characters stroke order font
 LICENSE=	modified-bsd
-
-# Force using "curl" for fetching the distribution file. It is only available
-# over HTTPS and "curl" is the only fetch program which always supports HTTPS.
-FETCH_USING=	curl
 
 USE_X11BASE=	YES
 NO_CONFIGURE=	YES

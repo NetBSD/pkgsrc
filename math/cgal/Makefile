@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2013/11/20 20:04:35 adam Exp $
-#
+# $NetBSD: Makefile,v 1.21 2014/01/27 18:41:13 wiz Exp $
 
 PKGNAME=	cgal-3.9
 DISTNAME=	CGAL-3.9
@@ -11,8 +10,6 @@ MAINTAINER=	reinoud@NetBSD.org
 HOMEPAGE=	http://www.cgal.org/
 COMMENT=	Computational Geometry Algorithms Library
 LICENSE=	gnu-lgpl-v3
-
-FETCH_USING=	curl
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++

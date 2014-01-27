@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2013/10/30 06:03:38 dholland Exp $
-#
+# $NetBSD: Makefile,v 1.7 2014/01/27 18:41:14 wiz Exp $
 
 DISTNAME=		luasec-0.4.1
 PKGNAME=		${LUA_PKGPREFIX}-${DISTNAME:S/lua//}
 CATEGORIES=		security
 MASTER_SITES=		https://github.com/brunoos/luasec/archive/
-FETCH_USING=		curl
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/brunoos/luasec/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/11/05 17:37:48 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2014/01/27 18:41:14 wiz Exp $
 
 DISTNAME=	python-ecdsa-0.10
 PKGNAME=	${PYPKGPREFIX}-ecdsa-0.10
@@ -6,7 +6,6 @@ EGG_NAME=	ecdsa-0.0.0
 PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://github.com/warner/python-ecdsa/archive/
-FETCH_USING=	curl
 
 MAINTAINER=	gls@NetBSD.org
 HOMEPAGE=	https://github.com/warner/python-ecdsa/

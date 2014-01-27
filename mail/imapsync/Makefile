@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/12/09 14:17:48 obache Exp $
+# $NetBSD: Makefile,v 1.13 2014/01/27 18:41:13 wiz Exp $
 
 DISTNAME=	imapsync-1.564
 PKGREVISION=	1
@@ -18,7 +18,6 @@ DEPENDS+=	p5-IO-Socket-SSL-[0-9]*:../../security/p5-IO-Socket-SSL
 DEPENDS+=	p5-Mail-IMAPClient>=3.1.9:../../mail/p5-Mail-IMAPClient
 DEPENDS+=	p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey
 
-FETCH_USING=	curl
 NO_BUILD=	YES
 USE_TOOLS+=	perl:run
 REPLACE_PERL+=	imapsync

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/23 19:50:57 asau Exp $
+# $NetBSD: Makefile,v 1.10 2014/01/27 18:41:14 wiz Exp $
 
 DISTNAME=	dc-tools-1.4
 CATEGORIES=	sysutils
@@ -16,8 +16,6 @@ COMMENT=	Dreamcast bootable CDs tools (mainly from Marcus Comstedt)
 DCBURN_DISTFILE=abs0-dc-burn-netbsd-1.4-0-g1004515
 
 DEPENDS+=	cdrtools>=2.01:../../sysutils/cdrtools
-
-FETCH_USING=	curl	# For github
 
 # The filenames in the _slave.tar.gz files overlap
 EXTRACT_CMD=	${CP} ${DISTDIR}/${DIST_SUBDIR}/scramble.c ${WRKSRC} && \

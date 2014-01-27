@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/04/26 10:20:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/27 18:41:11 wiz Exp $
 
 DISTNAME=	jq-1.2
 CATEGORIES=	devel
@@ -8,8 +8,6 @@ MAINTAINER=	jperkin@joyent.com
 HOMEPAGE=	http://github.com/stedolan/jq/
 COMMENT=	Command-line JSON processor
 LICENSE=	mit
-
-FETCH_USING=	curl
 
 WRKSRC=		${WRKDIR}/stedolan-jq-1e8c524
 

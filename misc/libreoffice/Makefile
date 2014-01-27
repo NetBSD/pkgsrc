@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2014/01/01 11:52:25 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2014/01/27 18:41:13 wiz Exp $
 
 VER=			3.5.6.2
 DISTNAME=		libreoffice-${VER}
@@ -46,11 +46,6 @@ DISTFILES+=		${md}
 .endfor
 
 .include "../../mk/bsd.prefs.mk"
-
-# ftp: Unsupported URL scheme `https'
-.if ${OPSYS} == "NetBSD"
-FETCH_USING=		curl
-.endif
 
 # tar: Invalid header, starting valid header search.
 EXTRACT_USING=		gtar

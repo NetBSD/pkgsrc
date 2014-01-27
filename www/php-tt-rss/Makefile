@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/12/21 19:46:24 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2014/01/27 18:41:15 wiz Exp $
 
 TTRVER=		1.10
 DISTNAME=	Tiny-Tiny-RSS-${TTRVER}
@@ -16,10 +16,6 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mbstring-[0-9]*:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-dom-[0-9]*:../../textproc/php-dom
 DEPENDS+=	${PHP_PKG_PREFIX}-iconv-[0-9]*:../../converters/php-iconv
-
-# Force using "curl" for fetching the distribution file. It is only available
-# over HTTPS and "curl" is the only fetch program which always supports HTTPS.
-FETCH_USING=	curl
 
 .include "options.mk"
 

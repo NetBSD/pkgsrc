@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2013/07/05 17:25:23 stacktic Exp $
-#
+# $NetBSD: Makefile,v 1.19 2014/01/27 18:41:12 wiz Exp $
 
 GIT_COMMIT=		v1.00
 DISTNAME=		${GIT_COMMIT}
 PKGNAME=		fs-utils-20130701
-
 CATEGORIES=		filesystems
 MASTER_SITES=		https://github.com/stacktic/fs-utils/archive/
-FETCH_USING=		curl
 
 MAINTAINER=		stacktic@NetBSD.org
 HOMEPAGE=		https://github.com/stacktic/fs-utils

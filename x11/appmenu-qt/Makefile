@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/10/27 20:38:50 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.3 2014/01/27 18:41:15 wiz Exp $
 
 DISTNAME=	appmenu-qt-0.2.6
 CATEGORIES=	x11
@@ -10,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://launchpad.net/appmenu-qt/
 COMMENT=	Allows Qt applications to export menus over DBus to a menu applet
 LICENSE=	gnu-lgpl-v2.1
-
-FETCH_USING=	curl
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=  c c++

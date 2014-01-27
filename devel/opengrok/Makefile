@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2013/12/31 22:56:12 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.30 2014/01/27 18:41:12 wiz Exp $
 
 DISTNAME=	OpenGrok-0.12-rc5
 PKGNAME=	${DISTNAME:tl:S/-rc/rc/}
@@ -11,7 +10,6 @@ HOMEPAGE=	http://opengrok.github.io/OpenGrok/
 COMMENT=	Fast and usable source code search and cross reference engine
 LICENSE=	cddl-1.0
 
-FETCH_USING=	curl
 EXTRACT_USING=	bsdtar
 
 DEPENDS+=	exctags-[0-9]*:../../devel/exctags

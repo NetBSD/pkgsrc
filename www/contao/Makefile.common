@@ -1,9 +1,8 @@
-# $NetBSD: Makefile.common,v 1.54 2014/01/21 16:20:09 taca Exp $
+# $NetBSD: Makefile.common,v 1.55 2014/01/27 18:41:15 wiz Exp $
 #
 # used by www/contao/Makefile.example"
 # used by www/contao211/Makefile
 # used by www/contao32/Makefile
-#
 
 # Contao master site (on GitHub).
 CT_MASTER_SITE=	https://github.com/contao/core/archive/
@@ -37,7 +36,6 @@ CT_VERBASE=	${CT_VERSION:C/([0-9]+)\.([0-9]+)\..*/\1.\2/}
 CT_PKGVER=	${CT_VERSION:S/.RC/rc/}
 
 DIST_SUBDIR?=	contao
-FETCH_USING?=	curl
 
 FILES_SUBST+=	PAX=${PAX} CT_EGDIR=${CT_EGDIR:Q} CT_WEBDIR=${CT_WEBDIR:Q} \
 		WWWGRP=${APACHE_GROUP:Q} WWWOWN=${APACHE_USER:Q}

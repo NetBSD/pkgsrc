@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/11/25 12:00:49 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.9 2014/01/27 18:41:15 wiz Exp $
 
 DISTNAME=	razorqt-0.5.1
 PKGREVISION=	7
@@ -14,7 +13,6 @@ LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 
-FETCH_USING=	curl
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash pkg-config
 USE_CMAKE=	yes

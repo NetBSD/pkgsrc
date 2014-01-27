@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/01/22 16:20:51 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.7 2014/01/27 18:41:14 wiz Exp $
 
 DISTNAME=		luasocket-3.0-rc1
 PKGNAME=		${LUA_PKGPREFIX}-${DISTNAME:S/lua//:S/-rc/rc/}
@@ -11,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://w3.impa.br/~diego/software/luasocket/
 COMMENT=		Network support for the Lua language
 LICENSE=		mit
-
-FETCH_USING=		curl
 
 MAKE_FILE=		makefile
 

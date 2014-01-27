@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/27 08:10:24 obache Exp $
-#
+# $NetBSD: Makefile,v 1.4 2014/01/27 18:41:12 wiz Exp $
 
 DISTNAME=	luaposix-release-v31
 PKGNAME=	${DISTNAME:S/lua/${LUA_PKGPREFIX}-/:S/release-v//}

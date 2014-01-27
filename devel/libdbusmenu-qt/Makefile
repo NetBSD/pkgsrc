@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2013/06/06 12:53:41 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.21 2014/01/27 18:41:12 wiz Exp $
 
 DISTNAME=	libdbusmenu-qt-0.9.2
 PKGREVISION=	10
@@ -11,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://people.canonical.com/~agateau/dbusmenu/index.html
 COMMENT=	Dbusmenu library for Qt
 LICENSE=	gnu-lgpl-v2.1
-
-FETCH_USING=	curl
 
 USE_LANGUAGES=  c c++
 USE_CMAKE=      yes

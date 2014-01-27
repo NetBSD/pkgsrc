@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/10/18 11:41:18 bsiegert Exp $
+# $NetBSD: Makefile,v 1.16 2014/01/27 18:41:11 wiz Exp $
 
 GLVER=		3.5.2
 DISTNAME=	gitolite-${GLVER}
@@ -14,10 +14,6 @@ DEPENDS+=	git-base>=1.6.6:../../devel/git-base
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	pax perl:run
-
-# Force using "curl" for fetching the distribution file. It is only available
-# over HTTPS and "curl" is the only fetch program which always supports HTTPS.
-FETCH_USING=	curl
 
 NO_BUILD=	yes
 

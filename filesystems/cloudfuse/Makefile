@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/02/06 23:22:16 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2014/01/27 18:41:12 wiz Exp $
 
 DISTNAME=	1003a82
 PKGNAME=	cloudfuse-20120124
@@ -22,10 +22,6 @@ WRKSRC=		${WRKDIR}/redbo-cloudfuse-${DISTNAME}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/cloudfuse.README
-
-# Force using "curl" for fetching the distribution file. It is only available
-# over HTTPS and "curl" is the only fetch program which always supports HTTPS.
-FETCH_USING=	curl
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"

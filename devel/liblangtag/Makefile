@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/08/24 16:15:10 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/27 18:41:12 wiz Exp $
 
 DISTNAME=	liblangtag-0.5.1
 CATEGORIES=	devel
 MASTER_SITES=	https://bitbucket.org/tagoh/liblangtag/downloads/
 EXTRACT_SUFX=	.tar.bz2
-FETCH_USING=	curl
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	http://tagoh.bitbucket.org/liblangtag/

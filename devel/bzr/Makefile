@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2014/01/25 10:45:16 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2014/01/27 18:41:11 wiz Exp $
 
 DISTNAME=	bzr-2.5.1
 CATEGORIES=	devel scm
 MASTER_SITES=	https://launchpad.net/bzr/${PKGVERSION_NOREV:R}/${PKGVERSION_NOREV}/+download/
-FETCH_USING=	curl
 
 MAINTAINER=	ddeus.pkgsrc@mailnull.com
 HOMEPAGE=	http://bazaar-vcs.org/
