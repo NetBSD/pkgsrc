@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1015 2014/01/23 20:08:40 jnemeth Exp $
+# $NetBSD: Makefile,v 1.1016 2014/01/27 21:42:33 wiedi Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -151,6 +151,7 @@ SUBDIR+=	gallery2
 SUBDIR+=	ganglia-webfrontend
 SUBDIR+=	geeklog
 SUBDIR+=	gitweb
+SUBDIR+=	goaccess
 SUBDIR+=	gtkasp2php
 SUBDIR+=	gtkhtml314
 SUBDIR+=	gwt
