@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.477 2014/01/27 20:20:10 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.478 2014/01/27 20:25:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -560,3 +560,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/libvorbis to 1.3.4 [wiz 2014-01-27]
 	Updated audio/libmikmod to 3.3.5 [wiz 2014-01-27]
 	Updated devel/global to 6.2.10 [wiz 2014-01-27]
+	Updated graphics/dcraw to 9.20 [wiz 2014-01-27]
