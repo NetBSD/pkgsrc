@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2013/09/09 20:39:14 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2014/01/27 20:20:02 wiz Exp $
 
-DISTNAME=	global-6.2.9
+DISTNAME=	global-6.2.10
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=global/}
 

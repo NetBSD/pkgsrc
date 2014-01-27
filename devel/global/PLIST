@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2013/09/09 20:39:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2014/01/27 20:20:02 wiz Exp $
 bin/global
 bin/globash
 bin/gozilla
@@ -19,16 +19,20 @@ share/gtags/BOKIN_MODEL
 share/gtags/BOKIN_MODEL_FAQ
 share/gtags/BUILD_TOOLS
 share/gtags/COPYING
+share/gtags/COPYING.LIB
 share/gtags/ChangeLog
 share/gtags/DONORS
 share/gtags/FAQ
 share/gtags/INSTALL
 share/gtags/LICENSE
 share/gtags/NEWS
+share/gtags/PLUGIN_HOWTO
 share/gtags/README
+share/gtags/SERVERSIDE_HOWTO
 share/gtags/THANKS
 share/gtags/bless.sh.tmpl
 share/gtags/completion.cgi.tmpl
+share/gtags/ctags-5.8.patch
 share/gtags/elvis-2.2_0.patch
 share/gtags/elvis.rc
 share/gtags/ghtml.cgi.tmpl
@@ -39,7 +43,6 @@ share/gtags/gtags.conf
 share/gtags/gtags.el
 share/gtags/gtags.pl
 share/gtags/gtags.vim
-share/gtags/head.in
 share/gtags/icons/back.png
 share/gtags/icons/bottom.png
 share/gtags/icons/c.png
@@ -81,8 +84,6 @@ share/gtags/jquery/jquery.treeview.css
 share/gtags/jquery/jquery.treeview.js
 share/gtags/jscode_suggest.tmpl
 share/gtags/jscode_treeview.tmpl
-share/gtags/mainpage.dox
-share/gtags/script/README
 share/gtags/script/elvis-global
 share/gtags/script/global-client
 share/gtags/script/gtags-client
