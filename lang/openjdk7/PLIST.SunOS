@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.SunOS,v 1.3 2014/01/08 13:09:38 jperkin Exp $
+@comment $NetBSD: PLIST.SunOS,v 1.4 2014/01/27 11:04:20 ryoon Exp $
 bin/openjdk7-jar
 bin/openjdk7-java
 bin/openjdk7-javac
@@ -511,7 +511,6 @@ java/openjdk7/jre/lib/zi/Africa/Freetown
 java/openjdk7/jre/lib/zi/Africa/Gaborone
 java/openjdk7/jre/lib/zi/Africa/Harare
 java/openjdk7/jre/lib/zi/Africa/Johannesburg
-java/openjdk7/jre/lib/zi/Africa/Juba
 java/openjdk7/jre/lib/zi/Africa/Kampala
 java/openjdk7/jre/lib/zi/Africa/Khartoum
 java/openjdk7/jre/lib/zi/Africa/Kigali
@@ -540,7 +539,6 @@ java/openjdk7/jre/lib/zi/Africa/Tunis
 java/openjdk7/jre/lib/zi/Africa/Windhoek
 java/openjdk7/jre/lib/zi/America/Adak
 java/openjdk7/jre/lib/zi/America/Anchorage
-java/openjdk7/jre/lib/zi/America/Anguilla
 java/openjdk7/jre/lib/zi/America/Antigua
 java/openjdk7/jre/lib/zi/America/Araguaina
 java/openjdk7/jre/lib/zi/America/Argentina/Buenos_Aires
@@ -555,7 +553,6 @@ java/openjdk7/jre/lib/zi/America/Argentina/San_Juan
 java/openjdk7/jre/lib/zi/America/Argentina/San_Luis
 java/openjdk7/jre/lib/zi/America/Argentina/Tucuman
 java/openjdk7/jre/lib/zi/America/Argentina/Ushuaia
-java/openjdk7/jre/lib/zi/America/Aruba
 java/openjdk7/jre/lib/zi/America/Asuncion
 java/openjdk7/jre/lib/zi/America/Atikokan
 java/openjdk7/jre/lib/zi/America/Bahia
@@ -584,7 +581,6 @@ java/openjdk7/jre/lib/zi/America/Dawson
 java/openjdk7/jre/lib/zi/America/Dawson_Creek
 java/openjdk7/jre/lib/zi/America/Denver
 java/openjdk7/jre/lib/zi/America/Detroit
-java/openjdk7/jre/lib/zi/America/Dominica
 java/openjdk7/jre/lib/zi/America/Edmonton
 java/openjdk7/jre/lib/zi/America/Eirunepe
 java/openjdk7/jre/lib/zi/America/El_Salvador
@@ -593,8 +589,6 @@ java/openjdk7/jre/lib/zi/America/Glace_Bay
 java/openjdk7/jre/lib/zi/America/Godthab
 java/openjdk7/jre/lib/zi/America/Goose_Bay
 java/openjdk7/jre/lib/zi/America/Grand_Turk
-java/openjdk7/jre/lib/zi/America/Grenada
-java/openjdk7/jre/lib/zi/America/Guadeloupe
 java/openjdk7/jre/lib/zi/America/Guatemala
 java/openjdk7/jre/lib/zi/America/Guayaquil
 java/openjdk7/jre/lib/zi/America/Guyana
@@ -633,7 +627,6 @@ java/openjdk7/jre/lib/zi/America/Moncton
 java/openjdk7/jre/lib/zi/America/Monterrey
 java/openjdk7/jre/lib/zi/America/Montevideo
 java/openjdk7/jre/lib/zi/America/Montreal
-java/openjdk7/jre/lib/zi/America/Montserrat
 java/openjdk7/jre/lib/zi/America/Nassau
 java/openjdk7/jre/lib/zi/America/New_York
 java/openjdk7/jre/lib/zi/America/Nipigon
@@ -665,17 +658,12 @@ java/openjdk7/jre/lib/zi/America/Sao_Paulo
 java/openjdk7/jre/lib/zi/America/Scoresbysund
 java/openjdk7/jre/lib/zi/America/Sitka
 java/openjdk7/jre/lib/zi/America/St_Johns
-java/openjdk7/jre/lib/zi/America/St_Kitts
-java/openjdk7/jre/lib/zi/America/St_Lucia
-java/openjdk7/jre/lib/zi/America/St_Thomas
-java/openjdk7/jre/lib/zi/America/St_Vincent
 java/openjdk7/jre/lib/zi/America/Swift_Current
 java/openjdk7/jre/lib/zi/America/Tegucigalpa
 java/openjdk7/jre/lib/zi/America/Thule
 java/openjdk7/jre/lib/zi/America/Thunder_Bay
 java/openjdk7/jre/lib/zi/America/Tijuana
 java/openjdk7/jre/lib/zi/America/Toronto
-java/openjdk7/jre/lib/zi/America/Tortola
 java/openjdk7/jre/lib/zi/America/Vancouver
 java/openjdk7/jre/lib/zi/America/Whitehorse
 java/openjdk7/jre/lib/zi/America/Winnipeg
@@ -686,7 +674,6 @@ java/openjdk7/jre/lib/zi/Antarctica/Davis
 java/openjdk7/jre/lib/zi/Antarctica/DumontDUrville
 java/openjdk7/jre/lib/zi/Antarctica/Macquarie
 java/openjdk7/jre/lib/zi/Antarctica/Mawson
-java/openjdk7/jre/lib/zi/Antarctica/McMurdo
 java/openjdk7/jre/lib/zi/Antarctica/Palmer
 java/openjdk7/jre/lib/zi/Antarctica/Rothera
 java/openjdk7/jre/lib/zi/Antarctica/Syowa
@@ -865,7 +852,6 @@ java/openjdk7/jre/lib/zi/Europe/Stockholm
 java/openjdk7/jre/lib/zi/Europe/Tallinn
 java/openjdk7/jre/lib/zi/Europe/Tirane
 java/openjdk7/jre/lib/zi/Europe/Uzhgorod
-java/openjdk7/jre/lib/zi/Europe/Vaduz
 java/openjdk7/jre/lib/zi/Europe/Vienna
 java/openjdk7/jre/lib/zi/Europe/Vilnius
 java/openjdk7/jre/lib/zi/Europe/Volgograd
@@ -904,7 +890,6 @@ java/openjdk7/jre/lib/zi/Pacific/Gambier
 java/openjdk7/jre/lib/zi/Pacific/Guadalcanal
 java/openjdk7/jre/lib/zi/Pacific/Guam
 java/openjdk7/jre/lib/zi/Pacific/Honolulu
-java/openjdk7/jre/lib/zi/Pacific/Johnston
 java/openjdk7/jre/lib/zi/Pacific/Kiritimati
 java/openjdk7/jre/lib/zi/Pacific/Kosrae
 java/openjdk7/jre/lib/zi/Pacific/Kwajalein
