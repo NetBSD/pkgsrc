@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.20 2013/09/14 03:40:01 mspo Exp $
+$NetBSD: distinfo,v 1.21 2014/01/27 19:53:06 drochner Exp $
 
-SHA1 (dropbear-2013.58.tar.bz2) = fdbc0ed332b17fc7579dbce6d95d585cf5d653d7
-RMD160 (dropbear-2013.58.tar.bz2) = 4eac17f92d90d06556034432e9a2f7bbd51e3eaa
-Size (dropbear-2013.58.tar.bz2) = 1580584 bytes
-SHA1 (patch-aa) = 01bf4d80c4e76f9a60341b448cd7e77b2a03c286
+SHA1 (dropbear-2013.62.tar.bz2) = 1d0abb6c46206a2c95b26a6f454844855f585403
+RMD160 (dropbear-2013.62.tar.bz2) = 0eff5a4caf353898d3f5d4518786b2ec2473554a
+Size (dropbear-2013.62.tar.bz2) = 1598084 bytes
+SHA1 (patch-aa) = d0ba545503307ff39745823fe3382cd7899aed1d
 SHA1 (patch-ab) = 911a0525f309386901d32c23404d13ae67c2e2d1
