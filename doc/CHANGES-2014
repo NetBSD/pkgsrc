@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.453 2014/01/27 04:48:37 obache Exp $
+$NetBSD: CHANGES-2014,v 1.454 2014/01/27 05:13:54 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -536,3 +536,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/stunnel to 4.56 [tron 2014-01-26]
 	Updated x11/p5-gtk2 to 1.249 [obache 2014-01-27]
 	Added graphics/p5-cairo-gobject version 1.004 [obache 2014-01-27]
+	Updated graphics/p5-clutter to 1.110 [obache 2014-01-27]
