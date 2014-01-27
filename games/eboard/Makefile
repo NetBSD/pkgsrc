@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2013/10/10 14:42:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.35 2014/01/27 22:48:15 wiedi Exp $
 #
 
 DISTNAME=		eboard-1.0.4
@@ -22,6 +22,7 @@ USE_TOOLS+=		perl gmake pkg-config
 CONFIG_SHELL=		perl
 REPLACE_PERL+=		configure
 LDFLAGS+=		${LIBOSSAUDIO}
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 SUBST_CLASSES+=		mf
 SUBST_STAGE.mf=		post-configure
