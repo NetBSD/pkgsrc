@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2009/08/26 21:10:11 snj Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/01/27 19:53:06 drochner Exp $
 bin/dbclient
 bin/dbscp
 bin/dropbearconvert
 bin/dropbearkey
 man/man1/dbclient.1
+man/man1/dropbearconvert.1
+man/man1/dropbearkey.1
 man/man8/dropbear.8
-man/man8/dropbearkey.8
 sbin/dropbear
-share/doc/dropbear/README
