@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.473 2014/01/27 20:14:15 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.474 2014/01/27 20:15:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -556,3 +556,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/meld to 1.8.4 [wiz 2014-01-27]
 	Updated graphics/jpeg to 9a [wiz 2014-01-27]
 	Updated security/libsecret to 0.16 [wiz 2014-01-27]
+	Updated net/wget to 1.15 [wiz 2014-01-27]
