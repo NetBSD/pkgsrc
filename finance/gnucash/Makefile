@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.193 2014/01/26 16:29:40 wiz Exp $
+# $NetBSD: Makefile,v 1.194 2014/01/27 18:57:27 wiz Exp $
 
-DISTNAME=		gnucash-2.6.0
-PKGREVISION=		1
+DISTNAME=		gnucash-2.6.1
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 EXTRACT_SUFX=		.tar.bz2
@@ -33,6 +32,8 @@ REPLACE_PERL+=		packaging/win32/exetype.pl
 REPLACE_PERL+=		src/backend/xml/test/grab-types.pl
 REPLACE_PERL+=		src/quotes/Quote_example.pl
 
+REPLACE_PYTHON+=	src/python/pycons/*.py src/python/pycons/pycons
+
 PY_PATCHPLIST=		yes
 
 PKG_SYSCONFSUBDIR=	gnucash
@@ -46,6 +47,7 @@ INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/gnucash
 .include "../../finance/libofx/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../misc/goffice0.8/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
