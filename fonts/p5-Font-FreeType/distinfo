@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2014/01/27 06:07:59 obache Exp $
+
+SHA1 (Font-FreeType-0.03.tar.gz) = 7309f72ddf569b5868c49a8b407a5739b158e4d1
+RMD160 (Font-FreeType-0.03.tar.gz) = 6bd13f34505a1c04a8050eec4b72dc763e284031
+Size (Font-FreeType-0.03.tar.gz) = 95275 bytes
+SHA1 (patch-FreeType.xs) = 7a42e516040e26aa692b4e4fdc520711aa57b148
+SHA1 (patch-Makefile.PL) = c7737c389acb0f38b8a1367118ba62c653536c9f
