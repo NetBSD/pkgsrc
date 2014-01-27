@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/01/27 04:48:23 obache Exp $
+
+SHA1 (Cairo-GObject-1.004.tar.gz) = a77ac5a75f4e5becf93e7c7a0c6bf23bd9930484
+RMD160 (Cairo-GObject-1.004.tar.gz) = 2d15dcfe2271c2205c9d00b15f9a2aaddb56cbd0
+Size (Cairo-GObject-1.004.tar.gz) = 16786 bytes
