@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/01/11 14:42:04 adam Exp $
+# $NetBSD: Makefile,v 1.11 2014/01/27 21:51:03 wiedi Exp $
 #
 
 DISTNAME=		wbd-1.0ucl4
@@ -17,6 +17,8 @@ BUILD_TARGET=		wbd
 NO_CONFIGURE=		yes
 
 INSTALLATION_DIRS=	bin
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wbd ${DESTDIR}${PREFIX}/bin/wbd
