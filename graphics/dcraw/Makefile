@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2014/01/05 15:12:11 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2014/01/27 20:25:17 wiz Exp $
 #
 # Changes can be found in the RCS file at
 # http://www.cybercom.net/~dcoffin/dcraw/RCS/dcraw.c,v
 
-DISTNAME=	dcraw-9.19
+DISTNAME=	dcraw-9.20
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.cybercom.net/~dcoffin/dcraw/archive/
 
@@ -32,18 +32,7 @@ INSTALLATION_DIRS+=	${PKGLOCALEDIR}/locale/${lang}/LC_MESSAGES
 
 BROKEN_GETTEXT_DETECTION=	yes
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.dcraw
-PKG_SUPPORTED_OPTIONS=	lcms
-PKG_SUGGESTED_OPTIONS=	lcms
-
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mlcms)
-LIBS+=		-llcms
-.include "../../graphics/lcms/buildlink3.mk"
-.else
-CFLAGS+=	-DNO_LCMS
-.endif
+.include "options.mk"
 
 do-build:
 	set -e; cd ${WRKSRC};						\
