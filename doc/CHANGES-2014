@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.468 2014/01/27 19:54:01 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.469 2014/01/27 20:00:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -551,3 +551,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/py-psycopg2 to 2.5.2 [wiz 2014-01-27]
 	Updated security/dropbear to 2013.62 [drochner 2014-01-27]
 	Added security/py-backports.ssl_match_hostname version 3.4.0.2 [wiz 2014-01-27]
+	Updated www/py-tornado to 3.2 [wiz 2014-01-27]
