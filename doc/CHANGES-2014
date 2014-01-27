@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.470 2014/01/27 20:02:27 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.471 2014/01/27 20:04:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -553,3 +553,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added security/py-backports.ssl_match_hostname version 3.4.0.2 [wiz 2014-01-27]
 	Updated www/py-tornado to 3.2 [wiz 2014-01-27]
 	Updated misc/py-anki2 to 2.0.21 [wiz 2014-01-27]
+	Updated devel/meld to 1.8.4 [wiz 2014-01-27]
