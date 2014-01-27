@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2013/11/12 15:10:22 taca Exp $
-#
+# $NetBSD: Makefile,v 1.33 2014/01/27 18:41:15 wiz Exp $
 
 DISTNAME=	contao${CT_VER}-translations-${VERS}
 CATEGORIES=	www
@@ -20,7 +19,6 @@ VERS=		201311070
 CT_VERS=	211
 
 USE_TOOLS=	pax
-FETCH_USING=	wget
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
 PLIST_SRC=	${WRKDIR}/PLIST
