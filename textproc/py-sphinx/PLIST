@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2014/01/02 17:58:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/01/27 19:14:26 wiz Exp $
 bin/sphinx-apidoc
 bin/sphinx-autogen
 bin/sphinx-build
@@ -285,7 +285,11 @@ ${PYSITELIB}/sphinx/locale/zh_CN/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/zh_TW/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/zh_TW/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/zh_TW/LC_MESSAGES/sphinx.po
-${PYSITELIB}/sphinx/pycode/Grammar.txt
+${PYSITELIB}/sphinx/make_mode.py
+${PYSITELIB}/sphinx/make_mode.pyc
+${PYSITELIB}/sphinx/make_mode.pyo
+${PYSITELIB}/sphinx/pycode/Grammar-py2.txt
+${PYSITELIB}/sphinx/pycode/Grammar-py3.txt
 ${PYSITELIB}/sphinx/pycode/__init__.py
 ${PYSITELIB}/sphinx/pycode/__init__.pyc
 ${PYSITELIB}/sphinx/pycode/__init__.pyo
