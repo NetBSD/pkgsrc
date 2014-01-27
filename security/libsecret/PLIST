@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/05/18 09:05:46 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/01/27 20:14:04 wiz Exp $
 bin/secret-tool
 include/libsecret-1/libsecret/secret-attributes.h
 include/libsecret-1/libsecret/secret-collection.h
@@ -77,14 +77,26 @@ share/gtk-doc/html/libsecret-1/vala-lookup-example.html
 share/gtk-doc/html/libsecret-1/vala-remove-example.html
 share/gtk-doc/html/libsecret-1/vala-store-example.html
 share/locale/cs/LC_MESSAGES/libsecret.mo
+share/locale/da/LC_MESSAGES/libsecret.mo
+share/locale/de/LC_MESSAGES/libsecret.mo
 share/locale/es/LC_MESSAGES/libsecret.mo
+share/locale/fr/LC_MESSAGES/libsecret.mo
+share/locale/fur/LC_MESSAGES/libsecret.mo
 share/locale/gl/LC_MESSAGES/libsecret.mo
+share/locale/he/LC_MESSAGES/libsecret.mo
 share/locale/hu/LC_MESSAGES/libsecret.mo
+share/locale/id/LC_MESSAGES/libsecret.mo
 share/locale/it/LC_MESSAGES/libsecret.mo
 share/locale/ja/LC_MESSAGES/libsecret.mo
+share/locale/lt/LC_MESSAGES/libsecret.mo
+share/locale/nb/LC_MESSAGES/libsecret.mo
+share/locale/pa/LC_MESSAGES/libsecret.mo
 share/locale/pl/LC_MESSAGES/libsecret.mo
 share/locale/pt_BR/LC_MESSAGES/libsecret.mo
 share/locale/ru/LC_MESSAGES/libsecret.mo
+share/locale/sk/LC_MESSAGES/libsecret.mo
 share/locale/sl/LC_MESSAGES/libsecret.mo
 share/locale/sr/LC_MESSAGES/libsecret.mo
 share/locale/sr@latin/LC_MESSAGES/libsecret.mo
+share/locale/zh_HK/LC_MESSAGES/libsecret.mo
+share/locale/zh_TW/LC_MESSAGES/libsecret.mo
