@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12945 2014/01/27 19:45:53 wiz Exp $
+$NetBSD: TODO,v 1.12946 2014/01/27 19:53:55 drochner Exp $
 
 Suggested new packages
 ======================
@@ -490,7 +490,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dolphin-4.0.2
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
-	o dropbear-2013.59
 	o dvtm-0.10
 	o easymenu-0.7.2p1
 	o eboard-1.1.1
