@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/10/25 09:43:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.22 2014/01/27 23:27:04 wiedi Exp $
 #
 
 DISTNAME=		x2vnc-1.7.2
@@ -12,7 +12,7 @@ COMMENT=		Multi-console display using X and VNC
 LICENSE=		gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
-LDFLAGS.SunOS+=		-lresolv -lsocket
+LDFLAGS.SunOS+=		-lresolv -lsocket -lnsl
 
 .include "options.mk"
 
