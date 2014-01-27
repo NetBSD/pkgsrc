@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/27 18:41:14 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/27 18:42:11 wiz Exp $
 
 DISTNAME=	python-ecdsa-0.10
 PKGNAME=	${PYPKGPREFIX}-ecdsa-0.10
@@ -15,10 +15,8 @@ LICENSE=	mit
 WRKSRC=		${WRKDIR}/python-ecdsa-${DISTNAME}
 USE_LANGUAGES=	# none
 
-REPLACE_INTERPRETER+=	python
-REPLACE.python.old=	/usr/bin/env python
-REPLACE.python.new=	${PYTHONBIN}
-REPLACE_FILES.python=	ecdsa/ecdsa.py ecdsa/ellipticcurve.py ecdsa/numbertheory.py
+REPLACE_PYTHON=	ecdsa/ecdsa.py ecdsa/ellipticcurve.py ecdsa/numbertheory.py
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
