@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/09/17 16:23:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/27 08:10:24 obache Exp $
 #
 
 DISTNAME=	luaposix-release-v31
@@ -10,8 +10,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/luaposix/luaposix
 COMMENT=	POSIX library (including curses) for lua
 LICENSE=	mit
-
-FETCH_USING=	curl
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	perl:build
