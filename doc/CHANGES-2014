@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.464 2014/01/27 19:16:04 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.465 2014/01/27 19:44:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -547,3 +547,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-urwid to 1.1.2 [wiz 2014-01-27]
 	Updated textproc/py-sphinx to 1.2.1 [wiz 2014-01-27]
 	Updated devel/py-virtualenv to 1.11.2 [wiz 2014-01-27]
+	Updated devel/py-cython to 0.20 [wiz 2014-01-27]
