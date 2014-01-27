@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/05/18 09:05:46 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2014/01/27 20:14:04 wiz Exp $
 
-SHA1 (libsecret-0.15.tar.xz) = da54ec18c3aa1581b4080237f082ce0105132eaf
-RMD160 (libsecret-0.15.tar.xz) = f5cf815f11d5c80b970a89852a99426afb7c5c66
-Size (libsecret-0.15.tar.xz) = 484532 bytes
+SHA1 (libsecret-0.16.tar.xz) = 9110beaaa0dbaf0d8119c1a04f38ef87320cbc0e
+RMD160 (libsecret-0.16.tar.xz) = f63400bf2d8209675d28b26c137fb073ca91e37e
+Size (libsecret-0.16.tar.xz) = 499888 bytes
