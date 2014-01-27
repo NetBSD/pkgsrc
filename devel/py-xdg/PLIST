@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/04/08 20:21:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/01/27 19:00:18 wiz Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/xdg/BaseDirectory.py
 ${PYSITELIB}/xdg/BaseDirectory.pyc
@@ -36,3 +36,6 @@ ${PYSITELIB}/xdg/RecentFiles.pyo
 ${PYSITELIB}/xdg/__init__.py
 ${PYSITELIB}/xdg/__init__.pyc
 ${PYSITELIB}/xdg/__init__.pyo
+${PYSITELIB}/xdg/util.py
+${PYSITELIB}/xdg/util.pyc
+${PYSITELIB}/xdg/util.pyo
