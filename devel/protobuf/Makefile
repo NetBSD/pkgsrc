@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/03/29 09:17:26 asau Exp $
+# $NetBSD: Makefile,v 1.7 2014/01/27 08:08:50 obache Exp $
 #
 
 DISTNAME=	protobuf-2.5.0
@@ -15,7 +15,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c++ c
 
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib
+SET_LIBDIR=	yes
 
 PKGCONFIG_OVERRIDE+=	protobuf-lite.pc.in
 PKGCONFIG_OVERRIDE+=	protobuf.pc.in
