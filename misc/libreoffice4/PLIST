@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/10/12 01:04:42 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/01/27 11:16:16 ryoon Exp $
 bin/sbase
 bin/scalc
 bin/sdraw
@@ -47053,6 +47053,14 @@ ${PKGNAME}/share/extensions/presentation-minimizer/registry/data/org/openoffice/
 ${PKGNAME}/share/extensions/presentation-minimizer/registry/data/org/openoffice/Office/ProtocolHandler.xcu
 ${PKGNAME}/share/extensions/presentation-minimizer/registry/data/org/openoffice/Office/extension/SunPresentationMinimizer.xcu
 ${PKGNAME}/share/extensions/presentation-minimizer/registry/schema/org/openoffice/Office/extension/SunPresentationMinimizer.xcs
+${PKGNAME}/share/fonts/truetype/Caladea-Bold.ttf
+${PKGNAME}/share/fonts/truetype/Caladea-BoldItalic.ttf
+${PKGNAME}/share/fonts/truetype/Caladea-Italic.ttf
+${PKGNAME}/share/fonts/truetype/Caladea-Regular.ttf
+${PKGNAME}/share/fonts/truetype/Carlito-Bold.ttf
+${PKGNAME}/share/fonts/truetype/Carlito-BoldItalic.ttf
+${PKGNAME}/share/fonts/truetype/Carlito-Italic.ttf
+${PKGNAME}/share/fonts/truetype/Carlito-Regular.ttf
 ${PKGNAME}/share/fonts/truetype/DejaVuSans-Bold.ttf
 ${PKGNAME}/share/fonts/truetype/DejaVuSans-BoldOblique.ttf
 ${PKGNAME}/share/fonts/truetype/DejaVuSans-ExtraLight.ttf
