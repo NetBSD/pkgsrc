@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.466 2014/01/27 19:45:53 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.467 2014/01/27 19:53:55 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -549,3 +549,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-virtualenv to 1.11.2 [wiz 2014-01-27]
 	Updated devel/py-cython to 0.20 [wiz 2014-01-27]
 	Updated databases/py-psycopg2 to 2.5.2 [wiz 2014-01-27]
+	Updated security/dropbear to 2013.62 [drochner 2014-01-27]
