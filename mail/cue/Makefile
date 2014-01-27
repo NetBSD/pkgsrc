@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2013/02/06 23:22:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.66 2014/01/27 22:04:45 wiedi Exp $
 
 DISTNAME=	cue-snap-20100426
 PKGNAME=	${DISTNAME:S/snap-//}
@@ -15,6 +15,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 INSTALLATION_DIRS+=	bin share/doc/cue share/examples/cue
+
+CPPFLAGS.SunOS+=	-Du_int8_t=uint8_t
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cue ${DESTDIR}${PREFIX}/bin
