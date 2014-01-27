@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.456 2014/01/27 11:17:06 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.457 2014/01/27 12:58:13 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -539,3 +539,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/p5-clutter to 1.110 [obache 2014-01-27]
 	Added fonts/p5-Font-FreeType version 0.03 [obache 2014-01-27]
 	Updated misc/libreoffice4 to 4.1.4.2 [ryoon 2014-01-27]
+	Updated net/nsd to 4.0.1 [pettai 2014-01-27]
