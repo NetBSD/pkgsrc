@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2014/01/26 00:52:04 wiz Exp $
-${PLIST.py2x}bin/coverage-2.7
+@comment $NetBSD: PLIST,v 1.4 2014/01/27 20:46:22 wiz Exp $
+bin/coverage-${PYVERSSUFFIX}
 ${PLIST.py2x}bin/coverage2
-${PLIST.py3x}bin/coverage-3.3
 ${PLIST.py3x}bin/coverage3
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
