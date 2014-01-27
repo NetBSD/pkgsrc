@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.474 2014/01/27 20:15:43 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.475 2014/01/27 20:17:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -557,3 +557,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/jpeg to 9a [wiz 2014-01-27]
 	Updated security/libsecret to 0.16 [wiz 2014-01-27]
 	Updated net/wget to 1.15 [wiz 2014-01-27]
+	Updated audio/libvorbis to 1.3.4 [wiz 2014-01-27]
