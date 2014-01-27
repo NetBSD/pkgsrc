@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2014/01/20 19:27:51 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2014/01/27 11:16:16 ryoon Exp $
 
-VER=		4.1.3.2
+VER=		4.1.4.2
 DISTNAME=	libreoffice-${VER}
 PKGNAME=	libreoffice4-${VER}
-PKGREVISION=	5
 CATEGORIES=	misc
-MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/4.1.3/
+MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/4.1.4/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -85,7 +84,9 @@ MORE_DISTFILES= \
 	05f84c95b610c21c5fd510d10debcabf-mariadb-native-client-1.0.0.tar.bz2 \
 	08c85a6d6d793daee14e10e22eefdc4b-mdds_0.8.1.tar.bz2 \
 	ea91f2fb4212a21d708aced277e6e85a-vigra1.4.0.tar.gz \
-	185d60944ea767075d27247c3162b3bc-unowinreg.dll
+	185d60944ea767075d27247c3162b3bc-unowinreg.dll \
+	368f114c078f94214a308a74c7e991bc-crosextrafonts-20130214.tar.gz \
+	c74b7223abe75949b4af367942d96c7a-crosextrafonts-carlito-20130920.tar.gz
 #	libmwaw-0.1.10.tar.bz2
 #	17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip
 #	ac4781e01619be13461bb2d562b94a7b-cppunit-1.13.1.tar.gz
