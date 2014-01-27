@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.471 2014/01/27 20:04:48 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.472 2014/01/27 20:12:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -554,3 +554,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-tornado to 3.2 [wiz 2014-01-27]
 	Updated misc/py-anki2 to 2.0.21 [wiz 2014-01-27]
 	Updated devel/meld to 1.8.4 [wiz 2014-01-27]
+	Updated graphics/jpeg to 9a [wiz 2014-01-27]
