@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/05/02 07:53:02 wen Exp $
-#
+# $NetBSD: Makefile,v 1.3 2014/01/27 19:58:33 wiz Exp $
 
-DISTNAME=	tornado-3.0.1
+DISTNAME=	tornado-3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	http://pypi.python.org/packages/source/t/tornado/
@@ -20,6 +19,12 @@ REPLACE_PYTHON+=	tornado/test/*.py
 
 do-test:
 	${RUN}cd ${WRKSRC}; ${PYTHONBIN} -m tornado.test.runtests
+
+.include "../../lang/python/pyversion.mk"
+
+.if "${PYPKGPREFIX}" == "py26" || "${PYPKGPREFIX}" == "py27
+DEPENDS+=	${PYPKGPREFIX}-backports.ssl_match_hostname-[0-9]*:../../security/py-backports.ssl_match_hostname
+.endif
 
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/application.mk"

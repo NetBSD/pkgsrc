@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2013/05/02 07:53:02 wen Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/01/27 19:58:33 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/tornado/__init__.py
 ${PYSITELIB}/tornado/__init__.pyc
@@ -55,6 +56,9 @@ ${PYSITELIB}/tornado/options.pyo
 ${PYSITELIB}/tornado/platform/__init__.py
 ${PYSITELIB}/tornado/platform/__init__.pyc
 ${PYSITELIB}/tornado/platform/__init__.pyo
+${PYSITELIB}/tornado/platform/asyncio.py
+${PYSITELIB}/tornado/platform/asyncio.pyc
+${PYSITELIB}/tornado/platform/asyncio.pyo
 ${PYSITELIB}/tornado/platform/auto.py
 ${PYSITELIB}/tornado/platform/auto.pyc
 ${PYSITELIB}/tornado/platform/auto.pyo
@@ -91,6 +95,7 @@ ${PYSITELIB}/tornado/process.pyo
 ${PYSITELIB}/tornado/simple_httpclient.py
 ${PYSITELIB}/tornado/simple_httpclient.pyc
 ${PYSITELIB}/tornado/simple_httpclient.pyo
+${PYSITELIB}/tornado/speedups.so
 ${PYSITELIB}/tornado/stack_context.py
 ${PYSITELIB}/tornado/stack_context.pyc
 ${PYSITELIB}/tornado/stack_context.pyo
@@ -156,6 +161,9 @@ ${PYSITELIB}/tornado/test/options_test.pyo
 ${PYSITELIB}/tornado/test/process_test.py
 ${PYSITELIB}/tornado/test/process_test.pyc
 ${PYSITELIB}/tornado/test/process_test.pyo
+${PYSITELIB}/tornado/test/resolve_test_helper.py
+${PYSITELIB}/tornado/test/resolve_test_helper.pyc
+${PYSITELIB}/tornado/test/resolve_test_helper.pyo
 ${PYSITELIB}/tornado/test/runtests.py
 ${PYSITELIB}/tornado/test/runtests.pyc
 ${PYSITELIB}/tornado/test/runtests.pyo
@@ -165,6 +173,7 @@ ${PYSITELIB}/tornado/test/simple_httpclient_test.pyo
 ${PYSITELIB}/tornado/test/stack_context_test.py
 ${PYSITELIB}/tornado/test/stack_context_test.pyc
 ${PYSITELIB}/tornado/test/stack_context_test.pyo
+${PYSITELIB}/tornado/test/static/dir/index.html
 ${PYSITELIB}/tornado/test/static/robots.txt
 ${PYSITELIB}/tornado/test/template_test.py
 ${PYSITELIB}/tornado/test/template_test.pyc
