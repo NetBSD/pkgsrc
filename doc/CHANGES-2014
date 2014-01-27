@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.479 2014/01/27 21:45:15 wiedi Exp $
+$NetBSD: CHANGES-2014,v 1.480 2014/01/27 22:40:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -562,3 +562,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/global to 6.2.10 [wiz 2014-01-27]
 	Updated graphics/dcraw to 9.20 [wiz 2014-01-27]
 	Added www/goaccess version 0.7 [wiedi 2013-01-27]
+	Updated net/youtube-dl to 20140127.2 [wiz 2014-01-27]
