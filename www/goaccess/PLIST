@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/27 21:40:38 wiedi Exp $
+bin/goaccess
+man/man1/goaccess.1
