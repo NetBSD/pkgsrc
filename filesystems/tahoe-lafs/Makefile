@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/01/25 10:30:07 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2014/01/27 18:41:12 wiz Exp $
 
 VERSION=	1.10.0
 PKGREVISION=	2
@@ -10,7 +10,6 @@ MASTER_SITES=	https://tahoe-lafs.org/source/tahoe-lafs/releases/
 #for beta, add
 #MASTER_SITES+=		http://tahoe-lafs.org/source/tahoe-lafs/tarballs/
 EXTRACT_SUFX=	.tar.bz2
-FETCH_USING=	curl
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://tahoe-lafs.org/
