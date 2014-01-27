@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.478 2014/01/27 20:25:26 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.479 2014/01/27 21:45:15 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -561,3 +561,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/libmikmod to 3.3.5 [wiz 2014-01-27]
 	Updated devel/global to 6.2.10 [wiz 2014-01-27]
 	Updated graphics/dcraw to 9.20 [wiz 2014-01-27]
+	Added www/goaccess version 0.7 [wiedi 2013-01-27]
