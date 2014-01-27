@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.452 2014/01/27 04:28:33 obache Exp $
+$NetBSD: CHANGES-2014,v 1.453 2014/01/27 04:48:37 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -535,3 +535,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated finance/gnucash to 2.6.0nb1 [wiz 2014-01-26]
 	Updated security/stunnel to 4.56 [tron 2014-01-26]
 	Updated x11/p5-gtk2 to 1.249 [obache 2014-01-27]
+	Added graphics/p5-cairo-gobject version 1.004 [obache 2014-01-27]
