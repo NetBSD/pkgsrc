@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.455 2014/01/27 06:08:11 obache Exp $
+$NetBSD: CHANGES-2014,v 1.456 2014/01/27 11:17:06 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -538,3 +538,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added graphics/p5-cairo-gobject version 1.004 [obache 2014-01-27]
 	Updated graphics/p5-clutter to 1.110 [obache 2014-01-27]
 	Added fonts/p5-Font-FreeType version 0.03 [obache 2014-01-27]
+	Updated misc/libreoffice4 to 4.1.4.2 [ryoon 2014-01-27]
