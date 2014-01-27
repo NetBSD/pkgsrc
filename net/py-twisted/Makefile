@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2013/08/13 17:47:41 adam Exp $
+# $NetBSD: Makefile,v 1.23 2014/01/27 18:49:19 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 COMMENT=	Framework for writing networked applications
@@ -37,9 +37,8 @@ CHECK_FILES_SKIP+=	${PREFIX}/${PYSITELIB}/twisted/plugins/dropin.cache
 .include "../../lang/python/application.mk"
 
 # With python 2.6, twisted builds an additional object.
-# XXX Guess that 2.5 does this too.
 PLIST_VARS+=		initgroups
-.if ${PYPKGPREFIX} == "py26" || ${PYPKGPREFIX} == "py25"
+.if ${PYPKGPREFIX} == "py26"
 PLIST.initgroups=	YES
 .endif
 
