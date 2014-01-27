@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2014/01/27 16:44:27 pettai Exp $
+# $NetBSD: options.mk,v 1.9 2014/01/27 21:25:21 pettai Exp $
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.bind98
 PKG_SUPPORTED_OPTIONS=  bind-dig-sigchase bind-xml-statistics-server
@@ -54,6 +54,8 @@ CONFIGURE_ARGS+=	--with-dlz-ldap=${BUILDLINK_PREFIX.openldap-client}
 CONFIGURE_ARGS+=	--with-dlz-filesystem
 .endif
 
+# The RRL patches available here
+# http://ss.vix.su/~vjs/rrlrpz.html
 .if !empty(PKG_OPTIONS:Mrrl)
 PATCHFILES=rl-9.8.6.patch
 PATCH_SITES=http://ss.vix.su/~vjs/
