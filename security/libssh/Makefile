@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.17 2014/01/09 14:29:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2014/01/27 18:41:14 wiz Exp $
 #
-
 # history: upstream renamed 0.11 to 0.1.1;
 # we have to use the old-style convention so that version compares work.
 #
@@ -17,11 +16,6 @@ COMMENT=		SSHv2+v1 protocol library; libssh.org version ${VER}
 LICENSE=		2-clause-bsd
 
 DIST_SUBDIR=		security
-
-.include "../../mk/bsd.prefs.mk"
-
-# ftp: Unsupported URL scheme `https'
-FETCH_USING=		curl
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++

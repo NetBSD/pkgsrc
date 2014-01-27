@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/04/13 12:01:42 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.12 2014/01/27 18:41:12 wiz Exp $
 
 DISTNAME=	liberation-fonts-ttf-2.00.1
 PKGNAME=	${DISTNAME:S/-fonts//}
@@ -11,10 +10,6 @@ MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	http://www.redhat.com/promo/fonts/
 COMMENT=	TrueType fonts from RedHat
 LICENSE=	ofl-v1.1
-
-# Force using "curl" for fetching the distribution file. It is only available
-# over HTTPS and "curl" is the only fetch program which always supports HTTPS.
-FETCH_USING=	curl
 
 NO_BUILD=	yes
 NO_CONFIGURE=	yes

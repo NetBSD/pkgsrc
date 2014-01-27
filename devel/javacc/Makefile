@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/06/30 12:31:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2014/01/27 18:41:11 wiz Exp $
 
 DISTNAME=	javacc-5.0
 CATEGORIES=	devel
@@ -12,10 +12,6 @@ LICENSE=	modified-bsd
 NO_BUILD=	yes
 USE_JAVA=	run
 USE_JAVA2=	yes
-
-# Force using "curl" for fetching the distribution file. It is only available
-# over HTTPS and "curl" is the only fetch program which always supports HTTPS.
-FETCH_USING=	curl
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing classpath.

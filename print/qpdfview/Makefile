@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/12/06 13:23:47 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.16 2014/01/27 18:41:14 wiz Exp $
 
 VER=		0.4
 DISTNAME=	qpdfview-${VER}
@@ -11,10 +10,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://launchpad.net/qpdfview
 COMMENT=	Tabbed PDF viewer
 LICENSE=	gnu-gpl-v2
-
-# Force using "curl" for fetching the distribution file. It is only available
-# over HTTPS and "curl" is the only fetch program which always supports HTTPS.
-FETCH_USING=	curl
 
 DEPENDS+=	poppler-data-[0-9]*:../../print/poppler-data
 DEPENDS+=	qt4-sqlite3-[0-9]*:../../x11/qt4-sqlite3

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/22 16:16:21 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/01/27 18:41:12 wiz Exp $
 
 DISTNAME=	lgi-${VERSION}
 PKGNAME=	${LUA_PKGPREFIX}-gi-${VERSION}
@@ -15,7 +14,6 @@ LICENSE=	mit
 
 USE_LANGUAGES+=	c
 USE_TOOLS+=	pkg-config gmake
-FETCH_USING=	curl
 WRKSRC=		${WRKDIR}/pavouk-lgi-1bbf1bc
 
 SUBST_CLASSES+=	v

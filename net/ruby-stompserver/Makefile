@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/07/12 10:45:00 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/27 18:41:14 wiz Exp $
 
 DISTNAME=	drizztbsd-stompserver-1c7a275
 PKGNAME=	${RUBY_PKGPREFIX}-stompserver-1.0.0
@@ -12,8 +12,6 @@ LICENSE=	mit
 MASTER_SITES=	https://nodeload.github.com/drizztbsd/stompserver/tarball/
 DISTFILES=	1c7a275272f14ba3ce9d4c7f27402e659f775498
 
-# needed for https on github
-FETCH_USING=	curl
 # FETCH_OUTPUT_ARGS does not seem to work, we'll extract ourselves
 USE_TOOLS=	tar
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2013/01/25 22:02:18 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.4 2014/01/27 18:41:12 wiz Exp $
 # used by devel/lua-lrexlib-posix/Makefile
 # used by devel/lua-lrexlib-pcre/Makefile
 # used by devel/lua-lrexlib-onig/Makefile
@@ -14,10 +14,6 @@ EXTRACT_SUFX=	.zip
 HOMEPAGE=	http://luaforge.net/projects/lrexlib
 
 LICENSE=		mit
-
-# Force using "curl" for fetching the distribution file. It is only available
-# over HTTPS and "curl" is the only fetch program which always supports HTTPS.
-FETCH_USING=	curl
 
 #USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
