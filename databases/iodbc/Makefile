@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/02 21:25:19 asau Exp $
+# $NetBSD: Makefile,v 1.23 2014/01/27 06:52:27 obache Exp $
 
 DISTNAME=	libiodbc-3.52.8
 PKGNAME=	${DISTNAME:S/^lib//}
@@ -14,7 +14,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-gui
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/iodbc
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/iodbc
+GNU_CONFIGURE_LIBSUBDIR=	iodbc
 CONFIGURE_ARGS+=	--pkgconfigdir=${PREFIX}/lib/pkgconfig
 CONFIGURE_ARGS+=	--with-iodbc-inidir=${PKG_SYSCONFDIR}
 
