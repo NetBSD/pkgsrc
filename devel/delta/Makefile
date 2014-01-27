@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/05/31 12:39:58 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/01/27 18:41:11 wiz Exp $
 
 DISTNAME=	delta-2006.08.03
 PKGREVISION=	2
@@ -11,7 +10,6 @@ HOMEPAGE=	http://delta.tigris.org/
 COMMENT=	Heuristically minimizes interesting files
 LICENSE=	2-clause-bsd
 
-FETCH_USING=	wget
 USE_TOOLS+=	gmake perl
 REPLACE_PERL=	delta multidelta
 INSTALLATION_DIRS= bin
