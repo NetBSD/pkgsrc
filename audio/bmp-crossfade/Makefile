@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/10/10 14:41:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2014/01/27 06:56:42 obache Exp $
 #
 
 PKGNAME=		bmp-crossfade-0.3.11
@@ -25,7 +25,7 @@ MAKE_ENV+=		OSS_DEFS=${OSS_DEFS:Q}
 .include "../../mk/oss.buildlink3.mk"
 
 CONFIGURE_ARGS+=	--enable-player=bmp
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/bmp/Output
+GNU_CONFIGURE_LIBSUBDIR=	bmp/Output
 
 .if ${OSS_TYPE} == "none"
 CONFIGURE_ARGS+=	--disable-oss
