@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/12/31 19:32:32 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/27 18:41:15 wiz Exp $
 
 DISTNAME=	http-parser-0.8.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	https://pypi.python.org/packages/source/h/http-parser/
-FETCH_USING=	curl
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://github.com/benoitc/http-parser

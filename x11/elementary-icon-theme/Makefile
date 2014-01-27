@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/06/16 18:56:05 sno Exp $
-#
+# $NetBSD: Makefile,v 1.2 2014/01/27 18:41:15 wiz Exp $
 
 DISTNAME=	elementary-icon-theme-3.0
 CATEGORIES=	graphics
@@ -12,9 +11,6 @@ COMMENT=	Simple and appealing Tango-styled icon theme
 LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-# Needed for launchpad
-FETCH_USING=	curl
 
 WRKSRC=		${WRKDIR}/elementary
 NO_BUILD=	yes
