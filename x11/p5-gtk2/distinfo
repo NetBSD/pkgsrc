@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2012/07/11 09:45:05 wiz Exp $
+$NetBSD: distinfo,v 1.16 2014/01/27 04:28:23 obache Exp $
 
-SHA1 (Gtk2-1.243.tar.gz) = 7b5513722891ca27012f499c653d8e10611fd407
-RMD160 (Gtk2-1.243.tar.gz) = 48fe3fad258e35c8469e62e2ac22c7f3fc748b8b
-Size (Gtk2-1.243.tar.gz) = 740472 bytes
+SHA1 (Gtk2-1.249.tar.gz) = e7e78aa3ebae975b1a8aaf35ef4d35b16aa84d38
+RMD160 (Gtk2-1.249.tar.gz) = 6a4ebb0430f20eb9f883ef718cf204baa05a76bc
+Size (Gtk2-1.249.tar.gz) = 742086 bytes
