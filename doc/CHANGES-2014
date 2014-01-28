@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.482 2014/01/28 09:24:18 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.483 2014/01/28 12:41:53 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -565,3 +565,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/youtube-dl to 20140127.2 [wiz 2014-01-27]
 	Updated x11/qt5-qtbase to 5.2.0nb3 [ryoon 2014-01-28]
 	Updated databases/p5-DBD-SQLite to 1.40 [wiz 2014-01-28]
+	Updated mail/milter-manager to 2.0.2 [obache 2014-01-28]
