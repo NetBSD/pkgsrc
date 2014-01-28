@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.7 2012/06/12 15:46:02 wiz Exp $
+# $NetBSD: options.mk,v 1.8 2014/01/28 08:19:30 tron Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wget
-PKG_SUPPORTED_OPTIONS=	gnutls idn inet6 openssl
+PKG_SUPPORTED_OPTIONS=	idn inet6
 PKG_OPTIONS_REQUIRED_GROUPS=	ssl
 PKG_OPTIONS_GROUP.ssl=	gnutls openssl
 PKG_SUGGESTED_OPTIONS=	idn inet6 openssl
