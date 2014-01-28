@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2013/10/10 11:08:16 roy Exp $
+# $NetBSD: Makefile.common,v 1.15 2014/01/28 12:08:07 obache Exp $
 
 DISTNAME=		ce-${VERSION}
 VERSION=		4.6
@@ -13,7 +13,7 @@ COMMENT=		Chet's Emacs: small, fast emacs-like editor
 MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/share/doc
+GNU_CONFIGURE_LIBDIR=	${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--without-ce-malloc
 
 PATCHDIR=		${.CURDIR}/../ce/patches
