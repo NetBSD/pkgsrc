@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.241 2013/12/09 10:44:22 taca Exp $
+# $NetBSD: Makefile,v 1.242 2014/01/28 12:16:39 obache Exp $
 
 DISTNAME=	samba-${VERSION}
 CATEGORIES=	net
@@ -48,7 +48,7 @@ REPLACE_PERL=		script/findsmb.in
 
 BROKEN_GETTEXT_DETECTION=yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--libdir=${SAMBA_LIBDIR}
+GNU_CONFIGURE_LIBDIR=	${SAMBA_LIBDIR}
 CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 CONFIGURE_ARGS+=	--with-configdir=${SAMBA_ETCDIR}

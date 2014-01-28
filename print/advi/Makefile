@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2014/01/01 11:52:31 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2014/01/28 12:21:54 obache Exp $
 
 DISTNAME=		advi-1.10.1
 PKGREVISION=		31
@@ -24,7 +24,7 @@ DEPENDS+=		tex-cyrillic-bin>=2013:../../print/tex-cyrillic-bin
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake gs:run
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/share/texmf-dist
+GNU_CONFIGURE_LIBDIR=	${PREFIX}/share/texmf-dist
 CONFIGURE_ARGS+=	--with-gs=${PREFIX}/bin/gs
 
 INSTALL_UNSTRIPPED=	yes
