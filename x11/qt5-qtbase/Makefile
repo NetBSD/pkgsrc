@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2014/01/04 11:58:39 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/01/28 08:46:14 ryoon Exp $
 
 PKGNAME=	qt5-qtbase-${QTVERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 COMMENT=	C++ X GUI toolkit
 
 .include "../../x11/qt5-qtbase/Makefile.common"
