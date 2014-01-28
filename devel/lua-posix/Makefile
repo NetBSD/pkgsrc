@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/27 18:41:12 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/28 11:53:07 obache Exp $
 
 DISTNAME=	luaposix-release-v31
 PKGNAME=	${DISTNAME:S/lua/${LUA_PKGPREFIX}-/:S/release-v//}
@@ -14,7 +14,7 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	perl:build
 USE_LIBTOOL=	yes
 
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/${LUA_CDIR}
+GNU_CONFIGURE_LIBDIR=	${PREFIX}/${LUA_CDIR}
 CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/${PKGNAME_NOREV}
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/${PKGNAME_NOREV}
 
