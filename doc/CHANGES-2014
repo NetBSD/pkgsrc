@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.484 2014/01/28 20:19:20 adam Exp $
+$NetBSD: CHANGES-2014,v 1.485 2014/01/28 21:19:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -573,3 +573,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/openldap-cloak to 2.4.39 [adam 2014-01-28]
 	Updated databases/openldap-nops to 2.4.39 [adam 2014-01-28]
 	Updated databases/openldap-smbk5pwd to 2.4.39 [adam 2014-01-28]
+	Updated graphics/jpeg to 9anb1 [wiz 2014-01-28]
