@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.240 2014/01/25 10:45:20 wiz Exp $
+# $NetBSD: makevars.map,v 1.241 2014/01/28 12:55:32 obache Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -234,6 +234,7 @@ CONFIGURE_ARGS		List of ShellWord [$package_list]
 CONFIGURE_DIRS		List of WrksrcSubdirectory [$package_list]
 CONFIGURE_ENV		List of ShellWord [$package_list]
 CONFIGURE_HAS_INFODIR	YesNo [$package]
+CONFIGURE_HAS_LIBDIR	YesNo [$package]
 CONFIGURE_HAS_MANDIR	YesNo [$package]
 CONFIGURE_SCRIPT	Pathname [$package]
 CONFIG_GUESS_OVERRIDE	List of Pathmask [m:as,c:as]
@@ -363,6 +364,9 @@ GENERATE_PLIST		List of ShellWord [$package_list]
 # ^^ List of Shellcommand, terminated with a semicolon
 GNU_ARCH		{ mips }
 GNU_CONFIGURE		Yes [c:s,m:s]
+GNU_CONFIGURE_INFODIR	Pathname [m:s,c:s]
+GNU_CONFIGURE_LIBDIR	Pathname [m:s,c:s]
+GNU_CONFIGURE_LIBSUBDIR	Pathname [$package]
 GNU_CONFIGURE_MANDIR	Pathname [m:s,c:s]
 GNU_CONFIGURE_PREFIX	Pathname [m:s]
 HAS_CONFIGURE		Yes [m:s,c:s]
