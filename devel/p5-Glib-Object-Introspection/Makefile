@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/01/26 12:06:41 obache Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/28 10:53:43 obache Exp $
 
 DISTNAME=	Glib-Object-Introspection-0.019
 PKGNAME=	p5-${DISTNAME}
@@ -22,7 +22,7 @@ USE_TOOLS+=		pkg-config
 PERL5_PACKLIST=		auto/Glib/Object/Introspection/.packlist
 
 .include "../../mk/bsd.prefs.mk"
-.if !empty(PKGSRC_RUN_TESTS:M[Yy][Ee][Ss])
+.if !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
 BUILDLINK_DEPMETHOD.cairo-gobject=	build
 .include "../../graphics/cairo-gobject/buildlink3.mk"
 .endif
