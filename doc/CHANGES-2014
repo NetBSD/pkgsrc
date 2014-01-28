@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.480 2014/01/27 22:40:36 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.481 2014/01/28 08:46:52 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -563,3 +563,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/dcraw to 9.20 [wiz 2014-01-27]
 	Added www/goaccess version 0.7 [wiedi 2013-01-27]
 	Updated net/youtube-dl to 20140127.2 [wiz 2014-01-27]
+	Updated x11/qt5-qtbase to 5.2.0nb3 [ryoon 2014-01-28]
