@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.483 2014/01/28 12:41:53 obache Exp $
+$NetBSD: CHANGES-2014,v 1.484 2014/01/28 20:19:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -566,3 +566,10 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/qt5-qtbase to 5.2.0nb3 [ryoon 2014-01-28]
 	Updated databases/p5-DBD-SQLite to 1.40 [wiz 2014-01-28]
 	Updated mail/milter-manager to 2.0.2 [obache 2014-01-28]
+	Updated databases/openldap to 2.4.39 [adam 2014-01-28]
+	Updated databases/openldap-client to 2.4.39 [adam 2014-01-28]
+	Updated databases/openldap-server to 2.4.39 [adam 2014-01-28]
+	Updated databases/openldap-doc to 2.4.39 [adam 2014-01-28]
+	Updated databases/openldap-cloak to 2.4.39 [adam 2014-01-28]
+	Updated databases/openldap-nops to 2.4.39 [adam 2014-01-28]
+	Updated databases/openldap-smbk5pwd to 2.4.39 [adam 2014-01-28]
