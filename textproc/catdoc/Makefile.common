@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2013/06/16 09:10:23 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.19 2014/01/28 11:36:13 obache Exp $
 #
 
 DISTNAME=	catdoc_0.94.4.orig
@@ -19,7 +19,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME:S/_/-/:S/.orig//}
 USE_FEATURES=		glob
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/share
+GNU_CONFIGURE_LIBDIR=	${PREFIX}/share
 CONFIGURE_ARGS+=	--with-install-root=${DESTDIR}
 
 CPPFLAGS+=		-Dunix -D__unix
