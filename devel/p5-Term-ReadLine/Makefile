@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2014/01/28 12:05:05 obache Exp $
+# $NetBSD: Makefile,v 1.35 2014/01/28 12:06:48 obache Exp $
 
 DISTNAME=	Term-ReadLine-Gnu-1.20
 PKGNAME=	p5-${DISTNAME:S/-Gnu//}
@@ -20,7 +20,7 @@ MAKE_PARAMS+=	--prefix=${BUILDLINK_PREFIX.readline}
 
 WRKSRC=		${WRKDIR}/${DISTNAME:C/a$//}
 
-REPLACE_PERL+=	Gnu/XS.pm Gnu/euc_jp.pm
+REPLACE_PERL+=	Gnu/XS.pm
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
