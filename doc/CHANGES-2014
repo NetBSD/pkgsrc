@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.481 2014/01/28 08:46:52 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.482 2014/01/28 09:24:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -564,3 +564,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added www/goaccess version 0.7 [wiedi 2013-01-27]
 	Updated net/youtube-dl to 20140127.2 [wiz 2014-01-27]
 	Updated x11/qt5-qtbase to 5.2.0nb3 [ryoon 2014-01-28]
+	Updated databases/p5-DBD-SQLite to 1.40 [wiz 2014-01-28]
