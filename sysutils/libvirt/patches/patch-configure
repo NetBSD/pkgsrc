@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2014/01/28 18:00:41 agc Exp $
+
+Portability bug - test should use '=' for string equality
+
+--- configure	2014/01/25 02:05:59	1.1
++++ configure	2014/01/25 02:06:27
+@@ -62681,7 +62681,7 @@
+ if test "x$with_firewalld" = "xcheck" ; then
+    with_firewalld=$with_dbus
+ fi
+-if test "x$with_firewalld" == "xyes" ; then
++if test "x$with_firewalld" = "xyes" ; then
+   if test "x$with_dbus" != "xyes" ; then
+      as_fn_error $? "You must have dbus enabled for firewalld support" "$LINENO" 5
+   fi
