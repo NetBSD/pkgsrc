@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/01/25 02:54:27 agc Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/01/29 01:08:41 agc Exp $
 bin/virsh
 bin/virt-host-validate
 bin/virt-pki-validate
@@ -264,3 +264,6 @@ share/locale/zh_CN/LC_MESSAGES/libvirt.mo
 share/locale/zh_TW/LC_MESSAGES/libvirt.mo
 share/locale/zu/LC_MESSAGES/libvirt.mo
 @pkgdir share/examples/libvirt/nwfilter
+@pkgdir	etc/libvirt/qemu/networks/autostart
+@pkgdir	etc/logrotate.d
+@pkgdir	etc/sasl2
