@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.18 2014/01/28 18:08:57 agc Exp $
+# $NetBSD: Makefile,v 1.19 2014/01/29 01:08:41 agc Exp $
 
-DISTNAME=	libvirt-1.2.1
-CATEGORIES=	sysutils
-MASTER_SITES=	http://libvirt.org/sources/
+DISTNAME=		libvirt-1.2.1
+CATEGORIES=		sysutils
+MASTER_SITES=		http://libvirt.org/sources/
 
-MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://libvirt.org/
-COMMENT=	Virtualisation toolkit for host operating systems
-LICENSE=	gnu-lgpl-v2
+MAINTAINER=		agc@NetBSD.org
+HOMEPAGE=		http://libvirt.org/
+COMMENT=		Virtualisation toolkit for host operating systems
+LICENSE=		gnu-lgpl-v2
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-vbox=no --sysconfdir=${EGDIR} --localstatedir=${VARBASE}
@@ -20,42 +20,13 @@ BUILD_DEFS+=		VARBASE
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-xml
 
 PY_PATCHPLIST=		yes
-REPLACE_PYTHON+=	examples/python/domstart.py
-REPLACE_PYTHON+=	examples/python/domrestore.py
-REPLACE_PYTHON+=	examples/python/dominfo.py
-REPLACE_PYTHON+=	examples/python/domsave.py
-REPLACE_PYTHON+=	examples/python/esxlist.py
-REPLACE_PYTHON+=	examples/domain-events/events-python/event-test.py
-REPLACE_PYTHON+=	python/tests/create.py
-REPLACE_PYTHON+=	python/tests/error.py
-REPLACE_PYTHON+=	python/tests/uuid.py
-REPLACE_PYTHON+=	python/tests/basic.py
-REPLACE_PYTHON+=	python/tests/node.py
-REPLACE_PYTHON+=	python/libvirt-override.py
-REPLACE_PYTHON+=	python/libvirt-override-virStream.py
-REPLACE_PYTHON+=	python/libvirt-override-virConnect.py
-REPLACE_PYTHON+=	python/generator.py
-REPLACE_PYTHON+=	python/libvirt.py
-REPLACE_PYTHON+=	src/esx/esx_vi_generator.py
 REPLACE_PYTHON+=	docs/apibuild.py
+REPLACE_PYTHON+=	src/esx/esx_vi_generator.py
+REPLACE_PYTHON+=	src/hyperv/hyperv_wmi_generator.py
+REPLACE_PYTHON+=	src/util/virkeycode-mapgen.py
 
 EGDIR=			${PREFIX}/share/examples
 CONF_FILES+=		${EGDIR}/libvirt/libvirtd.conf ${PKG_SYSCONFDIR}/libvirt/libvirtd.conf
-CONF_FILES+=		${EGDIR}/libvirt/nwfilter/allow-arp.xml ${PKG_SYSCONFDIR}/libvirt/nwfilter/allow-arp.xml
-CONF_FILES+=		${EGDIR}/libvirt/nwfilter/allow-dhcp-server.xml ${PKG_SYSCONFDIR}/libvirt/nwfilter/allow-dhcp-server.xml
-CONF_FILES+=		${EGDIR}/libvirt/nwfilter/allow-dhcp.xml ${PKG_SYSCONFDIR}/libvirt/nwfilter/allow-dhcp.xml
-CONF_FILES+=		${EGDIR}/libvirt/nwfilter/allow-incoming-ipv4.xml ${PKG_SYSCONFDIR}/libvirt/nwfilter/allow-incoming-ipv4.xml
-CONF_FILES+=		${EGDIR}/libvirt/nwfilter/allow-ipv4.xml ${PKG_SYSCONFDIR}/libvirt/nwfilter/allow-ipv4.xml
-CONF_FILES+=		${EGDIR}/libvirt/nwfilter/clean-traffic.xml ${PKG_SYSCONFDIR}/libvirt/nwfilter/clean-traffic.xml
-CONF_FILES+=		${EGDIR}/libvirt/nwfilter/no-arp-spoofing.xml ${PKG_SYSCONFDIR}/libvirt/nwfilter/no-arp-spoofing.xml
-CONF_FILES+=		${EGDIR}/libvirt/nwfilter/no-ip-multicast.xml ${PKG_SYSCONFDIR}/libvirt/nwfilter/no-ip-multicast.xml
-CONF_FILES+=		${EGDIR}/libvirt/nwfilter/no-ip-spoofing.xml ${PKG_SYSCONFDIR}/libvirt/nwfilter/no-ip-spoofing.xml
-CONF_FILES+=		${EGDIR}/libvirt/nwfilter/no-mac-broadcast.xml ${PKG_SYSCONFDIR}/libvirt/nwfilter/no-mac-broadcast.xml
-CONF_FILES+=		${EGDIR}/libvirt/nwfilter/no-mac-spoofing.xml ${PKG_SYSCONFDIR}/libvirt/nwfilter/no-mac-spoofing.xml
-CONF_FILES+=		${EGDIR}/libvirt/nwfilter/no-other-l2-traffic.xml ${PKG_SYSCONFDIR}/libvirt/nwfilter/no-other-l2-traffic.xml
-CONF_FILES+=		${EGDIR}/libvirt/nwfilter/no-other-rarp-traffic.xml ${PKG_SYSCONFDIR}/libvirt/nwfilter/no-other-rarp-traffic.xml
-CONF_FILES+=		${EGDIR}/libvirt/nwfilter/qemu-announce-self-rarp.xml ${PKG_SYSCONFDIR}/libvirt/nwfilter/qemu-announce-self-rarp.xml
-CONF_FILES+=		${EGDIR}/libvirt/nwfilter/qemu-announce-self.xml ${PKG_SYSCONFDIR}/libvirt/nwfilter/qemu-announce-self.xml
 CONF_FILES+=		${EGDIR}/libvirt/qemu/networks/autostart/default.xml ${PKG_SYSCONFDIR}/libvirt/qemu/networks/autostart/default.xml
 CONF_FILES+=		${EGDIR}/libvirt/qemu/networks/default.xml ${PKG_SYSCONFDIR}/libvirt/qemu/networks/default.xml
 CONF_FILES+=		${EGDIR}/logrotate.d/libvirtd ${PKG_SYSCONFDIR}/logrotate.d/libvirtd
