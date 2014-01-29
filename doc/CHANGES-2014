@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.489 2014/01/29 09:00:28 obache Exp $
+$NetBSD: CHANGES-2014,v 1.490 2014/01/29 09:51:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -578,3 +578,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/nuitka to 0.5.0.1nb1 [wiz 2014-01-29]
 	Updated devel/cmake-fedora to 1.2.3 [obache 2014-01-29]
 	Updated textproc/groonga to 3.1.2 [obache 2014-01-29]
+	Updated x11/xcb-util-wm to 0.4.0 [wiz 2014-01-29]
