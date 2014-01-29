@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/02/16 11:21:14 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/01/29 17:03:13 wiedi Exp $
 #
 
 DISTNAME=		chromium-bsu-0.9.14
@@ -17,6 +17,7 @@ USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 LDFLAGS+=		${BUILDLINK_LDADD.gettext}
 LDFLAGS.DragonFly=	-lSDL
+LDFLAGS.SunOS=		-lSDL
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
