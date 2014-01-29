@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.487 2014/01/29 07:50:37 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.488 2014/01/29 08:35:05 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -576,3 +576,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/jpeg to 9anb1 [wiz 2014-01-28]
 	Added lang/nuitka version 0.5.0.1 [agc 2013-01-28]
 	Updated lang/nuitka to 0.5.0.1nb1 [wiz 2014-01-29]
+	Updated devel/cmake-fedora to 1.2.3 [obache 2014-01-29]
