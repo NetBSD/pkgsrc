@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2014/01/29 08:08:10 obache Exp $
+# $NetBSD: Makefile,v 1.87 2014/01/29 08:14:17 obache Exp $
 
 DISTNAME=	etherape-0.9.12
 PKGREVISION=	22
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=etherape/}
 MAINTAINER=	damon@NetBSD.org
 HOMEPAGE=	http://etherape.sourceforge.net/
 COMMENT=	Graphical network monitor
+LICENSE=	gnu-gpl-v2 # or later
 
 USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	yes
