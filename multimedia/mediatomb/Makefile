@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2013/10/24 10:53:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.39 2014/01/29 20:13:54 tron Exp $
 
 DISTNAME=	mediatomb-0.12.1
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mediatomb/}
 
@@ -64,7 +64,6 @@ post-install:
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
-.include "../../multimedia/ffmpeg/buildlink3.mk"
 .include "../../sysutils/file/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
