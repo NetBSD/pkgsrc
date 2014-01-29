@@ -1,19 +1,23 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/04 12:24:37 obache Exp $
-share/cmake-2.8/Modules/CMakeVersion.cmake
+@comment $NetBSD: PLIST,v 1.2 2014/01/29 08:34:05 obache Exp $
 share/cmake-2.8/Modules/DateTimeFormat.cmake
+share/cmake-2.8/Modules/ManageAPIDoc.cmake
+share/cmake-2.8/Modules/ManageArchive.cmake
+share/cmake-2.8/Modules/ManageDependency.cmake
 share/cmake-2.8/Modules/ManageEnvironment.cmake
-share/cmake-2.8/Modules/ManageMaintainerTargets.cmake
+share/cmake-2.8/Modules/ManageFile.cmake
+share/cmake-2.8/Modules/ManageGConf.cmake
+share/cmake-2.8/Modules/ManageInstall.cmake
 share/cmake-2.8/Modules/ManageMessage.cmake
+share/cmake-2.8/Modules/ManageRPM.cmake
 share/cmake-2.8/Modules/ManageRelease.cmake
-share/cmake-2.8/Modules/ManageReleaseOnFedora.cmake
+share/cmake-2.8/Modules/ManageReleaseFedora.cmake
 share/cmake-2.8/Modules/ManageSourceVersionControl.cmake
 share/cmake-2.8/Modules/ManageString.cmake
+share/cmake-2.8/Modules/ManageTarget.cmake
 share/cmake-2.8/Modules/ManageTranslation.cmake
 share/cmake-2.8/Modules/ManageUninstall.cmake
+share/cmake-2.8/Modules/ManageUpload.cmake
 share/cmake-2.8/Modules/ManageVariable.cmake
 share/cmake-2.8/Modules/ManageVersion.cmake
-share/cmake-2.8/Modules/PackRPM.cmake
-share/cmake-2.8/Modules/PackSource.cmake
-share/cmake-2.8/Modules/UseDoxygen.cmake
-share/cmake-2.8/Modules/UseGConf.cmake
+share/cmake-2.8/Modules/cmake_install.cmake
 share/cmake-2.8/Modules/cmake_uninstall.cmake.in
