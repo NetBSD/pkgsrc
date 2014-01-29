@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.491 2014/01/29 18:59:18 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.492 2014/01/29 20:22:25 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -582,3 +582,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/libgda to 5.2.2nb1 [ryoon 2014-01-29]
 	Updated databases/libgda-mysql to 5.2.2nb1 [ryoon 2014-01-29]
 	Updated databases/libgda-postgres to 5.2.2nb1 [ryoon 2014-01-29]
+	Updated mail/spamdyke to 5.0.0 [schmonz 2014-01-29]
