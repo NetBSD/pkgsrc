@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2014/01/29 01:14:31 agc Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/29 07:50:28 wiz Exp $
 
 DISTNAME=	Nuitka-0.5.0.1
 PKGNAME=	${DISTNAME:C/N/n/}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://nuitka.net/releases/
 
@@ -9,9 +10,6 @@ MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	http://www.nuitka.net/pages/overview.html
 COMMENT=	Python to C++ compiler
 LICENSE=	apache-2.0
-
-PYTHON_VERSIONS_ACCEPTED=	33 32 27 26
-PYDISTUTILSPKG=	yes
 
 REPLACE_PYTHON+=	misc/check-release
 REPLACE_PYTHON+=	misc/check-with-pylint
@@ -34,6 +32,5 @@ REPLACE_PYTHON+=	tests/programs/run_all.py
 REPLACE_PYTHON+=	nuitka/build/inline_copy/bin/scons.py
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
-
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
