@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.486 2014/01/29 01:19:38 agc Exp $
+$NetBSD: CHANGES-2014,v 1.487 2014/01/29 07:50:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -575,3 +575,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/openldap-smbk5pwd to 2.4.39 [adam 2014-01-28]
 	Updated graphics/jpeg to 9anb1 [wiz 2014-01-28]
 	Added lang/nuitka version 0.5.0.1 [agc 2013-01-28]
+	Updated lang/nuitka to 0.5.0.1nb1 [wiz 2014-01-29]
