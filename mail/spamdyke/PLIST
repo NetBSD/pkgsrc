@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2010/07/04 14:37:13 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/01/29 20:22:19 schmonz Exp $
 bin/spamdyke
 share/doc/spamdyke/Changelog.txt
 share/doc/spamdyke/FAQ.html
@@ -8,6 +8,8 @@ share/doc/spamdyke/README.html
 share/doc/spamdyke/README_ip_file_format.html
 share/doc/spamdyke/README_rdns_directory_format.html
 share/doc/spamdyke/README_rdns_file_format.html
+share/doc/spamdyke/README_spamdyke_qrv.html
 share/doc/spamdyke/UPGRADING.txt
 share/doc/spamdyke/UPGRADING_version_3_to_version_4.txt
+share/doc/spamdyke/UPGRADING_version_4_to_version_5.txt
 share/examples/spamdyke/spamdyke.conf.example
