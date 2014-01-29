@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2014/01/29 01:14:31 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/01/29 07:50:28 wiz Exp $
 bin/nuitka
 bin/nuitka-run
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/nuitka/Builtins.py
 ${PYSITELIB}/nuitka/Builtins.pyc
 ${PYSITELIB}/nuitka/Builtins.pyo
