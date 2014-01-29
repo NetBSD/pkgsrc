@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.34 2013/10/06 19:55:38 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2014/01/29 18:57:54 ryoon Exp $
 #
 
 .include "Makefile.common"
 .include "options.mk"
+
+PKGREVISION=		1
 
 PKGCONFIG_OVERRIDE=	libgda-5.0.pc.in libgda-report-5.0.pc.in \
 			libgda-sqlcipher-5.0.pc.in libgda-sqlite-5.0.pc.in
