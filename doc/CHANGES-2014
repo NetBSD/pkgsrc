@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.490 2014/01/29 09:51:19 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.491 2014/01/29 18:59:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -579,3 +579,6 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/cmake-fedora to 1.2.3 [obache 2014-01-29]
 	Updated textproc/groonga to 3.1.2 [obache 2014-01-29]
 	Updated x11/xcb-util-wm to 0.4.0 [wiz 2014-01-29]
+	Updated databases/libgda to 5.2.2nb1 [ryoon 2014-01-29]
+	Updated databases/libgda-mysql to 5.2.2nb1 [ryoon 2014-01-29]
+	Updated databases/libgda-postgres to 5.2.2nb1 [ryoon 2014-01-29]
