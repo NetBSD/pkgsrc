@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/04 11:58:39 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/29 13:01:53 ryoon Exp $
 
 PKGNAME=	qt5-dbus-${QTVERSION}
 PKGREVISION=	1
@@ -26,6 +26,8 @@ post-install:
 .endfor
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+# Use lib/dbus-1.0/include/dbus/dbus-arch-deps.h from sysutils/dbus
+USE_DBUS-ARCH-DEPS_H=	yes
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
