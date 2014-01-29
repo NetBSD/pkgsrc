@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.365 2014/01/23 15:24:47 wiz Exp $
+# $NetBSD: Makefile,v 1.366 2014/01/29 01:17:12 agc Exp $
 #
 
 COMMENT=	Programming languages
@@ -119,6 +119,7 @@ SUBDIR+=	newlisp
 SUBDIR+=	nhc98
 SUBDIR+=	nodejs
 SUBDIR+=	nqp
+SUBDIR+=	nuitka
 SUBDIR+=	objc
 SUBDIR+=	ocaml
 SUBDIR+=	onyx
