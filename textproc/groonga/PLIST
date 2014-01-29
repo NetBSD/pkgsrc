@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2014/01/01 08:48:47 obache Exp $
+@comment $NetBSD: PLIST,v 1.19 2014/01/29 09:00:15 obache Exp $
 bin/groonga
 bin/groonga-benchmark
 bin/groonga-suggest-create-dataset
@@ -58,6 +58,7 @@ share/doc/groonga/en/html/_sources/news/1.2.x.txt
 share/doc/groonga/en/html/_sources/news/senna.txt
 share/doc/groonga/en/html/_sources/reference.txt
 share/doc/groonga/en/html/_sources/reference/api.txt
+share/doc/groonga/en/html/_sources/reference/api/global_configurations.txt
 share/doc/groonga/en/html/_sources/reference/api/grn_cache.txt
 share/doc/groonga/en/html/_sources/reference/api/grn_column.txt
 share/doc/groonga/en/html/_sources/reference/api/grn_command_version.txt
@@ -242,6 +243,7 @@ share/doc/groonga/en/html/news/senna.html
 share/doc/groonga/en/html/objects.inv
 share/doc/groonga/en/html/reference.html
 share/doc/groonga/en/html/reference/api.html
+share/doc/groonga/en/html/reference/api/global_configurations.html
 share/doc/groonga/en/html/reference/api/grn_cache.html
 share/doc/groonga/en/html/reference/api/grn_column.html
 share/doc/groonga/en/html/reference/api/grn_command_version.html
@@ -403,6 +405,7 @@ share/doc/groonga/ja/html/_sources/news/1.2.x.txt
 share/doc/groonga/ja/html/_sources/news/senna.txt
 share/doc/groonga/ja/html/_sources/reference.txt
 share/doc/groonga/ja/html/_sources/reference/api.txt
+share/doc/groonga/ja/html/_sources/reference/api/global_configurations.txt
 share/doc/groonga/ja/html/_sources/reference/api/grn_cache.txt
 share/doc/groonga/ja/html/_sources/reference/api/grn_column.txt
 share/doc/groonga/ja/html/_sources/reference/api/grn_command_version.txt
@@ -587,6 +590,7 @@ share/doc/groonga/ja/html/news/senna.html
 share/doc/groonga/ja/html/objects.inv
 share/doc/groonga/ja/html/reference.html
 share/doc/groonga/ja/html/reference/api.html
+share/doc/groonga/ja/html/reference/api/global_configurations.html
 share/doc/groonga/ja/html/reference/api/grn_cache.html
 share/doc/groonga/ja/html/reference/api/grn_column.html
 share/doc/groonga/ja/html/reference/api/grn_command_version.html
