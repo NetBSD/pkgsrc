@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2014/01/02 13:14:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2014/01/30 14:40:34 ryoon Exp $
 
-DISTNAME=	reposurgeon-2.43
+DISTNAME=	reposurgeon-3.1
 CATEGORIES=	devel scm
 MASTER_SITES=	http://www.catb.org/~esr/reposurgeon/
 
