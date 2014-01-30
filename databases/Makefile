@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.443 2013/12/05 08:48:38 adam Exp $
+# $NetBSD: Makefile,v 1.444 2014/01/30 04:55:57 rodent Exp $
 
 COMMENT=	Databases
 
@@ -331,6 +331,7 @@ SUBDIR+=	py-mysqldb
 SUBDIR+=	py-pgnotify
 SUBDIR+=	py-postgresql
 SUBDIR+=	py-psycopg2
+SUBDIR+=	py-python-sql
 SUBDIR+=	py-sqlalchemy
 SUBDIR+=	py-sqlalchemy-migrate
 SUBDIR+=	py-sqlite
