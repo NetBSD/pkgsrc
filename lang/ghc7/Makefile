@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2013/12/17 01:08:30 obache Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/30 07:57:35 obache Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
 DISTNAME=	ghc-${VERSION}
 VERSION=	7.6.3
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://www.haskell.org/ghc/dist/${VERSION}/
 MAINTAINER=	pho@cielonegro.org
@@ -104,8 +105,8 @@ do-configure:
 # in a non-standard path. Without that, the resulting GHC tries to
 # link programs by executing ld(1) without passing it -L${PREFIX:Q}/lib.
 	${RUN} ${ECHO} "libraries/terminfo_CONFIGURE_OPTS += \
-		--configure-option=--with-curses-includes=${BUILDLINK_PREFIX.ncurses:Q}/include \
-		--configure-option=--with-curses-libraries=${BUILDLINK_PREFIX.ncurses:Q}/lib" >> ${WRKSRC:Q}/mk/build.mk
+		--configure-option=--with-curses-includes=${BUILDLINK_PREFIX.curses:Q}/include \
+		--configure-option=--with-curses-libraries=${BUILDLINK_PREFIX.curses:Q}/lib" >> ${WRKSRC:Q}/mk/build.mk
 
 # The ghc compiler does normally split the generated asm files into small
 # parts before sending them to gcc, to enable the linker to eliminate
@@ -178,14 +179,11 @@ CHECK_SHLIBS_SUPPORTED=	no
 # Dependencies
 #
 
-# I guess pdcurses works well but not tested.
-USE_NCURSES=	yes
-
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
