@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2013/10/21 10:06:57 fhajny Exp $
+# $NetBSD: Makefile,v 1.10 2014/01/30 15:07:57 adam Exp $
 
-DISTNAME=	miniupnpd-1.8.20130730
+DISTNAME=	miniupnpd-1.8.20140127
 CATEGORIES=	net
 MASTER_SITES=	http://miniupnp.free.fr/files/download.php?file=
 
@@ -9,15 +9,13 @@ HOMEPAGE=	http://miniupnp.free.fr/
 COMMENT=	UPnP IGD service with NAT-PMP support
 LICENSE=	modified-bsd
 
-MAKE_JOBS_SAFE=	no
-
 EGDIR=		${PREFIX}/share/examples/miniupnpd
 CONF_FILES=	${EGDIR}/miniupnpd.conf ${PKG_SYSCONFDIR}/miniupnpd.conf
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-CFLAGS+=	-DDEFAULT_CONFIG=\"${PKG_SYSCONFDIR:Q}/miniupnpd.conf\"
+CFLAGS+=	-DDEFAULT_CONFIG=\"${PKG_SYSCONFDIR}/miniupnpd.conf\"
 
 INSTALL_MAKE_FLAGS+=	INSTALLETCDIR=${EGDIR}
 INSTALL_MAKE_FLAGS+=	INSTALLMANDIR=${PREFIX}/${PKGMANDIR}/man1
