@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.497 2014/01/30 09:24:49 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.498 2014/01/30 14:41:28 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -588,3 +588,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added databases/py-python-sql version 0.2 [rodent 2014-01-30]
 	Updated lang/ghc7 to 7.6.3nb1 [obache 2014-01-30]
 	Updated x11/xkeyboard-config to 2.11 [wiz 2014-01-30]
+	Updated devel/reposurgeon to 3.1 [ryoon 2014-01-30]
