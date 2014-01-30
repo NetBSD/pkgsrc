@@ -2,8 +2,8 @@ sysbuild is a tool to automate the maintenance of the NetBSD sources and
 the build of releases by means of a single command and a configuration
 file that tells sysbuild what to do.
 
-Since NetBSD 1.6 (released on July 2011), the source tree has included a
-very flexible script (build.sh) to build a full NetBSD release for the
+Since NetBSD 1.6 (released in September 2002), the source tree has included
+a very flexible script (build.sh) to build a full NetBSD release for the
 current platform or to cross-build for any of the supported platforms.
 
 The flipside of the flexibility is that the script is inconvenient to use
