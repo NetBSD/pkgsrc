@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.498 2014/01/30 14:41:28 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.499 2014/01/30 15:49:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -589,3 +589,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/ghc7 to 7.6.3nb1 [obache 2014-01-30]
 	Updated x11/xkeyboard-config to 2.11 [wiz 2014-01-30]
 	Updated devel/reposurgeon to 3.1 [ryoon 2014-01-30]
+	Updated net/miniupnpd to 1.8.20140127 [adam 2014-01-30]
