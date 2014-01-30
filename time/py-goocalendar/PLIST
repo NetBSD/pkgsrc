@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/30 03:36:35 rodent Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/goocalendar/__init__.py
+${PYSITELIB}/goocalendar/__init__.pyc
+${PYSITELIB}/goocalendar/__init__.pyo
+${PYSITELIB}/goocalendar/_calendar.py
+${PYSITELIB}/goocalendar/_calendar.pyc
+${PYSITELIB}/goocalendar/_calendar.pyo
+${PYSITELIB}/goocalendar/_event.py
+${PYSITELIB}/goocalendar/_event.pyc
+${PYSITELIB}/goocalendar/_event.pyo
+${PYSITELIB}/goocalendar/util.py
+${PYSITELIB}/goocalendar/util.pyc
+${PYSITELIB}/goocalendar/util.pyo
