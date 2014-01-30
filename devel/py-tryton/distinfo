@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/01/30 03:46:18 rodent Exp $
+
+SHA1 (tryton-3.0.2.tar.gz) = 3c1234948774728fe92b276f44f4c1c9df452060
+RMD160 (tryton-3.0.2.tar.gz) = 40b6e5f4aeb8dec8630bb83f0111c6278603f667
+Size (tryton-3.0.2.tar.gz) = 805889 bytes
