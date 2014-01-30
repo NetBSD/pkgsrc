@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.495 2014/01/30 04:55:10 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.496 2014/01/30 07:57:47 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -586,3 +586,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added time/py-goocalendar version 0.1 [rodent 2014-01-30]
 	Added devel/py-tryton version 3.0.2 [rodent 2014-01-30]
 	Added databases/py-python-sql version 0.2 [rodent 2014-01-30]
+	Updated lang/ghc7 to 7.6.3nb1 [obache 2014-01-30]
