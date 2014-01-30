@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.494 2014/01/30 03:47:03 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.495 2014/01/30 04:55:10 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -585,3 +585,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/spamdyke to 5.0.0 [schmonz 2014-01-29]
 	Added time/py-goocalendar version 0.1 [rodent 2014-01-30]
 	Added devel/py-tryton version 3.0.2 [rodent 2014-01-30]
+	Added databases/py-python-sql version 0.2 [rodent 2014-01-30]
