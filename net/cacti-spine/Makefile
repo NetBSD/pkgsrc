@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2013/12/11 03:01:57 obache Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/30 16:01:27 pettai Exp $
 #
 
 DISTNAME=	cacti-spine-0.8.8b
 CATEGORIES=	net
 MASTER_SITES=	http://www.cacti.net/downloads/spine/
 
-MAINTAINER=	pettai@nordu.net
+MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://www.cacti.net/spine_info.php
 COMMENT=	Spine is a poller for Cacti for large installations
 LICENSE=	gnu-lgpl-v2.1
