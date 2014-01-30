@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.4 2009/06/04 07:54:26 hasso Exp $
+# $NetBSD: options.mk,v 1.5 2014/01/30 15:07:57 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.miniupnpd
 PKG_OPTIONS_REQUIRED_GROUPS=	miniupnpd-fw
-PKG_OPTIONS_GROUP.miniupnpd-fw=	pf ipfilter
+PKG_OPTIONS_GROUP.miniupnpd-fw=	ipfilter ipfw pf
 
 .if ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS+=		ipfilter
@@ -19,6 +19,11 @@ PKG_SUGGESTED_OPTIONS+=		ipfilter
 .if !empty(PKG_OPTIONS:Mipfilter)
 MAKE_ENV+=	FWNAME=ipf
 FILES_SUBST+=	FWNAME=ipfilter
+.endif
+
+.if !empty(PKG_OPTIONS:Mipfw)
+MAKE_ENV+=	FWNAME=ipfw
+FILES_SUBST+=	FWNAME=ipfw
 .endif
 
 .if !empty(PKG_OPTIONS:Mpf)
