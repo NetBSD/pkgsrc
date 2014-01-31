@@ -1,21 +1,23 @@
-# $NetBSD: Makefile,v 1.29 2014/01/27 19:53:06 drochner Exp $
+# $NetBSD: Makefile,v 1.30 2014/01/31 17:32:19 agc Exp $
 
 DISTNAME=	dropbear-2013.62
 CATEGORIES=	security
 MASTER_SITES=	http://matt.ucc.asn.au/dropbear/releases/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	snj@NetBSD.org
 HOMEPAGE=	http://matt.ucc.asn.au/dropbear/dropbear.html
 COMMENT=	Small SSH2 server and client, aimed at embedded market
+LICENSE=	modified-bsd
 
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake
-EXTRACT_SUFX=	.tar.bz2
-
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+USE_TOOLS+=		gmake
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dropbear
 PKG_SUPPORTED_OPTIONS=	pam
+
+.include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mpam)
@@ -27,8 +29,6 @@ SUBST_STAGE.pam=	post-patch
 SUBST_FILES.pam=	options.h
 SUBST_SED.pam=		-e "s/ENABLE_SVR_PASSWORD_AUTH/ENABLE_SVR_PAM_AUTH/"
 .endif
-
-MAKEFLAGS+=	ROOT_USER=${ROOT_USER:Q} ROOT_GROUP=${ROOT_GROUP:Q}
 
 OWN_DIRS+=		${PKG_SYSCONFDIR}/dropbear
 
@@ -48,9 +48,7 @@ CPPFLAGS+=-DXAUTH_COMMAND="\"${X11BASE}/bin/xauth\""
 CPPFLAGS+=-DXAUTH_COMMAND="\"${X11PREFIX}/bin/xauth\""
 .endif
 
-.if ${OPSYS} == "NetBSD"
-CFLAGS+=	-DHAVE_NETINET_IN_SYSTM_H
-.endif
+CFLAGS.NetBSD+=		-DHAVE_NETINET_IN_SYSTM_H
 
 INSTALLATION_DIRS=	share/doc/dropbear ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
 
