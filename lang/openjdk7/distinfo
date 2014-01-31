@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.41 2014/01/25 13:53:22 ryoon Exp $
+$NetBSD: distinfo,v 1.42 2014/01/31 04:39:18 obache Exp $
 
 SHA1 (openjdk7/UnlimitedJCEPolicyJDK7.zip) = 7d3c9ee89536b82cd21c680088b1bced16017253
 RMD160 (openjdk7/UnlimitedJCEPolicyJDK7.zip) = a4a6a284579f43d2df3532d279e143d2f03c2c3f
@@ -9,9 +9,36 @@ Size (openjdk7/apache-ant-1.8.4-bin.tar.bz2) = 4257152 bytes
 SHA1 (openjdk7/bootstrap-jdk7-bin-common-20110811.tar.bz2) = 6b3d887dfe3283a28f950bc3f87482200cfe78e2
 RMD160 (openjdk7/bootstrap-jdk7-bin-common-20110811.tar.bz2) = 7c6c2067322a4909c306f9a5049fe75f9244bab7
 Size (openjdk7/bootstrap-jdk7-bin-common-20110811.tar.bz2) = 22390959 bytes
+SHA1 (openjdk7/bootstrap-jdk7-bin-dragonfly-2.13-amd64-20110811A.tar.xz) = fa383b2c7d5060a689dcbc5fcdd9f08908270ea4
+RMD160 (openjdk7/bootstrap-jdk7-bin-dragonfly-2.13-amd64-20110811A.tar.xz) = a914780d3c1c0a53f68c07d39a5af36535282efe
+Size (openjdk7/bootstrap-jdk7-bin-dragonfly-2.13-amd64-20110811A.tar.xz) = 3208572 bytes
+SHA1 (openjdk7/bootstrap-jdk7-bin-dragonfly-2.13-i386-20110811A.tar.xz) = 08d0003078162c038ed67bb3d59cd2e4073cf4dd
+RMD160 (openjdk7/bootstrap-jdk7-bin-dragonfly-2.13-i386-20110811A.tar.xz) = 4ea4bd473635d99d9740c10bb815e019f7ad09d5
+Size (openjdk7/bootstrap-jdk7-bin-dragonfly-2.13-i386-20110811A.tar.xz) = 3422188 bytes
+SHA1 (openjdk7/bootstrap-jdk7-bin-netbsd-5-amd64-20110811.tar.bz2) = f7578bfdfc7a952cd83306c97fa87ebf921a0461
+RMD160 (openjdk7/bootstrap-jdk7-bin-netbsd-5-amd64-20110811.tar.bz2) = 74c570fa6ab6e175871229acc45edbb1e9c759ce
+Size (openjdk7/bootstrap-jdk7-bin-netbsd-5-amd64-20110811.tar.bz2) = 3837091 bytes
+SHA1 (openjdk7/bootstrap-jdk7-bin-netbsd-5-i386-20110811.tar.bz2) = e9153bab724d415b30b42e320a878aeceb71ed64
+RMD160 (openjdk7/bootstrap-jdk7-bin-netbsd-5-i386-20110811.tar.bz2) = 8d9742b9288ed5eb965bc7fd50fe709f047665af
+Size (openjdk7/bootstrap-jdk7-bin-netbsd-5-i386-20110811.tar.bz2) = 3486566 bytes
 SHA1 (openjdk7/bootstrap-jdk7-bin-netbsd-6-amd64-20110811.tar.bz2) = 60ff45ed4c027209fc855919227bb175c60ede08
 RMD160 (openjdk7/bootstrap-jdk7-bin-netbsd-6-amd64-20110811.tar.bz2) = e98c534a6804ecd794d1ffd8975e0c705cf8938c
 Size (openjdk7/bootstrap-jdk7-bin-netbsd-6-amd64-20110811.tar.bz2) = 4082640 bytes
+SHA1 (openjdk7/bootstrap-jdk7-bin-netbsd-6-i386-20110811.tar.bz2) = baa7e0b2010c1cf918a88654b36db39935e532a4
+RMD160 (openjdk7/bootstrap-jdk7-bin-netbsd-6-i386-20110811.tar.bz2) = 791f8db986905f2477adcb1784fea957cd9501d2
+Size (openjdk7/bootstrap-jdk7-bin-netbsd-6-i386-20110811.tar.bz2) = 3622007 bytes
+SHA1 (openjdk7/bootstrap-openjdk-7.21.11.dfly-3.5-amd64.tar.xz) = e18704c72646ef4f66e37ea7a2feb8dad9008079
+RMD160 (openjdk7/bootstrap-openjdk-7.21.11.dfly-3.5-amd64.tar.xz) = b661b7a434d7d3c27614a2527b0fb2ed065d1f05
+Size (openjdk7/bootstrap-openjdk-7.21.11.dfly-3.5-amd64.tar.xz) = 20011172 bytes
+SHA1 (openjdk7/bootstrap-openjdk-7.21.11.dfly-3.5-i386.tar.xz) = d7994e2a485c3e4eca44e81f4215bb4c35b54d04
+RMD160 (openjdk7/bootstrap-openjdk-7.21.11.dfly-3.5-i386.tar.xz) = bb9ba4fc83ec276c5e8decd53a6523eca1f6b819
+Size (openjdk7/bootstrap-openjdk-7.21.11.dfly-3.5-i386.tar.xz) = 21142004 bytes
+SHA1 (openjdk7/bootstrap-openjdk-7.9.05_2.dfly-3.3-amd64.tar.xz) = b9445fa4cc4674ba8b9330e45ae65c597f5fca10
+RMD160 (openjdk7/bootstrap-openjdk-7.9.05_2.dfly-3.3-amd64.tar.xz) = aa2443fa202f3ed8694b6d0e4031622b5da52283
+Size (openjdk7/bootstrap-openjdk-7.9.05_2.dfly-3.3-amd64.tar.xz) = 20874080 bytes
+SHA1 (openjdk7/bootstrap-openjdk-7.9.05_2.dfly-3.3-i386.tar.xz) = aa44be237fac1b7c9b4044ea32cab9a0c2fb3ab2
+RMD160 (openjdk7/bootstrap-openjdk-7.9.05_2.dfly-3.3-i386.tar.xz) = 5422564d6a5ba590b0906fdbb9de20091d7dabf2
+Size (openjdk7/bootstrap-openjdk-7.9.05_2.dfly-3.3-i386.tar.xz) = 21676584 bytes
 SHA1 (openjdk7/cacerts-20091013.tar.bz2) = 905e88e6e2ccdbfe1f36c1dace7cc687fba78890
 RMD160 (openjdk7/cacerts-20091013.tar.bz2) = 0f4e14197016201ff65272a944eafecc6f2d5770
 Size (openjdk7/cacerts-20091013.tar.bz2) = 55894 bytes
