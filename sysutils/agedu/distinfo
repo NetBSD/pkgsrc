@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2014/01/16 18:11:36 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2014/01/31 15:32:03 schmonz Exp $
 
-SHA1 (agedu-r9723.tar.gz) = 2a4125e66eccfb5a2039e789aac21268929b2ba4
-RMD160 (agedu-r9723.tar.gz) = 2773db8da3a91d46e804731835ec48b2a97f4870
-Size (agedu-r9723.tar.gz) = 163320 bytes
+SHA1 (agedu-r10126.tar.gz) = 2a97a7239dfb67c13cbeb8d8647b1a58190c07d0
+RMD160 (agedu-r10126.tar.gz) = 173a48333ed77db166bd195ce5a9a87faae2aac2
+Size (agedu-r10126.tar.gz) = 163659 bytes
