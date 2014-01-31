@@ -3,3 +3,5 @@ framework in Python 2.7. It is tested to run on Python 2.4 - 2.7.
 
 To use unittest2 instead of unittest simply replace import unittest with
 import unittest2.
+
+This is the version for Python 2.x.
