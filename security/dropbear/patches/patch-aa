@@ -1,8 +1,11 @@
-$NetBSD: patch-aa,v 1.9 2014/01/27 19:53:06 drochner Exp $
+$NetBSD: patch-aa,v 1.10 2014/01/31 17:32:19 agc Exp $
 
---- Makefile.in.orig	2013-12-03 13:39:15.000000000 +0000
-+++ Makefile.in
-@@ -73,6 +73,7 @@ datarootdir = @datarootdir@
+use pkgsrc macros to install programs and man pages
+set up dropbear default key locations correctly
+
+--- Makefile.in.orig	2013-12-03 05:39:15.000000000 -0800
++++ Makefile.in	2014-01-29 16:14:08.000000000 -0800
+@@ -73,6 +73,7 @@
  bindir=@bindir@
  sbindir=@sbindir@
  mandir=@mandir@
@@ -10,7 +13,7 @@ $NetBSD: patch-aa,v 1.9 2014/01/27 19:53:06 drochner Exp $
  
  CC=@CC@
  AR=@AR@
-@@ -96,6 +97,9 @@ ifneq (,$(strip $(foreach prog, $(PROGRA
+@@ -96,6 +97,9 @@
  	CFLAGS+= -DDROPBEAR_CLIENT
  endif
  
@@ -20,24 +23,53 @@ $NetBSD: patch-aa,v 1.9 2014/01/27 19:53:06 drochner Exp $
  
  # these are exported so that libtomcrypt's makefile will use them
  export CC
-@@ -142,12 +146,16 @@ insmulti%: dropbearmulti
+@@ -125,31 +129,30 @@
+ install: $(addprefix inst_, $(TARGETS))
+ 
+ insmultidropbear: dropbearmulti
+-	$(INSTALL) -d $(DESTDIR)$(sbindir)
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(sbindir)
+ 	-rm -f $(DESTDIR)$(sbindir)/dropbear$(EXEEXT)
+ 	-ln -s $(bindir)/dropbearmulti$(EXEEXT) $(DESTDIR)$(sbindir)/dropbear$(EXEEXT) 
+-	$(INSTALL) -d $(DESTDIR)$(mandir)/man8
+-	$(INSTALL) -m 644 dropbear.8  $(DESTDIR)$(mandir)/man8/dropbear.8
++	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(mandir)/man8
++	$(BSD_INSTALL_MAN) dropbear.8  $(DESTDIR)$(mandir)/man8/dropbear.8
+ 
+ insmulti%: dropbearmulti
+-	$(INSTALL) -d $(DESTDIR)$(bindir)
+-	-rm -f $(DESTDIR)$(bindir)/$*$(EXEEXT) 
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(bindir)
+ 	-ln -s $(bindir)/dropbearmulti$(EXEEXT) $(DESTDIR)$(bindir)/$*$(EXEEXT) 
+-	$(INSTALL) -d $(DESTDIR)$(mandir)/man1
+-	$(INSTALL) -m 644 $*.1  $(DESTDIR)$(mandir)/man1/$*.1
++	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(mandir)/man1
++	$(BSD_INSTALL_MAN) $*.1  $(DESTDIR)$(mandir)/man1/$*.1
+ 
+ # dropbear should go in sbin, so it needs a seperate rule
  inst_dropbear: dropbear
- 	$(INSTALL) -d $(DESTDIR)$(sbindir)
- 	$(INSTALL) dropbear$(EXEEXT) $(DESTDIR)$(sbindir)
-+	-chown ${ROOT_USER} $(DESTDIR)$(sbindir)/dropbear$(EXEEXT)
-+	-chgrp ${ROOT_GROUP} $(DESTDIR)$(sbindir)/dropbear$(EXEEXT)
- 	$(INSTALL) -d $(DESTDIR)$(mandir)/man8
- 	$(INSTALL) -m 644 dropbear.8 $(DESTDIR)$(mandir)/man8/dropbear.8
+-	$(INSTALL) -d $(DESTDIR)$(sbindir)
+-	$(INSTALL) dropbear$(EXEEXT) $(DESTDIR)$(sbindir)
+-	$(INSTALL) -d $(DESTDIR)$(mandir)/man8
+-	$(INSTALL) -m 644 dropbear.8 $(DESTDIR)$(mandir)/man8/dropbear.8
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(sbindir)
++	$(BSD_INSTALL_PROGRAM) dropbear$(EXEEXT) $(DESTDIR)$(sbindir)
++	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(mandir)/man8
++	$(BSD_INSTALL_MAN) dropbear.8 $(DESTDIR)$(mandir)/man8/dropbear.8
  
  inst_%: $*
- 	$(INSTALL) -d $(DESTDIR)$(bindir)
- 	$(INSTALL) $*$(EXEEXT) $(DESTDIR)$(bindir)
-+	-chown ${ROOT_USER} $(DESTDIR)$(bindir)/$*$(EXEEXT)
-+	-chgrp ${ROOT_GROUP} $(DESTDIR)$(bindir)/$*$(EXEEXT)
- 	$(INSTALL) -d $(DESTDIR)$(mandir)/man1
- 	if test -e $*.1; then $(INSTALL) -m 644 $*.1 $(DESTDIR)$(mandir)/man1/$*.1; fi
+-	$(INSTALL) -d $(DESTDIR)$(bindir)
+-	$(INSTALL) $*$(EXEEXT) $(DESTDIR)$(bindir)
+-	$(INSTALL) -d $(DESTDIR)$(mandir)/man1
+-	if test -e $*.1; then $(INSTALL) -m 644 $*.1 $(DESTDIR)$(mandir)/man1/$*.1; fi
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(bindir)
++	$(BSD_INSTALL_PROGRAM) $*$(EXEEXT) $(DESTDIR)$(bindir)
++	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(mandir)/man1
++	if test -e $*.1; then $(BSD_INSTALL_MAN) $*.1 $(DESTDIR)$(mandir)/man1/$*.1; fi
  
-@@ -187,7 +195,7 @@ link%:
+ inst_dropbearmulti: $(addprefix insmulti, $(PROGRAMS)) 
+ 
+@@ -187,7 +190,7 @@
  	-ln -s dropbearmulti$(EXEEXT) $*$(EXEEXT)
  
  $(LTC): options.h
