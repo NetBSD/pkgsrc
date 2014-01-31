@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/01/30 07:57:35 obache Exp $
+# $NetBSD: Makefile,v 1.6 2014/01/31 09:04:36 obache Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -153,12 +153,13 @@ PRINT_PLIST_AWK+=	/lib\/${PKGNAME_NOREV}\/package\.conf\.d/ { next; }
 # feature has seemingly bitrotted.
 .include "../../mk/bsd.prefs.mk"
 .if empty(USE_DESTDIR:M[Yy][Ee][Ss])
-PKG_FAIL_REASON+="This package can not be built without using DESTDIR.\
-You need to set USE_DESTDIR to \"yes\"."
+GENERATE_PLIST+= \
+	cd ${PREFIX:Q} && \
+		${FIND} lib/${PKGNAME_NOREV}/package.conf.d -xdev -newer ${_COOKIE.extract} \! -type d -print | ${SORT} -d;
 .else
 GENERATE_PLIST+= \
 	cd ${DESTDIR:Q}${PREFIX:Q} && \
-		${FIND} lib/${PKGNAME_NOREV}/package.conf.d \( -type f -o -type l \) | ${SORT} -d;
+		${FIND} lib/${PKGNAME_NOREV}/package.conf.d -xdev \! -type d -print | ${SORT} -d;
 .endif
 
 
