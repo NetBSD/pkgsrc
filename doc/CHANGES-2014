@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.500 2014/01/31 05:49:25 obache Exp $
+$NetBSD: CHANGES-2014,v 1.501 2014/01/31 06:34:23 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -591,3 +591,8 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/reposurgeon to 3.1 [ryoon 2014-01-30]
 	Updated net/miniupnpd to 1.8.20140127 [adam 2014-01-30]
 	Updated converters/skf to 1.99.8 [obache 2014-01-31]
+	Updated chat/finch to 2.10.8 [obache 2014-01-31]
+	Updated chat/libpurple to 2.10.8 [obache 2014-01-31]
+	Updated chat/pidgin to 2.10.8 [obache 2014-01-31]
+	Updated chat/pidgin-sametime to 2.10.8 [obache 2014-01-31]
+	Updated chat/pidgin-silc to 2.10.8 [obache 2014-01-31]
