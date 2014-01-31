@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/01/31 12:30:50 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/31 19:32:04 wiz Exp $
 
 DISTNAME=	trytond-3.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,6 +9,11 @@ MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://www.tryton.org/
 COMMENT=	Server of the Tryton application platform
 LICENSE=	gnu-gpl-v3
+
+DEPENDS+=	${PYPKGPREFIX}-python-sql>=0.2:../../databases/py-python-sql
+DEPENDS+=	${PYPKGPREFIX}-polib-[0-9]*:../../devel/py-polib
+DEPENDS+=	${PYPKGPREFIX}-relatorio>=0.2.0:../../textproc/py-relatorio
+DEPENDS+=	${PYPKGPREFIX}-lxml>=2.0:../../textproc/py-lxml
 
 USE_LANGUAGES=	# none
 
@@ -27,18 +32,11 @@ REPLACE_PYTHON+=	trytond/tests/test_transaction.py
 REPLACE_PYTHON+=	trytond/tests/test_trigger.py
 REPLACE_PYTHON+=	trytond/tests/test_tryton.py
 
+PYTHON_VERSIONED_DEPENDENCIES=	dateutil
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2 via py-pycha via py-relatorio
+
 .include "options.mk"
 
-DEPENDS+=	${PYPKGPREFIX}-python-sql>=0.2:../../databases/py-python-sql
-DEPENDS+=	${PYPKGPREFIX}-polib-[0-9]*:../../devel/py-polib
-.include "../../lang/python/pyversion.mk"
-.if ${PYPACKAGE} == "python27"
-DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
-.else
-DEPENDS+=	${PYPKGPREFIX}-dateutil2-[0-9]*:../../time/py-dateutil2
-.endif
-DEPENDS+=	${PYPKGPREFIX}-relatorio>=0.2.0:../../textproc/py-relatorio
-DEPENDS+=	${PYPKGPREFIX}-lxml>=2.0:../../textproc/py-lxml
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
