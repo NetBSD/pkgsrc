@@ -1,4 +1,7 @@
-$NetBSD: patch-ab,v 1.7 2009/08/26 21:10:11 snj Exp $
+$NetBSD: patch-ab,v 1.8 2014/01/31 17:32:19 agc Exp $
+
+comment out the path to the dropbear ssh client
+- this is passed through CFLAGS
 
 --- options.h.orig	2009-08-26 13:15:07.000000000 -0700
 +++ options.h	2009-08-26 13:15:14.000000000 -0700
