@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.506 2014/01/31 15:32:07 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.507 2014/01/31 22:10:36 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -601,3 +601,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/get-flash-videos to 0.0.20140129 [dsainty 2014-01-31]
 	Added devel/py-trytond version 3.0.2 [rodent 2014-01-31]
 	Updated sysutils/agedu to 10126 [schmonz 2014-01-31]
+	Updated devel/userspace-rcu to 0.8.1 [pettai 2014-01-31]
