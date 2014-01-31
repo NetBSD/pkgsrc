@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.507 2014/01/31 22:10:36 pettai Exp $
+$NetBSD: CHANGES-2014,v 1.508 2014/01/31 22:11:10 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -602,3 +602,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/py-trytond version 3.0.2 [rodent 2014-01-31]
 	Updated sysutils/agedu to 10126 [schmonz 2014-01-31]
 	Updated devel/userspace-rcu to 0.8.1 [pettai 2014-01-31]
+	Updated net/knot to 1.4.2 [pettai 2014-01-31]
