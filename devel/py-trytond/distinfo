@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/01/31 12:30:50 rodent Exp $
+
+SHA1 (trytond-3.0.2.tar.gz) = db770ad843957412382029a2c8b60086d7986c9d
+RMD160 (trytond-3.0.2.tar.gz) = 2ca52bac94fcde85b78160eeac11d50d017da785
+Size (trytond-3.0.2.tar.gz) = 471286 bytes
