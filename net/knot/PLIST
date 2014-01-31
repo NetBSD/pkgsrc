@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2013/09/13 18:14:11 pettai Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/01/31 22:05:43 pettai Exp $
 bin/kdig
 bin/khost
+bin/knsec3hash
 bin/knsupdate
 man/man1/kdig.1
 man/man1/khost.1
+man/man1/knsec3hash.1
 man/man1/knsupdate.1
 man/man5/knot.conf.5
 man/man8/knotc.8
