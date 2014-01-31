@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.503 2014/01/31 11:23:43 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.504 2014/01/31 11:24:49 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -598,3 +598,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated chat/pidgin-silc to 2.10.8 [obache 2014-01-31]
 	Updated graphics/clutter to 1.16.4nb1 [obache 2014-01-31]
 	Added devel/py-unittest2py3k version 0.5.1 [wiz 2014-01-31]
+	Updated net/get-flash-videos to 0.0.20140129 [dsainty 2014-01-31]
