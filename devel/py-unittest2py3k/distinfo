@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/01/31 11:23:13 wiz Exp $
+
+SHA1 (unittest2py3k-0.5.1.tar.gz) = f686e4e3b3c0c705814d94b55ddb53d174177994
+RMD160 (unittest2py3k-0.5.1.tar.gz) = 119f837e7af015fc83e8967fa1388f8745d9895f
+Size (unittest2py3k-0.5.1.tar.gz) = 55493 bytes
