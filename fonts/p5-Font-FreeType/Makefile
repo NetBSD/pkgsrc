@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/01/27 06:07:59 obache Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/31 10:44:47 obache Exp $
 #
 
 DISTNAME=	Font-FreeType-0.03
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Font/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Font-FreeType/
 COMMENT=	Read font files and render glyphs from Perl using FreeType2
-LICENSE=	${PERL_LICENSE}
+LICENSE=	${PERL5_LICENSE}
 
 PERL5_PACKLIST=		auto/Font/FreeType/.packlist
 
