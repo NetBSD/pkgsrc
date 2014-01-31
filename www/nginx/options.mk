@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.22 2013/08/18 08:06:38 imil Exp $
+# $NetBSD: options.mk,v 1.23 2014/01/31 03:09:19 rodent Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	dav flv gtools inet6 mail-proxy memcache naxsi pcre \
@@ -28,6 +28,7 @@ CONFIGURE_ARGS+=	--with-http_ssl_module
 
 .if !empty(PKG_OPTIONS:Mpcre)
 .include "../../devel/pcre/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-pcre-jit
 .else
 CONFIGURE_ARGS+=	--without-pcre
 CONFIGURE_ARGS+=	--without-http_rewrite_module
