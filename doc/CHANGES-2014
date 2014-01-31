@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.504 2014/01/31 11:24:49 dsainty Exp $
+$NetBSD: CHANGES-2014,v 1.505 2014/01/31 12:31:02 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -599,3 +599,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/clutter to 1.16.4nb1 [obache 2014-01-31]
 	Added devel/py-unittest2py3k version 0.5.1 [wiz 2014-01-31]
 	Updated net/get-flash-videos to 0.0.20140129 [dsainty 2014-01-31]
+	Added devel/py-trytond version 3.0.2 [rodent 2014-01-31]
