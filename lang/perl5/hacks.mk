@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.8 2013/04/03 11:57:46 obache Exp $
+# $NetBSD: hacks.mk,v 1.9 2014/01/31 17:38:48 schnoebe Exp $
 
 .if !defined(PERL5_HACKS_MK)
 PERL5_HACKS_MK=	defined
@@ -82,6 +82,16 @@ BUILDLINK_TRANSFORM+=	rename:-O[0-9]*:-Os
 .if !empty(MACHINE_PLATFORM:MHaiku-*-*)
 PKG_HACKS+=			broken-haiku-pthreads
 PERL5_BUILD_THREADS_SUPPORT=	no
+.endif
+
+### [Fri Jan 31 11:09:04 CST 2014 : schnoebe]
+### gcc-4.*.* in NetBSD/alpha causes  unaligned access exception in perl.
+### -O works around, and there is a report that -O2 -fno-tree-ter is enough.
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-alpha) && !empty(CC_VERSION:Mgcc-4.*.*)
+# XXX: is there any good way to replace the default -O2 with multiple args?
+PKG_HACKS+=            alpha-optimisation
+#BUILDLINK_TRANSFORM+=  rename:-O[2-9]*:-O2 -fno-tree-ter
+CFLAGS+=-fno-tree-ter
 .endif
 
 .endif  # PERL5_HACKS_MK
