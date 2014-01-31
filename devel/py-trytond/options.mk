@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2014/01/31 19:32:04 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2014/01/31 20:13:55 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-trytond
 PKG_SUPPORTED_OPTIONS=	cdecimal mysql pydot psycopg pytz simplejson sphinx
@@ -16,12 +16,12 @@ DEPENDS+=		${PYPKGPREFIX}-cdecimal-[0-9]*:../../math/py-cdecimal
 .endif
 
 .if !empty(PKG_OPTIONS:Mmysql)
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.2.3
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-mysqldb
 DEPENDS+=		${PYPKGPREFIX}-mysqldb-[0-9]*:../../databases/py-mysqldb
 .endif
 
 .if !empty(PKG_OPTIONS:Mpydot)
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.0.28
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-dot
 DEPENDS+=		${PYPKGPREFIX}-dot-[0-9]*:../../graphics/py-dot
 .endif
 
@@ -42,6 +42,6 @@ DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 .endif
 
 .if !empty(PKG_OPTIONS:Mwebdav)
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.9.8
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-pywebdav
 DEPENDS+=		${PYPKGPREFIX}-pywebdav-[0-9]*:../../www/py-pywebdav
 .endif
