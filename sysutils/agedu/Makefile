@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2014/01/16 18:11:36 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2014/01/31 15:32:03 schmonz Exp $
 #
 
-DISTNAME=	agedu-r9723
+DISTNAME=	agedu-r10126
 PKGNAME=	${DISTNAME:S/-r/-/}
 CATEGORIES=	sysutils
 MASTER_SITES=	${HOMEPAGE}
