@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.501 2014/01/31 06:34:23 obache Exp $
+$NetBSD: CHANGES-2014,v 1.502 2014/01/31 11:21:56 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -596,3 +596,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated chat/pidgin to 2.10.8 [obache 2014-01-31]
 	Updated chat/pidgin-sametime to 2.10.8 [obache 2014-01-31]
 	Updated chat/pidgin-silc to 2.10.8 [obache 2014-01-31]
+	Updated graphics/clutter to 1.16.4nb1 [obache 2014-01-31]
