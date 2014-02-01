@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2014/01/01 11:52:17 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/02/01 02:20:46 markd Exp $
 
 DISTNAME=	kmines-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	games
 COMMENT=	KDE version of the classic minesweeper game
 

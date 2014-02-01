@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/11/07 11:35:51 markd Exp $
+$NetBSD: distinfo,v 1.4 2014/02/01 02:20:47 markd Exp $
 
-SHA1 (ksudoku-4.11.3.tar.xz) = 5f311bea8dffa71001f311317ff98b55e57c525d
-RMD160 (ksudoku-4.11.3.tar.xz) = b960a9dad004d23d900f3a152d442d85b5890adb
-Size (ksudoku-4.11.3.tar.xz) = 1433632 bytes
+SHA1 (ksudoku-4.11.5.tar.xz) = e5624934dafe4a8974e96f0c252d6c51f7397cb5
+RMD160 (ksudoku-4.11.5.tar.xz) = 1edc45dc4d66e33d003cd61da2c2c37deac0c6ff
+Size (ksudoku-4.11.5.tar.xz) = 1428472 bytes

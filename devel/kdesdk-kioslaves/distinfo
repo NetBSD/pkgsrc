@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/11/07 10:42:26 markd Exp $
+$NetBSD: distinfo,v 1.2 2014/02/01 02:20:44 markd Exp $
 
-SHA1 (kdesdk-kioslaves-4.11.3.tar.xz) = 177d78db40c568a51c74d2c1e2e48d3838254e09
-RMD160 (kdesdk-kioslaves-4.11.3.tar.xz) = dea783fd7a78ab5d4405ea634d64f6d82e979db4
-Size (kdesdk-kioslaves-4.11.3.tar.xz) = 363724 bytes
+SHA1 (kdesdk-kioslaves-4.11.5.tar.xz) = c90e604519edee695a6ec2d65364f5fe8fdbef7f
+RMD160 (kdesdk-kioslaves-4.11.5.tar.xz) = 9abce0e06a70fa553f697540bd66f273b90a3aab
+Size (kdesdk-kioslaves-4.11.5.tar.xz) = 361500 bytes

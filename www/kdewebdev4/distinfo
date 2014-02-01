@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2013/11/07 13:20:40 markd Exp $
+$NetBSD: distinfo,v 1.20 2014/02/01 02:20:53 markd Exp $
 
-SHA1 (kdewebdev-4.11.3.tar.xz) = 2178b219f0220592e039b337529a5962acf97db1
-RMD160 (kdewebdev-4.11.3.tar.xz) = 210e37b832f2f1003b6ce30513a08037bd7bfadf
-Size (kdewebdev-4.11.3.tar.xz) = 2564736 bytes
+SHA1 (kdewebdev-4.11.5.tar.xz) = 8a0f3850ad015e973d9cbbf3752e59e37ba2317b
+RMD160 (kdewebdev-4.11.5.tar.xz) = ee2ffc27419d5ea71ce8aaeb9bf73fae50a4c6af
+Size (kdewebdev-4.11.5.tar.xz) = 2538216 bytes
 SHA1 (patch-klinkstatus_src_CMakeLists.txt) = b3698f7edde82552e0395a27df980d0e58ce0994

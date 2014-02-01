@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/11/07 11:35:50 markd Exp $
+$NetBSD: distinfo,v 1.4 2014/02/01 02:20:47 markd Exp $
 
-SHA1 (ksnakeduel-4.11.3.tar.xz) = c64fbe0973582938ed8aa46b65e29e3a6e38fb80
-RMD160 (ksnakeduel-4.11.3.tar.xz) = f0f8a50f5d756853bda674a897961e1b26b21b5d
-Size (ksnakeduel-4.11.3.tar.xz) = 321728 bytes
+SHA1 (ksnakeduel-4.11.5.tar.xz) = 21a6946f262cfa5c953c4a3c6f3ddc70fedb70d0
+RMD160 (ksnakeduel-4.11.5.tar.xz) = 3815881e93318878a4170cdcf2ca9de920fda897
+Size (ksnakeduel-4.11.5.tar.xz) = 319920 bytes

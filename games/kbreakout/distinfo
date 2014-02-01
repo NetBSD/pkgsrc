@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/11/07 11:35:49 markd Exp $
+$NetBSD: distinfo,v 1.4 2014/02/01 02:20:45 markd Exp $
 
-SHA1 (kbreakout-4.11.3.tar.xz) = c62ce7ad423f5c6ff3593ff22a3e851b2ee34471
-RMD160 (kbreakout-4.11.3.tar.xz) = f02d47278f52269c4f6d8d8d720c499acd7e3fab
-Size (kbreakout-4.11.3.tar.xz) = 1393828 bytes
+SHA1 (kbreakout-4.11.5.tar.xz) = 0afe57b3c4a8234384d4d075edd0a628f9be041f
+RMD160 (kbreakout-4.11.5.tar.xz) = 7468fefe02af9e11602441b89b380e291bbe83ee
+Size (kbreakout-4.11.5.tar.xz) = 1389748 bytes

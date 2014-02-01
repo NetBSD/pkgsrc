@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/11/07 13:03:08 markd Exp $
+$NetBSD: distinfo,v 1.2 2014/02/01 02:20:52 markd Exp $
 
-SHA1 (kdnssd-4.11.3.tar.xz) = 4d26fda0e964c5baca68336a1c035252d6f1d4bb
-RMD160 (kdnssd-4.11.3.tar.xz) = 32bb04d111be19576ea6cf6e97b430e967098b39
-Size (kdnssd-4.11.3.tar.xz) = 26616 bytes
+SHA1 (kdnssd-4.11.5.tar.xz) = 87063f0654229a3e5da522d740759df9dba58446
+RMD160 (kdnssd-4.11.5.tar.xz) = bbe4fbd03a9a8de1ae10583df91695dcfe2ffa2b
+Size (kdnssd-4.11.5.tar.xz) = 25932 bytes

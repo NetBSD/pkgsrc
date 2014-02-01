@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.49 2014/01/01 11:52:24 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2014/02/01 02:20:49 markd Exp $
 
 #DISTNAME=	kdepim-runtime-${_KDE_VERSION}
 DISTNAME=	kdepim-runtime-4.4.11.1
 PKGNAME=	${DISTNAME:S/-4/4-4/}
 MASTER_SITES=	${MASTER_SITE_KDE:=kdepim-4.4.11.1/src/}
-PKGREVISION=	24
+PKGREVISION=	25
 CATEGORIES=	misc
 COMMENT=	Runtime requirements for the KDE PIM tools
 EXTRACT_SUFX=	.tar.bz2

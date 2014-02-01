@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2013/11/07 11:59:58 markd Exp $
+$NetBSD: distinfo,v 1.7 2014/02/01 02:20:48 markd Exp $
 
-SHA1 (cantor-4.11.3.tar.xz) = fb0e450c0591db62ec9f71532a90c1ad15187c2e
-RMD160 (cantor-4.11.3.tar.xz) = e8b99cb05df4331ee5a342f68b3ee2bace122aa2
-Size (cantor-4.11.3.tar.xz) = 313116 bytes
+SHA1 (cantor-4.11.5.tar.xz) = f6774e335cdf8257ce19ba2708d87cd83d95f768
+RMD160 (cantor-4.11.5.tar.xz) = c7a54571d88f2accc8288148dc1a95daa083ccbb
+Size (cantor-4.11.5.tar.xz) = 302036 bytes

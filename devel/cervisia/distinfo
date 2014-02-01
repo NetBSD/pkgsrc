@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/11/07 10:42:25 markd Exp $
+$NetBSD: distinfo,v 1.5 2014/02/01 02:20:44 markd Exp $
 
-SHA1 (cervisia-4.11.3.tar.xz) = 5a15700bff3faf2dfddf440708edcb8e18163505
-RMD160 (cervisia-4.11.3.tar.xz) = 68d67e395f6b082db5b0992824987062698dc2ba
-Size (cervisia-4.11.3.tar.xz) = 374864 bytes
+SHA1 (cervisia-4.11.5.tar.xz) = ea9a3699b7f4282067dceedf38f593ac0c6898f5
+RMD160 (cervisia-4.11.5.tar.xz) = c56f70b48228b57fddd99e4c2a0b4ef268d9e97c
+Size (cervisia-4.11.5.tar.xz) = 370096 bytes

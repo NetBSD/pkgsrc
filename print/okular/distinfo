@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2013/11/07 13:06:58 markd Exp $
+$NetBSD: distinfo,v 1.7 2014/02/01 02:20:52 markd Exp $
 
-SHA1 (okular-4.11.3.tar.xz) = b65e4124aab93220302721d03db09469f4c3d7c7
-RMD160 (okular-4.11.3.tar.xz) = 2f8801e1a37ae164438d9cfe64506b5ff869cecb
-Size (okular-4.11.3.tar.xz) = 1556704 bytes
+SHA1 (okular-4.11.5.tar.xz) = 608c834a0dcbc5279992ef77186fdb21754654dc
+RMD160 (okular-4.11.5.tar.xz) = fbc76ade4ec97eaf7eb5496a7bb17c6260bfb09f
+Size (okular-4.11.5.tar.xz) = 1537356 bytes

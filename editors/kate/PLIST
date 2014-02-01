@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/11/07 10:23:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/02/01 02:20:45 markd Exp $
 bin/kate
 bin/kwrite
 include/kate/application.h
@@ -104,19 +104,6 @@ share/kde/apps/kate/icons/hicolor/16x16/actions/sql-table.png
 share/kde/apps/kate/icons/hicolor/16x16/actions/sql-view.png
 share/kde/apps/kate/kateui.rc
 share/kde/apps/kate/pate/block.py
-share/kde/apps/kate/pate/cmake_utils/__init__.py
-share/kde/apps/kate/pate/cmake_utils/cmake_help_parser.py
-share/kde/apps/kate/pate/cmake_utils/cmake_utils.py
-share/kde/apps/kate/pate/cmake_utils/cmake_utils_settings.py
-share/kde/apps/kate/pate/cmake_utils/cmake_utils_settings.ui
-share/kde/apps/kate/pate/cmake_utils/cmake_utils_toolview_cacheview_page.ui
-share/kde/apps/kate/pate/cmake_utils/cmake_utils_toolview_help_page.ui
-share/kde/apps/kate/pate/cmake_utils/cmake_utils_toolview_settings_page.ui
-share/kde/apps/kate/pate/cmake_utils/command_completers/__init__.py
-share/kde/apps/kate/pate/cmake_utils/command_completers/cmake_policy_cc.py
-share/kde/apps/kate/pate/cmake_utils/command_completers/cond_cc.py
-share/kde/apps/kate/pate/cmake_utils/command_completers/param_types.py
-share/kde/apps/kate/pate/cmake_utils/command_completers/syntax_cc.py
 share/kde/apps/kate/pate/color_tools.py
 share/kde/apps/kate/pate/color_tools_toolview.ui
 share/kde/apps/kate/pate/commentar.py
@@ -126,28 +113,11 @@ share/kde/apps/kate/pate/django_utils/django_snippets.py
 share/kde/apps/kate/pate/django_utils/django_template.py
 share/kde/apps/kate/pate/django_utils/django_utils.py
 share/kde/apps/kate/pate/django_utils/django_utils.ui
-share/kde/apps/kate/pate/expand.py
-share/kde/apps/kate/pate/expand/all.expand
-share/kde/apps/kate/pate/expand/text_css.expand
-share/kde/apps/kate/pate/expand/text_html.expand
-share/kde/apps/kate/pate/expand/text_x-c++hdr.expand
-share/kde/apps/kate/pate/expand/text_x-c++src.expand
-share/kde/apps/kate/pate/expand/text_x-chdr.expand
-share/kde/apps/kate/pate/expand/text_x-python.expand
 share/kde/apps/kate/pate/format.py
 share/kde/apps/kate/pate/gid/config.ui
 share/kde/apps/kate/pate/gid/gid.py
 share/kde/apps/kate/pate/gid/idutils.py
 share/kde/apps/kate/pate/gid/tool.ui
-share/kde/apps/kate/pate/js_utils/jquery_autocomplete.json
-share/kde/apps/kate/pate/js_utils/js_autocomplete.json
-share/kde/apps/kate/pate/js_utils/js_autocomplete.py
-share/kde/apps/kate/pate/js_utils/js_settings.py
-share/kde/apps/kate/pate/js_utils/js_snippets.py
-share/kde/apps/kate/pate/js_utils/js_utils.py
-share/kde/apps/kate/pate/js_utils/js_utils.ui
-share/kde/apps/kate/pate/js_utils/jslint.py
-share/kde/apps/kate/pate/js_utils/json_pretty.py
 share/kde/apps/kate/pate/libkatepate/__init__.py
 share/kde/apps/kate/pate/libkatepate/autocomplete.py
 share/kde/apps/kate/pate/libkatepate/common.py

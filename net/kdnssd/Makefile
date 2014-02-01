@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/01/01 11:52:29 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/01 02:20:52 markd Exp $
 
 DISTNAME=	kdnssd-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	net
 COMMENT=	Monitors the network for DNS-SD services
 
