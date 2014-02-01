@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.512 2014/02/01 10:53:59 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.513 2014/02/01 11:42:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -815,3 +815,8 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/kdevplatform to 1.6.0 [markd 2014-02-01]
 	Updated devel/kdevelop4 to 4.6.0 [markd 2014-02-01]
 	Updated devel/p5-Proc-ProcessTable to 0.50 [wiz 2014-02-01]
+	Updated www/curl to 7.35.0 [adam 2014-02-01]
+	Updated devel/cmake to 2.8.12.2 [adam 2014-02-01]
+	Updated databases/mysql55-client to 5.5.36 [adam 2014-02-01]
+	Updated databases/mysql55-server to 5.5.36 [adam 2014-02-01]
+	Updated www/awstats to 7.3 [adam 2014-02-01]
