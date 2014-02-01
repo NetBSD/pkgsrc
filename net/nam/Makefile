@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2014/01/11 14:42:05 adam Exp $
+# $NetBSD: Makefile,v 1.35 2014/02/01 08:07:01 markd Exp $
 
 DISTNAME=	nam-src-1.15
 PKGNAME=	nam-1.15
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nsnam/}
 
@@ -18,9 +18,9 @@ GNU_CONFIGURE=	yes
 BUILD_TARGET=
 
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}
-CONFIGURE_ARGS+=	--with-tcl-ver=8.5
+CONFIGURE_ARGS+=	--with-tcl-ver=8.6
 CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}
-CONFIGURE_ARGS+=	--with-tk-ver=8.5
+CONFIGURE_ARGS+=	--with-tk-ver=8.6
 CONFIGURE_ARGS+=	--with-otcl=${BUILDLINK_PREFIX.tcl-otcl}
 CONFIGURE_ARGS+=	--with-tclcl=${BUILDLINK_PREFIX.tcl-tclcl}
 
