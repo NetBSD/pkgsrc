@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:24:44 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/02/01 18:12:13 adam Exp $
 bin/bltsh
 bin/bltsh24
 bin/bltwish
@@ -184,8 +184,8 @@ man/mann/barchart.n
 man/mann/beep.n
 man/mann/bgexec.n
 man/mann/bltbitmap.n
+man/mann/bltbusy.n
 man/mann/bltdebug.n
-man/mann/busy.n
 man/mann/container.n
 man/mann/cutbuffer.n
 man/mann/dragdrop.n
