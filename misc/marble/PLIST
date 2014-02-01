@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/11/07 12:35:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/02/01 02:20:50 markd Exp $
 bin/marble
 bin/marble-qt
 bin/marble-touch
@@ -98,6 +98,8 @@ include/marble/NavigationWidget.h
 include/marble/ParseRunnerPlugin.h
 include/marble/ParsingRunner.h
 include/marble/Planet.h
+include/marble/PluginManager.h
+include/marble/PositionProviderPlugin.h
 include/marble/PluginAboutDialog.h
 include/marble/PluginInterface.h
 include/marble/PositionProviderPluginInterface.h
@@ -192,7 +194,7 @@ lib/kde4/plugins/marble/Weather.so
 lib/kde4/plugins/marble/Wikipedia.so
 lib/kde4/plugins/marble/YoursPlugin.so
 lib/libmarblewidget.so
-lib/libmarblewidget.so.0.16.2
+lib/libmarblewidget.so.0.16.5
 lib/libmarblewidget.so.16
 qt4/imports/org/kde/edu/marble/MarbleSettings.qml
 qt4/imports/org/kde/edu/marble/libMarbleDeclarativePlugin.so

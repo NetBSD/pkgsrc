@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/11/11 16:47:07 joerg Exp $
+$NetBSD: distinfo,v 1.5 2014/02/01 02:20:44 markd Exp $
 
-SHA1 (umbrello-4.11.3.tar.xz) = 98274cfe91db7b56429a9de0d23ae490adee9ce0
-RMD160 (umbrello-4.11.3.tar.xz) = e3455869134019335ac47ce89b4f074fbdb9bc79
-Size (umbrello-4.11.3.tar.xz) = 1478632 bytes
-SHA1 (patch-umbrello_CMakeLists.txt) = 9188a7d3b8a0b69def0cdfd2280a4f51eb4cde5b
-SHA1 (patch-umbrello_codeimport_classimport.cpp) = 8c4be72436bba4696d3b3e88bca8b360259123d3
-SHA1 (patch-umbrello_codeimport_kdevcppparser_position.h) = 5a2d2e24df8fbbc56c910f2e800b21083319d8c5
-SHA1 (patch-umbrello_codeimport_kdevcppparser_preprocesslexer.cpp) = 87c6c12c1e19009723aa58c89ef7ca67eedc04f0
+SHA1 (poxml-4.11.5.tar.xz) = 073ab7ad98eff46ced66e234adbafa2afdb86138
+RMD160 (poxml-4.11.5.tar.xz) = ffc00d262eeea2d8501ba452f9affe67cd96a18d
+Size (poxml-4.11.5.tar.xz) = 31044 bytes

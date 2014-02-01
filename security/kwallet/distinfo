@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2013/11/07 13:09:39 markd Exp $
+$NetBSD: distinfo,v 1.7 2014/02/01 02:20:52 markd Exp $
 
-SHA1 (kwallet-4.11.3.tar.xz) = 7d9a7cfdec09d7acf662aba75478bbd41b52e1ad
-RMD160 (kwallet-4.11.3.tar.xz) = 94f1d6bc91612d5ccf27f66b7f3ecd5ff899b9ce
-Size (kwallet-4.11.3.tar.xz) = 386960 bytes
+SHA1 (kwallet-4.11.5.tar.xz) = cd5fcadce9c00863c2a6ab79d6d2799f85c6f44b
+RMD160 (kwallet-4.11.5.tar.xz) = 0093522995940c56913a680af7a4a5944a032abd
+Size (kwallet-4.11.5.tar.xz) = 384188 bytes

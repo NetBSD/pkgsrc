@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/11/07 10:42:26 markd Exp $
+$NetBSD: distinfo,v 1.2 2014/02/01 02:20:44 markd Exp $
 
-SHA1 (okteta-4.11.3.tar.xz) = 1b6d7a8911e401def759ac562fd0205a1160fa9b
-RMD160 (okteta-4.11.3.tar.xz) = cb354449b6f1c96d564bd3c65f1d194f4435d88d
-Size (okteta-4.11.3.tar.xz) = 534340 bytes
+SHA1 (okteta-4.11.5.tar.xz) = 08620942826e43f4a88bc842dcdecf7abaacd04a
+RMD160 (okteta-4.11.5.tar.xz) = 9260f244f8a02bde10a659c9c2c39833e96d5df1
+Size (okteta-4.11.5.tar.xz) = 498636 bytes

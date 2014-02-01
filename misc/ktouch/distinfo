@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2013/11/07 12:35:42 markd Exp $
+$NetBSD: distinfo,v 1.7 2014/02/01 02:20:50 markd Exp $
 
-SHA1 (ktouch-4.11.3.tar.xz) = 4996509f4aa8d896095dd116be56c8f36739a465
-RMD160 (ktouch-4.11.3.tar.xz) = 42a738ccbb960a13b787e4159f909b62e9d5f92c
-Size (ktouch-4.11.3.tar.xz) = 2620184 bytes
+SHA1 (ktouch-4.11.5.tar.xz) = d66b0ddbce1b9645e9b20b8beb655f776c410530
+RMD160 (ktouch-4.11.5.tar.xz) = 358f9bb7df827d679822e0816dff4036e0e983af
+Size (ktouch-4.11.5.tar.xz) = 2611156 bytes

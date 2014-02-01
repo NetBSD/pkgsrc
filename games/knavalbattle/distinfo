@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/11/07 11:35:50 markd Exp $
+$NetBSD: distinfo,v 1.4 2014/02/01 02:20:46 markd Exp $
 
-SHA1 (knavalbattle-4.11.3.tar.xz) = 025c480ecea840efecbd20b41921ce56fe52d470
-RMD160 (knavalbattle-4.11.3.tar.xz) = aa0cf371a5656af083c0a6fb7e2c2b153fc8ec58
-Size (knavalbattle-4.11.3.tar.xz) = 851680 bytes
+SHA1 (knavalbattle-4.11.5.tar.xz) = 74bbe2f69242575991b178fc31adcca799dc6988
+RMD160 (knavalbattle-4.11.5.tar.xz) = 8981ca84890f81ef7733def7cf22f660a4b89431
+Size (knavalbattle-4.11.5.tar.xz) = 848952 bytes

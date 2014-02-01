@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/11/07 12:49:19 markd Exp $
+$NetBSD: distinfo,v 1.4 2014/02/01 02:20:51 markd Exp $
 
-SHA1 (mplayerthumbs-4.11.3.tar.xz) = 6f61935359f2dfb1073884a8d48738663b5aa33a
-RMD160 (mplayerthumbs-4.11.3.tar.xz) = 94c6084c5b7ba26f0c368cda1a3e93c3c9491fba
-Size (mplayerthumbs-4.11.3.tar.xz) = 28592 bytes
+SHA1 (mplayerthumbs-4.11.5.tar.xz) = 8f729e459623ffb6f7df3fd4a432bc9d6f1d6029
+RMD160 (mplayerthumbs-4.11.5.tar.xz) = c0d72a72c457a65efc0cfc405a7c9c175c043c9b
+Size (mplayerthumbs-4.11.5.tar.xz) = 27244 bytes

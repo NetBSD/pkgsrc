@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/11/07 12:35:41 markd Exp $
+$NetBSD: distinfo,v 1.4 2014/02/01 02:20:50 markd Exp $
 
-SHA1 (nepomuk-widgets-4.11.3.tar.xz) = d43a410fd9ed02b52e8d4076e080a66a4b2c435a
-RMD160 (nepomuk-widgets-4.11.3.tar.xz) = 806aea5d53c41921b4ea694e9b3ffed2ba285b72
-Size (nepomuk-widgets-4.11.3.tar.xz) = 50448 bytes
+SHA1 (nepomuk-widgets-4.11.5.tar.xz) = 6af8cff0b46bd092cb7e6e75fed09c717ce79baf
+RMD160 (nepomuk-widgets-4.11.5.tar.xz) = 94cdc4e8e5a2d1083001006a0e604c054872ce5c
+Size (nepomuk-widgets-4.11.5.tar.xz) = 49132 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/11/07 13:03:07 markd Exp $
+$NetBSD: distinfo,v 1.2 2014/02/01 02:20:52 markd Exp $
 
-SHA1 (kppp-4.11.3.tar.xz) = 11608fce538eecb3496406e50c4d2e17f5f520b1
-RMD160 (kppp-4.11.3.tar.xz) = cd123dedae5347cb1bf745f6b282eb1e6d440f93
-Size (kppp-4.11.3.tar.xz) = 718352 bytes
+SHA1 (kppp-4.11.5.tar.xz) = af23007b085850c0242387e794b86a7ab7f0c91c
+RMD160 (kppp-4.11.5.tar.xz) = 7188d53dfe2a59d13651710b98f5591addfd773d
+Size (kppp-4.11.5.tar.xz) = 700116 bytes

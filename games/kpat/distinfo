@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/11/07 11:35:50 markd Exp $
+$NetBSD: distinfo,v 1.4 2014/02/01 02:20:46 markd Exp $
 
-SHA1 (kpat-4.11.3.tar.xz) = 17ec8411212a75b3a2fab2b85f9c88bfe2bfbdd7
-RMD160 (kpat-4.11.3.tar.xz) = 8e684305c75f19a18bbbe54e64e726205ed4a030
-Size (kpat-4.11.3.tar.xz) = 3083784 bytes
+SHA1 (kpat-4.11.5.tar.xz) = e10f9eda064e9965681a2cba14d192871aff8351
+RMD160 (kpat-4.11.5.tar.xz) = d314c0d6ceafcfa7d2af35735fd2e6e3400f0d3e
+Size (kpat-4.11.5.tar.xz) = 3077500 bytes

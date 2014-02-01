@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/11/07 13:03:08 markd Exp $
+$NetBSD: distinfo,v 1.2 2014/02/01 02:20:51 markd Exp $
 
-SHA1 (kdenetwork-filesharing-4.11.3.tar.xz) = db93e4617230aebd377e415475e7ad5dd4e9b549
-RMD160 (kdenetwork-filesharing-4.11.3.tar.xz) = f23160d94111cc9ac89ff5c65b659332f4b7f6d8
-Size (kdenetwork-filesharing-4.11.3.tar.xz) = 28076 bytes
+SHA1 (kdenetwork-filesharing-4.11.5.tar.xz) = d2cdc771eca33c64448cfb3c3eada51e99c06910
+RMD160 (kdenetwork-filesharing-4.11.5.tar.xz) = ecff6f290125d02766258654f6e1452ee583f088
+Size (kdenetwork-filesharing-4.11.5.tar.xz) = 27468 bytes

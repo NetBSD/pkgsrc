@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/11/07 12:35:43 markd Exp $
+$NetBSD: distinfo,v 1.2 2014/02/01 02:20:50 markd Exp $
 
-SHA1 (kteatime-4.11.3.tar.xz) = 5359a97a9a46ca75cd1ed7173182f838d929a4f5
-RMD160 (kteatime-4.11.3.tar.xz) = 4a3fd3228091cb7849fca1beea0d1a6a44db0ba4
-Size (kteatime-4.11.3.tar.xz) = 101924 bytes
+SHA1 (kteatime-4.11.5.tar.xz) = 32402382e31226ea95e9c95706ca695934ec6acd
+RMD160 (kteatime-4.11.5.tar.xz) = 5da76b6e52db3dfa5f0d32fff49786020a8f8864
+Size (kteatime-4.11.5.tar.xz) = 100424 bytes

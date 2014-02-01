@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/11/07 11:35:48 markd Exp $
+$NetBSD: distinfo,v 1.4 2014/02/01 02:20:45 markd Exp $
 
-SHA1 (bovo-4.11.3.tar.xz) = 5dac983929801c794eb4d60016991c5557f88dd8
-RMD160 (bovo-4.11.3.tar.xz) = 7453ec5f2c1cb03a2488d99fc0b8bcaa710fb36d
-Size (bovo-4.11.3.tar.xz) = 103688 bytes
+SHA1 (bovo-4.11.5.tar.xz) = 1c2a6eb0c46b87662fbcd1984dab9fff1967bbc1
+RMD160 (bovo-4.11.5.tar.xz) = 42a7499aa555429e20858b910d44c5a2e37b099e
+Size (bovo-4.11.5.tar.xz) = 101612 bytes
