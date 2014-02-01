@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/01/01 11:52:29 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/02/01 02:20:52 markd Exp $
 
 DISTNAME=	kopete-${_KDE_VERSION}
-PKGREVISION=	3
 CATEGORIES=	net
 COMMENT=	Multi-protocol instant messenger client
 

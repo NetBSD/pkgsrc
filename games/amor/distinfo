@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/11/07 11:35:51 markd Exp $
+$NetBSD: distinfo,v 1.5 2014/02/01 02:20:45 markd Exp $
 
-SHA1 (amor-4.11.3.tar.xz) = b118d2fbee168d5bfd386ea67994f9730e80c5dc
-RMD160 (amor-4.11.3.tar.xz) = 5925e271c37f6c908937545dd60769af8a04ccd9
-Size (amor-4.11.3.tar.xz) = 184496 bytes
+SHA1 (amor-4.11.5.tar.xz) = 92e5695231e2b829aaec1f607e2988155b48db06
+RMD160 (amor-4.11.5.tar.xz) = 0b4f5ff09b8f5e1f82c79866588e2bbdc654bba9
+Size (amor-4.11.5.tar.xz) = 175468 bytes
