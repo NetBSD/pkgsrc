@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:59 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/02/01 01:44:52 markd Exp $
 include/ical.h
 include/libical/ical.h
 include/libical/icalarray.h
@@ -45,7 +45,16 @@ include/libical/sspm.h
 include/libical/vcaltmp.h
 include/libical/vcc.h
 include/libical/vobject.h
-lib/libical.la
-lib/libicalss.la
-lib/libicalvcal.la
+lib/libical.a
+lib/libical.so
+lib/libical.so.1
+lib/libical.so.1.0.0
+lib/libicalss.a
+lib/libicalss.so
+lib/libicalss.so.1
+lib/libicalss.so.1.0.0
+lib/libicalvcal.a
+lib/libicalvcal.so
+lib/libicalvcal.so.1
+lib/libicalvcal.so.1.0.0
 lib/pkgconfig/libical.pc

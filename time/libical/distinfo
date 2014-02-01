@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.4 2009/11/25 21:35:58 joerg Exp $
+$NetBSD: distinfo,v 1.5 2014/02/01 01:44:52 markd Exp $
 
-SHA1 (libical-0.44.tar.gz) = f781150e2d98806e91b7e0bee02abdc6baf9ac7d
-RMD160 (libical-0.44.tar.gz) = 5640ffd3ff01807e49d9090000510c4959218c39
-Size (libical-0.44.tar.gz) = 1149067 bytes
-SHA1 (patch-aa) = 88c6b75e74438785bafed8ae4521b3a8eb613c3d
-SHA1 (patch-ab) = 49e41ed5200ab73b37ac0824cd8b9650053186a3
-SHA1 (patch-as) = 86fc413de3e1e5c858c04099ea530484a6e46a6d
+SHA1 (libical-1.0.tar.gz) = 25c75f6f947edb6347404a958b1444cceeb9f117
+RMD160 (libical-1.0.tar.gz) = 1c78b07c37c80e8fe068fb3164bbf8614f02e67f
+Size (libical-1.0.tar.gz) = 1199483 bytes
+SHA1 (patch-as) = 94243c14ea3f554cd78c92a16b27e6b3b66b9e2d

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2013/05/31 12:42:24 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/02/01 01:44:52 markd Exp $
 #
 
-DISTNAME=	libical-0.44
-PKGREVISION=	2
+DISTNAME=	libical-1.0
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freeassociation/}
 
@@ -11,9 +10,8 @@ HOMEPAGE=	http://freeassociation.sourceforge.net/
 COMMENT=	Reference implementation of the iCalendar data type and format
 
 USE_TOOLS+=	perl
-USE_LIBTOOL=	yes
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+= --without-builtintz
+USE_CMAKE=	yes
+CMAKE_ARGS+= -DUSE_BUILTIN_TZDATA=false
 
 PKGCONFIG_OVERRIDE+=	libical.pc.in
 
@@ -24,7 +22,7 @@ DEPENDS+= zonetab-[0-9]*:../../time/zonetab
 .endif
 
 # C++ is only needed for test
-#USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++
 #TEST_TARGET=	check
 
 .include "../../mk/bsd.pkg.mk"
