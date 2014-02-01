@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.511 2014/02/01 09:56:41 markd Exp $
+$NetBSD: CHANGES-2014,v 1.512 2014/02/01 10:53:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -814,3 +814,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/tcl-tclcl to 1.20 [markd 2014-02-01]
 	Updated devel/kdevplatform to 1.6.0 [markd 2014-02-01]
 	Updated devel/kdevelop4 to 4.6.0 [markd 2014-02-01]
+	Updated devel/p5-Proc-ProcessTable to 0.50 [wiz 2014-02-01]
