@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2014/01/01 11:52:31 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2014/02/01 19:39:42 joerg Exp $
 #
 
 DISTNAME=	vinagre-3.6.2
@@ -41,6 +41,11 @@ CONFIGURE_ARGS+= --with-telepathy
 PLIST.telepathy= yes
 .else
 CONFIGURE_ARGS+= --without-telepathy
+.endif
+
+.if ${OPSYS} == "NetBSD"
+# Interface conflicts with glibc's version
+CONFIGURE_ARGS+=	ac_cv_func_ptsname_r=no
 .endif
 
 .include "../../databases/shared-mime-info/mimedb.mk"
