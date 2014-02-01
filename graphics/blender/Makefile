@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2014/01/10 20:06:46 joerg Exp $
+# $NetBSD: Makefile,v 1.102 2014/02/01 03:57:52 markd Exp $
 
 DISTNAME=	blender-2.69
 CATEGORIES=	graphics
@@ -40,8 +40,10 @@ SCONS_ARGS+=	WITH_BF_JACK=False
 SCONS_ARGS+=	WITH_BF_OPENAL=False
 SCONS_ARGS+=	WITH_BF_SNDFILE=False
 SCONS_ARGS+=	WITH_BF_FFMPEG=False
+SCONS_ARGS+=	WITH_BF_3DMOUSE=False
 
 SCONS_ARGS+=	BF_PYTHON=${PREFIX}
+SCONS_ARGS+=	BF_PYTHON_ABI_FLAGS=''
 SCONS_ARGS+=	BF_SDL=${BUILDLINK_PREFIX.SDL}
 SCONS_ARGS+=	BF_OPENEXR=${BUILDLINK_PREFIX.openexr}
 SCONS_ARGS+=	BF_JPEG=${BUILDLINK_PREFIX.jpeg}
@@ -69,6 +71,9 @@ do-install:
 
 CHECK_INTERPRETER_SKIP=	share/blender/${DISTNAME:S/blender-//:C/[a-z]//}/scripts/*.py share/blender/${DISTNAME:S/blender-//:C/[a-z]//}datafiles/*.py \
 			share/blender/${DISTNAME:S/blender-//:C/[a-z]//}/python/lib/python3.3/venv/scripts/posix/pydoc
+
+REPLACE_PYTHON+=	release/bin/blender-thumbnailer.py
+REPLACE_PYTHON+=	intern/cycles/kernel/SConscript
 
 post-install:
 	${LN} -sf ${PREFIX}/share/blender/blender \
