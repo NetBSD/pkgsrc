@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.3 2014/01/31 20:13:55 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2014/02/01 14:19:17 rodent Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-trytond
 PKG_SUPPORTED_OPTIONS=	cdecimal mysql pydot psycopg pytz simplejson sphinx
 PKG_SUPPORTED_OPTIONS+=	webdav
-PKG_SUGGESTED_OPTIONS+=	cdecimal psycopg pytz simplejson sphinx
+PKG_SUGGESTED_OPTIONS+=	psycopg pytz simplejson sphinx
 
 .include "../../mk/bsd.options.mk"
 
