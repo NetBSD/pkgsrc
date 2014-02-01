@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.523 2014/02/01 19:04:42 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.524 2014/02/01 19:14:34 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -830,3 +830,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added misc/py-trytond-party version 3.0.0 [rodent 2014-02-01]
 	Added finance/py-trytond-currency version 3.0.0 [rodent 2014-02-01]
 	Added misc/py-trytond-company version 3.0.0 [rodent 2014-02-01]
+	Added finance/py-trytond-account version 3.0.1 [rodent 2014-02-01]
