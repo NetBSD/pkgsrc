@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2013/12/03 15:40:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2014/02/01 11:16:03 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -2906,8 +2906,8 @@ share/mysql/test/suite/innodb/r/innodb-autoinc-56228.result
 share/mysql/test/suite/innodb/r/innodb-autoinc-optimize.result
 share/mysql/test/suite/innodb/r/innodb-autoinc.result
 share/mysql/test/suite/innodb/r/innodb-blob.result
+share/mysql/test/suite/innodb/r/innodb-change-buffer-recovery.result
 share/mysql/test/suite/innodb/r/innodb-consistent.result
-share/mysql/test/suite/innodb/r/innodb-create-options.result
 share/mysql/test/suite/innodb/r/innodb-index.result
 share/mysql/test/suite/innodb/r/innodb-index_ucs2.result
 share/mysql/test/suite/innodb/r/innodb-lock.result
@@ -2917,7 +2917,6 @@ share/mysql/test/suite/innodb/r/innodb-timeout.result
 share/mysql/test/suite/innodb/r/innodb-truncate.result
 share/mysql/test/suite/innodb/r/innodb-ucs2.result
 share/mysql/test/suite/innodb/r/innodb-use-sys-malloc.result
-share/mysql/test/suite/innodb/r/innodb-zip.result
 share/mysql/test/suite/innodb/r/innodb.result
 share/mysql/test/suite/innodb/r/innodb_autoinc_lock_mode_zero.result
 share/mysql/test/suite/innodb/r/innodb_bug11754376.result
@@ -2937,8 +2936,6 @@ share/mysql/test/suite/innodb/r/innodb_bug30919.result
 share/mysql/test/suite/innodb/r/innodb_bug34053.result
 share/mysql/test/suite/innodb/r/innodb_bug34300.result
 share/mysql/test/suite/innodb/r/innodb_bug35220.result
-share/mysql/test/suite/innodb/r/innodb_bug36169.result
-share/mysql/test/suite/innodb/r/innodb_bug36172.result
 share/mysql/test/suite/innodb/r/innodb_bug38231.result
 share/mysql/test/suite/innodb/r/innodb_bug39438.result
 share/mysql/test/suite/innodb/r/innodb_bug40360.result
@@ -2963,16 +2960,13 @@ share/mysql/test/suite/innodb/r/innodb_bug51378.result
 share/mysql/test/suite/innodb/r/innodb_bug51920.result
 share/mysql/test/suite/innodb/r/innodb_bug52199.result
 share/mysql/test/suite/innodb/r/innodb_bug52663.result
-share/mysql/test/suite/innodb/r/innodb_bug52745.result
 share/mysql/test/suite/innodb/r/innodb_bug53046.result
 share/mysql/test/suite/innodb/r/innodb_bug53290.result
-share/mysql/test/suite/innodb/r/innodb_bug53591.result
 share/mysql/test/suite/innodb/r/innodb_bug53592.result
 share/mysql/test/suite/innodb/r/innodb_bug53674.result
 share/mysql/test/suite/innodb/r/innodb_bug53756.result
 share/mysql/test/suite/innodb/r/innodb_bug54044.result
 share/mysql/test/suite/innodb/r/innodb_bug56143.result
-share/mysql/test/suite/innodb/r/innodb_bug56680.result
 share/mysql/test/suite/innodb/r/innodb_bug56716.result
 share/mysql/test/suite/innodb/r/innodb_bug56947.result
 share/mysql/test/suite/innodb/r/innodb_bug57252.result
@@ -2985,11 +2979,9 @@ share/mysql/test/suite/innodb/r/innodb_bug59733.result
 share/mysql/test/suite/innodb/r/innodb_bug60049.result
 share/mysql/test/suite/innodb/r/innodb_bug60196.result
 share/mysql/test/suite/innodb/r/innodb_bug60229.result
-share/mysql/test/suite/innodb/r/innodb_cmp_drop_table.result
 share/mysql/test/suite/innodb/r/innodb_corrupt_bit.result
 share/mysql/test/suite/innodb/r/innodb_file_format.result
 share/mysql/test/suite/innodb/r/innodb_gis.result
-share/mysql/test/suite/innodb/r/innodb_index_large_prefix.result
 share/mysql/test/suite/innodb/r/innodb_information_schema.result
 share/mysql/test/suite/innodb/r/innodb_information_schema_buffer.result
 share/mysql/test/suite/innodb/r/innodb_lock_wait_timeout_1.result
@@ -2998,7 +2990,6 @@ share/mysql/test/suite/innodb/r/innodb_multi_update.result
 share/mysql/test/suite/innodb/r/innodb_mysql.result
 share/mysql/test/suite/innodb/r/innodb_mysql_rbk.result
 share/mysql/test/suite/innodb/r/innodb_notembedded.result
-share/mysql/test/suite/innodb/r/innodb_prefix_index_liftedlimit.result
 share/mysql/test/suite/innodb/r/innodb_prefix_index_restart_server.result
 share/mysql/test/suite/innodb/r/innodb_replace.result
 share/mysql/test/suite/innodb/r/innodb_timeout_rollback.result
@@ -3014,9 +3005,10 @@ share/mysql/test/suite/innodb/t/innodb-autoinc-master.opt
 share/mysql/test/suite/innodb/t/innodb-autoinc-optimize.test
 share/mysql/test/suite/innodb/t/innodb-autoinc.test
 share/mysql/test/suite/innodb/t/innodb-blob.test
+share/mysql/test/suite/innodb/t/innodb-change-buffer-recovery-master.opt
+share/mysql/test/suite/innodb/t/innodb-change-buffer-recovery.test
 share/mysql/test/suite/innodb/t/innodb-consistent-master.opt
 share/mysql/test/suite/innodb/t/innodb-consistent.test
-share/mysql/test/suite/innodb/t/innodb-create-options.test
 share/mysql/test/suite/innodb/t/innodb-index.test
 share/mysql/test/suite/innodb/t/innodb-index_ucs2.test
 share/mysql/test/suite/innodb/t/innodb-lock.test
@@ -3029,7 +3021,6 @@ share/mysql/test/suite/innodb/t/innodb-truncate.test
 share/mysql/test/suite/innodb/t/innodb-ucs2.test
 share/mysql/test/suite/innodb/t/innodb-use-sys-malloc-master.opt
 share/mysql/test/suite/innodb/t/innodb-use-sys-malloc.test
-share/mysql/test/suite/innodb/t/innodb-zip.test
 share/mysql/test/suite/innodb/t/innodb.test
 share/mysql/test/suite/innodb/t/innodb_autoinc_lock_mode_zero-master.opt
 share/mysql/test/suite/innodb/t/innodb_autoinc_lock_mode_zero.test
@@ -3054,8 +3045,6 @@ share/mysql/test/suite/innodb/t/innodb_bug30919.test
 share/mysql/test/suite/innodb/t/innodb_bug34053.test
 share/mysql/test/suite/innodb/t/innodb_bug34300.test
 share/mysql/test/suite/innodb/t/innodb_bug35220.test
-share/mysql/test/suite/innodb/t/innodb_bug36169.test
-share/mysql/test/suite/innodb/t/innodb_bug36172.test
 share/mysql/test/suite/innodb/t/innodb_bug38231.test
 share/mysql/test/suite/innodb/t/innodb_bug39438-master.opt
 share/mysql/test/suite/innodb/t/innodb_bug39438.test
@@ -3083,10 +3072,8 @@ share/mysql/test/suite/innodb/t/innodb_bug51378.test
 share/mysql/test/suite/innodb/t/innodb_bug51920.test
 share/mysql/test/suite/innodb/t/innodb_bug52199.test
 share/mysql/test/suite/innodb/t/innodb_bug52663.test
-share/mysql/test/suite/innodb/t/innodb_bug52745.test
 share/mysql/test/suite/innodb/t/innodb_bug53046.test
 share/mysql/test/suite/innodb/t/innodb_bug53290.test
-share/mysql/test/suite/innodb/t/innodb_bug53591.test
 share/mysql/test/suite/innodb/t/innodb_bug53592.test
 share/mysql/test/suite/innodb/t/innodb_bug53674-master.opt
 share/mysql/test/suite/innodb/t/innodb_bug53674.test
@@ -3094,7 +3081,6 @@ share/mysql/test/suite/innodb/t/innodb_bug53756-master.opt
 share/mysql/test/suite/innodb/t/innodb_bug53756.test
 share/mysql/test/suite/innodb/t/innodb_bug54044.test
 share/mysql/test/suite/innodb/t/innodb_bug56143.test
-share/mysql/test/suite/innodb/t/innodb_bug56680.test
 share/mysql/test/suite/innodb/t/innodb_bug56716.test
 share/mysql/test/suite/innodb/t/innodb_bug56947.test
 share/mysql/test/suite/innodb/t/innodb_bug57252.test
@@ -3110,13 +3096,10 @@ share/mysql/test/suite/innodb/t/innodb_bug60196-master.opt
 share/mysql/test/suite/innodb/t/innodb_bug60196.test
 share/mysql/test/suite/innodb/t/innodb_bug60229-master.opt
 share/mysql/test/suite/innodb/t/innodb_bug60229.test
-share/mysql/test/suite/innodb/t/innodb_cmp_drop_table-master.opt
-share/mysql/test/suite/innodb/t/innodb_cmp_drop_table.test
 share/mysql/test/suite/innodb/t/innodb_corrupt_bit.test
 share/mysql/test/suite/innodb/t/innodb_file_format-master.opt
 share/mysql/test/suite/innodb/t/innodb_file_format.test
 share/mysql/test/suite/innodb/t/innodb_gis.test
-share/mysql/test/suite/innodb/t/innodb_index_large_prefix.test
 share/mysql/test/suite/innodb/t/innodb_information_schema.test
 share/mysql/test/suite/innodb/t/innodb_information_schema_buffer.test
 share/mysql/test/suite/innodb/t/innodb_lock_wait_timeout_1-master.opt
@@ -3129,12 +3112,32 @@ share/mysql/test/suite/innodb/t/innodb_mysql.test
 share/mysql/test/suite/innodb/t/innodb_mysql_rbk-master.opt
 share/mysql/test/suite/innodb/t/innodb_mysql_rbk.test
 share/mysql/test/suite/innodb/t/innodb_notembedded.test
-share/mysql/test/suite/innodb/t/innodb_prefix_index_liftedlimit.test
 share/mysql/test/suite/innodb/t/innodb_prefix_index_restart_server.test
 share/mysql/test/suite/innodb/t/innodb_replace.test
 share/mysql/test/suite/innodb/t/innodb_timeout_rollback-master.opt
 share/mysql/test/suite/innodb/t/innodb_timeout_rollback.test
 share/mysql/test/suite/innodb/t/innodb_trx_weight.test
+share/mysql/test/suite/innodb_zip/r/innodb-create-options.result
+share/mysql/test/suite/innodb_zip/r/innodb-zip.result
+share/mysql/test/suite/innodb_zip/r/innodb_bug36169.result
+share/mysql/test/suite/innodb_zip/r/innodb_bug36172.result
+share/mysql/test/suite/innodb_zip/r/innodb_bug52745.result
+share/mysql/test/suite/innodb_zip/r/innodb_bug53591.result
+share/mysql/test/suite/innodb_zip/r/innodb_bug56680.result
+share/mysql/test/suite/innodb_zip/r/innodb_cmp_drop_table.result
+share/mysql/test/suite/innodb_zip/r/innodb_index_large_prefix.result
+share/mysql/test/suite/innodb_zip/r/innodb_prefix_index_liftedlimit.result
+share/mysql/test/suite/innodb_zip/t/innodb-create-options.test
+share/mysql/test/suite/innodb_zip/t/innodb-zip.test
+share/mysql/test/suite/innodb_zip/t/innodb_bug36169.test
+share/mysql/test/suite/innodb_zip/t/innodb_bug36172.test
+share/mysql/test/suite/innodb_zip/t/innodb_bug52745.test
+share/mysql/test/suite/innodb_zip/t/innodb_bug53591.test
+share/mysql/test/suite/innodb_zip/t/innodb_bug56680.test
+share/mysql/test/suite/innodb_zip/t/innodb_cmp_drop_table-master.opt
+share/mysql/test/suite/innodb_zip/t/innodb_cmp_drop_table.test
+share/mysql/test/suite/innodb_zip/t/innodb_index_large_prefix.test
+share/mysql/test/suite/innodb_zip/t/innodb_prefix_index_liftedlimit.test
 share/mysql/test/suite/jp/include/trim_sjis.inc
 share/mysql/test/suite/jp/r/jp_alter_sjis.result
 share/mysql/test/suite/jp/r/jp_alter_ucs2.result
