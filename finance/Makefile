@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/02/01 19:14:58 rodent Exp $
+# $NetBSD: Makefile,v 1.30 2014/02/01 19:37:43 rodent Exp $
 #
 
 COMMENT=	Monetary, financial and related applications
@@ -15,6 +15,7 @@ SUBDIR+=	p5-Finance-Currency-Convert-WebserviceX
 SUBDIR+=	p5-Finance-Quote
 SUBDIR+=	p5-Locale-Currency-Format
 SUBDIR+=	py-trytond-account
+SUBDIR+=	py-trytond-account-product
 SUBDIR+=	py-trytond-currency
 SUBDIR+=	py-vatnumber
 SUBDIR+=	ruby-activemerchant
