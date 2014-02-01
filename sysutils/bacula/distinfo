@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.50 2014/01/22 10:45:21 jperkin Exp $
+$NetBSD: distinfo,v 1.51 2014/02/01 19:41:31 joerg Exp $
 
 SHA1 (bacula-5.2.13.tar.gz) = 30b1eb2efb515138807163d046f675eaa29fad1c
 RMD160 (bacula-5.2.13.tar.gz) = bcc168143c0eec5cb5e983f765935534379f4fcf
@@ -10,6 +10,7 @@ SHA1 (patch-ai) = 388e075e7ec54fb377ee9dbe8338c667efb256ee
 SHA1 (patch-aj) = 125d1503406474fec32e737068328cdfa718f5c2
 SHA1 (patch-am) = 28536d3f0de81940773749c3704ad7aca86d374d
 SHA1 (patch-configure) = 710d6e4370099a5d6d23d1297864af01abcdae83
+SHA1 (patch-src_bacula.h) = 74fed45f9d441a132f113fdfd783b8f5bb077885
 SHA1 (patch-src_console_conio.c) = bfec27296d145ab94c305cc5ffca7f892c14303e
 SHA1 (patch-src_dird_Makefile.in) = fdce18aca972f26f16af90283756cd5bf5ad5831
 SHA1 (patch-src_filed_Makefile.in) = c88ee648ef33c3f7c3a02b77b1d3fc3da8da088d
