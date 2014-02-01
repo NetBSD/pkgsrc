@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/02/01 13:06:19 obache Exp $
+# $NetBSD: Makefile,v 1.8 2014/02/01 13:08:57 obache Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -97,10 +97,8 @@ SITES.${i}?=	${MASTER_SITE_LOCAL}
 
 # Our pre-configure phase installs a bindist of bootstrapping compiler
 # directly into TOOLS_DIR so that ./configure can find it.
-do-configure:
-	${RUN} cd ${WRKSRC:Q} && \
-		${SETENV} ${CONFIGURE_ENV} ${SH} ./configure ${CONFIGURE_ARGS}
 
+post-configure:
 # Here we generate mk/build.mk dynamically.
 	${RUN} ${RM} -f ${WRKSRC:Q}/mk/build.mk
 
