@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12960 2014/02/01 09:56:41 markd Exp $
+$NetBSD: TODO,v 1.12961 2014/02/01 23:28:27 rodent Exp $
 
 Suggested new packages
 ======================
@@ -969,7 +969,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-pyutil-1.9.7
 	o py-qt4-4.10.3 [needs py-sip-4.15, see above]
 	o py-qt5-5.2
-	o py-relatorio-0.6.0
 	o py-rope-0.9.4
 	o py-scgi-1.14
 	o py-simpletal-5.1
