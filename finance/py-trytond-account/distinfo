@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/02/01 19:14:22 rodent Exp $
+
+SHA1 (trytond_account-3.0.1.tar.gz) = b264e04b8dc23631c914968540f2d2a27aaf7853
+RMD160 (trytond_account-3.0.1.tar.gz) = 39bc373726d1817a35674b246d20907ed1a62d09
+Size (trytond_account-3.0.1.tar.gz) = 284323 bytes
