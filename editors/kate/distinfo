@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2013/11/07 10:23:22 markd Exp $
+$NetBSD: distinfo,v 1.7 2014/02/01 02:20:45 markd Exp $
 
-SHA1 (kate-4.11.3.tar.xz) = c3e537ac9f47ba2c4b0d9ec7aef1c64c8060df79
-RMD160 (kate-4.11.3.tar.xz) = 30282e13906c3e50b66885c3abd1b901f77c3e12
-Size (kate-4.11.3.tar.xz) = 2677096 bytes
+SHA1 (kate-4.11.5.tar.xz) = f08e71093eff1274760dee67844a40ab37e1279d
+RMD160 (kate-4.11.5.tar.xz) = 6a83325dc36e50e8e13f7e83d3d695cfb8ae26f6
+Size (kate-4.11.5.tar.xz) = 2585636 bytes

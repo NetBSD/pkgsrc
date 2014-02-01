@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2013/11/07 09:49:27 markd Exp $
+$NetBSD: distinfo,v 1.7 2014/02/01 02:20:44 markd Exp $
 
-SHA1 (ark-4.11.3.tar.xz) = 02488f636275729980f6d15cbab7c79cecf219c8
-RMD160 (ark-4.11.3.tar.xz) = 005c4ad0867d3cf0f21fd9bd4f19a79f3870e590
-Size (ark-4.11.3.tar.xz) = 233916 bytes
+SHA1 (ark-4.11.5.tar.xz) = 2392d08c3a1d5d92cb1ec668e4e5013154fc0e14
+RMD160 (ark-4.11.5.tar.xz) = 7002d69ec1bf0ea2cb7315bf8cfeefb51a143b05
+Size (ark-4.11.5.tar.xz) = 230492 bytes

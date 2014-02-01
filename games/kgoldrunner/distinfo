@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/11/07 11:35:49 markd Exp $
+$NetBSD: distinfo,v 1.4 2014/02/01 02:20:45 markd Exp $
 
-SHA1 (kgoldrunner-4.11.3.tar.xz) = a977911bff2c8fb603e1befc1ec98ad1b14c8480
-RMD160 (kgoldrunner-4.11.3.tar.xz) = 02717e0d8ddbf017b5b79f8c83cb6dd7f2539900
-Size (kgoldrunner-4.11.3.tar.xz) = 2075100 bytes
+SHA1 (kgoldrunner-4.11.5.tar.xz) = 81e22605af8e6ea4209266fd55881402448ee267
+RMD160 (kgoldrunner-4.11.5.tar.xz) = 64fd3315604e6f0722b4b5e885b1e78c1a23ef40
+Size (kgoldrunner-4.11.5.tar.xz) = 2070680 bytes
