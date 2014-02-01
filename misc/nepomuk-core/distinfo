@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/11/07 12:35:40 markd Exp $
+$NetBSD: distinfo,v 1.4 2014/02/01 02:20:50 markd Exp $
 
-SHA1 (nepomuk-core-4.11.3.tar.xz) = 9d97cb731728a43037eb208e2322b6e0b4e8b7e5
-RMD160 (nepomuk-core-4.11.3.tar.xz) = 16e7489dc7f0a0016243218dfc151a8588742ac5
-Size (nepomuk-core-4.11.3.tar.xz) = 401544 bytes
+SHA1 (nepomuk-core-4.11.5.tar.xz) = 783d38400f79fb0983e12df0b69a1349c45eeca1
+RMD160 (nepomuk-core-4.11.5.tar.xz) = d152477e295c50edeadad279fa945c5590fde5eb
+Size (nepomuk-core-4.11.5.tar.xz) = 385212 bytes

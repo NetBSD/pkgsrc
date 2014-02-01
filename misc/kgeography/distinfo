@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2013/11/07 12:35:41 markd Exp $
+$NetBSD: distinfo,v 1.10 2014/02/01 02:20:49 markd Exp $
 
-SHA1 (kgeography-4.11.3.tar.xz) = 21fe59b502814181a604fbbd7546738294eba84e
-RMD160 (kgeography-4.11.3.tar.xz) = d1edfafd6b7bca14b0eaeb66c5c5fb9c47d6b098
-Size (kgeography-4.11.3.tar.xz) = 6747844 bytes
+SHA1 (kgeography-4.11.5.tar.xz) = 59d24c200be19638ad38f3b4301484292c888ef1
+RMD160 (kgeography-4.11.5.tar.xz) = 704d2c6f7d79107a01caac2b66e0e151997971dc
+Size (kgeography-4.11.5.tar.xz) = 6714048 bytes
