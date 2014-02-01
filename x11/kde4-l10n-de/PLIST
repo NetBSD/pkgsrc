@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2013/11/07 13:41:54 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2014/02/01 04:50:26 markd Exp $
 man/de/man1/adddebug.1
 man/de/man1/ark.1
 man/de/man1/cheatmake.1
@@ -286,7 +286,6 @@ share/doc/kde/HTML/de/kate/index.cache.bz2
 share/doc/kde/HTML/de/kate/index.docbook
 share/doc/kde/HTML/de/kate/kate.png
 share/doc/kde/HTML/de/kate/man-kate.1.docbook
-share/doc/kde/HTML/de/kate/mdi.docbook
 share/doc/kde/HTML/de/kate/menus.docbook
 share/doc/kde/HTML/de/kate/part.docbook
 share/doc/kde/HTML/de/kate/plugins-part.docbook
@@ -1079,34 +1078,20 @@ share/doc/kde/HTML/de/kommander/widgets.docbook
 share/doc/kde/HTML/de/kompare/common
 share/doc/kde/HTML/de/kompare/index.cache.bz2
 share/doc/kde/HTML/de/kompare/index.docbook
-share/doc/kde/HTML/de/konqueror/basics.docbook
-share/doc/kde/HTML/de/konqueror/bookmarks.docbook
-share/doc/kde/HTML/de/konqueror/browser.docbook
 share/doc/kde/HTML/de/konqueror/cmndline.png
-share/doc/kde/HTML/de/konqueror/commands.docbook
 share/doc/kde/HTML/de/konqueror/common
-share/doc/kde/HTML/de/konqueror/config.docbook
-share/doc/kde/HTML/de/konqueror/credits.docbook
 share/doc/kde/HTML/de/konqueror/dirtree.png
 share/doc/kde/HTML/de/konqueror/dragdrop.png
-share/doc/kde/HTML/de/konqueror/faq.docbook
-share/doc/kde/HTML/de/konqueror/filemanager.docbook
 share/doc/kde/HTML/de/konqueror/folders.png
 share/doc/kde/HTML/de/konqueror/index.cache.bz2
 share/doc/kde/HTML/de/konqueror/index.docbook
-share/doc/kde/HTML/de/konqueror/introduction.docbook
 share/doc/kde/HTML/de/konqueror/konqorg.png
 share/doc/kde/HTML/de/konqueror/look.png
 share/doc/kde/HTML/de/konqueror/man-kbookmarkmerger.1.docbook
 share/doc/kde/HTML/de/konqueror/parts.png
-share/doc/kde/HTML/de/konqueror/path-complete.docbook
-share/doc/kde/HTML/de/konqueror/plugins.docbook
-share/doc/kde/HTML/de/konqueror/save-settings.docbook
 share/doc/kde/HTML/de/konqueror/shortcut1.png
 share/doc/kde/HTML/de/konqueror/shortcut2.png
-share/doc/kde/HTML/de/konqueror/sidebar.docbook
 share/doc/kde/HTML/de/konqueror/thumbnails.png
-share/doc/kde/HTML/de/konqueror/view-extensions.docbook
 share/doc/kde/HTML/de/konquest/common
 share/doc/kde/HTML/de/konquest/index.cache.bz2
 share/doc/kde/HTML/de/konquest/index.docbook
