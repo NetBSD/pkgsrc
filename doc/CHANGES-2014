@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.509 2014/02/01 05:01:57 markd Exp $
+$NetBSD: CHANGES-2014,v 1.510 2014/02/01 08:10:24 markd Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -811,3 +811,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/kdelibs4 to 4.11.5 [markd 2014-02-01]
 	Updated x11/konsole to 4.11.5 [markd 2014-02-01]
 	Updated x11/py-kde4 to 4.11.5 [markd 2014-02-01]
+	Updated devel/tcl-tclcl to 1.20 [markd 2014-02-01]
