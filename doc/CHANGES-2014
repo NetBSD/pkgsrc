@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.519 2014/02/01 14:11:02 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.520 2014/02/01 18:11:04 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -826,3 +826,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/p5-Pod-Elemental to 0.103000 [wen 2014-02-01]
 	Updated textproc/p5-Pod-Elemental-PerlMunger to 0.200001 [wen 2014-02-01]
 	Updated databases/py-python-sql to 0.3 [rodent 2014-02-01]
+	Added geography/py-trytond-country version 3.0.0 [rodent 2014-02-01]
