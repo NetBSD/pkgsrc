@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2014/02/01 03:57:52 markd Exp $
+share/blender/${PKGVERSION}/python/lib/python3.3/lib-dynload/_sqlite3.so
+share/blender/${PKGVERSION}/python/lib/python3.3/lib-dynload/ossaudiodev.so
+share/blender/${PKGVERSION}/python/lib/python3.3/lib-dynload/pyexpat.so
+share/blender/${PKGVERSION}/python/lib/python3.3/lib-dynload/readline.so
+share/blender/${PKGVERSION}/python/lib/python3.3/lib-dynload/spwd.so
+share/blender/${PKGVERSION}/python/lib/python3.3/plat-linux/CDROM.py
+share/blender/${PKGVERSION}/python/lib/python3.3/plat-linux/DLFCN.py
+share/blender/${PKGVERSION}/python/lib/python3.3/plat-linux/IN.py
+share/blender/${PKGVERSION}/python/lib/python3.3/plat-linux/TYPES.py
+share/blender/${PKGVERSION}/python/lib/python3.3/plat-linux/regen
+share/blender/blender-thumbnailer.py
+share/blender/icons/16x16/apps/blender.png
+share/blender/icons/22x22/apps/blender.png
+share/blender/icons/24x24/apps/blender.png
+share/blender/icons/256x256/apps/blender.png
+share/blender/icons/32x32/apps/blender.png
+share/blender/icons/48x48/apps/blender.png
+share/blender/icons/blender_icon_source.svg
+share/blender/icons/scalable/apps/blender.svg
