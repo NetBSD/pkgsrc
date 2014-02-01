@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/11/07 11:35:49 markd Exp $
+$NetBSD: distinfo,v 1.4 2014/02/01 02:20:45 markd Exp $
 
-SHA1 (kdiamond-4.11.3.tar.xz) = bcb32208702219f3fbbb6f3693680e4f2b9bbe90
-RMD160 (kdiamond-4.11.3.tar.xz) = ee3f94aada036f3dd7a4c0fc2059ecc9471c3e30
-Size (kdiamond-4.11.3.tar.xz) = 4168376 bytes
+SHA1 (kdiamond-4.11.5.tar.xz) = a65f75b8a0d38c20336a12c6966d616d8e54355a
+RMD160 (kdiamond-4.11.5.tar.xz) = 4842efa905dcda634674960ec7deaf43ed91f744
+Size (kdiamond-4.11.5.tar.xz) = 4167204 bytes

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2014/01/01 11:52:16 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/02/01 02:20:45 markd Exp $
 
 DISTNAME=	kblocks-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	games
 COMMENT=	classic falling blocks game
 
