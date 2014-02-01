@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2013/07/21 12:15:29 richard Exp $
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+@comment $NetBSD: PLIST,v 1.2 2014/02/01 23:28:09 rodent Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/relatorio/__init__.py
 ${PYSITELIB}/relatorio/__init__.pyc
@@ -25,3 +25,20 @@ ${PYSITELIB}/relatorio/templates/opendocument.pyo
 ${PYSITELIB}/relatorio/templates/pdf.py
 ${PYSITELIB}/relatorio/templates/pdf.pyc
 ${PYSITELIB}/relatorio/templates/pdf.pyo
+${PYSITELIB}/relatorio/tests/__init__.py
+${PYSITELIB}/relatorio/tests/__init__.pyc
+${PYSITELIB}/relatorio/tests/__init__.pyo
+${PYSITELIB}/relatorio/tests/egg.jpg
+${PYSITELIB}/relatorio/tests/one.jpg
+${PYSITELIB}/relatorio/tests/templates/include.tmpl
+${PYSITELIB}/relatorio/tests/templates/other.tmpl
+${PYSITELIB}/relatorio/tests/templates/test.tmpl
+${PYSITELIB}/relatorio/tests/templates/time.tmpl
+${PYSITELIB}/relatorio/tests/test.odt
+${PYSITELIB}/relatorio/tests/test_api.py
+${PYSITELIB}/relatorio/tests/test_api.pyc
+${PYSITELIB}/relatorio/tests/test_api.pyo
+${PYSITELIB}/relatorio/tests/test_odt.py
+${PYSITELIB}/relatorio/tests/test_odt.pyc
+${PYSITELIB}/relatorio/tests/test_odt.pyo
+${PYSITELIB}/relatorio/tests/two.png
