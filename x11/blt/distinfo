@@ -1,12 +1,16 @@
-$NetBSD: distinfo,v 1.12 2012/08/21 22:00:24 marino Exp $
+$NetBSD: distinfo,v 1.13 2014/02/01 18:12:13 adam Exp $
 
 SHA1 (BLT2.4z.tar.gz) = 29f719aa762f1762dbf4a3b0e60dc5356118ba2f
 RMD160 (BLT2.4z.tar.gz) = d54d9fdb6c61391c191afab4701716d18a3d928b
 Size (BLT2.4z.tar.gz) = 2200973 bytes
+SHA1 (blt2.4z-patch-2) = abc287e23e4c08d3a771332499aee03ad3a56266
+RMD160 (blt2.4z-patch-2) = a9120e301e0a906b414e978cf3d5a3062d668cf0
+Size (blt2.4z-patch-2) = 28594 bytes
 SHA1 (patch-aa) = 6a28cc2405adcc6037865f174bb48d81909c83d6
 SHA1 (patch-ab) = da9479d5de1053c45753eef611eae2764909f0ec
 SHA1 (patch-ac) = 696f90010831522f46d67052abc0c6068197cfd9
-SHA1 (patch-ad) = be6bd157a084f5ad38ff3787f53e7aa4fcf80234
+SHA1 (patch-ad) = cc2579223a5a8a764d797fa16a146999cd4a796d
 SHA1 (patch-ae) = f2689eb585f19d05e9dfe6164f96d6fc9dbc77ad
 SHA1 (patch-af) = b82641d4aad426fbe9a6781fa828d8aa81f71253
 SHA1 (patch-src_bltNsUtil.h) = 949647e6ca4a4890a51917c268289384da98b7ca
+SHA1 (patch-src_tkButton.c) = 39132933914ee8d52389f5be72cbc02b21e7216e
