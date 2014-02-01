@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2011/02/12 11:40:41 wiz Exp $
+$NetBSD: distinfo,v 1.14 2014/02/01 03:46:49 markd Exp $
 
 SHA1 (ted-2.21.src.tar.gz) = 303b15de1fe97e473c4b89a88b6e127ee81e07e9
 RMD160 (ted-2.21.src.tar.gz) = 68935d62d216708c7053910f1261353176cf5c72
@@ -10,3 +10,4 @@ SHA1 (patch-ad) = a0761bd537cbef20bf80a74eb59c2352a97e4d99
 SHA1 (patch-ae) = 9cea02ede59d7f6a88a0c8ec1f93e5d814e6b994
 SHA1 (patch-af) = 369a2d0324538860c50653a140d660d50c2383b9
 SHA1 (patch-ag) = 3db30b3b2e04b03e4d69704ba00d6182f0c5fd9f
+SHA1 (patch-appFrame_appFontConfig.c) = b73d920231cd426b7db5a5d8cf6dfa87f3469a2c
