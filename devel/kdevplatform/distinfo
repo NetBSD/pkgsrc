@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2013/11/07 13:48:59 markd Exp $
+$NetBSD: distinfo,v 1.8 2014/02/01 09:54:23 markd Exp $
 
-SHA1 (kdevplatform-1.5.2.tar.xz) = a2fa1f765e992739546fa04d0aaffc4f2200c520
-RMD160 (kdevplatform-1.5.2.tar.xz) = 180156a9816fe7f40d084fa983017484ec8d430e
-Size (kdevplatform-1.5.2.tar.xz) = 1895448 bytes
-SHA1 (patch-sublime_aggregatemodel.cpp) = 29954a7e4a58dc567377fc03ffca010549c4dbfc
+SHA1 (kdevplatform-1.6.0.tar.xz) = 8ed8ccb63b64a3675716f1ad14b4a73fcbf4133d
+RMD160 (kdevplatform-1.6.0.tar.xz) = 6c212795effdd3ec0077795e37884edead916f06
+Size (kdevplatform-1.6.0.tar.xz) = 1889840 bytes
+SHA1 (patch-sublime_aggregatemodel.cpp) = 76bca4fbe352760eaa570ea242d0e33263481e90

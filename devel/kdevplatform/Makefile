@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.44 2014/01/01 11:52:12 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2014/02/01 09:54:23 markd Exp $
 #
 
-DISTNAME=	kdevplatform-1.5.2
-PKGREVISION=	2
+DISTNAME=	kdevplatform-1.6.0
 CATEGORIES=	devel kde
-MASTER_SITES=	${MASTER_SITE_KDE:=kdevelop/4.5.2/src/}
+MASTER_SITES=	${MASTER_SITE_KDE:=kdevelop/4.6.0/src/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	frank@fthieme.net
@@ -21,7 +20,7 @@ CXXFLAGS.Linux+=	-fpermissive
 
 REPLACE_BASH+= \
 	util/kdevplatform_shell_environment.sh \
-	util/kdev_format_source.sh
+	util/kdev_format_source
 
 BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../meta-pkgs/kde4/kde4.mk"
