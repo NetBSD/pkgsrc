@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.6 2014/01/31 09:04:36 obache Exp $
+# $NetBSD: Makefile,v 1.7 2014/02/01 13:06:19 obache Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
-DISTNAME=	ghc-${VERSION}
-VERSION=	7.6.3
+DISTNAME=	ghc-7.6.3-src
+PKGNAME=	${DISTNAME:S/-src$//}
 PKGREVISION=	1
 CATEGORIES=	lang
-MASTER_SITES=	http://www.haskell.org/ghc/dist/${VERSION}/
+MASTER_SITES=	http://www.haskell.org/ghc/dist/${PKGVERSION_NOREV}/
+EXTRACT_SUFX=	.tar.bz2
+
 MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	http://www.haskell.org/ghc/
 COMMENT=	Compiler for the functional language Haskell
@@ -30,22 +32,23 @@ ONLY_FOR_PLATFORM= \
 # -----------------------------------------------------------------------------
 # Distfiles
 #
-DISTFILES=	${DISTNAME}-src.tar.bz2
+DISTFILES=	${DEFAULT_DISTFILES}
 #.if make(distinfo)
-#DISTFILES+=	${DISTNAME}-boot-i386-unknown-freebsd.tar.xz
-#DISTFILES+=	${DISTNAME}-boot-i386-unknown-netbsd.tar.xz
-#DISTFILES+=	${DISTNAME}-boot-powerpc-apple-darwin.tar.xz
-#DISTFILES+=	${DISTNAME}-boot-x86_64-unknown-linux.tar.xz
-#DISTFILES+=	${DISTNAME}-boot-x86_64-unknown-netbsd.tar.xz
-#DISTFILES+=	${DISTNAME}-boot-i386-unknown-solaris2.tar.gz
-#DISTFILES+=	${DISTNAME}-boot-x86_64-unknown-solaris2.tar.xz
+#DISTFILES+=	${PKGNAME_NOREV}-boot-i386-unknown-freebsd.tar.xz
+#DISTFILES+=	${PKGNAME_NOREV}-boot-i386-unknown-netbsd.tar.xz
+#DISTFILES+=	${PKGNAME_NOREV}-boot-powerpc-apple-darwin.tar.xz
+#DISTFILES+=	${PKGNAME_NOREV}-boot-x86_64-unknown-linux.tar.xz
+#DISTFILES+=	${PKGNAME_NOREV}-boot-x86_64-unknown-netbsd.tar.xz
+#DISTFILES+=	${PKGNAME_NOREV}-boot-i386-unknown-solaris2.tar.gz
+#DISTFILES+=	${PKGNAME_NOREV}-boot-x86_64-unknown-solaris2.tar.xz
 #.else
 #DISTFILES+=	${BOOT_ARCHIVE}
 #.endif
 
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 # We don't want to extract all of the DISTFILEs.
-EXTRACT_ONLY=	${DISTNAME}-src.tar.bz2
+EXTRACT_ONLY=	${DEFAULT_DISTFILES}
 
 
 # -----------------------------------------------------------------------------
@@ -133,11 +136,11 @@ do-configure:
 #
 
 # Substitutions for INSTALL and DEINSTALL that handles package.cache.
-FILES_SUBST+=	DISTNAME=${DISTNAME}
+FILES_SUBST+=	GHC_VERSION=${PKGVERSION_NOREV}
 
 # We don't want package.cache to be in the PLIST.
 post-install:
-	${RM} -f ${DESTDIR:Q}${PREFIX:Q}/lib/${DISTNAME}/package.conf.d/package.cache
+	${RM} -f ${DESTDIR:Q}${PREFIX:Q}/lib/${PKGNAME_NOREV}/package.conf.d/package.cache
 
 
 # -----------------------------------------------------------------------------
