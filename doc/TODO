@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12959 2014/01/30 14:41:28 ryoon Exp $
+$NetBSD: TODO,v 1.12960 2014/02/01 09:56:41 markd Exp $
 
 Suggested new packages
 ======================
@@ -705,7 +705,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kdbg-2.5.4
 	o kde4-4.12.2
 	o kdenlive-0.9.6
-	o kdevelop-4.6.0
 	o kdrill-6.5
 	o kid3-3.0.2
 	o kismet-2011.03r2 [pkg/45692]
