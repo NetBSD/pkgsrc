@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.39 2014/01/10 20:06:46 joerg Exp $
+$NetBSD: distinfo,v 1.40 2014/02/01 03:57:52 markd Exp $
 
 SHA1 (blender-2.69.tar.gz) = 9500410d2457d99e685ca506bec12851454dc5d4
 RMD160 (blender-2.69.tar.gz) = 27997d071a767630baeaddc0017e19dccb99b1a9
 Size (blender-2.69.tar.gz) = 41274518 bytes
 SHA1 (patch-ab) = f752ba279aed273bb5c93ede64c2d7292f33fd83
+SHA1 (patch-build__files_scons_config_linux-config.py) = 863ff0b2839fa96a4b579cb52d7c4475aa4c571c
 SHA1 (patch-build__files_scons_config_netbsd6-config.py) = a2ef239cc40430a5eaafd006b423e7f70ac9ee80
 SHA1 (patch-build__files_scons_tools_btools.py) = 09fe67666091daafcf586aa70dc19fa6964b2098
 SHA1 (patch-doc_python__api_sphinx__doc__gen.sh) = 52c9ee0e0c73b9b9628a3d82292a9588ff0060da
