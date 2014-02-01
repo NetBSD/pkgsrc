@@ -1,12 +1,13 @@
-$NetBSD: patch-am,v 1.5 2005/09/08 02:50:58 minskim Exp $
+$NetBSD: patch-am,v 1.6 2014/02/01 08:04:04 markd Exp $
 
 --- indep-utils/webtrace-conv/dec/Makefile.in.orig	2005-01-19 10:23:27.000000000 -0800
 +++ indep-utils/webtrace-conv/dec/Makefile.in
 @@ -38,7 +38,7 @@ BINDEST = @prefix@/bin
  CC = @CXX@
  INCLUDE = -I. @V_INCLUDES@
- CFLAGS = @V_CCOPT@ -DCPP_NAMESPACE=@CPP_NAMESPACE@
+-CFLAGS = @V_CCOPT@ -DCPP_NAMESPACE=@CPP_NAMESPACE@
 -LDFLAGS = @V_STATIC@
++CFLAGS = @V_CCOPT@ -DCPP_NAMESPACE=@CPP_NAMESPACE@ -DUSE_INTERP_RESULT
 +LDFLAGS = @LDFLAGS@
  LIBS = @V_LIB_TCL@ @V_LIB@ @LIBS@
  INSTALL = @INSTALL@

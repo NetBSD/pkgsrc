@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2014/01/11 14:42:05 adam Exp $
+# $NetBSD: Makefile,v 1.44 2014/02/01 08:04:04 markd Exp $
 
 DISTNAME=	ns-src-2.35
 PKGNAME=	ns-2.35
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nsnam/}
 
@@ -22,9 +22,9 @@ PTHREAD_OPTS+=	require
 
 CONFIGURE_ARGS+=	LIBS="`${CONFIG_SHELL} -c '. ${TCLCONFIG_SH}; ${ECHO} $$TCL_LIBS'`"
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}
-CONFIGURE_ARGS+=	--with-tcl-ver=8.5
+CONFIGURE_ARGS+=	--with-tcl-ver=8.6
 CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}
-CONFIGURE_ARGS+=	--with-tk-ver=8.5
+CONFIGURE_ARGS+=	--with-tk-ver=8.6
 CONFIGURE_ARGS+=	--with-otcl=${BUILDLINK_PREFIX.tcl-otcl}
 CONFIGURE_ARGS+=	--with-tclcl=${BUILDLINK_PREFIX.tcl-tclcl}
 CONFIGURE_ENV+=		X11LIBDIR=${X11PREFIX}/lib${LIBABISUFFIX}
