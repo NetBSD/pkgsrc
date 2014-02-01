@@ -1,19 +1,24 @@
-$NetBSD: patch-ad,v 1.4 2004/03/06 06:26:21 minskim Exp $
+$NetBSD: patch-ad,v 1.5 2014/02/01 18:12:13 adam Exp $
 
---- man/Makefile.in.orig	2002-02-18 18:11:46.000000000 -0600
+--- man/Makefile.in.orig	2002-02-19 00:11:46.000000000 +0000
 +++ man/Makefile.in
-@@ -10,7 +10,7 @@ version		= @BLT_VERSION@
+@@ -10,8 +10,8 @@ version		= @BLT_VERSION@
  
  instdirs	= $(mandir) $(mandir)/mann $(mandir)/man3
  
 -MAN_N		= BLT.n barchart.n beep.n bgexec.n bitmap.n \
+-		  bltdebug.n busy.n container.n cutbuffer.n \
 +MAN_N		= BLT.n barchart.n beep.n bgexec.n bltbitmap.n \
- 		  bltdebug.n busy.n container.n cutbuffer.n \
++		  bltdebug.n bltbusy.n container.n cutbuffer.n \
  		  dragdrop.n eps.n graph.n hierbox.n  \
  		  hiertable.n htext.n spline.n stripchart.n \
-@@ -72,3 +72,5 @@ clean:
+ 	 	  table.n tabset.n tile.n tree.n treeview.n vector.n \
+@@ -72,3 +72,8 @@ clean:
  distclean: clean
  	$(RM) $(srcdir)/*.bak $(srcdir)/*\~ $(srcdir)/"#"* Makefile
  
 +bltbitmap.mann: bitmap.mann
 +	${CP} bitmap.mann bltbitmap.mann
++
++bltbusy.mann: busy.mann
++	${CP} busy.mann bltbusy.mann
