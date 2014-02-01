@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2013/04/27 11:19:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2014/02/01 11:38:48 adam Exp $
 awstats/bin/awstats_buildstaticpages.pl
 awstats/bin/awstats_configure.pl
 awstats/bin/awstats_exportlib.pl
@@ -610,6 +610,8 @@ awstats/icon/os/ibm.png
 awstats/icon/os/imode.png
 awstats/icon/os/inferno.png
 awstats/icon/os/ios.png
+awstats/icon/os/ios_ipad.png
+awstats/icon/os/ios_iphone.png
 awstats/icon/os/iphone.png
 awstats/icon/os/irix.png
 awstats/icon/os/j2me.png
@@ -663,12 +665,15 @@ awstats/icon/os/win2000.png
 awstats/icon/os/win2003.png
 awstats/icon/os/win2008.png
 awstats/icon/os/win7.png
+awstats/icon/os/win8.1.png
+awstats/icon/os/win8.png
 awstats/icon/os/win95.png
 awstats/icon/os/win98.png
 awstats/icon/os/wince.png
 awstats/icon/os/winlong.png
 awstats/icon/os/winme.png
 awstats/icon/os/winnt.png
+awstats/icon/os/winphone.png
 awstats/icon/os/winunknown.png
 awstats/icon/os/winvista.png
 awstats/icon/os/winxbox.png
@@ -724,17 +729,26 @@ share/doc/awstats/awstats_what.html
 share/doc/awstats/images/awstats.gif
 share/doc/awstats/images/awstats.ico
 share/doc/awstats/images/awstats.png
+share/doc/awstats/images/awstats.svg
+share/doc/awstats/images/awstats_250x250.png
+share/doc/awstats/images/awstats_ban_460x270.jpg
+share/doc/awstats/images/awstats_ban_460x270.png
+share/doc/awstats/images/awstats_ban_800x160.svg
+share/doc/awstats/images/awstats_ban_960x540.jpg
+share/doc/awstats/images/awstats_ban_960x540.png
+share/doc/awstats/images/awstats_ban_960x540.svg
 share/doc/awstats/images/awstats_logo1.gif
 share/doc/awstats/images/awstats_logo1.png
 share/doc/awstats/images/awstats_logo2.gif
 share/doc/awstats/images/awstats_logo2.png
 share/doc/awstats/images/awstats_logo3.gif
 share/doc/awstats/images/awstats_logo3.png
-share/doc/awstats/images/awstats_logo4.gif
-share/doc/awstats/images/awstats_logo4.png
 share/doc/awstats/images/awstats_logo5.gif
 share/doc/awstats/images/awstats_logo5.png
 share/doc/awstats/images/awstats_logo6.png
+share/doc/awstats/images/awstats_logo7.jpg
+share/doc/awstats/images/awstats_logo7.png
+share/doc/awstats/images/awstats_logo7.svg
 share/doc/awstats/images/license_chart.png
 share/doc/awstats/images/screen_shot_1.gif
 share/doc/awstats/images/screen_shot_1.jpg
@@ -743,6 +757,7 @@ share/doc/awstats/images/screen_shot_2.png
 share/doc/awstats/images/screen_shot_3.png
 share/doc/awstats/images/screen_shot_4.png
 share/doc/awstats/images/screen_shot_5.png
+share/doc/awstats/images/screen_shot_960x540.png
 share/doc/awstats/images/screen_shot_large_1.jpg
 share/doc/awstats/images/screen_shot_large_2.jpg
 share/doc/awstats/images/screen_shot_large_3.jpg
