@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.515 2014/02/01 12:23:01 wen Exp $
+$NetBSD: CHANGES-2014,v 1.516 2014/02/01 12:30:53 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -822,3 +822,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/awstats to 7.3 [adam 2014-02-01]
 	Updated graphics/pngcrush to 1.7.70 [adam 2014-02-01]
 	Updated www/p5-Mojolicious to 4.73 [wen 2014-02-01]
+	Updated devel/p5-Tree-DAG_Node to 1.20 [wen 2014-02-01]
