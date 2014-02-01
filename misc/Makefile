@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.417 2014/02/01 19:05:21 rodent Exp $
+# $NetBSD: Makefile,v 1.418 2014/02/01 19:29:14 rodent Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -232,6 +232,7 @@ SUBDIR+=	py-anki2
 SUBDIR+=	py-carddav
 SUBDIR+=	py-trytond-company
 SUBDIR+=	py-trytond-party
+SUBDIR+=	py-trytond-product
 SUBDIR+=	qbrew
 SUBDIR+=	qterm
 SUBDIR+=	raspberrypi-userland
