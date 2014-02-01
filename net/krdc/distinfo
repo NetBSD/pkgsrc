@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/11/07 13:03:07 markd Exp $
+$NetBSD: distinfo,v 1.2 2014/02/01 02:20:52 markd Exp $
 
-SHA1 (krdc-4.11.3.tar.xz) = 17b7da4c9acfefcedb67d017323c66279aedc428
-RMD160 (krdc-4.11.3.tar.xz) = e00e0a0752d443f0653f5092a4508100a142fef7
-Size (krdc-4.11.3.tar.xz) = 400728 bytes
+SHA1 (krdc-4.11.5.tar.xz) = 00c9201e3dcbbdbfe65adff48bdadfbc04d3b498
+RMD160 (krdc-4.11.5.tar.xz) = 207bb8c32c3705e07ecbf8a008597e80fb5d1719
+Size (krdc-4.11.5.tar.xz) = 396692 bytes

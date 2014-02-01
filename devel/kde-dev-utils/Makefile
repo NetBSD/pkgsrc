@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/01/01 11:52:12 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/02/01 02:20:44 markd Exp $
 
 DISTNAME=	kde-dev-utils-${_KDE_VERSION}
-PKGREVISION=	2
 CATEGORIES=	devel
 COMMENT=	Small utilities for developers using KDE/Qt libs/frameworks
 

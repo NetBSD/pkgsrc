@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2013/11/07 12:35:42 markd Exp $
+$NetBSD: distinfo,v 1.7 2014/02/01 02:20:51 markd Exp $
 
-SHA1 (step-4.11.3.tar.xz) = 03058d4d3d228aa1a6e57483fb52d1c2cc66319b
-RMD160 (step-4.11.3.tar.xz) = ce3a2d8fd6028547d812d08068319f35a2e315c0
-Size (step-4.11.3.tar.xz) = 368164 bytes
+SHA1 (step-4.11.5.tar.xz) = a3476750f4c5c8773b439ea86b4d232fcfc68b1b
+RMD160 (step-4.11.5.tar.xz) = a2e1551c167783c67133be6e2a0eceb2dd392894
+Size (step-4.11.5.tar.xz) = 362360 bytes
