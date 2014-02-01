@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2013/09/17 21:13:45 joerg Exp $
+$NetBSD: distinfo,v 1.21 2014/02/01 08:04:04 markd Exp $
 
 SHA1 (ns-src-2.35.tar.gz) = 785d4045711d92c0042a6f8f5620d5eb74732980
 RMD160 (ns-src-2.35.tar.gz) = 197e6874b97c56819ce9a722ffab9fe80a5cfe21
@@ -13,10 +13,10 @@ SHA1 (patch-ai) = b75f36f986ca7c833769de09e6e79f6b87c5564a
 SHA1 (patch-aj) = 533fa4f1bd1f8bf83882ed5ed2717511283d5ddc
 SHA1 (patch-ak) = ea478696cdddc44ba7a76d1f31d4a6a97a88aaef
 SHA1 (patch-al) = 628733a1e9ccf34c677711666e833c1ede27b5b1
-SHA1 (patch-am) = 882ea61b7f6909336f72f637b041f373830197e8
-SHA1 (patch-an) = c6dd6b93332a6c6dd169975836df9ef802bfc206
-SHA1 (patch-ao) = 2a1fd71686ff206fe2212605f91b8167b998d6e2
-SHA1 (patch-ap) = f130c112d7dfe114e637e190750d9caad55e4703
+SHA1 (patch-am) = d721e6187c2ed3f485fbab5bf1235de037453a05
+SHA1 (patch-an) = 05cf59b46305f81195a0bf4542cfbb264a683df6
+SHA1 (patch-ao) = 9c8458bc4f3d168333369255e0e8fc57fcfebe06
+SHA1 (patch-ap) = c5cfb464e5fc196ada34a4367705bcab314ce79f
 SHA1 (patch-aq) = c46339a81f3f0dea9754f733d567c3c93f7dc19e
 SHA1 (patch-common_packet.cc) = 74835d281febc195c5d1118bc5ceb40107597876
 SHA1 (patch-common_packet.h) = 2b8289ee47206f7201ea225d23318202c7b370c5
@@ -29,3 +29,5 @@ SHA1 (patch-mac_mac-802_11Exr.cc) = 93e4112025b6e610e76694c6067723f77cd75b84
 SHA1 (patch-mdart_mdart__adp.cc) = 5cee0a60a5102197363f53f2ebb90ca972bc139c
 SHA1 (patch-mdart_mdart__queue.h) = 1bf4cfec755c80cb5332a234c82c72584e62863c
 SHA1 (patch-nix_nixnode.cc) = d0a1826836f5ce9d40869946e9df29d6b53d4b7f
+SHA1 (patch-pushback_ident-tree.h) = eb7139b078ce3ea7f9627ffe7ae93efd1d27ba45
+SHA1 (patch-webcache_pagepool.cc) = b2f738d9025540731c3a61fd2d6f8ac5a51bdfcf
