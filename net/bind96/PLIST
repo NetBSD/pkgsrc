@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.10 2013/09/21 15:57:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/02/02 07:55:46 taca Exp $
+bin/bind9-config
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -199,6 +200,7 @@ lib/libisc.la
 lib/libisccc.la
 lib/libisccfg.la
 lib/liblwres.la
+man/man1/bind9-config.1
 man/man1/dig.1
 man/man1/host.1
 man/man1/isc-config.sh.1

@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.25 2014/01/13 17:27:09 taca Exp $
+$NetBSD: distinfo,v 1.26 2014/02/02 07:55:46 taca Exp $
 
-SHA1 (bind-9.6-ESV-R10-P2.tar.gz) = 0774c8ba8e2a251914130223dc1288a297b58c98
-RMD160 (bind-9.6-ESV-R10-P2.tar.gz) = accaa85b96f8aa7c01b155111b7df0e2ee413e59
-Size (bind-9.6-ESV-R10-P2.tar.gz) = 6421474 bytes
+SHA1 (bind-9.6-ESV-R11.tar.gz) = b528f79e5a4d20c06d47ac86ef1608092c4821f1
+RMD160 (bind-9.6-ESV-R11.tar.gz) = 6c852a957d30b3c7cd654e7666bcb664d3dc34b4
+Size (bind-9.6-ESV-R11.tar.gz) = 6456874 bytes
 SHA1 (patch-ab) = 33a515cd29cd7a534d65d34facb69fd4dca92180
 SHA1 (patch-ac) = 074649e1514870a3154c623a5f6d1507b72b5b05
-SHA1 (patch-ad) = d473825feb7df6b2270f6bc08151c7c6ef18c893
+SHA1 (patch-ad) = 3e27a7ea2ccb9155ed67853736fee11f97599ec2
 SHA1 (patch-ag) = ffc547b444f01f51a12a01cfa884916a9a411a88
 SHA1 (patch-am) = a52d847354cd83b2474d5420925925e4614c966f
