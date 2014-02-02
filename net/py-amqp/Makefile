@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2014/01/27 18:41:14 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/02 13:51:16 rodent Exp $
 
-DISTNAME=	v1.3.3
+DISTNAME=	v1.4.2
 PKGNAME=	${DISTNAME:S/v/${PYPKGPREFIX}-amqp-/1}
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/celery/py-amqp/archive/
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://amqp.readthedocs.org/

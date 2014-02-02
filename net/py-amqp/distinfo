@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/12/31 14:02:07 rodent Exp $
+$NetBSD: distinfo,v 1.2 2014/02/02 13:51:16 rodent Exp $
 
-SHA1 (v1.3.3.tar.gz) = 56d8ba9929647d3ebc6cf55f529abe69e97656d6
-RMD160 (v1.3.3.tar.gz) = 3724d6a6bc739052dea10b47c81e6c0cc6ac109a
-Size (v1.3.3.tar.gz) = 75487 bytes
+SHA1 (py27-amqp-1.4.2/v1.4.2.tar.gz) = 7a5e33aa5154cb68dddc7ab7be6c36031288c7ef
+RMD160 (py27-amqp-1.4.2/v1.4.2.tar.gz) = c20d661711945a7bee8116e6d4616e0a67aec944
+Size (py27-amqp-1.4.2/v1.4.2.tar.gz) = 76844 bytes
