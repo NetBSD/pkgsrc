@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.538 2014/02/02 07:19:22 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.539 2014/02/02 07:38:08 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -845,3 +845,9 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-pip to 1.5.2 [rodent 2014-02-02]
 	Updated sysutils/coreutils to 8.22 [richard 2014-02-02]
 	Updated converters/libwpg to 0.2.2 [ryoon 2014-02-02]
+	Updated converters/libcdr to 0.0.14 [ryoon 2014-02-02]
+	Updated converters/libmwaw to 0.2.0 [ryoon 2014-02-02]
+	Added converters/libabw version 0.0.1 [ryoon 2014-02-02]
+	Added converters/libe-book version 0.0.2 [ryoon 2014-02-02]
+	Added converters/libetonyek version 0.0.3 [ryoon 2014-02-02]
+	Added converters/libfreehand version 0.0.0 [ryoon 2014-02-02]
