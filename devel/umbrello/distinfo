@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2014/02/01 02:20:44 markd Exp $
+$NetBSD: distinfo,v 1.6 2014/02/02 07:19:29 markd Exp $
 
-SHA1 (poxml-4.11.5.tar.xz) = 073ab7ad98eff46ced66e234adbafa2afdb86138
-RMD160 (poxml-4.11.5.tar.xz) = ffc00d262eeea2d8501ba452f9affe67cd96a18d
-Size (poxml-4.11.5.tar.xz) = 31044 bytes
+SHA1 (umbrello-4.11.5.tar.xz) = f0c3565fd98059fa0c051b2c7c18f5ca80bf28df
+RMD160 (umbrello-4.11.5.tar.xz) = 41ce65a4d6537936ced8b37597570ab7791136cd
+Size (umbrello-4.11.5.tar.xz) = 1455256 bytes
