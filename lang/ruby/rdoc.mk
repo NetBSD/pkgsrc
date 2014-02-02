@@ -1,4 +1,4 @@
-# $NetBSD: rdoc.mk,v 1.16 2014/01/19 12:57:42 taca Exp $
+# $NetBSD: rdoc.mk,v 1.17 2014/02/02 07:46:16 taca Exp $
 
 .if !defined(_RUBY_RDOC_MK)
 _RUBY_RDOC_MK=	# defined
@@ -22,6 +22,7 @@ _RUBY_RDOC_MK=	# defined
 RUBY18_RDOC_VERS=	1.0.1
 RUBY193_RDOC_VERS=	3.9.4
 RUBY200_RDOC_VERS=	4.0.0
+RUBY210_RDOC_VERS=	4.1.0
 
 _RDOC_REQD_MAJOR=	${RUBY_RDOC_REQD:C/\.[0-9\.]+$//}
 _RDOC_REQD_MINORS=	${RUBY_RDOC_REQD:C/^([0-9]+)\.*//}
@@ -35,6 +36,9 @@ _RUBY_RDOC_MINORS=	${RUBY193_RDOC_VERS:C/^([0-9]+)\.*//}
 .elif ${RUBY_VER} == "200"
 _RUBY_RDOC_MAJOR=	${RUBY200_RDOC_VERS:C/\.[0-9\.]+$//}
 _RUBY_RDOC_MINORS=	${RUBY200_RDOC_VERS:C/^([0-9]+)\.*//}
+.elif ${RUBY_VER} == "210"
+_RUBY_RDOC_MAJOR=	${RUBY210_RDOC_VERS:C/\.[0-9\.]+$//}
+_RUBY_RDOC_MINORS=	${RUBY210_RDOC_VERS:C/^([0-9]+)\.*//}
 .else
 PKG_FAIL_REASON+= "Unknown Ruby version specified: ${RUBY_VER}."
 . endif

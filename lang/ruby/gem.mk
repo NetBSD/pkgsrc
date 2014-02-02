@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.23 2013/09/11 13:22:15 taca Exp $
+# $NetBSD: gem.mk,v 1.24 2014/02/02 07:46:16 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -11,6 +11,7 @@
 #		ruby18-base:	none
 #		ruby193-base:	1.8.23
 #		ruby200-base:	2.0.3
+#		ruby210-base:	2.2.0
 #
 #	If newer version of rubygems is resuiqred, set RUBYGEMS_REQD to
 #	minimum version.
@@ -177,6 +178,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-rubygems>=1.0.1:../../misc/rubygems
 
 RUBY193_RUBYGEMS_VERS=	1.8.11
 RUBY200_RUBYGEMS_VERS=	2.0.0
+RUBY210_RUBYGEMS_VERS=	2.1.0
 
 _RUBYGEMS_REQD_MAJOR=	${RUBYGEMS_REQD:C/\.[0-9\.]+$//}
 _RUBYGEMS_REQD_MINORS=	${RUBYGEMS_REQD:C/^([0-9]+)\.*//}
@@ -187,6 +189,9 @@ _RUBYGEMS_MINORS=	${RUBY193_RUBYGEMS_VERS:C/^([0-9]+)\.*//}
 .  elif ${RUBY_VER} == "200"
 _RUBYGEMS_MAJOR=	${RUBY200_RUBYGEMS_VERS:C/\.[0-9\.]+$//}
 _RUBYGEMS_MINORS=	${RUBY200_RUBYGEMS_VERS:C/^([0-9]+)\.*//}
+.  elif ${RUBY_VER} == "210"
+_RUBYGEMS_MAJOR=	${RUBY210_RUBYGEMS_VERS:C/\.[0-9\.]+$//}
+_RUBYGEMS_MINORS=	${RUBY210_RUBYGEMS_VERS:C/^([0-9]+)\.*//}
 .  else
 PKG_FAIL_REASON+= "Unknown Ruby version specified: ${RUBY_VER}."
 .  endif
