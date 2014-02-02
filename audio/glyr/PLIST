@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2014/02/02 23:35:03 rodent Exp $
+bin/glyrc
+include/glyr/cache.h
+include/glyr/config.h
+include/glyr/glyr.h
+include/glyr/misc.h
+include/glyr/testing.h
+include/glyr/types.h
+lib/libglyr.so
+lib/libglyr.so.1
+lib/libglyr.so.1.1.0
+lib/pkgconfig/libglyr.pc
