@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/09/17 21:15:06 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/02 09:48:31 ryoon Exp $
 
-DISTNAME=	libodfgen-0.0.2
+DISTNAME=	libodfgen-0.0.3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libwpd/libodfgen/libodfgen-${PKGVERSION}/}
 
@@ -16,6 +16,8 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
+CONFIGURE_ARGS+=	--without-docs
+
 PKGCONFIG_OVERRIDE+=	libodfgen.pc.in
 
 .include "../../mk/compiler.mk"
@@ -25,6 +27,7 @@ CONFIGURE_ARGS+=	--with-sharedptr=c++11
 CONFIGURE_ARGS+=	--with-sharedptr=tr1
 .endif
 
+.include "../../converters/libetonyek/buildlink3.mk"
 .include "../../converters/libwpd/buildlink3.mk"
 .include "../../converters/libwpg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
