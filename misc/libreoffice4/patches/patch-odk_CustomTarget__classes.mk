@@ -1,4 +1,4 @@
-$NetBSD: patch-odk_CustomTarget__classes.mk,v 1.1 2013/10/04 14:44:46 ryoon Exp $
+$NetBSD: patch-odk_CustomTarget__classes.mk,v 1.2 2014/02/02 07:43:40 ryoon Exp $
 
 * cp(1) of NetBSD 5.2 has no -a option
 
@@ -9,7 +9,7 @@ $NetBSD: patch-odk_CustomTarget__classes.mk,v 1.1 2013/10/04 14:44:46 ryoon Exp 
  $(call gb_CustomTarget_get_workdir,odk/classes)/java.done: $(call gb_JavaClassSet_get_target,loader)
  	$(call gb_Output_announce,$(subst $(WORKDIR)/,,$@),build,CPY,1)
 -	cp -a $(call gb_JavaClassSet_get_classdir,loader)/com $(dir $@) && \
-+	cp -RpP $(call gb_JavaClassSet_get_classdir,loader)/com $(dir $@) && \
++	cp -r $(call gb_JavaClassSet_get_classdir,loader)/com $(dir $@) && \
  	touch $@
  
  # vim: set noet sw=4 ts=4:
