@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/02/02 07:43:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.16 2014/02/02 11:09:51 ryoon Exp $
 
 VER=		4.2.0.4
 DISTNAME=	libreoffice-${VER}
@@ -77,7 +77,7 @@ MORE_DISTFILES= \
 	f94d9870737518e3b597f9265f4e9803-libserializer-1.1.6.zip \
 	b63e6340a02ff1cacfeadb2c42286161-JLanguageTool-1.7.0.tar.bz2 \
 	05f84c95b610c21c5fd510d10debcabf-mariadb-native-client-1.0.0.tar.bz2 \
-	ea91f2fb4212a21d708aced277e6e85a-vigra1.4.0.tar.gz \
+	d62650a6f908e85643e557a236ea989c-vigra1.6.0.tar.gz \
 	185d60944ea767075d27247c3162b3bc-unowinreg.dll \
 	368f114c078f94214a308a74c7e991bc-crosextrafonts-20130214.tar.gz \
 	c74b7223abe75949b4af367942d96c7a-crosextrafonts-carlito-20130920.tar.gz
