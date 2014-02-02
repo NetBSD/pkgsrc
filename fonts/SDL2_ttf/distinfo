@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/02/02 16:06:19 rodent Exp $
+
+SHA1 (SDL2_ttf-2.0.12.tar.gz) = 542865c604fe92d2f26000428ef733381caa0e8e
+RMD160 (SDL2_ttf-2.0.12.tar.gz) = ac5dee6f8e6e1aaef36c1f070b8b07b6c4582ba1
+Size (SDL2_ttf-2.0.12.tar.gz) = 5517665 bytes
