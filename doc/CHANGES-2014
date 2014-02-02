@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.554 2014/02/02 19:06:39 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.555 2014/02/02 20:21:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -867,3 +867,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added net/SDL2_net version 2.0.0 [rodent 2014-02-02]
 	Added fonts/SDL2_ttf version 2.0.12 [rodent 2014-02-02]
 	Updated devel/tcllib to 1.15 [wiz 2014-02-02]
+	Updated sysutils/vobcopy to 1.2.0nb1 [wiz 2014-02-02]
