@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2013/10/09 14:29:47 ryoon Exp $
-include/mdds/compat
+@comment $NetBSD: PLIST,v 1.6 2014/02/02 10:59:44 ryoon Exp $
+include/mdds/compat/unique_ptr.hpp
 include/mdds/default_deleter.hpp
 include/mdds/flat_segment_tree.hpp
 include/mdds/flat_segment_tree_def.inl
