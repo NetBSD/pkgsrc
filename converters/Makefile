@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2013/10/23 11:42:47 obache Exp $
+# $NetBSD: Makefile,v 1.127 2014/02/02 07:33:18 ryoon Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -31,7 +31,11 @@ SUBDIR+=	ja-dvi2tty
 SUBDIR+=	jcode-perl
 SUBDIR+=	kcc
 SUBDIR+=	latex2rtf
+SUBDIR+=	libabw
 SUBDIR+=	libcdr
+SUBDIR+=	libe-book
+SUBDIR+=	libetonyek
+SUBDIR+=	libfreehand
 SUBDIR+=	libiconv
 SUBDIR+=	libmspub
 SUBDIR+=	libmwaw
