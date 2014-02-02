@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.539 2014/02/02 07:38:08 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.540 2014/02/02 07:44:08 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -851,3 +851,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added converters/libe-book version 0.0.2 [ryoon 2014-02-02]
 	Added converters/libetonyek version 0.0.3 [ryoon 2014-02-02]
 	Added converters/libfreehand version 0.0.0 [ryoon 2014-02-02]
+	Updated misc/libreoffice4 to 4.2.0.4 [ryoon 2014-02-02]
