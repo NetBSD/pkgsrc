@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.544 2014/02/02 10:19:52 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.545 2014/02/02 11:01:58 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -857,3 +857,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/bind99 to 9.9.5 [taca 2014-02-02]
 	Updated textproc/libodfgen to 0.0.3 [ryoon 2014-02-02]
 	Updated pkgtools/pkg_notify to 0.4.4 [wiz 2014-02-02]
+	Updated devel/mdds to 0.10.1 [ryoon 2014-02-02]
