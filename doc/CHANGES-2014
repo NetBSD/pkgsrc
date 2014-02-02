@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.553 2014/02/02 16:06:36 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.554 2014/02/02 19:06:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -866,3 +866,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added audio/SDL2_mixer version 2.0.0 [rodent 2014-02-02]
 	Added net/SDL2_net version 2.0.0 [rodent 2014-02-02]
 	Added fonts/SDL2_ttf version 2.0.12 [rodent 2014-02-02]
+	Updated devel/tcllib to 1.15 [wiz 2014-02-02]
