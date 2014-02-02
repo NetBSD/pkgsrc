@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2013/09/21 16:00:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/02/02 07:58:20 taca Exp $
+bin/bind9-config
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -14,6 +15,7 @@ include/dns/byaddr.h
 include/dns/cache.h
 include/dns/callbacks.h
 include/dns/cert.h
+include/dns/client.h
 include/dns/clientinfo.h
 include/dns/compress.h
 include/dns/db.h
@@ -68,6 +70,7 @@ include/dns/ssu.h
 include/dns/tcpmsg.h
 include/dns/time.h
 include/dns/tkey.h
+include/dns/tsec.h
 include/dns/tsig.h
 include/dns/ttl.h
 include/dns/types.h
@@ -163,6 +166,7 @@ include/isc/taskpool.h
 include/isc/thread.h
 include/isc/time.h
 include/isc/timer.h
+include/isc/tm.h
 include/isc/types.h
 include/isc/util.h
 include/isc/version.h
@@ -206,6 +210,7 @@ lib/libisccc.la
 lib/libisccfg.la
 lib/liblwres.la
 man/man1/arpaname.1
+man/man1/bind9-config.1
 man/man1/dig.1
 man/man1/host.1
 man/man1/isc-config.sh.1
@@ -320,6 +325,7 @@ man/man8/rndc.8
 sbin/arpaname
 sbin/ddns-confgen
 sbin/dnssec-dsfromkey
+sbin/dnssec-importkey
 sbin/dnssec-keyfromlabel
 sbin/dnssec-keygen
 sbin/dnssec-revoke
