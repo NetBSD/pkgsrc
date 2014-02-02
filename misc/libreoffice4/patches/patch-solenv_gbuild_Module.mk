@@ -1,11 +1,11 @@
-$NetBSD: patch-solenv_gbuild_Module.mk,v 1.1 2013/10/04 14:44:46 ryoon Exp $
+$NetBSD: patch-solenv_gbuild_Module.mk,v 1.2 2014/02/02 07:43:40 ryoon Exp $
 
 * Disable never-ending test
 
---- solenv/gbuild/Module.mk.orig	2013-08-21 11:40:03.000000000 +0000
+--- solenv/gbuild/Module.mk.orig	2014-01-27 21:35:34.000000000 +0000
 +++ solenv/gbuild/Module.mk
-@@ -91,7 +91,7 @@ $(call gb_Module_get_target,%) :
- .PHONY : all build unitcheck slowcheck subsequentcheck clean check debugrun help showmodules translations
+@@ -105,7 +105,7 @@ $(call gb_Module_get_target,%) :
+ .PHONY : all build build-l10n-only build-non-l10n-only unitcheck slowcheck subsequentcheck clean check debugrun help showmodules translations
  .DEFAULT_GOAL := all
  
 -all : build $(if $(CROSS_COMPILING),,unitcheck $(if $(gb_PARTIAL_BUILD),,slowcheck))
