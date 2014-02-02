@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2014/02/02 07:18:25 ryoon Exp $
+$NetBSD: distinfo,v 1.6 2014/02/02 08:25:05 wiz Exp $
 
 SHA1 (libwpg-0.2.2.tar.bz2) = e9484e795259485ece9a984f60776704d55afeeb
 RMD160 (libwpg-0.2.2.tar.bz2) = 4b631a8f3fcb261205b04c4b0849256d159e8f31
 Size (libwpg-0.2.2.tar.bz2) = 376802 bytes
-SHA1 (patch-src_lib_WPG2Parser.cpp) = c5fad4ecdc445f13c97ba7a29f43f257b5487f41
