@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2013/05/31 12:41:46 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.17 2014/02/02 10:19:41 wiz Exp $
 
-DISTNAME=	pkg_notify-0.4.3
-PKGREVISION=	2
+DISTNAME=	pkg_notify-0.4.4
 CATEGORIES=	pkgtools
 MASTER_SITES=	# none
 DISTFILES=	# none

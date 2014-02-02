@@ -16,7 +16,7 @@
 #
 # $ pkg_notify category/package
 #
-# $Id: pkg_notify,v 1.1 2009/02/18 21:23:21 imil Exp $
+# $Id: pkg_notify,v 1.2 2014/02/02 10:19:41 wiz Exp $
 
 use Net::FTP;
 use LWP::UserAgent;
@@ -470,16 +470,16 @@ sub sort_master_sites {
 
 	if ($m_list =~ /$SF_NET/) {
 		# we only want ftp sites from SF
-		$m_list =~ s/http:\/\/[^\t\ \n]+//g;
+		$m_list =~ s/https?:\/\/[^\t\ \n]+//g;
 		$m_list =~ s/[\t\ \r\n]+//g;
 	}
 
     # graphics/libggi packages-like fix (ftp://blahhttp://bleh): missing space
     # this is because of previous SF's char stripping
-    $m_list =~ s/([^\ ])(ftp\:|http\:)/$1\ $2/g;
+    $m_list =~ s/([^\ ])(ftp\:|http\:|https\:)/$1\ $2/g;
 
 	foreach (@master_sort_list) {
-		if ($m_list =~ /(.*)(http|ftp)(\:\/\/[^\t\ ]*$_[^\t\ ]*)(.*)/) {
+		if ($m_list =~ /(.*)(http|https|ftp)(\:\/\/[^\t\ ]*$_[^\t\ ]*)(.*)/) {
 			push @s_list, $2.$3;
 			$m_list = $1 . $4;
 		}
@@ -653,7 +653,7 @@ foreach (@packages) {
 			}
 
 		# http master site
-		} elsif ($master_site =~ /^http\:\/\//) {
+		} elsif ($master_site =~ /^https?\:\/\//) {
 			http_ls($master_site, $distname);
 		} else {
 			print "unsupported MASTER_SITES protocol";
