@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/09/17 21:17:43 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/02 07:25:39 ryoon Exp $
 
-DISTNAME=	libmwaw-0.1.11
+DISTNAME=	libmwaw-0.2.0
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libmwaw/}
 EXTRACT_SUFX=	.tar.xz
@@ -26,6 +26,6 @@ CONFIGURE_ARGS+=	--with-sharedptr=tr1
 
 PKGCONFIG_OVERRIDE+=	libmwaw.pc.in
 
-.include "../../converters/libwpd/buildlink3.mk"
+.include "../../converters/libwpg/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
