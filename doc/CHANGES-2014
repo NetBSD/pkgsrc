@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.535 2014/02/02 03:32:23 mrg Exp $
+$NetBSD: CHANGES-2014,v 1.536 2014/02/02 06:58:22 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -842,3 +842,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added graphics/py-qrcode version 4.0.4 [rodent 2014-02-02]
 	Added net/py-caldav version caldav [rodent 2014-02-02]
 	Updated www/bozohttpd to 20140201 [mrg 2014-02-02]
+	Updated devel/py-pip to 1.5.2 [rodent 2014-02-02]
