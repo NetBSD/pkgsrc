@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12961 2014/02/01 23:28:27 rodent Exp $
+$NetBSD: TODO,v 1.12962 2014/02/02 07:10:50 richard Exp $
 
 Suggested new packages
 ======================
@@ -448,7 +448,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o conserver-8.1.19
 	o consolekit-0.4.5
 	o cook-2.31
-	o coreutils-8.22
 	o courier-0.71
 	o courier-authlib-0.65.0
 	o courier-imap-4.13

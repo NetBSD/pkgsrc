@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.536 2014/02/02 06:58:22 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.537 2014/02/02 07:10:50 richard Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -843,3 +843,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added net/py-caldav version caldav [rodent 2014-02-02]
 	Updated www/bozohttpd to 20140201 [mrg 2014-02-02]
 	Updated devel/py-pip to 1.5.2 [rodent 2014-02-02]
+	Updated sysutils/coreutils to 8.22 [richard 2014-02-02]
