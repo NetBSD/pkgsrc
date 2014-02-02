@@ -1,0 +1,5 @@
+Glyr comes both in a commandline interface tool and as a C library, both with an
+easy to use interface. The sort of metadata glyr is searching (and downloading)
+is usually the data you see in your music player. And indeed, originally it was
+written to serve as internally library for a music player, but has been extended
+to work as a standalone program.
