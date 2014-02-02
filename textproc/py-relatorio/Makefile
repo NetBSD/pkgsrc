@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/02/01 23:28:09 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2014/02/02 08:15:50 wiz Exp $
 
 DISTNAME=	relatorio-0.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,6 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_LANGUAGES=		#none
 PYTHON_VERSIONED_DEPENDENCIES=	cairo
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2 via py-pycha
 
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
