@@ -1,0 +1,2 @@
+QR Code image generator in Python. This package uses Pillow, which is
+recommended by upstream, instead of the default Python Imaging Library.
