@@ -1,13 +1,13 @@
-$NetBSD: patch-lib-fflush.c,v 1.1 2012/03/06 23:38:04 joerg Exp $
+$NetBSD: patch-lib-fflush.c,v 1.2 2014/02/02 07:08:25 richard Exp $
 
---- lib/fflush.c.orig	2011-08-19 16:09:37.000000000 +0000
+--- lib/fflush.c.orig	2013-12-04 14:53:33.000000000 +0000
 +++ lib/fflush.c
-@@ -91,7 +91,7 @@ static inline void
- update_fpos_cache (FILE *fp, off_t pos)
+@@ -96,7 +96,7 @@ update_fpos_cache (FILE *fp _GL_UNUSED_P
+                    off_t pos _GL_UNUSED_PARAMETER)
  {
- #if defined __sferror || defined __DragonFly__ /* FreeBSD, NetBSD, OpenBSD, DragonFly, MacOS X, Cygwin */
--# if defined __CYGWIN__
-+# if defined(__CYGWIN__) || defined(__NetBSD__)
+ #  if defined __sferror || defined __DragonFly__ /* FreeBSD, NetBSD, OpenBSD, DragonFly, Mac OS X, Cygwin */
+-#   if defined __CYGWIN__
++#   if defined(__CYGWIN__) || defined(__NetBSD__)
    /* fp_->_offset is typed as an integer.  */
    fp_->_offset = pos;
- # else
+ #   else
