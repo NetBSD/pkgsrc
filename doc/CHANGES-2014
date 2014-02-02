@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.542 2014/02/02 07:59:03 taca Exp $
+$NetBSD: CHANGES-2014,v 1.543 2014/02/02 09:49:16 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -855,3 +855,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added graphics/graphite2 version 1.2.4 [ryoon 2014-02-02]
 	Updated net/bind96 to 9.6.3.1.ESV.11 [taca 2014-02-02]
 	Updated net/bind99 to 9.9.5 [taca 2014-02-02]
+	Updated textproc/libodfgen to 0.0.3 [ryoon 2014-02-02]
