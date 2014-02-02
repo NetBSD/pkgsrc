@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.557 2014/02/02 23:21:49 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.558 2014/02/02 23:35:13 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -870,3 +870,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/vobcopy to 1.2.0nb1 [wiz 2014-02-02]
 	Added games/flare-engine version 0.19 [rodent 2014-02-02]
 	Added games/flare-game version 0.19 [rodent 2014-02-02]
+	Added audio/glyr version 1.0.3 [rodent 2014-02-02]
