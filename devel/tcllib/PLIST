@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/10/07 23:16:47 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/02/02 19:06:30 wiz Exp $
 bin/dtplite
 bin/nns
 bin/nnsd
@@ -40,6 +40,9 @@ lib/tcllib${PKGVERSION}/blowfish/blowfish.tcl
 lib/tcllib${PKGVERSION}/blowfish/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/cache/async.tcl
 lib/tcllib${PKGVERSION}/cache/pkgIndex.tcl
+lib/tcllib${PKGVERSION}/clock/iso8601.tcl
+lib/tcllib${PKGVERSION}/clock/pkgIndex.tcl
+lib/tcllib${PKGVERSION}/clock/rfc2822.tcl
 lib/tcllib${PKGVERSION}/cmdline/cmdline.tcl
 lib/tcllib${PKGVERSION}/cmdline/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/comm/comm.tcl
@@ -168,6 +171,7 @@ lib/tcllib${PKGVERSION}/doctools2toc/msgcat_fr.tcl
 lib/tcllib${PKGVERSION}/doctools2toc/parse.tcl
 lib/tcllib${PKGVERSION}/doctools2toc/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/doctools2toc/structure.tcl
+lib/tcllib${PKGVERSION}/fileutil/decode.tcl
 lib/tcllib${PKGVERSION}/fileutil/fileutil.tcl
 lib/tcllib${PKGVERSION}/fileutil/multi.tcl
 lib/tcllib${PKGVERSION}/fileutil/multiop.tcl
@@ -184,6 +188,8 @@ lib/tcllib${PKGVERSION}/fumagic/filetypes.tcl
 lib/tcllib${PKGVERSION}/fumagic/mimetypes.tcl
 lib/tcllib${PKGVERSION}/fumagic/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/fumagic/rtcore.tcl
+lib/tcllib${PKGVERSION}/generator/generator.tcl
+lib/tcllib${PKGVERSION}/generator/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/gpx/gpx.tcl
 lib/tcllib${PKGVERSION}/gpx/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/grammar_aycock/aycock-build.tcl
@@ -243,6 +249,7 @@ lib/tcllib${PKGVERSION}/log/loggerAppender.tcl
 lib/tcllib${PKGVERSION}/log/loggerUtils.tcl
 lib/tcllib${PKGVERSION}/log/msgs/en.msg
 lib/tcllib${PKGVERSION}/log/pkgIndex.tcl
+lib/tcllib${PKGVERSION}/map/map_geocode_nominatim.tcl
 lib/tcllib${PKGVERSION}/map/map_slippy.tcl
 lib/tcllib${PKGVERSION}/map/map_slippy_cache.tcl
 lib/tcllib${PKGVERSION}/map/map_slippy_fetcher.tcl
@@ -284,6 +291,7 @@ lib/tcllib${PKGVERSION}/math/special.tcl
 lib/tcllib${PKGVERSION}/math/statistics.tcl
 lib/tcllib${PKGVERSION}/math/symdiff.tcl
 lib/tcllib${PKGVERSION}/math/tclIndex
+lib/tcllib${PKGVERSION}/math/wilcoxon.tcl
 lib/tcllib${PKGVERSION}/md4/md4.tcl
 lib/tcllib${PKGVERSION}/md4/md4c.tcl
 lib/tcllib${PKGVERSION}/md4/pkgIndex.tcl
@@ -612,8 +620,12 @@ lib/tcllib${PKGVERSION}/wip/wip2.tcl
 lib/tcllib${PKGVERSION}/yaml/huddle.tcl
 lib/tcllib${PKGVERSION}/yaml/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/yaml/yaml.tcl
+lib/tcllib${PKGVERSION}/zip/decode.tcl
+lib/tcllib${PKGVERSION}/zip/encode.tcl
+lib/tcllib${PKGVERSION}/zip/pkgIndex.tcl
 man/mann/S3.n
 man/mann/adjust.n
+man/mann/adler32.n
 man/mann/aes.n
 man/mann/annealing.n
 man/mann/ansi_cattr.n
@@ -637,6 +649,7 @@ man/mann/bigfloat.n
 man/mann/bignum.n
 man/mann/blowfish.n
 man/mann/calculus.n
+man/mann/cat.n
 man/mann/cfront.n
 man/mann/cgen.n
 man/mann/changelog.n
@@ -650,6 +663,7 @@ man/mann/constants.n
 man/mann/container.n
 man/mann/control.n
 man/mann/copyops.n
+man/mann/core.n
 man/mann/counter.n
 man/mann/crc16.n
 man/mann/crc32.n
@@ -688,6 +702,7 @@ man/mann/doctools_lang_syntax.n
 man/mann/doctools_plugin_apiref.n
 man/mann/dsource.n
 man/mann/dtplite.n
+man/mann/events.n
 man/mann/expander.n
 man/mann/export.n
 man/mann/export_docidx.n
@@ -698,7 +713,10 @@ man/mann/export_nroff.n
 man/mann/export_text.n
 man/mann/export_wiki.n
 man/mann/fa.n
+man/mann/facade.n
 man/mann/faop.n
+man/mann/fifo.n
+man/mann/fifo2.n
 man/mann/filetypes.n
 man/mann/fileutil.n
 man/mann/fourier.n
@@ -707,15 +725,19 @@ man/mann/ftp_geturl.n
 man/mann/ftpd.n
 man/mann/fuzzy.n
 man/mann/gasm.n
+man/mann/generator.n
 man/mann/graph.n
 man/mann/graph1.n
 man/mann/graphops.n
+man/mann/halfpipe.n
+man/mann/hex.n
 man/mann/hook.n
 man/mann/html.n
 man/mann/html_cssdefaults.n
 man/mann/htmlparse.n
 man/mann/huddle.n
 man/mann/ident.n
+man/mann/identity.n
 man/mann/imap4.n
 man/mann/imenu.n
 man/mann/import.n
@@ -727,6 +749,7 @@ man/mann/interpolate.n
 man/mann/introduction.n
 man/mann/ipager.n
 man/mann/irc.n
+man/mann/iso8601.n
 man/mann/javascript.n
 man/mann/jpeg.n
 man/mann/json.n
@@ -734,12 +757,14 @@ man/mann/json_write.n
 man/mann/lambda.n
 man/mann/ldap.n
 man/mann/ldapx.n
+man/mann/limitsize.n
 man/mann/linalg.n
 man/mann/log.n
 man/mann/logger.n
 man/mann/loggerAppender.n
 man/mann/loggerUtils.n
 man/mann/machineparameters.n
+man/mann/map_geocode_nominatim.n
 man/mann/map_slippy.n
 man/mann/map_slippy_cache.n
 man/mann/map_slippy_fetcher.n
@@ -758,6 +783,7 @@ man/mann/me_intro.n
 man/mann/me_tcl.n
 man/mann/me_util.n
 man/mann/me_vm.n
+man/mann/memchan.n
 man/mann/mime.n
 man/mann/mimetypes.n
 man/mann/montecarlo.n
@@ -784,7 +810,10 @@ man/mann/nnslog.n
 man/mann/nntp.n
 man/mann/nroff_manmacros.n
 man/mann/ntp_time.n
+man/mann/null.n
+man/mann/nullzero.n
 man/mann/numtheory.n
+man/mann/observe.n
 man/mann/ooutil.n
 man/mann/optimize.n
 man/mann/otp.n
@@ -851,6 +880,8 @@ man/mann/pt_tclparam_config_tcloo.n
 man/mann/pt_to_api.n
 man/mann/qcomplex.n
 man/mann/queue.n
+man/mann/random.n
+man/mann/randseed.n
 man/mann/rational_funcs.n
 man/mann/rc4.n
 man/mann/rcs.n
@@ -860,10 +891,12 @@ man/mann/record.n
 man/mann/repeat.n
 man/mann/report.n
 man/mann/rest.n
+man/mann/rfc2822.n
 man/mann/ripemd128.n
 man/mann/ripemd160.n
 man/mann/roman.n
 man/mann/romberg.n
+man/mann/rot.n
 man/mann/rtcore.n
 man/mann/sasl.n
 man/mann/sha1.n
@@ -875,10 +908,13 @@ man/mann/smtpd.n
 man/mann/snit.n
 man/mann/snitfaq.n
 man/mann/soundex.n
+man/mann/spacer.n
 man/mann/special.n
 man/mann/stack.n
 man/mann/statistics.n
+man/mann/std.n
 man/mann/stooop.n
+man/mann/chan_string.n
 man/mann/stringprep.n
 man/mann/stringprep_data.n
 man/mann/struct_list.n
@@ -896,6 +932,7 @@ man/mann/tcllib_dns.n
 man/mann/tcllib_interp.n
 man/mann/tcllib_ip.n
 man/mann/tcllib_msgcat.n
+man/mann/tcllib_try.n
 man/mann/tepam_argument_dialogbox.n
 man/mann/tepam_introduction.n
 man/mann/tepam_procedure.n
@@ -905,15 +942,16 @@ man/mann/term_send.n
 man/mann/textutil.n
 man/mann/textutil_split.n
 man/mann/textutil_string.n
+man/mann/textwindow.n
 man/mann/tie.n
 man/mann/tie_std.n
 man/mann/tiff.n
 man/mann/tqueue.n
+man/mann/transformcore.n
 man/mann/transmitter.n
 man/mann/traverse.n
 man/mann/treeql.n
 man/mann/trim.n
-man/mann/try.n
 man/mann/uevent.n
 man/mann/uevent_onidle.n
 man/mann/unicode.n
@@ -923,7 +961,10 @@ man/mann/uri.n
 man/mann/urn-scheme.n
 man/mann/uuencode.n
 man/mann/uuid.n
+man/mann/chan_variable.n
 man/mann/wip.n
 man/mann/xsxp.n
 man/mann/yaml.n
 man/mann/yencode.n
+man/mann/zero.n
+man/mann/transform_zlib.n
