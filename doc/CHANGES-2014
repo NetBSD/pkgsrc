@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.558 2014/02/02 23:35:13 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.559 2014/02/02 23:42:04 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -871,3 +871,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added games/flare-engine version 0.19 [rodent 2014-02-02]
 	Added games/flare-game version 0.19 [rodent 2014-02-02]
 	Added audio/glyr version 1.0.3 [rodent 2014-02-02]
+	Updated devel/nspr to 4.10.3 [ryoon 2014-02-02]

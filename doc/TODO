@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12966 2014/02/02 19:06:39 wiz Exp $
+$NetBSD: TODO,v 1.12967 2014/02/02 23:42:04 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -851,7 +851,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
 	o nspluginwrapper-1.4.4 [pkg/47208]
-	o nspr-4.10.3
 	o ntop-5.0
 	o nulib2-220
 	o nut-19.1
