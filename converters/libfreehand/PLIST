@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2014/02/02 07:31:30 ryoon Exp $
+bin/fh2raw
+bin/fh2svg
+include/libfreehand-0.0/libfreehand/FHStringVector.h
+include/libfreehand-0.0/libfreehand/FreeHandDocument.h
+include/libfreehand-0.0/libfreehand/libfreehand.h
+lib/libfreehand-0.0.la
+lib/pkgconfig/libfreehand-0.0.pc
