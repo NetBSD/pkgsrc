@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2014/02/02 07:28:11 ryoon Exp $
+bin/ebook2html
+bin/ebook2raw
+bin/ebook2text
+include/libe-book-0.0/libe-book/EBOOKDocument.h
+include/libe-book-0.0/libe-book/FB2Document.h
+include/libe-book-0.0/libe-book/IMPDocument.h
+include/libe-book-0.0/libe-book/LRFDocument.h
+include/libe-book-0.0/libe-book/PDBDocument.h
+include/libe-book-0.0/libe-book/PLKRDocument.h
+include/libe-book-0.0/libe-book/PMLDocument.h
+include/libe-book-0.0/libe-book/QIOODocument.h
+include/libe-book-0.0/libe-book/TCRDocument.h
+include/libe-book-0.0/libe-book/TDDocument.h
+include/libe-book-0.0/libe-book/ZTXTDocument.h
+include/libe-book-0.0/libe-book/ZVRDocument.h
+include/libe-book-0.0/libe-book/libe-book.h
+lib/libe-book-0.0.la
+lib/pkgconfig/libe-book-0.0.pc
