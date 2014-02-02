@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2014/02/02 15:56:29 rodent Exp $
+include/SDL2/SDL_net.h
+lib/libSDL2_net.la
+lib/pkgconfig/SDL2_net.pc
