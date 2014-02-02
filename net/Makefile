@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1003 2014/02/02 00:50:01 rodent Exp $
+# $NetBSD: Makefile,v 1.1004 2014/02/02 15:57:24 rodent Exp $
 #
 
 COMMENT=	Networking tools
@@ -13,6 +13,7 @@ SUBDIR+=	LaBrea
 SUBDIR+=	ORBit
 SUBDIR+=	ORBit2
 SUBDIR+=	Radicale
+SUBDIR+=	SDL2_net
 SUBDIR+=	SDL_net
 SUBDIR+=	adns
 SUBDIR+=	aget
