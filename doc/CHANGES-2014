@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.531 2014/02/01 23:28:27 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.532 2014/02/02 00:10:39 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -838,3 +838,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added misc/py-trytond-stock version 3.0.1 [rodent 2014-02-01]
 	Added misc/py-trytond-stock-lot version 3.0.0 [rodent 2014-02-01]
 	Updated textproc/py-relatorio to 0.6.0 [rodent 2014-02-01]
+	Added lang/py-six version 1.5.2 [rodent 2014-02-02]
