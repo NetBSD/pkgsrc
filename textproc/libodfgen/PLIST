@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2013/08/24 16:17:12 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/02/02 09:48:31 ryoon Exp $
 include/libodfgen-0.0/libodfgen/OdfDocumentHandler.hxx
 include/libodfgen-0.0/libodfgen/OdgGenerator.hxx
+include/libodfgen-0.0/libodfgen/OdpGenerator.hxx
 include/libodfgen-0.0/libodfgen/OdtGenerator.hxx
 include/libodfgen-0.0/libodfgen/libodfgen.hxx
 lib/libodfgen-0.0.la
