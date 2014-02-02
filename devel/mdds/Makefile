@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2013/11/20 20:04:36 adam Exp $
+# $NetBSD: Makefile,v 1.20 2014/02/02 10:59:44 ryoon Exp $
 #
 
-DISTNAME=	mdds_0.9.0
-PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	3
+DISTNAME=	01a380acfec23bf617117ce98e318f3d-mdds_0.10.1
+PKGNAME=	${DISTNAME:C/[0-9a-f]*-//:S/_/-/}
 CATEGORIES=	devel
-MASTER_SITES=	http://multidimalgorithm.googlecode.com/files/
+MASTER_SITES=	http://dev-www.libreoffice.org/src/
 EXTRACT_SUFX=	.tar.bz2
 EXTRACT_USING=	gtar
 
@@ -14,12 +13,14 @@ HOMEPAGE=	http://code.google.com/p/multidimalgorithm/
 COMMENT=	Collection of multi-dimensional data structure and indexing algorithms
 LICENSE=	mit
 
+WRKSRC=		${WRKDIR}/${DISTNAME:C/[0-9a-f]*-//}
+
 USE_LANGUAGES=		c++
 GNU_CONFIGURE=		yes
-INSTALLATION_DIRS=	include/mdds/hash_container share/pkgconfig
+NO_BUILD=		yes
+INSTALLATION_DIRS=	include/mdds/compat include/mdds/hash_container \
+			share/pkgconfig
 PKGCONFIG_OVERRIDE+=	misc/mdds.pc.in
-
-do-build:
 
 do-install:
 	for i in ${WRKSRC}/include/mdds/*.*; do \
