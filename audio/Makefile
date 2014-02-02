@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.497 2014/02/02 15:39:55 rodent Exp $
+# $NetBSD: Makefile,v 1.498 2014/02/02 23:36:32 rodent Exp $
 #
 
 COMMENT=	Audio tools
@@ -127,6 +127,7 @@ SUBDIR+=	gbemol
 SUBDIR+=	gimmix
 SUBDIR+=	gkrellm-volume
 SUBDIR+=	glurp
+SUBDIR+=	glyr
 SUBDIR+=	gmp3info
 SUBDIR+=	gmpc
 SUBDIR+=	gmpc-alarm
