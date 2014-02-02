@@ -1,11 +1,11 @@
-$NetBSD: patch-lib-fseeko.c,v 1.1 2012/03/06 23:38:04 joerg Exp $
+$NetBSD: patch-lib-fseeko.c,v 1.2 2014/02/02 07:08:25 richard Exp $
 
---- lib/fseeko.c.orig	2011-08-12 08:05:46.000000000 +0000
+--- lib/fseeko.c.orig	2013-12-04 15:02:00.000000000 +0000
 +++ lib/fseeko.c
-@@ -111,7 +111,7 @@ fseeko (FILE *fp, off_t offset, int when
+@@ -125,7 +125,7 @@ fseeko (FILE *fp, off_t offset, int when
        fp->_flags &= ~_IO_EOF_SEEN;
        fp->_offset = pos;
- #elif defined __sferror || defined __DragonFly__ /* FreeBSD, NetBSD, OpenBSD, DragonFly, MacOS X, Cygwin */
+ #elif defined __sferror || defined __DragonFly__ /* FreeBSD, NetBSD, OpenBSD, DragonFly, Mac OS X, Cygwin */
 -# if defined __CYGWIN__
 +# if defined(__CYGWIN__) || defined(__NetBSD__)
        /* fp_->_offset is typed as an integer.  */

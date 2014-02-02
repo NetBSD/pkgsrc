@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2012/06/02 09:32:30 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.17 2014/02/02 07:08:24 richard Exp $
 bin/g[
 bin/gbase64
 bin/gbasename
@@ -49,6 +49,7 @@ bin/gnice
 bin/gnl
 bin/gnohup
 bin/gnproc
+bin/gnumfmt
 bin/god
 bin/gpaste
 bin/gpathchk
@@ -59,6 +60,7 @@ bin/gprintf
 bin/gptx
 bin/gpwd
 bin/greadlink
+bin/grealpath
 bin/grm
 bin/grmdir
 bin/gruncon
@@ -150,6 +152,7 @@ gnu/bin/nice
 gnu/bin/nl
 gnu/bin/nohup
 gnu/bin/nproc
+gnu/bin/numfmt
 gnu/bin/od
 gnu/bin/paste
 gnu/bin/pathchk
@@ -160,6 +163,7 @@ gnu/bin/printf
 gnu/bin/ptx
 gnu/bin/pwd
 gnu/bin/readlink
+gnu/bin/realpath
 gnu/bin/rm
 gnu/bin/rmdir
 gnu/bin/runcon
@@ -250,6 +254,7 @@ gnu/man/man1/nice.1
 gnu/man/man1/nl.1
 gnu/man/man1/nohup.1
 gnu/man/man1/nproc.1
+gnu/man/man1/numfmt.1
 gnu/man/man1/od.1
 gnu/man/man1/paste.1
 gnu/man/man1/pathchk.1
@@ -260,6 +265,7 @@ gnu/man/man1/printf.1
 gnu/man/man1/ptx.1
 gnu/man/man1/pwd.1
 gnu/man/man1/readlink.1
+gnu/man/man1/realpath.1
 gnu/man/man1/rm.1
 gnu/man/man1/rmdir.1
 gnu/man/man1/runcon.1
@@ -352,6 +358,7 @@ man/man1/gnice.1
 man/man1/gnl.1
 man/man1/gnohup.1
 man/man1/gnproc.1
+man/man1/gnumfmt.1
 man/man1/god.1
 man/man1/gpaste.1
 man/man1/gpathchk.1
@@ -362,6 +369,7 @@ man/man1/gprintf.1
 man/man1/gptx.1
 man/man1/gpwd.1
 man/man1/greadlink.1
+man/man1/grealpath.1
 man/man1/grm.1
 man/man1/grmdir.1
 man/man1/gruncon.1
@@ -419,7 +427,9 @@ share/locale/fi/LC_MESSAGES/coreutils.mo
 share/locale/fr/LC_MESSAGES/coreutils.mo
 share/locale/ga/LC_MESSAGES/coreutils.mo
 share/locale/gl/LC_MESSAGES/coreutils.mo
+share/locale/hr/LC_MESSAGES/coreutils.mo
 share/locale/hu/LC_MESSAGES/coreutils.mo
+share/locale/ia/LC_MESSAGES/coreutils.mo
 share/locale/id/LC_MESSAGES/coreutils.mo
 share/locale/it/LC_MESSAGES/coreutils.mo
 share/locale/ja/LC_MESSAGES/coreutils.mo
@@ -459,7 +469,9 @@ share/locale/fi/LC_TIME/coreutils.mo
 share/locale/fr/LC_TIME/coreutils.mo
 share/locale/ga/LC_TIME/coreutils.mo
 share/locale/gl/LC_TIME/coreutils.mo
+share/locale/hr/LC_TIME/coreutils.mo
 share/locale/hu/LC_TIME/coreutils.mo
+share/locale/ia/LC_TIME/coreutils.mo
 share/locale/id/LC_TIME/coreutils.mo
 share/locale/it/LC_TIME/coreutils.mo
 share/locale/ja/LC_TIME/coreutils.mo
