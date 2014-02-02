@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.550 2014/02/02 15:24:23 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.551 2014/02/02 15:39:11 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -863,3 +863,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated geography/gipfel to 0.4.0 [rodent 2014-02-02]
 	Updated www/php-owncloud to 6.0.1 [ryoon 2014-02-02]
 	Added multimedia/smpeg2 version 2.0.0 [rodent 2014-02-02]
+	Added audio/SDL2_mixer version 2.0.0 [rodent 2014-02-02]
