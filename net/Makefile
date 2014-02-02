@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1002 2014/01/21 13:34:05 wiz Exp $
+# $NetBSD: Makefile,v 1.1003 2014/02/02 00:50:01 rodent Exp $
 #
 
 COMMENT=	Networking tools
@@ -537,6 +537,7 @@ SUBDIR+=	py-ORBit
 SUBDIR+=	py-adns
 SUBDIR+=	py-amqp
 SUBDIR+=	py-boto
+SUBDIR+=	py-caldav
 SUBDIR+=	py-dns
 SUBDIR+=	py-dns3
 SUBDIR+=	py-dpkt
