@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/10/07 23:16:47 minskim Exp $
+$NetBSD: distinfo,v 1.5 2014/02/02 19:06:30 wiz Exp $
 
-SHA1 (tcllib-1.14.tar.bz2) = f27d2443e5469f0de89f4ecbb8e4f58ec152318d
-RMD160 (tcllib-1.14.tar.bz2) = 04ca4c9bfffb307c7bbea38a5ad1de0c24e8adde
-Size (tcllib-1.14.tar.bz2) = 4398059 bytes
+SHA1 (tcllib-1.15.tar.bz2) = 7130ee20c0fe7fc720288886b9ecb449899e0d6d
+RMD160 (tcllib-1.15.tar.bz2) = dcc5b8d180da1fc3ebc9d620a18c5cd063f33d32
+Size (tcllib-1.15.tar.bz2) = 5030648 bytes
