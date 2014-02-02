@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2014/02/02 07:27:04 ryoon Exp $
+bin/abw2html
+bin/abw2raw
+bin/abw2text
+include/libabw-0.0/libabw/AbiDocument.h
+include/libabw-0.0/libabw/libabw.h
+lib/libabw-0.0.la
+lib/pkgconfig/libabw-0.0.pc
