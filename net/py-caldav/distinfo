@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/02/02 00:49:17 rodent Exp $
+
+SHA1 (caldav-0.1.12.tar.gz) = ce068ec1052b39951ab13bc934685800de0bae73
+RMD160 (caldav-0.1.12.tar.gz) = dc30155b43c303a2c5eff936a6430713db4e0b91
+Size (caldav-0.1.12.tar.gz) = 28751 bytes
