@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2013/10/04 14:44:46 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2014/02/02 07:43:40 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libreoffice4
 PKG_SUPPORTED_OPTIONS=	java debug
@@ -35,4 +35,6 @@ CONFIGURE_ARGS+=	--without-java
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug
 CONFIGURE_ARGS+=	--enable-selective-debuginfo="all"
+.else
+CONFIGURE_ARGS+=	--enable-release-build
 .endif

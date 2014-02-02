@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2014/01/27 11:16:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2014/02/02 07:43:40 ryoon Exp $
 
-VER=		4.1.4.2
+VER=		4.2.0.4
 DISTNAME=	libreoffice-${VER}
 PKGNAME=	libreoffice4-${VER}
 CATEGORIES=	misc
-MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/4.1.4/
+MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/4.2.0/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -41,7 +41,7 @@ EXTRACT_ONLY+=		libreoffice-${component}-${VER}.tar.xz
 MORE_DISTFILES= \
 	0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz \
 	0279a21fab6f245e85a6f85fea54f511-source-code-font-1.009.tar.gz \
-	0be45d54cc5e1c2e3102e32b8c190346-liberation-fonts-ttf-1.07.1.tar.gz \
+	b3174b11c2b6a341f5c99b31088bd67b-liberation-fonts-ttf-1.07.3.tar.gz \
 	5c781723a0d9ed6188960defba8e91cf-liberation-fonts-ttf-2.00.1.tar.gz \
 	1756c4fa6c616ae15973c104cd8cb256-Adobe-Core35_AFMs-314.tar.gz \
 	1e9ddfe25ac9577da709d7b2ea36f939-source-sans-font-1.036.tar.gz \
@@ -61,8 +61,6 @@ MORE_DISTFILES= \
 	7a15edea7d415ac5150ea403e27401fd-open-sans-font-ttf-1.10.tar.gz \
 	8ce2fcd72becf06c41f7201d15373ed9-librepository-1.1.6.zip \
 	97b2d4dba862397f446b217e2b623e71-libloader-1.1.6.zip \
-	b85436266b2ac91d351ab5684b181151-libwpg-0.2.2.tar.bz2 \
-	a2f6010987e1c601274ab5d63b72c944-hyphen-2.8.4.tar.gz \
 	a7983f859eafb2677d7ff386a023bc40-xsltml_2.1.2.zip \
 	ace6ab49184e329db254e454a010f56d-libxml-1.1.7.zip \
 	2e482c7567908d334785ce7d69ddfff7-commons-codec-1.6-src.tar.gz \
@@ -77,12 +75,8 @@ MORE_DISTFILES= \
 	eeb2c7ddf0d302fba4bfc6e97eac9624-libbase-1.1.6.zip \
 	f872f4ac066433d8ff92f5e316b36ff9-dejavu-fonts-ttf-2.33.zip \
 	f94d9870737518e3b597f9265f4e9803-libserializer-1.1.6.zip \
-	libcdr-0.0.14.tar.bz2 \
-	libmspub-0.0.6.tar.bz2 \
-	8473296c671b6e3dd8197f4145e0854b-libodfgen-0.0.2.tar.bz2 \
 	b63e6340a02ff1cacfeadb2c42286161-JLanguageTool-1.7.0.tar.bz2 \
 	05f84c95b610c21c5fd510d10debcabf-mariadb-native-client-1.0.0.tar.bz2 \
-	08c85a6d6d793daee14e10e22eefdc4b-mdds_0.8.1.tar.bz2 \
 	ea91f2fb4212a21d708aced277e6e85a-vigra1.4.0.tar.gz \
 	185d60944ea767075d27247c3162b3bc-unowinreg.dll \
 	368f114c078f94214a308a74c7e991bc-crosextrafonts-20130214.tar.gz \
@@ -138,9 +132,10 @@ CONFIGURE_ENV+=		TMPDIR=${WRKSRC}/tmp
 
 CONFIGURE_ARGS+=	--prefix=${DESTDIR}${PREFIX}/${PKGNAME_NOREV}
 CONFIGURE_ARGS+=	--disable-ccache
-CONFIGURE_ARGS+=	--disable-dbus
+CONFIGURE_ARGS+=	--enable-dbus
 CONFIGURE_ARGS+=	--disable-epm
 CONFIGURE_ARGS+=	--disable-fetch-external
+CONFIGURE_ARGS+=	--disable-firebird-sdbc
 CONFIGURE_ARGS+=	--disable-gconf
 CONFIGURE_ARGS+=	--disable-gnome-vfs
 CONFIGURE_ARGS+=	--disable-kde4
@@ -151,13 +146,11 @@ CONFIGURE_ARGS+=	--disable-randr-link
 CONFIGURE_ARGS+=	--disable-systray
 # Enabling crashrep causes error. Non-official build does not need it.
 CONFIGURE_ARGS+=	--disable-crashdump
-CONFIGURE_ARGS+=	--enable-ext-presenter-minimizer
 # Enabling GIO causes error. losessioninstall.component not found.
 CONFIGURE_ARGS+=	--disable-gio
 CONFIGURE_ARGS+=	--enable-gstreamer
 CONFIGURE_ARGS+=	--enable-gtk3
 CONFIGURE_ARGS+=	--enable-lockdown
-CONFIGURE_ARGS+=	--enable-odk
 CONFIGURE_ARGS+=	--enable-python=system
 #CONFIGURE_ARGS+=	--enable-release-build
 CONFIGURE_ARGS+=	--enable-ext-wiki-publisher
@@ -169,38 +162,12 @@ CONFIGURE_ARGS+=	--with-fonts
 CONFIGURE_ARGS+=	--with-lang="ALL"
 CONFIGURE_ARGS+=	--with-myspell-dicts
 CONFIGURE_ARGS+=	--with-parallelism=${MAKE_JOBS:Q}
-CONFIGURE_ARGS+=	--with-system-clucene
-CONFIGURE_ARGS+=	--with-system-libxml
-CONFIGURE_ARGS+=	--with-system-boost
 CONFIGURE_ARGS+=	--with-boost-libdir=${BUILDLINK_PREFIX.boost-libs}/lib
-CONFIGURE_ARGS+=	--with-system-cairo
-CONFIGURE_ARGS+=	--with-system-curl
+CONFIGURE_ARGS+=	--with-system-libs
 CONFIGURE_ARGS+=	--with-system-dicts
-CONFIGURE_ARGS+=	--with-system-expat
-CONFIGURE_ARGS+=	--with-system-harfbuzz
-CONFIGURE_ARGS+=	--with-system-hunspell
-CONFIGURE_ARGS+=	--with-system-icu
-CONFIGURE_ARGS+=	--with-system-jars
-CONFIGURE_ARGS+=	--with-system-jpeg
-CONFIGURE_ARGS+=	--with-system-lcms2
-CONFIGURE_ARGS+=	--with-system-libexttextcat
-CONFIGURE_ARGS+=	--with-system-libpng
-CONFIGURE_ARGS+=	--with-system-libvisio
-CONFIGURE_ARGS+=	--with-system-libwpd
-CONFIGURE_ARGS+=	--with-system-libxml
-CONFIGURE_ARGS+=	--with-system-lpsolve
-CONFIGURE_ARGS+=	--with-system-mesa-headers
-CONFIGURE_ARGS+=	--with-system-nss
-CONFIGURE_ARGS+=	--with-system-openldap
-CONFIGURE_ARGS+=	--with-system-openssl
-CONFIGURE_ARGS+=	--with-system-libmwaw
-CONFIGURE_ARGS+=	--with-system-orcus
-CONFIGURE_ARGS+=	--with-system-poppler
-CONFIGURE_ARGS+=	--with-system-postgresql
-CONFIGURE_ARGS+=	--with-system-redland
-CONFIGURE_ARGS+=	--with-system-neon
-CONFIGURE_ARGS+=	--with-system-zlib
+CONFIGURE_ARGS+=	--enable-scripting-beanshell
 CONFIGURE_ARGS+=	--without-system-beanshell
+CONFIGURE_ARGS+=	--enable-scripting-javascript
 # internal vigra should be used for effective developement.
 CONFIGURE_ARGS+=	--without-system-vigra
 CONFIGURE_ARGS+=	--with-vendor="pkgsrc"
@@ -211,9 +178,9 @@ CONFIGURE_ARGS+=	--without-gssapi
 CONFIGURE_ARGS+=	--without-system-apache-commons
 CONFIGURE_ARGS+=	--with-system-cppunit
 CONFIGURE_ARGS+=	--without-system-jfreereport
+CONFIGURE_ARGS+=	--without-system-npapi-headers
 # internal sane should be used for effective developement.
 CONFIGURE_ARGS+=	--without-system-sane
-CONFIGURE_ARGS+=	--without-system-servlet-api
 # sbin might not be in PATH
 CONFIGURE_ARGS+=	ac_cv_path_SYSTEM_GENCCODE=${BUILDLINK_PREFIX.icu}/sbin/genccode
 CONFIGURE_ARGS+=	ac_cv_path_SYSTEM_GENCMN=${BUILDLINK_PREFIX.icu}/sbin/gencmn
@@ -232,10 +199,14 @@ LO_DESKTOP_FILES=	calc.desktop draw.desktop impress.desktop math.desktop \
 
 CONFIGURE_SCRIPT=	./autogen.sh
 
+#LD_LIBRARY_PATH+=	${WRKSRC}/instdir/sdk/lib:${WRKSRC}/instdir/ure/lib:${WRKSRC}/instdir/program
+
 MAKE_ENV+=		ROOT_USER=${ROOT_USER}
 MAKE_ENV+=		ROOT_GROUP=${ROOT_GROUP}
-BUILD_MAKE_FLAGS+=	VERBOSE=yes
-BUILD_TARGET=		dev-install
+MAKE_ENV+=		SHELL=${BASH}
+#MAKE_ENV+=		LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
+BUILD_MAKE_FLAGS+=	VERBOSE=true
+#BUILD_MAKE_FLAGS+=	GMAKE_OPTIONS+=-p
 
 BUILDLINK_TRANSFORM+=	rm:-ldl
 
@@ -259,6 +230,12 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/share/applications && ${LN} -s ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/share/xdg/${f}
 .endfor
 
+.include "../../converters/libabw/buildlink3.mk"
+.include "../../converters/libcdr/buildlink3.mk"
+.include "../../converters/libe-book/buildlink3.mk"
+.include "../../converters/libetonyek/buildlink3.mk"
+.include "../../converters/libfreehand/buildlink3.mk"
+.include "../../converters/libmspub/buildlink3.mk"
 .include "../../converters/libvisio/buildlink3.mk"
 .include "../../converters/libwpd/buildlink3.mk"
 .include "../../converters/libwpg/buildlink3.mk"
@@ -274,6 +251,8 @@ post-install:
 .include "../../devel/cppunit/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
+.include "../../devel/liblangtag/buildlink3.mk"
+.include "../../devel/mdds/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
@@ -282,6 +261,7 @@ post-install:
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2-xlib/buildlink3.mk"
+.include "../../graphics/graphite2/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
@@ -293,14 +273,19 @@ post-install:
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
+.include "../../net/libcmis/buildlink3.mk"
 .include "../../print/cups/buildlink3.mk"
 .include "../../print/poppler-cpp/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
+.include "../../textproc/hyphen/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libclucene/buildlink3.mk"
+.include "../../textproc/libodfgen/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/redland/buildlink3.mk"
