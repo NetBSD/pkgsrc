@@ -1,48 +1,12 @@
-$NetBSD: patch-configure.ac,v 1.1 2013/10/04 14:44:46 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.2 2014/02/02 07:43:40 ryoon Exp $
 
 * Improve portability, replace == with =
 * Detect pkgsrc apache-ant library
 * Fix installation directory
 
---- configure.ac.orig	2013-08-21 11:40:03.000000000 +0000
+--- configure.ac.orig	2014-01-27 21:35:34.000000000 +0000
 +++ configure.ac
-@@ -2088,7 +2088,7 @@ else
-     fi
- fi
- AC_MSG_RESULT($STRIP_COMPONENTS)
--if test x$STRIP_COMPONENTS == xunsupported; then
-+if test x$STRIP_COMPONENTS = xunsupported; then
-     AC_MSG_ERROR([you need a tar that is able to strip components.])
- fi
- AC_SUBST(STRIP_COMPONENTS)
-@@ -3056,7 +3056,7 @@ if test "$_os" = "WINNT"; then
- 
-         MSPDB_PATH=
- 
--        if test "$BITNESS_OVERRIDE" == ""; then
-+        if test "$BITNESS_OVERRIDE" = ""; then
-             MSPDB_PATH="$VC_PRODUCT_DIR/../Common7/IDE"
-         else
-             MSPDB_PATH="$VC_PRODUCT_DIR/bin/amd64"
-@@ -3226,7 +3226,7 @@ AC_SUBST(SHOWINCLUDES_PREFIX)
- #
- # dbghelp.dll
- #
--if test "$_os" == "WINNT"; then
-+if test "$_os" = "WINNT"; then
-     BUILD_TYPE="$BUILD_TYPE DBGHELP"
- fi
- 
-@@ -8432,7 +8432,7 @@ dnl ====================================
- dnl Check for NPAPI interface to plug LibreOffice into browser windows
- dnl ===================================================================
- AC_MSG_CHECKING([whether to plug LibreOffice into browser windows])
--if test "$_os" == WINNT -o "$_os" != Android -a "$_os" != Darwin -a "$_os" != iOS -a \
-+if test "$_os" = WINNT -o "$_os" != Android -a "$_os" != Darwin -a "$_os" != iOS -a \
-         "$enable_headless" != yes -a "$enable_gtk" != no
- then
-     AC_MSG_RESULT([yes])
-@@ -11138,7 +11138,7 @@ EOF
+@@ -11906,7 +11906,7 @@ EOF
      dnl Checking for ant.jar
      if test "$ANT_HOME" != "NO_ANT_HOME"; then
          AC_MSG_CHECKING([Ant lib directory])
@@ -51,7 +15,7 @@ $NetBSD: patch-configure.ac,v 1.1 2013/10/04 14:44:46 ryoon Exp $
              ANT_LIB="$ANT_HOME/lib"
          else
              if test -f $ANT_HOME/ant.jar; then
-@@ -11549,7 +11549,7 @@ AC_SUBST(MANDIR)
+@@ -12322,7 +12322,7 @@ AC_SUBST(MANDIR)
  DOCDIR=[$(eval echo $(eval echo $docdir))]
  AC_SUBST(DOCDIR)
  
@@ -59,4 +23,4 @@ $NetBSD: patch-configure.ac,v 1.1 2013/10/04 14:44:46 ryoon Exp $
 +INSTALLDIR="$PREFIXDIR"
  AC_SUBST(INSTALLDIR)
  
- DEVINSTALLDIR="$OUTDIR/installation"
+ TESTINSTALLDIR="${BUILDDIR}/test-install"
