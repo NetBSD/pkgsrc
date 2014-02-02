@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.6 2014/02/02 07:43:40 ryoon Exp $
+$NetBSD: distinfo,v 1.7 2014/02/02 11:09:51 ryoon Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
 Size (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 96939 bytes
-SHA1 (libreoffice/01a380acfec23bf617117ce98e318f3d-mdds_0.10.1.tar.bz2) = 199e609afa5ae08d164754f7a0a54b01f88692d0
-RMD160 (libreoffice/01a380acfec23bf617117ce98e318f3d-mdds_0.10.1.tar.bz2) = ad3574e1c0371e278a0ebac59b86371ff520a09c
-Size (libreoffice/01a380acfec23bf617117ce98e318f3d-mdds_0.10.1.tar.bz2) = 150168 bytes
 SHA1 (libreoffice/0279a21fab6f245e85a6f85fea54f511-source-code-font-1.009.tar.gz) = 66ed8eac9bac2a23ba9e3a3b3d560609fa3acc25
 RMD160 (libreoffice/0279a21fab6f245e85a6f85fea54f511-source-code-font-1.009.tar.gz) = 45c0fd5f41e82691dcdebdda87da78b0af529066
 Size (libreoffice/0279a21fab6f245e85a6f85fea54f511-source-code-font-1.009.tar.gz) = 102916 bytes
@@ -69,9 +66,6 @@ Size (libreoffice/5c781723a0d9ed6188960defba8e91cf-liberation-fonts-ttf-2.00.1.t
 SHA1 (libreoffice/625ff5f2f968dd908bca43c9469d6e6b-commons-lang-2.4-src.tar.gz) = 61ec8be8c2cf8f4c4272545666f936dd9f7e2a29
 RMD160 (libreoffice/625ff5f2f968dd908bca43c9469d6e6b-commons-lang-2.4-src.tar.gz) = c474272aa3ebf7147a3cf6a59cfa97fa33979c9e
 Size (libreoffice/625ff5f2f968dd908bca43c9469d6e6b-commons-lang-2.4-src.tar.gz) = 522654 bytes
-SHA1 (libreoffice/7042305e4208af4c2d5249d814ccce58-graphite2-1.2.3.tgz) = 3b765254d50364bca2e3eea510b3c5b817b0e32d
-RMD160 (libreoffice/7042305e4208af4c2d5249d814ccce58-graphite2-1.2.3.tgz) = 273dc9a9644bb05bc6373d4bc5ecc236e26f1b38
-Size (libreoffice/7042305e4208af4c2d5249d814ccce58-graphite2-1.2.3.tgz) = 5120099 bytes
 SHA1 (libreoffice/798b2ffdc8bcfe7bca2cf92b62caf685-rhino1_5R5.zip) = 8a90669029e107b61953b90ba11545fef586c2ca
 RMD160 (libreoffice/798b2ffdc8bcfe7bca2cf92b62caf685-rhino1_5R5.zip) = 68e248ec03675458f0536282ef250efa42c4c154
 Size (libreoffice/798b2ffdc8bcfe7bca2cf92b62caf685-rhino1_5R5.zip) = 1521926 bytes
@@ -84,9 +78,6 @@ Size (libreoffice/8ce2fcd72becf06c41f7201d15373ed9-librepository-1.1.6.zip) = 76
 SHA1 (libreoffice/97b2d4dba862397f446b217e2b623e71-libloader-1.1.6.zip) = 47b58e0ef2d856df26372a7061ae43fae6e08051
 RMD160 (libreoffice/97b2d4dba862397f446b217e2b623e71-libloader-1.1.6.zip) = 61672340e92957a5b72cddddcfcbf56d9602842c
 Size (libreoffice/97b2d4dba862397f446b217e2b623e71-libloader-1.1.6.zip) = 2938721 bytes
-SHA1 (libreoffice/a2f6010987e1c601274ab5d63b72c944-hyphen-2.8.4.tar.gz) = 4481ed35d147d2d67dccf49cb483ec8744e17ab7
-RMD160 (libreoffice/a2f6010987e1c601274ab5d63b72c944-hyphen-2.8.4.tar.gz) = 23a4268d7b28b4ecba717eaef3cf4fffd940787b
-Size (libreoffice/a2f6010987e1c601274ab5d63b72c944-hyphen-2.8.4.tar.gz) = 636667 bytes
 SHA1 (libreoffice/a7983f859eafb2677d7ff386a023bc40-xsltml_2.1.2.zip) = 2d49e11b0b711970f494294dc3698f05eb294853
 RMD160 (libreoffice/a7983f859eafb2677d7ff386a023bc40-xsltml_2.1.2.zip) = 923870cf88023713a492e0a5c5d5707ec21d8739
 Size (libreoffice/a7983f859eafb2677d7ff386a023bc40-xsltml_2.1.2.zip) = 23150 bytes
@@ -102,9 +93,6 @@ Size (libreoffice/b3174b11c2b6a341f5c99b31088bd67b-liberation-fonts-ttf-1.07.3.t
 SHA1 (libreoffice/b63e6340a02ff1cacfeadb2c42286161-JLanguageTool-1.7.0.tar.bz2) = aa8faa4f9e6721eed9bc6878862d74d0cb23251c
 RMD160 (libreoffice/b63e6340a02ff1cacfeadb2c42286161-JLanguageTool-1.7.0.tar.bz2) = e0ac7cc60e692c22a604949dd6c0b3c2be997db8
 Size (libreoffice/b63e6340a02ff1cacfeadb2c42286161-JLanguageTool-1.7.0.tar.bz2) = 37482428 bytes
-SHA1 (libreoffice/b85436266b2ac91d351ab5684b181151-libwpg-0.2.2.tar.bz2) = e9484e795259485ece9a984f60776704d55afeeb
-RMD160 (libreoffice/b85436266b2ac91d351ab5684b181151-libwpg-0.2.2.tar.bz2) = 4b631a8f3fcb261205b04c4b0849256d159e8f31
-Size (libreoffice/b85436266b2ac91d351ab5684b181151-libwpg-0.2.2.tar.bz2) = 376802 bytes
 SHA1 (libreoffice/ba2930200c9f019c2d93a8c88c651a0f-flow-engine-0.9.4.zip) = 1acd76cd63f7b19f6a0252eb029c3cb13a25aa9b
 RMD160 (libreoffice/ba2930200c9f019c2d93a8c88c651a0f-flow-engine-0.9.4.zip) = ecf14c46ddf095734752ef260134c97b1772be57
 Size (libreoffice/ba2930200c9f019c2d93a8c88c651a0f-flow-engine-0.9.4.zip) = 743031 bytes
@@ -114,6 +102,9 @@ Size (libreoffice/c3c1a8ba7452950636e871d25020ce0d-pt-serif-font-1.0000W.tar.gz)
 SHA1 (libreoffice/c74b7223abe75949b4af367942d96c7a-crosextrafonts-carlito-20130920.tar.gz) = 65ceb1377897a4d5a404134423728592aea6eb13
 RMD160 (libreoffice/c74b7223abe75949b4af367942d96c7a-crosextrafonts-carlito-20130920.tar.gz) = c866f23bc73a0f7e883c08d9056ef10b7af8bb58
 Size (libreoffice/c74b7223abe75949b4af367942d96c7a-crosextrafonts-carlito-20130920.tar.gz) = 1169488 bytes
+SHA1 (libreoffice/d62650a6f908e85643e557a236ea989c-vigra1.6.0.tar.gz) = 9714a0c4efb77726a1140329e98e5db057f9a69f
+RMD160 (libreoffice/d62650a6f908e85643e557a236ea989c-vigra1.6.0.tar.gz) = cc9f6626801182a0ee71ec9eb8fa34c38f8777a7
+Size (libreoffice/d62650a6f908e85643e557a236ea989c-vigra1.6.0.tar.gz) = 16525605 bytes
 SHA1 (libreoffice/d8bd5eed178db6e2b18eeed243f85aa8-flute-1.1.6.zip) = 3478ebc27bb76025f4b5c2ae6a9bac6090e2cb09
 RMD160 (libreoffice/d8bd5eed178db6e2b18eeed243f85aa8-flute-1.1.6.zip) = d5b50ff1bcb09efd7c1f4167f2d0d38065ba0166
 Size (libreoffice/d8bd5eed178db6e2b18eeed243f85aa8-flute-1.1.6.zip) = 207563 bytes
@@ -126,9 +117,6 @@ Size (libreoffice/e7a384790b13c29113e22e596ade9687-LinLibertineG-20120116.zip) =
 SHA1 (libreoffice/ea570af93c284aa9e5621cd563f54f4d-bsh-2.0b1-src.tar.gz) = 51537a09aa546336b0477c70077f3e21d857caa7
 RMD160 (libreoffice/ea570af93c284aa9e5621cd563f54f4d-bsh-2.0b1-src.tar.gz) = 03c1abf40f5950062ff8802829b8fa718c146512
 Size (libreoffice/ea570af93c284aa9e5621cd563f54f4d-bsh-2.0b1-src.tar.gz) = 726942 bytes
-SHA1 (libreoffice/ea91f2fb4212a21d708aced277e6e85a-vigra1.4.0.tar.gz) = 908c4053f8f4e6214426a41b1e4134e7bc86098e
-RMD160 (libreoffice/ea91f2fb4212a21d708aced277e6e85a-vigra1.4.0.tar.gz) = a2776747753219a110e8d5b39939d0914cfec37d
-Size (libreoffice/ea91f2fb4212a21d708aced277e6e85a-vigra1.4.0.tar.gz) = 12735186 bytes
 SHA1 (libreoffice/eeb2c7ddf0d302fba4bfc6e97eac9624-libbase-1.1.6.zip) = 43a7ff11dd15370d456b20a093e1ee81279163a0
 RMD160 (libreoffice/eeb2c7ddf0d302fba4bfc6e97eac9624-libbase-1.1.6.zip) = 99ddfde4ffb6a76f1bf796dd26c0b10e45d8ddea
 Size (libreoffice/eeb2c7ddf0d302fba4bfc6e97eac9624-libbase-1.1.6.zip) = 427800 bytes
@@ -138,12 +126,6 @@ Size (libreoffice/f872f4ac066433d8ff92f5e316b36ff9-dejavu-fonts-ttf-2.33.zip) = 
 SHA1 (libreoffice/f94d9870737518e3b597f9265f4e9803-libserializer-1.1.6.zip) = 5ecb895ffc1eff2c381fa78d2197d0c57422b3df
 RMD160 (libreoffice/f94d9870737518e3b597f9265f4e9803-libserializer-1.1.6.zip) = 575a7daf02efbab9ea972e03a6870f7f13112806
 Size (libreoffice/f94d9870737518e3b597f9265f4e9803-libserializer-1.1.6.zip) = 211919 bytes
-SHA1 (libreoffice/libcdr-0.0.14.tar.bz2) = 6656217a2df79381115bf5c03c7789a7c800b6c9
-RMD160 (libreoffice/libcdr-0.0.14.tar.bz2) = 7153faa881f0da0062961bb94e69a5dd32407236
-Size (libreoffice/libcdr-0.0.14.tar.bz2) = 691524 bytes
-SHA1 (libreoffice/libmspub-0.0.6.tar.bz2) = 9163275fbf674cbb0d7e07145988b768b20a2984
-RMD160 (libreoffice/libmspub-0.0.6.tar.bz2) = 16b1a0181b95dd986745be78de88594117aac2a2
-Size (libreoffice/libmspub-0.0.6.tar.bz2) = 433629 bytes
 SHA1 (libreoffice/libreoffice-4.2.0.4.tar.xz) = 58146b66b5a07aabaf1894b845880d412b15e13b
 RMD160 (libreoffice/libreoffice-4.2.0.4.tar.xz) = a58a9daa43f5effaa425f1f71badaae6cccd5f96
 Size (libreoffice/libreoffice-4.2.0.4.tar.xz) = 123114364 bytes
