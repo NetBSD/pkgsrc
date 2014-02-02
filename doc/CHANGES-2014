@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.546 2014/02/02 13:51:34 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.547 2014/02/02 13:58:46 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -859,3 +859,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated pkgtools/pkg_notify to 0.4.4 [wiz 2014-02-02]
 	Updated devel/mdds to 0.10.1 [ryoon 2014-02-02]
 	Updated net/py-amqp to 1.4.2 [rodent 2014-02-02]
+	Updated net/py-kombu to 3.0.10 [rodent 2014-02-02]
