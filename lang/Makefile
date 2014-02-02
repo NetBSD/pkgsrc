@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.366 2014/01/29 01:17:12 agc Exp $
+# $NetBSD: Makefile,v 1.367 2014/02/02 00:11:51 rodent Exp $
 #
 
 COMMENT=	Programming languages
@@ -150,6 +150,7 @@ SUBDIR+=	polyml
 SUBDIR+=	py-basicproperty
 SUBDIR+=	py-cxfreeze
 SUBDIR+=	py-pyrex
+SUBDIR+=	py-six
 SUBDIR+=	py26-html-docs
 SUBDIR+=	py27-html-docs
 #SUBDIR+=	python		# only contains Makefile fragments
