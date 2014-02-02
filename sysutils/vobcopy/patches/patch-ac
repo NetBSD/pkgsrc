@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2010/09/16 12:02:16 wiz Exp $
+$NetBSD: patch-ac,v 1.5 2014/02/02 20:20:50 wiz Exp $
 
 --- vobcopy.h.orig	2009-06-08 20:15:39.000000000 +0000
 +++ vobcopy.h
@@ -22,7 +22,7 @@ $NetBSD: patch-ac,v 1.4 2010/09/16 12:02:16 wiz Exp $
  
  #if !defined( __NetBSD__ ) || \
         ( defined( __NetBSD__) && ( __NetBSD_Version__ < 200040000 ) )
-@@ -100,20 +103,23 @@ typedef enum  { FALSE=0, TRUE=1 }  bool;
+@@ -100,20 +103,27 @@ typedef enum  { FALSE=0, TRUE=1 }  bool;
  #define GETMNTINFO_USES_STATVFS
  
  #    endif
@@ -37,6 +37,10 @@ $NetBSD: patch-ac,v 1.4 2010/09/16 12:02:16 wiz Exp $
  #endif
  
 -# if !defined(OpenBSD)
++#if defined(__NetBSD__) && !defined(O_LARGEFILE)
++#define O_LARGEFILE 0
++#endif
++
 +# if !defined(OpenBSD) && defined(O_LARGEFILE)
  #define HAS_LARGEFILE 1
  #endif
@@ -49,7 +53,7 @@ $NetBSD: patch-ac,v 1.4 2010/09/16 12:02:16 wiz Exp $
  
  #else /* *BSD */
  
-@@ -134,8 +140,10 @@ typedef enum  { FALSE=0, TRUE=1 }  bool;
+@@ -134,8 +144,10 @@ typedef enum  { FALSE=0, TRUE=1 }  bool;
  #define GETMNTINFO_USES_STATFS 1
  #define USE_GETMNTINFO 1
  
@@ -60,7 +64,7 @@ $NetBSD: patch-ac,v 1.4 2010/09/16 12:02:16 wiz Exp $
  typedef int bool;
  
  #  endif
-@@ -163,7 +171,11 @@ typedef int bool;
+@@ -163,7 +175,11 @@ typedef int bool;
  #define HAVE_GETOPT_LONG 1
  #define HAS_LARGEFILE    1
  
@@ -72,7 +76,7 @@ $NetBSD: patch-ac,v 1.4 2010/09/16 12:02:16 wiz Exp $
  
  #elif defined( __GLIBC__ )
  
-@@ -174,13 +186,21 @@ typedef int bool;
+@@ -174,13 +190,21 @@ typedef int bool;
  #define HAVE_GETOPT_LONG 1
  #define HAS_LARGEFILE    1
  
@@ -94,7 +98,7 @@ $NetBSD: patch-ac,v 1.4 2010/09/16 12:02:16 wiz Exp $
  
  #if defined( __USE_FILE_OFFSET64 )
  #  define HAS_LARGEFILE 1
-@@ -232,6 +252,6 @@ char *safestrncpy(char *dest, const char
+@@ -232,6 +256,6 @@ char *safestrncpy(char *dest, const char
  int check_progress( void ); /* this can be removed because the one below supersedes it */
  int progressUpdate( int starttime, int cur, int tot, int force );
  
