@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/02/02 15:39:01 rodent Exp $
+
+SHA1 (SDL2_mixer-2.0.0.tar.gz) = 9ed975587f09a1776ba9776dcc74a58e695aba6e
+RMD160 (SDL2_mixer-2.0.0.tar.gz) = a49884a68351f77fefe76c2fcf8ee317e6d971e2
+Size (SDL2_mixer-2.0.0.tar.gz) = 10119589 bytes
