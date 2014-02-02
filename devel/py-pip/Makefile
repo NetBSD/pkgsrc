@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2014/01/27 18:41:12 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2014/02/02 06:58:08 rodent Exp $
 
-DISTNAME=	pip-1.5
+DISTNAME=	pip-1.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pip/
