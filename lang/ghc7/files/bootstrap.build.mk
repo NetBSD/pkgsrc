@@ -31,5 +31,5 @@ INTEGER_LIBRARY    = integer-simple
 BIN_DIST_NAME      = ghc-$(ProjectVersion)-boot
 
 libraries/terminfo_CONFIGURE_OPTS += \
-	  --configure-option=--with-curses-includes=@CURSES_PREFIX@/include \
-	  --configure-option=--with-curses-libraries=@CURSES_PREFIX@/lib
+	  --configure-option=--with-curses-includes=@CURSES_INCDIR@ \
+	  --configure-option=--with-curses-libraries=@CURSES_LIBDIR@
