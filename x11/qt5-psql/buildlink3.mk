@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2013/12/15 09:42:44 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2014/02/03 16:17:12 ryoon Exp $
 
 BUILDLINK_TREE+=	qt5-sqlite3
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	qt5-sqlite3
 QT5_SQLITE3_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt5-sqlite3+=	qt5-sqlite3>=5.2.0
+BUILDLINK_ABI_DEPENDS.qt5-sqlite3?=	qt5-psql>=5.2.0nb2
 BUILDLINK_PKGSRCDIR.qt5-sqlite3?=	../../x11/qt5-sqlite3
 
 BUILDLINK_LIBDIRS.qt5-sqlite3+=		qt5/plugins
