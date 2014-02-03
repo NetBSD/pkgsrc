@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2014/01/31 06:32:16 obache Exp $
+# $NetBSD: Makefile,v 1.60 2014/02/03 16:38:53 wiz Exp $
 
 COMMENT=		Multi-protocol Instant Messaging client GTK frontend
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.10.8 (finch)
 
 .include		"../../chat/libpurple/Makefile.common"
 
