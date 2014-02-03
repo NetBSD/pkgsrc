@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.562 2014/02/03 11:39:59 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.563 2014/02/03 15:25:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -875,3 +875,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/suse131_base to 13.1nb1 [obache 2014-02-03]
 	Added databases/py-sqlsoup version 0.9.0 [rodent 2014-02-03]
 	Updated devel/mercurial to 2.9 [wiz 2014-02-03]
+	Updated www/contao211 to 2.11.14 [taca 2014-02-03]
+	Updated www/contao211-example to 2.11.14 [taca 2014-02-03]
+	Updated www/contao32 to 3.2.5 [taca 2014-02-03]
+	Updated www/contao32-example to 3.2.5 [taca 2014-02-03]
