@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/02/02 15:56:29 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/03 08:59:33 rodent Exp $
 
 DISTNAME=	SDL2_net-2.0.0
 CATEGORIES=	net
@@ -17,6 +17,8 @@ USE_LANGUAGES=	c c++
 PKGCONFIG_OVERRIDE+=	SDL2_net.pc.in
 
 .include "options.mk"
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
