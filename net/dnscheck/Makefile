@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.6 2014/01/27 18:41:13 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2014/02/03 12:45:26 pettai Exp $
 
-DISTNAME=	dotse-dnscheck-1.4.1-0-ga93f48c
-PKGNAME=	dnscheck-1.4.1
+DISTNAME=	dotse-dnscheck-1.5.4-0-g352a15c
+PKGNAME=	dnscheck-1.5.4
 CATEGORIES=	net perl5
-MASTER_SITES=	-https://github.com/dotse/dnscheck/tarball/1.4.1
+MASTER_SITES=	-https://github.com/dotse/dnscheck/tarball/1.5.4
 
 MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	https://github.com/dotse/dnscheck/
 COMMENT=	DNSCheck is a DNS quality checker
 LICENSE=	2-clause-bsd
+
+# If you're not able to download the distfile, try using
+#FETCH_USING=	curl # in mk.conf or on the command-line
 
 DEPENDS+=	p5-Net-DNS>=0.65:../../net/p5-Net-DNS
 DEPENDS+=	p5-Net-DNS-SEC>=0.16:../../security/p5-Net-DNS-SEC
@@ -30,12 +33,12 @@ DEPENDS+=	p5-Text-Template-[0-9]*:../../textproc/p5-Text-Template
 
 REPLACE_PERL+=  lib/DNSCheck.pm lib/DNSCheck/*.pm
 REPLACE_PERL+=  lib/DNSCheck/Lookup/*.pm lib/DNSCheck/Test/*.pm
-REPLACE_PERL+=  apps/dnscheck-packetcheck
+REPLACE_PERL+=  apps/dnscheck-enqueue apps/dnscheck-packetcheck
 
 PERL5_PACKLIST=	auto/DNSCheck/.packlist
 BUILDLINK_API_DEPENDS.perl+=	perl>=5.6.1
 
-WRKSRC=         ${WRKDIR}/dotse-dnscheck-f058797/engine
+WRKSRC=         ${WRKDIR}/dotse-dnscheck-006ca8d/engine
 SYSCONFDIR=     `${BASENAME} ${PKG_SYSCONFDIR}`
 
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
