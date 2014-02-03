@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/12/05 11:42:14 obache Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/03 03:14:18 obache Exp $
 
 DISTNAME=	suse_base-${SUSE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	emulators
 RPMPKGS+=	aaa_base-${SUSE_VERSION}-16.17.1.${SUSE_ARCH}
 RPMPKGS+=	bash-4.2-68.1.5.${SUSE_ARCH}
@@ -23,6 +24,7 @@ RPMPKGS+=	libuuid1-2.23.2-3.1.${SUSE_ARCH}
 RPMPKGS+=	net-tools-1.60-763.1.2.${SUSE_ARCH}
 RPMPKGS+=	libz1-1.2.8-3.1.2.${SUSE_ARCH}
 RPMPKGS+=	liblzma5-5.0.5-2.1.20.${SUSE_ARCH}
+RPMPKGS+=	openSUSE-release-${SUSE_VERSION}-1.10.${SUSE_ARCH}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Linux compatibility package
@@ -58,13 +60,11 @@ SUBST_VARS.suse=	EMULDIR LINUX_BASE SUSE_ARCH SUSE_VERSION
 BRANDELF_CMD=	${BRANDELF:D${BRANDELF} -t Linux ${DESTDIR}${LINUX_LDCONFIG}:U${TRUE}}
 
 post-extract:
-	${CP} ${FILESDIR}/SuSE-release ${WRKSRC}
 	${CP} ${FILESDIR}/*.sh ${WRKSRC}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/linux-mkpwd.sh \
 		${DESTDIR}${PREFIX}/sbin/${LINUX_BASE}-mkpwd
-	${INSTALL_DATA} ${WRKSRC}/SuSE-release ${DESTDIR}${EMULDIR}/etc
 	${BRANDELF_CMD}
 	${SED}	-e 's:#! :#! ${EMULDIR}:' \
 		-e 's:^RTLD=:RTLD=/${EMULSUBDIR}:' \
