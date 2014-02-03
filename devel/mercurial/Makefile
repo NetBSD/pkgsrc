@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.98 2014/01/25 10:30:02 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2014/02/03 11:39:49 wiz Exp $
 
-DISTNAME=	mercurial-2.8.2
+DISTNAME=	mercurial-2.9
 CATEGORIES=	devel scm
 MASTER_SITES=	http://mercurial.selenic.com/release/
 
@@ -17,8 +17,11 @@ USE_TOOLS+=			gmake msgfmt
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 INSTALLATION_DIRS+=	share/doc/mercurial
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.8.2
-# the following setup argument was requested by 2.8.2 when compiling
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.9
+# see also http://mercurial.selenic.com/wiki/SupportedPythonVersions
+# 3.x support is not planned for the near future
+#
+# the following setup argument was requested when compiling
 # for python-3.x
 #.include "../../lang/python/pyversion.mk"
 #
