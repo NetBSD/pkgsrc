@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2013/11/02 17:29:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.37 2014/02/03 11:39:49 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -437,6 +437,9 @@ ${PYSITELIB}/mercurial/parsers.so
 ${PYSITELIB}/mercurial/patch.py
 ${PYSITELIB}/mercurial/patch.pyc
 ${PYSITELIB}/mercurial/patch.pyo
+${PYSITELIB}/mercurial/pathutil.py
+${PYSITELIB}/mercurial/pathutil.pyc
+${PYSITELIB}/mercurial/pathutil.pyo
 ${PYSITELIB}/mercurial/peer.py
 ${PYSITELIB}/mercurial/peer.pyc
 ${PYSITELIB}/mercurial/peer.pyo
