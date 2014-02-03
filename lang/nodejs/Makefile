@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2014/01/25 10:30:12 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2014/02/03 17:23:48 fhajny Exp $
 
-DISTNAME=	node-v0.10.24
+DISTNAME=	node-v0.10.25
 CATEGORIES=	devel
 MASTER_SITES=	http://nodejs.org/dist/${DISTNAME:S/node-//}/
 PKGNAME=	${DISTNAME:S/-v/js-/}
@@ -58,6 +58,7 @@ BUILD_DEPENDS+=	lockf-[0-9]*:../../sysutils/lockf
 
 pre-install:
 	${FIND} ${WRKSRC}/deps/npm -name '*.orig' | ${XARGS} ${RM} -f
+	${CHMOD} -R g-w ${WRKSRC}
 
 .if ${OPSYS} != "Darwin"
 .include "../../devel/libexecinfo/buildlink3.mk"
