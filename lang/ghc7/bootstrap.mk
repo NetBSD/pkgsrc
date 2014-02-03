@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.5 2014/02/03 07:02:32 obache Exp $
+# $NetBSD: bootstrap.mk,v 1.6 2014/02/03 07:06:55 obache Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler based on a per-platform
 # basis.
@@ -80,7 +80,7 @@ pre-configure:
 
 #BUILDLINK_PASSTHRU_DIRS=	${PREFIX}/lib/${PKGNAME_NOREV}
 
-.if exists(${WRKDIR}/${PKGNAME_NOREV}/mk/config.mk)
+.if exists(${WRKDIR}/${DISTNAME:S/-src$//}/mk/config.mk)
 bootstrap:
 	@${ERROR_MSG} "You have already configured the package in a way\
 	that building bootstrapping compiler is impossible."
