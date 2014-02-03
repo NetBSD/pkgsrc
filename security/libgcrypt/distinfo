@@ -1,14 +1,9 @@
-$NetBSD: distinfo,v 1.46 2014/01/13 11:44:27 obache Exp $
+$NetBSD: distinfo,v 1.47 2014/02/03 16:51:35 wiz Exp $
 
-SHA1 (libgcrypt-1.6.0.tar.bz2) = 43283c0b41c41e3d3bc13c2d8f937dfe2aaa1a77
-RMD160 (libgcrypt-1.6.0.tar.bz2) = 33e4e45116a64999c4cd0d132a4a968612057f40
-Size (libgcrypt-1.6.0.tar.bz2) = 2499149 bytes
+SHA1 (libgcrypt-1.6.1.tar.bz2) = f03d9b63ac3b17a6972fc11150d136925b702f02
+RMD160 (libgcrypt-1.6.1.tar.bz2) = df69424afa6fa27a1ad54b9ffae1d5bb4903f6b2
+Size (libgcrypt-1.6.1.tar.bz2) = 2470885 bytes
 SHA1 (patch-aa) = 7c46612f912d45dfd4ce4f4b510e72c00bd38585
 SHA1 (patch-ab) = 6fac21daa26b7de3b13839d076f78a74400efce7
 SHA1 (patch-ad) = 19345b7d164521d526a44eb3f1a465ff09d8266c
-SHA1 (patch-cipher_Makefile.am) = 90ec53aaba6b7efcbdaac95eefeccdbd1ed0356b
-SHA1 (patch-cipher_Makefile.in) = c9c98052e061df3556d660f40a6e602e1fb724c6
-SHA1 (patch-cipher_bithelp.h) = d624c33777ad3367cd527f4c141bcbede310df2b
-SHA1 (patch-cipher_blowfish-arm.S) = ec81170eb3a45bc160394a5835de0171c24b95ea
-SHA1 (patch-cipher_serpent-armv7-neon.S) = 6941ec8dda48785961f4cb05a64724ff7298dd7b
 SHA1 (patch-configure) = c4e10bdb7e00a44d507f5b964f3e71a63828cd0a
