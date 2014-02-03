@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.6 2014/02/03 07:06:55 obache Exp $
+# $NetBSD: bootstrap.mk,v 1.7 2014/02/03 09:48:44 obache Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler based on a per-platform
 # basis.
@@ -116,7 +116,9 @@ ${WRKDIR}/stamp-configure-boot: ${WRKDIR}/stamp-lndir-boot
 		CONF_GCC_LINKER_OPTS_STAGE2="-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib" \
 		CONF_LD_LINKER_OPTS_STAGE2="-L${PREFIX}/lib ${LINKER_RPATH_FLAG}${PREFIX}/lib" \
 		${SH} ./configure && \
-		${SED} -e "s,@CURSES_PREFIX@,${BUILDLINK_PREFIX.curses:Q},g" /${FILESDIR:Q}/bootstrap.build.mk > mk/build.mk
+		${SED} -e "s,@CURSES_INCDIR@,${BUILDLINK_PREFIX.curses:Q}/${BUILDLINK_INCDIRS.ncurses:Uinclude},g" \
+			-e "s,@CURSES_LIBDIR@,${BUILDLINK_PREFIX.curses:Q}/lib,g" \
+			${FILESDIR:Q}/bootstrap.build.mk > mk/build.mk
 	${TOUCH} ${.TARGET}
 
 ${WRKDIR}/stamp-build-boot: ${WRKDIR}/stamp-configure-boot
