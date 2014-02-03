@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.56 2014/02/03 15:20:39 taca Exp $
+# $NetBSD: Makefile.common,v 1.57 2014/02/03 15:23:22 taca Exp $
 #
 # used by www/contao/Makefile.example"
 # used by www/contao211/Makefile
@@ -9,15 +9,12 @@ CT_MASTER_SITE=	https://github.com/contao/core/archive/
 
 # current release
 CT211_VERSION=	2.11.14
-CT31_VERSION=	3.1.5
-CT32_VERSION=	3.2.4
+CT32_VERSION=	3.2.5
 
 CT_VERS?=	211
 
 .if ${CT_VERS} == "211"
 CT_VERSION=	${CT211_VERSION}
-.elif ${CT_VERS} == "31"
-CT_VERSION=	${CT31_VERSION}
 .elif ${CT_VERS} == "32"
 CT_VERSION=	${CT32_VERSION}
 .else
