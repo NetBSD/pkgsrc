@@ -1,0 +1,22 @@
+$NetBSD: patch-configure,v 1.1 2014/02/03 16:01:19 ryoon Exp $
+
+--- configure.orig	2014-02-02 23:44:04.000000000 +0000
++++ configure
+@@ -18735,7 +18735,7 @@ else
+   enable_x11=yes
+ fi
+ 
+-if test "x$enable_x11" == xyes; then
++if test "x$enable_x11" = xyes; then
+ 
+ pkg_failed=no
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for XCB_XKB" >&5
+@@ -18810,7 +18810,7 @@ $as_echo "yes" >&6; }
+ 
+ fi
+ fi
+- if test "x$enable_x11" == xyes; then
++ if test "x$enable_x11" = xyes; then
+   ENABLE_X11_TRUE=
+   ENABLE_X11_FALSE='#'
+ else
