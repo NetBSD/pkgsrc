@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.560 2014/02/03 03:14:36 obache Exp $
+$NetBSD: CHANGES-2014,v 1.561 2014/02/03 10:21:24 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -873,3 +873,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added audio/glyr version 1.0.3 [rodent 2014-02-02]
 	Updated devel/nspr to 4.10.3 [ryoon 2014-02-02]
 	Updated emulators/suse131_base to 13.1nb1 [obache 2014-02-03]
+	Added databases/py-sqlsoup version 0.9.0 [rodent 2014-02-03]
