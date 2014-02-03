@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.563 2014/02/03 15:25:28 taca Exp $
+$NetBSD: CHANGES-2014,v 1.564 2014/02/03 16:02:09 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -879,3 +879,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/contao211-example to 2.11.14 [taca 2014-02-03]
 	Updated www/contao32 to 3.2.5 [taca 2014-02-03]
 	Updated www/contao32-example to 3.2.5 [taca 2014-02-03]
+	Updated x11/libxkbcommon to 0.4.0 [ryoon 2014-02-03]
