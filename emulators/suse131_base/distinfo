@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2014/02/03 03:08:08 obache Exp $
+$NetBSD: distinfo,v 1.3 2014/02/03 03:14:18 obache Exp $
 
 SHA1 (suse131/aaa_base-13.1-16.17.1.i586.rpm) = de632d236e08da14f0591a94e7080fd22757db38
 RMD160 (suse131/aaa_base-13.1-16.17.1.i586.rpm) = d5ccd2229715daf2637a558cf49e29216bb06000
@@ -126,3 +126,9 @@ Size (suse131/net-tools-1.60-763.1.2.i586.rpm) = 223817 bytes
 SHA1 (suse131/net-tools-1.60-763.1.2.x86_64.rpm) = 072966776653a3de3da29d7ddb1043f55340c153
 RMD160 (suse131/net-tools-1.60-763.1.2.x86_64.rpm) = 80d15846eabb1b030eceb178c2ebb8b53fab7ebb
 Size (suse131/net-tools-1.60-763.1.2.x86_64.rpm) = 227965 bytes
+SHA1 (suse131/openSUSE-release-13.1-1.10.i586.rpm) = 8019e299a87c72c8ed527368e0d067728cfbf80c
+RMD160 (suse131/openSUSE-release-13.1-1.10.i586.rpm) = fd7e303c715ed51ba06fee1a8c175411919a403f
+Size (suse131/openSUSE-release-13.1-1.10.i586.rpm) = 156048 bytes
+SHA1 (suse131/openSUSE-release-13.1-1.10.x86_64.rpm) = 16e168b4163994b93a90aeb58076331468d21c22
+RMD160 (suse131/openSUSE-release-13.1-1.10.x86_64.rpm) = 37240ecce96c5749b184969c32ec0820afc48cd0
+Size (suse131/openSUSE-release-13.1-1.10.x86_64.rpm) = 156032 bytes
