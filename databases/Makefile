@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.444 2014/01/30 04:55:57 rodent Exp $
+# $NetBSD: Makefile,v 1.445 2014/02/03 10:22:23 rodent Exp $
 
 COMMENT=	Databases
 
@@ -338,6 +338,7 @@ SUBDIR+=	py-sqlite
 SUBDIR+=	py-sqlite2
 SUBDIR+=	py-sqlite3
 SUBDIR+=	py-sqlparse
+SUBDIR+=	py-sqlsoup
 SUBDIR+=	py-sybase
 SUBDIR+=	py-table
 SUBDIR+=	py-tokyocabinet
