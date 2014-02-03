@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.4 2014/02/01 13:06:19 obache Exp $
+# $NetBSD: bootstrap.mk,v 1.5 2014/02/03 07:02:32 obache Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler based on a per-platform
 # basis.
@@ -85,13 +85,8 @@ bootstrap:
 	@${ERROR_MSG} "You have already configured the package in a way\
 	that building bootstrapping compiler is impossible."
 	@${FAIL_MSG}  "Please run \"${MAKE} clean patch\" first."
-
-.elif !exists(${WRKDIR}/${PKGNAME_NOREV}/rts/ghc.mk.orig)
-bootstrap:
-	@${FAIL_MSG} "Please run \"${MAKE} patch\" first."
-
 .else
-bootstrap: ${WRKDIR}/${BOOT_ARCHIVE}
+bootstrap: patch .WAIT ${WRKDIR}/${BOOT_ARCHIVE}
 	@${PHASE_MSG} "Done creating" ${WRKDIR}/${BOOT_ARCHIVE}
 
 ${WRKDIR}/lndir:
