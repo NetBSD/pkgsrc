@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.49 2013/12/24 15:29:44 tron Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.50 2014/02/03 16:09:34 wiz Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -139,11 +139,6 @@ with each package.</para>
   </listitem>
 
   <listitem>
-    <para><filename role="pkg">pkgtools/xpkgwedge</filename>: Put X11
-      packages someplace else (enabled by default).</para>
-  </listitem>
-
-  <listitem>
     <para><filename role="pkg">devel/cpuflags</filename>: Determine
       the best compiler flags to optimise code for your current
       CPU and compiler. </para>
@@ -155,6 +150,12 @@ with each package.</para>
 etc:</para>
 
 <itemizedlist>
+
+  <listitem>
+    <para><filename role="pkg">pkgtools/pkgin</filename>: A package
+    update tool similar to apt(1). Download, install, and upgrade
+    binary packages easily.</para>
+  </listitem>
 
   <listitem>
     <para><filename role="pkg">pkgtools/pkg_chk</filename>: Reports on
@@ -202,14 +203,8 @@ etc:</para>
   </listitem>
 
   <listitem>
-    <para><filename role="pkg">pkgtools/rpm2pkg</filename>,
-      <filename role="pkg">pkgtools/url2pkg</filename>: Aids in
+    <para><filename role="pkg">pkgtools/url2pkg</filename>: Aids in
       converting to pkgsrc.</para>
-  </listitem>
-
-  <listitem>
-    <para><filename role="pkg">pkgtools/gensolpkg</filename>: Convert
-      pkgsrc to a Solaris package.</para>
   </listitem>
 
 </itemizedlist>
@@ -327,6 +322,26 @@ are:</para>
 ftp_proxy=ftp://orpheus.amdahl.com:80/
 http_proxy=http://orpheus.amdahl.com:80/
 </programlisting>
+
+</sect1>
+
+<!-- ================================================================== -->
+
+<sect1 id="fetch-https">
+<title>How to fetch files from HTTPS sites</title>
+
+<para>Some fetch tools are not prepared to support HTTPS by default
+(for example, the one in NetBSD 6.0), or the one installed by the
+pkgsrc bootstrap (to avoid an openssl dependency that low in the
+dependency graph).</para>
+
+<para>Usually you won't notice, because distribution files are
+mirrored weekly to <quote>ftp.NetBSD.org</quote>, but that might not
+be often enough if you are following pkgsrc-current. In that case, set
+<varname>FETCH_USING</varname> in your &mk.conf; file to
+<quote>curl</quote> or <quote>wget</quote>, which are both compiled
+with HTTPS support by default. Of course, these tools need to be
+installed before you can use them this way.</para>
 
 </sect1>
 
