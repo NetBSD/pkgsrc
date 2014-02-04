@@ -1,20 +1,16 @@
-# $NetBSD: Makefile,v 1.25 2012/06/02 08:51:37 cheusov Exp $
+# $NetBSD: Makefile,v 1.26 2014/02/04 14:33:54 richard Exp $
 #
 
 .include "../../sysutils/coreutils/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/coreutils/gnuls/}
-PKGREVISION=	2
 CATEGORIES=	misc
 
 COMMENT=	GNU ls utility with color support
 
 CONFLICTS=	coreutils-[0-9]* linuxls-[0-9]*
 
-do-build:
-	${RUN} cd ${WRKSRC}/lib && ${BUILD_MAKE_CMD} all
-	${RUN} cd ${WRKSRC}/src && ${BUILD_MAKE_CMD} version.h
-	${RUN} cd ${WRKSRC}/src && ${BUILD_MAKE_CMD} dircolors ls
+BUILD_TARGET=	gnuls
 
 AUTO_MKDIRS=	yes
 

@@ -1,0 +1,14 @@
+$NetBSD: patch-Makefile.in,v 1.1 2014/02/04 14:33:54 richard Exp $
+
+--- Makefile.in.orig	2013-12-13 15:20:00.000000000 +0000
++++ Makefile.in
+@@ -4395,6 +4395,9 @@ pr_data = \
+ all: $(BUILT_SOURCES)
+ 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
+ 
++gnuls: $(BUILT_SOURCES) $(mandeps)
++	$(MAKE) $(AM_MAKEFLAGS) src/dircolors src/ls man/dircolors.1 man/ls.1
++
+ .SUFFIXES:
+ .SUFFIXES: .1 .c .dvi .log .o .obj .pl .pl$(EXEEXT) .ps .sed .sh .sh$(EXEEXT) .sin .trs .x .xpl .xpl$(EXEEXT) .y
+ am--refresh: Makefile
