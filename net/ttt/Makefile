@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2014/01/11 14:42:05 adam Exp $
+# $NetBSD: Makefile,v 1.30 2014/02/04 00:19:54 joerg Exp $
 #
 
 DISTNAME=	ttt-1.8.2
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.sonycsl.co.jp/pub/kjc/
 
@@ -27,6 +27,9 @@ REPLACE_FILES.sys-BLTWISH=	ttt.tcl
 
 
 .include "../../mk/bsd.prefs.mk"
+
+CFLAGS+=	-DUSE_INTERP_RESULT
+CONFIGURE_ARGS+=	ttt_cv_prog_cflags=${CFLAGS:Q}
 
 .if ${OPSYS} == "NetBSD"
 .if empty(OS_VERSION:M1.[56]*)
