@@ -1,4 +1,6 @@
-$NetBSD: patch-Makefile.in,v 1.1 2014/02/04 14:33:54 richard Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2014/02/04 15:07:46 wiz Exp $
+
+Target for misc/gnuls package.
 
 --- Makefile.in.orig	2013-12-13 15:20:00.000000000 +0000
 +++ Makefile.in
