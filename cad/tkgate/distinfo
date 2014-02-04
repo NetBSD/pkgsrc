@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2013/03/02 18:29:03 joerg Exp $
+$NetBSD: distinfo,v 1.8 2014/02/04 00:11:43 joerg Exp $
 
 SHA1 (tkgate-1.6i.tgz) = 6eece2eb4aaa2f45c2b1c68b9c5b79a76b3bb084
 RMD160 (tkgate-1.6i.tgz) = 651ac3194c7b2b8dc8fc8fb28d409672586d4f98
 Size (tkgate-1.6i.tgz) = 1459011 bytes
-SHA1 (patch-aa) = b285f85cf8e894fa02714a5bc2c2277837395bf9
-SHA1 (patch-ab) = 8c0fb6b4f2e9e4fb7af2621fb6546e4e99ba69e5
+SHA1 (patch-aa) = 035171eb490ea74fcd0fc0788585aa87703fe171
+SHA1 (patch-ab) = 1b80671b8ad504970f35d6413151439138269a1b
 SHA1 (patch-src_tkgate_edit.c) = d955226ff73d232310dc3f4f9b7e2381432b81de
 SHA1 (patch-src_tkgate_tclfuncs.c) = e7d9f0fef83c8c1b66eb6b510493908360997608
