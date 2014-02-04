@@ -1,4 +1,4 @@
-$NetBSD: patch-ay,v 1.5 2012/08/21 21:49:30 marino Exp $
+$NetBSD: patch-ay,v 1.6 2014/02/04 00:16:09 joerg Exp $
 
 --- configure.orig	1996-06-24 00:59:45.000000000 +0000
 +++ configure
@@ -6,8 +6,8 @@ $NetBSD: patch-ay,v 1.5 2012/08/21 21:49:30 marino Exp $
    d=""
  fi
  
-+tcldir=tcl8.5
-+tcllib=tcl85
++tcldir=tcl8.6
++tcllib=tcl86
  if test "$d" != "" ; then 
  	if test ! -d $d ; then 
  		echo "'$d' is not a directory"
@@ -182,8 +182,8 @@ $NetBSD: patch-ay,v 1.5 2012/08/21 21:49:30 marino Exp $
    d=""
  fi
  
-+tkdir=tk8.5
-+tklib=tk85
++tkdir=tk8.6
++tklib=tk86
  if test "$d" != "" ; then 
  	if test ! -d $d ; then 
  		echo "'$d' is not a directory"
