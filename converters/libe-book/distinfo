@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/02/02 07:28:11 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2014/02/04 00:13:03 joerg Exp $
 
 SHA1 (libe-book-0.0.2.tar.bz2) = cf409b33e8122fd77578c5b9be7a5e0d0483ae95
 RMD160 (libe-book-0.0.2.tar.bz2) = fd3250fba42140049d539360bb6724768c666c3a
 Size (libe-book-0.0.2.tar.bz2) = 409605 bytes
+SHA1 (patch-src_lib_FB2Token.cpp) = 4532e652cf434fcfb52d268856f3c74be1bad894
