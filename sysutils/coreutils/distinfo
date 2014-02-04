@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.24 2014/02/02 07:08:24 richard Exp $
+$NetBSD: distinfo,v 1.25 2014/02/04 14:33:54 richard Exp $
 
 SHA1 (coreutils-8.22.tar.xz) = cc7fe47b21eb49dd2ee4cdb707570f42fb2c8cc6
 RMD160 (coreutils-8.22.tar.xz) = c3da7ade1d3ac82e97ac4a24c70376af8b9b503b
 Size (coreutils-8.22.tar.xz) = 5335124 bytes
+SHA1 (patch-Makefile.in) = 2dfeef19557a569bb7a60947dd3389656cb5024b
 SHA1 (patch-lib-fflush.c) = 106e9c7d05fff290f24cb69e1b2c80d0077c62bd
 SHA1 (patch-lib-fseeko.c) = 9f4b0294698648011c64869fc0e642f910e9d47f
