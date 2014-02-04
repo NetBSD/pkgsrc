@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2014/02/04 11:36:44 obache Exp $
+
+SHA1 (asunder-2.4.tar.bz2) = f6b23e08891d753fe859573e805c3045d89357d3
+RMD160 (asunder-2.4.tar.bz2) = 515dcc9e2ac79611780516923072aa73c59aa1cf
+Size (asunder-2.4.tar.bz2) = 223890 bytes
+SHA1 (patch-src_main.c) = 6da17bc7775788c297ef1ae5921afc423dac8f54
+SHA1 (patch-src_wrappers.c) = 7422ef3af92eb1d809f3beea66c983982008f647
