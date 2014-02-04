@@ -23,9 +23,9 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #ifndef NETPGP_VERIFY_H_
-#define NETPGP_VERIFY_H_	20131219
+#define NETPGP_VERIFY_H_	20140202
 
-#define NETPGPVERIFY_VERSION	"netpgpverify portable 20131219"
+#define NETPGPVERIFY_VERSION	"netpgpverify portable 20140202"
 
 #include <sys/types.h>
 
@@ -49,7 +49,7 @@ typedef struct pgpv_bignum_t {
 } pgpv_bignum_t;
 
 /* right now, our max binary digest length is 20 bytes */
-#define PGPV_MAX_HASH_LEN	20
+#define PGPV_MAX_HASH_LEN	64
 
 /* fingerprint */
 typedef struct pgpv_fingerprint_t {
@@ -251,6 +251,7 @@ typedef struct pgpv_t {
 	PGPV_ARRAY(size_t,	 datastarts);	/* starts of data packets */
 	size_t		 	 pkt;		/* when parsing, current pkt number */
 	const char		*op;		/* the operation we're doing */
+	unsigned		 ssh;		/* using ssh keys */
 } pgpv_t;
 
 #define PGPV_REASON_LEN		128
@@ -281,11 +282,12 @@ typedef struct pgpv_cursor_t {
 __BEGIN_DECLS
 
 int pgpv_read_pubring(pgpv_t */*pgp*/, const void */*keyringfile/mem*/, ssize_t /*size*/);
+int pgpv_read_ssh_pubkeys(pgpv_t */*pgp*/, const void */*keyring*/, ssize_t /*size*/);
 
 size_t pgpv_verify(pgpv_cursor_t */*cursor*/, pgpv_t */*pgp*/, const void */*mem/file*/, ssize_t /*size*/);
 size_t pgpv_get_verified(pgpv_cursor_t */*cursor*/, size_t /*cookie*/, char **/*ret*/);
 
-size_t pgpv_get_entry(pgpv_t */*pgp*/, unsigned /*ent*/, char **/*ret*/);
+size_t pgpv_get_entry(pgpv_t */*pgp*/, unsigned /*ent*/, char **/*ret*/, const char */*modifiers*/);
 
 int pgpv_close(pgpv_t */*pgp*/);
 
