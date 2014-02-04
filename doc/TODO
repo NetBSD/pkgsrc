@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12974 2014/02/03 16:51:44 wiz Exp $
+$NetBSD: TODO,v 1.12975 2014/02/04 22:18:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -545,7 +545,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o flpsed-0.4.4
 	o fltk2-2.0pre8323
 	o fluxbox-1.3.5
-	o fotoxx-14.01
+	o fmsx-3.7
+	o fotoxx-14.02
 	o fox-1.6.41
 	o freeciv-2.4.0
 	o freefont-20120503
@@ -755,7 +756,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libprelude-1.1.0
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o libraw-0.16.0
-	o libreoffice-4.1
+	o libreoffice-4.2
+	o libreoffice4-bin-4.2
 	o libssh2-1.4.2
 	o libstree-0.4.3pre2 [pkg/43748]
 	o libtar-1.2.20
@@ -1069,6 +1071,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o stalin-0.11
 	o star-1.5.2
 	o statist-1.3.0
+	o stella-3.9.3
 	o stgit-0.16
 	o stlport-4.6.2
 	o stow-2.2.0
@@ -1175,7 +1178,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xbindkeys-1.8.6
 	o xbindkeys-tk-1.8.0
 	o xboard-4.7.0
-	o xcb-util-0.4.0
 	o xcmsdb-1.0.4 [unpackaged]
 	o xemacs-current-21.5.31
 	o xentools43-4.3.0
