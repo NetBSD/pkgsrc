@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.574 2014/02/04 09:06:52 obache Exp $
+$NetBSD: CHANGES-2014,v 1.575 2014/02/04 10:27:06 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -894,3 +894,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated chat/pidgin to 2.10.9 [obache 2014-02-04]
 	Updated chat/pidgin-sametime to 2.10.9 [obache 2014-02-04]
 	Updated chat/pidgin-silc to 2.10.9 [obache 2014-02-04]
+	Updated mail/p5-Email-Address to 1.901 [rhaen 2014-02-04]
