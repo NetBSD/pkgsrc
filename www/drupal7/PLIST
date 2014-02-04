@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/04/06 12:07:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.7.6.1 2014/02/04 21:40:10 tron Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/COPYRIGHT.txt
 share/doc/drupal/INSTALL.mysql.txt
@@ -590,6 +590,9 @@ share/drupal/modules/simpletest/files/css_test_files/css_input_with_import.css.u
 share/drupal/modules/simpletest/files/css_test_files/css_input_without_import.css
 share/drupal/modules/simpletest/files/css_test_files/css_input_without_import.css.optimized.css
 share/drupal/modules/simpletest/files/css_test_files/css_input_without_import.css.unoptimized.css
+share/drupal/modules/simpletest/files/css_test_files/css_subfolder/css_input_with_import.css
+share/drupal/modules/simpletest/files/css_test_files/css_subfolder/css_input_with_import.css.optimized.css
+share/drupal/modules/simpletest/files/css_test_files/css_subfolder/css_input_with_import.css.unoptimized.css
 share/drupal/modules/simpletest/files/css_test_files/import1.css
 share/drupal/modules/simpletest/files/css_test_files/import2.css
 share/drupal/modules/simpletest/files/html-1.txt
@@ -789,8 +792,10 @@ share/drupal/modules/simpletest/tests/xmlrpc_test.module
 share/drupal/modules/statistics/statistics.admin.inc
 share/drupal/modules/statistics/statistics.info
 share/drupal/modules/statistics/statistics.install
+share/drupal/modules/statistics/statistics.js
 share/drupal/modules/statistics/statistics.module
 share/drupal/modules/statistics/statistics.pages.inc
+share/drupal/modules/statistics/statistics.php
 share/drupal/modules/statistics/statistics.test
 share/drupal/modules/statistics/statistics.tokens.inc
 share/drupal/modules/syslog/syslog.info
