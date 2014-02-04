@@ -43,8 +43,9 @@
 #include "zlib.h"
 
 #include "array.h"
-#include "bn.h"
 #include "b64.h"
+#include "bn.h"
+#include "bufgap.h"
 #include "digest.h"
 #include "pgpsum.h"
 #include "rsa.h"
@@ -151,7 +152,6 @@
 static int read_all_packets(pgpv_t */*pgp*/, pgpv_mem_t */*mem*/, const char */*op*/);
 static int read_binary_file(pgpv_t */*pgp*/, const char */*op*/, const char */*fmt*/, ...);
 static int read_binary_memory(pgpv_t */*pgp*/, const char */*op*/, const void */*memory*/, size_t /*size*/);
-static int pgpv_find_keyid(pgpv_t */*pgp*/, const char */*strkeyid*/, uint8_t */*keyid*/);
 
 /* read a file into the pgpv_mem_t struct */
 static int
@@ -296,6 +296,68 @@ get_pkt_len(uint8_t newfmt, uint8_t *p, size_t filesize, int isprimary)
 	}
 }
 
+static const uint8_t	base64s[] =
+/* 000 */       "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+/* 016 */       "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+/* 032 */       "\0\0\0\0\0\0\0\0\0\0\0?\0\0\0@"
+/* 048 */       "56789:;<=>\0\0\0\0\0\0"
+/* 064 */       "\0\1\2\3\4\5\6\7\10\11\12\13\14\15\16\17"
+/* 080 */       "\20\21\22\23\24\25\26\27\30\31\32\0\0\0\0\0"
+/* 096 */       "\0\33\34\35\36\37 !\"#$%&'()"
+/* 112 */       "*+,-./01234\0\0\0\0\0"
+/* 128 */       "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+/* 144 */       "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+/* 160 */       "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+/* 176 */       "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+/* 192 */       "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+/* 208 */       "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+/* 224 */       "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+/* 240 */       "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0";
+
+
+/* short function to decode from base64 */
+/* inspired by an ancient copy of b64.c, then rewritten, the bugs are all mine */
+static int
+frombase64(char *dst, const char *src, size_t size, int flag)
+{
+	uint8_t	out[3];
+	uint8_t	in[4];
+	uint8_t	b;
+	size_t	srcc;
+	int	dstc;
+	int	gotc;
+	int	i;
+
+	USE_ARG(flag);
+	for (dstc = 0, srcc = 0 ; srcc < size; ) {
+		for (gotc = 0, i = 0; i < 4 && srcc < size; i++) {
+			for (b = 0x0; srcc < size && b == 0x0 ; ) {
+				b = base64s[(unsigned)src[srcc++]];
+			}
+			if (srcc < size) {
+				gotc += 1;
+				if (b) {
+					in[i] = (uint8_t)(b - 1);
+				}
+			} else {
+				in[i] = 0x0;
+			}
+		}
+		if (gotc) {
+			out[0] = (uint8_t)((unsigned)in[0] << 2 |
+						(unsigned)in[1] >> 4);
+			out[1] = (uint8_t)((unsigned)in[1] << 4 |
+						(unsigned)in[2] >> 2);
+			out[2] = (uint8_t)(((in[2] << 6) & 0xc0) | in[3]);
+			for (i = 0; i < gotc - 1; i++) {
+				*dst++ = out[i];
+			}
+			dstc += gotc - 1;
+		}
+	}
+	return dstc;
+}
+
 /* get the length of the packet length field */
 static unsigned
 get_pkt_len_len(uint8_t newfmt, uint8_t *p, int isprimary)
@@ -403,8 +465,8 @@ fmt_key_mpis(pgpv_pubkey_t *pubkey, uint8_t *buf, size_t size)
 
 	cc = 0;
 	buf[cc++] = pubkey->version;
-	cc += fmt_32(&buf[cc], (uint32_t)pubkey->birth);
-	buf[cc++] = pubkey->keyalg;
+	cc += fmt_32(&buf[cc], (uint32_t)pubkey->birth); /* XXX - do this portably! */
+	buf[cc++] = pubkey->keyalg;	/* XXX - sign, or encrypt and sign? */
 	switch(pubkey->keyalg) {
 	case PUBKEY_RSA_ENCRYPT_OR_SIGN:
 	case PUBKEY_RSA_ENCRYPT:
@@ -429,7 +491,7 @@ fmt_key_mpis(pgpv_pubkey_t *pubkey, uint8_t *buf, size_t size)
 
 /* calculate the fingerprint, RFC 4880, section 12.2 */
 static int
-pgpv_calc_fingerprint(pgpv_fingerprint_t *fingerprint, pgpv_pubkey_t *pubkey)
+pgpv_calc_fingerprint(pgpv_fingerprint_t *fingerprint, pgpv_pubkey_t *pubkey, const char *hashtype)
 {
 	digest_t	 fphash;
 	uint16_t	 cc;
@@ -440,7 +502,7 @@ pgpv_calc_fingerprint(pgpv_fingerprint_t *fingerprint, pgpv_pubkey_t *pubkey)
 	memset(&fphash, 0x0, sizeof(fphash));
 	if (pubkey->version == 4) {
 		/* v4 keys */
-		fingerprint->hashalg = digest_get_alg("sha1");
+		fingerprint->hashalg = digest_get_alg(hashtype);
 		digest_init(&fphash, (unsigned)fingerprint->hashalg);
 		cc = fmt_key_mpis(pubkey, buf, sizeof(buf));
 		digest_update(&fphash, &ch, 1);
@@ -493,9 +555,9 @@ fmt_fingerprint(char *s, size_t size, pgpv_fingerprint_t *fingerprint, const cha
 
 /* calculate keyid from a pubkey */
 static int 
-pgpv_calc_keyid(pgpv_pubkey_t *key)
+calc_keyid(pgpv_pubkey_t *key, const char *hashtype)
 {
-	pgpv_calc_fingerprint(&key->fingerprint, key);
+	pgpv_calc_fingerprint(&key->fingerprint, key, hashtype);
 	memcpy(key->keyid, &key->fingerprint.v[key->fingerprint.len - PGPV_KEYID_LEN], PGPV_KEYID_LEN);
 	return 1;
 }
@@ -1387,22 +1449,45 @@ fmt_userid(char *s, size_t size, pgpv_primarykey_t *primary, uint8_t u)
 			(userid->revoked) ? " [REVOKED]" : "");
 }
 
+/* format a trust sig - used to order the userids when formatting */
+static size_t
+fmt_trust(char *s, size_t size, pgpv_signed_userid_t *userid, uint32_t u)
+{
+	pgpv_signature_t	*sig;
+	size_t			 cc;
+
+	sig = &ARRAY_ELEMENT(userid->sigs, u);
+	cc = snprintf(s, size, "trust          ");
+	cc += fmt_binary(&s[cc], size - cc, sig->signer, 8);
+	return cc + snprintf(&s[cc], size - cc, "\n");
+}
+
 /* print a primary key, per RFC 4880 */
 static size_t
-fmt_primary(char *s, size_t size, pgpv_primarykey_t *primary, int dosubkeys)
+fmt_primary(char *s, size_t size, pgpv_primarykey_t *primary, const char *modifiers)
 {
-	unsigned	 i;
-	size_t		 cc;
+	pgpv_signed_userid_t	*userid;
+	unsigned		 i;
+	unsigned		 j;
+	size_t			 cc;
 
 	cc = fmt_pubkey(s, size, &primary->primary, "signature    ");
 	cc += fmt_userid(&s[cc], size - cc, primary, primary->primary_userid);
 	for (i = 0 ; i < ARRAY_COUNT(primary->signed_userids) ; i++) {
 		if (i != primary->primary_userid) {
 			cc += fmt_userid(&s[cc], size - cc, primary, i);
+			if (strcasecmp(modifiers, "trust") == 0) {
+				userid = &ARRAY_ELEMENT(primary->signed_userids, i);
+				for (j = 0 ; j < ARRAY_COUNT(userid->sigs) ; j++) {
+					cc += fmt_trust(&s[cc], size - cc, userid, j);
+				}
+			}
 		}
 	}
-	for (i = 0 ; dosubkeys && i < ARRAY_COUNT(primary->signed_subkeys) ; i++) {
-		cc += fmt_pubkey(&s[cc], size - cc, &ARRAY_ELEMENT(primary->signed_subkeys, i).subkey, "encryption");
+	if (strcasecmp(modifiers, "subkeys") == 0) {
+		for (i = 0 ; i < ARRAY_COUNT(primary->signed_subkeys) ; i++) {
+			cc += fmt_pubkey(&s[cc], size - cc, &ARRAY_ELEMENT(primary->signed_subkeys, i).subkey, "encryption");
+		}
 	}
 	cc += snprintf(&s[cc], size - cc, "\n");
 	return cc;
@@ -2028,7 +2113,7 @@ recog_primary_key(pgpv_t *pgp, pgpv_primarykey_t *primary)
 				printf("recog_primary_key: not signed public subkey\n");
 				return 0;
 			}
-			pgpv_calc_keyid(&subkey.subkey);
+			calc_keyid(&subkey.subkey, "sha1");
 			ARRAY_APPEND(primary->signed_subkeys, subkey);
 		}
 	} while (pgp->pkt < ARRAY_COUNT(pgp->pkts) && pkt_is(pgp, USERID_PKT));
@@ -2061,7 +2146,7 @@ read_all_packets(pgpv_t *pgp, pgpv_mem_t *mem, const char *op)
 	}
 	if (strcmp(op, "pubring") == 0) {
 		for (pgp->pkt = 0; pgp->pkt < ARRAY_COUNT(pgp->pkts) && recog_primary_key(pgp, &primary) ; ) {
-			pgpv_calc_keyid(&primary.primary);
+			calc_keyid(&primary.primary, "sha1");
 			ARRAY_APPEND(pgp->primaries, primary);
 		}
 		if (pgp->pkt < ARRAY_COUNT(pgp->pkts)) {
@@ -2086,6 +2171,194 @@ read_binary_file(pgpv_t *pgp, const char *op, const char *fmt, ...)
 		return 0;
 	}
 	return read_all_packets(pgp, &ARRAY_LAST(pgp->areas), op);
+}
+
+/* get a bignum from the buffer gap */
+static int
+getbignum(pgpv_bignum_t *bignum, bufgap_t *bg, char *buf, const char *header)
+{
+	uint32_t	 len;
+
+	(void) bufgap_getbin(bg, &len, sizeof(len));
+	len = ntohl(len);
+	(void) bufgap_seek(bg, sizeof(len), BGFromHere, BGByte);
+	(void) bufgap_getbin(bg, buf, len);
+	bignum->bn = BN_bin2bn((const uint8_t *)buf, (int)len, NULL);
+	bignum->bits = BN_num_bits(bignum->bn);
+	(void) bufgap_seek(bg, len, BGFromHere, BGByte);
+	return 1;
+}
+
+/* structure for searching for constant strings */
+typedef struct str_t {
+	const char	*s;		/* string */
+	size_t		 len;		/* its length */
+	int		 type;		/* return type */
+} str_t;
+
+static str_t	pkatypes[] = {
+	{	"ssh-rsa",	7,	PUBKEY_RSA_SIGN	},
+	{	"ssh-dss",	7,	PUBKEY_DSA	},
+	{	"ssh-dsa",	7,	PUBKEY_DSA	},
+	{	NULL,		0,	0		}
+};
+
+/* look for a string in the given array */
+static int
+findstr(str_t *array, const char *name)
+{
+	str_t	*sp;
+
+	for (sp = array ; sp->s ; sp++) {
+		if (strncmp(name, sp->s, sp->len) == 0) {
+			return sp->type;
+		}
+	}
+	return -1;
+}
+
+/* read public key from the ssh pubkey file */
+static int
+read_ssh_file(pgpv_t *pgp, pgpv_primarykey_t *primary, const char *fmt, ...)
+{
+	pgpv_signed_userid_t	 userid;
+	pgpv_pubkey_t		*pubkey;
+	struct stat		 st;
+	bufgap_t		 bg;
+	uint32_t		 len;
+	int64_t			 off;
+	va_list			 args;
+	char			 hostname[256];
+	char			 owner[256];
+	char			*space;
+	char		 	*buf;
+	char		 	*bin;
+	char			 f[1024];
+	int			 ok;
+	int			 cc;
+
+	memset(primary, 0x0, sizeof(*primary));
+	(void) memset(&bg, 0x0, sizeof(bg));
+	va_start(args, fmt);
+	vsnprintf(f, sizeof(f), fmt, args);
+	va_end(args);
+	if (!bufgap_open(&bg, f)) {
+		(void) fprintf(stderr, "pgp_ssh2pubkey: can't open '%s'\n", f);
+		return 0;
+	}
+	(void)stat(f, &st);
+	if ((buf = calloc(1, (size_t)st.st_size)) == NULL) {
+		(void) fprintf(stderr, "can't calloc %zu bytes for '%s'\n", (size_t)st.st_size, f);
+		bufgap_close(&bg);
+		return 0;
+	}
+	if ((bin = calloc(1, (size_t)st.st_size)) == NULL) {
+		(void) fprintf(stderr, "can't calloc %zu bytes for '%s'\n", (size_t)st.st_size, f);
+		(void) free(buf);
+		bufgap_close(&bg);
+		return 0;
+	}
+
+	/* move past ascii type of key */
+	while (bufgap_peek(&bg, 0) != ' ') {
+		if (!bufgap_seek(&bg, 1, BGFromHere, BGByte)) {
+			(void) fprintf(stderr, "bad key file '%s'\n", f);
+			(void) free(buf);
+			bufgap_close(&bg);
+			return 0;
+		}
+	}
+	if (!bufgap_seek(&bg, 1, BGFromHere, BGByte)) {
+		(void) fprintf(stderr, "bad key file '%s'\n", f);
+		(void) free(buf);
+		bufgap_close(&bg);
+		return 0;
+	}
+	off = bufgap_tell(&bg, BGFromBOF, BGByte);
+
+	if (bufgap_size(&bg, BGByte) - off < 10) {
+		(void) fprintf(stderr, "bad key file '%s'\n", f);
+		(void) free(buf);
+		bufgap_close(&bg);
+		return 0;
+	}
+
+	/* convert from base64 to binary */
+	cc = bufgap_getbin(&bg, buf, (size_t)bg.bcc);
+	if ((space = strchr(buf, ' ')) != NULL) {
+		cc = (int)(space - buf);
+	}
+	cc = frombase64(bin, buf, (size_t)cc, 0);
+	bufgap_delete(&bg, (uint64_t)bufgap_tell(&bg, BGFromEOF, BGByte));
+	bufgap_insert(&bg, bin, cc);
+	bufgap_seek(&bg, off, BGFromBOF, BGByte);
+
+	/* get the type of key */
+	(void) bufgap_getbin(&bg, &len, sizeof(len));
+	len = ntohl(len);
+	if (len >= st.st_size) {
+		(void) fprintf(stderr, "bad public key file '%s'\n", f);
+		return 0;
+	}
+	(void) bufgap_seek(&bg, sizeof(len), BGFromHere, BGByte);
+	(void) bufgap_getbin(&bg, buf, len);
+	(void) bufgap_seek(&bg, len, BGFromHere, BGByte);
+
+	pubkey = &primary->primary;
+	pubkey->hashalg = digest_get_alg("sha256"); /* gets fixed up later */
+	pubkey->version = 4;
+	pubkey->birth = 0; /* gets fixed up later */
+	/* get key type */
+	ok = 1;
+	switch (pubkey->keyalg = findstr(pkatypes, buf)) {
+	case PUBKEY_RSA_ENCRYPT_OR_SIGN:
+	case PUBKEY_RSA_SIGN:
+		getbignum(&pubkey->bn[RSA_E], &bg, buf, "RSA E");
+		getbignum(&pubkey->bn[RSA_N], &bg, buf, "RSA N");
+		break;
+	case PUBKEY_DSA:
+		getbignum(&pubkey->bn[DSA_P], &bg, buf, "DSA P");
+		getbignum(&pubkey->bn[DSA_Q], &bg, buf, "DSA Q");
+		getbignum(&pubkey->bn[DSA_G], &bg, buf, "DSA G");
+		getbignum(&pubkey->bn[DSA_Y], &bg, buf, "DSA Y");
+		break;
+	default:
+		(void) fprintf(stderr, "Unrecognised pubkey type %d for '%s'\n",
+				pubkey->keyalg, f);
+		ok = 0;
+		break;
+	}
+
+	/* check for stragglers */
+	if (ok && bufgap_tell(&bg, BGFromEOF, BGByte) > 0) {
+		printf("%"PRIi64" bytes left\n", bufgap_tell(&bg, BGFromEOF, BGByte));
+		printf("[%s]\n", bufgap_getstr(&bg));
+		ok = 0;
+	}
+	if (ok) {
+		memset(&userid, 0x0, sizeof(userid));
+		(void) gethostname(hostname, sizeof(hostname));
+		if (strlen(space + 1) - 1 == 0) {
+			(void) snprintf(owner, sizeof(owner), "<root@%s>",
+					hostname);
+		} else {
+			(void) snprintf(owner, sizeof(owner), "<%.*s>",
+				(int)strlen(space + 1) - 1,
+				space + 1);
+		}
+		calc_keyid(pubkey, "sha1");
+		userid.userid.size = asprintf((char **)(void *)&userid.userid.data,
+						"%s (%s) %s",
+						hostname,
+						f,
+						owner);
+		ARRAY_APPEND(primary->signed_userids, userid);
+		primary->fmtsize = estimate_primarykey_size(primary) + 1024;
+	}
+	(void) free(bin);
+	(void) free(buf);
+	bufgap_close(&bg);
+	return ok;
 }
 
 /* parse memory according to "op" */
@@ -2234,7 +2507,7 @@ pgpv_close(pgpv_t *pgp)
 
 /* return the formatted entry for the primary key desired */
 size_t
-pgpv_get_entry(pgpv_t *pgp, unsigned ent, char **ret)
+pgpv_get_entry(pgpv_t *pgp, unsigned ent, char **ret, const char *modifiers)
 {
 	size_t	cc;
 
@@ -2243,15 +2516,36 @@ pgpv_get_entry(pgpv_t *pgp, unsigned ent, char **ret)
 	}
 	*ret = NULL;
 	cc = ARRAY_ELEMENT(pgp->primaries, ent).fmtsize;
+	if (modifiers == NULL || (strcasecmp(modifiers, "trust") != 0 && strcasecmp(modifiers, "subkeys") != 0)) {
+		modifiers = "no-subkeys";
+	}
+	if (strcasecmp(modifiers, "trust") == 0) {
+		cc *= 2048;
+	}
 	if ((*ret = calloc(1, cc)) == NULL) {
 		return 0;
 	}
-	return fmt_primary(*ret, cc, &ARRAY_ELEMENT(pgp->primaries, ent), NO_SUBKEYS);
+	return fmt_primary(*ret, cc, &ARRAY_ELEMENT(pgp->primaries, ent), modifiers);
+}
+
+/* fixup key id, with birth, keyalg and hashalg value from signature */
+static int
+fixup_ssh_keyid(pgpv_t *pgp, pgpv_signature_t *signature, const char *hashtype)
+{
+	pgpv_pubkey_t	*pubkey;
+	unsigned	 i;
+
+	for (i = 0 ; i < ARRAY_COUNT(pgp->primaries) ; i++) {
+		pubkey = &ARRAY_ELEMENT(pgp->primaries, i).primary;
+		pubkey->keyalg = signature->keyalg;
+		calc_keyid(pubkey, hashtype);
+	}
+	return 1;
 }
 
 /* find key id */
-int
-pgpv_find_keyid(pgpv_t *pgp, const char *strkeyid, uint8_t *keyid)
+static int
+find_keyid(pgpv_t *pgp, const char *strkeyid, uint8_t *keyid)
 {
 	unsigned	 i;
 	uint8_t		 binkeyid[PGPV_KEYID_LEN];
@@ -2277,6 +2571,21 @@ pgpv_find_keyid(pgpv_t *pgp, const char *strkeyid, uint8_t *keyid)
 	return -1;
 }
 
+/* match the signature with the id indexed by 'primary' */
+static int
+match_sig_id(pgpv_cursor_t *cursor, pgpv_signature_t *signature, pgpv_litdata_t *litdata, unsigned primary)
+{
+	pgpv_pubkey_t		*pubkey;
+	uint8_t			*data;
+	size_t			 insize;
+
+	pubkey = &ARRAY_ELEMENT(cursor->pgp->primaries, primary).primary;
+	cursor->sigtime = signature->birth;
+	/* calc hash on data packet */
+	data = get_literal_data(cursor, litdata, &insize);
+	return match_sig(cursor, signature, pubkey, data, insize);
+}
+
 /* verify the signed packets we have */
 size_t
 pgpv_verify(pgpv_cursor_t *cursor, pgpv_t *pgp, const void *p, ssize_t size)
@@ -2284,12 +2593,9 @@ pgpv_verify(pgpv_cursor_t *cursor, pgpv_t *pgp, const void *p, ssize_t size)
 	pgpv_signature_t	*signature;
 	pgpv_onepass_t		*onepass;
 	pgpv_litdata_t		*litdata;
-	pgpv_pubkey_t		*pubkey;
-	unsigned		 primary;
-	uint8_t			*data;
 	size_t			 pkt;
-	size_t			 insize;
 	char			 strkeyid[PGPV_STR_KEYID_LEN];
+	int			 found;
 	int			 j;
 
 	if (cursor == NULL || pgp == NULL || p == NULL) {
@@ -2336,21 +2642,21 @@ pgpv_verify(pgpv_cursor_t *cursor, pgpv_t *pgp, const void *p, ssize_t size)
 			signature->keyalg, onepass->keyalg);
 		return 0;
 	}
-	if ((j = pgpv_find_keyid(cursor->pgp, NULL, onepass->keyid)) < 0) {
+	if (cursor->pgp->ssh) {
+		fixup_ssh_keyid(cursor->pgp, signature, "sha1");
+	}
+	if (ARRAY_COUNT(cursor->pgp->primaries) == 1) {
+		j = 0;
+	} else if ((j = find_keyid(cursor->pgp, NULL, onepass->keyid)) < 0) {
 		fmt_binary(strkeyid, sizeof(strkeyid), onepass->keyid, (unsigned)sizeof(onepass->keyid));
 		snprintf(cursor->why, sizeof(cursor->why), "Signature key id %s not found ", strkeyid);
 		return 0;
 	}
-	primary = (unsigned)j;
-	pubkey = &ARRAY_ELEMENT(cursor->pgp->primaries, primary).primary;
-	cursor->sigtime = signature->birth;
-	/* calc hash on data packet */
-	data = get_literal_data(cursor, litdata, &insize);
-	if (!match_sig(cursor, signature, pubkey, data, insize)) {
+	if (!match_sig_id(cursor, signature, litdata, (unsigned)j)) {
 		return 0;
 	}
 	ARRAY_APPEND(cursor->datacookies, pkt);
-	ARRAY_APPEND(cursor->found, primary);
+	ARRAY_APPEND(cursor->found, j);
 	return pkt + 1;
 }
 
@@ -2367,6 +2673,27 @@ pgpv_read_pubring(pgpv_t *pgp, const void *keyring, ssize_t size)
 			read_binary_file(pgp, "pubring", "%s", keyring);
 	}
 	return read_binary_file(pgp, "pubring", "%s/%s", nonnull_getenv("HOME"), ".gnupg/pubring.gpg");
+}
+
+/* set up the pubkey keyring from ssh pub key */
+int
+pgpv_read_ssh_pubkeys(pgpv_t *pgp, const void *keyring, ssize_t size)
+{
+	pgpv_primarykey_t	primary;
+
+	if (pgp == NULL) {
+		return 0;
+	}
+	if (keyring) {
+		if (!read_ssh_file(pgp, &primary, "%s", keyring)) {
+			return 0;
+		}
+	} else if (!read_ssh_file(pgp, &primary, "pubring", "%s/%s", nonnull_getenv("HOME"), ".ssh/id_rsa.pub")) {
+		return 0;
+	}
+	ARRAY_APPEND(pgp->primaries, primary);
+	pgp->ssh = 1;
+	return 1;
 }
 
 /* get verified data as a string, return its size */
