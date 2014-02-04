@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.143 2013/11/23 08:55:28 obache Exp $
+# $NetBSD: gcc.mk,v 1.144 2014/02/04 12:11:57 fhajny Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -690,6 +690,7 @@ PKG_CXX:=	${_GCC_CXX}
 _GCC_VARS+=	FC
 _GCC_FC=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}g77
 _ALIASES.FC=	f77 g77
+FC=		g77
 FCPATH=		${_GCCBINDIR}/${_GCC_BIN_PREFIX}g77
 F77PATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}g77
 PKG_FC:=	${_GCC_FC}
@@ -699,6 +700,7 @@ PKGSRC_FORTRAN?=	g77
 _GCC_VARS+=	FC
 _GCC_FC=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}gfortran
 _ALIASES.FC=	gfortran
+FC=		gfortran
 FCPATH=		${_GCCBINDIR}/${_GCC_BIN_PREFIX}gfortran
 F77PATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}gfortran
 PKG_FC:=	${_GCC_FC}
