@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2014/01/22 13:34:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.63 2014/02/04 00:14:16 joerg Exp $
 
 DISTNAME=	gtranslator-2.91.6
 CATEGORIES=	editors
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gtranslator.sourceforge.net/
 COMMENT=	Gettext po file editor for the GNOME2 desktop environment
+
+BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
