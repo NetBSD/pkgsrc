@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/02/09 21:29:24 wiz Exp $
+$NetBSD: distinfo,v 1.3 2014/02/04 19:15:09 wiz Exp $
 
-SHA1 (ppl-0.11.2.tar.gz) = f3fe00f14983d6abcd1d4d886d340af04a974dfa
-RMD160 (ppl-0.11.2.tar.gz) = 953717be0b3ca9f8a1e2e61b2025fdb0c16e02e5
-Size (ppl-0.11.2.tar.gz) = 13741905 bytes
-SHA1 (patch-src_mp__std__bits.cc) = d1ddd67269fab7e3584565c43fc2d0ae8111d4c7
-SHA1 (patch-src_mp__std__bits.defs.hh) = 6e627fb09898e0071903b53ecd92ff01a27951f8
+SHA1 (ppl-1.1.tar.gz) = d24c79f7299320e6a344711aaec74bd2d5015b15
+RMD160 (ppl-1.1.tar.gz) = 3619a9ed076c05bd042b5f2c3d6545a018c9908a
+Size (ppl-1.1.tar.gz) = 17281194 bytes
