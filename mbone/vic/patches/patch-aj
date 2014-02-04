@@ -1,9 +1,30 @@
-$NetBSD: patch-aj,v 1.2 2010/03/03 14:30:13 is Exp $
+$NetBSD: patch-aj,v 1.3 2014/02/04 00:16:09 joerg Exp $
 
---- Makefile.in.orig	1996-07-22 18:32:53.000000000 +0200
+--- Makefile.in.orig	1996-07-22 16:32:53.000000000 +0000
 +++ Makefile.in
-@@ -299,15 +299,9 @@ ppmtolut: ppmtolut.c
- 	$(CC) -o $@ $(CFLAGS) ppmtolut.c -lm $(STATIC)
+@@ -35,5 +35,5 @@
+ #
+ 
+-.SUFFIXES: .cc $(.SUFFIXES)
++.SUFFIXES: .cc .cpp $(.SUFFIXES)
+ 
+ ALL = @V_ALL@ histtolut
+@@ -43,4 +43,7 @@ all:	$(ALL)
+ 	rm -f $@; $(C++) -o $@ -c $(CFLAGS) $*.cc
+ 
++.cpp.o:
++	rm -f $@; $(C++) -o $@ -c $(CFLAGS) $*.cpp
++
+ .c.o:
+ 	rm -f $@; $(CC) -o $@ -c $(CFLAGS) $*.c
+@@ -88,5 +91,5 @@ LIB = $(LIB_GRABBER) @V_LIB_TK@ @V_LIB_T
+ INCLUDE = $(INCLUDE_MISC) $(INCLUDE_GRABBER) $(INCLUDE_TK) $(INCLUDE_TCL) \
+ 	$(INCLUDE_X11) $(MD_INC) -I./jpeg -I./p64 -I.
+-DEFINE = @V_DEFINE@ -DED_YBITS=$(ED_YBITS) -DSIGRET=@V_SIGRET@
++DEFINE = @V_DEFINE@ -DED_YBITS=$(ED_YBITS) -DSIGRET=@V_SIGRET@ -DUSE_INTERP_RESULT
+ BFLAGS = $(DEFINE) $(INCLUDE)
+ CFLAGS = $(CCOPT) $(BFLAGS)
+@@ -300,13 +303,7 @@ ppmtolut: ppmtolut.c
  
  install: force
 -	 cp vic @prefix@/bin/vic
@@ -20,4 +41,3 @@ $NetBSD: patch-aj,v 1.2 2010/03/03 14:30:13 is Exp $
 +	${BSD_INSTALL_PROGRAM} histtolut ${DESTDIR}@prefix@/bin
  
  clean:
- 	rm -f *.o jpeg/*.o p64/*.o core tcl2c++ mkbv bv.c mkhuff huffcode.c \
