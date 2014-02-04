@@ -5157,7 +5157,7 @@ getbn(BIGNUM **a, const char *str, int radix)
 	if (mp_getradix_num(*a, radix, __UNCONST(str)) != MP_OKAY) {
 		return 0;
 	}
-	mp_radix_size(__UNCONST(*a), radix, &len);
+	mp_radix_size(__UNCONST(a), radix, &len);
 	return len - 1;
 }
 
