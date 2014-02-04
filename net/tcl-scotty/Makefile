@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2014/01/11 14:42:01 adam Exp $
+# $NetBSD: Makefile,v 1.31 2014/02/04 00:19:14 joerg Exp $
 #
 
 DISTNAME=	scotty-${DIST_VERS}
@@ -26,6 +26,11 @@ CONFIGURE_ARGS+=--with-tcl-config=${BUILDLINK_PREFIX.tcl}/lib	\
 		--enable-multicast				\
 		--enable-gdmo --without-tk-config
 CONFIGURE_ENV+=	TARGET=scotty
+
+.include "../../mk/bsd.prefs.mk"
+
+CFLAGS+=	-DUSE_INTERP_RESULT -DUSE_INTERP_ERRORLINE
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q} GDMO_LIBS=
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	lex yacc
