@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2013/12/06 19:26:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2014/02/04 13:28:07 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -39,6 +39,7 @@ share/doc/sqlite3/c3ref/c_config_covering_index_scan.html
 share/doc/sqlite3/c3ref/c_dbconfig_enable_fkey.html
 share/doc/sqlite3/c3ref/c_dbstatus_options.html
 share/doc/sqlite3/c3ref/c_deny.html
+share/doc/sqlite3/c3ref/c_deterministic.html
 share/doc/sqlite3/c3ref/c_fail.html
 share/doc/sqlite3/c3ref/c_fcntl_busyhandler.html
 share/doc/sqlite3/c3ref/c_index_constraint_eq.html
@@ -374,13 +375,16 @@ share/doc/sqlite3/images/syntax/column-constraint.gif
 share/doc/sqlite3/images/syntax/column-def.gif
 share/doc/sqlite3/images/syntax/comment-syntax.gif
 share/doc/sqlite3/images/syntax/commit-stmt.gif
+share/doc/sqlite3/images/syntax/common-table-expression.gif
 share/doc/sqlite3/images/syntax/compound-operator.gif
+share/doc/sqlite3/images/syntax/compound-select-stmt.gif
 share/doc/sqlite3/images/syntax/conflict-clause.gif
 share/doc/sqlite3/images/syntax/create-index-stmt.gif
 share/doc/sqlite3/images/syntax/create-table-stmt.gif
 share/doc/sqlite3/images/syntax/create-trigger-stmt.gif
 share/doc/sqlite3/images/syntax/create-view-stmt.gif
 share/doc/sqlite3/images/syntax/create-virtual-table-stmt.gif
+share/doc/sqlite3/images/syntax/cte-table-name.gif
 share/doc/sqlite3/images/syntax/delete-stmt-limited.gif
 share/doc/sqlite3/images/syntax/delete-stmt.gif
 share/doc/sqlite3/images/syntax/detach-stmt.gif
@@ -389,12 +393,13 @@ share/doc/sqlite3/images/syntax/drop-table-stmt.gif
 share/doc/sqlite3/images/syntax/drop-trigger-stmt.gif
 share/doc/sqlite3/images/syntax/drop-view-stmt.gif
 share/doc/sqlite3/images/syntax/expr.gif
+share/doc/sqlite3/images/syntax/factored-select-stmt.gif
 share/doc/sqlite3/images/syntax/foreign-key-clause.gif
 share/doc/sqlite3/images/syntax/indexed-column.gif
 share/doc/sqlite3/images/syntax/insert-stmt.gif
+share/doc/sqlite3/images/syntax/join-clause.gif
 share/doc/sqlite3/images/syntax/join-constraint.gif
-share/doc/sqlite3/images/syntax/join-op.gif
-share/doc/sqlite3/images/syntax/join-source.gif
+share/doc/sqlite3/images/syntax/join-operator.gif
 share/doc/sqlite3/images/syntax/literal-value.gif
 share/doc/sqlite3/images/syntax/numeric-literal.gif
 share/doc/sqlite3/images/syntax/ordering-term.gif
@@ -402,6 +407,7 @@ share/doc/sqlite3/images/syntax/pragma-stmt.gif
 share/doc/sqlite3/images/syntax/pragma-value.gif
 share/doc/sqlite3/images/syntax/qualified-table-name.gif
 share/doc/sqlite3/images/syntax/raise-function.gif
+share/doc/sqlite3/images/syntax/recursive-cte.gif
 share/doc/sqlite3/images/syntax/reindex-stmt.gif
 share/doc/sqlite3/images/syntax/release-stmt.gif
 share/doc/sqlite3/images/syntax/result-column.gif
@@ -410,14 +416,16 @@ share/doc/sqlite3/images/syntax/savepoint-stmt.gif
 share/doc/sqlite3/images/syntax/select-core.gif
 share/doc/sqlite3/images/syntax/select-stmt.gif
 share/doc/sqlite3/images/syntax/signed-number.gif
-share/doc/sqlite3/images/syntax/single-source.gif
+share/doc/sqlite3/images/syntax/simple-select-stmt.gif
 share/doc/sqlite3/images/syntax/sql-stmt-list.gif
 share/doc/sqlite3/images/syntax/sql-stmt.gif
 share/doc/sqlite3/images/syntax/table-constraint.gif
+share/doc/sqlite3/images/syntax/table-or-subquery.gif
 share/doc/sqlite3/images/syntax/type-name.gif
 share/doc/sqlite3/images/syntax/update-stmt-limited.gif
 share/doc/sqlite3/images/syntax/update-stmt.gif
 share/doc/sqlite3/images/syntax/vacuum-stmt.gif
+share/doc/sqlite3/images/syntax/with-clause.gif
 share/doc/sqlite3/images/table-ex1b2.gif
 share/doc/sqlite3/images/vfs1.gif
 share/doc/sqlite3/index.html
@@ -458,6 +466,7 @@ share/doc/sqlite3/lang_select.html
 share/doc/sqlite3/lang_transaction.html
 share/doc/sqlite3/lang_update.html
 share/doc/sqlite3/lang_vacuum.html
+share/doc/sqlite3/lang_with.html
 share/doc/sqlite3/limits.html
 share/doc/sqlite3/loadext.html
 share/doc/sqlite3/lockingv3.html
@@ -600,6 +609,7 @@ share/doc/sqlite3/releaselog/3_8_0_1.html
 share/doc/sqlite3/releaselog/3_8_0_2.html
 share/doc/sqlite3/releaselog/3_8_1.html
 share/doc/sqlite3/releaselog/3_8_2.html
+share/doc/sqlite3/releaselog/3_8_3.html
 share/doc/sqlite3/releaselog/current.html
 share/doc/sqlite3/requirements.html
 share/doc/sqlite3/robots.txt
