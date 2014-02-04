@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.3 2007/01/20 01:47:00 rillig Exp $
+$NetBSD: patch-ab,v 1.4 2014/02/04 00:11:43 joerg Exp $
 
---- configure.orig	2001-06-11 22:44:36.000000000 +0200
+--- configure.orig	2001-06-11 20:44:36.000000000 +0000
 +++ configure
 @@ -70,7 +70,7 @@ done
  #
@@ -23,3 +23,11 @@ $NetBSD: patch-ab,v 1.3 2007/01/20 01:47:00 rillig Exp $
        echo "Tcl/Tk Version: $tcltk_ver"
    else
        echo "Tcl/Tk Version: not found"
+@@ -679,6 +684,7 @@ showvalues()
+ editconfigh()
+ {
+   cat > options.h << -eof-
++#define USE_INTERP_RESULT
+ #ifndef TKGATE_CC
+ #define TKGATE_CC		$CC
+ #endif
