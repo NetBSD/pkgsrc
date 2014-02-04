@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.3 2008/06/20 01:09:25 joerg Exp $
+$NetBSD: patch-ak,v 1.4 2014/02/04 00:17:35 joerg Exp $
 
---- Makefile.in.orig	Thu Apr 25 15:20:32 1996
-+++ Makefile.in	Mon Mar 13 14:11:24 2000
-@@ -48,6 +48,7 @@
+--- Makefile.in.orig	1996-04-25 13:20:32.000000000 +0000
++++ Makefile.in
+@@ -48,6 +48,7 @@ CC = @CC@
  C++ = @CXX@
  TABCC = @V_TABCC@
  CCOPT = @V_CCOPT@
@@ -10,7 +10,16 @@ $NetBSD: patch-ak,v 1.3 2008/06/20 01:09:25 joerg Exp $
  
  INCLUDE_TK = @V_INCLUDE_TK@
  INCLUDE_TCL = @V_INCLUDE_TCL@
-@@ -175,7 +176,7 @@
+@@ -85,7 +86,7 @@ SRC_AUDIO = $(OBJ_AUDIO:.o=.cc) 
+ LIB = $(LIB_AUDIO) @V_LIB_TK@ @V_LIB_TCL@ @V_LIB_GSM@ @V_LIB_X11@ @V_LIB@ -lm
+ INCLUDE = $(INCLUDE_MISC) $(INCLUDE_AUDIO) $(INCLUDE_TK) $(INCLUDE_TCL) \
+ 	$(INCLUDE_X11) $(MD_INC)
+-DEFINE = @V_DEFINE@ -DSIGRET=@V_SIGRET@ -DFRAMESIZE=160
++DEFINE = @V_DEFINE@ -DSIGRET=@V_SIGRET@ -DFRAMESIZE=160 -DUSE_INTERP_RESULT
+ BFLAGS = $(DEFINE) $(INCLUDE)
+ CFLAGS = $(CCOPT) $(BFLAGS)
+ 
+@@ -175,7 +176,7 @@ $(OBJ3): $(SRC3)
  	$(TABCC) $(RFLAG) -c $*.c
  
  $(SRC3): mktab.c
@@ -19,7 +28,7 @@ $NetBSD: patch-ak,v 1.3 2008/06/20 01:09:25 joerg Exp $
  	rm -f $(SRC3)
  	./mktab -mulaw > tabmulaw.c
  	./mktab -sum > tabmix.c
-@@ -184,7 +185,7 @@
+@@ -184,7 +185,7 @@ $(SRC3): mktab.c
  	rm -f mktab
  
  vat-gsm.o: vat-gsm.c
@@ -28,7 +37,7 @@ $NetBSD: patch-ak,v 1.3 2008/06/20 01:09:25 joerg Exp $
  
  tar: force
  	tar=vatbin-`cat VERSION`-@V_TAR_TARGET@.tar.gz ; \
-@@ -209,16 +210,10 @@
+@@ -209,16 +210,10 @@ srctar: force
  	     rm ../$$name; chmod 444 $$tar
  
  install: force
