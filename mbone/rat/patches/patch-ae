@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.4 2006/02/24 00:35:59 joerg Exp $
+$NetBSD: patch-ae,v 1.5 2014/02/04 00:17:54 joerg Exp $
 
 --- Makefile.orig	1998-08-15 19:16:44.000000000 +0000
 +++ Makefile
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.4 2006/02/24 00:35:59 joerg Exp $
  CC     = gcc
 -CFLAGS = -Wall -Werror $(INCS) $(DEFS) -g -O -fsigned-char
 -LDFLAGS= 
-+CFLAGS = -Wall $(INCS) $(DEFS) -g -O -fsigned-char
++CFLAGS = -Wall $(INCS) $(DEFS) -g -O -fsigned-char -DUSE_INTERP_RESULT
 +#LDFLAGS= 
  LDLIBS=  $(LDLIBS) -lm
  RANLIB = ranlib
