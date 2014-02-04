@@ -49,11 +49,11 @@ ptime(int64_t secs)
 
 /* print entry n */
 static void
-pentry(pgpv_t *pgp, int n)
+pentry(pgpv_t *pgp, int n, const char *modifiers)
 {
 	char	*s;
 
-	pgpv_get_entry(pgp, (unsigned)n, &s);
+	pgpv_get_entry(pgp, (unsigned)n, &s, modifiers);
 	printf("%s", s);
 	free(s);
 }
@@ -91,6 +91,7 @@ static int
 verify_data(pgpv_t *pgp, const char *cmd, const char *inname, char *in, ssize_t cc)
 {
 	pgpv_cursor_t	 cursor;
+	const char	*modifiers;
 	size_t		 size;
 	size_t		 cookie;
 	char		*data;
@@ -103,16 +104,17 @@ verify_data(pgpv_t *pgp, const char *cmd, const char *inname, char *in, ssize_t 
 			}
 			return 1;
 		}
-	} else if (strcasecmp(cmd, "verify") == 0) {
+	} else if (strcasecmp(cmd, "verify") == 0 || strcasecmp(cmd, "trust") == 0) {
+		modifiers = (strcasecmp(cmd, "trust") == 0) ? "trust" : NULL;
 		if (pgpv_verify(&cursor, pgp, in, cc)) {
 			printf("Good signature for %s made ", inname);
 			ptime(cursor.sigtime);
-			pentry(pgp, ARRAY_ELEMENT(cursor.found, 0));
+			pentry(pgp, ARRAY_ELEMENT(cursor.found, 0), modifiers);
 			return 1;
 		}
-		fprintf(stderr, "Signature did not match contents -- %s", cursor.why);
+		fprintf(stderr, "Signature did not match contents -- %s\n", cursor.why);
 	} else {
-		fprintf(stderr, "unrecognised command \"%s\"", cmd);
+		fprintf(stderr, "unrecognised command \"%s\"\n", cmd);
 	}
 	return 0;
 }
@@ -120,21 +122,29 @@ verify_data(pgpv_t *pgp, const char *cmd, const char *inname, char *in, ssize_t 
 int
 main(int argc, char **argv)
 {
+	const char	*modifiers;
 	const char	*keyring;
 	const char	*cmd;
 	ssize_t		 cc;
 	size_t		 size;
 	pgpv_t		 pgp;
 	char		*in;
+	int		 ssh;
 	int		 ok;
 	int		 i;
 
 	memset(&pgp, 0x0, sizeof(pgp));
 	keyring = NULL;
+	ssh = 0;
 	ok = 1;
 	cmd = "verify";
-	while ((i = getopt(argc, argv, "c:k:v")) != -1) {
+	modifiers = NULL;
+	while ((i = getopt(argc, argv, "S:c:k:v")) != -1) {
 		switch(i) {
+		case 'S':
+			ssh = 1;
+			keyring = optarg;
+			break;
 		case 'c':
 			cmd = optarg;
 			break;
@@ -148,8 +158,14 @@ main(int argc, char **argv)
 			break;
 		}
 	}
-	if (!pgpv_read_pubring(&pgp, keyring, -1)) {
-		errx(EXIT_FAILURE, "can't read keyring");
+	if (ssh) {
+		if (!pgpv_read_ssh_pubkeys(&pgp, keyring, -1)) {
+			fprintf(stderr, "can't read ssh keyring\n");
+			exit(EXIT_FAILURE);
+		}
+	} else if (!pgpv_read_pubring(&pgp, keyring, -1)) {
+		fprintf(stderr, "can't read keyring\n");
+		exit(EXIT_FAILURE);
 	}
 	if (optind == argc) {
 		in = getstdin(&cc, &size);
