@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2014/01/27 21:51:03 wiedi Exp $
+$NetBSD: patch-aa,v 1.5 2014/02/04 00:15:14 joerg Exp $
 
-Patch hardcoded with libtcl85.  Previously it was hardcoded to libtcl84.
+Patch hardcoded with libtcl86.  Previously it was hardcoded to libtcl84.
 
 --- makefile.orig	1998-01-29 11:46:41.000000000 +0000
 +++ makefile
@@ -12,13 +12,13 @@ Patch hardcoded with libtcl85.  Previously it was hardcoded to libtcl84.
 -INCDIR		= /cs/research/mice/starship/common/solaris/include
 +LIBDIR		= ${PREFIX}/lib
 +INCDIR		= ${PREFIIX}/include
-+LIBS            = -ll -ltk85 -ltcl85 -lm -lX11 -L${PREFIX}/lib -Wl,-R${PREFIX}/lib -L${X11BASE}/lib -Wl,-R${X11BASE}/lib $(LDFLAGS)
++LIBS            = -ll -ltk86 -ltcl86 -lm -lX11 -L${PREFIX}/lib -Wl,-R${PREFIX}/lib -L${X11BASE}/lib -Wl,-R${X11BASE}/lib $(LDFLAGS)
  
  # The files needed from the tcl/tk library directories...
 -LIBRARY_TK	= $(LIBDIR)/tk4.2
 -LIBRARY_TCL	= $(LIBDIR)/tcl7.6
-+LIBRARY_TK	= $(LIBDIR)/tk8.5
-+LIBRARY_TCL	= $(LIBDIR)/tcl8.5
++LIBRARY_TK	= $(LIBDIR)/tk8.6
++LIBRARY_TCL	= $(LIBDIR)/tcl8.6
  
  
  # Uncomment these lines for SGI (IRIX 5.3).
