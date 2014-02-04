@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.577 2014/02/04 11:51:05 obache Exp $
+$NetBSD: CHANGES-2014,v 1.578 2014/02/04 16:37:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -897,3 +897,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/p5-Email-Address to 1.901 [rhaen 2014-02-04]
 	Added audio/asunder version 2.4 [obache 2014-02-04]
 	Updated math/ruby-spreadsheet to 0.9.7 [obache 2014-02-04]
+	Updated databases/sqlite3 to 3.8.3 [adam 2014-02-04]
+	Updated databases/sqlite3-docs to 3.8.3 [adam 2014-02-04]
+	Updated databases/sqlite3-tcl to 3.8.3 [adam 2014-02-04]
+	Updated www/squid3 to 3.4.3 [adam 2014-02-04]
