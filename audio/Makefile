@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.498 2014/02/02 23:36:32 rodent Exp $
+# $NetBSD: Makefile,v 1.499 2014/02/04 11:41:04 obache Exp $
 #
 
 COMMENT=	Audio tools
@@ -33,6 +33,7 @@ SUBDIR+=	ampache
 SUBDIR+=	applerecords
 SUBDIR+=	ario
 SUBDIR+=	arts
+SUBDIR+=	asunder
 SUBDIR+=	aubio
 SUBDIR+=	audacious
 SUBDIR+=	audacious-plugins
