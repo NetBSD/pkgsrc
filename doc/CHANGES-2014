@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.576 2014/02/04 11:37:50 obache Exp $
+$NetBSD: CHANGES-2014,v 1.577 2014/02/04 11:51:05 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -896,3 +896,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated chat/pidgin-silc to 2.10.9 [obache 2014-02-04]
 	Updated mail/p5-Email-Address to 1.901 [rhaen 2014-02-04]
 	Added audio/asunder version 2.4 [obache 2014-02-04]
+	Updated math/ruby-spreadsheet to 0.9.7 [obache 2014-02-04]
