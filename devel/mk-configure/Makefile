@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2014/01/01 23:59:27 cheusov Exp $
+# $NetBSD: Makefile,v 1.16 2014/02/04 02:53:01 cheusov Exp $
 #
 
-DISTNAME=	mk-configure-0.25.0
+DISTNAME=	mk-configure-0.26.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mk-configure/} \
 		http://mova.org/~cheusov/pub/mk-configure/
@@ -32,6 +32,7 @@ TEST_TARGET=		test
 
 post-install:
 	cp -Rp ${WRKSRC}/examples/* ${DESTDIR}${PREFIX}/${EGDIR}
+	cp ${WRKSRC}/presentation/*.pdf ${DESTDIR}${PREFIX}/share/doc/mk-configure
 
 .include "../../mk/bsd.prefs.mk"
 
