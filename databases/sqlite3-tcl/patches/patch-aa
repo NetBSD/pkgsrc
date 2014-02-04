@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2009/11/21 16:58:05 tnn Exp $
+$NetBSD: patch-aa,v 1.2 2014/02/04 13:28:08 adam Exp $
 
 --- Makefile.in.orig	2009-04-13 11:18:29.000000000 +0200
 +++ Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1 2009/11/21 16:58:05 tnn Exp $
  PKG_DIR		= $(PACKAGE_NAME)$(PACKAGE_VERSION)
  pkgdatadir	= $(datadir)/$(PKG_DIR)
 -pkglibdir	= $(libdir)/$(PKG_DIR)
-+pkglibdir	= $(libdir)/tcl8.4/sqlite3
++pkglibdir	= $(libdir)/sqlite3
  pkgincludedir	= $(includedir)/$(PKG_DIR)
  
  top_builddir	= .
