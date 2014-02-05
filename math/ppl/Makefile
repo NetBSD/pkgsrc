@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/02/04 19:15:09 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.6 2014/02/05 18:04:05 wiz Exp $
 
 DISTNAME=	ppl-1.1
 CATEGORIES=	math
@@ -8,7 +7,7 @@ MASTER_SITES=	ftp://ftp.cs.unipr.it/pub/ppl/releases/1.1/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cs.unipr.it/ppl/
-COMMENT=	The Parma Polyhedra Library. Used by gcc for loop optimization
+COMMENT=	The Parma Polyhedra Library
 LICENSE=	gnu-gpl-v3
 
 USE_LIBTOOL=	yes
