@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/07/17 21:49:57 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2014/02/05 09:44:18 obache Exp $
 
 DISTNAME=	xrandr-1.4.1
 CATEGORIES=	x11
@@ -21,8 +21,10 @@ SUBST_FILES.nickle=	xkeystone
 SUBST_STAGE.nickle=	post-build
 SUBST_MESSAGE.nickle=	Fixing path to nickle.
 
-BUILDLINK_API_DEPENDS.libXrandr+=	libXrandr>=1.2
+BUILDLINK_API_DEPENDS.libXrandr+=	libXrandr>=1.4
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+BUILDLINK_API_DEPENDS.xproto+=	xproto>=7.0.17
+.include "../../x11/xproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
