@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.590 2014/02/05 14:48:13 wen Exp $
+$NetBSD: CHANGES-2014,v 1.591 2014/02/05 15:22:19 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -913,3 +913,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/tk to 8.6.1nb1 [obache 2014-02-05]
 	Updated textproc/raptor2 to 2.0.13 [wiz 2014-02-05]
 	Updated databases/p5-DBIx-Class-Fixtures to 1.001021 [wen 2014-02-05]
+	Updated www/mediawiki to 1.21.5 [wen 2014-02-05]
