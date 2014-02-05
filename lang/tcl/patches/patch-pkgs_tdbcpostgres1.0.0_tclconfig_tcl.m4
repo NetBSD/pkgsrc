@@ -1,39 +1,29 @@
-$NetBSD: patch-pkgs_tdbcmysql1.0.0_configure,v 1.2 2014/02/05 12:50:51 obache Exp $
+$NetBSD: patch-pkgs_tdbcpostgres1.0.0_tclconfig_tcl.m4,v 1.1 2014/02/05 12:50:51 obache Exp $
 
---- pkgs/tdbcmysql1.0.0/configure.orig	2012-11-26 14:24:47.000000000 +0000
-+++ pkgs/tdbcmysql1.0.0/configure
-@@ -7769,7 +7769,6 @@ fi
- 		    CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
- fi
- 		LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
--		SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so.${SHLIB_VERSION}'
- 		;;
- 	    esac
- 	    case "$arch" in
-@@ -7853,17 +7852,17 @@ fi
+--- pkgs/tdbcpostgres1.0.0/tclconfig/tcl.m4.orig	2013-09-19 20:17:13.000000000 +0000
++++ pkgs/tdbcpostgres1.0.0/tclconfig/tcl.m4
+@@ -1659,26 +1659,26 @@ AC_DEFUN([TEA_CONFIG_CFLAGS], [
  		;;
  	    esac
  	    ;;
 -	FreeBSD-*)
-+	FreeBSD-*|DragonFly)
++	FreeBSD-*|DragonFly-*)
  	    # This configuration from FreeBSD Ports.
  	    SHLIB_CFLAGS="-fPIC"
  	    SHLIB_LD="${CC} -shared"
--	    TCL_SHLIB_LD_EXTRAS="-soname \$@"
-+	    TCL_SHLIB_LD_EXTRAS="-Wl,-soname \$@"
+-	    TCL_SHLIB_LD_EXTRAS="-soname \$[@]"
++	    TCL_SHLIB_LD_EXTRAS="-Wl,-soname \$[@]"
  	    SHLIB_SUFFIX=".so"
  	    LDFLAGS=""
- 	    if test $doRpath = yes; then :
- 
+ 	    AS_IF([test $doRpath = yes], [
  		CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
--		LD_SEARCH_FLAGS='-rpath ${LIB_RUNTIME_DIR}'
-+		LD_SEARCH_FLAGS='-Wl,-rpath ${LIB_RUNTIME_DIR}'
- fi
- 	    if test "${TCL_THREADS}" = "1"; then :
- 
-@@ -7873,10 +7872,10 @@ fi
- 		LDFLAGS="$LDFLAGS $PTHREAD_LIBS"
- fi
+-		LD_SEARCH_FLAGS='-rpath ${LIB_RUNTIME_DIR}'])
++		LD_SEARCH_FLAGS='-Wl,-rpath ${LIB_RUNTIME_DIR}'])
+ 	    AS_IF([test "${TCL_THREADS}" = "1"], [
+ 		# The -pthread needs to go in the LDFLAGS, not LIBS
+ 		LIBS=`echo $LIBS | sed s/-pthread//`
+ 		CFLAGS="$CFLAGS $PTHREAD_CFLAGS"
+ 		LDFLAGS="$LDFLAGS $PTHREAD_LIBS"])
  	    # Version numbers are dot-stripped by system policy.
 -	    TCL_TRIM_DOTS=`echo ${VERSION} | tr -d .`
 -	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
@@ -46,7 +36,7 @@ $NetBSD: patch-pkgs_tdbcmysql1.0.0_configure,v 1.2 2014/02/05 12:50:51 obache Ex
  	    ;;
  	Darwin-*)
  	    CFLAGS_OPTIMIZE="-Os"
-@@ -8440,7 +8439,7 @@ fi
+@@ -1999,7 +1999,7 @@ dnl # preprocessing tests use only CPPFL
  	    BSD/OS*) ;;
  	    CYGWIN_*) ;;
  	    IRIX*) ;;
