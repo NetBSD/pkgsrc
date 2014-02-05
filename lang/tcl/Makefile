@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2014/02/05 12:46:31 obache Exp $
+# $NetBSD: Makefile,v 1.74 2014/02/05 12:49:38 obache Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
@@ -16,7 +16,6 @@ LICENSE=	2-clause-bsd
 WRKSRC=			${WRKDIR}/tcl${TCL_VERSION}
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_DIRS=		unix
 BUILD_DIRS=		${CONFIGURE_DIRS}
 INSTALL_TARGET=		install
