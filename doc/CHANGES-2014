@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.593 2014/02/05 20:25:19 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.594 2014/02/05 21:14:13 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -922,3 +922,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/grilo to 0.2.7 [drochner 2014-02-05]
 	Updated net/grilo-plugins to 0.2.9 [drochner 2014-02-05]
 	Updated lang/gawk to 4.1.0nb2 [wiz 2014-02-05]
+	Updated devel/lmdbg to 1.2.1 [cheusov 2014-02-05]
