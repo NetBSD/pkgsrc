@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.581 2014/02/05 04:59:15 wen Exp $
+$NetBSD: CHANGES-2014,v 1.582 2014/02/05 09:33:23 manu Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -904,3 +904,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated math/ppl to 1.1 [wiz 2014-02-04]
 	Updated devel/p5-Throwable to 0.200009 [wen 2014-02-05]
 	Updated www/p5-Mojolicious to 4.76 [wen 2014-02-05]
+	Added net/nagios-plugin-dotpid version 0.1 [manu 2014-02-05]
