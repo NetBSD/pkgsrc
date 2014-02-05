@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12976 2014/02/05 12:59:05 wiz Exp $
+$NetBSD: TODO,v 1.12977 2014/02/05 17:39:19 drochner Exp $
 
 Suggested new packages
 ======================
@@ -638,7 +638,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gramofile-1.6P
 	o gramps-4.0.1
 	o graphviz-2.36.0
-	o grilo-0.2.7
 	o groff-1.22.2
 	o gsharutils-4.14
 	o gss-1.0.2
@@ -657,7 +656,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gtodo-applet-0.16.2
 	o guile-2.0.9
 	o guile-gtk-2.0
-	o gupnp-av-0.12.4
 	o gwaei-3.6.2
 	o gworkspace-0.9.2
 	o gxine-0.5.907
