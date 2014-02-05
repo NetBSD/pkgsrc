@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.579 2014/02/04 19:15:20 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.580 2014/02/05 03:27:04 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -902,3 +902,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/sqlite3-tcl to 3.8.3 [adam 2014-02-04]
 	Updated www/squid3 to 3.4.3 [adam 2014-02-04]
 	Updated math/ppl to 1.1 [wiz 2014-02-04]
+	Updated devel/p5-Throwable to 0.200009 [wen 2014-02-05]
