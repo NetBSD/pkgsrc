@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2013/12/31 17:49:38 wiz Exp $
+$NetBSD: distinfo,v 1.8 2014/02/05 12:58:56 wiz Exp $
 
-SHA1 (raptor2-2.0.12.tar.gz) = d485d409e93b79a9d3690ba2b9d15ca6e1c4b84e
-RMD160 (raptor2-2.0.12.tar.gz) = 2b3cda74e1c8774652619b99d2cf2ac81072d084
-Size (raptor2-2.0.12.tar.gz) = 1859726 bytes
+SHA1 (raptor2-2.0.13.tar.gz) = 6e9b7db17ab1b6b030e257eb2a25dee7ee2b9838
+RMD160 (raptor2-2.0.13.tar.gz) = d12515a71c0c4c03ed0ffc52ff1c148015ed77f2
+Size (raptor2-2.0.13.tar.gz) = 1859648 bytes
