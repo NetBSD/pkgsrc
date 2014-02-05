@@ -1,0 +1,3 @@
+This module tries to load Cpanel::JSON::XS, and if that fails
+instead tries to load JSON::PP. If neither is available, an exception
+will be thrown.
