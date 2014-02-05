@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2013/10/09 14:47:01 wen Exp $
+# $NetBSD: Makefile,v 1.10 2014/02/05 03:25:59 wen Exp $
 
-DISTNAME=	Throwable-0.200008
+DISTNAME=	Throwable-0.200009
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 SVR4_PKGNAME=	p5err
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RJ/RJBS/}
@@ -15,6 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Devel-StackTrace>=1.2100:../../devel/p5-Devel-StackTrace
 DEPENDS+=	p5-Moo>=1.000001:../../devel/p5-Moo
 DEPENDS+=	p5-MooX-Types-MooseLike>=0:../../devel/p5-MooX-Types-MooseLike
+DEPENDS+=	p5-Class-Load>=0.20:../../devel/p5-Class-Load
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
