@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2008/10/05 21:36:33 cube Exp $
+# $NetBSD: builtin.mk,v 1.3 2014/02/05 09:42:33 obache Exp $
 
 BUILTIN_PKG:=	libXrandr
 
@@ -49,3 +49,12 @@ USE_BUILTIN.libXrandr!=							\
 MAKEVARS+=	USE_BUILTIN.libXrandr
 
 .include "../../mk/x11.builtin.mk"
+
+CHECK_BUILTIN.libXrandr?=	no
+.if !empty(CHECK_BUILTIN.libXrandr:M[nN][oO])
+
+.  if !empty(USE_BUILTIN.libXrandr:M[nN][oO])
+BUILDLINK_API_DEPENDS.randrproto+=	randrproto>=1.4
+.  endif
+
+.endif  # CHECK_BUILTIN.libXrandr
