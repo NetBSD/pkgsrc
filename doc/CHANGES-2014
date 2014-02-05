@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.583 2014/02/05 10:56:59 wen Exp $
+$NetBSD: CHANGES-2014,v 1.584 2014/02/05 11:50:56 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -906,3 +906,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Mojolicious to 4.76 [wen 2014-02-05]
 	Added net/nagios-plugin-dotpid version 0.1 [manu 2014-02-05]
 	Updated databases/p5-SQL-Abstract to 1.77 [wen 2014-02-05]
+	Updated devel/p5-MRO-Compat to 0.12 [wen 2014-02-05]
