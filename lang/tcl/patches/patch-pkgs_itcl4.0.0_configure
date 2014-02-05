@@ -1,4 +1,4 @@
-$NetBSD: patch-pkgs_itcl4.0.0_configure,v 1.1 2014/01/26 03:51:12 ryoon Exp $
+$NetBSD: patch-pkgs_itcl4.0.0_configure,v 1.2 2014/02/05 12:50:51 obache Exp $
 
 --- pkgs/itcl4.0.0/configure.orig	2012-11-07 21:54:07.000000000 +0000
 +++ pkgs/itcl4.0.0/configure
@@ -20,3 +20,48 @@ $NetBSD: patch-pkgs_itcl4.0.0_configure,v 1.1 2014/01/26 03:51:12 ryoon Exp $
  	    ;;
  	NetBSD-*|FreeBSD-[3-4].*)
  	    # FreeBSD 3.* and greater have ELF.
+@@ -8837,17 +8833,17 @@ fi
+ 		;;
+ 	    esac
+ 	    ;;
+-	FreeBSD-*)
++	FreeBSD-*|DragonFly-*)
+ 	    # This configuration from FreeBSD Ports.
+ 	    SHLIB_CFLAGS="-fPIC"
+ 	    SHLIB_LD="${CC} -shared"
+-	    TCL_SHLIB_LD_EXTRAS="-soname \$@"
++	    TCL_SHLIB_LD_EXTRAS="-Wl,-soname \$@"
+ 	    SHLIB_SUFFIX=".so"
+ 	    LDFLAGS=""
+ 	    if test $doRpath = yes; then
+ 
+ 		CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
+-		LD_SEARCH_FLAGS='-rpath ${LIB_RUNTIME_DIR}'
++		LD_SEARCH_FLAGS='-Wl,-rpath ${LIB_RUNTIME_DIR}'
+ fi
+ 
+ 	    if test "${TCL_THREADS}" = "1"; then
+@@ -8859,10 +8855,10 @@ fi
+ fi
+ 
+ 	    # Version numbers are dot-stripped by system policy.
+-	    TCL_TRIM_DOTS=`echo ${VERSION} | tr -d .`
+-	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
+-	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so.1'
+-	    TCL_LIB_VERSIONS_OK=nodots
++#	    TCL_TRIM_DOTS=`echo ${VERSION} | tr -d .`
++#	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
++#	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so.1'
++#	    TCL_LIB_VERSIONS_OK=nodots
+ 	    ;;
+ 	Darwin-*)
+ 	    CFLAGS_OPTIMIZE="-Os"
+@@ -9637,7 +9633,7 @@ fi
+ 	    BSD/OS*) ;;
+ 	    CYGWIN_*) ;;
+ 	    IRIX*) ;;
+-	    NetBSD-*|FreeBSD-*|OpenBSD-*) ;;
++	    NetBSD-*|FreeBSD-*|OpenBSD-*|DragonFly-*) ;;
+ 	    Darwin-*) ;;
+ 	    SCO_SV-3.2*) ;;
+ 	    windows) ;;
