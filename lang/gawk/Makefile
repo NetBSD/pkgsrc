@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2013/12/15 09:42:14 richard Exp $
+# $NetBSD: Makefile,v 1.59 2014/02/05 20:25:09 wiz Exp $
 
 DISTNAME=	gawk-4.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gawk/}
 EXTRACT_SUFX=	.tar.xz
@@ -38,7 +38,7 @@ CFLAGS+=	-Dvm_region=vm_region_64
 PLIST_VARS+=		extension
 .if "${OPSYS}" != "MirBSD"
 PLIST.extension=	yes
-.endif 
+.endif
 
 INSTALLATION_DIRS+=	${PKGGNUDIR}bin ${PKGGNUDIR}${PKGMANDIR}/man1
 
