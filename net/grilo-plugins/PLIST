@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/07/24 11:22:59 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/02/05 17:38:32 drochner Exp $
 lib/grilo-0.2/grl-apple-trailers.xml
 lib/grilo-0.2/grl-bliptv.xml
 lib/grilo-0.2/grl-bookmarks.xml
@@ -14,6 +14,7 @@ lib/grilo-0.2/grl-podcasts.xml
 lib/grilo-0.2/grl-raitv.xml
 lib/grilo-0.2/grl-shoutcast.xml
 lib/grilo-0.2/grl-upnp.xml
+lib/grilo-0.2/grl-vimeo.xml
 lib/grilo-0.2/libgrlappletrailers.la
 lib/grilo-0.2/libgrlbliptv.la
 lib/grilo-0.2/libgrlbookmarks.la
@@ -29,3 +30,4 @@ lib/grilo-0.2/libgrlpodcasts.la
 lib/grilo-0.2/libgrlraitv.la
 lib/grilo-0.2/libgrlshoutcast.la
 lib/grilo-0.2/libgrlupnp.la
+lib/grilo-0.2/libgrlvimeo.la
