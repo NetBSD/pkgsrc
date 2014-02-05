@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.592 2014/02/05 17:39:19 drochner Exp $
+$NetBSD: CHANGES-2014,v 1.593 2014/02/05 20:25:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -921,3 +921,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/gupnp-av to 0.12.5 [drochner 2014-02-05]
 	Updated net/grilo to 0.2.7 [drochner 2014-02-05]
 	Updated net/grilo-plugins to 0.2.9 [drochner 2014-02-05]
+	Updated lang/gawk to 4.1.0nb2 [wiz 2014-02-05]
