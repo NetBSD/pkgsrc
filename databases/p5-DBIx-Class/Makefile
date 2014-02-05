@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2013/05/31 12:39:50 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2014/02/05 12:00:08 wen Exp $
 
-DISTNAME=	DBIx-Class-0.08250
+DISTNAME=	DBIx-Class-0.08270
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBIx/}
 
@@ -22,18 +21,18 @@ DEPENDS+=	p5-Data-Compare>=1.22:../../devel/p5-Data-Compare
 DEPENDS+=	p5-Data-Dumper-Concise>=2.020:../../devel/p5-Data-Dumper-Concise
 DEPENDS+=	p5-Devel-GlobalDestruction>=0.09:../../devel/p5-Devel-GlobalDestruction
 DEPENDS+=	p5-Hash-Merge>=0.12:../../devel/p5-Hash-Merge
-DEPENDS+=	p5-MRO-Compat>=0.09:../../devel/p5-MRO-Compat
+DEPENDS+=	p5-MRO-Compat>=0.12:../../devel/p5-MRO-Compat
 DEPENDS+=	p5-Module-Find>=0.07:../../devel/p5-Module-Find
 DEPENDS+=	p5-Moo>=1.000006:../../devel/p5-Moo
 DEPENDS+=	p5-Path-Class>=0.18:../../devel/p5-Path-Class
-DEPENDS+=	p5-SQL-Abstract>=1.73:../../databases/p5-SQL-Abstract
+DEPENDS+=	p5-SQL-Abstract>=1.77:../../databases/p5-SQL-Abstract
 DEPENDS+=	p5-SQL-Abstract-Limit>=0.13:../../databases/p5-SQL-Abstract-Limit
 DEPENDS+=	p5-Scope-Guard>=0.03:../../devel/p5-Scope-Guard
 DEPENDS+=	p5-Sub-Name>=0.04:../../devel/p5-Sub-Name
 DEPENDS+=	p5-Try-Tiny>=0.07:../../devel/p5-Try-Tiny
 DEPENDS+=	p5-namespace-clean>=0.24:../../devel/p5-namespace-clean
 
-BUILD_DEPENDS+=	p5-DBD-SQLite>=1.29:../../databases/p5-DBD-SQLite
+BUILD_DEPENDS+=	p5-DBD-SQLite>=1.40:../../databases/p5-DBD-SQLite
 BUILD_DEPENDS+= p5-Package-Stash>=0.28:../../devel/p5-Package-Stash
 BUILD_DEPENDS+=	{perl>=5.10.1,p5-File-Temp>=0.22}:../../devel/p5-File-Temp
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
