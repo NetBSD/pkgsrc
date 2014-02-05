@@ -1,0 +1,13 @@
+# -*- sh -*-
+# $NetBSD: INSTALL.in,v 1.1 2014/02/05 07:02:30 obache Exp $
+#
+HASKELL_PKG_BIN="@HASKELL_PKG_BIN@"
+HASKELL_PKG_DESCR_FILE="@HASKELL_PKG_DESCR_FILE@"
+
+case ${STAGE} in
+    POST-INSTALL)
+        if [ -f ${HASKELL_PKG_DESCR_FILE} ]; then
+            ${HASKELL_PKG_BIN} update ${HASKELL_PKG_DESCR_FILE};
+        fi
+        ;;
+esac
