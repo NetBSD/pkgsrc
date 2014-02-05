@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.588 2014/02/05 12:56:28 obache Exp $
+$NetBSD: CHANGES-2014,v 1.589 2014/02/05 12:59:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -911,3 +911,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/py-carddav to 0.7.0 [wiz 2014-02-05]
 	Updated lang/tcl to 8.6.1nb2 [obache 2014-02-05]
 	Updated x11/tk to 8.6.1nb1 [obache 2014-02-05]
+	Updated textproc/raptor2 to 2.0.13 [wiz 2014-02-05]
