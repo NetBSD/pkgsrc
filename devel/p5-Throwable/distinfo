@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/09/08 13:31:54 wen Exp $
+$NetBSD: distinfo,v 1.4 2014/02/05 03:25:59 wen Exp $
 
-SHA1 (Throwable-0.200008.tar.gz) = 93f0049daed239277fa806c8c2d90da3c0eb9d47
-RMD160 (Throwable-0.200008.tar.gz) = a69dc110d8d1d5b28f9dd5992a6ca0d45a85aed3
-Size (Throwable-0.200008.tar.gz) = 16623 bytes
+SHA1 (Throwable-0.200009.tar.gz) = 80ac0b795ff1c8f20253d52ac51a40edc1764a80
+RMD160 (Throwable-0.200009.tar.gz) = efa03d91a17c3df727252e78d7c5ab951fae00f4
+Size (Throwable-0.200009.tar.gz) = 16081 bytes
