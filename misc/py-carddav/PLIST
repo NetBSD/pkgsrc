@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/11/26 13:46:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/02/05 12:21:19 wiz Exp $
 bin/pc_query
 bin/pycard-import
 bin/pycardsyncer
@@ -16,9 +16,15 @@ ${PYSITELIB}/pycarddav/backend.pyo
 ${PYSITELIB}/pycarddav/carddav.py
 ${PYSITELIB}/pycarddav/carddav.pyc
 ${PYSITELIB}/pycarddav/carddav.pyo
-${PYSITELIB}/pycarddav/controllers.py
-${PYSITELIB}/pycarddav/controllers.pyc
-${PYSITELIB}/pycarddav/controllers.pyo
+${PYSITELIB}/pycarddav/controllers/__init__.py
+${PYSITELIB}/pycarddav/controllers/__init__.pyc
+${PYSITELIB}/pycarddav/controllers/__init__.pyo
+${PYSITELIB}/pycarddav/controllers/query.py
+${PYSITELIB}/pycarddav/controllers/query.pyc
+${PYSITELIB}/pycarddav/controllers/query.pyo
+${PYSITELIB}/pycarddav/controllers/sync.py
+${PYSITELIB}/pycarddav/controllers/sync.pyc
+${PYSITELIB}/pycarddav/controllers/sync.pyo
 ${PYSITELIB}/pycarddav/model.py
 ${PYSITELIB}/pycarddav/model.pyc
 ${PYSITELIB}/pycarddav/model.pyo
