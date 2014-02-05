@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.20 2014/02/05 14:25:55 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.21 2014/02/05 19:45:59 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q4 branch:
@@ -74,3 +74,5 @@ Pullup ticket #4313 - requested by pettai
 net/bind98: build fix
 Pullup ticket #4314 - requested by obache
 graphics/cogl: bug fix patch
+Pullup ticket #4315 - requested by obache
+emulators/dosbox: build fix
