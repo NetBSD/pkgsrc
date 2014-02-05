@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.13 2012/03/23 18:44:23 marino Exp $
+$NetBSD: distinfo,v 1.14 2014/02/05 17:20:31 drochner Exp $
 
 SHA1 (a2ps-4.14.tar.gz) = 365abbbe4b7128bf70dad16d06e23c5701874852
 RMD160 (a2ps-4.14.tar.gz) = a5105d6256a809483e099519325979aaaff7219e
 Size (a2ps-4.14.tar.gz) = 2552507 bytes
+SHA1 (patch-CVE-2001-1593_1) = d0ce811248c33c5df6952f84176c2901ca4bd176
+SHA1 (patch-CVE-2001-1593_2) = f3a40104b0c510480ce5107a8acf2924d4ef5974
 SHA1 (patch-aa) = 6317b6abca697388538fc705037da55379a4e1e1
 SHA1 (patch-ab) = 7b1f1e3ed2af47e7d9864ec2dbcd7d105f93632a
 SHA1 (patch-ac) = 8e09c4c3b320b58bf12c4266d4d22977b5f9b826
