@@ -1,0 +1,17 @@
+$NetBSD: patch-configure,v 1.1 2014/02/05 09:26:58 manu Exp $
+
+Make sure _POSIX_C_SOURCE=199506 so that strtok() is defined by <string.h>
+Otherwise, compiler assumes it returns an int, which badly breaks on LP64
+
+--- configure.orig	2014-02-05 08:57:10.000000000 +0000
++++ configure	2014-02-05 08:58:04.000000000 +0000
+@@ -14461,8 +14461,9 @@
+ fi
+ 
+ 
+ LASSO_PUB_CFLAGS="$LASSO_DEFINES"
++LASSO_CFLAGS="$LASSO_CFLAGS -D_POSIX_C_SOURCE=199506"
+ LASSO_CORE_CFLAGS="$LASSO_CFLAGS $LASSO_DEFINES $Z_CFLAGS -DLASSO_INTERNALS"
+ if test $MINGW -eq 1; then
+   LASSO_CORE_LIBS="-llasso-0"
+ else
