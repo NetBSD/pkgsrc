@@ -1,0 +1,3 @@
+$NetBSD: DESCR,v 1.1 2014/02/05 09:31:47 manu Exp $
+
+This Nagios plugin cheks that /var/run/*.pid belongs to alive processes
