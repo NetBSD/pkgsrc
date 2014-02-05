@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.7 2014/02/03 09:48:44 obache Exp $
+# $NetBSD: bootstrap.mk,v 1.8 2014/02/05 06:24:27 obache Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler based on a per-platform
 # basis.
@@ -80,14 +80,20 @@ pre-configure:
 
 #BUILDLINK_PASSTHRU_DIRS=	${PREFIX}/lib/${PKGNAME_NOREV}
 
-.if exists(${WRKDIR}/${DISTNAME:S/-src$//}/mk/config.mk)
-bootstrap:
-	@${ERROR_MSG} "You have already configured the package in a way\
-	that building bootstrapping compiler is impossible."
-	@${FAIL_MSG}  "Please run \"${MAKE} clean patch\" first."
-.else
-bootstrap: patch .WAIT ${WRKDIR}/${BOOT_ARCHIVE}
+bootstrap: pre-bootstrap .WAIT ${WRKDIR}/${BOOT_ARCHIVE}
 	@${PHASE_MSG} "Done creating" ${WRKDIR}/${BOOT_ARCHIVE}
+
+
+.PHONY: pre-bootstrap
+pre-bootstrap:
+	@${TEST} \! -f ${_COOKIE.configure} || \
+		(${ERROR_MSG} "You have already configured the package in a way\
+		that building bootstrapping compiler is impossible."; \
+		${FAIL_MSG}  "Please run \"${MAKE} clean patch\" first.");
+	@${TEST} -f ${_COOKIE.patch} || \
+		${FAIL_MSG} "Please run \"${MAKE} patch\" first."
+	@${DO_NADA}
+
 
 ${WRKDIR}/lndir:
 	@${PHASE_MSG} "Building lndir(1) to duplicate the source tree."
@@ -135,4 +141,3 @@ ${WRKDIR}/${BOOT_TARBALL}: ${WRKDIR}/stamp-build-boot
 ${WRKDIR}/${BOOT_ARCHIVE}: ${WRKDIR}/${BOOT_TARBALL}
 	@${PHASE_MSG} "Compressing binary distribution of bootstrapping ${PKGNAME_NOREV}"
 	${XZ} --verbose -9 --extreme ${WRKDIR:Q}/${BOOT_TARBALL}
-.endif
