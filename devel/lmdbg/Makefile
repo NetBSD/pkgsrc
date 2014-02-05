@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2013/08/07 21:07:25 cheusov Exp $
+# $NetBSD: Makefile,v 1.14 2014/02/05 21:14:00 cheusov Exp $
 #
 
-DISTNAME=	lmdbg-1.2.0
+DISTNAME=	lmdbg-1.2.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lmdbg/} \
 		http://mova.org/~cheusov/pub/lmdbg/
