@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2013/07/03 18:18:03 sno Exp $
+# $NetBSD: Makefile,v 1.29 2014/02/05 10:55:00 wen Exp $
 
-DISTNAME=	SQL-Abstract-1.74
+DISTNAME=	SQL-Abstract-1.77
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5sqa
 CATEGORIES=	databases perl5
@@ -20,6 +20,7 @@ BUILD_DEPENDS+=	p5-Test-Deep>=0.101:../../devel/p5-Test-Deep
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.92}:../../devel/p5-Test-Simple
 BUILD_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
+BUILD_DEPENDS+=	p5-Tree-DAG_Node>=0:../../devel/p5-Tree-DAG_Node
 
 PERL5_PACKLIST=		auto/SQL/Abstract/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
