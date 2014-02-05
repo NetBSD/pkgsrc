@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.585 2014/02/05 12:01:05 wen Exp $
+$NetBSD: CHANGES-2014,v 1.586 2014/02/05 12:21:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -908,3 +908,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/p5-SQL-Abstract to 1.77 [wen 2014-02-05]
 	Updated devel/p5-MRO-Compat to 0.12 [wen 2014-02-05]
 	Updated databases/p5-DBIx-Class to 0.08270 [wen 2014-02-05]
+	Updated misc/py-carddav to 0.7.0 [wiz 2014-02-05]
