@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.8 2014/02/05 06:24:27 obache Exp $
+# $NetBSD: bootstrap.mk,v 1.9 2014/02/05 06:38:05 obache Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler based on a per-platform
 # basis.
@@ -12,29 +12,29 @@
 #
 .include "../../mk/bsd.prefs.mk"
 .if ${MACHINE_ARCH} == "i386" && ${OPSYS} == "FreeBSD"
-BOOT_ARCHIVE=	${PKGNAME_NOREV}-boot-i386-unknown-freebsd.tar.xz
+BOOT_ARCHIVE:=	${PKGNAME}-boot-i386-unknown-freebsd.tar.xz
 
 .elif ${MACHINE_ARCH} == "i386" && ${OPSYS} == "NetBSD"
-BOOT_ARCHIVE=	${PKGNAME_NOREV}-boot-i386-unknown-netbsd.tar.xz
+BOOT_ARCHIVE:=	${PKGNAME}-boot-i386-unknown-netbsd.tar.xz
 
 .elif ${MACHINE_ARCH} == "powerpc" && ${OPSYS} == "Darwin"
-BOOT_ARCHIVE=	${PKGNAME_NOREV}-boot-powerpc-apple-darwin.tar.xz
+BOOT_ARCHIVE:=	${PKGNAME_NOREV}-boot-powerpc-apple-darwin.tar.xz
 # Existence of libelf makes LeadingUnderscore being "NO", which is
 # incorrect for this platform. See ${WRKSRC}/aclocal.m4
 # (FP_LEADING_UNDERSCORE)
 CONFLICTS+=	libelf-[0-9]*
 
 .elif ${MACHINE_ARCH} == "x86_64" && ${OPSYS} == "Linux"
-BOOT_ARCHIVE=	${PKGNAME_NOREV}-boot-x86_64-unknown-linux.tar.xz
+BOOT_ARCHIVE:=	${PKGNAME}-boot-x86_64-unknown-linux.tar.xz
 
 .elif ${MACHINE_ARCH} == "x86_64" && ${OPSYS} == "NetBSD"
-BOOT_ARCHIVE=	${PKGNAME_NOREV}-boot-x86_64-unknown-netbsd.tar.xz
+BOOT_ARCHIVE:=	${PKGNAME}-boot-x86_64-unknown-netbsd.tar.xz
 
 .elif !empty(MACHINE_PLATFORM:MSunOS-5.11-i386)
-BOOT_ARCHIVE=  ${PKGNAME_NOREV}-boot-i386-unknown-solaris2.tar.gz
+BOOT_ARCHIVE:=  ${PKGNAME}-boot-i386-unknown-solaris2.tar.gz
 
 .elif !empty(MACHINE_PLATFORM:MSunOS-5.11-x86_64)
-BOOT_ARCHIVE=  ${PKGNAME_NOREV}-boot-x86_64-unknown-solaris2.tar.xz
+BOOT_ARCHIVE:=  ${PKGNAME}-boot-x86_64-unknown-solaris2.tar.xz
 
 .else
 PKG_FAIL_REASON+=	"internal error: unsupported platform"
