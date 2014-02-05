@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1016 2014/01/27 21:42:33 wiedi Exp $
+# $NetBSD: Makefile,v 1.1017 2014/02/05 21:48:17 abs Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -274,6 +274,7 @@ SUBDIR+=	p5-CGI-Session-Driver-memcached
 SUBDIR+=	p5-CGI-Session-Plugin-Redirect
 SUBDIR+=	p5-CGI-Session-Serialize-yaml
 SUBDIR+=	p5-CGI-Simple
+SUBDIR+=	p5-CGI-Struct
 SUBDIR+=	p5-CSS
 SUBDIR+=	p5-CSS-Squish
 SUBDIR+=	p5-CSS-Tiny
@@ -291,6 +292,7 @@ SUBDIR+=	p5-Catalyst-Controller-BindLex
 SUBDIR+=	p5-Catalyst-Controller-FormBuilder
 SUBDIR+=	p5-Catalyst-Controller-HTML-FormFu
 SUBDIR+=	p5-Catalyst-Devel
+SUBDIR+=	p5-Catalyst-DispatchType-Regex
 SUBDIR+=	p5-Catalyst-Engine-JobQueue-POE
 SUBDIR+=	p5-Catalyst-Engine-PSGI
 SUBDIR+=	p5-Catalyst-Manual
