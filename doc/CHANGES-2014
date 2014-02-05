@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.591 2014/02/05 15:22:19 wen Exp $
+$NetBSD: CHANGES-2014,v 1.592 2014/02/05 17:39:19 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -906,6 +906,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Mojolicious to 4.76 [wen 2014-02-05]
 	Added net/nagios-plugin-dotpid version 0.1 [manu 2014-02-05]
 	Updated databases/p5-SQL-Abstract to 1.77 [wen 2014-02-05]
+	Updated textproc/libyaml to 0.1.5 [drochner 2014-02-05]
 	Updated devel/p5-MRO-Compat to 0.12 [wen 2014-02-05]
 	Updated databases/p5-DBIx-Class to 0.08270 [wen 2014-02-05]
 	Updated misc/py-carddav to 0.7.0 [wiz 2014-02-05]
@@ -914,3 +915,9 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/raptor2 to 2.0.13 [wiz 2014-02-05]
 	Updated databases/p5-DBIx-Class-Fixtures to 1.001021 [wen 2014-02-05]
 	Updated www/mediawiki to 1.21.5 [wen 2014-02-05]
+	Updated net/gssdp to 0.14.7 [drochner 2014-02-05]
+	Updated net/gupnp to 0.20.10 [drochner 2014-02-05]
+	Updated net/gupnp-tools to 0.8.9 [drochner 2014-02-05]
+	Updated net/gupnp-av to 0.12.5 [drochner 2014-02-05]
+	Updated net/grilo to 0.2.7 [drochner 2014-02-05]
+	Updated net/grilo-plugins to 0.2.9 [drochner 2014-02-05]
