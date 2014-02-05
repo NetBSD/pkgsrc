@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2013/08/22 08:32:44 wen Exp $
+# $NetBSD: Makefile,v 1.30 2014/02/05 21:50:50 abs Exp $
 
-DISTNAME=	Catalyst-Runtime-5.90042
+DISTNAME=	Catalyst-Runtime-5.90053
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
@@ -16,7 +16,7 @@ DEPENDS+=	p5-List-MoreUtils>=0:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-namespace-autoclean>=0.09:../../devel/p5-namespace-autoclean
 DEPENDS+=	p5-MooseX-Emulate-Class-Accessor-Fast>=0.00903:../../devel/p5-MooseX-Emulate-Class-Accessor-Fast
 DEPENDS+=	p5-Data-OptList>=0:../../devel/p5-Data-OptList
-DEPENDS+=	p5-Moose>=2:../../devel/p5-Moose
+DEPENDS+=	p5-Moose>=1.03:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-MethodAttributes>=0.24:../../devel/p5-MooseX-MethodAttributes
 DEPENDS+=	p5-MooseX-Role-WithOverloading>=0.09:../../devel/p5-MooseX-Role-WithOverloading
 DEPENDS+=	p5-MooseX-Types-LoadableClass>=0.03:../../devel/p5-MooseX-Types-LoadableClass
@@ -29,12 +29,11 @@ DEPENDS+=	p5-HTTP-Message>=5.814:../../www/p5-HTTP-Message
 DEPENDS+=	p5-HTTP-Request-AsCGI>=1.0:../../www/p5-HTTP-Request-AsCGI
 DEPENDS+=	p5-libwww>=0:../../www/p5-libwww
 DEPENDS+=	p5-Path-Class>=0.09:../../devel/p5-Path-Class
-DEPENDS+=	p5-Safe-Isa>=0:../../devel/p5-Safe-Isa
 DEPENDS+=	p5-Sub-Exporter>=0:../../devel/p5-Sub-Exporter
 DEPENDS+=	p5-Text-SimpleTable>=0.03:../../textproc/p5-Text-SimpleTable
 DEPENDS+=	p5-Tree-Simple>=1.15:../../devel/p5-Tree-Simple
 DEPENDS+=	p5-Tree-Simple-VisitorFactory>=0:../../devel/p5-Tree-Simple-VisitorFactory
-DEPENDS+=	p5-URI>=1.36:../../www/p5-URI
+DEPENDS+=	p5-Safe-Isa>=0:../../devel/p5-Safe-Isa
 DEPENDS+=	p5-Task-Weaken>=0:../../devel/p5-Task-Weaken
 DEPENDS+=	p5-MRO-Compat>=0:../../devel/p5-MRO-Compat
 DEPENDS+=	p5-MooseX-Getopt>=0.48:../../devel/p5-MooseX-Getopt
@@ -42,11 +41,14 @@ DEPENDS+=	p5-String-RewritePrefix>=0.004:../../textproc/p5-String-RewritePrefix
 DEPENDS+=	p5-Plack>=0.9991:../../www/p5-Plack
 DEPENDS+=	p5-Plack-Middleware-ReverseProxy>=0.04:../../www/p5-Plack-Middleware-ReverseProxy
 DEPENDS+=	p5-Plack-Test-ExternalServer>=0:../../www/p5-Plack-Test-ExternalServer
+DEPENDS+=	p5-Class-Data-Inheritable-[0-9]*:../../devel/p5-Class-Data-Inheritable
+DEPENDS+=	p5-URI>=1.36:../../www/p5-URI
+DEPENDS+=	p5-JSON-MaybeXS>=1.36:../../converters/p5-JSON-MaybeXS
+DEPENDS+=	p5-CGI-Struct>=0:../../www/p5-CGI-Struct
+DEPENDS+=	p5-Catalyst-DispatchType-Regex>=5.90021:../../www/p5-Catalyst-DispatchType-Regex
 
-BUILD_DEPENDS+=	p5-Class-Data-Inheritable-[0-9]*:../../devel/p5-Class-Data-Inheritable
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 #BUILD_DEPENDS+=	p5-Test-MockObject>=1.07:../../devel/p5-Test-MockObject
-BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 
 #MAKE_ENV+=	PERL_EXTUTILS_AUTOINSTALL=--skipdeps
 PERL5_PACKLIST= auto/Catalyst/Runtime/.packlist
