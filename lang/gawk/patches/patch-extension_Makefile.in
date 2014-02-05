@@ -1,0 +1,15 @@
+$NetBSD: patch-extension_Makefile.in,v 1.1 2014/02/05 20:25:09 wiz Exp $
+
+Install into a separate directory, otherwise these shadow e.g. time(3).
+
+--- extension/Makefile.in.orig	2013-05-09 13:00:15.000000000 +0000
++++ extension/Makefile.in
+@@ -272,7 +272,7 @@ am__can_run_installinfo = \
+     n|no|NO) false;; \
+     *) (install-info --version) >/dev/null 2>&1;; \
+   esac
+-man3dir = $(mandir)/man3
++man3dir = $(mandir)/man3am
+ NROFF = nroff
+ MANS = $(dist_man_MANS)
+ RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\

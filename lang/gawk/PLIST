@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2013/10/19 19:47:39 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.21 2014/02/05 20:25:09 wiz Exp $
 bin/gawk
 bin/${PKGNAME}
 bin/igawk
@@ -23,16 +23,16 @@ libexec/awk/grcat
 libexec/awk/pwcat
 man/man1/gawk.1
 man/man1/igawk.1
-${PLIST.extension}man/man3/filefuncs.3am
-${PLIST.extension}man/man3/fnmatch.3am
-${PLIST.extension}man/man3/fork.3am
-${PLIST.extension}man/man3/ordchr.3am
-${PLIST.extension}man/man3/readdir.3am
-${PLIST.extension}man/man3/readfile.3am
-${PLIST.extension}man/man3/revoutput.3am
-${PLIST.extension}man/man3/revtwoway.3am
-${PLIST.extension}man/man3/rwarray.3am
-${PLIST.extension}man/man3/time.3am
+${PLIST.extension}man/man3am/filefuncs.3am
+${PLIST.extension}man/man3am/fnmatch.3am
+${PLIST.extension}man/man3am/fork.3am
+${PLIST.extension}man/man3am/ordchr.3am
+${PLIST.extension}man/man3am/readdir.3am
+${PLIST.extension}man/man3am/readfile.3am
+${PLIST.extension}man/man3am/revoutput.3am
+${PLIST.extension}man/man3am/revtwoway.3am
+${PLIST.extension}man/man3am/rwarray.3am
+${PLIST.extension}man/man3am/time.3am
 share/awk/assert.awk
 share/awk/bits2str.awk
 share/awk/cliff_rand.awk
