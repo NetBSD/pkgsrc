@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.594 2014/02/05 21:14:13 cheusov Exp $
+$NetBSD: CHANGES-2014,v 1.595 2014/02/05 21:51:36 abs Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -923,3 +923,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/grilo-plugins to 0.2.9 [drochner 2014-02-05]
 	Updated lang/gawk to 4.1.0nb2 [wiz 2014-02-05]
 	Updated devel/lmdbg to 1.2.1 [cheusov 2014-02-05]
+	Added converters/p5-JSON-MaybeXS version 1.001000 [abs 2014-02-05]
+	Added www/p5-CGI-Struct version 1.21 [abs 2014-02-05]
+	Added www/p5-Catalyst-DispatchType-Regex version 5.90033 [abs 2014-02-05]
+	Updated www/p5-Catalyst-Runtime to 5.90053 [abs 2014-02-05]
