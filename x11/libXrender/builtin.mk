@@ -1,51 +1,7 @@
-# $NetBSD: builtin.mk,v 1.2 2008/10/05 21:36:33 cube Exp $
+# $NetBSD: builtin.mk,v 1.3 2014/02/06 05:51:54 obache Exp $
 
 BUILTIN_PKG:=	libXrender
+PKGCONFIG_FILE.libXrender=	${X11BASE}/lib/pkgconfig/xrender.pc
 
-BUILTIN_FIND_FILES_VAR:=	H_XRENDER
-BUILTIN_FIND_FILES.H_XRENDER=	${X11BASE}/include/X11/extensions/Xrender.h
-
-.include "../../mk/buildlink3/bsd.builtin.mk"
-
-###
-### Determine if there is a built-in implementation of the package and
-### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
-###
-.if ${X11BASE} == ${LOCALBASE}
-IS_BUILTIN.libXrender=	no
-.elif !defined(IS_BUILTIN.libXrender)
-IS_BUILTIN.libXrender=	no
-.  if empty(H_XRENDER:M__nonexistent__)
-IS_BUILTIN.libXrender=	yes
-.  endif
-.endif
-MAKEVARS+=	IS_BUILTIN.libXrender
-
-###
-### Determine whether we should use the built-in implementation if it
-### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
-###
-.if !defined(USE_BUILTIN.libXrender)
-.  if ${PREFER.libXrender} == "pkgsrc"
-USE_BUILTIN.libXrender=	no
-.  else
-USE_BUILTIN.libXrender=	${IS_BUILTIN.libXrender}
-.    if defined(BUILTIN_PKG.libXrender) && \
-        !empty(IS_BUILTIN.libXrender:M[yY][eE][sS])
-USE_BUILTIN.libXrender=	yes
-.      for _dep_ in ${BUILDLINK_API_DEPENDS.libXrender}
-.        if !empty(USE_BUILTIN.libXrender:M[yY][eE][sS])
-USE_BUILTIN.libXrender!=							\
-	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.libXrender:Q}; then \
-		${ECHO} yes;						\
-	else								\
-		${ECHO} no;						\
-	fi
-.        endif
-.      endfor
-.    endif
-.  endif  # PREFER.libXrender
-.endif
-MAKEVARS+=	USE_BUILTIN.libXrender
-
+.include "../../mk/buildlink3/pkgconfig-builtin.mk"
 .include "../../mk/x11.builtin.mk"
