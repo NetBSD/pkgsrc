@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/10/02 10:58:19 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/06 12:52:14 abs Exp $
 
-DISTNAME=	Sereal-Encoder-0.37
+DISTNAME=	Sereal-Encoder-2.03
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	security perl5 converters
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../CPAN/authors/id/S/SM/SMUELLER/}
@@ -11,6 +11,7 @@ COMMENT=	Perl5 module for fast, compact, powerful binary serialization
 LICENSE=	${PERL5_LICENSE}
 
 BUILD_DEPENDS+=	p5-Test-LongString-[0-9]*:../../devel/p5-Test-LongString
+BUILD_DEPENDS+=	p5-Sereal-Decoder>=2.03:../../converters/p5-Sereal-Decoder
 
 PERL5_PACKLIST=		auto/Sereal/Encoder/.packlist
 
