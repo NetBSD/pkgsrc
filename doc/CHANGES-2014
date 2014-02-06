@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.599 2014/02/06 08:32:11 obache Exp $
+$NetBSD: CHANGES-2014,v 1.600 2014/02/06 09:10:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -931,3 +931,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-pyparsing to 2.0.1nb1 [obache 2014-02-06]
 	Updated security/ap-modsecurity2 to 2.7.7 [obache 2014-02-06]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.336 [obache 2014-02-06]
+	Updated sysutils/monit to 5.6 [obache 2014-02-06]
