@@ -1,21 +1,19 @@
-# $NetBSD: Makefile,v 1.27 2013/11/13 22:53:10 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2014/02/06 08:17:42 obache Exp $
 
-DISTNAME=	modsecurity-apache_2.5.13
+DISTNAME=	modsecurity-apache_2.7.7
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/apache_//}
-PKGREVISION=	7
 CATEGORIES=	www security
-MASTER_SITES=	http://www.modsecurity.org/download/
-LICENSE=	gnu-gpl-v2
+MASTER_SITES=	https://www.modsecurity.org/tarball/${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.modsecurity.org/
 COMMENT=	Intrusion detection and prevention engine for web applications
+LICENSE=	apache-2.0
 
 APACHE_MODULE=		yes
-PKG_APACHE_ACCEPTED=	apache22
+PKG_APACHE_ACCEPTED=	apache22 apache24
 USE_APR=		yes
 USE_LANGUAGES=		c++ c
-LUA_VERSIONS_ACCEPTED=	51
 
 .include "../../mk/apache.mk"
 .include "options.mk"
@@ -23,7 +21,7 @@ LUA_VERSIONS_ACCEPTED=	51
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		pax
 USE_LIBTOOL=		yes
-WRKSRC=			${WRKDIR}/${DISTNAME}/apache2
+BUILD_DIRS=		apache2
 
 CONFIGURE_ARGS+=	--with-apxs=${APXS}
 CONFIGURE_ARGS+=	--with-pcre=${BUILDLINK_PREFIX.pcre}
@@ -33,22 +31,19 @@ CONFIGURE_ARGS+=	--with-apr=${BUILDLINK_PREFIX.apr}
 CONFIGURE_ARGS+=	--with-apu=${BUILDLINK_PREFIX.apr-util}
 
 INSTALLATION_DIRS+=	lib/httpd
-INSTALL_ENV+=		APACHEPREFIX=${BUILDLINK_PREFIX.apache}
-INSTALL_ENV+=		DESTDIR=${DESTDIR}
 
 EGDIR=			share/examples/ap-modsecurity
 DOCDIR=			share/doc/ap-modsecurity
 INSTALLATION_DIRS+=	${EGDIR} ${DOCDIR}
 
-CONF_FILES=		${PREFIX}/${EGDIR}/modsecurity.conf-minimal \
+CONF_FILES=		${PREFIX}/${EGDIR}/modsecurity.conf-recommended \
 			${PKG_SYSCONFDIR}/httpd/modsecurity.conf
 
-BUILDLINK_API_DEPENDS.apache+=	apache>=2.0.59nb2
-
 post-install:
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/modsecurity.conf-minimal \
+	${RM} -f ${DESTDIR}${PREFIX}/lib/mod_security2.so
+	${INSTALL_DATA} ${WRKSRC}/modsecurity.conf-recommended \
 			${DESTDIR}${PREFIX}/${EGDIR}
-	cd ${WRKDIR}/${DISTNAME}/doc && \
+	cd ${WRKSRC}/doc && \
 		pax -rw . ${DESTDIR}${PREFIX}/${DOCDIR}
 
 .include "../../textproc/libxml2/buildlink3.mk"
