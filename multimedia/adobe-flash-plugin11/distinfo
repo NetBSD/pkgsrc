@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20.2.1 2014/01/15 12:45:43 tron Exp $
+$NetBSD: distinfo,v 1.20.2.2 2014/02/06 09:12:30 tron Exp $
 
-SHA1 (flash-plugin-11.2.202.335-release.i386.rpm) = 3fe2b33aebe39c4bcd7ca58f3252a6e25e269971
-RMD160 (flash-plugin-11.2.202.335-release.i386.rpm) = 4ca25ca03c65abe06f1d946e5112cf6e8bd92050
-Size (flash-plugin-11.2.202.335-release.i386.rpm) = 6903214 bytes
+SHA1 (flash-plugin-11.2.202.336-release.i386.rpm) = 60569d0c4a14749d9de60d2e1ac3d5e8c4a3b743
+RMD160 (flash-plugin-11.2.202.336-release.i386.rpm) = c8fd4fdc0311d41c0e7cf6242bc2f9696b74d8ad
+Size (flash-plugin-11.2.202.336-release.i386.rpm) = 6903245 bytes
