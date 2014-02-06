@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.143 2014/01/11 14:42:04 adam Exp $
+# $NetBSD: Makefile,v 1.144 2014/02/06 10:57:21 markd Exp $
 
-DISTNAME=		R-3.0.1
-PKGREVISION=		1
+DISTNAME=		R-3.0.2
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_R_CRAN:=base/R-3/}
 
@@ -69,6 +68,7 @@ CONFIGURE_ENV+=		lt_cv_path_SED=${TOOLS_SED}
 CONFIGURE_ENV+=		ac_cv_path_R_GZIPCMD=${TOOLS_GZIP_CMD}
 CONFIGURE_ENV+=		ac_cv_path_R_UNZIPCMD=${TOOLS_PATH.unzip}
 CONFIGURE_ENV+=		r_cv_prog_f77_flag_mieee=no
+CONFIGURE_ENV+=		ac_cv_path_PDFLATEX=""
 
 # We don't want "lib64"
 CONFIGURE_ENV+=		LIBnn=lib
@@ -94,26 +94,26 @@ CONFIGURE_ENV+=		R_PAPERSIZE=${R_PAPERSIZE:Q}
 INSTALL_DATA=		${INSTALL} ${COPY} -m ${SHAREMODE}
 INSTALL_SCRIPT=		${INSTALL} ${COPY} -m ${BINMODE}
 
-# to build NEWS.pdf
-BUILD_DEPENDS+=		tex-latex-bin-[0-9]*:../../print/tex-latex-bin
-BUILD_DEPENDS+=		tex-metafont-[0-9]*:../../fonts/tex-metafont
-BUILD_DEPENDS+=		tex-ae-[0-9]*:../../fonts/tex-ae
-BUILD_DEPENDS+=		tex-ec-[0-9]*:../../fonts/tex-ec
-BUILD_DEPENDS+=		tex-tools-[0-9]*:../../print/tex-tools
-BUILD_DEPENDS+=		tex-url-[0-9]*:../../print/tex-url
-BUILD_DEPENDS+=		tex-oberdiek-[0-9]*:../../print/tex-oberdiek
-BUILD_DEPENDS+=		tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
-BUILD_DEPENDS+=		tex-cm-[0-9]*:../../fonts/tex-cm
-BUILD_DEPENDS+=		tex-cm-super-[0-9]*:../../fonts/tex-cm-super
-BUILD_DEPENDS+=		tex-fontname-[0-9]*:../../fonts/tex-fontname
-BUILD_DEPENDS+=		tex-graphics-[0-9]*:../../print/tex-graphics
-BUILD_DEPENDS+=		tex-hyperref-[0-9]*:../../print/tex-hyperref
-BUILD_DEPENDS+=		tex-ifluatex-[0-9]*:../../print/tex-ifluatex
-BUILD_DEPENDS+=		tex-ifxetex-[0-9]*:../../print/tex-ifxetex
-BUILD_DEPENDS+=		tex-latex-[0-9]*:../../print/tex-latex
-BUILD_DEPENDS+=		tex-latexconfig-[0-9]*:../../print/tex-latexconfig
-BUILD_DEPENDS+=		tex-mptopdf-[0-9]*:../../graphics/tex-mptopdf
-BUILD_DEPENDS+=		tex-pdftex-def-[0-9]*:../../print/tex-pdftex
+## to build NEWS.pdf
+#BUILD_DEPENDS+=		tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+#BUILD_DEPENDS+=		tex-metafont-[0-9]*:../../fonts/tex-metafont
+#BUILD_DEPENDS+=		tex-ae-[0-9]*:../../fonts/tex-ae
+#BUILD_DEPENDS+=		tex-ec-[0-9]*:../../fonts/tex-ec
+#BUILD_DEPENDS+=		tex-tools-[0-9]*:../../print/tex-tools
+#BUILD_DEPENDS+=		tex-url-[0-9]*:../../print/tex-url
+#BUILD_DEPENDS+=		tex-oberdiek-[0-9]*:../../print/tex-oberdiek
+#BUILD_DEPENDS+=		tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
+#BUILD_DEPENDS+=		tex-cm-[0-9]*:../../fonts/tex-cm
+#BUILD_DEPENDS+=		tex-cm-super-[0-9]*:../../fonts/tex-cm-super
+#BUILD_DEPENDS+=		tex-fontname-[0-9]*:../../fonts/tex-fontname
+#BUILD_DEPENDS+=		tex-graphics-[0-9]*:../../print/tex-graphics
+#BUILD_DEPENDS+=		tex-hyperref-[0-9]*:../../print/tex-hyperref
+#BUILD_DEPENDS+=		tex-ifluatex-[0-9]*:../../print/tex-ifluatex
+#BUILD_DEPENDS+=		tex-ifxetex-[0-9]*:../../print/tex-ifxetex
+#BUILD_DEPENDS+=		tex-latex-[0-9]*:../../print/tex-latex
+#BUILD_DEPENDS+=		tex-latexconfig-[0-9]*:../../print/tex-latexconfig
+#BUILD_DEPENDS+=		tex-mptopdf-[0-9]*:../../graphics/tex-mptopdf
+#BUILD_DEPENDS+=		tex-pdftex-def-[0-9]*:../../print/tex-pdftex
 
 
 BUILDLINK_API_DEPENDS.zlib+= zlib>=1.2.3
