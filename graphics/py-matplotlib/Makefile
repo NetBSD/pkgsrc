@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2014/01/20 19:53:05 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2014/02/06 01:53:16 obache Exp $
 
 DISTNAME=		matplotlib-1.3.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		graphics python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=matplotlib/}
 
@@ -10,6 +11,7 @@ HOMEPAGE=		http://matplotlib.org/
 COMMENT=		Matlab-style plotting package for Python
 
 DEPENDS+=		${PYPKGPREFIX}-pytz>=2008b:../../time/py-pytz
+DEPENDS+=		${PYPKGPREFIX}-pyparsing>=1.5.6:../../devel/py-pyparsing
 
 PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 
