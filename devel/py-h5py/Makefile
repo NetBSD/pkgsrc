@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/02/06 14:22:51 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/06 14:59:11 drochner Exp $
 
 DISTNAME=	h5py-2.2.1
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
@@ -10,8 +10,6 @@ HOMEPAGE=	http://www.h5py.org
 COMMENT=	Python interface to the HDF5 library
 LICENSE=	modified-bsd
 
-PYDISTUTILSPKG=	yes
-
 PKG_OPTIONS_VAR=	PKG_OPTIONS.h5py
 PKG_SUPPORTED_OPTIONS=	cython
 
@@ -22,6 +20,6 @@ PKG_SUPPORTED_OPTIONS=	cython
 .endif
 
 .include "../../devel/hdf5/buildlink3.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
