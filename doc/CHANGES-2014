@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.603 2014/02/06 13:15:06 abs Exp $
+$NetBSD: CHANGES-2014,v 1.604 2014/02/06 17:28:54 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -968,3 +968,6 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/p5-Rose-DB-Object to 0.810 [abs 2014-02-06]
 	Updated databases/p5-DBD-postgresql to 3.0.0 [abs 2014-02-06]
 	Updated databases/p5-DBI to 1.631 [abs 2014-02-06]
+	Updated graphics/veusz to 1.20 [drochner 2014-02-06]
+	Updated devel/scintilla to 3.3.9 [drochner 2014-02-06]
+	Updated x11/qt4-qscintilla to 2.8 [drochner 2014-02-06]
