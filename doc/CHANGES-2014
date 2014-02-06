@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.604 2014/02/06 17:28:54 drochner Exp $
+$NetBSD: CHANGES-2014,v 1.605 2014/02/06 17:35:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -971,3 +971,8 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/veusz to 1.20 [drochner 2014-02-06]
 	Updated devel/scintilla to 3.3.9 [drochner 2014-02-06]
 	Updated x11/qt4-qscintilla to 2.8 [drochner 2014-02-06]
+	Updated devel/git to 1.8.5.4 [adam 2014-02-06]
+	Updated devel/git-base to 1.8.5.4 [adam 2014-02-06]
+	Updated devel/git-docs to 1.8.5.4 [adam 2014-02-06]
+	Updated devel/git-svn to 1.8.5.4 [adam 2014-02-06]
+	Updated www/gitweb to 1.8.5.4 [adam 2014-02-06]
