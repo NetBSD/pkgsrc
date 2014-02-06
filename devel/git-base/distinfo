@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.10 2014/01/17 09:50:38 adam Exp $
+$NetBSD: distinfo,v 1.11 2014/02/06 17:34:02 adam Exp $
 
-SHA1 (git-1.8.5.3.tar.gz) = 767aa30c0f569f9b6e04cb215dfeec0c013c355a
-RMD160 (git-1.8.5.3.tar.gz) = 4f0ca2e7ccdd534812651bbdaef3eb6978a6ef7f
-Size (git-1.8.5.3.tar.gz) = 4757215 bytes
+SHA1 (git-1.8.5.4.tar.gz) = cbf14318ee9652232489982bb2da15d2e5ebb580
+RMD160 (git-1.8.5.4.tar.gz) = 9bf3c366ad95f069997eb70633a7d977b879e5dc
+Size (git-1.8.5.4.tar.gz) = 4760610 bytes
 SHA1 (patch-aa) = 31f3759c6cf3bfd28d154b3abaa95d396b72502b
 SHA1 (patch-ac) = ae75c6ca3abb5edf688e4877f3df8b6c6297f091
 SHA1 (patch-ae) = 9bc2e6c7f0a8fbc385b6ffda638d3245a62dc5ca
@@ -12,5 +12,4 @@ SHA1 (patch-ah) = f22a2160631fb624e9e20616c68ad1a4aa2bebc7
 SHA1 (patch-ai) = 56b63d4790a11f5eb128186ad5efdd1bcf102f2e
 SHA1 (patch-config.mak.uname) = 6321f0e0d941d04fdd378b2341c2ba1c938441a3
 SHA1 (patch-git-compat-util.h) = 788800c9972faadef40ad7ef795ed72305bfa292
-SHA1 (patch-perl_Git_SVN_Editor.pm) = 50721693d2a23ff7f8d19db49f2427dbf446eee5
 SHA1 (patch-wrapper.c) = d8252c63cca9a134fca3f8f6f28663f563c7b4bc
