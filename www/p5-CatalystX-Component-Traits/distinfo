@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2010/09/05 15:01:34 sno Exp $
+$NetBSD: distinfo,v 1.6 2014/02/06 10:38:19 abs Exp $
 
-SHA1 (CatalystX-Component-Traits-0.16.tar.gz) = 1ed3138d3aeac8bc5ea7538caf462b6f593ffb82
-RMD160 (CatalystX-Component-Traits-0.16.tar.gz) = 8a28497ac41110bc6463ba60f689255543bbfb01
-Size (CatalystX-Component-Traits-0.16.tar.gz) = 29505 bytes
+SHA1 (CatalystX-Component-Traits-0.19.tar.gz) = a2d4738a790ee9359813258d33aeddd5749989f9
+RMD160 (CatalystX-Component-Traits-0.19.tar.gz) = 269e4258c3f83559f1ca9281fc072ee42a209dcd
+Size (CatalystX-Component-Traits-0.19.tar.gz) = 14999 bytes
