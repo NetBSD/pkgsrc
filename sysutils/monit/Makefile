@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.11 2013/03/03 01:09:55 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2014/02/06 09:09:17 obache Exp $
 #
 
-DISTNAME=		monit-4.10.1
-PKGREVISION=		3
+DISTNAME=		monit-5.6
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.tildeslash.com/monit/dist/
+MASTER_SITES=		http://monit.com/monit/dist/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.tildeslash.com/monit/
+HOMEPAGE=		http://monit.com/monit/
 COMMENT=		Utility for monitoring processes, files, directories and devices
-LICENSE=		gnu-gpl-v3
+LICENSE=		gnu-agpl-v3
 
 # no platform specific code yet
 NOT_FOR_PLATFORM+=	BSDOS-*-* DragonFly-*-* Interix-*-* IRIX-*-* OSF1-*-*
 
-USE_TOOLS+=		gmake gzcat flex yacc pax
+USE_TOOLS+=		gmake gzcat flex yacc
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
@@ -46,8 +45,8 @@ DOCDIR=			${PREFIX}/${DOC_SUBDIR}
 EG_SUBDIR=		share/examples/monit
 EGDIR=			${PREFIX}/${EG_SUBDIR}
 
-M_DOCFILES=		CHANGES.txt CONTRIBUTORS COPYING FAQ.txt LICENSE
-M_DOCFILES+=		PACKAGES PLATFORMS README README.SSL STATUS UPGRADE.txt
+M_DOCFILES=		CHANGES COPYING README
+M_DOCFILES+=		doc/PLATFORMS
 
 SUBST_CLASSES+=		monit
 SUBST_STAGE.monit=	pre-configure
@@ -55,11 +54,6 @@ SUBST_MESSAGE.monit=	Setting daemon interval
 SUBST_FILES.monit=	monitrc
 SUBST_SED.monit=	-e "s|^\# *set *daemon|set daemon|"
 SUBST_SED.monit+=	-e "s|include */etc/monit.d|include ${PKG_SYSCONFDIR}/monit.d|"
-
-CPPFLAGS.NetBSD+=	-D_KMEMUSER
-
-post-extract:
-	cd ${WRKSRC}/contrib && gzcat monit-OSX-startup.tar.gz | pax -r
 
 # Perform configure substitutions on monit.1
 post-configure:
@@ -71,14 +65,11 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCDIR}
 .endfor
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}/MacOSX
 	${INSTALL_DATA} ${WRKSRC}/monitrc ${DESTDIR}${EGDIR}/monitrc.sample
-	${INSTALL_DATA} ${WRKSRC}/contrib/monit.php ${DESTDIR}${EGDIR}/
+	${INSTALL_DATA} ${WRKSRC}/contrib/monit.service ${DESTDIR}${EGDIR}/
+	${INSTALL_DATA} ${WRKSRC}/contrib/monit.upstart ${DESTDIR}${EGDIR}/
 	${INSTALL_DATA} ${WRKSRC}/contrib/monitrc-gentoo ${DESTDIR}${EGDIR}/
-	${INSTALL_DATA} ${WRKSRC}/contrib/wap.php ${DESTDIR}${EGDIR}/
-.for f in README StartupParameters.plist monit monit.plist monitrc
-	${INSTALL_DATA} ${WRKSRC}/contrib/monit/${f} ${DESTDIR}${EGDIR}/MacOSX
-.endfor
+	${INSTALL_DATA} ${WRKSRC}/contrib/rc.monit ${DESTDIR}${EGDIR}/
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
