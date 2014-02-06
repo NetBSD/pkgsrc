@@ -1,6 +1,6 @@
-$NetBSD: patch-src_emu_emualloc.h,v 1.1 2013/12/18 17:55:15 joerg Exp $
+$NetBSD: patch-src_emu_emualloc.h,v 1.2 2014/02/06 10:40:19 wiz Exp $
 
---- src/emu/emualloc.h.orig	2013-12-18 13:39:10.000000000 +0000
+--- src/emu/emualloc.h.orig	2013-10-16 09:14:50.000000000 +0000
 +++ src/emu/emualloc.h
 @@ -77,6 +77,7 @@ void dump_unfreed_mem();
  // zeromem_t is a dummy class used to tell new to zero memory after allocation
