@@ -1,15 +1,15 @@
-$NetBSD: patch-af,v 1.5 2011/04/09 13:20:21 shattered Exp $
+$NetBSD: patch-af,v 1.6 2014/02/06 18:37:08 wiz Exp $
 
---- src/plugins/alsa/ao_alsa.c.orig	2008-12-18 23:24:28.000000000 -0500
+--- src/plugins/alsa/ao_alsa.c.orig	2014-01-27 17:02:05.000000000 +0000
 +++ src/plugins/alsa/ao_alsa.c
 @@ -39,6 +39,10 @@
+ #include <alsa/asoundlib.h>
  #include <ao/ao.h>
  #include <ao/plugin.h>
- 
 +#ifndef ESTRPIPE
 +#define ESTRPIPE EPIPE
 +#endif
 +
- /* default 500 millisecond buffer */
- #define AO_ALSA_BUFFER_TIME 100000
  
+ /* default 20 millisecond buffer */
+ #define AO_ALSA_BUFFER_TIME 20000
