@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.194 2014/01/27 18:57:27 wiz Exp $
+# $NetBSD: Makefile,v 1.195 2014/02/06 18:18:11 wiz Exp $
 
 DISTNAME=		gnucash-2.6.1
+PKGREVISION=		1
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 EXTRACT_SUFX=		.tar.bz2
@@ -32,8 +33,8 @@ REPLACE_PERL+=		packaging/win32/exetype.pl
 REPLACE_PERL+=		src/backend/xml/test/grab-types.pl
 REPLACE_PERL+=		src/quotes/Quote_example.pl
 
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.6.1
 REPLACE_PYTHON+=	src/python/pycons/*.py src/python/pycons/pycons
-
 PY_PATCHPLIST=		yes
 
 PKG_SYSCONFSUBDIR=	gnucash
