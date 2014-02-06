@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.4 2008/12/28 22:38:08 seb Exp $
+$NetBSD: distinfo,v 1.5 2014/02/06 09:09:17 obache Exp $
 
-SHA1 (monit-4.10.1.tar.gz) = c87aa0c6e0b1d13f46b7e9d84937191e25a907a6
-RMD160 (monit-4.10.1.tar.gz) = 6c517b19bc43f4023dfca4de1df09272b41af02d
-Size (monit-4.10.1.tar.gz) = 606273 bytes
-SHA1 (patch-aa) = b51792edf22fb9867d45a4adb2aadd03dbe5467c
-SHA1 (patch-ab) = f691fd49a7c8150096a0a3fb4fb8ae72bf38d547
+SHA1 (monit-5.6.tar.gz) = cc59780deea208312690e6c05d27fb947bae3789
+RMD160 (monit-5.6.tar.gz) = b53becbc8859d97f4379d4befd070a937ea78e74
+Size (monit-5.6.tar.gz) = 1263370 bytes
+SHA1 (patch-aa) = 047783cbefb65cd89e3a398f2fb826b7ad0b3612
