@@ -1,33 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2011/03/19 21:16:27 dholland Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/02/06 08:17:42 obache Exp $
 lib/httpd/mod_security2.so
-share/doc/ap-modsecurity/apache_request_cycle-modsecurity.jpg
-share/doc/ap-modsecurity/breach-logo-small.gif
-share/doc/ap-modsecurity/html-multipage/actions.html
-share/doc/ap-modsecurity/html-multipage/apache_request_cycle-modsecurity.jpg
-share/doc/ap-modsecurity/html-multipage/ar01s02.html
-share/doc/ap-modsecurity/html-multipage/ar01s10.html
-share/doc/ap-modsecurity/html-multipage/ar01s11.html
-share/doc/ap-modsecurity/html-multipage/ar01s12.html
-share/doc/ap-modsecurity/html-multipage/breach-logo-small.gif
-share/doc/ap-modsecurity/html-multipage/configuration-directives.html
-share/doc/ap-modsecurity/html-multipage/index.html
-share/doc/ap-modsecurity/html-multipage/installation.html
-share/doc/ap-modsecurity/html-multipage/introduction.html
-share/doc/ap-modsecurity/html-multipage/modsecurity-reference.css
-share/doc/ap-modsecurity/html-multipage/modsecurity.gif
-share/doc/ap-modsecurity/html-multipage/operators.html
-share/doc/ap-modsecurity/html-multipage/processing-phases.html
-share/doc/ap-modsecurity/html-multipage/transformation-functions.html
-share/doc/ap-modsecurity/html-multipage/variables.html
-share/doc/ap-modsecurity/index.html
-share/doc/ap-modsecurity/migration-matrix.html
-share/doc/ap-modsecurity/migration-matrix.xml
-share/doc/ap-modsecurity/modsecurity-reference.css
-share/doc/ap-modsecurity/modsecurity.gif
-share/doc/ap-modsecurity/modsecurity2-apache-reference.html
-share/doc/ap-modsecurity/modsecurity2-apache-reference.pdf
-share/doc/ap-modsecurity/modsecurity2-apache-reference.xml
-share/doc/ap-modsecurity/modsecurity2-data-formats.html
-share/doc/ap-modsecurity/modsecurity2-data-formats.pdf
-share/doc/ap-modsecurity/modsecurity2-data-formats.xml
-share/examples/ap-modsecurity/modsecurity.conf-minimal
+share/doc/ap-modsecurity/README.txt
+share/examples/ap-modsecurity/modsecurity.conf-recommended
