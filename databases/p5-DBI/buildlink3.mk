@@ -1,9 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.16 2010/07/17 08:07:17 sno Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2014/02/06 13:14:06 abs Exp $
 
 BUILDLINK_TREE+=	p5-DBI
 
 .if !defined(P5_DBI_BUILDLINK3_MK)
 P5_DBI_BUILDLINK3_MK:=
+
+.  include "../../mk/bsd.fast.prefs.mk"
 
 BUILDLINK_API_DEPENDS.p5-DBI+=	p5-DBI>=1.612
 BUILDLINK_PKGSRCDIR.p5-DBI?=	../../databases/p5-DBI
