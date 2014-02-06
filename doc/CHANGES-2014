@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.600 2014/02/06 09:10:38 obache Exp $
+$NetBSD: CHANGES-2014,v 1.601 2014/02/06 10:40:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -932,3 +932,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/ap-modsecurity2 to 2.7.7 [obache 2014-02-06]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.336 [obache 2014-02-06]
 	Updated sysutils/monit to 5.6 [obache 2014-02-06]
+	Updated emulators/mame to 0.152 [wiz 2014-02-06]
+	Updated emulators/mess to 0.152 [wiz 2014-02-06]
