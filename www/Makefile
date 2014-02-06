@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1017 2014/02/05 21:48:17 abs Exp $
+# $NetBSD: Makefile,v 1.1018 2014/02/06 12:47:41 abs Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -261,6 +261,7 @@ SUBDIR+=	p5-CGI-Application-Plugin-DBH
 SUBDIR+=	p5-CGI-Application-Plugin-ValidateRM
 SUBDIR+=	p5-CGI-Compile
 SUBDIR+=	p5-CGI-Cookie-Splitter
+SUBDIR+=	p5-CGI-Cookie-XS
 SUBDIR+=	p5-CGI-Emulate-PSGI
 SUBDIR+=	p5-CGI-FastTemplate
 SUBDIR+=	p5-CGI-FormBuilder
@@ -329,6 +330,7 @@ SUBDIR+=	p5-CatalystX-CRUD-YUI
 SUBDIR+=	p5-CatalystX-Component-Traits
 SUBDIR+=	p5-CatalystX-LeakChecker
 SUBDIR+=	p5-Continuity
+SUBDIR+=	p5-Cookie-XS
 SUBDIR+=	p5-Corona
 SUBDIR+=	p5-Dancer
 SUBDIR+=	p5-Dancer-Session-Cookie
@@ -387,6 +389,7 @@ SUBDIR+=	p5-HTTP-DAV
 SUBDIR+=	p5-HTTP-Daemon
 SUBDIR+=	p5-HTTP-Date
 SUBDIR+=	p5-HTTP-GHTTP
+SUBDIR+=	p5-HTTP-HeaderParser-XS
 SUBDIR+=	p5-HTTP-Lite
 SUBDIR+=	p5-HTTP-Message
 SUBDIR+=	p5-HTTP-Negotiate
