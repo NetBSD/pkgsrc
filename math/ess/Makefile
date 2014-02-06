@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2013/05/31 12:41:21 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2014/02/06 09:49:15 markd Exp $
 
-DISTNAME=	ess-5.11
-PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	3
+DISTNAME=	ess-13.09-1
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/-1$/.1/}
 CATEGORIES=	math
 MASTER_SITES=	http://ess.r-project.org/downloads/ess/
 EXTRACT_SUFX=	.tgz
@@ -11,7 +10,7 @@ MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://ess.r-project.org/
 COMMENT=	Emacs Speaks Statistics
 
-USE_TOOLS+=	makeinfo perl
+USE_TOOLS+=	makeinfo perl gmake
 EMACS_MODULES=	base
 INFO_FILES=	yes
 
