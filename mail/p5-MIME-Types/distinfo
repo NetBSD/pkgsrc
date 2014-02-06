@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2013/08/13 16:04:27 wen Exp $
+$NetBSD: distinfo,v 1.13 2014/02/06 11:58:17 abs Exp $
 
-SHA1 (MIME-Types-2.01.tar.gz) = 86772a0d4a1f3cd7079d0ded297da93905862ed8
-RMD160 (MIME-Types-2.01.tar.gz) = 74a1dc4932cde8b024abb2535d52b7f4f68f104c
-Size (MIME-Types-2.01.tar.gz) = 44900 bytes
+SHA1 (MIME-Types-2.04.tar.gz) = 6701a7aa2e3fd12e54be2f31094704f3d7767d8f
+RMD160 (MIME-Types-2.04.tar.gz) = ec5f5ae2717c26adad48748535bdcfb8426addda
+Size (MIME-Types-2.04.tar.gz) = 45320 bytes
