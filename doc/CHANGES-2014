@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.597 2014/02/06 01:58:32 obache Exp $
+$NetBSD: CHANGES-2014,v 1.598 2014/02/06 08:17:56 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -929,3 +929,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Catalyst-Runtime to 5.90053 [abs 2014-02-05]
 	Updated graphics/py-matplotlib to 1.3.1nb1 [obache 2014-02-06]
 	Updated devel/py-pyparsing to 2.0.1nb1 [obache 2014-02-06]
+	Updated security/ap-modsecurity2 to 2.7.7 [obache 2014-02-06]
