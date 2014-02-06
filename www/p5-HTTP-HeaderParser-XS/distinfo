@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2014/02/06 12:08:50 abs Exp $
+
+SHA1 (HTTP-HeaderParser-XS-0.20.tar.gz) = 316002368cac21bd01daae0db97642b960aabd7e
+RMD160 (HTTP-HeaderParser-XS-0.20.tar.gz) = 0505f6befb799f23fdd8fe8b67e6ad33ed465366
+Size (HTTP-HeaderParser-XS-0.20.tar.gz) = 24257 bytes
