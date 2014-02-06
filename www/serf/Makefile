@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2014/01/02 18:36:40 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2014/02/06 11:02:12 markd Exp $
 
 DISTNAME=	serf-1.3.3
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://serf.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,6 +18,7 @@ SCONS_ARGS+=		APU=${PREFIX}/bin/apu-1-config
 SCONS_ARGS+=		CC=${CC:Q}
 SCONS_ARGS+=		CFLAGS=${CFLAGS:Q}
 SCONS_ARGS+=		OPENSSL=${PREFIX}/lib
+SCONS_ARGS+=		GSSAPI=${KRB5BASE}
 
 CFLAGS.SunOS+=		-D__EXTENSIONS__
 
@@ -29,5 +31,6 @@ do-install:
 .include "../../devel/apr/buildlink3.mk"
 .include "../../devel/apr-util/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../mk/krb5.buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
