@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/10/02 10:57:46 wiz Exp $
+$NetBSD: distinfo,v 1.3 2014/02/06 12:48:52 abs Exp $
 
-SHA1 (Sereal-Decoder-0.37.tar.gz) = dd548567f0c2c3e18eb364ab2e2ac76594475889
-RMD160 (Sereal-Decoder-0.37.tar.gz) = 647abed2cd5aa2ffc797fe7586673efebdaab753
-Size (Sereal-Decoder-0.37.tar.gz) = 275863 bytes
+SHA1 (Sereal-Decoder-2.03.tar.gz) = d76f2ef828199caea8e671b147b80c167518ffd0
+RMD160 (Sereal-Decoder-2.03.tar.gz) = 55f86d71e049d2e616aff15e00ee5215cf0b4f4a
+Size (Sereal-Decoder-2.03.tar.gz) = 281983 bytes
