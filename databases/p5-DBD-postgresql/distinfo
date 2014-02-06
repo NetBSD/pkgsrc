@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.32 2012/10/21 22:05:40 wiz Exp $
+$NetBSD: distinfo,v 1.33 2014/02/06 13:11:32 abs Exp $
 
-SHA1 (DBD-Pg-2.19.3.tar.gz) = 0950c950ba5fc61a47a4b97daad5f5189ffffd72
-RMD160 (DBD-Pg-2.19.3.tar.gz) = 65693085e6cd2ff1a5a625230dbc271fd5521fa4
-Size (DBD-Pg-2.19.3.tar.gz) = 237399 bytes
+SHA1 (DBD-Pg-3.0.0.tar.gz) = 03ded628d453718cbceaea906da3412df5a7137a
+RMD160 (DBD-Pg-3.0.0.tar.gz) = aed2b3341b75d0d1b9d1754662d321de3cbda2ce
+Size (DBD-Pg-3.0.0.tar.gz) = 247817 bytes
