@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.605 2014/02/06 17:35:22 adam Exp $
+$NetBSD: CHANGES-2014,v 1.606 2014/02/06 18:18:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -976,3 +976,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/git-docs to 1.8.5.4 [adam 2014-02-06]
 	Updated devel/git-svn to 1.8.5.4 [adam 2014-02-06]
 	Updated www/gitweb to 1.8.5.4 [adam 2014-02-06]
+	Updated finance/gnucash to 2.6.1nb1 [wiz 2014-02-06]
