@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12980 2014/02/06 11:05:11 markd Exp $
+$NetBSD: TODO,v 1.12981 2014/02/06 17:28:54 drochner Exp $
 
 Suggested new packages
 ======================
@@ -990,7 +990,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-zconfig-3.0.3
 	o py-zfec-1.4.24
 	o qnetwalk-1.4
-	o qt4-qscintilla-2.8
 	o radiance-3.7.2
 	o rails-4.0.1
 	o rainbowcrack-1.5
@@ -1132,7 +1131,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vbetool-1.1
 	o vera-1.17
 	o verilog-current-20130827 [wip]
-	o veusz-1.20
 	o vfu-4.09
 	o vicq-0.4.2
 	o viewvc-1.1.22
