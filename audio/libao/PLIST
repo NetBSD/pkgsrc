@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.15 2010/05/19 18:17:27 drochner Exp $
+@comment $NetBSD: PLIST,v 1.16 2014/02/06 18:37:07 wiz Exp $
 include/ao/ao.h
 include/ao/os_types.h
 include/ao/plugin.h
+lib/ckport/db/libao.ckport
 lib/libao.la
 lib/pkgconfig/ao.pc
 man/man5/libao.conf.5
