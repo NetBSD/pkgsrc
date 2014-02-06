@@ -1,0 +1,7 @@
+This module parses HTTP headers using a C++ state machine. (Hence
+this being an XS module.) The goal is to be fast, not necessarily
+to do everything you could ever want.
+
+Headers are not static, you can parse them, munge them, or even
+build them using this module. See the SYNOPSIS for more information
+on how to use this module.
