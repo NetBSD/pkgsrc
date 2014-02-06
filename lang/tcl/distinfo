@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.60 2014/02/05 12:50:51 obache Exp $
+$NetBSD: distinfo,v 1.61 2014/02/06 04:29:12 obache Exp $
 
 SHA1 (tcl8.6.1-src.tar.gz) = 5c83d44152cc0496cc0847a2495f659502a30e40
 RMD160 (tcl8.6.1-src.tar.gz) = fbb181d26bb28fe9413bc2e07f333571b8e7e190
@@ -12,7 +12,7 @@ SHA1 (patch-pkgs_sqlite3.8.0_configure) = 14b61ded1cd2bb41054b45da3044638bc44004
 SHA1 (patch-pkgs_sqlite3.8.0_tclconfig_tcl.m4) = 6891b39dc05a037ba667c92fd2341b418030c0af
 SHA1 (patch-pkgs_tdbc1.0.0_configure) = 8964e3617b36435f3bf54bebddae1d34034045c8
 SHA1 (patch-pkgs_tdbc1.0.0_tclconfig_tcl.m4) = db4802f3db9b640a559d7e1c917969c0e2ecf069
-SHA1 (patch-pkgs_tdbcmysql1.0.0_configure) = 470eb422efaa7a9f09f6c1a541b8f498acabcdec
+SHA1 (patch-pkgs_tdbcmysql1.0.0_configure) = 17bf2c0578b8b3316373dd8b1a0c9687033304f3
 SHA1 (patch-pkgs_tdbcmysql1.0.0_tclconfig_tcl.m4) = fbbf5b6c27e50251b56759ae9f0b0317f6e41a60
 SHA1 (patch-pkgs_tdbcodbc1.0.0_configure) = 0478fb9c6747a23df66c3c38f9f774606002187c
 SHA1 (patch-pkgs_tdbcodbc1.0.0_tclconfig_tcl.m4) = 2d2418c8d7b77e84b77b4c8568f8bc3920d285fa
