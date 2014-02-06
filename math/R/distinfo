@@ -1,12 +1,10 @@
-$NetBSD: distinfo,v 1.56 2014/01/13 11:25:54 jperkin Exp $
+$NetBSD: distinfo,v 1.57 2014/02/06 10:57:21 markd Exp $
 
-SHA1 (R-3.0.1.tar.gz) = 5cc65476837926fdf04105954ea94efa53ac85ce
-RMD160 (R-3.0.1.tar.gz) = 09910626891c2962b5c05d204b14d59444da0c3b
-Size (R-3.0.1.tar.gz) = 25508280 bytes
+SHA1 (R-3.0.2.tar.gz) = f5d9daef00e09d36a465ff7b0bf4cab136bea227
+RMD160 (R-3.0.2.tar.gz) = 8e91603754c965b402bb201c4e5f5a2043262537
+Size (R-3.0.2.tar.gz) = 25364181 bytes
 SHA1 (patch-ac) = cbfe9853a6b1bdfa68d21c0a291f39545b131333
 SHA1 (patch-ad) = 21c2f74ceb41afa72b0b268ba4b1dcb57f01e106
-SHA1 (patch-doc_manual_R-defs.texi) = 57ad7175cc1bba48bcc74d29c6f85c02a84e4891
-SHA1 (patch-doc_manual_R-intro.texi) = 592dbbe5e048f5bcbbb94fa3aec32ff2f0e321ba
 SHA1 (patch-src_library_stats_src_cov.c) = 23e452472506483ffc33a9c6629274b121cfd161
 SHA1 (patch-src_main_format.c) = f03012b8fbab34ead3f35143fe782ab7c7b29768
 SHA1 (patch-src_nmath_dnbeta.c) = 4711d17404352c9c190ca037a01b1eec1236cebc
