@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.595 2014/02/05 21:51:36 abs Exp $
+$NetBSD: CHANGES-2014,v 1.596 2014/02/06 01:53:43 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -927,3 +927,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added www/p5-CGI-Struct version 1.21 [abs 2014-02-05]
 	Added www/p5-Catalyst-DispatchType-Regex version 5.90033 [abs 2014-02-05]
 	Updated www/p5-Catalyst-Runtime to 5.90053 [abs 2014-02-05]
+	Updated graphics/py-matplotlib to 1.3.1nb1 [obache 2014-02-06]
