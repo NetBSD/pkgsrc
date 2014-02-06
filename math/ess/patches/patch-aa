@@ -1,38 +1,40 @@
-$NetBSD: patch-aa,v 1.3 2010/09/15 08:46:21 markd Exp $
+$NetBSD: patch-aa,v 1.4 2014/02/06 09:49:15 markd Exp $
 
---- Makeconf.orig	2010-07-13 16:42:27.000000000 +0000
+--- Makeconf.orig	2013-11-23 00:40:17.000000000 +0000
 +++ Makeconf
-@@ -15,14 +15,14 @@
+@@ -15,15 +15,15 @@
  ## ETCDIR          Destination of script and icon files
  ## PREFIX(DESTDIR) Directory prepended to LISPDIR, INFODIR, DOCDIR & ETCDIR
  ##                 Specify either PREFIX or DESTDIR to over-ride /usr/local
--DESTDIR=/usr/local
+-DESTDIR=/usr
 -PREFIX=$(DESTDIR)
-+#DESTDIR=/usr/local
++#DESTDIR=/usr
 +#PREFIX=$(DESTDIR)
  #
- ## GNU Emacs
+ ##__ GNU Emacs __
 -EMACS=emacs
--LISPDIR=$(PREFIX)/share/emacs/site-lisp
--INFODIR=$(PREFIX)/info
+-SITELISP=$(PREFIX)/share/emacs/site-lisp
+-LISPDIR=$(SITELISP)/ess
+-INFODIR=$(PREFIX)/share/info
 -ETCDIR =$(PREFIX)/share/emacs/etc/ess
 +#EMACS=emacs
-+#LISPDIR=$(PREFIX)/share/emacs/site-lisp
-+#INFODIR=$(PREFIX)/info
++#SITELISP=$(PREFIX)/share/emacs/site-lisp
++#LISPDIR=$(SITELISP)/ess
++#INFODIR=$(PREFIX)/share/info
 +#ETCDIR =$(PREFIX)/share/emacs/etc/ess
  
- ## XEmacs
- #EMACS=xemacs
-@@ -48,7 +48,7 @@ EMACSBATCH = $(EMACS) -batch -no-site-fi
+ ##__ XEmacs __
+ #EMACS=$(PREFIX)/bin/xemacs
+@@ -67,7 +67,7 @@ EMACSBATCH = $(EMACS) -batch -no-site-fi
  #
  SHELL = /bin/sh
  #
 -MAKEINFO = LC_ALL=C LANG=en makeinfo
 +#MAKEINFO = LC_ALL=C LANG=en makeinfo
- MAKEHTML = $(MAKEINFO) --html --no-split --css-include=atouchofstyle.css -o -
+ # new:  MAKEHTML <output>.html  <input>.texi  {necessary to build 'Index'}
+ MAKEHTML = $(MAKEINFO) --html --no-split --css-include=atouchofstyle.css -o
  ##                            ^^^^^^^^^^ today's bandwidth is fast
- #MAKETXT  = $(MAKEINFO) --no-validate --no-headers --no-split -o -
-@@ -57,7 +57,7 @@ MAKETXT  = $(MAKEINFO) --no-validate --p
+@@ -77,7 +77,7 @@ MAKETXT  = $(MAKEINFO) --no-validate --p
  INSTALLDIR = install -d
  #INSTALLDIR = mkdir -p
  #
@@ -40,4 +42,4 @@ $NetBSD: patch-aa,v 1.3 2010/09/15 08:46:21 markd Exp $
 +#INSTALL = cp -p
  #INSTALL = install
  #
- DOCDIR=$(PREFIX)/share/doc/ess
+ UNINSTALL = rm -f
