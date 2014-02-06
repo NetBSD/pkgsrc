@@ -1,0 +1,6 @@
+This module implements a very simple parser for cookies used in
+HTTP applications. We've found CGI::Simple::Cookie and CGI::Cookie
+rather slow according to the profiling results for our OpenResty
+project, hence the rewrite in C.
+
+WARNING: This module is obsolete; please use CGI::Cookie::XS instead.
