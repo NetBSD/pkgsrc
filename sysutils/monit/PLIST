@@ -1,24 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:16:10 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/02/06 09:09:17 obache Exp $
 bin/monit
 man/man1/monit.1
-share/docs/monit/CHANGES.txt
-share/docs/monit/CONTRIBUTORS
+share/docs/monit/CHANGES
 share/docs/monit/COPYING
-share/docs/monit/FAQ.txt
-share/docs/monit/LICENSE
-share/docs/monit/PACKAGES
 share/docs/monit/PLATFORMS
 share/docs/monit/README
-share/docs/monit/README.SSL
-share/docs/monit/STATUS
-share/docs/monit/UPGRADE.txt
-share/examples/monit/MacOSX/README
-share/examples/monit/MacOSX/StartupParameters.plist
-share/examples/monit/MacOSX/monit
-share/examples/monit/MacOSX/monit.plist
-share/examples/monit/MacOSX/monitrc
-share/examples/monit/monit.php
+share/examples/monit/monit.service
+share/examples/monit/monit.upstart
 share/examples/monit/monitrc-gentoo
 share/examples/monit/monitrc.sample
-share/examples/monit/wap.php
+share/examples/monit/rc.monit
 share/examples/rc.d/monit

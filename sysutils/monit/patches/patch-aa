@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.2 2007/12/15 16:41:51 seb Exp $
+$NetBSD: patch-aa,v 1.3 2014/02/06 09:09:17 obache Exp $
 
 Fix for LP64 big-endian platforms.
 
---- http/engine.c.orig	2007-07-29 20:23:26.000000000 +0000
-+++ http/engine.c
-@@ -246,7 +246,7 @@ int add_host_allow(char *name) {
+--- src/http/engine.c.orig	2012-05-10 20:52:38.000000000 +0000
++++ src/http/engine.c
+@@ -245,7 +245,7 @@ int add_host_allow(char *name) {
         struct sockaddr_in *sin = (struct sockaddr_in *)_res->ai_addr;
  
         NEW(h);      
