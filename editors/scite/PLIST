@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/04/10 11:30:51 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/02/06 17:26:32 drochner Exp $
 bin/SciTE
 share/applications/SciTE.desktop
 share/pixmaps/Sci48M.png
@@ -25,6 +25,7 @@ share/scite/ScriptLexer.html
 share/scite/abaqus.properties
 share/scite/abbrev.properties
 share/scite/ada.properties
+share/scite/asl.properties
 share/scite/asm.properties
 share/scite/asn1.properties
 share/scite/au3.properties
@@ -80,6 +81,7 @@ share/scite/python.properties
 share/scite/r.properties
 share/scite/rebol.properties
 share/scite/ruby.properties
+share/scite/rust.properties
 share/scite/scriptol.properties
 share/scite/smalltalk.properties
 share/scite/sorcins.properties
