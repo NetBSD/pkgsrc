@@ -1,4 +1,5 @@
-# $NetBSD: Makefile.common,v 1.34 2012/09/12 00:24:41 asau Exp $
+# $NetBSD: Makefile.common,v 1.35 2014/02/06 18:37:07 wiz Exp $
+#
 # used by audio/libao-arts/Makefile
 # used by audio/libao-esound/Makefile
 # used by audio/libao-macosx/Makefile
@@ -6,7 +7,7 @@
 # used by audio/libao-oss/Makefile
 # used by audio/libao-sun/Makefile
 
-DISTNAME=	libao-1.1.0
+DISTNAME=	libao-1.2.0
 CATEGORIES=	audio devel
 MASTER_SITES=	http://downloads.xiph.org/releases/ao/
 
