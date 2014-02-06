@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.601 2014/02/06 10:40:46 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.602 2014/02/06 11:05:11 markd Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -934,3 +934,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/monit to 5.6 [obache 2014-02-06]
 	Updated emulators/mame to 0.152 [wiz 2014-02-06]
 	Updated emulators/mess to 0.152 [wiz 2014-02-06]
+	Updated math/ess to 13.09.1 [markd 2014-02-06]
+	Updated math/R to 3.0.2 [markd 2014-02-06]
