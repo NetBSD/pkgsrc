@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2013/11/14 08:18:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2014/02/06 10:40:19 wiz Exp $
 bin/castool
 bin/floptool
 bin/imgtool
@@ -19,6 +19,7 @@ share/mess/hash/a800_flop.xml
 share/mess/hash/abc1600.xml
 share/mess/hash/abc80.xml
 share/mess/hash/abc800.xml
+share/mess/hash/abc800_hdd.xml
 share/mess/hash/abc806.xml
 share/mess/hash/adam_cart.xml
 share/mess/hash/adam_cass.xml
@@ -161,6 +162,7 @@ share/mess/hash/msx1_cart.xml
 share/mess/hash/msx1_cass.xml
 share/mess/hash/msx2.hsi
 share/mess/hash/msx2_cart.xml
+share/mess/hash/myvision.xml
 share/mess/hash/mz2000_cass.xml
 share/mess/hash/mz2000_flop.xml
 share/mess/hash/mz2500.xml
@@ -205,6 +207,7 @@ share/mess/hash/pecom_cass.xml
 share/mess/hash/pentagon_cass.xml
 share/mess/hash/pet_cass.xml
 share/mess/hash/pet_flop.xml
+share/mess/hash/pet_hdd.xml
 share/mess/hash/pet_rom.xml
 share/mess/hash/pico.xml
 share/mess/hash/pippin.xml
@@ -283,7 +286,8 @@ share/mess/hash/tutor.xml
 share/mess/hash/tvc_cart.xml
 share/mess/hash/ut88.xml
 share/mess/hash/uzebox.xml
-share/mess/hash/v1050.xml
+share/mess/hash/v1050_flop.xml
+share/mess/hash/v1050_hdd.xml
 share/mess/hash/vboy.xml
 share/mess/hash/vc4000.xml
 share/mess/hash/vectrex.xml
