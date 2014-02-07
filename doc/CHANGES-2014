@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.608 2014/02/06 18:37:16 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.609 2014/02/07 03:52:30 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -979,3 +979,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated finance/gnucash to 2.6.1nb1 [wiz 2014-02-06]
 	Updated graphics/png to 1.6.9 [wiz 2014-02-06]
 	Updated audio/libao to 1.2.0 [wiz 2014-02-06]
+	Added textproc/p5-Text-Nimble version 0.002001 [schmonz 2014-02-07]
