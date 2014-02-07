@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/09/13 08:07:01 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/07 09:21:15 fhajny Exp $
 #
 
 MODNAME=		memcached
@@ -13,8 +13,8 @@ LICENSE=		php
 CONFLICTS=		php-memcached-[0-9]*
 
 CONFIGURE_ARGS+=	--enable-${MODNAME}
-CONFIGURE_ARGS+=	--with-libmemcached-dir=${PREFIX}
-#WRKSRC=			${WRKDIR}/${MODNAME}-${PECL_VERSION}
+CONFIGURE_ARGS+=	--with-libmemcached-dir=${BUILDLINK_PREFIX.libmemcached}
+CONFIGURE_ARGS+=	--with-zlib-dir=${BUILDLINK_PREFIX.zlib}
 
 .include "../../lang/php/ext.mk"
 .include "../../devel/libmemcached/buildlink3.mk"
