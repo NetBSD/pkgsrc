@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2012/02/05 09:00:13 sbd Exp $
+$NetBSD: distinfo,v 1.7 2014/02/07 14:16:34 wiedi Exp $
 
 SHA1 (sidplay-libs-2.1.1.tar.gz) = 8af6350866edc30b0d331e075fa97292f6f645a5
 RMD160 (sidplay-libs-2.1.1.tar.gz) = 1ce4c3cb80470a834c5887b3f3be0b61ca71e4cd
@@ -10,3 +10,4 @@ SHA1 (patch-builders_hardsid-builder_src_hardsid-builder.cpp) = cc3001b12d3f18d5
 SHA1 (patch-builders_resid-builder_src_resid-builder.cpp) = 46d3686eb67256397458df1eac2c017465b616d8
 SHA1 (patch-builders_resid-builder_src_resid.cpp) = db9f0bf3658c38e88eba7ced3f6102587558160d
 SHA1 (patch-libsidplay_src_sidtune_SidTune.cpp) = 20f2a2f36db8c08989ad1239da15a91d82cd2a2f
+SHA1 (patch-resid_sid.cc) = 88da243fab096f6b532af111c1d23ebc64ece632
