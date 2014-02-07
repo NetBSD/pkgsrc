@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.98 2014/01/01 11:52:19 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2014/02/07 13:10:58 wiz Exp $
 
 DISTNAME=	inkscape-0.48.4
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=inkscape/}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,6 +14,9 @@ LICENSE=	gnu-gpl-v2
 .if !exists (/usr/bin/iconv)
 BUILD_DEPENDS+=		libiconv-[0-9]*:../../converters/libiconv
 .endif
+DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+# for inkex.py, needed by most python extension scripts
+DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 
 EXTRACT_USING=		bsdtar
 GCC_REQD+=		3.0
@@ -40,7 +43,14 @@ SUBST_CLASSES+= pypath
 SUBST_STAGE.pypath= pre-configure
 SUBST_FILES.pypath= src/extension/implementation/script.cpp
 SUBST_VARS.pypath= PYTHONBIN
-CHECK_INTERPRETER_SKIP+= share/inkscape/extensions/*.py
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.48.4
+REPLACE_PYTHON+=	cxxtest/cxxtestgen.py
+REPLACE_PYTHON+=	share/filters/i18n.py
+REPLACE_PYTHON+=	share/extensions/*.py
+REPLACE_PYTHON+=	share/extensions/test/*.test.py
+REPLACE_PYTHON+=	share/extensions/Barcode/*.py
+REPLACE_PYTHON+=	share/patterns/i18n.py
 
 # XXX I don't see where this is used
 CHECK_INTERPRETER_SKIP+= share/inkscape/extensions/simplepath.rb
