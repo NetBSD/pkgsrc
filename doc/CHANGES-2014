@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.617 2014/02/07 14:29:41 wiedi Exp $
+$NetBSD: CHANGES-2014,v 1.618 2014/02/07 14:46:14 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -988,3 +988,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/gtk2 to 2.24.22nb1 [wiz 2014-02-07]
 	Updated devel/GConf to 2.32.4nb8 [wiz 2014-02-07]
 	Updated multimedia/mediatomb to 0.12.1nb20 [wiedi 2014-02-07]
+	Added mail/rspamd version 0.6.8 [wiedi 2014-02-07]
