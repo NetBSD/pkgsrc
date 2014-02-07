@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2014/01/05 20:20:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2014/02/07 08:54:06 dsainty Exp $
 avr/include/alloca.h
 avr/include/assert.h
 avr/include/avr/boot.h
@@ -1107,22 +1107,6 @@ share/doc/avr-libc/man/man3/_delay_loop_1.3
 share/doc/avr-libc/man/man3/_delay_loop_2.3
 share/doc/avr-libc/man/man3/_delay_ms.3
 share/doc/avr-libc/man/man3/_delay_us.3
-share/doc/avr-libc/man/man3/_scratch_cross_avr-libc_work_${PKGNAME}_doc_examples_.3
-share/doc/avr-libc/man/man3/_scratch_cross_avr-libc_work_${PKGNAME}_doc_examples_asmdemo_.3
-share/doc/avr-libc/man/man3/_scratch_cross_avr-libc_work_${PKGNAME}_doc_examples_demo_.3
-share/doc/avr-libc/man/man3/_scratch_cross_avr-libc_work_${PKGNAME}_doc_examples_largedemo_.3
-share/doc/avr-libc/man/man3/_scratch_cross_avr-libc_work_${PKGNAME}_doc_examples_stdiodemo_.3
-share/doc/avr-libc/man/man3/_scratch_cross_avr-libc_work_${PKGNAME}_doc_examples_twitest_.3
-share/doc/avr-libc/man/man3/_scratch_cross_avr-libc_work_${PKGNAME}_include_.3
-share/doc/avr-libc/man/man3/_scratch_cross_avr-libc_work_${PKGNAME}_include_avr_.3
-share/doc/avr-libc/man/man3/_scratch_cross_avr-libc_work_${PKGNAME}_include_compat_.3
-share/doc/avr-libc/man/man3/_scratch_cross_avr-libc_work_${PKGNAME}_include_util_.3
-share/doc/avr-libc/man/man3/_scratch_cross_avr-libc_work_${PKGNAME}_libc_.3
-share/doc/avr-libc/man/man3/_scratch_cross_avr-libc_work_${PKGNAME}_libc_misc_.3
-share/doc/avr-libc/man/man3/_scratch_cross_avr-libc_work_${PKGNAME}_libc_pmstring_.3
-share/doc/avr-libc/man/man3/_scratch_cross_avr-libc_work_${PKGNAME}_libc_stdio_.3
-share/doc/avr-libc/man/man3/_scratch_cross_avr-libc_work_${PKGNAME}_libc_stdlib_.3
-share/doc/avr-libc/man/man3/_scratch_cross_avr-libc_work_${PKGNAME}_libc_string_.3
 share/doc/avr-libc/man/man3/abort.3
 share/doc/avr-libc/man/man3/abs.3
 share/doc/avr-libc/man/man3/acks.3
