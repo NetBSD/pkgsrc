@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.614 2014/02/07 13:20:50 mef Exp $
+$NetBSD: CHANGES-2014,v 1.615 2014/02/07 13:25:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -985,3 +985,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/inkscape to 0.48.4nb17 [wiz 2014-02-07]
 	Updated devel/doxygen to 1.8.6nb1 [wiz 2014-02-07]
 	Updated ham/gpredict to 1.3 [mef 2014-02-07]
+	Updated x11/gtk2 to 2.24.22nb1 [wiz 2014-02-07]
