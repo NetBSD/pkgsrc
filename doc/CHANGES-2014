@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.610 2014/02/07 05:28:56 obache Exp $
+$NetBSD: CHANGES-2014,v 1.611 2014/02/07 12:27:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -981,3 +981,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/libao to 1.2.0 [wiz 2014-02-06]
 	Added textproc/p5-Text-Nimble version 0.002001 [schmonz 2014-02-07]
 	Updated www/squid3 to 3.4.3nb1 [obache 2014-02-07]
+	Updated games/wesnoth to 1.10.6nb6 [wiz 2014-02-07]
