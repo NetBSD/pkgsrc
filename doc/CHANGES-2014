@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.618 2014/02/07 14:46:14 wiedi Exp $
+$NetBSD: CHANGES-2014,v 1.619 2014/02/07 15:36:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -989,3 +989,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/GConf to 2.32.4nb8 [wiz 2014-02-07]
 	Updated multimedia/mediatomb to 0.12.1nb20 [wiedi 2014-02-07]
 	Added mail/rspamd version 0.6.8 [wiedi 2014-02-07]
+	Updated lang/php55 to 5.5.9 [taca 2014-02-07]
+	Updated lang/php54 to 5.4.25 [taca 2014-02-07]
