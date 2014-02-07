@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2013/05/23 15:07:29 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.4 2014/02/07 21:29:09 wiz Exp $
 
 DISTNAME=		fish-1.23.1
+PKGREVISION=		1
 CATEGORIES=		shells
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fish/}
 
@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.fishshell.org/
 COMMENT=		User friendly command line shell for UNIX-like operating systems
 LICENSE=		gnu-gpl-v2
-
-BUILD_DEPENDS+=		doxygen>=1.2.14:../../devel/doxygen
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
