@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.107 2014/01/26 04:22:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.108 2014/02/07 13:14:06 wiz Exp $
 
 DISTNAME=	doxygen-1.8.6.src
 PKGNAME=	${DISTNAME:S/.src//}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.stack.nl/pub/users/dimitri/ \
 		http://ftp.stack.nl/pub/users/dimitri/
@@ -33,7 +34,9 @@ LDFLAGS.OpenBSD=	-liconv
 
 REPLACE_PERL=		tmake/bin/tmake
 
-# Case Insensitive fs or Sensitive
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.8.6
+
+# Case Insensitive or Case Sensitive File System
 PLIST_VARS+=		ci cs
 
 # pangocairo: basic ps/pdf support via PKG_BUILD_OPTIONS.graphviz
