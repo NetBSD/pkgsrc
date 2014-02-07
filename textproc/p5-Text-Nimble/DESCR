@@ -1,0 +1,7 @@
+Nimble is a markup language that tries to make it easy to author
+semantically-useful documents with special consideration given to
+HTML5 output. Things like blog posts, wiki articles, and documentation
+are meant to be easy to write using Nimble. Some parts of Nimble
+syntax rely on aligning things using indentation, and so Nimble
+likes to be written in a monospaced font. If you've ever used a
+wiki markup language, you should feel right at home using Nimble.
