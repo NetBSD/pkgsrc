@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2013/10/10 14:41:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.39 2014/02/07 13:57:31 wiedi Exp $
 #
 
 DISTNAME=		libvisual-bmp-0.2.0
@@ -14,6 +14,8 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config msgfmt
+
+CFLAGS.SunOS+=		-Du_int8_t=uint8_t -Du_int32_t=uint32_t
 
 post-extract:
 	${MV} ${WRKSRC}/pixmaps/libvisual-xmms-vis.bmp \
