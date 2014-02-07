@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2014/02/04 14:23:01 adam Exp $
+# $NetBSD: Makefile,v 1.27 2014/02/07 05:28:19 obache Exp $
 
 DISTNAME=	squid-3.4.3
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v3/${PKGVERSION_NOREV:R}/ \
 		ftp://ftp.squid-cache.org/pub/squid/ \
@@ -58,8 +59,8 @@ GNU_ARCH.i386=	i486
 CFLAGS+=	-march=i486
 .endif
 
-INSTALLATION_DIRS=	bin libexec ${PKGMANDIR}/man8 sbin ${EGDIR} \
-			share/squid share/squid/errors share/squid/icons \
+INSTALLATION_DIRS=	${EGDIR}
+
 SPECIAL_PERMS+=		libexec/pinger ${SETUID_ROOT_PERMS}
 
 RCD_SCRIPTS=		squid
