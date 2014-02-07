@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2013/12/31 16:50:19 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2014/02/07 08:56:52 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs
-PKG_SUPPORTED_OPTIONS=	dbus xft2 svg
+PKG_SUPPORTED_OPTIONS=	dbus xft2 svg xml gnutls
 PKG_OPTIONS_OPTIONAL_GROUPS+= window-system
 PKG_OPTIONS_GROUP.window-system= x11 nextstep
 PKG_OPTIONS_OPTIONAL_GROUPS+= toolkit
@@ -17,6 +17,27 @@ PKG_SUGGESTED_OPTIONS=	dbus svg x11 xft2
 .include "../../sysutils/dbus/buildlink3.mk"
 .  else
 CONFIGURE_ARGS+=	--without-dbus
+.  endif
+
+###
+### Support XML2
+###
+.  if !empty(PKG_OPTIONS:Mxml)
+USE_TOOLS+=		pkg-config
+BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.6.17
+.include "../../textproc/libxml2/buildlink3.mk"
+.  else
+CONFIGURE_ARGS+=	--without-xml2
+.  endif
+
+###
+### Support GnuTLS
+###
+.  if !empty(PKG_OPTIONS:Mgnutls)
+USE_TOOLS+=		pkg-config
+.include "../../security/gnutls/buildlink3.mk"
+.  else
+CONFIGURE_ARGS+=	--without-gnutls
 .  endif
 
 ###
