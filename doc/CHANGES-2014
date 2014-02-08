@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.627 2014/02/08 16:00:21 jmmv Exp $
+$NetBSD: CHANGES-2014,v 1.628 2014/02/08 17:08:47 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1007,3 +1007,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/shtk to 1.3nb1 [jmmv 2014-02-08]
 	Updated sysutils/sysbuild to 2.7nb1 [jmmv 2014-02-08]
 	Updated sysutils/sysupgrade to 1.5nb1 [jmmv 2014-02-08]
+	Updated pkgtools/x11-links to 0.82 [jperkin 2014-02-08]
