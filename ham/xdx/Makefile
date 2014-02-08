@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2013/10/10 14:42:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.42 2014/02/08 23:21:48 wiedi Exp $
 #
 
 DISTNAME=	xdx-2.4.2
@@ -14,6 +14,8 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	gmake pkg-config
 GNU_CONFIGURE=	yes
 USE_PKGLOCALEDIR=yes
+
+LDFLAGS.SunOS+=	-lsocket -lnsl -lresolv
 
 BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
 
