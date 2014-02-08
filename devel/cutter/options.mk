@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2011/02/13 12:59:51 obache Exp $
+# $NetBSD: options.mk,v 1.3 2014/02/08 12:14:32 obache Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.cutter
@@ -33,7 +33,7 @@ CONFIGURE_ARGS+=	--disable-goffice
 ### gstreamer support
 ###
 .if !empty(PKG_OPTIONS:Mgstreamer)
-.include "../../multimedia/gstreamer0.10/buildlink3.mk"
+.include "../../multimedia/gstreamer1/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-gstreamer
 PLIST.gst=		yes
 .else
