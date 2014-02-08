@@ -1,6 +1,6 @@
-$NetBSD: patch-netwerk_sctp_src_user__socketvar.h,v 1.2 2013/06/26 11:32:12 ryoon Exp $
+$NetBSD: patch-netwerk_sctp_src_user__socketvar.h,v 1.3 2014/02/08 09:36:00 ryoon Exp $
 
---- netwerk/sctp/src/user_socketvar.h.orig	2013-06-17 22:13:23.000000000 +0000
+--- netwerk/sctp/src/user_socketvar.h.orig	2014-01-28 04:04:00.000000000 +0000
 +++ netwerk/sctp/src/user_socketvar.h
 @@ -47,7 +47,7 @@
  /* #include <sys/_lock.h>  was 0 byte file */
