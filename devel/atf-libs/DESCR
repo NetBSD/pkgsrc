@@ -1,6 +1,0 @@
-The atf-libs package provides the development libraries of the Automated
-Testing Framework (ATF).  These libraries allow developers to write test
-programs that can later be run by the ATF tools (in the atf package) or,
-preferably, by Kyua (in the kyua-cli package).
-
-The included libraries are: libatf-c, libatf-c++ and libatf-sh.

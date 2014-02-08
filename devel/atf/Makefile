@@ -1,35 +1,27 @@
-# $NetBSD: Makefile,v 1.22 2013/02/14 18:36:12 jmmv Exp $
+# $NetBSD: Makefile,v 1.23 2014/02/08 15:54:58 jmmv Exp $
 #
 
-.include "Makefile.common"
+DISTNAME=	atf-0.20
+CATEGORIES=	devel
+MASTER_SITES=	https://github.com/jmmv/atf/releases/download/${DISTNAME}/
 
-COMMENT:=	${COMMENT} - Runtime tools (deprecated; use kyua-cli)
+MAINTAINER=	jmmv@NetBSD.org
+HOMEPAGE=	https://github.com/jmmv/atf/
+COMMENT=	Automated testing framework
+LICENSE=	2-clause-bsd
 
-CONFIGURE_ARGS+=	--enable-tools
+CONFLICTS+=		atf-libs<0.20
 
-XML_ENTRIES=	public "-//NetBSD//DTD ATF Tests Results 0.1//EN" \
-		${PREFIX}/share/xml/atf/tests-results.dtd
+MAKE_JOBS_SAFE=		yes
 
-post-install:
-.for file in bin/atf-sh \
-	     include/ \
-	     lib/ \
-	     libexec/ \
-	     ${PKGMANDIR}/man1/atf-check.1 \
-	     ${PKGMANDIR}/man1/atf-sh.1 \
-	     ${PKGMANDIR}/man1/atf-test-program.1 \
-	     ${PKGMANDIR}/man3/ \
-	     ${PKGMANDIR}/man4/ \
-	     share/aclocal/ \
-	     share/atf/libatf-sh.subr \
-	     tests/atf/atf-c++ \
-	     tests/atf/atf-c \
-	     tests/atf/atf-sh \
-	     tests/atf/test-programs
-	rm -rf ${DESTDIR}${PREFIX}/${file}
-.endfor
+GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
 
-BUILDLINK_API_DEPENDS.atf-libs+=	atf-libs>=${PKGVERSION_NOREV}
-.include "../../devel/atf-libs/buildlink3.mk"
-.include "../../textproc/xmlcatmgr/catalogs.mk"
+CONFIGURE_ARGS+=	ATF_SHELL=${SH:Q}
+
+PKGCONFIG_OVERRIDE=	atf-c/atf-c.pc.in
+PKGCONFIG_OVERRIDE+=	atf-c++/atf-c++.pc.in
+PKGCONFIG_OVERRIDE+=	atf-sh/atf-sh.pc.in
+
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1850 2014/02/06 14:24:22 drochner Exp $
+# $NetBSD: Makefile,v 1.1851 2014/02/08 15:54:58 jmmv Exp $
 #
 
 COMMENT=	Development utilities
@@ -52,7 +52,6 @@ SUBDIR+=	at-spi
 SUBDIR+=	at-spi2-atk
 SUBDIR+=	at-spi2-core
 SUBDIR+=	atf
-SUBDIR+=	atf-libs
 SUBDIR+=	atk
 SUBDIR+=	atkmm
 SUBDIR+=	autoconf
