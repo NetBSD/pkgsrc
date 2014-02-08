@@ -1,9 +1,9 @@
-$NetBSD: patch-xpcom_base_nsMemoryReporterManager.cpp,v 1.1 2013/12/15 13:54:37 ryoon Exp $
+$NetBSD: patch-xpcom_base_nsMemoryReporterManager.cpp,v 1.2 2014/02/08 09:36:00 ryoon Exp $
 
---- xpcom/base/nsMemoryReporterManager.cpp.orig	2013-12-05 16:08:00.000000000 +0000
+--- xpcom/base/nsMemoryReporterManager.cpp.orig	2014-01-28 04:04:07.000000000 +0000
 +++ xpcom/base/nsMemoryReporterManager.cpp
-@@ -196,6 +196,43 @@ static nsresult GetResidentFast(int64_t*
-     return GetResident(aN);
+@@ -201,6 +201,43 @@ ResidentFastDistinguishedAmount(int64_t*
+     return ResidentDistinguishedAmount(aN);
  }
  
 +#ifdef __FreeBSD__
@@ -46,8 +46,8 @@ $NetBSD: patch-xpcom_base_nsMemoryReporterManager.cpp,v 1.1 2013/12/15 13:54:37 
  #elif defined(SOLARIS)
  
  #include <procfs.h>
-@@ -370,6 +407,24 @@ static nsresult GetResidentFast(int64_t*
- }
+@@ -428,6 +465,24 @@ public:
+ };
  
  #define HAVE_PRIVATE_REPORTER
 +static nsresult
@@ -71,7 +71,7 @@ $NetBSD: patch-xpcom_base_nsMemoryReporterManager.cpp,v 1.1 2013/12/15 13:54:37 
  class PrivateReporter MOZ_FINAL : public MemoryUniReporter
  {
  public:
-@@ -382,21 +437,10 @@ public:
+@@ -440,21 +495,10 @@ public:
  
      NS_IMETHOD GetAmount(int64_t* aAmount)
      {
@@ -95,7 +95,7 @@ $NetBSD: patch-xpcom_base_nsMemoryReporterManager.cpp,v 1.1 2013/12/15 13:54:37 
  
  #ifdef HAVE_VSIZE_AND_RESIDENT_REPORTERS
  class VsizeReporter MOZ_FINAL : public MemoryUniReporter
-@@ -780,7 +824,7 @@ nsMemoryReporterManager::Init()
+@@ -842,7 +886,7 @@ nsMemoryReporterManager::Init()
      RegisterReporter(new mozilla::dmd::DMDReporter);
  #endif
  

@@ -1,6 +1,6 @@
-$NetBSD: patch-netwerk_wifi_nsWifiScannerFreeBSD.cpp,v 1.1 2013/09/19 12:37:50 ryoon Exp $
+$NetBSD: patch-netwerk_wifi_nsWifiScannerFreeBSD.cpp,v 1.2 2014/02/08 09:36:00 ryoon Exp $
 
---- netwerk/wifi/nsWifiScannerFreeBSD.cpp.orig	2013-09-14 15:17:47.000000000 +0000
+--- netwerk/wifi/nsWifiScannerFreeBSD.cpp.orig	2014-02-08 06:57:28.000000000 +0000
 +++ netwerk/wifi/nsWifiScannerFreeBSD.cpp
 @@ -0,0 +1,172 @@
 +/* This Source Code Form is subject to the terms of the Mozilla Public
