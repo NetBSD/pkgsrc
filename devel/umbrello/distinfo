@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.6 2014/02/02 07:19:29 markd Exp $
+$NetBSD: distinfo,v 1.7 2014/02/08 12:53:32 wiedi Exp $
 
 SHA1 (umbrello-4.11.5.tar.xz) = f0c3565fd98059fa0c051b2c7c18f5ca80bf28df
 RMD160 (umbrello-4.11.5.tar.xz) = 41ce65a4d6537936ced8b37597570ab7791136cd
 Size (umbrello-4.11.5.tar.xz) = 1455256 bytes
+SHA1 (patch-umbrello_widgets_associationwidget.cpp) = 6b14315f341dffa25e0f8e96175c6c397e57d3f8
+SHA1 (patch-umbrello_widgets_floatingdashlinewidget.cpp) = 9e77c211f5d8aed1679dfab6fa6ce131831f9c11
