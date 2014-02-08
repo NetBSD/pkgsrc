@@ -1,6 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_chrome_common_transport__dib.h,v 1.1 2013/07/17 11:00:13 jperkin Exp $
+$NetBSD: patch-ipc_chromium_src_chrome_common_transport__dib.h,v 1.2 2014/02/08 09:36:00 ryoon Exp $
 
---- ipc/chromium/src/chrome/common/transport_dib.h.orig	2013-05-11 19:19:32.000000000 +0000
+--- ipc/chromium/src/chrome/common/transport_dib.h.orig	2014-01-28 04:03:44.000000000 +0000
 +++ ipc/chromium/src/chrome/common/transport_dib.h
 @@ -70,7 +70,7 @@ class TransportDIB {
    typedef base::SharedMemoryHandle Handle;

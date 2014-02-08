@@ -1,8 +1,8 @@
-$NetBSD: patch-dom_plugins_ipc_PluginModuleChild.h,v 1.1 2013/07/17 11:00:13 jperkin Exp $
+$NetBSD: patch-dom_plugins_ipc_PluginModuleChild.h,v 1.2 2014/02/08 09:36:00 ryoon Exp $
 
---- dom/plugins/ipc/PluginModuleChild.h.orig	2013-05-11 19:19:27.000000000 +0000
+--- dom/plugins/ipc/PluginModuleChild.h.orig	2014-01-28 04:03:39.000000000 +0000
 +++ dom/plugins/ipc/PluginModuleChild.h
-@@ -325,7 +325,7 @@ private:
+@@ -328,7 +328,7 @@ private:
  
      // we get this from the plugin
      NP_PLUGINSHUTDOWN mShutdownFunc;

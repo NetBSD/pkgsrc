@@ -1,8 +1,8 @@
-$NetBSD: patch-ipc_chromium_src_base_debug__util__posix.cc,v 1.1 2013/07/17 11:00:13 jperkin Exp $
+$NetBSD: patch-ipc_chromium_src_base_debug__util__posix.cc,v 1.2 2014/02/08 09:36:00 ryoon Exp $
 
---- ipc/chromium/src/base/debug_util_posix.cc.orig	2013-05-11 19:19:32.000000000 +0000
+--- ipc/chromium/src/base/debug_util_posix.cc.orig	2014-01-28 04:03:44.000000000 +0000
 +++ ipc/chromium/src/base/debug_util_posix.cc
-@@ -107,7 +107,7 @@ bool DebugUtil::BeingDebugged() {
+@@ -110,7 +110,7 @@ bool DebugUtil::BeingDebugged() {
    return being_debugged;
  }
  

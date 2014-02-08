@@ -1,8 +1,8 @@
-$NetBSD: patch-ipc_ipdl_ipdl_lower.py,v 1.1 2013/05/23 13:12:13 ryoon Exp $
+$NetBSD: patch-ipc_ipdl_ipdl_lower.py,v 1.2 2014/02/08 09:36:00 ryoon Exp $
 
---- ipc/ipdl/ipdl/lower.py.orig	2013-01-04 23:44:34.000000000 +0000
+--- ipc/ipdl/ipdl/lower.py.orig	2014-01-28 04:03:44.000000000 +0000
 +++ ipc/ipdl/ipdl/lower.py
-@@ -1797,7 +1797,7 @@ def _generateMessageClass(clsname, msgid
+@@ -1811,7 +1811,7 @@ def _generateMessageClass(clsname, msgid
          StmtExpr(ExprCall(
              ExprVar('StringAppendF'),
              args=[ ExprAddrOf(msgvar),

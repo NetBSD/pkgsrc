@@ -1,8 +1,8 @@
-$NetBSD: patch-gfx_skia_src_utils_SkThreadUtils__pthread__linux.cpp,v 1.3 2013/11/05 14:40:49 ryoon Exp $
+$NetBSD: patch-gfx_skia_src_utils_SkThreadUtils__pthread__linux.cpp,v 1.4 2014/02/08 09:36:00 ryoon Exp $
 
 * Use cpuset(3) for NetBSD. From rmind@.
 
---- gfx/skia/src/utils/SkThreadUtils_pthread_linux.cpp.orig	2013-10-25 22:27:18.000000000 +0000
+--- gfx/skia/src/utils/SkThreadUtils_pthread_linux.cpp.orig	2014-01-28 04:03:42.000000000 +0000
 +++ gfx/skia/src/utils/SkThreadUtils_pthread_linux.cpp
 @@ -12,26 +12,47 @@
  #include "SkThreadUtils.h"

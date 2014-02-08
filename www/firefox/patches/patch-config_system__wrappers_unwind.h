@@ -1,6 +1,6 @@
-$NetBSD: patch-config_system__wrappers_unwind.h,v 1.3 2013/06/27 15:52:51 joerg Exp $
+$NetBSD: patch-config_system__wrappers_unwind.h,v 1.4 2014/02/08 09:36:00 ryoon Exp $
 
---- config/system_wrappers/unwind.h.orig	2013-05-13 19:56:18.000000000 +0000
+--- config/system_wrappers/unwind.h.orig	2014-02-08 06:57:27.000000000 +0000
 +++ config/system_wrappers/unwind.h
 @@ -0,0 +1,4 @@
 +#pragma GCC system_header

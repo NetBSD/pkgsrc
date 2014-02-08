@@ -1,6 +1,6 @@
-$NetBSD: patch-config_baseconfig.mk,v 1.3 2013/12/15 13:54:37 ryoon Exp $
+$NetBSD: patch-config_baseconfig.mk,v 1.4 2014/02/08 09:36:00 ryoon Exp $
 
---- config/baseconfig.mk.orig	2013-12-05 16:07:23.000000000 +0000
+--- config/baseconfig.mk.orig	2014-01-28 04:03:35.000000000 +0000
 +++ config/baseconfig.mk
 @@ -1,7 +1,7 @@
 -includedir := $(includedir)/$(MOZ_APP_NAME)-$(MOZ_APP_VERSION)

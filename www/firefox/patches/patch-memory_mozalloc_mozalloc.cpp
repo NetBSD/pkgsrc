@@ -1,8 +1,8 @@
-$NetBSD: patch-memory_mozalloc_mozalloc.cpp,v 1.1 2013/11/29 13:00:32 joerg Exp $
+$NetBSD: patch-memory_mozalloc_mozalloc.cpp,v 1.2 2014/02/08 09:36:00 ryoon Exp $
 
 https://bugzilla.mozilla.org/show_bug.cgi?id=928808
 
---- memory/mozalloc/mozalloc.cpp.orig	2013-10-25 22:27:35.000000000 +0000
+--- memory/mozalloc/mozalloc.cpp.orig	2014-01-28 04:03:59.000000000 +0000
 +++ memory/mozalloc/mozalloc.cpp
 @@ -229,3 +229,76 @@ namespace mozilla {
  const fallible_t fallible = fallible_t();
