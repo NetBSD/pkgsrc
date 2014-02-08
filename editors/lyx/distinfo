@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.12 2014/01/19 14:04:39 rumko Exp $
+$NetBSD: distinfo,v 1.13 2014/02/08 18:49:05 rumko Exp $
 
-SHA1 (lyx-2.0.6.tar.xz) = d73ba7a5e796acdf32282207be0b29d66411c5f8
-RMD160 (lyx-2.0.6.tar.xz) = 8e0e3af80726f566fdd8498f7410c36cffa6bdda
-Size (lyx-2.0.6.tar.xz) = 10390452 bytes
+SHA1 (lyx-2.0.7.tar.xz) = 4d54eb0cf98b0a44b5156ec84932e58c9c0efb07
+RMD160 (lyx-2.0.7.tar.xz) = 01b8989b68f10f37b5eb799fc01ba0a4f739b9f6
+Size (lyx-2.0.7.tar.xz) = 10449908 bytes
 SHA1 (patch-boost_boost_detail_container__fwd.hpp) = ff95034c4e2c03c894b3aa4b9222b34b8495fba7
 SHA1 (patch-boost_libs_signals_src_named__slot__map.cpp) = 3d73f93911eb2a9b51b0be34e3a26e85ec5b54f4
 SHA1 (patch-development_MacOSX_Makefile.in) = ae9e51e3458f8986ae392b146f8684305b7fe25b
