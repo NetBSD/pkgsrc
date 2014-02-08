@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2013/07/28 23:30:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2014/02/08 15:59:30 jmmv Exp $
 
 DISTNAME=	shtk-1.3
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/jmmv/shtk/releases/download/shtk-1.3/
 
@@ -24,8 +25,7 @@ PKG_SUGGESTED_OPTIONS=	tests
 .include "../../mk/bsd.options.mk"
 
 .if $(PKG_OPTIONS:Mtests)
-BUILDLINK_API_DEPENDS.atf-libs+=	atf-libs>=0.17
-.  include "../../devel/atf-libs/buildlink3.mk"
+.  include "../../devel/atf/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-atf=yes
 PLIST_SUBST+=		TESTS=
 .else
