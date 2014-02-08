@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2014/01/25 10:45:18 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2014/02/08 18:49:05 rumko Exp $
 
-DISTNAME=		lyx-2.0.6
+DISTNAME=		lyx-2.0.7
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.lyx.org/pub/lyx/stable/2.0.x/ \
 			http://gd.tuwien.ac.at/publishing/tex/lyx/stable/2.0.x/ \
@@ -144,6 +144,7 @@ SUBST_SED.python+=	-e 's,command("python -tt,command("${PYTHONBIN} -tt,'
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../textproc/mythes/buildlink3.mk"
+.include "../../devel/boost-headers/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
