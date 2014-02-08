@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2013/07/28 23:32:58 jmmv Exp $
+# $NetBSD: Makefile,v 1.27 2014/02/08 15:59:30 jmmv Exp $
 
 DISTNAME=	sysbuild-2.7
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://github.com/jmmv/sysbuild/releases/download/sysbuild-2.7/
 
@@ -29,8 +30,7 @@ PKG_SUGGESTED_OPTIONS=	tests
 .include "../../mk/bsd.options.mk"
 
 .if $(PKG_OPTIONS:Mtests)
-BUILDLINK_API_DEPENDS.atf-libs+=	atf-libs>=0.17
-.  include "../../devel/atf-libs/buildlink3.mk"
+.  include "../../devel/atf/buildlink3.mk"
 PLIST_SUBST+=	TESTS=
 .else
 PLIST_SUBST+=	TESTS=@comment
