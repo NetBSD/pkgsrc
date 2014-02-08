@@ -1,23 +1,23 @@
-$NetBSD: patch-aa,v 1.6 2013/10/28 23:47:18 joerg Exp $
+$NetBSD: patch-aa,v 1.7 2014/02/08 09:41:29 obache Exp $
 
 - improve recognition of various host platforms
 - honor PTHREAD_LDFLAGS and PTHREAD_LIBS
 
---- configure.orig	2008-03-02 04:16:07.000000000 +0000
+--- configure.orig	2009-12-31 18:41:44.000000000 +0000
 +++ configure
-@@ -2549,17 +2549,25 @@ i[3456]86-*-darwin*) host_cpu=i386 host_
+@@ -2684,20 +2684,30 @@ i[3456]86-*-darwin*) host_cpu=i386 host_
  arm*-*-darwin*) host_cpu=arm host_os=darwin libdl_needed=no ;;
  i386-*-openbsd*) host_os=bsd libdl_needed=no ;;
  i386-*-freebsd*) host_os=bsd libdl_needed=no ;;
-+i[34]86-*-netbsd*) host_os=bsd libdl_needed=no ;;
++i[34]86-*-netbsd*) host_cpu=i386 host_os=bsd libdl_needed=no ;;
 +i386-*-dragonfly*) host_os=bsd libdl_needed=no ;;
+ i386-*-solaris*) host_cpu=x86 host_os=solaris ;;
  x86_64-*-linux*) host_os=linux ;;
  hppa*-*-linux*) host_cpu=parisc host_os=linux ;;
  mipsel-*-linux*) host_cpu=mips host_os=linux ;;
--amd64-*-openbsd*) host_os=bsd libdl_needed=no ;;
--amd64-*-freebsd*) host_os=bsd libdl_needed=no ;;
-+x86_64-*-openbsd*) host_os=bsd libdl_needed=no ;;
-+x86_64-*-freebsd*) host_os=bsd libdl_needed=no ;;
+ x86_64-*-openbsd*) host_os=bsd libdl_needed=no ;;
+-x86_64-*-freebsd*) host_os=bsd libdl_needed=no ;;
++amd64-*-freebsd*) host_os=bsd host_cpu=x86_64 libdl_needed=no ;;
 +x86_64-*-netbsd*) host_os=bsd libdl_needed=no ;;
 +x86_64-*-dragonfly*) host_os=bsd libdl_needed=no ;;
  arm*-*-linux*) host_cpu=arm host_os=linux ;;
@@ -31,9 +31,13 @@ $NetBSD: patch-aa,v 1.6 2013/10/28 23:47:18 joerg Exp $
 +powerpc*-*-netbsd*) host_cpu=powerpc host_os=bsd libdl_needed=no ;;
 +powerpc*-*-dragonfly*) host_cpu=powerpc host_os=bsd libdl_needed=no ;;
  powerpc-*-darwin*) host_os=darwin ;;
- *) { { echo "$as_me:$LINENO: error: $host not supported" >&5
- echo "$as_me: error: $host not supported" >&2;}
-@@ -2828,7 +2820,7 @@ cat >>confdefs.h <<\_ACEOF
+ sparc*-*-freebsd*) host_cpu=sparc host_os=bsd libdl_needed=no ;;
++sparc*-*-openbsd*) host_cpu=sparc host_os=bsd libdl_needed=no ;;
++sparc*-*-netbsd*) host_cpu=sparc host_os=bsd libdl_needed=no ;;
+ *) { { $as_echo "$as_me:$LINENO: error: $host not supported" >&5
+ $as_echo "$as_me: error: $host not supported" >&2;}
+    { (exit 1); exit 1; }; } ;;
+@@ -2957,7 +2967,7 @@ cat >>confdefs.h <<\_ACEOF
  #define INLINING 1
  _ACEOF
  
@@ -42,16 +46,16 @@ $NetBSD: patch-aa,v 1.6 2013/10/28 23:47:18 joerg Exp $
  
              if test "$enable_runtime_reloc_checks" != no; then
  
-@@ -20707,13 +20715,13 @@ done
+@@ -21329,13 +21339,13 @@ _ACEOF
+ else
  
  
- 
--{ echo "$as_me:$LINENO: checking for pthread_self in -lpthread" >&5
--echo $ECHO_N "checking for pthread_self in -lpthread... $ECHO_C" >&6; }
-+{ echo "$as_me:$LINENO: checking for pthread_self in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
-+echo $ECHO_N "checking for pthread_self in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}... $ECHO_C" >&6; }
+-{ $as_echo "$as_me:$LINENO: checking for pthread_self in -lpthread" >&5
+-$as_echo_n "checking for pthread_self in -lpthread... " >&6; }
++{ $as_echo "$as_me:$LINENO: checking for pthread_self in  ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
++$as_echo_n "checking for pthread_self in  ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}... " >&6; }
  if test "${ac_cv_lib_pthread_pthread_self+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
+   $as_echo_n "(cached) " >&6
  else
    ac_check_lib_save_LIBS=$LIBS
 -LIBS="-lpthread  $LIBS"
@@ -59,7 +63,7 @@ $NetBSD: patch-aa,v 1.6 2013/10/28 23:47:18 joerg Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -20773,7 +20781,7 @@ if test $ac_cv_lib_pthread_pthread_self 
+@@ -21399,7 +21409,7 @@ if test "x$ac_cv_lib_pthread_pthread_sel
  #define HAVE_LIBPTHREAD 1
  _ACEOF
  
@@ -67,4 +71,4 @@ $NetBSD: patch-aa,v 1.6 2013/10/28 23:47:18 joerg Exp $
 +  LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} $LIBS"
  
  else
-   { { echo "$as_me:$LINENO: error: libpthread is missing" >&5
+   { { $as_echo "$as_me:$LINENO: error: libpthread is missing" >&5
