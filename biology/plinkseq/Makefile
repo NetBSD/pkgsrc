@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/03/26 20:11:19 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/08 12:27:14 wiedi Exp $
 
 DISTNAME=	plinkseq-0.08
 PKGREVISION=	1
@@ -15,6 +15,8 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS=	bash:run
 REPLACE_BASH=	browser/pbrowse.in index/index.in
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../mk/bsd.prefs.mk"
 
