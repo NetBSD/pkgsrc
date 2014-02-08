@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2013/07/12 10:44:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.37 2014/02/08 15:38:44 wiedi Exp $
 
 DISTNAME=	gnats-4.1.0
 PKGREVISION=	4
@@ -25,6 +25,8 @@ CONFIGURE_ARGS+=	--with-gnatsd-host-access-file=${GNATS_HOST_FILE:Q}
 CONFIGURE_ARGS+=	--with-gnats-dblist-file=${GNATS_DB_FILE:Q}
 CONFIGURE_ARGS+=	--with-gnats-default-db=${GNATS_DBHOME:Q}
 CONFIGURE_ARGS+=	--with-lispdir=${PREFIX}/share/gnats
+
+CFLAGS.SunOS+=		-D__EXTENSIONS__
 
 INFO_FILES=		yes
 
