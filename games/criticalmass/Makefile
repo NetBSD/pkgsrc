@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2013/02/16 11:21:14 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2014/02/08 17:45:29 wiedi Exp $
 #
 
 DISTNAME=	CriticalMass-1.0.2
@@ -16,6 +16,8 @@ GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
