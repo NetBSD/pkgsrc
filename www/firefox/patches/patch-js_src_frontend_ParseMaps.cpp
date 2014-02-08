@@ -1,8 +1,8 @@
-$NetBSD: patch-js_src_frontend_ParseMaps.cpp,v 1.1 2013/09/19 12:37:50 ryoon Exp $
+$NetBSD: patch-js_src_frontend_ParseMaps.cpp,v 1.2 2014/02/08 09:36:00 ryoon Exp $
 
---- js/src/frontend/ParseMaps.cpp.orig	2013-09-10 03:43:34.000000000 +0000
+--- js/src/frontend/ParseMaps.cpp.orig	2014-01-28 04:03:45.000000000 +0000
 +++ js/src/frontend/ParseMaps.cpp
-@@ -132,5 +132,5 @@ frontend::InitAtomMap(JSContext *cx, fro
+@@ -132,5 +132,5 @@ frontend::InitAtomMap(frontend::AtomInde
      }
  }
  
