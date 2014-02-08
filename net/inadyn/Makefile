@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/23 17:18:28 asau Exp $
+# $NetBSD: Makefile,v 1.4 2014/02/08 23:50:08 wiedi Exp $
 
 DISTNAME=	inadyn.v1.96.2
 PKGNAME=	${DISTNAME:C:.v:-:} # inadyn-1.96.2
@@ -18,6 +18,7 @@ RCD_SCRIPT_WRK.inadyn=	${WRKDIR}/inadyn.sh
 
 LIBS.SunOS=	-lsocket -lnsl
 MAKE_ENV+=	TARGET_ARCH=pkgsrc
+MAKE_ENV+=	LIBS=${LIBS:Q}
 
 WRKSRC=		${WRKDIR}/inadyn
 MAKE_FILE=	makefile
