@@ -1,4 +1,4 @@
-# $NetBSD: xorg.xcb-util,v 1.3 2012/04/08 05:55:48 obache Exp $
+# $NetBSD: xorg.xcb-util,v 1.4 2014/02/08 17:08:33 jperkin Exp $
 include/xcb/xcb_atom.h
 include/xcb/xcb_aux.h
 include/xcb/xcb_bitops.h
@@ -10,6 +10,7 @@ include/xcb/xcb_pixel.h
 include/xcb/xcb_property.h
 include/xcb/xcb_renderutil.h
 include/xcb/xcb_reply.h
+include/xcb/xcb_util.h
 lib/libxcb-atom.1.0.0.dylib
 lib/libxcb-atom.1.dylib
 lib/libxcb-atom.a
@@ -83,6 +84,9 @@ lib/libxcb-reply.la
 lib/libxcb-reply.so
 lib/libxcb-reply.so.1
 lib/libxcb-reply.so.1.0
+lib/libxcb-util.0.dylib
+lib/libxcb-util.1.dylib
+lib/libxcb-util.dylib
 lib/pkgconfig/xcb-atom.pc
 lib/pkgconfig/xcb-aux.pc
 lib/pkgconfig/xcb-event.pc
@@ -92,3 +96,4 @@ lib/pkgconfig/xcb-keysyms.pc
 lib/pkgconfig/xcb-property.pc
 lib/pkgconfig/xcb-renderutil.pc
 lib/pkgconfig/xcb-reply.pc
+lib/pkgconfig/xcb-util.pc
