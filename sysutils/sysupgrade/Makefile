@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2013/07/28 23:37:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2014/02/08 15:59:30 jmmv Exp $
 
 DISTNAME=	sysupgrade-1.5
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://github.com/jmmv/sysupgrade/releases/download/sysupgrade-1.5/
 
@@ -32,8 +33,7 @@ PKG_SUGGESTED_OPTIONS=	tests
 .include "../../mk/bsd.options.mk"
 
 .if $(PKG_OPTIONS:Mtests)
-BUILDLINK_API_DEPENDS.atf-libs+=	atf-libs>=0.17
-.  include "../../devel/atf-libs/buildlink3.mk"
+.  include "../../devel/atf/buildlink3.mk"
 PLIST_SUBST+=	TESTS=
 .else
 PLIST_SUBST+=	TESTS=@comment

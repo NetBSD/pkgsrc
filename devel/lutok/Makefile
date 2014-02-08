@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2013/12/08 01:20:21 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2014/02/08 15:59:30 jmmv Exp $
 
 DISTNAME=	lutok-0.4
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://lutok.googlecode.com/files/
 
@@ -29,9 +30,9 @@ PKGCONFIG_OVERRIDE=	lutok.pc.in
 .include "../../mk/bsd.options.mk"
 
 .if $(PKG_OPTIONS:Mtests)
+.  include "../../devel/atf/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-atf
 PLIST_SUBST+=		TESTS=
-.  include "../../devel/atf-libs/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-atf
 PLIST_SUBST+=		TESTS=@comment
