@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2013/07/15 02:02:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2014/02/08 23:39:55 wiedi Exp $
 #
 # Convert the version number as follows 2d2 -> 2.4.2, where the d is
 # changed to a 4, representing the 4th letter.
@@ -22,6 +22,8 @@ DEPENDS+=	slib>=3.1.1:../../devel/slib
 WRKSRC=		${WRKDIR}/scm
 EVAL_PREFIX+=	SLIB_PREFIX=slib
 INFO_FILES=	yes
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 SCM_MODULES+=	sc2 ramap dynl edline gsubr ioext posix record rgx socket
 SCM_MODULES+=	unix  continue scm scmmain findexec script time repl scl eval
