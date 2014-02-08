@@ -1,10 +1,10 @@
-$NetBSD: patch-xl,v 1.3 2013/05/23 13:12:13 ryoon Exp $
+$NetBSD: patch-xl,v 1.4 2014/02/08 06:47:08 obache Exp $
 
 NetBSD ppc xptcall support code. Originally from pkgsrc/www/mozilla.
 
---- xpcom/reflect/xptcall/src/md/unix/xptcinvoke_asm_ppc_netbsd.s.orig	2013-01-04 23:44:47.000000000 +0000
+--- xpcom/reflect/xptcall/src/md/unix/xptcinvoke_asm_ppc_netbsd.s.orig	2013-12-05 16:08:00.000000000 +0000
 +++ xpcom/reflect/xptcall/src/md/unix/xptcinvoke_asm_ppc_netbsd.s
-@@ -20,41 +20,42 @@
+@@ -20,15 +20,15 @@
  		      
          .section ".text"
  	.align 2
@@ -12,63 +12,16 @@ NetBSD ppc xptcall support code. Originally from pkgsrc/www/mozilla.
 -	.type  XPTC_InvokeByIndex,@function
 +	.globl NS_InvokeByIndex_P
 +	.type  NS_InvokeByIndex_P,@function
-+
-+//
-+// NS_InvokeByIndex_P(nsISupports* that, PRUint32 methodIndex,
-+//                    PRUint32 paramCount, nsXPTCVariant* params)
-+//
-+
-+NS_InvokeByIndex_P:
-+	stwu    sp,-32(sp)                      // setup standard stack frame
-+	mflr    r0                              // save LR
-+	stw     r3,8(sp)                        // r3 <= that
-+	stw     r4,12(sp)                       // r4 <= methodIndex
  
--#
+ #
 -# XPTC_InvokeByIndex(nsISupports* that, uint32_t methodIndex,
 -#                    uint32_t paramCount, nsXPTCVariant* params)
--#
--
++# NS_InvokeByIndex_P(nsISupports* that, PRUint32 methodIndex,
++#                    PRUint32 paramCount, nsXPTCVariant* params)
+ #
+ 
 -XPTC_InvokeByIndex:
--	stwu    sp,-32(sp)			# setup standard stack frame
--	mflr    r0				# save LR
--	stw     r3,8(sp)			# r3 <= that
--	stw     r4,12(sp)			# r4 <= methodIndex
- 	stw     r30,16(sp)
- 	stw     r31,20(sp)
- 
--	stw     r0,36(sp)			# store LR backchain
-+	stw     r0,36(sp)			// store LR backchain
- 	mr      r31,sp
- 
--	rlwinm  r10,r5,3,0,27			# r10 = (ParamCount * 2 * 4) & ~0x0f
--	addi    r0,r10,96			# reserve stack for GPR and FPR register save area r0 = r10 + 96
--	lwz     r9,0(sp)			# r9 = backchain
-+	rlwinm  r10,r5,3,0,27			// r10 = (ParamCount * 2 * 4) & ~0x0f
-+	addi    r0,r10,96			// reserve stack for GPR and FPR register save area r0 = r10 + 96
-+	lwz     r9,0(sp)			// r9 = backchain
- 	neg     r0,r0
--	stwux   r9,sp,r0			# reserve stack sapce and save SP backchain
-+	stwux   r9,sp,r0			// reserve stack sapce and save SP backchain
- 	
--	addi    r3,sp,8				# r3 <= args
--	mr      r4,r5				# r4 <= paramCount
--	mr      r5,r6				# r5 <= params
--	add     r6,r3,r10			# r6 <= gpregs ( == args + r10 )
--	mr      r30,r6				# store in r30 for use later...
--	addi    r7,r6,32			# r7 <= fpregs ( == gpregs + 32 )
-+	addi    r3,sp,8				// r3 <= args
-+	mr      r4,r5				// r4 <= paramCount
-+	mr      r5,r6				// r5 <= params
-+	add     r6,r3,r10			// r6 <= gpregs ( == args + r10 )
-+	mr      r30,r6				// store in r30 for use later...
-+	addi    r7,r6,32			// r7 <= fpregs ( == gpregs + 32 )
- 
--	bl      invoke_copy_to_stack@local	# (args, paramCount, params, gpregs, fpregs)
-+	bl      invoke_copy_to_stack@local	// (args, paramCount, params, gpregs, fpregs)
- 
--	lfd     f1,32(r30)			# load FP registers with method parameters
-+	lfd     f1,32(r30)			// load FP registers with method parameters
- 	lfd     f2,40(r30)   
- 	lfd     f3,48(r30)  
- 	lfd     f4,56(r30)  
++NS_InvokeByIndex_P:
+ 	stwu    sp,-32(sp)			# setup standard stack frame
+ 	mflr    r0				# save LR
+ 	stw     r3,8(sp)			# r3 <= that
