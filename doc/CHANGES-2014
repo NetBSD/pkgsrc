@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.626 2014/02/08 15:43:25 wen Exp $
+$NetBSD: CHANGES-2014,v 1.627 2014/02/08 16:00:21 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -998,3 +998,12 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated math/cgal to 3.9nb20 [wiedi 2014-02-08]
 	Updated x11/py-xcbgen to 1.10nb1 [wiz 2014-02-08]
 	Updated www/p5-HTTP-Tiny to 0.039 [wen 2014-02-08]
+	Removed devel/atf-libs [jmmv 2014-02-08]
+	Updated devel/atf to 0.20 [jmmv 2014-02-08]
+	Updated devel/kyua-atf-compat to 0.1nb1 [jmmv 2014-02-08]
+	Updated devel/kyua-cli to 0.8nb1 [jmmv 2014-02-08]
+	Updated devel/kyua-testers to 0.2nb1 [jmmv 2014-02-08]
+	Updated devel/lutok to 0.4nb1 [jmmv 2014-02-08]
+	Updated devel/shtk to 1.3nb1 [jmmv 2014-02-08]
+	Updated sysutils/sysbuild to 2.7nb1 [jmmv 2014-02-08]
+	Updated sysutils/sysupgrade to 1.5nb1 [jmmv 2014-02-08]
