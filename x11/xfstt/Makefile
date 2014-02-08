@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/10/29 05:07:11 asau Exp $
+# $NetBSD: Makefile,v 1.35 2014/02/08 02:53:05 wiedi Exp $
 #
 
 DISTNAME=		xfstt-1.9
@@ -19,6 +19,8 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-nls
 
 CXXFLAGS+=		-fomit-frame-pointer -ffast-math
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 RCD_SCRIPTS=		xfstt
 INSTALLATION_DIRS=	bin			\
