@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2013/11/24 00:35:07 wen Exp $
+$NetBSD: distinfo,v 1.6 2014/02/08 15:41:35 wen Exp $
 
-SHA1 (HTTP-Tiny-0.038.tar.gz) = b02831b48bb70156eeb1e59e9d74e9458971f131
-RMD160 (HTTP-Tiny-0.038.tar.gz) = 63eba19b1f0f2e32dfe87f16745dc1a067d977d0
-Size (HTTP-Tiny-0.038.tar.gz) = 50938 bytes
+SHA1 (HTTP-Tiny-0.039.tar.gz) = 01299308b0b698fd7406fbbc324374a2081965d3
+RMD160 (HTTP-Tiny-0.039.tar.gz) = 25254e1bb589fe8bf8e3912061a83777513a22f8
+Size (HTTP-Tiny-0.039.tar.gz) = 51179 bytes
