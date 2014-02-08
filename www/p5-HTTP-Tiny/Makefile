@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2013/11/24 00:35:07 wen Exp $
+# $NetBSD: Makefile,v 1.9 2014/02/08 15:41:35 wen Exp $
 #
 
-DISTNAME=	HTTP-Tiny-0.038
+DISTNAME=	HTTP-Tiny-0.039
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
