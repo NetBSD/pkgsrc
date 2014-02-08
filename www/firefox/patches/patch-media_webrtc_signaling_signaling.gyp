@@ -1,6 +1,6 @@
-$NetBSD: patch-media_webrtc_signaling_signaling.gyp,v 1.2 2013/12/15 13:54:37 ryoon Exp $
+$NetBSD: patch-media_webrtc_signaling_signaling.gyp,v 1.3 2014/02/08 09:36:00 ryoon Exp $
 
---- media/webrtc/signaling/signaling.gyp.orig	2013-12-05 16:07:48.000000000 +0000
+--- media/webrtc/signaling/signaling.gyp.orig	2014-01-28 04:03:57.000000000 +0000
 +++ media/webrtc/signaling/signaling.gyp
 @@ -244,6 +244,19 @@
            'cflags_mozilla': [

@@ -1,6 +1,6 @@
-$NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.3 2013/08/07 12:17:54 ryoon Exp $
+$NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.4 2014/02/08 09:36:00 ryoon Exp $
 
---- ipc/glue/GeckoChildProcessHost.cpp.orig	2013-07-30 00:58:17.000000000 +0000
+--- ipc/glue/GeckoChildProcessHost.cpp.orig	2014-01-28 04:03:44.000000000 +0000
 +++ ipc/glue/GeckoChildProcessHost.cpp
 @@ -4,7 +4,13 @@
   * License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -16,7 +16,7 @@ $NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.3 2013/08/07 12:17:54 ryoo
  
  #include "base/command_line.h"
  #include "base/path_service.h"
-@@ -490,7 +496,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
+@@ -494,7 +500,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
    // and passing wstrings from one config to the other is unsafe.  So
    // we split the logic here.
  
@@ -25,7 +25,7 @@ $NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.3 2013/08/07 12:17:54 ryoo
    base::environment_map newEnvVars;
    ChildPrivileges privs = mPrivileges;
    if (privs == base::PRIVILEGES_DEFAULT) {
-@@ -509,7 +515,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
+@@ -513,7 +519,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
        if (NS_SUCCEEDED(rv)) {
          nsCString path;
          greDir->GetNativePath(path);
@@ -34,7 +34,7 @@ $NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.3 2013/08/07 12:17:54 ryoo
  #  if defined(MOZ_WIDGET_ANDROID)
          path += "/lib";
  #  endif  // MOZ_WIDGET_ANDROID
-@@ -618,7 +624,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
+@@ -622,7 +628,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
    childArgv.push_back(pidstring);
  
  #if defined(MOZ_CRASHREPORTER)
@@ -43,7 +43,7 @@ $NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.3 2013/08/07 12:17:54 ryoo
    int childCrashFd, childCrashRemapFd;
    if (!CrashReporter::CreateNotificationPipeForChild(
          &childCrashFd, &childCrashRemapFd))
-@@ -651,7 +657,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
+@@ -655,7 +661,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
    childArgv.push_back(childProcessType);
  
    base::LaunchApp(childArgv, mFileMap,

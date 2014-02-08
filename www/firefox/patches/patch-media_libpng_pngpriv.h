@@ -1,6 +1,6 @@
-$NetBSD: patch-media_libpng_pngpriv.h,v 1.2 2013/08/07 12:17:54 ryoon Exp $
+$NetBSD: patch-media_libpng_pngpriv.h,v 1.3 2014/02/08 09:36:00 ryoon Exp $
 
---- media/libpng/pngpriv.h.orig	2013-07-30 00:58:46.000000000 +0000
+--- media/libpng/pngpriv.h.orig	2014-01-28 04:03:54.000000000 +0000
 +++ media/libpng/pngpriv.h
 @@ -38,6 +38,7 @@
   * still required (as of 2011-05-02.)
@@ -9,4 +9,4 @@ $NetBSD: patch-media_libpng_pngpriv.h,v 1.2 2013/08/07 12:17:54 ryoon Exp $
 +#define _XOPEN_SOURCE 600
  
  #ifndef PNG_VERSION_INFO_ONLY
- /* This is required for the definition of abort(), used as a last ditch
+ /* Standard library headers not required by png.h: */

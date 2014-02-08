@@ -1,6 +1,6 @@
-$NetBSD: patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_video__capture__linux.cc,v 1.3 2013/11/02 22:57:55 ryoon Exp $
+$NetBSD: patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_video__capture__linux.cc,v 1.4 2014/02/08 09:36:00 ryoon Exp $
 
---- media/webrtc/trunk/webrtc/modules/video_capture/linux/video_capture_linux.cc.orig	2013-10-25 22:27:35.000000000 +0000
+--- media/webrtc/trunk/webrtc/modules/video_capture/linux/video_capture_linux.cc.orig	2014-01-28 04:03:58.000000000 +0000
 +++ media/webrtc/trunk/webrtc/modules/video_capture/linux/video_capture_linux.cc
 @@ -18,13 +18,16 @@
  #include <string.h>

@@ -1,6 +1,6 @@
-$NetBSD: patch-xpcom_base_nsStackWalk.cpp,v 1.1 2013/07/17 11:00:13 jperkin Exp $
+$NetBSD: patch-xpcom_base_nsStackWalk.cpp,v 1.2 2014/02/08 09:36:00 ryoon Exp $
 
---- xpcom/base/nsStackWalk.cpp.orig	2013-05-11 19:19:56.000000000 +0000
+--- xpcom/base/nsStackWalk.cpp.orig	2014-01-28 04:04:07.000000000 +0000
 +++ xpcom/base/nsStackWalk.cpp
 @@ -853,7 +853,7 @@ void DemangleSymbol(const char * aSymbol
  }

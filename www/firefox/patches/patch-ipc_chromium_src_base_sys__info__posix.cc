@@ -1,6 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_base_sys__info__posix.cc,v 1.1 2013/07/17 11:00:13 jperkin Exp $
+$NetBSD: patch-ipc_chromium_src_base_sys__info__posix.cc,v 1.2 2014/02/08 09:36:00 ryoon Exp $
 
---- ipc/chromium/src/base/sys_info_posix.cc.orig	2013-05-11 19:19:32.000000000 +0000
+--- ipc/chromium/src/base/sys_info_posix.cc.orig	2014-01-28 04:03:44.000000000 +0000
 +++ ipc/chromium/src/base/sys_info_posix.cc
 @@ -119,7 +119,11 @@ std::wstring SysInfo::GetEnvVar(const wc
  

@@ -1,6 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_base_file__util__posix.cc,v 1.2 2013/12/15 13:54:37 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_file__util__posix.cc,v 1.3 2014/02/08 09:36:00 ryoon Exp $
 
---- ipc/chromium/src/base/file_util_posix.cc.orig	2013-12-05 16:07:35.000000000 +0000
+--- ipc/chromium/src/base/file_util_posix.cc.orig	2014-01-28 04:03:44.000000000 +0000
 +++ ipc/chromium/src/base/file_util_posix.cc
 @@ -8,7 +8,7 @@
  #include <errno.h>
