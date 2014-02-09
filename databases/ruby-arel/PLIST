@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/03/02 03:25:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/02/09 05:29:26 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/.gemtest
@@ -31,6 +31,7 @@ ${GEM_LIBDIR}/lib/arel/nodes/count.rb
 ${GEM_LIBDIR}/lib/arel/nodes/delete_statement.rb
 ${GEM_LIBDIR}/lib/arel/nodes/descending.rb
 ${GEM_LIBDIR}/lib/arel/nodes/equality.rb
+${GEM_LIBDIR}/lib/arel/nodes/extract.rb
 ${GEM_LIBDIR}/lib/arel/nodes/false.rb
 ${GEM_LIBDIR}/lib/arel/nodes/function.rb
 ${GEM_LIBDIR}/lib/arel/nodes/in.rb
@@ -42,6 +43,7 @@ ${GEM_LIBDIR}/lib/arel/nodes/named_function.rb
 ${GEM_LIBDIR}/lib/arel/nodes/node.rb
 ${GEM_LIBDIR}/lib/arel/nodes/ordering.rb
 ${GEM_LIBDIR}/lib/arel/nodes/outer_join.rb
+${GEM_LIBDIR}/lib/arel/nodes/over.rb
 ${GEM_LIBDIR}/lib/arel/nodes/select_core.rb
 ${GEM_LIBDIR}/lib/arel/nodes/select_statement.rb
 ${GEM_LIBDIR}/lib/arel/nodes/sql_literal.rb
@@ -53,6 +55,7 @@ ${GEM_LIBDIR}/lib/arel/nodes/unary.rb
 ${GEM_LIBDIR}/lib/arel/nodes/unqualified_column.rb
 ${GEM_LIBDIR}/lib/arel/nodes/update_statement.rb
 ${GEM_LIBDIR}/lib/arel/nodes/values.rb
+${GEM_LIBDIR}/lib/arel/nodes/window.rb
 ${GEM_LIBDIR}/lib/arel/nodes/with.rb
 ${GEM_LIBDIR}/lib/arel/order_predications.rb
 ${GEM_LIBDIR}/lib/arel/predications.rb
@@ -79,6 +82,7 @@ ${GEM_LIBDIR}/lib/arel/visitors/sqlite.rb
 ${GEM_LIBDIR}/lib/arel/visitors/to_sql.rb
 ${GEM_LIBDIR}/lib/arel/visitors/visitor.rb
 ${GEM_LIBDIR}/lib/arel/visitors/where_sql.rb
+${GEM_LIBDIR}/lib/arel/window_predications.rb
 ${GEM_LIBDIR}/test/attributes/test_attribute.rb
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/nodes/test_as.rb
@@ -88,12 +92,14 @@ ${GEM_LIBDIR}/test/nodes/test_count.rb
 ${GEM_LIBDIR}/test/nodes/test_delete_statement.rb
 ${GEM_LIBDIR}/test/nodes/test_descending.rb
 ${GEM_LIBDIR}/test/nodes/test_equality.rb
+${GEM_LIBDIR}/test/nodes/test_extract.rb
 ${GEM_LIBDIR}/test/nodes/test_infix_operation.rb
 ${GEM_LIBDIR}/test/nodes/test_insert_statement.rb
 ${GEM_LIBDIR}/test/nodes/test_named_function.rb
 ${GEM_LIBDIR}/test/nodes/test_node.rb
 ${GEM_LIBDIR}/test/nodes/test_not.rb
 ${GEM_LIBDIR}/test/nodes/test_or.rb
+${GEM_LIBDIR}/test/nodes/test_over.rb
 ${GEM_LIBDIR}/test/nodes/test_select_core.rb
 ${GEM_LIBDIR}/test/nodes/test_select_statement.rb
 ${GEM_LIBDIR}/test/nodes/test_sql_literal.rb
