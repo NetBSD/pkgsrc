@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12989 2014/02/08 18:50:52 rumko Exp $
+$NetBSD: TODO,v 1.12990 2014/02/09 02:03:44 jnemeth Exp $
 
 Suggested new packages
 ======================
@@ -1037,7 +1037,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o seamonkey-2.24
 	o secpanel-0.6.1
 	o sendfile-20010424
-	o sendmail-8.14.8
 	o ser-0.9.6
 	o sharity-3.7
 	o sharity-light-1.3
