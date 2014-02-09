@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2013/02/16 11:24:11 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2014/02/09 00:51:23 wiedi Exp $
 
 DISTNAME=	xdvik-${XDVIK_ORIGINAL_VERS}
 PKGNAME=	ja-vfxdvik-${XDVIK_ORIGINAL_VERS}.${XDVIK_JP_PATCH_VERS}
@@ -28,6 +28,8 @@ USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	klibtool
 GNU_CONFIGURE=		YES
 LDFLAGS.DragonFly=	-lm
+LDFLAGS.SunOS+=		-lm
+
 CONFIGURE_ARGS+=--enable-local-texmf=${PREFIX}/share/texmf-dist \
 		--without-texinfo \
 		--without-dialog \
