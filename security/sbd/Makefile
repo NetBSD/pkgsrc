@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/23 18:16:57 asau Exp $
+# $NetBSD: Makefile,v 1.4 2014/02/09 00:44:36 wiedi Exp $
 #
 
 DISTNAME=	sbd-0.5
@@ -24,10 +24,12 @@ INSTALLATION_DIRS+=	bin share/sbd
 
 OWN_DIRS+=	${PKG_SYSCONFDIR}/sbd
 
+LDFLAGS.SunOS+=	-lsocket -lnsl
+
 do-build:
 	cd ${WRKSRC} && \
-	${CXX} -DPKG_SYSCONFDIR=\""${PKG_SYSCONFDIR}/sbd\"" -Wall -O2 -o sbdd ssocket.cpp sha1.cpp utils.cpp sbdd.cpp; \
-	${CXX} -DPKG_SYSCONFDIR=\""${PKG_SYSCONFDIR}/sbd\"" -Wall -O2 -o sbd csocket.cpp sha1.cpp utils.cpp sbd.cpp
+	${CXX} -DPKG_SYSCONFDIR=\""${PKG_SYSCONFDIR}/sbd\"" -Wall -O2 -o sbdd ssocket.cpp sha1.cpp utils.cpp sbdd.cpp ${LDFLAGS}; \
+	${CXX} -DPKG_SYSCONFDIR=\""${PKG_SYSCONFDIR}/sbd\"" -Wall -O2 -o sbd csocket.cpp sha1.cpp utils.cpp sbd.cpp ${LDFLAGS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sbdd ${DESTDIR}${PREFIX}/bin
