@@ -1,6 +1,10 @@
-$NetBSD: patch-ap,v 1.3 2010/09/04 05:12:00 obache Exp $
+$NetBSD: patch-ap,v 1.4 2014/02/09 13:47:10 drochner Exp $
 
---- Modules/socketmodule.c.orig	2010-05-23 15:22:08.000000000 +0000
+Fix vulnerability reported in SA56624. Patch taken from here:
+
+http://hg.python.org/cpython/rev/87673659d8f7
+
+--- Modules/socketmodule.c.orig	2014-02-09 12:58:52.000000000 +0000
 +++ Modules/socketmodule.c
 @@ -379,7 +379,7 @@ const char *inet_ntop(int af, const void
  #define SOCKETCLOSE close
@@ -66,7 +70,18 @@ $NetBSD: patch-ap,v 1.3 2010/09/04 05:12:00 obache Exp $
              *len_ret = sizeof *addr;
              return 1;
          }
-@@ -4588,9 +4607,13 @@ init_socket(void)
+@@ -2625,6 +2644,10 @@ sock_recvfrom_into(PySocketSockObject *s
+     if (recvlen == 0) {
+         /* If nbytes was not specified, use the buffer's length */
+         recvlen = buflen;
++    } else if (recvlen > buflen) {
++        PyErr_SetString(PyExc_ValueError,
++                        "nbytes is greater than the length of the buffer");
++        return NULL;
+     }
+ 
+     readlen = sock_recvfrom_guts(s, buf, recvlen, flags, &addr);
+@@ -4588,9 +4611,13 @@ init_socket(void)
      PyModule_AddIntConstant(m, "BTPROTO_L2CAP", BTPROTO_L2CAP);
      PyModule_AddIntConstant(m, "BTPROTO_HCI", BTPROTO_HCI);
      PyModule_AddIntConstant(m, "SOL_HCI", SOL_HCI);
