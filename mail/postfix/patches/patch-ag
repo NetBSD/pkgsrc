@@ -1,22 +1,9 @@
-$NetBSD: patch-ag,v 1.33 2012/02/27 03:01:30 taca Exp $
+$NetBSD: patch-ag,v 1.34 2014/02/09 05:34:13 taca Exp $
 
 Only define HAS_DB if it hasn't been defined.
-Add support for NetBSD 5.x, NetBSD 6.x and DragonFly BSD.
-Handle closefrom() on FreeBSD.
 
---- src/util/sys_defs.h.orig	2011-11-02 23:46:22.000000000 +0000
+--- src/util/sys_defs.h.orig	2013-09-29 20:51:55.000000000 +0000
 +++ src/util/sys_defs.h
-@@ -30,8 +30,8 @@
-     || defined(OPENBSD2) || defined(OPENBSD3) || defined(OPENBSD4) \
-     || defined(OPENBSD5) \
-     || defined(NETBSD1) || defined(NETBSD2) || defined(NETBSD3) \
--    || defined(NETBSD4) \
--    || defined(EKKOBSD1)
-+    || defined(NETBSD4) || defined(NETBSD5) || defined(NETBSD6) \
-+    || defined(EKKOBSD1) || defined(DRAGONFLY)
- #define SUPPORTED
- #include <sys/types.h>
- #include <sys/param.h>
 @@ -44,7 +44,9 @@
  #define DEF_MAILBOX_LOCK "flock, dotlock"
  #define HAS_SUN_LEN
@@ -25,44 +12,5 @@ Handle closefrom() on FreeBSD.
  #define HAS_DB
 +#endif
  #define HAS_SA_LEN
- #define DEF_DB_TYPE	"hash"
+ #define NATIVE_DB_TYPE	"hash"
  #if (defined(__NetBSD_Version__) && __NetBSD_Version__ >= 104250000)
-@@ -165,9 +167,19 @@
- #define HAS_FUTIMES
- #endif
- 
-+#if defined(__DragonFly__)
-+#define HAS_DEV_URANDOM
-+#define HAS_ISSETUGID
-+#define HAS_FUTIMES
-+#define SOCKADDR_SIZE	socklen_t
-+#define SOCKOPT_SIZE	socklen_t
-+#define HAS_DUPLEX_PIPE
-+#endif
-+
- #if (defined(__NetBSD_Version__) && __NetBSD_Version__ >= 105000000) \
-     || (defined(__FreeBSD__) && __FreeBSD__ >= 4) \
-     || (defined(OpenBSD) && OpenBSD >= 200003) \
-+    || defined(__DragonFly__) \
-     || defined(USAGI_LIBINET6)
- #ifndef NO_IPV6
- # define HAS_IPV6
-@@ -176,14 +188,16 @@
- 
- #if (defined(__FreeBSD_version) && __FreeBSD_version >= 300000) \
-     || (defined(__NetBSD_Version__) && __NetBSD_Version__ >= 103000000) \
--    || (defined(OpenBSD) && OpenBSD >= 199700)	/* OpenBSD 2.0?? */
-+    || (defined(OpenBSD) && OpenBSD >= 199700)	/* OpenBSD 2.0?? */ \
-+    || defined(__DragonFly__)
- # define USE_SYSV_POLL
- #endif
- 
- #ifndef NO_KQUEUE
- # if (defined(__FreeBSD_version) && __FreeBSD_version >= 410000) \
-     || (defined(__NetBSD_Version__) && __NetBSD_Version__ >= 200000000) \
--    || (defined(OpenBSD) && OpenBSD >= 200105)	/* OpenBSD 2.9 */
-+    || (defined(OpenBSD) && OpenBSD >= 200105)	/* OpenBSD 2.9 */ \
-+    || defined(__DragonFly__)
- #  define EVENTS_STYLE	EVENTS_STYLE_KQUEUE
- # endif
- #endif
