@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.677 2014/02/02 07:49:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.678 2014/02/09 15:02:34 rodent Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -379,6 +379,7 @@ SUBDIR+=	py-OpenGL
 SUBDIR+=	py-Pillow
 SUBDIR+=	py-aafigure
 SUBDIR+=	py-actdiag
+SUBDIR+=	py-altgraph
 SUBDIR+=	py-biggles
 SUBDIR+=	py-blockdiag
 SUBDIR+=	py-cairo
