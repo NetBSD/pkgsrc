@@ -1,11 +1,11 @@
-$NetBSD: patch-bind_bind-9.8.4-P2_lib_export_dns_Makefile.in,v 1.1 2013/05/10 00:58:06 riastradh Exp $
+$NetBSD: patch-bind_bind-9.9.5_lib_export_dns_Makefile.in,v 1.1 2014/02/09 04:34:31 taca Exp $
 
 Build gen with BUILD_CC and the associated BUILD_* flags so it can run
 on the build platform when cross-compiling.
 
---- bind/bind-9.8.4-P2/lib/export/dns/Makefile.in.orig	2012-10-26 04:52:55.000000000 +0000
-+++ bind/bind-9.8.4-P2/lib/export/dns/Makefile.in
-@@ -166,7 +166,8 @@ code.h:	gen
+--- bind/bind-9.9.5/lib/export/dns/Makefile.in.orig	2014-01-27 18:58:24.000000000 +0000
++++ bind/bind-9.9.5/lib/export/dns/Makefile.in
+@@ -168,7 +168,8 @@ code.h:	gen
  	./gen -s ${srcdir} > code.h
  
  gen: ${srcdir}/gen.c
