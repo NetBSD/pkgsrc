@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/31 19:32:04 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/09 15:32:19 rodent Exp $
 
 DISTNAME=	trytond-3.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -36,6 +36,10 @@ PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2 via py-pycha via py-relatorio
 
 .include "options.mk"
+
+.if ${OPSYS} == "Darwin"
+DEPENDS+=	${PYPKGPREFIX}-py2app[0-9]*:../../devel/py-py2app
+.endif
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
