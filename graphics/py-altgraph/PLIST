@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2014/02/09 15:01:18 rodent Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/altgraph/Dot.py
+${PYSITELIB}/altgraph/Dot.pyc
+${PYSITELIB}/altgraph/Dot.pyo
+${PYSITELIB}/altgraph/Graph.py
+${PYSITELIB}/altgraph/Graph.pyc
+${PYSITELIB}/altgraph/Graph.pyo
+${PYSITELIB}/altgraph/GraphAlgo.py
+${PYSITELIB}/altgraph/GraphAlgo.pyc
+${PYSITELIB}/altgraph/GraphAlgo.pyo
+${PYSITELIB}/altgraph/GraphStat.py
+${PYSITELIB}/altgraph/GraphStat.pyc
+${PYSITELIB}/altgraph/GraphStat.pyo
+${PYSITELIB}/altgraph/GraphUtil.py
+${PYSITELIB}/altgraph/GraphUtil.pyc
+${PYSITELIB}/altgraph/GraphUtil.pyo
+${PYSITELIB}/altgraph/ObjectGraph.py
+${PYSITELIB}/altgraph/ObjectGraph.pyc
+${PYSITELIB}/altgraph/ObjectGraph.pyo
+${PYSITELIB}/altgraph/__init__.py
+${PYSITELIB}/altgraph/__init__.pyc
+${PYSITELIB}/altgraph/__init__.pyo
