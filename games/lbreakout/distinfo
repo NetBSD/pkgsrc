@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2010/01/29 23:35:57 joerg Exp $
+$NetBSD: distinfo,v 1.11 2014/02/09 17:12:33 wiedi Exp $
 
 SHA1 (lbreakout-010315.tar.gz) = 9385f4690aee645955acb23d8481957aaaf0e2fb
 RMD160 (lbreakout-010315.tar.gz) = ecb5784ec9475766035fabd84609c8a71581219d
@@ -6,3 +6,4 @@ Size (lbreakout-010315.tar.gz) = 655418 bytes
 SHA1 (patch-aa) = 42dbfbf5cdbbe72b652319dc7e43867fa1907c76
 SHA1 (patch-ab) = 5eb50dd1e4925ac9ad9469b03b92ca351baad305
 SHA1 (patch-ac) = 0dd6692789e41eb0f32d34dc2f4efd9efc1fec8a
+SHA1 (patch-lbreakout_breakout.cpp) = d52bdbd16a9a764c954d7fc52d39bd78eb183495
