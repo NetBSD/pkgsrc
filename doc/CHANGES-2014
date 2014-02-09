@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.644 2014/02/09 15:11:00 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.645 2014/02/09 15:17:53 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1031,3 +1031,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Data-Section to 0.200005 [wen 2014-02-09]
 	Added graphics/py-altgraph version 0.11 [rodent 2014-02-09]
 	Added devel/py-modulegraph version 0.11 [rodent 2014-02-09]
+	Added devel/py-macholib version 1.6 [rodent 2014-02-09]
