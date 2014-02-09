@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 16:08:33 asau Exp $
+# $NetBSD: Makefile,v 1.5 2014/02/09 17:23:54 wiedi Exp $
 #
 
 DISTNAME=	u9fs-2.0.3
@@ -12,5 +12,7 @@ COMMENT=	Unix file server using the 9P protocol
 WRKSRC=		${WRKDIR}/u9fs
 
 MAKE_FILE=	makefile
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../mk/bsd.pkg.mk"

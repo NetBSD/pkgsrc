@@ -1,14 +1,17 @@
-$NetBSD: patch-ab,v 1.2 2011/01/06 05:03:31 agc Exp $
+$NetBSD: patch-ab,v 1.3 2014/02/09 17:23:54 wiedi Exp $
 
---- u9fs.c	2007/04/23 22:01:05	1.1
-+++ u9fs.c	2007/04/23 22:29:28
-@@ -28,7 +28,14 @@
+--- u9fs.c.orig	2005-06-06 19:26:52.000000000 +0000
++++ u9fs.c
+@@ -28,7 +28,17 @@
  #define DEFAULTLOG "/tmp/u9fs.log"
  #endif
  
 +#if __linux__
  #include <linux/kdev_t.h>
-+#elif defined(__NetBSD__) || defined(__APPLE__) || defined(__DragonFly__) || defined(__FreeBSD__) 
++#elif defined(__NetBSD__) || defined(__APPLE__) || defined(__DragonFly__) || defined(__FreeBSD__) || defined(__sun)
++#if defined(__sun)
++# include <sys/mkdev.h>
++#endif
 +#include <sys/types.h>
 +#define MAJOR(m)	major(m)
 +#define MINOR(m)	minor(m)
@@ -17,7 +20,7 @@ $NetBSD: patch-ab,v 1.2 2011/01/06 05:03:31 agc Exp $
  
  char *logfile = DEFAULTLOG;
  char *rootpath = "/";
-@@ -752,11 +759,11 @@
+@@ -752,11 +762,11 @@ stat2dir(char *path, struct stat *st, Di
  			}
  			d->extension = estrdup(link);
  		} else if (d->mode&DMDEVICE) {
