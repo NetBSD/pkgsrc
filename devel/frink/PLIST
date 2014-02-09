@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2014/02/09 09:24:22 obache Exp $
+bin/frink
+share/doc/frink/COPYRIGHT
+share/doc/frink/README
