@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.22 2014/02/06 09:12:39 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.23 2014/02/09 23:56:59 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q4 branch:
@@ -78,3 +78,7 @@ Pullup ticket #4315 - requested by obache
 emulators/dosbox: build fix
 Pullup ticket #4316 - requested by obache
 multimedia/adobe-flash-plugin11: security update
+Pullup ticket #4317 - requested by drochner
+textproc/libyaml: security update
+Pullup ticket #4318 - requested by sborrill
+www/squid3: bug fix update
