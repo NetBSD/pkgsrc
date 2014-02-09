@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.1 2008/07/27 21:44:47 dholland Exp $
+$NetBSD: patch-ak,v 1.2 2014/02/09 17:09:03 wiedi Exp $
 
---- Main/Source/lsquare.cpp~	2004-12-10 10:51:47.000000000 -0500
-+++ Main/Source/lsquare.cpp	2008-07-27 16:34:33.000000000 -0400
-@@ -1585,7 +1585,7 @@
+--- Main/Source/lsquare.cpp.orig	2004-12-10 15:51:47.000000000 +0000
++++ Main/Source/lsquare.cpp
+@@ -1585,7 +1585,7 @@ truth lsquare::Duplicate(const beamdata&
    character* Character = GetCharacter();
  
    if(Character)
@@ -11,3 +11,14 @@ $NetBSD: patch-ak,v 1.1 2008/07/27 21:44:47 dholland Exp $
  
    if(GetStack()->Duplicate(DuplicatedSomething ? 4 : 5, Beam.SpecialParameters))
      DuplicatedSomething = true;
+@@ -2186,8 +2186,8 @@ void lsquare::SpillFluid(character* Spil
+ 	Spiller->Hostility(GetCharacter());
+ 
+       long CharVolume = GetCharacter()->GetVolume();
+-      double ChanceMultiplier = 1. / (300 + sqrt(GetStack()->GetVolume() + CharVolume));
+-      double Root = sqrt(CharVolume);
++      double ChanceMultiplier = 1. / (300 + sqrt((double)(GetStack()->GetVolume() + CharVolume)));
++      double Root = sqrt((double)CharVolume);
+ 
+       if(ForceHit || Root > RAND() % 400 || Root > RAND() % 400)
+       {
