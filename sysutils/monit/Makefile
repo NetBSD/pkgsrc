@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.12 2014/02/06 09:09:17 obache Exp $
+# $NetBSD: Makefile,v 1.13 2014/02/09 11:57:46 obache Exp $
 #
 
 DISTNAME=		monit-5.6
 CATEGORIES=		sysutils
-MASTER_SITES=		http://monit.com/monit/dist/
+MASTER_SITES=		http://mmonit.com/monit/dist/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://monit.com/monit/
+HOMEPAGE=		http://mmonit.com/monit/
 COMMENT=		Utility for monitoring processes, files, directories and devices
 LICENSE=		gnu-agpl-v3
 
