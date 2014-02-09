@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2013/02/13 14:31:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.27 2014/02/09 05:34:13 taca Exp $
 bin/mailq
 bin/newaliases
 libexec/postfix/anvil
@@ -61,6 +61,7 @@ man/man5/cidr_table.5
 man/man5/generic.5
 man/man5/header_checks.5
 man/man5/ldap_table.5
+man/man5/lmdb_table.5
 man/man5/master.5
 man/man5/memcache_table.5
 man/man5/mysql_table.5
@@ -71,6 +72,7 @@ man/man5/postconf.5
 man/man5/postfix-wrapper.5
 man/man5/regexp_table.5
 man/man5/relocated.5
+man/man5/socketmap_table.5
 man/man5/sqlite_table.5
 man/man5/tcp_table.5
 man/man5/transport.5
@@ -134,10 +136,12 @@ share/doc/postfix/DEBUG_README
 share/doc/postfix/DSN_README
 share/doc/postfix/ETRN_README
 share/doc/postfix/FILTER_README
+share/doc/postfix/FORWARD_SECRECY_README
 share/doc/postfix/INSTALL
 share/doc/postfix/IPV6_README
 share/doc/postfix/LDAP_README
 share/doc/postfix/LINUX_README
+share/doc/postfix/LMDB_README
 share/doc/postfix/LOCAL_RECIPIENT_README
 share/doc/postfix/MAILDROP_README
 share/doc/postfix/MEMCACHE_README
