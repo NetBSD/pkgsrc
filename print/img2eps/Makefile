@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2013/02/16 11:24:10 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2014/02/09 00:22:11 wiedi Exp $
 #
 
 DISTNAME=	img2eps-0.2
@@ -14,6 +14,7 @@ GNU_CONFIGURE=	YES
 TEST_TARGET=	check
 
 LDFLAGS.DragonFly=	-lm
+LDFLAGS.SunOS+=		-lm
 
 .include "options.mk"
 
