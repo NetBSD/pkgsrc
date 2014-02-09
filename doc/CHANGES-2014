@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.636 2014/02/09 05:29:51 taca Exp $
+$NetBSD: CHANGES-2014,v 1.637 2014/02/09 05:32:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1020,3 +1020,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/isc-dhcrelay4 to 4.3.0 [taca 2014-02-09]
 	Updated devel/ruby-rake to 10.0.4nb1 [taca 2014-02-09]
 	Updated databases/ruby-arel to 3.0.3 [taca 2014-02-09]
+	Updated databases/ruby-cassandra to 0.23.0 [taca 2014-02-09]
