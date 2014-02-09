@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.633 2014/02/09 04:31:38 wen Exp $
+$NetBSD: CHANGES-2014,v 1.634 2014/02/09 04:36:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1014,3 +1014,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/sendmail-qtool to 8.14.8 [jnemeth 2014-02-09]
 	Updated mail/sendmail-cidrexpand to 8.14.8 [jnemeth 2014-02-09]
 	Updated devel/p5-Module-Runtime to 0.014 [wen 2014-02-09]
+	Updated net/isc-dhcp4 to 4.3.0 [taca 2014-02-09]
+	Updated net/isc-dhclient4 to 4.3.0 [taca 2014-02-09]
+	Updated net/isc-dhcpd4 to 4.3.0 [taca 2014-02-09]
+	Updated net/isc-dhcrelay4 to 4.3.0 [taca 2014-02-09]
