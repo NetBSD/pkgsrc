@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12990 2014/02/09 02:03:44 jnemeth Exp $
+$NetBSD: TODO,v 1.12991 2014/02/09 08:21:59 adam Exp $
 
 Suggested new packages
 ======================
@@ -936,13 +936,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-cssutils-1.0
 	o py-datapkg-0.9
 	o py-decorator-3.4.0
-	o py-django-1.6.2
 	o py-django-cmsplugin_gallery-0.5.5
 	o py-django-easy-thumbnails-1.4
 	o py-django-photologue-2.7
 	o py-django-registration-1.0
-	o py-django-reversion-1.8.0
-	o py-django-south-0.8.3
 	o py-djangorestframework-2.3.12
 	o py-gammu-1.33.0
 	o py-gmpy-1.17
