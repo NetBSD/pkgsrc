@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.630 2014/02/09 02:03:44 jnemeth Exp $
+$NetBSD: CHANGES-2014,v 1.631 2014/02/09 02:17:10 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1011,3 +1011,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated editors/lyx to 2.0.7 [rumko 2014-02-08]
 	Updated editors/lyx to 2.0.7 [rumko 2014-02-08]
 	Updated mail/sendmail to 8.14.8 [jnemeth 2014-02-09]
+	Updated mail/sendmail-qtool to 8.14.8 [jnemeth 2014-02-09]
