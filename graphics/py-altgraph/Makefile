@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/02/09 15:01:18 rodent Exp $
-#
+# $NetBSD: Makefile,v 1.2 2014/02/09 16:51:06 wiz Exp $
 
 DISTNAME=	altgraph-0.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,8 +9,6 @@ MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://packages.python.org/altgraph
 COMMENT=	Graph (network) package for constructing graphs
 LICENSE=	mit
-
-#WRKSRC=		${WRKDIR}/altgraph-0.9
 
 USE_LANGUAGES=	# none
 
