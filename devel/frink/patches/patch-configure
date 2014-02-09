@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2014/02/09 09:24:22 obache Exp $
+
+* prevent to overwrite CFLAGS.
+
+--- configure.orig	2002-12-11 22:14:01.000000000 +0000
++++ configure
+@@ -2588,8 +2588,6 @@ CCDEPMODE=depmode=$am_cv_CC_dependencies
+ 
+ 
+ 
+-CFLAGS="-ansii -g -Wall"
+-
+ # Find a good install program.  We prefer a C program (faster),
+ # so one script is as good as another.  But avoid the broken or
+ # incompatible versions:
