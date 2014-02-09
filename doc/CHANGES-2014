@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.641 2014/02/09 09:25:13 obache Exp $
+$NetBSD: CHANGES-2014,v 1.642 2014/02/09 14:42:33 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1028,3 +1028,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-django-south to 0.8.3 [adam 2014-02-09]
 	Updated www/py-django-reversion to 1.8.0 [adam 2014-02-09]
 	Added devel/frink version 2.2.2p4 [obache 2014-02-09]
+	Updated devel/p5-Data-Section to 0.200005 [wen 2014-02-09]
