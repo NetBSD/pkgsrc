@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/02/09 15:17:42 rodent Exp $
+
+SHA1 (macholib-1.6.tar.gz) = 20822b549c71616187660ff940aaad764210b8e6
+RMD160 (macholib-1.6.tar.gz) = 6274b9ba177a9db6e2ea00dc091db517ba6d452b
+Size (macholib-1.6.tar.gz) = 468973 bytes
