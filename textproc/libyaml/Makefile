@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/10/25 06:56:05 asau Exp $
+# $NetBSD: Makefile,v 1.5.10.1 2014/02/09 23:19:22 tron Exp $
 #
 
-DISTNAME=	yaml-0.1.4
+DISTNAME=	yaml-0.1.5
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	http://pyyaml.org/download/libyaml/
@@ -14,5 +14,6 @@ LICENSE=	mit
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE=	yaml-0.1.pc.in
+TEST_TARGET=		check
 
 .include "../../mk/bsd.pkg.mk"
