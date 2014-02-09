@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1851 2014/02/08 15:54:58 jmmv Exp $
+# $NetBSD: Makefile,v 1.1852 2014/02/09 09:25:51 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -214,6 +214,7 @@ SUBDIR+=	florist
 SUBDIR+=	fortran-utils
 SUBDIR+=	fossil
 SUBDIR+=	frama-c
+SUBDIR+=	frink
 SUBDIR+=	fromcvs
 SUBDIR+=	ftnchek
 SUBDIR+=	g-wrap
