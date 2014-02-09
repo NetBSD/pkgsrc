@@ -1,0 +1,3 @@
+Frink is a tcl formatting and static check program. It can prettify your
+program, minimise, obfuscate or just sanity check it. It can also do some
+rewriting.
