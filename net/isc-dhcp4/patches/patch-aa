@@ -1,19 +1,25 @@
-$NetBSD: patch-aa,v 1.4 2011/04/08 14:09:24 taca Exp $
+$NetBSD: patch-aa,v 1.5 2014/02/09 04:34:31 taca Exp $
 
 * Don't install config files.
 
---- server/Makefile.in.orig	2011-03-24 21:58:37.000000000 +0000
+--- server/Makefile.in.orig	2014-01-31 19:20:49.000000000 +0000
 +++ server/Makefile.in
-@@ -615,13 +615,6 @@ uninstall-man8:
- 	done
+@@ -808,19 +808,6 @@ uninstall-man8:
+ 	dir='$(DESTDIR)$(man8dir)'; $(am__uninstall_files_from_dir)
  install-dist_sysconfDATA: $(dist_sysconf_DATA)
  	@$(NORMAL_INSTALL)
--	test -z "$(sysconfdir)" || $(MKDIR_P) "$(DESTDIR)$(sysconfdir)"
--	@list='$(dist_sysconf_DATA)'; for p in $$list; do \
+-	@list='$(dist_sysconf_DATA)'; test -n "$(sysconfdir)" || list=; \
+-	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(sysconfdir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(sysconfdir)" || exit 1; \
+-	fi; \
+-	for p in $$list; do \
 -	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
--	  f=$(am__strip_dir) \
--	  echo " $(dist_sysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(sysconfdir)/$$f'"; \
--	  $(dist_sysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(sysconfdir)/$$f"; \
+-	  echo "$$d$$p"; \
+-	done | $(am__base_list) | \
+-	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(sysconfdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(sysconfdir)" || exit $$?; \
 -	done
  
  uninstall-dist_sysconfDATA:
