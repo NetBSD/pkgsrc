@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.5 2013/04/30 22:20:58 joerg Exp $
+$NetBSD: patch-ad,v 1.6 2014/02/09 16:50:45 wiedi Exp $
 
 --- main.cpp.orig	2000-04-01 07:46:20.000000000 +0000
 +++ main.cpp
@@ -29,7 +29,7 @@ $NetBSD: patch-ad,v 1.5 2013/04/30 22:20:58 joerg Exp $
  #else
   #include <windows.h>
   #include <time.h>
-@@ -42,21 +45,21 @@ int omttc = 0, mttc = 0, inc = 0; float 
+@@ -42,21 +45,21 @@ int omttc = 0, mttc = 0, inc = 0; float
  int display_board = 0;
  int analysis_mode = 0;
  extern int fail;   // flag for fail high/fail low from search
@@ -96,6 +96,51 @@ $NetBSD: patch-ad,v 1.5 2013/04/30 22:20:58 joerg Exp $
     {
  
      // find a hint move, check book first then look in pv
+@@ -204,14 +198,14 @@ int main(int argc, char *argv[])
+     if(!game_pos.wtm)                        // if it is black's turn
+     {
+      if(both) p_side = 0;
+-     if(!xboard) cout << "Black-To-Move[" << ceil(T/2) << "]: ";
+-     if(logging) logfile << "Black-To-Move[" << ceil(T/2) << "]: ";
++     if(!xboard) cout << "Black-To-Move[" << ceil((double)(T/2)) << "]: ";
++     if(logging) logfile << "Black-To-Move[" << ceil((double)(T/2)) << "]: ";
+     }
+     else                                         // or if it is white's
+     {
+      if(both) p_side = 1;
+-     if(!xboard) cout << "White-To-Move[" << (ceil(T/2) + 1) << "]: ";
+-     if(logging) logfile << "White-To-Move[" << (ceil(T/2) + 1) << "]: ";
++     if(!xboard) cout << "White-To-Move[" << (ceil((double)(T/2)) + 1) << "]: ";
++     if(logging) logfile << "White-To-Move[" << (ceil((double)(T/2)) + 1) << "]: ";
+     }
+ 
+     cout.flush();
+@@ -322,12 +316,12 @@ void make_move()
+      if(p_side != game_pos.wtm)
+       {
+        if(game_pos.wtm) {
+-         cout << (ceil(T/2) + 1) << ". ";
++         cout << (ceil((double)(T/2)) + 1) << ". ";
+          if(xboard) cout << "... ";
+-         if(logging) logfile << (ceil(T/2) + 1) << ". ";
++         if(logging) logfile << (ceil((double)(T/2)) + 1) << ". ";
+        } else {
+-         cout << ceil(T/2) << ". ... ";
+-         if(logging) logfile << ceil(T/2) << ". ... ";
++         cout << ceil((double)(T/2)) << ". ... ";
++         if(logging) logfile << ceil((double)(T/2)) << ". ... ";
+        }
+        print_move(game_pos, best, mstring);
+        cout << mstring << "\n";
+@@ -558,7 +552,7 @@ void drawboard()
+      print_move(last_pos, game_pos.last, mstring);
+      cout << mstring;
+     }
+-   if(j==3) cout << "   fifty: " << ceil(game_pos.fifty/2);
++   if(j==3) cout << "   fifty: " << ceil((double)(game_pos.fifty/2));
+    if(j==2) cout << "   Computer time: " << int(timeleft/100) << " seconds";
+   }
+    cout << "\n  +---+---+---+---+---+---+---+---+";
 @@ -745,7 +739,7 @@ void parse_command()
    else if(!strcmp(response, "nopost")) { post = 0; }
    else if(!strcmp(response, "probe")) { cout << probe_tb(&game_pos,0) << "\n"; }
@@ -114,3 +159,12 @@ $NetBSD: patch-ad,v 1.5 2013/04/30 22:20:58 joerg Exp $
  int best_depth, best_score;
  extern int stage;
  unsigned long nodes, nodes1, test_time, test_time1;
+@@ -1063,7 +1057,7 @@ void save_game()
+   for(int i = 1; i < TURN; i++)
+    {
+     print_move(game_pos, game_history[i-1], mstring);
+-    if (game_pos.wtm) outfile << (ceil(i/2) + 1) << ". " << mstring;
++    if (game_pos.wtm) outfile << (ceil((double)(i/2)) + 1) << ". " << mstring;
+     else outfile << mstring;
+     outfile << " ";
+     if(!(T%8)) outfile << "\n";
