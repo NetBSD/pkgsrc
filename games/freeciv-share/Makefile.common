@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2014/01/25 10:45:18 wiz Exp $
+# $NetBSD: Makefile.common,v 1.42 2014/02/09 18:08:44 wiedi Exp $
 
 # used by games/freeciv-share/Makefile
 # used by games/freeciv-client/Makefile
@@ -16,7 +16,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt pkg-config
-USE_LANGUAGES+=		c c++
+USE_LANGUAGES+=		c99 c++
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
