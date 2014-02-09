@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/02/09 15:32:19 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2014/02/09 16:54:12 wiz Exp $
 
 DISTNAME=	tryton-3.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 .include "options.mk"
 
 .if ${OPSYS} == "Darwin"
-DEPENDS+=	${PYPKGPREFIX}-py2app[0-9]*:../../devel/py-py2app
+DEPENDS+=	${PYPKGPREFIX}-py2app-[0-9]*:../../devel/py-py2app
 .endif
 
 .include "../../graphics/librsvg/buildlink3.mk"
