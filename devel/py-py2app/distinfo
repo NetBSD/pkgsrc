@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/02/09 15:25:46 rodent Exp $
+
+SHA1 (py2app-0.8.tar.gz) = 35251ef16dde1b62f5f2d20519758f6551d0cd7f
+RMD160 (py2app-0.8.tar.gz) = 5c40b179e47f875a27b1479cb6e5ebf249c40f77
+Size (py2app-0.8.tar.gz) = 1542446 bytes
