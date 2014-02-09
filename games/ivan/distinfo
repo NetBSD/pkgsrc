@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2012/10/11 11:36:20 marino Exp $
+$NetBSD: distinfo,v 1.9 2014/02/09 17:09:03 wiedi Exp $
 
 SHA1 (ivan-0.50.tar.gz) = e4c5ae2b9bdfd59a0ed3c87a504043df12b0f1a4
 RMD160 (ivan-0.50.tar.gz) = 7e84340cd8fdfbdaaf7fde730fc0a76b137e2e91
@@ -6,6 +6,15 @@ Size (ivan-0.50.tar.gz) = 803651 bytes
 SHA1 (patch-FeLib_Source_bitmap.cc) = 88a4c73046069aed5e3a3c67ed22a1f22230254a
 SHA1 (patch-FeLib_Source_festring.cpp) = f45e5a3228f168888ecb5f645f463a2b8a3d903a
 SHA1 (patch-FeLib_Source_fetime.cpp) = f941686fedd9603f1d89c0edb205caceef4b27ba
+SHA1 (patch-Main_Source_bodypart.cpp) = 56880c6515a615dbd51e423416c35f8fa19aa2c2
+SHA1 (patch-Main_Source_char.cpp) = e6c5417416330a79fd38d0227d329db63f36c002
+SHA1 (patch-Main_Source_gear.cpp) = 6fb8ee978033701b86bbaf14f17fde78194c530d
+SHA1 (patch-Main_Source_human.cpp) = db8160fd618c2481046df42d4a389259bc0cde2a
+SHA1 (patch-Main_Source_item.cpp) = e546ccba7a445f818aab9cd22b74aa0d99efa745
+SHA1 (patch-Main_Source_materias.cpp) = b4ad153e784acab903aacb16457162253a13c3fd
+SHA1 (patch-Main_Source_rain.cpp) = c42e2bc7022b8584adadd27a906307b9f517a2ba
+SHA1 (patch-Main_Source_stack.cpp) = 6af80f842478be248b80d46c5cd72c02de6dfc7b
+SHA1 (patch-Main_Source_wsquare.cpp) = 8d0c40235bdfef17b1d1030a543aee313740f22b
 SHA1 (patch-aa) = a52f3945a79e12cc72d30d9609c4bf390809a5bd
 SHA1 (patch-ab) = 63f215564ee0922d1daa5240b5a3b3b4afc5db24
 SHA1 (patch-ac) = 42150fb33cbc0136bd702ab5cb26dcbc9d7c717c
@@ -16,7 +25,7 @@ SHA1 (patch-ag) = 58c92ccf5cad81c8030bb0e7f885e95b1ca4d555
 SHA1 (patch-ah) = 56fa7992634cd699eeccbb6702f2ec499d149a21
 SHA1 (patch-ai) = 0bd4ee24abae746489452a5a3fba11f5cb1965e4
 SHA1 (patch-aj) = 61d62867bb5fee01f8c243bc255de30a85781a76
-SHA1 (patch-ak) = 3ca89be9258c4ecc4a2ba16df9faa574983affa1
+SHA1 (patch-ak) = f7c043fad5c5cc1c72fd4dbc6db0a4ae3bce8d51
 SHA1 (patch-al) = 32e9e591e5967ec24525c5a6d5ddbb6294287b3b
 SHA1 (patch-am) = a631ea77b56262915181f8b0a6ed700596c820e1
 SHA1 (patch-an) = 48e334a68d12bfc23ea642956e0119ee0c6189c0
