@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2014/01/28 08:46:14 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2014/02/09 17:19:14 wiedi Exp $
 
 SHA1 (qt-everywhere-opensource-src-5.2.0.tar.xz) = 7d9d8cad4434bc200d9ed87b3c7cb39654a2f1b4
 RMD160 (qt-everywhere-opensource-src-5.2.0.tar.xz) = b2dd68f622fa7ff271ef621a7c7f17f2ecf7be9d
@@ -43,6 +43,7 @@ SHA1 (patch-qtquick1_tests_auto_declarative_qdeclarativeimage_tst__qdeclarativei
 SHA1 (patch-qtscript_src_3rdparty_javascriptcore_JavaScriptCore_config.h) = 66dc22ee78727c84f1e82dc10bb342d514f8f9a0
 SHA1 (patch-qtscript_src_3rdparty_javascriptcore_JavaScriptCore_runtime_JSValue.h) = ee35790f58ec9cf4d1a370f5549d92b5a680f557
 SHA1 (patch-qtscript_src_3rdparty_javascriptcore_JavaScriptCore_wtf_Platform.h) = ea5d9249aaa6e00b2111e0ba5bd8337f2e0f345a
+SHA1 (patch-qtserialport_src_serialport_qserialport__unix.cpp) = 27ff0bdedda6099f11ebb3eb4c377052bb605ddd
 SHA1 (patch-qttools_src_assistant_3rdparty_clucene_src_CLucene_index_SegmentMerger.cpp) = 67c3422f65338ea29d03e45f51bb0f40274760d1
 SHA1 (patch-qttools_src_assistant_3rdparty_clucene_src_CLucene_search_FieldCacheImpl.cpp) = 5dc1139b4dbfd464bfecd9eac86090064e5ae816
 SHA1 (patch-qttools_src_assistant_3rdparty_clucene_src_CLucene_util_Arrays.h) = 30562da15ccfd3034b6db5430e7abdab2fd5cb94
