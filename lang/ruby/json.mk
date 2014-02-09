@@ -1,4 +1,4 @@
-# $NetBSD: json.mk,v 1.5 2014/02/02 07:48:35 taca Exp $
+# $NetBSD: json.mk,v 1.6 2014/02/09 06:08:18 taca Exp $
 
 # This file handles appropriate dependency to ruby-json pacakge.
 #
@@ -13,7 +13,7 @@
 # RUBY_JSON_TYPE
 #	Specify depending packages: ruby-json, ruby-json-pure or both.
 #
-#	Possible values: json, pure, both
+#	Possible values: json, pure
 #	Default: json
 #
 
@@ -28,15 +28,9 @@ WARNINGS+= "[lang/ruby/json.mk] No needs to include ../../lang/ruby/json.mk"
 
 .include "../../lang/ruby/rubyversion.mk"
 
-.  if ${RUBY_VER} == "18"
+.  if empty(RUBY_JSON_VERSION)
 _RUBY_JSON_REQD=	true
 .  else
-
-.    if ${RUBY_VER} == "193"
-RUBY_JSON_VERSION=	1.5.5
-.    elif ${RUBY_VER} == "200"
-RUBY_JSON_VERSION=	1.7.7
-.    endif
 
 _RUBY_JSON_MAJOR=	${RUBY_JSON_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\1/}
 _RUBY_JSON_MINOR=	${RUBY_JSON_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\2/}
@@ -67,13 +61,12 @@ _RUBY_JSON_REQD=	true
 .        endif
 .      endif
 .    endif
-.  endif # ${RUBY_VER} != "18"
+.  endif # empty(RUBY_JSON_VERSION)
 
 .  if !empty(_RUBY_JSON_REQD)
-.    if ${RUBY_JSON_TYPE} == "json" || ${RUBY_JSON_TYPE} == "both"
+.    if ${RUBY_JSON_TYPE} == "json"
 DEPENDS+= ${RUBY_PKGPREFIX}-json>=${RUBY_JSON_REQD}:../../textproc/ruby-json
-.    endif
-.    if ${RUBY_JSON_TYPE} == "pure" || ${RUBY_JSON_TYPE} == "both"
+.    elif ${RUBY_JSON_TYPE} == "pure"
 DEPENDS+= ${RUBY_PKGPREFIX}-json-pure>=${RUBY_JSON_REQD}:../../textproc/ruby-json-pure
 .    endif
 .  endif
