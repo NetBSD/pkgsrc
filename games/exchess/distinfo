@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2013/04/30 22:20:58 joerg Exp $
+$NetBSD: distinfo,v 1.10 2014/02/09 16:50:45 wiedi Exp $
 
 SHA1 (EXCH314S.zip) = 7d8ffbd94dc86a97512826e611048a691c8c646d
 RMD160 (EXCH314S.zip) = 0503200c210aaf7ddc69e1372392e8ea690505ea
@@ -6,7 +6,7 @@ Size (EXCH314S.zip) = 110676 bytes
 SHA1 (patch-aa) = 6aa16f2ca4ecc52b77739b5d28ab650f8102e54c
 SHA1 (patch-ab) = a38d6455675083e9ca291c844c85746a0ed897e5
 SHA1 (patch-ac) = cfc1beff8ae3b2e4c9620e8d49852ce80d848ad6
-SHA1 (patch-ad) = 6deeaae3dbaf84f7763306d06117e21aa3dcf885
+SHA1 (patch-ad) = f2d2de59f56a0a24e6408ace9ba15139f986de95
 SHA1 (patch-ae) = 9d374b888a6f431604f41c4421baa23d8ca775a1
 SHA1 (patch-af) = f2379b8929775ff660f9af9fc96969eab1b25870
 SHA1 (patch-ag) = 7072e6b7ac08fcb901630c2705fe38065bc89bab
