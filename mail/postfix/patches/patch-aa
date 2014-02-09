@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.22 2013/02/13 14:31:31 taca Exp $
+$NetBSD: patch-aa,v 1.23 2014/02/09 05:34:13 taca Exp $
 
 Make this pkgsrc friendly.
 
---- postfix-install.orig	2011-11-19 23:09:16.000000000 +0000
+--- postfix-install.orig	2012-05-22 19:40:29.000000000 +0000
 +++ postfix-install
-@@ -365,26 +365,6 @@ HTML files. Specify \"no\" if you do not
+@@ -370,26 +370,6 @@ HTML files. Specify \"no\" if you do not
  : ${tempdir=`pwd`}
  : ${config_directory=`bin/postconf -c conf -h -d config_directory`}
  
@@ -31,7 +31,7 @@ Make this pkgsrc friendly.
  # In case some systems special-case pathnames beginning with //.
  
  case $install_root in
-@@ -739,10 +719,3 @@ bin/postconf -c $CONFIG_DIRECTORY -e \
+@@ -744,10 +724,3 @@ bin/postconf -c $CONFIG_DIRECTORY -e \
      "sample_directory = $sample_directory" \
      "readme_directory = $readme_directory" \
  || exit 1

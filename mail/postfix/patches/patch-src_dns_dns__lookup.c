@@ -1,10 +1,10 @@
-$NetBSD: patch-src_dns_dns__lookup.c,v 1.2 2013/09/06 14:08:18 taca Exp $
+$NetBSD: patch-src_dns_dns__lookup.c,v 1.3 2014/02/09 05:34:13 taca Exp $
 
 Fix runtime problem when mysql PKG_OPTIONS is enabled.
 
---- src/dns/dns_lookup.c.orig	2013-02-26 19:34:50.000000000 +0000
+--- src/dns/dns_lookup.c.orig	2014-01-09 15:00:36.000000000 +0000
 +++ src/dns/dns_lookup.c
-@@ -153,6 +153,8 @@
+@@ -194,6 +194,8 @@
  
  /* Local stuff. */
  
@@ -13,7 +13,7 @@ Fix runtime problem when mysql PKG_OPTIONS is enabled.
   /*
    * Structure to keep track of things while decoding a name server reply.
    */
-@@ -192,7 +194,7 @@ static int dns_query(const char *name, i
+@@ -235,7 +237,7 @@ static int dns_query(const char *name, i
      /*
       * Initialize the name service.
       */
@@ -22,11 +22,11 @@ Fix runtime problem when mysql PKG_OPTIONS is enabled.
  	if (why)
  	    vstring_strcpy(why, "Name service initialization failure");
  	return (DNS_FAIL);
-@@ -206,18 +208,18 @@ static int dns_query(const char *name, i
+@@ -264,18 +266,18 @@ static int dns_query(const char *name, i
+      */
+ #define SAVE_FLAGS (USER_FLAGS | XTRA_FLAGS)
  
-     if ((flags & USER_FLAGS) != flags)
- 	msg_panic("dns_query: bad flags: %d", flags);
--    saved_options = (_res.options & USER_FLAGS);
+-    saved_options = (_res.options & SAVE_FLAGS);
 +    saved_options = (rstate.options & USER_FLAGS);
  
      /*
@@ -44,6 +44,6 @@ Fix runtime problem when mysql PKG_OPTIONS is enabled.
 +	len = res_nsearch(&rstate, (char *) name, C_IN, type, reply->buf, reply->buf_len);
 +	rstate.options &= ~flags;
 +	rstate.options |= saved_options;
+ 	reply_header = (HEADER *) reply->buf;
+ 	reply->rcode = reply_header->rcode;
  	if (len < 0) {
- 	    if (why)
- 		vstring_sprintf(why, "Host or domain name not found. "
