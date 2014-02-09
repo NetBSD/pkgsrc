@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.638 2014/02/09 05:34:42 taca Exp $
+$NetBSD: CHANGES-2014,v 1.639 2014/02/09 06:24:32 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1022,3 +1022,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/ruby-arel to 3.0.3 [taca 2014-02-09]
 	Updated databases/ruby-cassandra to 0.23.0 [taca 2014-02-09]
 	Updated mail/postfix to 2.11.0 [taca 2014-02-09]
+	Updated devel/p5-Moose to 2.1204 [wen 2014-02-09]
