@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2014/01/14 15:36:59 reinoud Exp $
+$NetBSD: distinfo,v 1.2 2014/02/10 20:18:04 reinoud Exp $
 
 SHA1 (b-o-s-s-a-code-05bfcc39bc0453c3028b1161175b95a81af7a901.zip) = 4a21cb6c19ad755fd31f6f0b96b6b1dd997c62c9
 RMD160 (b-o-s-s-a-code-05bfcc39bc0453c3028b1161175b95a81af7a901.zip) = eb9cc01f00bf9c8f1d59ea11e0b8cede532e4829
 Size (b-o-s-s-a-code-05bfcc39bc0453c3028b1161175b95a81af7a901.zip) = 692158 bytes
-SHA1 (patch-Makefile-NetBSD) = 5d3e27bc19ae7a4b8a6b36866da6efc025ab243a
-SHA1 (patch-PortFactory.h) = da62cd3b41297401b2a7fbdabf507678e492409c
+SHA1 (patch-Makefile-NetBSD) = b2ae0fa1a0377ffee8d44bf5c915c9771e5ee84f
+SHA1 (patch-PortFactory.h) = 4faae14f2efe2fc20eac90910b458484060ee2da
