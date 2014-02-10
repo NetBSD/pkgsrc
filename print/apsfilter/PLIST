@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 21:16:21 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2014/02/10 11:13:03 obache Exp $
 bin/aps2file
 bin/apsfilter-bug
 bin/apspreview
@@ -311,6 +311,7 @@ share/apsfilter/setup/printer-omni
 share/apsfilter/setup/printer-pcl3
 share/apsfilter/setup/printer-ppa
 share/apsfilter/setup/printer-stp
+share/apsfilter/setup/sound
 share/apsfilter/setup/test.ps
 share/apsfilter/template/README
 share/apsfilter/template/apsfilterrc
@@ -323,4 +324,3 @@ share/doc/apsfilter/README.TeX
 share/doc/apsfilter/apsfilter4.png
 share/doc/apsfilter/handbook.html
 share/doc/apsfilter/paper
-@unexec ${RMDIR} %D/etc/apsfilter 2>/dev/null || ${TRUE}
