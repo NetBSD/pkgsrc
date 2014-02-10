@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2006/04/22 17:45:05 joerg Exp $
+$NetBSD: distinfo,v 1.5 2014/02/10 11:43:09 obache Exp $
 
 SHA1 (cpia2_driver-1.0.tgz) = 72c70f88fd894118510e761c9c9f5f5a928e7e42
 RMD160 (cpia2_driver-1.0.tgz) = bdec7a2cd68c08d10a734ad66f16433b9622ba84
@@ -12,3 +12,4 @@ SHA1 (patch-ac) = f4645a7c31dbbc9232ecdc71619ba1c4b777b266
 SHA1 (patch-ad) = 4e92276bb154bdb33af581a278c1bb656d139895
 SHA1 (patch-ae) = 4f2f601f02e4d5060ce39d002fad8aaa5cdc5afc
 SHA1 (patch-af) = 11cfd02d70bd35e8485f3d92a3cb3e8b96f480d3
+SHA1 (patch-jpeg__decode.c) = 102e8afe4a8a8cf650cd4811ea7d687ad10cdf98
