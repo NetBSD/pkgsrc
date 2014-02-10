@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2014/02/09 15:17:42 rodent Exp $
-bin/macho_dump
-bin/macho_find
-bin/macho_standalone
+@comment $NetBSD: PLIST,v 1.2 2014/02/10 00:16:58 rodent Exp $
+bin/macho_dump${PYVERSSUFFIX}
+bin/macho_find${PYVERSSUFFIX}
+bin/macho_standalone${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
