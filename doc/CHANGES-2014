@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.652 2014/02/10 13:34:42 wen Exp $
+$NetBSD: CHANGES-2014,v 1.653 2014/02/10 14:00:20 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1039,3 +1039,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated print/apsfilter to 7.2.8 [obache 2014-02-10]
 	Updated net/miniupnpd to 1.8.20140203 [adam 2014-02-10]
 	Added devel/p5-Term-Encoding version 0.02 [wen 2014-02-10]
+	Updated devel/p5-Dist-Zilla to 5.013 [wen 2014-02-10]
