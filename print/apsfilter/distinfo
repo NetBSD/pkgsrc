@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.8 2006/01/10 07:17:41 martti Exp $
+$NetBSD: distinfo,v 1.9 2014/02/10 11:13:03 obache Exp $
 
-SHA1 (apsfilter-7.2.6.tar.gz) = c188642d878d10ee694667c916c594714a84cb4f
-RMD160 (apsfilter-7.2.6.tar.gz) = 82c60e16f836fe963b84516c0f5e19139112460b
-Size (apsfilter-7.2.6.tar.gz) = 363051 bytes
-SHA1 (patch-aa) = e79f596952e30bb70121168a8d1dfba819716e62
-SHA1 (patch-ac) = a8ace4d2f9fcdf049981bb8f2c3f48b28e4f4cf9
-SHA1 (patch-ad) = 27df89568fa6c0e194fcd8af7ed884c45588a53b
+SHA1 (apsfilter-7.2.8.tar.gz) = 2441c7c302b995dfc1a457f8ff695e4c32d3d8f1
+RMD160 (apsfilter-7.2.8.tar.gz) = 69f6cf26a2f47623ae3cd78746abc5ab9278da9c
+Size (apsfilter-7.2.8.tar.gz) = 364413 bytes
+SHA1 (patch-aa) = f347ec24c662509791b9b0662bef60ce2afed46c
