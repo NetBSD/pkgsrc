@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.14 2014/01/07 18:25:17 jperkin Exp $
+$NetBSD: distinfo,v 1.15 2014/02/10 01:37:13 dsainty Exp $
 
+SHA1 (jre-7u45-linux-i586.tar.gz) = 6168b44df496f5989be4597699f11c687a47edc7
+RMD160 (jre-7u45-linux-i586.tar.gz) = 6824599b83661d83aaedd1b97688114900f31306
+Size (jre-7u45-linux-i586.tar.gz) = 48265934 bytes
 SHA1 (jre-7u45-linux-x64.tar.gz) = 729cbee2591a5b429f4fa9272db6e988371b7923
 RMD160 (jre-7u45-linux-x64.tar.gz) = 117ba716c76d2afba47e7adf1c834b7e4a9edc91
 Size (jre-7u45-linux-x64.tar.gz) = 46842143 bytes
