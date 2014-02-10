@@ -1,4 +1,6 @@
-$NetBSD: patch-lib_Makefile.in,v 1.4 2013/11/29 22:55:29 wiz Exp $
+$NetBSD: patch-lib_Makefile.in,v 1.5 2014/02/10 12:01:20 tron Exp $
+
+Correct path to locale files.
 
 --- lib/Makefile.in.orig	2013-11-23 10:09:55.000000000 +0000
 +++ lib/Makefile.in
@@ -16,7 +18,7 @@ $NetBSD: patch-lib_Makefile.in,v 1.4 2013/11/29 22:55:29 wiz Exp $
  libdir = @libdir@
  libexecdir = @libexecdir@
 -localedir = $(datadir)/locale
-+localedir = /usr/pkg/share/locale
++localedir = @prefix@/share/locale
  localstatedir = @localstatedir@
  mandir = @mandir@
  mkdir_p = @mkdir_p@
