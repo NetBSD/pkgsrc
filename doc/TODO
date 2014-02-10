@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12992 2014/02/09 17:03:38 wiz Exp $
+$NetBSD: TODO,v 1.12993 2014/02/10 11:14:05 obache Exp $
 
 Suggested new packages
 ======================
@@ -380,7 +380,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o apache-ant-1.9.3
 	o apache22-2.2.26
 	o apr0-2.4.1
-	o apsfilter-7.2.8
 	o argtable-2.9
 	o aria2-1.18.3
 	o arirang-1.70
