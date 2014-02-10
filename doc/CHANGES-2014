@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.650 2014/02/10 11:14:05 obache Exp $
+$NetBSD: CHANGES-2014,v 1.651 2014/02/10 11:46:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1037,3 +1037,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-macholib to 1.6nb1 [rodent 2014-02-10]
 	Updated devel/py-py2app to 0.8nb1 [rodent 2014-02-10]
 	Updated print/apsfilter to 7.2.8 [obache 2014-02-10]
+	Updated net/miniupnpd to 1.8.20140203 [adam 2014-02-10]
