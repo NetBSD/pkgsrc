@@ -1,17 +1,10 @@
-$NetBSD: patch-aa,v 1.4 2003/04/15 09:25:05 martti Exp $
+$NetBSD: patch-aa,v 1.5 2014/02/10 11:13:03 obache Exp $
 
---- Makefile.in.orig	2002-10-28 00:05:19.000000000 +0200
-+++ Makefile.in	2003-04-15 08:56:15.000000000 +0300
-@@ -12,7 +12,7 @@
- 
- APSSHARE=${datadir}/apsfilter
- APSDOC=${docdir}/apsfilter
--APSCONF=${sysconfdir}/apsfilter
-+APSCONF=${sysconfdir}
- 
- MKDIR=mkdir -p
- RM=rm -f
-@@ -33,7 +33,6 @@
+* will be handled by package system.
+
+--- Makefile.in.orig	2006-07-09 15:54:22.000000000 +0000
++++ Makefile.in
+@@ -33,7 +33,6 @@ update:
  	${MKDIR} ${mandir}/man1
  	${MKDIR} ${mandir}/man5
  	${MKDIR} ${APSDOC}
@@ -19,7 +12,7 @@ $NetBSD: patch-aa,v 1.4 2003/04/15 09:25:05 martti Exp $
  	${MKDIR} ${APSSHARE}
  	${MKDIR} ${APSSHARE}/bin
  	${MKDIR} ${APSSHARE}/setup
-@@ -80,7 +79,6 @@
+@@ -81,7 +80,6 @@ update:
  	${INSTALL_DATA}   man/apsfilter-bug.1	${mandir}/man1/apsfilter-bug.1
  	${INSTALL_DATA}   man/apsfilterrc.5	${mandir}/man5/apsfilterrc.5
  	tar cf - driver | ( cd ${APSSHARE} && tar xf -)
