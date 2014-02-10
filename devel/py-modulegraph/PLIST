@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2014/02/09 15:09:46 rodent Exp $
-bin/modulegraph
+@comment $NetBSD: PLIST,v 1.2 2014/02/10 00:12:10 rodent Exp $
+bin/modulegraph${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
