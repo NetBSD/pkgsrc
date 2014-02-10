@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.24 2014/02/10 09:48:06 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.25 2014/02/10 18:14:48 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q4 branch:
@@ -82,3 +82,5 @@ Pullup ticket #4317 - requested by drochner
 textproc/libyaml: security update
 Pullup ticket #4318 - requested by sborrill
 www/squid3: bug fix update
+Pullup ticket #4319 - requested by tron
+lang/python27: security fix
