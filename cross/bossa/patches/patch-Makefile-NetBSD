@@ -1,9 +1,7 @@
-$NetBSD: patch-Makefile-NetBSD,v 1.1 2014/01/14 15:36:59 reinoud Exp $
+$NetBSD: patch-Makefile-NetBSD,v 1.2 2014/02/10 20:18:04 reinoud Exp $
 
-# Patching for NetBSD serial port detection code
-
---- /usr/tmp/pkgsrc-aspire/comms/bossa/work/b-o-s-s-a-code-05bfcc39bc0453c3028b1161175b95a81af7a901/Makefile.orig	2012-04-08 13:55:52.000000000 +0000
-+++ /usr/tmp/pkgsrc-aspire/comms/bossa/work/b-o-s-s-a-code-05bfcc39bc0453c3028b1161175b95a81af7a901/Makefile
+--- Makefile.orig	2014-02-10 20:08:47.000000000 +0000
++++ Makefile
 @@ -75,6 +75,20 @@ install: strip
  endif
  
