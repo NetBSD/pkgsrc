@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/12/28 19:50:34 hauke Exp $
+@comment $NetBSD: PLIST,v 1.7.2.1 2014/02/10 09:47:25 tron Exp $
 bin/purge
 bin/squidclient
 ${PLIST.ba_getpwnam}libexec/basic_getpwnam_auth
@@ -23,7 +23,7 @@ ${PLIST.ta_kerberos}libexec/negotiate_kerberos_auth_test
 ${PLIST.na_SMB}libexec/ntlm_auth
 ${PLIST.unlinkd}libexec/unlinkd
 libexec/ntlm_fake_auth
-libexec/pinger/pinger
+libexec/pinger
 libexec/storeid_file_rewrite
 libexec/url_fake_rewrite
 libexec/url_fake_rewrite.sh
