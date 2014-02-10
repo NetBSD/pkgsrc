@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2006/04/22 17:24:27 joerg Exp $
+$NetBSD: distinfo,v 1.4 2014/02/10 11:46:55 obache Exp $
 
 SHA1 (cnxtutil-0.00-alpha.tar.gz) = bd151410026a307562ed928d72feb8aa57b2cb51
 RMD160 (cnxtutil-0.00-alpha.tar.gz) = a9ef8504c8254c2f6e99cea2a1345dcdc48a6bda
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = e9277d522b02191e49a9d0b8ef9057b64ae0ae6b
 SHA1 (patch-ac) = f9502c50575ca5b8917a3c78cbcdf0bb3afe1bcf
 SHA1 (patch-ad) = 89fa87ebbe611e05cda5dc8087aa6d5179bbe01a
 SHA1 (patch-ae) = eff3d6b1c2c6e94c7d6edd5ef8375beb86b71241
+SHA1 (patch-jpeg__decode.c) = df308f9ea2e8462cc2fd31e1c69cba46e4d310c3
