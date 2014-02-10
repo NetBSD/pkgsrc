@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.4 2012/07/02 18:53:03 drochner Exp $
+$NetBSD: patch-ae,v 1.5 2014/02/10 12:01:20 tron Exp $
+
+Fix build.
 
 --- guile/src/core.c.orig	2012-04-12 20:05:11.000000000 +0000
 +++ guile/src/core.c
