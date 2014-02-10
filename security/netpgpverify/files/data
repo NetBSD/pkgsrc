@@ -1,5 +1,3 @@
-# $NetBSD: data,v 1.1 2014/02/04 02:11:18 agc Exp $
-
 PROG=netpgpverify
 
 SRCS= b64.c bignum.c digest.c
