@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.655 2014/02/11 09:12:35 obache Exp $
+$NetBSD: CHANGES-2014,v 1.656 2014/02/11 09:12:54 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1042,3 +1042,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Dist-Zilla to 5.013 [wen 2014-02-10]
 	Updated lang/python33 to 3.3.3nb1 [obache 2014-02-11]
 	Updated lang/sun-jre7 to 7.0.51 [obache 2014-02-11]
+	Updated lang/sun-jdk7 to 7.0.51 [obache 2014-02-11]
