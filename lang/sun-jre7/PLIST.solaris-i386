@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.solaris-i386,v 1.4 2014/01/07 18:25:17 jperkin Exp $
+@comment $NetBSD: PLIST.solaris-i386,v 1.5 2014/02/11 09:12:12 obache Exp $
 bin/sun7-java
 bin/sun7-javaws
 bin/sun7-keytool
@@ -276,7 +276,6 @@ java/sun-7/lib/zi/Africa/Freetown
 java/sun-7/lib/zi/Africa/Gaborone
 java/sun-7/lib/zi/Africa/Harare
 java/sun-7/lib/zi/Africa/Johannesburg
-java/sun-7/lib/zi/Africa/Juba
 java/sun-7/lib/zi/Africa/Kampala
 java/sun-7/lib/zi/Africa/Khartoum
 java/sun-7/lib/zi/Africa/Kigali
@@ -305,7 +304,6 @@ java/sun-7/lib/zi/Africa/Tunis
 java/sun-7/lib/zi/Africa/Windhoek
 java/sun-7/lib/zi/America/Adak
 java/sun-7/lib/zi/America/Anchorage
-java/sun-7/lib/zi/America/Anguilla
 java/sun-7/lib/zi/America/Antigua
 java/sun-7/lib/zi/America/Araguaina
 java/sun-7/lib/zi/America/Argentina/Buenos_Aires
@@ -320,7 +318,6 @@ java/sun-7/lib/zi/America/Argentina/San_Juan
 java/sun-7/lib/zi/America/Argentina/San_Luis
 java/sun-7/lib/zi/America/Argentina/Tucuman
 java/sun-7/lib/zi/America/Argentina/Ushuaia
-java/sun-7/lib/zi/America/Aruba
 java/sun-7/lib/zi/America/Asuncion
 java/sun-7/lib/zi/America/Atikokan
 java/sun-7/lib/zi/America/Bahia
@@ -349,7 +346,6 @@ java/sun-7/lib/zi/America/Dawson
 java/sun-7/lib/zi/America/Dawson_Creek
 java/sun-7/lib/zi/America/Denver
 java/sun-7/lib/zi/America/Detroit
-java/sun-7/lib/zi/America/Dominica
 java/sun-7/lib/zi/America/Edmonton
 java/sun-7/lib/zi/America/Eirunepe
 java/sun-7/lib/zi/America/El_Salvador
@@ -358,8 +354,6 @@ java/sun-7/lib/zi/America/Glace_Bay
 java/sun-7/lib/zi/America/Godthab
 java/sun-7/lib/zi/America/Goose_Bay
 java/sun-7/lib/zi/America/Grand_Turk
-java/sun-7/lib/zi/America/Grenada
-java/sun-7/lib/zi/America/Guadeloupe
 java/sun-7/lib/zi/America/Guatemala
 java/sun-7/lib/zi/America/Guayaquil
 java/sun-7/lib/zi/America/Guyana
@@ -398,7 +392,6 @@ java/sun-7/lib/zi/America/Moncton
 java/sun-7/lib/zi/America/Monterrey
 java/sun-7/lib/zi/America/Montevideo
 java/sun-7/lib/zi/America/Montreal
-java/sun-7/lib/zi/America/Montserrat
 java/sun-7/lib/zi/America/Nassau
 java/sun-7/lib/zi/America/New_York
 java/sun-7/lib/zi/America/Nipigon
@@ -430,17 +423,12 @@ java/sun-7/lib/zi/America/Sao_Paulo
 java/sun-7/lib/zi/America/Scoresbysund
 java/sun-7/lib/zi/America/Sitka
 java/sun-7/lib/zi/America/St_Johns
-java/sun-7/lib/zi/America/St_Kitts
-java/sun-7/lib/zi/America/St_Lucia
-java/sun-7/lib/zi/America/St_Thomas
-java/sun-7/lib/zi/America/St_Vincent
 java/sun-7/lib/zi/America/Swift_Current
 java/sun-7/lib/zi/America/Tegucigalpa
 java/sun-7/lib/zi/America/Thule
 java/sun-7/lib/zi/America/Thunder_Bay
 java/sun-7/lib/zi/America/Tijuana
 java/sun-7/lib/zi/America/Toronto
-java/sun-7/lib/zi/America/Tortola
 java/sun-7/lib/zi/America/Vancouver
 java/sun-7/lib/zi/America/Whitehorse
 java/sun-7/lib/zi/America/Winnipeg
@@ -451,7 +439,6 @@ java/sun-7/lib/zi/Antarctica/Davis
 java/sun-7/lib/zi/Antarctica/DumontDUrville
 java/sun-7/lib/zi/Antarctica/Macquarie
 java/sun-7/lib/zi/Antarctica/Mawson
-java/sun-7/lib/zi/Antarctica/McMurdo
 java/sun-7/lib/zi/Antarctica/Palmer
 java/sun-7/lib/zi/Antarctica/Rothera
 java/sun-7/lib/zi/Antarctica/Syowa
@@ -630,7 +617,6 @@ java/sun-7/lib/zi/Europe/Stockholm
 java/sun-7/lib/zi/Europe/Tallinn
 java/sun-7/lib/zi/Europe/Tirane
 java/sun-7/lib/zi/Europe/Uzhgorod
-java/sun-7/lib/zi/Europe/Vaduz
 java/sun-7/lib/zi/Europe/Vienna
 java/sun-7/lib/zi/Europe/Vilnius
 java/sun-7/lib/zi/Europe/Volgograd
@@ -669,7 +655,6 @@ java/sun-7/lib/zi/Pacific/Gambier
 java/sun-7/lib/zi/Pacific/Guadalcanal
 java/sun-7/lib/zi/Pacific/Guam
 java/sun-7/lib/zi/Pacific/Honolulu
-java/sun-7/lib/zi/Pacific/Johnston
 java/sun-7/lib/zi/Pacific/Kiritimati
 java/sun-7/lib/zi/Pacific/Kosrae
 java/sun-7/lib/zi/Pacific/Kwajalein
