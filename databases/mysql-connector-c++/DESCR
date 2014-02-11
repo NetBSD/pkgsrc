@@ -1,0 +1,10 @@
+MySQL Connector/C++ is a MySQL database connector for C++. It lets
+you develop C++ applications that connect to the MySQL Server.
+
+MySQL Connector/C++ offers the following benefits for C++ users
+compared to the MySQL C API (MySQL client library):
+
+* Convenience of pure C++; no C function calls required
+* Supports JDBC 4.0, an industry standard API
+* Supports the object-oriented programming paradigm
+* Reduces development time
