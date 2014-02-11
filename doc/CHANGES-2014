@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.654 2014/02/11 05:53:39 obache Exp $
+$NetBSD: CHANGES-2014,v 1.655 2014/02/11 09:12:35 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1041,3 +1041,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/p5-Term-Encoding version 0.02 [wen 2014-02-10]
 	Updated devel/p5-Dist-Zilla to 5.013 [wen 2014-02-10]
 	Updated lang/python33 to 3.3.3nb1 [obache 2014-02-11]
+	Updated lang/sun-jre7 to 7.0.51 [obache 2014-02-11]
