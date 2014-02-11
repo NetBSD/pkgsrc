@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/04/06 12:41:23 obache Exp $
+# $NetBSD: Makefile,v 1.22 2014/02/11 07:21:28 dholland Exp $
 #
 
 DISTNAME=	libffi-3.0.13
@@ -43,6 +43,12 @@ LIBS+=	-lm68k
 # fix http://gnats.netbsd.org/42865
 .if !empty(MACHINE_PLATFORM:MSunOS-*-i386) && !empty(CC_VERSION:Mgcc-[23]*)
 CPPFLAGS += -D__PIC__
+.endif
+
+# irix fixes from PR 48587
+.if !empty(OPSYS:MIRIX)
+USE_TOOLS+=     bash gmake
+MAKE_FLAGS+=SHELL=${TOOLS_DIR}/bin/bash
 .endif
 
 .include "../../mk/bsd.pkg.mk"
