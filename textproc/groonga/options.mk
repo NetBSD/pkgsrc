@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2014/01/23 05:59:14 obache Exp $
+# $NetBSD: options.mk,v 1.8 2014/02/11 16:21:01 taca Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.groonga
@@ -27,13 +27,12 @@ TEST_ENV+=		RUBYOPT="-Ku"
 .include "../../lang/ruby/buildlink3.mk"
 BUILDLINK_API_DEPENDS.cutter+=		cutter>=1.1.6
 .include "../../devel/cutter/buildlink3.mk"
-# XXX: no way to add build dependency on json
-#RUBY_JSON_REQD=		1.8.0
-#.include "../../lang/ruby/json.mk"
+RUBY_JSON_REQD=		1.8.0:build
 BUILD_DEPENDS+=		${RUBY_PKGPREFIX}-bundler-[0-9]*:../../misc/ruby-bundler
 BUILD_DEPENDS+=		${RUBY_PKGPREFIX}-msgpack>=0.5.6:../../devel/ruby-msgpack
 BUILD_DEPENDS+=		${RUBY_PKGPREFIX}-test-unit>=2.5.5:../../devel/ruby-test-unit
 BUILD_DEPENDS+=		${RUBY_PKGPREFIX}-test-unit-notify>=1.0.1:../../devel/ruby-test-unit-notify
+.include "../../lang/ruby/json.mk"
 .else
 CONFIGURE_ARGS+=	--without-cutter
 .endif
