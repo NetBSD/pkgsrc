@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.2 2013/12/26 23:30:41 pettai Exp $
+$NetBSD: patch-af,v 1.2.2.1 2014/02/11 20:50:43 tron Exp $
 
-Fix for CVE-2013-6890
-(See http://seclists.org/oss-sec/2013/q4/535)
+Fix for CVE-2013-6890 (See http://seclists.org/oss-sec/2013/q4/535)
+Added DSA-2826-2 fix for regression (See http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=734329)
 
 --- DenyHosts/regex.py.orig	2013-12-26 22:46:33.000000000 +0000
 +++ DenyHosts/regex.py
@@ -14,7 +14,7 @@ Fix for CVE-2013-6890
  #SSHD_FORMAT_REGEX = re.compile(r""".* sshd.*: (?P<message>.*)""")
  
 -FAILED_ENTRY_REGEX = re.compile(r"""Failed (?P<method>.*) for (?P<invalid>invalid user |illegal user )?(?P<user>.*?) .*from (::ffff:)?(?P<host>\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})""")
-+FAILED_ENTRY_REGEX = re.compile(r"""Failed (?P<method>\S*) for (?P<invalid>invalid user |illegal user )?(?P<user>.*) from (::ffff:)?(?P<host>\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})$""")
++FAILED_ENTRY_REGEX = re.compile(r"""Failed (?P<method>\S*) for (?P<invalid>invalid user |illegal user )?(?P<user>.*) from (::ffff:)?(?P<host>\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})( port \d+)?( ssh2)?$""")
  
 -FAILED_ENTRY_REGEX2 = re.compile(r"""(?P<invalid>(Illegal|Invalid)) user (?P<user>.*?) .*from (::ffff:)?(?P<host>\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})""")
 +FAILED_ENTRY_REGEX2 = re.compile(r"""(?P<invalid>(Illegal|Invalid)) user (?P<user>.*) from (::ffff:)?(?P<host>\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})$""")
