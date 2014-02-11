@@ -1,19 +1,19 @@
-$NetBSD: distinfo,v 1.30 2013/11/03 23:51:51 jklos Exp $
+$NetBSD: distinfo,v 1.31 2014/02/11 07:21:28 dholland Exp $
 
 SHA1 (libffi-3.0.13.tar.gz) = f5230890dc0be42fb5c58fbf793da253155de106
 RMD160 (libffi-3.0.13.tar.gz) = 03f0627c0fcc800d38636258a2fab2d6bb8b6625
 Size (libffi-3.0.13.tar.gz) = 845747 bytes
 SHA1 (patch-Makefile.am) = 01109a0d5708835162a2d007a26decac5bb0bbac
-SHA1 (patch-aa) = 0a5f894f989c51951e3b4ea6f45631466e183181
+SHA1 (patch-aa) = 7b88ce9a55e6c0bc6e588909e1c14e4d7c79d60a
 SHA1 (patch-ac) = f3c6324f4334d23e684b4eca25173a13be5d37eb
 SHA1 (patch-ad) = 8901a00abe25422e3e35f321a5fb89311185fc0b
-SHA1 (patch-ae) = aa53d44c740806d54776530eeb7f7ff245d2022d
+SHA1 (patch-ae) = 3d8cd3bcd834876f6e60ae519dca8c0b0ba0d4d1
 SHA1 (patch-af) = 2c7ca79ef980a2561333bf79a18df1ecb0bbb9f7
 SHA1 (patch-ag) = 6333317170f6e92f89db966315276dcd8e3484f2
 SHA1 (patch-ah) = e9580069ede90cd616da7bc230b28acbf5d204a6
 SHA1 (patch-ai) = f85a6cb64d4a9d7c3e56b47b7092fce10a744b5b
 SHA1 (patch-aj) = d130b2b20b94ca26c70dcc46614e36c6d0ac9153
-SHA1 (patch-configure.ac) = 7fc7490a5b62b00afff31824c1d86cf973d549be
+SHA1 (patch-configure.ac) = 080d79b5ada93c5073df7dd09c5131fcfe72ce86
 SHA1 (patch-fficonfig.h.in) = fd85fa767bc057c843ff71cc61bedfcff84def43
 SHA1 (patch-src_m88k_elfbsd.S) = fae3e425dcff3e924ef195eab165f9bbc6ec4077
 SHA1 (patch-src_m88k_ffi.c) = e4b7382c3d6e253b8c1c6054150c530c21d018de
