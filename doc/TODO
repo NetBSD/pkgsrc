@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12993 2014/02/10 11:14:05 obache Exp $
+$NetBSD: TODO,v 1.12994 2014/02/11 15:54:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -405,6 +405,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bbweather-0.6.3
 	o benchfft-3.1
 	o bioperl-1.5.0
+	o bluefish-2.2.5
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o boehm-gc-7.4.0 [at https://github.com/ivmai/bdwgc/releases/tag/gc7_4_0]
@@ -442,6 +443,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o classpath-0.98
 	o cln-1.33
 	o clutter-gst-2.0.10 [require gstreamer1>=1.2.0]
+	o coccigrep-2.13
 	o colorize-0.3.4
 	o colortail-0.3.3
 	o connect-1.96
@@ -511,7 +513,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o enlightenment-0.18
 	o eog-plugins-3.6.1
 	o epiphany-extensions-3.2.0
-	o eric5-5.4.0
+	o eric5-5.4.1
 	o erlang-16B03
 	o esh-0.8.5
 	o espeak-1.46.02 [wip]
@@ -564,7 +566,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gammu-1.33.0
 	o gap-4r4p9
 	o gated-3.6
-	o gaupol-0.24.3
+	o gaupol-0.25
 	o gbrainy-2.22
 	o gcin-1.5.5
 	o gcombust-0.1.55
@@ -731,7 +733,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lftp-4.4.10
 	o lgeneral-1.2.3
 	o libAppleWM-1.4.1
-	o libao-sun-1.2.0
 	o libarchive-3.1.2
 	o libcaca-0.99beta18
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
@@ -749,6 +750,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
 	o libjit-1.0.2
 	o libmcs-0.7.2
+	o libmemcached-1.0.18
 	o libnasl-2.3.1
 	o liboobs-2.32.0 [GNOME 2.32]
 	o libpcap-1.5.1
@@ -889,7 +891,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o php-sugarcrm-6.5.16
 	o php-tiki6-6.10
 	o php-tt-rss-1.11
-	o phpmyadmin-4.1.6
+	o phpmyadmin-4.1.7
 	o picp-0.6.8
 	o pim6dd-20040819a
 	o pim6sd-20040824a
@@ -1158,7 +1160,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o webkit-gtk-2.2.4
 	o webmin-1.670
 	o websvn-2.3.2
-	o weechat-0.4.2
+	o weechat-0.4.3
 	o windowlab-1.40
 	o wine-devel-1.7.12
 	o wmi-11
