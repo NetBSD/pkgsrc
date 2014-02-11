@@ -1,6 +1,6 @@
-$NetBSD: patch-configure.ac,v 1.1 2013/11/03 23:51:51 jklos Exp $
+$NetBSD: patch-configure.ac,v 1.2 2014/02/11 07:21:28 dholland Exp $
 
---- configure.ac.orig	2013-03-17 22:36:15.000000000 +0000
+--- configure.ac.orig	2014-02-11 07:13:01.000000000 +0000
 +++ configure.ac
 @@ -191,6 +191,10 @@ case "$host" in
  	TARGET=M68K; TARGETDIR=m68k
@@ -13,6 +13,15 @@ $NetBSD: patch-configure.ac,v 1.1 2013/11/03 23:51:51 jklos Exp $
    microblaze*-*-*)
  	TARGET=MICROBLAZE; TARGETDIR=microblaze
  	;;
+@@ -203,7 +207,7 @@ case "$host" in
+ 	TARGET=METAG; TARGETDIR=metag
+ 	;;
+ 
+-  mips-sgi-irix5.* | mips-sgi-irix6.* | mips*-*-rtems*)
++  mips*-sgi-irix5.* | mips*-sgi-irix6.* | mips*-*-rtems*)
+ 	TARGET=MIPS; TARGETDIR=mips
+ 	;;
+   mips*-*-linux* | mips*-*-openbsd*)
 @@ -256,6 +260,10 @@ case "$host" in
          TARGET=TILE; TARGETDIR=tile
          ;;

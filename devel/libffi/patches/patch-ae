@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.5 2012/12/18 12:33:07 ryoon Exp $
+$NetBSD: patch-ae,v 1.6 2014/02/11 07:21:28 dholland Exp $
 
 Make a minimal adjustment to support the various NetBSD mips ports.
 
@@ -18,7 +18,7 @@ Make a minimal adjustment to support the various NetBSD mips ports.
  #define _MIPS_SIM_NABI32	2
  #define _MIPS_SIM_ABI64		3
 -#elif !defined(__OpenBSD__)
-+#elif defined(irix)
++#elif defined(__sgi)
  # include <sgidefs.h>
 +#else
 +# include <sys/cdefs.h>
