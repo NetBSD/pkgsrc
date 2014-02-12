@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2014/02/12 00:57:25 prlw1 Exp $
+# $NetBSD: Makefile.common,v 1.2 2014/02/12 18:06:05 drochner Exp $
 # used by devel/py-gobject3/Makefile
 # used by devel/py-gobject3-common/Makefile
 
@@ -30,13 +30,6 @@ PY_PATCHPLIST=		yes
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 CONFLICTS+=		${PYPKGPREFIX}-gtk2<2.8.4
 CONFLICTS+=		${PYPKGPREFIX}-gobject<2.28.6nb4
-
-# https://bugzilla.gnome.org/show_bug.cgi?id=685094
-# https://bugzilla.gnome.org/show_bug.cgi?id=707196
-PYTHON_VERSIONED_DEPENDENCIES=  cairo:link
-.include "../../lang/python/versioned_dependencies.mk"
-.include "../../graphics/cairo-gobject/buildlink3.mk"
-TEST_TARGET=    check
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
