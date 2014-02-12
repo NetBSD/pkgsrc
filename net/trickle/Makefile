@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2013/02/06 23:23:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.25 2014/02/12 23:18:26 tron Exp $
 #
 
 DISTNAME=	trickle-1.06
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	net
 MASTER_SITES=	http://monkey.org/~marius/trickle/
 

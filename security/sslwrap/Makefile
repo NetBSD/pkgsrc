@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2013/12/23 11:57:05 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2014/02/12 23:18:37 tron Exp $
 
 DISTNAME=	${PKGNAME_NOREV:S/-//}
 PKGNAME=	sslwrap-206
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	security net
 MASTER_SITES=	http://www.rickk.com/sslwrap/
 
