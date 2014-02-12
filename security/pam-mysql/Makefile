@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2013/03/02 20:33:33 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2014/02/12 23:18:35 tron Exp $
 
 DISTNAME=	pam_mysql-0.7RC1
 PKGNAME=	${DISTNAME:S/_/-/:S/RC/rc/}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pam-mysql/}
 

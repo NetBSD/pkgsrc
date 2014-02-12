@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2013/02/06 23:24:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.19 2014/02/12 23:18:45 tron Exp $
 #
 
 DISTNAME=	lhs-0.1
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	www
 MASTER_SITES=	ftp://dev.null.pl/pub/
 
