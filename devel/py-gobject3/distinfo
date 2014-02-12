@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.8 2013/12/09 23:12:31 prlw1 Exp $
+$NetBSD: distinfo,v 1.9 2014/02/12 00:57:25 prlw1 Exp $
 
 SHA1 (pygobject-3.10.2.tar.xz) = 693cc1cb692a8f21ff27d28eaa780f5e67cafb1a
 RMD160 (pygobject-3.10.2.tar.xz) = 96b8ecc9862750135ad4ea1278a5b1ce78e73c76
 Size (pygobject-3.10.2.tar.xz) = 672092 bytes
+SHA1 (patch-Makefile.in) = 7c365f074b6f4a079cb7ca032c6c7db26116d538
+SHA1 (patch-configure) = f8f237b9c6ce942eb1c169a40489098b4bb6ecdf
+SHA1 (patch-gi___gobject_Makefile.in) = fb7dca31865e970044dfb15db99f83e7a2ddb7b6

@@ -1,0 +1,34 @@
+$NetBSD: patch-gi___gobject_Makefile.in,v 1.1 2014/02/12 00:57:25 prlw1 Exp $
+
+build: Add --without-common configure option for package maintainers
+https://bugzilla.gnome.org/show_bug.cgi?id=721646
+commit 15fdd827ce4bff847fb35c817c6ea2d3650eec00
+
+--- gi/_gobject/Makefile.in.orig	2013-12-12 00:22:35.000000000 +0000
++++ gi/_gobject/Makefile.in
+@@ -84,7 +84,7 @@ host_triplet = @host@
+ subdir = gi/_gobject
+ DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
+ 	$(top_srcdir)/depcomp $(pygobject_PYTHON) \
+-	$(top_srcdir)/py-compile $(pkginclude_HEADERS)
++	$(top_srcdir)/py-compile $(am__pkginclude_HEADERS_DIST)
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ am__aclocal_m4_deps = $(top_srcdir)/m4/as-ac-expand.m4 \
+ 	$(top_srcdir)/m4/jhflags.m4 $(top_srcdir)/m4/libtool.m4 \
+@@ -190,6 +190,7 @@ am__py_compile = PYTHON=$(PYTHON) $(SHEL
+ am__pep3147_tweak = \
+   sed -e 's|\.py$$||' -e 's|[^/]*$$|__pycache__/&.*.py|'
+ py_compile = $(top_srcdir)/py-compile
++am__pkginclude_HEADERS_DIST = pygobject.h
+ HEADERS = $(pkginclude_HEADERS)
+ am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
+ # Read a list of newline-separated strings from the standard input,
+@@ -379,7 +380,7 @@ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ AUTOMAKE_OPTIONS = 1.7
+ PLATFORM_VERSION = 3.0
+-pkginclude_HEADERS = pygobject.h
++@WITH_COMMON_TRUE@pkginclude_HEADERS = pygobject.h
+ extension_cppflags = \
+ 	$(PYTHON_INCLUDES) \
+ 	-DPY_SSIZE_T_CLEAN
