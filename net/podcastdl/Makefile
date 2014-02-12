@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2013/02/06 23:23:22 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2014/02/12 23:18:25 tron Exp $
 #
 
 DISTNAME=	podcastdl-0.3.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	http://files.bebik.net/podcastdl/
 EXTRACT_SUFX=	.tgz

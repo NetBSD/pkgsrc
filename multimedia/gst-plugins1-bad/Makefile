@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2013/05/03 15:58:36 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.8 2014/02/12 23:18:17 tron Exp $
+
+PKGREVISION=	1
 
 USE_LANGUAGES=	c c++
 
