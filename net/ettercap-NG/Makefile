@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2013/02/06 23:23:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2014/02/12 23:18:20 tron Exp $
 
 DISTNAME=	ettercap-NG-0.7.3
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ettercap/}
 

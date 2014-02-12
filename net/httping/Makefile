@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2013/06/26 12:39:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2014/02/12 23:18:20 tron Exp $
 
 DISTNAME=	httping-2.3.3
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.vanheusden.com/httping/
 EXTRACT_SUFX=	.tgz

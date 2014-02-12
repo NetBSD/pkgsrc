@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2013/10/09 17:39:04 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2014/02/12 23:17:33 tron Exp $
 #
 
 GNOME_VFS_NAME=		cdda
-PKGREVISION=		19
+PKGREVISION=		20
 CATEGORIES=		audio
 
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.cdparanoia}/include/cdparanoia

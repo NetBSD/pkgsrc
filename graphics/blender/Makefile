@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.102 2014/02/01 03:57:52 markd Exp $
+# $NetBSD: Makefile,v 1.103 2014/02/12 23:17:59 tron Exp $
 
 DISTNAME=	blender-2.69
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.blender.org/source/
 

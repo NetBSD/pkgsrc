@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2014/01/02 15:12:16 prlw1 Exp $
+# $NetBSD: Makefile,v 1.43 2014/02/12 23:18:25 tron Exp $
 
 DISTNAME=		rdesktop-1.8.1
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rdesktop/}
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2013/02/06 23:21:02 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2014/02/12 23:17:48 tron Exp $
 
 BUILDLINK_TREE+=	libthrift
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libthrift
 LIBTHRIFT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libthrift+=	libthrift>=0.2.0
-BUILDLINK_ABI_DEPENDS.libthrift+=	libthrift>=0.7.0nb11
+BUILDLINK_ABI_DEPENDS.libthrift+=	libthrift>=0.7.0nb20
 BUILDLINK_PKGSRCDIR.libthrift?=		../../devel/libthrift
 
 .include "../../security/openssl/buildlink3.mk"

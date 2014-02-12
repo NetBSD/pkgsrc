@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2013/10/03 11:12:43 obache Exp $
+# $NetBSD: Makefile,v 1.6 2014/02/12 23:18:07 tron Exp $
 
 DISTNAME=		fdm-1.7
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fdm/}
 

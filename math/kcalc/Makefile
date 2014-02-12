@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2014/02/01 02:20:49 markd Exp $
+# $NetBSD: Makefile,v 1.21 2014/02/12 23:18:11 tron Exp $
 
 DISTNAME=	kcalc-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	math
 COMMENT=	KDE scientific calculator
 

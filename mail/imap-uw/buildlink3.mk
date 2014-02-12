@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2013/02/06 23:21:02 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2014/02/12 23:18:08 tron Exp $
 
 BUILDLINK_TREE+=	imap-uw
 
@@ -8,7 +8,7 @@ IMAP_UW_BUILDLINK3_MK:=
 .include "../../mk/bsd.fast.prefs.mk"
 
 BUILDLINK_API_DEPENDS.imap-uw+=	imap-uw>=2007dnb1
-BUILDLINK_ABI_DEPENDS.imap-uw+=	imap-uw>=2007fnb1
+BUILDLINK_ABI_DEPENDS.imap-uw+=	imap-uw>=2007fnb2
 BUILDLINK_PKGSRCDIR.imap-uw?=	../../mail/imap-uw
 . if ${OPSYS} == "Darwin"
 BUILDLINK_LDFLAGS.imap-uw+=	-flat_namespace

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2013/10/15 16:45:41 roy Exp $
+# $NetBSD: Makefile,v 1.16 2014/02/12 23:17:36 tron Exp $
 #
 
 DISTNAME=		gtmess-0.91
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		chat
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gtmess/}
 

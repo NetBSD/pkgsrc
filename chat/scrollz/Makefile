@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2013/04/22 21:18:45 zafer Exp $
+# $NetBSD: Makefile,v 1.18 2014/02/12 23:17:37 tron Exp $
 #
 
 DISTNAME=	ScrollZ-1.9.5
 PKGNAME=	scrollz-1.9.5
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	ftp://ftp.scrollz.com/pub/ScrollZ/source/
 

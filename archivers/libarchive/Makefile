@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2013/06/13 21:46:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.39 2014/02/12 23:17:32 tron Exp $
 #
 
 DISTNAME=	libarchive-2.8.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	archivers
 MASTER_SITES=	# empty
 DISTFILES=	# empty
