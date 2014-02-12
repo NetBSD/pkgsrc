@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2013/10/10 14:42:06 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.12 2014/02/12 01:49:10 prlw1 Exp $
 
 .include "../../editors/gedit3/Makefile.common"
 
 COMMENT=	Lightweight GNOME UTF-8 text editor
-PKGREVISION=	6
 
 CONFIGURE_ARGS+=	--disable-spell
 
