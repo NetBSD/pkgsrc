@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2013/10/10 14:41:56 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2014/02/12 01:23:33 prlw1 Exp $
 
 BUILDLINK_TREE+=	gnome-desktop3
 
@@ -11,7 +11,6 @@ BUILDLINK_PKGSRCDIR.gnome-desktop3?=	../../x11/gnome-desktop3
 
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
-.include "../../x11/startup-notification/buildlink3.mk"
 .endif # GNOME_DESKTOP_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-gnome-desktop3
