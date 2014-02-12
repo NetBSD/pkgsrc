@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2014/01/25 10:30:13 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2014/02/12 12:53:56 obache Exp $
 
 DISTNAME=	scipy-0.12.1
 PKGNAME=	${PYPKGPREFIX}-scipy-0.12.1
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scipy/}
 
@@ -10,7 +11,6 @@ HOMEPAGE=	http://www.scipy.org/
 COMMENT=	Scientific Algorithms Library for Python
 LICENSE=	modified-bsd
 
-PYDISTUTILSPKG=	yes
 PLIST_SUBST+=   PYPKGPREFIX=${PYPKGPREFIX}
 USE_LANGUAGES+=	c c++ fortran
 MAKE_ENV+=	ATLAS=None
@@ -121,7 +121,7 @@ REPLACE_PYTHON+=	scipy/weave/setup.py
 REPLACE_PYTHON+=	scipy/weave/setupscons.py
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
