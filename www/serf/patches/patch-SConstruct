@@ -1,11 +1,19 @@
-$NetBSD: patch-SConstruct,v 1.4 2013/10/14 06:30:47 adam Exp $
+$NetBSD: patch-SConstruct,v 1.5 2014/02/12 14:35:11 jperkin Exp $
 
 Hack: Use OPENSSL variable as final shared library path; fixes lib id on Darwin.
 Don't append -O2 compiler flag.
 
 --- SConstruct.orig	2013-10-04 15:11:04.000000000 +0000
 +++ SConstruct
-@@ -146,7 +146,7 @@ if sys.platform == 'win32':
+@@ -106,6 +106,7 @@ opts.AddVariables(
+   RawListVariable('CC', "Command name or path of the C compiler", None),
+   RawListVariable('CFLAGS', "Extra flags for the C compiler (space-separated)",
+                   None),
++  RawListVariable('LDFLAGS', "Extra linker flags from pkgsrc", None),
+   RawListVariable('LIBS', "Extra libraries passed to the linker, "
+                   "e.g. \"-l<library1> -l<library2>\" (space separated)", None),
+   RawListVariable('LINKFLAGS', "Extra flags for the linker (space-separated)",
+@@ -146,7 +147,7 @@ if sys.platform == 'win32':
                   True),
      )
  
@@ -14,7 +22,7 @@ Don't append -O2 compiler flag.
                    tools=('default', 'textfile',),
                    CPPPATH=['.', ],
                    )
-@@ -240,7 +240,6 @@ if sys.platform != 'win32':
+@@ -240,7 +241,6 @@ if sys.platform != 'win32':
      env.Append(CCFLAGS='-g')
      env.Append(CPPDEFINES=['DEBUG', '_DEBUG'])
    else:
@@ -22,7 +30,19 @@ Don't append -O2 compiler flag.
      env.Append(CPPDEFINES='NDEBUG')
  
    ### works for Mac OS. probably needs to change
-@@ -410,7 +409,7 @@ if sys.platform == 'darwin':
+@@ -372,6 +372,11 @@ if sys.platform == 'win32':
+ for d in env['LIBPATH']:
+   env.Append(RPATH=':'+d)
+ 
++for l in env['LDFLAGS']:
++  if l.startswith('-l'):
++    env.Append(LINKFLAGS=" " + l)
++    env.Append(GSSAPI_LIBS=" " + l)
++
+ # Set up the construction of serf-*.pc
+ pkgconfig = env.Textfile('serf-%d.pc' % (MAJOR,),
+                          env.File('build/serf.pc.in'),
+@@ -410,7 +415,7 @@ if sys.platform == 'darwin':
    # make applications depend on the exact major.minor.patch version of serf.
  
    install_shared_path = install_shared[0].abspath
