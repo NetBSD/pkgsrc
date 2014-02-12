@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2013/02/06 23:23:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2014/02/12 23:18:20 tron Exp $
 #
 
 DISTNAME=		ftplibpp-1.0.1
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		net devel
 MASTER_SITES=		http://download.berlios.de/kasablanca/
 

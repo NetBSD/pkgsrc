@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2013/02/06 23:21:35 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2014/02/12 23:17:34 tron Exp $
 
 BUILDLINK_TREE+=	libtunepimp
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libtunepimp
 LIBTUNEPIMP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libtunepimp+=	libtunepimp>=0.5.0
-BUILDLINK_ABI_DEPENDS.libtunepimp+=	libtunepimp>=0.5.3nb11
+BUILDLINK_ABI_DEPENDS.libtunepimp+=	libtunepimp>=0.5.3nb14
 BUILDLINK_PKGSRCDIR.libtunepimp?=	../../audio/libtunepimp
 
 .include "../../audio/musicbrainz/buildlink3.mk"
