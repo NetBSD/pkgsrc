@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2013/06/04 22:16:58 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2014/02/12 23:18:29 tron Exp $
 
 BUILDLINK_TREE+=	ghostscript-agpl
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ghostscript-agpl
 GHOSTSCRIPT_AGPL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ghostscript-agpl+=	ghostscript-agpl>=8.63nb1
-BUILDLINK_ABI_DEPENDS.ghostscript-agpl+=	ghostscript-agpl>=9.07nb4
+BUILDLINK_ABI_DEPENDS.ghostscript-agpl+=	ghostscript-agpl>=9.10nb1
 BUILDLINK_PKGSRCDIR.ghostscript-agpl?=		../../print/ghostscript-agpl
 
 .include "../../graphics/png/buildlink3.mk"

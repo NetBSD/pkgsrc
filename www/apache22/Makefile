@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.97 2014/01/21 23:28:46 tron Exp $
+# $NetBSD: Makefile,v 1.98 2014/02/12 23:18:43 tron Exp $
 
 DISTNAME=	httpd-2.2.25
 PKGNAME=	${DISTNAME:S/httpd/apache/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=httpd/} \
 		http://archive.apache.org/dist/httpd/ \

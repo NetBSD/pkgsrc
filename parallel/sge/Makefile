@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2014/01/14 10:21:39 markd Exp $
+# $NetBSD: Makefile,v 1.59 2014/02/12 23:18:28 tron Exp $
 #
 
 DISTNAME=		sge-8.1.6
+PKGREVISION=		1
 CATEGORIES=		parallel sysutils
 MASTER_SITES=		http://arc.liv.ac.uk/downloads/SGE/releases/8.1.6/
 

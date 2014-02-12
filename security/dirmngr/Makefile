@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2014/01/01 11:52:31 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2014/02/12 23:18:31 tron Exp $
 
 DISTNAME=	dirmngr-1.1.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/dirmngr/
 EXTRACT_SUFX=	.tar.bz2

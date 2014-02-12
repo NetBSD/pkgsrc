@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2014/01/14 10:58:17 markd Exp $
+# $NetBSD: Makefile,v 1.33 2014/02/12 23:18:38 tron Exp $
 
 PKGNAME=	${DISTNAME:S/-/-qt-console-/}
+PKGREVISION=	1
 COMMENT=	Qt-based console for Bacula - The Network Backup Solution
 
 DISTINFO_FILE=		${.CURDIR}/../../sysutils/bacula/distinfo
