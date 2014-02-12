@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2013/09/10 15:32:32 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2014/02/12 23:17:44 tron Exp $
 
 BUILDLINK_TREE+=	postgresql93-client
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	postgresql93-client
 POSTGRESQL93_CLIENT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.postgresql93-client+=	postgresql93-client>=9.3.0
-BUILDLINK_ABI_DEPENDS.postgresql93-client+=	postgresql93-client>=9.3.0
+BUILDLINK_ABI_DEPENDS.postgresql93-client+=	postgresql93-client>=9.3.2nb1
 BUILDLINK_PKGSRCDIR.postgresql93-client?=	../../databases/postgresql93-client
 
 # This variable contains the libraries need to link most clients.

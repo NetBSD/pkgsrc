@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2013/02/06 23:21:36 jperkin Exp $
+# $NetBSD: Makefile,v 1.48 2014/02/12 23:18:24 tron Exp $
 
 DISTNAME=	openh323-v1_15_2-src
 PKGNAME=	openh323-1.15.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	http://www.voxgratia.org/releases/
 EXTRACT_SUFX=	-tar.gz

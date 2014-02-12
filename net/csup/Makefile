@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2013/02/06 23:23:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2014/02/12 23:18:19 tron Exp $
 #
 
 DISTNAME=	csup-snap-20100404
 PKGNAME=	${DISTNAME:S/-snap//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net devel
 MASTER_SITES=	http://distfiles.aydogan.net/net/ \
 				http://www.plhk.ru/static/csup/

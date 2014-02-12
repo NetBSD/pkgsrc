@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2014/02/01 02:20:47 markd Exp $
+# $NetBSD: Makefile,v 1.21 2014/02/12 23:18:01 tron Exp $
 
 DISTNAME=	kamera-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	graphics
 COMMENT=	KDE digital camera manager
 

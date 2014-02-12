@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2013/06/06 12:54:50 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2014/02/12 23:18:16 tron Exp $
 #
 
 DISTNAME=	zyGrib-6.0.1
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	misc
 MASTER_SITES=	http://www.zygrib.org/getfile.php?file=
 EXTRACT_SUFX=	.tgz

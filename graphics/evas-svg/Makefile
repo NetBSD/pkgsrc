@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2013/10/10 14:41:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2014/02/12 23:18:00 tron Exp $
 
 PKGNAME=	evas-svg-${EVAS_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 
 COMMENT=	Evas SVG image loader
 

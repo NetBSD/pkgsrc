@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2013/02/06 23:21:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.19 2014/02/12 23:17:35 tron Exp $
 
 DISTNAME=	postal-0.70
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	benchmarks
 MASTER_SITES=	http://www.coker.com.au/postal/
 EXTRACT_SUFX=	.tgz

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2014/01/12 10:46:15 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2014/02/12 23:18:22 tron Exp $
 
 DISTNAME=	V4.1.2
 PKGNAME=	libzrtpcpp${DISTNAME:S/V/-/1}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/wernerd/ZRTPCPP/archive/
 

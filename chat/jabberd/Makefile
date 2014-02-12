@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.37 2013/07/12 10:44:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.38 2014/02/12 23:17:36 tron Exp $
 #
 
 DISTNAME=		jabber-1.4.2
 PKGNAME=		jabberd-1.4.2
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		chat
 MASTER_SITES=		http://download.jabberd.org/jabberd14/
 

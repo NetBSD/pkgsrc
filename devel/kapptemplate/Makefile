@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2014/02/01 02:20:44 markd Exp $
+# $NetBSD: Makefile,v 1.4 2014/02/12 23:17:47 tron Exp $
 
 DISTNAME=	kapptemplate-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel
 COMMENT=	KDE Template Generator
 

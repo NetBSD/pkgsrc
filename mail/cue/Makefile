@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.66 2014/01/27 22:04:45 wiedi Exp $
+# $NetBSD: Makefile,v 1.67 2014/02/12 23:18:06 tron Exp $
 
 DISTNAME=	cue-snap-20100426
 PKGNAME=	${DISTNAME:S/snap-//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	ftp://sh.wide.ad.jp/WIDE/free-ware/cue/snap/
 

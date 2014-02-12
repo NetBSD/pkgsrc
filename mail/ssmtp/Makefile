@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2013/10/24 11:31:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.28 2014/02/12 23:18:10 tron Exp $
 #
 # TLS functionality needs testing. Please let me know the result,
 # and preferably info about your system.
@@ -8,6 +8,7 @@
 DISTNAME=	ssmtp_2.64.orig
 EXTRACT_SUFX=	.tar.bz2
 PKGNAME=	ssmtp-2.64
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/s/ssmtp/}
 

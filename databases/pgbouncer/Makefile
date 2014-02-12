@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2013/07/12 10:44:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2014/02/12 23:17:40 tron Exp $
 #
 
 DISTNAME=	pgbouncer-${VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases
 MASTER_SITES=	http://pgfoundry.org/frs/download.php/3085/
 EXTRACT_SUFX=	.tgz

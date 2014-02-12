@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2013/11/02 09:19:17 adam Exp $
+# $NetBSD: Makefile,v 1.49 2014/02/12 23:17:50 tron Exp $
 
 PKGNAME=	${RUBY_PKGPREFIX}-subversion-${SVNVER}
+PKGREVISION=	1
 COMMENT=	Ruby bindings for Subversion
 
 .include "../../devel/subversion/Makefile.common"

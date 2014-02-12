@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2014/01/25 10:30:03 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2014/02/12 23:17:50 tron Exp $
 
 PKGVER=			0.8.4
 DISTNAME=		compizconfig-python-${PKGVER}
 PKGNAME=		${PYPKGPREFIX}-compizconfig-${PKGVER}
-PKGREVISION=		23
+PKGREVISION=		24
 CATEGORIES=		devel gnome
 MASTER_SITES=		http://releases.compiz.org/${PKGVER}/
 

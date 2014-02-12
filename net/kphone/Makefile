@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2013/10/09 17:39:15 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2014/02/12 23:18:21 tron Exp $
 
 DISTNAME=		kphone-4.2
-PKGREVISION=		18
+PKGREVISION=		19
 CATEGORIES=		net comms
 MASTER_SITES=		http://www.wirlab.net/kphone/
 

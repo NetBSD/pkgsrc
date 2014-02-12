@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2014/02/01 02:20:47 markd Exp $
+# $NetBSD: Makefile,v 1.11 2014/02/12 23:17:56 tron Exp $
 
 DISTNAME=	kshisen-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	games
 COMMENT=	a solitaire-like game played using the standard set of Mahjong tiles
 

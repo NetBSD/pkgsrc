@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2013/11/03 12:46:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2014/02/12 23:17:46 tron Exp $
 
 DISTNAME=	fossil-src-20130911114349
 PKGNAME=	fossil-1.27
+PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	http://www.fossil-scm.org/download/
 

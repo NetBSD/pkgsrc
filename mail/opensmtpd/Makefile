@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2013/11/18 22:50:01 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/12 23:18:09 tron Exp $
 
 VERSION=	5.3.3p1
 DISTNAME=	opensmtpd-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	mail net
 MASTER_SITES=	http://www.opensmtpd.org/archives/
 

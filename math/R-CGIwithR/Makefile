@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2013/06/04 22:16:37 tron Exp $
+# $NetBSD: Makefile,v 1.14 2014/02/12 23:18:10 tron Exp $
 #
 
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_R_CRAN:=contrib/}
 
