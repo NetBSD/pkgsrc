@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2014/02/01 02:20:50 markd Exp $
+# $NetBSD: Makefile,v 1.21 2014/02/12 23:18:14 tron Exp $
 
 DISTNAME=	kiten-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	misc
 COMMENT=	KDE Japanese reference/learning tool
 

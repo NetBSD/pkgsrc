@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2013/02/06 23:21:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2014/02/12 23:17:37 tron Exp $
 #
 
 PKGVER=		8.1.18
 DISTNAME=	conserver-${PKGVER}
 PKGNAME=	conserver8-${PKGVER}
 #PKGREVISION=	1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	comms
 MASTER_SITES=	http://www.conserver.com/
 

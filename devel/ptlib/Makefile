@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2013/10/30 06:49:53 dholland Exp $
+# $NetBSD: Makefile,v 1.22 2014/02/12 23:17:50 tron Exp $
 
 DISTNAME=	ptlib-2.10.7
-PKGREVISION= 5
+PKGREVISION= 6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/ptlib/2.10/}
 EXTRACT_SUFX=	.tar.xz

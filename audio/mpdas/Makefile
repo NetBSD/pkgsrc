@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2013/02/06 23:21:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2014/02/12 23:17:34 tron Exp $
 #
 
 DISTNAME=			mpdas-0.3.0
-PKGREVISION=			6
+PKGREVISION=			7
 CATEGORIES=			audio
 MASTER_SITES=		http://50hz.ws/mpdas/
 EXTRACT_SUFX=		.tar.bz2
