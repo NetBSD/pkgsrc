@@ -1,4 +1,13 @@
-# $NetBSD: Makefile,v 1.24 2014/02/12 00:57:25 prlw1 Exp $
+# $NetBSD: Makefile,v 1.25 2014/02/12 18:06:05 drochner Exp $
+
+PYTHON_VERSIONS_INCOMPATIBLE=	26
+
+# https://bugzilla.gnome.org/show_bug.cgi?id=685094
+# https://bugzilla.gnome.org/show_bug.cgi?id=707196
+PYTHON_VERSIONED_DEPENDENCIES=	cairo:link
+.include "../../lang/python/versioned_dependencies.mk"
+.include "../../graphics/cairo-gobject/buildlink3.mk"
+TEST_TARGET=	check
 
 .include "Makefile.common"
 
