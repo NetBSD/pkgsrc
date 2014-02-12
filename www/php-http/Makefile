@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/09/13 08:28:18 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/12 23:18:46 tron Exp $
 
 MODNAME=		http
+PKGREVISION=		1
 PECL_VERSION=		1.7.6
 CATEGORIES+=		www
 

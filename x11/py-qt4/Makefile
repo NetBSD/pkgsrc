@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.72 2014/01/25 10:30:31 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2014/02/12 23:18:53 tron Exp $
 
 PKGNAME=	${PYPKGPREFIX}-qt4-${PYQT_VERSION}
 PYQT_VERSION=	4.10.2
+PKGREVISION=	1
 CATEGORIES=	x11 python
 #MASTER_SITES=	http://www.riverbankcomputing.com/static/Downloads/PyQt4/
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyqt/}

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.115 2013/12/11 09:45:14 spz Exp $
+# $NetBSD: Makefile,v 1.116 2014/02/12 23:18:28 tron Exp $
 
 DISTNAME=		inn-2.5.3
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		news
 MASTER_SITES=		ftp://ftp.isc.org/isc/inn/ \
 			ftp://ftp.fu-berlin.de/unix/news/inn/

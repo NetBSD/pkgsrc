@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2013/07/03 13:33:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/12 23:18:33 tron Exp $
 
 DISTNAME=	libgt-0.3.11-src
 PKGNAME=	libguardtime-0.3.11
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://download.guardtime.com/
 EXTRACT_SUFX=	.tgz

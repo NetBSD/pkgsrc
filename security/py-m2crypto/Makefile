@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2014/01/25 10:30:20 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2014/02/12 23:18:36 tron Exp $
 
 DISTNAME=		M2Crypto-0.21.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		security python
 MASTER_SITES=		http://pypi.python.org/packages/source/M/M2Crypto/
 

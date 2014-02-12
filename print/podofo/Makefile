@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2013/07/16 21:28:43 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2014/02/12 23:18:30 tron Exp $
 #
 
 DISTNAME=	podofo-0.9.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=podofo/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2013/12/27 16:42:46 gdt Exp $
+# $NetBSD: Makefile,v 1.8 2014/02/12 23:18:29 tron Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-agpl/}
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ghostscript/} \
 		http://downloads.ghostscript.com/public/

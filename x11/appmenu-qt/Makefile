@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2014/01/27 18:41:15 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/02/12 23:18:47 tron Exp $
 
 DISTNAME=	appmenu-qt-0.2.6
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://launchpad.net/appmenu-qt/trunk/0.2.6/+download/
 EXTRACT_SUFX=	.tar.bz2

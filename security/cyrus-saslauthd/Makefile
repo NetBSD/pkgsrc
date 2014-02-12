@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2013/09/30 06:16:34 obache Exp $
+# $NetBSD: Makefile,v 1.47 2014/02/12 23:18:31 tron Exp $
 
 PKGNAME=	${DISTNAME:S/sasl/saslauthd/}
-PKGREVISION=	2
+PKGREVISION=	3
 CONFLICTS+=	cyrus-sasl<2.1.15nb2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
