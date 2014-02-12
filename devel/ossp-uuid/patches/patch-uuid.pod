@@ -1,0 +1,16 @@
+$NetBSD: patch-uuid.pod,v 1.1 2014/02/12 11:43:53 fhajny Exp $
+
+Rename package files to avoid conflict with devel/libuuid (based
+on Debian patches).
+
+--- uuid.pod.orig	2008-05-14 11:53:35.000000000 +0000
++++ uuid.pod
+@@ -31,7 +31,7 @@
+ 
+ =head1 NAME
+ 
+-B<OSSP uuid> - B<Universally Unique Identifier>
++B<uuid> - B<Universally Unique Identifier>
+ 
+ =head1 VERSION
+ 
