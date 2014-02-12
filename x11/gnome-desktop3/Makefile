@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2013/10/10 14:41:56 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.16 2014/02/12 01:23:33 prlw1 Exp $
 
-DISTNAME=	gnome-desktop-3.6.2
+DISTNAME=	gnome-desktop-3.10.2
 PKGNAME=	${DISTNAME:S/desktop/desktop3/}
-PKGREVISION=	6
 CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-desktop/3.6/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-desktop/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	prlw1@cam.ac.uk
@@ -28,15 +26,15 @@ CONFIGURE_ARGS+=	--disable-gtk-doc
 
 BUILD_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
 
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.33.3
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.35.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gsettings-deskopt-schmemas+=	gsettings-deskopt-schmemas>=3.5.91
+BUILDLINK_API_DEPENDS.gsettings-desktop-schemas+=	gsettings-desktop-schemas>=3.5.91
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
+.include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
-.include "../../x11/startup-notification/buildlink3.mk"
 .include "../../x11/xkeyboard-config/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
