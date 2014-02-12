@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2013/10/10 14:41:56 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2014/02/12 18:11:27 drochner Exp $
 
 BUILDLINK_TREE+=	libpeas
 
@@ -11,6 +11,7 @@ BUILDLINK_PKGSRCDIR.libpeas?=	../../devel/libpeas
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
+PYTHON_VERSIONS_INCOMPATIBLE+= 26 27
 .include "../../devel/py-gobject3/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .endif # LIBPEAS_BUILDLINK3_MK
