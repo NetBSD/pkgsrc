@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2013/02/06 23:23:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2014/02/12 23:18:33 tron Exp $
 
 DISTNAME=	krb5-appl-1.0.3
 PKGNAME=	mit-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5-appl/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar

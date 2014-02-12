@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2014/01/25 10:45:21 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2014/02/12 23:18:41 tron Exp $
 
 DISTNAME=		xen-2.0.7-src
 PKGNAME=		xentools20-2.0.7
-PKGREVISION=		17
+PKGREVISION=		18
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.cl.cam.ac.uk/research/srg/netos/xen/downloads/
 EXTRACT_SUFX=		.tgz

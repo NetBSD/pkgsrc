@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2013/02/06 23:21:36 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2014/02/12 23:18:45 tron Exp $
 
 BUILDLINK_TREE+=	libmrss
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libmrss
 LIBMRSS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libmrss+=	libmrss>=0.19.2
-BUILDLINK_ABI_DEPENDS.libmrss+=	libmrss>=0.19.2nb3
+BUILDLINK_ABI_DEPENDS.libmrss+=	libmrss>=0.19.2nb4
 BUILDLINK_PKGSRCDIR.libmrss?=	../../www/libmrss
 
 .include "../../textproc/libnxml/buildlink3.mk"

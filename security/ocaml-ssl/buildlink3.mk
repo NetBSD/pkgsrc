@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2013/11/01 11:30:22 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2014/02/12 23:18:34 tron Exp $
 
 BUILDLINK_TREE+=	ocaml-ssl
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocaml-ssl
 OCAML_SSL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-ssl+=	ocaml-ssl>=0.4.0
-BUILDLINK_ABI_DEPENDS.ocaml-ssl+=	ocaml-ssl>=0.4.6nb3
+BUILDLINK_ABI_DEPENDS.ocaml-ssl+=	ocaml-ssl>=0.4.6nb4
 BUILDLINK_PKGSRCDIR.ocaml-ssl?=	../../security/ocaml-ssl
 
 .include "../../lang/ocaml/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2013/11/27 01:54:19 mef Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2014/02/12 23:18:41 tron Exp $
 
 BUILDLINK_TREE+=	jansson
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	jansson
 JANSSON_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.jansson+=jansson>=2.0
+BUILDLINK_ABI_DEPENDS.jansson?=	jansson>=2.4nb1
 BUILDLINK_PKGSRCDIR.jansson?=	../../textproc/jansson
 
 .include "../../security/openssl/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2013/02/06 23:23:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.35 2014/02/12 23:18:32 tron Exp $
 
 DISTNAME=		ipsec-tools-0.7.3
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_NETBSD:=ipsec-tools/}
 EXTRACT_SUFX=		.tar.bz2

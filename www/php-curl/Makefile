@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2013/02/22 03:07:45 taca Exp $
+# $NetBSD: Makefile,v 1.23 2014/02/12 23:18:46 tron Exp $
 
 MODNAME=		curl
+PKGREVISION=		1
 CATEGORIES+=		www
 COMMENT=		PHP extension for curl functions
 

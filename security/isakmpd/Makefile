@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2013/09/20 23:07:44 joerg Exp $
+# $NetBSD: Makefile,v 1.49 2014/02/12 23:18:32 tron Exp $
 #
 
 DISTNAME=		isakmpd-20030903
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		security net
 MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
 

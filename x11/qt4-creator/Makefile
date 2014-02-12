@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2013/09/19 10:25:44 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2014/02/12 23:18:54 tron Exp $
 
 DISTNAME=	qt-creator-2.0.1-src
 PKGNAME=	${DISTNAME:S/qt-/qt4-/:S/-src//}
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	devel
 MASTER_SITES=	http://get.qt.nokia.com/qtcreator/
 EXTRACT_SUFX=	.tgz

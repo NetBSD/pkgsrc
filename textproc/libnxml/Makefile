@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2013/02/06 23:21:35 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2014/02/12 23:18:41 tron Exp $
 #
 
 DISTNAME=	libnxml-0.18.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.autistici.org/bakunin/libnxml/
 

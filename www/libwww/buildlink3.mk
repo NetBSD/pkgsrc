@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2013/02/06 23:21:01 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2014/02/12 23:18:45 tron Exp $
 
 BUILDLINK_TREE+=	libwww
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libwww
 LIBWWW_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libwww+=	libwww>=5.3.2nb2
-BUILDLINK_ABI_DEPENDS.libwww+=	libwww>=5.4.0nb11
+BUILDLINK_ABI_DEPENDS.libwww+=	libwww>=5.4.0nb13
 BUILDLINK_PKGSRCDIR.libwww?=	../../www/libwww
 
 .include "../../mk/bsd.fast.prefs.mk"
