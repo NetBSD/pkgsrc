@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/20 02:42:27 heinz Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/02/12 11:43:53 fhajny Exp $
 bin/uuid
 bin/uuid-config
 include/uuid++.hh
 include/uuid.h
 include/uuid_dce.h
-lib/libuuid++.la
-lib/libuuid.la
-lib/libuuid_dce.la
-lib/pkgconfig/uuid.pc
+lib/libossp-uuid++.la
+lib/libossp-uuid.la
+lib/libossp-uuid_dce.la
+lib/pkgconfig/ossp-uuid.pc
 man/man1/uuid-config.1
 man/man1/uuid.1
-man/man3/uuid++.3
-man/man3/uuid.3
+man/man3/uuid++.3ossp
+man/man3/uuid.3ossp

@@ -1,0 +1,16 @@
+$NetBSD: patch-uuid-config.in,v 1.1 2014/02/12 11:43:53 fhajny Exp $
+
+Rename package files to avoid conflict with devel/libuuid (based
+on Debian patches).
+
+--- uuid-config.in.orig	2008-03-07 10:49:59.000000000 +0000
++++ uuid-config.in
+@@ -121,7 +121,7 @@ do
+             output_extra="$output_extra $uuid_ldflags"
+             ;;
+         --libs)
+-            output="$output -luuid"
++            output="$output -lossp-uuid"
+             output_extra="$output_extra $uuid_libs"
+             ;;
+         * )
