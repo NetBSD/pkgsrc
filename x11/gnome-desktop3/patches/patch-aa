@@ -1,27 +1,9 @@
-$NetBSD: patch-aa,v 1.1 2012/08/23 18:15:38 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2014/02/12 01:23:33 prlw1 Exp $
 
 allow 64-bit time_t on 32-bit system
 
 --- libgnome-desktop/gnome-desktop-thumbnail.c.orig	2012-08-23 17:49:46.000000000 +0000
 +++ libgnome-desktop/gnome-desktop-thumbnail.c
-@@ -1382,7 +1382,7 @@ gnome_desktop_thumbnail_factory_save_thu
-     }
-   close (tmp_fd);
-   
--  g_snprintf (mtime_str, 21, "%ld",  original_mtime);
-+  g_snprintf (mtime_str, 21, "%lld",  (long long)original_mtime);
-   width = gdk_pixbuf_get_option (thumbnail, "tEXt::Thumb::Image::Width");
-   height = gdk_pixbuf_get_option (thumbnail, "tEXt::Thumb::Image::Height");
- 
-@@ -1484,7 +1484,7 @@ gnome_desktop_thumbnail_factory_create_f
-     }
-   close (tmp_fd);
-   
--  g_snprintf (mtime_str, 21, "%ld",  mtime);
-+  g_snprintf (mtime_str, 21, "%lld",  (long long)mtime);
-   pixbuf = gdk_pixbuf_new (GDK_COLORSPACE_RGB, TRUE, 8, 1, 1);
-   saved_ok  = gdk_pixbuf_save (pixbuf,
- 			       tmp_path,
 @@ -1613,7 +1613,7 @@ gnome_desktop_thumbnail_is_valid (GdkPix
    thumb_mtime_str = gdk_pixbuf_get_option (pixbuf, "tEXt::Thumb::MTime");
    if (!thumb_mtime_str)
