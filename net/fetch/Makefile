@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2013/02/06 23:23:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2014/02/12 23:18:20 tron Exp $
 #
 
 DISTNAME=	fetch-1.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	# empty
 DISTFILES=	# empty

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2013/05/31 12:41:21 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2014/02/12 23:18:10 tron Exp $
 
 DISTNAME=	teapop-0.3.8
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	mail
 MASTER_SITES=	# ftp://ftp.toontown.org/pub/teapop/
 

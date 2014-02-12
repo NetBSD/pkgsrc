@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2013/02/06 23:21:05 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2014/02/12 23:17:45 tron Exp $
 
 BUILDLINK_TREE+=	apr
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	apr
 APR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.apr+=	apr-0.9.* apr>=0.9.5.2.0.51nb1
-BUILDLINK_ABI_DEPENDS.apr+=	apr>=0.9.19.2.0.64nb2
+BUILDLINK_ABI_DEPENDS.apr+=	apr>=0.9.20.2.0.65nb1
 BUILDLINK_PKGSRCDIR.apr?=	../../devel/apr0
 BUILDLINK_INCDIRS.apr?=		include/apr-0
 
