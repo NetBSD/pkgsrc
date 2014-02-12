@@ -1,0 +1,17 @@
+$NetBSD: patch-uuid.pc.in,v 1.1 2014/02/12 11:43:53 fhajny Exp $
+
+Rename package files to avoid conflict with devel/libuuid (based
+on Debian patches).
+
+--- uuid.pc.in.orig	2008-03-07 10:49:59.000000000 +0000
++++ uuid.pc.in
+@@ -36,7 +36,7 @@ Name: OSSP uuid
+ Description: Universally Unique Identifier (UUID) Library
+ Version: @UUID_VERSION_RAW@
+ URL: http://www.ossp.org/pkg/lib/uuid/
+-Cflags: -I${includedir}
+-Libs: -L${libdir} -luuid
++Cflags: -I${includedir}/ossp
++Libs: -L${libdir} -lossp-uuid
+ Libs.private: @LIBS@
+ 
