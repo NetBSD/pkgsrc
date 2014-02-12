@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2014/01/25 10:30:09 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/02/12 00:30:03 prlw1 Exp $
 
 DISTNAME=		pycairo-1.10.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		http://cairographics.org/releases/
 EXTRACT_SUFX=		.tar.bz2
@@ -18,7 +19,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
 PKGCONFIG_OVERRIDE+=	py3cairo.pc.in
-PYTHON_SELF_CONFLICT=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	26 27
 PY_PATCHPLIST=		yes
 # waf is not smart enough for this as of 1.10.0
