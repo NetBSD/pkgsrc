@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.669 2014/02/12 15:18:00 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.670 2014/02/12 15:18:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1056,3 +1056,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/rhythmbox-gtk3 to 3.0.1 [prlw1 2014-02-12]
 	Updated net/gupnp-igd to 0.2.3 [wiz 2014-02-12]
 	Updated devel/py-doctor to 0.5 [wiz 2014-02-12]
+	Updated devel/py-setuptools to 2.2 [wiz 2014-02-12]
