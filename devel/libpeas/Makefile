@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2014/02/12 01:35:43 prlw1 Exp $
+# $NetBSD: Makefile,v 1.19 2014/02/12 18:11:27 drochner Exp $
 #
 
 DISTNAME=	libpeas-1.8.1
@@ -17,11 +17,11 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake intltool msgfmt pkg-config gsed
 
+PYTHON_VERSIONS_INCOMPATIBLE=	26 27
+
 .include "../../lang/python/pyversion.mk"
 CONFIGURE_ARGS+=	--disable-python2
 CONFIGURE_ENV+=		PYTHON3_CONFIG=/usr/pkg/bin/python${PYVERSSUFFIX}-config
-
-PYTHON_VERSIONS_INCOMPATIBLE=	26 27
 
 PKGCONFIG_OVERRIDE+=	data/libpeas-gtk-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	data/libpeas-1.0.pc.in
