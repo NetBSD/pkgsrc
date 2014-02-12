@@ -1,0 +1,19 @@
+$NetBSD: patch-Makefile.in,v 1.1 2014/02/12 00:57:25 prlw1 Exp $
+
+build: Add --without-common configure option for package maintainers
+https://bugzilla.gnome.org/show_bug.cgi?id=721646
+commit 15fdd827ce4bff847fb35c817c6ea2d3650eec00
+
+--- Makefile.in.orig	2013-12-12 00:22:35.000000000 +0000
++++ Makefile.in
+@@ -445,8 +445,8 @@ BUILT_EXTRA_DIST = \
+ 
+ 
+ # pkg-config files
+-pkgconfigdir = $(libdir)/pkgconfig
+-pkgconfig_DATA = pygobject-$(PLATFORM_VERSION).pc
++@WITH_COMMON_TRUE@pkgconfigdir = $(libdir)/pkgconfig
++@WITH_COMMON_TRUE@pkgconfig_DATA = pygobject-$(PLATFORM_VERSION).pc
+ 
+ # python
+ pyexec_LTLIBRARIES = 

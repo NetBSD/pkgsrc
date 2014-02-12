@@ -1,0 +1,69 @@
+$NetBSD: patch-configure,v 1.1 2014/02/12 00:57:25 prlw1 Exp $
+
+build: Add --without-common configure option for package maintainers
+https://bugzilla.gnome.org/show_bug.cgi?id=721646
+commit 15fdd827ce4bff847fb35c817c6ea2d3650eec00
+
+--- configure.orig	2013-12-12 00:22:35.000000000 +0000
++++ configure
+@@ -648,6 +648,8 @@ CODE_COVERAGE_ENABLED_TRUE
+ WARN_CFLAGS
+ INTROSPECTION_COMPILER
+ INTROSPECTION_SCANNER
++WITH_COMMON_FALSE
++WITH_COMMON_TRUE
+ ENABLE_CAIRO_FALSE
+ ENABLE_CAIRO_TRUE
+ PYCAIRO_LIBS
+@@ -828,6 +830,7 @@ enable_thread
+ enable_glibtest
+ with_ffi
+ enable_cairo
++with_common
+ enable_compile_warnings
+ enable_iso_c
+ enable_code_coverage
+@@ -1505,6 +1508,8 @@ Optional Packages:
+                           program name is given; if not given, searches for a
+                           few standard names such as "python3" or "python2"
+   --without-ffi           Disable libffi support
++  --without-common        For package maintainers: do not install Python
++                          version independent files
+ 
+ Some influential environment variables:
+   CC          C compiler command
+@@ -14294,6 +14299,23 @@ else
+ fi
+ 
+ 
++
++# Check whether --with-common was given.
++if test "${with_common+set}" = set; then :
++  withval=$with_common; with_common=$enableval
++else
++  with_common=yes
++fi
++
++ if test "$with_common" = "yes"; then
++  WITH_COMMON_TRUE=
++  WITH_COMMON_FALSE='#'
++else
++  WITH_COMMON_TRUE='#'
++  WITH_COMMON_FALSE=
++fi
++
++
+ INTROSPECTION_SCANNER=`$PKG_CONFIG --variable=g_ir_scanner gobject-introspection-1.0`
+ INTROSPECTION_COMPILER=`$PKG_CONFIG --variable=g_ir_compiler gobject-introspection-1.0`
+ 
+@@ -14967,6 +14989,10 @@ if test -z "${ENABLE_CAIRO_TRUE}" && tes
+   as_fn_error $? "conditional \"ENABLE_CAIRO\" was never defined.
+ Usually this means the macro was only invoked conditionally." "$LINENO" 5
+ fi
++if test -z "${WITH_COMMON_TRUE}" && test -z "${WITH_COMMON_FALSE}"; then
++  as_fn_error $? "conditional \"WITH_COMMON\" was never defined.
++Usually this means the macro was only invoked conditionally." "$LINENO" 5
++fi
+ if test -z "${CODE_COVERAGE_ENABLED_TRUE}" && test -z "${CODE_COVERAGE_ENABLED_FALSE}"; then
+   as_fn_error $? "conditional \"CODE_COVERAGE_ENABLED\" was never defined.
+ Usually this means the macro was only invoked conditionally." "$LINENO" 5
