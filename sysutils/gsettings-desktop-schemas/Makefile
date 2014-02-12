@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2012/11/23 17:19:39 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.6 2014/02/12 01:16:24 prlw1 Exp $
 
-DISTNAME=	gsettings-desktop-schemas-3.6.1
+DISTNAME=	gsettings-desktop-schemas-3.10.1
 CATEGORIES=	sysutils gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gsettings-desktop-schemas/3.6/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gsettings-desktop-schemas/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,4 +19,7 @@ USE_LANGUAGES=		c
 PKGCONFIG_OVERRIDE+=	gsettings-desktop-schemas.pc.in
 
 .include "../../devel/glib2/schemas.mk"
+BUILDLINK_DEPMETHOD.gobject-introspection:=	build
+BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=1.31
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
