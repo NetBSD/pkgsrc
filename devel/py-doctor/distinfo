@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/09/30 17:23:04 wiz Exp $
+$NetBSD: distinfo,v 1.2 2014/02/12 15:17:52 wiz Exp $
 
-SHA1 (pydoctor-0.4.tar.gz) = ffb26f8f470c5b4afede992fc15c89104f61b238
-RMD160 (pydoctor-0.4.tar.gz) = 6d56da643c741f143e31c6505579575b854c52ef
-Size (pydoctor-0.4.tar.gz) = 81064 bytes
+SHA1 (pydoctor-0.5.tar.gz) = bd82a2419b56c4c36890cce68f98a3228b855f36
+RMD160 (pydoctor-0.5.tar.gz) = 6be8fd43f45cda9b6bf992ebfaf5c2fcc6c48cfd
+Size (pydoctor-0.5.tar.gz) = 83632 bytes
