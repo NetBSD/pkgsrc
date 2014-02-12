@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2013/02/06 23:21:48 jperkin Exp $
+# $NetBSD: Makefile,v 1.40 2014/02/12 23:17:37 tron Exp $
 
 DISTNAME=	loudmouth-1.4.3
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/loudmouth/1.4/}
 

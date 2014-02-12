@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/03/17 15:29:24 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/12 23:18:18 tron Exp $
 
+PKGREVISION=	1
 CONFLICTS+=	Transmission-[0-9]*
 
 pre-configure:
