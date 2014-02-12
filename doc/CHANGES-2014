@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.662 2014/02/12 01:16:47 prlw1 Exp $
+$NetBSD: CHANGES-2014,v 1.663 2014/02/12 01:23:55 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1049,3 +1049,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/py-gobject3-common version 3.10.2 [prlw1 2014-02-12]
 	Updated x11/gtksourceview3 to 3.10.2 [prlw1 2014-02-12]
 	Updated sysutils/gsettings-desktop-schemas to 3.10.1 [prlw1 2014-02-12]
+	Updated x11/gnome-desktop3 to 3.10.2 [prlw1 2014-02-12]
