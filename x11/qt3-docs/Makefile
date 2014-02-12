@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.38 2013/10/09 17:39:24 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2014/02/12 23:18:54 tron Exp $
 
 .include "../../x11/qt3-libs/Makefile.common"
 
 PKGNAME=	qt3-docs-${QTVERSION}
-PKGREVISION=	12
+PKGREVISION=	13
 COMMENT=	Documentation for the QT C++ X GUI toolkit
 
 BUILD_QT3=	yes

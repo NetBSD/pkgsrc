@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2014/01/14 10:58:17 markd Exp $
+# $NetBSD: Makefile,v 1.56 2014/02/12 23:18:38 tron Exp $
+
+PKGREVISION=		1
 
 CONFLICTS+=		bacula-client-[0-9]* bacula-clientonly-[0-9]*
 

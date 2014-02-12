@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.157 2014/01/01 11:52:38 wiz Exp $
+# $NetBSD: Makefile,v 1.158 2014/02/12 23:18:48 tron Exp $
 #
 
 DISTNAME=		gnome-session-2.26.2
-PKGREVISION=		40
+PKGREVISION=		41
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.26/}
 SITES.gnome-splash-2.16.0.png=	${MASTER_SITE_LOCAL:=gnome-splash/}

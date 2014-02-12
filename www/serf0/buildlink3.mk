@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2013/09/07 14:00:47 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2014/02/12 23:18:47 tron Exp $
 
 BUILDLINK_TREE+=	serf
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	serf
 SERF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.serf+=	serf0>=0.1.0
-BUILDLINK_ABI_DEPENDS.serf+=	serf0>=0.7.2nb1
+BUILDLINK_ABI_DEPENDS.serf+=	serf0>=0.7.2nb2
 BUILDLINK_PKGSRCDIR.serf?=	../../www/serf0
 
 .include "../../devel/apr/buildlink3.mk"

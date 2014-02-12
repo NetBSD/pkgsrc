@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2013/12/10 14:15:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2014/02/12 23:18:37 tron Exp $
 
 DISTNAME=	sslscan-1.8.2
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sslscan/}
 EXTRACT_SUFX=	.tgz

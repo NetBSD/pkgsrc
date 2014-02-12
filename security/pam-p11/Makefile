@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2013/07/19 12:57:28 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2014/02/12 23:18:35 tron Exp $
 #
 
 DISTNAME=	pam_p11-0.1.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	http://www.opensc-project.org/files/pam_p11/
 

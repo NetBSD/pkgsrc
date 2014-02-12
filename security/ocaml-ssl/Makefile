@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2013/11/01 11:30:22 jaapb Exp $
+# $NetBSD: Makefile,v 1.13 2014/02/12 23:18:34 tron Exp $
 #
 
 DISTNAME=	ocaml-ssl-0.4.6
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=savonet/}
 
