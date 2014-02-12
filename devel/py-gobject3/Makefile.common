@@ -1,0 +1,54 @@
+# $NetBSD: Makefile.common,v 1.1 2014/02/12 00:57:25 prlw1 Exp $
+# used by devel/py-gobject3/Makefile
+# used by devel/py-gobject3-common/Makefile
+
+VER=			3.10.2
+DISTNAME=		pygobject-${VER}
+CATEGORIES=		devel gnome
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/pygobject/${PKGVERSION_NOREV:R}/}
+EXTRACT_SUFX=		.tar.xz
+
+MAINTAINER=		prlw1@cam.ac.uk
+HOMEPAGE=		https://wiki.gnome.org/action/show/Projects/PyGObject
+LICENSE=		gnu-lgpl-v2.1
+
+USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES=		c c99
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config gmake
+GNU_CONFIGURE=		yes
+#CONFIGURE_ARGS+=	--disable-cairo
+CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
+
+DISTINFO_FILE=		${.CURDIR}/../../devel/py-gobject3/distinfo
+PATCHDIR=		${.CURDIR}/../../devel/py-gobject3/patches
+
+PYTHON_VERSIONS_INCOMPATIBLE=	26
+
+PKGCONFIG_OVERRIDE+=	pygobject-3.0.pc.in
+PY_PATCHPLIST=		yes
+PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
+CONFLICTS+=		${PYPKGPREFIX}-gtk2<2.8.4
+CONFLICTS+=		${PYPKGPREFIX}-gobject<2.28.6nb4
+
+# https://bugzilla.gnome.org/show_bug.cgi?id=685094
+# https://bugzilla.gnome.org/show_bug.cgi?id=707196
+PYTHON_VERSIONED_DEPENDENCIES=  cairo:link
+.include "../../lang/python/versioned_dependencies.mk"
+.include "../../graphics/cairo-gobject/buildlink3.mk"
+TEST_TARGET=    check
+
+.include "../../lang/python/extension.mk"
+.include "../../lang/python/application.mk"
+
+# for the egg
+.if exists(${PYTHONBIN:Q})
+PLATFORM!=	${PYTHONBIN:Q} -c "import sys; from distutils import util; sys.stdout.write(util.get_platform())"
+PLIST_SUBST+=	PLATFORM=${PLATFORM:Q}
+.endif
+
+BUILDLINK_API_DEPENDS.glib2=	glib2>=2.35.9
+.include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gobject-introspection=	gobject-introspection>=1.35.9
+.include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../devel/libffi/buildlink3.mk"

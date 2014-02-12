@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2014/02/12 00:57:25 prlw1 Exp $
+include/pygobject-3.0/pygobject.h
+lib/pkgconfig/pygobject-3.0.pc
