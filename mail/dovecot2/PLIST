@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2014/01/17 11:50:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.33 2014/02/13 19:54:55 adam Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -181,6 +181,7 @@ include/dovecot/ioloop-iolist.h
 include/dovecot/ioloop-notify-fd.h
 include/dovecot/ioloop-private.h
 include/dovecot/ioloop.h
+include/dovecot/iostream-lz4.h
 include/dovecot/iostream-openssl.h
 include/dovecot/iostream-private.h
 include/dovecot/iostream-rawlog-private.h
@@ -539,6 +540,7 @@ share/doc/dovecot/solr-schema.xml
 share/doc/dovecot/thread-refs.txt
 share/doc/dovecot/wiki/ACL.txt
 share/doc/dovecot/wiki/AixPluginsSupport.txt
+share/doc/dovecot/wiki/AntiSpam.txt
 share/doc/dovecot/wiki/AuthDatabase.CheckPassword.txt
 share/doc/dovecot/wiki/AuthDatabase.Dict.txt
 share/doc/dovecot/wiki/AuthDatabase.LDAP.AuthBinds.txt
@@ -609,13 +611,17 @@ share/doc/dovecot/wiki/DomainLost.txt
 share/doc/dovecot/wiki/Errors.ChgrpNoPerm.txt
 share/doc/dovecot/wiki/FindMailLocation.txt
 share/doc/dovecot/wiki/FinishBasicConfiguration.txt
+share/doc/dovecot/wiki/HowTo.ConvertPasswordSchemes.txt
 share/doc/dovecot/wiki/HowTo.EximAndDovecotSASL.txt
+share/doc/dovecot/wiki/HowTo.F5SLBTLSOffload.txt
 share/doc/dovecot/wiki/HowTo.ImapcProxy.txt
 share/doc/dovecot/wiki/HowTo.PopBSMTPAndDovecot.txt
 share/doc/dovecot/wiki/HowTo.PopRelay.txt
 share/doc/dovecot/wiki/HowTo.PostfixAndDovecotSASL.txt
 share/doc/dovecot/wiki/HowTo.Rootless.txt
 share/doc/dovecot/wiki/HowTo.SimpleVirtualInstall.txt
+share/doc/dovecot/wiki/HowTo.TriggerGetmailOnIMAPAccess.txt
+share/doc/dovecot/wiki/HowTo.Virtual(2b)Postfix(2b)Dspam(2b)Dovecot.txt
 share/doc/dovecot/wiki/HowTo.txt
 share/doc/dovecot/wiki/IndexFiles.txt
 share/doc/dovecot/wiki/LDA.Exim.txt
@@ -645,6 +651,7 @@ share/doc/dovecot/wiki/MailboxFormat.mbox.txt
 share/doc/dovecot/wiki/MailboxFormat.mbx.txt
 share/doc/dovecot/wiki/MailboxFormat.txt
 share/doc/dovecot/wiki/MailboxSettings.txt
+share/doc/dovecot/wiki/MainConfig.txt
 share/doc/dovecot/wiki/MboxChildFolders.txt
 share/doc/dovecot/wiki/MboxLocking.txt
 share/doc/dovecot/wiki/MboxProblems.txt
