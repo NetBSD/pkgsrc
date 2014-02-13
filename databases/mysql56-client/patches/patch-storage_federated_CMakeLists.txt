@@ -1,0 +1,13 @@
+$NetBSD: patch-storage_federated_CMakeLists.txt,v 1.1 2014/02/13 14:38:08 jperkin Exp $
+
+Build with newer DTrace.
+
+--- storage/federated/CMakeLists.txt.orig	2013-11-17 18:02:53.000000000 +0000
++++ storage/federated/CMakeLists.txt
+@@ -21,4 +21,5 @@ IF(NOT WITH_FEDERATED AND NOT WITH_FEDER
+  # mysqld and are optimized away by the linker.
+  SET(FEDERATED_SOURCES ${FEDERATED_SOURCES} ${CMAKE_SOURCE_DIR}/mysys/string.c)
+ ENDIF()
+-MYSQL_ADD_PLUGIN(federated ${FEDERATED_SOURCES} STORAGE_ENGINE)
++MYSQL_ADD_PLUGIN(federated ${FEDERATED_SOURCES} STORAGE_ENGINE
++                 DTRACE_INSTRUMENTED)
