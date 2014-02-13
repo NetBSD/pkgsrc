@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.681 2014/02/13 10:22:49 mrg Exp $
+$NetBSD: CHANGES-2014,v 1.682 2014/02/13 11:45:19 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1071,7 +1071,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/sqlite3-docs to 3.8.3.1 [adam 2014-02-13]
 	Updated databases/sqlite3-tcl to 3.8.3.1 [adam 2014-02-13]
 	Updated databases/mysql56-client to 5.6.16 [adam 2014-02-13]
-	Updated databases/mysql56-server to 5.6.16 [adam 2014-02-13
+	Updated databases/mysql56-server to 5.6.16 [adam 2014-02-13]
 	Updated net/rabbitmq-c to 0.5.0 [root 2014-02-13]
 	Updated audio/csound5 to 5.19.01 [mrg 2014-02-13]
 	Updated audio/csound5-manual to 5.19 [mrg 2014-02-13]
