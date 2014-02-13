@@ -1,11 +1,11 @@
-$NetBSD: patch-install.py,v 1.1 2011/09/07 12:42:02 obache Exp $
+$NetBSD: patch-install.py,v 1.2 2014/02/13 10:10:06 mrg Exp $
 
 * adjust installation layout to same as SCons.
 * kill uninstaller and md5sum for it.
 * kill ldconfig
 
---- install.py.orig	2006-03-15 15:20:59.000000000 +0000
-+++ install.py
+--- install.py.orig	2013-01-07 04:49:35.000000000 -0800
++++ install.py	2014-02-12 21:10:18.000000000 -0800
 @@ -3,7 +3,6 @@
  import sys
  import os
@@ -14,16 +14,15 @@ $NetBSD: patch-install.py,v 1.1 2011/09/07 12:42:02 obache Exp $
  import time
  
  # get Python version
-@@ -25,7 +24,7 @@ exeFiles1 = ['csound', 'CsoundVST', 'cst
-              'pvlook', 'scale', 'sndinfo', 'srconv',
+@@ -28,6 +27,7 @@
               'scsort', 'extract', 'cs', 'csb64enc', 'makecsd', 'scot']
  
--exeFiles2 = ['brkpt', 'linseg', 'tabdes']
+ exeFiles2 = ['brkpt', 'linseg', 'tabdes']
 +exeFiles2 = []
  
  docFiles = ['COPYING', 'ChangeLog', 'INSTALL', 'readme-csound5.txt']
  
-@@ -88,15 +87,15 @@ def concatPath(lst):
+@@ -96,15 +96,15 @@
      return s
  
  # frontends
@@ -33,8 +32,8 @@ $NetBSD: patch-install.py,v 1.1 2011/09/07 12:42:02 obache Exp $
 -includeDir  = concatPath([prefix, '/include/csound'])
 +includeDir  = concatPath([prefix, '/include/csound5'])
  # Csound API libraries
--libDir      = concatPath([prefix, '/lib'])
-+libDir      = concatPath([prefix, '/lib/csound5'])
+-libDir      = concatPath([prefix, '/lib' + word64Suffix])
++libDir      = concatPath([prefix, '/lib/csound5' + word64Suffix])
  # single precision plugin libraries
 -pluginDir32 = concatPath([libDir, '/csound/plugins'])
 +pluginDir32 = concatPath([libDir, '/plugins'])
@@ -42,18 +41,22 @@ $NetBSD: patch-install.py,v 1.1 2011/09/07 12:42:02 obache Exp $
 -pluginDir64 = concatPath([libDir, '/csound/plugins64'])
 +pluginDir64 = concatPath([libDir, '/plugins64'])
  # XMG files
- xmgDir      = concatPath([prefix, '/share/csound/xmg'])
+ xmgDir      = concatPath([prefix, '/share/locale'])
  # documentation
-@@ -317,7 +316,7 @@ installErrors = installErrors or err
- print ' === Installing Tcl/Tk modules and scripts ==='
- if findFiles('.', 'tclcsound\\.so').__len__() > 0:
-     err = installXFile('--strip-unneeded', 'tclcsound.so', tclDir)
+@@ -360,9 +360,9 @@
+     installErrors = installErrors or err
+     err = installFile('frontends/tclcsound/command_summary.txt', tclDir)
+     installErrors = installErrors or err
 -err = installFile('nsliders.tk', tclDir)
+-installErrors = installErrors or err
+-err = installXFile('', 'matrix.tk', binDir)
 +    err = installFile('nsliders.tk', tclDir)
++    installErrors = installErrors or err
++    err = installXFile('', 'matrix.tk', binDir)
  installErrors = installErrors or err
  
  # copy STK raw wave files
-@@ -375,42 +374,6 @@ if vimDir != '':
+@@ -420,43 +420,6 @@
                            '%s/%s' % (vimDir, 'syntax'))
          installErrors = installErrors or err
  
@@ -93,10 +96,11 @@ $NetBSD: patch-install.py,v 1.1 2011/09/07 12:42:02 obache Exp $
 -    print ' *** Error installing MD5 checksums'
 -    installErrors = 1
 -
+-    
  # -----------------------------------------------------------------------------
  
  print ''
-@@ -437,8 +400,5 @@ else:
+@@ -483,8 +446,5 @@
          print '  RAWWAVE_PATH=%s' % rawWaveDir
      print 'Csound can be uninstalled by running %s/uninstall-csound5' % binDir
  
