@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.683 2014/02/13 14:14:30 taca Exp $
+$NetBSD: CHANGES-2014,v 1.684 2014/02/13 16:12:50 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1079,3 +1079,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/contao211-example to 2.11.16 [taca 2014-02-13]
 	Updated www/contao32 to 3.2.7 [taca 2014-02-13]
 	Updated www/contao32-example to 3.2.7 [taca 2014-02-13]
+	Added devel/py-spwd version 2.7.6 [jperkin 2014-02-13]
