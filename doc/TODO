@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13000 2014/02/12 15:21:07 wiz Exp $
+$NetBSD: TODO,v 1.13001 2014/02/13 18:52:10 tron Exp $
 
 Suggested new packages
 ======================
@@ -1103,7 +1103,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o texlive-2012
 	o texmaker-4.1.1 [wip]
 	o tfmxplay-1.1.6
-	o thunderbird-24.3.0
 	o tightvnc-2.7.10
 	o tile-0.7.4
 	o tkgate-1.8.7
