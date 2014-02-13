@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1855 2014/02/12 00:57:25 prlw1 Exp $
+# $NetBSD: Makefile,v 1.1856 2014/02/13 16:11:39 jperkin Exp $
 #
 
 COMMENT=	Development utilities
@@ -1494,6 +1494,7 @@ SUBDIR+=	py-serpent
 SUBDIR+=	py-setuptools
 SUBDIR+=	py-setuptools_trial
 SUBDIR+=	py-speaklater
+SUBDIR+=	py-spwd
 SUBDIR+=	py-stompclient
 SUBDIR+=	py-subversion
 SUBDIR+=	py-subvertpy
