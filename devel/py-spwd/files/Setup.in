@@ -1,0 +1,5 @@
+# $NetBSD: Setup.in,v 1.1 2014/02/13 16:10:50 jperkin Exp $
+#
+*shared*
+spwd spwdmodule.c @BUILDLINK_LDFLAGS@ -R@LOCALBASE@/lib \
+	@BUILDLINK_CPPFLAGS@
