@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2012/12/16 02:55:46 obache Exp $
+$NetBSD: distinfo,v 1.18 2014/02/13 06:24:36 obache Exp $
 
 SHA1 (cyrus-imapd-2.4.17.tar.gz) = cc869dea08ad663fc32d9ab628992a1711cfbb1b
 RMD160 (cyrus-imapd-2.4.17.tar.gz) = c28e971515130eea23067b7015047a120edba86f
@@ -7,6 +7,5 @@ SHA1 (patch-ac) = d6b2e8c00a3605773bf7718d29ccfb0b82f59323
 SHA1 (patch-ah) = 4bc62dfdeafdca83ddac02aff0ffd05db28fe0b9
 SHA1 (patch-ai) = 9167678988f411479d187b232eb10ad8622b4151
 SHA1 (patch-am) = e100e13d5137116f5bd7674e954031b2615e5ab1
-SHA1 (patch-an) = 94aac408657e2315246c7cdaac2524c68eeb7c24
 SHA1 (patch-ao) = c01c9d32b4d73cbc32d2ad8bfca8b8b021ca2474
 SHA1 (patch-imap_mailbox.c) = 2a00d97525edb0768cbf4cfd2e1ad5e5f915bc62
