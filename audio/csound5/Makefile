@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2014/02/13 10:10:06 mrg Exp $
+# $NetBSD: Makefile,v 1.31 2014/02/13 12:25:18 wiz Exp $
 
 DISTNAME=		Csound${CSOUND_VERSION}
 PKGNAME=		csound5-${CSOUND_VERSION}
 CATEGORIES=		audio
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=csound/csound5/Csound5.19/}
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=csound/csound5/csound5.19/}
 WRKSRC=			${WRKDIR}/Csound${CSOUND_VERSION}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
