@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.10 2013/12/11 10:27:01 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.11 2014/02/13 20:31:08 adam Exp $
 
 BUILTIN_PKG:=	mit-krb5
 
@@ -6,7 +6,7 @@ BUILTIN_PKG:=	mit-krb5
 
 BUILTIN_FIND_HEADERS_VAR:=		H_MIT_KRB5
 .if !(empty(MACHINE_PLATFORM:MDarwin-9.*-*) && \
-      empty(MACHINE_PLATFORM:MDarwin-10.*-*))
+      empty(MACHINE_PLATFORM:MDarwin-1?.*-*))
 BUILTIN_FIND_HEADERS.H_MIT_KRB5=	krb5/krb5.h
 .elif !empty(MACHINE_PLATFORM:MSunOS-*-*)
 BUILTIN_FIND_HEADERS.H_MIT_KRB5=	kerberosv5/krb5.h
