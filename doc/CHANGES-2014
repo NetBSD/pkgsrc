@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.675 2014/02/13 00:39:29 taca Exp $
+$NetBSD: CHANGES-2014,v 1.676 2014/02/13 00:50:24 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1065,3 +1065,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/contao211-example to 2.11.15 [taca 2014-02-13]
 	Updated www/contao32 to 3.2.6 [taca 2014-02-13]
 	Updated www/contao32-example to 3.2.6 [taca 2014-02-13]
+	Added textproc/py-acora version 1.8 [rodent 2014-02-13]
