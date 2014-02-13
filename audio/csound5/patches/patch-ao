@@ -1,13 +1,13 @@
-$NetBSD: patch-ao,v 1.2 2006/05/29 19:44:24 joerg Exp $
+$NetBSD: patch-ao,v 1.3 2014/02/13 10:10:06 mrg Exp $
 
---- Top/threads.c.orig	2005-12-26 09:27:07.000000000 -0800
-+++ Top/threads.c
-@@ -109,7 +109,7 @@ PUBLIC void csoundSleep(size_t milliseco
-     Sleep((DWORD) milliseconds);
- }
+--- Top/threads.c.orig	2013-01-07 04:49:34.000000000 -0800
++++ Top/threads.c	2014-02-12 20:56:20.000000000 -0800
+@@ -168,7 +168,7 @@
  
--#elif defined(LINUX) || defined(__MACH__)
-+#elif defined(LINUX) || defined(__MACH__) || defined(__NetBSD__) || defined(__DragonFly__)
  
+ 
+-#if defined(LINUX) || defined(__MACH__) || defined(WIN32)
++#if defined(LINUX) || defined(__MACH__) || defined(WIN32) || defined(__NetBSD__) || defined(__DragonFly__)
+ 
+ #include <errno.h>
  #include <pthread.h>
- #include <time.h>

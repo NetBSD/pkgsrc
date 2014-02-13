@@ -1,40 +1,32 @@
-$NetBSD: patch-ai,v 1.3 2009/08/03 13:28:22 joerg Exp $
+$NetBSD: patch-ai,v 1.4 2014/02/13 10:10:06 mrg Exp $
 
---- InOut/widgets.cpp.orig	2006-02-15 19:25:55.000000000 +0100
-+++ InOut/widgets.cpp
-@@ -29,7 +29,7 @@
- #  include <windows.h>
- #endif /* defined(WIN32) */
+--- InOut/widgets.cpp.orig	2013-01-07 04:49:34.000000000 -0800
++++ InOut/widgets.cpp	2014-02-12 20:48:11.000000000 -0800
+@@ -2019,7 +2019,7 @@
  
--#if defined(LINUX)
-+#if defined(LINUX) || defined(__NetBSD__) || defined(__DragonFly__)
- #  include <pthread.h>
- #  include <sched.h>
- #  include <sys/time.h>
-@@ -1722,7 +1722,7 @@ static uintptr_t fltkRun(void *userdata)
- 
-   p = (widgetsGlobals_t*) csound->QueryGlobalVariable(csound,
-                                                       "_widgets_globals");
+       p = (widgetsGlobals_t*) csound->QueryGlobalVariable(csound,
+                                                           "_widgets_globals");
 -#ifdef LINUX
 +#if defined(LINUX) || defined(__NetBSD__) || defined(__DragonFly__)
-   {
-     struct sched_param  sp;
-     // IV - Aug 27 2002: widget thread is always run with normal priority
-@@ -2579,7 +2579,7 @@ extern "C" int fl_setTextType(CSOUND *cs
-   return OK;
- }
+       {
+         struct sched_param  sp;
+         // IV - Aug 27 2002: widget thread is always run with normal priority
+@@ -2039,7 +2039,7 @@
+ #ifdef WIN32
+         HWND xid = fl_xid(ST(fl_windows)[panelNum].panel);
+         ST(VSTplugEditors)[k]->SetEditWindow(xid);
+-#elif defined (LINUX) || defined(MACOSX)
++#elif defined (LINUX) || defined(MACOSX) || defined(__NetBSD__) || defined(__DragonFly__)
+         // put some appropriate alternative code here
+         Fl_Window * xid = fl_find(fl_xid(ST(fl_windows)[panelNum].panel));
+         ST(VSTplugEditors)[k]->SetEditWindow(xid);
+@@ -2166,8 +2166,7 @@
+     CSOUND *csound = p->csound;
+     char *command = (char *)csound->Malloc(csound, strlen(p->commandString) + 1);
  
--extern "C" int fl_box(CSOUND *csound, FL_BOX *p)
-+extern "C" int my_fl_box(CSOUND *csound, FL_BOX *p)
- {
-   char *text = GetString(csound, p->itext, p->XSTRCODE);
-   Fl_Box *o =  new Fl_Box((int)*p->ix, (int)*p->iy,
-@@ -3612,7 +3612,7 @@ static OENTRY localops[] = {
-     { "FLsetAlign",     S(FL_TALIGN),           1,  "",     "ii",
-         (SUBR) fl_align,                (SUBR) NULL,              (SUBR) NULL },
-     { "FLbox",          S(FL_BOX),              1,  "i",    "Tiiiiiii",
--        (SUBR) fl_box,                  (SUBR) NULL,              (SUBR) NULL },
-+        (SUBR) my_fl_box, 		(SUBR) NULL,              (SUBR) NULL },
-     { "FLvalue",        S(FLVALUE),             1,  "i",    "Tjjjj",
-         (SUBR) fl_value,                (SUBR) NULL,              (SUBR) NULL },
-     { "FLpanel",        S(FLPANEL),             1,  "",     "Tjjooo",
+-#if defined(LINUX) || defined (MACOSX)
+-
++#if defined(LINUX) || defined (MACOSX) || defined(__NetBSD__) || defined(__DragonFly__)
+ 
+     pid_t pId = vfork();
+     if (pId == 0) {
