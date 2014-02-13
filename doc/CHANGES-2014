@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.685 2014/02/13 18:52:10 tron Exp $
+$NetBSD: CHANGES-2014,v 1.686 2014/02/13 20:57:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1081,3 +1081,6 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/contao32-example to 3.2.7 [taca 2014-02-13]
 	Added devel/py-spwd version 2.7.6 [jperkin 2014-02-13]
 	Updated mail/thunderbird to 24.3.0 [tron 2014-02-13]
+	Updated mail/dovecot2 to 2.2.11 [adam 2014-02-13]
+	Updated graphics/ImageMagick to 6.8.8.5 [wiz 2014-02-13]
+	Updated graphics/p5-PerlMagick to 6.8.8.5 [wiz 2014-02-13]
