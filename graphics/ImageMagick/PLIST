@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.79 2014/01/06 19:48:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.80 2014/02/13 19:53:43 adam Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/MagickCore-config
@@ -21,11 +21,13 @@ include/ImageMagick-${IM_MAJOR_LIB_VER}/Magick++/CoderInfo.h
 include/ImageMagick-${IM_MAJOR_LIB_VER}/Magick++/Color.h
 include/ImageMagick-${IM_MAJOR_LIB_VER}/Magick++/Drawable.h
 include/ImageMagick-${IM_MAJOR_LIB_VER}/Magick++/Exception.h
+include/ImageMagick-${IM_MAJOR_LIB_VER}/Magick++/Functions.h
 include/ImageMagick-${IM_MAJOR_LIB_VER}/Magick++/Geometry.h
 include/ImageMagick-${IM_MAJOR_LIB_VER}/Magick++/Image.h
 include/ImageMagick-${IM_MAJOR_LIB_VER}/Magick++/Include.h
 include/ImageMagick-${IM_MAJOR_LIB_VER}/Magick++/Montage.h
 include/ImageMagick-${IM_MAJOR_LIB_VER}/Magick++/Pixels.h
+include/ImageMagick-${IM_MAJOR_LIB_VER}/Magick++/ResourceLimits.h
 include/ImageMagick-${IM_MAJOR_LIB_VER}/Magick++/STL.h
 include/ImageMagick-${IM_MAJOR_LIB_VER}/Magick++/TypeMetric.h
 include/ImageMagick-${IM_MAJOR_LIB_VER}/magick/ImageMagick.h
@@ -198,9 +200,7 @@ share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/bluebells_log.jpg
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/button.gif
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/configure.jpg
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/cylinder_shaded.png
-share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/definitive-guide.png
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/difference.png
-share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/donate.png
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/examples.jpg
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/frame.jpg
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/fuzzy-magick.png
@@ -215,7 +215,6 @@ share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/logo.jpg
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/logo.png
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/montage.jpg
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/navy.png
-share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/networkredux.png
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/patterns/bricks.png
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/patterns/checkerboard.png
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/patterns/circles.png
@@ -271,7 +270,6 @@ share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/patterns/verticalleftshingle.pn
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/patterns/verticalrightshingle.png
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/patterns/verticalsaw.png
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/piechart.png
-share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/project-support.jpg
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/radial-gradient.png
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/reconstruct.jpg
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/red-ball.png
@@ -287,7 +285,6 @@ share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/smile.gif
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/sponsor.jpg
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/sprite.jpg
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/t-shirt.png
-share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/tricks.png
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/wand.ico
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/wand.png
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/white-highlight.png
