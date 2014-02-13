@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2014/02/13 00:50:13 rodent Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/acora/__init__.py
+${PYSITELIB}/acora/__init__.pyc
+${PYSITELIB}/acora/__init__.pyo
+${PYSITELIB}/acora/_acora.so
+${PYSITELIB}/acora/_nfa2dfa.py
+${PYSITELIB}/acora/_nfa2dfa.pyc
+${PYSITELIB}/acora/_nfa2dfa.pyo
+${PYSITELIB}/acora/_nfa2dfa.so
+${PYSITELIB}/acora/nfa2dfa.py
+${PYSITELIB}/acora/nfa2dfa.pyc
+${PYSITELIB}/acora/nfa2dfa.pyo
