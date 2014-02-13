@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2013/05/31 12:41:46 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2014/02/13 17:35:44 abs Exp $
 
 DISTNAME=	pkg_p5up2date-0.04
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
