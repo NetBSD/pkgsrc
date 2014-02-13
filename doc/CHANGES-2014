@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.677 2014/02/13 00:59:17 minskim Exp $
+$NetBSD: CHANGES-2014,v 1.678 2014/02/13 07:31:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1067,3 +1067,6 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/contao32-example to 3.2.6 [taca 2014-02-13]
 	Added textproc/py-acora version 1.8 [rodent 2014-02-13]
 	Updated textproc/mendexk to 2.6fnb3 [minskim 2014-02-13]
+	Updated databases/sqlite3 to 3.8.3.1 [adam 2014-02-13]
+	Updated databases/sqlite3-docs to 3.8.3.1 [adam 2014-02-13]
+	Updated databases/sqlite3-tcl to 3.8.3.1 [adam 2014-02-13]
