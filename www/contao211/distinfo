@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2014/02/03 15:20:39 taca Exp $
+$NetBSD: distinfo,v 1.20 2014/02/13 00:36:38 taca Exp $
 
-SHA1 (contao/2.11.14.tar.gz) = ace0081973be448f8cdd213d533575d36a7ac4d2
-RMD160 (contao/2.11.14.tar.gz) = 413cc0df8d4a76cca4b0bc6c6d9a9e080d5a6f9e
-Size (contao/2.11.14.tar.gz) = 5354948 bytes
+SHA1 (contao/2.11.15.tar.gz) = d2443464cb77e4a2fe3ad6792fc11c487864f440
+RMD160 (contao/2.11.15.tar.gz) = 8c45099c24dd813463ce50fa36a81468dace7643
+Size (contao/2.11.15.tar.gz) = 5353594 bytes
 SHA1 (patch-system_initialize.php) = 49ae936bc70d0448fb73185b1dd02e607609fa19
