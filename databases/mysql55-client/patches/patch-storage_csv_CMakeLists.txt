@@ -1,0 +1,13 @@
+$NetBSD: patch-storage_csv_CMakeLists.txt,v 1.1 2014/02/13 15:47:15 jperkin Exp $
+
+Build with newer DTrace.
+
+--- storage/csv/CMakeLists.txt.orig	2014-01-14 08:16:26.000000000 +0000
++++ storage/csv/CMakeLists.txt
+@@ -17,4 +17,5 @@ SET(CSV_PLUGIN_STATIC  "csv")
+ SET(CSV_PLUGIN_MANDATORY TRUE)
+ 
+ SET(CSV_SOURCES  ha_tina.cc ha_tina.h transparent_file.cc transparent_file.h)
+-MYSQL_ADD_PLUGIN(csv ${CSV_SOURCES} STORAGE_ENGINE MANDATORY)
++MYSQL_ADD_PLUGIN(csv ${CSV_SOURCES} STORAGE_ENGINE
++                 MANDATORY DTRACE_INSTRUMENTED)
