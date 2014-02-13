@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2013/04/06 20:27:27 rodent Exp $
+# $NetBSD: Makefile,v 1.18 2014/02/13 18:12:36 gdt Exp $
 
 DISTNAME=	epg-0.0.16
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/epg/EasyPG/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=epg/29289/}
 
@@ -19,7 +19,7 @@ INFO_FILES=	yes
 # per README: GnuPG 1.4.3
 DEPENDS+=	gnupg>=1.4.3:../../security/gnupg
 # per README: GNU Emacs 21.4, XEmacs 21.4, or later
-EMACS_VERSIONS_ACCEPTED= emacs23 emacs21 emacs21nox emacs22 emacs22nox xemacs214 xemacs215
+EMACS_VERSIONS_ACCEPTED=  emacs21 emacs21nox emacs22 emacs22nox xemacs214 xemacs215
 
 .include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"
