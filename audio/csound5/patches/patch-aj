@@ -1,13 +1,13 @@
-$NetBSD: patch-aj,v 1.2 2006/05/29 19:44:24 joerg Exp $
+$NetBSD: patch-aj,v 1.3 2014/02/13 10:10:06 mrg Exp $
 
---- InOut/libsnd.c.orig	2006-02-13 09:05:46.000000000 -0800
-+++ InOut/libsnd.c
-@@ -47,7 +47,7 @@ typedef struct {
+--- InOut/libsnd.c.orig	2013-01-07 04:49:34.000000000 -0800
++++ InOut/libsnd.c	2014-02-12 20:49:21.000000000 -0800
+@@ -51,7 +51,7 @@
  
  #ifdef PIPES
  # if defined(SGI) || defined(LINUX) || defined(__BEOS__) || defined(NeXT) ||  \
--     defined(__MACH__)
-+     defined(__MACH__) || defined(__NetBSD__) || defined(__DragonFly__)
+-     defined(__MACH__) || defined(__HAIKU__)
++     defined(__MACH__) || defined(__HAIKU__) || defined(__NetBSD__) || defined(__DragonFly__)
  #  define _popen popen
  #  define _pclose pclose
  # endif

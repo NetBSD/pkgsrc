@@ -1,13 +1,23 @@
-$NetBSD: patch-ad,v 1.2 2006/05/29 19:44:24 joerg Exp $
+$NetBSD: patch-ad,v 1.3 2014/02/13 10:10:06 mrg Exp $
 
---- Top/csound.c.orig	2006-03-10 08:37:48.000000000 -0800
-+++ Top/csound.c
-@@ -613,7 +613,7 @@ static const CSOUND cenviron_ = {
-     csound_free_string_database();
-   }
+--- Top/csound.c.orig	2013-01-07 04:49:34.000000000 -0800
++++ Top/csound.c	2014-02-12 20:35:00.000000000 -0800
+@@ -765,7 +765,8 @@
  
--#if !defined(LINUX) && !defined(SGI) && !defined(__BEOS__) && !defined(__MACH__)
-+#if !defined(__NetBSD__) && !defined(LINUX) && !defined(SGI) && !defined(__BEOS__) && !defined(__MACH__) && !defined(__DragonFly__)
+ #if defined(ANDROID) || (!defined(LINUX) && !defined(SGI) && \
+                          !defined(__HAIKU__) && !defined(__BEOS__) && \
+-                         !defined(__MACH__))
++                         !defined(__MACH__) && !defined(__NetBSD__) && \
++			 !defined(__DragonFly__))
    static char *signal_to_string(int sig)
    {
-     switch(sig) {
+       switch (sig) {
+@@ -918,7 +919,7 @@
+   }
+ 
+ 	static const int sigs[] = {
+-#if defined(LINUX) || defined(SGI) || defined(sol) || defined(__MACH__)
++#if defined(LINUX) || defined(SGI) || defined(sol) || defined(__MACH__) || defined(__NetBSD__) || defined(__DragonFly__)
+           SIGHUP, SIGINT, SIGQUIT, SIGILL, SIGTRAP, SIGABRT, SIGIOT, SIGBUS,
+           SIGFPE, SIGSEGV, SIGPIPE, SIGTERM, SIGXCPU, SIGXFSZ,
+ #elif defined(WIN32)
