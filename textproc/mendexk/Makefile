@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2013/12/06 02:36:54 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2014/02/13 00:58:22 minskim Exp $
 
 DISTNAME=	texlive-20130530-source
 PKGNAME=	mendexk-2.6f
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2013/
 EXTRACT_SUFX=	.tar.xz
