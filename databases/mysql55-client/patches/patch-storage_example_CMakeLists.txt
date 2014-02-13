@@ -1,0 +1,13 @@
+$NetBSD: patch-storage_example_CMakeLists.txt,v 1.1 2014/02/13 15:47:15 jperkin Exp $
+
+Build with newer DTrace.
+
+--- storage/example/CMakeLists.txt.orig	2014-01-14 08:16:26.000000000 +0000
++++ storage/example/CMakeLists.txt
+@@ -15,4 +15,5 @@
+ 
+ SET(EXAMPLE_PLUGIN_DYNAMIC "ha_example")
+ SET(EXAMPLE_SOURCES ha_example.cc)
+-MYSQL_ADD_PLUGIN(example ${EXAMPLE_SOURCES} STORAGE_ENGINE MODULE_ONLY)
++MYSQL_ADD_PLUGIN(example ${EXAMPLE_SOURCES} STORAGE_ENGINE MODULE_ONLY
++                 DTRACE_INSTRUMENTED)
