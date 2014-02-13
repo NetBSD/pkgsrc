@@ -1,15 +1,17 @@
-$NetBSD: distinfo,v 1.30 2014/02/01 11:16:03 adam Exp $
+$NetBSD: distinfo,v 1.31 2014/02/13 15:47:15 jperkin Exp $
 
 SHA1 (mysql-5.5.36.tar.gz) = 581d49e1a38d5536c8268350e2f91ed9d461909d
 RMD160 (mysql-5.5.36.tar.gz) = 7651338751545a30652836d9c7bb0d3102592180
 Size (mysql-5.5.36.tar.gz) = 21723910 bytes
 SHA1 (patch-BUILD_compile-pentium-gcov) = a1ac666efa953a98455a726e5db359c903d699b6
-SHA1 (patch-CMakeLists.txt) = 0c4263762d2d9fafd84b25038cae57a87fed339d
+SHA1 (patch-CMakeLists.txt) = 632e036cd9578d0636328c2259a8529c36f2d14a
 SHA1 (patch-client_completion_hash.cc) = e27fd7072a8206380f0a932b1a31d2843c985cbf
 SHA1 (patch-client_mysqladmin.cc) = 382486c2f336eed87052e682b52d1acf444452a0
 SHA1 (patch-client_mysqlbinlog.cc) = e38abe026c10a07808ccd24b596cf13c5079e206
 SHA1 (patch-client_sql_string.cc) = 1547b8d3889af2831c89b97aecdbe8158711a600
+SHA1 (patch-cmake_dtrace.cmake) = 5ae3284589a17a8375b8a546136965fa337f3767
 SHA1 (patch-cmake_libutils.cmake) = 5d75a1762e3db6724bec2d75b45d40b17a5e9d09
+SHA1 (patch-cmake_plugin.cmake) = 2b702af6bf8f251886cea12cf7477abae7659230
 SHA1 (patch-cmake_readline.cmake) = aed279d6740e70d7e0e7565a6d9f0f214c866c8d
 SHA1 (patch-include_CMakeLists.txt) = 4781c69315624fb5567ae70cee87f1ddb3f89847
 SHA1 (patch-include_my_compare.h) = f45bac4b488332a668b0005751856279b67401f5
@@ -25,7 +27,15 @@ SHA1 (patch-sql_CMakeLists.txt) = c4e72a0a93eb94a94501c267e2a43aedf8de2c76
 SHA1 (patch-sql_log_event.h) = 43a52ea2f410aa51b99f2f7e1f293a579e13f9c8
 SHA1 (patch-sql_mysqld.cc) = 7e2cfb58f6af8531920dd9128f7b3a35735d7d2c
 SHA1 (patch-sql_sql_string.h) = 32c0caf813f7ba94e9ed8fc6d0da4b4a52b41141
+SHA1 (patch-storage_archive_CMakeLists.txt) = 1144fc8dda537be12656e76c2a714f2af59d0368
+SHA1 (patch-storage_blackhole_CMakeLists.txt) = c8907f400c64e7405a2d112b80892fa0a395d212
+SHA1 (patch-storage_csv_CMakeLists.txt) = 59ef822fe0eeb65bd003a5cc6849b57d26276b56
+SHA1 (patch-storage_example_CMakeLists.txt) = 10b4e505dc2d7291b9f61228e34426f2f99479b5
+SHA1 (patch-storage_federated_CMakeLists.txt) = aec604eca871e9efcde479a31569127746884c92
+SHA1 (patch-storage_heap_CMakeLists.txt) = 997b3eabc62ab5fcd80b83d030b3f8de0a5bcdac
 SHA1 (patch-storage_innobase_include_os0sync.h) = d3f66b063af3328f3ee518dd00dfc9d1d25943dc
+SHA1 (patch-storage_myisam_CMakeLists.txt) = cad3fd135d30a9d3800a9bc525595ead92fc0a9c
+SHA1 (patch-storage_myisammrg_CMakeLists.txt) = 7ec499b4c8a146c551fc129e86acf2a7ead8ca7b
 SHA1 (patch-storage_ndb_include_util_Parser.hpp) = ca9406a8b01dffb3f515f132fa7aaef66c78f2be
 SHA1 (patch-strings_decimal.c) = dafedbfbd71149890f3356f3cafa77d6d0466f0f
 SHA1 (patch-vio_viossl.c) = bc1922f1170ff55a6ed832b90c110e788b49d4be

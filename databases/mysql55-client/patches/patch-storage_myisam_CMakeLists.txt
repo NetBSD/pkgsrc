@@ -1,0 +1,16 @@
+$NetBSD: patch-storage_myisam_CMakeLists.txt,v 1.1 2014/02/13 15:47:15 jperkin Exp $
+
+Build with newer DTrace.
+
+--- storage/myisam/CMakeLists.txt.orig	2014-01-14 08:16:26.000000000 +0000
++++ storage/myisam/CMakeLists.txt
+@@ -29,7 +29,8 @@ SET(MYISAM_SOURCES  ft_boolean_search.c 
+ MYSQL_ADD_PLUGIN(myisam ${MYISAM_SOURCES} 
+   STORAGE_ENGINE 
+   MANDATORY 
+-  RECOMPILE_FOR_EMBEDDED)
++  RECOMPILE_FOR_EMBEDDED
++  DTRACE_INSTRUMENTED)
+ 
+ TARGET_LINK_LIBRARIES(myisam mysys)
+ 
