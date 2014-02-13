@@ -1,21 +1,20 @@
-$NetBSD: distinfo,v 1.10 2014/01/09 16:55:16 jperkin Exp $
+$NetBSD: distinfo,v 1.11 2014/02/13 10:10:06 mrg Exp $
 
-SHA1 (Csound5.01_src.tar.gz) = b387da9b6c24961397e89ddcedd1229cdfebffe7
-RMD160 (Csound5.01_src.tar.gz) = 24652f8f650464d886f6d537ae991654f475ad4a
-Size (Csound5.01_src.tar.gz) = 2031426 bytes
+SHA1 (Csound5.19.01.tar.gz) = eeeb3591745c5b352b9040a2dfa3805f22f5fbda
+RMD160 (Csound5.19.01.tar.gz) = ceb9952d562c57b09143a47a4d51081753f1b694
+Size (Csound5.19.01.tar.gz) = 9302526 bytes
+SHA1 (patch-Opcodes_cpumeter.c) = 45cf1eafa0fbf7d430c5f4a39a193c63e0259d5a
 SHA1 (patch-Opcodes_wavegde.h) = e1a6d742b28dd9b6b129a993102baf7218efa57c
-SHA1 (patch-ac) = 4a5a361744b659986fb4acdbc41b6a1c1e86a17f
-SHA1 (patch-ad) = 343b5767584cf4ddfbc7664e3234577fe22ff03a
-SHA1 (patch-ae) = 705d56ce7a03cd10763542a9ec71b393474c0595
-SHA1 (patch-af) = 4444b8efe47a401e01718c21197c2b6e19ec548c
-SHA1 (patch-ag) = 2771fdce6a054d96e51dd70df1264fe2cfdcdf58
-SHA1 (patch-ah) = e9978da3a14140f072ca12ca25b4c9a67ea4ede4
-SHA1 (patch-ai) = b7e079331053e555ce39df425e092715a6232d56
-SHA1 (patch-aj) = c22d25d55387c232187259690a43512457e18c54
+SHA1 (patch-ac) = 6079e0715edd55215f7f53a2d390d0fb290de1a4
+SHA1 (patch-ad) = 30aa452d35dbcd6ba4fe2c9a7680fe028368aae4
+SHA1 (patch-ae) = cba2fb017f4b940debbf7f8fd482c73c3fe19587
+SHA1 (patch-ah) = 229fc00e122288ea16ebf07f081869965cab9365
+SHA1 (patch-ai) = f5dee772f6569d4356be17045282666e159ce2dc
+SHA1 (patch-aj) = 6721ccfeeeb196d2f1430e1fd497e23226b42c80
 SHA1 (patch-ak) = 1f3a7ec113a5185a81fe219d99061afb025bc13b
-SHA1 (patch-al) = 7da1e82a280b6803e2f0f75b8fb1eafbc3206636
-SHA1 (patch-am) = 9770973e54770b9eebcf66c17f90f459e71a71c6
-SHA1 (patch-an) = 7dfbd38a4eca8c7767a53c2b93bb4967344c0f0e
-SHA1 (patch-ao) = 64ee0a2a70dd317c992088212bc3f241f6296113
-SHA1 (patch-ap) = 9229c0166b37fb6991da5557c475d754715df711
-SHA1 (patch-install.py) = 8150b01843b5875558cbbf0bd621d8cf7b021905
+SHA1 (patch-al) = fe4e28b474f8a40f5b9bfada32abdb2aa37a2d0f
+SHA1 (patch-am) = 4df76fa93f26455d559acadb8389a6d7174c43ed
+SHA1 (patch-an) = edaddf39179bf686e46591c2353b16917a9ae8f0
+SHA1 (patch-ao) = 83a028f92ef743072728376cf4ddc79ef3d46381
+SHA1 (patch-custom.py.mkg) = ef45464105e7d7bc8ad2401d1b19f521e12333ca
+SHA1 (patch-install.py) = 8a02d553440bf921761a189af7b96fdd9657e870

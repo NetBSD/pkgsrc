@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.2 2006/05/29 19:44:24 joerg Exp $
+$NetBSD: patch-al,v 1.3 2014/02/13 10:10:06 mrg Exp $
 
---- InOut/winFLTK.c.orig	2005-12-30 07:21:18.000000000 -0800
-+++ InOut/winFLTK.c
+--- InOut/winFLTK.c.orig	2013-01-07 04:49:34.000000000 -0800
++++ InOut/winFLTK.c	2014-02-12 20:51:49.000000000 -0800
 @@ -29,7 +29,7 @@
  #include <stdio.h>
  #include "cwindow.h"
@@ -11,12 +11,21 @@ $NetBSD: patch-al,v 1.2 2006/05/29 19:44:24 joerg Exp $
  #include <X11/Xlib.h>
  #endif
  
-@@ -54,7 +54,7 @@ static void KillGraph_FLTK(CSOUND *csoun
- 
- void set_display_callbacks(CSOUND *csound)
- {
+@@ -81,7 +81,7 @@
+     fltkFlags = getFLTKFlagsPtr(csound);
+     if (((*fltkFlags) & 2) == 0 &&
+         !(csound->oparms->graphsoff || csound->oparms->postscript)) {
 -#ifdef LINUX
 +#if defined(LINUX) || defined(__NetBSD__) || defined(__DragonFly__)
-     Display *dpy = XOpenDisplay(NULL);
-     if (dpy == NULL)
-       return;
+       Display *dpy = XOpenDisplay(NULL);
+       if (dpy != NULL) {
+         XCloseDisplay(dpy);
+@@ -105,7 +105,7 @@
+           csound->Message(csound, "graph init \n");
+ 
+         }
+-#ifdef LINUX
++#if defined(LINUX) || defined(__NetBSD__) || defined(__DragonFly__)
+       }
+ #endif
+     }

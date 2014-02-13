@@ -1,26 +1,26 @@
-$NetBSD: patch-am,v 1.2 2006/05/29 19:44:24 joerg Exp $
+$NetBSD: patch-am,v 1.3 2014/02/13 10:10:06 mrg Exp $
 
---- Top/csmodule.c.orig	2006-03-08 15:13:15.000000000 -0800
-+++ Top/csmodule.c
-@@ -78,7 +78,7 @@
- #include "csoundCore.h"
- #include "csmodule.h"
+--- Top/csmodule.c.orig	2013-01-07 04:49:34.000000000 -0800
++++ Top/csmodule.c	2014-02-12 20:53:40.000000000 -0800
+@@ -90,7 +90,7 @@
+ #endif
+ #endif
  
--#if defined(LINUX)
-+#if defined(LINUX) || defined(__NetBSD__) || defined(__DragonFly__)
+-#if defined(LINUX) || defined(NEW_MACH_CODE) || defined(__HAIKU__)
++#if defined(LINUX) || defined(NEW_MACH_CODE) || defined(__HAIKU__) || defined(__NetBSD__) || defined(__DragonFly__)
  #include <dlfcn.h>
  #elif defined(WIN32)
  #include <windows.h>
-@@ -121,7 +121,7 @@ static  const   char    *plugindir_envva
- static  const   char    *plugindir64_envvar = "OPCODEDIR64";
- 
- /* default directory to load plugins from if environment variable is not set */
--#if !(defined(_CSOUND_RELEASE_) && (defined(LINUX) || defined(__MACH__)))
-+#if !(defined(_CSOUND_RELEASE_) && (defined(LINUX) || defined(__MACH__) || defined(__NetBSD__) || defined(__DragonFly__)))
+@@ -143,7 +143,7 @@
+ #      define CS_DEFAULT_PLUGINDIR  "/boot/common/lib/csound/plugins64"
+ #    endif
+ #  endif
+-#elif !(defined(_CSOUND_RELEASE_) && (defined(LINUX) || defined(__MACH__)))
++#elif !(defined(_CSOUND_RELEASE_) && (defined(LINUX) || defined(__MACH__) || defined(__NetBSD__) || defined(__DragonFly__)))
  #  define ENABLE_OPCODEDIR_WARNINGS 1
  #  ifdef CS_DEFAULT_PLUGINDIR
  #    undef CS_DEFAULT_PLUGINDIR
-@@ -131,9 +131,9 @@ static  const   char    *plugindir64_env
+@@ -153,9 +153,9 @@
  #  define ENABLE_OPCODEDIR_WARNINGS 0
  #  ifndef CS_DEFAULT_PLUGINDIR
  #    ifndef USE_DOUBLE
@@ -32,21 +32,30 @@ $NetBSD: patch-am,v 1.2 2006/05/29 19:44:24 joerg Exp $
  #    endif
  #  endif
  #endif
-@@ -225,7 +225,7 @@ static CS_NOINLINE int csoundLoadExterna
-     /* load library */
+@@ -258,7 +258,7 @@
      err = csound->OpenLibrary(&h, libraryPath);
-     if (err) {
--#if defined(BETA) && defined(LINUX)
-+#if defined(BETA) && (defined(LINUX) || defined(__NetBSD__) || defined(__DragonFly__))
-       csound->Warning(csound, "%s", dlerror());
- #endif
-       csound->Warning(csound, Str("could not open library '%s' (%d)"),
-@@ -591,7 +591,7 @@ PUBLIC void *csoundGetLibrarySymbol(void
+     if (UNLIKELY(err)) {
+       char ERRSTR[256];
+- #if defined(LINUX) || defined(__HAIKU__)
++ #if defined(LINUX) || defined(__HAIKU__) || defined(__NetBSD__) || defined(__DragonFly__)
+       sprintf(ERRSTR, Str("could not open library '%s' (%s)"),
+                       libraryPath, dlerror());
+  #else
+@@ -964,7 +964,7 @@
      return (void*) GetProcAddress((HMODULE) library, procedureName);
  }
  
--#elif defined(LINUX)
-+#elif defined(LINUX) || defined(__NetBSD__) || defined(__DragonFly__)
+-#elif defined(LINUX) || defined (NEW_MACH_CODE) || defined(__HAIKU__)
++#elif defined(LINUX) || defined (NEW_MACH_CODE) || defined(__HAIKU__) || defined(__NetBSD__) || defined(__DragonFly__)
  
  PUBLIC int csoundOpenLibrary(void **library, const char *libraryPath)
  {
+@@ -1358,7 +1358,7 @@
+                                  fareyseq_localops_init, hrtfearly_localops_init,
+                                  hrtfreverb_localops_init, minmax_localops_init,
+                                  vaops_localops_init,
+-#if defined(__MACH__) || defined(LINUX) || defined(__HAIKU__)
++#if defined(__MACH__) || defined(LINUX) || defined(__HAIKU__) || defined(__NetBSD__) || defined(__DragonFly__)
+                                  cpumeter_localops_init,
+ #endif
+                                  mp3in_localops_init, gendy_localops_init,

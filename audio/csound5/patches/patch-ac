@@ -1,128 +1,142 @@
-$NetBSD: patch-ac,v 1.7 2014/01/09 16:55:16 jperkin Exp $
+$NetBSD: patch-ac,v 1.8 2014/02/13 10:10:06 mrg Exp $
 
---- SConstruct.orig	2006-03-15 15:22:43.000000000 +0000
-+++ SConstruct
-@@ -50,6 +50,12 @@ def today():
- def getPlatform():
-     if sys.platform[:5] == 'linux':
-         return 'linux'
+--- SConstruct.orig	2013-01-07 04:49:34.000000000 -0800
++++ SConstruct	2014-02-12 23:01:25.000000000 -0800
+@@ -60,6 +60,10 @@
+         return 'darwin'
+     elif sys.platform[:5] == 'sunos':
+         return 'sunos'
 +    elif sys.platform[:6] == 'netbsd':
 +        return 'netbsd'
 +    elif sys.platform[:9] == 'dragonfly':
 +        return 'dragonfly'
-+    elif sys.platform[:6] == 'sunos5':
-+        return 'sunos5'
-     elif sys.platform[:3] == 'win':
-         return 'mingw'
-     elif sys.platform[:6] == 'darwin':
-@@ -207,7 +213,7 @@ opts.Add('buildOSXGUI',
- # This section also sets up customized options for third-party libraries, which
- # should take priority over default options.
+     else:
+         return 'unsupported'
  
--commonEnvironment = Environment(options = opts, ENV = {'PATH' : os.environ['PATH']})
-+commonEnvironment = Environment(options = opts, ENV = os.environ)
+@@ -408,6 +412,8 @@
+         commonEnvironment.Append(LIBS=['intl'])
+     if getPlatform() == 'haiku':
+         commonEnvironment.Append(LIBS=['intl'])
++    if getPlatform() == 'netbsd':
++        commonEnvironment.Append(LIBS=['intl'])
+ else:
+     print "CONFIGURATION DECISION: No localisation"
  
- customCPPPATH = commonEnvironment['customCPPPATH']
- commonEnvironment.Prepend(CPPPATH = customCPPPATH)
-@@ -285,11 +291,11 @@ if commonEnvironment['MSVC'] == '0':
- 
+@@ -505,17 +511,17 @@
  if getPlatform() == 'linux':
-     commonEnvironment.Append(CCFLAGS = "-DLINUX")
--    commonEnvironment.Append(CPPPATH = '/usr/local/include')
--    commonEnvironment.Append(CPPPATH = '/usr/include')
--    commonEnvironment.Append(CPPPATH = '/usr/X11R6/include')
-     commonEnvironment.Append(CCFLAGS = "-DPIPES")
+     commonEnvironment.Append(CCFLAGS = ["-DLINUX"])
+     commonEnvironment.Append(CPPFLAGS = ['-DHAVE_SOCKETS'])
+-    commonEnvironment.Append(CPPPATH = ['/usr/local/include'])
+-    commonEnvironment.Append(CPPPATH = ['/usr/include'])
+-    commonEnvironment.Append(CPPPATH = ['/usr/include'])
+-    commonEnvironment.Append(CPPPATH = ['/usr/X11R6/include'])
+     commonEnvironment.Append(CCFLAGS = ["-DPIPES"])
      commonEnvironment.Append(LINKFLAGS = ['-Wl,-Bdynamic'])
 +    commonEnvironment.Append(CCFLAGS = Split(os.environ['CFLAGS']))
 +    commonEnvironment.Append(CXXFLAGS = Split(os.environ['CXXFLAGS']))
 +    commonEnvironment.Append(LINKFLAGS = Split(os.environ['LDFLAGS']))
- elif getPlatform() == 'darwin':
-     commonEnvironment.Append(CCFLAGS = "-DMACOSX")
-     commonEnvironment.Append(CPPPATH = '/usr/local/include')
-@@ -335,6 +341,15 @@ elif getPlatform() == 'mingw':
-     pythonLinkFlags = []
-     pythonLibraryPath = []
-     pythonLibs = ['python%s' % commonEnvironment['pythonVersion'].replace('.', '')]
+ elif getPlatform() == 'sunos':
+     commonEnvironment.Append(CCFLAGS = "-D_SOLARIS")
+-    commonEnvironment.Append(CPPPATH = '/usr/local/include')
+-    commonEnvironment.Append(CPPPATH = '/usr/include')
+     commonEnvironment.Append(CPPPATH = '/usr/jdk/instances/jdk1.5.0/include')
++    commonEnvironment.Append(CCFLAGS = Split(os.environ['CFLAGS']))
++    commonEnvironment.Append(CXXFLAGS = Split(os.environ['CXXFLAGS']))
++    commonEnvironment.Append(LINKFLAGS = Split(os.environ['LDFLAGS']))
+     if compilerGNU():
+         commonEnvironment.Append(CCFLAGS = "-DPIPES")
+         commonEnvironment.Append(LINKFLAGS = ['-Wl,-Bdynamic'])
+@@ -570,6 +576,11 @@
+     if compilerIntel():
+         print 'Generating code optimized for Intel Core 2 Duo and Pentium 4 that will run on other processors also.'
+         commonEnvironment.Append(CCFLAGS = Split('/O3 /QaxTP'))
 +elif getPlatform() == 'netbsd' or getPlatform() == 'dragonfly' or getPlatform() == 'sunos5':
 +    commonEnvironment.Append(CCFLAGS = Split(os.environ['CFLAGS']))
 +    commonEnvironment.Append(CXXFLAGS = Split(os.environ['CXXFLAGS']))
 +    commonEnvironment.Append(LINKFLAGS = Split(os.environ['LDFLAGS']))
-+    pythonIncludePath = []
-+    pythonLinkFlags = []
-+    pythonLibraryPath = []
-+    pythonLibs = []
 +    SConsignFile("unused-consign-file")
  
- # Check for prerequisites.
- # We check only for headers; checking for libs may fail
-@@ -485,7 +500,7 @@ def buildzip(env, target, source):
- # library version is CS_VERSION.CS_APIVERSION
- csoundLibraryVersion = '5.1'
- csoundLibraryName = 'csound'
--if getPlatform() == 'linux' and commonEnvironment['useDouble'] != '0':
-+if (getPlatform() == 'linux' or getPlatform() == 'netbsd' or getPlatform() == 'dragonfly' or getPlatform() == 'sunos5') and commonEnvironment['useDouble'] != '0':
-     csoundLibraryName += '64'
- # flags for linking with the Csound library
- libCsoundLinkFlags = []
-@@ -526,6 +541,12 @@ if commonEnvironment['buildRelease'] !=
+ if getPlatform() == 'linux':
+     path1 = '/usr/include/python%s' % commonEnvironment['pythonVersion']
+@@ -942,6 +953,13 @@
              tmp += '64'
          s = '-DCS_DEFAULT_PLUGINDIR=\\"%s\\"' % tmp
          csoundLibraryEnvironment.Append(CPPFLAGS = [s])
-+    if getPlatform() == 'netbsd' or getPlatform() == 'dragonfly' or getPlatform() == 'sunos5':
++    if getPlatform() == 'netbsd' or getPlatform() == 'dragonfly' or getPlatform() == 'sunos':
 +        tmp = '%s/lib/csound5/plugins' % commonEnvironment['prefix']
 +        if commonEnvironment['useDouble'] != '0':
 +            tmp += '64'
 +        s = '-DCS_DEFAULT_PLUGINDIR=\\"%s\\"' % tmp
 +        csoundLibraryEnvironment.Append(CPPFLAGS = [s])
- csoundDynamicLibraryEnvironment = csoundLibraryEnvironment.Copy()
++
+ csoundDynamicLibraryEnvironment = csoundLibraryEnvironment.Clone()
  csoundDynamicLibraryEnvironment.Append(LIBS = ['sndfile'])
- if getPlatform() == 'mingw':
-@@ -550,6 +571,11 @@ if getPlatform() == 'mingw':
-     csoundDynamicLibraryEnvironment['ENV']['PATH'] = os.environ['PATH']
- elif getPlatform() == 'linux':
+ if getPlatform() == 'win32':
+@@ -999,6 +1017,11 @@
+         csoundDynamicLibraryEnvironment.Append(SHLINKFLAGS = ['-module'])
+ elif getPlatform() == 'linux' or getPlatform() == 'sunos' or getPlatform() == 'darwin':
      csoundDynamicLibraryEnvironment.Append(LIBS = ['dl', 'm', 'pthread'])
 +elif getPlatform() == 'netbsd':
 +    csoundDynamicLibraryEnvironment.Append(LIBS = ['m', 'pthread'])
 +elif getPlatform() == 'dragonfly':
 +    csoundDynamicLibraryEnvironment.Append(LINKFLAGS = ['-pthread'])
 +    csoundDynamicLibraryEnvironment.Append(LIBS = ['m'])
- csoundInterfacesEnvironment = csoundDynamicLibraryEnvironment.Copy()
+ csoundInterfacesEnvironment = csoundDynamicLibraryEnvironment.Clone()
  
  if buildOSXFramework:
-@@ -776,9 +802,17 @@ else:
-         csoundProgramEnvironment.Append(LIBS = ['dl'])
-         vstEnvironment.Append(LIBS = ['dl'])
-         guiProgramEnvironment.Append(LIBS = ['dl'])
--    csoundProgramEnvironment.Append(LIBS = ['pthread', 'm'])
+@@ -1289,7 +1312,7 @@
+     csoundLibraryEnvironment.Append(CCFLAGS='-fPIC')
+     csoundLibrary = csoundLibraryEnvironment.Library(
+         csoundLibraryName, libCsoundSources)
+-if getPlatform() == 'linux' or getPlatform() == 'sunos' or getPlatform() == 'haiku':
++if getPlatform() == 'linux' or getPlatform() == 'sunos' or getPlatform() == 'haiku' or getPlatform() == 'netbsd' or getPlatform() == 'dragonfly':
+  # We need the library before sndfile in case we are building a static
+  # libcsound and passing -Wl,-as-needed
+  libCsoundLibs.insert(0,csoundLibrary)
+@@ -1691,7 +1714,7 @@
+ makePlugin(pluginEnvironment, 'fractalnoise', ['Opcodes/tl/fractalnoise.cpp'])
+ 
+ # platform-specific
+-if (getPlatform() == 'linux' or getPlatform() == 'darwin'):
++if getPlatform() == 'linux' or getPlatform() == 'darwin' or getPlatform() == 'netbsd' or getPlatform() == 'dragonfly' or getPlatform() == 'sunos':
+     makePlugin(pluginEnvironment, 'control', ['Opcodes/control.c'])
+ #   makePlugin(pluginEnvironment, 'cpumeter', ['Opcodes/cpumeter.c'])
+ if getPlatform() == 'linux':
+@@ -1738,8 +1761,10 @@
+     print "CONFIGURATION DECISION: Building OSC plugin."
+     oscEnvironment = pluginEnvironment.Clone()
+     oscEnvironment.Append(LIBS = ['lo'])
+-    if getPlatform() != 'haiku':
+-	    oscEnvironment.Append(LIBS = ['pthread'])
++    if getPlatform() == 'dragonfly':
++        oscEnvironment.Append(LINKFLAGS = ['-pthread'])
++    elif getPlatform() != 'haiku':
++        oscEnvironment.Append(LIBS = ['pthread'])
+     if getPlatform() == 'win32':
+         oscEnvironment.Append(LIBS = csoundWindowsLibraries)
+         if compilerGNU():
+@@ -1842,8 +1867,15 @@
+         WiiEnvironment.Append(LIBS = ['wiiuse', 'bluetooth'])
+     if p5gfound :
+         P5GEnvironment.Append(LIBS = ['p5glove'])
 -    vstEnvironment.Append(LIBS = ['stdc++', 'pthread', 'm'])
 -    guiProgramEnvironment.Append(LIBS = ['stdc++', 'pthread', 'm'])
 +    if getPlatform() == 'dragonfly':
-+	csoundProgramEnvironment.Append(LIBS = ['m'])
-+	csoundProgramEnvironment.Append(LINKFLAGS = ['-pthread'])
++        csoundProgramEnvironment.Append(LINKFLAGS = ['-pthread'])
 +        vstEnvironment.Append(LIBS = ['stdc++', 'm'])
 +        vstEnvironment.Append(LINKFLAGS = ['-pthread'])
 +        guiProgramEnvironment.Append(LIBS = ['stdc++', 'm'])
 +        guiProgramEnvironment.Append(LINKFLAGS = ['-pthread'])
 +    else:
-+	csoundProgramEnvironment.Append(LIBS = ['pthread', 'm'])
 +        vstEnvironment.Append(LIBS = ['stdc++', 'pthread', 'm'])
 +        guiProgramEnvironment.Append(LIBS = ['stdc++', 'pthread', 'm'])
      if getPlatform() == 'darwin':
-         csoundProgramEnvironment.Append(LINKFLAGS = Split('''
-             -framework Carbon -framework CoreAudio -framework CoreMidi
-@@ -989,7 +1023,7 @@ makePlugin(pluginEnvironment, 'stdopcod'
- pluginLibraries.append('opcodes.dir')
- MacOSX_InstallPlugin('opcodes.dir')
+         csoundProgramEnvironment.Append(LINKFLAGS = Split('''-framework Carbon -framework CoreAudio -framework CoreMIDI'''))
  
--if getPlatform() == 'linux' or getPlatform() == 'darwin':
-+if getPlatform() == 'linux' or getPlatform() == 'darwin' or getPlatform() == 'netbsd' or getPlatform() == 'dragonfly' or getPlatform() == 'sunos5':
-     makePlugin(pluginEnvironment, 'control', ['Opcodes/control.c'])
- makePlugin(pluginEnvironment, 'ftest', ['Opcodes/ftest.c'])
- makePlugin(pluginEnvironment, 'mixer', ['Opcodes/mixer.cpp'])
-@@ -1042,6 +1076,13 @@ else:
-             -framework Carbon -framework CoreAudio -framework CoreMidi
-             -framework ApplicationServices
-         '''))
+@@ -1872,6 +1904,13 @@
+         widgetsEnvironment.Append(LIBS = csoundWindowsLibraries)
+     elif getPlatform() == 'darwin':
+         widgetsEnvironment.ParseConfig('fltk-config --use-images --cflags --cxxflags --ldflags')
 +    elif getPlatform() == 'netbsd':
 +        widgetsEnvironment.ParseConfig('fltk-config --use-images --cflags --cxxflags --ldflags')
 +        widgetsEnvironment.Append(LIBS = ['stdc++', 'pthread', 'm'])
@@ -133,10 +147,10 @@ $NetBSD: patch-ac,v 1.7 2014/01/09 16:55:16 jperkin Exp $
      makePlugin(widgetsEnvironment, 'widgets',
                 ['InOut/FL_graph.cpp', 'InOut/winFLTK.c', 'InOut/widgets.cpp'])
  
-@@ -1060,7 +1101,11 @@ if not (commonEnvironment['useALSA'] ==
+@@ -1909,7 +1948,11 @@
  else:
      print "CONFIGURATION DECISION: Building ALSA plugin."
-     alsaEnvironment = pluginEnvironment.Copy()
+     alsaEnvironment = pluginEnvironment.Clone()
 -    alsaEnvironment.Append(LIBS = ['asound', 'pthread'])
 +    if getPlatform() == 'dragonfly':
 +        alsaEnvironment.Append(LIBS = ['asound'])
@@ -145,55 +159,65 @@ $NetBSD: patch-ac,v 1.7 2014/01/09 16:55:16 jperkin Exp $
 +        alsaEnvironment.Append(LIBS = ['asound', 'pthread'])
      makePlugin(alsaEnvironment, 'rtalsa', ['InOut/rtalsa.c'])
  
- if getPlatform() == 'mingw':
-@@ -1082,6 +1127,8 @@ else:
-     elif getPlatform() == 'mingw':
+ if pulseaudioFound and (getPlatform() == 'linux' or getPlatform() == 'sunos'):
+@@ -1942,6 +1985,9 @@
          portaudioEnvironment.Append(LIBS = ['winmm', 'dsound'])
          portaudioEnvironment.Append(LIBS = csoundWindowsLibraries)
+         makePlugin(portaudioEnvironment, 'rtpa', ['InOut/rtpa.cpp'])
 +    elif getPlatform() == 'netbsd' or getPlatform() == 'dragonfly' or getPlatform() == 'sunos5':
 +        portaudioEnvironment.ParseConfig('pkg-config --cflags --libs portaudio-2.0')
-     makePlugin(portaudioEnvironment, 'rtpa', ['InOut/rtpa.c'])
++        makePlugin(portaudioEnvironment, 'rtpa', ['InOut/rtpa.c'])
+     else:
+         makePlugin(portaudioEnvironment, 'rtpa', ['InOut/rtpa.c'])
  
- if not (commonEnvironment['useJack'] == '1' and jackFound):
-@@ -1091,6 +1138,9 @@ else:
-     jackEnvironment = pluginEnvironment.Copy()
-     if getPlatform() == 'linux':
+@@ -1954,6 +2000,9 @@
          jackEnvironment.Append(LIBS = ['jack', 'asound', 'pthread'])
+     elif getPlatform() == 'win32':
+         jackEnvironment.Append(LIBS = ['jackdmp'])
 +    elif getPlatform() == 'dragonfly':
 +        jackEnvironment.Append(LIBS = ['jack'])
 +        jackEnvironment.Append(LINKFLAGS = ['-pthread'])
      else:
-         jackEnvironment.Append(LIBS = ['jack', 'pthread'])
+         jackEnvironment.Append(LIBS = ['pthread', 'jack'])
      makePlugin(jackEnvironment, 'rtjack', ['InOut/rtjack.c'])
-@@ -1100,7 +1150,11 @@ if not (commonEnvironment['useOSC'] == '
- else:
-     print "CONFIGURATION DECISION: Building OSC plugin."
-     oscEnvironment = pluginEnvironment.Copy()
--    oscEnvironment.Append(LIBS = ['lo', 'pthread'])
-+    if getPlatform() == 'dragonfly':
-+        oscEnvironment.Append(LIBS = ['lo'])
-+        oscEnvironment.Append(LINKFLAGS = ['-pthread'])
-+    else:
-+        oscEnvironment.Append(LIBS = ['lo', 'pthread'])
-     if getPlatform() == 'mingw':
-         oscEnvironment.Append(LIBS = csoundWindowsLibraries)
-         oscEnvironment.Append(SHLINKFLAGS = ['-Wl,--enable-stdcall-fixup'])
-@@ -1118,8 +1172,10 @@ else:
-         fluidEnvironment.Append(CPPFLAGS = ['-DFLUIDSYNTH_NOT_A_DLL'])
-         fluidEnvironment.Append(LIBS = ['winmm', 'dsound'])
-         fluidEnvironment.Append(LIBS = csoundWindowsLibraries)
--    elif getPlatform() == 'linux' or getPlatform() == 'darwin':
-+    elif getPlatform() == 'linux' or getPlatform() == 'darwin' or getPlatform() == 'netbsd':
-         fluidEnvironment.Append(LIBS = ['pthread'])
-+    elif getPlatform() == 'dragonfly':
-+        fluidEnvironment.Append(LINKFLAGS = ['-pthread'])
-     makePlugin(fluidEnvironment, 'fluidOpcodes',
-                ['Opcodes/fluidOpcodes/fluidOpcodes.c'])
+@@ -2016,6 +2065,12 @@
+ 		fluidEnvironment.Append(LIBS = ['pthread'])
+ 	elif getPlatform() == 'haiku':
+ 		fluidEnvironment.Append(LIBS = ['fluidsynth'])
++        elif getPlatform() == 'netbsd':
++		fluidEnvironment.Append(LIBS = ['fluidsynth'])
++		fluidEnvironment.Append(LIBS = ['pthread'])
++        elif getPlatform() == 'dragonfly':
++		fluidEnvironment.Append(LIBS = ['fluidsynth'])
++                fluidEnvironment.Append(LINKFLAGS = ['-pthread'])
+ 	makePlugin(fluidEnvironment, 'fluidOpcodes',
+ 			   ['Opcodes/fluidOpcodes/fluidOpcodes.cpp'])
  
-@@ -1237,6 +1293,13 @@ else:
-         guiProgramEnvironment.Prepend(LINKFLAGS = ['-mwindows'])
-         vstEnvironment.Append(LIBS = ['fltk_images', 'fltk'])
-         guiProgramEnvironment.Append(LINKFLAGS = '-mwindows')
+@@ -2178,8 +2233,10 @@
+         stkEnvironment.Append(LIBS = ['stdc++'])
+     if getPlatform() == 'win32':
+         stkEnvironment.Append(LIBS = csoundWindowsLibraries)
+-    elif getPlatform() == 'linux' or getPlatform() == 'darwin' or getPlatform() == 'sunos':
++    elif getPlatform() == 'linux' or getPlatform() == 'darwin' or getPlatform() == 'sunos' or getPlatform() == 'netbsd':
+         stkEnvironment.Append(LIBS = ['pthread'])
++    elif getPlatform() == 'dragonfly':
++        stkEnvironment.Append(LINKFLAGS = ['-pthread'])
+     # This is the one that actually defines the opcodes.
+     # They are straight wrappers, as simple as possible.
+     stk = makePlugin(stkEnvironment, 'stk', ['Opcodes/stk/stkOpcodes.cpp'])
+@@ -2206,6 +2263,8 @@
+         pyEnvironment.Append(LIBS = ['dl', 'm'])
+     elif getPlatform() == 'win32':
+         pyEnvironment['ENV']['PATH'] = os.environ['PATH']
++    elif getPlatform() == 'netbsd' or getPlatform() == 'dragonfly':
++        pyEnvironment.Append(LIBS = ['m'])
+     pythonOpcodes = makePlugin(pyEnvironment, 'py',
+                                ['Opcodes/py/pythonopcodes.c'])
+     if getPlatform() == 'win32' and pythonLibs[0] < 'python24':
+@@ -2606,6 +2665,13 @@
+             vstEnvironment.Append(LIBS = Split('fltk fltk_images fltk_png fltk_jpeg fltk_z'))
+         else:
+             vstEnvironment.Append(LIBS = Split('csound64 csnd fltk fltkimages fltkpng fltkjpeg fltkz'))
 +    elif getPlatform() == 'netbsd' or getPlatform() == 'dragonfly':
 +        vstEnvironment.Append(LIBS = ['m'])
 +        vstEnvironment.Append(SHLINKFLAGS = '--no-export-all-symbols')
@@ -201,31 +225,10 @@ $NetBSD: patch-ac,v 1.7 2014/01/09 16:55:16 jperkin Exp $
 +        guiProgramEnvironment.Prepend(LINKFLAGS = ['-Wl,-rpath-link,.'])
 +        os.spawnvp(os.P_WAIT, 'rm', ['rm', '-f', '_CsoundVST.so'])
 +        os.symlink('lib_CsoundVST.so', '_CsoundVST.so')
-     guiProgramEnvironment.Prepend(LIBS = ['_CsoundVST'])
-     for option in vstEnvironment['CCFLAGS']:
-         if string.find(option, '-D') == 0:
-@@ -1420,8 +1483,10 @@ else:
-         stkEnvironment.Append(LIBS = ['stdc++'])
-     if getPlatform() == 'mingw':
-         stkEnvironment.Append(LIBS = csoundWindowsLibraries)
--    elif getPlatform() == 'linux' or getPlatform() == 'darwin':
-+    elif getPlatform() == 'linux' or getPlatform() == 'darwin' or getPlatform() == 'netbsd':
-         stkEnvironment.Append(LIBS = ['pthread'])
-+    elif getPlatform() == 'dragonfly':
-+        stkEnvironment.Append(LINKFLAGS = ['-pthread'])
-     # This is the one that actually defines the opcodes.
-     # They are straight wrappers, as simple as possible.
-     stk = makePlugin(stkEnvironment, 'stk', ['Opcodes/stk/stkOpcodes.cpp'])
-@@ -1443,6 +1508,8 @@ else:
-     elif getPlatform() == 'mingw':
-         pyEnvironment['ENV']['PATH'] = os.environ['PATH']
-         pyEnvironment.Append(SHLINKFLAGS = '--no-export-all-symbols')
-+    elif getPlatform() == 'netbsd' or getPlatform() == 'dragonfly':
-+        pyEnvironment.Append(LIBS = ['m'])
-     pythonOpcodes = makePlugin(pyEnvironment, 'py',
-                                ['Opcodes/py/pythonopcodes.c'])
-     if getPlatform() == 'mingw' and pythonLibs[0] < 'python24':
-@@ -1461,7 +1528,7 @@ if commonEnvironment['buildPDClass']=='1
+     print 'PATH =', commonEnvironment['ENV']['PATH']
+     csoundVstSources = Split('''
+     frontends/CsoundVST/vstsdk2.4/public.sdk/source/vst2.x/audioeffect.cpp
+@@ -2653,7 +2719,7 @@
          pdClass = pdClassEnvironment.Program(
              'csoundapi~.pd_darwin',
              'frontends/csoundapi_tilde/csoundapi_tilde.c')
@@ -234,40 +237,46 @@ $NetBSD: patch-ac,v 1.7 2014/01/09 16:55:16 jperkin Exp $
          pdClass = pdClassEnvironment.SharedLibrary(
              'csoundapi~.pd_linux',
              'frontends/csoundapi_tilde/csoundapi_tilde.c',
-@@ -1493,6 +1560,11 @@ if commonEnvironment['buildTclcsound'] =
-         '''))
-     elif getPlatform() == 'linux':
-         csTclEnvironment.Append(LIBS = ['tcl8.4', 'tk8.4', 'dl', 'pthread'])
-+    elif getPlatform() == 'netbsd':
-+        csTclEnvironment.Append(LIBS = ['tcl8.4', 'tk8.4', 'pthread'])
-+    elif getPlatform() == 'dragonfly':
-+        csTclEnvironment.Append(LIBS = ['tcl8.4', 'tk8.4'])
-+        csTclEnvironment.Append(LINKFLAGS = ['-pthread'])
-     elif getPlatform() == 'mingw':
-         csTclEnvironment.Append(LIBS = ['tcl84', 'tk84'])
+@@ -2694,6 +2760,15 @@
+         lib2 = 'tk%s' % commonEnvironment['tclversion']
+         csTclEnvironment.Append(LIBS = [lib1, lib2])
          csTclEnvironment.Append(LIBS = csoundWindowsLibraries)
-@@ -1591,18 +1663,18 @@ else:
++    elif getPlatform() == 'netbsd':
++        lib1 = 'tcl%s' % commonEnvironment['tclversion']
++        lib2 = 'tk%s' % commonEnvironment['tclversion']
++        csTclEnvironment.Append(LIBS = [lib1, lib2, 'pthread'])
++    elif getPlatform() == 'dragonfly':
++        lib1 = 'tcl%s' % commonEnvironment['tclversion']
++        lib2 = 'tk%s' % commonEnvironment['tclversion']
++        csTclEnvironment.Append(LIBS = [lib1, lib2])
++        csTclEnvironment.Append(LINKFLAGS = ['-pthread'])
+     csTclCmdObj = csTclEnvironment.SharedObject(
+         'frontends/tclcsound/commands.c')
+     csTcl = csTclEnvironment.Program(
+@@ -2887,11 +2962,15 @@
+ PREFIX = INSTDIR + commonEnvironment['prefix']
  
- PREFIX = commonEnvironment['prefix']
- 
--BIN_DIR = PREFIX + "/bin"
--INCLUDE_DIR = PREFIX + "/include/csound"
+ BIN_DIR = PREFIX + "/bin"
 +BIN_DIR = PREFIX + "/lib/csound5"
+ INCLUDE_DIR = PREFIX + "/include/csound"
 +INCLUDE_DIR = PREFIX + "/include/csound5"
  
- if (commonEnvironment['Word64'] == '1'):
--    LIB_DIR = PREFIX + "/lib64"
+ if (commonEnvironment['Lib64'] == '1'):
+     LIB_DIR = PREFIX + "/lib64"
 +    LIB_DIR = PREFIX + "/lib64/csound5"
+     PYTHON_DIR = '%s/lib64' % sys.prefix
++    PYTHON_DIR = '%s/lib64/csount5' % sys.prefix
  else:
--    LIB_DIR = PREFIX + "/lib"
-+    LIB_DIR = PREFIX + "/lib/csound5"
+     LIB_DIR = PREFIX + "/lib"
+     PYTHON_DIR = '%s/lib' % sys.prefix
+@@ -2903,8 +2982,10 @@
  
  if commonEnvironment['useDouble'] == '0':
--    PLUGIN_DIR = LIB_DIR + "/csound/plugins"
+     PLUGIN_DIR = LIB_DIR + "/csound/plugins"
 +    PLUGIN_DIR = LIB_DIR + "/plugins"
  else:
--    PLUGIN_DIR = LIB_DIR + "/csound/plugins64"
-+    PLUGIN_DIR = LIB_DIR + "/plugins"
+     PLUGIN_DIR = LIB_DIR + "/csound/plugins64"
++    PLUGIN_DIR = LIB_DIR + "/plugins64"
  
  if commonEnvironment['install'] == '1':
      installExecutables = Alias('install-executables',
