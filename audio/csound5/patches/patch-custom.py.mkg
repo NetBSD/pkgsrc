@@ -1,0 +1,15 @@
+$NetBSD: patch-custom.py.mkg,v 1.1 2014/02/13 12:44:47 mrg Exp $
+
+--- custom.py.mkg.orig	2013-01-07 04:49:34.000000000 -0800
++++ custom.py.mkg	2014-02-12 22:49:53.000000000 -0800
+@@ -25,6 +25,10 @@
+     customCPPPATH.append('/opt/local/include/boost-1_32/')
+     customCPPPATH.append('/usr/include/python2.3')
+     customCXXFLAGS.append('-fabi-version=0')
++elif sys.platform == 'dragonfly':
++    platform = 'dragonfly'
++elif sys.platform == 'netbsd':
++    platform = 'netbsd'
+ elif sys.platform[:3] == 'win':
+     # For the basic build you need MinGW, MSys, and libsndfile.
+     # Add them here:
