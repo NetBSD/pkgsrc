@@ -1,0 +1,13 @@
+$NetBSD: patch-storage_blackhole_CMakeLists.txt,v 1.1 2014/02/13 15:47:15 jperkin Exp $
+
+Build with newer DTrace.
+
+--- storage/blackhole/CMakeLists.txt.orig	2014-01-14 08:16:26.000000000 +0000
++++ storage/blackhole/CMakeLists.txt
+@@ -14,4 +14,5 @@
+ # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+ 
+ SET(BLACKHOLE_SOURCES  ha_blackhole.cc ha_blackhole.h)
+-MYSQL_ADD_PLUGIN(blackhole ${BLACKHOLE_SOURCES} STORAGE_ENGINE)
++MYSQL_ADD_PLUGIN(blackhole ${BLACKHOLE_SOURCES} STORAGE_ENGINE
++                 DTRACE_INSTRUMENTED)
