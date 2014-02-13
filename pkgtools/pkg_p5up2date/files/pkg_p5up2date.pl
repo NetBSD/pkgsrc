@@ -325,7 +325,7 @@ foreach my $dn (@p5_pkg_dirs)
     elsif( is_ne($pkgdist{$distnm}, $pkgver ) )
     {
         (my $pkgdir  = $dn) =~ s,$pkgsrc_base/,,;
-	$writer->write_entry( File::Spec->catfile( $pkgdir, $pkgnm ), $maint, "seems to out of sync", $pkgdist{$distnm}, "!=", $pkgver, defined( $havepkgs{$pkgnm} ) );
+	$writer->write_entry( File::Spec->catfile( $pkgdir, $pkgnm ), $maint, "out of sync?", $pkgdist{$distnm}, "!=", $pkgver, defined( $havepkgs{$pkgnm} ) );
 	++$pkgcrank;
     }
     else
