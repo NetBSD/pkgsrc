@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/02/12 23:18:25 tron Exp $
+# $NetBSD: Makefile,v 1.4 2014/02/13 09:46:00 fhajny Exp $
 
-DISTNAME=	rabbitmq-c-0.4.1
-PKGREVISION=	1
+DISTNAME=	rabbitmq-c-0.5.0
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/alanxz/rabbitmq-c/releases/download/v${PKGVERSION_NOREV}/
 
@@ -13,7 +12,7 @@ LICENSE=	mit
 BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
 
 USE_CMAKE=		yes
-USE_LANGUAGES+=		c99
+USE_LANGUAGES=		c c99
 USE_TOOLS+=		pkg-config
 
 SUBST_CLASSES+=		man
