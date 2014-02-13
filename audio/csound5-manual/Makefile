@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/09/11 23:59:29 asau Exp $
+# $NetBSD: Makefile,v 1.9 2014/02/13 10:21:50 mrg Exp $
 #
 
 DISTNAME=		Csound${CSOUND_VERSION}_manual_html
@@ -12,7 +12,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.csounds.com/
 COMMENT=		Csound5 Reference Manual
 
-CSOUND_VERSION=		5.01
+CSOUND_VERSION=		5.19
 NO_BUILD=		yes
 WRKSRC=			${WRKDIR}/html
 DIST_SUBDIR=		${PKGNAME_NOREV}
