@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.691 2014/02/14 12:05:40 obache Exp $
+$NetBSD: CHANGES-2014,v 1.692 2014/02/14 12:52:28 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1091,3 +1091,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/apache-cassandra to 1.2.15 [root 2014-02-14]
 	Updated devel/fossil to 1.28 [roy 2014-02-14]
 	Updated misc/whohas to 0.29nb3 [obache 2014-02-14]
+	Updated www/firefox-l10n to 27.0 [ryoon 2014-02-14]
