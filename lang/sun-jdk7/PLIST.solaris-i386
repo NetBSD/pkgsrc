@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.solaris-i386,v 1.4 2014/01/08 11:05:57 jperkin Exp $
+@comment $NetBSD: PLIST.solaris-i386,v 1.5 2014/02/14 16:24:35 jperkin Exp $
 bin/sun7-appletviewer
 bin/sun7-apt
 bin/sun7-extcheck
@@ -610,6 +610,7 @@ java/sun-7/man/ja_JP.PCK/man1/jdb.1
 java/sun-7/man/ja_JP.PCK/man1/jhat.1
 java/sun-7/man/ja_JP.PCK/man1/jinfo.1
 java/sun-7/man/ja_JP.PCK/man1/jmap.1
+java/sun-7/man/ja_JP.PCK/man1/jmc.1
 java/sun-7/man/ja_JP.PCK/man1/jps.1
 java/sun-7/man/ja_JP.PCK/man1/jrunscript.1
 java/sun-7/man/ja_JP.PCK/man1/jsadebugd.1
@@ -640,6 +641,7 @@ java/sun-7/man/ja_JP.UTF-8/man1/jdb.1
 java/sun-7/man/ja_JP.UTF-8/man1/jhat.1
 java/sun-7/man/ja_JP.UTF-8/man1/jinfo.1
 java/sun-7/man/ja_JP.UTF-8/man1/jmap.1
+java/sun-7/man/ja_JP.UTF-8/man1/jmc.1
 java/sun-7/man/ja_JP.UTF-8/man1/jps.1
 java/sun-7/man/ja_JP.UTF-8/man1/jrunscript.1
 java/sun-7/man/ja_JP.UTF-8/man1/jsadebugd.1
@@ -670,6 +672,7 @@ java/sun-7/man/man1/jdb.1
 java/sun-7/man/man1/jhat.1
 java/sun-7/man/man1/jinfo.1
 java/sun-7/man/man1/jmap.1
+java/sun-7/man/man1/jmc.1
 java/sun-7/man/man1/jps.1
 java/sun-7/man/man1/jrunscript.1
 java/sun-7/man/man1/jsadebugd.1
