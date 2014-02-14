@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2013/05/31 12:41:50 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2014/02/14 04:14:40 rodent Exp $
 #
 
-DISTNAME=	apg-2.2.3
-PKGREVISION=	2
+DISTNAME=	apg-2.3.0b
 CATEGORIES=	security
 MASTER_SITES=	http://www.adel.nursat.kz/apg/download/
 
@@ -22,6 +21,9 @@ CS_LIBS.SunOS+=	-lnsl -lsocket
 MAKE_ENV+=	CS_LIBS=${CS_LIBS:Q}
 
 INSTALLATION_DIRS+=	bin sbin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
+
+post-extract:
+	${CHMOD} -R u+w ${WRKSRC}
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/perl/apgcli.pl ${DESTDIR}${PREFIX}/bin/apgcli
