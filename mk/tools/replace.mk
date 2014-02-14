@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.266 2014/02/02 07:09:23 richard Exp $
+# $NetBSD: replace.mk,v 1.267 2014/02/14 07:43:46 obache Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -852,6 +852,16 @@ TOOLS_DEPENDS.unzoo?=		unzoo-[0-9]*:../../archivers/unzoo
 TOOLS_CREATE+=			unzoo
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.unzoo=unzoo
 TOOLS_PATH.unzoo=		${TOOLS_PREFIX.unzoo}/bin/unzoo
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.wget) && !empty(_USE_TOOLS:Mwget)
+.  if !empty(PKGPATH:Mnet/wget)
+MAKEFLAGS+=			TOOLS_IGNORE.wget=
+.  elif !empty(_TOOLS_USE_PKGSRC.wget:M[yY][eE][sS])
+TOOLS_DEPENDS.wget?=		wget-[0-9]*:../../net/wget
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.wget=wget
+TOOLS_PATH.wget=		${TOOLS_PREFIX.wget}/bin/wget
 .  endif
 .endif
 
