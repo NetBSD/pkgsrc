@@ -1,12 +1,12 @@
-$NetBSD: patch-pty.c,v 1.2 2013/07/30 19:15:30 christos Exp $
+$NetBSD: patch-pty.c,v 1.3 2014/02/14 22:06:39 christos Exp $
 
 Fix pty allocation to use openpty(3) for all BSD's
 Fix closing slave bug.
 Set the pty queue size if we have it.
 Set set _NETBSRC_SOURCE for older NetBSD versions and sockaddr_storage.
 
---- pty.c.orig	2013-06-17 06:17:24.000000000 -0400
-+++ pty.c	2013-07-30 14:58:46.000000000 -0400
+--- pty.c.orig	2014-01-16 17:02:04.000000000 -0500
++++ pty.c	2014-02-14 14:28:45.000000000 -0500
 @@ -17,6 +17,7 @@
  #define _ISOC99_SOURCE
  #define _XOPEN_SOURCE
@@ -15,7 +15,7 @@ Set set _NETBSRC_SOURCE for older NetBSD versions and sockaddr_storage.
  #define _XOPEN_SOURCE_EXTENDED
  
  #include <stdlib.h>
-@@ -25,10 +26,10 @@
+@@ -25,6 +26,7 @@
  #include <errno.h>
  #include <stdio.h>
  #include <fcntl.h>
@@ -23,19 +23,15 @@ Set set _NETBSRC_SOURCE for older NetBSD versions and sockaddr_storage.
  #include "l2tp.h"
  
  
--
- #ifdef SOLARIS
- #define PTY00 "/dev/ptyXX"
- #define PTY10 "pqrstuvwxyz"
-@@ -41,13 +42,12 @@
+@@ -41,13 +43,12 @@
  #define PTY01 "0123456789abcdef"
  #endif
  
--#ifdef FREEBSD
+-#if defined(FREEBSD) || defined(NETBSD)
 -#define PTY00 "/dev/ptyXX"
 -#define PTY10 "p"
 -#define PTY01 "0123456789abcdefghijklmnopqrstuv"
-+#if defined(NETBSD) || defined(FREEBSD) || defined(OPENBSD)
++#if defined(FREEBSD) || defined(NETBSD) || defined(OPENBSD)
 +#define ALLBSD
 +#include <util.h>
  #endif
@@ -45,7 +41,7 @@ Set set _NETBSRC_SOURCE for older NetBSD versions and sockaddr_storage.
  int getPtyMaster_pty (char *tty10, char *tty01)
  {
      char *p10;
-@@ -110,56 +110,63 @@
+@@ -110,56 +111,63 @@
  
      return fd;
  }
