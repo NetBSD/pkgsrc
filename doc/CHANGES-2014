@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.688 2014/02/14 09:27:07 adam Exp $
+$NetBSD: CHANGES-2014,v 1.689 2014/02/14 10:25:35 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1088,3 +1088,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/hdf5 to 1.8.12 [adam 2014-02-14]
 	Updated devel/hdf5-c++ to 1.8.12 [adam 2014-02-14]
 	Updated math/glpk to 4.53 [adam 2014-02-14]
+	Updated databases/apache-cassandra to 1.2.15 [root 2014-02-14]
