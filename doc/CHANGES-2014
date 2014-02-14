@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.693 2014/02/14 16:09:27 jperkin Exp $
+$NetBSD: CHANGES-2014,v 1.694 2014/02/14 17:27:03 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1093,3 +1093,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/whohas to 0.29nb3 [obache 2014-02-14]
 	Updated www/firefox-l10n to 27.0 [ryoon 2014-02-14]
 	Updated devel/bmake to 20140214 [jperkin 2014-02-14]
+	Updated security/gnutls to 3.2.11 [drochner 2014-02-14]
+	Updated graphics/veusz to 1.20.1 [drochner 2014-02-14]
