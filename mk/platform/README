@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.3 2013/04/28 12:53:56 obache Exp $
+$NetBSD: README,v 1.4 2014/02/14 13:11:17 obache Exp $
 
 These files contain platform-specific definitions that are used by the
 pkgsrc infrastructure.
@@ -113,6 +113,9 @@ TODO: Document all these variables.
     _OPSYS_MAX_CMDLEN_CMD is used to check maximum command line length and
 	set it in configure's environment, to avoid a test required by the
 	libtool script that takes forever.
+
+    _OPSYS_PREFER.<pkg> is builtin defaults which make sense for this platform.
+	see also: mk/buildlink3/bsd.builtin.mk.
 
 === Implementation notes ===
 
