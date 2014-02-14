@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.687 2014/02/14 04:15:03 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.688 2014/02/14 09:27:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1085,3 +1085,6 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/ImageMagick to 6.8.8.5 [wiz 2014-02-13]
 	Updated graphics/p5-PerlMagick to 6.8.8.5 [wiz 2014-02-13]
 	Updated security/apg to 2.3.0b [rodent 2014-02-14]
+	Updated devel/hdf5 to 1.8.12 [adam 2014-02-14]
+	Updated devel/hdf5-c++ to 1.8.12 [adam 2014-02-14]
+	Updated math/glpk to 4.53 [adam 2014-02-14]
