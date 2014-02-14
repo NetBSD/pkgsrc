@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/02/14 12:05:28 obache Exp $
+# $NetBSD: Makefile,v 1.13 2014/02/14 12:08:34 obache Exp $
 #
 
 DISTNAME=	whohas-0.29
@@ -20,8 +20,7 @@ REPLACE_PERL=	program/whohas
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/de/man1 \
 			share/doc/whohas
 
-do-build:
-	# nothing
+NO_BUILD=	yes
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/program/whohas ${DESTDIR}${PREFIX}/bin
