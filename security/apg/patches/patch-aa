@@ -1,8 +1,18 @@
-$NetBSD: patch-aa,v 1.3 2006/11/03 09:07:30 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2014/02/14 04:14:40 rodent Exp $
 
---- Makefile.orig	2003-08-07 15:40:30.000000000 +0000
+Don't hardcode CC, CFLAGS, PREFIX. Fix installation stage.
+
+--- Makefile.orig	2003-08-07 15:40:39.000000000 +0000
 +++ Makefile
-@@ -1,12 +1,10 @@
+@@ -1,7 +1,6 @@
+ ##################################################################
+ # Directories
+ # Install dirs
+-INSTALL_PREFIX = /usr/local
+ 
+ # Full default path is /usr/local/bin
+ APG_BIN_DIR = /bin
+@@ -60,12 +59,10 @@ APG_CLIBS += -lcrypt
  ##################################################################
  # You can modify CC variable if you have compiler other than GCC
  # But the code was designed and tested with GCC
@@ -11,19 +21,11 @@ $NetBSD: patch-aa,v 1.3 2006/11/03 09:07:30 joerg Exp $
  ##################################################################
  # Compilation flags
  # You should comment the line below for AIX+native cc
--FLAGS = -Wall
+-CFLAGS = -Wall
  
- ##################################################################
- # Libraries
-@@ -39,7 +37,6 @@ USE_SHA = APG_DONOTUSE_SHA
- ##################################################################
- # Directories
- # Install dirs
--INSTALL_PREFIX = /usr/local
- APG_BIN_DIR = /bin
- APG_MAN_DIR = /man/man1
- APGD_BIN_DIR = /sbin
-@@ -110,24 +107,12 @@ strip:
+ ####################################################################
+ # If you plan to install APG daemon you should look at lines below #
+@@ -143,24 +140,12 @@ strip:
  	strip ${BFM_PROGNAME}
  
  install:
