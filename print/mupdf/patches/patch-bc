@@ -1,0 +1,13 @@
+$NetBSD: patch-bc,v 1.1 2014/02/14 17:49:41 drochner Exp $
+
+--- source/xps/xps-gradient.c.orig	2013-08-14 12:41:20.000000000 +0000
++++ source/xps/xps-gradient.c
+@@ -38,7 +38,7 @@ xps_parse_gradient_stops(xps_document *d
+ 	struct stop *stops, int maxcount)
+ {
+ 	fz_colorspace *colorspace;
+-	float sample[8];
++	float sample[FZ_MAX_COLORS];
+ 	float rgb[3];
+ 	int before, after;
+ 	int count;
