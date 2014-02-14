@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.339 2013/12/19 23:50:29 tron Exp $
+# $NetBSD: bsd.prefs.mk,v 1.340 2014/02/14 07:43:46 obache Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -678,6 +678,8 @@ USE_TOOLS+=	awk:pkgsrc cut:pkgsrc echo:pkgsrc pwd:pkgsrc		\
 FETCH_USING=	fetch
 .  elif defined(TOOLS_PLATFORM.curl)
 FETCH_USING=	curl
+.  elif defined(TOOLS_PLATFORM.wget)
+FETCH_USING=	wget
 .  else
 FETCH_USING=	ftp
 .  endif
