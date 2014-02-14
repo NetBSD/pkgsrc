@@ -1,31 +1,55 @@
-$NetBSD: patch-network.c,v 1.1 2013/07/02 00:22:17 christos Exp $
+$NetBSD: patch-network.c,v 1.2 2014/02/14 22:06:39 christos Exp $
 
 Handle not having IP_PKTINFO
+Handle not having SO_NO_CHECK
 Don't set control buf if controllen == 0
+Fix reversed PLBIT test?
 
---- network.c.orig	2013-06-17 06:17:24.000000000 -0400
-+++ network.c	2013-06-26 17:15:55.000000000 -0400
-@@ -85,14 +85,15 @@
+--- network.c.orig	2014-01-16 17:02:04.000000000 -0500
++++ network.c	2014-02-14 16:00:07.000000000 -0500
+@@ -85,24 +85,26 @@
  
  	    gconfig.ipsecsaref=0;
      }
 -    
-+#else
-+	l2tp_log(LOG_INFO, "No attempt being made to use IPsec SAref's since we're not on a Linux machine.\n");
-+
-+#endif    
-+#ifdef IP_PKTINFO
-     arg=1;
-     if(setsockopt(server_socket, IPPROTO_IP, IP_PKTINFO, (char*)&arg, sizeof(arg)) != 0) {
- 	    l2tp_log(LOG_CRIT, "setsockopt IP_PKTINFO: %s\n", strerror(errno));
+-    arg=1;
+-    if(setsockopt(server_socket, IPPROTO_IP, IP_PKTINFO, (char*)&arg, sizeof(arg)) != 0) {
+-	    l2tp_log(LOG_CRIT, "setsockopt IP_PKTINFO: %s\n", strerror(errno));
+-    }
+ #else
+     {
+ 	l2tp_log(LOG_INFO, "No attempt being made to use IPsec SAref's since we're not on a Linux machine.\n");
      }
--#else
--	l2tp_log(LOG_INFO, "No attempt being made to use IPsec SAref's since we're not on a Linux machine.\n");
 -
++#endif
++#ifdef IP_PKTINFO    
++    arg=1;
++    if(setsockopt(server_socket, IPPROTO_IP, IP_PKTINFO, (char*)&arg, sizeof(arg)) != 0) {
++	    l2tp_log(LOG_CRIT, "setsockopt IP_PKTINFO: %s\n", strerror(errno));
++    }
  #endif
  
+     /* turn off UDP checksums */
++#ifdef SO_NO_CHECK
+     arg=1;
+     if (setsockopt(server_socket, SOL_SOCKET, SO_NO_CHECK , (void*)&arg,
+                    sizeof(arg)) ==-1) {
+       l2tp_log(LOG_INFO, "unable to turn off UDP checksums");
+     }
++#endif
+ 
  #ifdef USE_KERNEL
-@@ -271,12 +272,18 @@
+     if (gconfig.forceuserspace)
+@@ -143,7 +145,7 @@
+      */
+ 
+     struct payload_hdr *p = (struct payload_hdr *) buf;
+-    if (PLBIT (p->ver))
++    if (!PLBIT (p->ver))
+     {
+         *tunnel = p->tid;
+         *call = p->cid;
+@@ -280,12 +282,18 @@
  void udp_xmit (struct buffer *buf, struct tunnel *t)
  {
      struct cmsghdr *cmsg;
@@ -45,7 +69,7 @@ Don't set control buf if controllen == 0
      int finallen;
      
      /*
-@@ -303,7 +310,7 @@
+@@ -312,7 +320,7 @@
  	
  	finallen = cmsg->cmsg_len;
      }
@@ -54,7 +78,7 @@ Don't set control buf if controllen == 0
      if (t->my_addr.ipi_addr.s_addr){
  
  	if ( ! cmsg) {
-@@ -322,7 +329,9 @@
+@@ -331,7 +339,9 @@
  	
  	finallen += cmsg->cmsg_len;
      }
@@ -65,7 +89,7 @@ Don't set control buf if controllen == 0
      msgh.msg_controllen = finallen;
      
      iov.iov_base = buf->start;
-@@ -417,7 +426,9 @@
+@@ -426,7 +436,9 @@
       * our network socket.  Control handling is no longer done here.
       */
      struct sockaddr_in from;
@@ -75,7 +99,7 @@ Don't set control buf if controllen == 0
      unsigned int fromlen;
      int tunnel, call;           /* Tunnel and call */
      int recvsize;               /* Length of data received */
-@@ -497,7 +508,9 @@
+@@ -506,7 +518,9 @@
              buf->len -= PAYLOAD_BUF;
  
  	    memset(&from, 0, sizeof(from));
@@ -85,7 +109,7 @@ Don't set control buf if controllen == 0
  	    
  	    fromlen = sizeof(from);
  	    
-@@ -548,13 +561,16 @@
+@@ -557,13 +571,16 @@
  		for (cmsg = CMSG_FIRSTHDR(&msgh);
  			cmsg != NULL;
  			cmsg = CMSG_NXTHDR(&msgh,cmsg)) {
@@ -103,7 +127,7 @@ Don't set control buf if controllen == 0
  			&& cmsg->cmsg_type == gconfig.sarefnum) {
  				unsigned int *refp;
  				
-@@ -618,9 +634,11 @@
+@@ -627,9 +644,11 @@
  	    }
  	    else
  	    {
