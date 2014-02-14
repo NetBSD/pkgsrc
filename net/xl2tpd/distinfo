@@ -1,15 +1,14 @@
-$NetBSD: distinfo,v 1.4 2013/07/30 19:15:30 christos Exp $
+$NetBSD: distinfo,v 1.5 2014/02/14 22:06:39 christos Exp $
 
-SHA1 (xl2tpd-20130626.zip) = f115483cd04c8cd1af183be21842d13ce34fdc66
-RMD160 (xl2tpd-20130626.zip) = 1a53199f5a288811fcd540b93812293a95c4ced5
-Size (xl2tpd-20130626.zip) = 590466 bytes
+SHA1 (xl2tpd-20140214.zip) = 6d5d38674b6671ef1cd1880a548645ae08725a9e
+RMD160 (xl2tpd-20140214.zip) = 684f3d1d07ce3b0629123f056f8cf3f6d67c41f3
+Size (xl2tpd-20140214.zip) = 591764 bytes
 SHA1 (patch-Makefile) = fde2535eb5c2eb498df8e96162d2f24dba27b3dd
-SHA1 (patch-contrib_pfc.c) = 22a7bf36e45347470154b87ff26e68ecdd2493ac
 SHA1 (patch-control.c) = 3b1aa772be07bdc1312d94c8e0b1543086b6fb7f
 SHA1 (patch-l2tp.h) = d068d47170da6a1a3d960ef6f7a7027c10c8820f
 SHA1 (patch-md5.c) = cc100db8b9314a86a96464cde4df78c387b56e9a
 SHA1 (patch-misc.c) = 8c1b0bff81af1f5718cbf1d02e4f47fcad14c9a9
 SHA1 (patch-misc.h) = dd7a42bee5a16cc583bfcfc31b1fc589d39515ab
-SHA1 (patch-network.c) = b6a95181583ee8edace5fe05beb83534da200901
-SHA1 (patch-pty.c) = ac51a96aba040ae22d9208fa48923a284270a529
-SHA1 (patch-xl2tpd.c) = f80c11eaf57d77ffdb17d7584e03cc889ebde767
+SHA1 (patch-network.c) = 934235f9a7e9c206fcf36762b56fd06de38d8361
+SHA1 (patch-pty.c) = ade58a4e34f0977ebaba713b0be74ed943047a13
+SHA1 (patch-xl2tpd.c) = b5ff4245b380d9aff480f9dbe961c92faf691b3d
