@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/02/14 12:08:34 obache Exp $
+# $NetBSD: Makefile,v 1.14 2014/02/14 12:10:04 obache Exp $
 #
 
 DISTNAME=	whohas-0.29
@@ -14,6 +14,7 @@ LICENSE=	gnu-gpl-v2 # or later
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
 USE_LANGUAGES=	# none
+USE_TOOLS+=	perl:run
 
 REPLACE_PERL=	program/whohas
 
