@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.695 2014/02/14 20:00:09 gls Exp $
+$NetBSD: CHANGES-2014,v 1.696 2014/02/14 22:07:37 christos Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1096,3 +1096,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/gnutls to 3.2.11 [drochner 2014-02-14]
 	Updated graphics/veusz to 1.20.1 [drochner 2014-02-14]
 	Updated sysutils/fabric to 1.8.2 [gls 2014-02-14]
+	Updatex net/xl2tp to 20140214 [christos 2014-02-14]
