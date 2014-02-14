@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2014/02/06 17:22:19 drochner Exp $
+@comment $NetBSD: PLIST,v 1.17 2014/02/14 17:26:15 drochner Exp $
 bin/veusz
 bin/veusz_listen
 ${PYSITELIB}/veusz/VERSION
@@ -615,3 +615,11 @@ ${PYSITELIB}/veusz/windows/tutorial.pyo
 ${PYSITELIB}/veusz/windows/widgettree.py
 ${PYSITELIB}/veusz/windows/widgettree.pyc
 ${PYSITELIB}/veusz/windows/widgettree.pyo
+share/applications/veusz.desktop
+share/icons/hicolor/128x128/apps/veusz.png
+share/icons/hicolor/16x16/apps/veusz.png
+share/icons/hicolor/32x32/apps/veusz.png
+share/icons/hicolor/48x48/apps/veusz.png
+share/icons/hicolor/64x64/apps/veusz.png
+share/icons/hicolor/scalable/apps/veusz.svg
+share/mime/packages/veusz.xml
