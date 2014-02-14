@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2013/02/26 00:52:20 christos Exp $
+# $NetBSD: Makefile,v 1.64 2014/02/14 16:09:18 jperkin Exp $
 
-DISTNAME=	bmake-20110606
-PKGREVISION=	1
+DISTNAME=	bmake-20140214
 CATEGORIES=	devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -24,7 +23,7 @@ USE_FEATURES=	nbcompat
 
 makesyspath=	${PREFIX}/share/mk
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
@@ -55,6 +54,11 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bmake ${DESTDIR}${PREFIX}/bin
+.if defined(CATMAN_SECTION_SUFFIX) && !empty(CATMAN_SECTION_SUFFIX:M[Yy][Ee][Ss])
+	${INSTALL_MAN} ${WRKSRC}/bmake.cat1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1/bmake.1
+.else
+	${INSTALL_MAN} ${WRKSRC}/bmake.cat1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1/bmake.0
+.endif
 	${INSTALL_MAN} ${WRKSRC}/bmake.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 do-test:
