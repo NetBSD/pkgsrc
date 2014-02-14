@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2014/01/16 10:14:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.51 2014/02/14 17:24:27 drochner Exp $
 bin/certtool
 bin/danetool
 bin/gnutls-cli
@@ -153,6 +153,7 @@ man/man3/gnutls_credentials_clear.3
 man/man3/gnutls_credentials_set.3
 man/man3/gnutls_db_check_entry.3
 man/man3/gnutls_db_check_entry_time.3
+man/man3/gnutls_db_get_default_cache_expiration.3
 man/man3/gnutls_db_get_ptr.3
 man/man3/gnutls_db_remove_session.3
 man/man3/gnutls_db_set_cache_expiration.3
