@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.142 2014/02/10 12:01:19 tron Exp $
+# $NetBSD: Makefile,v 1.143 2014/02/14 17:24:27 drochner Exp $
 
-DISTNAME=	gnutls-3.2.9
-PKGREVISION=	1
+DISTNAME=	gnutls-3.2.11
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://ftp.gnutls.org/gcrypt/gnutls/v3.2/
 EXTRACT_SUFX=	.tar.xz
@@ -37,7 +36,6 @@ PKGCONFIG_OVERRIDE+=	libdane/gnutls-dane.pc.in
 MAKE_ENV+=		RM=${RM:Q}
 MAKE_ENV+=		TZ=UTC
 
-DOCDIR=		${PREFIX}/share/doc/gnutls
 EGDIR=		${PREFIX}/share/examples/gnutls
 
 .include "../../mk/bsd.prefs.mk"
