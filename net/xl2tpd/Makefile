@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/07/02 00:22:16 christos Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/14 22:06:39 christos Exp $
 #
 
-DISTNAME=		xl2tpd-20130626
+DISTNAME=		xl2tpd-20140214
 CATEGORIES=		net
 MASTER_SITES=		-https://github.com/xelerance/xl2tpd/archive/master.zip
 EXTRACT_SUFX=		.zip
