@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.52 2013/11/06 13:12:50 obache Exp $
+# $NetBSD: tools.Linux.mk,v 1.53 2014/02/14 07:43:46 obache Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -239,6 +239,9 @@ TOOLS_PLATFORM.tr?=		/usr/bin/tr
 TOOLS_PLATFORM.true?=		true			# shell builtin
 TOOLS_PLATFORM.tsort?=		/usr/bin/tsort
 TOOLS_PLATFORM.wc?=		/usr/bin/wc
+.if exists(/usr/bin/wget)
+TOOLS_PLATFORM.wget?=		/usr/bin/wget
+.endif
 TOOLS_PLATFORM.xargs?=		/usr/bin/xargs -r
 .if exists(/usr/bin/xgettext)
 TOOLS_PLATFORM.xgettext?=	/usr/bin/xgettext
