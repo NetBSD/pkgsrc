@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/02/14 12:10:04 obache Exp $
+# $NetBSD: Makefile,v 1.15 2014/02/14 12:11:10 obache Exp $
 #
 
 DISTNAME=	whohas-0.29
@@ -32,5 +32,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/intro* \
 		${DESTDIR}${PREFIX}/share/doc/whohas
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
