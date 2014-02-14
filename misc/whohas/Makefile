@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2014/02/14 12:03:15 obache Exp $
+# $NetBSD: Makefile,v 1.12 2014/02/14 12:05:28 obache Exp $
 #
 
 DISTNAME=	whohas-0.29
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	http://www.philippwesche.org/200811/whohas/
 
@@ -12,7 +12,6 @@ COMMENT=	Query several packaging systems for a program
 LICENSE=	gnu-gpl-v2 # or later
 
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
-DEPENDS+=	wget-[0-9]*:../../net/wget
 
 USE_LANGUAGES=	# none
 
