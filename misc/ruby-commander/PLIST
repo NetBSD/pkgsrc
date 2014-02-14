@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/03/17 16:17:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/02/14 23:20:04 minskim Exp $
 bin/commander
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
@@ -6,8 +6,9 @@ ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/DEVELOPMENT
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/History.rdoc
+${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/Manifest
-${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/commander
 ${GEM_LIBDIR}/commander.gemspec
