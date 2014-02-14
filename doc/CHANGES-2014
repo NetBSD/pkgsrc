@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.697 2014/02/14 23:12:20 minskim Exp $
+$NetBSD: CHANGES-2014,v 1.698 2014/02/14 23:20:49 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1098,3 +1098,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/fabric to 1.8.2 [gls 2014-02-14]
 	Updatex net/xl2tp to 20140214 [christos 2014-02-14]
 	Updated devel/ruby-highline to 1.6.20 [minskim 2014-02-14]
+	Updated misc/ruby-commander to 4.1.6 [minskim 2014-02-14]
