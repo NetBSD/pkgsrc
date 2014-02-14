@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/31 15:32:03 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2014/02/14 13:48:40 schmonz Exp $
 #
 
 DISTNAME=	agedu-r10126
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.chiark.greenend.org.uk/~sgtatham/agedu/
 COMMENT=	Utility for tracking down wasted disk space
 LICENSE=	mit
+
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 GNU_CONFIGURE=		yes
 
