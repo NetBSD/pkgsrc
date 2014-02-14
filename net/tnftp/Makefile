@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2013/09/12 11:18:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.34 2014/02/14 05:54:51 obache Exp $
 
 DISTNAME=		tnftp-20070806
 SVR4_PKGNAME=		tnftp
@@ -36,11 +36,11 @@ do-extract:
 # system.  If we use the system editline library, then use the built-in
 # termcap library.
 #
-CHECK_BUILTIN.readline:=	yes
-.include "../../mk/readline.builtin.mk"
-CHECK_BUILTIN.readline:=	no
+CHECK_BUILTIN.editline:=	yes
+.include "../../devel/editline/builtin.mk"
+CHECK_BUILTIN.editline:=	no
 
-.if !empty(BUILTIN_LIB_FOUND.edit:M[yY][eE][sS])
+.if !empty(USE_BUILTIN.editline:M[yY][eE][sS])
 USE_BUILTIN.termcap?=	yes
 .endif
 
