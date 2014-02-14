@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2013/09/15 14:09:22 taca Exp $
+$NetBSD: distinfo,v 1.8 2014/02/14 23:20:04 minskim Exp $
 
-SHA1 (commander-4.1.5.gem) = d5506fd05de0c6e835926c9b1b38f1005e11803b
-RMD160 (commander-4.1.5.gem) = b0a314428834aa5874174b321816748feb5bf1ac
-Size (commander-4.1.5.gem) = 30720 bytes
+SHA1 (commander-4.1.6.gem) = bfcf5d7d41062740777cbce3f7da524eb0944de8
+RMD160 (commander-4.1.6.gem) = fe1d3545f97b100684b914f821f899532c51cc34
+Size (commander-4.1.6.gem) = 32256 bytes
