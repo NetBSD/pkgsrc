@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2014/01/07 09:43:54 mef Exp $
+# $NetBSD: Makefile,v 1.38 2014/02/15 13:46:12 mef Exp $
 #
 
 DISTNAME=	verilog-0.9.7
@@ -6,7 +6,7 @@ CATEGORIES=	cad
 MASTER_SITES=	ftp://icarus.com/pub/eda/verilog/v0.9/
 
 MAINTAINER=	dmcmahill@NetBSD.org
-HOMEPAGE=	http://icarus.com/eda/verilog/index.html
+HOMEPAGE=	http://iverilog.icarus.com/
 COMMENT=	Verilog simulation and synthesis tool (stable release version)
 LICENSE=	gnu-gpl-v2
 
