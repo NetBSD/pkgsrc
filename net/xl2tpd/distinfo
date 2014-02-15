@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2014/02/14 22:06:39 christos Exp $
+$NetBSD: distinfo,v 1.6 2014/02/15 15:36:34 christos Exp $
 
 SHA1 (xl2tpd-20140214.zip) = 6d5d38674b6671ef1cd1880a548645ae08725a9e
 RMD160 (xl2tpd-20140214.zip) = 684f3d1d07ce3b0629123f056f8cf3f6d67c41f3
@@ -9,6 +9,6 @@ SHA1 (patch-l2tp.h) = d068d47170da6a1a3d960ef6f7a7027c10c8820f
 SHA1 (patch-md5.c) = cc100db8b9314a86a96464cde4df78c387b56e9a
 SHA1 (patch-misc.c) = 8c1b0bff81af1f5718cbf1d02e4f47fcad14c9a9
 SHA1 (patch-misc.h) = dd7a42bee5a16cc583bfcfc31b1fc589d39515ab
-SHA1 (patch-network.c) = 934235f9a7e9c206fcf36762b56fd06de38d8361
+SHA1 (patch-network.c) = e8b51c3b1e1c2bfb31f7c04517d82c332499bf30
 SHA1 (patch-pty.c) = ade58a4e34f0977ebaba713b0be74ed943047a13
 SHA1 (patch-xl2tpd.c) = b5ff4245b380d9aff480f9dbe961c92faf691b3d
