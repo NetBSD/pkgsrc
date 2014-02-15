@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/23 19:51:27 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/15 22:32:10 wiedi Exp $
 #
 
 DISTNAME=	ts-0.7.0
@@ -12,5 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c
 USE_TOOLS+=	gmake
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../mk/bsd.pkg.mk"
