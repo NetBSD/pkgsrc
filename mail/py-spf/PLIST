@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2014/02/15 13:26:59 darcy Exp $
+@comment $NetBSD: PLIST,v 1.1 2014/02/15 13:26:59 darcy Exp $
+bin/spfquery.py
+bin/type99.py
+${PYSITELIB}/spf.py
+${PYSITELIB}/spf.pyc
+${PYSITELIB}/spf.pyo
