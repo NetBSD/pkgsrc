@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/02/15 14:35:13 darcy Exp $
+
+SHA1 (ipaddr-2.1.10.tar.gz) = c608450b077b19773d4f1b5f1ef88b26f6650ce0
+RMD160 (ipaddr-2.1.10.tar.gz) = 66204bccb990425612a2f198e2bd8737906f5ae7
+Size (ipaddr-2.1.10.tar.gz) = 29004 bytes
