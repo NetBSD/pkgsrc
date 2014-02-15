@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.698 2014/02/14 23:20:49 minskim Exp $
+$NetBSD: CHANGES-2014,v 1.699 2014/02/15 11:36:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1096,6 +1096,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/gnutls to 3.2.11 [drochner 2014-02-14]
 	Updated graphics/veusz to 1.20.1 [drochner 2014-02-14]
 	Updated sysutils/fabric to 1.8.2 [gls 2014-02-14]
-	Updatex net/xl2tp to 20140214 [christos 2014-02-14]
+	Updated net/xl2tp to 20140214 [christos 2014-02-14]
 	Updated devel/ruby-highline to 1.6.20 [minskim 2014-02-14]
 	Updated misc/ruby-commander to 4.1.6 [minskim 2014-02-14]
+	Updated converters/help2man to 1.44.1 [adam 2014-02-15]
