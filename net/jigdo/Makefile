@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2014/02/15 03:28:04 obache Exp $
+# $NetBSD: Makefile,v 1.48 2014/02/15 03:29:55 obache Exp $
 
 DISTNAME=		jigdo-0.7.3
 PKGREVISION=		25
@@ -9,6 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://atterer.org/jigdo/
 COMMENT=		Tool to ease downloading of large files from the Internet
+LICENSE=		gnu-gpl-v2
 
 MAKE_JOBS_SAFE=		no
 
