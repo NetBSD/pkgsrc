@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/08 13:04:20 asau Exp $
+# $NetBSD: Makefile,v 1.5 2014/02/15 21:16:47 wiedi Exp $
 #
 
 DISTNAME=		leapsunpack-0.05
@@ -12,6 +12,8 @@ COMMENT=		Creates libtai leapsecs.dat from compressed table
 DEPENDS+=		libtai-[0-9]*:../../devel/libtai
 
 DJB_RESTRICTED=		no
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	do-configure
