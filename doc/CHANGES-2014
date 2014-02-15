@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.702 2014/02/15 14:37:22 darcy Exp $
+$NetBSD: CHANGES-2014,v 1.703 2014/02/15 16:15:39 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1101,4 +1101,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/ruby-commander to 4.1.6 [minskim 2014-02-14]
 	Updated converters/help2man to 1.44.1 [adam 2014-02-15]
 	Added mail/py-spf version 2.0.8 [darcy 2014-02-15]
-	Added devel/py-ipaddr version 2.1.10 darcy 2014-02-15]
+	Added devel/py-ipaddr version 2.1.10 [darcy 2014-02-15]
+	Updated databases/p5-perl-ldap to 0.58 [schmonz 2014-02-15]
