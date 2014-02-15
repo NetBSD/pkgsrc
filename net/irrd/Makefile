@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2013/07/12 10:44:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.49 2014/02/15 03:09:18 obache Exp $
 
 DISTNAME=		irrd2.3.9
 PKGNAME=		irrd-2.3.9
@@ -15,9 +15,8 @@ LICENSE=		original-bsd
 MAKE_JOBS_SAFE=		no
 
 DEPENDS+=		gnupg-[0-9]*:../../security/gnupg
-DEPENDS+=		wget-[0-9]*:../../net/wget
 
-USE_TOOLS+=		automake autoconf flex perl:run yacc
+USE_TOOLS+=		automake autoconf flex perl:run yacc wget:run
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 
@@ -37,6 +36,8 @@ PKG_GECOS.${IRRD_USER}=	IRRd user
 RCD_SCRIPTS+=		irrd
 
 GNU_CONFIGURE=		yes
+
+CONFIGURE_ENV+=		WGET_PATH=${TOOLS_PATH.wget}
 
 .include "options.mk"
 
