@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.699 2014/02/15 11:36:18 adam Exp $
+$NetBSD: CHANGES-2014,v 1.700 2014/02/15 13:28:25 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1100,3 +1100,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/ruby-highline to 1.6.20 [minskim 2014-02-14]
 	Updated misc/ruby-commander to 4.1.6 [minskim 2014-02-14]
 	Updated converters/help2man to 1.44.1 [adam 2014-02-15]
+	Added mail/py-sp5 version 2.0.8 [darcy 2014-02-15]
