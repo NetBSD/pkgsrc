@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/02/15 13:26:59 darcy Exp $
-@comment $NetBSD: PLIST,v 1.1 2014/02/15 13:26:59 darcy Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/02/15 14:29:40 darcy Exp $
 bin/spfquery.py
 bin/type99.py
 ${PYSITELIB}/spf.py
