@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2014/02/12 23:18:21 tron Exp $
+# $NetBSD: Makefile,v 1.47 2014/02/15 03:28:04 obache Exp $
 
 DISTNAME=		jigdo-0.7.3
 PKGREVISION=		25
@@ -10,11 +10,9 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://atterer.org/jigdo/
 COMMENT=		Tool to ease downloading of large files from the Internet
 
-DEPENDS+=		wget-[0-9]*:../../net/wget
-
 MAKE_JOBS_SAFE=		no
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config wget:run
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-libdb
