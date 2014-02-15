@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2013/05/23 18:42:22 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2014/02/15 23:54:46 wiedi Exp $
 
 DISTNAME=	rtty-3.2
 PKGREVISION=	1
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Multiuser "tip"/"cu" replacement with logging
 
 WRKSRC=		${WRKDIR}
+
+CFLAGS.SunOS+=	-Du_int16_t=uint16_t -Du_int32_t=uint32_t
 
 .include "../../mk/bsd.prefs.mk"
 
