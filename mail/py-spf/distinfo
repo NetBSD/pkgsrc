@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/02/15 13:26:59 darcy Exp $
+$NetBSD: distinfo,v 1.2 2014/02/15 17:20:59 wiz Exp $
 
-SHA1 (pyspf-2.0.8.tar.gz) = 64397bf468325955d82991a0f7580c9dbf39b2b8
-RMD160 (pyspf-2.0.8.tar.gz) = a735cf66b1680cfd64330aaf11e923731610047c
-Size (pyspf-2.0.8.tar.gz) = 48819 bytes
+SHA1 (pyspf-2.0.8.tar.gz) = 279634a93614d3887d4bbf44852bd6d73944af5c
+RMD160 (pyspf-2.0.8.tar.gz) = aa2c6493ed36db1150465d436618035a5da9c624
+Size (pyspf-2.0.8.tar.gz) = 48818 bytes
