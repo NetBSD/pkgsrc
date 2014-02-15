@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/05/31 12:42:43 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/02/15 21:39:58 hiramatsu Exp $
 
 DISTNAME=		HTML-TokeParser-Simple-3.15
 PKGNAME=		p5-${DISTNAME}
@@ -9,6 +9,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=HTML/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/HTML-TokeParser-Simple/
 COMMENT=		Perl 5 module prodiving an easy to use HTML::TokeParser interface
+LICENSE=		${PERL5_LICENSE}
 
 PERL5_PACKLIST=		auto/HTML/TokeParser/Simple/.packlist
 
