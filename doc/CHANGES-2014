@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.703 2014/02/15 16:15:39 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.704 2014/02/15 16:21:58 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1103,3 +1103,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added mail/py-spf version 2.0.8 [darcy 2014-02-15]
 	Added devel/py-ipaddr version 2.1.10 [darcy 2014-02-15]
 	Updated databases/p5-perl-ldap to 0.58 [schmonz 2014-02-15]
+	Updated cad/gtkwave to 3.3.57 [mef 2014-02-15]
