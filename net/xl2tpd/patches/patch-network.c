@@ -1,12 +1,13 @@
-$NetBSD: patch-network.c,v 1.2 2014/02/14 22:06:39 christos Exp $
+$NetBSD: patch-network.c,v 1.3 2014/02/15 15:36:35 christos Exp $
 
 Handle not having IP_PKTINFO
 Handle not having SO_NO_CHECK
 Don't set control buf if controllen == 0
-Fix reversed PLBIT test?
+Avoid pointer aliasing issue and fix test that was done in the wrong
+byte order
 
 --- network.c.orig	2014-01-16 17:02:04.000000000 -0500
-+++ network.c	2014-02-14 16:00:07.000000000 -0500
++++ network.c	2014-02-15 10:33:31.000000000 -0500
 @@ -85,24 +85,26 @@
  
  	    gconfig.ipsecsaref=0;
@@ -40,16 +41,20 @@ Fix reversed PLBIT test?
  
  #ifdef USE_KERNEL
      if (gconfig.forceuserspace)
-@@ -143,7 +145,7 @@
+@@ -160,10 +162,8 @@
+     /*
+      * Fix the byte order of the header
       */
- 
-     struct payload_hdr *p = (struct payload_hdr *) buf;
--    if (PLBIT (p->ver))
-+    if (!PLBIT (p->ver))
+-
+-    struct payload_hdr *p = (struct payload_hdr *) buf;
+-    _u16 ver = ntohs (p->ver);
+-    if (CTBIT (p->ver))
++    _u16 ver = ntohs (*(_u16 *)buf);
++    if (CTBIT (ver))
      {
-         *tunnel = p->tid;
-         *call = p->cid;
-@@ -280,12 +282,18 @@
+         /*
+          * Control headers are always
+@@ -280,12 +280,18 @@
  void udp_xmit (struct buffer *buf, struct tunnel *t)
  {
      struct cmsghdr *cmsg;
@@ -69,7 +74,7 @@ Fix reversed PLBIT test?
      int finallen;
      
      /*
-@@ -312,7 +320,7 @@
+@@ -312,7 +318,7 @@
  	
  	finallen = cmsg->cmsg_len;
      }
@@ -78,7 +83,7 @@ Fix reversed PLBIT test?
      if (t->my_addr.ipi_addr.s_addr){
  
  	if ( ! cmsg) {
-@@ -331,7 +339,9 @@
+@@ -331,7 +337,9 @@
  	
  	finallen += cmsg->cmsg_len;
      }
@@ -89,7 +94,7 @@ Fix reversed PLBIT test?
      msgh.msg_controllen = finallen;
      
      iov.iov_base = buf->start;
-@@ -426,7 +436,9 @@
+@@ -426,7 +434,9 @@
       * our network socket.  Control handling is no longer done here.
       */
      struct sockaddr_in from;
@@ -99,7 +104,7 @@ Fix reversed PLBIT test?
      unsigned int fromlen;
      int tunnel, call;           /* Tunnel and call */
      int recvsize;               /* Length of data received */
-@@ -506,7 +518,9 @@
+@@ -506,7 +516,9 @@
              buf->len -= PAYLOAD_BUF;
  
  	    memset(&from, 0, sizeof(from));
@@ -109,7 +114,7 @@ Fix reversed PLBIT test?
  	    
  	    fromlen = sizeof(from);
  	    
-@@ -557,13 +571,16 @@
+@@ -557,13 +569,16 @@
  		for (cmsg = CMSG_FIRSTHDR(&msgh);
  			cmsg != NULL;
  			cmsg = CMSG_NXTHDR(&msgh,cmsg)) {
@@ -127,6 +132,15 @@ Fix reversed PLBIT test?
  			&& cmsg->cmsg_type == gconfig.sarefnum) {
  				unsigned int *refp;
  				
+@@ -592,6 +607,8 @@
+ 
+ 	    if (gconfig.packet_dump)
+ 	    {
++    struct payload_hdr *p = (struct payload_hdr *) buf->start;
++		l2tp_log(LOG_DEBUG, "ver = 0x%x\n", p->ver);
+ 		do_packet_dump (buf);
+ 	    }
+ 	    if (!
 @@ -627,9 +644,11 @@
  	    }
  	    else
