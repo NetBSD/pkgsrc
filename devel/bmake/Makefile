@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2014/02/14 16:09:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.65 2014/02/15 10:42:52 jperkin Exp $
 
 DISTNAME=	bmake-20140214
 CATEGORIES=	devel
@@ -54,10 +54,12 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bmake ${DESTDIR}${PREFIX}/bin
-.if defined(CATMAN_SECTION_SUFFIX) && !empty(CATMAN_SECTION_SUFFIX:M[Yy][Ee][Ss])
+.if !empty(MANINSTALL:Mcatinstall)
+  .if defined(CATMAN_SECTION_SUFFIX) && !empty(CATMAN_SECTION_SUFFIX:M[Yy][Ee][Ss])
 	${INSTALL_MAN} ${WRKSRC}/bmake.cat1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1/bmake.1
-.else
+  .else
 	${INSTALL_MAN} ${WRKSRC}/bmake.cat1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1/bmake.0
+  .endif
 .endif
 	${INSTALL_MAN} ${WRKSRC}/bmake.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
