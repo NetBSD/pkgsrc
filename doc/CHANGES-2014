@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.719 2014/02/16 15:55:44 wen Exp $
+$NetBSD: CHANGES-2014,v 1.720 2014/02/16 16:07:18 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1119,3 +1119,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-HTTP-Body to 1.19 [wen 2014-02-16]
 	Updated textproc/p5-Text-Xslate to 3.1.1 [wen 2014-02-16]
 	Added devel/p5-File-Slurp-Tiny version 0.003 [wen 2014-02-16]
+	Updated devel/p5-Tree-DAG_Node to 1.22 [wen 2014-02-16]
