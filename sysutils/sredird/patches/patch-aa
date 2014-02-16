@@ -1,8 +1,16 @@
-$NetBSD: patch-aa,v 1.2 2004/09/28 22:14:04 tv Exp $
+$NetBSD: patch-aa,v 1.3 2014/02/16 15:45:52 wiedi Exp $
 
---- sredird.c.orig	2002-01-14 05:40:44.000000000 -0500
+--- sredird.c.orig	2002-01-14 10:40:44.000000000 +0000
 +++ sredird.c
-@@ -82,9 +82,9 @@
+@@ -77,14 +77,17 @@
+ #include <sys/time.h>
+ #include <sys/times.h>
+ #include <sys/types.h>
++#if defined(__sun)
++#include <sys/filio.h>
++#endif
+ #include <sys/ioctl.h>
+ #include <signal.h>
  #include <fcntl.h>
  #include <syslog.h>
  #include <termios.h>
@@ -13,7 +21,7 @@ $NetBSD: patch-aa,v 1.2 2004/09/28 22:14:04 tv Exp $
  #include <netinet/ip.h>
  #include <netinet/tcp.h>
  
-@@ -656,10 +656,14 @@ unsigned long int GetPortSpeed(int PortF
+@@ -656,10 +659,14 @@ unsigned long int GetPortSpeed(int PortF
            return(57600UL);
          case B115200:
            return(115200UL);
@@ -28,7 +36,7 @@ $NetBSD: patch-aa,v 1.2 2004/09/28 22:14:04 tv Exp $
          default:
            return(0UL);
        }
-@@ -1038,9 +1042,11 @@ void SetPortSpeed(int PortFd, unsigned l
+@@ -1038,9 +1045,11 @@ void SetPortSpeed(int PortFd, unsigned l
          case 230400UL:
            Speed = B230400;
          break;
@@ -40,7 +48,7 @@ $NetBSD: patch-aa,v 1.2 2004/09/28 22:14:04 tv Exp $
          default:
            LogMsg(LOG_WARNING,"Unknwon baud rate requested, setting to 9600.");
            Speed = B9600;
-@@ -1770,7 +1776,8 @@ int main(int argc, char * argv[])
+@@ -1770,7 +1779,8 @@ int main(int argc, char * argv[])
      int SockParm;
  
      /* Out buffer ticks count */
@@ -50,7 +58,23 @@ $NetBSD: patch-aa,v 1.2 2004/09/28 22:14:04 tv Exp $
  
      /* Out buffer clock ticks limit */
      clock_t MaxBTicks;
-@@ -1907,10 +1914,10 @@ int main(int argc, char * argv[])
+@@ -1882,7 +1892,15 @@ int main(int argc, char * argv[])
+     tcgetattr(DeviceFd,&PortSettings);
+ 
+     /* Set the serial port to raw mode */
++#if defined(__sun)
++    PortSettings.c_iflag &= ~(IMAXBEL|IGNBRK|BRKINT|PARMRK|ISTRIP|INLCR|IGNCR|ICRNL|IXON);
++    PortSettings.c_oflag &= ~OPOST;
++    PortSettings.c_lflag &= ~(ECHO|ECHONL|ICANON|ISIG|IEXTEN);
++    PortSettings.c_cflag &= ~(CSIZE|PARENB);
++    PortSettings.c_cflag |= CS8;
++#else
+     cfmakeraw(&PortSettings);
++#endif
+ 
+     /* Enable HANGUP on close and disable modem control line handling */
+     PortSettings.c_cflag = (PortSettings.c_cflag | HUPCL) | CLOCAL;
+@@ -1907,10 +1925,10 @@ int main(int argc, char * argv[])
       */
      SockParm = IPTOS_LOWDELAY;
      setsockopt(STDIN_FILENO,SOL_SOCKET,SO_KEEPALIVE,&SockParmEnable,sizeof(SockParmEnable));
