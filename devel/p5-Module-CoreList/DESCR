@@ -1,3 +1,1 @@
-The Perl 5 module Module::CoreList provides a manifest of the
-modules and their versions included in core Perl for various
-releases.
+what modules shipped with versions of perl
