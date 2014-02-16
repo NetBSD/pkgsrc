@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.705 2014/02/16 01:04:55 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.706 2014/02/16 10:44:56 sno Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1105,3 +1105,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/p5-perl-ldap to 0.58 [schmonz 2014-02-15]
 	Updated cad/gtkwave to 3.3.57 [mef 2014-02-15]
 	Updated graphics/gifsicle to 1.78 [schmonz 2014-02-16]
+	Updated devel/p5-Module-Pluggable to 5.1 [sno 2014-02-16]
