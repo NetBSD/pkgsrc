@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2013/07/03 13:28:31 sno Exp $
+# $NetBSD: Makefile,v 1.21 2014/02/16 10:44:45 sno Exp $
 #
 
-DISTNAME=	Module-Pluggable-4.8
+DISTNAME=	Module-Pluggable-5.1
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5mpl
 CATEGORIES=	devel perl5
