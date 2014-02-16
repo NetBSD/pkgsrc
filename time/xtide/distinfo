@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2011/01/31 20:23:10 wiz Exp $
+$NetBSD: distinfo,v 1.3 2014/02/16 15:54:09 wiedi Exp $
 
 SHA1 (harmonics-dwf-20060708.tcd.bz2) = 1f54ed856b064e485f7e386eb4a71965e83abfa4
 RMD160 (harmonics-dwf-20060708.tcd.bz2) = 754255ac5f2e36cf2dce587e7f9f7bd0561226d9
@@ -8,6 +8,6 @@ RMD160 (xtide-2.8.3.tar.bz2) = 926d116d6d36b3e4ff5e4630e0df394a4f9a0a8b
 Size (xtide-2.8.3.tar.bz2) = 463382 bytes
 SHA1 (patch-aa) = 8b9059e2870f6b8149e72ca33c452e75650f8230
 SHA1 (patch-ab) = 889c68bce0bd78cfc1b5f7410364e8c39182cfec
-SHA1 (patch-ac) = 07a0099f0d58b8774ae456470142314dabe38c1b
+SHA1 (patch-ac) = 5ba4062c3b0d2c05e3d758281bf6099a476d127a
 SHA1 (patch-ad) = cf18fb73096b3cef07fbf501fa1205fe126d1155
 SHA1 (patch-ae) = d93d25768341ac52a7379e4d4043c8f799072329

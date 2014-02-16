@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1.1.1 2010/03/14 16:39:24 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2014/02/16 15:54:09 wiedi Exp $
 
---- Makefile.in.orig	2004-12-20 15:15:05.000000000 +0100
-+++ Makefile.in	2006-11-05 22:03:06.000000000 +0100
+--- Makefile.in.orig	2006-03-14 00:54:31.000000000 +0000
++++ Makefile.in
 @@ -11,8 +11,8 @@ mandir=@mandir@
  # DEFS should include -Dacceptarg3_t=int (replace with the correct data type)
  CXX = @CXX@
@@ -9,7 +9,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2010/03/14 16:39:24 wiz Exp $
 -CXXFLAGS = @extracxxflags@ @DEFS@ -I@includedir@ -Ilibtcd -I@xroot@/include @normalcxxflags@ -c
 -LDFLAGS = @extraldflags@ -L@libdir@ -L@xlibdir@ @normalldflags@ -o
 +CXXFLAGS = @extracxxflags@ @DEFS@ -I@includedir@ -Ilibtcd -I@xroot@/include @normalcxxflags@ -DPREFIX='"${prefix}"' -DPKG_SYSCONFDIR='"@sysconfdir@"' -c
-+LDFLAGS = @extraldflags@ -L@libdir@ -Wl,-R@libdir@ -L@xlibdir@ -Wl,-R@xlibdir@ @normalldflags@ -o
++LDFLAGS += @extraldflags@ -L@libdir@ -Wl,-R@libdir@ -L@xlibdir@ -Wl,-R@xlibdir@ @normalldflags@ -o
  
  # Extra switches and libs determined by configure.in
  extraswitches=@extraswitches@
