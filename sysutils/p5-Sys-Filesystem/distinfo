@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2012/06/30 05:10:51 dholland Exp $
+$NetBSD: distinfo,v 1.6 2014/02/16 11:57:22 sno Exp $
 
-SHA1 (Sys-Filesystem-1.30.tar.gz) = f7ef406c2093d0255fb073b72648276a295f8de8
-RMD160 (Sys-Filesystem-1.30.tar.gz) = d909253efd74ee25e8d870bd73105e1d1f486b56
-Size (Sys-Filesystem-1.30.tar.gz) = 34319 bytes
-SHA1 (patch-lib_Sys_Filesystem_Netbsd_pm) = d193631d7034ce84e4b226a102084e2991b8c580
+SHA1 (Sys-Filesystem-1.405.tar.gz) = 859b4b234739a9be02ec63eb6a6d557d27ba7619
+RMD160 (Sys-Filesystem-1.405.tar.gz) = 2e2bcf12ae30da2934c687d4cb24e1adb518853e
+Size (Sys-Filesystem-1.405.tar.gz) = 27314 bytes
