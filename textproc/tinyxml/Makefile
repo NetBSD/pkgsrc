@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/02/16 23:05:33 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/16 23:16:05 wiz Exp $
 
-PKGVERSION=		2.6.2
-DISTNAME=		tinyxml_${PKGVERSION:S/./_/g}
-PKGNAME=		tinyxml-${PKGVERSION}
+DISTNAME=		tinyxml_2_6_2
+PKGNAME=		tinyxml-2.6.2
+PKGREVISION=		1
 CATEGORIES=		textproc devel lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tinyxml/}
 EXTRACT_SUFX=		.zip
