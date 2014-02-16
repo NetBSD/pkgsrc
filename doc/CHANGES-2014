@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.718 2014/02/16 15:36:27 wen Exp $
+$NetBSD: CHANGES-2014,v 1.719 2014/02/16 15:55:44 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1118,3 +1118,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Mojolicious to 4.81 [wen 2014-02-16]
 	Updated www/p5-HTTP-Body to 1.19 [wen 2014-02-16]
 	Updated textproc/p5-Text-Xslate to 3.1.1 [wen 2014-02-16]
+	Added devel/p5-File-Slurp-Tiny version 0.003 [wen 2014-02-16]
