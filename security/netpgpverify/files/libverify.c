@@ -47,6 +47,7 @@
 #include "bn.h"
 #include "bufgap.h"
 #include "digest.h"
+#include "misc.h"
 #include "pgpsum.h"
 #include "rsa.h"
 #include "verify.h"
@@ -2595,7 +2596,6 @@ pgpv_verify(pgpv_cursor_t *cursor, pgpv_t *pgp, const void *p, ssize_t size)
 	pgpv_litdata_t		*litdata;
 	size_t			 pkt;
 	char			 strkeyid[PGPV_STR_KEYID_LEN];
-	int			 found;
 	int			 j;
 
 	if (cursor == NULL || pgp == NULL || p == NULL) {
