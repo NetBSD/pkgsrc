@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/23 19:51:26 asau Exp $
+# $NetBSD: Makefile,v 1.6 2014/02/16 15:48:03 wiedi Exp $
 #
 
 DISTNAME=	tarsnap-autoconf-1.0.33
@@ -17,4 +17,5 @@ INSTALL_MAKE_FLAGS=	sysconfdir=${PREFIX}/share/examples/tarsnap
 
 CONF_FILES=	${PREFIX}/share/examples/tarsnap/tarsnap.conf.sample ${PKG_SYSCONFDIR}/tarsnap.conf
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
