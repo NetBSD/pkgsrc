@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.713 2014/02/16 14:42:58 wen Exp $
+$NetBSD: CHANGES-2014,v 1.714 2014/02/16 15:06:18 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1113,3 +1113,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/p5-IO-Socket-SSL to 1.967 [sno 2014-02-16]
 	Updated devel/p5-MooX-Options to 4.008 [sno 2014-02-16]
 	Updated devel/p5-version to 0.9908 [wen 2014-02-16]
+	Updated www/p5-Dancer to 1.3121 [wen 2014-02-16]
