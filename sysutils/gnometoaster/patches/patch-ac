@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.3 2011/10/02 01:20:55 dholland Exp $
+$NetBSD: patch-ac,v 1.4 2014/02/16 15:37:53 wiedi Exp $
 
 - netbsd/dragonfly/openbsd cdrom support
 - silence LP64 warnings; these seem to be ok
@@ -15,7 +15,7 @@ version of the patch by accident.
  #include <unistd.h>
 -#ifndef __FreeBSD__
 -#include <linux/soundcard.h>
-+#if defined(__FreeBSD__) || defined(__DragonFly__)
++#if defined(__FreeBSD__) || defined(__DragonFly__) || defined(__sun)
 +#include <sys/soundcard.h>
 +#elif defined(__NetBSD__) || defined(__OpenBSD__)
 +#include <soundcard.h>
