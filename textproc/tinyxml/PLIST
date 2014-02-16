@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2014/02/16 23:05:33 wiz Exp $
+include/tinyxml.h
+lib/libtinyxml.a
+lib/libtinyxml.so
+lib/libtinyxml.so.2
+lib/libtinyxml.so.${PKGVERSION}

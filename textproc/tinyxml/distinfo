@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2014/02/16 23:05:33 wiz Exp $
+
+SHA1 (tinyxml_2_6_2.zip) = a425a22ff331dafa570b2a508a37a85a4eaa4127
+RMD160 (tinyxml_2_6_2.zip) = 162880af0cb1a284268cc18ec582f51c55120a76
+Size (tinyxml_2_6_2.zip) = 290881 bytes
+SHA1 (patch-tinyxml.h) = aa78b0b8764e460cdab43530ad951ccbe24feef9
