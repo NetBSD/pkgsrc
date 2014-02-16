@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13001 2014/02/13 18:52:10 tron Exp $
+$NetBSD: TODO,v 1.13002 2014/02/16 01:19:24 gdt Exp $
 
 Suggested new packages
 ======================
@@ -297,6 +297,10 @@ Suggested new packages
 	softether
 	http://www.softether.org/
 	VPN packages, aiming to be a better replacement for openvpn
+
+	ddar
+	http://www.synctus.com/ddar/
+	de-duplicating archiver for Unix.
 
 	Missing xorg packages
 	app: constype, intel-gpu-tools
