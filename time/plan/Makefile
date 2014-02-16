@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/10/08 13:04:27 asau Exp $
+# $NetBSD: Makefile,v 1.32 2014/02/16 15:41:54 wiedi Exp $
 
 DISTNAME=	plan-1.9
 PKGREVISION=	1
@@ -21,6 +21,10 @@ INSTALLATION_DIRS=	libexec/plan ${PKGMANDIR}/man1 ${PKGMANDIR}/man4 \
 
 .if ${OPSYS} == "IRIX"
 BUILD_TARGET=	${LOWER_VENDOR}${OS_VERSION:C/.[0-9]//}
+.endif
+
+.if ${OPSYS} == "SunOS"
+BUILD_TARGET=	"solg"
 .endif
 
 .include "../../mk/compiler.mk"
