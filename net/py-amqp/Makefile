@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2014/02/02 23:32:05 rodent Exp $
+# $NetBSD: Makefile,v 1.6 2014/02/16 21:39:14 rodent Exp $
 
-DISTNAME=	v1.4.2
+DISTNAME=	v1.4.3
 PKGNAME=	${DISTNAME:S/v/${PYPKGPREFIX}-amqp-/1}
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/celery/py-amqp/archive/
