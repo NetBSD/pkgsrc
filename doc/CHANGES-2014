@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.724 2014/02/16 17:56:59 sno Exp $
+$NetBSD: CHANGES-2014,v 1.725 2014/02/16 18:02:47 sno Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1124,3 +1124,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/libnetpgpverify to 20140210 [agc 2014-02-16]
 	Updated security/netpgpverify to 20140210 [agc 2014-02-16]
 	Updated devel/p5-local-lib to 2.000004 [sno 2014-02-16]
+	Updated devel/p5-Module-Build to 0.42050 [sno 2014-02-16]
