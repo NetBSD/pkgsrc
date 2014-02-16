@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.732 2014/02/16 20:22:16 sno Exp $
+$NetBSD: CHANGES-2014,v 1.733 2014/02/16 21:05:21 sno Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1132,3 +1132,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Sub-Exporter to 0.987 [sno 2014-02-16]
 	Updated devel/p5-Scalar-List-Utils to 1.38 [sno 2014-02-16]
 	Updated devel/p5-MooseX-Role-Parameterized to 1.02 [sno 2014-02-16]
+	Updated devel/p5-Module-CoreList to 3.04 [sno 2014-02-16]
