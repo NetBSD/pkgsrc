@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/02/02 23:35:03 rodent Exp $
+$NetBSD: distinfo,v 1.2 2014/02/16 21:33:00 rodent Exp $
 
-SHA1 (glyr/1.0.3.tar.gz) = f0492337640bfbae13eeecd2cd2f8d0f01856390
-RMD160 (glyr/1.0.3.tar.gz) = 9beba59161bbe888e970fef52ecbcda56f03179e
-Size (glyr/1.0.3.tar.gz) = 426276 bytes
+SHA1 (glyr/1.0.5.tar.gz) = 52ba9b05b9962a22af2f371d0484429db44f2f00
+RMD160 (glyr/1.0.5.tar.gz) = d61d5d8ed5c10d9c711ef3136948d2705e9b3399
+Size (glyr/1.0.5.tar.gz) = 426382 bytes
