@@ -1,6 +1,6 @@
-.\" $NetBSD: libnetpgpverify.3,v 1.2 2013/07/20 21:50:54 wiz Exp $
+.\" $NetBSD: libnetpgpverify.3,v 1.1 2014/02/16 17:15:48 agc Exp $
 .\"
-.\" Copyright (c) 2012 Alistair Crooks <agc@NetBSD.org>
+.\" Copyright (c) 2014 Alistair Crooks <agc@NetBSD.org>
 .\" All rights reserved.
 .\"
 .\" Redistribution and use in source and binary forms, with or without
@@ -23,7 +23,7 @@
 .\" (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 .\" THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd October 21, 2012
+.Dd February 16, 2014
 .Dt LIBNETPGPVERIFY 3
 .Os
 .Sh NAME
@@ -32,9 +32,13 @@
 .Sh LIBRARY
 .Lb libnetpgpverify
 .Sh SYNOPSIS
-.In netpgp/verify.h
+.In netpgpverify.h
 .Ft int
 .Fo pgpv_read_pubring
+.Fa "pgpv_t *pgp" "const void *keyring" "ssize_t size"
+.Fc
+.Ft int
+.Fo pgpv_read_ssh_pubkeys
 .Fa "pgpv_t *pgp" "const void *keyring" "ssize_t size"
 .Fc
 .Ft size_t
@@ -69,6 +73,17 @@ using
 .Fn pgpv_read_pubring
 to read the public keys of trusted identities,
 and to read files or memory which has already been signed.
+SSH public keys can also be used for signature verification
+by using the
+.Fn pgpv_read_ssh_pubkeys
+function.
+Please note that the creation date of the signature key
+will show up as January 1st 1970, due to the fact that the
+creation date of the key is not encoded anywhere for an ssh
+key, whilst it is an inherent part of the PGP fingerprint.
+In order that the correct fingerprint is used, the key creation
+date is forced to 0.
+.Pp
 The
 .Fn pgpv_verify
 function is used to verify the signature, either on data, or on memory.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2013/02/23 21:04:26 agc Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/16 17:15:48 agc Exp $
 
 DISTNAME=	libnetpgpverify-${VERSION}
 CATEGORIES=	security
@@ -7,25 +7,25 @@ DISTFILES=	# empty
 
 MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/
-COMMENT=	PGP signature verification library
+COMMENT=	PGP and ssh signature verification library
 LICENSE=	modified-bsd
 
+FILESDIR=	${.CURDIR}/../netpgpverify/files
+
+GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 AUTO_MKDIRS=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-VERSION!=	${AWK} '/\#define.*NETPGP_VERIFY_H_/ {print $$3}' ${FILESDIR}/src/libverify/verify.h
+VERSION!=	${AWK} '/\#define.*NETPGP_VERIFY_H_/ {print $$3}' ${FILESDIR}/verify.h
 
 do-extract:
-	@${CP} -R ${FILESDIR} ${WRKSRC}
-
-do-install:
-	libtool --mode=install ${INSTALL_LIB} ${WRKSRC}/libnetpgpverify.la ${DESTDIR}${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/src/libverify/verify.h ${DESTDIR}${PREFIX}/include/netpgp
-	${INSTALL_DATA} ${WRKSRC}/src/libverify/libnetpgpverify.3 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
-
-.include "../../archivers/bzip2/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
+	${CP} -R ${FILESDIR} ${WRKSRC}
+.if defined(BOOTSTRAP)
+	cd ${WRKSRC} && ${CP} Makefile.lib.in Makefile.in
+.else
+	cd ${WRKSRC} && ${CP} Makefile.libtool.in Makefile.in
+.endif
 
 .include "../../mk/bsd.pkg.mk"
