@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2013/07/03 13:54:01 sno Exp $
+$NetBSD: distinfo,v 1.7 2014/02/16 19:27:49 sno Exp $
 
-SHA1 (Sub-Exporter-0.986.tar.gz) = cdc6b13da7bf0e65713c8ebd9d51b7e459e90cd6
-RMD160 (Sub-Exporter-0.986.tar.gz) = 8615947b4a9d3b8313a32f1c28efef7400f8f2a4
-Size (Sub-Exporter-0.986.tar.gz) = 45295 bytes
+SHA1 (Sub-Exporter-0.987.tar.gz) = cbe2baead99a36bbd1ca1f34a3d4699fc88bade2
+RMD160 (Sub-Exporter-0.987.tar.gz) = 30a9b8f013f9cfe92feee731675a36611fbdc22d
+Size (Sub-Exporter-0.987.tar.gz) = 45980 bytes
