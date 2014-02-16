@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/08/04 18:00:52 adam Exp $
+# $NetBSD: Makefile,v 1.17 2014/02/16 22:45:54 bouyer Exp $
 
 DISTNAME=	glew-1.10.0
 CATEGORIES=	graphics
@@ -35,5 +35,6 @@ MAKEFLAGS+=	LD=${CC:Q}
 
 pre-configure:
 	${LN} -sf Makefile.netbsd ${WRKSRC}/config/Makefile.dragonfly
+	${LN} -sf Makefile.netbsd ${WRKSRC}/config/Makefile.netbsdelf
 
 .include "../../mk/bsd.pkg.mk"
