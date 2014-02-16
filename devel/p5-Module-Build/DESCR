@@ -1,6 +1,20 @@
-Module::Build is a system for building, testing, and installing Perl
-modules. It is meant to be a replacement for ExtUtils::MakeMaker.
-Developers may alter the behavior of the module through subclassing in
-a much more straightforward way than with MakeMaker. It also does not
-require a make on your system - most of the Module::Build code is
-pure-perl and written in a very cross-platform way.
+"Module::Build" is a system for building, testing, and installing Perl
+modules. It is meant to be an alternative to "ExtUtils::MakeMaker".
+Developers may alter the behavior of the module through subclassing in a
+much more straightforward way than with "MakeMaker". It also does not
+require a "make" on your system - most of the "Module::Build" code is
+pure-perl and written in a very cross-platform way. See "MOTIVATIONS" for
+more comparisons between "ExtUtils::MakeMaker" and "Module::Build". To
+install "Module::Build", and any other module that uses "Module::Build" for
+its installation process, do the following: perl Build.PL # 'Build.PL'
+script creates the 'Build' script ./Build # Need ./ to ensure we're using
+this "Build" script ./Build test # and not another one that happens to be
+in the PATH ./Build install This illustrates initial configuration and the
+running of three 'actions'. In this case the actions run are 'build' (the
+default action), 'test', and 'install'. Other actions defined so far
+include: build manifest clean manifest_skip code manpages config_data
+pardist diff ppd dist ppmdist distcheck prereq_data distclean prereq_report
+distdir pure_install distinstall realclean distmeta retest distsign
+skipcheck disttest test docs testall fakeinstall testcover help testdb html
+testpod install testpodcoverage installdeps versioninstall You can run the
+'help' action for a complete list of actions.
