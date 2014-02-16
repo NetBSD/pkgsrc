@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.717 2014/02/16 15:26:00 wen Exp $
+$NetBSD: CHANGES-2014,v 1.718 2014/02/16 15:36:27 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1117,3 +1117,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-MooseX-ConfigFromFile to 0.13 [sno 2014-02-16]
 	Updated www/p5-Mojolicious to 4.81 [wen 2014-02-16]
 	Updated www/p5-HTTP-Body to 1.19 [wen 2014-02-16]
+	Updated textproc/p5-Text-Xslate to 3.1.1 [wen 2014-02-16]
