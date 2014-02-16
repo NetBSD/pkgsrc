@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2014/02/16 10:02:21 sno Exp $
+# $NetBSD: Makefile,v 1.39 2014/02/16 10:04:11 sno Exp $
 
 DISTNAME=	libvpx_1.3.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -27,10 +27,10 @@ CONFIGURE_ARGS+=	--disable-unit-tests
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
-.if ${PKGSRC_COMPILER} == "gcc" && (${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS")
+. if ${PKGSRC_COMPILER} == "gcc" && (${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS")
 # PR pkg/48508: GCC 4.4 or later is required to compile ssse3 code on NetBSD & Solaris.
 GCC_REQD=	4.4
-.endif
+. endif
 
 BUILD_DEPENDS+=		yasm-[0-9]*:../../devel/yasm
 .endif
