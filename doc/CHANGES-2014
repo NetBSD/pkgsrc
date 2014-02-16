@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.734 2014/02/16 21:33:15 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.735 2014/02/16 21:39:29 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1134,3 +1134,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-MooseX-Role-Parameterized to 1.02 [sno 2014-02-16]
 	Updated devel/p5-Module-CoreList to 3.04 [sno 2014-02-16]
 	Updated audio/glyr to 1.0.5 [rodent 2014-02-16]
+	Updated net/py-amqp to 1.4.3 [rodent 2014-02-16]
