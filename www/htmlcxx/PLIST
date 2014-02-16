@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2014/02/16 22:58:51 wiz Exp $
+bin/htmlcxx
+include/htmlcxx/css/parser.h
+include/htmlcxx/css/parser_pp.h
+include/htmlcxx/html/CharsetConverter.h
+include/htmlcxx/html/Extensions.h
+include/htmlcxx/html/Node.h
+include/htmlcxx/html/ParserDom.h
+include/htmlcxx/html/ParserSax.h
+include/htmlcxx/html/ParserSax.tcc
+include/htmlcxx/html/Uri.h
+include/htmlcxx/html/ci_string.h
+include/htmlcxx/html/tld.h
+include/htmlcxx/html/tree.h
+include/htmlcxx/html/utils.h
+lib/libcss_parser.la
+lib/libcss_parser_pp.la
+lib/libhtmlcxx.la
+lib/pkgconfig/htmlcxx.pc
+share/htmlcxx/css/default.css
