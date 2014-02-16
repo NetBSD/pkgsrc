@@ -1,6 +1,15 @@
-The Perl 5 module local::lib allows for the bootstrapping and usage
-of a directory containing Perl modules outside of Perl's @INC. This
-makes it easier to ship an application with an app-specific copy
-of a Perl module, or collection of modules. Useful in cases like
-when an upstream maintainer hasn't applied a patch to a module of
-theirs that you need for your application.
+This module provides a quick, convenient way of bootstrapping a user-local
+Perl module library located within the user's home directory. It also
+constructs and prints out for the user the list of environment variables
+using the syntax appropriate for the user's current shell (as specified by
+the "SHELL" environment variable), suitable for directly adding to one's
+shell configuration file. More generally, local::lib allows for the
+bootstrapping and usage of a directory containing Perl modules outside of
+Perl's @INC. This makes it easier to ship an application with an
+app-specific copy of a Perl module, or collection of modules. Useful in
+cases like when an upstream maintainer hasn't applied a patch to a module
+of theirs that you need for your application. On import, local::lib sets
+the following environment variables to appropriate values: PERL_MB_OPT
+PERL_MM_OPT PERL5LIB PATH PERL_LOCAL_LIB_ROOT When possible, these will be
+appended to instead of overwritten entirely. These values are then
+available for reference by any code after import.
