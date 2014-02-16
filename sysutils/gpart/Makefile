@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/23 19:51:05 asau Exp $
+# $NetBSD: Makefile,v 1.16 2014/02/16 16:59:37 wiedi Exp $
 
 DISTNAME=	gpart-0.1h
 PKGREVISION=	1
@@ -11,6 +11,8 @@ COMMENT=	Tool to show the partitions on a PC type harddisk
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake
+
+CFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t -Du_int32_t=uint32_t
 
 # Doesn't work on 1.4.x due to problems with dlopen
 NOT_FOR_PLATFORM=	NetBSD-1.4*-*
