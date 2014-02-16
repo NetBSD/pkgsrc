@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/10/23 19:51:03 asau Exp $
+# $NetBSD: Makefile,v 1.32 2014/02/16 00:45:28 wiedi Exp $
 
 .include "../../sysutils/gkrellm/Makefile.common"
 
@@ -12,6 +12,8 @@ PTHREAD_OPTS+=		require
 RCD_SCRIPTS=		gkrellmd
 EGDIR=			${PREFIX}/share/examples/gkrellm-server
 CONF_FILES=		${EGDIR}/gkrellmd.conf ${PKG_SYSCONFDIR}/gkrellmd.conf
+
+CFLAGS.SunOS+=		-Du_int32_t=uint32_t
 
 .include "../../mk/bsd.prefs.mk"
 
