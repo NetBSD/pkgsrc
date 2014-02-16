@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.704 2014/02/15 16:21:58 mef Exp $
+$NetBSD: CHANGES-2014,v 1.705 2014/02/16 01:04:55 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1104,3 +1104,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/py-ipaddr version 2.1.10 [darcy 2014-02-15]
 	Updated databases/p5-perl-ldap to 0.58 [schmonz 2014-02-15]
 	Updated cad/gtkwave to 3.3.57 [mef 2014-02-15]
+	Updated graphics/gifsicle to 1.78 [schmonz 2014-02-16]
