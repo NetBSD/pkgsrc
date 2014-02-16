@@ -1,11 +1,20 @@
-$NetBSD: patch-ad,v 1.5 2013/12/01 09:05:03 wiz Exp $
+$NetBSD: patch-ad,v 1.6 2014/02/16 18:57:17 sno Exp $
 
 Perl in pkgsrc doesn't install or tweak perllocal.pod, so comment
 out that test.
 
---- t/INSTALL_BASE.t.orig	2009-02-20 00:30:32.000000000 +0000
-+++ t/INSTALL_BASE.t	2009-04-12 00:49:30.000000000 +0000
-@@ -52,7 +52,7 @@
+--- t/INSTALL_BASE.t.orig	2013-09-12 20:16:09.000000000 +0000
++++ t/INSTALL_BASE.t
+@@ -13,7 +13,7 @@ use Config;
+ use Test::More
+     $ENV{PERL_CORE} && $Config{'usecrosscompile'}
+     ? (skip_all => "no toolchain installed when cross-compiling")
+-    : (tests => 20);
++    : (tests => 18);
+ use MakeMaker::Test::Utils;
+ use MakeMaker::Test::Setup::BFD;
+ 
+@@ -58,7 +58,7 @@ my @installed_files =
    ('../dummy-install/lib/perl5/Big/Dummy.pm',
     '../dummy-install/lib/perl5/Big/Liar.pm',
     '../dummy-install/bin/program',
