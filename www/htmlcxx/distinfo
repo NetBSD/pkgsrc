@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2014/02/16 22:58:51 wiz Exp $
+
+SHA1 (htmlcxx-0.85.tar.gz) = e56fef830db51041fd297d269d24379b2dccb928
+RMD160 (htmlcxx-0.85.tar.gz) = d357b4c29127aae7f06da666c004c9db26ef29a4
+Size (htmlcxx-0.85.tar.gz) = 414624 bytes
+SHA1 (patch-html_CharsetConverter.cc) = 72204f93fa3639328b73c5bed1841f23c32946c8
+SHA1 (patch-html_ci__string.h) = 71438e4eea290f5934918d1996d0c80eefd5ffe5

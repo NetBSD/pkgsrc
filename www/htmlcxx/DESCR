@@ -1,0 +1,20 @@
+htmlcxx is a simple non-validating CSS1 and HTML parser for C++.
+Although there are several other HTML parsers available, htmlcxx
+has some characteristics that make it unique:
+
+* STL like navigation of DOM tree, using the excellent tree.hh library
+  from Kasper Peeters
+* It is possible to reproduce exactly, character by character, the
+  original document from the parse tree
+* Bundled css parser
+* Optional parsing of attributes
+* C++ code that looks like C++ (not so true anymore)
+* Offsets of tags/elements in the original document are stored in
+  the nodes of the DOM tree
+
+The parsing politics of htmlcxx were created trying to mimic Mozilla
+Firefox behavior. So you should expect parse trees similar to those
+create by Firefox. However, differently from Firefox, htmlcxx does
+not insert non-existent stuff in your html. Therefore, serializing
+the DOM tree gives exactly the same bytes contained in the original
+HTML document.
