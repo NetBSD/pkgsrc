@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.710 2014/02/16 12:07:40 sno Exp $
+$NetBSD: CHANGES-2014,v 1.711 2014/02/16 12:13:10 sno Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1110,3 +1110,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/p5-Sys-Filesystem to 1.405 [sno 2014-02-16]
 	Updated devel/p5-MooX-Cmd to 0.009 [sno 2014-02-16]
 	Updated security/p5-Net-SSLeay to 1.58 [sno 2014-02-16]
+	Updated security/p5-IO-Socket-SSL to 1.967 [sno 2014-02-16]
