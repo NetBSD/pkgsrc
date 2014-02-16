@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.735 2014/02/16 21:39:29 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.736 2014/02/16 21:44:40 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1135,3 +1135,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Module-CoreList to 3.04 [sno 2014-02-16]
 	Updated audio/glyr to 1.0.5 [rodent 2014-02-16]
 	Updated net/py-amqp to 1.4.3 [rodent 2014-02-16]
+	Updated net/py-kombu to 3.0.12 [rodent 2014-02-16]
