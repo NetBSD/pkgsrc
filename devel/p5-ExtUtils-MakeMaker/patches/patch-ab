@@ -1,22 +1,22 @@
-$NetBSD: patch-ab,v 1.6 2013/12/01 09:05:03 wiz Exp $
+$NetBSD: patch-ab,v 1.7 2014/02/16 18:57:17 sno Exp $
 
 Changes:
  o More general adaptation for BSDs
  o Install scripts in DESTINSTALLSITESCRIPT instead of DESTINSTALLSCRIPT
  o Ignore installed packlist when creating new packlist.
 
---- lib/ExtUtils/MM_Unix.pm.orig	2013-11-30 15:23:42.000000000 +0000
+--- lib/ExtUtils/MM_Unix.pm.orig	2014-01-31 20:50:13.000000000 +0000
 +++ lib/ExtUtils/MM_Unix.pm
-@@ -933,7 +933,7 @@ $(INST_DYNAMIC): $(OBJECT) $(MYEXTLIB) $
+@@ -934,7 +934,7 @@ $(INST_DYNAMIC): $(OBJECT) $(MYEXTLIB) $
  
      my $libs = '$(LDLOADLIBS)';
  
--    if (($Is{NetBSD} || $Is{Interix}) && $Config{'useshrplib'} eq 'true') {
-+    if ($Is{BSD} && $Config{'useshrplib'} eq 'true') {
+-    if (($Is{NetBSD} || $Is{Interix} || $Is{Android}) && $Config{'useshrplib'} eq 'true') {
++    if (($Is{BSD} || $Is{Interix} || $Is{Android}) && $Config{'useshrplib'} eq 'true') {
  	# Use nothing on static perl platforms, and to the flags needed
  	# to link against the shared libperl library on shared perl
  	# platforms.  We peek at lddlflags to see if we need -Wl,-R
-@@ -2080,7 +2080,7 @@ q{		read }.$self->catfile('$(PERL_ARCHLI
+@@ -2087,7 +2087,7 @@ q{		read }.$self->catfile('$(PERL_ARCHLI
  q{		$(INST_LIB) $(DESTINSTALLPRIVLIB) \
  		$(INST_ARCHLIB) $(DESTINSTALLARCHLIB) \
  		$(INST_BIN) $(DESTINSTALLBIN) \
@@ -25,12 +25,12 @@ Changes:
  		$(INST_MAN1DIR) $(DESTINSTALLMAN1DIR) \
  		$(INST_MAN3DIR) $(DESTINSTALLMAN3DIR)
  	$(NOECHO) $(WARN_IF_OLD_PACKLIST) \
-@@ -2109,7 +2109,7 @@ pure_vendor_install :: all
+@@ -2098,7 +2098,7 @@ pure_site_install :: all
  	$(NOECHO) $(MOD_INSTALL) \
  };
      push @m,
--q{		read }.$self->catfile('$(VENDORARCHEXP)','auto','$(FULLEXT)','.packlist').q{ \
+-q{		read }.$self->catfile('$(SITEARCHEXP)','auto','$(FULLEXT)','.packlist').q{ \
 +q{		read "" \
- 		write }.$self->catfile('$(DESTINSTALLVENDORARCH)','auto','$(FULLEXT)','.packlist').q{ \
+ 		write }.$self->catfile('$(DESTINSTALLSITEARCH)','auto','$(FULLEXT)','.packlist').q{ \
  } unless $self->{NO_PACKLIST};
  
