@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.736 2014/02/16 21:44:40 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.737 2014/02/16 22:59:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1136,3 +1136,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/glyr to 1.0.5 [rodent 2014-02-16]
 	Updated net/py-amqp to 1.4.3 [rodent 2014-02-16]
 	Updated net/py-kombu to 3.0.12 [rodent 2014-02-16]
+	Added www/htmlcxx version 0.85 [wiz 2014-02-16]
