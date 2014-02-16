@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2014/02/16 19:30:35 sno Exp $
+# $NetBSD: Makefile,v 1.28 2014/02/16 20:58:12 sno Exp $
 #
 
 DISTNAME=	Scalar-List-Utils-1.38
@@ -14,7 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	c
 
-PERL5_PACKLIST=	auto/Scalar/List/Utils/.packlist
+PERL5_PACKLIST=	auto/List/Util/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
