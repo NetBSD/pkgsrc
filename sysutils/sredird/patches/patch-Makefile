@@ -1,0 +1,11 @@
+$NetBSD: patch-Makefile,v 1.1 2014/02/16 15:45:52 wiedi Exp $
+
+add LDFLAGS
+--- Makefile.orig	2014-02-15 23:37:24.214914997 +0000
++++ Makefile
+@@ -7,4 +7,4 @@ CFLAGS=-O3 -m486 -pipe -fomit-frame-poin
+ SRC=sredird.c
+ 
+ sredird:	sredird.c
+-	$(CC) $(CFLAGS) -o sredird $(SRC)
++	$(CC) $(CFLAGS) -o sredird $(SRC) $(LDFLAGS)
