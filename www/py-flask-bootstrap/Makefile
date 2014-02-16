@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/01/27 18:41:15 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/16 23:46:55 rodent Exp $
 
-DISTNAME=	Flask-Bootstrap-3.0.3.1
+DISTNAME=	Flask-Bootstrap-3.1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	python www
 MASTER_SITES=	https://pypi.python.org/packages/source/F/Flask-Bootstrap/
