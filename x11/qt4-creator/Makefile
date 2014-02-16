@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/02/12 23:18:54 tron Exp $
+# $NetBSD: Makefile,v 1.27 2014/02/16 02:08:19 wiedi Exp $
 
 DISTNAME=	qt-creator-2.0.1-src
 PKGNAME=	${DISTNAME:S/qt-/qt4-/:S/-src//}
@@ -24,6 +24,8 @@ BUILD_DEPENDS+=	qt4-sqlite3>=4.7.0:../../x11/qt4-sqlite3
 
 BUILD_TARGET=	make_default qch_docs
 MAKE_ENV+=	PREFIX=${PREFIX}
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 pre-configure:
 	rm -rf ${WRKSRC}/src/libs/3rdparty/botan
