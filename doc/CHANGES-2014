@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.739 2014/02/16 23:16:14 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.740 2014/02/16 23:21:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1139,3 +1139,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added www/htmlcxx version 0.85 [wiz 2014-02-16]
 	Added textproc/tinyxml version 2.6.2 [wiz 2014-02-16]
 	Updated textproc/tinyxml to 2.6.2nb1 [wiz 2014-02-16]
+	Updated net/filezilla to 3.7.3nb4 [wiz 2014-02-16]
