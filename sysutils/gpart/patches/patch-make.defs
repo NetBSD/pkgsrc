@@ -1,0 +1,14 @@
+$NetBSD: patch-make.defs,v 1.1 2014/02/16 16:59:37 wiedi Exp $
+
+don't overwrite CFLAGS
+--- make.defs.orig	2001-01-29 19:17:12.000000000 +0000
++++ make.defs
+@@ -2,7 +2,7 @@
+ #
+ #
+ CC      = gcc
+-CFLAGS  = -Wall -O2 -pedantic
++#CFLAGS  = -Wall -O2 -pedantic
+ LDFLAGS =
+ MAKEDEP = gcc -M
+ INSTALL = install
