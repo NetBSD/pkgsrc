@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.722 2014/02/16 17:16:51 agc Exp $
+$NetBSD: CHANGES-2014,v 1.723 2014/02/16 17:21:57 agc Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1122,3 +1122,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Tree-DAG_Node to 1.22 [wen 2014-02-16]
 	Updated devel/p5-Try-Tiny to 0.19 [wen 2014-02-16]
 	Updated security/libnetpgpverify to 20140210 [agc 2014-02-16]
+	Updated security/netpgpverify to 20140210 [agc 2014-02-16]
