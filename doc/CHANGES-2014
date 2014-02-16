@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.707 2014/02/16 11:41:44 sno Exp $
+$NetBSD: CHANGES-2014,v 1.708 2014/02/16 11:57:32 sno Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1107,3 +1107,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/gifsicle to 1.78 [schmonz 2014-02-16]
 	Updated devel/p5-Module-Pluggable to 5.1 [sno 2014-02-16]
 	Updated textproc/p5-Encode to 2.57 [sno 2014-02-16]
+	Updated sysutils/p5-Sys-Filesystem to 1.405 [sno 2014-02-16]
