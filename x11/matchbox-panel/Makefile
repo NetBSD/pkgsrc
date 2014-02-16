@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2013/06/06 12:55:20 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2014/02/16 01:36:31 wiedi Exp $
 #
 
 DISTNAME=		matchbox-panel-0.9.2
@@ -20,6 +20,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-small-icons
 CONFIGURE_ARGS+=	--enable-startup-notification
 CONFIGURE_ARGS+=	--enable-nls
+
+CFLAGS.SunOS+=		-Du_int64_t=uint64_t
 
 .include "../../mk/bsd.prefs.mk"
 
