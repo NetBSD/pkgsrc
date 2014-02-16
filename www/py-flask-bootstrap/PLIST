@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/01/03 03:34:00 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/02/16 23:46:55 rodent Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -9,8 +9,10 @@ ${PYSITELIB}/flask_bootstrap/__init__.py
 ${PYSITELIB}/flask_bootstrap/__init__.pyc
 ${PYSITELIB}/flask_bootstrap/__init__.pyo
 ${PYSITELIB}/flask_bootstrap/static/css/bootstrap-theme.css
+${PYSITELIB}/flask_bootstrap/static/css/bootstrap-theme.css.map
 ${PYSITELIB}/flask_bootstrap/static/css/bootstrap-theme.min.css
 ${PYSITELIB}/flask_bootstrap/static/css/bootstrap.css
+${PYSITELIB}/flask_bootstrap/static/css/bootstrap.css.map
 ${PYSITELIB}/flask_bootstrap/static/css/bootstrap.min.css
 ${PYSITELIB}/flask_bootstrap/static/fonts/glyphicons-halflings-regular.eot
 ${PYSITELIB}/flask_bootstrap/static/fonts/glyphicons-halflings-regular.svg
