@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.729 2014/02/16 19:20:10 sno Exp $
+$NetBSD: CHANGES-2014,v 1.730 2014/02/16 19:28:01 sno Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1129,3 +1129,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Module-Build-Tiny to 0.034 [sno 2014-02-16]
 	Updated devel/p5-ExtUtils-MakeMaker to 6.88 [sno 2014-02-16]
 	Updated devel/p5-Sub-Install to 0.927 [sno 2014-02-16]
+	Updated devel/p5-Sub-Exporter to 0.987 [sno 2014-02-16]
