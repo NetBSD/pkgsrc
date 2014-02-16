@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/02/16 11:24:44 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2014/02/16 15:54:09 wiedi Exp $
 
 DISTNAME=	xtide-2.8.3
 PKGREVISION=	5
@@ -20,6 +20,8 @@ HARMONICS_FILE=	harmonics-dwf-20060708.tcd
 CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR:Q} X11BASE=${X11BASE:Q}
 EGDIR=		${PREFIX}/share/examples/xtide
 CONF_FILES=	${EGDIR}/xtide.conf ${PKG_SYSCONFDIR}/xtide.conf
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 SUBST_CLASSES+=	xt
 SUBST_STAGE.xt=	pre-configure
