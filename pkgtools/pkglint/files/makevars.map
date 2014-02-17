@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.241 2014/01/28 12:55:32 obache Exp $
+# $NetBSD: makevars.map,v 1.242 2014/02/17 14:33:42 wiz Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -655,6 +655,7 @@ RCD_SCRIPT_SRC.*	List of Pathname [m:s]
 REPLACE.*		String [m:s]
 REPLACE_AWK		List of Pathmask [$package_list]
 REPLACE_BASH		List of Pathmask [$package_list]
+REPLACE_CSH		List of Pathmask [$package_list]
 REPLACE_EMACS		List of Pathmask
 REPLACE_FILES.*		List of Pathmask [m:as,c:as]
 REPLACE_INTERPRETER	List of Identifier [m:a,c:a]
