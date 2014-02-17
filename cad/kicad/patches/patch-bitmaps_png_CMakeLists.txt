@@ -1,0 +1,31 @@
+$NetBSD: patch-bitmaps_png_CMakeLists.txt,v 1.1.1.1 2014/02/17 20:38:59 bouyer Exp $
+
+Don't use ${CMAKE_MODULE_PATH} directly as it will be changed
+and containt multiple directories
+
+--- bitmaps_png/CMakeLists.txt.orig	2014-02-14 21:55:49.000000000 +0100
++++ bitmaps_png/CMakeLists.txt	2014-02-14 22:37:57.000000000 +0100
+@@ -602,9 +602,9 @@
+ 
+         COMMAND rm -f ${outFile}.tmp
+         COMMAND ${CMAKE_COMMAND} -DinputFile=${inputFile} -DoutCppFile=${outFile}
+-            -P ${CMAKE_MODULE_PATH}/PNG2cpp.cmake
++            -P ${PROJECT_SOURCE_DIR}/CMakeModules/PNG2cpp.cmake
+ 
+-        DEPENDS ${inputFile} ${CMAKE_MODULE_PATH}/PNG2cpp.cmake
++        DEPENDS ${inputFile} ${PROJECT_SOURCE_DIR}/CMakeModules/PNG2cpp.cmake
+ 
+         POST_BUILD
+         COMMAND ${eol2unix_EXECUTABLE} ${outFile}
+@@ -619,9 +619,9 @@
+         OUTPUT  ${outFile}
+ 
+         COMMAND ${CMAKE_COMMAND} -DinputFile=${inputFile} -DoutCppFile=${outFile}
+-            -P ${CMAKE_MODULE_PATH}/PNG2cpp.cmake
++            -P ${PROJECT_SOURCE_DIR}/CMakeModules/PNG2cpp.cmake
+ 
+-        DEPENDS ${inputFile} ${CMAKE_MODULE_PATH}/PNG2cpp.cmake
++        DEPENDS ${inputFile} ${PROJECT_SOURCE_DIR}/CMakeModules/PNG2cpp.cmake
+         COMMENT "Creating ${outFile}"
+         )
+ endfunction()
