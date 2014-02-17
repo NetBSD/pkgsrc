@@ -1,3 +1,5 @@
+$NetBSD: patch-modules_proxy_mod_proxy_connect.c,v 1.2 2014/02/17 17:32:56 adam Exp $
+
 --- modules/proxy/mod_proxy_connect.c
 +++ modules/proxy/mod_proxy_connect.c
 @@ -21,6 +21,8 @@ 
