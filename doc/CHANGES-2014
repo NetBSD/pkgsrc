@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.754 2014/02/17 14:33:51 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.755 2014/02/17 16:35:29 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1165,3 +1165,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added sysutils/collectd-snmp version 5.4.1 [fhajny 2014-02-17]
 	Updated biology/py-mol to 1.5.0.1nb3 [wiz 2014-02-17]
 	Updated pkgtools/pkglint to 4.136 [wiz 2014-02-17]
+	Updated x11/tk to 8.6.1nb2 [jperkin 2014-02-17]
