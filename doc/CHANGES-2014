@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.749 2014/02/17 08:19:16 pettai Exp $
+$NetBSD: CHANGES-2014,v 1.750 2014/02/17 10:32:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1149,3 +1149,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/netpgp to 20140210 [agc 2014-02-16]
 	Updated security/validns to 0.8 [pettai 2014-02-17]
 	Added security/credns version 0.2.10 [pettai 2014-02-17]
+	Updated pkgtools/port2pkg to 1.15 [wiz 2014-02-17]
