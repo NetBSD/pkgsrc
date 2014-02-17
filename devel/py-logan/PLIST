@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2014/02/17 00:29:06 rodent Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/logan/__init__.py
+${PYSITELIB}/logan/__init__.pyc
+${PYSITELIB}/logan/__init__.pyo
+${PYSITELIB}/logan/importer.py
+${PYSITELIB}/logan/importer.pyc
+${PYSITELIB}/logan/importer.pyo
+${PYSITELIB}/logan/runner.py
+${PYSITELIB}/logan/runner.pyc
+${PYSITELIB}/logan/runner.pyo
+${PYSITELIB}/logan/settings.py
+${PYSITELIB}/logan/settings.pyc
+${PYSITELIB}/logan/settings.pyo
