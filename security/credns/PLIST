@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2014/02/17 07:42:25 pettai Exp $
+man/man5/credns.conf.5
+man/man8/credns-checkconf.8
+man/man8/credns-notify.8
+man/man8/credns-patch.8
+man/man8/credns-xfer.8
+man/man8/credns.8
+man/man8/crednsc.8
+sbin/credns
+sbin/credns-checkconf
+sbin/credns-notify
+sbin/credns-patch
+sbin/credns-xfer
+sbin/crednsc
+@pkgdir var/db/credns
