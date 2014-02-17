@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13002 2014/02/16 01:19:24 gdt Exp $
+$NetBSD: TODO,v 1.13003 2014/02/17 17:34:56 adam Exp $
 
 Suggested new packages
 ======================
@@ -377,12 +377,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ap-dtcl-1.0.0
 	o ap-layout-3.4
 	o ap-mp3-0.40
-	o ap-python-3.5.0
 	o ap-xslt-1.4.3
 	o ap2-auth-ldap-3.11
 	o ap2-transform-0.6.0
 	o apache-ant-1.9.3
-	o apache22-2.2.26
 	o apr0-2.4.1
 	o argtable-2.9
 	o aria2-1.18.3
