@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2014/02/17 10:36:51 wiz Exp $
+bin/ori
+bin/oridbg
+bin/orifs
+bin/orisync
+man/man1/ori.1
+man/man1/oridbg.1
+man/man1/orifs.1
+man/man1/orisync.1
