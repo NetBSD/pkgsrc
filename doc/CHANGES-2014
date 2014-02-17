@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.747 2014/02/17 06:46:47 agc Exp $
+$NetBSD: CHANGES-2014,v 1.748 2014/02/17 08:18:44 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1147,3 +1147,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-uwsgi to 2.0.1 [rodent 2014-02-17]
 	Updated devel/p5-Config-MVP to 2.200007 [hiramatsu 2014-02-17]
 	Updated security/netpgp to 20140210 [agc 2014-02-16]
+	Updated security/validns to 0.8 [pettai 2014-02-17]
