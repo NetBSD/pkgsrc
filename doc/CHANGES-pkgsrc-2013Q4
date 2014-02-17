@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.28 2014/02/15 14:33:54 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.29 2014/02/17 06:53:46 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q4 branch:
@@ -98,3 +98,5 @@ Pullup ticket #4326 - requested by taca
 www/contao32: security update
 Pullup ticket #4327 - requested by drochner
 lang/python26: security patch
+Pullup ticket #4324 - requested by tron
+mail/thunderbird: security update
