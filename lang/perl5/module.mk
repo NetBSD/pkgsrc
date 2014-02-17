@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.69 2014/02/16 22:40:57 sno Exp $
+# $NetBSD: module.mk,v 1.70 2014/02/17 04:28:45 obache Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -54,7 +54,7 @@ TEST_TARGET?=		test
 .include "../../mk/compiler.mk"
 
 .if ${PERL5_MODULE_TYPE} == "Module::Build" || \
-    ${PERL5_MODULE_TYPE} == "Module::Build::Bundled"||  \
+    ${PERL5_MODULE_TYPE} == "Module::Build::Bundled" || \
     ${PERL5_MODULE_TYPE} == "Module::Build::Tiny"
 PERL5_MODTYPE=		modbuild
 PERL5_MODBUILD_DESTDIR_OPTION=--destdir ${DESTDIR:Q}
