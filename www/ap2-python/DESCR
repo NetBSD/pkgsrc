@@ -1,6 +1,5 @@
-mod_python is an Apache module that embeds the Python interpreter
-within the server. With mod_python you can write web-based applications
-in Python that will run many times faster than traditional CGI and
-will have access to advanced features such as ability to retain
-database connections and other data between hits and access to
-Apache internals.
+Mod_python is an Apache module that embeds the Python interpreter within
+the server. With mod_python you can write web-based applications in Python
+that will run many times faster than traditional CGI and will have access
+to advanced features such as ability to retain database connections and other
+data between hits and access to Apache internals.

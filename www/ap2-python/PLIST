@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 22:00:17 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/02/17 17:20:28 adam Exp $
+bin/mod_python
 lib/httpd/mod_python.so
 ${PYSITELIB}/mod_python/Cookie.py
 ${PYSITELIB}/mod_python/Cookie.pyc
@@ -19,9 +20,9 @@ ${PYSITELIB}/mod_python/cache.pyo
 ${PYSITELIB}/mod_python/cgihandler.py
 ${PYSITELIB}/mod_python/cgihandler.pyc
 ${PYSITELIB}/mod_python/cgihandler.pyo
-${PYSITELIB}/mod_python/importer.py
-${PYSITELIB}/mod_python/importer.pyc
-${PYSITELIB}/mod_python/importer.pyo
+${PYSITELIB}/mod_python/httpdconf.py
+${PYSITELIB}/mod_python/httpdconf.pyc
+${PYSITELIB}/mod_python/httpdconf.pyo
 ${PYSITELIB}/mod_python/psp.py
 ${PYSITELIB}/mod_python/psp.pyc
 ${PYSITELIB}/mod_python/psp.pyo
@@ -37,3 +38,9 @@ ${PYSITELIB}/mod_python/testhandler.pyo
 ${PYSITELIB}/mod_python/util.py
 ${PYSITELIB}/mod_python/util.pyc
 ${PYSITELIB}/mod_python/util.pyo
+${PYSITELIB}/mod_python/version.py
+${PYSITELIB}/mod_python/version.pyc
+${PYSITELIB}/mod_python/version.pyo
+${PYSITELIB}/mod_python/wsgi.py
+${PYSITELIB}/mod_python/wsgi.pyc
+${PYSITELIB}/mod_python/wsgi.pyo

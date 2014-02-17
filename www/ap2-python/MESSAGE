@@ -1,19 +1,24 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/07/17 01:11:36 darcy Exp $
+$NetBSD: MESSAGE,v 1.2 2014/02/17 17:20:28 adam Exp $
+
+In order to use this module in your Apache installation, you need to
+add the following to your httpd.conf file:
+
+  LoadModule python_module lib/httpd/mod_python.so
 
 Also remember to add to your Apache configuration in the appropriate context:
 
-PythonPath "['/path/to/foo', '/path/to/bar']"
-AddHandler python-program .py
-PythonHandler foobar
-PythonDebug On
+  PythonPath "['/path/to/foo', '/path/to/bar']"
+  AddHandler python-program .py
+  PythonHandler foobar
+  PythonDebug On
 
 For more information, see http://www.modpython.org/.
 
 And, if you built apache without thread support, you may need to add the
-following lines to $PREFIX/sbin/envvars:
+following lines to ${PREFIX}/sbin/envvars:
 
-LD_PRELOAD=/usr/lib/libc_r.so  # or libpthread.so
-export LD_PRELOAD
+  LD_PRELOAD=/usr/lib/libc_r.so  # or libpthread.so
+  export LD_PRELOAD
 
 ===========================================================================
