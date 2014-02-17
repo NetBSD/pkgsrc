@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2014/02/17 07:42:25 pettai Exp $
+
+SHA1 (credns-0.2.10.tar.gz) = b61a9315faffcec0a1399641246307ad08ae3419
+RMD160 (credns-0.2.10.tar.gz) = 9601dedddd70784051b52c27d4e060c2d7d0e4bc
+Size (credns-0.2.10.tar.gz) = 957981 bytes
+SHA1 (patch-Makefile.in) = a7c231e7078a5060290be5410fff17c3e52b4176
