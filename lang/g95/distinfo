@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2013/09/23 17:56:32 asau Exp $
+$NetBSD: distinfo,v 1.19 2014/02/17 16:49:14 jperkin Exp $
 
 SHA1 (g95_source.tgz) = b5e503fd6459b65cbda73190685f9490230d9cff
 RMD160 (g95_source.tgz) = 98d03e9a1835f4b3553a72a798bdf1d90a757176
@@ -30,4 +30,4 @@ SHA1 (patch-libf95.a-0.93_io_read.c) = 594bcfb15e59dcaaec5a6a21a58af17e8f41eae9
 SHA1 (patch-libf95.a-0.93_math_ff.c) = 353121bc08a86765d18b0e6f051ba91f7e65e9c2
 SHA1 (patch-libf95.a-0.93_math_x87.S) = d1eb02bd2358b6abb9b8dc3e32629cba540adcc4
 SHA1 (patch-libf95.a-0.93_quad_power16.c) = fc7375aa90ecf75bb8ba26d41739614040b16e09
-SHA1 (patch-libf95.a-0.93_runtime_main.c) = a993a28e0c766c1ae0c73c5bda91b1446d6d944d
+SHA1 (patch-libf95.a-0.93_runtime_main.c) = dfde68072f38bf5bbb9c54ebeea5b9ce07d0c6be
