@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.591 2013/12/31 17:08:08 wiz Exp $
+# $NetBSD: Makefile,v 1.592 2014/02/17 11:23:01 fhajny Exp $
 #
 
 COMMENT=	System utilities
@@ -55,6 +55,18 @@ SUBDIR+=	checkpassword
 SUBDIR+=	checkpassword-pam
 SUBDIR+=	checkperms
 SUBDIR+=	clex
+SUBDIR+=	collectd
+SUBDIR+=	collectd-amqp
+SUBDIR+=	collectd-curl
+SUBDIR+=	collectd-dbi
+SUBDIR+=	collectd-dns
+SUBDIR+=	collectd-memcached
+SUBDIR+=	collectd-mysql
+SUBDIR+=	collectd-network
+SUBDIR+=	collectd-notify-email
+SUBDIR+=	collectd-postgresql
+SUBDIR+=	collectd-rrdtool
+SUBDIR+=	collectd-snmp
 SUBDIR+=	conky
 SUBDIR+=	consolekit
 SUBDIR+=	coreutils
