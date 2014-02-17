@@ -1,0 +1,94 @@
+$NetBSD: patch-src_collectd.conf.in,v 1.1 2014/02/17 11:21:55 fhajny Exp $
+
+Fix default dirs.
+--- src/collectd.conf.in.orig	2014-01-26 08:09:23.516559631 +0000
++++ src/collectd.conf.in
+@@ -12,7 +12,7 @@
+ 
+ #Hostname    "localhost"
+ #FQDNLookup   true
+-#BaseDir     "@localstatedir@/lib/@PACKAGE_NAME@"
++#BaseDir     "@localstatedir@/db/@PACKAGE_NAME@"
+ #PIDFile     "@localstatedir@/run/@PACKAGE_NAME@.pid"
+ #PluginDir   "@libdir@/@PACKAGE_NAME@"
+ #TypesDB     "@prefix@/share/@PACKAGE_NAME@/types.db"
+@@ -278,7 +278,7 @@
+ #</Plugin>
+ 
+ #<Plugin csv>
+-#	DataDir "@localstatedir@/lib/@PACKAGE_NAME@/csv"
++#	DataDir "@localstatedir@/db/@PACKAGE_NAME@/csv"
+ #	StoreRates false
+ #</Plugin>
+ 
+@@ -566,7 +566,7 @@
+ #
+ #	<Database db_name2>
+ #		Host "localhost"
+-#		Socket "/var/run/mysql/mysqld.sock"
++#		Socket "@localstatedir@/run/mysql/mysqld.sock"
+ #		SlaveStats true
+ #		SlaveNotifications true
+ #	</Database>
+@@ -827,14 +827,14 @@
+ #  <Server "server_name">
+ #    Collect "latency"
+ #    Collect "udp-answers" "udp-queries"
+-#    Socket "/var/run/pdns.controlsocket"
++#    Socket "@localstatedir@/run/pdns.controlsocket"
+ #  </Server>
+ #  <Recursor "recursor_name">
+ #    Collect "questions"
+ #    Collect "cache-hits" "cache-misses"
+-#    Socket "/var/run/pdns_recursor.controlsocket"
++#    Socket "@localstatedir@/run/pdns_recursor.controlsocket"
+ #  </Recursor>
+-#  LocalSocket "/opt/collectd/var/run/collectd-powerdns"
++#  LocalSocket "@localstatedir@/run/collectd-powerdns"
+ #</Plugin>
+ 
+ #<Plugin processes>
+@@ -882,14 +882,14 @@
+ 
+ #<Plugin rrdcached>
+ #	DaemonAddress "unix:/tmp/rrdcached.sock"
+-#	DataDir "@localstatedir@/lib/@PACKAGE_NAME@/rrd"
++#	DataDir "@localstatedir@/db/@PACKAGE_NAME@/rrd"
+ #	CreateFiles true
+ #	CreateFilesAsync false
+ #	CollectStatistics true
+ #</Plugin>
+ 
+ #<Plugin rrdtool>
+-#	DataDir "@localstatedir@/lib/@PACKAGE_NAME@/rrd"
++#	DataDir "@localstatedir@/db/@PACKAGE_NAME@/rrd"
+ #	CreateFilesAsync false
+ #	CacheTimeout 120
+ #	CacheFlush   900
+@@ -994,7 +994,7 @@
+ #</Plugin>
+ 
+ #<Plugin "tail">
+-#  <File "/var/log/exim4/mainlog">
++#  <File "@localstatedir@/log/exim4/mainlog">
+ #    Instance "exim"
+ #    <Match>
+ #      Regex "S=([1-9][0-9]*)"
+@@ -1031,7 +1031,7 @@
+ #       Type "kpackets_wire_per_sec.realtime"
+ #       ValueFrom 4
+ #   </Metric>
+-#   <File "/var/log/snort/snort.stats">
++#   <File "@localstatedir@/log/snort/snort.stats">
+ #       Instance "snort-eth0"
+ #       Interval 600
+ #       Collect "dropped" "mbps" "alerts" "kpps"
+@@ -1068,7 +1068,7 @@
+ #</Plugin>
+ 
+ #<Plugin unixsock>
+-#	SocketFile "@prefix@/var/run/@PACKAGE_NAME@-unixsock"
++#	SocketFile "@localstatedir@/run/@PACKAGE_NAME@-unixsock"
+ #	SocketGroup "collectd"
+ #	SocketPerms "0660"
+ #	DeleteSocket false

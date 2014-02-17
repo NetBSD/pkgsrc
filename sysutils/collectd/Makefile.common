@@ -1,0 +1,72 @@
+# $NetBSD: Makefile.common,v 1.1 2014/02/17 11:21:54 fhajny Exp $
+#
+# used by sysutils/collectd/Makefile
+# used by sysutils/collectd-amqp/Makefile
+# used by sysutils/collectd-curl/Makefile
+# used by sysutils/collectd-dbi/Makefile
+# used by sysutils/collectd-dns/Makefile
+# used by sysutils/collectd-memcached/Makefile
+# used by sysutils/collectd-mysql/Makefile
+# used by sysutils/collectd-network/Makefile
+# used by sysutils/collectd-notify-email/Makefile
+# used by sysutils/collectd-postgresql/Makefile
+# used by sysutils/collectd-rrdtool/Makefile
+# used by sysutils/collectd-snmp/Makefile
+
+DISTNAME=	collectd-5.4.1
+MASTER_SITES=	http://collectd.org/files/
+CATEGORIES=	sysutils
+
+MAINTAINER=	filip@joyent.com
+HOMEPAGE=	http://collectd.org/
+LICENSE=	gnu-gpl-v2
+
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
+USE_LANGUAGES=		c c++
+
+DISTINFO_FILE=		${.CURDIR}/../../sysutils/collectd/distinfo
+PATCHDIR=		${.CURDIR}/../../sysutils/collectd/patches
+
+.if !empty(COLLECTD_PACKAGE)
+PKGNAME?=		${DISTNAME:S/collectd/collectd-${COLLECTD_PACKAGE}/}
+
+DEPENDS+=		${DISTNAME}:../../sysutils/collectd
+
+COLLECTD_PLUGINS?=	${COLLECTD_PACKAGE:S/-/_/}
+
+BUILD_DIRS=		src
+BUILD_TARGET=		${COLLECTD_PLUGINS:S/$/.la/}
+INSTALL_DIRS=		src
+INSTALL_TARGET=		install-pkglibLTLIBRARIES
+.  for plugin in ${COLLECTD_PLUGINS}
+CONFIGURE_ARGS+=	--enable-${plugin}
+GENERATE_PLIST+=	${ECHO} "lib/collectd/${plugin}.la";
+.  endfor
+.endif
+
+.include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS+=		VARBASE
+
+# Disable all libs support by default
+DISABLED_LIBS=		aquaero5 credis curl dbi esmtp ganglia gcrypt	\
+			iptc lvm2app memcached mnl modbus mongoc mysql	\
+			netsnmp notify oping owcapi pcap perl pq	\
+			rabbitmq routeros rrd sensors sigrok statgrab	\
+			tokyotyrant upsclient varnish xml2 xmms yajl
+CONFIGURE_ARGS+=	--with-java=no --with-mic=no --with-oracle=no	\
+			--with-perl-bindings=no --with-python=no	\
+			--disable-all-plugins
+.for lib in ${DISABLED_LIBS}
+CONFIGURE_ARGS+=	--with-lib${lib}=no
+.endfor
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--with-ltdl-lib=${BUILDLINK_PREFIX.libltdl}/lib
+CONFIGURE_ARGS+=	--with-ltdl-include=${BUILDLINK_PREFIX.libltdl}/include
+
+CPPFLAGS.SunOS+=	-D__EXTENSIONS__ -DSOLARIS2=11
+
+.include "../../devel/libltdl/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"

@@ -1,0 +1,2 @@
+CURL-based plugins for collectd (curl, curl_json, curl_xml,
+apache, bind, nginx, write_http).
