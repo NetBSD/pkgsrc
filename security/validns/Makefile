@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2013/12/10 14:13:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2014/02/17 08:18:07 pettai Exp $
 #
 
-DISTNAME=	validns-0.7
+DISTNAME=	validns-0.8
 CATEGORIES=	security
 MASTER_SITES=	http://www.validns.net/download/
 
