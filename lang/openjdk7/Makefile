@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2014/02/12 23:18:05 tron Exp $
+# $NetBSD: Makefile,v 1.61 2014/02/17 21:44:22 wiz Exp $
 
 DISTNAME=	openjdk-1.7.51-20140125
 PKGNAME=	openjdk7-1.7.51
@@ -122,6 +122,8 @@ _WRAP_EXTRA_ARGS.CXX+=	-Wno-parentheses -Wno-sign-conversion \
 			-Wno-delete-non-virtual-dtor \
 			-Wno-return-type -Wno-unused-parameter \
 			-Wno-parentheses-equality -Wno-empty-body
+BUILDLINK_TRANSFORM+=	rm:-fcheck-new
+BUILDLINK_TRANSFORM+=	rm:-fpch-deps
 .  if ${MACHINE_ARCH} == "x86_64"
 _WRAP_EXTRA_ARGS.CXX+=	-mstackrealign
 .  endif
