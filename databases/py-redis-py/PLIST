@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2014/02/17 00:39:26 rodent Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/redis/__init__.py
+${PYSITELIB}/redis/__init__.pyc
+${PYSITELIB}/redis/__init__.pyo
+${PYSITELIB}/redis/_compat.py
+${PYSITELIB}/redis/_compat.pyc
+${PYSITELIB}/redis/_compat.pyo
+${PYSITELIB}/redis/client.py
+${PYSITELIB}/redis/client.pyc
+${PYSITELIB}/redis/client.pyo
+${PYSITELIB}/redis/connection.py
+${PYSITELIB}/redis/connection.pyc
+${PYSITELIB}/redis/connection.pyo
+${PYSITELIB}/redis/exceptions.py
+${PYSITELIB}/redis/exceptions.pyc
+${PYSITELIB}/redis/exceptions.pyo
+${PYSITELIB}/redis/sentinel.py
+${PYSITELIB}/redis/sentinel.pyc
+${PYSITELIB}/redis/sentinel.pyo
+${PYSITELIB}/redis/utils.py
+${PYSITELIB}/redis/utils.pyc
+${PYSITELIB}/redis/utils.pyo
