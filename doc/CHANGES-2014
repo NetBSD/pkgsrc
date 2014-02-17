@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.751 2014/02/17 10:37:44 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.752 2014/02/17 11:25:49 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1151,3 +1151,15 @@ Changes to the packages collection and infrastructure in 2014:
 	Added security/credns version 0.2.10 [pettai 2014-02-17]
 	Updated pkgtools/port2pkg to 1.15 [wiz 2014-02-17]
 	Added filesystems/ori version 0.8.1 [wiz 2014-02-17]
+	Added sysutils/collectd version 5.4.1 [fhajny 2014-02-17]
+	Added sysutils/collectd-amqp version 5.4.1 [fhajny 2014-02-17]
+	Added sysutils/collectd-curl version 5.4.1 [fhajny 2014-02-17]
+	Added sysutils/collectd-dbi version 5.4.1 [fhajny 2014-02-17]
+	Added sysutils/collectd-dns version 5.4.1 [fhajny 2014-02-17]
+	Added sysutils/collectd-memcached version 5.4.1 [fhajny 2014-02-17]
+	Added sysutils/collectd-mysql version 5.4.1 [fhajny 2014-02-17]
+	Added sysutils/collectd-network version 5.4.1 [fhajny 2014-02-17]
+	Added sysutils/collectd-notify-email version 5.4.1 [fhajny 2014-02-17]
+	Added sysutils/collectd-postgresql version 5.4.1 [fhajny 2014-02-17]
+	Added sysutils/collectd-rrdtool version 5.4.1 [fhajny 2014-02-17]
+	Added sysutils/collectd-snmp version 5.4.1 [fhajny 2014-02-17]
