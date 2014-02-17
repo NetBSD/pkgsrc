@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.745 2014/02/17 01:01:35 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.746 2014/02/17 01:23:02 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1145,3 +1145,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/py-logan version 0.5.9.1 [rodent 2014-02-17]
 	Added databases/py-redis-py version 2.9.1 [rodent 2014-02-17]
 	Updated www/py-uwsgi to 2.0.1 [rodent 2014-02-17]
+	Updated devel/p5-Config-MVP to 2.200007 [hiramatsu 2014-02-17]
