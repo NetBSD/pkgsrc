@@ -1,0 +1,6 @@
+Credns is a software program aimed at fortifying DNSSEC by performing
+validation in the DNS notify/transfer-chain. Currently credns is a fork
+of the NSD_3_2 branch that has been extended with the possibility to
+assess zones (received or updated by AXFR or IXFR) by running an external
+verifier. Only zones that are deemed correct by the verifier will be
+notified to (public) slave servers and offered for transfer.
