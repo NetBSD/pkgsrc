@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/02/17 00:39:26 rodent Exp $
+
+SHA1 (redis-2.9.1.tar.gz) = 10ecaca32dc83c275d70b3dcf9685a7c2291fb2a
+RMD160 (redis-2.9.1.tar.gz) = 54ae1e52cd6b1b9d829738970137562b38027c69
+Size (redis-2.9.1.tar.gz) = 62204 bytes
