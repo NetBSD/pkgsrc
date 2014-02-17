@@ -1,0 +1,29 @@
+$NetBSD: patch-configure,v 1.1 2014/02/17 11:21:55 fhajny Exp $
+
+Remove m4 cruft.
+--- configure.orig	2014-01-26 08:10:00.249270750 +0000
++++ configure
+@@ -18338,19 +18338,19 @@ $as_echo_n "checking if have htonll defi
+     have_htonll="no"
+     cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+-[
++
+ #include <sys/types.h>
+ #include <netinet/in.h>
+ #if HAVE_INTTYPES_H
+ # include <inttypes.h>
+ #endif
+-]
++
+ int
+ main ()
+ {
+-[
++
+           return htonll(0);
+-]
++
+ 
+   ;
+   return 0;
