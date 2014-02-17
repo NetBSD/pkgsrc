@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/02/17 00:20:28 rodent Exp $
+
+SHA1 (py-ejson/ejson-0.1.6.tar.gz) = 0b83a598b9862877f51c390a83d170cdc515d10b
+RMD160 (py-ejson/ejson-0.1.6.tar.gz) = 2103743d42ab0d652de6402f8d4fb1db42d31340
+Size (py-ejson/ejson-0.1.6.tar.gz) = 10244 bytes

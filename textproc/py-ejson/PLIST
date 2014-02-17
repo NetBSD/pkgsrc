@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2014/02/17 00:20:28 rodent Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/ejson/__init__.py
+${PYSITELIB}/ejson/__init__.pyc
+${PYSITELIB}/ejson/__init__.pyo
+${PYSITELIB}/ejson/serializers.py
+${PYSITELIB}/ejson/serializers.pyc
+${PYSITELIB}/ejson/serializers.pyo
