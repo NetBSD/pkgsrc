@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2014/02/17 07:42:25 pettai Exp $
+
+Install sample conf in examples dir
+
+--- Makefile.in.orig	2014-02-17 07:36:09.000000000 +0000
++++ Makefile.in
+@@ -377,7 +377,7 @@ install: all
+ 	$(INSTALL_DATA) $(srcdir)/credns-patch.8 $(DESTDIR)$(mandir)/man8/credns-patch.8
+ 	$(INSTALL_DATA) $(srcdir)/credns-xfer.8 $(DESTDIR)$(mandir)/man8/credns-xfer.8
+ 	$(INSTALL_DATA) $(srcdir)/credns.conf.5 $(DESTDIR)$(mandir)/man5/credns.conf.5
+-	$(INSTALL_DATA) credns.conf.sample $(DESTDIR)$(nsdconfigfile).sample
++	$(INSTALL_DATA) credns.conf.sample $(DESTDIR)${PREFIX}/share/examples/credns/credns.conf.sample
+ 
+ uninstall:
+ 	@echo
