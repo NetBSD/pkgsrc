@@ -1,0 +1,12 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1.1.1 2014/02/17 20:40:10 bouyer Exp $
+
+Don't install template files, they're already installed by the
+kicad package
+
+--- CMakeLists.txt.orig	2014-02-15 14:08:46.000000000 +0100
++++ CMakeLists.txt	2014-02-15 14:08:57.000000000 +0100
+@@ -51,4 +51,3 @@
+ # Resources.
+ add_subdirectory(library)
+ add_subdirectory(modules)
+-add_subdirectory(template)
