@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2013/07/04 04:33:08 jnemeth Exp $
+# $NetBSD: Makefile,v 1.37 2014/02/17 10:37:18 wiz Exp $
 #
 
 COMMENT=	File systems, and file system related packages
@@ -33,6 +33,7 @@ SUBDIR+=	fuse-wikipediafs
 SUBDIR+=	glusterfs
 SUBDIR+=	openafs
 SUBDIR+=	openafs-devel
+SUBDIR+=	ori
 SUBDIR+=	p5-Module-Path
 SUBDIR+=	p5-MooseX-Types-Path-Tiny
 SUBDIR+=	p5-Path-Tiny
