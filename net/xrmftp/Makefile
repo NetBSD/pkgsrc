@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2013/01/26 21:38:39 adam Exp $
+# $NetBSD: Makefile,v 1.23 2014/02/17 00:24:05 wiedi Exp $
 
 DISTNAME=	xrmftp-1.2.4
 PKGREVISION=	8
@@ -14,6 +14,8 @@ WRKSRC=		${WRKDIR}/${DISTNAME}.src
 USE_X11BASE=	yes
 
 INSTALLATION_DIRS=	bin
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xrmftp ${DESTDIR}${PREFIX}/bin
