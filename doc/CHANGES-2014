@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.742 2014/02/17 00:20:45 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.743 2014/02/17 00:29:44 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1142,3 +1142,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/filezilla to 3.7.3nb4 [wiz 2014-02-16]
 	Updated www/py-flask-bootstrap to 3.1.1.1 [rodent 2014-02-16]
 	Added textproc/py-ejson version 0.1.6 [rodent 2014-02-17]
+	Added devel/py-logan version 0.5.9.1 [rodent 2014-02-17]
