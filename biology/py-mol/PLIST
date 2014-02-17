@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2013/04/14 19:48:56 joerg Exp $
-bin/pymol
+@comment $NetBSD: PLIST,v 1.6 2014/02/17 14:32:28 wiz Exp $
+bin/pymol${PYVERSSUFFIX}
 ${PYSITELIB}/chempy/__init__.py
 ${PYSITELIB}/chempy/__init__.pyc
 ${PYSITELIB}/chempy/__init__.pyo
