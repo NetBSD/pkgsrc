@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1858 2014/02/16 15:54:32 wen Exp $
+# $NetBSD: Makefile,v 1.1859 2014/02/17 00:30:27 rodent Exp $
 #
 
 COMMENT=	Development utilities
@@ -1463,6 +1463,7 @@ SUBDIR+=	py-kqueue
 SUBDIR+=	py-libevent-rpcgen
 SUBDIR+=	py-libmc
 SUBDIR+=	py-lockfile
+SUBDIR+=	py-logan
 SUBDIR+=	py-logilab-astng
 SUBDIR+=	py-logilab-common
 SUBDIR+=	py-macholib
