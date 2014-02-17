@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2014/02/17 20:40:10 bouyer Exp $
+
+SHA1 (kicad-lib-20140214.tar.gz) = effdbaf079a7cc8df6791a90689e798dea93e7a2
+RMD160 (kicad-lib-20140214.tar.gz) = 01897ec2d1fbf980a837707a0803ba51c2b1a915
+Size (kicad-lib-20140214.tar.gz) = 48623882 bytes
+SHA1 (patch-CMakeLists.txt) = a24893bbca87d03fe3103095766fcb6f746252f7
