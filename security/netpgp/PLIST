@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2010/11/06 03:54:18 agc Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/02/17 06:45:42 agc Exp $
 bin/netpgp
 bin/netpgpkeys
-bin/netpgpverify
 include/netpgp.h
 lib/libmj.la
 lib/libnetpgp.la
 man/man1/netpgp.1
 man/man1/netpgpkeys.1
-man/man1/netpgpverify.1
 man/man3/libnetpgp.3
 man/man3/libmj.3
