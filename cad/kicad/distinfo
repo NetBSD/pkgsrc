@@ -1,0 +1,26 @@
+$NetBSD: distinfo,v 1.1.1.1 2014/02/17 20:38:59 bouyer Exp $
+
+SHA1 (kicad-stable-20140214.tar.gz) = d424af27803d26f08657e10cd37d7a5c37d01149
+RMD160 (kicad-stable-20140214.tar.gz) = daf0bc83219c7ba15e18d4211bf77b6a48f47b76
+Size (kicad-stable-20140214.tar.gz) = 13856340 bytes
+SHA1 (patch-CMakeLists.txt) = a3a91c4629a64815adf7c10724902163947482bb
+SHA1 (patch-CMakeModules_Functions.cmake) = 40581fd56de4d2cc3d3b6b0384d72373b7175dd3
+SHA1 (patch-CMakeModules_config.h.cmake) = e4e2e96f9923a73d60e0141a1f1de3a7c4dffed7
+SHA1 (patch-bitmaps_png_CMakeLists.txt) = 842fb628ab9eab3e67c6b73ee230b8d2a285d179
+SHA1 (patch-common-edaappl.cpp) = e9f0344f4d67566e9224402570b4666f44f3e925
+SHA1 (patch-common_richio.cpp) = 0fec7d5e6871a39d37882620c1853e94bae704dc
+SHA1 (patch-eeschema_netform.cpp) = 2ed91f042404973a4689b0885e4459872b8e8153
+SHA1 (patch-eeschema_sch_component.cpp) = d5f43448399625587394dfb474d5f3583eed1ce1
+SHA1 (patch-eeschema_sch_sheet.cpp) = ae7612dad83915de52dba578776bd8329e67a18d
+SHA1 (patch-eeschema_sch_sheet_path.cpp) = 2a214a215c8f0c334170d700b3a75a958adcad93
+SHA1 (patch-eeschema_sheet.cpp) = 45534b24d6f024605482c0327b89cee3c8d3a4a5
+SHA1 (patch-include-kicad_string.h) = 8165630c230a361567472fbce911e383512c944f
+SHA1 (patch-include_common.h) = e8013295bfa0f058752a3fcc654e95e510710104
+SHA1 (patch-pcbnew_CMakeLists.txt) = b7d3d89ab14cab065982ad51a4db006a0626aa4a
+SHA1 (patch-pcbnew_class_edge_mod.cpp) = 6847ab1057c94e3a04e4407dffab1cb08178c7df
+SHA1 (patch-pcbnew_class_module.cpp) = 36c75238f631e1ce4244395c32b44cfd4b0f819f
+SHA1 (patch-pcbnew_class_track.cpp) = 8602e76cdacd65231e730ab3c36eb85d56c3aad1
+SHA1 (patch-pcbnew_class_zone.cpp) = 7660bd6092bfaf5fda78e2b7650de9d0a2fb4473
+SHA1 (patch-pcbnew_kicad_plugin.cpp) = 44a0a354463a607b81eaa02ea953d45568cf2837
+SHA1 (patch-pcbnew_legacy_plugin.cpp) = af3722a66712593d91164a110e28fe31abbf2165
+SHA1 (patch-pcbnew_xchgmod.cpp) = 6718cc7d6f3f858ca5ca90342619dbaf591517c3
