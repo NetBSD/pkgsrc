@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2014/02/18 02:11:38 obache Exp $
+# $NetBSD: Makefile.common,v 1.5 2014/02/18 02:25:15 obache Exp $
 # used by textproc/cabocha/Makefile
 # used by textproc/p5-cabocha/Makefile
 # used by textproc/py-cabocha/Makefile
@@ -14,7 +14,7 @@ PATCHDIR=	${.CURDIR}/../../textproc/cabocha/patches
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/cabocha/
-LICENSE=	modified-bsd
+LICENSE=	gnu-lgpl-v2.1 OR modified-bsd
 
 RESTRICTED=	Included model is not re-distributed without prior permission.
 NO_SRC_ON_FTP=		${RESTRICTED}
