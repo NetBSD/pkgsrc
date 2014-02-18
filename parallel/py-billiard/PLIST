@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2014/01/19 18:48:00 wiz Exp $
-${PLIST.py2x}${PYSITELIB}/_billiard.so
+@comment $NetBSD: PLIST,v 1.4 2014/02/18 02:53:37 rodent Exp $
+${PLIST.py2}${PYSITELIB}/_billiard.so
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -8,21 +8,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/billiard/__init__.py
 ${PYSITELIB}/billiard/__init__.pyc
 ${PYSITELIB}/billiard/__init__.pyo
-${PYSITELIB}/billiard/_connection.py
-${PYSITELIB}/billiard/_connection.pyc
-${PYSITELIB}/billiard/_connection.pyo
-${PYSITELIB}/billiard/_connection3.py
-${PYSITELIB}/billiard/_connection3.pyc
-${PYSITELIB}/billiard/_connection3.pyo
 ${PYSITELIB}/billiard/_ext.py
 ${PYSITELIB}/billiard/_ext.pyc
 ${PYSITELIB}/billiard/_ext.pyo
-${PYSITELIB}/billiard/_reduction.py
-${PYSITELIB}/billiard/_reduction.pyc
-${PYSITELIB}/billiard/_reduction.pyo
-${PYSITELIB}/billiard/_reduction3.py
-${PYSITELIB}/billiard/_reduction3.pyc
-${PYSITELIB}/billiard/_reduction3.pyo
 ${PYSITELIB}/billiard/_win.py
 ${PYSITELIB}/billiard/_win.pyc
 ${PYSITELIB}/billiard/_win.pyo
@@ -65,6 +53,15 @@ ${PYSITELIB}/billiard/pool.pyo
 ${PYSITELIB}/billiard/process.py
 ${PYSITELIB}/billiard/process.pyc
 ${PYSITELIB}/billiard/process.pyo
+${PYSITELIB}/billiard/${PY_VER_MAJ}/__init__.py
+${PYSITELIB}/billiard/${PY_VER_MAJ}/__init__.pyc
+${PYSITELIB}/billiard/${PY_VER_MAJ}/__init__.pyo
+${PYSITELIB}/billiard/${PY_VER_MAJ}/connection.py
+${PYSITELIB}/billiard/${PY_VER_MAJ}/connection.pyc
+${PYSITELIB}/billiard/${PY_VER_MAJ}/connection.pyo
+${PYSITELIB}/billiard/${PY_VER_MAJ}/reduction.py
+${PYSITELIB}/billiard/${PY_VER_MAJ}/reduction.pyc
+${PYSITELIB}/billiard/${PY_VER_MAJ}/reduction.pyo
 ${PYSITELIB}/billiard/queues.py
 ${PYSITELIB}/billiard/queues.pyc
 ${PYSITELIB}/billiard/queues.pyo
@@ -101,9 +98,3 @@ ${PYSITELIB}/funtests/__init__.pyo
 ${PYSITELIB}/funtests/setup.py
 ${PYSITELIB}/funtests/setup.pyc
 ${PYSITELIB}/funtests/setup.pyo
-${PYSITELIB}/funtests/tests/__init__.py
-${PYSITELIB}/funtests/tests/__init__.pyc
-${PYSITELIB}/funtests/tests/__init__.pyo
-${PYSITELIB}/funtests/tests/test_multiprocessing.py
-${PYSITELIB}/funtests/tests/test_multiprocessing.pyc
-${PYSITELIB}/funtests/tests/test_multiprocessing.pyo
