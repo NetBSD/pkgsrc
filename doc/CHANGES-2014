@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.758 2014/02/17 20:50:04 bouyer Exp $
+$NetBSD: CHANGES-2014,v 1.759 2014/02/18 01:49:54 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1172,3 +1172,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added cad/kicad version 20140214 [bouyer 2014-02-17]
 	Added cad/kicad-lib version 20140214 [bouyer 2014-02-17]
 	Added cad/kicad-doc version 20140214 [bouyer 2014-02-17]
+	Updated textproc/p5-XML-XPathEngine to 0.14 [hiramatsu 2014-02-18]
