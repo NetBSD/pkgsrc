@@ -1,6 +1,6 @@
-$NetBSD: patch-Makefile-NetBSD,v 1.2 2014/02/10 20:18:04 reinoud Exp $
+$NetBSD: patch-Makefile-NetBSD,v 1.3 2014/02/18 15:01:09 joerg Exp $
 
---- Makefile.orig	2014-02-10 20:08:47.000000000 +0000
+--- Makefile.orig	2012-04-08 15:55:52.000000000 +0000
 +++ Makefile
 @@ -75,6 +75,20 @@ install: strip
  endif
@@ -23,3 +23,14 @@ $NetBSD: patch-Makefile-NetBSD,v 1.2 2014/02/10 20:18:04 reinoud Exp $
  # OS X rules
  #
  ifeq ($(OS),Darwin)
+@@ -142,8 +156,8 @@ ARMOBJCOPY=$(ARM)objcopy
+ #
+ # CXX Flags
+ #
+-COMMON_CXXFLAGS+=-Wall -Werror -MT $@ -MD -MP -MF $(@:%.o=%.d) -DVERSION=\"$(VERSION)\" -g -O2
+-WX_CXXFLAGS:=$(shell wx-config --cxxflags --version=$(WXVERSION)) -DWX_PRECOMP -Wno-ctor-dtor-privacy -O2 -fno-strict-aliasing
++COMMON_CXXFLAGS+=-Wall -Werror -MT $@ -MD -MP -MF $(@:%.o=%.d) -DVERSION=\"$(VERSION)\" ${CXXFLAGS}
++WX_CXXFLAGS:=$(shell wx-config --cxxflags --version=$(WXVERSION)) -DWX_PRECOMP -Wno-ctor-dtor-privacy ${CXXFLAGS} -fno-strict-aliasing
+ BOSSA_CXXFLAGS=$(COMMON_CXXFLAGS) $(WX_CXXFLAGS) 
+ BOSSAC_CXXFLAGS=$(COMMON_CXXFLAGS)
+ BOSSASH_CXXFLAGS=$(COMMON_CXXFLAGS) -Isrc/arm-dis
