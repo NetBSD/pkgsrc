@@ -1,0 +1,15 @@
+$NetBSD: patch-sntp_configure,v 1.1 2014/02/18 22:18:48 joerg Exp $
+
+--- sntp/configure.orig	2014-02-18 19:31:21.000000000 +0000
++++ sntp/configure
+@@ -14368,8 +14368,8 @@ done
+ 	    # because thread cancellation fails to load libgcc_s with dlopen().
+ 	    # We have to pass this all as linker options to avoid argument
+ 	    # reordering by libtool.
+-	    case "$GCC$with_gnu_ld" in
+-	    yesyes)
++	    case "$GCC,$with_gnu_ld,$host_os" in
++	    yes,yes,linux)
+ 		PTHREAD_LIBS="$LTHREAD_LIBS -Wl,--no-as-needed,-lgcc_s,--as-needed"
+ 		;;
+ 	    esac
