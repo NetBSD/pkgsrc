@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/02/17 10:36:51 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/18 03:00:52 gdt Exp $
 
 DISTNAME=	ori-0.8.1
+PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	https://bitbucket.org/orifs/ori/downloads/
 EXTRACT_SUFX=	.tar.xz
@@ -30,7 +31,7 @@ do-install:
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
-.include "../../filesystems/fuse/buildlink3.mk"
+.include "../../mk/fuse.buildlink3.mk"
 .include "../../net/mDNSResponder/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
