@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.34 2013/11/29 19:31:47 drochner Exp $
+$NetBSD: distinfo,v 1.34.2.1 2014/02/18 11:34:25 tron Exp $
 
 SHA1 (ipxe-git-v1.0.0.tar.gz) = da052c8de5f3485fe0253c19cf52ed6d72528485
 RMD160 (ipxe-git-v1.0.0.tar.gz) = dcd9b6eaafa1ce05c1ebf2a15f2f73ad7a8c5547
@@ -10,6 +10,7 @@ SHA1 (patch-.._.._ipxe_src_arch_i386_include_librm.h) = 4549ac641b112321b4731a91
 SHA1 (patch-.._.._ipxe_src_core_settings.c) = 240ff973757403b983f12b2cbed826584c4a8aba
 SHA1 (patch-.._.._ipxe_src_net_tls.c) = c0cfbc2ab2b92c659c146601c4f80d58c951ca62
 SHA1 (patch-.._Config.mk) = 9b971a41f67bb3974d3a4459bb9d96fbbd636c96
+SHA1 (patch-CVE-2014-1950) = b0d900722fd0f59a50f1e1eda1471105d5b557e5
 SHA1 (patch-aa) = 9b53ba4a809dad7a1de34c8fa0dbe493d7256ada
 SHA1 (patch-ab) = 0906a5ec3a7450fc987b01289e2560e60966d00d
 SHA1 (patch-ac) = c3cc5335a1d6b066307c5f03fe72f513a9eb2bdb
