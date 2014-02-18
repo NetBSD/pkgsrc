@@ -1,0 +1,22 @@
+$NetBSD: patch-src_plugins_alsa_Makefile.in,v 1.1 2014/02/18 20:49:00 wiz Exp $
+
+--- src/plugins/alsa/Makefile.in.orig	2014-01-27 23:57:41.000000000 +0000
++++ src/plugins/alsa/Makefile.in
+@@ -118,7 +118,7 @@ am__uninstall_files_from_dir = { \
+   }
+ am__installdirs = "$(DESTDIR)$(libdir)"
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+-libalsa_la_DEPENDENCIES = ../../libao.la
++libalsa_la_DEPENDENCIES = $(PREFIX)/lib/libao.la
+ am__libalsa_la_SOURCES_DIST = ao_alsa.c
+ @HAVE_ALSA_TRUE@am__objects_1 = ao_alsa.lo
+ am_libalsa_la_OBJECTS = $(am__objects_1)
+@@ -351,7 +351,7 @@ AUTOMAKE_OPTIONS = foreign
+ INCLUDES = -I$(top_builddir)/include/ao -I$(top_srcdir)/include
+ lib_LTLIBRARIES = $(alsaltlibs)
+ libalsa_la_LDFLAGS = @PLUGIN_LDFLAGS@
+-libalsa_la_LIBADD = @ALSA_LIBS@ ../../libao.la
++libalsa_la_LIBADD = @ALSA_LIBS@ $(PREFIX)/lib/libao.la
+ libalsa_la_SOURCES = $(alsasources)
+ EXTRA_DIST = ao_alsa.c
+ all: all-am
