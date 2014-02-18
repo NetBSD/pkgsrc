@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/02/12 23:18:20 tron Exp $
+# $NetBSD: Makefile,v 1.20 2014/02/18 12:13:01 jperkin Exp $
 
 DISTNAME=	httping-2.3.3
 PKGREVISION=	1
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--with-openssl
 .include "../../mk/bsd.prefs.mk"
 
 LDFLAGS.NetBSD=		-lintl
-LDFLAGS.SunOS=		-lnsl -lsocket
+LDFLAGS.SunOS=		-lnsl -lsocket -lresolv -lintl
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
