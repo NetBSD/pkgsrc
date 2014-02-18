@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/02/17 07:42:25 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/02/18 18:38:55 pettai Exp $
 man/man5/credns.conf.5
 man/man8/credns-checkconf.8
 man/man8/credns-notify.8
@@ -12,4 +12,6 @@ sbin/credns-notify
 sbin/credns-patch
 sbin/credns-xfer
 sbin/crednsc
+share/examples/credns/credns.conf.sample
 @pkgdir var/db/credns
+@pkgdir etc/credns
