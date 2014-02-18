@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.17 2014/01/12 17:01:02 spz Exp $
+$NetBSD: distinfo,v 1.18 2014/02/18 22:18:48 joerg Exp $
 
 SHA1 (ntp-dev-4.2.7p410.tar.gz) = d93719047fdd9e67287edaabb1653735ffaf28f3
 RMD160 (ntp-dev-4.2.7p410.tar.gz) = 309f7c6ba088b9c4ac0b2bd018ea3918fb837d4f
 Size (ntp-dev-4.2.7p410.tar.gz) = 6334536 bytes
 SHA1 (patch-aa) = b247569339d09a88f2e143e355033ce7635ffe92
+SHA1 (patch-configure) = a244467f886a8fedfa7a84864898fa6d84e0a6a3
+SHA1 (patch-sntp_configure) = c0c3d8bc9a23f3ef3ecfc369298df71f0da55943
 SHA1 (patch-sntp_loc_pkgsrc) = 6e46ffc0cc2afcfdc1d01297cbe04cb80d103575
