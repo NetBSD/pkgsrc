@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.760 2014/02/18 02:53:51 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.761 2014/02/18 16:13:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1174,3 +1174,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added cad/kicad-doc version 20140214 [bouyer 2014-02-17]
 	Updated textproc/p5-XML-XPathEngine to 0.14 [hiramatsu 2014-02-18]
 	Updated parallel/py-billiard to 3.3.0.16 [rodent 2014-02-18]
+	Updated devel/py-cython to 0.20nb1 [wiz 2014-02-18]
