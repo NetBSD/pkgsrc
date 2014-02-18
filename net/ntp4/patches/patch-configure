@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2014/02/18 22:18:48 joerg Exp $
+
+--- configure.orig	2014-02-18 19:22:37.000000000 +0000
++++ configure
+@@ -26457,8 +26457,8 @@ done
+ 	    # because thread cancellation fails to load libgcc_s with dlopen().
+ 	    # We have to pass this all as linker options to avoid argument
+ 	    # reordering by libtool.
+-	    case "$GCC$with_gnu_ld" in
+-	    yesyes)
++	    case "$GCC,$with_gnu_ld,$host_os" in
++	    yes,yes,linux)
+ 		PTHREAD_LIBS="$LTHREAD_LIBS -Wl,--no-as-needed,-lgcc_s,--as-needed"
+ 		;;
+ 	    esac
