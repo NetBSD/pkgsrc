@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/02/12 23:18:09 tron Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/18 22:20:25 joerg Exp $
 
 DISTNAME=	rspamd-0.6.8
 PKGREVISION=	1
@@ -11,7 +11,7 @@ COMMENT=	Fast, free and open-source spam filtering system
 LICENSE=	2-clause-bsd
 
 USE_CMAKE=	yes
-USE_TOOLS+=	perl
+USE_TOOLS+=	perl pkg-config
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/rspamd
 
