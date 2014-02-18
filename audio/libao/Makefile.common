@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.35 2014/02/06 18:37:07 wiz Exp $
+# $NetBSD: Makefile.common,v 1.36 2014/02/18 20:48:46 wiz Exp $
 #
+# used by audio/libao-alsa/Makefile
 # used by audio/libao-arts/Makefile
 # used by audio/libao-esound/Makefile
 # used by audio/libao-macosx/Makefile
