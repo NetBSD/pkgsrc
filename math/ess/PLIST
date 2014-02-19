@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2014/02/06 09:49:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/02/19 09:19:01 markd Exp $
 ${EMACS_INFOPREFIX}/ess.info
 ${EMACS_LISPPREFIX}/ess/ess-arc-d.el
 ${EMACS_LISPPREFIX}/ess/ess-arc-d.elc
@@ -118,6 +118,14 @@ ${EMACS_LISPPREFIX}/ess/mouseme.el
 ${EMACS_LISPPREFIX}/ess/mouseme.elc
 ${EMACS_LISPPREFIX}/ess/msdos.el
 ${EMACS_LISPPREFIX}/ess/msdos.elc
+${EMACS_ETCPREFIX}/ess/ESSR/LOADREMOTE
+${EMACS_ETCPREFIX}/ess/ESSR/R/.basic.R
+${EMACS_ETCPREFIX}/ess/ESSR/R/.load.R
+${EMACS_ETCPREFIX}/ess/ESSR/R/completion.R
+${EMACS_ETCPREFIX}/ess/ESSR/R/debug.R
+${EMACS_ETCPREFIX}/ess/ESSR/R/developer.R
+${EMACS_ETCPREFIX}/ess/ESSR/R/misc.R
+${EMACS_ETCPREFIX}/ess/ESSR/VERSION
 ${EMACS_ETCPREFIX}/ess/ess-s4.S
 ${EMACS_ETCPREFIX}/ess/ess-sas-sh-command
 ${EMACS_ETCPREFIX}/ess/ess-sp3.S
