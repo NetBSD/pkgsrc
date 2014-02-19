@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_rubygems_installer.rb,v 1.2 2013/07/07 15:01:01 taca Exp $
+$NetBSD: patch-lib_rubygems_installer.rb,v 1.3 2014/02/19 15:50:53 taca Exp $
 
 Add install_root option for pkgsrc's rubygems support.
 
@@ -36,7 +36,7 @@ Add install_root option for pkgsrc's rubygems support.
 -    bindir = @bin_dir || Gem.bindir(gem_home)
 +    bindir = @bin_dir ? @bin_dir : (Gem.bindir @gem_home, @install_root)
 +
-+    unless @install_root.nil? or @install_root == ""
++    unless @install_root.nil? or @install_root.empty?
 +      bindir = File.join(@install_root, bindir)
 +    end
  
@@ -55,7 +55,7 @@ Add install_root option for pkgsrc's rubygems support.
      @security_policy     = options[:security_policy]
      @wrappers            = options[:wrappers]
 +    install_root         = options[:install_root]
-+    unless install_root.nil? or install_root == ""
++    unless install_root.nil? or install_root.empty?
 +      @install_root = File.expand_path install_root
 +      @gem_home = File.join(@install_root, @gem_home)
 +    end
