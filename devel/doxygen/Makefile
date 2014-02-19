@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2014/02/19 17:03:06 jperkin Exp $
+# $NetBSD: Makefile,v 1.110 2014/02/19 17:43:47 jperkin Exp $
 
 DISTNAME=	doxygen-1.8.6.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -73,7 +73,7 @@ PLIST.cs=		yes	# case-sensitive
 CONFIGURE_ARGS+=	-platform freebsd-g++
 .endif
 
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "Linux"
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD"
 LDFLAGS+=		${BUILDLINK_LDADD.iconv}
 .endif
 
