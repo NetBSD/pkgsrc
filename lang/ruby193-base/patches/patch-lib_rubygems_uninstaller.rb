@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_rubygems_uninstaller.rb,v 1.1.1.1 2011/11/08 16:10:51 taca Exp $
+$NetBSD: patch-lib_rubygems_uninstaller.rb,v 1.2 2014/02/19 15:50:53 taca Exp $
 
 Add install_root option for pkgsrc's rubygems support.
 
@@ -9,7 +9,7 @@ Add install_root option for pkgsrc's rubygems support.
      @bin_dir           = options[:bin_dir]
      @format_executable = options[:format_executable]
 +    install_root = options[:install_root]
-+    unless install_root.nil? or install_root == ""
++    unless install_root.nil? or install_root.empty?
 +      @install_root = File.expand_path install_root
 +      @gem_home = File.join(@install_root, @gem_home)
 +    end
@@ -23,7 +23,7 @@ Add install_root option for pkgsrc's rubygems support.
 -      bin_dir = @bin_dir || Gem.bindir(spec.base_dir)
 +      bin_dir = @bin_dir || (Gem.bindir @gem_home, @install_root)
 +
-+      unless @install_root.nil? or @install_root == ""
++      unless @install_root.nil? or @install_root.empty?
 +        bindir = File.join(@install_root, bindir)
 +      end
  
