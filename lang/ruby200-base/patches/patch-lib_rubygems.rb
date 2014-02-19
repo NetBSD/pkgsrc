@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_rubygems.rb,v 1.2 2013/11/24 14:22:03 taca Exp $
+$NetBSD: patch-lib_rubygems.rb,v 1.3 2014/02/19 15:52:05 taca Exp $
 
 * Add install_root option for pkgsrc's rubygems support.
 
@@ -10,7 +10,7 @@ $NetBSD: patch-lib_rubygems.rb,v 1.2 2013/11/24 14:22:03 taca Exp $
  
 -  def self.bindir(install_dir=Gem.dir)
 +  def self.bindir(install_dir=Gem.dir, install_root=nil)
-+    unless install_root.nil?
++    unless install_root.nil? or install_root.empty?
 +      install_dir = install_dir.sub(install_root, "")
 +    end
      # TODO: move to Gem::Dirs

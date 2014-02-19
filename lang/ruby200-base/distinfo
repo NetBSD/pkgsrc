@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2014/01/08 11:31:18 fhajny Exp $
+$NetBSD: distinfo,v 1.10 2014/02/19 15:52:05 taca Exp $
 
 SHA1 (ruby-2.0.0-p353.tar.bz2) = 0be863f1c39d7764c52cbb79ca06105743e27c42
 RMD160 (ruby-2.0.0-p353.tar.bz2) = e12445ef618953c89d1c198899b6a3a959fc55f2
@@ -8,17 +8,17 @@ SHA1 (patch-defs_default__gems) = 28a47952e27c22055bac6ad151d092572b96b1ec
 SHA1 (patch-ext_dl_extconf.rb) = f6c71db3c3076216c9b5db92692c7c8dad012af0
 SHA1 (patch-ext_tk_lib_tkextlib_tktable_tktable.rb) = 10c7842daa3c23d57dcd08dc00adf5770af9dad1
 SHA1 (patch-lib_rdoc_ri_driver.rb) = 53ce4055b4c008c8ee13d38a81334d4846debdbc
-SHA1 (patch-lib_rubygems.rb) = 589ca26a32579f87c2d3d0e8e7f03348760f4b4e
+SHA1 (patch-lib_rubygems.rb) = 0f0b8f14745998f5ed0ade9b0b5cdefc8f30d988
 SHA1 (patch-lib_rubygems_commands_setup__command.rb) = 46991d63256d0d3cc2f707fb286d1691331ad40e
 SHA1 (patch-lib_rubygems_commands_uninstall__command.rb) = f39435fbdbbfcc8c756e54fcbec89a4ff796ee2d
 SHA1 (patch-lib_rubygems_commands_unpack__command.rb) = 58af5f0d1a185183ff9a4b4828ef1ca9fc074e05
 SHA1 (patch-lib_rubygems_config__file.rb) = 0d863d3f886c1ed83585d96064725e7db7bec1bc
 SHA1 (patch-lib_rubygems_defaults.rb) = 1af4161a83c0bf5b894c4ab3f4a77d4ee4183985
-SHA1 (patch-lib_rubygems_dependency__installer.rb) = a2f0d03924a70e8e6cb30736e0f3807e5baa520d
+SHA1 (patch-lib_rubygems_dependency__installer.rb) = f4e40727d231b336c1d4c2303ac1c1e2b50f2710
 SHA1 (patch-lib_rubygems_install__update__options.rb) = 22cfafe090db72211253b8528937e5be0e677ebf
-SHA1 (patch-lib_rubygems_installer.rb) = b22ece5d6fe8952512ee772ba28d8c60f273d726
+SHA1 (patch-lib_rubygems_installer.rb) = 7ce68eaa5893c83780f7b4e1af44a88ae63a39cf
 SHA1 (patch-lib_rubygems_specification.rb) = 3e9e95178127da862add4141665b80d965874f21
-SHA1 (patch-lib_rubygems_uninstaller.rb) = bf525fc55e9bf94e1561a7cac76e09873d3aaca2
+SHA1 (patch-lib_rubygems_uninstaller.rb) = cb4db78829af11d6294b15d1e81066227e3ea3bb
 SHA1 (patch-man_erb.1) = 1fe6ce4f4fe6418bfabb5e132a63596562030116
 SHA1 (patch-man_irb.1) = 2bf807b4c1b1c68d1f518caa054cfd900e0fedb7
 SHA1 (patch-man_ri.1) = af855135020f18c361cc55af676adc75e26bf4d3
