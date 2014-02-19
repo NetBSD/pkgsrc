@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2014/02/12 23:18:18 tron Exp $
+# $NetBSD: Makefile,v 1.49 2014/02/19 09:44:56 jperkin Exp $
 #
 
 DISTNAME=	aria2-1.18.2
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 # Minimum requirement is 4.6.4, but lang/gcc46 is 4.6.3, then use 4.7
 # See https://github.com/tatsuhiro-t/aria2/issues/144
-GCC_REQD=	4.7
+GCC_REQD+=	4.7
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
