@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_rubygems_installer.rb,v 1.3 2014/01/08 11:31:19 fhajny Exp $
+$NetBSD: patch-lib_rubygems_installer.rb,v 1.4 2014/02/19 15:52:05 taca Exp $
 
 * Add install_root option for pkgsrc's rubygems support.
 * Tweak build_info directory with destdir to store build_args.
@@ -31,7 +31,7 @@ $NetBSD: patch-lib_rubygems_installer.rb,v 1.3 2014/01/08 11:31:19 fhajny Exp $
      # (or use) a new bin dir under the gem_home.
 -    @bin_dir             = options[:bin_dir] || Gem.bindir(gem_home)
 +    @bin_dir             = options[:bin_dir] || Gem.bindir(gem_home, @install_root)
-+    unless @install_root.nil? or @install_root == ""
++    unless @install_root.nil? or @install_root.empty?
 +      @bin_dir = File.join(@install_root, @bin_dir)
 +    end
      @development         = options[:development]
@@ -41,7 +41,7 @@ $NetBSD: patch-lib_rubygems_installer.rb,v 1.3 2014/01/08 11:31:19 fhajny Exp $
      return if @build_args.empty?
  
      build_info_dir = File.join gem_home, 'build_info'
-+    unless @install_root.nil?
++    unless @install_root.nil? or @install_root.empty?
 +      build_info_dir = File.join @gem_home, "build_info"
 +    end
  
