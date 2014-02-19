@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.13 2013/09/10 16:33:29 taca Exp $
+$NetBSD: patch-ah,v 1.14 2014/02/19 15:47:32 taca Exp $
 
 Add install_root option for pkgsrc's rubygems support.
 
@@ -19,7 +19,7 @@ Add install_root option for pkgsrc's rubygems support.
 +    else
 +      install_dir = File.join install_dir, 'bin'
 +    end
-+    unless install_root.nil?
++    unless install_root.nil? or install_root.empty?
 +      install_dir = File.join install_root, install_dir
 +    end
 +    install_dir
