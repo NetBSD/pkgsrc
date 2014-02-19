@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/04/19 15:34:30 drochner Exp $
+$NetBSD: distinfo,v 1.4 2014/02/19 19:00:14 drochner Exp $
 
-SHA1 (microcode-20130222.tgz) = 1df2f36f0e97808861d17747826a77440a0f38f5
-RMD160 (microcode-20130222.tgz) = aa2133df8d91ce8bbaa4305a8b2c18323b5103e8
-Size (microcode-20130222.tgz) = 602449 bytes
+SHA1 (microcode-20140122.tgz) = 638d760b53c94f073d62b334561ae6bc139c8a32
+RMD160 (microcode-20140122.tgz) = d46ce142dafc6dc375bf9c2be17c92780d19c11e
+Size (microcode-20140122.tgz) = 762424 bytes
