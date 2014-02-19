@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.13 2013/09/10 16:33:29 taca Exp $
+$NetBSD: patch-ad,v 1.14 2014/02/19 15:47:32 taca Exp $
 
 * Add install_root option for pkgsrc's rubygems support.
 
@@ -32,7 +32,7 @@ $NetBSD: patch-ad,v 1.13 2013/09/10 16:33:29 taca Exp $
 +    install_root         = options[:install_root]
 +    @bin_dir             = options[:bin_dir] || Gem.bindir(gem_home, install_root)
      @development         = options[:development]
-+    unless install_root.nil? or install_root == ""
++    unless install_root.nil? or install_root.empty?
 +      @install_root = File.expand_path install_root
 +      @gem_home = File.join(@install_root, @gem_home)
 +    end
