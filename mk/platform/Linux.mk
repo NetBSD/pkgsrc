@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.56 2013/07/23 13:01:05 ryoon Exp $
+# $NetBSD: Linux.mk,v 1.57 2014/02/19 17:20:23 jperkin Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -24,7 +24,6 @@ DEF_UMASK?=		022
 DEFAULT_SERIAL_DEVICE?=	/dev/null
 EXPORT_SYMBOLS_LDFLAGS?=	# Don't add symbols to the dynamic symbol table
 GROUPADD?=		/usr/sbin/groupadd
-LIBC_BUILTINS=		iconv getopt sysexits gettext
 MOTIF_TYPE_DEFAULT?=	motif	# default 2.0 compatible libs type
 .if exists(/etc/ssdlinux_version)
 NOLOGIN?=		/sbin/nologin
@@ -67,6 +66,12 @@ _OPSYS_SYSTEM_RPATH=	/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}
 _OPSYS_LIB_DIRS?=	/lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX}
 .endif
 _OPSYS_INCLUDE_DIRS?=	/usr/include
+
+# These are libc builtins
+_OPSYS_PREFER.getopt?=		native
+_OPSYS_PREFER.gettext?=		native
+_OPSYS_PREFER.iconv?=		native
+_OPSYS_PREFER.sysexits?=	native
 
 .if exists(/usr/include/netinet6) || exists(/usr/include/linux/in6.h)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
