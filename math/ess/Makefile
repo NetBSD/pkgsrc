@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2014/02/06 09:49:15 markd Exp $
+# $NetBSD: Makefile,v 1.28 2014/02/19 09:19:01 markd Exp $
 
 DISTNAME=	ess-13.09-1
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/-1$/.1/}
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://ess.r-project.org/downloads/ess/
 EXTRACT_SUFX=	.tgz
@@ -25,6 +26,7 @@ SUBST_SED.etcdir=	-e 's,"./etc/"),"./etc/" "../../../ess/"),'
 
 INSTALLATION_DIRS=	${EMACS_INFOPREFIX} ${EMACS_LISPPREFIX}/ess
 INSTALLATION_DIRS+=	${EMACS_ETCPREFIX}/ess ${EMACS_ETCPREFIX}/ess/icons
+INSTALLATION_DIRS+=	${EMACS_ETCPREFIX}/ess/ESSR/R
 
 post-extract:
 	cd ${WRKSRC} && chmod u+w doc/*/
@@ -42,6 +44,10 @@ do-install:
 		${DESTDIR}${EMACS_ETCPREFIX}/ess
 	cd ${WRKSRC}/etc && ${INSTALL_SCRIPT} ess-sas-sh-command	\
 		${DESTDIR}${EMACS_ETCPREFIX}/ess
+	cd ${WRKSRC}/etc/ESSR && ${INSTALL_DATA} LOADREMOTE VERSION	\
+		${DESTDIR}${EMACS_ETCPREFIX}/ess/ESSR
+	cd ${WRKSRC}/etc/ESSR/R && ${INSTALL_DATA} *.R .*.R		\
+		${DESTDIR}${EMACS_ETCPREFIX}/ess/ESSR/R
 
 .include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"
