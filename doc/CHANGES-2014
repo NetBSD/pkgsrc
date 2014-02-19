@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.761 2014/02/18 16:13:40 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.762 2014/02/19 10:25:20 gson Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1175,3 +1175,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/p5-XML-XPathEngine to 0.14 [hiramatsu 2014-02-18]
 	Updated parallel/py-billiard to 3.3.0.16 [rodent 2014-02-18]
 	Updated devel/py-cython to 0.20nb1 [wiz 2014-02-18]
+	Updated misc/py-anita to 1.32 [gson 2014-02-19]
