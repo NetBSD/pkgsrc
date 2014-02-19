@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.764 2014/02/19 15:48:47 taca Exp $
+$NetBSD: CHANGES-2014,v 1.765 2014/02/19 15:51:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1178,3 +1178,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/py-anita to 1.32 [gson 2014-02-19]
 	Updated mail/dovecot2 to 2.2.12 [taca 2014-02-19]
 	Updated misc/rubygems to 2.0.10nb1 [taca 2014-02-19]
+	Updated lang/ruby193-base to 1.9.3p484nb2 [taca 2014-02-19]
