@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_rubygems_dependency__installer.rb,v 1.2 2013/11/24 14:22:03 taca Exp $
+$NetBSD: patch-lib_rubygems_dependency__installer.rb,v 1.3 2014/02/19 15:52:05 taca Exp $
 
 * Add install_root option for pkgsrc's rubygems support.
 
@@ -36,7 +36,7 @@ $NetBSD: patch-lib_rubygems_dependency__installer.rb,v 1.2 2013/11/24 14:22:03 t
 -    @cache_dir = options[:cache_dir] || @install_dir
 +    @install_root = options[:install_root] || ""
 +    install_dir = @install_dir
-+    if not @install_root.empty?
++    unless @install_root.nil? or @install_root.empty?
 +      install_dir = File.join(@install_root, install_dir)
 +    end
 +    @cache_dir = options[:cache_dir] || install_dir
