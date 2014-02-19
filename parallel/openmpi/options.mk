@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2013/07/19 03:52:29 manu Exp $
+# $NetBSD: options.mk,v 1.6 2014/02/19 09:44:56 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openmpi
 PKG_SUPPORTED_OPTIONS=	debug f90
@@ -11,7 +11,7 @@ CONFIGURE_ARGS+=	--enable-debug
 
 
 .if !empty(PKG_OPTIONS:Mf90)
-GCC_REQD=		4.7
+GCC_REQD+=		4.7
 GCCDIR=			${PREFIX}/gcc47
 CONFIGURE_ARGS+=	--enable-mpi-f90
 CONFIGURE_ENV+=		FC=${GCCDIR}/bin/gfortran

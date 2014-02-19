@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2014/02/12 23:17:59 tron Exp $
+# $NetBSD: Makefile,v 1.44 2014/02/19 09:44:56 jperkin Exp $
 
 DISTNAME=	darktable-1.2.3
 PKGREVISION=	2
@@ -41,7 +41,7 @@ LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/darktable
 .include "../../mk/bsd.fast.prefs.mk"
 .if ${MACHINE_ARCH} == "i386"
 # SSE alignment issues
-GCC_REQD=	4.2
+GCC_REQD+=	4.2
 CFLAGS+=	-mstackrealign -msse2 -march=i686
 .endif
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/06/04 22:17:06 tron Exp $
+# $NetBSD: Makefile,v 1.5 2014/02/19 09:44:56 jperkin Exp $
 #
 
 DISTNAME=		grub-2.00
@@ -39,7 +39,7 @@ USE_PKGLOCALEDIR=	yes
 #
 # Additionnaly, help2man is required to generate the manual pages.
 #
-GCC_REQD=		4.4
+GCC_REQD+=		4.4
 FLEX_REQD=		2.5.35
 BUILD_DEPENDS+=		help2man>=1.36:../../converters/help2man
 
