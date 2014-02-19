@@ -1,0 +1,15 @@
+$NetBSD: patch-libf95.a-0.93_configure.in,v 1.1 2014/02/19 18:27:43 jperkin Exp $
+
+Use $host_alias in the gcc-libdir path so it matches ${MACHINE_GNU_PLATFORM}
+
+--- libf95.a-0.93/configure.in.orig	2010-04-15 05:25:24.000000000 +0000
++++ libf95.a-0.93/configure.in
+@@ -293,7 +293,7 @@ fi
+ 
+ AC_MSG_RESULT([$gcc_version])
+ 
+-DEST_LIBDIR=$prefix/lib/gcc-lib/$host/$gcc_version
++DEST_LIBDIR=$prefix/lib/gcc-lib/$host_alias/$gcc_version
+ 
+ 
+ AC_SUBST(DEST_LIBDIR)
