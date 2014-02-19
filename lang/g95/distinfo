@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2014/02/17 16:49:14 jperkin Exp $
+$NetBSD: distinfo,v 1.20 2014/02/19 18:27:43 jperkin Exp $
 
 SHA1 (g95_source.tgz) = b5e503fd6459b65cbda73190685f9490230d9cff
 RMD160 (g95_source.tgz) = 98d03e9a1835f4b3553a72a798bdf1d90a757176
@@ -20,9 +20,9 @@ SHA1 (patch-gcc_config_t-dragonfly) = dd8d5919af737dfb9e3c18be9a41b4e2c6f31155
 SHA1 (patch-gcc_config_t-dragonfly-thread) = ebdb58dacf0dc5d0bf2f1f1707a7c6ab29ee308c
 SHA1 (patch-gcc_ginclude_stddef.h) = 60f51a470e03173803b5e20b1fa4d6882e8d1fe9
 SHA1 (patch-gcc_toplev.h) = 4894b45bf0fd30de0610a36827ef1089e0ec6bd5
-SHA1 (patch-libf95.a-0.92_configure) = e23998692b410acaabaf24f591b659d2b229bcca
 SHA1 (patch-libf95.a-0.92_io_atof.c) = 0c3a209815be3a97d984cb9a15ee888f93110d1d
 SHA1 (patch-libf95.a-0.93_Makefile.am) = a5e6a8fa0cd05e6e4a581c027d97cdf68dd2a6f8
+SHA1 (patch-libf95.a-0.93_configure.in) = b81b36f574f6f40ce43bbd371cdb93d388d83b5d
 SHA1 (patch-libf95.a-0.93_intrinsics_dot__product10.c) = a2fe19bab2a6f719f541692fd4ef7e67766a18e5
 SHA1 (patch-libf95.a-0.93_intrinsics_matmul10.c) = 30609c3183a98610e4005fd4c0d12cccec0855a1
 SHA1 (patch-libf95.a-0.93_intrinsics_random.c) = 5445f78b267f742a2bf711aa0f5e06683dda1a68
