@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/10/30 13:26:51 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/02/19 19:00:14 drochner Exp $
 libdata/firmware/cpu_x86_intel1/00000650-0
 libdata/firmware/cpu_x86_intel1/00000650-1
 libdata/firmware/cpu_x86_intel1/00000650-3
@@ -161,6 +161,8 @@ libdata/firmware/cpu_x86_intel1/0001067a-6
 libdata/firmware/cpu_x86_intel1/0001067a-7
 libdata/firmware/cpu_x86_intel1/000106a4-0
 libdata/firmware/cpu_x86_intel1/000106a4-1
+libdata/firmware/cpu_x86_intel1/000106a5-0
+libdata/firmware/cpu_x86_intel1/000106a5-1
 libdata/firmware/cpu_x86_intel1/000106c2-0
 libdata/firmware/cpu_x86_intel1/000106c2-2
 libdata/firmware/cpu_x86_intel1/000106c2-3
@@ -197,4 +199,26 @@ libdata/firmware/cpu_x86_intel1/000206f2-0
 libdata/firmware/cpu_x86_intel1/000206f2-2
 libdata/firmware/cpu_x86_intel1/000306a9-1
 libdata/firmware/cpu_x86_intel1/000306a9-4
+libdata/firmware/cpu_x86_intel1/000306c3-1
+libdata/firmware/cpu_x86_intel1/000306c3-4
+libdata/firmware/cpu_x86_intel1/000306c3-5
+libdata/firmware/cpu_x86_intel1/000306e4-0
+libdata/firmware/cpu_x86_intel1/000306e4-2
+libdata/firmware/cpu_x86_intel1/000306e4-3
+libdata/firmware/cpu_x86_intel1/000306e4-5
+libdata/firmware/cpu_x86_intel1/000306e4-6
+libdata/firmware/cpu_x86_intel1/000306e4-7
+libdata/firmware/cpu_x86_intel1/000306e6-0
+libdata/firmware/cpu_x86_intel1/000306e6-2
+libdata/firmware/cpu_x86_intel1/000306e6-3
+libdata/firmware/cpu_x86_intel1/000306e6-5
+libdata/firmware/cpu_x86_intel1/000306e6-6
+libdata/firmware/cpu_x86_intel1/000306e6-7
+libdata/firmware/cpu_x86_intel1/00040651-1
+libdata/firmware/cpu_x86_intel1/00040651-4
+libdata/firmware/cpu_x86_intel1/00040651-5
+libdata/firmware/cpu_x86_intel1/00040651-6
+libdata/firmware/cpu_x86_intel1/00040661-1
+libdata/firmware/cpu_x86_intel1/00040661-4
+libdata/firmware/cpu_x86_intel1/00040661-5
 share/examples/rc.d/intel-microcode
