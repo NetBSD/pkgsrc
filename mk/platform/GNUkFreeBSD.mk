@@ -1,4 +1,4 @@
-# $NetBSD: GNUkFreeBSD.mk,v 1.1 2013/07/26 09:38:15 ryoon Exp $
+# $NetBSD: GNUkFreeBSD.mk,v 1.2 2014/02/19 17:20:23 jperkin Exp $
 #
 # Variable definitions for the Debian GNU/kFreeBSD operating system.
 
@@ -18,7 +18,6 @@ DEF_UMASK?=		022
 DEFAULT_SERIAL_DEVICE?=	/dev/null
 EXPORT_SYMBOLS_LDFLAGS?=	# Don't add symbols to the dynamic symbol table
 GROUPADD?=		/usr/sbin/groupadd
-LIBC_BUILTINS=		iconv getopt sysexits gettext
 MOTIF_TYPE_DEFAULT?=	motif	# default 2.0 compatible libs type
 NOLOGIN?=		/usr/sbin/nologin
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
@@ -40,6 +39,12 @@ _OPSYS_SYSTEM_RPATH=	/lib:/usr/lib:/lib/i386-kfreebsd-gnu:/usr/lib/i386-kfreebsd
 _OPSYS_LIB_DIRS?=	/lib /usr/lib /lib/i386-kfreebsd-gnu /usr/lib/i386-kfreebsd-gnu
 .endif
 _OPSYS_INCLUDE_DIRS?=	/usr/include
+
+# These are libc builtins
+_OPSYS_PREFER.getopt?=		native
+_OPSYS_PREFER.gettext?=		native
+_OPSYS_PREFER.iconv?=		native
+_OPSYS_PREFER.sysexits?=	native
 
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
 _OPSYS_HAS_JAVA=	no	# Java is not standard
