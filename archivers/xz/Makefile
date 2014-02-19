@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/07/04 23:30:47 adam Exp $
+# $NetBSD: Makefile,v 1.17 2014/02/19 09:44:56 jperkin Exp $
 
 DISTNAME=	xz-5.0.5
 CATEGORIES=	archivers
@@ -14,7 +14,7 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE=	src/liblzma/liblzma.pc.in
 
-GCC_REQD=		3.0
+GCC_REQD+=		3.0
 
 CONFLICTS=	lzma-[0-9]* lzma-utils-[0-9]* lzmalib-[0-9]*
 

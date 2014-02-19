@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/01/23 09:34:03 obache Exp $
+# $NetBSD: Makefile,v 1.6 2014/02/19 09:44:56 jperkin Exp $
 #
 
 DISTNAME=	msgpack-0.5.8
@@ -16,7 +16,7 @@ USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE=	msgpack.pc.in
 
-GCC_REQD=	4.1
+GCC_REQD+=	4.1
 
 .include "../../mk/bsd.prefs.mk"
 
