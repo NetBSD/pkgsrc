@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2014/02/07 13:14:06 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2014/02/19 17:03:06 jperkin Exp $
 
 DISTNAME=	doxygen-1.8.6.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -28,9 +28,6 @@ CONFIGURE_ARGS+=	--prefix ${PREFIX}
 CONFIGURE_ARGS+=	--docdir ${PREFIX}/share/doc/doxygen
 MAKE_ENV+=		PKGSRC_CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=		MAN1DIR=${PKGMANDIR}/man1
-
-LDFLAGS.FreeBSD=	-liconv
-LDFLAGS.OpenBSD=	-liconv
 
 REPLACE_PERL=		tmake/bin/tmake
 
@@ -76,8 +73,9 @@ PLIST.cs=		yes	# case-sensitive
 CONFIGURE_ARGS+=	-platform freebsd-g++
 .endif
 
-LDFLAGS.FreeBSD+=	${BUILDLINK_LDADD.iconv}
-LDFLAGS.OpenBSD+=	${BUILDLINK_LDADD.iconv}
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "Linux"
+LDFLAGS+=		${BUILDLINK_LDADD.iconv}
+.endif
 
 post-patch:
 	touch ${WRKSRC}/src/doxytag.l
