@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.781 2014/02/20 11:26:32 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.782 2014/02/20 11:26:48 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1195,3 +1195,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/lynx to 2.8.8.1 [wiz 2014-02-20]
 	Updated sysutils/dbus-glib to 0.102 [wiz 2014-02-20]
 	Updated math/p5-Math-Derivative to 0.01 [root 2014-02-20]
+	Updated math/p5-Algorithm-Munkres to 0.08 [root 2014-02-20]
