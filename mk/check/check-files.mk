@@ -1,4 +1,4 @@
-# $NetBSD: check-files.mk,v 1.29 2013/03/08 15:32:52 wiz Exp $
+# $NetBSD: check-files.mk,v 1.30 2014/02/20 09:15:15 obache Exp $
 #
 # This file checks that the list of installed files matches the PLIST.
 # For that purpose it records the file list of LOCALBASE before and
@@ -144,7 +144,7 @@ _CHECK_FILES_ERRMSGS+=		${_CHECK_FILES_ERRMSG.varbase}
 # building the check-files-pre target.  These targets should cause the
 # "pre" file lists to be generated.
 #
-_CHECK_FILES_PRE=		check-files-pre-message
+_CHECK_FILES_PRE=		#
 _CHECK_FILES_PRE+=		${_CHECK_FILES_PRE.prefix}
 .if empty(CHECK_FILES_STRICT:M[nN][oO])
 _CHECK_FILES_PRE+=		${_CHECK_FILES_PRE.sysconfdir}
@@ -156,7 +156,7 @@ _CHECK_FILES_PRE+=		${_CHECK_FILES_PRE.varbase}
 # building the check-files-post target.  These targets should cause the
 # "post" file lists to be generated.
 #
-_CHECK_FILES_POST=		check-files-post-message
+_CHECK_FILES_POST=		#
 _CHECK_FILES_POST+=		${_CHECK_FILES_POST.prefix}
 .if empty(CHECK_FILES_STRICT:M[nN][oO])
 _CHECK_FILES_POST+=		${_CHECK_FILES_POST.sysconfdir}
@@ -171,8 +171,8 @@ privileged-install-hook: check-files
 # check-files-pre and check-files-post targets and subtargets
 #
 .PHONY: check-files-pre check-files-post
-check-files-pre: ${_CHECK_FILES_PRE}
-check-files-post: ${_CHECK_FILES_POST}
+check-files-pre: check-files-pre-message ${_CHECK_FILES_PRE}
+check-files-post: check-files-post-message ${_CHECK_FILES_POST}
 
 .PHONY: check-files-pre-message check-files-post-message
 check-files-pre-message:
