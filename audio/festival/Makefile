@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2014/02/20 12:16:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.69 2014/02/20 12:26:14 obache Exp $
 
 DISTNAME=	festival-2.1-release
 PKGNAME=	festival-2.1
@@ -78,8 +78,11 @@ post-patch:
 	${CP} ${FILESDIR}/unknown_${OPSYS}.mak ${FESTIVAL}/config/systems
 .endif
 
+# from festival/config/system.sh
 .if exists(/etc/redhat-release)
 FESTOS=		RedHatLinux
+.elif exists(/etc/debian_version)
+FESTOS=		DebianGNULinux
 .else
 FESTOS=		${OPSYS}
 .endif
