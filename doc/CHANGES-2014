@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.802 2014/02/20 19:15:59 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.803 2014/02/20 19:16:25 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1214,3 +1214,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/gtkspell to 2.0.16nb19 [wiz 2014-02-20]
 	Updated textproc/xapian to 1.2.17 [schmonz 2014-02-20]
 	Updated textproc/xapian-omega to 1.2.17 [schmonz 2014-02-20]
+	Updated textproc/p5-Search-Xapian to 1.2.17.0 [schmonz 2014-02-20]
