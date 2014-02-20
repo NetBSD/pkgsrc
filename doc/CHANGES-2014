@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.769 2014/02/20 00:37:59 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.770 2014/02/20 07:39:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1183,3 +1183,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/intel-microcode-netbsd to 20140122 [drochner 2014-02-19]
 	Added finance/py-stripe version 1.12.0 [rodent 2014-02-20]
 	Updated net/haproxy to 1.4.24nb1 [rodent 2014-02-20]
+	Updated x11/xcb-util-wm to 0.4.1 [wiz 2014-02-20]
