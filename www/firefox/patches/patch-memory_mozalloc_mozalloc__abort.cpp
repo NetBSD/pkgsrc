@@ -1,6 +1,6 @@
-$NetBSD: patch-memory_mozalloc_mozalloc__abort.cpp,v 1.2 2014/02/08 09:36:00 ryoon Exp $
+$NetBSD: patch-memory_mozalloc_mozalloc__abort.cpp,v 1.3 2014/02/20 13:19:03 ryoon Exp $
 
---- memory/mozalloc/mozalloc_abort.cpp.orig	2014-01-28 04:03:59.000000000 +0000
+--- memory/mozalloc/mozalloc_abort.cpp.orig	2013-05-11 19:19:46.000000000 +0000
 +++ memory/mozalloc/mozalloc_abort.cpp
 @@ -34,7 +34,11 @@ mozalloc_abort(const char* const msg)
  // Define abort() here, so that it is used instead of the system abort(). This

@@ -1,6 +1,6 @@
-$NetBSD: patch-netwerk_sctp_src_netinet_sctp__os__userspace.h,v 1.3 2014/02/08 09:36:00 ryoon Exp $
+$NetBSD: patch-netwerk_sctp_src_netinet_sctp__os__userspace.h,v 1.4 2014/02/20 13:19:03 ryoon Exp $
 
---- netwerk/sctp/src/netinet/sctp_os_userspace.h.orig	2014-01-28 04:04:00.000000000 +0000
+--- netwerk/sctp/src/netinet/sctp_os_userspace.h.orig	2013-06-17 22:13:23.000000000 +0000
 +++ netwerk/sctp/src/netinet/sctp_os_userspace.h
 @@ -383,7 +383,7 @@ struct udphdr {
  #else /* !defined(Userspace_os_Windows) */
