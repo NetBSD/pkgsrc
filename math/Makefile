@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.262 2014/01/25 12:52:56 prlw1 Exp $
+# $NetBSD: Makefile,v 1.263 2014/02/20 11:30:45 fhajny Exp $
 
 COMMENT=	Mathematics
 
@@ -153,6 +153,7 @@ SUBDIR+=	openfst
 SUBDIR+=	ordCalc
 SUBDIR+=	otter
 SUBDIR+=	p5-Algorithm-Cluster
+SUBDIR+=	p5-Algorithm-Munkres
 SUBDIR+=	p5-Excel-Template
 SUBDIR+=	p5-Excel-Template-Plus
 SUBDIR+=	p5-Math-Base36
@@ -163,6 +164,7 @@ SUBDIR+=	p5-Math-BigInt-GMP
 SUBDIR+=	p5-Math-BigInt-Pari
 SUBDIR+=	p5-Math-BigInteger
 SUBDIR+=	p5-Math-Complex
+SUBDIR+=	p5-Math-Derivative
 SUBDIR+=	p5-Math-FFT
 SUBDIR+=	p5-Math-GMP
 SUBDIR+=	p5-Math-Interpolate
@@ -177,6 +179,7 @@ SUBDIR+=	p5-Math-Random-MT
 SUBDIR+=	p5-Math-Random-MT-Auto
 SUBDIR+=	p5-Math-Random-MT-Perl
 SUBDIR+=	p5-Math-Round
+SUBDIR+=	p5-Math-Spline
 SUBDIR+=	p5-Math-VecStat
 SUBDIR+=	p5-Number-Compare
 SUBDIR+=	p5-Number-Latin
