@@ -1,4 +1,4 @@
-# $NetBSD: developer.mk,v 1.20 2013/04/12 13:53:57 joerg Exp $
+# $NetBSD: developer.mk,v 1.21 2014/02/20 10:12:22 obache Exp $
 #
 # Public targets for developers:
 #
@@ -53,7 +53,12 @@
 # cce:
 #	Like changes-entry, plus the CHANGES and TODO files are committed.
 #
-# Keywords: commit update add rename changes
+# upload-distfiles:
+# 	Upload files that wish to provide distfiles that others may fetch.
+#	It only upload distfiles that are freely re-distributable by setting
+# 	NO_SKIP (see mk/fetch/bsd.fetch-vars.mk).
+#
+# Keywords: commit update add rename changes upload
 #
 
 CTYPE?=			Updated
@@ -139,3 +144,46 @@ changes-entry: .PHONY ce-error-check changes-entry-update changes-entry-add todo
 
 commit-changes-entry cce: .PHONY ce-error-check changes-entry-update changes-entry-add todo-entry-remove changes-entry-commit
 	@${DO_NADA}
+
+.PHONY: upload-distfiles
+.if defined(NO_SRC_ON_FTP) || empty(_ALLFILES)
+upload-distfiles:
+	@${DO_NADA}
+.else
+.  if defined(EMUL_PLATFORMS) && !empty(EMUL_PLATFORMS)
+upload-distfiles:
+.    for _platform_ in ${EMUL_PLATFORMS}
+	${RUN} ${MAKE} ${MAKEFLAGS} do-upload-distfiles NO_SKIP=yes	\
+		_BOOTSTRAP_VERBOSE= EMUL_PLATFORM=${_platform_}
+.    endfor
+.  else
+upload-distfiles: do-upload-distfiles
+.  endif
+
+.PHONY: do-upload-distfiles
+do-upload-distfiles: checksum
+	${RUN}								\
+	disthost='ftp.NetBSD.org';					\
+	distdir='~ftp/pub/pkgsrc/distfiles';				\
+	${STEP_MSG} "Checking uploaded files";				\
+	uploaded_files=`${ECHO} "(cd $${distdir} && /bin/ls -1d ${_ALLFILES}) 2>/dev/null || ${TRUE}" | ssh $${disthost} /bin/sh`;	\
+	pending_files="";						\
+	for file in ${_ALLFILES}; do					\
+		found=0;						\
+		for ufile in "" $${uploaded_files}; do			\
+			if ${TEST} x$${file} = x$${ufile}; then		\
+				found=1;				\
+				break;					\
+			fi;						\
+		done;							\
+		if ${TEST} $${found} -ne 1; then			\
+			pending_files="$${pending_files} $${file}";	\
+		fi;							\
+	done;								\
+	if ${TEST} -n "$${pending_files}"; then				\
+		${STEP_MSG} "Uploading distfiles";			\
+		cd ${DISTDIR} && ${TAR:U${TOOLS_PLATFORM.tar:Utar}} cf - $${pending_files} | 	\
+			ssh "$${disthost}" /bin/tar xpf - -C "$${distdir}";\
+	fi
+.endif
+
