@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.786 2014/02/20 11:36:12 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.787 2014/02/20 11:38:07 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1194,8 +1194,8 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/ffmpeg to 20140116.1.2.5 [wiz 2014-02-20]
 	Updated www/lynx to 2.8.8.1 [wiz 2014-02-20]
 	Updated sysutils/dbus-glib to 0.102 [wiz 2014-02-20]
-	Added math/p5-Math-Derivative to 0.01 [root 2014-02-20]
-	Added math/p5-Algorithm-Munkres to 0.08 [root 2014-02-20]
-	Added math/p5-Math-Spline to 0.02 [root 2014-02-20]
-	Added devel/p5-Data-Stag to 0.14 [root 2014-02-20]
-	Added devel/p5-Convert-Binary-C to 0.76 [root 2014-02-20]
+	Added math/p5-Math-Derivative version 0.01 [root 2014-02-20]
+	Added math/p5-Algorithm-Munkres version 0.08 [root 2014-02-20]
+	Added math/p5-Math-Spline version 0.02 [root 2014-02-20]
+	Added devel/p5-Data-Stag version 0.14 [root 2014-02-20]
+	Added devel/p5-Convert-Binary-C version 0.76 [root 2014-02-20]
