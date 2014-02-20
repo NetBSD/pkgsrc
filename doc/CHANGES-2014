@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.780 2014/02/20 10:17:53 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.781 2014/02/20 11:26:32 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1194,3 +1194,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/ffmpeg to 20140116.1.2.5 [wiz 2014-02-20]
 	Updated www/lynx to 2.8.8.1 [wiz 2014-02-20]
 	Updated sysutils/dbus-glib to 0.102 [wiz 2014-02-20]
+	Updated math/p5-Math-Derivative to 0.01 [root 2014-02-20]
