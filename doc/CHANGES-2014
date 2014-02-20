@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.795 2014/02/20 16:40:58 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.796 2014/02/20 18:38:03 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1207,3 +1207,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated biology/bioperl to 1.6.923 [root 2014-02-20]
 	Updated mail/p5-Mail-Ezmlm to 0.08.2 [schmonz 2014-02-20]
 	Updated textproc/p5-Text-Markdown-Discount to 0.11 [schmonz 2014-02-20]
+	Added devel/p5-PerlIO-utf8_strict version 0.004 [schmonz 2014-02-20]
