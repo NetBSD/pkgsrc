@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.31 2014/02/18 11:34:39 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.32 2014/02/20 12:32:40 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q4 branch:
@@ -104,3 +104,7 @@ Pullup ticket #4328 - requested by bouyer
 graphics/glew: build fix
 Pullup ticket #4329 - requested by drochner
 sysutils/xentools41: security patch
+Pullup ticket #4330 - requested by drochner
+print/mupdf: security patch
+Pullup ticket #4331 - requested by drochner
+security/gnutls: security patch
