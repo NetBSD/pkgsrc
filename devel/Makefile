@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1859 2014/02/17 00:30:27 rodent Exp $
+# $NetBSD: Makefile,v 1.1860 2014/02/20 11:36:38 fhajny Exp $
 #
 
 COMMENT=	Development utilities
@@ -689,6 +689,7 @@ SUBDIR+=	p5-Config-Tiny
 SUBDIR+=	p5-Const-Fast
 SUBDIR+=	p5-Context-Preserve
 SUBDIR+=	p5-Contextual-Return
+SUBDIR+=	p5-Convert-Binary-C
 SUBDIR+=	p5-Coro
 SUBDIR+=	p5-Curses
 SUBDIR+=	p5-Curses-UI
@@ -715,6 +716,7 @@ SUBDIR+=	p5-Data-Section
 SUBDIR+=	p5-Data-Section-Simple
 SUBDIR+=	p5-Data-Serializer
 SUBDIR+=	p5-Data-ShowTable
+SUBDIR+=	p5-Data-Stag
 SUBDIR+=	p5-Data-Taxi
 SUBDIR+=	p5-Data-TemporaryBag
 SUBDIR+=	p5-Data-UUID
