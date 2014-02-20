@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.19 2014/01/04 12:31:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2014/02/20 07:56:02 wiz Exp $
 bin/easytag
+share/appdata/easytag.appdata.xml
 share/applications/easytag.desktop
 share/help/C/easytag/cddb-search.page
 share/help/C/easytag/file-rename.page
