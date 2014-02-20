@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/05/15 22:35:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/02/20 09:34:50 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -65,9 +65,48 @@ ${PYSITELIB}/urwid/split_repr.py
 ${PYSITELIB}/urwid/split_repr.pyc
 ${PYSITELIB}/urwid/split_repr.pyo
 ${PYSITELIB}/urwid/str_util.so
-${PYSITELIB}/urwid/tests.py
-${PYSITELIB}/urwid/tests.pyc
-${PYSITELIB}/urwid/tests.pyo
+${PYSITELIB}/urwid/tests/__init__.py
+${PYSITELIB}/urwid/tests/__init__.pyc
+${PYSITELIB}/urwid/tests/__init__.pyo
+${PYSITELIB}/urwid/tests/test_canvas.py
+${PYSITELIB}/urwid/tests/test_canvas.pyc
+${PYSITELIB}/urwid/tests/test_canvas.pyo
+${PYSITELIB}/urwid/tests/test_container.py
+${PYSITELIB}/urwid/tests/test_container.pyc
+${PYSITELIB}/urwid/tests/test_container.pyo
+${PYSITELIB}/urwid/tests/test_decoration.py
+${PYSITELIB}/urwid/tests/test_decoration.pyc
+${PYSITELIB}/urwid/tests/test_decoration.pyo
+${PYSITELIB}/urwid/tests/test_doctests.py
+${PYSITELIB}/urwid/tests/test_doctests.pyc
+${PYSITELIB}/urwid/tests/test_doctests.pyo
+${PYSITELIB}/urwid/tests/test_event_loops.py
+${PYSITELIB}/urwid/tests/test_event_loops.pyc
+${PYSITELIB}/urwid/tests/test_event_loops.pyo
+${PYSITELIB}/urwid/tests/test_graphics.py
+${PYSITELIB}/urwid/tests/test_graphics.pyc
+${PYSITELIB}/urwid/tests/test_graphics.pyo
+${PYSITELIB}/urwid/tests/test_listbox.py
+${PYSITELIB}/urwid/tests/test_listbox.pyc
+${PYSITELIB}/urwid/tests/test_listbox.pyo
+${PYSITELIB}/urwid/tests/test_str_util.py
+${PYSITELIB}/urwid/tests/test_str_util.pyc
+${PYSITELIB}/urwid/tests/test_str_util.pyo
+${PYSITELIB}/urwid/tests/test_text_layout.py
+${PYSITELIB}/urwid/tests/test_text_layout.pyc
+${PYSITELIB}/urwid/tests/test_text_layout.pyo
+${PYSITELIB}/urwid/tests/test_util.py
+${PYSITELIB}/urwid/tests/test_util.pyc
+${PYSITELIB}/urwid/tests/test_util.pyo
+${PYSITELIB}/urwid/tests/test_vterm.py
+${PYSITELIB}/urwid/tests/test_vterm.pyc
+${PYSITELIB}/urwid/tests/test_vterm.pyo
+${PYSITELIB}/urwid/tests/test_widget.py
+${PYSITELIB}/urwid/tests/test_widget.pyc
+${PYSITELIB}/urwid/tests/test_widget.pyo
+${PYSITELIB}/urwid/tests/util.py
+${PYSITELIB}/urwid/tests/util.pyc
+${PYSITELIB}/urwid/tests/util.pyo
 ${PYSITELIB}/urwid/text_layout.py
 ${PYSITELIB}/urwid/text_layout.pyc
 ${PYSITELIB}/urwid/text_layout.pyo
@@ -83,9 +122,6 @@ ${PYSITELIB}/urwid/version.pyo
 ${PYSITELIB}/urwid/vterm.py
 ${PYSITELIB}/urwid/vterm.pyc
 ${PYSITELIB}/urwid/vterm.pyo
-${PYSITELIB}/urwid/vterm_test.py
-${PYSITELIB}/urwid/vterm_test.pyc
-${PYSITELIB}/urwid/vterm_test.pyo
 ${PYSITELIB}/urwid/web_display.py
 ${PYSITELIB}/urwid/web_display.pyc
 ${PYSITELIB}/urwid/web_display.pyo
@@ -113,4 +149,3 @@ share/examples/py-urwid/tour.py
 share/examples/py-urwid/treesample.py
 share/examples/py-urwid/twisted_serve_ssh.py
 share/examples/py-urwid/twisted_serve_ssh.tac
-@pkgdir share/doc/py-urwid
