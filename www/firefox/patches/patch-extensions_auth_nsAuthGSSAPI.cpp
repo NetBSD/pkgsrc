@@ -1,8 +1,8 @@
-$NetBSD: patch-extensions_auth_nsAuthGSSAPI.cpp,v 1.2 2014/02/08 09:36:00 ryoon Exp $
+$NetBSD: patch-extensions_auth_nsAuthGSSAPI.cpp,v 1.3 2014/02/20 13:19:03 ryoon Exp $
 
---- extensions/auth/nsAuthGSSAPI.cpp.orig	2014-01-28 04:03:40.000000000 +0000
+--- extensions/auth/nsAuthGSSAPI.cpp.orig	2013-05-11 19:19:29.000000000 +0000
 +++ extensions/auth/nsAuthGSSAPI.cpp
-@@ -40,6 +40,9 @@ typedef KLStatus (*KLCacheHasValidTicket
+@@ -39,6 +39,9 @@ typedef KLStatus (*KLCacheHasValidTicket
  #endif
  
  #if defined(HAVE_RES_NINIT)
