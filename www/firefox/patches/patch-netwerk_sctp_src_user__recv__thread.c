@@ -1,6 +1,6 @@
-$NetBSD: patch-netwerk_sctp_src_user__recv__thread.c,v 1.2 2014/02/08 09:36:00 ryoon Exp $
+$NetBSD: patch-netwerk_sctp_src_user__recv__thread.c,v 1.3 2014/02/20 13:19:03 ryoon Exp $
 
---- netwerk/sctp/src/user_recv_thread.c.orig	2014-01-28 04:04:00.000000000 +0000
+--- netwerk/sctp/src/user_recv_thread.c.orig	2013-05-11 19:19:49.000000000 +0000
 +++ netwerk/sctp/src/user_recv_thread.c
 @@ -35,7 +35,7 @@
  #include <netinet/in.h>
