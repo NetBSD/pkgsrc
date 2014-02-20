@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.6 2014/01/09 14:25:23 mef Exp $
+$NetBSD: patch-ac,v 1.7 2014/02/20 23:15:27 wiz Exp $
 
 o libtool support 
 o Install target cleanup
@@ -227,7 +227,7 @@ o Install only one "mupdf" binary, prefer the featureful one and always
 +		${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} $$f $(DESTDIR)$(libdir); \
 +	done
 +
-+	${BSD_INSTALL_PROGRAM_DIR} $(bindir)
++	${BSD_INSTALL_PROGRAM_DIR} $(DESTDIR)$(bindir)
 +	for f in $(INSTALL_APPS); do \
 +		${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} $$f $(DESTDIR)$(bindir); \
 +	done
