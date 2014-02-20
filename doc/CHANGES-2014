@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.800 2014/02/20 19:05:50 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.801 2014/02/20 19:15:29 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1212,3 +1212,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added www/p5-URI-db version 0.12 [schmonz 2014-02-20]
 	Updated databases/p5-App-Sqitch to 0.991 [schmonz 2014-02-20]
 	Updated textproc/gtkspell to 2.0.16nb19 [wiz 2014-02-20]
+	Updated textproc/xapian to 1.2.17 [schmonz 2014-02-20]
