@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.28 2011/11/30 14:02:59 wiz Exp $
+$NetBSD: distinfo,v 1.29 2014/02/20 10:07:35 wiz Exp $
 
-SHA1 (lynx-2.8.7rel2/lynx2.8.7.tar.bz2) = a34978f7f83cd46bd857cb957faa5a9120458afa
-RMD160 (lynx-2.8.7rel2/lynx2.8.7.tar.bz2) = 553e232aebaa09f88a6a190a1dfe7debb89f0a41
-Size (lynx-2.8.7rel2/lynx2.8.7.tar.bz2) = 2436801 bytes
+SHA1 (lynx2.8.8rel.1.tar.bz2) = cc925355db7a8631677e9da6bb632553da9744a0
+RMD160 (lynx2.8.8rel.1.tar.bz2) = da2a6fe554d7252a16f58d78404ec40143a742da
+Size (lynx2.8.8rel.1.tar.bz2) = 2583698 bytes
 SHA1 (patch-aa) = 85e76c4b2708e01dd1abdc1af764a067bd83bcb9
 SHA1 (patch-ab) = 26fab3bd426a76df530e6780eefe36464059bc6a
-SHA1 (patch-ac) = f307eb078c9efccc7322262c9a7529f147eff78b
-SHA1 (patch-af) = 79188265d998d962675e221d170042cc35182e8e
+SHA1 (patch-af) = 31399c0c3394b90c0680708fff06f6f9e19674b3
+SHA1 (patch-src_LYCurses.c) = f2e9e810d0a5f1f83f16362d5b29a03411ac56e9
