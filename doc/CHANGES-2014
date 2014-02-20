@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.767 2014/02/19 19:28:08 drochner Exp $
+$NetBSD: CHANGES-2014,v 1.768 2014/02/20 00:08:26 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1181,3 +1181,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/ruby193-base to 1.9.3p484nb2 [taca 2014-02-19]
 	Updated lang/ruby200-base to 2.0.0p353nb3 [taca 2014-02-19]
 	Updated sysutils/intel-microcode-netbsd to 20140122 [drochner 2014-02-19]
+	Added finance/py-stripe version 1.12.0 [rodent 2014-02-20]
