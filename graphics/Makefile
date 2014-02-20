@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.678 2014/02/09 15:02:34 rodent Exp $
+# $NetBSD: Makefile,v 1.679 2014/02/20 12:38:22 fhajny Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -344,6 +344,7 @@ SUBDIR+=	p5-Image-Size
 SUBDIR+=	p5-PerlMagick
 SUBDIR+=	p5-RRDTool-OO
 SUBDIR+=	p5-SVG
+SUBDIR+=	p5-SVG-Graph
 SUBDIR+=	p5-SWF-File
 SUBDIR+=	p5-Template-GD
 SUBDIR+=	p5-cairo
