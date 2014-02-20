@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2013/06/04 21:28:26 schmonz Exp $
+$NetBSD: patch-aa,v 1.5 2014/02/20 19:15:44 schmonz Exp $
 
 Call it "xapian-omega" and follow hier(7).
 
---- Makefile.in.orig	2013-04-17 00:14:08.000000000 +0000
+--- Makefile.in.orig	2014-01-29 03:14:38.000000000 +0000
 +++ Makefile.in
 @@ -55,7 +55,7 @@ PRE_UNINSTALL = :
  POST_UNINSTALL = :
@@ -31,7 +31,7 @@ Call it "xapian-omega" and follow hier(7).
  dist_omegadata_DATA = htdig2omega.script mbox2omega.script
  dist_sysconf_DATA = omega.conf
  
-@@ -714,8 +714,8 @@ htmlparsetest$(EXEEXT): $(htmlparsetest_
+@@ -715,8 +715,8 @@ htmlparsetest$(EXEEXT): $(htmlparsetest_
  md5test$(EXEEXT): $(md5test_OBJECTS) $(md5test_DEPENDENCIES) $(EXTRA_md5test_DEPENDENCIES) 
  	@rm -f md5test$(EXEEXT)
  	$(CXXLINK) $(md5test_OBJECTS) $(md5test_LDADD) $(LIBS)
