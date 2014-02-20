@@ -1,11 +1,6 @@
-  The Bioperl project is a coordinated effort to collect computational
-methods routinely used in bioinformatics into a set of standard
-CPAN-style, well-documented, and freely available Perl modules.  Perl
-provides unparalleled support for many tasks common in bioinformatics
-yet there are no standard Perl modules for biology.  Bioperl hopes to
-help fill this void.
+The Bioperl Project is an international association of developers of open
+source Perl tools for bioinformatics, genomics and life science research.
 
-  Bioperl modules and source code will always be freely available
-under the same terms as Perl itself.  The Bioperl project is open to
-all and we invite suggestions and participation from the larger
-bioinformatics community.
+Bioperl is a collection of object-oriented Perl modules created by the
+Bioperl Project.  It forms the basis of a large number of bioinformatics
+and genomics applications.
