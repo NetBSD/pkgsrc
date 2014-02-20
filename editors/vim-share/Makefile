@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2013/10/07 19:26:28 morr Exp $
+# $NetBSD: Makefile,v 1.32 2014/02/20 10:15:57 jperkin Exp $
 
 PKGNAME=		vim-share-${VIM_VERSION}.${VIM_PATCHLEVEL}
 
@@ -19,4 +19,5 @@ PLIST_SUBST+=		VIM_SUBDIR=${VIM_SUBDIR}
 CHECK_INTERPRETER_SKIP+=	share/vim/vim74/doc/*.pl
 CHECK_INTERPRETER_SKIP+=	share/vim/vim74/tools/*.pl
 
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
