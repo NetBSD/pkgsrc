@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13012 2014/02/20 10:17:53 wiz Exp $
+$NetBSD: TODO,v 1.13013 2014/02/20 14:44:30 fhajny Exp $
 
 Suggested new packages
 ======================
@@ -406,7 +406,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bbsload-0.2.8
 	o bbweather-0.6.3
 	o benchfft-3.1
-	o bioperl-1.5.0
 	o bluefish-2.2.5
 	o blur6ex-0.3.462
 	o bmon-2.1.0
