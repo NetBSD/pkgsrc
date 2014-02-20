@@ -1,4 +1,6 @@
-$NetBSD: patch-configure.sh,v 1.3 2013/08/26 00:23:04 wen Exp $
+$NetBSD: patch-configure.sh,v 1.4 2014/02/20 16:40:54 schmonz Exp $
+
+Fix messed up configure.sh.
 
 --- discount/configure.sh.orig	2013-08-26 08:16:50.000000000 +0000
 +++ discount/configure.sh

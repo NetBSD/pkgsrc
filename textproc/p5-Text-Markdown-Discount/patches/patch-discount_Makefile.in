@@ -1,8 +1,8 @@
-$NetBSD: patch-discount_Makefile.in,v 1.1 2013/08/30 15:49:49 schmonz Exp $
+$NetBSD: patch-discount_Makefile.in,v 1.2 2014/02/20 16:40:54 schmonz Exp $
 
 Fix build on case-insensitive filesystems (e.g., Darwin's).
 
---- discount/Makefile.in.orig	2013-07-09 21:38:57.000000000 +0000
+--- discount/Makefile.in.orig	2013-11-15 18:26:06.000000000 +0000
 +++ discount/Makefile.in
 @@ -25,7 +25,7 @@ all: $(PGMS) $(SAMPLE_PGMS) $(TESTFRAMEW
  
@@ -18,9 +18,9 @@ Fix build on case-insensitive filesystems (e.g., Darwin's).
  	@INSTALL_DIR@ $(DESTDIR)$(LIBDIR)
  
 -version.o: version.c VERSION
--	$(CC) -DVERSION=\"`cat VERSION`\" -c version.c
+-	$(CC) $(CFLAGS) -DVERSION=\"`cat VERSION`\" -c version.c
 +version.o: version.c MYVERSION
-+	$(CC) -DVERSION=\"`cat MYVERSION`\" -c version.c
++	$(CC) $(CFLAGS) -DVERSION=\"`cat MYVERSION`\" -c version.c
  
 -VERSION:
 +MYVERSION:
@@ -28,7 +28,7 @@ Fix build on case-insensitive filesystems (e.g., Darwin's).
  
  tags.o: tags.c blocktags
 @@ -95,7 +95,7 @@ main.o: main.c mkdio.h config.h
- 	$(CC) -I. -c main.c
+ 	$(CC) $(CFLAGS) -I. -c main.c
  
  $(MKDLIB): $(OBJS)
 -	./librarian.sh make $(MKDLIB) VERSION $(OBJS)
