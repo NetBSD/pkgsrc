@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/02/20 18:41:16 schmonz Exp $
+
+SHA1 (URI-db-0.12.tar.gz) = 74ec5498ec10132d15b23615248683454877f52d
+RMD160 (URI-db-0.12.tar.gz) = 738b4261e7e6e1cfced5ac721e7d753733e43eb5
+Size (URI-db-0.12.tar.gz) = 18250 bytes
