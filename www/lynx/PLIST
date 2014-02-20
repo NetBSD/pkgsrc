@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2011/11/30 14:02:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2014/02/20 10:07:35 wiz Exp $
 bin/lynx
 man/man1/lynx.1
 share/examples/lynx/lynx.cfg
@@ -8,6 +8,7 @@ share/locale/cs/LC_MESSAGES/lynx.mo
 share/locale/da/LC_MESSAGES/lynx.mo
 share/locale/de/LC_MESSAGES/lynx.mo
 share/locale/en/LC_MESSAGES/lynx.mo
+share/locale/eo/LC_MESSAGES/lynx.mo
 share/locale/et/LC_MESSAGES/lynx.mo
 share/locale/fi/LC_MESSAGES/lynx.mo
 share/locale/fr/LC_MESSAGES/lynx.mo
@@ -49,6 +50,7 @@ share/lynx/lynx_doc/docs/README.defines
 share/lynx/lynx_doc/docs/README.jp
 share/lynx/lynx_doc/docs/README.metrics
 share/lynx/lynx_doc/docs/README.options
+share/lynx/lynx_doc/docs/README.release
 share/lynx/lynx_doc/docs/README.rootcerts
 share/lynx/lynx_doc/docs/README.ssl
 share/lynx/lynx_doc/docs/README.sslcerts
@@ -82,6 +84,7 @@ share/lynx/lynx_doc/samples/midnight.lss
 share/lynx/lynx_doc/samples/mild-colors.lss
 share/lynx/lynx_doc/samples/mime.types
 share/lynx/lynx_doc/samples/oldlynx
+share/lynx/lynx_doc/samples/oldlynx.bat
 share/lynx/lynx_doc/samples/opaque.lss
 share/lynx/lynx_doc/test/ALT88592.html
 share/lynx/lynx_doc/test/ISO_LATIN1_test.html
@@ -89,6 +92,7 @@ share/lynx/lynx_doc/test/README.txt
 share/lynx/lynx_doc/test/TestComment.html
 share/lynx/lynx_doc/test/bad-html.html
 share/lynx/lynx_doc/test/c1.html
+share/lynx/lynx_doc/test/circle.html
 share/lynx/lynx_doc/test/cp-1252.html
 share/lynx/lynx_doc/test/cp-1252a.html
 share/lynx/lynx_doc/test/iso-8859-1.html
@@ -101,9 +105,11 @@ share/lynx/lynx_doc/test/raw8bit.html
 share/lynx/lynx_doc/test/sgml.html
 share/lynx/lynx_doc/test/spaces.html
 share/lynx/lynx_doc/test/special_urls.html
+share/lynx/lynx_doc/test/square.html
 share/lynx/lynx_doc/test/tabtest.html
 share/lynx/lynx_doc/test/tags.html
 share/lynx/lynx_doc/test/test-styles.html
+share/lynx/lynx_doc/test/triangle.html
 share/lynx/lynx_doc/test/unicode.html
 share/lynx/lynx_doc/test/utf-8-demo.html
 share/lynx/lynx_help/COPYHEADER
