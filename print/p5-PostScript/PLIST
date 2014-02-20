@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2014/02/20 11:41:14 fhajny Exp $
+${PERL5_SUB_INSTALLVENDORLIB}/PostScript/Document.pm
+${PERL5_SUB_INSTALLVENDORLIB}/PostScript/Elements.pm
+${PERL5_SUB_INSTALLVENDORLIB}/PostScript/Metrics.pm
+${PERL5_SUB_INSTALLVENDORLIB}/PostScript/TextBlock.pm
+${PERL5_SUB_INSTALLVENDORLIB}/PostScript/example.pl
+${PERL5_SUB_INSTALLVENDORARCH}/auto/PostScript/Metrics/.packlist
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/PostScript::Elements.3
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/PostScript::Metrics.3
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/PostScript::TextBlock.3
