@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.797 2014/02/20 18:40:06 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.798 2014/02/20 18:41:31 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1209,3 +1209,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/p5-Text-Markdown-Discount to 0.11 [schmonz 2014-02-20]
 	Added devel/p5-PerlIO-utf8_strict version 0.004 [schmonz 2014-02-20]
 	Added www/p5-URI-Nested version 0.10 [schmonz 2014-02-20]
+	Added www/p5-URI-db version 0.12 [schmonz 2014-02-20]
