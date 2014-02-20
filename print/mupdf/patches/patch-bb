@@ -1,0 +1,13 @@
+$NetBSD: patch-bb,v 1.1.2.2 2014/02/20 12:23:28 tron Exp $
+
+--- xps/xps_glyphs.c.orig	2013-08-14 12:41:20.000000000 +0000
++++ xps/xps_glyphs.c
+@@ -591,7 +591,7 @@ xps_parse_glyphs(xps_document *doc, cons
+ 
+ 	if (fill_att)
+ 	{
+-		float samples[32];
++		float samples[FZ_MAX_COLORS];
+ 		fz_colorspace *colorspace;
+ 
+ 		xps_parse_color(doc, base_uri, fill_att, &colorspace, samples);
