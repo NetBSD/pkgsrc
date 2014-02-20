@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.579 2014/01/08 04:49:50 minskim Exp $
+# $NetBSD: Makefile,v 1.580 2014/02/20 11:42:07 fhajny Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -91,6 +91,7 @@ SUBDIR+=	p5-LaTeX-Driver
 SUBDIR+=	p5-LaTeX-Encode
 SUBDIR+=	p5-LaTeX-Table
 SUBDIR+=	p5-Net-CUPS
+SUBDIR+=	p5-PostScript
 SUBDIR+=	p5-PostScript-MailLabels
 SUBDIR+=	p5-PostScript-Simple
 #SUBDIR+=	p5-biblatex-biber	# broken dependencies
