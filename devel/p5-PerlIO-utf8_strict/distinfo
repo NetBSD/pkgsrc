@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/02/20 18:37:42 schmonz Exp $
+
+SHA1 (PerlIO-utf8_strict-0.004.tar.gz) = 140cc84a43ae559a2949cacae7946df6ad34ac61
+RMD160 (PerlIO-utf8_strict-0.004.tar.gz) = 5a7223290eaf7c4670782bc4944e5148ef960211
+Size (PerlIO-utf8_strict-0.004.tar.gz) = 19118 bytes
