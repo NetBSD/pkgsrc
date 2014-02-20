@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.793 2014/02/20 14:44:30 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.794 2014/02/20 16:27:31 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1205,3 +1205,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/firefox to 27.0.1 [ryoon 2014-02-20]
 	Updated www/firefox-l10n to 27.0.1 [ryoon 2014-02-20]
 	Updated biology/bioperl to 1.6.923 [root 2014-02-20]
+	Updated mail/p5-Mail-Ezmlm to 0.08.2 [schmonz 2014-02-20]
