@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.108 2014/02/12 23:18:32 tron Exp $
+# $NetBSD: Makefile,v 1.109 2014/02/20 08:19:43 obache Exp $
 
 DISTNAME=	heimdal-1.5.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	security
 MASTER_SITES=	http://www.h5l.org/dist/src/
 
@@ -81,14 +81,6 @@ PLIST_VARS+=		afskauth hcrypto
 PLIST.afskauth=		yes
 .endif
 
-.include "../../security/openssl/builtin.mk"
-
-.if ${MACHINE_PLATFORM:MNetBSD-[1-3]*} != "" || \
-    (${OPSYS} == "SunOS" && !empty(USE_BUILTIN.openssl:Myes) &&	\
-		!empty(BUILTIN_LIB_FOUND.crypto:M[Nn][Oo]))
-PLIST.hcrypto=		yes
-.endif
-
 .if ${OPSYS} == "MirBSD"
 PLIST.hcrypto=		yes
 PLIST.vis=		yes
@@ -116,6 +108,15 @@ pre-build:
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+CHECK_BUILTIN.openssl:=	yes
+.include "../../security/openssl/builtin.mk"
+CHECK_BUILTIN.openssl:=no
+.if ${MACHINE_PLATFORM:MNetBSD-[1-3]*} != "" || \
+    (${OPSYS} == "SunOS" && !empty(USE_BUILTIN.openssl:Myes) &&	\
+		!empty(BUILTIN_LIB_FOUND.crypto:M[Nn][Oo]))
+PLIST.hcrypto=		yes
+.endif
+
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
