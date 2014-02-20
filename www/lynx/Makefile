@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.115 2014/02/12 23:18:46 tron Exp $
+# $NetBSD: Makefile,v 1.116 2014/02/20 10:07:35 wiz Exp $
 
-DISTNAME=	lynx2.8.7
-PKGNAME=	lynx-2.8.7
-PKGREVISION=	6
+DISTNAME=	lynx2.8.8rel.1
+PKGNAME=	${DISTNAME:S/lynx/lynx-/:S/rel//}
 CATEGORIES=	www
 MASTER_SITES=	http://lynx.isc.org/${SUBDIR:Q}/ \
 		ftp://ftp.cyf-kr.edu.pl/pub/unix/lynx/${SUBDIR:Q}/
@@ -18,12 +17,8 @@ MAKE_JOBS_SAFE=		no
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-# 2.8.7 was rereleased under the same name
-# XXX: remove when updating!
-DIST_SUBDIR=		lynx-2.8.7rel2
-
-SUBDIR=			${DISTNAME}
-WRKSRC=			${WRKDIR}/lynx2-8-7
+SUBDIR=			current
+WRKSRC=			${WRKDIR}/lynx2-8-8
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 BROKEN_GETTEXT_DETECTION= yes
