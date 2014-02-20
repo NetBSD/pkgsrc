@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2014/01/29 09:51:11 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2014/02/20 07:38:52 wiz Exp $
 
-DISTNAME=	xcb-util-wm-0.4.0
+DISTNAME=	xcb-util-wm-0.4.1
 CATEGORIES=	x11
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.bz2
