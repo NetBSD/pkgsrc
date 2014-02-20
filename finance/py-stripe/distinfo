@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/02/20 00:08:13 rodent Exp $
+
+SHA1 (stripe-1.12.0.tar.gz) = 8a470f7afbe63128d8ffd8721a352fc5ebd0d583
+RMD160 (stripe-1.12.0.tar.gz) = ead983bdcabd8dcf7310a39f0a60f5da4850639e
+Size (stripe-1.12.0.tar.gz) = 152667 bytes
