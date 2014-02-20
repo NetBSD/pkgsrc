@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.340 2014/02/14 07:43:46 obache Exp $
+# $NetBSD: bsd.prefs.mk,v 1.341 2014/02/20 21:27:43 jperkin Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -581,6 +581,8 @@ X11BASE?=	/opt/X11
 X11BASE?=	/usr/X11R7
 .  elif exists(/usr/X11R7/lib/libX11.so)
 X11BASE?=	/usr/X11R7
+.  elif exists(/usr/lib/libX11.so) || exists(/usr/lib64/libX11.so)
+X11BASE?=	/usr
 .  else
 X11BASE?=	/usr/X11R6
 .  endif
