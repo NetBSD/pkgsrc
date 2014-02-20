@@ -1,8 +1,8 @@
-$NetBSD: patch-mb,v 1.7 2014/02/08 09:36:00 ryoon Exp $
+$NetBSD: patch-mb,v 1.8 2014/02/20 13:19:03 ryoon Exp $
 
---- xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	2014-01-28 04:04:07.000000000 +0000
+--- xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	2013-09-10 03:43:57.000000000 +0000
 +++ xpcom/reflect/xptcall/src/md/unix/Makefile.in
-@@ -174,7 +174,7 @@ endif
+@@ -183,7 +183,7 @@ endif
  #
  # NetBSD/PPC
  #
@@ -11,7 +11,7 @@ $NetBSD: patch-mb,v 1.7 2014/02/08 09:36:00 ryoon Exp $
  ASFILES		:= xptcinvoke_asm_ppc_netbsd.s xptcstubs_asm_ppc_netbsd.s
  endif
  
-@@ -226,6 +226,13 @@ ifneq (,$(filter OpenBSDsparc64 FreeBSDs
+@@ -235,6 +235,13 @@ ifneq (,$(filter OpenBSDsparc64 FreeBSDs
  ASFILES		:= xptcinvoke_asm_sparc64_openbsd.s xptcstubs_asm_sparc64_openbsd.s
  endif
  #
