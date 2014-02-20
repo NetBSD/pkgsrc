@@ -1,0 +1,13 @@
+$NetBSD: patch-bd,v 1.1.2.2 2014/02/20 12:23:28 tron Exp $
+
+--- xps/xps_path.c.orig	2012-08-16 13:55:20.000000000 +0000
++++ xps/xps_path.c
+@@ -825,7 +825,7 @@ xps_parse_path(xps_document *doc, fz_mat
+ 
+ 	fz_stroke_state *stroke = NULL;
+ 	fz_matrix transform;
+-	float samples[32];
++	float samples[FZ_MAX_COLORS];
+ 	fz_colorspace *colorspace;
+ 	fz_path *path;
+ 	fz_path *stroke_path = NULL;
