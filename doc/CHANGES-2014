@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.790 2014/02/20 12:37:41 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.791 2014/02/20 13:22:30 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1202,3 +1202,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added print/p5-PostScript version 0.06 [root 2014-02-20]
 	Added biology/p5-Bio-ASN1-EntrezGene version 1.70 [root 2014-02-20]
 	Added graphics/p5-SVG-Graph version 0.04 [root 2014-02-20]
+	Updated www/firefox to 27.0.1 [ryoon 2014-02-20]
