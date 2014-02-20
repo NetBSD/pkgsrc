@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2014/02/18 02:53:37 rodent Exp $
-${PLIST.py2}${PYSITELIB}/_billiard.so
+@comment $NetBSD: PLIST,v 1.5 2014/02/20 00:47:28 rodent Exp $
+${PLIST.py2x}${PYSITELIB}/_billiard.so
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
