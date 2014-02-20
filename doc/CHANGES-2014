@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.784 2014/02/20 11:34:12 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.785 2014/02/20 11:35:19 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1198,3 +1198,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated math/p5-Algorithm-Munkres to 0.08 [root 2014-02-20]
 	Updated math/p5-Math-Spline to 0.02 [root 2014-02-20]
 	Updated devel/p5-Data-Stag to 0.14 [root 2014-02-20]
+	Updated devel/p5-Convert-Binary-C to 0.76 [root 2014-02-20]
