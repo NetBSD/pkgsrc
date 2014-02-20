@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.58 2014/02/20 10:52:33 jperkin Exp $
+# $NetBSD: Linux.mk,v 1.59 2014/02/20 11:03:09 jperkin Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -71,6 +71,7 @@ _OPSYS_INCLUDE_DIRS?=	/usr/include
 _OPSYS_PREFER.getopt?=		native
 _OPSYS_PREFER.gettext?=		native
 _OPSYS_PREFER.iconv?=		native
+_OPSYS_PREFER.libexecinfo?=	native
 _OPSYS_PREFER.libinotify?=	native
 _OPSYS_PREFER.sysexits?=	native
 
@@ -105,9 +106,9 @@ _OPSYS_CAN_CHECK_SHLIBS=	yes # use readelf in check/bsd.check-vars.mk
 _OPSYS_MAX_CMDLEN_CMD?=	/usr/bin/getconf ARG_MAX
 .endif
 
-.if (${MACHINE_ARCH} == "x86_64")
-ABI?=	64
-LIBABISUFFIX?=          64
+.if ${MACHINE_ARCH} == "x86_64"
+ABI?=		64
+LIBABISUFFIX?=	64
 .endif
 
 ## Use _CMD so the command only gets run when needed!
