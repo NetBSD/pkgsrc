@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.57 2014/02/19 17:20:23 jperkin Exp $
+# $NetBSD: Linux.mk,v 1.58 2014/02/20 10:52:33 jperkin Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -71,6 +71,7 @@ _OPSYS_INCLUDE_DIRS?=	/usr/include
 _OPSYS_PREFER.getopt?=		native
 _OPSYS_PREFER.gettext?=		native
 _OPSYS_PREFER.iconv?=		native
+_OPSYS_PREFER.libinotify?=	native
 _OPSYS_PREFER.sysexits?=	native
 
 .if exists(/usr/include/netinet6) || exists(/usr/include/linux/in6.h)
