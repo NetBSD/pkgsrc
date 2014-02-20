@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2013/05/31 12:41:18 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2014/02/20 16:27:21 schmonz Exp $
 #
 
-DISTNAME=		Ezmlm-0.07.2
+DISTNAME=		Ezmlm-0.08.2
 PKGNAME=		p5-Mail-${DISTNAME}
-PKGREVISION=		6
 CATEGORIES=		mail perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Mail/}
 
