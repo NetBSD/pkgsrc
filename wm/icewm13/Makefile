@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/01/05 12:33:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/20 14:15:40 jperkin Exp $
 
 DISTNAME=	icewm-1.3.8
 CATEGORIES=	wm
@@ -15,7 +15,7 @@ FILESDIR=	${.CURDIR}/../../wm/icewm/files
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c++
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	msgfmt pkg-config
 
 post-extract:
 	cp ${FILESDIR}/bsd-daemon.xpm ${WRKSRC}/lib/taskbar
