@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.770 2014/02/20 07:39:01 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.771 2014/02/20 07:56:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1184,3 +1184,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added finance/py-stripe version 1.12.0 [rodent 2014-02-20]
 	Updated net/haproxy to 1.4.24nb1 [rodent 2014-02-20]
 	Updated x11/xcb-util-wm to 0.4.1 [wiz 2014-02-20]
+	Updated audio/easytag to 2.1.10 [wiz 2014-02-20]
