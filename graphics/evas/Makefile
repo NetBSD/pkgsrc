@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/02/12 23:17:59 tron Exp $
+# $NetBSD: Makefile,v 1.17 2014/02/20 09:46:32 jperkin Exp $
 
 PKGREVISION=	1
 
@@ -22,7 +22,7 @@ PLIST_SRC+=	PLIST
 # /var/shm was added together with shm_open, so use this as test.
 PLIST_SRC+=	PLIST.cserve
 .  endif
-.elif ${OPSYS} == "OpenBSD" || ${OPSYS} == "MirBSD"
+.elif ${OPSYS} == "OpenBSD" || ${OPSYS} == "MirBSD" || ${OPSYS} == "Linux"
 # No shm_open on OpenBSD/MirBSD
 .else
 # Assume shm_open exists as sane default.
