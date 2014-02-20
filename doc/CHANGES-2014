@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.772 2014/02/20 08:20:01 obache Exp $
+$NetBSD: CHANGES-2014,v 1.773 2014/02/20 09:29:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1186,3 +1186,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/xcb-util-wm to 0.4.1 [wiz 2014-02-20]
 	Updated audio/easytag to 2.1.10 [wiz 2014-02-20]
 	Updated security/heimdal to 1.5.3nb5 [obache 2014-02-20]
+	Updated devel/py-cython to 0.20.1 [wiz 2014-02-20]
