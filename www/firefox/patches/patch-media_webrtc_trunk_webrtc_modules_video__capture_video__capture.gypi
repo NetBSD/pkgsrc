@@ -1,6 +1,6 @@
-$NetBSD: patch-media_webrtc_trunk_webrtc_modules_video__capture_video__capture.gypi,v 1.3 2014/02/08 09:36:00 ryoon Exp $
+$NetBSD: patch-media_webrtc_trunk_webrtc_modules_video__capture_video__capture.gypi,v 1.4 2014/02/20 13:19:03 ryoon Exp $
 
---- media/webrtc/trunk/webrtc/modules/video_capture/video_capture.gypi.orig	2014-01-28 04:03:58.000000000 +0000
+--- media/webrtc/trunk/webrtc/modules/video_capture/video_capture.gypi.orig	2013-09-10 03:43:47.000000000 +0000
 +++ media/webrtc/trunk/webrtc/modules/video_capture/video_capture.gypi
 @@ -7,6 +7,9 @@
  # be found in the AUTHORS file in the root of the source tree.
@@ -12,7 +12,7 @@ $NetBSD: patch-media_webrtc_trunk_webrtc_modules_video__capture_video__capture.g
    'targets': [
      {
        'target_name': 'video_capture_module',
-@@ -47,6 +50,16 @@
+@@ -49,6 +52,16 @@
          }, {  # include_internal_video_capture == 1
            'conditions': [
              ['include_v4l2_video_capture==1', {

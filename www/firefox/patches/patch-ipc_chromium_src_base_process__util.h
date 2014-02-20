@@ -1,6 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_base_process__util.h,v 1.3 2014/02/08 09:36:00 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_process__util.h,v 1.4 2014/02/20 13:19:03 ryoon Exp $
 
---- ipc/chromium/src/base/process_util.h.orig	2014-01-28 04:03:44.000000000 +0000
+--- ipc/chromium/src/base/process_util.h.orig	2013-09-10 03:43:34.000000000 +0000
 +++ ipc/chromium/src/base/process_util.h
 @@ -13,7 +13,7 @@
  #if defined(OS_WIN)
@@ -21,7 +21,7 @@ $NetBSD: patch-ipc_chromium_src_base_process__util.h,v 1.3 2014/02/08 09:36:00 r
  // TODO(port): we should not rely on a Win32 structure.
  struct ProcessEntry {
    int pid;
-@@ -250,7 +253,7 @@ class NamedProcessIterator {
+@@ -316,7 +319,7 @@ class NamedProcessIterator {
  #if defined(OS_WIN)
    HANDLE snapshot_;
    bool started_iteration_;

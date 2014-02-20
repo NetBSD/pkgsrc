@@ -1,10 +1,10 @@
-$NetBSD: patch-mfbt_Poison.cpp,v 1.3 2014/02/08 09:36:00 ryoon Exp $
+$NetBSD: patch-mfbt_Poison.cpp,v 1.4 2014/02/20 13:19:03 ryoon Exp $
 
 * Use posix_madvise(3) instead of madvise(3) for Solaris/SunOS.
   Solaris/SunOS's madvise(3) is not enabled in this context,
   and its first argument type is different from NetBSD/Linux's one.
 
---- mfbt/Poison.cpp.orig	2014-01-28 04:03:59.000000000 +0000
+--- mfbt/Poison.cpp.orig	2013-09-11 03:22:45.000000000 +0000
 +++ mfbt/Poison.cpp
 @@ -125,7 +125,11 @@ ReleaseRegion(void *region, uintptr_t si
  static bool

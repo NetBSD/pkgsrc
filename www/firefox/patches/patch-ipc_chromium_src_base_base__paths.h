@@ -1,6 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_base_base__paths.h,v 1.2 2014/02/08 09:36:00 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_base__paths.h,v 1.3 2014/02/20 13:19:03 ryoon Exp $
 
---- ipc/chromium/src/base/base_paths.h.orig	2014-01-28 04:03:44.000000000 +0000
+--- ipc/chromium/src/base/base_paths.h.orig	2013-05-11 19:19:32.000000000 +0000
 +++ ipc/chromium/src/base/base_paths.h
 @@ -13,7 +13,7 @@
  #include "base/base_paths_win.h"

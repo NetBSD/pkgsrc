@@ -1,6 +1,6 @@
-$NetBSD: patch-modules_libjar_nsZipArchive.cpp,v 1.2 2014/02/08 09:36:00 ryoon Exp $
+$NetBSD: patch-modules_libjar_nsZipArchive.cpp,v 1.3 2014/02/20 13:19:03 ryoon Exp $
 
---- modules/libjar/nsZipArchive.cpp.orig	2014-01-28 04:04:00.000000000 +0000
+--- modules/libjar/nsZipArchive.cpp.orig	2013-06-18 11:01:37.000000000 +0000
 +++ modules/libjar/nsZipArchive.cpp
 @@ -590,7 +590,9 @@ MOZ_WIN_MEM_TRY_BEGIN
      // Success means optimized jar layout from bug 559961 is in effect
