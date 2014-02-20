@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.787 2014/02/20 11:38:07 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.788 2014/02/20 11:41:27 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1199,3 +1199,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added math/p5-Math-Spline version 0.02 [root 2014-02-20]
 	Added devel/p5-Data-Stag version 0.14 [root 2014-02-20]
 	Added devel/p5-Convert-Binary-C version 0.76 [root 2014-02-20]
+	Added print/p5-PostScript version 0.06 [root 2014-02-20]
