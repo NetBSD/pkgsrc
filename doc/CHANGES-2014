@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.778 2014/02/20 09:53:24 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.779 2014/02/20 10:07:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1192,3 +1192,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/gtk-doc to 1.20 [wiz 2014-02-20]
 	Updated games/puzzles to 10116 [wiz 2014-02-20]
 	Updated multimedia/ffmpeg to 20140116.1.2.5 [wiz 2014-02-20]
+	Updated www/lynx to 2.8.8.1 [wiz 2014-02-20]
