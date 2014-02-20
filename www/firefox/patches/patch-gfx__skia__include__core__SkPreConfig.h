@@ -1,9 +1,9 @@
-$NetBSD: patch-gfx__skia__include__core__SkPreConfig.h,v 1.3 2014/02/08 09:36:00 ryoon Exp $
+$NetBSD: patch-gfx__skia__include__core__SkPreConfig.h,v 1.4 2014/02/20 13:19:03 ryoon Exp $
 
 Configure sparc cpus as big endian (Bugzilla #884376)
 
 diff -r 581ea0e6531e gfx/skia/include/core/SkPreConfig.h
---- gfx/skia/include/core/SkPreConfig.h.orig	2014-01-28 04:03:41.000000000 +0000
+--- gfx/skia/include/core/SkPreConfig.h.orig	2013-10-25 22:27:18.000000000 +0000
 +++ gfx/skia/include/core/SkPreConfig.h
 @@ -100,7 +100,7 @@
  

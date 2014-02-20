@@ -1,6 +1,6 @@
-$NetBSD: patch-media_webrtc_trunk_webrtc_system__wrappers_source_spreadsortlib_spreadsort.hpp,v 1.3 2014/02/08 09:36:00 ryoon Exp $
+$NetBSD: patch-media_webrtc_trunk_webrtc_system__wrappers_source_spreadsortlib_spreadsort.hpp,v 1.4 2014/02/20 13:19:03 ryoon Exp $
 
---- media/webrtc/trunk/webrtc/system_wrappers/source/spreadsortlib/spreadsort.hpp.orig	2014-01-28 04:03:59.000000000 +0000
+--- media/webrtc/trunk/webrtc/system_wrappers/source/spreadsortlib/spreadsort.hpp.orig	2013-12-05 16:07:50.000000000 +0000
 +++ media/webrtc/trunk/webrtc/system_wrappers/source/spreadsortlib/spreadsort.hpp
 @@ -1,1688 +1,1695 @@
 -//Templated spread_sort library

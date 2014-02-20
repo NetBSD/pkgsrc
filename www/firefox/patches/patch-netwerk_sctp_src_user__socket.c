@@ -1,8 +1,8 @@
-$NetBSD: patch-netwerk_sctp_src_user__socket.c,v 1.2 2014/02/08 09:36:00 ryoon Exp $
+$NetBSD: patch-netwerk_sctp_src_user__socket.c,v 1.3 2014/02/20 13:19:03 ryoon Exp $
 
---- netwerk/sctp/src/user_socket.c.orig	2014-01-28 04:04:00.000000000 +0000
+--- netwerk/sctp/src/user_socket.c.orig	2013-06-17 22:13:23.000000000 +0000
 +++ netwerk/sctp/src/user_socket.c
-@@ -1044,8 +1044,13 @@ userspace_sctp_recvmsg(struct socket *so
+@@ -1104,8 +1104,13 @@ userspace_sctp_recvmsg(struct socket *so
  		    (struct sctp_sndrcvinfo *)sinfo, 1);
  
  	if (error) {
@@ -16,7 +16,7 @@ $NetBSD: patch-netwerk_sctp_src_user__socket.c,v 1.2 2014/02/08 09:36:00 ryoon E
  			error = 0;
  		}
  	if ((fromlenp != NULL) && (fromlen > 0) && (from != NULL)) {
-@@ -1133,7 +1138,11 @@ usrsctp_recvv(struct socket *so,
+@@ -1193,7 +1198,11 @@ usrsctp_recvv(struct socket *so,
  		    (struct sctp_sndrcvinfo *)&seinfo, 1);
  	if (errno) {
  		if (auio.uio_resid != (int)ulen &&
@@ -28,7 +28,7 @@ $NetBSD: patch-netwerk_sctp_src_user__socket.c,v 1.2 2014/02/08 09:36:00 ryoon E
  			errno = 0;
  		}
  	}
-@@ -2083,7 +2092,11 @@ int user_connect(struct socket *so, stru
+@@ -2143,7 +2152,11 @@ int user_connect(struct socket *so, stru
  		error = pthread_cond_wait(SOCK_COND(so), SOCK_MTX(so));
  #endif
  		if (error) {
@@ -40,7 +40,7 @@ $NetBSD: patch-netwerk_sctp_src_user__socket.c,v 1.2 2014/02/08 09:36:00 ryoon E
  				interrupted = 1;
  			break;
  		}
-@@ -2097,8 +2110,10 @@ int user_connect(struct socket *so, stru
+@@ -2157,8 +2170,10 @@ int user_connect(struct socket *so, stru
  bad:
  	if (!interrupted)
  		so->so_state &= ~SS_ISCONNECTING;

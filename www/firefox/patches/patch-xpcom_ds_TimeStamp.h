@@ -1,10 +1,10 @@
-$NetBSD: patch-xpcom_ds_TimeStamp.h,v 1.2 2014/02/08 09:36:00 ryoon Exp $
+$NetBSD: patch-xpcom_ds_TimeStamp.h,v 1.3 2014/02/20 13:19:03 ryoon Exp $
 
 http://gnats.netbsd.org/47233
 
---- xpcom/ds/TimeStamp.h.orig	2014-01-28 04:04:07.000000000 +0000
+--- xpcom/ds/TimeStamp.h.orig	2013-01-04 23:44:47.000000000 +0000
 +++ xpcom/ds/TimeStamp.h
-@@ -161,11 +161,11 @@ private:
+@@ -130,11 +130,11 @@ private:
      // NOTE: this MUST be a >= test, because int64_t(double(INT64_MAX))
      // overflows and gives INT64_MIN.
      if (aTicks >= double(INT64_MAX))

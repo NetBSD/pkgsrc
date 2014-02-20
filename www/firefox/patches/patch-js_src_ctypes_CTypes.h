@@ -1,6 +1,6 @@
-$NetBSD: patch-js_src_ctypes_CTypes.h,v 1.2 2014/02/08 09:36:00 ryoon Exp $
+$NetBSD: patch-js_src_ctypes_CTypes.h,v 1.3 2014/02/20 13:19:03 ryoon Exp $
 
---- js/src/ctypes/CTypes.h.orig	2014-01-28 04:03:45.000000000 +0000
+--- js/src/ctypes/CTypes.h.orig	2014-02-12 21:29:02.000000000 +0000
 +++ js/src/ctypes/CTypes.h
 @@ -14,6 +14,23 @@
  #include "js/Vector.h"

@@ -1,6 +1,6 @@
-$NetBSD: patch-media_libsoundtouch_src_cpu__detect__x86.cpp,v 1.3 2014/02/08 09:36:00 ryoon Exp $
+$NetBSD: patch-media_libsoundtouch_src_cpu__detect__x86.cpp,v 1.4 2014/02/20 13:19:03 ryoon Exp $
 
---- media/libsoundtouch/src/cpu_detect_x86.cpp.orig	2014-01-28 04:03:54.000000000 +0000
+--- media/libsoundtouch/src/cpu_detect_x86.cpp.orig	2013-06-17 22:13:19.000000000 +0000
 +++ media/libsoundtouch/src/cpu_detect_x86.cpp
 @@ -131,6 +131,9 @@ uint detectCPUextensions(void)
  

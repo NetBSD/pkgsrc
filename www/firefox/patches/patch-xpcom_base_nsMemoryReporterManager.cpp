@@ -1,6 +1,6 @@
-$NetBSD: patch-xpcom_base_nsMemoryReporterManager.cpp,v 1.2 2014/02/08 09:36:00 ryoon Exp $
+$NetBSD: patch-xpcom_base_nsMemoryReporterManager.cpp,v 1.3 2014/02/20 13:19:03 ryoon Exp $
 
---- xpcom/base/nsMemoryReporterManager.cpp.orig	2014-01-28 04:04:07.000000000 +0000
+--- xpcom/base/nsMemoryReporterManager.cpp.orig	2014-02-12 21:29:26.000000000 +0000
 +++ xpcom/base/nsMemoryReporterManager.cpp
 @@ -201,6 +201,43 @@ ResidentFastDistinguishedAmount(int64_t*
      return ResidentDistinguishedAmount(aN);

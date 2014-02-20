@@ -1,8 +1,8 @@
-$NetBSD: patch-toolkit_mozapps_update_updater_updater.cpp,v 1.2 2014/02/08 09:36:00 ryoon Exp $
+$NetBSD: patch-toolkit_mozapps_update_updater_updater.cpp,v 1.3 2014/02/20 13:19:03 ryoon Exp $
 
---- toolkit/mozapps/update/updater/updater.cpp.orig	2014-01-28 04:04:06.000000000 +0000
+--- toolkit/mozapps/update/updater/updater.cpp.orig	2013-08-20 13:38:52.000000000 +0000
 +++ toolkit/mozapps/update/updater/updater.cpp
-@@ -127,7 +127,10 @@ static bool sUseHardLinks = true;
+@@ -123,7 +123,10 @@ static bool sUseHardLinks = true;
  // declare it here to avoid including that entire header file.
  #define BZ2_CRC32TABLE_UNDECLARED
  

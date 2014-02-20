@@ -1,8 +1,8 @@
-$NetBSD: patch-ipc_chromium_Makefile.in,v 1.4 2014/02/08 09:36:00 ryoon Exp $
+$NetBSD: patch-ipc_chromium_Makefile.in,v 1.5 2014/02/20 13:19:03 ryoon Exp $
 
---- ipc/chromium/Makefile.in.orig	2014-01-28 04:03:44.000000000 +0000
+--- ipc/chromium/Makefile.in.orig	2013-10-25 22:27:21.000000000 +0000
 +++ ipc/chromium/Makefile.in
-@@ -11,9 +11,7 @@ vpath %.c \
+@@ -22,9 +22,7 @@ vpath %.c \
    $(srcdir)/src/third_party/libevent \
    $(NULL)
  else # } else {
@@ -13,7 +13,7 @@ $NetBSD: patch-ipc_chromium_Makefile.in,v 1.4 2014/02/08 09:36:00 ryoon Exp $
  endif # }
  
  vpath %.cc \
-@@ -32,6 +30,33 @@ DEFINES += -DANDROID -D_POSIX_MONOTONIC_
+@@ -45,6 +43,33 @@ DEFINES += -DANDROID -D_POSIX_MONOTONIC_
  endif # Android
  endif # } Not WINNT (OS_POSIX)
  
