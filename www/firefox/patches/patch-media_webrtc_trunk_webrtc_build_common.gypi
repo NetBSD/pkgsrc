@@ -1,6 +1,6 @@
-$NetBSD: patch-media_webrtc_trunk_webrtc_build_common.gypi,v 1.5 2014/02/08 09:36:00 ryoon Exp $
+$NetBSD: patch-media_webrtc_trunk_webrtc_build_common.gypi,v 1.6 2014/02/20 13:19:03 ryoon Exp $
 
---- media/webrtc/trunk/webrtc/build/common.gypi.orig	2014-01-28 04:03:58.000000000 +0000
+--- media/webrtc/trunk/webrtc/build/common.gypi.orig	2013-12-05 16:07:49.000000000 +0000
 +++ media/webrtc/trunk/webrtc/build/common.gypi
 @@ -78,9 +78,9 @@
      'enable_protobuf%': 1,
