@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/10/23 18:16:22 asau Exp $
+# $NetBSD: Makefile,v 1.31 2014/02/20 11:38:14 jperkin Exp $
 
 DISTNAME=	crack5.0
 PKGNAME=	crack-5.0
@@ -20,6 +20,12 @@ REPLACE.xdawg.new=	${PREFIX}/libexec/crack/xdawg
 REPLACE_FILES.xdawg=	dict/*/*
 
 CHECK_INTERPRETER_SKIP+=	share/crack/extra/Dictstats.pl
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux"
+MAKE_ENV+=	LIBS="-lcrypt"
+.endif
 
 pre-configure:
 	@if [ -f /usr/lib/libcrypt.a ]; then				\
