@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.788 2014/02/20 11:41:27 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.789 2014/02/20 11:44:19 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1200,3 +1200,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/p5-Data-Stag version 0.14 [root 2014-02-20]
 	Added devel/p5-Convert-Binary-C version 0.76 [root 2014-02-20]
 	Added print/p5-PostScript version 0.06 [root 2014-02-20]
+	Added biology/p5-Bio-ASN1-EntrezGene version 1.70 [root 2014-02-20]
