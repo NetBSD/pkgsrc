@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2014/02/20 09:43:33 wiz Exp $
+
+Fix unportable test(1) construct.
+
+--- configure.orig	2014-02-20 09:35:29.000000000 +0000
++++ configure
+@@ -12543,7 +12543,7 @@ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether date can output nanoseconds" >&5
+ $as_echo_n "checking whether date can output nanoseconds... " >&6; }
+ date +%s.%N | grep -q '%N'
+-if test "$?" == "1"; then
++if test "$?" = "1"; then
+   TS_FMT="+%s.%N"
+   ELAPSED_FMT="+%H:%M:%S.%N"
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+@@ -12560,7 +12560,7 @@ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether date can format dates" >&5
+ $as_echo_n "checking whether date can format dates... " >&6; }
+ date >/dev/null 2>&1 --utc --date @1.1 $ELAPSED_FMT
+-if test "$?" == "0"; then
++if test "$?" = "0"; then
+   DATE_FMT_CMD="date --utc $ELAPSED_FMT --date @0"
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
