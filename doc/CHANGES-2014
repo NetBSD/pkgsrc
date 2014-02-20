@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.799 2014/02/20 18:43:04 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.800 2014/02/20 19:05:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1211,3 +1211,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added www/p5-URI-Nested version 0.10 [schmonz 2014-02-20]
 	Added www/p5-URI-db version 0.12 [schmonz 2014-02-20]
 	Updated databases/p5-App-Sqitch to 0.991 [schmonz 2014-02-20]
+	Updated textproc/gtkspell to 2.0.16nb19 [wiz 2014-02-20]
