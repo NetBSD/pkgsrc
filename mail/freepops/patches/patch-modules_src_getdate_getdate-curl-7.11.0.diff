@@ -1,0 +1,110 @@
+$NetBSD: patch-modules_src_getdate_getdate-curl-7.11.0.diff,v 1.1 2014/02/21 20:26:53 joerg Exp $
+
+--- modules/src/getdate/getdate-curl-7.11.0.diff.orig	2014-02-21 00:02:59.000000000 +0000
++++ modules/src/getdate/getdate-curl-7.11.0.diff
+@@ -1,6 +1,6 @@
+-diff -ruN getdate-curl-7.11.0/Makefile getdate-curl-7.11.0-new/Makefile
+---- getdate-curl-7.11.0/Makefile	1970-01-01 01:00:00.000000000 +0100
+-+++ getdate-curl-7.11.0-new/Makefile	2004-02-03 18:26:37.000000000 +0100
++diff -ur getdate-curl-7.11.0/Makefile getdate-curl-7.11.0-new/Makefile
++--- getdate-curl-7.11.0/Makefile	2014-02-21 00:01:21.000000000 +0000
+++++ getdate-curl-7.11.0-new/Makefile	2014-02-21 00:01:21.000000000 +0000
+ @@ -0,0 +1,20 @@
+ +include $(CONFIG)
+ +H=@
+@@ -22,10 +22,9 @@ diff -ruN getdate-curl-7.11.0/Makefile g
+ +clean:
+ +	$(H)rm -f *.o
+ +.PHONY:  all
+-+
+-diff -ruN getdate-curl-7.11.0/getdate.h getdate-curl-7.11.0-new/getdate.h
+---- getdate-curl-7.11.0/getdate.h	2004-02-03 18:23:54.000000000 +0100
+-+++ getdate-curl-7.11.0-new/getdate.h	2004-02-03 18:19:13.000000000 +0100
++diff -ur getdate-curl-7.11.0/getdate.h getdate-curl-7.11.0-new/getdate.h
++--- getdate-curl-7.11.0/getdate.h	2004-02-03 17:23:54.000000000 +0000
+++++ getdate-curl-7.11.0-new/getdate.h	2014-02-21 00:01:21.000000000 +0000
+ @@ -7,7 +7,9 @@
+  **  This code is in the public domain and has no copyright.
+  */
+@@ -43,9 +42,9 @@ diff -ruN getdate-curl-7.11.0/getdate.h 
+  
+ -time_t curl_getdate PARAMS ((const char *p, const time_t *now));
+ +time_t gd_getdate PARAMS ((const char *p, const time_t *now));
+-diff -ruN getdate-curl-7.11.0/getdate.y getdate-curl-7.11.0-new/getdate.y
+---- getdate-curl-7.11.0/getdate.y	2004-02-03 18:23:54.000000000 +0100
+-+++ getdate-curl-7.11.0-new/getdate.y	2004-02-03 18:21:42.000000000 +0100
++diff -ur getdate-curl-7.11.0/getdate.y getdate-curl-7.11.0-new/getdate.y
++--- getdate-curl-7.11.0/getdate.y	2004-02-03 17:23:54.000000000 +0000
+++++ getdate-curl-7.11.0-new/getdate.y	2014-02-21 00:02:09.000000000 +0000
+ @@ -11,7 +11,10 @@
+  **  This code is in the public domain and has no copyright.
+  */
+@@ -55,10 +54,10 @@ diff -ruN getdate-curl-7.11.0/getdate.y 
+ +#include "config.h"
+ +#endif
+ +extern void abort(void);
+-
++ 
+  # ifdef HAVE_ALLOCA_H
+  #  include <alloca.h>
+-@@ -113,44 +115,44 @@
++@@ -113,44 +116,44 @@
+     then those parser generators need to be fixed instead of adding those
+     names to this list. */
+  
+@@ -141,7 +140,7 @@ diff -ruN getdate-curl-7.11.0/getdate.y 
+  
+  static int yylex ();
+  static int yyerror ();
+-@@ -178,7 +180,7 @@
++@@ -178,7 +181,7 @@
+  } MERIDIAN;
+  
+  /* parse results and input string */
+@@ -150,7 +149,7 @@ diff -ruN getdate-curl-7.11.0/getdate.y 
+      const char	*yyInput;
+      int		yyDayOrdinal;
+      int		yyDayNumber;
+-@@ -201,14 +203,14 @@
++@@ -201,14 +204,12 @@
+      int		yyRelMonth;
+      int		yyRelSeconds;
+      int		yyRelYear;
+@@ -161,14 +160,25 @@ diff -ruN getdate-curl-7.11.0/getdate.y 
+ -**  in a user defined value (CURL_CONTEXT struct in our case)
+ +**  in a user defined value (GD_CONTEXT struct in our case)
+  */
+- #define YYPARSE_PARAM cookie
+- #define YYLEX_PARAM cookie
++-#define YYPARSE_PARAM cookie
++-#define YYLEX_PARAM cookie
+ -#define context ((CURL_CONTEXT *) cookie)
+ +#define context ((GD_CONTEXT *) cookie)
+  %}
+  
+  /* This grammar has 13 shift/reduce conflicts. */
+-@@ -947,11 +949,11 @@
++@@ -217,7 +218,9 @@
++ /* turn global variables into locals, additionally enable extra arguments
++ ** for yylex (pointer to yylval and user defined value)
++ */
++-%pure_parser
+++%pure-parser
+++%parse-param {GD_CONTEXT *cookie}
+++%lex-param {GD_CONTEXT *cookie}
++ 
++ %union {
++     int			Number;
++@@ -947,11 +950,11 @@
+  }
+  
+  time_t
+@@ -182,7 +192,7 @@ diff -ruN getdate-curl-7.11.0/getdate.y 
+  #ifdef HAVE_LOCALTIME_R
+    struct tm keeptime;
+  #endif
+-@@ -1098,7 +1100,7 @@
++@@ -1098,7 +1101,7 @@
+    buff[MAX_BUFF_LEN] = 0;
+    while (fgets (buff, MAX_BUFF_LEN, stdin) && buff[0])
+      {
