@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.200 2014/02/12 23:18:28 tron Exp $
+# $NetBSD: Makefile,v 1.201 2014/02/21 18:18:49 richard Exp $
 
 # Notes to package maintainers:
 #
@@ -59,7 +59,13 @@ USE_NATIVE_GCC=		yes
 PKG_ADD_CMD=		${WRKSRC}/add/pkg_add
 PKG_CREATE_CMD=		${WRKSRC}/create/pkg_create
 PKG_DELETE_CMD=		${WRKSRC}/delete/pkg_delete
+#
+#  Special case for dependency checking in 'non-bootstrap' builds:
+#  don't redefine 'pkg_info' if it already exists.
+#
+.  if defined(PKG_INFO_CMD) && !exists(${PKG_INFO_CMD})
 PKG_INFO_CMD=		${WRKSRC}/info/pkg_info
+.  endif
 .endif
 
 CPPFLAGS+=		-D_LARGEFILE_SOURCE -D_LARGE_FILES
