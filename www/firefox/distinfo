@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.132 2014/02/20 13:19:03 ryoon Exp $
+$NetBSD: distinfo,v 1.133 2014/02/21 16:17:47 ryoon Exp $
 
 SHA1 (firefox-27.0.1.source.tar.bz2) = 29dc759e36f2b9381e80ac48ce59635ea25033dc
 RMD160 (firefox-27.0.1.source.tar.bz2) = c6849fd4af75d8e6cb559b22bb7e3d1a616e270c
@@ -25,7 +25,7 @@ SHA1 (patch-config_system__wrappers_unwind.h) = b3bdac0710179b9c8f8eabd824216d01
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.cpp) = 69b0a51d733cd52e7d200052362e0faf4ec918f1
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.h) = 0a7f3167e939822013ae6195406657453578453e
 SHA1 (patch-extensions_auth_nsAuthGSSAPI.cpp) = 548886fc4a86a988f3f91650061ddc04f37653a8
-SHA1 (patch-extensions_spellcheck_hunspell_src_mozHunspell.cpp) = ccc438b47a907c2f4fc3ababd03cca8d790e5400
+SHA1 (patch-extensions_spellcheck_hunspell_src_mozHunspell.cpp) = a2a0652d0eac018fda06e729bf5ba786dd8a3866
 SHA1 (patch-gfx__skia__include__core__SkPreConfig.h) = 6f99cf0eb5d4617d529c378707f537bc1e5cb28f
 SHA1 (patch-gfx_graphite2_src_Bidi.cpp) = 5e80b4a32a47ae44d237fec69ea87bdd612a76ce
 SHA1 (patch-gfx_skia_moz.build) = dd83548d5eb7c3495932dd7df94c699c8c82270e
