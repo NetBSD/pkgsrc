@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.804 2014/02/21 02:17:27 agc Exp $
+$NetBSD: CHANGES-2014,v 1.805 2014/02/21 07:39:03 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1216,3 +1216,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/xapian-omega to 1.2.17 [schmonz 2014-02-20]
 	Updated textproc/p5-Search-Xapian to 1.2.17.0 [schmonz 2014-02-20]
 	Updated security/netpgp to 20140220 [agc 2014-02-20]
+	Updated lang/nodejs to 0.10.26 [root 2014-02-21]
