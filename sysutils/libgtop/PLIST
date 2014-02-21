@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2011/11/12 00:40:34 dholland Exp $
+@comment $NetBSD: PLIST,v 1.16 2014/02/21 20:32:12 joerg Exp $
 ${PLIST.server}bin/libgtop_daemon2
 ${PLIST.server}bin/libgtop_server2
 include/libgtop-2.0/glibtop.h
@@ -51,6 +51,7 @@ share/gtk-doc/html/libgtop/home.png
 share/gtk-doc/html/libgtop/index.html
 share/gtk-doc/html/libgtop/index.sgml
 share/gtk-doc/html/libgtop/left.png
+share/gtk-doc/html/libgtop/left-insensitive.png
 share/gtk-doc/html/libgtop/libgtop-Close.html
 share/gtk-doc/html/libgtop/libgtop-Command.html
 share/gtk-doc/html/libgtop/libgtop-GlibTop-Server.html
@@ -91,8 +92,10 @@ share/gtk-doc/html/libgtop/libgtop-white-paper-overview.html
 share/gtk-doc/html/libgtop/libgtop-white-paper.html
 share/gtk-doc/html/libgtop/libgtop.devhelp2
 share/gtk-doc/html/libgtop/right.png
+share/gtk-doc/html/libgtop/right-insensitive.png
 share/gtk-doc/html/libgtop/style.css
 share/gtk-doc/html/libgtop/up.png
+share/gtk-doc/html/libgtop/up-insensitive.png
 share/locale/am/LC_MESSAGES/libgtop-2.0.mo
 share/locale/ar/LC_MESSAGES/libgtop-2.0.mo
 share/locale/as/LC_MESSAGES/libgtop-2.0.mo
