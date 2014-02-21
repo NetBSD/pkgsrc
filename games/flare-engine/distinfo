@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/02/02 23:19:51 rodent Exp $
+$NetBSD: distinfo,v 1.2 2014/02/21 20:25:27 joerg Exp $
 
 SHA1 (flare-engine/v0.19.tar.gz) = ec33aaf68738d7422fdada5599bb7c001abd5ed3
 RMD160 (flare-engine/v0.19.tar.gz) = 0799e2b0ac9b4a07c6215c2f213efe0c48e1229c
 Size (flare-engine/v0.19.tar.gz) = 544468 bytes
+SHA1 (patch-CMakeLists.txt) = 5c4d0f4b33c7ef4896911d1c2cbf9389033336c7
