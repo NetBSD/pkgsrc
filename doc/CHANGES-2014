@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.808 2014/02/21 12:54:22 obache Exp $
+$NetBSD: CHANGES-2014,v 1.809 2014/02/21 16:18:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1219,3 +1219,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/nodejs to 0.10.26 [fhajny 2014-02-21]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.341 [obache 2014-02-21]
 	Updated textproc/groonga to 4.0.0 [obache 2014-02-21]
+	Updated www/firefox to 27.0.1nb1 [ryoon 2014-02-21]
