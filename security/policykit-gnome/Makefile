@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2013/10/10 14:42:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2014/02/21 11:54:33 richard Exp $
 #
 
 POLICYKIT_GNOME_VER=	0.9.2
 DISTNAME=		PolicyKit-gnome-${POLICYKIT_GNOME_VER}
 PKGNAME=		policykit-gnome-${POLICYKIT_GNOME_VER}
-PKGREVISION=		24
+PKGREVISION=		25
 CATEGORIES=		security
 MASTER_SITES=		http://hal.freedesktop.org/releases/
 EXTRACT_SUFX=		.tar.bz2
@@ -30,6 +30,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 .include "../../security/policykit/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gnome-doc-utils+=	gnome-doc-utils>=0.20.1
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk-doc+=	gtk-doc>=1.20
 .include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
