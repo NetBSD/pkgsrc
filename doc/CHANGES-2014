@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.805 2014/02/21 07:39:03 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.806 2014/02/21 08:50:33 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1217,3 +1217,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/p5-Search-Xapian to 1.2.17.0 [schmonz 2014-02-20]
 	Updated security/netpgp to 20140220 [agc 2014-02-20]
 	Updated lang/nodejs to 0.10.26 [root 2014-02-21]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.341 [obache 2014-02-21]
