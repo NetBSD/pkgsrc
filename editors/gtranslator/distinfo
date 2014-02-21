@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2014/01/21 14:08:14 ryoon Exp $
+$NetBSD: distinfo,v 1.9 2014/02/21 20:24:45 joerg Exp $
 
 SHA1 (gtranslator-2.91.6.tar.xz) = d2071076ad0dbe8b84d0fc7947e7561af14f5d3a
 RMD160 (gtranslator-2.91.6.tar.xz) = 93c7f10a00d77d5d96eee655eab1a800a3a657f8
 Size (gtranslator-2.91.6.tar.xz) = 2235796 bytes
+SHA1 (patch-plugins_codeview_gtr-viewer.c) = 1aea4a053788685003997a35f3cced73b19227fd
