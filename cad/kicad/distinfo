@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2014/02/17 20:38:59 bouyer Exp $
+$NetBSD: distinfo,v 1.2 2014/02/21 20:17:03 joerg Exp $
 
 SHA1 (kicad-stable-20140214.tar.gz) = d424af27803d26f08657e10cd37d7a5c37d01149
 RMD160 (kicad-stable-20140214.tar.gz) = daf0bc83219c7ba15e18d4211bf77b6a48f47b76
@@ -16,6 +16,7 @@ SHA1 (patch-eeschema_sch_sheet_path.cpp) = 2a214a215c8f0c334170d700b3a75a958adca
 SHA1 (patch-eeschema_sheet.cpp) = 45534b24d6f024605482c0327b89cee3c8d3a4a5
 SHA1 (patch-include-kicad_string.h) = 8165630c230a361567472fbce911e383512c944f
 SHA1 (patch-include_common.h) = e8013295bfa0f058752a3fcc654e95e510710104
+SHA1 (patch-include_hashtables.h) = 3f1b993daa48b4757d78ae42ecc969e5158da65e
 SHA1 (patch-pcbnew_CMakeLists.txt) = b7d3d89ab14cab065982ad51a4db006a0626aa4a
 SHA1 (patch-pcbnew_class_edge_mod.cpp) = 6847ab1057c94e3a04e4407dffab1cb08178c7df
 SHA1 (patch-pcbnew_class_module.cpp) = 36c75238f631e1ce4244395c32b44cfd4b0f819f
