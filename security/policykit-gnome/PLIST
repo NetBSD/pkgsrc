@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/11/14 12:51:51 dholland Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/02/21 11:01:05 richard Exp $
 bin/polkit-gnome-authorization
 bin/polkit-gnome-example
 include/PolicyKit/polkit-gnome/polkit-gnome-action.h
@@ -25,6 +25,7 @@ share/gtk-doc/html/polkit-gnome/auth-wheel-group-2.png
 share/gtk-doc/html/polkit-gnome/home.png
 share/gtk-doc/html/polkit-gnome/index.html
 share/gtk-doc/html/polkit-gnome/index.sgml
+share/gtk-doc/html/polkit-gnome/left-insensitive.png
 share/gtk-doc/html/polkit-gnome/left.png
 share/gtk-doc/html/polkit-gnome/license.html
 share/gtk-doc/html/polkit-gnome/polkit-gnome-Authentication-Dialogs.html
@@ -37,8 +38,10 @@ share/gtk-doc/html/polkit-gnome/polkit-gnome-polkit-gnome-toggle-action.html
 share/gtk-doc/html/polkit-gnome/polkit-gnome.devhelp2
 share/gtk-doc/html/polkit-gnome/ref-auth-daemon.html
 share/gtk-doc/html/polkit-gnome/ref-core.html
+share/gtk-doc/html/polkit-gnome/right-insensitive.png
 share/gtk-doc/html/polkit-gnome/right.png
 share/gtk-doc/html/polkit-gnome/style.css
+share/gtk-doc/html/polkit-gnome/up-insensitive.png
 share/gtk-doc/html/polkit-gnome/up.png
 share/locale/ar/LC_MESSAGES/PolicyKit-gnome.mo
 share/locale/ca/LC_MESSAGES/PolicyKit-gnome.mo
