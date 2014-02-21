@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.15 2012/11/16 00:35:28 joerg Exp $
+$NetBSD: distinfo,v 1.16 2014/02/21 20:18:13 joerg Exp $
 
 SHA1 (eggdrop1.6.21.tar.bz2) = 98ce7220c8aff19d2f8406fcc52aa1807aa0de01
 RMD160 (eggdrop1.6.21.tar.bz2) = 1006dfd6a6e735500c2b484eb3061f1d2dfd20f8
 Size (eggdrop1.6.21.tar.bz2) = 999211 bytes
-SHA1 (patch-aa) = 0dfc560d2ef0d92c65c5afa9396da00f80257ee6
+SHA1 (patch-aa) = 555c7e7529643eb0e0fec0388e8767047ec8b984
 SHA1 (patch-ab) = c43cbe9586c6a05114a3ff21eb5fe5b806e8bb05
 SHA1 (patch-ac) = c71d67618a5b53a3de2f3041ed8fa098a89e4471
 SHA1 (patch-ad) = 9904f090a2a942a7442b1950489db0ae68a6e294
