@@ -1,0 +1,14 @@
+$NetBSD: patch-configure,v 1.1 2014/02/22 14:51:03 wiedi Exp $
+
+== portability
+--- configure.orig	2013-07-15 05:53:19.000000000 +0000
++++ configure
+@@ -6400,7 +6400,7 @@ else
+ fi
+ 
+ 
+-if test "x${USE_DEBUG}" == "xyes" ; then
++if test "x${USE_DEBUG}" = "xyes" ; then
+     DEBUG_CXXFLAGS="-g"
+     { $as_echo "$as_me:${as_lineno-$LINENO}: result: compiling in debug mode" >&5
+ $as_echo "compiling in debug mode" >&6; }
