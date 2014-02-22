@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 12:14:01 agc Exp $
+$NetBSD: distinfo,v 1.6 2014/02/22 14:16:06 wiedi Exp $
 
 SHA1 (poink-1.6.tar.gz) = bc0c28f3901a4cff70ffff89bf7e59e48912f482
 RMD160 (poink-1.6.tar.gz) = 7f22bd55a1b640a29ba1c07df5acc7f0a8286297
 Size (poink-1.6.tar.gz) = 10743 bytes
-SHA1 (patch-aa) = 1df3acd27e332af43e2a67a0110248abf0cbd874
+SHA1 (patch-aa) = b1231bf9d2c8236a87e02d1fdfbeb1f737da2569
 SHA1 (patch-ab) = 726aa54dc26a79e3d89734ac322bff088b503927
