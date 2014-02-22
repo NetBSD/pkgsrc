@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13016 2014/02/22 11:15:17 tron Exp $
+$NetBSD: TODO,v 1.13017 2014/02/22 12:36:29 obache Exp $
 
 Suggested new packages
 ======================
@@ -1119,6 +1119,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tomboy-1.10.2
 	o top-3.8beta1
 	o totem-3.4.1
+	o transfig-3.2.5e
 	o transmission-2.82
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
@@ -1194,6 +1195,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xfce4-4.10
 	o xfce4-volman-0.3.80
 	o xfe-1.37
+	o xfig-3.2.5c
 	o xforms-1.0.93sp1
 	o xfs-1.1.1 [wip]
 	o xhippo-3.5
