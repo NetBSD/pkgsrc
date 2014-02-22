@@ -1,8 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2012/08/26 12:37:34 ryoon Exp $
+$NetBSD: MESSAGE,v 1.2 2014/02/22 17:28:34 ryoon Exp $
 
-After apache-2.4.3, --enable-mpms-shared='event prefork worker' is
-passed to configure script, then three multi-process model is built
+After apache-2.4.3, --enable-mpms-shared='${MPMS}' is
+passed to configure script, then these multi-process model is built
 and you can select the model in configuraton file.
 
 The mod_cgi.so module conflicts with non-prefork multi-process model,
