@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.811 2014/02/22 00:35:53 jperkin Exp $
+$NetBSD: CHANGES-2014,v 1.812 2014/02/22 01:23:16 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1222,3 +1222,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/firefox to 27.0.1nb1 [ryoon 2014-02-21]
 	Updated pkgtools/x11-links to 0.83 [jperkin 2014-02-21]
 	Updated pkgtools/pbulk to 0.52 [jperkin 2014-02-22]
+	Updated sysutils/xenkernel42 to 4.2.4 [prlw1 2014-02-22]
