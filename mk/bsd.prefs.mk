@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.341 2014/02/20 21:27:43 jperkin Exp $
+# $NetBSD: bsd.prefs.mk,v 1.342 2014/02/22 09:40:52 ryoon Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -293,7 +293,7 @@ LOWER_OPSYS_VERSUFFIX=	2.${OS_VERSION:C/5.//}
 _UNAME_V!=		${UNAME} -v
 .  if !empty(_UNAME_V:Mjoyent_*)
 OS_VARIANT=		SmartOS
-.  else if !empty(_UNAME_V:Momnios-*)
+.  elif !empty(_UNAME_V:Momnios-*)
 OS_VARIANT=		OmniOS
 .  endif
 
