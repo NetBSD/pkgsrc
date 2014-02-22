@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.810 2014/02/21 17:45:22 jperkin Exp $
+$NetBSD: CHANGES-2014,v 1.811 2014/02/22 00:35:53 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1221,3 +1221,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/groonga to 4.0.0 [obache 2014-02-21]
 	Updated www/firefox to 27.0.1nb1 [ryoon 2014-02-21]
 	Updated pkgtools/x11-links to 0.83 [jperkin 2014-02-21]
+	Updated pkgtools/pbulk to 0.52 [jperkin 2014-02-22]
