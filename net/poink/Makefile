@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/23 17:18:59 asau Exp $
+# $NetBSD: Makefile,v 1.15 2014/02/22 14:16:06 wiedi Exp $
 #
 
 DISTNAME=	poink-1.6
@@ -11,6 +11,8 @@ COMMENT=	Nosuid, absolutely secure version of ping utility
 NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL.
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/poink ${DESTDIR}${PREFIX}/bin
