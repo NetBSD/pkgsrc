@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2014/01/11 14:42:03 adam Exp $
+# $NetBSD: Makefile,v 1.22 2014/02/22 03:26:53 mef Exp $
 #
 DISTNAME=		simulavr-1.0.0
 PKGREVISION=		1
@@ -89,6 +89,6 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 .include "../../mk/curses.buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../lang/${PYPACKAGE}/buildlink3.mk"
-.include "../../lang/tcl-itcl/buildlink3.mk"
+#include "../../lang/tcl-itcl/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
