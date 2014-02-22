@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.36 2013/11/23 12:10:13 obache Exp $
+# $NetBSD: builtin.mk,v 1.37 2014/02/22 09:45:36 obache Exp $
 
 BUILTIN_PKG:=	openssl
 
@@ -126,6 +126,11 @@ USE_BUILTIN.openssl=	${IS_BUILTIN.openssl}
 .    if defined(BUILTIN_PKG.openssl) && \
         !empty(IS_BUILTIN.openssl:M[yY][eE][sS])
 USE_BUILTIN.openssl=	yes
+### take care builtin check case, BUILDLINK_API_DEPENDS may not be defined yet.
+CHECK_BUILTIN.openssl?=	no
+.      if !empty(CHECK_BUILTIN.openssl:M[yY][eE][sS])
+BUILDLINK_API_DEPENDS.openssl?=	openssl>=1.0.1c
+.      endif
 .      for dep_ in ${BUILDLINK_API_DEPENDS.openssl}
 .        if !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
 USE_BUILTIN.openssl!=							\
