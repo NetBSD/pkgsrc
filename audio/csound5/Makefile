@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2014/02/13 12:25:18 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2014/02/22 00:59:26 mrg Exp $
 
 DISTNAME=		Csound${CSOUND_VERSION}
 PKGNAME=		csound5-${CSOUND_VERSION}
@@ -28,6 +28,8 @@ EXTRACT_USING=		gtar
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 5.01
 
 INSTALLATION_DIRS=	bin
+
+CHECK_PORTABILITY_SKIP+=	installer/misc/makedeb.sh
 
 .include "../../mk/bsd.prefs.mk"
 
