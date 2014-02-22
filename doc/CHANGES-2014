@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.822 2014/02/22 09:35:20 wen Exp $
+$NetBSD: CHANGES-2014,v 1.823 2014/02/22 09:44:33 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1233,3 +1233,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/p5-PDF-API2 to 2.021 [wen 2014-02-22]
 	Removed lang/tcl-itcl [obache 2014-02-22]
 	Updated textproc/p5-Text-Xslate to 3.1.2 [wen 2014-02-22]
+	Updated www/p5-Mojolicious to 4.83 [wen 2014-02-22]
