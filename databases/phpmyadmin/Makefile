@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2013/12/06 18:34:54 tron Exp $
+# $NetBSD: Makefile,v 1.123 2014/02/22 11:14:57 tron Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}-all-languages
 PKGNAME=	phpmyadmin-${DIST_VERSION:S/-//}
@@ -11,16 +11,16 @@ HOMEPAGE=	http://www.phpmyadmin.net/
 COMMENT=	Set of PHP-scripts to adminstrate MySQL over the WWW
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PHP_PKG_PREFIX}-bz2>=5.2.0:../../archivers/php-bz2
-DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.2.0:../../archivers/php-zip
-DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.2.0:../../archivers/php-zlib
-DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.2.0:../../converters/php-mbstring
-DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=5.2.0:../../devel/php-gettext
-DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=5.2.0:../../databases/php-mysql
-DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=5.2.0:../../databases/php-mysqli
-DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.2.0:../../graphics/php-gd
-DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=5.2.0:../../security/php-mcrypt
-DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.2.0:../../textproc/php-json
+DEPENDS+=	${PHP_PKG_PREFIX}-bz2>=5.3.0:../../archivers/php-bz2
+DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.3.0:../../archivers/php-zip
+DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.3.0:../../archivers/php-zlib
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.3.0:../../converters/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=5.3.0:../../devel/php-gettext
+DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=5.3.0:../../databases/php-mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=5.3.0:../../databases/php-mysqli
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.3.0:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=5.3.0:../../security/php-mcrypt
+DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.3.0:../../textproc/php-json
 
 FILES_SUBST+=	APACHE_GROUP=${APACHE_GROUP} APACHE_USER=${APACHE_USER}
 FILES_SUBST+=	PMSETUPDIR=${PMSETUPDIR} PMSETUPFILE=${PMSETUPFILE}
@@ -29,7 +29,7 @@ MESSAGE_SUBST+=	CONF_INC_PHP=${CONF_INC_PHP} PMCONFFILE=${PMCONFFILE:Q} \
 		EXDIR=${EXDIR:Q}
 
 CONF_INC_PHP=	${PREFIX}/share/phpmyadmin/config.inc.php
-DIST_VERSION=	4.0.10
+DIST_VERSION=	4.1.7
 DOC_FILES=	ChangeLog LICENSE README RELEASE-DATE-${DIST_VERSION}
 
 APACHE_USER?=	www
@@ -58,20 +58,26 @@ INSTALLATION_DIRS+=	${PREFIX}/share/doc/phpmyadmin \
 INSTALL_DIRS=	doc/html
 INSTALL_DIRS+=	js
 INSTALL_DIRS+=	js/canvg
+INSTALL_DIRS+=	js/jqplot
+INSTALL_DIRS+=	js/jqplot/plugins
 INSTALL_DIRS+=	js/codemirror
+INSTALL_DIRS+=	js/codemirror/addon
+INSTALL_DIRS+=	js/codemirror/addon/runmode
 INSTALL_DIRS+=	js/codemirror/lib
 INSTALL_DIRS+=	js/codemirror/mode
-INSTALL_DIRS+=	js/codemirror/mode/mysql
-INSTALL_DIRS+=	js/highcharts
+INSTALL_DIRS+=	js/codemirror/mode/sql
 INSTALL_DIRS+=	js/jquery
+INSTALL_DIRS+=	js/jquery/src
+INSTALL_DIRS+=	js/jquery/src/jquery-ui
+INSTALL_DIRS+=	js/jquery/src/jquery
+INSTALL_DIRS+=	js/jquery/src/jquery/ajax
 INSTALL_DIRS+=	js/openlayers
 INSTALL_DIRS+=	js/openlayers/img
 INSTALL_DIRS+=	js/openlayers/theme
 INSTALL_DIRS+=	js/openlayers/theme/default
 INSTALL_DIRS+=	js/openlayers/theme/default/img
 INSTALL_DIRS+=	js/pmd
-INSTALL_DIRS+=	js/query
-INSTALL_DIRS+=	js/rte
+INSTALL_DIRS+=	js/tracekit
 INSTALL_DIRS+=	libraries
 INSTALL_DIRS+=	libraries/PHPExcel
 INSTALL_DIRS+=	libraries/PHPExcel/PHPExcel
@@ -139,6 +145,7 @@ INSTALL_DIRS+=	libraries/tcpdf/config/lang
 INSTALL_DIRS+=	libraries/tcpdf/fonts
 INSTALL_DIRS+=	libraries/tcpdf/fonts/dejavu-fonts-ttf-2.32
 INSTALL_DIRS+=	libraries/tcpdf/fonts/dejavu-fonts-ttf-2.33
+INSTALL_DIRS+=	libraries/tcpdf/include
 INSTALL_DIRS+=	libraries/transformations
 INSTALL_DIRS+=	locale
 INSTALL_DIRS+=	locale/ar
