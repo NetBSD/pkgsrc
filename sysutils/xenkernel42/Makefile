@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2014/01/25 10:30:22 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2014/02/22 01:22:49 prlw1 Exp $
 
-VERSION=	4.2.3
+VERSION=	4.2.4
 DISTNAME=	xen-${VERSION}
 PKGNAME=	xenkernel42-${VERSION}
 CATEGORIES=	sysutils
