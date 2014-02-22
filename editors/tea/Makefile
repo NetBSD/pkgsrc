@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2014/02/12 23:17:52 tron Exp $
+# $NetBSD: Makefile,v 1.35 2014/02/22 19:12:20 wiedi Exp $
 #
 
 DISTNAME=		tea-16.0.5
@@ -16,6 +16,7 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config msgfmt
 LDFLAGS.DragonFly=	-lX11 -lm
+LDFLAGS.SunOS=		-lX11 -lm
 
 .include "options.mk"
 
