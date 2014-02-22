@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.817 2014/02/22 08:36:15 wen Exp $
+$NetBSD: CHANGES-2014,v 1.818 2014/02/22 08:40:32 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1228,3 +1228,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/ruby193-base to 1.9.3p484nb3 [taca 2014-02-22]
 	Updated sysutils/tkdesk to 2.0p2 [obache 2014-02-22]
 	Updated net/p5-SOAP-Lite to 1.11 [wen 2014-02-22]
+	Updated devel/p5-Module-CoreList to 3.07 [wen 2014-02-22]
