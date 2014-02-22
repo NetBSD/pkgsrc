@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.825 2014/02/22 14:29:45 wiedi Exp $
+$NetBSD: CHANGES-2014,v 1.826 2014/02/22 14:42:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1236,3 +1236,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Mojolicious to 4.83 [wen 2014-02-22]
 	Updated databases/phpmyadmin to 4.1.7 [tron 2014-02-22]
 	Updated www/goaccess to 0.7.1 [wiedi 2014-02-22]
+	Updated misc/tmux to 1.9 [wiz 2014-02-22]
