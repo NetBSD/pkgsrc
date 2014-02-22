@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2013/11/04 16:40:09 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2014/02/22 17:40:38 wiedi Exp $
 #
 
 DISTNAME=	ap-utils-1.3.2
@@ -17,6 +17,8 @@ USE_PKGLOCALEDIR=	YES
 
 INCOMPAT_CURSES=	NetBSD-1.5*-* NetBSD-1.6[-_.]*-*
 INCOMPAT_CURSES+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-C]*-*
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
