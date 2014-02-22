@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2012/10/23 18:16:56 asau Exp $
+# $NetBSD: Makefile,v 1.42 2014/02/22 18:15:33 wiedi Exp $
 #
 
 DISTNAME=		rsaref
@@ -25,6 +25,8 @@ USE_FEATURES+=		cdefs
 USE_LIBTOOL=		yes
 MAKE_FILE=		unix/makefile
 BUILD_TARGET=		librsaref.la
+
+CFLAGS.SunOS+=		-Du_int16_t=uint16_t -Du_int32_t=uint32_t
 
 INSTALLATION_DIRS=	lib include/rsaref share/doc/rsaref
 
