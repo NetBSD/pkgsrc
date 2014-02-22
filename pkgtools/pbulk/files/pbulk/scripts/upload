@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: upload,v 1.3 2008/09/16 18:21:30 joerg Exp $
+# $NetBSD: upload,v 1.4 2014/02/22 00:35:41 jperkin Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -50,4 +50,4 @@ cd ${packages}
 	echo "+ All/pkg_summary.gz"
 	${packages_script} ${loc}
 	echo "- *"
-} | sort | ${rsync} --exclude-from=- ${pkg_rsync_args} . ${pkg_rsync_target}
+} | LC_ALL=C sort | ${rsync} --exclude-from=- ${pkg_rsync_args} . ${pkg_rsync_target}
