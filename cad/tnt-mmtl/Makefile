@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2014/02/22 09:19:24 obache Exp $
+# $NetBSD: Makefile,v 1.26 2014/02/22 09:20:30 obache Exp $
 #
 
 DISTNAME=	tnt-1.2.2
@@ -39,7 +39,6 @@ post-patch:
 	cd ${WRKSRC}/bem && autoconf
 
 .include "../../lang/tcl/buildlink3.mk"
-.include "../../lang/tcl-itcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../x11/tk-BWidget/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
