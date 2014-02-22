@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.2 2005/10/26 04:29:01 minskim Exp $
+$NetBSD: patch-ab,v 1.3 2014/02/22 07:53:47 obache Exp $
 
---- Makefile.in.orig	2004-04-14 17:31:17.000000000 -0500
+--- Makefile.in.orig	2004-04-14 22:31:17.000000000 +0000
 +++ Makefile.in
 @@ -28,7 +28,7 @@ exec_prefix =	@exec_prefix@
  INSTALL_ROOT =
@@ -11,6 +11,15 @@ $NetBSD: patch-ab,v 1.2 2005/10/26 04:29:01 minskim Exp $
  
  # Path name to use when installing library scripts:
  SCRIPT_INSTALL_DIR =	$(INSTALL_ROOT)$(TKDESK_LIBRARY)
+@@ -50,7 +50,7 @@ MAN1_INSTALL_DIR =	$(MAN_INSTALL_DIR)/ma
+ 
+ # To change the compiler switches, for example to change from -O
+ # to -g, change the following line:
+-CC_OPTS = -O -DUSE_OLD_IMAGE -DUSE_NON_CONST
++CC_OPTS = @CFLAGS@ -DUSE_OLD_IMAGE -DUSE_NON_CONST
+ 
+ # To change the linker switches, for example to add -s,
+ # change the following line:
 @@ -173,28 +173,29 @@ tkdesk_script:
  rm_tkdesk_script:
  	@rm -f tkdesk
@@ -34,7 +43,7 @@ $NetBSD: patch-ab,v 1.2 2005/10/26 04:29:01 minskim Exp $
 -	@cd ./tcldesk; tar cf - * | (cd $(SCRIPT_INSTALL_DIR); tar xvf -)
 -	@cd ..
 +	$(BSD_INSTALL_DATA_DIR) $(SCRIPT_INSTALL_DIR)
-+	@cd ./tcldesk; ${PAX} -rwpm * ${SCRIPT_INSTALL_DIR}; cd ..
++	@cd ./tcldesk; pax -rwpm * ${SCRIPT_INSTALL_DIR}; cd ..
  	@cp ChangeLog $(SCRIPT_INSTALL_DIR)/doc/ChangeLog
  	@echo "=== Setting permissions..."
  	find $(SCRIPT_INSTALL_DIR) -type f -exec chmod a+r {} \;
