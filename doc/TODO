@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13015 2014/02/21 21:42:21 rodent Exp $
+$NetBSD: TODO,v 1.13016 2014/02/22 11:15:17 tron Exp $
 
 Suggested new packages
 ======================
@@ -894,7 +894,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o php-sugarcrm-6.5.16
 	o php-tiki6-6.10
 	o php-tt-rss-1.11
-	o phpmyadmin-4.1.7
 	o picp-0.6.8
 	o pim6dd-20040819a
 	o pim6sd-20040824a
