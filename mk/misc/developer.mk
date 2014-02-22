@@ -1,4 +1,4 @@
-# $NetBSD: developer.mk,v 1.21 2014/02/20 10:12:22 obache Exp $
+# $NetBSD: developer.mk,v 1.22 2014/02/22 13:11:22 obache Exp $
 #
 # Public targets for developers:
 #
@@ -165,8 +165,9 @@ do-upload-distfiles: checksum
 	${RUN}								\
 	disthost='ftp.NetBSD.org';					\
 	distdir='~ftp/pub/pkgsrc/distfiles';				\
+	ssh_cmd="ssh -l ${NETBSD_LOGIN_NAME} $${disthost}";		\
 	${STEP_MSG} "Checking uploaded files";				\
-	uploaded_files=`${ECHO} "(cd $${distdir} && /bin/ls -1d ${_ALLFILES}) 2>/dev/null || ${TRUE}" | ssh $${disthost} /bin/sh`;	\
+	uploaded_files=`${ECHO} "(cd $${distdir} && /bin/ls -1d ${_ALLFILES}) 2>/dev/null || ${TRUE}" | $${ssh_cmd} /bin/sh`;	\
 	pending_files="";						\
 	for file in ${_ALLFILES}; do					\
 		found=0;						\
@@ -183,7 +184,7 @@ do-upload-distfiles: checksum
 	if ${TEST} -n "$${pending_files}"; then				\
 		${STEP_MSG} "Uploading distfiles";			\
 		cd ${DISTDIR} && ${TAR:U${TOOLS_PLATFORM.tar:Utar}} cf - $${pending_files} | 	\
-			ssh "$${disthost}" /bin/tar xpf - -C "$${distdir}";\
+			$${ssh_cmd} /bin/tar xpf - -C "$${distdir}";	\
 	fi
 .endif
 
