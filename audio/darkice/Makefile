@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.21 2012/09/11 23:59:30 asau Exp $
+# $NetBSD: Makefile,v 1.22 2014/02/22 14:51:03 wiedi Exp $
 #
 
-DISTNAME=	darkice-0.17.1
-PKGREVISION=	1
+DISTNAME=	darkice-1.2
 CATEGORIES=	audio
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=darkice/}
+MASTER_SITES=	https://darkice.googlecode.com/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://darkice.tyrell.hu/
 COMMENT=	IceCast, IceCast2 and ShoutCast live audio streamer
+LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
@@ -38,8 +38,6 @@ do-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/man/darkice.cfg.5 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/darkice.conf.5
-	cd ${WRKSRC}/doc/doxygen/html && ${INSTALL_DATA} *.html \
-		${DESTDIR}${HTMLDIR}
 
 .include "../../audio/faac/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
