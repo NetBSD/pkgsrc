@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.819 2014/02/22 08:47:36 wen Exp $
+$NetBSD: CHANGES-2014,v 1.820 2014/02/22 08:58:06 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1230,3 +1230,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/p5-SOAP-Lite to 1.11 [wen 2014-02-22]
 	Updated devel/p5-Module-CoreList to 3.07 [wen 2014-02-22]
 	Updated www/p5-HTTP-Tiny to 0.043 [wen 2014-02-22]
+	Updated textproc/p5-PDF-API2 to 2.021 [wen 2014-02-22]
