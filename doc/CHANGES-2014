@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.813 2014/02/22 01:28:46 prlw1 Exp $
+$NetBSD: CHANGES-2014,v 1.814 2014/02/22 02:53:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1224,3 +1224,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated pkgtools/pbulk to 0.52 [jperkin 2014-02-22]
 	Updated sysutils/xenkernel42 to 4.2.4 [prlw1 2014-02-22]
 	Updated sysutils/xentools42 to 4.2.4 [prlw1 2014-02-22]
+	Updated filesystems/openafs to 1.6.6 [gendalia 2014-02-22]
