@@ -1,8 +1,9 @@
-# $NetBSD: options.mk,v 1.8 2013/06/04 22:08:20 fhajny Exp $
+# $NetBSD: options.mk,v 1.9 2014/02/22 17:28:34 ryoon Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.apache
 PKG_SUPPORTED_OPTIONS=		lua suexec apache-mpm-event apache-mpm-prefork apache-mpm-worker
-PKG_SUGGESTED_OPTIONS=		apache-mpm-prefork
+PKG_SUGGESTED_OPTIONS=		apache-mpm-event apache-mpm-prefork \
+				apache-mpm-worker
 
 .if ${OPSYS} == "SunOS" && !empty(OS_VERSION:M5.1[0-9])
 PKG_SUPPORTED_OPTIONS+=		privileges
@@ -24,22 +25,23 @@ PKG_SUPPORTED_OPTIONS+=		privileges
 #
 PLIST_VARS+=		worker prefork event
 
-CONFIGURE_ARGS+=	--enable-mpms-shared='event prefork worker'
-
 .if !empty(PKG_OPTIONS:Mapache-mpm-event)
-CONFIGURE_ARGS+=	--with-mpm=event
+MPMS+=			event
 PLIST.event=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mapache-mpm-worker)
-CONFIGURE_ARGS+=	--with-mpm=worker
+MPMS+=			worker
 PLIST.worker=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mapache-mpm-prefork)
-CONFIGURE_ARGS+=	--with-mpm=prefork
+MPMS+=			prefork
 PLIST.prefork=		yes
 .endif
+
+CONFIGURE_ARGS+=	--enable-mpms-shared='${MPMS}'
+MESSAGE_SUBST+=		MPMS=${MPMS:Q}
 
 BUILD_DEFS+=		APACHE_MODULES
 
