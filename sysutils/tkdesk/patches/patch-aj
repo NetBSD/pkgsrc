@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.3 2006/04/21 12:09:57 joerg Exp $
+$NetBSD: patch-aj,v 1.4 2014/02/22 07:53:47 obache Exp $
 
---- libdesk/tixImgXpm.c.orig	2004-04-13 21:32:20.000000000 -0500
+--- libdesk/tixImgXpm.c.orig	2014-02-22 04:59:11.000000000 +0000
 +++ libdesk/tixImgXpm.c
-@@ -63,8 +63,6 @@
+@@ -58,8 +58,6 @@
  #include "tkPort.h"*/
  /*#include <tix.h>*/
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aj,v 1.3 2006/04/21 12:09:57 joerg Exp $
  /* constants used only in this file */
  
  #define XPM_MONO		1
-@@ -156,7 +154,7 @@ typedef struct PixmapInstance {
+@@ -151,7 +149,7 @@ typedef struct PixmapInstance {
   */
  
  static int		ImgXpmCreate _ANSI_ARGS_((Tcl_Interp *interp,
@@ -20,16 +20,7 @@ $NetBSD: patch-aj,v 1.3 2006/04/21 12:09:57 joerg Exp $
  			    Tk_ImageType *typePtr, Tk_ImageMaster master,
  			    ClientData *clientDataPtr));
  static ClientData	ImgXpmGet _ANSI_ARGS_((Tk_Window tkwin,
-@@ -177,7 +175,7 @@ Tk_ImageType tixPixmapImageType = {
-     ImgXpmFree,			/* freeProc */
-     ImgXpmDelete,		/* deleteProc */
-     (Tk_ImagePostscriptProc *) NULL, /* postscriptProc ?? */
--    (struct Tk_ImageType *) NULL /* nextPtr */
-+    /* (struct Tk_ImageType *) NULL *//* nextPtr */
- };
- 
- /*
-@@ -242,12 +240,12 @@ static int xpmTableInited = 0;
+@@ -239,12 +237,12 @@ static int xpmTableInited = 0;
   *----------------------------------------------------------------------
   */
  static int
@@ -45,7 +36,7 @@ $NetBSD: patch-aj,v 1.3 2006/04/21 12:09:57 joerg Exp $
  				 * include image name or type). */
      Tk_ImageType *typePtr;	/* Pointer to our type record (not used). */
      Tk_ImageMaster master;	/* Token for image, to be used by us in
-@@ -257,6 +255,13 @@ ImgXpmCreate(interp, name, argc, argv, t
+@@ -254,6 +252,13 @@ ImgXpmCreate(interp, name, argc, argv, t
  {
      PixmapMaster *masterPtr;
  
@@ -59,7 +50,7 @@ $NetBSD: patch-aj,v 1.3 2006/04/21 12:09:57 joerg Exp $
      masterPtr = (PixmapMaster *) ckalloc(sizeof(PixmapMaster));
      masterPtr->tkMaster = master;
      masterPtr->interp = interp;
-@@ -270,10 +275,11 @@ ImgXpmCreate(interp, name, argc, argv, t
+@@ -267,10 +272,11 @@ ImgXpmCreate(interp, name, argc, argv, t
      masterPtr->isDataAlloced = 0;
      masterPtr->instancePtr = NULL;
  
