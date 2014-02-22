@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.14 2013/11/23 12:10:13 obache Exp $
+# $NetBSD: builtin.mk,v 1.15 2014/02/22 09:50:47 obache Exp $
 
 BUILTIN_PKG:=	heimdal
 
@@ -72,9 +72,17 @@ MAKEVARS+=	BUILTIN_PKG.heimdal
 USE_BUILTIN.heimdal=	no
 .  else
 USE_BUILTIN.heimdal=	${IS_BUILTIN.heimdal}
+.    if !empty(USE_BUILTIN.heimdal:M[yY][eE][sS])
+CHECK_BUILTIN.openssl:=	yes
+.      include "../../security/openssl/builtin.mk"
+CHECK_BUILTIN.openssl:=	no
+.      if !empty(USE_BUILTIN.openssl:M[Nn][Oo])
+USE_BUILTIN.heimdal=	no
+.      endif
+.    endif
 .    if defined(BUILTIN_PKG.heimdal) && \
         !empty(IS_BUILTIN.heimdal:M[yY][eE][sS])
-USE_BUILTIN.heimdal=	yes
+USE_BUILTIN.heimdal?=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.heimdal}
 .        if !empty(USE_BUILTIN.heimdal:M[yY][eE][sS])
 USE_BUILTIN.heimdal!=							\
