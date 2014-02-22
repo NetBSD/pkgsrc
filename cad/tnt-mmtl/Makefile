@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2014/01/11 14:42:01 adam Exp $
+# $NetBSD: Makefile,v 1.25 2014/02/22 09:19:24 obache Exp $
 #
 
 DISTNAME=	tnt-1.2.2
@@ -35,7 +35,7 @@ CONFIGURE_ENV+=	CPP=${CPP}
 post-patch:
 	${MV} ${WRKSRC}/tnt ${WRKSRC}/tnt-mmtl
 	cd ${WRKSRC}/bem && aclocal
-	cd ${WRKSRC}/bem && automake
+	cd ${WRKSRC}/bem && automake --add-missing --copy --force-missing
 	cd ${WRKSRC}/bem && autoconf
 
 .include "../../lang/tcl/buildlink3.mk"
