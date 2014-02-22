@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/23 17:18:40 asau Exp $
+# $NetBSD: Makefile,v 1.25 2014/02/22 14:08:58 wiedi Exp $
 
 DISTNAME=	nap-1.4.4
 PKGREVISION=	2
@@ -16,6 +16,8 @@ INCOMPAT_CURSES=	NetBSD-1.4*-*
 INCOMPAT_CURSES+=	NetBSD-1.5-* NetBSD-1.5.*-* NetBSD-1.5[A-Z]-*
 
 INSTALLATION_DIRS+=	share/doc/nap share/examples/nap
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/nap
