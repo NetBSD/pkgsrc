@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2013/12/01 10:02:34 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.13 2014/02/22 17:28:34 ryoon Exp $
 bin/ab
 bin/apxs
 bin/dbmmanage
@@ -133,9 +133,9 @@ ${PLIST.lua}lib/httpd/mod_lua.so
 lib/httpd/mod_macro.so
 lib/httpd/mod_mime.so
 lib/httpd/mod_mime_magic.so
-lib/httpd/mod_mpm_event.so
-lib/httpd/mod_mpm_prefork.so
-lib/httpd/mod_mpm_worker.so
+${PLIST.event}lib/httpd/mod_mpm_event.so
+${PLIST.prefork}lib/httpd/mod_mpm_prefork.so
+${PLIST.worker}lib/httpd/mod_mpm_worker.so
 lib/httpd/mod_negotiation.so
 ${PLIST.privileges}lib/httpd/mod_privileges.so
 lib/httpd/mod_proxy.so
