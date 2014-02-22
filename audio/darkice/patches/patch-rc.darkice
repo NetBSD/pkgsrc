@@ -1,0 +1,32 @@
+$NetBSD: patch-rc.darkice,v 1.1 2014/02/22 14:51:03 wiedi Exp $
+
+== portability
+--- rc.darkice.orig	2013-07-15 05:50:01.000000000 +0000
++++ rc.darkice
+@@ -40,7 +40,7 @@ case $1 in
+ 	if [ -f $pidfile ]; then
+                 PID=`cat $pidfile`
+                 running=`ps --no-headers -o "%c" -p $PID`
+-                if ( [ "$progname" == "$running" ] ); then
++                if ( [ "$progname" = "$running" ] ); then
+ 			echo "$progname is still running"
+ 		else
+ 			echo "$progname seems crashed - PID ($PID) does not match the deamon"
+@@ -85,7 +85,7 @@ case $1 in
+ 	if [ -f $pidfile ]; then
+ 		PID=`cat $pidfile` 		
+ 		running=`ps --no-headers -o "%c" -p $PID`
+-		if ( [ "$progname" == "$running" ] ); then
++		if ( [ "$progname" = "$running" ] ); then
+ 			echo "$progname IS running with PID `cat $pidfile`."
+ 		else
+ 			echo "$progname process is dead or stale PID File $pidfile"
+@@ -106,7 +106,7 @@ case $1 in
+ 	if [ -f $pidfile ]; then
+                 PID=`cat $pidfile`
+                 running=`ps --no-headers -o "%c" -p $PID`
+-                if ( [ "$progname" == "$running" ] ); then
++                if ( [ "$progname" = "$running" ] ); then
+                         echo "$progname IS running with PID `cat $pidfile` - no restart."
+                 else
+ 			echo "$progname PID $PID seems dead - restart"

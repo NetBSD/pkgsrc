@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2014/02/22 14:51:03 wiedi Exp $
+
+Don't build with -pedantic; it causes g++ to reject "long long" so
+32-bit builds fail.
+--- src/Makefile.in.orig	2013-07-15 05:53:19.000000000 +0000
++++ src/Makefile.in
+@@ -253,7 +253,7 @@ target_alias = @target_alias@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-AM_CXXFLAGS = -O2 -pedantic -Wall @DEBUG_CXXFLAGS@ @PTHREAD_CFLAGS@
++AM_CXXFLAGS = -O2 -Wall @DEBUG_CXXFLAGS@ @PTHREAD_CFLAGS@
+ INCLUDES = @LAME_INCFLAGS@ @VORBIS_INCFLAGS@ @OPUS_INCFLAGS@ @FAAC_INCFLAGS@ @AACPLUS_INCFLAGS@ @TWOLAME_INCFLAGS@ \
+ 		@ALSA_INCFLAGS@ @PULSEAUDIO_INCFLAGS@ @JACK_INCFLAGS@ @SRC_INCFLAGS@
+ 
