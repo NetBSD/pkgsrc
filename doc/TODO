@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13017 2014/02/22 12:36:29 obache Exp $
+$NetBSD: TODO,v 1.13018 2014/02/22 14:43:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -420,7 +420,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bzr-2.6.0
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
-	o calibre-1.24
+	o calibre-1.25
 	o calligra-2.4.3 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o ccrtp-2.0.7
@@ -494,7 +494,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o eboard-1.1.1
 	o echinus-0.4.9
 	o eclipse-3.2.0
-	o ed-1.9
+	o ed-1.10
 	o ede-2.0
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o efax-gtk-3.2.12
@@ -1024,7 +1024,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sablecc-3.7
 	o samba-4.0.15
 	o samba-4.1.0 [wip]
-	o samba-4.1.4
+	o samba-4.1.5
 	o sane-1.0.24
 	o sarg-2.2.5
 	o scew-0.4.0
@@ -1162,7 +1162,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o websvn-2.3.2
 	o weechat-0.4.3
 	o windowlab-1.40
-	o wine-devel-1.7.12
+	o wine-devel-1.7.13
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wml-2.0.11
