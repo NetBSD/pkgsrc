@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2013/09/17 11:35:47 obache Exp $
+$NetBSD: distinfo,v 1.6 2014/02/22 14:14:01 wiedi Exp $
 
 SHA1 (mysqlcc-1.0.2-src.tar.gz) = 8f4846c3d64078eae433784b4d69dd355e45ade9
 RMD160 (mysqlcc-1.0.2-src.tar.gz) = ebfcdabd1791b021df8b88c3874e5a8d413bf1b5
 Size (mysqlcc-1.0.2-src.tar.gz) = 6673848 bytes
 SHA1 (patch-ae) = 1ca050f7bbd65ef5911a32283fd832741942f623
 SHA1 (patch-af) = 2aa7b24355df675e1f116cad23ed1830551696fd
+SHA1 (patch-src_CSqlTable.cpp) = 560000201257a89d85f0601a0aeb1ed1756c95f8
