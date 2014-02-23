@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.851 2014/02/23 15:33:31 adam Exp $
+$NetBSD: CHANGES-2014,v 1.852 2014/02/23 15:36:56 sno Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1343,3 +1343,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/p5-Unix-Statgrab to 0.103 [sno 2014-02-23]
 	Updated math/mpcomplex to 1.0.2 [adam 2014-02-23]
 	Updated textproc/grep to 2.18 [adam 2014-02-23]
+	Added devel/p5-CPAN-Changes version 0.27 [sno 2014-02-23]
