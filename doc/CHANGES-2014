@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.828 2014/02/22 23:32:39 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.829 2014/02/23 00:35:39 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1239,3 +1239,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/tmux to 1.9 [wiz 2014-02-22]
 	Updated audio/darkice to 1.2 [wiedi 2014-02-22]
 	Updated misc/tmux to 1.9a [wiz 2014-02-22]
+	Updated graphics/libcaca to 0.99.18 [schmonz 2014-02-23]
