@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/08/20 11:52:58 seb Exp $
+$NetBSD: distinfo,v 1.2 2014/02/23 13:02:50 wen Exp $
 
-SHA1 (HTML-TokeParser-Simple-3.15.tar.gz) = f31f74997e6ba5905e9414236ccb716fe989f98b
-RMD160 (HTML-TokeParser-Simple-3.15.tar.gz) = 55c2c72281afed2b700d48ccfd94cd8791fb3901
-Size (HTML-TokeParser-Simple-3.15.tar.gz) = 16302 bytes
+SHA1 (HTML-TokeParser-Simple-3.16.tar.gz) = e1f4b70dd7dbd28c599b12b667acc7ddf2bf8613
+RMD160 (HTML-TokeParser-Simple-3.16.tar.gz) = a092fd49c6023fbacfb37824f7056a4978890b26
+Size (HTML-TokeParser-Simple-3.16.tar.gz) = 19952 bytes
