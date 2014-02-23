@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/04/21 12:23:20 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2014/02/23 10:08:12 wen Exp $
 
-SHA1 (HTML-Mason-PSGIHandler-0.52.tar.gz) = 6cec3a48d095022db824235ebbcfc46e9765233c
-RMD160 (HTML-Mason-PSGIHandler-0.52.tar.gz) = 1da64959e0695c576a8b4caa8b11f5edba1abee9
-Size (HTML-Mason-PSGIHandler-0.52.tar.gz) = 13167 bytes
+SHA1 (HTML-Mason-PSGIHandler-0.53.tar.gz) = abb51ce66ca93db63542cb52fc8be0753dbcecd9
+RMD160 (HTML-Mason-PSGIHandler-0.53.tar.gz) = 5fe07dd0cdaf1f0e35f17273219204d62c2d317b
+Size (HTML-Mason-PSGIHandler-0.53.tar.gz) = 14157 bytes

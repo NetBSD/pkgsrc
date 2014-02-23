@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2013/12/09 14:17:55 obache Exp $
+# $NetBSD: Makefile,v 1.4 2014/02/23 10:08:12 wen Exp $
 #
 
-DISTNAME=	HTML-Mason-PSGIHandler-0.52
+DISTNAME=	HTML-Mason-PSGIHandler-0.53
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTML/}
 
