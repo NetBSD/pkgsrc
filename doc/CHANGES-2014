@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.845 2014/02/23 13:20:41 wen Exp $
+$NetBSD: CHANGES-2014,v 1.846 2014/02/23 14:34:33 sno Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1336,3 +1336,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-HTML-TokeParser-Simple to 3.16 [wen 2014-02-23]
 	Updated www/p5-HTTP-Async to 0.23 [wen 2014-02-23]
 	Updated www/p5-HTTP-Cache-Transparent to 1.1 [wen 2014-02-23]
+	Added devel/p5-Future version 0.25 [sno 2014-02-23]
