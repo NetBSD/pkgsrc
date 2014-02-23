@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/03 12:55:12 asau Exp $
+# $NetBSD: Makefile,v 1.20 2014/02/23 17:30:01 wiedi Exp $
 #
 
 DISTNAME=		gcube-0.4-src
@@ -18,6 +18,7 @@ USE_TOOLS+=		gmake
 WRKSRC=			${WRKDIR}/0.4
 
 LDFLAGS.DragonFly=	-lm
+LDFLAGS.SunOS+=		-lm
 
 .include "../../mk/bsd.prefs.mk"
 
