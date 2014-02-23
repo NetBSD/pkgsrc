@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.841 2014/02/23 12:44:11 wen Exp $
+$NetBSD: CHANGES-2014,v 1.842 2014/02/23 12:58:16 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1332,3 +1332,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/p5-Test-Identity version 0.01 [sno 2014-02-23]
 	Updated www/p5-HTML-FormFu to 1.00 [wen 2014-02-23]
 	Updated www/p5-HTML-Selector-XPath to 0.16 [wen 2014-02-23]
+	Updated www/p5-HTML-Template to 2.95 [wen 2014-02-23]
