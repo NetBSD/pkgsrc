@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.847 2014/02/23 14:49:35 wen Exp $
+$NetBSD: CHANGES-2014,v 1.848 2014/02/23 14:54:54 sno Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1338,3 +1338,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-HTTP-Cache-Transparent to 1.1 [wen 2014-02-23]
 	Added devel/p5-Future version 0.25 [sno 2014-02-23]
 	Updated databases/p5-DBD-CSV to 0.41 [wen 2014-02-23]
+	Added devel/p5-IO-Async version 0.61 [sno 2014-02-23]
