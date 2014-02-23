@@ -1,0 +1,4 @@
+A logging role building a very lightweight wrapper to Log::Any for use with
+your Moo or Moose classes. Connectibng a Log::Any::Adapter should be
+performed prior to logging the first log message, otherwise nothing will
+happen, just like with Log::Any
