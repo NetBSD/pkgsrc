@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.839 2014/02/23 11:34:00 sno Exp $
+$NetBSD: CHANGES-2014,v 1.840 2014/02/23 11:38:58 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1330,3 +1330,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/postgresql84-pltcl to 8.4.20 [adam 2014-02-23]
 	Updated databases/postgresql84-server to 8.4.20 [adam 2014-02-23]
 	Added devel/p5-Test-Identity version 0.01 [sno 2014-02-23]
+	Updated www/p5-HTML-FormFu to 1.00 [wen 2014-02-23]
