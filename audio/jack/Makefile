@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2013/07/15 02:02:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.27 2014/02/23 10:22:13 richard Exp $
 #
 
 DISTNAME=	jack-audio-connection-kit-${JACK_VERSION}
@@ -76,7 +76,7 @@ PLIST.coreaudio=	yes
 ### XXX The sun driver is buggy on NetBSD right now.  I hope to remedy
 ###	this shortly.
 ###
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "Solaris"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "SunOS"
 CONFIGURE_ARGS+=	--enable-sun
 PLIST.sunaudio=		yes
 .else
