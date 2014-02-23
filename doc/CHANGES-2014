@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.831 2014/02/23 02:13:25 hiramatsu Exp $
+$NetBSD: CHANGES-2014,v 1.832 2014/02/23 09:49:21 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1242,3 +1242,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/libcaca to 0.99.18 [schmonz 2014-02-23]
 	Added misc/toilet version 0.3 [schmonz 2014-02-23]
 	Updated textproc/p5-Dist-Zilla-Plugin-PodWeaver to 4.005 [hiramatsu 2014-02-23]
+	Updated www/p5-HTML-Mason to 1.54 [wen 2014-02-23]
