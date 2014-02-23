@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2009/05/17 19:56:58 sno Exp $
+# $NetBSD: options.mk,v 1.3 2014/02/23 09:47:53 wen Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.p5-HTML-Mason
-PKG_SUPPORTED_OPTIONS=	fcgi modperl
+PKG_SUPPORTED_OPTIONS=	fastcgi modperl
 PKG_SUGGESTED_OPTIONS=	# empty
 
 .include "../../mk/bsd.options.mk"
@@ -23,6 +23,6 @@ DEPENDS+=	p5-libapreq2-[0-9]*:../../www/p5-libapreq2
 ###
 ### FastCGI Support e.g. for lighttpd
 ###
-.if !empty(PKG_OPTIONS:Mfcgi)
+.if !empty(PKG_OPTIONS:Mfastcgi)
 DEPENDS+=	p5-FCGI-[0-9]*:../../www/p5-FCGI
 .endif
