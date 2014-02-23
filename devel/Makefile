@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1866 2014/02/23 15:37:44 sno Exp $
+# $NetBSD: Makefile,v 1.1867 2014/02/23 15:54:07 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -995,6 +995,7 @@ SUBDIR+=	p5-Moo
 SUBDIR+=	p5-MooX-Cmd
 SUBDIR+=	p5-MooX-ConfigFromFile
 SUBDIR+=	p5-MooX-File-ConfigDir
+SUBDIR+=	p5-MooX-Log-Any
 SUBDIR+=	p5-MooX-Options
 SUBDIR+=	p5-MooX-Roles-Pluggable
 SUBDIR+=	p5-MooX-Types-MooseLike
