@@ -1,0 +1,4 @@
+It is standard practice to include a Changes file in your distribution. The
+purpose the Changes file is to help a user figure out what has changed
+since
+the last release.
