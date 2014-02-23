@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.6 2012/09/13 17:34:22 asau Exp $
+# $NetBSD: Makefile,v 1.7 2014/02/23 15:32:10 adam Exp $
 
-DISTNAME=	mpc-1.0.1
-PKGNAME=	mpcomplex-1.0.1
+DISTNAME=	mpc-1.0.2
+PKGNAME=	${DISTNAME:S/mpc/mpcomplex/}
 CATEGORIES=	math
-MASTER_SITES=	http://www.multiprecision.org/mpc/download/
+MASTER_SITES=	http://www.multiprecision.org/mpc/download/ \
+		${MASTER_SITE_GNU:=mpc/}
 
 MAINTAINER=	MarkoSchuetz@web.de
 HOMEPAGE=	http://www.multiprecision.org/mpc/
 COMMENT=	Multiprecision complex arithmetic library
 LICENSE=	gnu-lgpl-v3
 
-GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+GNU_CONFIGURE=	yes
 INFO_FILES=	yes
 
 # The test that checks version match between binary library and
