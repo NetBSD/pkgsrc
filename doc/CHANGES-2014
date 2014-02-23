@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.843 2014/02/23 13:03:40 wen Exp $
+$NetBSD: CHANGES-2014,v 1.844 2014/02/23 13:16:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1334,3 +1334,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-HTML-Selector-XPath to 0.16 [wen 2014-02-23]
 	Updated www/p5-HTML-Template to 2.95 [wen 2014-02-23]
 	Updated www/p5-HTML-TokeParser-Simple to 3.16 [wen 2014-02-23]
+	Updated www/p5-HTTP-Async to 0.23 [wen 2014-02-23]
