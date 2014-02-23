@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13020 2014/02/23 11:31:31 adam Exp $
+$NetBSD: TODO,v 1.13021 2014/02/23 15:33:31 adam Exp $
 
 Suggested new packages
 ======================
@@ -639,7 +639,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gramofile-1.6P
 	o gramps-4.0.1
 	o graphviz-2.36.0
-	o grep-2.17
 	o grilo-0.2.8
 	o grilo-plugins-0.2.10
 	o groff-1.22.2
