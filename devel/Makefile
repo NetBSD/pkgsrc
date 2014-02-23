@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1863 2014/02/23 11:38:48 sno Exp $
+# $NetBSD: Makefile,v 1.1864 2014/02/23 14:36:54 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -847,6 +847,7 @@ SUBDIR+=	p5-Filesys-Notify-Simple
 SUBDIR+=	p5-FindBin-libs
 SUBDIR+=	p5-Format-Human-Bytes
 SUBDIR+=	p5-FreezeThaw
+SUBDIR+=	p5-Future
 SUBDIR+=	p5-Getopt-ArgvFile
 SUBDIR+=	p5-Getopt-Euclid
 SUBDIR+=	p5-Getopt-Long
