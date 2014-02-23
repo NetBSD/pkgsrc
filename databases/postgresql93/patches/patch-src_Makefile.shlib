@@ -1,4 +1,4 @@
-$NetBSD: patch-src_Makefile.shlib,v 1.2 2013/10/04 18:23:40 joerg Exp $
+$NetBSD: patch-src_Makefile.shlib,v 1.3 2014/02/23 11:25:54 adam Exp $
 
 --- src/Makefile.shlib.orig	2013-09-02 20:53:17.000000000 +0000
 +++ src/Makefile.shlib
@@ -38,38 +38,6 @@ $NetBSD: patch-src_Makefile.shlib,v 1.2 2013/10/04 18:23:40 joerg Exp $
  ifeq ($(PORTNAME), hpux)
    ifdef SO_MAJOR_VERSION
      shlib			= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION)
-@@ -281,8 +286,9 @@ ifeq ($(PORTNAME), unixware)
- endif
- 
- ifeq ($(PORTNAME), cygwin)
-+  LINK.shared		= $(CC) -shared
-   ifdef SO_MAJOR_VERSION
--    shlib		= cyg$(NAME)$(DLSUFFIX)
-+    shlib		= cyg$(NAME)-$(SO_MAJOR_VERSION)$(DLSUFFIX)
-   endif
-   haslibarule   = yes
- endif
-@@ -371,6 +377,12 @@ else # PORTNAME == cygwin || PORTNAME ==
- 
- # If SHLIB_EXPORTS is set, the rules below will build a .def file from
- # that.  Else we build a temporary one here.
-+ifeq ($(PORTNAME), cygwin)
-+$(shlib) $(stlib): $(OBJS) | $(SHLIB_PREREQS)
-+	$(CC) $(CFLAGS)  -shared -o $(shlib)  -Wl,--out-implib=$(stlib) $(OBJS) $(LDFLAGS) $(LDFLAGS_SL) $(SHLIB_LINK) $(LIBS) $(LDAP_LIBS_BE)
-+
-+
-+else
- ifeq (,$(SHLIB_EXPORTS))
- DLL_DEFFILE = lib$(NAME)dll.def
- exports_file = $(DLL_DEFFILE)
-@@ -387,6 +399,7 @@ $(shlib): $(OBJS) $(DLL_DEFFILE) | $(SHL
- $(stlib): $(shlib) $(DLL_DEFFILE) | $(SHLIB_PREREQS)
- 	$(DLLTOOL) --dllname $(shlib) $(DLLTOOL_LIBFLAGS) --def $(DLL_DEFFILE) --output-lib $@
- 
-+endif # PORTNAME == cygwin 
- endif # PORTNAME == cygwin || PORTNAME == win32
- 
- 
 @@ -467,8 +480,10 @@ ifdef soname
  # we don't install $(shlib) on AIX
  # (see http://archives.postgresql.org/message-id/52EF20B2E3209443BC37736D00C3C1380A6E79FE@EXADV1.host.magwien.gv.at)
