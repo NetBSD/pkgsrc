@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/02/23 00:40:04 schmonz Exp $
+
+SHA1 (toilet-0.3.tar.gz) = 73ea7aa2b0470ac0fecc103d7eeed0048684a505
+RMD160 (toilet-0.3.tar.gz) = f7357fcd84bf717f1df738e09762a048005caa74
+Size (toilet-0.3.tar.gz) = 864880 bytes
