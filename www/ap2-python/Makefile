@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2014/02/17 17:20:28 adam Exp $
+# $NetBSD: Makefile,v 1.32 2014/02/23 11:40:00 wiz Exp $
 
 DISTNAME=	mod_python-3.5.0
 PKGNAME=	${APACHE_PKG_PREFIX}-${PYPKGPREFIX}-${DISTNAME:S/mod_//}
 CATEGORIES=	www python
-MASTER_SITES=	http://archive.apache.org/dist/httpd/modpython/
+MASTER_SITES=	http://dist.modpython.org/dist/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
