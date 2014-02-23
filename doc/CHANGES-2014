@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.834 2014/02/23 10:08:59 wen Exp $
+$NetBSD: CHANGES-2014,v 1.835 2014/02/23 10:19:40 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1245,3 +1245,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-HTML-Mason to 1.54 [wen 2014-02-23]
 	Updated devel/p5-Module-Load to 0.32 [wen 2014-02-23]
 	Updated www/p5-HTML-Mason-PSGIHandler to 0.53 [wen 2014-02-23]
+	Updated www/p5-HTML-Format to 2.11 [wen 2014-02-23]
