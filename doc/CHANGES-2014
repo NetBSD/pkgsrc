@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.832 2014/02/23 09:49:21 wen Exp $
+$NetBSD: CHANGES-2014,v 1.833 2014/02/23 09:57:06 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1243,3 +1243,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added misc/toilet version 0.3 [schmonz 2014-02-23]
 	Updated textproc/p5-Dist-Zilla-Plugin-PodWeaver to 4.005 [hiramatsu 2014-02-23]
 	Updated www/p5-HTML-Mason to 1.54 [wen 2014-02-23]
+	Updated devel/p5-Module-Load to 0.32 [wen 2014-02-23]
