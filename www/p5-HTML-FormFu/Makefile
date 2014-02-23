@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2013/10/27 13:31:04 wen Exp $
+# $NetBSD: Makefile,v 1.11 2014/02/23 11:32:16 wen Exp $
 #
 
-DISTNAME=		HTML-FormFu-0.09010
+DISTNAME=		HTML-FormFu-1.00
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=HTML/}
@@ -41,6 +41,7 @@ DEPENDS+=	p5-MooseX-Aliases-[0-9]*:../../devel/p5-MooseX-Aliases
 DEPENDS+=	p5-MooseX-SetOnce-[0-9]*:../../devel/p5-MooseX-SetOnce
 DEPENDS+=	p5-Number-Format-[0-9]*:../../textproc/p5-Number-Format
 DEPENDS+=	p5-Path-Class-[0-9]*:../../devel/p5-Path-Class
+DEPENDS+=	p5-Readonly>=0:../../devel/p5-Readonly
 DEPENDS+=	p5-Regexp-Common-[0-9]*:../../textproc/p5-Regexp-Common
 #DEPENDS+=	p5-Regexp-Copy-[0-9]*:../../textproc/p5-Regexp-Copy
 DEPENDS+=	p5-Task-Weaken-[0-9]*:../../devel/p5-Task-Weaken
@@ -50,6 +51,7 @@ DEPENDS+=	p5-libwww>=5:../../www/p5-libwww
 
 BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.92}:../../devel/p5-Test-Simple
 BUILD_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
+BUILD_DEPENDS+=	p5-Test-Aggregate>=0.371:../../devel/p5-Test-Aggregate
 
 USE_LANGUAGES=		c
 
