@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2007/09/14 07:39:31 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2014/02/23 00:35:32 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libcaca
 PKG_SUPPORTED_OPTIONS=		imlib2
@@ -38,3 +38,8 @@ CONFIGURE_ARGS+=	--x-libraries=${BUILDLINK_PREFIX.libX11}/lib
 .else
 CONFIGURE_ARGS+=	--disable-x11
 .endif
+
+# could be made into options if desired
+.for i in gl cocoa network vga csharp java cxx python ruby cppunit zzuf
+CONFIGURE_ARGS+=	--disable-${i}
+.endfor
