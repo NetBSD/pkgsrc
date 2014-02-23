@@ -1,0 +1,3 @@
+A "Future" object represents an operation that is currently in progress, or
+has recently completed. It can be used in a variety of ways to manage the
+flow of control, and data, through an asynchronous program.
