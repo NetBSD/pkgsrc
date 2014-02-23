@@ -1,0 +1,6 @@
+The Perl garbage collector uses simple reference counting during the normal
+execution of a program. This means that cycles or unweakened references in
+other parts of code can keep an object around for longer than intended. To
+help avoid this problem, the reference count of a new object from its class
+constructor ought to be 1. This way, the caller can know the object will be
+properly DESTROYed when it drops all of its references to it.
