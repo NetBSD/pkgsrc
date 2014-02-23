@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1864 2014/02/23 14:36:54 sno Exp $
+# $NetBSD: Makefile,v 1.1865 2014/02/23 14:56:03 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -877,6 +877,7 @@ SUBDIR+=	p5-Hook-LexWrap
 SUBDIR+=	p5-IMDB-Film
 SUBDIR+=	p5-IO-AIO
 SUBDIR+=	p5-IO-All
+SUBDIR+=	p5-IO-Async
 SUBDIR+=	p5-IO-Capture
 SUBDIR+=	p5-IO-CaptureOutput
 SUBDIR+=	p5-IO-Compress
