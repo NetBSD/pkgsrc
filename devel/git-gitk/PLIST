@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/09/09 13:55:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/02/23 10:00:27 adam Exp $
 bin/gitk
 libexec/git-core/git-citool
 libexec/git-core/git-gui
@@ -34,6 +34,7 @@ share/git-gui/lib/line.tcl
 share/git-gui/lib/logo.tcl
 share/git-gui/lib/merge.tcl
 share/git-gui/lib/mergetool.tcl
+share/git-gui/lib/msgs/bg.msg
 share/git-gui/lib/msgs/de.msg
 share/git-gui/lib/msgs/el.msg
 share/git-gui/lib/msgs/fr.msg
@@ -61,6 +62,7 @@ share/git-gui/lib/tools_dlg.tcl
 share/git-gui/lib/transport.tcl
 share/git-gui/lib/win32.tcl
 share/git-gui/lib/win32_shortcut.js
+share/gitk/lib/msgs/bg.msg
 share/gitk/lib/msgs/de.msg
 share/gitk/lib/msgs/es.msg
 share/gitk/lib/msgs/fr.msg

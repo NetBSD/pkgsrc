@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/01/03 17:31:25 richard Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/02/23 10:00:27 adam Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -95,7 +95,6 @@ libexec/git-core/git-init
 libexec/git-core/git-init-db
 libexec/git-core/git-instaweb
 libexec/git-core/git-log
-libexec/git-core/git-lost-found
 libexec/git-core/git-ls-files
 libexec/git-core/git-ls-remote
 libexec/git-core/git-ls-tree
@@ -125,7 +124,6 @@ libexec/git-core/git-pack-redundant
 libexec/git-core/git-pack-refs
 libexec/git-core/git-parse-remote
 libexec/git-core/git-patch-id
-libexec/git-core/git-peek-remote
 libexec/git-core/git-prune
 libexec/git-core/git-prune-packed
 libexec/git-core/git-pull
@@ -149,7 +147,6 @@ libexec/git-core/git-remote-https
 libexec/git-core/git-remote-testsvn
 libexec/git-core/git-repack
 libexec/git-core/git-replace
-libexec/git-core/git-repo-config
 libexec/git-core/git-request-pull
 libexec/git-core/git-rerere
 libexec/git-core/git-reset
@@ -176,7 +173,6 @@ libexec/git-core/git-submodule
 libexec/git-core/git-svn
 libexec/git-core/git-symbolic-ref
 libexec/git-core/git-tag
-libexec/git-core/git-tar-tree
 libexec/git-core/git-unpack-file
 libexec/git-core/git-unpack-objects
 libexec/git-core/git-update-index
@@ -223,12 +219,11 @@ share/examples/git/templates/hooks/pre-rebase.sample
 share/examples/git/templates/hooks/prepare-commit-msg.sample
 share/examples/git/templates/hooks/update.sample
 share/examples/git/templates/info/exclude
-share/locale/da/LC_MESSAGES/git.mo
+share/locale/bg/LC_MESSAGES/git.mo
 share/locale/de/LC_MESSAGES/git.mo
 share/locale/fr/LC_MESSAGES/git.mo
 share/locale/is/LC_MESSAGES/git.mo
 share/locale/it/LC_MESSAGES/git.mo
-share/locale/nl/LC_MESSAGES/git.mo
 share/locale/pt_PT/LC_MESSAGES/git.mo
 share/locale/sv/LC_MESSAGES/git.mo
 share/locale/vi/LC_MESSAGES/git.mo

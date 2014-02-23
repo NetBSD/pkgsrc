@@ -1,4 +1,4 @@
-$NetBSD: patch-config.mak.uname,v 1.2 2014/01/01 16:05:51 bsiegert Exp $
+$NetBSD: patch-config.mak.uname,v 1.3 2014/02/23 10:00:27 adam Exp $
 
 --- config.mak.uname.orig	Tue Dec  3 19:34:59 2013
 +++ config.mak.uname
@@ -20,17 +20,3 @@ $NetBSD: patch-config.mak.uname,v 1.2 2014/01/01 16:05:51 bsiegert Exp $
  	BASIC_CFLAGS += -D__EXTENSIONS__ -D__sun__ -DHAVE_ALLOCA_H
  endif
  ifeq ($(uname_O),Cygwin)
-@@ -196,6 +194,13 @@ ifeq ($(uname_S),OpenBSD)
- 	NEEDS_LIBICONV = YesPlease
- 	BASIC_CFLAGS += -I/usr/local/include
- 	BASIC_LDFLAGS += -L/usr/local/lib
-+	HAVE_PATHS_H = YesPlease
-+endif
-+ifeq ($(uname_S),MirBSD)
-+	NO_STRCASESTR = YesPlease
-+	NO_MEMMEM = YesPlease
-+	USE_ST_TIMESPEC = YesPlease
-+	NEEDS_LIBICONV = YesPlease
- 	HAVE_PATHS_H = YesPlease
- endif
- ifeq ($(uname_S),NetBSD)
