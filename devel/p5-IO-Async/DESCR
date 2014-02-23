@@ -1,0 +1,6 @@
+This collection of modules allows programs to be written that perform
+asynchronous filehandle IO operations. A typical program using them would
+consist of a single subclass of IO::Async::Loop to act as a container of
+other objects, which perform the actual IO work required by the program. As
+well as IO handles, the loop also supports timers and signal handlers, and
+includes more higher-level functionality built on top of these basic parts.
