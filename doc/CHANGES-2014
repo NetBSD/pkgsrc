@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.849 2014/02/23 14:56:28 wen Exp $
+$NetBSD: CHANGES-2014,v 1.850 2014/02/23 15:18:31 sno Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1340,3 +1340,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/p5-DBD-CSV to 0.41 [wen 2014-02-23]
 	Added devel/p5-IO-Async version 0.61 [sno 2014-02-23]
 	Updated databases/p5-DBD-XBase to 1.05 [wen 2014-02-23]
+	Updated sysutils/p5-Unix-Statgrab to 0.103 [sno 2014-02-23]
