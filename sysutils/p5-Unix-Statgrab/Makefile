@@ -1,21 +1,24 @@
-# $NetBSD: Makefile,v 1.1 2013/09/13 10:31:29 sno Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/23 15:18:19 sno Exp $
 
-DISTNAME=	Unix-Statgrab-0.101
+DISTNAME=	Unix-Statgrab-0.103
 PKGNAME=	p5-${DISTNAME}
-CATEGORIES=	perl5 sysutils
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Unix/}
+CATEGORIES=	devel perl5
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RE/REHSACK/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Unix-Statgrab/
+HOMEPAGE=	https://metacpan.org/release/Unix-Statgrab
 COMMENT=	Perl extension for collecting information about the machine
 LICENSE=	${PERL5_LICENSE}
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
+BUILD_DEPENDS+=	p5-Config-AutoConf>=0.19:../../devel/p5-Config-AutoConf
+BUILD_DEPENDS+=	p5-Module-Build>=0.4000:../../devel/p5-Module-Build
 
-PERL5_PACKLIST=	auto/Unix/Statgrab/.packlist
+USE_LANGUAGES=	c
 PERL5_MODULE_TYPE=	Module::Build
-
-BUILD_DEPENDS=	p5-Config-AutoConf>=0.19:../../devel/p5-Config-AutoConf
+PERL5_PACKLIST=		auto/Unix/Statgrab/.packlist
+PERL5_REQD+=	5.2	# File::Copy >= 0
+PERL5_REQD+=	5.10.1	# parent >= 0
+PERL5_REQD+=	5.11.2	# ExtUtils::CBuilder >= 0.27
 
 .include "../../devel/libstatgrab/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
