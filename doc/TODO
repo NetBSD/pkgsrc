@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13021 2014/02/23 15:33:31 adam Exp $
+$NetBSD: TODO,v 1.13022 2014/02/23 20:25:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -484,6 +484,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o delegate-9.9.7
 	o denemo-1.1
 	o dhid-5.3
+	o dialog-1.2.20140219
 	o diffstat-1.58
 	o doclifter-2.13
 	o dolphin-4.0.2
@@ -773,6 +774,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libxmp-4.2.3
 	o licq-1.3.8
 	o liferea-1.10.5
+	o lilypond-2.18.1
 	o lincvs-2.1.4 [now called CrossVC]
 	o liquidwar-6.0.0.11
 	o lldpd-0.7.7 [wip, perl module path]
@@ -794,6 +796,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mawk-1.3.4.20131226
 	o mc-4.8.9
 	o mcsim-5.5.0
+	o meld-3.11.0
 	o mergeant-0.67
 	o mesure-0.7.2
 	o metis-5.1.0
@@ -878,7 +881,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o packagekit-0.5.1
 	o pam-passwdqc-1.2.2
 	o par2-0.6.2 [https://github.com/BlackIkeEagle/par2cmdline]
-	o parallel-20140122
+	o parallel-20140222
 	o pari-2.5.5
 	o pbzip2-1.1.6
 	o pcal-4.8
@@ -891,6 +894,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o php-sugarcrm-6.5.16
 	o php-tiki6-6.10
 	o php-tt-rss-1.11
+	o phpmyadmin-4.1.8
+	o physfs-2.0.2
 	o picp-0.6.8
 	o pim6dd-20040819a
 	o pim6sd-20040824a
@@ -917,12 +922,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pspp-0.8.1
 	o pstoedit-3.61
 	o pulseaudio-4.0 [hal support is dropped]
+	o puzzles-10146
 	o pv-1.2.0
 	o pvs-5.0
 	o pwlib-1.11.1
 	o py-HappyDoc-3.0
 	o py-IP-0.81
 	o py-METAR-0.19
+	o py-OpenSSL-0.14
 	o py-PDF2-1.19
 	o py-PasteDeploy-1.5.2
 	o py-Scientific-2.8.1
@@ -986,6 +993,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-test-2.5.1
 	o py-tlslite-0.4.6
 	o py-uliweb-0.2.4
+	o py-virtualenv-1.11.4
 	o py-wxWidgets-3.0.0
 	o py-zconfig-3.0.3
 	o py-zfec-1.4.24
@@ -1171,7 +1179,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wxGTK-3.0
 	o wxRemind-101
 	o wyrd-1.4.6
-	o x264-devel-20140208
+	o x264-devel-20140222
 	o xanalyser-1.30
 	o xbindkeys-1.8.6
 	o xbindkeys-tk-1.8.0
