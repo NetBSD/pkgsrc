@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1867 2014/02/23 15:54:07 sno Exp $
+# $NetBSD: Makefile,v 1.1868 2014/02/24 12:24:19 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -493,6 +493,7 @@ SUBDIR+=	matio
 SUBDIR+=	mcpp
 SUBDIR+=	mdds
 SUBDIR+=	meld
+SUBDIR+=	meld-devel
 SUBDIR+=	mell
 SUBDIR+=	memcached
 SUBDIR+=	menhir
