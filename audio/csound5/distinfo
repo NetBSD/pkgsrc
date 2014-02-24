@@ -1,11 +1,15 @@
-$NetBSD: distinfo,v 1.11 2014/02/13 10:10:06 mrg Exp $
+$NetBSD: distinfo,v 1.12 2014/02/24 16:19:39 joerg Exp $
 
 SHA1 (Csound5.19.01.tar.gz) = eeeb3591745c5b352b9040a2dfa3805f22f5fbda
 RMD160 (Csound5.19.01.tar.gz) = ceb9952d562c57b09143a47a4d51081753f1b694
 Size (Csound5.19.01.tar.gz) = 9302526 bytes
+SHA1 (patch-Engine_cs__par__base.c) = ab28f22d8806e7eb57c4849156c0fc854094fe20
+SHA1 (patch-Engine_cs__par__dispatch.c) = 91a65c4e5d4a1fd8e2cc882739fa15dbee37bd24
+SHA1 (patch-H_cs__par__base.h) = 198ceed3c47d3fe48d45f7d78c00d85912cc98a7
+SHA1 (patch-H_cs__par__dispatch.h) = d4c2be5958f533c8383d85efb97ecda0a33ef43d
 SHA1 (patch-Opcodes_cpumeter.c) = 45cf1eafa0fbf7d430c5f4a39a193c63e0259d5a
 SHA1 (patch-Opcodes_wavegde.h) = e1a6d742b28dd9b6b129a993102baf7218efa57c
-SHA1 (patch-ac) = 6079e0715edd55215f7f53a2d390d0fb290de1a4
+SHA1 (patch-ac) = 6420eba18a5c06c84a592b96d3725d6f96d238a4
 SHA1 (patch-ad) = 30aa452d35dbcd6ba4fe2c9a7680fe028368aae4
 SHA1 (patch-ae) = cba2fb017f4b940debbf7f8fd482c73c3fe19587
 SHA1 (patch-ah) = 229fc00e122288ea16ebf07f081869965cab9365
@@ -17,4 +21,5 @@ SHA1 (patch-am) = 4df76fa93f26455d559acadb8389a6d7174c43ed
 SHA1 (patch-an) = edaddf39179bf686e46591c2353b16917a9ae8f0
 SHA1 (patch-ao) = 83a028f92ef743072728376cf4ddc79ef3d46381
 SHA1 (patch-custom.py.mkg) = ef45464105e7d7bc8ad2401d1b19f521e12333ca
+SHA1 (patch-frontends_beats_main.c) = 5de77ee83be93120a93b86b755d767c46c58fcdf
 SHA1 (patch-install.py) = 8a02d553440bf921761a189af7b96fdd9657e870
