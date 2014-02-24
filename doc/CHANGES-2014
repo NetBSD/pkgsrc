@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.853 2014/02/23 15:52:42 sno Exp $
+$NetBSD: CHANGES-2014,v 1.854 2014/02/24 01:20:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1345,3 +1345,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/grep to 2.18 [adam 2014-02-23]
 	Added devel/p5-CPAN-Changes version 0.27 [sno 2014-02-23]
 	Added devel/p5-MooX-Log-Any version 0.001 [sno 2014-02-23]
+	Updated lang/ruby193-base to 1.9.3p484nb4 [taca 2014-02-24]
