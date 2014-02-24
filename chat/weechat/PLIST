@@ -1,12 +1,8 @@
-@comment $NetBSD: PLIST,v 1.17 2013/06/09 21:19:02 tonio Exp $
+@comment $NetBSD: PLIST,v 1.18 2014/02/24 23:06:12 tonio Exp $
+bin/weechat
 bin/weechat-curses
 include/weechat/weechat-plugin.h
 lib/pkgconfig/weechat.pc
-${PLIST.lua}lib/weechat/plugins/lua.so
-${PLIST.perl}lib/weechat/plugins/perl.so
-${PLIST.python}lib/weechat/plugins/python.so
-${PLIST.ruby}lib/weechat/plugins/ruby.so
-${PLIST.charset}lib/weechat/plugins/charset.so
 lib/weechat/plugins/alias.so
 lib/weechat/plugins/charset.so
 lib/weechat/plugins/fifo.so
@@ -16,7 +12,12 @@ lib/weechat/plugins/relay.so
 lib/weechat/plugins/rmodifier.so
 lib/weechat/plugins/script.so
 lib/weechat/plugins/xfer.so
-man/man1/weechat-curses.1
+man/de/man1/weechat.1
+man/fr/man1/weechat.1
+man/it/man1/weechat.1
+man/ja/man1/weechat.1
+man/man1/weechat.1
+man/pl/man1/weechat.1
 share/icons/hicolor/32x32/apps/weechat.png
 share/locale/cs/LC_MESSAGES/weechat.mo
 share/locale/de/LC_MESSAGES/weechat.mo
@@ -28,3 +29,9 @@ share/locale/ja/LC_MESSAGES/weechat.mo
 share/locale/pl/LC_MESSAGES/weechat.mo
 share/locale/pt_BR/LC_MESSAGES/weechat.mo
 share/locale/ru/LC_MESSAGES/weechat.mo
+share/locale/tr/LC_MESSAGES/weechat.mo
+${PLIST.charset}lib/weechat/plugins/charset.so
+${PLIST.lua}lib/weechat/plugins/lua.so
+${PLIST.perl}lib/weechat/plugins/perl.so
+${PLIST.python}lib/weechat/plugins/python.so
+${PLIST.ruby}lib/weechat/plugins/ruby.so
