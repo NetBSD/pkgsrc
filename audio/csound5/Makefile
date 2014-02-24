@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2014/02/22 00:59:26 mrg Exp $
+# $NetBSD: Makefile,v 1.33 2014/02/24 16:19:39 joerg Exp $
 
 DISTNAME=		Csound${CSOUND_VERSION}
 PKGNAME=		csound5-${CSOUND_VERSION}
@@ -13,7 +13,8 @@ LICENSE=		gnu-lgpl-v2.1 # or later
 
 CSOUND_VERSION=		5.19.01
 USE_LANGUAGES=		c c++
-CFLAGS+=		-g -D__PKGSRC_PREFIX__=${PREFIX}/ -DBETA
+USE_TOOLS+=		bison
+CFLAGS+=		-D__PKGSRC_PREFIX__=${PREFIX}/ -DBETA
 BUILD_DEPENDS+=		scons>=0.96:../../devel/scons
 SCONS=			${PREFIX}/bin/scons
 SCONS_ARGS=		-C ${WRKSRC} prefix=${PREFIX}
@@ -41,6 +42,7 @@ SUBST_SED.strip=	-e 's/--strip-unneeded//g'
 .endif
 
 do-build:
+	cd ${WRKSRC} && ${TOOLS_PATH.bison} -d -o frontends/beats/beats.tab.c frontends/beats/beats.y
 	cd ${WRKSRC} && if [ ! -f custom.py ]; then cp custom.py.mkg custom.py; fi
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONS} ${SCONS_ARGS}
 
