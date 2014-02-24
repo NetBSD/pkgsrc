@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2014/01/04 16:50:38 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2014/02/24 09:37:48 wiz Exp $
 
-DISTNAME=	mdoclint-1.26
+DISTNAME=	mdoclint-1.27
 CATEGORIES=	textproc
 MASTER_SITES=	# none
 DISTFILES=	# none
