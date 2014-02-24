@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/01/19 23:22:54 riastradh Exp $
+# $NetBSD: Makefile,v 1.7 2014/02/24 15:53:22 wiedi Exp $
 #
 
 DISTNAME=		Xlt-13.0.13
@@ -16,6 +16,8 @@ PKG_INSTALLATION_TYPES=	overwrite
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
+
+LDFLAGS.SunOS+=		-lresolv  -lsocket   -lnsl
 
 .include "../../mk/bsd.prefs.mk"
 
