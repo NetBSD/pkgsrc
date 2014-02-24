@@ -1,13 +1,13 @@
-$NetBSD: patch-po_CMakeLists.txt,v 1.1 2013/08/30 16:56:56 joerg Exp $
+$NetBSD: patch-po_CMakeLists.txt,v 1.2 2014/02/24 23:06:12 tonio Exp $
 
---- po/CMakeLists.txt.orig	2013-08-30 13:48:27.000000000 +0000
+--- po/CMakeLists.txt.orig	2014-02-09 08:52:53.000000000 +0000
 +++ po/CMakeLists.txt
-@@ -55,7 +55,7 @@ IF(XGETTEXT_EXECUTABLE AND MSGMERGE_EXEC
+@@ -56,7 +56,7 @@ IF(XGETTEXT_EXECUTABLE AND MSGMERGE_EXEC
    ADD_CUSTOM_COMMAND(
      OUTPUT ${POT_FILE_PATH}
      COMMAND ${XGETTEXT_EXECUTABLE}
--    ARGS -o ${POT_FILE_PATH} --add-comments='TRANSLATORS:' --keyword='_' --keyword='weechat_gettext' --keyword='N_' --keyword='NG_:1,2' --keyword='weechat_ngettext:1,2' --no-location --directory=${CMAKE_SOURCE_DIR} --package-name='WeeChat' --package-version=${VERSION} --msgid-bugs-address=${BUGS_ADDRESS} --copyright-holder='NAME' ${SRC_FILES}
-+    ARGS -o ${POT_FILE_PATH} --add-comments='TRANSLATORS:' --keyword='_' --keyword='weechat_gettext' --keyword='N_' --keyword='NG_:1,2' --keyword='weechat_ngettext:1,2' --no-location --directory=${CMAKE_SOURCE_DIR} --msgid-bugs-address=${BUGS_ADDRESS} --copyright-holder='NAME' ${SRC_FILES}
+-    ARGS -o ${POT_FILE_PATH} --add-comments='TRANSLATORS:' --keyword='_' --keyword='weechat_gettext' --keyword='N_' --keyword='NG_:1,2' --keyword='weechat_ngettext:1,2' --no-location --from-code=UTF-8 --directory=${CMAKE_SOURCE_DIR} --package-name='WeeChat' --package-version=${VERSION} --msgid-bugs-address=${BUGS_ADDRESS} --copyright-holder='NAME' ${SRC_FILES}
++    ARGS -o ${POT_FILE_PATH} --add-comments='TRANSLATORS:' --keyword='_' --keyword='weechat_gettext' --keyword='N_' --keyword='NG_:1,2' --keyword='weechat_ngettext:1,2' --no-location --from-code=UTF-8 --directory=${CMAKE_SOURCE_DIR} --msgid-bugs-address=${BUGS_ADDRESS} --copyright-holder='NAME' ${SRC_FILES}
      DEPENDS ${POT_DEPENDS}
      COMMENT "Generating ${POT_FILE}"
      )
