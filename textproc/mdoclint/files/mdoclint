@@ -1,7 +1,7 @@
 #!@PERL5@
 #
 # $OpenBSD: mdoclint,v 1.38 2013/09/04 19:39:19 patrick Exp $
-# $NetBSD: mdoclint,v 1.45 2014/01/04 16:50:38 wiz Exp $
+# $NetBSD: mdoclint,v 1.46 2014/02/24 09:37:48 wiz Exp $
 #
 # Copyright (c) 2001-2013 Thomas Klausner
 # All rights reserved.
@@ -205,7 +205,7 @@ my $valid_date_re;
 		@arches =
 		    (qw(acorn26 acorn32 algor alpha amiga arc atari
 		    bebox cats cesfic cobalt dreamcast evbarm evbmips evbppc
-		    evbsh3 evbsh5 hp300 hp700 hpcarm hpcmips hpcsh
+		    evbsh3 evbsh5 hp300 hpcarm hpcmips hpcsh hppa
 		    i386 ibmnws luna68k mac68k macppc mipsco mmeye
 		    mvme68k mvmeppc netwinder news68k newsmips next68k
 		    pc532 playstation2 pmax pmppc prep sandpoint sbmips
