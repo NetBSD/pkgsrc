@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2014/02/24 06:23:01 obache Exp $
+# $NetBSD: Makefile,v 1.6 2014/02/24 06:37:31 obache Exp $
 #
 
 .include "Makefile.common"
+
+PKGREVISION=	1
 
 COMMENT=	Yet another Japanese Dependency Structure Analyzer
 
@@ -20,6 +22,10 @@ INSTALL_MAKE_FLAGS+=	confdir=${PREFIX}/share/examples
 CONF_FILES=	share/examples/cabocharc ${PKG_SYSCONFDIR}/cabocharc
 
 TEST_TARGET=	check
+
+# remove deprecated tournament model, reduce much memmory.
+post-extract:
+	${RM} -f ${WRKSRC}/model/*-tournament.*.txt
 
 BUILDLINK_API_DEPENDS.crfpp+=	CRF++>=0.55
 .include "../../textproc/CRF++/buildlink3.mk"
