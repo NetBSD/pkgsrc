@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1868 2014/02/24 12:24:19 wiz Exp $
+# $NetBSD: Makefile,v 1.1869 2014/02/24 12:24:37 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -599,8 +599,8 @@ SUBDIR+=	p5-BackPAN-Index
 SUBDIR+=	p5-Bit-Vector
 SUBDIR+=	p5-CLASS
 SUBDIR+=	p5-CPAN
-SUBDIR+=	p5-CPAN-Checksums
 SUBDIR+=	p5-CPAN-Changes
+SUBDIR+=	p5-CPAN-Checksums
 SUBDIR+=	p5-CPAN-DistnameInfo
 SUBDIR+=	p5-CPAN-FindDependencies
 SUBDIR+=	p5-CPAN-Inject
