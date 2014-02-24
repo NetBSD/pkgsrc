@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2013/10/10 14:42:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2014/02/24 17:54:04 wiedi Exp $
 #
 
 DISTNAME=	ftmenu-0.3
@@ -13,6 +13,7 @@ COMMENT=	Fluxbox Tray Menu
 
 GNU_CONFIGURE=		YES
 LDFLAGS.DragonFly=	-lX11
+LDFLAGS.SunOS+=		-lX11
 
 #XXX: Not using C++, but configure require it.
 USE_LANGUAGES+=	c c++
