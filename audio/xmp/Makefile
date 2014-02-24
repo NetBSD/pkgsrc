@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2013/12/10 07:14:45 rxg Exp $
+# $NetBSD: Makefile,v 1.41 2014/02/24 20:41:17 adam Exp $
 
 DISTNAME=	xmp-4.0.6
 PKGREVISION=	2
@@ -10,19 +10,14 @@ HOMEPAGE=	http://xmp.sourceforge.net/
 COMMENT=	Player for many different Amiga and PC module formats
 LICENSE=	gnu-gpl-v2
 
-MAKE_JOBS_SAFE=		no
-
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR}
-
 USE_TOOLS+=	gmake pkg-config
+GNU_CONFIGURE=	yes
 
 EGDIR=		${PREFIX}/share/examples/xmp
 CONF_FILES=	${EGDIR}/modules.conf ${PKG_SYSCONFDIR}/xmp/modules.conf
 CONF_FILES+=	${EGDIR}/xmp.conf ${PKG_SYSCONFDIR}/xmp/xmp.conf
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${EGDIR}
-
 INSTALL_MAKE_FLAGS+=	INSTALL=${INSTALL:Q}
 
 .include "options.mk"

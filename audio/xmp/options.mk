@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2013/11/16 07:41:02 shattered Exp $
+# $NetBSD: options.mk,v 1.4 2014/02/24 20:41:17 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xmp
 # XXX configure.ac is broken, you cannot disable oss and alsa at the moment.
@@ -8,11 +8,13 @@ PKG_SUPPORTED_OPTIONS=	alsa arts esound nas oss pulseaudio
 
 .if ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS=	alsa
-.elif ${OPSYS} == "Darwin" || ${OPSYS} == "Interix"
-# No native support for these OS's, so use esound for audio output
+.elif ${OPSYS} == "Interix"
+# No native support for this OS, so use esound for audio output
 PKG_SUGGESTED_OPTIONS=	esound
-.endif
+# On Darwin, xmp uses CoreAudio
+.elif ${OPSYS} != "Darwin"
 PKG_SUGGESTED_OPTIONS+=	pulseaudio
+.endif
 
 .include "../../mk/bsd.options.mk"
 
