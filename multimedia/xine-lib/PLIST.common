@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.36 2013/12/04 12:38:35 drochner Exp $
+@comment $NetBSD: PLIST.common,v 1.37 2014/02/24 05:31:54 richard Exp $
 bin/xine-config
 bin/xine-list-1.2
 include/xine.h
@@ -150,6 +150,8 @@ lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_dmx_yuv4mpeg2.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_dmx_yuv4mpeg2.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_dmx_yuv_frames.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_dmx_yuv_frames.so
+lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_flac.a
+lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_flac.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_cdda.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_cdda.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_dvd.a
