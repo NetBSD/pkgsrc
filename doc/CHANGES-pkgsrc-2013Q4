@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.33 2014/02/21 14:57:56 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.34 2014/02/24 16:33:48 schnoebe Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q4 branch:
@@ -110,3 +110,5 @@ Pullup ticket #4331 - requested by drochner
 security/gnutls: security patch
 Pullup ticket #4332 - requested by obache
 multimedia/adobe-flash-plugin11: security update
+Pullup ticket #4333 - requested by tron
+databases/phpmyadmin: vulnerability patch
