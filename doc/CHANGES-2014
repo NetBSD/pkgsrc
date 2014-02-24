@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.856 2014/02/24 08:18:06 adam Exp $
+$NetBSD: CHANGES-2014,v 1.857 2014/02/24 09:38:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1350,3 +1350,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated archivers/gtar to 1.27.1 [adam 2014-02-24]
 	Updated archivers/gtar-base to 1.27.1 [adam 2014-02-24]
 	Updated archivers/gtar-info to 1.27.1 [adam 2014-02-24]
+	Updated textproc/mdoclint to 1.27 [wiz 2014-02-24]
