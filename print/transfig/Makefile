@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.43 2013/02/16 11:18:03 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2014/02/24 12:12:02 wiz Exp $
 
-DISTNAME=	transfig.3.2.5d
-PKGNAME=	transfig-3.2.5d
-PKGREVISION=	1
+DISTNAME=	transfig.3.2.5e
+PKGNAME=	${DISTNAME:S/g./g-/}
 CATEGORIES=	graphics print
-MASTER_SITES=	ftp://epb.lbl.gov/xfig/alpha/ \
-		${MASTER_SITE_SOURCEFORGE:=mcj/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mcj/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xfig.org/
