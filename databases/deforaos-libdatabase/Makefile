@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2013/10/19 09:07:01 adam Exp $
+# $NetBSD: Makefile,v 1.5 2014/02/24 16:17:15 joerg Exp $
 
 DISTNAME=	libDatabase-0.0.0
 PKGNAME=	deforaos-libdatabase-0.0.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases
 MASTER_SITES=	http://www.defora.org/os/download/download/4287/
 
@@ -21,5 +21,6 @@ MAKE_FLAGS+=	PREFIX=${PREFIX}
 .include "../../mk/readline.buildlink3.mk"
 .include "../../databases/sqlite/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk-doc+=	gtk-doc>=1.20
 .include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
