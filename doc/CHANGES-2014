@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.871 2014/02/24 21:04:52 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.872 2014/02/24 23:07:15 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1365,3 +1365,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/libxmp to 4.2.4 [adam 2014-02-24]
 	Added security/botan-devel version 1.11.8 [joerg 2014-02-24]
 	Updated devel/meld-devel to 3.11.0nb1 [wiz 2014-02-24]
+	Updated chat/weechat to 0.4.3 [tonio 2014-02-24]
