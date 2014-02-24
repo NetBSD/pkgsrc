@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2014/02/21 12:45:26 obache Exp $
+# $NetBSD: Makefile,v 1.35 2014/02/24 16:10:29 joerg Exp $
 #
 
 DISTNAME=	groonga-4.0.0
@@ -50,6 +50,11 @@ REPLACE_RUBY+=	data/munin/groonga_query_performance_
 REPLACE_RUBY+=	data/munin/groonga_status_
 REPLACE_RUBY+=	data/munin/groonga_throughput_
 .include "../../lang/ruby/replace.mk"
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+MAKE_ENV+=	CLANG_NO_OPT=-O0
+.endif
 
 .include "../../devel/editline/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
