@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13030 2014/02/24 12:24:58 wiz Exp $
+$NetBSD: TODO,v 1.13031 2014/02/24 12:29:39 obache Exp $
 
 Suggested new packages
 ======================
@@ -976,6 +976,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-pyutil-1.9.7
 	o py-qt4-4.10.3 [needs py-sip-4.15, see above]
 	o py-qt5-5.2
+	o py-reportlab-3.0
 	o py-rope-0.9.4
 	o py-scgi-1.14
 	o py-simpletal-5.1
