@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.859 2014/02/24 10:51:39 hiramatsu Exp $
+$NetBSD: CHANGES-2014,v 1.860 2014/02/24 11:47:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1353,3 +1353,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/mdoclint to 1.27 [wiz 2014-02-24]
 	Updated devel/p5-Mixin-Linewise to 0.105 [hiramatsu 2014-02-24]
 	Updated textproc/p5-Pod-Weaver to 4.006 [hiramatsu 2014-02-24]
+	Updated security/py-OpenSSL to 0.14 [wiz 2014-02-24]
