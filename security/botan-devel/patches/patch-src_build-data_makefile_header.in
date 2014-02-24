@@ -1,0 +1,21 @@
+$NetBSD: patch-src_build-data_makefile_header.in,v 1.1 2014/02/24 20:49:14 joerg Exp $
+
+--- src/build-data/makefile/header.in.orig	2014-02-24 21:22:30.086425663 +0100
++++ src/build-data/makefile/header.in	2014-02-24 21:22:48.658425876 +0100
+@@ -21,11 +21,11 @@
+ BRANCH         = %{version_major}.%{version_minor}
+ 
+ # Installation Settings
+-DESTDIR        = %{destdir}
+-BINDIR         = $(DESTDIR)/bin
+-LIBDIR         = $(DESTDIR)/%{libdir}
+-HEADERDIR      = $(DESTDIR)/%{includedir}/botan-$(BRANCH)/botan
+-DOCDIR         = $(DESTDIR)/%{docdir}/botan-$(VERSION)
++PREFIX         = ${DESTDIR}%{destdir}
++BINDIR         = $(PREFIX)/bin
++LIBDIR         = $(PREFIX)/%{libdir}
++HEADERDIR      = $(PREFIX)/%{includedir}/botan-$(BRANCH)/botan
++DOCDIR         = $(PREFIX)/%{docdir}/botan-$(VERSION)
+ PKGCONF_DIR    = $(LIBDIR)/pkgconfig
+ 
+ CONFIG_SCRIPT = %{botan_config}

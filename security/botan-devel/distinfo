@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2014/02/24 20:49:14 joerg Exp $
+
+SHA1 (Botan-1.11.8.tbz) = bde51183fd601b1cf1e687a1fe88eb2407c2db32
+RMD160 (Botan-1.11.8.tbz) = 62f1ca66f5eceb18e9218321e8b983af3743167f
+Size (Botan-1.11.8.tbz) = 2193897 bytes
+SHA1 (patch-src_build-data_makefile_header.in) = 9ef8fba7f7a4d665d95478cdd87d58839d438f80
