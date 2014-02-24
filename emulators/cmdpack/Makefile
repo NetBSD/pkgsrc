@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 12:55:10 asau Exp $
+# $NetBSD: Makefile,v 1.4 2014/02/24 12:29:18 wiedi Exp $
 #
 
 DISTNAME=	cmdpack-1.03-src
@@ -10,6 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.neillcorlett.com/cmdpack/
 COMMENT=	Neill Corlett's command line tools for emulation
 LICENSE=	gnu-gpl-v3
+USE_LANGUAGES=	c99
 
 INSTALLATION_DIRS=	bin share/doc/cmdpack
 
