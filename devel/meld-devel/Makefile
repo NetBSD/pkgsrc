@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/02/24 12:24:11 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/24 21:04:41 wiz Exp $
 
 DISTNAME=		meld-3.11.0
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/meld/3.11/}
 EXTRACT_SUFX=		.tar.xz
@@ -15,6 +16,8 @@ DEPENDS+=		${PYPKGPREFIX}-gobject3>=3.8:../../devel/py-gobject3
 DEPENDS+=		gsettings-desktop-schemas-[0-9]*:../../sysutils/gsettings-desktop-schemas
 
 USE_TOOLS+=		intltool msgfmt
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 3.11; 3.12 will probably require 33+
 
 SUBST_CLASSES+=		man
 SUBST_FILES.man=	setup.py
