@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2014/02/24 12:24:11 wiz Exp $
+
+SHA1 (meld-3.11.0.tar.xz) = 3a23ef1b813bdcb3f8fd0308d46ba83f8536c90b
+RMD160 (meld-3.11.0.tar.xz) = 1406fc6cb01526f1cdc6291ccd4f579d4bf9e599
+Size (meld-3.11.0.tar.xz) = 408668 bytes
+SHA1 (patch-meld_build__helpers.py) = 709f0ebdf247632c938e9ec7144b688750a1af25
