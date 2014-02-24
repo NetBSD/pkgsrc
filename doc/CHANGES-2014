@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.867 2014/02/24 19:30:05 schnoebe Exp $
+$NetBSD: CHANGES-2014,v 1.868 2014/02/24 19:31:39 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1361,3 +1361,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/dialog to 1.2.20140219 [wiz 2014-02-24]
 	Added devel/meld-devel version 3.11.0 [wiz 2014-02-24]
 	Updated net/udns to version 0.4 [schnoebe 2014-02-24]
+	Updated chat/jabberd2 to version 2.3.2 [schnoebe 2014-02-24]
