@@ -1,7 +1,11 @@
-$NetBSD: distinfo,v 1.8 2013/03/03 01:06:49 joerg Exp $
+$NetBSD: distinfo,v 1.9 2014/02/24 12:49:56 wiedi Exp $
 
 SHA1 (pchar-1.5.tar.gz) = 3e78505b881773d2a726b426c6023ee2519bed75
 RMD160 (pchar-1.5.tar.gz) = b8e600b9c11cf7e584768c87aadeeb9d7b482949
 Size (pchar-1.5.tar.gz) = 117678
+SHA1 (patch-PctestIpv6Icmp.cc) = 28f4807aa8776fc45377661f4095b9033ad69d36
+SHA1 (patch-PctestIpv6Tcp.cc) = 06113c259529c51d756ae848bcea831c5dac5471
+SHA1 (patch-PctestIpv6Udp.cc) = c2d8dfac106ad7510b0005f6f078983833f909ce
+SHA1 (patch-ResultTable.cc) = ad3ce2c717d50f26c2dbea52fde648fe04e27c19
 SHA1 (patch-ab) = e298aec0ea18925f677da019bff8548fb5a2a96f
 SHA1 (patch-pc.h) = ca30eeef1f48b88dc9c36d22caa4f2edc29d093e
