@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2014/02/18 02:25:15 obache Exp $
+# $NetBSD: Makefile.common,v 1.6 2014/02/24 06:23:01 obache Exp $
 # used by textproc/cabocha/Makefile
 # used by textproc/p5-cabocha/Makefile
 # used by textproc/py-cabocha/Makefile
@@ -19,5 +19,3 @@ LICENSE=	gnu-lgpl-v2.1 OR modified-bsd
 RESTRICTED=	Included model is not re-distributed without prior permission.
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
-NO_BIN_ON_CDROM=	${RESTRICTED}
