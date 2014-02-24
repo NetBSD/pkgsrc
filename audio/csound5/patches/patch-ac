@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.8 2014/02/13 10:10:06 mrg Exp $
+$NetBSD: patch-ac,v 1.9 2014/02/24 16:19:39 joerg Exp $
 
---- SConstruct.orig	2013-01-07 04:49:34.000000000 -0800
-+++ SConstruct	2014-02-12 23:01:25.000000000 -0800
-@@ -60,6 +60,10 @@
+--- SConstruct.orig	2013-01-07 12:49:34.000000000 +0000
++++ SConstruct
+@@ -60,6 +60,10 @@ def getPlatform():
          return 'darwin'
      elif sys.platform[:5] == 'sunos':
          return 'sunos'
@@ -13,7 +13,7 @@ $NetBSD: patch-ac,v 1.8 2014/02/13 10:10:06 mrg Exp $
      else:
          return 'unsupported'
  
-@@ -408,6 +412,8 @@
+@@ -408,6 +412,8 @@ if commonEnvironment['useGettext'] == '1
          commonEnvironment.Append(LIBS=['intl'])
      if getPlatform() == 'haiku':
          commonEnvironment.Append(LIBS=['intl'])
@@ -22,7 +22,7 @@ $NetBSD: patch-ac,v 1.8 2014/02/13 10:10:06 mrg Exp $
  else:
      print "CONFIGURATION DECISION: No localisation"
  
-@@ -505,17 +511,17 @@
+@@ -505,17 +511,17 @@ else:
  if getPlatform() == 'linux':
      commonEnvironment.Append(CCFLAGS = ["-DLINUX"])
      commonEnvironment.Append(CPPFLAGS = ['-DHAVE_SOCKETS'])
@@ -46,7 +46,7 @@ $NetBSD: patch-ac,v 1.8 2014/02/13 10:10:06 mrg Exp $
      if compilerGNU():
          commonEnvironment.Append(CCFLAGS = "-DPIPES")
          commonEnvironment.Append(LINKFLAGS = ['-Wl,-Bdynamic'])
-@@ -570,6 +576,11 @@
+@@ -570,6 +576,11 @@ elif getPlatform() == 'win32':
      if compilerIntel():
          print 'Generating code optimized for Intel Core 2 Duo and Pentium 4 that will run on other processors also.'
          commonEnvironment.Append(CCFLAGS = Split('/O3 /QaxTP'))
@@ -58,7 +58,7 @@ $NetBSD: patch-ac,v 1.8 2014/02/13 10:10:06 mrg Exp $
  
  if getPlatform() == 'linux':
      path1 = '/usr/include/python%s' % commonEnvironment['pythonVersion']
-@@ -942,6 +953,13 @@
+@@ -942,6 +953,13 @@ if commonEnvironment['buildRelease'] != 
              tmp += '64'
          s = '-DCS_DEFAULT_PLUGINDIR=\\"%s\\"' % tmp
          csoundLibraryEnvironment.Append(CPPFLAGS = [s])
@@ -72,7 +72,7 @@ $NetBSD: patch-ac,v 1.8 2014/02/13 10:10:06 mrg Exp $
  csoundDynamicLibraryEnvironment = csoundLibraryEnvironment.Clone()
  csoundDynamicLibraryEnvironment.Append(LIBS = ['sndfile'])
  if getPlatform() == 'win32':
-@@ -999,6 +1017,11 @@
+@@ -999,6 +1017,11 @@ ws2_32
          csoundDynamicLibraryEnvironment.Append(SHLINKFLAGS = ['-module'])
  elif getPlatform() == 'linux' or getPlatform() == 'sunos' or getPlatform() == 'darwin':
      csoundDynamicLibraryEnvironment.Append(LIBS = ['dl', 'm', 'pthread'])
@@ -84,7 +84,7 @@ $NetBSD: patch-ac,v 1.8 2014/02/13 10:10:06 mrg Exp $
  csoundInterfacesEnvironment = csoundDynamicLibraryEnvironment.Clone()
  
  if buildOSXFramework:
-@@ -1289,7 +1312,7 @@
+@@ -1289,7 +1312,7 @@ else:
      csoundLibraryEnvironment.Append(CCFLAGS='-fPIC')
      csoundLibrary = csoundLibraryEnvironment.Library(
          csoundLibraryName, libCsoundSources)
@@ -93,7 +93,7 @@ $NetBSD: patch-ac,v 1.8 2014/02/13 10:10:06 mrg Exp $
   # We need the library before sndfile in case we are building a static
   # libcsound and passing -Wl,-as-needed
   libCsoundLibs.insert(0,csoundLibrary)
-@@ -1691,7 +1714,7 @@
+@@ -1691,7 +1714,7 @@ makePlugin(pluginEnvironment, 'signalflo
  makePlugin(pluginEnvironment, 'fractalnoise', ['Opcodes/tl/fractalnoise.cpp'])
  
  # platform-specific
@@ -102,7 +102,7 @@ $NetBSD: patch-ac,v 1.8 2014/02/13 10:10:06 mrg Exp $
      makePlugin(pluginEnvironment, 'control', ['Opcodes/control.c'])
  #   makePlugin(pluginEnvironment, 'cpumeter', ['Opcodes/cpumeter.c'])
  if getPlatform() == 'linux':
-@@ -1738,8 +1761,10 @@
+@@ -1738,8 +1761,10 @@ else:
      print "CONFIGURATION DECISION: Building OSC plugin."
      oscEnvironment = pluginEnvironment.Clone()
      oscEnvironment.Append(LIBS = ['lo'])
@@ -115,7 +115,7 @@ $NetBSD: patch-ac,v 1.8 2014/02/13 10:10:06 mrg Exp $
      if getPlatform() == 'win32':
          oscEnvironment.Append(LIBS = csoundWindowsLibraries)
          if compilerGNU():
-@@ -1842,8 +1867,15 @@
+@@ -1842,8 +1867,15 @@ else:
          WiiEnvironment.Append(LIBS = ['wiiuse', 'bluetooth'])
      if p5gfound :
          P5GEnvironment.Append(LIBS = ['p5glove'])
@@ -133,7 +133,7 @@ $NetBSD: patch-ac,v 1.8 2014/02/13 10:10:06 mrg Exp $
      if getPlatform() == 'darwin':
          csoundProgramEnvironment.Append(LINKFLAGS = Split('''-framework Carbon -framework CoreAudio -framework CoreMIDI'''))
  
-@@ -1872,6 +1904,13 @@
+@@ -1872,6 +1904,13 @@ else:
          widgetsEnvironment.Append(LIBS = csoundWindowsLibraries)
      elif getPlatform() == 'darwin':
          widgetsEnvironment.ParseConfig('fltk-config --use-images --cflags --cxxflags --ldflags')
@@ -147,7 +147,7 @@ $NetBSD: patch-ac,v 1.8 2014/02/13 10:10:06 mrg Exp $
      makePlugin(widgetsEnvironment, 'widgets',
                 ['InOut/FL_graph.cpp', 'InOut/winFLTK.c', 'InOut/widgets.cpp'])
  
-@@ -1909,7 +1948,11 @@
+@@ -1909,7 +1948,11 @@ if not (commonEnvironment['useALSA'] == 
  else:
      print "CONFIGURATION DECISION: Building ALSA plugin."
      alsaEnvironment = pluginEnvironment.Clone()
@@ -160,7 +160,7 @@ $NetBSD: patch-ac,v 1.8 2014/02/13 10:10:06 mrg Exp $
      makePlugin(alsaEnvironment, 'rtalsa', ['InOut/rtalsa.c'])
  
  if pulseaudioFound and (getPlatform() == 'linux' or getPlatform() == 'sunos'):
-@@ -1942,6 +1985,9 @@
+@@ -1942,6 +1985,9 @@ else:
          portaudioEnvironment.Append(LIBS = ['winmm', 'dsound'])
          portaudioEnvironment.Append(LIBS = csoundWindowsLibraries)
          makePlugin(portaudioEnvironment, 'rtpa', ['InOut/rtpa.cpp'])
@@ -170,7 +170,7 @@ $NetBSD: patch-ac,v 1.8 2014/02/13 10:10:06 mrg Exp $
      else:
          makePlugin(portaudioEnvironment, 'rtpa', ['InOut/rtpa.c'])
  
-@@ -1954,6 +2000,9 @@
+@@ -1954,6 +2000,9 @@ else:
          jackEnvironment.Append(LIBS = ['jack', 'asound', 'pthread'])
      elif getPlatform() == 'win32':
          jackEnvironment.Append(LIBS = ['jackdmp'])
@@ -180,7 +180,7 @@ $NetBSD: patch-ac,v 1.8 2014/02/13 10:10:06 mrg Exp $
      else:
          jackEnvironment.Append(LIBS = ['pthread', 'jack'])
      makePlugin(jackEnvironment, 'rtjack', ['InOut/rtjack.c'])
-@@ -2016,6 +2065,12 @@
+@@ -2016,6 +2065,12 @@ else:
  		fluidEnvironment.Append(LIBS = ['pthread'])
  	elif getPlatform() == 'haiku':
  		fluidEnvironment.Append(LIBS = ['fluidsynth'])
@@ -193,7 +193,7 @@ $NetBSD: patch-ac,v 1.8 2014/02/13 10:10:06 mrg Exp $
  	makePlugin(fluidEnvironment, 'fluidOpcodes',
  			   ['Opcodes/fluidOpcodes/fluidOpcodes.cpp'])
  
-@@ -2178,8 +2233,10 @@
+@@ -2178,8 +2233,10 @@ else:
          stkEnvironment.Append(LIBS = ['stdc++'])
      if getPlatform() == 'win32':
          stkEnvironment.Append(LIBS = csoundWindowsLibraries)
@@ -205,7 +205,7 @@ $NetBSD: patch-ac,v 1.8 2014/02/13 10:10:06 mrg Exp $
      # This is the one that actually defines the opcodes.
      # They are straight wrappers, as simple as possible.
      stk = makePlugin(stkEnvironment, 'stk', ['Opcodes/stk/stkOpcodes.cpp'])
-@@ -2206,6 +2263,8 @@
+@@ -2206,6 +2263,8 @@ else:
          pyEnvironment.Append(LIBS = ['dl', 'm'])
      elif getPlatform() == 'win32':
          pyEnvironment['ENV']['PATH'] = os.environ['PATH']
@@ -214,7 +214,7 @@ $NetBSD: patch-ac,v 1.8 2014/02/13 10:10:06 mrg Exp $
      pythonOpcodes = makePlugin(pyEnvironment, 'py',
                                 ['Opcodes/py/pythonopcodes.c'])
      if getPlatform() == 'win32' and pythonLibs[0] < 'python24':
-@@ -2606,6 +2665,13 @@
+@@ -2606,6 +2665,13 @@ else:
              vstEnvironment.Append(LIBS = Split('fltk fltk_images fltk_png fltk_jpeg fltk_z'))
          else:
              vstEnvironment.Append(LIBS = Split('csound64 csnd fltk fltkimages fltkpng fltkjpeg fltkz'))
@@ -228,7 +228,7 @@ $NetBSD: patch-ac,v 1.8 2014/02/13 10:10:06 mrg Exp $
      print 'PATH =', commonEnvironment['ENV']['PATH']
      csoundVstSources = Split('''
      frontends/CsoundVST/vstsdk2.4/public.sdk/source/vst2.x/audioeffect.cpp
-@@ -2653,7 +2719,7 @@
+@@ -2653,7 +2719,7 @@ if commonEnvironment['buildPDClass'] == 
          pdClass = pdClassEnvironment.Program(
              'csoundapi~.pd_darwin',
              'frontends/csoundapi_tilde/csoundapi_tilde.c')
@@ -237,7 +237,7 @@ $NetBSD: patch-ac,v 1.8 2014/02/13 10:10:06 mrg Exp $
          pdClass = pdClassEnvironment.SharedLibrary(
              'csoundapi~.pd_linux',
              'frontends/csoundapi_tilde/csoundapi_tilde.c',
-@@ -2694,6 +2760,15 @@
+@@ -2694,6 +2760,15 @@ if commonEnvironment['buildTclcsound'] =
          lib2 = 'tk%s' % commonEnvironment['tclversion']
          csTclEnvironment.Append(LIBS = [lib1, lib2])
          csTclEnvironment.Append(LIBS = csoundWindowsLibraries)
@@ -253,7 +253,17 @@ $NetBSD: patch-ac,v 1.8 2014/02/13 10:10:06 mrg Exp $
      csTclCmdObj = csTclEnvironment.SharedObject(
          'frontends/tclcsound/commands.c')
      csTcl = csTclEnvironment.Program(
-@@ -2887,11 +2962,15 @@
+@@ -2831,8 +2906,7 @@ else:
+     blb = csBeatsEnvironment.CFile(target = 'frontends/beats/lex.yy.c',
+                                source = 'frontends/beats/beats.l')
+     bb = csBeatsEnvironment.Program('csbeats',
+-                                    ['frontends/beats/main.c', 
+-                                    byb, 
++                                    ['frontends/beats/main.c', 'frontends/beats/beats.tab.c',
+                                     blb])
+     executables.append(bb)
+ 
+@@ -2887,11 +2961,15 @@ INSTDIR = commonEnvironment['instdir']
  PREFIX = INSTDIR + commonEnvironment['prefix']
  
  BIN_DIR = PREFIX + "/bin"
@@ -269,7 +279,7 @@ $NetBSD: patch-ac,v 1.8 2014/02/13 10:10:06 mrg Exp $
  else:
      LIB_DIR = PREFIX + "/lib"
      PYTHON_DIR = '%s/lib' % sys.prefix
-@@ -2903,8 +2982,10 @@
+@@ -2903,8 +2981,10 @@ for i in sys.path:
  
  if commonEnvironment['useDouble'] == '0':
      PLUGIN_DIR = LIB_DIR + "/csound/plugins"
