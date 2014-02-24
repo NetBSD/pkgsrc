@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13026 2014/02/24 12:04:52 wiz Exp $
+$NetBSD: TODO,v 1.13027 2014/02/24 12:12:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1119,7 +1119,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tomboy-1.10.2
 	o top-3.8beta1
 	o totem-3.4.1
-	o transfig-3.2.5e
 	o transmission-2.82
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
