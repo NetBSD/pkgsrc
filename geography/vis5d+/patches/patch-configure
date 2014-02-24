@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.1 2014/02/24 16:15:48 joerg Exp $
+
+--- configure.orig	2014-02-24 13:54:36.000000000 +0000
++++ configure
+@@ -10261,6 +10261,11 @@ fi
+           done
+           ;;
+         -[lLR]*)
++            case $ac_arg in
++            -R*)
++                ac_arg="${wl}$ac_arg"
++                ;;
++            esac
+ 
+   ac_exists=false
+   for ac_i in $ac_cv_flibs; do
