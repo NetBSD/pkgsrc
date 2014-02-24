@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2014/02/24 05:35:47 richard Exp $
+# $NetBSD: Makefile,v 1.65 2014/02/24 22:40:44 richard Exp $
 #
 
 DISTNAME=		xine-ui-0.99.7
@@ -16,6 +16,7 @@ USE_TOOLS+=		msgfmt pkg-config gmake
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-lirc
+CONFIGURE_ARGS+=	--without-aalib
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
