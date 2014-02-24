@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2014/02/12 23:18:18 tron Exp $
+# $NetBSD: Makefile,v 1.64 2014/02/24 05:35:47 richard Exp $
 #
 
 DISTNAME=		xine-ui-0.99.7
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xine/}
 EXTRACT_SUFX=		.tar.xz
@@ -18,6 +18,8 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-lirc
 
 BUILDLINK_DEPMETHOD.libXt?=	build
+
+LIBS.SunOS+=	-lsocket -lnsl
 
 PTHREAD_AUTO_VARS=	yes
 
