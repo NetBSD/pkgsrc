@@ -1,0 +1,11 @@
+$NetBSD: patch-Imakefile,v 1.1 2014/02/24 12:36:27 wiedi Exp $
+
+larsmenu also needs to link XLIB
+--- Imakefile.orig	2004-06-29 00:59:06.000000000 +0000
++++ Imakefile
+@@ -17,4 +17,4 @@ OBJS4 = larsmenu.o
+ ComplexProgramTarget_1(larswm, $(XLIB), NullParameter)
+ ComplexProgramTarget_2(larsremote, $(XLIB), NullParameter)
+ ComplexProgramTarget_3(larsclock, $(XLIB), NullParameter)
+-ComplexProgramTarget_4(larsmenu, $(XMULIB), NullParameter)
++ComplexProgramTarget_4(larsmenu, $(XLIB) $(XMULIB), NullParameter)
