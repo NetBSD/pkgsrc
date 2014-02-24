@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/02/23 11:32:16 wen Exp $
+# $NetBSD: Makefile,v 1.12 2014/02/24 03:09:51 wen Exp $
 #
 
 DISTNAME=		HTML-FormFu-1.00
@@ -28,6 +28,7 @@ DEPENDS+=	p5-DateTime-Format-Strptime>=1.2000:../../time/p5-DateTime-Format-Strp
 DEPENDS+=	p5-DateTime-Locale>=0.45:../../time/p5-DateTime-Locale
 DEPENDS+=	p5-Email-Valid-[0-9]*:../../mail/p5-Email-Valid
 DEPENDS+=	p5-File-ShareDir-[0-9]*:../../devel/p5-File-ShareDir
+DEPENDS+=	p5-File-ShareDir-Install-[0-9]*:../../devel/p5-File-ShareDir-Install
 DEPENDS+=	p5-HTML-Scrubber-[0-9]*:../../www/p5-HTML-Scrubber
 DEPENDS+=	p5-HTML-TokeParser-Simple>=3.14:../../www/p5-HTML-TokeParser-Simple
 DEPENDS+=	p5-Hash-Flatten-[0-9]*:../../devel/p5-Hash-Flatten
