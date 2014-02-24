@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2013/02/27 19:33:11 markd Exp $
+$NetBSD: patch-aa,v 1.6 2014/02/24 12:30:59 wiedi Exp $
 
 --- Makefile.orig	2007-10-14 08:43:07.000000000 +0000
 +++ Makefile
@@ -46,6 +46,23 @@ $NetBSD: patch-aa,v 1.5 2013/02/27 19:33:11 markd Exp $
     DESTDIR=/usr
  else
  ifeq ($(shell uname -s), Darwin)
+@@ -66,11 +88,11 @@ ifeq ($(shell uname -s), Darwin)
+    LIBS=-L/usr/local/lib -L. -ldl -lelf -lpthread
+ else
+ ifeq ($(shell uname -s), SunOS)
+-   CFLAGS+=-I/usr/local/include -DINADDR_NONE=0xFFFFFFFF \
+-	-I /opt/csw/include -DSUNOS
+-   LIBS=-L/usr/local/lib -L. -ldl -lelf -lpthread -L/opt/csw/lib \
+-	-lsocket -lnsl -lresolv
+-   PCAP_LIB=/opt/csw/lib/libpcap.a
++   PTHREAD_LIBS?=-pthread
++   CFLAGS+=-I${LOCALBASE}/include -I${LOCALBASE}/include/libelf ${PTHREAD_CFLAGS} \
++	-DINADDR_NONE=0xFFFFFFFF -DSUNOS
++   LIBS=-L${LOCALBASE}/lib -lelf ${PTHREAD_LIBS} ${PTHREAD_LDFLAGS} \
++	${COMPILER_RPATH_FLAG}${LOCALBASE}/lib -lsocket -lnsl -lresolv
+ else
+ ifeq ($(shell uname -o), Cygwin)
+    CFLAGS+=-I/usr/local/include -I/usr/local/include/libelf -DCYGWIN \
 @@ -79,7 +101,9 @@ ifeq ($(shell uname -o), Cygwin)
     PCAP_LIB=-lpacket -lwpcap
  else
