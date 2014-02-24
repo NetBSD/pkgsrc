@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.866 2014/02/24 12:24:58 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.867 2014/02/24 19:30:05 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1360,3 +1360,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated print/transfig to 3.2.5e [wiz 2014-02-24]
 	Updated misc/dialog to 1.2.20140219 [wiz 2014-02-24]
 	Added devel/meld-devel version 3.11.0 [wiz 2014-02-24]
+	Updated net/udns to version 0.4 [schnoebe 2014-02-24]
