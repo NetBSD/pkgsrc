@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2014/02/02 06:58:08 rodent Exp $
+# $NetBSD: Makefile,v 1.10 2014/02/24 12:06:14 wiz Exp $
 
-DISTNAME=	pip-1.5.2
+DISTNAME=	pip-1.5.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pip/
@@ -13,6 +13,7 @@ LICENSE=	mit
 PLIST_SUBST+=	PYVERSSUFFIX="${PYVERSSUFFIX}"
 
 REPLACE_PYTHON+=	pip/__init__.py pip/_vendor/requests/certs.py
+REPLACE_PYTHON+=	pip/_vendor/requests/packages/chardet/chardetect.py
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
