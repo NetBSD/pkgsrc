@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.869 2014/02/24 20:44:13 adam Exp $
+$NetBSD: CHANGES-2014,v 1.870 2014/02/24 20:49:45 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1363,3 +1363,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/udns to 0.4 [schnoebe 2014-02-24]
 	Updated chat/jabberd2 to 2.3.2 [schnoebe 2014-02-24]
 	Updated audio/libxmp to 4.2.4 [adam 2014-02-24]
+	Added security/botan-devel version 1.11.8 [joerg 2014-02-24]
