@@ -1,13 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2013/05/22 13:14:29 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/02/24 06:37:31 obache Exp $
 bin/cabocha
 bin/cabocha-config
 include/cabocha.h
 lib/cabocha/model/chunk.ipa.model
 lib/cabocha/model/chunk.juman.model
 lib/cabocha/model/chunk.unidic.model
-lib/cabocha/model/dep-tournament.ipa.model
-lib/cabocha/model/dep-tournament.juman.model
-lib/cabocha/model/dep-tournament.unidic.model
 lib/cabocha/model/dep.ipa.model
 lib/cabocha/model/dep.juman.model
 lib/cabocha/model/dep.unidic.model
