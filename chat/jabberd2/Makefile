@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.90 2014/02/12 23:17:36 tron Exp $
+# $NetBSD: Makefile,v 1.91 2014/02/24 19:30:53 schnoebe Exp $
 
-DISTNAME=	jabberd-2.3.1
-PKGREVISION=	2
+DISTNAME=	jabberd-2.3.2
 CATEGORIES=	chat
 MASTER_SITES=	https://github.com/jabberd2/jabberd2/releases/download/${DISTNAME}/
 EXTRACT_SUFX=	.tar.xz
+
+FETCH_USING=	curl
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://jabberd2.org/
@@ -126,6 +127,7 @@ post-install:
 .include "../../devel/cppunit/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../net/udns/buildlink3.mk"
+.include "../../security/gsasl/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
