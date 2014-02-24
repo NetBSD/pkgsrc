@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13032 2014/02/24 20:44:13 adam Exp $
+$NetBSD: TODO,v 1.13033 2014/02/24 20:49:45 joerg Exp $
 
 Suggested new packages
 ======================
@@ -413,7 +413,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bomberclone-0.11.9
 	o bos-2.5
 	o boson-0.13
-	o botan-1.10.7
 	o brasero-3.4.0
 	o bugzilla-3.6.12
 	o byacc-20140101
