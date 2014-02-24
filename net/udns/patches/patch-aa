@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2013/09/13 09:57:36 jperkin Exp $
+$NetBSD: patch-aa,v 1.4 2014/02/24 19:29:02 schnoebe Exp $
 
-Make use of libtool.
+Uniformly use libtool.
 
---- Makefile.in.orig	2010-12-27 17:35:02.000000000 +0000
+--- Makefile.in.orig	2014-01-23 10:45:31.000000000 +0000
 +++ Makefile.in
 @@ -35,7 +35,7 @@ DIST   = COPYING.LGPL udns.h udns.3 dnsg
  
@@ -13,7 +13,7 @@ Make use of libtool.
  
  SOBJS  = $(OBJS:.o=.lo)
  SOLIB  = lib$(NAME)_s.so
-@@ -63,10 +63,10 @@ all: static
+@@ -66,10 +66,10 @@ all: static
  static: $(LIB) $(UTILS)
  staticlib: $(LIB)
  $(LIB): $(OBJS)
@@ -27,21 +27,44 @@ Make use of libtool.
  
  shared: $(SOLIBV) $(SOUTILS)
  sharedlib: $(SOLIBV)
-@@ -183,14 +183,14 @@ dnsget.o dnsget.lo: dnsget.c config.h ud
+@@ -153,9 +153,11 @@ depend dep deps: $(SRCS) $(USRC)
+ 	done >> Makefile.tmp; \
+ 	for f in $(USRCS:.c=.o); do \
+ 	 echo "$${f%.?}: $$f \$$(LIB)"; \
+-	 echo "	\$$(LD) \$$(LDLAGS) -o \$$@ $$f \$$(LIBFL) \$$(LIBS)"; \
++	 echo "	\$$(LIBTOOL) --mode=link \$$(CC) \$$(CFLAGS) \$$(LDLAGS) \\";\
++	 echo "		-o \$$@ $$f \$$(LIBFL) \$$(LIBS)"; \
+ 	 echo "$${f%.?}_s: $$f \$$(SOLIB)"; \
+-	 echo "	\$$(LD) \$$(LDFLAGS) -o \$$@ $$f \$$(SOLIBFL)"; \
++	 echo "	\$$(LIBTOOL) --mode=link \$$(CC) \$(CFLAGS) \$$(LDFLAGS) \\";\
++	 echo "		-o \$$@ $$f \$$(SOLIBFL)"; \
+ 	done >> Makefile.tmp ; \
+ 	if cmp Makefile.tmp Makefile.in >/dev/null 2>&1 ; then \
+ 	 echo Makefile.in unchanged; rm -f Makefile.tmp; \
+@@ -184,14 +186,20 @@ dnsget.o dnsget.lo: dnsget.c config.h ud
  rblcheck.o rblcheck.lo: rblcheck.c config.h udns.h getopt.c
  ex-rdns.o ex-rdns.lo: ex-rdns.c udns.h
  dnsget: dnsget.o $(LIB)
--	$(CC) $(CFLAGS) -o $@ dnsget.o $(LIBFL)
-+	${LIBTOOL} --mode=link $(CC) $(CFLAGS) -o $@ dnsget.o $(LIBFL)
+-	$(LD) $(LDLAGS) -o $@ dnsget.o $(LIBFL) $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDLAGS) -o $@ dnsget.o \
++		$(LIBFL) $(LIBS)
  dnsget_s: dnsget.o $(SOLIB)
- 	$(CC) $(CFLAGS) -o $@ dnsget.o $(SOLIBFL)
+-	$(LD) $(LDFLAGS) -o $@ dnsget.o $(SOLIBFL)
++	$(LIBTOOL) --mode=link $(CC) $(CLFAGS) $(LDFLAGS) -o $@ dnsget.o \
++		$(SOLIBFL)
  rblcheck: rblcheck.o $(LIB)
--	$(CC) $(CFLAGS) -o $@ rblcheck.o $(LIBFL)
-+	${LIBTOOL} --mode=link $(CC) $(CFLAGS) -o $@ rblcheck.o $(LIBFL)
+-	$(LD) $(LDLAGS) -o $@ rblcheck.o $(LIBFL) $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) $(CLFAGS) $(LDLAGS) -o $@ rblcheck.o \
++		$(LIBFL) $(LIBS)
  rblcheck_s: rblcheck.o $(SOLIB)
- 	$(CC) $(CFLAGS) -o $@ rblcheck.o $(SOLIBFL)
+-	$(LD) $(LDFLAGS) -o $@ rblcheck.o $(SOLIBFL)
++	$(LIBTOOL) --mode=link $(CC) $(CLFAGS) $(LDFLAGS) -o $@ rblcheck.o \
++		$(SOLIBFL)
  ex-rdns: ex-rdns.o $(LIB)
--	$(CC) $(CFLAGS) -o $@ ex-rdns.o $(LIBFL)
-+	${LIBTOOL} --mode=link $(CC) $(CFLAGS) -o $@ ex-rdns.o $(LIBFL)
+-	$(LD) $(LDLAGS) -o $@ ex-rdns.o $(LIBFL) $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDLAGS) -o $@ ex-rdns.o \
++		$(LIBFL) $(LIBS)
  ex-rdns_s: ex-rdns.o $(SOLIB)
- 	$(CC) $(CFLAGS) -o $@ ex-rdns.o $(SOLIBFL)
+-	$(LD) $(LDFLAGS) -o $@ ex-rdns.o $(SOLIBFL)
++	$(LIBTOOL) --mode=link $(CC) $(CLFAGS) $(LDFLAGS) -o $@ ex-rdns.o \
++		$(SOLIBFL)
