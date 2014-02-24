@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2012/09/11 19:46:55 asau Exp $
+# $NetBSD: Makefile,v 1.43 2014/02/24 08:16:56 adam Exp $
 
-DISTNAME=	gtar-1.26
+DISTNAME=	gtar-1.27.1
 CATEGORIES=	archivers
 MASTER_SITES=	# empty
 DISTFILES=	# empty
