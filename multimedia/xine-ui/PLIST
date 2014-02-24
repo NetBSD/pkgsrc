@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2014/02/24 05:35:47 richard Exp $
-bin/aaxine
+@comment $NetBSD: PLIST,v 1.14 2014/02/24 22:40:44 richard Exp $
 bin/fbxine
 bin/xine
 bin/xine-bugreport
