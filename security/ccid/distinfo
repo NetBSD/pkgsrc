@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2013/10/05 14:12:57 pettai Exp $
+$NetBSD: distinfo,v 1.9 2014/02/25 17:16:35 gdt Exp $
 
-SHA1 (ccid-1.4.12.tar.bz2) = a14a99ff6575d311dad083a066b80e4e0b6b8731
-RMD160 (ccid-1.4.12.tar.bz2) = eb3d9de2178966d647e7ba3c8cb21fca717f10a4
-Size (ccid-1.4.12.tar.bz2) = 479751 bytes
+SHA1 (ccid-1.4.15.tar.bz2) = cd73b99ef2a81822180b8c9bf0486e79e98a90a2
+RMD160 (ccid-1.4.15.tar.bz2) = 11403d8293d3baee2b8be52a1ab4029f3d0650a5
+Size (ccid-1.4.15.tar.bz2) = 487625 bytes
 SHA1 (patch-ab) = 9f392ba99a9d3a9dfca01bf92abaff67b79c29da
 SHA1 (patch-ad) = 18d9d25c1e63bd1aeae885ac51116f7a81e58876
