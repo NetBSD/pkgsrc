@@ -1,15 +1,14 @@
-$NetBSD: patch-src_spy_Makefile.in,v 1.1 2013/01/06 16:02:21 pettai Exp $
+$NetBSD: patch-src_spy_Makefile.in,v 1.2 2014/02/25 17:47:19 gdt Exp $
 
 Build fix for dlopen() on NetBSD
 
---- src/spy/Makefile.in.orig	2012-12-15 16:30:04.000000000 +0000
+--- src/spy/Makefile.in.orig	2014-02-14 16:17:03.000000000 +0000
 +++ src/spy/Makefile.in
-@@ -293,7 +293,7 @@ dist_bin_SCRIPTS = pcsc-spy
- libpcscspy_la_SOURCES = \
- 	libpcscspy.c
- 
--libpcscspy_la_LIBADD = -ldl
-+libpcscspy_la_LIBADD = ${DL_LIBS}
- man_MANS = pcsc-spy.1
- EXTRA_DIST = install_spy.sh uninstall_spy.sh pcsc-spy.pod
- CLEANFILES = pcsc-spy.1
+@@ -124,6 +124,7 @@ am__uninstall_files_from_dir = { \
+ am__installdirs = "$(DESTDIR)$(libdir)" "$(DESTDIR)$(bindir)" \
+ 	"$(DESTDIR)$(man1dir)"
+ LTLIBRARIES = $(lib_LTLIBRARIES)
++# In earlier versions, pkgsrc patched -ldl to ${DL_LIBS}
+ libpcscspy_la_LIBADD =
+ am_libpcscspy_la_OBJECTS = libpcscspy.lo
+ libpcscspy_la_OBJECTS = $(am_libpcscspy_la_OBJECTS)
