@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2014/01/05 10:57:11 richard Exp $
+# $NetBSD: options.mk,v 1.10 2014/02/25 09:16:49 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pari
 PKG_SUPPORTED_OPTIONS=	doc gmp x11
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=	--with-gmp=${PREFIX}
 .include "../../devel/gmp/buildlink3.mk"
 .else
 PLIST.nogmp=		yes
+CONFIGURE_ARGS+=	--without-gmp
 .endif
 
 .if !empty(PKG_OPTIONS:Mx11)
