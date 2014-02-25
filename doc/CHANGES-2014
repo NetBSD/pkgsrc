@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.873 2014/02/25 01:00:10 mspo Exp $
+$NetBSD: CHANGES-2014,v 1.874 2014/02/25 07:36:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1366,3 +1366,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added security/botan-devel version 1.11.8 [joerg 2014-02-24]
 	Updated devel/meld-devel to 3.11.0nb1 [wiz 2014-02-24]
 	Updated chat/weechat to 0.4.3 [tonio 2014-02-24]
+	Updated multimedia/ffmpeg2 to 2.1.4 [adam 2014-02-25]
