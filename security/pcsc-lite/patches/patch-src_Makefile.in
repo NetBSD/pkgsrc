@@ -1,12 +1,12 @@
-$NetBSD: patch-src_Makefile.in,v 1.4 2013/01/06 16:02:21 pettai Exp $
+$NetBSD: patch-src_Makefile.in,v 1.5 2014/02/25 17:47:19 gdt Exp $
 
 Make sure libpscslite.so is not linked against -lpthread on NetBSD, as
 loading libpthread.so through dlopen() is now forbidden.
 Disable installation of pcsc-spy
 
---- src/Makefile.in.orig	2012-11-28 17:44:06.000000000 +0000
+--- src/Makefile.in.orig	2014-02-14 16:17:03.000000000 +0000
 +++ src/Makefile.in
-@@ -334,6 +334,8 @@ PKG_CONFIG_PATH = @PKG_CONFIG_PATH@
+@@ -396,6 +396,8 @@ POLKIT_LIBS = @POLKIT_LIBS@
  PTHREAD_CC = @PTHREAD_CC@
  PTHREAD_CFLAGS = @PTHREAD_CFLAGS@
  PTHREAD_LIBS = @PTHREAD_LIBS@
@@ -15,7 +15,7 @@ Disable installation of pcsc-spy
  RANLIB = @RANLIB@
  SED = @SED@
  SET_MAKE = @SET_MAKE@
-@@ -403,7 +405,7 @@ top_builddir = @top_builddir@
+@@ -466,7 +468,7 @@ top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  usbdropdir = @usbdropdir@
  usbdropdir_exp = @usbdropdir_exp@
@@ -24,7 +24,7 @@ Disable installation of pcsc-spy
  AM_CPPFLAGS = -I$(top_srcdir)/src/PCSC -I$(top_builddir)/src/PCSC \
  	$(SYMBOL_VISIBILITY)
  
-@@ -427,8 +429,8 @@ libpcsclite_la_SOURCES = \
+@@ -490,8 +492,8 @@ libpcsclite_la_SOURCES = \
  	winscard_msg.c
  
  libpcsclite_la_LDFLAGS = -version-info 1:0:0
@@ -33,5 +33,5 @@ Disable installation of pcsc-spy
 +libpcsclite_la_CFLAGS = $(CFLAGS) $(LIBPCSC_PTHREAD_CFLAGS) -DLIBPCSCLITE -DSIMCLIST_NO_DUMPRESTORE
 +libpcsclite_la_LIBADD = $(LIBPCSC_PTHREAD_CFLAGS) $(PTHREAD_LIBS)
  pcscd_SOURCES = \
- 	atrhandler.c \
- 	atrhandler.h \
+ 	auth.c \
+ 	auth.h \
