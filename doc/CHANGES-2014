@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.875 2014/02/25 09:19:31 adam Exp $
+$NetBSD: CHANGES-2014,v 1.876 2014/02/25 12:38:14 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1368,3 +1368,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated chat/weechat to 0.4.3 [tonio 2014-02-24]
 	Updated multimedia/ffmpeg2 to 2.1.4 [adam 2014-02-25]
 	Updated math/isl to 0.12.2 [adam 2014-02-25]
+	Updated devel/mdds to 0.10.2 [ryoon 2014-02-25]
