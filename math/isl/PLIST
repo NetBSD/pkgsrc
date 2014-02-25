@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/04/16 06:47:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/02/25 09:18:25 adam Exp $
 include/isl/aff.h
 include/isl/aff_type.h
 include/isl/arg.h
@@ -39,6 +39,9 @@ include/isl/union_map.h
 include/isl/union_map_type.h
 include/isl/union_set.h
 include/isl/union_set_type.h
+include/isl/val.h
+include/isl/val_gmp.h
+include/isl/val_int.h
 include/isl/vec.h
 include/isl/version.h
 include/isl/vertices.h
