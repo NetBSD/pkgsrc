@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.878 2014/02/25 17:16:46 gdt Exp $
+$NetBSD: CHANGES-2014,v 1.879 2014/02/25 17:47:30 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1371,3 +1371,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/mdds to 0.10.2 [ryoon 2014-02-25]
 	Updated misc/libreoffice4 to 4.2.1.1 [ryoon 2014-02-25]
 	Updated security/ccid to 1.4.15 [gdt 2014-02-25]
+	Updated security/pcsc-lite to 1.8.11 [gdt 2014-02-25]
