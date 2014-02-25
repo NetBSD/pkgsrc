@@ -8097,7 +8097,7 @@ or package moves or removals, set the CTYPE variable on the command line to
 your local login name is not the same as your NetBSD login name. The target
 also automatically removes possibly existing entries for the package in the
 TODO file. Don't forget to commit the changes, e.g. by using make
-changes-entry-commit! If you are not using a checkout directly from
+commit-changes-entry! If you are not using a checkout directly from
 cvs.NetBSD.org, but e.g. a local copy of the repository, you can set
 USE_NETBSD_REPO=yes. This makes the cvs commands use the main repository.
 
@@ -8123,7 +8123,7 @@ $ vi Makefile # add SUBDIRS+=pkgname line
 $ cvs commit Makefile
 $ cd pkgname
 $ make CTYPE=Added changes-entry
-$ make changes-entry-commit
+$ make commit-changes-entry
 
 The commit message of the initial import should include part of the DESCR file,
 so people reading the mailing lists know what the package is/does.
