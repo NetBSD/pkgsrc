@@ -8121,6 +8121,9 @@ $ cvs commit
 $ cd ..
 $ vi Makefile # add SUBDIRS+=pkgname line
 $ cvs commit Makefile
+$ cd pkgname
+$ make CTYPE=Added changes-entry
+$ make changes-entry-commit
 
 The commit message of the initial import should include part of the DESCR file,
 so people reading the mailing lists know what the package is/does.
