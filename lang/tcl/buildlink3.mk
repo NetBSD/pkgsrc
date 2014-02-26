@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2014/01/11 14:41:05 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2014/02/26 11:24:28 dsainty Exp $
 
 BUILDLINK_TREE+=	tcl
 
@@ -25,6 +25,7 @@ FIND_PREFIX:=		TOOLS_PREFIX.tclsh=tcl
 .include "../../mk/find-prefix.mk"
 TCLSH=			${TOOLS_PREFIX.tclsh}/bin/tclsh
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .endif # TCL_BUILDLINK3_MK
 
