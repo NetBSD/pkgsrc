@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/02/18 22:20:25 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2014/02/26 18:15:25 wiedi Exp $
 
 DISTNAME=	rspamd-0.6.8
 PKGREVISION=	1
@@ -43,7 +43,8 @@ CONF_FILES+=	${EGDIR}/surbl-whitelist.inc ${PKG_SYSCONFDIR}/surbl-whitelist.inc
 CONF_FILES+=	${EGDIR}/workers.conf ${PKG_SYSCONFDIR}/workers.conf
 
 post-extract:
-	cd ${WRKSRC} && chmod 644 conf/*
+	${FIND} ${WRKSRC}/conf -type d -exec ${CHMOD} ${PKGDIRMODE} {} \;
+	${FIND} ${WRKSRC}/conf -type f -exec ${CHMOD} ${DOCMODE} {} \;
 
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
