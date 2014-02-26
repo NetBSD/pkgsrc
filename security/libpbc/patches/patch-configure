@@ -1,0 +1,30 @@
+$NetBSD: patch-configure,v 1.1 2014/02/26 04:00:57 agc Exp $
+
+The test for string equality in test(1) is "="
+
+--- configure.orig	2013-06-14 20:43:05.000000000 -0700
++++ configure	2014-02-25 10:54:12.000000000 -0800
+@@ -12888,12 +12888,14 @@
+ done
+ test -n "$YACC" || YACC="yacc"
+ 
++if false; then
+ if test "x$YACC" != "xbison -y"; then
+   echo "************************"
+   echo "bison not found"
+   echo "************************"
+   exit -1
+ fi
++fi
+ 
+ # Checks for libraries.
+ lib_err_msg="add its path to LDFLAGS\nsee ./configure --help"
+@@ -13532,7 +13534,7 @@
+ 
+ CFLAGS="$CFLAGS -Wall -W -Wfloat-equal -Wpointer-arith -Wcast-align -Wstrict-prototypes -Wredundant-decls \
+ -Wendif-labels -Wshadow -pipe -ffast-math -U__STRICT_ANSI__ -std=gnu99"
+-if test "$with_debug" == "y"; then
++if test "$with_debug" = "y"; then
+     CFLAGS="$CFLAGS -g3 -O0"
+ elif test "$with_enable_optimized" != "no"; then
+    	CFLAGS="$CFLAGS -g -O2"
