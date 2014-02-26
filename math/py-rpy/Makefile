@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2014/01/19 22:50:43 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2014/02/26 10:38:07 wiedi Exp $
 
 DISTNAME=	rpy2-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/rpy2/rpy/}
@@ -16,6 +16,7 @@ BUILDLINK_API_DEPENDS.R+= R>=2.11.0
 
 LDFLAGS.SunOS+=		-mimpure-text
 
+.include "../../mk/readline.buildlink3.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../math/R/buildlink3.mk"
