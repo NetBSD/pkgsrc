@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/17 22:17:47 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/26 18:20:11 wiedi Exp $
 #
 
 DISTNAME=	scrypt-1.1.6
@@ -13,4 +13,5 @@ LICENSE=	2-clause-bsd
 
 GNU_CONFIGURE=	yes
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
