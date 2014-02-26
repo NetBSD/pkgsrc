@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.54 2013/07/03 20:00:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.55 2014/02/26 10:12:49 jperkin Exp $
 bin/eventlogadm
 bin/findsmb
 bin/net
@@ -199,6 +199,7 @@ share/examples/samba/deluser.sh
 share/examples/samba/mknissmbpasswd.sh
 share/examples/samba/mknissmbpwdtbl.sh
 share/examples/samba/mksmbpasswd.sh
+${PLIST.pam}share/examples/samba/pam_smbpass/README
 ${PLIST.pam}share/examples/samba/pam_smbpass/kdc-pdc
 ${PLIST.pam}share/examples/samba/pam_smbpass/password-mature
 ${PLIST.pam}share/examples/samba/pam_smbpass/password-migration
