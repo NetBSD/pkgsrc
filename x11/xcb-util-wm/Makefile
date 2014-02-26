@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/02/20 07:38:52 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2014/02/26 09:47:27 jperkin Exp $
 
 DISTNAME=	xcb-util-wm-0.4.1
 CATEGORIES=	x11
@@ -11,8 +11,8 @@ COMMENT=	Client and window-manager helpers for ICCCM and EWMH
 LICENSE=	mit
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	m4 pkg-config gmake
 USE_LIBTOOL=	yes
+USE_TOOLS+=	gm4 gmake pkg-config
 
 PKGCONFIG_OVERRIDE=	ewmh/xcb-ewmh.pc.in
 PKGCONFIG_OVERRIDE=	icccm/xcb-icccm.pc.in
