@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.880 2014/02/25 18:02:50 gdt Exp $
+$NetBSD: CHANGES-2014,v 1.881 2014/02/26 04:02:16 agc Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1373,3 +1373,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/ccid to 1.4.15 [gdt 2014-02-25]
 	Updated security/pcsc-lite to 1.8.11 [gdt 2014-02-25]
 	Updated security/pcsc-tools to 1.4.22 [gdt 2014-02-25]
+	Updated security/libpbc to 0.5.14 [agc 2014-02-25]
