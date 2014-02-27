@@ -1,0 +1,33 @@
+$NetBSD: patch-projects_libcxx_lib_buildit,v 1.1 2014/02/27 17:35:35 adam Exp $
+
+Portability fix.
+
+--- projects/libcxx/lib/buildit.orig	2013-12-27 14:42:54.000000000 +0000
++++ projects/libcxx/lib/buildit
+@@ -45,7 +45,7 @@ case $TRIPLE in
+       RC_CFLAGS="-arch i386 -arch x86_64"
+     fi
+     SOEXT=dylib
+-    if [ "$MACOSX_DEPLOYMENT_TARGET" == "10.6" ]
++    if [ "$MACOSX_DEPLOYMENT_TARGET" = "10.6" ]
+     then
+         EXTRA_FLAGS="-nostdinc++ -std=c++11 -U__STRICT_ANSI__"
+         LDSHARED_FLAGS="-o libc++.1.dylib \
+@@ -101,7 +101,7 @@ case $TRIPLE in
+     hostOS=`echo $hostOS | sed -e "s/\s+$//"`
+     hostOS=`echo $hostOS | tr '[A-Z]' '[a-z]'`
+ 
+-    if [ $hostOS == "linux" ]
++    if [ $hostOS = "linux" ]
+     then
+       LDSHARED_FLAGS="-o libc++.so.1 \
+         -qmkshrobj -Wl,-soname,libc++.so.1 \
+@@ -153,7 +153,7 @@ case $TRIPLE in
+     *-*-mingw*)
+         ;;
+     *-ibm-*)
+-        if [ $hostOS == "linux" ]
++        if [ $hostOS = "linux" ]
+         then
+            rm -f libc++.so
+            ln -s libc++.so.1 libc++.so
