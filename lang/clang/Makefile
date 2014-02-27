@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.25 2014/01/25 12:26:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2014/02/27 17:35:35 adam Exp $
 
 DISTNAME=	clang-3.4
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 DISTFILES=	llvm-${PKGVERSION_NOREV}.src.tar.gz \
+		libcxx-${PKGVERSION_NOREV}.src.tar.gz \
 		clang-${PKGVERSION_NOREV}.src.tar.gz
 
 MAINTAINER=	adam.hoka@gmail.com
@@ -56,7 +58,7 @@ TEST_ILLUMOS_3849!=\
 #
 #CFLAGS.SunOS+=		-mimpure-text
 
-SUBST_CLASSES+=				fix-paths
+SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fixing absolute gcc paths for SunOS.
 SUBST_FILES.fix-paths=		tools/clang/lib/Driver/Tools.cpp
@@ -82,6 +84,7 @@ SUBST_SED.fix-paths+=		-e 's,^.*cxa_finalize.*$$,		; //cxa_finalize.o,g'
 .endif
 
 post-extract:
+	mv ${WRKDIR}/libcxx-${PKGVERSION_NOREV} ${WRKSRC}/projects/libcxx
 	mv ${WRKDIR}/clang-${PKGVERSION_NOREV} ${WRKSRC}/tools/clang
 .if ${OPSYS} == "SunOS"
 	${ECHO} "int sun_ld_needs_a_symbol=0;" >> ${WRKSRC}/lib/Target/NVPTX/InstPrinter/NVPTXInstPrinter.cpp
