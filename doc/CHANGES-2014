@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.883 2014/02/27 07:21:27 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.884 2014/02/27 12:42:16 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1376,3 +1376,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/libpbc to 0.5.14 [agc 2014-02-25]
 	Updated multimedia/vlc2 to 2.0.9nb3 [wiz 2014-02-26]
 	Updated audio/xmp to 4.0.7 [rxg 2014-02-27]
+	Updated devel/libdatrie to 0.2.8 [obache 2014-02-27]
