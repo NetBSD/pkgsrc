@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/04/06 11:43:39 obache Exp $
+$NetBSD: distinfo,v 1.2 2014/02/27 12:43:31 obache Exp $
 
-SHA1 (swath-0.4.1.tar.gz) = a94bcdc905c13aef7dcb4bd420792598e800c662
-RMD160 (swath-0.4.1.tar.gz) = 38e224d7e48d7d518d7a6562edb3c10155a51494
-Size (swath-0.4.1.tar.gz) = 441022 bytes
+SHA1 (swath-0.4.3.tar.gz) = 0c9f0e583ed0678b867c56f0b14cb2781cece012
+RMD160 (swath-0.4.3.tar.gz) = 0852978e2e854c161362483e6c3d2fc73e49eb10
+Size (swath-0.4.3.tar.gz) = 481773 bytes

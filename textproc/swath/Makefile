@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/10/25 06:57:02 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/27 12:43:31 obache Exp $
 #
 
-DISTNAME=	swath-0.4.1
+DISTNAME=	swath-0.4.3
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://linux.thai.net/pub/ThaiLinux/software/swath/ 	\
 		http://linux.thai.net/pub/ThaiLinux/software/swath/
