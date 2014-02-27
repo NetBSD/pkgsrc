@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/09/09 11:56:57 obache Exp $
+$NetBSD: distinfo,v 1.2 2014/02/27 12:48:53 obache Exp $
 
-SHA1 (ibus-libthai-0.1.0.tar.xz) = b37b2c4fb01eb600c067218874c9e85a2bce7ba5
-RMD160 (ibus-libthai-0.1.0.tar.xz) = 9f36e633a24a0311194170272e070f853f40fe58
-Size (ibus-libthai-0.1.0.tar.xz) = 145112 bytes
+SHA1 (ibus-libthai-0.1.2.tar.xz) = 0d264b9998d55a2036af79270062f5b31bfed065
+RMD160 (ibus-libthai-0.1.2.tar.xz) = 7cd3964a8beb2880c73200bf9b1422a290b5184d
+Size (ibus-libthai-0.1.2.tar.xz) = 150224 bytes
