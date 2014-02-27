@@ -1,3 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/08 16:20:08 wiz Exp $
-lib/X11/fonts/OTF/EBGaramond.otf
-lib/X11/fonts/OTF/EBGaramondSC.otf
+@comment $NetBSD: PLIST,v 1.2 2014/02/27 14:55:53 wiz Exp $
+lib/X11/fonts/OTF/EBGaramond-Initials.otf
+lib/X11/fonts/OTF/EBGaramond-InitialsF1.otf
+lib/X11/fonts/OTF/EBGaramond-InitialsF2.otf
+lib/X11/fonts/OTF/EBGaramond08-Italic.otf
+lib/X11/fonts/OTF/EBGaramond08-Regular.otf
+lib/X11/fonts/OTF/EBGaramond08-SC.otf
+lib/X11/fonts/OTF/EBGaramond12-AllSC.otf
+lib/X11/fonts/OTF/EBGaramond12-Italic.otf
+lib/X11/fonts/OTF/EBGaramond12-Regular.otf
+lib/X11/fonts/OTF/EBGaramond12-SC.otf
+share/doc/EBGaramond/Specimen.pdf
