@@ -1,23 +1,23 @@
-# $NetBSD: Makefile,v 1.3 2013/04/08 01:42:39 rodent Exp $
-#
+# $NetBSD: Makefile,v 1.4 2014/02/27 14:55:53 wiz Exp $
 
-DISTNAME=	EB-Garamond-0.012
+DISTNAME=	EBGaramond-0.015d
 CATEGORIES=	fonts
-MASTER_SITES=	# https://github.com/georgd/EB-Garamond/tarball/0.012
+MASTER_SITES=	http://bitbucket.org/georgd/eb-garamond/downloads/
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.georgduffner.at/ebgaramond/index.html
+HOMEPAGE=	http://www.georgduffner.at/ebgaramond/
 COMMENT=	Egenolff-Berner Garamond font
 LICENSE=	ofl-v1.1
 
-WRKSRC=		${WRKDIR}/georgd-EB-Garamond-d9f3abd
-
-INSTALLATION_DIRS=	lib/X11/fonts/OTF
 FONTS_DIRS.ttf=		lib/X11/fonts/OTF
-
-do-build:
+DOCDIR=		share/doc/EBGaramond
+INSTALLATION_DIRS=	${FONTS_DIRS.ttf} ${DOCDIR}
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/otf/* ${DESTDIR}${PREFIX}/lib/X11/fonts/OTF
+	${INSTALL_DATA} ${WRKSRC}/otf/* ${DESTDIR}${PREFIX}/${FONTS_DIRS.ttf}
+	${INSTALL_DATA} ${WRKSRC}/specimen/* ${DESTDIR}${PREFIX}/${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
