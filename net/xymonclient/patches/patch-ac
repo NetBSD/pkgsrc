@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.5 2012/10/11 18:42:20 spz Exp $
+$NetBSD: patch-ac,v 1.6 2014/02/27 20:22:41 spz Exp $
 
 pkgsrcify
 
---- client/Makefile.orig	2011-12-12 22:15:39.000000000 +0000
+--- client/Makefile.orig	2014-01-07 21:43:56.000000000 +0000
 +++ client/Makefile
-@@ -19,6 +19,25 @@ endif
+@@ -24,6 +24,25 @@ XYMONCLIENTCOMMLIBS = $(XYMONCLIENTCOMML
  PROGRAMS=xymonlaunch logfetch clientupdate orcaxymon msgcache
  COMMONTOOLS=xymon xymoncmd xymongrep xymoncfg xymondigest
  
@@ -30,78 +30,50 @@ pkgsrcify
  all: $(PROGRAMS) $(COMMONTOOLS) xymonclient.cfg clientlaunch.cfg $(EXTRATOOLS)
  
  xymonclient.cfg: xymonclient.cfg.DIST
-@@ -58,28 +77,58 @@ netbsd-meminfo: netbsd-meminfo.c
+@@ -62,22 +81,21 @@ netbsd-meminfo: netbsd-meminfo.c
+ 	$(CC) -o $@ netbsd-meminfo.c
  
  install:
- 	if test ! -d $(INSTALLROOT)$(XYMONHOME)       ; then mkdir -p $(INSTALLROOT)$(XYMONHOME)       ; fi
--	if test ! -d $(INSTALLROOT)$(XYMONHOME)/bin   ; then mkdir -p $(INSTALLROOT)$(XYMONHOME)/bin   ; fi
--	if test ! -d $(INSTALLROOT)$(XYMONHOME)/etc   ; then mkdir -p $(INSTALLROOT)$(XYMONHOME)/etc   ; fi
--	if test ! -d $(INSTALLROOT)$(XYMONHOME)/tmp   ; then mkdir -p $(INSTALLROOT)$(XYMONHOME)/tmp   ; fi
--	if test ! -d $(INSTALLROOT)$(XYMONHOME)/logs  ; then mkdir -p $(INSTALLROOT)$(XYMONHOME)/logs  ; fi
--	if test ! -d $(INSTALLROOT)$(XYMONHOME)/ext   ; then mkdir -p $(INSTALLROOT)$(XYMONHOME)/ext   ; fi
--	if test ! -d $(INSTALLROOT)$(XYMONHOME)/local ; then mkdir -p $(INSTALLROOT)$(XYMONHOME)/local ; fi
--	if test ! -f $(INSTALLROOT)$(XYMONHOME)/etc/localclient.cfg ; then cp localclient.cfg $(INSTALLROOT)$(XYMONHOME)/etc/ ; fi
+-	if test ! -d $(INSTALLROOT)$(XYMONHOME)       ; then mkdir -p $(INSTALLROOT)$(XYMONHOME)       ; chmod 755 $(INSTALLROOT)$(XYMONHOME)      ; fi
+-	if test ! -d $(INSTALLROOT)$(XYMONHOME)/bin   ; then mkdir -p $(INSTALLROOT)$(XYMONHOME)/bin   ; chmod 755 $(INSTALLROOT)$(XYMONHOME)/bin  ; fi
+-	if test ! -d $(INSTALLROOT)$(XYMONHOME)/etc   ; then mkdir -p $(INSTALLROOT)$(XYMONHOME)/etc   ; chmod 755 $(INSTALLROOT)$(XYMONHOME)/etc  ; fi
+-	if test ! -d $(INSTALLROOT)$(XYMONHOME)/tmp   ; then mkdir -p $(INSTALLROOT)$(XYMONHOME)/tmp   ; chmod 755 $(INSTALLROOT)$(XYMONHOME)/tmp  ; fi
+-	if test ! -d $(INSTALLROOT)$(XYMONHOME)/logs  ; then mkdir -p $(INSTALLROOT)$(XYMONHOME)/logs  ; chmod 755 $(INSTALLROOT)$(XYMONHOME)/logs ; fi
+-	if test ! -d $(INSTALLROOT)$(XYMONHOME)/ext   ; then mkdir -p $(INSTALLROOT)$(XYMONHOME)/ext   ; chmod 755 $(INSTALLROOT)$(XYMONHOME)/ext  ; fi
+-	if test ! -d $(INSTALLROOT)$(XYMONHOME)/local ; then mkdir -p $(INSTALLROOT)$(XYMONHOME)/local ; chmod 755 $(INSTALLROOT)$(XYMONHOME)/local; fi
+-	if test ! -f $(INSTALLROOT)$(XYMONHOME)/etc/localclient.cfg ; then cp localclient.cfg $(INSTALLROOT)$(XYMONHOME)/etc/ ; chmod 644 $(INSTALLROOT)$(XYMONHOME)/etc/localclient.cfg; fi
 -	if test ! -f $(INSTALLROOT)$(XYMONHOME)/local/README; then cp README-local $(INSTALLROOT)$(XYMONHOME)/local/README ; chmod 644 $(INSTALLROOT)$(XYMONHOME)/local/README; fi
+-	chmod 755 runclient.sh $(PROGRAMS) xymonclient*.sh $(COMMONTOOLS) $(EXTRATOOLS)
 -	cp -fp runclient.sh $(INSTALLROOT)$(XYMONHOME)
 -	cp -fp $(PROGRAMS) xymonclient*.sh $(COMMONTOOLS) $(EXTRATOOLS) $(INSTALLROOT)$(XYMONHOME)/bin/
--	chmod ugo+x $(INSTALLROOT)$(XYMONHOME)/bin/*
-+	if test ! -d $(INSTALLROOT)$(INSTALLBINDIR)   ; then mkdir -p $(INSTALLROOT)$(INSTALLBINDIR)   ; fi
-+ifndef PKGBUILD
-+ifneq ($(INSTALLBINDIR),$(XYMONHOME)/bin)
-+	ln -sf $(INSTALLBINDIR) $(INSTALLROOT)$(XYMONHOME)/bin
-+endif
-+endif
-+	if test ! -d $(INSTALLROOT)$(INSTALLETCDIR)   ; then mkdir -p $(INSTALLROOT)$(INSTALLETCDIR)   ; fi
-+ifndef PKGBUILD
-+ifneq ($(INSTALLETCDIR),$(XYMONHOME)/etc)
-+	ln -sf $(INSTALLETCDIR) $(INSTALLROOT)$(XYMONHOME)/etc
-+endif
-+endif
-+	if test ! -d $(INSTALLROOT)$(INSTALLTMPDIR)   ; then mkdir -p $(INSTALLROOT)$(INSTALLTMPDIR)   ; fi
-+ifndef PKGBUILD
-+ifneq ($(INSTALLTMPDIR),$(XYMONHOME)/tmp)
-+	ln -sf $(INSTALLTMPDIR) $(INSTALLROOT)$(XYMONHOME)/tmp
-+endif
-+endif
-+	if test ! -d $(INSTALLROOT)$(XYMONLOGDIR)  ; then mkdir -p $(INSTALLROOT)$(XYMONLOGDIR)  ; fi
-+ifndef PKGBUILD
-+ifneq ($(BBLOGDIR),$(XYMONHOME)/log)
-+	ln -sf $(BBLOGDIR) $(INSTALLROOT)$(XYMONHOME)/log
-+endif
-+endif
-+	if test ! -d $(INSTALLROOT)$(INSTALLEXTDIR)   ; then mkdir -p $(INSTALLROOT)$(INSTALLEXTDIR)   ; fi
-+ifndef PKGBUILD
-+ifneq ($(INSTALLEXTDIR),$(XYMONHOME)/ext)
-+	ln -sf $(INSTALLEXTDIR) $(INSTALLROOT)$(XYMONHOME)/ext
-+endif
-+endif
-+	if test ! -d $(INSTALLROOT)$(INSTALLLOCALDIR) ; then mkdir -p $(INSTALLROOT)$(INSTALLLOCALDIR) ; fi
-+ifndef PKGBUILD
-+ifneq ($(INSTALLLOCALDIR),$(XYMONHOME)/local)
-+	ln -sf $(INSTALLLOCALDIR) $(INSTALLROOT)$(XYMONHOME)/local
-+endif
-+endif
-+	if test ! -f $(INSTALLROOT)$(INSTALLETCDIR)/localclient.cfg ; then cp localclient.cfg $(INSTALLROOT)$(INSTALLETCDIR) ; fi
+-
+-	../build/merge-sects clientlaunch.cfg $(INSTALLROOT)$(XYMONHOME)/etc/clientlaunch.cfg
+-	../build/merge-lines xymonclient.cfg $(INSTALLROOT)$(XYMONHOME)/etc/xymonclient.cfg
+-	chmod 644 $(INSTALLROOT)$(XYMONHOME)/etc/clientlaunch.cfg $(INSTALLROOT)$(XYMONHOME)/etc/xymonclient.cfg
++	if test ! -d $(INSTALLROOT)$(XYMONHOME)       ; then mkdir -p $(INSTALLROOT)$(XYMONHOME)       ;  fi
++	if test ! -d $(INSTALLROOT)$(INSTALLBINDIR)   ; then mkdir -p $(INSTALLROOT)$(INSTALLBINDIR)   ;  fi
++	if test ! -d $(INSTALLROOT)$(INSTALLETCDIR)   ; then mkdir -p $(INSTALLROOT)$(INSTALLETCDIR)   ;  fi
++	if test ! -d $(INSTALLROOT)$(INSTALLTMPDIR)   ; then mkdir -p $(INSTALLROOT)$(INSTALLTMPDIR)   ;  fi
++	if test ! -d $(INSTALLROOT)$(XYMONLOGDIR)     ; then mkdir -p $(INSTALLROOT)$(XYMONLOGDIR)  ;  fi
++	if test ! -d $(INSTALLROOT)$(INSTALLEXTDIR)   ; then mkdir -p $(INSTALLROOT)$(INSTALLEXTDIR)   ;  fi
++	if test ! -d $(INSTALLROOT)$(INSTALLLOCALDIR) ; then mkdir -p $(INSTALLROOT)$(INSTALLLOCALDIR) ;  fi
++	if test ! -f $(INSTALLROOT)$(INSTALLETCDIR)/localclient.cfg ; then cp localclient.cfg $(INSTALLROOT)$(INSTALLETCDIR)/ ;  fi
 +	if test ! -f $(INSTALLROOT)$(INSTALLLOCALDIR)/README; then cp README-local $(INSTALLROOT)$(INSTALLLOCALDIR)/README ; chmod 644 $(INSTALLROOT)$(INSTALLLOCALDIR)/README; fi
 +	cp -fp runclient.sh $(INSTALLROOT)$(INSTALLBINDIR)
 +	cp -fp $(PROGRAMS) xymonclient*.sh $(COMMONTOOLS) $(EXTRATOOLS) $(INSTALLROOT)$(INSTALLBINDIR)
 +	chmod ugo+x $(INSTALLROOT)$(INSTALLBINDIR)/*
- 
--	../build/merge-sects clientlaunch.cfg $(INSTALLROOT)$(XYMONHOME)/etc/clientlaunch.cfg
--	../build/merge-lines xymonclient.cfg $(INSTALLROOT)$(XYMONHOME)/etc/xymonclient.cfg
++
 +	../build/merge-sects clientlaunch.cfg $(INSTALLROOT)$(INSTALLETCDIR)/clientlaunch.cfg
 +	../build/merge-lines xymonclient.cfg $(INSTALLROOT)$(INSTALLETCDIR)/xymonclient.cfg
+ 
  ifndef PKGBUILD
--	chown -R $(XYMONUSER) $(INSTALLROOT)$(XYMONHOME)
-+	chown -R $(XYMONUSER) $(INSTALLROOT)$(XYMONHOME) $(INSTALLROOT)$(INSTALLETCDIR) $(INSTALLROOT)$(INSTALLEXADIR) $(INSTALLROOT)$(INSTALLEXTDIR) $(INSTALLROOT)$(INSTALLBINDIR) $(INSTALLROOT)$(INSTALLTMPDIR) $(INSTALLROOT)$(XYMONLOGDIR) $$(INSTALLROOT)$(INSTALLLOCALDIR)
- endif
+ 	chown -R $(XYMONUSER) $(INSTALLROOT)$(XYMONHOME)
+@@ -87,7 +105,7 @@ endif
  
  install-localclient:
+ 	chmod 755 xymond_client
 -	cp -fp xymond_client $(INSTALLROOT)$(XYMONHOME)/bin/
-+	cp -fp xymond_client $(INSTALLROOT)$(INSTALLBINDIR)
++	cp -fp xymond_client $(INSTALLROOT)$(INSTALLBINDIR)/
  ifndef PKGBUILD
--	chown $(XYMONUSER) $(INSTALLROOT)$(XYMONHOME)/bin/xymond_client
-+	chown $(XYMONUSER) $(INSTALLROOT)$(INSTALLBINDIR)/xymond_client
- endif
- 
- clean:
+ 	chown $(XYMONUSER) $(INSTALLROOT)$(XYMONHOME)/bin/xymond_client
+ 	chgrp `$(IDTOOL) -g $(XYMONUSER)` $(INSTALLROOT)$(XYMONHOME)/bin/xymond_client
