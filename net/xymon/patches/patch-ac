@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.4 2012/04/28 18:26:19 gendalia Exp $
+$NetBSD: patch-ac,v 1.5 2014/02/27 20:22:41 spz Exp $
 
 pkgsrc uses rc.d files to stop/start, don't copy that xymon.sh
 
---- xymond/Makefile.orig	2011-12-12 22:18:17.000000000 +0000
+--- xymond/Makefile.orig	2014-01-19 15:23:42.000000000 +0000
 +++ xymond/Makefile
-@@ -160,7 +160,9 @@ install-cfg:
+@@ -187,7 +187,9 @@ install-cfg:
  	cd etcfiles; ../../build/merge-sects graphs.cfg $(INSTALLROOT)$(INSTALLETCDIR)/graphs.cfg
  	cd etcfiles; ../../build/merge-lines columndoc.csv $(INSTALLROOT)$(INSTALLETCDIR)/columndoc.csv
  	cd etcfiles; (echo "hosts.cfg"; echo "alerts.cfg"; echo "analysis.cfg"; echo "combo.cfg"; echo "client-local.cfg"; echo "holidays.cfg"; echo "rrddefinitions.cfg"; echo snmpmibs.cfg; echo xymonmenu.cfg; echo xymon-apache.conf) | ../../build/setup-newfiles $(INSTALLROOT)$(INSTALLETCDIR)/
