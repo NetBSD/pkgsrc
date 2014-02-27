@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2013/10/10 14:42:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.59 2014/02/27 01:01:21 wiedi Exp $
 #
 
 DISTNAME=	gwave2-20090213
@@ -22,6 +22,7 @@ EVAL_PREFIX+=	GRAPHDIR=plotutils
 CONFIGURE_ENV+=	GRAPH=${GRAPHDIR}/bin/graph
 
 LDFLAGS.DragonFly=	-lX11
+LDFLAGS.SunOS+=		-lX11
 
 # make this file get rebuilt in a way that gcc3 can deal with
 #post-extract:
