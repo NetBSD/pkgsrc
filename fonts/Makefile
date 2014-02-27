@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.243 2014/02/02 16:08:07 rodent Exp $
+# $NetBSD: Makefile,v 1.244 2014/02/27 14:46:37 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -161,6 +161,7 @@ SUBDIR+=	p5-Font-FreeType
 SUBDIR+=	p5-Font-TTF
 SUBDIR+=	p5-Font-TTFMetrics
 SUBDIR+=	pcf2bdf
+SUBDIR+=	pixel-sagas-startrek
 SUBDIR+=	profont
 SUBDIR+=	proggy-fonts
 SUBDIR+=	ps2pkm
