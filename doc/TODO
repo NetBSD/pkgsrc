@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13036 2014/02/27 07:20:39 wiz Exp $
+$NetBSD: TODO,v 1.13037 2014/02/27 12:08:29 obache Exp $
 
 Suggested new packages
 ======================
@@ -1080,6 +1080,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sudo-1.8.9p5
 	o swapd-1.0.5
 	o swatch-3.2.3
+	o swath-0.5.2
 	o swfdec-gnome-2.30.1
 	o sympa-6.1.19
 	o synergy-1.4.12 [pkg/48141]
