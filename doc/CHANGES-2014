@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.886 2014/02/27 12:45:34 obache Exp $
+$NetBSD: CHANGES-2014,v 1.887 2014/02/27 12:47:56 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1379,3 +1379,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/libdatrie to 0.2.8 [obache 2014-02-27]
 	Updated textproc/swath to 0.4.3 [obache 2014-02-27]
 	Updated devel/libthai to 0.1.20 [obache 2014-02-27]
+	Updated inputmethod/gtk-im-libthai to 0.2.1nb13 [obache 2014-02-27]
