@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2013/09/03 09:24:42 obache Exp $
+# $NetBSD: Makefile,v 1.14 2014/02/27 12:45:24 obache Exp $
 
-DISTNAME=	libthai-0.1.19
+DISTNAME=	libthai-0.1.20
 CATEGORIES=	devel
 MASTER_SITES=	http://linux.thai.net/pub/thailinux/software/libthai/ \
 		ftp://linux.thai.net/pub/ThaiLinux/software/libthai/
