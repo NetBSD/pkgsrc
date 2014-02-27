@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.891 2014/02/27 14:56:02 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.892 2014/02/27 15:07:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1384,3 +1384,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added fonts/pixel-sagas-startrek version 201312 [wiz 2014-02-27]
 	Added misc/starplot version 0.95.5 [wiz 2014-02-27]
 	Updated fonts/EB-Garamond to 0.015d [wiz 2014-02-27]
+	Updated graphics/png to 1.6.10rc01 [wiz 2014-02-27]
