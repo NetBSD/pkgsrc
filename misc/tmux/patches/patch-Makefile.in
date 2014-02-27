@@ -1,0 +1,19 @@
+$NetBSD: patch-Makefile.in,v 1.1 2014/02/27 15:56:54 hauke Exp $
+
+At least on SunOS, lang/nawk (nawk-20050424nb3) insists on
+a space between -f and the program file name, by penalty of
+"/opt/local/bin/nawk: no program filename"
+
+--- Makefile.in.orig	2014-02-22 20:56:13.000000000 +0000
++++ Makefile.in
+@@ -1221,8 +1221,8 @@ install-exec-hook:
+ 		sed -e "s|@SYSCONFDIR@|$(sysconfdir)|g" $(srcdir)/tmux.1 \
+ 			>$(srcdir)/tmux.1.mdoc; \
+ 	else \
+-		sed -e "s|@SYSCONFDIR@|$(sysconfdir)|g" $(srcdir)/tmux.1| \
+-			$(AWK) -fmdoc2man.awk >$(srcdir)/tmux.1.man; \
++		sed -e "s|@SYSCONFDIR@|$(sysconfdir)|g" $(srcdir)/tmux.1 | \
++			$(AWK) -f mdoc2man.awk >$(srcdir)/tmux.1.man; \
+ 	fi
+ 	$(MKDIR_P) $(DESTDIR)$(mandir)/man1
+ 	$(INSTALL_DATA) $(srcdir)/tmux.1.@MANFORMAT@ \
