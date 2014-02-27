@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2014/02/27 14:46:17 wiz Exp $
+$NetBSD: distinfo,v 1.2 2014/02/27 14:50:30 wiz Exp $
 
 SHA1 (PS_Font_Fontana.zip) = 231e24e3f618a98be36b185873b709b024c4497d
 RMD160 (PS_Font_Fontana.zip) = 4057fb90ceca3fafa5a7d34d9cbc56f410068a2c
@@ -9,9 +9,6 @@ Size (PS_Font_Jefferies.zip) = 38705 bytes
 SHA1 (PS_Font_Montalban.zip) = 72f7d8418065a3f8e007d419d6af2e3589b794cf
 RMD160 (PS_Font_Montalban.zip) = f568f3d781980857cf8c35c88eb7dcdf44ccb743
 Size (PS_Font_Montalban.zip) = 44884 bytes
-SHA1 (PS_Font_Okuda.zip) = 5c6a18c672f4621163aac49121e6271ea70f5e4a
-RMD160 (PS_Font_Okuda.zip) = 5501bff63925cb554ed43cab93c1ccc0582f076a
-Size (PS_Font_Okuda.zip) = 45662 bytes
 SHA1 (PS_Font_Probert.zip) = afa2df478eb69bd3841207eac29aad132d3598af
 RMD160 (PS_Font_Probert.zip) = 2b47ef2b267699a62aaaae5e2596f326e934669b
 Size (PS_Font_Probert.zip) = 74185 bytes
