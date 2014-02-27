@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2012/12/12 02:08:11 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.39 2014/02/27 23:47:12 schmonz Exp $
 bin/ikiwiki
 bin/ikiwiki-calendar
 bin/ikiwiki-makerepo
@@ -148,7 +148,14 @@ share/ikiwiki/javascript/ikiwiki/ikiwiki.js
 share/ikiwiki/javascript/ikiwiki/relativedate.js
 share/ikiwiki/javascript/ikiwiki/toggle.js
 share/ikiwiki/jquery/ikiwiki/jquery.min.js
+share/ikiwiki/openid-selector/ikiwiki/openid/aol.png
+share/ikiwiki/openid-selector/ikiwiki/openid/goa-account-flickr.png
+share/ikiwiki/openid-selector/ikiwiki/openid/goa-account-google.png
+share/ikiwiki/openid-selector/ikiwiki/openid/goa-account-yahoo.png
+share/ikiwiki/openid-selector/ikiwiki/openid/livejournal.png
 share/ikiwiki/openid-selector/ikiwiki/openid/openid-jquery.js
+share/ikiwiki/openid-selector/ikiwiki/openid/verisign.png
+share/ikiwiki/openid-selector/ikiwiki/openid/wordpress.png
 share/ikiwiki/osm/ikiwiki/images/osm.png
 share/ikiwiki/osm/ikiwiki/osm.js
 share/ikiwiki/po/cs/basewiki/ikiwiki.cs.po
