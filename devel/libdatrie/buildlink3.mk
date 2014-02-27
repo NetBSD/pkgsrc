@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/05/15 08:52:42 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2014/02/27 12:42:05 obache Exp $
 
 BUILDLINK_TREE+=	libdatrie
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libdatrie
 LIBDATRIE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libdatrie+=	libdatrie>=0.2.0
+BUILDLINK_ABI_DEPENDS.libdatrie+=	libdatrie>=0.2.7.1
 BUILDLINK_PKGSRCDIR.libdatrie?=	../../devel/libdatrie
 .endif # LIBDATRIE_BUILDLINK3_MK
 
