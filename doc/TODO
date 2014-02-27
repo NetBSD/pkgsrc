@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13038 2014/02/27 12:42:16 obache Exp $
+$NetBSD: TODO,v 1.13039 2014/02/27 12:45:34 obache Exp $
 
 Suggested new packages
 ======================
@@ -759,7 +759,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libstree-0.4.3pre2 [pkg/43748]
 	o libtar-1.2.20
 	o libtcl-nothread-8.5.1
-	o libthai-0.1.20
 	o libthrift-0.8.0
 	o libusb-1.0.18
 	o libusbx-1.0.18 [but actually obsolete, switch to libusb]
