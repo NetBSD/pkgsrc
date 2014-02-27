@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/05/15 08:55:35 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2014/02/27 12:45:24 obache Exp $
 
 BUILDLINK_TREE+=	libthai
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libthai
 LIBTHAI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libthai+=	libthai>=0.1.10
+BUILDLINK_ABI_DEPENDS.libthai+=	libthai>=0.1.20
 BUILDLINK_PKGSRCDIR.libthai?=	../../devel/libthai
 
 .include "../../devel/libdatrie/buildlink3.mk"
