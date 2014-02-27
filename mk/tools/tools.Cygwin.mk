@@ -1,4 +1,4 @@
-# $NetBSD: tools.Cygwin.mk,v 1.6 2014/02/14 07:43:46 obache Exp $
+# $NetBSD: tools.Cygwin.mk,v 1.7 2014/02/27 08:47:32 obache Exp $
 #
 # System-supplied tools for the Cygwin operating system.
 
@@ -142,7 +142,7 @@ TOOLS_PLATFORM.xargs?=		/bin/xargs -r
 .if exists(/bin/xgettext)
 TOOLS_PLATFORM.xgettext?=	/bin/xgettext
 .endif
-TOOLS_PLATFORM.xzcat?=		/bin/xz
+TOOLS_PLATFORM.xz?=		/bin/xz
 TOOLS_PLATFORM.xzcat?=		/bin/xzcat
 .if exists(/bin/yacc)
 TOOLS_PLATFORM.yacc?=		/bin/yacc
