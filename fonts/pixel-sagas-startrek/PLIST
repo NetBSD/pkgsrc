@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/02/27 14:46:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/02/27 14:50:30 wiz Exp $
 lib/X11/fonts/TTF/Fontana Bold Italic.ttf
 lib/X11/fonts/TTF/Fontana Bold.ttf
 lib/X11/fonts/TTF/Fontana Italic.ttf
@@ -11,10 +11,6 @@ lib/X11/fonts/TTF/Montalban Condensed Italic.ttf
 lib/X11/fonts/TTF/Montalban Condensed.ttf
 lib/X11/fonts/TTF/Montalban Italic.ttf
 lib/X11/fonts/TTF/Montalban.ttf
-lib/X11/fonts/TTF/Okuda Bold Italic.ttf
-lib/X11/fonts/TTF/Okuda Bold.ttf
-lib/X11/fonts/TTF/Okuda Italic.ttf
-lib/X11/fonts/TTF/Okuda.ttf
 lib/X11/fonts/TTF/Probert Black Italic.otf
 lib/X11/fonts/TTF/Probert Black.otf
 lib/X11/fonts/TTF/Probert Bold Italic.otf
