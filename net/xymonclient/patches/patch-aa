@@ -1,9 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2012/10/11 18:42:19 spz Exp $
+$NetBSD: patch-aa,v 1.6 2014/02/27 20:22:41 spz Exp $
 
-pkgsrcify
-
---- configure.client.orig	2011-03-08 17:20:28.000000000 +0000
-+++ configure.client
+--- ./configure.client.orig	2014-01-19 12:17:56.000000000 +0000
++++ ./configure.client
 @@ -75,7 +75,7 @@ then
  	XYMONUSER="xymon"
  fi
@@ -57,11 +55,7 @@ pkgsrcify
  fi
  if test -d "$XYMONTOPDIR"
  then
-@@ -158,9 +160,12 @@ echo "# Toplevel dir"
- echo "XYMONTOPDIR = $XYMONTOPDIR"        >>Makefile
- echo "# Server home dir for etc/, www/"  >>Makefile
- echo "XYMONHOME = $XYMONHOME"            >>Makefile
-+echo "XYMONCLIENTHOME = $XYMONHOME/client"            >>Makefile
+@@ -156,6 +158,8 @@ echo "XYMONTOPDIR = $XYMONTOPDIR"       
  echo ""                                  >>Makefile
  echo "# Xymon settings follows"          >>Makefile
  echo "#"                                 >>Makefile
@@ -70,7 +64,7 @@ pkgsrcify
  echo "# Username running Xymon"          >>Makefile
  echo "XYMONUSER = $XYMONUSER"            >>Makefile
  echo "# Xymon server IP-address"         >>Makefile
-@@ -194,9 +199,15 @@ fi
+@@ -189,9 +193,15 @@ fi
  if test "$INSTALLETCDIR" != ""; then
  	echo "INSTALLETCDIR = $INSTALLETCDIR"   >>Makefile
  fi
