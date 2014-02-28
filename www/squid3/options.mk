@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2013/12/28 19:50:34 hauke Exp $
+# $NetBSD: options.mk,v 1.12 2014/02/28 12:28:32 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	inet6 snmp ssl squid-backend-aufs squid-backend-diskd \
@@ -91,7 +91,10 @@ CONFIGURE_ARGS+=	--disable-ipv6
 
 .if !empty(PKG_OPTIONS:Msquid-kerberos-helper)
 .include "../../mk/krb5.buildlink3.mk"
+CONFIGURE_ARGS+=	--with-krb5-config=${KRB5_CONFIG:Q}
 SQUID_NEGOTIATE_AUTH_HELPERS+=	kerberos
+.else
+CONFIGURE_ARGS+=	--with-krb5-config=no
 .endif
 
 .if !empty(PKG_OPTIONS:Msquid-ldap-helper)
