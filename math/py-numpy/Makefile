@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.26 2014/01/25 10:30:13 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2014/02/28 09:43:10 adam Exp $
 
-DISTNAME=	numpy-1.7.1
+DISTNAME=	numpy-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=numpy/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://numpy.scipy.org/
+HOMEPAGE=	http://www.numpy.org/
 COMMENT=	Array processing for numbers, strings, records, and objects
 LICENSE=	modified-bsd
 
@@ -14,6 +14,7 @@ USE_LANGUAGES=		c fortran
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 MAKE_ENV+=		ATLAS=None
 
+REPLACE_PYTHON+=	*.py
 REPLACE_PYTHON+=	numpy/*.py
 REPLACE_PYTHON+=	numpy/compat/*.py
 REPLACE_PYTHON+=	numpy/core/*.py
@@ -29,13 +30,13 @@ REPLACE_PYTHON+=	numpy/f2py/docs/usersguide/*.py
 REPLACE_PYTHON+=	numpy/fft/tests/*.py
 REPLACE_PYTHON+=	numpy/ma/*.py
 REPLACE_PYTHON+=	numpy/matrixlib/*.py
+REPLACE_PYTHON+=	numpy/random/mtrand/*.py
 REPLACE_PYTHON+=	numpy/testing/*.py
 
 SUBST_CLASSES+=		numpy
 SUBST_STAGE.numpy=	post-patch
-SUBST_FILES.numpy=	numpy/f2py/setup.py numpy/f2py/setupscons.py
-SUBST_SED.numpy=	-e 's:/usr/bin/env %s:${PYTHONBIN}:'
-SUBST_SED.numpy+=	-e 's:%(os.path.basename(sys.executable))::'
+SUBST_FILES.numpy=	numpy/f2py/setup.py
+SUBST_SED.numpy=	-e 's:%(os.path.basename(sys.executable))::'
 
 # XXX Avoid picking up other compilers when installed
 .include "../../mk/compiler.mk"
@@ -61,18 +62,15 @@ SUBST_SED.linkabi=	-e 's,@COMPILER_ABI_FLAG@,${_COMPILER_ABI_FLAG.${ABI}},'
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Darwin"
-# to avoid '-bundle can't be used with -dynamiclib' error
-BUILDLINK_TRANSFORM+=	rm:-bundle
-LDFLAGS+=		-lpython
-.endif
-
 # needs devel/py-nose
 #do-test:
 #	${PYTHONBIN} -c "import numpy; numpy.test()"
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
+.if ${OPSYS} != "Darwin"
+# blas and lapack are not needed; numpy will use Accelerate.framework
 .include "../../math/blas/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
