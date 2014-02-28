@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/01/12 14:59:47 mspo Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/28 14:42:15 mspo Exp $
 
-DISTNAME=	ck-0.3.3
+DISTNAME=	ck-0.4.1
 CATEGORIES=	devel
 MASTER_SITES=	http://concurrencykit.org/releases/
 
