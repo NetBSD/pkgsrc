@@ -1,19 +1,20 @@
-$NetBSD: patch-ad,v 1.2 2009/10/20 14:00:23 tnn Exp $
+$NetBSD: patch-ad,v 1.3 2014/02/28 09:39:56 adam Exp $
 
---- INSTALL/Makefile.orig	2007-02-26 19:19:47.000000000 +0100
+--- INSTALL/Makefile.orig	2011-10-01 02:37:03.000000000 +0000
 +++ INSTALL/Makefile
-@@ -29,7 +29,10 @@ testversion: ilaver.o LAPACK_version.o
+@@ -28,8 +28,11 @@ testversion: ilaver.o LAPACK_version.o
+ 
  clean:
  	rm -f *.o
+-.f.o: 
+-	$(FORTRAN) $(OPTS) -c $< -o $@
  
 -slamch.o: slamch.f ; $(FORTRAN) $(NOOPT) -c $< -o $@
 -dlamch.o: dlamch.f ; $(FORTRAN) $(NOOPT) -c $< -o $@
--
--.f.o: ; $(FORTRAN) $(OPTS) -c $< -o $@
++.f.o:
++	${LIBTOOL} --mode=compile --tag=CC ${FC} ${FFLAGS} -c $<
++
 +slamch.o: slamch.f
 +	${LIBTOOL} --mode=compile --tag=CC $(FC) $(NOOPT) -c $< -o $@
 +dlamch.o: dlamch.f
 +	${LIBTOOL} --mode=compile --tag=CC $(FC) $(NOOPT) -c $< -o $@
-+ 
-+.f.o:
-+	${LIBTOOL} --mode=compile --tag=CC ${FC} ${FFLAGS} -c $<
