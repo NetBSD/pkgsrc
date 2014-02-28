@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.893 2014/02/27 23:47:27 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.894 2014/02/28 09:33:26 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1386,3 +1386,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated fonts/EB-Garamond to 0.015d [wiz 2014-02-27]
 	Updated graphics/png to 1.6.10rc01 [wiz 2014-02-27]
 	Updated www/ikiwiki to 3.20140227 [schmonz 2014-02-27]
+	Updated security/softhsm to 1.3.6 [pettai 2014-02-28]
