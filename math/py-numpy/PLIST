@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2013/05/20 05:59:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2014/02/28 09:43:10 adam Exp $
 bin/f2py${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/numpy/__config__.py
@@ -25,12 +25,10 @@ ${PYSITELIB}/numpy/compat/py3k.pyo
 ${PYSITELIB}/numpy/compat/setup.py
 ${PYSITELIB}/numpy/compat/setup.pyc
 ${PYSITELIB}/numpy/compat/setup.pyo
-${PYSITELIB}/numpy/compat/setupscons.py
-${PYSITELIB}/numpy/compat/setupscons.pyc
-${PYSITELIB}/numpy/compat/setupscons.pyo
 ${PYSITELIB}/numpy/core/__init__.py
 ${PYSITELIB}/numpy/core/__init__.pyc
 ${PYSITELIB}/numpy/core/__init__.pyo
+${PYSITELIB}/numpy/core/_dotblas.so
 ${PYSITELIB}/numpy/core/_dummy.so
 ${PYSITELIB}/numpy/core/_internal.py
 ${PYSITELIB}/numpy/core/_internal.pyc
@@ -67,10 +65,10 @@ ${PYSITELIB}/numpy/core/include/numpy/multiarray_api.txt
 ${PYSITELIB}/numpy/core/include/numpy/ndarrayobject.h
 ${PYSITELIB}/numpy/core/include/numpy/ndarraytypes.h
 ${PYSITELIB}/numpy/core/include/numpy/noprefix.h
+${PYSITELIB}/numpy/core/include/numpy/npy_1_7_deprecated_api.h
 ${PYSITELIB}/numpy/core/include/numpy/npy_3kcompat.h
 ${PYSITELIB}/numpy/core/include/numpy/npy_common.h
 ${PYSITELIB}/numpy/core/include/numpy/npy_cpu.h
-${PYSITELIB}/numpy/core/include/numpy/npy_deprecated_api.h
 ${PYSITELIB}/numpy/core/include/numpy/npy_endian.h
 ${PYSITELIB}/numpy/core/include/numpy/npy_interrupt.h
 ${PYSITELIB}/numpy/core/include/numpy/npy_math.h
@@ -102,25 +100,22 @@ ${PYSITELIB}/numpy/core/numeric.pyo
 ${PYSITELIB}/numpy/core/numerictypes.py
 ${PYSITELIB}/numpy/core/numerictypes.pyc
 ${PYSITELIB}/numpy/core/numerictypes.pyo
+${PYSITELIB}/numpy/core/operand_flag_tests.so
 ${PYSITELIB}/numpy/core/records.py
 ${PYSITELIB}/numpy/core/records.pyc
 ${PYSITELIB}/numpy/core/records.pyo
 ${PYSITELIB}/numpy/core/scalarmath.so
-${PYSITELIB}/numpy/core/scons_support.py
-${PYSITELIB}/numpy/core/scons_support.pyc
-${PYSITELIB}/numpy/core/scons_support.pyo
 ${PYSITELIB}/numpy/core/setup.py
 ${PYSITELIB}/numpy/core/setup.pyc
 ${PYSITELIB}/numpy/core/setup.pyo
 ${PYSITELIB}/numpy/core/setup_common.py
 ${PYSITELIB}/numpy/core/setup_common.pyc
 ${PYSITELIB}/numpy/core/setup_common.pyo
-${PYSITELIB}/numpy/core/setupscons.py
-${PYSITELIB}/numpy/core/setupscons.pyc
-${PYSITELIB}/numpy/core/setupscons.pyo
 ${PYSITELIB}/numpy/core/shape_base.py
 ${PYSITELIB}/numpy/core/shape_base.pyc
 ${PYSITELIB}/numpy/core/shape_base.pyo
+${PYSITELIB}/numpy/core/struct_ufunc_test.so
+${PYSITELIB}/numpy/core/test_rational.so
 ${PYSITELIB}/numpy/core/tests/data/astype_copy.pkl
 ${PYSITELIB}/numpy/core/tests/data/recarray_from_file.fits
 ${PYSITELIB}/numpy/core/tests/test_api.py
@@ -128,6 +123,7 @@ ${PYSITELIB}/numpy/core/tests/test_arrayprint.py
 ${PYSITELIB}/numpy/core/tests/test_blasdot.py
 ${PYSITELIB}/numpy/core/tests/test_datetime.py
 ${PYSITELIB}/numpy/core/tests/test_defchararray.py
+${PYSITELIB}/numpy/core/tests/test_deprecations.py
 ${PYSITELIB}/numpy/core/tests/test_dtype.py
 ${PYSITELIB}/numpy/core/tests/test_einsum.py
 ${PYSITELIB}/numpy/core/tests/test_errstate.py
@@ -148,6 +144,7 @@ ${PYSITELIB}/numpy/core/tests/test_print.py
 ${PYSITELIB}/numpy/core/tests/test_records.py
 ${PYSITELIB}/numpy/core/tests/test_regression.py
 ${PYSITELIB}/numpy/core/tests/test_scalarmath.py
+${PYSITELIB}/numpy/core/tests/test_scalarprint.py
 ${PYSITELIB}/numpy/core/tests/test_shape_base.py
 ${PYSITELIB}/numpy/core/tests/test_ufunc.py
 ${PYSITELIB}/numpy/core/tests/test_umath.py
@@ -221,9 +218,6 @@ ${PYSITELIB}/numpy/distutils/command/install_data.pyo
 ${PYSITELIB}/numpy/distutils/command/install_headers.py
 ${PYSITELIB}/numpy/distutils/command/install_headers.pyc
 ${PYSITELIB}/numpy/distutils/command/install_headers.pyo
-${PYSITELIB}/numpy/distutils/command/scons.py
-${PYSITELIB}/numpy/distutils/command/scons.pyc
-${PYSITELIB}/numpy/distutils/command/scons.pyo
 ${PYSITELIB}/numpy/distutils/command/sdist.py
 ${PYSITELIB}/numpy/distutils/command/sdist.pyc
 ${PYSITELIB}/numpy/distutils/command/sdist.pyo
@@ -305,9 +299,6 @@ ${PYSITELIB}/numpy/distutils/info.pyo
 ${PYSITELIB}/numpy/distutils/intelccompiler.py
 ${PYSITELIB}/numpy/distutils/intelccompiler.pyc
 ${PYSITELIB}/numpy/distutils/intelccompiler.pyo
-${PYSITELIB}/numpy/distutils/interactive.py
-${PYSITELIB}/numpy/distutils/interactive.pyc
-${PYSITELIB}/numpy/distutils/interactive.pyo
 ${PYSITELIB}/numpy/distutils/lib2def.py
 ${PYSITELIB}/numpy/distutils/lib2def.pyc
 ${PYSITELIB}/numpy/distutils/lib2def.pyo
@@ -336,9 +327,6 @@ ${PYSITELIB}/numpy/distutils/pathccompiler.pyo
 ${PYSITELIB}/numpy/distutils/setup.py
 ${PYSITELIB}/numpy/distutils/setup.pyc
 ${PYSITELIB}/numpy/distutils/setup.pyo
-${PYSITELIB}/numpy/distutils/setupscons.py
-${PYSITELIB}/numpy/distutils/setupscons.pyc
-${PYSITELIB}/numpy/distutils/setupscons.pyo
 ${PYSITELIB}/numpy/distutils/system_info.py
 ${PYSITELIB}/numpy/distutils/system_info.pyc
 ${PYSITELIB}/numpy/distutils/system_info.pyo
@@ -531,9 +519,6 @@ ${PYSITELIB}/numpy/f2py/rules.pyo
 ${PYSITELIB}/numpy/f2py/setup.py
 ${PYSITELIB}/numpy/f2py/setup.pyc
 ${PYSITELIB}/numpy/f2py/setup.pyo
-${PYSITELIB}/numpy/f2py/setupscons.py
-${PYSITELIB}/numpy/f2py/setupscons.pyc
-${PYSITELIB}/numpy/f2py/setupscons.pyo
 ${PYSITELIB}/numpy/f2py/src/fortranobject.c
 ${PYSITELIB}/numpy/f2py/src/fortranobject.h
 ${PYSITELIB}/numpy/f2py/tests/src/array_from_pyobj/wrapmodule.c
@@ -578,9 +563,6 @@ ${PYSITELIB}/numpy/fft/info.pyo
 ${PYSITELIB}/numpy/fft/setup.py
 ${PYSITELIB}/numpy/fft/setup.pyc
 ${PYSITELIB}/numpy/fft/setup.pyo
-${PYSITELIB}/numpy/fft/setupscons.py
-${PYSITELIB}/numpy/fft/setupscons.pyc
-${PYSITELIB}/numpy/fft/setupscons.pyo
 ${PYSITELIB}/numpy/fft/tests/test_fftpack.py
 ${PYSITELIB}/numpy/fft/tests/test_helper.py
 ${PYSITELIB}/numpy/lib/__init__.py
@@ -602,11 +584,6 @@ ${PYSITELIB}/numpy/lib/arraysetops.pyo
 ${PYSITELIB}/numpy/lib/arrayterator.py
 ${PYSITELIB}/numpy/lib/arrayterator.pyc
 ${PYSITELIB}/numpy/lib/arrayterator.pyo
-${PLIST.py2x}${PYSITELIB}/numpy/lib/benchmarks/benchmark.py
-${PLIST.py2x}${PYSITELIB}/numpy/lib/benchmarks/casting.py
-${PLIST.py2x}${PYSITELIB}/numpy/lib/benchmarks/creating.py
-${PLIST.py2x}${PYSITELIB}/numpy/lib/benchmarks/simpleindex.py
-${PLIST.py2x}${PYSITELIB}/numpy/lib/benchmarks/sorting.py
 ${PYSITELIB}/numpy/lib/financial.py
 ${PYSITELIB}/numpy/lib/financial.pyc
 ${PYSITELIB}/numpy/lib/financial.pyo
@@ -622,6 +599,9 @@ ${PYSITELIB}/numpy/lib/index_tricks.pyo
 ${PYSITELIB}/numpy/lib/info.py
 ${PYSITELIB}/numpy/lib/info.pyc
 ${PYSITELIB}/numpy/lib/info.pyo
+${PYSITELIB}/numpy/lib/nanfunctions.py
+${PYSITELIB}/numpy/lib/nanfunctions.pyc
+${PYSITELIB}/numpy/lib/nanfunctions.pyo
 ${PYSITELIB}/numpy/lib/npyio.py
 ${PYSITELIB}/numpy/lib/npyio.pyc
 ${PYSITELIB}/numpy/lib/npyio.pyo
@@ -637,9 +617,6 @@ ${PYSITELIB}/numpy/lib/scimath.pyo
 ${PYSITELIB}/numpy/lib/setup.py
 ${PYSITELIB}/numpy/lib/setup.pyc
 ${PYSITELIB}/numpy/lib/setup.pyo
-${PYSITELIB}/numpy/lib/setupscons.py
-${PYSITELIB}/numpy/lib/setupscons.pyc
-${PYSITELIB}/numpy/lib/setupscons.pyo
 ${PYSITELIB}/numpy/lib/shape_base.py
 ${PYSITELIB}/numpy/lib/shape_base.pyc
 ${PYSITELIB}/numpy/lib/shape_base.pyo
@@ -656,6 +633,7 @@ ${PYSITELIB}/numpy/lib/tests/test_format.py
 ${PYSITELIB}/numpy/lib/tests/test_function_base.py
 ${PYSITELIB}/numpy/lib/tests/test_index_tricks.py
 ${PYSITELIB}/numpy/lib/tests/test_io.py
+${PYSITELIB}/numpy/lib/tests/test_nanfunctions.py
 ${PYSITELIB}/numpy/lib/tests/test_polynomial.py
 ${PYSITELIB}/numpy/lib/tests/test_recfunctions.py
 ${PYSITELIB}/numpy/lib/tests/test_regression.py
@@ -683,6 +661,7 @@ ${PYSITELIB}/numpy/lib/utils.pyo
 ${PYSITELIB}/numpy/linalg/__init__.py
 ${PYSITELIB}/numpy/linalg/__init__.pyc
 ${PYSITELIB}/numpy/linalg/__init__.pyo
+${PYSITELIB}/numpy/linalg/_umath_linalg.so
 ${PYSITELIB}/numpy/linalg/info.py
 ${PYSITELIB}/numpy/linalg/info.pyc
 ${PYSITELIB}/numpy/linalg/info.pyo
@@ -693,10 +672,8 @@ ${PYSITELIB}/numpy/linalg/linalg.pyo
 ${PYSITELIB}/numpy/linalg/setup.py
 ${PYSITELIB}/numpy/linalg/setup.pyc
 ${PYSITELIB}/numpy/linalg/setup.pyo
-${PYSITELIB}/numpy/linalg/setupscons.py
-${PYSITELIB}/numpy/linalg/setupscons.pyc
-${PYSITELIB}/numpy/linalg/setupscons.pyo
 ${PYSITELIB}/numpy/linalg/tests/test_build.py
+${PYSITELIB}/numpy/linalg/tests/test_deprecations.py
 ${PYSITELIB}/numpy/linalg/tests/test_linalg.py
 ${PYSITELIB}/numpy/linalg/tests/test_regression.py
 ${PYSITELIB}/numpy/ma/__init__.py
@@ -717,9 +694,6 @@ ${PYSITELIB}/numpy/ma/mrecords.pyo
 ${PYSITELIB}/numpy/ma/setup.py
 ${PYSITELIB}/numpy/ma/setup.pyc
 ${PYSITELIB}/numpy/ma/setup.pyo
-${PYSITELIB}/numpy/ma/setupscons.py
-${PYSITELIB}/numpy/ma/setupscons.pyc
-${PYSITELIB}/numpy/ma/setupscons.pyo
 ${PYSITELIB}/numpy/ma/tests/test_core.py
 ${PYSITELIB}/numpy/ma/tests/test_extras.py
 ${PYSITELIB}/numpy/ma/tests/test_mrecords.py
@@ -747,9 +721,6 @@ ${PYSITELIB}/numpy/matrixlib/defmatrix.pyo
 ${PYSITELIB}/numpy/matrixlib/setup.py
 ${PYSITELIB}/numpy/matrixlib/setup.pyc
 ${PYSITELIB}/numpy/matrixlib/setup.pyo
-${PYSITELIB}/numpy/matrixlib/setupscons.py
-${PYSITELIB}/numpy/matrixlib/setupscons.pyc
-${PYSITELIB}/numpy/matrixlib/setupscons.pyo
 ${PYSITELIB}/numpy/matrixlib/tests/test_defmatrix.py
 ${PYSITELIB}/numpy/matrixlib/tests/test_multiarray.py
 ${PYSITELIB}/numpy/matrixlib/tests/test_numeric.py
@@ -812,9 +783,6 @@ ${PYSITELIB}/numpy/numarray/session.pyo
 ${PYSITELIB}/numpy/numarray/setup.py
 ${PYSITELIB}/numpy/numarray/setup.pyc
 ${PYSITELIB}/numpy/numarray/setup.pyo
-${PYSITELIB}/numpy/numarray/setupscons.py
-${PYSITELIB}/numpy/numarray/setupscons.pyc
-${PYSITELIB}/numpy/numarray/setupscons.pyo
 ${PYSITELIB}/numpy/numarray/ufuncs.py
 ${PYSITELIB}/numpy/numarray/ufuncs.pyc
 ${PYSITELIB}/numpy/numarray/ufuncs.pyo
@@ -878,9 +846,6 @@ ${PYSITELIB}/numpy/oldnumeric/rng_stats.pyo
 ${PYSITELIB}/numpy/oldnumeric/setup.py
 ${PYSITELIB}/numpy/oldnumeric/setup.pyc
 ${PYSITELIB}/numpy/oldnumeric/setup.pyo
-${PYSITELIB}/numpy/oldnumeric/setupscons.py
-${PYSITELIB}/numpy/oldnumeric/setupscons.pyc
-${PYSITELIB}/numpy/oldnumeric/setupscons.pyo
 ${PYSITELIB}/numpy/oldnumeric/tests/test_oldnumeric.py
 ${PYSITELIB}/numpy/oldnumeric/tests/test_regression.py
 ${PYSITELIB}/numpy/oldnumeric/typeconv.py
@@ -942,17 +907,11 @@ ${PYSITELIB}/numpy/random/randomkit.h
 ${PYSITELIB}/numpy/random/setup.py
 ${PYSITELIB}/numpy/random/setup.pyc
 ${PYSITELIB}/numpy/random/setup.pyo
-${PYSITELIB}/numpy/random/setupscons.py
-${PYSITELIB}/numpy/random/setupscons.pyc
-${PYSITELIB}/numpy/random/setupscons.pyo
 ${PYSITELIB}/numpy/random/tests/test_random.py
 ${PYSITELIB}/numpy/random/tests/test_regression.py
 ${PYSITELIB}/numpy/setup.py
 ${PYSITELIB}/numpy/setup.pyc
 ${PYSITELIB}/numpy/setup.pyo
-${PYSITELIB}/numpy/setupscons.py
-${PYSITELIB}/numpy/setupscons.pyc
-${PYSITELIB}/numpy/setupscons.pyo
 ${PYSITELIB}/numpy/testing/__init__.py
 ${PYSITELIB}/numpy/testing/__init__.pyc
 ${PYSITELIB}/numpy/testing/__init__.pyo
@@ -965,9 +924,6 @@ ${PYSITELIB}/numpy/testing/noseclasses.pyo
 ${PYSITELIB}/numpy/testing/nosetester.py
 ${PYSITELIB}/numpy/testing/nosetester.pyc
 ${PYSITELIB}/numpy/testing/nosetester.pyo
-${PYSITELIB}/numpy/testing/nulltester.py
-${PYSITELIB}/numpy/testing/nulltester.pyc
-${PYSITELIB}/numpy/testing/nulltester.pyo
 ${PYSITELIB}/numpy/testing/numpytest.py
 ${PYSITELIB}/numpy/testing/numpytest.pyc
 ${PYSITELIB}/numpy/testing/numpytest.pyo
@@ -977,9 +933,6 @@ ${PYSITELIB}/numpy/testing/print_coercion_tables.pyo
 ${PYSITELIB}/numpy/testing/setup.py
 ${PYSITELIB}/numpy/testing/setup.pyc
 ${PYSITELIB}/numpy/testing/setup.pyo
-${PYSITELIB}/numpy/testing/setupscons.py
-${PYSITELIB}/numpy/testing/setupscons.pyc
-${PYSITELIB}/numpy/testing/setupscons.pyo
 ${PYSITELIB}/numpy/testing/tests/test_decorators.py
 ${PYSITELIB}/numpy/testing/tests/test_doctesting.py
 ${PYSITELIB}/numpy/testing/tests/test_utils.py
