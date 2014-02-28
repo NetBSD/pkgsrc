@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.896 2014/02/28 12:29:01 obache Exp $
+$NetBSD: CHANGES-2014,v 1.897 2014/02/28 14:43:02 mspo Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1391,3 +1391,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated math/lapack to 3.5.0 [adam 2014-02-28]
 	Updated math/py-numpy to 1.8.0 [adam 2014-02-28]
 	Updated www/squid3 to 3.4.3nb3 [obache 2014-02-28]
+	Updated devel/concurrencykit to 0.4.1 [mspo 2014-02-28]
+	Updated devel/concurrencykit to 0.4.1 [mspo 2014-02-28]
