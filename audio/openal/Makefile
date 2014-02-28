@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/10/02 23:48:02 asau Exp $
+# $NetBSD: Makefile,v 1.31 2014/02/28 11:59:10 jperkin Exp $
 
 DISTNAME=	openal-0.0.8
 PKGREVISION=	5
@@ -28,6 +28,12 @@ SUBST_CLASSES+=		fixdev
 SUBST_STAGE.fixdev=	post-configure
 SUBST_FILES.fixdev=	src/backends/alc_backend_bsd.c
 SUBST_SED.fixdev=	-e 's;/dev/dsp;${DEVOSSSOUND};g'
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(MACHINE_PLATFORM:MDarwin-10.*-*)
+CONFIGURE_ENV+=		NASM_FORMAT="-f macho"
+.endif
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
