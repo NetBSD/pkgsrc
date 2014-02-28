@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.11 2014/02/13 20:31:08 adam Exp $
+# $NetBSD: builtin.mk,v 1.12 2014/02/28 12:17:20 obache Exp $
 
 BUILTIN_PKG:=	mit-krb5
 
@@ -110,6 +110,10 @@ fake-krb5-config:
 	fi
 
 .    endif
+.  else
+KRB5_CONFIG?=	${BUILDLINK_PREFIX.mit-krb5}/bin/krb5-config
+CONFIGURE_ENV+=	KRB5_CONFIG=${KRB5_CONFIG:Q}
+MAKE_ENV+=	KRB5_CONFIG=${KRB5_CONFIG:Q}
 .  endif
 
 .endif	# CHECK_BUILTIN.mit-krb5
