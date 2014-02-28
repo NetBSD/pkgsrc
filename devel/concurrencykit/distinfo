@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/01/12 14:59:47 mspo Exp $
+$NetBSD: distinfo,v 1.2 2014/02/28 14:42:15 mspo Exp $
 
-SHA1 (ck-0.3.3.tar.gz) = b0a522926e46177fd124ea8daa838c1cbb91484b
-RMD160 (ck-0.3.3.tar.gz) = 4ef304d57387855c33ff976ee2fceaee57735aeb
-Size (ck-0.3.3.tar.gz) = 174365 bytes
+SHA1 (ck-0.4.1.tar.gz) = 53be7f3cc42bf46f409926a8add911bf49f37c20
+RMD160 (ck-0.4.1.tar.gz) = f6d6f2f6f3bb1dc9fd14f3f7024604ad6110c24a
+Size (ck-0.4.1.tar.gz) = 188050 bytes
