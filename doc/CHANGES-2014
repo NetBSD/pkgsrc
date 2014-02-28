@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.899 2014/02/28 16:06:13 tsutsui Exp $
+$NetBSD: CHANGES-2014,v 1.900 2014/02/28 16:18:38 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1393,3 +1393,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/squid3 to 3.4.3nb3 [obache 2014-02-28]
 	Updated devel/concurrencykit to 0.4.1 [mspo 2014-02-28]
 	Updated x11/mlterm to 3.3.3 [tsutsui 2014-02-28]
+	Updated games/onscripter to 20131223 [tsutsui 2014-02-28]
