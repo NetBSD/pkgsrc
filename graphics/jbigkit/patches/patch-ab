@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2013/08/04 09:22:25 adam Exp $
+$NetBSD: patch-ab,v 1.3 2014/02/28 04:23:14 pho Exp $
 
 libtoolize
 
@@ -20,27 +20,28 @@ libtoolize
 -pbmtojbg: pbmtojbg.o ../libjbig/libjbig.a
 -	$(CC) $(CFLAGS) -o pbmtojbg pbmtojbg.o -L../libjbig -ljbig
 +pbmtojbg: pbmtojbg.lo
-+	${LIBTOOL} --mode=link --tag=CC $(CC) $(CFLAGS) -o pbmtojbg pbmtojbg.lo ../libjbig/libjbig.la
++	${LIBTOOL} --mode=link --tag=CC $(CC) $(CFLAGS) -o pbmtojbg pbmtojbg.lo ../libjbig/libjbig.la -rpath ${PREFIX}/lib
  
 -jbgtopbm: jbgtopbm.o ../libjbig/libjbig.a
 -	$(CC) $(CFLAGS) -o jbgtopbm jbgtopbm.o -L../libjbig -ljbig
 +jbgtopbm: jbgtopbm.lo
-+	${LIBTOOL} --mode=link --tag=CC $(CC) $(CFLAGS) -o jbgtopbm jbgtopbm.lo ../libjbig/libjbig.la
++	${LIBTOOL} --mode=link --tag=CC $(CC) $(CFLAGS) -o jbgtopbm jbgtopbm.lo ../libjbig/libjbig.la -rpath ${PREFIX}/lib
  
 -pbmtojbg85: pbmtojbg85.o ../libjbig/libjbig85.a
 -	$(CC) $(CFLAGS) -o pbmtojbg85 pbmtojbg85.o -L../libjbig -ljbig85
 +pbmtojbg85: pbmtojbg85.lo
-+	${LIBTOOL} --mode=link --tag=CC $(CC) $(CFLAGS) -o pbmtojbg85 pbmtojbg85.lo ../libjbig/libjbig85.la
++	${LIBTOOL} --mode=link --tag=CC $(CC) $(CFLAGS) -o pbmtojbg85 pbmtojbg85.lo ../libjbig/libjbig85.la -rpath ${PREFIX}/lib
  
 -jbgtopbm85: jbgtopbm85.o ../libjbig/libjbig85.a
 -	$(CC) $(CFLAGS) -o jbgtopbm85 jbgtopbm85.o -L../libjbig -ljbig85
-+jbgtopbm85: jbgtopbm85.lo
-+	${LIBTOOL} --mode=link --tag=CC $(CC) $(CFLAGS) -o jbgtopbm85 jbgtopbm85.lo ../libjbig/libjbig85.la
- 
+-
 -jbgtopbm.o: jbgtopbm.c ../libjbig/jbig.h
 -pbmtojbg.o: pbmtojbg.c ../libjbig/jbig.h
 -jbgtopbm85.o: jbgtopbm85.c ../libjbig/jbig85.h
 -pbmtojbg85.o: pbmtojbg85.c ../libjbig/jbig85.h
++jbgtopbm85: jbgtopbm85.lo
++	${LIBTOOL} --mode=link --tag=CC $(CC) $(CFLAGS) -o jbgtopbm85 jbgtopbm85.lo ../libjbig/libjbig85.la -rpath ${PREFIX}/lib
++
 +jbgtopbm.lo: jbgtopbm.c ../libjbig/jbig.h
 +pbmtojbg.lo: pbmtojbg.c ../libjbig/jbig.h
 +jbgtopbm85.lo: jbgtopbm85.c ../libjbig/jbig85.h
