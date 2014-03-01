@@ -1,12 +1,19 @@
-$NetBSD: patch-ab,v 1.3 2014/02/28 04:23:14 pho Exp $
+$NetBSD: patch-ab,v 1.4 2014/03/01 06:58:41 obache Exp $
 
-libtoolize
+* prevent to overwrite our CC/CFLAGS settings
+* libtoolize
 
 --- pbmtools/Makefile.orig	2008-08-25 22:26:39.000000000 +0000
 +++ pbmtools/Makefile
-@@ -7,27 +7,30 @@ CC = gcc
+@@ -3,30 +3,33 @@
+ 
+ # Select an ANSI/ISO C compiler here, e.g. GNU gcc is recommended
+-CC = gcc
++CC ?= gcc
+ 
  # Options for the compiler
- CFLAGS = -g -Wall -ansi -pedantic -I../libjbig # --coverage
+-CFLAGS = -g -Wall -ansi -pedantic -I../libjbig # --coverage
++CFLAGS += -Wall -ansi -pedantic -I../libjbig # --coverage
  
 -.SUFFIXES: .1 .5 .txt $(SUFFIXES)
 +.SUFFIXES: .1 .5 .txt .lo $(SUFFIXES)
@@ -20,17 +27,17 @@ libtoolize
 -pbmtojbg: pbmtojbg.o ../libjbig/libjbig.a
 -	$(CC) $(CFLAGS) -o pbmtojbg pbmtojbg.o -L../libjbig -ljbig
 +pbmtojbg: pbmtojbg.lo
-+	${LIBTOOL} --mode=link --tag=CC $(CC) $(CFLAGS) -o pbmtojbg pbmtojbg.lo ../libjbig/libjbig.la -rpath ${PREFIX}/lib
++	${LIBTOOL} --mode=link --tag=CC $(CC) $(CFLAGS) -o pbmtojbg pbmtojbg.lo ../libjbig/libjbig.la -R ${PREFIX}/lib
  
 -jbgtopbm: jbgtopbm.o ../libjbig/libjbig.a
 -	$(CC) $(CFLAGS) -o jbgtopbm jbgtopbm.o -L../libjbig -ljbig
 +jbgtopbm: jbgtopbm.lo
-+	${LIBTOOL} --mode=link --tag=CC $(CC) $(CFLAGS) -o jbgtopbm jbgtopbm.lo ../libjbig/libjbig.la -rpath ${PREFIX}/lib
++	${LIBTOOL} --mode=link --tag=CC $(CC) $(CFLAGS) -o jbgtopbm jbgtopbm.lo ../libjbig/libjbig.la -R ${PREFIX}/lib
  
 -pbmtojbg85: pbmtojbg85.o ../libjbig/libjbig85.a
 -	$(CC) $(CFLAGS) -o pbmtojbg85 pbmtojbg85.o -L../libjbig -ljbig85
 +pbmtojbg85: pbmtojbg85.lo
-+	${LIBTOOL} --mode=link --tag=CC $(CC) $(CFLAGS) -o pbmtojbg85 pbmtojbg85.lo ../libjbig/libjbig85.la -rpath ${PREFIX}/lib
++	${LIBTOOL} --mode=link --tag=CC $(CC) $(CFLAGS) -o pbmtojbg85 pbmtojbg85.lo ../libjbig/libjbig85.la -R ${PREFIX}/lib
  
 -jbgtopbm85: jbgtopbm85.o ../libjbig/libjbig85.a
 -	$(CC) $(CFLAGS) -o jbgtopbm85 jbgtopbm85.o -L../libjbig -ljbig85
@@ -40,7 +47,7 @@ libtoolize
 -jbgtopbm85.o: jbgtopbm85.c ../libjbig/jbig85.h
 -pbmtojbg85.o: pbmtojbg85.c ../libjbig/jbig85.h
 +jbgtopbm85: jbgtopbm85.lo
-+	${LIBTOOL} --mode=link --tag=CC $(CC) $(CFLAGS) -o jbgtopbm85 jbgtopbm85.lo ../libjbig/libjbig85.la -rpath ${PREFIX}/lib
++	${LIBTOOL} --mode=link --tag=CC $(CC) $(CFLAGS) -o jbgtopbm85 jbgtopbm85.lo ../libjbig/libjbig85.la -R ${PREFIX}/lib
 +
 +jbgtopbm.lo: jbgtopbm.c ../libjbig/jbig.h
 +pbmtojbg.lo: pbmtojbg.c ../libjbig/jbig.h
@@ -48,4 +55,70 @@ libtoolize
 +pbmtojbg85.lo: pbmtojbg85.c ../libjbig/jbig85.h
  
  ../libjbig/libjbig.a: ../libjbig/jbig.c ../libjbig/jbig.h \
- 	../libjbig/jbig_ar.c ../libjbig/jbig_ar.h
+@@ -58,16 +61,16 @@ test82: pbmtojbg jbgtopbm
+ 	make IMG=mx        "OPTIONSP=-Y -1"                dotest2b
+ 	rm -f test-*.jbg test-*.pbm test-*.pgm
+-	./jbgtopbm ../examples/ccitt1.jbg | ./pbmtojbg > test-ccitt1.jbg
++	${LIBTOOL} --mode=execute ./jbgtopbm ../examples/ccitt1.jbg | ./pbmtojbg > test-ccitt1.jbg
+ 	cmp ../examples/ccitt1.jbg test-ccitt1.jbg
+ 	rm -f test-*.jbg test-*.pbm test-*.pgm
+-	./jbgtopbm < ../examples/ccitt1.jbg | ./pbmtojbg - test-ccitt1.jbg
++	${LIBTOOL} --mode=execute ./jbgtopbm < ../examples/ccitt1.jbg | ./pbmtojbg - test-ccitt1.jbg
+ 	cmp ../examples/ccitt1.jbg test-ccitt1.jbg
+ 	rm -f test-*.jbg test-*.pbm test-*.pgm
+-	./jbgtopbm < ../examples/ccitt1.jbg - test-ccitt1.pbm ; \
+-	  ./pbmtojbg test-ccitt1.pbm test-ccitt1.jbg
++	${LIBTOOL} --mode=execute ./jbgtopbm < ../examples/ccitt1.jbg - test-ccitt1.pbm ; \
++	  ${LIBTOOL} --mode=execute ./pbmtojbg test-ccitt1.pbm test-ccitt1.jbg
+ 	cmp ../examples/ccitt1.jbg test-ccitt1.jbg
+ 	rm -f test-*.jbg test-*.pbm test-*.pgm
+-	./jbgtopbm ../examples/ccitt1.jbg test-ccitt1.pbm ; \
+-	  ./pbmtojbg test-ccitt1.pbm >test-ccitt1.jbg
++	${LIBTOOL} --mode=execute ./jbgtopbm ../examples/ccitt1.jbg test-ccitt1.pbm ; \
++	  ${LIBTOOL} --mode=execute ./pbmtojbg test-ccitt1.pbm >test-ccitt1.jbg
+ 	cmp ../examples/ccitt1.jbg test-ccitt1.jbg
+ 	rm -f test-*.jbg test-*.pbm test-*.pgm
+@@ -116,33 +119,33 @@ test85: pbmtojbg jbgtopbm pbmtojbg85 jbg
+ 
+ dotest85: test-$(IMG).pbm
+-	./pbmtojbg85  $(OPTIONSP) test-$(IMG).pbm test-$(IMG).jbg85
++	${LIBTOOL} --mode=execute ./pbmtojbg85  $(OPTIONSP) test-$(IMG).pbm test-$(IMG).jbg85
+ 	ls -l test-$(IMG).jbg85
+-	./jbgtopbm test-$(IMG).jbg85 test-$(IMG).pbm85
++	${LIBTOOL} --mode=execute ./jbgtopbm test-$(IMG).jbg85 test-$(IMG).pbm85
+ 	cmp test-$(IMG).pbm test-$(IMG).pbm85
+ 	rm test-$(IMG).pbm85
+-	./jbgtopbm85 test-$(IMG).jbg85 test-$(IMG).pbm85
++	${LIBTOOL} --mode=execute ./jbgtopbm85 test-$(IMG).jbg85 test-$(IMG).pbm85
+ 	cmp test-$(IMG).pbm test-$(IMG).pbm85
+ 	rm test-$(IMG).pbm85
+-	./jbgtopbm85 -B 1 test-$(IMG).jbg85 test-$(IMG).pbm85
++	${LIBTOOL} --mode=execute ./jbgtopbm85 -B 1 test-$(IMG).jbg85 test-$(IMG).pbm85
+ 	cmp test-$(IMG).pbm test-$(IMG).pbm85
+ 
+ dotest85b: test-$(IMG).pbm
+-	./pbmtojbg -f $(OPTIONSP) test-$(IMG).pbm test-$(IMG).jbg85
++	${LIBTOOL} --mode=execute ./pbmtojbg -f $(OPTIONSP) test-$(IMG).pbm test-$(IMG).jbg85
+ 	ls -l test-$(IMG).jbg85
+-	./jbgtopbm test-$(IMG).jbg85 test-$(IMG).pbm85
++	${LIBTOOL} --mode=execute ./jbgtopbm test-$(IMG).jbg85 test-$(IMG).pbm85
+ 	cmp test-$(IMG).pbm test-$(IMG).pbm85
+ 	rm test-$(IMG).pbm85
+-	./jbgtopbm85 test-$(IMG).jbg85 test-$(IMG).pbm85
++	${LIBTOOL} --mode=execute ./jbgtopbm85 test-$(IMG).jbg85 test-$(IMG).pbm85
+ 	cmp test-$(IMG).pbm test-$(IMG).pbm85
+ 	rm test-$(IMG).pbm85
+-	./jbgtopbm85 -B 1 test-$(IMG).jbg85 test-$(IMG).pbm85
++	${LIBTOOL} --mode=execute ./jbgtopbm85 -B 1 test-$(IMG).jbg85 test-$(IMG).pbm85
+ 	cmp test-$(IMG).pbm test-$(IMG).pbm85
+ 
+ test-%.pbm: ../examples/%.jbg
+-	./jbgtopbm $< $@
++	${LIBTOOL} --mode=execute ./jbgtopbm $< $@
+ 
+ test-t82.pbm:
+ 	make -C ../libjbig tstcodec
+-	../libjbig/tstcodec $@
++	${LIBTOOL} --mode=execute ../libjbig/tstcodec $@
+ 
+ .1.txt .5.txt:
