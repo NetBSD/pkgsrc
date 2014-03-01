@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/05/16 15:58:12 bouyer Exp $
+$NetBSD: distinfo,v 1.2 2014/03/01 03:10:35 wen Exp $
 
-SHA1 (Unicode-LineBreak-2012.02.tar.gz) = 00ae57df5b11884ff765fda98124d2133d279fb6
-RMD160 (Unicode-LineBreak-2012.02.tar.gz) = a59cb16b95154c1297ef1e16d1dbbfcb884c4e8a
-Size (Unicode-LineBreak-2012.02.tar.gz) = 642249 bytes
+SHA1 (Unicode-LineBreak-2013.11.tar.gz) = ff0e2fe819ea7b21e484a78c1c35b9cedb1d7ffd
+RMD160 (Unicode-LineBreak-2013.11.tar.gz) = da2700e9be7b131712add76a0e4ae48daec70d9e
+Size (Unicode-LineBreak-2013.11.tar.gz) = 289906 bytes
