@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2013/09/30 12:54:11 obache Exp $
+# $NetBSD: Makefile,v 1.13 2014/03/01 08:38:12 obache Exp $
 
-DISTNAME=	zeromq-3.2.4
+DISTNAME=	zeromq-4.0.3
 CATEGORIES=	net devel
 MASTER_SITES=	http://download.zeromq.org/
 
