@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.911 2014/03/01 14:10:05 wen Exp $
+$NetBSD: CHANGES-2014,v 1.912 2014/03/01 19:12:40 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1403,3 +1403,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/p5-Log-Report-Optional version 1.00 [wen 2014-03-01]
 	Updated devel/p5-Log-Report to 1.01 [wen 2014-03-01]
 	Updated devel/p5-Class-Accessor-Lite to 0.06 [wen 2014-03-01]
+	Updated www/py-uwsgi to 2.0.2 [rodent 2014-03-01]
