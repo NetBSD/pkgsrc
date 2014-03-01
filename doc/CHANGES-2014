@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.906 2014/03/01 08:38:23 obache Exp $
+$NetBSD: CHANGES-2014,v 1.907 2014/03/01 08:55:27 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1398,3 +1398,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/p5-Unicode-LineBreak to 2013.11 [wen 2014-03-01]
 	Added devel/p5-String-Print version 0.13 [wen 2014-03-01]
 	Updated net/zeromq to 4.0.3 [obache 2014-03-01]
+	Updated net/py-zmq to 14.0.1 [obache 2014-03-01]
