@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/01/05 15:09:52 rodent Exp $
+$NetBSD: distinfo,v 1.2 2014/03/01 19:15:20 rodent Exp $
 
-SHA1 (uwsgitop-0.6.2.tar.gz) = 9df74ab55e3f5b1483967b11103b4d77f3660952
-RMD160 (uwsgitop-0.6.2.tar.gz) = 757a8c262a6041c6f95003d11b8683433e4ac9b2
-Size (uwsgitop-0.6.2.tar.gz) = 2280 bytes
+SHA1 (uwsgitop-0.8.tar.gz) = 97c7ee2b17fabb57180b6e83d7ba0a7a7d93347a
+RMD160 (uwsgitop-0.8.tar.gz) = cfac13989b454c689b812461c0a23737a6b7da0f
+Size (uwsgitop-0.8.tar.gz) = 3203 bytes
