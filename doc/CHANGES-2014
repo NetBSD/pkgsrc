@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.908 2014/03/01 09:41:29 obache Exp $
+$NetBSD: CHANGES-2014,v 1.909 2014/03/01 13:56:07 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1400,3 +1400,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/zeromq to 4.0.3 [obache 2014-03-01]
 	Updated net/py-zmq to 14.0.1 [obache 2014-03-01]
 	Updated devel/cmake-fedora to 1.2.7 [obache 2014-03-01]
+	Added devel/p5-Log-Report-Optional version 1.00 [wen 2014-03-01]
