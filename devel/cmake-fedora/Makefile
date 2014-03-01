@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2014/01/29 08:34:05 obache Exp $
+# $NetBSD: Makefile,v 1.6 2014/03/01 09:41:12 obache Exp $
 #
 
-DISTNAME=	cmake-fedora-1.2.3-modules-only
+DISTNAME=	cmake-fedora-1.2.7-modules-only
 PKGNAME=	${DISTNAME:S/-modules-only//}
 CATEGORIES=	devel
 MASTER_SITES=	https://fedorahosted.org/releases/c/m/cmake-fedora/
