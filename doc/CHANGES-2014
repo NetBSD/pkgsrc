@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.901 2014/02/28 18:03:49 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.902 2014/03/01 02:16:14 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1393,3 +1393,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/concurrencykit to 0.4.1 [mspo 2014-02-28]
 	Updated x11/mlterm to 3.3.3 [tsutsui 2014-02-28]
 	Updated games/onscripter to 20131223 [tsutsui 2014-02-28]
+	Updated devel/p5-boolean to 0.32 [wen 2014-03-01]
