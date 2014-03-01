@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.21 2009/06/14 18:09:23 joerg Exp $
+@comment $NetBSD: PLIST,v 1.22 2014/03/01 22:29:20 richard Exp $
 bin/bug-buddy
 lib/gtk-2.0/modules/libgnomebreakpad.la
 man/man1/bug-buddy.1
 share/applications/bug-buddy.desktop
 share/bug-buddy/bug-buddy.gtkbuilder
-share/bug-buddy/bug-buddy.menu
 share/bug-buddy/gdb-cmd
 share/gconf/schemas/bug-buddy.schemas
 share/icons/HighContrastLargePrint/48x48/apps/bug-buddy.png
@@ -18,6 +17,7 @@ share/locale/af/LC_MESSAGES/bug-buddy.mo
 share/locale/am/LC_MESSAGES/bug-buddy.mo
 share/locale/ar/LC_MESSAGES/bug-buddy.mo
 share/locale/as/LC_MESSAGES/bug-buddy.mo
+share/locale/ast/LC_MESSAGES/bug-buddy.mo
 share/locale/az/LC_MESSAGES/bug-buddy.mo
 share/locale/be/LC_MESSAGES/bug-buddy.mo
 share/locale/be@latin/LC_MESSAGES/bug-buddy.mo
@@ -26,6 +26,7 @@ share/locale/bn/LC_MESSAGES/bug-buddy.mo
 share/locale/bn_IN/LC_MESSAGES/bug-buddy.mo
 share/locale/bs/LC_MESSAGES/bug-buddy.mo
 share/locale/ca/LC_MESSAGES/bug-buddy.mo
+share/locale/ca@valencia/LC_MESSAGES/bug-buddy.mo
 share/locale/cs/LC_MESSAGES/bug-buddy.mo
 share/locale/cy/LC_MESSAGES/bug-buddy.mo
 share/locale/da/LC_MESSAGES/bug-buddy.mo
@@ -34,6 +35,7 @@ share/locale/dz/LC_MESSAGES/bug-buddy.mo
 share/locale/el/LC_MESSAGES/bug-buddy.mo
 share/locale/en_CA/LC_MESSAGES/bug-buddy.mo
 share/locale/en_GB/LC_MESSAGES/bug-buddy.mo
+share/locale/en@shaw/LC_MESSAGES/bug-buddy.mo
 share/locale/es/LC_MESSAGES/bug-buddy.mo
 share/locale/et/LC_MESSAGES/bug-buddy.mo
 share/locale/eu/LC_MESSAGES/bug-buddy.mo
@@ -58,6 +60,7 @@ share/locale/ku/LC_MESSAGES/bug-buddy.mo
 share/locale/ky/LC_MESSAGES/bug-buddy.mo
 share/locale/lt/LC_MESSAGES/bug-buddy.mo
 share/locale/lv/LC_MESSAGES/bug-buddy.mo
+share/locale/mai/LC_MESSAGES/bug-buddy.mo
 share/locale/mg/LC_MESSAGES/bug-buddy.mo
 share/locale/mk/LC_MESSAGES/bug-buddy.mo
 share/locale/ml/LC_MESSAGES/bug-buddy.mo
