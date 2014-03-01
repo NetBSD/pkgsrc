@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.903 2014/03/01 02:22:04 wen Exp $
+$NetBSD: CHANGES-2014,v 1.904 2014/03/01 03:11:37 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1395,3 +1395,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated games/onscripter to 20131223 [tsutsui 2014-02-28]
 	Updated devel/p5-boolean to 0.32 [wen 2014-03-01]
 	Updated devel/p5-Mo to 0.38 [wen 2014-03-01]
+	Updated textproc/p5-Unicode-LineBreak to 2013.11 [wen 2014-03-01]
