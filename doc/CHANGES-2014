@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.904 2014/03/01 03:11:37 wen Exp $
+$NetBSD: CHANGES-2014,v 1.905 2014/03/01 08:17:21 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1396,3 +1396,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-boolean to 0.32 [wen 2014-03-01]
 	Updated devel/p5-Mo to 0.38 [wen 2014-03-01]
 	Updated textproc/p5-Unicode-LineBreak to 2013.11 [wen 2014-03-01]
+	Added devel/p5-String-Print version 0.13 [wen 2014-03-01]
