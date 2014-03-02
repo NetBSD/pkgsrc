@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.916 2014/03/02 13:53:28 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.917 2014/03/02 15:05:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1408,3 +1408,11 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/nginx to 1.4.5 [rodent 2014-03-01]
 	Updated net/bug-buddy to 2.30.0 [richard 2014-03-01]
 	Updated sysutils/xentools42 to 4.2.4nb1 [wiz 2014-03-02]
+	Updated devel/ruby-activesupport32 to 3.2.17 [taca 2014-03-02]
+	Updated devel/ruby-activemodel32 to 3.2.17 [taca 2014-03-02]
+	Updated databases/ruby-activerecord32 to 3.2.17 [taca 2014-03-02]
+	Updated www/ruby-activeresource32 to 3.2.17 [taca 2014-03-02]
+	Updated www/ruby-actionpack32 to 3.2.17 [taca 2014-03-02]
+	Updated mail/ruby-actionmailer32 to 3.2.17 [taca 2014-03-02]
+	Updated devel/ruby-railties32 to 3.2.17 [taca 2014-03-02]
+	Updated www/ruby-rails32 to 3.2.17 [taca 2014-03-02]
