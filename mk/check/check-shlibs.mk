@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs.mk,v 1.22 2013/02/20 06:00:51 obache Exp $
+# $NetBSD: check-shlibs.mk,v 1.23 2014/03/02 05:43:16 obache Exp $
 #
 # This file verifies that all libraries used by the package can be found
 # at run-time.
@@ -11,6 +11,13 @@
 #	Default value: "yes" for PKG_DEVELOPERs, "no" otherwise.
 #
 # Package-settable variables:
+#
+# CHECK_SHLIBS_SKIP
+#	A list of shell patterns (like man/*) that should be excluded
+#	from the check. Note that a * in a pattern also matches a slash
+#	in a pathname.
+#
+#	Default value: empty.
 #
 # CHECK_SHLIBS_SUPPORTED
 #	Whether the check should be enabled for this package or not.
@@ -27,6 +34,7 @@ CHECK_SHLIBS?=			yes
 .endif
 CHECK_SHLIBS?=			no
 CHECK_SHLIBS_SUPPORTED?=	yes
+CHECK_SHLIBS_SKIP?=		# none
 
 # All binaries and shared libraries.
 _CHECK_SHLIBS_ERE=	(bin/|sbin/|libexec/|\.so$$|lib/lib.*\.so|lib/lib.*\.dylib|lib/lib.*\.sl)
@@ -60,6 +68,13 @@ _check-shlibs: error-check .PHONY
 	cd ${DESTDIR:Q}${PREFIX:Q};					\
 	${_CHECK_SHLIBS_FILELIST_CMD} |					\
 	${EGREP} -h ${_CHECK_SHLIBS_ERE:Q} |				\
+	while read file; do						\
+		case "$$file" in					\
+		${CHECK_SHLIBS_SKIP:@p@${p}) continue ;;@}		\
+		*) ;;							\
+		esac;							\
+		${ECHO} $$file;						\
+	done |								\
 	${PKGSRC_SETENV} ${CHECK_SHLIBS_ELF_ENV} ${AWK} -f ${CHECK_SHLIBS_ELF} > ${ERROR_DIR}/${.TARGET}
 
 .else
@@ -81,6 +96,10 @@ _check-shlibs: error-check .PHONY
 	${_CHECK_SHLIBS_FILELIST_CMD} |					\
 	${EGREP} -h ${_CHECK_SHLIBS_ERE:Q} |				\
 	while read file; do						\
+		case "$$file" in					\
+		${CHECK_SHLIBS_SKIP:@p@${p}) continue ;;@}		\
+		*) ;;							\
+		esac;							\
 		err=`$$ldd $$file 2>&1 | ${GREP} "not found" || ${TRUE}`; \
 		${TEST} -z "$$err" || ${ECHO} "${DESTDIR}${PREFIX}/$$file: $$err"; \
 	done
