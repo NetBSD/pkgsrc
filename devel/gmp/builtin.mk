@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2012/02/16 18:39:53 hans Exp $
+# $NetBSD: builtin.mk,v 1.4 2014/03/02 08:00:00 obache Exp $
 
 BUILTIN_PKG:=	gmp
 
@@ -14,9 +14,12 @@ BUILTIN_VERSION_SCRIPT.gmp= ${AWK} \
 
 .include "../../mk/buildlink3/pkgconfig-builtin.mk"
 
-.if !empty(USE_BUILTIN.gmp:M[Yy][Ee][Ss])
+CHECK_BUILTIN.gmp?=	no
+.if !empty(CHECK_BUILTIN.gmp:M[Nn][Oo])
+.  if !empty(USE_BUILTIN.gmp:M[Yy][Ee][Ss])
 GMP_INCLUDE=		${FIND_FILES_gmp:S/\/gmp.h//}
 CONFIGURE_ARGS+=	--with-gmp-include=${GMP_INCLUDE}
 CPPFLAGS+=		-I${GMP_INCLUDE}
 CFLAGS+=		-I${GMP_INCLUDE}
-.endif
+.  endif
+.endif # CHECK_BUILTIN.gmp
