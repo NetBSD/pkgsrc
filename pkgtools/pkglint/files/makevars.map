@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.242 2014/02/17 14:33:42 wiz Exp $
+# $NetBSD: makevars.map,v 1.243 2014/03/02 05:45:24 obache Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -224,6 +224,7 @@ CHECK_PERMS_SKIP	List of Pathmask [$package_list]
 CHECK_PORTABILITY	YesNo [$user]
 CHECK_PORTABILITY_SKIP	List of Pathmask [$package_list]
 CHECK_SHLIBS		YesNo [m:s]
+CHECK_SHLIBS_SKIP	List of Pathmask [$package_list]
 CHECK_SHLIBS_SUPPORTED	YesNo [m:s]
 CHECK_WRKREF_SKIP	List of Pathmask [$package_list]
 CMAKE_ARG_PATH		Pathname [$package]
