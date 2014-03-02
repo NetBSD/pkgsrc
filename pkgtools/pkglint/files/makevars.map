@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.246 2014/03/02 09:36:56 obache Exp $
+# $NetBSD: makevars.map,v 1.247 2014/03/02 09:47:20 obache Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -333,6 +333,7 @@ EXPORT_SYMBOLS_LDFLAGS	List of LdFlag [$system]
 EXTRACT_CMD		ShellCommand [$system]
 EXTRACT_DIR		Pathname [$package]
 EXTRACT_ELEMENTS	List of Pathmask [$package_list]
+EXTRACT_ENV		List of ShellWord [$package_list]
 EXTRACT_ONLY		List of Pathname [$package_list]
 EXTRACT_OPTS		List of ShellWord [m:as,c:as]
 EXTRACT_OPTS_BIN	List of ShellWord [m:as,c:as]
