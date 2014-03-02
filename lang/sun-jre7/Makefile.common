@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2014/03/02 09:53:41 obache Exp $
+# $NetBSD: Makefile.common,v 1.5 2014/03/02 09:54:36 obache Exp $
 # used by lang/sun-jre7/Makefile
 # used by lang/sun-jdk7/Makefile
 
@@ -20,7 +20,7 @@ EMUL_PLATFORMS=		linux-i386 linux-x86_64 solaris-i386 solaris-x86_64
 
 USE_TOOLS+=	pax
 
-# JDK7 Update number 
+# JDK7 Update number
 UPDATE_NUMBER=	51
 
 .include "../../mk/bsd.prefs.mk"
