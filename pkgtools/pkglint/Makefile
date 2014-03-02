@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.439 2014/02/17 14:33:42 wiz Exp $
+# $NetBSD: Makefile,v 1.440 2014/03/02 09:03:11 obache Exp $
 
 # Note: if you update the version number, please have a look at the
 # changes between the CVS tag "pkglint_current" and HEAD.
 # After updating, please re-set the CVS tag to HEAD.
-DISTNAME=	pkglint-4.136
+PKGNAME=	pkglint-4.136
 CATEGORIES=	pkgtools
-MASTER_SITES=	# none
-DISTFILES=	# none
 
 OWNER=		wiz@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/docs/pkgsrc/
@@ -39,7 +37,7 @@ SUBST_SED.pkglint+=	-e s\|@PKGSRCDIR@\|/usr/pkgsrc\|g
 SUBST_SED.pkglint+=	-e s\|@PKGSRCDIR@\|${PKGSRCDIR}\|g
 .endif
 SUBST_SED.pkglint+=	-e s\|@PREFIX@\|${PREFIX}\|g
-SUBST_SED.pkglint+=	-e s\|@DISTVER@\|${DISTNAME:S/pkglint-//}\|g
+SUBST_SED.pkglint+=	-e s\|@DISTVER@\|${PKGNAME:S/pkglint-//}\|g
 SUBST_SED.pkglint+=	-e s\|@MAKE@\|${MAKE:Q}\|g
 SUBST_SED.pkglint+=	-e s\|@PERL@\|${PERL5:Q}\|g
 SUBST_SED.pkglint+=	-e s\|@DATADIR@\|${FILESDIR}\|g
