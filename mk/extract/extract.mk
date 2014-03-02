@@ -1,4 +1,4 @@
-# $NetBSD: extract.mk,v 1.36 2012/10/06 22:16:08 ryoon Exp $
+# $NetBSD: extract.mk,v 1.37 2014/03/02 09:45:42 obache Exp $
 #
 # The following variables may be set by the package Makefile and
 # specify how extraction happens:
@@ -12,6 +12,9 @@
 #	The directory into which the file ${file} is extracted.
 #
 #	Default: ${EXTRACT_DIR}
+#
+#    EXTRACT_ENV is the shell environment that is exported to the extract
+#	process.
 #
 #    EXTRACTOR is the the the environment and path used to execute the
 #	all-purpose extract script.
