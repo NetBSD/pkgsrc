@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.244 2014/03/02 06:13:00 obache Exp $
+# $NetBSD: makevars.map,v 1.245 2014/03/02 06:15:01 obache Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -700,7 +700,7 @@ SUPERSEDES		InternalList of Dependency [$package_list]
 SVR4_PKGNAME		SVR4PkgName [$package]
 TEST_DIRS		List of WrksrcSubdirectory [$package_list]
 TEST_ENV		List of ShellWord [$package_list]
-TEST_TARGET		List of Identifier [m:s,c:ds]
+TEST_TARGET		List of Identifier [m:s,c:ds,o:as]
 TEX_ACCEPTED		List of { teTeX1 teTeX2 teTeX3 } [m:s,c:s]
 TEX_DEPMETHOD		{ build run } [m:s,c:s]
 TEXINFO_REQD		List of Version [$package_list]
