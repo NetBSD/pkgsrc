@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.915 2014/03/01 22:30:30 richard Exp $
+$NetBSD: CHANGES-2014,v 1.916 2014/03/02 13:53:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1407,3 +1407,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-uwsgitop to 0.8 [rodent 2014-03-01]
 	Updated www/nginx to 1.4.5 [rodent 2014-03-01]
 	Updated net/bug-buddy to 2.30.0 [richard 2014-03-01]
+	Updated sysutils/xentools42 to 4.2.4nb1 [wiz 2014-03-02]
