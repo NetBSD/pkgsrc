@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.245 2014/03/02 06:15:01 obache Exp $
+# $NetBSD: makevars.map,v 1.246 2014/03/02 09:36:56 obache Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -318,7 +318,7 @@ EMUL_ARCH		{ i386 none } [$system]
 EMUL_DISTRO		Identifier [$system]
 EMUL_IS_NATIVE		Yes [$system]
 EMUL_MODULES.*		List of Identifier [$package]
-EMUL_OPSYS		{ linux } [$system]
+EMUL_OPSYS		{ freebsd hpux irix linux osf1 solaris sunos none } [$system]
 EMUL_PKG_FMT		{ plain rpm } [$package]
 EMUL_PLATFORM		EmulPlatform [$user]
 EMUL_PLATFORMS		List of EmulPlatform [$package]
