@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.862 2014/01/13 01:54:52 cheusov Exp $
+# $NetBSD: pkglint.pl,v 1.863 2014/03/02 08:39:01 obache Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -7062,6 +7062,8 @@ sub checkfile($) {
 	if (S_ISDIR($st->mode)) {
 		if ($basename eq "files" || $basename eq "patches" || $basename eq "CVS") {
 			# Ok
+		} elsif ($fname =~ m"(?:^|/)files/[^/]*$") {
+			# Ok
 
 		} elsif (!is_emptydir($fname)) {
 			log_warning($fname, NO_LINE_NUMBER, "Unknown directory name.");
@@ -7117,6 +7119,8 @@ sub checkfile($) {
 	} elsif (!-T $fname) {
 		log_warning($fname, NO_LINE_NUMBER, "Unexpectedly found a binary file.");
 
+	} elsif ($fname =~ m"(?:^|/)files/[^/]*$") {
+		# Ok
 	} else {
 		log_warning($fname, NO_LINE_NUMBER, "Unexpected file found.");
 		$opt_check_extra and checkfile_extra($fname);
