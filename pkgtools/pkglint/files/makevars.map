@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.243 2014/03/02 05:45:24 obache Exp $
+# $NetBSD: makevars.map,v 1.244 2014/03/02 06:13:00 obache Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -262,6 +262,7 @@ DEPENDS			InternalList of DependencyWithPath [$package_list]
 DEPENDS_TARGET		List of Identifier [$user]
 DESCR_SRC		List of Pathname [m:s,c:ds]
 DESTDIR			Pathname [$system]
+DESTDIR_VARNAME		Varname [m:s,c:s]
 DEVOSSAUDIO		Pathname [$system]
 DEVOSSSOUND		Pathname [$system]
 DISTFILES		List of Filename [$package_list]
