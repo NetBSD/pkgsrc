@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/08 09:57:25 asau Exp $
+# $NetBSD: Makefile,v 1.19 2014/03/02 07:20:30 obache Exp $
 
 DISTNAME=	NetBSD1.3I-jman-19990531
 PKGNAME=	ja-man-19990531
@@ -34,6 +34,8 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/${JAMANDIR}/man${c}
 INSTALL_DIRS+=	man
 
 CONF_FILES+=	share/examples/jman.conf ${PKG_SYSCONFDIR}/jman.conf
+
+CHECK_SHLIBS_SKIP+=	${PKGMANDIR}/${JAMANDIR}/man1/ld.so.1
 
 .include "../../mk/bsd.prefs.mk"
 
