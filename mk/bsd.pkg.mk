@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1993 2013/07/15 20:22:15 christos Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1994 2014/03/02 08:54:41 obache Exp $
 #
 # This file is in the public domain.
 #
@@ -133,8 +133,12 @@ PKG_FAIL_REASON+=	"PKG_INSTALLATION_TYPE must be \`\`pkgviews'' or \`\`overwrite
 PKG_FAIL_REASON+=	"This package doesn't support PKG_INSTALLATION_TYPE=${PKG_INSTALLATION_TYPE}."
 .endif
 
-.if !defined(CATEGORIES) || !defined(DISTNAME)
-PKG_FAIL_REASON+='CATEGORIES and DISTNAME are mandatory.'
+.if !defined(CATEGORIES)
+PKG_FAIL_REASON+='CATEGORIES are mandatory.'
+.endif
+
+.if !defined(PKGNAME) && !defined(DISTNAME)
+PKG_FAIL_REASON+='PKGNAME and/or DISTNAME are mandatory.'
 .endif
 
 .if defined(PKG_PATH)
