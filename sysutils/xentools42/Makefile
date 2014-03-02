@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2014/02/22 01:28:23 prlw1 Exp $
+# $NetBSD: Makefile,v 1.17 2014/03/02 13:53:18 wiz Exp $
 
 VERSION=	4.2.4
 VERSION_IPXE=	1.0.0
 
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools42-${VERSION}
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://bits.xensource.com/oss-xen/release/${VERSION}/
 
@@ -23,6 +24,7 @@ BUILD_DEPENDS+= dev86-[0-9]*:../../devel/dev86 # needed to build firmware
 BUILD_DEPENDS+= acpica-utils-[0-9]*:../../sysutils/acpica-utils
 .endif
 DEPENDS+=		${PYPKGPREFIX}-curses>=0nb4:../../devel/py-curses
+DEPENDS+=		${PYPKGPREFIX}-lxml:../../textproc/py-lxml
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-xml
 
