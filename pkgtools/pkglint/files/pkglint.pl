@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.863 2014/03/02 08:39:01 obache Exp $
+# $NetBSD: pkglint.pl,v 1.864 2014/03/02 08:56:54 obache Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4936,7 +4936,7 @@ sub checklines_package_Makefile_varorder($) {
 		],
 		[ "Unsorted stuff, part 1", once,
 			[
-				[ "DISTNAME", once ],
+				[ "DISTNAME", optional ],
 				[ "PKGNAME",  optional ],
 				[ "PKGREVISION", optional ],
 				[ "SVR4_PKGNAME", optional ],
