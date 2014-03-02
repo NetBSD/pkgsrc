@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.7 2013/08/10 06:03:37 obache Exp $
+# $NetBSD: metadata.mk,v 1.8 2014/03/02 07:18:36 obache Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -70,6 +70,10 @@ ${_BUILD_INFO_FILE}: ${_PLIST_NOKEYWORDS}
 		fi;							\
 		linklibs=`${AWK} '/.*\.so(\.[0-9]+)*$$/ { print "${DESTDIR}${PREFIX}/" $$0 }' ${_PLIST_NOKEYWORDS}`; \
 		for i in $$linklibs; do					\
+			case "$$i" in					\
+			${CHECK_SHLIBS_SKIP:U:@p@${DESTDIR}${PREFIX}/${p}) continue ;;@}	\
+			*);;						\
+			esac;						\
 			if ${TEST} -r $$i -a ! -x $$i -a ! -h $$i; then	\
 				${TEST} ${PKG_DEVELOPER:Uno:Q}"" = "no" || \
 					${ECHO} "$$i: installed without execute permission; fixing (should use [BSD_]INSTALL_LIB)"; \
