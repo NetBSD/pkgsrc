@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2012/09/11 23:19:34 asau Exp $
+# $NetBSD: Makefile,v 1.12 2014/03/03 03:30:52 obache Exp $
 
-DISTNAME=	bootstrap-extra-files-20070702
+PKGNAME=	bootstrap-extra-files-20070702
 CATEGORIES=	pkgtools
-MASTER_SITES=	# empty
-DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Extra bootstrap files and scripts for ${OPSYS}

@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2014/02/02 10:19:41 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2014/03/03 03:30:54 obache Exp $
 
-DISTNAME=	pkg_notify-0.4.4
+PKGNAME=	pkg_notify-0.4.4
 CATEGORIES=	pkgtools
-MASTER_SITES=	# none
-DISTFILES=	# none
 
 MAINTAINER=	imil@gcu.info
 HOMEPAGE=	# none

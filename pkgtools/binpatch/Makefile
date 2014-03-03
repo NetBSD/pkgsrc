@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2012/09/11 23:19:33 asau Exp $
+# $NetBSD: Makefile,v 1.13 2014/03/03 03:30:52 obache Exp $
 #
 
-DISTNAME=	binpatch-1.0
+PKGNAME=	binpatch-1.0
 CATEGORIES=	pkgtools
-MASTER_SITES=	# empty
-DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/doc/pkgsrc.html

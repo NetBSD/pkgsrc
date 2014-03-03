@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/30 03:18:26 sbd Exp $
+# $NetBSD: Makefile,v 1.2 2014/03/03 03:30:53 obache Exp $
 #
 
-DISTNAME=	osabi-${OPSYS}-${OS_VERSION}
+PKGNAME=	osabi-${OPSYS}-${OS_VERSION}
 CATEGORIES=	pkgtools
-MASTER_SITES=	# empty
-DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pkgsrc.org/

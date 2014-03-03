@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2012/09/11 23:19:34 asau Exp $
+# $NetBSD: Makefile,v 1.32 2014/03/03 03:30:53 obache Exp $
 #
 
-DISTNAME=	cdpack-1.9
+PKGNAME=	cdpack-1.9
 CATEGORIES=	pkgtools
-MASTER_SITES=	# empty
-DISTFILES=	# empty
 
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/

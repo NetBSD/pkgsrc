@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.201 2014/02/21 18:18:49 richard Exp $
+# $NetBSD: Makefile,v 1.202 2014/03/03 03:30:54 obache Exp $
 
 # Notes to package maintainers:
 #
@@ -6,11 +6,9 @@
 # PKGTOOLS_REQD in bsd.pkg.mk. Do so if and only if there is a critical
 # change in the pkg_* tools that pkgsrc relies on for proper operation.
 
-DISTNAME=		pkg_install-${VERSION}
+PKGNAME=		pkg_install-${VERSION}
 PKGREVISION=		1
 CATEGORIES=		pkgtools
-MASTER_SITES=		# empty
-DISTFILES=		# empty
 
 MAINTAINER=		agc@NetBSD.org
 HOMEPAGE=		http://www.pkgsrc.org/

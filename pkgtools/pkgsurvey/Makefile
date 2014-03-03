@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2012/09/11 23:19:39 asau Exp $
+# $NetBSD: Makefile,v 1.13 2014/03/03 03:30:55 obache Exp $
 #
 
-DISTNAME=	pkgsurvey-0.0
+PKGNAME=	pkgsurvey-0.0
 CATEGORIES=	pkgtools
-MASTER_SITES=	# empty
-DISTFILES=	# empty
 
 MAINTAINER=	agc@pkgsrc.org
 COMMENT=	Utility to collate pkg information, and mail to central census site

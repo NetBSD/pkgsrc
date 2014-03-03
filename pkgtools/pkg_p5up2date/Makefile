@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2014/02/13 17:35:44 abs Exp $
+# $NetBSD: Makefile,v 1.8 2014/03/03 03:30:54 obache Exp $
 
-DISTNAME=	pkg_p5up2date-0.04
+PKGNAME=	pkg_p5up2date-0.04
 PKGREVISION=	3
 CATEGORIES=	pkgtools
-MASTER_SITES=	# empty
-DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-p5-people@NetBSD.org
 COMMENT=	Check p5-* pkgsrc packages requiring updates
