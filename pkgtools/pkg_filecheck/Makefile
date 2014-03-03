@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2014/03/03 03:30:54 obache Exp $
+# $NetBSD: Makefile,v 1.37 2014/03/03 04:43:49 obache Exp $
 #
 
 PKGNAME=		pkg_filecheck-0.4
@@ -8,6 +8,7 @@ CATEGORIES=		pkgtools devel
 MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=		http://www.NetBSD.org/docs/pkgsrc/
 COMMENT=		Check for files not owned by any package
+LICENSE=		modified-bsd AND 2-clause-bsd
 
 WRKSRC=		${WRKDIR}
 USE_TOOLS+=	perl:run
