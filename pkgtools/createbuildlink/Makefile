@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.51 2014/03/03 03:30:53 obache Exp $
+# $NetBSD: Makefile,v 1.52 2014/03/03 03:41:12 obache Exp $
 
 PKGNAME=	createbuildlink-3.16
 CATEGORIES=	pkgtools sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Shell script to help creating buildlink3.mk files
+LICENSE=	original-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
