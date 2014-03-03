@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1994 2014/03/02 08:54:41 obache Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1995 2014/03/03 03:21:16 obache Exp $
 #
 # This file is in the public domain.
 #
@@ -97,7 +97,7 @@ MAINTAINER?=		pkgsrc-users@NetBSD.org
 PKGWILDCARD?=		${PKGBASE}-[0-9]*
 SVR4_PKGNAME?=		${PKGNAME}
 TOOL_DEPENDS?=		# empty
-WRKSRC?=		${WRKDIR}/${DISTNAME}
+WRKSRC?=		${WRKDIR}/${DISTNAME:U${PKGNAME_NOREV}}
 
 # Override for SU_CMD user check
 _IS_ROOT_CMD?=		${TEST}	`${ID} -u` = `${ID} -u ${_SU_ROOT_USER}`
