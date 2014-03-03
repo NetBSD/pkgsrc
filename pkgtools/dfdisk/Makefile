@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/03/03 03:30:53 obache Exp $
+# $NetBSD: Makefile,v 1.16 2014/03/03 03:42:05 obache Exp $
 #
 
 PKGNAME=	dfdisk-1.0
@@ -6,6 +6,7 @@ CATEGORIES=	pkgtools
 
 MAINTAINER=	jmmv@NetBSD.org
 COMMENT=	Fetch distfiles from multiple locations
+LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	yes
