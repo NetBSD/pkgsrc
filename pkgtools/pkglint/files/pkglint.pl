@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.865 2014/03/02 09:41:31 obache Exp $
+# $NetBSD: pkglint.pl,v 1.866 2014/03/03 05:18:23 obache Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4291,7 +4291,7 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 			if ($value =~ m"^(${part})-(${part})-(${part})$") {
 				my ($opsys, $os_version, $arch) = ($1, $2, $3);
 
-				if ($opsys !~ m"^(?:\*|BSDOS|Cygwin|Darwin|DragonFly|FreeBSD|Haiku|HPUX|Interix|IRIX|Linux|NetBSD|OpenBSD|OSF1|SunOS)$") {
+				if ($opsys !~ m"^(?:\*|BSDOS|Cygwin|Darwin|DragonFly|FreeBSD|Haiku|HPUX|Interix|IRIX|Linux|NetBSD|OpenBSD|OSF1|QNX|SunOS)$") {
 					$line->log_warning("Unknown operating system: ${opsys}");
 				}
 				# no check for $os_version
