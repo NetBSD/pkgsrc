@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/03/15 16:14:55 bsiegert Exp $
+# $NetBSD: Makefile,v 1.13 2014/03/03 06:01:26 obache Exp $
 
 DISTNAME=	mozilla-rootcerts-1.0.${CERTDATA_DATE}
 PKGREVISION=	1
@@ -23,6 +23,7 @@ DATADIR=	${PREFIX}/share/${PKGBASE}
 
 CHECK_BUILTIN.openssl=	yes
 .include "../../security/openssl/builtin.mk"
+CHECK_BUILTIN.openssl=	no
 .if !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
 SSLDIR=		/etc/openssl/certs
 .else
