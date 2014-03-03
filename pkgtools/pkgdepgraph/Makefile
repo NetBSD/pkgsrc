@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2014/03/03 05:03:49 obache Exp $
+# $NetBSD: Makefile,v 1.35 2014/03/03 05:06:43 obache Exp $
 #
 
 PKGNAME=	pkgdepgraph-2.8
@@ -38,6 +38,7 @@ do-build:
 		-e 's|@PKG_DBDIR@|${PKG_DBDIR}|g'	\
 		-e 's|@PKGSRCDIR@|${PKGSRCDIR}|g'	\
 		-e 's|@DISTVER@|${DISTVER}|g'		\
+		-e 's|@PERL5@|${PERL5}|g'		\
 		< ${WRKSRC}/${file}.pl 		\
 		> ${WRKSRC}/${file}
 .endfor
