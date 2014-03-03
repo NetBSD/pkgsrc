@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/03/03 03:30:52 obache Exp $
+# $NetBSD: Makefile,v 1.14 2014/03/03 03:34:32 obache Exp $
 #
 
 PKGNAME=	binpatch-1.0
@@ -7,6 +7,7 @@ CATEGORIES=	pkgtools
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/doc/pkgsrc.html
 COMMENT=	Trivial binary patch applicator
+LICENSE=	beer-ware
 
 .include "../../mk/bsd.prefs.mk"
 
