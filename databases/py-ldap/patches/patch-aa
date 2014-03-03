@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.9 2012/02/28 00:01:05 adam Exp $
+$NetBSD: patch-aa,v 1.10 2014/03/03 17:01:34 adam Exp $
 
 --- setup.cfg.orig	2012-02-21 17:18:54.000000000 +0000
 +++ setup.cfg
 @@ -1,10 +1,10 @@
  [_ldap]
--library_dirs = /opt/openldap-RE24/lib /usr/lib
--include_dirs = /opt/openldap-RE24/include /usr/include/sasl /usr/include
+-library_dirs = /opt/openldap/lib64 /usr/lib
+-include_dirs = /opt/openldap/include /usr/include/sasl /usr/include
 -defines = HAVE_SASL HAVE_TLS HAVE_LIBLDAP_R
 +library_dirs = @PY_LDAP_LIBRARY_DIRS@
 +include_dirs = @PY_LDAP_INCLUDE_DIRS@
