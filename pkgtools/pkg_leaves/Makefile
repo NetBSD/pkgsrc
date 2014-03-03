@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2014/03/03 03:30:54 obache Exp $
+# $NetBSD: Makefile,v 1.7 2014/03/03 04:47:04 obache Exp $
 
 PKGNAME=	pkg_leaves-1.2
 CATEGORIES=	pkgtools
 
 MAINTAINER=	joerg@NetBSD.org
 COMMENT=	Print leaf packages
+LICENSE=	2-clause-bsd
 
 WRKSRC=		${WRKDIR}
 NO_BUILD=	yes
