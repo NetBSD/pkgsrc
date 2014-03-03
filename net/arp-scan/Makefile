@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/05/31 12:41:31 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/03/03 09:19:49 pho Exp $
 #
 
 DISTNAME=	arp-scan-1.8
@@ -16,4 +16,6 @@ USE_TOOLS+=	perl:run
 
 REPLACE_PERL=	arp-fingerprint get-iab get-oui
 
+BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.8
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
