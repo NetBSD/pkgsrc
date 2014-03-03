@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/03/03 03:30:53 obache Exp $
+# $NetBSD: Makefile,v 1.21 2014/03/03 04:40:12 obache Exp $
 #
 
 PKGNAME=	pkg_alternatives-1.6
@@ -6,6 +6,7 @@ CATEGORIES=	pkgtools
 
 MAINTAINER=	jmmv@NetBSD.org
 COMMENT=	Generic wrappers for programs with similar interfaces
+LICENSE=	modified-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
