@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.59 2012/09/11 23:19:34 asau Exp $
+# $NetBSD: Makefile,v 1.60 2014/03/03 03:30:53 obache Exp $
 #
 # When adding new digest algorithms, please use rmd160 as the template,
 # and bump the VERSION definition.
 
-DISTNAME?=	digest-${VERSION}
+PKGNAME?=	digest-${VERSION}
 CATEGORIES=	pkgtools
-MASTER_SITES=	# empty
-DISTFILES=	# empty
 
 MAINTAINER?=	agc@NetBSD.org
 HOMEPAGE?=	http://www.NetBSD.org/docs/software/packages.html

@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2012/09/11 23:19:34 asau Exp $
+# $NetBSD: Makefile,v 1.15 2014/03/03 03:30:53 obache Exp $
 #
 
-DISTNAME=	dfdisk-1.0
+PKGNAME=	dfdisk-1.0
 CATEGORIES=	pkgtools
-MASTER_SITES=	# empty
-DISTFILES=	# empty
 
 MAINTAINER=	jmmv@NetBSD.org
 COMMENT=	Fetch distfiles from multiple locations
