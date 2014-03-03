@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.25 2014/03/03 03:30:54 obache Exp $
+# $NetBSD: Makefile,v 1.26 2014/03/03 05:07:42 obache Exp $
 
 PKGNAME=	pkgfind-20111022
 CATEGORIES=	pkgtools
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Find packages by package name in pkgsrc
+LICENSE=	2-clause-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
