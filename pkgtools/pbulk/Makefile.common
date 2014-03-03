@@ -1,4 +1,7 @@
-# $NetBSD: Makefile.common,v 1.2 2011/11/27 19:53:30 joerg Exp $
+# $NetBSD: Makefile.common,v 1.3 2014/03/03 04:38:43 obache Exp $
+#
+# used by pkgtools/pbulk/Makefile
+# used by pkgtools/pbulk-base/Makefile
 
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
