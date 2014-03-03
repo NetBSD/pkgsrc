@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2013/09/12 11:15:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.27 2014/03/03 02:38:11 obache Exp $
 #
 
-DISTNAME=	shlock-20080529
+PKGNAME=	shlock-20080529
 CATEGORIES=	pkgtools sysutils
-MASTER_SITES=	# empty
-DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=
