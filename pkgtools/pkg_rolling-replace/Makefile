@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2012/09/11 23:19:37 asau Exp $
+# $NetBSD: Makefile,v 1.35 2014/03/03 03:30:54 obache Exp $
 
-DISTNAME=	pkg_rolling-replace-0.24.1
+PKGNAME=	pkg_rolling-replace-0.24.1
 CATEGORIES=	pkgtools
-MASTER_SITES=	# empty
-DISTFILES=	# empty
 
 MAINTAINER=	ngoffee@bbn.com
 COMMENT=	Replace/upgrade packages in-place
