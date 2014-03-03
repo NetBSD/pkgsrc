@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13045 2014/03/02 14:47:58 wiz Exp $
+$NetBSD: TODO,v 1.13046 2014/03/03 10:39:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -545,7 +545,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fltk2-2.0pre8323
 	o fluxbox-1.3.5
 	o fmsx-3.7
-	o fotoxx-14.02
+	o fotoxx-14.03
 	o fox-1.6.41
 	o freeciv-2.4.0
 	o freefont-20120503
@@ -627,6 +627,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnomeicu-0.99.16
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
+	o gnucash-2.6.2
 	o gnuchess-6.1.1
 	o gob-2.0.19
 	o gok-2.30.1 [GNOME 2.32]
@@ -766,6 +767,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libvdpau-0.7
 	o libxdg-basedir-1.2.0
 	o libxklavier-5.3
+	o libxmp-4.2.5
 	o licq-1.3.8
 	o liferea-1.10.6
 	o lincvs-2.1.4 [now called CrossVC]
