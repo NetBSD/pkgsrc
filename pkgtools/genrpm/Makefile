@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/03/03 03:30:53 obache Exp $
+# $NetBSD: Makefile,v 1.11 2014/03/03 03:43:39 obache Exp $
 
 PKGNAME=	genrpm-1.2
 CATEGORIES=	pkgtools
@@ -6,6 +6,7 @@ CATEGORIES=	pkgtools
 MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	http://www.pkgsrc.org/
 COMMENT=	Generate an RPM package from an installed pkgsrc package
+LICENSE=	modified-bsd
 
 DEPENDS+=	pkg_tarup-[0-9]*:../../pkgtools/pkg_tarup
 DEPENDS+=	rpm-[0-9]*:../../misc/rpm
