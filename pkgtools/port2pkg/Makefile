@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2014/02/17 10:32:02 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2014/03/03 03:30:55 obache Exp $
 
-DISTNAME=	port2pkg-1.15
+PKGNAME=	port2pkg-1.15
 CATEGORIES=	pkgtools
-MASTER_SITES=	# empty
-DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Convert from a FreeBSD port to a NetBSD package

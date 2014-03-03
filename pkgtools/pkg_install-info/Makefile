@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2012/09/11 23:19:37 asau Exp $
+# $NetBSD: Makefile,v 1.21 2014/03/03 03:30:54 obache Exp $
 #
 
-DISTNAME=		pkg_install-info-${VERSION}
+PKGNAME=		pkg_install-info-${VERSION}
 PKGREVISION=		3
 CATEGORIES=		pkgtools
-MASTER_SITES=		# empty
-DISTFILES=		# empty
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/texinfo/texinfo.html
