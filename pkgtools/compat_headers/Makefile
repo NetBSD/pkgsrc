@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2013/04/06 03:45:21 rodent Exp $
+# $NetBSD: Makefile,v 1.9 2014/03/03 03:30:53 obache Exp $
 
-DISTNAME=		compat_headers-0.2
+PKGNAME=		compat_headers-0.2
 CATEGORIES=		pkgtools
-MASTER_SITES=		# empty
-DISTFILES=		# empty
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.pkgsrc.org/

@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2013/09/12 11:18:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.15 2014/03/03 03:30:53 obache Exp $
 
-DISTNAME=	lintpkgsrc-4.86
+PKGNAME=	lintpkgsrc-4.86
 PKGREVISION=	1
 CATEGORIES=	pkgtools
-MASTER_SITES=	# none
-DISTFILES=	# none
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/Documentation/pkgsrc/
