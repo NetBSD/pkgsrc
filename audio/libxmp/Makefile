@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/02/27 09:29:10 rxg Exp $
+# $NetBSD: Makefile,v 1.5 2014/03/03 15:52:03 adam Exp $
 
-DISTNAME=	libxmp-4.2.4
-PKGREVISION=	1
+DISTNAME=	libxmp-4.2.5
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmp/}
 
@@ -11,7 +10,6 @@ COMMENT=	Player for many different Amiga and PC module formats
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=		gmake pkg-config
-#CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 GNU_CONFIGURE=		yes
 
 INSTALLATION_DIRS=	bin lib
