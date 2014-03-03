@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2011/11/28 10:58:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/03/03 17:01:34 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -107,6 +107,7 @@ share/doc/py-ldap/Demo/passwd_ext_op.py
 share/doc/py-ldap/Demo/pickle_ldapobject.py
 share/doc/py-ldap/Demo/pyasn1/README
 share/doc/py-ldap/Demo/pyasn1/dds.py
+share/doc/py-ldap/Demo/pyasn1/noopsearch.py
 share/doc/py-ldap/Demo/pyasn1/ppolicy.py
 share/doc/py-ldap/Demo/pyasn1/psearch.py
 share/doc/py-ldap/Demo/pyasn1/readentrycontrol.py
