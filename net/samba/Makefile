@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.244 2014/03/03 08:05:07 obache Exp $
+# $NetBSD: Makefile,v 1.245 2014/03/03 08:15:10 obache Exp $
 
 DISTNAME=	samba-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${SAMBA_MIRRORS:=stable/}
 
@@ -107,6 +107,12 @@ SUBST_MESSAGE.paths=	Fixing paths.
 SUBST_FILES.paths=	${WRKDIR}/adduser.sh ${WRKDIR}/deluser.sh
 SUBST_STAGE.paths=	post-patch
 SUBST_VARS.paths+=	AWK CAT MKTEMP RM PWD_MKDB SH
+
+SUBST_CLASSES+=		def-cfg
+SUBST_MESSAGE.def-cfg=	Fixing default config files
+SUBST_FILES.def-cfg=	${WRKDIR}/${DISTNAME}/examples/smb.conf.default
+SUBST_STAGE.def-cfg=	post-configure
+SUBST_VARS.def-cfg=	SAMBA_LOGDIR
 
 post-extract:
 	${CP} ${FILESDIR}/adduser.sh ${FILESDIR}/deluser.sh ${WRKDIR}
