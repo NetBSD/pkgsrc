@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2014/03/03 03:30:52 obache Exp $
+# $NetBSD: Makefile,v 1.21 2014/03/03 03:33:18 obache Exp $
 
 PKGNAME=		autoswc-1.6
 CATEGORIES=		pkgtools sysutils
 
 MAINTAINER=		jmmv@NetBSD.org
 COMMENT=		Generates system wide cache files for GNU autoconf
+LICENSE=		modified-bsd
 
 DEPENDS+=		autoconf>=2.59:../../devel/autoconf
 DEPENDS+=		automake>=1.8.2:../../devel/automake
