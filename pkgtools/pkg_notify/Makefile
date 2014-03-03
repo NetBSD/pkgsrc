@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2014/03/03 03:30:54 obache Exp $
+# $NetBSD: Makefile,v 1.19 2014/03/03 04:48:46 obache Exp $
 
 PKGNAME=	pkg_notify-0.4.4
 CATEGORIES=	pkgtools
@@ -6,6 +6,7 @@ CATEGORIES=	pkgtools
 MAINTAINER=	imil@gcu.info
 HOMEPAGE=	# none
 COMMENT=	Notifies package maintainer when a new version is available
+LICENSE=	modified-bsd
 
 DEPENDS+=	p5-libwww>=5.76:../../www/p5-libwww
 

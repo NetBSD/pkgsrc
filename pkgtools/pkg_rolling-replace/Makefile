@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.35 2014/03/03 03:30:54 obache Exp $
+# $NetBSD: Makefile,v 1.36 2014/03/03 04:50:47 obache Exp $
 
 PKGNAME=	pkg_rolling-replace-0.24.1
 CATEGORIES=	pkgtools
 
 MAINTAINER=	ngoffee@bbn.com
 COMMENT=	Replace/upgrade packages in-place
+LICENSE=	modified-bsd
 
 DEPENDS+=	pkg_chk>=1.76:../../pkgtools/pkg_chk
 DEPENDS+=	pkg_tarup>=1.6.6:../../pkgtools/pkg_tarup
