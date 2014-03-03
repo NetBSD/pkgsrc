@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.918 2014/03/03 00:25:05 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.919 2014/03/03 08:17:27 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1417,3 +1417,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/ruby-railties32 to 3.2.17 [taca 2014-03-02]
 	Updated www/ruby-rails32 to 3.2.17 [taca 2014-03-02]
 	Updated textproc/p5-Syntax-Highlight-Engine-Kate to 0.08 [rodent 2014-03-03]
+	Updated net/samba to 3.6.22nb2 [obache 2014-03-03]
