@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2012/09/11 23:19:37 asau Exp $
+# $NetBSD: Makefile,v 1.12 2014/03/03 03:30:54 obache Exp $
 
-DISTNAME=	pkg_regress-0.2
+PKGNAME=	pkg_regress-0.2
 CATEGORIES=	pkgtools
-MASTER_SITES=	# empty
-DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Run pkgsrc infrastructure regression test suite

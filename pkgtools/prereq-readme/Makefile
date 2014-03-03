@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2008/06/15 09:56:37 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2014/03/03 03:30:55 obache Exp $
 #
 
-DISTNAME=	prereq-readme-20050521
+PKGNAME=	prereq-readme-20050521
 CATEGORIES=	pkgtools
-MASTER_SITES=	# empty
-DISTFILES=	# empty
 
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/

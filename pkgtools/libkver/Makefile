@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2013/08/23 08:59:51 apb Exp $
+# $NetBSD: Makefile,v 1.35 2014/03/03 03:30:53 obache Exp $
 
-DISTNAME=		libkver-${VERSION}
+PKGNAME=		libkver-${VERSION}
 CATEGORIES=		pkgtools
-MASTER_SITES=		# empty
-DISTFILES=		# empty
 
 MAINTAINER=	seb@NetBSD.org
 #HOMEPAGE=

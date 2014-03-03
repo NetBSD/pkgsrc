@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2013/05/31 12:41:46 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2014/03/03 03:30:54 obache Exp $
 #
 
-DISTNAME=		pkg_filecheck-0.4
+PKGNAME=		pkg_filecheck-0.4
 PKGREVISION=		2
 CATEGORIES=		pkgtools devel
-MASTER_SITES=		# empty
-DISTFILES=		# empty
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=		http://www.NetBSD.org/docs/pkgsrc/

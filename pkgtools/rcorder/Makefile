@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2012/09/11 23:19:39 asau Exp $
+# $NetBSD: Makefile,v 1.16 2014/03/03 03:30:55 obache Exp $
 #
 
-DISTNAME=		rcorder-20120310
+PKGNAME=		rcorder-20120310
 CATEGORIES=		pkgtools sysutils
-MASTER_SITES=		# empty
-DISTFILES=		# empty
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/

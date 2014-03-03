@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2012/09/11 23:19:36 asau Exp $
+# $NetBSD: Makefile,v 1.83 2014/03/03 03:30:54 obache Exp $
 
-DISTNAME=	pkg_chk-2.0.6
+PKGNAME=	pkg_chk-2.0.6
 CATEGORIES=	pkgtools
-MASTER_SITES=	# empty
-DISTFILES=	# empty
 
 OWNER=		abs@NetBSD.org
 HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/doc/pkgsrc.html

@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2012/09/11 23:19:34 asau Exp $
+# $NetBSD: Makefile,v 1.10 2014/03/03 03:30:53 obache Exp $
 
-DISTNAME=	genrpm-1.2
+PKGNAME=	genrpm-1.2
 CATEGORIES=	pkgtools
-MASTER_SITES=	# empty
-DISTFILES=	# empty
 
 MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	http://www.pkgsrc.org/

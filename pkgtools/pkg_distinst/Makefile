@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2013/05/31 12:41:46 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/03/03 03:30:54 obache Exp $
 
-DISTNAME=	pkg_distinst-0.02
+PKGNAME=	pkg_distinst-0.02
 PKGREVISION=	2
 CATEGORIES=	pkgtools
-MASTER_SITES=	# empty
-DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Remove any distfiles not belonging to an installed package
