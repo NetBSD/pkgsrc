@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2013/10/21 10:43:28 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2014/03/03 02:46:28 obache Exp $
 
-DISTNAME=		revbump-2.5
+PKGNAME=		revbump-2.5
 CATEGORIES=		pkgtools
-MASTER_SITES=		# empty
-DISTFILES=		# empty
 
 MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.pkgsrc.org/
