@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/03/03 02:19:45 obache Exp $
+# $NetBSD: Makefile,v 1.14 2014/03/03 02:35:39 obache Exp $
 #
 
 PKGNAME=	verifypc-1.6
@@ -6,6 +6,7 @@ CATEGORIES=	pkgtools
 
 MAINTAINER=	jmmv@NetBSD.org
 COMMENT=	Sanity check package dependencies according to pkg-config
+LICENSE=	modified-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
