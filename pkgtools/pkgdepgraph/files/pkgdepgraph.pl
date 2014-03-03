@@ -1,9 +1,9 @@
-#!@PREFIX@/bin/perl
+#!@PERL5@
 
 # Copyright (c) 2002, 2003, 2004 by Andrew Brown <atatat@netbsd.org>
 # Absolutely no warranty.
 
-# $NetBSD: pkgdepgraph.pl,v 1.11 2005/06/26 17:34:19 atatat Exp $
+# $NetBSD: pkgdepgraph.pl,v 1.12 2014/03/03 05:06:43 obache Exp $
 # pkgdepgraph: @DISTVER@
 
 use strict;
