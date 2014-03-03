@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2014/03/03 03:30:54 obache Exp $
+# $NetBSD: Makefile,v 1.34 2014/03/03 05:03:49 obache Exp $
 #
 
 PKGNAME=	pkgdepgraph-2.8
@@ -20,6 +20,10 @@ NO_CONFIGURE=	yes
 DISTVER=	${PKGVERSION_NOREV}
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "AIX"
+USE_TOOLS+=	nroff
+.endif
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
