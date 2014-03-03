@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/03/03 03:34:32 obache Exp $
+# $NetBSD: Makefile,v 1.15 2014/03/03 03:36:51 obache Exp $
 #
 
 PKGNAME=	binpatch-1.0
@@ -18,8 +18,8 @@ do-extract:
 
 do-build:
 	@(cd ${WRKSRC}; \
-	  ${ECHO} "${CC} -o binpatch binpatch.c"; \
-	  ${CC} -o binpatch binpatch.c )
+	  ${ECHO} "${CC} ${CFLAGS} -o binpatch binpatch.c"; \
+	  ${CC} ${CFLAGS} -o binpatch binpatch.c )
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/binpatch ${DESTDIR}${PREFIX}/bin/binpatch
