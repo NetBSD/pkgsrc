@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/12/06 17:01:23 adam Exp $
+$NetBSD: patch-ab,v 1.2 2014/03/03 08:46:45 obache Exp $
 
 --- ../examples/smb.conf.default.orig	2010-01-14 10:12:10.000000000 +0000
 +++ ../examples/smb.conf.default
@@ -16,7 +16,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2010/12/06 17:01:23 adam Exp $
  # this tells Samba to use a separate log file for each machine
  # that connects
 -   log file = /usr/local/samba/var/log.%m
-+;  log file = @VARBASE@/log/log.%m
++;  log file = @SAMBA_LOGDIR@/log.%m
  
  # Put a capping on the size of the log files (in Kb).
 -   max log size = 50
