@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.243 2014/02/12 23:18:25 tron Exp $
+# $NetBSD: Makefile,v 1.244 2014/03/03 08:05:07 obache Exp $
 
 DISTNAME=	samba-${VERSION}
 PKGREVISION=	1
@@ -106,12 +106,7 @@ SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing paths.
 SUBST_FILES.paths=	${WRKDIR}/adduser.sh ${WRKDIR}/deluser.sh
 SUBST_STAGE.paths=	post-patch
-SUBST_SED.paths+=	-e 's,@AWK@,${AWK},g'
-SUBST_SED.paths+=	-e 's,@CAT@,${CAT},g'
-SUBST_SED.paths+=	-e 's,@MKTEMP@,${MKTEMP},g'
-SUBST_SED.paths+=	-e 's,@RM@,${RM},g'
-SUBST_SED.paths+=	-e 's,@PWD_MKDB@,${PWD_MKDB},g'
-SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
+SUBST_VARS.paths+=	AWK CAT MKTEMP RM PWD_MKDB SH
 
 post-extract:
 	${CP} ${FILESDIR}/adduser.sh ${FILESDIR}/deluser.sh ${WRKDIR}
