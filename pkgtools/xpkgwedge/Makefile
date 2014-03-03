@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.81 2013/04/06 04:07:24 rodent Exp $
+# $NetBSD: Makefile,v 1.82 2014/03/03 02:17:47 obache Exp $
 
-DISTNAME=	xpkgwedge-1.17
+PKGNAME=	xpkgwedge-1.17
 CATEGORIES=	pkgtools devel x11
-MASTER_SITES=	# empty
-DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/doc/pkgsrc.html
