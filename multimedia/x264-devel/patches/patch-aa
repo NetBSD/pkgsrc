@@ -1,8 +1,19 @@
-$NetBSD: patch-aa,v 1.16 2012/11/28 16:29:53 adam Exp $
+$NetBSD: patch-aa,v 1.17 2014/03/04 13:59:11 adam Exp $
 
---- configure.orig	2012-11-27 21:45:03.000000000 +0000
+Clang does not support -falign-loops option.
+
+--- configure.orig	2014-03-03 21:45:04.000000000 +0000
 +++ configure
-@@ -466,6 +466,10 @@ case $host_os in
+@@ -467,7 +467,7 @@ case $host_os in
+         ;;
+     darwin*)
+         SYS="MACOSX"
+-        CFLAGS="$CFLAGS -falign-loops=16"
++        CFLAGS="$CFLAGS"
+         libm="-lm"
+         if [ "$pic" = "no" ]; then
+             cc_check "" -mdynamic-no-pic && CFLAGS="$CFLAGS -mdynamic-no-pic"
+@@ -477,6 +477,10 @@ case $host_os in
          SYS="FREEBSD"
          libm="-lm"
          ;;
@@ -13,7 +24,7 @@ $NetBSD: patch-aa,v 1.16 2012/11/28 16:29:53 adam Exp $
      kfreebsd*-gnu)
          SYS="FREEBSD"
          define HAVE_MALLOC_H
-@@ -567,7 +571,7 @@ case $host_cpu in
+@@ -599,7 +603,7 @@ case $host_cpu in
              ASFLAGS="$ASFLAGS -f elf"
          fi
          ;;
@@ -22,7 +33,7 @@ $NetBSD: patch-aa,v 1.16 2012/11/28 16:29:53 adam Exp $
          ARCH="X86_64"
          AS="yasm"
          [ $compiler = GNU ] && CFLAGS="-m64 $CFLAGS" && LDFLAGS="-m64 $LDFLAGS"
-@@ -587,13 +591,14 @@ case $host_cpu in
+@@ -620,13 +624,14 @@ case $host_cpu in
          fi
          ;;
      powerpc|powerpc64)
@@ -38,7 +49,7 @@ $NetBSD: patch-aa,v 1.16 2012/11/28 16:29:53 adam Exp $
                  CFLAGS="$CFLAGS -maltivec -mabi=altivec"
                  define HAVE_ALTIVEC_H
              fi
-@@ -739,7 +744,7 @@ fi
+@@ -777,7 +782,7 @@ fi
  # pthread-win32 is lgpl, prevent its use if --disable-gpl is specified and targeting windows
  [ "$SYS" = "WINDOWS" -a "$gpl" = "no" -a "$thread" = "auto" ] && thread="win32"
  
@@ -47,7 +58,7 @@ $NetBSD: patch-aa,v 1.16 2012/11/28 16:29:53 adam Exp $
  if [ "$thread" = "auto" ]; then
      thread="no"
      case $SYS in
-@@ -922,10 +927,11 @@ fi
+@@ -986,10 +991,11 @@ fi
  cc_check "stdint.h" "" "uint32_t test_vec __attribute__ ((vector_size (16))) = {0,1,2,3};" && define HAVE_VECTOREXT
  
  if [ "$pic" = "yes" ] ; then
