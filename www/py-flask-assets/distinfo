@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/07/28 17:54:32 kleink Exp $
+$NetBSD: distinfo,v 1.2 2014/03/04 13:45:28 kleink Exp $
 
-SHA1 (Flask-Assets-0.8.tar.gz) = 8ff670ed1fb3dc83f7d99529549eb6275956bef7
-RMD160 (Flask-Assets-0.8.tar.gz) = dae91d96be3215d12a26ef9a2d8eb81d82689fba
-Size (Flask-Assets-0.8.tar.gz) = 27378 bytes
+SHA1 (Flask-Assets-0.9.tar.gz) = 230a936e757746b8d44cf0888681aabab37c19f4
+RMD160 (Flask-Assets-0.9.tar.gz) = 0c564912324845c0be342ab98ad48c0a3b2fdcf9
+Size (Flask-Assets-0.9.tar.gz) = 21114 bytes
