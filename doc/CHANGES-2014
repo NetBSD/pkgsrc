@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.927 2014/03/04 09:35:15 adam Exp $
+$NetBSD: CHANGES-2014,v 1.928 2014/03/04 13:48:33 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1427,3 +1427,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/p5-GD to 2.52 [adam 2014-03-03]
 	Updated misc/p5-Business-ISBN to 2.07 [adam 2014-03-03]
 	Updated security/gnutls to 3.2.12 [adam 2014-03-04]
+	Updated www/py-flask-assets to 0.9 [kleink 2014-03-04]
+	Updated www/py-flask-script to 0.6.7 [kleink 2014-03-04]
