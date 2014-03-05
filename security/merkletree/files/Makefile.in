@@ -1,0 +1,22 @@
+# $NetBSD: Makefile.in,v 1.1.1.1 2014/03/05 05:19:25 agc Exp $
+
+PROG=merkletree
+
+OBJS= libmerkle.o main.o
+
+PREFIX=@PREFIX@
+MANDIR=@MANDIR@
+
+all: ${PROG}
+
+${PROG}: ${OBJS}
+	${CC} ${OBJS} -L${PREFIX}/lib -Wl,-R${PREFIX}/lib -o ${PROG} -lmultigest
+
+install:
+	install -c -s ${PROG} ${DESTDIR}${PREFIX}/bin
+	install -c merkletree.1 ${DESTDIR}${MANDIR}/man1
+
+clean:
+	rm -rf *.core ${OBJS} ${PROG}
+cleandist:
+	rm -rf *.core ${OBJS} ${PROG} Makefile

@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2014/03/05 05:19:25 agc Exp $
+bin/merkletree
+man/man1/merkletree.1

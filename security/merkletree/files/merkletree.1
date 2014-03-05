@@ -1,0 +1,135 @@
+.\" $NetBSD: merkletree.1,v 1.1.1.1 2014/03/05 05:19:25 agc Exp $
+.\"
+.\" Copyright (c) 2013 Alistair Crooks <agc@NetBSD.org>
+.\" All rights reserved.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, this list of conditions and the following disclaimer.
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+.\" IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+.\" OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+.\" IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+.\" INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+.\" NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+.\" DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+.\" THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+.\" (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+.\" THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+.\"
+.Dd March 3, 2014
+.Dt MERKLETREE 1
+.Os
+.Sh NAME
+.Nm merkletree
+.Nd Calculate and verify Merkle tree information
+.Sh SYNOPSIS
+.Nm
+.Fl V
+.Op Fl a Ar digest-algorithm
+.Op Fl b Ar blocksize
+.Op Fl m Ar max-input-size
+.Op Fl o Ar output-file
+.Op Fl v Ar sum-file
+.Op Ar file ...
+.Sh DESCRIPTION
+The
+.Nm
+command performs Merkle tree calculation and
+verification on the input data.
+This allows the establishment of the block
+positions (i.e. relative neighbourhood) of any
+changed data.
+The
+.Nm
+utility uses the
+.Xr libmerkletree 3
+library.
+For a more in-depth description of Merkle trees, please see
+.Xr libmerkletree 3 .
+.Pp
+The following options are available:
+.Bl -tag -width sector-size123
+.It Fl V Ar sumfile
+Verify the information found in the previously-generated
+Merkle tree
+.Dv sum-file
+against the file named on the command line.
+.It Fl a Ar digest
+Use the
+.Dv digest
+algorithm in the operand.
+The full list of digests available is given in
+.Xr libmultigest 3 ,
+which is used internally in
+.Xr libmerkletree 3
+to calculate digests.
+.It Fl b Ar blocksize
+Use the
+.Dv blocksize
+specified in the operand.
+Block sizes can be arbitrarily large or small, but may
+not be 0.
+.It Fl m Ar maxsize
+If data is to be read on standard input, resources are allocated
+to hold the data being used to calculate the Merkle tree sums.
+In order to avoid exhaustion of resources, the amount of data
+which can be specified by default is 10 Megabytes.
+This argument allows this amount to be varied on the command line.
+.It Fl o Ar outputfile
+Output results to the
+.Dv outputfile
+name specified as the operand.
+.It Fl v
+Print the version information of
+.Nm
+on
+.Dv stdout
+and exit.
+.El
+.Pp
+When verifying, for obvious reasons, the digest algorithm
+and the blocksize used to calculate the stored tree are used
+when verifying the data.
+.Pp
+During verification, if a mismatch is found, the block number
+will be printed on the standard output, along with the byte
+offsets of the start and end of the block.
+This is repeated for each block in which a mismatch is found.
+.Sh RETURN VALUES
+The
+.Nm
+utility will return 0 for success,
+and 1 for failure.
+.Sh EXAMPLES
+.Bd -literal
+% merkletree Makefile
+merkletree sha1 1 144 512 (Makefile) = f2f61cbd72f16d10bf83f5a952dffc28f5addd83
+% merkletree -b 60 Makefile
+merkletree sha1 2 144 60 (Makefile) = a7ca944a6f7edc6a0ce60038e9d8c2899baeaf55c63987e6049abe2096c3bc0e4811b8112714a0f369666ab31e2fd8f4900444e1b001e3debba8e8f196a50d7648660b2dc441e0757465786921ecca4e8ab0b6353e5992c59e70b724a3cc0c527cda3edc
+% merkletree -a rmd160,sha1 Makefile
+merkletree rmd160,sha1 1 144 512 (Makefile) = f96c883de70b5bb3b3ad3d207b00ce174131f523f2f61cbd72f16d10bf83f5a952dffc28f5addd83
+% merkletree -a rmd160,sha1 -o Makefile.sum Makefile
+% merkletree -v Makefile.sum Makefile
+% echo "# comment" >> Makefile
+% merkletree -v Makefile.sum Makefile
+[0] 0, 511
+%
+.Ed
+.Sh SEE ALSO
+.Xr libmerkletree 3 ,
+.Xr libmultigest 3
+.Sh HISTORY
+The
+.Nm
+command first appeared in
+.Nx 7.0 .
+.Sh AUTHORS
+.An -nosplit
+.An Alistair Crooks Aq Mt agc@netbsd.org .

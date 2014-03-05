@@ -1,0 +1,3 @@
+The merkletree(1) command performs Merkle tree calculation and
+verification on the input data.  This allows the establishment of the
+block positions (i.e.  relative neighbourhood) of any changed data.
