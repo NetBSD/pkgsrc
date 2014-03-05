@@ -1,0 +1,16 @@
+libmultigest is a library interface to calculate multiple digests at
+the same time, without having to re-scan data.  This is to protect
+against any single digest algorithm being found to have second
+pre-images.  Up to 32 digests can be specified on the command line.
+
+The data being used as input to the digest can be modified by using a
+regular expression-based substitution operation, so that any Version
+Control System identifiers can be normalised before being digested.
+If no substitution regular expression is provided, the input data will
+be used as-is.
+
+The list of digests provided is:
+
+	BLAKE2, CRC32C, MD5, RMD160, SHA1, SHA256, SHA512,
+	SHA3-224, SHA3-256, SHA3-384, SHA3-512, SIZE,
+	TIGER, TIGER2, WHIRLPOOL
