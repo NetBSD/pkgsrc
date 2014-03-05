@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.493 2014/02/24 20:49:33 joerg Exp $
+# $NetBSD: Makefile,v 1.494 2014/03/05 05:10:42 agc Exp $
 #
 
 COMMENT=	Security tools
@@ -169,6 +169,7 @@ SUBDIR+=	mixminion
 SUBDIR+=	mozilla-rootcerts
 SUBDIR+=	msu
 SUBDIR+=	msudir
+SUBDIR+=	multigest
 SUBDIR+=	munge
 SUBDIR+=	netpgp
 SUBDIR+=	netpgpverify
