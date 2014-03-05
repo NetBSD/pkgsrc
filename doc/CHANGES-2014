@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.941 2014/03/05 15:10:10 taca Exp $
+$NetBSD: CHANGES-2014,v 1.942 2014/03/05 15:45:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1442,3 +1442,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/tcl-scotty to 2.1.11nb10 [he 2014-03-05]
 	Updated www/contao211 to 2.11.16nb1 [taca 2014-03-05]
 	Updated www/contao32 to 3.2.7nb1 [taca 2014-03-05]
+	Updated www/cgicc to 3.2.12 [adam 2014-03-05]
