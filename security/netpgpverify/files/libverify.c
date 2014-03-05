@@ -386,7 +386,7 @@ get_pkt_len_len(uint8_t newfmt, uint8_t *p, int isprimary)
 static unsigned
 fmt_32(uint8_t *p, uint32_t a)
 {
-	a = htonl(a);
+	a = pgp_hton32(a);
 	memcpy(p, &a, sizeof(a));
 	return sizeof(a);
 }
@@ -395,7 +395,7 @@ fmt_32(uint8_t *p, uint32_t a)
 static unsigned
 fmt_16(uint8_t *p, uint16_t a)
 {
-	a = htons(a);
+	a = pgp_hton16(a);
 	memcpy(p, &a, sizeof(a));
 	return sizeof(a);
 }
@@ -626,7 +626,7 @@ get_16(uint8_t *p)
 	uint16_t	u16;
 
 	memcpy(&u16, p, sizeof(u16));
-	return ntohs(u16);
+	return pgp_ntoh16(u16);
 }
 
 /* get a 32 bit integer, in host order */
@@ -636,7 +636,7 @@ get_32(uint8_t *p)
 	uint32_t	u32;
 
 	memcpy(&u32, p, sizeof(u32));
-	return ntohl(u32);
+	return pgp_ntoh32(u32);
 }
 
 #define HOURSECS	(int64_t)(60 * 60)
@@ -1696,7 +1696,9 @@ verify_dsa_sig(uint8_t *calculated, unsigned calclen, pgpv_bignum_t *sig, pgpv_p
 	BIGNUM		 *t1;
 	int		  ret;
 
-	if (pubkey[DSA_P].bn == NULL || pubkey[DSA_Q].bn == NULL || pubkey[DSA_G].bn == NULL) {
+	if (pubkey->bn[DSA_P].bn == NULL ||
+	    pubkey->bn[DSA_Q].bn == NULL ||
+	    pubkey->bn[DSA_G].bn == NULL) {
 		return 0;
 	}
 	M = W = t1 = NULL;
@@ -2181,7 +2183,7 @@ getbignum(pgpv_bignum_t *bignum, bufgap_t *bg, char *buf, const char *header)
 	uint32_t	 len;
 
 	(void) bufgap_getbin(bg, &len, sizeof(len));
-	len = ntohl(len);
+	len = pgp_ntoh32(len);
 	(void) bufgap_seek(bg, sizeof(len), BGFromHere, BGByte);
 	(void) bufgap_getbin(bg, buf, len);
 	bignum->bn = BN_bin2bn((const uint8_t *)buf, (int)len, NULL);
@@ -2296,7 +2298,7 @@ read_ssh_file(pgpv_t *pgp, pgpv_primarykey_t *primary, const char *fmt, ...)
 
 	/* get the type of key */
 	(void) bufgap_getbin(&bg, &len, sizeof(len));
-	len = ntohl(len);
+	len = pgp_ntoh32(len);
 	if (len >= st.st_size) {
 		(void) fprintf(stderr, "bad public key file '%s'\n", f);
 		return 0;
