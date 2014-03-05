@@ -1,0 +1,32 @@
+# $NetBSD: Makefile.in,v 1.1.1.1 2014/03/05 05:09:44 agc Exp $
+
+PROG=multigest
+
+OBJS+= blake2.o
+OBJS+= crc32c.o
+OBJS+= keccak.o
+OBJS+= main.o
+OBJS+= md5c.o
+OBJS+= multigest.o
+OBJS+= rmd160.o
+OBJS+= sha1.o
+OBJS+= sha2.o
+OBJS+= tiger.o
+OBJS+= whirlpool.o
+
+PREFIX=@PREFIX@
+MANDIR=@MANDIR@
+
+all: ${PROG}
+
+${PROG}: ${OBJS}
+	${CC} ${OBJS} -o ${PROG}
+
+install:
+	install -c -s ${PROG} ${DESTDIR}${PREFIX}/bin
+	install -c multigest.1 ${DESTDIR}${MANDIR}/man1
+
+clean:
+	rm -rf *.core ${OBJS} ${PROG}
+cleandist:
+	rm -rf *.core ${OBJS} ${PROG} Makefile
