@@ -1,11 +1,11 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2013/11/29 16:43:06 taca Exp $
+$NetBSD: MESSAGE,v 1.3 2014/03/05 15:09:42 taca Exp $
 
 To complete the setup, please read:
 
-	${PREFIX}/share/doc/contao${CT_VER}/README.md
+	${PREFIX}/share/doc/contao${CT_VER}/README
 
-To use ${PREFIX}/share/doc/contao${CT_VER}/system/bin/minify command,
+To use ${PREFIX}/share/contao${CT_VER}/system/bin/minify command,
 Please install the following package:
 
        shells/bash
