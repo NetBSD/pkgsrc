@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2013/12/15 18:35:22 asau Exp $
+# $NetBSD: Makefile,v 1.10 2014/03/05 22:14:17 asau Exp $
 
 DISTNAME=	polyml.5.5.1
 PKGNAME=	polyml-5.5.1
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=polyml/}
 
