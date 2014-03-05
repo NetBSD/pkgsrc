@@ -29,6 +29,11 @@
 
 #include <inttypes.h>
 
+uint16_t pgp_ntoh16(uint16_t /*in*/);
+uint16_t pgp_hton16(uint16_t /*in*/);
+uint32_t pgp_ntoh32(uint32_t /*in*/);
+uint32_t pgp_hton32(uint32_t /*in*/);
+
 int pgpv_digest_file(uint8_t */*buf*/, size_t /*size*/, const char */*name*/, const uint8_t */*hashed*/, size_t /*hashsize*/, int /*doarmor*/);
 int pgpv_digest_memory(uint8_t */*buf*/, size_t /*size*/, void */*memory*/, size_t /*cc*/, const uint8_t */*hashed*/, size_t /*hashsize*/, int /*doarmor*/);
 
