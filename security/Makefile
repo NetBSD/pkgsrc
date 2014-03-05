@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.495 2014/03/05 05:15:41 agc Exp $
+# $NetBSD: Makefile,v 1.496 2014/03/05 05:20:21 agc Exp $
 #
 
 COMMENT=	Security tools
@@ -162,6 +162,7 @@ SUBDIR+=	lua-sec
 SUBDIR+=	mcrypt
 SUBDIR+=	md4-collision
 SUBDIR+=	md5-collision
+SUBDIR+=	merkletree
 SUBDIR+=	mhash
 SUBDIR+=	mirrordir
 SUBDIR+=	mit-krb5
