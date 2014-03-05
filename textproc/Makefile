@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.758 2014/02/17 00:21:35 rodent Exp $
+# $NetBSD: Makefile,v 1.759 2014/03/05 13:45:21 fhajny Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -723,6 +723,7 @@ SUBDIR+=	sgrep
 SUBDIR+=	shared-desktop-ontologies
 SUBDIR+=	soprano
 SUBDIR+=	source-highlight
+SUBDIR+=	sphinxsearch
 SUBDIR+=	stardic
 SUBDIR+=	sub2srt
 SUBDIR+=	sublib
