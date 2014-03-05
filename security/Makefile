@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.494 2014/03/05 05:10:42 agc Exp $
+# $NetBSD: Makefile,v 1.495 2014/03/05 05:15:41 agc Exp $
 #
 
 COMMENT=	Security tools
@@ -131,6 +131,7 @@ SUBDIR+=	libidea
 SUBDIR+=	libident
 SUBDIR+=	libksba
 SUBDIR+=	libmcrypt
+SUBDIR+=	libmultigest
 SUBDIR+=	libnetpgpverify
 SUBDIR+=	liboauth
 SUBDIR+=	libp11
