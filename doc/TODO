@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13048 2014/03/03 17:03:28 adam Exp $
+$NetBSD: TODO,v 1.13049 2014/03/05 15:45:42 adam Exp $
 
 Suggested new packages
 ======================
@@ -428,7 +428,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cdk-5.0.20120323
 	o cdrkit-1.1.10
 	o cfitsio-3.350
-	o cgicc-3.2.11
 	o chasen-2.4.5
 	o cheese-2.32.0 [GNOME 2.32]
 	o cheese-3.10.2
