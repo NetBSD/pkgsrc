@@ -1,0 +1,32 @@
+# $NetBSD: Makefile.lib.in,v 1.1.1.1 2014/03/05 05:09:44 agc Exp $
+
+LIB=	libmultigest.a
+
+OBJS+= blake2.o
+OBJS+= crc32c.o
+OBJS+= keccak.o
+OBJS+= md5c.o
+OBJS+= multigest.o
+OBJS+= rmd160.o
+OBJS+= sha1.o
+OBJS+= sha2.o
+OBJS+= tiger.o
+OBJS+= whirlpool.o
+
+PREFIX=@PREFIX@
+MANDIR=@MANDIR@
+
+all: ${LIB}
+
+${LIB}: ${OBJS}
+	ar crv ${LIB} ${OBJS}
+
+install:
+	${BSD_INSTALL_LIB} ${LIB} ${DESTDIR}${PREFIX}/lib
+	${BSD_INSTALL_DATA} multigest.h ${DESTDIR}${PREFIX}/include
+	${BSD_INSTALL_DATA} libmultigest.3 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
+
+clean:
+	rm -rf *.core ${OBJS} ${LIB}
+cleandist:
+	rm -rf *.core ${OBJS} ${LIB} Makefile

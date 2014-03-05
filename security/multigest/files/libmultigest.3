@@ -1,0 +1,202 @@
+.\" $NetBSD: libmultigest.3,v 1.1.1.1 2014/03/05 05:09:44 agc Exp $
+.\"
+.\" Copyright (c) 2013,2014 Alistair Crooks <agc@NetBSD.org>
+.\" All rights reserved.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, this list of conditions and the following disclaimer.
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+.\" IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+.\" OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+.\" IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+.\" INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+.\" NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+.\" DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+.\" THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+.\" (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+.\" THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+.\"
+.Dd March 3, 2014
+.Dt LIBMULTIGEST 3
+.Os
+.Sh NAME
+.Nm libmultigest
+.Nd Multiple digest library
+.Sh LIBRARY
+.Lb libmultigest
+.Sh SYNOPSIS
+.In multigest.h
+.Ft multigest_t *
+.Fo multigest_new
+.Fa "void"
+.Fc
+.Ft int
+.Fo multigest_init
+.Fa "multigest_t *mg" "const char *algorithms"
+.Fc
+.Ft int
+.Fo multigest_add_subst
+.Fa "multigest_t *mg" "const char *substregex" "const char *replacement"
+.Fc
+.Ft void
+.Fo multigest_update
+.Fa "multigest_t *mg" "const char *data" "size_t length"
+.Fc
+.Ft void
+.Fo multigest_final
+.Fa "unsigned char *rawdigest" "multigest_t *mg"
+.Fc
+.Ft "uint8_t *"
+.Fo multigest_data
+.Fa "const char *algorithms" "const char *data" "size_t length"
+.Fa "const unsigned char *rawoutput" "const char *substregex"
+.Fa "const char *replacement"
+.Fc
+.Ft "uint8_t *"
+.Fo multigest_file
+.Fa "const char *algorithms" "const char *filename"
+.Fa "const unsigned char *rawoutput" "const char *substregex"
+.Fa "const char *replacement"
+.Fc
+.Ft uint32_t
+.Fo multigest_get_rawsize
+.Fa "multigest_t *mg"
+.Fc
+.Ft uint32_t
+.Fo multigest_algs_rawsize
+.Fa "const char *algnames"
+.Fc
+.Ft int
+.Fo multigest_format_hex
+.Fa "unsigned char *rawinput" "const char *algorithms"
+.Fa "char *output" "size_t outputsize"
+.Fc
+.Ft int
+.Fo multigest_print_hex
+.Fa "unsigned char *rawinput" "const char *algorithms"
+.Fa "const char *outname" "const char *filename" "const char *substregex"
+.Fa "const char *output_separator" "const char *output_format"
+.Fc
+.Ft char *
+.Fo multigest_format_raw
+.Fa "const uint8_t *rawinput" "size_t insize"
+.Fa "char *fmtoutput" "size_t outsize"
+.Fc
+.Sh DESCRIPTION
+.Nm
+is a library interface to calculate multiple digests
+at the same time, without having to re-scan data.
+This is to protect against any single digest algorithm
+being found to have second pre-images.
+Up to 32 digests can be specified on the command line.
+.Pp
+The data being used as input to the digest can be modified
+by using a regular expression-based substitution operation,
+so that any Version Control System identifiers can be normalised
+before being digested.
+If no substitution regular expression is provided,
+the input data will be used as-is.
+.Pp
+The list of digests provided is:
+.Bd -literal -offset indent
+BLAKE2
+CRC32C
+MD5
+RMD160
+SHA1
+SHA256
+SHA3-224
+SHA3-256
+SHA3-384
+SHA3-512
+SHA512
+SIZE
+TIGER2
+TIGER
+WHIRLPOOL
+.Ed
+.Pp
+The
+.Dv crc32c
+checksum is a simple, lightweight checksum, as found in SCTP and iSCSI.
+It is useful since there are times when a secure digest is not needed,
+but rather an indication of correct transmission, where calculating a heavyweight
+digest may be overkill.
+The
+.Dv TIGER2
+digest is different to the
+.Dv TIGER
+digest in its initialisation only.
+Obviously, different values are calculated for the two digests.
+The
+.Dv BLAKE2
+digest is one of the losing finalists in the SHA-3
+competition.
+The winning SHA-3 contender, the sponge function
+.Dv Keccak ,
+has been
+included here, with 4 different digest lengths, of 224, 256, 384 and 512 bits.
+The
+.Dv size
+pseudo-algorithm simply prints the size of the input data in bytes.
+.Pp
+As the
+.Nm
+name suggests, multiple digests can be used to calculate compound digests.
+The output from each digest is concatenated on the output.
+Digest names are provided to the initialisation function in a comma-separated
+list of names.
+.Pp
+There are two interfaces to the
+.Nm
+library, one using the lower-level functions
+.Fn multigest_init ,
+.Fn multigest_update
+and
+.Fn multigest_final
+to calculate the digests.
+The other, higher-level interface,
+uses the functions
+.Fn mutigest_data
+and
+.Fn multigest_file
+to operate on a complete set of bytes, or a file.
+.Pp
+The output from
+.Fn multigest_final
+is a string of unsigned bytes, which can be formatted
+using
+.Fn multigest_format_hex
+or printed, possible to an output file, by
+.Fn multigest_print_hex .
+To format output without printing to a stream,
+the
+.Fn multigest_format_raw
+function can be used.
+To find out the rawsize needed (in bytes) for a multigest,
+the
+.Fn multigest_algs_rawsize
+function can be used, passing the digest algorithm names as
+arguments to the function, or the
+.Fn multigest_get_rawsize
+function can be used if the multigest structure has already
+been initialised.
+.Sh SEE ALSO
+.Xr md5 3 ,
+.Xr rmd160 3 ,
+.Xr sha1 3 ,
+.Xr sha2 3
+.Sh HISTORY
+The
+.Nm
+library first appeared in
+.Nx 7.0 .
+.Sh AUTHORS
+.An Alistair Crooks Aq Mt agc@NetBSD.org .
