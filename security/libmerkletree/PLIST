@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2014/03/05 05:25:18 agc Exp $
+include/merkletree.h
+lib/libmerkletree.la
+man/man3/libmerkletree.3

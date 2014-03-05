@@ -1,0 +1,18 @@
+The libmerkletree library implements Merkle tree calculation, and also
+includes some higher-level functions to verify a file against a
+previously-generated Merkle tree.
+
+A Merkle tree is a hash tree calculated across blocks in data.  Any
+block size can be specified in this implementation.  A digest is
+calculated across each block in the data, and then a digest is
+calculated across blocks of the checksums, and this continues until
+only one block of digest exists.  The hierarchical nature of this
+allows individual blocks of a file to be verified, even if other parts
+of the file have been modified.  A degenerate case, in which the data
+is less than the blocksize, will mean that a single digest value for
+the block is calculated.  This will be the same as the digest
+algorithm applied to the whole file.
+
+The digest calculations themselves are done by the libmultigest(3)
+library, and allow concatenation of multiple digests to produce a
+single large digest value.
