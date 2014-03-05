@@ -1,10 +1,10 @@
-$NetBSD: patch-ag,v 1.3 2012/08/21 21:54:19 marino Exp $
+$NetBSD: patch-tnm_snmp_straps.c,v 1.1 2014/03/05 13:52:29 he Exp $
 
 Provide more robustness for the straps helper program.
 
---- tnm/snmp/straps.c.orig	1999-03-09 17:06:10.000000000 +0000
-+++ tnm/snmp/straps.c
-@@ -246,6 +246,17 @@ main(argc, argv)
+--- tnm/snmp/straps.c.orig	1999-03-09 18:06:10.000000000 +0100
++++ tnm/snmp/straps.c	2014-03-04 13:25:45.000000000 +0100
+@@ -246,6 +246,17 @@
  #endif
      
      /*
@@ -22,7 +22,7 @@ Provide more robustness for the straps helper program.
       * Fine everything is ready; lets listen for events: 
       * the for(;;) loop aborts, if the last client went away.
       */
-@@ -271,7 +282,25 @@ main(argc, argv)
+@@ -271,7 +282,25 @@
  	      perror("straps: select failed");
  	  }
  	  
@@ -49,7 +49,7 @@ Provide more robustness for the straps helper program.
  	      /* read trap message and forward to clients: */
  	      llen = sizeof(laddr);
  	      if ((rc = recvfrom(trap_s, buf, sizeof(buf), 0, 
-@@ -329,24 +358,6 @@ main(argc, argv)
+@@ -329,24 +358,6 @@
  		  go_on += cl_addr [i] > 0;
  	      }
  
