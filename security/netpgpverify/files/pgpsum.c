@@ -120,8 +120,8 @@ calcsum(uint8_t *out, size_t size, uint8_t *mem, size_t cc, const uint8_t *hashe
 	/* hashed data is non-null (previously checked) */
 	hashalg = hashed[3];
 	memcpy(&len16, &hashed[4], sizeof(len16));
-	len32 = ntohs(len16) + 6;
-	len32 = htonl(len32);
+	len32 = pgp_ntoh16(len16) + 6;
+	len32 = pgp_hton32(len32);
 	trailer[0] = 0x04;
 	trailer[1] = 0xff;
 	memcpy(&trailer[2], &len32, sizeof(len32));
@@ -141,6 +141,48 @@ calcsum(uint8_t *out, size_t size, uint8_t *mem, size_t cc, const uint8_t *hashe
 	digest_update(&hash, trailer, sizeof(trailer));
 	return digest_final(out, &hash);
 }
+
+/* used to byteswap 16 bit words */
+typedef union {
+	uint16_t	i16;
+	uint8_t		i8[2];
+} u16;
+
+/* used to byte swap 32 bit words */
+typedef union {
+	uint32_t	i32;
+	uint8_t		i8[4];
+} u32;
+
+static inline uint16_t
+swap16(uint16_t in)
+{
+	u16	u;
+
+	u.i16 = in;
+	return (u.i8[0] << 8) | u.i8[1];
+}
+
+static inline uint32_t
+swap32(uint32_t in)
+{
+	u32	u;
+
+	u.i32 = in;
+	return (u.i8[0] << 24) | (u.i8[1] << 16) | (u.i8[2] << 8) | u.i8[3];
+}
+
+static inline int
+is_little_endian(void)
+{
+	static const int	indian = 1;
+
+	return (*(const char *)(const void *)&indian != 0);
+}
+
+/************************************************************/
+
+/* exportable routines */
 
 /* open the file, mmap it, and then get the checksum on that */
 int
@@ -190,4 +232,32 @@ pgpv_digest_memory(uint8_t *data, size_t size, void *mem, size_t cc, const uint8
 		return 0;
 	}
 	return calcsum(data, size, mem, cc, hashed, hashsize, doarmor);
+}
+
+/* our 16bit byte swap if LE host */
+uint16_t
+pgp_ntoh16(uint16_t in)
+{
+	return (is_little_endian()) ? swap16(in) : in;
+}
+
+/* our 16bit byte swap if LE host */
+uint16_t
+pgp_hton16(uint16_t in)
+{
+	return (is_little_endian()) ? swap16(in) : in;
+}
+
+/* our 32bit byte swap if LE host */
+uint32_t
+pgp_ntoh32(uint32_t in)
+{
+	return (is_little_endian()) ? swap32(in) : in;
+}
+
+/* our 32bit byte swap if LE host */
+uint32_t
+pgp_hton32(uint32_t in)
+{
+	return (is_little_endian()) ? swap32(in) : in;
 }
