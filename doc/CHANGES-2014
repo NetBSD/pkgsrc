@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.936 2014/03/05 11:16:40 darcy Exp $
+$NetBSD: CHANGES-2014,v 1.937 2014/03/05 12:12:03 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1437,3 +1437,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added security/merkletree version 20140304 [agc 2014-03-04]
 	Added security/libmerkletree version 20140304 [agc 2014-03-04]
 	Updated databases/py-postgresql to 4.1.1nb1 [darcy 2014-03-05]
+	Updated mail/cue to 20140217 [obache 2014-03-05]
