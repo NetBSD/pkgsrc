@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.929 2014/03/04 14:00:31 adam Exp $
+$NetBSD: CHANGES-2014,v 1.930 2014/03/05 04:52:34 agc Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1430,3 +1430,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-flask-assets to 0.9 [kleink 2014-03-04]
 	Updated www/py-flask-script to 0.6.7 [kleink 2014-03-04]
 	Updated multimedia/x264-devel to 20140303 [adam 2014-03-04]
+	Updated security/netpgpverify to 20140304 [agc 2014-03-04]
