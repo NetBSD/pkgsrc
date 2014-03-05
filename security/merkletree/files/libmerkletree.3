@@ -1,0 +1,127 @@
+.\" $NetBSD: libmerkletree.3,v 1.1.1.1 2014/03/05 05:19:25 agc Exp $
+.\"
+.\" Copyright (c) 2014 Alistair Crooks <agc@NetBSD.org>
+.\" All rights reserved.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, this list of conditions and the following disclaimer.
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+.\" IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+.\" OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+.\" IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+.\" INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+.\" NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+.\" DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+.\" THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+.\" (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+.\" THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+.\"/
+.Dd March 3, 2014
+.Dt LIBMERKLETREE 3
+.Os
+.Sh NAME
+.Nm libmerkletree
+.Nd Merkle tree construction and verification
+.Sh LIBRARY
+.Lb libmerkletree
+.Sh SYNOPSIS
+.In merkletree.h
+.Pp
+.Ft int
+.Fo merkletree_file
+.Fa "merkletree_t *tree" "const char *f" "const char *algorithm" "size_t blocksize"
+.Fc
+.Ft int
+.Fo merkletree_data
+.Fa "merkletree_t *tree" "const void *p" "size_t size" "const char *algorithm" "size_t blocksize"
+.Fc
+.Ft void
+.Fo merkletree_free
+.Fa "merkletree_t *tree"
+.Fc
+.Ft int
+.Fo merkletree_snprintf
+.Fa "merkletree_t *tree" "const void *f" "const char *buf" "size_t size"
+.Fc
+.Ft int
+.Fo merkletree_asprintf
+.Fa "merkletree_t *tree" "const void *f" "const char **buf"
+.Fc
+.Ft int
+.Fo merkletree_sum_info
+.Fa "merkletree_t *tree" "const void *f" "const char **buf"
+.Fc
+.Ft int
+.Fo merkletree_verify
+.Fa "const void *sumfile" "const char *filename"
+.Fc
+.Sh DESCRIPTION
+The
+.Nm
+library implements Merkle tree calculation, and also includes
+some higher-level functions to verify a file against a previously-generated
+Merkle tree. 
+.Pp
+A Merkle tree is a hash tree calculated across blocks in data.
+Any block size can be specified in this implementation.
+A digest is calculated across each block in the data,
+and then a digest is calculated across blocks of the checksums,
+and this continues until only one block of digest exists.
+The hierarchical nature of this allows individual blocks of
+a file to be verified, even if other parts of the file have been modified.
+A degenerate case, in which the data is less than the blocksize,
+will mean that a single digest value for the block is calculated.
+This will be the same as the digest algorithm applied to the whole file.
+.Pp
+The digest calculations themselves are done by the
+.Xr libmultigest 3
+library, and allow concatenation of multiple digests to produce a
+single large digest value.
+.Pp
+A tree of digests is calculated using either
+.Fn merkletree_file
+or
+.Fn merkletree_data
+and can then be retrieved in an understandable form using either
+.Fn merkletree_snprintf
+or
+.Fn merkletree_asprintf
+which is in string format.
+The functions differ in the way the arguments are passed in.
+In both cases, the number of bytes in the output text is returned.
+.Pp
+The information from the calculated digests, including digest
+algorithm and blocksize, can be retrieved using
+.Fn merkletree_sum_info
+and a file may be verified against a previously calculated tree
+using the
+.Fn merkletree_verify
+function.
+The
+.Fn merkletree_verify
+function returns
+.Dv 1
+if the files matched,
+and
+.Dv 0
+otherwise.
+.Pp
+Finally, resources allocated can be freed using the
+.Fn merkletree
+function.
+.Sh SEE ALSO
+.Xr libmultigest 3
+.Sh HISTORY
+The
+.Nm
+library first appeared in
+.Nx 7.0 .
+.Sh AUTHORS
+.An Alistair Crooks Aq agc@NetBSD.org
