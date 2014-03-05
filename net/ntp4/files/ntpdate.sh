@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: ntpdate.sh,v 1.1 2004/03/11 20:39:40 reed Exp $
+# $NetBSD: ntpdate.sh,v 1.2 2014/03/05 12:24:43 obache Exp $
 #
 
 # PROVIDE: ntpdate
@@ -23,7 +23,7 @@ ntpdate_start()
 	fi
 	if [ -n "$ntpdate_hosts"  ]; then
 		echo "Setting date via ntp."
-		@PREFIX@/bin/ntpdate $rc_flags $ntpdate_hosts
+		@PREFIX@/sbin/ntpdate $rc_flags $ntpdate_hosts
 	fi
 }
 
