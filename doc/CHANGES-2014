@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.935 2014/03/05 05:26:50 agc Exp $
+$NetBSD: CHANGES-2014,v 1.936 2014/03/05 11:16:40 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1436,3 +1436,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added security/libmultigest version 20140304 [agc 2014-03-04]
 	Added security/merkletree version 20140304 [agc 2014-03-04]
 	Added security/libmerkletree version 20140304 [agc 2014-03-04]
+	Updated databases/py-postgresql to 4.1.1nb1 [darcy 2014-03-05]
