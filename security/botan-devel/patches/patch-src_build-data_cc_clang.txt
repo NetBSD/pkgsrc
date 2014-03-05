@@ -1,0 +1,14 @@
+$NetBSD: patch-src_build-data_cc_clang.txt,v 1.1 2014/03/05 21:22:38 joerg Exp $
+
+--- src/build-data/cc/clang.txt.orig	2014-03-01 16:46:28.000000000 +0000
++++ src/build-data/cc/clang.txt
+@@ -53,8 +53,7 @@ ivybridge   -> "-march=core-avx-i"
+ </mach_opt>
+ 
+ <mach_abi_linking>
+-#all     -> "-stdlib=libc++ -pthread"
+-all     -> "-stdlib=libstdc++ -pthread"
++all     -> "-pthread"
+ 
+ x86_64  -> "-m64"
+ ppc64   -> "-m64"
