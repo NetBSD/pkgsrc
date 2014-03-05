@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.933 2014/03/05 05:16:32 agc Exp $
+$NetBSD: CHANGES-2014,v 1.934 2014/03/05 05:20:50 agc Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1434,3 +1434,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/libnetpgpverify to 20140304 [agc 2014-03-04]
 	Added security/multigest version 20140304 [agc 2014-03-04]
 	Added security/libmultigest version 20140304 [agc 2014-03-04]
+	Added security/merkletree version 20140304 [agc 2014-03-04]
