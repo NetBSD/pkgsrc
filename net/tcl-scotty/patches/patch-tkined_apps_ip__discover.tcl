@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2011/09/02 08:06:55 he Exp $
+$NetBSD: patch-tkined_apps_ip__discover.tcl,v 1.1 2014/03/05 13:52:29 he Exp $
 
 Ensure we unset the global variable...
 

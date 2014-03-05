@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.7 2012/08/22 22:18:23 marino Exp $
+$NetBSD: patch-unix-Makefile.in,v 1.1 2014/03/05 13:52:29 he Exp $
 
 Put installed files under lib/tcl, so that tcl more easily picks it
 up using e.g. "package require Tnm".

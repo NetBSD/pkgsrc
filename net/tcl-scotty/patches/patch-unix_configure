@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2011/09/02 08:06:55 he Exp $
+$NetBSD: patch-unix_configure,v 1.1 2014/03/05 13:52:29 he Exp $
 
 Default target to build & install scotty & tkined.
 Append TCL_LIBS to library setting, so that tcl library is picked up.
