@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2014/02/04 00:19:14 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2014/03/05 13:52:29 he Exp $
 #
 
 DISTNAME=	scotty-${DIST_VERS}
 PKGNAME=	tcl-scotty-${DIST_VERS}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	net tcl
 MASTER_SITES=	ftp://ftp.ibr.cs.tu-bs.de/pub/local/tkined/
 
@@ -29,7 +29,6 @@ CONFIGURE_ENV+=	TARGET=scotty
 
 .include "../../mk/bsd.prefs.mk"
 
-CFLAGS+=	-DUSE_INTERP_RESULT -DUSE_INTERP_ERRORLINE
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q} GDMO_LIBS=
 
 USE_LIBTOOL=	yes
