@@ -1,0 +1,7 @@
+The multigest utility calculates message digests of files or, if no
+file is specified, standard input.  The list of possible algorithms is
+given in the libmultigest(3) manual page.
+
+The multigest utility is a simple wrapper for the various different
+algorithm implementations, and was designed to be scalable as new
+message digest algorithms are developed.
