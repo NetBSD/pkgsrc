@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2014/03/05 05:14:42 agc Exp $
+include/multigest.h
+lib/libmultigest.la
+man/man3/libmultigest.3
