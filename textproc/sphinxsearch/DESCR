@@ -1,0 +1,6 @@
+Sphinx is an open source full text search server, designed from the ground up
+with performance, relevance (aka search quality), and integration simplicity
+in mind. Sphinx lets you either batch index and search data stored in an SQL
+database, NoSQL storage, or just files quickly and easily - or index and
+search data on the fly, working with Sphinx pretty much as with a database
+server.

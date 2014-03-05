@@ -1,0 +1,90 @@
+$NetBSD: patch-Makefile.in,v 1.1 2014/03/05 13:44:23 fhajny Exp $
+
+Force pkgsrc compatible locations.
+
+--- Makefile.in.orig	2013-11-11 19:18:55.000000000 +0000
++++ Makefile.in
+@@ -79,7 +79,7 @@ am__nobase_list = $(am__nobase_strip_set
+ am__base_list = \
+   sed '$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g' | \
+   sed '$$!N;$$!N;$$!N;$$!N;s/\n/ /g'
+-am__installdirs = "$(DESTDIR)$(sysconfdir)"
++am__installdirs = "$(DESTDIR)$(egdir)"
+ DATA = $(sysconf_DATA)
+ RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\
+   distclean-recursive maintainer-clean-recursive
+@@ -225,6 +225,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@
++egdir = @egdir@
+ target_alias = @target_alias@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+@@ -296,24 +297,24 @@ sphinx-min.conf.dist: $(top_builddir)/co
+ 	cd $(top_builddir) && $(SHELL) ./config.status $@
+ install-sysconfDATA: $(sysconf_DATA)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(sysconfdir)" || $(MKDIR_P) "$(DESTDIR)$(sysconfdir)"
++	test -z "$(egdir)" || $(MKDIR_P) "$(DESTDIR)$(egdir)"
+ 	@list='$(sysconf_DATA)'; test -n "$(sysconfdir)" || list=; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(sysconfdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(sysconfdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(egdir)'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(egdir)" || exit $$?; \
+ 	done
+ 
+ uninstall-sysconfDATA:
+ 	@$(NORMAL_UNINSTALL)
+-	@list='$(sysconf_DATA)'; test -n "$(sysconfdir)" || list=; \
++	@list='$(sysconf_DATA)'; test -n "$(egdir)" || list=; \
+ 	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
+ 	test -n "$$files" || exit 0; \
+-	echo " ( cd '$(DESTDIR)$(sysconfdir)' && rm -f" $$files ")"; \
+-	cd "$(DESTDIR)$(sysconfdir)" && rm -f $$files
++	echo " ( cd '$(DESTDIR)$(egdir)' && rm -f" $$files ")"; \
++	cd "$(DESTDIR)$(egdir)" && rm -f $$files
+ 
+ # This directory's subdirectories are mostly independent; you can cd
+ # into them and run `make' without going through this Makefile.
+@@ -630,7 +631,7 @@ check: check-recursive
+ all-am: Makefile $(DATA)
+ installdirs: installdirs-recursive
+ installdirs-am:
+-	for dir in "$(DESTDIR)$(sysconfdir)"; do \
++	for dir in "$(DESTDIR)$(egdir)"; do \
+ 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
+ 	done
+ install: install-recursive
+@@ -681,7 +682,6 @@ info-am:
+ 
+ install-data-am:
+ 	@$(NORMAL_INSTALL)
+-	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
+ install-dvi: install-dvi-recursive
+ 
+ install-dvi-am:
+@@ -738,7 +738,7 @@ uninstall-am: uninstall-sysconfDATA
+ 	distclean distclean-generic distclean-hdr distclean-tags \
+ 	distcleancheck distdir distuninstallcheck dvi dvi-am html \
+ 	html-am info info-am install install-am install-data \
+-	install-data-am install-data-hook install-dvi install-dvi-am \
++	install-data-am install-dvi install-dvi-am \
+ 	install-exec install-exec-am install-html install-html-am \
+ 	install-info install-info-am install-man install-pdf \
+ 	install-pdf-am install-ps install-ps-am install-strip \
+@@ -748,9 +748,6 @@ uninstall-am: uninstall-sysconfDATA
+ 	tags-recursive uninstall uninstall-am uninstall-sysconfDATA
+ 
+ 
+-install-data-hook:
+-	mkdir -p $(DESTDIR)$(localstatedir)/data && mkdir -p $(DESTDIR)$(localstatedir)/log
+-
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:

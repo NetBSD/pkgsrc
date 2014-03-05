@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2014/03/05 13:44:23 fhajny Exp $
+bin/indexer
+bin/indextool
+bin/search
+bin/searchd
+bin/spelldump
+bin/wordbreaker
+include/sphinxclient.h
+lib/libsphinxclient.la
+man/man1/indexer.1
+man/man1/indextool.1
+man/man1/search.1
+man/man1/searchd.1
+man/man1/spelldump.1
+share/examples/sphinx/example.sql
+share/examples/sphinx/sphinx-full.conf
+share/examples/sphinx/sphinx-min.conf
