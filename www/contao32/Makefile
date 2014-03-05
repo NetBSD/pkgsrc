@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2013/12/21 02:46:25 taca Exp $
+# $NetBSD: Makefile,v 1.3 2014/03/05 15:09:42 taca Exp $
 #
 
 DISTNAME=	${CT_VERSION}
 PKGNAME=	contao${CT_VER}-${CT_PKGVER}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${CT_MASTER_SITE}
 
@@ -41,7 +42,7 @@ MAKE_DIRS+=	${CT_WEBDIR}/files/tiny_templates
 REPLACE_BASH=	system/bin/minify
 
 .for f in ${EG_TEMPLATES}
-REQD_FILES+=	${CT_EGDIR}/files/${f} ${CT_WEBDIR}/tl_files/${f}
+REQD_FILES+=	${CT_EGDIR}/files/${f} ${CT_WEBDIR}/files/${f}
 .endfor
 
 .for f in ${WWW_EG_FILES}
