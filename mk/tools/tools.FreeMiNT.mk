@@ -1,4 +1,4 @@
-# $NetBSD: tools.FreeMiNT.mk,v 1.3 2013/09/12 13:19:06 ryoon Exp $
+# $NetBSD: tools.FreeMiNT.mk,v 1.4 2014/03/06 07:34:20 uebayasi Exp $
 #
 # System-supplied tools for the FreeMiNT operating system.
 
@@ -86,6 +86,7 @@ TOOLS_PLATFORM.touch?=		/bin/touch
 TOOLS_PLATFORM.tr?=		/usr/bin/tr
 TOOLS_PLATFORM.true?=		true			# shell builtin
 TOOLS_PLATFORM.tsort?=		/usr/bin/tsort
+TOOLS_PLATFORM.uniq?=		/bin/uniq
 TOOLS_PLATFORM.wc?=		/usr/bin/wc
 TOOLS_PLATFORM.xargs?=		/usr/bin/xargs -r
 TOOLS_PLATFORM.xgettext?=	/usr/bin/xgettext

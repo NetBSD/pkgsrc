@@ -1,4 +1,4 @@
-# $NetBSD: tools.Cygwin.mk,v 1.7 2014/02/27 08:47:32 obache Exp $
+# $NetBSD: tools.Cygwin.mk,v 1.8 2014/03/06 07:34:20 uebayasi Exp $
 #
 # System-supplied tools for the Cygwin operating system.
 
@@ -131,6 +131,7 @@ TOOLS_PLATFORM.touch?=		/bin/touch
 TOOLS_PLATFORM.tr?=		/bin/tr
 TOOLS_PLATFORM.true?=		true			# shell builtin
 TOOLS_PLATFORM.tsort?=		/bin/tsort
+TOOLS_PLATFORM.uniq?=		/bin/uniq
 .if exists(/bin/unzip)
 TOOLS_PLATFORM.unzip?=		/bin/unzip
 .endif

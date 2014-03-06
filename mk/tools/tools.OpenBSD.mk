@@ -1,4 +1,4 @@
-# $NetBSD: tools.OpenBSD.mk,v 1.34 2013/08/24 10:12:52 tron Exp $
+# $NetBSD: tools.OpenBSD.mk,v 1.35 2014/03/06 07:34:20 uebayasi Exp $
 #
 # System-supplied tools for the OpenBSD operating system.
 
@@ -96,6 +96,7 @@ TOOLS_PLATFORM.touch?=		/usr/bin/touch
 TOOLS_PLATFORM.tr?=		/usr/bin/tr
 TOOLS_PLATFORM.true?=		true			# shell builtin
 TOOLS_PLATFORM.tsort?=		/usr/bin/tsort
+TOOLS_PLATFORM.uniq?=		/usr/bin/uniq
 TOOLS_PLATFORM.wc?=		/usr/bin/wc
 TOOLS_PLATFORM.xargs?=		/usr/bin/xargs -r
 TOOLS_PLATFORM.yacc?=		/usr/bin/yacc

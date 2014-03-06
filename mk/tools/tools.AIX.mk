@@ -1,4 +1,4 @@
-# $NetBSD: tools.AIX.mk,v 1.16 2009/02/05 19:03:29 joerg Exp $
+# $NetBSD: tools.AIX.mk,v 1.17 2014/03/06 07:34:20 uebayasi Exp $
 #
 # System-supplied tools for the AIX operating system.
 
@@ -63,6 +63,7 @@ TOOLS_PLATFORM.touch?=		/usr/bin/touch
 TOOLS_PLATFORM.tr?=		/usr/bin/tr
 TOOLS_PLATFORM.true?=		true			# shell builtin
 TOOLS_PLATFORM.tsort?=		/usr/bin/tsort
+TOOLS_PLATFORM.uniq?=		/usr/bin/uniq
 TOOLS_PLATFORM.wc?=		/usr/bin/wc
 TOOLS_PLATFORM.xargs?=		/usr/bin/xargs
 

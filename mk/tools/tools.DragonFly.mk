@@ -1,4 +1,4 @@
-# $NetBSD: tools.DragonFly.mk,v 1.41 2013/12/19 23:50:29 tron Exp $
+# $NetBSD: tools.DragonFly.mk,v 1.42 2014/03/06 07:34:20 uebayasi Exp $
 #
 # System-supplied tools for the DragonFly operating system.
 
@@ -91,6 +91,7 @@ TOOLS_PLATFORM.touch?=		/usr/bin/touch
 TOOLS_PLATFORM.tr?=		/usr/bin/tr
 TOOLS_PLATFORM.true?=		/usr/bin/true
 TOOLS_PLATFORM.tsort?=		/usr/bin/tsort
+TOOLS_PLATFORM.uniq?=		/usr/bin/uniq
 TOOLS_PLATFORM.wc?=		/usr/bin/wc
 TOOLS_PLATFORM.xargs?=		/usr/bin/xargs
 TOOLS_PLATFORM.xz?=		/usr/bin/xz
