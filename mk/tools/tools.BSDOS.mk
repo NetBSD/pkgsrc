@@ -1,4 +1,4 @@
-# $NetBSD: tools.BSDOS.mk,v 1.17 2006/10/17 06:13:51 rillig Exp $
+# $NetBSD: tools.BSDOS.mk,v 1.18 2014/03/06 07:34:20 uebayasi Exp $
 #
 # System-supplied tools for the BSD/OS operating system.
 
@@ -82,5 +82,6 @@ TOOLS_PLATFORM.touch?=		/usr/bin/touch
 TOOLS_PLATFORM.tr?=		/usr/bin/tr
 TOOLS_PLATFORM.true?=		true			# shell builtin
 TOOLS_PLATFORM.tsort?=		/usr/bin/tsort
+TOOLS_PLATFORM.uniq?=		/usr/bin/uniq
 TOOLS_PLATFORM.wc?=		/usr/bin/wc
 TOOLS_PLATFORM.xargs?=		/usr/bin/xargs
