@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2014/02/20 17:37:25 drochner Exp $
+# $NetBSD: Makefile,v 1.34 2014/03/06 15:45:45 joerg Exp $
 
 VERSION=	4.1.6.1
 DISTNAME=	xen-${VERSION}
@@ -37,7 +37,8 @@ MESSAGE_SUBST+=		XENKERNELDIR=${XENKERNELDIR:Q}
 .if !empty(PKGSRC_COMPILER:Mclang)
 EXTRA_CFLAGS+=	-Qunused-arguments -no-integrated-as -Wno-error=format \
 		-Wno-error=parentheses-equality -Wno-error=enum-conversion \
-		-Wno-error=unused-function
+		-Wno-error=unused-function \
+		-Wno-error=tautological-pointer-compare
 .endif
 
 MAKE_ENV+=	EXTRA_CFLAGS=${EXTRA_CFLAGS:Q}
