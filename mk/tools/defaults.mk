@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.60 2013/12/01 02:57:36 obache Exp $
+# $NetBSD: defaults.mk,v 1.61 2014/03/06 07:34:20 uebayasi Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -139,6 +139,7 @@ _TOOLS_VARNAME.touch=		TOUCH
 _TOOLS_VARNAME.tr=		TR
 _TOOLS_VARNAME.true=		TRUE
 _TOOLS_VARNAME.tsort=		TSORT
+_TOOLS_VARNAME.uniq=		UNIQ
 _TOOLS_VARNAME.unrar=		UNRAR
 _TOOLS_VARNAME.unzip=		UNZIP_CMD
 _TOOLS_VARNAME.unzoo=		UNZOO

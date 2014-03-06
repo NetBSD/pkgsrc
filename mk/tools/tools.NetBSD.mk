@@ -1,4 +1,4 @@
-# $NetBSD: tools.NetBSD.mk,v 1.50 2013/12/13 07:11:20 obache Exp $
+# $NetBSD: tools.NetBSD.mk,v 1.51 2014/03/06 07:34:20 uebayasi Exp $
 #
 # System-supplied tools for the NetBSD operating system.
 
@@ -113,6 +113,7 @@ TOOLS_PLATFORM.touch?=		/usr/bin/touch
 TOOLS_PLATFORM.tr?=		/usr/bin/tr
 TOOLS_PLATFORM.true?=		true			# shell builtin
 TOOLS_PLATFORM.tsort?=		/usr/bin/tsort
+TOOLS_PLATFORM.uniq?=		/usr/bin/uniq
 .if exists(/usr/bin/unzip)
 TOOLS_PLATFORM.unzip?=		/usr/bin/unzip
 .endif

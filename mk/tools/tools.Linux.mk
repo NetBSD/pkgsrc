@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.53 2014/02/14 07:43:46 obache Exp $
+# $NetBSD: tools.Linux.mk,v 1.54 2014/03/06 07:34:20 uebayasi Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -238,6 +238,11 @@ TOOLS_PLATFORM.touch?=		/usr/bin/touch
 TOOLS_PLATFORM.tr?=		/usr/bin/tr
 TOOLS_PLATFORM.true?=		true			# shell builtin
 TOOLS_PLATFORM.tsort?=		/usr/bin/tsort
+.if exists(/bin/uniq)
+TOOLS_PLATFORM.uniq?=		/bin/uniq
+.elif exists(/usr/bin/uniq)
+TOOLS_PLATFORM.uniq?=		/usr/bin/uniq
+.endif
 TOOLS_PLATFORM.wc?=		/usr/bin/wc
 .if exists(/usr/bin/wget)
 TOOLS_PLATFORM.wget?=		/usr/bin/wget

@@ -1,4 +1,4 @@
-# $NetBSD: tools.FreeBSD.mk,v 1.39 2013/12/13 07:04:09 obache Exp $
+# $NetBSD: tools.FreeBSD.mk,v 1.40 2014/03/06 07:34:20 uebayasi Exp $
 #
 # System-supplied tools for the FreeBSD operating system.
 
@@ -84,6 +84,7 @@ TOOLS_PLATFORM.touch?=		/usr/bin/touch
 TOOLS_PLATFORM.tr?=		/usr/bin/tr
 TOOLS_PLATFORM.true?=		true			# shell builtin
 TOOLS_PLATFORM.tsort?=		/usr/bin/tsort
+TOOLS_PLATFORM.uniq?=		/usr/bin/uniq
 .if exists(/usr/bin/unzip)
 TOOLS_PLATFORM.unzip?=		/usr/bin/unzip
 .endif

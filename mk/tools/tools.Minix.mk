@@ -1,4 +1,4 @@
-# $NetBSD: tools.Minix.mk,v 1.3 2013/04/07 20:04:17 tcort Exp $
+# $NetBSD: tools.Minix.mk,v 1.4 2014/03/06 07:34:20 uebayasi Exp $
 #
 # System-supplied tools for the Minix operating system.
 
@@ -69,6 +69,7 @@ TOOLS_PLATFORM.touch?=		/usr/bin/touch
 TOOLS_PLATFORM.tr?=		/usr/bin/tr
 TOOLS_PLATFORM.true?=		/bin/true
 TOOLS_PLATFORM.tsort?=		/usr/bin/tsort
+TOOLS_PLATFORM.uniq?=		/usr/bin/uniq
 TOOLS_PLATFORM.wc?=		/usr/bin/wc
 TOOLS_PLATFORM.xargs?=		/usr/bin/xargs
 TOOLS_PLATFORM.yacc?=		/usr/bin/yacc
