@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2012/06/25 11:18:39 joerg Exp $
+$NetBSD: distinfo,v 1.4 2014/03/06 15:42:29 joerg Exp $
 
 SHA1 (doxymacs-1.8.0.tar.gz) = b2aafb4f2d20ceb63614c2b9f06d79dd484d8e2e
 RMD160 (doxymacs-1.8.0.tar.gz) = f7a0657251d9220d75aec08dd796dbba3cfe99a5
 Size (doxymacs-1.8.0.tar.gz) = 133600 bytes
-SHA1 (patch-c_doxymacs__parser.c) = d96e087ec14057ae1f58c6f44eecf8e0cd55b470
+SHA1 (patch-c_doxymacs__parser.c) = 44fa1103299a2dabdcf4ced99710a3f3c6fc9264
