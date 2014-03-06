@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2012/10/28 06:30:07 asau Exp $
+# $NetBSD: Makefile,v 1.10 2014/03/06 15:04:53 prlw1 Exp $
 
-DISTNAME=	mod_fcgid-2.3.7
+DISTNAME=	mod_fcgid-2.3.9
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=httpd/mod_fcgid/}
