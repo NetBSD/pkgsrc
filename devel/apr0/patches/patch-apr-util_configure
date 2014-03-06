@@ -1,0 +1,18 @@
+$NetBSD: patch-apr-util_configure,v 1.1 2014/03/06 11:52:19 jperkin Exp $
+
+Search for builtin expat in /usr/lib64 too.
+
+--- apr-util/configure.orig	2013-06-28 17:48:52.000000000 +0000
++++ apr-util/configure
+@@ -23132,6 +23132,11 @@ $as_echo_n "checking for Expat in $withv
+             expat_include_dir="$abs_expatdir/include"
+     expat_ldflags="-L$abs_expatdir/lib"
+     expat_libs="-lexpat"
++  elif test -r "$abs_expatdir/include/expat.h" -a \
++    -r "$abs_expatdir/lib64/libexpat.a"; then
++            expat_include_dir="$abs_expatdir/include"
++    expat_ldflags="-L$abs_expatdir/lib64"
++    expat_libs="-lexpat"
+   elif test -r "$abs_expatdir/xmlparse.h"; then
+         expat_include_dir="$abs_expatdir"
+     expat_ldflags="-L$abs_expatdir"
