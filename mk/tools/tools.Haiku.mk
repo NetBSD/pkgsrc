@@ -1,4 +1,4 @@
-# $NetBSD: tools.Haiku.mk,v 1.10 2013/11/06 13:12:50 obache Exp $
+# $NetBSD: tools.Haiku.mk,v 1.11 2014/03/06 07:34:20 uebayasi Exp $
 #
 # System-supplied tools for the Haiku operating system.
 
@@ -116,6 +116,7 @@ TOOLS_PLATFORM.touch?=		/bin/touch
 TOOLS_PLATFORM.tr?=		/bin/tr
 TOOLS_PLATFORM.true?=		true			# shell builtin
 TOOLS_PLATFORM.tsort?=		/bin/tsort
+TOOLS_PLATFORM.uniq?=		/bin/uniq
 TOOLS_PLATFORM.wc?=		/bin/wc
 TOOLS_PLATFORM.xargs?=		/bin/xargs -r
 #TOOLS_PLATFORM.xgettext?=	/usr/bin/xgettext
