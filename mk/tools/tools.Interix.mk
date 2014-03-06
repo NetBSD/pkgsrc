@@ -1,4 +1,4 @@
-# $NetBSD: tools.Interix.mk,v 1.23 2009/12/19 11:56:11 obache Exp $
+# $NetBSD: tools.Interix.mk,v 1.24 2014/03/06 07:34:20 uebayasi Exp $
 #
 # System-supplied tools for the Interix operating system.
 
@@ -79,6 +79,7 @@ TOOLS_PLATFORM.touch?=		/bin/touch
 TOOLS_PLATFORM.tr?=		/bin/tr
 TOOLS_PLATFORM.true?=		true			# shell builtin
 TOOLS_PLATFORM.tsort?=		/bin/tsort
+TOOLS_PLATFORM.uniq?=		/bin/uniq
 TOOLS_PLATFORM.wc?=		/bin/wc
 .if !empty(MACHINE_PLATFORM:MInterix-[0-5].*-*)
 TOOLS_PLATFORM.xargs?=		/bin/xargs
