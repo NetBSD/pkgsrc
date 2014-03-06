@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2013/08/07 11:06:39 drochner Exp $
+$NetBSD: distinfo,v 1.16 2014/03/06 15:45:09 joerg Exp $
 
 SHA1 (putty-0.63.tar.gz) = 195c0603ef61082b91276faa8d4246ea472bba3b
 RMD160 (putty-0.63.tar.gz) = cf28d88a5f0e1db6c21bb0308bd59ed4d6399e5f
@@ -11,3 +11,4 @@ SHA1 (patch-unix_gtkwin.c) = ccabdde03fda8bbc24d659a440fe48f96ab5d867
 SHA1 (patch-unix_uxnet.c) = 2d1c2939721993fe5616c2fe3f1935c03a31bb35
 SHA1 (patch-unix_uxucs.c) = a2a5021b515c3bade1126ed062bdc1eece1ca0f9
 SHA1 (patch-windows_window.c) = e851bad963967429131286c18e39d1ac4add4ae7
+SHA1 (patch-x11fwd.c) = 119ac9d5b3eda83f01616490aea42a4e8fe2814a
