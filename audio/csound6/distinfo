@@ -1,0 +1,18 @@
+$NetBSD: distinfo,v 1.1 2014/03/06 10:16:53 mrg Exp $
+
+SHA1 (Csound6.02.tar.gz) = 9903dd2825d533d08fa333adb85bb39a2ef3da77
+RMD160 (Csound6.02.tar.gz) = a2a6b0436a1988bcfd4b24b4dc2e0e78f56cb7c1
+Size (Csound6.02.tar.gz) = 23459796 bytes
+SHA1 (patch-CMakeLists.txt) = dab8132921ea5d0eecea0950d465772e65c04a48
+SHA1 (patch-Engine_linevent.c) = e77671774437438f80a38e3bfe4fa3cb847cbd20
+SHA1 (patch-InOut_libsnd.c) = a944d30531fe85c98368dfdc1c5bf7cab7c8af8c
+SHA1 (patch-InOut_widgets.cpp) = c34237c579f90b093a39d79e11a40cd4edafa81c
+SHA1 (patch-InOut_winEPS.c) = 1f3a7ec113a5185a81fe219d99061afb025bc13b
+SHA1 (patch-InOut_winFLTK.c) = 77e82625a8db39814d5f7e2c36ad16b122eb2754
+SHA1 (patch-Opcodes_cpumeter.c) = d6eca4f22dd6d6d51ae3bb1e65f0a6c5b6faa039
+SHA1 (patch-Opcodes_wavegde.h) = e1a6d742b28dd9b6b129a993102baf7218efa57c
+SHA1 (patch-Top_csmodule.c) = dae30ae850925a05df0f9e383425ab1e1c42dec1
+SHA1 (patch-Top_csound.c) = b1477eac05aefe6ddd5b94b52246f18ce6148914
+SHA1 (patch-Top_one_file.c) = 24b9b9d51843f2f79336e95e65a2c6011f31b754
+SHA1 (patch-Top_threads.c) = 9ea7a8f1923f25cc7b2192582711cff143386bda
+SHA1 (patch-frontends_CsoundVST_ScoreGeneratorVstMain.cpp) = 229fc00e122288ea16ebf07f081869965cab9365
