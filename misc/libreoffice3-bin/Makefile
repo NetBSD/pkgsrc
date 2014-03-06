@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/04/13 09:03:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2014/03/06 07:36:04 uebayasi Exp $
 
 DISTNAME=		libreoffice3-bin	# overridden below
 PKGNAME=		libreoffice3-bin-${OO_RELEASE}
@@ -46,7 +46,7 @@ RPM2PKG_SUBPREFIX=	# empty
 RPM2PKG_STAGE=		do-install
 RUN_LDCONFIG=		no
 
-USE_TOOLS+=	patch
+USE_TOOLS+=	patch uniq
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -75,7 +75,7 @@ do-install:
 #	${RM} -f ${DESTDIR}${PREFIX}/opt/libreoffice${OO_BASEVER}/program/soffice.orig
 	${PATCH} -d ${DESTDIR}${PREFIX}/opt/libreoffice${OO_BASEVER}/program < ${FILESDIR}/spadmin-patch
 	${RM} -f ${DESTDIR}${PREFIX}/opt/libreoffice${OO_BASEVER}/program/spadmin.orig
-	uniq ${RPM2PKG_PLIST} | \
+	${UNIQ} ${RPM2PKG_PLIST} | \
 		${SED} -e 's,^@exec mkdir -m 755 -p %D/,@pkgdir,' > ${WRKDIR}/PLIST
 	${RM} -f ${DESTDIR}${PREFIX}/bin/soffice
 	${SED}  -e "s|@@PREFIX@@|${PREFIX}|g" -e "s|@@OO_VER@@|${OO_VER}|g" \
