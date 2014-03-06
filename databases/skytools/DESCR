@@ -1,0 +1,19 @@
+SkyTools is a package of tools in use in Skype for replication and failover.
+It also includes a generic queuing mechanism called PgQ and a utility
+library for Python scripts, as well as a script for setting up and managing
+WAL based standby servers.
+
+PgQ is a queuing system written in PL/pgSQL, Python and C code. It is based
+on snapshot-based event handling ideas from Slony-I, and is written for
+general usage. PgQ provides an efficient, transactional, queueing system
+with multi-node support (including work sharing and splitting, failover and
+switchover, for queues and for consumers). PgQ is split into 3 layers:
+Producers, Ticker and Consumers.
+
+Londiste is a replication tool written in Python, using PgQ as event
+transport.
+
+Walmgr is a script that will setup WAL archiving, does the initial backup,
+and runtime WAL archive and restore. It can also be used for
+up-to-last-second partial file copying, so that less than the whole file is
+lost in case of loss of the master database server.
