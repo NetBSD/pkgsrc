@@ -1,0 +1,7 @@
+Config::Any returns your configuration as a hash of hashes keyed by the
+name of the configuration file. This module merges these hashes into a
+single hash. If the "override" paramter is set to 0 in the paramters for
+"load_files" or "load_stems", configurations files later in the list
+can't override variables that are already set. The default is to
+override previously set variables. In all other regards Config::Any::Merge
+is a strict subclass of Config::Any and inherits all of its functions.
