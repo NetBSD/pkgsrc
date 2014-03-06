@@ -1,6 +1,6 @@
-$NetBSD: patch-c_doxymacs__parser.c,v 1.1 2012/06/25 11:18:39 joerg Exp $
+$NetBSD: patch-c_doxymacs__parser.c,v 1.2 2014/03/06 15:42:29 joerg Exp $
 
---- c/doxymacs_parser.c.orig	2012-06-18 16:32:20.000000000 +0000
+--- c/doxymacs_parser.c.orig	2006-04-23 00:05:33.000000000 +0000
 +++ c/doxymacs_parser.c
 @@ -70,7 +70,7 @@ typedef struct _hash_entry
  
@@ -11,8 +11,12 @@ $NetBSD: patch-c_doxymacs__parser.c,v 1.1 2012/06/25 11:18:39 joerg Exp $
  {
      unsigned int h = 0;
  
-@@ -82,7 +82,7 @@ inline unsigned int hash(const char *s)
-     return abs(h % HASH_SIZE);
+@@ -79,10 +79,10 @@ inline unsigned int hash(const char *s)
+         h += *s++;
+     }
+ 
+-    return abs(h % HASH_SIZE);
++    return h % HASH_SIZE;
  }
  
 -inline void AddToHash(completion_list *cl)
