@@ -1,6 +1,6 @@
 #! @WRAPPER_SHELL@
 #
-# $NetBSD: wrapper.sh,v 1.22 2013/04/21 03:51:27 uebayasi Exp $
+# $NetBSD: wrapper.sh,v 1.23 2014/03/06 10:19:43 uebayasi Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -125,18 +125,18 @@ yes)
 	;;
 esac
 
-cmd="$cmd $libs"
+cmdline="$cmd $libs"
 
 @_WRAP_ENV@
 
-msg_log $wrapperlog "<.>" "$cmd"
+msg_log $wrapperlog "<.>" "$cmdline"
 
 if [ "${empty_file}" = "${cleanup}" ] && [ "$debug" != "yes" ]; then
-	eval "exec $cmd"
+	eval "exec $cmdline"
 	wrapper_result=$?
 else
 	wrapper_result=0
-	eval "$cmd" || wrapper_result="$?"
+	eval "$cmdline" || wrapper_result="$?"
 fi
 
 . $cleanup
@@ -144,7 +144,7 @@ fi
 [ $wrapper_result -eq 0 ] || [ "$debug" != "yes" ] || {
 	echo ""
 	echo "[wrapper.sh] note: The real command line, after the pkgsrc wrapper, was:"
-	echo "$cmd"
+	echo "$cmdline"
 } 1>&2
 
 exit ${wrapper_result}
