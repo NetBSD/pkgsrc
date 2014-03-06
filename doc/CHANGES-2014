@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.944 2014/03/06 11:29:05 obache Exp $
+$NetBSD: CHANGES-2014,v 1.945 2014/03/06 11:52:04 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1447,3 +1447,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added audio/csound6 version 6.02 [mrg 2014-03-05]
 	Added audio/csound6-manual version 6.02 [mrg 2014-03-05]
 	Added databases/skytools version 3.1.5 [obache 2014-03-06]
+	Added devel/p5-Config-Any-Merge version 0.08 [obache 2014-03-06]
