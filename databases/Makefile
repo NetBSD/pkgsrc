@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.447 2014/02/17 00:40:20 rodent Exp $
+# $NetBSD: Makefile,v 1.448 2014/03/06 11:29:40 obache Exp $
 
 COMMENT=	Databases
 
@@ -418,6 +418,7 @@ SUBDIR+=	ruby-tokyotyrant
 SUBDIR+=	ruby-vapor
 SUBDIR+=	sdbm
 SUBDIR+=	shared-mime-info
+SUBDIR+=	skytools
 SUBDIR+=	slony1
 SUBDIR+=	soci
 SUBDIR+=	sqlite
