@@ -1,4 +1,4 @@
-# $NetBSD: tools.MirBSD.mk,v 1.4 2012/09/28 19:07:59 bsiegert Exp $
+# $NetBSD: tools.MirBSD.mk,v 1.5 2014/03/06 07:34:20 uebayasi Exp $
 #
 # System-supplied tools for the MirOS operating system.
 
@@ -72,6 +72,7 @@ TOOLS_PLATFORM.touch?=		/usr/bin/touch
 TOOLS_PLATFORM.tr?=		/usr/bin/tr
 TOOLS_PLATFORM.true?=		/bin/sh -c true
 TOOLS_PLATFORM.tsort?=		/usr/bin/tsort
+TOOLS_PLATFORM.uniq?=		/usr/bin/uniq
 TOOLS_PLATFORM.wc?=		/usr/bin/wc
 TOOLS_PLATFORM.xargs?=		/usr/bin/xargs -r
 TOOLS_PLATFORM.yacc?=		/usr/bin/yacc

@@ -1,4 +1,4 @@
-# $NetBSD: tools.UnixWare.mk,v 1.13 2009/02/05 19:03:29 joerg Exp $
+# $NetBSD: tools.UnixWare.mk,v 1.14 2014/03/06 07:34:20 uebayasi Exp $
 #
 # System-supplied tools for the UnixWare 7 operating system.
 
@@ -49,6 +49,7 @@ TOOLS_PLATFORM.touch?=		/usr/bin/touch
 TOOLS_PLATFORM.tr?=		/usr/bin/tr
 TOOLS_PLATFORM.true?=		/usr/bin/true
 TOOLS_PLATFORM.tsort?=		/usr/ccs/bin/tsort
+TOOLS_PLATFORM.uniq?=		/usr/bin/uniq
 TOOLS_PLATFORM.wc?=		/usr/bin/wc
 TOOLS_PLATFORM.xargs?=		/usr/bin/xargs
 
