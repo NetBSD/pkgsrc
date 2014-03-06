@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2013/09/10 14:26:49 joerg Exp $
+$NetBSD: patch-ab,v 1.3 2014/03/06 15:44:21 joerg Exp $
 
 --- tty.c.orig	1995-06-30 23:41:05.000000000 +0000
 +++ tty.c
@@ -160,7 +160,17 @@ $NetBSD: patch-ab,v 1.2 2013/09/10 14:26:49 joerg Exp $
      {
        (void) fprintf ( stderr, "DIP: tty: open(%s, RW): %s\n",
  						path, strerror ( errno ) );
-@@ -1118,10 +1178,5 @@ int  tty_open ( char *name )
+@@ -1080,8 +1140,7 @@ int  tty_open ( char *name )
+   /*
+    * If we are running in MASTER mode, set the default speed.
+    */
+-  if ( ( path  !=  NULL )
+-    && ( tty_set_speed ( &tty_current, "9600" )  !=  0 ) )
++  if ( ( tty_set_speed ( &tty_current, "9600" )  !=  0 ) )
+   {
+     (void) fprintf ( stderr, "DIP: tty: open: cannot set 9600 bps!\n" );
+ 
+@@ -1118,10 +1177,5 @@ int  tty_open ( char *name )
    {
      return 0 ;
    }
