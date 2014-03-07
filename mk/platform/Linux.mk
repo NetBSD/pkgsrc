@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.59 2014/02/20 11:03:09 jperkin Exp $
+# $NetBSD: Linux.mk,v 1.60 2014/03/07 15:03:15 jperkin Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -109,6 +109,13 @@ _OPSYS_MAX_CMDLEN_CMD?=	/usr/bin/getconf ARG_MAX
 .if ${MACHINE_ARCH} == "x86_64"
 ABI?=		64
 LIBABISUFFIX?=	64
+.endif
+
+# When building 32-bit packages on x86_64 GNU ld isn't smart enough to
+# figure out the target architecture based on the objects so we need to
+# explicitly set it.
+.if ${NATIVE_MACHINE_ARCH} == "x86_64" && ${MACHINE_ARCH} == "i386"
+_WRAP_EXTRA_ARGS.LD+=	-m elf_i386
 .endif
 
 ## Use _CMD so the command only gets run when needed!
