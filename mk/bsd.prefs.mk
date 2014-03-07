@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.342 2014/02/22 09:40:52 ryoon Exp $
+# $NetBSD: bsd.prefs.mk,v 1.343 2014/03/07 14:52:12 jperkin Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -240,7 +240,7 @@ MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH:Q}
 LOWER_VENDOR?=		debian
 .  elif exists(/etc/mandrake-release)
 LOWER_VENDOR?=		mandrake
-.  elif exists(/etc/redhat-version)
+.  elif exists(/etc/redhat-version) || exists(/etc/redhat-release)
 LOWER_VENDOR?=		redhat
 .  elif exists(/etc/slackware-version)
 LOWER_VENDOR?=		slackware
