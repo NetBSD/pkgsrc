@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.201 2014/02/10 10:43:02 ryoon Exp $
+# $NetBSD: bootstrap,v 1.202 2014/03/07 14:59:42 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -473,6 +473,7 @@ root_user=root
 bmakexenv=
 bmakexargs=
 need_extras=no
+set_machine_arch=no
 use_bsdinstall=
 case "$opsys" in
 AIX)
@@ -672,6 +673,12 @@ Linux)
 	need_sed=no
 	set_opsys=no
 	machine_arch=`uname -m | sed -e 's/i.86/i386/'`
+	# Support multiarch systems.
+	if [ "$machine_arch" = "x86_64" -a "$abi" = "32" ]; then
+		machine_arch=i386
+		set_machine_arch=yes
+		bmakexargs="MACHINE_ARCH=$machine_arch"
+	fi
 	;;
 Minix)
 	root_group=operator
@@ -933,6 +940,9 @@ fi
 
 if [ -n "$abi" ]; then
 	echo "ABI=			$abi" >> ${TARGET_MKCONF}
+fi
+if [ "$set_machine_arch" = "yes" ]; then
+	echo "MACHINE_ARCH=		$machine_arch" >> ${TARGET_MKCONF}
 fi
 if [ "$compiler" != "" ]; then
 	echo "PKGSRC_COMPILER=	$compiler" >> ${TARGET_MKCONF}
