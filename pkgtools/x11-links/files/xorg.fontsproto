@@ -1,6 +1,7 @@
-# $NetBSD: xorg.fontsproto,v 1.2 2008/10/05 21:36:35 cube Exp $
+# $NetBSD: xorg.fontsproto,v 1.3 2014/03/07 15:27:32 jperkin Exp $
 #
 include/X11/fonts/font.h
 include/X11/fonts/fontproto.h
 include/X11/fonts/fontstruct.h
 lib/pkgconfig/fontsproto.pc
+share/pkgconfig/fontsproto.pc

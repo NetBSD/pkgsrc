@@ -1,5 +1,6 @@
-# $NetBSD: xorg.renderproto,v 1.1 2007/12/15 17:53:41 tron Exp $
+# $NetBSD: xorg.renderproto,v 1.2 2014/03/07 15:27:32 jperkin Exp $
 #
 include/X11/extensions/render.h
 include/X11/extensions/renderproto.h
 lib/pkgconfig/renderproto.pc
+share/pkgconfig/renderproto.pc

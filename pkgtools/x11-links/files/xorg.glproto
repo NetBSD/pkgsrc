@@ -1,7 +1,8 @@
-# $NetBSD: xorg.glproto,v 1.2 2008/10/05 21:36:35 cube Exp $
+# $NetBSD: xorg.glproto,v 1.3 2014/03/07 15:27:32 jperkin Exp $
 #
 include/GL/glxint.h
 include/GL/glxmd.h
 include/GL/glxproto.h
 include/GL/glxtokens.h
 lib/pkgconfig/glproto.pc
+share/pkgconfig/glproto.pc

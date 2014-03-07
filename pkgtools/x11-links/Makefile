@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.151 2014/03/03 02:18:41 obache Exp $
+# $NetBSD: Makefile,v 1.152 2014/03/07 15:27:32 jperkin Exp $
 #
 # NOTE:	If you update this package, then you'll likely need to also update
 #	the x11-links dependency in buildlink3.mk to the correct version,
 #	usually the most recent.
 
-PKGNAME=	x11-links-0.83
+PKGNAME=	x11-links-0.84
 CATEGORIES=	pkgtools x11
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -56,6 +56,8 @@ PKG_FAIL_REASON+=	"pkgsrc installations is not supported!"
        exists(${X11BASE}/lib/X11/config/version.def)) || \
       exists(${X11BASE}/lib/pkgconfig/xorg-server.pc) || \
       exists(${X11BASE}/lib/pkgconfig/x11.pc) || \
+      exists(${X11BASE}/lib${LIBABISUFFIX}/pkgconfig/xorg-server.pc) || \
+      exists(${X11BASE}/lib${LIBABISUFFIX}/pkgconfig/x11.pc) || \
       exists(${X11BASE}/bin/Xquartz)
 .  include "xorg.mk"
 .else
@@ -67,6 +69,10 @@ X11_LINKS_BUILD_DIR=	${WRKSRC}/${X11_LINKS_SUBDIR}
 X11_LINKS_DIR=		${PREFIX}/${X11_LINKS_SUBDIR}
 
 FILES_LIST_CMD=	${SED} -e "s/@ABI@/${ABI}/" ${FILES_LIST} | ${GREP} -v "^\#"
+
+.if ${OPSYS} == "Linux" && !empty(LIBABISUFFIX)
+FILES_LIST_CMD+=	| awk '{print;} /^lib\// { sub(/^lib\//, "lib${LIBABISUFFIX}/"); print; }'
+.endif
 
 CREATE_X11LINK?=	${LN} -fs $$src $$dest
 
