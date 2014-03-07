@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.267 2014/02/14 07:43:46 obache Exp $
+# $NetBSD: replace.mk,v 1.268 2014/03/07 15:07:44 jperkin Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1192,7 +1192,7 @@ TOOLS_PATH.mkfontscale=		${TOOLS_PREFIX.mkfontscale}/bin/mkfontscale
 MAKEFLAGS+=		TOOLS_IGNORE.bdftopcf=
 .  elif !empty(_TOOLS_USE_PKGSRC.bdftopcf:M[yY][eE][sS])
 TOOLS_CREATE+=			bdftopcf
-.    if !empty(X11_TYPE:Mnative)
+.    if !empty(X11_TYPE:Mnative) && exists(${X11BASE}/bin/bdftopcf)
 TOOLS_PATH.bdftopcf=	${X11BASE}/bin/bdftopcf
 .    else
 TOOLS_DEPENDS.bdftopcf?=	bdftopcf-[0-9]*:../../fonts/bdftopcf
