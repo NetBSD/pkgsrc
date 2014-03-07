@@ -1,9 +1,11 @@
-# $NetBSD: builtin.mk,v 1.4 2014/03/02 08:00:00 obache Exp $
+# $NetBSD: builtin.mk,v 1.5 2014/03/07 11:30:49 obache Exp $
 
 BUILTIN_PKG:=	gmp
 
-PKGCONFIG_FILE.gmp=	/usr/include/gmp.h /usr/include/gmp/gmp.h
-PKGCONFIG_BASE.gmp=	/usr
+BUILTIN_FIND_HEADERS_VAR:=	H_GMP
+BUILTIN_FIND_HEADERS.H_GMP=	gmp.h gmp/gmp.h
+PKGCONFIG_FILE.gmp=	H_GMP
+PKGCONFIG_BASE.gmp=	${H_GMP:H:S/\gmp$//:H}
 
 BUILTIN_VERSION_SCRIPT.gmp= ${AWK} \
 	'/\#define[ \t]*__GNU_MP_VERSION[ \t]/ { major = $$3; } \
