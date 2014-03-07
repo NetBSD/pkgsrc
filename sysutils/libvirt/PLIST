@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/01/29 01:08:41 agc Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/03/07 00:30:11 agc Exp $
 bin/virsh
 bin/virt-host-validate
 bin/virt-pki-validate
@@ -61,6 +61,7 @@ share/doc/${PKGNAME}/html/devguide.html
 share/doc/${PKGNAME}/html/docs.html
 share/doc/${PKGNAME}/html/downloads.html
 share/doc/${PKGNAME}/html/drivers.html
+share/doc/${PKGNAME}/html/drvbhyve.html
 share/doc/${PKGNAME}/html/drvesx.html
 share/doc/${PKGNAME}/html/drvhyperv.html
 share/doc/${PKGNAME}/html/drvlxc.html
@@ -91,6 +92,7 @@ share/doc/${PKGNAME}/html/formatstorage.html
 share/doc/${PKGNAME}/html/formatstorageencryption.html
 share/doc/${PKGNAME}/html/generic.css
 share/doc/${PKGNAME}/html/goals.html
+share/doc/${PKGNAME}/html/governance.html
 share/doc/${PKGNAME}/html/hacking.html
 share/doc/${PKGNAME}/html/hooks.html
 share/doc/${PKGNAME}/html/html/home.png
@@ -105,6 +107,7 @@ share/doc/${PKGNAME}/html/index.html
 share/doc/${PKGNAME}/html/internals.html
 share/doc/${PKGNAME}/html/internals/command.html
 share/doc/${PKGNAME}/html/internals/locking.html
+share/doc/${PKGNAME}/html/internals/oomtesting.html
 share/doc/${PKGNAME}/html/internals/rpc.html
 share/doc/${PKGNAME}/html/intro.html
 share/doc/${PKGNAME}/html/java.html
@@ -264,6 +267,6 @@ share/locale/zh_CN/LC_MESSAGES/libvirt.mo
 share/locale/zh_TW/LC_MESSAGES/libvirt.mo
 share/locale/zu/LC_MESSAGES/libvirt.mo
 @pkgdir share/examples/libvirt/nwfilter
-@pkgdir	etc/libvirt/qemu/networks/autostart
-@pkgdir	etc/logrotate.d
-@pkgdir	etc/sasl2
+@pkgdir        etc/libvirt/qemu/networks/autostart
+@pkgdir        etc/logrotate.d
+@pkgdir        etc/sasl2
