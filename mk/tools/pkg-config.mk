@@ -1,4 +1,4 @@
-# $NetBSD: pkg-config.mk,v 1.11 2012/10/30 18:48:33 drochner Exp $
+# $NetBSD: pkg-config.mk,v 1.12 2014/03/07 15:15:17 jperkin Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -39,6 +39,9 @@
 # Override the location where pkg-config searches for *.pc files in the
 # pkg-config wrapper script.
 #
+.if !empty(LIBABISUFFIX)
+_PKG_CONFIG_LIBDIR?=	${BUILDLINK_DIR}/lib${LIBABISUFFIX}/pkgconfig:${BUILDLINK_DIR}/lib/pkgconfig:${BUILDLINK_DIR}/share/pkgconfig
+.endif
 _PKG_CONFIG_LIBDIR?=	${BUILDLINK_DIR}/lib/pkgconfig:${BUILDLINK_DIR}/share/pkgconfig
 _PKG_CONFIG_LOG?=	${WRKDIR}/.pkg-config.log
 
