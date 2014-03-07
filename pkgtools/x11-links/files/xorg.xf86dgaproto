@@ -1,4 +1,4 @@
-# $NetBSD: xorg.xf86dgaproto,v 1.4 2012/04/08 05:55:48 obache Exp $
+# $NetBSD: xorg.xf86dgaproto,v 1.5 2014/03/07 15:27:32 jperkin Exp $
 #
 include/X11/extensions/Xxf86dga.h
 include/X11/extensions/xf86dga.h
@@ -20,3 +20,4 @@ lib/libXxf86dga.so.2.0
 lib/libXxf86dga.so.5.0
 lib/pkgconfig/xf86dgaproto.pc
 lib/pkgconfig/xxf86dga.pc
+share/pkgconfig/xf86dgaproto.pc
