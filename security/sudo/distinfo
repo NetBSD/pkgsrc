@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.80 2013/07/26 10:48:22 ryoon Exp $
+$NetBSD: distinfo,v 1.80.4.1 2014/03/08 20:33:47 spz Exp $
 
-SHA1 (sudo-1.7.10p7.tar.gz) = b5beb1a470d1f03b3940aff612f5089244dd773a
-RMD160 (sudo-1.7.10p7.tar.gz) = 171e54506c30a85fa642070332db012aba4a6203
-Size (sudo-1.7.10p7.tar.gz) = 1217508 bytes
+SHA1 (sudo-1.7.10p8.tar.gz) = deb83d8ba8f15f70c134c3f3a74e750925aa9f59
+RMD160 (sudo-1.7.10p8.tar.gz) = de3594843c006f7d5d3b21c79dd4115b4823b19d
+Size (sudo-1.7.10p8.tar.gz) = 1220987 bytes
 SHA1 (patch-aa) = 0c9c173a26ea72dd06a7d3947a0b3ba6dc00cf40
-SHA1 (patch-af) = 463b1653f3015d08cd4c03b7f29d206d96aa1cc0
-SHA1 (patch-ag) = e0d9efd8afeda339d9cd186ffd6f644b15e8b213
-SHA1 (patch-logging.c) = 26608d7423b77f71f17b37cc87f4b2e75978d7cb
+SHA1 (patch-af) = 3462525bd0863ec5f957173a10839aed2b7cbb69
+SHA1 (patch-ag) = 86f9838045f2bed7eb8e4271553c510be31b7d6b
+SHA1 (patch-logging.c) = a16a9c6020a79cc378c3cfd1c6a1abd2326c8e6d
