@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.30 2013/07/26 10:48:22 ryoon Exp $
+$NetBSD: patch-af,v 1.30.4.1 2014/03/08 20:33:47 spz Exp $
 
 * Add "--with-nbsdops" option, NetBSD standard options.
 * Link with util(3) in the case of DragonFly, too.
@@ -7,9 +7,9 @@ $NetBSD: patch-af,v 1.30 2013/07/26 10:48:22 ryoon Exp $
   functions (HAVE_KRB5_*).
 * Remove setting sysconfdir to "/etc".
 
---- configure.in.orig	2013-02-21 15:43:17.000000000 +0000
-+++ configure.in
-@@ -330,6 +330,18 @@ AC_ARG_WITH(csops, [AS_HELP_STRING([--wi
+--- configure.in.orig	2014-03-05 08:08:53.000000000 -0500
++++ configure.in	2014-03-08 06:35:19.000000000 -0500
+@@ -330,6 +330,18 @@
  		;;
  esac])
  
@@ -28,7 +28,7 @@ $NetBSD: patch-af,v 1.30 2013/07/26 10:48:22 ryoon Exp $
  AC_ARG_WITH(passwd, [AS_HELP_STRING([--without-passwd], [don't use passwd/shadow file for authentication])],
  [case $with_passwd in
      yes|no)	AC_MSG_CHECKING(whether to use shadow/passwd file authentication)
-@@ -1725,7 +1737,7 @@ case "$host" in
+@@ -1726,7 +1738,7 @@
  		: ${mansectsu='1m'}
  		: ${mansectform='4'}
  		;;
@@ -37,7 +37,7 @@ $NetBSD: patch-af,v 1.30 2013/07/26 10:48:22 ryoon Exp $
  		OSDEFS="${OSDEFS} -D_GNU_SOURCE"
  		# Some Linux versions need to link with -lshadow
  		shadow_funcs="getspnam"
-@@ -2015,7 +2027,7 @@ SUDO_MAILDIR
+@@ -2016,7 +2028,7 @@
  if test ${with_logincap-'no'} != "no"; then
      AC_CHECK_HEADERS(login_cap.h, [LOGINCAP_USAGE='[[-c class|-]] '; LCMAN=1
  	case "$OS" in
@@ -46,7 +46,7 @@ $NetBSD: patch-af,v 1.30 2013/07/26 10:48:22 ryoon Exp $
  	    ;;
  	esac
      ])
-@@ -2634,6 +2646,8 @@ if test ${with_kerb5-'no'} != "no"; then
+@@ -2635,6 +2647,8 @@
  	])
  	AUTH_OBJS="$AUTH_OBJS kerb5.o"
      fi
@@ -55,7 +55,7 @@ $NetBSD: patch-af,v 1.30 2013/07/26 10:48:22 ryoon Exp $
      _LIBS="$LIBS"
      LIBS="${LIBS} ${SUDO_LIBS}"
      AC_CHECK_FUNCS(krb5_verify_user krb5_init_secure_context)
-@@ -3167,7 +3181,6 @@ test "$datarootdir" = '${prefix}/share' 
+@@ -3168,7 +3182,6 @@
  test "$docdir" = '${datarootdir}/doc/${PACKAGE_TARNAME}' && docdir='$(datarootdir)/doc/$(PACKAGE_TARNAME)'
  test "$localedir" = '${datarootdir}/locale' && localedir='$(datarootdir)/locale'
  test "$localstatedir" = '${prefix}/var' && localstatedir='$(prefix)/var'
