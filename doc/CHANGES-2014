@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.951 2014/03/08 10:38:39 tron Exp $
+$NetBSD: CHANGES-2014,v 1.952 2014/03/08 13:08:50 tron Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1454,3 +1454,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/ap2-suphp to 0.7.2 [adam 2014-03-07]
 	Updated x11/mlterm to 3.3.3nb1 [tsutsui 2014-03-07]
 	Updated net/wireshark to 1.10.6 [tron 2014-03-08]
+	Updated databases/phpmyadmin to 4.1.9 [tron 2014-03-08]
