@@ -1,7 +1,16 @@
-$NetBSD: patch-ad,v 1.42 2013/08/27 15:50:23 joerg Exp $
+$NetBSD: patch-ad,v 1.43 2014/03/08 19:57:25 joerg Exp $
 
---- libltdl/configure.orig	2011-10-17 10:19:47.000000000 +0000
+--- libltdl/configure.orig	2014-03-06 15:38:09.000000000 +0000
 +++ libltdl/configure
+@@ -4548,7 +4548,7 @@ else
+     lt_cv_sys_max_cmd_len=8192;
+     ;;
+ 
+-  netbsd* | freebsd* | openbsd* | darwin* | dragonfly*)
++  netbsd* | freebsd* | openbsd* | mirbsd* | darwin* | dragonfly*)
+     # This has been around since 386BSD, at least.  Likely further.
+     if test -x /sbin/sysctl; then
+       lt_cv_sys_max_cmd_len=`/sbin/sysctl -n kern.argmax`
 @@ -5042,12 +5042,19 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu)
    lt_cv_deplibs_check_method=pass_all
    ;;
@@ -115,7 +124,7 @@ $NetBSD: patch-ad,v 1.42 2013/08/27 15:50:23 joerg Exp $
    *djgpp*)
      lt_prog_compiler_pic=
      ;;
-@@ -8958,16 +8994,28 @@ _LT_EOF
+@@ -8958,16 +8994,29 @@ _LT_EOF
        fi
        ;;
  
@@ -145,12 +154,22 @@ $NetBSD: patch-ad,v 1.42 2013/08/27 15:50:23 joerg Exp $
 +      hardcode_libdir_flag_spec='${wl}-rpath,$libdir'
 +      hardcode_direct=yes
 +      hardcode_shlibpath_var=no
++      output_verbose_link_cmd=func_echo_all
 +      ;;
 +
      solaris*)
        if $LD -v 2>&1 | $GREP 'BFD 2\.8' > /dev/null; then
  	ld_shlibs=no
-@@ -9588,13 +9636,25 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+@@ -9376,7 +9425,7 @@ fi
+   allow_undefined_flag="$_lt_dar_allow_undefined"
+   case $cc_basename in
+      ifort*) _lt_dar_can_shared=yes ;;
+-     *) _lt_dar_can_shared=$GCC ;;
++     *) _lt_dar_can_shared=yes ;;
+   esac
+   if test "$_lt_dar_can_shared" = "yes"; then
+     output_verbose_link_cmd=func_echo_all
+@@ -9588,15 +9637,28 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        link_all_deplibs=yes
        ;;
  
@@ -180,8 +199,11 @@ $NetBSD: patch-ad,v 1.42 2013/08/27 15:50:23 joerg Exp $
 +      hardcode_libdir_flag_spec='${wl}-rpath,$libdir'
        hardcode_direct=yes
        hardcode_shlibpath_var=no
++      output_verbose_link_cmd=func_echo_all
        ;;
-@@ -9608,6 +9668,11 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+ 
+     newsos6)
+@@ -9608,6 +9670,11 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        ;;
  
      *nto* | *qnx*)
@@ -193,7 +215,7 @@ $NetBSD: patch-ad,v 1.42 2013/08/27 15:50:23 joerg Exp $
        ;;
  
      openbsd*)
-@@ -10381,7 +10446,7 @@ dgux*)
+@@ -10381,7 +10448,7 @@ dgux*)
    shlibpath_var=LD_LIBRARY_PATH
    ;;
  
@@ -202,7 +224,7 @@ $NetBSD: patch-ad,v 1.42 2013/08/27 15:50:23 joerg Exp $
    # DragonFly does not have aout.  When/if they implement a new
    # versioning mechanism, adjust this.
    if test -x /usr/bin/objformat; then
-@@ -10395,7 +10460,7 @@ freebsd* | dragonfly*)
+@@ -10395,7 +10462,7 @@ freebsd* | dragonfly*)
    version_type=freebsd-$objformat
    case $version_type in
      freebsd-elf*)
@@ -211,7 +233,7 @@ $NetBSD: patch-ad,v 1.42 2013/08/27 15:50:23 joerg Exp $
        need_version=no
        need_lib_prefix=no
        ;;
-@@ -10418,13 +10483,24 @@ freebsd* | dragonfly*)
+@@ -10418,13 +10485,24 @@ freebsd* | dragonfly*)
      shlibpath_overrides_runpath=no
      hardcode_into_libs=yes
      ;;
@@ -237,7 +259,7 @@ $NetBSD: patch-ad,v 1.42 2013/08/27 15:50:23 joerg Exp $
  gnu*)
    version_type=linux # correct to gnu/linux during the next big refactor
    need_lib_prefix=no
-@@ -10512,12 +10588,7 @@ interix[3-9]*)
+@@ -10512,12 +10590,7 @@ interix[3-9]*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
@@ -251,7 +273,7 @@ $NetBSD: patch-ad,v 1.42 2013/08/27 15:50:23 joerg Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -10616,19 +10687,36 @@ fi
+@@ -10616,19 +10689,36 @@ fi
    dynamic_linker='GNU/Linux ld.so'
    ;;
  
@@ -298,7 +320,7 @@ $NetBSD: patch-ad,v 1.42 2013/08/27 15:50:23 joerg Exp $
    shlibpath_var=LD_LIBRARY_PATH
    shlibpath_overrides_runpath=yes
    hardcode_into_libs=yes
-@@ -10654,7 +10742,7 @@ newsos6)
+@@ -10654,7 +10744,7 @@ newsos6)
    ;;
  
  openbsd*)
@@ -307,7 +329,7 @@ $NetBSD: patch-ad,v 1.42 2013/08/27 15:50:23 joerg Exp $
    sys_lib_dlsearch_path_spec="/usr/lib"
    need_lib_prefix=no
    # Some older versions of OpenBSD (3.3 at least) *do* need versioned libs.
-@@ -10662,7 +10750,7 @@ openbsd*)
+@@ -10662,7 +10752,7 @@ openbsd*)
      openbsd3.3 | openbsd3.3.*)	need_version=yes ;;
      *)				need_version=no  ;;
    esac
@@ -316,7 +338,7 @@ $NetBSD: patch-ad,v 1.42 2013/08/27 15:50:23 joerg Exp $
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | $GREP __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -12196,6 +12284,9 @@ else
+@@ -12196,6 +12286,9 @@ else
      # at 6.2 and later dlopen does load deplibs.
      lt_cv_sys_dlopen_deplibs=yes
      ;;
