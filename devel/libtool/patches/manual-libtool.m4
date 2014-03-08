@@ -1,7 +1,9 @@
-$NetBSD: manual-libtool.m4,v 1.37 2013/08/27 15:50:23 joerg Exp $
+$NetBSD: manual-libtool.m4,v 1.38 2014/03/08 19:57:25 joerg Exp $
 
 --- libltdl/m4/libtool.m4.orig	2011-10-17 10:17:05.000000000 +0000
 +++ libltdl/m4/libtool.m4
+--- libtool.m4.orig	2011-10-17 10:17:05.000000000 +0000
++++ libtool.m4
 @@ -123,7 +123,10 @@ m4_defun([_LT_CC_BASENAME],
      *) break;;
    esac
@@ -283,7 +285,7 @@ $NetBSD: manual-libtool.m4,v 1.37 2013/08/27 15:50:23 joerg Exp $
    *djgpp*)
      _LT_TAGVAR(lt_prog_compiler_pic, $1)=
      ;;
-@@ -4861,16 +4929,28 @@ _LT_EOF
+@@ -4861,16 +4929,29 @@ _LT_EOF
        fi
        ;;
  
@@ -313,12 +315,13 @@ $NetBSD: manual-libtool.m4,v 1.37 2013/08/27 15:50:23 joerg Exp $
 +      _LT_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-rpath,$libdir'
 +      _LT_TAGVAR(hardcode_direct, $1)=yes
 +      _LT_TAGVAR(hardcode_shlibpath_var, $1)=no
++      output_verbose_link_cmd=func_echo_all
 +      ;;
 +
      solaris*)
        if $LD -v 2>&1 | $GREP 'BFD 2\.8' > /dev/null; then
  	_LT_TAGVAR(ld_shlibs, $1)=no
-@@ -5342,13 +5422,25 @@ _LT_EOF
+@@ -5342,15 +5423,28 @@ _LT_EOF
        _LT_TAGVAR(link_all_deplibs, $1)=yes
        ;;
  
@@ -348,8 +351,11 @@ $NetBSD: manual-libtool.m4,v 1.37 2013/08/27 15:50:23 joerg Exp $
 +      _LT_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-rpath,$libdir'
        _LT_TAGVAR(hardcode_direct, $1)=yes
        _LT_TAGVAR(hardcode_shlibpath_var, $1)=no
++      output_verbose_link_cmd=func_echo_all
        ;;
-@@ -5362,6 +5454,11 @@ _LT_EOF
+ 
+     newsos6)
+@@ -5362,6 +5456,11 @@ _LT_EOF
        ;;
  
      *nto* | *qnx*)
@@ -361,7 +367,7 @@ $NetBSD: manual-libtool.m4,v 1.37 2013/08/27 15:50:23 joerg Exp $
        ;;
  
      openbsd*)
-@@ -5819,9 +5916,7 @@ m4_defun([_LT_LANG_CXX_CONFIG],
+@@ -5819,9 +5918,7 @@ m4_defun([_LT_LANG_CXX_CONFIG],
  [m4_require([_LT_FILEUTILS_DEFAULTS])dnl
  m4_require([_LT_DECL_EGREP])dnl
  m4_require([_LT_PATH_MANIFEST_TOOL])dnl
@@ -372,7 +378,7 @@ $NetBSD: manual-libtool.m4,v 1.37 2013/08/27 15:50:23 joerg Exp $
    AC_PROG_CXXCPP
  else
    _lt_caught_CXX_error=yes
-@@ -6538,6 +6633,22 @@ if test "$_lt_caught_CXX_error" != yes; 
+@@ -6538,6 +6635,22 @@ if test "$_lt_caught_CXX_error" != yes; 
          _LT_TAGVAR(ld_shlibs, $1)=no
  	;;
  
@@ -395,7 +401,7 @@ $NetBSD: manual-libtool.m4,v 1.37 2013/08/27 15:50:23 joerg Exp $
        mvs*)
          case $cc_basename in
            cxx*)
-@@ -6552,15 +6663,12 @@ if test "$_lt_caught_CXX_error" != yes; 
+@@ -6552,15 +6665,13 @@ if test "$_lt_caught_CXX_error" != yes; 
  	;;
  
        netbsd*)
@@ -414,10 +420,11 @@ $NetBSD: manual-libtool.m4,v 1.37 2013/08/27 15:50:23 joerg Exp $
 +	_LT_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-rpath,$libdir'
 +	_LT_TAGVAR(hardcode_direct, $1)=yes
 +	_LT_TAGVAR(hardcode_shlibpath_var, $1)=no
++	output_verbose_link_cmd=func_echo_all
  	;;
  
        *nto* | *qnx*)
-@@ -6740,9 +6848,9 @@ if test "$_lt_caught_CXX_error" != yes; 
+@@ -6740,9 +6851,9 @@ if test "$_lt_caught_CXX_error" != yes; 
  	    if test "$GXX" = yes && test "$with_gnu_ld" = no; then
  	      _LT_TAGVAR(no_undefined_flag, $1)=' ${wl}-z ${wl}defs'
  	      if $CC --version | $GREP -v '^2\.7' > /dev/null; then
@@ -429,7 +436,7 @@ $NetBSD: manual-libtool.m4,v 1.37 2013/08/27 15:50:23 joerg Exp $
  
  	        # Commands to make compiler produce verbose output that lists
  	        # what "hidden" libraries, object files and flags are used when
-@@ -6751,9 +6859,9 @@ if test "$_lt_caught_CXX_error" != yes; 
+@@ -6751,9 +6862,9 @@ if test "$_lt_caught_CXX_error" != yes; 
  	      else
  	        # g++ 2.7 appears to require `-G' NOT `-shared' on this
  	        # platform.
