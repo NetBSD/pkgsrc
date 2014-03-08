@@ -1,4 +1,4 @@
-# $NetBSD: shlib-pe.awk,v 1.3 2013/04/17 11:53:44 obache Exp $
+# $NetBSD: shlib-pe.awk,v 1.4 2014/03/08 08:52:25 obache Exp $
 #
 # Copyright (c) 2006,2013 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -50,12 +50,18 @@ BEGIN {
 
 ###
 ### add_dll(lib) adds the named "lib" to the PLIST entries list and
-###	to the dlls list if we haven't already seen it.
+### to the dlls list if we haven't already seen it.
+### dll may be in "bin" or its name may be cygXXX.dll instead of libXXX.dll.
 ###
 function add_dll(lib) {
 	if (dlls[lib] == "") {
 		dlls[lib] = lib
 		entries[++nentries] = lib
+		if (sub("^lib/lib", "bin/lib", lib)) {
+			add_dll(lib)
+			sub("^bin/lib", "bin/cyg", lib)
+			add_dll(lib)
+		}
 	}
 }
 
@@ -94,9 +100,13 @@ function add_dll(lib) {
 	lib = $0; sub("\\.so\\.", ".", lib); sub("\\.so$", "", lib)
 	lib = lib ".dll"
 	add_dll(lib)
+	sub("\\.", "-", lib)
+	add_dll(lib)
 	while (sub("\\.[0-9]+$", "")) {
 		lib = $0; sub("\\.so\\.", ".", lib); sub("\\.so$", "", lib)
 		lib = lib ".dll"
+		add_dll(lib)
+		sub("\\.", "-", lib)
 		add_dll(lib)
 	}
 	if (sub("\\.so$", "")) {
@@ -140,9 +150,11 @@ function add_dll(lib) {
 	if (system(cmd) == 0) {
 		entries[++nentries] = $0
 	}
-	lib = $0; sub("\\.a$", "", lib)
-	lib = lib ".dll.a"
-	add_dll(lib)
+	lib = $0; sub("\\.a$", ".dll.a", lib)
+	cmd = TEST " -f " PREFIX "/" lib
+	if (system(cmd) == 0) {
+		entries[++nentries] = lib
+	}
 	next
 }
 
