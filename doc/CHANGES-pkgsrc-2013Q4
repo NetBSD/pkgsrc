@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.35 2014/02/27 15:55:51 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.36 2014/03/08 20:35:00 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q4 branch:
@@ -114,3 +114,7 @@ Pullup ticket #4333 - requested by tron
 databases/phpmyadmin: vulnerability patch
 Pullup ticket #4334 - requested by wiz
 graphics/png: security update
+Pullup ticket #4336 - requested by tron
+net/wireshark: security update
+Pullup ticket #4337 - requested by kim
+security/sudo: security update
