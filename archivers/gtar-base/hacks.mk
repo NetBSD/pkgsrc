@@ -1,7 +1,7 @@
-# $NetBSD: hacks.mk,v 1.1 2012/08/24 15:04:53 tsutsui Exp $
+# $NetBSD: hacks.mk,v 1.2 2014/03/08 11:57:00 obache Exp $
 
-.if !defined(BISON_HACKS_MK)
-BISON_HACKS_MK=	defined
+.if !defined(GTAR_BASE_HACKS_MK)
+GTAR_BASE_HACKS_MK=	defined
 
 .include "../../mk/compiler.mk"
 
@@ -12,4 +12,4 @@ PKG_HACKS+=		optimisation
 BUILDLINK_TRANSFORM+=	rename:-O[2s]*:-O1
 .endif
 
-.endif	# BISON_HACKS_MK
+.endif	# GTAR_BASE_HACKS_MK
