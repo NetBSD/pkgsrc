@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.183 2014/01/10 14:32:42 tron Exp $
+# $NetBSD: Makefile,v 1.184 2014/03/08 08:53:14 obache Exp $
 
 DISTNAME=	openssl-1.0.1f
 MASTER_SITES=	http://ftp.openssl.org/source/
@@ -111,8 +111,6 @@ CONFIGURE_ARGS+=	hpux-parisc-${CC}
 CONFIGURE_ARGS+=	hpux-ia64-${CC}
 .    endif
 .  endif
-.elif ${OPSYS} == "Cygwin"
-USE_PLIST_SHLIB=	no
 .elif ${OPSYS} == "Linux"
 .  if ${MACHINE_ARCH} == "powerpc64"
 CONFIGURE_SCRIPT=	./Configure
