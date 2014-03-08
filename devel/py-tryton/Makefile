@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/02/09 16:54:12 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/03/08 07:19:51 richard Exp $
 
 DISTNAME=	tryton-3.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.tryton.org/
 COMMENT=	Three-tiers high-level general purpose application platform
 LICENSE=	gnu-gpl-v3
 
-USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	26 # XXX Needs weakrefset. No package, though.
