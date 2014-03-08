@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.3 2013/05/09 23:37:26 riastradh Exp $
+# $NetBSD: depends.mk,v 1.4 2014/03/08 11:46:14 obache Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -162,13 +162,13 @@ _DEPENDS_INSTALL_CMD=							\
 
 ${_DEPENDS_FILE}:
 	${RUN} ${MKDIR} ${.TARGET:H}
-	${RUN} ${_LIST_DEPENDS_CMD} > ${.TARGET}
+	${RUN} ${_LIST_DEPENDS_CMD} > ${.TARGET} || (${RM} -f ${.TARGET} && ${FALSE})
 
 ${_RDEPENDS_FILE}: ${_DEPENDS_FILE}
-	${RUN} ${_RESOLVE_DEPENDS_CMD} > ${.TARGET}
+	${RUN} ${_RESOLVE_DEPENDS_CMD} > ${.TARGET} || (${RM} -f ${.TARGET} && ${FALSE})
 
 ${_RRDEPENDS_FILE}: ${_RDEPENDS_FILE}
-	${RUN} ${_REDUCE_RESOLVED_DEPENDS_CMD} > ${.TARGET}
+	${RUN} ${_REDUCE_RESOLVED_DEPENDS_CMD} > ${.TARGET} || (${RM} -f ${.TARGET} && ${FALSE})
 
 # _pkgformat-install-dependencies:
 #	Installs any missing dependencies.
