@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.957 2014/03/09 13:57:38 wen Exp $
+$NetBSD: CHANGES-2014,v 1.958 2014/03/09 14:05:38 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1460,3 +1460,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-MooseX-Types to 0.44 [wen 2014-03-09]
 	Updated www/nginx to 1.4.6 [rodent 2014-03-09]
 	Updated math/R-zoo to 1.7.11 [wen 2014-03-09]
+	Updated math/R-xts to 0.9.7 [wen 2014-03-09]
