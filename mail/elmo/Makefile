@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2014/02/12 23:18:07 tron Exp $
+# $NetBSD: Makefile,v 1.23 2014/03/09 09:18:06 roy Exp $
 #
 
 DISTNAME=		elmo-1.3.2
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=elmo/}
 
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 # I get segmentation faults when not compiled with debug enabled
 CONFIGURE_ARGS+=	--enable-debug
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
