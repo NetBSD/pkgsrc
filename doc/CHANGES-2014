@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.955 2014/03/09 13:23:25 wen Exp $
+$NetBSD: CHANGES-2014,v 1.956 2014/03/09 13:34:15 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1458,3 +1458,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/py-hgview version 1.8 [bsiegert 2014-03-09]
 	Updated devel/p5-Module-Build-Tiny to 0.035 [wen 2014-03-09]
 	Updated devel/p5-MooseX-Types to 0.44 [wen 2014-03-09]
+	Updated www/nginx to 1.4.6 [rodent 2014-03-09]
