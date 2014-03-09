@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.958 2014/03/09 14:05:38 wen Exp $
+$NetBSD: CHANGES-2014,v 1.959 2014/03/09 14:10:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1461,3 +1461,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/nginx to 1.4.6 [rodent 2014-03-09]
 	Updated math/R-zoo to 1.7.11 [wen 2014-03-09]
 	Updated math/R-xts to 0.9.7 [wen 2014-03-09]
+	Updated lang/php54 to 5.4.26 [taca 2014-03-09]
+	Updated lang/php55 to 5.5.10 [taca 2014-03-09]
