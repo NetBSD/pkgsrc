@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/10/10 19:16:40 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2014/03/09 14:22:53 wen Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	R-circular>=0.4.3:../../math/R-circular
 
 R_PKGNAME=	wle
-R_PKGVER=	0.9-7
+R_PKGVER=	0.9-9
 
 USE_LANGUAGES+=	c fortran
 
