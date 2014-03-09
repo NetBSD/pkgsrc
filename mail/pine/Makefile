@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.129 2014/02/12 23:18:09 tron Exp $
+# $NetBSD: Makefile,v 1.130 2014/03/09 10:55:40 roy Exp $
 
 DISTNAME=	pine4.64
 PKGNAME=	pine-4.64
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	mail news
 MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/ \
 		ftp://ftp.fu-berlin.de/unix/mail/pine/
@@ -116,7 +116,7 @@ do-install:
 BUILDLINK_API_DEPENDS.imap-uw+=	imap-uw>=2004e
 .include "../../mail/imap-uw/buildlink3.mk"
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/terminfo.buildlink3.mk"
 .include "../../editors/pico/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 
