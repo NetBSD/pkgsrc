@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2013/11/02 18:58:27 dholland Exp $
+# $NetBSD: Makefile,v 1.47 2014/03/09 11:59:09 roy Exp $
 
 DISTNAME=		nhc98src-1.22
 PKGNAME=		nhc98-1.22
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		http://www.haskell.org/nhc98/
 
@@ -32,6 +33,6 @@ PLIST_SUBST+=		HARCH=`${WRKSRC}/script/harch`
 INCOMPAT_CURSES=	NetBSD-1.5*-* NetBSD-1.6[-_.]*-*
 INCOMPAT_CURSES+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-K]*-*
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
