@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.964 2014/03/09 15:27:03 tsutsui Exp $
+$NetBSD: CHANGES-2014,v 1.965 2014/03/09 19:00:47 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1471,3 +1471,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/ruby-rainbow to 2.0.0 [tsutsui 2014-03-09]
 	Updated net/ruby-twitter to 5.7.1 [tsutsui 2014-03-09]
 	Updated net/ruby-tw to 1.0.8 [tsutsui 2014-03-09]
+	Updated net/knot to 1.4.3 [pettai 2014-03-09]
