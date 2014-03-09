@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2012/10/08 12:19:26 asau Exp $
+# $NetBSD: Makefile,v 1.12 2014/03/09 11:02:28 roy Exp $
 #
 
 DISTNAME=	pfqueue-0.5.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pfqueue/}
 
@@ -14,6 +14,7 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 INCOMPAT_CURSES=	NetBSD-1.*-*
+FAKE_NCURSES=	yes
 
 .include "options.mk"
 
@@ -39,6 +40,6 @@ SUBST_SED.conf=		-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g'
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/pfqueue.conf ${DESTDIR}${PREFIX}/share/examples/pfqueue
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
