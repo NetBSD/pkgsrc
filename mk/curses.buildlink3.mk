@@ -1,4 +1,4 @@
-# $NetBSD: curses.buildlink3.mk,v 1.17 2010/02/07 10:28:13 roy Exp $
+# $NetBSD: curses.buildlink3.mk,v 1.18 2014/03/09 10:15:32 roy Exp $
 #
 # This Makefile fragment is meant to be included by packages that require
 # any curses implementation instead of one particular one.  The available
@@ -16,7 +16,7 @@
 #	system.  Setting this to "curses" means that the system curses
 #	implementation is fine.
 #
-#	Possible: curses, ncurses, pdcurses
+#	Possible: curses, ncurses, ncursesw, pdcurses
 #	Default: (depends)
 #
 # === Variables set by this file ===
@@ -29,10 +29,14 @@ CURSES_BUILDLINK3_MK:=	${CURSES_BUILDLINK3_MK}+
 
 .if !empty(CURSES_BUILDLINK3_MK:M+)
 
+.if !defined(USE_CURSES) && !empty(PKG_OPTIONS:Mwide-curses)
+USE_CURSES?=		wide
+.endif
+
 # _CURSES_PKGS is an exhaustive list of all of the curses implementations
 # that may be used with curses.buildlink3.mk.
 #
-_CURSES_PKGS?=		curses ncurses pdcurses
+_CURSES_PKGS?=		curses ncurses ncursesw pdcurses
 
 CHECK_BUILTIN.curses:=	yes
 .  include "curses.builtin.mk"
@@ -43,6 +47,8 @@ CHECK_BUILTIN.curses:=	no
 #
 .if defined(USE_BUILTIN.curses) && !empty(USE_BUILTIN.curses:M[yY][eE][sS])
 CURSES_DEFAULT?=	curses
+.elif !empty(USE_CURSES:Mwide) || !empty(PKG_OPTIONS:Mwide-curses)
+CURSES_DEFAULT?=	ncursesw
 .else
 CURSES_DEFAULT?=	ncurses
 .endif
@@ -51,7 +57,11 @@ _CURSES_ACCEPTED=	# empty
 .if defined(USE_BUILTIN.curses) && !empty(USE_BUILTIN.curses:M[yY][eE][sS])
 _CURSES_ACCEPTED+=	curses		# system curses exists
 .endif
+.if defined(USE_BUILTIN.cursesw) && !empty(USE_BUILTIN.cursesw:M[yY][eE][sS])
+_CURSES_ACCEPTED+=	curses		# system curses exists
+.endif
 _CURSES_ACCEPTED+=	ncurses		# pkgsrc ncurses
+_CURSES_ACCEPTED+=	ncursesw	# pkgsrc ncursesw
 _CURSES_ACCEPTED+=	pdcurses	# pkgsrc pdcurses
 
 _CURSES_TYPE=		${CURSES_DEFAULT}
@@ -70,21 +80,48 @@ BUILD_DEFS_EFFECTS+=	CURSES_TYPE
 #
 _PKG_USE_CURSES=	yes
 
+.PHONY: buildlink-curses-ncurses-h
+buildlink-curses-ncurses-h:
+	${RUN}								\
+	src="${H_CURSES}";						\
+	dest=${BUILDLINK_DIR}"/include/ncurses.h";			\
+	if ${TEST} ! -f "$$dest" -a -f "$$src"; then			\
+		${ECHO_BUILDLINK_MSG} "Linking ${H_CURSES} -> ncurses.h.";\
+		${MKDIR} `${DIRNAME} "$$dest"`;				\
+		${LN} -s "$$src" "$$dest";				\
+	fi
+
+
 .endif	# CURSES_BUILDLINK3_MK
 
 .if ${CURSES_TYPE} == "none"
 PKG_FAIL_REASON=	\
 	"${_CURSES_TYPE} is not an acceptable curses type for ${PKGNAME}."
 .elif ${CURSES_TYPE} == "curses"
+.  include "curses.builtin.mk"
 BUILDLINK_TREE+=		curses -curses
 BUILDLINK_LDADD.curses?=	${BUILDLINK_LIBNAME.curses:S/^/-l/:S/^-l$//}
-BUILDLINK_BUILTIN_MK.curses=	../../mk/curses.builtin.mk
+BUSILDLINK_BUILTIN_MK.curses=	../../mk/curses.builtin.mk
+# Some packages only look for ncurses
+# The correct action would be to write a patch and pass it upstream
+# but by setting FAKE_NCURSES=yes in the package we can temporarily work
+# around the short-coming.
+.  if !empty(FAKE_NCURSES:M[yY][eE][sS])
+BUILDLINK_TARGETS+=		buildlink-curses-ncurses-h
+BUILDLINK_TRANSFORM+=		l:ncurses:${BUILDLINK_LIBNAME.curses}
+BUILDLINK_TRANSFORM+=		l:ncursesw:${BUILDLINK_LIBNAME.curses}
+.  endif
 .elif ${CURSES_TYPE} == "ncurses"
 USE_NCURSES=			yes
 .  include "../../devel/ncurses/buildlink3.mk"
 BUILDLINK_PREFIX.curses?=	${BUILDLINK_PREFIX.ncurses}
 BUILDLINK_LIBNAME.curses?=	${BUILDLINK_LIBNAME.ncurses}
 BUILDLINK_LDADD.curses?=	${BUILDLINK_LDADD.ncurses}
+.elif ${CURSES_TYPE} == "ncursesw"
+.  include "../../devel/ncursesw/buildlink3.mk"
+BUILDLINK_PREFIX.curses?=	${BUILDLINK_PREFIX.ncursesw}
+BUILDLINK_LIBNAME.curses?=	${BUILDLINK_LIBNAME.ncursesw}
+BUILDLINK_LDADD.curses?=	${BUILDLINK_LDADD.ncursesw}
 .elif ${CURSES_TYPE} == "pdcurses"
 .  include "../../devel/pdcurses/buildlink3.mk"
 BUILDLINK_PREFIX.curses?=	${BUILDLINK_PREFIX.pdcurses}
