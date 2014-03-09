@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2014/01/17 18:58:19 tsutsui Exp $
+# $NetBSD: Makefile,v 1.4 2014/03/09 15:24:07 tsutsui Exp $
 #
 
-DISTNAME=	rainbow-1.99.1
+DISTNAME=	rainbow-2.0.0
 CATEGORIES=	misc
 
 MAINTAINER=	tsutsui@NetBSD.org
 HOMEPAGE=	https://github.com/sickill/rainbow
 COMMENT=	Extends ruby String class enabling coloring text on ANSI terminals
 LICENSE=	mit
-
-RUBY_VERSION_SUPPORTED=	200 193
 
 USE_LANGUAGES=	# none
 
