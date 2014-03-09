@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.963 2014/03/09 14:39:09 wen Exp $
+$NetBSD: CHANGES-2014,v 1.964 2014/03/09 15:27:03 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1467,3 +1467,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated math/R-wle to 0.9.9 [wen 2014-03-09]
 	Updated math/R-statmod to 1.4.18 [wen 2014-03-09]
 	Updated math/R-sp to 1.0.14 [wen 2014-03-09]
+	Added misc/ruby-naught version 1.0.0 [tsutsui 2014-03-09]
+	Updated misc/ruby-rainbow to 2.0.0 [tsutsui 2014-03-09]
+	Updated net/ruby-twitter to 5.7.1 [tsutsui 2014-03-09]
+	Updated net/ruby-tw to 1.0.8 [tsutsui 2014-03-09]
