@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.953 2014/03/09 10:29:41 bsiegert Exp $
+$NetBSD: CHANGES-2014,v 1.954 2014/03/09 13:02:27 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1456,3 +1456,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/wireshark to 1.10.6 [tron 2014-03-08]
 	Updated databases/phpmyadmin to 4.1.9 [tron 2014-03-08]
 	Added devel/py-hgview version 1.8 [bsiegert 2014-03-09]
+	Updated devel/p5-Module-Build-Tiny to 0.035 [wen 2014-03-09]
