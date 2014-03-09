@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13051 2014/03/08 13:08:50 tron Exp $
+$NetBSD: TODO,v 1.13052 2014/03/09 15:02:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -462,7 +462,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o crossfire-client-gtk2-1.60.0
 	o cuisine-0.6.5
 	o cups-1.7.1
-	o cvs-fast-export-1.8
+	o cvs-fast-export-1.9
 	o cvs2p4-2.5.5 [schmonz]
 	o cwm-5.1
 	o cxref-1.6e
@@ -489,7 +489,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dolphin-4.0.2
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
-	o dvtm-0.10
+	o dvtm-0.11
 	o easymenu-0.7.2p1
 	o eboard-1.1.1
 	o echinus-0.4.9
@@ -750,6 +750,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmemcached-1.0.18
 	o libmicrohttpd-0.9.34
 	o libnasl-2.3.1
+	o libnice-0.1.5
 	o liboobs-2.32.0 [GNOME 2.32]
 	o libpcap-1.5.1
 	o libprelude-1.1.0
@@ -816,7 +817,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mp3splt-2.6.0
 	o mp3splt-gtk-0.9.0
 	o mpeg4ip-1.6.1
-	o mpg123-1.18.1
+	o mpg123-1.19.0
 	o mserv-devel-0.41
 	o mu-0.9.9.5
 	o multitail-6.2
@@ -848,6 +849,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nulib2-220
 	o nut-19.1
 	o nxtvepg-2.8.1
+	o ocaml-findlib-1.4.1
 	o ocrad-0.22
 	o octave-3.8
 	o olvwm-4.5
@@ -936,6 +938,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-biggles-1.6.6
 	o py-bottle-0.11.6
 	o py-cassa-1.11.0
+	o py-cffi-0.8.2
 	o py-creole-1.1.1
 	o py-cssselect-0.9.1
 	o py-cssutils-1.0
@@ -956,8 +959,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-lasso-2.4.0
 	o py-logilab-astng-0.24.3
 	o py-logilab-common-0.60.1
-	o py-lxml-3.3.2
+	o py-lxml-3.3.3
 	o py-markdown-2.3.1
+	o py-markupsafe-0.19
 	o py-mezzanine-3.0.5
 	o py-mpmath-0.18
 	o py-musicbrainz-0.7.4
@@ -979,6 +983,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-reportlab-3.0
 	o py-rope-0.9.4
 	o py-scgi-1.14
+	o py-setuptools-3.1
 	o py-simpletal-5.1
 	o py-sip-4.15.1 [don't update until pyqt3 and KDE problems are fixed -- still there in 4.15.1]
 	o py-sip-4.15.4
