@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2014/03/01 20:14:44 rodent Exp $
+# $NetBSD: Makefile,v 1.47 2014/03/09 13:34:02 rodent Exp $
 
-DISTNAME=		nginx-1.4.5
+DISTNAME=		nginx-1.4.6
 MAINTAINER=		joerg@NetBSD.org
 
 .include "../../www/nginx/Makefile.common"
