@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2014/03/06 10:16:15 mrg Exp $
+# $NetBSD: Makefile,v 1.43 2014/03/09 10:48:48 wiedi Exp $
 
 DISTNAME=	hydrogen-0.9.6-beta3
 PKGNAME=	hydrogen-0.9.6.beta3
@@ -28,6 +28,8 @@ CMAKE_ARGS+=	-DWANT_ALSA=ON
 .else
 CMAKE_ARGS+=	-DWANT_ALSA=OFF
 .endif
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../archivers/libarchive/buildlink3.mk"
 .if ${OPSYS} == "Linux"
