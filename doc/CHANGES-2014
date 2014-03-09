@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.952 2014/03/08 13:08:50 tron Exp $
+$NetBSD: CHANGES-2014,v 1.953 2014/03/09 10:29:41 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1455,3 +1455,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/mlterm to 3.3.3nb1 [tsutsui 2014-03-07]
 	Updated net/wireshark to 1.10.6 [tron 2014-03-08]
 	Updated databases/phpmyadmin to 4.1.9 [tron 2014-03-08]
+	Added devel/py-hgview version 1.8 [bsiegert 2014-03-09]
