@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.961 2014/03/09 14:23:37 wen Exp $
+$NetBSD: CHANGES-2014,v 1.962 2014/03/09 14:29:50 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1465,3 +1465,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/php55 to 5.5.10 [taca 2014-03-09]
 	Updated math/R-circular to 0.4.7 [wen 2014-03-09]
 	Updated math/R-wle to 0.9.9 [wen 2014-03-09]
+	Updated math/R-statmod to 1.4.18 [wen 2014-03-09]
