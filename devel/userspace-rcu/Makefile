@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2014/01/31 22:01:40 pettai Exp $
+# $NetBSD: Makefile,v 1.8 2014/03/09 19:16:37 pettai Exp $
 #
 
-DISTNAME=	userspace-rcu-0.8.1
+DISTNAME=	userspace-rcu-0.8.4
 CATEGORIES=	devel
 MASTER_SITES=	http://lttng.org/files/urcu/
 EXTRACT_SUFX=	.tar.bz2
