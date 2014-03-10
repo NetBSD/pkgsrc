@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2011/01/19 17:50:48 tron Exp $
+# $NetBSD: builtin.mk,v 1.2 2014/03/10 11:05:53 jperkin Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -6,6 +6,7 @@ BUILTIN_PKG:=	libXvMC
 
 BUILTIN_FIND_FILES_VAR:=	PC_LIBXVMC LIB_XVMCW
 BUILTIN_FIND_FILES.PC_LIBXVMC=	${X11BASE}/lib/pkgconfig/xvmc.pc
+BUILTIN_FIND_FILES.PC_LIBXVMC+=	${X11BASE}/lib${LIBABISUFFIX}/pkgconfig/xvmc.pc
 .if ${_OPSYS_SHLIB_TYPE} == "dylib"
 BUILTIN_FIND_FILES.LIB_XVMCW=	${X11BASE}/lib/libXvMCW.dylib
 .else
