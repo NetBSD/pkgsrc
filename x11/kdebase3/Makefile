@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.184 2014/02/12 23:18:53 tron Exp $
+# $NetBSD: Makefile,v 1.185 2014/03/10 18:03:35 jperkin Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 PKGREVISION=	35
@@ -104,6 +104,11 @@ PLIST.usbview=		yes
 PLIST_VARS+=		joystick
 .if ${OPSYS} == "Linux"
 PLIST.joystick=		yes
+.endif
+
+PLIST_VARS+=		ksysguardd
+.if ${OPSYS} != "Darwin"
+PLIST.ksysguardd=	yes
 .endif
 
 ICONDIR=		share/icons
