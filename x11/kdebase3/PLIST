@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2009/06/14 22:06:40 joerg Exp $
+@comment $NetBSD: PLIST,v 1.54 2014/03/10 18:03:35 jperkin Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -71,7 +71,7 @@ bin/ksplash
 bin/ksplashsimple
 bin/kstart
 bin/ksysguard
-bin/ksysguardd
+${PLIST.ksysguardd}bin/ksysguardd
 bin/ksystraycmd
 bin/ktip
 bin/ktrash

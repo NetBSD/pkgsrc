@@ -1,0 +1,14 @@
+$NetBSD: patch-ksysguard_gui_SensorDisplayLib_ListViewSettingsWidget.ui,v 1.1 2014/03/10 18:03:35 jperkin Exp $
+
+Fix includes.
+
+--- ksysguard/gui/SensorDisplayLib/ListViewSettingsWidget.ui.orig	2005-09-10 08:26:15.000000000 +0000
++++ ksysguard/gui/SensorDisplayLib/ListViewSettingsWidget.ui
+@@ -161,6 +161,7 @@
+ </widget>
+ <includes>
+     <include location="global" impldecl="in implementation">kdialog.h</include>
++    <include location="local" impldecl="in implementation">kcolorbutton.h</include>
+     <include location="local" impldecl="in implementation">ListViewSettingsWidget.ui.h</include>
+ </includes>
+ <functions>
