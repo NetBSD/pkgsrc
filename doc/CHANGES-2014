@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.975 2014/03/10 13:01:32 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.976 2014/03/10 13:24:24 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1481,3 +1481,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/squid3 to 3.4.4 [adam 2014-03-10]
 	Updated www/squidGuard to 1.4nb9 [obache 2014-03-10]
 	Updated chat/prosody to 0.9.3 [fhajny 2014-03-10]
+	Updated databases/redis to 2.8.7 [fhajny 2014-03-10]
