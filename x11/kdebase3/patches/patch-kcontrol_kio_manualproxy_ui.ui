@@ -1,0 +1,17 @@
+$NetBSD: patch-kcontrol_kio_manualproxy_ui.ui,v 1.1 2014/03/10 18:03:35 jperkin Exp $
+
+Fix includes.
+
+--- kcontrol/kio/manualproxy_ui.ui.orig	2005-09-10 08:25:10.000000000 +0000
++++ kcontrol/kio/manualproxy_ui.ui
+@@ -313,5 +313,10 @@ Reverse the use of the exception list. C
+     <tabstop>pbDelete</tabstop>
+     <tabstop>pbDeleteAll</tabstop>
+ </tabstops>
++<includes>
++    <include location="local" impldecl="in implementation">klineedit.h</include>
++    <include location="local" impldecl="in implementation">klistbox.h</include>
++    <include location="local" impldecl="in implementation">knuminput.h</include>
++</includes>
+ <layoutdefaults spacing="6" margin="11"/>
+ </UI>

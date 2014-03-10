@@ -1,0 +1,14 @@
+$NetBSD: patch-kcontrol_kio_kcookiesmanagementdlg_ui.ui,v 1.1 2014/03/10 18:03:35 jperkin Exp $
+
+Fix includes.
+
+--- kcontrol/kio/kcookiesmanagementdlg_ui.ui.orig	2005-09-10 08:25:10.000000000 +0000
++++ kcontrol/kio/kcookiesmanagementdlg_ui.ui
+@@ -314,6 +314,7 @@
+ </connections>
+ <includes>
+     <include location="global" impldecl="in implementation">kdialog.h</include>
++    <include location="local" impldecl="in implementation">klistview.h</include>
+ </includes>
+ <layoutdefaults spacing="6" margin="11"/>
+ <layoutfunctions spacing="KDialog::spacingHint" margin="KDialog::marginHint"/>

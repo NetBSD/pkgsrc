@@ -1,0 +1,15 @@
+$NetBSD: patch-kcontrol_kio_policydlg_ui.ui,v 1.1 2014/03/10 18:03:35 jperkin Exp $
+
+Fix includes.
+
+--- kcontrol/kio/policydlg_ui.ui.orig	2005-09-10 08:25:10.000000000 +0000
++++ kcontrol/kio/policydlg_ui.ui
+@@ -100,6 +100,8 @@ Select the desired policy:
+ </widget>
+ <includes>
+     <include location="global" impldecl="in implementation">kdialog.h</include>
++    <include location="local" impldecl="in implementation">kcombobox.h</include>
++    <include location="local" impldecl="in implementation">klineedit.h</include>
+ </includes>
+ <layoutdefaults spacing="6" margin="11"/>
+ <layoutfunctions spacing="KDialog::spacingHint" margin="KDialog::marginHint"/>
