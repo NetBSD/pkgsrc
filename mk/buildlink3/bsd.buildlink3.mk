@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.223 2013/06/08 20:23:02 dholland Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.224 2014/03/10 12:06:35 jperkin Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -737,12 +737,12 @@ _BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}=	# empty
 # files into the canonical ${BUILDLINK_DIR} path.
 #
 _BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
-	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)/usr\(/lib/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}\\2,g" \
-	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)/usr\(/lib/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}\\2,g" \
+	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)/usr\(/lib${LIBABISUFFIX}/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}\\2,g" \
+	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)/usr\(/lib${LIBABISUFFIX}/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}\\2,g" \
 	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)${DEPOTBASE}/[^/${_BLNK_SEP}]*\(/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}\\2,g" \
 	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)${DEPOTBASE}/[^/${_BLNK_SEP}]*\(/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}\\2,g"
 
-.if ${X11_TYPE} != "modular"
+.if ${X11_TYPE} != "modular" && ${X11BASE} != "/usr"
 _BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
 	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)${X11BASE}\(/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}}\\2,g" \
 	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)${X11BASE}\(/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}}\\2,g"
@@ -768,10 +768,10 @@ _BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
 # files.
 #
 _BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
-	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)-L${X11BASE}/[^${_BLNK_SEP}]*\([${_BLNK_SEP}]\),\\1\\2,g" \
-	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)-L${X11BASE}/[^${_BLNK_SEP}]*\([${_BLNK_SEP}]\),\\1\\2,g" \
 	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)-L${LOCALBASE}/[^${_BLNK_SEP}]*\([${_BLNK_SEP}]\),\\1\\2,g" \
-	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)-L${LOCALBASE}/[^${_BLNK_SEP}]*\([${_BLNK_SEP}]\),\\1\\2,g"
+	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)-L${LOCALBASE}/[^${_BLNK_SEP}]*\([${_BLNK_SEP}]\),\\1\\2,g" \
+	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)-L${X11BASE}/[^${_BLNK_SEP}]*\([${_BLNK_SEP}]\),\\1\\2,g" \
+	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)-L${X11BASE}/[^${_BLNK_SEP}]*\([${_BLNK_SEP}]\),\\1\\2,g"
 #
 # Unmangle.
 #
@@ -797,16 +797,16 @@ _BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
 .  if (${PKG_INSTALLATION_TYPE} == "overwrite") ||			\
       !empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[nN][oO])
 _BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
-	-e "/^libdir=/s,/usr\(/lib/[^${_BLNK_SEP}]*\),${BUILDLINK_DIR}\\1,g" \
+	-e "/^libdir=/s,/usr\(/lib${LIBABISUFFIX}/[^${_BLNK_SEP}]*\),${BUILDLINK_DIR}\\1,g" \
 	-e "/^libdir=/s,${DEPOTBASE}/[^/${_BLNK_SEP}]*\(/[^${_BLNK_SEP}]*\),${BUILDLINK_DIR}\\1,g"
-
-.    if ${X11_TYPE} != "modular"
-_BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
-	-e "/^libdir=/s,${X11BASE}\(/[^${_BLNK_SEP}]*\),${BUILDLINK_X11_DIR}\\1,g"
-.    endif
 
 _BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
 	-e "/^libdir=/s,${LOCALBASE}\(/[^${_BLNK_SEP}]*\),${BUILDLINK_DIR}\\1,g"
+
+.    if ${X11_TYPE} != "modular" && ${X11BASE} != "/usr"
+_BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
+	-e "/^libdir=/s,${X11BASE}\(/[^${_BLNK_SEP}]*\),${BUILDLINK_X11_DIR}\\1,g"
+.    endif
 .  endif
 .endfor
 
@@ -1050,10 +1050,10 @@ _BLNK_TRANSFORM+=	depot:${DEPOTBASE}:${LOCALBASE}
 # ${LOCALBASE} or ${X11BASE} into references into ${BUILDLINK_DIR}.
 #
 .if ${PKG_INSTALLATION_TYPE} == "overwrite"
+_BLNK_TRANSFORM+=	P:${LOCALBASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}
 .  if defined(USE_X11) && ${X11_TYPE} != "modular"
 _BLNK_TRANSFORM+=	P:${X11BASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}}
 .  endif
-_BLNK_TRANSFORM+=	P:${LOCALBASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}
 .endif
 #
 # Transform references to ${X11BASE} into ${BUILDLINK_X11_DIR}.
