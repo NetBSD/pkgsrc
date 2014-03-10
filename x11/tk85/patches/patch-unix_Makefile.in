@@ -1,0 +1,136 @@
+$NetBSD: patch-unix_Makefile.in,v 1.1 2014/03/10 14:22:01 taca Exp $
+
+Shared library handling on pkgsrc.
+
+--- unix/Makefile.in.orig	2013-09-16 16:45:24.000000000 +0000
++++ unix/Makefile.in
+@@ -13,6 +13,7 @@ MAJOR_VERSION		= @TK_MAJOR_VERSION@
+ MINOR_VERSION		= @TK_MINOR_VERSION@
+ PATCH_LEVEL		= @TK_PATCH_LEVEL@
+ LOCALES			= @LOCALES@
++SHLIB_VERSION		= @SHLIB_VERSION@
+ 
+ #----------------------------------------------------------------
+ # Things you can change to personalize the Makefile for your own
+@@ -63,6 +64,8 @@ SCRIPT_INSTALL_DIR	= $(INSTALL_ROOT)$(TK
+ 
+ # Directory in which to install the include file tk.h:
+ INCLUDE_INSTALL_DIR	= $(INSTALL_ROOT)$(includedir)
++UNIX_INCLUDE_INSTALL_DIR    = $(DESTDIR)$(prefix)/include/tk/unix
++GENERIC_INCLUDE_INSTALL_DIR = $(DESTDIR)$(prefix)/include/tk/generic
+ 
+ # Path to the private tk header dir:
+ PRIVATE_INCLUDE_DIR	= @PRIVATE_INCLUDE_DIR@
+@@ -99,7 +102,7 @@ DEMO_INSTALL_DIR	= $(INSTALL_ROOT)$(TK_L
+ # The directory containing the Tcl sources and headers appropriate
+ # for this version of Tk ("srcdir" will be replaced or has already
+ # been replaced by the configure script):
+-TCL_GENERIC_DIR		= @TCL_SRC_DIR@/generic
++TCL_GENERIC_DIR		= $(TCL_BIN_DIR)/../include/tcl/generic
+ 
+ # The directory containing the platform specific Tcl sources and headers
+ # appropriate for this version of Tk:
+@@ -136,7 +139,7 @@ CFLAGS_OPTIMIZE		= @CFLAGS_OPTIMIZE@
+ #CFLAGS			= $(CFLAGS_DEBUG)
+ #CFLAGS			= $(CFLAGS_OPTIMIZE)
+ #CFLAGS			= $(CFLAGS_DEBUG) $(CFLAGS_OPTIMIZE)
+-CFLAGS			= @CFLAGS_DEFAULT@ @CFLAGS@
++CFLAGS			+= @CFLAGS_DEFAULT@ @CFLAGS@
+ 
+ # Flags to pass to the linker
+ LDFLAGS_DEBUG		= @LDFLAGS_DEBUG@
+@@ -244,6 +247,7 @@ TK_STUB_LIB_FLAG	= @TK_STUB_LIB_FLAG@
+ #TK_STUB_LIB_FLAG	= -ltkstub
+ 
+ TK_LIB_FILE		= @TK_LIB_FILE@
++TK_LIB_A_FILE		= ${TK_LIB_FILE:@SHLIB_SUFFIX@=.a}
+ #TK_LIB_FILE		= libtk.a
+ 
+ # Generic lib name used in rules that apply to tcl and tk
+@@ -275,6 +279,8 @@ SHLIB_LD		= @SHLIB_LD@
+ SHLIB_LD_LIBS		= @SHLIB_LD_LIBS@
+ TK_SHLIB_LD_EXTRAS	= @TK_SHLIB_LD_EXTRAS@
+ 
++SHLIB_SUFFIX		= @SHLIB_SUFFIX@
++
+ # Additional search flags needed to find the various shared libraries
+ # at run-time.  The first symbol is for use when creating a binary
+ # with cc, and the second is for use when running ld directly.
+@@ -545,6 +551,9 @@ PRIVATE_HDRS = $(GENERIC_DIR)/tkInt.h $(
+ 
+ DEMOPROGS = browse hello ixset rmt rolodex square tcolor timer widget
+ 
++INSTALL_HDRS = tk.h tkInt.h  tkDecls.h tkIntDecls.h tkPlatDecls.h \
++	       tkIntPlatDecls.h tkIntXlibDecls.h
++
+ SHELL_ENV = \
+ 	@LD_LIBRARY_PATH_VAR@="`pwd`:${TCL_BIN_DIR}:$${@LD_LIBRARY_PATH_VAR@}"; \
+ 	export @LD_LIBRARY_PATH_VAR@; \
+@@ -568,6 +577,11 @@ ${LIB_FILE}: ${OBJS} ${STUB_LIB_FILE} @L
+ 	rm -f $@
+ 	@MAKE_LIB@
+ 
++${TK_LIB_A_FILE}: ${OBJS}
++	rm -f $@
++	ar cr $@ ${OBJS}
++	$(RANLIB) $@
++
+ ${STUB_LIB_FILE}: ${STUB_LIB_OBJS}
+ 	rm -f $@
+ 	@MAKE_STUB_LIB@
+@@ -685,7 +699,7 @@ install-strip:
+ # some ranlibs write to current directory, and this might not always be
+ # possible (e.g. if installing as root).
+ 
+-install-binaries: $(TK_LIB_FILE) $(TK_STUB_LIB_FILE) ${WISH_EXE}
++install-binaries: $(TK_LIB_FILE) $(TK_LIB_A_FILE) $(TK_STUB_LIB_FILE) ${WISH_EXE} ${TK_LIB_A_FILE}
+ 	@for i in "$(LIB_INSTALL_DIR)" "$(BIN_INSTALL_DIR)" \
+ 	    "$(PKG_INSTALL_DIR)" "$(CONFIG_INSTALL_DIR)" ; \
+ 	    do \
+@@ -715,7 +729,13 @@ install-binaries: $(TK_LIB_FILE) $(TK_ST
+ 	    fi
+ 	@echo "Installing $(LIB_FILE) to $(DLL_INSTALL_DIR)/"
+ 	@@INSTALL_LIB@
+-	@chmod 555 "$(DLL_INSTALL_DIR)/$(LIB_FILE)"
++	@cd "$(DLL_INSTALL_DIR)" && if test "$(SHLIB_SUFFIX)" = ".dylib"; then \
++		ln -sf libtk$(MAJOR_VERSION)$(MINOR_VERSION).$(SHLIB_VERSION)$(SHLIB_SUFFIX) $(LIB_FILE) ; \
++	else \
++		ln -sf libtk$(MAJOR_VERSION)$(MINOR_VERSION)$(SHLIB_SUFFIX).$(SHLIB_VERSION) $(LIB_FILE) ; \
++	fi
++	@echo "Installing ${TK_LIB_A_FILE} to $(DLL_INSTALL_DIR)/"
++	@$(INSTALL_DATA) ${TK_LIB_A_FILE} $(DLL_INSTALL_DIR)/${TK_LIB_A_FILE}
+ 	@if test -f "tk${MAJOR_VERSION}${MINOR_VERSION}.dll"; then \
+ 	    $(INSTALL_LIBRARY) "tk${MAJOR_VERSION}${MINOR_VERSION}.dll" "$(DLL_INSTALL_DIR)";\
+ 	    chmod 555 "$(DLL_INSTALL_DIR)/tk${MAJOR_VERSION}${MINOR_VERSION}.dll";\
+@@ -724,6 +744,7 @@ install-binaries: $(TK_LIB_FILE) $(TK_ST
+ 	fi
+ 	@echo "Installing ${WISH_EXE} as $(BIN_INSTALL_DIR)/wish$(VERSION)${EXE_SUFFIX}"
+ 	@$(INSTALL_PROGRAM) ${WISH_EXE} "$(BIN_INSTALL_DIR)/wish$(VERSION)${EXE_SUFFIX}"
++	@cd "$(BIN_INSTALL_DIR)" && ln -sf wish$(VERSION)@EXEEXT@ wish
+ 	@echo "Installing tkConfig.sh to $(CONFIG_INSTALL_DIR)/"
+ 	@$(INSTALL_DATA) tkConfig.sh "$(CONFIG_INSTALL_DIR)/tkConfig.sh"
+ 	@if test "$(STUB_LIB_FILE)" != "" ; then \
+@@ -828,7 +849,7 @@ install-doc:
+ install-headers:
+ 	@if test "$(@TK_WINDOWINGSYSTEM@_XLIB_HDRS)" != ""; then \
+ 	    XLIB_INCLUDE_INSTALL_DIR="$(INCLUDE_INSTALL_DIR)"/X11; fi; \
+-	for i in "$(INCLUDE_INSTALL_DIR)" "$${XLIB_INCLUDE_INSTALL_DIR}"; \
++	for i in "$(INCLUDE_INSTALL_DIR)" "$${XLIB_INCLUDE_INSTALL_DIR}" "$(GENERIC_INCLUDE_INSTALL_DIR)" "$(UNIX_INCLUDE_INSTALL_DIR)"; \
+ 	    do \
+ 	    if [ -n "$$i" -a ! -d "$$i" ] ; then \
+ 		echo "Making directory $$i"; \
+@@ -837,9 +858,12 @@ install-headers:
+ 		fi; \
+ 	    done;
+ 	@echo "Installing header files to $(INCLUDE_INSTALL_DIR)/";
+-	@for i in $(PUBLIC_HDRS); \
++	$(INSTALL_DATA) $(GENERIC_DIR)/*.h "$(GENERIC_INCLUDE_INSTALL_DIR)"/
++	$(INSTALL_DATA) $(UNIX_DIR)/*.h "$(UNIX_INCLUDE_INSTALL_DIR)"/
++	@for i in $(INSTALL_HDRS); \
+ 	    do \
+-	    $(INSTALL_DATA) $$i "$(INCLUDE_INSTALL_DIR)"; \
++	    j=`basename $$i` ; \
++	    cd "$(INCLUDE_INSTALL_DIR)" && ln -sf tk/generic/$$j $$j ; \
+ 	    done;
+ 	@list='$(@TK_WINDOWINGSYSTEM@_XLIB_HDRS)'; for i in $$list ; \
+ 	    do \
