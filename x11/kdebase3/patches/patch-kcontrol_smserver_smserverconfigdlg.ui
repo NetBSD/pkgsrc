@@ -1,0 +1,14 @@
+$NetBSD: patch-kcontrol_smserver_smserverconfigdlg.ui,v 1.1 2014/03/10 18:03:35 jperkin Exp $
+
+Fix includes.
+
+--- kcontrol/smserver/smserverconfigdlg.ui.orig	2005-09-10 08:25:08.000000000 +0000
++++ kcontrol/smserver/smserverconfigdlg.ui
+@@ -239,6 +239,7 @@
+ </connections>
+ <includes>
+     <include location="global" impldecl="in implementation">kdialog.h</include>
++    <include location="local" impldecl="in implementation">klineedit.h</include>
+ </includes>
+ <slots>
+     <slot>configChanged()</slot>

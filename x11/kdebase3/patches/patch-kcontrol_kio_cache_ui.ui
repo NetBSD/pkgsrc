@@ -1,0 +1,15 @@
+$NetBSD: patch-kcontrol_kio_cache_ui.ui,v 1.1 2014/03/10 18:03:35 jperkin Exp $
+
+Fix includes.
+
+--- kcontrol/kio/cache_ui.ui.orig	2005-09-10 08:25:10.000000000 +0000
++++ kcontrol/kio/cache_ui.ui
+@@ -183,5 +183,8 @@
+         <slot>setEnabled(bool)</slot>
+     </connection>
+ </connections>
++<includes>
++    <include location="local" impldecl="in implementation">knuminput.h</include>
++</includes>
+ <layoutdefaults spacing="6" margin="11"/>
+ </UI>
