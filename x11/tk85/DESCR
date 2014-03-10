@@ -1,0 +1,6 @@
+This package contains the binary release of Tk, a GUI toolkit for Tcl.
+
+The best way to get started with Tcl is to read ``Practical Programming in
+TCL and Tk, 4th Edition'' by Brent Welch and Ken Jones, Prentice Hall PTR,
+ISBN 0-13-038560-3.  There's also the collectible ``Tcl and the Tk
+Toolkit'' by John K. Ousterhout, Addison-Wesley, ISBN 0-20-163337-X.
