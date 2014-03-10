@@ -1,7 +1,8 @@
-# $NetBSD: builtin.mk,v 1.6 2008/10/06 12:54:43 tron Exp $
+# $NetBSD: builtin.mk,v 1.7 2014/03/10 11:05:53 jperkin Exp $
 
 BUILTIN_PKG:=	pixman
 PKGCONFIG_FILE.pixman=	${X11BASE}/lib/pkgconfig/pixman-1.pc
+PKGCONFIG_FILE.pixman+=	${X11BASE}/lib${LIBABISUFFIX}/pkgconfig/pixman-1.pc
 
 .include "../../mk/buildlink3/pkgconfig-builtin.mk"
 .include "../../mk/x11.builtin.mk"
