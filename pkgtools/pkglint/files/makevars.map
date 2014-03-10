@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.247 2014/03/02 09:47:20 obache Exp $
+# $NetBSD: makevars.map,v 1.248 2014/03/10 12:11:33 obache Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -464,13 +464,18 @@ MASTER_SITE_GNOME	List of URL [$system]
 MASTER_SITE_GNU		List of URL [$system]
 MASTER_SITE_GNUSTEP	List of URL [$system]
 MASTER_SITE_IFARCHIVE	List of URL [$system]
+MASTER_SITE_HASKELL_HACKAGE	List of URL [$system]
 MASTER_SITE_KDE		List of URL [$system]
 MASTER_SITE_LOCAL	List of URL [$system]
 MASTER_SITE_MOZILLA	List of URL [$system]
+MASTER_SITE_MOZILLA_ALL	List of URL [$system]
+MASTER_SITE_MOZILLA_ESR	List of URL [$system]
 MASTER_SITE_MYSQL	List of URL [$system]
+MASTER_SITE_NETLIB	List of URL [$system]
 MASTER_SITE_OPENOFFICE	List of URL [$system]
 MASTER_SITE_PERL_CPAN	List of URL [$system]
 MASTER_SITE_R_CRAN	List of URL [$system]
+MASTER_SITE_RUBYGEMS	List of URL [$system]
 MASTER_SITE_SOURCEFORGE	List of URL [$system]
 MASTER_SITE_SOURCEFORGE_JP	List of URL [$system]
 MASTER_SITE_SUNSITE	List of URL [$system]
