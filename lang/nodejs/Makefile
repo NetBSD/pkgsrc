@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2014/02/21 07:38:50 fhajny Exp $
+# $NetBSD: Makefile,v 1.21 2014/03/10 15:42:19 fhajny Exp $
 
 DISTNAME=	node-v0.10.26
 CATEGORIES=	devel
 MASTER_SITES=	http://nodejs.org/dist/${DISTNAME:S/node-//}/
 PKGNAME=	${DISTNAME:S/-v/js-/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	filip@joyent.com
 HOMEPAGE=	http://nodejs.org/
 COMMENT=	V8 JavaScript for clients and servers
 LICENSE=	mit
