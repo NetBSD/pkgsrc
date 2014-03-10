@@ -1,4 +1,4 @@
-# $NetBSD: curses.buildlink3.mk,v 1.18 2014/03/09 10:15:32 roy Exp $
+# $NetBSD: curses.buildlink3.mk,v 1.19 2014/03/10 12:57:03 obache Exp $
 #
 # This Makefile fragment is meant to be included by packages that require
 # any curses implementation instead of one particular one.  The available
@@ -106,7 +106,7 @@ BUSILDLINK_BUILTIN_MK.curses=	../../mk/curses.builtin.mk
 # The correct action would be to write a patch and pass it upstream
 # but by setting FAKE_NCURSES=yes in the package we can temporarily work
 # around the short-coming.
-.  if !empty(FAKE_NCURSES:M[yY][eE][sS])
+.  if defined(FAKE_NCURSES) && !empty(FAKE_NCURSES:M[yY][eE][sS])
 BUILDLINK_TARGETS+=		buildlink-curses-ncurses-h
 BUILDLINK_TRANSFORM+=		l:ncurses:${BUILDLINK_LIBNAME.curses}
 BUILDLINK_TRANSFORM+=		l:ncursesw:${BUILDLINK_LIBNAME.curses}
