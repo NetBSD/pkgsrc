@@ -1,41 +1,47 @@
-$NetBSD: patch-Makefile,v 1.4 2014/02/26 10:29:27 wiedi Exp $
+$NetBSD: patch-Makefile,v 1.5 2014/03/10 19:47:34 ryoon Exp $
 
 * Add "all" target.
 * Use ${PREFIX} variable.
 * Install man pages in ${PREFIX}/${PKGMANDIR}, not ${PREFIX}/share/man.
 
---- Makefile.orig	2013-05-22 03:23:56.000000000 +0000
+--- Makefile.orig	2014-03-08 06:09:53.000000000 +0000
 +++ Makefile
-@@ -3,9 +3,9 @@
- # Build requirements: A C compiler, yacc, lex, and asciidoc.
+@@ -6,12 +6,12 @@
+ 
+ VERSION=1.9
+ 
+-prefix?=/usr/local
++prefix?=$(PREFIX)
+ target=$(DESTDIR)$(prefix)
  
  INSTALL = install
--prefix?=/usr/local
-+prefix=$(PREFIX)
- target=$(DESTDIR)$(prefix)
--LEX=/usr/bin/flex
+ YACC = bison -y
+-LEX = flex
 +mandir=$(PKGMANDIR)
  
- VERSION=0.5
- 
-@@ -25,6 +25,8 @@ OBJS=gram.o lex.o main.o cvsutil.o revdi
+ GCC_WARNINGS1=-Wall -Wpointer-arith -Wstrict-prototypes
+ GCC_WARNINGS2=-Wmissing-prototypes -Wmissing-declarations
+@@ -38,6 +38,8 @@ OBJS=gram.o lex.o rbtree.o main.o cvsuti
  	revlist.o atom.o revcvs.o generate.o export.o \
- 	nodehash.o tags.o authormap.o graph.o
+ 	nodehash.o tags.o authormap.o graph.o utils.o
  
 +all: cvs-fast-export cvs-fast-export.1
 +
  cvs-fast-export: $(OBJS)
- 	cc $(CFLAGS) -o $@ $(OBJS)
+ 	$(CC) $(CFLAGS) $(OBJS) $(LDFLAGS) -o $@ 
  
-@@ -56,9 +58,9 @@ clean:
+@@ -77,11 +79,11 @@ check: cvs-fast-export
  
- install: cvs-fast-export.1 all
+ install: cvs-fast-export man
  	$(INSTALL) -d "$(target)/bin"
 -	$(INSTALL) -d "$(target)/share/man/man1"
 +	$(INSTALL) -d "$(target)/$(mandir)/man1"
  	$(INSTALL) cvs-fast-export "$(target)/bin"
+ 	$(INSTALL) cvssync "$(target)/bin"
 -	$(INSTALL) -m 644 cvs-fast-export.1 "$(target)/share/man/man1"
+-	$(INSTALL) -m 644 cvssync.1 "$(target)/share/man/man1"
 +	$(INSTALL) -m 644 cvs-fast-export.1 "$(target)/$(mandir)/man1"
++	$(INSTALL) -m 644 cvssync.1 "$(target)/$(mandir)/man1"
  
- # Weird suppressions are required because of strange tricks in Bison.
- SUPPRESSIONS = -U__UNUSED__ -UYYPARSE_PARAM -UYYTYPE_INT16 -UYYTYPE_INT8 \
+ PROFILE_REPO = ~/software/groff-conversion/groff-mirror/groff
+ gmon.out: cvs-fast-export
