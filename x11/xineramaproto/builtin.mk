@@ -1,9 +1,10 @@
-# $NetBSD: builtin.mk,v 1.4 2012/06/15 23:06:08 dholland Exp $
+# $NetBSD: builtin.mk,v 1.5 2014/03/10 11:05:54 jperkin Exp $
 
 BUILTIN_PKG:=	xineramaproto
 
 BUILTIN_FIND_FILES_VAR:=		PC_XINERAMAPROTO
 BUILTIN_FIND_FILES.PC_XINERAMAPROTO=	${X11BASE}/lib/pkgconfig/xineramaproto.pc
+BUILTIN_FIND_FILES.PC_XINERAMAPROTO+=	${X11BASE}/lib${LIBABISUFFIX}/pkgconfig/xineramaproto.pc
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 

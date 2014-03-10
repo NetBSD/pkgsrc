@@ -1,9 +1,11 @@
-# $NetBSD: builtin.mk,v 1.4 2012/06/15 23:06:03 dholland Exp $
+# $NetBSD: builtin.mk,v 1.5 2014/03/10 11:05:52 jperkin Exp $
 
 BUILTIN_PKG:=	inputproto
 
 BUILTIN_FIND_FILES_VAR:=		PC_INPUTPROTO
 BUILTIN_FIND_FILES.PC_INPUTPROTO=	${X11BASE}/lib/pkgconfig/inputproto.pc
+BUILTIN_FIND_FILES.PC_INPUTPROTO+=	${X11BASE}/lib${LIBABISUFFIX}/pkgconfig/inputproto.pc
+BUILTIN_FIND_FILES.PC_INPUTPROTO+=	${X11BASE}/share/pkgconfig/inputproto.pc
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 

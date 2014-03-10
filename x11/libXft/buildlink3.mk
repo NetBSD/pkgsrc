@@ -1,8 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.12 2013/06/06 12:53:41 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2014/03/10 11:05:52 jperkin Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if ${X11_TYPE} != "modular" && !exists(${X11BASE}/lib/xorg)
+.if ${X11_TYPE} != "modular" && \
+    !exists(${X11BASE}/lib/pkgconfig/xft.pc) && \
+    !exists(${X11BASE}/lib${LIBABISUFFIX}/pkgconfig/xft.pc)
 .include "../../fonts/Xft2/buildlink3.mk"
 .else
 
