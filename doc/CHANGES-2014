@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.971 2014/03/10 11:34:09 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.972 2014/03/10 11:35:37 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1477,4 +1477,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added emulators/free42 version 1.4.78 [he 2014-03-10]
 	Updated textproc/py-markupsafe to 0.19 [kleink 2014-03-10]
 	Updated net/rabbitmq to 3.2.4 [fhajny 2014-03-10]
-	Updated chat/ejabberd to 13.12nb1 [fhajny 2014-03-10]
+	Updated chat/ejabberd to 13.12 [fhajny 2014-03-10]
