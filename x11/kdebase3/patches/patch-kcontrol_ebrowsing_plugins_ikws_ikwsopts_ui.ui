@@ -1,0 +1,16 @@
+$NetBSD: patch-kcontrol_ebrowsing_plugins_ikws_ikwsopts_ui.ui,v 1.1 2014/03/10 18:03:35 jperkin Exp $
+
+Fix includes.
+
+--- kcontrol/ebrowsing/plugins/ikws/ikwsopts_ui.ui.orig	2005-09-10 08:25:07.000000000 +0000
++++ kcontrol/ebrowsing/plugins/ikws/ikwsopts_ui.ui
+@@ -254,5 +254,9 @@ Select the search engine to use for inpu
+     <tabstop>cmbDefaultEngine</tabstop>
+     <tabstop>cmbDelimiter</tabstop>
+ </tabstops>
++<includes>
++    <include location="local" impldecl="in implementation">kcombobox.h</include>
++    <include location="local" impldecl="in implementation">klistview.h</include>
++</includes>
+ <layoutdefaults spacing="6" margin="11"/>
+ </UI>

@@ -1,0 +1,15 @@
+$NetBSD: patch-kcontrol_arts_hardwaretab.ui,v 1.1 2014/03/10 18:03:35 jperkin Exp $
+
+Fix includes.
+
+--- kcontrol/arts/hardwaretab.ui.orig	2005-09-10 08:25:09.000000000 +0000
++++ kcontrol/arts/hardwaretab.ui
+@@ -354,5 +354,8 @@
+         </spacer>
+     </vbox>
+ </widget>
++<includes>
++    <include location="local" impldecl="in implementation">kurlrequester.h</include>
++</includes>
+ <layoutdefaults spacing="6" margin="11"/>
+ </UI>
