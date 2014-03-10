@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.202 2014/03/07 14:59:42 jperkin Exp $
+# $NetBSD: bootstrap,v 1.203 2014/03/10 20:50:35 asau Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -147,6 +147,15 @@ get_compiler()
 		done
 		IFS="${save_IFS}"
 	fi
+
+	# Clang compiler pretends to be GCC, so we have to check that
+	cat >${wrkdir}/$$.c <<EOF
+#ifdef __clang__
+indeed
+#endif
+EOF
+	compiler_is_clang=`${testcc:-cc} -E ${wrkdir}/$$.c 2>/dev/null | grep -c indeed`
+	rm -f ${wrkdir}/$$.c
 
 	cat >${wrkdir}/$$.c <<EOF
 #ifdef __GNUC__
@@ -549,6 +558,7 @@ FreeBSD)
 	need_sed=no
 	set_opsys=no
 	machine_arch=`uname -p`
+	check_compiler=yes
 	;;
 FreeMiNT)
 	root_group=root
@@ -870,7 +880,10 @@ echo "Working directory is: ${wrkdir}"
 
 if [ "$compiler" = "" ] && [ x"$check_compiler" = x"yes" ]; then
 	get_compiler
-	if [ $compiler_is_gnu -gt 0 ]; then
+	# Clang pretends to be GCC, so we have to check it first.
+	if [ $compiler_is_clang -gt 0 ]; then
+		compiler="clang"
+	elif [ $compiler_is_gnu -gt 0 ]; then
 		compiler="gcc"
 	else
 		case "$opsys" in
