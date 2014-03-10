@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.969 2014/03/10 09:15:15 kleink Exp $
+$NetBSD: CHANGES-2014,v 1.970 2014/03/10 11:18:54 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1476,3 +1476,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/oath-toolkit to 2.4.1 [pettai 2014-03-10]
 	Added emulators/free42 version 1.4.78 [he 2014-03-10]
 	Updated textproc/py-markupsafe to 0.19 [kleink 2014-03-10]
+	Updated net/rabbitmq to 3.2.4 [fhajny 2014-03-10]
