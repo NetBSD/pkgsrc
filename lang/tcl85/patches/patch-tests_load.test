@@ -1,0 +1,15 @@
+$NetBSD: patch-tests_load.test,v 1.1 2014/03/10 14:20:44 taca Exp $
+
+Carried over from TCL 8.4
+
+--- tests/load.test.orig	2012-07-16 11:57:06.000000000 +0000
++++ tests/load.test
+@@ -21,7 +21,7 @@ if {![info exists ext]} {
+     set ext [info sharedlibextension]
+ }
+ # Tests require the existence of one of the DLLs in the dltest directory.
+-set testDir [file join [file dirname [info nameofexecutable]] dltest]
++set testDir [file join [file dirname [info nameofexecutable]] .. dltest .libs ]
+ set x [file join $testDir pkga$ext]
+ set dll "[file tail $x]Required"
+ testConstraint $dll [file readable $x]
