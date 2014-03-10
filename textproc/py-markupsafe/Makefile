@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2014/01/25 10:30:24 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2014/03/10 09:14:13 kleink Exp $
 
-DISTNAME=	MarkupSafe-0.18
+DISTNAME=	MarkupSafe-0.19
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	http://pypi.python.org/packages/source/M/MarkupSafe/
