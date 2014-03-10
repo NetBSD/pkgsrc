@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.968 2014/03/10 08:39:28 he Exp $
+$NetBSD: CHANGES-2014,v 1.969 2014/03/10 09:15:15 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1475,3 +1475,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/userspace-rcu to 0.8.4 [pettai 2014-03-09]
 	Updated security/oath-toolkit to 2.4.1 [pettai 2014-03-10]
 	Added emulators/free42 version 1.4.78 [he 2014-03-10]
+	Updated textproc/py-markupsafe to 0.19 [kleink 2014-03-10]
