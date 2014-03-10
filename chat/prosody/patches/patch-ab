@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.4 2013/09/13 14:37:49 fhajny Exp $
+$NetBSD: patch-ab,v 1.5 2014/03/10 13:01:17 fhajny Exp $
 
 enable POSIX functionality by default
 set the logging paths
 set up the pid files
 
---- prosody.cfg.lua.dist.orig	2013-09-09 10:32:23.000000000 +0000
+--- prosody.cfg.lua.dist.orig	2014-01-12 11:41:40.000000000 +0000
 +++ prosody.cfg.lua.dist
 @@ -63,7 +63,7 @@ modules_enabled = {
  		--"http_files"; -- Serve static files from a directory over HTTP
