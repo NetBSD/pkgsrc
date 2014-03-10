@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.977 2014/03/10 14:23:04 taca Exp $
+$NetBSD: CHANGES-2014,v 1.978 2014/03/10 14:24:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1484,3 +1484,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/redis to 2.8.7 [fhajny 2014-03-10]
 	Added lang/tcl85 version 8.5.15nb1 [taca 2014-03-10]
 	Added x11/tk85 version 8.5.15nb1 [taca 2014-03-10]
+	Updated x11/ruby-tk to 1.9.3p545nb3 [taca 2014-03-10]
