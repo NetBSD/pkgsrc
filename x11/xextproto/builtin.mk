@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.7 2009/05/26 21:59:58 rillig Exp $
+# $NetBSD: builtin.mk,v 1.8 2014/03/10 11:56:02 jperkin Exp $
 
 BUILTIN_PKG:=	xextproto
 
@@ -71,6 +71,9 @@ BUILDLINK_TARGETS+=	xextproto-fake-pc
 
 xextproto-fake-pc:
 	${RUN} \
+	for dir in lib lib${LIBABISUFFIX} share; do \
+		${TEST} -f ${BUILDLINK_PREFIX.xextproto}/$${dir}/pkgconfig/xextproto.pc && exit; \
+	done; \
 	src=${BUILDLINK_PREFIX.xextproto}/lib/pkgconfig/xextproto.pc; \
 	dst=${BUILDLINK_DIR}/lib/pkgconfig/xextproto.pc; \
 	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig; \

@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.4 2010/12/13 07:51:45 obache Exp $
+# $NetBSD: builtin.mk,v 1.5 2014/03/10 11:56:02 jperkin Exp $
 
 BUILTIN_PKG:=	libXdmcp
 
@@ -60,6 +60,9 @@ BUILDLINK_TARGETS+=	xdmcp-fake-pc
 
 xdmcp-fake-pc:
 	${RUN} \
+	for dir in lib lib${LIBABISUFFIX} share; do \
+		${TEST} -f ${BUILDLINK_PREFIX.libXdmcp}/$${dir}/pkgconfig/xdmcp.pc && exit; \
+	done; \
 	src=${BUILDLINK_PREFIX.libXdmcp}/lib/pkgconfig/xdmcp.pc; \
 	dst=${BUILDLINK_DIR}/lib/pkgconfig/xdmcp.pc; \
 	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig; \
