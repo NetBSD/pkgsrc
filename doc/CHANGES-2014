@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.973 2014/03/10 12:24:47 adam Exp $
+$NetBSD: CHANGES-2014,v 1.974 2014/03/10 12:49:59 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1479,3 +1479,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/rabbitmq to 3.2.4 [fhajny 2014-03-10]
 	Updated chat/ejabberd to 13.12 [fhajny 2014-03-10]
 	Updated www/squid3 to 3.4.4 [adam 2014-03-10]
+	Updated www/squidGuard to 1.4nb9 [obache 2014-03-10]
