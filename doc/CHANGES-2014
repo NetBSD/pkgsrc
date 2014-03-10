@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.976 2014/03/10 13:24:24 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.977 2014/03/10 14:23:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1482,3 +1482,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/squidGuard to 1.4nb9 [obache 2014-03-10]
 	Updated chat/prosody to 0.9.3 [fhajny 2014-03-10]
 	Updated databases/redis to 2.8.7 [fhajny 2014-03-10]
+	Added lang/tcl85 version 8.5.15nb1 [taca 2014-03-10]
+	Added x11/tk85 version 8.5.15nb1 [taca 2014-03-10]
