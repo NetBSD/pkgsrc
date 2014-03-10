@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13054 2014/03/10 15:28:57 wiz Exp $
+$NetBSD: TODO,v 1.13055 2014/03/10 19:48:06 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -462,7 +462,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o crossfire-client-gtk2-1.60.0
 	o cuisine-0.6.5
 	o cups-1.7.1
-	o cvs-fast-export-1.9
 	o cvs2p4-2.5.5 [schmonz]
 	o cwm-5.1
 	o cxref-1.6e
