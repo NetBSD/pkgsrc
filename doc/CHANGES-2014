@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.967 2014/03/10 00:59:15 pettai Exp $
+$NetBSD: CHANGES-2014,v 1.968 2014/03/10 08:39:28 he Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1474,3 +1474,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/knot to 1.4.3 [pettai 2014-03-09]
 	Updated devel/userspace-rcu to 0.8.4 [pettai 2014-03-09]
 	Updated security/oath-toolkit to 2.4.1 [pettai 2014-03-10]
+	Added emulators/free42 version 1.4.78 [he 2014-03-10]
