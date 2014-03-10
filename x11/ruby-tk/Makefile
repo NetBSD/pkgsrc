@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2014/01/11 14:42:06 adam Exp $
+# $NetBSD: Makefile,v 1.43 2014/03/10 14:23:51 taca Exp $
 
 DISTNAME=		${RUBY_DISTNAME}
 PKGNAME=		${RUBY_PKGPREFIX}-${RUBY_EXTNAME}-${RUBY_VERSION_FULL}
-PKGREVISION=		2
+PKGREVISION=		3
 RUBY_EXTNAME=		tk
 CATEGORIES=		x11 ruby
 MASTER_SITES=		${MASTER_SITE_RUBY}
@@ -36,6 +36,6 @@ post-install:
 
 .include "../../lang/ruby/modules.mk"
 .include "../../lang/ruby/Makefile.common"
-.include "../../lang/tcl/buildlink3.mk"
-.include "../../x11/tk/buildlink3.mk"
+.include "../../lang/tcl85/buildlink3.mk"
+.include "../../x11/tk85/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
