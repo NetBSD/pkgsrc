@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.20 2012/03/19 12:34:21 joerg Exp $
+# $NetBSD: builtin.mk,v 1.21 2014/03/10 11:56:02 jperkin Exp $
 
 BUILTIN_PKG:=	Xrender
 
@@ -118,6 +118,9 @@ BUILDLINK_TARGETS+=	Xrender-fake-pc
 
 Xrender-fake-pc:
 	${RUN} \
+	for dir in lib lib${LIBABISUFFIX} share; do \
+		${TEST} -f ${BUILDLINK_PREFIX.Xrender}/$${dir}/pkgconfig/xrender.pc && exit; \
+	done; \
 	src=${BUILDLINK_PREFIX.Xrender}/lib/pkgconfig/xrender.pc; \
 	dst=${BUILDLINK_DIR}/lib/pkgconfig/xrender.pc; \
 	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig; \
