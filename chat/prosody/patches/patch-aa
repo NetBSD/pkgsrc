@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2013/09/13 14:37:49 fhajny Exp $
+$NetBSD: patch-aa,v 1.4 2014/03/10 13:01:17 fhajny Exp $
 
 Fix installation directories and scripts
---- Makefile.orig	2013-09-09 10:32:23.000000000 +0000
+--- Makefile.orig	2014-01-12 11:41:40.000000000 +0000
 +++ Makefile
 @@ -3,10 +3,11 @@ include config.unix
  
@@ -16,8 +16,8 @@ Fix installation directories and scripts
  
  INSTALLEDSOURCE = $(PREFIX)/lib/prosody
  INSTALLEDCONFIG = $(SYSCONFDIR)
-@@ -19,26 +20,39 @@ all: prosody.install prosodyctl.install
- 	$(MAKE) -C util-src install
+@@ -22,26 +23,39 @@ ifeq ($(EXCERTS),yes)
+ endif
  
  install: prosody.install prosodyctl.install prosody.cfg.lua.install util/encodings.so util/encodings.so util/pposix.so util/signal.so
 -	install -d $(BIN) $(CONFIG) $(MODULES) $(SOURCE)

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2014/02/12 23:17:37 tron Exp $
+# $NetBSD: Makefile,v 1.13 2014/03/10 13:01:17 fhajny Exp $
 #
 
-DISTNAME=		prosody-0.9.1
-PKGREVISION=		2
+DISTNAME=		prosody-0.9.3
 CATEGORIES=		chat
 MASTER_SITES=		http://prosody.im/downloads/source/
 
@@ -47,6 +46,10 @@ PKG_SHELL.${PROSODY_USER}=	${NOLOGIN}
 PKG_SYSCONFSUBDIR=	${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES+=		${EGDIR}/prosody.cfg.lua ${PKG_SYSCONFDIR}/prosody.cfg.lua
+CONF_FILES+=		${EGDIR}/certs/example.com.cnf ${PKG_SYSCONFDIR}/certs/example.com.cnf
+CONF_FILES+=		${EGDIR}/certs/example.com.crt ${PKG_SYSCONFDIR}/certs/example.com.crt
+CONF_FILES+=		${EGDIR}/certs/example.com.key ${PKG_SYSCONFDIR}/certs/example.com.key
+CONF_FILES+=		${EGDIR}/certs/localhost.cnf ${PKG_SYSCONFDIR}/certs/localhost.cnf
 CONF_FILES+=		${EGDIR}/certs/localhost.crt ${PKG_SYSCONFDIR}/certs/localhost.crt
 CONF_FILES+=		${EGDIR}/certs/localhost.key ${PKG_SYSCONFDIR}/certs/localhost.key
 
