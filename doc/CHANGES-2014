@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.966 2014/03/09 19:17:06 pettai Exp $
+$NetBSD: CHANGES-2014,v 1.967 2014/03/10 00:59:15 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1473,3 +1473,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/ruby-tw to 1.0.8 [tsutsui 2014-03-09]
 	Updated net/knot to 1.4.3 [pettai 2014-03-09]
 	Updated devel/userspace-rcu to 0.8.4 [pettai 2014-03-09]
+	Updated security/oath-toolkit to 2.4.1 [pettai 2014-03-10]
