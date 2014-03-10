@@ -1,0 +1,16 @@
+$NetBSD: patch-kcontrol_kio_envvarproxy_ui.ui,v 1.1 2014/03/10 18:03:35 jperkin Exp $
+
+Fix includes.
+
+--- kcontrol/kio/envvarproxy_ui.ui.orig	2006-01-19 17:00:52.000000000 +0000
++++ kcontrol/kio/envvarproxy_ui.ui
+@@ -163,6 +163,9 @@ Alternatively, you can click on the &lt;
+         </widget>
+     </grid>
+ </widget>
++<includes>
++    <include location="local" impldecl="in implementation">klineedit.h</include>
++</includes>
+ <tabstops>
+     <tabstop>leHttp</tabstop>
+     <tabstop>leHttps</tabstop>
