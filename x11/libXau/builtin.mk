@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.4 2010/12/13 07:51:45 obache Exp $
+# $NetBSD: builtin.mk,v 1.5 2014/03/10 11:56:02 jperkin Exp $
 
 BUILTIN_PKG:=	libXau
 
@@ -60,6 +60,9 @@ BUILDLINK_TARGETS+=	xau-fake-pc
 
 xau-fake-pc:
 	${RUN} \
+	for dir in lib lib${LIBABISUFFIX} share; do \
+		${TEST} -f ${BUILDLINK_PREFIX.libXau}/$${dir}/pkgconfig/xau.pc && exit; \
+	done; \
 	src=${BUILDLINK_PREFIX.libXau}/lib/pkgconfig/xau.pc; \
 	dst=${BUILDLINK_DIR}/lib/pkgconfig/xau.pc; \
 	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig; \
