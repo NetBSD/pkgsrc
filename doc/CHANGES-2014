@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.991 2014/03/11 11:50:48 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.992 2014/03/11 11:56:23 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1500,3 +1500,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/ffmpeg to 20140305.1.2.6 [wiz 2014-03-11]
 	Updated lang/ocaml to 4.01.0nb2 [jperkin 2014-03-11]
 	Updated devel/xulrunner24 to 24.3.0 [ryoon 2014-03-11]
+	Updated mail/msmtp to 1.4.32 [ryoon 2014-03-11]
