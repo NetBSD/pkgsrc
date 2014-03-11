@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/04/21 00:58:46 rodent Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/03/11 14:05:06 jperkin Exp $
 bin/avahi-browse
 bin/avahi-browse-domains
 ${PLIST.ui}bin/avahi-discover-standalone
@@ -120,7 +120,6 @@ share/examples/avahi/avahi-dnsconfd.action
 share/examples/avahi/hosts
 share/examples/avahi/services/sftp-ssh.service
 share/examples/avahi/services/ssh.service
-share/examples/rc.d/avahidaemon
 ${PLIST.introspection}share/gir-1.0/Avahi-0.6.gir
 ${PLIST.introspection}share/gir-1.0/AvahiCore-0.6.gir
 share/locale/bg/LC_MESSAGES/avahi.mo

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:20 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/03/11 14:05:17 jperkin Exp $
 libexec/cgi-bin/dansguardian.pl
 man/man8/dansguardian.8
 sbin/dansguardian
@@ -125,4 +125,3 @@ share/examples/dansguardian/phraselists/webmail/weighted
 share/examples/dansguardian/pics
 share/examples/dansguardian/transparent1x1.gif
 share/examples/dansguardian/weightedphraselist
-share/examples/rc.d/dansguardian

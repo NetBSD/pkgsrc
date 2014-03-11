@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:09:43 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/03/11 14:05:11 jperkin Exp $
 bin/rarchie
 bin/rfinger
 bin/rftp
@@ -21,7 +21,6 @@ man/man1/stopsocks.1
 man/man5/libsocks5.conf.5
 man/man5/socks5.conf.5
 man/man5/socks5.passwd.5
-share/examples/rc.d/socks5
 share/examples/socks5/README
 share/examples/socks5/multiple_server.example
 share/examples/socks5/server_2_multiple_server.example

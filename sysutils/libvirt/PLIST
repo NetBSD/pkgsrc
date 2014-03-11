@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/03/07 00:30:11 agc Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/03/11 14:05:15 jperkin Exp $
 bin/virsh
 bin/virt-host-validate
 bin/virt-pki-validate
@@ -159,7 +159,6 @@ share/examples/logrotate.d/libvirtd
 share/examples/logrotate.d/libvirtd.lxc
 share/examples/logrotate.d/libvirtd.qemu
 share/examples/logrotate.d/libvirtd.uml
-share/examples/rc.d/libvirtd
 share/examples/sasl2/libvirt.conf
 share/gtk-doc/html/libvirt/general.html
 share/gtk-doc/html/libvirt/home.png

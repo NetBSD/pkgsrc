@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/05 00:54:46 cube Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/11 14:04:58 jperkin Exp $
 lib/squeezeboxserver/CPAN/AnyEvent/AIO.pm
 lib/squeezeboxserver/CPAN/AnyEvent/Debug.pm
 lib/squeezeboxserver/CPAN/AnyEvent/Handle.pm
@@ -614,7 +614,6 @@ lib/squeezeboxserver/lib/README
 lib/squeezeboxserver/lib/Template/Provider.pm
 lib/squeezeboxserver/scanner.pl
 lib/squeezeboxserver/slimserver.pl
-share/examples/rc.d/squeezeboxserver
 share/squeezeboxserver/Changelog.html
 share/squeezeboxserver/Changelog1.html
 share/squeezeboxserver/Changelog2.html

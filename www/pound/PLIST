@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/07 19:08:09 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/11 14:05:18 jperkin Exp $
 man/man8/pound.8
 man/man8/poundctl.8
 sbin/pound
 sbin/poundctl
-share/examples/rc.d/pound

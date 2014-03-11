@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:41 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/03/11 14:05:11 jperkin Exp $
 ${PKGMANDIR}/man8/rbldnsd.8
 sbin/rbldnsd
 share/doc/rbldnsd/NEWS
 share/doc/rbldnsd/README.user
-share/examples/rc.d/rbldnsd

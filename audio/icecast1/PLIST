@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:10:28 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/03/11 14:04:57 jperkin Exp $
 bin/icecast
 share/doc/icecast/manual.html
 share/examples/icecast/groups.aut.dist
 share/examples/icecast/icecast.conf.dist
 share/examples/icecast/mounts.aut.dist
 share/examples/icecast/users.aut.dist
-share/examples/rc.d/icecast
 share/icecast/templates/306.html
 share/icecast/templates/400.html
 share/icecast/templates/403.html

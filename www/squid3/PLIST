@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2014/02/07 05:28:19 obache Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/03/11 14:05:18 jperkin Exp $
 bin/purge
 bin/squidclient
 ${PLIST.ba_getpwnam}libexec/basic_getpwnam_auth
@@ -42,7 +42,6 @@ man/man8/log_db_daemon.8
 man/man8/squid.8
 man/man8/storeid_file_rewrite.8
 sbin/squid
-share/examples/rc.d/squid
 share/examples/squid/cachemgr.conf
 share/examples/squid/errorpage.css
 share/examples/squid/mime.conf

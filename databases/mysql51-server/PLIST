@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2013/10/01 11:00:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2014/03/11 14:05:00 jperkin Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -94,7 +94,6 @@ ${PLIST.ndb}man/man8/ndbd.8
 ${PLIST.ndb}man/man8/ndbmtd.8
 mysql-test/lib/My/SafeProcess/my_safe_process
 share/aclocal/mysql.m4
-share/examples/rc.d/mysqld
 share/mysql-test/collections/README
 share/mysql-test/collections/README.experimental
 share/mysql-test/collections/default.daily

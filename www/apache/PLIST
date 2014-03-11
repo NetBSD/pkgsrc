@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2009/06/14 22:00:17 joerg Exp $
+@comment $NetBSD: PLIST,v 1.17 2014/03/11 14:05:17 jperkin Exp $
 bin/checkgid
 bin/dbmmanage
 bin/htdigest
@@ -72,7 +72,6 @@ sbin/rotatelogs
 share/examples/httpd/httpd.conf.default
 share/examples/httpd/magic.default
 share/examples/httpd/mime.types.default
-share/examples/rc.d/apache
 share/httpd/htdocs/apache_pb.gif
 share/httpd/htdocs/index.html.ca
 share/httpd/htdocs/index.html.cz

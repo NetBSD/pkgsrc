@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/02/22 17:06:54 imil Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/11 14:05:18 jperkin Exp $
 man/man8/nginx.8
 sbin/nginx
 share/examples/nginx/conf/fastcgi.conf
@@ -12,4 +12,3 @@ ${PLIST.naxsi}share/examples/nginx/conf/naxsi_core.rules
 share/examples/nginx/conf/win-utf
 share/examples/nginx/html/50x.html
 share/examples/nginx/html/index.html
-share/examples/rc.d/nginx

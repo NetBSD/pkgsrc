@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/03/22 22:40:18 asau Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/03/11 14:05:17 jperkin Exp $
 bin/CTK-run
 bin/cget
 bin/cherokee-admin-launcher
@@ -1051,7 +1051,6 @@ share/doc/cherokee/other_signals.html
 share/examples/cherokee/cherokee/cherokee.conf
 share/examples/cherokee/cherokee/cherokee.conf.perf_sample
 share/examples/cherokee/pam.d/cherokee
-share/examples/rc.d/cherokee
 share/locale/ca/LC_MESSAGES/cherokee.mo
 share/locale/de/LC_MESSAGES/cherokee.mo
 share/locale/en/LC_MESSAGES/cherokee.mo

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2012/09/18 07:17:28 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.40 2014/03/11 14:05:13 jperkin Exp $
 bin/cancel
 bin/cups-config
 bin/cupstestdsc
@@ -1095,7 +1095,6 @@ share/doc/cups/ru/index.html
 ${PLIST.pam}share/examples/cups/cups.pam
 share/examples/cups/cupsd.conf
 share/examples/cups/snmp.conf
-share/examples/rc.d/cupsd
 share/locale/da/cups_da.po
 share/locale/de/cups_de.po
 share/locale/es/cups_es.po

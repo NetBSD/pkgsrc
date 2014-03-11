@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:37:46 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/03/11 14:04:59 jperkin Exp $
 bin/encspeed
 bin/ircd
 bin/ircd-hybrid-mkpasswd
@@ -121,7 +121,6 @@ share/examples/ircd-hybrid/example.conf
 share/examples/ircd-hybrid/example.conf.quick
 share/examples/ircd-hybrid/example.efnet.conf
 share/examples/ircd-hybrid/simple.conf
-share/examples/rc.d/ircd-hybrid
 share/ircd-hybrid/help/opers/accept
 share/ircd-hybrid/help/opers/admin
 share/ircd-hybrid/help/opers/away

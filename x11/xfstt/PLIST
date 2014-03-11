@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.10 2012/06/13 08:23:25 mef Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/03/11 14:05:19 jperkin Exp $
 bin/xfstt
 man/man1/xfstt.1
 share/doc/xfstt/FAQ
 share/doc/xfstt/THANKS
 share/doc/xfstt/TODO
-share/examples/rc.d/xfstt
 share/examples/xfstt/font.properties
 @pkgdir lib/X11/fonts/TTF

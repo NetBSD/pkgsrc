@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2013/12/13 16:44:44 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.18 2014/03/11 14:04:59 jperkin Exp $
 bin/bdbdump.pl
 bin/c2s
 bin/jabberd
@@ -69,8 +69,3 @@ share/examples/jabberd/router-users.xml
 share/examples/jabberd/router.xml
 share/examples/jabberd/s2s.xml
 share/examples/jabberd/sm.xml
-share/examples/rc.d/c2s
-share/examples/rc.d/jabberd
-share/examples/rc.d/router
-share/examples/rc.d/s2s
-share/examples/rc.d/sm

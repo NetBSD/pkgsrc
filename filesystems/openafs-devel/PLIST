@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/08/30 17:37:55 jakllsch Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/11 14:05:01 jperkin Exp $
 bin/afs_compile_et
 bin/afsio
 bin/afsmonitor
@@ -267,6 +267,5 @@ sbin/voldump
 sbin/volinfo
 sbin/vos
 sbin/vsys
-share/examples/rc.d/bosserver
 share/openafs/C/afszcm.cat
 @pkgdir lib/openafs

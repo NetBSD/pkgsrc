@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2014/01/28 12:41:40 obache Exp $
+@comment $NetBSD: PLIST,v 1.16 2014/03/11 14:05:04 jperkin Exp $
 bin/milter-manager-log-analyzer
 bin/milter-performance-check
 bin/milter-report-statistics
@@ -341,7 +341,6 @@ share/examples/milter-manager/defaults/pkgsrc.conf
 share/examples/milter-manager/defaults/redhat.conf
 share/examples/milter-manager/milter-manager.conf
 share/examples/milter-manager/models/example.rb
-share/examples/rc.d/milter-manager
 share/milter-manager/license/fdl.txt
 share/milter-manager/license/gpl.txt
 share/milter-manager/license/lgpl.txt

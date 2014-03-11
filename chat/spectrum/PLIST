@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/07 06:31:22 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/11 14:04:59 jperkin Exp $
 bin/spectrum
 bin/spectrumctl
 ${PYSITELIB}/spectrum/ExistsError.py
@@ -28,7 +28,6 @@ ${PYSITELIB}/spectrum/spectrumconfigparser.py
 ${PYSITELIB}/spectrum/spectrumconfigparser.pyc
 man/man5/spectrum.cfg.5
 man/man8/spectrumctl.8
-share/examples/rc.d/spectrum
 share/examples/spectrum/ChangeLog
 share/examples/spectrum/spectrum-mysql.sql
 share/examples/spectrum/spectrum.cfg

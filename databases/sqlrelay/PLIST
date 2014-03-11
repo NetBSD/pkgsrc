@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2011/11/02 13:59:29 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/03/11 14:05:01 jperkin Exp $
 bin/backupschema
 bin/fields
 bin/query
@@ -154,7 +154,6 @@ share/doc/sqlrelay/programming/zope/zsqlmethodresultset.gif
 share/doc/sqlrelay/running.html
 share/doc/sqlrelay/tuning.html
 share/doc/sqlrelay/windows.html
-share/examples/rc.d/sqlrelay
 share/examples/sqlrelay/sqlrelay
 share/examples/sqlrelay/sqlrelay.conf.example
 share/examples/sqlrelay/sqlrelay.dtd

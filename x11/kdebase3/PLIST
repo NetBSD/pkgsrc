@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.54 2014/03/10 18:03:35 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.55 2014/03/11 14:05:19 jperkin Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -1136,7 +1136,6 @@ share/examples/kdebase3/kde-information.menu
 share/examples/kdebase3/kde-screensavers.menu
 share/examples/kdebase3/kde-settings.menu
 share/examples/kdebase3/ksysguarddrc
-share/examples/rc.d/kdm
 share/icons/Daemon.png
 share/icons/NetBSD-flag.png
 share/icons/crystalsvg/128x128/apps/access.png

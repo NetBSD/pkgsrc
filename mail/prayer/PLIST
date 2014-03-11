@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2010/06/08 12:34:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2014/03/11 14:05:04 jperkin Exp $
 man/man5/prayer.cf.5
 man/man8/prayer-session.8
 man/man8/prayer-ssl-prune.8
@@ -13,7 +13,6 @@ sbin/prayer-ssl-prune
 share/examples/prayer/motd.html
 share/examples/prayer/prayer-accountd.cf
 share/examples/prayer/prayer.cf
-share/examples/rc.d/prayer
 share/prayer/icons/addressbook-inactive.gif
 share/prayer/icons/addressbook.gif
 share/prayer/icons/back.gif

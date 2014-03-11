@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/02/20 08:36:34 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/03/11 14:05:15 jperkin Exp $
 lib/libpromises.la
 man/man8/cf-agent.8
 man/man8/cf-execd.8
@@ -295,6 +295,3 @@ share/examples/cfengine/win_dns_client.cf
 share/examples/cfengine/win_emergency.cf
 share/examples/cfengine/win_registry.cf
 share/examples/cfengine/win_schedule.cf
-share/examples/rc.d/cfexecd
-share/examples/rc.d/cfmonitord
-share/examples/rc.d/cfserverd

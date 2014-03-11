@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2013/07/14 15:42:34 rodent Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/03/11 14:04:59 jperkin Exp $
 sbin/ircd
 share/doc/unrealircd/Authors
 share/doc/unrealircd/LICENSE
@@ -11,7 +11,6 @@ share/doc/unrealircd/unreal32docs.html
 share/doc/unrealircd/unreal32docs.hu.html
 share/doc/unrealircd/unreal32docs.ru.html
 share/doc/unrealircd/unreal32docs.tr.html
-share/examples/rc.d/unrealircd
 share/examples/unrealircd/example.conf
 share/examples/unrealircd/example.de.conf
 share/examples/unrealircd/example.es.conf

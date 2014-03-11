@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/02 16:09:51 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/11 14:05:08 jperkin Exp $
 bin/istgt
 bin/istgtcontrol
 man/man1/istgt.1
@@ -6,4 +6,3 @@ share/examples/istgt/auth.conf
 share/examples/istgt/istgt.conf
 share/examples/istgt/istgt.large.conf
 share/examples/istgt/istgtcontrol.conf
-share/examples/rc.d/istgt

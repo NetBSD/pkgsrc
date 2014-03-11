@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/12/05 16:00:19 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/11 14:05:04 jperkin Exp $
 include/opendmarc/dmarc.h
 lib/libopendmarc.la
 man/man5/opendmarc.conf.5
@@ -67,4 +67,3 @@ share/doc/opendmarc/opendmarc_xml_parse.html
 share/doc/opendmarc/rddmarc
 share/doc/opendmarc/schema.mysql
 share/examples/opendmarc/opendmarc.conf.sample
-share/examples/rc.d/opendmarc

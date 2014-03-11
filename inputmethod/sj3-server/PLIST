@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/02/15 13:35:22 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/03/11 14:05:02 jperkin Exp $
 bin/sj3mkdic
 lib/libsj3core.la
 libdata/sj3main.dic
@@ -9,8 +9,6 @@ sbin/sj3serv
 share/doc/sj3/hinsi.ms
 share/doc/sj3/makedict.ms
 share/doc/sj3/sj3serv.ms
-share/examples/rc.d/sj3proxy
-share/examples/rc.d/sj3serv
 share/examples/sj3/freebsd-sj3.sh.in
 share/examples/sj3/freebsd-sj3proxy.sh.in
 share/examples/sj3/sj3proxy.lua.example

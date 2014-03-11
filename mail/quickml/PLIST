@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/06/19 10:01:53 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/11 14:05:05 jperkin Exp $
 ${PLIST.analog}bin/quickml-analog
 ${RUBY_VENDORLIB}/quickml.rb
 ${RUBY_VENDORLIB}/quickml/config.rb
@@ -13,5 +13,4 @@ ${RUBY_VENDORLIB}/quickml/version.rb
 sbin/quickml
 sbin/quickml-ctl
 share/examples/quickml/quickmlrc.sample
-share/examples/rc.d/quickml
 share/quickml/messages.ja

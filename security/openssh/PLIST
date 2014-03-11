@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2010/06/11 20:41:41 martti Exp $
+@comment $NetBSD: PLIST,v 1.15 2014/03/11 14:05:13 jperkin Exp $
 bin/scp
 bin/sftp
 bin/slogin
@@ -29,4 +29,3 @@ sbin/sshd
 share/examples/openssh/moduli
 share/examples/openssh/ssh_config
 share/examples/openssh/sshd_config
-share/examples/rc.d/sshd

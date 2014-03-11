@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/05/03 21:21:58 jdf Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/11 14:05:15 jperkin Exp $
 man/man5/fscd.conf.5
 man/man8/fscadm.8
 man/man8/fscd.8
@@ -6,4 +6,3 @@ man/man8/service.8
 sbin/fscadm
 sbin/fscd
 sbin/service
-share/examples/rc.d/fscd

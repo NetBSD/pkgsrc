@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/07/25 11:44:49 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/03/11 14:05:06 jperkin Exp $
 bin/argus-config
 lib/argus/Alias.pm
 lib/argus/Argus/Agent.pm
@@ -104,7 +104,6 @@ share/examples/argus/locale/template
 share/examples/argus/log
 share/examples/argus/notno
 share/examples/argus/users.example
-share/examples/rc.d/argusd
 @pkgdir share/examples/argus/stats
 @pkgdir share/examples/argus/perl
 @pkgdir share/examples/argus/notify

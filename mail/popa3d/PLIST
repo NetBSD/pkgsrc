@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 20:45:11 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/03/11 14:05:04 jperkin Exp $
 man/man8/popa3d.8
 sbin/popa3d
 share/doc/popa3d/DESIGN
 share/doc/popa3d/INSTALL
 share/doc/popa3d/LICENSE
-share/examples/rc.d/popa3d
 @comment empty dir to chroot to
 @pkgdir share/empty

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/01/12 00:11:19 jym Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/03/11 14:05:16 jperkin Exp $
 bin/pygrub
 bin/readnotes
 bin/xc_restore
@@ -359,9 +359,6 @@ sbin/xenstored
 sbin/xentop
 sbin/xen-python-path
 sbin/xm
-share/examples/rc.d/xenbackendd
-share/examples/rc.d/xend
-share/examples/rc.d/xendomains
 share/examples/xen/block
 share/examples/xen/netbsd1
 share/examples/xen/vif-bridge

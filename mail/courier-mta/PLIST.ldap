@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST.ldap,v 1.1.1.1 2006/04/28 18:10:21 jlam Exp $
+@comment $NetBSD: PLIST.ldap,v 1.2 2014/03/11 14:05:02 jperkin Exp $
 sbin/courierldapaliasd
 share/examples/courier/ldapaliasrc.dist
-share/examples/rc.d/courierldapaliasd

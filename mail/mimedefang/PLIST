@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:04:38 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/03/11 14:05:04 jperkin Exp $
 bin/md-mx-ctrl
 bin/mimedefang
 bin/mimedefang-multiplexor
@@ -13,6 +13,4 @@ man/man8/mimedefang.pl.8
 man/man8/watch-mimedefang.8
 share/examples/mimedefang/mimedefang-filter
 share/examples/mimedefang/sa-mimedefang.cf
-share/examples/rc.d/mimedefang
-share/examples/rc.d/mimedefang-multiplexor
 share/mimedefang/gen-ip-validator.pl

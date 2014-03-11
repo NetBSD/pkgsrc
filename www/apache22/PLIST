@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2013/03/03 20:05:03 tron Exp $
+@comment $NetBSD: PLIST,v 1.23 2014/03/11 14:05:17 jperkin Exp $
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
 include/httpd/ap_config_auto.h
@@ -170,7 +170,6 @@ share/examples/httpd/extra/httpd-vhosts.conf
 share/examples/httpd/httpd.conf
 share/examples/httpd/magic
 share/examples/httpd/mime.types
-share/examples/rc.d/apache
 share/httpd/build/config.nice
 share/httpd/build/config_vars.mk
 share/httpd/build/instdso.sh

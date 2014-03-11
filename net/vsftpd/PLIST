@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:09:48 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/03/11 14:05:12 jperkin Exp $
 libexec/vsftpd
 man/man5/vsftpd.conf.5
 man/man8/vsftpd.8
@@ -11,5 +11,4 @@ share/doc/vsftpd/SECURITY/IMPLEMENTATION
 share/doc/vsftpd/SECURITY/OVERVIEW
 share/doc/vsftpd/SECURITY/TRUST
 share/doc/vsftpd/TUNING
-share/examples/rc.d/vsftpd
 share/examples/vsftpd/vsftpd.conf.default

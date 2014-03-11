@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/02/23 11:25:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/03/11 14:05:01 jperkin Exp $
 bin/postgres
 bin/postmaster
 include/postgresql/server/plpgsql.h
@@ -31,7 +31,6 @@ lib/postgresql/utf8_and_sjis.so
 lib/postgresql/utf8_and_sjis2004.so
 lib/postgresql/utf8_and_uhc.so
 lib/postgresql/utf8_and_win.so
-share/examples/rc.d/pgsql
 share/locale/cs/LC_MESSAGES/plpgsql-9.2.mo
 share/locale/de/LC_MESSAGES/plpgsql-9.2.mo
 share/locale/de/LC_MESSAGES/postgres-9.2.mo

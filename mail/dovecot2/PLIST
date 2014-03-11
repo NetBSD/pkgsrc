@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2014/02/13 19:54:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.34 2014/03/11 14:05:03 jperkin Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -806,4 +806,3 @@ share/examples/dovecot/dovecot-openssl.cnf
 share/examples/dovecot/dovecot-sql.conf.ext
 share/examples/dovecot/dovecot.conf
 share/examples/dovecot/mkcert.sh
-share/examples/rc.d/dovecot

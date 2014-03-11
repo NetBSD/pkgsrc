@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2014/01/12 17:01:02 spz Exp $
+@comment $NetBSD: PLIST,v 1.15 2014/03/11 14:05:09 jperkin Exp $
 bin/sntp
 man/man1/sntp.1
 man/man5/ntp.conf.5
@@ -487,7 +487,5 @@ share/examples/ntp4/grundoon.conf
 share/examples/ntp4/malarky.conf
 share/examples/ntp4/pogo.conf
 share/examples/ntp4/rackety.conf
-share/examples/rc.d/ntpd
-share/examples/rc.d/ntpdate
 share/ntp/lib/NTP/Util.pm
 @pkgdir include/event2
