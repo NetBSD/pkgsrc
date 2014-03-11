@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/02/06 12:01:43 spz Exp $
+# $NetBSD: Makefile,v 1.15 2014/03/11 14:34:40 jperkin Exp $
 #
 
 DISTNAME=	apache-tomcat-${TOMCAT_VER}
@@ -28,6 +28,7 @@ TOMCAT_HOME=		${PREFIX}/share/tomcat
 EGDIR=			${PREFIX}/share/examples/tomcat
 DOCDIR=			${PREFIX}/share/doc/tomcat
 RCD_SCRIPTS=		tomcat
+SMF_NAME=		tomcat
 TOMCAT_USER?=		tomcat
 TOMCAT_GROUP?=		tomcat
 USERGROUP_PHASE=	pre-install
