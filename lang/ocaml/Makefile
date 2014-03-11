@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.88 2013/12/21 16:21:20 christos Exp $
+# $NetBSD: Makefile,v 1.89 2014/03/11 10:29:30 jperkin Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=	1
+PKGREVISION=	2
 
 CONFIGURE_ARGS+=	-no-tk
 CONFIGURE_ARGS+=	-cc ${CC}
@@ -19,7 +19,7 @@ UNLIMIT_RESOURCES=	stacksize
 # Stub libraries for functions missing from base system.
 .if !empty(MACHINE_PLATFORM:MDarwin-*-powerpc) || \
     !empty(MACHINE_PLATFORM:MDarwin-9.*-i386) || \
-    !empty(MACHINE_PLATFORM:MDarwin-1[0-9].*-x86_64) || \
+    !empty(MACHINE_PLATFORM:MDarwin-1[0-9].*) || \
     ${OPSYS} == "DragonFly" || ${OPSYS} == "NetBSD" || \
     ${OPSYS} == "FreeBSD" || ${OPSYS} == "SunOS" || \
     ${OPSYS} == "Linux"
