@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2013/09/04 12:31:26 obache Exp $
+# $NetBSD: Makefile,v 1.50 2014/03/11 14:34:39 jperkin Exp $
 #
 
 DISTNAME=		nagios-3.5.0
@@ -35,7 +35,10 @@ USE_TOOLS+=		mail:run perl
 CONFIGURE_ARGS+=	--with-mail=${TOOLS_PLATFORM.mail:Q}
 
 RCD_SCRIPTS+=		nagios
+SMF_NAME=		nagios
 FILES_SUBST+=		NAGIOS_USER=${NAGIOS_USER}
+FILES_SUBST+=		NAGIOS_GROUP=${NAGIOS_GROUP}
+FILES_SUBST+=		NAGIOSDIR=${NAGIOSDIR}
 
 INSTALL_TARGET=		install install-config
 
