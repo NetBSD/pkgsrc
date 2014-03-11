@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2013/12/11 16:13:22 fhajny Exp $
+# $NetBSD: Makefile,v 1.20 2014/03/11 14:34:41 jperkin Exp $
 #
 
 DISTNAME=	varnish-3.0.5
@@ -33,6 +33,9 @@ PKG_USERS+=		${VRNUSER}:${VRNGROUP}
 PKG_HOME.${VRNUSER}=	${VRNDIR}
 PKG_SHELL.${VRNUSER}=	${SH}
 PKG_GECOS.${VRNUSER}=	Varnish daemon user
+
+FILES_SUBST+=		VRNUSER=${VRNUSER}
+FILES_SUBST+=		VRNGROUP=${VRNGROUP}
 
 RCD_SCRIPTS=		varnishd varnishlog varnishncsa
 PYTHON_FOR_BUILD_ONLY=	yes

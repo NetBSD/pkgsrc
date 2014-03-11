@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/02/14 10:25:23 fhajny Exp $
+# $NetBSD: Makefile,v 1.16 2014/03/11 14:34:36 jperkin Exp $
 #
 
 DISTNAME=	apache-cassandra-${CASSANDRA_VER}
@@ -29,6 +29,7 @@ EGDIR=		${PREFIX}/share/examples/cassandra
 DOCDIR=		${PREFIX}/share/doc/cassandra
 
 RCD_SCRIPTS=		cassandra
+SMF_NAME=		cassandra
 CASSANDRA_USER?=	cassandra
 CASSANDRA_GROUP?=	cassandra
 PKG_GROUPS=		${CASSANDRA_GROUP}

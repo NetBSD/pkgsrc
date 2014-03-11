@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.215 2014/02/12 23:18:34 tron Exp $
+# $NetBSD: Makefile,v 1.216 2014/03/11 14:34:40 jperkin Exp $
 
 DISTNAME=		openssh-6.4p1
 PKGNAME=		openssh-6.4.1
@@ -161,6 +161,7 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 OWN_DIRS=		${OPENSSH_CHROOT}
 RCD_SCRIPTS=		sshd
 RCD_SCRIPT_SRC.sshd=	${WRKDIR}/sshd.sh
+SMF_METHODS=		sshd
 
 PLIST_SRC+=		${.CURDIR}/PLIST
 FILES_SUBST+=		SSH_PID_DIR=${SSH_PID_DIR:Q}

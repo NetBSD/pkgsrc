@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/12/09 14:17:48 obache Exp $
+# $NetBSD: Makefile,v 1.12 2014/03/11 14:34:38 jperkin Exp $
 
 DISTNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
 PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL:S/-//}
@@ -75,6 +75,7 @@ OWN_DIRS_PERMS+=		${AMAVIS_DIR}/tmp ${AMAVIS_USER} ${AMAVIS_GROUP} 750
 OWN_DIRS_PERMS+=		${AMAVIS_QUARANTINE} ${AMAVIS_USER} ${AMAVIS_GROUP} 750
 
 RCD_SCRIPTS=	amavisd
+SMF_NAME=	amavisd
 CONF_FILES=	${EGDIR}/amavisd.conf-minimal ${PKG_SYSCONFDIR}/amavisd.conf
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.amavisd-new

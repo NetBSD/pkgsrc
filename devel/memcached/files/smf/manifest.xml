@@ -1,0 +1,34 @@
+<?xml version='1.0'?>
+<!DOCTYPE service_bundle SYSTEM '/usr/share/lib/xml/dtd/service_bundle.dtd.1'>
+<service_bundle type='manifest' name='@SMF_NAME@'>
+  <service name='@SMF_PREFIX@/@SMF_NAME@' type='service' version='1'>
+    <create_default_instance enabled='false' />
+    <single_instance />
+    <dependency name='loopback' grouping='require_all' restart_on='error' type='service'>
+      <service_fmri value='svc:/network/loopback:default' />
+    </dependency>
+    <exec_method name='start' type='method' exec='@PREFIX@/bin/memcached -d -u %{config/user} -l %{config/listen_ip} -m %{config/memory}' timeout_seconds='30'>
+      <method_context>
+        <method_environment>
+          <envvar name='EVENT_NOEVPORT' value='1' />
+          <envvar name='EVENT_SHOW_METHOD' value='1' />
+        </method_environment>
+      </method_context>
+    </exec_method>
+    <exec_method name='stop' type='method' exec=':kill' timeout_seconds='30' />
+    <property_group name='config' type='application'>
+      <propval name='listen_ip' type='astring' value='127.0.0.1' />
+      <propval name='user' type='astring' value='@MEMCACHED_USER@' />
+      <propval name='memory' type='integer' value='64' />
+    </property_group>
+    <stability value='Evolving' />
+    <template>
+      <common_name>
+        <loctext xml:lang='C'>memcached</loctext>
+      </common_name>
+      <documentation>
+        <doc_link name='memcached Official' uri='http://www.danga.com/memcached/' />
+      </documentation>
+    </template>
+  </service>
+</service_bundle>

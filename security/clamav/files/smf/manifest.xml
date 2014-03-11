@@ -1,0 +1,57 @@
+<?xml version='1.0'?>
+<!DOCTYPE service_bundle SYSTEM '/usr/share/lib/xml/dtd/service_bundle.dtd.1'>
+<service_bundle type='manifest' name='@SMF_NAME@'>
+  <service name='@SMF_PREFIX@/@SMF_NAME@' type='service' version='1'>
+    <dependency name='fs-local' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/system/filesystem/local'/>
+    </dependency>
+    <dependency name='network-service' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/network/service'/>
+    </dependency>
+    <dependency name='name-services' grouping='require_all' restart_on='refresh' type='service'>
+      <service_fmri value='svc:/milestone/name-services'/>
+    </dependency>
+    <dependency name='system-log' grouping='optional_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/system/system-log'/>
+    </dependency>
+    <method_context working_directory='@CLAMAV_DBDIR@'>
+        <method_credential user='@CLAMAV_USER@' group='@CLAMAV_GROUP@'/>
+    </method_context>
+    <property_group name='startd' type='framework'>
+      <propval name='ignore_error' type='astring' value='core,signal'/>
+    </property_group>
+    <instance name='clamd' enabled='false'>
+      <dependency name='config-file' grouping='require_all' restart_on='refresh' type='path'>
+        <service_fmri value='file://localhost@PKG_SYSCONFDIR@/clamd.conf'/>
+      </dependency>
+      <exec_method name='start' type='method' exec='@PREFIX@/@SMF_METHOD_FILE.clamd@ start' timeout_seconds='0'/>
+      <exec_method name='stop' type='method' exec='@PREFIX@/@SMF_METHOD_FILE.clamd@ stop' timeout_seconds='0'/>
+      <exec_method name='refresh' type='method' exec='@PREFIX@/@SMF_METHOD_FILE.clamd@ refresh' timeout_seconds='0'/>
+      <template>
+        <common_name>
+          <loctext xml:lang='C'>ClamAV anti-virus scanner daemon</loctext>
+        </common_name>
+        <documentation>
+          <manpage title='clamd' section='8' manpath='man'/>
+        </documentation>
+      </template>
+    </instance>
+    <instance name='freshclamd' enabled='false'>
+      <dependency name='config-file' grouping='require_all' restart_on='refresh' type='path'>
+        <service_fmri value='file://localhost@PKG_SYSCONFDIR@/freshclam.conf'/>
+      </dependency>
+      <exec_method name='start' type='method' exec='@PREFIX@/@SMF_METHOD_FILE.freshclamd@ start' timeout_seconds='0'/>
+      <exec_method name='stop' type='method' exec='@PREFIX@/@SMF_METHOD_FILE.freshclamd@ stop' timeout_seconds='0'/>
+      <exec_method name='refresh' type='method' exec='@PREFIX@/@SMF_METHOD_FILE.freshclamd@ refresh' timeout_seconds='0'/>
+      <template>
+        <common_name>
+          <loctext xml:lang='C'>ClamAV anti-virus database update daemon</loctext>
+        </common_name>
+        <documentation>
+          <manpage title='freshclam' section='1' manpath='man'/>
+        </documentation>
+      </template>
+    </instance>
+    <stability value='Unstable'/>
+  </service>
+</service_bundle>
