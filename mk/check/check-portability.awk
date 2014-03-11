@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.awk,v 1.5 2014/03/01 17:57:01 jklos Exp $
+# $NetBSD: check-portability.awk,v 1.6 2014/03/11 21:32:11 ryoon Exp $
 #
 # Checks a shell file for possible portability problems.
 #
@@ -9,6 +9,15 @@
 BEGIN {
 	found_random = no;
 	found_test_eqeq = no;
+}
+
+# length(array) of lang/nawk does not work as expected.
+function pkgsrc_length(arg, len) {
+	len = 0;
+	for (i in arg) {
+		len++
+	}
+	return len;
 }
 
 # Check for $RANDOM, which is specific to ksh and bash.
@@ -31,7 +40,7 @@ function check_random(line) {
 
 function check_test_eqeq(line,  n, word, i) {
 
-	if (length(line) == 0 || length(word) == 0)
+	if (length(line) == 0 || pkgsrc_length(word) == 0)
 		return;
 	n = split(line, word);
 	for (i = 3; i < n; i++) {
