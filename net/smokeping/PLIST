@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2012/02/02 18:54:34 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.13 2014/03/11 14:05:11 jperkin Exp $
 bin/smokeinfo
 bin/smokeping
 bin/smokeping_cgi
@@ -138,7 +138,6 @@ share/doc/smokeping/COPYRIGHT
 share/doc/smokeping/LICENSE
 share/doc/smokeping/README
 share/doc/smokeping/TODO
-share/examples/rc.d/smokeping
 share/examples/smokeping/basepage.html.dist
 share/examples/smokeping/config.dist
 share/examples/smokeping/config.echoping

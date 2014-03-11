@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2011/05/23 19:39:10 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/03/11 14:05:09 jperkin Exp $
 netdisco/bin/catalyst_mac_vlan.pl
 netdisco/bin/debian_install.sh
 netdisco/bin/device_to_csv
@@ -1993,4 +1993,3 @@ share/examples/netdisco/netdisco.conf
 share/examples/netdisco/netdisco.crontab
 share/examples/netdisco/netdisco_apache.conf
 share/examples/netdisco/netdisco_apache_dir.conf
-share/examples/rc.d/netdisco

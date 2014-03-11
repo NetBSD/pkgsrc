@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:04:44 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/03/11 14:05:05 jperkin Exp $
 libexec/teapop
 man/man8/teapop.8
 sbin/cronpopauth.pl
-share/examples/rc.d/teapop
 share/examples/teapop/teapop.passwd

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2013/10/29 15:13:34 pettai Exp $
+@comment $NetBSD: PLIST,v 1.12 2014/03/11 14:05:09 jperkin Exp $
 man/man5/nsd.conf.5
 man/man8/nsd-checkconf.8
 man/man8/nsd-control.8
@@ -8,5 +8,4 @@ sbin/nsd-checkconf
 sbin/nsd-control
 sbin/nsd-control-setup
 share/examples/nsd/nsd.conf
-share/examples/rc.d/nsd
 @pkgdir etc/nsd

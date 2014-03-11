@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2013/06/14 23:53:03 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.12 2014/03/11 14:04:59 jperkin Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -2815,7 +2815,6 @@ share/examples/asterisk/unistim.conf
 share/examples/asterisk/users.conf
 share/examples/asterisk/voicemail.conf
 share/examples/asterisk/vpb.conf
-share/examples/rc.d/asterisk
 ${PLIST.webvmail}share/httpd/htdocs/_asterisk/animlogo.gif
 ${PLIST.webvmail}share/httpd/htdocs/_asterisk/play.gif
 @pkgdir libdata/asterisk/keys

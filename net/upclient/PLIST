@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:09:47 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/03/11 14:05:12 jperkin Exp $
 bin/upclient
 share/doc/upclient/AUTHORS
 share/doc/upclient/COPYING
@@ -6,5 +6,4 @@ share/doc/upclient/HISTORY
 share/doc/upclient/README
 share/doc/upclient/FAQ
 share/doc/upclient/INSTALL
-share/examples/rc.d/upclient
 share/examples/upclient/upclient.conf
