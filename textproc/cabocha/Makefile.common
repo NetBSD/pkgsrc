@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.6 2014/02/24 06:23:01 obache Exp $
+# $NetBSD: Makefile.common,v 1.7 2014/03/11 09:43:06 obache Exp $
 # used by textproc/cabocha/Makefile
 # used by textproc/p5-cabocha/Makefile
 # used by textproc/py-cabocha/Makefile
 # used by textproc/ruby-cabocha/Makefile
 
-DISTNAME=	cabocha-0.67
+DISTNAME=	cabocha-0.68
 CATEGORIES=	textproc
 MASTER_SITES=	http://cabocha.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
