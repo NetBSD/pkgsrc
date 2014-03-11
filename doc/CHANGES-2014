@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.992 2014/03/11 11:56:23 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.993 2014/03/11 12:14:17 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1501,3 +1501,26 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/ocaml to 4.01.0nb2 [jperkin 2014-03-11]
 	Updated devel/xulrunner24 to 24.3.0 [ryoon 2014-03-11]
 	Updated mail/msmtp to 1.4.32 [ryoon 2014-03-11]
+	Updated meta-pkgs/ruby-gnome2 to 2.2.0 [obache 2014-03-11]
+	Updated devel/ruby-gnome2-atk to 2.2.0 [obache 2014-03-11]
+	Updated devel/ruby-gnome2-gio to 2.2.0 [obache 2014-03-11]
+	Updated devel/ruby-gnome2-glib to 2.2.0 [obache 2014-03-11]
+	Updated devel/ruby-gnome2-gobject-introspection to 2.2.0 [obache 2014-03-11]
+	Updated devel/ruby-gnome2-pango to 2.2.0 [obache 2014-03-11]
+	Updated graphics/ruby-gnome2-cairo-gobject to 2.2.0 [obache 2014-03-11]
+	Updated graphics/ruby-gnome2-clutter to 2.2.0 [obache 2014-03-11]
+	Updated graphics/ruby-gnome2-clutter-gtk to 2.2.0 [obache 2014-03-11]
+	Updated graphics/ruby-gnome2-gdk3 to 2.2.0 [obache 2014-03-11]
+	Updated graphics/ruby-gnome2-gdkpixbuf to 2.2.0 [obache 2014-03-11]
+	Updated graphics/ruby-gnome2-goocanvas to 2.2.0 [obache 2014-03-11]
+	Updated graphics/ruby-gnome2-rsvg to 2.2.0 [obache 2014-03-11]
+	Updated multimedia/ruby-gnome2-clutter-gstreamer to 2.2.0 [obache 2014-03-11]
+	Updated multimedia/ruby-gnome2-gstreamer to 2.2.0 [obache 2014-03-11]
+	Updated print/ruby-gnome2-poppler to 2.2.0 [obache 2014-03-11]
+	Updated www/ruby-gnome2-webkit-gtk to 2.2.0 [obache 2014-03-11]
+	Updated www/ruby-gnome2-webkit-gtk2 to 2.2.0 [obache 2014-03-11]
+	Updated x11/ruby-gnome2-gtk to 2.2.0 [obache 2014-03-11]
+	Updated x11/ruby-gnome2-gtk3 to 2.2.0 [obache 2014-03-11]
+	Updated x11/ruby-gnome2-vte to 2.2.0 [obache 2014-03-11]
+	Updated x11/ruby-gnome2-gtksourceview2 to 2.2.0 [obache 2014-03-11]
+	Updated x11/ruby-gnome2-gtksourceview3 to 2.2.0 [obache 2014-03-11]
