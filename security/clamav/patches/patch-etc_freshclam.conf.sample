@@ -1,0 +1,15 @@
+$NetBSD: patch-etc_freshclam.conf.sample,v 1.1 2014/03/11 14:34:40 jperkin Exp $
+
+Make this useable out of the box.
+
+--- etc/freshclam.conf.sample.orig	2013-04-17 15:25:09.000000000 +0000
++++ etc/freshclam.conf.sample
+@@ -5,7 +5,7 @@
+ 
+ 
+ # Comment or remove the line below.
+-Example
++#Example
+ 
+ # Path to the database directory.
+ # WARNING: It must match clamd.conf's directive!

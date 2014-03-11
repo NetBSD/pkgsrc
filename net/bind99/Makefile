@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2014/02/12 23:18:19 tron Exp $
+# $NetBSD: Makefile,v 1.34 2014/03/11 14:34:38 jperkin Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -67,6 +67,7 @@ PLIST.inet6=	yes
 .endif
 
 RCD_SCRIPTS=		lwresd named9
+SMF_METHODS=		named
 
 INSTALLATION_DIRS=	${DOCDIR} share/doc/bind9/arm
 

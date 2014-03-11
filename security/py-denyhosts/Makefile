@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/02/04 15:38:16 pettai Exp $
+# $NetBSD: Makefile,v 1.12 2014/03/11 14:34:40 jperkin Exp $
 
 VER=		2.6
 DISTNAME=	DenyHosts-${VER}
@@ -32,6 +32,7 @@ PYTHON_SELF_CONFLICT=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	33
 
 RCD_SCRIPTS+=	denyhosts
+SMF_NAME=	denyhost
 
 post-configure:
 	${RM} ${WRKDIR}/${DISTNAME}/scripts/*.orig

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2013/07/25 11:41:25 he Exp $
+# $NetBSD: Makefile,v 1.32 2014/03/11 14:34:40 jperkin Exp $
 #
 
 DISTNAME=	munin_${VER}
@@ -99,6 +99,7 @@ MESSAGE_SUBST+=	VARBASE=${VARBASE:Q}
 BUILD_DEFS+=	VARBASE
 
 RCD_SCRIPTS+=	munin-node
+SMF_NAME=	munin
 
 EGDIR=		${PREFIX}/share/examples/munin
 

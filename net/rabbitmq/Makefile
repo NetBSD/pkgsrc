@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/03/10 11:18:41 fhajny Exp $
+# $NetBSD: Makefile,v 1.17 2014/03/11 14:34:39 jperkin Exp $
 
 PKGNAME=		rabbitmq-${RMQ_VERSION}
 DISTNAME=		rabbitmq-server-${RMQ_VERSION}
@@ -50,6 +50,10 @@ CONF_FILES+=		share/examples/rabbitmq/rabbitmq-env.conf \
 			  ${PKG_SYSCONFDIR}/rabbitmq-env.conf
 CONF_FILES+=		share/examples/rabbitmq/rabbitmq.config.example \
 			  ${PKG_SYSCONFDIR}/rabbitmq.config
+
+FILES_SUBST+=		RMQ_USER=${RMQ_USER}
+FILES_SUBST+=		RMQ_GROUP=${RMQ_GROUP}
+FILES_SUBST+=		RMQ_DIR=${RMQ_DIR}
 
 INSTALLATION_DIRS+=	share/examples/rabbitmq
 

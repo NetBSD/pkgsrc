@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2013/10/02 18:06:19 adam Exp $
+# $NetBSD: Makefile,v 1.92 2014/03/11 14:34:39 jperkin Exp $
 
 DISTNAME=	rsync-3.1.0
 CATEGORIES=	net
@@ -26,6 +26,7 @@ PKG_SYSCONFSUBDIR=	rsync
 
 RCD_SCRIPTS=		rsyncd
 RCD_SCRIPT_SRC.rsyncd=	files/rsyncd.sh
+SMF_NAME=		rsyncd
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.

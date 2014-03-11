@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2013/07/12 10:44:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.79 2014/03/11 14:34:38 jperkin Exp $
 
 DISTNAME=	courier-imap-4.10.0
 PKGREVISION=	3
@@ -52,6 +52,7 @@ CONF_FILES_PERMS+=	${EGDIR}/${_file_}				\
 			${COURIER_FILE_PERMS}
 .endfor
 RCD_SCRIPTS=		courierimap courierimaps courierpop courierpops
+SMF_METHODS=		courier-imap
 
 SUBST_CLASSES+=		courier
 SUBST_FILES.courier=	imap/imapd-ssl.dist.in imap/imapd.8.in		\

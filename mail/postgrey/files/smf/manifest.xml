@@ -1,0 +1,51 @@
+<?xml version='1.0'?>
+<!DOCTYPE service_bundle SYSTEM '/usr/share/lib/xml/dtd/service_bundle.dtd.1'>
+<service_bundle type='manifest' name='@SMF_NAME@'>
+  <service name='@SMF_PREFIX@/@SMF_NAME@' type='service' version='1'>
+    <create_default_instance enabled="false" />
+    <single_instance />
+    <dependency name='fs-local' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/system/filesystem/local' />
+    </dependency>
+    <dependency name='loopback' grouping='require_all' restart_on='error' type='service'>
+      <service_fmri value='svc:/network/loopback:default' />
+    </dependency>
+    <dependency name='physical' grouping='require_all' restart_on='error' type='service'>
+      <service_fmri value='svc:/network/physical:default' />
+    </dependency>
+    <dependency name='name-services' grouping='require_all'  restart_on='refresh' type='service'>
+      <service_fmri value='svc:/milestone/name-services' />
+    </dependency>
+    <dependency name='system-log' grouping='optional_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/system/system-log' />
+    </dependency>
+    <dependency name='config-file' grouping='require_all' restart_on='none' type='path'>
+      <service_fmri value='file://@PKG_SYSCONFDIR@/postgrey_whitelist_clients' />
+    </dependency>
+    <method_context working_directory='@POSTGREY_DBDIR@'>
+      <method_credential user='@POSTGREY_USER@' group='@POSTGREY_GROUP@' />
+    </method_context>
+    <exec_method name='start' type='method' exec='@PREFIX@/sbin/postgrey --daemonize --privacy --inet=%{postgrey/port} %{postgrey/targrey} --tarpit=%{postgrey/tarpit} --pidfile=@POSTGREY_DBDIR@/postgrey.pid --greylist-action=%{postgrey/action} --greylist-text=%{postgrey/text} --delay=%{postgrey/delay} --max-age=%{postgrey/maxage} --retry-window=%{postgrey/retry}' timeout_seconds='30' />
+    <exec_method name='stop' type='method' exec=':kill' timeout_seconds='30' />
+    <property_group name='postgrey' type='application'>
+      <propval name='port' type='integer' value='10025'/>
+      <propval name='targrey' type='astring' value='--targrey'/>
+      <propval name='tarpit' type='integer' value='35'/>
+      <propval name='maxage' type='integer' value='35'/>
+      <propval name='delay' type='integer' value='300'/>
+      <propval name='retry' type='integer' value='2'/>
+      <propval name='action' type='astring' value='DEFER_IF_PERMIT'/>
+      <propval name='text' type='astring' value='Policy restrictions; try later'/>
+    </property_group>
+    <stability value='Unstable' />
+    <template>
+      <common_name>
+        <loctext xml:lang='C'>Postgrey Greylisting for Postfix</loctext>
+      </common_name>
+      <documentation>
+        <manpage title='postgrey' section='1' />
+        <doc_link name='postgrey website' uri='http://postgrey.schweikert.ch' />
+      </documentation>
+    </template>
+  </service>
+</service_bundle>

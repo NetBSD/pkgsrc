@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/09/13 09:24:19 fhajny Exp $
+# $NetBSD: Makefile,v 1.10 2014/03/11 14:34:41 jperkin Exp $
 
 PKGNAME=		${PHP_PKG_PREFIX}-fpm-${PHP_BASE_VERS}
 CATEGORIES=		www
@@ -34,6 +34,7 @@ CONFIGURE_ARGS+=	--enable-fpm
 CONFIGURE_ARGS+=	--with-fpm-user=${FPM_USER}
 CONFIGURE_ARGS+=	--with-fpm-group=${FPM_GROUP}
 
+SMF_NAME=		php-fpm
 RCD_SCRIPTS=		php_fpm
 MESSAGE_SUBST+=		CGIDIR=${CGIDIR:Q}
 MESSAGE_SUBST+=		VARBASE=${VARBASE:Q}

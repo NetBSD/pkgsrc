@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2014/02/19 15:29:23 taca Exp $
+# $NetBSD: Makefile,v 1.60 2014/03/11 14:34:38 jperkin Exp $
 
 DISTNAME=	dovecot-2.2.12
 CATEGORIES=	mail
@@ -21,6 +21,7 @@ CONFIGURE_ARGS+=	--with-ssldir=${SSLDIR}
 .include "../../mk/bsd.prefs.mk"
 
 RCD_SCRIPTS=		dovecot
+SMF_NAME=		dovecot
 
 DOVECOT_USER?=		dovecot
 DOVECOT_GROUP?=		dovecot
