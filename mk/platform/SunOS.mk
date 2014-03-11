@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.57 2013/09/12 11:01:47 jperkin Exp $
+# $NetBSD: SunOS.mk,v 1.58 2014/03/11 14:07:04 jperkin Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -36,6 +36,11 @@ X11_TYPE?=		modular
 MOTIF_TYPE_DEFAULT?=	dt		# default 2.0 compatible libs type
 .else
 MOTIF_TYPE_DEFAULT?=	motif
+.endif
+
+# Use SMF by default if available.
+.if ${OS_VERSION} >= 5.10
+INIT_SYSTEM?=		smf
 .endif
 
 # Comes with a builtin implementation based on mit-krb5
