@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.994 2014/03/11 12:16:49 obache Exp $
+$NetBSD: CHANGES-2014,v 1.995 2014/03/11 20:17:03 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1525,3 +1525,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/ruby-gnome2-gtksourceview2 to 2.2.0 [obache 2014-03-11]
 	Updated x11/ruby-gnome2-gtksourceview3 to 2.2.0 [obache 2014-03-11]
 	Updated net/mikutter to 0.2.2.1537 [obache 2014-03-11]
+	Updated math/maxima to 5.32.1 [ryoon 2014-03-11]
