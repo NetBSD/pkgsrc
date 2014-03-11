@@ -1,0 +1,40 @@
+# $NetBSD: install-smf,v 1.1 2014/03/11 14:07:04 jperkin Exp $
+#
+# Print post-install messages instructing the user how to handle the
+# newly-installed SMF services.
+#
+
+case ${STAGE} in
+POST-INSTALL)
+	cat <<EOF
+============================================================================
+This package has SMF support.  You may use svcadm(1M) to 'enable', 'disable'
+or 'restart' services.  To enable the instance(s) for this package, run:
+
+EOF
+	for svc in @SMF_INSTANCES@; do
+		cat <<EOF
+	/usr/sbin/svcadm enable svc:/@SMF_PREFIX@/@SMF_NAME@:${svc}
+EOF
+	done
+	cat <<EOF
+
+Use svcs(1) to check on service status.  See smf(5) for more information.
+EOF
+	if [ -z "${PKG_SKIP_SMF}" ]; then
+		/usr/sbin/svccfg import ${PKG_PREFIX}/@SMF_MANIFEST_FILE@
+	else
+		cat <<EOF
+
+The PKG_SKIP_SMF variable was set, automatic import of SMF manifests was
+skipped.  You must import the SMF manifest first with:
+
+	/usr/sbin/svccfg import ${PKG_PREFIX}/@SMF_MANIFEST_FILE@
+
+EOF
+	fi
+	cat <<EOF
+============================================================================
+EOF
+	;;
+esac
