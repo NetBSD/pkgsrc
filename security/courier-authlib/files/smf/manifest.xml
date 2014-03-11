@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<!DOCTYPE service_bundle SYSTEM '/usr/share/lib/xml/dtd/service_bundle.dtd.1'>
+<service_bundle type='manifest' name='@SMF_NAME@'>
+  <service name='@SMF_PREFIX@/@SMF_NAME@' type='service' version='1'>
+    <dependency name='fs-local' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/system/filesystem/local' />
+    </dependency>
+    <dependency name='network-service' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/network/service' />
+    </dependency>
+    <dependency name='system-log' grouping='optional_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/system/system-log' />
+    </dependency>
+    <instance name='@SMF_INSTANCE@' enabled='false'>
+      <dependency name='config-file' grouping='require_all' restart_on='refresh' type='path'>
+        <service_fmri value='file://localhost@PKG_SYSCONFDIR@/authdaemonrc' />
+      </dependency>
+      <exec_method name='start' type='method' exec='@PREFIX@/sbin/authdaemond start' timeout_seconds='120' />
+      <exec_method name='stop' type='method' exec='@PREFIX@/sbin/authdaemond stop' timeout_seconds='60' />
+      <property_group name='startd' type='framework'>
+        <propval name='ignore_error' type='astring' value='core,signal' />
+      </property_group>
+      <property_group name='general' type='framework'>
+        <propval name='action_authorization' type='astring' value='solaris.smf.manage.courier-authlib' />
+      </property_group>
+      <template>
+        <common_name>
+          <loctext xml:lang='C'>authlib - Generic authentication API for Courier mail services</loctext>
+        </common_name>
+        <documentation>
+          <manpage title='authlib' section='3' manpath='@PREFIX@/@PKGMANDIR@' />
+        </documentation>
+      </template>
+    </instance>
+    <stability value='Evolving' />
+  </service>
+</service_bundle>
