@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/01/14 12:01:51 obache Exp $
+# $NetBSD: Makefile,v 1.13 2014/03/11 12:11:46 obache Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gtk3-${VERSION}
@@ -18,8 +18,6 @@ do-test:
 
 BUILDLINK_API_DEPENDS.ruby-gnome2-glib+=	${RUBY_PKGPREFIX}-gnome2-glib>=${VERSION}
 .include "../../devel/ruby-gnome2-glib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.ruby-gnome2-gio+=	${RUBY_PKGPREFIX}-gnome2-gio>=${VERSION}
-.include "../../devel/ruby-gnome2-gio/buildlink3.mk"
 BUILDLINK_API_DEPENDS.ruby-gnome2-pango+=	${RUBY_PKGPREFIX}-gnome2-pango>=${VERSION}
 .include "../../devel/ruby-gnome2-pango/buildlink3.mk"
 .include "../../graphics/ruby-rcairo/buildlink3.mk"
