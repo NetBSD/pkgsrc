@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/05/07 18:39:05 tnn Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/03/11 14:05:16 jperkin Exp $
 bin/lsevtchn
 bin/pygrub
 bin/qemu-img-xen
@@ -681,10 +681,6 @@ sbin/xm
 sbin/xsview
 share/doc/xen/README.blktap
 share/doc/xen/README.xenmon
-share/examples/rc.d/xen-watchdog
-share/examples/rc.d/xencommons
-share/examples/rc.d/xend
-share/examples/rc.d/xendomains
 share/examples/xen/README
 share/examples/xen/README.incompatibilities
 share/examples/xen/cpupool

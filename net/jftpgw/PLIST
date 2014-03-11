@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:09:31 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/03/11 14:05:08 jperkin Exp $
 man/man1/jftpgw.1
 sbin/jftpgw
 share/examples/jftpgw/jftpgw.conf
-share/examples/rc.d/jftpgw

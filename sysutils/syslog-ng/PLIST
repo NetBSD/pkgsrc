@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/10/09 10:59:31 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/03/11 14:05:16 jperkin Exp $
 bin/loggen
 bin/pdbtool
 bin/syslog2ng
@@ -27,7 +27,6 @@ sbin/syslog-ng-ctl
 share/doc/${PKGBASE}/INSTALL
 share/doc/${PKGBASE}/README
 share/doc/${PKGBASE}/syslog-ng.conf.doc
-share/examples/rc.d/syslogng
 share/examples/syslog-ng/modules.conf
 share/examples/syslog-ng/scl.conf
 share/examples/syslog-ng/syslog-ng.conf

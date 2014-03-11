@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/07/08 17:49:32 jklos Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/03/11 14:05:17 jperkin Exp $
 bin/libxl-save-helper
 bin/lsevtchn
 bin/pygrub
@@ -675,10 +675,6 @@ sbin/xm
 sbin/xsview
 share/doc/xen/README.blktap
 share/doc/xen/README.xenmon
-share/examples/rc.d/xen-watchdog
-share/examples/rc.d/xencommons
-share/examples/rc.d/xend
-share/examples/rc.d/xendomains
 share/examples/xen/README
 share/examples/xen/README.incompatibilities
 share/examples/xen/cpupool

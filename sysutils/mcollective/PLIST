@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/08/12 09:15:57 imil Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/11 14:05:15 jperkin Exp $
 bin/mc-call-agent
 bin/mco
 ${RUBY_VENDORLIB}/mcollective.rb
@@ -406,7 +406,6 @@ share/doc/mcollective/lib/mcollective_rb.html
 share/doc/mcollective/rdoc.css
 share/examples/mcollective/client.cfg.dist
 share/examples/mcollective/server.cfg.dist
-share/examples/rc.d/mcollectived
 share/mcollective/agent/discovery.rb
 share/mcollective/agent/rpcutil.ddl
 share/mcollective/agent/rpcutil.rb

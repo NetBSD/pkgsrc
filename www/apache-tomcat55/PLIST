@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2012/04/04 11:34:27 obache Exp $
-share/examples/rc.d/tomcat
+@comment $NetBSD: PLIST,v 1.10 2014/03/11 14:05:17 jperkin Exp $
 tomcat/LICENSE
 tomcat/NOTICE
 tomcat/RELEASE-NOTES

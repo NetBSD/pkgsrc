@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2010/06/02 12:50:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/03/11 14:05:04 jperkin Exp $
 lib/libperditiondb_nis.la
 lib/libperditiondb_posix_regex.la
 man/man5/perditiondb.5
@@ -20,7 +20,3 @@ share/examples/perdition/Makefile.popmap
 share/examples/perdition/perdition.conf
 share/examples/perdition/popmap
 share/examples/perdition/popmap.re
-share/examples/rc.d/perdition.imap4
-share/examples/rc.d/perdition.imap4s
-share/examples/rc.d/perdition.pop3
-share/examples/rc.d/perdition.pop3s

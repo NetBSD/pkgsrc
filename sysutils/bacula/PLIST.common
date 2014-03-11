@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.17 2013/05/19 11:00:03 shattered Exp $
+@comment $NetBSD: PLIST.common,v 1.18 2014/03/11 14:05:14 jperkin Exp $
 lib/bpipe-fd.la
 lib/libbac.la
 lib/libbaccfg.la
@@ -48,4 +48,3 @@ share/doc/bacula/VERIFYING
 share/doc/bacula/technotes
 share/examples/bacula/bacula-fd.conf
 share/examples/bacula/bconsole.conf
-share/examples/rc.d/bacula-fd
