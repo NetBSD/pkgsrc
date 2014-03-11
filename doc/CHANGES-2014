@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.985 2014/03/11 09:43:15 obache Exp $
+$NetBSD: CHANGES-2014,v 1.986 2014/03/11 09:51:00 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1494,3 +1494,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/firefox24 to 24.3.0 [ryoon 2014-03-10]
 	Updated net/zeromq to 4.0.4 [obache 2014-03-11]
 	Updated textproc/cabocha to 0.68 [obache 2014-03-11]
+	Updated devel/ruby-locale to 2.1.0 [obache 2014-03-11]
