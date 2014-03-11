@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/12/30 11:55:49 abs Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/03/11 14:05:17 jperkin Exp $
 bin/dictfmt
 bin/dictfmt_index2suffix
 bin/dictfmt_index2word
@@ -25,4 +25,3 @@ share/examples/dict-server/dictd_mime.conf
 share/examples/dict-server/dictd_plugin_dbi.conf
 share/examples/dict-server/dictd_site.txt
 share/examples/dict-server/dictd_virtual.conf
-share/examples/rc.d/dictd

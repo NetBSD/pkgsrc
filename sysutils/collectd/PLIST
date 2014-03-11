@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/02/17 11:21:54 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/11 14:05:15 jperkin Exp $
 bin/collectd-nagios
 bin/collectd-tg
 bin/collectdctl
@@ -80,4 +80,3 @@ sbin/collectdmon
 share/collectd/postgresql_default.conf
 share/collectd/types.db
 share/examples/collectd/collectd.conf
-share/examples/rc.d/collectd

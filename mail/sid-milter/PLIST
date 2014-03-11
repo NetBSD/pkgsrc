@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/04/04 22:09:49 pettai Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/03/11 14:05:05 jperkin Exp $
 bin/sid-filter
 include/sm-marid.h
 lib/libar.a
@@ -14,4 +14,3 @@ share/doc/sid-milter/RELEASE_NOTES
 share/doc/sid-milter/rfc4406.txt
 share/doc/sid-milter/rfc4407.txt
 share/doc/sid-milter/rfc4408.txt
-share/examples/rc.d/sid-filter

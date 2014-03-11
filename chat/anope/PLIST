@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:28:43 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/03/11 14:04:58 jperkin Exp $
 lib/anope/anoperc
 lib/anope/languages/cat
 lib/anope/languages/de
@@ -188,4 +188,3 @@ share/doc/anope/WIN32.txt
 share/examples/anope/example.chk
 share/examples/anope/example.conf
 share/examples/anope/tables.sql
-share/examples/rc.d/anope

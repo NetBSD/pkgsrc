@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/12/14 13:35:46 abs Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/03/11 14:05:08 jperkin Exp $
 bin/inadyn
 ${PKGMANDIR}/man5/inadyn.conf.5
 ${PKGMANDIR}/man8/inadyn.8
-share/examples/rc.d/inadyn

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:37:42 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/03/11 14:04:58 jperkin Exp $
 bin/atheme-services
 lib/atheme/modules/backend/flatfile.so
 lib/atheme/modules/chanserv/akick.so
@@ -327,4 +327,3 @@ share/examples/atheme/atheme.conf.example
 share/examples/atheme/atheme.conf.userserv-example
 share/examples/atheme/atheme.cron.example
 share/examples/atheme/atheme.motd.example
-share/examples/rc.d/atheme
