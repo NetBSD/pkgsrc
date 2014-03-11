@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:13:27 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/03/11 14:05:13 jperkin Exp $
 bin/cfs_attach
 bin/cfs_cat
 bin/cfs_detach
@@ -18,4 +18,3 @@ man/man8/cfs_name.8
 man/man8/cfsd.8
 sbin/cfsd
 share/doc/cfs/notes.ms
-share/examples/rc.d/cfsd

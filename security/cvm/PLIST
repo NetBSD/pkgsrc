@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:13:27 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/03/11 14:05:13 jperkin Exp $
 bin/cvm-benchclient
 bin/cvm-chain
 bin/cvm-checkpassword
@@ -34,4 +34,3 @@ lib/libcvm-sql.la
 lib/libcvm-udp.la
 lib/libcvm-v1client.la
 lib/libcvm-v2client.la
-share/examples/rc.d/cvm

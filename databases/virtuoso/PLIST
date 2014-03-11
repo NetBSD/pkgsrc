@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/13 13:16:02 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/11 14:05:01 jperkin Exp $
 bin/inifile
 bin/isql-vt
 bin/isql-iodbc
@@ -30,7 +30,6 @@ lib/virtuoso/hosting/creolewiki.la
 ${PLIST.im}lib/virtuoso/hosting/im.la
 lib/virtuoso/hosting/mediawiki.la
 lib/virtuoso/hosting/wikiv.la
-share/examples/rc.d/virtuoso
 share/virtuoso/doc/AUTHORS
 share/virtuoso/doc/COPYING
 share/virtuoso/doc/CREDITS

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2014/03/10 11:32:38 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.24 2014/03/11 14:04:58 jperkin Exp $
 lib/erlang/lib/${PKGNAME}/ebin/acl.beam
 lib/erlang/lib/${PKGNAME}/ebin/adhoc.beam
 lib/erlang/lib/${PKGNAME}/ebin/beam_util.beam
@@ -331,4 +331,3 @@ share/doc/ejabberd/yozhikheader.png
 share/examples/ejabberd/ejabberd.yml
 share/examples/ejabberd/ejabberdctl.cfg
 share/examples/ejabberd/inetrc
-share/examples/rc.d/ejabberd

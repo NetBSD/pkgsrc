@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:08:04 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/03/11 14:05:06 jperkin Exp $
 bin/ggrab
 bin/sserver
 share/doc/ggrab/README
-share/examples/rc.d/sserver

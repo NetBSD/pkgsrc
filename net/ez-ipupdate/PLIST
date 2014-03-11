@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:27 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/03/11 14:05:08 jperkin Exp $
 bin/ez-ipupdate
 share/examples/ez-ipupdate/example-dhs.conf
 share/examples/ez-ipupdate/example-dyndns.conf
@@ -11,4 +11,3 @@ share/examples/ez-ipupdate/example-ods.conf
 share/examples/ez-ipupdate/example-pgpow.conf
 share/examples/ez-ipupdate/example-tzo.conf
 share/examples/ez-ipupdate/ez-ipupdate.conf
-share/examples/rc.d/ez-ipupdate

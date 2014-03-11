@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2013/10/01 00:30:26 manu Exp $
+@comment $NetBSD: PLIST,v 1.17 2014/03/11 14:05:01 jperkin Exp $
 etc/glusterfs/glusterd.vol.sample
 etc/glusterfs/glusterfs-logrotate
 include/glusterfs/api/glfs.h
@@ -75,6 +75,4 @@ share/doc/glusterfs/benchmarking/local-script.sh
 share/doc/glusterfs/benchmarking/rdd.c
 share/doc/glusterfs/glusterfs-mode.el
 share/doc/glusterfs/glusterfs.vim
-share/examples/rc.d/glusterd
-share/examples/rc.d/glusterfsd
 @exec test -d ${PKG_SYSCONFDIR}/glusterd -a ! -d ${VARBASE}/lib/glusterd && ${MKDIR} -p ${VARBASE}/lib/ && mv ${PKG_SYSCONFDIR}/glusterd  ${VARBASE}/lib/glusterd && ${LN} -s ${VARBASE}/lib/glusterd  ${PKG_SYSCONFDIR}/glusterd

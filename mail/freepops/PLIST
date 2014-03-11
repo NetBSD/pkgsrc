@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:04:34 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/03/11 14:05:03 jperkin Exp $
 bin/freepopsd
 man/man1/freepopsd.1
 share/doc/freepops/MANUAL.txt
 share/examples/freepops/config.lua
-share/examples/rc.d/freepopsd
 share/freepops/lua/abv.lua
 share/freepops/lua/aggregator.lua
 share/freepops/lua/aol.lua

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2011/04/01 16:48:36 gdt Exp $
+@comment $NetBSD: PLIST,v 1.32 2014/03/11 14:05:11 jperkin Exp $
 bin/snort
 lib/pkgconfig/snort.pc
 lib/snort_dynamicengine/libsf_engine.la
@@ -72,7 +72,6 @@ share/doc/snort/schemas/create_postgresql
 share/doc/snort/snort_manual.pdf
 share/doc/snort/snort_manual.tex
 share/doc/snort/snort_schema_v106.pdf
-share/examples/rc.d/snort
 share/examples/snort/classification.config
 share/examples/snort/gen-msg.map
 share/examples/snort/generators
