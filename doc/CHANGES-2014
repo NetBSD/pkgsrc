@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.983 2014/03/10 20:40:28 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.984 2014/03/11 09:11:36 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1492,3 +1492,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/sqlite3-docs to 3.8.4 [adam 2014-03-10]
 	Updated databases/sqlite3-tcl to 3.8.4 [adam 2014-03-10]
 	Updated www/firefox24 to 24.3.0 [ryoon 2014-03-10]
+	Updated net/zeromq to 4.0.4 [obache 2014-03-11]
