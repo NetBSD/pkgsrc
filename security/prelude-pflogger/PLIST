@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/07/21 12:22:15 shannonjr Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/03/11 14:05:14 jperkin Exp $
 bin/prelude-pflogger
 sbin/run-prelude-pflogger
-share/examples/rc.d/pflogger
 share/examples/prelude-pflogger/prelude-pflogger.conf

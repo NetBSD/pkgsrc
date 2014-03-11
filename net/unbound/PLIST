@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/11/17 22:57:38 pettai Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/03/11 14:05:12 jperkin Exp $
 include/unbound.h
 lib/libunbound.la
 man/man1/unbound-host.1
@@ -45,5 +45,4 @@ sbin/unbound-checkconf
 sbin/unbound-control
 sbin/unbound-control-setup
 sbin/unbound-host
-share/examples/rc.d/unbound
 share/examples/unbound/unbound.conf

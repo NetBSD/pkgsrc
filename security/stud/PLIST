@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/03/16 19:41:35 jym Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/11 14:05:14 jperkin Exp $
 bin/stud
 man/man8/stud.8
 share/examples/stud/stud.conf
-share/examples/rc.d/stud

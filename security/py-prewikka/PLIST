@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2009/10/02 10:25:53 hasso Exp $
+@comment $NetBSD: PLIST,v 1.18 2014/03/11 14:05:14 jperkin Exp $
 ${PYSITELIB}/prewikka/Auth.py
 ${PYSITELIB}/prewikka/Auth.pyc
 ${PYSITELIB}/prewikka/Auth.pyo
@@ -199,7 +199,6 @@ share/prewikka/database/sqlite-update-0.9.11.sql
 bin/prewikka-httpd
 sbin/runPrewikka
 share/examples/${PKGBASE}/prewikka.conf
-share/examples/rc.d/prewikka
 share/prewikka/cgi-bin/prewikka.cgi
 share/prewikka/database/mysql-update-0.9.1.sql
 share/prewikka/database/mysql.sql

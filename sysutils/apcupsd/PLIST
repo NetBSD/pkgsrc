@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2012/01/22 09:07:50 shattered Exp $
+@comment $NetBSD: PLIST,v 1.16 2014/03/11 14:05:14 jperkin Exp $
 ${PLIST.cgi}libexec/cgi-bin/upsstats.cgi
 ${PLIST.cgi}libexec/cgi-bin/upsfstats.cgi
 ${PLIST.cgi}libexec/cgi-bin/apcupsimage.cgi
@@ -41,4 +41,3 @@ share/examples/apcupsd/hosts.conf
 share/examples/apcupsd/multimon.conf
 share/examples/apcupsd/offbattery
 share/examples/apcupsd/onbattery
-share/examples/rc.d/apcupsd

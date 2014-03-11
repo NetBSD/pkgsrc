@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/02/02 07:58:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/03/11 14:05:07 jperkin Exp $
 bin/bind9-config
 bin/dig
 bin/host
@@ -381,5 +381,3 @@ share/doc/bind9/arm/man.nsupdate.html
 share/doc/bind9/arm/man.rndc-confgen.html
 share/doc/bind9/arm/man.rndc.conf.html
 share/doc/bind9/arm/man.rndc.html
-share/examples/rc.d/lwresd
-share/examples/rc.d/named9

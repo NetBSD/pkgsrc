@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/22 02:53:01 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/11 14:05:07 jperkin Exp $
 sbin/bird${BIRD6}
 sbin/birdc${BIRD6}
 share/examples/bird${BIRD6}/bird${BIRD6}.conf
-share/examples/rc.d/bird${BIRD6}

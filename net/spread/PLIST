@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:09:44 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/03/11 14:05:11 jperkin Exp $
 bin/spflooder
 bin/spmonitor
 bin/sptuser
@@ -35,6 +35,5 @@ sbin/spread
 share/doc/spread/LICENSE
 share/doc/spread/Readme.txt
 share/doc/spread/Short_Buffer_Handling.txt
-share/examples/rc.d/spread
 share/examples/spread/spread.access_ip.sample
 share/examples/spread/spread.conf.sample
