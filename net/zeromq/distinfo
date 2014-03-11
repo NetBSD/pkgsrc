@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.13 2014/03/01 08:38:12 obache Exp $
+$NetBSD: distinfo,v 1.14 2014/03/11 09:11:25 obache Exp $
 
-SHA1 (zeromq-4.0.3.tar.gz) = a363ddfff75f73976f656b3ba48f32544b214075
-RMD160 (zeromq-4.0.3.tar.gz) = 183228d912c88618ed8392f0f82bec5ac6af4b1b
-Size (zeromq-4.0.3.tar.gz) = 2169301 bytes
+SHA1 (zeromq-4.0.4.tar.gz) = 2328014e5990efac31390439b75c5528e38e4490
+RMD160 (zeromq-4.0.4.tar.gz) = 6971d9842ce6bc9197c9c8179eabde29ad54a81a
+Size (zeromq-4.0.4.tar.gz) = 2149732 bytes
 SHA1 (patch-configure) = 1dc8623eb06a167b3559ae950a9dbf1e19a29b6d
 SHA1 (patch-src_platform.hpp.in) = 767370bd997310cddeb7ee1f759bec1a638974e0
