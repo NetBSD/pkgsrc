@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2014/02/12 23:17:58 tron Exp $
+# $NetBSD: Makefile,v 1.56 2014/03/11 23:50:38 gdt Exp $
 #
 
-VERSION=		1.4.2
+VERSION=		1.5
 DISTNAME=		viking-${VERSION}
-PKGREVISION=		3
 CATEGORIES=		geography
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=viking/}${VERSION}/
 EXTRACT_SUFX=		.tar.bz2
@@ -17,6 +16,8 @@ LICENSE=		gnu-gpl-v2
 GNU_CONFIGURE=		yes
 
 TEST_TARGET=		check
+
+CONFIGURE_ARGS+=	--disable-magic
 
 # Perhaps optionize use of gpsd (remove bl3, add this).
 # CONFIGURE_ARGS+=	--disable-realtime-gps-tracking
