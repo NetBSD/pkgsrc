@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.422 2014/02/27 14:51:34 wiz Exp $
+# $NetBSD: Makefile,v 1.423 2014/03/11 12:06:54 jperkin Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -260,6 +260,7 @@ SUBDIR+=	ruby-gem_plugin
 SUBDIR+=	ruby-hashie
 SUBDIR+=	ruby-launchy
 SUBDIR+=	ruby-memoizable
+SUBDIR+=	ruby-naught
 SUBDIR+=	ruby-parallel
 SUBDIR+=	ruby-progressbar
 SUBDIR+=	ruby-rainbow
