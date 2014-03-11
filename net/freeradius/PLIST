@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2010/10/29 15:55:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2014/03/11 14:05:08 jperkin Exp $
 bin/radclient
 bin/radeapclient
 bin/radlast
@@ -257,7 +257,6 @@ share/examples/freeradius/snmp.conf
 share/examples/freeradius/sql.conf
 share/examples/freeradius/sqlippool.conf
 share/examples/freeradius/users
-share/examples/rc.d/radiusd
 share/freeradius/dictionary
 share/freeradius/dictionary.3com
 share/freeradius/dictionary.3gpp

@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:04:40 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/03/11 14:05:04 jperkin Exp $
 sbin/postgrey
 share/doc/postgrey/COPYING
 share/doc/postgrey/Changes
 share/doc/postgrey/README
 share/examples/postgrey/postgrey_whitelist_clients
 share/examples/postgrey/postgrey_whitelist_recipients
-share/examples/rc.d/postgrey

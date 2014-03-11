@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2009/06/14 18:24:47 joerg Exp $
+@comment $NetBSD: PLIST,v 1.41 2014/03/11 14:05:19 jperkin Exp $
 ${PLIST.dmx}bin/gdm-dmx-reconnect-proxy
 bin/gdmXnest
 bin/gdmXnestchooser
@@ -35,7 +35,6 @@ share/examples/gdm/modules/AccessDwellMouseEvents
 share/examples/gdm/modules/AccessKeyMouseEvents
 share/examples/gdm/modules/factory-AccessDwellMouseEvents
 share/examples/gdm/modules/factory-AccessKeyMouseEvents
-share/examples/rc.d/gdm
 share/gdm/BuiltInSessions/custom.desktop
 share/gdm/BuiltInSessions/default.desktop
 share/gdm/applications/gdmflexiserver-xnest.desktop

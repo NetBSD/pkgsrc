@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2014/02/01 11:16:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2014/03/11 14:05:00 jperkin Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -40,7 +40,6 @@ share/doc/mysql/INFO_BIN
 share/doc/mysql/INFO_SRC
 share/doc/mysql/INSTALL-BINARY
 share/doc/mysql/README
-share/examples/rc.d/mysqld
 share/mysql/binary-configure
 share/mysql/charsets/Index.xml
 share/mysql/charsets/README

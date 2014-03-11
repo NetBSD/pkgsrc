@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2013/03/15 13:34:32 kim Exp $
+@comment $NetBSD: PLIST,v 1.25 2014/03/11 14:05:10 jperkin Exp $
 bin/ftpasswd
 bin/ftpcount
 bin/ftpdctl
@@ -103,7 +103,6 @@ share/examples/proftpd/complex-virtual.conf
 share/examples/proftpd/ftpasswd
 share/examples/proftpd/mod_sql.conf
 share/examples/proftpd/virtual.conf
-share/examples/rc.d/proftpd
 share/locale/bg_BG/LC_MESSAGES/proftpd.mo
 share/locale/en_US/LC_MESSAGES/proftpd.mo
 share/locale/es_ES/LC_MESSAGES/proftpd.mo

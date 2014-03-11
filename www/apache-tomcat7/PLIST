@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 2013/11/24 04:44:51 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/03/11 14:05:17 jperkin Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
 share/doc/tomcat/RUNNING.txt
-share/examples/rc.d/tomcat
 share/examples/tomcat/catalina.policy
 share/examples/tomcat/catalina.properties
 share/examples/tomcat/context.xml

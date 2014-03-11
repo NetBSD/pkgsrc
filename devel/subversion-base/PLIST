@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2013/07/04 19:31:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2014/03/11 14:05:01 jperkin Exp $
 bin/svn
 bin/svnadmin
 bin/svndumpfilter
@@ -81,7 +81,6 @@ share/doc/subversion/README
 share/doc/subversion/cvs-crossover-guide.html
 share/doc/subversion/lj_article.txt
 share/doc/subversion/svn-best-practices.html
-share/examples/rc.d/svnserve
 share/examples/subversion/backup/hot-backup.py
 share/examples/subversion/hook-scripts/commit-access-control.cfg.example
 share/examples/subversion/hook-scripts/commit-access-control.pl

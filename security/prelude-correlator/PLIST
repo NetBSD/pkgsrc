@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/03/23 18:01:47 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/03/11 14:05:14 jperkin Exp $
 bin/prelude-correlator
 ${PYSITELIB}/PreludeCorrelator/__init__.py
 ${PYSITELIB}/PreludeCorrelator/__init__.pyc
@@ -66,5 +66,4 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 sbin/run-prelude-correlator
 share/examples/dshield.dat
 share/examples/prelude-correlator.conf
-share/examples/rc.d/preludecorrelator
 share/examples/spamhaus_drop.dat

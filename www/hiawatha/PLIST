@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 22:00:23 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/03/11 14:05:17 jperkin Exp $
 lib/java/hiawatha/hiawatha.jar
 lib/java/hiawatha/xsls.jar
 share/examples/hiawatha/simple.cfg
@@ -77,4 +77,3 @@ share/examples/hiawatha/pault.com/xsl-include/widget.xsls
 share/examples/hiawatha/WEBROOT/index.xml
 share/examples/hiawatha/WEBROOT/index.xsl
 share/examples/hiawatha/WEBROOT/images/sitedrivenby.gif
-share/examples/rc.d/hiawatha

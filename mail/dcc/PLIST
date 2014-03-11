@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/10/27 12:26:37 gdt Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/11 14:05:03 jperkin Exp $
 bin/cdcc
 bin/dccproc
 libexec/ck2ip
@@ -60,6 +60,3 @@ share/examples/dcc/map.txt
 share/examples/dcc/whiteclnt
 share/examples/dcc/whitecommon
 share/examples/dcc/whitelist
-share/examples/rc.d/dccd
-share/examples/rc.d/dccifd
-${PLIST.dccm}share/examples/rc.d/dccm

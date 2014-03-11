@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/05/03 15:39:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/03/11 14:05:07 jperkin Exp $
 man/cat8/dtcpauth.0
 man/cat8/dtcpc.0
 man/cat8/dtcps.0
@@ -8,5 +8,3 @@ man/man8/dtcps.8
 sbin/dtcpauth
 sbin/dtcpc
 sbin/dtcps
-share/examples/rc.d/dtcpc
-share/examples/rc.d/dtcps

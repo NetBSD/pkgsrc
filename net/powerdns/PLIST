@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/01/25 10:21:12 ghen Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/03/11 14:05:10 jperkin Exp $
 bin/pdns_control
 bin/zone2ldap
 bin/zone2sql
@@ -9,4 +9,3 @@ man/man8/pdns_server.8
 man/man8/zone2sql.8
 sbin/pdns_server
 share/examples/pdns/pdns.conf-dist
-share/examples/rc.d/pdns

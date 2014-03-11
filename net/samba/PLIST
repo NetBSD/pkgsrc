@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.56 2014/02/27 13:03:25 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.57 2014/03/11 14:05:11 jperkin Exp $
 bin/eventlogadm
 bin/findsmb
 bin/net
@@ -190,10 +190,6 @@ share/doc/samba/Win9X-CacheHandling.reg
 share/doc/samba/WinME_PlainPassword.reg
 share/doc/samba/WinXP_PlainPassword.reg
 share/doc/samba/WindowsTerminalServer.reg
-share/examples/rc.d/nmbd
-share/examples/rc.d/samba
-share/examples/rc.d/smbd
-${PLIST.winbind}share/examples/rc.d/winbindd
 share/examples/samba/adduser.sh
 share/examples/samba/deluser.sh
 share/examples/samba/mknissmbpasswd.sh

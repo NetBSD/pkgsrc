@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2013/08/22 21:17:00 joerg Exp $
+@comment $NetBSD: PLIST,v 1.24 2014/03/11 14:05:13 jperkin Exp $
 bin/afslog
 bin/compile_et
 bin/gsstool
@@ -1206,7 +1206,3 @@ sbin/kadmin
 sbin/kstash
 sbin/ktutil
 ${PLIST.ldap}share/examples/heimdal/hdb.schema
-share/examples/rc.d/kadmind
-share/examples/rc.d/kcm
-share/examples/rc.d/kdc
-share/examples/rc.d/kpasswdd

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/01/31 22:05:43 pettai Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/03/11 14:05:09 jperkin Exp $
 bin/kdig
 bin/khost
 bin/knsec3hash
@@ -14,5 +14,4 @@ sbin/knotc
 sbin/knotd
 share/examples/knot/example.com.zone
 share/examples/knot/knot.sample.conf
-share/examples/rc.d/knot
 @pkgdir etc/knot

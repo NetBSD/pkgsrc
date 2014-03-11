@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2010/03/14 16:59:27 pettai Exp $
+@comment $NetBSD: PLIST,v 1.13 2014/03/11 14:05:03 jperkin Exp $
 ${PLIST.arlib}lib/libar.a
 ${PLIST.arlib}man/man3/ar.3
 lib/libdkim.a
@@ -109,4 +109,3 @@ share/doc/dkim-milter/rfc4871.txt
 share/doc/dkim-milter/rfc5016.txt
 share/doc/dkim-milter/rfc5451.txt
 share/doc/dkim-milter/rfc5518.txt
-share/examples/rc.d/dkim-filter

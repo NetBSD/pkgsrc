@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2011/04/07 15:45:37 hauke Exp $
+@comment $NetBSD: PLIST,v 1.22 2014/03/11 14:05:04 jperkin Exp $
 lib/mailman/Mailman/Archiver/Archiver.py
 lib/mailman/Mailman/Archiver/Archiver.pyc
 lib/mailman/Mailman/Archiver/HyperArch.py
@@ -2144,5 +2144,4 @@ share/doc/mailman/mailman-member.ps
 share/doc/mailman/mailman-member.txt
 share/examples/mailman/crontab.in
 share/examples/mailman/mailman.conf
-share/examples/rc.d/mailman
 @pkgdir lib/mailman/pythonlib

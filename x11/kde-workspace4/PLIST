@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/11/07 13:35:56 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/03/11 14:05:19 jperkin Exp $
 bin/genkdmconf
 bin/kaccess
 bin/kapplymousetheme
@@ -654,7 +654,6 @@ share/examples/kde4-dbus/org.kde.fontinst.conf
 share/examples/kde4-dbus/org.kde.kcontrol.kcmclock.conf
 share/examples/kde4-dbus/org.kde.kcontrol.kcmkdm.conf
 share/examples/kde4-dbus/org.kde.ksysguard.processlisthelper.conf
-share/examples/rc.d/kdm
 share/icons/Daemon.png
 share/icons/KDE_Classic/cursors/00000000000000020006000e7e9ffc3f
 share/icons/KDE_Classic/cursors/00008160000006810000408080010102

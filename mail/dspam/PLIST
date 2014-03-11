@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2012/12/06 10:47:35 roy Exp $
+@comment $NetBSD: PLIST,v 1.21 2014/03/11 14:05:03 jperkin Exp $
 ${PLIST.hash}bin/cssstat
 ${PLIST.hash}bin/csscompress
 ${PLIST.hash}bin/cssclean
@@ -225,6 +225,5 @@ share/examples/dspam/cgi-admins
 share/examples/dspam/cgi-default.prefs
 share/examples/dspam/configure.pl
 share/examples/dspam/dspam.conf
-share/examples/rc.d/dspam
 @pkgdir lib/dspam
 @pkgdir etc/dspam

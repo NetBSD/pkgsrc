@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/01/03 13:56:13 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/03/11 14:05:18 jperkin Exp $
 share/examples/jetty/README.spnego
 share/examples/jetty/jdbcRealm.properties
 share/examples/jetty/jetty-ajp.xml
@@ -33,7 +33,6 @@ share/examples/jetty/realm.properties
 share/examples/jetty/spnego.conf
 share/examples/jetty/spnego.properties
 share/examples/jetty/webdefault.xml
-share/examples/rc.d/jetty
 share/jetty/LICENSE-APACHE-2.0.txt
 share/jetty/LICENSE-ECLIPSE-1.0.html
 share/jetty/README.txt

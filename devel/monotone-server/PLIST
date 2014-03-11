@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.6 2010/03/12 09:27:17 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/03/11 14:05:01 jperkin Exp $
 man/man7/monotone-server.7
 share/examples/monotone-server/monotonerc
 share/examples/monotone-server/read-permissions
 share/examples/monotone-server/write-permissions
-share/examples/rc.d/monotone

@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 21:28:47 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/03/11 14:05:15 jperkin Exp $
 bin/gkrellmd
 include/gkrellm2/gkrellmd.h
 man/man1/gkrellmd.1
 share/examples/gkrellm-server/gkrellmd.conf
-share/examples/rc.d/gkrellmd

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2013/10/22 19:27:52 drochner Exp $
+@comment $NetBSD: PLIST,v 1.16 2014/03/11 14:04:57 jperkin Exp $
 bin/icecast
 share/doc/icecast/AUTHORS
 share/doc/icecast/COPYING
@@ -25,7 +25,6 @@ share/doc/icecast/listener_auth3.jpg
 share/doc/icecast/masterslave.png
 share/doc/icecast/relay.png
 share/examples/icecast/icecast.xml
-share/examples/rc.d/icecast
 share/icecast/admin/listclients.xsl
 share/icecast/admin/listmounts.xsl
 share/icecast/admin/manageauth.xsl

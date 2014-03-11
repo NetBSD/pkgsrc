@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2014/02/22 17:28:34 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.14 2014/03/11 14:05:17 jperkin Exp $
 bin/ab
 bin/apxs
 bin/dbmmanage
@@ -219,7 +219,6 @@ share/examples/httpd/extra/proxy-html.conf
 share/examples/httpd/httpd.conf
 share/examples/httpd/magic
 share/examples/httpd/mime.types
-share/examples/rc.d/apache
 share/httpd/build/config.nice
 share/httpd/build/config_vars.mk
 share/httpd/build/instdso.sh
@@ -508,7 +507,6 @@ share/examples/httpd/extra/proxy-html.conf
 share/examples/httpd/httpd.conf
 share/examples/httpd/magic
 share/examples/httpd/mime.types
-share/examples/rc.d/apache
 share/httpd/build/config.nice
 share/httpd/build/config_vars.mk
 share/httpd/build/instdso.sh

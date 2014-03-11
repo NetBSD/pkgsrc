@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:08:08 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/03/11 14:05:06 jperkin Exp $
 bin/mediatomb
 man/man1/mediatomb.1
 share/applications/mediatomb.desktop
 share/examples/mediatomb/config.xml
-share/examples/rc.d/mediatomb
 share/mediatomb/js/common.js
 share/mediatomb/js/import.js
 share/mediatomb/js/playlists.js

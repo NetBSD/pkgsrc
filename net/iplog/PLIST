@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:09:30 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/03/11 14:05:08 jperkin Exp $
 man/man5/iplog.conf.5
 man/man8/iplog.8
 sbin/iplog
 share/examples/iplog/iplog.conf
-share/examples/rc.d/iplog

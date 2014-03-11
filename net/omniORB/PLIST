@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/01/19 11:28:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/03/11 14:05:09 jperkin Exp $
 bin/catior
 bin/convertior
 bin/genior
@@ -366,7 +366,6 @@ share/doc/omniORB/omnithread.pdf
 share/doc/omniORB/utilities.html
 share/doc/omniORB/utilities.pdf
 share/examples/omniORB/sample.cfg
-share/examples/rc.d/omninames
 share/idl/omniORB/COS/CosCollection.idl
 share/idl/omniORB/COS/CosCompoundLifeCycle.idl
 share/idl/omniORB/COS/CosConcurrencyControl.idl

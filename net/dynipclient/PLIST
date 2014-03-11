@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:09:26 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/03/11 14:05:07 jperkin Exp $
 bin/dynipadmin
 bin/dynipclient
 man/man1/dynipadmin.1
 man/man1/dynipclient.1
 share/examples/dynipclient/dynip.cfg
-share/examples/rc.d/dynipclient

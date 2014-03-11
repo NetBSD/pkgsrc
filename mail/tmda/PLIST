@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2009/06/14 18:04:45 joerg Exp $
+@comment $NetBSD: PLIST,v 1.17 2014/03/11 14:05:05 jperkin Exp $
 bin/tmda-address
 bin/tmda-check-address
 bin/tmda-filter
@@ -377,4 +377,3 @@ ${SHAREDIR}/bounce_invalid_confirmation.txt
 ${SHAREDIR}/bounce_missing_pending.txt
 ${SHAREDIR}/confirm_accept.txt
 ${SHAREDIR}/confirm_request.txt
-share/examples/rc.d/tofmipd

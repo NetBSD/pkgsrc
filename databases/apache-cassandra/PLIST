@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/02/14 10:25:23 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.10 2014/03/11 14:05:00 jperkin Exp $
 share/cassandra/bin/cassandra
 share/cassandra/bin/cassandra-cli
 share/cassandra/bin/cassandra-shuffle
@@ -2909,4 +2909,3 @@ share/examples/cassandra/commitlog_archiving.properties
 share/examples/cassandra/cqlshrc.sample
 share/examples/cassandra/log4j-server.properties
 share/examples/cassandra/log4j-tools.properties
-share/examples/rc.d/cassandra

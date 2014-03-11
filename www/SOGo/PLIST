@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/03/16 15:12:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/03/11 14:05:17 jperkin Exp $
 include/GDLContentStore/EOAdaptorChannel+GCS.h
 include/GDLContentStore/GCSAlarmsFolder.h
 include/GDLContentStore/GCSChannelManager.h
@@ -1594,4 +1594,3 @@ sbin/sogo-tool
 sbin/sogod
 share/examples/SOGo/SOGo.conf
 share/examples/SOGo/sogo-conf.sh
-share/examples/rc.d/sogod

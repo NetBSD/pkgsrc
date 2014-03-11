@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2013/03/17 00:15:28 gdt Exp $
+@comment $NetBSD: PLIST,v 1.24 2014/03/11 14:05:09 jperkin Exp $
 bin/agentxtrap
 bin/encode_keychange
 ${PLIST.perl}bin/fixproc
@@ -386,8 +386,6 @@ man/man8/snmptrapd.8
 sbin/snmpd
 sbin/snmptrapd
 share/examples/net-snmp/EXAMPLE.conf
-share/examples/rc.d/snmpd
-share/examples/rc.d/snmptrapd
 ${PLIST.perl}share/snmp/mib2c-data/default-mfd-top.m2c
 ${PLIST.perl}share/snmp/mib2c-data/details-enums.m2i
 ${PLIST.perl}share/snmp/mib2c-data/details-node.m2i

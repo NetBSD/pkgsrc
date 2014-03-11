@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2013/07/31 06:53:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2014/03/11 14:05:10 jperkin Exp $
 include/openvpn-plugin.h
 ${PLIST.pam}lib/openvpn/plugins/openvpn-plugin-auth-pam.la
 lib/openvpn/plugins/openvpn-plugin-down-root.la
@@ -44,4 +44,3 @@ share/examples/openvpn/scripts/bridge-start
 share/examples/openvpn/scripts/bridge-stop
 share/examples/openvpn/scripts/ucn.pl
 share/examples/openvpn/scripts/verify-cn
-share/examples/rc.d/openvpn

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/08/15 16:04:44 spz Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/03/11 14:05:12 jperkin Exp $
 libexec/xymon/client/clientupdate
 libexec/xymon/client/local/README
 libexec/xymon/client/logfetch
@@ -26,7 +26,6 @@ libexec/xymon/client/xymoncmd
 libexec/xymon/client/xymondigest
 libexec/xymon/client/xymongrep
 libexec/xymon/client/xymonlaunch
-share/examples/rc.d/xymonclient
 share/examples/xymon/clientlaunch.cfg
 share/examples/xymon/localclient.cfg
 share/examples/xymon/xymonclient.cfg

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/12/26 20:59:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/03/11 14:05:15 jperkin Exp $
 bin/hal-device
 bin/hal-disable-polling
 bin/hal-find-by-capability
@@ -62,7 +62,6 @@ share/PolicyKit/policy/org.freedesktop.hal.power-management.policy
 share/PolicyKit/policy/org.freedesktop.hal.storage.policy
 share/PolicyKit/policy/org.freedesktop.hal.wol.policy
 share/examples/hal/hal.conf
-share/examples/rc.d/hal
 share/gtk-doc/html/libhal-storage/home.png
 share/gtk-doc/html/libhal-storage/index.html
 share/gtk-doc/html/libhal-storage/index.sgml

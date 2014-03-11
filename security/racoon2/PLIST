@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/11 20:08:39 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/11 14:05:14 jperkin Exp $
 ${IKED}man/man8/iked.8
 ${KINKD}man/man8/kinkd.8
 man/man8/pskgen.8
@@ -37,10 +37,6 @@ share/examples/racoon2/hook/ikesa-rekey
 share/examples/racoon2/hook/migration
 share/examples/racoon2/hook/ph1-up
 share/examples/racoon2/hook/ph1-down
-share/examples/rc.d/iked
-share/examples/rc.d/kinkd
-share/examples/rc.d/racoon2
-share/examples/rc.d/spmd
 @dirrm share/doc/racoon2
 @exec ${MKDIR} %D/share/examples/racoon2/hook/child-up.d
 @exec ${MKDIR} %D/share/examples/racoon2/hook/child-down.d

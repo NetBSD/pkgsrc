@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2012/08/23 19:00:41 spz Exp $
+@comment $NetBSD: PLIST,v 1.24 2014/03/11 14:05:12 jperkin Exp $
 bin/inews
 bin/rnews
 include/inn/buffer.h
@@ -320,7 +320,6 @@ share/examples/inn/readers.conf
 share/examples/inn/send-uucp.cf
 share/examples/inn/storage.conf
 share/examples/inn/subscriptions
-share/examples/rc.d/innd
 @pkgdir ${INN_PATHBIN}/filter
 @pkgdir etc/nntp
 @pkgdir etc/inn

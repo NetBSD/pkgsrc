@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:13:37 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/03/11 14:05:14 jperkin Exp $
 bin/denyhosts.py
 ${PYSITELIB}/DenyHosts/__init__.py
 ${PYSITELIB}/DenyHosts/__init__.pyc
@@ -75,4 +75,3 @@ share/denyhosts/plugins/test_deny.py
 share/denyhosts/scripts/restricted_from_invalid.py
 share/denyhosts/scripts/restricted_from_passwd.py
 share/denyhosts/setup.py
-share/examples/rc.d/denyhosts

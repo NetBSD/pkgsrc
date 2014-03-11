@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2012/07/16 19:12:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2014/03/11 14:05:13 jperkin Exp $
 bin/compile_et
 bin/gss-client
 bin/k5srvutil
@@ -116,7 +116,5 @@ share/et/et_h.awk
 share/examples/krb5/kdc.conf
 share/examples/krb5/krb5.conf
 share/examples/krb5/services.append
-share/examples/rc.d/kadmind
-share/examples/rc.d/kdc
 share/gnats/mit
 share/locale/en_US/LC_MESSAGES/mit-krb5.mo

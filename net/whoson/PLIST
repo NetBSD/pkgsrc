@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:09:48 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/03/11 14:05:12 jperkin Exp $
 include/whoson.h
 lib/libwhoson.la
 man/man3/whoson.3
@@ -11,5 +11,4 @@ man/man8/whoson.8
 man/man8/whosond.8
 sbin/whoson
 sbin/whosond
-share/examples/rc.d/whosond
 share/examples/whoson/whoson.conf

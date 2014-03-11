@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2013/04/30 15:43:30 hauke Exp $
+@comment $NetBSD: PLIST,v 1.27 2014/03/11 14:05:09 jperkin Exp $
 ${PLIST.ea}bin/ad
 bin/add_netatalk_printer
 bin/adv1tov2
@@ -168,10 +168,5 @@ share/examples/netatalk/atalkd.conf
 share/examples/netatalk/netatalk.conf
 ${PLIST.pam}share/examples/netatalk/netatalk.pam
 share/examples/netatalk/papd.conf
-${PLIST.rcd}share/examples/rc.d/afpd
-${PLIST.rcd}share/examples/rc.d/atalkd
-${PLIST.rcd}share/examples/rc.d/cnid_metad
-${PLIST.rcd}share/examples/rc.d/papd
-${PLIST.rcd}share/examples/rc.d/timelord
 share/netatalk/pagecount.ps
 @pkgdir libexec/psffilters

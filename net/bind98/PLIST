@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/09/21 15:59:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/03/11 14:05:06 jperkin Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -375,5 +375,3 @@ share/doc/bind9/misc/options
 share/doc/bind9/misc/rfc-compliance
 share/doc/bind9/misc/roadmap
 share/doc/bind9/misc/sdb
-share/examples/rc.d/lwresd
-share/examples/rc.d/named9

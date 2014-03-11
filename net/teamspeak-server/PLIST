@@ -1,2 +1,1 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/30 15:33:27 abs Exp $
-share/examples/rc.d/teamspeak
+@comment $NetBSD: PLIST,v 1.2 2014/03/11 14:05:11 jperkin Exp $

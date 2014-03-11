@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/08/29 22:42:46 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/03/11 14:04:58 jperkin Exp $
 bin/inspircd
 lib/inspircd/cmd_admin.so
 lib/inspircd/cmd_away.so
@@ -74,7 +74,6 @@ share/examples/inspircd/sql/m_sqloper.mssql.sql
 share/examples/inspircd/sql/m_sqloper.mysql.sql
 share/examples/inspircd/sql/m_sqloper.postgresql.sql
 share/examples/inspircd/sql/m_sqloper.sqlite3.sql
-share/examples/rc.d/inspircd
 share/inspircd/.gdbargs
 share/inspircd/inspircd
 share/inspircd/modules/m_alias.so

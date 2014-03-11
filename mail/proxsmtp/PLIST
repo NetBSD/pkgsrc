@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:04:40 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/03/11 14:05:05 jperkin Exp $
 man/man5/proxsmtpd.conf.5
 man/man8/proxsmtpd.8
 sbin/proxsmtpd
 share/examples/proxsmtp/add_header.sh
 share/examples/proxsmtp/proxsmtpd.conf
 share/examples/proxsmtp/spamassassin.sh
-share/examples/rc.d/proxsmtpd

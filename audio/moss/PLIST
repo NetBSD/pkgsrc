@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:32:18 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/03/11 14:04:58 jperkin Exp $
 bin/moss
 ${PYSITELIB}/moss/__init__.py
 ${PYSITELIB}/moss/__init__.pyc
@@ -24,7 +24,6 @@ ${PYSITELIB}/moss/template.pyo
 ${PYSITELIB}/moss/web.py
 ${PYSITELIB}/moss/web.pyc
 ${PYSITELIB}/moss/web.pyo
-share/examples/rc.d/moss
 share/moss/images/back.gif
 share/moss/images/dir.gif
 share/moss/images/file.gif

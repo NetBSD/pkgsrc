@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2011/04/05 08:29:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/03/11 14:05:18 jperkin Exp $
 lib/lighttpd/mod_access.la
 lib/lighttpd/mod_accesslog.la
 lib/lighttpd/mod_alias.la
@@ -105,4 +105,3 @@ share/examples/lighttpd/modules.conf
 share/examples/lighttpd/rrdtool-graph.sh
 share/examples/lighttpd/spawn-php.sh
 share/examples/lighttpd/vhosts.d/vhosts.template
-share/examples/rc.d/lighttpd

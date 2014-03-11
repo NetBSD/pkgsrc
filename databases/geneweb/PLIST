@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:43:15 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/03/11 14:05:00 jperkin Exp $
 bin/consang
 bin/ged2gwb
 bin/gwb2ged
@@ -173,7 +173,6 @@ share/doc/geneweb/wdoc/fr/update.txt
 share/doc/geneweb/wdoc/wdoc.txt
 share/examples/geneweb/a.gwf
 share/examples/geneweb/only.txt
-share/examples/rc.d/geneweb
 share/geneweb/etc/accent.txt
 share/geneweb/etc/anclist.txt
 share/geneweb/etc/ancmenu.txt

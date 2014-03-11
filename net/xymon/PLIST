@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/05/10 21:58:38 spz Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/03/11 14:05:12 jperkin Exp $
 libexec/xymon/ackinfo.cgi
 libexec/xymon/acknowledge.cgi
 libexec/xymon/appfeed.cgi
@@ -164,7 +164,6 @@ man/man8/xymond_sample.8
 man/man8/xymonfetch.8
 man/man8/xymonlaunch.8
 man/man8/xymonproxy.8
-share/examples/rc.d/xymon
 share/examples/xymon/alerts.cfg
 share/examples/xymon/analysis.cfg
 share/examples/xymon/cgioptions.cfg

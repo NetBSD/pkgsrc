@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2013/04/10 21:10:54 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.14 2014/03/11 14:05:16 jperkin Exp $
 bin/puppet
 ${PLIST.sunos}lib/svc/method/svc-puppetd
 ${PLIST.sunos}lib/svc/method/svc-puppetmasterd
@@ -1747,8 +1747,6 @@ ${GEM_LIBDIR}/spec/watchr.rb
 ${GEM_LIBDIR}/tasks/manpages.rake
 ${GEM_LIBDIR}/tasks/parser.rake
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-share/examples/rc.d/puppetd
-share/examples/rc.d/puppetmasterd
 ${PLIST.sunos}${EGDIR}/svc/puppetd.xml
 ${PLIST.sunos}${EGDIR}/svc/puppetmasterd.xml
 ${RUBY_EG}-puppet/puppet.conf

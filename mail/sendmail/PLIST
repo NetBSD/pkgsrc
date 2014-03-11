@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2011/06/11 04:44:08 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.19 2014/03/11 14:05:05 jperkin Exp $
 bin/hoststat
 bin/mailq
 bin/newaliases
@@ -27,8 +27,6 @@ share/doc/sendmail/RELEASE_NOTES
 share/doc/sendmail/SECURITY
 share/doc/sendmail/op.me
 share/doc/sendmail/op.ps
-share/examples/rc.d/sendmail
-share/examples/rc.d/smmsp
 share/examples/sendmail/mailer.conf
 share/examples/sendmail/socketmapClient.pl
 share/examples/sendmail/socketmapServer.pl

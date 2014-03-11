@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:09:24 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/03/11 14:05:07 jperkin Exp $
 sbin/ddclient
 share/doc/ddclient/COPYING
 share/doc/ddclient/COPYRIGHT
@@ -12,4 +12,3 @@ share/examples/ddclient/sample-etc_ppp_ip-up.local
 share/examples/ddclient/sample-etc_rc.d_init.d_ddclient
 share/examples/ddclient/sample-etc_rc.d_init.d_ddclient.lsb
 share/examples/ddclient/sample-etc_rc.d_init.d_ddclient.redhat
-share/examples/rc.d/ddclient

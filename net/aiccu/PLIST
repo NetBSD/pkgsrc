@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:09:20 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/03/11 14:05:06 jperkin Exp $
 man/man1/aiccu.1
 sbin/aiccu
 share/doc/aiccu/COPYRIGHT
@@ -6,4 +6,3 @@ share/doc/aiccu/HOWTO
 share/doc/aiccu/LICENSE
 share/doc/aiccu/README
 share/examples/aiccu/aiccu.conf
-share/examples/rc.d/aiccu

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2011/01/12 00:12:13 jym Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/03/11 14:05:16 jperkin Exp $
 bin/lsevtchn
 bin/pygrub
 bin/readnotes
@@ -502,9 +502,6 @@ sbin/xm
 sbin/xsview
 share/doc/xen/README.blktap
 share/doc/xen/README.xenmon
-share/examples/rc.d/xenbackendd
-share/examples/rc.d/xend
-share/examples/rc.d/xendomains
 share/examples/xen/block
 share/examples/xen/formats
 share/examples/xen/hvm

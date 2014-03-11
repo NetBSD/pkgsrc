@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/09/25 14:13:48 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/03/11 14:05:13 jperkin Exp $
 bin/fpscan
 ${PLIST.scanmail}${PERL5_SUB_INSTALLVENDORLIB}/Anomy/HTMLCleaner.pm
 ${PLIST.scanmail}${PERL5_SUB_INSTALLVENDORLIB}/Anomy/Log.pm
@@ -72,7 +72,5 @@ share/doc/f-prot/html/Helpfiles_v6/test_inst.html
 share/doc/f-prot/html/Helpfiles_v6/todo.txt
 share/doc/f-prot/html/Helpfiles_v6/updater.html
 ${EGDIR}/f-prot.conf
-${PLIST.fpscand}share/examples/rc.d/fpscand
-${PLIST.scanmail}share/examples/rc.d/scanmail
 ${PLIST.license}${EGDIR}/license.key
 ${DATADIR}/antivir.def

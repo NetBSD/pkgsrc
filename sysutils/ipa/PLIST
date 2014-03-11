@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/01/23 16:59:51 reed Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/03/11 14:05:15 jperkin Exp $
 bin/ipa
 bin/ipactl
 bin/ipastat
@@ -15,4 +15,3 @@ man/ru/man5/ipastat.conf.5
 man/ru/man8/ipa.8
 man/ru/man8/ipactl.8
 man/ru/man8/ipastat.8
-share/examples/rc.d/ipa

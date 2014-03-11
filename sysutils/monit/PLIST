@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/02/06 09:09:17 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/03/11 14:05:15 jperkin Exp $
 bin/monit
 man/man1/monit.1
 share/docs/monit/CHANGES
@@ -10,4 +10,3 @@ share/examples/monit/monit.upstart
 share/examples/monit/monitrc-gentoo
 share/examples/monit/monitrc.sample
 share/examples/monit/rc.monit
-share/examples/rc.d/monit
