@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.36 2014/03/08 20:35:00 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.37 2014/03/11 16:25:24 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q4 branch:
@@ -118,3 +118,17 @@ Pullup ticket #4336 - requested by tron
 net/wireshark: security update
 Pullup ticket #4337 - requested by kim
 security/sudo: security update
+Pullup ticket #4338 - requested by taca
+www/curl: security update
+Pullup ticket #4339 - requested by taca
+databases/ruby-activerecord32: security update
+devel/ruby-activemodel32: security update
+devel/ruby-activesupport32: security update
+devel/ruby-railties32: security update
+mail/ruby-actionmailer32: security update
+www/ruby-actionpack32: security update
+www/ruby-activeresource32: security update
+www/ruby-rails32: security update
+Pullup ticket #4340 - requested by taca
+lang/php54: security update
+lang/php55: security update
