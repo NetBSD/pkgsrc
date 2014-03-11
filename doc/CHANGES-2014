@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.988 2014/03/11 10:03:55 obache Exp $
+$NetBSD: CHANGES-2014,v 1.989 2014/03/11 10:26:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1497,3 +1497,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/ruby-locale to 2.1.0 [obache 2014-03-11]
 	Updated devel/ruby-gettext to 3.1.1 [obache 2014-03-11]
 	Updated graphics/rabbit to 2.1.2 [obache 2014-03-11]
+	Updated multimedia/ffmpeg to 20140305.1.2.6 [wiz 2014-03-11]
