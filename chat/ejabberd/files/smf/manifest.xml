@@ -1,0 +1,39 @@
+<?xml version='1.0'?>
+<!DOCTYPE service_bundle SYSTEM '/usr/share/lib/xml/dtd/service_bundle.dtd.1'>
+<service_bundle type='manifest' name='@SMF_NAME@'>
+  <service name='@SMF_PREFIX@/@SMF_NAME@' type='service' version='1'>
+    <create_default_instance enabled='false' />
+    <single_instance />
+    <dependency name='fs-local' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/system/filesystem/local' />
+    </dependency>
+    <dependency name='network-service' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/network/service' />
+    </dependency>
+    <dependency name='system-log' grouping='optional_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/system/system-log' />
+    </dependency>
+    <dependency name='config-files' grouping='require_any' restart_on='refresh' type='path'>
+      <service_fmri value='file://localhost@PKG_SYSCONFDIR@/ejabberd.cfg' />
+      <service_fmri value='file://localhost@PKG_SYSCONFDIR@/ejabberctl.cfg' />
+      <service_fmri value='file://localhost@PKG_SYSCONFDIR@/inetrc' />
+    </dependency>
+    <dependency name='@SMF_NAME@-epmd' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/@SMF_PREFIX@/epmd' />
+    </dependency>
+    <method_context working_directory='@EJABBERD_DB@'>
+      <method_credential user='@EJABBERD_USER@' group='@EJABBERD_GROUP@' />
+    </method_context>
+    <exec_method name='start' type='method' exec='@PREFIX@/sbin/ejabberdctl start' timeout_seconds='120' />
+    <exec_method name='stop' type='method' exec='@PREFIX@/sbin/ejabberdctl stop' timeout_seconds='60' />
+    <property_group name='startd' type='framework'>
+      <propval name='ignore_error' type='astring' value='core,signal' />
+    </property_group>
+    <stability value='Unstable' />
+    <template>
+      <common_name>
+        <loctext xml:lang='C'>ejabberd - the Erlang Jabber/XMPP daemon</loctext>
+      </common_name>
+    </template>
+  </service>
+</service_bundle>
