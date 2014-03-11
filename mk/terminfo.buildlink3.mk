@@ -1,4 +1,4 @@
-# $NetBSD: terminfo.buildlink3.mk,v 1.5 2014/03/09 10:15:32 roy Exp $
+# $NetBSD: terminfo.buildlink3.mk,v 1.6 2014/03/11 09:16:57 obache Exp $
 #
 # This Makefile fragment is meant to be included by packages that require
 # any terminfo implementation instead of one particular one.  The available
@@ -74,7 +74,7 @@ BUILD_DEFS_EFFECTS+=	TERMINFO_TYPE
 .if empty(TERMINFO_TYPE:Mnone)
 .  for _tcap_ in ${_TERMINFO_TYPES}
 .    if empty(TERMINFO_TYPE:M${_tcap_}) \
-	&& (!defined(CURSES_TYPE) || empty(CURSES_TYPE:M${_tcap_}))
+	&& (!defined(CURSES_TYPE) || empty(CURSES_TYPE:U:M${_tcap_}))
 BUILDLINK_TRANSFORM+=		l:${_tcap_}:${BUILDLINK_LIBNAME.terminfo}
 .    endif
 .  endfor
