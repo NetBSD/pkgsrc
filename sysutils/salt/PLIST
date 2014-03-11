@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/08/17 18:30:02 imil Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/03/11 14:05:16 jperkin Exp $
 bin/salt
 bin/salt-call
 bin/salt-cp
@@ -1087,7 +1087,5 @@ man/man1/salt-run.1
 man/man1/salt-syndic.1
 man/man1/salt.1
 man/man7/salt.7
-share/examples/rc.d/salt_master
-share/examples/rc.d/salt_minion
 share/examples/salt/master
 share/examples/salt/minion

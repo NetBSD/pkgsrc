@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/10/02 18:30:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/03/11 14:05:13 jperkin Exp $
 bin/clamav-config
 bin/clambc
 bin/clamconf
@@ -29,5 +29,3 @@ ${PLIST.milter}sbin/clamav-milter
 share/examples/clamav/clamav-milter.conf
 share/examples/clamav/clamd.conf
 share/examples/clamav/freshclam.conf
-share/examples/rc.d/clamd
-share/examples/rc.d/freshclamd

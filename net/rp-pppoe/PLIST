@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:09:41 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/03/11 14:05:11 jperkin Exp $
 man/man5/pppoe.conf.5
 man/man8/pppoe-connect.8
 man/man8/pppoe-server.8
@@ -20,6 +20,5 @@ share/doc/${PKGNAME}/LICENSE
 share/doc/${PKGNAME}/README
 share/doc/${PKGNAME}/SERVPOET
 share/doc/${PKGNAME}/pap-secrets
-share/examples/rc.d/pppoe
 share/examples/rp-pppoe/pppoe-server-options
 share/examples/rp-pppoe/pppoe.conf

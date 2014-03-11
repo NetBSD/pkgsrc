@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/03/13 09:36:33 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/03/11 14:05:18 jperkin Exp $
 bin/varnishadm
 bin/varnishhist
 bin/varnishlog
@@ -38,7 +38,4 @@ man/man7/varnish-cli.7
 man/man7/varnish-counters.7
 man/man7/vcl.7
 sbin/varnishd
-share/examples/rc.d/varnishd
-share/examples/rc.d/varnishlog
-share/examples/rc.d/varnishncsa
 share/examples/varnish/default.vcl

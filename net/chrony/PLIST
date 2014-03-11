@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/08/16 08:30:20 hannken Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/03/11 14:05:07 jperkin Exp $
 bin/chronyc
 man/man1/chrony.1
 man/man1/chronyc.1
@@ -10,4 +10,3 @@ share/doc/chrony/README
 share/doc/chrony/chrony.txt
 share/examples/chrony/chrony.conf.example
 share/examples/chrony/chrony.keys.example
-share/examples/rc.d/chronyd

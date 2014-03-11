@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:04:27 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/03/11 14:05:02 jperkin Exp $
 man/man5/clamsmtpd.conf.5
 man/man8/clamsmtpd.8
 sbin/clamsmtpd
 share/examples/clamsmtp/clamsmtpd.conf
 share/examples/clamsmtp/virus_action.sh
-share/examples/rc.d/clamsmtpd

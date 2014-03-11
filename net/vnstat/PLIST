@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/11/26 14:11:44 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/03/11 14:05:12 jperkin Exp $
 bin/vnstat
 bin/vnstatd
 ${PLIST.gd}bin/vnstati
@@ -7,4 +7,3 @@ man/man1/vnstatd.1
 ${PLIST.gd}man/man1/vnstati.1
 man/man5/vnstat.conf.5
 share/examples/vnstat.conf
-share/examples/rc.d/vnstatd
