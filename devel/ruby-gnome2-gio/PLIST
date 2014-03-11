@@ -1,7 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2013/02/07 13:41:55 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/03/11 12:11:45 obache Exp $
 lib/pkgconfig/ruby-gio2.pc
 ${RUBY_VENDORLIB}/gio2.rb
 ${RUBY_VENDORLIB}/gio2/deprecated.rb
+${RUBY_VENDORLIB}/gio2/inet-address.rb
+${RUBY_VENDORLIB}/gio2/input-stream.rb
+${RUBY_VENDORLIB}/gio2/loader.rb
+${RUBY_VENDORLIB}/gio2/output-stream.rb
+${RUBY_VENDORLIB}/gio2/pollable-input-stream.rb
+${RUBY_VENDORLIB}/gio2/pollable-output-stream.rb
+${RUBY_VENDORLIB}/gio2/resources.rb
 ${RUBY_VENDORARCHLIB}/gio2.${RUBY_DLEXT}
-${RUBY_VENDORARCHLIB}/rbgio2.h
-${RUBY_VENDORARCHLIB}/rbgio2conversions.h
