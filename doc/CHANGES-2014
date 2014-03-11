@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.990 2014/03/11 10:29:46 jperkin Exp $
+$NetBSD: CHANGES-2014,v 1.991 2014/03/11 11:50:48 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1499,3 +1499,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/rabbit to 2.1.2 [obache 2014-03-11]
 	Updated multimedia/ffmpeg to 20140305.1.2.6 [wiz 2014-03-11]
 	Updated lang/ocaml to 4.01.0nb2 [jperkin 2014-03-11]
+	Updated devel/xulrunner24 to 24.3.0 [ryoon 2014-03-11]
