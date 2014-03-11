@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2013/05/09 13:43:02 obache Exp $
+@comment $NetBSD: PLIST,v 1.25 2014/03/11 10:03:46 obache Exp $
 bin/rabbirc
 bin/rabbit
 bin/rabbit-command
@@ -152,6 +152,7 @@ ${RUBY_VENDORLIB}/rabbit/renderer/print/layout.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/print/multiple.rb
 ${RUBY_VENDORLIB}/rabbit/search-window.rb
 ${RUBY_VENDORLIB}/rabbit/searcher.rb
+${RUBY_VENDORLIB}/rabbit/slide.rb
 ${RUBY_VENDORLIB}/rabbit/slide-configuration.rb
 ${RUBY_VENDORLIB}/rabbit/slideshare.rb
 ${RUBY_VENDORLIB}/rabbit/soap/base.rb
