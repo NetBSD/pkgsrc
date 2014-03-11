@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.986 2014/03/11 09:51:00 obache Exp $
+$NetBSD: CHANGES-2014,v 1.987 2014/03/11 10:00:30 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1495,3 +1495,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/zeromq to 4.0.4 [obache 2014-03-11]
 	Updated textproc/cabocha to 0.68 [obache 2014-03-11]
 	Updated devel/ruby-locale to 2.1.0 [obache 2014-03-11]
+	Updated devel/ruby-gettext to 3.1.1 [obache 2014-03-11]
