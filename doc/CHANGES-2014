@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1008 2014/03/12 10:04:58 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1009 2014/03/12 10:08:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1539,3 +1539,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/xterm to 303 [wiz 2014-03-12]
 	Updated textproc/py-lxml to 3.3.3 [wiz 2014-03-12]
 	Updated devel/readline to 6.3 [wiz 2014-03-12]
+	Updated shells/bash to 4.3 [wiz 2014-03-12]
