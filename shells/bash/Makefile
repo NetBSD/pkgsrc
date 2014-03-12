@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.60 2014/01/11 18:18:46 chopps Exp $
+# $NetBSD: Makefile,v 1.61 2014/03/12 10:08:46 wiz Exp $
 
-BASH_VERSION=		4.2
+BASH_VERSION=		4.3
 
 DISTNAME=	bash-${BASH_VERSION}
 #PKGNAME=	bash-${BASH_VERSION}.${BASH_PATCHLEVEL}
-PKGREVISION=	4
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GNU:=bash/} \
 		ftp://ftp.cwru.edu/pub/bash/
