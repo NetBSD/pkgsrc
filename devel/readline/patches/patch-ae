@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.16 2013/07/26 13:13:12 ryoon Exp $
+$NetBSD: patch-ae,v 1.17 2014/03/12 10:04:50 wiz Exp $
 
 Pass -no-undefined to libtool for building shared library.
 
---- Makefile.in.orig	2010-10-11 15:53:52.000000000 +0000
+--- Makefile.in.orig	2014-01-27 14:52:00.000000000 +0000
 +++ Makefile.in
 @@ -18,6 +18,9 @@
  RL_LIBRARY_VERSION = @LIBVERSION@
@@ -14,7 +14,7 @@ Pass -no-undefined to libtool for building shared library.
  PACKAGE = @PACKAGE_NAME@
  VERSION = @PACKAGE_VERSION@
  
-@@ -74,6 +77,7 @@ CTAGS = ctags -tw
+@@ -78,6 +81,7 @@ CTAGS = ctags -tw
  CFLAGS = @CFLAGS@
  LOCAL_CFLAGS = @LOCAL_CFLAGS@ -DRL_LIBRARY_VERSION='"$(RL_LIBRARY_VERSION)"'
  CPPFLAGS = @CPPFLAGS@
@@ -22,7 +22,7 @@ Pass -no-undefined to libtool for building shared library.
  
  DEFS = @DEFS@ @CROSS_COMPILE@
  LOCAL_DEFS = @LOCAL_DEFS@
-@@ -96,9 +100,15 @@ GCC_LINT_CFLAGS = $(XCCFLAGS) $(GCC_LINT
+@@ -100,9 +104,15 @@ GCC_LINT_CFLAGS = $(XCCFLAGS) $(GCC_LINT
  	${RM} $@
  	$(CC) -c $(CCFLAGS) $<
  
@@ -38,7 +38,7 @@ Pass -no-undefined to libtool for building shared library.
  
  # The C code source files for this library.
  CSOURCES = $(srcdir)/readline.c $(srcdir)/funmap.c $(srcdir)/keymaps.c \
-@@ -150,6 +160,8 @@ INSTALL_TARGETS = @STATIC_INSTALL_TARGET
+@@ -160,6 +170,8 @@ INSTALL_TARGETS = @STATIC_INSTALL_TARGET
  
  all: $(TARGETS)
  
@@ -47,7 +47,7 @@ Pass -no-undefined to libtool for building shared library.
  everything: all examples
  
  static: $(STATIC_LIBS)
-@@ -159,17 +171,33 @@ libreadline.a: $(OBJECTS)
+@@ -169,17 +181,33 @@ libreadline.a: $(OBJECTS)
  	$(AR) $(ARFLAGS) $@ $(OBJECTS)
  	-test -n "$(RANLIB)" && $(RANLIB) $@
  
@@ -81,7 +81,7 @@ Pass -no-undefined to libtool for building shared library.
  readline: $(OBJECTS) readline.h rldefs.h chardefs.h ./libreadline.a
  	$(CC) $(CCFLAGS) -DREADLINE_LIBRARY -o $@ $(top_srcdir)/examples/rl.c ./libreadline.a ${TERMCAP_LIB}
  
-@@ -254,6 +282,12 @@ install-examples: installdirs install-he
+@@ -264,6 +292,12 @@ install-examples: installdirs install-he
  uninstall-examples: maybe-uninstall-headers
  	-( cd examples; ${MAKE} ${MFLAGS} DESTDIR=${DESTDIR} uninstall )
  
@@ -92,5 +92,5 @@ Pass -no-undefined to libtool for building shared library.
 +	$(LIBTOOL) --mode=install $(INSTALL) libhistory.la $(DESTDIR)$(libdir)
 +
  install-doc:	installdirs
+ 	$(INSTALL_DATA) $(OTHER_DOCS) $(DESTDIR)$(docdir)
  	-( if test -d doc ; then \
- 		cd doc && \

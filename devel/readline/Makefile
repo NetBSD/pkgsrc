@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2014/01/12 13:30:25 chopps Exp $
+# $NetBSD: Makefile,v 1.56 2014/03/12 10:04:50 wiz Exp $
 
-READLINE_VERSION=	6.2
+READLINE_VERSION=	6.3
 
 DISTNAME=       readline-${READLINE_VERSION}
-PKGREVISION=    1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=readline/}
 
