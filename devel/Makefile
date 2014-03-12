@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1873 2014/03/12 01:27:55 rodent Exp $
+# $NetBSD: Makefile,v 1.1874 2014/03/12 01:38:15 rodent Exp $
 #
 
 COMMENT=	Development utilities
@@ -1483,6 +1483,7 @@ SUBDIR+=	py-logilab-common
 SUBDIR+=	py-macholib
 SUBDIR+=	py-mako
 SUBDIR+=	py-memcached
+SUBDIR+=	py-minimock
 SUBDIR+=	py-mock
 SUBDIR+=	py-modulegraph
 SUBDIR+=	py-msgpack
