@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1872 2014/03/06 11:53:57 obache Exp $
+# $NetBSD: Makefile,v 1.1873 2014/03/12 01:27:55 rodent Exp $
 #
 
 COMMENT=	Development utilities
@@ -1431,6 +1431,7 @@ SUBDIR+=	py-Optik
 SUBDIR+=	py-Pyro
 SUBDIR+=	py-ZopeInterface
 SUBDIR+=	py-argparse
+SUBDIR+=	py-astroid
 SUBDIR+=	py-at-spi
 SUBDIR+=	py-at-spi2
 SUBDIR+=	py-babel
@@ -1498,6 +1499,7 @@ SUBDIR+=	py-pqueue
 SUBDIR+=	py-py
 SUBDIR+=	py-py2app
 SUBDIR+=	py-pyev
+SUBDIR+=	py-pylint
 SUBDIR+=	py-pyparsing
 SUBDIR+=	py-pysvn
 SUBDIR+=	py-pytemplate
