@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2014/03/12 01:37:37 rodent Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/minimock.py
+${PYSITELIB}/minimock.pyc
+${PYSITELIB}/minimock.pyo
