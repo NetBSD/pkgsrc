@@ -1,11 +1,11 @@
-$NetBSD: patch-bc,v 1.1 2010/11/23 08:24:04 tron Exp $
+$NetBSD: patch-bc,v 1.2 2014/03/12 12:57:06 obache Exp $
 
 Fix for CVE-2010-3492 and CVE-2010-3493, taken from the Python SVN repository:
 
 http://svn.python.org/view?view=rev&revision=86084
 
---- Lib/smtpd2.6.py.orig	2010-11-22 18:18:59.000000000 +0000
-+++ Lib/smtpd2.6.py	2010-11-22 18:19:03.000000000 +0000
+--- Lib/smtpd.py.orig	2010-11-22 18:18:59.000000000 +0000
++++ Lib/smtpd.py	2010-11-22 18:19:03.000000000 +0000
 @@ -35,7 +35,6 @@
  and if remoteport is not given, then 25 is used.
  """
