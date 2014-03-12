@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.8 2014/02/12 23:28:17 tron Exp $
+@comment $NetBSD: PLIST.common,v 1.9 2014/03/12 12:40:57 obache Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -2453,9 +2453,9 @@ lib/python${PY_VER_SUFFIX}/site-packages/README
 lib/python${PY_VER_SUFFIX}/site.py
 lib/python${PY_VER_SUFFIX}/site.pyc
 lib/python${PY_VER_SUFFIX}/site.pyo
-lib/python${PY_VER_SUFFIX}/smtpd${PY_VER_SUFFIX}.py
-lib/python${PY_VER_SUFFIX}/smtpd${PY_VER_SUFFIX}.pyc
-lib/python${PY_VER_SUFFIX}/smtpd${PY_VER_SUFFIX}.pyo
+lib/python${PY_VER_SUFFIX}/smtpd.py
+lib/python${PY_VER_SUFFIX}/smtpd.pyc
+lib/python${PY_VER_SUFFIX}/smtpd.pyo
 lib/python${PY_VER_SUFFIX}/smtplib.py
 lib/python${PY_VER_SUFFIX}/smtplib.pyc
 lib/python${PY_VER_SUFFIX}/smtplib.pyo
