@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.19 2011/11/08 07:30:08 sbd Exp $
+$NetBSD: patch-am,v 1.20 2014/03/12 12:57:06 obache Exp $
 
 Disabled modules for normal build:
 bsddb
@@ -378,7 +378,7 @@ support building the "nis" and "crypt" modules.
 -                     'Lib/smtpd.py']
 +          scripts = ['Tools/scripts/pydoc2.6',
 +                     'Tools/scripts/2to3-2.6',
-+                     'Lib/smtpd2.6.py']
++                     'Tools/scripts/smtpd2.6.py']
          )
  
  # --install-platlib
