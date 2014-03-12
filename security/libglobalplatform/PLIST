@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2014/03/12 21:23:11 gdt Exp $
+include/globalplatform/connection.h
+include/globalplatform/connectionplugin.h
+include/globalplatform/debug.h
+include/globalplatform/error.h
+include/globalplatform/errorcodes.h
+include/globalplatform/globalplatform.h
+include/globalplatform/library.h
+include/globalplatform/security.h
+include/globalplatform/stringify.h
+include/globalplatform/types.h
+include/globalplatform/unicode.h
+lib/libglobalplatform.la
+lib/pkgconfig/globalplatform.pc
