@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.37 2014/03/11 16:25:24 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.38 2014/03/12 09:41:29 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q4 branch:
@@ -132,3 +132,5 @@ www/ruby-rails32: security update
 Pullup ticket #4340 - requested by taca
 lang/php54: security update
 lang/php55: security update
+Pullup ticket #4341 - requested by jym
+security/stunnel: security update
