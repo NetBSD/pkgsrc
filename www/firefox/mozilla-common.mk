@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.26 2014/03/10 19:52:26 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.27 2014/03/12 23:41:33 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -26,6 +26,8 @@ GCC_REQD+=		4.5
 
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
+CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}js/src/tests/update-test262.sh
+
 
 CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--disable-pedantic
