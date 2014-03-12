@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/03/06 10:16:53 mrg Exp $
+# $NetBSD: Makefile,v 1.2 2014/03/12 19:00:36 wiz Exp $
 
 DISTNAME=		Csound${CSOUND_VERSION}
 PKGNAME=		csound6-${CSOUND_VERSION}
@@ -13,6 +13,7 @@ LICENSE=		gnu-lgpl-v2.1 # or later
 
 CSOUND_VERSION=		6.02
 USE_LANGUAGES=		c c++
+USE_TOOLS+=		bison
 CFLAGS+=		-g -D__PKGSRC_PREFIX__=\"${PREFIX}/\" -DBETA
 USE_CMAKE=		yes
 CMAKE_ARGS+=		-DUSE_PORTAUDIO:BOOL=OFF
