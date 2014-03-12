@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1032 2014/03/12 22:49:14 justin Exp $
+$NetBSD: CHANGES-2014,v 1.1033 2014/03/12 23:57:45 tron Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1563,3 +1563,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added security/libglobalplatform version 6.0.0 [gdt 2014-03-12]
 	Added security/gpshell version 1.4.4 [gdt 2014-03-12]
 	Updated lang/LuaJIT2 to 2.0.3 [justin 2014-03-12]
+	Updated mail/mutt-devel to 1.5.23 [tron 2014-03-12]
