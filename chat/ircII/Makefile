@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2014/01/02 07:57:49 mrg Exp $
+# $NetBSD: Makefile,v 1.63 2014/03/12 07:22:34 mrg Exp $
 
 DISTNAME=		ircii-${VERS}
 PKGNAME=		ircII-${VERS}
+PKGREVISION=		1
 CATEGORIES=		chat
 MASTER_SITES=		http://ircii.warped.com/
 EXTRACT_SUFX=		.tar.bz2
