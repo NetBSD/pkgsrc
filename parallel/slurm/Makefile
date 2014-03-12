@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2014/02/12 23:18:28 tron Exp $
+# $NetBSD: Makefile,v 1.12 2014/03/12 20:17:09 asau Exp $
 
 DISTNAME=	slurm-2.6.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.schedmd.com/download/archive/ \
 		http://www.schedmd.com/download/latest/ \
@@ -34,6 +34,7 @@ post-install:
 	$(INSTALL_DATA_DIR) $(DESTDIR)$(PREFIX)/share/examples/$(PKGBASE)
 	$(INSTALL_DATA) $(WRKSRC)/etc/* $(DESTDIR)$(PREFIX)/share/examples/$(PKGBASE)/
 
+PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/tool.mk"
 
 CONFIGURE_ARGS+=	--with-munge=$(BUILDLINK_PREFIX.munge:Q)
