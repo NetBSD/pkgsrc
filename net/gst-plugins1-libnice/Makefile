@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2014/01/01 11:52:29 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2014/03/12 10:26:10 wiz Exp $
 
-DISTNAME=	libnice-0.1.4
+DISTNAME=	libnice-0.1.5
 PKGNAME=	gst-plugins1-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net devel
 MASTER_SITES=	http://nice.freedesktop.org/releases/
 
@@ -23,6 +22,12 @@ CONFIGURE_ARGS+= --with-gstreamer
 
 BUILD_DIRS=	gst
 INSTALL_DIRS=	gst
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+_WRAP_EXTRA_ARGS.CC+=	-Wunused-but-set-variable
+.endif
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../net/gupnp-igd/buildlink3.mk"
