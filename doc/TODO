@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13067 2014/03/12 10:14:30 wiz Exp $
+$NetBSD: TODO,v 1.13068 2014/03/12 10:18:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -754,7 +754,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o libraw-0.16.0
 	o libreoffice4-bin-4.2.1
-	o libsecret-0.18
 	o libssh2-1.4.2
 	o libstree-0.4.3pre2 [pkg/43748]
 	o libtar-1.2.20
@@ -778,7 +777,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lsh-2.1
 	o ltris-1.0.19
 	o lwm-1.2.3
-	o lynx-2.8.8rel2
 	o m17n-db-1.6.5
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
