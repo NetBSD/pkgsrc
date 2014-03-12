@@ -1,15 +1,13 @@
-$NetBSD: patch-ac,v 1.15 2011/11/10 21:01:39 ryoon Exp $
+$NetBSD: patch-ac,v 1.15.18.1 2014/03/12 09:41:09 tron Exp $
 
-Change pid file location.
-
---- src/Makefile.in.orig	2011-11-04 20:24:15.000000000 +0000
+--- src/Makefile.in.orig	2014-01-07 20:19:44.000000000 +0000
 +++ src/Makefile.in
-@@ -271,7 +271,7 @@ libstunnel_la_LDFLAGS = -avoid-version
+@@ -310,7 +310,7 @@ libstunnel_la_LDFLAGS = -avoid-version
  
  # Additional preprocesor definitions
  stunnel_CPPFLAGS = -I/usr/kerberos/include -I$(SSLDIR)/include \
--	-DLIBDIR='"$(pkglibdir)"' -DCONFDIR='"$(sysconfdir)/stunnel"' \
-+	-DLIBDIR='"$(pkglibdir)"' -DCONFDIR='"$(sysconfdir)"' \
- 	-DPIDFILE='"$(localstatedir)/run/stunnel/stunnel.pid"'
+-	-DLIBDIR='"$(pkglibdir)"' -DCONFDIR='"$(sysconfdir)/stunnel"'
++	-DLIBDIR='"$(pkglibdir)"' -DCONFDIR='"$(sysconfdir)"'
  
  # Win32 executable
+ EXTRA_DIST = make.bat makece.bat makew32.bat mingw.mak evc.mak vc.mak \
