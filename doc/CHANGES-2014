@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1025 2014/03/12 16:16:27 pettai Exp $
+$NetBSD: CHANGES-2014,v 1.1026 2014/03/12 18:14:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1556,3 +1556,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/nawk to 20121220 [ryoon 2014-03-12]
 	Updated net/nsd to 4.0.2 [pettai 2014-03-12]
 	Updated net/unbound to 1.4.22 [pettai 2014-03-12]
+	Updated wm/spectrwm to 2.5.0 [wiz 2014-03-12]
