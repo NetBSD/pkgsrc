@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1022 2014/03/12 12:57:24 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1023 2014/03/12 14:21:25 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1553,3 +1553,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/python27 to 2.7.6nb3 [obache 2014-03-12]
 	Updated mail/mew to 6.5nb3 [ryoon 2014-03-12]
 	Updated lang/python26 to 2.6.9nb3 [obache 2014-03-12]
+	Updated lang/nawk to 20121220 [ryoon 2014-03-12]
