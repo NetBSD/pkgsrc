@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1009 2014/03/12 10:08:55 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1010 2014/03/12 10:13:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1540,3 +1540,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/py-lxml to 3.3.3 [wiz 2014-03-12]
 	Updated devel/readline to 6.3 [wiz 2014-03-12]
 	Updated shells/bash to 4.3 [wiz 2014-03-12]
+	Updated www/lynx to 2.8.8.2 [wiz 2014-03-12]
