@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2013/07/14 21:42:00 alnsn Exp $
+# $NetBSD: Makefile,v 1.2 2014/03/12 22:49:14 justin Exp $
 #
 
-DISTNAME=	LuaJIT-2.0.2
+DISTNAME=	LuaJIT-2.0.3
 PKGNAME=	${DISTNAME:S/LuaJIT/LuaJIT2/}
 CATEGORIES=	lang
 MASTER_SITES=	http://luajit.org/download/
