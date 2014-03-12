@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/02/11 17:56:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/03/12 10:39:43 wiz Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1514,6 +1514,13 @@ lib/python${PY_VER_SUFFIX}/idlelib/HyperParser.py
 lib/python${PY_VER_SUFFIX}/idlelib/IOBinding.py
 lib/python${PY_VER_SUFFIX}/idlelib/Icons/folder.gif
 lib/python${PY_VER_SUFFIX}/idlelib/Icons/idle.icns
+lib/python${PY_VER_SUFFIX}/idlelib/Icons/idle.ico
+lib/python${PY_VER_SUFFIX}/idlelib/Icons/idle_16.gif
+lib/python${PY_VER_SUFFIX}/idlelib/Icons/idle_16.png
+lib/python${PY_VER_SUFFIX}/idlelib/Icons/idle_32.gif
+lib/python${PY_VER_SUFFIX}/idlelib/Icons/idle_32.png
+lib/python${PY_VER_SUFFIX}/idlelib/Icons/idle_48.gif
+lib/python${PY_VER_SUFFIX}/idlelib/Icons/idle_48.png
 lib/python${PY_VER_SUFFIX}/idlelib/Icons/minusnode.gif
 lib/python${PY_VER_SUFFIX}/idlelib/Icons/openfolder.gif
 lib/python${PY_VER_SUFFIX}/idlelib/Icons/plusnode.gif
@@ -2273,6 +2280,8 @@ lib/python${PY_VER_SUFFIX}/test/__pycache__/autotest.cpython-33.pyc
 lib/python${PY_VER_SUFFIX}/test/__pycache__/autotest.cpython-33.pyo
 lib/python${PY_VER_SUFFIX}/test/__pycache__/buffer_tests.cpython-33.pyc
 lib/python${PY_VER_SUFFIX}/test/__pycache__/buffer_tests.cpython-33.pyo
+lib/python${PY_VER_SUFFIX}/test/__pycache__/coding20731.cpython-33.pyc
+lib/python${PY_VER_SUFFIX}/test/__pycache__/coding20731.cpython-33.pyo
 lib/python${PY_VER_SUFFIX}/test/__pycache__/curses_tests.cpython-33.pyc
 lib/python${PY_VER_SUFFIX}/test/__pycache__/curses_tests.cpython-33.pyo
 lib/python${PY_VER_SUFFIX}/test/__pycache__/datetimetester.cpython-33.pyc
@@ -2653,6 +2662,8 @@ lib/python${PY_VER_SUFFIX}/test/__pycache__/test_idle.cpython-33.pyc
 lib/python${PY_VER_SUFFIX}/test/__pycache__/test_idle.cpython-33.pyo
 lib/python${PY_VER_SUFFIX}/test/__pycache__/test_imaplib.cpython-33.pyc
 lib/python${PY_VER_SUFFIX}/test/__pycache__/test_imaplib.cpython-33.pyo
+lib/python${PY_VER_SUFFIX}/test/__pycache__/test_imghdr.cpython-33.pyc
+lib/python${PY_VER_SUFFIX}/test/__pycache__/test_imghdr.cpython-33.pyo
 lib/python${PY_VER_SUFFIX}/test/__pycache__/test_imp.cpython-33.pyc
 lib/python${PY_VER_SUFFIX}/test/__pycache__/test_imp.cpython-33.pyo
 lib/python${PY_VER_SUFFIX}/test/__pycache__/test_import.cpython-33.pyc
@@ -3177,6 +3188,7 @@ lib/python${PY_VER_SUFFIX}/test/cjkencodings/shift_jis.txt
 lib/python${PY_VER_SUFFIX}/test/cjkencodings/shift_jisx0213-utf8.txt
 lib/python${PY_VER_SUFFIX}/test/cjkencodings/shift_jisx0213.txt
 lib/python${PY_VER_SUFFIX}/test/cmath_testcases.txt
+lib/python${PY_VER_SUFFIX}/test/coding20731.py
 lib/python${PY_VER_SUFFIX}/test/curses_tests.py
 lib/python${PY_VER_SUFFIX}/test/data/README
 lib/python${PY_VER_SUFFIX}/test/datetimetester.py
@@ -3346,6 +3358,17 @@ lib/python${PY_VER_SUFFIX}/test/future_test2.py
 lib/python${PY_VER_SUFFIX}/test/gdb_sample.py
 lib/python${PY_VER_SUFFIX}/test/https_svn_python_org_root.pem
 lib/python${PY_VER_SUFFIX}/test/ieee754.txt
+lib/python${PY_VER_SUFFIX}/test/imghdrdata/python.bmp
+lib/python${PY_VER_SUFFIX}/test/imghdrdata/python.gif
+lib/python${PY_VER_SUFFIX}/test/imghdrdata/python.jpg
+lib/python${PY_VER_SUFFIX}/test/imghdrdata/python.pbm
+lib/python${PY_VER_SUFFIX}/test/imghdrdata/python.pgm
+lib/python${PY_VER_SUFFIX}/test/imghdrdata/python.png
+lib/python${PY_VER_SUFFIX}/test/imghdrdata/python.ppm
+lib/python${PY_VER_SUFFIX}/test/imghdrdata/python.ras
+lib/python${PY_VER_SUFFIX}/test/imghdrdata/python.sgi
+lib/python${PY_VER_SUFFIX}/test/imghdrdata/python.tiff
+lib/python${PY_VER_SUFFIX}/test/imghdrdata/python.xbm
 lib/python${PY_VER_SUFFIX}/test/inspect_fodder.py
 lib/python${PY_VER_SUFFIX}/test/inspect_fodder2.py
 lib/python${PY_VER_SUFFIX}/test/keycert.passwd.pem
@@ -3708,6 +3731,7 @@ lib/python${PY_VER_SUFFIX}/test/test_httplib.py
 lib/python${PY_VER_SUFFIX}/test/test_httpservers.py
 lib/python${PY_VER_SUFFIX}/test/test_idle.py
 lib/python${PY_VER_SUFFIX}/test/test_imaplib.py
+lib/python${PY_VER_SUFFIX}/test/test_imghdr.py
 lib/python${PY_VER_SUFFIX}/test/test_imp.py
 lib/python${PY_VER_SUFFIX}/test/test_import.py
 lib/python${PY_VER_SUFFIX}/test/test_importhooks.py
