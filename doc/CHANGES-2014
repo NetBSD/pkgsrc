@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1018 2014/03/12 12:22:35 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1019 2014/03/12 12:28:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1549,3 +1549,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/python33 to 3.3.5 [wiz 2014-03-12]
 	Updated x11/gtkmm3 to 3.10.0 [wiz 2014-03-12]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.346 [obache 2014-03-12]
+	Updated audio/mp3diags to 1.2.01 [wiz 2014-03-12]
