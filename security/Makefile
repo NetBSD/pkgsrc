@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.497 2014/03/05 05:26:09 agc Exp $
+# $NetBSD: Makefile,v 1.498 2014/03/12 21:26:07 gdt Exp $
 #
 
 COMMENT=	Security tools
@@ -124,6 +124,7 @@ SUBDIR+=	libdes
 SUBDIR+=	libfprint
 SUBDIR+=	libfwbuilder
 SUBDIR+=	libgcrypt
+SUBDIR+=	libglobalplatform
 SUBDIR+=	libgnome-keyring
 SUBDIR+=	libgpg-error
 SUBDIR+=	libguardtime
