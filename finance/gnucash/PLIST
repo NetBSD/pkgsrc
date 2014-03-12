@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2014/01/02 01:25:49 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.50 2014/03/12 09:36:28 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -9,7 +9,6 @@ bin/gnucash-make-guids
 bin/gnucash-valgrind
 include/gnucash/Account.h
 include/gnucash/FreqSpec.h
-include/gnucash/GNCId.h
 include/gnucash/Query.h
 include/gnucash/QuickFill.h
 include/gnucash/Recurrence.h
@@ -669,7 +668,6 @@ share/gnucash/accounts/sk/acctchrt_retiremt.gnucash-xea
 share/gnucash/accounts/sk/acctchrt_spouseinc.gnucash-xea
 share/gnucash/accounts/sk/acctchrt_spouseretire.gnucash-xea
 share/gnucash/accounts/sv_SE/bas_2012.gnucash-xea
-share/gnucash/accounts/sv_SE/swedish_small_business.gnucash-xea
 share/gnucash/accounts/tr_TR/acctchrt_TEKDUZ.gnucash-xea
 share/gnucash/accounts/tr_TR/acctchrt_brokerage.gnucash-xea
 share/gnucash/accounts/tr_TR/acctchrt_carloan.gnucash-xea
