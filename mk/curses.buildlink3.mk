@@ -1,4 +1,4 @@
-# $NetBSD: curses.buildlink3.mk,v 1.19 2014/03/10 12:57:03 obache Exp $
+# $NetBSD: curses.buildlink3.mk,v 1.20 2014/03/12 08:38:47 obache Exp $
 #
 # This Makefile fragment is meant to be included by packages that require
 # any curses implementation instead of one particular one.  The available
@@ -47,7 +47,7 @@ CHECK_BUILTIN.curses:=	no
 #
 .if defined(USE_BUILTIN.curses) && !empty(USE_BUILTIN.curses:M[yY][eE][sS])
 CURSES_DEFAULT?=	curses
-.elif !empty(USE_CURSES:Mwide) || !empty(PKG_OPTIONS:Mwide-curses)
+.elif !empty(USE_CURSES:U:Mwide) || !empty(PKG_OPTIONS:U:Mwide-curses)
 CURSES_DEFAULT?=	ncursesw
 .else
 CURSES_DEFAULT?=	ncurses
