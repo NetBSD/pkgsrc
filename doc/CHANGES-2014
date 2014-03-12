@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1005 2014/03/12 09:50:05 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1006 2014/03/12 09:51:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1536,3 +1536,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/cdrtools to 3.01alpha23 [wiz 2014-03-12]
 	Updated finance/gnucash to 2.6.2 [wiz 2014-03-12]
 	Updated devel/mercurial to 2.9.1 [wiz 2014-03-12]
+	Updated x11/xterm to 303 [wiz 2014-03-12]
