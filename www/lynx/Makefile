@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.116 2014/02/20 10:07:35 wiz Exp $
+# $NetBSD: Makefile,v 1.117 2014/03/12 10:13:15 wiz Exp $
 
-DISTNAME=	lynx2.8.8rel.1
+DISTNAME=	lynx2.8.8rel.2
 PKGNAME=	${DISTNAME:S/lynx/lynx-/:S/rel//}
 CATEGORIES=	www
 MASTER_SITES=	http://lynx.isc.org/${SUBDIR:Q}/ \

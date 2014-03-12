@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2014/02/20 10:07:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2014/03/12 10:13:15 wiz Exp $
 bin/lynx
 man/man1/lynx.1
 share/examples/lynx/lynx.cfg
@@ -90,16 +90,19 @@ share/lynx/lynx_doc/test/ALT88592.html
 share/lynx/lynx_doc/test/ISO_LATIN1_test.html
 share/lynx/lynx_doc/test/README.txt
 share/lynx/lynx_doc/test/TestComment.html
+share/lynx/lynx_doc/test/X
 share/lynx/lynx_doc/test/bad-html.html
 share/lynx/lynx_doc/test/c1.html
 share/lynx/lynx_doc/test/circle.html
 share/lynx/lynx_doc/test/cp-1252.html
 share/lynx/lynx_doc/test/cp-1252a.html
+share/lynx/lynx_doc/test/image.jpg
 share/lynx/lynx_doc/test/iso-8859-1.html
 share/lynx/lynx_doc/test/iso-8859-1a.html
 share/lynx/lynx_doc/test/iso-8859-2.html
 share/lynx/lynx_doc/test/iso-8859-2a.html
 share/lynx/lynx_doc/test/koi8-r.html
+share/lynx/lynx_doc/test/nobody
 share/lynx/lynx_doc/test/quickbrown.html
 share/lynx/lynx_doc/test/raw8bit.html
 share/lynx/lynx_doc/test/sgml.html
