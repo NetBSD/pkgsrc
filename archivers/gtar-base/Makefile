@@ -1,7 +1,11 @@
-# $NetBSD: Makefile,v 1.80 2014/02/24 08:16:56 adam Exp $
+# $NetBSD: Makefile,v 1.81 2014/03/12 13:32:14 fhajny Exp $
+#
+# Please run 'make files/gtar.1' when updating version of this package
+# to regenerate the man page. converters/help2man is needed.
 
 DISTNAME=	tar-1.27.1
 PKGNAME=	${DISTNAME:S/tar/gtar-base/}
+PKGREVISION=	1
 SVR4_PKGNAME=	gtarb
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GNU:=tar/}
@@ -54,6 +58,13 @@ SYMLINKS=		bin/gtar ${PKGGNUDIR}bin/tar \
 .if defined(PLIST.rmt) && ${PLIST.rmt} == "yes"
 SYMLINKS+=		libexec/grmt ${PKGGNUDIR}libexec/rmt
 .endif
+
+files/gtar.1: build
+	${ECHO} .\\\" > ${FILESDIR}/gtar.1
+	${ECHO} .\\\" \$$NetBSD\$$ >> ${FILESDIR}/gtar.1
+	help2man --name "The GNU version of the tar archiving utility" \
+		--info-page tar ${WRKSRC}/src/tar | \
+		${SED} '/help2man/d' >> ${FILESDIR}/gtar.1
 
 post-install:
 	${INSTALL_MAN} ${FILESDIR}/gtar.1 \
