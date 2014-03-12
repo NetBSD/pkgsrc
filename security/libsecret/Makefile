@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2014/01/27 20:14:04 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/03/12 10:17:57 wiz Exp $
 
-DISTNAME=	libsecret-0.16
+DISTNAME=	libsecret-0.18
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsecret/${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.xz
@@ -12,6 +12,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+BUILD_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -20,6 +21,7 @@ USE_TOOLS+=	gmake intltool pkg-config msgfmt
 PKGCONFIG_OVERRIDE+=	libsecret/libsecret-unstable.pc.in
 PKGCONFIG_OVERRIDE+=	libsecret/libsecret.pc.in
 
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.38.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
