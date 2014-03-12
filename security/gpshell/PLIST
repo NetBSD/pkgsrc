@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2014/03/12 21:29:24 gdt Exp $
+bin/gpshell
+man/man1/gpshell.1
