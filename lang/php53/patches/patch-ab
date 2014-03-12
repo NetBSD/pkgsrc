@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.7 2013/07/12 00:07:04 taca Exp $
+$NetBSD: patch-ab,v 1.8 2014/03/12 19:52:04 asau Exp $
 
---- configure.orig	2013-07-11 17:08:25.000000000 +0000
+--- configure.orig	2013-12-10 20:13:12.000000000 +0000
 +++ configure
 @@ -14121,7 +14121,7 @@ EOF
    PHP_VAR_SUBST="$PHP_VAR_SUBST SAPI_CGI_PATH"
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.7 2013/07/12 00:07:04 taca Exp $
      
    if test "$PHP_SAPI" != "default"; then
  { echo "configure: error: 
-@@ -23465,7 +23465,7 @@ fi
+@@ -23462,7 +23462,7 @@ fi
      if test "$found_openssl" = "no"; then
    
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.7 2013/07/12 00:07:04 taca Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -25456,7 +25456,7 @@ echo "configure:25433: checking bundled 
+@@ -25453,7 +25453,7 @@ echo "configure:25433: checking bundled 
      PHP_SQLITE3_CFLAGS="-I@ext_srcdir@/libsqlite $other_flags $threadsafe_flags $debug_flags"
      
    
@@ -29,7 +29,7 @@ $NetBSD: patch-ab,v 1.7 2013/07/12 00:07:04 taca Exp $
        
    
    unique=`echo $header_file|$SED 's/[^a-zA-Z0-9]/_/g'`
-@@ -36318,7 +36318,7 @@ fi
+@@ -36315,7 +36315,7 @@ fi
      if test "$found_openssl" = "no"; then
    
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -38,7 +38,7 @@ $NetBSD: patch-ab,v 1.7 2013/07/12 00:07:04 taca Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -50659,7 +50659,7 @@ fi
+@@ -50656,7 +50656,7 @@ fi
      if test "$found_openssl" = "no"; then
    
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -47,7 +47,7 @@ $NetBSD: patch-ab,v 1.7 2013/07/12 00:07:04 taca Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -84777,7 +84777,7 @@ fi
+@@ -84774,7 +84774,7 @@ fi
      if test "$found_openssl" = "no"; then
    
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -56,7 +56,7 @@ $NetBSD: patch-ab,v 1.7 2013/07/12 00:07:04 taca Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -107940,12 +107940,7 @@ old_CC=$CC
+@@ -107937,12 +107937,7 @@ old_CC=$CC
  if test "$PHP_THREAD_SAFETY" = "yes" && test -n "$ac_cv_pthreads_cflags"; then
    CXXFLAGS="$CXXFLAGS $ac_cv_pthreads_cflags"
    INLINE_CFLAGS="$INLINE_CFLAGS $ac_cv_pthreads_cflags"
@@ -70,3 +70,57 @@ $NetBSD: patch-ab,v 1.7 2013/07/12 00:07:04 taca Exp $
  fi
  
  if test "$PHP_THREAD_SAFETY" = "yes" && test "$PHP_MYSQL" = "yes"; then
+@@ -110873,7 +110868,7 @@ if test -z "$aix_libpath"; then aix_libp
+       hardcode_shlibpath_var=no
+       ;;
+ 
+-    freebsd1*)
++    freebsd1|freebsd1.*)
+       ld_shlibs=no
+       ;;
+ 
+@@ -111512,7 +111507,7 @@ dgux*)
+   shlibpath_var=LD_LIBRARY_PATH
+   ;;
+ 
+-freebsd1*)
++freebsd1|freebsd1.*)
+   dynamic_linker=no
+   ;;
+ 
+@@ -111523,7 +111518,7 @@ freebsd* | dragonfly*)
+     objformat=`/usr/bin/objformat`
+   else
+     case $host_os in
+-    freebsd[123]*) objformat=aout ;;
++    freebsd[123]|freebsd[123].*) objformat=aout ;;
+     *) objformat=elf ;;
+     esac
+   fi
+@@ -113653,7 +113648,7 @@ if test -z "$aix_libpath"; then aix_libp
+ 	;;
+     esac
+     ;;
+-  freebsd[12]*)
++  freebsd[12]|freebsd[12].*)
+     # C++ shared libraries reported to be fairly broken before switch to ELF
+     ld_shlibs_CXX=no
+     ;;
+@@ -115181,7 +115176,7 @@ dgux*)
+   shlibpath_var=LD_LIBRARY_PATH
+   ;;
+ 
+-freebsd1*)
++freebsd1|freebsd1.*)
+   dynamic_linker=no
+   ;;
+ 
+@@ -115192,7 +115187,7 @@ freebsd* | dragonfly*)
+     objformat=`/usr/bin/objformat`
+   else
+     case $host_os in
+-    freebsd[123]*) objformat=aout ;;
++    freebsd[123]|freebsd[123].*) objformat=aout ;;
+     *) objformat=elf ;;
+     esac
+   fi
