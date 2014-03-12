@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2014/02/12 23:18:26 tron Exp $
+# $NetBSD: Makefile,v 1.31 2014/03/12 16:16:00 pettai Exp $
 
-DISTNAME=	unbound-1.4.21
-PKGREVISION=	1
+DISTNAME=	unbound-1.4.22
 CATEGORIES=	net
 MASTER_SITES=	http://www.unbound.net/downloads/
 
@@ -15,7 +14,6 @@ BUILD_DEFS+=	VARBASE
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
-CONFIGURE_ARGS+=	--with-ldns=${BUILDLINK_PREFIX.ldns}
 CONFIGURE_ARGS+=	--with-libexpat=${BUILDLINK_PREFIX.expat}
 CONFIGURE_ARGS+=	--with-pidfile=${VARBASE}/run/unbound.pid
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
@@ -91,5 +89,4 @@ PKG_USERS=	${UNBOUND_USER}:${UNBOUND_GROUP}
 .include "options.mk"
 
 .include "../../textproc/expat/buildlink3.mk"
-.include "../../net/ldns/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
