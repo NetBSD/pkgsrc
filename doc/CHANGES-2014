@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1017 2014/03/12 11:36:51 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1018 2014/03/12 12:22:35 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1548,3 +1548,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/ocaml-findlib to 1.4.1 [wiz 2014-03-12]
 	Updated lang/python33 to 3.3.5 [wiz 2014-03-12]
 	Updated x11/gtkmm3 to 3.10.0 [wiz 2014-03-12]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.346 [obache 2014-03-12]
