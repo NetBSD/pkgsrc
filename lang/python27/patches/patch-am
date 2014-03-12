@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.11 2013/11/12 18:57:25 adam Exp $
+$NetBSD: patch-am,v 1.12 2014/03/12 12:40:57 obache Exp $
 
 Disabled modules for normal build:
 bsddb
@@ -357,7 +357,7 @@ cygwin 2.7.3-no-libm.patch
 -                     'Lib/smtpd.py']
 +          scripts = ['Tools/scripts/pydoc2.7',
 +                     'Tools/scripts/2to3-2.7',
-+                     'Lib/smtpd2.7.py']
++                     'Tools/scripts/smtpd2.7.py']
          )
  
  # --install-platlib
