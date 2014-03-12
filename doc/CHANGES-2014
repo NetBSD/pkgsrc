@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1002 2014/03/12 09:18:02 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1003 2014/03/12 09:20:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1533,3 +1533,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/py-minimock version 1.2.8 [rodent 2014-03-12]
 	Updated chat/ircII to 20131230nb1 [mrg 2014-03-12]
 	Updated graphics/png to 1.6.10 [wiz 2014-03-12]
+	Updated sysutils/cdrtools to 3.01alpha23 [wiz 2014-03-12]
