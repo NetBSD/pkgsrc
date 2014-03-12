@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/03/12 01:26:03 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2014/03/12 01:35:52 rodent Exp $
 
 DISTNAME=	pylint-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	https://pypi.python.org/packages/source/p/pylint/
 
 MAINTAINER=	helgoman@users.sourceforge.net
