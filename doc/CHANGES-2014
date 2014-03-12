@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1024 2014/03/12 14:47:36 pettai Exp $
+$NetBSD: CHANGES-2014,v 1.1025 2014/03/12 16:16:27 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1555,3 +1555,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/python26 to 2.6.9nb3 [obache 2014-03-12]
 	Updated lang/nawk to 20121220 [ryoon 2014-03-12]
 	Updated net/nsd to 4.0.2 [pettai 2014-03-12]
+	Updated net/unbound to 1.4.22 [pettai 2014-03-12]
