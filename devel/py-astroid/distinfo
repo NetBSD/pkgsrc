@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/03/12 01:06:05 rodent Exp $
+
+SHA1 (astroid-1.0.1.tar.gz) = 4b0080576174cc0a3519a6c6e9025a8ee853956a
+RMD160 (astroid-1.0.1.tar.gz) = 765a0e67c371b563b306b200f2e4fd91fefddc9d
+Size (astroid-1.0.1.tar.gz) = 112597 bytes
