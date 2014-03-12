@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2013/10/10 14:42:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.60 2014/03/12 19:36:44 wiedi Exp $
 #
 
 DISTNAME=		genius-1.0.17
@@ -11,6 +11,7 @@ HOMEPAGE=		http://www.jirka.org/genius.html
 COMMENT=		Calculator and math tool
 LICENSE=		gnu-gpl-v3
 
+USE_LANGUAGES=		c99
 MAKE_JOBS_SAFE=		no
 
 USE_PKGLOCALEDIR=	yes
