@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.14 2012/12/07 02:19:58 gdt Exp $
+# $NetBSD: Makefile,v 1.15 2014/03/12 00:14:29 gdt Exp $
 #
 
 DISTNAME=		epsg-v${VERS}sql-PostgreSQL
-PKGNAME=		epsg-8.1
-VERS=			8_1
-VERS_README=		8.1
+PKGNAME=		epsg-${VERS_README}
+VER_MAJOR=		8
+VER_MINOR=		1
+VERS=			${VER_MAJOR}_${VER_MINOR}
+VERS_README=		${VER_MAJOR}.${VER_MINOR}
 CATEGORIES=		geography databases
 MASTER_SITES+=		http://www.epsg.org/databases/ \
 			http://www.epsg.org/databases/Arc/${VERS}/
@@ -12,7 +14,11 @@ DISTFILES+=		epsg-v${VERS}sql-PostgreSQL.zip \
 			epsg-v${VERS}sql-mySQL.zip
 DIST_SUBDIR=		epsg-${VERS}
 
+# Note some files are unpacked twice, once for PostgeSQL and once for
+# mySQL.  We assume that they are the same and ignore the issue.
+
 MAINTAINER=		brook@nmsu.edu
+# MAINTAINER+=		gdt@NetBSD.org
 HOMEPAGE=		http://www.epsg.org/
 COMMENT=		EPSG geodetic parameters database
 LICENSE=		epsg-license
@@ -30,9 +36,24 @@ INSTALLATION_DIRS=	${BINDIR} ${DOCDIR} ${EPSGDIR}
 MESSAGE_SUBST+=		BINDIR=${BINDIR:Q}
 MESSAGE_SUBST+=		EPSGDIR=${EPSGDIR:Q}
 
-# Sometimes (8.0), pgsql files are in epsg-v${VERS}sql-PostgreSQL/,
+# Upstream changes layout and file names for no apparent reason.
+
+## directories
+# 8.0, 8.3:
+# pgsql files are in epsg-v${VERS}sql-PostgreSQL/,
 # with mysql files in epsg-v${VERS}sql-mySQL/.
-# Sometimes (8.1), they appear in the working directory itself.
+
+# 8.1:
+# Files appear in the working directory itself.
+
+DIR.doc=		
+DIR.pgsql=		#epsg-v${VERS}sql-PostgreSQL
+DIR.mysql=		#epsg-v${VERS}sql-mySQL
+
+## file names
+# 8.1:
+# Files are named EPSG_v${VERS}.mdb_{Data,FKeys,Tables}_{PostgreSQL,MySQL}.sql
+
 DATAFILES.pgsql+=	EPSG_v${VERS}.mdb_Data_PostgreSQL.sql
 DATAFILES.pgsql+=	EPSG_v${VERS}.mdb_FKeys_PostgreSQL.sql
 DATAFILES.pgsql+=	EPSG_v${VERS}.mdb_Tables_PostgreSQL.sql
@@ -50,18 +71,15 @@ SUBST_MESSAGE.epsg=	Fixing EPSG example script
 PLIST_SUBST+=		VERS=${VERS}
 PLIST_SUBST+=		VERS_README=${VERS_README}
 
-# Note that the doc files are unpacked twice, once for PostgeSQL and
-# once for mySQL.  We assume that they are the same and ignore the
-# issue.
 post-extract:
 	${CP} ${FILESDIR}/epsg-load ${WRKSRC}
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/epsg-v${VERS_README}_readme.pdf ${DESTDIR}${DOCDIR:Q}
 	${INSTALL_SCRIPT} ${WRKSRC}/epsg-load ${DESTDIR}${BINDIR}
+	${INSTALL_DATA} ${WRKSRC}/${DIR.doc}/epsg-v${VERS_README}_readme.pdf ${DESTDIR}${DOCDIR:Q}
 .for d in pgsql mysql
 .for f in ${DATAFILES.${d}}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${EPSGDIR:Q}/${f}
+	${INSTALL_DATA} ${WRKSRC}/${DIR.${d}}/${f} ${DESTDIR}${EPSGDIR:Q}/${f}
 .endfor
 .endfor
 
