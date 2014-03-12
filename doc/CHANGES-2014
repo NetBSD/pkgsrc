@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1015 2014/03/12 10:29:47 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1016 2014/03/12 10:43:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1546,3 +1546,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/libnice to 0.1.5 [wiz 2014-03-12]
 	Updated net/gst-plugins1-libnice to 0.1.5 [wiz 2014-03-12]
 	Updated devel/ocaml-findlib to 1.4.1 [wiz 2014-03-12]
+	Updated lang/python33 to 3.3.5 [wiz 2014-03-12]
