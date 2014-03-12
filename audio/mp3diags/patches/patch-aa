@@ -1,13 +1,17 @@
-$NetBSD: patch-aa,v 1.6 2011/09/08 20:32:21 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2014/03/12 12:28:28 wiz Exp $
 
 Fix name of boost library for pkgsrc.
 
---- src/src.pro.orig	2010-12-29 09:47:57.000000000 +0000
+--- src/src.pro.orig	2014-01-17 13:06:41.000000000 +0000
 +++ src/src.pro
-@@ -158,5 +158,5 @@ ThreadRunner.ui \
- #DEFINES += DISABLE_CHECK_FOR_UPDATES
+@@ -164,8 +164,8 @@ ThreadRunner.ui \
+ QMAKE_CXXFLAGS_DEBUG += -DGENERATE_TOC_zz
  
  LIBS += -lz \
--  -lboost_serialization-mt
-+  -lboost_serialization
+-  -lboost_serialization-mt \
+-  -lboost_program_options-mt
++  -lboost_serialization \
++  -lboost_program_options
  
+ 
+ TRANSLATIONS = translations/mp3diags_cs.ts \
