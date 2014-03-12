@@ -1,4 +1,4 @@
-/* $NetBSD: lib.c,v 1.3 2008/08/26 20:26:25 joerg Exp $ */
+/* $NetBSD: lib.c,v 1.4 2014/03/12 14:20:43 ryoon Exp $ */
 
 /****************************************************************
 Copyright (C) Lucent Technologies 1997
@@ -46,7 +46,7 @@ char	static_inputFS[16] = " ";
 size_t	len_inputFS = sizeof(static_inputFS) - 1;
 char	*inputFS = static_inputFS;
 
-#define	MAXFLD	200
+#define	MAXFLD	2
 int	nfields	= MAXFLD;	/* last allocated slot for $i */
 
 int	donefld;	/* 1 = implies rec broken into fields */
@@ -62,7 +62,7 @@ static Cell dollar1 = { OCELL, CFLD, NULL, "", 0.0, FLD|STR|DONTFREE };
 void recinit(unsigned int n)
 {
 	if ( (record = (char *) malloc(n)) == NULL
-	  || (fields = (char *) malloc(n)) == NULL
+	  || (fields = (char *) malloc(n+1)) == NULL
 	  || (fldtab = (Cell **) malloc((nfields+1) * sizeof(Cell *))) == NULL
 	  || (fldtab[0] = (Cell *) malloc(sizeof(Cell))) == NULL )
 		FATAL("out of space for $0 and fields");
@@ -93,8 +93,13 @@ void initgetrec(void)
 	char *p;
 
 	for (i = 1; i < *ARGC; i++) {
-		if (!isclvar(p = getargv(i))) {	/* find 1st real filename */
-			setsval(lookup("FILENAME", symtab), getargv(i));
+		p = getargv(i); /* find 1st real filename */
+		if (p == NULL || *p == '\0') {  /* deleted or zapped */
+			argno++;
+			continue;
+		}
+		if (!isclvar(p)) {
+			setsval(lookup("FILENAME", symtab), p);
 			return;
 		}
 		setclvar(p);	/* a commandline assignment before filename */
@@ -128,7 +133,7 @@ int getrec(char **pbuf, int *pbufsize, int isrecord)	/* get next input record */
 		   dprintf( ("argno=%d, file=|%s|\n", argno, file) );
 		if (infile == NULL) {	/* have to open a new file */
 			file = getargv(argno);
-			if (*file == '\0') {	/* it's been zapped */
+			if (file == NULL || *file == '\0') {	/* deleted or zapped */
 				argno++;
 				continue;
 			}
@@ -177,7 +182,7 @@ int getrec(char **pbuf, int *pbufsize, int isrecord)	/* get next input record */
 
 void nextfile(void)
 {
-	if (infile != stdin)
+	if (infile != NULL && infile != stdin)
 		fclose(infile);
 	infile = NULL;
 	argno++;
@@ -240,6 +245,8 @@ char *getargv(int n)	/* get ARGV[n] */
 	extern Array *ARGVtab;
 
 	sprintf(temp, "%d", n);
+	if (lookup(temp, ARGVtab) == NULL)
+		return NULL;
 	x = setsymtab(temp, "", 0.0, STR, ARGVtab);
 	s = getsval(x);
 	   dprintf( ("getargv(%d) returns |%s|\n", n, s) );
@@ -269,6 +276,7 @@ void fldbld(void)	/* create fields from current record */
 {
 	/* this relies on having fields[] the same length as $0 */
 	/* the fields are all stored in this one array with \0's */
+	/* possibly with a final trailing \0 not associated with any field */
 	char *r, *fr, sep;
 	Cell *p;
 	int i, j, n;
@@ -281,7 +289,7 @@ void fldbld(void)	/* create fields from current record */
 	n = strlen(r);
 	if (n > fieldssize) {
 		xfree(fields);
-		if ((fields = (char *) malloc(n+1)) == NULL)
+		if ((fields = (char *) malloc(n+2)) == NULL) /* possibly 2 final \0s */
 			FATAL("out of space for fields in fldbld %d", n);
 		fieldssize = n;
 	}
@@ -488,14 +496,14 @@ void recbld(void)	/* create $0 from $1..$NF if necessary */
 	if (!adjbuf(&record, &recsize, 2+r-record, recsize, &r, "recbld 3"))
 		FATAL("built giant record `%.30s...'", record);
 	*r = '\0';
-	   dprintf( ("in recbld inputFS=%s, fldtab[0]=%p\n", inputFS, fldtab[0]) );
+	   dprintf( ("in recbld inputFS=%s, fldtab[0]=%p\n", inputFS, (void*)fldtab[0]) );
 
 	if (freeable(fldtab[0]))
 		xfree(fldtab[0]->sval);
 	fldtab[0]->tval = REC | STR | DONTFREE;
 	fldtab[0]->sval = record;
 
-	   dprintf( ("in recbld inputFS=%s, fldtab[0]=%p\n", inputFS, fldtab[0]) );
+	   dprintf( ("in recbld inputFS=%s, fldtab[0]=%p\n", inputFS, (void*)fldtab[0]) );
 	   dprintf( ("recbld = |%s|\n", record) );
 	donerec = 1;
 }

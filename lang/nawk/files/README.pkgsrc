@@ -1,4 +1,4 @@
-$NetBSD: README.pkgsrc,v 1.2 2009/10/29 20:21:53 tnn Exp $
+$NetBSD: README.pkgsrc,v 1.3 2014/03/12 14:20:43 ryoon Exp $
 
 The following changes were made to the standard distribution:
 
@@ -15,12 +15,4 @@ The following changes were made to the standard distribution:
     * The *.bat files were removed.  These files are only used on
       MS Windows.
 
-    * The makefile.win file was removed.  This file is only used on
-      MS Windows.
-
-    * The mac.code files was removed.  This file is only used on
-      Mac OS with MPW.
-
     * A "NetBSD" CVS Id tag was added to each file.
-
-    * getline was renamed to get_line to avoid conflict with getline(3)

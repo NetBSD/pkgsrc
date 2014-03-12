@@ -1,4 +1,4 @@
-/* $NetBSD: maketab.c,v 1.1 2006/07/14 14:23:06 jlam Exp $ */
+/* $NetBSD: maketab.c,v 1.2 2014/03/12 14:20:43 ryoon Exp $ */
 
 /****************************************************************
 Copyright (C) Lucent Technologies 1997
@@ -104,7 +104,7 @@ struct xx
 	{ CALL, "call", "call" },
 	{ ARG, "arg", "arg" },
 	{ VARNF, "getnf", "NF" },
-	{ GETLINE, "getline", "getline" },
+	{ GETLINE, "awkgetline", "getline" },
 	{ 0, "", "" },
 };
 
@@ -137,7 +137,7 @@ int main(int argc, char *argv[])
 		if (c != '#' || (n != 4 && strcmp(def,"define") != 0))	/* not a valid #define */
 			continue;
 		if (tok < FIRSTTOKEN || tok > LASTTOKEN) {
-			fprintf(stderr, "maketab funny token %d %s ignored\n", tok, buf);
+			/* fprintf(stderr, "maketab funny token %d %s ignored\n", tok, buf); */
 			continue;
 		}
 		names[tok-FIRSTTOKEN] = (char *) malloc(strlen(name)+1);
