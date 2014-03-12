@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1030 2014/03/12 21:24:50 gdt Exp $
+$NetBSD: CHANGES-2014,v 1.1031 2014/03/12 21:30:43 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1561,3 +1561,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated chat/konversation to 1.5 [wiedi 2014-03-12]
 	Updated pkgtools/pkgdiff to 1.5 [asau 2014-03-12]
 	Added security/libglobalplatform version 6.0.0 [gdt 2014-03-12]
+	Added security/gpshell version 1.4.4 [gdt 2014-03-12]
