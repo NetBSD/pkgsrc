@@ -1,8 +1,8 @@
-$NetBSD: patch-examples_Makefile.in,v 1.1 2014/01/12 13:30:25 chopps Exp $
+$NetBSD: patch-examples_Makefile.in,v 1.2 2014/03/12 10:04:50 wiz Exp $
 
 Patch to link correctly against libtool built libs.
 
---- examples/Makefile.in.orig	2010-12-28 20:55:32.000000000 +0000
+--- examples/Makefile.in.orig	2013-10-03 16:57:31.000000000 +0000
 +++ examples/Makefile.in
 @@ -58,8 +58,8 @@ LDFLAGS = -g -L.. @LDFLAGS@
  
@@ -15,7 +15,7 @@ Patch to link correctly against libtool built libs.
  
  TERMCAP_LIB = @TERMCAP_LIB@
  
-@@ -96,28 +96,28 @@ uninstall:
+@@ -104,37 +104,37 @@ uninstall:
  	-rmdir $(DESTDIR)$(installdir)
  
  rl$(EXEEXT): rl.o $(READLINE_LIB)
@@ -38,6 +38,10 @@ Patch to link correctly against libtool built libs.
 -	$(PURIFY) $(CC) $(LDFLAGS) -o $@ rltest.o $(READLINE_LIB) $(TERMCAP_LIB)
 +	$(LIBTOOL) --mode=link $(PURIFY) $(CC) $(LDFLAGS) -o $@ rltest.o $(READLINE_LIB) $(TERMCAP_LIB)
  
+ rl-callbacktest$(EXEEXT): rl-callbacktest.o $(READLINE_LIB)
+-	$(PURIFY) $(CC) $(LDFLAGS) -o $@ rl-callbacktest.o $(READLINE_LIB) $(TERMCAP_LIB)
++	$(LIBTOOL) --mode=link $(PURIFY) $(CC) $(LDFLAGS) -o $@ rl-callbacktest.o $(READLINE_LIB) $(TERMCAP_LIB)
+ 
  rlptytest$(EXEEXT): rlptytest.o $(READLINE_LIB)
 -	$(PURIFY) $(CC) $(LDFLAGS) -o $@ rlptytest.o $(READLINE_LIB) $(TERMCAP_LIB)
 +	$(LIBTOOL) --mode=link $(PURIFY) $(CC) $(LDFLAGS) -o $@ rlptytest.o $(READLINE_LIB) $(TERMCAP_LIB)
@@ -48,7 +52,15 @@ Patch to link correctly against libtool built libs.
  
  histexamp$(EXEEXT): histexamp.o $(HISTORY_LIB)
 -	$(PURIFY) $(CC) $(LDFLAGS) -o $@ histexamp.o -lhistory $(TERMCAP_LIB)
-+	$(LIBTOOL) --mode=link $(PURIFY) $(CC) $(LDFLAGS) -o $@ histexamp.o $(HISTORY_LIB) $(TERMCAP_LIB)
++	$(LIBTOOL) --mode=link $(PURIFY) $(CC) $(LDFLAGS) -o $@ histexamp.o -lhistory $(TERMCAP_LIB)
+ 
+ hist_erasedups$(EXEEXT): hist_erasedups.o $(HISTORY_LIB)
+-	$(PURIFY) $(CC) $(LDFLAGS) -o $@ hist_erasedups.o -lhistory $(TERMCAP_LIB)
++	$(LIBTOOL) --mode=link $(PURIFY) $(CC) $(LDFLAGS) -o $@ hist_erasedups.o -lhistory $(TERMCAP_LIB)
+ 
+ hist_purgecmd$(EXEEXT): hist_purgecmd.o $(HISTORY_LIB)
+-	$(PURIFY) $(CC) $(LDFLAGS) -o $@ hist_purgecmd.o -lhistory $(TERMCAP_LIB)
++	$(LIBTOOL) --mode=link $(PURIFY) $(CC) $(LDFLAGS) -o $@ hist_purgecmd.o -lhistory $(TERMCAP_LIB)
  
  clean mostlyclean:
- 	$(RM) $(OBJECTS)
+ 	$(RM) $(OBJECTS) $(OTHEROBJ)
