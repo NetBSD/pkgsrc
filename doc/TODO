@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13071 2014/03/12 10:43:14 wiz Exp $
+$NetBSD: TODO,v 1.13072 2014/03/12 11:45:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -647,7 +647,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gthumb-3.2.6
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
-	o gtkmm-3.10.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtl-3.6
 	o gtodo-0.16.0rc2
@@ -914,8 +913,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o psmisc-22.20
 	o pspp-0.8.1
 	o pstoedit-3.61
-	o pulseaudio-4.0 [hal support is dropped]
-	o pulseaudio-5.0
+	o pulseaudio-5.0 [hal support is dropped]
 	o puzzles-10146
 	o pv-1.2.0
 	o pvs-5.0
@@ -1183,7 +1181,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xboard-4.7.0
 	o xcmsdb-1.0.4 [unpackaged]
 	o xemacs-current-21.5.31
-	o xentools43-4.3.0
+	o xentools44-4.4.0
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
 	o xf86-input-ws-1.3.0 [successor to openbsd-input-ws, only builds on OpenBSD]
