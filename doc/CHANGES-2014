@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.999 2014/03/12 01:26:15 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.1000 2014/03/12 01:37:49 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1530,3 +1530,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/stunnel to 5.00 [jym 2014-03-12]
 	Added devel/py-astroid version 1.0.1 [rodent 2014-03-12]
 	Added devel/py-pylint version 1.1.0 [rodent 2014-03-12]
+	Added devel/py-minimock version 1.2.8 [rodent 2014-03-12]
