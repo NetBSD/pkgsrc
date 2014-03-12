@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1000 2014/03/12 01:37:49 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.1001 2014/03/12 07:23:25 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1531,3 +1531,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/py-astroid version 1.0.1 [rodent 2014-03-12]
 	Added devel/py-pylint version 1.1.0 [rodent 2014-03-12]
 	Added devel/py-minimock version 1.2.8 [rodent 2014-03-12]
+	Updated chat/ircII to 20131230nb1 [mrg 2014-03-12]
