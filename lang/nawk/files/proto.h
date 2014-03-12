@@ -1,4 +1,4 @@
-/* $NetBSD: proto.h,v 1.2 2009/10/29 20:21:53 tnn Exp $ */
+/* $NetBSD: proto.h,v 1.3 2014/03/12 14:20:43 ryoon Exp $ */
 
 /****************************************************************
 Copyright (C) Lucent Technologies 1997
@@ -45,10 +45,10 @@ extern	fa	*mkdfa(const char *, int);
 extern	int	makeinit(fa *, int);
 extern	void	penter(Node *);
 extern	void	freetr(Node *);
-extern	int	hexstr(char **);
-extern	int	quoted(char **);
+extern	int	hexstr(uschar **);
+extern	int	quoted(uschar **);
 extern	char	*cclenter(const char *);
-extern	void	overflo(const char *);
+extern	void	overflo(const char *) __attribute__((__noreturn__));
 extern	void	cfoll(fa *, Node *);
 extern	int	first(Node *);
 extern	void	follow(Node *);
@@ -134,7 +134,7 @@ extern	void	fpecatch(int);
 extern	void	bracecheck(void);
 extern	void	bcheck2(int, int, int);
 extern	void	SYNTAX(const char *, ...);
-extern	void	FATAL(const char *, ...);
+extern	void	FATAL(const char *, ...) __attribute__((__noreturn__));
 extern	void	WARNING(const char *, ...);
 extern	void	error(void);
 extern	void	eprint(void);
@@ -151,7 +151,7 @@ extern	Cell	*call(Node **, int);
 extern	Cell	*copycell(Cell *);
 extern	Cell	*arg(Node **, int);
 extern	Cell	*jump(Node **, int);
-extern	Cell	*get_line(Node **, int);
+extern	Cell	*awkgetline(Node **, int);
 extern	Cell	*getnf(Node **, int);
 extern	Cell	*array(Node **, int);
 extern	Cell	*awkdelete(Node **, int);

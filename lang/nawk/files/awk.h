@@ -1,4 +1,4 @@
-/* $NetBSD: awk.h,v 1.2 2008/08/26 14:46:21 joerg Exp $ */
+/* $NetBSD: awk.h,v 1.3 2014/03/12 14:20:43 ryoon Exp $ */
 
 /****************************************************************
 Copyright (C) Lucent Technologies 1997
@@ -32,7 +32,7 @@ typedef double	Awkfloat;
 
 typedef	unsigned char uschar;
 
-#define	xfree(a)	{ if ((a) != NULL) { free((char *) a); a = NULL; } }
+#define	xfree(a)	{ if ((a) != NULL) { free((void *) (a)); (a) = NULL; } }
 
 #define	NN(p)	((p) ? (p) : "(null)")	/* guaranteed non-null for dprintf 
 */
