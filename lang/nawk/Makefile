@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.39 2012/10/02 20:11:46 asau Exp $
+# $NetBSD: Makefile,v 1.40 2014/03/12 14:20:43 ryoon Exp $
 
-DISTNAME=	nawk-20050424
-PKGREVISION=	3
+DISTNAME=	nawk-20121220
 CATEGORIES=	lang
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cm.bell-labs.com/who/bwk/
+HOMEPAGE=	http://www.cs.princeton.edu/~bwk/btl.mirror/
 COMMENT=	Brian Kernighan's pattern-directed scanning and processing language
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews

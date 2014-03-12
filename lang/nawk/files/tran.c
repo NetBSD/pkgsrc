@@ -1,4 +1,4 @@
-/* $NetBSD: tran.c,v 1.3 2008/09/08 13:47:55 joerg Exp $ */
+/* $NetBSD: tran.c,v 1.4 2014/03/12 14:20:43 ryoon Exp $ */
 
 /****************************************************************
 Copyright (C) Lucent Technologies 1997
@@ -214,7 +214,7 @@ Cell *setsymtab(const char *n, const char *s, Awkfloat f, unsigned t, Array *tp)
 
 	if (n != NULL && (p = lookup(n, tp)) != NULL) {
 		   dprintf( ("setsymtab found %p: n=%s s=\"%s\" f=%g t=%o\n",
-			p, NN(p->nval), NN(p->sval), p->fval, p->tval) );
+			(void*)p, NN(p->nval), NN(p->sval), p->fval, p->tval) );
 		return(p);
 	}
 	p = (Cell *) malloc(sizeof(Cell));
@@ -233,7 +233,7 @@ Cell *setsymtab(const char *n, const char *s, Awkfloat f, unsigned t, Array *tp)
 	p->cnext = tp->tab[h];
 	tp->tab[h] = p;
 	   dprintf( ("setsymtab set %p: n=%s s=\"%s\" f=%g t=%o\n",
-		p, p->nval, p->sval, p->fval, p->tval) );
+		(void*)p, p->nval, p->sval, p->fval, p->tval) );
 	return(p);
 }
 
@@ -300,7 +300,9 @@ Awkfloat setfval(Cell *vp, Awkfloat f)	/* set float val of a Cell */
 		xfree(vp->sval); /* free any previous string */
 	vp->tval &= ~STR;	/* mark string invalid */
 	vp->tval |= NUM;	/* mark number ok */
-	   dprintf( ("setfval %p: %s = %g, t=%o\n", vp, NN(vp->nval), f, vp->tval) );
+	if (f == -0)  /* who would have thought this possible? */
+		f = 0;
+	   dprintf( ("setfval %p: %s = %g, t=%o\n", (void*)vp, NN(vp->nval), f, vp->tval) );
 	return vp->fval = f;
 }
 
@@ -320,7 +322,7 @@ char *setsval(Cell *vp, const char *s)	/* set string val of a Cell */
 	int fldno;
 
 	   dprintf( ("starting setsval %p: %s = \"%s\", t=%o, r,f=%d,%d\n", 
-		vp, NN(vp->nval), s, vp->tval, donerec, donefld) );
+		(void*)vp, NN(vp->nval), s, vp->tval, donerec, donefld) );
 	if ((vp->tval & (NUM | STR)) == 0)
 		funnyvar(vp, "assign to");
 	if (isfld(vp)) {
@@ -334,13 +336,13 @@ char *setsval(Cell *vp, const char *s)	/* set string val of a Cell */
 		donerec = 1;
 	}
 	t = tostring(s);	/* in case it's self-assign */
-	vp->tval &= ~NUM;
-	vp->tval |= STR;
 	if (freeable(vp))
 		xfree(vp->sval);
+	vp->tval &= ~NUM;
+	vp->tval |= STR;
 	vp->tval &= ~DONTFREE;
 	   dprintf( ("setsval %p: %s = \"%s (%p) \", t=%o r,f=%d,%d\n", 
-		vp, NN(vp->nval), t,t, vp->tval, donerec, donefld) );
+		(void*)vp, NN(vp->nval), t,t, vp->tval, donerec, donefld) );
 	return(vp->sval = t);
 }
 
@@ -357,7 +359,8 @@ Awkfloat getfval(Cell *vp)	/* get float val of a Cell */
 		if (is_number(vp->sval) && !(vp->tval&CON))
 			vp->tval |= NUM;	/* make NUM only sparingly */
 	}
-	   dprintf( ("getfval %p: %s = %g, t=%o\n", vp, NN(vp->nval), vp->fval, vp->tval) );
+	   dprintf( ("getfval %p: %s = %g, t=%o\n",
+		(void*)vp, NN(vp->nval), vp->fval, vp->tval) );
 	return(vp->fval);
 }
 
@@ -383,7 +386,8 @@ static char *get_str_val(Cell *vp, char **fmt)        /* get string val of a Cel
 		vp->tval &= ~DONTFREE;
 		vp->tval |= STR;
 	}
-	   dprintf( ("getsval %p: %s = \"%s (%p)\", t=%o\n", vp, NN(vp->nval), vp->sval, vp->sval, vp->tval) );
+	   dprintf( ("getsval %p: %s = \"%s (%p)\", t=%o\n",
+		(void*)vp, NN(vp->nval), vp->sval, vp->sval, vp->tval) );
 	return(vp->sval);
 }
 
