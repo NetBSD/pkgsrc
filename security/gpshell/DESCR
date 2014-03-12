@@ -1,0 +1,7 @@
+GPShell is a script interpreter which talks to a smart card which
+complies to the GlobalPlatform Card Specification.  It is written on
+top of the GlobalPlatform Library.  It uses the PC-SC Connection
+Plugin for accessing smart cards.  It can establish a secure channel
+with a smart card, load, instantiate, delete and list applications on
+supported smart cards.  These applications are practically always
+JavaCard applets.
