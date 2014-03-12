@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.997 2014/03/12 00:27:07 jym Exp $
+$NetBSD: CHANGES-2014,v 1.998 2014/03/12 01:06:16 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1528,3 +1528,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated math/maxima to 5.32.1 [ryoon 2014-03-11]
 	Updated geography/viking to 1.5 [gdt 2014-03-11]
 	Updated security/stunnel to 5.00 [jym 2014-03-12]
+	Added devel/py-astroid version 1.0.1 [rodent 2014-03-12]
