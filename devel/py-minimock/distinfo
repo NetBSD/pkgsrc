@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/03/12 01:37:37 rodent Exp $
+
+SHA1 (MiniMock-1.2.8.tar.gz) = 8db20a995efb33491532429be4c6295e4c5e2ff1
+RMD160 (MiniMock-1.2.8.tar.gz) = e997c336c699820bc2abcf1db7bdc446c4108a48
+Size (MiniMock-1.2.8.tar.gz) = 13217 bytes
