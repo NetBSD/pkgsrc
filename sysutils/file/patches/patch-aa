@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.6 2012/03/30 03:53:54 taca Exp $
+$NetBSD: patch-aa,v 1.7 2014/03/12 18:35:49 wiz Exp $
 
 Make pkgsrc file look in @sysconfdir@/magic first.
 
---- src/Makefile.in.orig	2012-02-21 19:17:04.000000000 +0000
-+++ src/Makefile.in
-@@ -240,10 +240,10 @@ target_alias = @target_alias@
+--- src/Makefile.in.orig	2014-02-13 00:29:38.000000000 +0100
++++ src/Makefile.in	2014-03-06 20:10:48.215956295 +0100
+@@ -326,10 +326,10 @@
  top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
@@ -14,6 +14,6 @@ Make pkgsrc file look in @sysconfdir@/magic first.
  include_HEADERS = magic.h
 -AM_CPPFLAGS = -DMAGIC='"$(MAGIC)"'
 +AM_CPPFLAGS = -DMAGIC='"$(MAGIC):$(pkgdatadir)/magic"'
- AM_CFLAGS = @WARNINGS@
+ AM_CFLAGS = $(CFLAG_VISIBILITY) @WARNINGS@
  libmagic_la_SOURCES = magic.c apprentice.c softmagic.c ascmagic.c \
  	encoding.c compress.c is_tar.c readelf.c print.c fsmagic.c \
