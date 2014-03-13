@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2014/02/25 04:32:54 obache Exp $
+# $NetBSD: Makefile,v 1.38 2014/03/13 17:06:43 taca Exp $
 #
 
 DISTNAME=	groonga-4.0.0
@@ -10,9 +10,9 @@ HOMEPAGE=	http://groonga.org/
 COMMENT=	Fulltext search engine and column store
 LICENSE=	gnu-lgpl-v2.1
 
-RUBY_VERSION_SUPPORTED=	200 193
+RUBY_VERSION_SUPPORTED=	21 200 193
 .include "../../lang/ruby/rubyversion.mk"
-DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:../../lang/${RUBY_BASE}
+DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
