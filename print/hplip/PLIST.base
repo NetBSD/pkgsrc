@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.base,v 1.12 2014/01/23 14:58:28 schnoebe Exp $
+@comment $NetBSD: PLIST.base,v 1.13 2014/03/13 14:56:46 schnoebe Exp $
 bin/hp-align
 bin/hp-check
 bin/hp-clean
@@ -631,6 +631,8 @@ share/hplip/ppd/HP/hp-deskjet_4610_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_4610_series.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_4620_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_4620_series.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_4640_series-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_4640_series.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_500-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_500.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_500c-hpijs.ppd.gz
@@ -1349,8 +1351,20 @@ share/hplip/ppd/HP/hp-laserjet_p4515x-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_p4515x.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_p4515xm-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_p4515xm.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_pro_mfp_m125a-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_pro_mfp_m125a.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_pro_mfp_m125nw-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_pro_mfp_m125nw.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_pro_mfp_m125rnw-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_pro_mfp_m125rnw.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_pro_mfp_m126a-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_pro_mfp_m126a.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_pro_mfp_m126nw-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_pro_mfp_m126nw.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_pro_mfp_m127fn-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_pro_mfp_m127fn.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_pro_mfp_m127fp-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_pro_mfp_m127fp.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_pro_mfp_m127fw-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_pro_mfp_m127fw.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_pro_mfp_m435-ps.ppd.gz
