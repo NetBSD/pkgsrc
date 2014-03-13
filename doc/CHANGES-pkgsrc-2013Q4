@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.39 2014/03/12 15:19:32 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.40 2014/03/13 08:00:16 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q4 branch:
@@ -136,3 +136,5 @@ Pullup ticket #4341 - requested by jym
 security/stunnel: security update
 Pullup ticket #4342 - requested by obache
 multimedia/adobe-flash-plugin11: security update
+Pullup ticket #4343 - requested by tron
+mail/mutt-devel: security update
