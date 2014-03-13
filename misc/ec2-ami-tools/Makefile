@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/08 09:57:20 asau Exp $
+# $NetBSD: Makefile,v 1.5 2014/03/13 17:06:43 taca Exp $
 #
 
 PKGNAME=	ec2-ami-tools-1.3.57676
@@ -20,7 +20,7 @@ USE_TOOLS=	bash:run gtar:run gzip:run openssl:run pax tee:run
 
 DEPENDS+=	curl-[0-9]*:../../www/curl
 DEPENDS+=	rsync-[0-9]*:../../net/rsync
-DEPENDS+=	ruby${RUBY_VER}-base>=1.8.2:../../lang/ruby${RUBY_VER}-base
+DEPENDS+=	${RUBY_BASE}>=1.8.2:${RUBY_SRCDIR}
 
 NO_BUILD=	yes
 
