@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/01/21 16:20:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/03/13 13:55:07 taca Exp $
 ${CT_WEBDIR}/.gitignore
 ${CT_WEBDIR}/.htaccess.default
 ${CT_WEBDIR}/README.md
@@ -3726,6 +3726,7 @@ ${CT_WEBDIR}/system/themes/default/images/pasteinto_.gif
 ${CT_WEBDIR}/system/themes/default/images/pickcolor.gif
 ${CT_WEBDIR}/system/themes/default/images/pickfile.gif
 ${CT_WEBDIR}/system/themes/default/images/pickpage.gif
+${CT_WEBDIR}/system/themes/default/images/placeholder.png
 ${CT_WEBDIR}/system/themes/default/images/preview.gif
 ${CT_WEBDIR}/system/themes/default/images/published.gif
 ${CT_WEBDIR}/system/themes/default/images/redirect.gif
