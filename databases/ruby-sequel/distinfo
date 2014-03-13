@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2013/12/08 16:51:45 taca Exp $
+$NetBSD: distinfo,v 1.27 2014/03/13 18:24:52 taca Exp $
 
-SHA1 (sequel-4.5.0.gem) = ba50a62300c7c972dcd8a8f91ab14c33c788225a
-RMD160 (sequel-4.5.0.gem) = 07ffd93e04f5e6aab15ae7e7a9fc9a2165b4e771
-Size (sequel-4.5.0.gem) = 1189888 bytes
+SHA1 (sequel-4.8.0.gem) = ce9eebead05e3034988ea926ca3b0198256fe2e8
+RMD160 (sequel-4.8.0.gem) = 199ab24a4b9cc55a9c5c9d7b2fd931bf14dd0b58
+Size (sequel-4.8.0.gem) = 1218560 bytes
