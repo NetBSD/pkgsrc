@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.209 2014/01/22 12:32:44 obache Exp $
+# $NetBSD: Makefile,v 1.210 2014/03/13 07:24:05 jnemeth Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -54,6 +54,7 @@ SUBDIR+=	dynamips
 SUBDIR+=	e-uae
 SUBDIR+=	fceu
 SUBDIR+=	fmsx
+SUBDIR+=	free42
 SUBDIR+=	freebsd_lib
 SUBDIR+=	fuse
 SUBDIR+=	fuse-utils
