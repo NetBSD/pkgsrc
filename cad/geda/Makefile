@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.92 2013/10/10 14:42:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.93 2014/03/13 10:35:03 dmcmahill Exp $
 #
 
-DISTNAME=	geda-gaf-1.6.2
+DISTNAME=	geda-gaf-1.8.2
 PKGNAME=	${DISTNAME:S/-gaf-/-/}
-PKGREVISION=	20
 CATEGORIES=	cad
-MASTER_SITES=	ftp://ftp.geda.seul.org/pub/geda/release/v1.6/${PKGVERSION_NOREV}/ \
-		http://geda.seul.org/release/v1.6/${PKGVERSION_NOREV}/
+MASTER_SITES=	http://ftp.geda-project.org/release/v1.8/${PKGVERSION_NOREV}/
 
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.geda-project.org/
@@ -40,15 +38,10 @@ CONFIGURE_ARGS+=	--disable-update-desktop-database
 post-patch:
 	${RM} -f ${WRKSRC}/utils/src/olib.c
 
-# for gnet_hier_verilog.sh.  It looks to be fairly bash
-# dependent
-USE_TOOLS+=		bash:run
 REPLACE_BASH=		utils/scripts/gnet_hier_verilog.sh
 REPLACE_PYTHON=		utils/scripts/tragesym
 REPLACE_PERL+=		utils/scripts/pads_backannotate \
-			utils/scripts/gschupdate \
 			utils/scripts/gsymfix.pl \
-			utils/scripts/gsymupdate \
 			utils/scripts/pcb_backannotate \
 			utils/scripts/refdes_renum \
 			utils/scripts/sarlacc_sym \
@@ -78,6 +71,8 @@ USE_TOOLS+=		gawk:run lex perl:run pkg-config
 # disable groff for a consistent build
 # (otherwise html man pages appear if and only if groff -Thtml works)
 CONFIGURE_ENV+=		GROFF=false
+
+INFO_FILES=	yes
 
 .include "../../lang/python/application.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
