@@ -1,0 +1,12 @@
+$NetBSD: patch-mimedefang.pl.in,v 1.1 2014/03/13 22:39:09 pettai Exp $
+
+--- mimedefang.pl.in.orig	2014-03-13 22:31:40.000000000 +0000
++++ mimedefang.pl.in
+@@ -764,6 +764,7 @@ sub synthesize_received_header () {
+ #  Descends through input entity and rebuilds an output entity.  The
+ #  various parts of the input entity may be modified (or even deleted)
+ #***********************************************************************
++sub rebuild_entity ($$); # Forward declaration to avoid warning
+ sub rebuild_entity ($$) {
+     my($out, $in) = @_;
+     my @parts = $in->parts;
