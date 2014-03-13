@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.37 2014/01/12 21:19:33 schmonz Exp $
+# $NetBSD: buildlink3.mk,v 1.38 2014/03/13 23:26:35 spz Exp $
 
 BUILDLINK_TREE+=	freetype2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	freetype2
 FREETYPE2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.4.5
-BUILDLINK_ABI_DEPENDS.freetype2+=	freetype2>=2.4.11
+BUILDLINK_ABI_DEPENDS.freetype2+=	freetype2>=2.4.12
 BUILDLINK_PKGSRCDIR.freetype2?=	../../graphics/freetype2
 BUILDLINK_INCDIRS.freetype2?=	include/freetype2
 
