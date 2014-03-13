@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1039 2014/03/13 13:55:54 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1040 2014/03/13 14:07:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1571,3 +1571,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/sylpheed to 3.3.1 [taca 2014-03-13]
 	Updated www/contao32 to 3.2.8 [taca 2014-03-13]
 	Updated www/contao32-example to 3.2.8 [taca 2014-03-13]
+	Updated devel/SOPE to 2.2.1 [taca 2014-03-13]
+	Updated www/SOGo to 2.2.1 [taca 2014-03-13]
