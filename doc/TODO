@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13077 2014/03/12 19:50:15 wiedi Exp $
+$NetBSD: TODO,v 1.13078 2014/03/13 11:47:12 obache Exp $
 
 Suggested new packages
 ======================
@@ -551,6 +551,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o freeswitch-1.2.3
 	o freetype-lib-1.5.20050518
 	o freetype-utils-1.5.20050518
+	o freetype2-2.5.3 [CVE-2014-2240]
 	o freewais-sf-2.2.14
 	o ftplibpp-2.0.2
 	o fuse-archivemount-0.6.1
