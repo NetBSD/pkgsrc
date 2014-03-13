@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1035 2014/03/13 10:37:25 dmcmahill Exp $
+$NetBSD: CHANGES-2014,v 1.1036 2014/03/13 10:45:12 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1566,3 +1566,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/mutt-devel to 1.5.23 [tron 2014-03-12]
 	Updated www/mediawiki to 1.22.4 [wen 2014-03-13]
 	Updated cad/geda to 1.8.2 [dmcmahill 2014-03-13]
+	Updated devel/nspr to 4.10.4 [ryoon 2014-03-13]
