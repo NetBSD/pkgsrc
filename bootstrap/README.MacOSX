@@ -1,35 +1,56 @@
-$NetBSD: README.MacOSX,v 1.14 2013/02/06 15:25:24 schmonz Exp $
+$NetBSD: README.MacOSX,v 1.15 2014/03/13 20:57:20 gdt Exp $
 
+* gcc vs clang
 
-Mac OS X Snow Leopard 32/64 (i386/x86_64) ABI issue:
+Older versions of Mac OS X (with XCode, of course) provided gcc, and
+pkgsrc defaulted to using gcc.  With 10.9, gcc is no longer present
+and one must bootstrap with "--compiler=clang".  (Arguably, pkgsrc
+should default to clang on 10.9.)
 
-Mac OS X Snow Leopard (10.6) supports 64-bit binaries on most Intel
-Macs and builds those by default on such machine.  This causes
-problems with a lot of packages which get confused because
-"MACHINE_ARCH" is set to "i386" (on a 64-bit system!).  There are also
-packages that don't support 64-bit under Mac OS X at all.  Because of
-this, the default for pkgsrc is use use the 32-bit ABI, which results
-in packages being compiled and run in i386 mode.  For a longer
+* i386 vs x86_64 ABI issue
+
+Mac OS X Snow Leopard (10.6) through Mavericks (10.9) supports 64-bit
+binaries on most Intel Macs and build those by default on such
+machine.  This has caused problems with packages which get confused
+because "MACHINE_ARCH" is in some OS versions set to "i386" (on a
+64-bit system!).
+  version:  uname -m : uname -p
+  10.6: i386 : i386
+  10.9: x86_64 : i386
+
+There are of course some packages which will fail in i386 mode, and
+some in x86_64 mode.  Because of all this, the default for pkgsrc was
+set to use the 32-bit ABI, which results in packages being compiled
+and run in i386 mode.  In addition, there are some Intel Macs (older
+Mac Minis) which can only run i386 and not x86_64.  For a longer
 discussion, see:
 http://mail-index.NetBSD.org/pkgsrc-users/2009/09/24/msg010817.html
 
+As of 2014, the decision to default to i386 should probably be
+revisited.
 
-Developer tools:
+* Developer tools and prerequisites
 
-If you haven't already, you will need to install the Mac OS X Developer
-Tools package. Depending on the version of OS X you are running, you
-may have this on CD. If not, you can download it from Apple's
-Developer Connection. (You will need to register for a free ADC
-account.) See http://developer.apple.com/macosx/ for details.
-(If you don't want or need the full Xcode GUI, download and install
-Command Line Tools for Xcode.)
+** basic tools
 
-Then start Xcode, go to "Preferences" - "Downloads" and install
-the "Command Line Tools".
+If you haven't already, you will need to install the Mac OS X
+Developer Tools package (XCode) to obtain a compiler, etc.  The
+procedure depends on the version of Mac OS X; recent versions use the
+App Store.
 
-If you plan to build packages that use the X11 Window System, you
-will also need to make sure you have an Xserver installed. Download
-XQuartz from http://xquartz.macosforge.org/landing/
+Note that as of 10.9, cvs is no longer provided.  You can build
+devel/scmcvs.  To obtain pkgsrc in order to bootstrap and build cvs,
+it may be useful to use git to clone https://github.com/jsonn/pkgsrc
+
+** X11
+
+X11 used to be built into Mac OS X, but as of 10.8 it is not.
+Install XQuartz from http://xquartz.macosforge.org/landing/
+
+** XL compiler
+
+[The text in this section dates from 2004-10-07!  Please update it if
+you have used XL since then.]
 
 Experimental support for IBM's XL C/C++ compiler is present (tested
 with version 6.0). To use it, set:
@@ -56,8 +77,7 @@ to bootstrap with xlc, you need to make sure CFLAGS contains "-ma":
 
 env CC=/opt/ibmcmp/vacpp/6.0/bin/xlc CFLAGS=-ma ./bootstrap
 
-
-Mac OS X Versions
+* Mac OS X Versions
 
 pkgsrc is a volunteer project, and individuals support/fix packages
 and platforms as they choose.  However, pkgsrc contributors as a group
@@ -80,19 +100,46 @@ in mind that there are no guarantees:
 Given the above definitions, the pkgsrc developers label versions of
 Mac OS X as follows:
 
-  10.8: current, PRs may be filed.  Structurally breaking pkgsrc on 10.8
-	is considered not ok.  [SUPPORTED]
+  10.9 (13.1.0): current, PRs may be filed.  Structurally breaking
+	pkgsrc on 10.9 is considered not ok.  [SUPPORTED]
 
-  10.7: old, but PRs may still be filed.  Structurally breaking pkgsrc on
-	10.7 is considered not ok. [SUPPORTED]
+  10.8: somewhat old, PRs may still be filed.  Structurally breaking
+	pkgsrc on 10.8 is considered not ok.  [SUPPORTED]
 
-  10.6: very old, and individual pkg PRs may be bounced to authors to
-	retest with newer versions, and closed if that doesn't happen
-	in 14 days.  We will for now consider structurally breaking
-	pkgsrc on 10.6 to be undesirable.  If keeping support for 10.6
-	causes excessive work for maintainers it may be moved to
-	IGNORED state any time, without warning. [DEPRECATED]
+  10.7: old, but PRs may still be filed.  Structurally breaking pkgsrc
+	on 10.7 is considered not ok. [SUPPORTED]
+
+  10.6 (10.8.0): very old, and individual pkg PRs may be bounced to
+	authors to retest with newer versions, and closed if that
+	doesn't happen in 14 days.  We will for now consider
+	structurally breaking pkgsrc on 10.6 to be undesirable.  If
+	keeping support for 10.6 causes excessive work for maintainers
+	it may be moved to IGNORED state any time, without
+	warning. [DEPRECATED]
 
   10.5 and below: ancient, and PRs will be summarily closed.  It is
 	acceptable to give zero consideration to causing structural
 	problems on 10.5 and below. [IGNORED]
+
+Because Apple provides 10.9 as a no-cost upgrade (from 10.6 or higher,
+it is fairly likely that 10.6-10.8 will become DEPRECATED faster than
+they might have otherwise.  (The rationale for supporting versions
+beyond the current and previous ones has been the difficulty for users
+to upgrade.)
+
+* Bulk build suggestions and issues
+
+Clearly, it is desirable for a bulk build to be useful on as many
+computers as possible.  The main issues are which ABI and which OS X
+version.
+
+jperkin@netbsd.org provides a bulk build (--abi=32, OSX 10.6, and
+therefore gcc 4.2.1, XQuartz, X11_TYPE=native):
+  http://www.perkin.org.uk/pages/pkgsrc-binary-packages-for-osx.html
+  http://mail-index.netbsd.org/pkgsrc-bulk/2014/03/09/msg010457.html
+which should run on any version from 10.6 to 10.9.
+
+Given the 10.9 license situation, a bulk build on 10.9 (and therefore
+clang) seems reasonable, with either --abi=32 or --abi=64.  Such
+builds are almost certainly only usable on 10.9, but that is or will
+be soon a large fraction of Macs.
