@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/02/12 23:18:09 tron Exp $
+# $NetBSD: Makefile,v 1.4 2014/03/13 23:56:55 pettai Exp $
 
 DISTNAME=	opendmarc-1.1.3
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opendmarc/}
 
 MAINTAINER=	pettai@NetBSD.org
-HOMEPAGE=	http://opendmarc.org/
+HOMEPAGE=	http://www.trusteddomain.org/opendmarc/
 COMMENT=	Open source DMARC library, MTA filter implementation and tools
 LICENSE=	modified-bsd
 
