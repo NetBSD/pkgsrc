@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/02/12 11:44:58 fhajny Exp $
+# $NetBSD: Makefile,v 1.7 2014/03/13 11:08:50 jperkin Exp $
 
 DISTNAME=	util-linux-2.19.1
 PKGNAME=	${DISTNAME:S/util-linux/libuuid/}
@@ -12,6 +12,7 @@ HOMEPAGE=	http://kernel.org/~kzak/util-linux-ng/
 COMMENT=	Generate unique identifiers for objects
 LICENSE=	modified-bsd
 
+USE_GCC_RUNTIME=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-agetty

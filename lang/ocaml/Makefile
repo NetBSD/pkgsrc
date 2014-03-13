@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2014/03/11 10:29:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.90 2014/03/13 11:08:51 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -11,6 +11,8 @@ CONFIGURE_ENV+=		disable_x11=yes
 BUILD_TARGET=		world
 MAKE_JOBS_SAFE=		no
 UNLIMIT_RESOURCES=	stacksize
+
+USE_GCC_RUNTIME=	yes
 
 ###
 ### PLIST components

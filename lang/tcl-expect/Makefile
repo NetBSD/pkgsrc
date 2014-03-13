@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2014/01/11 14:42:00 adam Exp $
+# $NetBSD: Makefile,v 1.31 2014/03/13 11:08:51 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -9,6 +9,8 @@ CATEGORIES=	lang
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Extensions to Tcl to support scripting of interactive programs
 LICENSE=	public-domain
+
+USE_GCC_RUNTIME=	yes
 
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--without-x

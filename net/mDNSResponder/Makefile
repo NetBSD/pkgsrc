@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2012/10/23 17:18:36 asau Exp $
+# $NetBSD: Makefile,v 1.38 2014/03/13 11:08:52 jperkin Exp $
 
 DISTNAME=	mDNSResponder-258.14
 CATEGORIES=	net
@@ -14,6 +14,8 @@ BUILD_DIRS=		mDNSPosix
 BUILDDIR=		${WRKSRC}/mDNSPosix/build/prod
 AUTO_MKDIRS=		yes
 MAKE_JOBS_SAFE=		no
+
+USE_GCC_RUNTIME=	yes
 
 .include "../../mk/bsd.prefs.mk"
 

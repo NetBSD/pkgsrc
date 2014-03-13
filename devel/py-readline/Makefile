@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/01/25 10:30:04 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2014/03/13 11:08:50 jperkin Exp $
 
 PKGNAME=	${PYPKGPREFIX}-readline-${PY_DISTVERSION}
 CATEGORIES=	devel misc python
@@ -8,6 +8,8 @@ HOMEPAGE=	http://www.python.org/doc/current/tut/node15.html
 COMMENT=	Line editing support for Python
 
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/readline.c
+
+USE_GCC_RUNTIME=	yes
 
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes

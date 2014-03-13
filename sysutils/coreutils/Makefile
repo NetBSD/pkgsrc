@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2014/02/02 07:08:24 richard Exp $
+# $NetBSD: Makefile,v 1.62 2014/03/13 11:08:52 jperkin Exp $
 
 .include "../../sysutils/coreutils/Makefile.common"
 
@@ -21,6 +21,11 @@ PLIST_VARS+=		hostid stdbuf
 .if ${OPSYS} != "Interix"
 PLIST.hostid=		yes
 .endif
+
+# This should really only be defined if building stdbuf, however we cannot
+# set this variable after including compiler.mk, so we take the hit of
+# setting it unconditionally for now.
+USE_GCC_RUNTIME=	yes
 
 .include "../../mk/compiler.mk"
 

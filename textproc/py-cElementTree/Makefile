@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/01/25 10:30:23 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2014/03/13 11:08:52 jperkin Exp $
 
 PKGNAME=	${PYPKGPREFIX}-cElementTree-${PY_DISTVERSION}
 CATEGORIES=	textproc python
@@ -9,6 +9,7 @@ COMMENT=	C implementation of Python ElementTree API
 
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/_elementtree.c
 
+USE_GCC_RUNTIME=yes
 USE_TOOLS+=	patch
 
 PYDISTUTILSPKG=	yes

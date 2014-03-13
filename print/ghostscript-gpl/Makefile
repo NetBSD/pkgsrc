@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/02/21 18:09:02 richard Exp $
+# $NetBSD: Makefile,v 1.10 2014/03/13 11:08:52 jperkin Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-gpl/}
@@ -26,6 +26,7 @@ CONFLICTS+=		ghostscript-afpl-[0-9]*
 CONFLICTS+=		ghostscript-esp{,-nox11}-[0-9]*
 CONFLICTS+=		ghostscript-gnu{,-nox11,-x11}-[0-9]*
 
+USE_GCC_RUNTIME=	yes
 USE_TOOLS+=		gmake perl:run lex pkg-config
 USE_LANGUAGES+=		c c++
 GNU_CONFIGURE=		yes

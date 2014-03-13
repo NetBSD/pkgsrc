@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2014/02/26 12:23:36 dsainty Exp $
+# $NetBSD: Makefile,v 1.77 2014/03/13 11:08:51 jperkin Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
@@ -14,6 +14,8 @@ LICENSE=	2-clause-bsd
 .include "../../lang/tcl/Makefile.version"
 
 WRKSRC=			${WRKDIR}/tcl${TCL_VERSION}
+
+USE_GCC_RUNTIME=	yes
 
 GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		unix

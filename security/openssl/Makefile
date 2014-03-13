@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.184 2014/03/08 08:53:14 obache Exp $
+# $NetBSD: Makefile,v 1.185 2014/03/13 11:08:52 jperkin Exp $
 
 DISTNAME=	openssl-1.0.1f
 MASTER_SITES=	http://ftp.openssl.org/source/
@@ -16,6 +16,8 @@ CRYPTO=		yes
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BUILD_DEPENDS+=	p5-Perl4-CoreLibs-[0-9]*:../../devel/p5-Perl4-CoreLibs
+
+USE_GCC_RUNTIME=	yes
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"

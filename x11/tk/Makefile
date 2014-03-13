@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2014/02/17 16:35:07 jperkin Exp $
+# $NetBSD: Makefile,v 1.80 2014/03/13 11:08:53 jperkin Exp $
 
 DISTNAME=	tk${TK_VERSION}-src
 PKGNAME=	tk-${TK_VERSION}
@@ -16,6 +16,8 @@ LICENSE=	2-clause-bsd
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/tk${TK_VERSION}
+
+USE_GCC_RUNTIME=	yes
 
 GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		unix
