@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/06/19 10:36:43 taca Exp $
+# $NetBSD: Makefile,v 1.8 2014/03/13 11:08:51 jperkin Exp $
 
 DISTNAME=	linecache-0.46
 CATEGORIES=	devel
@@ -11,6 +11,8 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${RUBY_PKGPREFIX}-rbx-require-relative>=0.0.5:../../devel/ruby-rbx-require-relative
 
 RUBY_VERSION_SUPPORTED= 18
+
+USE_GCC_RUNTIME=	yes
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

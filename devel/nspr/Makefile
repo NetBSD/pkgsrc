@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2014/03/13 10:44:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.69 2014/03/13 11:08:50 jperkin Exp $
 #
 
 DISTNAME=	nspr-${NSPR_RELEASE}
@@ -20,6 +20,7 @@ GNU_CONFIGURE=		yes
 GNU_CONFIGURE_LIBSUBDIR=nspr
 CONFIGURE_DIRS=		nspr
 
+USE_GCC_RUNTIME=	yes
 USE_TOOLS+=		autoconf213 gmake perl
 REPLACE_PERL+=		nspr/pr/src/misc/compile-et.pl
 

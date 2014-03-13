@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/09/15 17:59:44 taca Exp $
+# $NetBSD: Makefile,v 1.14 2014/03/13 11:08:53 jperkin Exp $
 
 DISTNAME=	thin-1.5.1
 CATEGORIES=	www
@@ -13,6 +13,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-daemons>=1.0.9:../../misc/ruby-daemons
 DEPENDS+=	${RUBY_PKGPREFIX}-eventmachine>=0.12.6:../../devel/ruby-eventmachine
 
 CONFLICTS+=	ruby[1-9][0-9]-thin-[0-9]* thin-[0-9]*
+
+USE_GCC_RUNTIME=	yes
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

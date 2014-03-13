@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.217 2014/01/31 17:38:48 schnoebe Exp $
+# $NetBSD: Makefile,v 1.218 2014/03/13 11:08:51 jperkin Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -96,6 +96,9 @@ SUPERSEDES+=	p5-Tie-File<=0.99
 SUPERSEDES+=	p5-Memoize<=1.03
 SUPERSEDES+=	p5-I18N-LangTags<=0.39
 SUPERSEDES+=	p5-Locale-Maketext<=1.23
+
+# XXX: requires that gcc use an external perl to avoid circular dependencies
+USE_GCC_RUNTIME=	yes
 
 .include "../../mk/bsd.prefs.mk"
 

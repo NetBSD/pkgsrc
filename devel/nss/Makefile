@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2014/03/10 18:42:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.77 2014/03/13 11:08:50 jperkin Exp $
 
 DISTNAME=		nss-${NSS_RELEASE}
 NSS_RELEASE=		3.15.5
@@ -15,6 +15,7 @@ CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}nss/tests/multinit/multinit.sh
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}js/src/configure
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}configure
 
+USE_GCC_RUNTIME=	yes
 USE_TOOLS+=		gmake perl pax pkg-config
 
 .include "../../mk/bsd.prefs.mk"

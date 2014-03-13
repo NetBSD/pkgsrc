@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.245 2014/03/03 08:15:10 obache Exp $
+# $NetBSD: Makefile,v 1.246 2014/03/13 11:08:52 jperkin Exp $
 
 DISTNAME=	samba-${VERSION}
 PKGREVISION=	2
@@ -12,6 +12,8 @@ LICENSE=	gnu-gpl-v3
 
 VERSION=	3.6.22
 CONFLICTS+=	ja-samba-[0-9]* pam-smbpass-[0-9]* winbind-[0-9]*
+
+USE_GCC_RUNTIME=	yes
 
 FILESDIR=		${PKGDIR}/../../net/samba/files
 DESCR_SRC=		${PKGDIR}/../../net/samba/DESCR
