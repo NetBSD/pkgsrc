@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1045 2014/03/13 16:43:32 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1046 2014/03/13 17:56:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1581,3 +1581,11 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated print/hplip to 3.14.3 [schnoebe 2014-03-13]
 	Updated lang/mawk to 1.3.4.20131226 [adam 2014-03-13]
 	Updated time/ruby-tzinfo to 0.3.39 [taca 2014-03-13]
+	Updated lang/ruby193-base to 1.9.3p545 [taca 2014-03-13]
+	Updated databases/ruby-gdbm to 1.9.3p545 [taca 2014-03-13]
+	Updated devel/ruby-curses to 1.9.3p545nb1 [taca 2014-03-13]
+	Updated devel/ruby-fiddle to 1.9.3p545 [taca 2014-03-13]
+	Updated devel/ruby-readline to 1.9.3p545 [taca 2014-03-13]
+	Updated x11/ruby-tk to 1.9.3p545nb3 [taca 2014-03-13]
+	Updated lang/ruby193 to 1.9.3p545 [taca 2014-03-13]
+	Updated lang/ruby to 1.9.3p545 [taca 2014-03-13]
