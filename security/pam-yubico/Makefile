@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2014/02/12 23:18:35 tron Exp $
+# $NetBSD: Makefile,v 1.9 2014/03/13 22:27:33 pettai Exp $
 
-DISTNAME=	pam_yubico-2.13
+DISTNAME=	pam_yubico-2.14
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	security
-MASTER_SITES=	http://yubico-pam.googlecode.com/files/
+MASTER_SITES=	http://opensource.yubico.com/yubico-pam/releases/
 
 MAINTAINER=	pettai@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/yubico-pam/
+HOMEPAGE=	http://opensource.yubico.com/yubico-pam/
 COMMENT=	Pluggable Authentication Module for Yubikey validation
 
 LICENSE=	modified-bsd
