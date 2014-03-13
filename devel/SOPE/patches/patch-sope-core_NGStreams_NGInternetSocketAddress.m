@@ -1,4 +1,6 @@
-$NetBSD: patch-sope-core_NGStreams_NGInternetSocketAddress.m,v 1.2 2012/11/24 14:06:43 manu Exp $
+$NetBSD: patch-sope-core_NGStreams_NGInternetSocketAddress.m,v 1.3 2014/03/13 14:02:44 taca Exp $
+
+Add support for DragonFly.
 
 --- sope-core/NGStreams/NGInternetSocketAddress.m.orig	2012-11-15 18:51:03.000000000 +0100
 +++ sope-core/NGStreams/NGInternetSocketAddress.m	2012-11-22 18:39:01.000000000 +0100
