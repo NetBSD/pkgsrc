@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/07/21 02:36:38 taca Exp $
+# $NetBSD: Makefile,v 1.2 2014/03/13 17:06:43 taca Exp $
 #
 
 DISTNAME=	# empty
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2 OR ruby-license
 
 META_PACKAGE=		yes
 
-DEPENDS+= ${RUBY_PKGPREFIX}-base>=${RUBY_VERSION_FULL}:../../lang/${RUBY_NAME}-base
+DEPENDS+= ${RUBY_BASE}>=${RUBY_VERSION_FULL}:${RUBY_SRCDIR}
 DEPENDS+= ${RUBY_PKGPREFIX}-gdbm>=${RUBY_VERSION_FULL}:../../databases/ruby-gdbm
 DEPENDS+= ${RUBY_PKGPREFIX}-curses>=${RUBY_VERSION_FULL}:../../devel/ruby-curses
 DEPENDS+= ${RUBY_PKGPREFIX}-fiddle>=${RUBY_VERSION_FULL}:../../devel/ruby-fiddle
