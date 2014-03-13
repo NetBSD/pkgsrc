@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2013/07/14 21:42:00 alnsn Exp $
+$NetBSD: distinfo,v 1.2 2014/03/13 08:20:53 justin Exp $
 
-SHA1 (LuaJIT-2.0.2.tar.gz) = d21426c4fc6ad8888255139039a014f7e28e7300
-RMD160 (LuaJIT-2.0.2.tar.gz) = 581ead4b18b54000d83f1ff79559c709f781b6c3
-Size (LuaJIT-2.0.2.tar.gz) = 843031 bytes
-SHA1 (patch-Makefile) = c21c75ec7473aea0e964fc73f3d5d65848df5e75
-SHA1 (patch-src_lj__alloc.c) = 48baa3177020c6ef304654dd4ed6380c10bda0a5
+SHA1 (LuaJIT-2.0.3.tar.gz) = 2db39e7d1264918c2266b0436c313fbd12da4ceb
+RMD160 (LuaJIT-2.0.3.tar.gz) = aa5c3fc367871a6ad15c7f9ad3300327c20462ec
+Size (LuaJIT-2.0.3.tar.gz) = 844927 bytes
+SHA1 (patch-Makefile) = 09279eb84c8a624a778778fcda992c3297b056e8
