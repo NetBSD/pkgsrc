@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2014/02/23 11:25:53 adam Exp $
+# $NetBSD: Makefile.common,v 1.10 2014/03/13 11:08:50 jperkin Exp $
 #
 # used by databases/postgresql92-adminpack/Makefile
 # used by databases/postgresql92-client/Makefile
@@ -44,6 +44,7 @@ DISTINFO_FILE?=		${.CURDIR}/../../databases/postgresql92/distinfo
 COMMON_FILESDIR?=	${.CURDIR}/../../databases/postgresql92/files
 PATCHDIR?=		${.CURDIR}/../../databases/postgresql92/patches
 
+USE_GCC_RUNTIME=	yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		bison gmake lex msgfmt
 PKG_SYSCONFSUBDIR=	postgresql

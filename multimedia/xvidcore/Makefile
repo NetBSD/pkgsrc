@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2012/10/08 09:21:16 asau Exp $
+# $NetBSD: Makefile,v 1.42 2014/03/13 11:08:52 jperkin Exp $
 
 DISTNAME=	xvidcore-1.3.2
 CATEGORIES=	multimedia
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.xvid.org/
 COMMENT=	ISO MPEG-4 compliant video codec
 LICENSE=	gnu-gpl-v2
 
+USE_GCC_RUNTIME=yes
 USE_TOOLS+=	gmake
 
 .include "../../mk/bsd.prefs.mk"

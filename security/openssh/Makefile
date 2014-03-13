@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.216 2014/03/11 14:34:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.217 2014/03/13 11:08:52 jperkin Exp $
 
 DISTNAME=		openssh-6.4p1
 PKGNAME=		openssh-6.4.1
@@ -24,6 +24,7 @@ CONFLICTS+=		ssh2-[0-9]* ssh2-nox11-[0-9]*
 CONFLICTS+=		openssh+gssapi-[0-9]*
 CONFLICTS+=		lsh>2.0
 
+USE_GCC_RUNTIME=	yes
 USE_TOOLS+=		perl
 
 CRYPTO=			yes
