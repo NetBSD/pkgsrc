@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.2.1 2014/01/20 23:15:45 tron Exp $
+# $NetBSD: Makefile,v 1.1.2.2 2014/03/13 14:21:15 tron Exp $
 
 DISTNAME=	suse_libpng-${SUSE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 RPMPKGS+=	libpng12-0-1.2.50-6.1.2.${SUSE_ARCH}
-RPMUPDPKGS+=	libpng16-16-1.6.6-8.1.${SUSE_ARCH}
+RPMUPDPKGS+=	libpng16-16-1.6.6-12.1.${SUSE_ARCH}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Linux compatibility package for PNG
