@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1048 2014/03/13 18:06:20 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1049 2014/03/13 18:19:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1592,3 +1592,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/ruby200-base to 2.0.0p451 [taca 2014-03-13]
 	Updated lang/ruby200 to 2.0.0p451 [taca 2014-03-13]
 	Updated misc/rubygems to 2.0.10nb2 [taca 2014-03-13]
+	Updated databases/ruby-data_objects to 0.10.14 [taca 2014-03-13]
+	Updated databases/ruby-do_mysql to 0.10.14 [taca 2014-03-13]
+	Updated databases/ruby-do_postgres to 0.10.14 [taca 2014-03-13]
+	Updated databases/ruby-do_sqlite3 to 0.10.14 [taca 2014-03-13]
