@@ -1,5 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2012/12/02 10:28:41 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/03/13 16:35:23 adam Exp $
 bin/mawk
 man/man1/mawk.1
-share/doc/mawk/CHANGES
-share/doc/mawk/README
