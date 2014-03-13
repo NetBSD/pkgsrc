@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2014/02/09 05:21:19 taca Exp $
+# $NetBSD: Makefile,v 1.9 2014/03/13 18:36:21 taca Exp $
 
 DISTNAME=	rake-${VERS}
-PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	taca@NetBSD.org
@@ -13,7 +12,7 @@ CONFLICTS+=	 rake-[0-9]*
 
 USE_TOOLS+=	gzip
 FIX_PERM=	doc/release_notes/rake-0.7.3.rdoc
-VERS=		10.0.4
+VERS=		10.1.1
 
 FILES_SUBST+=	GEM_NAME=${GEM_NAME} RAKE_HACK=${RAKE_HACK} RAKEBIN=${RAKEBIN}
 PLIST_SUBST+=	RAKE_HACK=${RAKE_HACK} RAKEBIN=${RAKEBIN}
@@ -26,13 +25,13 @@ OVERRIDE_GEMSPEC+= :executables rake=${RAKEBIN} \
 		:files bin/rake=bin/${RAKEBIN} doc/rake.1.gz=doc/rake.1
 
 .if defined(RUBY_RAKE_VERSION)
-RAKEBIN=	rake${RUBY_VER}-${PKGVERSION_NOREV}
+RAKEBIN=	rake${RUBY_SUFFIX}-${PKGVERSION_NOREV}
 .  if ${RUBY_RAKE_VERSION} == ${VERS}
 RAKE_HACK=	.${PKGVERSION_NOREV}
 RAKE_SPEC=	${GEM_HOME}/specifications/${GEM_NAME}.gemspec
 .  endif
 .endif
-RAKEBIN?=	rake${RUBY_VER}
+RAKEBIN?=	rake${RUBY_SUFFIX}
 
 # rake.1.gz has one extra byte at EOF.
 pre-configure:
