@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1038 2014/03/13 13:52:41 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1039 2014/03/13 13:55:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1569,3 +1569,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/nspr to 4.10.4 [ryoon 2014-03-13]
 	Updated emulators/suse131_libpng to 13.1nb2 [obache 2014-03-13]
 	Updated mail/sylpheed to 3.3.1 [taca 2014-03-13]
+	Updated www/contao32 to 3.2.8 [taca 2014-03-13]
+	Updated www/contao32-example to 3.2.8 [taca 2014-03-13]
