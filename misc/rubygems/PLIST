@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.23 2013/07/07 15:12:56 taca Exp $
-bin/gem${RUBY_VER}.new
+@comment $NetBSD: PLIST,v 1.24 2014/03/13 18:05:49 taca Exp $
+bin/gem${RUBY_SUFFIX}.new
 ${RUBY_VENDORLIB}/gauntlet_rubygems.rb
 ${RUBY_VENDORLIB}/rubygems.rb
 ${RUBY_VENDORLIB}/rubygems/available_set.rb
