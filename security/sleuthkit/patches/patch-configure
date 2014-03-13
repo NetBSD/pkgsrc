@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2014/03/13 23:41:31 pettai Exp $
+
+--- configure.orig	2014-03-13 22:51:42.000000000 +0000
++++ configure
+@@ -21983,7 +21983,7 @@ else
+   ax_java_support=no
+ fi
+ 
+- if test "x$ax_java_support" == "xyes"; then
++ if test "x$ax_java_support" = "xyes"; then
+   X_JNI_TRUE=
+   X_JNI_FALSE='#'
+ else
