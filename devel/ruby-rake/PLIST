@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/12/17 16:52:48 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/03/13 18:36:21 taca Exp $
 bin/${RAKEBIN}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
@@ -49,6 +49,7 @@ ${GEM_LIBDIR}/doc/release_notes/rake-10.0.0.rdoc
 ${GEM_LIBDIR}/doc/release_notes/rake-10.0.1.rdoc
 ${GEM_LIBDIR}/doc/release_notes/rake-10.0.2.rdoc
 ${GEM_LIBDIR}/doc/release_notes/rake-10.0.3.rdoc
+${GEM_LIBDIR}/doc/release_notes/rake-10.1.0.rdoc
 ${GEM_LIBDIR}/install.rb
 ${GEM_LIBDIR}/lib/rake.rb
 ${GEM_LIBDIR}/lib/rake/alt_system.rb
@@ -77,6 +78,7 @@ ${GEM_LIBDIR}/lib/rake/file_utils_ext.rb
 ${GEM_LIBDIR}/lib/rake/gempackagetask.rb
 ${GEM_LIBDIR}/lib/rake/invocation_chain.rb
 ${GEM_LIBDIR}/lib/rake/invocation_exception_mixin.rb
+${GEM_LIBDIR}/lib/rake/linked_list.rb
 ${GEM_LIBDIR}/lib/rake/loaders/makefile.rb
 ${GEM_LIBDIR}/lib/rake/multi_task.rb
 ${GEM_LIBDIR}/lib/rake/name_space.rb
@@ -92,6 +94,7 @@ ${GEM_LIBDIR}/lib/rake/rdoctask.rb
 ${GEM_LIBDIR}/lib/rake/ruby182_test_unit_fix.rb
 ${GEM_LIBDIR}/lib/rake/rule_recursion_overflow_error.rb
 ${GEM_LIBDIR}/lib/rake/runtest.rb
+${GEM_LIBDIR}/lib/rake/scope.rb
 ${GEM_LIBDIR}/lib/rake/task.rb
 ${GEM_LIBDIR}/lib/rake/task_argument_error.rb
 ${GEM_LIBDIR}/lib/rake/task_arguments.rb
@@ -105,6 +108,8 @@ ${GEM_LIBDIR}/lib/rake/version.rb
 ${GEM_LIBDIR}/lib/rake/win32.rb
 ${GEM_LIBDIR}/test/file_creation.rb
 ${GEM_LIBDIR}/test/helper.rb
+${GEM_LIBDIR}/test/support/rakefile_definitions.rb
+${GEM_LIBDIR}/test/support/ruby_runner.rb
 ${GEM_LIBDIR}/test/test_private_reader.rb
 ${GEM_LIBDIR}/test/test_rake.rb
 ${GEM_LIBDIR}/test/test_rake_application.rb
@@ -124,6 +129,7 @@ ${GEM_LIBDIR}/test/test_rake_file_utils.rb
 ${GEM_LIBDIR}/test/test_rake_ftp_file.rb
 ${GEM_LIBDIR}/test/test_rake_functional.rb
 ${GEM_LIBDIR}/test/test_rake_invocation_chain.rb
+${GEM_LIBDIR}/test/test_rake_linked_list.rb
 ${GEM_LIBDIR}/test/test_rake_makefile_loader.rb
 ${GEM_LIBDIR}/test/test_rake_multi_task.rb
 ${GEM_LIBDIR}/test/test_rake_name_space.rb
@@ -136,6 +142,7 @@ ${GEM_LIBDIR}/test/test_rake_rake_test_loader.rb
 ${GEM_LIBDIR}/test/test_rake_reduce_compat.rb
 ${GEM_LIBDIR}/test/test_rake_require.rb
 ${GEM_LIBDIR}/test/test_rake_rules.rb
+${GEM_LIBDIR}/test/test_rake_scope.rb
 ${GEM_LIBDIR}/test/test_rake_task.rb
 ${GEM_LIBDIR}/test/test_rake_task_argument_parsing.rb
 ${GEM_LIBDIR}/test/test_rake_task_arguments.rb
