@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2013/12/08 16:51:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.27 2014/03/13 18:24:52 taca Exp $
 bin/sequel
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -20,6 +20,7 @@ ${GEM_LIBDIR}/doc/mass_assignment.rdoc
 ${GEM_LIBDIR}/doc/migration.rdoc
 ${GEM_LIBDIR}/doc/model_hooks.rdoc
 ${GEM_LIBDIR}/doc/model_plugins.rdoc
+${GEM_LIBDIR}/doc/mssql_stored_procedures.rdoc
 ${GEM_LIBDIR}/doc/object_model.rdoc
 ${GEM_LIBDIR}/doc/opening_databases.rdoc
 ${GEM_LIBDIR}/doc/postgresql.rdoc
@@ -99,6 +100,9 @@ ${GEM_LIBDIR}/doc/release_notes/4.2.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.3.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.4.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.5.0.txt
+${GEM_LIBDIR}/doc/release_notes/4.6.0.txt
+${GEM_LIBDIR}/doc/release_notes/4.7.0.txt
+${GEM_LIBDIR}/doc/release_notes/4.8.0.txt
 ${GEM_LIBDIR}/doc/schema_modification.rdoc
 ${GEM_LIBDIR}/doc/security.rdoc
 ${GEM_LIBDIR}/doc/sharding.rdoc
@@ -324,6 +328,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/touch.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/tree.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/typecast_on_load.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/unlimited_update.rb
+${GEM_LIBDIR}/lib/sequel/plugins/update_or_create.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/update_primary_key.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/validation_class_methods.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/validation_helpers.rb
@@ -459,6 +464,7 @@ ${GEM_LIBDIR}/spec/extensions/touch_spec.rb
 ${GEM_LIBDIR}/spec/extensions/tree_spec.rb
 ${GEM_LIBDIR}/spec/extensions/typecast_on_load_spec.rb
 ${GEM_LIBDIR}/spec/extensions/unlimited_update_spec.rb
+${GEM_LIBDIR}/spec/extensions/update_or_create_spec.rb
 ${GEM_LIBDIR}/spec/extensions/update_primary_key_spec.rb
 ${GEM_LIBDIR}/spec/extensions/validation_class_methods_spec.rb
 ${GEM_LIBDIR}/spec/extensions/validation_helpers_spec.rb
@@ -533,6 +539,7 @@ ${GEM_LIBDIR}/spec/model/plugins_spec.rb
 ${GEM_LIBDIR}/spec/model/record_spec.rb
 ${GEM_LIBDIR}/spec/model/spec_helper.rb
 ${GEM_LIBDIR}/spec/model/validations_spec.rb
+${GEM_LIBDIR}/spec/rspec_helper.rb
 ${GEM_LIBDIR}/spec/sequel_coverage.rb
 ${GEM_LIBDIR}/spec/spec_config.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
