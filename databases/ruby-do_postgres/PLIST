@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/17 17:13:07 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/13 18:17:12 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/do_postgres/do_postgres.${RUBY_DLEXT}
 ${GEM_LIBDIR}/ChangeLog.markdown
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.markdown
