@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2014/02/05 15:21:28 wen Exp $
+# $NetBSD: Makefile,v 1.38 2014/03/13 07:30:34 wen Exp $
 
 DISTNAME=	mediawiki-${VER}.${PVER}
 CATEGORIES=	www
-MASTER_SITES=	http://download.wikimedia.org/mediawiki/${VER}/
+MASTER_SITES=	http://releases.wikimedia.org/mediawiki/${VER}/
 
 MAINTAINER=	wenheping@gmail.com
 HOMEPAGE=	http://www.mediawiki.org/
@@ -12,6 +12,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PHP_PKG_PREFIX}-dom>=5.3.2:../../textproc/php-dom
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.3.2:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-intl>=5.3.2:../../textproc/php-intl
+DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.3.2:../../textproc/php-json
 
 EGDIR=			share/examples/mediawiki
 MEDIAWIKI=		${PREFIX}/share/mediawiki
@@ -21,8 +22,8 @@ INSTALLATION_DIRS=	${EGDIR} share/mediawiki
 .include "options.mk"
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-VER=			1.21
-PVER=			5
+VER=			1.22
+PVER=			4
 
 APACHE_USER?=		www
 APACHE_GROUP?=		www
@@ -56,7 +57,7 @@ SUBST_CLASSES+=		sh2
 SUBST_STAGE.sh2=	post-patch
 SUBST_MESSAGE.sh2=	Fixing path to sh
 SUBST_FILES.sh2+=	maintenance/mwjsduck-gen
-SUBST_SED.sh2=		-e "s|/usr/bin/env sh|${SH}|"
+SUBST_SED.sh2=		-e "s|/usr/bin/env bash|${SH}|"
 
 SUBST_CLASSES+=		perl
 SUBST_STAGE.perl=	post-patch
@@ -82,8 +83,6 @@ SUBST_CLASSES+=		php
 SUBST_MESSAGE.php=	Fixing the path of php.
 SUBST_STAGE.php=	post-patch
 SUBST_FILES.php+=	includes/normal/UtfNormalTest2.php
-SUBST_FILES.php+=	tests/RunSeleniumTests.php
-SUBST_FILES.php+=	tests/phpunit/phpunit.php
 SUBST_SED.php=          -e "s,/usr/bin/env php,${PREFIX}/bin/php,g"
 
 post-extract:
