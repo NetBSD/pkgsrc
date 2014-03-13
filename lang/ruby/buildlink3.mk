@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2012/05/07 02:45:47 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2014/03/13 17:06:42 taca Exp $
 
 BUILDLINK_TREE+=	${RUBY_BASE}
 
@@ -11,15 +11,15 @@ RUBY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.${RUBY_BASE}+=	${RUBY_BASE}>=${RUBY_VERSION}
 BUILDLINK_ABI_DEPENDS.${RUBY_BASE}+=	${RUBY_BASE}>=${RUBY_ABI_VERSION}
-BUILDLINK_PKGSRCDIR.${RUBY_BASE}?=	../../lang/${RUBY_BASE}
-BUILDLINK_FILES.${RUBY_BASE}+=		lib/libruby${RUBY_VER}.*
+BUILDLINK_PKGSRCDIR.${RUBY_BASE}?=	${RUBY_SRCDIR}
+BUILDLINK_FILES.${RUBY_BASE}+=		lib/libruby${RUBY_SUFFIX}.*
 BUILDLINK_FILES.${RUBY_BASE}+=	lib/ruby/${RUBY_VER_DIR}/${RUBY_ARCH}/*.h
 
 BUILDLINK_TARGETS+=	buildlink-bin-ruby
 
 buildlink-bin-ruby:
 	${RUN} \
-	f=${BUILDLINK_PREFIX.${RUBY_BASE}:Q}"/bin/ruby${RUBY_VER}"; \
+	f=${BUILDLINK_PREFIX.${RUBY_BASE}:Q}"/bin/ruby${RUBY_SUFFIX}"; \
 	if ${TEST} -f $$f; then \
 		${LN} -s $$f ${BUILDLINK_DIR}/bin/ruby; \
 	fi
