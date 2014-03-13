@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2014/03/13 11:08:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2014/03/13 18:18:01 taca Exp $
 
-DISTNAME=	do_sqlite3-0.10.13
-PKGREVISION=	1
+DISTNAME=	do_sqlite3-0.10.14
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,7 +8,7 @@ HOMEPAGE=	#
 COMMENT=	Implements the DataObjects API for Sqlite3
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-data_objects>=0.10.13<0.11:../../databases/ruby-data_objects
+DEPENDS+=	${RUBY_PKGPREFIX}-data_objects>=0.10.14<0.11:../../databases/ruby-data_objects
 
 USE_GCC_RUNTIME=	yes
 
