@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/02/12 23:18:46 tron Exp $
+# $NetBSD: Makefile,v 1.18 2014/03/13 11:08:53 jperkin Exp $
 
 DISTNAME=	patron-0.4.18
 PKGREVISION=	3
@@ -8,6 +8,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://toland.github.com/patron/
 COMMENT=	Ruby HTTP client library based on libcurl
 LICENSE=	mit
+
+USE_GCC_RUNTIME=	yes
 
 .include "../../lang/ruby/gem.mk"
 .include "../../www/curl/buildlink3.mk"
