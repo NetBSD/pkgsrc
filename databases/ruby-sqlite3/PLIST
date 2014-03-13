@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.13 2012/04/28 14:09:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2014/03/13 18:28:12 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/sqlite3/sqlite3_native.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/API_CHANGES.rdoc
 ${GEM_LIBDIR}/CHANGELOG.rdoc
 ${GEM_LIBDIR}/ChangeLog.cvs
+${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.rdoc
