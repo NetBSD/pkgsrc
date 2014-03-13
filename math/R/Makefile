@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.145 2014/02/17 17:11:07 jperkin Exp $
+# $NetBSD: Makefile,v 1.146 2014/03/13 11:08:51 jperkin Exp $
 
 DISTNAME=		R-3.0.2
 CATEGORIES=		math
@@ -14,6 +14,8 @@ NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-alpha NetBSD-1.5-alpha \
 			NetBSD-1.5.*-alpha NetBSD-1.5[A-U]-alpha
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_GCC_RUNTIME=	yes
 
 BUILD_TARGET=		all info
 INSTALL_TARGET=		install install-info

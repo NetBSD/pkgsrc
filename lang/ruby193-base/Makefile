@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2014/02/24 01:20:15 taca Exp $
+# $NetBSD: Makefile,v 1.41 2014/03/13 11:08:51 jperkin Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -15,6 +15,7 @@ LICENSE=	${RUBY_LICENSE}
 RUBY_VERSION_SUPPORTED=	193
 
 MAKE_JOBS_SAFE=		no
+USE_GCC_RUNTIME=	yes
 USE_LANGUAGES=		c
 USE_TOOLS+=		pax yacc
 GNU_CONFIGURE=		yes

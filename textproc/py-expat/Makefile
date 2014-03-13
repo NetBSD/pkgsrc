@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/01/25 10:30:24 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2014/03/13 11:08:52 jperkin Exp $
 
 PKGNAME=	${PYPKGPREFIX}-expat-${PY_DISTVERSION}
 CATEGORIES=	textproc python
@@ -8,6 +8,8 @@ HOMEPAGE=	http://www.python.org/
 COMMENT=	Python interface to expat
 
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/pyexpat.c
+
+USE_GCC_RUNTIME=	yes
 
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
