@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2013/03/16 19:56:07 pettai Exp $
+# $NetBSD: Makefile,v 1.6 2014/03/13 22:13:44 pettai Exp $
 
-DISTNAME=	libyubikey-1.10
+DISTNAME=	libyubikey-1.11
 CATEGORIES=	security
-MASTER_SITES=	http://yubico-c.googlecode.com/files/
+MASTER_SITES=	http://opensource.yubico.com/yubico-c/releases/
 
 MAINTAINER=	pettai@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/yubico-c/
+HOMEPAGE=	http://opensource.yubico.com/yubico-c/
 COMMENT=	Yubikey library
 
 LICENSE=	modified-bsd
