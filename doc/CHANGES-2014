@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1036 2014/03/13 10:45:12 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.1037 2014/03/13 11:34:05 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1567,3 +1567,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/mediawiki to 1.22.4 [wen 2014-03-13]
 	Updated cad/geda to 1.8.2 [dmcmahill 2014-03-13]
 	Updated devel/nspr to 4.10.4 [ryoon 2014-03-13]
+	Updated emulators/suse131_libpng to 13.1nb2 [obache 2014-03-13]
