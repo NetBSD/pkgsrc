@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2013/09/13 12:41:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/03/13 18:11:36 taca Exp $
 bin/cassandra_helper
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/cassandra_native.${RUBY_DLEXT}
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
