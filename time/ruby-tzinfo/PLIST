@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2013/12/13 15:42:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.20 2014/03/13 16:43:02 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGES
@@ -309,9 +309,6 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Qatar.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Qyzylorda.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Rangoon.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Riyadh.rb
-${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Riyadh87.rb
-${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Riyadh88.rb
-${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Riyadh89.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Saigon.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Sakhalin.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Samarkand.rb
@@ -521,9 +518,6 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/MST7MDT.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Mexico/BajaNorte.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Mexico/BajaSur.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Mexico/General.rb
-${GEM_LIBDIR}/lib/tzinfo/definitions/Mideast/Riyadh87.rb
-${GEM_LIBDIR}/lib/tzinfo/definitions/Mideast/Riyadh88.rb
-${GEM_LIBDIR}/lib/tzinfo/definitions/Mideast/Riyadh89.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/NZ.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/NZ__m__CHAT.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Navajo.rb
@@ -639,4 +633,5 @@ ${GEM_LIBDIR}/test/tc_timezone_transition_info.rb
 ${GEM_LIBDIR}/test/tc_timezone_utc.rb
 ${GEM_LIBDIR}/test/test_utils.rb
 ${GEM_LIBDIR}/test/ts_all.rb
+${GEM_LIBDIR}/tzinfo.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
