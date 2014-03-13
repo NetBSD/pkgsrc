@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2014/02/19 15:52:05 taca Exp $
+# $NetBSD: Makefile,v 1.10 2014/03/13 18:00:02 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION_FULL}
-PKGREVISION=	3
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -149,7 +148,7 @@ pre-configure:
 	${RM} -f ${WRKSRC}/ext/tk/extconf.rb
 
 pre-install:
-	cd ${WRKSRC}/bin; for f in *; do ${LN} -f $$f $${f}${RUBY_VER}; done
+	cd ${WRKSRC}/bin; for f in *; do ${LN} -f $$f $${f}${RUBY_SUFFIX}; done
 	cd ${WRKSRC}/lib; \
 		${FIND} . \( -name '*.orig' -o -name '*.orig_dist' \) \
 		-exec ${RM} -f {} \;
