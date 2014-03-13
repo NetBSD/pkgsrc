@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2013/06/27 16:37:16 taca Exp $
+# $NetBSD: Makefile,v 1.55 2014/03/13 17:06:42 taca Exp $
 
 DISTNAME=	# empty
 PKGNAME=	ruby-${RUBY_VERSION_FULL}
@@ -17,7 +17,7 @@ NO_BUILD=	yes
 
 .include "../../lang/ruby/rubyversion.mk"
 
-DEPENDS+= ${RUBY_PKGPREFIX}-base>=${RUBY_VERSION}:../../lang/${RUBY_PKGPREFIX}-base
+DEPENDS+= ${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
 
 RUBY_COMMANDS=	erb irb ruby testrb
 .if ${RUBY_VER} == "18"
@@ -41,7 +41,7 @@ GENERATE_PLIST+=	${ECHO} man/man1/ruby.1;
 do-install:
 .if ${RUBY_NAME} != "ruby"
 .  for f in ${RUBY_COMMANDS}
-	${LN} -sf ${f}${RUBY_VER} ${DESTDIR}${PREFIX}/bin/${f}
+	${LN} -sf ${f}${RUBY_SUFFIX} ${DESTDIR}${PREFIX}/bin/${f}
 .  endfor
 	${LN} -sf ${RUBY_NAME}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/ruby.1
 .endif
