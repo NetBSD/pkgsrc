@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1056 2014/03/13 22:28:05 pettai Exp $
+$NetBSD: CHANGES-2014,v 1.1057 2014/03/13 23:41:52 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1603,3 +1603,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/libyubikey to 1.11 [pettai 2014-03-13]
 	Updated security/ykpers to 1.15.1 [pettai 2014-03-13]
 	Updated security/pam-yubico to 2.14 [pettai 2014-03-13]
+	Updated security/sleuthkit to 4.1.3 [pettai 2014-03-13]
