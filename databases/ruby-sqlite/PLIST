@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/17 12:24:46 taca Exp $
-${GEM_HOME}/cache/sqlite-ruby-${PKGVERSION}.gem
+@comment $NetBSD: PLIST,v 1.2 2014/03/13 18:26:43 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/sqlite_api.${RUBY_DLEXT}
 ${GEM_LIBDIR}/README
 ${GEM_LIBDIR}/doc/faq/faq.html
 ${GEM_LIBDIR}/doc/faq/faq.rb
@@ -25,4 +26,4 @@ ${GEM_LIBDIR}/test/tc_pragmas.rb
 ${GEM_LIBDIR}/test/tc_translator.rb
 ${GEM_LIBDIR}/test/tc_type_translation.rb
 ${GEM_LIBDIR}/test/tests.rb
-${GEM_HOME}/specifications/sqlite-ruby-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
