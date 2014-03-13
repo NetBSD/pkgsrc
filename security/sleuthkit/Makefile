@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/10/30 15:22:36 pettai Exp $
+# $NetBSD: Makefile,v 1.3 2014/03/13 23:41:31 pettai Exp $
 
-DISTNAME=	sleuthkit-3.2.3
+DISTNAME=	sleuthkit-4.1.3
 CATEGORIES=	security sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sleuthkit/}
 
@@ -13,8 +13,6 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake file perl:run
-
-REPLACE_PERL=	tools/timeline/mactime tools/sorter/sorter
 
 .include "../../sysutils/file/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
