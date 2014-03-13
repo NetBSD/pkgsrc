@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.728 2014/03/10 14:22:30 taca Exp $
+# $NetBSD: Makefile,v 1.729 2014/03/13 07:28:38 jnemeth Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -450,9 +450,9 @@ SUBDIR+=	startup-notification010
 SUBDIR+=	tile
 SUBDIR+=	tint2
 SUBDIR+=	tk
-SUBDIR+=	tk85
 SUBDIR+=	tk-BWidget
 SUBDIR+=	tk-Tix
+SUBDIR+=	tk85
 SUBDIR+=	tkinfo
 SUBDIR+=	tktable
 SUBDIR+=	transset
