@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1041 2014/03/13 14:52:37 adam Exp $
+$NetBSD: CHANGES-2014,v 1.1042 2014/03/13 14:57:42 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1577,3 +1577,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/sqlite3 to 3.8.4.1 [adam 2014-03-13]
 	Updated databases/sqlite3-docs to 3.8.4.1 [adam 2014-03-13]
 	Updated databases/sqlite3-tcl to 3.8.4.1 [adam 2014-03-13]
+	Updated databases/postgresql93-monitoring to 9.3.3nb1 [jperkin 2014-03-13]
