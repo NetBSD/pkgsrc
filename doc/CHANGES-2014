@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1083 2014/03/14 15:26:15 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1084 2014/03/14 15:29:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1630,3 +1630,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/ruby-atomic to 1.1.15 [taca 2014-03-14]
 	Updated devel/ruby-backports to 3.6.0 [taca 2014-03-14]
 	Updated devel/ruby-daemon_controller to 1.2.0 [taca 2014-03-14]
+	Updated devel/ruby-fast_gettext to 0.8.1 [taca 2014-03-14]
