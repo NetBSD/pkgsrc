@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp_var.h,v 1.6 2008/04/29 05:46:09 martin Exp $	*/
+/*	$NetBSD: ftp_var.h,v 1.7 2014/03/14 22:10:49 ryoon Exp $	*/
 /*	from	NetBSD: ftp_var.h,v 1.75 2007/07/22 05:02:50 lukem Exp	*/
 
 /*-
@@ -193,6 +193,15 @@ enum {
 
 #define	TMPFILE		"ftpXXXXXXXXXX"
 
+/*
+ * SCO OpenServer 5.0.7/3.2 has PATH_MAX (256) in limits.h.
+ * But it is not usable ordinal condition.
+ */
+#if !defined(PATH_MAX)
+#if defined(_SCO_DS)
+#define PATH_MAX	256
+#endif
+#endif
 
 #ifndef	GLOBAL
 #define	GLOBAL	extern
