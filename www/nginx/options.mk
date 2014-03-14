@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.23 2014/01/31 03:09:19 rodent Exp $
+# $NetBSD: options.mk,v 1.24 2014/03/14 11:30:57 imil Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
-PKG_SUPPORTED_OPTIONS=	dav flv gtools inet6 mail-proxy memcache naxsi pcre \
-			push realip ssl sub uwsgi image-filter upload debug \
-			status nginx-autodetect-cflags spdy
+PKG_SUPPORTED_OPTIONS=	dav flv gtools inet6 luajit mail-proxy memcache naxsi \
+			pcre push realip ssl sub uwsgi image-filter upload \
+			debug status nginx-autodetect-cflags spdy
 PKG_SUGGESTED_OPTIONS=	inet6 pcre ssl
 
 PLIST_VARS+=		naxsi uwsgi
@@ -63,10 +63,10 @@ CONFIGURE_ARGS+=	--without-http_memcached_module
 .endif
 
 .if !empty(PKG_OPTIONS:Mnaxsi) || make(makesum)
-NAXSI=			naxsi-core-0.51-1
-NAXSI_DISTFILE=		${NAXSI}.tgz
-SITES.${NAXSI_DISTFILE}=	http://naxsi.googlecode.com/files/
-DISTFILES+=		${NAXSI_DISTFILE}
+NAXSI=				naxsi-0.53-2
+NAXSI_DISTFILE=			${NAXSI}.tar.gz
+SITES.${NAXSI_DISTFILE}=	http://ftp.netbsd.org/pub/pkgsrc/distfiles/
+DISTFILES+=			${NAXSI_DISTFILE}
 .endif
 
 .if !empty(PKG_OPTIONS:Mrealip)
@@ -75,6 +75,22 @@ CONFIGURE_ARGS+=	--with-http_realip_module
 
 .if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--with-ipv6
+.endif
+
+.if !empty(PKG_OPTIONS:Mluajit)
+CONFIGURE_ARGS+=	--add-module=../${NDK}
+CONFIGURE_ARGS+=	--add-module=../${LUA}
+.endif
+.if !empty(PKG_OPTIONS:Mluajit) || make(makesum)
+NDK=			ngx_devel_kit-0.2.19
+NDK_DISTFILE=		${NDK}.tar.gz
+SITES.${NDK_DISTFILE}=	http://ftp.netbsd.org/pub/pkgsrc/distfiles/
+LUA=			lua-nginx-module-0.9.5
+LUA_DISTFILE=		${LUA}.tar.gz
+SITES.${LUA_DISTFILE}=	http://ftp.netbsd.org/pub/pkgsrc/distfiles/
+DISTFILES+=		${NDK_DISTFILE} ${LUA_DISTFILE}
+
+DEPENDS+=		LuaJIT2>=2.0.3:../../lang/LuaJIT2
 .endif
 
 .if !empty(PKG_OPTIONS:Muwsgi)
