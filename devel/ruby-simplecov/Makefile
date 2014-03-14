@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2013/07/21 02:42:41 taca Exp $
+# $NetBSD: Makefile,v 1.6 2014/03/14 16:54:29 taca Exp $
 
-DISTNAME=	simplecov-0.7.1
+DISTNAME=	simplecov-0.8.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,9 +9,10 @@ COMMENT=	Code coverage for Ruby 1.9
 LICENSE=	gnu-gpl-v2 OR ruby-license
 
 DEPENDS+=	${RUBY_PKGPREFIX}-multi_json>=1.0<2:../../textproc/ruby-multi_json
-DEPENDS+=	${RUBY_PKGPREFIX}-simplecov-html>=0.7.1<0.8:../../devel/ruby-simplecov-html
+DEPENDS+=	${RUBY_PKGPREFIX}-simplecov-html>=0.8.0<0.9:../../devel/ruby-simplecov-html
+DEPENDS+=	${RUBY_PKGPREFIX}-docile>=1.1.0<1.2:../../devel/ruby-docile
 
-RUBY_VERSION_SUPPORTED=	200 193
+RUBY_VERSION_SUPPORTED=	21 200 193
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
