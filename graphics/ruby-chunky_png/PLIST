@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/09/15 13:33:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/03/14 17:08:35 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -35,6 +35,7 @@ ${GEM_LIBDIR}/lib/chunky_png/palette.rb
 ${GEM_LIBDIR}/lib/chunky_png/point.rb
 ${GEM_LIBDIR}/lib/chunky_png/rmagick.rb
 ${GEM_LIBDIR}/lib/chunky_png/vector.rb
+${GEM_LIBDIR}/lib/chunky_png/version.rb
 ${GEM_LIBDIR}/spec/chunky_png/canvas/adam7_interlacing_spec.rb
 ${GEM_LIBDIR}/spec/chunky_png/canvas/data_url_exporting_spec.rb
 ${GEM_LIBDIR}/spec/chunky_png/canvas/data_url_importing_spec.rb
@@ -298,6 +299,7 @@ ${GEM_LIBDIR}/spec/resources/damaged_chunk.png
 ${GEM_LIBDIR}/spec/resources/damaged_signature.png
 ${GEM_LIBDIR}/spec/resources/lines.png
 ${GEM_LIBDIR}/spec/resources/operations.png
+${GEM_LIBDIR}/spec/resources/operations_border.png
 ${GEM_LIBDIR}/spec/resources/operations_grayscale.png
 ${GEM_LIBDIR}/spec/resources/partial_circles.png
 ${GEM_LIBDIR}/spec/resources/pixelstream.rgb
@@ -315,5 +317,4 @@ ${GEM_LIBDIR}/spec/resources/text_chunk.png
 ${GEM_LIBDIR}/spec/resources/ztxt_chunk.png
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/tasks/benchmarks.rake
-${GEM_LIBDIR}/tasks/github-gem.rake
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
