@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/06/16 09:36:23 obache Exp $
+# $NetBSD: Makefile,v 1.3 2014/03/14 19:02:56 taca Exp $
 
-DISTNAME=	http_router-0.11.0
+DISTNAME=	http_router-0.11.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
