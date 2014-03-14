@@ -1,0 +1,247 @@
+$NetBSD: README.OpenServer5,v 1.1 2014/03/14 21:54:25 ryoon Exp $
+
+XXX You should change your /bin/sh to shells/pdksh under OpenServer 5.0.7/3.2!!
+
+Supported platforms
+===================
+- Xinuos SCO OpenServer 5.0.7/3.2
+
+Prerequisite softwares
+======================
+- SCO OpenServer 5 Development System with Maintenance Pack 4 update
+- GCC 4.2.4
+- GNU binutils 2.24
+
+Compiler
+========
+C compiler that is shipped with OpenServer 5 Development System cannot
+build pkgsrc/devel/bmake. Please use GCC 4.2.4 built from scratch.
+You can follow "How to build gcc-4.2.4 for SCO OpenServer 5.0.7/.3.2"
+steps.
+
+Prebuilt GCC is not available, because it contains proprietary header files
+in its directory structure (GCC fixincludes mechanism).
+
+Selecting which ABI to use
+==========================
+Xinuos SCO OpenServer 5.0.7 can handle COFF and ELF binaries.
+I have tested only ELF binaries.
+But OpenServer 5.0.7's native CC generates COFF by default.
+
+Start bootstrapping pkgsrc
+==========================
+PREFER_PKGSRC=yes build is recommended.
+
+	# ./bootstrap --prefer-pkgsrc yes
+
+And you must remove libtool-base that is built and installed during
+bootstrap with
+
+	$ pkg_delete -ff libtool-base
+
+It contains the path to bootstrap working directory and does not work properly.
+And rm command cannot accept "rm -f". You should install sysutils/coreutils
+and put the following line to your mk.conf.
+
+	TOOLS_PLATFORM.rm?=/a/pkg/bin/grm
+
+How to build gcc-4.2.4 for SCO OpenServer 5.0.7/.3.2
+====================================================
+To follow these steps, you must have SCO OpenServer 5 Development System.
+
+OpenServer 5.0.7's tar command does not support builtin gzip or bzip2
+support. You should use pipe.
+
+	$ gzcat make-3.79.1.tar.gz | tar xvf -
+
+For configure newer GNU packages, you should replace your /bin/sh with
+ksh from pkgsrc/shells/pdksh!!
+
+
+1. Build GNU make 3.79.1 from make-3.79.1.tar.gz
+   Use OpenServer's native CC, AS, LD, and MAKE.
+
+	$ cd make-3.79.1
+	$ ./configure --prefix=$HOME/tools
+	$ make
+	$ make install
+
+2. Build GCC 2.95.3 C compiler from GNU official gcc-core-2.95.3.tar.gz
+   with minimal patch (*1)
+   Use OpenServer's native CC, AS, LD, and GNU make.
+   In this stage, you cannot build C++ compiler with internel compiler error.
+
+	$ mkdir build0
+	$ cd build0
+	$ PATH=$HOME/tools/bin:$PATH ../gcc-2.95.3/configure --prefix=$HOME/tools
+	$ PATH=$HOME/tools/bin:$PATH $HOME/tools/bin/make
+	$ PATH=$HOME/tools/bin:$PATH $HOME/tools/bin/make install
+
+3. Build GCC 2.95.3 C and C++ compilers from GNU official
+   gcc-core-2.95.3.tar.gz and gcc-g++-2.95.3.tar.gz with minimal patch
+   (*1 and *2)
+   Use OpenServer's native AS, LD, GCC, and GNU make.
+   In this stage, you can build C++ compiler with GCC C compiler.
+
+	$ mkdir build1
+	$ cd build1
+	$ PATH=$HOME/tools/bin:$PATH ../gcc-2.95.3/configure --prefix=$HOME/tools
+	$ PATH=$HOME/tools/bin:$PATH $HOME/tools/bin/make
+	$ PATH=$HOME/tools/bin:$PATH $HOME/tools/bin/make install
+
+4. Build GNU m4 1.4.3 from m4-1.4.3.tar.gz
+   Use OpenServer's native AS, LD, GNU make, and GCC.
+
+	$ cd m4-1.4.3
+	$ PATH=$HOME/tools/bin:$PATH ./configure --prefix=$HOME/tools
+	$ PATH=$HOME/tools/bin:$PATH $HOME/tools/bin/make
+	$ PATH=$HOME/tools/bin:$PATH $HOME/tools/bin/make install
+
+5. Build GNU bison 2.0 from bison-2.0.tar.gz
+   Use OpenServer's native AS, LD, GNU make, and GCC.
+
+	$ cd  bison-2.0
+	$ PATH=$HOME/tools/bin:$PATH ./configure --prefix=$HOME/tools
+	$ PATH=$HOME/tools/bin:$PATH $HOME/tools/bin/make
+	$ PATH=$HOME/tools/bin:$PATH $HOME/tools/bin/make install
+
+6. Build flex 2.5.4 from flex-2.5.4a.tar.bz2
+   Use OpenServer's native AS, LD, GNU make, and GCC.
+
+	$ cd flex-2.5.4a
+	$ PATH=$HOME/tools/bin:$PATH ./configure --prefix=$HOME/tools
+	$ PATH=$HOME/tools/bin:$PATH $HOME/tools/bin/make
+	$ PATH=$HOME/tools/bin:$PATH $HOME/tools/bin/make install
+
+7. Build texinfo 4.8 with texinfo-4.8.tar.gz
+   Use OpenServer's native AS, LD, GNU make, and GCC.
+
+	$ cd texinfo-4.8
+	$ PATH=$HOME/tools/bin:$PATH ./configure --prefix=$HOME/tools
+	$ PATH=$HOME/tools/bin:$PATH $HOME/tools/bin/make
+	$ PATH=$HOME/tools/bin:$PATH $HOME/tools/bin/make install
+
+8. Build GNU gperf 2.7.2 from gperf-2.7.2.tar.gz
+   Use OpenServer's native AS, LD, GNU make, and GCC (including g++).
+
+	$ cd gperf-2.7.2
+	$ PATH=$HOME/tools/bin:$PATH ./configure --prefix=$HOME/tools
+	$ PATH=$HOME/tools/bin:$PATH $HOME/tools/bin/make
+	$ PATH=$HOME/tools/bin:$PATH $HOME/tools/bin/make install
+
+9. Build GCC 2.95.3pl4 (bootstrap) from Xinuos gnutools-5.0.7Kj-SRC.tar.bz2
+   Use OpenServer's native LD, AS, GNU make, and GCC.
+
+	$ mkdir build2
+	$ cd build2
+	$ PATH=$HOME/tools/bin:$PATH ../gcc-2.95.3/configure --prefix=$HOME/tools
+	$ PATH=$HOME/tools/bin:$PATH $HOME/tools/bin/make bootstrap
+	$ PATH=$HOME/tools/bin:$PATH $HOME/tools/bin/make install
+
+10. Build GNU binutils 2.14pl1 from Xinuos gnutools-5.0.7Kj-SRC.tar.bz2
+    Use OpenServer's native LD, AS, GNU make, and GCC.
+    LD from binutils is not available.
+
+	$ mkdir binutils-build0
+	$ cd binutils-build0
+	$ PATH=$HOME/tools/bin:$PATH ../binutils-2.14/configure --prefix=$HOME/tools2
+	$ PATH=$HOME/tools/bin:$PATH $HOME/tools/bin/make
+	$ PATH=$HOME/tools/bin:$PATH $HOME/tools/bin/make install
+
+11. Build GCC 2.95.3pl4 (bootstrap) again
+    Use OpenServer's native LD, GNU binutils (AS), GNU make, and GCC.
+
+	$ mkdir build3
+	$ cd build3
+	$ PATH=$HOME/tools2/bin:$HOME/tools/bin:$PATH ../gcc-2.95.3/configure --prefix=$HOME/tools2 --with-gnu-as
+	$ PATH=$HOME/tools2/bin:$HOME/tools/bin:$PATH $HOME/tools/bin/make bootstrap
+	$ PATH=$HOME/tools2/bin:$HOME/tools/bin:$PATH $HOME/tools/bin/make install
+
+12. Build GNU binutils 2.14pl1 from Xinuos gnutools-5.0.7Kj-SRC.tar.bz2
+    Use OpenServer's native LD, AS, GNU make, and GCC.
+
+	$ mkdir binutils-build1
+	$ cd binutils-build1
+	$ PATH=$HOME/tools2/bin:$PATH ../binutils-2.14/configure --prefix=$HOME/tools3
+	$ PATH=$HOME/tools2/bin:$PATH $HOME/tools/bin/make
+	$ PATH=$HOME/tools2/bin:$PATH $HOME/tools/bin/make install
+
+13. Build GCC 4.2.4 with patch (*3)
+    Use OpenServer's native LD, GNU binutils (AS), GNU make, and GCC.
+    XXX You cannot use native TAR to extract GCC 4.2.4's tar ball!!
+
+	$ mkdir 42build0
+	$ cd 42build0
+	$ PATH=$HOME/tools3/bin:$HOME/tools2/bin:$HOME/tools/bin:$PATH ../gcc-4.2.4/configure --prefix=$HOME/tools3 --with-gnu-as --disable-nls --enable-languages=c
+	$ PATH=$HOME/tools3/bin:$HOME/tools2/bin:$HOME/tools/bin:$PATH $HOME/tools/bin/make
+	$ PATH=$HOME/tools3/bin:$HOME/tools2/bin:$HOME/tools/bin:$PATH $HOME/tools/bin/make install
+
+14. Build GNU binutils 2.24 with patch (*4)
+    Use OpenServer's native LD, GNU binutils (AS), GNU make, and GCC.
+
+	$ mkdir 224binutils
+	$ cd 224binutils
+	$ PATH=$HOME/tools3/bin:$HOME/tools/bin:$PATH ../binutils-2.24/configure --prefix=$HOME/tools4 --disable-nls --disable-werror
+	$ PATH=$HOME/tools3/bin:$HOME/tools/bin:$PATH ~/tools/bin/make
+	$ PATH=$HOME/tools3/bin:$HOME/tools/bin:$PATH ~/tools/bin/make install
+
+15. Build GCC 4.2.4 (bootstrap) with patch (*3)
+    Use OpenServer's native LD, GNU binutils (AS), GNU make, and GCC.
+
+	$ mkdir 42build1
+	$ cd 42build1
+	$ PATH=$HOME/tools3/bin:$HOME/tools/bin:$PATH ../gcc-4.2.4/configure --prefix=$HOME/tools4 --with-gnu-as --disable-nls --enable-languages=c
+	$ PATH=$HOME/tools3/bin:$HOME/tools/bin:$PATH $HOME/tools/bin/make bootstrap
+	$ PATH=$HOME/tools3/bin:$HOME/tools/bin:$PATH $HOME/tools/bin/make install
+
+16. Build GNU binutils 2.24 with patch (*4)
+    Use OpenServer's native LD, GNU binutils (AS), GNU make, and GCC.
+
+	$ mkdir 224binutils
+	$ cd 224binutils
+	$ PATH=$HOME/tools4/bin:$HOME/tools/bin:$PATH ../binutils-2.24/configure --prefix=/opt/prebuilt --disable-nls --disable-werror
+	$ PATH=$HOME/tools4/bin:$HOME/tools/bin:$PATH ~/tools/bin/make
+	# PATH=$HOME/tools4/bin:$HOME/tools/bin:$PATH ~/tools/bin/make install
+
+17. Build GNU gmp 4.2.4 from gmp-4.2.4.tar.gz
+    Use OpenServer's native LD, GNU binutils (AS), GNU make, and GCC.
+
+	$ cd gmp-4.2.4
+	$ PATH=/opt/prebuilt/bin:$PATH ./configure --prefix=/opt/prebuilt --build=i386-pc-sco3.2v5.0.7
+	$ PATH=$HOME/tools4/bin:$HOME/tools/bin:$PATH ~/tools/bin/make
+	# PATH=$HOME/tools4/bin:$HOME/tools/bin:$PATH ~/tools/bin/make install
+
+18. Build mpfr 2.3.2 from mpfr-2.3.2.tar.gz
+    Use OpenServer's native LD, GNU binutils (AS), GNU make, and GCC.
+
+	$ cd mpfr-2.3.2
+	$ PATH=/opt/prebuilt/bin:$PATH ./configure --prefix=/opt/prebuilt
+	$ PATH=$HOME/tools4/bin:$HOME/tools/bin:$PATH ~/tools/bin/make
+	# PATH=$HOME/tools4/bin:$HOME/tools/bin:$PATH ~/tools/bin/make install
+
+19. Build GNU mpc 0.8.2 from mpc-0.8.2.tar.gz
+    Use OpenServer's native LD, GNU binutils (AS), GNU make, and GCC.
+
+	$ cd mpc-0.8.2
+	$ PATH=/opt/prebuilt/bin:$PATH ./configure --prefix=/opt/prebuilt
+	$ PATH=$HOME/tools4/bin:$HOME/tools/bin:$PATH ~/tools/bin/make
+	# PATH=$HOME/tools4/bin:$HOME/tools/bin:$PATH ~/tools/bin/make install
+
+20. Build GCC 4.2.4 fullset (bootstrap) with patch (*3)
+    Use OpenServer's native LD, GNU binutils (AS), GNU make, and GCC.
+    After this step, it is ready to bootstrap pkgsrc with GCC 4.2.4.
+
+	$ mkdir 42build2
+	$ cd 42build2
+	$ PATH=$HOME/tools4/bin:$HOME/tools/bin:$PATH ../gcc-4.2.4/configure --prefix=/opt/prebuilt --with-gnu-as --disable-nls
+	$ PATH=$HOME/tools4/bin:$HOME/tools/bin:$PATH $HOME/tools/bin/make bootstrap
+	# PATH=$HOME/tools4/bin:$HOME/tools/bin:$PATH $HOME/tools/bin/make install
+
+Patches
+=======
+There are in
+http://ftp.netbsd.org/pub/NetBSD/misc/ryoon/SCO-OpenServer-5.0.7_3.2/ .
+(*1) gcc-2.95.3-SCO-OpenServer5.0.7_3.2-C-fix.diff
+(*2) gcc-2.95.3-SCO-OpenServer5.0.7_3.2-C++-fix.diff
+(*3) gcc-4.2.4-SCO-OpenServer-5.0.7_3.2.diff
+(*4) binutils-2.24-SCO-OpenServer-5.0.7_3.2.diff
