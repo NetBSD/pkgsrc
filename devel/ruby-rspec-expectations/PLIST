@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2013/09/15 10:14:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/03/14 16:42:22 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
@@ -94,6 +94,7 @@ ${GEM_LIBDIR}/spec/rspec/expectations/extensions/kernel_spec.rb
 ${GEM_LIBDIR}/spec/rspec/expectations/fail_with_spec.rb
 ${GEM_LIBDIR}/spec/rspec/expectations/handler_spec.rb
 ${GEM_LIBDIR}/spec/rspec/expectations/syntax_spec.rb
+${GEM_LIBDIR}/spec/rspec/expectations_spec.rb
 ${GEM_LIBDIR}/spec/rspec/matchers/base_matcher_spec.rb
 ${GEM_LIBDIR}/spec/rspec/matchers/be_close_spec.rb
 ${GEM_LIBDIR}/spec/rspec/matchers/be_instance_of_spec.rb
