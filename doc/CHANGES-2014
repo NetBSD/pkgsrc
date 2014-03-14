@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1090 2014/03/14 15:55:34 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1091 2014/03/14 15:57:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1637,3 +1637,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/ruby-highline to 1.6.21 [taca 2014-03-14]
 	Updated devel/ruby-kgio to 2.9.2 [taca 2014-03-14]
 	Updated devel/ruby-lockfile to 2.1.3 [taca 2014-03-14]
+	Updated devel/ruby-logging to 1.8.2 [taca 2014-03-14]
