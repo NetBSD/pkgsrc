@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/09/13 12:59:41 taca Exp $
+# $NetBSD: Makefile,v 1.2 2014/03/14 15:19:51 taca Exp $
 
-DISTNAME=	atomic-1.1.14
+DISTNAME=	atomic-1.1.15
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
