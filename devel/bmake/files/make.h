@@ -1,4 +1,4 @@
-/*	$NetBSD: make.h,v 1.6 2011/06/18 22:39:46 bsiegert Exp $	*/
+/*	$NetBSD: make.h,v 1.7 2014/03/14 21:59:34 ryoon Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -97,6 +97,17 @@
 #endif
 #include <unistd.h>
 #include <sys/cdefs.h>
+
+/*
+ * SCO OpenServer 5.0.7/3.2 has no MAXPATHLEN, but it has PATH_MAX (256).
+ * in limits.h. PATH_MAX is defined alternatively under non-OpenServer OS,
+ * and it is used in dirname.c of bmake.
+ */
+#if !defined(MAXPATHLEN)
+#if defined(_SCO_DS)
+#define MAXPATHLEN	1024
+#endif
+#endif
 
 #if !defined(__GNUC_PREREQ__)
 #if defined(__GNUC__)

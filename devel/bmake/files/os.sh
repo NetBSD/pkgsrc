@@ -17,7 +17,7 @@
 #	Simon J. Gerraty <sjg@crufty.net>
 
 # RCSid:
-#	$Id: os.sh,v 1.9 2013/09/08 16:32:14 ryoon Exp $
+#	$Id: os.sh,v 1.10 2014/03/14 21:59:34 ryoon Exp $
 #
 #	@(#) Copyright (c) 1994 Simon J. Gerraty
 #
@@ -200,6 +200,11 @@ GNU/kFreeBSD)
 	;;
 FreeMiNT)
 	MACHINE_ARCH=m68k
+	;;
+SCO_SV)
+	OSREL=`uname -v`
+	OSMAJOR=`IFS=.; set $OSREL; echo $1`
+	MACHINE_ARCH=`uname -m`
 	;;
 esac
 
