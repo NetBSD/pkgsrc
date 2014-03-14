@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2013/09/15 10:17:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2014/03/14 16:43:43 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
@@ -45,6 +45,7 @@ ${GEM_LIBDIR}/features/step_definitions/additional_cli_steps.rb
 ${GEM_LIBDIR}/features/step_definitions/model_steps.rb
 ${GEM_LIBDIR}/features/support/env.rb
 ${GEM_LIBDIR}/features/support/rails_versions.rb
+${GEM_LIBDIR}/features/support/rubinius.rb
 ${GEM_LIBDIR}/features/view_specs/inferred_controller_path.feature
 ${GEM_LIBDIR}/features/view_specs/stub_template.feature
 ${GEM_LIBDIR}/features/view_specs/view_spec.feature
