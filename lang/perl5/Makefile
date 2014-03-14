@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.218 2014/03/13 11:08:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.219 2014/03/14 22:41:10 ryoon Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -209,6 +209,7 @@ LIBSWANTED.NetBSD=	m crypt
 LIBSWANTED.OpenBSD=	m crypt
 LIBSWANTED.SunOS=	m crypt dl socket nsl
 LIBSWANTED.AIX=		m crypt dl socket nsl bind c
+LIBSWANTED.SCO_SV=	m crypt socket
 LIBSWANTED=		${LIBSWANTED.${OPSYS}}
 SUBST_VARS.policysh+=	LIBSWANTED
 
@@ -227,6 +228,7 @@ SYSLIBPATH.NetBSD=	/usr/lib
 SYSLIBPATH.OpenBSD=	/usr/lib
 SYSLIBPATH.SunOS=	/usr/lib
 SYSLIBPATH.AIX=		/usr/lib
+SYSLIBPATH.SCO_SV=	/usr/lib
 SYSLIBPATH=		${SYSLIBPATH.${OPSYS}}
 SUBST_VARS.policysh+=	SYSLIBPATH
 
