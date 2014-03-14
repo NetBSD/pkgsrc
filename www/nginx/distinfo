@@ -1,7 +1,22 @@
-$NetBSD: distinfo,v 1.34 2014/03/09 13:34:02 rodent Exp $
+$NetBSD: distinfo,v 1.35 2014/03/14 11:30:57 imil Exp $
 
+SHA1 (lua-nginx-module-0.9.5.tar.gz) = c9c752461f407ccae40870d4cabfbf2bd8c81bac
+RMD160 (lua-nginx-module-0.9.5.tar.gz) = 180331a69680278bac26f0a9ccd0de52fd88a7ea
+Size (lua-nginx-module-0.9.5.tar.gz) = 476124 bytes
+SHA1 (naxsi-0.53-2.tar.gz) = e29101b3193f434e4ec503671c41d0bacc64ff39
+RMD160 (naxsi-0.53-2.tar.gz) = 198ff9d2faf55ce3ed72332615f9e555e3afc155
+Size (naxsi-0.53-2.tar.gz) = 165690 bytes
 SHA1 (nginx-1.4.6.tar.gz) = 1d790fd2b403b0b694a8dbbc28f7e34dbc3ca863
 RMD160 (nginx-1.4.6.tar.gz) = ce34a7112d8ee4f62ac372dee1fab8238d92f5d8
 Size (nginx-1.4.6.tar.gz) = 768828 bytes
+SHA1 (nginx_http_push_module-0.692.tar.gz) = 72103084cad8f4d3d9a49a6b04cf780e4541605d
+RMD160 (nginx_http_push_module-0.692.tar.gz) = 9d2be16074cf28115af0f1d8f3646937cda649ad
+Size (nginx_http_push_module-0.692.tar.gz) = 29119 bytes
+SHA1 (nginx_upload_module-2.2.0.tar.gz) = 93d6e83e613a0ce2ed057a434b344fa1b6609b47
+RMD160 (nginx_upload_module-2.2.0.tar.gz) = 5734af837be3fe8ec444a7e5e7f6707118594098
+Size (nginx_upload_module-2.2.0.tar.gz) = 25796 bytes
+SHA1 (ngx_devel_kit-0.2.19.tar.gz) = 888635e80a8a0e6242b8e9b684ff60ffa70845a2
+RMD160 (ngx_devel_kit-0.2.19.tar.gz) = 64d3737bc4cc948c1363cce80d70e5260878811e
+Size (ngx_devel_kit-0.2.19.tar.gz) = 65029 bytes
 SHA1 (patch-aa) = adf433d1b56a88c6c2ed09c4bd54fdb1a336582f
 SHA1 (patch-ab) = 6f20ef8ac9a042faf7e22770de7c16b351cb1191
