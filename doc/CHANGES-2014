@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1116 2014/03/14 17:26:47 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1117 2014/03/14 17:37:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1668,3 +1668,6 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/ruby-execjs to 2.0.2 [taca 2014-03-14]
 	Updated misc/ruby-bundler to 1.5.3 [taca 2014-03-14]
 	Updated misc/ruby-configuration to 1.3.4 [taca 2014-03-14]
+	Updated net/ruby-amq-protocol to 1.9.2 [taca 2014-03-14]
+	Updated net/ruby-amq-client to 1.0.4 [taca 2014-03-14]
+	Updated net/ruby-amqp to 1.3.0 [taca 2014-03-14]
