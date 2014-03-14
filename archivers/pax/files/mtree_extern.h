@@ -1,4 +1,4 @@
-/*	$NetBSD: mtree_extern.h,v 1.3 2008/10/26 12:48:48 joerg Exp $	*/
+/*	$NetBSD: mtree_extern.h,v 1.4 2014/03/14 22:16:50 ryoon Exp $	*/
 
 /*-
  * Copyright (c) 1991, 1993
@@ -57,6 +57,16 @@
 
 #ifndef MAXHOSTNAMELEN
 #define MAXHOSTNAMELEN 256
+#endif
+
+/*
+ * SCO OpenServer 5.0.7/3.2 has no MAXPATHLEN, but it has PATH_MAX (256).
+ * in limits.h. But it is not usable under ordinal condition.
+ */
+#if !defined(MAXPATHLEN)
+#if defined(_SCO_DS)
+#define MAXPATHLEN	1024
+#endif
 #endif
 
 void	 addtag(slist_t *, char *);

@@ -1,4 +1,4 @@
-/*	$NetBSD: pax.h,v 1.12 2010/01/30 08:46:20 obache Exp $	*/
+/*	$NetBSD: pax.h,v 1.13 2014/03/14 22:16:50 ryoon Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -40,7 +40,7 @@
 #endif
 
 /* Tape support only available if one of the following is available. */
-#if (HAVE_SYS_MTIO_H || HAVE_SYS_TAPE_H) && !defined(UNIXWARE)
+#if (HAVE_SYS_MTIO_H || HAVE_SYS_TAPE_H) && !defined(UNIXWARE) && !defined(_SCO_DS)
 #define SUPPORT_TAPE 1
 #endif
 
@@ -78,6 +78,16 @@
 #define ISPIPE		4	/* pipe/socket */
 #ifdef SUPPORT_RMT
 #define	ISRMT		5	/* rmt */
+#endif
+
+/*
+ * SCO OpenServer 5.0.7/3.2 has no MAXPATHLEN, but it has PATH_MAX (256).
+ * in limits.h. But it is not usable under ordinal condition.
+ */
+#if !defined(MAXPATHLEN)
+#if defined(_SCO_DS)
+#define MAXPATHLEN	1024
+#endif
 #endif
 
 /*
@@ -255,6 +265,8 @@ typedef struct oplist {
 #  define major(x)		((int)(0x00ff & ((x) >> 8)))
 #  define minor(x)		((int)(0xffff00ff & (x)))
 #  define makedev(maj,min)	((0xff00 & ((maj)<<8))|(0xffff00ff & (min)))
+# elif defined(_SCO_DS)
+#  include <sys/sysmacros.h>
 # endif
 # define MAJOR(x)	major(x)
 # define MINOR(x)	minor(x)
