@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1129 2014/03/14 18:09:13 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1130 2014/03/14 18:10:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1683,3 +1683,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/ruby-facter to 1.7.5 [taca 2014-03-14]
 	Updated textproc/ruby-classifier to 1.3.4 [taca 2014-03-14]
 	Updated textproc/ruby-diff-lcs to 1.2.5 [taca 2014-03-14]
+	Updated textproc/ruby-haml to 4.0.5 [taca 2014-03-14]
