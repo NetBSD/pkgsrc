@@ -1,9 +1,12 @@
-$NetBSD: patch-xwindow_fb_x__display__x68kgrf.c,v 1.3 2014/03/07 18:22:50 tsutsui Exp $
+$NetBSD: patch-xwindow_fb_x__display__x68kgrf.c,v 1.4 2014/03/14 17:42:17 tsutsui Exp $
 
 Pull fixes for NetBSD/x68k framebuffer from upstream:
 https://bitbucket.org/arakiken/mlterm/commits/f32b4ef020ab4ce25ab46166efac5c02f5e692eb
  - Allow non-privileged users to use mlterm-fb
  - The default resolution is changed to 768x512x4
+
+https://bitbucket.org/arakiken/mlterm/commits/097ac4f2b78e1dea5a53a55fa070007655d85add#chg-xwindow/fb/x_display_x68kgrf.c
+ - Also allow non-privileged users to use Text VRAM by --multivram=true option
 
 --- xwindow/fb/x_display_x68kgrf.c.orig	2014-02-21 16:51:44.000000000 +0000
 +++ xwindow/fb/x_display_x68kgrf.c
@@ -39,4 +42,21 @@ https://bitbucket.org/arakiken/mlterm/commits/f32b4ef020ab4ce25ab46166efac5c02f5
 +	if( _display.fb_fd < 0)
  	{
  		kik_msg_printf( "Couldn't open %s.\n" , dev ? dev : "/dev/grf1") ;
+ 
+@@ -663,7 +670,15 @@ x68k_tvram_set_wall_picture(
+ 	{
+ 		struct grfinfo  vinfo ;
+ 
+-		if( image && ( grf0_fd = open( "/dev/grf0" , O_RDWR)) >= 0)
++		kik_priv_restore_euid() ;
++		kik_priv_restore_egid() ;
++
++		grf0_fd = open( "/dev/grf0" , O_RDWR) ;
++
++		kik_priv_change_euid( kik_getuid()) ;
++		kik_priv_change_egid( kik_getgid()) ;
++
++		if( grf0_fd >= 0)
+ 		{
+ 			kik_file_set_cloexec( grf0_fd) ;
  
