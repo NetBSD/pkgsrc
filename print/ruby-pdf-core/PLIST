@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2014/03/14 17:43:21 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/lib/pdf/core.rb
+${GEM_LIBDIR}/lib/pdf/core/annotations.rb
+${GEM_LIBDIR}/lib/pdf/core/byte_string.rb
+${GEM_LIBDIR}/lib/pdf/core/destinations.rb
+${GEM_LIBDIR}/lib/pdf/core/document_state.rb
+${GEM_LIBDIR}/lib/pdf/core/filter_list.rb
+${GEM_LIBDIR}/lib/pdf/core/filters.rb
+${GEM_LIBDIR}/lib/pdf/core/graphics_state.rb
+${GEM_LIBDIR}/lib/pdf/core/literal_string.rb
+${GEM_LIBDIR}/lib/pdf/core/name_tree.rb
+${GEM_LIBDIR}/lib/pdf/core/object_store.rb
+${GEM_LIBDIR}/lib/pdf/core/outline.rb
+${GEM_LIBDIR}/lib/pdf/core/page.rb
+${GEM_LIBDIR}/lib/pdf/core/page_geometry.rb
+${GEM_LIBDIR}/lib/pdf/core/pdf_object.rb
+${GEM_LIBDIR}/lib/pdf/core/reference.rb
+${GEM_LIBDIR}/lib/pdf/core/stream.rb
+${GEM_LIBDIR}/lib/pdf/core/text.rb
+${GEM_LIBDIR}/pdf-core.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/2.0.0/build_info
