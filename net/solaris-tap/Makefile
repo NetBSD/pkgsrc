@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/03/13 11:22:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2014/03/14 08:34:45 obache Exp $
 
 DISTNAME=	tuntap
 PKGNAME=	solaris-tap-20091116
@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}/tuntap
 
 .include "../../mk/bsd.prefs.mk"
 
-.if empty(ABI:M64)
+.if empty(ABI:U:M64)
 CONFIGURE_ARGS+=	--disable-64bit
 .endif
 
