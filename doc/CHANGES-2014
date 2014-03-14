@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1099 2014/03/14 16:24:05 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1100 2014/03/14 16:28:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1646,3 +1646,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/ruby-parseconfig to 1.0.4 [taca 2014-03-14]
 	Updated devel/ruby-parser to 3.4.1 [taca 2014-03-14]
 	Updated devel/ruby-polyglot to 0.3.4 [taca 2014-03-14]
+	Updated devel/ruby-posix-spawn to 0.3.8 [taca 2014-03-14]
