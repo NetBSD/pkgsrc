@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2014/02/06 10:57:21 markd Exp $
+@comment $NetBSD: PLIST,v 1.19 2014/03/14 20:15:38 markd Exp $
 bin/R
 bin/Rscript
 info/R-FAQ.info.gz
@@ -8,6 +8,12 @@ info/R-exts.info.gz
 info/R-intro.info.gz
 info/R-ints.info.gz
 info/R-lang.info.gz
+lib/R/doc/manual/images/QQ.png
+lib/R/doc/manual/images/ecdf.png
+lib/R/doc/manual/images/fig11.png
+lib/R/doc/manual/images/fig12.png
+lib/R/doc/manual/images/hist.png
+lib/R/doc/manual/images/ice.png
 lib/R/COPYING
 lib/R/NEWS
 lib/R/NEWS.0
@@ -236,6 +242,7 @@ lib/R/library/Matrix/external/USCounties_slots.rda
 lib/R/library/Matrix/external/lund_a.mtx
 lib/R/library/Matrix/external/lund_a.rsa
 lib/R/library/Matrix/external/pores_1.mtx
+lib/R/library/Matrix/external/symA.rda
 lib/R/library/Matrix/external/symW.rda
 lib/R/library/Matrix/external/test3comp.rda
 lib/R/library/Matrix/external/utm300.rua
@@ -976,6 +983,7 @@ lib/R/library/stats4/help/stats4.rdx
 lib/R/library/stats4/html/00Index.html
 lib/R/library/stats4/html/R.css
 lib/R/library/survival/CITATION
+lib/R/library/survival/COPYRIGHTS
 lib/R/library/survival/DESCRIPTION
 lib/R/library/survival/INDEX
 lib/R/library/survival/Meta/Rd.rds
@@ -993,7 +1001,15 @@ lib/R/library/survival/R/survival.rdx
 lib/R/library/survival/data/Rdata.rdb
 lib/R/library/survival/data/Rdata.rds
 lib/R/library/survival/data/Rdata.rdx
+lib/R/library/survival/data/datalist
+lib/R/library/survival/doc/adjcurve.R
+lib/R/library/survival/doc/adjcurve.Rnw
+lib/R/library/survival/doc/adjcurve.pdf
 lib/R/library/survival/doc/index.html
+lib/R/library/survival/doc/sourcecode.pdf
+lib/R/library/survival/doc/tests.R
+lib/R/library/survival/doc/tests.Rnw
+lib/R/library/survival/doc/tests.pdf
 lib/R/library/survival/doc/timedep.R
 lib/R/library/survival/doc/timedep.Rnw
 lib/R/library/survival/doc/timedep.pdf

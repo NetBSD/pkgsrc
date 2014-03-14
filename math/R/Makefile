@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.146 2014/03/13 11:08:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.147 2014/03/14 20:15:38 markd Exp $
 
-DISTNAME=		R-3.0.2
+DISTNAME=		R-3.0.3
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_R_CRAN:=base/R-3/}
 
@@ -42,6 +42,11 @@ CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--with-system-bzlib
 CONFIGURE_ARGS+=	--with-system-pcre
 CONFIGURE_ARGS+=	--with-system-xz
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
+CONFIGURE_ARGS+=	--enable-long-double=no
+.endif
 
 # Disable Mac OS specific support used by R.app
 CONFIGURE_ARGS+=	--disable-R-framework
