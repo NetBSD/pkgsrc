@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/09/15 18:29:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/03/14 17:34:03 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.gitmodules
@@ -10,6 +10,7 @@ ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/amq-protocol.gemspec
+${GEM_LIBDIR}/benchmarks/int_allocator.rb
 ${GEM_LIBDIR}/benchmarks/pure/body_framing_with_256k_payload.rb
 ${GEM_LIBDIR}/benchmarks/pure/body_framing_with_2k_payload.rb
 ${GEM_LIBDIR}/codegen/__init__.py
@@ -34,10 +35,12 @@ ${GEM_LIBDIR}/lib/amq/protocol/table_value_encoder.rb
 ${GEM_LIBDIR}/lib/amq/protocol/type_constants.rb
 ${GEM_LIBDIR}/lib/amq/protocol/version.rb
 ${GEM_LIBDIR}/lib/amq/settings.rb
-${GEM_LIBDIR}/profiling/pure/body_framing_with_2k_payload.rb
+${GEM_LIBDIR}/lib/amq/uri.rb
+${GEM_LIBDIR}/profiling/README.md
+${GEM_LIBDIR}/profiling/stackprof/body_framing_with_2k_payload.rb
 ${GEM_LIBDIR}/spec/amq/bit_set_spec.rb
-${GEM_LIBDIR}/spec/amq/hacks_spec.rb
 ${GEM_LIBDIR}/spec/amq/int_allocator_spec.rb
+${GEM_LIBDIR}/spec/amq/pack_spec.rb
 ${GEM_LIBDIR}/spec/amq/protocol/basic_spec.rb
 ${GEM_LIBDIR}/spec/amq/protocol/blank_body_encoding_spec.rb
 ${GEM_LIBDIR}/spec/amq/protocol/channel_spec.rb
@@ -54,5 +57,6 @@ ${GEM_LIBDIR}/spec/amq/protocol/value_decoder_spec.rb
 ${GEM_LIBDIR}/spec/amq/protocol/value_encoder_spec.rb
 ${GEM_LIBDIR}/spec/amq/protocol_spec.rb
 ${GEM_LIBDIR}/spec/amq/settings_spec.rb
+${GEM_LIBDIR}/spec/amq/uri_parsing_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
