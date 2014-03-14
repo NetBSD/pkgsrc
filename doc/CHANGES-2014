@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1132 2014/03/14 18:14:56 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1133 2014/03/14 18:19:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1687,3 +1687,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/ruby-json to 1.8.1 [taca 2014-03-14]
 	Updated textproc/ruby-json-pure to 1.8.1 [taca 2014-03-14]
 	Updated net/ruby-net-ping to 1.7.2 [taca 2014-03-14]
+	Updated textproc/ruby-markaby to 0.8.0 [taca 2014-03-14]
