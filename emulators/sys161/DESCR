@@ -1,0 +1,14 @@
+System/161 is a machine simulator that provides a simplified but still
+realistic environment for OS hacking. It is a 32-bit MIPS system
+supporting up to 32 processors, with up to 31 hardware slots each
+holding a single simple device (disk, console, network, etc.)
+
+It is used for teaching; the OS/161 instructional OS runs on it.
+However, it has also proven useful as a rapid development platform for
+bringing up research or experimental kernels.
+
+System/161 supports fully transparent debugging, via remote gdb into
+the simulator. It also provides transparent kernel profiling,
+statistical monitoring, event tracing (down to the level of individual
+machine instructions) and one can connect multiple running System/161
+instances together into a network using a "hub" program.
