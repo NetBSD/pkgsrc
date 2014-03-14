@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.8 2013/06/11 15:00:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/03/14 14:31:20 taca Exp $
 bin/rdoc
 bin/ri
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gemtest
+${GEM_LIBDIR}/CONTRIBUTING.rdoc
 ${GEM_LIBDIR}/CVE-2013-0256.rdoc
-${GEM_LIBDIR}/DEVELOPERS.rdoc
+${GEM_LIBDIR}/ExampleMarkdown.md
+${GEM_LIBDIR}/ExampleRDoc.rdoc
 ${GEM_LIBDIR}/History.rdoc
 ${GEM_LIBDIR}/LEGAL.rdoc
 ${GEM_LIBDIR}/LICENSE.rdoc
@@ -57,6 +59,13 @@ ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/_sidebar_search.rhtml
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/_sidebar_sections.rhtml
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/_sidebar_table_of_contents.rhtml
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/class.rhtml
+${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/fonts.css
+${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/fonts/Lato-Light.ttf
+${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/fonts/Lato-LightItalic.ttf
+${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/fonts/Lato-Regular.ttf
+${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/fonts/Lato-RegularItalic.ttf
+${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/fonts/SourceCodePro-Bold.ttf
+${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/fonts/SourceCodePro-Regular.ttf
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/images/add.png
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/images/arrow_up.png
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/images/brick.png
@@ -143,6 +152,7 @@ ${GEM_LIBDIR}/lib/rdoc/markup/to_tt_only.rb
 ${GEM_LIBDIR}/lib/rdoc/markup/verbatim.rb
 ${GEM_LIBDIR}/lib/rdoc/meta_method.rb
 ${GEM_LIBDIR}/lib/rdoc/method_attr.rb
+${GEM_LIBDIR}/lib/rdoc/mixin.rb
 ${GEM_LIBDIR}/lib/rdoc/normal_class.rb
 ${GEM_LIBDIR}/lib/rdoc/normal_module.rb
 ${GEM_LIBDIR}/lib/rdoc/options.rb
@@ -213,7 +223,6 @@ ${GEM_LIBDIR}/test/test.ja.largedoc
 ${GEM_LIBDIR}/test/test.ja.rdoc
 ${GEM_LIBDIR}/test/test.ja.txt
 ${GEM_LIBDIR}/test/test.txt
-${GEM_LIBDIR}/test/test_attribute_manager.rb
 ${GEM_LIBDIR}/test/test_rdoc_alias.rb
 ${GEM_LIBDIR}/test/test_rdoc_any_method.rb
 ${GEM_LIBDIR}/test/test_rdoc_attr.rb
