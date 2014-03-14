@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2014/03/13 23:26:35 spz Exp $
+# $NetBSD: Makefile,v 1.93 2014/03/14 14:54:02 ryoon Exp $
 
 DISTNAME=	freetype-2.5.3
 PKGNAME=	${DISTNAME:S/-/2-/}
@@ -32,15 +32,7 @@ PKGCONFIG_OVERRIDE=	builds/unix/freetype2.in
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.freetype2
-PKG_SUPPORTED_OPTIONS=	subpixel
-
-.include "../../mk/bsd.options.mk"
-
-# subpixel (lcd) rendering, patent issues
-.if !empty(PKG_OPTIONS:Msubpixel)
-CFLAGS+=	-DFT_CONFIG_OPTION_SUBPIXEL_RENDERING
-.endif
+.include "options.mk"
 
 # source code breaks strict aliasing in gcc>=2.95
 .if !empty(CC_VERSION:Mgcc-[3-9]*) || !empty(CC_VERSION:Mgcc-2.95*)
