@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2013/02/11 08:53:38 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/14 17:01:08 taca Exp $
 bin/cdiff
+bin/colortab
 bin/decolor
+bin/term_display
+bin/term_mandel
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -11,13 +14,32 @@ ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/VERSION
 ${GEM_LIBDIR}/bin/cdiff
+${GEM_LIBDIR}/bin/colortab
 ${GEM_LIBDIR}/bin/decolor
-${GEM_LIBDIR}/doc-main.txt
+${GEM_LIBDIR}/bin/term_display
+${GEM_LIBDIR}/bin/term_mandel
+${GEM_LIBDIR}/examples/ColorTest.gif
+${GEM_LIBDIR}/examples/Mona_Lisa.jpg
+${GEM_LIBDIR}/examples/Stilleben.jpg
 ${GEM_LIBDIR}/examples/example.rb
-${GEM_LIBDIR}/install.rb
+${GEM_LIBDIR}/examples/lambda-red-plain.ppm
+${GEM_LIBDIR}/examples/lambda-red.png
+${GEM_LIBDIR}/examples/lambda-red.ppm
+${GEM_LIBDIR}/examples/pacman.jpg
+${GEM_LIBDIR}/examples/smiley.png
+${GEM_LIBDIR}/examples/wool.jpg
 ${GEM_LIBDIR}/lib/term/ansicolor.rb
 ${GEM_LIBDIR}/lib/term/ansicolor/.keep
+${GEM_LIBDIR}/lib/term/ansicolor/attribute.rb
+${GEM_LIBDIR}/lib/term/ansicolor/ppm_reader.rb
+${GEM_LIBDIR}/lib/term/ansicolor/rgb_color_metrics.rb
+${GEM_LIBDIR}/lib/term/ansicolor/rgb_triple.rb
 ${GEM_LIBDIR}/lib/term/ansicolor/version.rb
 ${GEM_LIBDIR}/term-ansicolor.gemspec
 ${GEM_LIBDIR}/tests/ansicolor_test.rb
+${GEM_LIBDIR}/tests/attribute_test.rb
+${GEM_LIBDIR}/tests/ppm_reader_test.rb
+${GEM_LIBDIR}/tests/rgb_color_metrics_test.rb
+${GEM_LIBDIR}/tests/rgb_triple_test.rb
+${GEM_LIBDIR}/tests/test_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
