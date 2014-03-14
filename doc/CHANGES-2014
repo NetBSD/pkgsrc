@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1148 2014/03/14 19:08:57 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1149 2014/03/14 19:20:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1703,3 +1703,10 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/ruby-jquery-rails to 3.1.0 [taca 2014-03-14]
 	Updated www/ruby-liquid to 2.5.5 [taca 2014-03-14]
 	Updated www/ruby-net-http-persistent to 2.9.4 [taca 2014-03-14]
+	Updated www/ruby-padrino-core to 0.12.0 [taca 2014-03-14]
+	Updated www/ruby-padrino-cache to 0.12.0 [taca 2014-03-14]
+	Updated www/ruby-padrino-admin to 0.12.0 [taca 2014-03-14]
+	Updated www/ruby-padrino-gen to 0.12.0 [taca 2014-03-14]
+	Updated www/ruby-padrino-helpers to 0.12.0 [taca 2014-03-14]
+	Updated www/ruby-padrino-mailer to 0.12.0 [taca 2014-03-14]
+	Updated www/ruby-padrino to 0.12.0 [taca 2014-03-14]
