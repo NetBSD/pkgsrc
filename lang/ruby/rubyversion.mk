@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.114 2014/03/13 18:00:02 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.115 2014/03/14 19:33:59 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -231,7 +231,7 @@ RUBY21_API_VERSION=	2.1.0
 #
 RUBY_VERSION_DEFAULT?=	193
 
-RUBY_VERSION_SUPPORTED?= 200 193 18 # 21
+RUBY_VERSION_SUPPORTED?= 200 193 18 21
 
 .if defined(RUBY_VERSION_REQD)
 . for rv in ${RUBY_VERSION_SUPPORTED}
