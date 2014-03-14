@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/01/17 12:43:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/03/14 19:24:32 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/License
 ${GEM_LIBDIR}/README.md
@@ -21,6 +21,7 @@ ${GEM_LIBDIR}/lib/rack/protection/version.rb
 ${GEM_LIBDIR}/lib/rack/protection/xss_header.rb
 ${GEM_LIBDIR}/rack-protection.gemspec
 ${GEM_LIBDIR}/spec/authenticity_token_spec.rb
+${GEM_LIBDIR}/spec/base_spec.rb
 ${GEM_LIBDIR}/spec/escaped_params_spec.rb
 ${GEM_LIBDIR}/spec/form_token_spec.rb
 ${GEM_LIBDIR}/spec/frame_options_spec.rb
