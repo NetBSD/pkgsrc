@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.42 2014/03/14 08:21:58 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.43 2014/03/14 13:59:58 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q4 branch:
@@ -142,3 +142,5 @@ Pullup ticket #4344 - requested by obache
 emulators/suse131_libpng: security update
 Pullup ticket #4345 - requested by taca
 graphics/freetype2: build fix for depending packages
+Pullup ticket #4346 - requested by obache
+graphics/MesaLib: build fix for depending packages
