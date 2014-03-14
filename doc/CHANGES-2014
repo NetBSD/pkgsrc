@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1121 2014/03/14 17:51:47 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1122 2014/03/14 17:53:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1675,3 +1675,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/mlterm to 3.3.3nb2 [tsutsui 2014-03-14]
 	Added print/ruby-pdf-core version 0.1.6 [taca 2014-03-14]
 	Updated print/ruby-prawn to 0.15.0 [taca 2014-03-14]
+	Updated security/ruby-bcrypt to 3.1.7 [taca 2014-03-14]
