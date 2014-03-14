@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2013/09/15 14:58:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2014/03/14 17:54:28 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES.txt
 ${GEM_LIBDIR}/LICENSE.txt
@@ -103,6 +103,9 @@ ${GEM_LIBDIR}/test/authentication/test_agent.rb
 ${GEM_LIBDIR}/test/authentication/test_key_manager.rb
 ${GEM_LIBDIR}/test/authentication/test_session.rb
 ${GEM_LIBDIR}/test/common.rb
+${GEM_LIBDIR}/test/configs/auth_off
+${GEM_LIBDIR}/test/configs/auth_on
+${GEM_LIBDIR}/test/configs/empty
 ${GEM_LIBDIR}/test/configs/eqsign
 ${GEM_LIBDIR}/test/configs/exact_match
 ${GEM_LIBDIR}/test/configs/host_plus
@@ -116,6 +119,7 @@ ${GEM_LIBDIR}/test/connection/test_channel.rb
 ${GEM_LIBDIR}/test/connection/test_session.rb
 ${GEM_LIBDIR}/test/known_hosts/github
 ${GEM_LIBDIR}/test/manual/test_forward.rb
+${GEM_LIBDIR}/test/start/test_connection.rb
 ${GEM_LIBDIR}/test/start/test_options.rb
 ${GEM_LIBDIR}/test/start/test_transport.rb
 ${GEM_LIBDIR}/test/test_all.rb
