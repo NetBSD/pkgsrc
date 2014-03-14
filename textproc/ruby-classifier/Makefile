@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/23 18:11:23 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2014/03/14 18:07:16 taca Exp $
 
-DISTNAME=	classifier-1.3.3
+DISTNAME=	classifier-1.3.4
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
 

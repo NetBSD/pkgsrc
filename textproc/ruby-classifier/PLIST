@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/23 18:11:23 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/14 18:07:16 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/Gemfile.lock
 ${GEM_LIBDIR}/LICENSE
-${GEM_LIBDIR}/README
+${GEM_LIBDIR}/README.markdown
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/bayes.rb
 ${GEM_LIBDIR}/bin/summarize.rb
