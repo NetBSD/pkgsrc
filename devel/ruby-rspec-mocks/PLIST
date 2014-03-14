@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2013/09/15 10:15:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2014/03/14 16:42:56 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
@@ -122,6 +122,7 @@ ${GEM_LIBDIR}/spec/rspec/mocks/passing_argument_matchers_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/precise_counts_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/record_messages_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/serialization_spec.rb
+${GEM_LIBDIR}/spec/rspec/mocks/space_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/stash_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/stub_chain_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/stub_implementation_spec.rb
