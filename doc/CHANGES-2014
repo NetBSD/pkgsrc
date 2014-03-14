@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1079 2014/03/14 15:13:52 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1080 2014/03/14 15:16:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1626,3 +1626,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added databases/ruby-moneta version 0.7.20 [taca 2014-03-14]
 	Updated databases/ruby-mysql2 to 0.3.15 [taca 2014-03-14]
 	Updated devel/ZenTest to 4.9.5 [taca 2014-03-14]
+	Updated devel/hoe to 3.9.0 [taca 2014-03-14]
