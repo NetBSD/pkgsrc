@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1146 2014/03/14 19:04:29 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1147 2014/03/14 19:07:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1701,3 +1701,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/ruby-em-http-request to 1.1.2 [taca 2014-03-14]
 	Updated www/ruby-http_router to 0.11.1 [taca 2014-03-14]
 	Updated www/ruby-jquery-rails to 3.1.0 [taca 2014-03-14]
+	Updated www/ruby-liquid to 2.5.5 [taca 2014-03-14]
