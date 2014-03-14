@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1072 2014/03/14 11:37:18 imil Exp $
+$NetBSD: CHANGES-2014,v 1.1073 2014/03/14 13:22:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1619,3 +1619,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/nsd to 4.0.3 [pettai 2014-03-14]
 	Updated www/nginx to 1.4.6nb1 [imil 2014-03-14]
 	Updated www/nginx-devel to 1.5.11 [imil 2014-03-14]
+	Updated www/ruby-sass-rails32 to 3.2.6nb1 [taca 2014-03-14]
