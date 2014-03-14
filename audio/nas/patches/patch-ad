@@ -1,7 +1,17 @@
-$NetBSD: patch-ad,v 1.14 2013/01/05 12:57:22 mef Exp $
+$NetBSD: patch-ad,v 1.15 2014/03/14 21:17:12 asau Exp $
 
 --- server/dda/voxware/auvoxware.c.orig	2007-11-11 12:40:47.000000000 +1300
 +++ server/dda/voxware/auvoxware.c
+@@ -183,7 +183,9 @@ static int debug_msg_indentation = 0;
+ # else
+ #  include <machine/soundcard.h>
+ # endif
++/* PC Speaker functions seem to be unused here
+ # include <machine/pcaudioio.h>
++*/
+ #else
+ # ifdef __NetBSD__
+ #  include <sys/ioctl.h>
 @@ -245,8 +245,13 @@ SndStat sndStatIn = {
      256,                        /* fragSize */
      3,                          /* minFrags */
