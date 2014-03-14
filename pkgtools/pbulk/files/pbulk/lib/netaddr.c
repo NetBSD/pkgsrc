@@ -1,4 +1,4 @@
-/* $NetBSD: netaddr.c,v 1.7 2008/02/21 14:40:43 tnn Exp $ */
+/* $NetBSD: netaddr.c,v 1.8 2014/03/14 09:45:31 jperkin Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -68,6 +68,7 @@ parse_sockaddr_in(const char *str, struct sockaddr_in *addr)
 	tmp = strtoul(str, &port_end, 10);
 	if (*str == '\0' || *port_end != '\0' || errno != 0 || tmp > 0xfffful)
 		return -1;
+	memset(addr, 0, sizeof(struct sockaddr_in));
 	addr->sin_port = htons((in_port_t)tmp);
 	addr->sin_addr = in;
 #if !defined(__sun) && !defined(__hpux) && !defined(__INTERIX) && \
