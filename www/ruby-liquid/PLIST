@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/09/15 17:25:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/03/14 19:06:55 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/History.md
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -14,12 +14,8 @@ ${GEM_LIBDIR}/lib/liquid/errors.rb
 ${GEM_LIBDIR}/lib/liquid/extensions.rb
 ${GEM_LIBDIR}/lib/liquid/file_system.rb
 ${GEM_LIBDIR}/lib/liquid/htmltags.rb
-${GEM_LIBDIR}/lib/liquid/i18n.rb
 ${GEM_LIBDIR}/lib/liquid/interrupts.rb
-${GEM_LIBDIR}/lib/liquid/lexer.rb
-${GEM_LIBDIR}/lib/liquid/locales/en.yml
 ${GEM_LIBDIR}/lib/liquid/module_ex.rb
-${GEM_LIBDIR}/lib/liquid/parser.rb
 ${GEM_LIBDIR}/lib/liquid/standardfilters.rb
 ${GEM_LIBDIR}/lib/liquid/strainer.rb
 ${GEM_LIBDIR}/lib/liquid/tag.rb
@@ -41,10 +37,7 @@ ${GEM_LIBDIR}/lib/liquid/tags/unless.rb
 ${GEM_LIBDIR}/lib/liquid/template.rb
 ${GEM_LIBDIR}/lib/liquid/utils.rb
 ${GEM_LIBDIR}/lib/liquid/variable.rb
-${GEM_LIBDIR}/lib/liquid/version.rb
-${GEM_LIBDIR}/test/fixtures/en_locale.yml
 ${GEM_LIBDIR}/test/liquid/assign_test.rb
-${GEM_LIBDIR}/test/liquid/blank_test.rb
 ${GEM_LIBDIR}/test/liquid/block_test.rb
 ${GEM_LIBDIR}/test/liquid/capture_test.rb
 ${GEM_LIBDIR}/test/liquid/condition_test.rb
@@ -53,12 +46,8 @@ ${GEM_LIBDIR}/test/liquid/drop_test.rb
 ${GEM_LIBDIR}/test/liquid/error_handling_test.rb
 ${GEM_LIBDIR}/test/liquid/file_system_test.rb
 ${GEM_LIBDIR}/test/liquid/filter_test.rb
-${GEM_LIBDIR}/test/liquid/hash_ordering_test.rb
-${GEM_LIBDIR}/test/liquid/i18n_test.rb
-${GEM_LIBDIR}/test/liquid/lexer_test.rb
 ${GEM_LIBDIR}/test/liquid/module_ex_test.rb
 ${GEM_LIBDIR}/test/liquid/output_test.rb
-${GEM_LIBDIR}/test/liquid/parser_test.rb
 ${GEM_LIBDIR}/test/liquid/parsing_quirks_test.rb
 ${GEM_LIBDIR}/test/liquid/regexp_test.rb
 ${GEM_LIBDIR}/test/liquid/security_test.rb
