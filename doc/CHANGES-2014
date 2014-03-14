@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1158 2014/03/14 20:17:20 markd Exp $
+$NetBSD: CHANGES-2014,v 1.1159 2014/03/14 20:50:14 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1724,3 +1724,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added lang/ruby21 version 2.1.1 [taca 2014-03-14]
 	Updated devel/ruby-mode to 2.1.1 [taca 2014-03-14]
 	Updated math/R to 3.0.3 [markd 2014-03-14]
+	Updated security/opensc.new to 0.13.0 [gdt 2014-03-14]
