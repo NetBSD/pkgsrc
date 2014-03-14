@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1109 2014/03/14 17:05:35 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1110 2014/03/14 17:09:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1660,3 +1660,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/ruby-term-ansicolor to 1.3.0 [taca 2014-03-14]
 	Updated devel/ruby2ruby to 2.0.7 [taca 2014-03-14]
 	Updated fonts/ruby-ttfunk to 1.1.1 [taca 2014-03-14]
+	Updated graphics/ruby-chunky_png to 1.3.0 [taca 2014-03-14]
