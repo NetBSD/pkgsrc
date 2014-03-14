@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/09/15 18:09:29 taca Exp $
+$NetBSD: distinfo,v 1.3 2014/03/14 19:27:01 taca Exp $
 
-SHA1 (rack-rewrite-1.4.01.gem) = 1cc043f604138b9368aa5765bf8b17e4ee9242ca
-RMD160 (rack-rewrite-1.4.01.gem) = 50cb7dc11083884218e286d8e2322001cbe8214a
-Size (rack-rewrite-1.4.01.gem) = 17920 bytes
+SHA1 (rack-rewrite-1.5.0.gem) = 240fc110d1c2e9314d49ad48fb5e8057444e51ce
+RMD160 (rack-rewrite-1.5.0.gem) = 88e132d8bea4699a63d396281a46a92a514131b8
+Size (rack-rewrite-1.5.0.gem) = 18432 bytes
