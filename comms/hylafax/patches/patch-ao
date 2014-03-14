@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.7 2005/01/27 16:22:37 adam Exp $
+$NetBSD: patch-ao,v 1.8 2014/03/14 15:59:29 adam Exp $
 
---- hfaxd/User.c++.orig	2005-01-10 04:52:09.000000000 +0000
+--- hfaxd/User.c++.orig	2012-06-06 00:58:38.000000000 +0000
 +++ hfaxd/User.c++
-@@ -244,7 +244,7 @@ HylaFAXServer::userName(u_int id)
+@@ -260,7 +260,7 @@ HylaFAXServer::userName(u_int id)
      if (id == uid)				// user currently logged in
  	return (const char*) the_user;
      if (id == FAXUID_ANON)			// anonymous user
@@ -11,7 +11,7 @@ $NetBSD: patch-ao,v 1.7 2005/01/27 16:22:37 adam Exp $
      if (idcache == NULL)			// load cache from file
  	fillIDCache();
      const fxStr* hit = idcache->find(id);	// check cache
-@@ -263,7 +263,7 @@ HylaFAXServer::userID(const char* name, 
+@@ -279,7 +279,7 @@ HylaFAXServer::userID(const char* name, 
  {
      if (name == the_user)
  	id = uid;
@@ -20,12 +20,12 @@ $NetBSD: patch-ao,v 1.7 2005/01/27 16:22:37 adam Exp $
  	id = FAXUID_ANON;
      else {
  	if (idcache == NULL)
-@@ -350,7 +350,7 @@ HylaFAXServer::findUser(FILE* db, const 
+@@ -366,7 +366,7 @@ HylaFAXServer::findUser(FILE* db, const 
      if (faxuid < FAXUID_MAX)
- 	SetBit(FAXUID_RESV);			// reserved uid
+ 	SetBit(faxuid);			// reserved uid
      else
 -	logError("Internal error, \"fax\" UID (%u) too large.", faxuid);
 +	logError("Internal error, \"" FAX_USER "\" UID (%u) too large.", faxuid);
+     SetBit(0);					// 0 uid is reserved
      SetBit(FAXUID_ANON);			// anonymous uid is reserved
      while (nextRecord(db, line, sizeof (line))) {
- 	if (line[0] == '!')

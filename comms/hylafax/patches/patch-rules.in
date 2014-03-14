@@ -1,8 +1,8 @@
-$NetBSD: patch-rules.in,v 1.1 2013/08/30 16:57:35 joerg Exp $
+$NetBSD: patch-rules.in,v 1.2 2014/03/14 15:59:29 adam Exp $
 
 --- rules.in.orig	2013-08-30 14:42:52.000000000 +0000
 +++ rules.in
-@@ -195,3 +195,5 @@ RAWDEPFILTER= sed -e 's:^:${VPATH}/:'
+@@ -198,3 +198,5 @@ RAWDEPFILTER= sed -e 's:^:${VPATH}/:'
  # Include the make dependency file if it exists.
  #
  @MAKEDEPINCLUDE@ @MAKELQUOTE@${MKDEPFILE}@MAKERQUOTE@
