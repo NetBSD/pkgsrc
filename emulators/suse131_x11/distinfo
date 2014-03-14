@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2014/01/16 08:11:24 obache Exp $
+$NetBSD: distinfo,v 1.5 2014/03/14 09:38:15 obache Exp $
 
 SHA1 (suse131/libFS6-1.0.5-2.1.2.i586.rpm) = 7ae5e9e9b7a86221ddb5dc3bb7699133a65313d2
 RMD160 (suse131/libFS6-1.0.5-2.1.2.i586.rpm) = f9b31a84204ba4989f92de331612ed60fffdfe77
@@ -195,6 +195,12 @@ Size (suse131/libXrender1-0.9.8-2.1.2.i586.rpm) = 18307 bytes
 SHA1 (suse131/libXrender1-0.9.8-2.1.2.x86_64.rpm) = 4665c5f71b5008803459ecce6857174cffc12ed2
 RMD160 (suse131/libXrender1-0.9.8-2.1.2.x86_64.rpm) = 4dd5432f8a77467e9857c04174e7d56bbf176f03
 Size (suse131/libXrender1-0.9.8-2.1.2.x86_64.rpm) = 18922 bytes
+SHA1 (suse131/libXss1-1.2.2-7.1.2.i586.rpm) = c7479d8c1b967dbd9f6966f61b29815712c0b71c
+RMD160 (suse131/libXss1-1.2.2-7.1.2.i586.rpm) = ce4987177f06a01ca0bfe3c46819954bc418c409
+Size (suse131/libXss1-1.2.2-7.1.2.i586.rpm) = 7581 bytes
+SHA1 (suse131/libXss1-1.2.2-7.1.2.x86_64.rpm) = 5b585634d670956c2407f5ebd9e4c2ca0137bd61
+RMD160 (suse131/libXss1-1.2.2-7.1.2.x86_64.rpm) = ac3b1937b7eda173379079daa6206a1fcdf4035d
+Size (suse131/libXss1-1.2.2-7.1.2.x86_64.rpm) = 7638 bytes
 SHA1 (suse131/libXt6-1.1.4-2.1.2.i586.rpm) = ac16251085bb5aa58321c93f736bac5458c3cd62
 RMD160 (suse131/libXt6-1.1.4-2.1.2.i586.rpm) = 36233c63a4d53d5d38641bcedcb5e6076b4c564b
 Size (suse131/libXt6-1.1.4-2.1.2.i586.rpm) = 147688 bytes
@@ -213,6 +219,24 @@ Size (suse131/libXv1-1.0.10-2.1.2.i586.rpm) = 12034 bytes
 SHA1 (suse131/libXv1-1.0.10-2.1.2.x86_64.rpm) = 52adcb47eff240a7fdcd4dcf6b01932b1e31c4f3
 RMD160 (suse131/libXv1-1.0.10-2.1.2.x86_64.rpm) = 87310cf6416fdeebfc73102a013fe7379dfef875
 Size (suse131/libXv1-1.0.10-2.1.2.x86_64.rpm) = 12216 bytes
+SHA1 (suse131/libXvMC1-1.0.8-2.1.2.i586.rpm) = 0234fecf7409cddf94b0bb6c708d6ad542881825
+RMD160 (suse131/libXvMC1-1.0.8-2.1.2.i586.rpm) = 9c1c0434f07e632ec4f799ad5ee1d0a9f2eba2bb
+Size (suse131/libXvMC1-1.0.8-2.1.2.i586.rpm) = 13941 bytes
+SHA1 (suse131/libXvMC1-1.0.8-2.1.2.x86_64.rpm) = 6d108f4d54535b219006a4a410dc6e4235820801
+RMD160 (suse131/libXvMC1-1.0.8-2.1.2.x86_64.rpm) = 3e74a547c566b4f235848799c9b69a02fd778f30
+Size (suse131/libXvMC1-1.0.8-2.1.2.x86_64.rpm) = 14101 bytes
+SHA1 (suse131/libXxf86dga1-1.1.4-2.1.2.i586.rpm) = ada42be4f08653c93888bc9e47d492aa34e3327e
+RMD160 (suse131/libXxf86dga1-1.1.4-2.1.2.i586.rpm) = 7883b563f9e7ecd67efffd04efb0c77f588ce07c
+Size (suse131/libXxf86dga1-1.1.4-2.1.2.i586.rpm) = 11531 bytes
+SHA1 (suse131/libXxf86dga1-1.1.4-2.1.2.x86_64.rpm) = 2dc9192241d5bf6011d23dfca9b5ec0fcfbda7a8
+RMD160 (suse131/libXxf86dga1-1.1.4-2.1.2.x86_64.rpm) = bde241b6b12c18ba5cc6b5707673371f1867c9f7
+Size (suse131/libXxf86dga1-1.1.4-2.1.2.x86_64.rpm) = 12031 bytes
+SHA1 (suse131/libXxf86misc1-1.0.3-9.1.2.i586.rpm) = 565bbdeb391fa96383f2030967ac4cdd1b4d476d
+RMD160 (suse131/libXxf86misc1-1.0.3-9.1.2.i586.rpm) = 42f8e25b2eaed8bc7be683a07ae6db8d59ab17fd
+Size (suse131/libXxf86misc1-1.0.3-9.1.2.i586.rpm) = 7861 bytes
+SHA1 (suse131/libXxf86misc1-1.0.3-9.1.2.x86_64.rpm) = b2bfb4210c3dda1afd73848e2e2b722afcba7a5b
+RMD160 (suse131/libXxf86misc1-1.0.3-9.1.2.x86_64.rpm) = a714c06ff64948d2205a4151767e8e03bec7e178
+Size (suse131/libXxf86misc1-1.0.3-9.1.2.x86_64.rpm) = 8033 bytes
 SHA1 (suse131/libXxf86vm1-1.1.3-2.1.2.i586.rpm) = 489db2f402c7075d30ed96531cb54d61da8fb613
 RMD160 (suse131/libXxf86vm1-1.1.3-2.1.2.i586.rpm) = 5e7f9d6490188291b2a154dc8745b48f01e61c4c
 Size (suse131/libXxf86vm1-1.1.3-2.1.2.i586.rpm) = 10351 bytes

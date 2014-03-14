@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2014/01/16 08:11:24 obache Exp $
+# $NetBSD: Makefile,v 1.5 2014/03/14 09:38:14 obache Exp $
 
 DISTNAME=	suse_x11-${SUSE_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	emulators
 RPMPKGS+=	libFS6-1.0.5-2.1.2.${SUSE_ARCH}
 RPMPKGS+=	libICE6-1.0.8-7.1.2.${SUSE_ARCH}
@@ -33,12 +33,16 @@ RPMPKGS+=	libXpm4-3.5.11-2.1.2.${SUSE_ARCH}
 RPMPKGS+=	libXprintAppUtil1-1.0.1-9.1.2.${SUSE_ARCH}
 RPMPKGS+=	libXprintUtil1-1.0.1-9.1.2.${SUSE_ARCH}
 RPMPKGS+=	libXrender1-0.9.8-2.1.2.${SUSE_ARCH}
+RPMPKGS+=	libXss1-1.2.2-7.1.2.${SUSE_ARCH}
 RPMPKGS+=	libXt6-1.1.4-2.1.2.${SUSE_ARCH}
 RPMPKGS+=	libXtst6-1.2.2-2.1.2.${SUSE_ARCH}
 RPMPKGS+=	libXv1-1.0.10-2.1.2.${SUSE_ARCH}
+RPMPKGS+=	libXvMC1-1.0.8-2.1.2.${SUSE_ARCH}
 RPMPKGS+=	libXrandr2-1.4.2-2.1.2.${SUSE_ARCH}
 RPMPKGS+=	libXRes1-1.0.7-2.1.2.${SUSE_ARCH}
 RPMPKGS+=	libXTrap6-1.0.1-6.1.2.${SUSE_ARCH}
+RPMPKGS+=	libXxf86dga1-1.1.4-2.1.2.${SUSE_ARCH}
+RPMPKGS+=	libXxf86misc1-1.0.3-9.1.2.${SUSE_ARCH}
 RPMPKGS+=	libXxf86vm1-1.1.3-2.1.2.${SUSE_ARCH}
 RPMPKGS+=	libdmx1-1.1.3-2.1.2.${SUSE_ARCH}
 RPMPKGS+=	libfontenc1-1.1.2-2.1.2.${SUSE_ARCH}
