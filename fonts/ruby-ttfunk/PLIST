@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/12/15 15:36:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/03/14 17:04:58 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/COPYING
@@ -7,7 +7,6 @@ ${GEM_LIBDIR}/GPLv3
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/data/fonts/DejaVuSans.ttf
-${GEM_LIBDIR}/data/fonts/comicsans.ttf
 ${GEM_LIBDIR}/examples/metrics.rb
 ${GEM_LIBDIR}/lib/ttfunk.rb
 ${GEM_LIBDIR}/lib/ttfunk/directory.rb
@@ -26,6 +25,9 @@ ${GEM_LIBDIR}/lib/ttfunk/table.rb
 ${GEM_LIBDIR}/lib/ttfunk/table/cmap.rb
 ${GEM_LIBDIR}/lib/ttfunk/table/cmap/format00.rb
 ${GEM_LIBDIR}/lib/ttfunk/table/cmap/format04.rb
+${GEM_LIBDIR}/lib/ttfunk/table/cmap/format06.rb
+${GEM_LIBDIR}/lib/ttfunk/table/cmap/format10.rb
+${GEM_LIBDIR}/lib/ttfunk/table/cmap/format12.rb
 ${GEM_LIBDIR}/lib/ttfunk/table/cmap/subtable.rb
 ${GEM_LIBDIR}/lib/ttfunk/table/glyf.rb
 ${GEM_LIBDIR}/lib/ttfunk/table/glyf/compound.rb
