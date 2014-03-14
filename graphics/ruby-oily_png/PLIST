@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2012/09/16 06:38:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/14 17:13:14 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/oily_png/oily_png.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.infinity_test
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
@@ -23,6 +23,7 @@ ${GEM_LIBDIR}/ext/oily_png/resampling.h
 ${GEM_LIBDIR}/lib/oily_png.rb
 ${GEM_LIBDIR}/lib/oily_png/canvas.rb
 ${GEM_LIBDIR}/lib/oily_png/oily_png.${RUBY_DLEXT}
+${GEM_LIBDIR}/lib/oily_png/version.rb
 ${GEM_LIBDIR}/oily_png.gemspec
 ${GEM_LIBDIR}/spec/color_spec.rb
 ${GEM_LIBDIR}/spec/decoding_spec.rb
@@ -116,6 +117,5 @@ ${GEM_LIBDIR}/spec/resources/tp0n2c08.png
 ${GEM_LIBDIR}/spec/resources/tp0n3p08.png
 ${GEM_LIBDIR}/spec/resources/tp1n3p08.png
 ${GEM_LIBDIR}/spec/spec_helper.rb
-${GEM_LIBDIR}/tasks/github-gem.rake
 ${GEM_LIBDIR}/tasks/testing.rake
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
