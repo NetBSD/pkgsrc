@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/09/15 18:50:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/14 19:00:25 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.gitignore
@@ -14,6 +14,8 @@ ${GEM_LIBDIR}/benchmarks/em-profile.txt
 ${GEM_LIBDIR}/benchmarks/server.rb
 ${GEM_LIBDIR}/em-http-request.gemspec
 ${GEM_LIBDIR}/examples/.gitignore
+${GEM_LIBDIR}/examples/digest_auth/client.rb
+${GEM_LIBDIR}/examples/digest_auth/server.rb
 ${GEM_LIBDIR}/examples/fetch.rb
 ${GEM_LIBDIR}/examples/fibered-http.rb
 ${GEM_LIBDIR}/examples/multi.rb
@@ -30,20 +32,25 @@ ${GEM_LIBDIR}/lib/em-http/http_connection_options.rb
 ${GEM_LIBDIR}/lib/em-http/http_encoding.rb
 ${GEM_LIBDIR}/lib/em-http/http_header.rb
 ${GEM_LIBDIR}/lib/em-http/http_status_codes.rb
+${GEM_LIBDIR}/lib/em-http/middleware/digest_auth.rb
 ${GEM_LIBDIR}/lib/em-http/middleware/json_response.rb
 ${GEM_LIBDIR}/lib/em-http/middleware/oauth.rb
+${GEM_LIBDIR}/lib/em-http/middleware/oauth2.rb
 ${GEM_LIBDIR}/lib/em-http/multi.rb
 ${GEM_LIBDIR}/lib/em-http/request.rb
 ${GEM_LIBDIR}/lib/em-http/version.rb
 ${GEM_LIBDIR}/spec/client_fiber_spec.rb
 ${GEM_LIBDIR}/spec/client_spec.rb
+${GEM_LIBDIR}/spec/digest_auth_spec.rb
 ${GEM_LIBDIR}/spec/dns_spec.rb
 ${GEM_LIBDIR}/spec/encoding_spec.rb
 ${GEM_LIBDIR}/spec/external_spec.rb
 ${GEM_LIBDIR}/spec/fixtures/google.ca
 ${GEM_LIBDIR}/spec/fixtures/gzip-sample.gz
+${GEM_LIBDIR}/spec/gzip_spec.rb
 ${GEM_LIBDIR}/spec/helper.rb
 ${GEM_LIBDIR}/spec/http_proxy_spec.rb
+${GEM_LIBDIR}/spec/middleware/oauth2_spec.rb
 ${GEM_LIBDIR}/spec/middleware_spec.rb
 ${GEM_LIBDIR}/spec/multi_spec.rb
 ${GEM_LIBDIR}/spec/pipelining_spec.rb
