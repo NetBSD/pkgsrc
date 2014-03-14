@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2012/06/09 08:03:17 dholland Exp $
+# $NetBSD: Makefile,v 1.7 2014/03/14 16:28:14 taca Exp $
 
-DISTNAME=	posix-spawn-0.3.6
+DISTNAME=	posix-spawn-0.3.8
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/github/albino
+HOMEPAGE=	https://github.com/rtomayko/posix-spawn/
 COMMENT=	Ruby wrapper for the posix_spawn() system call
 
 LICENSE=	mit
