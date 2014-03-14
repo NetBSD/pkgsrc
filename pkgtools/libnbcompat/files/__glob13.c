@@ -1,4 +1,4 @@
-/*	$NetBSD: __glob13.c,v 1.3 2008/10/30 16:00:54 joerg Exp $	*/
+/*	$NetBSD: __glob13.c,v 1.4 2014/03/14 22:08:17 ryoon Exp $	*/
 
 /*
  * Copyright (c) 1989, 1993
@@ -38,9 +38,19 @@
 #if 0
 static char sccsid[] = "@(#)glob.c	8.3 (Berkeley) 10/13/93";
 #else
-__RCSID("$NetBSD: __glob13.c,v 1.3 2008/10/30 16:00:54 joerg Exp $");
+__RCSID("$NetBSD: __glob13.c,v 1.4 2014/03/14 22:08:17 ryoon Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
+
+/*
+ * SCO OpenServer 5.0.7/3.2 has no MAXPATHLEN, but it has PATH_MAX (256).
+ * in limits.h. But it is not usable under ordinal condition.
+ */
+#if !defined(MAXPATHLEN)
+#if defined(_SCO_DS)
+#define MAXPATHLEN	1024
+#endif
+#endif
 
 /*
  * glob(3) -- a superset of the one defined in POSIX 1003.2.

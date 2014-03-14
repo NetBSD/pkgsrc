@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.81 2013/09/08 16:24:43 ryoon Exp $
+dnl $NetBSD: configure.ac,v 1.82 2014/03/14 22:08:17 ryoon Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -159,6 +159,16 @@ AC_CHECK_FUNC(SHA512_File, [:], [
 
 case $host in
 *-*-hpux*)
+	AC_DEFINE(BROKEN_PREAD)
+	AH_TEMPLATE([BROKEN_PREAD], [
+	Define to 1 if the `pread' function is broken.
+])
+	AC_DEFINE(BROKEN_PWRITE)
+	AH_TEMPLATE([BROKEN_PWRITE], [
+	Define to 1 if the `pwrite' function is broken.
+])
+	;;
+*-*-sco3.2v5*)
 	AC_DEFINE(BROKEN_PREAD)
 	AH_TEMPLATE([BROKEN_PREAD], [
 	Define to 1 if the `pread' function is broken.
