@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.202 2014/03/03 03:30:54 obache Exp $
+# $NetBSD: Makefile,v 1.203 2014/03/14 22:09:04 ryoon Exp $
 
 # Notes to package maintainers:
 #
@@ -52,6 +52,12 @@ CHECK_PERMS=		no
 USE_NATIVE_GCC=		yes
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OS_VARIANT} == "SCOOSR5"
+# SCO OpenServer 5.0.7/3.2's strings.h defines strcasecmp with
+# "unsigned size_t". We cannot use -Werror for net/libfetch.
+MAKE_FLAGS+=	NOGCCERROR=yes
+.endif
 
 .if defined(_PKGSRC_BARRIER) && empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 PKG_ADD_CMD=		${WRKSRC}/add/pkg_add
