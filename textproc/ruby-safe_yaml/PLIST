@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/09/15 16:31:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/14 18:27:35 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -7,8 +7,10 @@ ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/bundle_install_all_ruby_versions.sh
 ${GEM_LIBDIR}/lib/safe_yaml.rb
 ${GEM_LIBDIR}/lib/safe_yaml/deep.rb
+${GEM_LIBDIR}/lib/safe_yaml/load.rb
 ${GEM_LIBDIR}/lib/safe_yaml/parse/date.rb
 ${GEM_LIBDIR}/lib/safe_yaml/parse/hexadecimal.rb
 ${GEM_LIBDIR}/lib/safe_yaml/parse/sexagesimal.rb
@@ -32,6 +34,8 @@ ${GEM_LIBDIR}/run_specs_all_ruby_versions.sh
 ${GEM_LIBDIR}/safe_yaml.gemspec
 ${GEM_LIBDIR}/spec/exploit.1.9.2.yaml
 ${GEM_LIBDIR}/spec/exploit.1.9.3.yaml
+${GEM_LIBDIR}/spec/issue48.txt
+${GEM_LIBDIR}/spec/issue49.yml
 ${GEM_LIBDIR}/spec/psych_resolver_spec.rb
 ${GEM_LIBDIR}/spec/resolver_specs.rb
 ${GEM_LIBDIR}/spec/safe_yaml_spec.rb
@@ -43,5 +47,6 @@ ${GEM_LIBDIR}/spec/transform/to_date_spec.rb
 ${GEM_LIBDIR}/spec/transform/to_float_spec.rb
 ${GEM_LIBDIR}/spec/transform/to_integer_spec.rb
 ${GEM_LIBDIR}/spec/transform/to_symbol_spec.rb
+${GEM_LIBDIR}/spec/yaml_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
 @pkgdir lib/ruby/gems/2.0.0/build_info
