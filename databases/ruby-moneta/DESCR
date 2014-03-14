@@ -1,0 +1,3 @@
+Moneta provides a standard interface for interacting with various kinds of
+key/value stores. Moneta supports the well-known NoSQL and document based
+stores.
