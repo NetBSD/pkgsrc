@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1063 2014/03/14 09:07:57 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1064 2014/03/14 09:16:29 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1610,3 +1610,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added emulators/sys161 version 1.99.07 [dholland 2014-03-14]
 	Updated emulators/suse131_pulseaudio to 13.1nb2 [obache 2014-03-14]
 	Updated emulators/suse131_gtk2 to 13.1nb2 [obache 2014-03-14]
+	Updated emulators/suse131_base to 13.1nb2 [obache 2014-03-14]
