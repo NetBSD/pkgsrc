@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2013/09/15 10:17:31 taca Exp $
+# $NetBSD: Makefile,v 1.15 2014/03/14 16:43:43 taca Exp $
 
-DISTNAME=	rspec-rails-2.14.0
+DISTNAME=	rspec-rails-2.14.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
