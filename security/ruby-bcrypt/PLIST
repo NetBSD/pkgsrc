@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2013/09/15 14:56:11 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/03/14 17:53:12 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/bcrypt_ext.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.travis.yml
@@ -9,7 +10,7 @@ ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/Gemfile.lock
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/bcrypt-ruby.gemspec
+${GEM_LIBDIR}/bcrypt.gemspec
 ${GEM_LIBDIR}/ext/jruby/bcrypt_jruby/BCrypt.java
 ${GEM_LIBDIR}/ext/mri/bcrypt_ext.c
 ${GEM_LIBDIR}/ext/mri/crypt.c
