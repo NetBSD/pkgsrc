@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/23 18:16:22 asau Exp $
+# $NetBSD: Makefile,v 1.18 2014/03/14 01:06:39 wiedi Exp $
 #
 
 DISTNAME=		cvm-0.96
@@ -51,6 +51,7 @@ CVM_LIB_EXT=dylib
 CVM_LIB_EXT=so
 .endif
 
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../devel/bglibs/buildlink3.mk"
 .include "../../mk/djbware.mk"
