@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2014/01/31 17:32:19 agc Exp $
+# $NetBSD: Makefile,v 1.31 2014/03/14 22:40:17 agc Exp $
 
 DISTNAME=	dropbear-2013.62
 CATEGORIES=	security
@@ -41,12 +41,9 @@ SUBST_SED.config=	-e "s,/etc/dropbear/,"${PKG_SYSCONFDIR:Q}"/dropbear/,g"
 # used by dbscp
 CPPFLAGS+=		-D_PATH_SSH_PROGRAM="\"${PREFIX}/bin/dbclient\""
 
-# XXX use base xauth if present, otherwise _ass_ume pkgsrc. better than nothing
-.if exists(${X11BASE}/bin/xauth)
-CPPFLAGS+=-DXAUTH_COMMAND="\"${X11BASE}/bin/xauth\""
-.else
-CPPFLAGS+=-DXAUTH_COMMAND="\"${X11PREFIX}/bin/xauth\""
-.endif
+.include "../../x11/xauth/builtin.mk"
+
+CPPFLAGS+=		-DXAUTH_COMMAND="\"${XAUTHBASE}/bin/xauth\""
 
 CFLAGS.NetBSD+=		-DHAVE_NETINET_IN_SYSTM_H
 
@@ -59,6 +56,5 @@ post-install:
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../math/ltm/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libtomcrypt+= libtomcrypt>=1.17nb2
 .include "../../security/libtomcrypt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
