@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.25 2013/09/23 01:51:55 asau Exp $
+# $NetBSD: options.mk,v 1.25.4.1 2014/03/14 13:59:47 tron Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=
@@ -48,8 +48,8 @@ PKG_SUGGESTED_OPTIONS+=		dri
 .if !empty(PKG_OPTIONS:Mdri)
 CONFIGURE_ARGS+=        --with-driver=dri
 PLIST.dri=	yes
-BUILDLINK_API_DEPENDS.libdrm+= libdrm>=2.4.24
 .  include "../../sysutils/libpciaccess/buildlink3.mk"
+USE_BUILTIN.MesaLib=	no
 .  include "../../graphics/MesaLib/dri.mk"
 CONFIGURE_ARGS+=        --with-dri-drivers="i810 i915 i965 mach64 mga r128 r200 r300 r600 radeon savage sis swrast tdfx unichrome"
 .else
