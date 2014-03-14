@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2014/03/14 04:09:31 dholland Exp $
+bin/hub161
+bin/hub161-${PKGVERSION}
+bin/stat161
+bin/stat161-${PKGVERSION}
+bin/sys161
+bin/sys161-${PKGVERSION}
+bin/trace161
+bin/trace161-${PKGVERSION}
+share/doc/sys161/copying.txt
+share/doc/sys161/devices.html
+share/doc/sys161/gdb.html
+share/doc/sys161/index.html
+share/doc/sys161/install.html
+share/doc/sys161/lamebus.html
+share/doc/sys161/mips.html
+share/doc/sys161/networking.html
+share/doc/sys161/system.html
+share/examples/sys161/sys161.conf.sample
