@@ -1,25 +1,12 @@
-@comment $NetBSD: PLIST,v 1.9 2013/09/15 13:47:23 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2014/03/14 17:11:42 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/mini_gmagick.rb
 ${GEM_LIBDIR}/lib/mini_magick.rb
+${GEM_LIBDIR}/lib/mini_magick/command_builder.rb
+${GEM_LIBDIR}/lib/mini_magick/errors.rb
+${GEM_LIBDIR}/lib/mini_magick/image.rb
+${GEM_LIBDIR}/lib/mini_magick/utilities.rb
 ${GEM_LIBDIR}/lib/mini_magick/version.rb
-${GEM_LIBDIR}/test/command_builder_test.rb
-${GEM_LIBDIR}/test/files/actually_a_gif.jpg
-${GEM_LIBDIR}/test/files/animation.gif
-${GEM_LIBDIR}/test/files/composited.jpg
-${GEM_LIBDIR}/test/files/erroneous.jpg
-${GEM_LIBDIR}/test/files/leaves (spaced).tiff
-${GEM_LIBDIR}/test/files/not_an_image.php
-${GEM_LIBDIR}/test/files/png.png
-${GEM_LIBDIR}/test/files/simple-minus.gif
-${GEM_LIBDIR}/test/files/simple.gif
-${GEM_LIBDIR}/test/files/special! "chars'.gif
-${GEM_LIBDIR}/test/files/trogdor.jpg
-${GEM_LIBDIR}/test/files/trogdor_capitalized.JPG
-${GEM_LIBDIR}/test/image_test.rb
-${GEM_LIBDIR}/test/leaves (spaced).tiff
-${GEM_LIBDIR}/test/test_helper.rb
-${GEM_LIBDIR}/test/trogdor_capitalized.JPG
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
