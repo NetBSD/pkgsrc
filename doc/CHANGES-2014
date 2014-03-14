@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1156 2014/03/14 19:50:15 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1157 2014/03/14 19:51:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1722,3 +1722,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/ruby-readline version 2.1.1 [taca 2014-03-14]
 	Added x11/ruby-tk version 2.1.1nb3 [taca 2014-03-14]
 	Added lang/ruby21 version 2.1.1 [taca 2014-03-14]
+	Updated devel/ruby-mode to 2.1.1 [taca 2014-03-14]
