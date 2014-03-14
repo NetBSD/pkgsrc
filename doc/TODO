@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13084 2014/03/14 14:40:21 mef Exp $
+$NetBSD: TODO,v 1.13085 2014/03/14 14:51:49 taca Exp $
 
 Suggested new packages
 ======================
@@ -1012,9 +1012,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.7
 	o salt-2014.1.0
-	o samba-4.0.15
+	o samba-3.6.23 [CVE-2013-4496]
+	o samba-4.0.16
 	o samba-4.1.0 [wip]
-	o samba-4.1.5
+	o samba-4.1.6
 	o sane-1.0.24
 	o sarg-2.2.5
 	o scew-0.4.0
@@ -1067,7 +1068,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o stratagus-2.2.5.5
 	o streamripper-1.63.0
 	o subtitleeditor-0.33.0
-	o sudo-1.8.10
+	o sudo-1.8.10p1
 	o swapd-1.0.5
 	o swatch-3.2.3
 	o swath-0.5.2
