@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp_var.h,v 1.7 2014/03/14 22:10:49 ryoon Exp $	*/
+/*	$NetBSD: ftp_var.h,v 1.8 2014/03/14 22:11:45 ryoon Exp $	*/
 /*	from	NetBSD: ftp_var.h,v 1.75 2007/07/22 05:02:50 lukem Exp	*/
 
 /*-
@@ -199,7 +199,7 @@ enum {
  */
 #if !defined(PATH_MAX)
 #if defined(_SCO_DS)
-#define PATH_MAX	256
+#define PATH_MAX	1024
 #endif
 #endif
 
