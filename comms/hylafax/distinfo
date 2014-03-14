@@ -1,22 +1,20 @@
-$NetBSD: distinfo,v 1.25 2013/08/30 16:57:35 joerg Exp $
+$NetBSD: distinfo,v 1.26 2014/03/14 15:59:29 adam Exp $
 
-SHA1 (hylafax-4.2.5.tar.gz) = b3bfd492dcb85e8aa1ddff9e6dcec3c31e00fccc
-RMD160 (hylafax-4.2.5.tar.gz) = aef5e7a8ff32bafa43b5efc431b9fd8c334ddb3a
-Size (hylafax-4.2.5.tar.gz) = 1450958 bytes
-SHA1 (patch-aa) = 94de7c7fb55c9c95c6a774fb732e2d47ec818152
+SHA1 (hylafax-6.0.6.tar.gz) = 8d8cc9a5f242ef83d7bc6f5cd200fec1351b280e
+RMD160 (hylafax-6.0.6.tar.gz) = 1f6e3022fe9886f2cde9fb406277d5496ee24f1c
+Size (hylafax-6.0.6.tar.gz) = 1297412 bytes
+SHA1 (patch-aa) = 54f34633757a4925084d9e7e4c1e743bca48e4ba
 SHA1 (patch-ab) = 5ee930814178223fa66dd308f365ff400559fd1d
-SHA1 (patch-ac) = 6f89cc0c9e7a0e789c23b0dfc604376e457091b7
+SHA1 (patch-ac) = b2051ac2e43d0635797043605d96f128e535c976
 SHA1 (patch-ad) = a7e361980c94a025be0b326c1cf694cce3cbff72
-SHA1 (patch-ae) = 75b243c618a197bacd97e4292b123e97ffe178cd
-SHA1 (patch-af) = cb76c429c01e05ceeee7664a09344dc9d27f972d
-SHA1 (patch-ag) = e1a38918cadf1d1cca7765ee2c050e99dfed0b7f
-SHA1 (patch-ah) = 084a99cfe21d7090fca33d9e068036e19707f441
-SHA1 (patch-ai) = d45bb9e224b18999489314aa1c1c74fc62a77328
-SHA1 (patch-al) = edac7c7af07556f7321ba7ede1eeca55e618b8cc
+SHA1 (patch-ae) = 031813b7a130cb7ee99596be88aa933e6ec8786e
+SHA1 (patch-af) = f1dd817fcd086bfdd354351dc0b92027250edcba
+SHA1 (patch-ag) = 52024e0184e2607c6cfb2c6c19c9f31b3c37ec95
+SHA1 (patch-ah) = 8558a0f9d970ce1cddbeb76fc87a1c450bd0941d
+SHA1 (patch-ai) = 85ae0baa95f012593b908b3394280e49ba3b7f24
+SHA1 (patch-al) = a0f006412918c047176945d911042264aa050fc0
 SHA1 (patch-am) = b004485310a2257630561a42b3f08896604ce986
-SHA1 (patch-an) = 535f9454e473d7bb26a256aec3158cffdb3d0399
-SHA1 (patch-ao) = 73da088c0dbc13a0dcb8d6abaa36804f34638c51
-SHA1 (patch-ap) = f9d6a2796535e7200419d6e24203b9995e5cfb39
-SHA1 (patch-hfaxd_FileSystem_c__) = d39e8abb1163f5f02b2cb1fa5814c4588a8fa73e
-SHA1 (patch-hfaxd_FileTransfer_c__) = 683b4a0bdd1927d0a0636e8df75d5b8bae27e0ff
-SHA1 (patch-rules.in) = 7d2752d19a3367ce0feaca1b8704159f9691f9c2
+SHA1 (patch-an) = de131bcdeb22a2f7daadbaf86d0aa00b841512af
+SHA1 (patch-ao) = d46c0c4d3e3e6309a807fa5c335888a3c28886d8
+SHA1 (patch-ap) = 419036385f1d0582ab6e5dd0710f5bbf41744e0f
+SHA1 (patch-rules.in) = 4c9604ce9fc5848764adfdbd2e39cc7576674ebc

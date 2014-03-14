@@ -1,60 +1,48 @@
-# $NetBSD: Makefile,v 1.69 2013/08/30 16:57:35 joerg Exp $
+# $NetBSD: Makefile,v 1.70 2014/03/14 15:59:29 adam Exp $
 
-VERS=		4.2.5
-DISTNAME=	hylafax-${VERS}
-PKGREVISION=	10
+DISTNAME=	hylafax-6.0.6
 CATEGORIES=	comms
-MASTER_SITES_BETA=	ftp://ftp.hylafax.org/source/BETA/
-MASTER_SITES_RELEASE=	ftp://ftp.hylafax.org/source/
-MASTER_SITES=	${MASTER_SITES_RELEASE}
+MASTER_SITES=	ftp://ftp.hylafax.org/source/
 
-MAINTAINER=	hallmann@ahatec.de
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.hylafax.org/
 COMMENT=	Telecommunication and fax server system
-
-DEPENDS+=	mawk>=1.2.2:../../lang/mawk
+LICENSE=	sgi-free-software-b-v2.0
 
 CONFLICTS=	hylafax-devel-[0-9]* mgetty-[0-9]*
+DEPENDS+=	mawk>=1.2.2:../../lang/mawk
 
 BUILD_DEFS+=	FAXUSER FAXGROUP VARBASE
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gs:run
+USE_TOOLS+=		gs:run pkg-config
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-MAKE=${MAKE_PROGRAM:Q}
 CONFIGURE_ARGS+=	--with-INSTALL="" --nointeractive
 CONFIGURE_ARGS+=	--with-ZLIBINC=-I${BUILDLINK_PREFIX.zlib}/include
 CONFIGURE_ARGS+=	--with-LIBZ="-L${BUILDLINK_PREFIX.zlib}/lib -lz"
 CONFIGURE_ARGS+=	--with-SYSVINIT=no
-CONFIGURE_ENV+=		PREFIX=${PREFIX:Q} OPTIMIZER=${CFLAGS:Q}
-CONFIGURE_ENV+=		FAXUID=${FAXUSER:Q} FAXGID=${FAXGROUP:Q}
-CONFIGURE_ENV+=		VARBASE=${VARBASE:Q}
+CONFIGURE_ENV+=		FAXUID=${FAXUSER:Q}
+CONFIGURE_ENV+=		FAXGID=${FAXGROUP:Q}
+CONFIGURE_ENV+=		OPTIMIZER=${CFLAGS:Q}
+CONFIGURE_ENV+=		VARBASE=${VARBASE}
+CHECK_PORTABILITY_SKIP=	rpm/jobcontrol.sh
 MANCOMPRESSED=		yes
 
 FAXUSER?=	uucp
 FAXGROUP?=	dialer
 RCD_SCRIPTS=	hylafax
 
-MAKE_JOBS_SAFE=	NO
+EGDIR=		share/examples/hylafax
 
-INSTALLATION_DIRS=	libdata/hylafax
+INSTALLATION_DIRS=	libdata/hylafax ${EGDIR} ${EGDIR}/templates
 
 SPECIAL_PERMS+=	bin/faxalter ${SETUID_ROOT_PERMS} \
 		bin/faxrm ${SETUID_ROOT_PERMS} \
 		libexec/faxgetty ${SETUID_ROOT_PERMS} \
 		sbin/faxq ${SETUID_ROOT_PERMS}
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.hylafax
-PKG_SUPPORTED_OPTIONS=	pam
-#pam doesn't work right now, so disabled by default
-#PKG_SUGGESTED_OPTIONS=       pam
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mpam)
-.include "../../mk/pam.buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-pam
-.endif
+.include "options.mk"
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -69,5 +57,4 @@ BUILDLINK_API_DEPENDS.libtiff+=	tiff>=4.0.0
 .include "../../graphics/jbigkit/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

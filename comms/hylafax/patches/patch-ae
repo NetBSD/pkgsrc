@@ -1,10 +1,9 @@
-$NetBSD: patch-ae,v 1.17 2013/05/21 18:36:52 joerg Exp $
+$NetBSD: patch-ae,v 1.18 2014/03/14 15:59:29 adam Exp $
 
-- Configure for pkgsrc.
-- Recognize libtiff 4.x.
-- ...
+* Customize paths.
+* Configure for pkgsrc.
 
---- configure.orig	2005-12-16 22:40:30.000000000 +0000
+--- configure.orig	2012-06-06 00:58:38.000000000 +0000
 +++ configure
 @@ -37,23 +37,23 @@
  #
@@ -16,7 +15,7 @@ $NetBSD: patch-ae,v 1.17 2013/05/21 18:36:52 joerg Exp $
 -DIR_LIB=/usr/local/lib
 -DIR_LIBEXEC=$DIR_SBIN
 -DIR_SPOOL=/var/spool/hylafax
--DIR_HTML=/var/httpd/htdocs/hylafax
+-DIR_LOCALE=/usr/local/share/locale
 -DIR_CGI=/var/httpd/cgi-bin
 +DIR_BIN=${PREFIX}/bin
 +DIR_SBIN=${PREFIX}/sbin
@@ -24,13 +23,13 @@ $NetBSD: patch-ae,v 1.17 2013/05/21 18:36:52 joerg Exp $
 +DIR_LIB=${PREFIX}/lib
 +DIR_LIBEXEC=${PREFIX}/libexec
 +DIR_SPOOL=${VARBASE}/spool/hylafax
-+DIR_HTML=${PREFIX}/http/htdocs/hylafax
++DIR_LOCALE=${PREFIX}/share/locale
 +DIR_CGI=${PREFIX}/http/cgi-bin
  PATH_DPSRIP=$DIR_LIBEXEC/ps2fax.exe
 -PATH_IMPRIP=/usr/lib/print/psrip
 +PATH_IMPRIP=${PREFIX}/lib/print/psrip
- HTMLPATH=/hylafax
  CGIPATH=/cgi-bin
+ LOCALE_DOMAIN=hylafax
  DEFVRES=98
  PAGESIZE="North American Letter"
  FAXUID=uucp
@@ -40,38 +39,29 @@ $NetBSD: patch-ae,v 1.17 2013/05/21 18:36:52 joerg Exp $
  SYSGID=
  DSO=auto
  GETTY=auto
-@@ -72,9 +72,8 @@ DPS=no
- GS=no
+@@ -70,11 +70,10 @@ GS=no
  IMP=no
  UTMP=auto
+ NLS=auto
 -OPTIMIZER="-O"
--LIBTIFF="-L/usr/local/lib -ltiff"
--TIFFINC=/usr/local/include
-+LIBTIFF="-Wl,-R${PREFIX}/lib -L${PREFIX}/lib -ltiff -ljpeg -lz -lm"
-+TIFFINC=${PREFIX}/include
+ LIBCRYPT=
+ LIBPAM=
+-LIBTIFF="-ltiff"
+-TIFFINC=
++LIBTIFF=`pkg-config --libs libtiff-4`
++TIFFINC=`pkg-config --cflags libtiff-4`
  TIFFBIN=
- LIBZ=
- ZLIBINC=
-@@ -82,8 +81,8 @@ REGEX=yes
- LIBREGEX='-L${DEPTH}/regex -lregex'
- REGEXINC='${DEPTH}/${TOPSRCDIR}/regex'
- DBLIB=no
--LIBDB="-L/usr/local/lib -ldb"
--DBLIBINC=/usr/local/include
-+LIBDB="-L${PREFIX}/lib -ldb"
-+DBLIBINC=${PREFIX}/include
- FAXD=
- LIBFAXSERVER='libfaxserver.${DSO}'
- LIBUTIL='${UTIL}/libfaxutil.${DSO}'
-@@ -224,6 +223,7 @@ PKG_EMAIL
+ LIBUTIL=
+ LIBZ=-lz
+@@ -229,6 +228,7 @@ PKG_ARCH
+ PKG_EMAIL
  PKG_VENDOR
- PORT
  PORTFUNCS
 +PREFIX
  PROTOTYPES
  PSPACKAGE	PS
  PWDCMD
-@@ -290,7 +290,7 @@ test -d /usr/bsd && PATH=$PATH:/usr/bsd	
+@@ -300,7 +300,7 @@ test -d /usr/bsd && PATH=$PATH:/usr/bsd	
  test -d /usr/ucb && PATH=$PATH:/usr/ucb			# Sun and others
  test -d /usr/contrib/bin && PATH=$PATH:/usr/contrib/bin	# BSDi
  test -d /usr/5bin && PATH=/usr/5bin:$PATH:/usr/etc	# Sun and others
@@ -80,7 +70,7 @@ $NetBSD: patch-ae,v 1.17 2013/05/21 18:36:52 joerg Exp $
  PATH=$PATH:$OPATH
  
  POSIXLY_CORRECT=1; export POSIXLY_CORRECT		# disable GNU extensions
-@@ -809,7 +809,7 @@ checkGCCVersion()
+@@ -831,7 +831,7 @@ checkGCCVersion()
  # NB: use ANSI C prototype to weed out non-ANSI compilers.
  #
  cat>dummy.c<<EOF
@@ -89,7 +79,7 @@ $NetBSD: patch-ae,v 1.17 2013/05/21 18:36:52 joerg Exp $
  EOF
  
  checkCompiler()
-@@ -958,7 +958,7 @@ fi
+@@ -982,7 +982,7 @@ fi
  # Make dependency information.
  #
  cat>dummy.c<<EOF
@@ -98,32 +88,7 @@ $NetBSD: patch-ae,v 1.17 2013/05/21 18:36:52 joerg Exp $
  EOF
  capture cat dummy.c
  if capture "$CCOMPILER -c -M $MKDEPCOPTS dummy.c | grep '^dummy.o[ 	]*:[ 	]*dummy.c'"; then
-@@ -1418,12 +1418,22 @@ runMake()
- CheckForCXXRuntime()
- {
- cat>t.c++<<EOF
-+#include <iostream>
-+int main(){ std::cout << "Hello World!" << std::endl; return 0;}
-+EOF
-+    runMake t "t:; \${C++F} \${C++FILE} t.c++${MAKECXXOVERRIDE}" || return $?
-+    Note "Looks like the system has a CXX runtime"
-+}
-+CheckForDeprecatedCXXRuntime()
-+{
-+cat>t.c++<<EOF
- #include "iostream.h"
- int main(){ cout << "Hello World!" << endl; return 0;}
- EOF
--    runMake t "t:; \${C++F} \${C++FILE} t.c++${MAKECXXOVERRIDE}"
-+    runMake t "t:; \${C++F} \${C++FILE} t.c++${MAKECXXOVERRIDE}" || return $?
-+    Note "Looks like the system has a CXX runtime with deprecated headers"
- }
--CheckForCXXRuntime || {
-+CheckForCXXRuntime || CheckForDeprecatedCXXRuntime || {
-     cat 1>&2 <<EOF
- 
- Missing C++ runtime support for $CXX ($CXXCOMPILER).
-@@ -1591,7 +1601,7 @@ pamconv(int num_msg, const struct pam_me
+@@ -1629,7 +1629,7 @@ pamconv(int num_msg, const struct pam_me
  {
      return(0);
  }
@@ -132,16 +97,16 @@ $NetBSD: patch-ae,v 1.17 2013/05/21 18:36:52 joerg Exp $
  {
      struct pam_conv conv = { pamconv };
  }
-@@ -2062,7 +2072,7 @@ EmitConfigurationDefinitions()
+@@ -2176,7 +2176,7 @@ EmitConfigurationDefinitions()
  #
  CheckForFunc()
  {
--    echo "extern int $1(); main(){$1();exit(0);}" >t.c
-+    echo "extern int $1(); int main(){$1();exit(0);}" >t.c
+-    echo "extern int $1(); main(){$1($2);exit(0);}" >t.c
++    echo "extern int $1(); int main(){$1($2);exit(0);}" >t.c
      capture cat t.c
      runMake t "t:; \${CC} t.c ${MACHDEPLIBS}"
  }
-@@ -2315,7 +2325,7 @@ CheckForStructExitStatus()
+@@ -2448,7 +2448,7 @@ CheckForStructExitStatus()
  	echo "$i"
      done
      cat<<EOF
@@ -150,7 +115,7 @@ $NetBSD: patch-ae,v 1.17 2013/05/21 18:36:52 joerg Exp $
  {
      struct $decl x;
      x.ut_exit.e_exit = 0;
-@@ -2332,7 +2342,7 @@ CheckForTimeZoneHandling()
+@@ -2465,7 +2465,7 @@ CheckForTimeZoneHandling()
  {
      (echo '#include <time.h>'
      cat<<EOF
@@ -159,7 +124,7 @@ $NetBSD: patch-ae,v 1.17 2013/05/21 18:36:52 joerg Exp $
  {
      struct tm x;
      char* cp;
-@@ -2351,7 +2361,7 @@ CheckForTXCD()
+@@ -2484,7 +2484,7 @@ CheckForTXCD()
  {
      cat>t.c<<EOF
  #include <sys/ioctl.h>
@@ -168,7 +133,7 @@ $NetBSD: patch-ae,v 1.17 2013/05/21 18:36:52 joerg Exp $
  {
      ioctl(0, TXADDCD, "rts");
      ioctl(0, TXDELCD, "rts");
-@@ -2400,7 +2410,7 @@ CheckLibtiff()
+@@ -2538,7 +2538,7 @@ CheckLibtiff()
      cat>t.c<<EOF
  #include <stdio.h>
  #include "tiffio.h"
@@ -177,16 +142,7 @@ $NetBSD: patch-ae,v 1.17 2013/05/21 18:36:52 joerg Exp $
  {
      printf( "header_ver=%d lib_ver=%s", TIFFLIB_VERSION, TIFFGetVersion() );
      exit(0);
-@@ -2418,7 +2428,7 @@ EOF
- 	if [ ${header_ver} -ge 19960307 ]; then
- 	    case ${lib_ver} in
- 		3.4)		tiff_runlen_t="uint16" ;;
--		3.[567])	tiff_runlen_t="uint32" ;;
-+		3.[56789]|4*)	tiff_runlen_t="uint32" ;;
- 	    esac
- 	fi
-     else
-@@ -3102,7 +3112,7 @@ CheckForSyslog()
+@@ -3281,7 +3281,7 @@ CheckForSyslog()
  {
      (echo '#include <syslog.h>';
       echo '#include "port.h"';
@@ -195,7 +151,7 @@ $NetBSD: patch-ae,v 1.17 2013/05/21 18:36:52 joerg Exp $
      capture cat t.c
      runMake t "t:; \${CC} t.c ${MACHDEPLIBS}"
  }
-@@ -3111,7 +3121,7 @@ CheckForVSyslog()
+@@ -3290,7 +3290,7 @@ CheckForVSyslog()
      (echo '#include <syslog.h>';
       echo '#include <stdarg.h>';
       echo '#include "port.h"';
@@ -204,7 +160,7 @@ $NetBSD: patch-ae,v 1.17 2013/05/21 18:36:52 joerg Exp $
      capture cat t.c
      runMake t "t:; \${CC} t.c ${MACHDEPLIBS}"
  }
-@@ -3139,19 +3149,13 @@ Note "Checking ZLIB support."
+@@ -3314,19 +3314,13 @@ Note "Checking ZLIB support."
  #
  cat>t.c<<EOF
  #include "zlib.h"
@@ -225,7 +181,7 @@ $NetBSD: patch-ae,v 1.17 2013/05/21 18:36:52 joerg Exp $
  }
  EOF
  capture cat t.c
-@@ -3213,7 +3217,7 @@ Note "Checking TIFF support."
+@@ -3385,7 +3379,7 @@ Note "Checking TIFF support."
  # Location of TIFF binaries
  #
  if [ -z "$TIFFBIN" ]; then
@@ -234,16 +190,7 @@ $NetBSD: patch-ae,v 1.17 2013/05/21 18:36:52 joerg Exp $
      for i in $DIRS; do
          test -x $i/tiff2ps && { TIFFBIN=$i; break; }
      done
-@@ -3245,7 +3249,7 @@ if [ -f $SRCDIR/MLA/VERSION -a $DBLIB = 
- #include <stdio.h>
- #include <string.h>
- #include "db.h"
--main()
-+int main()
- {
-     DBT key, data;
-     const char d[] = "some random string";
-@@ -3722,6 +3726,7 @@ if [ -z "$FAXGID" ]; then
+@@ -3806,6 +3800,7 @@ if [ -z "$FAXGID" ]; then
      *-bsdi*)	FAXGID=uucp;;
      *freebsd2.1*) FAXGID=uucp; break;; # Not sure when this changed..
      *bsd*)	FAXGID=dialer;;
@@ -251,7 +198,7 @@ $NetBSD: patch-ae,v 1.17 2013/05/21 18:36:52 joerg Exp $
      *-hpux*)	FAXGID=sys;;
      *-irix*)	FAXGID=nuucp;;
      *-isc*)	FAXGID=uucp;;
-@@ -3750,6 +3755,7 @@ if [ -z "$SYSGID" ]; then
+@@ -3834,6 +3829,7 @@ if [ -z "$SYSGID" ]; then
      *-aix*)	SYSGID=sys;;
      *netbsd*)	SYSGID=wheel;;
      *bsd*)	SYSGID=bin;;
@@ -259,7 +206,7 @@ $NetBSD: patch-ae,v 1.17 2013/05/21 18:36:52 joerg Exp $
      *-hpux*)	SYSGID=bin;;
      *-irix*)	SYSGID=sys;;
      *-isc*)	SYSGID=sys;;
-@@ -3794,6 +3800,7 @@ fi
+@@ -3878,6 +3874,7 @@ fi
  if [ "$GETTY" = auto ]; then
      case $TARGET in
      *bsd*)	GETTY=BSD;;
@@ -267,7 +214,7 @@ $NetBSD: patch-ae,v 1.17 2013/05/21 18:36:52 joerg Exp $
      *-sunos*)	GETTY=BSD;;
      *-ultrix*)	GETTY=BSD;;
      *darwin*)   GETTY=BSD;;
-@@ -3836,7 +3843,7 @@ fi
+@@ -3920,7 +3917,7 @@ fi
  if [ -z "$PATH_VGETTY" ]; then
      PATH_VGETTY=`findApp vgetty /usr/libexec:/sbin:$PATH` 
      if [ -z "$PATH_VGETTY" ]; then
@@ -276,7 +223,7 @@ $NetBSD: patch-ae,v 1.17 2013/05/21 18:36:52 joerg Exp $
  	Note "WARNING, no vgetty program found to handle a voice call, using $PATH_VGETTY."
      else
  	Note "Looks like $PATH_VGETTY is the program to exec for a voice call."
-@@ -3849,7 +3856,7 @@ fi
+@@ -3933,7 +3930,7 @@ fi
  if [ -z "$PATH_EGETTY" ]; then
      PATH_EGETTY=`findApp egetty /usr/libexec:/sbin:$PATH` 
      if [ -z "$PATH_EGETTY" ]; then
@@ -285,7 +232,7 @@ $NetBSD: patch-ae,v 1.17 2013/05/21 18:36:52 joerg Exp $
  	Note "WARNING, no egetty program found, using $PATH_EGETTY."
      else
  	Note "Looks like $PATH_EGETTY is the program to exec for an extern call."
-@@ -3871,6 +3878,7 @@ if [ "$LOCKS" = auto ]; then
+@@ -3956,6 +3953,7 @@ if [ "$LOCKS" = auto ]; then
      *-sysv5*)	LOCKS="+ascii";;
      *-solaris*)	LOCKS="+ascii";;
      *-freebsd*)	LOCKS=ascii;;
@@ -293,7 +240,7 @@ $NetBSD: patch-ae,v 1.17 2013/05/21 18:36:52 joerg Exp $
      *-netbsd*)	LOCKS=ascii;;
      *bsd*)	LOCKS=binary;;
      *)		LOCKS=ascii;;
-@@ -3920,6 +3928,7 @@ PickRIP()
+@@ -4005,6 +4003,7 @@ PickRIP()
  {
      if [ -z "$PATH_GSRIP" ]; then
  	GSLOCS="
@@ -301,7 +248,7 @@ $NetBSD: patch-ae,v 1.17 2013/05/21 18:36:52 joerg Exp $
  	    /usr/local/bin/gs
  	    /usr/contrib/bin/gs
  	    /usr/gnu/bin/gs
-@@ -3967,7 +3976,7 @@ fax software to operate correctly.  See 
+@@ -4052,7 +4051,7 @@ fax software to operate correctly.  See 
  on building Ghostscript with the necessary TIFF driver.
  
  EOF
@@ -310,7 +257,7 @@ $NetBSD: patch-ae,v 1.17 2013/05/21 18:36:52 joerg Exp $
  	PATH_GSRIP=$PATH_PSRIP
      fi
  }
-@@ -4034,9 +4043,9 @@ if [ -z "$PATH_AFM" ]; then
+@@ -4119,9 +4118,9 @@ if [ -z "$PATH_AFM" ]; then
      else
          DIR_AFMS="
  	    /usr/lib/afm
@@ -323,7 +270,7 @@ $NetBSD: patch-ae,v 1.17 2013/05/21 18:36:52 joerg Exp $
  	    /usr/share/ghostscript/fonts
  	    /usr/gnu/lib/ghostscript/fonts
  	    /opt/gnu/lib/ghostscript/fonts
-@@ -4056,7 +4065,7 @@ if [ -z "$PATH_AFM" ]; then
+@@ -4141,7 +4140,7 @@ if [ -z "$PATH_AFM" ]; then
  fi
  if [ -z "$PATH_AFM" ]; then
      # put it where ghostscript normally puts things
@@ -332,7 +279,7 @@ $NetBSD: patch-ae,v 1.17 2013/05/21 18:36:52 joerg Exp $
      Note "WARNING, could not locate a directory with font metric information,"
      Note "guessing that font metric information goes in $PATH_AFM."
  else
-@@ -4075,7 +4084,7 @@ fi
+@@ -4160,7 +4159,7 @@ fi
  #
  if [ -z "$DIR_MAN" ]; then
      MANPATH="
@@ -341,7 +288,7 @@ $NetBSD: patch-ae,v 1.17 2013/05/21 18:36:52 joerg Exp $
  	/usr/local/man
  	/usr/contrib/man
  	/usr/catman/local
-@@ -4084,43 +4093,11 @@ if [ -z "$DIR_MAN" ]; then
+@@ -4169,43 +4168,11 @@ if [ -z "$DIR_MAN" ]; then
      for i in $MANPATH; do
  	test -d $i && { DIR_MAN=$i; break; }
      done

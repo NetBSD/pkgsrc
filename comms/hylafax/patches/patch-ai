@@ -1,6 +1,6 @@
-$NetBSD: patch-ai,v 1.9 2005/01/27 16:22:37 adam Exp $
+$NetBSD: patch-ai,v 1.10 2014/03/14 15:59:29 adam Exp $
 
---- etc/faxsetup.sh.in.orig	2004-12-28 04:45:04.000000000 +0000
+--- etc/faxsetup.sh.in.orig	2012-06-06 00:58:38.000000000 +0000
 +++ etc/faxsetup.sh.in
 @@ -41,7 +41,9 @@
  # This script interactively prepares and verifies 
@@ -18,10 +18,10 @@ $NetBSD: patch-ai,v 1.9 2005/01/27 16:22:37 adam Exp $
  LN=@LN@				# ln command for use below
  LN_S=@LN_S@			# ln option for creating a symbolic link
 +MKDIR=@MKDIR@			# directory creation program for use below
- MIMENCODE=@MIMENCODE@		# mimencode command to dump in setup.cache
  MKFIFO=@MKFIFO@			# FIFO creation program for use below
  MV=@MV@				# move file for use below
-@@ -149,6 +152,7 @@ LIBEXEC		DIR_LIBEXEC
+ PCL6CMD=@PCL6CMD@		# pcl6 (GhostPCL) program
+@@ -154,6 +157,7 @@ LIBEXEC		DIR_LIBEXEC
  LN
  MANDIR		DIR_MAN
  MIMENCODE
@@ -29,7 +29,7 @@ $NetBSD: patch-ai,v 1.9 2005/01/27 16:22:37 adam Exp $
  MKFIFO
  MV
  PATH
-@@ -816,6 +820,61 @@ if [ "$euid" != "root" ]; then
+@@ -870,6 +874,61 @@ if [ "$euid" != "root" ]; then
      boom
  fi
  
@@ -91,7 +91,7 @@ $NetBSD: patch-ai,v 1.9 2005/01/27 16:22:37 adam Exp $
  onClient && Note "Checking system for proper client configuration."
  onServer && Note "Checking system for proper server configuration."
  
-@@ -2214,12 +2273,7 @@ if onServer; then
+@@ -2426,12 +2485,7 @@ if onServer; then
  
      findproc()
      {

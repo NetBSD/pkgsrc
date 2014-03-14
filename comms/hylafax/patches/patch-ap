@@ -1,8 +1,8 @@
-$NetBSD: patch-ap,v 1.8 2005/01/27 16:22:37 adam Exp $
+$NetBSD: patch-ap,v 1.9 2014/03/14 15:59:29 adam Exp $
 
---- util/Makefile.in.orig	2004-08-16 12:58:22.000000000 +0000
+--- util/Makefile.in.orig	2012-06-06 00:58:38.000000000 +0000
 +++ util/Makefile.in
-@@ -156,7 +156,7 @@ checkat: checkat.o ${LIBS}
+@@ -117,7 +117,7 @@ checkat: checkat.o ${LIBS}
  PUTCLIENT	= ${INSTALL} -idb ${PRODUCT}.sw.client
  PUTSERVER	= ${INSTALL} -idb ${PRODUCT}.sw.server
  PUTSERV		= ${PUTSERVER} -m 755
@@ -11,7 +11,7 @@ $NetBSD: patch-ap,v 1.8 2005/01/27 16:22:37 adam Exp $
  PUTSBIN		= ${PUTSERVER} -F ${SBIN}
  
  installClient: default
-@@ -173,6 +173,7 @@ install: installClient
+@@ -133,6 +133,7 @@ install: installClient
  	${PUTSBIN} -m 755 -src xferfaxstats.sh -O xferfaxstats
  	${PUTSBIN} -m 755 -src recvstats.sh -O recvstats
  	${PUTSBIN} -m 755 -idb "config(update)" -src faxcron.sh -O faxcron
@@ -19,7 +19,7 @@ $NetBSD: patch-ap,v 1.8 2005/01/27 16:22:37 adam Exp $
  	${PUTSUPD} -m 755 -src ps2fax.gs.sh -O ps2fax.gs
  	${PUTSUPD} -m 755 -src ps2fax.dps.sh -O ps2fax.dps
  	${PUTSUPD} -m 755 -src ps2fax.imp.sh -O ps2fax.imp
-@@ -187,9 +188,11 @@ install: installClient
+@@ -153,9 +154,11 @@ install: installClient
  	${PUTSUPD} -m 755 -src pollrcvd.sh -O pollrcvd
  	${PUTSUPD} -m 755 -src mkcover.sh -O mkcover
  	${PUTSUPD} -m 755 -src wedged.sh -O wedged
@@ -32,4 +32,4 @@ $NetBSD: patch-ap,v 1.8 2005/01/27 16:22:37 adam Exp $
 +	${PUTSERVER} -F ${PREFIX}/share/hylafax/etc_template -idb "config(suggest)" \
  	    -m 444 -src ${SRCDIR}/cover.templ -O cover.templ
  
- @MAKEDSOINCLUDE@ @MAKELQUOTE@${SRCDIR}/Makefile.@DSO@dso@MAKERQUOTE@
+ #
