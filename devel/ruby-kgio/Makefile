@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2014/03/13 11:08:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2014/03/14 15:42:16 taca Exp $
 
-DISTNAME=	kgio-2.8.1
+DISTNAME=	kgio-2.9.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel net
 
