@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13085 2014/03/14 14:51:49 taca Exp $
+$NetBSD: TODO,v 1.13086 2014/03/14 16:00:35 adam Exp $
 
 Suggested new packages
 ======================
@@ -670,7 +670,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o httping-2.3.4
 	o httptunnel-3.3
 	o hugin-2012.0.0
-	o hylafax-6.0.5
 	o i3-4.7.2
 	o icc11-13.0
 	o icdprog-0.5
