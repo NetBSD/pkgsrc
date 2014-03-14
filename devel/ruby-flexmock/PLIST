@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.12 2013/06/16 15:36:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2014/03/14 15:36:16 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/Gemfile.lock
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/TAGS
 ${GEM_LIBDIR}/doc/GoogleExample.rdoc
 ${GEM_LIBDIR}/doc/examples/rspec_examples_spec.rdoc
 ${GEM_LIBDIR}/doc/examples/test_unit_examples_test.rdoc
@@ -43,23 +42,28 @@ ${GEM_LIBDIR}/lib/flexmock/argument_matchers.rb
 ${GEM_LIBDIR}/lib/flexmock/argument_matching.rb
 ${GEM_LIBDIR}/lib/flexmock/argument_types.rb
 ${GEM_LIBDIR}/lib/flexmock/base.rb
+${GEM_LIBDIR}/lib/flexmock/call_record.rb
+${GEM_LIBDIR}/lib/flexmock/call_validator.rb
 ${GEM_LIBDIR}/lib/flexmock/class_extensions.rb
-${GEM_LIBDIR}/lib/flexmock/composite.rb
+${GEM_LIBDIR}/lib/flexmock/composite_expectation.rb
 ${GEM_LIBDIR}/lib/flexmock/core.rb
 ${GEM_LIBDIR}/lib/flexmock/core_class_methods.rb
 ${GEM_LIBDIR}/lib/flexmock/default_framework_adapter.rb
 ${GEM_LIBDIR}/lib/flexmock/deprecated_methods.rb
 ${GEM_LIBDIR}/lib/flexmock/errors.rb
 ${GEM_LIBDIR}/lib/flexmock/expectation.rb
+${GEM_LIBDIR}/lib/flexmock/expectation_builder.rb
 ${GEM_LIBDIR}/lib/flexmock/expectation_director.rb
+${GEM_LIBDIR}/lib/flexmock/expectation_recorder.rb
 ${GEM_LIBDIR}/lib/flexmock/explicit_needed.rb
+${GEM_LIBDIR}/lib/flexmock/extensions/active_record_model.rb
+${GEM_LIBDIR}/lib/flexmock/mock_builder.rb
 ${GEM_LIBDIR}/lib/flexmock/mock_container.rb
 ${GEM_LIBDIR}/lib/flexmock/noop.rb
 ${GEM_LIBDIR}/lib/flexmock/object_extensions.rb
 ${GEM_LIBDIR}/lib/flexmock/ordering.rb
 ${GEM_LIBDIR}/lib/flexmock/partial_mock.rb
 ${GEM_LIBDIR}/lib/flexmock/rails.rb
-${GEM_LIBDIR}/lib/flexmock/rails/view_mocking.rb
 ${GEM_LIBDIR}/lib/flexmock/recorder.rb
 ${GEM_LIBDIR}/lib/flexmock/rspec.rb
 ${GEM_LIBDIR}/lib/flexmock/rspec/configure.rb
@@ -69,6 +73,7 @@ ${GEM_LIBDIR}/lib/flexmock/symbol_extensions.rb
 ${GEM_LIBDIR}/lib/flexmock/test_unit.rb
 ${GEM_LIBDIR}/lib/flexmock/test_unit_assert_spy_called.rb
 ${GEM_LIBDIR}/lib/flexmock/test_unit_integration.rb
+${GEM_LIBDIR}/lib/flexmock/test_unit_testcase_extensions.rb
 ${GEM_LIBDIR}/lib/flexmock/undefined.rb
 ${GEM_LIBDIR}/lib/flexmock/validators.rb
 ${GEM_LIBDIR}/lib/flexmock/version.rb
@@ -84,11 +89,11 @@ ${GEM_LIBDIR}/test/examples_from_readme_test.rb
 ${GEM_LIBDIR}/test/expectation_description_test.rb
 ${GEM_LIBDIR}/test/extended_should_receive_test.rb
 ${GEM_LIBDIR}/test/flexmodel_test.rb
+${GEM_LIBDIR}/test/mock_builder_test.rb
 ${GEM_LIBDIR}/test/naming_test.rb
 ${GEM_LIBDIR}/test/new_instances_test.rb
 ${GEM_LIBDIR}/test/object_extensions_test.rb
 ${GEM_LIBDIR}/test/partial_mock_test.rb
-${GEM_LIBDIR}/test/rails_view_stub_test.rb
 ${GEM_LIBDIR}/test/record_mode_test.rb
 ${GEM_LIBDIR}/test/redirect_error.rb
 ${GEM_LIBDIR}/test/rspec_integration/integration_spec.rb
