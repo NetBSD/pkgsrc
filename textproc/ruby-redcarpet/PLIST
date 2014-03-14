@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2013/09/15 16:26:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/14 18:23:34 taca Exp $
 bin/redcarpet
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/redcarpet.${RUBY_DLEXT}
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/README.markdown
@@ -33,6 +34,7 @@ ${GEM_LIBDIR}/lib/redcarpet/render_strip.rb
 ${GEM_LIBDIR}/redcarpet.gemspec
 ${GEM_LIBDIR}/test/custom_render_test.rb
 ${GEM_LIBDIR}/test/html_render_test.rb
+${GEM_LIBDIR}/test/html_toc_render_test.rb
 ${GEM_LIBDIR}/test/markdown_test.rb
 ${GEM_LIBDIR}/test/pathological_inputs_test.rb
 ${GEM_LIBDIR}/test/redcarpet_compat_test.rb
