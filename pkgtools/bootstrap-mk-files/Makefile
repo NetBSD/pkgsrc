@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2014/03/03 03:30:53 obache Exp $
+# $NetBSD: Makefile,v 1.41 2014/03/14 22:03:16 ryoon Exp $
 
-PKGNAME=	bootstrap-mk-files-20131207
+PKGNAME=	bootstrap-mk-files-20140314
 CATEGORIES=	pkgtools
 
 CONFLICTS+=	mk-files-[0-9]*
