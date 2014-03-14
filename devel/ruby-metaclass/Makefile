@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/09/12 11:46:27 taca Exp $
+# $NetBSD: Makefile,v 1.2 2014/03/14 16:08:18 taca Exp $
 
-DISTNAME=	metaclass-0.0.1
+DISTNAME=	metaclass-0.0.4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
