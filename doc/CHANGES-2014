@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1123 2014/03/14 17:55:00 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1124 2014/03/14 17:56:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1677,3 +1677,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated print/ruby-prawn to 0.15.0 [taca 2014-03-14]
 	Updated security/ruby-bcrypt to 3.1.7 [taca 2014-03-14]
 	Updated security/ruby-net-ssh to 2.8.0 [taca 2014-03-14]
+	Updated security/ruby-shadow to 2.3.3 [taca 2014-03-14]
