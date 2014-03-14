@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2012/09/16 14:24:12 taca Exp $
+$NetBSD: distinfo,v 1.7 2014/03/14 18:22:03 taca Exp $
 
-SHA1 (maruku-0.6.1.gem) = 67d0331ba51730a2fc3101a87c438aef136e7e90
-RMD160 (maruku-0.6.1.gem) = 53f7c067088f17b59176e54a68cff7c0cb6fb24f
-Size (maruku-0.6.1.gem) = 150528 bytes
-SHA1 (patch-aa) = 8efb749b4372814901731bf998aa595eab9da651
+SHA1 (maruku-0.7.1.gem) = f4f93a2e930b2711aa1f7572be2271a4638978e8
+RMD160 (maruku-0.7.1.gem) = 849c580ac87b0c21e49ce73a2813511264e1ef5f
+Size (maruku-0.7.1.gem) = 144896 bytes
