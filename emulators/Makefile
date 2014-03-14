@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.210 2014/03/13 07:24:05 jnemeth Exp $
+# $NetBSD: Makefile,v 1.211 2014/03/14 04:10:10 dholland Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -290,6 +290,7 @@ SUBDIR+=	suse131_qt4
 SUBDIR+=	suse131_slang
 SUBDIR+=	suse131_x11
 SUBDIR+=	swarm
+SUBDIR+=	sys161
 SUBDIR+=	tme
 SUBDIR+=	tuxnes
 SUBDIR+=	twin
