@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2013/09/15 16:16:26 taca Exp $
+$NetBSD: distinfo,v 1.14 2014/03/14 18:09:53 taca Exp $
 
-SHA1 (haml-4.0.3.gem) = e1c9efff4f7e24ec2775089c51d8d57866bfe00c
-RMD160 (haml-4.0.3.gem) = 6ec5eb7aec9a7ea050ca1fad7adc8a42c87856d3
-Size (haml-4.0.3.gem) = 115712 bytes
+SHA1 (haml-4.0.5.gem) = 9cafd882b5eb29d3312afbf67028275cfe8e8770
+RMD160 (haml-4.0.5.gem) = 34e439308337496b56ef883f4cfd97a2f85e6ded
+Size (haml-4.0.5.gem) = 116736 bytes
