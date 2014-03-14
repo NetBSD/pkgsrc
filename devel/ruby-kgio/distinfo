@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2013/09/15 10:04:04 taca Exp $
+$NetBSD: distinfo,v 1.6 2014/03/14 15:42:16 taca Exp $
 
-SHA1 (kgio-2.8.1.gem) = 027b1dafd1f5544954afd591dba99f4e2e30756b
-RMD160 (kgio-2.8.1.gem) = e1d3dcbf11a9d0a9d8ed3ac092d744a5f4518573
-Size (kgio-2.8.1.gem) = 80896 bytes
+SHA1 (kgio-2.9.2.gem) = 425e77117fa2eb70ae5d0f7cc517b9e2b3c50bcc
+RMD160 (kgio-2.9.2.gem) = ab404768375b30693aaf553701774d55ca4436c5
+Size (kgio-2.9.2.gem) = 84992 bytes
