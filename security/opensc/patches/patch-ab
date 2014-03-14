@@ -1,15 +1,15 @@
-$NetBSD: patch-ab,v 1.3 2012/11/30 14:44:34 gdt Exp $
+$NetBSD: patch-ab,v 1.4 2014/03/14 20:49:56 gdt Exp $
 
 This patch was added 2009-09-10 by hasso@, with comment:
   More userfriendly default configuration.
 
---- etc/opensc.conf.in.orig	2011-07-05 11:28:53.000000000 +0000
+--- etc/opensc.conf.in.orig	2012-12-04 14:43:40.000000000 +0000
 +++ etc/opensc.conf.in
-@@ -309,6 +309,7 @@ app default {
+@@ -453,6 +453,7 @@ app default {
  		#
  		# Default: no
  		# try_emulation_first = yes;
 +		try_emulation_first = yes;
- 		
+ 
  		# Enable builtin emulators.
  		# Default: yes
