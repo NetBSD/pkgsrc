@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2013/12/06 10:35:17 obache Exp $
+# $NetBSD: Makefile,v 1.3 2014/03/14 09:00:11 obache Exp $
 
 DISTNAME=	suse_pulseaudio-${SUSE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
-RPMPKGS+=	libpulse0-4.0.git.270.g9490a-1.1.${SUSE_ARCH}
+RPMUPDPKGS+=	libpulse0-4.0.git.270.g9490a-8.1.${SUSE_ARCH}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Linux compatibility package for Pulseaudio
