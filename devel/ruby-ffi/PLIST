@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.9 2013/06/16 15:00:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2014/03/14 15:33:42 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/ffi_c.${RUBY_DLEXT}
 ${GEM_LIBDIR}/COPYING
-${GEM_LIBDIR}/COPYING.LESSER
-${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
@@ -50,7 +49,6 @@ ${GEM_LIBDIR}/ext/ffi_c/Types.c
 ${GEM_LIBDIR}/ext/ffi_c/Types.h
 ${GEM_LIBDIR}/ext/ffi_c/Variadic.c
 ${GEM_LIBDIR}/ext/ffi_c/compat.h
-${GEM_LIBDIR}/ext/ffi_c/cruby-ext.iml
 ${GEM_LIBDIR}/ext/ffi_c/extconf.rb
 ${GEM_LIBDIR}/ext/ffi_c/ffi.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi.bsd.mk
@@ -342,7 +340,6 @@ ${GEM_LIBDIR}/lib/ffi/buffer.rb
 ${GEM_LIBDIR}/lib/ffi/callback.rb
 ${GEM_LIBDIR}/lib/ffi/enum.rb
 ${GEM_LIBDIR}/lib/ffi/errno.rb
-${GEM_LIBDIR}/lib/ffi/ffi.iml
 ${GEM_LIBDIR}/lib/ffi/ffi.rb
 ${GEM_LIBDIR}/lib/ffi/io.rb
 ${GEM_LIBDIR}/lib/ffi/library.rb
@@ -370,6 +367,7 @@ ${GEM_LIBDIR}/lib/ffi/platform/s390x-linux/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/sparc-linux/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/sparc-solaris/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/sparcv9-solaris/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/x86_64-cygwin/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/x86_64-darwin/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/x86_64-freebsd/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/x86_64-linux/types.conf
@@ -426,7 +424,6 @@ ${GEM_LIBDIR}/spec/ffi/rbx/attach_function_spec.rb
 ${GEM_LIBDIR}/spec/ffi/rbx/memory_pointer_spec.rb
 ${GEM_LIBDIR}/spec/ffi/rbx/spec_helper.rb
 ${GEM_LIBDIR}/spec/ffi/rbx/struct_spec.rb
-${GEM_LIBDIR}/spec/ffi/spec.iml
 ${GEM_LIBDIR}/spec/ffi/spec_helper.rb
 ${GEM_LIBDIR}/spec/ffi/string_spec.rb
 ${GEM_LIBDIR}/spec/ffi/strptr_spec.rb
