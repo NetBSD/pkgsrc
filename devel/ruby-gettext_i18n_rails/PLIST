@@ -1,22 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2013/09/15 10:01:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/03/14 15:39:42 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.travis.yml
-${GEM_LIBDIR}/Appraisals
-${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/Gemfile.lock
-${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/Readme.md
-${GEM_LIBDIR}/gemfiles/rails23.gemfile
-${GEM_LIBDIR}/gemfiles/rails23.gemfile.lock
-${GEM_LIBDIR}/gemfiles/rails30.gemfile
-${GEM_LIBDIR}/gemfiles/rails30.gemfile.lock
-${GEM_LIBDIR}/gemfiles/rails31.gemfile
-${GEM_LIBDIR}/gemfiles/rails31.gemfile.lock
-${GEM_LIBDIR}/gemfiles/rails32.gemfile
-${GEM_LIBDIR}/gemfiles/rails32.gemfile.lock
-${GEM_LIBDIR}/gettext_i18n_rails.gemspec
-${GEM_LIBDIR}/init.rb
+${GEM_LIBDIR}/MIT-LICENSE.txt
 ${GEM_LIBDIR}/lib/gettext_i18n_rails.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/action_controller.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/active_model.rb
@@ -37,14 +21,4 @@ ${GEM_LIBDIR}/lib/gettext_i18n_rails/string_interpolate_fix.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/tasks.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/version.rb
 ${GEM_LIBDIR}/lib/tasks/gettext_rails_i18n.rake
-${GEM_LIBDIR}/spec/gettext_i18n_rails/action_controller_spec.rb
-${GEM_LIBDIR}/spec/gettext_i18n_rails/active_model/name_spec.rb
-${GEM_LIBDIR}/spec/gettext_i18n_rails/active_record_spec.rb
-${GEM_LIBDIR}/spec/gettext_i18n_rails/backend_spec.rb
-${GEM_LIBDIR}/spec/gettext_i18n_rails/haml_parser_spec.rb
-${GEM_LIBDIR}/spec/gettext_i18n_rails/model_attributes_finder_spec.rb
-${GEM_LIBDIR}/spec/gettext_i18n_rails/slim_parser_spec.rb
-${GEM_LIBDIR}/spec/gettext_i18n_rails/string_interpolate_fix_spec.rb
-${GEM_LIBDIR}/spec/gettext_i18n_rails_spec.rb
-${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
