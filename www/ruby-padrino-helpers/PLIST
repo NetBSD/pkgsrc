@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/09/15 18:25:49 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/03/14 19:18:31 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
@@ -85,6 +85,12 @@ ${GEM_LIBDIR}/test/fixtures/markup_app/views/simple_partial.erb
 ${GEM_LIBDIR}/test/fixtures/markup_app/views/simple_partial.haml
 ${GEM_LIBDIR}/test/fixtures/markup_app/views/simple_partial.slim
 ${GEM_LIBDIR}/test/fixtures/render_app/app.rb
+${GEM_LIBDIR}/test/fixtures/render_app/views/_deep.erb
+${GEM_LIBDIR}/test/fixtures/render_app/views/_deep.haml
+${GEM_LIBDIR}/test/fixtures/render_app/views/_deep.slim
+${GEM_LIBDIR}/test/fixtures/render_app/views/_partial_block_erb.erb
+${GEM_LIBDIR}/test/fixtures/render_app/views/_partial_block_haml.haml
+${GEM_LIBDIR}/test/fixtures/render_app/views/_partial_block_slim.slim
 ${GEM_LIBDIR}/test/fixtures/render_app/views/current_engine.haml
 ${GEM_LIBDIR}/test/fixtures/render_app/views/current_engines/_erb.erb
 ${GEM_LIBDIR}/test/fixtures/render_app/views/current_engines/_haml.haml
@@ -95,9 +101,15 @@ ${GEM_LIBDIR}/test/fixtures/render_app/views/double_capture_slim.slim
 ${GEM_LIBDIR}/test/fixtures/render_app/views/erb/test.erb
 ${GEM_LIBDIR}/test/fixtures/render_app/views/explicit_engine.haml
 ${GEM_LIBDIR}/test/fixtures/render_app/views/haml/test.haml
+${GEM_LIBDIR}/test/fixtures/render_app/views/render_block_erb.erb
+${GEM_LIBDIR}/test/fixtures/render_app/views/render_block_haml.haml
+${GEM_LIBDIR}/test/fixtures/render_app/views/render_block_slim.slim
 ${GEM_LIBDIR}/test/fixtures/render_app/views/template/_user.haml
 ${GEM_LIBDIR}/test/fixtures/render_app/views/template/haml_template.haml
 ${GEM_LIBDIR}/test/fixtures/render_app/views/template/some_template.haml
+${GEM_LIBDIR}/test/fixtures/render_app/views/wrong_capture_erb.erb
+${GEM_LIBDIR}/test/fixtures/render_app/views/wrong_capture_haml.haml
+${GEM_LIBDIR}/test/fixtures/render_app/views/wrong_capture_slim.slim
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/test_asset_tag_helpers.rb
 ${GEM_LIBDIR}/test/test_breadcrumb_helpers.rb

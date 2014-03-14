@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/09/15 18:25:49 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/03/14 19:18:31 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
@@ -32,7 +32,9 @@ ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/font-awesome/mixins.less
 ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/font-awesome/path.less
 ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/font-awesome/variables.less
 ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/forms.less
+${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/glyphicons.less
 ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/grid.less
+${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/input-groups.less
 ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/jumbotron.less
 ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/labels.less
 ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/list-group.less
@@ -52,6 +54,7 @@ ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/progress-bars.less
 ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/responsive-utilities.less
 ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/scaffolding.less
 ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/tables.less
+${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/theme.less
 ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/thumbnails.less
 ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/tooltip.less
 ${GEM_LIBDIR}/lib/padrino-admin/bootstrap-less/type.less
