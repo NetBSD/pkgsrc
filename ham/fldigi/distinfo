@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.16 2013/09/17 21:12:25 joerg Exp $
+$NetBSD: distinfo,v 1.17 2014/03/14 14:39:22 mef Exp $
 
-SHA1 (fldigi-3.21.76.tar.gz) = c5affcedd19410d02e176e38914787278a21ec44
-RMD160 (fldigi-3.21.76.tar.gz) = b9261eb62b75c238dc3ad790b66e35f52255d29b
-Size (fldigi-3.21.76.tar.gz) = 2537663 bytes
+SHA1 (fldigi-3.21.79.tar.gz) = d00d29997eb809046f43231f2815d10c8f01a85d
+RMD160 (fldigi-3.21.79.tar.gz) = 5c3f949f36edbc8f156d215e18982718aaec3633
+Size (fldigi-3.21.79.tar.gz) = 2646946 bytes
 SHA1 (patch-src_dominoex_dominoex.cxx) = 39d2d2e75497ec5264148bc4927278df5adaa84d
-SHA1 (patch-src_include_logsupport.h) = f5981f5dde6c9dc4f6df9318ceaff908a142e795
+SHA1 (patch-src_include_logsupport.h) = 2291272db0ddba2d106f4006143df96e2d466e4b
 SHA1 (patch-src_include_qrunner.h) = 5dac7e9fd52f10c66978a854963bd03d39a729d0
-SHA1 (patch-src_include_strutil.h) = b12f49bddc839991a9dac8f0d38439c3e34c268f
+SHA1 (patch-src_include_strutil.h) = e35090f545ce957cf67d408e469c203e29fb7447
 SHA1 (patch-src_logbook_logsupport.cxx) = bffff9fe6ee6f07596fa1e65208377d17b822263
 SHA1 (patch-src_misc_configuration.cxx) = 4f1940b0ff9d51418b37d01636c1a45f9a392943
 SHA1 (patch-src_misc_dxcc.cxx) = 23533d5062d731b56c7f7b2e9e4cac0b2b4f7194
