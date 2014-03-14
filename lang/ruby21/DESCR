@@ -1,0 +1,6 @@
+This a meta package including Ruby 2.1.1 full release.
+
+It includes ruby211-base, ruby211-gdbm, ruby211-fiddle, ruby211-readline
+and ruby211-tk package.
+
+No package should depend on this package directly.
