@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1149 2014/03/14 19:20:17 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1150 2014/03/14 19:22:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1710,3 +1710,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/ruby-padrino-helpers to 0.12.0 [taca 2014-03-14]
 	Updated www/ruby-padrino-mailer to 0.12.0 [taca 2014-03-14]
 	Updated www/ruby-padrino to 0.12.0 [taca 2014-03-14]
+	Updated www/ruby-puma to 2.8.1 [taca 2014-03-14]
