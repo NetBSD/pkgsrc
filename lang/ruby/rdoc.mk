@@ -1,4 +1,4 @@
-# $NetBSD: rdoc.mk,v 1.19 2014/02/09 05:15:21 taca Exp $
+# $NetBSD: rdoc.mk,v 1.20 2014/03/14 19:33:10 taca Exp $
 
 .if !defined(_RUBY_RDOC_MK)
 _RUBY_RDOC_MK=	# defined
@@ -7,14 +7,7 @@ _RUBY_RDOC_MK=	# defined
 # === Package-settable variables ===
 #
 # RUBY_RDOC_REQD
-#	Specify later version of rdoc.  Ruby base packages contain:
-#
-#		ruby18-base:	rdoc 1.0.1 - 20041108
-#		ruby193-base:	rdoc 3.9.4
-#		ruby200-base:	rdoc 4.0.0
-#
-#	If a package has a trouble with these version, please specify the
-#	version of rdoc to RDOC_REQD.
+#	Specify minimum version of rdoc.
 #
 
 .if !empty(RUBY_RDOC_REQD)
