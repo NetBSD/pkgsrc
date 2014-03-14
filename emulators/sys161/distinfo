@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/03/14 04:09:31 dholland Exp $
+
+SHA1 (sys161-1.99.07.tar.gz) = 45fae58582ad8120b7b0586f4615f53c4a0a1a6e
+RMD160 (sys161-1.99.07.tar.gz) = 597e93080d62dfb42e28ca99bdf5cd8cef7a81af
+Size (sys161-1.99.07.tar.gz) = 141830 bytes
