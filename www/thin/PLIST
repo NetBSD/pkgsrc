@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2012/09/16 13:40:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/03/14 19:31:19 taca Exp $
 bin/thin
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/thin_parser.${RUBY_DLEXT}
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
