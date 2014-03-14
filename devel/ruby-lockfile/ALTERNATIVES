@@ -1,1 +1,1 @@
-bin/rlock @PREFIX@/bin/rlock@RUBY_VER@
+bin/rlock @PREFIX@/bin/rlock@RUBY_SUFFIX@
