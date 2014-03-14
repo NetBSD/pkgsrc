@@ -1,19 +1,22 @@
-@comment $NetBSD: PLIST,v 1.2 2013/09/15 17:39:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/03/14 19:21:27 taca Exp $
 bin/puma
 bin/pumactl
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/puma/puma_http11.${RUBY_DLEXT}
 ${GEM_LIBDIR}/COPYING
+${GEM_LIBDIR}/DEPLOYMENT.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/TODO
 ${GEM_LIBDIR}/bin/puma
+${GEM_LIBDIR}/bin/puma-wild
 ${GEM_LIBDIR}/bin/pumactl
 ${GEM_LIBDIR}/docs/config.md
 ${GEM_LIBDIR}/docs/nginx.md
+${GEM_LIBDIR}/docs/signals.md
 ${GEM_LIBDIR}/ext/puma_http11/PumaHttp11Service.java
 ${GEM_LIBDIR}/ext/puma_http11/ext_help.h
 ${GEM_LIBDIR}/ext/puma_http11/extconf.rb
