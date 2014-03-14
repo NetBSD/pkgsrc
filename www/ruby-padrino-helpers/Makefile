@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/02/11 14:39:08 taca Exp $
+# $NetBSD: Makefile,v 1.2 2014/03/14 19:18:31 taca Exp $
 
 DISTNAME=	padrino-helpers-${RUBY_PADRINO_VERS}
 CATEGORIES=	www
@@ -9,7 +9,7 @@ COMMENT=	Helpers for padrino
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-padrino-core>=${RUBY_PADRINO_VERS}:../../www/ruby-padrino-core
-DEPENDS+=	${RUBY_PKGPREFIX}-i18n>=0.6<1:../../devel/ruby-i18n
+DEPENDS+=	${RUBY_PKGPREFIX}-i18n>=0.6.7<1:../../devel/ruby-i18n
 
 .include "../../www/ruby-padrino/Makefile.common"
 .include "../../lang/ruby/gem.mk"

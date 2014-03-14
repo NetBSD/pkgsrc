@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/09/15 18:25:49 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/03/14 19:18:31 taca Exp $
 bin/padrino
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
@@ -10,13 +10,14 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/padrino
 ${GEM_LIBDIR}/lib/padrino-core.rb
 ${GEM_LIBDIR}/lib/padrino-core/application.rb
+${GEM_LIBDIR}/lib/padrino-core/application/authenticity_token.rb
 ${GEM_LIBDIR}/lib/padrino-core/application/flash.rb
 ${GEM_LIBDIR}/lib/padrino-core/application/rendering.rb
 ${GEM_LIBDIR}/lib/padrino-core/application/rendering/extensions/erubis.rb
 ${GEM_LIBDIR}/lib/padrino-core/application/rendering/extensions/haml.rb
 ${GEM_LIBDIR}/lib/padrino-core/application/rendering/extensions/slim.rb
 ${GEM_LIBDIR}/lib/padrino-core/application/routing.rb
-${GEM_LIBDIR}/lib/padrino-core/application/showexceptions.rb
+${GEM_LIBDIR}/lib/padrino-core/application/show_exceptions.rb
 ${GEM_LIBDIR}/lib/padrino-core/caller.rb
 ${GEM_LIBDIR}/lib/padrino-core/cli/adapter.rb
 ${GEM_LIBDIR}/lib/padrino-core/cli/base.rb
@@ -52,6 +53,8 @@ ${GEM_LIBDIR}/lib/padrino-core/logger.rb
 ${GEM_LIBDIR}/lib/padrino-core/module.rb
 ${GEM_LIBDIR}/lib/padrino-core/mounter.rb
 ${GEM_LIBDIR}/lib/padrino-core/reloader.rb
+${GEM_LIBDIR}/lib/padrino-core/reloader/rack.rb
+${GEM_LIBDIR}/lib/padrino-core/reloader/storage.rb
 ${GEM_LIBDIR}/lib/padrino-core/router.rb
 ${GEM_LIBDIR}/lib/padrino-core/server.rb
 ${GEM_LIBDIR}/lib/padrino-core/support_lite.rb
@@ -66,7 +69,17 @@ ${GEM_LIBDIR}/test/fixtures/app_gem/lib/app_gem/version.rb
 ${GEM_LIBDIR}/test/fixtures/apps/.components
 ${GEM_LIBDIR}/test/fixtures/apps/.gitignore
 ${GEM_LIBDIR}/test/fixtures/apps/complex.rb
+${GEM_LIBDIR}/test/fixtures/apps/helpers/system_helpers.rb
+${GEM_LIBDIR}/test/fixtures/apps/kiq.rb
+${GEM_LIBDIR}/test/fixtures/apps/lib/myklass.rb
+${GEM_LIBDIR}/test/fixtures/apps/lib/myklass/mysubklass.rb
+${GEM_LIBDIR}/test/fixtures/apps/models/child.rb
+${GEM_LIBDIR}/test/fixtures/apps/models/parent.rb
+${GEM_LIBDIR}/test/fixtures/apps/render.rb
 ${GEM_LIBDIR}/test/fixtures/apps/simple.rb
+${GEM_LIBDIR}/test/fixtures/apps/static.rb
+${GEM_LIBDIR}/test/fixtures/apps/system.rb
+${GEM_LIBDIR}/test/fixtures/apps/views/blog/post.erb
 ${GEM_LIBDIR}/test/fixtures/dependencies/a.rb
 ${GEM_LIBDIR}/test/fixtures/dependencies/b.rb
 ${GEM_LIBDIR}/test/fixtures/dependencies/c.rb
@@ -74,6 +87,7 @@ ${GEM_LIBDIR}/test/fixtures/dependencies/circular/e.rb
 ${GEM_LIBDIR}/test/fixtures/dependencies/circular/f.rb
 ${GEM_LIBDIR}/test/fixtures/dependencies/circular/g.rb
 ${GEM_LIBDIR}/test/fixtures/dependencies/d.rb
+${GEM_LIBDIR}/test/fixtures/layouts/layout.erb
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/mini_shoulda.rb
 ${GEM_LIBDIR}/test/test_application.rb
@@ -87,6 +101,7 @@ ${GEM_LIBDIR}/test/test_logger.rb
 ${GEM_LIBDIR}/test/test_mounter.rb
 ${GEM_LIBDIR}/test/test_reloader_complex.rb
 ${GEM_LIBDIR}/test/test_reloader_simple.rb
+${GEM_LIBDIR}/test/test_reloader_system.rb
 ${GEM_LIBDIR}/test/test_rendering.rb
 ${GEM_LIBDIR}/test/test_rendering_extensions.rb
 ${GEM_LIBDIR}/test/test_restful_routing.rb
