@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/03/14 09:16:11 obache Exp $
+# $NetBSD: Makefile,v 1.4 2014/03/14 09:21:10 obache Exp $
 
 DISTNAME=	suse_base-${SUSE_VERSION}
 PKGREVISION=	2
@@ -8,7 +8,7 @@ RPMPKGS+=	bash-4.2-68.1.5.${SUSE_ARCH}
 RPMUPDPKGS+=	coreutils-8.21-7.12.1.${SUSE_ARCH}
 RPMPKGS+=	findutils-4.5.12-1.1.${SUSE_ARCH}
 RPMPKGS+=	libgdbm4-1.10-7.1.2.${SUSE_ARCH}
-RPMPKGS+=	glibc-2.18-4.4.1.${SUSE_ARCH}
+RPMUPDPKGS+=	glibc-2.18-4.11.1.${SUSE_ARCH}
 RPMPKGS+=	keyutils-1.5.5-6.1.3.${SUSE_ARCH}
 RPMPKGS+=	libacl1-2.2.52-2.1.2.${SUSE_ARCH}
 RPMPKGS+=	libattr1-2.4.47-2.1.2.${SUSE_ARCH}
