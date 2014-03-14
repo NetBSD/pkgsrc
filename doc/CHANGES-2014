@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1061 2014/03/14 07:55:11 spz Exp $
+$NetBSD: CHANGES-2014,v 1.1062 2014/03/14 09:00:25 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1608,3 +1608,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/freetype2 to 2.5.3 [spz 2014-03-13]
 	Added lang/py-pythonz version 1.2.1 [rodent 2014-03-14]
 	Added emulators/sys161 version 1.99.07 [dholland 2014-03-14]
+	Updated emulators/suse131_pulseaudio to 13.1nb2 [obache 2014-03-14]
