@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1067 2014/03/14 09:45:17 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1068 2014/03/14 09:45:45 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1614,3 +1614,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/suse131_glx to 13.1nb1 [obache 2014-03-14]
 	Updated emulators/suse131_x11 to 13.1nb4 [obache 2014-03-14]
 	Updated emulators/suse131_fontconfig to 13.1nb1 [obache 2014-03-14]
+	Updated pkgtools/pbulk-base to 0.48 [jperkin 2014-03-14]
