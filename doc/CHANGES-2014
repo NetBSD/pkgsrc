@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1076 2014/03/14 14:49:54 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1077 2014/03/14 14:55:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1623,3 +1623,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/ruby-rdoc to 4.1.1 [taca 2014-03-14]
 	Updated ham/fldigi to 3.21.79 [mef 2014-03-14]
 	Updated databases/ruby-hiera to 1.3.2 [taca 2014-03-14]
+	Added databases/ruby-moneta version 0.7.20 [taca 2014-03-14]
