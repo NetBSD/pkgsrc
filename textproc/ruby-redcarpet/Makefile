@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2013/09/15 16:26:30 taca Exp $
+# $NetBSD: Makefile,v 1.2 2014/03/14 18:23:34 taca Exp $
 
-DISTNAME=	redcarpet-3.0.0
+DISTNAME=	redcarpet-3.1.1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/vmg/redcarpet
+HOMEPAGE=	https://github.com/vmg/redcarpet/
 COMMENT=	Markdown that smells nice
 LICENSE=	mit
 
