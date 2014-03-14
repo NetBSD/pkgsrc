@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.203 2014/03/10 20:50:35 asau Exp $
+# $NetBSD: bootstrap,v 1.204 2014/03/14 21:52:13 ryoon Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -760,6 +760,17 @@ QNX)
 	groupsprog="id -gn"
 	whoamiprog="id -un"
 	machine_arch=`uname -p | sed -e 's/x86/i386/'`
+	;;
+SCO_SV)
+	root_group=root
+	need_awk=yes
+	need_bsd_install=yes
+	need_sed=yes
+	set_opsys=no
+	whoamiprog='id -u'
+	groupsprog='id -g'
+	# /bin/sh under OpenServer 5.0.7/3.2 breaks bmake tests.
+	#bmakexargs="$bmakexargs --with-defshell=/bin/ksh"
 	;;
 SunOS)
 	root_group=root
