@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/09/15 13:34:36 taca Exp $
+$NetBSD: distinfo,v 1.4 2014/03/14 17:10:02 taca Exp $
 
-SHA1 (color-1.4.2.gem) = 47c87aa534b1f93a78963e0ef9335d1e4985b32b
-RMD160 (color-1.4.2.gem) = cb1762464ce1d0f3946631c817222f433133711b
-Size (color-1.4.2.gem) = 40448 bytes
+SHA1 (color-1.5.1.gem) = f0946fa1c47155a55e2d8b5b9d5b877e3a7fb26e
+RMD160 (color-1.5.1.gem) = 648319250a0e87baccc6e61460f0f09dda9c01f6
+Size (color-1.5.1.gem) = 44032 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/09/15 13:34:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/03/14 17:10:02 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.hoerc
@@ -17,8 +17,8 @@ ${GEM_LIBDIR}/lib/color/palette.rb
 ${GEM_LIBDIR}/lib/color/palette/adobecolor.rb
 ${GEM_LIBDIR}/lib/color/palette/gimp.rb
 ${GEM_LIBDIR}/lib/color/palette/monocontrast.rb
-${GEM_LIBDIR}/lib/color/rgb-colors.rb
 ${GEM_LIBDIR}/lib/color/rgb.rb
+${GEM_LIBDIR}/lib/color/rgb/colors.rb
 ${GEM_LIBDIR}/lib/color/rgb/metallic.rb
 ${GEM_LIBDIR}/lib/color/yiq.rb
 ${GEM_LIBDIR}/test/test_adobecolor.rb
