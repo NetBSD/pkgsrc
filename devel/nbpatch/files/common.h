@@ -1,7 +1,7 @@
 /*
  * $OpenBSD: common.h,v 1.26 2006/03/11 19:41:30 otto Exp $
  * $DragonFly: src/usr.bin/patch/common.h,v 1.5 2008/08/10 23:50:12 joerg Exp $
- * $NetBSD: common.h,v 1.3 2009/06/05 20:00:26 joerg Exp $
+ * $NetBSD: common.h,v 1.4 2014/03/14 22:13:09 ryoon Exp $
  */
 
 /*
@@ -60,6 +60,16 @@
 
 #define ORIGEXT ".orig"
 #define REJEXT ".rej"
+
+/*
+ * SCO OpenServer 5.0.7/3.2 has no MAXPATHLEN, but it has PATH_MAX (256).
+ * in limits.h. But it is not usable under ordinal condition.
+ */
+#if !defined(MAXPATHLEN)
+#if defined(_SCO_DS)
+#define MAXPATHLEN	1024
+#endif
+#endif
 
 /* handy definitions */
 
