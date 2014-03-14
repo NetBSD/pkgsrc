@@ -1,0 +1,13 @@
+$NetBSD: patch-template_verconf.h.in,v 1.1 2014/03/14 19:40:47 taca Exp $
+
+--- template/verconf.h.in.orig	2013-05-16 13:35:44.000000000 +0000
++++ template/verconf.h.in
+@@ -8,7 +8,7 @@
+ % elsif !C["RUBY_LIB_VERSION"]
+ #define RUBY_LIB_VERSION_STYLE		3	/* full */
+ % else
+-#define RUBY_LIB_VERSION		${RUBY_LIB_VERSION}
++#define RUBY_LIB_VERSION		"${RUBY_LIB_VERSION}"
+ % end
+ #define RUBY_EXEC_PREFIX		"<%='${RUBY_EXEC_PREFIX}' if C['RUBY_EXEC_PREFIX']%>"
+ #define RUBY_LIB_PREFIX 		"${rubylibprefix}"
