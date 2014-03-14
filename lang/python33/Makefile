@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/03/12 10:42:42 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2014/03/14 14:04:07 ryoon Exp $
 
 .include "dist.mk"
 
@@ -11,6 +11,9 @@ COMMENT=	Interpreted, interactive, object-oriented programming language
 LICENSE=	python-software-foundation
 
 CONFLICTS+=	python-[0-9]*
+
+# Trigger PY_PEP3147=yes in PYTHON_VERSION_DEFAULT={26,27} case.
+PYTHON_VERSION_REQD=	33
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-threads
