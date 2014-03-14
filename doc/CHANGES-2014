@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1113 2014/03/14 17:14:03 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1114 2014/03/14 17:19:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1664,3 +1664,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/ruby-color to 1.5.1 [taca 2014-03-14]
 	Updated graphics/ruby-mini-magick to 3.7.0 [taca 2014-03-14]
 	Updated graphics/ruby-oily_png to 1.1.1 [taca 2014-03-14]
+	Updated lang/ruby-coffee-script-source to 1.7.0 [taca 2014-03-14]
