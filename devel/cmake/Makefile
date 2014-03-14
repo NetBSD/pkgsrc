@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.85 2014/02/12 23:17:45 tron Exp $
+# $NetBSD: Makefile,v 1.86 2014/03/14 22:47:44 asau Exp $
 
 DISTNAME=	cmake-${CMAKE_API}.12.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.cmake.org/files/v${CMAKE_API}/
 
@@ -61,6 +61,7 @@ pre-configure:
 
 BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=2.8.4
 .include "../../archivers/libarchive/buildlink3.mk"
+.include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
