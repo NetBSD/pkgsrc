@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.343 2014/03/07 14:52:12 jperkin Exp $
+# $NetBSD: bsd.prefs.mk,v 1.344 2014/03/14 22:05:18 ryoon Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -295,6 +295,19 @@ _UNAME_V!=		${UNAME} -v
 OS_VARIANT=		SmartOS
 .  elif !empty(_UNAME_V:Momnios-*)
 OS_VARIANT=		OmniOS
+.  endif
+
+.elif ${OPSYS} == "SCO_SV"
+SCO_RELEASE!=		${UNAME} -r
+SCO_VERSION!=		${UNAME} -v
+LOWER_VENDOR?=		pc
+LOWER_OPSYS?=		sco${SCO_RELEASE}v${SCO_VERSION}
+MACHINE_GNU_PLATFORM?=	${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
+_UNAME_V!=		${UNAME} -v
+.  if !empty(_UNAME_V:M5.0*)
+OS_VARIANT=		SCOOSR5
+.  elif !empty(_UNAME_V:M6.0*)
+OS_VARIANT=		SCOOSR6
 .  endif
 
 .elif ${OPSYS} == "Minix"
