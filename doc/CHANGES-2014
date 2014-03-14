@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1084 2014/03/14 15:29:32 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1085 2014/03/14 15:34:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1631,3 +1631,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/ruby-backports to 3.6.0 [taca 2014-03-14]
 	Updated devel/ruby-daemon_controller to 1.2.0 [taca 2014-03-14]
 	Updated devel/ruby-fast_gettext to 0.8.1 [taca 2014-03-14]
+	Updated devel/ruby-ffi to 1.9.3 [taca 2014-03-14]
