@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/09/15 16:31:27 taca Exp $
+# $NetBSD: Makefile,v 1.2 2014/03/14 18:27:35 taca Exp $
 
-DISTNAME=	safe_yaml-0.9.5
+DISTNAME=	safe_yaml-1.0.1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
