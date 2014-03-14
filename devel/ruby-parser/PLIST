@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/09/15 10:11:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/03/14 16:16:52 taca Exp $
 bin/ruby_parse
 bin/ruby_parse_extract_error
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -10,7 +10,7 @@ ${GEM_LIBDIR}/README.txt
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/ruby_parse
 ${GEM_LIBDIR}/bin/ruby_parse_extract_error
-${GEM_LIBDIR}/lib/gauntlet_rubyparser.rb
+${GEM_LIBDIR}/lib/.document
 ${GEM_LIBDIR}/lib/ruby18_parser.rb
 ${GEM_LIBDIR}/lib/ruby18_parser.y
 ${GEM_LIBDIR}/lib/ruby19_parser.rb
@@ -18,6 +18,8 @@ ${GEM_LIBDIR}/lib/ruby19_parser.y
 ${GEM_LIBDIR}/lib/ruby20_parser.rb
 ${GEM_LIBDIR}/lib/ruby20_parser.y
 ${GEM_LIBDIR}/lib/ruby_lexer.rb
+${GEM_LIBDIR}/lib/ruby_lexer.rex
+${GEM_LIBDIR}/lib/ruby_lexer.rex.rb
 ${GEM_LIBDIR}/lib/ruby_parser.rb
 ${GEM_LIBDIR}/lib/ruby_parser_extras.rb
 ${GEM_LIBDIR}/test/test_ruby_lexer.rb
