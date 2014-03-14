@@ -1,12 +1,16 @@
-@comment $NetBSD: PLIST,v 1.2 2013/07/07 15:32:56 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/03/14 17:55:49 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/shadow.${RUBY_DLEXT}
 ${GEM_LIBDIR}/HISTORY
+${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/MANIFEST
 ${GEM_LIBDIR}/README
 ${GEM_LIBDIR}/README.euc
-${GEM_LIBDIR}/depend
 ${GEM_LIBDIR}/extconf.rb
 ${GEM_LIBDIR}/lib/shadow.${RUBY_DLEXT}
+${GEM_LIBDIR}/pwd/depend
+${GEM_LIBDIR}/pwd/shadow.c
 ${GEM_LIBDIR}/ruby-shadow.gemspec
-${GEM_LIBDIR}/shadow.c
+${GEM_LIBDIR}/shadow/depend
+${GEM_LIBDIR}/shadow/shadow.c
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
