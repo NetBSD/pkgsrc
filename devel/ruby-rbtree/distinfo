@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2013/06/16 16:21:54 taca Exp $
+$NetBSD: distinfo,v 1.7 2014/03/14 16:30:56 taca Exp $
 
-SHA1 (rbtree-0.4.1.gem) = 720c11cd7ff5b317236e2f89197a33f15ca6718c
-RMD160 (rbtree-0.4.1.gem) = a6a8525525ba5de981f297caee4b03934845cf18
-Size (rbtree-0.4.1.gem) = 28160 bytes
+SHA1 (rbtree-0.4.2.gem) = 64faf89d36b4564ee4af8ce72b18889204611d54
+RMD160 (rbtree-0.4.2.gem) = c886da1060ab6fd7ab24d912419032a63895f810
+Size (rbtree-0.4.2.gem) = 30208 bytes
