@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2013/09/15 18:05:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/03/14 18:49:47 taca Exp $
 bin/sass
 bin/sass-convert
 bin/scss
@@ -231,6 +231,8 @@ ${GEM_LIBDIR}/test/sass/templates/script.sass
 ${GEM_LIBDIR}/test/sass/templates/scss_import.scss
 ${GEM_LIBDIR}/test/sass/templates/scss_importee.scss
 ${GEM_LIBDIR}/test/sass/templates/single_import_loop.sass
+${GEM_LIBDIR}/test/sass/templates/subdir/import_up1.scss
+${GEM_LIBDIR}/test/sass/templates/subdir/import_up2.scss
 ${GEM_LIBDIR}/test/sass/templates/subdir/nested_subdir/_nested_partial.sass
 ${GEM_LIBDIR}/test/sass/templates/subdir/nested_subdir/nested_subdir.sass
 ${GEM_LIBDIR}/test/sass/templates/subdir/subdir.sass
