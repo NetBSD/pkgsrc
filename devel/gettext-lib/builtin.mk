@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.44 2013/11/23 11:29:35 obache Exp $
+# $NetBSD: builtin.mk,v 1.45 2014/03/14 22:33:27 ryoon Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -6,13 +6,16 @@ BUILTIN_PKG:=	gettext
 
 BUILTIN_FIND_LIBS:=			intl
 BUILTIN_FIND_HEADERS_VAR:=		H_GETTEXT H_GENTOO_GETTEXT	\
-					H_NGETTEXT_GETTEXT
+					H_NGETTEXT_GETTEXT		\
+					H_OPNSVR5_GETTEXT
 BUILTIN_FIND_HEADERS.H_GETTEXT=		libintl.h
 BUILTIN_FIND_GREP.H_GETTEXT=		\#define[ 	]*__USE_GNU_GETTEXT
 BUILTIN_FIND_HEADERS.H_GENTOO_GETTEXT=	libintl.h
 BUILTIN_FIND_GREP.H_GENTOO_GETTEXT=	gentoo-multilib/.*/libintl.h
 BUILTIN_FIND_HEADERS.H_NGETTEXT_GETTEXT=libintl.h
 BUILTIN_FIND_GREP.H_NGETTEXT_GETTEXT=	char.*ngettext
+BUILTIN_FIND_HEADERS.H_OPNSVR5_GETTEXT=	libintl.h
+BUILTIN_FIND_GREP.H_OPNSVR5_GETTEXT=	libgnuintl.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -26,12 +29,17 @@ BUILTIN_FIND_GREP.H_NGETTEXT_GETTEXT=	char.*ngettext
 # real libintl.h file.  We can safely assume that this is GNU gettext
 # (in glibc).
 #
+# SCO OpenServer 5.0.7/3.2 has an unusual scheme where /usr/include/libintl.h
+# pulls in /usr/include/libgnuintl.h, where the latter is the real libintl.h.
+#
 .if !defined(IS_BUILTIN.gettext)
 IS_BUILTIN.gettext=	no
 .  if (empty(H_GETTEXT:M__nonexistent__) && \
        empty(H_GETTEXT:M${LOCALBASE}/*)) || \
       (empty(H_GENTOO_GETTEXT:M__nonexistent__) && \
-       empty(H_GENTOO_GETTEXT:M${LOCALBASE}/*))
+       empty(H_GENTOO_GETTEXT:M${LOCALBASE}/*)) || \
+      (empty(H_OPNSVR5_GETTEXT:M__nonexistent__) && \
+       empty(H_OPNSVR5_GETTEXT:M${LOCALBASE}/*))
 IS_BUILTIN.gettext=	yes
 .  endif
 .endif
@@ -100,6 +108,9 @@ CHECK_BUILTIN.gettext?=	no
 
 .  if !empty(USE_BUILTIN.gettext:M[yY][eE][sS])
 BUILDLINK_LIBNAME.gettext=	${BUILTIN_LIBNAME.gettext}
+.    if !empty(OS_VARIANT:MSCOOSR5)
+BUILDLINK_PREFIX.gettext=	/usr/gnu
+.    endif
 .    if empty(BUILTIN_LIBNAME.gettext)
 BUILDLINK_TRANSFORM+=		rm:-lintl
 .    endif
