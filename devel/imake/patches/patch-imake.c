@@ -1,8 +1,19 @@
-$NetBSD: patch-imake.c,v 1.4 2013/07/23 06:48:21 wiz Exp $
+$NetBSD: patch-imake.c,v 1.5 2014/03/14 21:14:28 asau Exp $
 
 --- imake.c.orig	2013-07-23 04:53:04.000000000 +0000
 +++ imake.c
-@@ -1337,54 +1337,8 @@ get_gcc_version(FILE *inFile, char *name
+@@ -1158,7 +1158,9 @@ get_binary_format(FILE *inFile)
+   } else
+       strcpy (cmd, "objformat");
+ 
+-  if (osrel >= 300004 &&
++  if (osrel >= 600000)
++    iself = 1;
++  else if (osrel >= 300004 &&
+       (objprog = popen(cmd, "r")) != NULL &&
+       fgets(buf, sizeof(buf), objprog) != NULL &&
+       strncmp(buf, "elf", 3) == 0)
+@@ -1337,54 +1339,8 @@ get_gcc_version(FILE *inFile, char *name
  static boolean
  get_gcc(char *cmd)
  {
