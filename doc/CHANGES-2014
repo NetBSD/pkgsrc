@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1154 2014/03/14 19:30:37 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1155 2014/03/14 19:31:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1715,3 +1715,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/ruby-rack-rewrite to 1.5.0 [taca 2014-03-14]
 	Updated www/ruby-raindrops to 0.13.0 [taca 2014-03-14]
 	Updated www/ruby-sinatra-contrib to 1.4.2 [taca 2014-03-14]
+	Updated www/thin to 1.6.2 [taca 2014-03-14]
