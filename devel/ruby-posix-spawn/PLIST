@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/08/21 04:57:36 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/14 16:28:14 taca Exp $
 bin/posix-spawn-benchmark
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/posix_spawn_ext.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/Gemfile
