@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1069 2014/03/14 09:50:03 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1070 2014/03/14 11:12:03 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1616,3 +1616,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/suse131_fontconfig to 13.1nb1 [obache 2014-03-14]
 	Updated pkgtools/pbulk-base to 0.48 [jperkin 2014-03-14]
 	Updated pkgtools/pkglint to 4.137 [obache 2014-03-14]
+	Updated net/nsd to 4.0.3 [pettai 2014-03-14]
