@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2013/12/05 11:42:15 obache Exp $
+# $NetBSD: Makefile,v 1.2 2014/03/14 09:26:56 obache Exp $
 
 DISTNAME=	suse_glx-${SUSE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	emulators
-RPMPKGS+=	Mesa-9.2.2-61.6.1.${SUSE_ARCH}
-RPMPKGS+=	Mesa-libEGL1-9.2.2-61.6.1.${SUSE_ARCH}
-RPMPKGS+=	Mesa-libGL1-9.2.2-61.6.1.${SUSE_ARCH}
-RPMPKGS+=	Mesa-libglapi0-9.2.2-61.6.1.${SUSE_ARCH}
-RPMPKGS+=	libgbm1-9.2.2-61.6.1.${SUSE_ARCH}
+RPMPKGS+=	Mesa-9.2.3-61.9.1.${SUSE_ARCH}
+RPMPKGS+=	Mesa-libEGL1-9.2.3-61.9.1.${SUSE_ARCH}
+RPMPKGS+=	Mesa-libGL1-9.2.3-61.9.1.${SUSE_ARCH}
+RPMPKGS+=	Mesa-libglapi0-9.2.3-61.9.1.${SUSE_ARCH}
+RPMPKGS+=	libgbm1-9.2.3-61.9.1.${SUSE_ARCH}
 RPMPKGS+=	libwayland-client0-1.2.1-1.1.${SUSE_ARCH}
 RPMPKGS+=	libwayland-server0-1.2.1-1.1.${SUSE_ARCH}
 RPMPKGS+=	libudev1-208-6.1.${SUSE_ARCH}
