@@ -1,0 +1,43 @@
+$NetBSD: patch-configure.ac,v 1.1 2014/03/14 20:49:56 gdt Exp $
+
+Patch taken from upstream post 0.13.0:
+  https://github.com/OpenSC/OpenSC/commit/11ff81367af9bc9dce2cbcb550cc463552a3b69e
+
+--- configure.ac.orig	2012-12-04 14:43:40.000000000 +0000
++++ configure.ac
+@@ -286,23 +286,19 @@ AC_CHECK_LIB(
+ 
+ if test "${WIN32}" = "no"; then
+ 	dnl dl support
+-	AC_CHECK_LIB(
+-		[dl],
+-		[dlopen],
+-		,
+-		[AC_MSG_ERROR([libdl required])]
+-	)
++	dnl https://github.com/OpenSC/OpenSC/commit/11ff81367af9bc9dce2cbcb550cc463552a3b69e
++	AC_SEARCH_LIBS([dlopen], [dl dld], [], [
++				 AC_MSG_ERROR([unable to find the dlopen() function])
++				 ])
++
++case "${host_cpu}-${host_os}" in
++        *netbsd*)
++		acx_pthread_ok=yes
++		PTHREAD_CFLAGS=""
++		PTHREAD_LIBS=""
++	;;
++esac
+ 
+-	dnl Special check for pthread support.
+-	AX_PTHREAD(
+-		[AC_DEFINE(
+-			[HAVE_PTHREAD],
+-			[1],
+-			[Define if you have POSIX threads libraries and header files.]
+-		)],
+-		[AC_MSG_ERROR([POSIX thread support required])]
+-	)
+-	CC="${PTHREAD_CC}"
+ fi
+ 
+ if test "${enable_minidriver}" = "yes"; then

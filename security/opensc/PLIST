@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2012/11/30 14:44:34 gdt Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/03/14 20:49:56 gdt Exp $
 bin/cardos-tool
 bin/cryptoflex-tool
 bin/eidenv
+bin/iasecc-tool
 bin/netkey-tool
+bin/openpgp-tool
 bin/opensc-explorer
 bin/opensc-tool
 bin/piv-tool
@@ -10,18 +12,19 @@ bin/pkcs11-tool
 bin/pkcs15-crypt
 bin/pkcs15-init
 bin/pkcs15-tool
+bin/sc-hsm-tool
 bin/westcos-tool
 lib/libopensc.la
-lib/onepin-opensc-pkcs11.la
 lib/opensc-pkcs11.la
 lib/pkcs11-spy.la
-lib/pkcs11/onepin-opensc-pkcs11.so
 lib/pkcs11/opensc-pkcs11.so
 lib/pkcs11/pkcs11-spy.so
 man/man1/cardos-tool.1
 man/man1/cryptoflex-tool.1
 man/man1/eidenv.1
+man/man1/iasecc-tool.1
 man/man1/netkey-tool.1
+man/man1/openpgp-tool.1
 man/man1/opensc-explorer.1
 man/man1/opensc-tool.1
 man/man1/piv-tool.1
@@ -29,6 +32,7 @@ man/man1/pkcs11-tool.1
 man/man1/pkcs15-crypt.1
 man/man1/pkcs15-init.1
 man/man1/pkcs15-tool.1
+man/man1/sc-hsm-tool.1
 man/man1/westcos-tool.1
 man/man5/pkcs15-profile.5
 share/doc/opensc/NEWS
@@ -38,6 +42,7 @@ share/opensc/authentic.profile
 share/opensc/cardos.profile
 share/opensc/cyberflex.profile
 share/opensc/entersafe.profile
+share/opensc/epass2003.profile
 share/opensc/flex.profile
 share/opensc/gpk.profile
 share/opensc/ias_adele_admin1.profile
@@ -53,9 +58,11 @@ share/opensc/miocos.profile
 share/opensc/muscle.profile
 share/opensc/myeid.profile
 share/opensc/oberthur.profile
+share/opensc/openpgp.profile
 share/opensc/pkcs15.profile
 share/opensc/rutoken.profile
 share/opensc/rutoken_ecp.profile
+share/opensc/sc-hsm.profile
 share/opensc/setcos.profile
 share/opensc/starcos.profile
 share/opensc/westcos.profile
