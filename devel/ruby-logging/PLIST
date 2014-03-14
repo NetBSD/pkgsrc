@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/01/12 09:14:59 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/03/14 15:56:37 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -56,6 +56,7 @@ ${GEM_LIBDIR}/lib/logging/stats.rb
 ${GEM_LIBDIR}/lib/logging/utils.rb
 ${GEM_LIBDIR}/lib/rspec/logging_helper.rb
 ${GEM_LIBDIR}/lib/spec/logging_helper.rb
+${GEM_LIBDIR}/script/bootstrap
 ${GEM_LIBDIR}/test/appenders/test_buffered_io.rb
 ${GEM_LIBDIR}/test/appenders/test_console.rb
 ${GEM_LIBDIR}/test/appenders/test_email.rb
