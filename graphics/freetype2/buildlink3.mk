@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.41 2014/03/14 13:43:17 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.42 2014/03/14 14:54:02 ryoon Exp $
 
 BUILDLINK_TREE+=	freetype2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	freetype2
 FREETYPE2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.4.5
-BUILDLINK_ABI_DEPENDS.freetype2+=	freetype2>=2.4.12
+BUILDLINK_ABI_DEPENDS.freetype2+=	freetype2>=2.4.11
 BUILDLINK_PKGSRCDIR.freetype2?=	../../graphics/freetype2
 BUILDLINK_INCDIRS.freetype2?=	include/freetype2
 
@@ -15,6 +15,7 @@ BUILDLINK_FILES.freetype2+=	bin/freetype-config
 FREETYPE_CONFIG?=	${BUILDLINK_PREFIX.freetype2}/bin/freetype-config
 CONFIGURE_ENV+=		FREETYPE_CONFIG=${FREETYPE_CONFIG:Q}
 
+.if !empty(PKG_BUILD_OPTIONS.freetype2:Mpng)
 CHECK_BUILTIN.freetype2:=	yes
 .include "../../graphics/freetype2/builtin.mk"
 CHECK_BUILTIN.freetype2:=	no
@@ -23,6 +24,7 @@ CHECK_BUILTIN.freetype2:=	no
 .include "../../devel/zlib/buildlink3.mk"
 .if empty(USE_BUILTIN.freetype2:M[yY][eE][sS])
 .include "../../graphics/png/buildlink3.mk"
+.endif
 .endif
 .endif # FREETYPE2_BUILDLINK3_MK
 
