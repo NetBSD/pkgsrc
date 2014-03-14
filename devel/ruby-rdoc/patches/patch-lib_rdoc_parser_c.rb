@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_rdoc_parser_c.rb,v 1.1 2013/07/07 15:58:52 taca Exp $
+$NetBSD: patch-lib_rdoc_parser_c.rb,v 1.2 2014/03/14 14:31:20 taca Exp $
 
 Dirty hack for Ruby 1.8.7.
 
---- lib/rdoc/parser/c.rb.orig	2013-07-05 02:21:00.000000000 +0000
+--- lib/rdoc/parser/c.rb.orig	2014-02-12 12:58:37.000000000 +0000
 +++ lib/rdoc/parser/c.rb
-@@ -729,6 +729,7 @@ class RDoc::Parser::C < RDoc::Parser
+@@ -736,6 +736,7 @@ class RDoc::Parser::C < RDoc::Parser
    def find_class_comment class_name, class_mod
      comment = nil
  
@@ -12,7 +12,7 @@ Dirty hack for Ruby 1.8.7.
      if @content =~ %r%
          ((?>/\*.*?\*/\s+))
          (static\s+)?
-@@ -747,6 +748,29 @@ class RDoc::Parser::C < RDoc::Parser
+@@ -754,6 +755,29 @@ class RDoc::Parser::C < RDoc::Parser
      else
        comment = ''
      end
