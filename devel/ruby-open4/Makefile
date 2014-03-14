@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2012/08/09 18:15:19 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2014/03/14 16:14:01 taca Exp $
 
-DISTNAME=	open4-1.3.0
+DISTNAME=	open4-1.3.3
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel
 
