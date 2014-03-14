@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/09/16 13:37:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/03/14 18:53:36 taca Exp $
 bin/compass
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE.markdown
@@ -76,7 +76,6 @@ ${GEM_LIBDIR}/examples/compass/config.rb
 ${GEM_LIBDIR}/examples/compass/headers.txt
 ${GEM_LIBDIR}/examples/compass/images/blue_arrow.gif
 ${GEM_LIBDIR}/examples/compass/images/border2.png
-${GEM_LIBDIR}/examples/compass/images/emblem-a043c4f148.png
 ${GEM_LIBDIR}/examples/compass/images/emblem/favorite.png
 ${GEM_LIBDIR}/examples/compass/images/emblem/important.png
 ${GEM_LIBDIR}/examples/compass/images/emblem/photos.png
@@ -84,8 +83,6 @@ ${GEM_LIBDIR}/examples/compass/images/emblem/readonly.png
 ${GEM_LIBDIR}/examples/compass/images/emblem/symbolic-link.png
 ${GEM_LIBDIR}/examples/compass/images/emblem/system.png
 ${GEM_LIBDIR}/examples/compass/images/emblem/unreadable.png
-${GEM_LIBDIR}/examples/compass/images/flag-03c3b29b35.png
-${GEM_LIBDIR}/examples/compass/images/flag-21cfbfbfc8.png
 ${GEM_LIBDIR}/examples/compass/images/flag/ad.png
 ${GEM_LIBDIR}/examples/compass/images/flag/ae.png
 ${GEM_LIBDIR}/examples/compass/images/flag/af.png
@@ -352,9 +349,6 @@ ${GEM_LIBDIR}/examples/compass/utilities.html.haml
 ${GEM_LIBDIR}/examples/css3/bootstrap.rb
 ${GEM_LIBDIR}/examples/css3/clean.rb
 ${GEM_LIBDIR}/examples/css3/config.rb
-${GEM_LIBDIR}/examples/css3/extensions/fancy-fonts/templates/project/Prociono.otf
-${GEM_LIBDIR}/examples/css3/extensions/fancy-fonts/templates/project/bgrove.otf
-${GEM_LIBDIR}/examples/css3/extensions/fancy-fonts/templates/project/bgrove.ttf
 ${GEM_LIBDIR}/examples/css3/extensions/fancy-fonts/templates/project/fancy-fonts.sass
 ${GEM_LIBDIR}/examples/css3/extensions/fancy-fonts/templates/project/manifest.rb
 ${GEM_LIBDIR}/examples/css3/gradients.html.haml
