@@ -1,0 +1,4 @@
+pythonz is a program to automate the building and installation of Python in the
+users $HOME. This is a fork of the original project, pythonbrew.
+
+CPython, Stackless, PyPy and Jython are supported.
