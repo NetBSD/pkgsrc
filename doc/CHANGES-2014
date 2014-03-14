@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1144 2014/03/14 19:00:52 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1145 2014/03/14 19:03:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1699,3 +1699,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/ruby-compass to 0.12.3 [taca 2014-03-14]
 	Updated www/ruby-cookiejar to 0.3.2 [taca 2014-03-14]
 	Updated www/ruby-em-http-request to 1.1.2 [taca 2014-03-14]
+	Updated www/ruby-http_router to 0.11.1 [taca 2014-03-14]
