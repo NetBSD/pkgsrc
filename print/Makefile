@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.580 2014/02/20 11:42:07 fhajny Exp $
+# $NetBSD: Makefile,v 1.581 2014/03/14 17:44:11 taca Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -135,6 +135,7 @@ SUBDIR+=	rlpr
 SUBDIR+=	rtf2latex
 SUBDIR+=	rtf2latex2e
 SUBDIR+=	ruby-gnome2-poppler
+SUBDIR+=	ruby-pdf-core
 SUBDIR+=	ruby-pdf-reader
 SUBDIR+=	ruby-pdf-writer
 SUBDIR+=	ruby-prawn
