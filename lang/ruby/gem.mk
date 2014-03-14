@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.28 2014/03/14 13:21:34 taca Exp $
+# $NetBSD: gem.mk,v 1.29 2014/03/14 22:31:31 asau Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -447,6 +447,6 @@ do-install: ${_GEM_INSTALL_TARGETS}
 _gem-install:
 	@${STEP_MSG} "gem install"
 	${RUN} cd ${RUBYGEM_INSTALL_ROOT}${PREFIX} && \
-		pax -rwpe . ${DESTDIR}${PREFIX}
+		pax -rwpp . ${DESTDIR}${PREFIX}
 
 .endif
