@@ -4779,6 +4779,14 @@ case $host in
 
 
 	;;
+*-*-sco3.2v5*)
+	$as_echo "#define BROKEN_PREAD 1" >>confdefs.h
+
+
+	$as_echo "#define BROKEN_PWRITE 1" >>confdefs.h
+
+
+	;;
 esac
 
 # Check whether --enable-db was given.
