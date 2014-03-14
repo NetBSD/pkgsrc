@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.115 2014/03/14 19:33:59 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.116 2014/03/14 19:54:23 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -10,8 +10,8 @@
 # RUBY_VERSION_DEFAULT
 #	The preferered Ruby version to use.
 #
-#		Possible values: 18 193 200
-#		Default: 193
+#		Possible values: 18 193 200 21
+#		Default: 200
 #
 # RUBY_BUILD_RDOC
 #	Build rdoc of this package and so that install formated
@@ -41,8 +41,8 @@
 # RUBY_VERSION_SUPPORTED
 #	The Ruby versions that are acceptable for the package.
 #
-#		Possible values: 18 193 200
-#		Default: 18 193 200
+#		Possible values: 18 193 200 21
+#		Default: 200 193 18 21
 #
 # RUBY_NOVERSION
 #	If "Yes", the package dosen't depend on any version of Ruby, such
@@ -229,7 +229,7 @@ RUBY200_API_VERSION=	2.0.0
 RUBY21_API_VERSION=	2.1.0
 
 #
-RUBY_VERSION_DEFAULT?=	193
+RUBY_VERSION_DEFAULT?=	200
 
 RUBY_VERSION_SUPPORTED?= 200 193 18 21
 
