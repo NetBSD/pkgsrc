@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2013/09/15 16:03:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.22 2014/03/14 18:04:25 taca Exp $
 bin/facter
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -83,6 +83,7 @@ ${GEM_LIBDIR}/lib/facter/uptime.rb
 ${GEM_LIBDIR}/lib/facter/uptime_days.rb
 ${GEM_LIBDIR}/lib/facter/uptime_hours.rb
 ${GEM_LIBDIR}/lib/facter/uptime_seconds.rb
+${GEM_LIBDIR}/lib/facter/util/architecture.rb
 ${GEM_LIBDIR}/lib/facter/util/cfpropertylist.rb
 ${GEM_LIBDIR}/lib/facter/util/cfpropertylist/LICENSE
 ${GEM_LIBDIR}/lib/facter/util/cfpropertylist/README
@@ -122,10 +123,12 @@ ${GEM_LIBDIR}/lib/facter/util/processor.rb
 ${GEM_LIBDIR}/lib/facter/util/registry.rb
 ${GEM_LIBDIR}/lib/facter/util/resolution.rb
 ${GEM_LIBDIR}/lib/facter/util/solaris_zones.rb
+${GEM_LIBDIR}/lib/facter/util/unix_root.rb
 ${GEM_LIBDIR}/lib/facter/util/uptime.rb
 ${GEM_LIBDIR}/lib/facter/util/values.rb
 ${GEM_LIBDIR}/lib/facter/util/virtual.rb
 ${GEM_LIBDIR}/lib/facter/util/vlans.rb
+${GEM_LIBDIR}/lib/facter/util/windows_root.rb
 ${GEM_LIBDIR}/lib/facter/util/wmi.rb
 ${GEM_LIBDIR}/lib/facter/util/xendomains.rb
 ${GEM_LIBDIR}/lib/facter/version.rb
@@ -140,6 +143,7 @@ ${GEM_LIBDIR}/spec/fixtures/cpuinfo/amd64dual
 ${GEM_LIBDIR}/spec/fixtures/cpuinfo/amd64quad
 ${GEM_LIBDIR}/spec/fixtures/cpuinfo/amd64solo
 ${GEM_LIBDIR}/spec/fixtures/cpuinfo/amd64tri
+${GEM_LIBDIR}/spec/fixtures/cpuinfo/amd64twentyfour
 ${GEM_LIBDIR}/spec/fixtures/cpuinfo/bbg3-armel
 ${GEM_LIBDIR}/spec/fixtures/cpuinfo/beaglexm-armel
 ${GEM_LIBDIR}/spec/fixtures/cpuinfo/panda-armel
@@ -149,6 +153,8 @@ ${GEM_LIBDIR}/spec/fixtures/hpux/machinfo/hppa-rp4440
 ${GEM_LIBDIR}/spec/fixtures/hpux/machinfo/ia64-rx2620
 ${GEM_LIBDIR}/spec/fixtures/hpux/machinfo/ia64-rx6600
 ${GEM_LIBDIR}/spec/fixtures/hpux/machinfo/ia64-rx8640
+${GEM_LIBDIR}/spec/fixtures/hpux/machinfo/superdome-server-SD32B
+${GEM_LIBDIR}/spec/fixtures/hpux/machinfo/superdome2-16s
 ${GEM_LIBDIR}/spec/fixtures/hpux/sched.models
 ${GEM_LIBDIR}/spec/fixtures/hpux/unistd.h
 ${GEM_LIBDIR}/spec/fixtures/ifconfig/bsd_ifconfig_all_with_multiple_interfaces
@@ -191,6 +197,7 @@ ${GEM_LIBDIR}/spec/fixtures/netstat/fedora_10
 ${GEM_LIBDIR}/spec/fixtures/netstat/open_solaris_10
 ${GEM_LIBDIR}/spec/fixtures/netstat/open_solaris_b132
 ${GEM_LIBDIR}/spec/fixtures/netstat/ubuntu_7_04
+${GEM_LIBDIR}/spec/fixtures/processorcount/solaris-psrinfo
 ${GEM_LIBDIR}/spec/fixtures/processorcount/solaris-sparc-kstat-cpu-info
 ${GEM_LIBDIR}/spec/fixtures/processorcount/solaris-x86_64-kstat-cpu-info
 ${GEM_LIBDIR}/spec/fixtures/unit/filesystems/linux
@@ -281,6 +288,7 @@ ${GEM_LIBDIR}/spec/fixtures/virtual/proc_self_status/vserver_2_1/host
 ${GEM_LIBDIR}/spec/fixtures/virtual/proc_self_status/vserver_2_3/guest
 ${GEM_LIBDIR}/spec/fixtures/virtual/proc_self_status/vserver_2_3/host
 ${GEM_LIBDIR}/spec/integration/facter_spec.rb
+${GEM_LIBDIR}/spec/lib/facter_spec/cpuinfo.rb
 ${GEM_LIBDIR}/spec/lib/facter_spec/windows_network.rb
 ${GEM_LIBDIR}/spec/puppetlabs_spec/files.rb
 ${GEM_LIBDIR}/spec/puppetlabs_spec/fixtures.rb
