@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1105 2014/03/14 16:49:00 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1106 2014/03/14 16:57:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1655,3 +1655,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/ruby-sexp-processor to 4.4.1 [taca 2014-03-14]
 	Updated devel/ruby-simple_uuid to 0.4.0 [taca 2014-03-14]
 	Updated devel/ruby-stomp to 1.3.2 [taca 2014-03-14]
+	Updated devel/ruby-simplecov to 0.8.2 [taca 2014-03-14]
+	Updated devel/ruby-simplecov-html to 0.8.0 [taca 2014-03-14]
