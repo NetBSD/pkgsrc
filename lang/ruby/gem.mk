@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.27 2014/03/13 17:21:01 taca Exp $
+# $NetBSD: gem.mk,v 1.28 2014/03/14 13:21:34 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -151,6 +151,12 @@ UPDATE_GEMSPEC=		../../lang/ruby/files/update-gemspec.rb
 USE_RAKE?=		YES
 .endif
 
+.if !empty(RUBY_GEMS_VERSION)
+.if ${_RUBYGEMS_MAJOR} >= 2 && ${_RUBYGEMS_MINORS} >= 2
+GEM_EXTSDIR=	${GEM_HOME}/extensions/${RUBY_ARCH}/${RUBY_VERSION}/${GEM_NAME}
+.endif
+.endif
+
 # print-PLIST support
 PRINT_PLIST_AWK+=	/${GEM_NAME}\.info$$/ \
 			{ gsub(/${GEM_NAME}\.info/, "$${GEM_NAME}.info"); }
@@ -158,9 +164,11 @@ PRINT_PLIST_AWK+=	/${GEM_NAME}\.(gem|gemspec)$$/ \
 			{ gsub(/${GEM_NAME}\.gem/, "$${GEM_NAME}.gem"); }
 PRINT_PLIST_AWK+=	/${GEM_NAME:S/./[.]/g}[.](gem|gemspec)$$/ \
 	{ gsub(/${PKGVERSION_NOREV:S|/|\\/|g}[.]gem/, "$${PKGVERSION}.gem"); }
+.if !empty(GEM_EXTSDIR)
 PRINT_PLIST_AWK+=	/^${GEM_EXTSDIR:S|/|\\/|g}/ \
 		{ gsub(/${GEM_EXTSDIR:S|/|\\/|g}/, "$${GEM_EXTSDIR}"); \
 			print; next; }
+.endif
 PRINT_PLIST_AWK+=	/^${GEM_LIBDIR:S|/|\\/|g}/ \
 	{ gsub(/${GEM_LIBDIR:S|/|\\/|g}/, "$${GEM_LIBDIR}"); print; next; }
 PRINT_PLIST_AWK+=	/^${GEM_DOCDIR:S|/|\\/|g}/ \
@@ -240,12 +248,6 @@ GEM_DOCDIR=	${GEM_HOME}/doc/${GEM_NAME}
 GEM_LIBDIR=	${GEM_HOME}/gems/${GEM_NAME}
 
 GEM_BUILDINFO_DIR=	${GEM_HOME}/build_info
-
-.if !empty(RUBY_GEMS_VERSION)
-.if ${_RUBYGEMS_MAJOR} >= 2 && ${_RUBYGEMS_MINORS} >= 2
-GEM_EXTSDIR=	${GEM_HOME}/extensions/${RUBY_ARCH}/${RUBY_VERSION}/${GEM_NAME}
-.endif
-.endif
 
 # Installed gems have wrapper scripts that call the right interpreter,
 # regardless of the #! line at the head of a script, so we can skip
