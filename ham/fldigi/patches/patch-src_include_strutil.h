@@ -1,4 +1,6 @@
-$NetBSD: patch-src_include_strutil.h,v 1.1 2013/09/17 21:12:25 joerg Exp $
+$NetBSD: patch-src_include_strutil.h,v 1.2 2014/03/14 14:39:22 mef Exp $
+
+Don't depend on implicit boolean conversion for streams.
 
 --- src/include/strutil.h.orig	2013-09-17 19:23:48.000000000 +0000
 +++ src/include/strutil.h
