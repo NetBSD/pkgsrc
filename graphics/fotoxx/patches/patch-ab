@@ -1,0 +1,34 @@
+$NetBSD: patch-ab,v 1.13 2014/03/15 05:37:22 ryoon Exp $
+
+--- fotoxx-14.03.1.cc.orig	2014-03-05 07:17:10.000000000 +0000
++++ fotoxx-14.03.1.cc
+@@ -512,7 +512,11 @@ int initzfunc(void *)
+    }
+ 
+    contx = 0;
++#if defined(__NetBSD__)
++   while ((pp = command_output(contx,"find /var/shm/fotoxx-*",0))) {
++#else
+    while ((pp = command_output(contx,"find /run/shm/fotoxx-*",0))) {
++#endif
+       pp2 = strchr(pp,'-');
+       if (! pp2) continue;
+       npid = atoi(pp2+1);                                                  //  pid of fotoxx owner process
+@@ -556,7 +560,7 @@ int initzfunc(void *)
+ 
+    //  miscellaneous
+ 
+-   Nwt = get_nprocs();                                                     //  get SMP CPU count
++   Nwt = sysconf(_SC_NPROCESSORS_ONLN);                                    //  get SMP CPU count
+    if (Nwt <= 0) Nwt = 2;
+    if (Nwt > max_threads) Nwt = max_threads;                               //  compile time limit
+    printz("using %d threads \n",Nwt);
+@@ -641,7 +645,7 @@ int initzfunc(void *)
+    err = stat(favorites_config,&statb);
+    if (err) {
+       printz("create default favorites menu \n");
+-      shell_quiet("cp -R -n %s/favorites/* %s",get_zdatadir(),favorites_dirk);
++      shell_quiet("yes 'n' | cp -R -i %s/favorites/* %s",get_zdatadir(),favorites_dirk);
+    }
+ 
+    //  if no slide show pause tone file, copy installation default
