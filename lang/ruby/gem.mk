@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.29 2014/03/14 22:31:31 asau Exp $
+# $NetBSD: gem.mk,v 1.30 2014/03/15 12:30:26 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -151,35 +151,6 @@ UPDATE_GEMSPEC=		../../lang/ruby/files/update-gemspec.rb
 USE_RAKE?=		YES
 .endif
 
-.if !empty(RUBY_GEMS_VERSION)
-.if ${_RUBYGEMS_MAJOR} >= 2 && ${_RUBYGEMS_MINORS} >= 2
-GEM_EXTSDIR=	${GEM_HOME}/extensions/${RUBY_ARCH}/${RUBY_VERSION}/${GEM_NAME}
-.endif
-.endif
-
-# print-PLIST support
-PRINT_PLIST_AWK+=	/${GEM_NAME}\.info$$/ \
-			{ gsub(/${GEM_NAME}\.info/, "$${GEM_NAME}.info"); }
-PRINT_PLIST_AWK+=	/${GEM_NAME}\.(gem|gemspec)$$/ \
-			{ gsub(/${GEM_NAME}\.gem/, "$${GEM_NAME}.gem"); }
-PRINT_PLIST_AWK+=	/${GEM_NAME:S/./[.]/g}[.](gem|gemspec)$$/ \
-	{ gsub(/${PKGVERSION_NOREV:S|/|\\/|g}[.]gem/, "$${PKGVERSION}.gem"); }
-.if !empty(GEM_EXTSDIR)
-PRINT_PLIST_AWK+=	/^${GEM_EXTSDIR:S|/|\\/|g}/ \
-		{ gsub(/${GEM_EXTSDIR:S|/|\\/|g}/, "$${GEM_EXTSDIR}"); \
-			print; next; }
-.endif
-PRINT_PLIST_AWK+=	/^${GEM_LIBDIR:S|/|\\/|g}/ \
-	{ gsub(/${GEM_LIBDIR:S|/|\\/|g}/, "$${GEM_LIBDIR}"); print; next; }
-PRINT_PLIST_AWK+=	/^${GEM_DOCDIR:S|/|\\/|g}/ \
-			{ next; }
-PRINT_PLIST_AWK+=	/^${GEM_HOME:S|/|\\/|g}/ \
-			{ gsub(/${GEM_HOME:S|/|\\/|g}/, "$${GEM_HOME}"); \
-			print; next; }
-PRINT_PLIST_AWK+=	/^${RUBY_GEM_BASE:S|/|\\/|g}/ \
-		{ gsub(/${RUBY_GEM_BASE:S|/|\\/|g}/, "$${RUBY_GEM_BASE}"); \
-			print; next; }
-
 # Include this early in case some of its target are needed
 .include "../../lang/ruby/modules.mk"
 
@@ -221,6 +192,12 @@ DEPENDS+=	${RUBY_PKGPREFIX}-rubygems>=${RUBYGEMS_REQD}:../../misc/rubygems
 .  endif
 . endif
 .endif # !ruby18
+
+.if !empty(RUBY_GEMS_VERSION)
+.if ${_RUBYGEMS_MAJOR} >= 2 && ${_RUBYGEMS_MINORS} >= 2
+GEM_EXTSDIR=	${GEM_HOME}/extensions/${RUBY_ARCH}/${RUBY_VERSION}/${GEM_NAME}
+.endif
+.endif
 
 CATEGORIES+=	ruby
 MASTER_SITES?=	${MASTER_SITE_RUBYGEMS}
@@ -271,6 +248,29 @@ PLIST_SUBST+=		GEM_EXTSDIR=${GEM_EXTSDIR}
 .else
 PLIST_SUBST+=		GEM_EXTSDIR="@comment "
 .endif
+
+# print-PLIST support
+PRINT_PLIST_AWK+=	/${GEM_NAME}\.info$$/ \
+			{ gsub(/${GEM_NAME}\.info/, "$${GEM_NAME}.info"); }
+PRINT_PLIST_AWK+=	/${GEM_NAME}\.(gem|gemspec)$$/ \
+			{ gsub(/${GEM_NAME}\.gem/, "$${GEM_NAME}.gem"); }
+PRINT_PLIST_AWK+=	/${GEM_NAME:S/./[.]/g}[.](gem|gemspec)$$/ \
+	{ gsub(/${PKGVERSION_NOREV:S|/|\\/|g}[.]gem/, "$${PKGVERSION}.gem"); }
+.if !empty(GEM_EXTSDIR)
+PRINT_PLIST_AWK+=	/^${GEM_EXTSDIR:S|/|\\/|g}/ \
+		{ gsub(/${GEM_EXTSDIR:S|/|\\/|g}/, "$${GEM_EXTSDIR}"); \
+			print; next; }
+.endif
+PRINT_PLIST_AWK+=	/^${GEM_LIBDIR:S|/|\\/|g}/ \
+	{ gsub(/${GEM_LIBDIR:S|/|\\/|g}/, "$${GEM_LIBDIR}"); print; next; }
+PRINT_PLIST_AWK+=	/^${GEM_DOCDIR:S|/|\\/|g}/ \
+			{ next; }
+PRINT_PLIST_AWK+=	/^${GEM_HOME:S|/|\\/|g}/ \
+			{ gsub(/${GEM_HOME:S|/|\\/|g}/, "$${GEM_HOME}"); \
+			print; next; }
+PRINT_PLIST_AWK+=	/^${RUBY_GEM_BASE:S|/|\\/|g}/ \
+		{ gsub(/${RUBY_GEM_BASE:S|/|\\/|g}/, "$${RUBY_GEM_BASE}"); \
+			print; next; }
 
 ###
 ### gem-extract
