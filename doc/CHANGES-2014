@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1168 2014/03/15 05:30:20 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1169 2014/03/15 05:37:54 ryoon Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2014Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW, 
@@ -1738,3 +1738,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/libreoffice4 to 4.2.2.1 [ryoon 2014-03-15]
 	Updated x11/qt5-qtwebkit to 5.2.0nb5 [obache 2014-03-15]
 	Updated multimedia/mkvtoolnix to 5.0.1nb20 [obache 2014-03-15]
+	Updated graphics/fotoxx to 14.03.1 [ryoon 2014-03-15]
