@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/03/12 10:25:47 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2014/03/15 22:02:55 wiz Exp $
 #
 # Also update net/gst-plugins1-libnice when you update this!
 
@@ -17,6 +17,8 @@ USE_TOOLS+=	pkg-config
 CONFIGURE_ARGS+= --without-gstreamer
 
 PKGCONFIG_OVERRIDE+=	nice/nice.pc.in
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../mk/compiler.mk"
 
