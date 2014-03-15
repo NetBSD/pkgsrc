@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1162 2014/03/14 23:03:49 agc Exp $
+$NetBSD: CHANGES-2014,v 1.1163 2014/03/15 01:43:57 obache Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2014Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW, 
@@ -1733,3 +1733,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/bmake to 20140314 [ryoon 2014-03-14]
 	Updated pkgtools/bootstrap-mk-files to 20140314 [ryoon 2014-03-14]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2014Q1 branch [agc 2013-03-14]
+	Updated graphics/freetype2 to 2.5.3nb1 [obache 2014-03-15]
