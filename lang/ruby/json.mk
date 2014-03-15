@@ -1,4 +1,4 @@
-# $NetBSD: json.mk,v 1.7 2014/02/11 16:20:03 taca Exp $
+# $NetBSD: json.mk,v 1.8 2014/03/15 08:16:03 obache Exp $
 
 # This file handles appropriate dependency to ruby-json pacakge.
 #
@@ -75,14 +75,16 @@ _RUBY_JSON_REQD=	true
 
 .  if !empty(_RUBY_JSON_REQD)
 .    if ${RUBY_JSON_TYPE} == "pure"
-_RUBY_JSON_PKG=	../../textproc/ruby-json-pure
+_RUBY_JSON_PKGSRCDIR=	../../textproc/ruby-json-pure
+_RUBY_JSON_PKGNAME=	${RUBY_PKGPREFIX}-json-pure
 .    else
-_RUBY_JSON_PKG=	../../textproc/ruby-json
+_RUBY_JSON_PKGSRCDIR=	../../textproc/ruby-json
+_RUBY_JSON_PKGNAME=	${RUBY_PKGPREFIX}-json
 .    endif
 .    if ${_RUBY_JSON_DEPENDS} == "build"
-BUILD_DEPENDS+= ${RUBY_PKGPREFIX}-json>=${_RUBY_JSON_VERS}:${_RUBY_JSON_PKG}
+BUILD_DEPENDS+= ${_RUBY_JSON_PKGNAME}>=${_RUBY_JSON_VERS}:${_RUBY_JSON_PKGSRCDIR}
 .    else
-DEPENDS+= ${RUBY_PKGPREFIX}-json>=${_RUBY_JSON_VERS}:${_RUBY_JSON_PKG}
+DEPENDS+= ${_RUBY_JSON_PKGNAME}>=${_RUBY_JSON_VERS}:${_RUBY_JSON_PKGSRCDIR}
 .    endif
 .  endif
 
