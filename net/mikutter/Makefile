@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.76 2014/03/11 12:16:39 obache Exp $
+# $NetBSD: Makefile,v 1.77 2014/03/15 08:17:29 obache Exp $
 #
 
 DISTNAME=	mikutter.0.2.2.1537
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/./-/}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://mikutter.hachune.net/bin/
 
@@ -50,5 +51,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/mikutter.sh ${DESTDIR}${PREFIX}/bin/mikutter
 	${INSTALL_DATA} ${WRKDIR}/desktop ${DESTDIR}${PREFIX}/share/applications/mikutter.desktop
 
+RUBY_JSON_TYPE=	pure
+RUBY_JSON_REQD=	1.8
 .include "../../lang/ruby/json.mk"
 .include "../../mk/bsd.pkg.mk"
