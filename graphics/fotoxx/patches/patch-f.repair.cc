@@ -1,6 +1,6 @@
-$NetBSD: patch-f.repair.cc,v 1.1 2013/10/20 18:07:43 joerg Exp $
+$NetBSD: patch-f.repair.cc,v 1.2 2014/03/15 05:37:03 ryoon Exp $
 
---- f.repair.cc.orig	2013-10-18 21:25:06.000000000 +0000
+--- f.repair.cc.orig	2014-03-05 07:17:10.000000000 +0000
 +++ f.repair.cc
 @@ -28,6 +28,8 @@
     Fotoxx image edit - Repair menu functions
@@ -9,9 +9,9 @@ $NetBSD: patch-f.repair.cc,v 1.1 2013/10/20 18:07:43 joerg Exp $
 +int smart_erase_blur(float radius);
 +void smart_erase_func(int mode);
  
- //  image sharpening function
+ //  image sharpen functions
  
-@@ -1557,9 +1559,6 @@ void m_smart_erase(GtkWidget *, const ch
+@@ -1593,9 +1595,6 @@ void m_smart_erase(GtkWidget *, const ch
  
  int smart_erase_dialog_event(zdialog *zd, const char *event)               //  overhauled
  {
