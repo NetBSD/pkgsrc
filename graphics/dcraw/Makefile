@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2014/01/27 20:25:17 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2014/03/15 00:16:03 ryoon Exp $
 #
 # Changes can be found in the RCS file at
 # http://www.cybercom.net/~dcoffin/dcraw/RCS/dcraw.c,v
@@ -10,6 +10,8 @@ MASTER_SITES=	http://www.cybercom.net/~dcoffin/dcraw/archive/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cybercom.net/~dcoffin/dcraw/
 COMMENT=	Raw digital camera decoder
+
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 USE_PKGLOCALEDIR=	yes
 WRKSRC=			${WRKDIR}/${PKGBASE}
