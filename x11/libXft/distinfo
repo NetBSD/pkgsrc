@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2012/06/03 17:43:11 wiz Exp $
+$NetBSD: distinfo,v 1.9 2014/03/15 09:20:31 richard Exp $
 
 SHA1 (libXft-2.3.1.tar.bz2) = c7ec1361e3d4f095910f8c58988ab42e32f314d9
 RMD160 (libXft-2.3.1.tar.bz2) = 81a29298af843dff03234a6f0068ae052e698380
 Size (libXft-2.3.1.tar.bz2) = 311556 bytes
+SHA1 (patch-src_xftglyphs.c) = 50bb8668ed1cd4555f55b63d23a4d90dba9bb2df
