@@ -1,10 +1,18 @@
-$NetBSD: patch-ac,v 1.13 2013/06/08 13:39:39 ryoon Exp $
+$NetBSD: patch-ac,v 1.14 2014/03/15 05:37:03 ryoon Exp $
 
 * Add non-execinfo.h platform support
 
---- zfuncs.h.orig	2013-06-05 08:02:57.000000000 +0000
+--- zfuncs.h.orig	2014-03-05 07:17:10.000000000 +0000
 +++ zfuncs.h
-@@ -40,6 +40,7 @@
+@@ -22,7 +22,6 @@
+ 
+ //     zfuncs.h   version  v.5.8
+ 
+-#include <sys/sysinfo.h> 
+ #include <sys/time.h>
+ #include <sys/stat.h>
+ #include <sys/resource.h>
+@@ -43,6 +42,7 @@
  #include <execinfo.h>
  #include <locale.h>
  #include <gtk/gtk.h>
