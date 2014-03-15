@@ -1,4 +1,9 @@
-$NetBSD: patch-bb,v 1.4 2012/09/01 08:14:22 marino Exp $
+$NetBSD: patch-bb,v 1.5 2014/03/15 14:39:12 richard Exp $
+The CPPFunction typedef (among others) have been deprecated in favour of
+specific prototyped typedefs since readline 4.2.
+They've been working since because compatibility typedefs have been
+until they were removed in readline 6.3.
+Hint found here: https://bugs.gentoo.org/show_bug.cgi?id=504208
 
 --- src/xitk/network.c.orig	2011-11-08 20:49:07.000000000 +0000
 +++ src/xitk/network.c
@@ -22,3 +27,12 @@ $NetBSD: patch-bb,v 1.4 2012/09/01 08:14:22 marino Exp $
  
  #include "common.h"
  
+@@ -1255,7 +1255,7 @@ int main(int argc, char **argv) {
+   rl_readline_name = PROGNAME;
+   rl_set_prompt(session.prompt);
+   rl_initialize();
+-  rl_attempted_completion_function = (CPPFunction *)completion_function;
++  rl_attempted_completion_function = (rl_completion_func_t *)completion_function;
+   
+   signal(SIGPIPE, SIG_IGN);
+   
