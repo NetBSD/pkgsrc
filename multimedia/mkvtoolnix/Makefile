@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2014/02/12 23:18:18 tron Exp $
+# $NetBSD: Makefile,v 1.67 2014/03/15 05:30:09 obache Exp $
 
 DISTNAME=	mkvtoolnix-5.0.1
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.bunkus.org/videotools/mkvtoolnix/sources/
 EXTRACT_SUFX=	.tar.bz2
@@ -41,8 +41,8 @@ do-install:
 .include "options.mk"
 
 .if ${OPSYS} != "Darwin"
-BUILDLINK_DEPMETHOD.${RUBY_BASE}=	build
 .include "../../lang/ruby/buildlink3.mk"
+BUILDLINK_DEPMETHOD.${RUBY_BASE}=	build
 .endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
