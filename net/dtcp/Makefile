@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2013/09/12 11:15:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.28 2014/03/15 05:20:51 obache Exp $
 #
 
 DISTNAME=	dtcp-20060109
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://www.imasy.or.jp/~ume/ipv6/ \
 		http://home.jp.FreeBSD.org/~ume/ipv6/
