@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2014/02/12 23:18:56 tron Exp $
+# $NetBSD: Makefile,v 1.8 2014/03/15 05:26:17 obache Exp $
 
 PKGNAME=	qt5-qtwebkit-${QTVERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 COMMENT=	Qt5 WebView module
 
 .include "../../x11/qt5-qtbase/Makefile.common"
@@ -63,7 +63,8 @@ post-install:
 .include "../../x11/qt5-qtlocation/buildlink3.mk"
 .include "../../x11/qt5-qtmultimedia/buildlink3.mk"
 .include "../../x11/qt5-qtsensors/buildlink3.mk"
+PYTHON_FOR_BUILD_ONLY=			yes
 .include "../../lang/python/tool.mk"
-BUILDLINK_DEPMETHOD.ruby=	build
 .include "../../lang/ruby/buildlink3.mk"
+BUILDLINK_DEPMETHOD.${RUBY_BASE}=	build
 .include "../../mk/bsd.pkg.mk"
