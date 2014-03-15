@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2014/02/11 16:21:01 taca Exp $
+# $NetBSD: options.mk,v 1.9 2014/03/15 04:55:21 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.groonga
@@ -32,6 +32,7 @@ BUILD_DEPENDS+=		${RUBY_PKGPREFIX}-bundler-[0-9]*:../../misc/ruby-bundler
 BUILD_DEPENDS+=		${RUBY_PKGPREFIX}-msgpack>=0.5.6:../../devel/ruby-msgpack
 BUILD_DEPENDS+=		${RUBY_PKGPREFIX}-test-unit>=2.5.5:../../devel/ruby-test-unit
 BUILD_DEPENDS+=		${RUBY_PKGPREFIX}-test-unit-notify>=1.0.1:../../devel/ruby-test-unit-notify
+RUBY_JSON_REQD=		0:build
 .include "../../lang/ruby/json.mk"
 .else
 CONFIGURE_ARGS+=	--without-cutter
