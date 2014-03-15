@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1164 2014/03/15 01:48:17 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1165 2014/03/15 01:57:04 obache Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2014Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW, 
@@ -1633,6 +1633,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/ZenTest to 4.9.5 [taca 2014-03-14]
 	Updated devel/hoe to 3.9.0 [taca 2014-03-14]
 	Updated devel/ruby-atomic to 1.1.15 [taca 2014-03-14]
+	Downgraded math/R-zoo to 1.7.10 [wen 2014-03-14]
 	Updated devel/ruby-backports to 3.6.0 [taca 2014-03-14]
 	Updated devel/ruby-daemon_controller to 1.2.0 [taca 2014-03-14]
 	Updated devel/ruby-fast_gettext to 0.8.1 [taca 2014-03-14]
