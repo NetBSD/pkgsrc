@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2013/06/16 15:10:41 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/03/16 17:53:15 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.RUBYLIBDIR.-.console.time
+${GEM_EXTSDIR}/io/console.${RUBY_DLEXT}
 ${GEM_LIBDIR}/console.c
 ${GEM_LIBDIR}/extconf.rb
 ${GEM_LIBDIR}/io/console.${RUBY_DLEXT}
