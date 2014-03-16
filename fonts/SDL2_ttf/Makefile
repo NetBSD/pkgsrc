@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/03/15 22:05:49 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2014/03/16 01:36:51 rodent Exp $
 
 DISTNAME=	SDL2_ttf-2.0.12
 CATEGORIES=	fonts
@@ -17,7 +17,6 @@ PKGCONFIG_OVERRIDE+=	SDL2_ttf.pc.in
 
 .include "options.mk"
 
-.include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
