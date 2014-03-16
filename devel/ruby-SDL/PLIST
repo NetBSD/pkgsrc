@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2013/07/07 15:24:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/03/16 07:26:07 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/sdl_ext.${RUBY_DLEXT}
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/MANIFEST
 ${GEM_LIBDIR}/NEWS.en
