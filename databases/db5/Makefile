@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/11/30 16:25:12 bsiegert Exp $
+# $NetBSD: Makefile,v 1.14 2014/03/16 08:50:58 adam Exp $
 #
 # NOTE:
 # When updating this package, a change in the minor (5.n -> 5.(n+1))
@@ -46,8 +46,10 @@ PTHREAD_OPTS+=		native
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "MirBSD"
-PLIST_SRC=		PLIST.${OPSYS}
+PLIST_VARS+=	shlib
+
+.if ${OPSYS} != "MirBSD"
+PLIST.shlib=		yes
 .endif
 
 INSTALLATION_DIRS=	include/db5 lib share/doc/db5
