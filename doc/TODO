@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13088 2014/03/15 05:37:54 ryoon Exp $
+$NetBSD: TODO,v 1.13089 2014/03/16 09:36:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -745,7 +745,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libprelude-1.1.0
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o libraw-0.16.0
-	o libreoffice4-bin-4.2.1
+	o libreoffice4-bin-4.2.2.1
 	o libssh2-1.4.2
 	o libstree-0.4.3pre2 [pkg/43748]
 	o libtar-1.2.20
@@ -992,7 +992,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o re-alpine-2.03 [pkg/47802]
 	o realboy-0.2.2
 	o rep-gtk-0.90.8.1
-	o reposurgeon-3.6
+	o reposurgeon-3.7
 	o resize_image-0.7
 	o rio500-0.8.1
 	o robodoc-4.99.6
@@ -1150,7 +1150,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wcalc-2.4
 	o webalizer-2.23.05
 	o webkit-gtk-2.2.5
-	o webmin-1.670
+	o webmin-1.680
 	o websvn-2.3.2
 	o windowlab-1.40
 	o wine-devel-1.7.14
