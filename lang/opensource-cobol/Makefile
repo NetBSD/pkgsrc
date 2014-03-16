@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2013/05/26 04:15:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2014/03/16 04:52:42 ryoon Exp $
 
-DISTNAME=	opensource-cobol-1.3J-utf8
+DISTNAME=	opensource-cobol-1.3.2J-utf8
 PKGNAME=	${DISTNAME:S/-utf8//}
 CATEGORIES=	lang
-MASTER_SITES=	-http://www.osscons.jp/osscobol/files/?action=cabinet_action_main_download&block_id=412&room_id=21&cabinet_id=11&file_id=154&upload_id=304
+MASTER_SITES=	-http://www.osscons.jp/osscobol/files/?action=cabinet_action_main_download&block_id=414&room_id=21&cabinet_id=11&file_id=193&upload_id=388
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.osscons.jp/osscobol/
@@ -19,6 +19,8 @@ BDB_ACCEPTED=		db4
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
+
+CONFIGURE_ARGS+=	--enable-utf8
 
 TEST_TARGET=		check
 
