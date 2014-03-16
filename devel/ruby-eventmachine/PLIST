@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2013/03/10 13:19:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/03/16 17:52:12 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/fastfilereaderext.${RUBY_DLEXT}
+${GEM_EXTSDIR}/rubyeventmachine.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/.yardopts
