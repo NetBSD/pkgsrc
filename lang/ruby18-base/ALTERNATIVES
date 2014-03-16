@@ -1,5 +1,5 @@
-bin/erb @PREFIX@/bin/erb@RUBY_VER@
-bin/h2rb @PREFIX@/bin/h2rb@RUBY_VER@
-bin/irb @PREFIX@/bin/irb@RUBY_VER@
+bin/erb @PREFIX@/bin/erb@RUBY_SUFFIX@
+bin/h2rb @PREFIX@/bin/h2rb@RUBY_SUFFIX@
+bin/irb @PREFIX@/bin/irb@RUBY_SUFFIX@
 bin/ruby @PREFIX@/bin/@RUBY_NAME@
-bin/testrb @PREFIX@/bin/testrb@RUBY_VER@
+bin/testrb @PREFIX@/bin/testrb@RUBY_SUFFIX@
