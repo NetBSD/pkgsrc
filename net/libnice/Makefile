@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2014/03/15 22:02:55 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2014/03/17 17:02:55 richard Exp $
 #
 # Also update net/gst-plugins1-libnice when you update this!
 
@@ -15,6 +15,12 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 CONFIGURE_ARGS+= --without-gstreamer
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+USE_LANGUAGES+=	c99
+.endif
 
 PKGCONFIG_OVERRIDE+=	nice/nice.pc.in
 
