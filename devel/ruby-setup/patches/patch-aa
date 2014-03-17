@@ -1,15 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/02/15 03:04:18 taca Exp $
+$NetBSD: patch-aa,v 1.2 2014/03/17 14:08:41 taca Exp $
 
-Add shbang path and use vendordir.
+* Add shbang path and use vendordir.
+* Don't use obsolete Config.
 
---- setup.rb.orig	2005-09-25 02:22:05.000000000 +0900
+--- setup.rb.orig	2005-11-20 11:54:27.000000000 +0000
 +++ setup.rb
 @@ -1,3 +1,4 @@
 +#!env ruby
  #
  # setup.rb
  #
-@@ -171,6 +172,9 @@ class ConfigTable
+@@ -168,6 +169,9 @@ class ConfigTable
        siteruby        = c['sitedir']
        siterubyver     = c['sitelibdir']
        siterubyverarch = c['sitearchdir']
@@ -19,7 +20,7 @@ Add shbang path and use vendordir.
      elsif newpath_p
        # 1.4.4 <= V <= 1.6.3
        libruby         = "#{c['prefix']}/lib/ruby"
-@@ -207,8 +211,8 @@ class ConfigTable
+@@ -204,8 +208,8 @@ class ConfigTable
                table['rbdir'] = '$librubyver'
                table['sodir'] = '$librubyverarch'
              when 'site'
@@ -30,7 +31,7 @@ Add shbang path and use vendordir.
              when 'home'
                setup_rb_error '$HOME was not set' unless ENV['HOME']
                table['prefix'] = ENV['HOME']
-@@ -242,9 +246,15 @@ class ConfigTable
+@@ -239,9 +243,15 @@ class ConfigTable
                     'the directory for aux ruby libraries'),
        PathItem.new('siterubyverarch', 'path', siterubyverarch,
                     'the directory for aux ruby binaries'),
@@ -48,3 +49,12 @@ Add shbang path and use vendordir.
                     'the directory for ruby extentions'),
        PathItem.new('rubypath', 'path', rubypath,
                     'the path to set to #! line'),
+@@ -785,7 +795,7 @@ class ToplevelInstaller
+     else
+       require 'rbconfig'
+     end
+-    ::Config::CONFIG
++    ::RbConfig::CONFIG
+   end
+ 
+   def initialize(ardir_root, config)
