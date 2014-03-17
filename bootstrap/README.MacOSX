@@ -1,4 +1,4 @@
-$NetBSD: README.MacOSX,v 1.15 2014/03/13 20:57:20 gdt Exp $
+$NetBSD: README.MacOSX,v 1.16 2014/03/17 17:12:58 gdt Exp $
 
 * gcc vs clang
 
@@ -133,10 +133,11 @@ Clearly, it is desirable for a bulk build to be useful on as many
 computers as possible.  The main issues are which ABI and which OS X
 version.
 
-jperkin@netbsd.org provides a bulk build (--abi=32, OSX 10.6, and
-therefore gcc 4.2.1, XQuartz, X11_TYPE=native):
+jperkin@netbsd.org provides a bulk build for quarterly branches
+(--abi=32, OSX 10.6, and therefore gcc 4.2.1, XQuartz,
+X11_TYPE=native):
   http://www.perkin.org.uk/pages/pkgsrc-binary-packages-for-osx.html
-  http://mail-index.netbsd.org/pkgsrc-bulk/2014/03/09/msg010457.html
+  http://mail-index.netbsd.org/pkgsrc-bulk/2014/01/10/msg010276.html
 which should run on any version from 10.6 to 10.9.
 
 Given the 10.9 license situation, a bulk build on 10.9 (and therefore
