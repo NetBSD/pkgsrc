@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2011/11/08 15:37:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/03/17 14:35:43 taca Exp $
 bin/mongrel_rails
 ${GEM_HOME}/cache/mongrel-${PKGVERSION}.gem
+${GEM_EXTSDIR}/http11.${RUBY_DLEXT}
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/LICENSE
