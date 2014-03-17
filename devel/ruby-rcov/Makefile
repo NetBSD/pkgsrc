@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/03/13 11:08:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2014/03/17 14:07:06 taca Exp $
 
 DISTNAME=	rcov-1.0.0
 CATEGORIES=	devel
@@ -13,7 +13,7 @@ RUBY_VERSION_SUPPORTED=	18
 USE_GCC_RUNTIME=	yes
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/rcov ${DESTDIR}${PREFIX}/bin/rcov${RUBY_VER}
+	${MV} ${DESTDIR}${PREFIX}/bin/rcov ${DESTDIR}${PREFIX}/bin/rcov${RUBY_SUFFIX}
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
