@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.10 2011/11/08 15:37:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/03/17 14:15:39 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/tmailscanner.${RUBY_DLEXT}
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/NOTES
