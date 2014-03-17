@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1176 2014/03/17 14:02:33 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1177 2014/03/17 14:09:14 taca Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2014Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW, 
@@ -1744,3 +1744,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Test-Class to 0.41 [schmonz 2014-03-16]
 	Updated databases/p5-App-Sqitch to 0.992 [schmonz 2014-03-16]
 	Updated net/samba to 3.6.23 [taca 2014-03-17]
+	Updated devel/ruby-setup to 3.4.1nb1 [taca 2014-03-17]
