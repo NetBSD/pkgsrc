@@ -1,4 +1,9 @@
-$NetBSD: patch-aa,v 1.10 2009/09/27 22:27:23 apb Exp $
+$NetBSD: patch-aa,v 1.11 2014/03/17 07:07:40 dholland Exp $
+
+ - Don't issue own declarations of malloc, free, exit, perror, errno, getopt.
+ - Use standard headers.
+ - Avoid symbol conflicts with restrict, setprogname, getline.
+ - Fix build with current readline.
 
 --- cdecl.c.orig	1996-01-16 03:54:46.000000000 +0000
 +++ cdecl.c
@@ -176,11 +181,13 @@ $NetBSD: patch-aa,v 1.10 2009/09/27 22:27:23 apb Exp $
  	    if (!strcmp(line, "quit") || !strcmp(line, "exit")) {
  		free(line);
  		return ret;
-@@ -1252,10 +1258,10 @@ char **argv;
+@@ -1251,11 +1257,11 @@ char **argv;
+ 
  #ifdef USE_READLINE
      /* install completion handlers */
-     rl_attempted_completion_function = (CPPFunction *)attempt_completion;
+-    rl_attempted_completion_function = (CPPFunction *)attempt_completion;
 -    rl_completion_entry_function = (Function *)keyword_completion;
++    rl_attempted_completion_function = (rl_completion_func_t *)attempt_completion;
 +    rl_completion_entry_function = keyword_completion;
  #endif
  
