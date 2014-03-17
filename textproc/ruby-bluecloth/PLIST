@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2011/12/15 15:59:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/03/17 14:31:34 taca Exp $
 bin/bluecloth
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/bluecloth_ext.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/History.rdoc
