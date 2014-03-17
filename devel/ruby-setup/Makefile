@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/10/31 11:19:43 asau Exp $
+# $NetBSD: Makefile,v 1.5 2014/03/17 14:08:41 taca Exp $
 # $FreeBSD: ports/devel/ruby-setup.rb/Makefile,v 1.20 2006/06/08 20:25:19 sem Exp $
 
 DISTNAME=	setup-3.4.1
+PKGREVISION=	1
 CATEGORIES=	devel ruby
 MASTER_SITES=	http://i.loveruby.net/archive/setup/
 
