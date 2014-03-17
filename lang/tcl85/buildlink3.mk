@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.1 2014/03/10 14:20:44 taca Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2014/03/17 00:04:43 asau Exp $
 
 BUILDLINK_TREE+=	tcl
 
 .if !defined(TCL_BUILDLINK3_MK)
 TCL_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.tcl+=	tcl>=8.5.7
-BUILDLINK_ABI_DEPENDS.tcl+=	tcl>=8.5.7
+BUILDLINK_API_DEPENDS.tcl+=	tcl>=8.5.7<8.6
+BUILDLINK_ABI_DEPENDS.tcl+=	tcl>=8.5.7<8.6
 BUILDLINK_PKGSRCDIR.tcl?=	../../lang/tcl85
 
 BUILDLINK_FILES.tcl+=	bin/tclsh*
