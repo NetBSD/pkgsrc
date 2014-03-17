@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.14 2014/02/04 11:50:54 obache Exp $
-bin/xlsopcodes${RUBY_VER}
+@comment $NetBSD: PLIST,v 1.15 2014/03/17 14:17:47 taca Exp $
+bin/xlsopcodes${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.gitignore
