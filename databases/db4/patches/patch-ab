@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.23 2011/02/04 12:26:01 obache Exp $
+$NetBSD: patch-ab,v 1.24 2014/03/17 19:07:36 asau Exp $
 
 --- dist/configure.orig	2010-04-12 20:25:23.000000000 +0000
 +++ dist/configure
@@ -20,6 +20,60 @@ $NetBSD: patch-ab,v 1.23 2011/02/04 12:26:01 obache Exp $
  		CPPFLAGS="$CPPFLAGS -pthread"
  		LDFLAGS="$LDFLAGS -pthread"
  	else
+@@ -11202,7 +11202,7 @@ if test -z "$aix_libpath"; then aix_libp
+       hardcode_shlibpath_var=no
+       ;;
+ 
+-    freebsd1*)
++    freebsd1|freebsd1.*)
+       ld_shlibs=no
+       ;;
+ 
+@@ -12077,7 +12077,7 @@ dgux*)
+   shlibpath_var=LD_LIBRARY_PATH
+   ;;
+ 
+-freebsd1*)
++freebsd1|freebsd1.*)
+   dynamic_linker=no
+   ;;
+ 
+@@ -12088,7 +12088,7 @@ freebsd* | dragonfly*)
+     objformat=`/usr/bin/objformat`
+   else
+     case $host_os in
+-    freebsd[123]*) objformat=aout ;;
++    freebsd[123].freebsd[123].*) objformat=aout ;;
+     *) objformat=elf ;;
+     esac
+   fi
+@@ -13772,7 +13772,7 @@ if test -z "$aix_libpath"; then aix_libp
+         esac
+         ;;
+ 
+-      freebsd[12]*)
++      freebsd[12]|freebsd[12].*)
+         # C++ shared libraries reported to be fairly broken before
+ 	# switch to ELF
+         ld_shlibs_CXX=no
+@@ -15530,7 +15530,7 @@ dgux*)
+   shlibpath_var=LD_LIBRARY_PATH
+   ;;
+ 
+-freebsd1*)
++freebsd1|freebsd1.*)
+   dynamic_linker=no
+   ;;
+ 
+@@ -15541,7 +15541,7 @@ freebsd* | dragonfly*)
+     objformat=`/usr/bin/objformat`
+   else
+     case $host_os in
+-    freebsd[123]*) objformat=aout ;;
++    freebsd[123]|freebsd[123].*) objformat=aout ;;
+     *) objformat=elf ;;
+     esac
+   fi
 @@ -16161,7 +16161,7 @@ LIBTOOL="./libtool"
  INSTALLER="\$(LIBTOOL) --mode=install cp -p"
  
