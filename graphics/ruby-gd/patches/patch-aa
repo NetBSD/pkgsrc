@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2010/09/10 06:46:43 taca Exp $
+$NetBSD: patch-aa,v 1.2 2014/03/17 14:12:10 taca Exp $
 
 Support both Ruby 1.8 and Ruby 1.9.
 
---- GD.c.orig	2010-09-09 08:50:50.000000000 +0000
+--- GD.c.orig	2014-03-11 11:19:58.000000000 +0000
 +++ GD.c
 @@ -11,7 +11,23 @@
  **************************************************************/
@@ -621,7 +621,17 @@ Support both Ruby 1.8 and Ruby 1.9.
 +    f = RB_IO_FILE(fptr);
  
      gdImageWBMP(im, FIX2INT(fg), f);
-@@ -1725,7 +1743,7 @@ ply_to_pt(ply, dx, dy)
+@@ -1698,5 +1716,9 @@ ply_new(klass)
+     VALUE self = rb_ary_new();
+ 
++#if RUBY_API_VERSION_MAJOR >=2 && RUBY_API_VERSION_MINOR >= 1
++	rb_obj_reveal(self, klass);
++#else
+     RBASIC(self)->klass = klass;
++#endif
+     return self;
+ }
+@@ -1725,7 +1747,7 @@ ply_to_pt(ply, dx, dy)
      NUM2INT(dy);
  
 -    if (RARRAY(ply)->len > 0) {
@@ -632,21 +642,21 @@ Support both Ruby 1.8 and Ruby 1.9.
 +        y = rb_ary_entry(ply, RARRAY_LEN(ply) - 1);
          rb_ary_push(ply, INT2NUM(NUM2INT(x) + NUM2INT(dx)));
          rb_ary_push(ply, INT2NUM(NUM2INT(y) + NUM2INT(dy)));
-@@ -1742,5 +1760,5 @@ ply_get_pt(ply, idx)
+@@ -1742,5 +1764,5 @@ ply_get_pt(ply, idx)
      int i = NUM2INT(idx);
  
 -    if (RARRAY(ply)->len < idx) return Qnil;
 +    if (RARRAY_LEN(ply) < idx) return Qnil;
      i *= 2;
  
-@@ -1780,5 +1798,5 @@ ply_length(ply)
+@@ -1780,5 +1802,5 @@ ply_length(ply)
      VALUE ply;
  {
 -    return INT2FIX(RARRAY(ply)->len / 2);
 +    return INT2FIX(RARRAY_LEN(ply) / 2);
  }
  
-@@ -1788,8 +1806,8 @@ ply_vertices(ply)
+@@ -1788,8 +1810,8 @@ ply_vertices(ply)
  {
      int i;
 -    VALUE ary = rb_ary_new2(ply->len/2);
@@ -658,7 +668,7 @@ Support both Ruby 1.8 and Ruby 1.9.
 +	    rb_ary_push(ary, rb_assoc_new(RARRAY_PTR(ply)[i], RARRAY_PTR(ply)[i+1]));
      }
      return ary;
-@@ -1803,16 +1821,16 @@ ply_bounds(ply)
+@@ -1803,16 +1825,16 @@ ply_bounds(ply)
      int nx, ny;
  
 -    if (ply->len == 0) {
@@ -681,7 +691,7 @@ Support both Ruby 1.8 and Ruby 1.9.
 +	ny = NUM2INT(RARRAY_PTR(ply)[i+1]);
  	if (ny < t) t = ny;
  	if (ny > b) b = ny;
-@@ -1831,9 +1849,9 @@ ply_offset(ply, vx, vy)
+@@ -1831,9 +1853,9 @@ ply_offset(ply, vx, vy)
      y = NUM2INT(vy);
  
 -    for (i = 0; i<ply->len; i+=2) {
@@ -696,7 +706,7 @@ Support both Ruby 1.8 and Ruby 1.9.
 +	RARRAY_PTR(ply)[i+1] = INT2FIX(c);
      }
  
-@@ -1858,16 +1876,16 @@ ply_map(argc, argv, ply)
+@@ -1858,16 +1880,16 @@ ply_map(argc, argv, ply)
  	int nx, ny;
  
 -	if (ply->len == 0) {
@@ -719,7 +729,7 @@ Support both Ruby 1.8 and Ruby 1.9.
 +	    ny = NUM2INT(RARRAY_PTR(ply)[i+1]);
  	    if (ny < t) t = ny;
  	    if (ny > b) b = ny;
-@@ -1894,12 +1912,12 @@ ply_map(argc, argv, ply)
+@@ -1894,12 +1916,12 @@ ply_map(argc, argv, ply)
      }
  
 -    for (i = 0; i<ply->len; i+=2) {
@@ -737,7 +747,7 @@ Support both Ruby 1.8 and Ruby 1.9.
 +	RARRAY_PTR(ply)[i+1] = INT2FIX(c);
      }
  
-@@ -1914,9 +1932,9 @@ ply_transform(ply, a, b, c, d, tx, ty)
+@@ -1914,9 +1936,9 @@ ply_transform(ply, a, b, c, d, tx, ty)
      VALUE x, y;
  
 -    for (i = 0; i < RARRAY(ply)->len / 2; i++) {
@@ -750,14 +760,14 @@ Support both Ruby 1.8 and Ruby 1.9.
 +        y = RARRAY_PTR(ply)[i * 2 + 1];
          ply_set_pt(ply, INT2NUM(i),
                  INT2NUM(NUM2DBL(a) * NUM2INT(x) + NUM2DBL(c) * NUM2INT(y) + NUM2INT(tx)),
-@@ -1968,5 +1986,5 @@ fnt_s_new(obj, name)
+@@ -1968,5 +1990,5 @@ fnt_s_new(obj, name)
  {
      Check_Type(name, T_STRING);
 -    return fnt_new(name->ptr);
 +    return fnt_new(RSTRING_PTR(name));
  }
  
-@@ -2060,7 +2078,7 @@ img_color_allocate_alpha_str(img, rgbstr
+@@ -2060,7 +2082,7 @@ img_color_allocate_alpha_str(img, rgbstr
      ary = hex2triplet(rgbstr);
      c = gdImageColorAllocateAlpha(im,
 -                                  NUM2INT(*(RARRAY(ary)->ptr)),
@@ -768,7 +778,7 @@ Support both Ruby 1.8 and Ruby 1.9.
 +                                  NUM2INT(*(RARRAY_PTR(ary)+2)),
                                    NUM2INT(a));
      return INT2NUM(c);
-@@ -2122,7 +2140,7 @@ img_color_resolve_alpha_str(img, rgbstr,
+@@ -2122,7 +2144,7 @@ img_color_resolve_alpha_str(img, rgbstr,
      ary = hex2triplet(rgbstr);
      c = gdImageColorResolveAlpha(im,
 -                                 NUM2INT(*(RARRAY(ary)->ptr)),
@@ -779,7 +789,7 @@ Support both Ruby 1.8 and Ruby 1.9.
 +                                 NUM2INT(*(RARRAY_PTR(ary)+2)),
                                   NUM2INT(a));
      return INT2NUM(c);
-@@ -2183,7 +2201,7 @@ img_color_closest_alpha_str(img, rgbstr,
+@@ -2183,7 +2205,7 @@ img_color_closest_alpha_str(img, rgbstr,
      ary = hex2triplet(rgbstr);
      c = gdImageColorClosestAlpha(im,
 -                                 NUM2INT(*(RARRAY(ary)->ptr)),
@@ -790,7 +800,7 @@ Support both Ruby 1.8 and Ruby 1.9.
 +                                 NUM2INT(*(RARRAY_PTR(ary)+2)),
                                   NUM2INT(a));
      return INT2NUM(c);
-@@ -2245,7 +2263,7 @@ img_color_exact_alpha_str(img, rgbstr, a
+@@ -2245,7 +2267,7 @@ img_color_exact_alpha_str(img, rgbstr, a
      ary = hex2triplet(rgbstr);
      c = gdImageColorExactAlpha(im,
 -                                 NUM2INT(*(RARRAY(ary)->ptr)),
@@ -801,7 +811,7 @@ Support both Ruby 1.8 and Ruby 1.9.
 +                                 NUM2INT(*(RARRAY_PTR(ary)+2)),
                                   NUM2INT(a));
      return INT2NUM(c);
-@@ -2311,7 +2329,7 @@ img_s_truecolor_str(rgbstr)
+@@ -2311,7 +2333,7 @@ img_s_truecolor_str(rgbstr)
      VALUE ary;
      ary = hex2triplet(rgbstr);
 -    c = gdTrueColor(NUM2INT(*(RARRAY(ary)->ptr)),
@@ -812,7 +822,7 @@ Support both Ruby 1.8 and Ruby 1.9.
 +                    NUM2INT(*(RARRAY_PTR(ary)+2)));
      
      return INT2NUM(c);
-@@ -2365,7 +2383,7 @@ img_s_truecolor_alpha_str(rgbstr, a)
+@@ -2365,7 +2387,7 @@ img_s_truecolor_alpha_str(rgbstr, a)
      VALUE ary;
      ary = hex2triplet(rgbstr);
 -    c = gdTrueColorAlpha(NUM2INT(*(RARRAY(ary)->ptr)),
