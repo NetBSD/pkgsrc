@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2012/03/18 05:11:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/03/17 14:41:15 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/patron/session_ext.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
