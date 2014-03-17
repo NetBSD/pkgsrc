@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2013/10/01 10:29:53 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/17 14:04:42 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/msgpack/msgpack.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/Gemfile
