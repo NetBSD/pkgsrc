@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.9 2010/06/14 02:25:01 obache Exp $
-${GEM_HOME}/cache/ruby-opengl-${PKGVERSION}.gem
+@comment $NetBSD: PLIST,v 1.10 2014/03/17 14:14:18 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/gl.${RUBY_DLEXT}
+${GEM_EXTSDIR}/glu.${RUBY_DLEXT}
+${GEM_EXTSDIR}/glut.${RUBY_DLEXT}
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/doc/build_install.txt
 ${GEM_LIBDIR}/doc/extensions.txt
@@ -129,4 +132,4 @@ ${GEM_LIBDIR}/test/tc_glu.rb
 ${GEM_LIBDIR}/test/tc_include_gl.rb
 ${GEM_LIBDIR}/test/tc_misc.rb
 ${GEM_LIBDIR}/test/tc_require_gl.rb
-${GEM_HOME}/specifications/ruby-opengl-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
