@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.13 2011/12/15 16:19:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2014/03/17 14:34:33 taca Exp $
 bin/redcloth
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/redcloth_scan.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/CHANGELOG
