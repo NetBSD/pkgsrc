@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2013/10/01 15:24:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/03/17 14:30:38 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/ae.${RUBY_DLEXT}
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/README
 ${GEM_LIBDIR}/doc/aem-manual/01_introduction.html
