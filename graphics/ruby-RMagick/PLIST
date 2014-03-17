@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.21 2011/11/08 15:37:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.22 2014/03/17 14:11:16 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/RMagick2.${RUBY_DLEXT}
 ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/Doxyfile
 ${GEM_LIBDIR}/README-Mac-OSX.txt
