@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2011/07/11 11:28:34 obache Exp $
-bin/oauth${RUBY_VER}
+@comment $NetBSD: PLIST,v 1.5 2014/03/17 14:29:28 taca Exp $
+bin/oauth${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/Gemfile
