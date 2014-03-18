@@ -1,13 +1,15 @@
-$NetBSD: README.MacOSX,v 1.16 2014/03/17 17:12:58 gdt Exp $
+$NetBSD: README.MacOSX,v 1.17 2014/03/18 01:28:26 gdt Exp $
 
-* gcc vs clang
+* system tools issues
+
+** gcc vs clang
 
 Older versions of Mac OS X (with XCode, of course) provided gcc, and
 pkgsrc defaulted to using gcc.  With 10.9, gcc is no longer present
 and one must bootstrap with "--compiler=clang".  (Arguably, pkgsrc
 should default to clang on 10.9.)
 
-* i386 vs x86_64 ABI issue
+** i386 vs x86_64 ABI issue
 
 Mac OS X Snow Leopard (10.6) through Mavericks (10.9) supports 64-bit
 binaries on most Intel Macs and build those by default on such
@@ -28,6 +30,12 @@ http://mail-index.NetBSD.org/pkgsrc-users/2009/09/24/msg010817.html
 
 As of 2014, the decision to default to i386 should probably be
 revisited.
+
+** sed in 10.9
+
+The sed that comes with 10.9 appears to be broken; it exits when
+called on files with UTF-8 or other apparently-binary content.
+Therefore, pkgsrc uses nbsed on 10.9.
 
 * Developer tools and prerequisites
 
@@ -133,12 +141,20 @@ Clearly, it is desirable for a bulk build to be useful on as many
 computers as possible.  The main issues are which ABI and which OS X
 version.
 
+** 10.6, --abi=32
+
 jperkin@netbsd.org provides a bulk build for quarterly branches
 (--abi=32, OSX 10.6, and therefore gcc 4.2.1, XQuartz,
 X11_TYPE=native):
   http://www.perkin.org.uk/pages/pkgsrc-binary-packages-for-osx.html
   http://mail-index.netbsd.org/pkgsrc-bulk/2014/01/10/msg010276.html
 which should run on any version from 10.6 to 10.9.
+
+Note that sed on 10.9 is broken, but a bootstrap on 10.6 will not
+avoid it, so while one can install this bootstrap on 10.9 and run
+binary packages, building packages will not in general work.
+
+** 10.9, --abi=64 --compiler=clang
 
 Given the 10.9 license situation, a bulk build on 10.9 (and therefore
 clang) seems reasonable, with either --abi=32 or --abi=64.  Such
