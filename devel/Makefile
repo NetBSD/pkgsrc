@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1876 2014/03/18 14:35:51 taca Exp $
+# $NetBSD: Makefile,v 1.1877 2014/03/18 14:38:54 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -1677,6 +1677,7 @@ SUBDIR+=	ruby-test-unit-notify
 SUBDIR+=	ruby-thor
 SUBDIR+=	ruby-thrift
 SUBDIR+=	ruby-thrift_client
+SUBDIR+=	ruby-tins
 SUBDIR+=	ruby-turn
 SUBDIR+=	ruby-uglifier
 SUBDIR+=	ruby-uuidtools
