@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2014/03/11 14:05:17 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.15 2014/03/18 20:09:08 adam Exp $
 bin/ab
 bin/apxs
 bin/dbmmanage
@@ -61,8 +61,8 @@ include/httpd/util_cfgtree.h
 include/httpd/util_charset.h
 include/httpd/util_cookies.h
 include/httpd/util_ebcdic.h
-include/httpd/util_filter.h
 include/httpd/util_fcgi.h
+include/httpd/util_filter.h
 include/httpd/util_ldap.h
 include/httpd/util_md5.h
 include/httpd/util_mutex.h
@@ -820,14 +820,14 @@ share/httpd/manual/developer/debugging.html
 share/httpd/manual/developer/debugging.html.en
 share/httpd/manual/developer/documenting.html
 share/httpd/manual/developer/documenting.html.en
-share/httpd/manual/developer/documenting.html.zh-cn
+share/httpd/manual/developer/documenting.html.zh-cn.utf8
 share/httpd/manual/developer/filters.html
 share/httpd/manual/developer/filters.html.en
 share/httpd/manual/developer/hooks.html
 share/httpd/manual/developer/hooks.html.en
 share/httpd/manual/developer/index.html
 share/httpd/manual/developer/index.html.en
-share/httpd/manual/developer/index.html.zh-cn
+share/httpd/manual/developer/index.html.zh-cn.utf8
 share/httpd/manual/developer/modguide.html
 share/httpd/manual/developer/modguide.html.en
 share/httpd/manual/developer/modules.html
@@ -866,7 +866,7 @@ share/httpd/manual/faq/index.html
 share/httpd/manual/faq/index.html.en
 share/httpd/manual/faq/index.html.fr
 share/httpd/manual/faq/index.html.tr.utf8
-share/httpd/manual/faq/index.html.zh-cn
+share/httpd/manual/faq/index.html.zh-cn.utf8
 share/httpd/manual/filter.html
 share/httpd/manual/filter.html.en
 share/httpd/manual/filter.html.es
@@ -892,7 +892,7 @@ share/httpd/manual/handler.html.fr
 share/httpd/manual/handler.html.ja.utf8
 share/httpd/manual/handler.html.ko.euc-kr
 share/httpd/manual/handler.html.tr.utf8
-share/httpd/manual/handler.html.zh-cn
+share/httpd/manual/handler.html.zh-cn.utf8
 share/httpd/manual/howto/access.html
 share/httpd/manual/howto/access.html.en
 share/httpd/manual/howto/access.html.fr
@@ -918,7 +918,7 @@ share/httpd/manual/howto/index.html.en
 share/httpd/manual/howto/index.html.fr
 share/httpd/manual/howto/index.html.ja.utf8
 share/httpd/manual/howto/index.html.ko.euc-kr
-share/httpd/manual/howto/index.html.zh-cn
+share/httpd/manual/howto/index.html.zh-cn.utf8
 share/httpd/manual/howto/public_html.html
 share/httpd/manual/howto/public_html.html.en
 share/httpd/manual/howto/public_html.html.fr
@@ -951,6 +951,7 @@ share/httpd/manual/images/mod_filter_new.gif
 share/httpd/manual/images/mod_filter_new.png
 share/httpd/manual/images/mod_filter_new.tr.png
 share/httpd/manual/images/mod_filter_old.gif
+share/httpd/manual/images/mod_filter_old.png
 share/httpd/manual/images/mod_rewrite_fig1.gif
 share/httpd/manual/images/mod_rewrite_fig1.png
 share/httpd/manual/images/mod_rewrite_fig2.gif
@@ -980,7 +981,7 @@ share/httpd/manual/index.html.ja.utf8
 share/httpd/manual/index.html.ko.euc-kr
 share/httpd/manual/index.html.pt-br
 share/httpd/manual/index.html.tr.utf8
-share/httpd/manual/index.html.zh-cn
+share/httpd/manual/index.html.zh-cn.utf8
 share/httpd/manual/install.html
 share/httpd/manual/install.html.de
 share/httpd/manual/install.html.en
@@ -1010,7 +1011,7 @@ share/httpd/manual/misc/index.html.en
 share/httpd/manual/misc/index.html.fr
 share/httpd/manual/misc/index.html.ko.euc-kr
 share/httpd/manual/misc/index.html.tr.utf8
-share/httpd/manual/misc/index.html.zh-cn
+share/httpd/manual/misc/index.html.zh-cn.utf8
 share/httpd/manual/misc/password_encryptions.html
 share/httpd/manual/misc/password_encryptions.html.en
 share/httpd/manual/misc/password_encryptions.html.fr
@@ -1049,7 +1050,7 @@ share/httpd/manual/mod/directives.html.fr
 share/httpd/manual/mod/directives.html.ja.utf8
 share/httpd/manual/mod/directives.html.ko.euc-kr
 share/httpd/manual/mod/directives.html.tr.utf8
-share/httpd/manual/mod/directives.html.zh-cn
+share/httpd/manual/mod/directives.html.zh-cn.utf8
 share/httpd/manual/mod/event.html
 share/httpd/manual/mod/event.html.en
 share/httpd/manual/mod/event.html.fr
@@ -1061,7 +1062,7 @@ share/httpd/manual/mod/index.html.fr
 share/httpd/manual/mod/index.html.ja.utf8
 share/httpd/manual/mod/index.html.ko.euc-kr
 share/httpd/manual/mod/index.html.tr.utf8
-share/httpd/manual/mod/index.html.zh-cn
+share/httpd/manual/mod/index.html.zh-cn.utf8
 share/httpd/manual/mod/mod_access_compat.html
 share/httpd/manual/mod/mod_access_compat.html.en
 share/httpd/manual/mod/mod_access_compat.html.fr
@@ -1548,7 +1549,7 @@ share/httpd/manual/mod/quickreference.html.fr
 share/httpd/manual/mod/quickreference.html.ja.utf8
 share/httpd/manual/mod/quickreference.html.ko.euc-kr
 share/httpd/manual/mod/quickreference.html.tr.utf8
-share/httpd/manual/mod/quickreference.html.zh-cn
+share/httpd/manual/mod/quickreference.html.zh-cn.utf8
 share/httpd/manual/mod/worker.html
 share/httpd/manual/mod/worker.html.de
 share/httpd/manual/mod/worker.html.en
@@ -1563,7 +1564,7 @@ share/httpd/manual/mpm.html.fr
 share/httpd/manual/mpm.html.ja.utf8
 share/httpd/manual/mpm.html.ko.euc-kr
 share/httpd/manual/mpm.html.tr.utf8
-share/httpd/manual/mpm.html.zh-cn
+share/httpd/manual/mpm.html.zh-cn.utf8
 share/httpd/manual/new_features_2_0.html
 share/httpd/manual/new_features_2_0.html.de
 share/httpd/manual/new_features_2_0.html.en
@@ -1590,7 +1591,7 @@ share/httpd/manual/platform/index.html
 share/httpd/manual/platform/index.html.en
 share/httpd/manual/platform/index.html.fr
 share/httpd/manual/platform/index.html.ko.euc-kr
-share/httpd/manual/platform/index.html.zh-cn
+share/httpd/manual/platform/index.html.zh-cn.utf8
 share/httpd/manual/platform/netware.html
 share/httpd/manual/platform/netware.html.en
 share/httpd/manual/platform/netware.html.fr
@@ -1672,7 +1673,7 @@ share/httpd/manual/programs/index.html.es
 share/httpd/manual/programs/index.html.fr
 share/httpd/manual/programs/index.html.ko.euc-kr
 share/httpd/manual/programs/index.html.tr.utf8
-share/httpd/manual/programs/index.html.zh-cn
+share/httpd/manual/programs/index.html.zh-cn.utf8
 share/httpd/manual/programs/log_server_status.html
 share/httpd/manual/programs/log_server_status.html.en
 share/httpd/manual/programs/logresolve.html
@@ -1715,7 +1716,7 @@ share/httpd/manual/rewrite/index.html
 share/httpd/manual/rewrite/index.html.en
 share/httpd/manual/rewrite/index.html.fr
 share/httpd/manual/rewrite/index.html.tr.utf8
-share/httpd/manual/rewrite/index.html.zh-cn
+share/httpd/manual/rewrite/index.html.zh-cn.utf8
 share/httpd/manual/rewrite/intro.html
 share/httpd/manual/rewrite/intro.html.en
 share/httpd/manual/rewrite/intro.html.fr
@@ -1754,7 +1755,7 @@ share/httpd/manual/sitemap.html.fr
 share/httpd/manual/sitemap.html.ja.utf8
 share/httpd/manual/sitemap.html.ko.euc-kr
 share/httpd/manual/sitemap.html.tr.utf8
-share/httpd/manual/sitemap.html.zh-cn
+share/httpd/manual/sitemap.html.zh-cn.utf8
 share/httpd/manual/socache.html
 share/httpd/manual/socache.html.en
 share/httpd/manual/socache.html.fr
@@ -1763,7 +1764,7 @@ share/httpd/manual/ssl/index.html.en
 share/httpd/manual/ssl/index.html.fr
 share/httpd/manual/ssl/index.html.ja.utf8
 share/httpd/manual/ssl/index.html.tr.utf8
-share/httpd/manual/ssl/index.html.zh-cn
+share/httpd/manual/ssl/index.html.zh-cn.utf8
 share/httpd/manual/ssl/ssl_compat.html
 share/httpd/manual/ssl/ssl_compat.html.en
 share/httpd/manual/ssl/ssl_compat.html.fr
@@ -1799,7 +1800,9 @@ share/httpd/manual/style/lang.dtd
 share/httpd/manual/style/latex/atbeginend.sty
 share/httpd/manual/style/manualpage.dtd
 share/httpd/manual/style/modulesynopsis.dtd
+share/httpd/manual/style/scripts/MINIFY
 share/httpd/manual/style/scripts/prettify.js
+share/httpd/manual/style/scripts/prettify.min.js
 share/httpd/manual/style/sitemap.dtd
 share/httpd/manual/style/version.ent
 share/httpd/manual/suexec.html
@@ -1841,7 +1844,7 @@ share/httpd/manual/vhosts/index.html.fr
 share/httpd/manual/vhosts/index.html.ja.utf8
 share/httpd/manual/vhosts/index.html.ko.euc-kr
 share/httpd/manual/vhosts/index.html.tr.utf8
-share/httpd/manual/vhosts/index.html.zh-cn
+share/httpd/manual/vhosts/index.html.zh-cn.utf8
 share/httpd/manual/vhosts/ip-based.html
 share/httpd/manual/vhosts/ip-based.html.en
 share/httpd/manual/vhosts/ip-based.html.fr
