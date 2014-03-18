@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/03/14 19:18:31 taca Exp $
+# $NetBSD: Makefile,v 1.4 2014/03/18 09:43:47 jperkin Exp $
 
 DISTNAME=	padrino-core-${RUBY_PADRINO_VERS}
 CATEGORIES=	www
@@ -13,7 +13,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-http_router>=0.11.0<0.12:../../www/ruby-http_router
 DEPENDS+=	${RUBY_PKGPREFIX}-rack-protection>=1.5.0:../../www/ruby-rack-protection
 DEPENDS+=	${RUBY_PKGPREFIX}-sinatra>=1.4.2<1.5:../../www/ruby-sinatra
 DEPENDS+=	${RUBY_PKGPREFIX}-thor>=0.17.0:../../devel/ruby-thor
-DEPENDS+=	${RUBY_PKGPREFIX}-tilt>=1.4.1<1.5:../../textproc/ruby-tilt
+#DEPENDS+=	${RUBY_PKGPREFIX}-tilt>=1.4.1<1.5:../../textproc/ruby-tilt
 
 CONFLICTS+=	ruby[1-9][0-9][0-9]-padrino-core-[0-9]*
 
