@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2014/03/18 14:34:46 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.coveralls.yml
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.ruby-gemset
+${GEM_LIBDIR}/.ruby-version
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/.yardopts
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/HISTORY.md
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/docile.gemspec
+${GEM_LIBDIR}/lib/docile.rb
+${GEM_LIBDIR}/lib/docile/chaining_fallback_context_proxy.rb
+${GEM_LIBDIR}/lib/docile/execution.rb
+${GEM_LIBDIR}/lib/docile/fallback_context_proxy.rb
+${GEM_LIBDIR}/lib/docile/version.rb
+${GEM_LIBDIR}/spec/docile_spec.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/2.0.0/build_info
