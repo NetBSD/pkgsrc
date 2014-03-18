@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/11/18 06:41:27 mef Exp $
+# $NetBSD: Makefile,v 1.4 2014/03/18 15:39:01 mef Exp $
 .include		"../../cross/nios2/Makefile.common"
 PKGNAME=		nios2-gcc-${PKG_VERSION}
 PKG_VERSION=		4.7.3
@@ -46,9 +46,9 @@ SUBST_SED.host-subdir=		'-e /host_subdir = @host_subdir@/s,@host_subdir@,host-${
 .include "../../math/mpcomplex/buildlink3.mk"
 
 do-extract:
-	(cd ${WRKDIR}; tar zxf ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}	\
+	(cd ${WRKDIR}; tar jxf ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}	\
 	        sourceryg++-2013.05-43-nios2-linux-gnu/gcc-2013.05-43.tar.bz2;\
-	tar zxf sourceryg++-2013.05-43-nios2-linux-gnu/gcc-2013.05-43.tar.bz2;\
+	tar jxf sourceryg++-2013.05-43-nios2-linux-gnu/gcc-2013.05-43.tar.bz2;\
 	)
 
 # to avoid conflict with binutils (to be fixed by more sophisticated way)
