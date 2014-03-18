@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.31 2014/02/24 08:16:56 adam Exp $
+$NetBSD: distinfo,v 1.32 2014/03/18 09:03:26 obache Exp $
 
 SHA1 (tar-1.27.1.tar.bz2) = 67aa31d0d497849c05ba5ea6eb41cff130407751
 RMD160 (tar-1.27.1.tar.bz2) = a99ccfd874ac72c1e0feec2d86423c3e5bcd19fb
 Size (tar-1.27.1.tar.bz2) = 2573070 bytes
 SHA1 (patch-ad) = f3a988a6b675a389d8d307fe1a90dde81ba98df5
+SHA1 (patch-gnu_readlinkat.c) = b1ddbf5159db92df9186354f27db5c9cb93b9afa
