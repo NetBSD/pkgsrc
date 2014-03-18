@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2013/02/16 11:22:34 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2014/03/18 23:28:20 gdt Exp $
 
 DISTNAME=	xfig.3.2.5b.full
 PKGNAME=	xfig-3.2.5b
@@ -27,6 +27,7 @@ CFLAGS+=		-I${X11PREFIX}/include/X11
 
 post-extract:
 	cd ${WRKSRC} && ${RM} -f Doc/*.orig Doc/*/*.orig Doc/*/*.save Doc/*/*/*.orig
+	${CHMOD} 755 ${WRKSRC}/Libraries
 	find ${WRKSRC}/Libraries -type d -exec ${CHMOD} 0755 {} \;
 	find ${WRKSRC}/Libraries -type f -exec ${CHMOD} 0644 {} \;
 	find ${WRKSRC}/Doc -type d -exec ${CHMOD} 0755 {} \;
