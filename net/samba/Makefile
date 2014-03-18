@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.241 2013/12/09 10:44:22 taca Exp $
+# $NetBSD: Makefile,v 1.241.2.1 2014/03/18 12:42:57 tron Exp $
 
 DISTNAME=	samba-${VERSION}
 CATEGORIES=	net
@@ -9,8 +9,10 @@ HOMEPAGE=	http://www.samba.org/
 COMMENT=	SMB/CIFS protocol server suite
 LICENSE=	gnu-gpl-v3
 
-VERSION=	3.6.22
+VERSION=	3.6.23
 CONFLICTS+=	ja-samba-[0-9]* pam-smbpass-[0-9]* winbind-[0-9]*
+
+USE_GCC_RUNTIME=	yes
 
 FILESDIR=		${PKGDIR}/../../net/samba/files
 DESCR_SRC=		${PKGDIR}/../../net/samba/DESCR
@@ -48,7 +50,7 @@ REPLACE_PERL=		script/findsmb.in
 
 BROKEN_GETTEXT_DETECTION=yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--libdir=${SAMBA_LIBDIR}
+GNU_CONFIGURE_LIBDIR=	${SAMBA_LIBDIR}
 CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 CONFIGURE_ARGS+=	--with-configdir=${SAMBA_ETCDIR}
@@ -105,12 +107,13 @@ SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing paths.
 SUBST_FILES.paths=	${WRKDIR}/adduser.sh ${WRKDIR}/deluser.sh
 SUBST_STAGE.paths=	post-patch
-SUBST_SED.paths+=	-e 's,@AWK@,${AWK},g'
-SUBST_SED.paths+=	-e 's,@CAT@,${CAT},g'
-SUBST_SED.paths+=	-e 's,@MKTEMP@,${MKTEMP},g'
-SUBST_SED.paths+=	-e 's,@RM@,${RM},g'
-SUBST_SED.paths+=	-e 's,@PWD_MKDB@,${PWD_MKDB},g'
-SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
+SUBST_VARS.paths+=	AWK CAT MKTEMP RM PWD_MKDB SH
+
+SUBST_CLASSES+=		def-cfg
+SUBST_MESSAGE.def-cfg=	Fixing default config files
+SUBST_FILES.def-cfg=	${WRKDIR}/${DISTNAME}/examples/smb.conf.default
+SUBST_STAGE.def-cfg=	post-configure
+SUBST_VARS.def-cfg=	SAMBA_LOGDIR
 
 post-extract:
 	${CP} ${FILESDIR}/adduser.sh ${FILESDIR}/deluser.sh ${WRKDIR}
