@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2014/03/12 13:32:14 fhajny Exp $
+# $NetBSD: Makefile,v 1.82 2014/03/18 18:11:26 bsiegert Exp $
 #
 # Please run 'make files/gtar.1' when updating version of this package
 # to regenerate the man page. converters/help2man is needed.
@@ -50,6 +50,10 @@ PLIST.rmt=		yes
 # XXX see similar hack in coreutils.
 .if ${OPSYS} != "Linux"
 CONFIGURE_ENV+=		gt_cv_func_gnugettext3_libintl=yes
+.endif
+
+.if ${OPSYS} == "MirBSD"
+CPPFLAGS+=		-Dstrtoimax=strtoll -Dstrtoumax=strtoull
 .endif
 
 SYMLINKS=		bin/gtar ${PKGGNUDIR}bin/tar \
