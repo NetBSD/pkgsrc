@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1181 2014/03/18 14:39:21 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1182 2014/03/18 20:11:10 adam Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2014Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW, 
@@ -1749,3 +1749,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/ruby-tilt to 1.4.1 [taca 2014-03-18]
 	Added devel/ruby-docile version 1.1.1 [taca 2014-03-18]
 	Added devel/ruby-tins version 1.0.0 [taca 2014-03-18]
+	Updated devel/SDL2 to 2.0.3 [adam 2014-03-18]
+	Updated www/apache24 to 2.4.9 [adam 2014-03-18]
