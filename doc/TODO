@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13094 2014/03/18 08:22:44 wiz Exp $
+$NetBSD: TODO,v 1.13095 2014/03/18 20:11:10 adam Exp $
 
 Suggested new packages
 ======================
@@ -378,7 +378,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ap-xslt-1.4.3
 	o ap2-auth-ldap-3.11
 	o ap2-transform-0.6.0
-	o apache-2.4.9 [CVE-2014-0098, CVE-2013-6438]
 	o apache-ant-1.9.3
 	o apr0-2.4.1
 	o argtable-2.9
@@ -680,7 +679,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o idutils-4.6
 	o ike-2.0.1 [pkg/37032]
 	o imapsync-1.580 [pkg/48578]
-	p imapsync-1.584 [CVE-2014-2014]
+	o imapsync-1.584 [CVE-2014-2014]
 	o imp-6.1.7
 	o ingo-3.1.4
 	o inspircd-1.2.1
