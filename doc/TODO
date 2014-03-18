@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13091 2014/03/18 00:14:43 taca Exp $
+$NetBSD: TODO,v 1.13092 2014/03/18 04:38:01 obache Exp $
 
 Suggested new packages
 ======================
@@ -677,6 +677,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o idutils-4.6
 	o ike-2.0.1 [pkg/37032]
 	o imapsync-1.580 [pkg/48578]
+	p imapsync-1.584 [CVE-2014-2014]
 	o imp-6.1.7
 	o ingo-3.1.4
 	o inspircd-1.2.1
