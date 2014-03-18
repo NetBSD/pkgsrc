@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/03/18 11:55:49 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2014/03/18 12:50:13 wiz Exp $
 
 DISTNAME=	acroread9	# overridden below
 PKGNAME=	acroread9-9.5.5
@@ -22,7 +22,7 @@ BUILD_DIRS=		# empty
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	compat cups curl gtk2 locale xml2
-EMUL_REQD=		suse>=10.0
+EMUL_REQD=		suse>=11.0
 
 .include "../../mk/bsd.prefs.mk"
 
