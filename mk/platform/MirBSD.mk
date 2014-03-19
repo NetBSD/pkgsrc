@@ -1,4 +1,4 @@
-# $NetBSD: MirBSD.mk,v 1.9 2013/04/28 12:53:56 obache Exp $
+# $NetBSD: MirBSD.mk,v 1.10 2014/03/19 16:44:08 bsiegert Exp $
 #
 # Variable definitions for the MirOS BSD operating system.
 
@@ -45,7 +45,9 @@ _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
 _PATCH_BACKUP_ARG?=	-V simple -z 	# switch to patch(1) for backup suffix
 _USE_RPATH=		yes	# add rpath to LDFLAGS
 
-BUILDLINK_TRANSFORM+=	rm:-ldl	# libdl.a is an empty static library
+BUILDLINK_TRANSFORM+=	rm:-ldl # libdl.a is an empty static library
+BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden # at least until there is a newer gcc
+
 
 # flags passed to the linker to extract all symbols from static archives.
 # this is GNU ld.
