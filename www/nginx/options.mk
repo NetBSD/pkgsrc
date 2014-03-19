@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.24 2014/03/14 11:30:57 imil Exp $
+# $NetBSD: options.mk,v 1.25 2014/03/19 18:01:18 imil Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	dav flv gtools inet6 luajit mail-proxy memcache naxsi \
 			pcre push realip ssl sub uwsgi image-filter upload \
-			debug status nginx-autodetect-cflags spdy
+			debug status nginx-autodetect-cflags spdy echo
 PKG_SUGGESTED_OPTIONS=	inet6 pcre ssl
 
 PLIST_VARS+=		naxsi uwsgi
@@ -65,7 +65,7 @@ CONFIGURE_ARGS+=	--without-http_memcached_module
 .if !empty(PKG_OPTIONS:Mnaxsi) || make(makesum)
 NAXSI=				naxsi-0.53-2
 NAXSI_DISTFILE=			${NAXSI}.tar.gz
-SITES.${NAXSI_DISTFILE}=	http://ftp.netbsd.org/pub/pkgsrc/distfiles/
+SITES.${NAXSI_DISTFILE}=	http://ftp.NetBSD.org/pub/pkgsrc/distfiles/
 DISTFILES+=			${NAXSI_DISTFILE}
 .endif
 
@@ -84,13 +84,23 @@ CONFIGURE_ARGS+=	--add-module=../${LUA}
 .if !empty(PKG_OPTIONS:Mluajit) || make(makesum)
 NDK=			ngx_devel_kit-0.2.19
 NDK_DISTFILE=		${NDK}.tar.gz
-SITES.${NDK_DISTFILE}=	http://ftp.netbsd.org/pub/pkgsrc/distfiles/
+SITES.${NDK_DISTFILE}=	http://ftp.NetBSD.org/pub/pkgsrc/distfiles/
 LUA=			lua-nginx-module-0.9.5
 LUA_DISTFILE=		${LUA}.tar.gz
-SITES.${LUA_DISTFILE}=	http://ftp.netbsd.org/pub/pkgsrc/distfiles/
+SITES.${LUA_DISTFILE}=	http://ftp.NetBSD.org/pub/pkgsrc/distfiles/
 DISTFILES+=		${NDK_DISTFILE} ${LUA_DISTFILE}
 
 DEPENDS+=		LuaJIT2>=2.0.3:../../lang/LuaJIT2
+.endif
+
+.if !empty(PKG_OPTIONS:Mecho)
+CONFIGURE_ARGS+=	--add-module=../${ECHOMOD}
+.endif
+.if !empty(PKG_OPTIONS:Mecho) || make(makesum)
+ECHOMOD=		echo-nginx-module-0.51
+ECHOMOD_DISTFILE=	${ECHOMOD}.tar.gz
+SITES.${ECHOMOD_DISTFILE}=	http://ftp.NetBSD.org/pub/pkgsrc/distfiles/
+DISTFILES+=		${ECHOMOD_DISTFILE}
 .endif
 
 .if !empty(PKG_OPTIONS:Muwsgi)
