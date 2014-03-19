@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/03/09 10:27:04 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2014/03/19 14:51:33 wiz Exp $
 
 DISTNAME=	hgview-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	mercurial>=1.6:../../devel/mercurial
 
 REPLACE_PYTHON= *.py
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.8.0
 
 USE_TOOLS+=	gmake
 
