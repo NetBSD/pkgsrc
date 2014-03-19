@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2014/03/19 13:15:13 gdt Exp $
+$NetBSD: distinfo,v 1.6 2014/03/19 17:50:00 gdt Exp $
 
 SHA1 (bup-0.25.tar.gz) = f32ba39582d0e8875632f282c54f7377ed2a4df9
 RMD160 (bup-0.25.tar.gz) = d578dc87330c49090c25a212d6c5fe4561c8ad0c
@@ -8,4 +8,4 @@ RMD160 (bup-man-0.25.zip) = 8d023cc394ae006ec1a24924176d72a52208558f
 Size (bup-man-0.25.zip) = 40779 bytes
 SHA1 (patch-Makefile) = b37a1f2d584c987430e948c5c04d97def8a5334c
 SHA1 (patch-config_configure) = 9360a8be2cef559d93f1a5301f1f397f31da7d72
-SHA1 (patch-lib_bup___helpers.c) = e803ede14d59d28b97f11bfe5d1536ddc21b999f
+SHA1 (patch-lib_bup___helpers.c) = df146a325e4ca912552f09176a605c26267cfe8b

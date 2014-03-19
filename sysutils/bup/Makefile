@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2014/03/19 13:15:13 gdt Exp $
+# $NetBSD: Makefile,v 1.16 2014/03/19 17:50:00 gdt Exp $
 
 DISTNAME=	bup-0.25
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	# manually packaged since master site is git repository
 # and only available via https
