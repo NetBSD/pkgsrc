@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/03/19 15:11:52 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/03/19 21:05:14 wiz Exp $
 
 DISTNAME=	hgview-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,7 @@ BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
 REPLACE_PYTHON= *.py
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.8.0
+PYTHON_VERSIONS_INCOMPATIBLE+=	26 # imports modules from mercurial, so needs to be the same version
 
 USE_TOOLS+=	gmake
 
