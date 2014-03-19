@@ -1,6 +1,6 @@
-$NetBSD: patch-configure,v 1.4 2014/01/11 17:05:09 taca Exp $
+$NetBSD: patch-configure,v 1.5 2014/03/19 21:56:31 asau Exp $
 
---- configure.orig	2014-01-08 10:33:50.000000000 +0000
+--- configure.orig	2014-03-05 10:52:32.000000000 +0000
 +++ configure
 @@ -23604,7 +23604,7 @@ fi
      if test "$found_openssl" = "no"; then
@@ -61,3 +61,57 @@ $NetBSD: patch-configure,v 1.4 2014/01/11 17:05:09 taca Exp $
  fi
  
  if test "$PHP_THREAD_SAFETY" = "yes" && test "$PHP_MYSQL" = "yes"; then
+@@ -107703,7 +107698,7 @@ if test -z "$aix_libpath"; then aix_libp
+       hardcode_shlibpath_var=no
+       ;;
+ 
+-    freebsd1*)
++    freebsd1|freebsd1.*)
+       ld_shlibs=no
+       ;;
+ 
+@@ -108352,7 +108347,7 @@ dgux*)
+   shlibpath_var=LD_LIBRARY_PATH
+   ;;
+ 
+-freebsd1*)
++freebsd1|freebsd1.*)
+   dynamic_linker=no
+   ;;
+ 
+@@ -108363,7 +108358,7 @@ freebsd* | dragonfly*)
+     objformat=`/usr/bin/objformat`
+   else
+     case $host_os in
+-    freebsd[123]*) objformat=aout ;;
++    freebsd[123]|freebsd[123].*) objformat=aout ;;
+     *) objformat=elf ;;
+     esac
+   fi
+@@ -110443,7 +110438,7 @@ if test -z "$aix_libpath"; then aix_libp
+ 	;;
+     esac
+     ;;
+-  freebsd[12]*)
++  freebsd[12]|freebsd[12].*)
+     # C++ shared libraries reported to be fairly broken before switch to ELF
+     ld_shlibs_CXX=no
+     ;;
+@@ -111989,7 +111984,7 @@ dgux*)
+   shlibpath_var=LD_LIBRARY_PATH
+   ;;
+ 
+-freebsd1*)
++freebsd1|freebsd1.*)
+   dynamic_linker=no
+   ;;
+ 
+@@ -112000,7 +111995,7 @@ freebsd* | dragonfly*)
+     objformat=`/usr/bin/objformat`
+   else
+     case $host_os in
+-    freebsd[123]*) objformat=aout ;;
++    freebsd[123]|freebsd[123].*) objformat=aout ;;
+     *) objformat=elf ;;
+     esac
+   fi
