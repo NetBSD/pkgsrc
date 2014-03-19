@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1185 2014/03/19 14:16:36 imil Exp $
+$NetBSD: CHANGES-2014,v 1.1186 2014/03/19 14:21:33 wen Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2014Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW, 
@@ -1754,3 +1754,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/mdoclint to 1.28 [wiz 2014-03-19]
 	Updated www/nginx to 1.4.7 [imil 2014-03-19]
 	Updated www/nginx-devel to 1.5.12 [imil 2014-03-19]
+	Updated www/moodle to 2.5.5 [wen 2014-03-19]
