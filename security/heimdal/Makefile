@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2014/02/20 08:19:43 obache Exp $
+# $NetBSD: Makefile,v 1.110 2014/03/19 13:25:04 bsiegert Exp $
 
 DISTNAME=	heimdal-1.5.3
 PKGREVISION=	5
@@ -82,7 +82,9 @@ PLIST.afskauth=		yes
 .endif
 
 .if ${OPSYS} == "MirBSD"
+.if ${USE_BUILTIN.openssl} == "yes"
 PLIST.hcrypto=		yes
+.endif
 PLIST.vis=		yes
 # all of the tools need to link against pthread, force it.
 PTHREAD_AUTO_VARS=	yes
