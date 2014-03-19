@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/03/19 14:51:33 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/03/19 15:11:52 wiz Exp $
 
 DISTNAME=	hgview-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,8 @@ COMMENT=	Visually navigate in a Mercurial repository history
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	mercurial>=1.6:../../devel/mercurial
+BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
 REPLACE_PYTHON= *.py
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.8.0
