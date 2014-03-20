@@ -1,18 +1,13 @@
-$NetBSD: patch-js_src_Makefile.in,v 1.6 2014/02/20 13:19:03 ryoon Exp $
+$NetBSD: patch-js_src_Makefile.in,v 1.7 2014/03/20 21:02:00 ryoon Exp $
 
---- js/src/Makefile.in.orig	2013-12-05 16:07:35.000000000 +0000
+--- js/src/Makefile.in.orig	2014-03-15 05:19:19.000000000 +0000
 +++ js/src/Makefile.in
-@@ -467,6 +467,13 @@ EXTRA_LIBS	+= -lposix4 -ldl -lnsl -lsock
- endif
+@@ -379,7 +379,7 @@ endif
+ ifdef MOZ_SHARED_ICU
+ EXTRA_DSO_LDOPTS += $(MOZ_ICU_LIBS)
+ else
+-SHARED_LIBRARY_LIBS += $(MOZ_ICU_LIBS)
++SHARED_LIBRARY_LIBS += $(filter-out -L% -l% -Wl%,$(MOZ_ICU_LIBS))
  endif
  
-+# clang 3.3 + -O2 makes jaeger crash in FixupArity
-+ifdef CLANG_CXX
-+ifndef MOZ_DEBUG
-+Compiler.$(OBJ_SUFFIX): CXXFLAGS += -fno-inline-functions
-+endif
-+endif
-+
- # An AIX Optimization bug causes PR_dtoa() & JS_dtoa to produce wrong result.
- # This suppresses optimization for this single compilation unit.
- ifeq ($(OS_ARCH),AIX)
+ # Prevent floating point errors caused by VC++ optimizations
