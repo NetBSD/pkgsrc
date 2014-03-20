@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.37 2014/03/19 18:01:18 imil Exp $
+$NetBSD: distinfo,v 1.38 2014/03/20 22:19:35 imil Exp $
 
 SHA1 (echo-nginx-module-0.51.tar.gz) = 127d011f146a7e611f328cd4f2f29cdde1227f07
 RMD160 (echo-nginx-module-0.51.tar.gz) = 79bb11c34735381a5a90176eb4d07dec8b469ab4
 Size (echo-nginx-module-0.51.tar.gz) = 63460 bytes
+SHA1 (headers-more-nginx-module-0.25.tar.gz) = 514bc3df30b24eb0a06533f1ebaa579b898990f5
+RMD160 (headers-more-nginx-module-0.25.tar.gz) = 8270edae05b2cf24f1d46fb1b217d4943bf56372
+Size (headers-more-nginx-module-0.25.tar.gz) = 27973 bytes
 SHA1 (lua-nginx-module-0.9.5.tar.gz) = c9c752461f407ccae40870d4cabfbf2bd8c81bac
 RMD160 (lua-nginx-module-0.9.5.tar.gz) = 180331a69680278bac26f0a9ccd0de52fd88a7ea
 Size (lua-nginx-module-0.9.5.tar.gz) = 476124 bytes
@@ -21,5 +24,8 @@ Size (nginx_upload_module-2.2.0.tar.gz) = 25796 bytes
 SHA1 (ngx_devel_kit-0.2.19.tar.gz) = 888635e80a8a0e6242b8e9b684ff60ffa70845a2
 RMD160 (ngx_devel_kit-0.2.19.tar.gz) = 64d3737bc4cc948c1363cce80d70e5260878811e
 Size (ngx_devel_kit-0.2.19.tar.gz) = 65029 bytes
+SHA1 (set-misc-nginx-module-0.24.tar.gz) = da404a7dac5fa4a0a86f42b4ec7648b607f4cd66
+RMD160 (set-misc-nginx-module-0.24.tar.gz) = 07d0bb8f2a0840534a82a2d18394163342393cef
+Size (set-misc-nginx-module-0.24.tar.gz) = 40397 bytes
 SHA1 (patch-aa) = adf433d1b56a88c6c2ed09c4bd54fdb1a336582f
 SHA1 (patch-ab) = 6f20ef8ac9a042faf7e22770de7c16b351cb1191
