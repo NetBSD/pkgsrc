@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2013/06/23 09:30:14 mbalmer Exp $
+# $NetBSD: Makefile,v 1.54 2014/03/20 12:38:26 gdt Exp $
 
 DISTNAME=	nedit-${VERS}-src
 PKGNAME=	nedit-${VERS}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_NEDIT:=v${VERS:S/./_/g}/} \
 		${MASTER_SITE_SOURCEFORGE:=nedit/}
@@ -11,6 +11,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nedit.org/
 COMMENT=	Motif based standard GUI style text editor
+LICENSE=	gnu-gpl-v2
 
 VERS=		5.5
 MASTER_SITE_NEDIT=	http://www.nedit.org/ftp/			\
