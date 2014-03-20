@@ -1,9 +1,10 @@
-# $NetBSD: options.mk,v 1.25 2014/03/19 18:01:18 imil Exp $
+# $NetBSD: options.mk,v 1.26 2014/03/20 22:19:35 imil Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	dav flv gtools inet6 luajit mail-proxy memcache naxsi \
 			pcre push realip ssl sub uwsgi image-filter upload \
-			debug status nginx-autodetect-cflags spdy echo
+			debug status nginx-autodetect-cflags spdy echo \
+			set-misc headers-more
 PKG_SUGGESTED_OPTIONS=	inet6 pcre ssl
 
 PLIST_VARS+=		naxsi uwsgi
@@ -77,18 +78,20 @@ CONFIGURE_ARGS+=	--with-http_realip_module
 CONFIGURE_ARGS+=	--with-ipv6
 .endif
 
-.if !empty(PKG_OPTIONS:Mluajit)
+# NDK must be added once and before 3rd party modules needing it
+.if !empty(PKG_OPTIONS:Mluajit) || !empty(PKG_OPTIONS:Mset-misc)
 CONFIGURE_ARGS+=	--add-module=../${NDK}
+NEED_NDK=		yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mluajit)
 CONFIGURE_ARGS+=	--add-module=../${LUA}
 .endif
 .if !empty(PKG_OPTIONS:Mluajit) || make(makesum)
-NDK=			ngx_devel_kit-0.2.19
-NDK_DISTFILE=		${NDK}.tar.gz
-SITES.${NDK_DISTFILE}=	http://ftp.NetBSD.org/pub/pkgsrc/distfiles/
 LUA=			lua-nginx-module-0.9.5
 LUA_DISTFILE=		${LUA}.tar.gz
 SITES.${LUA_DISTFILE}=	http://ftp.NetBSD.org/pub/pkgsrc/distfiles/
-DISTFILES+=		${NDK_DISTFILE} ${LUA_DISTFILE}
+DISTFILES+=		${LUA_DISTFILE}
 
 DEPENDS+=		LuaJIT2>=2.0.3:../../lang/LuaJIT2
 .endif
@@ -101,6 +104,33 @@ ECHOMOD=		echo-nginx-module-0.51
 ECHOMOD_DISTFILE=	${ECHOMOD}.tar.gz
 SITES.${ECHOMOD_DISTFILE}=	http://ftp.NetBSD.org/pub/pkgsrc/distfiles/
 DISTFILES+=		${ECHOMOD_DISTFILE}
+.endif
+
+.if !empty(PKG_OPTIONS:Mset-misc)
+CONFIGURE_ARGS+=	--add-module=../${SETMISC}
+.endif
+.if !empty(PKG_OPTIONS:Mset-misc) || make(makesum)
+SETMISC=		set-misc-nginx-module-0.24
+SETMISC_DISTFILE=	${SETMISC}.tar.gz
+SITES.${SETMISC_DISTFILE}=	http://ftp.NetBSD.org/pub/pkgsrc/distfiles/
+DISTFILES+=		${SETMISC_DISTFILE}
+.endif
+
+.if defined(NEED_NDK) || make(makesum)
+NDK=			ngx_devel_kit-0.2.19
+NDK_DISTFILE=		${NDK}.tar.gz
+SITES.${NDK_DISTFILE}=	http://ftp.NetBSD.org/pub/pkgsrc/distfiles/
+DISTFILES+=		${NDK_DISTFILE}
+.endif
+
+.if !empty(PKG_OPTIONS:Mheaders-more)
+CONFIGURE_ARGS+=	--add-module=../${HEADMORE}
+.endif
+.if !empty(PKG_OPTIONS:Mheaders-more) || make(makesum)
+HEADMORE=		headers-more-nginx-module-0.25
+HEADMORE_DISTFILE=	${HEADMORE}.tar.gz
+SITES.${HEADMORE_DISTFILE}=	http://ftp.NetBSD.org/pub/pkgsrc/distfiles/
+DISTFILES+=		${HEADMORE_DISTFILE}
 .endif
 
 .if !empty(PKG_OPTIONS:Muwsgi)
