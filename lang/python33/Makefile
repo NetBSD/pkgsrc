@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/03/14 14:04:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.21 2014/03/20 12:40:21 wiz Exp $
 
 .include "dist.mk"
 
@@ -12,8 +12,11 @@ LICENSE=	python-software-foundation
 
 CONFLICTS+=	python-[0-9]*
 
-# Trigger PY_PEP3147=yes in PYTHON_VERSION_DEFAULT={26,27} case.
-PYTHON_VERSION_REQD=	33
+PLIST_AWK+=	-f ${PKGSRCDIR}/lang/python/plist-python.awk
+PLIST_AWK_ENV+=	PYTHON_SOABI="cpython-33"
+PRINT_PLIST_AWK+=	/^[^@]/ && /[^\/]+\.py[co]$$/ {
+PRINT_PLIST_AWK+=	gsub(/__pycache__\//, "")
+PRINT_PLIST_AWK+=	gsub(/\.cpython-33/, "")}
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-threads
@@ -134,7 +137,6 @@ BUILDLINK_DEPMETHOD.readline=		build
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../lang/python/extension.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
