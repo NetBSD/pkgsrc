@@ -1,0 +1,12 @@
+$NetBSD: patch-netwerk_dns_Makefile.in,v 1.1 2014/03/20 21:02:00 ryoon Exp $
+
+--- netwerk/dns/Makefile.in.orig	2014-03-15 05:19:32.000000000 +0000
++++ netwerk/dns/Makefile.in
+@@ -9,3 +9,7 @@ include $(topsrcdir)/config/rules.mk
+ # for effective TLD data.
+ etld_data.inc: $(srcdir)/prepare_tlds.py $(srcdir)/effective_tld_names.dat
+ 	$(PYTHON) $(srcdir)/prepare_tlds.py $(srcdir)/effective_tld_names.dat > etld_data.inc
++
++ifdef MOZ_NATIVE_HARFBUZZ
++nsIDNService.$(OBJ_SUFFIX): CXXFLAGS+=$(MOZ_HARFBUZZ_CFLAGS)
++endif
