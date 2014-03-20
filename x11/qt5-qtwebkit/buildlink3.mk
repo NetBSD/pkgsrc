@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2014/02/03 16:17:13 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2014/03/20 00:06:52 obache Exp $
 
 BUILDLINK_TREE+=	qt5-qtwebkit
 
@@ -28,9 +28,10 @@ BUILDLINK_LIBDIRS.qt5-qtwebkit+=	qt5/plugins
 .include "../../x11/qt5-qtlocation/buildlink3.mk"
 .include "../../x11/qt5-qtmultimedia/buildlink3.mk"
 .include "../../x11/qt5-qtsensors/buildlink3.mk"
+PYTHON_FOR_BUILD_ONLY=			yes
 .include "../../lang/python/tool.mk"
-BUILDLINK_DEPMETHOD.ruby=       build
 .include "../../lang/ruby/buildlink3.mk"
+BUILDLINK_DEPMETHOD.${RUBY_BASE}=	build
 .endif	# QT5_QTWEBKIT_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-qt5-qtwebkit
