@@ -1,4 +1,4 @@
-# $NetBSD: patch-src_nss-pgsql.h,v 1.1.1.1 2013/03/17 14:12:02 asau Exp $
+# $NetBSD: patch-src_nss-pgsql.h,v 1.2 2014/03/20 18:58:31 asau Exp $
 
 Adds checks for header files
 
@@ -8,7 +8,7 @@ Adds checks for header files
  
  #  ifdef HAVE_NSS_H
  #    include <nss.h>
-+#  elsif HAVE_NSSWITCH_H
++#  elif HAVE_NSSWITCH_H
 +#    include <nsswitch.h>
  #  endif
  
