@@ -1,12 +1,25 @@
-$NetBSD: patch-media_webrtc_signaling_test_Makefile.in,v 1.4 2014/02/20 13:19:03 ryoon Exp $
+$NetBSD: patch-media_webrtc_signaling_test_Makefile.in,v 1.5 2014/03/20 21:02:00 ryoon Exp $
 
---- media/webrtc/signaling/test/Makefile.in.orig	2013-12-05 16:07:48.000000000 +0000
+--- media/webrtc/signaling/test/Makefile.in.orig	2014-03-15 05:19:29.000000000 +0000
 +++ media/webrtc/signaling/test/Makefile.in
-@@ -7,6 +7,7 @@ LIBS = \
-   $(NSPR_LIBS) \
+@@ -8,6 +8,7 @@ LIBS = \
    $(NSS_LIBS) \
    $(REALTIME_LIBS) \
+   $(MOZ_JS_LIBS) \
 +  $(MOZ_LIBV4L2_LIBS) \
    $(DEPTH)/xpcom/glue/$(LIB_PREFIX)xpcomglue_s.$(LIB_SUFFIX) \
    $(DEPTH)/media/mtransport/standalone/$(LIB_PREFIX)mtransport_s.$(LIB_SUFFIX) \
    $(DEPTH)/media/webrtc/signalingtest/signaling_ecc/$(LIB_PREFIX)ecc.$(LIB_SUFFIX) \
+@@ -40,6 +41,12 @@ LIBS += \
+   $(NULL)
+ endif
+ 
++ifdef MOZ_NATIVE_OPUS
++LIBS += \
++  $(MOZ_OPUS_LIBS) \
++  $(NULL)
++endif
++
+ ifdef MOZ_NATIVE_LIBVPX
+ LIBS += \
+   $(MOZ_LIBVPX_LIBS) \
