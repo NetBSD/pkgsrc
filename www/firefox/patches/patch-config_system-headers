@@ -1,9 +1,33 @@
-$NetBSD: patch-config_system-headers,v 1.6 2014/02/20 13:19:03 ryoon Exp $
+$NetBSD: patch-config_system-headers,v 1.7 2014/03/20 21:02:00 ryoon Exp $
 
---- config/system-headers.orig	2013-12-05 16:07:23.000000000 +0000
+--- config/system-headers.orig	2014-03-15 05:19:09.000000000 +0000
 +++ config/system-headers
-@@ -1144,3 +1144,4 @@ unicode/unum.h
+@@ -1144,4 +1144,28 @@ unicode/unum.h
  unicode/ustring.h
  unicode/utypes.h
  #endif
-+libutil.h
++cairo-qt.h
++#if MOZ_NATIVE_GRAPHITE2==1
++unwind.h
++graphite2/Font.h
++graphite2/Segment.h
++#endif
++#if MOZ_NATIVE_HARFBUZZ==1
++harfbuzz/hb-ot.h
++harfbuzz/hb.h
++#endif
++#if MOZ_NATIVE_OGG==1
++ogg/ogg.h
++ogg/os_types.h
++#endif
++#if MOZ_NATIVE_VORBIS==1
++vorbis/codec.h
++vorbis/vorbisenc.h
++#endif
++#if MOZ_NATIVE_OPUS==1
++opus.h
++opus_multistream.h
++opus/opus.h
++opus/opus_multistream.h
++#endif
+ libutil.h

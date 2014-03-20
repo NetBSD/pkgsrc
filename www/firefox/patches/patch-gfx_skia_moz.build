@@ -1,10 +1,10 @@
-$NetBSD: patch-gfx_skia_moz.build,v 1.5 2014/02/20 13:19:03 ryoon Exp $
+$NetBSD: patch-gfx_skia_moz.build,v 1.6 2014/03/20 21:02:00 ryoon Exp $
 
---- gfx/skia/moz.build.orig	2014-02-12 21:29:00.000000000 +0000
+--- gfx/skia/moz.build.orig	2014-03-15 05:19:16.000000000 +0000
 +++ gfx/skia/moz.build
-@@ -197,7 +197,7 @@ elif CONFIG['MOZ_WIDGET_TOOLKIT'] == 'qt
+@@ -209,7 +209,7 @@ elif CONFIG['MOZ_WIDGET_TOOLKIT'] == 'qt
+         'src/ports/SkFontHost_cairo.cpp',
          'src/ports/SkFontHost_FreeType_common.cpp',
-         'src/utils/SkOSFile.cpp',
      ]
 -    if CONFIG['OS_TARGET'] == 'Linux':
 +    if CONFIG['MOZ_X11'] == 1 or CONFIG['OS_TARGET'] == 'Linux':

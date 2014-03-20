@@ -1,27 +1,132 @@
-$NetBSD: patch-as,v 1.8 2014/02/20 13:19:03 ryoon Exp $
+$NetBSD: patch-as,v 1.9 2014/03/20 21:02:00 ryoon Exp $
 
 Treat DragonFly like FreeBSD.
 
---- js/src/configure.in.orig	2013-12-05 16:07:35.000000000 +0000
+--- js/src/configure.in.orig	2014-03-15 05:19:19.000000000 +0000
 +++ js/src/configure.in
-@@ -2290,6 +2290,7 @@ EOF
- #pragma GCC visibility push(hidden)
- #pragma GCC visibility push(default)
- #include <string.h>
-+#include <iterator>
- #pragma GCC visibility pop
+@@ -2148,116 +2148,13 @@ AC_LANG_CPLUSPLUS
  
- __attribute__ ((visibility ("default"))) void Func() {
-@@ -2298,7 +2299,7 @@ __attribute__ ((visibility ("default")))
- }
- EOF
-                        ac_cv_have_visibility_builtin_bug=no
+ MOZ_CXX11
+ 
+-dnl Check for .hidden assembler directive and visibility attribute.
+-dnl Borrowed from glibc configure.in
++dnl Setup default hidden visibility and wrapped system headers.
+ dnl ===============================================================
+ if test "$GNU_CC"; then
+-  AC_CACHE_CHECK(for visibility(hidden) attribute,
+-                 ac_cv_visibility_hidden,
+-                 [cat > conftest.c <<EOF
+-                  int foo __attribute__ ((visibility ("hidden"))) = 1;
+-EOF
+-                  ac_cv_visibility_hidden=no
+-                  if ${CC-cc} -Werror -S conftest.c -o conftest.s >/dev/null 2>&1; then
+-                    if egrep '\.(hidden|private_extern).*foo' conftest.s >/dev/null; then
+-                      ac_cv_visibility_hidden=yes
+-                    fi
+-                  fi
+-                  rm -f conftest.[cs]
+-                 ])
+-  if test "$ac_cv_visibility_hidden" = "yes"; then
+-    AC_DEFINE(HAVE_VISIBILITY_HIDDEN_ATTRIBUTE)
+-
+-    AC_CACHE_CHECK(for visibility(default) attribute,
+-                   ac_cv_visibility_default,
+-                   [cat > conftest.c <<EOF
+-                    int foo __attribute__ ((visibility ("default"))) = 1;
+-EOF
+-                    ac_cv_visibility_default=no
+-                    if ${CC-cc} -fvisibility=hidden -Werror -S conftest.c -o conftest.s >/dev/null 2>&1; then
+-                      if ! egrep '\.(hidden|private_extern).*foo' conftest.s >/dev/null; then
+-                        ac_cv_visibility_default=yes
+-                      fi
+-                    fi
+-                    rm -f conftest.[cs]
+-                   ])
+-    if test "$ac_cv_visibility_default" = "yes"; then
+-      AC_DEFINE(HAVE_VISIBILITY_ATTRIBUTE)
+-
+-      AC_CACHE_CHECK(for visibility pragma support,
+-                     ac_cv_visibility_pragma,
+-                     [cat > conftest.c <<EOF
+-#pragma GCC visibility push(hidden)
+-                      int foo_hidden = 1;
+-#pragma GCC visibility push(default)
+-                      int foo_default = 1;
+-EOF
+-                      ac_cv_visibility_pragma=no
+-                      if ${CC-cc} -Werror -S conftest.c -o conftest.s >/dev/null 2>&1; then
+-                        if egrep '\.(hidden|private_extern).*foo_hidden' conftest.s >/dev/null; then
+-                          if ! egrep '\.(hidden|private_extern).*foo_default' conftest.s > /dev/null; then
+-                            ac_cv_visibility_pragma=yes
+-                          fi
+-                        fi
+-                      fi
+-                      rm -f conftest.[cs]
+-                    ])
+-      if test "$ac_cv_visibility_pragma" = "yes"; then
+-        AC_CACHE_CHECK(For gcc visibility bug with class-level attributes (GCC bug 26905),
+-                       ac_cv_have_visibility_class_bug,
+-                       [cat > conftest.c <<EOF
+-#pragma GCC visibility push(hidden)
+-struct __attribute__ ((visibility ("default"))) TestStruct {
+-  static void Init();
+-};
+-__attribute__ ((visibility ("default"))) void TestFunc() {
+-  TestStruct::Init();
+-}
+-EOF
+-                       ac_cv_have_visibility_class_bug=no
+-                       if ! ${CXX-g++} ${CXXFLAGS} ${DSO_PIC_CFLAGS} ${DSO_LDOPTS} -S -o conftest.S conftest.c > /dev/null 2>&1 ; then
+-                         ac_cv_have_visibility_class_bug=yes
+-                       else
+-                         if test `egrep -c '@PLT|\\$stub' conftest.S` = 0; then
+-                           ac_cv_have_visibility_class_bug=yes
+-                         fi
+-                       fi
+-                       rm -rf conftest.{c,S}
+-                       ])
+-
+-        AC_CACHE_CHECK(For x86_64 gcc visibility bug with builtins (GCC bug 20297),
+-                       ac_cv_have_visibility_builtin_bug,
+-                       [cat > conftest.c <<EOF
+-#pragma GCC visibility push(hidden)
+-#pragma GCC visibility push(default)
+-#include <string.h>
+-#pragma GCC visibility pop
+-
+-__attribute__ ((visibility ("default"))) void Func() {
+-  char c[[100]];
+-  memset(c, 0, sizeof(c));
+-}
+-EOF
+-                       ac_cv_have_visibility_builtin_bug=no
 -                       if ! ${CC-cc} ${CFLAGS} ${DSO_PIC_CFLAGS} ${DSO_LDOPTS} -O2 -S -o conftest.S conftest.c > /dev/null 2>&1 ; then
-+                       if ! ${CXX-c++} ${CXXFLAGS} ${DSO_PIC_CFLAGS} ${DSO_LDOPTS} -O2 -S -o conftest.S conftest.c > /dev/null 2>&1 ; then
-                          ac_cv_have_visibility_builtin_bug=yes
-                        else
-                          if test `grep -c "@PLT" conftest.S` = 0; then
-@@ -2515,7 +2516,7 @@ then
+-                         ac_cv_have_visibility_builtin_bug=yes
+-                       else
+-                         if test `grep -c "@PLT" conftest.S` = 0; then
+-                           ac_cv_visibility_builtin_bug=yes
+-                         fi
+-                       fi
+-                       rm -f conftest.{c,S}
+-                       ])
+-        if test "$ac_cv_have_visibility_builtin_bug" = "no" -a \
+-                "$ac_cv_have_visibility_class_bug" = "no"; then
+-          VISIBILITY_FLAGS='-I$(DIST)/system_wrappers_js -include $(topsrcdir)/config/gcc_hidden.h'
+-          WRAP_SYSTEM_INCLUDES=1
+-        else
+-          VISIBILITY_FLAGS='-fvisibility=hidden'
+-        fi # have visibility pragma bug
+-      fi   # have visibility pragma
+-    fi     # have visibility(default) attribute
+-  fi       # have visibility(hidden) attribute
++  AC_DEFINE(HAVE_VISIBILITY_HIDDEN_ATTRIBUTE)
++  AC_DEFINE(HAVE_VISIBILITY_ATTRIBUTE)
++  VISIBILITY_FLAGS='-I$(DIST)/system_wrappers_js -include $(topsrcdir)/config/gcc_hidden.h'
++  WRAP_SYSTEM_INCLUDES=1
+ fi         # GNU_CC
+ 
+ # visibility hidden flag for Sun Studio on Solaris
+@@ -2456,7 +2353,7 @@ then
      fi
  
  	case "$target" in
@@ -30,33 +135,7 @@ Treat DragonFly like FreeBSD.
  			AC_DEFINE(_REENTRANT)
  			AC_DEFINE(_THREAD_SAFE)
  			dnl -pthread links in -lpthread, so don't specify it explicitly.
-@@ -2600,14 +2601,22 @@ fi
- AC_CACHE_CHECK(
-     [for res_ninit()],
-     ac_cv_func_res_ninit,
--    [AC_TRY_LINK([
-+    [AC_TRY_RUN([
-         #ifdef linux
-         #define _BSD_SOURCE 1
-         #endif
-+	#ifdef __NetBSD__
-+	#error use of global _res variable in threaded programs is not portable
-+	#endif
-+        #include <sys/types.h>
-+        #include <netinet/in.h>
-+        #include <arpa/nameser.h>
-         #include <resolv.h>
--        ],
--        [int foo = res_ninit(&_res);],
-+        int main(int argc, char **argv){
-+            int foo = res_ninit(&_res);
-+        }],
-         [ac_cv_func_res_ninit=yes],
-+        [ac_cv_func_res_ninit=no],
-         [ac_cv_func_res_ninit=no])
-     ])
- 
-@@ -3316,7 +3325,7 @@ if test "$MOZ_MEMORY"; then
+@@ -3270,7 +3167,7 @@ if test "$MOZ_MEMORY"; then
    *-darwin*)
      AC_DEFINE(MOZ_MEMORY_DARWIN)
      ;;
@@ -65,7 +144,39 @@ Treat DragonFly like FreeBSD.
      AC_DEFINE(MOZ_MEMORY_BSD)
      ;;
    *-android*|*-linuxandroid*)
-@@ -4339,6 +4348,16 @@ fi
+@@ -3632,7 +3529,10 @@ dnl ====================================
+ dnl = Support for gcc stack unwinding (from gcc 3.3)
+ dnl ========================================================
+ if test -z "$SKIP_LIBRARY_CHECKS"; then
++    AC_LANG_SAVE
++    AC_LANG_CPLUSPLUS
+     MOZ_CHECK_HEADER(unwind.h, AC_CHECK_FUNCS(_Unwind_Backtrace))
++    AC_LANG_RESTORE
+ fi
+ 
+ dnl ========================================================
+@@ -4086,6 +3986,20 @@ AC_SUBST(CXX_VERSION)
+ AC_SUBST(MSMANIFEST_TOOL)
+ AC_SUBST(MOZ_LINKER)
+ 
++AC_MSG_CHECKING([for posix_fadvise])
++AC_TRY_LINK([#define _XOPEN_SOURCE 600
++  #include <fcntl.h>],
++                 [posix_fadvise(0, 0, 0, 0);],
++                 [ac_cv___posix_fadvise=true],
++                 [ac_cv___posix_fadvise=false])
++
++if test "$ac_cv___posix_fadvise" = true ; then
++  AC_DEFINE(HAVE_POSIX_FADVISE)
++  AC_MSG_RESULT(yes)
++else
++  AC_MSG_RESULT(no)
++fi
++
+ AC_MSG_CHECKING([for posix_fallocate])
+ AC_TRY_LINK([#define _XOPEN_SOURCE 600
+   #include <fcntl.h>],
+@@ -4436,6 +4350,16 @@ fi
  dnl ========================================================
  dnl JavaScript shell
  dnl ========================================================

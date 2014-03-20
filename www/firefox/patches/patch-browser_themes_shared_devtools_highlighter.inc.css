@@ -1,0 +1,13 @@
+$NetBSD: patch-browser_themes_shared_devtools_highlighter.inc.css,v 1.1 2014/03/20 21:02:00 ryoon Exp $
+
+--- browser/themes/shared/devtools/highlighter.inc.css.orig	2014-03-15 05:19:09.000000000 +0000
++++ browser/themes/shared/devtools/highlighter.inc.css
+@@ -54,7 +54,7 @@ html|*.highlighter-nodeinfobar-pseudo-cl
+   padding: 0;
+   width: 26px;
+   min-height: 26px;
+-%ifndef XP_LINUX
++%if !defined(MOZ_WIDGET_GTK) && !defined(MOZ_WIDGET_QT)
+   background-color: transparent;
+ %endif
+ }
