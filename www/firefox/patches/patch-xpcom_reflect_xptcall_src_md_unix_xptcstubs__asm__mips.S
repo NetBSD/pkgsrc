@@ -1,8 +1,8 @@
-$NetBSD: patch-xn,v 1.3 2014/02/20 13:19:03 ryoon Exp $
+$NetBSD: patch-xpcom_reflect_xptcall_src_md_unix_xptcstubs__asm__mips.S,v 1.1 2014/03/20 21:02:00 ryoon Exp $
 
---- xpcom/reflect/xptcall/src/md/unix/xptcinvoke_asm_mips.s.orig	2013-01-04 23:44:47.000000000 +0000
-+++ xpcom/reflect/xptcall/src/md/unix/xptcinvoke_asm_mips.s
-@@ -16,6 +16,47 @@
+--- xpcom/reflect/xptcall/src/md/unix/xptcstubs_asm_mips.S.orig	2014-03-15 05:19:39.000000000 +0000
++++ xpcom/reflect/xptcall/src/md/unix/xptcstubs_asm_mips.S
+@@ -14,6 +14,47 @@
  #include <sys/asm.h>
  #endif
  

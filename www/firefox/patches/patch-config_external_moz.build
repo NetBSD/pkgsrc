@@ -1,0 +1,31 @@
+$NetBSD: patch-config_external_moz.build,v 1.1 2014/03/20 21:02:00 ryoon Exp $
+
+--- config/external/moz.build.orig	2014-03-15 05:19:09.000000000 +0000
++++ config/external/moz.build
+@@ -15,13 +15,13 @@ if CONFIG['MOZ_UPDATER']:
+     if not CONFIG['MOZ_NATIVE_BZ2']:
+         external_dirs += ['modules/libbz2']
+ 
+-if CONFIG['MOZ_VORBIS']:
++if CONFIG['MOZ_VORBIS'] and not CONFIG['MOZ_NATIVE_VORBIS']:
+     external_dirs += ['media/libvorbis']
+ 
+ if CONFIG['MOZ_TREMOR']:
+     external_dirs += ['media/libtremor']
+ 
+-if CONFIG['MOZ_OPUS']:
++if CONFIG['MOZ_OPUS'] and not CONFIG['MOZ_NATIVE_OPUS']:
+     external_dirs += ['media/libopus']
+ 
+ if CONFIG['MOZ_WEBM']:
+@@ -31,7 +31,9 @@ if CONFIG['MOZ_VP8'] and not CONFIG['MOZ
+     external_dirs += ['media/libvpx']
+ 
+ if CONFIG['MOZ_OGG']:
+-    external_dirs += ['media/libogg', 'media/libtheora']
++    if not CONFIG['MOZ_NATIVE_OGG']:
++        external_dirs += ['media/libogg']
++    external_dirs += ['media/libtheora']
+ 
+ if not CONFIG['MOZ_NATIVE_PNG']:
+     external_dirs += ['media/libpng']
