@@ -1,51 +1,134 @@
-$NetBSD: patch-aa,v 1.20 2014/02/20 13:19:03 ryoon Exp $
+$NetBSD: patch-aa,v 1.21 2014/03/20 21:02:00 ryoon Exp $
 
---- configure.in.orig	2013-12-05 16:07:23.000000000 +0000
+--- configure.in.orig	2014-03-15 05:19:10.000000000 +0000
 +++ configure.in
-@@ -2752,6 +2752,7 @@ EOF
- #pragma GCC visibility push(hidden)
- #pragma GCC visibility push(default)
- #include <string.h>
-+#include <iterator>
- #pragma GCC visibility pop
+@@ -2544,118 +2544,15 @@ MOZ_CXX11
  
- __attribute__ ((visibility ("default"))) void Func() {
-@@ -2760,7 +2761,7 @@ __attribute__ ((visibility ("default")))
- }
- EOF
-                        ac_cv_have_visibility_builtin_bug=no
+ AC_LANG_C
+ 
+-dnl Check for .hidden assembler directive and visibility attribute.
+-dnl Borrowed from glibc configure.in
++dnl Setup default hidden visibility and wrapped system headers.
+ dnl ===============================================================
+ if test "$GNU_CC"; then
+-  AC_CACHE_CHECK(for visibility(hidden) attribute,
+-                 ac_cv_visibility_hidden,
+-                 [cat > conftest.c <<EOF
+-                  int foo __attribute__ ((visibility ("hidden"))) = 1;
+-EOF
+-                  ac_cv_visibility_hidden=no
+-                  if ${CC-cc} -Werror -S conftest.c -o conftest.s >/dev/null 2>&1; then
+-                    if egrep '\.(hidden|private_extern).*foo' conftest.s >/dev/null; then
+-                      ac_cv_visibility_hidden=yes
+-                    fi
+-                  fi
+-                  rm -f conftest.[cs]
+-                 ])
+-  if test "$ac_cv_visibility_hidden" = "yes"; then
+-    AC_DEFINE(HAVE_VISIBILITY_HIDDEN_ATTRIBUTE)
+-
+-    AC_CACHE_CHECK(for visibility(default) attribute,
+-                   ac_cv_visibility_default,
+-                   [cat > conftest.c <<EOF
+-                    int foo __attribute__ ((visibility ("default"))) = 1;
+-EOF
+-                    ac_cv_visibility_default=no
+-                    if ${CC-cc} -fvisibility=hidden -Werror -S conftest.c -o conftest.s >/dev/null 2>&1; then
+-                      if ! egrep '\.(hidden|private_extern).*foo' conftest.s >/dev/null; then
+-                        ac_cv_visibility_default=yes
+-                      fi
+-                    fi
+-                    rm -f conftest.[cs]
+-                   ])
+-    if test "$ac_cv_visibility_default" = "yes"; then
+-      AC_DEFINE(HAVE_VISIBILITY_ATTRIBUTE)
+-
+-      AC_CACHE_CHECK(for visibility pragma support,
+-                     ac_cv_visibility_pragma,
+-                     [cat > conftest.c <<EOF
+-#pragma GCC visibility push(hidden)
+-                      int foo_hidden = 1;
+-#pragma GCC visibility push(default)
+-                      int foo_default = 1;
+-EOF
+-                      ac_cv_visibility_pragma=no
+-                      if ${CC-cc} -Werror -S conftest.c -o conftest.s >/dev/null 2>&1; then
+-                        if egrep '\.(hidden|private_extern).*foo_hidden' conftest.s >/dev/null; then
+-                          if ! egrep '\.(hidden|private_extern).*foo_default' conftest.s > /dev/null; then
+-                            ac_cv_visibility_pragma=yes
+-                          fi
+-                        fi
+-                      fi
+-                      rm -f conftest.[cs]
+-                    ])
+-      if test "$ac_cv_visibility_pragma" = "yes"; then
+-        AC_CACHE_CHECK(For gcc visibility bug with class-level attributes (GCC bug 26905),
+-                       ac_cv_have_visibility_class_bug,
+-                       [cat > conftest.c <<EOF
+-#pragma GCC visibility push(hidden)
+-struct __attribute__ ((visibility ("default"))) TestStruct {
+-  static void Init();
+-};
+-__attribute__ ((visibility ("default"))) void TestFunc() {
+-  TestStruct::Init();
+-}
+-EOF
+-                       ac_cv_have_visibility_class_bug=no
+-                       if ! ${CXX-g++} ${CXXFLAGS} ${DSO_PIC_CFLAGS} ${DSO_LDOPTS} -S -o conftest.S conftest.c > /dev/null 2>&1 ; then
+-                         ac_cv_have_visibility_class_bug=yes
+-                       else
+-                         if test `egrep -c '@PLT|\\$stub' conftest.S` = 0; then
+-                           ac_cv_have_visibility_class_bug=yes
+-                         fi
+-                       fi
+-                       rm -rf conftest.{c,S}
+-                       ])
+-
+-        AC_CACHE_CHECK(For x86_64 gcc visibility bug with builtins (GCC bug 20297),
+-                       ac_cv_have_visibility_builtin_bug,
+-                       [cat > conftest.c <<EOF
+-#pragma GCC visibility push(hidden)
+-#pragma GCC visibility push(default)
+-#include <string.h>
+-#pragma GCC visibility pop
+-
+-__attribute__ ((visibility ("default"))) void Func() {
+-  char c[[100]];
+-  memset(c, 0, sizeof(c));
+-}
+-EOF
+-                       ac_cv_have_visibility_builtin_bug=no
 -                       if ! ${CC-cc} ${CFLAGS} ${DSO_PIC_CFLAGS} ${DSO_LDOPTS} -O2 -S -o conftest.S conftest.c > /dev/null 2>&1 ; then
-+                       if ! ${CXX-c++} ${CXXFLAGS} ${DSO_PIC_CFLAGS} ${DSO_LDOPTS} -O2 -S -o conftest.S conftest.c > /dev/null 2>&1 ; then
-                          ac_cv_have_visibility_builtin_bug=yes
-                        else
-                          if test `grep -c "@PLT" conftest.S` = 0; then
-@@ -3216,14 +3217,22 @@ fi
- AC_CACHE_CHECK(
-     [for res_ninit()],
-     ac_cv_func_res_ninit,
--    [AC_TRY_LINK([
-+    [AC_TRY_RUN([
-         #ifdef linux
-         #define _BSD_SOURCE 1
-         #endif
-+	#ifdef __NetBSD__
-+	#error use of global _res variable in threaded programs is not portable
-+	#endif
-+        #include <sys/types.h>
-+        #include <netinet/in.h>
-+        #include <arpa/nameser.h>
-         #include <resolv.h>
--        ],
--        [int foo = res_ninit(&_res);],
-+        int main(int argc, char **argv){
-+            int foo = res_ninit(&_res);
-+        }],
-         [ac_cv_func_res_ninit=yes],
-+        [ac_cv_func_res_ninit=no],
-         [ac_cv_func_res_ninit=no])
-     ])
+-                         ac_cv_have_visibility_builtin_bug=yes
+-                       else
+-                         if test `grep -c "@PLT" conftest.S` = 0; then
+-                           ac_cv_visibility_builtin_bug=yes
+-                         fi
+-                       fi
+-                       rm -f conftest.{c,S}
+-                       ])
+-        if test "$ac_cv_have_visibility_builtin_bug" = "no" -a \
+-                "$ac_cv_have_visibility_class_bug" = "no"; then
+-          VISIBILITY_FLAGS='-I$(DIST)/system_wrappers -include $(topsrcdir)/config/gcc_hidden.h'
+-          WRAP_SYSTEM_INCLUDES=1
+-          STL_FLAGS='-I$(DIST)/stl_wrappers'
+-          WRAP_STL_INCLUDES=1
+-        else
+-          VISIBILITY_FLAGS='-fvisibility=hidden'
+-        fi # have visibility pragma bug
+-      fi   # have visibility pragma
+-    fi     # have visibility(default) attribute
+-  fi       # have visibility(hidden) attribute
++  AC_DEFINE(HAVE_VISIBILITY_HIDDEN_ATTRIBUTE)
++  AC_DEFINE(HAVE_VISIBILITY_ATTRIBUTE)
++  VISIBILITY_FLAGS='-I$(DIST)/system_wrappers -include $(topsrcdir)/config/gcc_hidden.h'
++  WRAP_SYSTEM_INCLUDES=1
++  STL_FLAGS='-I$(DIST)/stl_wrappers'
++  WRAP_STL_INCLUDES=1
+ fi         # GNU_CC
  
-@@ -3874,6 +3883,14 @@ if test -n "$YASM"; then
+ # visibility hidden flag for Sun Studio on Solaris
+@@ -3724,6 +3621,14 @@ if test -n "$YASM"; then
    _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
  fi
  
@@ -60,7 +143,7 @@ $NetBSD: patch-aa,v 1.20 2014/02/20 13:19:03 ryoon Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -3901,11 +3918,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
+@@ -3751,11 +3656,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
                       #include <jpeglib.h> ],
                     [ #if JPEG_LIB_VERSION < $MOZJPEG
                       #error "Insufficient JPEG library version ($MOZJPEG required)."
@@ -73,7 +156,7 @@ $NetBSD: patch-aa,v 1.20 2014/02/20 13:19:03 ryoon Exp $
                     MOZ_NATIVE_JPEG=1,
                     AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
  fi
-@@ -4062,6 +4075,22 @@ fi
+@@ -3921,6 +3822,22 @@ fi
  AC_SUBST(MOZ_NATIVE_ICU)
  
  dnl ========================================================
@@ -96,20 +179,25 @@ $NetBSD: patch-aa,v 1.20 2014/02/20 13:19:03 ryoon Exp $
  dnl Java SDK support
  dnl ========================================================
  
-@@ -5281,6 +5310,12 @@ if test -n "$MOZ_WEBRTC"; then
-     MOZ_VP8_ENCODER=1
+@@ -3955,6 +3872,7 @@ MOZ_SAMPLE_TYPE_FLOAT32=
+ MOZ_SAMPLE_TYPE_S16=
+ MOZ_OPUS=1
+ MOZ_WEBM=1
++MOZ_GSTREAMER=
+ MOZ_DIRECTSHOW=
+ MOZ_WMF=
+ MOZ_FMP4=
+@@ -5136,6 +5054,9 @@ if test -n "$MOZ_WEBRTC"; then
+     MOZ_VP8=1
      MOZ_VP8_ERROR_CONCEALMENT=1
  
-+    dnl with libv4l2 we can support more cameras
-+    PKG_CHECK_MODULES(MOZ_LIBV4L2, libv4l2)
-+
 +    dnl with libv4l2 we can support more cameras
 +    PKG_CHECK_MODULES(MOZ_LIBV4L2, libv4l2)
 +
  dnl enable once Signaling lands
      MOZ_WEBRTC_SIGNALING=1
      AC_DEFINE(MOZ_WEBRTC_SIGNALING)
-@@ -5307,15 +5342,18 @@ AC_SUBST(MOZ_SRTP)
+@@ -5158,15 +5079,18 @@ AC_SUBST(MOZ_SRTP)
  
  dnl Use integers over floats for audio on B2G and Android, because audio
  dnl backends for those platforms don't support floats.
@@ -131,7 +219,205 @@ $NetBSD: patch-aa,v 1.20 2014/02/20 13:19:03 ryoon Exp $
  
  dnl ========================================================
  dnl = Disable Speech API code
-@@ -8276,7 +8314,7 @@ case "$OS_TARGET" in
+@@ -5230,6 +5154,40 @@ if test -n "$MOZ_OGG"; then
+ fi
+ 
+ dnl ========================================================
++dnl Check for libogg
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-ogg,
++[  --with-system-ogg       Use system libogg (located with pkgconfig)],
++MOZ_NATIVE_OGG=1,
++MOZ_NATIVE_OGG= )
++
++if test -n "$MOZ_NATIVE_OGG"; then
++    PKG_CHECK_MODULES(MOZ_OGG, ogg >= 1.2.1)
++fi
++
++AC_SUBST(MOZ_NATIVE_OGG)
++AC_SUBST(MOZ_OGG_CFLAGS)
++AC_SUBST(MOZ_OGG_LIBS)
++
++dnl ========================================================
++dnl Check for libvorbis
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-vorbis,
++[  --with-system-vorbis    Use system libvorbis (located with pkgconfig)],
++MOZ_NATIVE_VORBIS=1,
++MOZ_NATIVE_VORBIS= )
++
++if test -n "$MOZ_NATIVE_VORBIS"; then
++    PKG_CHECK_MODULES(MOZ_VORBIS, vorbis vorbisenc >= 1.3.4)
++fi
++
++AC_SUBST(MOZ_NATIVE_VORBIS)
++AC_SUBST(MOZ_VORBIS_CFLAGS)
++AC_SUBST(MOZ_VORBIS_LIBS)
++
++dnl ========================================================
+ dnl = Disable Opus audio codec support
+ dnl ========================================================
+ MOZ_ARG_DISABLE_BOOL(opus,
+@@ -5238,6 +5196,25 @@ MOZ_ARG_DISABLE_BOOL(opus,
+     MOZ_OPUS=1)
+ 
+ dnl ========================================================
++dnl Check for libopus
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-opus,
++[  --with-system-opus      Use system libopus (located with pkgconfig)],
++MOZ_NATIVE_OPUS=1,
++MOZ_NATIVE_OPUS= )
++
++if test -n "$MOZ_NATIVE_OPUS"; then
++    PKG_CHECK_MODULES(MOZ_OPUS, opus >= 1.1)
++else
++    MOZ_OPUS_CFLAGS='-I$(topsrcdir)/media/libopus/include'
++fi
++
++AC_SUBST(MOZ_NATIVE_OPUS)
++AC_SUBST(MOZ_OPUS_CFLAGS)
++AC_SUBST(MOZ_OPUS_LIBS)
++
++dnl ========================================================
+ dnl = Disable VP8 decoder support
+ dnl ========================================================
+ MOZ_ARG_DISABLE_BOOL(webm,
+@@ -5606,43 +5583,60 @@ dnl = Enable GStreamer
+ dnl ========================================================
+ if test "$OS_TARGET" = "Linux"; then
+   MOZ_GSTREAMER=1
++  GST_API_VERSION=0.10
+ fi
+ 
+-MOZ_ARG_ENABLE_BOOL(gstreamer,
+-[  --enable-gstreamer           Enable GStreamer support],
+-MOZ_GSTREAMER=1,
+-MOZ_GSTREAMER=)
+-
+-if test "$MOZ_GSTREAMER"; then
+-    # API version, eg 0.10, 1.0 etc
++MOZ_ARG_ENABLE_STRING(gstreamer,
++[  --enable-gstreamer[=0.10]           Enable GStreamer support],
++[ MOZ_GSTREAMER=1
++  # API version, eg 0.10, 1.0 etc
++  if test -z "$enableval" -o "$enableval" = "yes"; then
+     GST_API_VERSION=0.10
++  elif test "$enableval" = "no"; then
++    MOZ_GSTREAMER=
++  else
++    GST_API_VERSION=$enableval
++  fi],
++)
++
++if test -n "$MOZ_GSTREAMER"; then
+     # core/base release number
+-    GST_VERSION=0.10.25
++    if test "$GST_API_VERSION" = "1.0"; then
++      GST_VERSION=1.0
++    else
++      GST_VERSION=0.10.25
++    fi
++
+     PKG_CHECK_MODULES(GSTREAMER,
+                       gstreamer-$GST_API_VERSION >= $GST_VERSION
+                       gstreamer-app-$GST_API_VERSION
+-                      gstreamer-plugins-base-$GST_API_VERSION, ,
+-                      AC_MSG_ERROR([gstreamer and gstreamer-plugins-base development packages are needed to build gstreamer backend. Install them or disable gstreamer support with --disable-gstreamer]))
+-    if test -n "$GSTREAMER_LIBS"; then
+-       _SAVE_LDFLAGS=$LDFLAGS
+-       LDFLAGS="$LDFLAGS $GSTREAMER_LIBS -lgstvideo-$GST_API_VERSION"
+-       AC_TRY_LINK(,[return 0;],_HAVE_LIBGSTVIDEO=1,_HAVE_LIBGSTVIDEO=)
+-       if test -n "$_HAVE_LIBGSTVIDEO" ; then
+-          GSTREAMER_LIBS="$GSTREAMER_LIBS -lgstvideo-$GST_API_VERSION"
+-       else
+-          AC_MSG_ERROR([gstreamer-plugins-base found, but no libgstvideo. Something has gone terribly wrong. Try reinstalling gstreamer-plugins-base; failing that, disable the gstreamer backend with --disable-gstreamer.])
+-       fi
+-       LDFLAGS=$_SAVE_LDFLAGS
++                      gstreamer-plugins-base-$GST_API_VERSION,
++                      [_HAVE_GSTREAMER=1],
++                      [_HAVE_GSTREAMER=])
++    if test -z "$_HAVE_GSTREAMER"; then
++        AC_MSG_ERROR([gstreamer and gstreamer-plugins-base development packages are needed to build gstreamer backend. Install them or disable gstreamer support with --disable-gstreamer])
++    fi
++
++    _SAVE_LDFLAGS=$LDFLAGS
++    LDFLAGS="$LDFLAGS $GSTREAMER_LIBS -lgstvideo-$GST_API_VERSION"
++    AC_TRY_LINK(,[return 0;],_HAVE_LIBGSTVIDEO=1,_HAVE_LIBGSTVIDEO=)
++    if test -n "$_HAVE_LIBGSTVIDEO" ; then
++        GSTREAMER_LIBS="$GSTREAMER_LIBS -lgstvideo-$GST_API_VERSION"
+     else
+-       AC_MSG_ERROR([gstreamer and gstreamer-plugins-base development packages are needed to build gstreamer backend. Install them or disable gstreamer support with --disable-gstreamer])
++        AC_MSG_ERROR([gstreamer-plugins-base found, but no libgstvideo. Something has gone terribly wrong. Try reinstalling gstreamer-plugins-base; failing that, disable the gstreamer backend with --disable-gstreamer.])
+     fi
++    LDFLAGS=$_SAVE_LDFLAGS
++
++    AC_SUBST(GSTREAMER_CFLAGS)
++    AC_SUBST(GSTREAMER_LIBS)
+ fi
+-AC_SUBST(GSTREAMER_CFLAGS)
+-AC_SUBST(GSTREAMER_LIBS)
++
+ AC_SUBST(MOZ_GSTREAMER)
++AC_SUBST(GST_API_VERSION)
+ 
+ if test -n "$MOZ_GSTREAMER"; then
+-   AC_DEFINE(MOZ_GSTREAMER)
++     AC_DEFINE(MOZ_GSTREAMER)
++     AC_DEFINE_UNQUOTED(GST_API_VERSION, "$GST_API_VERSION")
+ fi
+ 
+ 
+@@ -7424,7 +7418,10 @@ dnl ====================================
+ dnl = Support for gcc stack unwinding (from gcc 3.3)
+ dnl ========================================================
+ if test -z "$SKIP_LIBRARY_CHECKS"; then
++    AC_LANG_SAVE
++    AC_LANG_CPLUSPLUS
+     MOZ_CHECK_HEADER(unwind.h, AC_CHECK_FUNCS(_Unwind_Backtrace))
++    AC_LANG_RESTORE
+ fi
+ 
+ dnl ========================================================
+@@ -7870,6 +7867,34 @@ if test "$USE_FC_FREETYPE"; then
+ fi
+ 
+ dnl ========================================================
++dnl Check for graphite2 and harfbuzz
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-harfbuzz,
++[  --with-system-harfbuzz  Use system harfbuzz (located with pkgconfig)],
++MOZ_NATIVE_HARFBUZZ=1,
++MOZ_NATIVE_HARFBUZZ= )
++
++if test -n "$MOZ_NATIVE_HARFBUZZ"; then
++    PKG_CHECK_MODULES(MOZ_HARFBUZZ, harfbuzz >= 0.9.25)
++fi
++AC_SUBST(MOZ_NATIVE_HARFBUZZ)
++AC_SUBST(MOZ_HARFBUZZ_CFLAGS)
++AC_SUBST(MOZ_HARFBUZZ_LIBS)
++
++MOZ_ARG_WITH_BOOL(system-graphite2,
++[  --with-system-graphite2 Use system graphite2 (located with pkgconfig)],
++MOZ_NATIVE_GRAPHITE2=1,
++MOZ_NATIVE_GRAPHITE2= )
++
++if test -n "$MOZ_NATIVE_GRAPHITE2"; then
++    PKG_CHECK_MODULES(MOZ_GRAPHITE2, graphite2 >= 1.2.4)
++fi
++AC_SUBST(MOZ_NATIVE_GRAPHITE2)
++AC_SUBST(MOZ_GRAPHITE2_CFLAGS)
++AC_SUBST(MOZ_GRAPHITE2_LIBS)
++
++dnl ========================================================
+ dnl Check for pixman and cairo
+ dnl ========================================================
+ 
+@@ -8118,7 +8143,7 @@ case "$OS_TARGET" in
        NECKO_WIFI=1
      fi
      ;;
@@ -140,14 +426,31 @@ $NetBSD: patch-aa,v 1.20 2014/02/20 13:19:03 ryoon Exp $
      NECKO_WIFI=1
      ;;
    Linux)
-@@ -9005,6 +9043,14 @@ if test -n "$INTEL_ARCHITECTURE"; then
+@@ -8665,6 +8690,20 @@ AC_SUBST(MOZ_ENABLE_SZIP)
+ AC_SUBST(MOZ_SZIP_FLAGS)
+ 
+ if test -n "$COMPILE_ENVIRONMENT"; then
++AC_MSG_CHECKING([for posix_fadvise])
++AC_TRY_LINK([#define _XOPEN_SOURCE 600
++  #include <fcntl.h>],
++                 [posix_fadvise(0, 0, 0, 0);],
++                 [ac_cv___posix_fadvise=true],
++                 [ac_cv___posix_fadvise=false])
++
++if test "$ac_cv___posix_fadvise" = true ; then
++  AC_DEFINE(HAVE_POSIX_FADVISE)
++  AC_MSG_RESULT(yes)
++else
++  AC_MSG_RESULT(no)
++fi
++
+ AC_MSG_CHECKING([for posix_fallocate])
+ AC_TRY_LINK([#define _XOPEN_SOURCE 600
+   #include <fcntl.h>],
+@@ -8918,6 +8957,10 @@ if test -n "$INTEL_ARCHITECTURE"; then
    fi
  fi
  
-+if test -n "$MOZ_LIBV4L2_LIBS"; then
-+   EXTRA_GYP_DEFINES="$EXTRA_GYP_DEFINES -D use_libv4l2=1"
-+fi
-+
 +if test -n "$MOZ_LIBV4L2_LIBS"; then
 +   EXTRA_GYP_DEFINES="$EXTRA_GYP_DEFINES -D use_libv4l2=1"
 +fi

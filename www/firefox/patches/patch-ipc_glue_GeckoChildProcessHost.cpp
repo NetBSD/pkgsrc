@@ -1,6 +1,6 @@
-$NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.5 2014/02/20 13:19:03 ryoon Exp $
+$NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.6 2014/03/20 21:02:00 ryoon Exp $
 
---- ipc/glue/GeckoChildProcessHost.cpp.orig	2013-07-30 00:58:17.000000000 +0000
+--- ipc/glue/GeckoChildProcessHost.cpp.orig	2014-03-15 05:19:19.000000000 +0000
 +++ ipc/glue/GeckoChildProcessHost.cpp
 @@ -4,7 +4,13 @@
   * License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -14,9 +14,9 @@ $NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.5 2014/02/20 13:19:03 ryoo
 +_Pragma("GCC visibility pop")
 +#endif
  
- #include "base/command_line.h"
- #include "base/path_service.h"
-@@ -490,7 +496,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
+ #if defined(XP_WIN) && defined(MOZ_CONTENT_SANDBOX)
+ #include "sandboxBroker.h"
+@@ -499,7 +505,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
    // and passing wstrings from one config to the other is unsafe.  So
    // we split the logic here.
  
@@ -25,7 +25,7 @@ $NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.5 2014/02/20 13:19:03 ryoo
    base::environment_map newEnvVars;
    ChildPrivileges privs = mPrivileges;
    if (privs == base::PRIVILEGES_DEFAULT) {
-@@ -509,7 +515,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
+@@ -518,7 +524,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
        if (NS_SUCCEEDED(rv)) {
          nsCString path;
          greDir->GetNativePath(path);
@@ -34,7 +34,7 @@ $NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.5 2014/02/20 13:19:03 ryoo
  #  if defined(MOZ_WIDGET_ANDROID)
          path += "/lib";
  #  endif  // MOZ_WIDGET_ANDROID
-@@ -618,7 +624,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
+@@ -627,7 +633,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
    childArgv.push_back(pidstring);
  
  #if defined(MOZ_CRASHREPORTER)
@@ -43,7 +43,7 @@ $NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.5 2014/02/20 13:19:03 ryoo
    int childCrashFd, childCrashRemapFd;
    if (!CrashReporter::CreateNotificationPipeForChild(
          &childCrashFd, &childCrashRemapFd))
-@@ -651,7 +657,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
+@@ -660,7 +666,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
    childArgv.push_back(childProcessType);
  
    base::LaunchApp(childArgv, mFileMap,

@@ -1,9 +1,10 @@
-$NetBSD: patch-js_src_config_system-headers,v 1.6 2014/02/20 13:19:03 ryoon Exp $
+$NetBSD: patch-js_src_config_system-headers,v 1.7 2014/03/20 21:02:00 ryoon Exp $
 
---- js/src/config/system-headers.orig	2013-12-05 16:07:35.000000000 +0000
+--- js/src/config/system-headers.orig	2014-03-15 05:19:19.000000000 +0000
 +++ js/src/config/system-headers
-@@ -1144,3 +1144,4 @@ unicode/unum.h
- unicode/ustring.h
+@@ -1145,3 +1145,5 @@ unicode/ustring.h
  unicode/utypes.h
  #endif
-+libutil.h
+ libutil.h
++unwind.h
++cairo-qt.h

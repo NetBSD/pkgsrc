@@ -1,8 +1,8 @@
-$NetBSD: patch-ipc_chromium_Makefile.in,v 1.5 2014/02/20 13:19:03 ryoon Exp $
+$NetBSD: patch-ipc_chromium_Makefile.in,v 1.6 2014/03/20 21:02:00 ryoon Exp $
 
---- ipc/chromium/Makefile.in.orig	2013-10-25 22:27:21.000000000 +0000
+--- ipc/chromium/Makefile.in.orig	2014-03-15 05:19:19.000000000 +0000
 +++ ipc/chromium/Makefile.in
-@@ -22,9 +22,7 @@ vpath %.c \
+@@ -11,9 +11,7 @@ vpath %.c \
    $(srcdir)/src/third_party/libevent \
    $(NULL)
  else # } else {
@@ -13,37 +13,3 @@ $NetBSD: patch-ipc_chromium_Makefile.in,v 1.5 2014/02/20 13:19:03 ryoon Exp $
  endif # }
  
  vpath %.cc \
-@@ -45,6 +43,33 @@ DEFINES += -DANDROID -D_POSIX_MONOTONIC_
- endif # Android
- endif # } Not WINNT (OS_POSIX)
- 
-+ifdef OS_SOLARIS # {
-+
-+CPPSRCS += \
-+  atomicops_internals_x86_gcc.cc \
-+  process_util_linux.cc \
-+  time_posix.cc \
-+  $(NULL)
-+
-+ifdef MOZ_ENABLE_GTK2
-+CPPSRCS += \
-+  message_pump_glib.cc \
-+  $(NULL)
-+endif
-+
-+ifdef MOZ_ENABLE_QT
-+MOCSRCS = \
-+  moc_message_pump_qt.cc \
-+  $(NULL)
-+
-+CPPSRCS += \
-+  $(MOCSRCS) \
-+  message_pump_qt.cc \
-+  $(NULL)
-+endif
-+
-+endif # } OS_SOLARIS
-+
- # libevent
- 
- ifndef MOZ_NATIVE_LIBEVENT # {

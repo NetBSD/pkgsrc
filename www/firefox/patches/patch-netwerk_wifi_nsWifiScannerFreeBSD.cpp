@@ -1,8 +1,8 @@
-$NetBSD: patch-netwerk_wifi_nsWifiScannerFreeBSD.cpp,v 1.3 2014/02/20 13:19:03 ryoon Exp $
+$NetBSD: patch-netwerk_wifi_nsWifiScannerFreeBSD.cpp,v 1.4 2014/03/20 21:02:00 ryoon Exp $
 
---- netwerk/wifi/nsWifiScannerFreeBSD.cpp.orig	2013-09-14 15:17:47.000000000 +0000
+--- netwerk/wifi/nsWifiScannerFreeBSD.cpp.orig	2014-03-20 11:09:40.000000000 +0000
 +++ netwerk/wifi/nsWifiScannerFreeBSD.cpp
-@@ -0,0 +1,172 @@
+@@ -0,0 +1,167 @@
 +/* This Source Code Form is subject to the terms of the Mozilla Public
 + * License, v. 2.0. If a copy of the MPL was not distributed with this
 + * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
@@ -31,43 +31,39 @@ $NetBSD: patch-netwerk_wifi_nsWifiScannerFreeBSD.cpp,v 1.3 2014/02/20 13:19:03 r
 +static nsresult
 +FreeBSDGetAccessPointData(nsCOMArray<nsWifiAccessPoint> &accessPoints)
 +{
-+  bool res = false;
-+  char *dupn = NULL;
-+  struct ifaddrs *ifal, *ifa;
-+  unsigned len;
-+
 +  // get list of interfaces
-+  if (getifaddrs(&ifal) < 0)
++  struct ifaddrs *ifal;
++  if (getifaddrs(&ifal) < 0) {
 +    return NS_ERROR_FAILURE;
++  }
 +
 +  accessPoints.Clear();
 +
 +  // loop through the interfaces
++  nsresult rv = NS_ERROR_FAILURE;
++  struct ifaddrs *ifa;
 +  for (ifa = ifal; ifa; ifa = ifa->ifa_next) {
-+    int s;
-+    struct ifreq ifr;
-+    struct ifmediareq ifmr;
-+    struct ieee80211req i802r;
-+    char iscanbuf[32*1024], *vsr;
-+
-+    memset(&ifr, 0, sizeof(ifr));
-+
-+    // list can contain duplicates, so ignore those
-+    if (dupn != NULL && strcmp(dupn, ifa->ifa_name) == 0)
++    // limit to one interface per address
++    if (ifa->ifa_addr->sa_family != AF_LINK) {
 +      continue;
-+    dupn = ifa->ifa_name;
++    }
 +
 +    // store interface name in socket structure
++    struct ifreq ifr;
++    memset(&ifr, 0, sizeof(ifr));
 +    strncpy(ifr.ifr_name, ifa->ifa_name, sizeof(ifr.ifr_name));
 +    ifr.ifr_addr.sa_family = AF_LOCAL;
 +
 +    // open socket to interface
-+    if ((s = socket(ifr.ifr_addr.sa_family, SOCK_DGRAM, 0)) < 0)
++    int s = socket(ifr.ifr_addr.sa_family, SOCK_DGRAM, 0);
++    if (s < 0) {
 +      continue;
++    }
 +
 +    // clear interface media structure
-+    (void) memset(&ifmr, 0, sizeof(ifmr));
-+    (void) strncpy(ifmr.ifm_name, ifa->ifa_name, sizeof(ifmr.ifm_name));
++    struct ifmediareq ifmr;
++    memset(&ifmr, 0, sizeof(ifmr));
++    strncpy(ifmr.ifm_name, ifa->ifa_name, sizeof(ifmr.ifm_name));
 +
 +    // get interface media information
 +    if (ioctl(s, SIOCGIFMEDIA, (caddr_t)&ifmr) < 0) {
@@ -82,8 +78,10 @@ $NetBSD: patch-netwerk_wifi_nsWifiScannerFreeBSD.cpp,v 1.3 2014/02/20 13:19:03 r
 +    }
 +
 +    // perform WiFi scan
-+    (void) memset(&i802r, 0, sizeof(i802r));
-+    (void) strncpy(i802r.i_name, ifa->ifa_name, sizeof(i802r.i_name));
++    struct ieee80211req i802r;
++    char iscanbuf[32*1024];
++    memset(&i802r, 0, sizeof(i802r));
++    strncpy(i802r.i_name, ifa->ifa_name, sizeof(i802r.i_name));
 +    i802r.i_type = IEEE80211_IOC_SCAN_RESULTS;
 +    i802r.i_data = iscanbuf;
 +    i802r.i_len = sizeof(iscanbuf);
@@ -96,36 +94,33 @@ $NetBSD: patch-netwerk_wifi_nsWifiScannerFreeBSD.cpp,v 1.3 2014/02/20 13:19:03 r
 +    close(s);
 +
 +    // loop through WiFi networks and build geoloc-lookup structure
-+    vsr = (char *) i802r.i_data;
-+    len = i802r.i_len;
++    char *vsr = (char *) i802r.i_data;
++    unsigned len = i802r.i_len;
 +    while (len >= sizeof(struct ieee80211req_scan_result)) {
-+      struct ieee80211req_scan_result *isr;
-+      char *id;
-+      int idlen;
-+      char ssid[IEEE80211_NWID_LEN+1];
-+      nsWifiAccessPoint *ap;
-+
-+      isr = (struct ieee80211req_scan_result *) vsr;
++      struct ieee80211req_scan_result *isr =
++        (struct ieee80211req_scan_result *) vsr;
 +
 +      // determine size of this entry
++      char *id;
++      int idlen;
 +      if (isr->isr_meshid_len) {
 +        id = vsr + isr->isr_ie_off + isr->isr_ssid_len;
 +        idlen = isr->isr_meshid_len;
-+      }
-+      else {
++      } else {
 +        id = vsr + isr->isr_ie_off;
 +        idlen = isr->isr_ssid_len;
 +      }
 +
 +      // copy network data
++      char ssid[IEEE80211_NWID_LEN+1];
 +      strncpy(ssid, id, idlen);
 +      ssid[idlen] = '\0';
-+      ap = new nsWifiAccessPoint();
++      nsWifiAccessPoint *ap = new nsWifiAccessPoint();
 +      ap->setSSID(ssid, strlen(ssid));
 +      ap->setMac(isr->isr_bssid);
 +      ap->setSignal(isr->isr_rssi);
 +      accessPoints.AppendObject(ap);
-+      res = true;
++      rv = NS_OK;
 +
 +      // log the data
 +      LOG(( "FreeBSD access point: "
@@ -143,7 +138,7 @@ $NetBSD: patch-netwerk_wifi_nsWifiScannerFreeBSD.cpp,v 1.3 2014/02/20 13:19:03 r
 +
 +  freeifaddrs(ifal);
 +
-+  return res ? NS_OK : NS_ERROR_FAILURE;
++  return rv;
 +}
 +
 +nsresult
