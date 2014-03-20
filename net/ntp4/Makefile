@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2014/03/05 12:35:09 obache Exp $
+# $NetBSD: Makefile,v 1.78 2014/03/20 19:01:45 asau Exp $
 #
 
 DISTNAME=	ntp-dev-4.2.7p410
@@ -43,7 +43,7 @@ post-install:
 
 PLIST_VARS+=	ntptime tickadj timetrim
 
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
 PLIST.ntptime=		yes
 PLIST.tickadj=		yes
 .elif ${OPSYS} == "IRIX"
