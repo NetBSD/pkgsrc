@@ -1,10 +1,11 @@
-# $NetBSD: options.mk,v 1.27 2014/03/21 11:36:47 imil Exp $
+# $NetBSD: options.mk,v 1.28 2014/03/21 21:41:19 imil Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	dav flv gtools inet6 luajit mail-proxy memcache naxsi \
 			pcre push realip ssl sub uwsgi image-filter upload \
 			debug status nginx-autodetect-cflags spdy echo \
-			set-misc headers-more array-var
+			set-misc headers-more array-var encrypted-session \
+			form-input
 PKG_SUGGESTED_OPTIONS=	inet6 pcre ssl
 
 PLIST_VARS+=		naxsi uwsgi
@@ -79,7 +80,7 @@ CONFIGURE_ARGS+=	--with-ipv6
 .endif
 
 # NDK must be added once and before 3rd party modules needing it
-.for _ngx_mod in luajit set-misc array-var
+.for _ngx_mod in luajit set-misc array-var form-input encrypted-session
 .	if !defined(NEED_NDK) && !empty(PKG_OPTIONS:M${_ngx_mod}:O)
 CONFIGURE_ARGS+=	--add-module=../${NDK}
 NEED_NDK=		yes
@@ -132,6 +133,26 @@ ARRAYVAR=		array-var-nginx-module-0.03
 ARRAYVAR_DISTFILE=	${ARRAYVAR}.tar.gz
 SITES.${ARRAYVAR_DISTFILE}=	http://ftp.NetBSD.org/pub/pkgsrc/distfiles/
 DISTFILES+=		${ARRAYVAR_DISTFILE}
+.endif
+
+.if !empty(PKG_OPTIONS:Mencrypted-session)
+CONFIGURE_ARGS+=	--add-module=../${ENCSESS}
+.endif
+.if !empty(PKG_OPTIONS:Mencrypted-session) || make(makesum)
+ENCSESS=		encrypted-session-nginx-module-0.03
+ENCSESS_DISTFILE=	${ENCSESS}.tar.gz
+SITES.${ENCSESS_DISTFILE}=	http://ftp.NetBSD.org/pub/pkgsrc/distfiles/
+DISTFILES+=		${ENCSESS_DISTFILE}
+.endif
+
+.if !empty(PKG_OPTIONS:Mform-input)
+CONFIGURE_ARGS+=	--add-module=../${FORMINPUT}
+.endif
+.if !empty(PKG_OPTIONS:Mform-input) || make(makesum)
+FORMINPUT=		form-input-nginx-module-0.07
+FORMINPUT_DISTFILE=	${FORMINPUT}.tar.gz
+SITES.${FORMINPUT_DISTFILE}=	http://ftp.NetBSD.org/pub/pkgsrc/distfiles/
+DISTFILES+=		${FORMINPUT_DISTFILE}
 .endif
 
 .if !empty(PKG_OPTIONS:Mheaders-more)
