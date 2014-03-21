@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2012/07/28 08:39:30 obache Exp $
+$NetBSD: distinfo,v 1.3 2014/03/21 07:13:45 obache Exp $
 
-SHA1 (medit-1.1.1.tar.bz2) = 4d89b11fe61a6d1f8cc3feed90925bf22abb48be
-RMD160 (medit-1.1.1.tar.bz2) = 6014dc93cb6a11d6479acb4ea2ef4b8825929934
-Size (medit-1.1.1.tar.bz2) = 1714015 bytes
+SHA1 (medit-1.2.0.tar.bz2) = 904ad57f0774ec1ef5ad8905f3dfc700811d5b36
+RMD160 (medit-1.2.0.tar.bz2) = 24c9e9a3df624cbdafaf5251f05690c6a38fe8ad
+Size (medit-1.2.0.tar.bz2) = 1771094 bytes
