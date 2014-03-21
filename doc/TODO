@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13097 2014/03/20 21:02:38 ryoon Exp $
+$NetBSD: TODO,v 1.13098 2014/03/21 08:07:09 obache Exp $
 
 Suggested new packages
 ======================
@@ -727,6 +727,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libAppleWM-1.4.1
 	o libFS-1.0.6
 	o libarchive-3.1.2
+	o libass-0.11.1 [https://github.com/libass/libass]
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libchamplain08-0.12.7
 	o libextractor-1.2 [requires shm_open()]
