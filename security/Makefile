@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.500 2014/03/14 17:58:42 taca Exp $
+# $NetBSD: Makefile,v 1.501 2014/03/21 13:20:51 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -339,6 +339,7 @@ SUBDIR+=	py-backports.ssl_match_hostname
 SUBDIR+=	py-crack
 SUBDIR+=	py-cryptkit
 SUBDIR+=	py-crypto
+SUBDIR+=	py-cryptography
 SUBDIR+=	py-cryptopp
 SUBDIR+=	py-denyhosts
 SUBDIR+=	py-ecdsa
