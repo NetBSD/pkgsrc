@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1195 2014/03/21 01:44:30 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.1196 2014/03/21 07:14:15 obache Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2014Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW, 
@@ -1764,3 +1764,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/ruby-rack-ssl to 1.3.3nb2 [taca 2014-03-21]
 	Updated mail/thunderbird to 24.4.0 [ryoon 2014-03-21]
 	Updated mail/thunderbird-l10n to 24.4.0 [ryoon 2014-03-21]
+	Updated editors/medit to 1.2.0 [obache 2014-03-21]
