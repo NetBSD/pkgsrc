@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13099 2014/03/21 18:26:29 wiz Exp $
+$NetBSD: TODO,v 1.13100 2014/03/21 23:58:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -969,7 +969,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-prettytable-0.7.2
 	o py-psutil-2.0.0
 	o py-ptt-1.10.2
-	o py-py-1.4.19
 	o py-pycha-0.7.0 [wait for fix to regression with bin/chavier - richard]
 	o py-pytz-2014.1
 	o py-pyutil-1.9.7
