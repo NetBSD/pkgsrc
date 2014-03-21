@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/07/24 10:44:51 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/21 23:58:13 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -25,6 +25,9 @@ ${PYSITELIB}/py/_code/_assertionnew.pyo
 ${PYSITELIB}/py/_code/_assertionold.py
 ${PYSITELIB}/py/_code/_assertionold.pyc
 ${PYSITELIB}/py/_code/_assertionold.pyo
+${PYSITELIB}/py/_code/_py2traceback.py
+${PYSITELIB}/py/_code/_py2traceback.pyc
+${PYSITELIB}/py/_code/_py2traceback.pyo
 ${PYSITELIB}/py/_code/assertion.py
 ${PYSITELIB}/py/_code/assertion.pyc
 ${PYSITELIB}/py/_code/assertion.pyo
