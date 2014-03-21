@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1209 2014/03/21 21:43:07 imil Exp $
+$NetBSD: CHANGES-2014,v 1.1210 2014/03/21 22:04:28 wiz Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2014Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW, 
@@ -1779,3 +1779,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-test to 2.5.2 [wiz 2014-03-21]
 	Updated www/nginx to 1.4.7nb4 [imil 2014-03-21]
 	Updated www/nginx-devel to 1.5.12nb3 [imil 2014-03-21]
+	Updated security/py-cryptography to 0.2.2nb2 [wiz 2014-03-21]
