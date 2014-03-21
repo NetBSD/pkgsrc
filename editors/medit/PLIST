@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/06/10 12:50:33 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/21 07:13:45 obache Exp $
 bin/medit
 man/man1/medit.1
 share/applications/medit.desktop
@@ -45,6 +45,7 @@ share/doc/medit-1/help/script/ch01s13.html
 share/doc/medit-1/help/script/ch01s14.html
 share/doc/medit-1/help/script/ch01s15.html
 share/doc/medit-1/help/script/ch01s16.html
+share/doc/medit-1/help/script/ch01s17.html
 share/doc/medit-1/help/script/ch02s01.html
 share/doc/medit-1/help/script/ch02s02.html
 share/doc/medit-1/help/script/ch02s03.html
@@ -74,6 +75,7 @@ share/doc/medit-1/help/script/ch03s11.html
 share/doc/medit-1/help/script/ch03s12.html
 share/doc/medit-1/help/script/ch03s13.html
 share/doc/medit-1/help/script/ch03s14.html
+share/doc/medit-1/help/script/ch03s15.html
 share/doc/medit-1/help/script/index.html
 share/doc/medit-1/help/script/lua-gtk.html
 share/doc/medit-1/help/script/lua-moo.html
@@ -141,6 +143,7 @@ share/locale/oc/LC_MESSAGES/medit-1-gsv.mo
 share/locale/or/LC_MESSAGES/medit-1-gsv.mo
 share/locale/pa/LC_MESSAGES/medit-1-gsv.mo
 share/locale/pl/LC_MESSAGES/medit-1-gsv.mo
+share/locale/pl/LC_MESSAGES/medit-1.mo
 share/locale/pt/LC_MESSAGES/medit-1-gsv.mo
 share/locale/pt_BR/LC_MESSAGES/medit-1-gsv.mo
 share/locale/ro/LC_MESSAGES/medit-1-gsv.mo
@@ -169,11 +172,14 @@ share/locale/zh_TW/LC_MESSAGES/medit-1-gsv.mo
 share/medit-1/context.xml
 share/medit-1/filters.xml
 share/medit-1/language-specs/R.lang
+share/medit-1/language-specs/actionscript.lang
 share/medit-1/language-specs/ada.lang
 share/medit-1/language-specs/asp.lang
+share/medit-1/language-specs/automake.lang
 share/medit-1/language-specs/awk.lang
 share/medit-1/language-specs/bennugd.lang
 share/medit-1/language-specs/bibtex.lang
+share/medit-1/language-specs/bluespec.lang
 share/medit-1/language-specs/boo.lang
 share/medit-1/language-specs/c.lang
 share/medit-1/language-specs/cg.lang
@@ -213,10 +219,15 @@ share/medit-1/language-specs/haddock.lang
 share/medit-1/language-specs/haskell-literate.lang
 share/medit-1/language-specs/haskell.lang
 share/medit-1/language-specs/html.lang
+share/medit-1/language-specs/idl-exelis.lang
 share/medit-1/language-specs/idl.lang
+share/medit-1/language-specs/imagej.lang
 share/medit-1/language-specs/ini.lang
+share/medit-1/language-specs/j.lang
 share/medit-1/language-specs/java.lang
 share/medit-1/language-specs/javascript.lang
+share/medit-1/language-specs/json.lang
+share/medit-1/language-specs/julia.lang
 share/medit-1/language-specs/kate.xml
 share/medit-1/language-specs/language2.rng
 share/medit-1/language-specs/latex.lang
@@ -225,17 +236,25 @@ share/medit-1/language-specs/lua.lang
 share/medit-1/language-specs/m4.lang
 share/medit-1/language-specs/makefile.lang
 share/medit-1/language-specs/mallard.lang
+share/medit-1/language-specs/markdown.lang
+share/medit-1/language-specs/matlab.lang
+share/medit-1/language-specs/mediawiki.lang
 share/medit-1/language-specs/medit.xml
+share/medit-1/language-specs/modelica.lang
 share/medit-1/language-specs/msil.lang
+share/medit-1/language-specs/mxml.lang
 share/medit-1/language-specs/nemerle.lang
+share/medit-1/language-specs/netrexx.lang
 share/medit-1/language-specs/nsis.lang
 share/medit-1/language-specs/objc.lang
+share/medit-1/language-specs/objj.lang
 share/medit-1/language-specs/oblivion.xml
 share/medit-1/language-specs/ocaml.lang
 share/medit-1/language-specs/ocl.lang
 share/medit-1/language-specs/octave.lang
 share/medit-1/language-specs/ooc.lang
 share/medit-1/language-specs/opal.lang
+share/medit-1/language-specs/opencl.lang
 share/medit-1/language-specs/pascal.lang
 share/medit-1/language-specs/perl.lang
 share/medit-1/language-specs/php.lang
@@ -243,13 +262,17 @@ share/medit-1/language-specs/pkgconfig.lang
 share/medit-1/language-specs/po.lang
 share/medit-1/language-specs/prolog.lang
 share/medit-1/language-specs/protobuf.lang
+share/medit-1/language-specs/puppet.lang
 share/medit-1/language-specs/python-console.lang
 share/medit-1/language-specs/python.lang
+share/medit-1/language-specs/python3.lang
 share/medit-1/language-specs/rpmspec.lang
 share/medit-1/language-specs/ruby.lang
+share/medit-1/language-specs/scala.lang
 share/medit-1/language-specs/scheme.lang
 share/medit-1/language-specs/scilab.lang
 share/medit-1/language-specs/sh.lang
+share/medit-1/language-specs/sml.lang
 share/medit-1/language-specs/sparql.lang
 share/medit-1/language-specs/sql.lang
 share/medit-1/language-specs/systemverilog.lang
