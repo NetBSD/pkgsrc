@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/01/14 14:28:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2014/03/21 07:58:25 obache Exp $
 
 DISTNAME=	libass-0.10.2
 PKGREVISION=	1
@@ -17,7 +17,7 @@ USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	libass.pc.in
 
-LDFLAGS.SunOS+=	-liconv
+LDFLAGS+=	${BUILDLINK_LDADD.iconv}
 
 BUILDLINK_API_DEPENDS.fribidi+=	fribidi>=0.19.0
 .include "../../converters/fribidi/buildlink3.mk"
