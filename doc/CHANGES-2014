@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1207 2014/03/21 18:26:29 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1208 2014/03/21 21:41:33 imil Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2014Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW, 
@@ -1777,3 +1777,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/firefox24 to 24.4.0 [ryoon 2014-03-21]
 	Updated devel/xulrunner24 to 24.4.0 [ryoon 2014-03-21]
 	Updated devel/py-test to 2.5.2 [wiz 2014-03-21]
+	Updated www/nginx to 1.4.7nb4 [imil 2014-03-21]
