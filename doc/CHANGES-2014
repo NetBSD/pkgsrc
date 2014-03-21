@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1201 2014/03/21 13:59:36 jperkin Exp $
+$NetBSD: CHANGES-2014,v 1.1202 2014/03/21 14:01:07 jperkin Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2014Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW, 
@@ -1770,3 +1770,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added security/py-cryptography version 0.2.2 [wiz 2014-03-21]
 	Updated devel/deforaos-libsystem to 0.1.7nb2 [jperkin 2014-03-21]
 	Updated databases/deforaos-libdatabase to 0.0.0nb4 [jperkin 2014-03-21]
+	Updated mail/deforaos-mailer to 0.1.6nb3 [jperkin 2014-03-21]
