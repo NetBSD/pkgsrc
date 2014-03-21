@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/03/21 13:20:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/21 14:02:45 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -11,9 +11,9 @@ ${PYSITELIB}/cryptography/__about__.pyo
 ${PYSITELIB}/cryptography/__init__.py
 ${PYSITELIB}/cryptography/__init__.pyc
 ${PYSITELIB}/cryptography/__init__.pyo
-${PYSITELIB}/cryptography/${SONAME1}
-${PYSITELIB}/cryptography/${SONAME2}
-${PYSITELIB}/cryptography/${SONAME3}
+${PYSITELIB}/cryptography/checkpkcs7padding.so
+${PYSITELIB}/cryptography/constanttime.so
+${PYSITELIB}/cryptography/cryptography.so
 ${PYSITELIB}/cryptography/exceptions.py
 ${PYSITELIB}/cryptography/exceptions.pyc
 ${PYSITELIB}/cryptography/exceptions.pyo
