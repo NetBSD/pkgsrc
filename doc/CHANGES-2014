@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1206 2014/03/21 15:02:03 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.1207 2014/03/21 18:26:29 wiz Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2014Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW, 
@@ -1776,3 +1776,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/py-xattr to 0.7.2nb2 [wiz 2014-03-21]
 	Updated www/firefox24 to 24.4.0 [ryoon 2014-03-21]
 	Updated devel/xulrunner24 to 24.4.0 [ryoon 2014-03-21]
+	Updated devel/py-test to 2.5.2 [wiz 2014-03-21]
