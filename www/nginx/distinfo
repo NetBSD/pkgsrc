@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.38 2014/03/20 22:19:35 imil Exp $
+$NetBSD: distinfo,v 1.39 2014/03/21 11:36:47 imil Exp $
 
+SHA1 (array-var-nginx-module-0.03.tar.gz) = b2666aa3c092060fcd3931a6d45798a5745c1ad6
+RMD160 (array-var-nginx-module-0.03.tar.gz) = 171c2d9bd02d7a7ede9f87ab348ef035cea14aec
+Size (array-var-nginx-module-0.03.tar.gz) = 9520 bytes
 SHA1 (echo-nginx-module-0.51.tar.gz) = 127d011f146a7e611f328cd4f2f29cdde1227f07
 RMD160 (echo-nginx-module-0.51.tar.gz) = 79bb11c34735381a5a90176eb4d07dec8b469ab4
 Size (echo-nginx-module-0.51.tar.gz) = 63460 bytes

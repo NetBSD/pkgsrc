@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.26 2014/03/20 22:19:35 imil Exp $
+# $NetBSD: options.mk,v 1.27 2014/03/21 11:36:47 imil Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	dav flv gtools inet6 luajit mail-proxy memcache naxsi \
 			pcre push realip ssl sub uwsgi image-filter upload \
 			debug status nginx-autodetect-cflags spdy echo \
-			set-misc headers-more
+			set-misc headers-more array-var
 PKG_SUGGESTED_OPTIONS=	inet6 pcre ssl
 
 PLIST_VARS+=		naxsi uwsgi
@@ -79,9 +79,17 @@ CONFIGURE_ARGS+=	--with-ipv6
 .endif
 
 # NDK must be added once and before 3rd party modules needing it
-.if !empty(PKG_OPTIONS:Mluajit) || !empty(PKG_OPTIONS:Mset-misc)
+.for _ngx_mod in luajit set-misc array-var
+.	if !defined(NEED_NDK) && !empty(PKG_OPTIONS:M${_ngx_mod}:O)
 CONFIGURE_ARGS+=	--add-module=../${NDK}
 NEED_NDK=		yes
+.	endif
+.endfor
+.if defined(NEED_NDK) || make(makesum)
+NDK=			ngx_devel_kit-0.2.19
+NDK_DISTFILE=		${NDK}.tar.gz
+SITES.${NDK_DISTFILE}=	http://ftp.NetBSD.org/pub/pkgsrc/distfiles/
+DISTFILES+=		${NDK_DISTFILE}
 .endif
 
 .if !empty(PKG_OPTIONS:Mluajit)
@@ -116,11 +124,14 @@ SITES.${SETMISC_DISTFILE}=	http://ftp.NetBSD.org/pub/pkgsrc/distfiles/
 DISTFILES+=		${SETMISC_DISTFILE}
 .endif
 
-.if defined(NEED_NDK) || make(makesum)
-NDK=			ngx_devel_kit-0.2.19
-NDK_DISTFILE=		${NDK}.tar.gz
-SITES.${NDK_DISTFILE}=	http://ftp.NetBSD.org/pub/pkgsrc/distfiles/
-DISTFILES+=		${NDK_DISTFILE}
+.if !empty(PKG_OPTIONS:Marray-var)
+CONFIGURE_ARGS+=	--add-module=../${ARRAYVAR}
+.endif
+.if !empty(PKG_OPTIONS:Marray-var) || make(makesum)
+ARRAYVAR=		array-var-nginx-module-0.03
+ARRAYVAR_DISTFILE=	${ARRAYVAR}.tar.gz
+SITES.${ARRAYVAR_DISTFILE}=	http://ftp.NetBSD.org/pub/pkgsrc/distfiles/
+DISTFILES+=		${ARRAYVAR_DISTFILE}
 .endif
 
 .if !empty(PKG_OPTIONS:Mheaders-more)
