@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2014/03/21 13:23:27 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2014/03/21 13:34:59 wiz Exp $
 
 DISTNAME=	pyOpenSSL-0.14
 PKGREVISION=	1
@@ -11,7 +11,8 @@ HOMEPAGE=	https://launchpad.net/pyopenssl/
 COMMENT=	Python interface to the OpenSSL library
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
+DEPENDS+=	${PYPKGPREFIX}-cryptography>=0.2.1:../../security/py-cryptography
+DEPENDS+=	${PYPKGPREFIX}-six>=1.5.2:../../lang/py-six
 
 .include "../../lang/python/egg.mk"
 .include "../../security/openssl/buildlink3.mk"
