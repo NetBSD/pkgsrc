@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2014/03/21 11:37:45 imil Exp $
+$NetBSD: distinfo,v 1.11 2014/03/21 21:42:50 imil Exp $
 
 SHA1 (array-var-nginx-module-0.03.tar.gz) = b2666aa3c092060fcd3931a6d45798a5745c1ad6
 RMD160 (array-var-nginx-module-0.03.tar.gz) = 171c2d9bd02d7a7ede9f87ab348ef035cea14aec
@@ -6,6 +6,12 @@ Size (array-var-nginx-module-0.03.tar.gz) = 9520 bytes
 SHA1 (echo-nginx-module-0.51.tar.gz) = 127d011f146a7e611f328cd4f2f29cdde1227f07
 RMD160 (echo-nginx-module-0.51.tar.gz) = 79bb11c34735381a5a90176eb4d07dec8b469ab4
 Size (echo-nginx-module-0.51.tar.gz) = 63460 bytes
+SHA1 (encrypted-session-nginx-module-0.03.tar.gz) = b33a74b83a200299fe80a2441b4cc014fab02a6a
+RMD160 (encrypted-session-nginx-module-0.03.tar.gz) = 89cab2054f95e1017c109238d399afe23ce499e6
+Size (encrypted-session-nginx-module-0.03.tar.gz) = 8949 bytes
+SHA1 (form-input-nginx-module-0.07.tar.gz) = 4f68ad4b6b19f313582523585aee4e4473666ea3
+RMD160 (form-input-nginx-module-0.07.tar.gz) = 1d543c15c1ced82497987b7fd71d79d7c818b9bf
+Size (form-input-nginx-module-0.07.tar.gz) = 10563 bytes
 SHA1 (headers-more-nginx-module-0.25.tar.gz) = 514bc3df30b24eb0a06533f1ebaa579b898990f5
 RMD160 (headers-more-nginx-module-0.25.tar.gz) = 8270edae05b2cf24f1d46fb1b217d4943bf56372
 Size (headers-more-nginx-module-0.25.tar.gz) = 27973 bytes
