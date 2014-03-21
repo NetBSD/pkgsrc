@@ -1,8 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1 2013/07/24 10:46:38 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/21 18:26:16 wiz Exp $
 bin/py.test-${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/_pytest/__init__.py
 ${PYSITELIB}/_pytest/__init__.pyc
 ${PYSITELIB}/_pytest/__init__.pyo
+${PYSITELIB}/_pytest/_argcomplete.py
+${PYSITELIB}/_pytest/_argcomplete.pyc
+${PYSITELIB}/_pytest/_argcomplete.pyo
 ${PYSITELIB}/_pytest/assertion/__init__.py
 ${PYSITELIB}/_pytest/assertion/__init__.pyc
 ${PYSITELIB}/_pytest/assertion/__init__.pyo
@@ -93,13 +103,6 @@ ${PYSITELIB}/_pytest/tmpdir.pyo
 ${PYSITELIB}/_pytest/unittest.py
 ${PYSITELIB}/_pytest/unittest.pyc
 ${PYSITELIB}/_pytest/unittest.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pytest.py
 ${PYSITELIB}/pytest.pyc
 ${PYSITELIB}/pytest.pyo
