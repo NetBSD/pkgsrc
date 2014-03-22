@@ -1,12 +1,17 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/10/15 12:29:19 kei Exp $
+$NetBSD: patch-ab,v 1.2 2014/03/22 22:26:44 spz Exp $
 
---- bdf.h.orig	Wed Jul  4 10:21:42 2001
-+++ bdf.h	Wed Jul  4 10:22:01 2001
-@@ -41,7 +41,7 @@
+make it deal gracefully with both freetype 2.4.* and 2.5.*
+
+--- bdf.h.orig	2001-09-19 21:00:42.000000000 +0000
++++ bdf.h
+@@ -40,8 +40,9 @@
+ #endif /* HAVE_XLIB */
  
  #ifdef HAVE_FREETYPE
- #include <freetype.h>
+-#include <freetype.h>
 -#include <extend/ftxsbit.h>
++#include <ft2build.h>
++#include FT_FREETYPE_H
 +#include <ftxsbit.h>
  #endif /* HAVE_FREETYPE */
  
