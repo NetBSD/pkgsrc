@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.77 2014/03/13 11:08:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.78 2014/03/22 23:32:46 ryoon Exp $
 
-DISTNAME=		nss-${NSS_RELEASE}
-NSS_RELEASE=		3.15.5
+DISTNAME=		nss-${NSS_RELEASE:S/.0$//}
+NSS_RELEASE=		3.16.0
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${NSS_RELEASE:S/./_/g}_RTM/src/}
 
@@ -77,8 +77,8 @@ do-install:
 	set -e; \
 	{ ${ECHO} "Name: NSS"; \
 	  ${ECHO} "Description: Mozilla Network Security Services"; \
-	  ${ECHO} "Version: ${PKGVERSION_NOREV}"; \
-	  ${ECHO} "Requires: nspr >= 4.8.2"; \
+	  ${ECHO} "Version: ${NSS_RELEASE}"; \
+	  ${ECHO} "Requires: nspr >= 4.10.3"; \
 	  ${ECHO} "Cflags: -I${PREFIX}/include/nss/nss -I${PREFIX}/include/nss"; \
 	  ${ECHO} "Libs: -L${PREFIX}/lib/nss" \
 	      "${COMPILER_RPATH_FLAG}${PREFIX}/lib/nss" \
