@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2014/03/19 13:25:04 bsiegert Exp $
+# $NetBSD: Makefile,v 1.111 2014/03/22 09:05:24 bsiegert Exp $
 
 DISTNAME=	heimdal-1.5.3
 PKGREVISION=	5
@@ -81,15 +81,6 @@ PLIST_VARS+=		afskauth hcrypto
 PLIST.afskauth=		yes
 .endif
 
-.if ${OPSYS} == "MirBSD"
-.if ${USE_BUILTIN.openssl} == "yes"
-PLIST.hcrypto=		yes
-.endif
-PLIST.vis=		yes
-# all of the tools need to link against pthread, force it.
-PTHREAD_AUTO_VARS=	yes
-.endif
-
 OWN_DIRS_PERMS=		${HEIMDAL_HDB_DIR} ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 SPECIAL_PERMS+=		${PREFIX}/bin/otp ${SETUID_ROOT_PERMS}
 SPECIAL_PERMS=		${PREFIX}/bin/${KRB5_PREFIX}su ${SETUID_ROOT_PERMS}
@@ -117,6 +108,15 @@ CHECK_BUILTIN.openssl:=no
     (${OPSYS} == "SunOS" && !empty(USE_BUILTIN.openssl:Myes) &&	\
 		!empty(BUILTIN_LIB_FOUND.crypto:M[Nn][Oo]))
 PLIST.hcrypto=		yes
+.endif
+
+.if ${OPSYS} == "MirBSD"
+.if !empty(USE_BUILTIN.openssl:Myes)
+PLIST.hcrypto=		yes
+.endif
+PLIST.vis=		yes
+# all of the tools need to link against pthread, force it.
+PTHREAD_AUTO_VARS=	yes
 .endif
 
 .include "../../mk/termcap.buildlink3.mk"
