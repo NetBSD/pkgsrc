@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2013/12/08 14:21:37 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.12 2014/03/22 13:03:56 adam Exp $
 bin/gtk-launch
 bin/gtk-query-immodules-3.0
 bin/gtk3-demo
@@ -361,6 +361,7 @@ lib/girepository-1.0/Gtk-3.0.typelib
 lib/gtk-3.0/3.0.0/immodules/im-am-et.la
 lib/gtk-3.0/3.0.0/immodules/im-cedilla.la
 lib/gtk-3.0/3.0.0/immodules/im-cyrillic-translit.la
+${PLIST.quartz}lib/gtk-3.0/3.0.0/immodules/im-quartz.la
 lib/gtk-3.0/3.0.0/immodules/im-inuktitut.la
 lib/gtk-3.0/3.0.0/immodules/im-ipa.la
 lib/gtk-3.0/3.0.0/immodules/im-multipress.la
