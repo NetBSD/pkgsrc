@@ -1,10 +1,11 @@
-# $NetBSD: builtin.mk,v 1.19 2013/06/17 05:27:50 dholland Exp $
+# $NetBSD: builtin.mk,v 1.20 2014/03/22 08:19:24 jperkin Exp $
 
 BUILTIN_PKG:=	MesaLib
 
 BUILTIN_FIND_FILES_VAR:=	H_MESALIB PC_GL
 BUILTIN_FIND_FILES.H_MESALIB=	${X11BASE}/include/GL/glx.h
 BUILTIN_FIND_FILES.PC_GL=	${X11BASE}/lib/pkgconfig/gl.pc
+BUILTIN_FIND_FILES.PC_GL+=	${X11BASE}/lib${LIBABISUFFIX}/pkgconfig/gl.pc
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
