@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1212 2014/03/21 23:58:56 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1213 2014/03/22 13:31:25 wiz Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2014Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW, 
@@ -1782,3 +1782,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/py-cryptography to 0.2.2nb2 [wiz 2014-03-21]
 	Updated devel/py-py to 1.4.20 [wiz 2014-03-21]
 	Updated devel/py-test to 2.5.2nb1 [wiz 2014-03-21]
+	Updated textproc/py-sphinx to 1.2.2 [wiz 2014-03-22]
