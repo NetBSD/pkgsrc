@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1214 2014/03/22 13:47:53 imil Exp $
+$NetBSD: CHANGES-2014,v 1.1215 2014/03/22 16:38:28 prlw1 Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2014Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW, 
@@ -1784,3 +1784,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-test to 2.5.2nb1 [wiz 2014-03-21]
 	Updated textproc/py-sphinx to 1.2.2 [wiz 2014-03-22]
 	Added textproc/lua-cjson version 2.1.0 [imil 2014-03-22]
+	Updated devel/py-ipython1 to 1.2.1 [prlw1 2014-03-22]
