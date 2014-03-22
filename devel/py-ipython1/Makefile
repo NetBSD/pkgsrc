@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2014/01/25 08:19:44 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/03/22 16:38:05 prlw1 Exp $
 
-DISTNAME=	ipython-1.1.0
+DISTNAME=	ipython-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel lang
-MASTER_SITES=	http://archive.ipython.org/release/1.1.0/
+MASTER_SITES=	http://archive.ipython.org/release/1.2.1/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ipython.org/
