@@ -1,8 +1,20 @@
-$NetBSD: patch-ai,v 1.1 2006/06/19 21:16:19 joerg Exp $
+$NetBSD: patch-ai,v 1.2 2014/03/22 16:50:29 spz Exp $
 
---- src/generic/dcpsg.cpp.orig	2006-06-19 20:01:50.000000000 +0000
+make it deal gracefully with various freetype versions
+
+--- src/generic/dcpsg.cpp.orig	2003-09-21 11:31:45.000000000 +0000
 +++ src/generic/dcpsg.cpp
-@@ -1146,8 +1146,13 @@ struct _OutlineInfo {
+@@ -1132,7 +1132,8 @@ void wxPostScriptDC::SetBrush( const wxB
+ 
+ #include "wx/fontutil.h"
+ #include <pango/pangoft2.h>
+-#include <freetype/ftglyph.h>
++#include <ft2build.h>
++#include FT_GLYPH_H
+ 
+ #ifndef FT_Outline_Decompose
+   FT_EXPORT( FT_Error )  FT_Outline_Decompose(
+@@ -1146,8 +1147,13 @@ struct _OutlineInfo {
    FILE *file;
  };
  
@@ -16,7 +28,7 @@ $NetBSD: patch-ai,v 1.1 2006/06/19 21:16:19 joerg Exp $
  {
    OutlineInfo *outline_info = (OutlineInfo*)user_data;
    fprintf(outline_info->file, "%d %d moveto\n",
-@@ -1156,8 +1161,13 @@ static int paps_move_to( FT_Vector* to,
+@@ -1156,8 +1162,13 @@ static int paps_move_to( FT_Vector* to,
    return 0;
  }
  
@@ -30,7 +42,7 @@ $NetBSD: patch-ai,v 1.1 2006/06/19 21:16:19 joerg Exp $
  {
    OutlineInfo *outline_info = (OutlineInfo*)user_data;
    fprintf(outline_info->file, "%d %d lineto\n",
-@@ -1166,9 +1176,15 @@ static int paps_line_to( FT_Vector*  to,
+@@ -1166,9 +1177,15 @@ static int paps_line_to( FT_Vector*  to,
    return 0;
  }
  
@@ -46,7 +58,7 @@ $NetBSD: patch-ai,v 1.1 2006/06/19 21:16:19 joerg Exp $
  {
    OutlineInfo *outline_info = (OutlineInfo*)user_data;
    fprintf(outline_info->file, "%d %d %d %d conicto\n",
-@@ -1179,10 +1195,17 @@ static int paps_conic_to( FT_Vector*  co
+@@ -1179,10 +1196,17 @@ static int paps_conic_to( FT_Vector*  co
    return 0;
  }
  
