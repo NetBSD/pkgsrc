@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.54 2014/03/20 12:38:26 gdt Exp $
+# $NetBSD: Makefile,v 1.55 2014/03/22 17:26:12 gdt Exp $
 
 DISTNAME=	nedit-${VERS}-src
 PKGNAME=	nedit-${VERS}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	editors
+# @pkglint: MASTER_SITE_NEDIT is defined below
 MASTER_SITES=	${MASTER_SITE_NEDIT:=v${VERS:S/./_/g}/} \
 		${MASTER_SITE_SOURCEFORGE:=nedit/}
 EXTRACT_SUFX=	.tar.bz2
@@ -24,7 +25,7 @@ MASTER_SITE_NEDIT=	http://www.nedit.org/ftp/			\
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 BUILD_TARGET=		netbsd
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PREFIX}/share/doc/nedit
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/source/nedit ${DESTDIR}${PREFIX}/bin
@@ -33,7 +34,6 @@ do-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/nedit.1
 	${INSTALL_MAN} ${WRKSRC}/doc/nc.man \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/nedit-nc.1
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/nedit
 .for f in README ReleaseNotes
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/nedit
 .endfor
