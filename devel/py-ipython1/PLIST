@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/01/25 08:19:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/03/22 16:38:05 prlw1 Exp $
 ${PLIST.py2x}bin/ipcluster
 ${PLIST.py2x}bin/ipcontroller
 ${PLIST.py2x}bin/ipengine
@@ -423,6 +423,15 @@ ${PYSITELIB}/IPython/extensions/tests/test_storemagic.pyo
 ${PYSITELIB}/IPython/external/__init__.py
 ${PYSITELIB}/IPython/external/__init__.pyc
 ${PYSITELIB}/IPython/external/__init__.pyo
+${PYSITELIB}/IPython/external/appnope/__init__.py
+${PYSITELIB}/IPython/external/appnope/__init__.pyc
+${PYSITELIB}/IPython/external/appnope/__init__.pyo
+${PYSITELIB}/IPython/external/appnope/_dummy.py
+${PYSITELIB}/IPython/external/appnope/_dummy.pyc
+${PYSITELIB}/IPython/external/appnope/_dummy.pyo
+${PYSITELIB}/IPython/external/appnope/_nope.py
+${PYSITELIB}/IPython/external/appnope/_nope.pyc
+${PYSITELIB}/IPython/external/appnope/_nope.pyo
 ${PYSITELIB}/IPython/external/argparse/__init__.py
 ${PYSITELIB}/IPython/external/argparse/__init__.pyc
 ${PYSITELIB}/IPython/external/argparse/__init__.pyo
