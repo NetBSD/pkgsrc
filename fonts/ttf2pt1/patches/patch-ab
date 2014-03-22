@@ -1,12 +1,24 @@
-$NetBSD: patch-ab,v 1.1 2004/04/27 15:18:08 adam Exp $
+$NetBSD: patch-ab,v 1.2 2014/03/22 22:02:11 spz Exp $
 
---- ft.c.orig	2004-04-27 10:58:11.000000000 +0000
+make it deal gracefully with both freetype 2.4.* and 2.5.*
+
+--- ft.c.orig	2003-12-31 21:30:50.000000000 +0000
 +++ ft.c
-@@ -12,6 +12,7 @@
+@@ -12,11 +12,12 @@
  #include <stdlib.h>
  #include <ctype.h>
  #include <sys/types.h>
+-#include <freetype/freetype.h>
+-#include <freetype/ftglyph.h>
+-#include <freetype/ftsnames.h>
+-#include <freetype/ttnameid.h>
+-#include <freetype/ftoutln.h>
 +#include <ft2build.h>
- #include <freetype/freetype.h>
- #include <freetype/ftglyph.h>
- #include <freetype/ftsnames.h>
++#include FT_FREETYPE_H
++#include FT_GLYPH_H
++#include FT_SFNT_NAMES_H
++#include FT_TRUETYPE_IDS_H
++#include FT_OUTLINE_H
+ #include "pt1.h"
+ #include "global.h"
+ 
