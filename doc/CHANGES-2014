@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1216 2014/03/22 20:50:06 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.1217 2014/03/22 23:34:13 ryoon Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2014Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW, 
@@ -1786,3 +1786,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added textproc/lua-cjson version 2.1.0 [imil 2014-03-22]
 	Updated devel/py-ipython1 to 1.2.1 [prlw1 2014-03-22]
 	Updated mail/getmail to 4.44.0 [schmonz 2014-03-22]
+	Updated devel/nss to 3.16 [ryoon 2014-03-22]
