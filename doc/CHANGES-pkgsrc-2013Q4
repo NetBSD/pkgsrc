@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.46 2014/03/21 08:03:49 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.47 2014/03/22 18:22:13 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q4 branch:
@@ -150,3 +150,5 @@ Pullup ticket #4348 - requested by taca
 net/samba: security update
 Pullup ticket #4349 - requested by tron
 www/apache24: security update
+Pullup ticket #4350 - requested by tron
+graphics/freetype2: build fix
