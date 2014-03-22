@@ -1,10 +1,18 @@
-$NetBSD: patch-source_parse.y,v 1.1 2013/04/28 20:35:22 dholland Exp $
+$NetBSD: patch-source_parse.y,v 1.2 2014/03/22 17:26:13 gdt Exp $
 
 Silence gcc warnings about unsafe pointer casts.
 
---- source/parse.y~	2003-12-19 23:23:31.000000000 +0000
+--- source/parse.y.orig	2003-12-19 23:23:31.000000000 +0000
 +++ source/parse.y
-@@ -178,69 +178,69 @@ simpstmt:   SYMBOL '=' expr {
+@@ -14,6 +14,7 @@
+ #include <string.h>
+ #include <stdio.h>
+ #include <ctype.h>
++#include <stdint.h>
+ #include <X11/Intrinsic.h>
+ #include <Xm/Xm.h>
+ #ifdef VMS
+@@ -178,69 +179,69 @@ simpstmt:   SYMBOL '=' expr {
                  ADD_OP(OP_BIT_OR); ADD_OP(OP_ASSIGN); ADD_SYM($1);
              }
              | DELETE arraylv '[' arglist ']' {
@@ -99,7 +107,7 @@ Silence gcc warnings about unsafe pointer casts.
              }
              | INCR SYMBOL {
                  ADD_OP(OP_PUSH_SYM); ADD_SYM($2); ADD_OP(OP_INCR);
-@@ -289,17 +289,17 @@ expr:       numexpr %prec CONCAT
+@@ -289,17 +290,17 @@ expr:       numexpr %prec CONCAT
              }
              ;
  initarraylv:    SYMBOL {
@@ -121,7 +129,7 @@ Silence gcc warnings about unsafe pointer casts.
              }
              ;
  arrayexpr:  numexpr {
-@@ -317,7 +317,7 @@ numexpr:    NUMBER {
+@@ -317,7 +318,7 @@ numexpr:    NUMBER {
              }
              | SYMBOL '(' arglist ')' {
                  ADD_OP(OP_SUBR_CALL);
@@ -130,7 +138,7 @@ Silence gcc warnings about unsafe pointer casts.
                  ADD_OP(OP_FETCH_RET_VAL);
              }
              | '(' expr ')'
-@@ -331,7 +331,7 @@ numexpr:    NUMBER {
+@@ -331,7 +332,7 @@ numexpr:    NUMBER {
                 ADD_OP(OP_PUSH_ARG_ARRAY);
              }
              | numexpr '[' arglist ']' {
