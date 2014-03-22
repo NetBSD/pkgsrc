@@ -1,0 +1,2 @@
+Lua CJSON provides JSON support for Lua. It has been tested under Linux,
+FreeBSD, OSX, Solaris and Windows.
