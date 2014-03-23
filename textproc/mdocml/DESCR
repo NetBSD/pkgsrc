@@ -1,4 +1,4 @@
-The mandoc manual page parser and formatter contains:
+The mdocml = mandoc manual page parser and formatter contains:
  * complete validating parsers for the mdoc and man languages
  * a slightly incomplete parser handling most of the tbl language
  * a very incomplete parser handling a part of the eqn language
