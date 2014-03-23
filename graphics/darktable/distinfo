@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.21 2013/12/04 13:02:08 drochner Exp $
+$NetBSD: distinfo,v 1.22 2014/03/23 15:16:35 spz Exp $
 
 SHA1 (darktable-1.2.3.tar.xz) = dbd7545d1fbb5f67862f62ae39c7e6ba008d1c10
 RMD160 (darktable-1.2.3.tar.xz) = 3148a7f9063c372b3477525cacf518750c88766d
 Size (darktable-1.2.3.tar.xz) = 2348864 bytes
 SHA1 (patch-aa) = 7b6987512bdac0477ab724ade75785802903dfd8
+SHA1 (patch-cmake_modules_FindFreetype.cmake) = fb69e7a413f455490649d4b2b39cce74408dd332
 SHA1 (patch-cmake_modules_FindGTK2.cmake) = de1273594801ab82da31b624845e0b36a77b53b3
 SHA1 (patch-src_LibRaw_libraw_libraw__alloc.h) = 8227a7180383cd4379313b07ff964bb7fb9ce694
 SHA1 (patch-src_common_imageio__exr.hh) = 8bef7fab739dfdd0688371b08d6f31503eaf04af
