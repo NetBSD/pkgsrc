@@ -1,25 +1,49 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.13 2013/11/22 14:34:33 ryoon Exp $
+$NetBSD: MESSAGE,v 1.14 2014/03/23 01:19:17 ryoon Exp $
 
 To use ownCloud, you will need to perform the following steps.
 
 1. If you want to use with MySQL server, install databases/mysql55-*
    and enable it, then create database.
 
-2. Install apache httpd server, for example www/apache24 and www/ap-php.
+2. Install nginx httpd server, for example www/nginx.
 
-3. Be sure to have the following lines in ${PREFIX}/etc/httpd/httpd.conf
+3. Install PHP-FPM, PHP FastCGI Process Magager from www/php-fpm.
 
-	Alias /owncloud ${PREFIX}/share/owncloud
-	<Directory "${PREFIX}/share/owncloud">
-		DirectoryIndex index.php
-		Options All
-		Allow from All
-		AllowOverride All
-		Require all granted
-	</Directory>
+4. Be sure to have the following lines in ${PREFIX}/etc/nginx/nginx.conf
+   to enable PHP script in http://YOUR_SERVER_NAME/owncloud/ .
 
-4. Be sure to have the following lines in ${PREFIX}/etc/php.ini.
+	http {
+	server {
+		listen 80;
+		server_name YOUR_SERVER_NAME;
+		root ${PREFIX}/share/owncloud/;
+
+		client_max_body_size 10G; # set max upload size
+		fastcgi_buffers 64 4K;
+
+		location /owncloud {
+			index index.php;
+			error_page 403 /owncloud/core/templates/403.php;
+			error_page 404 /owncloud/core/templates/404.php;
+			alias ${PREFIX}/share/owncloud;
+		}
+
+		location ~ ^(.+?\.php)(/.*)?$ {
+			include fastcgi_params;
+			fastcgi_param SCRIPT_FILENAME ${PREFIX}/share/$1;
+			fastcgi_param PATH_INFO $2;
+			fastcgi_pass 127.0.0.1:9000;
+		}
+	}
+	}
+
+5. Be sure to have the following lines in ${PREFIX}/etc/php-fam.conf
+   to restrict access from localhost only.
+
+	listen.allowed_clients = 127.0.0.1
+
+6. Be sure to have the following lines in ${PREFIX}/etc/php.ini.
 
 	extension=dom.so
 	extension=gd.so
@@ -34,7 +58,13 @@ To use ownCloud, you will need to perform the following steps.
 	extension=mysql.so ;if you select MySQL backend.
 	extension=pgsql.so ;if you select PostgreSQL backend.
 
-5. Start apache httpd.
+7. Start PHP-FPM daemon.
 
-6. Access http://localhost/owncloud/ and setup.
+	${RCD_SCRIPTS_DIR}/php_fpm start
+
+8. Start nginx httpd server.
+
+	${RCD_SCRIPTS_DIR}/nginx start
+
+6. Access http://YOUR_SERVER_NAME/owncloud/ and setup.
 ===========================================================================
