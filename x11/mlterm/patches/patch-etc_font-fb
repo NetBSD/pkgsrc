@@ -1,8 +1,8 @@
-$NetBSD: patch-etc_font-fb,v 1.5 2013/10/28 13:26:07 tsutsui Exp $
+$NetBSD: patch-etc_font-fb,v 1.6 2014/03/23 07:04:00 tsutsui Exp $
 
 add more examples for typical NetBSD and pkgsrc installation
 
---- etc/font-fb.orig	2013-10-26 16:47:13.000000000 +0000
+--- etc/font-fb.orig	2014-03-22 22:06:39.000000000 +0000
 +++ etc/font-fb
 @@ -1,10 +1,17 @@
  #DEFAULT = /usr/share/fonts/X11/misc/unifont.pcf.gz:100
