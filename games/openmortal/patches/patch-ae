@@ -1,6 +1,9 @@
-$NetBSD: patch-ae,v 1.1 2007/08/08 20:53:47 joerg Exp $
+$NetBSD: patch-ae,v 1.2 2014/03/23 08:21:11 spz Exp $
 
---- src/sge_tt_text.cpp.orig	2007-08-08 20:28:55.000000000 +0000
+add malloc.h
+make it deal gracefully with both freetype 2.4.* and 2.5.*
+
+--- src/sge_tt_text.cpp.orig	2004-03-03 20:17:48.000000000 +0000
 +++ src/sge_tt_text.cpp
 @@ -26,7 +26,6 @@
  
@@ -10,3 +13,16 @@ $NetBSD: patch-ae,v 1.1 2007/08/08 20:53:47 joerg Exp $
  #include <memory.h>
  #include <string.h>
  #include <stdarg.h>
+@@ -37,9 +36,9 @@
+ 
+ #ifndef _SGE_NOTTF
+ #include <ft2build.h>
+-#include <freetype/freetype.h>
+-#include <freetype/ftoutln.h>
+-#include <freetype/ttnameid.h>
++#include FT_FREETYPE_H
++#include FT_OUTLINE_H
++#include FT_TRUETYPE_IDS_H
+ 
+ /* The structure used to hold glyph information (cached) */
+ struct glyph {
