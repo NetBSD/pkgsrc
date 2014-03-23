@@ -1,6 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2013/07/12 00:07:04 taca Exp $
+$NetBSD: patch-ac,v 1.7 2014/03/23 09:55:59 spz Exp $
 
---- ext/gd/config.m4.orig	2013-07-10 17:43:08.000000000 +0000
+Adjustments for zlib, png and freetype2
+
+--- ext/gd/config.m4.orig	2013-12-10 19:04:57.000000000 +0000
 +++ ext/gd/config.m4
 @@ -45,18 +45,7 @@ dnl Checks for the configure options
  dnl
@@ -47,3 +49,21 @@ $NetBSD: patch-ac,v 1.6 2013/07/12 00:07:04 taca Exp $
      ],[
        -L$PHP_ZLIB_DIR/$PHP_LIBDIR -lz -L$GD_PNG_DIR/$PHP_LIBDIR
      ])
+@@ -162,7 +150,7 @@ AC_DEFUN([PHP_GD_FREETYPE2],[
+   if test "$PHP_FREETYPE_DIR" != "no"; then
+ 
+     for i in $PHP_FREETYPE_DIR /usr/local /usr; do
+-      if test -f "$i/include/freetype2/freetype/freetype.h"; then
++      if test -f "$i/include/ft2build.h" -o -f "$i/include/freetype2/ft2build.h"; then
+         FREETYPE2_DIR=$i
+         FREETYPE2_INC_DIR=$i/include/freetype2
+         break
+@@ -170,7 +158,7 @@ AC_DEFUN([PHP_GD_FREETYPE2],[
+     done
+ 
+     if test -z "$FREETYPE2_DIR"; then
+-      AC_MSG_ERROR([freetype.h not found.])
++      AC_MSG_ERROR([ft2build.h not found.])
+     fi
+ 
+     PHP_CHECK_LIBRARY(freetype, FT_New_Face,
