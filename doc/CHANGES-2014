@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1218 2014/03/23 01:24:39 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.1219 2014/03/23 07:08:21 tsutsui Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2014Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW, 
@@ -1788,3 +1788,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/getmail to 4.44.0 [schmonz 2014-03-22]
 	Updated devel/nss to 3.16 [ryoon 2014-03-22]
 	Updated www/php-owncloud to 6.0.2 [ryoon 2014-03-23]
+	Updated x11/mlterm to 3.3.4 [tsutsui 2014-03-23]
