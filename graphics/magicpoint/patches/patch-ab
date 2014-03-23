@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.6 2013/08/17 14:39:24 taca Exp $
+$NetBSD: patch-ab,v 1.7 2014/03/23 01:37:27 spz Exp $
 
-* Add Support freetype2.
+* Add support for freetype2 (2.4.* and 2.5.*).
 * Add some prototypes.
 
 --- mgp.h.orig	2008-01-18 17:43:20.000000000 +0000
@@ -11,9 +11,9 @@ $NetBSD: patch-ab,v 1.6 2013/08/17 14:39:24 taca Exp $
  #include FT_FREETYPE_H
 -#include <fontconfig/fontconfig.h>
 +#include FT_CONFIG_CONFIG_H
-+#include <freetype2/freetype/fttypes.h>
-+#include <freetype2/freetype/fterrors.h>
-+#include <freetype2/freetype/freetype.h>
++#include FT_TYPES_H
++#include FT_ERRORS_H
++#include FT_FREETYPE_H
  #include <X11/Xft/Xft.h>
  #ifdef HAVE_ICONV
  #include <iconv.h>
