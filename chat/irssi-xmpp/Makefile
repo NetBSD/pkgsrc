@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 00:02:38 asau Exp $
+# $NetBSD: Makefile,v 1.4 2014/03/24 17:44:47 jperkin Exp $
 #
 
 DISTNAME=	irssi-xmpp-0.52
@@ -28,6 +28,15 @@ SUBST_STAGE.makefile=	pre-build
 SUBST_MESSAGE.makefile=	Fixing doc-install Makefile target.
 SUBST_FILES.makefile=	Makefile
 SUBST_SED.makefile+=	-e '/docs/s/install/install -m 644/'
+
+SUBST_CLASSES+=		configmk
+SUBST_STAGE.configmk=	pre-build
+SUBST_MESSAGE.configmk=	Fixing CFLAGS and LDFLAGS to be user-settable.
+SUBST_FILES.configmk=	config.mk
+SUBST_SED.configmk+=	-e 's/^CFLAGS =/CFLAGS +=/'
+SUBST_SED.configmk+=	-e 's/^LDFLAGS =/LDFLAGS +=/'
+
+CFLAGS.SunOS+=	-D__BEGIN_DECLS= -D__END_DECLS=
 
 post-extract:
 	${MV} ${WRKDIR}/${DISTNAME} ${WRKDIR}/${IRSSI_DISTNAME}
