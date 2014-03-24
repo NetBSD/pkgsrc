@@ -1,9 +1,10 @@
-# $NetBSD: builtin.mk,v 1.13 2012/03/19 12:34:14 joerg Exp $
+# $NetBSD: builtin.mk,v 1.14 2014/03/24 15:29:54 tron Exp $
 
 BUILTIN_PKG:=	freetype2
 
-BUILTIN_FIND_FILES_VAR:=	H_FREETYPE2
-BUILTIN_FIND_FILES.H_FREETYPE2=	${X11BASE}/include/freetype2/freetype/freetype.h
+BUILTIN_FIND_FILES_VAR:=		H_FREETYPE2 H_FREETYPE2_NEW
+BUILTIN_FIND_FILES.H_FREETYPE2=		${X11BASE}/include/freetype2/freetype/freetype.h
+BUILTIN_FIND_FILES.H_FREETYPE2_NEW=	${X11BASE}/include/freetype2/freetype.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -14,6 +15,9 @@ BUILTIN_FIND_FILES.H_FREETYPE2=	${X11BASE}/include/freetype2/freetype/freetype.h
 .if !defined(IS_BUILTIN.freetype2)
 .  if empty(H_FREETYPE2:M__nonexistent__)
 IS_BUILTIN.freetype2=	yes
+.  elif empty(H_FREETYPE2_NEW:M__nonexistent__)
+IS_BUILTIN.freetype2=	yes
+H_FREETYPE2:=		${H_FREETYPE2_NEW}
 .  else
 IS_BUILTIN.freetype2=	no
 .  endif
