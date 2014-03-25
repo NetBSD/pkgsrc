@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.3 2012/02/15 19:43:51 hans Exp $
+$NetBSD: patch-ac,v 1.4 2014/03/25 23:06:07 asau Exp $
 
 --- include/asoundlib-head.h.orig	2008-12-18 22:01:21.000000000 -0500
 +++ include/asoundlib-head.h
@@ -6,7 +6,7 @@ $NetBSD: patch-ac,v 1.3 2012/02/15 19:43:51 hans Exp $
  #include <string.h>
  #include <fcntl.h>
  #include <assert.h>
-+#if defined(__NetBSD__) || defined(__DragonFly__)
++#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
 +#include <sys/endian.h>
 +#elif defined(__sun)
 +#include <sys/byteorder.h>
