@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2008/12/30 14:40:29 hasso Exp $
+$NetBSD: patch-ab,v 1.5 2014/03/25 23:06:07 asau Exp $
 
 --- configure.orig	2008-10-29 08:46:35.000000000 -0400
 +++ configure	2008-12-19 00:09:49.000000000 -0500
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.4 2008/12/30 14:40:29 hasso Exp $
  fi
  
 +case $host_os in
-+  netbsd*|dragonfly*)
++  netbsd*|freebsd*|dragonfly*)
 +    HAVE_LIBDL=yes
 +cat >>confdefs.h <<\_ACEOF
 +#define HAVE_LIBDL 1
@@ -22,7 +22,7 @@ $NetBSD: patch-ab,v 1.4 2008/12/30 14:40:29 hasso Exp $
  
  DEFS=-DHAVE_CONFIG_H
 +case $host_os in
-+  netbsd*|dragonfly*)
++  netbsd*|freebsd*|dragonfly*)
 +    DEFS="$DEFS -Dbswap_32=bswap32 -Dbswap_16=bswap16 -Dbswap_64=bswap64"
 +    ;;
 +esac
