@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.17 2014/03/22 17:26:12 gdt Exp $
+$NetBSD: distinfo,v 1.18 2014/03/25 12:54:22 gdt Exp $
 
 SHA1 (nedit-5.5-src.tar.bz2) = 7d3c87a793a5047cf857af1ac82e39f3b33e8a87
 RMD160 (nedit-5.5-src.tar.bz2) = 93fce64bdc5d8a9eff86ab76cec67d44d676d0eb
 Size (nedit-5.5-src.tar.bz2) = 1124825 bytes
 SHA1 (patch-Xlt_SlideC.c) = aafca789053536a0d3ca0bc98ae301c60697e4c2
 SHA1 (patch-aa) = 29cf7e55b23e437b0203e0dde09cc053d65f245c
-SHA1 (patch-source_highlight.c) = f6c8de27402e3e6d4fd73cb11e541c5c053835d9
+SHA1 (patch-source_highlight.c) = cfb36657e654747a16f7cf9ed6394e047493e1f5
 SHA1 (patch-source_interpret.c) = c2fc78178c814fff1b572f8674f0fec3803926e5
 SHA1 (patch-source_macro.c) = e0a1562687c3f989d96eb2fc62a93452273d1ea7
 SHA1 (patch-source_menu.c) = 529be222b97904b82721dc79ae8fa587378ccd48
