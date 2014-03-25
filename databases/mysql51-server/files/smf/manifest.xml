@@ -16,8 +16,8 @@
         <envvar name='LD_PRELOAD_32' value='/usr/lib/extendedFILE.so.1' />
       </method_environment>
     </method_context>
-    <exec_method name='start' type='method' exec='@PREFIX@/@SMF_METHOD_FILE.mysql@ start' timeout_seconds='18446744073709551615' />
-    <exec_method name='stop' type='method' exec='@PREFIX@/@SMF_METHOD_FILE.mysql@ stop' timeout_seconds='18446744073709551615' />
+    <exec_method name='start' type='method' exec='@PREFIX@/@SMF_METHOD_FILE.mysqld@ start' timeout_seconds='18446744073709551615' />
+    <exec_method name='stop' type='method' exec='@PREFIX@/@SMF_METHOD_FILE.mysqld@ stop' timeout_seconds='18446744073709551615' />
     <stability value='Evolving' />
     <template>
       <common_name>
