@@ -1,7 +1,7 @@
-$NetBSD: patch-Source_kwsys_SystemInformation.cxx,v 1.6 2014/03/24 20:42:11 asau Exp $
+$NetBSD: patch-Source_kwsys_SystemInformation.cxx,v 1.7 2014/03/25 07:11:52 asau Exp $
 
 * Add more conditional handling for NetBSD, same as others.
-* Treat FreeBSD the same way as NetBSD and OpenBSD.
+* Treat FreeBSD and DragonFly the same way as NetBSD and OpenBSD.
 * Treat Solaris same as Linux.
 * Use correct cmake define.
 
@@ -12,7 +12,7 @@ $NetBSD: patch-Source_kwsys_SystemInformation.cxx,v 1.6 2014/03/24 20:42:11 asau
  #endif
  
 -#ifdef __FreeBSD__
-+#if defined(__OpenBSD__) || defined(__NetBSD__) || defined(__FreeBSD__)
++#if defined(__OpenBSD__) || defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
 +# include <sys/param.h>
  # include <sys/sysctl.h>
 -# include <fenv.h>
