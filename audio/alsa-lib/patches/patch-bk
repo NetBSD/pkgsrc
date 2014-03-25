@@ -1,4 +1,4 @@
-$NetBSD: patch-bk,v 1.1 2008/12/25 13:18:00 hasso Exp $
+$NetBSD: patch-bk,v 1.2 2014/03/25 23:06:07 asau Exp $
 
 --- src/async.c.orig	2008-12-25 08:18:22 +0200
 +++ src/async.c	2008-12-25 08:20:39 +0200
@@ -6,7 +6,7 @@ $NetBSD: patch-bk,v 1.1 2008/12/25 13:18:00 hasso Exp $
  
  static void snd_async_handler(int signo ATTRIBUTE_UNUSED, siginfo_t *siginfo, void *context ATTRIBUTE_UNUSED)
  {
-+#if defined(__DragonFly__)
++#if defined(__FreeBSD__) || defined(__DragonFly__)
 +	/* XXX XXX XXX */
 +	struct list_head *i;
 +	list_for_each(i, &snd_async_handlers) {

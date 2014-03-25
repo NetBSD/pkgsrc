@@ -1,4 +1,4 @@
-$NetBSD: patch-aw,v 1.4 2012/02/15 19:43:51 hans Exp $
+$NetBSD: patch-aw,v 1.5 2014/03/25 23:06:07 asau Exp $
 
 --- src/pcm/pcm_misc.c.orig	2008-10-29 14:42:10 +0200
 +++ src/pcm/pcm_misc.c	2008-12-21 17:08:14 +0200
@@ -8,7 +8,7 @@ $NetBSD: patch-aw,v 1.4 2012/02/15 19:43:51 hans Exp $
  #include <string.h>
 +#ifdef __NetBSD__
 +#include <sys/bswap.h>
-+#elif defined(__DragonFly__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
 +#include <sys/endian.h>
 +#elif defined (__sun)
 +#include <sys/byteorder.h>
