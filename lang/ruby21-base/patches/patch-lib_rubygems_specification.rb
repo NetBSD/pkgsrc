@@ -1,14 +1,15 @@
-$NetBSD: patch-lib_rubygems_specification.rb,v 1.1 2014/03/14 19:40:47 taca Exp $
+$NetBSD: patch-lib_rubygems_specification.rb,v 1.2 2014/03/26 13:22:44 taca Exp $
 
 * Changes for pkgsrc environment:
 
-  -  Allow some attributes to nil.
-  -  Relax date/time format.
+  - Allow some attributes to nil.
+  - Relax date/time format.
+  - Allow duplicated dependencies for now.
 
 And allow multiple conditions for requirement from Ruby 2.0.0 and
 Rubygem 1.8.25.
 
---- lib/rubygems/specification.rb.orig	2013-12-19 22:09:19.000000000 +0000
+--- lib/rubygems/specification.rb.orig	2014-02-06 02:59:36.000000000 +0000
 +++ lib/rubygems/specification.rb
 @@ -178,6 +178,12 @@ class Gem::Specification < Gem::BasicSpe
      @@default_value[k].nil?
@@ -69,3 +70,12 @@ Rubygem 1.8.25.
      end
  
      # Warnings
+@@ -2605,7 +2633,7 @@ http://opensource.org/licenses/alphabeti
+ 
+     dependencies.each do |dep|
+       if prev = seen[dep.name] then
+-        raise Gem::InvalidSpecificationException, <<-MESSAGE
++        warn <<-MESSAGE
+ duplicate dependency on #{dep}, (#{prev.requirement}) use:
+     add_runtime_dependency '#{dep.name}', '#{dep.requirement}', '#{prev.requirement}'
+         MESSAGE
