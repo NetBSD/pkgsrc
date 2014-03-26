@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.1 2013/11/03 04:51:59 ryoon Exp $
+$NetBSD: patch-ao,v 1.2 2014/03/26 13:56:22 ryoon Exp $
 
---- toolkit/mozapps/installer/packager.mk.orig	2013-03-26 22:18:05.000000000 +0000
+--- toolkit/mozapps/installer/packager.mk.orig	2014-03-15 16:06:46.000000000 +0000
 +++ toolkit/mozapps/installer/packager.mk
-@@ -911,8 +911,8 @@ endif
+@@ -676,8 +676,8 @@ endif
  	(cd $(DIST)/$(MOZ_PKG_DIR) && $(TAR) --exclude=precomplete $(TAR_CREATE_FLAGS) - .) | \
  	  (cd $(DESTDIR)$(installdir) && tar -xf -)
  	$(NSINSTALL) -D $(DESTDIR)$(bindir)
