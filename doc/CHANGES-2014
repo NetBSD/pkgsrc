@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1220 2014/03/25 12:51:05 jperkin Exp $
+$NetBSD: CHANGES-2014,v 1.1221 2014/03/26 01:43:34 nat Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2014Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW, 
@@ -1790,3 +1790,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/php-owncloud to 6.0.2 [ryoon 2014-03-23]
 	Updated x11/mlterm to 3.3.4 [tsutsui 2014-03-23]
 	Updated lang/nawk to 20121220nb1 [jperkin 2014-03-25]
+	Updated emulators/mame to 0.152nb1 [nat 2014-03-26]
