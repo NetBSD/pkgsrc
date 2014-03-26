@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1222 2014/03/26 02:25:05 nat Exp $
+$NetBSD: CHANGES-2014,v 1.1223 2014/03/26 13:23:20 taca Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2014Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW, 
@@ -1792,3 +1792,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/nawk to 20121220nb1 [jperkin 2014-03-25]
 	Updated emulators/mame to 0.152nb1 [nat 2014-03-26]
 	Updated emulators/mess to 0.152nb1 [nat 2014-03-26]
+	Updated lang/ruby21-base to 2.1.1nb1 [taca 2014-03-26]
