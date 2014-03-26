@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1225 2014/03/26 13:53:37 imil Exp $
+$NetBSD: CHANGES-2014,v 1.1226 2014/03/26 16:23:48 ryoon Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2014Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW, 
@@ -1795,3 +1795,17 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/ruby21-base to 2.1.1nb1 [taca 2014-03-26]
 	Updated lang/LuaJIT2 to 2.0.3nb1 [imil 2014-03-26]
 	Updated www/nginx to 1.4.7nb5 [imil 2014-03-26]
+	Updated graphics/gimp-docs-de to 2.8.1 [ryoon 2014-03-26]
+	Updated graphics/gimp-docs-en to 2.8.1 [ryoon 2014-03-26]
+	Updated graphics/gimp-docs-es to 2.8.1 [ryoon 2014-03-26]
+	Updated graphics/gimp-docs-fr to 2.8.1 [ryoon 2014-03-26]
+	Updated graphics/gimp-docs-it to 2.8.1 [ryoon 2014-03-26]
+	Updated graphics/gimp-docs-ja to 2.8.1 [ryoon 2014-03-26]
+	Updated graphics/gimp-docs-ko to 2.8.1 [ryoon 2014-03-26]
+	Updated graphics/gimp-docs-nl to 2.8.1 [ryoon 2014-03-26]
+	Updated graphics/gimp-docs-nn to 2.8.1 [ryoon 2014-03-26]
+	Updated graphics/gimp-docs-pl to 2.8.1 [ryoon 2014-03-26]
+	Updated graphics/gimp-docs-ru to 2.8.1 [ryoon 2014-03-26]
+	Updated graphics/gimp-docs-sv to 2.8.1 [ryoon 2014-03-26]
+	Updated graphics/gimp-docs-zh_CN to 2.8.1 [ryoon 2014-03-26]
+	Updated meta-pkgs/gimp-docs to 2.8.1 [ryoon 2014-03-26]
