@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/03/09 15:25:27 tsutsui Exp $
+# $NetBSD: Makefile,v 1.5 2014/03/26 14:27:22 taca Exp $
 
 DISTNAME=	twitter-5.7.1
 CATEGORIES=	net
@@ -20,7 +20,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-http_parser.rb>=0.6.0:../../www/ruby-http_parser.rb
 
 RUBY_JSON_REQD=	1.8
 
-RUBY_VERSION_SUPPORTED=	200 193
+RUBY_VERSION_SUPPORTED=	200 193 21
 
 .include "../../lang/ruby/gem.mk"
 .include "../../lang/ruby/json.mk"
