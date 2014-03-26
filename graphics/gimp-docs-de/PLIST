@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/07/21 17:20:48 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/03/26 16:18:29 ryoon Exp $
 share/gimp/2.0/help/de/become-a-gimp-wizard.html
 share/gimp/2.0/help/de/bibliography.html
 share/gimp/2.0/help/de/common-script-fu-errors.html
@@ -88,7 +88,10 @@ share/gimp/2.0/help/de/gimp-errors-dialog.html
 share/gimp/2.0/help/de/gimp-export-dialog.html
 share/gimp/2.0/help/de/gimp-file-close-all.html
 share/gimp/2.0/help/de/gimp-file-close.html
+share/gimp/2.0/help/de/gimp-file-create-template.html
 share/gimp/2.0/help/de/gimp-file-create.html
+share/gimp/2.0/help/de/gimp-file-export-to.html
+share/gimp/2.0/help/de/gimp-file-export.html
 share/gimp/2.0/help/de/gimp-file-menu.html
 share/gimp/2.0/help/de/gimp-file-new.html
 share/gimp/2.0/help/de/gimp-file-open-as-layer.html
@@ -99,7 +102,6 @@ share/gimp/2.0/help/de/gimp-file-preferences.html
 share/gimp/2.0/help/de/gimp-file-quit.html
 share/gimp/2.0/help/de/gimp-file-revert.html
 share/gimp/2.0/help/de/gimp-file-save-a-copy.html
-share/gimp/2.0/help/de/gimp-file-save-as-template.html
 share/gimp/2.0/help/de/gimp-file-save-as.html
 share/gimp/2.0/help/de/gimp-file-save.html
 share/gimp/2.0/help/de/gimp-filter-repeat.html
@@ -198,6 +200,7 @@ share/gimp/2.0/help/de/gimp-layer-mask-show.html
 share/gimp/2.0/help/de/gimp-layer-menu.html
 share/gimp/2.0/help/de/gimp-layer-merge-down.html
 share/gimp/2.0/help/de/gimp-layer-new-from-visible.html
+share/gimp/2.0/help/de/gimp-layer-new-layer-group.html
 share/gimp/2.0/help/de/gimp-layer-new.html
 share/gimp/2.0/help/de/gimp-layer-next.html
 share/gimp/2.0/help/de/gimp-layer-offset.html
@@ -257,6 +260,7 @@ share/gimp/2.0/help/de/gimp-tool-blend.html
 share/gimp/2.0/help/de/gimp-tool-brightness-contrast.html
 share/gimp/2.0/help/de/gimp-tool-bucket-fill.html
 share/gimp/2.0/help/de/gimp-tool-by-color-select.html
+share/gimp/2.0/help/de/gimp-tool-cage.html
 share/gimp/2.0/help/de/gimp-tool-clone.html
 share/gimp/2.0/help/de/gimp-tool-color-balance.html
 share/gimp/2.0/help/de/gimp-tool-color-picker.html
@@ -266,6 +270,7 @@ share/gimp/2.0/help/de/gimp-tool-crop.html
 share/gimp/2.0/help/de/gimp-tool-curves.html
 share/gimp/2.0/help/de/gimp-tool-desaturate.html
 share/gimp/2.0/help/de/gimp-tool-dodge-burn.html
+share/gimp/2.0/help/de/gimp-tool-dynamics.html
 share/gimp/2.0/help/de/gimp-tool-ellipse-select.html
 share/gimp/2.0/help/de/gimp-tool-eraser.html
 share/gimp/2.0/help/de/gimp-tool-flip.html
@@ -377,16 +382,13 @@ share/gimp/2.0/help/de/gimp-view-snap-to-grid.html
 share/gimp/2.0/help/de/gimp-view-snap-to-guides.html
 share/gimp/2.0/help/de/gimp-view-snap-to-vectors.html
 share/gimp/2.0/help/de/gimp-view-zoom.html
-share/gimp/2.0/help/de/gimp-windows-menu.html
-share/gimp/2.0/help/de/gimp-windows-open-recent-dock.html
-share/gimp/2.0/help/de/gimp-windows-show-dock.html
+share/gimp/2.0/help/de/gimp-windows.html
 share/gimp/2.0/help/de/gimp-xrefs.xml
 share/gimp/2.0/help/de/gimp22.css
 share/gimp/2.0/help/de/glossary.html
 share/gimp/2.0/help/de/help-missing.html
 share/gimp/2.0/help/de/image-independent-script-fu.html
 share/gimp/2.0/help/de/images/caution.png
-share/gimp/2.0/help/de/images/dialogs/SaveAsCSS.png
 share/gimp/2.0/help/de/images/dialogs/brushes-buttons.png
 share/gimp/2.0/help/de/images/dialogs/brushes-context-menu.png
 share/gimp/2.0/help/de/images/dialogs/brushes-dialog-clipboard.png
@@ -512,7 +514,6 @@ share/gimp/2.0/help/de/images/dialogs/stock-path-stroke-16.png
 share/gimp/2.0/help/de/images/dialogs/stock-redo-16.png
 share/gimp/2.0/help/de/images/dialogs/stock-reload-16.png
 share/gimp/2.0/help/de/images/dialogs/stock-remove-16.png
-share/gimp/2.0/help/de/images/dialogs/stock-reset-16.png
 share/gimp/2.0/help/de/images/dialogs/stock-revert-16.png
 share/gimp/2.0/help/de/images/dialogs/stock-save-16.png
 share/gimp/2.0/help/de/images/dialogs/stock-selection-16.png
@@ -973,6 +974,8 @@ share/gimp/2.0/help/de/images/filters/examples/render-checkerboard1.jpg
 share/gimp/2.0/help/de/images/filters/examples/render-checkerboard2.jpg
 share/gimp/2.0/help/de/images/filters/examples/render-circuit.jpg
 share/gimp/2.0/help/de/images/filters/examples/render-fractalexpl.png
+share/gimp/2.0/help/de/images/filters/examples/render-grid-detail1.png
+share/gimp/2.0/help/de/images/filters/examples/render-grid-detail2.png
 share/gimp/2.0/help/de/images/filters/examples/render-taj-cmlexplorer.jpg
 share/gimp/2.0/help/de/images/filters/examples/render-taj-diffcloud.jpg
 share/gimp/2.0/help/de/images/filters/examples/render-taj-flame.jpg
@@ -1159,7 +1162,6 @@ share/gimp/2.0/help/de/images/math/displace2.png
 share/gimp/2.0/help/de/images/math/displace3.png
 share/gimp/2.0/help/de/images/math/displace4.png
 share/gimp/2.0/help/de/images/math/displace5.png
-share/gimp/2.0/help/de/images/math/dot-for-dot.png
 share/gimp/2.0/help/de/images/math/layer-mode-addition.png
 share/gimp/2.0/help/de/images/math/layer-mode-burn.png
 share/gimp/2.0/help/de/images/math/layer-mode-darken.png
@@ -1254,6 +1256,7 @@ share/gimp/2.0/help/de/images/menus/file/create/logos/chrome.jpg
 share/gimp/2.0/help/de/images/menus/file/create/logos/frosty.jpg
 share/gimp/2.0/help/de/images/menus/file/create/scanner.png
 share/gimp/2.0/help/de/images/menus/file/create/screenshot.png
+share/gimp/2.0/help/de/images/menus/file/create/webpage.png
 share/gimp/2.0/help/de/images/menus/file/new.png
 share/gimp/2.0/help/de/images/menus/file/new/advanced-dialog.png
 share/gimp/2.0/help/de/images/menus/file/new/templates.png
@@ -1261,7 +1264,6 @@ share/gimp/2.0/help/de/images/menus/file/open-location.png
 share/gimp/2.0/help/de/images/menus/file/open.png
 share/gimp/2.0/help/de/images/menus/file/open/folder-context-menu.png
 share/gimp/2.0/help/de/images/menus/file/print-tab3.png
-share/gimp/2.0/help/de/images/menus/file/save-as-browse.png
 share/gimp/2.0/help/de/images/menus/file/save-as.png
 share/gimp/2.0/help/de/images/menus/filters.png
 share/gimp/2.0/help/de/images/menus/filters/alpha-to-logo.png
@@ -1286,9 +1288,11 @@ share/gimp/2.0/help/de/images/menus/help/plug-in-browser.png
 share/gimp/2.0/help/de/images/menus/help/procedure-browser.png
 share/gimp/2.0/help/de/images/menus/help/tip-of-the-day.png
 share/gimp/2.0/help/de/images/menus/icon-submenu.png
+share/gimp/2.0/help/de/images/menus/image-menu-bar.png
 share/gimp/2.0/help/de/images/menus/image.png
 share/gimp/2.0/help/de/images/menus/image/align-demo.png
 share/gimp/2.0/help/de/images/menus/image/align-layers.png
+share/gimp/2.0/help/de/images/menus/image/align-no-layer.png
 share/gimp/2.0/help/de/images/menus/image/alignHCLB+.png
 share/gimp/2.0/help/de/images/menus/image/alignHCLB-.png
 share/gimp/2.0/help/de/images/menus/image/alignHFLB+.png
@@ -1398,7 +1402,6 @@ share/gimp/2.0/help/de/images/menus/view/display-filters/sight-defects_tritanopi
 share/gimp/2.0/help/de/images/menus/view/padding-color.png
 share/gimp/2.0/help/de/images/menus/view/zoom.png
 share/gimp/2.0/help/de/images/menus/windows.png
-share/gimp/2.0/help/de/images/menus/windows/dockable-dialogs.png
 share/gimp/2.0/help/de/images/menus/windows/expanded-menu.png
 share/gimp/2.0/help/de/images/misc/bugzilla/advanced-search.png
 share/gimp/2.0/help/de/images/misc/bugzilla/enter-bug.png
@@ -1459,6 +1462,7 @@ share/gimp/2.0/help/de/images/tool-options/rectsel-mode-subtract.png
 share/gimp/2.0/help/de/images/tool-options/rotate-affect-layer.png
 share/gimp/2.0/help/de/images/tool-options/rotate-affect-path.png
 share/gimp/2.0/help/de/images/tool-options/rotate-affect-selection.png
+share/gimp/2.0/help/de/images/tool-options/smooth-stroke.png
 share/gimp/2.0/help/de/images/tool-options/stock-gravity-east-24.png
 share/gimp/2.0/help/de/images/tool-options/stock-gravity-north-24.png
 share/gimp/2.0/help/de/images/tool-options/stock-gravity-south-24.png
@@ -1473,9 +1477,6 @@ share/gimp/2.0/help/de/images/toolbox/FG-select-ex2.png
 share/gimp/2.0/help/de/images/toolbox/FG-select-ex3.png
 share/gimp/2.0/help/de/images/toolbox/FG-select-ex4.png
 share/gimp/2.0/help/de/images/toolbox/FG-select-options.png
-share/gimp/2.0/help/de/images/toolbox/FG-select-smoothing1.png
-share/gimp/2.0/help/de/images/toolbox/FG-select-smoothing2.png
-share/gimp/2.0/help/de/images/toolbox/FG-select-smoothing3.png
 share/gimp/2.0/help/de/images/toolbox/FG-select-toolbox.png
 share/gimp/2.0/help/de/images/toolbox/align-ex1.png
 share/gimp/2.0/help/de/images/toolbox/align-ex2.png
@@ -1487,15 +1488,19 @@ share/gimp/2.0/help/de/images/toolbox/auto-shrink1.png
 share/gimp/2.0/help/de/images/toolbox/auto-shrink2.png
 share/gimp/2.0/help/de/images/toolbox/blend-tool-offset.png
 share/gimp/2.0/help/de/images/toolbox/blend-tool-options.png
-share/gimp/2.0/help/de/images/toolbox/brush-dynamics.png
 share/gimp/2.0/help/de/images/toolbox/brush-tools-box.png
 share/gimp/2.0/help/de/images/toolbox/brush-tools.png
 share/gimp/2.0/help/de/images/toolbox/by-color-selection.png
+share/gimp/2.0/help/de/images/toolbox/cage-1.png
+share/gimp/2.0/help/de/images/toolbox/cage-2.png
 share/gimp/2.0/help/de/images/toolbox/cissors-bad.png
 share/gimp/2.0/help/de/images/toolbox/cissors-mouse.png
 share/gimp/2.0/help/de/images/toolbox/cissors-plus.png
 share/gimp/2.0/help/de/images/toolbox/clip-3.png
 share/gimp/2.0/help/de/images/toolbox/clip-3b.png
+share/gimp/2.0/help/de/images/toolbox/clip-4a.png
+share/gimp/2.0/help/de/images/toolbox/clip-4b.png
+share/gimp/2.0/help/de/images/toolbox/clip-4c.png
 share/gimp/2.0/help/de/images/toolbox/clip-adjust.png
 share/gimp/2.0/help/de/images/toolbox/clip-adjust2.png
 share/gimp/2.0/help/de/images/toolbox/clip-crop.png
@@ -1578,11 +1583,20 @@ share/gimp/2.0/help/de/images/toolbox/mode-behind.png
 share/gimp/2.0/help/de/images/toolbox/mode-dissolve.png
 share/gimp/2.0/help/de/images/toolbox/mode-erase.png
 share/gimp/2.0/help/de/images/toolbox/other-tools.png
+share/gimp/2.0/help/de/images/toolbox/paint-dynamics-edit.png
+share/gimp/2.0/help/de/images/toolbox/paint-dynamics-fade-example-1.png
+share/gimp/2.0/help/de/images/toolbox/paint-dynamics-fade-example-2.png
+share/gimp/2.0/help/de/images/toolbox/paint-dynamics-fade-example-3.png
+share/gimp/2.0/help/de/images/toolbox/paint-dynamics-list.png
+share/gimp/2.0/help/de/images/toolbox/paint-dynamics-options.png
+share/gimp/2.0/help/de/images/toolbox/paint-dynamics-select.png
+share/gimp/2.0/help/de/images/toolbox/paint-dynamics-tool-options.png
+share/gimp/2.0/help/de/images/toolbox/paint-dynamics-tuning-color.png
+share/gimp/2.0/help/de/images/toolbox/paint-dynamics-tuning.png
 share/gimp/2.0/help/de/images/toolbox/painting-examples.png
 share/gimp/2.0/help/de/images/toolbox/path-tool-options.png
 share/gimp/2.0/help/de/images/toolbox/perspective-clone-ex1.png
 share/gimp/2.0/help/de/images/toolbox/perspective-clone-ex2.png
-share/gimp/2.0/help/de/images/toolbox/perspective-clone-options.png
 share/gimp/2.0/help/de/images/toolbox/pointer.png
 share/gimp/2.0/help/de/images/toolbox/posterize-ex.png
 share/gimp/2.0/help/de/images/toolbox/presets-buttons.png
@@ -1597,6 +1611,8 @@ share/gimp/2.0/help/de/images/toolbox/select-area.png
 share/gimp/2.0/help/de/images/toolbox/selection-tools.png
 share/gimp/2.0/help/de/images/toolbox/shear-example.png
 share/gimp/2.0/help/de/images/toolbox/side-pt.png
+share/gimp/2.0/help/de/images/toolbox/slider-fast.png
+share/gimp/2.0/help/de/images/toolbox/slider-slow.png
 share/gimp/2.0/help/de/images/toolbox/stock-convert-grayscale-16.png
 share/gimp/2.0/help/de/images/toolbox/stock-tool-airbrush-22.png
 share/gimp/2.0/help/de/images/toolbox/stock-tool-align-22.png
@@ -1605,6 +1621,7 @@ share/gimp/2.0/help/de/images/toolbox/stock-tool-blur-22.png
 share/gimp/2.0/help/de/images/toolbox/stock-tool-brightness-contrast-22.png
 share/gimp/2.0/help/de/images/toolbox/stock-tool-bucket-fill-22.png
 share/gimp/2.0/help/de/images/toolbox/stock-tool-by-color-select-22.png
+share/gimp/2.0/help/de/images/toolbox/stock-tool-cage-22.png
 share/gimp/2.0/help/de/images/toolbox/stock-tool-clone-22.png
 share/gimp/2.0/help/de/images/toolbox/stock-tool-color-balance-22.png
 share/gimp/2.0/help/de/images/toolbox/stock-tool-color-picker-22.png
@@ -1615,6 +1632,7 @@ share/gimp/2.0/help/de/images/toolbox/stock-tool-dodge-22.png
 share/gimp/2.0/help/de/images/toolbox/stock-tool-ellipse-select-22.png
 share/gimp/2.0/help/de/images/toolbox/stock-tool-eraser-22.png
 share/gimp/2.0/help/de/images/toolbox/stock-tool-flip-22.png
+share/gimp/2.0/help/de/images/toolbox/stock-tool-folders-dynamics-22.png
 share/gimp/2.0/help/de/images/toolbox/stock-tool-foreground-select-22.png
 share/gimp/2.0/help/de/images/toolbox/stock-tool-free-select-22.png
 share/gimp/2.0/help/de/images/toolbox/stock-tool-fuzzy-select-22.png
@@ -1651,6 +1669,7 @@ share/gimp/2.0/help/de/images/toolbox/tool-options-airbrush.png
 share/gimp/2.0/help/de/images/toolbox/tool-options-align.png
 share/gimp/2.0/help/de/images/toolbox/tool-options-blur-sharpen.png
 share/gimp/2.0/help/de/images/toolbox/tool-options-brushcommon.png
+share/gimp/2.0/help/de/images/toolbox/tool-options-cage.png
 share/gimp/2.0/help/de/images/toolbox/tool-options-clone.png
 share/gimp/2.0/help/de/images/toolbox/tool-options-crop.png
 share/gimp/2.0/help/de/images/toolbox/tool-options-dodge.png
@@ -1663,9 +1682,9 @@ share/gimp/2.0/help/de/images/toolbox/tool-options-ink.png
 share/gimp/2.0/help/de/images/toolbox/tool-options-lasso.png
 share/gimp/2.0/help/de/images/toolbox/tool-options-levels.png
 share/gimp/2.0/help/de/images/toolbox/tool-options-move.png
-share/gimp/2.0/help/de/images/toolbox/tool-options-paint-gradient.png
 share/gimp/2.0/help/de/images/toolbox/tool-options-paintbrush.png
 share/gimp/2.0/help/de/images/toolbox/tool-options-pencil.png
+share/gimp/2.0/help/de/images/toolbox/tool-options-perspective-clone.png
 share/gimp/2.0/help/de/images/toolbox/tool-options-perspective.png
 share/gimp/2.0/help/de/images/toolbox/tool-options-rectsel.png
 share/gimp/2.0/help/de/images/toolbox/tool-options-rotate.png
@@ -1685,6 +1704,7 @@ share/gimp/2.0/help/de/images/toolbox/toolbox-airbrush.png
 share/gimp/2.0/help/de/images/toolbox/toolbox-align.png
 share/gimp/2.0/help/de/images/toolbox/toolbox-blur.png
 share/gimp/2.0/help/de/images/toolbox/toolbox-brush.png
+share/gimp/2.0/help/de/images/toolbox/toolbox-cage.png
 share/gimp/2.0/help/de/images/toolbox/toolbox-clone.png
 share/gimp/2.0/help/de/images/toolbox/toolbox-crop.png
 share/gimp/2.0/help/de/images/toolbox/toolbox-dodge.png
@@ -1724,6 +1744,7 @@ share/gimp/2.0/help/de/images/toolbox/tools-hue-sat.png
 share/gimp/2.0/help/de/images/toolbox/tools-levels.png
 share/gimp/2.0/help/de/images/toolbox/tools-posterize.png
 share/gimp/2.0/help/de/images/toolbox/tools-threshold.png
+share/gimp/2.0/help/de/images/toolbox/transform-guides.png
 share/gimp/2.0/help/de/images/toolbox/transform-tools-common-options.png
 share/gimp/2.0/help/de/images/toolbox/transform-tools.png
 share/gimp/2.0/help/de/images/tutorials/quickie-background-alpha-result.png
@@ -1794,14 +1815,10 @@ share/gimp/2.0/help/de/images/using/crop-auto.png
 share/gimp/2.0/help/de/images/using/crop-orig.png
 share/gimp/2.0/help/de/images/using/crop-zealous.png
 share/gimp/2.0/help/de/images/using/dialog-button-bar.png
-share/gimp/2.0/help/de/images/using/dialog-highlight-dockbar.png
-share/gimp/2.0/help/de/images/using/dialog-highlight-handle.png
 share/gimp/2.0/help/de/images/using/dialog-highlight-imagemenu.png
 share/gimp/2.0/help/de/images/using/dialog-highlight-tabmenu.png
 share/gimp/2.0/help/de/images/using/dock-anchor-dialog.png
-share/gimp/2.0/help/de/images/using/dock-attached.png
 share/gimp/2.0/help/de/images/using/dock-integrate-dialog.png
-share/gimp/2.0/help/de/images/using/dock-tab.png
 share/gimp/2.0/help/de/images/using/duck_orig.png
 share/gimp/2.0/help/de/images/using/empty-image-window.png
 share/gimp/2.0/help/de/images/using/enter-unicode-char1.png
@@ -1840,7 +1857,6 @@ share/gimp/2.0/help/de/images/using/image-layer-groups.png
 share/gimp/2.0/help/de/images/using/image-lock-pixels.png
 share/gimp/2.0/help/de/images/using/image-window-multi.png
 share/gimp/2.0/help/de/images/using/image-window-single.png
-share/gimp/2.0/help/de/images/using/imagewindow-description.png
 share/gimp/2.0/help/de/images/using/improved-text-tool.png
 share/gimp/2.0/help/de/images/using/keyfob_orig.png
 share/gimp/2.0/help/de/images/using/layer-mode-addition-mask1.jpg
@@ -1889,7 +1905,6 @@ share/gimp/2.0/help/de/images/using/layer-mode-subtract-mask1.jpg
 share/gimp/2.0/help/de/images/using/layer-mode-subtract-mask2.jpg
 share/gimp/2.0/help/de/images/using/layer-mode-value-mask1.jpg
 share/gimp/2.0/help/de/images/using/layer-mode-value-mask2.jpg
-share/gimp/2.0/help/de/images/using/left-vertical-line.png
 share/gimp/2.0/help/de/images/using/list-search-field.png
 share/gimp/2.0/help/de/images/using/logo-examples.png
 share/gimp/2.0/help/de/images/using/math-size-entries.png
@@ -1937,7 +1952,6 @@ share/gimp/2.0/help/de/images/using/select-outline.png
 share/gimp/2.0/help/de/images/using/select-to-brush.png
 share/gimp/2.0/help/de/images/using/single-window-mode.png
 share/gimp/2.0/help/de/images/using/single-window.png
-share/gimp/2.0/help/de/images/using/standard-setup.png
 share/gimp/2.0/help/de/images/using/stock-navigation-16.png
 share/gimp/2.0/help/de/images/using/straightline1.png
 share/gimp/2.0/help/de/images/using/straightline2.png
