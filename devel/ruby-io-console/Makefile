@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/03/16 17:53:15 taca Exp $
+# $NetBSD: Makefile,v 1.6 2014/03/26 13:24:35 taca Exp $
 
 DISTNAME=	io-console-0.4.2
 PKGREVISION=	2
@@ -10,7 +10,7 @@ COMMENT=	Add console capabilities to IO instances
 
 GEM_CLEANBUILD=	Makefile console.${RUBY_DLEXT} *.o mkmf.log \
 	.RUBYARCHDIR.-.io.time .RUBYLIBDIR.-.io.-.console.time \
-	.RUBYLIBDIR.-.console.time
+	.RUBYLIBDIR.-.console.time .RUBYARCHDIR.time
 GEM_CLEANBUOLD_EXTENSIONS= .RUBYARCHDIR.time .RUBYLIBDIR.-.console.time \
 	io/console/size.rb
 
