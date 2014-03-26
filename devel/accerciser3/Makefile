@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2014/01/25 08:47:17 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/03/26 21:59:00 prlw1 Exp $
 
-DISTNAME=	accerciser-3.6.0
-PKGREVISION=	6
-CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/accerciser/3.6/}
+DISTNAME=	accerciser-3.12.0
+CATEGORIES=	devel gnome
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/accerciser/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	prlw1@cam.ac.uk
@@ -21,14 +20,12 @@ REPLACE_PYTHON+=	src/accerciser.in
 BUILD_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
 DEPENDS+=	${PYPKGPREFIX}-at-spi2-[0-9]*:../../devel/py-at-spi2
 DEPENDS+=	libwnck3-[0-9]*:../../devel/libwnck3
+DEPENDS+=	${PYPKGPREFIX}-ipython>=1.2.1:../../devel/py-ipython1
 
 # dependencies to keep package's configure script happy:
 USE_LANGUAGES=	c
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 3.6.0
-
-# does not install into proper __pycache__ dir as of 3.6.0
-PY_PEP3147=	no
+PYTHON_VERSIONS_INCOMPATIBLE=	26 27
 
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../devel/at-spi2-core/buildlink3.mk"
