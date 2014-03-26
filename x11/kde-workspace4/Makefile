@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2014/02/12 23:18:49 tron Exp $
+# $NetBSD: Makefile,v 1.35 2014/03/26 13:24:52 jperkin Exp $
 
 DISTNAME=	kde-workspace-${_KDE_VERSION}
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -65,6 +65,11 @@ PLIST_VARS+=	utempter noutempter
 PLIST.utempter=		yes
 .else
 PLIST.noutempter=	yes
+.endif
+
+PLIST_VARS+=	gles
+.if ${OPSYS} == "Linux" && exists(/usr/include/GLES2/gl2.h)
+PLIST.gles=		yes
 .endif
 
 .if ${OPSYS} == "Linux"
