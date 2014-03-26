@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2012/09/28 12:31:59 adam Exp $
+$NetBSD: patch-ab,v 1.6 2014/03/26 06:23:12 asau Exp $
 
 * portability fix
 * DragonFly also not require extra libs for OpenSSL.
@@ -36,7 +36,7 @@ $NetBSD: patch-ab,v 1.5 2012/09/28 12:31:59 adam Exp $
  	*-*-osf5*) openssl_exlibs=;;
  	*-*-openbsd*) openssl_exlibs=;;
  	*-*-netbsd*) openssl_exlibs=;;
-+	*-*-dragonfly*) openssl_exlibs=;;
++	*-*-freebsd*|*-*-dragonfly*) openssl_exlibs=;;
 +	*-*-darwin*) openssl_exlibs=;;
  	#FIXME: check if lib "dl" is required
  	*)          openssl_exlibs=-ldl;;
