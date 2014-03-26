@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/09/26 09:42:23 obache Exp $
+# $NetBSD: Makefile,v 1.10 2014/03/26 14:27:22 taca Exp $
 #
 
 DISTNAME=	quickml-0.7
@@ -15,7 +15,7 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	# none
 RCD_SCRIPTS+=	quickml
 
-RUBY_VERSION_SUPPORTED= 193
+RUBY_VERSION_SUPPORTED= 200 193 21
 
 QUICKML_USER=	quickml
 QUICKML_GROUP=	quickml

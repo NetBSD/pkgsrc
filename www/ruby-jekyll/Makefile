@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/09/16 12:43:56 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2014/03/26 14:27:23 taca Exp $
 
 DISTNAME=	jekyll-1.2.0
 CATEGORIES=	www
@@ -19,7 +19,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-safe_yaml>=0.7.0:../../textproc/ruby-safe_yaml
 DEPENDS+=	${RUBY_PKGPREFIX}-colorator>=0.1<1:../../misc/ruby-colorator
 DEPENDS+=	${RUBY_PKGPREFIX}-redcarpet>=3.0.0:../../textproc/ruby-redcarpet
 
-RUBY_VERSION_SUPPORTED=	200 193
+RUBY_VERSION_SUPPORTED=	200 193 21
 
 OVERRIDE_GEMSPEC= directory-watcher>=1.5.1 safe_yaml>=0.9.5 redcarpet>=3.0.0
 
