@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2013/09/15 18:01:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/03/26 13:45:12 taca Exp $
 bin/unicorn
 bin/unicorn_rails
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/unicorn_http.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.CHANGELOG.old
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
