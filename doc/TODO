@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13102 2014/03/23 14:44:36 wiz Exp $
+$NetBSD: TODO,v 1.13103 2014/03/26 13:27:28 obache Exp $
 
 Suggested new packages
 ======================
@@ -678,6 +678,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o httptunnel-3.3
 	o hugin-2012.0.0
 	o i3-4.7.2
+	o ibus-1.5.6
+	o ibus-anthy-1.5.5
 	o icc11-13.0
 	o icdprog-0.5
 	o idutils-4.6
