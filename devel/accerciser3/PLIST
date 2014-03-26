@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/10/26 10:56:58 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/26 21:59:00 prlw1 Exp $
 bin/accerciser
 ${PYSITELIB}/accerciser/__init__.py
 ${PYSITELIB}/accerciser/__init__.pyc
@@ -634,6 +634,7 @@ share/help/zh_CN/accerciser/ipython_plugin.page
 share/help/zh_CN/accerciser/preferences.page
 share/help/zh_CN/accerciser/quick_select_plugin.page
 share/help/zh_CN/accerciser/validator_plugin.page
+share/icons/HighContrast/scalable/apps/accerciser.svg
 share/icons/hicolor/16x16/apps/accerciser.png
 share/icons/hicolor/22x22/apps/accerciser.png
 share/icons/hicolor/32x32/apps/accerciser.png
@@ -699,6 +700,7 @@ share/locale/sr/LC_MESSAGES/accerciser.mo
 share/locale/sr@latin/LC_MESSAGES/accerciser.mo
 share/locale/sv/LC_MESSAGES/accerciser.mo
 share/locale/te/LC_MESSAGES/accerciser.mo
+share/locale/tg/LC_MESSAGES/accerciser.mo
 share/locale/th/LC_MESSAGES/accerciser.mo
 share/locale/tr/LC_MESSAGES/accerciser.mo
 share/locale/ug/LC_MESSAGES/accerciser.mo
