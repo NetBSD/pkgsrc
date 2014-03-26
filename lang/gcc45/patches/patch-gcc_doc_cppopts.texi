@@ -1,0 +1,15 @@
+$NetBSD: patch-gcc_doc_cppopts.texi,v 1.1 2014/03/26 11:07:27 jperkin Exp $
+
+Texinfo 5 compatibility.
+
+--- gcc/doc/cppopts.texi.orig	2010-04-02 19:54:46.000000000 +0000
++++ gcc/doc/cppopts.texi
+@@ -760,7 +760,7 @@ Replacement:      [    ]    @{    @}    
+ Enable special code to work around file systems which only permit very
+ short file names, such as MS-DOS@.
+ 
+-@itemx --help
++@item --help
+ @itemx --target-help
+ @opindex help
+ @opindex target-help
