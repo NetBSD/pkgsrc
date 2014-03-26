@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13103 2014/03/26 13:27:28 obache Exp $
+$NetBSD: TODO,v 1.13104 2014/03/26 13:37:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -382,7 +382,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o apache22-2.2.27
 	o apr0-2.4.1
 	o argtable-2.9
-	o aria2-1.18.3
+	o aria2-1.18.4
 	o arirang-1.70
 	o arnold-20040104
 	o asapm-3.1
@@ -430,7 +430,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cfitsio-3.350
 	o chasen-2.4.5
 	o cheese-2.32.0 [GNOME 2.32]
-	o cheese-3.10.2
+	o cheese-3.12.0
 	o cherokee-1.2.103 [pkg/48268]
 	o chktex-1.7.2
 	o chromium-0.9.15
@@ -532,6 +532,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o felt-3.07
 	o fetchmail-6.3.26
 	o fetchyahoo-2.14.0
+	o ffmpeg2-2.2
 	o fftw-3.3.4
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
@@ -600,6 +601,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnome-chess-3.10.3
 	o gnome-color-manager-2.32.0 [GNOME 2.32]
 	o gnome-commander-1.4.0
+	o gnome-common-3.12.0
 	o gnome-control-center-3.8.3
 	o gnome-devel-docs-2.30.0 [GNOME 2.30]
 	o gnome-disk-utility-2.32.0 [GNOME 2.32]
@@ -646,9 +648,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gst-plugins1-base-1.2.0
 	o gstreamer-1.2
 	o gstreamer1-1.2.0
-	o gthumb-3.2.6
+	o gthumb-3.2.7
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
+	o gtk3-3.12.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtl-3.6
 	o gtodo-0.16.0rc2
@@ -770,6 +773,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libuuid-2.24.1
 	o libv4l-0.8.5
 	o libvdpau-0.7
+	o libwildmidi-0.3.5
 	o libxdg-basedir-1.2.0
 	o libxklavier-5.3
 	o licq-1.3.8
@@ -866,6 +870,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o openslp-2.0.0
 	o openssh-6.5
 	o openttd-1.3.3
+	o optipng-0.7.5
 	o opus-1.1
 	o oroborus-2.0.18
 	o ortp-0.16.5
@@ -958,7 +963,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-gstreamer0.10-1.2.0
 	o py-hgtools-4.0
 	o py-irclib-8.5
-	o py-keyring-0.6.2
+	o py-keyring-3.7
 	o py-lasso-2.4.0
 	o py-logilab-astng-0.24.3
 	o py-logilab-common-0.60.1
@@ -1047,7 +1052,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o scsh-1.3.0
 	o seahorse-3.10.2
 	o seahorse-nautilus-3.10.1
-	o seamonkey-2.24
+	o seamonkey-2.25
 	o secpanel-0.6.1
 	o sendfile-20010424
 	o ser-0.9.6
@@ -1107,7 +1112,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
 	o tcpillust-1.00b
-	o tcpreplay-4.0.3
+	o tcpreplay-4.0.4
 	o tcpslice-1.2a3
 	o tct-1.16
 	o tds-1.6.2
@@ -1148,7 +1153,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o unrealircd-3.2.10.2
 	o userppp-030706
 	o utilisp-1.14
-	o vala-0.22.1
+	o vala-0.24.0
 	o vbetool-1.1
 	o vera-1.17
 	o verilog-current-20130827 [wip]
@@ -1157,8 +1162,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vicq-0.4.2
 	o viewvc-1.1.22
 	o vifm-0.7.6
-	o vinagre-3.10.2
-	o vino-3.10.1
+	o vinagre-3.12.0
+	o vino-3.12.0
 	o visual-regexp-3.1
 	o vlc-2.1.4
 	o vlc2-2.1.1
