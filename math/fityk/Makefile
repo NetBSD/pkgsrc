@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2014/02/24 12:35:10 wiedi Exp $
+# $NetBSD: Makefile,v 1.29 2014/03/26 06:57:06 asau Exp $
 
 DISTNAME=	fityk-0.9.7
 PKGREVISION=	16
@@ -17,6 +17,8 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 # XXX: xyconvert requires wxWidgets >= 2.9
 CONFIGURE_ARGS+=	--disable-xyconvert
+
+CFLAGS.FreeBSD+=       -D_WITH_GETLINE
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
