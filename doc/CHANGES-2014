@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1226 2014/03/26 16:23:48 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.1227 2014/03/26 16:48:35 tsutsui Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2014Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW, 
@@ -1809,3 +1809,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/gimp-docs-sv to 2.8.1 [ryoon 2014-03-26]
 	Updated graphics/gimp-docs-zh_CN to 2.8.1 [ryoon 2014-03-26]
 	Updated meta-pkgs/gimp-docs to 2.8.1 [ryoon 2014-03-26]
+	Updated x11/mlterm to 3.3.4nb1 [tsutsui 2014-03-26]
