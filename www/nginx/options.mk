@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.28 2014/03/21 21:41:19 imil Exp $
+# $NetBSD: options.mk,v 1.29 2014/03/26 13:31:22 imil Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	dav flv gtools inet6 luajit mail-proxy memcache naxsi \
@@ -94,6 +94,9 @@ DISTFILES+=		${NDK_DISTFILE}
 .endif
 
 .if !empty(PKG_OPTIONS:Mluajit)
+.include "../../lang/LuaJIT2/buildlink3.mk"
+CONFIGURE_ENV+=		LUAJIT_LIB=${PREFIX}/lib
+CONFIGURE_ENV+=		LUAJIT_INC=${PREFIX}/include/luajit-2.0
 CONFIGURE_ARGS+=	--add-module=../${LUA}
 .endif
 .if !empty(PKG_OPTIONS:Mluajit) || make(makesum)
@@ -101,8 +104,6 @@ LUA=			lua-nginx-module-0.9.5
 LUA_DISTFILE=		${LUA}.tar.gz
 SITES.${LUA_DISTFILE}=	http://ftp.NetBSD.org/pub/pkgsrc/distfiles/
 DISTFILES+=		${LUA_DISTFILE}
-
-DEPENDS+=		LuaJIT2>=2.0.3:../../lang/LuaJIT2
 .endif
 
 .if !empty(PKG_OPTIONS:Mecho)
