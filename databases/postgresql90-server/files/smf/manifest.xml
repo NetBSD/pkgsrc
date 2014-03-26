@@ -20,8 +20,8 @@
     <exec_method type='method' name='stop' exec='@PREFIX@/@SMF_METHOD_FILE.postgresql@ stop' timeout_seconds='300' />
     <exec_method type='method' name='refresh' exec='@PREFIX@/@SMF_METHOD_FILE.postgresql@ refresh' timeout_seconds='60' />
     <property_group name='config' type='application'>
-      <propval name='data' type='astring' value='@PGDATA@' />
-      <propval name='log' type='astring' value='@PGLOGFILE@' />
+      <propval name='data' type='astring' value='@PGHOME@/data' />
+      <propval name='log' type='astring' value='@VARBASE@/log/postgresql.log' />
     </property_group>
     <stability value='Evolving' />
     <template>

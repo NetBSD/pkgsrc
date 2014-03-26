@@ -2,6 +2,8 @@
 <!DOCTYPE service_bundle SYSTEM "/usr/share/lib/xml/dtd/service_bundle.dtd.1">
 <service_bundle type='manifest' name='@SMF_NAME@'>
   <service name='@SMF_PREFIX@/@SMF_NAME@' type='service' version='1'>
+    <create_default_instance enabled='false' />
+    <single_instance />
     <dependency name='network' grouping='require_all' restart_on='none' type='service'>
       <service_fmri value='svc:/milestone/network:default' />
     </dependency>
@@ -14,15 +16,13 @@
         <envvar name="LD_PRELOAD_32" value="/usr/lib/extendedFILE.so.1" />
       </method_environment>
     </method_context>
-    <instance name='@SMF_INSTANCE@' enabled='false'>
-      <exec_method type='method' name='start' exec='@PREFIX@/@SMF_METHOD_FILE.postgresql@ start' timeout_seconds='300' />
-      <exec_method type='method' name='stop' exec='@PREFIX@/@SMF_METHOD_FILE.postgresql@ stop' timeout_seconds='300' />
-      <exec_method type='method' name='refresh' exec='@PREFIX@/@SMF_METHOD_FILE.postgresql@ refresh' timeout_seconds='60' />
-      <property_group name='config' type='application'>
-        <propval name='data' type='astring' value='@PGHOME@/data84' />
-        <propval name='log' type='astring' value='@PGLOGFILE@' />
-      </property_group>
-    </instance>
+    <exec_method type='method' name='start' exec='@PREFIX@/@SMF_METHOD_FILE.postgresql@ start' timeout_seconds='300' />
+    <exec_method type='method' name='stop' exec='@PREFIX@/@SMF_METHOD_FILE.postgresql@ stop' timeout_seconds='300' />
+    <exec_method type='method' name='refresh' exec='@PREFIX@/@SMF_METHOD_FILE.postgresql@ refresh' timeout_seconds='60' />
+    <property_group name='config' type='application'>
+      <propval name='data' type='astring' value='@PGHOME@/data' />
+      <propval name='log' type='astring' value='@VARBASE@/log/postgresql.log' />
+    </property_group>
     <stability value='Evolving' />
     <template>
       <common_name>
