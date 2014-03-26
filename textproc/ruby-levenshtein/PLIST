@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2013/01/26 10:49:03 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/26 13:30:56 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/levenshtein/levenshtein_fast.${RUBY_DLEXT}
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README
@@ -8,7 +9,7 @@ ${GEM_LIBDIR}/ext/levenshtein/extconf.rb
 ${GEM_LIBDIR}/ext/levenshtein/levenshtein.h
 ${GEM_LIBDIR}/ext/levenshtein/levenshtein_fast.c
 ${GEM_LIBDIR}/lib/levenshtein.rb
-${GEM_LIBDIR}/lib/levenshtein/levenshtein_fast.so
+${GEM_LIBDIR}/lib/levenshtein/levenshtein_fast.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/levenshtein/version.rb
 ${GEM_LIBDIR}/test/test.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
