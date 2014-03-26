@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2014/03/26 16:19:08 ryoon Exp $
+
+--- configure.orig	2014-03-15 05:44:42.000000000 +0000
++++ configure
+@@ -3220,7 +3220,7 @@ if test "${enable_languageMenu+set}" = s
+ fi
+ 
+ 
+-if test "x$enable_languageMenu" == "xyes"; then
++if test "x$enable_languageMenu" = "xyes"; then
+     XSLTFLAGS="$XSLTFLAGS --stringparam gimp.help.languageselector 1"
+ fi
+ 
