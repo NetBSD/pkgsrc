@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2014/03/14 18:01:03 taca Exp $
+# $NetBSD: Makefile,v 1.19 2014/03/26 13:29:09 taca Exp $
 
 DISTNAME=	capistrano-3.1.0
 CATEGORIES=	sysutils
@@ -8,7 +8,7 @@ HOMEPAGE=	http://github.com/capistrano/capistrano
 COMMENT=	Tool for parallel execution of commands across multiple machines
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-sshkit>=1.3:../../security/ruby-net-ssh
+DEPENDS+=	${RUBY_PKGPREFIX}-sshkit>=1.3:../../security/ruby-sshkit
 DEPENDS+=	${RUBY_PKGPREFIX}-i18n>=0:../../devel/ruby-i18n
 
 USE_RAKE=	YES
