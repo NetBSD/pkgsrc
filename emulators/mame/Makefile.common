@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2014/01/25 10:30:07 wiz Exp $
+# $NetBSD: Makefile.common,v 1.14 2014/03/26 01:42:48 nat Exp $
 #
 # used by emulators/mame/Makefile
 # used by emulators/mess/Makefile
@@ -29,7 +29,7 @@ MAKE_FILE=		makefile
 # 0.141 has too many conversion warnings
 MAKE_ENV=		NOWERROR=1
 # we don't want to pull in qt4
-MAKE_ENV=		NO_USE_QTDEBUG=1
+MAKE_ENV+=		NO_USE_QTDEBUG=1
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
