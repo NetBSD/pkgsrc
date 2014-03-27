@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2013/10/09 15:56:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.40 2014/03/27 18:39:31 ryoon Exp $
 #
 
-DISTNAME=	umefont_456
+DISTNAME=	umefont_461
 PKGNAME=	${DISTNAME:S/_/-ttf-0./}
 CATEGORIES=	fonts japanese
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=ume-font/22212/}
