@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1231 2014/03/27 18:40:14 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.1232 2014/03/27 19:27:04 ryoon Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2014Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW, 
@@ -1814,3 +1814,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/python33 to 3.3.5nb1 [obache 2014-03-27]
 	Updated graphics/x11rec to 0.3nb9 [obache 2014-03-27]
 	Updated fonts/umefont-ttf to 0.461 [ryoon 2014-03-27]
+	Updated sysutils/lsof to 4.87 [ryoon 2014-03-27]
