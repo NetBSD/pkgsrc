@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13105 2014/03/26 22:02:26 prlw1 Exp $
+$NetBSD: TODO,v 1.13106 2014/03/27 08:32:20 obache Exp $
 
 Suggested new packages
 ======================
@@ -843,7 +843,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o netatalk-3.1.0 [wip]
 	o netramet-50
 	o newmail-1.0.2
-	o newt-0.52.12
 	o nikto-2.0.1
 	o nios2-binutils-2.24 [wip]
 	o ns-3.14.1
