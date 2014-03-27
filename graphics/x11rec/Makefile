@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2014/03/15 07:40:59 obache Exp $
+# $NetBSD: Makefile,v 1.20 2014/03/27 09:19:12 obache Exp $
 #
 
 DISTNAME=	x11rec-0.3
 PKGNAME=	${RUBY_PKGPREFIX}-x11rec-0.3
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	graphics ruby
 MASTER_SITES=	http://0xcc.net/x11rec/
 
@@ -36,6 +36,7 @@ do-install:
 		${DESTDIR}${PREFIX}/share/doc/x11rec/index.html.ja
 
 .include "../../lang/ruby/replace.mk"
+DEPENDS+=	${RUBY_BASE}-[0-9]*:${RUBY_SRCDIR}
 
 FIND_PREFIX:=	BUILDLINK_PREFIX.ImageMagick=ImageMagick	\
 		BUILDLINK_PREFIX.gifsicle=gifsicle
