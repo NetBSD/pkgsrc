@@ -1,0 +1,16 @@
+$NetBSD: patch-po_Makefile,v 1.1 2014/03/27 07:54:49 obache Exp $
+
+* fixes hard-coded paths
+
+--- po/Makefile.orig	2013-08-06 15:46:42.000000000 +0000
++++ po/Makefile
+@@ -1,7 +1,7 @@
+-INSTALL= /usr/bin/install -c
++INSTALL= @INSTALL@ -c
+ INSTALL_PROGRAM= ${INSTALL}
+ INSTALL_DATA= ${INSTALL} -m 644
+-INSTALLNLSDIR=$(datadir)/locale
++INSTALLNLSDIR=${DESTDIR}${PREFIX}/@PKGLOCALEDIR@/locale
+ 
+ MSGMERGE = msgmerge
+ 
