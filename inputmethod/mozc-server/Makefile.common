@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.common,v 1.7 2014/02/19 09:44:56 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.8 2014/03/27 19:28:33 ryoon Exp $
 # used by inputmethod/ibus-mozc/Makefile
 # used by inputmethod/mozc-elisp/Makefile
 # used by inputmethod/mozc-server/Makefile
 # used by inputmethod/mozc-tool/Makefile
 # used by inputmethod/mozc-renderer/Makefile
+# used by inputmethod/uim-mozc/Makefile
 #
 
 DISTNAME=	mozc-1.13.1651.102
