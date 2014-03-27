@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.13 2014/03/15 05:37:22 ryoon Exp $
+$NetBSD: patch-ab,v 1.14 2014/03/27 19:13:06 ryoon Exp $
+
+* Add NetBSD support
 
 --- fotoxx-14.03.1.cc.orig	2014-03-05 07:17:10.000000000 +0000
 +++ fotoxx-14.03.1.cc
