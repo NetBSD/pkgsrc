@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1228 2014/03/26 22:02:26 prlw1 Exp $
+$NetBSD: CHANGES-2014,v 1.1229 2014/03/27 08:50:11 obache Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2014Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW, 
@@ -1811,3 +1811,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated meta-pkgs/gimp-docs to 2.8.1 [ryoon 2014-03-26]
 	Updated x11/mlterm to 3.3.4nb1 [tsutsui 2014-03-26]
 	Updated devel/accerciser3 to 3.12.0 [prlw1 2014-03-26]
+	Updated lang/python33 to 3.3.5nb1 [obache 2014-03-27]
