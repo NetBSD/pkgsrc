@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.56 2014/03/27 05:36:10 obache Exp $
+$NetBSD: distinfo,v 1.57 2014/03/27 06:14:57 obache Exp $
 
 SHA1 (Python-2.6.9.tar.xz) = 2fc159946dfcceffbe4a8638de32d0cd8059c2f8
 RMD160 (Python-2.6.9.tar.xz) = 42edf7c9f2f64b77ab173de30ea453257c2c06b3
@@ -8,6 +8,7 @@ SHA1 (patch-Mac_Modules_fm___Fmmodule.c) = b9314bccb51b4fe672b81559068f7a79d2965
 SHA1 (patch-Mac_Modules_qd___Qdmodule.c) = 45c748b15b9436d45ba137460389638aa7108c8d
 SHA1 (patch-Mac_Modules_qdoffs___Qdoffsmodule.c) = 9994f0c1a908f18f1f3df3f05b184f082c018365
 SHA1 (patch-Modules_pyexpat.c) = 093f5abb50667e776c66564f4ec87addfdc05ff3
+SHA1 (patch-Modules_readline.c) = e72d8b3e6e96d34b45b1f5c440967ebad6d714c4
 SHA1 (patch-SA43463) = a0285ce9eb1d994bb05cd54812f3fc9cb678fe7f
 SHA1 (patch-aa) = 0528fc5da76d5f1d19586ea3dda1acd09a4b0113
 SHA1 (patch-ab) = b47aa9d18a7c1a99ac8cc8b29c64867443f303e5
