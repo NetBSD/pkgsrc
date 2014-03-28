@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13112 2014/03/28 23:37:08 wiz Exp $
+$NetBSD: TODO,v 1.13113 2014/03/28 23:46:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -460,6 +460,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o crossfire-client-gtk2-1.60.0
 	o cuisine-0.6.5
 	o cups-1.7.1
+	o cvs-fast-export-1.10
 	o cvs2p4-2.5.5 [schmonz]
 	o cwm-5.1
 	o cxref-1.6e
@@ -591,6 +592,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gle-4.2.4
 	o global-6.2.11
 	o glom-1.14.2 [GNOME 2.26]
+	o glpk-4.54
 	o glu-10.1
 	o glusterfs-3.4.2
 	o gmp-6.0.0
@@ -967,7 +969,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-logilab-astng-0.24.3
 	o py-logilab-common-0.60.1
 	o py-markdown-2.3.1
-	o py-markupsafe-0.19
 	o py-mezzanine-3.0.5
 	o py-mpmath-0.18
 	o py-musicbrainz-0.7.4
@@ -1018,7 +1019,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o re-alpine-2.03 [pkg/47802]
 	o realboy-0.2.2
 	o rep-gtk-0.90.8.1
-	o reposurgeon-3.7
+	o reposurgeon-3.8
 	o resize_image-0.7
 	o rio500-0.8.1
 	o robodoc-4.99.6
@@ -1230,11 +1231,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
 	o xmon-1.5.6
 	o xnap-2.5r3
+	o xorg-util-macros-1.19.0
 	o xorp-1.8.5
 	o xosview-1.15
 	o xpaint-2.9.9
 	o xpr-1.0.4 [unpackaged]
 	o xpuyopuyo-0.9.8
+	o xrandr-1.4.2
 	o xrmap-base-2.33.1
 	o xrn-9.02
 	o xscreensaver-5.24
