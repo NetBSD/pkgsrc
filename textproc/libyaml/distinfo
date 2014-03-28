@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.4 2014/02/05 11:14:07 drochner Exp $
+$NetBSD: distinfo,v 1.5 2014/03/28 16:02:01 drochner Exp $
 
 SHA1 (yaml-0.1.5.tar.gz) = 8b78cb9f759c7d80db8a7328c0ebecfe34fde737
 RMD160 (yaml-0.1.5.tar.gz) = 58d5a60ccc13c728bed48013cd0a5f001d7bde04
 Size (yaml-0.1.5.tar.gz) = 504897 bytes
+SHA1 (patch-CVE-2014-2525_1) = b7695050a303b14c118fa4ff889cdb92ce338ac9
+SHA1 (patch-CVE-2014-2525_2) = 6239cc15e6f5503839c81fde2c31df00a880f061
