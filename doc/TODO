@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13110 2014/03/28 11:58:48 wiz Exp $
+$NetBSD: TODO,v 1.13111 2014/03/28 14:13:55 prlw1 Exp $
 
 Suggested new packages
 ======================
@@ -464,7 +464,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cwm-5.1
 	o cxref-1.6e
 	o cygwin_lib-1.5.24.2
-	o dansguardian-2.10.0.3
 	o dante-1.4.0
 	o dap-3.9
 	o dar-2.4.12
