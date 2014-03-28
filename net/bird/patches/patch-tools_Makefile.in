@@ -1,26 +1,27 @@
-$NetBSD: patch-tools_Makefile.in,v 1.1.1.1 2012/01/22 02:53:01 agc Exp $
+$NetBSD: patch-tools_Makefile.in,v 1.2 2014/03/28 23:27:16 pettai Exp $
 
 install the example config files into the correct directory
 
---- tools/Makefile.in.orig	2011-03-31 08:29:42.000000000 +0000
+--- tools/Makefile.in.orig	2013-04-29 21:41:58.000000000 +0000
 +++ tools/Makefile.in
-@@ -55,16 +55,13 @@ tags:
+@@ -68,17 +68,14 @@ tags:
  	cd $(srcdir) ; etags -lc `find $(static-dirs) $(addprefix $(objdir)/,$(dynamic-dirs)) $(client-dirs) -name *.[chY]`
  
  install: all
--	$(INSTALL) -d $(DESTDIR)/$(sbindir) $(DESTDIR)/$(sysconfdir) $(DESTDIR)/$(localstatedir)/run
-+	$(INSTALL) -d $(DESTDIR)/$(sbindir) $(DESTDIR)/$(EGDIR) $(DESTDIR)/$(localstatedir)/run
- 	$(INSTALL_PROGRAM) -s $(exedir)/bird $(DESTDIR)/$(sbindir)/bird@SUFFIX6@
+-	$(INSTALL) -d $(DESTDIR)/$(sbindir) $(DESTDIR)/$(sysconfdir) $(DESTDIR)/@runtimedir@
++	$(INSTALL) -d $(DESTDIR)/$(sbindir) $(DESTDIR)/$(EGDIR) $(DESTDIR)/@runtimedir@
+ 	$(INSTALL_PROGRAM) -s $(exedir)/bird $(DESTDIR)/$(sbindir)/bird@SUFFIX@
+ 	$(INSTALL_PROGRAM) -s $(exedir)/birdcl $(DESTDIR)/$(sbindir)/birdcl@SUFFIX@
  	if test -n "@CLIENT@" ; then								\
- 		$(INSTALL_PROGRAM) -s $(exedir)/birdc $(DESTDIR)/$(sbindir)/birdc@SUFFIX6@ ;				\
+ 		$(INSTALL_PROGRAM) -s $(exedir)/birdc $(DESTDIR)/$(sbindir)/birdc@SUFFIX@ ;	\
  	fi
--	if ! test -f $(DESTDIR)/$(sysconfdir)/bird@SUFFIX6@.conf ; then						\
--		$(INSTALL_DATA) $(srcdir)/doc/bird.conf.example $(DESTDIR)/$(sysconfdir)/bird@SUFFIX6@.conf ;	\
+-	if ! test -f $(DESTDIR)/@CONFIG_FILE@ ; then						\
+-		$(INSTALL_DATA) $(srcdir)/doc/bird.conf.example $(DESTDIR)/@CONFIG_FILE@ ;	\
 -	else											\
--		echo "Not overwriting old bird@SUFFIX@.conf" ;						\
+-		echo "Not overwriting old bird@SUFFIX@.conf" ;					\
 -	fi
-+
-+	$(INSTALL_DATA) $(srcdir)/doc/bird.conf.example $(DESTDIR)/$(EGDIR)/bird@SUFFIX6@.conf
++	
++	$(INSTALL_DATA) $(srcdir)/doc/bird.conf.example $(DESTDIR)/$(EGDIR)/bird@SUFFIX@.conf
  
  install-docs:
  	$(INSTALL) -d $(DESTDIR)/$(docdir)
