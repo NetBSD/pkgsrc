@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13109 2014/03/28 11:27:57 adam Exp $
+$NetBSD: TODO,v 1.13110 2014/03/28 11:58:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -347,7 +347,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o TiffIO-130e
 	o YoSucker-81
 	o ZIPIdent-2.9
-	o abcm2ps-7.7.1
+	o abcm2ps-7.8.0
 	o abcmidi-20140120
 	o abiword-3.0
 	o accerciser-1.12.2 [GNOME 2.32]
@@ -367,6 +367,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o amaya-11.4.4 [wip]
 	o amsn-0.98.4
 	o angband-3.2
+	o anjuta-3.12.0
 	o anope-1.8.7
 	o antiright-8.6
 	o ap-Embperl-1.3.6
@@ -418,7 +419,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bzr-2.6.0
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
-	o calibre-1.29
+	o calibre-1.30
 	o calligra-2.4.3 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o ccrtp-2.0.7
@@ -558,6 +559,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fvwm2-themes-0.7.0
 	o galculator-2.1.3
 	o gallery3-3.0.2
+	o gama-1.15
 	o gammu-1.33.0
 	o gap-4r4p9
 	o gated-3.6
@@ -571,7 +573,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gdb-7.7
 	o gdbm-1.11
 	o gdeskcal-1.01
-	o gdl-3.10.0
+	o gdl-3.12.0
 	o gdm-2.32.2 [GNOME 2.32]
 	o gdm-3.0.3
 	o gdsreader-0.3.2
@@ -584,7 +586,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
 	o gl-7.8.2 [pkgrc-wip]
-	o glade-3.16.1
+	o glade-3.18.1
 	o glade3-3.8.3 [GNOME 2.34]
 	o glade3-3.14.2
 	o gle-4.2.4
@@ -592,9 +594,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glom-1.14.2 [GNOME 2.26]
 	o glu-10.1
 	o glusterfs-3.4.2
+	o gmp-6.0.0
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-3.10.1
+	o gnome-3.12
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-chess-3.10.3
 	o gnome-color-manager-2.32.0 [GNOME 2.32]
@@ -605,7 +608,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnome-disk-utility-2.32.0 [GNOME 2.32]
 	o gnome-games-3.6.1
 	o gnome-games-extra-data-2.30.0 [GNOME 2.30]
-	o gnome-keyring-3.10.1
+	o gnome-keyring-3.12.0
 	o gnome-media-2.32.0 [GNOME 2.32]
 	o gnome-menus-3.8.0
 	o gnome-netstatus-2.28.2 [GNOME 2.32]
@@ -639,7 +642,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gramps-4.0.1
 	o graphviz-2.36.0
 	o grilo-0.2.10
-	o grilo-plugins-0.2.10
+	o grilo-plugins-0.2.12
 	o groff-1.22.2
 	o gsharutils-4.14
 	o gss-1.0.2
@@ -703,6 +706,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o john-1.8.0
 	o jpilot-syncmal-0.81
 	o jq-1.3
+	o json-glib-1.0.0
 	o kadu-0.11.1
 	o kaffe-1.1.9
 	o kakasi-2.3.6
@@ -742,9 +746,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libfolks-0.8.0
 	o libgdata-0.14.1
 	o libgdiplus-3.0
-	o libgee-0.12.1
+	o libgee-0.14.0
 	o libgiigic-1.1.2
-	o libgnome-keyring-3.10.1
+	o libgnome-keyring-3.12.0
 	o libgnomedb-3.1.2
 	o libgnomekbd-3.4.0.2
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
@@ -817,7 +821,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mono-3.2.8
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.1 [GNOME 2.32]
-	o mousetweaks-3.10.0
+	o mousetweaks-3.12.0
 	o mp3splt-2.6.0
 	o mp3splt-gtk-0.9.0
 	o mpeg4ip-1.6.1
@@ -851,7 +855,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nulib2-220
 	o nut-19.1
 	o nxtvepg-2.8.1
-	o ocrad-0.22
+	o ocrad-0.23
 	o octave-3.8.1
 	o olvwm-4.5
 	o oo2c-2.1.7
@@ -865,7 +869,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o openoffice3-3.3
 	o openscad-2013.06
 	o openslp-2.0.0
-	o openssh-6.5
+	o openssh-6.6
 	o openttd-1.3.3
 	o optipng-0.7.5
 	o opus-1.1
@@ -895,7 +899,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o php-sugarcrm-6.5.16
 	o php-tiki6-6.10
 	o php-tt-rss-1.12
-	o phpmyadmin-4.1.11
+	o phpmyadmin-4.1.12
 	o physfs-2.0.2
 	o picp-0.6.8
 	o pim6dd-20040819a
@@ -1047,7 +1051,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o scripts-1.0.1
 	o scrollz-1.9.99
 	o scsh-1.3.0
-	o seahorse-3.10.2
+	o seahorse-3.12.0
 	o seahorse-nautilus-3.10.1
 	o seamonkey-2.25
 	o secpanel-0.6.1
@@ -1113,7 +1117,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tcpslice-1.2a3
 	o tct-1.16
 	o tds-1.6.2
-	o tea-37.1.0
+	o tea-37.2.0
 	o ted-en-us-2.17
 	o teem-1.10.0
 	o telepathy-gabble-0.16.6
@@ -1173,7 +1177,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
 	o webalizer-2.23.05
-	o webkit-gtk-2.2.6
+	o webkit-gtk-2.4.0
 	o webmin-1.680
 	o websvn-2.3.2
 	o windowlab-1.40
@@ -1205,6 +1209,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xf86-video-intel-2.21.15
 	o xf86-video-modesetting-0.8.1 [wip]
 	o xf86-video-sisusb-0.9.4
+	o xf86-video-vmware-13.0.2
 	o xf86-video-voodoo-1.2.5 [wip]
 	o xf86-video-xgi-1.6.0 [unpackaged]
 	o xfce4-4.10
