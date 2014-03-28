@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.3 2013/07/15 02:02:26 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.4 2014/03/28 23:27:16 pettai Exp $
 # used by net/bird/Makefile
 # used by net/bird6/Makefile
 
-DISTNAME=	bird-1.3.6
+DISTNAME=	bird-1.3.11
 PKGNAME=	${DISTNAME:S/bird/bird${BIRD6}/}
 CATEGORIES=	net
 MASTER_SITES=	ftp://bird.network.cz/pub/bird/
