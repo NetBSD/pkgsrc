@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2011/08/09 19:29:27 gls Exp $
+$NetBSD: distinfo,v 1.7 2014/03/28 23:36:53 wiz Exp $
 
-SHA1 (libmodplug-0.8.8.4.tar.gz) = df4deffe542b501070ccb0aee37d875ebb0c9e22
-RMD160 (libmodplug-0.8.8.4.tar.gz) = ca27dbcc918efb3a56de42d90618ebc1ea8478ab
-Size (libmodplug-0.8.8.4.tar.gz) = 546319 bytes
+SHA1 (libmodplug-0.8.8.5.tar.gz) = 771ee75bb8bfcfe95eae434ed1f3b2c5b63b2cb3
+RMD160 (libmodplug-0.8.8.5.tar.gz) = 7e7599412971229f72de235de264a6480c35e022
+Size (libmodplug-0.8.8.5.tar.gz) = 546751 bytes
