@@ -1,0 +1,16 @@
+$NetBSD: patch-upnp_sample_Makefile.in,v 1.1 2014/03/28 05:51:13 obache Exp $
+
+* install(1) from GNU coreutils dislike overwrite with same contents.
+  https://sourceforge.net/p/pupnp/bugs/120/
+
+--- upnp/sample/Makefile.in.orig	2013-11-15 16:19:11.000000000 +0000
++++ upnp/sample/Makefile.in
+@@ -628,7 +628,7 @@ clean-libtool:
+ 	-rm -rf .libs _libs
+ install-examplesDATA: $(examples_DATA)
+ 	@$(NORMAL_INSTALL)
+-	@list='$(examples_DATA)'; test -n "$(examplesdir)" || list=; \
++	@list='$(examples_DATA:O:u)'; test -n "$(examplesdir)" || list=; \
+ 	if test -n "$$list"; then \
+ 	  echo " $(MKDIR_P) '$(DESTDIR)$(examplesdir)'"; \
+ 	  $(MKDIR_P) "$(DESTDIR)$(examplesdir)" || exit 1; \
