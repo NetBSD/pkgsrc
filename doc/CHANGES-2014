@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1234 2014/03/27 21:01:16 adam Exp $
+$NetBSD: CHANGES-2014,v 1.1235 2014/03/28 11:27:57 adam Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2014Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW, 
@@ -1885,3 +1885,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/postgresql84-plpython to 8.4.21 [adam 2014-03-27]
 	Updated databases/postgresql84-pltcl to 8.4.21 [adam 2014-03-27]
 	Updated databases/postgresql84-server to 8.4.21 [adam 2014-03-27]
+	Updated www/apache22 to 2.2.27 [adam 2014-03-28]
