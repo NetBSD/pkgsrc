@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2014/02/05 11:14:07 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2014/03/28 16:02:01 drochner Exp $
 #
 
 DISTNAME=	yaml-0.1.5
 PKGNAME=	lib${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://pyyaml.org/download/libyaml/
 
