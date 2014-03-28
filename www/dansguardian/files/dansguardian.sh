@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dansguardian.sh,v 1.2 2008/04/16 14:55:29 sborrill Exp $
+# $NetBSD: dansguardian.sh,v 1.3 2014/03/28 14:13:25 prlw1 Exp $
 #
 # PROVIDE: dansguardian
 # REQUIRE: DAEMON LOGIN
@@ -10,8 +10,8 @@
 
 name="dansguardian"
 rcvar=$name
-command="/usr/pkg/sbin/${name}"
-pidfile="/var/run/${name}.pid"
+command="@PREFIX@/sbin/${name}"
+pidfile="@VARBASE@/run/${name}.pid"
 required_files="@PKG_SYSCONFDIR@/${name}.conf"
 extra_commands="reload"
 

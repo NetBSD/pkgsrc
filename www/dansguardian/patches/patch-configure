@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2014/03/28 14:13:25 prlw1 Exp $
+
+https://sourceforge.net/p/dansguardian/patches/16/
+
+--- configure.orig	2012-09-29 20:09:06.000000000 +0000
++++ configure
+@@ -6148,7 +6148,7 @@ $as_echo_n "checking for debug option...
+ 
+ # Check whether --with-dgdebug was given.
+ if test "${with_dgdebug+set}" = set; then :
+-  withval=$with_dgdebug; if test "x${withval}" == "xoff" ; then
++  withval=$with_dgdebug; if test "x${withval}" = "xoff" ; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+ $as_echo "no" >&6; }
+ else
