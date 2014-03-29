@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13115 2014/03/29 09:39:37 taca Exp $
+$NetBSD: TODO,v 1.13116 2014/03/29 10:25:19 taca Exp $
 
 Suggested new packages
 ======================
@@ -777,7 +777,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libwildmidi-0.3.5
 	o libxdg-basedir-1.2.0
 	o libxklavier-5.3
-	o libyaml-0.1.6 [CVE-2014-2525]
+	o libyaml-0.1.6 [CVE-2014-2525, already fixed in libyaml-0.1.5nb1]
 	o licq-1.3.8
 	o liferea-1.10.7
 	o lighttpd-1.4.35
