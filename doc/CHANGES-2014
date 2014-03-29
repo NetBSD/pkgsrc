@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1239 2014/03/29 04:15:50 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.1240 2014/03/29 09:38:47 taca Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2014Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW, 
@@ -1890,3 +1890,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/bird to 1.3.11 [pettai 2014-03-28]
 	Updated audio/libmodplug to 0.8.8.5 [wiz 2014-03-28]
 	Updated net/aria2 to 1.18.4 [ryoon 2014-03-29]
+	Updated security/openssh to 6.6.1 [taca 2014-03-29]
