@@ -1,10 +1,10 @@
-$NetBSD: patch-sftp-common.c,v 1.1 2013/12/01 06:11:41 taca Exp $
+$NetBSD: patch-sftp-common.c,v 1.2 2014/03/29 09:38:11 taca Exp $
 
 Include <unistd.h> for strmode(3).
 
---- sftp-common.c.orig	2013-06-01 21:31:19.000000000 +0000
+--- sftp-common.c.orig	2014-01-09 23:40:45.000000000 +0000
 +++ sftp-common.c
-@@ -36,6 +36,9 @@
+@@ -37,6 +37,9 @@
  #include <string.h>
  #include <time.h>
  #include <stdarg.h>

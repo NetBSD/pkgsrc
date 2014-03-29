@@ -1,10 +1,10 @@
-$NetBSD: patch-configure,v 1.2 2013/12/01 06:11:41 taca Exp $
+$NetBSD: patch-configure,v 1.3 2014/03/29 09:38:11 taca Exp $
 
 Various fixes regarding portability
 
---- configure.orig	2013-11-08 01:41:15.000000000 +0000
+--- configure.orig	2014-03-13 02:19:03.000000000 +0000
 +++ configure
-@@ -6159,6 +6159,9 @@ if test "${with_rpath+set}" = set; then 
+@@ -6500,6 +6500,9 @@ if test "${with_rpath+set}" = set; then 
  fi
  
  
@@ -14,7 +14,7 @@ Various fixes regarding portability
  # Allow user to specify flags
  
  # Check whether --with-cflags was given.
-@@ -6243,6 +6246,7 @@ for ac_header in  \
+@@ -6586,6 +6589,7 @@ for ac_header in  \
  	maillock.h \
  	ndir.h \
  	net/if_tun.h \
@@ -22,7 +22,7 @@ Various fixes regarding portability
  	netdb.h \
  	netgroup.h \
  	pam/pam_appl.h \
-@@ -6978,6 +6982,36 @@ $as_echo "#define HAVE_SECUREWARE 1" >>c
+@@ -7369,6 +7373,36 @@ $as_echo "#define HAVE_SECUREWARE 1" >>c
  		;;
  	esac
  	;;
@@ -59,8 +59,8 @@ Various fixes regarding portability
  *-*-irix5*)
  	PATH="$PATH:/usr/etc"
  
-@@ -7179,7 +7213,7 @@ fi
- $as_echo "#define SSH_TUN_PREPEND_AF 1" >>confdefs.h
+@@ -7578,7 +7612,7 @@ $as_echo "#define BROKEN_STRNVIS 1" >>co
+ $as_echo "#define BROKEN_READ_COMPARISON 1" >>confdefs.h
  
  	;;
 -*-*-freebsd*)
@@ -68,7 +68,7 @@ Various fixes regarding portability
  	check_for_libcrypt_later=1
  
  $as_echo "#define LOCKED_PASSWD_PREFIX \"*LOCKED*\"" >>confdefs.h
-@@ -17406,12 +17440,18 @@ fi
+@@ -18248,12 +18282,18 @@ fi
  rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
  if test -z "$conf_wtmpx_location"; then
  	if test x"$system_wtmpx_path" = x"no" ; then
@@ -92,7 +92,7 @@ Various fixes regarding portability
  #define CONF_WTMPX_FILE "$conf_wtmpx_location"
  _ACEOF
  
-@@ -18816,7 +18856,7 @@ echo "OpenSSH has been configured with t
+@@ -19660,7 +19700,7 @@ echo "OpenSSH has been configured with t
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"

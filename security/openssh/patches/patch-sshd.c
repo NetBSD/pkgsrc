@@ -1,8 +1,8 @@
-$NetBSD: patch-sshd.c,v 1.2 2013/12/01 06:11:41 taca Exp $
+$NetBSD: patch-sshd.c,v 1.3 2014/03/29 09:38:11 taca Exp $
 
 Interix support
 
---- sshd.c.orig	2013-07-20 03:21:53.000000000 +0000
+--- sshd.c.orig	2014-02-26 23:20:08.000000000 +0000
 +++ sshd.c
 @@ -243,7 +243,11 @@ int *startup_pipes = NULL;
  int startup_pipe;		/* in child */
@@ -16,7 +16,7 @@ Interix support
  struct monitor *pmonitor = NULL;
  int privsep_is_preauth = 1;
  
-@@ -631,10 +635,15 @@ privsep_preauth_child(void)
+@@ -646,10 +650,15 @@ privsep_preauth_child(void)
  	/* XXX not ready, too heavy after chroot */
  	do_setusercontext(privsep_pw);
  #else
@@ -32,7 +32,7 @@ Interix support
  #endif
  }
  
-@@ -696,7 +705,7 @@ privsep_preauth(Authctxt *authctxt)
+@@ -711,7 +720,7 @@ privsep_preauth(Authctxt *authctxt)
  		set_log_handler(mm_log_handler, pmonitor);
  
  		/* Demote the child */
@@ -41,7 +41,7 @@ Interix support
  			privsep_preauth_child();
  		setproctitle("%s", "[net]");
  		if (box != NULL)
-@@ -714,7 +723,7 @@ privsep_postauth(Authctxt *authctxt)
+@@ -729,7 +738,7 @@ privsep_postauth(Authctxt *authctxt)
  #ifdef DISABLE_FD_PASSING
  	if (1) {
  #else
@@ -50,7 +50,7 @@ Interix support
  #endif
  		/* File descriptor passing is broken or root login */
  		use_privsep = 0;
-@@ -1390,8 +1399,10 @@ main(int ac, char **av)
+@@ -1413,8 +1422,10 @@ main(int ac, char **av)
  	av = saved_argv;
  #endif
  
@@ -62,7 +62,7 @@ Interix support
  
  	/* Ensure that fds 0, 1 and 2 are open or directed to /dev/null */
  	sanitise_stdfd();
-@@ -1790,7 +1801,7 @@ main(int ac, char **av)
+@@ -1815,7 +1826,7 @@ main(int ac, char **av)
  		    (st.st_uid != getuid () ||
  		    (st.st_mode & (S_IWGRP|S_IWOTH)) != 0))
  #else
@@ -71,7 +71,7 @@ Interix support
  #endif
  			fatal("%s must be owned by root and not group or "
  			    "world-writable.", _PATH_PRIVSEP_CHROOT_DIR);
-@@ -1813,8 +1824,10 @@ main(int ac, char **av)
+@@ -1838,8 +1849,10 @@ main(int ac, char **av)
  	 * to create a file, and we can't control the code in every
  	 * module which might be used).
  	 */
