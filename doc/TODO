@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13113 2014/03/28 23:46:36 wiz Exp $
+$NetBSD: TODO,v 1.13114 2014/03/29 04:15:50 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -381,7 +381,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o apache-ant-1.9.3
 	o apr0-2.4.1
 	o argtable-2.9
-	o aria2-1.18.4
 	o arirang-1.70
 	o arnold-20040104
 	o asapm-3.1
