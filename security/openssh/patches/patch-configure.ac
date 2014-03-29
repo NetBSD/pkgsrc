@@ -1,10 +1,10 @@
-$NetBSD: patch-configure.ac,v 1.2 2013/12/01 06:11:41 taca Exp $
+$NetBSD: patch-configure.ac,v 1.3 2014/03/29 09:38:11 taca Exp $
 
 Various fixes regarding portability
 
---- configure.ac.orig	2013-08-04 11:48:41.000000000 +0000
+--- configure.ac.orig	2014-02-21 17:09:34.000000000 +0000
 +++ configure.ac
-@@ -246,6 +246,9 @@ AC_ARG_WITH([rpath],
+@@ -275,6 +275,9 @@ AC_ARG_WITH([rpath],
  	]
  )
  
@@ -14,7 +14,7 @@ Various fixes regarding portability
  # Allow user to specify flags
  AC_ARG_WITH([cflags],
  	[  --with-cflags           Specify additional flags to pass to compiler],
-@@ -315,6 +318,7 @@ AC_CHECK_HEADERS([ \
+@@ -346,6 +349,7 @@ AC_CHECK_HEADERS([ \
  	maillock.h \
  	ndir.h \
  	net/if_tun.h \
@@ -22,7 +22,7 @@ Various fixes regarding portability
  	netdb.h \
  	netgroup.h \
  	pam/pam_appl.h \
-@@ -618,6 +622,15 @@ main() { if (NSVersionOfRunTimeLibrary("
+@@ -655,6 +659,15 @@ main() { if (NSVersionOfRunTimeLibrary("
  		;;
  	esac
  	;;
@@ -38,7 +38,7 @@ Various fixes regarding portability
  *-*-irix5*)
  	PATH="$PATH:/usr/etc"
  	AC_DEFINE([BROKEN_INET_NTOA], [1],
-@@ -4500,9 +4513,17 @@ AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[
+@@ -4731,9 +4744,17 @@ AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[
  ])
  if test -z "$conf_wtmpx_location"; then
  	if test x"$system_wtmpx_path" = x"no" ; then
@@ -58,7 +58,7 @@ Various fixes regarding portability
  	AC_DEFINE_UNQUOTED([CONF_WTMPX_FILE], ["$conf_wtmpx_location"],
  		[Define if you want to specify the path to your wtmpx file])
  fi
-@@ -4588,7 +4609,7 @@ echo "OpenSSH has been configured with t
+@@ -4820,7 +4841,7 @@ echo "OpenSSH has been configured with t
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"
