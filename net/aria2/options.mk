@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2013/07/14 15:03:14 rodent Exp $
+# $NetBSD: options.mk,v 1.15 2014/03/29 04:15:09 ryoon Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.aria2
 
@@ -7,7 +7,7 @@ PKG_OPTIONS_REQUIRED_GROUPS=	ssl
 
 PKG_SUPPORTED_OPTIONS=		nls sqlite
 PKG_SUGGESTED_OPTIONS=		nls sqlite ssl
-PLIST_VARS=			nls
+PLIST_VARS+=			nls
 
 .include "../../mk/bsd.options.mk"
 
