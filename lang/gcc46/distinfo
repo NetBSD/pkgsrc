@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2014/01/25 13:38:47 ryoon Exp $
+$NetBSD: distinfo,v 1.15 2014/03/29 20:50:03 ryoon Exp $
 
 SHA1 (gcc-4.6.4.tar.bz2) = 63933a8a5cf725626585dbba993c8b0f6db1335d
 RMD160 (gcc-4.6.4.tar.bz2) = 6a58b053812cf75622bc4579e020cd9471f46916
@@ -29,6 +29,7 @@ SHA1 (patch-gcc_config_arm_elf.h) = 28c67bb698ebe9a3aa45c4cff29f028c82cc7606
 SHA1 (patch-gcc_config_arm_t-netbsd) = a1682f4f8dc7e393446f19f615737ddfc98fcb7f
 SHA1 (patch-gcc_config_exec-stack.h) = 2ff8a153a41638de2943c4109f38ea3a7c26c00d
 SHA1 (patch-gcc_config_host-openbsd.c) = 109ce33dbbc19c988637d77dce4d240d6bfc912c
+SHA1 (patch-gcc_config_i386_i386.c) = 49ba75bb347a9c96606a7bef7e0f972488d881b3
 SHA1 (patch-gcc_config_i386_openbsd.h) = 0adb1e531eb9d773cbd6944f279e949e59035bd3
 SHA1 (patch-gcc_config_i386_openbsd64.h) = c4fdb98de196702afad36a75886967babf49a55a
 SHA1 (patch-gcc_config_i386_openbsdelf.h) = cd7afa938514dc80fb53c683fb089468c935d2ae
