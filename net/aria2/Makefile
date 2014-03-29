@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2014/03/29 04:15:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.51 2014/03/29 06:04:41 ryoon Exp $
 #
 
 DISTNAME=	aria2-1.18.4
@@ -11,9 +11,8 @@ HOMEPAGE=	http://aria2.sourceforge.net/
 COMMENT=	Multi-threaded, multi-protocol, flexible download accelerator
 LICENSE=	gnu-gpl-v2
 
-# Minimum requirement is 4.6.4, but lang/gcc46 is 4.6.3, then use 4.7
-# See https://github.com/tatsuhiro-t/aria2/issues/144
-GCC_REQD+=	4.7
+# Minimum requirement is 4.6.4
+GCC_REQD+=	4.6
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
