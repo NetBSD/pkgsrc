@@ -1,10 +1,10 @@
-$NetBSD: patch-uidswap.c,v 1.2 2013/12/01 06:11:41 taca Exp $
+$NetBSD: patch-uidswap.c,v 1.3 2014/03/29 09:38:11 taca Exp $
 
 Interix support
 
---- uidswap.c.orig	2013-06-01 22:07:32.000000000 +0000
+--- uidswap.c.orig	2014-01-18 09:43:50.000000000 +0000
 +++ uidswap.c
-@@ -66,13 +66,13 @@ temporarily_use_uid(struct passwd *pw)
+@@ -67,13 +67,13 @@ temporarily_use_uid(struct passwd *pw)
  	    (u_int)pw->pw_uid, (u_int)pw->pw_gid,
  	    (u_int)saved_euid, (u_int)saved_egid);
  #ifndef HAVE_CYGWIN
@@ -20,7 +20,7 @@ Interix support
  		privileged = 0;
  		return;
  	}
-@@ -95,9 +95,11 @@ temporarily_use_uid(struct passwd *pw)
+@@ -96,9 +96,11 @@ temporarily_use_uid(struct passwd *pw)
  
  	/* set and save the user's groups */
  	if (user_groupslen == -1) {
@@ -32,7 +32,7 @@ Interix support
  
  		user_groupslen = getgroups(0, NULL);
  		if (user_groupslen < 0)
-@@ -111,9 +113,11 @@ temporarily_use_uid(struct passwd *pw)
+@@ -112,9 +114,11 @@ temporarily_use_uid(struct passwd *pw)
  			free(user_groups);
  		}
  	}
@@ -44,7 +44,7 @@ Interix support
  #ifndef SAVED_IDS_WORK_WITH_SETEUID
  	/* Propagate the privileged gid to all of our gids. */
  	if (setgid(getegid()) < 0)
-@@ -184,8 +188,10 @@ restore_uid(void)
+@@ -187,8 +191,10 @@ restore_uid(void)
  	setgid(getgid());
  #endif /* SAVED_IDS_WORK_WITH_SETEUID */
  
@@ -55,7 +55,7 @@ Interix support
  	temporarily_use_uid_effective = 0;
  }
  
-@@ -206,6 +212,10 @@ permanently_set_uid(struct passwd *pw)
+@@ -211,6 +217,10 @@ permanently_set_uid(struct passwd *pw)
  	debug("permanently_set_uid: %u/%u", (u_int)pw->pw_uid,
  	    (u_int)pw->pw_gid);
  
@@ -66,7 +66,7 @@ Interix support
  	if (setresgid(pw->pw_gid, pw->pw_gid, pw->pw_gid) < 0)
  		fatal("setresgid %u: %.100s", (u_int)pw->pw_gid, strerror(errno));
  
-@@ -242,6 +252,7 @@ permanently_set_uid(struct passwd *pw)
+@@ -247,6 +257,7 @@ permanently_set_uid(struct passwd *pw)
  	    (setuid(old_uid) != -1 || seteuid(old_uid) != -1))
  		fatal("%s: was able to restore old [e]uid", __func__);
  #endif
