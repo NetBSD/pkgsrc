@@ -1,8 +1,8 @@
-$NetBSD: patch-defines.h,v 1.1 2013/05/01 19:58:26 imil Exp $
+$NetBSD: patch-defines.h,v 1.2 2014/03/29 09:38:11 taca Exp $
 
 Define ROOTUID, UTMPX_FILE and WTMPX_FILE
 
---- defines.h.orig	2013-03-07 09:06:13.000000000 +0000
+--- defines.h.orig	2014-01-17 13:12:38.000000000 +0000
 +++ defines.h
 @@ -30,6 +30,15 @@
  
@@ -20,7 +20,7 @@ Define ROOTUID, UTMPX_FILE and WTMPX_FILE
  #if defined(HAVE_DECL_SHUT_RD) && HAVE_DECL_SHUT_RD == 0
  enum
  {
-@@ -695,6 +704,24 @@ struct winsize {
+@@ -708,6 +717,24 @@ struct winsize {
  #    endif
  #  endif
  #endif
