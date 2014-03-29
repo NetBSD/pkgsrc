@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.28 2014/03/29 09:38:11 taca Exp $
+# $NetBSD: options.mk,v 1.29 2014/03/29 10:30:15 taca Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -21,12 +21,13 @@ PATCH_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/openssh/
 PATCH_DIST_STRIP=	-p1
 .endif
 
+PLIST_VARS+=	pam
+
 .if !empty(PKG_OPTIONS:Mpam)
 .include "../../mk/pam.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-pam
 MESSAGE_SRC+=		${.CURDIR}/MESSAGE.pam
 MESSAGE_SUBST+=		EGDIR=${EGDIR}
-PLIST_VARS+=	pam
 .if ${OPSYS} == "Linux"
 PLIST.pam=	yes
 .endif
