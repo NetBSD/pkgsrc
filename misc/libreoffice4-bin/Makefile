@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/03/06 07:36:05 uebayasi Exp $
+# $NetBSD: Makefile,v 1.6 2014/03/30 16:43:50 ryoon Exp $
 
 DISTNAME=		libreoffice4-bin	# overridden below
 PKGNAME=		libreoffice4-bin-${OO_RELEASE}
@@ -20,9 +20,9 @@ CONFLICTS+=		openoffice-linux-[0-9]*
 CONFLICTS+=		libreoffice3-bin-[0-9]*
 
 OO_VER=			4
-OO_BASEVER=		4.1
-OO_RELEASE=		4.1.3
-OO_RELEASEV=		4.1.3.2
+OO_BASEVER=		4.2
+OO_RELEASE=		4.2.2
+OO_RELEASEV=		4.2.2.1
 PLIST_SUBST+=		VER=${OO_VER:Q} BASEVER=${OO_BASEVER:Q}
 MESSAGE_SUBST+=		VER=${OO_VER:Q}
 FILES_SUBST+=		VER=${OO_VER:Q}
@@ -38,7 +38,9 @@ PLIST_SRC+=		${PKGDIR}/PLIST.dirs
 EMUL_PLATFORMS=		linux-i386 linux-x86_64
 #EMUL_PLATFORMS+=	solaris-i386 solaris-sparc
 EMUL_MODULES.linux=	freetype2 x11 locale png fontconfig cups gtk2 krb5
+.if !empty(SUSE_PREFER:M1[3-9].*)
 EMUL_MODULES.linux+=	dbus dbus-glib
+.endif
 EMUL_REQD=		suse>=11.3
 
 EMUL_PKG_FMT=		rpm
