@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1246 2014/03/30 13:09:27 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1247 2014/03/30 14:47:20 kim Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2014Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW, 
@@ -1459,6 +1459,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/ap2-suphp to 0.7.2 [adam 2014-03-07]
 	Updated x11/mlterm to 3.3.3nb1 [tsutsui 2014-03-07]
 	Updated net/wireshark to 1.10.6 [tron 2014-03-08]
+	Updated security/sudo to 1.7.10p8 [kim 2014-03-08]
 	Updated databases/phpmyadmin to 4.1.9 [tron 2014-03-08]
 	Added devel/py-hgview version 1.8 [bsiegert 2014-03-09]
 	Updated devel/p5-Module-Build-Tiny to 0.035 [wen 2014-03-09]
