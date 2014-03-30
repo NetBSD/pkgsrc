@@ -1,23 +1,46 @@
-$NetBSD: patch-mozilla_toolkit_library_Makefile.in,v 1.2 2013/12/26 13:17:37 ryoon Exp $
+$NetBSD: patch-mozilla_toolkit_library_Makefile.in,v 1.3 2014/03/30 04:13:17 ryoon Exp $
 
---- mozilla/toolkit/library/Makefile.in.orig	2013-12-11 04:29:15.000000000 +0000
+--- mozilla/toolkit/library/Makefile.in.orig	2014-03-19 01:42:16.000000000 +0000
 +++ mozilla/toolkit/library/Makefile.in
-@@ -399,6 +399,7 @@ endif
+@@ -164,6 +164,18 @@ ifdef MOZ_NATIVE_HUNSPELL
+ EXTRA_DSO_LDOPTS += $(MOZ_HUNSPELL_LIBS)
+ endif
+ 
++ifdef MOZ_NATIVE_OGG
++EXTRA_DSO_LDOPTS += $(MOZ_OGG_LIBS)
++endif
++
++ifdef MOZ_NATIVE_VORBIS
++EXTRA_DSO_LDOPTS += $(MOZ_VORBIS_LIBS)
++endif
++
++ifdef MOZ_NATIVE_OPUS
++EXTRA_DSO_LDOPTS += $(MOZ_OPUS_LIBS)
++endif
++
+ ifdef MOZ_NATIVE_LIBEVENT
+ EXTRA_DSO_LDOPTS += $(MOZ_LIBEVENT_LIBS)
+ endif
+@@ -176,6 +188,14 @@ ifndef MOZ_TREE_PIXMAN
+ EXTRA_DSO_LDOPTS += $(MOZ_PIXMAN_LIBS)
+ endif
+ 
++ifdef MOZ_NATIVE_GRAPHITE2
++EXTRA_DSO_LDOPTS += $(MOZ_GRAPHITE2_LIBS)
++endif
++
++ifdef MOZ_NATIVE_HARFBUZZ
++EXTRA_DSO_LDOPTS += $(MOZ_HARFBUZZ_LIBS)
++endif
++
+ ifdef MOZ_DMD
+ EXTRA_DSO_LDOPTS += $(call EXPAND_LIBNAME_PATH,dmd,$(DIST)/lib)
+ endif
+@@ -183,6 +203,7 @@ endif
  EXTRA_DSO_LDOPTS += $(call EXPAND_LIBNAME_PATH,gkmedias,$(DIST)/lib)
  
  ifdef MOZ_WEBRTC
 +EXTRA_DSO_LDOPTS += $(MOZ_LIBV4L2_LIBS)
- ifdef MOZ_PEERCONNECTION
- COMPONENT_LIBS += peerconnection
- endif
-@@ -541,6 +542,10 @@ OS_LIBS += $(call EXPAND_LIBNAME,kvm)
- EXTRA_DSO_LDOPTS += -Wl,--warn-unresolved-symbols
- endif
- 
-+ifeq ($(OS_ARCH),FreeBSD)
-+OS_LIBS += $(call EXPAND_LIBNAME,util)
-+endif
-+
- ifeq ($(OS_ARCH),WINNT)
- OS_LIBS += $(call EXPAND_LIBNAME,shell32 ole32 version winspool comdlg32 imm32 msimg32 shlwapi psapi ws2_32 dbghelp rasapi32 rasdlg iphlpapi uxtheme setupapi secur32 sensorsapi portabledeviceguids windowscodecs wininet)
- ifdef ACCESSIBILITY
+ ifdef MOZ_WEBRTC_SIGNALING
+ SHARED_LIBRARY_LIBS += \
+   $(DEPTH)/media/webrtc/signaling/signaling_ecc/$(LIB_PREFIX)ecc.$(LIB_SUFFIX) \

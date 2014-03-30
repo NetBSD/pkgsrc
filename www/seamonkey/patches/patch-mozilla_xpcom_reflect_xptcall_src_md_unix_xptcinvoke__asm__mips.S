@@ -1,7 +1,7 @@
-$NetBSD: patch-xn,v 1.7 2013/01/07 21:55:30 ryoon Exp $
+$NetBSD: patch-mozilla_xpcom_reflect_xptcall_src_md_unix_xptcinvoke__asm__mips.S,v 1.1 2014/03/30 04:13:17 ryoon Exp $
 
---- mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_asm_mips.s.orig	2012-08-27 04:49:34.000000000 +0000
-+++ mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_asm_mips.s
+--- mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_asm_mips.S.orig	2014-03-19 01:42:18.000000000 +0000
++++ mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_asm_mips.S
 @@ -16,6 +16,47 @@
  #include <sys/asm.h>
  #endif

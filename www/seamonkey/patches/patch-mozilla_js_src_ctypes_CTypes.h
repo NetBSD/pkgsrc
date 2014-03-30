@@ -1,10 +1,10 @@
-$NetBSD: patch-mozilla_js_src_ctypes_CTypes.h,v 1.1 2013/09/28 14:37:05 ryoon Exp $
+$NetBSD: patch-mozilla_js_src_ctypes_CTypes.h,v 1.2 2014/03/30 04:13:17 ryoon Exp $
 
---- mozilla/js/src/ctypes/CTypes.h.orig	2013-09-16 18:26:39.000000000 +0000
+--- mozilla/js/src/ctypes/CTypes.h.orig	2014-03-19 01:41:57.000000000 +0000
 +++ mozilla/js/src/ctypes/CTypes.h
-@@ -13,6 +13,23 @@
- 
- #include "js/HashTable.h"
+@@ -14,6 +14,23 @@
+ #include "js/Vector.h"
+ #include "vm/String.h"
  
 +#if defined(__NetBSD__)
 +#include <stdint.h>
