@@ -1,8 +1,10 @@
-$NetBSD: patch-src_framework_mlt__property.h,v 1.1 2013/06/26 21:59:10 joerg Exp $
+$NetBSD: patch-src_framework_mlt__property.h,v 1.2 2014/03/30 19:42:53 abs Exp $
 
---- src/framework/mlt_property.h.orig	2013-06-26 21:36:42.000000000 +0000
+Add conditional section for __NetBSD__
+
+--- src/framework/mlt_property.h.orig	2013-06-03 03:34:35.000000000 +0000
 +++ src/framework/mlt_property.h
-@@ -31,8 +31,10 @@
+@@ -32,8 +32,10 @@
  #include <sys/param.h>
  #endif
  
