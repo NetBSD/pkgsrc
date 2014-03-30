@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/11/24 13:43:41 joerg Exp $
+$NetBSD: distinfo,v 1.3 2014/03/30 19:45:00 abs Exp $
 
-SHA1 (kdenlive-0.7.8.tar.gz) = 6fd6d50f9714974ec3f2ce04e8c978f839020f9a
-RMD160 (kdenlive-0.7.8.tar.gz) = 5ce3ffa5d4480c6da0672675b2ec3aa47ecac905
-Size (kdenlive-0.7.8.tar.gz) = 3232442 bytes
-SHA1 (patch-aa) = 42a1c91403089cfaa9c4b50b7934ec7822336fa4
-SHA1 (patch-src_colorcorrection_vectorscopegenerator.h) = 6402b80395b74ad813487f64907ed42c7e26afb6
+SHA1 (kdenlive-0.9.6.tar.bz2) = 0b9de2dd1e77140020bf3efc9c88105d4dcf5c8d
+RMD160 (kdenlive-0.9.6.tar.bz2) = 0aaf8911073b82725998a8f18426b7f4189e25f0
+Size (kdenlive-0.9.6.tar.bz2) = 5355764 bytes
