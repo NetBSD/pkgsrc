@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1247 2014/03/30 14:47:20 kim Exp $
+$NetBSD: CHANGES-2014,v 1.1248 2014/03/30 16:27:16 schmonz Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2014Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW, 
@@ -1899,3 +1899,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/seamonkey-l10n to 2.25 [ryoon 2014-03-30]
 	Updated sysutils/salt to 2014.1.1 [imil 2014-03-30]
 	Updated devel/p5-Term-ReadLine to 1.22 [taca 2014-03-30]
+	Updated mail/getmail to 4.45.0 [schmonz 2014-03-30]
