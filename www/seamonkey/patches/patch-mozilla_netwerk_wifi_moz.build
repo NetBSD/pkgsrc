@@ -1,15 +1,15 @@
-$NetBSD: patch-mozilla_netwerk_wifi_moz.build,v 1.3 2013/12/26 13:17:37 ryoon Exp $
+$NetBSD: patch-mozilla_netwerk_wifi_moz.build,v 1.4 2014/03/30 04:13:17 ryoon Exp $
 
---- mozilla/netwerk/wifi/moz.build.orig	2013-12-11 04:29:10.000000000 +0000
+--- mozilla/netwerk/wifi/moz.build.orig	2014-03-19 01:42:12.000000000 +0000
 +++ mozilla/netwerk/wifi/moz.build
-@@ -38,6 +38,10 @@ if CONFIG['OS_ARCH'] == 'Darwin':
-     CMMSRCS += [
+@@ -35,6 +35,10 @@ if CONFIG['OS_ARCH'] == 'Darwin':
+     UNIFIED_SOURCES += [
          'osx_corewlan.mm',
      ]
 +elif CONFIG['OS_ARCH'] == 'FreeBSD':
-+    CPP_SOURCES += [
++    UNIFIED_SOURCES += [
 +        'nsWifiScannerFreeBSD.cpp',
 +    ]
  elif CONFIG['OS_ARCH'] == 'WINNT':
-     CPP_SOURCES += [
+     UNIFIED_SOURCES += [
          'nsWifiScannerWin.cpp',

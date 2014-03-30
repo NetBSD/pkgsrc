@@ -1,9 +1,33 @@
-$NetBSD: patch-mozilla_config_system-headers,v 1.9 2013/12/26 13:17:37 ryoon Exp $
+$NetBSD: patch-mozilla_config_system-headers,v 1.10 2014/03/30 04:13:17 ryoon Exp $
 
---- mozilla/config/system-headers.orig	2013-12-11 04:28:28.000000000 +0000
+--- mozilla/config/system-headers.orig	2014-03-19 01:41:46.000000000 +0000
 +++ mozilla/config/system-headers
-@@ -1144,3 +1144,4 @@ unicode/unum.h
+@@ -1144,4 +1144,28 @@ unicode/unum.h
  unicode/ustring.h
  unicode/utypes.h
  #endif
-+libutil.h
++cairo-qt.h
++#if MOZ_NATIVE_GRAPHITE2==1
++unwind.h
++graphite2/Font.h
++graphite2/Segment.h
++#endif
++#if MOZ_NATIVE_HARFBUZZ==1
++harfbuzz/hb-ot.h
++harfbuzz/hb.h
++#endif
++#if MOZ_NATIVE_OGG==1
++ogg/ogg.h
++ogg/os_types.h
++#endif
++#if MOZ_NATIVE_VORBIS==1
++vorbis/codec.h
++vorbis/vorbisenc.h
++#endif
++#if MOZ_NATIVE_OPUS==1
++opus.h
++opus_multistream.h
++opus/opus.h
++opus/opus_multistream.h
++#endif
+ libutil.h
