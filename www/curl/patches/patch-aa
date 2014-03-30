@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.25 2014/02/01 11:07:14 adam Exp $
+$NetBSD: patch-aa,v 1.26 2014/03/30 12:57:54 spz Exp $
 
 builtin krb5-config in platforms such as solaris do not support
 the gssapi option, and need an explicit -lgss
 
---- configure.orig	2014-01-29 06:54:45.000000000 +0000
+--- configure.orig	2014-03-25 10:29:28.000000000 +0000
 +++ configure
 @@ -3641,6 +3641,7 @@ $as_echo "$as_me: $xc_bad_var_msg librar
          ;;
@@ -13,7 +13,7 @@ the gssapi option, and need an explicit -lgss
    if test $xc_bad_var_cflags = yes; then
      { $as_echo "$as_me:${as_lineno-$LINENO}: using CFLAGS: $CFLAGS" >&5
  $as_echo "$as_me: using CFLAGS: $CFLAGS" >&6;}
-@@ -16619,7 +16620,7 @@ squeeze() {
+@@ -16620,7 +16621,7 @@ squeeze() {
  
  
        #
@@ -22,7 +22,7 @@ the gssapi option, and need an explicit -lgss
      #
      if test "$compiler_id" = "GNU_C" ||
        test "$compiler_id" = "CLANG"; then
-@@ -21078,7 +21079,12 @@ $as_echo "yes" >&6; }
+@@ -21079,7 +21080,12 @@ $as_echo "yes" >&6; }
  
    if test -z "$GSSAPI_INCS"; then
       if test -f "$GSSAPI_ROOT/bin/krb5-config"; then
@@ -36,7 +36,7 @@ the gssapi option, and need an explicit -lgss
       elif test "$GSSAPI_ROOT" != "yes"; then
          GSSAPI_INCS="-I$GSSAPI_ROOT/include"
       fi
-@@ -21226,13 +21232,18 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
+@@ -21227,13 +21233,18 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
          ;;
       *)
          if test -f "$GSSAPI_ROOT/bin/krb5-config"; then
@@ -58,7 +58,7 @@ the gssapi option, and need an explicit -lgss
          fi
          ;;
       esac
-@@ -21243,7 +21254,7 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
+@@ -21244,7 +21255,7 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
          LIBS="-lgss $LIBS"
          ;;
       *)
@@ -67,30 +67,3 @@ the gssapi option, and need an explicit -lgss
          ;;
       esac
    fi
-@@ -24834,19 +24845,19 @@ $as_echo "$as_me: WARNING: You need an l
- $as_echo "yes" >&6; }
-         if test "x$OPENSSL_ENABLED" = "x1"; then
-           versioned_symbols_flavour="OPENSSL_"
--        elif test "x$GNUTLS_ENABLED" == "x1"; then
-+        elif test "x$GNUTLS_ENABLED" = "x1"; then
-           versioned_symbols_flavour="GNUTLS_"
--        elif test "x$NSS_ENABLED" == "x1"; then
-+        elif test "x$NSS_ENABLED" = "x1"; then
-           versioned_symbols_flavour="NSS_"
--        elif test "x$POLARSSL_ENABLED" == "x1"; then
-+        elif test "x$POLARSSL_ENABLED" = "x1"; then
-           versioned_symbols_flavour="POLARSSL_"
--        elif test "x$CYASSL_ENABLED" == "x1"; then
-+        elif test "x$CYASSL_ENABLED" = "x1"; then
-           versioned_symbols_flavour="CYASSL_"
--        elif test "x$AXTLS_ENABLED" == "x1"; then
-+        elif test "x$AXTLS_ENABLED" = "x1"; then
-           versioned_symbols_flavour="AXTLS_"
--        elif test "x$WINSSL_ENABLED" == "x1"; then
-+        elif test "x$WINSSL_ENABLED" = "x1"; then
-           versioned_symbols_flavour="WINSSL_"
--        elif test "x$DARWINSSL_ENABLED" == "x1"; then
-+        elif test "x$DARWINSSL_ENABLED" = "x1"; then
-           versioned_symbols_flavour="DARWINSSL_"
-         else
-           versioned_symbols_flavour=""
