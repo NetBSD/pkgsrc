@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1243 2014/03/30 04:14:10 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.1244 2014/03/30 04:24:23 ryoon Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2014Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW, 
@@ -1895,3 +1895,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/php54 to 5.4.26nb2 [he 2014-03-29]
 	Updated lang/php55 to 5.5.10nb2 [he 2014-03-29]
 	Updated www/seamonkey to 2.25 [ryoon 2014-03-30]
+	Updated www/seamonkey-l10n to 2.25 [ryoon 2014-03-30]
