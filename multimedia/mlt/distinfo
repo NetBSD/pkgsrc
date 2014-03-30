@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.6 2013/11/15 14:03:11 joerg Exp $
+$NetBSD: distinfo,v 1.7 2014/03/30 19:42:53 abs Exp $
 
-SHA1 (mlt-0.8.6.tar.gz) = 616e807ba9f8fd8d6c9f87cb04416885c471596c
-RMD160 (mlt-0.8.6.tar.gz) = 354130bdd1d42e55f01703d2eac25a947d86f377
-Size (mlt-0.8.6.tar.gz) = 1104163 bytes
-SHA1 (patch-configure) = 54a8c814e33e27fb12dbeccaec26836abcb37de5
-SHA1 (patch-src_framework_mlt__properties.c) = b8113fc58f0dce0d70cb4a0ba7534723e7924ad5
-SHA1 (patch-src_framework_mlt__property.c) = 61ea83f6d20c139741d5bb95456f0d1a4a9b3fa4
-SHA1 (patch-src_framework_mlt__property.h) = b6aec829f7f9f876711984c2edaba245a968e90d
-SHA1 (patch-src_modules_videostab_stab_estimate.c) = 58549c2ee2780604c043637a25dd39e92f90b7ce
+SHA1 (mlt-0.9.0.tar.gz) = 76bf18f4442801fae963c5a676d6626e383d1617
+RMD160 (mlt-0.9.0.tar.gz) = c58b21463562367ad1fad46fa3e524f283bd4c82
+Size (mlt-0.9.0.tar.gz) = 1167943 bytes
+SHA1 (patch-src_framework_mlt__properties.c) = 9a4f0351ddcbed4c431a65a16375a19357605d76
+SHA1 (patch-src_framework_mlt__property.c) = 7471031721b64dfcc8dccc828ca10b5eee1fb37d
+SHA1 (patch-src_framework_mlt__property.h) = 638ec43f6ad073b0f5dff48604f20e59dd0460e4
