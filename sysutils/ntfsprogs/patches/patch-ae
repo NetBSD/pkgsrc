@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.5 2008/03/08 08:56:47 adam Exp $
+$NetBSD: patch-ae,v 1.6 2014/03/30 23:58:19 jakllsch Exp $
 
---- libntfs/device.c.orig	2007-09-26 20:28:34.000000000 +0200
+--- libntfs/device.c.orig	2007-09-26 18:28:34.000000000 +0000
 +++ libntfs/device.c
 @@ -85,6 +85,10 @@
  #	define BLKBSZSET _IOW(0x12,113,size_t) /* Set device block size in bytes. */
@@ -17,7 +17,7 @@ $NetBSD: patch-ae,v 1.5 2008/03/08 08:56:47 adam Exp $
  		}
  	}
  #endif
-+#ifdef DIOCGPART
++#ifdef DIOCGDINFO
 +	{
 +		struct stat st;
 +		if (dev->d_ops->stat(dev, &st) >= 0) {
@@ -27,8 +27,8 @@ $NetBSD: patch-ae,v 1.5 2008/03/08 08:56:47 adam Exp $
 +			if (dev->d_ops->ioctl(dev, DIOCGDINFO, &disklabel) >= 0) {
 +				secsize = disklabel.d_secsize;
 +				psize = disklabel.d_partitions[DISKPART(st.st_rdev)].p_size;
-+				ntfs_log_debug("DIOCGPART nr %d byte blocks = %lld (0x%llx)\n",
-+						secsize, psize, psize);
++				ntfs_log_debug("DIOCGDINFO part %d nr %d byte blocks = %lld (0x%llx)\n",
++						DISKPART(st.st_rdev), secsize, psize, psize);
 +				return psize * secsize / block_size;
 +			}
 +		}
