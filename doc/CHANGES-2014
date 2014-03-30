@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1250 2014/03/30 17:15:33 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1251 2014/03/30 19:45:37 abs Exp $
 
 [PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 2014Q1 BRANCH. PLEASE DO NOT ADD ANY MORE PACKAGES RIGHT NOW, 
@@ -1902,3 +1902,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/getmail to 4.45.0 [schmonz 2014-03-30]
 	Updated misc/libreoffice4-bin to 4.2.2 [ryoon 2014-03-30]
 	Updated lang/ruby21-base to 2.1.1nb2 [taca 2014-03-30]
+	Updated multimedia/mlt to 0.9.0 [abs 2014-03-30]
+	Updated multimedia/kdenlive to 0.9.6 [abs 2014-03-30]
