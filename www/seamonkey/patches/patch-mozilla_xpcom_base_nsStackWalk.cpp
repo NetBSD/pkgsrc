@@ -1,8 +1,21 @@
-$NetBSD: patch-mozilla_xpcom_base_nsStackWalk.cpp,v 1.1 2013/08/11 03:18:46 ryoon Exp $
+$NetBSD: patch-mozilla_xpcom_base_nsStackWalk.cpp,v 1.2 2014/03/30 04:13:17 ryoon Exp $
 
---- mozilla/xpcom/base/nsStackWalk.cpp.orig	2013-08-04 03:05:53.000000000 +0000
+--- mozilla/xpcom/base/nsStackWalk.cpp.orig	2014-03-19 01:42:18.000000000 +0000
 +++ mozilla/xpcom/base/nsStackWalk.cpp
-@@ -853,7 +853,7 @@ void DemangleSymbol(const char * aSymbol
+@@ -23,6 +23,12 @@ struct CriticalAddress {
+ };
+ static CriticalAddress gCriticalAddress;
+ 
++// for _Unwind_Backtrace from libcxxrt or libunwind
++// cxxabi.h from libcxxrt implicitly includes unwind.h first
++#if defined(HAVE__UNWIND_BACKTRACE) && !defined(_GNU_SOURCE)
++#define _GNU_SOURCE
++#endif
++
+ #if defined(HAVE_DLOPEN) || defined(XP_MACOSX)
+ #include <dlfcn.h>
+ #endif
+@@ -874,7 +880,7 @@ void DemangleSymbol(const char * aSymbol
  }
  
  
@@ -11,3 +24,13 @@ $NetBSD: patch-mozilla_xpcom_base_nsStackWalk.cpp,v 1.1 2013/08/11 03:18:46 ryoo
  
  /*
   * Stack walking code for Solaris courtesy of Bart Smaalder's "memtrak".
+@@ -1223,9 +1229,6 @@ NS_StackWalk(NS_WalkStackCallback aCallb
+ #elif defined(HAVE__UNWIND_BACKTRACE)
+ 
+ // libgcc_s.so symbols _Unwind_Backtrace@@GCC_3.3 and _Unwind_GetIP@@GCC_3.0
+-#ifndef _GNU_SOURCE
+-#define _GNU_SOURCE
+-#endif
+ #include <unwind.h>
+ 
+ struct unwind_info {
