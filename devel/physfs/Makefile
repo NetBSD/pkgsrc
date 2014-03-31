@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.20 2013/07/15 02:02:21 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.21 2014/03/31 08:29:44 wiz Exp $
 
-DISTNAME=		physfs-1.0.1
-PKGREVISION=		1
+DISTNAME=		physfs-2.0.3
 CATEGORIES=		devel
 MASTER_SITES=		http://offload1.icculus.org/physfs/downloads/
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.icculus.org/physfs/
 COMMENT=		Library providing abstract access to various archives
+LICENSE=		zlib
 
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
+USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
-CONFIGURE_ARGS+=	--enable-pthreads
 PTHREAD_AUTO_VARS=	yes
 
 .include "../../mk/bsd.prefs.mk"
