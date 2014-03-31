@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.679 2014/02/20 12:38:22 fhajny Exp $
+# $NetBSD: Makefile,v 1.680 2014/03/31 10:12:07 adam Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -18,6 +18,7 @@ SUBDIR+=	MesaLib
 SUBDIR+=	Ngraph
 SUBDIR+=	OpenRM
 SUBDIR+=	PanoTools
+SUBDIR+=	SDL2_image
 SUBDIR+=	SDL_image
 SUBDIR+=	TiffIO
 SUBDIR+=	aalib
