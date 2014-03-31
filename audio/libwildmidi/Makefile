@@ -1,23 +1,24 @@
-# $NetBSD: Makefile,v 1.2 2012/09/12 00:24:45 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2014/03/31 08:31:19 wiz Exp $
 
-DISTNAME=	wildmidi-0.2.3.4
+DISTNAME=	wildmidi-0.3.5
 PKGNAME=	${DISTNAME:S/wildmidi/libwildmidi/}
 CATEGORIES=	audio
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wildmidi/}
+MASTER_SITES=	https://github.com/Mindwerks/wildmidi/archive/
 
 MAINTAINER=	pallegra@gmail.com
-HOMEPAGE=	http://wildmidi.sourceforge.net/
+HOMEPAGE=	http://www.mindwerks.net/projects/wildmidi/
 COMMENT=	Midi processing library and a midi player using the GUS patch set
 LICENSE=	gnu-lgpl-v3
 
+WRKSRC=		${WRKDIR}/wildmidi-${DISTNAME}
 USE_TOOLS+=	gmake
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
+USE_CMAKE=	yes
 
-CONFIGURE_ARGS+=	--with-wildmidi-cfg=${PKG_SYSCONFDIR}/timidity.cfg
-CONFIGURE_ARGS+=	--disable-werror
-CONFIGURE_ARGS+=	--with-oss
+SUBST_CLASSES+=		man
+SUBST_SED.man+=		-e "s,share/man,${PKGMANDIR},"
+SUBST_FILES.man+=	src/CMakeLists.txt
+SUBST_STAGE.man=	post-extract
+SUBST_MESSAGE.man=	Fixing man page installation path.
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
