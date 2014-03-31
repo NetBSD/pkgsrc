@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1274 2014/03/31 08:35:03 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1275 2014/03/31 08:35:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1922,3 +1922,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/libmikmod to 3.3.6 [wiz 2014-03-31]
 	Updated devel/global to 6.2.11 [wiz 2014-03-31]
 	Updated x11/xrandr to 1.4.2 [wiz 2014-03-31]
+	Updated devel/xorg-util-macros to 1.19.0 [wiz 2014-03-31]
