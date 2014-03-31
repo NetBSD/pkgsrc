@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1268 2014/03/31 08:32:35 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1269 2014/03/31 08:32:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1916,3 +1916,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/uncrustify to 0.60 [wiz 2014-03-31]
 	Updated time/py-pytz to 2014.2 [wiz 2014-03-31]
 	Updated devel/py-setuptools to 3.3 [wiz 2014-03-31]
+	Updated converters/py-zfec to 1.4.24 [wiz 2014-03-31]
