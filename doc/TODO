@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13142 2014/03/31 10:37:27 adam Exp $
+$NetBSD: TODO,v 1.13143 2014/03/31 12:32:18 fhajny Exp $
 
 Suggested new packages
 ======================
@@ -883,7 +883,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o par2-0.6.2 [https://github.com/BlackIkeEagle/par2cmdline]
 	o parallel-20140322
 	o pari-2.7.0
-	o pbzip2-1.1.6
 	o pcal-4.8
 	o pcmanfm-0.5.2 [pkg/42451]
 	o pdmenu-1.2.87
