@@ -1,0 +1,7 @@
+The library allows a process to change its title (as displayed by
+system tools such as ps and top).
+
+Changing the title is mostly useful in multi-process systems, for
+example when a master process is forked: changing the children's
+title allows to identify the task each process is busy with.  The
+technique is used by PostgreSQL and the OpenSSH Server for example.
