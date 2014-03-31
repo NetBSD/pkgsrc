@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-x86_64,v 1.3 2014/02/11 09:12:12 obache Exp $
+@comment $NetBSD: PLIST.linux-x86_64,v 1.4 2014/03/31 14:06:44 wiz Exp $
 bin/sun7-appletviewer
 bin/sun7-apt
 bin/sun7-extcheck
@@ -99,11 +99,11 @@ java/sun-7/include/jvmticmlr.h
 java/sun-7/include/linux/jawt_md.h
 java/sun-7/include/linux/jni_md.h
 java/sun-7/jre
+java/sun-7/lib/${JAVA_ARCH}/libattach.so
+java/sun-7/lib/${JAVA_ARCH}/libsaproc.so
 java/sun-7/lib/ant-javafx.jar
 java/sun-7/lib/ct.sym
 java/sun-7/lib/dt.jar
-java/sun-7/lib/${JAVA_ARCH}/libattach.so
-java/sun-7/lib/${JAVA_ARCH}/libsaproc.so
 java/sun-7/lib/ir.idl
 java/sun-7/lib/javafx-doclet.jar
 java/sun-7/lib/javafx-mx.jar
@@ -166,12 +166,11 @@ java/sun-7/lib/missioncontrol/p2/org.eclipse.equinox.p2.core/cache/artifacts.xml
 java/sun-7/lib/missioncontrol/p2/org.eclipse.equinox.p2.core/cache/binary/com.jrockit.mc.rcp.product_root_5.2.0.157284
 java/sun-7/lib/missioncontrol/p2/org.eclipse.equinox.p2.core/cache/binary/org.eclipse.rcp_root_3.8.2.v20130118-180157-96BuGOZFxwOAeG8Ofmqicz0tPK
 java/sun-7/lib/missioncontrol/p2/org.eclipse.equinox.p2.engine/.settings/org.eclipse.equinox.p2.artifact.repository.prefs
-java/sun-7/lib/missioncontrol/p2/org.eclipse.equinox.p2.engine/.settings/org.eclipse.equinox.p2.metadata.repository.prefs
 java/sun-7/lib/missioncontrol/p2/org.eclipse.equinox.p2.engine/profileRegistry/JMC.profile/.lock
-java/sun-7/lib/missioncontrol/p2/org.eclipse.equinox.p2.engine/profileRegistry/JMC.profile/1373031188273.profile.gz
-java/sun-7/lib/missioncontrol/p2/org.eclipse.equinox.p2.engine/profileRegistry/JMC.profile/1373031188475.profile.gz
-java/sun-7/lib/missioncontrol/p2/org.eclipse.equinox.p2.engine/profileRegistry/JMC.profile/1373031196799.profile.gz
-java/sun-7/lib/missioncontrol/p2/org.eclipse.equinox.p2.engine/profileRegistry/JMC.profile/1373031199501.profile.gz
+java/sun-7/lib/missioncontrol/p2/org.eclipse.equinox.p2.engine/profileRegistry/JMC.profile/1373031147492.profile.gz
+java/sun-7/lib/missioncontrol/p2/org.eclipse.equinox.p2.engine/profileRegistry/JMC.profile/1373031147665.profile.gz
+java/sun-7/lib/missioncontrol/p2/org.eclipse.equinox.p2.engine/profileRegistry/JMC.profile/1373031154566.profile.gz
+java/sun-7/lib/missioncontrol/p2/org.eclipse.equinox.p2.engine/profileRegistry/JMC.profile/1373031156383.profile.gz
 java/sun-7/lib/missioncontrol/plugins/com.ibm.icu_4.4.2.v20110823.jar
 java/sun-7/lib/missioncontrol/plugins/com.jrockit.mc.alert.ja_5.2.0.157284.jar
 java/sun-7/lib/missioncontrol/plugins/com.jrockit.mc.alert.zh_CN_5.2.0.157284.jar
@@ -383,13 +382,13 @@ java/sun-7/lib/missioncontrol/plugins/org.eclipse.equinox.http.registry_1.1.200.
 java/sun-7/lib/missioncontrol/plugins/org.eclipse.equinox.http.servlet_1.1.300.v20120912-130548.jar
 java/sun-7/lib/missioncontrol/plugins/org.eclipse.equinox.jsp.jasper.registry_1.0.300.v20120912-130548.jar
 java/sun-7/lib/missioncontrol/plugins/org.eclipse.equinox.jsp.jasper_1.0.400.v20120912-130548.jar
-java/sun-7/lib/missioncontrol/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_1.1.200.v20120913-144807/META-INF/ECLIPSE_.RSA
-java/sun-7/lib/missioncontrol/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_1.1.200.v20120913-144807/META-INF/ECLIPSE_.SF
-java/sun-7/lib/missioncontrol/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_1.1.200.v20120913-144807/META-INF/MANIFEST.MF
-java/sun-7/lib/missioncontrol/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_1.1.200.v20120913-144807/META-INF/eclipse.inf
-java/sun-7/lib/missioncontrol/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_1.1.200.v20120913-144807/about.html
-java/sun-7/lib/missioncontrol/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_1.1.200.v20120913-144807/eclipse_1502.so
-java/sun-7/lib/missioncontrol/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_1.1.200.v20120913-144807/launcher.gtk.linux.x86.properties
+java/sun-7/lib/missioncontrol/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_64_1.1.200.v20120913-144807/META-INF/ECLIPSE_.RSA
+java/sun-7/lib/missioncontrol/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_64_1.1.200.v20120913-144807/META-INF/ECLIPSE_.SF
+java/sun-7/lib/missioncontrol/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_64_1.1.200.v20120913-144807/META-INF/MANIFEST.MF
+java/sun-7/lib/missioncontrol/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_64_1.1.200.v20120913-144807/META-INF/eclipse.inf
+java/sun-7/lib/missioncontrol/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_64_1.1.200.v20120913-144807/about.html
+java/sun-7/lib/missioncontrol/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_64_1.1.200.v20120913-144807/eclipse_1502.so
+java/sun-7/lib/missioncontrol/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_64_1.1.200.v20120913-144807/launcher.gtk.linux.x86_64.properties
 java/sun-7/lib/missioncontrol/plugins/org.eclipse.equinox.launcher_1.3.0.v20120522-1813.jar
 java/sun-7/lib/missioncontrol/plugins/org.eclipse.equinox.p2.artifact.repository_1.1.200.v20120430-1959.jar
 java/sun-7/lib/missioncontrol/plugins/org.eclipse.equinox.p2.console_1.0.300.v20120429-0125.jar
@@ -435,7 +434,7 @@ java/sun-7/lib/missioncontrol/plugins/org.eclipse.jface_3.8.0.v20120912-135020.j
 java/sun-7/lib/missioncontrol/plugins/org.eclipse.osgi.services_3.3.100.v20120522-1822.jar
 java/sun-7/lib/missioncontrol/plugins/org.eclipse.osgi_3.8.2.v20130124-134944.jar
 java/sun-7/lib/missioncontrol/plugins/org.eclipse.rcp_3.8.1.v201301310800.jar
-java/sun-7/lib/missioncontrol/plugins/org.eclipse.swt.gtk.linux.x86_3.8.1.v3836b.jar
+java/sun-7/lib/missioncontrol/plugins/org.eclipse.swt.gtk.linux.x86_64_3.8.1.v3836b.jar
 java/sun-7/lib/missioncontrol/plugins/org.eclipse.swt_3.8.1.v3836b.jar
 java/sun-7/lib/missioncontrol/plugins/org.eclipse.text_3.5.200.v20120523-1310.jar
 java/sun-7/lib/missioncontrol/plugins/org.eclipse.ui.forms_3.5.200.v20120521-2332.jar
