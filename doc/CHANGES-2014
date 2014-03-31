@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1276 2014/03/31 08:37:04 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1277 2014/03/31 08:40:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1924,3 +1924,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/xrandr to 1.4.2 [wiz 2014-03-31]
 	Updated devel/xorg-util-macros to 1.19.0 [wiz 2014-03-31]
 	Updated devel/boost-headers to 1.55.0nb1 [wiz 2014-03-31]
+	Updated textproc/mdoclint to 1.29 [wiz 2014-03-31]
