@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1269 2014/03/31 08:32:57 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1270 2014/03/31 08:33:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1917,3 +1917,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/py-pytz to 2014.2 [wiz 2014-03-31]
 	Updated devel/py-setuptools to 3.3 [wiz 2014-03-31]
 	Updated converters/py-zfec to 1.4.24 [wiz 2014-03-31]
+	Updated math/fftw to 3.3.4 [wiz 2014-03-31]
