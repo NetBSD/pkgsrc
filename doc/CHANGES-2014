@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1259 2014/03/31 08:19:42 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1260 2014/03/31 08:29:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1907,3 +1907,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added textproc/pod2mdoc version 0.0.8 [wiz 2014-03-31]
 	Added devel/py-pretend version 1.0.8 [wiz 2014-03-31]
 	Updated devel/gnome-common to 3.12.0 [wiz 2014-03-31]
+	Updated security/py-keyring to 3.7 [wiz 2014-03-31]
