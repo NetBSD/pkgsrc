@@ -1,6 +1,8 @@
-$NetBSD: patch-Makefile,v 1.4 2013/10/21 10:06:57 fhajny Exp $
+$NetBSD: patch-Makefile,v 1.5 2014/03/31 11:25:22 wiz Exp $
 
+don't force -ansi
 add missing linker flags
+
 --- Makefile.orig	2013-02-06 13:14:42.000000000 +0000
 +++ Makefile
 @@ -17,7 +17,7 @@
