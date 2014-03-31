@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2014/03/31 10:10:14 adam Exp $
+
+SHA1 (SDL2_image-2.0.0.tar.gz) = 20b1b0db9dd540d6d5e40c7da8a39c6a81248865
+RMD160 (SDL2_image-2.0.0.tar.gz) = 1bd3e383bada30852fe1bcc4ac1f5d144a9158ca
+Size (SDL2_image-2.0.0.tar.gz) = 8398016 bytes
+SHA1 (patch-Makefile.in) = dbe3c8578e6b2be2ab1ed82c170817417f30e021
+SHA1 (patch-configure) = 78123313737fe09eed0d80e5c30eef63e16e908b
