@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1288 2014/03/31 14:03:27 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1289 2014/03/31 14:42:44 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1947,3 +1947,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated archivers/pbzip2 to 1.1.8 [fhajny 2014-03-31]
 	Updated security/py-cryptography to 0.2.2nb3 [wiz 2014-03-31]
 	Added sysutils/py-setproctitle version 1.1.8 [wiz 2014-03-31]
+	Updated devel/rudiments to 0.46 [fhajny 2014-03-31]
