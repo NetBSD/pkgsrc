@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1278 2014/03/31 08:45:43 richard Exp $
+$NetBSD: CHANGES-2014,v 1.1279 2014/03/31 08:53:17 skrll Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1926,3 +1926,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/boost-headers to 1.55.0nb1 [wiz 2014-03-31]
 	Updated textproc/mdoclint to 1.29 [wiz 2014-03-31]
 	Updated misc/py-stdnum to 0.9 [richard 2014-03-31]
+	Updated misc/raspberrypi-userland to 20140329 [skrll 2014-03-31]
