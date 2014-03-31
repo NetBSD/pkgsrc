@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/09/30 09:33:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/03/31 08:30:53 wiz Exp $
 bin/pyflakes${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -47,6 +47,9 @@ ${PYSITELIB}/pyflakes/test/test_imports.pyo
 ${PYSITELIB}/pyflakes/test/test_other.py
 ${PYSITELIB}/pyflakes/test/test_other.pyc
 ${PYSITELIB}/pyflakes/test/test_other.pyo
+${PYSITELIB}/pyflakes/test/test_return_with_arguments_inside_generator.py
+${PYSITELIB}/pyflakes/test/test_return_with_arguments_inside_generator.pyc
+${PYSITELIB}/pyflakes/test/test_return_with_arguments_inside_generator.pyo
 ${PYSITELIB}/pyflakes/test/test_undefined_names.py
 ${PYSITELIB}/pyflakes/test/test_undefined_names.pyc
 ${PYSITELIB}/pyflakes/test/test_undefined_names.pyo
