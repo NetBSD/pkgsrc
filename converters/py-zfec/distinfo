@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2012/02/12 19:55:09 gls Exp $
+$NetBSD: distinfo,v 1.4 2014/03/31 08:32:48 wiz Exp $
 
-SHA1 (zfec-1.4.22.tar.gz) = 5f6548a68d0c4b8a5dcfb190120d338d55179a81
-RMD160 (zfec-1.4.22.tar.gz) = 296a328db013c6e373ade1f34377502b1fed8c9c
-Size (zfec-1.4.22.tar.gz) = 162680 bytes
+SHA1 (zfec-1.4.24.tar.gz) = 99b334431209332a14f0531de252aee3de18c948
+RMD160 (zfec-1.4.24.tar.gz) = 98d51af0c4af8d33f558e4e60f14773dc21fd178
+Size (zfec-1.4.24.tar.gz) = 175884 bytes
 SHA1 (patch-aa) = 0df981871a8fb22656a53a1934c1153d1a65c442
