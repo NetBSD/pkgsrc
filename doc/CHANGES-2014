@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1281 2014/03/31 09:48:20 martin Exp $
+$NetBSD: CHANGES-2014,v 1.1282 2014/03/31 09:50:06 martin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1930,3 +1930,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated pkgtools/x11-links to 0.85 [ryoon 2014-03-31]
 	Added cross/binutils-mips-current version 2.23.91 [martin 2014-03-31]
 	Updated cross/binutils-mips-current to 2.23.91 [martin 2014-03-31]
+	Added cross/gcc-mips-current version 20140330 [martin 2014-03-31]
+	Updated cross/gcc-mips-current to 20140330 [martin 2014-03-31]
