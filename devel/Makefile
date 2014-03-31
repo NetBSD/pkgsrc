@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1877 2014/03/18 14:38:54 taca Exp $
+# $NetBSD: Makefile,v 1.1878 2014/03/31 08:18:52 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1498,6 +1498,7 @@ SUBDIR+=	py-pexpect
 SUBDIR+=	py-pip
 SUBDIR+=	py-polib
 SUBDIR+=	py-pqueue
+SUBDIR+=	py-pretend
 SUBDIR+=	py-py
 SUBDIR+=	py-py2app
 SUBDIR+=	py-pyev
