@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2013/11/26 14:19:51 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2014/03/31 08:19:33 wiz Exp $
 
-DISTNAME=	gnome-common-3.10.0
+DISTNAME=	gnome-common-3.12.0
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-common/3.10/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-common/3.12/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
