@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/03/31 14:03:03 wiz Exp $
+
+SHA1 (setproctitle-1.1.8.tar.gz) = a23463feac8d99b5504efc22f0ca2cfe2c145930
+RMD160 (setproctitle-1.1.8.tar.gz) = 001dbb048258c6ac2e4a5c309c9e8a9ebcea083e
+Size (setproctitle-1.1.8.tar.gz) = 23208 bytes
