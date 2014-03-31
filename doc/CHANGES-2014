@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1271 2014/03/31 08:33:52 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1272 2014/03/31 08:34:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1919,3 +1919,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated converters/py-zfec to 1.4.24 [wiz 2014-03-31]
 	Updated math/fftw to 3.3.4 [wiz 2014-03-31]
 	Updated fonts/harfbuzz to 0.9.27 [wiz 2014-03-31]
+	Updated audio/libmikmod to 3.3.6 [wiz 2014-03-31]
