@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1282 2014/03/31 09:50:06 martin Exp $
+$NetBSD: CHANGES-2014,v 1.1283 2014/03/31 10:20:38 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1932,3 +1932,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated cross/binutils-mips-current to 2.23.91 [martin 2014-03-31]
 	Added cross/gcc-mips-current version 20140330 [martin 2014-03-31]
 	Updated cross/gcc-mips-current to 20140330 [martin 2014-03-31]
+	Updated security/libguardtime to 0.3.13 [fhajny 2014-03-31]
