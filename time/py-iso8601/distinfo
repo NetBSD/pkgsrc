@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/03/31 08:10:05 wiz Exp $
+
+SHA1 (iso8601-0.1.10.tar.gz) = 523f48ec579c49c0c1496c094282b684e07d4b36
+RMD160 (iso8601-0.1.10.tar.gz) = dab2bd109891c7c76340dc6a5a18a86c5c95eee4
+Size (iso8601-0.1.10.tar.gz) = 8405 bytes
