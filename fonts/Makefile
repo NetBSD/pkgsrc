@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.244 2014/02/27 14:46:37 wiz Exp $
+# $NetBSD: Makefile,v 1.245 2014/03/31 08:12:36 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -311,6 +311,7 @@ SUBDIR+=	tex-wasysym-doc
 SUBDIR+=	tex-zapfchan
 SUBDIR+=	tex-zapfding
 SUBDIR+=	thaixfonts
+SUBDIR+=	ttf-tlwg
 SUBDIR+=	ttf2pk
 SUBDIR+=	ttf2pt1
 SUBDIR+=	ttfdump
