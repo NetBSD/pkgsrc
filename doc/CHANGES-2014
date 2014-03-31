@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1264 2014/03/31 08:31:02 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1265 2014/03/31 08:31:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1912,3 +1912,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/libFS to 1.0.6 [wiz 2014-03-31]
 	Updated devel/py-cffi to 0.8.2 [wiz 2014-03-31]
 	Updated devel/py-flakes to 0.8 [wiz 2014-03-31]
+	Updated audio/libwildmidi to 0.3.5 [wiz 2014-03-31]
