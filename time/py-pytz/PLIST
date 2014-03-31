@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2014/01/06 14:36:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2014/03/31 08:32:07 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -250,6 +250,7 @@ ${PYSITELIB}/pytz/zoneinfo/Antarctica/Palmer
 ${PYSITELIB}/pytz/zoneinfo/Antarctica/Rothera
 ${PYSITELIB}/pytz/zoneinfo/Antarctica/South_Pole
 ${PYSITELIB}/pytz/zoneinfo/Antarctica/Syowa
+${PYSITELIB}/pytz/zoneinfo/Antarctica/Troll
 ${PYSITELIB}/pytz/zoneinfo/Antarctica/Vostok
 ${PYSITELIB}/pytz/zoneinfo/Arctic/Longyearbyen
 ${PYSITELIB}/pytz/zoneinfo/Asia/Aden
