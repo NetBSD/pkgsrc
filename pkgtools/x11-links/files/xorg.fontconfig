@@ -1,4 +1,4 @@
-# $NetBSD: xorg.fontconfig,v 1.8 2014/01/23 21:05:18 ryoon Exp $
+# $NetBSD: xorg.fontconfig,v 1.9 2014/03/31 09:19:33 ryoon Exp $
 #
 include/fontconfig/fcfreetype.h
 include/fontconfig/fcprivate.h
@@ -15,6 +15,7 @@ lib/libfontconfig.so.1
 lib/libfontconfig.so.1.3
 lib/libfontconfig.so.2
 lib/libfontconfig.so.2.0
+lib/libfontconfig.so.2.2
 lib/libfontconfig.so.6.0
 lib/libfontconfig.so.7.0
 lib/libfontconfig.so.8.0
