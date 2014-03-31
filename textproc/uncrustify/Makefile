@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/01/13 04:22:34 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.2 2014/03/31 08:31:44 wiz Exp $
 
-DISTNAME=	uncrustify-0.59
+DISTNAME=	uncrustify-0.60
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=uncrustify/}
 
