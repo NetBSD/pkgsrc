@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2014/02/05 09:44:18 obache Exp $
+# $NetBSD: Makefile,v 1.18 2014/03/31 08:34:55 wiz Exp $
 
-DISTNAME=	xrandr-1.4.1
+DISTNAME=	xrandr-1.4.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
