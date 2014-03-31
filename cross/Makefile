@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2014/01/17 01:50:00 jnemeth Exp $
+# $NetBSD: Makefile,v 1.59 2014/03/31 09:51:35 martin Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -13,6 +13,7 @@ SUBDIR+=	avrdude
 SUBDIR+=	bfd-crunchide
 SUBDIR+=	bfd-mdsetimage
 SUBDIR+=	binutils
+SUBDIR+=	binutils-mips-current
 SUBDIR+=	bossa
 SUBDIR+=	cc65
 SUBDIR+=	dasm
@@ -25,6 +26,7 @@ SUBDIR+=	freemint-ldg
 SUBDIR+=	freemint-mintbin
 SUBDIR+=	freemint-mintlib
 SUBDIR+=	freemint-pml
+SUBDIR+=	gcc-mips-current
 SUBDIR+=	h8300-elf-binutils
 SUBDIR+=	h8300-elf-gcc34
 SUBDIR+=	h8300-hms-binutils
