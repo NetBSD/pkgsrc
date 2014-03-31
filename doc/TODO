@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13129 2014/03/31 08:31:02 wiz Exp $
+$NetBSD: TODO,v 1.13130 2014/03/31 08:31:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -773,7 +773,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libuuid-2.24.1
 	o libv4l-0.8.5
 	o libvdpau-0.7
-	o libwildmidi-0.3.5
 	o libxdg-basedir-1.2.0
 	o libxkbcommon-0.4.1
 	o libxklavier-5.3
