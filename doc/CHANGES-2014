@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1273 2014/03/31 08:34:42 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1274 2014/03/31 08:35:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1921,3 +1921,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated fonts/harfbuzz to 0.9.27 [wiz 2014-03-31]
 	Updated audio/libmikmod to 3.3.6 [wiz 2014-03-31]
 	Updated devel/global to 6.2.11 [wiz 2014-03-31]
+	Updated x11/xrandr to 1.4.2 [wiz 2014-03-31]
