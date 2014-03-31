@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.6 2013/09/14 09:14:08 fhajny Exp $
+$NetBSD: patch-aa,v 1.7 2014/03/31 14:42:20 fhajny Exp $
 
 Link when linking.
---- configure.orig	2011-08-03 10:33:54.000000000 +0000
+--- configure.orig	2014-03-25 04:06:31.000000000 +0000
 +++ configure
-@@ -22414,7 +22414,7 @@ mlockall(0);
+@@ -25060,7 +25060,7 @@ mlockall(0);
    return 0;
  }
  _ACEOF
@@ -12,7 +12,7 @@ Link when linking.
  
  $as_echo "#define RUDIMENTS_HAVE_MLOCKALL 1" >>confdefs.h
   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
-@@ -22504,7 +22504,7 @@ munlockall();
+@@ -25150,7 +25150,7 @@ munlockall();
    return 0;
  }
  _ACEOF
