@@ -1,20 +1,20 @@
-$NetBSD: patch-ac,v 1.10 2013/10/06 16:09:01 wiz Exp $
+$NetBSD: patch-ac,v 1.11 2014/03/31 08:34:12 wiz Exp $
 
---- configure.orig	2013-10-05 14:00:10.000000000 +0000
+--- configure.orig	2014-03-20 20:20:14.000000000 +0000
 +++ configure
-@@ -11471,6 +11471,7 @@ fi
+@@ -12359,6 +12359,7 @@ CC=$lt_save_CC
  
- fi
+ 
  
 +if false ; then
  # Check if makeinfo support html output. If it doesn't, pretend it's missing
  # rather than failing rebuilding the documentation.
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking if makeinfo supports html output" >&5
-@@ -11493,6 +11494,7 @@ then
+@@ -12379,6 +12380,7 @@ if test $libmikmod_cv_makeinfo_html = no
  else
  	MAKEINFO="$MAKEINFO --no-split"
  fi
 +fi
  
- # ====================
- # Check for libraries.
+ # =============================================================
+ # Check for typedefs, structures, and compiler characteristics.
