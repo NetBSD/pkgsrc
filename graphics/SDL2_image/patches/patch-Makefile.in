@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2014/03/31 10:10:14 adam Exp $
+
+Explicitly tell libtool the compiler type.
+
+--- Makefile.in.orig	2014-03-21 08:02:25.000000000 +0000
++++ Makefile.in
+@@ -124,7 +124,7 @@ AM_V_lt = $(am__v_lt_@AM_V@)
+ am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
+ am__v_lt_0 = --silent
+ am__v_lt_1 = 
+-libSDL2_image_la_LINK = $(LIBTOOL) $(AM_V_lt) $(AM_LIBTOOLFLAGS) \
++libSDL2_image_la_LINK = $(LIBTOOL) --tag CC $(AM_V_lt) $(AM_LIBTOOLFLAGS) \
+ 	$(LIBTOOLFLAGS) --mode=link $(OBJCLD) $(AM_OBJCFLAGS) \
+ 	$(OBJCFLAGS) $(libSDL2_image_la_LDFLAGS) $(LDFLAGS) -o $@
+ PROGRAMS = $(noinst_PROGRAMS)
