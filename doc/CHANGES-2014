@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1283 2014/03/31 10:20:38 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.1284 2014/03/31 10:37:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1933,3 +1933,13 @@ Changes to the packages collection and infrastructure in 2014:
 	Added cross/gcc-mips-current version 20140330 [martin 2014-03-31]
 	Updated cross/gcc-mips-current to 20140330 [martin 2014-03-31]
 	Updated security/libguardtime to 0.3.13 [fhajny 2014-03-31]
+	Updated graphics/optipng to 0.7.5 [adam 2014-03-31]
+	Updated graphics/pngcrush to 1.7.73 [adam 2014-03-31]
+	Added graphics/SDL2_image version 2.0.0 [adam 2014-03-31]
+	Updated databases/sqlite3 to 3.8.4.2 [adam 2014-03-31]
+	Updated databases/sqlite3-docs to 3.8.4.2 [adam 2014-03-31]
+	Updated databases/sqlite3-tcl to 3.8.4.2 [adam 2014-03-31]
+	Updated databases/mysql55-client to 5.5.37 [adam 2014-03-31]
+	Updated databases/mysql55-server to 5.5.37 [adam 2014-03-31]
+	Updated databases/mysql56-client to 5.6.17 [adam 2014-03-31]
+	Updated databases/mysql56-server to 5.6.17 [adam 2014-03-31]
