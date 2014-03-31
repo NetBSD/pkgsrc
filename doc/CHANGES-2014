@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1256 2014/03/31 08:13:46 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1257 2014/03/31 08:13:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1904,3 +1904,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added time/py-iso8601 version 0.1.10 [wiz 2014-03-31]
 	Added fonts/ttf-tlwg version 0.6.0 [wiz 2014-03-31]
 	Added textproc/docbook2mdoc version 0.0.5 [wiz 2014-03-31]
+	Added textproc/pod2mdoc version 0.0.8 [wiz 2014-03-31]
