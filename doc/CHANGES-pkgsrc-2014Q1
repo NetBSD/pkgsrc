@@ -1,6 +1,7 @@
-echo $NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.1 2014/03/31 05:20:06 agc Exp $
-echo 
-echo Changes to the packages collection and infrastructure on the
-echo pkgsrc-2014Q1 branch:
-echo 
-echo Created pkgsrc-2014Q1 branch [agc 2014-03-31 05:15 UTC]
+$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.2 2014/03/31 12:12:57 tron Exp $
+
+Changes to the packages collection and infrastructure on the
+pkgsrc-2014Q1 branch:
+
+Created pkgsrc-2014Q1 branch [agc 2014-03-31 05:15 UTC]
+
