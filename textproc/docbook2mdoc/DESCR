@@ -1,0 +1,3 @@
+The docbook2mdoc utility is a converter from DocBook into mdoc.
+Unlike most DocBook utilities, it's a standalone ISC-licensed ISO
+C utility that should compile on any modern UNIX system.
