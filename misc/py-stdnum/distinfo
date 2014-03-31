@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/03/31 08:42:47 richard Exp $
+
+SHA1 (python-stdnum-0.9.tar.gz) = 50265eaadd9827e54d70085b7f0de9e7055f3952
+RMD160 (python-stdnum-0.9.tar.gz) = 9f69168c908d278b66be4992a7823a0cacdbe9cd
+Size (python-stdnum-0.9.tar.gz) = 136636 bytes
