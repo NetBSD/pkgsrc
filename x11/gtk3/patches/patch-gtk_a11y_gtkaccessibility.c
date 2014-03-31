@@ -1,5 +1,5 @@
-$NetBSD: patch-gtk_a11y_gtkaccessibility.c,v 1.2 2013/12/08 14:21:37 prlw1 Exp $
- 
+$NetBSD: patch-gtk_a11y_gtkaccessibility.c,v 1.3 2014/03/31 13:26:31 adam Exp $
+
 gtk3-atk-bridge option to avoid dbus dependency.
 
 --- gtk/a11y/gtkaccessibility.c.orig	2013-10-14 16:39:20.000000000 +0000
