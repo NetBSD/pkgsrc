@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2014/03/22 00:07:20 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2014/03/31 13:42:29 wiz Exp $
 
 DISTNAME=	cryptography-0.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security python
 MASTER_SITES=	https://pypi.python.org/packages/source/c/cryptography/
 
@@ -14,6 +14,9 @@ LICENSE=	apache-2.0
 DEPENDS+=	${PYPKGPREFIX}-cffi>=0.8:../../devel/py-cffi
 DEPENDS+=	${PYPKGPREFIX}-cparser>=2.10:../../devel/py-cparser
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+# actually, TEST_DEPENDS
+BUILD_DEPENDS+=	${PYPKGPREFIX}-iso8601-[0-9]*:../../time/py-iso8601
+BUILD_DEPENDS+=	${PYPKGPREFIX}-pretend-[0-9]*:../../devel/py-pretend
 BUILD_DEPENDS+=	${PYPKGPREFIX}-requests>=0.8:../../devel/py-requests
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test>=0.8:../../devel/py-test
 
