@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1253 2014/03/31 05:22:25 agc Exp $
+$NetBSD: CHANGES-2014,v 1.1254 2014/03/31 08:10:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1901,3 +1901,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/kdenlive to 0.9.6 [abs 2014-03-30]
 	Updated sysutils/ntfsprogs to 2.0.0nb2 [jakllsch 2014-03-30]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2014Q1 branch [agc 2014-03-30]
+	Added time/py-iso8601 version 0.1.10 [wiz 2014-03-31]
