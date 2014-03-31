@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.761 2014/03/27 10:04:02 wiz Exp $
+# $NetBSD: Makefile,v 1.762 2014/03/31 08:13:36 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -143,6 +143,7 @@ SUBDIR+=	docbook-simple
 SUBDIR+=	docbook-website
 SUBDIR+=	docbook-xml
 SUBDIR+=	docbook-xsl
+SUBDIR+=	docbook2mdoc
 SUBDIR+=	doclifter
 SUBDIR+=	dsssl-docbook-modular
 SUBDIR+=	dtdparse
@@ -587,6 +588,7 @@ SUBDIR+=	php-wddx
 SUBDIR+=	php-xsl
 SUBDIR+=	po-mode
 SUBDIR+=	po4a
+SUBDIR+=	pod2mdoc
 SUBDIR+=	postgresql-autodoc
 SUBDIR+=	psgml-mode
 SUBDIR+=	pxp
