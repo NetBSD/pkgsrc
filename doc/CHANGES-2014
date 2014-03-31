@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1254 2014/03/31 08:10:31 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1255 2014/03/31 08:12:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1902,3 +1902,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/ntfsprogs to 2.0.0nb2 [jakllsch 2014-03-30]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2014Q1 branch [agc 2014-03-30]
 	Added time/py-iso8601 version 0.1.10 [wiz 2014-03-31]
+	Added fonts/ttf-tlwg version 0.6.0 [wiz 2014-03-31]
