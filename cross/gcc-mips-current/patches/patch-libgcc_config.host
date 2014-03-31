@@ -1,0 +1,25 @@
+$NetBSD: patch-libgcc_config.host,v 1.1 2014/03/31 09:49:32 martin Exp $
+
+don't force libgcc_so.so to depend upon libc being present, and
+build the gcc crtstuff (for this cross-compiler only)
+
+--- libgcc/config.host.orig	2014-03-06 04:24:11.000000000 -0800
++++ libgcc/config.host	2014-03-23 17:46:43.000000000 -0700
+@@ -239,14 +239,8 @@
+   ;;
+ *-*-netbsd*)
+   tmake_file="$tmake_file t-crtstuff-pic t-libgcc-pic t-slibgcc t-slibgcc-gld t-slibgcc-elf-ver"
+-  # NetBSD 1.7 and later are set up to use GCC's crtstuff for
+-  # ELF configurations.  We will clear extra_parts in the
+-  # a.out configurations.
+-  case ${host} in
+-    *-*-netbsd*1.[7-9]* | *-*-netbsd[2-9]* | *-*-netbsdelf[2-9]*)
+-      extra_parts="crtbegin.o crtend.o crtbeginS.o crtendS.o crtbeginT.o"
+-      ;;
+-  esac
++  tmake_file="${tmake_file} t-slibgcc-nolc-override"
++  extra_parts="crtbegin.o crtend.o crtbeginS.o crtendS.o"
+   ;;
+ *-*-openbsd*)
+   tmake_file="$tmake_file t-crtstuff-pic t-libgcc-pic t-eh-dw2-dip"
+
