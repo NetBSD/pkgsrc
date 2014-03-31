@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2014/01/25 10:29:59 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2014/03/31 08:32:48 wiz Exp $
 
-DISTNAME=	zfec-1.4.22
+DISTNAME=	zfec-1.4.24
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	converters
 MASTER_SITES=	http://pypi.python.org/packages/source/z/zfec/
