@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1266 2014/03/31 08:31:52 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1267 2014/03/31 08:32:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1914,3 +1914,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-flakes to 0.8 [wiz 2014-03-31]
 	Updated audio/libwildmidi to 0.3.5 [wiz 2014-03-31]
 	Updated textproc/uncrustify to 0.60 [wiz 2014-03-31]
+	Updated time/py-pytz to 2014.2 [wiz 2014-03-31]
