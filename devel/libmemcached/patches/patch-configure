@@ -1,8 +1,8 @@
-$NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
+$NetBSD: patch-configure,v 1.4 2014/04/01 13:51:56 fhajny Exp $
 
---- configure.orig	2013-04-03 04:22:41.000000000 +0000
+--- configure.orig	2014-02-09 11:52:52.000000000 +0000
 +++ configure
-@@ -26555,15 +26555,15 @@ else
+@@ -26560,15 +26560,15 @@ else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
@@ -21,7 +21,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -26628,7 +26628,7 @@ main ()
+@@ -26632,7 +26632,7 @@ main ()
    return 0;
  }
  _ACEOF
@@ -30,7 +30,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -26685,15 +26685,17 @@ else
+@@ -26688,15 +26688,17 @@ else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
@@ -50,7 +50,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -26750,15 +26752,17 @@ else
+@@ -26752,15 +26754,17 @@ else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
@@ -71,7 +71,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -26823,7 +26827,7 @@ main ()
+@@ -26824,7 +26828,7 @@ main ()
    return 0;
  }
  _ACEOF
@@ -116,7 +116,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -27148,7 +27152,7 @@ main ()
+@@ -27147,7 +27151,7 @@ main ()
    return 0;
  }
  _ACEOF
@@ -125,7 +125,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -27213,7 +27217,7 @@ main ()
+@@ -27211,7 +27215,7 @@ main ()
    return 0;
  }
  _ACEOF
@@ -134,7 +134,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -27278,7 +27282,7 @@ main ()
+@@ -27275,7 +27279,7 @@ main ()
    return 0;
  }
  _ACEOF
@@ -143,7 +143,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -27343,7 +27347,7 @@ main ()
+@@ -27339,7 +27343,7 @@ main ()
    return 0;
  }
  _ACEOF
@@ -152,7 +152,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -27408,7 +27412,7 @@ main ()
+@@ -27403,7 +27407,7 @@ main ()
    return 0;
  }
  _ACEOF
@@ -161,7 +161,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -27473,7 +27477,7 @@ main ()
+@@ -27468,7 +27472,7 @@ main ()
    return 0;
  }
  _ACEOF
@@ -170,7 +170,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -27529,16 +27533,19 @@ else
+@@ -27523,16 +27527,19 @@ else
    CFLAGS="$CFLAGS -Werror $flag"
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
@@ -193,7 +193,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -27603,7 +27610,7 @@ main ()
+@@ -27596,7 +27603,7 @@ main ()
    return 0;
  }
  _ACEOF
@@ -202,7 +202,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -27668,7 +27675,7 @@ main ()
+@@ -27660,7 +27667,7 @@ main ()
    return 0;
  }
  _ACEOF
@@ -211,7 +211,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -27733,7 +27740,7 @@ main ()
+@@ -27725,7 +27732,7 @@ main ()
    return 0;
  }
  _ACEOF
@@ -220,7 +220,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -27798,7 +27805,7 @@ main ()
+@@ -27790,7 +27797,7 @@ main ()
    return 0;
  }
  _ACEOF
@@ -229,7 +229,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -31956,16 +31963,16 @@ else
+@@ -31967,16 +31974,16 @@ else
    CXXFLAGS="$CXXFLAGS -Werror $flag"
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
@@ -249,7 +249,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -32030,7 +32037,7 @@ main ()
+@@ -32042,7 +32049,7 @@ main ()
    return 0;
  }
  _ACEOF
@@ -258,7 +258,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -32087,15 +32094,17 @@ else
+@@ -32098,15 +32105,17 @@ else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
@@ -278,7 +278,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -32155,12 +32164,12 @@ else
+@@ -32165,12 +32174,12 @@ else
  int
  main ()
  {
@@ -294,7 +294,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -32225,7 +32234,7 @@ main ()
+@@ -32234,7 +32243,7 @@ main ()
    return 0;
  }
  _ACEOF
@@ -303,7 +303,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -32290,7 +32299,7 @@ main ()
+@@ -32298,7 +32307,7 @@ main ()
    return 0;
  }
  _ACEOF
@@ -312,7 +312,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -32355,7 +32364,7 @@ main ()
+@@ -32362,7 +32371,7 @@ main ()
    return 0;
  }
  _ACEOF
@@ -321,7 +321,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -32420,7 +32429,7 @@ main ()
+@@ -32426,7 +32435,7 @@ main ()
    return 0;
  }
  _ACEOF
@@ -330,7 +330,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -32485,7 +32494,7 @@ main ()
+@@ -32490,7 +32499,7 @@ main ()
    return 0;
  }
  _ACEOF
@@ -339,7 +339,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -32550,7 +32559,7 @@ main ()
+@@ -32554,7 +32563,7 @@ main ()
    return 0;
  }
  _ACEOF
@@ -348,7 +348,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -32615,7 +32624,7 @@ main ()
+@@ -32618,7 +32627,7 @@ main ()
    return 0;
  }
  _ACEOF
@@ -357,7 +357,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -32680,7 +32689,7 @@ main ()
+@@ -32682,7 +32691,7 @@ main ()
    return 0;
  }
  _ACEOF
@@ -366,7 +366,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -32745,7 +32754,7 @@ main ()
+@@ -32746,7 +32755,7 @@ main ()
    return 0;
  }
  _ACEOF
@@ -384,7 +384,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -32875,7 +32884,7 @@ main ()
+@@ -32874,7 +32883,7 @@ main ()
    return 0;
  }
  _ACEOF
@@ -393,7 +393,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -32931,16 +32940,19 @@ else
+@@ -32929,16 +32938,19 @@ else
    CXXFLAGS="$CXXFLAGS -Werror $flag"
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
@@ -416,7 +416,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -33005,7 +33017,7 @@ main ()
+@@ -33002,7 +33014,7 @@ main ()
    return 0;
  }
  _ACEOF
@@ -425,7 +425,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -33070,7 +33082,7 @@ main ()
+@@ -33066,7 +33078,7 @@ main ()
    return 0;
  }
  _ACEOF
@@ -434,7 +434,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -33135,7 +33147,7 @@ main ()
+@@ -33131,7 +33143,7 @@ main ()
    return 0;
  }
  _ACEOF
@@ -443,7 +443,7 @@ $NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
    eval "$as_CACHEVAR=yes"
  else
    eval "$as_CACHEVAR=no"
-@@ -33200,7 +33212,7 @@ main ()
+@@ -33195,7 +33207,7 @@ main ()
    return 0;
  }
  _ACEOF
