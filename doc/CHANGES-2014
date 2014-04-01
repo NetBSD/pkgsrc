@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1301 2014/04/01 21:21:42 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1302 2014/04/01 21:24:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1967,3 +1967,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/libyaml to 0.1.6 [wiz 2014-04-01]
 	Updated databases/py-ldap to 2.4.15 [wiz 2014-04-01]
 	Updated fonts/fontconfig to 2.11.1 [wiz 2014-04-01]
+	Updated x11/libxkbcommon to 0.4.1 [wiz 2014-04-01]
