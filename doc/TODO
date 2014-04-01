@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13145 2014/04/01 06:49:15 adam Exp $
+$NetBSD: TODO,v 1.13146 2014/04/01 08:40:12 adam Exp $
 
 Suggested new packages
 ======================
@@ -591,7 +591,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glade3-3.14.2
 	o gle-4.2.4
 	o glom-1.14.2 [GNOME 2.26]
-	o glpk-4.54
 	o glu-10.1
 	o glusterfs-3.4.2
 	o gmp-6.0.0a
@@ -667,7 +666,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hanzim-3.5
 	o haskell-mode-1.45
 	o hdf-4.2.7
-	o help2man-1.45.1
 	o hesiod-3.1.0
 	o heyu-2.9.0
 	o hiawatha-9.3
