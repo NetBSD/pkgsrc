@@ -1,8 +1,8 @@
-$NetBSD: patch-configure,v 1.2 2013/10/30 07:08:23 adam Exp $
+$NetBSD: patch-configure,v 1.3 2014/04/01 10:51:49 adam Exp $
 
---- configure.orig	2013-10-28 00:58:04.000000000 +0000
+--- configure.orig	2014-03-23 22:08:02.000000000 +0000
 +++ configure
-@@ -3514,6 +3514,11 @@ case $target_os in
+@@ -3716,6 +3716,11 @@ case $target_os in
          ;;
      netbsd)
          disable symver
@@ -14,7 +14,7 @@ $NetBSD: patch-configure,v 1.2 2013/10/30 07:08:23 adam Exp $
          oss_indev_extralibs="-lossaudio"
          oss_outdev_extralibs="-lossaudio"
          enabled gcc || check_ldflags -Wl,-zmuldefs
-@@ -3872,10 +3877,13 @@ check_cc <<EOF && enable attribute_may_a
+@@ -4101,10 +4106,13 @@ check_cc <<EOF && enable attribute_may_a
  union { int x; } __attribute__((may_alias)) x;
  EOF
  
@@ -31,7 +31,7 @@ $NetBSD: patch-configure,v 1.2 2013/10/30 07:08:23 adam Exp $
  
  check_inline_asm inline_asm_labels '"1:\n"'
  
-@@ -4448,6 +4456,7 @@ enabled xmm_clobber_test &&
+@@ -4727,6 +4735,7 @@ enabled xmm_clobber_test &&
                    -Wl,--wrap,sws_scale ||
      disable xmm_clobber_test
  
@@ -39,7 +39,7 @@ $NetBSD: patch-configure,v 1.2 2013/10/30 07:08:23 adam Exp $
  echo "X{};" > $TMPV
  if test_ldflags -Wl,--version-script,$TMPV; then
      append SHFLAGS '-Wl,--version-script,\$(SUBDIR)lib\$(NAME).ver'
-@@ -4460,6 +4469,7 @@ __asm__(".symver ff_foo,av_foo@VERSION")
+@@ -4739,6 +4748,7 @@ __asm__(".symver ff_foo,av_foo@VERSION")
  void ff_foo(void) {}
  EOF
  fi
@@ -47,12 +47,12 @@ $NetBSD: patch-configure,v 1.2 2013/10/30 07:08:23 adam Exp $
  
  if [ -z "$optflags" ]; then
      if enabled small; then
-@@ -4945,7 +4955,7 @@ Version: $version
+@@ -5259,7 +5269,7 @@ Version: $version
  Requires: $(enabled shared || echo $requires)
  Requires.private: $(enabled shared && echo $requires)
  Conflicts:
--Libs: -L\${libdir} -l${shortname} $(enabled shared || echo $libs)
-+Libs: -L\${libdir} -Wl,-R\${libdir} -l${shortname} $(enabled shared || echo $libs)
+-Libs: -L\${libdir} $(enabled rpath && echo "-Wl,-rpath,\${libdir}") -l${shortname} $(enabled shared || echo $libs)
++Libs: -L\${libdir} -Wl,-R\${libdir} $(enabled rpath && echo "-Wl,-rpath,\${libdir}") -l${shortname} $(enabled shared || echo $libs)
  Libs.private: $(enabled shared && echo $libs)
  Cflags: -I\${includedir}
  EOF
