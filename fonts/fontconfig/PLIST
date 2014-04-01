@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2013/10/17 07:27:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2014/04/01 21:21:28 wiz Exp $
 bin/fc-cache
 bin/fc-cat
 bin/fc-list
@@ -89,6 +89,7 @@ man/man3/FcDirCacheClean.3
 man/man3/FcDirCacheLoad.3
 man/man3/FcDirCacheLoadFile.3
 man/man3/FcDirCacheRead.3
+man/man3/FcDirCacheRescan.3
 man/man3/FcDirCacheUnlink.3
 man/man3/FcDirCacheUnload.3
 man/man3/FcDirCacheValid.3
@@ -134,6 +135,7 @@ man/man3/FcLangSetCreate.3
 man/man3/FcLangSetDel.3
 man/man3/FcLangSetDestroy.3
 man/man3/FcLangSetEqual.3
+man/man3/FcLangSetGetLangs.3
 man/man3/FcLangSetHasLang.3
 man/man3/FcLangSetHash.3
 man/man3/FcLangSetSubtract.3
@@ -280,6 +282,7 @@ share/doc/fontconfig/fontconfig-devel/fcdircacheclean.html
 share/doc/fontconfig/fontconfig-devel/fcdircacheload.html
 share/doc/fontconfig/fontconfig-devel/fcdircacheloadfile.html
 share/doc/fontconfig/fontconfig-devel/fcdircacheread.html
+share/doc/fontconfig/fontconfig-devel/fcdircacherescan.html
 share/doc/fontconfig/fontconfig-devel/fcdircacheunlink.html
 share/doc/fontconfig/fontconfig-devel/fcdircacheunload.html
 share/doc/fontconfig/fontconfig-devel/fcdircachevalid.html
@@ -325,6 +328,7 @@ share/doc/fontconfig/fontconfig-devel/fclangsetcreate.html
 share/doc/fontconfig/fontconfig-devel/fclangsetdel.html
 share/doc/fontconfig/fontconfig-devel/fclangsetdestroy.html
 share/doc/fontconfig/fontconfig-devel/fclangsetequal.html
+share/doc/fontconfig/fontconfig-devel/fclangsetgetlangs.html
 share/doc/fontconfig/fontconfig-devel/fclangsethash.html
 share/doc/fontconfig/fontconfig-devel/fclangsethaslang.html
 share/doc/fontconfig/fontconfig-devel/fclangsetsubtract.html
