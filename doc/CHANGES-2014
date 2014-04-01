@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1295 2014/04/01 11:20:33 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1296 2014/04/01 13:52:08 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1961,3 +1961,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/transmission-qt to 2.82 [adam 2014-04-01]
 	Updated benchmarks/netperf to 2.6.0 [adam 2014-04-01]
 	Updated x11/xf86-video-vmware to 13.0.2 [wiz 2014-04-01]
+	Updated devel/libmemcached to 1.0.18 [fhajny 2014-04-01]
