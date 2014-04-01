@@ -1,0 +1,64 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2014/04/01 08:38:35 adam Exp $
+
+Use external zlib.
+
+--- src/Makefile.in.orig	2014-04-01 08:25:18.000000000 +0000
++++ src/Makefile.in
+@@ -94,7 +94,7 @@ am__uninstall_files_from_dir = { \
+   }
+ am__installdirs = "$(DESTDIR)$(libdir)" "$(DESTDIR)$(includedir)"
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+-libglpk_la_LIBADD =
++libglpk_la_LIBADD = -lz
+ am_libglpk_la_OBJECTS = libglpk_la-avl.lo libglpk_la-bfd.lo \
+ 	libglpk_la-bfx.lo libglpk_la-glpapi01.lo \
+ 	libglpk_la-glpapi02.lo libglpk_la-glpapi03.lo \
+@@ -151,13 +151,7 @@ am_libglpk_la_OBJECTS = libglpk_la-avl.l
+ 	libglpk_la-strspx.lo libglpk_la-strtrim.lo \
+ 	libglpk_la-triang.lo libglpk_la-wclique.lo \
+ 	libglpk_la-wclique1.lo libglpk_la-proxy.lo \
+-	libglpk_la-proxy1.lo libglpk_la-adler32.lo \
+-	libglpk_la-compress.lo libglpk_la-crc32.lo \
+-	libglpk_la-deflate.lo libglpk_la-gzclose.lo \
+-	libglpk_la-gzlib.lo libglpk_la-gzread.lo libglpk_la-gzwrite.lo \
+-	libglpk_la-inffast.lo libglpk_la-inflate.lo \
+-	libglpk_la-inftrees.lo libglpk_la-trees.lo \
+-	libglpk_la-uncompr.lo libglpk_la-zio.lo libglpk_la-zutil.lo
++	libglpk_la-proxy1.lo
+ libglpk_la_OBJECTS = $(am_libglpk_la_OBJECTS)
+ libglpk_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
+ 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+@@ -310,8 +304,7 @@ libglpk_la_CPPFLAGS = \
+ -I$(srcdir)/env \
+ -I$(srcdir)/minisat \
+ -I$(srcdir)/misc \
+--I$(srcdir)/proxy \
+--I$(srcdir)/zlib
++-I$(srcdir)/proxy
+ 
+ libglpk_la_LDFLAGS = \
+ -version-info 37:1:1 \
+@@ -447,22 +440,7 @@ misc/triang.c \
+ misc/wclique.c \
+ misc/wclique1.c \
+ proxy/proxy.c \
+-proxy/proxy1.c \
+-zlib/adler32.c \
+-zlib/compress.c \
+-zlib/crc32.c \
+-zlib/deflate.c \
+-zlib/gzclose.c \
+-zlib/gzlib.c \
+-zlib/gzread.c \
+-zlib/gzwrite.c \
+-zlib/inffast.c \
+-zlib/inflate.c \
+-zlib/inftrees.c \
+-zlib/trees.c \
+-zlib/uncompr.c \
+-zlib/zio.c \
+-zlib/zutil.c
++proxy/proxy1.c
+ 
+ all: all-am
+ 
