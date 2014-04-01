@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1299 2014/04/01 21:10:52 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1300 2014/04/01 21:15:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1965,3 +1965,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/ffmpeg2 to 2.2 [adam 2014-04-01]
 	Updated lang/pcc-current to 20140401 [plunky 2014-04-01]
 	Updated textproc/libyaml to 0.1.6 [wiz 2014-04-01]
+	Updated databases/py-ldap to 2.4.15 [wiz 2014-04-01]
