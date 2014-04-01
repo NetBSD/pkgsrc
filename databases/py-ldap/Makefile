@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2014/03/03 17:01:34 adam Exp $
+# $NetBSD: Makefile,v 1.55 2014/04/01 21:15:23 wiz Exp $
 
-DISTNAME=	python-ldap-2.4.14
+DISTNAME=	python-ldap-2.4.15
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
 CATEGORIES=	databases python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/python-ldap/
@@ -31,11 +31,14 @@ USE_TOOLS+=		pax
 
 INSTALLATION_DIRS=	${PY_LDAP_DOCDIR}
 
+REPLACE_PYTHON=		Lib/ldap/controls/readentry.py
+
 post-install:
 	cd ${WRKSRC} && pax -s,.cvsignore,, -rw CHANGES README INSTALL TODO Demo \
 		${DESTDIR}${PY_LDAP_DOCDIR}
 
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
