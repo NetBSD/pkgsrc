@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1291 2014/04/01 06:49:15 adam Exp $
+$NetBSD: CHANGES-2014,v 1.1292 2014/04/01 08:40:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1953,3 +1953,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/giflib to 5.0.6 [adam 2014-04-01]
 	Updated graphics/giflib-util to 5.0.6 [adam 2014-04-01]
 	Updated emulators/qemu to 1.7.1 [adam 2014-04-01]
+	Updated converters/help2man to 1.45.1 [adam 2014-04-01]
+	Updated math/glpk to 4.54 [adam 2014-04-01]
