@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2013/09/15 12:28:22 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2014/04/01 13:51:56 fhajny Exp $
 #
 
-DISTNAME=	libmemcached-1.0.17
-PKGREVISION=	1
+DISTNAME=	libmemcached-1.0.18
 CATEGORIES=	devel
 MASTER_SITES=	http://launchpad.net/libmemcached/1.0/${PKGVERSION_NOREV}/+download/
 
