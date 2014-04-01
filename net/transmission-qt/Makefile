@@ -1,9 +1,16 @@
-# $NetBSD: Makefile,v 1.6 2014/04/01 09:48:05 adam Exp $
+# $NetBSD: Makefile,v 1.7 2014/04/01 20:04:27 wiz Exp $
 
 PKGNAME=	${DISTNAME:C:-:-qt-:}
 
 USE_LANGUAGES=		c c++
 MAKE_ENV+=		QTDIR=${QTDIR}
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-[6-9].*-*)
+MAKE_ENV+=		SUBLIBS=-lquota
+.endif
+
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}${PREFIX}
 
 CONFIGURE_ARGS+=	--disable-cli
