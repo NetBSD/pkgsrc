@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2012/07/20 00:41:11 gdt Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/04/01 21:31:44 wiz Exp $
 bin/lines
+bin/passphrase
 bin/randcookie
 bin/randfile
 bin/tailx
@@ -12,7 +13,6 @@ ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/stdeb.cfg
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pyutil/PickleSaver.py
 ${PYSITELIB}/pyutil/PickleSaver.pyc
@@ -26,18 +26,13 @@ ${PYSITELIB}/pyutil/_version.pyo
 ${PYSITELIB}/pyutil/assertutil.py
 ${PYSITELIB}/pyutil/assertutil.pyc
 ${PYSITELIB}/pyutil/assertutil.pyo
-${PYSITELIB}/pyutil/benchmarks/bench_json.py
-${PYSITELIB}/pyutil/benchmarks/bench_json.pyc
-${PYSITELIB}/pyutil/benchmarks/bench_json.pyo
-${PYSITELIB}/pyutil/benchmarks/bench_xor.py
-${PYSITELIB}/pyutil/benchmarks/bench_xor.pyc
-${PYSITELIB}/pyutil/benchmarks/bench_xor.pyo
 ${PYSITELIB}/pyutil/benchutil.py
 ${PYSITELIB}/pyutil/benchutil.pyc
 ${PYSITELIB}/pyutil/benchutil.pyo
 ${PYSITELIB}/pyutil/cache.py
 ${PYSITELIB}/pyutil/cache.pyc
 ${PYSITELIB}/pyutil/cache.pyo
+${PYSITELIB}/pyutil/data/wordlist.txt
 ${PYSITELIB}/pyutil/dictutil.py
 ${PYSITELIB}/pyutil/dictutil.pyc
 ${PYSITELIB}/pyutil/dictutil.pyo
@@ -47,9 +42,6 @@ ${PYSITELIB}/pyutil/fileutil.pyo
 ${PYSITELIB}/pyutil/find_exe.py
 ${PYSITELIB}/pyutil/find_exe.pyc
 ${PYSITELIB}/pyutil/find_exe.pyo
-${PYSITELIB}/pyutil/hashexpand.py
-${PYSITELIB}/pyutil/hashexpand.pyc
-${PYSITELIB}/pyutil/hashexpand.pyo
 ${PYSITELIB}/pyutil/humanreadable.py
 ${PYSITELIB}/pyutil/humanreadable.pyc
 ${PYSITELIB}/pyutil/humanreadable.pyo
@@ -101,6 +93,9 @@ ${PYSITELIB}/pyutil/scripts/lines.pyo
 ${PYSITELIB}/pyutil/scripts/memdump2dot.py
 ${PYSITELIB}/pyutil/scripts/memdump2dot.pyc
 ${PYSITELIB}/pyutil/scripts/memdump2dot.pyo
+${PYSITELIB}/pyutil/scripts/passphrase.py
+${PYSITELIB}/pyutil/scripts/passphrase.pyc
+${PYSITELIB}/pyutil/scripts/passphrase.pyo
 ${PYSITELIB}/pyutil/scripts/randcookie.py
 ${PYSITELIB}/pyutil/scripts/randcookie.pyc
 ${PYSITELIB}/pyutil/scripts/randcookie.pyo
@@ -227,9 +222,6 @@ ${PYSITELIB}/pyutil/test/out_of_shape/test_zlibutil.pyo
 ${PYSITELIB}/pyutil/testutil.py
 ${PYSITELIB}/pyutil/testutil.pyc
 ${PYSITELIB}/pyutil/testutil.pyo
-${PYSITELIB}/pyutil/time_comparisons.py
-${PYSITELIB}/pyutil/time_comparisons.pyc
-${PYSITELIB}/pyutil/time_comparisons.pyo
 ${PYSITELIB}/pyutil/time_format.py
 ${PYSITELIB}/pyutil/time_format.pyc
 ${PYSITELIB}/pyutil/time_format.pyo
@@ -254,8 +246,9 @@ ${PYSITELIB}/pyutil/xor/xor.pyo
 ${PYSITELIB}/pyutil/zlibutil.py
 ${PYSITELIB}/pyutil/zlibutil.pyc
 ${PYSITELIB}/pyutil/zlibutil.pyo
+pyutil/data/wordlist.txt
 share/doc/pyutil/COPYING.GPL
 share/doc/pyutil/COPYING.SPL.txt
-share/doc/pyutil/COPYING.TGPPL.html
+share/doc/pyutil/COPYING.TGPPL.rst
 share/doc/pyutil/CREDITS
 share/doc/pyutil/README.rst
