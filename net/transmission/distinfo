@@ -1,12 +1,14 @@
-$NetBSD: distinfo,v 1.3 2014/04/01 09:48:04 adam Exp $
+$NetBSD: distinfo,v 1.4 2014/04/01 11:13:28 wiz Exp $
 
 SHA1 (transmission-2.82.tar.xz) = 1081542e2692147e45dde7c310b793abc4f33f2d
 RMD160 (transmission-2.82.tar.xz) = 468ac753cd7143f2789a4b2515b9b6eb1745717f
 Size (transmission-2.82.tar.xz) = 3172024 bytes
-SHA1 (patch-aa) = 75d6df8cf8105dbb55ec3a4ed967036c28cfae3c
-SHA1 (patch-ab) = 96174f474e3301f9062eaa17fafe3cd5c26a5243
+SHA1 (patch-aa) = 1a3761226a9986e69a61f531213a447bbdb2c54f
+SHA1 (patch-ab) = 796faa7c61762dc3ffe563748e55160c827149d2
 SHA1 (patch-ac) = 75e0d1fbfc5bb895b17fa22d8d09d6257e798847
-SHA1 (patch-libtransmission_platform-quota.c) = d87c6cfba6ef91585afac1063a8f47e39777a9a8
+SHA1 (patch-configure) = f7df68a574fba475578e352283f43e6c058db494
+SHA1 (patch-configure.ac) = a0445df6bf43029e7cb16ee346a27fd016f98889
+SHA1 (patch-libtransmission_platform-quota.c) = 08999288207643b97efca558c824489ea745d411
 SHA1 (patch-qt_qtr.pro) = 9a272f1e60f1b59d513b62451b4e0fc085dbae18
 SHA1 (patch-qt_torrent-filter.cc) = 490babef551fd43cfed18c0efdfd9624c8c3527e
 SHA1 (patch-third-party_miniupnp_miniupnp.c) = df4957ccf5b08af14d2df98e953dd2d1b584c294
