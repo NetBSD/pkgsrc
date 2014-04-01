@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1293 2014/04/01 10:57:49 adam Exp $
+$NetBSD: CHANGES-2014,v 1.1294 2014/04/01 11:14:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1959,3 +1959,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/transmission to 2.82 [adam 2014-04-01]
 	Updated net/transmission-gtk to 2.82 [adam 2014-04-01]
 	Updated net/transmission-qt to 2.82 [adam 2014-04-01]
+	Updated benchmarks/netperf to 2.6.0 [adam 2014-04-01]
