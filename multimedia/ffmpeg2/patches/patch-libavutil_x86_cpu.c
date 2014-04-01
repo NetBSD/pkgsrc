@@ -1,6 +1,6 @@
-$NetBSD: patch-libavutil_x86_cpu.c,v 1.2 2013/10/30 07:08:23 adam Exp $
+$NetBSD: patch-libavutil_x86_cpu.c,v 1.3 2014/04/01 10:51:49 adam Exp $
 
---- libavutil/x86/cpu.c.orig	2013-10-28 00:58:06.000000000 +0000
+--- libavutil/x86/cpu.c.orig	2014-03-23 22:07:55.000000000 +0000
 +++ libavutil/x86/cpu.c
 @@ -116,6 +116,7 @@ int ff_get_cpu_flags_x86(void)
  #if HAVE_SSE
@@ -10,11 +10,11 @@ $NetBSD: patch-libavutil_x86_cpu.c,v 1.2 2013/10/30 07:08:23 adam Exp $
          if (std_caps & (1 << 26))
              rval |= AV_CPU_FLAG_SSE2;
          if (ecx & 1)
-@@ -143,6 +144,7 @@ int ff_get_cpu_flags_x86(void)
-     }
- #endif /* HAVE_AVX2 */
+@@ -138,6 +139,7 @@ int ff_get_cpu_flags_x86(void)
+             }
+         }
  #endif /* HAVE_AVX */
 +#endif /* gcc >= 4.2 */
  #endif /* HAVE_SSE */
      }
- 
+     if (max_std_level >= 7) {
