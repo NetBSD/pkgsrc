@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2014/02/12 23:18:26 tron Exp $
+# $NetBSD: Makefile,v 1.5 2014/04/01 09:48:04 adam Exp $
 
-PKGREVISION=	1
 CONFLICTS+=	Transmission-[0-9]*
 
 pre-configure:
 	touch ${WRKSRC}/po/Makefile
 
+CONFIGURE_ARGS+=	--disable-mac
 CONFIGURE_ARGS+=	--without-gtk
 
 .include "../../net/transmission/Makefile.common"
