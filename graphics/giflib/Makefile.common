@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.5 2013/08/31 18:41:33 adam Exp $
+# $NetBSD: Makefile.common,v 1.6 2014/04/01 06:34:34 adam Exp $
 # used by graphics/giflib/Makefile
 # used by graphics/giflib-util/Makefile
 
-DISTNAME=	giflib-5.0.5
+DISTNAME=	giflib-5.0.6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=giflib/}
 EXTRACT_SUFX=	.tar.bz2
