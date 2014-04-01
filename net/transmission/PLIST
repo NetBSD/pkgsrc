@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/03/02 19:33:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/04/01 09:48:04 adam Exp $
 bin/transmission-cli
 bin/transmission-create
 bin/transmission-daemon
@@ -22,8 +22,6 @@ share/transmission/web/javascript/file-row.js
 share/transmission/web/javascript/formatter.js
 share/transmission/web/javascript/inspector.js
 share/transmission/web/javascript/jquery/jquery.contextmenu.min.js
-share/transmission/web/javascript/jquery/jquery.form.js
-share/transmission/web/javascript/jquery/jquery.form.min.js
 share/transmission/web/javascript/jquery/jquery.min.js
 share/transmission/web/javascript/jquery/jquery.transmenu.min.js
 share/transmission/web/javascript/jquery/jqueryui-1.8.16.min.js
