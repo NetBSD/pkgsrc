@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2010/03/24 21:54:16 asau Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2014/04/01 08:38:35 adam Exp $
 
 BUILDLINK_TREE+=	glpk
 
@@ -10,6 +10,7 @@ BUILDLINK_ABI_DEPENDS.glpk+=	glpk>=4.35nb1
 BUILDLINK_PKGSRCDIR.glpk?=	../../math/glpk
 
 .include "../../devel/gmp/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .endif # GLPK_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-glpk
