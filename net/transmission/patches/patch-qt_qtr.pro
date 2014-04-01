@@ -1,8 +1,8 @@
-$NetBSD: patch-qt_qtr.pro,v 1.1 2013/03/02 19:33:29 wiz Exp $
+$NetBSD: patch-qt_qtr.pro,v 1.2 2014/04/01 09:48:04 adam Exp $
 
---- qt/qtr.pro.orig	2012-07-06 01:24:43.000000000 +0000
+--- qt/qtr.pro.orig	2014-03-21 11:16:35.000000000 +0000
 +++ qt/qtr.pro
-@@ -8,7 +8,7 @@ target.path = /bin
+@@ -8,12 +8,14 @@ target.path = /bin
  INSTALLS += target
  
  unix: INSTALLS += man
@@ -10,4 +10,11 @@ $NetBSD: patch-qt_qtr.pro,v 1.1 2013/03/02 19:33:29 wiz Exp $
 +man.path = /man/man1/
  man.files = transmission-qt.1
  
- CONFIG += qt qdbus thread debug link_pkgconfig
+ CONFIG += qt thread debug link_pkgconfig
+ QT += network dbus widgets
+ PKGCONFIG = fontconfig libcurl openssl libevent
++INCLUDEPATH += $${OPENSSL_CFLAGS}
++LIBS +=  $${OPENSSL_LIBS}
+ 
+ TRANSMISSION_TOP = ..
+ 
