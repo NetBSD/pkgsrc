@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2014/02/28 12:28:32 obache Exp $
+# $NetBSD: options.mk,v 1.13 2014/04/01 09:57:07 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	inet6 snmp ssl squid-backend-aufs squid-backend-diskd \
@@ -32,7 +32,8 @@ PKG_SUPPORTED_OPTIONS+=	squid-netfilter
 PKG_SUPPORTED_OPTIONS+=	squid-ipf
 .endif
 
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "DragonFly"
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || \
+    ${OPSYS} == "Darwin" || ${OPSYS} == "DragonFly"
 PKG_SUPPORTED_OPTIONS+=	squid-pf
 .endif
 
