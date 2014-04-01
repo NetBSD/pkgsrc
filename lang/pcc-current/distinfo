@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2012/03/27 15:17:04 plunky Exp $
+$NetBSD: distinfo,v 1.11 2014/04/01 18:48:54 plunky Exp $
 
-SHA1 (pcc-20120326.tgz) = b1a49417094d4ca9198de7e877f21a0fb7c141aa
-RMD160 (pcc-20120326.tgz) = e48cc7b64eac56bc12cdb6fc918cc789e4a9b025
-Size (pcc-20120326.tgz) = 770343 bytes
+SHA1 (pcc-20140401.tgz) = e7d49448fe58b823556dabaa222d6b2bf6458c65
+RMD160 (pcc-20140401.tgz) = 2ec4ec82c1bf841da4e2f0b508ce986a817cb9ea
+Size (pcc-20140401.tgz) = 799473 bytes
