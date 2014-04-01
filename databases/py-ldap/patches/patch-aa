@@ -1,19 +1,28 @@
-$NetBSD: patch-aa,v 1.10 2014/03/03 17:01:34 adam Exp $
+$NetBSD: patch-aa,v 1.11 2014/04/01 21:15:23 wiz Exp $
 
---- setup.cfg.orig	2012-02-21 17:18:54.000000000 +0000
+--- setup.cfg.orig	2012-02-21 17:17:16.000000000 +0000
 +++ setup.cfg
-@@ -1,10 +1,10 @@
+@@ -8,19 +8,19 @@
  [_ldap]
--library_dirs = /opt/openldap/lib64 /usr/lib
--include_dirs = /opt/openldap/include /usr/include/sasl /usr/include
--defines = HAVE_SASL HAVE_TLS HAVE_LIBLDAP_R
+ 
+ # Define extra include and library dirs if needed
+-library_dirs = /opt/openldap-RE24/lib /usr/lib
+-include_dirs = /opt/openldap-RE24/include /usr/include/sasl /usr/include
 +library_dirs = @PY_LDAP_LIBRARY_DIRS@
 +include_dirs = @PY_LDAP_INCLUDE_DIRS@
+ 
+ # These defines needs OpenLDAP built with
+ # ./configure --with-cyrus-sasl --with-tls
+-defines = HAVE_SASL HAVE_TLS HAVE_LIBLDAP_R
 +defines = HAVE_TLS HAVE_LIBLDAP_R
+ 
  extra_compile_args = 
  extra_objects = 
+ 
+ # Example for full-featured build:
+ # Support for StartTLS/LDAPS, SASL bind and reentrant libldap_r.
 -libs = ldap_r
 +libs = @PY_LDAP_LIBS@
  
+ # Installation options
  [install]
- compile = 1

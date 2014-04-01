@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2014/03/03 17:01:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2014/04/01 21:15:23 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -24,12 +24,18 @@ ${PYSITELIB}/ldap/controls/__init__.pyo
 ${PYSITELIB}/ldap/controls/libldap.py
 ${PYSITELIB}/ldap/controls/libldap.pyc
 ${PYSITELIB}/ldap/controls/libldap.pyo
+${PYSITELIB}/ldap/controls/openldap.py
+${PYSITELIB}/ldap/controls/openldap.pyc
+${PYSITELIB}/ldap/controls/openldap.pyo
 ${PYSITELIB}/ldap/controls/ppolicy.py
 ${PYSITELIB}/ldap/controls/ppolicy.pyc
 ${PYSITELIB}/ldap/controls/ppolicy.pyo
 ${PYSITELIB}/ldap/controls/psearch.py
 ${PYSITELIB}/ldap/controls/psearch.pyc
 ${PYSITELIB}/ldap/controls/psearch.pyo
+${PYSITELIB}/ldap/controls/pwdpolicy.py
+${PYSITELIB}/ldap/controls/pwdpolicy.pyc
+${PYSITELIB}/ldap/controls/pwdpolicy.pyo
 ${PYSITELIB}/ldap/controls/readentry.py
 ${PYSITELIB}/ldap/controls/readentry.pyc
 ${PYSITELIB}/ldap/controls/readentry.pyo
@@ -105,7 +111,6 @@ share/doc/py-ldap/Demo/page_control.py
 share/doc/py-ldap/Demo/paged_search_ext_s.py
 share/doc/py-ldap/Demo/passwd_ext_op.py
 share/doc/py-ldap/Demo/pickle_ldapobject.py
-share/doc/py-ldap/Demo/pyasn1/README
 share/doc/py-ldap/Demo/pyasn1/dds.py
 share/doc/py-ldap/Demo/pyasn1/noopsearch.py
 share/doc/py-ldap/Demo/pyasn1/ppolicy.py

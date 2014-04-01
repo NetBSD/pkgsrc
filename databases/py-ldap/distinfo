@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.21 2014/03/03 17:01:34 adam Exp $
+$NetBSD: distinfo,v 1.22 2014/04/01 21:15:23 wiz Exp $
 
-SHA1 (python-ldap-2.4.14.tar.gz) = ecfc85d8c20272fa05a6d4b50a0cba3a0ae5e8b3
-RMD160 (python-ldap-2.4.14.tar.gz) = c7cc8d13b973a9ce6b32230f65838297e547b539
-Size (python-ldap-2.4.14.tar.gz) = 136808 bytes
-SHA1 (patch-aa) = 9666857ff98f506fca100d202613fdd6b0c39493
+SHA1 (python-ldap-2.4.15.tar.gz) = cfd116af0c0d71d250a8cf31d32051f81e3b6310
+RMD160 (python-ldap-2.4.15.tar.gz) = 64b828cf4107bbe3902efda81296ba9aac029e5b
+Size (python-ldap-2.4.15.tar.gz) = 111597 bytes
+SHA1 (patch-aa) = 562902dcfd3ed6b85cebbde54245b2e9dc9f908c
