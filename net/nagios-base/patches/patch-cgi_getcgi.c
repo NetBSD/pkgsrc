@@ -1,4 +1,6 @@
-$NetBSD: patch-ah,v 1.4 2012/12/14 18:49:51 manu Exp $
+$NetBSD: patch-cgi_getcgi.c,v 1.1 2014/04/02 10:22:37 he Exp $
+
+Also include limits.h.
 
 --- cgi/getcgi.c.orig	2012-10-04 18:31:47.000000000 +0200
 +++ cgi/getcgi.c	2012-10-04 18:31:57.000000000 +0200
