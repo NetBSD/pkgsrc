@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.4 2011/04/08 22:37:25 morr Exp $
+$NetBSD: patch-sample-config_nagios.cfg.in,v 1.1 2014/04/02 10:22:37 he Exp $
+
+Fix placement of temporary file.
 
 --- sample-config/nagios.cfg.in.orig	2010-10-04 02:27:55.000000000 +0000
 +++ sample-config/nagios.cfg.in
