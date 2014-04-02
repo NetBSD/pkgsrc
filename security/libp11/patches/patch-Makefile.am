@@ -1,0 +1,22 @@
+$NetBSD: patch-Makefile.am,v 1.1 2014/04/02 20:14:19 gdt Exp $
+
+Don't install NEWS, as usually it is not.
+Don't install a README about a wiki copy that isn't there.
+
+These changes have not yet been submitted upstream.
+
+--- Makefile.am.orig	2011-04-15 11:52:31.000000000 +0000
++++ Makefile.am
+@@ -16,9 +16,10 @@ EXTRA_DIST = svnignore Makefile.mak winc
+ 
+ dist_noinst_DATA = COPYING bootstrap \
+ 	$(srcdir)/examples/Makefile $(srcdir)/examples/*.c $(srcdir)/examples/README
+-dist_doc_DATA = NEWS
++#dist_doc_DATA = NEWS
+ 
+-SUBDIRS = src doc
++SUBDIRS = src
++# doc
+ 
+ # Allow detection of packaged tarball
+ dist-hook:
