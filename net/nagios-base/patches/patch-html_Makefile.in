@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.10 2013/08/05 11:22:29 obache Exp $
+$NetBSD: patch-html_Makefile.in,v 1.1 2014/04/02 10:22:37 he Exp $
 
---- html/Makefile.in.orig	2012-02-13 21:40:42.000000000 +0100
-+++ html/Makefile.in	2012-10-05 15:13:58.000000000 +0200
+Adjustments to build procedure.
+
 --- html/Makefile.in.orig	2012-02-13 20:40:42.000000000 +0000
 +++ html/Makefile.in
 @@ -7,7 +7,7 @@ exec_prefix=@exec_prefix@
