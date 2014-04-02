@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2014/04/02 17:25:44 wiedi Exp $
+include/hiredis/adapters/ae.h
+include/hiredis/adapters/libev.h
+include/hiredis/adapters/libevent.h
+include/hiredis/async.h
+include/hiredis/hiredis.h
+lib/libhiredis.la
