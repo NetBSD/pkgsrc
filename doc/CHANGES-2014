@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1310 2014/04/02 10:23:30 he Exp $
+$NetBSD: CHANGES-2014,v 1.1311 2014/04/02 10:37:57 he Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1976,3 +1976,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/pod2mdoc to 0.0.9 [wiz 2014-04-02]
 	Updated net/rancid to 3.0 [pettai 2014-04-02]
 	Updated net/nagios-base to 3.5.0nb2 [he 2014-04-02]
+	Updated net/nagios-base to 3.5.1 [he 2014-04-02]
