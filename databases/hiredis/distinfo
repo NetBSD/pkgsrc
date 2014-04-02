@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2014/04/02 17:25:44 wiedi Exp $
+
+SHA1 (v0.11.0.tar.gz) = 694b6d7a6e4ea7fb20902619e9a2423c014b37c1
+RMD160 (v0.11.0.tar.gz) = a22c38518d32b8badd77c486ab041e3e54f3ff71
+Size (v0.11.0.tar.gz) = 42137 bytes
+SHA1 (patch-Makefile) = fac6faa11c2dd80acaf7a378cc4146d7a03a937c
+SHA1 (patch-fmacros.h) = 77e49207baeccae657a8d2c85429d6e76c2438b3
