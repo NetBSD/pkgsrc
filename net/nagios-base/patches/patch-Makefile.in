@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.11 2013/08/05 11:22:29 obache Exp $
+$NetBSD: patch-Makefile.in,v 1.1 2014/04/02 10:22:37 he Exp $
+
+Adjustments to build procedure.
 
 --- Makefile.in.orig	2012-04-25 12:30:47.000000000 +0000
 +++ Makefile.in
