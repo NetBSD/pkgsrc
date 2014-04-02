@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1308 2014/04/02 08:26:02 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1309 2014/04/02 09:11:41 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1974,3 +1974,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added math/libsvm version 3.18 [rodent 2014-04-02]
 	Updated textproc/docbook2mdoc to 0.0.6 [wiz 2014-04-02]
 	Updated textproc/pod2mdoc to 0.0.9 [wiz 2014-04-02]
+	Updated net/rancid to 3.0 [pettai 2014-04-02]
