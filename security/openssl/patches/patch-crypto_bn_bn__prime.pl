@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.6 2008/01/17 06:42:49 tnn Exp $
+$NetBSD: patch-crypto_bn_bn__prime.pl,v 1.1 2014/04/02 12:11:35 he Exp $
 
 --- crypto/bn/bn_prime.pl.orig	2003-09-25 15:57:58.000000000 +0200
 +++ crypto/bn/bn_prime.pl	2007-07-31 17:53:39.000000000 +0200
