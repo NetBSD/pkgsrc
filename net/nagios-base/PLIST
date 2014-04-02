@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2014/04/02 10:22:37 he Exp $
+@comment $NetBSD: PLIST,v 1.17 2014/04/02 13:32:18 he Exp $
 bin/nagios
 bin/nagiostats
 bin/p1.pl
@@ -30,7 +30,6 @@ share/examples/nagios/objects/templates.cfg-sample
 share/examples/nagios/objects/timeperiods.cfg-sample
 share/examples/nagios/objects/windows.cfg-sample
 share/examples/nagios/resource.cfg-sample
-share/examples/rc.d/nagios
 share/nagios/config.inc.php
 share/nagios/contexthelp/A1.html
 share/nagios/contexthelp/A2.html
