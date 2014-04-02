@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/03/05 20:30:52 hasso Exp $
+$NetBSD: distinfo,v 1.2 2014/04/02 19:23:06 gdt Exp $
 
-SHA1 (engine_pkcs11-0.1.5.tar.gz) = 189da9a9156c86df99d16567acbf141869f87729
-RMD160 (engine_pkcs11-0.1.5.tar.gz) = e1edcab5008cc0d524c904808de3344b9520700e
-Size (engine_pkcs11-0.1.5.tar.gz) = 355324 bytes
-SHA1 (patch-aa) = 996cdb0f077c923a2c2552ad03443e449b7c70fe
+SHA1 (engine_pkcs11-0.1.8.tar.gz) = 7a84469ff9ab59373fc345ceb7888eedf45c78eb
+RMD160 (engine_pkcs11-0.1.8.tar.gz) = 66ab0417b6d62c4f0f639c45965805b21107d723
+Size (engine_pkcs11-0.1.8.tar.gz) = 18866 bytes
+SHA1 (patch-Makefile.am) = f240bc8ab9f28e4b20c766e49473e4b21ec0850d
