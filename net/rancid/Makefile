@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2013/07/12 10:45:00 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2014/04/02 09:11:11 pettai Exp $
 #
 
-DISTNAME=		rancid-2.3.8
-PKGREVISION=		3
+DISTNAME=		rancid-3.0
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.shrubbery.net/pub/rancid/
 
@@ -36,6 +35,8 @@ PKG_HOME.${RC_USER}=	${VARBASE}/rancid
 PKG_SHELL.${RC_USER}=	${SH}
 PKG_USERS_VARS+=	RC_USER
 PKG_GROUPS_VARS+=	RC_GROUP
+
+REPLACE_PERL=		lib/dell.pm.in
 
 EGDIR=			${PREFIX}/share/examples/rancid
 PKG_SYSCONFSUBDIR?=	rancid
