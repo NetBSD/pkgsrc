@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1307 2014/04/02 08:24:07 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1308 2014/04/02 08:26:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1973,3 +1973,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added www/py-wtforms-recaptcha version 0.3.1 [rodent 2014-04-02]
 	Added math/libsvm version 3.18 [rodent 2014-04-02]
 	Updated textproc/docbook2mdoc to 0.0.6 [wiz 2014-04-02]
+	Updated textproc/pod2mdoc to 0.0.9 [wiz 2014-04-02]
