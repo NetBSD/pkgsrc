@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1320 2014/04/02 21:09:58 pettai Exp $
+$NetBSD: CHANGES-2014,v 1.1321 2014/04/02 21:26:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1986,3 +1986,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/libp11 to 0.2.8 [gdt 2014-04-02]
 	Updated devel/mercurial to 2.9.2 [wiz 2014-04-02]
 	Updated net/knot to 1.4.4 [pettai 2014-04-02]
+	Updated fonts/pixel-sagas-startrek to 201404 [wiz 2014-04-02]
