@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2014/04/02 07:27:09 rodent Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/wtfrecaptcha/__init__.py
+${PYSITELIB}/wtfrecaptcha/__init__.pyc
+${PYSITELIB}/wtfrecaptcha/__init__.pyo
+${PYSITELIB}/wtfrecaptcha/fields.py
+${PYSITELIB}/wtfrecaptcha/fields.pyc
+${PYSITELIB}/wtfrecaptcha/fields.pyo
+${PYSITELIB}/wtfrecaptcha/validators.py
+${PYSITELIB}/wtfrecaptcha/validators.pyc
+${PYSITELIB}/wtfrecaptcha/validators.pyo
+${PYSITELIB}/wtfrecaptcha/widgets.py
+${PYSITELIB}/wtfrecaptcha/widgets.pyc
+${PYSITELIB}/wtfrecaptcha/widgets.pyo
