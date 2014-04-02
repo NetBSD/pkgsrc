@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1318 2014/04/02 20:14:33 gdt Exp $
+$NetBSD: CHANGES-2014,v 1.1319 2014/04/02 20:56:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1984,3 +1984,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/engine-pkcs11 to 0.1.8nb4 [gdt 2014-04-02]
 	Updated security/ccid to 1.4.16 [gdt 2014-04-02]
 	Updated security/libp11 to 0.2.8 [gdt 2014-04-02]
+	Updated devel/mercurial to 2.9.2 [wiz 2014-04-02]
