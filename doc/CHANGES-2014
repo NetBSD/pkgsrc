@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1312 2014/04/02 12:05:00 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1313 2014/04/02 17:29:47 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1978,3 +1978,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/nagios-base to 3.5.0nb2 [he 2014-04-02]
 	Updated net/nagios-base to 3.5.1 [he 2014-04-02]
 	Updated sysutils/tarsnap to 1.0.35 [wiz 2014-04-02]
+	Added databases/hiredis version 0.11.0 [wiedi 2014-04-02]
