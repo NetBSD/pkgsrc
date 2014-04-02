@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.501 2014/03/21 13:20:51 wiz Exp $
+# $NetBSD: Makefile,v 1.502 2014/04/02 19:23:53 schmonz Exp $
 #
 
 COMMENT=	Security tools
@@ -254,6 +254,7 @@ SUBDIR+=	p5-Digest-BubbleBabble
 SUBDIR+=	p5-Digest-CRC
 SUBDIR+=	p5-Digest-HMAC
 SUBDIR+=	p5-Digest-Hashcash
+SUBDIR+=	p5-Digest-JHash
 SUBDIR+=	p5-Digest-MD2
 SUBDIR+=	p5-Digest-MD4
 SUBDIR+=	p5-Digest-MD5
