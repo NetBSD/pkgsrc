@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1317 2014/04/02 19:47:26 gdt Exp $
+$NetBSD: CHANGES-2014,v 1.1318 2014/04/02 20:14:33 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1983,3 +1983,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/p5-CHI version 0.58 [schmonz 2014-04-02]
 	Updated security/engine-pkcs11 to 0.1.8nb4 [gdt 2014-04-02]
 	Updated security/ccid to 1.4.16 [gdt 2014-04-02]
+	Updated security/libp11 to 0.2.8 [gdt 2014-04-02]
