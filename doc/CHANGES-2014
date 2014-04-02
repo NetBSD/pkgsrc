@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1306 2014/04/02 07:31:55 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.1307 2014/04/02 08:24:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1972,3 +1972,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated print/lilypond to 2.18.2 [wiz 2014-04-01]
 	Added www/py-wtforms-recaptcha version 0.3.1 [rodent 2014-04-02]
 	Added math/libsvm version 3.18 [rodent 2014-04-02]
+	Updated textproc/docbook2mdoc to 0.0.6 [wiz 2014-04-02]
