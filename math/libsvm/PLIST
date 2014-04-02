@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2014/04/02 07:31:43 rodent Exp $
+bin/svm-predict
+bin/svm-scale
+bin/svm-train
+lib/libsvm.so.2
+share/doc/libsvm/FAQ.html
+share/examples/libsvm/heart_scale
