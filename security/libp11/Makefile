@@ -1,23 +1,28 @@
-# $NetBSD: Makefile,v 1.9 2014/02/12 23:18:33 tron Exp $
+# $NetBSD: Makefile,v 1.10 2014/04/02 20:14:19 gdt Exp $
 #
 
-DISTNAME=		libp11-0.2.6
-PKGREVISION=		4
+VERSION=		0.2.8
+DISTNAME=		libp11-${VERSION}
 CATEGORIES=		security
-MASTER_SITES=		http://www.opensc-project.org/files/libp11/
+MASTER_SITES=		https://github.com/OpenSC/libp11/archive/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.opensc-project.org/libp11/
+HOMEPAGE=		https://github.com/OpenSC/libp11/wiki
 COMMENT=		Convenience library for easy PKCS\#11 implementation
 LICENSE=		gnu-lgpl-v2.1
 
+WRKSRC=			${WRKDIR}/libp11-libp11-${VERSION}
+
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7
 
-USE_PKGLOCALEDIR=	yes
-USE_LIBTOOL=		yes
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/src/libp11.pc.in
+USE_TOOLS+=		autoconf automake gmake pkg-config
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/src/libp11.pc.in
+
+pre-configure:
+	cd ${WRKSRC} && ./bootstrap
 
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
