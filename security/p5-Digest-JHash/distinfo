@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/04/02 19:23:09 schmonz Exp $
+
+SHA1 (Digest-JHash-0.08.tar.gz) = 630604609fb17ac70c260a9ffa384cb23545029d
+RMD160 (Digest-JHash-0.08.tar.gz) = 6b01565d686968bf7dca51d6f7e51f314db31b3b
+Size (Digest-JHash-0.08.tar.gz) = 12343 bytes
