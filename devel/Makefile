@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1878 2014/03/31 08:18:52 wiz Exp $
+# $NetBSD: Makefile,v 1.1879 2014/04/02 19:28:12 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -597,6 +597,7 @@ SUBDIR+=	p5-B-Utils
 SUBDIR+=	p5-BSD-Resource
 SUBDIR+=	p5-BackPAN-Index
 SUBDIR+=	p5-Bit-Vector
+SUBDIR+=	p5-CHI
 SUBDIR+=	p5-CLASS
 SUBDIR+=	p5-CPAN
 SUBDIR+=	p5-CPAN-Changes
