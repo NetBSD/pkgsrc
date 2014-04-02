@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/03/31 08:13:16 wiz Exp $
+$NetBSD: distinfo,v 1.2 2014/04/02 08:23:35 wiz Exp $
 
-SHA1 (pod2mdoc-0.0.8.tgz) = 5545258eb13a1331e76ec52b8f6bf453dbaea2f5
-RMD160 (pod2mdoc-0.0.8.tgz) = 34f4da892b898146031825c6abde31c0674ab617
-Size (pod2mdoc-0.0.8.tgz) = 10026 bytes
+SHA1 (pod2mdoc-0.0.9.tgz) = 66e2f3737c07347f29a40c5ef688422bf06c81bb
+RMD160 (pod2mdoc-0.0.9.tgz) = e7e6299e77d3e0daca5ab600c95958de644097e3
+Size (pod2mdoc-0.0.9.tgz) = 10857 bytes
