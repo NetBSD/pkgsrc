@@ -1,14 +1,14 @@
-# $NetBSD: options.mk,v 1.20 2013/07/15 02:02:25 ryoon Exp $
+# $NetBSD: options.mk,v 1.21 2014/04/02 17:36:00 wiedi Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.exim
 PKG_SUPPORTED_OPTIONS=	exim-appendfile-maildir exim-appendfile-mailstore
 PKG_SUPPORTED_OPTIONS+=	exim-appendfile-mbx exim-auth-dovecot exim-build-eximon
 PKG_SUPPORTED_OPTIONS+=	exim-content-scan exim-lookup-cdb exim-lookup-dnsdb
 PKG_SUPPORTED_OPTIONS+=	exim-lookup-dsearch exim-lookup-ldap exim-lookup-mysql
-PKG_SUPPORTED_OPTIONS+=	exim-lookup-pgsql exim-lookup-sqlite exim-lookup-whoson
-PKG_SUPPORTED_OPTIONS+=	exim-old-demime exim-router-iplookup exim-tcp-wrappers
-PKG_SUPPORTED_OPTIONS+=	exim-tls exim-transport-lmtp gdbm inet6 saslauthd spf
-PKG_SUPPORTED_OPTIONS+=	readline
+PKG_SUPPORTED_OPTIONS+=	exim-lookup-pgsql exim-lookup-redis exim-lookup-sqlite
+PKG_SUPPORTED_OPTIONS+=	exim-lookup-whoson exim-old-demime exim-router-iplookup
+PKG_SUPPORTED_OPTIONS+=	exim-tcp-wrappers exim-tls exim-transport-lmtp gdbm
+PKG_SUPPORTED_OPTIONS+=	inet6 opendmarc saslauthd spf readline
 
 PKG_SUGGESTED_OPTIONS=	exim-appendfile-maildir exim-appendfile-mailstore
 PKG_SUGGESTED_OPTIONS+=	exim-appendfile-mbx exim-content-scan
@@ -76,6 +76,12 @@ LOOKUP_LIBS+=-lpq
 .  include "../../mk/pgsql.buildlink3.mk"
 .endif
 
+.if !empty(PKG_OPTIONS:Mexim-lookup-redis)
+LOCAL_MAKEFILE_OPTIONS+=EXPERIMENTAL_REDIS=YES
+LOOKUP_LIBS+=-lhiredis
+.  include "../../databases/hiredis/buildlink3.mk"
+.endif
+
 .if !empty(PKG_OPTIONS:Mexim-lookup-sqlite)
 LOCAL_MAKEFILE_OPTIONS+=LOOKUP_SQLITE=YES
 LOOKUP_LIBS+=-lsqlite3
@@ -116,6 +122,12 @@ LOCAL_MAKEFILE_OPTIONS+=TRANSPORT_LMTP=yes
 LOCAL_MAKEFILE_OPTIONS+=HAVE_IPV6=YES
 .else
 LOCAL_MAKEFILE_OPTIONS+=HAVE_IPV6=NO
+.endif
+
+.if !empty(PKG_OPTIONS:Mopendmarc)
+LOCAL_MAKEFILE_OPTIONS+=EXPERIMENTAL_DMARC=yes
+LOOKUP_LIBS+=		-lopendmarc
+.  include "../../mail/opendmarc/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mgdbm)

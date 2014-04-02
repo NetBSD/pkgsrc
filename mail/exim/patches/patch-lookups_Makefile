@@ -1,10 +1,10 @@
-$NetBSD: patch-lookups_Makefile,v 1.1 2013/09/02 16:04:13 jperkin Exp $
+$NetBSD: patch-lookups_Makefile,v 1.2 2014/04/02 17:36:00 wiedi Exp $
 
 Avoid use of non-portable "local" keyword.
 
---- scripts/lookups-Makefile.orig	2012-10-25 03:37:38.000000000 +0000
+--- scripts/lookups-Makefile.orig	2013-10-25 00:46:27.000000000 +0000
 +++ scripts/lookups-Makefile
-@@ -62,16 +62,16 @@ tmp="$target.t"
+@@ -61,16 +61,16 @@ fi
  # command-line, not just check the Makefile.
  
  want_dynamic() {
@@ -25,7 +25,18 @@ Avoid use of non-portable "local" keyword.
    env | grep -q "^$re"
    if [ $? -eq 0 ]; then return 0; fi
    grep -q "^[ $tab]*$re" "$defs_source"
-@@ -83,8 +83,7 @@ MODS=""
+@@ -78,8 +78,8 @@ want_at_all() {
+ 
+ # Adapted want_at_all above to work for EXPERIMENTAL features
+ want_experimental() {
+-  local want_name="$1"
+-  local re="EXPERIMENTAL_${want_name}[ $tab]*=[ $tab]*."
++  want_name="$1"
++  re="EXPERIMENTAL_${want_name}[ $tab]*=[ $tab]*."
+   env | grep -q "^$re"
+   if [ $? -eq 0 ]; then return 0; fi
+   grep -q "^[ $tab]*$re" "$defs_source"
+@@ -91,8 +91,7 @@ MODS=""
  OBJ=""
  
  emit_module_rule() {
