@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1315 2014/04/02 19:27:53 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.1316 2014/04/02 19:45:37 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1981,3 +1981,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added databases/hiredis version 0.11.0 [wiedi 2014-04-02]
 	Added security/p5-Digest-JHash version 0.08 [schmonz 2014-04-02]
 	Added devel/p5-CHI version 0.58 [schmonz 2014-04-02]
+	Updated security/engine-pkcs11 to 0.1.8nb4 [gdt 2014-04-02]
