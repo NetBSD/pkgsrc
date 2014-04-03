@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13159 2014/04/03 09:09:16 wiz Exp $
+$NetBSD: TODO,v 1.13160 2014/04/03 09:34:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -640,7 +640,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gpsdrive-2.11
 	o gramofile-1.6P
 	o gramps-4.0.1
-	o graphviz-2.36.0
 	o grilo-0.2.10
 	o grilo-plugins-0.2.12
 	o groff-1.22.2

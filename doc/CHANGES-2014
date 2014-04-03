@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1325 2014/04/03 09:09:16 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1326 2014/04/03 09:34:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1993,3 +1993,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-flask-login to 0.2.10 [kleink 2014-04-03]
 	Updated www/py-flask-wtf to 0.9.5 [kleink 2014-04-03]
 	Updated sysutils/dbus to 1.8.0 [wiz 2014-04-03]
+	Updated graphics/graphviz to 2.36.0 [wiz 2014-04-03]
