@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.204 2014/03/14 21:52:13 ryoon Exp $
+# $NetBSD: bootstrap,v 1.205 2014/04/03 09:05:11 obache Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -981,6 +981,9 @@ clang)
 	echo "CC=			clang"     >> ${TARGET_MKCONF}
 	echo "CXX=			clang++"   >> ${TARGET_MKCONF}
 	echo "CPP=			\${CC} -E" >> ${TARGET_MKCONF}
+	if [ -z "$CLANGBASE" -a -f "/usr/bin/clang" ]; then
+		CLANGBASE="/usr"
+	fi
 	if [ -n "$CLANGBASE" -o -f "/bin/clang" ]; then
 		echo "CLANGBASE=		$CLANGBASE" >> ${TARGET_MKCONF}
 	fi
