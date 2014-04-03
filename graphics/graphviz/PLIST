@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2013/10/09 18:30:22 sno Exp $
+@comment $NetBSD: PLIST,v 1.46 2014/04/03 09:34:03 wiz Exp $
 bin/acyclic
 bin/bcomps
 bin/ccomps
@@ -61,7 +61,7 @@ include/graphviz/gvpr.h
 include/graphviz/pack.h
 include/graphviz/pathgeom.h
 include/graphviz/pathplan.h
-include/graphviz/textpara.h
+include/graphviz/textspan.h
 include/graphviz/types.h
 include/graphviz/usershape.h
 include/graphviz/xdot.h
@@ -69,7 +69,7 @@ ${PLIST.guile}lib/graphviz/guile/libgv_guile.la
 lib/graphviz/libgvplugin_core.la
 lib/graphviz/libgvplugin_dot_layout.la
 ${PLIST.gd}lib/graphviz/libgvplugin_gd.la
-${PLIST.gtk}lib/graphviz/libgvplugin_gdk_pixbuf.la
+${PLIST.gtk}lib/graphviz/libgvplugin_gdk.la
 ${PLIST.gtk}lib/graphviz/libgvplugin_gtk.la
 ${PLIST.ghostscript}lib/graphviz/libgvplugin_gs.la
 lib/graphviz/libgvplugin_neato_layout.la
@@ -111,7 +111,13 @@ lib/pkgconfig/libgvc.pc
 lib/pkgconfig/libgvpr.pc
 lib/pkgconfig/libpathplan.pc
 lib/pkgconfig/libxdot.pc
-${PLIST.tcl}lib/tcl${TCL_BASEVER}/graphviz
+${PLIST.tcl}lib/tcl${TCL_BASEVER}/graphviz/libgdtclft.la
+${PLIST.tcl}lib/tcl${TCL_BASEVER}/graphviz/libgv_tcl.la
+${PLIST.tcl}lib/tcl${TCL_BASEVER}/graphviz/libtcldot.la
+${PLIST.tcl}lib/tcl${TCL_BASEVER}/graphviz/libtcldot_builtin.la
+${PLIST.tcl}lib/tcl${TCL_BASEVER}/graphviz/libtclplan.la
+${PLIST.tcl}lib/tcl${TCL_BASEVER}/graphviz/libtkspline.la
+${PLIST.tcl}lib/tcl${TCL_BASEVER}/graphviz/pkgIndex.tcl
 man/man1/acyclic.1
 man/man1/bcomps.1
 man/man1/ccomps.1
@@ -152,13 +158,13 @@ man/man3/cdt.3
 man/man3/cgraph.3
 man/man3/expr.3
 ${PLIST.tcl}${PLIST.gd}man/man3/gdtclft.3tcl
-man/man3/graph.3
 ${PLIST.guile}man/man3/gv.3guile
 ${PLIST.lua}man/man3/gv.3lua
 ${PLIST.ocaml}man/man3/gv.3ocaml
 ${PLIST.perl}man/man3/gv.3perl
 ${PLIST.tcl}man/man3/gv.3tcl
 man/man3/gvc.3
+man/man3/gvpr.3
 man/man3/pack.3
 man/man3/pathplan.3
 ${PLIST.tcl}man/man3/tcldot.3tcl
@@ -371,6 +377,7 @@ share/graphviz/doc/html/info/tab.gif
 share/graphviz/doc/html/info/trapezium.gif
 share/graphviz/doc/html/info/triangle.gif
 share/graphviz/doc/html/info/tripleoctagon.gif
+share/graphviz/doc/html/info/underline.gif
 share/graphviz/doc/html/pspdf.png
 share/graphviz/doc/html/schema/arguments.xml
 share/graphviz/doc/html/schema/attributes.xml
@@ -413,6 +420,7 @@ share/graphviz/doc/pdf/gvmap.1.pdf
 share/graphviz/doc/pdf/gvmap.sh.1.pdf
 share/graphviz/doc/pdf/gvpack.1.pdf
 share/graphviz/doc/pdf/gvpr.1.pdf
+share/graphviz/doc/pdf/gvpr.3.pdf
 share/graphviz/doc/pdf/gxl2gv.1.pdf
 ${PLIST.x11}share/graphviz/doc/pdf/lefty.1.pdf
 share/graphviz/doc/pdf/leftyguide.pdf
@@ -503,10 +511,12 @@ share/graphviz/gvpr/anon
 share/graphviz/gvpr/attr
 share/graphviz/gvpr/bb
 share/graphviz/gvpr/bbox
+share/graphviz/gvpr/chkclusters
 share/graphviz/gvpr/cliptree
 share/graphviz/gvpr/col
 share/graphviz/gvpr/collapse
 share/graphviz/gvpr/color
+share/graphviz/gvpr/cycle
 share/graphviz/gvpr/dechain
 share/graphviz/gvpr/deghist
 share/graphviz/gvpr/deledges
