@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1330 2014/04/03 13:12:22 he Exp $
+$NetBSD: CHANGES-2014,v 1.1331 2014/04/03 16:07:41 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1998,3 +1998,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated finance/gnucash-docs to 2.6.3 [wiz 2014-04-03]
 	Updated textproc/pod2mdoc to 0.0.10 [wiz 2014-04-03]
 	Updated archivers/libarchive to 2.8.4nb4 [he 2014-04-03]
+	Updated www/p5-Mojolicious to 4.91 [wen 2014-04-03]
