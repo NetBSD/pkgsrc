@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1322 2014/04/02 21:34:07 pettai Exp $
+$NetBSD: CHANGES-2014,v 1.1323 2014/04/03 08:22:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1988,3 +1988,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/knot to 1.4.4 [pettai 2014-04-02]
 	Updated fonts/pixel-sagas-startrek to 201404 [wiz 2014-04-02]
 	Updated mail/opendmarc to 1.2.0 [pettai 2014-04-02]
+	Updated multimedia/libass to 0.11.1 [wiz 2014-04-03]
