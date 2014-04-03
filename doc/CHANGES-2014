@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1327 2014/04/03 09:44:53 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1328 2014/04/03 10:56:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1995,3 +1995,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/dbus to 1.8.0 [wiz 2014-04-03]
 	Updated graphics/graphviz to 2.36.0 [wiz 2014-04-03]
 	Updated finance/gnucash to 2.6.3 [wiz 2014-04-03]
+	Updated finance/gnucash-docs to 2.6.3 [wiz 2014-04-03]
