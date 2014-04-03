@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2014/03/21 07:58:25 obache Exp $
+# $NetBSD: Makefile,v 1.10 2014/04/03 08:21:52 wiz Exp $
 
-DISTNAME=	libass-0.10.2
-PKGREVISION=	1
+DISTNAME=	libass-0.11.1
 CATEGORIES=	multimedia
-MASTER_SITES=	http://libass.googlecode.com/files/
+MASTER_SITES=	https://github.com/libass/libass/releases/download/0.11.1/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
