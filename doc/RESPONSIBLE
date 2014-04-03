@@ -1,4 +1,4 @@
-$NetBSD: RESPONSIBLE,v 1.21 2012/03/06 22:03:26 bsiegert Exp $
+$NetBSD: RESPONSIBLE,v 1.22 2014/04/03 21:16:25 ryoon Exp $
 
 List of sections of the system, and who is responsible for them (or
 at least considered an expert on them).
@@ -27,15 +27,25 @@ pkgsrc platforms:
 
 MACHINE_PLATFORM		People
 ---------------------------------------------------------------------------
-IRIX-6.5-mipseb			jschauma
-
+AIX				-
 BSD/OS				reed
-Darwin				schmonz
+Cygwin				-
+Darwin/Mac OS X/OS X		schmonz
 DragonFly			-
 FreeBSD				-
+FreeMiNT			ryoon
+GNU/kFreeBSD			ryoon
+Haiku				-
 HP-UX				tnn
 Interix				-
+IRIX-6.5-mipseb			jschauma
 Linux				jschauma, reed
+Minix				-
 MirBSD				bsiegert
+NetBSD				-
+OpenBSD				-
 OSF/1				tnn
+QNX				-
+SCO OpenServer			ryoon
 Solaris				-
+UnixWare			-
