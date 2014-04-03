@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2013/11/03 16:09:03 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2014/04/03 09:09:06 wiz Exp $
 
-DISTNAME=	dbus-1.6.18
+DISTNAME=	dbus-1.8.0
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
@@ -10,7 +10,8 @@ COMMENT=	Message bus system
 LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	dbus-glib<0.71
-CONFLICTS+=	py*-dbus<0.71
+CONFLICTS+=	py26-dbus<0.71
+CONFLICTS+=	py27-dbus<0.71
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake msgfmt pkg-config
@@ -25,14 +26,8 @@ SPECIAL_PERMS+=		libexec/dbus-daemon-launch-helper ${REAL_ROOT_USER} ${DBUS_GROU
 
 .include "../../mk/bsd.prefs.mk"
 
-# Disable man2html detection forcibly
-CONFIGURE_ENV+=		ac_cv_path_MAN2HTML=
-
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-#CONFIGURE_ARGS+=	--enable-embedded-tests
-
-#CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
 
 CONFIGURE_ARGS_GROUPS=	enable disable with without
 
@@ -40,11 +35,11 @@ CONFIGURE_ARGS_GROUPS=	enable disable with without
 CONFIGURE_ARGS+= --with-session-socket-dir=/tmp
 .endif
 
-CONFIGURE_ARGS.Linux=	abstract-sockets dnotify selinux
+CONFIGURE_ARGS.Linux=	abstract-sockets selinux
 CONFIGURE_ARGS.docs=	doxygen-docs xml-docs
 
 CONFIGURE_ARGS.without+=	init-scripts
-CONFIGURE_ARGS.disable=		ansi gcov
+CONFIGURE_ARGS.disable=		ansi
 CONFIGURE_ARGS.disable+=	console-owner-file
 CONFIGURE_ARGS.disable+=	${CONFIGURE_ARGS.docs}
 CONFIGURE_ARGS.enable=		checks static
@@ -58,7 +53,6 @@ CONFIGURE_ARGS.enable=		checks static
 
 CONFIGURE_ARGS.with=	dbus-user=${DBUS_USER}
 CONFIGURE_ARGS.with+=	test-socket-dir=${WRKDIR:Q}
-CONFIGURE_ARGS.with+=	xml=expat
 
 PTHREAD_AUTO_VARS=	yes
 
