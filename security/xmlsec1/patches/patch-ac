@@ -1,0 +1,25 @@
+$NetBSD: patch-ac,v 1.5 2014/04/03 17:00:44 drochner Exp $
+
+portability
+
+--- tests/testrun.sh.orig	2014-04-03 16:19:41.000000000 +0000
++++ tests/testrun.sh
+@@ -1,7 +1,7 @@
+ #!/bin/sh
+ 
+-OS_ARCH=`uname -o`
+-OS_KERNEL=`uname -s`
++OS_ARCH=xxx
++#OS_KERNEL=`uname -s`
+ 
+ #
+ # Get command line params
+@@ -436,7 +436,7 @@ execXkmsServerRequestTest() {
+ rm -rf $tmpfile $tmpfile.2 tmpfile.3
+ 
+ # run tests
+-source "$testfile"
++. "$testfile"
+ 
+ # cleanup
+ rm -rf $tmpfile $tmpfile.2 tmpfile.3
