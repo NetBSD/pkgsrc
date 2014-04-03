@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2014/02/12 23:18:37 tron Exp $
+# $NetBSD: Makefile,v 1.30 2014/04/03 17:00:44 drochner Exp $
 #
 
-DISTNAME=		xmlsec1-1.2.18
-PKGREVISION=		4
+DISTNAME=		xmlsec1-1.2.19
 CATEGORIES=		security
 MASTER_SITES=		http://www.aleksey.com/xmlsec/download/
 
@@ -27,6 +26,8 @@ CONFIGURE_ARGS+=	--without-gnutls
 CONFIGURE_ARGS+=	--with-libxml=${BUILDLINK_PREFIX.libxml2}
 CONFIGURE_ARGS+=	--with-libxslt=${BUILDLINK_PREFIX.libxslt}
 CONFIGURE_ARGS+=	--with-gcrypt=${BUILDLINK_PREFIX.libgcrypt}
+
+TEST_TARGET=	check
 
 .include "../../devel/libltdl/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.4.0
