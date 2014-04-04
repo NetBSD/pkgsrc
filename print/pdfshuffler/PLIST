@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2014/04/04 12:34:24 drochner Exp $
+bin/pdfshuffler
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/pdfshuffler/__init__.py
+${PYSITELIB}/pdfshuffler/__init__.pyc
+${PYSITELIB}/pdfshuffler/__init__.pyo
+${PYSITELIB}/pdfshuffler/pdfshuffler.py
+${PYSITELIB}/pdfshuffler/pdfshuffler.pyc
+${PYSITELIB}/pdfshuffler/pdfshuffler.pyo
+${PYSITELIB}/pdfshuffler/pdfshuffler_iconview.py
+${PYSITELIB}/pdfshuffler/pdfshuffler_iconview.pyc
+${PYSITELIB}/pdfshuffler/pdfshuffler_iconview.pyo
+man/man1/pdfshuffler.1
+share/applications/pdfshuffler.desktop
+share/locale/cs/LC_MESSAGES/pdfshuffler.mo
+share/locale/de/LC_MESSAGES/pdfshuffler.mo
+share/locale/el/LC_MESSAGES/pdfshuffler.mo
+share/locale/es/LC_MESSAGES/pdfshuffler.mo
+share/locale/fr/LC_MESSAGES/pdfshuffler.mo
+share/locale/hu/LC_MESSAGES/pdfshuffler.mo
+share/locale/it/LC_MESSAGES/pdfshuffler.mo
+share/locale/ja/LC_MESSAGES/pdfshuffler.mo
+share/locale/zh_CN/LC_MESSAGES/pdfshuffler.mo
+share/pdfshuffler/icons/hicolor/scalable/pdfshuffler.svg
+share/pdfshuffler/pdfshuffler.ui
+share/pixmaps/pdfshuffler.png
