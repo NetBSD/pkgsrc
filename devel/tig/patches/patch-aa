@@ -1,24 +1,23 @@
-$NetBSD: patch-aa,v 1.5 2013/08/23 05:09:28 schmonz Exp $
+$NetBSD: patch-aa,v 1.6 2014/04/04 21:00:24 ryoon Exp $
 
-Don't make/install PDF, and be sure to install test-graph.
+Don't make/install PDF.
 
---- Makefile.orig	2013-08-10 14:27:12.000000000 +0000
+--- Makefile.orig	2013-09-18 01:13:35.000000000 +0000
 +++ Makefile
 @@ -44,7 +44,7 @@ TESTS	= test-graph
- TXTDOC	= tig.1.txt tigrc.5.txt manual.txt NEWS README INSTALL BUGS
- MANDOC	= tig.1 tigrc.5 tigmanual.7
- HTMLDOC = tig.1.html tigrc.5.html manual.html README.html NEWS.html
--ALLDOC	= $(MANDOC) $(HTMLDOC) manual.html-chunked manual.pdf
-+ALLDOC	= $(MANDOC) $(HTMLDOC) manual.html-chunked
+ TXTDOC	= doc/tig.1.asciidoc doc/tigrc.5.asciidoc doc/manual.asciidoc NEWS README INSTALL BUGS
+ MANDOC	= doc/tig.1 doc/tigrc.5 doc/tigmanual.7
+ HTMLDOC = doc/tig.1.html doc/tigrc.5.html doc/manual.html README.html INSTALL.html NEWS.html
+-ALLDOC	= $(MANDOC) $(HTMLDOC) doc/manual.html-chunked doc/manual.pdf
++ALLDOC	= $(MANDOC) $(HTMLDOC) doc/manual.html-chunked
  
  # Never include the release number in the tarname for tagged
  # versions.
-@@ -71,7 +71,7 @@ doc-html: $(HTMLDOC)
- 
+@@ -72,6 +72,7 @@ doc-html: $(HTMLDOC)
  install: all
- 	mkdir -p $(DESTDIR)$(bindir) && \
--	for prog in $(PROGS); do \
-+	for prog in $(PROGS) $(TESTS); do \
- 		install -p -m 0755 "$$prog" "$(DESTDIR)$(bindir)"; \
- 	done
+ 	@mkdir -p $(DESTDIR)$(bindir)
+ 	install -p -m 0755 $(EXE) "$(DESTDIR)$(bindir)"
++	install -p -m 0755 $(TESTS) "$(DESTDIR)$(bindir)"
  
+ install-doc-man: doc-man
+ 	mkdir -p $(DESTDIR)$(mandir)/man1 \
