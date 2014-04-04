@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1340 2014/04/04 10:02:43 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1341 2014/04/04 10:08:33 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2010,3 +2010,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated print/ghostscript-agpl to 9.14 [adam 2014-04-04]
 	Updated converters/libe-book to 0.0.3 [wiz 2014-04-04]
 	Updated emulators/suse131_mozilla-nspr to 13.1nb1 [obache 2014-04-04]
+	Updated emulators/suse131_mozilla-nss to 13.1nb1 [obache 2014-04-04]
