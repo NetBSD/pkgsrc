@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13167 2014/04/04 20:21:11 ryoon Exp $
+$NetBSD: TODO,v 1.13168 2014/04/04 20:40:19 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -998,7 +998,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o re-alpine-2.03 [pkg/47802]
 	o realboy-0.2.2
 	o rep-gtk-0.90.8.1
-	o reposurgeon-3.8
 	o resize_image-0.7
 	o rio500-0.8.1
 	o robodoc-4.99.6

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1347 2014/04/04 20:21:11 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.1348 2014/04/04 20:40:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2017,3 +2017,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/suse131_openssl to 13.1nb3 [obache 2014-04-04]
 	Updated geography/gama to 1.15 [gdt 2014-04-04]
 	Updated devel/cvs-fast-export to 1.10 [ryoon 2014-04-04]
+	Updated devel/reposurgeon to 3.8 [ryoon 2014-04-04]
