@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1023 2014/04/02 07:29:11 rodent Exp $
+# $NetBSD: Makefile,v 1.1024 2014/04/04 04:40:57 jnemeth Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -644,8 +644,8 @@ SUBDIR+=	py-webcolors
 SUBDIR+=	py-webpy
 SUBDIR+=	py-werkzeug
 SUBDIR+=	py-werkzeug-docs
-SUBDIR+=	py-wtforms-recaptcha
 SUBDIR+=	py-wtforms
+SUBDIR+=	py-wtforms-recaptcha
 SUBDIR+=	qDecoder
 SUBDIR+=	raggle
 SUBDIR+=	ramaze
