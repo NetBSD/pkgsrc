@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/12/27 16:42:46 gdt Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/04/04 08:48:43 adam Exp $
 bin/dvipdf
 bin/eps2eps
 bin/font2c
@@ -524,7 +524,6 @@ share/ghostscript/${PKGVERSION}/lib/font2pcl.ps
 share/ghostscript/${PKGVERSION}/lib/ghostpdf.ppd
 share/ghostscript/${PKGVERSION}/lib/gs_ce_e.ps
 share/ghostscript/${PKGVERSION}/lib/gs_cmdl.ps
-share/ghostscript/${PKGVERSION}/lib/gs_fform.ps
 share/ghostscript/${PKGVERSION}/lib/gs_il2_e.ps
 share/ghostscript/${PKGVERSION}/lib/gs_kanji.ps
 share/ghostscript/${PKGVERSION}/lib/gs_ksb_e.ps
