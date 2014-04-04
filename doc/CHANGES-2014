@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1332 2014/04/03 19:46:00 adam Exp $
+$NetBSD: CHANGES-2014,v 1.1333 2014/04/04 02:36:39 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2002,3 +2002,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/sqlite3 to 3.8.4.3 [adam 2014-04-03]
 	Updated databases/sqlite3-docs to 3.8.4.3 [adam 2014-04-03]
 	Updated databases/sqlite3-tcl to 3.8.4.3 [adam 2014-04-03]
+	Added devel/p5-Devel-CheckCompiler version 0.05 [wen 2014-04-04]
