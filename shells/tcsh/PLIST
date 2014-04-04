@@ -1,3 +1,15 @@
-@comment $NetBSD: PLIST,v 1.2 2002/11/17 09:02:02 salo Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/04/04 12:00:37 kim Exp $
 bin/tcsh
 man/man1/tcsh.1
+share/locale/C/LC_MESSAGES/tcsh.cat
+share/locale/de/LC_MESSAGES/tcsh.cat
+share/locale/es/LC_MESSAGES/tcsh.cat
+share/locale/et/LC_MESSAGES/tcsh.cat
+share/locale/fi/LC_MESSAGES/tcsh.cat
+share/locale/fr/LC_MESSAGES/tcsh.cat
+share/locale/gr/LC_MESSAGES/tcsh.cat
+share/locale/it/LC_MESSAGES/tcsh.cat
+share/locale/ja/LC_MESSAGES/tcsh.cat
+share/locale/pl/LC_MESSAGES/tcsh.cat
+share/locale/ru/LC_MESSAGES/tcsh.cat
+share/locale/ru_UA.koi8u/LC_MESSAGES/tcsh.cat
