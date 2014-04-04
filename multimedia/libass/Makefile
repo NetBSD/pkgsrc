@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/04/03 08:21:52 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2014/04/04 05:52:17 obache Exp $
 
 DISTNAME=	libass-0.11.1
 CATEGORIES=	multimedia
@@ -15,6 +15,8 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	libass.pc.in
+
+CONFIGURE_ARGS+=	--disable-asm
 
 LDFLAGS+=	${BUILDLINK_LDADD.iconv}
 
