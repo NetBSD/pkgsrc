@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1352 2014/04/04 21:38:59 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.1353 2014/04/04 22:22:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2022,3 +2022,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/tig to 1.2.1 [ryoon 2014-04-04]
 	Updated graphics/gource to 0.40 [ryoon 2014-04-04]
 	Updated sysutils/file to 5.18 [ryoon 2014-04-04]
+	Updated print/evince3 to 3.12.0 [ryoon 2014-04-04]
