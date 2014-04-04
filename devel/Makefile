@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1879 2014/04/02 19:28:12 schmonz Exp $
+# $NetBSD: Makefile,v 1.1880 2014/04/04 02:35:15 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -736,6 +736,7 @@ SUBDIR+=	p5-Declare-Constraints-Simple
 SUBDIR+=	p5-Devel-Autoflush
 SUBDIR+=	p5-Devel-BeginLift
 SUBDIR+=	p5-Devel-Caller
+SUBDIR+=	p5-Devel-CheckCompiler
 SUBDIR+=	p5-Devel-CheckLib
 SUBDIR+=	p5-Devel-CheckOS
 SUBDIR+=	p5-Devel-Cover
