@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1336 2014/04/04 06:26:28 wen Exp $
+$NetBSD: CHANGES-2014,v 1.1337 2014/04/04 07:23:48 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2006,3 +2006,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/php55 to 5.5.11 [taca 2014-04-04]
 	Added devel/p5-Module-Build-XSUtil version 0.06 [wen 2014-04-04]
 	Updated devel/p5-Mouse to 2.2.0 [wen 2014-04-04]
+	Updated textproc/p5-Text-Xslate to 3.2.0 [wen 2014-04-04]
