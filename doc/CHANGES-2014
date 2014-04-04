@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1341 2014/04/04 10:08:33 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1342 2014/04/04 12:36:45 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1999,6 +1999,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/pod2mdoc to 0.0.10 [wiz 2014-04-03]
 	Updated archivers/libarchive to 2.8.4nb4 [he 2014-04-03]
 	Updated www/p5-Mojolicious to 4.91 [wen 2014-04-03]
+	Updated security/xmlsec1 to 1.2.19 [drochner 2014-04-03]
 	Updated databases/sqlite3 to 3.8.4.3 [adam 2014-04-03]
 	Updated databases/sqlite3-docs to 3.8.4.3 [adam 2014-04-03]
 	Updated databases/sqlite3-tcl to 3.8.4.3 [adam 2014-04-03]
