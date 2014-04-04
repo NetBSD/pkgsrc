@@ -1,8 +1,8 @@
-$NetBSD: patch-tig_c,v 1.3 2013/08/23 05:09:28 schmonz Exp $
+$NetBSD: patch-tig_c,v 1.4 2014/04/04 21:00:24 ryoon Exp $
 
---- tig.c.orig	2013-08-10 14:27:10.000000000 +0000
+--- tig.c.orig	2013-08-24 14:42:16.000000000 +0000
 +++ tig.c
-@@ -2594,19 +2594,19 @@ redraw_display(bool clear)
+@@ -2669,20 +2669,20 @@ redraw_display(bool clear)
   */
  
  #define TOGGLE_MENU \
@@ -14,6 +14,7 @@ $NetBSD: patch-tig_c,v 1.3 2013/08/23 05:09:28 schmonz Exp $
 -	TOGGLE_(REV_GRAPH, 'g', "revision graph",    &opt_rev_graph, NULL) \
 +	TOGGLE_(REV_GRAPH, 'g', "revision graph",    &opt_rev_graph, (struct enum_map *)NULL) \
  	TOGGLE_(FILENAME,  '#', "file names",        &opt_filename, filename_map) \
+ 	TOGGLE_(FILE_SIZE, '*', "file sizes",        &opt_file_size, file_size_map) \
  	TOGGLE_(IGNORE_SPACE, 'W', "space changes",  &opt_ignore_space, ignore_space_map) \
  	TOGGLE_(COMMIT_ORDER, 'l', "commit order",   &opt_commit_order, commit_order_map) \
 -	TOGGLE_(REFS,      'F', "reference display", &opt_show_refs, NULL) \
