@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1342 2014/04/04 12:36:45 drochner Exp $
+$NetBSD: CHANGES-2014,v 1.1343 2014/04/04 12:36:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2012,3 +2012,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated converters/libe-book to 0.0.3 [wiz 2014-04-04]
 	Updated emulators/suse131_mozilla-nspr to 13.1nb1 [obache 2014-04-04]
 	Updated emulators/suse131_mozilla-nss to 13.1nb1 [obache 2014-04-04]
+	Updated x11/xauth to 1.0.9 [wiz 2014-04-04]
