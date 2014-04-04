@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1338 2014/04/04 08:50:17 adam Exp $
+$NetBSD: CHANGES-2014,v 1.1339 2014/04/04 09:00:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2008,3 +2008,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Mouse to 2.2.0 [wen 2014-04-04]
 	Updated textproc/p5-Text-Xslate to 3.2.0 [wen 2014-04-04]
 	Updated print/ghostscript-agpl to 9.14 [adam 2014-04-04]
+	Updated converters/libe-book to 0.0.3 [wiz 2014-04-04]
