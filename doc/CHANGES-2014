@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1344 2014/04/04 12:40:35 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1345 2014/04/04 12:50:31 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2014,3 +2014,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/suse131_mozilla-nss to 13.1nb1 [obache 2014-04-04]
 	Added print/pdfshuffler version 0.6.0 [drochner 2014-04-04]
 	Updated x11/xauth to 1.0.9 [wiz 2014-04-04]
+	Updated emulators/suse131_openssl to 13.1nb3 [obache 2014-04-04]
