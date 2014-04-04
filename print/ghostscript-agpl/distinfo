@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.3 2013/09/03 06:39:12 adam Exp $
+$NetBSD: distinfo,v 1.4 2014/04/04 08:48:43 adam Exp $
 
-SHA1 (ghostscript-9.10.tar.bz2) = 89527d45f97b6cf028ad8ca4bfa07c64462390e8
-RMD160 (ghostscript-9.10.tar.bz2) = c30b94918d5eeed8d8b50c6ee9e339541004ded8
-Size (ghostscript-9.10.tar.bz2) = 30983380 bytes
-SHA1 (patch-af) = a1cbc0b9724e3ca43e3cedb6c6e619adfed59068
+SHA1 (ghostscript-9.14.tar.bz2) = eab1c9e9850d8aedf02d16f3f7f8198ad9384068
+RMD160 (ghostscript-9.14.tar.bz2) = 4f3aad17f271b17bd890ac63af56c75e42e10945
+Size (ghostscript-9.14.tar.bz2) = 31080058 bytes
+SHA1 (patch-af) = 3dd65dbd9611c00d45997c86d16eada37511dca5
 SHA1 (patch-ah) = db74a482e22771414f223a97dd71df5215553d85
 SHA1 (patch-ai) = e83a732559094ea8b683a171219388d5087c816f
 SHA1 (patch-al) = b4d06da288a608d65cdb014b0f2384406089afe3
 SHA1 (patch-base_gserrors_h) = ce75cfb7528871842a3bd35e18a6d91c89823909
-SHA1 (patch-openjpeg_libopenjpeg_opj_malloc_h) = 207a22833f6e7026feea0bfc3f7411d228f03e6e
+SHA1 (patch-devices_devs.mak) = 574c50c1dcb4136a6f150bcfdebb9c7ee62c0ef0
+SHA1 (patch-openjpeg_libopenjpeg_opj_malloc_h) = f279a31ed796e73f6dc701fe63c16fa5b120f3f6

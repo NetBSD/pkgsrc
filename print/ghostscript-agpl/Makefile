@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2014/02/12 23:18:29 tron Exp $
+# $NetBSD: Makefile,v 1.9 2014/04/04 08:48:43 adam Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-agpl/}
-PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ghostscript/} \
 		http://downloads.ghostscript.com/public/
@@ -94,6 +93,7 @@ post-extract:
 	${RM} -rf ${WRKSRC}/jpeg
 	${RM} -rf ${WRKSRC}/lcms2
 	${RM} -rf ${WRKSRC}/libpng
+	${RM} -rf ${WRKSRC}/tiff
 	${RM} -rf ${WRKSRC}/zlib
 
 #  To allow outside customization, rename cidfmap
