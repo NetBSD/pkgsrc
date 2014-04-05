@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2014/01/29 09:00:15 obache Exp $
+@comment $NetBSD: PLIST,v 1.20 2014/04/05 08:09:35 obache Exp $
 bin/groonga
 bin/groonga-benchmark
 bin/groonga-suggest-create-dataset
@@ -80,6 +80,8 @@ share/doc/groonga/en/html/_sources/reference/api/grn_table_cursor.txt
 share/doc/groonga/en/html/_sources/reference/api/grn_type.txt
 share/doc/groonga/en/html/_sources/reference/api/grn_user_data.txt
 share/doc/groonga/en/html/_sources/reference/cast.txt
+share/doc/groonga/en/html/_sources/reference/column.txt
+share/doc/groonga/en/html/_sources/reference/columns/vector.txt
 share/doc/groonga/en/html/_sources/reference/command.txt
 share/doc/groonga/en/html/_sources/reference/command/command_version.txt
 share/doc/groonga/en/html/_sources/reference/command/output_format.txt
@@ -265,6 +267,8 @@ share/doc/groonga/en/html/reference/api/grn_table_cursor.html
 share/doc/groonga/en/html/reference/api/grn_type.html
 share/doc/groonga/en/html/reference/api/grn_user_data.html
 share/doc/groonga/en/html/reference/cast.html
+share/doc/groonga/en/html/reference/column.html
+share/doc/groonga/en/html/reference/columns/vector.html
 share/doc/groonga/en/html/reference/command.html
 share/doc/groonga/en/html/reference/command/command_version.html
 share/doc/groonga/en/html/reference/command/output_format.html
@@ -427,6 +431,8 @@ share/doc/groonga/ja/html/_sources/reference/api/grn_table_cursor.txt
 share/doc/groonga/ja/html/_sources/reference/api/grn_type.txt
 share/doc/groonga/ja/html/_sources/reference/api/grn_user_data.txt
 share/doc/groonga/ja/html/_sources/reference/cast.txt
+share/doc/groonga/ja/html/_sources/reference/column.txt
+share/doc/groonga/ja/html/_sources/reference/columns/vector.txt
 share/doc/groonga/ja/html/_sources/reference/command.txt
 share/doc/groonga/ja/html/_sources/reference/command/command_version.txt
 share/doc/groonga/ja/html/_sources/reference/command/output_format.txt
@@ -612,6 +618,8 @@ share/doc/groonga/ja/html/reference/api/grn_table_cursor.html
 share/doc/groonga/ja/html/reference/api/grn_type.html
 share/doc/groonga/ja/html/reference/api/grn_user_data.html
 share/doc/groonga/ja/html/reference/cast.html
+share/doc/groonga/ja/html/reference/column.html
+share/doc/groonga/ja/html/reference/columns/vector.html
 share/doc/groonga/ja/html/reference/command.html
 share/doc/groonga/ja/html/reference/command/command_version.html
 share/doc/groonga/ja/html/reference/command/output_format.html
