@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1356 2014/04/05 09:02:35 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1357 2014/04/05 09:13:13 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2026,3 +2026,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/php54 to 5.4.27 [taca 2014-04-05]
 	Updated textproc/groonga to 4.0.1 [obache 2014-04-05]
 	Updated textproc/ruby-hikidoc to 0.1.0 [obache 2014-04-05]
+	Updated graphics/ruby-rcairo to 1.12.9 [obache 2014-04-05]
