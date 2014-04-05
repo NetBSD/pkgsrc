@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/03/31 09:49:31 martin Exp $
+# $NetBSD: Makefile,v 1.2 2014/04/05 11:05:38 martin Exp $
 
 GCC_PKGNAME=	gcc-mips-current
 
@@ -7,8 +7,7 @@ SNAPSHOT=	20140330
 GCC_DIST_VERSION=4.9-${SNAPSHOT}
 DISTNAME=	gcc-${GCC_DIST_VERSION}
 PKGNAME=	${GCC_PKGNAME}-${SNAPSHOT}
-
-# PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	cross lang
 MASTER_SITE_GCC=	\
 		ftp://ftp.fu-berlin.de/unix/languages/gcc/	\
@@ -83,7 +82,7 @@ MAKE_ENV+=		ac_cv_func_clock_gettime=yes
 CONFIGURE_ARGS+=	--disable-bootstrap
 .endif
 
-CONFIGURE_ARGS+=	--target=mips--netbsdelf
+CONFIGURE_ARGS+=	--target=mipsel--netbsdelf
 
 # ${WRKSRC}/fixincludes/ looks for sed and compiles the path to sed into
 # a binary so we need to make sure we give it the installed sed and not
