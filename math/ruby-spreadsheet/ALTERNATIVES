@@ -1,1 +1,1 @@
-bin/oletool @PREFIX@/bin/oletool@RUBY_VER@
+bin/oletool @PREFIX@/bin/oletool@RUBY_SUFFIX@
