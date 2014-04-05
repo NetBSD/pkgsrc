@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/03/30 16:43:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.6.2.1 2014/04/05 16:23:50 tron Exp $
 
 DISTNAME=		libreoffice4-bin	# overridden below
 PKGNAME=		libreoffice4-bin-${OO_RELEASE}
@@ -38,9 +38,7 @@ PLIST_SRC+=		${PKGDIR}/PLIST.dirs
 EMUL_PLATFORMS=		linux-i386 linux-x86_64
 #EMUL_PLATFORMS+=	solaris-i386 solaris-sparc
 EMUL_MODULES.linux=	freetype2 x11 locale png fontconfig cups gtk2 krb5
-.if !empty(SUSE_PREFER:M1[3-9].*)
 EMUL_MODULES.linux+=	dbus dbus-glib
-.endif
 EMUL_REQD=		suse>=11.3
 
 EMUL_PKG_FMT=		rpm
