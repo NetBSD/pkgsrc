@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1359 2014/04/05 11:06:07 martin Exp $
+$NetBSD: CHANGES-2014,v 1.1360 2014/04/05 13:56:20 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2029,3 +2029,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/ruby-rcairo to 1.12.9 [obache 2014-04-05]
 	Updated cross/binutils-mips-current to 2.23.91nb1 [martin 2014-04-05]
 	Updated cross/gcc-mips-current to 20140330nb1 [martin 2014-04-05]
+	Updated net/ccrtp to 2.0.8 [rodent 2014-04-05]
