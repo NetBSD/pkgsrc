@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1353 2014/04/04 22:22:36 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.1354 2014/04/05 03:44:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2023,3 +2023,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/gource to 0.40 [ryoon 2014-04-04]
 	Updated sysutils/file to 5.18 [ryoon 2014-04-04]
 	Updated print/evince3 to 3.12.0 [ryoon 2014-04-04]
+	Updated lang/php54 to 5.4.27 [taca 2014-04-05]
