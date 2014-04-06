@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/04/06 06:24:31 obache Exp $
+# $NetBSD: Makefile,v 1.5 2014/04/06 06:24:53 obache Exp $
 
 DISTNAME=	xcb-util-cursor-0.1.1
 PKGREVISION=	1
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xcb.freedesktop.org/
 COMMENT=	XCB port of Xlib's libXcursor
-#LICENSE=	mit
+LICENSE=	x11
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake
