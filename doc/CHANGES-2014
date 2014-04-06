@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1363 2014/04/06 02:50:28 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1364 2014/04/06 04:24:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2033,3 +2033,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added lang/gfortran version 4.8.2 [ryoon 2014-04-05]
 	Updated inputmethod/ibus to 1.5.5nb1 [obache 2014-04-06]
 	Updated inputmethod/ibus to 1.5.6 [obache 2014-04-06]
+	Updated inputmethod/ibus-anthy to 1.5.5 [obache 2014-04-06]
