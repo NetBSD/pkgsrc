@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1362 2014/04/06 01:49:23 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1363 2014/04/06 02:50:28 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2032,3 +2032,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/ccrtp to 2.0.8 [rodent 2014-04-05]
 	Added lang/gfortran version 4.8.2 [ryoon 2014-04-05]
 	Updated inputmethod/ibus to 1.5.5nb1 [obache 2014-04-06]
+	Updated inputmethod/ibus to 1.5.6 [obache 2014-04-06]
