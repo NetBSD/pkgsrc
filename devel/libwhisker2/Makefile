@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2013/05/31 12:40:01 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/04/06 14:05:14 rodent Exp $
 
-DISTNAME=	libwhisker2-2.4
-PKGREVISION=	2
+DISTNAME=	libwhisker2-2.5
 CATEGORIES=	devel
-MASTER_SITES=	http://www.wiretrip.net/rfp/libwhisker/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=whisker/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.wiretrip.net/rfp/lw.asp
+HOMEPAGE=	http://sourceforge.net/projects/whisker/
 COMMENT=	Perl module geared specifically for HTTP testing
+LICENSE=	2-clause-bsd
 
 DEPENDS+=	p5-Net-SSLeay>=1.20:../../security/p5-Net-SSLeay
 
@@ -16,23 +16,27 @@ REPLACE_PERL=	scripts/api_demo.pl scripts/crawl_demo.pl \
 		scripts/simple_demo.pl scripts/form_demo1.pl \
 		scripts/form_demo2.pl scripts/prox.pl
 
+INSTALLATION_DIRS+=	libdata/${PKGBASE} share/doc/${PKGBASE}
+INSTALLATION_DIRS+=	share/examples/${PKGBASE}
+
 do-build:
-	@cd ${WRKSRC} && ${PERL5} Makefile.pl lib
+	cd ${WRKSRC} && ${PERL5} Makefile.pl lib
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/libwhisker2
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/libwhisker2
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/libdata/libwhisker2
-
-	${INSTALL_DATA} ${WRKSRC}/docs/*.txt ${DESTDIR}${PREFIX}/share/doc/libwhisker2
-	${INSTALL_DATA} ${WRKSRC}/docs/*.gif ${DESTDIR}${PREFIX}/share/doc/libwhisker2
-	${INSTALL_DATA} ${WRKSRC}/KNOWNBUGS ${DESTDIR}${PREFIX}/share/doc/libwhisker2
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/libwhisker2
-	${INSTALL_DATA} ${WRKSRC}/LW2.pm ${DESTDIR}${PREFIX}/libdata/libwhisker2
+	${INSTALL_DATA} ${WRKSRC}/docs/*.txt \
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/docs/*.gif \
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/KNOWNBUGS \
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/README \
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/LW2.pm \
+		${DESTDIR}${PREFIX}/libdata/${PKGBASE}
 
 .	for f in ${REPLACE_PERL}
 		${INSTALL_SCRIPT} ${WRKSRC}/${f} \
-			${DESTDIR}${PREFIX}/share/examples/libwhisker2
+			${DESTDIR}${PREFIX}/share/examples/${PKGBASE}
 .	endfor
 
 .include "../../mk/bsd.pkg.mk"
