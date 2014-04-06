@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1364 2014/04/06 04:24:38 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1365 2014/04/06 05:46:47 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2034,3 +2034,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated inputmethod/ibus to 1.5.5nb1 [obache 2014-04-06]
 	Updated inputmethod/ibus to 1.5.6 [obache 2014-04-06]
 	Updated inputmethod/ibus-anthy to 1.5.5 [obache 2014-04-06]
+	Updated wm/awesome to 3.5.1nb4 [obache 2014-04-06]
