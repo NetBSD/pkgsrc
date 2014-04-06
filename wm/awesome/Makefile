@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2014/04/06 05:46:14 obache Exp $
+# $NetBSD: Makefile,v 1.49 2014/04/06 08:25:53 obache Exp $
 #
 
-DISTNAME=	awesome-3.5.1
-PKGREVISION=	4
+DISTNAME=	awesome-3.5.4
 CATEGORIES=	x11 wm
 MASTER_SITES=	http://awesome.naquadah.org/download/
 EXTRACT_SUFX=	.tar.xz
@@ -45,7 +44,7 @@ BUILD_DEPENDS+=	asciidoc>=8.3.0:../../textproc/asciidoc
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 BUILD_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
 
-DEPENDS+=		${LUA_PKGPREFIX}-gi-[0-9]*:../../devel/lua-gi
+DEPENDS+=		${LUA_PKGPREFIX}-gi>=0.7.0:../../devel/lua-gi
 DEPENDS+=		pango>=1.29.4nb2:../../devel/pango
 
 LDFLAGS.SunOS+=		-liconv
@@ -57,16 +56,15 @@ LDFLAGS.SunOS+=		-liconv
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-.include "../../graphics/imlib2/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/libxdg-basedir/buildlink3.mk"
-.include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/xcb-util/buildlink3.mk"
-.include "../../x11/xcb-util-image/buildlink3.mk"
+.include "../../x11/xcb-util-cursor/buildlink3.mk"
 .include "../../x11/xcb-util-keysyms/buildlink3.mk"
 .include "../../x11/xcb-util-wm/buildlink3.mk"
+.include "../../x11/xproto/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
