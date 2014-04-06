@@ -1,4 +1,6 @@
-$NetBSD: patch-solenv_gbuild_platform_NETBSD__INTEL__GCC.mk,v 1.1 2014/02/02 07:43:40 ryoon Exp $
+$NetBSD: patch-solenv_gbuild_platform_NETBSD__INTEL__GCC.mk,v 1.2 2014/04/06 04:07:05 ryoon Exp $
+
+https://bugs.freedesktop.org/show_bug.cgi?id=77098
 
 --- solenv/gbuild/platform/NETBSD_INTEL_GCC.mk.orig	2014-01-27 21:35:34.000000000 +0000
 +++ solenv/gbuild/platform/NETBSD_INTEL_GCC.mk
