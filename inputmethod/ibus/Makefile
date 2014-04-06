@@ -1,10 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2014/04/06 01:49:12 obache Exp $
-
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.5.4
+# $NetBSD: Makefile,v 1.37 2014/04/06 02:48:03 obache Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=	1
 COMMENT=	Intelligent Input Bus
 
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
@@ -26,6 +23,7 @@ CONFIGURE_ARGS+=	--enable-gtk2
 CONFIGURE_ARGS+=	--enable-gtk3
 CONFIGURE_ARGS+=	--enable-surrounding-text
 CONFIGURE_ARGS+=	--enable-introspection=yes
+CONFIGURE_ARGS+=	--with-python=${PYTHONBIN}
 
 SUBST_CLASSES+=		dbus
 SUBST_STAGE.dbus=	post-configure
@@ -68,4 +66,5 @@ GTK3_IMMODULES=	yes
 .include "../../x11/gtk3/modules.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
