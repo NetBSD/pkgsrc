@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.59 2014/03/31 09:51:35 martin Exp $
+# $NetBSD: Makefile,v 1.60 2014/04/06 16:15:06 jakllsch Exp $
 #
 
 COMMENT=	Cross-platform development utilities
 
 #SUBDIR+=	COMMON	# not a real package
+SUBDIR+=	GenFw
 SUBDIR+=	atasm
 SUBDIR+=	avr-binutils
 SUBDIR+=	avr-gcc
