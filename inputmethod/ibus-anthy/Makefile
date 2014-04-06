@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2014/01/25 10:30:11 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2014/04/06 04:24:19 obache Exp $
 
-DISTNAME=	ibus-anthy-1.5.4
-PKGREVISION=	1
+DISTNAME=	ibus-anthy-1.5.5
 CATEGORIES=	inputmethod japanese
-MASTER_SITES=	http://ibus.googlecode.com/files/
+MASTER_SITES=	https://github.com/ibus/ibus-anthy/releases/download/${PKGVERSION_NOREV}/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/ibus/
@@ -13,8 +12,6 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	kasumi>=2.1:../../inputmethod/kasumi
 DEPENDS+=	ibus>=1.5.4:../../inputmethod/ibus
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
-
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # ibus
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
@@ -28,6 +25,7 @@ FIND_PREFIX:=	KASUMI_DIR=kasumi
 CONFIGURE_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 CONFIGURE_ARGS+=	--with-kasumi-exec=${KASUMI_DIR}/bin/kasumi
 CONFIGURE_ARGS+=	--with-kasumi-icon=${KASUMI_DIR}/share/pixmaps/kasumi.png
+CONFIGURE_ARGS+=	--with-layout=default
 #CONFIGURE_ARGS+=	--enable-pygtk2-anthy
 
 .include "../../devel/gettext-lib/buildlink3.mk"
