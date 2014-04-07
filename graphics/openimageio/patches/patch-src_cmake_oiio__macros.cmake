@@ -1,9 +1,7 @@
-$NetBSD: patch-cmake_oiio__macros.cmake,v 1.1 2012/12/03 12:54:14 ryoon Exp $
+$NetBSD: patch-src_cmake_oiio__macros.cmake,v 1.1 2014/04/07 12:15:55 ryoon Exp $
 
-* Set python interpreter as pkgsrc-provided one
-
---- cmake/oiio_macros.cmake.orig	2012-11-16 23:02:42.000000000 +0000
-+++ cmake/oiio_macros.cmake
+--- src/cmake/oiio_macros.cmake.orig	2014-04-03 06:08:57.000000000 +0000
++++ src/cmake/oiio_macros.cmake
 @@ -103,7 +103,7 @@ macro (oiio_add_tests)
              if (_has_generator_expr)
                  set (_add_test_args NAME ${_testname} 
