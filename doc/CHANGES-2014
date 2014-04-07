@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1374 2014/04/07 03:46:54 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.1375 2014/04/07 03:59:15 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2044,3 +2044,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/py-amqp to 1.4.4 [rodent 2014-04-07]
 	Updated net/py-caldav to 0.2.1 [rodent 2014-04-07]
 	Updated net/py-kombu to 3.0.14 [rodent 2014-04-07]
+	Updated www/py-flask-bootstrap to 3.1.1.2 [rodent 2014-04-07]
