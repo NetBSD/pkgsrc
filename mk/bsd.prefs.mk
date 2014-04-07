@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.344 2014/03/14 22:05:18 ryoon Exp $
+# $NetBSD: bsd.prefs.mk,v 1.345 2014/04/07 17:25:16 asau Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -386,6 +386,8 @@ OBJECT_FMT?=	ELF
 .  else
 OBJECT_FMT?=	a.out
 .  endif
+.elif ${OPSYS} == "FreeBSD"
+OBJECT_FMT?=	ELF
 .elif ${OPSYS} == "DragonFly"
 OBJECT_FMT=	ELF
 .elif ${OPSYS} == "MirBSD"
