@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2014/02/12 23:18:02 tron Exp $
+# $NetBSD: Makefile,v 1.23 2014/04/07 12:15:55 ryoon Exp $
 
-OIIOVER=	1.2.2
+OIIOVER=	1.3.13
 DISTNAME=	oiio-Release-${OIIOVER}
 PKGNAME=	${DISTNAME:S/oiio-Release/openimageio/}
-PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	-https://github.com/OpenImageIO/oiio/archive/Release-${OIIOVER}.tar.gz
 
@@ -12,7 +11,7 @@ HOMEPAGE=	https://sites.google.com/site/openimageio/
 COMMENT=	OpenImageIO is a library for reading and writing images
 LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/src
+#WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
@@ -23,6 +22,10 @@ CXXFLAGS+=		-std=c++0x
 CMAKE_ARGS+=		-DILMBASE_HOME:STRING=${BUILDLINK_PREFIX.ilmbase}
 CMAKE_ARGS+=		-DOPENJPEG_HOME:STRING=${BUILDLINK_PREFIX.openjpeg15}
 CMAKE_ARGS+=		-DOPENEXR_HOME:STRING=${BUILDLINK_PREFIX.openexr}
+CMAKE_ARGS+=		-DINSTALL_DOCS:BOOL=OFF
+
+# For redefinition of _rotl macro.
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 pre-install:
 	${RM} -f ${WRKSRC}/include/tbb/tbb_machine.h.orig
@@ -44,6 +47,7 @@ CXXFLAGS+=	-Wno-deprecated-register
 .include "../../graphics/openjpeg15/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../mk/giflib.buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 BUILDLINK_DEPMETHOD.qt4-tools=	build
 .include "../../x11/qt4-tools/buildlink3.mk"

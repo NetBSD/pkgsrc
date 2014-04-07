@@ -1,9 +1,7 @@
-$NetBSD: patch-cmake_platform.cmake,v 1.3 2013/10/12 22:13:44 ryoon Exp $
+$NetBSD: patch-src_cmake_platform.cmake,v 1.1 2014/04/07 12:15:55 ryoon Exp $
 
-* Add NetBSD support
-
---- cmake/platform.cmake.orig	2013-09-30 17:25:21.000000000 +0000
-+++ cmake/platform.cmake
+--- src/cmake/platform.cmake.orig	2014-04-03 06:08:57.000000000 +0000
++++ src/cmake/platform.cmake
 @@ -28,6 +28,16 @@ if (UNIX)
              # with arch of i586 or higher
              set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=i586")

@@ -1,9 +1,7 @@
-$NetBSD: patch-dpx.imageio_libdpx_DPXColorConverter.cpp,v 1.1 2012/12/08 22:47:41 adam Exp $
+$NetBSD: patch-src_dpx.imageio_libdpx_DPXColorConverter.cpp,v 1.1 2014/04/07 12:15:55 ryoon Exp $
 
-Define 'max' as unsigned int, because 0xFFFFFFFF does not fit in int.
-
---- dpx.imageio/libdpx/DPXColorConverter.cpp.orig	2012-12-07 21:29:43.000000000 +0000
-+++ dpx.imageio/libdpx/DPXColorConverter.cpp
+--- src/dpx.imageio/libdpx/DPXColorConverter.cpp.orig	2014-04-03 06:08:57.000000000 +0000
++++ src/dpx.imageio/libdpx/DPXColorConverter.cpp
 @@ -90,7 +90,7 @@ namespace dpx {
  		}
  	}
