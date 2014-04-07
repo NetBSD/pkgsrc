@@ -1,48 +1,35 @@
-$NetBSD: patch-aa,v 1.3 2013/10/20 17:56:02 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2014/04/07 20:14:48 fhajny Exp $
 
 Pass installation dirs properly, fix search paths, add Solaris support
 
---- Makefile.orig	2012-09-02 14:40:59.000000000 +0000
+--- Makefile.orig	2014-01-29 20:43:33.000000000 +0000
 +++ Makefile
-@@ -1,16 +1,16 @@
- # Inform the location to intall the modules
--LUAPATH=/usr/local/share/lua/5.1
--LUACPATH=/usr/local/lib/lua/5.1
-+LUAPATH=$(DESTDIR)$(PREFIX)/$(LUA_LDIR)
-+LUACPATH=$(DESTDIR)$(PREFIX)/$(LUA_CDIR)
+@@ -6,7 +6,7 @@ LUACPATH	?= /usr/lib/lua/5.1
+ # Comment this lines if you will link with non-internal LuaSocket's help files
+ #  and edit INCDIR and LIBDIR properly.
+ EXTRA		 = luasocket
+-DEFS		 = -DWITH_LUASOCKET
++DEFS		 = -DWITH_LUASOCKET -DLUA_COMPAT_MODULE
  
- # Edit the lines below to inform new path, if necessary
- #
--#INCDIR=-I/usr/local/lua-5.1/include -I/usr/local/openssl-0.9.8/include
--#LIBDIR=-L/usr/local/openssl-0.9.8/lib -R/usr/local/openssl-0.9.8/lib
-+INCDIR=-I${PREFIX}/include
-+LIBDIR=-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib
- 
- # For Mac OS X: set the system version
- MACOSX_VERSION=10.4
- 
--DEFS=-DBUFFER_DEBUG
-+DEFS=-DBUFFER_DEBUG -DLUA_COMPAT_MODULE
- 
- #----------------------
- # Do not edit this part
-@@ -24,6 +24,7 @@ none:
+ # Edit the lines below to inform new path, if necessary.
+ # Path below points to internal LuaSocket's help files.
+@@ -30,6 +30,7 @@ none:
  	@echo "  * linux"
  	@echo "  * bsd"
  	@echo "  * macosx"
 +	@echo "  * solaris"
  
  install:
- 	@cd src ; $(MAKE) LUACPATH="$(LUACPATH)" LUAPATH="$(LUAPATH)" install
-@@ -46,5 +47,11 @@ macosx:
+ 	@cd src && $(MAKE) LUACPATH="$(LUACPATH)" LUAPATH="$(LUAPATH)" install
+@@ -52,5 +53,11 @@ macosx:
  	@echo "------------------------------"
- 	@cd src ; $(MAKE) INCDIR="$(INCDIR)" LIBDIR="$(LIBDIR)" DEFS="$(DEFS)" MACVER="$(MACOSX_VERSION)" $@
+ 	@cd src && $(MAKE) INCDIR="$(INCDIR)" LIBDIR="$(LIBDIR)" MACVER="$(MACOSX_VERSION)" DEFS="$(DEFS)" EXTRA="$(EXTRA)" $@
  
 +solaris:
 +	@echo "---------------------"
 +	@echo "** Build for Solaris **"
-+	@echo "---------------------"              
-+	@cd src ; $(MAKE) INCDIR="$(INCDIR)" LIBDIR="$(LIBDIR)" DEFS="$(DEFS)" $@
++	@echo "---------------------"
++	@cd src ; $(MAKE) INCDIR="$(INCDIR)" LIBDIR="$(LIBDIR)" DEFS="$(DEFS)" EXTRA="$(EXTRA)" $@
 +
  clean:
- 	@cd src ; $(MAKE) clean
+ 	@cd src && $(MAKE) clean
