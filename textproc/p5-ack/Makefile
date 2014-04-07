@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2013/11/24 10:02:41 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2014/04/07 19:32:56 schmonz Exp $
 
-DISTNAME=	ack-2.08
+DISTNAME=	ack-2.12
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=App/}
 
@@ -23,7 +22,6 @@ post-configure:
 DEPENDS+=	p5-File-Next>=0.4:../../devel/p5-File-Next
 #DEPENDS+=	p5-Term-ANSIColor-[0-9]*:../../devel/p5-Term-ANSIColor
 BUILD_DEPENDS+=	{perl>=5.8.8,p5-Test-Harness>=2.5}:../../devel/p5-Test-Harness
-
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
