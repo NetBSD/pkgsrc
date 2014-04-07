@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2014/02/12 23:18:22 tron Exp $
+# $NetBSD: Makefile,v 1.8 2014/04/07 04:11:22 rodent Exp $
 
-DISTNAME=	V4.1.2
+DISTNAME=	V4.2.0
 PKGNAME=	libzrtpcpp${DISTNAME:S/V/-/1}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/wernerd/ZRTPCPP/archive/
+DIST_SUBDIR=	${PKGBASE}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://wiki.gnutelephony.org/
