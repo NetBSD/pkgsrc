@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.4 2014/04/06 15:04:16 khorben Exp $
+# $NetBSD: package.mk,v 1.5 2014/04/07 05:25:03 obache Exp $
 
 .if defined(PKG_SUFX)
 WARNINGS+=		"PKG_SUFX is deprecated, please use PKG_COMPRESSION"
@@ -85,10 +85,10 @@ ${STAGE_PKGFILE}: ${_CONTENTS_TARGETS}
 .if ${PKGFILE} != ${STAGE_PKGFILE}
 ${PKGFILE}: ${STAGE_PKGFILE}
 	${RUN} ${MKDIR} ${.TARGET:H}
-. if !empty(SIGN_PACKAGES:Mgpg)
+. if !empty(SIGN_PACKAGES:U:Mgpg)
 	@${STEP_MSG} "Creating signed binary package ${.TARGET} (GPG)"
 	${PKG_ADMIN} gpg-sign-package ${STAGE_PKGFILE} ${PKGFILE}
-. elif !empty(SIGN_PACKAGES:Mx509)
+. elif !empty(SIGN_PACKAGES:U:Mx509)
 	@${STEP_MSG} "Creating signed binary package ${.TARGET} (X509)"
 	${PKG_ADMIN} x509-sign-package ${STAGE_PKGFILE} ${PKGFILE}	\
 		${X509_KEY} ${X509_CERTIFICATE}
