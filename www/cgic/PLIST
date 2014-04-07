@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:00:19 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/04/07 15:01:44 adam Exp $
 include/cgic.h
 lib/libcgic.la
 libexec/cgi-bin/capture
 libexec/cgi-bin/cgictest
-share/doc/html/cgiclib/cgic.html
+share/doc/cgiclib/cgic.html
 share/examples/cgiclib/capture.c
 share/examples/cgiclib/cgictest.c
