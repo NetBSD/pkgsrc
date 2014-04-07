@@ -1,8 +1,8 @@
-$NetBSD: patch-intern_cycles_util_util__types.h,v 1.1 2014/01/10 20:06:46 joerg Exp $
+$NetBSD: patch-intern_cycles_util_util__types.h,v 1.2 2014/04/07 12:21:25 ryoon Exp $
 
---- intern/cycles/util/util_types.h.orig	2013-11-20 21:10:53.000000000 +0000
+--- intern/cycles/util/util_types.h.orig	2014-03-19 22:27:02.000000000 +0000
 +++ intern/cycles/util/util_types.h
-@@ -26,6 +26,9 @@
+@@ -32,6 +32,9 @@
  /* Qualifiers for kernel code shared by CPU and GPU */
  
  #ifndef __KERNEL_GPU__
@@ -10,5 +10,5 @@ $NetBSD: patch-intern_cycles_util_util__types.h,v 1.1 2014/01/10 20:06:46 joerg 
 +#include <locale>
 +#endif
  
- #define __device static inline
- #define __device_noinline static
+ #define ccl_device static inline
+ #define ccl_device_noinline static
