@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.502 2014/04/02 19:23:53 schmonz Exp $
+# $NetBSD: Makefile,v 1.503 2014/04/07 12:37:49 obache Exp $
 #
 
 COMMENT=	Security tools
@@ -344,6 +344,7 @@ SUBDIR+=	py-cryptography
 SUBDIR+=	py-cryptopp
 SUBDIR+=	py-denyhosts
 SUBDIR+=	py-ecdsa
+SUBDIR+=	py-ezPyCrypto
 SUBDIR+=	py-gnupg
 SUBDIR+=	py-hsm
 SUBDIR+=	py-itsdangerous
