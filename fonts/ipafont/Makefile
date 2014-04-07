@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 18:28:24 asau Exp $
+# $NetBSD: Makefile,v 1.6 2014/04/07 12:32:31 ryoon Exp $
 #
 
 DISTNAME=	IPAfont00303
 PKGNAME=	${DISTNAME:S/IPAfont/ipafont-/}
 CATEGORIES=	fonts japanese
-MASTER_SITES=	http://info.openlab.ipa.go.jp/ipafont/fontdata/
+MASTER_SITES=	http://dl.ipafont.ipa.go.jp/IPAfont/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://ossipedia.ipa.go.jp/ipafont/
+HOMEPAGE=	http://ipafont.ipa.go.jp/
 COMMENT=	IPA JIS X 0213 fonts (Gothic, P Gothic, Mincho, and P Mincho)
 LICENSE=	ipafont
 
