@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2014/02/16 21:39:14 rodent Exp $
+$NetBSD: distinfo,v 1.6 2014/04/07 02:09:37 rodent Exp $
 
-SHA1 (py-amqp/v1.4.3.tar.gz) = c8e01e85cfd1b545dfdc28ebb67eaed0fa5d9c8f
-RMD160 (py-amqp/v1.4.3.tar.gz) = 2e2e845d1973dca2782d81c9821dba2f8c229513
-Size (py-amqp/v1.4.3.tar.gz) = 76921 bytes
+SHA1 (amqp-1.4.4.tar.gz) = fa89e5bcc2df374106ce260c99cfee7bc7ebe571
+RMD160 (amqp-1.4.4.tar.gz) = 323e97f8ba74ccc9330c5eaefeafad085e0f3efb
+Size (amqp-1.4.4.tar.gz) = 77196 bytes
