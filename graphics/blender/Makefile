@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.103 2014/02/12 23:17:59 tron Exp $
+# $NetBSD: Makefile,v 1.104 2014/04/07 12:21:25 ryoon Exp $
 
-DISTNAME=	blender-2.69
-PKGREVISION=	1
+DISTNAME=	blender-2.70
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.blender.org/source/
 
@@ -10,7 +9,7 @@ HOMEPAGE=	http://www.blender.org/
 COMMENT=	Fully integrated 3D graphics creation suite
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake sed
 USE_LANGUAGES=		c c++
 
 PYTHON_VERSIONS_ACCEPTED=	33
@@ -25,17 +24,17 @@ FIND_PREFIX:=		SCONSDIR=scons
 INSTALLATION_DIRS=	bin share/blender
 
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/execinfo.h)
-LDFLAGS+=	-lexecinfo
+PYLDFLAGS+=		'-lexecinfo',
 .endif
+PYLDFLAGS+=		'${COMPILER_RPATH_FLAG}${PREFIX}/lib', \
+			'${COMPILER_RPATH_FLAG}${X11BASE}/lib'
 
 # To pass LDFLAGS to compiler/linker
-MYLDFLAGS=	`printf "'%s'," ${LDFLAGS} | sed -e 's:,$$::'`
-pre-configure:
-	${CP} -f ${WRKSRC}/user-config.py ${WRKSRC}/user-config.py.1
-	${SED} \
-		-e "s|@MYLDFLAGS@|${MYLDFLAGS}|g" \
-		< ${WRKSRC}/user-config.py.1 > ${WRKSRC}/user-config.py
-	${RM} -f ${WRKSRC}/user-config.py.1
+SUBST_CLASSES+=		ldflags
+SUBST_STAGE.ldflags=	pre-configure
+SUBST_MESSAGE.ldflags=	Setting LDFLAGS
+SUBST_FILES.ldflags+=	build_files/scons/config/*-config.py
+SUBST_VARS.ldflags+=	PYLDFLAGS
 
 SCONS_ARGS+=	WITH_BF_JACK=False
 SCONS_ARGS+=	WITH_BF_OPENAL=False
@@ -83,6 +82,7 @@ post-install:
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/gettext-tools/buildlink3.mk"
+.include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"

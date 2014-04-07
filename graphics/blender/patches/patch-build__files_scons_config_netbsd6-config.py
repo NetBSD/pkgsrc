@@ -1,4 +1,4 @@
-$NetBSD: patch-build__files_scons_config_netbsd6-config.py,v 1.3 2014/01/10 20:06:46 joerg Exp $
+$NetBSD: patch-build__files_scons_config_netbsd6-config.py,v 1.4 2014/04/07 12:21:25 ryoon Exp $
 
 * config file for NetBSD 6
 
@@ -230,5 +230,5 @@ $NetBSD: patch-build__files_scons_config_netbsd6-config.py,v 1.3 2014/01/10 20:0
 +BF_BUILDDIR = '../build/netbsd6'
 +BF_INSTALLDIR='../install/netbsd6'
 +
-+#Link against pthread
-+PLATFORM_LINKFLAGS = ['-pthread']
++#Link against pthread and libexecinfo
++PLATFORM_LINKFLAGS = ['-pthread', @PYLDFLAGS@]
