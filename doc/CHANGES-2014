@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1371 2014/04/07 00:44:02 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.1372 2014/04/07 02:09:50 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2041,3 +2041,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added cross/GenFw version 0pre15188 [jakllsch 2014-04-06]
 	Updated finance/py-stripe to 1.12.2 [rodent 2014-04-07]
 	Updated lang/py-pythonz to 1.2.2 [rodent 2014-04-07]
+	Updated net/py-amqp to 1.4.4 [rodent 2014-04-07]
