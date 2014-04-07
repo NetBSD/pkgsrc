@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2013/09/01 04:48:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2014/04/07 19:39:17 fhajny Exp $
 #
 
-DISTNAME=	lua-expat-1f41c74ce686
-PKGNAME=	${LUA_PKGPREFIX}-expat-1.2.0.20130831
+DISTNAME=	luaexpat-1.3.0
+PKGNAME=	${DISTNAME:S/lua/${LUA_PKGPREFIX}-/}
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITES=	https://matthewwild.co.uk/projects/luaexpat/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://matthewwild.co.uk/projects/luaexpat/
