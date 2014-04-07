@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2014/02/14 10:25:23 fhajny Exp $
+$NetBSD: distinfo,v 1.9 2014/04/07 10:09:33 fhajny Exp $
 
-SHA1 (apache-cassandra-1.2.15-bin.tar.gz) = 717487325aab8df2c1ca0da71d567e0ea656733c
-RMD160 (apache-cassandra-1.2.15-bin.tar.gz) = 8f90f2062940b6abe37eba5733034d067d8c5b60
-Size (apache-cassandra-1.2.15-bin.tar.gz) = 16877671 bytes
+SHA1 (apache-cassandra-1.2.16-bin.tar.gz) = 637d9ecb643f3226bbf510880586f6021cf70d33
+RMD160 (apache-cassandra-1.2.16-bin.tar.gz) = 1cfd4f9bc93279a720bbda228e2bbb6b73e5c5b8
+Size (apache-cassandra-1.2.16-bin.tar.gz) = 16880266 bytes
