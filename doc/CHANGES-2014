@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1389 2014/04/07 19:31:24 adam Exp $
+$NetBSD: CHANGES-2014,v 1.1390 2014/04/07 19:33:01 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2060,3 +2060,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/getmail to 4.46.0 [schmonz 2014-04-07]
 	Updated devel/pango to 1.36.3 [adam 2014-04-07]
 	Updated www/py-cherrypy to 3.2.5 [adam 2014-04-07]
+	Updated textproc/p5-ack to 2.12 [schmonz 2014-04-07]
