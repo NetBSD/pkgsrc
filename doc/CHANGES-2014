@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1387 2014/04/07 15:03:41 adam Exp $
+$NetBSD: CHANGES-2014,v 1.1388 2014/04/07 19:23:30 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2057,3 +2057,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/apache-cassandra to 1.2.16 [fhajny 2014-04-07]
 	Updated graphics/openjpeg15 to 1.5.2 [adam 2014-04-07]
 	Updated www/cgic to 2.06 [adam 2014-04-07]
+	Updated mail/getmail to 4.46.0 [schmonz 2014-04-07]
