@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2008/06/20 01:09:41 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2014/04/07 15:01:44 adam Exp $
 
 --- Makefile.orig	2005-12-16 15:52:31.000000000 +0100
 +++ Makefile
@@ -59,9 +59,9 @@ $NetBSD: patch-aa,v 1.3 2008/06/20 01:09:41 joerg Exp $
 +	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} capture ${DESTDIR}${PREFIX}/libexec/cgi-bin
 +	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} cgictest ${DESTDIR}${PREFIX}/libexec/cgi-bin
 +	${INSTALL} -c -m 444 cgic.h ${DESTDIR}${PREFIX}/include
-+	mkdir -p ${DESTDIR}${PREFIX}/share/doc/html/cgiclib
++	mkdir -p ${DESTDIR}${PREFIX}/share/doc/cgiclib
 +	for i in *.html; do \
-+	  ${INSTALL} -c -m 444 $$i ${DESTDIR}${PREFIX}/share/doc/html/cgiclib ; \
++	  ${INSTALL} -c -m 444 $$i ${DESTDIR}${PREFIX}/share/doc/cgiclib ; \
 +	done
 + 
  clean:
