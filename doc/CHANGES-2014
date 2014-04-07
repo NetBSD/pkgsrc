@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1384 2014/04/07 13:30:39 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1385 2014/04/07 14:28:58 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2054,3 +2054,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added security/py-ezPyCrypto version 0.1.1 [obache 2014-04-07]
 	Updated www/contao211 to 2.11.17 [taca 2014-04-07]
 	Updated www/contao32 to 3.2.9 [taca 2014-04-07]
+	Updated databases/apache-cassandra to 1.2.16 [fhajny 2014-04-07]
