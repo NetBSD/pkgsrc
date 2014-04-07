@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1382 2014/04/07 12:37:01 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1383 2014/04/07 13:28:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2052,3 +2052,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/pod2mdoc to 0.0.11 [wiz 2014-04-07]
 	Updated graphics/blender to 2.70 [ryoon 2014-04-07]
 	Added security/py-ezPyCrypto version 0.1.1 [obache 2014-04-07]
+	Updated www/contao211 to 2.11.17 [taca 2014-04-07]
