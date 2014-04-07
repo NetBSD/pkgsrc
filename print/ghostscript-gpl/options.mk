@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2014/02/21 18:09:02 richard Exp $
+# $NetBSD: options.mk,v 1.3 2014/04/07 07:36:20 richard Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ghostscript
 PKG_SUPPORTED_OPTIONS=	x11 cups debug fontconfig disable-compile-inits utf8
@@ -24,6 +24,7 @@ PLIST_VARS+=		cups
 .if !empty(PKG_OPTIONS:Mcups)
 CONFIGURE_ARGS+=	--enable-cups
 PLIST.cups=		yes
+BUILD_TARGET+=		cups
 INSTALL_TARGET+=	install-cups
 
 CUPS_CONFDIR?=	${PKG_SYSCONFBASEDIR}/cups
