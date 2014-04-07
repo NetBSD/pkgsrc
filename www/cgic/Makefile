@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2012/10/28 06:30:12 asau Exp $
+# $NetBSD: Makefile,v 1.10 2014/04/07 15:01:44 adam Exp $
 
-DISTNAME=	cgic205
-PKGNAME=	cgic-2.05
+DISTNAME=	cgic206
+PKGNAME=	cgic-2.06
 CATEGORIES=	www
 MASTER_SITES=	http://www.boutell.com/cgic/
 
