@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2014/04/07 12:36:38 obache Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/ezPyCrypto.py
+${PYSITELIB}/ezPyCrypto.pyc
+${PYSITELIB}/ezPyCrypto.pyo
