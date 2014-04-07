@@ -1,10 +1,7 @@
-$NetBSD: patch-make_detectplatform.mk,v 1.1 2012/12/03 12:54:15 ryoon Exp $
+$NetBSD: patch-src_make_detectplatform.mk,v 1.1 2014/04/07 12:15:55 ryoon Exp $
 
-* Add amd64 support for NetBSD
-* Add NetBSD support
-
---- make/detectplatform.mk.orig	2012-11-16 23:02:42.000000000 +0000
-+++ make/detectplatform.mk
+--- src/make/detectplatform.mk.orig	2014-04-03 06:08:57.000000000 +0000
++++ src/make/detectplatform.mk
 @@ -25,7 +25,9 @@ ifneq (${hw},x86)
    ifneq (${hw},x86_64)
      ifneq (${hw},i386)
