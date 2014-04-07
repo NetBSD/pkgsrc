@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2014/04/07 12:21:25 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.19 2014/04/07 12:26:22 ryoon Exp $
 bin/blender
 share/blender/${PKGVERSION}/datafiles/fonts/bmonofont-i18n.ttf.gz
 share/blender/${PKGVERSION}/datafiles/fonts/droidsans.ttf.gz
@@ -392,8 +392,6 @@ share/blender/${PKGVERSION}/python/lib/python3.3/pickle.py
 share/blender/${PKGVERSION}/python/lib/python3.3/pickletools.py
 share/blender/${PKGVERSION}/python/lib/python3.3/pipes.py
 share/blender/${PKGVERSION}/python/lib/python3.3/pkgutil.py
-share/blender/${PKGVERSION}/python/lib/python3.3/plat-netbsd6/IN.py
-share/blender/${PKGVERSION}/python/lib/python3.3/plat-netbsd6/regen
 share/blender/${PKGVERSION}/python/lib/python3.3/platform.py
 share/blender/${PKGVERSION}/python/lib/python3.3/plistlib.py
 share/blender/${PKGVERSION}/python/lib/python3.3/poplib.py
