@@ -13,8 +13,7 @@
       <method_context project="@SMF_NAME@" working_directory="@CASSANDRA_HOME@">
       <method_credential user="@CASSANDRA_USER@" group="@CASSANDRA_GROUP@" />
       <method_environment>
-        <envvar name="JAVA_HOME" value="@PREFIX@/java/sun6" />
-        <envvar name="JVM_OPTS" value="-d64" />
+        <envvar name="JAVA_HOME" value="@JAVA_HOME@" />
       </method_environment>
     </method_context>
     <exec_method type="method" name="start" exec="@PREFIX@/share/cassandra/bin/cassandra -p @VARBASE@/lib/cassandra/cassandra.pid" timeout_seconds="600" />
