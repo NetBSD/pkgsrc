@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1377 2014/04/07 04:51:57 hiramatsu Exp $
+$NetBSD: CHANGES-2014,v 1.1378 2014/04/07 11:52:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2047,3 +2047,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-flask-bootstrap to 3.1.1.2 [rodent 2014-04-07]
 	Updated net/libzrtpcpp to 4.2.0 [rodent 2014-04-07]
 	Updated devel/p5-CPAN-Meta-YAML to 0.012 [hiramatsu 2014-04-07]
+	Updated textproc/icu to 53.1 [adam 2014-04-07]
