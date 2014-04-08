@@ -1,5 +1,7 @@
-$NetBSD: patch-ac,v 1.6 2013/08/13 00:17:36 wen Exp $
+$NetBSD: patch-ac,v 1.7 2014/04/08 12:50:43 adam Exp $
+
 Add -Wno-char-subscripts to CFLAGS
+
 --- configure.orig	2013-08-13 07:58:03.000000000 +0000
 +++ configure
 @@ -4299,7 +4299,7 @@ rm -f core conftest.err conftest.$ac_obj
