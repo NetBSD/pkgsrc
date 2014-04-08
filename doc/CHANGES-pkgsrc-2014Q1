@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.3 2014/04/05 16:25:03 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.4 2014/04/08 10:09:49 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q1 branch:
@@ -9,3 +9,5 @@ Pullup ticket #4352 - requested by obache
 emulators/suse131_openssl: security update
 Pullup ticket #4353 - requested by obache
 misc/libreoffice4-bin: build fix
+Pullup ticket #4359 - requested by obache
+security/openssl: security update
