@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.35 2014/01/25 10:30:11 wiz Exp $
+# $NetBSD: Makefile,v 1.35.2.1 2014/04/08 19:49:59 tron Exp $
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.5.4
 
 .include "Makefile.common"
 
+PKGREVISION=	1
 COMMENT=	Intelligent Input Bus
 
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
@@ -63,6 +64,7 @@ PY_PATCHPLIST=	yes
 .include "../../textproc/iso-codes/buildlink3.mk"
 GTK2_IMMODULES=	yes
 .include "../../x11/gtk2/modules.mk"
+GTK3_IMMODULES=	yes
 .include "../../x11/gtk3/modules.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../lang/python/application.mk"
