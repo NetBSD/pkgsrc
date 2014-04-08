@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2012/12/22 13:34:49 imil Exp $
+# $NetBSD: Makefile,v 1.4 2014/04/08 16:40:35 imil Exp $
 #
 
-IRCVERS=	3.4.2
+IRCVERS=	8.5.4
 DISTNAME=	irc-${IRCVERS}
 PKGNAME=	${PYPKGPREFIX}-irclib-${IRCVERS}
 CATEGORIES=	net python
