@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1406 2014/04/08 19:37:43 tez Exp $
+$NetBSD: CHANGES-2014,v 1.1407 2014/04/08 20:15:40 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2077,3 +2077,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/py-irclib to 8.5.4 [imil 2014-04-08]
 	Updated net/py-irclib to 8.5.4nb1 [imil 2014-04-08]
 	Updated print/a2ps to 4.14nb6 [tez 2014-04-08]
+	Updated www/apache-tomcat7 to 7.0.53 [ryoon 2014-04-08]
