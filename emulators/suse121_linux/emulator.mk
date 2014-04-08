@@ -1,4 +1,4 @@
-# $NetBSD: emulator.mk,v 1.6 2014/04/08 08:15:07 obache Exp $
+# $NetBSD: emulator.mk,v 1.7 2014/04/08 08:20:06 obache Exp $
 #
 # This file is included by linux-suse.mk in the emulator framework.
 #
@@ -54,6 +54,7 @@ DEPENDS_suse-12.1.${_mod_}:=	\
 DEPENDS_suse-12.1.nss=		${DEPENDS_suse-12.1.base}
 DEPENDS_suse-12.1.nspr=		${DEPENDS_suse-12.1.base}
 DEPENDS_suse-12.1.libidn=	${DEPENDS_suse-12.1.base}
+DEPENDS_suse-12.1.openldap=	${DEPENDS_suse-12.1.base}
 DEPENDS_suse-12.1.dbus=		${DEPENDS_suse-12.1.gtk2}
 DEPENDS_suse-12.1.dbus-glib=	${DEPENDS_suse-12.1.gtk2}
 DEPENDS_suse-12.1.libffi=	${DEPENDS_suse-12.1.gtk2}
