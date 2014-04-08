@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2014/03/18 12:50:13 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2014/04/08 10:12:10 obache Exp $
 
 DISTNAME=	acroread9	# overridden below
 PKGNAME=	acroread9-9.5.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	http://ardownload.adobe.com/pub/adobe/reader/unix/9.x/${PKGVERSION_NOREV}/enu/
 
@@ -21,8 +21,8 @@ WRKSRC=			${WRKDIR}/AdobeReader
 BUILD_DIRS=		# empty
 
 EMUL_PLATFORMS=		linux-i386
-EMUL_MODULES.linux=	compat cups curl gtk2 locale xml2
-EMUL_REQD=		suse>=11.0
+EMUL_MODULES.linux=	cups libidn gtk2 locale xml2
+EMUL_REQD=		suse>=10.0
 
 .include "../../mk/bsd.prefs.mk"
 
