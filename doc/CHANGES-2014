@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1395 2014/04/08 02:12:05 khorben Exp $
+$NetBSD: CHANGES-2014,v 1.1396 2014/04/08 06:21:08 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2066,3 +2066,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/lua-sec to 0.5 [fhajny 2014-04-07]
 	Updated chat/prosody to 0.9.4 [fhajny 2014-04-07]
 	Updated editors/deforaos-editor to 0.3.0 [khorben 2014-04-08]
+	Updated security/openssl to 1.0.1g [obache 2014-04-08]
