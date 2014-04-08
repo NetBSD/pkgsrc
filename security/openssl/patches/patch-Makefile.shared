@@ -1,4 +1,6 @@
-$NetBSD: patch-ag,v 1.12 2013/02/06 21:40:34 jperkin Exp $
+$NetBSD: patch-Makefile.shared,v 1.1.2.2 2014/04/08 10:09:26 tron Exp $
+
+Adjust build procedure.
 
 --- Makefile.shared.orig	2010-08-21 11:37:17.000000000 +0000
 +++ Makefile.shared

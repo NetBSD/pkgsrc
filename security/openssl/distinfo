@@ -1,16 +1,18 @@
-$NetBSD: distinfo,v 1.102 2014/01/14 21:51:00 bsiegert Exp $
+$NetBSD: distinfo,v 1.102.2.1 2014/04/08 10:09:26 tron Exp $
 
-SHA1 (openssl-1.0.1f.tar.gz) = 9ef09e97dfc9f14ac2c042f3b7e301098794fc0f
-RMD160 (openssl-1.0.1f.tar.gz) = db8c07f8753fab2b76118d4c18175290356ed144
-Size (openssl-1.0.1f.tar.gz) = 4509212 bytes
-SHA1 (patch-aa) = 4e759762074b73f7f0f4c24d5b56d1156a4bfe6e
-SHA1 (patch-ac) = ecdafa378e73bd2d6789c985ea28ef4ab2126aa6
-SHA1 (patch-ad) = bb86ac463fc4ab8b485df5f1a4fb9c13c1fc41c3
-SHA1 (patch-ae) = 7a58f1765a3761321dcc8dafc5fe2e33207be480
-SHA1 (patch-af) = f305134acfaa17e6a039630d916fbda4900adc85
-SHA1 (patch-ag) = b407200455878a8a151fc9b4f771fe17552d04fc
-SHA1 (patch-ak) = 049250b9bd42e6f155145703135dab39a7ec17e0
+SHA1 (openssl-1.0.1g.tar.gz) = b28b3bcb1dc3ee7b55024c9f795be60eb3183e3c
+RMD160 (openssl-1.0.1g.tar.gz) = cd2eb879646a2b91b2f67dfaf99eb9668ba5d7ea
+Size (openssl-1.0.1g.tar.gz) = 4509047 bytes
+SHA1 (patch-Configure) = ecdafa378e73bd2d6789c985ea28ef4ab2126aa6
+SHA1 (patch-Makefile.org) = 8780f8829b8a010d4283f00740c264a4dc15c7c6
+SHA1 (patch-Makefile.shared) = 1b47a1d3d95391217b15663d3558545780263fbb
+SHA1 (patch-apps_Makefile) = e575ccead86bb39205260b03c00a88fa4d21a906
+SHA1 (patch-config) = 3d33888b6ed4b9e3f6dfc2d3b6bb304e48d1360a
+SHA1 (patch-crypto_bn_bn.h) = e489574748de97c9f1c8724d599d1a345188c0d0
+SHA1 (patch-crypto_bn_bn__lib.c) = 8febe2b833f3adb2224aa723c29649660ff2681a
+SHA1 (patch-crypto_bn_bn__prime.pl) = 049250b9bd42e6f155145703135dab39a7ec17e0
 SHA1 (patch-crypto_dso_dso__dlfcn.c) = d5d6ca9a517151357efecb6aa9a5f528a5014290
+SHA1 (patch-crypto_ec_ec2__mult.c) = 3df4d00049712722816c715a783f2cdc17e22983
 SHA1 (patch-doc_apps_cms.pod) = 24792a0db2d8566e0f8b52833de300f538f6a92e
 SHA1 (patch-doc_apps_smine.pod) = 277aee087892f867402ea73bae10383fe24d6e08
 SHA1 (patch-doc_ssl_SSL__COMP__add__compression__method.pod) = f3fcbe0eae26ac8e24fe937e529ea0dba6ea1639
@@ -31,3 +33,4 @@ SHA1 (patch-doc_ssl_SSL__set__session.pod) = e4d8442f4fc827520ca20f108050fcd6314
 SHA1 (patch-doc_ssl_SSL__shutdown.pod) = 21682f3385a66ba8f0ebd11bb9bb3c6198352783
 SHA1 (patch-doc_ssl_SSL__write.pod) = 67efd6d0de0a0db34c18c62e4a939c0ea49442ca
 SHA1 (patch-engines_ccgost_Makefile) = 08999f0f40969883482ad9ffc1aa9959ed7d402c
+SHA1 (patch-tools_Makefile) = d67f3ea397674adbe3360e4df9c2e417dbcab56a
