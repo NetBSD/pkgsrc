@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2014/01/13 02:19:47 dholland Exp $
+# $NetBSD: Makefile,v 1.47.2.1 2014/04/08 22:30:27 tron Exp $
 #
 
 DISTNAME=	awesome-3.5.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11 wm
 MASTER_SITES=	http://awesome.naquadah.org/download/
 EXTRACT_SUFX=	.tar.xz
@@ -38,7 +38,7 @@ SUBST_CLASSES+=		ev
 SUBST_MESSAGE.ev=	Fixing pathnames for libev
 SUBST_STAGE.ev=		pre-configure
 SUBST_FILES.ev=		awesomeConfig.cmake
-SUBST_SED.ev=		-e "s,PKGPREFIX,${PREFIX},"
+SUBST_SED.ev=		-e "s,@LIBEV_PREFIX@,${BUILDLINK_PREFIX.libev},"
 
 BUILD_DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 BUILD_DEPENDS+=	asciidoc>=8.3.0:../../textproc/asciidoc
@@ -46,13 +46,14 @@ BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 BUILD_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
 
 DEPENDS+=		${LUA_PKGPREFIX}-gi-[0-9]*:../../devel/lua-gi
+DEPENDS+=		pango>=1.29.4nb2:../../devel/pango
 
 LDFLAGS.SunOS+=		-liconv
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libev/buildlink3.mk"
-.include "../../devel/pango/buildlink3.mk"
+.include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
