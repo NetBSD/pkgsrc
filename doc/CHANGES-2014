@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1402 2014/04/08 14:11:10 he Exp $
+$NetBSD: CHANGES-2014,v 1.1403 2014/04/08 14:47:05 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2073,3 +2073,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated print/acroread9 to 9.5.5nb2 [obache 2014-04-08]
 	Updated devel/nasm to 2.11.02 [adam 2014-04-08]
 	Updated net/net-snmp to 5.7.2.1 [he 2014-04-08]
+	Updated emulators/suse131_openssl to 13.1nb4 [obache 2014-04-08]
