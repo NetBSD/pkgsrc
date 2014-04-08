@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1398 2014/04/08 10:04:03 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1399 2014/04/08 10:07:55 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2069,3 +2069,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/openssl to 1.0.1g [obache 2014-04-08]
 	Added emulators/suse100_libidn version 10.0 [obache 2014-04-08]
 	Added emulators/suse100_32_libidn version 10.0 [obache 2014-04-08]
+	Updated emulators/suse131_gtk2 to 13.1nb3 [obache 2014-04-08]
