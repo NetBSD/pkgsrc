@@ -1,7 +1,18 @@
-$NetBSD: patch-configure,v 1.4 2014/04/01 13:51:56 fhajny Exp $
+$NetBSD: patch-configure,v 1.5 2014/04/08 13:23:31 fhajny Exp $
+
+Fix compile vs. link tests, portability.
 
 --- configure.orig	2014-02-09 11:52:52.000000000 +0000
 +++ configure
+@@ -15921,7 +15921,7 @@ if test "x$ac_cv_prog_cc_c99" != xno; th
+ fi
+ 
+ 
+-if test "x${ac_cv_prog_cc_c99}" == "xno"; then :
++if test "x${ac_cv_prog_cc_c99}" = "xno"; then :
+   as_fn_error $? "No c99 compatible compiler found" "$LINENO" 5
+ fi
+ 
 @@ -26560,15 +26560,15 @@ else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
