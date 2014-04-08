@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.27 2014/01/14 21:51:00 bsiegert Exp $
+$NetBSD: patch-config,v 1.1.2.2 2014/04/08 10:09:26 tron Exp $
+
+Adjust config procedure.
 
 --- config.orig	Mon Feb 11 15:25:39 2013
 +++ config

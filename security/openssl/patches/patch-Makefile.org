@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.26 2013/10/02 19:59:31 joerg Exp $
+$NetBSD: patch-Makefile.org,v 1.1.2.2 2014/04/08 10:09:26 tron Exp $
+
+Adjust build procedure.
 
 --- Makefile.org.orig	2013-02-11 15:26:04.000000000 +0000
 +++ Makefile.org
