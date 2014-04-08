@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3.2.1 2014/04/05 15:59:58 tron Exp $
+$NetBSD: distinfo,v 1.3.2.2 2014/04/08 20:01:23 tron Exp $
 
-SHA1 (suse131/libopenssl1_0_0-1.0.1e-11.28.1.i586.rpm) = e79ade024e3e119f5291f727688f5d8218c41803
-RMD160 (suse131/libopenssl1_0_0-1.0.1e-11.28.1.i586.rpm) = 1284acaa68a6cc87b86fbc4d7d4ae135b6458ad9
-Size (suse131/libopenssl1_0_0-1.0.1e-11.28.1.i586.rpm) = 760593 bytes
-SHA1 (suse131/libopenssl1_0_0-1.0.1e-11.28.1.x86_64.rpm) = a19ecef9bba2ed5d01a72ca9c82ef4fc81358440
-RMD160 (suse131/libopenssl1_0_0-1.0.1e-11.28.1.x86_64.rpm) = 89289697debb2e155f11458d0caa80d8da1a68a9
-Size (suse131/libopenssl1_0_0-1.0.1e-11.28.1.x86_64.rpm) = 811123 bytes
+SHA1 (suse131/libopenssl1_0_0-1.0.1e-11.32.1.i586.rpm) = 50adabda537833f01ef36af42bf172447fd95508
+RMD160 (suse131/libopenssl1_0_0-1.0.1e-11.32.1.i586.rpm) = c545ff5b18a42ae5450d37c3def8ca458ce0cc0d
+Size (suse131/libopenssl1_0_0-1.0.1e-11.32.1.i586.rpm) = 760753 bytes
+SHA1 (suse131/libopenssl1_0_0-1.0.1e-11.32.1.x86_64.rpm) = 6b58c66246625d519a383669320c9712abf79ef4
+RMD160 (suse131/libopenssl1_0_0-1.0.1e-11.32.1.x86_64.rpm) = 7ca5ecffa8af88aff560a738b1f37c75143bf143
+Size (suse131/libopenssl1_0_0-1.0.1e-11.32.1.x86_64.rpm) = 811211 bytes
