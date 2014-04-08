@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.103 2014/04/02 12:11:35 he Exp $
+$NetBSD: distinfo,v 1.104 2014/04/08 06:20:44 obache Exp $
 
-SHA1 (openssl-1.0.1f.tar.gz) = 9ef09e97dfc9f14ac2c042f3b7e301098794fc0f
-RMD160 (openssl-1.0.1f.tar.gz) = db8c07f8753fab2b76118d4c18175290356ed144
-Size (openssl-1.0.1f.tar.gz) = 4509212 bytes
+SHA1 (openssl-1.0.1g.tar.gz) = b28b3bcb1dc3ee7b55024c9f795be60eb3183e3c
+RMD160 (openssl-1.0.1g.tar.gz) = cd2eb879646a2b91b2f67dfaf99eb9668ba5d7ea
+Size (openssl-1.0.1g.tar.gz) = 4509047 bytes
 SHA1 (patch-Configure) = ecdafa378e73bd2d6789c985ea28ef4ab2126aa6
 SHA1 (patch-Makefile.org) = 8780f8829b8a010d4283f00740c264a4dc15c7c6
 SHA1 (patch-Makefile.shared) = 1b47a1d3d95391217b15663d3558545780263fbb
