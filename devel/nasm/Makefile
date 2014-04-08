@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.44 2013/08/13 00:17:36 wen Exp $
+# $NetBSD: Makefile,v 1.45 2014/04/08 12:50:43 adam Exp $
 
-DISTNAME=	nasm-2.10.09
+DISTNAME=	nasm-2.11.02
 CATEGORIES=	devel lang
-MASTER_SITES=	http://www.nasm.us/pub/nasm/releasebuilds/2.10.09/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	http://www.nasm.us/pub/nasm/releasebuilds/${PKGVERSION_NOREV}/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://nasm.sourceforge.net/
+HOMEPAGE=	http://www.nasm.us/
 COMMENT=	General-purpose x86 assembler
 # actually only 2-clause BSD
 LICENSE=	modified-bsd
@@ -18,7 +18,7 @@ AUTO_MKDIRS=		yes
 USE_TOOLS+=		gmake makeinfo perl
 GCC_REQD+=		3.0
 GNU_CONFIGURE=		yes
-MAKE_JOBS_SAFE=		NO
+#MAKE_JOBS_SAFE=		NO
 
 INFO_FILES=		yes
 BUILD_TARGET=		everything
