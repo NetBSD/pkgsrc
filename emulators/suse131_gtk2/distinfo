@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2014/03/14 09:07:28 obache Exp $
+$NetBSD: distinfo,v 1.3 2014/04/08 10:07:45 obache Exp $
 
 SHA1 (suse131/gdk-pixbuf-query-loaders-2.30.1-20.1.i586.rpm) = 7b0ba199a95aba9648be1f08bbaa66d39aa1ae67
 RMD160 (suse131/gdk-pixbuf-query-loaders-2.30.1-20.1.i586.rpm) = a6f7fc419dc7655689c25be5c24c697321f3f614
@@ -66,6 +66,12 @@ Size (suse131/libpango-1_0-0-1.36.0-1.1.i586.rpm) = 276661 bytes
 SHA1 (suse131/libpango-1_0-0-1.36.0-1.1.x86_64.rpm) = 47d09cc59beab844ff6040b31831a6126f705181
 RMD160 (suse131/libpango-1_0-0-1.36.0-1.1.x86_64.rpm) = 215bc9d5830efe8ba27755c9111d8adc9814387a
 Size (suse131/libpango-1_0-0-1.36.0-1.1.x86_64.rpm) = 279386 bytes
+SHA1 (suse131/libpangox-1_0-0-0.0.2-4.1.3.i586.rpm) = ce45a4ca506f4a61f3fbaab0cd63fd6295c55b8c
+RMD160 (suse131/libpangox-1_0-0-0.0.2-4.1.3.i586.rpm) = c27a03693a4910a1482786c7cff34a1ae1db426b
+Size (suse131/libpangox-1_0-0-0.0.2-4.1.3.i586.rpm) = 50834 bytes
+SHA1 (suse131/libpangox-1_0-0-0.0.2-4.1.3.x86_64.rpm) = 86852c47040eff19c456b9b599c917f5675cb6ed
+RMD160 (suse131/libpangox-1_0-0-0.0.2-4.1.3.x86_64.rpm) = 479333fc3cc97a933630b959edca8f3c5f70fd9d
+Size (suse131/libpangox-1_0-0-0.0.2-4.1.3.x86_64.rpm) = 51437 bytes
 SHA1 (suse131/orbit2-2.14.19-15.1.3.i586.rpm) = 67b76b092cf8369c46b4daa382c5d92efa451b93
 RMD160 (suse131/orbit2-2.14.19-15.1.3.i586.rpm) = c5474fe39fbe3b065eb73c9e6bdac888cf010c29
 Size (suse131/orbit2-2.14.19-15.1.3.i586.rpm) = 157176 bytes
