@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1404 2014/04/08 16:40:51 imil Exp $
+$NetBSD: CHANGES-2014,v 1.1405 2014/04/08 16:53:07 imil Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2075,3 +2075,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/net-snmp to 5.7.2.1 [he 2014-04-08]
 	Updated emulators/suse131_openssl to 13.1nb4 [obache 2014-04-08]
 	Updated net/py-irclib to 8.5.4 [imil 2014-04-08]
+	Updated net/py-irclib to 8.5.4nb1 [imil 2014-04-08]
