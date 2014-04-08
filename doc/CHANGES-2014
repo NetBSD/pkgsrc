@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1400 2014/04/08 10:12:21 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1401 2014/04/08 12:51:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2071,3 +2071,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added emulators/suse100_32_libidn version 10.0 [obache 2014-04-08]
 	Updated emulators/suse131_gtk2 to 13.1nb3 [obache 2014-04-08]
 	Updated print/acroread9 to 9.5.5nb2 [obache 2014-04-08]
+	Updated devel/nasm to 2.11.02 [adam 2014-04-08]
