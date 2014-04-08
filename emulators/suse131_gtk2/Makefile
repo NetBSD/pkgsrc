@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2014/03/14 09:07:28 obache Exp $
+# $NetBSD: Makefile,v 1.4 2014/04/08 10:07:45 obache Exp $
 
 DISTNAME=	suse_gtk2-${SUSE_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	emulators
 RPMPKGS+=	libcairo2-1.12.16-3.1.3.${SUSE_ARCH}
 RPMUPDPKGS+=	gdk-pixbuf-query-loaders-2.30.1-20.1.${SUSE_ARCH}
@@ -14,6 +14,7 @@ RPMPKGS+=	libgtk-2_0-0-2.24.22-2.1.${SUSE_ARCH}
 RPMPKGS+=	libjasper1-1.900.1-160.1.2.${SUSE_ARCH}
 RPMPKGS+=	orbit2-2.14.19-15.1.3.${SUSE_ARCH}
 RPMPKGS+=	libpango-1_0-0-1.36.0-1.1.${SUSE_ARCH}
+RPMPKGS+=	libpangox-1_0-0-0.0.2-4.1.3.${SUSE_ARCH}
 RPMPKGS+=	libharfbuzz0-0.9.21-1.3.${SUSE_ARCH}
 RPMPKGS+=	libgraphite2-3-1.2.0-6.1.2.${SUSE_ARCH}
 
