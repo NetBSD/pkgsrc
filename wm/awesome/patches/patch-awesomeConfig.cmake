@@ -1,4 +1,4 @@
-$NetBSD: patch-awesomeConfig.cmake,v 1.2 2013/07/22 19:47:18 degroote Exp $
+$NetBSD: patch-awesomeConfig.cmake,v 1.2.6.1 2014/04/08 22:30:27 tron Exp $
 
 --- awesomeConfig.cmake.orig	2013-04-01 11:44:46.000000000 +0000
 +++ awesomeConfig.cmake	2013-07-21 21:05:57.000000000 +0000
@@ -16,7 +16,7 @@ $NetBSD: patch-awesomeConfig.cmake,v 1.2 2013/07/22 19:47:18 degroote Exp $
  
  macro(a_find_library variable library)
 -    find_library(${variable} ${library})
-+    find_library(${variable} ${library} PKGPREFIX/lib/ev)
++    find_library(${variable} ${library} @LIBEV_PREFIX@/lib/ev)
      if(NOT ${variable})
          message(FATAL_ERROR ${library} " library not found.")
      endif()
