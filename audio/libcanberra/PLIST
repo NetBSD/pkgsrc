@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/08/12 07:09:59 obache Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/04/08 06:40:50 adam Exp $
 ${PLIST.gtk-any}bin/canberra-gtk-play
 ${PLIST.gtk-any}include/canberra-gtk.h
 include/canberra.h
@@ -16,10 +16,10 @@ ${PLIST.gtk}lib/pkgconfig/libcanberra-gtk.pc
 ${PLIST.gtk3}lib/pkgconfig/libcanberra-gtk3.pc
 lib/pkgconfig/libcanberra.pc
 share/doc/libcanberra/README
-${PLIST.gtk}share/gconf/schemas/libcanberra.schemas
-${PLIST.gtk}share/gdm/autostart/LoginWindow/libcanberra-ready-sound.desktop
-${PLIST.gtk}share/gnome/autostart/libcanberra-login-sound.desktop
-${PLIST.gtk}share/gnome/shutdown/libcanberra-logout-sound.sh
+${PLIST.gtk-any}share/gconf/schemas/libcanberra.schemas
+${PLIST.gtk-any}share/gdm/autostart/LoginWindow/libcanberra-ready-sound.desktop
+${PLIST.gtk-any}share/gnome/autostart/libcanberra-login-sound.desktop
+${PLIST.gtk-any}share/gnome/shutdown/libcanberra-logout-sound.sh
 share/gtk-doc/html/libcanberra/ch01.html
 share/gtk-doc/html/libcanberra/home.png
 share/gtk-doc/html/libcanberra/index.html
@@ -32,5 +32,5 @@ share/gtk-doc/html/libcanberra/libcanberra.devhelp2
 share/gtk-doc/html/libcanberra/right.png
 share/gtk-doc/html/libcanberra/style.css
 share/gtk-doc/html/libcanberra/up.png
-${PLIST.gtk}share/vala/vapi/libcanberra-gtk.vapi
+${PLIST.gtk-any}share/vala/vapi/libcanberra-gtk.vapi
 share/vala/vapi/libcanberra.vapi
