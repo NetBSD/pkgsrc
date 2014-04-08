@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2014/04/08 16:40:35 imil Exp $
+# $NetBSD: Makefile,v 1.5 2014/04/08 16:52:50 imil Exp $
 #
 
 IRCVERS=	8.5.4
 DISTNAME=	irc-${IRCVERS}
 PKGNAME=	${PYPKGPREFIX}-irclib-${IRCVERS}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	http://pypi.python.org/packages/source/i/irc/
 EXTRACT_SUFX=	.zip
@@ -14,6 +15,8 @@ COMMENT=	Internet Relay Chat (IRC) protocol client library
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
+
+DEPENDS+=	${PYPKGPREFIX}-six>=1.5.2:../../lang/py-six
 
 .include "../../lang/python/egg.mk"
 
