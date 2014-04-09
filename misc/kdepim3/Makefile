@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.117 2014/02/12 23:18:13 tron Exp $
+# $NetBSD: Makefile,v 1.118 2014/04/09 07:27:12 obache Exp $
 
 DISTNAME=	kdepim-${_KDE_VERSION}
-PKGREVISION=	34
+PKGREVISION=	35
 CATEGORIES=	misc
 COMMENT=	Personal Information Management tools for the KDE desktop
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2014/02/12 23:18:55 tron Exp $
+# $NetBSD: Makefile,v 1.6 2014/04/09 07:26:57 obache Exp $
 
 .include "../../x11/qt5-qtbase/Makefile.common"
 
 PKGNAME=	qt5-qtmultimedia-${QTVERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 COMMENT=	Qt5 module for multimedia
 
 USE_LIBTOOL=		yes
