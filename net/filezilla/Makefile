@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.50 2014/02/16 23:20:58 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2014/04/09 07:27:13 obache Exp $
 
 VERSION=	3.7.3
 DISTNAME=	FileZilla_${VERSION}_src
 PKGNAME=	filezilla-${VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=filezilla/}
 EXTRACT_SUFX=	.tar.bz2
