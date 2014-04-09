@@ -1,12 +1,16 @@
-$NetBSD: patch-system_bin_sqldump,v 1.1 2013/11/21 16:52:43 taca Exp $
+$NetBSD: patch-system_bin_sqldump,v 1.1.4.1 2014/04/09 11:10:15 tron Exp $
 
 No bash specific function is needed here.
 
---- system/bin/sqldump.orig	2013-10-24 09:11:21.000000000 +0000
+--- system/bin/sqldump.orig	2014-04-07 08:30:27.000000000 +0000
 +++ system/bin/sqldump
-@@ -1,4 +1,4 @@
+@@ -1,7 +1,7 @@
 -#!/bin/bash
 +#!/bin/sh
  
- # Clean the database
- mysql <<EOF
+ # Database name
+-if [[ $1 != "" ]]; then
++if [ "$1" ]; then
+   tpl=$1
+ else
+   tpl="music_academy"
