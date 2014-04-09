@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1409 2014/04/09 05:24:30 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1410 2014/04/09 18:07:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2080,3 +2080,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/apache-tomcat7 to 7.0.53 [ryoon 2014-04-08]
 	Updated fonts/umefont-ttf to 0.462 [ryoon 2014-04-08]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.350 [obache 2014-04-09]
+	Added fonts/inconsolata-g version 20090213 [wiz 2014-04-09]
