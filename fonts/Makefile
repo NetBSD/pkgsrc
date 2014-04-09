@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.245 2014/03/31 08:12:36 wiz Exp $
+# $NetBSD: Makefile,v 1.246 2014/04/09 18:07:33 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -107,6 +107,7 @@ SUBDIR+=	ghostscript-fonts
 SUBDIR+=	gsftopkk
 SUBDIR+=	gucharmap
 SUBDIR+=	harfbuzz
+SUBDIR+=	inconsolata-g
 SUBDIR+=	inconsolata-ttf
 SUBDIR+=	intlfonts
 SUBDIR+=	ipaexfont
