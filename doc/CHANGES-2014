@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1410 2014/04/09 18:07:43 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1411 2014/04/09 19:53:10 tron Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2081,3 +2081,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated fonts/umefont-ttf to 0.462 [ryoon 2014-04-08]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.350 [obache 2014-04-09]
 	Added fonts/inconsolata-g version 20090213 [wiz 2014-04-09]
+	Updated databases/phpmyadmin to 4.1.12 [tron 2014-04-09]
