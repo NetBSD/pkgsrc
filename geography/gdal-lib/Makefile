@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.64 2014/02/12 23:17:58 tron Exp $
+# $NetBSD: Makefile,v 1.65 2014/04/09 07:27:08 obache Exp $
 
 VERSION=	1.9.2
 DISTNAME=	gdal-${VERSION}
 PKGNAME=	gdal-lib-${VERSION}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	geography
 MASTER_SITES=	http://download.osgeo.org/gdal/
 

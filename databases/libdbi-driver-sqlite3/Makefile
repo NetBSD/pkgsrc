@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2013/10/19 09:07:01 adam Exp $
+# $NetBSD: Makefile,v 1.8 2014/04/09 07:27:04 obache Exp $
 #
 
 .include "../../databases/libdbi-driver-sqlite3/Makefile_drivers"
 
-PKGREVISION=		5
+PKGREVISION=		6
 LICENSE=		gnu-lgpl-v2
 
 DRIVER=			sqlite3

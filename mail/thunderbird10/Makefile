@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2014/02/12 23:18:10 tron Exp $
+# $NetBSD: Makefile,v 1.34 2014/04/09 07:27:11 obache Exp $
 #
 
 DISTNAME=	thunderbird-${TB_VER}esr.source
 PKGNAME=	thunderbird10-${TB_VER}
 TB_VER=		10.0.12
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ESR:=thunderbird/releases/${TB_VER}esr/source/}
 EXTRACT_SUFX=	.tar.bz2
