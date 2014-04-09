@@ -1,0 +1,11 @@
+Inconsolata is a mono-space, sans-serif font.
+This is a modified version with the following changes:
+- Single and double quotes ' and " are now straight
+- , . ' are a bit more visible
+- The ^ is a bit wider
+- The curved upper leg of the lower case r is a bit more visible
+- The zero is not slashed but dotted
+- Numbers are a bit larger (keeping the font non proportional)
+- The symbol minus - is a bit lower
+- [] are now about as tall as () and {}
+- The font is bigger than Inconsolata
