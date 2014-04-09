@@ -1,8 +1,7 @@
-# $NetBSD: mozilla-common.mk,v 1.27 2014/03/12 23:41:33 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.28 2014/04/09 06:13:50 obache Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
-# used by mail/thunderbird/Makefile
 # used by www/firefox/Makefile
 # used by www/seamonkey/Makefile
 
