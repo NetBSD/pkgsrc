@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2014/02/12 23:17:45 tron Exp $
+# $NetBSD: Makefile,v 1.34 2014/04/09 07:27:04 obache Exp $
 
 DISTNAME=		sqlrelay-0.43
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sqlrelay/}
 

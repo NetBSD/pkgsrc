@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/01/08 14:59:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2014/04/09 07:27:07 obache Exp $
 
 DISTNAME=	starbug1-1.6.01
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=starbug1/57514/}
 

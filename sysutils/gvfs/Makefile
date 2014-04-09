@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.64 2014/02/12 23:18:39 tron Exp $
+# $NetBSD: Makefile,v 1.65 2014/04/09 07:27:16 obache Exp $
 #
 
 DISTNAME=	gvfs-1.6.7
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gvfs/1.6/}
 EXTRACT_SUFX=	.tar.bz2

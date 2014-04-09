@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2014/01/01 11:52:38 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2014/04/09 07:27:18 obache Exp $
 #
 # PKGNAME derives from the supported API (still from
 # release 3.14). See also PLIST.
@@ -6,7 +6,7 @@
 
 DISTNAME=	gtkhtml-3.32.2
 PKGNAME=	${DISTNAME:S/gtkhtml/gtkhtml314/}
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkhtml/3.32/}
 EXTRACT_SUFX=	.tar.bz2

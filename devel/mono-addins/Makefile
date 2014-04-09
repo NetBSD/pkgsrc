@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2013/11/24 02:39:54 dholland Exp $
+# $NetBSD: Makefile,v 1.26 2014/04/09 07:27:01 obache Exp $
 
 DISTNAME=	mono-addins-1.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	-http://download-codeplex.sec.s-msft.com/Download/Release?ProjectName=monoaddins&DownloadId=509482&FileTime=129948574181430000&Build=19556
 
