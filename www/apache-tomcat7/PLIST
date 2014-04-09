@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/03/11 14:05:17 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.9.2.1 2014/04/09 14:10:59 tron Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -30,7 +30,7 @@ share/tomcat/lib/catalina-ant.jar
 share/tomcat/lib/catalina-ha.jar
 share/tomcat/lib/catalina-tribes.jar
 share/tomcat/lib/catalina.jar
-share/tomcat/lib/ecj-4.2.2.jar
+share/tomcat/lib/ecj-P20140317-1600.jar
 share/tomcat/lib/el-api.jar
 share/tomcat/lib/jasper-el.jar
 share/tomcat/lib/jasper.jar
@@ -103,6 +103,7 @@ share/tomcat/webapps/docs/class-loader-howto.html
 share/tomcat/webapps/docs/cluster-howto.html
 share/tomcat/webapps/docs/comments.html
 share/tomcat/webapps/docs/config/ajp.html
+share/tomcat/webapps/docs/config/automatic-deployment.html
 share/tomcat/webapps/docs/config/cluster-channel.html
 share/tomcat/webapps/docs/config/cluster-deployer.html
 share/tomcat/webapps/docs/config/cluster-interceptor.html
@@ -189,6 +190,7 @@ share/tomcat/webapps/docs/tribes/status.html
 share/tomcat/webapps/docs/tribes/transport.html
 share/tomcat/webapps/docs/virtual-hosting-howto.html
 share/tomcat/webapps/docs/web-socket-howto.html
+share/tomcat/webapps/docs/websocketapi/index.html
 share/tomcat/webapps/docs/windows-auth-howto.html
 share/tomcat/webapps/docs/windows-service-howto.html
 share/tomcat/webapps/examples/WEB-INF/classes/CookieExample.class
