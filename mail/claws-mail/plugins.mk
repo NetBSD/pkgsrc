@@ -1,11 +1,22 @@
-# $NetBSD: plugins.mk,v 1.5 2014/01/01 11:43:24 wiz Exp $
+# $NetBSD: plugins.mk,v 1.6 2014/04/09 06:35:53 obache Exp $
 #
+# used by mail/claws-mail-archive/Makefile
+# used by mail/claws-mail-attachwarner/Makefile
+# used by mail/claws-mail-attremover/Makefile
 # used by mail/claws-mail-bogofilter/Makefile
+# used by mail/claws-mail-fetchinfo/Makefile
+# used by mail/claws-mail-mailmbox/Makefile
+# used by mail/claws-mail-newmail/Makefile
+# used by mail/claws-mail-notification/Makefile
 # used by mail/claws-mail-pgpcore/Makefile
 # used by mail/claws-mail-pgpinline/Makefile
 # used by mail/claws-mail-pgpmime/Makefile
+# used by mail/claws-mail-rssyl/Makefile
 # used by mail/claws-mail-smime/Makefile
 # used by mail/claws-mail-spamassassin/Makefile
+# used by mail/claws-mail-spamreport/Makefile
+# used by mail/claws-mail-tnef/Makefile
+# used by mail/claws-mail-vcalendar/Makefile
 
 .include "../../mail/claws-mail/Makefile.common"
 .include "../../mail/claws-mail/Makefile.vers"
