@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1412 2014/04/10 07:34:20 martin Exp $
+$NetBSD: CHANGES-2014,v 1.1413 2014/04/10 12:04:36 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2083,3 +2083,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added fonts/inconsolata-g version 20090213 [wiz 2014-04-09]
 	Updated databases/phpmyadmin to 4.1.12 [tron 2014-04-09]
 	Updated www/firefox to 28.0nb2 [martin 2014-04-10]
+	Updated graphics/jbigkit to 2.1 [obache 2014-04-10]
