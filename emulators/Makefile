@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.212 2014/04/08 10:04:41 obache Exp $
+# $NetBSD: Makefile,v 1.213 2014/04/10 06:51:35 wiz Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -152,8 +152,8 @@ SUBDIR+=	suse100_glx
 SUBDIR+=	suse100_gtk2
 SUBDIR+=	suse100_krb5
 SUBDIR+=	suse100_libcups
-SUBDIR+=	suse100_libjpeg
 SUBDIR+=	suse100_libidn
+SUBDIR+=	suse100_libjpeg
 SUBDIR+=	suse100_libpng
 SUBDIR+=	suse100_libsigc++2
 SUBDIR+=	suse100_libtiff
