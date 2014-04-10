@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2012/10/08 09:21:04 asau Exp $
+# $NetBSD: Makefile,v 1.14 2014/04/10 05:57:43 obache Exp $
 #
 
 GST_PLUGINS0.10_NAME=	x264
 GST_PLUGINS0.10_DIRS=	ext/x264
-PKGREVISION=		2
+PKGREVISION=		3
 
 .include "../../multimedia/gst-plugins0.10-ugly/Makefile.common"
 
