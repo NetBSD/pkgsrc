@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2014/02/12 23:17:56 tron Exp $
+# $NetBSD: Makefile,v 1.12 2014/04/10 06:21:25 obache Exp $
 
 DISTNAME=	kreversi-${_KDE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 COMMENT=	the old reversi board game, also known as Othello.
 
