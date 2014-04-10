@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.68 2014/02/12 23:17:38 tron Exp $
+# $NetBSD: Makefile,v 1.69 2014/04/10 06:21:21 obache Exp $
 
 DISTNAME=	kmysqladmin-0.7.2
-PKGREVISION=	30
+PKGREVISION=	31
 CATEGORIES=	databases kde
 MASTER_SITES=	http://www.alwins-world.de/programs/download/kmysqladmin/
 

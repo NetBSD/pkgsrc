@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.109 2014/02/12 23:17:59 tron Exp $
+# $NetBSD: Makefile,v 1.110 2014/04/10 06:21:27 obache Exp $
 
 DISTNAME=	digikam-3.5.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_KDE:=digikam/}
 EXTRACT_SUFX=	.tar.bz2

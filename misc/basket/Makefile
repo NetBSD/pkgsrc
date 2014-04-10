@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2014/02/12 23:18:12 tron Exp $
+# $NetBSD: Makefile,v 1.35 2014/04/10 06:21:29 obache Exp $
 
 DISTNAME=		basket-1.0.2
-PKGREVISION=		30
+PKGREVISION=		31
 CATEGORIES=		misc
 MASTER_SITES=		http://basket.kde.org/downloads/
 

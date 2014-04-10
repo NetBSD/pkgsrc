@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.122 2014/04/10 05:39:14 obache Exp $
+# $NetBSD: Makefile,v 1.123 2014/04/10 06:21:34 obache Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=		3
+PKGREVISION=		4
 
 COMMENT=		Multimedia player library
 
