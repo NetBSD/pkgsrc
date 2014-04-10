@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2014/02/12 23:18:22 tron Exp $
+# $NetBSD: Makefile,v 1.22 2014/04/10 06:21:20 obache Exp $
 
 DISTNAME=	libktorrent-${LIBKTORRENT_VER}
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	net kde
 MASTER_SITES=	http://ktorrent.org/downloads/${KTORRENT_VER}/
 DISTFILES=	libktorrent-${LIBKTORRENT_FILEVER}.tar.bz2
