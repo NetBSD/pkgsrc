@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2014/02/12 23:17:54 tron Exp $
+# $NetBSD: Makefile,v 1.45 2014/04/10 05:39:15 obache Exp $
 
 DISTNAME=	flightgear-2.8.0
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	games
 MASTER_SITES=	ftp://ftp.flightgear.org/pub/fgfs/Source/ \
 		http://mirrors.ibiblio.org/pub/mirrors/flightgear/ftp/Source/ \
