@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2014/02/12 23:18:38 tron Exp $
+# $NetBSD: Makefile,v 1.18 2014/04/10 06:21:35 obache Exp $
 #
 
 DISTNAME=	filelight-1.0
-PKGREVISION=	35
+PKGREVISION=	36
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.methylblue.com/filelight/packages/
 EXTRACT_SUFX=	.tar.bz2

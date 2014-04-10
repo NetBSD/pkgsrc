@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2014/02/12 23:18:12 tron Exp $
+# $NetBSD: Makefile,v 1.23 2014/04/10 06:21:30 obache Exp $
 
 DISTNAME=	kalzium-${_KDE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 COMMENT=	Periodic table of elements
 

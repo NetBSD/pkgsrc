@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2014/02/12 23:18:03 tron Exp $
+# $NetBSD: Makefile,v 1.41 2014/04/10 06:21:29 obache Exp $
 #
 
 DISTNAME=	zphoto-1.2
-PKGREVISION=	32
+PKGREVISION=	33
 CATEGORIES=	graphics
 MASTER_SITES=	http://0xcc.net/zphoto/
 

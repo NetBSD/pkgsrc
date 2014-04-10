@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2014/04/09 07:27:06 obache Exp $
+# $NetBSD: Makefile,v 1.9 2014/04/10 06:21:22 obache Exp $
 
 DISTNAME=	lokalize-${_KDE_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 COMMENT=	Computer-Aided Translation System
 

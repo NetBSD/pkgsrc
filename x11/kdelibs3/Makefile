@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.174 2014/02/12 23:18:53 tron Exp $
+# $NetBSD: Makefile,v 1.175 2014/04/10 06:21:19 obache Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
-PKGREVISION=	31
+PKGREVISION=	32
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
