@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2014/04/09 07:27:05 obache Exp $
+# $NetBSD: Makefile,v 1.7 2014/04/10 06:21:22 obache Exp $
 
 DISTNAME=	kdesdk-kioslaves-${_KDE_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 COMMENT=	KIO-Slaves for subversion and perldoc
 
