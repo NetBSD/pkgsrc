@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2014/02/12 23:17:33 tron Exp $
+# $NetBSD: Makefile,v 1.48 2014/04/10 06:21:21 obache Exp $
 #
 
 DISTNAME=		kid3-1.6
-PKGREVISION=		21
+PKGREVISION=		22
 CATEGORIES=		kde audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kid3/}
 
