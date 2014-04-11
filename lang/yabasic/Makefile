@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2012/10/02 20:11:57 asau Exp $
+# $NetBSD: Makefile,v 1.16 2014/04/11 15:24:34 wen Exp $
 
-DISTNAME=		yabasic-2.763
+DISTNAME=		yabasic-2.767
 CATEGORIES=		lang
 MASTER_SITES=		http://www.yabasic.de/download/
 
@@ -10,6 +10,7 @@ COMMENT=		Yet another Basic for Unix and Windows
 LICENSE=		artistic OR gnu-gpl-v2
 
 GNU_CONFIGURE=		YES
+USE_NCURSES=		YES
 
 INSTALLATION_DIRS+=	share/doc/html/yabasic
 
