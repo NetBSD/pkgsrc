@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.6 2014/04/09 14:17:28 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.7 2014/04/11 11:50:29 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q1 branch:
@@ -25,3 +25,5 @@ Pullup ticket #4361 - requested by ryoon
 www/apache-tomcat7: security update
 Pullup ticket #4362 - requested by obache
 multimedia/adobe-flash-plugin11: security update
+Pullup ticket #4363 - requested by obache
+graphics/jbigkit: security update
