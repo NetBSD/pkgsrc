@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1415 2014/04/11 07:43:17 adam Exp $
+$NetBSD: CHANGES-2014,v 1.1416 2014/04/11 12:41:30 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2086,3 +2086,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/jbigkit to 2.1 [obache 2014-04-10]
 	Updated www/p5-Dancer2 to 0.12 [wen 2014-04-10]
 	Updated multimedia/ffmpeg2 to 2.2.1 [adam 2014-04-11]
+	Updated graphics/py-Pillow to 2.3.1 [obache 2014-04-11]
