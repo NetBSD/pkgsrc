@@ -1,31 +1,32 @@
-$NetBSD: patch-aa,v 1.3 2014/03/01 06:58:41 obache Exp $
+$NetBSD: patch-aa,v 1.3.2.1 2014/04/11 11:50:10 tron Exp $
 
 * prevent to overwrite our CC/CFLAGS settings
 * libtoolize
 
---- libjbig/Makefile.orig	2008-08-30 17:20:52.000000000 +0000
+--- libjbig/Makefile.orig	2014-03-27 18:47:15.000000000 +0000
 +++ libjbig/Makefile
-@@ -3,32 +3,32 @@
+@@ -1,34 +1,34 @@
+ # Unix makefile for the JBIG-KIT library
  
  # Select an ANSI/ISO C compiler here, GNU gcc is recommended
 -CC = gcc
 +CC ?= gcc
  
  # Options for the compiler: A high optimization level is suggested
--CFLAGS = -g -O -Wall -ansi -pedantic # --coverage
-+CFLAGS += -Wall -ansi -pedantic # --coverage
+-CFLAGS = -g -O -W -Wall -ansi -pedantic # --coverage
++CFLAGS += -W -Wall -ansi -pedantic # --coverage
  
--all: libjbig.a tstcodec tstcodec85
+-all: libjbig.a libjbig85.a tstcodec tstcodec85
 +.SUFFIXES: .lo
 +.c.lo:
 +	${LIBTOOL} --mode=compile $(CC) $(CFLAGS) -o $@ -c $<
  
 -tstcodec: tstcodec.o jbig.o jbig_ar.o
--	$(CC) $(CFLAGS) -o tstcodec $+
+-	$(CC) $(CFLAGS) -o tstcodec tstcodec.o jbig.o jbig_ar.o
 +all: libjbig.la libjbig85.la tstcodec tstcodec85
  
 -tstcodec85: tstcodec85.o jbig85.o jbig_ar.o
--	$(CC) $(CFLAGS) -o tstcodec85 $+
+-	$(CC) $(CFLAGS) -o tstcodec85 tstcodec85.o jbig85.o jbig_ar.o
 -
 -libjbig.a: jbig.o jbig_ar.o
 -	rm -f libjbig.a
@@ -43,16 +44,16 @@ $NetBSD: patch-aa,v 1.3 2014/03/01 06:58:41 obache Exp $
 -tstcodec.o: tstcodec.c jbig.h
 -tstcodec85.o: tstcodec85.c jbig85.h
 +tstcodec: tstcodec.lo jbig.lo jbig_ar.lo
-+	${LIBTOOL} --mode=link --tag=CC $(CC) $(CFLAGS) -o tstcodec $+
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o tstcodec tstcodec.lo jbig.lo jbig_ar.lo
 +
 +tstcodec85: tstcodec85.lo jbig85.lo jbig_ar.lo
-+	${LIBTOOL} --mode=link $(CC) $(CFLAGS) -o tstcodec85 $+
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o tstcodec85 tstcodec85.lo jbig85.lo jbig_ar.lo
 +
 +libjbig.la: jbig.lo jbig_ar.lo
-+	${LIBTOOL} --mode=link $(CC) -o libjbig.la jbig.lo jbig_ar.lo -rpath ${PREFIX}/lib -version-info 2:0
++	$(LIBTOOL) --mode=link $(CC) -o libjbig.la jbig.lo jbig_ar.lo -rpath ${PREFIX}/lib -version-info 2:1
 +
 +libjbig85.la: jbig85.lo jbig_ar.lo
-+	${LIBTOOL} --mode=link --tag=CC $(CC) -o libjbig85.la jbig85.lo jbig_ar.lo -rpath ${PREFIX}/lib -version-info 2:0
++	$(LIBTOOL) --mode=link $(CC) -o libjbig85.la jbig85.lo jbig_ar.lo -rpath ${PREFIX}/lib -version-info 2:1
 +
 +jbig.lo: jbig.c jbig.h jbig_ar.h
 +jbig85.lo: jbig85.c jbig85.h jbig_ar.h
@@ -60,17 +61,20 @@ $NetBSD: patch-aa,v 1.3 2014/03/01 06:58:41 obache Exp $
 +tstcodec.lo: tstcodec.c jbig.h
 +tstcodec85.lo: tstcodec85.c jbig85.h
  
- jbig.pot: jbig.c
-@@ -38,9 +38,9 @@ jbig.pot: jbig.c
+ update-po: jbig.c jbig85.c Makefile
+ 	xgettext -ojbig.pot -k_ \
+@@ -43,11 +43,11 @@ analyze:
+ 	clang --analyze *.c
  
  test: tstcodec tstcodec85
 -	./tstcodec
 -	./tstcodec85
-+	${LIBTOO} --mode=execute ./tstcodec
-+	${LIBTOO} --mode=execute ./tstcodec85
++	${LIBTOOL} --mode=execute ./tstcodec
++	${LIBTOOL} --mode=execute ./tstcodec85
  
  t82test.pbm: tstcodec
 -	./tstcodec $@
-+	${LIBTOO} --mode=execute ./tstcodec $@
++	${LIBTOOL} --mode=execute ./tstcodec $@
  
  clean:
+ 	rm -f *.o *.gcda *.gcno *.gcov *.plist *~ core gmon.out dbg_d\=??.pbm
