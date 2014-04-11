@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1419 2014/04/11 17:54:19 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1420 2014/04/11 17:58:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2090,3 +2090,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/py-carddav to 0.7.0nb1 [wiz 2014-04-11]
 	Updated lang/yabasic to 2.767 [wen 2014-04-11]
 	Updated x11/libdrm to 2.4.53 [wiz 2014-04-11]
+	Updated textproc/py-cssselect to 0.9.1 [wiz 2014-04-11]
