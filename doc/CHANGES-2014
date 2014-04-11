@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1417 2014/04/11 13:35:42 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1418 2014/04/11 15:25:42 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2088,3 +2088,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/ffmpeg2 to 2.2.1 [adam 2014-04-11]
 	Updated graphics/py-Pillow to 2.3.1 [obache 2014-04-11]
 	Updated misc/py-carddav to 0.7.0nb1 [wiz 2014-04-11]
+	Updated lang/yabasic to 2.767 [wen 2014-04-11]
