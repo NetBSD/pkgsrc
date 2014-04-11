@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1426 2014/04/11 18:08:32 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1427 2014/04/11 18:10:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2097,3 +2097,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-setuptools to 3.4.4 [wiz 2014-04-11]
 	Updated textproc/xmlto to 0.0.26 [wiz 2014-04-11]
 	Updated devel/global to 6.2.12 [wiz 2014-04-11]
+	Updated textproc/py-cssutils to 1.0 [wiz 2014-04-11]
