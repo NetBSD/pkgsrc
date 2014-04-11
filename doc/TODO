@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13185 2014/04/11 13:05:29 obache Exp $
+$NetBSD: TODO,v 1.13186 2014/04/11 17:58:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -931,7 +931,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-bottle-0.11.6
 	o py-cassa-1.11.0
 	o py-creole-1.1.1
-	o py-cssselect-0.9.1
 	o py-cssutils-1.0
 	o py-datapkg-0.9
 	o py-decorator-3.4.0
