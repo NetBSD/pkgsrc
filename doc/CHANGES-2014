@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1418 2014/04/11 15:25:42 wen Exp $
+$NetBSD: CHANGES-2014,v 1.1419 2014/04/11 17:54:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2089,3 +2089,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/py-Pillow to 2.3.1 [obache 2014-04-11]
 	Updated misc/py-carddav to 0.7.0nb1 [wiz 2014-04-11]
 	Updated lang/yabasic to 2.767 [wen 2014-04-11]
+	Updated x11/libdrm to 2.4.53 [wiz 2014-04-11]
