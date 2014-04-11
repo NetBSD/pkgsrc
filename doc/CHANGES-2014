@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1422 2014/04/11 18:03:22 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1423 2014/04/11 18:04:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2093,3 +2093,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/py-cssselect to 0.9.1 [wiz 2014-04-11]
 	Updated textproc/py-lxml to 3.3.4 [wiz 2014-04-11]
 	Updated devel/py-urwid to 1.2.1 [wiz 2014-04-11]
+	Updated devel/py-flakes to 0.8.1 [wiz 2014-04-11]
