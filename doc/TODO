@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13183 2014/04/10 09:32:00 obache Exp $
+$NetBSD: TODO,v 1.13184 2014/04/11 13:03:03 obache Exp $
 
 Suggested new packages
 ======================
@@ -340,6 +340,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o Mesa-10.1
 	o MesaLib-10.1
 	o PAM-0.99.7.1
+	o Pillow-2.4.0
 	o RBTools-0.5.5
 	o REminiscence-0.1.9
 	o ROMBuild-2.14
