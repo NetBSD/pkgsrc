@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2014/03/31 08:32:27 wiz Exp $
+$NetBSD: distinfo,v 1.24 2014/04/11 18:06:19 wiz Exp $
 
-SHA1 (setuptools-3.3.tar.gz) = 1bd8397aad681cef29f145a4d6f04033b7ba9bff
-RMD160 (setuptools-3.3.tar.gz) = 9173797ece8295c19d9ab2ea5e2d5489b5d590c7
-Size (setuptools-3.3.tar.gz) = 792267 bytes
+SHA1 (setuptools-3.4.4.tar.gz) = 916c77986e08785551f6a6c19759fd0ba322a8d6
+RMD160 (setuptools-3.4.4.tar.gz) = 545ebf579124c62b28662d5d529a3b3695c367c1
+Size (setuptools-3.4.4.tar.gz) = 794335 bytes
 SHA1 (patch-setup.py) = be1078e5e2b6e9ec8c859c2c6e2a4a44fe3c2840
