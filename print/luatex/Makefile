@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2013/12/07 16:50:02 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2014/04/11 19:50:02 asau Exp $
 
 DISTNAME=	luatex-beta-0.76.0-source
 PKGNAME=	${DISTNAME:S/-beta//:S/-source//}
@@ -109,6 +109,13 @@ SUBST_FILES.prefix=	texk/web2c/luatexdir/lua51/luaconf.h
 SUBST_VARS.prefix=	PREFIX
 
 INSTALLATION_DIRS+=	bin
+
+.include "../../mk/bsd.prefs.mk"
+
+# Native clang crashes on FreeBSD 10:
+.if $(OPSYS) == "FreeBSD"
+BUILDLINK_TRANSFORM+=	rename:-O*:-O0
+.endif
 
 .include "../../archivers/zziplib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
