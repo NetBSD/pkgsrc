@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1427 2014/04/11 18:10:19 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1428 2014/04/11 18:52:36 asau Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2098,3 +2098,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/xmlto to 0.0.26 [wiz 2014-04-11]
 	Updated devel/global to 6.2.12 [wiz 2014-04-11]
 	Updated textproc/py-cssutils to 1.0 [wiz 2014-04-11]
+	Updated lang/sbcl to 1.1.17 [asau 2014-04-11]
