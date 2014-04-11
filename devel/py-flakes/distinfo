@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2014/03/31 08:30:53 wiz Exp $
+$NetBSD: distinfo,v 1.4 2014/04/11 18:04:11 wiz Exp $
 
-SHA1 (pyflakes-0.8.tar.gz) = 801c9ad6bddc95e436b103a8deefbfe0f4451f50
-RMD160 (pyflakes-0.8.tar.gz) = 39ea1df18c58c3b1131d811a344ebf79f6128ba8
-Size (pyflakes-0.8.tar.gz) = 32041 bytes
+SHA1 (pyflakes-0.8.1.tar.gz) = d44dc00c271b825b64c270a867c0c9327886e857
+RMD160 (pyflakes-0.8.1.tar.gz) = d32f6115392fdcce3666e6771399e0b001a8f505
+Size (pyflakes-0.8.1.tar.gz) = 32981 bytes
