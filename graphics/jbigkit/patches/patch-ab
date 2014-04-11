@@ -1,61 +1,78 @@
-$NetBSD: patch-ab,v 1.4 2014/03/01 06:58:41 obache Exp $
+$NetBSD: patch-ab,v 1.4.2.1 2014/04/11 11:50:10 tron Exp $
 
 * prevent to overwrite our CC/CFLAGS settings
 * libtoolize
 
---- pbmtools/Makefile.orig	2008-08-25 22:26:39.000000000 +0000
+--- pbmtools/Makefile.orig	2014-03-27 18:47:15.000000000 +0000
 +++ pbmtools/Makefile
-@@ -3,30 +3,33 @@
+@@ -1,43 +1,46 @@
+ # Unix makefile for the JBIG-KIT PBM tools
  
  # Select an ANSI/ISO C compiler here, e.g. GNU gcc is recommended
 -CC = gcc
 +CC ?= gcc
  
  # Options for the compiler
--CFLAGS = -g -Wall -ansi -pedantic -I../libjbig # --coverage
-+CFLAGS += -Wall -ansi -pedantic -I../libjbig # --coverage
+-CFLAGS = -g -O -W -Wall -Wno-unused-result -ansi -pedantic # --coverage
++CFLAGS += -W -Wall -Wno-unused-result -ansi -pedantic # --coverage 
+ CPPFLAGS = -I../libjbig 
  
 -.SUFFIXES: .1 .5 .txt $(SUFFIXES)
 +.SUFFIXES: .1 .5 .txt .lo $(SUFFIXES)
-+
-+.c.lo:
-+	${LIBTOOL} --mode=compile --tag=CC $(CC) $(CFLAGS) -o $@ -c $<
+ .PHONY: txt test test82 test85 clean
  
- all: pbmtojbg jbgtopbm pbmtojbg85 jbgtopbm85 \
- 	pbmtojbg.txt jbgtopbm.txt pbm.txt pgm.txt
++.c.lo:
++	${LIBTOOL} --mode=compile $(CC) $(CFLAGS) -I../libjbig -o $@ -c $<
++
+ all: pbmtojbg jbgtopbm pbmtojbg85 jbgtopbm85 txt
+ 
+ txt: pbmtojbg.txt jbgtopbm.txt pbm.txt pgm.txt
  
 -pbmtojbg: pbmtojbg.o ../libjbig/libjbig.a
 -	$(CC) $(CFLAGS) -o pbmtojbg pbmtojbg.o -L../libjbig -ljbig
-+pbmtojbg: pbmtojbg.lo
-+	${LIBTOOL} --mode=link --tag=CC $(CC) $(CFLAGS) -o pbmtojbg pbmtojbg.lo ../libjbig/libjbig.la -R ${PREFIX}/lib
++pbmtojbg: pbmtojbg.lo ../libjbig/libjbig.la
++	${LIBTOOL} --mode=link $(CC) $(CFLAGS) -o pbmtojbg pbmtojbg.lo ../libjbig/libjbig.la -R ${PREFIX}/lib
  
 -jbgtopbm: jbgtopbm.o ../libjbig/libjbig.a
 -	$(CC) $(CFLAGS) -o jbgtopbm jbgtopbm.o -L../libjbig -ljbig
-+jbgtopbm: jbgtopbm.lo
-+	${LIBTOOL} --mode=link --tag=CC $(CC) $(CFLAGS) -o jbgtopbm jbgtopbm.lo ../libjbig/libjbig.la -R ${PREFIX}/lib
++jbgtopbm: jbgtopbm.lo ../libjbig/libjbig.la
++	${LIBTOOL} --mode=link $(CC) $(CFLAGS) -o jbgtopbm jbgtopbm.lo ../libjbig/libjbig.la -R ${PREFIX}/lib
  
 -pbmtojbg85: pbmtojbg85.o ../libjbig/libjbig85.a
 -	$(CC) $(CFLAGS) -o pbmtojbg85 pbmtojbg85.o -L../libjbig -ljbig85
-+pbmtojbg85: pbmtojbg85.lo
-+	${LIBTOOL} --mode=link --tag=CC $(CC) $(CFLAGS) -o pbmtojbg85 pbmtojbg85.lo ../libjbig/libjbig85.la -R ${PREFIX}/lib
++pbmtojbg85: pbmtojbg85.lo ../libjbig/libjbig85.la
++	${LIBTOOL} --mode=link $(CC) $(CFLAGS) -o pbmtojbg85 pbmtojbg85.lo ../libjbig/libjbig85.la -R ${PREFIX}/lib
  
 -jbgtopbm85: jbgtopbm85.o ../libjbig/libjbig85.a
 -	$(CC) $(CFLAGS) -o jbgtopbm85 jbgtopbm85.o -L../libjbig -ljbig85
--
++jbgtopbm85: jbgtopbm85.lo ../libjbig/libjbig85.la
++	${LIBTOOL} --mode=link $(CC) $(CFLAGS) -o jbgtopbm85 jbgtopbm85.lo ../libjbig/libjbig85.la -R ${PREFIX}/lib
+ 
 -jbgtopbm.o: jbgtopbm.c ../libjbig/jbig.h
 -pbmtojbg.o: pbmtojbg.c ../libjbig/jbig.h
 -jbgtopbm85.o: jbgtopbm85.c ../libjbig/jbig85.h
 -pbmtojbg85.o: pbmtojbg85.c ../libjbig/jbig85.h
-+jbgtopbm85: jbgtopbm85.lo
-+	${LIBTOOL} --mode=link --tag=CC $(CC) $(CFLAGS) -o jbgtopbm85 jbgtopbm85.lo ../libjbig/libjbig85.la -R ${PREFIX}/lib
-+
 +jbgtopbm.lo: jbgtopbm.c ../libjbig/jbig.h
 +pbmtojbg.lo: pbmtojbg.c ../libjbig/jbig.h
 +jbgtopbm85.lo: jbgtopbm85.c ../libjbig/jbig85.h
 +pbmtojbg85.lo: pbmtojbg85.c ../libjbig/jbig85.h
  
- ../libjbig/libjbig.a: ../libjbig/jbig.c ../libjbig/jbig.h \
-@@ -58,16 +61,16 @@ test82: pbmtojbg jbgtopbm
+-../libjbig/libjbig.a: ../libjbig/jbig.c ../libjbig/jbig.h \
++../libjbig/libjbig.la: ../libjbig/jbig.c ../libjbig/jbig.h \
+ 	../libjbig/jbig_ar.c ../libjbig/jbig_ar.h
+-	make -C ../libjbig libjbig.a
++	make -C ../libjbig libjbig.la
+ 
+-../libjbig/libjbig85.a: ../libjbig/jbig85.c ../libjbig/jbig85.h \
++../libjbig/libjbig85.la: ../libjbig/jbig85.c ../libjbig/jbig85.h \
+ 	../libjbig/jbig_ar.c ../libjbig/jbig_ar.h
+-	make -C ../libjbig libjbig85.a
++	make -C ../libjbig libjbig85.la
+ 
+ analyze:
+ 	clang $(CPPFLAGS) --analyze *.c
+@@ -62,18 +65,18 @@ test82: pbmtojbg jbgtopbm
+ 	make IMG=mx        "OPTIONSP=-q -Y -1"             dotest2b
  	make IMG=mx        "OPTIONSP=-Y -1"                dotest2b
  	rm -f test-*.jbg test-*.pbm test-*.pgm
 -	./jbgtopbm ../examples/ccitt1.jbg | ./pbmtojbg > test-ccitt1.jbg
@@ -78,7 +95,34 @@ $NetBSD: patch-ab,v 1.4 2014/03/01 06:58:41 obache Exp $
 +	  ${LIBTOOL} --mode=execute ./pbmtojbg test-ccitt1.pbm >test-ccitt1.jbg
  	cmp ../examples/ccitt1.jbg test-ccitt1.jbg
  	rm -f test-*.jbg test-*.pbm test-*.pgm
-@@ -116,33 +119,33 @@ test85: pbmtojbg jbgtopbm pbmtojbg85 jbg
+ 	@echo
+@@ -81,18 +84,18 @@ test82: pbmtojbg jbgtopbm
+ 	@echo
+ 
+ dotest1:
+-	./jbgtopbm ../examples/$(IMG).jbg test-$(IMG).pbm
+-	./pbmtojbg $(OPTIONSP) test-$(IMG).pbm test-$(IMG).jbg
++	${LIBTOOL} --mode=execute ./jbgtopbm ../examples/$(IMG).jbg test-$(IMG).pbm
++	${LIBTOOL} --mode=execute ./pbmtojbg $(OPTIONSP) test-$(IMG).pbm test-$(IMG).jbg
+ 	cmp test-$(IMG).jbg ../examples/$(IMG).jbg
+ 
+ dotest2b:
+-	./pbmtojbg $(OPTIONSP) test-$(IMG).pbm test-$(IMG).jbg
+-	./jbgtopbm $(OPTIONSJ) test-$(IMG).jbg test-$(IMG)-2.pbm
++	${LIBTOOL} --mode=execute ./pbmtojbg $(OPTIONSP) test-$(IMG).pbm test-$(IMG).jbg
++	${LIBTOOL} --mode=execute ./jbgtopbm $(OPTIONSJ) test-$(IMG).jbg test-$(IMG)-2.pbm
+ 	cmp test-$(IMG).pbm test-$(IMG)-2.pbm
+ 
+ dotest2g:
+-	./pbmtojbg $(OPTIONSP) ../examples/$(IMG).pgm test-$(IMG).jbg
+-	./jbgtopbm $(OPTIONSJ) test-$(IMG).jbg test-$(IMG).pgm
++	${LIBTOOL} --mode=execute ./pbmtojbg $(OPTIONSP) ../examples/$(IMG).pgm test-$(IMG).jbg
++	${LIBTOOL} --mode=execute ./jbgtopbm $(OPTIONSJ) test-$(IMG).jbg test-$(IMG).pgm
+ 	cmp test-$(IMG).pgm ../examples/$(IMG).pgm
+ 
+ test85: pbmtojbg jbgtopbm pbmtojbg85 jbgtopbm85 test-t82.pbm
+@@ -120,41 +123,41 @@ test85: pbmtojbg jbgtopbm pbmtojbg85 jbg
+ 	@echo
  
  dotest85: test-$(IMG).pbm
 -	./pbmtojbg85  $(OPTIONSP) test-$(IMG).pbm test-$(IMG).jbg85
@@ -120,5 +164,14 @@ $NetBSD: patch-ab,v 1.4 2014/03/01 06:58:41 obache Exp $
  	make -C ../libjbig tstcodec
 -	../libjbig/tstcodec $@
 +	${LIBTOOL} --mode=execute ../libjbig/tstcodec $@
+ 
+ FOPT=-c 1000 -p 300000 -m 3
+ fuzz: test-t82.pbm
+ 	while \
+-	  ./pbmtojbg -f test-t82.pbm | ./jbgfuzz.pl $(FOPT) && \
+-	  ./pbmtojbg test-t82.pbm | ./jbgfuzz.pl $(FOPT) -d jbgtopbm ; \
++	  ${LIBTOOL} --mode=execute ./pbmtojbg -f test-t82.pbm | ${LIBTOOL} --mode=execute ./jbgfuzz.pl $(FOPT) && \
++	  ${LIBTOOL} --mode=execute ./pbmtojbg test-t82.pbm | ${LIBTOOL} --mode=execute ./jbgfuzz.pl $(FOPT) -d jbgtopbm ; \
+ 	do true; done
  
  .1.txt .5.txt:

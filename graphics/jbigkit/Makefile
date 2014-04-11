@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2014/03/01 06:58:41 obache Exp $
+# $NetBSD: Makefile,v 1.5.2.1 2014/04/11 11:50:10 tron Exp $
 
-DISTNAME=	jbigkit-2.0
+DISTNAME=	jbigkit-2.1
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.cl.cam.ac.uk/~mgk25/download/
+MASTER_SITES=	http://www.cl.cam.ac.uk/~mgk25/jbigkit/download/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.cl.cam.ac.uk/~mgk25/jbigkit/
@@ -11,8 +11,6 @@ LICENSE=	gnu-gpl-v2
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
-
-WRKSRC=		${WRKDIR}/jbigkit
 
 TEST_TARGET=	test
 
