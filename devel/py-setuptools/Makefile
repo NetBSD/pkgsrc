@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2014/03/31 08:32:27 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2014/04/11 18:06:19 wiz Exp $
 
-EGG_VERSION=		3.3
+EGG_VERSION=		3.4.4
 DISTNAME=		setuptools-${EGG_VERSION}
 EGG_NAME=		setuptools-${EGG_VERSION}
 PKGNAME=		${PYPKGPREFIX}-setuptools-${EGG_VERSION}
@@ -8,7 +8,7 @@ CATEGORIES=		devel python
 MASTER_SITES=		https://pypi.python.org/packages/source/s/setuptools/
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://peak.telecommunity.com/DevCenter/setuptools
+HOMEPAGE=		https://pypi.python.org/pypi/setuptools
 COMMENT=		New Python packaging system
 LICENSE=		python-software-foundation OR zpl
 
