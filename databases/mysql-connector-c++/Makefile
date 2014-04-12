@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/02/11 14:13:38 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/04/12 12:00:16 adam Exp $
 
 DISTNAME=	mysql-connector-c++-1.1.3
 CATEGORIES=	databases
-MASTER_SITES=	https://dev.mysql.com/get/Downloads/Connector-C++/
+MASTER_SITES=	${MASTER_SITE_MYSQL:=Connector-C++/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://dev.mysql.com/downloads/connector/cpp/
