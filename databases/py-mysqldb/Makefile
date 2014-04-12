@@ -1,20 +1,25 @@
-# $NetBSD: Makefile,v 1.38 2014/01/25 10:29:59 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2014/04/12 09:30:38 adam Exp $
 
-DISTNAME=	MySQL-python-${DIST_VERSION}
-PKGNAME=	${PYPKGPREFIX}-mysqldb-${DIST_VERSION:S/c/rc/}
-DIST_VERSION=	1.2.3
-PKGREVISION=	3
+DISTNAME=	MySQL-python-1.2.5
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/MySQL-python/mysqldb/}
 CATEGORIES=	databases python
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mysql-python/}
+MASTER_SITES=	http://pypi.python.org/packages/source/M/MySQL-python/
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/mysql-python
+HOMEPAGE=	https://github.com/farcepest/MySQLdb1/
 COMMENT=	MySQL interface for Python
 LICENSE=	gnu-gpl-v2
 
-EGG_NAME=	${DISTNAME:S/MySQL-/MySQL_/}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.2.3
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.2.5
 
-.include "../../mk/mysql.buildlink3.mk"
+EGG_NAME=		${DISTNAME:S/MySQL-/MySQL_/}
+USE_LANGUAGES=		c
+
+# These files must not be world-writable.
+pre-configure:
+	${CHMOD} go-w ${WRKSRC}/MySQL_python.egg-info/*
+
 .include "../../lang/python/egg.mk"
+.include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
