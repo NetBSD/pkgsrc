@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.7 2014/04/11 11:50:29 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.8 2014/04/12 17:26:11 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q1 branch:
@@ -27,3 +27,9 @@ Pullup ticket #4362 - requested by obache
 multimedia/adobe-flash-plugin11: security update
 Pullup ticket #4363 - requested by obache
 graphics/jbigkit: security update
+Pullup ticket #4364 - requested by obache
+graphics/py-Pillow: security update
+Pullup ticket #4366 - requested by obache
+graphics/openjpeg15: security update
+Pullup ticket #4367 - requested by obache
+www/dillo: security update
