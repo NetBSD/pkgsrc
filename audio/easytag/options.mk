@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.7 2013/02/11 08:56:40 wiz Exp $
+# $NetBSD: options.mk,v 1.8 2014/04/12 06:45:31 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.easytag
-PKG_SUPPORTED_OPTIONS=	flac ogg speex wavpack
-PKG_SUGGESTED_OPTIONS=	flac ogg speex wavpack
+PKG_SUPPORTED_OPTIONS=	flac ogg opus speex wavpack
+PKG_SUGGESTED_OPTIONS=	flac ogg opus speex wavpack
 
 .include "../../mk/bsd.options.mk"
 
@@ -19,6 +19,14 @@ CONFIGURE_ARGS+=	--disable-flac
 CONFIGURE_ARGS+=	--enable-ogg
 .else
 CONFIGURE_ARGS+=	--disable-ogg
+.endif
+
+.if !empty(PKG_OPTIONS:Mopus)
+.  include "../../audio/libopus/buildlink3.mk"
+.  include "../../audio/opusfile/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-opus
+.else
+CONFIGURE_ARGS+=	--disable-opus
 .endif
 
 .if !empty(PKG_OPTIONS:Mspeex)
