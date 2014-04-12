@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1024 2014/04/04 04:40:57 jnemeth Exp $
+# $NetBSD: Makefile,v 1.1025 2014/04/12 12:48:49 rodent Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -727,6 +727,7 @@ SUBDIR+=	sitecopy
 SUBDIR+=	snarf
 SUBDIR+=	snownews
 SUBDIR+=	spawn-fcgi
+SUBDIR+=	sqtop
 SUBDIR+=	squid3
 SUBDIR+=	squidGuard
 SUBDIR+=	squidanalyzer
