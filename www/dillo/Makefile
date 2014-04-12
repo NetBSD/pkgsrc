@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2014/02/12 23:18:44 tron Exp $
+# $NetBSD: Makefile,v 1.64.2.1 2014/04/12 17:24:57 tron Exp $
 
-DISTNAME=	dillo-3.0.3
-PKGREVISION=	2
+DISTNAME=	dillo-3.0.4
 CATEGORIES=	www
 MASTER_SITES=	http://www.dillo.org/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -13,12 +12,10 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 
 REPLACE_PERL+=	dpid/dpidc dillo-install-hyphenation
-USE_TOOLS+=	perl:run
-
-DEPENDS+=	wget-[0-9]*:../../net/wget
+USE_TOOLS+=	perl:run wget:run
 
 PKG_SYSCONFSUBDIR=	dillo
 EGDIR=		${PREFIX}/share/examples/dillo
@@ -29,6 +26,8 @@ CONF_FILES+=	${EGDIR}/domainrc ${PKG_SYSCONFDIR}/domainrc
 
 INSTALLATION_DIRS=	share/doc/dillo ${EGDIR}
 
+INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
+
 LIBS.SunOS+=	-liconv
 
 .include "options.mk"
@@ -36,9 +35,6 @@ LIBS.SunOS+=	-liconv
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${DESTDIR}${PREFIX}/share/doc/dillo
 	${INSTALL_DATA} ${WRKSRC}/doc/README ${DESTDIR}${PREFIX}/share/doc/dillo
-	${INSTALL_DATA} ${WRKSRC}/dillorc ${DESTDIR}${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/src/keysrc ${DESTDIR}${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/src/domainrc ${DESTDIR}${EGDIR}
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
