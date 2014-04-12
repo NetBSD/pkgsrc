@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1432 2014/04/12 06:45:43 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1433 2014/04/12 09:00:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2103,3 +2103,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/dillo to 3.0.4 [obache 2014-04-12]
 	Added audio/opusfile version 0.5 [wiz 2014-04-12]
 	Updated audio/easytag to 2.2.0 [wiz 2014-04-12]
+	Updated devel/p5-Curses to 1.29 [wiz 2014-04-12]
