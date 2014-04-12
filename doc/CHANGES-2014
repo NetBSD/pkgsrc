@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1438 2014/04/12 14:20:07 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1439 2014/04/12 16:38:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2113,3 +2113,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added databases/py-mysql-connector version 1.1.6 [adam 2014-04-12]
 	Added www/sqtop version 20131217 [rodent 2014-04-12]
 	Updated finance/gnucash to 2.6.3nb2 [wiz 2014-04-12]
+	Updated devel/ruby-readline to 2.0.0p451nb1 [taca 2014-04-12]
