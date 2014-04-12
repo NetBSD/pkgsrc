@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2014/04/12 06:39:34 wiz Exp $
+include/opus/opusfile.h
+lib/libopusfile.la
+lib/libopusurl.la
+lib/pkgconfig/opusfile.pc
+lib/pkgconfig/opusurl.pc
+share/doc/opusfile/AUTHORS
+share/doc/opusfile/COPYING
+share/doc/opusfile/README.txt
