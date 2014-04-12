@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1430 2014/04/12 02:24:30 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1431 2014/04/12 06:40:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2101,3 +2101,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/sbcl to 1.1.17 [asau 2014-04-11]
 	Updated emulators/suse131_libcurl to 13.1nb2 [obache 2014-04-12]
 	Updated www/dillo to 3.0.4 [obache 2014-04-12]
+	Added audio/opusfile version 0.5 [wiz 2014-04-12]
