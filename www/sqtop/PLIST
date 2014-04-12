@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2014/04/12 12:47:39 rodent Exp $
+bin/sqtop
+man/man1/sqtop.1
