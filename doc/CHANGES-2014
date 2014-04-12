@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1429 2014/04/12 01:01:01 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1430 2014/04/12 02:24:30 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2100,3 +2100,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/py-cssutils to 1.0 [wiz 2014-04-11]
 	Updated lang/sbcl to 1.1.17 [asau 2014-04-11]
 	Updated emulators/suse131_libcurl to 13.1nb2 [obache 2014-04-12]
+	Updated www/dillo to 3.0.4 [obache 2014-04-12]
