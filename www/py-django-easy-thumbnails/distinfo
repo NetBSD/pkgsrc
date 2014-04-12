@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/01/28 21:15:26 adam Exp $
+$NetBSD: distinfo,v 1.2 2014/04/12 10:10:27 adam Exp $
 
-SHA1 (easy-thumbnails-1.2.tar.gz) = 3623dfb0e79b447c0705fc24058546db8ca60a05
-RMD160 (easy-thumbnails-1.2.tar.gz) = 35913df4a7feef8908783a1a12277256d7adcf0a
-Size (easy-thumbnails-1.2.tar.gz) = 53124 bytes
+SHA1 (easy-thumbnails-1.5.tar.gz) = be27388dfb29c076c1d05c24db111d3c448bc513
+RMD160 (easy-thumbnails-1.5.tar.gz) = cfb5d624caad42531b60ed9aa4378726fb94489e
+Size (easy-thumbnails-1.5.tar.gz) = 70360 bytes
+SHA1 (patch-easy_thumbnails_tests_mockoptim_fail.py) = 02ec8f0d103ac9f5fa1982b0e83940dcfaa9bb75
