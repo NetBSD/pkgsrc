@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2013/09/01 11:41:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/04/12 19:54:37 adam Exp $
 bin/scons
 bin/${PKGNAME}
 bin/scons-time
@@ -249,12 +249,18 @@ lib/${PKGNAME}/SCons/Tool/cc.pyo
 lib/${PKGNAME}/SCons/Tool/cvf.py
 lib/${PKGNAME}/SCons/Tool/cvf.pyc
 lib/${PKGNAME}/SCons/Tool/cvf.pyo
+lib/${PKGNAME}/SCons/Tool/cyglink.py
+lib/${PKGNAME}/SCons/Tool/cyglink.pyc
+lib/${PKGNAME}/SCons/Tool/cyglink.pyo
 lib/${PKGNAME}/SCons/Tool/default.py
 lib/${PKGNAME}/SCons/Tool/default.pyc
 lib/${PKGNAME}/SCons/Tool/default.pyo
 lib/${PKGNAME}/SCons/Tool/dmd.py
 lib/${PKGNAME}/SCons/Tool/dmd.pyc
 lib/${PKGNAME}/SCons/Tool/dmd.pyo
+lib/${PKGNAME}/SCons/Tool/docbook/__init__.py
+lib/${PKGNAME}/SCons/Tool/docbook/__init__.pyc
+lib/${PKGNAME}/SCons/Tool/docbook/__init__.pyo
 lib/${PKGNAME}/SCons/Tool/dvi.py
 lib/${PKGNAME}/SCons/Tool/dvi.pyc
 lib/${PKGNAME}/SCons/Tool/dvi.pyo
