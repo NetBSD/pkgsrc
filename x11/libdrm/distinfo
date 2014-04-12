@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.40 2014/04/11 17:54:10 wiz Exp $
+$NetBSD: distinfo,v 1.41 2014/04/12 09:28:41 wiz Exp $
 
 SHA1 (libdrm-2.4.53.tar.bz2) = d3381432045984faa060a43425d67fd359bf29e3
 RMD160 (libdrm-2.4.53.tar.bz2) = f261c9884c57fb75d4c67d23cba9616a404c226e
@@ -8,3 +8,4 @@ SHA1 (patch-ac) = 67c998df7dfc0dabc86320ea6d015cede3e464ea
 SHA1 (patch-ad) = ea3ef8de8db782ddab23f182f1e6bd9d8f612a78
 SHA1 (patch-include_drm_drm.h) = d370e83da5c39f0e49094787c5f4580758c911b0
 SHA1 (patch-libkms_linux.c) = 737d0a8e7b742ee9d24fec94c72de6b4915dd675
+SHA1 (patch-libkms_vmwgfx.c) = 373390c7c33df27227607ee1b8110bc65ca37af6
