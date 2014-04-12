@@ -1,6 +1,7 @@
-$NetBSD: patch-src_http.c,v 1.1 2014/04/12 06:39:34 wiz Exp $
+$NetBSD: patch-src_http.c,v 1.2 2014/04/12 08:15:03 wiz Exp $
 
 Avoid using the obsolete ftime() function.
+https://trac.xiph.org/ticket/2014
 
 --- src/http.c.orig	2013-12-05 16:49:13.000000000 +0000
 +++ src/http.c
