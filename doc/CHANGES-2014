@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1452 2014/04/13 14:58:53 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.1453 2014/04/13 16:01:44 morr Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2128,3 +2128,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/p5-Crypt-Rijndael to 1.12 [wen 2014-04-13]
 	Updated devel/p5-Test-BDD-Cucumber to 0.18 [schmonz 2014-04-13]
 	Updated devel/p5-Test-MockObject to 1.20140408 [schmonz 2014-04-13]
+	Updated www/wordpress to 3.8.2 [morr 2014-04-13]
