@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1448 2014/04/13 09:18:15 wen Exp $
+$NetBSD: CHANGES-2014,v 1.1449 2014/04/13 09:24:58 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2124,3 +2124,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Mojolicious to 4.93 [wen 2014-04-13]
 	Updated security/p5-Digest-SHA to 5.88 [wen 2014-04-13]
 	Updated security/p5-Crypt-PasswdMD5 to 1.40 [wen 2014-04-13]
+	Updated security/p5-Crypt-RandPasswd to 0.05 [wen 2014-04-13]
