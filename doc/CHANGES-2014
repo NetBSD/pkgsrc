@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1453 2014/04/13 16:01:44 morr Exp $
+$NetBSD: CHANGES-2014,v 1.1454 2014/04/13 17:56:35 tron Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2129,3 +2129,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Test-BDD-Cucumber to 0.18 [schmonz 2014-04-13]
 	Updated devel/p5-Test-MockObject to 1.20140408 [schmonz 2014-04-13]
 	Updated www/wordpress to 3.8.2 [morr 2014-04-13]
+	Updated databases/phpmyadmin to 4.1.13 [tron 2014-04-13]
