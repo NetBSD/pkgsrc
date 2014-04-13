@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1442 2014/04/13 02:55:16 wen Exp $
+$NetBSD: CHANGES-2014,v 1.1443 2014/04/13 04:47:30 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2118,3 +2118,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/gnuplot to 4.6.5 [adam 2014-04-12]
 	Updated lang/py-six to 1.6.1 [adam 2014-04-12]
 	Updated www/p5-Dancer to 1.3123 [wen 2014-04-13]
+	Updated devel/py-trytond to 3.0.4 [rodent 2014-04-13]
