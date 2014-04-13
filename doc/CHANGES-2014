@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1444 2014/04/13 05:02:25 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.1445 2014/04/13 05:04:14 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2120,3 +2120,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Dancer to 1.3123 [wen 2014-04-13]
 	Updated devel/py-trytond to 3.0.4 [rodent 2014-04-13]
 	Updated finance/py-trytond-account to 3.0.3 [rodent 2014-04-13]
+	Updated finance/py-trytond-account-invoice to 3.0.2 [rodent 2014-04-13]
