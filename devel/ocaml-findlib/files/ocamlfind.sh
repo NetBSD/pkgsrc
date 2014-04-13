@@ -1,6 +1,6 @@
 #!@SH@
 
-# $NetBSD: ocamlfind.sh,v 1.1 2011/06/15 05:25:47 uebayasi Exp $
+# $NetBSD: ocamlfind.sh,v 1.2 2014/04/13 10:39:01 hiramatsu Exp $
 
 args="$@"
 case "$args" in
@@ -9,7 +9,7 @@ case "$args" in
 	case "$args" in
 	*-destdir*) ;;
 	*)
-		install_args="${install_args} -destdir ${DESTDIR}@OCAML_FINDLIB_PREFIX@/lib/ocaml/site-lib"
+		install_args="${install_args} -destdir @DESTDIR@@OCAML_FINDLIB_PREFIX@/lib/ocaml/site-lib"
 		;;
 	esac
 	case "$args" in

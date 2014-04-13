@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2012/07/06 09:22:04 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2014/04/13 10:39:01 hiramatsu Exp $
 
 BUILDLINK_TREE+=	ocaml-findlib
 
@@ -15,6 +15,7 @@ BUILDLINK_TARGETS+=	ocaml-findlib-wrappers ocaml-findlib-ldconf
 ocaml-findlib-wrappers:
 	${RUN}								\
 	${SED}	-e 's|@SH@|'${SH:Q}'|g'					\
+		-e 's|@DESTDIR@|${DESTDIR}|g'				\
 		-e 's|@OCAML_FINDLIB_PREFIX@|${BUILDLINK_PREFIX.ocaml-findlib}|g' \
 		-e 's|@BUILDLINK_DIR@|${BUILDLINK_DIR}|g'		\
 		< ${.CURDIR}/../../devel/ocaml-findlib/files/ocamlfind.sh \
