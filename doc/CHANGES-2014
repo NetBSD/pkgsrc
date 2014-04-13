@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1451 2014/04/13 14:55:44 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.1452 2014/04/13 14:58:53 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2127,3 +2127,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/p5-Crypt-RandPasswd to 0.05 [wen 2014-04-13]
 	Updated security/p5-Crypt-Rijndael to 1.12 [wen 2014-04-13]
 	Updated devel/p5-Test-BDD-Cucumber to 0.18 [schmonz 2014-04-13]
+	Updated devel/p5-Test-MockObject to 1.20140408 [schmonz 2014-04-13]
