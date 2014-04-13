@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2014/04/12 19:06:55 adam Exp $
+# $NetBSD: Makefile,v 1.43 2014/04/13 07:41:49 wiz Exp $
 
 DISTNAME=	libvpx_1.3.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -81,6 +81,10 @@ CONFIGURE_ARGS+=	--target=ppc32-darwin8-gcc
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 CXXFLAGS+=	-std=c++11
+.if ${OPSYS} == "NetBSD"
+# https://bugzilla.mozilla.org/show_bug.cgi?id=982693
+CFLAGS+=	-fno-integrated-as
+.endif
 .endif
 
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "mipsel"
