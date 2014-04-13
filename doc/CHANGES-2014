@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1447 2014/04/13 09:03:05 wen Exp $
+$NetBSD: CHANGES-2014,v 1.1448 2014/04/13 09:18:15 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2123,3 +2123,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated finance/py-trytond-account-invoice to 3.0.2 [rodent 2014-04-13]
 	Updated www/p5-Mojolicious to 4.93 [wen 2014-04-13]
 	Updated security/p5-Digest-SHA to 5.88 [wen 2014-04-13]
+	Updated security/p5-Crypt-PasswdMD5 to 1.40 [wen 2014-04-13]
