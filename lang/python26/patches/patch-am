@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.22 2014/03/27 05:36:10 obache Exp $
+$NetBSD: patch-am,v 1.22.2.1 2014/04/14 11:38:44 tron Exp $
 
 Disabled modules for normal build:
 bsddb
@@ -17,14 +17,16 @@ Those have separate packages where needed.
 Only check the BUILDLINK_DIR for libraries etc, do not pick up random
 headers and libraries from the system.
 
+Build the _ssl module with pkgsrc choiced OpenSSL.
+
 Build the 1.85 compat module all the time against the BDB version of choice.
 
 Add in Debian multiarch support (retrofitted from Python 2.7.2) to
 support building the "nis" and "crypt" modules.
 
---- setup.py	2010-07-18 00:31:09.000000000 +1200
-+++ setup.py	2011-09-23 01:51:17.757519638 +1200
-@@ -18,7 +18,7 @@
+--- setup.py.orig	2013-10-29 15:04:39.000000000 +0000
++++ setup.py
+@@ -18,7 +18,7 @@ from distutils.command.install_lib impor
  from distutils.spawn import find_executable
  
  # This global variable is used to hold the list of modules to be disabled.
@@ -33,7 +35,7 @@ support building the "nis" and "crypt" modules.
  
  def add_dir_to_list(dirlist, dir):
      """Add the directory 'dir' to the list 'dirlist' (at the front) if
-@@ -354,10 +354,40 @@
+@@ -354,10 +354,40 @@ class PyBuildExt(build_ext):
                  return platform
          return sys.platform
  
@@ -77,7 +79,20 @@ support building the "nis" and "crypt" modules.
  
          # Add paths specified in the environment variables LDFLAGS and
          # CPPFLAGS for header and library files.
-@@ -703,9 +733,7 @@
+@@ -691,10 +721,9 @@ class PyBuildExt(build_ext):
+                                depends = ['socketmodule.h']) )
+         # Detect SSL support for the socket module (via _ssl)
+         search_for_ssl_incs_in = [
+-                              '/usr/local/ssl/include',
+-                              '/usr/contrib/ssl/include/'
++                              '@SSLBASE@/include'
+                              ]
+-        ssl_incs = find_file('openssl/ssl.h', inc_dirs,
++        ssl_incs = find_file('openssl/ssl.h', [],
+                              search_for_ssl_incs_in
+                              )
+         if ssl_incs is not None:
+@@ -703,9 +732,7 @@ class PyBuildExt(build_ext):
              if krb5_h:
                  ssl_incs += krb5_h
          ssl_libs = find_library_file(self.compiler, 'ssl',lib_dirs,
@@ -88,7 +103,16 @@ support building the "nis" and "crypt" modules.
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -815,172 +843,6 @@
+@@ -724,7 +751,7 @@ class PyBuildExt(build_ext):
+ 
+         # look for the openssl version header on the compiler search path.
+         opensslv_h = find_file('openssl/opensslv.h', [],
+-                inc_dirs + search_for_ssl_incs_in)
++                search_for_ssl_incs_in)
+         if opensslv_h:
+             name = os.path.join(opensslv_h[0], 'openssl/opensslv.h')
+             if sys.platform == 'darwin' and is_macosx_sdk_path(name):
+@@ -815,172 +842,6 @@ class PyBuildExt(build_ext):
              else:
                  raise ValueError("unknown major BerkeleyDB version", major)
  
@@ -261,7 +285,7 @@ support building the "nis" and "crypt" modules.
          # The sqlite interface
          sqlite_setup_debug = False   # verbose debug prints from this script?
  
-@@ -1094,35 +956,40 @@
+@@ -1094,35 +955,40 @@ class PyBuildExt(build_ext):
          # we do not build this one.  Otherwise this build will pick up
          # the more recent berkeleydb's db.h file first in the include path
          # when attempting to compile and it will fail.
@@ -327,7 +351,7 @@ support building the "nis" and "crypt" modules.
                  # Some systems have -lndbm, others don't
                  if self.compiler.find_library_file(lib_dirs, 'ndbm'):
                      ndbm_libs = ['ndbm']
-@@ -1131,7 +998,7 @@
+@@ -1131,7 +997,7 @@ class PyBuildExt(build_ext):
                  exts.append( Extension('dbm', ['dbmmodule.c'],
                                         define_macros=[('HAVE_NDBM_H',None)],
                                         libraries = ndbm_libs ) )
@@ -336,7 +360,7 @@ support building the "nis" and "crypt" modules.
                  gdbm_libs = ['gdbm']
                  if self.compiler.find_library_file(lib_dirs, 'gdbm_compat'):
                      gdbm_libs.append('gdbm_compat')
-@@ -1147,14 +1014,12 @@
+@@ -1147,14 +1013,12 @@ class PyBuildExt(build_ext):
                          libraries = gdbm_libs ) )
                  else:
                      missing.append('dbm')
@@ -354,7 +378,7 @@ support building the "nis" and "crypt" modules.
              else:
                  missing.append('dbm')
  
-@@ -1408,6 +1273,14 @@
+@@ -1408,6 +1272,14 @@ class PyBuildExt(build_ext):
                  )
              libraries = []
  
@@ -369,7 +393,7 @@ support building the "nis" and "crypt" modules.
          else:                                   # Linux and other unices
              macros = dict(
                  HAVE_SEM_OPEN=1,
-@@ -2026,9 +1899,9 @@
+@@ -2026,9 +1898,9 @@ def main():
            ext_modules=[Extension('_struct', ['_struct.c'])],
  
            # Scripts to install
