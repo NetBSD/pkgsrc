@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2013/07/06 23:20:56 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2014/04/14 10:50:31 adam Exp $
 
-DISTNAME=	lcms2-2.5
+DISTNAME=	lcms2-2.6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lcms/}
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.littlecms.com/
-COMMENT=	Little Color Management System -- a color management library
+COMMENT=	Little Color Management System - a color management library
 LICENSE=	mit
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
