@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2013/10/01 11:00:39 adam Exp $
+# $NetBSD: Makefile.common,v 1.31 2014/04/14 00:02:49 rodent Exp $
 #
 # used by databases/mysql51-client/Makefile
 # used by databases/mysql51-server/Makefile
@@ -23,9 +23,11 @@ EXTRACT_USING=		bsdtar
 # MYSQL_GROUP		group of the database administrator
 # MYSQL_DATADIR		home directory of the database administrator and
 #			location of the databases
+# MYSQL_PIDFILE		process ID file
 MYSQL_USER?=		mysql
 MYSQL_GROUP?=		mysql
 MYSQL_DATADIR?=		${VARBASE}/mysql
+MYSQL_PIDFILE?=		${MYSQL_DATADIR}/${HOST}.pid
 
 PKG_USERS_VARS+=	MYSQL_USER
 PKG_GROUPS_VARS+=	MYSQL_GROUP
