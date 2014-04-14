@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1456 2014/04/14 07:29:05 adam Exp $
+$NetBSD: CHANGES-2014,v 1.1457 2014/04/14 10:53:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2132,3 +2132,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/phpmyadmin to 4.1.13 [tron 2014-04-13]
 	Updated www/serf to 1.3.4nb2 [wiz 2014-04-13]
 	Updated audio/libxmp to 4.2.7 [adam 2014-04-14]
+	Updated graphics/lcms2 to 2.6 [adam 2014-04-14]
