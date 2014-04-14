@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.9 2014/04/14 14:00:09 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.10 2014/04/14 17:18:26 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q1 branch:
@@ -42,3 +42,13 @@ Pullup ticket #4370 - requested by morr
 www/wordpress: security update
 Pullup ticket #4371 - requested by taca
 net/net-snmp: security update
+Pullup ticket #4372 - requested by taca
+print/a2ps: security patch
+Pullup ticket #4373 - requested by taca
+databases/mysql55-client: security update
+databases/mysql55-server: update to keep in sync with with "mysql55-client"
+Pullup ticket #4374 - requested by taca
+databases/mysql56-client: security update
+databases/mysql56-server: update to keep in sync with with "mysql56-client"
+Pullup ticket #4375 - requested by obache
+textproc/p5-YAML-LibYAML: security patch
