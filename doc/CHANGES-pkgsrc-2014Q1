@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.8 2014/04/12 17:26:11 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.9 2014/04/14 14:00:09 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q1 branch:
@@ -33,3 +33,12 @@ Pullup ticket #4366 - requested by obache
 graphics/openjpeg15: security update
 Pullup ticket #4367 - requested by obache
 www/dillo: security update
+Pullup ticket #4365 - requested by obache
+emulators/suse131_libcurl: security update
+Pullup ticket #4369 - requested by bsiegert
+lang/python26: build fix
+lang/python27: build fix
+Pullup ticket #4370 - requested by morr
+www/wordpress: security update
+Pullup ticket #4371 - requested by taca
+net/net-snmp: security update
