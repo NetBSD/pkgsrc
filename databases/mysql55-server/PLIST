@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2014/03/11 14:05:00 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.27.2.1 2014/04/14 15:29:21 tron Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -2898,6 +2898,8 @@ share/mysql/test/suite/funcs_2/t/innodb_charset.test
 share/mysql/test/suite/funcs_2/t/memory_charset.test
 share/mysql/test/suite/funcs_2/t/myisam_charset.test
 share/mysql/test/suite/funcs_2/t/suite.opt
+share/mysql/test/suite/innodb/r/blob-update-debug.result
+share/mysql/test/suite/innodb/r/create-index.result
 share/mysql/test/suite/innodb/r/innodb-analyze.result
 share/mysql/test/suite/innodb/r/innodb-autoinc-18274.result
 share/mysql/test/suite/innodb/r/innodb-autoinc-44030.result
@@ -2915,6 +2917,7 @@ share/mysql/test/suite/innodb/r/innodb-semi-consistent.result
 share/mysql/test/suite/innodb/r/innodb-timeout.result
 share/mysql/test/suite/innodb/r/innodb-truncate.result
 share/mysql/test/suite/innodb/r/innodb-ucs2.result
+share/mysql/test/suite/innodb/r/innodb-update-insert.result
 share/mysql/test/suite/innodb/r/innodb-use-sys-malloc.result
 share/mysql/test/suite/innodb/r/innodb.result
 share/mysql/test/suite/innodb/r/innodb_autoinc_lock_mode_zero.result
@@ -2993,6 +2996,8 @@ share/mysql/test/suite/innodb/r/innodb_prefix_index_restart_server.result
 share/mysql/test/suite/innodb/r/innodb_replace.result
 share/mysql/test/suite/innodb/r/innodb_timeout_rollback.result
 share/mysql/test/suite/innodb/r/innodb_trx_weight.result
+share/mysql/test/suite/innodb/t/blob-update-debug.test
+share/mysql/test/suite/innodb/t/create-index.test
 share/mysql/test/suite/innodb/t/disabled.def
 share/mysql/test/suite/innodb/t/innodb-analyze.test
 share/mysql/test/suite/innodb/t/innodb-autoinc-18274.test
@@ -3018,6 +3023,7 @@ share/mysql/test/suite/innodb/t/innodb-semi-consistent.test
 share/mysql/test/suite/innodb/t/innodb-timeout.test
 share/mysql/test/suite/innodb/t/innodb-truncate.test
 share/mysql/test/suite/innodb/t/innodb-ucs2.test
+share/mysql/test/suite/innodb/t/innodb-update-insert.test
 share/mysql/test/suite/innodb/t/innodb-use-sys-malloc-master.opt
 share/mysql/test/suite/innodb/t/innodb-use-sys-malloc.test
 share/mysql/test/suite/innodb/t/innodb.test
