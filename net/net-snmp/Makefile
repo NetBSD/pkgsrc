@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.102 2014/03/11 14:34:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.102.2.1 2014/04/14 13:59:34 tron Exp $
 
-DISTNAME=	net-snmp-5.7.2
-PKGREVISION=	6
+DISTNAME=	net-snmp-5.7.2.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=net-snmp/}
 
