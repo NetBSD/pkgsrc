@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2014/04/02 10:37:21 he Exp $
+$NetBSD: distinfo,v 1.21 2014/04/15 10:16:47 obache Exp $
 
 SHA1 (nagios-3.5.1.tar.gz) = 486fd6c75db47000b96d6eebb1654c30d5e9bc72
 RMD160 (nagios-3.5.1.tar.gz) = 0ce5693a745f617c9fbf627f18af27b793de884d
@@ -10,7 +10,7 @@ SHA1 (patch-Makefile.in) = 6a02bb8a9e4f10ddf19458c8485ccda813057637
 SHA1 (patch-base_Makefile.in) = 4c56192ec7d4df0b162f1fe09018902a970dd5c7
 SHA1 (patch-cgi_Makefile.in) = d8e6bb1ca4039e1f613caae8537666738f61ce08
 SHA1 (patch-cgi_avail.c) = 1ca4bbc28496ba1a4f4034284d003b8bfaed5a82
-SHA1 (patch-cgi_cmd.c) = a62e800e500ded9f32441649a0474d644e837d9b
+SHA1 (patch-cgi_cmd.c) = 69b34e73dc54f99335626058e53d4e1f65313f72
 SHA1 (patch-cgi_config.c) = 9eb7887ee774e312f9254e9db38a04e41614d5e8
 SHA1 (patch-cgi_extinfo.c) = 27fada8f82a42ff80933ed8bacf6e6263ea7f3c0
 SHA1 (patch-cgi_getcgi.c) = 3aa7223473c7a961645591ee9ad46120cd7231b3
