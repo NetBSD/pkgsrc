@@ -1,12 +1,12 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: rbldns.sh,v 1.2 2005/04/15 05:15:55 schmonz Exp $
+# $NetBSD: rbldns.sh,v 1.3 2014/04/15 23:07:21 schmonz Exp $
 #
 # @PKGNAME@ script to control rbldns (local RBL service)
 #
 
 # PROVIDE: rbldns named
-# REQUIRE: SERVERS
+# REQUIRE: NETWORKING mountcritremote syslogd
 # BEFORE:  DAEMON
 
 name="rbldns"

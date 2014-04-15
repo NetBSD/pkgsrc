@@ -1,12 +1,12 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: axfrdns.sh,v 1.4 2005/04/15 05:15:55 schmonz Exp $
+# $NetBSD: axfrdns.sh,v 1.5 2014/04/15 23:07:21 schmonz Exp $
 #
 # @PKGNAME@ script to control axfrdns (DNS zone-transfer and TCP service)
 #
 
 # PROVIDE: axfrdns named
-# REQUIRE: SERVERS tinydns
+# REQUIRE: NETWORKING mountcritremote syslogd tinydns
 # BEFORE:  DAEMON
 
 name="axfrdns"
