@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.10 2014/04/14 17:18:26 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.11 2014/04/15 12:20:59 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q1 branch:
@@ -52,3 +52,5 @@ databases/mysql56-client: security update
 databases/mysql56-server: update to keep in sync with with "mysql56-client"
 Pullup ticket #4375 - requested by obache
 textproc/p5-YAML-LibYAML: security patch
+Pullup ticket #4377 - requested by asau
+www/curl: build fix
