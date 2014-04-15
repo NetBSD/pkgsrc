@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.1 2014/04/15 05:37:27 richard Exp $
+As determined elsewhere (pkg/48075) pdksh (and perhaps older ast-ksh and bash)
+have problems with double-parens expressions that are not arithmetic 
+expressions of a particular form.  Adding a space between the two parens 
+seems to get over the problem.
+--- configure.orig	2010-04-26 17:30:00.000000000 +0000
++++ configure
+@@ -15518,7 +15518,7 @@ if test "${enable_gnome+set}" = set; the
+ fi
+ 
+ 
+-if ((test "x$ENABLE_GNOME" = "xyes") && (test "x$ENABLE_WIN" = "xyes")) || ((test "x$ENABLE_GNOME" = "xyes") && (test "x$ENABLE_OSX" = "xyes")) || ((test "x$ENABLE_OSX" = "xyes") && (test "x$ENABLE_WIN" = "xyes")) ; then
++if ( (test "x$ENABLE_GNOME" = "xyes") && (test "x$ENABLE_WIN" = "xyes")) || ( (test "x$ENABLE_GNOME" = "xyes") && (test "x$ENABLE_OSX" = "xyes")) || ( (test "x$ENABLE_OSX" = "xyes") && (test "x$ENABLE_WIN" = "xyes")) ; then
+ 	{ { $as_echo "$as_me:$LINENO: error: --enable-gnome, --enable-windows, and --enable-osx are mutually exclusive" >&5
+ $as_echo "$as_me: error: --enable-gnome, --enable-windows, and --enable-osx are mutually exclusive" >&2;}
+    { (exit 1); exit 1; }; }
