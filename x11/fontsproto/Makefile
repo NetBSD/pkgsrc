@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2012/10/29 05:06:12 asau Exp $
-#
+# $NetBSD: Makefile,v 1.7 2014/04/15 08:22:53 wiz Exp $
 
-DISTNAME=		fontsproto-2.1.2
+DISTNAME=		fontsproto-2.1.3
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2
