@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1466 2014/04/15 16:47:37 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1467 2014/04/15 23:07:28 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2142,3 +2142,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/nagios-base to 3.5.1nb1 [obache 2014-04-15]
 	Updated devel/p5-Devel-ebug to 0.55 [hiramatsu 2014-04-15]
 	Updated x11/libXfont to 1.4.7nb1 [wiz 2014-04-15]
+	Updated net/djbdns-run to 20140415 [schmonz 2014-04-15]
