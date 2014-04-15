@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1463 2014/04/15 08:38:03 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1464 2014/04/15 10:16:59 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2139,3 +2139,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/fontsproto to 2.1.3 [wiz 2014-04-15]
 	Updated x11/xproto to 7.0.26 [wiz 2014-04-15]
 	Updated devel/pcre to 8.35 [wiz 2014-04-15]
+	Updated net/nagios-base to 3.5.1nb1 [obache 2014-04-15]
