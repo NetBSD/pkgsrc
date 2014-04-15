@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1459 2014/04/14 14:33:59 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1460 2014/04/15 02:53:48 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2135,3 +2135,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/lcms2 to 2.6 [adam 2014-04-14]
 	Updated textproc/p5-YAML-LibYAML to 0.41nb1 [obache 2014-04-14]
 	Updated audio/easytag to 2.2.0nb1 [wiz 2014-04-14]
+	Updated devel/p5-Devel-CheckLib to 1.01 [hiramatsu 2014-04-15]
