@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1997 2014/03/11 14:07:04 jperkin Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1998 2014/04/15 18:55:18 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -105,7 +105,7 @@ _SU_ROOT_USER?=		${ROOT_USER}
 REAL_ROOT_USER?=	${ROOT_USER}
 REAL_ROOT_GROUP?=	${ROOT_GROUP}
 
-.if (defined(INSTALL_UNSTRIPPED) && !empty(INSTALL_UNSTRIPPED:M[yY][eE][sS])) || defined(DEBUG_FLAGS)
+.if (defined(INSTALL_UNSTRIPPED) && !empty(INSTALL_UNSTRIPPED:M[yY][eE][sS]))
 _INSTALL_UNSTRIPPED=	# set (flag used by platform/*.mk)
 .endif
 
