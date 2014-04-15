@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1464 2014/04/15 10:16:59 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1465 2014/04/15 14:00:43 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2140,3 +2140,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/xproto to 7.0.26 [wiz 2014-04-15]
 	Updated devel/pcre to 8.35 [wiz 2014-04-15]
 	Updated net/nagios-base to 3.5.1nb1 [obache 2014-04-15]
+	Updated devel/p5-Devel-ebug to 0.55 [hiramatsu 2014-04-15]
