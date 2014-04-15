@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2014/04/12 09:00:36 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2014/04/15 20:57:35 wiz Exp $
 
 DISTNAME=	Curses-1.29
 PKGNAME=	p5-${DISTNAME}
@@ -38,6 +38,21 @@ BUILDLINK_TRANSFORM+=	rm:-ltermcap
 # Use the FreeBSD ncurses config as that works fine for pkgsrc
 pre-configure:
 	${LN} -sf ${WRKSRC}/hints/c-freebsd.ncurses.h ${WRKSRC}/c-config.h
+.endif
+
+# Pass appropriate CURSES_LIBTYPE so Curses will link to the matching panel/menu/form library
+.if ${CURSES_TYPE} == "curses"
+CURSES_LIBTYPE=		bsd
+.elif ${CURSES_TYPE} == "ncurses"
+CURSES_LIBTYPE=		ncurses
+.elif ${CURSES_TYPE} == "ncursesw"
+CURSES_LIBTYPE=		ncursesw
+.endif
+
+.if defined(CURSES_LIBTYPE)
+MAKE_ENV+=		CURSES_LIBTYPE=${CURSES_LIBTYPE}
+MAKE_ENV+=		CURSES_CFLAGS=${BUILDLINK_INCDIRS.${CURSES_TYPE}:S/^/-I/}
+MAKE_ENV+=		CURSES_LDFLAGS=${BUILDLINK_LDADD.${CURSES_TYPE}}
 .endif
 
 .include "../../mk/bsd.pkg.mk"
