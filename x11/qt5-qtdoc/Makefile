@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2014/04/09 07:27:18 obache Exp $
+# $NetBSD: Makefile,v 1.7 2014/04/16 11:22:04 wiz Exp $
 
 .include "../../x11/qt5-qtbase/Makefile.common"
 
 PKGNAME=	qt5-qtdoc-${QTVERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 COMMENT=	Qt5 documentations
 
 USE_LIBTOOL=		yes
