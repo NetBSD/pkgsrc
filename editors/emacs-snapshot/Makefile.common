@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.64 2014/01/10 02:11:28 minskim Exp $
+# $NetBSD: Makefile.common,v 1.65 2014/04/16 21:01:51 joerg Exp $
 
 DISTNAME=	emacs-snapshot_20140101.orig
 SNAPDATE=	${DISTNAME:S/emacs-snapshot_//:S/.orig//}
@@ -55,10 +55,6 @@ CHECK_WRKREF_SKIP+=	bin/emacs-${EMACS_VERSION}
 
 .if (${OPSYS} == "DragonFly") && exists(/usr/lib/crtn.o)
 CPPFLAGS+=		-DDFLY_CRT_USRLIB
-.endif
-
-.if ${OPSYS} == "NetBSD" && exists(/usr/lib/crti.o)
-CONFIGURE_ARGS+=	--with-crt-dir=/usr/lib
 .endif
 
 .if ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux" || ${OPSYS} == "OpenBSD"
