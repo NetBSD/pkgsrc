@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/04/08 02:10:29 khorben Exp $
+# $NetBSD: Makefile,v 1.9 2014/04/16 21:01:03 joerg Exp $
 
 DISTNAME=	Editor-0.3.0
 PKGNAME=	deforaos-editor-0.3.0
@@ -30,6 +30,7 @@ post-install:
 
 .include "options.mk"
 
-.include "../../x11/deforaos-libdesktop/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../textproc/libxslt/xsltproc-nonet.mk"
+.include "../../x11/deforaos-libdesktop/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
