@@ -1,0 +1,12 @@
+Elasticsearch is a distributed RESTful search engine built for the cloud.
+Features include:
+
+  * Distributed and Highly Available Search Engine.
+  * Multi Tenant with Multi Types.
+  * Various set of APIs
+  * Document oriented
+  * Reliable, Asynchronous Write Behind for long term persistency.
+  * (Near) Real Time Search.
+  * Built on top of Lucene
+  * Per operation consistency
+  * Open Source under Apache 2 License.
