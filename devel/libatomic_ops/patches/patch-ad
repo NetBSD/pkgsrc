@@ -1,9 +1,9 @@
-$NetBSD: patch-ad,v 1.3 2011/10/04 18:15:30 bsiegert Exp $
+$NetBSD: patch-ad,v 1.4 2014/04/16 11:21:32 wiz Exp $
 
---- src/atomic_ops.h.orig	2010-09-15 19:18:33.000000000 +0000
+--- src/atomic_ops.h.orig	2013-11-10 09:57:12.000000000 +0000
 +++ src/atomic_ops.h
-@@ -325,7 +325,10 @@
- # endif /* __x86_64 */
+@@ -351,7 +351,10 @@
+ # endif
  #endif
  
 -#if !defined(__GNUC__) && (defined(sparc) || defined(__sparc)) \
