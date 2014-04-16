@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2010/05/29 03:18:54 obache Exp $
+$NetBSD: distinfo,v 1.7 2014/04/16 14:51:24 wiz Exp $
 
-SHA1 (ScientificPython-2.8.tar.gz) = c0847eac6359d70b0e4687c5c65af49b3986e55b
-RMD160 (ScientificPython-2.8.tar.gz) = 0501829586253fe3986458529c436b6d93e6667f
-Size (ScientificPython-2.8.tar.gz) = 559613 bytes
+SHA1 (ScientificPython-2.8.1.tar.gz) = 40842ffec473371ba3c9710ba609844007616388
+RMD160 (ScientificPython-2.8.1.tar.gz) = 53131b769acafd0ef5e6b3e5f022e40ffa2b4663
+Size (ScientificPython-2.8.1.tar.gz) = 559819 bytes
 SHA1 (patch-aa) = c7f353e9264749e3afff633fb28623f053b39f1c
-SHA1 (patch-ab) = 0063518cd630597e271ba0b4934ae6b5ed116785
+SHA1 (patch-ab) = 5a9e4a8c744b02a10cb21e1f85b7cefa00109bef
