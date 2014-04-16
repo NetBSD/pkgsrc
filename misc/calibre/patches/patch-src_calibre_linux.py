@@ -1,11 +1,15 @@
-$NetBSD: patch-src_calibre_linux_py,v 1.4 2012/11/26 14:02:50 ryoon Exp $
+$NetBSD: patch-src_calibre_linux.py,v 1.3 2014/04/16 17:22:30 wiz Exp $
 
 Lifted from ArchLinux, saves mime and desktop files on disk
 instead of trying to add them directly.
 
---- src/calibre/linux.py.orig	2012-11-23 03:36:53.000000000 +0000
+See https://www.archlinux.org/packages/community/x86_64/calibre/ ->
+https://projects.archlinux.org/svntogit/community.git/tree/trunk?h=packages/calibre ->
+https://projects.archlinux.org/svntogit/community.git/plain/trunk/desktop_integration.patch?h=packages/calibre
+
+--- src/calibre/linux.py.orig	2014-04-04 02:33:40.000000000 +0000
 +++ src/calibre/linux.py
-@@ -179,19 +179,6 @@ class PostInstall:
+@@ -495,18 +495,6 @@ class PostInstall:
              self.setup_completion()
          if islinux or isbsd:
              self.setup_desktop_integration()
@@ -21,20 +25,19 @@ instead of trying to add them directly.
 -                        shutil.rmtree(f) if os.path.isdir(f) else os.unlink(f)
 -                if os.stat(config_dir).st_uid == 0:
 -                    os.rmdir(config_dir)
--
+ 
          if warn is None and self.warnings:
-             self.info('There were %d warnings'%len(self.warnings))
-             for args, kwargs in self.warnings:
-@@ -237,7 +224,7 @@ class PostInstall:
+             self.info('\n\nThere were %d warnings\n'%len(self.warnings))
+@@ -564,7 +552,7 @@ class PostInstall:
                  if isnetbsd:
                      f = os.path.join(self.opts.staging_root, 'share/bash_completion.d/calibre')
                  else:
 -                    f = os.path.join(self.opts.staging_etc, 'bash_completion.d/calibre')
-+                    f = os.path.join(self.opts.staging_root, 'usr/share/bash-completion/completions/calibre')
++                    f = os.path.join(self.opts.staging_root, 'usr/share/bash_completion.d/calibre')
              if not os.path.exists(os.path.dirname(f)):
                  os.makedirs(os.path.dirname(f))
-             self.manifest.append(f)
-@@ -357,63 +344,39 @@ class PostInstall:
+             bash_comp_dest, zsh_comp_dest = f, None
+@@ -713,56 +701,39 @@ class PostInstall:
  
              with TemporaryDirectory() as tdir, CurrentDir(tdir), \
                                  PreserveMIMEDefaults():
@@ -58,15 +61,19 @@ instead of trying to add them directly.
 -                self.icon_resources.append(('mimetypes', 'application-x-mobi8-ebook', '128'))
 -                render_img('lt.png', 'calibre-gui.png', width=256, height=256)
 -                cc('xdg-icon-resource install --noupdate --size 256 calibre-gui.png calibre-gui', shell=True)
--                self.icon_resources.append(('apps', 'calibre-gui', '128'))
--                render_img('viewer.png', 'calibre-viewer.png')
--                cc('xdg-icon-resource install --size 128 calibre-viewer.png calibre-viewer', shell=True)
--                self.icon_resources.append(('apps', 'calibre-viewer', '128'))
+-                self.icon_resources.append(('apps', 'calibre-gui', '256'))
+-                render_img('viewer.png', 'calibre-viewer.png', width=256, height=256)
+-                cc('xdg-icon-resource install --size 256 calibre-viewer.png calibre-viewer', shell=True)
+-                self.icon_resources.append(('apps', 'calibre-viewer', '256'))
+-                render_img('tweak.png', 'calibre-ebook-edit.png', width=256, height=256)
+-                cc('xdg-icon-resource install --size 256 calibre-ebook-edit.png calibre-ebook-edit', shell=True)
 +                dir = os.path.join(self.opts.staging_sharedir,'../pixmaps')
 +                os.mkdir(dir)
 +                render_img('mimetypes/lrf.png', os.path.join(dir,'calibre-lrf.png'))
 +                render_img('lt.png', os.path.join(dir, 'calibre-gui.png'))
 +                render_img('viewer.png', os.path.join(dir, 'calibre-viewer.png'))
++                render_img('tweak.png', os.path.join(dir, 'calibre-ebook-edit.png'))
+                 self.icon_resources.append(('apps', 'calibre-ebook-edit', '256'))
  
                  mimetypes = set([])
                  for x in all_input_formats():
@@ -78,37 +85,26 @@ instead of trying to add them directly.
                  def write_mimetypes(f):
                      f.write('MimeType=%s;\n'%';'.join(mimetypes))
  
+                 from calibre.ebooks.oeb.polish.main import SUPPORTED
 -                f = open('calibre-lrfviewer.desktop', 'wb')
 +                dir = os.path.join(self.opts.staging_sharedir,'../applications')
 +                os.mkdir(dir)
 +                f = open(os.path.join(dir, 'calibre-lrfviewer.desktop'), 'wb')
++                
                  f.write(VIEWER)
                  f.close()
 -                f = open('calibre-ebook-viewer.desktop', 'wb')
 +                f = open(os.path.join(dir, 'calibre-ebook-viewer.desktop'), 'wb')
                  f.write(EVIEWER)
                  write_mimetypes(f)
+-                f = open('calibre-ebook-edit.desktop', 'wb')
++                f = open(os.path.join(dir, 'calibre-ebook-edit.desktop'), 'wb')
+                 f.write(ETWEAK)
+                 mt = [guess_type('a.' + x.lower())[0] for x in SUPPORTED]
+                 f.write('MimeType=%s;\n'%';'.join(mt))
                  f.close()
 -                f = open('calibre-gui.desktop', 'wb')
 +                f = open(os.path.join(dir, 'calibre-gui.desktop'), 'wb')
                  f.write(GUI)
                  write_mimetypes(f)
                  f.close()
--                des = ('calibre-gui.desktop', 'calibre-lrfviewer.desktop',
--                        'calibre-ebook-viewer.desktop')
--                for x in des:
--                    cmd = ['xdg-desktop-menu', 'install', '--noupdate', './'+x]
--                    cc(' '.join(cmd), shell=True)
--                    self.menu_resources.append(x)
--                cc(['xdg-desktop-menu', 'forceupdate'])
--                f = open('calibre-mimetypes.xml', 'wb')
-+                dir = os.path.join(self.opts.staging_sharedir,'../mime/packages/')
-+                os.makedirs(dir)
-+                f = open(os.path.join(dir, 'calibre.xml'), 'wb')
-                 f.write(MIME)
-                 f.close()
--                self.mime_resources.append('calibre-mimetypes.xml')
--                cc('xdg-mime install ./calibre-mimetypes.xml', shell=True)
-         except Exception:
-             if self.opts.fatal_errors:
-                 raise
