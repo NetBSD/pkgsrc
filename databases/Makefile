@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.452 2014/04/16 17:15:42 wiz Exp $
+# $NetBSD: Makefile,v 1.453 2014/04/16 17:23:26 imil Exp $
 
 COMMENT=	Databases
 
@@ -23,6 +23,7 @@ SUBDIR+=	dbfsak
 SUBDIR+=	dbh
 SUBDIR+=	deforaos-libdatabase
 SUBDIR+=	edb
+SUBDIR+=	elasticsearch
 SUBDIR+=	freetds
 SUBDIR+=	gdbm
 SUBDIR+=	gdbm_compat
