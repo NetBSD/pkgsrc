@@ -1,0 +1,13 @@
+$NetBSD: patch-configure.ac,v 1.1 2014/04/16 21:02:19 joerg Exp $
+
+--- configure.ac.orig	2014-04-16 19:32:38.000000000 +0000
++++ configure.ac
+@@ -34,7 +34,7 @@ then
+       # "/c/foo/bar", to simplify later conversions to native Windows
+       # format ("c:/foo/bar")
+       srcdir=`cd "${srcdir}" && pwd -W`
+-      srcdir="/${srcdir:0:1}${srcdir:2}"
++      #srcdir="/${srcdir:0:1}${srcdir:2}"
+       ;;
+   esac
+ fi
