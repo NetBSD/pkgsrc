@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1468 2014/04/16 04:57:29 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.1469 2014/04/16 11:21:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2144,3 +2144,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/libXfont to 1.4.7nb1 [wiz 2014-04-15]
 	Updated net/djbdns-run to 20140415 [schmonz 2014-04-15]
 	Updated mail/qmail to 1.03nb18 [schmonz 2014-04-16]
+	Updated devel/libatomic_ops to 7.4.0 [wiz 2014-04-16]
