@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.32 2013/03/24 20:10:31 schmonz Exp $
+# $NetBSD: options.mk,v 1.33 2014/04/16 04:57:23 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qmail
 PKG_OPTIONS_OPTIONAL_GROUPS=	rcpt
@@ -54,11 +54,11 @@ PLIST_VARS+=		tls
 PKG_OPTIONS+=		sasl
 .  endif
 .  include "../../security/openssl/buildlink3.mk"
-TLSSASL_PATCH=		netqmail-1.05-tls-smtpauth-20070321.patch
+TLSSASL_PATCH=		netqmail-1.05-tls-smtpauth-20070417.patch
 PATCHFILES+=		${TLSSASL_PATCH}
-SITES.${TLSSASL_PATCH}=	http://shupp.org/patches/
+SITES.${TLSSASL_PATCH}=	https://raw.githubusercontent.com/shupp/legacy-qmail-related/master/patches/
 .  if !empty(PKG_OPTIONS:Mtls)
-CFLAGS+=		-DTLS=20060104	# NOTE: update according to the patch
+CFLAGS+=		-DTLS=20070408	# NOTE: update according to the patch
 DJB_INSTALL_TARGETS=	cert tmprsadh
 USE_TOOLS+=		gmake
 PLIST.tls=		yes
