@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2014/02/21 21:33:51 gendalia Exp $
+# $NetBSD: Makefile,v 1.7 2014/04/16 17:51:43 gendalia Exp $
 
-DISTNAME=	openafs-1.6.6-src
+DISTNAME=	openafs-1.6.7-src
 PKGNAME=	${DISTNAME:C/-src//}
 CATEGORIES=	filesystems net sysutils
-MASTER_SITES=	http://www.openafs.org/dl/openafs/1.6.6/
+MASTER_SITES=	http://www.openafs.org/dl/openafs/1.6.7/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	gendalia@NetBSD.org
