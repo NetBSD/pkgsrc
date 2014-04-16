@@ -1,0 +1,37 @@
+$NetBSD: patch-config_elasticsearch.yml,v 1.1 2014/04/16 17:22:14 imil Exp $
+
+Define various paths
+
+--- config/elasticsearch.yml.orig	2014-03-25 15:38:22.000000000 +0000
++++ config/elasticsearch.yml
+@@ -143,10 +143,12 @@
+ # Path to directory containing configuration (this file and logging.yml):
+ #
+ # path.conf: /path/to/conf
++path.conf: %%PKG_SYSCONFDIR%%
+ 
+ # Path to directory where to store index data allocated for this node.
+ #
+ # path.data: /path/to/data
++path.data: %%VARBASE%%/db/elasticsearch
+ #
+ # Can optionally include more than one location, causing data to be striped across
+ # the locations (a la RAID 0) on a file level, favouring locations with most free
+@@ -157,14 +159,16 @@
+ # Path to temporary files:
+ #
+ # path.work: /path/to/work
+-
++path.work: %%ES_TMPDIR%%
+ # Path to log files:
+ #
+ # path.logs: /path/to/logs
++path.logs: %%VARBASE%%/log/elasticsearch
+ 
+ # Path to where plugins are installed:
+ #
+ # path.plugins: /path/to/plugins
++path.plugins: %%PREFIX%%/lib/elasticsearch/plugins
+ 
+ 
+ #################################### Plugin ###################################

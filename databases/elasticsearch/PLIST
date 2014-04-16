@@ -1,0 +1,28 @@
+@comment $NetBSD: PLIST,v 1.1 2014/04/16 17:22:14 imil Exp $
+lib/elasticsearch/${PKGNAME}.jar
+lib/elasticsearch/jna-3.3.0.jar
+lib/elasticsearch/jts-1.13.jar
+lib/elasticsearch/log4j-1.2.17.jar
+lib/elasticsearch/lucene-analyzers-common-4.7.0.jar
+lib/elasticsearch/lucene-codecs-4.7.0.jar
+lib/elasticsearch/lucene-core-4.7.0.jar
+lib/elasticsearch/lucene-grouping-4.7.0.jar
+lib/elasticsearch/lucene-highlighter-4.7.0.jar
+lib/elasticsearch/lucene-join-4.7.0.jar
+lib/elasticsearch/lucene-memory-4.7.0.jar
+lib/elasticsearch/lucene-misc-4.7.0.jar
+lib/elasticsearch/lucene-queries-4.7.0.jar
+lib/elasticsearch/lucene-queryparser-4.7.0.jar
+lib/elasticsearch/lucene-sandbox-4.7.0.jar
+lib/elasticsearch/lucene-spatial-4.7.0.jar
+lib/elasticsearch/lucene-suggest-4.7.0.jar
+lib/elasticsearch/spatial4j-0.4.1.jar
+share/doc/elasticsearch/LICENSE.txt
+share/doc/elasticsearch/NOTICE.txt
+share/doc/elasticsearch/README.textile
+share/elasticsearch/elasticsearch
+share/elasticsearch/elasticsearch.in.sh
+share/elasticsearch/plugin
+share/examples/elasticsearch/elasticsearch.yml
+share/examples/elasticsearch/logging.yml
+@pkgdir lib/elasticsearch/plugins
