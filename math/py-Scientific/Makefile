@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.36 2014/02/12 23:18:11 tron Exp $
+# $NetBSD: Makefile,v 1.37 2014/04/16 14:51:24 wiz Exp $
 
-DISTNAME=	ScientificPython-2.8
+DISTNAME=	ScientificPython-2.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Python//}
-PKGREVISION=	2
 CATEGORIES=	math python
-MASTER_SITES=	http://sourcesup.cru.fr/frs/download.php/2309/
+MASTER_SITES=	http://sourcesup.cru.fr/frs/download.php/4411/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dirac.cnrs-orleans.fr/ScientificPython/
@@ -12,13 +11,11 @@ COMMENT=	Python modules for scientific computing
 
 CONFLICTS+=	py-Scientific-[0-9]*
 
-PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.8
-
 MAKE_ENV+=	NETCDF_PREFIX=${BUILDLINK_PREFIX.netcdf}
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 PLIST_SUBST+=	OSVER=${OS_VERSION:C/^(.).*/\1/}
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.8.1
 
 INSTALLATION_DIRS=	bin
 
@@ -31,7 +28,7 @@ post-install:
 		${DESTDIR}${PREFIX}/bin/mpipython${PYVERSSUFFIX}
 
 .include "../../devel/netcdf/buildlink3.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../parallel/mpi-ch/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
