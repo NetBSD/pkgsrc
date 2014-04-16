@@ -1,31 +1,20 @@
-# $NetBSD: Makefile,v 1.6 2012/10/31 11:17:10 asau Exp $
-#
-.include "Makefile.version"
+# $NetBSD: Makefile,v 1.7 2014/04/16 11:21:32 wiz Exp $
 
-DISTNAME=	libatomic_ops-${LIBATOMIC_OPS_SNAPDATE}
+DISTNAME=	libatomic_ops-7.4.0
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_LOCAL}
-#MASTER_SITES=	http://ryo-on.users.sourceforge.net/distrib/
-LICENSE=	gnu-gpl-v2
+MASTER_SITES=	http://www.ivmaisoft.com/atomic_ops/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://bdwgc.sourceforge.net/
+HOMEPAGE=	https://github.com/ivmai/libatomic_ops/wiki
 COMMENT=	Multi-platform library of atomic operations by Hans Boehm
+LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/libatomic_ops
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake automake autoconf autoreconf
+USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
 TEST_TARGET=	check
+PKGCONFIG_OVERRIDE=	pkgconfig/atomic_ops.pc
 
-INSTALL_MAKE_FLAGS=	pkgdatadir=${PKGDOCDIR:Q}
-PKGDOCDIR=		${PREFIX}/share/doc/libatomic_ops
-
-pre-configure:
-	cd ${WRKSRC} && autoreconf -vif
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/src/atomic_ops/sysdeps/README \
-		${DESTDIR}${PKGDOCDIR}/README_headers.txt
+INSTALL_MAKE_FLAGS=	pkgdatadir=${PREFIX}/share/doc/libatomic_ops
 
 .include "../../mk/bsd.pkg.mk"
