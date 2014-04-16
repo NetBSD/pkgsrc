@@ -1,7 +1,0 @@
-# $NetBSD: Makefile.version,v 1.2 2011/10/04 18:15:29 bsiegert Exp $
-#
-# CVS repo:	:pserver:anonymous@bdwgc.cvs.sourceforge.net:/cvsroot/bdwgc
-# CVS module:	bdwgc
-
-#LIBATOMIC_OPS_VERSION=	7.2alpha7
-LIBATOMIC_OPS_SNAPDATE=	20110807
