@@ -1,8 +1,10 @@
-$NetBSD: patch-setup_extensions.py,v 1.3 2012/09/19 15:38:27 ryoon Exp $
+$NetBSD: patch-setup_extensions.py,v 1.4 2014/04/16 17:22:30 wiz Exp $
 
---- setup/extensions.py.orig	2012-09-19 15:19:07.000000000 +0000
+Correct directory name.
+
+--- setup/extensions.py.orig	2014-04-04 02:33:40.000000000 +0000
 +++ setup/extensions.py
-@@ -483,7 +483,7 @@ class Build(Command):
+@@ -567,7 +567,7 @@ class Build(Command):
              self.check_call(qmc + ['qtcurve.pro'])
              self.check_call([make]+([] if iswindows else ['-j%d'%(cpu_count()
                  or 1)]))
@@ -10,4 +12,4 @@ $NetBSD: patch-setup_extensions.py,v 1.3 2012/09/19 15:38:27 ryoon Exp $
 +            src = (glob.glob('.libs/*.so') + glob.glob('release/*.dll') +
                      glob.glob('*.dylib'))
              ext = 'pyd' if iswindows else 'so'
-             shutil.copy2(src[0], self.j(dest, 'calibre_style.'+ext))
+             if not os.path.exists(dest):
