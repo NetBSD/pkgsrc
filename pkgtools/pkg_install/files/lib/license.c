@@ -1,4 +1,4 @@
-/*	$NetBSD: license.c,v 1.36 2014/03/19 21:45:12 wiz Exp $	*/
+/*	$NetBSD: license.c,v 1.37 2014/04/16 14:41:21 wiz Exp $	*/
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -53,6 +53,7 @@ const char *default_acceptable_licenses =
     "cc-by-sa-v3.0 "
     "cc0-1.0-universal "
     "cddl-1.0 "
+    "cecill-2.1 "
     "cpl-1.0 "
     "epl-v1.0 "
     "eupl-v1.1 "
