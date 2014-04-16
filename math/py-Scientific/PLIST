@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2010/05/29 03:18:54 obache Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/04/16 14:51:24 wiz Exp $
 bin/bsp_virtual
 bin/mpipython${PYVERSSUFFIX}
 bin/task_manager
@@ -9,6 +9,7 @@ ${PYINC}/Scientific/bspmodule.h
 ${PYINC}/Scientific/mpimodule.h
 ${PYINC}/Scientific/netcdf.h
 ${PYINC}/Scientific/netcdfmodule.h
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/Scientific/BSP/Console.py
 ${PYSITELIB}/Scientific/BSP/Console.pyc
 ${PYSITELIB}/Scientific/BSP/Console.pyo
