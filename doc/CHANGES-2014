@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1469 2014/04/16 11:21:44 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1470 2014/04/16 14:20:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2145,3 +2145,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/djbdns-run to 20140415 [schmonz 2014-04-15]
 	Updated mail/qmail to 1.03nb18 [schmonz 2014-04-16]
 	Updated devel/libatomic_ops to 7.4.0 [wiz 2014-04-16]
+	Updated devel/boehm-gc to 7.4.0 [wiz 2014-04-16]
