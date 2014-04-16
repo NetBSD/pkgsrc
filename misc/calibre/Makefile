@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.68 2014/04/10 06:21:29 obache Exp $
+# $NetBSD: Makefile,v 1.69 2014/04/16 17:22:30 wiz Exp $
 
-DISTNAME=	calibre-0.9.7
-PKGREVISION=	18
+DISTNAME=	calibre-1.31.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=calibre/}
 EXTRACT_SUFX=	.tar.xz
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.calibre-ebook.com/
@@ -26,8 +26,19 @@ DEPENDS+=	${PYPKGPREFIX}-cherrypy-[0-9]*:../../www/py-cherrypy
 DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
 DEPENDS+=	${PYPKGPREFIX}-netifaces-[0-9]*:../../net/py-netifaces
+DEPENDS+=	${PYPKGPREFIX}-apsw-[0-9]*:../../databases/py-apsw
 
 PYTHON_VERSIONED_DEPENDENCIES=	dateutil dns
+
+# We also need the distfile for qt4-libs to extract some private header files
+# If QTVERSION changes, the distinfo file needs to be updated too.
+QTVERSION=	4.8.5	# from ../../x11/qt4/Makefile.common
+# Including that file to avoid hardcoding the version number won't work,
+# since it will occur in the distinfo anyway.
+QTNAME=		qt-everywhere-opensource-src-${QTVERSION}
+DISTFILES+=	${QTNAME}.tar.gz
+MASTER_SITES+=	http://releases.qt-project.org/qt4/source/
+EXTRACT_USING=  bsdtar
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config pax
@@ -42,10 +53,10 @@ INSTALLATION_DIRS=	share/applications
 INSTALLATION_DIRS=	share/icons
 INSTALLATION_DIRS=	share/calibre/recipes
 
-FIX_PYTHON_PATHS+=	recipes/*.recipe
-FIX_PYTHON_PATHS+=	resources/catalog/*.py
-FIX_PYTHON_PATHS+=	resources/*.py
 FIX_PYTHON_PATHS+=	*.py
+FIX_PYTHON_PATHS+=	recipes/*.recipe
+FIX_PYTHON_PATHS+=	resources/*.py
+FIX_PYTHON_PATHS+=	resources/catalog/*.py
 FIX_PYTHON_PATHS+=	setup/*.py
 FIX_PYTHON_PATHS+=	setup/installer/*.py
 FIX_PYTHON_PATHS+=	setup/installer/linux/*.py
@@ -60,10 +71,16 @@ FIX_PYTHON_PATHS+=	src/calibre/devices/*.py
 FIX_PYTHON_PATHS+=	src/calibre/devices/android/*.py
 FIX_PYTHON_PATHS+=	src/calibre/devices/eslick/*.py
 FIX_PYTHON_PATHS+=	src/calibre/devices/folder_device/*.py
+FIX_PYTHON_PATHS+=	src/calibre/devices/idevice/*.py
 FIX_PYTHON_PATHS+=	src/calibre/devices/iriver/*.py
 FIX_PYTHON_PATHS+=	src/calibre/devices/kobo/*.py
+FIX_PYTHON_PATHS+=	src/calibre/devices/mtp/*.py
+FIX_PYTHON_PATHS+=	src/calibre/devices/mtp/unix/*.py
+FIX_PYTHON_PATHS+=	src/calibre/devices/mtp/unix/upstream/*.py
+FIX_PYTHON_PATHS+=	src/calibre/devices/mtp/windows/*.py
 FIX_PYTHON_PATHS+=	src/calibre/devices/prs505/*.py
 FIX_PYTHON_PATHS+=	src/calibre/devices/prst1/*.py
+FIX_PYTHON_PATHS+=	src/calibre/devices/smart_device_app/*.py
 FIX_PYTHON_PATHS+=	src/calibre/devices/teclast/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/chm/*.py
@@ -72,18 +89,18 @@ FIX_PYTHON_PATHS+=	src/calibre/ebooks/compression/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/conversion/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/conversion/plugins/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/djvu/*.py
-FIX_PYTHON_PATHS+=	src/calibre/ebooks/epub/fix/*.py
+FIX_PYTHON_PATHS+=	src/calibre/ebooks/docx/*.py
+FIX_PYTHON_PATHS+=	src/calibre/ebooks/docx/writer/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/epub/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/fb2/__init__.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/html/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/iterator/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/lit/*.py
-FIX_PYTHON_PATHS+=	src/calibre/ebooks/lrf/html/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/lrf/*.py
+FIX_PYTHON_PATHS+=	src/calibre/ebooks/lrf/html/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/lrf/pylrs/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/markdown/extensions/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/metadata/*.py
-FIX_PYTHON_PATHS+=	src/calibre/ebooks/metadata/book/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/metadata/book/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/metadata/sources/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/mobi/*.py
@@ -95,10 +112,16 @@ FIX_PYTHON_PATHS+=	src/calibre/ebooks/odt/__init__.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/oeb/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/oeb/display/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/oeb/display/test-cfi/*.py
+FIX_PYTHON_PATHS+=	src/calibre/ebooks/oeb/iterator/*.py
+FIX_PYTHON_PATHS+=	src/calibre/ebooks/oeb/polish/*.py
+FIX_PYTHON_PATHS+=	src/calibre/ebooks/oeb/polish/check/*.py
+FIX_PYTHON_PATHS+=	src/calibre/ebooks/oeb/polish/tests/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/oeb/transforms/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/pdb/haodoo/__init__.py
+FIX_PYTHON_PATHS+=	src/calibre/ebooks/pdf/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/pdf/__init__.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/pdf/reflow.py
+FIX_PYTHON_PATHS+=	src/calibre/ebooks/pdf/render/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/readability/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/rtf/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/rtf2xml/*.py
@@ -110,35 +133,44 @@ FIX_PYTHON_PATHS+=	src/calibre/gui2/actions/*.py
 FIX_PYTHON_PATHS+=	src/calibre/gui2/add_wizard/*.py
 FIX_PYTHON_PATHS+=	src/calibre/gui2/catalog/*.py
 FIX_PYTHON_PATHS+=	src/calibre/gui2/convert/*.py
+FIX_PYTHON_PATHS+=	src/calibre/gui2/device_drivers/*.py
 FIX_PYTHON_PATHS+=	src/calibre/gui2/dialogs/*.py
 FIX_PYTHON_PATHS+=	src/calibre/gui2/library/*.py
 FIX_PYTHON_PATHS+=	src/calibre/gui2/metadata/*.py
 FIX_PYTHON_PATHS+=	src/calibre/gui2/preferences/*.py
 FIX_PYTHON_PATHS+=	src/calibre/gui2/progress_indicator/*.py
+FIX_PYTHON_PATHS+=	src/calibre/gui2/store/loader.py
+FIX_PYTHON_PATHS+=	src/calibre/gui2/store/stores/*.py
 FIX_PYTHON_PATHS+=	src/calibre/gui2/tag_browser/*.py
+FIX_PYTHON_PATHS+=	src/calibre/gui2/toc/*.py
+FIX_PYTHON_PATHS+=	src/calibre/gui2/tweak_book/*.py
+FIX_PYTHON_PATHS+=	src/calibre/gui2/tweak_book/diff/*.py
+FIX_PYTHON_PATHS+=	src/calibre/gui2/tweak_book/editor/*.py
+FIX_PYTHON_PATHS+=	src/calibre/gui2/tweak_book/editor/smart/*.py
+FIX_PYTHON_PATHS+=	src/calibre/gui2/tweak_book/editor/syntax/*.py
 FIX_PYTHON_PATHS+=	src/calibre/gui2/viewer/*.py
 FIX_PYTHON_PATHS+=	src/calibre/gui2/wizard/*.py
 FIX_PYTHON_PATHS+=	src/calibre/library/*.py
 FIX_PYTHON_PATHS+=	src/calibre/library/catalogs/*.py
 FIX_PYTHON_PATHS+=	src/calibre/library/server/*.py
-FIX_PYTHON_PATHS+=	src/calibre/manual/*.py
-FIX_PYTHON_PATHS+=	src/calibre/manual/plugin_examples/helloworld/*.py
-FIX_PYTHON_PATHS+=	src/calibre/manual/plugin_examples/interface_demo/*.py
-FIX_PYTHON_PATHS+=	src/calibre/trac/*.py
 FIX_PYTHON_PATHS+=	src/calibre/translations/*.py
 FIX_PYTHON_PATHS+=	src/calibre/utils/*.py
 FIX_PYTHON_PATHS+=	src/calibre/utils/fonts/*.py
+FIX_PYTHON_PATHS+=	src/calibre/utils/fonts/sfnt/*.py
+FIX_PYTHON_PATHS+=	src/calibre/utils/fonts/sfnt/cff/*.py
+FIX_PYTHON_PATHS+=	src/calibre/utils/fonts/woff/__init__.py
 FIX_PYTHON_PATHS+=	src/calibre/utils/ipc/*.py
 FIX_PYTHON_PATHS+=	src/calibre/utils/magick/*.py
 FIX_PYTHON_PATHS+=	src/calibre/utils/podofo/*.py
 FIX_PYTHON_PATHS+=	src/calibre/utils/pyconsole/*.py
+FIX_PYTHON_PATHS+=	src/calibre/utils/spell/__init__.py
 FIX_PYTHON_PATHS+=	src/calibre/utils/wmf/*.py
 FIX_PYTHON_PATHS+=	src/calibre/web/feeds/*.py
 FIX_PYTHON_PATHS+=	src/calibre/web/feeds/recipes/*.py
 FIX_PYTHON_PATHS+=	src/calibre/web/fetch/*.py
 FIX_PYTHON_PATHS+=	src/calibre/web/jsbrowser/*.py
+FIX_PYTHON_PATHS+=	src/qtcurve/test_rendering.py
 FIX_PYTHON_PATHS+=	src/templite/*.py
-
 SUBST_CLASSES+=		prefix
 SUBST_SED.prefix=	-e "s,^QMAKE =.*,QMAKE = '${PREFIX}/qt4/bin/qmake',"
 SUBST_MESSAGE.prefix=	Fixing path to QMAKE
@@ -171,10 +203,24 @@ MAKE_ENV+=		PODOFO_LIB_DIR=${BUILDLINK_PREFIX.podofo}/lib
 pre-configure:
 	cd ${WRKSRC} && rm -rf src/cherrypy src/pyPdf src/html5lib src/chardet
 
+# Turn off x bits on non-executable files.
+post-extract:
+	find  ${WRKSRC}/src/calibre/devices ${WRKSRC}/src/calibre/ebooks ${WRKSRC}/src/calibre/web -name '*.py' -exec chmod a-x \{} \;
+	find  ${WRKSRC}/resources/images/mimetypes  -name '*.png' -exec chmod a-x \{} \;
+	chmod a-x ${WRKSRC}/src/calibre/utils/Zeroconf.py
+	chmod a-x ${WRKSRC}/src/calibre/utils/smtplib.py
+
+# Get access to (some of) the Qt4 private header files (for qt_hack).
+post-wrapper:
+	cd ${WRKDIR}/.buildlink/qt4/include/QtGui && \
+	    ln -s ../../../../${QTNAME}/include/QtGui/private .
+	cd ${WRKDIR}/.buildlink/qt4/include/QtCore && \
+	    ln -s ../../../../${QTNAME}/include/QtCore/private .
+
 post-install:
 	cd ${WRKSRC}/recipes && pax -wr -pma *.recipe \
 	    ${DESTDIR}${PREFIX}/share/calibre/recipes
-	cd ${WRKSRC} && pax -wr -pma Changelog* README \
+	cd ${WRKSRC} && pax -wr -pma Changelog* README.md \
 	    COPYRIGHT INSTALL LICENSE.* \
 	    ${DESTDIR}${PREFIX}/share/doc/calibre
 
@@ -215,6 +261,6 @@ BUILDLINK_API_DEPENDS.py-qt4+=	${PYPKGPREFIX}-qt4>=4.7.0
 .include "../../x11/py-qt4/buildlink3.mk"
 BUILDLINK_API_DEPENDS.qt4-tools+=	qt4-tools>=4.7.0
 .include "../../x11/qt4-tools/buildlink3.mk"
-BUILDLINK_API_DEPENDS.qt4-qdbus+=	qt4-tools>=4.7.0
+BUILDLINK_API_DEPENDS.qt4-qdbus+=	qt4-qdbus>=4.7.0
 .include "../../x11/qt4-qdbus/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
