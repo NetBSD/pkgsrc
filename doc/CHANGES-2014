@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1472 2014/04/16 14:56:33 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1473 2014/04/16 17:15:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2148,3 +2148,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/boehm-gc to 7.4.0 [wiz 2014-04-16]
 	Updated math/py-Scientific to 2.8.1 [wiz 2014-04-16]
 	Added devel/gperftools version 2.1 [wiz 2014-04-16]
+	Added databases/py-apsw version 3.8.4.2pl1 [wiz 2014-04-16]
