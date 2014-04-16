@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2013/11/25 12:00:46 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2014/04/16 11:22:01 wiz Exp $
 #
 
 PKGNAME=		akode-plugins-pulseaudio-${AKODE_VERSION}
-PKGREVISION=		9
+PKGREVISION=		10
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Pulseaudio output plugin for akode framework
