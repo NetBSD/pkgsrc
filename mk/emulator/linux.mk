@@ -1,4 +1,4 @@
-# $NetBSD: linux.mk,v 1.24 2014/04/08 08:18:44 obache Exp $
+# $NetBSD: linux.mk,v 1.25 2014/04/17 00:08:34 wiz Exp $
 #
 # Linux binary emulation framework
 #
@@ -75,6 +75,9 @@ _EMUL_MODULES+=		glx
 _EMUL_MODULES+=		gtk2
 _EMUL_MODULES+=		jpeg
 _EMUL_MODULES+=		krb5
+_EMUL_MODULES+=		libSDL
+_EMUL_MODULES+=		libaudiofile
+_EMUL_MODULES+=		libesd
 _EMUL_MODULES+=		libffi
 _EMUL_MODULES+=		libjson
 _EMUL_MODULES+=		libidn
