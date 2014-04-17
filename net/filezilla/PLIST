@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2013/08/07 16:48:49 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/04/17 12:16:43 wiz Exp $
 bin/filezilla
 bin/fzputtygen
 bin/fzsftp
@@ -40,6 +40,7 @@ share/filezilla/resources/16x16/sort_up_light.png
 share/filezilla/resources/16x16/speedlimits.png
 share/filezilla/resources/16x16/symlink.png
 share/filezilla/resources/16x16/synchronize.png
+share/filezilla/resources/16x16/throbber.gif
 share/filezilla/resources/16x16/unknown.png
 share/filezilla/resources/16x16/upload.png
 share/filezilla/resources/16x16/uploadadd.png
@@ -492,6 +493,7 @@ share/filezilla/resources/tango/theme.xml
 share/filezilla/resources/theme.xml
 share/filezilla/resources/toolbar.xrc
 share/filezilla/resources/up.png
+share/filezilla/resources/update.xrc
 share/icons/hicolor/16x16/apps/filezilla.png
 share/icons/hicolor/32x32/apps/filezilla.png
 share/icons/hicolor/48x48/apps/filezilla.png
@@ -501,6 +503,7 @@ share/locale/ar/LC_MESSAGES/filezilla.mo
 share/locale/bg_BG/LC_MESSAGES/filezilla.mo
 share/locale/ca/LC_MESSAGES/filezilla.mo
 share/locale/ca_ES@valencia/LC_MESSAGES/filezilla.mo
+share/locale/co/LC_MESSAGES/filezilla.mo
 share/locale/cs_CZ/LC_MESSAGES/filezilla.mo
 share/locale/da_DK/LC_MESSAGES/filezilla.mo
 share/locale/de/LC_MESSAGES/filezilla.mo
@@ -522,6 +525,7 @@ share/locale/is/LC_MESSAGES/filezilla.mo
 share/locale/it/LC_MESSAGES/filezilla.mo
 share/locale/ja_JP/LC_MESSAGES/filezilla.mo
 share/locale/ka/LC_MESSAGES/filezilla.mo
+share/locale/kab/LC_MESSAGES/filezilla.mo
 share/locale/km_KH/LC_MESSAGES/filezilla.mo
 share/locale/ko_KR/LC_MESSAGES/filezilla.mo
 share/locale/ku/LC_MESSAGES/filezilla.mo
