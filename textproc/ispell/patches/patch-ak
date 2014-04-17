@@ -1,13 +1,13 @@
-$NetBSD: patch-ak,v 1.1 2013/04/24 02:20:36 rodent Exp $
+$NetBSD: patch-ak,v 1.2 2014/04/17 21:30:14 asau Exp $
 
---- term.c.orig	2005-04-15 11:11:36.000000000 +1200
+--- term.c.orig	2005-04-14 23:11:36.000000000 +0000
 +++ term.c
 @@ -86,7 +86,10 @@ static char Rcs_Id[] =
  #include "ispell.h"
  #include "proto.h"
  #include "msgs.h"
 -#ifdef USG
-+#if defined(__NetBSD__) || defined(linux) || defined(__sgi) || defined(__INTERIX)
++#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(linux) || defined(__sgi) || defined(__INTERIX)
 +#define USE_TERMIOS
 +#include <termios.h>
 +#elif defined(USG)
