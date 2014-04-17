@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1502 2014/04/17 14:57:02 imil Exp $
+$NetBSD: CHANGES-2014,v 1.1503 2014/04/17 16:25:37 imil Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2180,3 +2180,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/gmp to 6.0.0a [wiz 2014-04-17]
 	Updated multimedia/xine-lib to 1.2.5 [wiz 2014-04-17]
 	Added net/py-softlayer version 3.0.2 [imil 2014-04-17]
+	Added net/py-apache-libcloud version 0.14.1 [imil 2014-04-17]
