@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1882 2014/04/16 14:56:24 wiz Exp $
+# $NetBSD: Makefile,v 1.1883 2014/04/17 12:27:28 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1457,6 +1457,7 @@ SUBDIR+=	py-decorator
 SUBDIR+=	py-distribute
 SUBDIR+=	py-doctor
 SUBDIR+=	py-dulwich
+SUBDIR+=	py-enum34
 SUBDIR+=	py-expect
 SUBDIR+=	py-filechunkio
 SUBDIR+=	py-flakes
