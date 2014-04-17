@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1476 2014/04/16 22:39:57 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1477 2014/04/17 00:08:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2152,3 +2152,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/calibre to 1.31.0 [wiz 2014-04-16]
 	Added databases/elasticsearch version 1.1.0 [imil 2014-04-16]
 	Updated news/pan to 0.139nb14 [wiz 2014-04-16]
+	Added emulators/suse131_libaudiofile version 13.1 [wiz 2014-04-17]
