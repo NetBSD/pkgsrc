@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.15 2014/04/16 17:22:30 wiz Exp $
+$NetBSD: distinfo,v 1.16 2014/04/17 13:01:13 wiz Exp $
 
-SHA1 (calibre-1.31.0.tar.xz) = 36854aded8fb67a7d8a529ce84ed7a56341c4591
-RMD160 (calibre-1.31.0.tar.xz) = 127193d6abc5b6d62d9b316416191ebb96bc7063
-Size (calibre-1.31.0.tar.xz) = 33189956 bytes
+SHA1 (calibre-1.32.0.tar.xz) = 536881dee5acaeb6af1ae87ff8d917437823b537
+RMD160 (calibre-1.32.0.tar.xz) = 27c937c3f5f86d2fd27c12116e1b1cd11cd37afa
+Size (calibre-1.32.0.tar.xz) = 33183068 bytes
 SHA1 (qt-everywhere-opensource-src-4.8.5.tar.gz) = 745f9ebf091696c0d5403ce691dc28c039d77b9e
 RMD160 (qt-everywhere-opensource-src-4.8.5.tar.gz) = 1e7bb099d5d1cda0b663cebe207c846c8d04750d
 Size (qt-everywhere-opensource-src-4.8.5.tar.gz) = 241491467 bytes
+SHA1 (patch-recipes_mojegotowanie.recipe) = d633337bec19ea466cb6d939e06d4aae18f75287
 SHA1 (patch-setup_extensions.py) = 285ab1aff5b0d5f7c0a016f68e705d312a120d65
 SHA1 (patch-src_calibre_linux.py) = 06e953e3a437ae76783d80bf0986bbbece991431
