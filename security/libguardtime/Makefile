@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/03/31 10:20:26 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2014/04/17 20:48:18 fhajny Exp $
 
 DISTNAME=	libgt-0.3.13
 PKGNAME=	${DISTNAME:S/gt/guardtime/}
@@ -16,6 +16,8 @@ GNU_CONFIGURE=	yes
 MAKE_FILE=	GNUmakefile
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
+
+CONFIGURE_ARGS+=	--with-cadir=${SSLCERTS}
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
