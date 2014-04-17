@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.5 2011/01/19 19:14:15 drochner Exp $
+$NetBSD: patch-ae,v 1.6 2014/04/17 21:32:25 asau Exp $
 
 --- fig2dev/fig2dev.h.orig	2010-03-16 18:53:20.000000000 +0000
 +++ fig2dev/fig2dev.h
@@ -7,7 +7,7 @@ $NetBSD: patch-ae,v 1.5 2011/01/19 19:14:15 drochner Exp $
  #endif /* PATH_MAX */
  
 -#if ( !defined(__NetBSD__) && !defined(__DARWIN__) && !defined(__FreeBSD) )
-+#if ( !defined(__NetBSD__) && !defined(__DARWIN__) && !defined(__FreeBSD) && !defined(__DragonFly__) )
++#if ( !defined(__NetBSD__) && !defined(__DARWIN__) && !defined(__FreeBSD__) && !defined(__DragonFly__) )
  extern int		sys_nerr, errno;
  #endif
  
