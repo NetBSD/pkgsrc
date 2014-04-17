@@ -36,7 +36,7 @@ bootstrap.
 pbulk may be installed into /usr/pkg_bulk with the following:
 
 cd /usr/pkgsrc/pkgtools/pbulk
-env PATH=/usr/pkg_bulk/bin:/usr/pkg_bulk/sbin:${PATH} bmake package
+env PATH=/usr/pkg_bulk/bin:/usr/pkg_bulk/sbin:${PATH} bmake install
 
 The mk.conf file in /usr/pkg_bulk/etc/mk.conf should already have the
 correct LOCALBASE and PKG_DBDIR settings.
