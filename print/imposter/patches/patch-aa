@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2006/03/23 17:44:09 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2014/04/17 21:41:38 asau Exp $
 
 --- include/common.h.orig	2006-03-23 17:39:45.000000000 +0000
 +++ include/common.h
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.1 2006/03/23 17:44:09 joerg Exp $
  extern int errno;
  #endif
  
-+#if defined(__DragonFly__)
++#if defined(__FreeBSD__) || defined(__DragonFly__)
 +typedef unsigned long ulong;
 +#endif
 +
