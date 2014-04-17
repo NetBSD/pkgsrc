@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1477 2014/04/17 00:08:51 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1478 2014/04/17 00:09:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2153,3 +2153,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Added databases/elasticsearch version 1.1.0 [imil 2014-04-16]
 	Updated news/pan to 0.139nb14 [wiz 2014-04-16]
 	Added emulators/suse131_libaudiofile version 13.1 [wiz 2014-04-17]
+	Added emulators/suse131_libesd version 13.1 [wiz 2014-04-17]
+	Added emulators/suse131_libSDL version 13.1 [wiz 2014-04-17]
