@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.224 2014/03/10 12:06:35 jperkin Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.224.2.1 2014/04/17 15:06:21 tron Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -133,6 +133,7 @@ _ok_:=yes
 _enter_:=${_pkg_:M-*}
 # work around another bug in netbsd-5's make (fixed in HEAD)
 _use_:=${USE_BUILTIN.${_pkg_:S/^-//}:M[Yy][Ee][Ss]}
+_ignore_:=${IGNORE_PKG.${_pkg_:S/^-//}:M[Yy][Ee][Ss]}
 
 .  if "${_pkg_}" == "x11-links" || "${_pkg_}" == "-x11-links"
      # (nothing)
@@ -153,7 +154,7 @@ _use_:=${USE_BUILTIN.${_pkg_:S/^-//}:M[Yy][Ee][Ss]}
 .      else
          #.say "${_stack_:C/.*/  /} ${_pkg_:S/^-//} built-in"
 .      endif
-.    else
+.    elif empty(_ignore_)
        # no builtin version or not using it
        #.say "${_stack_:C/.*/  /} ${_pkg_:S/^-//} pkgsrc"
        _ok_:=no
