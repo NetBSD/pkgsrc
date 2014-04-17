@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/04/09 07:27:04 obache Exp $
+# $NetBSD: Makefile,v 1.13 2014/04/17 11:13:23 hiramatsu Exp $
 
 PKGNAME=	ocaml-sqlite3-${VERSION}
 DISTNAME=	sqlite3-ocaml-${VERSION}
@@ -16,12 +16,6 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--destdir "${DESTDIR}" --prefix "${PREFIX}"
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c
-
-SUBST_CLASSES+=	destdir
-SUBST_STAGE.destdir=	post-configure
-SUBST_MESSAGE.destdir=	Changing install location to DESTDIR
-SUBST_FILES.destdir=	setup.ml
-SUBST_SED.destdir=	-e 's,"install" :: findlib_name,"install" :: "-destdir ${DESTDIR}${PREFIX}/lib/ocaml/site-lib" :: "-ldconf /var/null" :: findlib_name,'
 
 PLIST_VARS=	opt
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
