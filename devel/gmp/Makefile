@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.72 2013/10/02 15:13:46 adam Exp $
+# $NetBSD: Makefile,v 1.73 2014/04/17 13:08:24 wiz Exp $
 
-DISTNAME=	gmp-5.1.3
+DISTNAME=	gmp-6.0.0a
 CATEGORIES=	devel math
-MASTER_SITES=	ftp://ftp.gmplib.org/pub/${DISTNAME}/
+MASTER_SITES=	https://gmplib.org/download/gmp/ \
+		${MASTER_SITE_GNU:=gmp/}
 # Use .tar.bz2 distfile so that no extra dependency on archivers/xz
 # is needed when building lang/gcc* with option gcc-inplace-math.
 EXTRACT_SUFX=	.tar.bz2
@@ -12,14 +13,14 @@ HOMEPAGE=	http://gmplib.org/
 COMMENT=	Library for arbitrary precision arithmetic
 LICENSE=	gnu-lgpl-v3 AND gnu-gpl-v3
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
 INFO_FILES=		yes
 USE_LANGUAGES=		c c++ c99
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gm4 autoconf makeinfo
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-readline
+
+WRKSRC=		${WRKDIR}/${DISTNAME:S/a$//}
 
 TEST_TARGET=		check
 
