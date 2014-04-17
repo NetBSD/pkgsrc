@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.11 2014/04/15 12:20:59 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.12 2014/04/17 15:06:34 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q1 branch:
@@ -54,3 +54,5 @@ Pullup ticket #4375 - requested by obache
 textproc/p5-YAML-LibYAML: security patch
 Pullup ticket #4377 - requested by asau
 www/curl: build fix
+Pullup ticket #4379 - requested by obache
+pkgtools/x11-links: bug fix update
