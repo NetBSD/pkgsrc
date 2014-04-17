@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2014/01/25 10:29:56 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/04/17 12:29:34 wiz Exp $
 
-DISTNAME=	v1.3.2
+DISTNAME=	v1.3.5
 PKGNAME=	beets-${DISTNAME:S/v//}
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/sampsyo/beets/archive/
@@ -11,10 +11,12 @@ HOMEPAGE=	http://beets.radbox.org/
 COMMENT=	Music geek's media organizer
 LICENSE=	mit
 
+DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
 DEPENDS+=	${PYPKGPREFIX}-last-[0-9]*:../../audio/py-last
 DEPENDS+=	${PYPKGPREFIX}-munkres-[0-9]*:../../math/py-munkres
 DEPENDS+=	${PYPKGPREFIX}-musicbrainz-ngs>=0.4:../../audio/py-musicbrainz-ngs
 DEPENDS+=	${PYPKGPREFIX}-mutagen-[0-9]*:../../audio/py-mutagen
+DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-Unidecode-[0-9]*:../../textproc/py-Unidecode
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
