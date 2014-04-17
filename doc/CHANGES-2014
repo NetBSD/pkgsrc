@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1488 2014/04/17 11:56:21 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1489 2014/04/17 12:09:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2168,3 +2168,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/libmms to 0.6.4 [wiz 2014-04-17]
 	Updated sysutils/salt to 2014.1.2 [imil 2014-04-17]
 	Updated emulators/mame to 0.153 [wiz 2014-04-17]
+	Updated emulators/mess to 0.153 [wiz 2014-04-17]
