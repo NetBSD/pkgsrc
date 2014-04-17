@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2014/04/17 00:19:19 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/04/17 00:19:37 wiz Exp $
 
 DISTNAME=	suse_glx-${SUSE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 RPMUPDPKGS+=	Mesa-9.2.3-61.9.1.${SUSE_ARCH}
 RPMUPDPKGS+=	Mesa-libEGL1-9.2.3-61.9.1.${SUSE_ARCH}
