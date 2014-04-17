@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1483 2014/04/17 04:05:48 hiramatsu Exp $
+$NetBSD: CHANGES-2014,v 1.1484 2014/04/17 08:45:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2163,3 +2163,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/py-amqp to 1.4.5 [rodent 2014-04-17]
 	Updated net/py-kombu to 3.0.15 [rodent 2014-04-17]
 	Updated devel/p5-File-MimeInfo to 0.25 [hiramatsu 2014-04-17]
+	Updated graphics/inkscape to 0.48.4nb19 [wiz 2014-04-17]
