@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2014/04/07 02:09:37 rodent Exp $
+# $NetBSD: Makefile,v 1.8 2014/04/17 01:53:07 rodent Exp $
 
-DISTNAME=	amqp-1.4.4
+DISTNAME=	amqp-1.4.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	https://pypi.python.org/packages/source/a/amqp/
