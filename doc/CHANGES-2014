@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1489 2014/04/17 12:09:15 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1490 2014/04/17 12:16:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2169,3 +2169,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/salt to 2014.1.2 [imil 2014-04-17]
 	Updated emulators/mame to 0.153 [wiz 2014-04-17]
 	Updated emulators/mess to 0.153 [wiz 2014-04-17]
+	Updated net/filezilla to 3.8.0 [wiz 2014-04-17]
