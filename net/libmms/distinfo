@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2013/07/13 09:28:25 obache Exp $
+$NetBSD: distinfo,v 1.6 2014/04/17 11:15:09 wiz Exp $
 
-SHA1 (libmms-0.6.2.tar.gz) = cdef62fd1a0e2585dd2111fc94b032f84290e351
-RMD160 (libmms-0.6.2.tar.gz) = c1bf89f7460ec208ab7180510dbb3673d67dea5a
-Size (libmms-0.6.2.tar.gz) = 340230 bytes
-SHA1 (patch-src_mms.c) = 46e644843cc041eae942639560753d5e3ca9b678
+SHA1 (libmms-0.6.4.tar.gz) = b03ef84a9eedc68fdf2866265b667b75e1a33bee
+RMD160 (libmms-0.6.4.tar.gz) = 9001264ef7967514ad2e3cf0d711a9230e38ca80
+Size (libmms-0.6.4.tar.gz) = 356217 bytes
+SHA1 (patch-src_mms.c) = 7d80c241b3d1fde277dc984e24527914137924fe
