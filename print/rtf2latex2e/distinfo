@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/02/03 02:45:23 reed Exp $
+$NetBSD: distinfo,v 1.2 2014/04/17 21:34:16 asau Exp $
 
 SHA1 (rtf2latex2eUnix1.tar.gz) = e077351b0ee0713aaa7a02121449f568e4cdace5
 RMD160 (rtf2latex2eUnix1.tar.gz) = 4b7174f0c680874b0ac6dd712827d8c659b9dc66
 Size (rtf2latex2eUnix1.tar.gz) = 540992 bytes
 SHA1 (patch-aa) = a9cba2a36e0b0eb65779cbdc810e2e6f04306dd8
+SHA1 (patch-src_common_cole_oledecod.c) = adcf9d97671192102a28ce81dba5c87af5a5d3b4
