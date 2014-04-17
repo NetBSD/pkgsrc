@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.80 2013/12/04 12:38:35 drochner Exp $
+# $NetBSD: Makefile.common,v 1.81 2014/04/17 13:53:47 wiz Exp $
 #
 # used by audio/xine-alsa/Makefile
 # used by audio/xine-esound/Makefile
@@ -6,8 +6,8 @@
 # used by multimedia/xine-v4l/Makefile
 # used by multimedia/xine-v4l2/Makefile
 
-DISTNAME=		xine-lib-1.2.4
-XINE_PKGNAME=		xine-lib-1.2.4
+DISTNAME=		xine-lib-1.2.5
+XINE_PKGNAME=		xine-lib-1.2.5
 PKGNAME?=		${XINE_PKGNAME}
 CATEGORIES?=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xine/}
@@ -18,7 +18,7 @@ HOMEPAGE=		http://xinehq.de/
 
 MAKE_JOBS_SAFE=		no
 
-XINE_MOD_DIR_VER=	2.3
+XINE_MOD_DIR_VER=	2.4
 PLIST_SUBST+=		XINE_MOD_DIR_VER=${XINE_MOD_DIR_VER:Q}
 
 DISTINFO_FILE=		${.CURDIR}/../../multimedia/xine-lib/distinfo
