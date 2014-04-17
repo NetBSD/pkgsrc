@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/03/10 08:38:25 he Exp $
+# $NetBSD: Makefile,v 1.2 2014/04/17 20:18:49 joerg Exp $
 
 DISTNAME=	free42
 PKGVERSION=	1.4.78
@@ -14,7 +14,7 @@ COMMENT=	HP42S Calculator Simulator
 LICENSE=	gnu-gpl-v2
 
 #WRKSRC=		${WRKDIR}/free42/gtk/
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES+=	c++
 BUILD_DIRS=	gtk
 
