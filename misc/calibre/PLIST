@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2014/04/16 17:22:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2014/04/17 13:01:13 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -777,6 +777,7 @@ lib/calibre/calibre/gui2/dialogs/message_box.py
 lib/calibre/calibre/gui2/dialogs/message_box_ui.py
 lib/calibre/calibre/gui2/dialogs/metadata_bulk.py
 lib/calibre/calibre/gui2/dialogs/metadata_bulk_ui.py
+lib/calibre/calibre/gui2/dialogs/opml.py
 lib/calibre/calibre/gui2/dialogs/password.py
 lib/calibre/calibre/gui2/dialogs/password_ui.py
 lib/calibre/calibre/gui2/dialogs/plugin_updater.py
@@ -1506,6 +1507,7 @@ share/calibre/images/mimetypes/lrf.png
 share/calibre/images/mimetypes/lrx.png
 share/calibre/images/mimetypes/mobi.png
 share/calibre/images/mimetypes/odt.png
+share/calibre/images/mimetypes/opml.png
 share/calibre/images/mimetypes/pdf.png
 share/calibre/images/mimetypes/png.png
 share/calibre/images/mimetypes/rar.png
