@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.205 2014/04/03 09:05:11 obache Exp $
+# $NetBSD: bootstrap,v 1.206 2014/04/17 18:12:47 asau Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -479,7 +479,6 @@ fi
 
 overpath=""
 root_user=root
-bmakexenv=
 bmakexargs=
 need_extras=no
 set_machine_arch=no
@@ -658,7 +657,6 @@ IRIX*)
 	set_opsys=yes
 	machine_arch=mipseb
 	bmakexargs="MACHINE_ARCH=$machine_arch"
-	bmakexenv="MAKE=pmake"
 	check_compiler=yes
 	if [ `uname -r` -lt 6 ]; then
 # IRIX 5's mkdir bails out with an error when trying to create with the -p
@@ -1078,7 +1076,7 @@ bootstrap_bmake() {
 	echo_msg "Bootstrapping bmake"
 	copy_src $pkgsrcdir/devel/bmake/files bmake
 	run_cmd "chmod u+x $wrkdir/bmake/configure"
-	run_cmd "(cd $wrkdir/bmake && env $bmakexenv $shprog ./boot-strap $configure_quiet_flags -q -o bootstrap.$opsys --prefix=$wrkdir --sysconfdir=$wrkdir --mksrc none --with-default-sys-path="$wrkdir/share/mk" $bmakexargs)"
+	run_cmd "(cd $wrkdir/bmake && $shprog ./boot-strap $configure_quiet_flags -q -o bootstrap.$opsys --prefix=$wrkdir --sysconfdir=$wrkdir --mksrc none --with-default-sys-path="$wrkdir/share/mk" $bmakexargs)"
 	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/bmake/bootstrap.$opsys/bmake $wrkdir/bin/bmake"
 }
 bootstrap_bmake
