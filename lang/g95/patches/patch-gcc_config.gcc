@@ -1,11 +1,21 @@
-$NetBSD: patch-gcc_config.gcc,v 1.1 2013/05/20 05:47:34 adam Exp $
+$NetBSD: patch-gcc_config.gcc,v 1.2 2014/04/17 21:19:02 asau Exp $
 
 Darwin 64-bit support.
 DragonFly BSD support.
+FreeBSD 10 support.
 
---- ../gcc-4.1.2/gcc/config.gcc.orig	2006-10-15 23:12:23.000000000 +0000
-+++ ../gcc-4.1.2/gcc/config.gcc
-@@ -440,6 +440,23 @@ case ${target} in
+--- ../gcc-4.1.2/gcc/config.gcc.orig	2006-10-16 01:12:23.000000000 +0200
++++ ../gcc-4.1.2/gcc/config.gcc	2014-04-17 15:05:05.084032706 +0200
+@@ -412,6 +412,8 @@
+       tm_defines="${tm_defines} FBSD_MAJOR=8" ;;
+     *-*-freebsd9 | *-*-freebsd[9].*)
+       tm_defines="${tm_defines} FBSD_MAJOR=9" ;;
++    *-*-freebsd10 | *-*-freebsd10.*)
++      tm_defines="${tm_defines} FBSD_MAJOR=10" ;;
+     *)
+       echo 'Please update *-*-freebsd* in gcc/config.gcc'
+       exit 1
+@@ -440,6 +442,23 @@
    esac
    fbsd_tm_file="${fbsd_tm_file} freebsd-spec.h freebsd.h"
    ;;
@@ -29,7 +39,7 @@ DragonFly BSD support.
  *-*-linux*libc1* | *-*-linux*aout*)
    # Avoid the generic linux case.
    ;;
-@@ -981,6 +998,8 @@ hppa[12]*-*-hpux11*)
+@@ -981,6 +1000,8 @@
  i[34567]86-*-darwin*)
  	# All the configuration is presently done generically.
  	;;
@@ -38,7 +48,7 @@ DragonFly BSD support.
  i[34567]86-*-elf*)
  	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h i386/i386elf.h"
  	tmake_file="i386/t-i386elf t-svr4"
-@@ -1012,6 +1031,12 @@ i[34567]86-*-freebsd*)
+@@ -1012,6 +1033,12 @@
  x86_64-*-freebsd*)
  	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h ${fbsd_tm_file} i386/x86-64.h i386/freebsd.h i386/freebsd64.h"
  	;;
