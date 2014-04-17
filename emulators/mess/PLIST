@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2014/02/06 10:40:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2014/04/17 12:09:05 wiz Exp $
 bin/castool
 bin/floptool
 bin/imgtool
@@ -79,7 +79,9 @@ share/mess/hash/cdi.xml
 share/mess/hash/cdtv.xml
 share/mess/hash/channelf.xml
 share/mess/hash/coco_cart.xml
+share/mess/hash/coco_flop.xml
 share/mess/hash/coleco.xml
+share/mess/hash/compclr2_flop.xml
 share/mess/hash/compis.xml
 share/mess/hash/comx35_flop.xml
 share/mess/hash/copera.xml
@@ -108,6 +110,8 @@ share/mess/hash/gamepock.xml
 share/mess/hash/gba.xml
 share/mess/hash/gbcolor.xml
 share/mess/hash/genius.xml
+share/mess/hash/gl2000.xml
+share/mess/hash/gl6000sl.xml
 share/mess/hash/gmaster.xml
 share/mess/hash/gp32.xml
 share/mess/hash/gx4000.xml
@@ -160,6 +164,7 @@ share/mess/hash/mpz80.xml
 share/mess/hash/msx.hsi
 share/mess/hash/msx1_cart.xml
 share/mess/hash/msx1_cass.xml
+share/mess/hash/msx1_flop.xml
 share/mess/hash/msx2.hsi
 share/mess/hash/msx2_cart.xml
 share/mess/hash/myvision.xml
@@ -174,6 +179,9 @@ share/mess/hash/neocd.xml
 share/mess/hash/neogeo.xml
 share/mess/hash/nes.hsi
 share/mess/hash/nes.xml
+share/mess/hash/nes_ade.xml
+share/mess/hash/nes_datach.xml
+share/mess/hash/nes_kstudio.xml
 share/mess/hash/nes_ntbrom.xml
 share/mess/hash/next.xml
 share/mess/hash/ngp.xml
@@ -236,6 +244,7 @@ share/mess/hash/samcoupe_cass.xml
 share/mess/hash/samcoupe_flop.xml
 share/mess/hash/sat_cart.xml
 share/mess/hash/saturn.xml
+share/mess/hash/sawatte.xml
 share/mess/hash/scv.xml
 share/mess/hash/segacd.xml
 share/mess/hash/sf7000.xml
@@ -265,6 +274,7 @@ share/mess/hash/stv.xml
 share/mess/hash/super6.xml
 share/mess/hash/superpet_flop.xml
 share/mess/hash/supracan.xml
+share/mess/hash/sv8000.xml
 share/mess/hash/svi318_cart.xml
 share/mess/hash/svi318_cass.xml
 share/mess/hash/svi318_flop.xml
