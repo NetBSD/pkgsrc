@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2014/04/17 12:41:04 wiz Exp $
+$NetBSD: patch-ab,v 1.6 2014/04/17 16:44:30 adam Exp $
+
+Avoid -no-undefined flags, or missing symbols might occur.
 
 --- Makefile.in.orig	2014-03-26 18:58:57.000000000 +0000
 +++ Makefile.in
@@ -11,3 +13,18 @@ $NetBSD: patch-ab,v 1.5 2014/04/17 12:41:04 wiz Exp $
  flex_LDADD = $(LDADD)
  flex_DEPENDENCIES = lib/libcompat.la
  DEFAULT_INCLUDES = -I.@am__isrc@
+@@ -435,12 +435,12 @@ libfl_la_SOURCES = \
+ 	libmain.c \
+ 	libyywrap.c
+ 
+-libfl_la_LDFLAGS = -no-undefined -version-info @SHARED_VERSION_INFO@
++libfl_la_LDFLAGS = -version-info @SHARED_VERSION_INFO@
+ libfl_pic_la_SOURCES = \
+ 	libmain.c \
+ 	libyywrap.c
+ 
+-libfl_pic_la_LDFLAGS = -no-undefined -version-info @SHARED_VERSION_INFO@
++libfl_pic_la_LDFLAGS = -version-info @SHARED_VERSION_INFO@
+ noinst_HEADERS = \
+ 	flexdef.h \
+ 	flexint.h \
