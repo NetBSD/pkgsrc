@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/03/30 12:31:17 imil Exp $
+@comment $NetBSD: PLIST,v 1.10 2014/04/17 11:24:11 imil Exp $
 bin/salt
 bin/salt-call
 bin/salt-cloud
@@ -977,9 +977,6 @@ ${PYSITELIB}/salt/renderers/py.pyo
 ${PYSITELIB}/salt/renderers/pydsl.py
 ${PYSITELIB}/salt/renderers/pydsl.pyc
 ${PYSITELIB}/salt/renderers/pydsl.pyo
-${PYSITELIB}/salt/renderers/pyobjects.py
-${PYSITELIB}/salt/renderers/pyobjects.pyc
-${PYSITELIB}/salt/renderers/pyobjects.pyo
 ${PYSITELIB}/salt/renderers/stateconf.py
 ${PYSITELIB}/salt/renderers/stateconf.pyc
 ${PYSITELIB}/salt/renderers/stateconf.pyo
@@ -1511,9 +1508,6 @@ ${PYSITELIB}/salt/utils/process.pyo
 ${PYSITELIB}/salt/utils/pydsl.py
 ${PYSITELIB}/salt/utils/pydsl.pyc
 ${PYSITELIB}/salt/utils/pydsl.pyo
-${PYSITELIB}/salt/utils/pyobjects.py
-${PYSITELIB}/salt/utils/pyobjects.pyc
-${PYSITELIB}/salt/utils/pyobjects.pyo
 ${PYSITELIB}/salt/utils/reclass.py
 ${PYSITELIB}/salt/utils/reclass.pyc
 ${PYSITELIB}/salt/utils/reclass.pyo
