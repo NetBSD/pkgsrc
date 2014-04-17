@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1505 2014/04/17 20:57:33 imil Exp $
+$NetBSD: CHANGES-2014,v 1.1506 2014/04/17 21:02:16 imil Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2183,3 +2183,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added net/py-apache-libcloud version 0.14.1 [imil 2014-04-17]
 	Updated sysutils/salt to 2014.1.2nb1 [imil 2014-04-17]
 	Added devel/py-docopt version 0.6.1 [imil 2014-04-17]
+	Updated textproc/py-prettytable to 0.7.2 [imil 2014-04-17]
