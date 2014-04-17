@@ -1,4 +1,4 @@
-# $NetBSD: emulator.mk,v 1.3 2014/01/22 12:34:22 obache Exp $
+# $NetBSD: emulator.mk,v 1.4 2014/04/17 00:08:34 wiz Exp $
 #
 # This file is included by linux-suse.mk in the emulator framework.
 #
@@ -38,6 +38,9 @@ DEPENDS_suse-13.1.glx?=		suse_glx${_SUSE_VERSION_REQD}:../../emulators/suse131_g
 DEPENDS_suse-13.1.gtk2?=	suse_gtk2${_SUSE_VERSION_REQD}:../../emulators/suse131_gtk2
 DEPENDS_suse-13.1.jpeg?=	suse_libjpeg${_SUSE_VERSION_REQD}:../../emulators/suse131_libjpeg
 DEPENDS_suse-13.1.krb5?=	suse_krb5${_SUSE_VERSION_REQD}:../../emulators/suse131_krb5
+DEPENDS_suse-13.1.libSDL?=	suse_libSDL${_SUSE_VERSION_REQD}:../../emulators/suse131_libSDL
+DEPENDS_suse-13.1.libaudiofile?=	suse_libaudiofile${_SUSE_VERSION_REQD}:../../emulators/suse131_libaudiofile
+DEPENDS_suse-13.1.libesd?=	suse_libesd${_SUSE_VERSION_REQD}:../../emulators/suse131_libesd
 DEPENDS_suse-13.1.libffi?=	suse_libffi${_SUSE_VERSION_REQD}:../../emulators/suse131_libffi
 DEPENDS_suse-13.1.libidn?=	suse_libidn${_SUSE_VERSION_REQD}:../../emulators/suse131_libidn
 DEPENDS_suse-13.1.libjson?=	suse_libjson${_SUSE_VERSION_REQD}:../../emulators/suse131_libjson
