@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.2 2013/04/26 10:20:34 jperkin Exp $
+$NetBSD: distinfo,v 1.3 2014/04/17 09:08:34 fhajny Exp $
 
-SHA1 (jq-1.2.tar.gz) = 30bd7861acdfa9e1bb13d87b563eeb218c97e3a3
-RMD160 (jq-1.2.tar.gz) = 44df3e85f538a28d47aaa8b9bd9fd9cb2d1f558e
-Size (jq-1.2.tar.gz) = 180303 bytes
-SHA1 (patch-Makefile) = 6d828402c996ded50c2b76778356635293e0ef46
-SHA1 (patch-jq.1) = 3c93df8d998ad81cf244a9e9a08f83665d94c12a
-SHA1 (patch-jv__utf8__tables.gen.h) = c854e81aaa83aff8e9741690109f5e8c4c25bfbe
+SHA1 (jq-1.3.tar.gz) = 0d70d913e1df5cdbe09bccd3139ef0cb40c6fd49
+RMD160 (jq-1.3.tar.gz) = 8341cced3136448671e634f6f1d2d37791220f64
+Size (jq-1.3.tar.gz) = 213770 bytes
+SHA1 (patch-configure.ac) = 86ca50edaddb108ac9f337c394eda126adfac701
+SHA1 (patch-jq.1) = 9eba00837c7da427739fd0f9bcbe9aa653a4df69
