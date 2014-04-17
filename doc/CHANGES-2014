@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1497 2014/04/17 13:01:22 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1498 2014/04/17 13:08:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2177,3 +2177,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/py-anki2 to 2.0.25 [wiz 2014-04-17]
 	Updated devel/flex to 2.5.39 [wiz 2014-04-17]
 	Updated misc/calibre to 1.32.0 [wiz 2014-04-17]
+	Updated devel/gmp to 6.0.0a [wiz 2014-04-17]
