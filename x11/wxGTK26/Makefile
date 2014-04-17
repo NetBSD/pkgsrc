@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2013/10/10 14:41:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.28 2014/04/17 21:28:15 asau Exp $
 #
 
 .include "Makefile.common"
@@ -24,7 +24,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/LICENCE.txt ${DESTDIR}${DOCDIR}/LICENSE
 
 # for backtrace
-.if ${OPSYS} == "NetBSD" && exists(/usr/include/execinfo.h)
+.if (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD") && exists(/usr/include/execinfo.h)
 LIBS+=	-lexecinfo
 .endif
 
