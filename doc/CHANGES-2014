@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1501 2014/04/17 13:53:56 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1502 2014/04/17 14:57:02 imil Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2179,3 +2179,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/calibre to 1.32.0 [wiz 2014-04-17]
 	Updated devel/gmp to 6.0.0a [wiz 2014-04-17]
 	Updated multimedia/xine-lib to 1.2.5 [wiz 2014-04-17]
+	Added net/py-softlayer version 3.0.2 [imil 2014-04-17]
