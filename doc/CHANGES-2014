@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1486 2014/04/17 11:15:19 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1487 2014/04/17 11:24:26 imil Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2166,3 +2166,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/inkscape to 0.48.4nb19 [wiz 2014-04-17]
 	Updated devel/jq to 1.3 [fhajny 2014-04-17]
 	Updated net/libmms to 0.6.4 [wiz 2014-04-17]
+	Updated sysutils/salt to 2014.1.2 [imil 2014-04-17]
