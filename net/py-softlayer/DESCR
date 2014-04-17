@@ -1,0 +1,6 @@
+SoftLayer API bindings for Python. For use with SoftLayer's API.
+
+This library provides a simple interface to interact with SoftLayer's XML-RPC
+API and provides support for many of SoftLayer API's features like object masks
+and a command-line interface that can be used to access various SoftLayer
+services using the API.
