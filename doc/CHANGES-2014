@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1479 2014/04/17 00:19:48 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1480 2014/04/17 00:50:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2159,3 +2159,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added emulators/suse131_32_libesd version 13.1 [wiz 2014-04-17]
 	Added emulators/suse131_32_libSDL version 13.1 [wiz 2014-04-17]
 	Updated emulators/suse131_glx to 13.1nb2 [wiz 2014-04-17]
+	Updated emulators/dosbox to 0.74nb5 [wiz 2014-04-17]
