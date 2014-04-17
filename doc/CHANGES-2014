@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1493 2014/04/17 12:29:43 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1494 2014/04/17 12:30:08 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2173,3 +2173,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/py-enum34 version 0.9.23 [wiz 2014-04-17]
 	Updated multimedia/libdvbpsi to 1.2.0 [wiz 2014-04-17]
 	Updated audio/py-beets to 1.3.5 [wiz 2014-04-17]
+	Updated devel/py-babel to 1.3nb1 [rodent 2014-04-17]
