@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1006 2014/04/17 14:55:05 imil Exp $
+# $NetBSD: Makefile,v 1.1007 2014/04/17 16:24:30 imil Exp $
 #
 
 COMMENT=	Networking tools
@@ -533,6 +533,7 @@ SUBDIR+=	publicfile
 SUBDIR+=	puf
 SUBDIR+=	pure-ftpd
 SUBDIR+=	pxe
+SUBDIR+=	py-apache-libcloud
 SUBDIR+=	py-GeoIP
 SUBDIR+=	py-IP
 SUBDIR+=	py-ORBit
