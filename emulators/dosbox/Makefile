@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2014/02/05 08:40:11 obache Exp $
+# $NetBSD: Makefile,v 1.39 2014/04/17 00:49:51 wiz Exp $
 
 DISTNAME=	dosbox-0.74
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dosbox/}
 
@@ -14,7 +14,7 @@ USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 CPPFLAGS.SunOS+=	-DDISABLE_JOYSTICK
 .include "../../mk/compiler.mk"
-.if !empty(CC_VERSION:Mclang*) 
+.if !empty(CC_VERSION:Mclang*)
 CPPFLAGS+=		-fPIC
 .endif
 LDFLAGS.SunOS+=		-lsocket
