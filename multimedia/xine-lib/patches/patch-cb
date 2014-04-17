@@ -1,11 +1,11 @@
-$NetBSD: patch-cb,v 1.3 2009/12/09 10:13:03 drochner Exp $
+$NetBSD: patch-cb,v 1.4 2014/04/17 13:53:47 wiz Exp $
 
---- src/libw32dll/common.c.orig	2009-11-30 21:55:55.000000000 +0100
+--- src/libw32dll/common.c.orig	2014-03-11 13:28:30.000000000 +0000
 +++ src/libw32dll/common.c
-@@ -6,10 +6,7 @@ static char *get_win32_codecs_path(confi
+@@ -6,10 +6,7 @@ static const char *get_win32_codecs_path
    DIR                *dir;
-   char               *path, *cfgpath;
-   char               *listpath[] = { "",
+   const char         *path, *cfgpath;
+   const char * const listpath[] = { "",
 -                                     "/usr/lib/codecs",
 -                                     "/usr/local/lib/codecs",
 -                                     "/usr/lib/win32",

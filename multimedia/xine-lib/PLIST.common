@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.37 2014/02/24 05:31:54 richard Exp $
+@comment $NetBSD: PLIST.common,v 1.38 2014/04/17 13:53:47 wiz Exp $
 bin/xine-config
 bin/xine-list-1.2
 include/xine.h
@@ -80,6 +80,8 @@ lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_gsm610.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_gsm610.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_libjpeg.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_libjpeg.so
+lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_libvpx.a
+lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_libvpx.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_lpcm.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_lpcm.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_mad.a
