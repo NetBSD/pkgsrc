@@ -1,4 +1,4 @@
-# $NetBSD: xorg.mk,v 1.24 2013/02/11 09:16:12 wiz Exp $
+# $NetBSD: xorg.mk,v 1.25 2014/04/17 02:03:12 obache Exp $
 #
 # This is for X.org, but use "xfree" files also.
 
@@ -16,6 +16,7 @@ FILES_LIST=	${FILESDIR}/xorg
 .include "../../x11/bigreqsproto/buildlink3.mk"
 .include "../../x11/compositeproto/buildlink3.mk"
 .include "../../x11/damageproto/buildlink3.mk"
+.include "../../x11/dri2proto/buildlink3.mk"
 .include "../../x11/evieext/buildlink3.mk"
 .include "../../x11/fixesproto/buildlink3.mk"
 .include "../../x11/fontcacheproto/buildlink3.mk"
