@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2014/01/15 16:17:23 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/04/17 12:29:34 wiz Exp $
 bin/beet
-${PYSITELIB}/${EGG_NAME}-nspkg.pth
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/beets/__init__.py
@@ -24,6 +22,18 @@ ${PYSITELIB}/beets/autotag/mb.py
 ${PYSITELIB}/beets/autotag/mb.pyc
 ${PYSITELIB}/beets/autotag/mb.pyo
 ${PYSITELIB}/beets/config_default.yaml
+${PYSITELIB}/beets/dbcore/__init__.py
+${PYSITELIB}/beets/dbcore/__init__.pyc
+${PYSITELIB}/beets/dbcore/__init__.pyo
+${PYSITELIB}/beets/dbcore/db.py
+${PYSITELIB}/beets/dbcore/db.pyc
+${PYSITELIB}/beets/dbcore/db.pyo
+${PYSITELIB}/beets/dbcore/query.py
+${PYSITELIB}/beets/dbcore/query.pyc
+${PYSITELIB}/beets/dbcore/query.pyo
+${PYSITELIB}/beets/dbcore/types.py
+${PYSITELIB}/beets/dbcore/types.pyc
+${PYSITELIB}/beets/dbcore/types.pyo
 ${PYSITELIB}/beets/importer.py
 ${PYSITELIB}/beets/importer.pyc
 ${PYSITELIB}/beets/importer.pyo
@@ -42,6 +52,7 @@ ${PYSITELIB}/beets/ui/__init__.pyo
 ${PYSITELIB}/beets/ui/commands.py
 ${PYSITELIB}/beets/ui/commands.pyc
 ${PYSITELIB}/beets/ui/commands.pyo
+${PYSITELIB}/beets/ui/completion_base.sh
 ${PYSITELIB}/beets/ui/migrate.py
 ${PYSITELIB}/beets/ui/migrate.pyc
 ${PYSITELIB}/beets/ui/migrate.pyo
@@ -69,6 +80,9 @@ ${PYSITELIB}/beets/util/pipeline.pyo
 ${PYSITELIB}/beets/vfs.py
 ${PYSITELIB}/beets/vfs.pyc
 ${PYSITELIB}/beets/vfs.pyo
+${PYSITELIB}/beetsplug/__init__.py
+${PYSITELIB}/beetsplug/__init__.pyc
+${PYSITELIB}/beetsplug/__init__.pyo
 ${PYSITELIB}/beetsplug/beatport.py
 ${PYSITELIB}/beetsplug/beatport.pyc
 ${PYSITELIB}/beetsplug/beatport.pyo
@@ -126,6 +140,9 @@ ${PYSITELIB}/beetsplug/info.pyo
 ${PYSITELIB}/beetsplug/inline.py
 ${PYSITELIB}/beetsplug/inline.pyc
 ${PYSITELIB}/beetsplug/inline.pyo
+${PYSITELIB}/beetsplug/keyfinder.py
+${PYSITELIB}/beetsplug/keyfinder.pyc
+${PYSITELIB}/beetsplug/keyfinder.pyo
 ${PYSITELIB}/beetsplug/lastgenre/__init__.py
 ${PYSITELIB}/beetsplug/lastgenre/__init__.pyc
 ${PYSITELIB}/beetsplug/lastgenre/__init__.pyo
