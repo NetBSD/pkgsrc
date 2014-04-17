@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2014/04/17 00:08:34 wiz Exp $
+
+SHA1 (suse131/libesd0-0.2.41-26.1.2.i586.rpm) = 2c6d7a543231bc458d069c1fae129ac9957b35c7
+RMD160 (suse131/libesd0-0.2.41-26.1.2.i586.rpm) = ff8bfdc93ff941422ec7b2de058fa16a167176d7
+Size (suse131/libesd0-0.2.41-26.1.2.i586.rpm) = 20197 bytes
+SHA1 (suse131/libesd0-0.2.41-26.1.2.x86_64.rpm) = e0596c2c7124237ed775c0469791f03643fb366f
+RMD160 (suse131/libesd0-0.2.41-26.1.2.x86_64.rpm) = 6c6d02eee200f4dc465ecb6f2d45af56935fe2e5
+Size (suse131/libesd0-0.2.41-26.1.2.x86_64.rpm) = 20637 bytes
