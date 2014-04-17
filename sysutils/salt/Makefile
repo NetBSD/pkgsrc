@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2014/04/17 11:24:11 imil Exp $
+# $NetBSD: Makefile,v 1.20 2014/04/17 16:33:47 imil Exp $
 
 DISTNAME=	salt-2014.1.2
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://pypi.python.org/packages/source/s/salt/
 
@@ -16,6 +17,7 @@ DEPENDS+= ${PYPKGPREFIX}-crypto-[0-9]*:../../security/py-crypto
 DEPENDS+= ${PYPKGPREFIX}-msgpack-[0-9]*:../../devel/py-msgpack
 DEPENDS+= ${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 DEPENDS+= ${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
+DEPENDS+= ${PYPKGPREFIX}-apache-libcloud>=0.14.1:../../net/py-apache-libcloud
 
 BUILD_DEFS+=	VARBASE
 
