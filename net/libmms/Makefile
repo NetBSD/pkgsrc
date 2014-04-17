@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2013/06/16 21:12:26 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2014/04/17 11:15:09 wiz Exp $
 
-DISTNAME=	libmms-0.6.2
+DISTNAME=	libmms-0.6.4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libmms/}
 
@@ -17,6 +17,5 @@ CPPFLAGS.SunOS+=	-Du_int64_t=uint64_t -Du_int32_t=uint32_t -Du_int16_t=uint16_t
 
 PKGCONFIG_OVERRIDE+=	pkgconfig/libmms.pc.in
 
-.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
