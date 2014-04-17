@@ -1,11 +1,7 @@
-# $NetBSD: xorg.xf86driproto,v 1.4 2014/03/07 15:27:32 jperkin Exp $
+# $NetBSD: xorg.xf86driproto,v 1.4.2.1 2014/04/17 15:06:21 tron Exp $
 #
 include/X11/dri/xf86dri.h
 include/X11/dri/xf86driproto.h
 include/X11/dri/xf86dristr.h
-include/X11/extensions/dri2proto.h
-include/X11/extensions/dri2tokens.h
-lib/pkgconfig/dri2proto.pc
 lib/pkgconfig/xf86driproto.pc
-share/pkgconfig/dri2proto.pc
 share/pkgconfig/xf86driproto.pc
