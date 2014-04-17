@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.90 2013/12/04 12:38:35 drochner Exp $
+$NetBSD: distinfo,v 1.91 2014/04/17 13:53:47 wiz Exp $
 
-SHA1 (xine-lib-1.2.4.tar.xz) = 32267c5fcaa1439a5fbf7606d27dc4fafba9e504
-RMD160 (xine-lib-1.2.4.tar.xz) = 9c4b151730a4ede46013fb127545fbb59d56f8b6
-Size (xine-lib-1.2.4.tar.xz) = 4954992 bytes
+SHA1 (xine-lib-1.2.5.tar.xz) = c7ef38fa8ee301e44ba28d6549220546d02d053d
+RMD160 (xine-lib-1.2.5.tar.xz) = bb9c3a06666f454e8dfda85471eb6605e2dcb685
+Size (xine-lib-1.2.5.tar.xz) = 5007012 bytes
 SHA1 (patch-Makefile.am) = ab2bdb97834ea3ebf161e2c716f0dcb6eb147c1e
 SHA1 (patch-ad) = 94aaac03f74c72a1ca753d1320aac07d1bb8a846
 SHA1 (patch-ag) = 00009002714ed26fa646eed326e2b0a5e2265572
@@ -11,12 +11,13 @@ SHA1 (patch-ak) = 987700e6526b5112ac66bd6a8f9ee41f338c3508
 SHA1 (patch-ap) = d48fa83879895d4b1f56bfbcbe31087dd57d8a82
 SHA1 (patch-as) = a0a93a256589e87a66eef31494441aa1b200f834
 SHA1 (patch-at) = 15a810379ccb345aeeb374b0148096684f5f179b
-SHA1 (patch-cb) = db4ff27418e05e97bf30b554beecc24d6e578d15
+SHA1 (patch-cb) = e7390a12ebb015894fd4582051ba7b4e5db01f90
 SHA1 (patch-cd) = 192530e79568ea165b1fc675c7e794133a06c734
 SHA1 (patch-fa) = 9312a3bab4ae8482a208948277f1d11fb7eaaf8c
+SHA1 (patch-include_xine_post.h) = 771981e551f05351554692bb2b601f21032081a4
 SHA1 (patch-input_dvb.c) = 712291f38e5eec79daecb524e990e67af0d2c427
 SHA1 (patch-na) = b1158183f6caa772c1f3e08cb9abedc28326523f
-SHA1 (patch-src-demuxers-demux_qt.c) = 2942911c09c0580c6017474af2a14f5b1f193c1d
+SHA1 (patch-src-demuxers-demux_qt.c) = d3b7a57381cd5b00569a61ec4d867b293972a17f
 SHA1 (patch-src-post-audio-stretch.c) = bc083541c410e8b8c2b5c23bc7b2b0ae312272a5
 SHA1 (patch-src-post-audio-upmix.c) = ab01e157b42b8dd99622a17b5a8ecdb464ee694e
 SHA1 (patch-src-post-audio-upmix_mono.c) = 182a73985d6158c5ab2409bc372b302d3385320e
@@ -34,7 +35,6 @@ SHA1 (patch-src-post-planar-expand.c) = 7c532feeae4078f40d6f9a28dfa207e5cbee60a1
 SHA1 (patch-src-post-planar-noise.c) = b3baf82e150ca9a27e73753398c18839066748f1
 SHA1 (patch-src-post-planar-pp.c) = 147dc05a09ff851af99c488112c6a77926ae5afb
 SHA1 (patch-src-post-planar-unsharp.c) = 964ec33c8c3cfcc8783b5fae1093c8fba76ff2a9
-SHA1 (patch-src-xine-engine-post.h) = 3b96d1279bbec48b2f3df50a576bfa8ec25f796f
 SHA1 (patch-src_audio__out_Makefile.am) = 5f8ba2ce81a63cb195407c3ce6649007ce15408f
 SHA1 (patch-src_libw32dll_wine_Makefile.am) = 17c717c84531780dc06c3cd5db8f879a560aeb3a
 SHA1 (patch-src_libw32dll_wine_registry.c) = f34685be27dc9ec098f80e78cd24f3e92f12367a
