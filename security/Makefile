@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.503 2014/04/07 12:37:49 obache Exp $
+# $NetBSD: Makefile,v 1.504 2014/04/18 21:31:45 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -408,6 +408,7 @@ SUBDIR+=	sniff
 SUBDIR+=	snortsnarf
 SUBDIR+=	snow
 SUBDIR+=	softhsm
+SUBDIR+=	spiped
 SUBDIR+=	srm
 SUBDIR+=	srp_client
 SUBDIR+=	ssdeep
