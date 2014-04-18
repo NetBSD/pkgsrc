@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.501 2014/04/12 06:40:33 wiz Exp $
+# $NetBSD: Makefile,v 1.502 2014/04/18 12:44:59 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -230,6 +230,7 @@ SUBDIR+=	libaudiofile
 SUBDIR+=	libcanberra
 SUBDIR+=	libcdaudio
 SUBDIR+=	libcddb
+SUBDIR+=	libcuefile
 SUBDIR+=	libdca
 SUBDIR+=	libdiscid
 SUBDIR+=	libfishsound
@@ -252,6 +253,7 @@ SUBDIR+=	libmusicbrainz5
 SUBDIR+=	libofa
 SUBDIR+=	libopenspc
 SUBDIR+=	libopus
+SUBDIR+=	libreplaygain
 SUBDIR+=	libsamplerate
 SUBDIR+=	libshout
 SUBDIR+=	libsidplay
@@ -323,6 +325,7 @@ SUBDIR+=	mserv-irman
 SUBDIR+=	mstream
 SUBDIR+=	mt-daapd
 SUBDIR+=	muse
+SUBDIR+=	musepack
 SUBDIR+=	musicbrainz
 SUBDIR+=	musicpd
 SUBDIR+=	mutagen-tools
