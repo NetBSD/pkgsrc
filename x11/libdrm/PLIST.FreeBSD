@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.FreeBSD,v 1.1 2014/04/18 09:43:29 asau Exp $
+include/libkms/libkms.h
+lib/libkms.la
+lib/pkgconfig/libkms.pc
