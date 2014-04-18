@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1525 2014/04/18 21:31:55 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1526 2014/04/18 22:26:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2205,3 +2205,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/caff to 1.1.6 [wiz 2014-04-18]
 	Added misc/rhash version 1.3.1 [wiz 2014-04-18]
 	Added security/spiped version 1.3.1 [wiz 2014-04-18]
+	Added textproc/jsoncpp version 0.6.0rc2svn276 [wiz 2014-04-18]
