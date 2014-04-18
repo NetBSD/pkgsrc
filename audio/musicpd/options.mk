@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2014/04/18 12:46:57 wiz Exp $
+# $NetBSD: options.mk,v 1.22 2014/04/18 12:47:19 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
 PKG_SUPPORTED_OPTIONS=	adplug audiofile avahi bzip2 curl faad ffmpeg flac fluidsynth id3 inet6 libao lame jack libmms libmpdclient libwildmidi mikmod modplug mpg123 musepack musicpd-soundcloud openal opus pulseaudio shout sqlite3 tremor twolame vorbis wavpack zziplib
@@ -178,7 +178,7 @@ CONFIGURE_ARGS+=	--disable-mpg123
 .endif
 
 .if !empty(PKG_OPTIONS:Mmusepack)
-.  include "../../wip/musepack/buildlink3.mk"
+.  include "../../audio/musepack/buildlink3.mk"
 CONFIGURE_ENV+=		mpcdec_prefix=${BUILDLINK_PREFIX.musepack}
 CONFIGURE_ARGS+=	--enable-mpc
 .else
