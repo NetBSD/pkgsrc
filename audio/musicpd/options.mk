@@ -1,19 +1,34 @@
-# $NetBSD: options.mk,v 1.20 2014/01/05 23:18:49 wiz Exp $
+# $NetBSD: options.mk,v 1.21 2014/04/18 12:46:57 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
-PKG_SUPPORTED_OPTIONS=	audiofile bzip2 curl faad ffmpeg flac fluidsynth id3 inet6 libao lame jack libmms libwildmidi mikmod modplug musepack musicpd-lastfm ogg pulseaudio shout sqlite3 wavpack zziplib
-PKG_SUGGESTED_OPTIONS=	audiofile curl faad flac id3 inet6 libao musepack ogg
+PKG_SUPPORTED_OPTIONS=	adplug audiofile avahi bzip2 curl faad ffmpeg flac fluidsynth id3 inet6 libao lame jack libmms libmpdclient libwildmidi mikmod modplug mpg123 musepack musicpd-soundcloud openal opus pulseaudio shout sqlite3 tremor twolame vorbis wavpack zziplib
+PKG_SUGGESTED_OPTIONS=	audiofile curl faad flac id3 inet6 libao musepack vorbis
 
-PKG_OPTIONS_LEGACY_OPTS=	libmikmod:mikmod
-PKG_OPTIONS_LEGACY_OPTS=	aac:faad
+PKG_OPTIONS_OPTIONAL_GROUPS=	vorbis
+PKG_OPTIONS_GROUP.vorbis=	tremor vorbis
+
+PKG_OPTIONS_LEGACY_OPTS=	ogg:vorbis
 
 .include "../../mk/bsd.options.mk"
 
+.if !empty(PKG_OPTIONS:Madplug)
+.  include "../../audio/adplug/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-adplug
+.else
+CONFIGURE_ARGS+=	--disable-adplug
+.endif
+
 .if !empty(PKG_OPTIONS:Maudiofile)
+BUILDLINK_API_DEPENDS.libaudiofile+=	libaudiofile>=0.3
 .  include "../../audio/libaudiofile/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-audiofile
 .else
 CONFIGURE_ARGS+=	--disable-audiofile
+.endif
+
+.if !empty(PKG_OPTIONS:Mavahi)
+.  include "../../net/avahi/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-zeroconf=avahi
 .endif
 
 .if !empty(PKG_OPTIONS:Mbzip2)
@@ -22,6 +37,14 @@ CONFIGURE_ARGS+=	--enable-bzip2
 .else
 CONFIGURE_ARGS+=	--disable-bzip2
 .endif
+
+# wants a different version of the library than we have in pkgsrc
+#.if !empty(PKG_OPTIONS:Mcdparanoia)
+#.  include "../../audio/cdparanoia/buildlink3.mk"
+#CONFIGURE_ARGS+=	--enable-cdio-paranoia
+#.else
+#CONFIGURE_ARGS+=	--enable-cdio-paranoia
+#.endif
 
 .if !empty(PKG_OPTIONS:Mcurl)
 .  include "../../www/curl/buildlink3.mk"
@@ -32,7 +55,7 @@ CONFIGURE_ARGS+=	--disable-curl
 
 .if !empty(PKG_OPTIONS:Mfaad)
 .  include "../../audio/faad2/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-faad=${BUILDLINK_PREFIX.faad2}
+CONFIGURE_ARGS+=	--enable-aac
 .else
 CONFIGURE_ARGS+=	--disable-aac
 .endif
@@ -45,6 +68,7 @@ CONFIGURE_ARGS+=	--disable-ffmpeg
 .endif
 
 .if !empty(PKG_OPTIONS:Mflac)
+BUILDLINK_ABI_DEPENDS.flac+=	flac>=1.2
 .  include "../../audio/flac/buildlink3.mk"
 # XXX whole album flac files can appearently be parsed without libcue,
 # so I've yet to find out what libcue is good for
@@ -110,6 +134,21 @@ CONFIGURE_ARGS+=	--enable-mms
 CONFIGURE_ARGS+=	--disable-mms
 .endif
 
+.if !empty(PKG_OPTIONS:Mlibmpdclient)
+.  include "../../audio/libmpdclient/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-libmpdclient
+.else
+CONFIGURE_ARGS+=	--disable-libmpdclient
+.endif
+
+# does not find libresid-builder
+#.if !empty(PKG_OPTIONS:Mlibsidplay2)
+#.  include "../../audio/libsidplay2/buildlink3.mk"
+#CONFIGURE_ARGS+=	--enable-sidplay
+#.else
+#CONFIGURE_ARGS+=	--disable-sidplay
+#.endif
+
 .if !empty(PKG_OPTIONS:Mlibwildmidi)
 .  include "../../audio/libwildmidi/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-wildmidi
@@ -131,25 +170,41 @@ CONFIGURE_ARGS+=	--enable-modplug
 CONFIGURE_ARGS+=	--disable-modplug
 .endif
 
+.if !empty(PKG_OPTIONS:Mmpg123)
+.  include "../../audio/mpg123/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-mpg123
+.else
+CONFIGURE_ARGS+=	--disable-mpg123
+.endif
+
 .if !empty(PKG_OPTIONS:Mmusepack)
-.  include "../../audio/libmpcdec/buildlink3.mk"
-CONFIGURE_ENV+=		mpcdec_prefix=${BUILDLINK_PREFIX.libmpcdec}
+.  include "../../wip/musepack/buildlink3.mk"
+CONFIGURE_ENV+=		mpcdec_prefix=${BUILDLINK_PREFIX.musepack}
 CONFIGURE_ARGS+=	--enable-mpc
 .else
 CONFIGURE_ARGS+=	--disable-mpc
 .endif
 
-.if !empty(PKG_OPTIONS:Mmusicpd-lastfm)
-CONFIGURE_ARGS+=	--enable-lastfm
+.if !empty(PKG_OPTIONS:Mmusicpd-soundcloud)
+BUILDLINK_API_DEPENDS.yajl+=	yajl>=2.1
+.  include "../../devel/yajl/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-soundcloud
 .else
-CONFIGURE_ARGS+=	--disable-lastfm
+CONFIGURE_ARGS+=	--disable-soundcloud
 .endif
 
-.if !empty(PKG_OPTIONS:Mogg)
-.  include "../../audio/libvorbis/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-vorbis
+.if !empty(PKG_OPTIONS:Mopenal)
+.  include "../../audio/openal/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-openal
 .else
-CONFIGURE_ARGS+=	--disable-vorbis
+CONFIGURE_ARGS+=	--disable-openal
+.endif
+
+.if !empty(PKG_OPTIONS:Mopus)
+.  include "../../audio/libopus/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-opus
+.else
+CONFIGURE_ARGS+=	--disable-opus
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
@@ -180,6 +235,27 @@ CONFIGURE_ARGS+=	--disable-shout
 CONFIGURE_ARGS+=	--enable-sqlite
 .else
 CONFIGURE_ARGS+=	--disable-sqlite
+.endif
+
+.if !empty(PKG_OPTIONS:Mtremor)
+.  include "../../audio/tremor/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-tremor=${BUILDLINK_PREFIX.tremor}
+.else
+CONFIGURE_ARGS+=	--without-tremor
+.endif
+
+.if !empty(PKG_OPTIONS:Mtwolame)
+.  include "../../audio/twolame/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-twolame-encoder
+.else
+CONFIGURE_ARGS+=	--disable-twolame-encoder
+.endif
+
+.if !empty(PKG_OPTIONS:Mvorbis)
+.  include "../../audio/libvorbis/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-vorbis
+.else
+CONFIGURE_ARGS+=	--disable-vorbis
 .endif
 
 .if !empty(PKG_OPTIONS:Mwavpack)
