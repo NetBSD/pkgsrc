@@ -1,14 +1,10 @@
-# $NetBSD: options.mk,v 1.1 2014/02/02 16:06:19 rodent Exp $
+# $NetBSD: options.mk,v 1.2 2014/04/18 14:44:29 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.SDL2_ttf
-PKG_SUPPORTED_OPTIONS=	opengl static x11
-PKG_SUGGESTED_OPTIONS+=	opengl static
+PKG_SUPPORTED_OPTIONS=	static x11
+PKG_SUGGESTED_OPTIONS+=	static
 
 .include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mopengl)
-.include "../../graphics/MesaLib/buildlink3.mk"
-.endif
 
 .if !empty(PKG_OPTIONS:Mstatic)
 CONFIGURE_ARGS+=	--enable-static=yes
