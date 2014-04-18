@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1510 2014/04/18 08:56:33 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1511 2014/04/18 09:01:58 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2188,3 +2188,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/py-softlayer to 3.0.2nb1 [imil 2014-04-17]
 	Updated filesystems/glusterfs to 3.5.0 [manu 2014-04-18]
 	Updated misc/calibre to 1.33.0 [wiz 2014-04-18]
+	Updated devel/p5-IO-Pager to 0.31 [hiramatsu 2014-04-18]
