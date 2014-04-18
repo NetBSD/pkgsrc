@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2014/04/18 21:21:30 wiz Exp $
+bin/rhash
+include/rhash.h
+include/rhash_timing.h
+lib/librhash.a
+man/man1/rhash.1
+share/examples/rhash/rhashrc
