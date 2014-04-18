@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.6 2014/03/07 13:26:15 obache Exp $
+# $NetBSD: builtin.mk,v 1.7 2014/04/18 10:49:01 adam Exp $
 
 BUILTIN_PKG:=	gmp
 
@@ -32,9 +32,9 @@ MAKEVARS+=	IS_BUILTIN.gmp
     !empty(IS_BUILTIN.gmp:M[yY][eE][sS]) && \
     empty(H_GMP:M__nonexistent__)
 BUILTIN_VERSION.gmp!=	${BUILTIN_VERSION_SCRIPT.gmp}
-BUILTIN_PKG.gmp=     gmp-${BUILTIN_VERSION.gmp}
+BUILTIN_PKG.gmp=	gmp-${BUILTIN_VERSION.gmp}
 .endif
-MAKEVARS+=      BUILTIN_PKG.gmp
+MAKEVARS+=	BUILTIN_PKG.gmp
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -42,27 +42,25 @@ MAKEVARS+=      BUILTIN_PKG.gmp
 ###
 .if !defined(USE_BUILTIN.gmp)
 .  if ${PREFER.gmp} == "pkgsrc"
-USE_BUILTIN.gmp=       no
+USE_BUILTIN.gmp=	no
 .  else
-USE_BUILTIN.gmp=       ${IS_BUILTIN.gmp}
-.    if defined(BUILTIN_PKG.gmp) && \
-        !empty(IS_BUILTIN.gmp:M[yY][eE][sS])
-USE_BUILTIN.gmp=       yes
+USE_BUILTIN.gmp=	${IS_BUILTIN.gmp}
+.    if defined(BUILTIN_PKG.gmp) && !empty(IS_BUILTIN.gmp:M[yY][eE][sS])
+USE_BUILTIN.gmp=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.gmp}
 .        if !empty(USE_BUILTIN.gmp:M[yY][eE][sS])
-USE_BUILTIN.gmp!=      \
-        if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.gmp:Q}; then   \
-                ${ECHO} yes;                                            \
-        else                                                            \
-                ${ECHO} no;                                             \
+USE_BUILTIN.gmp!=	\
+        if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.gmp:Q}; then	\
+		${ECHO} yes;						\
+        else								\
+		${ECHO} no;						\
         fi
 .        endif
 .      endfor
 .    endif
 .  endif  # PREFER.gmp
 .endif
-MAKEVARS+=      USE_BUILTIN.gmp
-
+MAKEVARS+=	USE_BUILTIN.gmp
 
 CHECK_BUILTIN.gmp?=	no
 .if !empty(CHECK_BUILTIN.gmp:M[Nn][Oo])
