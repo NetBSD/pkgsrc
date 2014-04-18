@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.70 2014/04/17 13:01:13 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2014/04/18 08:56:22 wiz Exp $
 
-DISTNAME=	calibre-1.32.0
+DISTNAME=	calibre-1.33.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=calibre/}
 EXTRACT_SUFX=	.tar.xz
@@ -153,6 +153,7 @@ FIX_PYTHON_PATHS+=	src/calibre/gui2/wizard/*.py
 FIX_PYTHON_PATHS+=	src/calibre/library/*.py
 FIX_PYTHON_PATHS+=	src/calibre/library/catalogs/*.py
 FIX_PYTHON_PATHS+=	src/calibre/library/server/*.py
+FIX_PYTHON_PATHS+=	src/calibre/spell/*.py
 FIX_PYTHON_PATHS+=	src/calibre/translations/*.py
 FIX_PYTHON_PATHS+=	src/calibre/utils/*.py
 FIX_PYTHON_PATHS+=	src/calibre/utils/fonts/*.py
