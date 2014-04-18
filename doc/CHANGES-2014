@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1519 2014/04/18 15:38:48 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1520 2014/04/18 16:18:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2199,3 +2199,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/gst-plugins0.10-musepack to 0.10.23nb3 [wiz 2014-04-18]
 	Updated audio/cmus to 2.5.0nb4 [wiz 2014-04-18]
 	Updated audio/audacious-plugins to 1.5.1nb43 [wiz 2014-04-18]
+	Updated multimedia/vlc to 1.1.13nb42 [wiz 2014-04-18]
