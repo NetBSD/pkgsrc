@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2014/04/18 12:41:09 wiz Exp $
+include/replaygain/gain_analysis.h
+lib/libreplaygain.a
+lib/libreplaygain.so
+lib/libreplaygain.so.1
+lib/libreplaygain.so.1.0.0
