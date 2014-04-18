@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.1 2014/02/05 07:02:30 obache Exp $
+# $NetBSD: haskell.mk,v 1.2 2014/04/18 13:42:59 obache Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -56,7 +56,13 @@
 #       Default value:
 #           ghc
 #
-# Package-settable variables:
+#   HASKELL_ENABLE_SHARED_LIBRARY
+#       Description:
+#           Whether shared library should be built or not.
+#       Possible values:
+#           yes, no
+#       Default value:
+#           yes
 #
 #   HASKELL_ENABLE_LIBRARY_PROFILING
 #       Description:
@@ -72,7 +78,7 @@
 #       Possible values:
 #           yes, no
 #       Default value:
-#           no
+#           yes
 
 .if !defined(HASKELL_MK)
 HASKELL_MK=	# defined
@@ -83,6 +89,9 @@ HASKELL_MK=	# defined
 # Declare HASKELL_COMPILER as one of BUILD_DEFS variables. See
 # ../../mk/misc/show.mk
 BUILD_DEFS+=	HASKELL_COMPILER
+BUILD_DEFS+=	HASKELL_ENABLE_SHARED_LIBRARY
+BUILD_DEFS+=	HASKELL_ENABLE_LIBRARY_PROFILING
+BUILD_DEFS+=	HASKELL_ENABLE_HADDOCK_DOCUMENTATION
 
 
 # Declarations for ../../mk/misc/show.mk
@@ -95,11 +104,14 @@ _DEF_VARS.haskell= \
 	_GHC_VERSION \
 	_GHC_VERSION_CMD \
 	_GHC_VERSION_FULL \
+	_GHC_VERSION_SUFFIX \
 	_HASKELL_BIN \
 	_HASKELL_PKG_BIN \
 	_HASKELL_PKG_DESCR_FILE \
-	_HASKELL_VERSION
-_PKG_VARS.haskell= \
+	_HASKELL_VERSION \
+	_HASKELL_VERSION_SUFFIX
+_USER_VARS.haskell= \
+	HASKELL_ENABLE_SHARED_LIBRARY \
 	HASKELL_ENABLE_LIBRARY_PROFILING \
 	HASKELL_ENABLE_HADDOCK_DOCUMENTATION
 
@@ -118,11 +130,14 @@ HOMEPAGE?=	http://hackage.haskell.org/cgi-bin/hackage-scripts/package/${_DISTBAS
 # that. (PHO: I think that should be handled by url2pkg (2009-05-20))
 USE_TOOLS+=	pkg-config
 
+# Default value of HASKELL_ENABLE_SHARED_LIBRARY
+HASKELL_ENABLE_SHARED_LIBRARY?=		yes
+
 # Default value of HASKELL_ENABLE_LIBRARY_PROFILING
 HASKELL_ENABLE_LIBRARY_PROFILING?=	yes
 
 # Default value of HASKELL_ENABLE_HADDOCK_DOCUMENTATION
-HASKELL_ENABLE_HADDOCK_DOCUMENTATION?=	no
+HASKELL_ENABLE_HADDOCK_DOCUMENTATION?=	yes
 
 # Compiler specific variables and targets.
 .if ${HASKELL_COMPILER} == "ghc"
@@ -139,8 +154,15 @@ _HASKELL_PKG_BIN=	${_GHC_PKG_BIN} # Expose to the outer scope.
 # Determine GHC version.
 _GHC_VERSION_CMD=	${_GHC_BIN} -V | ${CUT} -d ' ' -f 8
 _GHC_VERSION=		${_GHC_VERSION_CMD:sh}
+_GHC_VERSION_SUFFIX=	ghc${_GHC_VERSION}
 _GHC_VERSION_FULL=	ghc-${_GHC_VERSION}
+_HASKELL_VERSION_SUFFIX=	${_GHC_VERSION_SUFFIX}
 _HASKELL_VERSION=	${_GHC_VERSION_FULL} # Expose to the outer scope.
+
+# Determine GHC shlib suffix
+_GHC_SHLIB_SUFFIX.dylib=	dylib	
+_GHC_SHLIB_SUFFIX=		${_GHC_SHLIB_SUFFIX.${SHLIB_TYPE}:Uso}
+_HASKELL_SHLIB_SUFFIX=		${_GHC_SHLIB_SUFFIX}
 
 # GHC requires C compiler.
 USE_LANGUAGES+=	c
@@ -152,11 +174,16 @@ CONFIGURE_ARGS+=	--with-hc-pkg=${_GHC_PKG_BIN}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 .endif # ${HASKELL_COMPILER}
 
+# Shared libraries
+.if ${HASKELL_ENABLE_SHARED_LIBRARY} == "yes"
+CONFIGURE_ARGS+=	--enable-shared --enable-executable-dynamic
+CONFIGURE_ARGS+=	"--ghc-option=-optl ${COMPILER_RPATH_FLAG}"
+CONFIGURE_ARGS+=	"--ghc-option=-optl ${PREFIX}/lib/${_GHC_VERSION_FULL}/${DISTNAME}"
+.endif
+
 # Library profiling
-PLIST_VARS+=		prof
 .if ${HASKELL_ENABLE_LIBRARY_PROFILING} == "yes"
 CONFIGURE_ARGS+=	-p
-PLIST.prof=		yes
 .endif
 
 
@@ -176,8 +203,21 @@ PRINT_PLIST_AWK+= \
 
 # _HASKELL_VERSION should be substituted in PLIST.
 PLIST_SUBST+=	HASKELL_VERSION=${_HASKELL_VERSION}
+PLIST_SUBST+=	HASKELL_VERSION_SUFFIX=${_HASKELL_VERSION_SUFFIX}
 PRINT_PLIST_AWK+= \
+	($$0 ~ /-${_HASKELL_VERSION_SUFFIX}\.${_HASKELL_SHLIB_SUFFIX}$$/) { next; } \
+	($$0 ~ /lib\/.*_p\.a$$/) { next; } \
+	($$0 ~ /\.dyn_hi$$/) { next; } \
+	($$0 ~ /\.p_hi$$/) { next; } \
+	($$0 ~ /^share\/doc\/${DISTNAME}\/html\//) \
+	{ $$0 = "$${PLIST.doc}" $$0; } \
+	{ gsub(/${_HASKELL_VERSION_SUFFIX}/, "$${HASKELL_VERSION_SUFFIX}"); } \
 	{ gsub(/${_HASKELL_VERSION}/, "$${HASKELL_VERSION}"); }
+PLIST_AWK+=	-f ${PKGSRCDIR}/mk/plist/plist-haskell.awk
+PLIST_AWK_ENV+=	HASKELL_VERSION_SUFFIX=${_HASKELL_VERSION_SUFFIX}
+PLIST_AWK_ENV+=	HASKELL_SHLIB_SUFFIX=${_HASKELL_SHLIB_SUFFIX}
+PLIST_AWK_ENV+=	HASKELL_ENABLE_SHARED_LIBRARY=${HASKELL_ENABLE_SHARED_LIBRARY}
+PLIST_AWK_ENV+=	HASKELL_ENABLE_LIBRARY_PROFILING=${HASKELL_ENABLE_LIBRARY_PROFILING}
 
 # We might not have any working Haskell interpreter so compile
 # Setup.?hs to a binary.
