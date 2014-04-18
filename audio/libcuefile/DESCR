@@ -1,0 +1,4 @@
+This library has been stripped down from cuetools.
+
+cuetools is a set of utilities for working with Cue Sheet (cue)
+and Table of Contents (toc) files.
