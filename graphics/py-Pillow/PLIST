@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/12/28 02:53:46 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/04/18 13:00:49 obache Exp $
 ${PYSITELIB}/PIL/ArgImagePlugin.py
 ${PYSITELIB}/PIL/ArgImagePlugin.pyc
 ${PYSITELIB}/PIL/ArgImagePlugin.pyo
@@ -146,6 +146,9 @@ ${PYSITELIB}/PIL/ImtImagePlugin.pyo
 ${PYSITELIB}/PIL/IptcImagePlugin.py
 ${PYSITELIB}/PIL/IptcImagePlugin.pyc
 ${PYSITELIB}/PIL/IptcImagePlugin.pyo
+${PYSITELIB}/PIL/Jpeg2KImagePlugin.py
+${PYSITELIB}/PIL/Jpeg2KImagePlugin.pyc
+${PYSITELIB}/PIL/Jpeg2KImagePlugin.pyo
 ${PYSITELIB}/PIL/JpegImagePlugin.py
 ${PYSITELIB}/PIL/JpegImagePlugin.pyc
 ${PYSITELIB}/PIL/JpegImagePlugin.pyo
@@ -164,6 +167,7 @@ ${PYSITELIB}/PIL/MpegImagePlugin.pyo
 ${PYSITELIB}/PIL/MspImagePlugin.py
 ${PYSITELIB}/PIL/MspImagePlugin.pyc
 ${PYSITELIB}/PIL/MspImagePlugin.pyo
+${PYSITELIB}/PIL/OleFileIO-README.md
 ${PYSITELIB}/PIL/OleFileIO.py
 ${PYSITELIB}/PIL/OleFileIO.pyc
 ${PYSITELIB}/PIL/OleFileIO.pyo
@@ -200,6 +204,9 @@ ${PYSITELIB}/PIL/PpmImagePlugin.pyo
 ${PYSITELIB}/PIL/PsdImagePlugin.py
 ${PYSITELIB}/PIL/PsdImagePlugin.pyc
 ${PYSITELIB}/PIL/PsdImagePlugin.pyo
+${PYSITELIB}/PIL/PyAccess.py
+${PYSITELIB}/PIL/PyAccess.pyc
+${PYSITELIB}/PIL/PyAccess.pyo
 ${PYSITELIB}/PIL/SgiImagePlugin.py
 ${PYSITELIB}/PIL/SgiImagePlugin.pyc
 ${PYSITELIB}/PIL/SgiImagePlugin.pyo

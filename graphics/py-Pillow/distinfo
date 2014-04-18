@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2014/04/11 12:41:18 obache Exp $
+$NetBSD: distinfo,v 1.5 2014/04/18 13:00:49 obache Exp $
 
-SHA1 (Pillow-2.3.1.zip) = 956ceda1fc5427220c19f7e4be2e0b04c0c557ef
-RMD160 (Pillow-2.3.1.zip) = 2b7d757eda7366e16f975bf3102823103ef65884
-Size (Pillow-2.3.1.zip) = 2421519 bytes
-SHA1 (patch-setup.py) = b70e3bec9f5c266a4864404a3a69f2da7b5e05c7
+SHA1 (Pillow-2.4.0.zip) = 43fcfb95a6190a86b56ec7c5872a5b4634a46c1d
+RMD160 (Pillow-2.4.0.zip) = 2692fee280a9abc595ebbb8df6d6a73f5c83667a
+Size (Pillow-2.4.0.zip) = 6519873 bytes
+SHA1 (patch-setup.py) = c7d2e6eddcc64369dc4605f806a360cc244dbcf0
