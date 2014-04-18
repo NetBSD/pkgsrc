@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/04/18 22:26:08 wiz Exp $
+
+SHA1 (jsoncpp-src-0.6.0rc2svn276.tar.gz) = 47a36b612343bb93ba89532b822eb9f851380ddf
+RMD160 (jsoncpp-src-0.6.0rc2svn276.tar.gz) = 1d9ff19fafd2ffb080774cd17215315cfca248f5
+Size (jsoncpp-src-0.6.0rc2svn276.tar.gz) = 342225 bytes
