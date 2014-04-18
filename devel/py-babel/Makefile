@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/04/17 12:29:48 rodent Exp $
+# $NetBSD: Makefile,v 1.14 2014/04/18 13:15:36 obache Exp $
 
 DISTNAME=	Babel-1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -16,6 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 USE_LANGUAGES=	# none
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+FILES_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/pybabel \
