@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2014/04/18 22:26:08 wiz Exp $
+include/json/assertions.h
+include/json/autolink.h
+include/json/config.h
+include/json/features.h
+include/json/forwards.h
+include/json/json.h
+include/json/reader.h
+include/json/value.h
+include/json/version.h
+include/json/writer.h
+lib/libjsoncpp.a
