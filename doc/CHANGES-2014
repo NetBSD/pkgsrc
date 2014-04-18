@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1515 2014/04/18 13:01:07 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1516 2014/04/18 13:43:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2195,3 +2195,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added audio/musepack version 0rc475 [wiz 2014-04-18]
 	Updated audio/musicpd to 0.18.10 [wiz 2014-04-18]
 	Updated graphics/py-Pillow to 2.4.0 [obache 2014-04-18]
+	Updated multimedia/vlc2 to 2.0.9nb6 [wiz 2014-04-18]
