@@ -2,6 +2,7 @@ aalib			Enable aalib support.
 abook			Enable abook support.
 acl			Enable POSIX ACL support.
 adobe-cidfonts		Select Adobe-fonts.
+adplug			Enable Adlib emulator support.
 ads			Enable Windows Active Directory support.
 agg			Enable agg support.
 alsa			Enable ALSA support.
@@ -385,6 +386,7 @@ libind			Add Indian script support using libind.
 liblqr			Enable liblqr (liquid rescale) support.
 libmms			Enable streaming from mms:// URLS using libmms.
 libmp4v2		Enable MP4 support using libmp4v2.
+libmpdclient		Enable MPD client support.
 libmpg123		Enable mpg123 project's core decoder library support.
 libmtp			Enable MTP via libmtp support.
 libofa			Enable Open Fingerprint Architecture library support.
@@ -458,6 +460,7 @@ mp4v2			Enable MP4 support using mp4v2.
 mpcdec			Enable Musepack decoder library support.
 mpeg3			Enable libmpeg3 MPEG decoding library support.
 mpeg4ip			Enable mpeg4ip support.
+mpg123			Enable MP3 support using mpg123.
 mpg123-altivec		Enable altivec optimized dithering code.
 mpg123-fifo		Enable FIFO support for the mpg123 control interface.
 mpg123-with-fpu		Enable generic fpu code.
@@ -473,6 +476,7 @@ mstats			Enable memory statistics.
 musepack		Enable the portable Musepack decoder library.
 musicbrainz		Enable musicbrainz support.
 musicpd-lastfm		Enable Last.FM support in musicpd.
+musicpd-soundcloud	Enable Soundcloud support.
 mutt-compressed-mbox	Enable compressed mailbox support in mutt.
 mutt-hcache		Enable header caching in mutt.
 mutt-sidebar		Enable the mutt mailbox sidebar patch.
@@ -671,6 +675,7 @@ tokyocabinet		Enable Tokyo Cabinet support.
 tremor			Enable Tremor fixed point audio decoding library support.
 trn-inn			Use INN as NNTP client.
 trn-nntpclnt		Use nntpclnt as NNTP client.
+twolame			Enable MP2 support using twolame.
 ucspi-ssl-perl		Enable Perl support in ucspi-ssl.
 ucspi-tcp-nodefaultrbl	Remove the (nonexistent) default RBL from rblsmtpd.
 udev			Enable support for the udev device manager.
