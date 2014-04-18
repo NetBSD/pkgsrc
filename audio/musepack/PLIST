@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2014/04/18 12:43:42 wiz Exp $
+bin/mpc2sv8
+bin/mpcchap
+bin/mpccut
+bin/mpcdec
+bin/mpcenc
+bin/mpcgain
+bin/wavcmp
+include/mpc/datatypes.h
+include/mpc/minimax.h
+include/mpc/mpc_types.h
+include/mpc/mpcdec.h
+include/mpc/mpcmath.h
+include/mpc/reader.h
+include/mpc/streaminfo.h
+lib/libmpcdec.so

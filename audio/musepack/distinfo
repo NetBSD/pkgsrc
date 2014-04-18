@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2014/04/18 12:43:42 wiz Exp $
+
+SHA1 (musepack_src_r475.tar.gz) = bdd4042773eb5c885df70d7a19914fa6e2306391
+RMD160 (musepack_src_r475.tar.gz) = 622d04eeb309beacd2b6bb650178dcdc42773db2
+Size (musepack_src_r475.tar.gz) = 188737 bytes
+SHA1 (patch-mpcenc_keyboard.c) = 42e038f003c64369e245e3688f6f0783bd2d443a
