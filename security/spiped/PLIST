@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2014/04/18 21:31:26 wiz Exp $
+bin/spipe
+bin/spiped
+share/doc/spiped/README
