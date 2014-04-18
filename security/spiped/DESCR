@@ -1,0 +1,20 @@
+spiped (pronounced "ess-pipe-dee") is a utility for creating symmetrically
+encrypted and authenticated pipes between socket addresses, so that one may
+connect to one address (e.g., a UNIX socket on localhost) and transparently
+have a connection established to another address (e.g., a UNIX socket on a
+different system).  This is similar to 'ssh -L' functionality, but does not
+use SSH and requires a pre-shared symmetric key.
+
+Note that spiped:
+1. Requires a strong key file: The file specified via the -k option should
+have at least 256 bits of entropy.  ('dd if=/dev/urandom bs=32 count=1' is
+your friend.)
+2. Does not provide any protection against information leakage via packet
+timing: Running telnet over spiped will protect a password from being directly
+read from the network, but will not obscure the typing rhythm.
+3. Can significantly increase bandwidth usage for interactive sessions: It
+sends data in packets of 1024 bytes, and pads smaller messages up to this
+length, so a 1 byte write could be expanded to 1024 bytes if it cannot be
+coalesced with adjacent bytes.
+4. Uses a symmetric key -- so anyone who can connect to an spiped "server" is
+also able to impersonate it.
