@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2014/04/18 12:38:22 wiz Exp $
+include/cuetools/cd.h
+include/cuetools/cdtext.h
+include/cuetools/cuefile.h
+lib/libcuefile.a
+lib/libcuefile.so
+lib/libcuefile.so.0
+lib/libcuefile.so.0.0.0
