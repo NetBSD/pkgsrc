@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.762 2014/03/31 08:13:36 wiz Exp $
+# $NetBSD: Makefile,v 1.763 2014/04/18 22:26:20 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -287,6 +287,7 @@ SUBDIR+=	jdom
 SUBDIR+=	jing
 SUBDIR+=	json-c
 SUBDIR+=	json-glib
+SUBDIR+=	jsoncpp
 SUBDIR+=	kakasi
 SUBDIR+=	kbanner
 SUBDIR+=	kdoc
