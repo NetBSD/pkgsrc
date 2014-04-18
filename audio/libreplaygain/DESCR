@@ -1,0 +1,5 @@
+This library has been stripped down from replaygain.
+
+ReplayGain is the name of a technique invented to achieve the same
+perceived playback loudness of audio files. It defines an algorithm
+to measure the perceived loudness of audio data.
