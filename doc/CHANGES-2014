@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1508 2014/04/17 21:17:35 imil Exp $
+$NetBSD: CHANGES-2014,v 1.1509 2014/04/18 08:32:21 manu Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2186,3 +2186,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/py-prettytable to 0.7.2 [imil 2014-04-17]
 	Updated textproc/py-prettytable to 0.7.2nb1 [imil 2014-04-17]
 	Updated net/py-softlayer to 3.0.2nb1 [imil 2014-04-17]
+	Updated filesystems/glusterfs to 3.5.0 [manu 2014-04-18]
