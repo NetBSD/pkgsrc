@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2014/04/10 06:21:35 obache Exp $
-#
+# $NetBSD: Makefile,v 1.70 2014/04/18 13:57:57 wiz Exp $
 
 DISTNAME=		k3b-2.0.2
 PKGREVISION=		26
@@ -42,7 +41,7 @@ BUILDLINK_TRANSFORM+=   opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
-#.include "../../audio/libmpcdec/buildlink3.mk"
+#.include "../../audio/musepack/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/musicbrainz/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
