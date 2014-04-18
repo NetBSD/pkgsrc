@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13224 2014/04/18 20:11:26 wiz Exp $
+$NetBSD: TODO,v 1.13225 2014/04/18 20:12:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -480,6 +480,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o diffstat-1.58
 	o doclifter-2.14
 	o dolphin-4.0.2
+	o dos2unix-6.0.5
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
 	o dvtm-0.11
@@ -821,7 +822,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o munin-node-1.4.6
 	o munin-server-1.4.6
 	o muse-0.9.2
-	o mutt-devel-1.5.23 [sidebar patch]
 	o mypaint-1.1.0
 	o nano-2.3.2
 	o nap-1.5.3
@@ -1012,7 +1012,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sablecc-3.7
 	o samba-4.0.17
 	o samba-4.1.0 [wip]
-	o samba-4.1.6
+	o samba-4.1.7
 	o sane-1.0.24
 	o sarg-2.2.5
 	o scew-0.4.0
@@ -1114,6 +1114,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o turba-4.1.4
 	o tuxpaint-0.9.21
 	o twelf-1.5r1
+	o typo3-6.1.8
 	o uae-0.8.29
 	o ubs-0.20
 	o ucblogo-5.5
