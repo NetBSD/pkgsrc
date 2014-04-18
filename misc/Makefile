@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.424 2014/03/31 08:43:26 richard Exp $
+# $NetBSD: Makefile,v 1.425 2014/04/18 21:21:43 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -240,6 +240,7 @@ SUBDIR+=	qbrew
 SUBDIR+=	qterm
 SUBDIR+=	raspberrypi-userland
 SUBDIR+=	reed
+SUBDIR+=	rhash
 SUBDIR+=	rlwrap
 SUBDIR+=	rocs
 SUBDIR+=	root
