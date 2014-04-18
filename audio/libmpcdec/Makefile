@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/09/12 00:24:42 asau Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/04/18 12:43:20 wiz Exp $
 
 DISTNAME=	libmpcdec-1.2.6
 CATEGORIES=	audio
@@ -8,7 +7,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.musepack.net/
-COMMENT=	Portable Musepack decoder library
+COMMENT=	Portable Musepack decoder library (V7)
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
