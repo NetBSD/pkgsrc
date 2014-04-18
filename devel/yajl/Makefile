@@ -1,25 +1,19 @@
-# $NetBSD: Makefile,v 1.5 2014/01/05 03:23:21 rodent Exp $
+# $NetBSD: Makefile,v 1.6 2014/04/18 12:16:57 wiz Exp $
 
-DISTNAME=	2.0.1
-PKGNAME=	yajl-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	yajl-2.1.0
 CATEGORIES=	devel textproc
-MASTER_SITES=	http://nodeload.github.com/lloyd/yajl/tarball/
-DIST_SUBDIR=	yajl
-EXTRACT_SUFX=
+MASTER_SITES=	# http://nodeload.github.com/lloyd/yajl/tarball/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lloyd.github.com/yajl/
 COMMENT=	Small JSON library written in ANSI C
 LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}/lloyd-yajl-f4b2b1a
+WRKSRC=		${WRKDIR}/lloyd-yajl-66cb08c
 
 USE_LANGUAGES=	c
 USE_LIBTOOL=	yes
-USE_TOOLS+=	tar gzcat
 USE_CMAKE=	yes
-
-EXTRACT_OPTS=	-c gzip -f tar
+PKGCONFIG_OVERRIDE=	src/yajl.pc.cmake
 
 .include "../../mk/bsd.pkg.mk"
