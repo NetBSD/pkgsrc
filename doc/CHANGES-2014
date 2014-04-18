@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1512 2014/04/18 12:17:05 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1513 2014/04/18 12:45:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2190,3 +2190,6 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/calibre to 1.33.0 [wiz 2014-04-18]
 	Updated devel/p5-IO-Pager to 0.31 [hiramatsu 2014-04-18]
 	Updated devel/yajl to 2.1.0 [wiz 2014-04-18]
+	Added audio/libreplaygain version 0rc475 [wiz 2014-04-18]
+	Added audio/libcuefile version 0rc475 [wiz 2014-04-18]
+	Added audio/musepack version 0rc475 [wiz 2014-04-18]
