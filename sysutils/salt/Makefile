@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2014/04/17 16:33:47 imil Exp $
+# $NetBSD: Makefile,v 1.21 2014/04/18 11:25:06 imil Exp $
 
-DISTNAME=	salt-2014.1.2
-PKGREVISION=	1
+DISTNAME=	salt-2014.1.3
 CATEGORIES=	sysutils
 MASTER_SITES=	https://pypi.python.org/packages/source/s/salt/
 
