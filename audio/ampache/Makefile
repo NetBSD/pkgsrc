@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/03/16 07:21:18 obache Exp $
+# $NetBSD: Makefile,v 1.11 2014/04/19 01:14:41 asau Exp $
 #
 
 DISTNAME=	ampache-3.5.3
@@ -47,7 +47,7 @@ post-extract:
 do-install:
 	${CHMOD} -x ${WRKSRC}/docs/[A-Z]*
 	${INSTALL_DATA} ${WRKSRC}/ampache.conf ${DESTDIR}${EGDIR}/ampache.conf
-	set -e; cd ${WRKSRC} && pax -rw -pe . ${DESTDIR}${INSTDIR}
+	set -e; cd ${WRKSRC} && pax -rw -pp . ${DESTDIR}${INSTDIR}
 	${RM} -f ${DESTDIR}${INSTDIR}/ampache.conf
 	${FIND} ${DESTDIR}${INSTDIR} -name '*.orig' | ${XARGS} ${RM} -f
 
