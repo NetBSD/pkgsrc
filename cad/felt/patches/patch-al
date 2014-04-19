@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.2 2009/12/17 20:31:37 abs Exp $
+$NetBSD: patch-al,v 1.3 2014/04/19 14:53:00 joerg Exp $
 
 --- src/Burlap/interactive.c.orig	2000-02-21 22:44:30.000000000 +0000
 +++ src/Burlap/interactive.c
@@ -11,3 +11,32 @@ $NetBSD: patch-al,v 1.2 2009/12/17 20:31:37 abs Exp $
  # include <string.h>
  # include "error.h"
  # include "lexer.h"
+@@ -96,7 +96,7 @@ static FILE *stream = stdin;
+ # include "functab.h"
+ # include "consttab.h"
+ 
+-static char *completion_generator PROTO ((char *, int));
++static char *completion_generator(const char *, int);
+ 
+ static char *keywords [ ] = {
+     "break", "do", "else", "end", "for", "function", "global",
+@@ -113,9 +113,7 @@ static char *keywords [ ] = {
+  *		intrinsic functions and keywords are completed.		*
+  ************************************************************************/
+ 
+-static char *completion_generator (text, state)
+-    char *text;
+-    int   state;
++static char *completion_generator(const char *text, int state)
+ {
+     char      *ptr;
+     static int index;
+@@ -391,7 +389,7 @@ void init_interactive (argv0, s_file, q_
+ 
+     using_history ( );
+     rl_readline_name = ptr;
+-    rl_completion_entry_function = (Function *) completion_generator;
++    rl_completion_entry_function = completion_generator;
+     rl_special_prefixes = "&";
+ 
+ # endif /* READLINE */
