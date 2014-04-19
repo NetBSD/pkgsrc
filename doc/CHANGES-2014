@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1529 2014/04/19 15:54:18 imil Exp $
+$NetBSD: CHANGES-2014,v 1.1530 2014/04/19 16:05:58 imil Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2209,3 +2209,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/rsync to 3.1.0nb1 [tron 2014-04-18]
 	Added games/lgogdownloader version 2.12 [wiz 2014-04-19]
 	Added www/py-urllib3 version 1.8.2 [imil 2014-04-19]
+	Added databases/py-elasticsearch version 1.0.0 [imil 2014-04-19]
