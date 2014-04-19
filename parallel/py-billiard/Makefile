@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2014/02/20 00:47:28 rodent Exp $
+# $NetBSD: Makefile,v 1.11 2014/04/19 17:54:28 rodent Exp $
 
-DISTNAME=	billiard-3.3.0.16
+DISTNAME=	billiard-3.3.0.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	parallel
 MASTER_SITES=	https://pypi.python.org/packages/source/b/billiard/
@@ -12,8 +12,6 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES+=	c
 REPLACE_PYTHON+=	funtests/setup.py funtests/tests/test_multiprocessing.py
-
-PYTHON_VERSIONS_INCOMPATIBLE=	26
 
 .include "../../lang/python/pyversion.mk"
 
