@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.5 2013/10/20 18:08:07 joerg Exp $
+$NetBSD: patch-ag,v 1.6 2014/04/19 15:00:09 joerg Exp $
 
 --- plug-ins/icc_examin/icc_examin/configure.orig	2007-05-10 15:48:30.000000000 +0000
 +++ plug-ins/icc_examin/icc_examin/configure
@@ -14,6 +14,15 @@ $NetBSD: patch-ag,v 1.5 2013/10/20 18:08:07 joerg Exp $
          echo "#define BSD 1" >> $CONF_H
          echo "BSD $UNAME_             detected"
          OSUNAME=BSD
+@@ -532,7 +532,7 @@ else
+     echo "INSTALL = install $DEBUG_SWITCH" >> $CONF
+   else
+     echo "COPY = cp -p" >> $CONF
+-    echo "INCL=-I\$(includedir) -I/usr/X11R6/include -I. -I/usr/include/g++ -I/usr/include" >> $CONF
++    echo "INCL=-I\$(includedir) -I/usr/X11R6/include -I." >> $CONF
+     if [ $OSUNAME = "BSD" ]; then
+       LDFLAGS="$LDFLAGS \$(iconv)"
+       INSTALL="install $DEBUG_SWITCH"
 @@ -542,10 +542,10 @@ else
        test -n "$ECHO" && $ECHO "INSTALL = install $DEBUG_SWITCH" >> $CONF
      fi

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2013/10/20 18:08:07 joerg Exp $
+$NetBSD: distinfo,v 1.20 2014/04/19 15:00:09 joerg Exp $
 
 SHA1 (cinepaint-0.22-1.tar.gz) = 717580b9b8b1044d76f1f0e4330e1c8104e2a206
 RMD160 (cinepaint-0.22-1.tar.gz) = 1f8e06486ed5e74ad483abec305d4fcef0538572
@@ -9,15 +9,17 @@ SHA1 (patch-ac) = 819bd88a7ed2a321d1ae7b1a37ac3e2551ff916d
 SHA1 (patch-ad) = 643ad8210fa479d4f2c3b83cebc5af92c9a310a1
 SHA1 (patch-ae) = 37d0b131dc19406add4bde0af5affbcec7f5930d
 SHA1 (patch-af) = 2e6f01e2b246570f1e8fda375a2f1e779d4c47da
-SHA1 (patch-ag) = cf0f50e7570a62d81c60cc0c05dc576675829a51
+SHA1 (patch-ag) = 76a0058b08c93091f2da9cd6aab7d834e0c0e35f
 SHA1 (patch-ah) = 3415f2b6f775a7b66b9d443cab94757b3b378928
 SHA1 (patch-app_gradient.c) = 9b6d38f1d3a5c417b3f69f4107637ec1ec33da0c
 SHA1 (patch-app_layers__dialog.c) = a9c4459edc83bd7e3faf1c90d9f4cff5d5e69a19
 SHA1 (patch-plug-ins_bracketing__to__hdr_br__core_ResponseSolver.hpp) = e5e457d8f8ceb0ae3b4b965cbc740969b4ed81d4
 SHA1 (patch-plug-ins_bracketing__to__hdr_br__core_br__Image.cpp) = a369c351d8bb05e79afa6c19592fbc148143d985
 SHA1 (patch-plug-ins_icc__examin_icc__examin_icc__examin.h) = eb4dba58efd6ff19c5eae770361b49fdacd4b375
+SHA1 (patch-plug-ins_icc__examin_icc__examin_icc__modell__beobachter.cpp) = 0aad88391642a9bacafee8e39116a98c7523d815
 SHA1 (patch-plug-ins_icc__examin_icc__examin_icc__oyranos.h) = a5a72d106b655f79932b0d2d032136a32acbeafb
 SHA1 (patch-plug-ins_icc__examin_icc__examin_icc__oyranos__extern.cpp) = 2e733a0c557236a735b97a7174795965b4bd4e0c
 SHA1 (patch-plug-ins_icc__examin_icc__examin_icc__speicher.h) = 1eef5be81fe36c2eb9ecf50606ecb294644e15f4
+SHA1 (patch-plug-ins_icc__examin_icc__examin_icc__thread__daten.cpp) = 66398aa3b06cc65017ec957e36579accd82df117
 SHA1 (patch-plug-ins_pdf_pdf.cpp) = e0af79a6f2e8962edc90d53ceef1b521aacb8e55
 SHA1 (patch-plug-ins_png_png.c) = 2420634637b44756b8e545efd3274fe469bbb3fa
