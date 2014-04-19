@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2013/04/01 09:29:38 sbd Exp $
+$NetBSD: distinfo,v 1.18 2014/04/19 14:53:00 joerg Exp $
 
 SHA1 (felt-3.05.src.tar.gz) = da3e1ced626cc1c65a570d3e6e242252c039c28b
 RMD160 (felt-3.05.src.tar.gz) = 0d2a363a6ef09f3b3a0e2be186c4c051ac1ea19a
@@ -17,7 +17,7 @@ SHA1 (patch-ah) = d48f55d8cc9c3b6d1bc75b56e4f8023e42e6d37e
 SHA1 (patch-ai) = 00d557b31d2b912de9f952a4f76f2742e98dca1a
 SHA1 (patch-aj) = 9104b418485bdd9f56c699ac4be9ed64422d19d2
 SHA1 (patch-ak) = 0ad726e6992a822ffcf32367f06305ac6ea818cc
-SHA1 (patch-al) = 3267802ff6467ffc37cb4de564b005bf1ceb91ac
+SHA1 (patch-al) = f46e0b715d0e624619adca69365741e7e3fcda8f
 SHA1 (patch-am) = de488591d0d7abace294ccb9a9aa6914b2b9fd4d
 SHA1 (patch-an) = 70195df18c833e46d354e9f2a0212e2bf03e68d2
 SHA1 (patch-ao) = 23106adc13a2ea06f94be807a188c8320f4fde8a
@@ -25,3 +25,4 @@ SHA1 (patch-ap) = 69650c94ca86ec069049a4fc58553534f26ea4bf
 SHA1 (patch-aq) = 2265c8e39c1a9bf2cb4f423fabf1dd6128d16210
 SHA1 (patch-ar) = 3915c952bc526d10acd5245b33835c2f76002e93
 SHA1 (patch-as) = 76dd3f51b62eac4d3e2ca6bbf8d579bdad84a3d2
+SHA1 (patch-src_Burlap_matrixfunc.c) = 03148a88f30ad424d5a81400f2d0eab33d4abe1e
