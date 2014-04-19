@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 00:10:30 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/04/19 01:15:20 asau Exp $
 
 DISTNAME=	mingw-runtime-3.14
 PKGNAME=	mingw-runtime-bin-3.14
@@ -18,7 +18,7 @@ WRKSRC=		${WRKDIR}
 INSTALLATION_DIRS+=	${MINGW_TARGET}
 
 do-install:
-	cd ${WRKSRC} && pax -rw -pe bin include lib \
+	cd ${WRKSRC} && pax -rw -pp bin include lib \
 		${DESTDIR}${PREFIX}/${MINGW_TARGET}
 
 .include "../../cross/mingw/Makefile.common"

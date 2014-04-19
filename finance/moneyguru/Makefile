@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/25 11:11:20 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/04/19 01:18:23 asau Exp $
 #
 # any of ~* is fine, they are the same and just there for Ubuntu
 # so moneyguru's built for all releases
@@ -44,7 +44,7 @@ do-build:
 	${CHMOD} +x ${WRKSRC}/run.py
 
 do-install:
-	cd ${WRKSRC} && pax -pe -rw ambuttonbar build cocoa cocoalib core data help hscommon images locale plugin_examples psmtabbarcontrol qt qtlib run.py ${DESTDIR}${PREFIX}/share/moneyguru
+	cd ${WRKSRC} && pax -pp -rw ambuttonbar build cocoa cocoalib core data help hscommon images locale plugin_examples psmtabbarcontrol qt qtlib run.py ${DESTDIR}${PREFIX}/share/moneyguru
 	${INSTALL_DATA} ${WRKSRC}/debian/moneyguru.desktop ${DESTDIR}${PREFIX}/share/applications
 	${LN} -s ${DESTDIR}${PREFIX}/share/moneyguru/run.py ${DESTDIR}${PREFIX}/bin/moneyguru
 
