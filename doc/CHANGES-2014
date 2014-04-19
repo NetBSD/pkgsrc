@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1531 2014/04/19 17:36:22 jakllsch Exp $
+$NetBSD: CHANGES-2014,v 1.1532 2014/04/19 17:54:44 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2211,3 +2211,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added www/py-urllib3 version 1.8.2 [imil 2014-04-19]
 	Added databases/py-elasticsearch version 1.0.0 [imil 2014-04-19]
 	Added net/u6rd version 1.7.1 [jakllsch 2014-04-19]
+	Updated parallel/py-billiard to 3.3.0.17 [rodent 2014-04-19]
