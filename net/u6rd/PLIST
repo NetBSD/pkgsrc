@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2014/04/19 17:34:01 jakllsch Exp $
+sbin/u6rd
+man/man8/u6rd.8
