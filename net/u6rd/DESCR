@@ -1,0 +1,6 @@
+u6rd is a user-space 6rd (RFC 5569) implementation, which uses
+tun(4) and the raw socket interface.
+
+It runs on the 6rd border router of a 6rd site that is isolated from
+the native IPv6 Internet.  In other words, it does not provide the
+functionality of 6rd "relay" routers.
