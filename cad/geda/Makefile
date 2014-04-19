@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2014/03/23 13:21:16 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2014/04/19 14:52:31 joerg Exp $
 
 DISTNAME=	geda-gaf-1.8.2
 PKGNAME=	${DISTNAME:S/-gaf-/-/}
@@ -40,7 +40,7 @@ post-patch:
 REPLACE_BASH=		utils/scripts/gnet_hier_verilog.sh
 REPLACE_PYTHON=		utils/scripts/tragesym
 REPLACE_PERL+=		utils/scripts/pads_backannotate \
-			utils/scripts/gsymfix.pl \
+			utils/scripts/gsymfix \
 			utils/scripts/pcb_backannotate \
 			utils/scripts/refdes_renum \
 			utils/scripts/sarlacc_sym \
