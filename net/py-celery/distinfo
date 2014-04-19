@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/04/19 17:57:31 rodent Exp $
+
+SHA1 (celery-3.1.11.tar.gz) = 60cde9bced8f104de23d7a979847dd9ac5a43498
+RMD160 (celery-3.1.11.tar.gz) = e778c924c6ce2c3c43cee399636cc5636a5c83a2
+Size (celery-3.1.11.tar.gz) = 1289359 bytes
