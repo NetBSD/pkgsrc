@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2014/04/15 08:29:23 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2014/04/19 10:09:50 wiz Exp $
 
 DISTNAME=		xproto-7.0.26
 CATEGORIES=		x11 devel
@@ -18,6 +18,8 @@ USE_LANGUAGES=		c
 
 post-extract:
 	${MV} ${WRKSRC}/Xos_r.h ${WRKSRC}/Xos_r.h.in
+
+pre-configure:
 	sleep 1 && ${TOUCH} ${WRKSRC}/aclocal.m4 ${WRKSRC}/Makefile.in
 
 .include "../../mk/bsd.pkg.mk"
