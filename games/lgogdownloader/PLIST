@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2014/04/19 08:19:31 wiz Exp $
+bin/lgogdownloader
+man/man1/lgogdownloader.1
