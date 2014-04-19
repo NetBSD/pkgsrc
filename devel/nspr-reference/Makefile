@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/04/06 14:09:32 rodent Exp $
+# $NetBSD: Makefile,v 1.11 2014/04/19 01:16:26 asau Exp $
 #
 
 DISTNAME=	nspr-reference
@@ -19,7 +19,7 @@ WRKSRC=			${WRKDIR}/nspr/reference/html
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/nspr/html
-	cd ${WRKSRC} && pax  -s,.*/CVS.*,, -rwvpe . \
+	cd ${WRKSRC} && pax  -s,.*/CVS.*,, -rwvpp . \
 		${DESTDIR}${PREFIX}/share/doc/nspr/html
 
 .include "../../mk/bsd.pkg.mk"
