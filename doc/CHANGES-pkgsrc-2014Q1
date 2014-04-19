@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.12 2014/04/17 15:06:34 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.13 2014/04/19 05:21:16 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q1 branch:
@@ -56,3 +56,5 @@ Pullup ticket #4377 - requested by asau
 www/curl: build fix
 Pullup ticket #4379 - requested by obache
 pkgtools/x11-links: bug fix update
+Pullup ticket #4380 - requested by tron
+net/rsync: security patch
