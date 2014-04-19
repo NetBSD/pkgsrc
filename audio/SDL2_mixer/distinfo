@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1 2014/02/02 15:39:01 rodent Exp $
+$NetBSD: distinfo,v 1.2 2014/04/19 14:52:13 joerg Exp $
 
 SHA1 (SDL2_mixer-2.0.0.tar.gz) = 9ed975587f09a1776ba9776dcc74a58e695aba6e
 RMD160 (SDL2_mixer-2.0.0.tar.gz) = a49884a68351f77fefe76c2fcf8ee317e6d971e2
 Size (SDL2_mixer-2.0.0.tar.gz) = 10119589 bytes
+SHA1 (patch-dynamic__modplug.h) = 1405a6329fa21a4c6b216902eaacbfcedead5150
+SHA1 (patch-music__modplug.h) = 852bfbc8f34c395b4313a7112941f79290040b78
