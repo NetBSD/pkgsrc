@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2012/10/02 20:11:37 asau Exp $
+# $NetBSD: Makefile.common,v 1.16 2014/04/19 15:00:37 joerg Exp $
 #
 # used by lang/classpath/Makefile
 # used by lang/classpath-gui/Makefile
@@ -14,6 +14,7 @@ COMMENT=		Class libraries for Java VM
 BUILD_DEPENDS+=		jikes>=1.18:../../lang/jikes
 
 DISTINFO_FILE=		${.CURDIR}/../../lang/classpath/distinfo
+PATCHDIR=		${.CURDIR}/../../lang/classpath/patches
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
