@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1533 2014/04/19 17:57:44 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.1534 2014/04/19 23:17:42 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2213,3 +2213,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added net/u6rd version 1.7.1 [jakllsch 2014-04-19]
 	Updated parallel/py-billiard to 3.3.0.17 [rodent 2014-04-19]
 	Added net/py-celery version 3.1.11 [rodent 2014-04-19]
+	Updated www/firefox to 28.0nb4 [ryoon 2014-04-19]
