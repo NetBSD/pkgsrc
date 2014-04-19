@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.453 2014/04/16 17:23:26 imil Exp $
+# $NetBSD: Makefile,v 1.454 2014/04/19 16:04:37 imil Exp $
 
 COMMENT=	Databases
 
@@ -327,6 +327,7 @@ SUBDIR+=	py-ckanclient
 SUBDIR+=	py-cx_Oracle
 SUBDIR+=	py-datapkg
 SUBDIR+=	py-elixir
+SUBDIR+=	py-elasticsearch
 SUBDIR+=	py-gdbm
 SUBDIR+=	py-ldap
 SUBDIR+=	py-metakit
