@@ -1,10 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2014/03/06 10:16:15 mrg Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2014/04/19 14:46:52 joerg Exp $
 
 look for -lossaudio on NetBSD.
 
---- CMakeLists.txt.orig	2013-02-21 10:53:51.000000000 -0800
-+++ CMakeLists.txt	2014-03-05 23:19:14.000000000 -0800
-@@ -53,7 +53,11 @@
+--- CMakeLists.txt.orig	2013-02-21 18:53:51.000000000 +0000
++++ CMakeLists.txt
+@@ -53,7 +53,11 @@ ELSE()
  	OPTION(WANT_JACKSESSION "Enable use of Jack-Session-Handler" ON)
  ENDIF()
  
@@ -17,7 +17,16 @@ look for -lossaudio on NetBSD.
  OPTION(WANT_ALSA         "Include ALSA (Advanced Linux Sound Architecture) support" ON)
  OPTION(WANT_JACK         "Include JACK (Jack Audio Connection Kit) support" ON)
  OPTION(WANT_PORTAUDIO    "Include PortAudio support" OFF)
-@@ -159,7 +163,11 @@
+@@ -88,7 +92,7 @@ ELSE()
+ ENDIF()
+ 
+ #SET(CMAKE_CXX_FLAGS "-fno-implement-inlines -finline-small-functions -findirect-inlining -fpartial-inlining")
+-SET(CMAKE_CXX_FLAGS "-O2 -fno-implement-inlines")
++SET(CMAKE_CXX_FLAGS "-O2")
+ SET(CMAKE_CXX_FLAGS_RELEASE "")
+ SET(CMAKE_CXX_FLAGS_DEBUG "-g ")#-Winline")
+ 
+@@ -159,7 +163,11 @@ ENDIF()
  FIND_HELPER(LIBSNDFILE sndfile sndfile.h sndfile)
  FIND_HELPER(ALSA alsa alsa/asoundlib.h asound )
  FIND_LADSPA(LADSPA ladspa.h noise)
