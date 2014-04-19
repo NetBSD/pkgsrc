@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.369 2014/02/02 23:22:35 rodent Exp $
+# $NetBSD: Makefile,v 1.370 2014/04/19 08:19:44 wiz Exp $
 #
 
 COMMENT=	Games
@@ -200,6 +200,7 @@ SUBDIR+=	lbreakout2
 SUBDIR+=	level9
 SUBDIR+=	lgeneral
 SUBDIR+=	lgeneral-data
+SUBDIR+=	lgogdownloader
 SUBDIR+=	libggz
 SUBDIR+=	libkdegames
 SUBDIR+=	libkmahjongg
