@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1539 2014/04/20 02:40:37 wen Exp $
+$NetBSD: CHANGES-2014,v 1.1540 2014/04/20 02:46:58 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2219,3 +2219,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/py-html2text to 2014.4.5 [schmonz 2014-04-20]
 	Updated mail/rss2email to 3.8nb1 [schmonz 2014-04-20]
 	Updated time/p5-DateTime to 1.08 [wen 2014-04-20]
+	Updated security/p5-Digest-SHA to 5.89 [wen 2014-04-20]
