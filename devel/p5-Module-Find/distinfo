@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/07/06 11:26:42 sno Exp $
+$NetBSD: distinfo,v 1.5 2014/04/20 10:12:06 wen Exp $
 
-SHA1 (Module-Find-0.11.tar.gz) = 89c1e3110cc3bada6b146ae8e4dcd6a4c499f2c6
-RMD160 (Module-Find-0.11.tar.gz) = 6de1e3d00e4337089af5428ba84781083484b789
-Size (Module-Find-0.11.tar.gz) = 5286 bytes
+SHA1 (Module-Find-0.12.tar.gz) = d54faffea787012dfcbd2d216fc42d86299f6dd3
+RMD160 (Module-Find-0.12.tar.gz) = c1300912791280163d4859cbe9f816756c7d844f
+Size (Module-Find-0.12.tar.gz) = 5902 bytes
