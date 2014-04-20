@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.93 2014/04/10 06:21:29 obache Exp $
+# $NetBSD: Makefile,v 1.94 2014/04/20 06:40:00 ryoon Exp $
 #
 
 .include "../../inputmethod/uim/Makefile.common"
 
-PKGREVISION=		10
+PKGREVISION=		11
 COMMENT=		Multilingual input method library
 #LICENSE=		See ${WRKSRC}/COPYING
 
@@ -18,21 +18,19 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-emacs
 CONFIGURE_ARGS+=	--with-libgcroots=installed
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=	SunOS_LDFLAGS="-shared -mimpure-text"
+LDFLAGS.SunOS+=	-shared -mimpure-text
 CFLAGS.SunOS+=	-std=c99 -D__EXTENSIONS__
-.endif
 
 .include "options.mk"
 
+MAKE_DIRS+=		etc/uim
 INSTALLATION_DIRS+=	share/doc/uim share/examples/uim
 
 EGDIR=			${PREFIX}/share/examples/uim
 CONF_FILES=		${EGDIR}/loader.scm.example \
-			${PREFIX}/share/uim/loader.scm
+			${PKG_SYSCONFDIR}/uim/loader.scm
 CONF_FILES+=		${EGDIR}/installed-modules.scm.example \
-			${PREFIX}/share/uim/installed-modules.scm
+			${PKG_SYSCONFDIR}/uim/installed-modules.scm
 
 post-install:
 # Register uim module infomation
@@ -51,9 +49,9 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/UIM-SCM ${DESTDIR}${PREFIX}/share/doc/uim
 	${INSTALL_DATA} ${WRKSRC}/doc/UIM-SH ${DESTDIR}${PREFIX}/share/doc/uim
 # loader.scm and installed-modules.scm is updated by uim-module-manager.
-	${MV} ${DESTDIR}${PREFIX}/share/uim/loader.scm \
+	${MV} ${DESTDIR}${PREFIX}/etc/uim/loader.scm \
 		${DESTDIR}${EGDIR}/loader.scm.example
-	${MV} ${DESTDIR}${PREFIX}/share/uim/installed-modules.scm \
+	${MV} ${DESTDIR}${PREFIX}/etc/uim/installed-modules.scm \
 		${DESTDIR}${EGDIR}/installed-modules.scm.example
 
 .include "../../converters/libiconv/buildlink3.mk"

@@ -1,0 +1,21 @@
+$NetBSD: patch-sigscheme_doc_Makefile.am,v 1.1 2014/04/20 06:40:00 ryoon Exp $
+
+Avoid to install of document files of sigscheme, conflict with lang/sigscheme.
+
+--- sigscheme/doc/Makefile.am.orig	2013-06-30 04:26:48.000000000 +0000
++++ sigscheme/doc/Makefile.am
+@@ -11,10 +11,10 @@ ASCIIDOC_HTMLS = \
+ EXTRA_DIST =
+ 
+ # Suppress installing documents on combined-source configuration
+-if USE_LIBSSCM
+-dist_doc_DATA  = $(TXTS)
+-dist_html_DATA = $(ASCIIDOC_HTMLS)
+-endif
++#if USE_LIBSSCM
++#dist_doc_DATA  = $(TXTS)
++#dist_html_DATA = $(ASCIIDOC_HTMLS)
++#endif
+ 
+ MAINTAINERCLEANFILES = $(ASCIIDOC_HTMLS)
+ 

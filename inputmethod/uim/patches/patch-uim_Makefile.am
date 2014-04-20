@@ -1,0 +1,24 @@
+$NetBSD: patch-uim_Makefile.am,v 1.1 2014/04/20 06:40:00 ryoon Exp $
+
+https://github.com/uim/uim/pull/41
+
+--- uim/Makefile.am.orig	2013-06-30 04:26:20.000000000 +0000
++++ uim/Makefile.am
+@@ -6,7 +6,7 @@ AUTOMAKE_OPTIONS = foreign
+ 
+ EXTRA_DIST = encoding-table.c test-gc.c version.h.in
+ 
+-uim_defs = -DSCM_FILES=\"$(datadir)/uim\"
++uim_defs = -DSCM_FILES=\"$(datadir)/uim:$(sysconfdir)/uim\"
+ # FIXME: $(UIM_SCM_CFLAGS) should only affect on uim-scm.c
+ CFLAGS = @CFLAGS@ $(UIM_SCM_CFLAGS)
+ # FIXME: $(SCIM_CFLAGS) should only affect on scim.cpp
+@@ -320,7 +320,7 @@ if LIBEDIT
+ endif
+ 
+ uim_module_manager_LIBS =
+-uim_module_manager_CPPFLAGS = $(uim_defs) -I$(top_srcdir) -DUIM_DATADIR=\""$(datadir)/uim"\"
++uim_module_manager_CPPFLAGS = $(uim_defs) -I$(top_srcdir) -DUIM_DATADIR=\""$(datadir)/uim"\" -DUIM_CONFDIR=\""$(sysconfdir)/uim"\"
+ uim_module_manager_CFLAGS =
+ uim_module_manager_LDADD = libuim-scm.la libuim.la
+ uim_module_manager_SOURCES = uim-module-manager.c
