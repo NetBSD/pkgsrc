@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1557 2014/04/20 14:14:13 wen Exp $
+$NetBSD: CHANGES-2014,v 1.1558 2014/04/20 19:05:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2237,3 +2237,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-ipython to 2.0.0nb3 [imil 2014-04-20]
 	Updated devel/p5-Test-Simple to 1.001003 [wen 2014-04-20]
 	Updated filesystems/p5-Module-Path to 0.13 [wen 2014-04-20]
+	Added devel/rainbow-delimiters-el version 1.3.5 [wiz 2014-04-20]
