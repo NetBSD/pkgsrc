@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13229 2014/04/20 11:40:34 wiz Exp $
+$NetBSD: TODO,v 1.13230 2014/04/20 18:16:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -337,8 +337,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GUIlib-1.1.2
 	o MAMEDiff-2.30
-	o Mesa-10.1
-	o MesaLib-10.1
+	o Mesa-10.1.1
+	o MesaLib-10.1.1
 	o PAM-0.99.7.1
 	o RBTools-0.5.5
 	o REminiscence-0.1.9
@@ -482,6 +482,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dos2unix-6.0.5
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
+	o drupal-7.27
 	o dvtm-0.11
 	o easymenu-0.7.2p1
 	o eboard-1.1.1
@@ -590,7 +591,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gle-4.2.4
 	o glib2-2.40.0
 	o glom-1.14.2 [GNOME 2.26]
-	o glu-10.1
+	o glu-10.1.1
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.12
@@ -666,6 +667,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o heyu-2.9.0
 	o hiawatha-9.3
 	o highlight-3.18
+	o holtz-1.4.0
 	o honeyd-1.5c
 	o horde-5.1.6
 	o html2wml-0.4.11
@@ -687,11 +689,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o instiki-0.13
 	o iodbc-3.52.9
 	o ircservices-5.1.21
+	o isl-0.13
 	o ispell-ga-4.6
 	o ja-vflib-lib-3.6.10
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
 	o jabberd-1.6.1.1
+	o jack-0.124.1
 	o java-db3-3.87
 	o jcabc2ps-20070110
 	o jed-0.99-18
@@ -739,6 +743,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libgnome-keyring-3.12.0
 	o libgnomedb-3.1.2
 	o libgnomekbd-3.4.0.2
+	o libgpg-error-1.13
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
 	o libjit-1.0.2
 	o libmcs-0.7.2
@@ -786,6 +791,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o matchbox-panel-0.9.3
 	o mc-4.8.12
 	o mcsim-5.5.0
+	o memcached-1.4.18
 	o mergeant-0.67
 	o mesure-0.7.2
 	o metis-5.1.0
@@ -943,7 +949,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-lasso-2.4.0
 	o py-logilab-astng-0.24.3
 	o py-logilab-common-0.60.1
+	o py-lxml-3.3.5
 	o py-markdown-2.3.1
+	o py-markupsafe-0.21
 	o py-mezzanine-3.0.5
 	o py-mpmath-0.18
 	o py-musicbrainz-0.7.4
@@ -1023,6 +1031,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o secpanel-0.6.1
 	o sendfile-20010424
 	o ser-0.9.6
+	o shared-mime-info-1.3
 	o sharity-3.7
 	o sharity-light-1.3
 	o shc-3.8
@@ -1144,11 +1153,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wcalc-2.4
 	o wdiff-1.2.2
 	o webalizer-2.23.05
-	o webkit-gtk-2.4.0
+	o webkit-gtk-2.4.1
 	o webmin-1.680
 	o websvn-2.3.2
 	o windowlab-1.40
-	o wine-devel-1.7.16
+	o wine-devel-1.7.17
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wml-2.0.11
@@ -1161,7 +1170,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wxGTK-3.0
 	o wxRemind-101
 	o wyrd-1.4.6
-	o x264-devel-20140405
+	o x264-devel-20140419
 	o xanalyser-1.30
 	o xbindkeys-1.8.6
 	o xbindkeys-tk-1.8.0
