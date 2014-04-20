@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1885 2014/04/20 11:24:35 obache Exp $
+# $NetBSD: Makefile,v 1.1886 2014/04/20 19:05:43 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1551,6 +1551,7 @@ SUBDIR+=	qof
 SUBDIR+=	qtscriptgenerator
 SUBDIR+=	quilt
 SUBDIR+=	ragel
+SUBDIR+=	rainbow-delimiters-el
 SUBDIR+=	rapidsvn
 SUBDIR+=	ratfor
 SUBDIR+=	rcs
