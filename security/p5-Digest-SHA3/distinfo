@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/04/20 03:02:49 wen Exp $
+
+SHA1 (Digest-SHA3-0.12.tar.gz) = c93a6f3977b71d48437082c64a2e44461f3695f8
+RMD160 (Digest-SHA3-0.12.tar.gz) = 2b5cb822aeded9fed7b8b256b9a508e325bb139b
+Size (Digest-SHA3-0.12.tar.gz) = 45640 bytes
