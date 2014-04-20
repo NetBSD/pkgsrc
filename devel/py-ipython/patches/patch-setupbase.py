@@ -1,20 +1,15 @@
-$NetBSD: patch-setupbase.py,v 1.1.1.1 2012/01/29 13:22:52 obache Exp $
+$NetBSD: patch-setupbase.py,v 1.2 2014/04/20 10:06:22 imil Exp $
 
-* honor PKGMANDIR
-* let not to install compressed man pages.
+Honor PKGMANDIR
 
---- setupbase.py.orig	2010-10-12 07:13:29.000000000 +0000
+--- setupbase.py.orig	2014-04-02 05:31:02.000000000 +0000
 +++ setupbase.py
-@@ -188,10 +188,10 @@ def find_data_files():
+@@ -272,7 +272,7 @@ def find_data_files():
+     Just man pages at this point.
      """
-     
-     docdirbase  = 'share/doc/ipython'
--    manpagebase = 'share/man/man1'
-+    manpagebase = os.environ.get('PKGMANDIR') + '/man1'
+ 
+-    manpagebase = pjoin('share', 'man', 'man1')
++    manpagebase = pjoin(os.environ.get('PKGMANDIR'), 'man1')
  
      # Simple file lists can be made by hand
--    manpages  = filter(isfile, glob('docs/man/*.1.gz'))
-+    manpages  = filter(isfile, glob('docs/man/*.1'))
-     igridhelpfiles = filter(isfile, glob('IPython/Extensions/igrid_help.*'))
- 
-     # For nested structures, use the utility above
+     manpages = [f for f in glob(pjoin('docs','man','*.1.gz')) if isfile(f)]
