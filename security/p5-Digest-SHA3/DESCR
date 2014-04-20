@@ -1,0 +1,6 @@
+Digest::SHA3 is a complete implementation of the NIST SHA-3
+cryptographic hash function, known originally as Keccak. It
+gives Perl programmers a convenient way to calculate SHA3-224,
+SHA3-256, SHA3-384, and SHA3-512 message digests, as well as
+variable-length hashes using the SHA3-0 variant. The module
+can handle all types of input, including partial-byte data.
