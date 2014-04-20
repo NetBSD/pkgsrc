@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1884 2014/04/17 20:56:18 imil Exp $
+# $NetBSD: Makefile,v 1.1885 2014/04/20 11:24:35 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -1476,6 +1476,7 @@ SUBDIR+=	py-hgview
 SUBDIR+=	py-idle
 SUBDIR+=	py-ipaddr
 SUBDIR+=	py-ipython
+SUBDIR+=	py-ipython010
 SUBDIR+=	py-ipython013
 SUBDIR+=	py-ipython1
 SUBDIR+=	py-jersey
