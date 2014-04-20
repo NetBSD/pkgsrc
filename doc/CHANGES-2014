@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1542 2014/04/20 06:40:37 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.1543 2014/04/20 08:22:11 imil Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2222,3 +2222,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/p5-Digest-SHA to 5.89 [wen 2014-04-20]
 	Added security/p5-Digest-SHA3 version 0.12 [wen 2014-04-20]
 	Updated inputmethod/uim to 1.8.6nb11 [ryoon 2014-04-20]
+	Updated net/py-irclib to 8.5.4nb2 [imil 2014-04-20]
