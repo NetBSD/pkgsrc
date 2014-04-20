@@ -1,0 +1,13 @@
+$NetBSD: patch-sigscheme_configure,v 1.1 2014/04/20 14:51:41 ryoon Exp $
+
+--- sigscheme/configure.orig	2013-06-30 04:27:03.000000000 +0000
++++ sigscheme/configure
+@@ -16003,7 +16003,7 @@ if test "x$ac_cv_func_strdup" = xyes; th
+ _ACEOF
+ 
+     # Overrides _POSIX_C_SOURCE
+-    $as_echo "#define _XOPEN_SOURCE 500" >>confdefs.h
++    $as_echo "#define _XOPEN_SOURCE 600" >>confdefs.h
+ 
+ 
+ fi
