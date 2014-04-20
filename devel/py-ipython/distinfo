@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/01/29 13:22:52 obache Exp $
+$NetBSD: distinfo,v 1.2 2014/04/20 10:06:22 imil Exp $
 
-SHA1 (ipython-0.10.2.tar.gz) = d45b97b0f458fd517cb2bfa9ebb3c671c46a21c0
-RMD160 (ipython-0.10.2.tar.gz) = 365a4eb9b534df1a9aa8717f173e9a032224ea01
-Size (ipython-0.10.2.tar.gz) = 5842688 bytes
-SHA1 (patch-setupbase.py) = 7d5ebc0d1ad322323b70d3b32aec58e4f6fa8555
+SHA1 (ipython-2.0.0.tar.gz) = d741ca11f19eecaaa0c9879163b9e66041f79813
+RMD160 (ipython-2.0.0.tar.gz) = df0fdad9c45291179a119232db83f6259cbe6b50
+Size (ipython-2.0.0.tar.gz) = 11877967 bytes
+SHA1 (patch-setupbase.py) = 8cd647afb3f26f19f5b8d872af7835b73615b324
