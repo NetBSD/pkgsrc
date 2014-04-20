@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1537 2014/04/20 01:45:09 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.1538 2014/04/20 01:45:28 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2217,3 +2217,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/json-c to 0.12 [ryoon 2014-04-20]
 	Updated textproc/json-c to 0.12nb1 [ryoon 2014-04-20]
 	Updated textproc/py-html2text to 2014.4.5 [schmonz 2014-04-20]
+	Updated mail/rss2email to 3.8nb1 [schmonz 2014-04-20]
