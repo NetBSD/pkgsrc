@@ -1,0 +1,5 @@
+RainbowDelimiters is a "rainbow parentheses"-like mode for emacs
+which highlights parens, brackets, and braces according to their
+depth. Each successive level is highlighted a different color. This
+makes it easy to spot matching delimiters, orient yourself in the
+code, and tell which statements are at the same depth.
