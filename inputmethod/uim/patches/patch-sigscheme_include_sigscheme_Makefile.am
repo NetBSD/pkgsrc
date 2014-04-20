@@ -1,0 +1,15 @@
+$NetBSD: patch-sigscheme_include_sigscheme_Makefile.am,v 1.1 2014/04/20 06:40:00 ryoon Exp $
+
+Avoid to install of header files of sigscheme, conflict with lang/sigscheme.
+
+--- sigscheme/include/sigscheme/Makefile.am.orig	2013-06-30 04:26:48.000000000 +0000
++++ sigscheme/include/sigscheme/Makefile.am
+@@ -4,6 +4,8 @@ BUILT_SOURCES = \
+         sigscheme.h \
+         storage-common.h storage-fatty.h storage-compact.h
+ 
++noinst_HEADERS = $(BUILT_SOURCES)
++
+ config.h: $(top_builddir)/src/config.h
+ 	rm -f $@
+ 	$(LN_S) $< $@
