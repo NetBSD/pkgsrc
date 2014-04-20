@@ -1,14 +1,19 @@
-@comment $NetBSD: PLIST,v 1.3 2014/04/20 10:06:22 imil Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/04/20 13:08:54 imil Exp $
 bin/ipcluster
-bin/ipcluster3
+${PLIST.py3x}bin/ipcluster3
+${PLIST.py2x}bin/ipcluster2
 bin/ipcontroller
-bin/ipcontroller3
+${PLIST.py3x}bin/ipcontroller3
+${PLIST.py2x}bin/ipcontroller2
 bin/ipengine
-bin/ipengine3
+${PLIST.py3x}bin/ipengine3
+${PLIST.py2x}bin/ipengine2
 bin/iptest
-bin/iptest3
+${PLIST.py3x}bin/iptest3
+${PLIST.py2x}bin/iptest2
 bin/ipython
-bin/ipython3
+${PLIST.py3x}bin/ipython3
+${PLIST.py2x}bin/ipython2
 ${PYSITELIB}/IPython/__init__.py
 ${PYSITELIB}/IPython/__main__.py
 ${PYSITELIB}/IPython/__init__.pyc
