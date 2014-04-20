@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/01/02 12:19:00 obache Exp $
+# $NetBSD: Makefile,v 1.20 2014/04/20 09:32:57 obache Exp $
 #
 
 DISTNAME=	json-glib-0.16.2
@@ -16,6 +16,8 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake msgfmt msgmerge pkg-config xgettext
 
 PKGCONFIG_OVERRIDE+=	json-glib.pc.in
+
+TEST_TARGET=		check
 
 .include "options.mk"
 
