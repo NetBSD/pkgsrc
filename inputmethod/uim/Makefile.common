@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2013/08/11 07:50:51 obache Exp $
+# $NetBSD: Makefile.common,v 1.12 2014/04/20 06:40:00 ryoon Exp $
 #
 # used by inputmethod/uim/Makefile
 # used by inputmethod/uim-elisp/Makefile
@@ -14,3 +14,9 @@ HOMEPAGE=		http://code.google.com/p/uim/
 
 DISTINFO_FILE=		${.CURDIR}/../../inputmethod/uim/distinfo
 PATCHDIR=		${.CURDIR}/../../inputmethod/uim/patches
+
+USE_TOOLS+=		automake
+
+pre-configure:
+	set -e; cd ${WRKSRC}; \
+	aclocal -I m4; autoheader; automake -a --foreign -i; autoconf
