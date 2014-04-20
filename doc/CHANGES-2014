@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1546 2014/04/20 10:05:17 wen Exp $
+$NetBSD: CHANGES-2014,v 1.1547 2014/04/20 10:07:45 imil Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2226,3 +2226,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/json-glib to 1.0.0 [obache 2014-04-20]
 	Updated devel/p5-Moose to 2.1205 [wen 2014-04-20]
 	Updated devel/p5-Module-CoreList to 3.09 [wen 2014-04-20]
+	Updated devel/py-ipython to 2.0.0 [imil 2014-04-20]
