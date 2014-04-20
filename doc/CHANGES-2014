@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1534 2014/04/19 23:17:42 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.1535 2014/04/20 00:10:12 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2214,3 +2214,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated parallel/py-billiard to 3.3.0.17 [rodent 2014-04-19]
 	Added net/py-celery version 3.1.11 [rodent 2014-04-19]
 	Updated www/firefox to 28.0nb4 [ryoon 2014-04-19]
+	Updated textproc/json-c to 0.12 [ryoon 2014-04-20]
