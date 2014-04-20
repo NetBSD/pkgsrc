@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1548 2014/04/20 10:14:11 wen Exp $
+$NetBSD: CHANGES-2014,v 1.1549 2014/04/20 10:19:43 imil Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2228,3 +2228,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Module-CoreList to 3.09 [wen 2014-04-20]
 	Updated devel/py-ipython to 2.0.0 [imil 2014-04-20]
 	Updated devel/p5-Module-Find to 0.12 [wen 2014-04-20]
+	Updated devel/py-ipython to 2.0.0nb1 [imil 2014-04-20]
