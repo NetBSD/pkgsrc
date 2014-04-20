@@ -1,24 +1,22 @@
-$NetBSD: patch-aa,v 1.5 2011/03/18 10:39:08 adam Exp $
+$NetBSD: patch-aa,v 1.6 2014/04/20 21:03:25 adam Exp $
 
---- Makefile.in.orig	2008-01-07 22:35:55.000000000 +0000
+--- Makefile.in.orig	2012-07-09 04:55:38.000000000 +0000
 +++ Makefile.in
-@@ -19,6 +19,6 @@
+@@ -19,5 +19,5 @@
  #  
  CC = @CC@
 -CFLAGS = @CFLAGS@ @CPPFLAGS@
--LDFLAGS = @LIBS@
 +CFLAGS = @CFLAGS@ @CPPFLAGS@ ${DEFS}
-+LDFLAGS = @LDFLAGS@ @LIBS@
+ LDFLAGS = @LDFLAGS@ @LIBS@
  
- YACC = @YACC@
-@@ -42,5 +42,5 @@ PID_FILE = ${VAR_DIR}/run/vtund.pid
+@@ -43,5 +43,5 @@ PID_FILE = ${VAR_DIR}/run/vtund.pid
  CFG_FILE = ${ETC_DIR}/vtund.conf
  STAT_DIR = ${VAR_DIR}/log/vtund
 -LOCK_DIR = ${VAR_DIR}/lock/vtund
 +LOCK_DIR = ${VAR_DIR}/run/vtund
  
  DEFS = -DVTUN_CONFIG_FILE=\"$(CFG_FILE)\" -DVTUN_PID_FILE=\"$(PID_FILE)\" \
-@@ -55,7 +55,4 @@ OBJS = main.o cfg_file.tab.o cfg_file.le
+@@ -56,7 +56,4 @@ OBJS = main.o cfg_file.tab.o cfg_file.le
  CONFIGURE_FILES = Makefile config.status config.cache config.h config.log 
  
 -%.o: %.c vtun.h lib.h
