@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1544 2014/04/20 09:36:44 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1545 2014/04/20 09:58:21 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2224,3 +2224,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated inputmethod/uim to 1.8.6nb11 [ryoon 2014-04-20]
 	Updated net/py-irclib to 8.5.4nb2 [imil 2014-04-20]
 	Updated textproc/json-glib to 1.0.0 [obache 2014-04-20]
+	Updated devel/p5-Moose to 2.1205 [wen 2014-04-20]
