@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/04/19 17:59:42 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2014/04/20 18:24:26 rodent Exp $
 #
 
 DISTNAME=	celery-3.1.11
@@ -9,7 +9,7 @@ MASTER_SITES=	https://pypi.python.org/packages/source/c/celery/
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://www.celeryproject.org/
 COMMENT=	Asynchronous task/job queue based on distributed message passing
-LICENSE=	modified-bsd AND cc-by-nc-sa-v3.0
+LICENSE=	modified-bsd AND cc-by-nc-sa-v3.0-license
 
 DEPENDS+=	${PYPKGPREFIX}-anyjson-[0-9]*:../../textproc/py-anyjson
 DEPENDS+=	${PYPKGPREFIX}-billiard>=3.3.0.17:../../parallel/py-billiard
