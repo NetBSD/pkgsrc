@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2014/04/20 09:36:29 obache Exp $
+
+* test(1) portability fix
+
+--- configure.orig	2014-04-20 08:58:47.000000000 +0000
++++ configure
+@@ -12430,7 +12430,7 @@ else
+   ENABLE_ALWAYS_BUILD_TESTS_FALSE=
+ fi
+ 
+-  if test "$ENABLE_INSTALLED_TESTS" == "1"; then
++  if test "$ENABLE_INSTALLED_TESTS" = "1"; then
+     installed_test_metadir=${datadir}/installed-tests/json-glib
+ 
+     installed_testdir=${libexecdir}/installed-tests/json-glib
