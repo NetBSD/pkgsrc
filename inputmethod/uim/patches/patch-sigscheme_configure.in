@@ -1,0 +1,15 @@
+$NetBSD: patch-sigscheme_configure.in,v 1.1 2014/04/20 06:40:00 ryoon Exp $
+
+* Fix for SunOS
+
+--- sigscheme/configure.in.orig	2013-06-30 04:26:58.000000000 +0000
++++ sigscheme/configure.in
+@@ -226,7 +226,7 @@ AC_CHECK_FUNCS(memalign)
+ AC_CHECK_FUNCS(strdup,
+   [
+     # Overrides _POSIX_C_SOURCE
+-    AC_DEFINE(_XOPEN_SOURCE, 500)
++    AC_DEFINE(_XOPEN_SOURCE, 600)
+   ])
+ AH_VERBATIM(_XOPEN_SOURCE,
+ [/* Define to 500 to enable strdup(3). */
