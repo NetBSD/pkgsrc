@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2014/01/25 10:30:00 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2014/04/20 11:26:23 obache Exp $
 
 DISTNAME=	accerciser-1.12.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/accerciser/1.12/}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-gnome2-desktop-[0-9]*:../../x11/py-gnome2-desktop
 DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.8:../../x11/py-gtk2
 DEPENDS+=	${PYPKGPREFIX}-at-spi>=1.23.4:../../devel/py-at-spi
-DEPENDS+=	${PYPKGPREFIX}-ipython-[0-9]*:../../devel/py-ipython
+DEPENDS+=	${PYPKGPREFIX}-ipython<0.11:../../devel/py-ipython010
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ORBit via py-gnome2, py-ipython, py-gtk2
 
