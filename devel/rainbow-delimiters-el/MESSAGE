@@ -1,0 +1,21 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2014/04/20 19:05:08 wiz Exp $
+
+You will need to add something like the following to your .emacs file to
+autoload the mode for Emacs.
+
+	(require 'rainbow-delimiters)
+
+To use only with specific modes, add lines like the following:
+
+	(add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
+
+To enable in all programming-related modes (Emacs 24+):
+
+	(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+
+To use Emacs-wide, add this line:
+
+	(global-rainbow-delimiters-mode)
+
+===========================================================================
