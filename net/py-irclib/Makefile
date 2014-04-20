@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2014/04/08 16:52:50 imil Exp $
+# $NetBSD: Makefile,v 1.6 2014/04/20 08:21:56 imil Exp $
 #
 
 IRCVERS=	8.5.4
 DISTNAME=	irc-${IRCVERS}
 PKGNAME=	${PYPKGPREFIX}-irclib-${IRCVERS}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net python
 MASTER_SITES=	http://pypi.python.org/packages/source/i/irc/
 EXTRACT_SUFX=	.zip
@@ -17,6 +17,7 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	# none
 
 DEPENDS+=	${PYPKGPREFIX}-six>=1.5.2:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=3.4.4:../../devel/py-setuptools
 
 .include "../../lang/python/egg.mk"
 
