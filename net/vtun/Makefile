@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2014/02/12 23:18:27 tron Exp $
+# $NetBSD: Makefile,v 1.50 2014/04/20 21:03:24 adam Exp $
 
-DISTNAME=	vtun-3.0.2
-PKGREVISION=	2
+DISTNAME=	vtun-3.0.3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vtun/}
 
