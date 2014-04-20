@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1550 2014/04/20 10:33:01 imil Exp $
+$NetBSD: CHANGES-2014,v 1.1551 2014/04/20 11:24:05 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2230,3 +2230,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Module-Find to 0.12 [wen 2014-04-20]
 	Updated devel/py-ipython to 2.0.0nb1 [imil 2014-04-20]
 	Updated net/py-irclib to 8.5.4nb3 [imil 2014-04-20]
+	Added devel/py-ipython010 version 0.10.2nb1 [obache 2014-04-20]
