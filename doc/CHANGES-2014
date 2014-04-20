@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1555 2014/04/20 13:16:44 imil Exp $
+$NetBSD: CHANGES-2014,v 1.1556 2014/04/20 13:47:30 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2235,3 +2235,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/accerciser3 to 3.12.0nb1 [wiz 2014-04-20]
 	Updated net/py-irclib to 8.5.4nb4 [imil 2014-04-20]
 	Updated devel/py-ipython to 2.0.0nb3 [imil 2014-04-20]
+	Updated devel/p5-Test-Simple to 1.001003 [wen 2014-04-20]
