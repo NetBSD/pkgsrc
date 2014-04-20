@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.19 2013/11/16 02:01:46 ryoon Exp $
+# $NetBSD: options.mk,v 1.20 2014/04/20 23:07:55 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
@@ -58,6 +58,8 @@ CONFIGURE_ARGS+=	--enable-optimize=-O2
 .if !empty(PKG_OPTIONS:Mpulseaudio)
 .include "../../audio/pulseaudio/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-pulseaudio
+.else
+CONFIGURE_ARGS+=	--disable-pulseaudio
 .endif
 # XXX end
 
