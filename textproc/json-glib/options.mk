@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2014/01/02 12:19:00 obache Exp $
+# $NetBSD: options.mk,v 1.4 2014/04/20 09:32:57 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.json-glib
-PKG_SUPPORTED_OPTIONS=	introspection nls tests
-PKG_SUGGESTED_OPTIONS+=	introspection nls tests
+PKG_SUPPORTED_OPTIONS=	introspection nls
+PKG_SUGGESTED_OPTIONS+=	introspection nls
 PLIST_VARS+=		introspection nls
 
 .include "../../mk/bsd.options.mk"
@@ -23,10 +23,4 @@ CONFIGURE_ARGS+=	--enable-introspection=no
 PLIST.nls=		yes
 .else
 CONFIGURE_ARGS+=	--disable-nls
-.endif
-
-.if !empty(PKG_OPTIONS:Mtests)
-TEST_TARGET=		check
-.else
-CONFIGURE_ARGS+=	--disable-glibtest
 .endif
