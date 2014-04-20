@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2014/04/13 09:01:45 wen Exp $
+# $NetBSD: Makefile,v 1.31 2014/04/20 02:46:00 wen Exp $
 
-DISTNAME=	Digest-SHA-5.88
+DISTNAME=	Digest-SHA-5.89
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	security perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Digest/}
