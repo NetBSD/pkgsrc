@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2013/10/10 14:42:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2014/04/21 06:34:08 richard Exp $
 #
 
 DISTNAME=		gnome-system-tools-2.22.2
-PKGREVISION=		25
+PKGREVISION=		26
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-system-tools/2.22/}
 EXTRACT_SUFX=		.tar.bz2
@@ -27,6 +27,12 @@ USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 USE_LIBTOOL=		YES
 
 GCONF_SCHEMAS+=		gnome-system-tools.schemas
+
+#fix symlink problems when primary source figure is not in 'C' directory root
+#may be overkill (only nl needs this) but it avoids `pkg_admin check` errors
+post-extract:
+	${CP} ${WRKSRC}/doc/services/nl/figures/service-properties.png \
+			${WRKSRC}/doc/services/C/figures/
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
