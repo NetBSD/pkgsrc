@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.13 2014/04/19 05:21:16 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.14 2014/04/21 13:39:22 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q1 branch:
@@ -58,3 +58,8 @@ Pullup ticket #4379 - requested by obache
 pkgtools/x11-links: bug fix update
 Pullup ticket #4380 - requested by tron
 net/rsync: security patch
+Pullup ticket #4381 - requested by ryoon
+www/firefox: bug fix
+Pullup ticket #4383 - requested by ryoon
+mail/thunderbird: build fix
+www/firefox24: build fix
