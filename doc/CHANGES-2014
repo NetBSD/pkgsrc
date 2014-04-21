@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1561 2014/04/21 13:36:19 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1562 2014/04/21 13:36:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2241,3 +2241,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/vtun to 3.0.3 [adam 2014-04-20]
 	Updated audio/cmus to 2.5.0nb6 [wiz 2014-04-21]
 	Added devel/py-mercurial version 2.9.2 [wiz 2014-04-21]
+	Updated devel/mercurial to 2.9.2nb1 [wiz 2014-04-21]
