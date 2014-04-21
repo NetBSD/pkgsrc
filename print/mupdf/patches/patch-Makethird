@@ -1,15 +1,36 @@
-$NetBSD: patch-Makethird,v 1.1 2014/01/09 14:25:23 mef Exp $
+$NetBSD: patch-Makethird,v 1.2 2014/04/21 16:14:40 wiz Exp $
 
-libcurl (www/curl) support. By default mupdf can be installed with curl
-support *only* building it in ${WRKSRC}/thirdparty.
+o mujs building support with libtool
+o libcurl (www/curl) support. By default mupdf can be installed with curl
+ support *only* building it in ${WRKSRC}/thirdparty.
 
---- Makethird.orig	2013-08-14 12:41:20.000000000 +0000
+--- Makethird.orig	2014-04-11 15:10:41.000000000 +0000
 +++ Makethird
-@@ -444,5 +444,6 @@ $(CURL_OUT)/%.o: $(CURL_DIR)/lib/%.c	| $
- CURL_CFLAGS := -I$(CURL_DIR)/include
- CURL_LIBS := $(SYS_CURL_DEPS)
- else
--NOCURL := yes
+@@ -50,14 +50,14 @@ endif
+ 
+ ifneq "$(wildcard $(MUJS_DIR)/README)" ""
+ 
+-MUJS_LIB := $(OUT)/libmujs.a
++MUJS_LIB := $(OUT)/libmujs.la
+ MUJS_OUT := $(OUT)/mujs
+ MUJS_SRC := one.c
+ 
+-$(MUJS_LIB): $(addprefix $(MUJS_OUT)/, $(MUJS_SRC:%.c=%.o))
++$(MUJS_LIB): $(addprefix $(MUJS_OUT)/, $(MUJS_SRC:%.c=%.lo))
+ $(MUJS_OUT):
+ 	$(MKDIR_CMD)
+-$(MUJS_OUT)/%.o: $(MUJS_DIR)/%.c | $(MUJS_OUT)
++$(MUJS_OUT)/%.lo: $(MUJS_DIR)/%.c | $(MUJS_OUT)
+ 	$(CC_CMD)
+ 
+ MUJS_CFLAGS := -I$(MUJS_DIR)
+@@ -456,6 +456,9 @@ CURL_LIBS := $(SYS_CURL_DEPS)
+ HAVE_CURL := yes
+ endif
+ 
 +CURL_CFLAGS := $(SYS_CURL_CFLAGS)
 +CURL_LIBS := $(SYS_CURL_LIBS) $(SYS_CURL_DEPS)
- endif
++
+ # --- X11 ---
+ 
+ ifeq "$(HAVE_X11)" "yes"
