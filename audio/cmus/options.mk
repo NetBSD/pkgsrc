@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.11 2014/04/18 14:12:51 wiz Exp $
+# $NetBSD: options.mk,v 1.12 2014/04/21 09:49:49 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.cmus
 PKG_SUPPORTED_OPTIONS=		flac mad vorbis arts libao musepack faad wavpack pulseaudio
 PKG_SUPPORTED_OPTIONS+=		wide-curses ffmpeg
 PKG_OPTIONS_OPTIONAL_GROUPS=	mod
 PKG_OPTIONS_GROUP.mod=		modplug mikmod
-PKG_SUGGESTED_OPTIONS=		flac mad libao vorbis
+PKG_SUGGESTED_OPTIONS=		flac libao mad modplug vorbis
 PKG_OPTIONS_LEGACY_OPTS=	ao:libao
 PKG_OPTIONS_LEGACY_OPTS=	mpcdec:musepack
 
