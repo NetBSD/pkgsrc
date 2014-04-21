@@ -1,4 +1,6 @@
-$NetBSD: patch-modplug.c,v 1.1 2014/04/19 14:48:12 joerg Exp $
+$NetBSD: patch-modplug.c,v 1.2 2014/04/21 09:49:49 wiz Exp $
+
+Adapt for header path change.
 
 --- modplug.c.orig	2014-04-19 13:01:44.000000000 +0000
 +++ modplug.c
