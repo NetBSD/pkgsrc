@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2014/03/19 21:05:14 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/04/21 13:37:41 wiz Exp $
 
 DISTNAME=	hgview-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	http://download.logilab.org/pub/hgview/
 
@@ -10,19 +11,15 @@ HOMEPAGE=	http://download.logilab.org/pub/hgview/
 COMMENT=	Visually navigate in a Mercurial repository history
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	mercurial>=1.6:../../devel/mercurial
+DEPENDS+=	${PYPKGPREFIX}-mercurial>=1.6:../../devel/py-mercurial
+DEPENDS+=	${PYPKGPREFIX}-urwid-[0-9]*:../../devel/py-urwid
 BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
 REPLACE_PYTHON= *.py
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.8.0
-PYTHON_VERSIONS_INCOMPATIBLE+=	26 # imports modules from mercurial, so needs to be the same version
 
 USE_TOOLS+=	gmake
-
-.include "../../lang/python/pyversion.mk"
-
-DEPENDS+=	${PYPKGPREFIX}-urwid-[0-9]*:../../devel/py-urwid
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
