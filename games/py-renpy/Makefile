@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/04/10 05:39:15 obache Exp $
+# $NetBSD: Makefile,v 1.6 2014/04/21 18:15:09 joerg Exp $
 
 DISTNAME=	renpy-6.16.5-source
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-source//}
@@ -15,7 +15,7 @@ LICENSE=	mit
 USE_TOOLS+=	pax
 
 PYSETUPSUBDIR=	module
-EGG_NAME=	Ren_Py-${PKGVERSION}.525
+EGG_NAME=	Ren_Py-${PKGVERSION_NOREV}.525
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 6.16.5
 
 RENPY_DEPS_INSTALL+=	${BUILDLINK_PREFIX.SDL}
