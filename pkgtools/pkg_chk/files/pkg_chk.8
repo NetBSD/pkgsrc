@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_chk.8,v 1.29 2011/01/13 17:07:01 jmmv Exp $
+.\"	$NetBSD: pkg_chk.8,v 1.30 2014/04/21 21:32:26 abs Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@NetBSD.org)
 .\" Absolutely no warranty.
@@ -248,16 +248,42 @@ The default set of tags used to determine which packages to match
 in
 .Pa pkgchk.conf
 are equivalent to the output of the following with
-any spaces converted to hyphens (-): hostname -s, hostname, uname
--srm, uname -sr, uname -sm, uname -s, uname -r, uname -m.
-If
-.Pa /usr/X11R6/lib/libX11.so
+any spaces converted to hyphens (-):
+.Bl -bullet
+.It
+hostname -s
+.It
+hostname
+.It
+uname -srm
+.It
+uname -sr
+.It
+uname -sm
+.It
+uname -s
+.It
+uname -r
+.It
+uname -m
+.El
+.Pp
+If any of
+.Pa /usr/X11R6/lib/libX11.so ,
+.Pa /usr/X11R6/lib/libX11.a ,
+.Pa /usr/X11R7/lib/libX11.so
 or
-.Pa /usr/X11R6/lib/libX11.a
+.Pa /usr/X11R7/lib/libX11.a
 is present,
 .Em x11
 is added to the list of tags.
+.Pp
 Tags should not contain the - or + characters.
+.Pp
+Setting the tag
+.Sq * 
+will cause all package lines to match, regardless of their tag values.
+.Pp
 To see tags for the current machine, run
 .Nm
 with the

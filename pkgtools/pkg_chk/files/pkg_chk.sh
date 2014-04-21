@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.71 2012/09/01 17:52:09 abs Exp $
+# $Id: pkg_chk.sh,v 1.72 2014/04/21 21:32:26 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Make -g list user-installed packages first, followed by commented
@@ -456,6 +456,8 @@ pkgdir2pkgnames()
     IFS="$oIFS"
     }
 
+# Redefines opt_D and opt_U to full list of defined and unset tags
+#
 determine_tags()
     {
     # Determine list of tags
@@ -493,9 +495,9 @@ determine_tags()
     esac
     if [ -n "$TAGS" ];then
 	if [ -n "$opt_D" ];then
-		opt_D="$opt_D,$TAGS"
+            opt_D="$opt_D,$TAGS"
 	else
-		opt_D="$TAGS"
+            opt_D="$TAGS"
 	fi
     fi
     verbose "set   TAGS=$opt_D"
@@ -509,20 +511,32 @@ pkgdirs_from_conf()
 	fatal "Unable to read PKGCHK_CONF '$CONF'"
     fi
 
+    determine_tags
 
     # Extract list of valid pkgdirs (skip any 'alreadyset' in $LIST)
     #
-    LIST="$LIST "$(${AWK} -v alreadyset="$LIST" -v setlist="$opt_D" -v unsetlist="$opt_U" '
+    verbose ${AWK} -v alreadyset="$LIST" -v set_tags="$opt_D" -v unset_tags="$opt_U"
+    LIST="$LIST "$(${AWK} -v alreadyset="$LIST" -v set_tags="$opt_D" -v unset_tags="$opt_U" '
     BEGIN {
 	split(alreadyset, tmp, " ");
-	for (tag in tmp) { skip[tmp[tag]] = 1; }
+	for (itag in tmp) {
+          skip[tmp[itag]] = 1;
+        }
 
-	split(setlist, tmp, ",");
-	for (tag in tmp) { taglist[tmp[tag]] = 1; }
+	split(set_tags, tmp, ",");
+	for (itag in tmp) {
+          if (tmp[itag] == "*") {
+            match_all_packages = 1;
+          }
+          taglist[tmp[itag]] = 1;
+        }
 
-	split(unsetlist, tmp, ",");
-	for (tag in tmp) { skip[tmp[tag]] = 1; nofile[tmp[tag]] = 1 ;
-			delete taglist[tmp[tag]] }
+	split(unset_tags, tmp, ",");
+	for (itag in tmp) {
+          skip[tmp[itag]] = 1;
+          nofile[tmp[itag]] = 1;
+          delete taglist[tmp[itag]];
+        }
 
 	taglist["*"] = "*"
     }
@@ -552,8 +566,9 @@ pkgdirs_from_conf()
     else
 	{
 	taggroup = ""
-	if (NF == 1)			# If only one arg, we want pkg
-	    need = 1;
+	if (match_all_packages || NF == 1)	# If only one arg, we want pkg
+            print $1;
+            next;
 	}
     for (f = 2 ; f<=NF ; ++f) {		# For each word on the line
 	if (sub("^-", "", $f)) {	# If it begins with a '-'
@@ -785,43 +800,35 @@ verbose_var()
     fi
     }
 
-original_argv="$@"
-args=$(getopt BC:D:L:P:U:abcfghiklNnpqrsuv "$@" || true)
-if [ $? != 0 ]; then
-    opt_h=1
-fi
-set -o noglob # -U can be '*'
-set -- $args
-set +o noglob
-while [ $# != 0 ]; do
-    case "$1" in
-	-a ) opt_a=1 ;;
-	-B ) opt_B=1 ;;
-	-b ) opt_b=1 ;;
-	-C ) opt_C="$2" ; shift ;;
-	-c ) opt_a=1 ; opt_q=1 ; echo "-c is deprecated - use -a -q" ;;
-	-D ) opt_D="$2" ; shift ;;
-	-f ) opt_f=1 ;;
-	-g ) opt_g=1 ;;
-	-h ) opt_h=1 ;;
-	-i ) opt_u=1 ; opt_q=1 ; echo "-i is deprecated - use -u -q" ;;
-	-k ) opt_k=1 ;;
-	-L ) opt_L="$2" ; shift ;;
-	-l ) opt_l=1 ;;
-	-N ) opt_N=1 ;;
-	-n ) opt_n=1 ;;
-	-p ) opt_p=1 ;;
-	-P ) opt_P="$2" ; shift ;;
-	-q ) opt_q=1 ;;
-	-r ) opt_r=1 ;;
-	-s ) opt_s=1 ;;
-	-U ) opt_U="$2" ; shift ;;
-	-u ) opt_u=1 ;;
-	-v ) opt_v=1 ;;
-	-- ) shift; break ;;
+original_argv="$@" # just used for verbose output
+while getopts BC:D:L:P:U:abcfghiklNnpqrsuv ch; do
+    case "$ch" in
+	a ) opt_a=1 ;;
+	B ) opt_B=1 ;;
+	b ) opt_b=1 ;;
+	C ) opt_C="$OPTARG" ;;
+	c ) opt_a=1 ; opt_q=1 ; echo "-c is deprecated - use -a -q" ;;
+	D ) opt_D="$OPTARG" ;;
+	f ) opt_f=1 ;;
+	g ) opt_g=1 ;;
+	h ) opt_h=1 ;;
+	i ) opt_u=1 ; opt_q=1 ; echo "-i is deprecated - use -u -q" ;;
+	k ) opt_k=1 ;;
+	L ) opt_L="$OPTARG" ;;
+	l ) opt_l=1 ;;
+	N ) opt_N=1 ;;
+	n ) opt_n=1 ;;
+	p ) opt_p=1 ;;
+	P ) opt_P="$OPTARG" ;;
+	q ) opt_q=1 ;;
+	r ) opt_r=1 ;;
+	s ) opt_s=1 ;;
+	U ) opt_U="$OPTARG" ;;
+	u ) opt_u=1 ;;
+        v ) opt_v=1 ;;
     esac
-    shift
 done
+shift $(($OPTIND - 1))
 
 if [ -z "$opt_b" -a -z "$opt_s" ];then
     opt_b=1; opt_s=1;
@@ -959,8 +966,6 @@ if [ -n "$opt_g" ]; then
     generate_conf_from_installed $PKGCHK_CONF
     cleanup_and_exit
 fi
-
-determine_tags
 
 if [ -n "$opt_r" -o -n "$opt_u" ];then
     verbose "Enumerate PKGDIRLIST from installed packages"
