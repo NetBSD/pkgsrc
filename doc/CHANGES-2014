@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1560 2014/04/21 09:49:58 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1561 2014/04/21 13:36:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2240,3 +2240,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/rainbow-delimiters-el version 1.3.5 [wiz 2014-04-20]
 	Updated net/vtun to 3.0.3 [adam 2014-04-20]
 	Updated audio/cmus to 2.5.0nb6 [wiz 2014-04-21]
+	Added devel/py-mercurial version 2.9.2 [wiz 2014-04-21]
