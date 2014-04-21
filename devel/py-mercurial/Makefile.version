@@ -1,0 +1,15 @@
+# $NetBSD: Makefile.version,v 1.1 2014/04/21 13:34:44 wiz Exp $
+
+VERSION=	2.9.2
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.9
+# see also http://mercurial.selenic.com/wiki/SupportedPythonVersions
+# 3.x support is not planned for the near future
+#
+# the following setup argument was requested when compiling
+# for python-3.x
+#.include "../../lang/python/pyversion.mk"
+#
+#.if ("${PYPKGPREFIX}" != "py26") && ("${PYPKGPREFIX}" != "py27")
+#PYSETUPARGS+=	--c2to3
+#.endif
