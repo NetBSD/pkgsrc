@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2014/02/14 17:49:41 drochner Exp $
+# $NetBSD: Makefile,v 1.22 2014/04/21 16:14:40 wiz Exp $
 
-DISTNAME=	mupdf-1.3-source
+DISTNAME=	mupdf-1.4-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	2
 CATEGORIES=	print
-MASTER_SITES=	http://mupdf.googlecode.com/files/
+MASTER_SITES=	http://mupdf.com/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mupdf.com/
@@ -25,14 +24,21 @@ INSTALL_MAKE_FLAGS+=	prefix=${PREFIX}
 INSTALL_MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
 LDFLAGS=	${COMPILER_RPATH_FLAG}${X11BASE}/lib
 MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
-MAKE_FLAGS+=	V8_PRESENT=no
 MAKE_FLAGS+=	build=release
 
 .include "options.mk"
 
 # Remove thirdparty directory in order to use the libraries provided by pkgsrc
+# mujs directory is an exception and should not be removed (MuJS is the
+# default Javascript interpreter for mupdf).
 post-extract:
-	${RM} -fr ${WRKSRC}/thirdparty
+	${RM} -fr \
+	    ${WRKSRC}/thirdparty/curl \
+	    ${WRKSRC}/thirdparty/freetype \
+	    ${WRKSRC}/thirdparty/jbig2dec \
+	    ${WRKSRC}/thirdparty/jpeg \
+	    ${WRKSRC}/thirdparty/openjpeg \
+	    ${WRKSRC}/thirdparty/zlib
 
 post-build:
 	sed -e "s,@PREFIX@,${PREFIX}," ${FILESDIR}/mupdf.pc > ${WRKSRC}/mupdf.pc
