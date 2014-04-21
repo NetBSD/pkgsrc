@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/04/18 21:31:26 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/04/21 21:58:57 wiedi Exp $
 
 DISTNAME=	spiped-1.3.1
 CATEGORIES=	net security
@@ -11,8 +11,16 @@ COMMENT=	Tool for creating symmetrically encrypted and authenticated pipes
 LICENSE=	2-clause-bsd
 
 MAKE_FLAGS+=	BINDIR=${DESTDIR}${PREFIX}/bin
+MAKE_FLAGS+=	MAN1DIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-INSTALLATION_DIRS=	share/doc/spiped
+CFLAGS.SunOS+=	-D__EXTENSIONS__
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "SunOS"
+MAKE_ENV+=	LDADD_EXTRA="-lsocket -lnsl"
+.endif
+
+INSTALLATION_DIRS=	share/doc/spiped ${PKGMANDIR}/man1
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/spiped
