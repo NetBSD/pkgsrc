@@ -1,4 +1,6 @@
-$NetBSD: patch-mixer__sun.c,v 1.1 2012/02/15 20:15:42 hans Exp $
+$NetBSD: patch-mixer__sun.c,v 1.2 2014/04/21 09:49:49 wiz Exp $
+
+Fix build on SunOS.
 
 --- mixer_sun.c.orig	2011-11-30 09:57:20.000000000 +0100
 +++ mixer_sun.c	2012-02-15 21:12:05.691072986 +0100
