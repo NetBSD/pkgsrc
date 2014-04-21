@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.135 2014/03/30 01:03:22 ryoon Exp $
+$NetBSD: distinfo,v 1.135.2.1 2014/04/21 07:30:36 tron Exp $
 
 SHA1 (firefox-28.0.source.tar.bz2) = f78517836ceca0cd2a0d3db1f282985c616e3fae
 RMD160 (firefox-28.0.source.tar.bz2) = 71124b36dca319eaa0de268ce4f6133f0ceca4f9
@@ -11,7 +11,6 @@ SHA1 (patch-as) = 3ce6e71d638ac1b6dec6737c92246e2dc7ff5d84
 SHA1 (patch-bf) = 75c971043e9f693203d6bd670b2c20c4952a7756
 SHA1 (patch-bg) = d6c02294765265d9e85cf49c22320d88573c2e25
 SHA1 (patch-bi) = 3dd927d93431afe000cd4a45b4d9920e63158a85
-SHA1 (patch-browser_app_nsBrowserApp.cpp) = 348227a30b25fda41b4f79235fc623f64ca8e8ba
 SHA1 (patch-browser_app_profile_firefox.js) = 108efbe1ae65669912d2f76caec546753e1ac8f3
 SHA1 (patch-browser_installer_package-manifest.in) = d5792a3c5dd7498d24ac0426aacf7d0b9a842c67
 SHA1 (patch-browser_locales_en-US_chrome_browser-region_region.properties) = 284d62596718d7f372c4e5214fd05adec043c93a
