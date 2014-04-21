@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2014/02/12 23:18:47 tron Exp $
+# $NetBSD: Makefile,v 1.26 2014/04/21 13:25:54 wiz Exp $
 
 PKGNAME=	w3m-img-${W3M_VERS}
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	Multilingualized version of w3m with inline image support
 
 CONFLICTS+=	w3m-[0-9]*
