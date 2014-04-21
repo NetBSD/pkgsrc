@@ -15,3 +15,5 @@ decentralized model is also available.
 And it just works: Mercurial strives to deliver on each of its
 promises. Most tasks simply work on the first try and without
 requiring arcane knowledge.
+
+This is a meta package for convenience.
