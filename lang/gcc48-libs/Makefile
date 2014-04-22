@@ -1,66 +1,94 @@
-# $NetBSD: Makefile,v 1.10 2014/01/14 19:33:10 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2014/04/22 20:46:41 ryoon Exp $
 
-GCC_PKGNAME=	gcc48
-.include	"../../lang/${GCC_PKGNAME}/version.mk"
-
-DISTNAME=	gcc-${GCC48_DIST_VERSION}
 PKGNAME=	${GCC_PKGNAME}-libs-${GCC48_DIST_VERSION}
-## The PKGREVISION of this package needs to be at least 1 more than the
-## PKGREVISION of the lang/gcc48 package so that with the dependence pattern
-## '{gcc48,gcc48-libs}>=4.8.*' pkg_all will choose gcc48-libs over gcc48.
-PKGREVISION=	2
-CATEGORIES=	lang
-MASTER_SITES=	# empty
-DISTFILES=	# empty
+PKGREVISION=	3
 
-MAINTAINER=	sbd@NetBSD.org
-HOMEPAGE=	http://gcc.gnu.org/
-COMMENT=	The GNU Compiler Collection (GCC) support shared libraries.
-LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
+COMMENT=	Runtime libraries from the GNU Compiler Collection (GCC) 4.8
 
-USE_TOOLS+=		pax
+DISTINFO_FILE=		${.CURDIR}/../../lang/gcc48/distinfo
+PATCHDIR=		${.CURDIR}/../../lang/gcc48/patches
 
-NO_BUILD=		yes
+LANGS=			fortran
 
-## Depend on exactly ${GCC48_DIST_VERSION}.
-BUILD_DEPENDS+=		${GCC_PKGNAME}-${GCC48_DIST_VERSION}{,nb[0-9]*}:../../lang/gcc48
+.include "../../lang/gcc48/options.mk"
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../lang/gcc48/c++.mk"
 
-FIND_PREFIX:=		GCC_PKG_PREFIX=${GCC_PKGNAME}-${GCC48_DIST_VERSION}*
-.include "../../mk/find-prefix.mk"
+INSTALLATION_DIRS=	${GCC_PKGNAME}/lib \
+			${GCC_PKGNAME}/lib/gcj-${GCC48_DIST_VERSION}-14 \
+			${GCC_PKGNAME}/libexec/gcc/${MACHINE_GNU_PLATFORM}/${GCC48_DIST_VERSION}
 
-LIBGCC_SUBPREFIX=	${GCC_PKGNAME}
-LIBGCC_PREFIX=		${GCC_PKG_PREFIX}/${LIBGCC_SUBPREFIX}
-GCC_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
-BUILD_DEFS+=		GCC_TARGET_MACHINE
-
-.include "../../mk/bsd.prefs.mk"
-.if ${_OPSYS_SHLIB_TYPE} == "dylib"
-SHLIB_EXT=	dylib
-.else
-SHLIB_EXT=	so
+.if !empty(PKG_OPTIONS:Mgcc-java)
+INSTALLATION_DIRS+=	java/${GCC_PKGNAME}/jre/lib/${MACHINE_ARCH:S/x86_64/amd64/}/client \
+			java/${GCC_PKGNAME}/jre/lib/${MACHINE_ARCH:S/x86_64/amd64/}/server
 .endif
 
-LIBRARY_FILES=	${WRKDIR}/lib_files
+do-install:
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/${OBJDIR}/${MACHINE_GNU_PLATFORM}/libatomic/libatomic.la \
+		${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib
 
-GENERATE_PLIST+= ${SED} -e 's,^,${LIBGCC_SUBPREFIX}/${GCC_TARGET_MACHINE}/,' \
-			${LIBRARY_FILES};
-GENERATE_PLIST+= ${GREP} -q 'lib/' ${LIBRARY_FILES} || \
-	   ${ECHO} '@pkgdir ${LIBGCC_SUBPREFIX}/${GCC_TARGET_MACHINE}/lib' ;
+# libgcc_s has no libtool la file.
+	${INSTALL_LIB} \
+		${WRKSRC}/${OBJDIR}/${MACHINE_GNU_PLATFORM}/libgcc/libgcc_s.so* \
+		${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib
 
-${LIBRARY_FILES}:
-	${PKG_INFO} -qL '${GCC_PKGNAME}-${GCC48_DIST_VERSION}*' |	\
-	${SED} -n -e's,^${LIBGCC_PREFIX}/,,' -e'/libexec\//d'		\
-		-e'/libgij/d;/libgcj/d;/libjvm/d'			\
-		-e'/lib.*\.${SHLIB_EXT}/p' 		>${LIBRARY_FILES}
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/${OBJDIR}/${MACHINE_GNU_PLATFORM}/libgfortran/libgfortran.la \
+		${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib
 
-do-install: ${LIBRARY_FILES}
-	${TEST} -d ${DESTDIR}${LIBGCC_PREFIX}/${GCC_TARGET_MACHINE}/lib || \
-		${MKDIR} ${DESTDIR}${LIBGCC_PREFIX}/${GCC_TARGET_MACHINE}/lib
-	cd ${LIBGCC_PREFIX} && 						\
-	  ${PAX} -rw ${DESTDIR}${LIBGCC_PREFIX}/${GCC_TARGET_MACHINE} <${LIBRARY_FILES}
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/${OBJDIR}/${MACHINE_GNU_PLATFORM}/libgomp/libgomp.la \
+		${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib
 
-.include "../../mk/dlopen.buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/bsd.pkg.mk"
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/${OBJDIR}/${MACHINE_GNU_PLATFORM}/libitm/libitm.la \
+		${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib
+
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/${OBJDIR}/${MACHINE_GNU_PLATFORM}/libobjc/libobjc.la \
+		${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib
+
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/${OBJDIR}/${MACHINE_GNU_PLATFORM}/libstdc++-v3/src/libstdc++.la \
+		${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib
+
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/${OBJDIR}/${MACHINE_GNU_PLATFORM}/libssp/libssp.la \
+		${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib
+
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/${OBJDIR}/lto-plugin/liblto_plugin.la \
+		${DESTDIR}${PREFIX}/${GCC_PKGNAME}/libexec/gcc/${MACHINE_GNU_PLATFORM}/${GCC48_DIST_VERSION}
+
+	${INSTALL_PROGRAM} ${WRKSRC}/${OBJDIR}/gcc/lto1 \
+		${DESTDIR}${PREFIX}/${GCC_PKGNAME}/libexec/gcc/${MACHINE_GNU_PLATFORM}/${GCC48_DIST_VERSION}
+
+	${INSTALL_PROGRAM} ${WRKSRC}/${OBJDIR}/gcc/lto-wrapper \
+		${DESTDIR}${PREFIX}/${GCC_PKGNAME}/libexec/gcc/${MACHINE_GNU_PLATFORM}/${GCC48_DIST_VERSION}
+
+.if !empty(PKG_OPTIONS:Mgcc-java)
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/${OBJDIR}/${MACHINE_GNU_PLATFORM}/libjava/libjvm.la \
+		${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib/gcj-${GCC48_DIST_VERSION}-14
+
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/${OBJDIR}/${MACHINE_GNU_PLATFORM}/libjava/libgcj.la \
+		${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib
+
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/${OBJDIR}/${MACHINE_GNU_PLATFORM}/libjava/libgij.la \
+		${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib
+
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/${OBJDIR}/${MACHINE_GNU_PLATFORM}/libjava/libgcj-tools.la \
+		${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib
+
+	cd ${DESTDIR}${PREFIX}/java/${GCC_PKGNAME}/jre/lib/${MACHINE_ARCH:S/x86_64/amd64/}/client && \
+		${LN} -sf ../../../../../../${GCC_PKGNAME}/lib/gcj-${GCC48_DIST_VERSION}-14/libjvm.so .
+
+	cd ${DESTDIR}${PREFIX}/java/${GCC_PKGNAME}/jre/lib/${MACHINE_ARCH:S/x86_64/amd64/}/server && \
+		${LN} -sf ../../../../../../${GCC_PKGNAME}/lib/gcj-${GCC48_DIST_VERSION}-14/libjvm.so .
+.endif
+
+.include	"../../lang/gcc48/Makefile.common"

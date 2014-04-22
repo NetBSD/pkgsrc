@@ -1,3 +1,1 @@
-The GNU Compiler Collection (GCC) includes front ends for C, C++, Objective-C,
-Fortran, and Go, as well as libraries for these languages (libstdc++,
-libgfortran, ...).
+The runtime libraries from the GNU Compiler Collection (GCC) 4.8 release branch.

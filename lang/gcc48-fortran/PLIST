@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2014/04/22 20:46:41 ryoon Exp $
+gcc48/bin/f77
+gcc48/bin/g77
+gcc48/bin/g95
+gcc48/bin/gfortran
+gcc48/bin/${MACHINE_GNU_PLATFORM}-gfortran
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/finclude/omp_lib.f90
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/finclude/omp_lib.h
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/finclude/omp_lib.mod
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/finclude/omp_lib_kinds.mod
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/libcaf_single.la
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/libgfortranbegin.la
+gcc48/lib/libgfortran.spec
+gcc48/libexec/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/f951
