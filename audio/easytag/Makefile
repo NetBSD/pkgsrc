@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.92 2014/04/14 14:33:49 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2014/04/22 22:19:41 wiz Exp $
 
-DISTNAME=	easytag-2.2.0
-PKGREVISION=	1
+DISTNAME=	easytag-2.2.1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/easytag/2.2/}
 EXTRACT_SUFX=	.tar.xz
@@ -22,6 +21,7 @@ USE_TOOLS+=		gmake intltool pkg-config xgettext
 
 .include "../../audio/id3lib/buildlink3.mk"
 .include "../../audio/libid3tag/buildlink3.mk"
+BUILDLINK_API_DEPENDS.taglib+=	taglib>=1.9.1
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"

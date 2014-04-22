@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.38 2014/04/21 18:16:41 joerg Exp $
+$NetBSD: distinfo,v 1.39 2014/04/22 22:19:41 wiz Exp $
 
-SHA1 (easytag-2.2.0.tar.xz) = 018e9efed5d7d561472098ccdc1140d16a647be8
-RMD160 (easytag-2.2.0.tar.xz) = 68dc19fc3975780f21795e0cd628702cf484f540
-Size (easytag-2.2.0.tar.xz) = 949080 bytes
-SHA1 (patch-src_id3lib_c__wrapper.cpp) = 54c544f3309149ef5392607c5c8ed9dd24c0e080
+SHA1 (easytag-2.2.1.tar.xz) = 2d18c0b32ab50d4aed9b16ec0bc09b4ac57c41fc
+RMD160 (easytag-2.2.1.tar.xz) = f23f8de7956f11cb9d4835235f9318bdab3422d7
+Size (easytag-2.2.1.tar.xz) = 951036 bytes
