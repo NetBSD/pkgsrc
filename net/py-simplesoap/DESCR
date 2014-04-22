@@ -1,0 +1,4 @@
+Python Simple SOAP library for client and server webservices interfaces, aimed
+to be as small and easy as possible, supporting most common functionality.
+Initially it was inspired by PHP Soap Extension (mimicking it functionality,
+simplicity and ease of use), with many advanced features added.
