@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.15 2014/04/22 06:54:03 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.16 2014/04/22 18:26:23 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q1 branch:
@@ -65,3 +65,5 @@ mail/thunderbird: build fix
 www/firefox24: build fix
 Pullup ticket #4384 - requested by tsutsui
 misc/libreoffice4: build fix
+Pullup ticket #4385 - requested by abs
+mail/imapsync: security update
