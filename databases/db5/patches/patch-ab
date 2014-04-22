@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.4 2012/01/18 13:46:50 adam Exp $
+$NetBSD: patch-ab,v 1.5 2014/04/22 14:42:35 asau Exp $
 
---- dist/configure.orig	2011-12-20 01:00:49.000000000 +0000
+--- dist/configure.orig	2012-05-11 17:57:48.000000000 +0000
 +++ dist/configure
 @@ -5112,7 +5112,7 @@ bsdi3*)	CC=${CC-"shlicc2"}
  	LIBSO_LIBS="$LIBSO_LIBS -lipc";;
@@ -20,6 +20,60 @@ $NetBSD: patch-ab,v 1.4 2012/01/18 13:46:50 adam Exp $
  		CPPFLAGS="$CPPFLAGS -pthread"
  		LDFLAGS="$LDFLAGS -pthread"
  	else
+@@ -12227,7 +12227,7 @@ fi
+       hardcode_shlibpath_var=no
+       ;;
+ 
+-    freebsd1*)
++    freebsd1|freebsd1.*)
+       ld_shlibs=no
+       ;;
+ 
+@@ -13221,7 +13221,7 @@ dgux*)
+   shlibpath_var=LD_LIBRARY_PATH
+   ;;
+ 
+-freebsd1*)
++freebsd1|freebsd1.*)
+   dynamic_linker=no
+   ;;
+ 
+@@ -13232,7 +13232,7 @@ freebsd* | dragonfly*)
+     objformat=`/usr/bin/objformat`
+   else
+     case $host_os in
+-    freebsd[123]*) objformat=aout ;;
++    freebsd[123]|freebsd[123].*) objformat=aout ;;
+     *) objformat=elf ;;
+     esac
+   fi
+@@ -15190,7 +15190,7 @@ fi
+         esac
+         ;;
+ 
+-      freebsd[12]*)
++      freebsd[12]|freebsd[12].*)
+         # C++ shared libraries reported to be fairly broken before
+ 	# switch to ELF
+         ld_shlibs_CXX=no
+@@ -17054,7 +17054,7 @@ dgux*)
+   shlibpath_var=LD_LIBRARY_PATH
+   ;;
+ 
+-freebsd1*)
++freebsd1|freebsd1.*)
+   dynamic_linker=no
+   ;;
+ 
+@@ -17065,7 +17065,7 @@ freebsd* | dragonfly*)
+     objformat=`/usr/bin/objformat`
+   else
+     case $host_os in
+-    freebsd[123]*) objformat=aout ;;
++    freebsd[123]|freebsd[123].*) objformat=aout ;;
+     *) objformat=elf ;;
+     esac
+   fi
 @@ -17712,7 +17712,7 @@ LIBTOOL="./libtool"
  INSTALLER="\$(LIBTOOL) --mode=install cp -p"
  
