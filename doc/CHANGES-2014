@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1573 2014/04/22 18:06:29 adam Exp $
+$NetBSD: CHANGES-2014,v 1.1574 2014/04/22 19:03:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2253,3 +2253,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/imapsync to 1.584 [abs 2014-04-22]
 	Removed databases/db46 [adam 2014-04-22]
 	Updated www/py-django to 1.6.3 [adam 2014-04-22]
+	Updated www/lighttpd to 1.4.35 [adam 2014-04-22]
