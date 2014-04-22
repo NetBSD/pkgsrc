@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1008 2014/04/19 17:36:02 jakllsch Exp $
+# $NetBSD: Makefile,v 1.1009 2014/04/22 00:09:00 rodent Exp $
 #
 
 COMMENT=	Networking tools
@@ -561,6 +561,7 @@ SUBDIR+=	py-omniORBpy
 SUBDIR+=	py-pcap
 SUBDIR+=	py-ptt
 SUBDIR+=	py-s3cmd
+SUBDIR+=	py-simplesoap
 SUBDIR+=	py-smb
 SUBDIR+=	py-soaplib
 SUBDIR+=	py-soappy
