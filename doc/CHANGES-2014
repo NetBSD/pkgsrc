@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1571 2014/04/22 08:20:20 abs Exp $
+$NetBSD: CHANGES-2014,v 1.1572 2014/04/22 14:27:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2251,3 +2251,4 @@ Changes to the packages collection and infrastructure in 2014:
 	updated print/hplip to 3.14.4 [schnoebe 2014-04-22]
 	Updated textproc/p5-Lingua-Identify to 0.56 [hiramatsu 2014-04-22]
 	Updated mail/imapsync to 1.584 [abs 2014-04-22]
+	Removed databases/db46 [adam 2014-04-22]
