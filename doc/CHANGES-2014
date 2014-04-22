@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1568 2014/04/22 00:08:08 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.1569 2014/04/22 00:11:52 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2248,3 +2248,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated finance/gnucash to 2.6.3nb3 [wiz 2014-04-21]
 	Updated pkgtools/pkg_chk to 2.0.7 [abs 2014-04-21]
 	Added net/py-simplesoap version 1.10 [rodent 2014-04-22]
+	updated print/hplip to 3.14.4 [schnoebe 2014-04-22]
