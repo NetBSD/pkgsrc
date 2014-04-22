@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13230 2014/04/20 18:16:23 wiz Exp $
+$NetBSD: TODO,v 1.13231 2014/04/22 08:20:20 abs Exp $
 
 Suggested new packages
 ======================
@@ -681,8 +681,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o icdprog-0.5
 	o idutils-4.6
 	o ike-2.0.1 [pkg/37032]
-	o imapsync-1.580 [pkg/48578]
-	o imapsync-1.584 [CVE-2014-2014]
 	o imp-6.1.7
 	o ingo-3.1.4
 	o inspircd-1.2.1
