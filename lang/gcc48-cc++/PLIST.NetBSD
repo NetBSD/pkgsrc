@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.NetBSD,v 1.1 2014/04/22 20:46:41 ryoon Exp $
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/plugin/include/config/i386/netbsd64.h
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/plugin/include/config/netbsd-elf.h
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/plugin/include/config/netbsd-stdint.h
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/plugin/include/config/netbsd.h

@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2014/04/22 20:46:41 ryoon Exp $
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/objc/NXConstStr.h
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/objc/Object.h
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/objc/Protocol.h
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/objc/message.h
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/objc/objc-decls.h
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/objc/objc-exception.h
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/objc/objc-sync.h
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/objc/objc.h
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/objc/runtime.h
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/objc/thr.h
+gcc48/libexec/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/cc1obj
+gcc48/libexec/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/cc1objplus
