@@ -1,0 +1,31 @@
+$NetBSD: patch-configure,v 1.1 2014/04/22 14:45:32 asau Exp $
+
+--- configure.orig	2014-04-22 13:26:20.353172000 +0000
++++ configure
+@@ -8496,7 +8496,7 @@ if test -z "$aix_libpath"; then aix_libp
+       hardcode_shlibpath_var=no
+       ;;
+ 
+-    freebsd1*)
++    freebsd1|freebsd1.*)
+       ld_shlibs=no
+       ;;
+ 
+@@ -9371,7 +9371,7 @@ dgux*)
+   shlibpath_var=LD_LIBRARY_PATH
+   ;;
+ 
+-freebsd1*)
++freebsd1|freebsd1.*)
+   dynamic_linker=no
+   ;;
+ 
+@@ -9382,7 +9382,7 @@ freebsd* | dragonfly*)
+     objformat=`/usr/bin/objformat`
+   else
+     case $host_os in
+-    freebsd[123]*) objformat=aout ;;
++    freebsd[123]|freebsd[123].*) objformat=aout ;;
+     *) objformat=elf ;;
+     esac
+   fi
