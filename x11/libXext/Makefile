@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2013/06/16 13:34:30 obache Exp $
+# $NetBSD: Makefile,v 1.20 2014/04/22 11:17:08 obache Exp $
 
 DISTNAME=		libXext-1.3.2
 CATEGORIES=		x11 devel
@@ -32,7 +32,7 @@ CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 
 BUILDLINK_API_DEPENDS.libX11+=	libX11>=1.2
 .include "../../x11/libX11/buildlink3.mk"
-BUILDLINK_API_DEPENDS.xextproto+=	xextproto>=7.0.99.2
+BUILDLINK_API_DEPENDS.xextproto+=	xextproto>=7.1.99
 .include "../../x11/xextproto/buildlink3.mk"
 BUILDLINK_API_DEPENDS.xproto+=		xproto>=7.0.13
 .include "../../x11/xproto/buildlink3.mk"
