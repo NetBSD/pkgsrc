@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13232 2014/04/22 19:03:57 adam Exp $
+$NetBSD: TODO,v 1.13233 2014/04/22 22:25:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -386,7 +386,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o asapm-3.1
 	o asc-2.6.0
 	o aspell-nb-2.0.10
-	o asymptote-2.24
+	o asymptote-2.25
 	o aterm-1.0.1
 	o aubio-0.4.0
 	o audacious-plugins-2.4.4
@@ -404,6 +404,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bbsload-0.2.8
 	o bbweather-0.6.3
 	o benchfft-3.1
+	o blender-2.70a
 	o bluefish-2.2.5
 	o blur6ex-0.3.462
 	o bmon-2.1.0
@@ -463,7 +464,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cygwin_lib-1.5.24.2
 	o dante-1.4.0
 	o dap-3.10
-	o dar-2.4.12
+	o dar-2.4.13
 	o darcs-2.4
 	o darktable-1.4
 	o dasher-4.11
@@ -480,6 +481,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o doclifter-2.14
 	o dolphin-4.0.2
 	o dos2unix-6.0.5
+	o doxygen-1.8.7
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
 	o drupal-7.27
@@ -648,6 +650,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
 	o gtk3-3.12.0 [needs glib2-2.40.0]
+	o gtkglarea-2.1.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtl-3.6
 	o gtodo-0.16.0rc2
@@ -698,6 +701,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o jcabc2ps-20070110
 	o jed-0.99-18
 	o john-1.8.0
+	o jpegoptim-1.3.1
 	o jpilot-syncmal-0.81
 	o kadu-0.11.1
 	o kaffe-1.1.9
@@ -914,7 +918,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pspp-0.8.1
 	o pstoedit-3.61
 	o pulseaudio-5.0 [hal support is dropped]
-	o puzzles-10167
+	o puzzles-10180
 	o pv-1.2.0
 	o pvs-5.0
 	o pwlib-1.11.1
@@ -992,8 +996,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rdp-1.6
 	o re-alpine-2.03 [pkg/47802]
 	o realboy-0.2.2
+	o redis-2.8.9
 	o rep-gtk-0.90.8.1
-	o reposurgeon-3.9
+	o reposurgeon-3.10
 	o resize_image-0.7
 	o rio500-0.8.1
 	o robodoc-4.99.6
