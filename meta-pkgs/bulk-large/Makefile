@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/01/25 10:30:13 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2014/04/22 14:16:56 adam Exp $
 
 DISTNAME=	bulk-large-20130223
 PKGREVISION=	2
@@ -111,7 +111,6 @@ BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-rails>=3.2:../../www/ruby-rails32
 #
 # 3. Libraries
 #
-BUILD_DEPENDS+=	db46-[0-9]*:../../databases/db46
 BUILD_DEPENDS+=	db5-[0-9]*:../../databases/db5
 BUILD_DEPENDS+=	heimdal-[0-9]*:../../security/heimdal
 BUILD_DEPENDS+=	mit-krb5-[0-9]*:../../security/mit-krb5

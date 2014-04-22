@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.454 2014/04/19 16:04:37 imil Exp $
+# $NetBSD: Makefile,v 1.455 2014/04/22 14:16:00 adam Exp $
 
 COMMENT=	Databases
 
@@ -17,7 +17,6 @@ SUBDIR+=	datadraw
 SUBDIR+=	db
 SUBDIR+=	db3
 SUBDIR+=	db4
-SUBDIR+=	db46
 SUBDIR+=	db5
 SUBDIR+=	dbfsak
 SUBDIR+=	dbh
