@@ -1,10 +1,13 @@
-# $NetBSD: builtin.mk,v 1.8 2014/03/10 11:56:02 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.9 2014/04/22 12:21:15 obache Exp $
 
 BUILTIN_PKG:=	xextproto
 
-BUILTIN_FIND_FILES_VAR:=		H_XEXTPROTO
+BUILTIN_FIND_FILES_VAR:=		H_XEXTPROTO PC_XEXTPROTO
 BUILTIN_FIND_FILES.H_XEXTPROTO=	\
 	${X11BASE}/include/X11/extensions/extutil.h
+BUILTIN_FIND_FILES.PC_XEXTPROTO=	${X11BASE}/lib/pkgconfig/xextproto.pc
+BUILTIN_FIND_FILES.PC_XEXTPROTO+=	${X11BASE}/lib${LIBABISUFFIX}/pkgconfig/xextproto.pc
+BUILTIN_FIND_FILES.PC_XEXTPROTO+=	${X11BASE}/share/pkgconfig/xextproto.pc
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -26,6 +29,21 @@ IS_BUILTIN.xextproto=	yes
 .  endif
 .endif
 MAKEVARS+=	IS_BUILTIN.xextproto
+
+###
+### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
+### a package name to represent the built-in package.
+###
+.if !defined(BUILTIN_PKG.xextproto) && \
+    !empty(IS_BUILTIN.xextproto:M[yY][eE][sS])
+.  if empty(PC_XEXTPROTO:M__nonexistent__)
+BUILTIN_VERSION.xextproto!= ${SED} -n -e 's/Version: //p' ${PC_XEXTPROTO}
+.  else
+BUILTIN_VERSION.xextproto!= 1.0.1
+.  endif
+BUILTIN_PKG.xextproto= xextproto-${BUILTIN_VERSION.xextproto}
+.endif
+MAKEVARS+=	BUILTIN_PKG.xextproto
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -66,7 +84,8 @@ CHECK_BUILTIN.xextproto?=	no
 
 # If we are using the builtin version, check whether it has a xextproto.pc
 # file or not.  If the latter, generate a fake one.
-.  if !empty(USE_BUILTIN.xextproto:M[Yy][Ee][Ss])
+.  if !empty(USE_BUILTIN.xextproto:M[Yy][Ee][Ss]) && \
+      !empty(PC_XEXTPROTO:M__nonexistent__)
 BUILDLINK_TARGETS+=	xextproto-fake-pc
 
 xextproto-fake-pc:
@@ -82,7 +101,7 @@ xextproto-fake-pc:
 	else \
 		{ ${ECHO} "Name: XExtensions"; \
 	   	${ECHO} "Description: Sundry X extension headers"; \
-	   	${ECHO} "Version: 1.0.1"; \
+	   	${ECHO} "Version: ${BUILTIN_VERSION.xextproto}"; \
 	   	${ECHO} "Cflags: -I${BUILDLINK_PREFIX.xextproto}/include"; \
 		} >$${dst}; \
 	fi
