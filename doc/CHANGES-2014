@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1577 2014/04/22 22:19:50 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1578 2014/04/22 22:38:17 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2261,3 +2261,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/gcc48 to 4.8.2nb2 [ryoon 2014-04-22]
 	Updated devel/p5-Curses-UI to 0.9609nb3 [wiz 2014-04-22]
 	Updated audio/easytag to 2.2.1 [wiz 2014-04-22]
+	Updated mail/mhonarc to 2.6.19 [schnoebe 2014-04-22]
