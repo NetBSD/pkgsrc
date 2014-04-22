@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.373 2014/04/05 23:55:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.374 2014/04/22 20:50:49 ryoon Exp $
 #
 
 COMMENT=	Programming languages
@@ -63,7 +63,10 @@ SUBDIR+=	gcc46
 SUBDIR+=	gcc47
 SUBDIR+=	gcc47-libs
 SUBDIR+=	gcc48
+SUBDIR+=	gcc48-cc++
+SUBDIR+=	gcc48-fortran
 SUBDIR+=	gcc48-libs
+SUBDIR+=	gcc48-objc
 SUBDIR+=	gforth
 SUBDIR+=	gfortran
 SUBDIR+=	ghc
