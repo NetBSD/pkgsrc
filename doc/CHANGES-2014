@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1574 2014/04/22 19:03:57 adam Exp $
+$NetBSD: CHANGES-2014,v 1.1575 2014/04/22 20:48:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2254,3 +2254,8 @@ Changes to the packages collection and infrastructure in 2014:
 	Removed databases/db46 [adam 2014-04-22]
 	Updated www/py-django to 1.6.3 [adam 2014-04-22]
 	Updated www/lighttpd to 1.4.35 [adam 2014-04-22]
+	Added lang/gcc48-cc++ version 4.8.2 [ryoon 2014-04-22]
+	Added lang/gcc48-fortran version 4.8.2 [ryoon 2014-04-22]
+	Added lang/gcc48-objc version 4.8.2 [ryoon 2014-04-22]
+	Updated lang/gcc48-libs to 4.8.2nb3 [ryoon 2014-04-22]
+	Updated lang/gcc48 to 4.8.2nb2 [ryoon 2014-04-22]
