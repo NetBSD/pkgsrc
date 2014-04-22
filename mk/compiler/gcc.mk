@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.144 2014/02/04 12:11:57 fhajny Exp $
+# $NetBSD: gcc.mk,v 1.145 2014/04/22 20:49:38 ryoon Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -456,24 +456,40 @@ _USE_GCC_SHLIB?=	yes
 .  endif
 .elif !empty(_NEED_GCC48:M[yY][eE][sS])
 #
-# We require gcc-4.8.x in the lang/gcc48 directory.
+# We require gcc-4.8.x in the lang/gcc48-* directory.
 #
-_GCC_PKGBASE=		gcc48
-.  if !empty(PKGPATH:Mlang/gcc48)
+_GCC_PKGBASE=		gcc48-cc++
+.  if !empty(PKGPATH:Mlang/gcc48-cc++)
 _IGNORE_GCC=		yes
 MAKEFLAGS+=		_IGNORE_GCC=yes
-.  endif
-.  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
-_GCC_PKGSRCDIR=		../../lang/gcc48
-_GCC_DEPENDENCY=	gcc48>=${_GCC_REQD}:../../lang/gcc48
-.    if !empty(_LANGUAGES.gcc:Mc++) || \
-        !empty(_LANGUAGES.gcc:Mfortran) || \
-        !empty(_LANGUAGES.gcc:Mfortran77) || \
-        !empty(_LANGUAGES.gcc:Mgo) || \
-        !empty(_LANGUAGES.gcc:Mobjc) || \
-        !empty(_LANGUAGES.gcc:Mobj-c++)
+_IGNORE_GCC48CXX=	yes
+MAKEFLAGS+=		_IGNORE_GCC48CXX=yes
 _USE_GCC_SHLIB?=	yes
-.    endif
+.  endif
+.  if !defined(_IGNORE_GCC) && \
+	(!empty(_LANGUAGES.gcc:Mc) || !empty(_LANGUAGES.gcc:Mc++))
+_GCC_PKGSRCDIR=		../../lang/gcc48-cc++
+_GCC_DEPENDENCY=	gcc48-cc++>=${_GCC_REQD}:../../lang/gcc48-cc++
+.  endif
+.  if !empty(PKGPATH:Mlang/gcc48-fortran)
+_IGNORE_GCC48FORTRAN=	yes
+MAKEFLAGS+=		_IGNORE_GCC48FORTRAN=yes
+.  endif
+.  if !defined(_IGNORE_GCC48FORTRAN) && \
+	(!empty(_LANGUAGES.gcc:Mfortran77) || !empty(_LANGUAGES.gcc:Mfortran))
+_GCC_PKGSRCDIR+=	../../lang/gcc48-fortran
+_GCC_DEPENDENCY+=	gcc48-fortran>=${_GCC_REQD}:../../lang/gcc48-fortran
+_USE_GCC_SHLIB?=	yes
+.  endif
+.  if !empty(PKGPATH:Mlang/gcc48-objc)
+_IGNORE_GCC48OBJC=	yes
+MAKEFLAGS+=		_IGNORE_GCC48OBJC=yes
+.  endif
+.  if !defined(_IGNORE_GCC48OBJC) && \
+	(!empty(_LANGUAGES.gcc:Mobjc) || !empty(_LANGUAGES.gcc:Mobj-c++))
+_GCC_PKGSRCDIR+=	../../lang/gcc48-objc
+_GCC_DEPENDENCY+=	gcc48-objc>=${_GCC_REQD}:../../lang/gcc48-objc
+_USE_GCC_SHLIB?=	yes
 .  endif
 .elif !empty(_NEED_GCC_AUX:M[yY][eE][sS])
 #
