@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2014/04/08 06:20:42 asau Exp $
+$NetBSD: distinfo,v 1.15 2014/04/22 20:46:41 ryoon Exp $
 
 SHA1 (ecj-4.5.jar) = 58c1d79c64c8cd718550f32a932ccfde8d1e6449
 RMD160 (ecj-4.5.jar) = d3f4da657f086b6423f74e93f001132f4855368a
@@ -9,7 +9,7 @@ Size (gcc-4.8.2.tar.bz2) = 85999682 bytes
 SHA1 (patch-gcc-config-vax-constraints.md) = e6cea7a5334b5b124ca3e8b62eba45423e788e55
 SHA1 (patch-gcc-config-vax-vax.c) = 02e389ec418a0fee1431ecd61d65b7f8d7629785
 SHA1 (patch-gcc-config-vax-vax.md) = e06696be85641cbe9131ecc10bb28c45a465916d
-SHA1 (patch-gcc_Makefile.in) = b2bceb34537de1cf704f18a59aa4e4d4a4551c62
+SHA1 (patch-gcc_Makefile.in) = 3706889f55dac4f2847301340d95fc11645108eb
 SHA1 (patch-gcc_config.gcc) = ac175c5eecf3dd53508479b30bf5c59cc0a5fca9
 SHA1 (patch-gcc_config.host) = 1b1e11cd199eb93f49443d51c0063b09b7327858
 SHA1 (patch-gcc_config_dragonfly-stdint.h) = 740dc819b446d5f1476506322c4b280ffdb5a6c0
@@ -31,7 +31,7 @@ SHA1 (patch-libgcc_crtstuff.c) = 88500ea895cd683608f8f2b7177149f11947e3b4
 SHA1 (patch-libgcc_unwind-dw2-fde-dip.c) = 770f04f3cbeb0d794fa297b328f06f6e687419c0
 SHA1 (patch-libgo_Makefile.in) = 612987541f745c7be6835ce7fb7119884db294c3
 SHA1 (patch-libjava_boehm.cc) = b18bc9d410a62543583c77e011f50b86f41ca18a
-SHA1 (patch-libjava_configure) = 48ea2baffe87e09dda8133d286bd9b1bfe4c3f8a
+SHA1 (patch-libjava_configure) = 9c83d60e155d6a9aac542d65ff195a99c5c764ff
 SHA1 (patch-libjava_contrib_rebuild-gcj-db.in) = bb01d738fc7db05046ae37e8ade32574de1d8297
 SHA1 (patch-libsanitizer_configure.tgt) = a56ba5e2dc6bc413e80358353af16e6910b0e106
 SHA1 (patch-libstdc++-v3_config_locale_dragonfly_c__locale.cc) = 5c0ccc6b90e3508b03ed399e8e9e300a6aa9cbb7
