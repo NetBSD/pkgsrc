@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/22 06:21:30 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2014/04/23 13:51:13 fhajny Exp $
 #
 
 DISTNAME=	dsh-0.25.10
@@ -19,6 +19,8 @@ USE_PKGLOCALEDIR=	yes
 CONF_FILES=		${EGDIR}/dsh.conf ${PKG_SYSCONFDIR}/dsh.conf
 
 INSTALL_MAKE_FLAGS=	sysconfdir=${EGDIR}
+
+LIBS=			-liconv -lintl
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libdshconfig/buildlink3.mk"
