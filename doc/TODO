@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13233 2014/04/22 22:25:58 wiz Exp $
+$NetBSD: TODO,v 1.13234 2014/04/23 07:07:39 adam Exp $
 
 Suggested new packages
 ======================
@@ -986,7 +986,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o python-3.4.0
 	o qnetwalk-1.4
 	o qt4-qscintilla-2.8.1
-	o qt5-5.2.1
 	o radiance-3.7.2
 	o rails-4.1.0
 	o rainbowcrack-1.5
