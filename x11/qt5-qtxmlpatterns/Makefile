@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.5 2014/04/09 07:26:57 obache Exp $
+# $NetBSD: Makefile,v 1.6 2014/04/23 07:05:32 adam Exp $
 
 PKGNAME=	qt5-qtxmlpatterns-${QTVERSION}
-PKGREVISION=	4
 COMMENT=	Qt5 module for XML Patterns
 
 .include "../../x11/qt5-qtbase/Makefile.common"
 
 USE_LIBTOOL=		yes
-
 CONFIGURE_ARGS+=	-I${QTDIR}/include -L${QTDIR}/lib
 
-BUILD_DIRS+=		qtxmlpatterns
-#MAKE_ENV+=		QTDIR=${QTDIR}
+BUILD_DIRS=		qtxmlpatterns
+BUILD_TARGET=		sub-tools
 
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 INSTALLATION_DIRS+=	lib/pkgconfig

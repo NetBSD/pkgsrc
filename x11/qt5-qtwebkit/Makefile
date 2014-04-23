@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2014/04/20 02:27:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2014/04/23 07:05:32 adam Exp $
 
 PKGNAME=	qt5-qtwebkit-${QTVERSION}
-PKGREVISION=	8
 COMMENT=	Qt5 WebView module
 
 .include "../../x11/qt5-qtbase/Makefile.common"
@@ -9,11 +8,10 @@ COMMENT=	Qt5 WebView module
 BUILD_DEPENDS+=		gperf-[0-9]*:../../devel/gperf
 
 USE_LIBTOOL=		yes
-
-BUILD_DIRS+=		qtwebkit
-MAKE_ENV+=		QTDIR=${QTDIR}
-
 USE_TOOLS+=		bison sed pkg-config
+
+BUILD_DIRS=		qtwebkit
+MAKE_ENV+=		QTDIR=${QTDIR}
 
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 INSTALLATION_DIRS+=	lib/pkgconfig
@@ -50,15 +48,15 @@ post-install:
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
+.if ${OPSYS} != "Darwin"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
-.include "../../x11/libXrender/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
+.endif
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
 .include "../../x11/qt5-qtlocation/buildlink3.mk"
 .include "../../x11/qt5-qtmultimedia/buildlink3.mk"
