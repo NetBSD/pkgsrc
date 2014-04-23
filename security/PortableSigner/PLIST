@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2014/04/23 11:27:58 wiz Exp $
+bin/PortableSigner.sh
+lib/PortableSigner/PortableSigner.jar
+lib/PortableSigner/lib/bcprov-ext-jdk16-146.jar
+lib/PortableSigner/lib/commons-cli-1.2.jar
+lib/PortableSigner/lib/itextpdf-5.1.3.jar
+lib/PortableSigner/lib/quaqua.jar
+lib/PortableSigner/lib/swing-layout-1.0.4.jar
+share/applications/portablesigner.desktop
+share/doc/PortableSigner/PortableSignerLogo.png
+share/doc/PortableSigner/Readme.txt
