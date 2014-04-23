@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/02/16 22:36:49 sno Exp $
+# $NetBSD: Makefile,v 1.15 2014/04/23 23:22:55 dsainty Exp $
 #
 
 DISTNAME=	Try-Tiny-0.19
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DO/DOY/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Try-Tiny
-COMMENT=	Minimal try/catch with proper preservation of $@
+COMMENT=	Minimal try/catch with proper preservation of $$@
 LICENSE=	mit
 
 # recommended modules ...
