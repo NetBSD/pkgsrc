@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.24 2014/02/04 08:28:06 obache Exp $
+# $NetBSD: options.mk,v 1.25 2014/04/23 02:21:08 schnoebe Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libpurple
 PKG_SUPPORTED_OPTIONS+=		avahi dbus debug farsight gnome gnutls
 PKG_SUPPORTED_OPTIONS+=		gstreamer perl sasl tcl
-PKG_SUGGESTED_OPTIONS+=		dbus farsight gnome gnutls gstreamer
+PKG_SUGGESTED_OPTIONS+=		dbus farsight gnome gstreamer
 
 .include "../../mk/bsd.options.mk"
 
