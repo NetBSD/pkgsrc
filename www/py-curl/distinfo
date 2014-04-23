@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2014/01/19 09:31:33 wiz Exp $
+$NetBSD: distinfo,v 1.19 2014/04/23 10:32:55 adam Exp $
 
-SHA1 (pycurl-7.19.3.tar.gz) = 5d8b7a7f869362421061d72f6d234bf805ebebb5
-RMD160 (pycurl-7.19.3.tar.gz) = cecbd26d6097a74a601eb8a334d0502f22aadf5c
-Size (pycurl-7.19.3.tar.gz) = 113771 bytes
-SHA1 (patch-aa) = 498e377238bdb42ff1f61added622edf3522f691
+SHA1 (pycurl-7.19.3.1.tar.gz) = fd82722e2abc108b7bd469ab6a743cebe8cd8f78
+RMD160 (pycurl-7.19.3.1.tar.gz) = 091e66521b942dbf25afac952776cdecc3649142
+Size (pycurl-7.19.3.1.tar.gz) = 116687 bytes
+SHA1 (patch-aa) = 0c237e7b8e01ff9398c26765976f0c36e19cc5d2

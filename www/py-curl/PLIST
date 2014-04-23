@@ -1,13 +1,14 @@
-@comment $NetBSD: PLIST,v 1.11 2014/01/19 09:31:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2014/04/23 10:32:55 adam Exp $
 ${PYSITELIB}/curl/__init__.py
 ${PYSITELIB}/curl/__init__.pyc
 ${PYSITELIB}/curl/__init__.pyo
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/pycurl.so
+share/doc/pycurl${PYVERSSUFFIX}/AUTHORS
 share/doc/pycurl${PYVERSSUFFIX}/COPYING-LGPL
 share/doc/pycurl${PYVERSSUFFIX}/COPYING-MIT
 share/doc/pycurl${PYVERSSUFFIX}/ChangeLog
-share/doc/pycurl${PYVERSSUFFIX}/INSTALL
+share/doc/pycurl${PYVERSSUFFIX}/INSTALL.rst
 share/doc/pycurl${PYVERSSUFFIX}/README.rst
 share/doc/pycurl${PYVERSSUFFIX}/examples/basicfirst.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/file_upload.py
@@ -16,11 +17,15 @@ share/doc/pycurl${PYVERSSUFFIX}/examples/retriever-multi.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/retriever.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/sfquery.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/xmlrpc_curl.py
-share/doc/pycurl${PYVERSSUFFIX}/html/callbacks.html
-share/doc/pycurl${PYVERSSUFFIX}/html/curlmultiobject.html
-share/doc/pycurl${PYVERSSUFFIX}/html/curlobject.html
-share/doc/pycurl${PYVERSSUFFIX}/html/curlshareobject.html
-share/doc/pycurl${PYVERSSUFFIX}/html/pycurl.html
+share/doc/pycurl${PYVERSSUFFIX}/rst/callbacks.rst
+share/doc/pycurl${PYVERSSUFFIX}/rst/curlmultiobject.rst
+share/doc/pycurl${PYVERSSUFFIX}/rst/curlobject.rst
+share/doc/pycurl${PYVERSSUFFIX}/rst/curlshareobject.rst
+share/doc/pycurl${PYVERSSUFFIX}/rst/files.rst
+share/doc/pycurl${PYVERSSUFFIX}/rst/internals.rst
+share/doc/pycurl${PYVERSSUFFIX}/rst/pycurl.rst
+share/doc/pycurl${PYVERSSUFFIX}/rst/release-process.rst
+share/doc/pycurl${PYVERSSUFFIX}/rst/unicode.rst
 share/doc/pycurl${PYVERSSUFFIX}/tests/__init__.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/app.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/appmanager.py
@@ -38,6 +43,7 @@ share/doc/pycurl${PYVERSSUFFIX}/tests/header_test.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/internals_test.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/matrix.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/memory_mgmt_test.py
+share/doc/pycurl${PYVERSSUFFIX}/tests/multi_option_constants_test.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/multi_socket_select_test.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/multi_socket_test.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/multi_test.py
@@ -55,6 +61,7 @@ share/doc/pycurl${PYVERSSUFFIX}/tests/runwsgi.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/seek_function_test.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/setopt_lifecycle_test.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/setopt_unicode_test.py
+share/doc/pycurl${PYVERSSUFFIX}/tests/setup_test.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/share_test.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/socket_open_test.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/unset_range_test.py
