@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2014/04/09 07:26:57 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2014/04/23 07:05:31 adam Exp $
 
 BUILDLINK_TREE+=	qt5-qtdeclarative
 
@@ -13,7 +13,6 @@ BUILDLINK_INCDIRS.qt5-qtdeclarative+=	qt5/include
 BUILDLINK_LIBDIRS.qt5-qtdeclarative+=	qt5/lib
 BUILDLINK_LIBDIRS.qt5-qtdeclarative+=	qt5/plugins
 
-.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtxmlpatterns/buildlink3.mk"
 .endif	# QT5_QTDECLARATIVE_BUILDLINK3_MK
 
