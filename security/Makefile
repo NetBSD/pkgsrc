@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.505 2014/04/20 03:04:05 wen Exp $
+# $NetBSD: Makefile,v 1.506 2014/04/23 11:28:33 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -12,6 +12,7 @@ SUBDIR+=	KeePass
 SUBDIR+=	MyPasswordSafe
 SUBDIR+=	PACK
 SUBDIR+=	PAM
+SUBDIR+=	PortableSigner
 SUBDIR+=	aide
 SUBDIR+=	aide06
 SUBDIR+=	amap
