@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1581 2014/04/23 06:56:17 tron Exp $
+$NetBSD: CHANGES-2014,v 1.1582 2014/04/23 07:07:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2265,3 +2265,27 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated pkgtools/pkg_chk to 2.0.8 [abs 2014-04-22]
 	Updated devel/p5-CPAN-FindDependencies to 2.42 [hiramatsu 2014-04-23]
 	Updated devel/apr to 1.5.1 [tron 2014-04-23]
+	Updated x11/qt5 to 5.2.1 [adam 2014-04-23]
+	Updated x11/qt5-dbus to 5.2.1 [adam 2014-04-23]
+	Updated x11/qt5-mysql to 5.2.1 [adam 2014-04-23]
+	Updated x11/qt5-odbc to 5.2.1 [adam 2014-04-23]
+	Updated x11/qt5-psql to 5.2.1 [adam 2014-04-23]
+	Updated x11/qt5-qtbase to 5.2.1 [adam 2014-04-23]
+	Updated x11/qt5-qtdeclarative to 5.2.1 [adam 2014-04-23]
+	Updated x11/qt5-qtdoc to 5.2.1 [adam 2014-04-23]
+	Updated x11/qt5-qtgraphicaleffects to 5.2.1 [adam 2014-04-23]
+	Updated x11/qt5-qtimageformats to 5.2.1 [adam 2014-04-23]
+	Updated x11/qt5-qtlocation to 5.2.1 [adam 2014-04-23]
+	Updated x11/qt5-qtmultimedia to 5.2.1 [adam 2014-04-23]
+	Updated x11/qt5-qtquick1 to 5.2.1 [adam 2014-04-23]
+	Updated x11/qt5-qtquickcontrols to 5.2.1 [adam 2014-04-23]
+	Updated x11/qt5-qtscript to 5.2.1 [adam 2014-04-23]
+	Updated x11/qt5-qtsensors to 5.2.1 [adam 2014-04-23]
+	Updated x11/qt5-qtserialport to 5.2.1 [adam 2014-04-23]
+	Updated x11/qt5-qtsvg to 5.2.1 [adam 2014-04-23]
+	Updated x11/qt5-qttools to 5.2.1 [adam 2014-04-23]
+	Updated x11/qt5-qttranslations to 5.2.1 [adam 2014-04-23]
+	Updated x11/qt5-qtwebkit to 5.2.1 [adam 2014-04-23]
+	Updated x11/qt5-qtx11extras to 5.2.1 [adam 2014-04-23]
+	Updated x11/qt5-qtxmlpatterns to 5.2.1 [adam 2014-04-23]
+	Updated x11/qt5-sqlite3 to 5.2.1 [adam 2014-04-23]
