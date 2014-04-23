@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1580 2014/04/23 06:49:44 hiramatsu Exp $
+$NetBSD: CHANGES-2014,v 1.1581 2014/04/23 06:56:17 tron Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2264,3 +2264,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/mhonarc to 2.6.19 [schnoebe 2014-04-22]
 	Updated pkgtools/pkg_chk to 2.0.8 [abs 2014-04-22]
 	Updated devel/p5-CPAN-FindDependencies to 2.42 [hiramatsu 2014-04-23]
+	Updated devel/apr to 1.5.1 [tron 2014-04-23]
