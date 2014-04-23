@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2009/07/09 20:26:11 hasso Exp $
+$NetBSD: distinfo,v 1.12 2014/04/23 20:17:32 asau Exp $
 
 SHA1 (lmbench-2alpha11.tgz) = 7480815b8f8d4000647db59eb6160e9dbac06490
 RMD160 (lmbench-2alpha11.tgz) = 361401104fd5ea3a6e0a26a754ffd66fb2d9e9d6
@@ -6,7 +6,7 @@ Size (lmbench-2alpha11.tgz) = 464956 bytes
 SHA1 (patch-aa) = 0f16f206d56cfdfdd870d21afcef46e3b8e2c53a
 SHA1 (patch-ab) = b25c659fd808535738591892c552b062bb7e7e8f
 SHA1 (patch-ac) = 2aa73fbf3119db95ca483f676bd3f3c2fd25c8f6
-SHA1 (patch-ad) = 6cc3849129c842f50f10771694da57ae50b3d719
+SHA1 (patch-ad) = b23b1321001970cbef384c1cef7e5d64d0b128ff
 SHA1 (patch-ae) = 6d55be411c3b1e02fb269a24c1fd115e6e86855a
 SHA1 (patch-af) = cd7ae198a225c69a7111a0a9478929223e7daf79
 SHA1 (patch-ag) = ff7937e90faf3457b7b6bba93d9013a500dc85b3
