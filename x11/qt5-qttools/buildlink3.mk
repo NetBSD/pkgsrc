@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2014/04/20 02:27:50 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2014/04/23 07:05:32 adam Exp $
 
 BUILDLINK_TREE+=	qt5-qttools
 
@@ -13,7 +13,6 @@ BUILDLINK_INCDIRS.qt5-qttools+=	qt5/include
 BUILDLINK_LIBDIRS.qt5-qttools+=	qt5/lib
 BUILDLINK_LIBDIRS.qt5-qttools+=	qt5/plugins
 
-.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-dbus/buildlink3.mk"
 .include "../../x11/qt5-qtxmlpatterns/buildlink3.mk"
 .include "../../x11/qt5-qtwebkit/buildlink3.mk"

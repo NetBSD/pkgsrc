@@ -1,10 +1,27 @@
-$NetBSD: patch-qtbase_configure,v 1.1 2013/12/13 14:38:35 ryoon Exp $
+$NetBSD: patch-qtbase_configure,v 1.2 2014/04/23 07:05:31 adam Exp $
 
+* Don't use SDKs on OS X
 * Add NetBSD/sparc{,64} support
 
---- qtbase/configure.orig	2013-11-27 01:00:28.000000000 +0000
+--- qtbase/configure.orig	2014-02-01 20:37:23.000000000 +0000
 +++ qtbase/configure
-@@ -2663,6 +2663,19 @@ if [ -z "$PLATFORM" ]; then
+@@ -319,7 +319,6 @@ getQMakeConf()
+ {
+     if [ -z "$specvals" ]; then
+         specvals=`expandQMakeConf "$QMAKESPEC/qmake.conf" | extractQMakeVariables "host_build"`
+-        if [ "$BUILD_ON_MAC" = "yes" ]; then specvals=$(macSDKify "$specvals"); fi
+     fi
+     getSingleQMakeVariable "$1" "$specvals"
+ }
+@@ -328,7 +327,6 @@ getXQMakeConf()
+ {
+     if [ -z "$xspecvals" ]; then
+         xspecvals=`expandQMakeConf "$XQMAKESPEC/qmake.conf" | extractQMakeVariables "!host_build"`
+-        if [ "$XPLATFORM_MAC" = "yes" ]; then xspecvals=$(macSDKify "$xspecvals"); fi
+     fi
+     getSingleQMakeVariable "$1" "$xspecvals"
+ }
+@@ -2679,6 +2677,19 @@ if [ -z "$PLATFORM" ]; then
       UNIX_SV:*)
          PLATFORM=unixware-g++
          ;;
@@ -24,7 +41,7 @@ $NetBSD: patch-qtbase_configure,v 1.1 2013/12/13 14:38:35 ryoon Exp $
       QNX:*)
          PLATFORM=unsupported/qnx-g++
          ;;
-@@ -6230,7 +6243,7 @@ QMakeVar set sql-plugins "$SQL_PLUGINS"
+@@ -6263,7 +6274,7 @@ QMakeVar set sql-plugins "$SQL_PLUGINS"
  [ "$CFG_PNG" != "yes" ]      && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_IMAGEFORMAT_PNG"
  [ "$CFG_JPEG" != "yes" ]     && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_IMAGEFORMAT_JPEG"
  [ "$CFG_ZLIB" != "yes" ]     && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_ZLIB"
