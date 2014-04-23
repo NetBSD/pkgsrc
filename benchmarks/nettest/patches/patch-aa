@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2012/01/12 15:21:05 hans Exp $
+$NetBSD: patch-aa,v 1.6 2014/04/23 20:22:56 asau Exp $
 
 --- Makefile.orig	1992-11-05 22:03:14.000000000 +0000
 +++ Makefile
@@ -37,7 +37,7 @@ $NetBSD: patch-aa,v 1.5 2012/01/12 15:21:05 hans Exp $
 +		DEFINES="-DSYSV -DWAIT3CODE -DNAMEDPIPES -DNO_ISO" \
 +		LIBS="-lsocket -lnsl" OPT="-O"
 +
-+DragonFly NetBSD:
++NetBSD FreeBSD DragonFly:
 +	$(MAKE) objs \
 +		INCLUDE="" \
 +		DEFINES="-DWAIT3CODE -DBSD44 -DNAMEDPIPES -DNO_ISO -DNONVOID_SETPGRP" \
