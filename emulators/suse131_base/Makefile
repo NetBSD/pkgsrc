@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/04/23 12:48:04 obache Exp $
+# $NetBSD: Makefile,v 1.6 2014/04/23 12:49:24 obache Exp $
 
 DISTNAME=	suse_base-${SUSE_VERSION}
 PKGREVISION=	3
@@ -51,7 +51,7 @@ OWN_DIRS+=		${EMULSUBDIR}
 
 SUBST_CLASSES+=		suse
 SUBST_STAGE.suse=	do-build
-SUBST_FILES.suse=	SuSE-release linux-mkpwd.sh
+SUBST_FILES.suse=	linux-mkpwd.sh
 SUBST_VARS.suse=	EMULDIR LINUX_BASE SUSE_ARCH SUSE_VERSION
 
 # Some platforms, e.g. FreeBSD, need to "brand" the ELF binaries to
