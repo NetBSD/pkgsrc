@@ -1,6 +1,6 @@
-$NetBSD: patch-qtmultimedia_src_gsttools_qgstreamervideoinputdevicecontrol.cpp,v 1.1 2013/12/30 06:37:11 ryoon Exp $
+$NetBSD: patch-qtmultimedia_src_gsttools_qgstreamervideoinputdevicecontrol.cpp,v 1.2 2014/04/23 07:05:31 adam Exp $
 
---- qtmultimedia/src/gsttools/qgstreamervideoinputdevicecontrol.cpp.orig	2013-12-20 09:05:17.000000000 +0000
+--- qtmultimedia/src/gsttools/qgstreamervideoinputdevicecontrol.cpp.orig	2014-02-01 20:37:58.000000000 +0000
 +++ qtmultimedia/src/gsttools/qgstreamervideoinputdevicecontrol.cpp
 @@ -44,7 +44,12 @@
  #include <QtCore/QDir>
@@ -22,4 +22,4 @@ $NetBSD: patch-qtmultimedia_src_gsttools_qgstreamervideoinputdevicecontrol.cpp,v
 -#include <linux/videodev2.h>
  
  QGstreamerVideoInputDeviceControl::QGstreamerVideoInputDeviceControl(QObject *parent)
-     :QVideoDeviceSelectorControl(parent), m_selectedDevice(0)
+     :QVideoDeviceSelectorControl(parent), m_source(0), m_selectedDevice(0)

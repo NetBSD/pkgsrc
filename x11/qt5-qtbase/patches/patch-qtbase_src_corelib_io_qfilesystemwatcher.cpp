@@ -1,8 +1,8 @@
-$NetBSD: patch-qtbase_src_corelib_io_qfilesystemwatcher.cpp,v 1.1 2013/12/13 14:38:35 ryoon Exp $
+$NetBSD: patch-qtbase_src_corelib_io_qfilesystemwatcher.cpp,v 1.2 2014/04/23 07:05:31 adam Exp $
 
 * Add NetBSD support
 
---- qtbase/src/corelib/io/qfilesystemwatcher.cpp.orig	2013-11-27 01:01:16.000000000 +0000
+--- qtbase/src/corelib/io/qfilesystemwatcher.cpp.orig	2014-02-01 20:37:36.000000000 +0000
 +++ qtbase/src/corelib/io/qfilesystemwatcher.cpp
 @@ -60,7 +60,7 @@
  #  include "qfilesystemwatcher_win_p.h"
@@ -21,4 +21,4 @@ $NetBSD: patch-qtbase_src_corelib_io_qfilesystemwatcher.cpp,v 1.1 2013/12/13 14:
 +#elif defined(Q_OS_FREEBSD) || defined(Q_OS_MAC) || defined(Q_OS_NETBSD)
      return QKqueueFileSystemWatcherEngine::create(parent);
  #else
-     return 0;
+     Q_UNUSED(parent);

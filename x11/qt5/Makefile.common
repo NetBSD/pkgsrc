@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.2 2013/12/15 09:42:43 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.3 2014/04/23 07:05:31 adam Exp $
 # used by x11/qt5-qtbase/Makefile.common
 # used by inputmethod/qt5-uim/Makefile
 
-QTDISTVER=	5.2.0
+QTDISTVER=	5.2.1
 QTVERSION=	${QTDISTVER:S/-rc/rc/}
 
 .include "../../mk/bsd.prefs.mk"

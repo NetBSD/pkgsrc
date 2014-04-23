@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/12/15 09:42:44 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/04/23 07:05:31 adam Exp $
 lib/pkgconfig/Qt5Qml.pc
 lib/pkgconfig/Qt5QmlDevTools.pc
 lib/pkgconfig/Qt5Quick.pc
@@ -290,6 +290,7 @@ qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickdroparea_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickevents_p_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickflickable_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickflickable_p_p.h
+qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickflickablebehavior_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickflipable_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickfocusscope_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickfontloader_p.h

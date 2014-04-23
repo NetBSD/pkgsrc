@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.8 2014/02/09 17:19:14 wiedi Exp $
+$NetBSD: distinfo,v 1.9 2014/04/23 07:05:31 adam Exp $
 
-SHA1 (qt-everywhere-opensource-src-5.2.0.tar.xz) = 7d9d8cad4434bc200d9ed87b3c7cb39654a2f1b4
-RMD160 (qt-everywhere-opensource-src-5.2.0.tar.xz) = b2dd68f622fa7ff271ef621a7c7f17f2ecf7be9d
-Size (qt-everywhere-opensource-src-5.2.0.tar.xz) = 173962448 bytes
+SHA1 (qt-everywhere-opensource-src-5.2.1.tar.xz) = cc68265c62321670bd40e29bdd484ea881bd6af3
+RMD160 (qt-everywhere-opensource-src-5.2.1.tar.xz) = 9b716c5875a6186968392896ac8bd3261fae9b24
+Size (qt-everywhere-opensource-src-5.2.1.tar.xz) = 174004404 bytes
 SHA1 (patch-qtbase_config.tests_unix_iconv_iconv.cpp) = bd7d0440b9c7022a71ccc6fe71415e1846c50e57
-SHA1 (patch-qtbase_configure) = 06cbb2dc9433bbb890fa5a49e161798b6847af41
+SHA1 (patch-qtbase_configure) = bc00f5f7ea40c7304b9cf836748e1bad6f98526a
+SHA1 (patch-qtbase_mkspecs_features_mac_objective__c.prf) = 40d56c675deabea27cdb9eae91d1e90b0f8348ad
 SHA1 (patch-qtbase_mkspecs_features_qt__module__pris.prf) = b58b4a9e1a0a76cfa99c8b2c540514159707043b
 SHA1 (patch-qtbase_qmake_Makefile.unix) = cdde195c16f55bc5f22ff095c20a59b7c2cdc883
 SHA1 (patch-qtbase_qmake_generators_makefile.cpp) = 18831f38df9d4abf61dbd0a1f780bffc0b1cabf4
@@ -15,8 +16,7 @@ SHA1 (patch-qtbase_src_corelib_arch_sparc_arch.pri) = 0af37348671d681cbfc5033dfe
 SHA1 (patch-qtbase_src_corelib_codecs_qiconvcodec.cpp) = ba42bd582adb9ffca218152f4201120801cb1c98
 SHA1 (patch-qtbase_src_corelib_global_qsystemdetection.h) = 9b4a18f59bd4ce2401ccbffe9db597674feb0686
 SHA1 (patch-qtbase_src_corelib_io_io.pri) = 3cdaa27a60710a56739781dc996a5325007e32f9
-SHA1 (patch-qtbase_src_corelib_io_qfileselector.cpp) = 921476e586e90c875cf7686f3b3ee70a958505fc
-SHA1 (patch-qtbase_src_corelib_io_qfilesystemwatcher.cpp) = 1d7089c5a1902c31696e584e3498cc722876ca1e
+SHA1 (patch-qtbase_src_corelib_io_qfilesystemwatcher.cpp) = 28af6bc44dbb02d5773e44e37e5a1c58bdf6fffc
 SHA1 (patch-qtbase_src_corelib_io_qsettings.cpp) = c52e8c457431dc7c37ee8b9225591cd05e91f639
 SHA1 (patch-qtbase_src_dbus_qdbusintegrator.cpp) = 6d178269350dab993383dfa2490119115e489e15
 SHA1 (patch-qtbase_src_network_kernel_qhostinfo__unix.cpp) = 01ceb308e8d595e26b988ff335187452025e0648
@@ -26,13 +26,13 @@ SHA1 (patch-qtbase_src_plugins_platforminputcontexts_compose_generator_qtablegen
 SHA1 (patch-qtbase_src_tools_bootstrap_bootstrap.pro) = 24f47fcf6bab2ddca855a77113a0681dec063ca8
 SHA1 (patch-qtbase_src_tools_moc_main.cpp) = 31f42b1625ec7a978e21ad3fdde67ce3328df425
 SHA1 (patch-qtbase_src_widgets_graphicsview_qgraphicsitem__p.h) = a30402585f0b7efd9fc0dcd256e410a92dffff2c
-SHA1 (patch-qtbase_tests_auto_corelib_io_qprocess_qprocess.pro) = 6226874e7a32d5172abbd2579a4c263c4e8a2d30
+SHA1 (patch-qtbase_tests_auto_corelib_io_qprocess_qprocess.pro) = 729e57819a0477c2bb06015b3bd106e1f972eb51
 SHA1 (patch-qtbase_tests_auto_widgets_itemviews_qtreewidgetitemiterator_qtreewidgetitemiterator.pro) = ec68f41ccdc622eb5457ea7a3c37c1f54058b595
 SHA1 (patch-qtdeclarative_examples_quick_customitems_painteditem_painteditem.pro) = 4eb38df598145da3bb8272dfc4c34649d54cf9fe
 SHA1 (patch-qtdeclarative_src_qml_jsruntime_qv4alloca__p.h) = 9a1a4bb03776e3e6331120933accd0cf46503533
 SHA1 (patch-qtdeclarative_src_qmldevtools_qmldevtools.pro) = 6f0e65eb6c4a5bfd05a603d9cbfc6fdc22e46d3b
 SHA1 (patch-qtdeclarative_tests_auto_qml_qjsengine_tst__qjsengine.cpp) = b1cc5a386dd0f1b3651adb9babee87be84221998
-SHA1 (patch-qtmultimedia_src_gsttools_qgstreamervideoinputdevicecontrol.cpp) = 9281d212f28dab5fece2f7a0cc9bddf0e58922dc
+SHA1 (patch-qtmultimedia_src_gsttools_qgstreamervideoinputdevicecontrol.cpp) = 122c629340578670876571e10c5946c4f359ed04
 SHA1 (patch-qtmultimedia_src_plugins_gstreamer_audiodecoder_qgstreameraudiodecoderserviceplugin.cpp) = ac97ed7ec63e3cfc060ce7e90dfe7f053f9dd851
 SHA1 (patch-qtmultimedia_src_plugins_gstreamer_camerabin_camerabincontrol.cpp) = e2b0022da1f523324159efdcd29237f82380aed8
 SHA1 (patch-qtmultimedia_src_plugins_gstreamer_camerabin_camerabinserviceplugin.cpp) = 4c5f0d3d5a0c6b3075232272abe00b467575194f
@@ -49,6 +49,7 @@ SHA1 (patch-qttools_src_assistant_3rdparty_clucene_src_CLucene_search_FieldCache
 SHA1 (patch-qttools_src_assistant_3rdparty_clucene_src_CLucene_util_Arrays.h) = 30562da15ccfd3034b6db5430e7abdab2fd5cb94
 SHA1 (patch-qttools_src_assistant_clucene_qclucene-config__p.h) = 000e1c5e6bba4e59738ec539d4f22530dc84cd98
 SHA1 (patch-qttools_src_designer_src_uitools_uitools.pro) = 61e72ba527d1209daa3672c749e25413d0ac595e
+SHA1 (patch-qtwebkit_Source_JavaScriptCore_API_ObjCCallbackFunction.h) = 80862b28ebbb2182be96da16853903a48c0bc610
 SHA1 (patch-qtwebkit_Source_JavaScriptCore_DerivedSources.pri) = 196feeeaf0ce0e3a4f8c9541bb3ea67b0892f79c
 SHA1 (patch-qtwebkit_Source_JavaScriptCore_JavaScriptCore.pri) = 0ce44b200616417357efc6495274c3a682bcd44b
 SHA1 (patch-qtwebkit_Source_JavaScriptCore_Target.pri) = 5c86d2733e8288e6ec9bea61907f917953adfc5c
@@ -79,8 +80,11 @@ SHA1 (patch-qtwebkit_Source_WebCore_editing_Editor.h) = ac37cddf5a34233ac12c41d3
 SHA1 (patch-qtwebkit_Source_WebCore_page_NavigatorBase.cpp) = 29c3821bc93967eadb808177f3c3deddb5065eb3
 SHA1 (patch-qtwebkit_Source_WebCore_platform_graphics_surfaces_GraphicsSurface.h) = 30cc1874c67834ee31109c7de838ae91bc2cbe61
 SHA1 (patch-qtwebkit_Source_WebCore_platform_graphics_surfaces_GraphicsSurfaceToken.h) = 08e5ac6d67fb66f80072877cd4eaa1ade94067cc
+SHA1 (patch-qtwebkit_Source_WebCore_platform_graphics_surfaces_mac_GraphicsSurfaceMac.cpp) = be8e1ab3ed5af934a3f38cd2fabe73249813422f
 SHA1 (patch-qtwebkit_Source_WebCore_platform_sql_SQLiteDatabase.cpp) = 6432882b26fb2a1a2e855286905e5d54db82b74f
 SHA1 (patch-qtwebkit_Source_WebKit2_DerivedSources.pri) = eb3306cb14e53b6e1712cf95fbc8dadaaee31745
+SHA1 (patch-qtwebkit_Source_WebKit2_Platform_CoreIPC_MessageDecoder.cpp) = 4e0589307055cb2cb35465c92f596c5a5d0ace06
+SHA1 (patch-qtwebkit_Source_WebKit2_Platform_CoreIPC_MessageDecoder.h) = 3690a35eb8defb1a746bcde790c8cca050b4faea
 SHA1 (patch-qtwebkit_Source_WebKit2_Platform_unix_SharedMemoryUnix.cpp) = fb5b89c138c061ea9caf05b6d7060db87b713db5
 SHA1 (patch-qtwebkit_Source_WebKit2_Target.pri) = 80bcb27c5f3f168227741fd68b9e67fc0b613eb4
 SHA1 (patch-qtwebkit_Source_WebKit_WebKit1.pro) = 70282ebe8ff4524389fe523063d4d00eef21158e

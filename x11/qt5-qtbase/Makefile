@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2014/04/09 07:26:56 obache Exp $
+# $NetBSD: Makefile,v 1.8 2014/04/23 07:05:31 adam Exp $
 
 PKGNAME=	qt5-qtbase-${QTVERSION}
-PKGREVISION=	6
 COMMENT=	C++ X GUI toolkit
 
 .include "../../x11/qt5-qtbase/Makefile.common"
 
-BUILD_DIRS+=		qtbase
+BUILD_DIRS=		qtbase
+BUILD_TARGET=		sub-src
 
 PTHREAD_OPTS+=		require
 UNLIMIT_RESOURCES=	datasize
@@ -26,6 +26,7 @@ CHECK_INTERPRETER_SKIP+=	qt5/examples/widgets/tools/plugandpaint/plugandpaint.pr
 CHECK_INTERPRETER_SKIP+=	qt5/examples/widgets/tools/plugandpaintplugins/basictools/basictools.pro
 CHECK_INTERPRETER_SKIP+=	qt5/examples/widgets/tools/plugandpaintplugins/extrafilters/extrafilters.pro
 CHECK_INTERPRETER_SKIP+=	qt5/examples/widgets/tools/styleplugin/plugin/plugin.pro
+CHECK_INTERPRETER_SKIP+=	qt5/mkspecs/macx-ios-clang/rename_main.sh
 
 BROKEN_FILES=		qt5/mkspecs/modules/qt_lib_bootstrap_private.pri
 
@@ -34,8 +35,6 @@ PC_FILES=		Qt5Bootstrap.pc Qt5Concurrent.pc Qt5Core.pc \
 			Qt5OpenGLExtensions.pc Qt5PlatformSupport.pc \
 			Qt5PrintSupport.pc Qt5Sql.pc Qt5Test.pc \
 			Qt5Widgets.pc Qt5Xml.pc
-
-#pre-configure: remove-3rdparty-libs set-qmake-conf
 
 post-configure:
 	cd ${WRKSRC}/${BUILD_DIRS} && ./bin/qmake -o Makefile
@@ -62,6 +61,7 @@ post-install:
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.if ${OPSYS} != "Darwin"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/xcb-util/buildlink3.mk"
@@ -77,6 +77,6 @@ post-install:
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
-
+.endif
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
