@@ -1,8 +1,8 @@
-$NetBSD: patch-qtbase_tests_auto_corelib_io_qprocess_qprocess.pro,v 1.1 2013/12/13 14:38:35 ryoon Exp $
+$NetBSD: patch-qtbase_tests_auto_corelib_io_qprocess_qprocess.pro,v 1.2 2014/04/23 07:05:31 adam Exp $
 
 * Pass whitespace(s) in filename test cases.
 
---- qtbase/tests/auto/corelib/io/qprocess/qprocess.pro.orig	2013-11-27 01:01:09.000000000 +0000
+--- qtbase/tests/auto/corelib/io/qprocess/qprocess.pro.orig	2014-02-01 20:37:28.000000000 +0000
 +++ qtbase/tests/auto/corelib/io/qprocess/qprocess.pro
 @@ -3,10 +3,7 @@ TEMPLATE = subdirs
  include(qprocess.pri)
@@ -14,5 +14,5 @@ $NetBSD: patch-qtbase_tests_auto_corelib_io_qprocess_qprocess.pro,v 1.1 2013/12/
 -           testSpaceInName
 +SUBDIRS += testProcessSpacesArgs/nospace.pro
  
- win32:!wince*:SUBDIRS+=testProcessEchoGui
- 
+ win32:!wince* {
+     SUBDIRS += \
