@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2014/04/09 07:26:56 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2014/04/23 07:05:31 adam Exp $
 
 BUILDLINK_TREE+=	qt5-qtbase
 
@@ -17,8 +17,15 @@ QTDIR=		${BUILDLINK_PREFIX.qt5-qtbase}/qt5
 
 PTHREAD_OPTS+=	require
 
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
+.if ${OPSYS} != "Darwin"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/xcb-util/buildlink3.mk"
@@ -33,12 +40,7 @@ PTHREAD_OPTS+=	require
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
-.include "../../textproc/icu/buildlink3.mk"
+.endif
 .endif	# QT5_QTBASE_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-qt5-qtbase

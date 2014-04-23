@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/12/15 09:42:44 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/04/23 07:05:31 adam Exp $
 lib/pkgconfig/Qt5Bootstrap.pc
 lib/pkgconfig/Qt5Concurrent.pc
 lib/pkgconfig/Qt5Core.pc
@@ -398,7 +398,6 @@ qt5/include/QtCore/QMutableVectorIterator
 qt5/include/QtCore/QMutex
 qt5/include/QtCore/QMutexLocker
 qt5/include/QtCore/QNoDebug
-qt5/include/QtCore/QNoImplicitBoolCast
 qt5/include/QtCore/QObject
 qt5/include/QtCore/QObjectCleanupHandler
 qt5/include/QtCore/QObjectData
@@ -741,7 +740,6 @@ qt5/include/QtCore/qwaitcondition.h
 qt5/include/QtCore/qwineventnotifier.h
 qt5/include/QtCore/qxmlstream.h
 qt5/include/QtGui/${PKGVERSION}/QtGui/private/qabstracttextdocumentlayout_p.h
-qt5/include/QtGui/${PKGVERSION}/QtGui/private/qaccessible2_p.h
 qt5/include/QtGui/${PKGVERSION}/QtGui/private/qaccessiblecache_p.h
 qt5/include/QtGui/${PKGVERSION}/QtGui/private/qbezier_p.h
 qt5/include/QtGui/${PKGVERSION}/QtGui/private/qblendfunctions_p.h
@@ -1629,7 +1627,6 @@ qt5/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qbasickeyeventtransition_p
 qt5/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qbasicmouseeventtransition_p.h
 qt5/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qbsptree_p.h
 qt5/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qcalendartextnavigator_p.h
-qt5/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qcocoatoolbardelegate_mac_p.h
 qt5/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qcolordialog_p.h
 qt5/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qcolumnview_p.h
 qt5/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qcolumnviewgrip_p.h
@@ -2147,14 +2144,16 @@ qt5/lib/cmake/Qt5Core/Qt5CoreMacros.cmake
 qt5/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake
 qt5/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake
 qt5/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake
+${PLIST.mac}qt5/lib/cmake/Qt5Gui/Qt5Gui_QCocoaIntegrationPlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake
-qt5/lib/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake
+${PLIST.unix}qt5/lib/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake
 qt5/lib/cmake/Qt5Network/Qt5NetworkConfig.cmake
 qt5/lib/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake
+${PLIST.mac}qt5/lib/cmake/Qt5Network/Qt5Network_QCoreWlanEnginePlugin.cmake
 qt5/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake
 qt5/lib/cmake/Qt5OpenGL/Qt5OpenGLConfig.cmake
 qt5/lib/cmake/Qt5OpenGL/Qt5OpenGLConfigVersion.cmake
@@ -2346,7 +2345,6 @@ qt5/mkspecs/features/java.prf
 qt5/mkspecs/features/lex.prf
 qt5/mkspecs/features/link_pkgconfig.prf
 qt5/mkspecs/features/mac/default_post.prf
-qt5/mkspecs/features/mac/default_pre.prf
 qt5/mkspecs/features/mac/objective_c.prf
 qt5/mkspecs/features/mac/rez.prf
 qt5/mkspecs/features/mac/sdk.prf
@@ -2462,6 +2460,8 @@ qt5/mkspecs/irix-g++/qmake.conf
 qt5/mkspecs/irix-g++/qplatformdefs.h
 qt5/mkspecs/linux-arm-gnueabi-g++/qmake.conf
 qt5/mkspecs/linux-arm-gnueabi-g++/qplatformdefs.h
+qt5/mkspecs/linux-clang-libc++/qmake.conf
+qt5/mkspecs/linux-clang-libc++/qplatformdefs.h
 qt5/mkspecs/linux-clang/qmake.conf
 qt5/mkspecs/linux-clang/qplatformdefs.h
 qt5/mkspecs/linux-cxx/qmake.conf
@@ -2527,6 +2527,7 @@ qt5/mkspecs/macx-ios-clang/features/qt.prf
 qt5/mkspecs/macx-ios-clang/features/qt_config.prf
 qt5/mkspecs/macx-ios-clang/qmake.conf
 qt5/mkspecs/macx-ios-clang/qplatformdefs.h
+qt5/mkspecs/macx-ios-clang/rename_main.sh
 qt5/mkspecs/macx-llvm/Info.plist.app
 qt5/mkspecs/macx-llvm/Info.plist.lib
 qt5/mkspecs/macx-llvm/qmake.conf
@@ -2654,11 +2655,14 @@ qt5/mkspecs/winrt-x64-msvc2012/qplatformdefs.h
 qt5/mkspecs/winrt-x86-msvc2012/qmake.conf
 qt5/mkspecs/winrt-x86-msvc2012/qplatformdefs.h
 qt5/plugins/accessible/libqtaccessiblewidgets.la
+${PLIST.mac}qt5/plugins/bearer/libqcorewlanbearer.la
 qt5/plugins/bearer/libqgenericbearer.la
 qt5/plugins/imageformats/libqgif.la
 qt5/plugins/imageformats/libqico.la
 qt5/plugins/imageformats/libqjpeg.la
-qt5/plugins/platforminputcontexts/libcomposeplatforminputcontextplugin.la
+${PLIST.unix}qt5/plugins/platforminputcontexts/libcomposeplatforminputcontextplugin.la
+${PLIST.mac}qt5/plugins/platforms/libqcocoa.la
 qt5/plugins/platforms/libqminimal.la
 qt5/plugins/platforms/libqoffscreen.la
-qt5/plugins/platforms/libqxcb.la
+${PLIST.unix}qt5/plugins/platforms/libqxcb.la
+${PLIST.mac}qt5/plugins/printsupport/libcocoaprintersupport.la

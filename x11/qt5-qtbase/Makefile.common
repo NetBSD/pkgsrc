@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2014/01/28 08:46:14 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.10 2014/04/23 07:05:31 adam Exp $
 # used by x11/qt5-dbus/Makefile
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
@@ -25,7 +25,7 @@
 
 DISTNAME=	qt-everywhere-opensource-src-${QTDISTVER}
 CATEGORIES=	x11
-MASTER_SITES=	http://download.qt-project.org/official_releases/qt/5.2/5.2.0/single/
+MASTER_SITES=	http://download.qt-project.org/official_releases/qt/${QTDISTVER:R}/${QTDISTVER}/single/
 EXTRACT_SUFX=	.tar.xz
 EXTRACT_USING=	bsdtar
 
@@ -37,9 +37,9 @@ FILESDIR=	${.CURDIR}/../../x11/qt5-qtbase/files
 PATCHDIR=	${.CURDIR}/../../x11/qt5-qtbase/patches
 
 .if defined(MAKE_JOBS)
-.if !defined(MAKE_JOBS_SAFE) || empty(MAKE_JOBS_SAFE:M[nN][oO])
+.  if !defined(MAKE_JOBS_SAFE) || empty(MAKE_JOBS_SAFE:M[nN][oO])
 CONFIGURE_ENV+=		MAKE_FLAGS=-j${MAKE_JOBS:Q}
-.endif
+.  endif
 .endif
 
 .include "../../mk/dlopen.buildlink3.mk"
@@ -67,7 +67,6 @@ CONFIGURE_ARGS+=	${CFLAGS:M-I*} ${LDFLAGS:M-L*} ${LDFLAGS:M-l*}
 CONFIGURE_ARGS+=	-opensource -confirm-license
 CONFIGURE_ARGS+=	-accessibility
 CONFIGURE_ARGS+=	-fontconfig
-CONFIGURE_ARGS+=	-iconv
 CONFIGURE_ARGS+=	-icu
 CONFIGURE_ARGS+=	-openssl-linked
 CONFIGURE_ARGS+=	-nomake examples
@@ -87,13 +86,22 @@ OPSYSVARS+=		CONFIGURE_ARGS
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} != "SunOS"
+.if ${OPSYS} != "Darwin"
+CONFIGURE_ARGS+=	-iconv
+.  if ${OPSYS} != "SunOS"
 CONFIGURE_ARGS+=	-reduce-relocations
+.  endif
 .endif
 
 MAKE_ENV+=		QTPREFIX=${QTPREFIX:Q}
-
+PLIST_VARS+=		mac unix
+.if ${OPSYS} == "Darwin"
+PLIST.mac=		yes
+QMAKE_CONF=		qmake.conf.mac
+.else
+PLIST.unix=		yes
 QMAKE_CONF=		qmake.conf
+.endif
 
 # avoid creating a .qt directory in the users home directory
 SCRIPTS_ENV+=		HOME=${WRKDIR}
@@ -115,7 +123,7 @@ CONFIGURE_ARGS+=	-platform solaris-cc
 .    endif
 .  endif
 SYS_LIBS=		-lresolv -lsocket -lnsl -lrt
-BUILDLINK_TRANSFORM+=   rm:-Wl,--gc-sections
+BUILDLINK_TRANSFORM+=	rm:-Wl,--gc-sections
 .elif ${OPSYS} == "Interix"
 CONFIGURE_ARGS+=	-platform interix-g++
 CFLAGS+=		-I/usr/local/include/bind
@@ -125,12 +133,7 @@ SYS_LIBS=		-lbind -ldb -ldl
 .elif ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	-platform freebsd-g++
 .elif ${OPSYS} == "Darwin"
-.  if !empty(PKGSRC_COMPILER:Mclang)
-CONFIGURE_ARGS+=	-platform macx-llvm
-.  else
-CONFIGURE_ARGS+=	-platform macx-g++
-.  endif
-CONFIGURE_ARGS+=	-no-dwarf2
+CONFIGURE_ARGS+=	-platform macx-clang
 CONFIGURE_ARGS+=	-no-framework
 .  if exists(/usr/lib/libresolv.dylib)
 LDFLAGS+=		-lresolv
@@ -140,9 +143,8 @@ LDFLAGS+=		-ldl
 .endif
 
 remove-3rdparty-libs:
-.for i in freetype libjpeg libpng zlib xcb
-	cd ${WRKSRC}/qtbase/src/3rdparty && \
-		${RM} -fr ${i}
+.for i in freetype  libjpeg libpng xcb zlib
+	${RM} -f -r ${WRKSRC}/qtbase/src/3rdparty/${i}
 .endfor
 
 set-qmake-conf:
@@ -170,10 +172,11 @@ set-qmake-conf:
 			cp ${WRKSRC}/qmake.conf $${dir}; \
 			rm -f $${dir}/*.orig; \
 		done
+	${RM} -f ${WRKSRC}/qtbase/mkspecs/features/mac/default_pre.prf
+	${RM} -f ${WRKSRC}/qtbase/mkspecs/features/mac/objective_c.prf.orig
 
 no-qmake-build:
-	cd ${WRKSRC} && \
-		${PATCH} < ${FILESDIR}/patch-qtbase_configure.no-qmake
+	cd ${WRKSRC} && ${PATCH} < ${FILESDIR}/patch-qtbase_configure.no-qmake
 	${LN} -sf ${QTPREFIX}/bin/moc ${WRKSRC}/qtbase/bin/moc
 	${LN} -sf ${QTPREFIX}/bin/qmake ${WRKSRC}/qtbase/bin/qmake
 	${LN} -sf ${QTPREFIX}/bin/rcc ${WRKSRC}/qtbase/bin/rcc
@@ -193,6 +196,7 @@ post-configure:
 	${PKGSRC_SETENV} ${_CONFIGURE_SCRIPT_ENV} ${QTPREFIX}/bin/qmake -o Makefile
 .endif
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
