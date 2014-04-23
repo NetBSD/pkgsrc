@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1584 2014/04/23 11:05:47 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.1585 2014/04/23 11:28:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2291,3 +2291,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/qt5-sqlite3 to 5.2.1 [adam 2014-04-23]
 	Updated www/py-curl to 7.19.3.1 [adam 2014-04-23]
 	Updated lang/gcc48-libs to 4.8.2nb4 [ryoon 2014-04-23]
+	Added security/PortableSigner version 2.0.38c0573 [wiz 2014-04-23]
