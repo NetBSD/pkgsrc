@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1589 2014/04/23 16:11:38 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.1590 2014/04/23 18:10:50 tron Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2296,3 +2296,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/suse131_libjson to 13.1nb1 [obache 2014-04-23]
 	Updated emulators/suse131_openssl to 13.1nb5 [obache 2014-04-23]
 	Updated mail/offlineimap to 6.5.5 [schmonz 2014-04-23]
+	Updated net/wireshark to 1.10.7 [tron 2014-04-23]
