@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2014/04/22 20:46:41 ryoon Exp $
+# $NetBSD: options.mk,v 1.3 2014/04/23 11:05:21 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-graphite gcc-java
@@ -7,9 +7,7 @@ PKG_SUGGESTED_OPTIONS=	gcc-graphite
 .include "../../mk/bsd.prefs.mk"
 
 # amd64 is for OpenBSD/amd64
-.if (!empty(MACHINE_ARCH:Mx86_64) || !empty(MACHINE_ARCH:Mamd64) || \
-	!empty(MACHINE_ARCH:Mi386)) && \
-	(!empty(PKGPATH:Mlang/gcc48-libs) || !empty(PKGPATH:Mlang/gcc48-java))
+.if !empty(PKG_OPTIONS:Mgcc-java)
 .include "../../lang/gcc48/java.mk"
 PKG_SUGGESTED_OPTIONS+=		gcc-java
 PLIST.java=			yes
