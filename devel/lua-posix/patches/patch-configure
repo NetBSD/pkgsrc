@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.1 2013/09/14 09:06:48 ryoon Exp $
+$NetBSD: patch-configure,v 1.2 2014/04/23 14:47:43 fhajny Exp $
 
 --- configure.orig	2013-09-09 07:15:14.000000000 +0000
 +++ configure
@@ -93,3 +93,41 @@ $NetBSD: patch-configure,v 1.1 2013/09/14 09:06:48 ryoon Exp $
  if test Darwin != `uname`; then
    # FIXME: Make -lrt conditional on _XOPEN_REALTIME
    POSIX_EXTRA_CFLAGS=-D_XOPEN_SOURCE=700
+@@ -13690,7 +13758,7 @@ fi
+ $as_echo_n "checking $_ax_check_text... " >&6; }
+ 
+   _ax_test_ver=`$LUA -e "print(_VERSION)" 2>/dev/null | \
+-    sed "s|^Lua \(.*\)|\1|" | grep -o "^[0-9]\+\\.[0-9]\+"`
++    sed "s|^Lua \([0-9]*\.[0-9]*\)|\1|"`
+   if test "x$_ax_test_ver" = 'x'; then :
+   _ax_test_ver='0'
+ fi
+@@ -13796,7 +13864,7 @@ fi
+ 
+ 
+   _ax_test_ver=`$ax_cv_pathless_LUA -e "print(_VERSION)" 2>/dev/null | \
+-    sed "s|^Lua \(.*\)|\1|" | grep -o "^[0-9]\+\\.[0-9]\+"`
++    sed "s|^Lua \([0-9]*\.[0-9]*\)|\1|"`
+   if test "x$_ax_test_ver" = 'x'; then :
+   _ax_test_ver='0'
+ fi
+@@ -13941,8 +14009,7 @@ if ${ax_cv_lua_version+:} false; then :
+   $as_echo_n "(cached) " >&6
+ else
+    ax_cv_lua_version=`$LUA -e "print(_VERSION)" | \
+-          sed "s|^Lua \(.*\)|\1|" | \
+-          grep -o "^[0-9]\+\\.[0-9]\+"`
++          sed "s|^Lua \([0-9]*\.[0-9]*\)|\1|"`
+ 
+ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ax_cv_lua_version" >&5
+@@ -14181,8 +14248,7 @@ int main(int argc, char ** argv)
+ _ACEOF
+ if ac_fn_c_try_run "$LINENO"; then :
+    ax_cv_lua_header_version=`./conftest$EXEEXT p | \
+-                sed "s|^Lua \(.*\)|\1|" | \
+-                grep -o "^[0-9]\+\\.[0-9]\+"`
++                sed "s|^Lua \([0-9]*\.[0-9]*\)|\1|"`
+ 
+ else
+   ax_cv_lua_header_version='unknown'
