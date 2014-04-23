@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1583 2014/04/23 10:33:53 adam Exp $
+$NetBSD: CHANGES-2014,v 1.1584 2014/04/23 11:05:47 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2290,3 +2290,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/qt5-qtxmlpatterns to 5.2.1 [adam 2014-04-23]
 	Updated x11/qt5-sqlite3 to 5.2.1 [adam 2014-04-23]
 	Updated www/py-curl to 7.19.3.1 [adam 2014-04-23]
+	Updated lang/gcc48-libs to 4.8.2nb4 [ryoon 2014-04-23]
