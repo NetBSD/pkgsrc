@@ -1,0 +1,7 @@
+PortableSigner is a signing (with X.509 certificates) program for
+PDF files. It's platform independent and runs (tested) under
+Windows (2000, XP, ...), Linux and Mac OS X.
+
+It's possible to sign PDF documents digital with X.509 certificates.
+This signed documents are read only. Therefore it's possible to
+implement "electronic paper".
