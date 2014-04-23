@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/02/12 23:17:38 tron Exp $
+# $NetBSD: Makefile,v 1.23 2014/04/23 13:17:52 fhajny Exp $
 #
 
 DISTNAME=		libcassandra-20101010
@@ -31,6 +31,7 @@ GCC_REQD+=	4.4
 .include "../../devel/libthrift/buildlink3.mk"
 
 CONFIGURE_ARGS+=	CPPFLAGS="-I${BUILDLINK_PREFIX.libthrift}/include/thrift -I${BUILDLINK_PREFIX.boost-headers}/include/boost"
+CONFIGURE_ARGS+=	--disable-64bit
 MAKE_ENV+=		AM_DEFAULT_VERBOSITY=1
 
 .include "../../mk/compiler.mk"
