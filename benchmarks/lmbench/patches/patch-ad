@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.3 2009/07/09 20:26:11 hasso Exp $
+$NetBSD: patch-ad,v 1.4 2014/04/23 20:17:32 asau Exp $
 
 --- src/lat_rpc.c.orig	Sat Aug  1 05:55:18 1998
 +++ src/lat_rpc.c	Thu Jul  5 13:18:49 2001
@@ -6,7 +6,7 @@ $NetBSD: patch-ad,v 1.3 2009/07/09 20:26:11 hasso Exp $
  }
  
  static void xact_prog_1();
-+#if !defined(__NetBSD__) && !defined(__DragonFly__)
++#if !defined(__NetBSD__) && !defined(__FreeBSD__) && !defined(__DragonFly__)
  bool_t	pmap_set(u_long prognum, u_long versnum, u_long protocol, u_short port);
 +#endif
  bool_t	pmap_unset(u_long prognum, u_long versnum);
