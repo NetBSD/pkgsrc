@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.72 2014/04/21 21:32:26 abs Exp $
+# $Id: pkg_chk.sh,v 1.73 2014/04/23 00:01:01 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Make -g list user-installed packages first, followed by commented
@@ -567,8 +567,10 @@ pkgdirs_from_conf()
 	{
 	taggroup = ""
 	if (match_all_packages || NF == 1)	# If only one arg, we want pkg
+            {
             print $1;
             next;
+            }
 	}
     for (f = 2 ; f<=NF ; ++f) {		# For each word on the line
 	if (sub("^-", "", $f)) {	# If it begins with a '-'
