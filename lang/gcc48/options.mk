@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2014/04/23 12:49:44 ryoon Exp $
+# $NetBSD: options.mk,v 1.5 2014/04/23 12:53:36 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-graphite gcc-java
@@ -34,6 +34,8 @@ MULTILIB_SUPPORTED=Yes
 PKG_SUPPORTED_OPTIONS+=	gcc-multilib
 PKG_SUGGESTED_OPTIONS+=	gcc-multilib
 .endif
+
+.include "../../mk/bsd.options.mk"
 
 ###
 ### Native Language Support
