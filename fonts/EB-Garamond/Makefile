@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2014/02/27 14:55:53 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/04/24 09:02:54 wiz Exp $
 
-DISTNAME=	EBGaramond-0.015d
+DISTNAME=	EBGaramond-0.016
 CATEGORIES=	fonts
-MASTER_SITES=	http://bitbucket.org/georgd/eb-garamond/downloads/
+MASTER_SITES=	https://bitbucket.org/georgd/eb-garamond/downloads/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
