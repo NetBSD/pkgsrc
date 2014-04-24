@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1600 2014/04/24 16:24:16 jperkin Exp $
+$NetBSD: CHANGES-2014,v 1.1601 2014/04/24 20:18:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2307,3 +2307,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/snappy-java10 version 1.0.5 [ryoon 2014-04-24]
 	Updated devel/intellij-idea-ce to 13.1.2 [ryoon 2014-04-24]
 	Updated net/haproxy to 1.4.24nb2 [jperkin 2014-04-24]
+	Updated graphics/openjpeg to 2.0.1 [adam 2014-04-24]
+	Added www/py-djangocms-admin-style version 0.2.2 [adam 2014-04-24]
+	Updated www/py-django-cms to 3.0 [adam 2014-04-24]
+	Updated www/py-django-cmsplugin_gallery to 0.5.5 [adam 2014-04-24]
