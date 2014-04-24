@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/01/28 21:16:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/04/24 20:16:07 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -16,12 +16,6 @@ ${PYSITELIB}/cmsplugin_gallery/cms_plugins.pyo
 ${PYSITELIB}/cmsplugin_gallery/forms.py
 ${PYSITELIB}/cmsplugin_gallery/forms.pyc
 ${PYSITELIB}/cmsplugin_gallery/forms.pyo
-${PYSITELIB}/cmsplugin_gallery/locale/en/LC_MESSAGES/django.mo
-${PYSITELIB}/cmsplugin_gallery/locale/en/LC_MESSAGES/django.po
-${PYSITELIB}/cmsplugin_gallery/locale/pl/LC_MESSAGES/django.mo
-${PYSITELIB}/cmsplugin_gallery/locale/pl/LC_MESSAGES/django.po
-${PYSITELIB}/cmsplugin_gallery/locale/ru/LC_MESSAGES/django.mo
-${PYSITELIB}/cmsplugin_gallery/locale/ru/LC_MESSAGES/django.po
 ${PYSITELIB}/cmsplugin_gallery/migrations/0001_initial.py
 ${PYSITELIB}/cmsplugin_gallery/migrations/0001_initial.pyc
 ${PYSITELIB}/cmsplugin_gallery/migrations/0001_initial.pyo
@@ -40,7 +34,6 @@ ${PYSITELIB}/cmsplugin_gallery/models.pyo
 ${PYSITELIB}/cmsplugin_gallery/settings.py
 ${PYSITELIB}/cmsplugin_gallery/settings.pyc
 ${PYSITELIB}/cmsplugin_gallery/settings.pyo
-${PYSITELIB}/cmsplugin_gallery/templates/cmsplugin_gallery/gallery.html
 ${PYSITELIB}/cmsplugin_gallery/utils.py
 ${PYSITELIB}/cmsplugin_gallery/utils.pyc
 ${PYSITELIB}/cmsplugin_gallery/utils.pyo
