@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2014/03/01 19:12:23 rodent Exp $
+# $NetBSD: Makefile,v 1.24 2014/04/24 00:18:52 rodent Exp $
 
-DISTNAME=	uwsgi-2.0.2
+DISTNAME=	uwsgi-2.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	http://projects.unbit.it/downloads/
