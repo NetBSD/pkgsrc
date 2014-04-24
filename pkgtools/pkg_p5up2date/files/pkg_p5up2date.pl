@@ -69,8 +69,17 @@ sub init
 
 <body>
   <h1>Outdated Perl5 modules in pkgsrc</h1>
-  <table>
-    <tr><th>Package location</th><th>Maintainer</th><th>Comment</th><th>Operation</th><th>Installed</th></tr>
+  <table class="table-datatable">
+    <thead>
+      <tr>
+        <th>Package location</th>
+        <th class="filter">Maintainer</th>
+        <th class="filter">Comment</th>
+        <th>Operation</th>
+        <th class="filter">Installed</th>
+      </tr>
+    </thead>
+    <tbody>
 EOH
     say {$self->{fh}} $intro;
     return;
@@ -90,7 +99,7 @@ sub write_entry
 sub finish
 {
     my ($self, $pkg2update, $pkgok, $pkgcrank) = @_;
-    say {$self->{fh}} "  </table>";
+    say {$self->{fh}} "    <tbody>\n</table>\n";
     scalar(@_) > 1 and
       say {$self->{fh}} "$pkg2update p5-packages needing updates, $pkgok p5-packages are up-to-date, $pkgcrank p5-packages needs review";
     my $extro = <<EOE;
