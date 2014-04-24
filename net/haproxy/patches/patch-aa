@@ -1,8 +1,9 @@
-$NetBSD: patch-aa,v 1.3 2013/04/17 19:55:37 morr Exp $
+$NetBSD: patch-aa,v 1.4 2014/04/24 16:23:59 jperkin Exp $
 
 Add support for NetBSD.
+Remove -fomit-frame-pointer on SunOS.
 
---- Makefile.orig	2013-04-03 00:33:32.000000000 +0000
+--- Makefile.orig	2013-06-17 13:28:14.000000000 +0000
 +++ Makefile
 @@ -73,7 +73,7 @@ DOCDIR = $(PREFIX)/doc/haproxy
  # Use TARGET=<target_name> to optimize for a specifc target OS among the
@@ -21,6 +22,15 @@ Add support for NetBSD.
  LD = $(CC)
  
  #### Debug flags (typically "-g").
+@@ -232,7 +231,7 @@ else
+ ifeq ($(TARGET),solaris)
+   # This is for Solaris 8
+   USE_POLL       = implicit
+-  TARGET_CFLAGS  = -fomit-frame-pointer -DFD_SETSIZE=65536 -D_REENTRANT
++  TARGET_CFLAGS  = -DFD_SETSIZE=65536 -D_REENTRANT
+   TARGET_LDFLAGS = -lnsl -lsocket
+   USE_TPROXY     = implicit
+   USE_LIBCRYPT    = implicit
 @@ -252,6 +251,12 @@ ifeq ($(TARGET),osx)
    USE_TPROXY     = implicit
    USE_LIBCRYPT   = implicit
