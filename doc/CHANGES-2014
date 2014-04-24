@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1596 2014/04/24 10:05:22 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1597 2014/04/24 14:48:49 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2303,3 +2303,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated fonts/EB-Garamond to 0.016 [wiz 2014-04-24]
 	Updated sysutils/dbus to 1.8.0nb1 [wiz 2014-04-24]
 	Updated pkgtools/pkg_p5up2date to 0.05 [wiz 2014-04-24]
+	Updated mail/isync to 1.1.0 [schmonz 2014-04-24]
