@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1 2014/04/24 16:15:43 ryoon Exp $
+
+SHA1 (snappy-java10/snappy-1.0.5.tar.gz) = 3a3df859cf33f78f8e945c3f67f28685f0f38bb1
+RMD160 (snappy-java10/snappy-1.0.5.tar.gz) = c9dec9a8a2faac7bf85b79bcf82f8080713103aa
+Size (snappy-java10/snappy-1.0.5.tar.gz) = 1731382 bytes
+SHA1 (snappy-java10/snappy-java-1.0.5.jar) = f6fdc26b034b2a6a62f74b0a678ae6679ed6c201
+RMD160 (snappy-java10/snappy-java-1.0.5.jar) = 53140b9a4b33c66bbf24b601b0aee5931a8a7c2d
+Size (snappy-java10/snappy-java-1.0.5.jar) = 1272779 bytes
+SHA1 (snappy-java10/snappy-java-1.0.5.tar.gz) = 61c9585aa64eba6cec77f9af61f0f5ea6fd418fb
+RMD160 (snappy-java10/snappy-java-1.0.5.tar.gz) = 65cf54742b55f4797dcc560215cca5cae1a11973
+Size (snappy-java10/snappy-java-1.0.5.tar.gz) = 5739368 bytes
+SHA1 (patch-Makefile) = da9cf7b0ff00374f3a45da06880b87bc9a1c729e
+SHA1 (patch-Makefile.common) = 9403c5f8a66f65dcd2b32f90c77d15bb7f196b18

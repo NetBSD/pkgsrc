@@ -1,0 +1,60 @@
+$NetBSD: patch-Makefile.common,v 1.1 2014/04/24 16:15:43 ryoon Exp $
+
+--- Makefile.common.orig	2013-03-28 06:27:26.000000000 +0000
++++ Makefile.common
+@@ -7,9 +7,9 @@ $(error Set JAVA_HOME environment variab
+ endif
+ 
+ 
+-JAVA  := "$$JAVA_HOME/bin/java"
+-JAVAC := "$$JAVA_HOME/bin/javac" 
+-JAVAH := "$$JAVA_HOME/bin/javah"
++JAVA  := ${JAVA_HOME}/bin/java
++JAVAC := ${JAVA_HOME}/bin/javac
++JAVAH := ${JAVA_HOME}/bin/javah
+ 
+ OSINFO_CLASS := org.xerial.snappy.OSInfo
+ OSINFO_PROG := lib/org/xerial/snappy/OSInfo.class
+@@ -33,15 +33,15 @@ endif
+ snappy := snappy-$(VERSION)
+ 
+ 
+-jni_md := $(shell find -L "$(JAVA_HOME)" -name jni_md.h)
+-ifneq ($(jni_md),)
+-jni_include := $(shell dirname "$(jni_md)")
+-endif
++#jni_md := $(shell find -L "$(JAVA_HOME)" -name jni_md.h)
++#ifneq ($(jni_md),)
++#jni_include := $(shell dirname "$(jni_md)")
++#endif
+ 
+ 
+ # os=Default is meant to be generic unix/linux
+ 
+-known_os_archs := Linux-i386 Linux-amd64 Linux-arm Linux-armhf Mac-i386 Mac-x86_64 FreeBSD-amd64 Windows-x86 Windows-amd64
++known_os_archs := Linux-i386 Linux-amd64 Linux-arm Linux-armhf Mac-i386 Mac-x86_64 FreeBSD-amd64 NetBSD-amd64 Windows-x86 Windows-amd64
+ os_arch := $(OS_NAME)-$(OS_ARCH)
+ 
+ ifeq (,$(findstring $(strip $(os_arch)),$(known_os_archs)))
+@@ -112,6 +112,13 @@ FreeBSD-amd64_LINKFLAGS    := -shared -s
+ FreeBSD-amd64_LIBNAME      := libsnappyjava.so
+ FreeBSD-amd64_SNAPPY_FLAGS := 
+ 
++NetBSD-amd64_CXX          := $(CROSS_PREFIX)g++
++NetBSD-amd64_STRIP        := $(CROSS_PREFIX)strip
++NetBSD-amd64_CXXFLAGS     := -I$(JAVA_HOME)/include -Ilib/inc_mac -O2 -fPIC -fvisibility=hidden
++NetBSD-amd64_LINKFLAGS    := -shared -static-libgcc
++NetBSD-amd64_LIBNAME      := libsnappyjava.so
++NetBSD-amd64_SNAPPY_FLAGS := 
++
+ Windows-x86_CXX          := $(CROSS_PREFIX)g++
+ Windows-x86_STRIP        := $(CROSS_PREFIX)strip
+ Windows-x86_CXXFLAGS     := -Ilib/inc_win -O2 
+@@ -138,6 +145,6 @@ SNAPPY_FLAGS := $($(os_arch)_SNAPPY_FLAG
+ 
+ CXXFLAGS := $(CXXFLAGS) -Ilib/include  
+ ifneq ($(jni_include),)
+-CXXFLAGS := $(CXXFLAGS) -I"$(jni_include)"
++CXXFLAGS := $(CXXFLAGS) -I${JAVA_HOME}/include
+ endif
+ 
