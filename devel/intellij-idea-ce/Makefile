@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/11/24 10:44:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2014/04/24 16:19:40 ryoon Exp $
 
-VERSION=	12.1.2
-DISTNAME=	ideaIC-${VERSION}-src
+VERSION=	13.1.2
+DISTNAME=	ideaIC-${VERSION:S/.0.0//}-src
 PKGNAME=	intellij-idea-ce-${VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	http://download.jetbrains.com/idea/
@@ -12,13 +12,14 @@ HOMEPAGE=	http://www.jetbrains.org/
 COMMENT=	JetBrain's Java IDE
 LICENSE=	apache-2.0
 
-WRKSRC=		${WRKDIR}/ideaIC-129.354
+WRKSRC=		${WRKDIR}/ideaIC-135.690
 USE_LANGUAGES=	c c++
 USE_JAVA=	yes
 USE_JAVA2=	7
 
 USE_TOOLS+=	pax tar
 
+DEPENDS+=	snappy-java10-[0-9]*:../../devel/snappy-java10
 BUILD_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
 
 FIND_PREFIX:=	ANTDIR=apache-ant
@@ -40,7 +41,7 @@ MNTENTCFILE=		mntent_compat.c
 
 INSTALLATION_DIRS=	intellij-idea-ce-${VERSION}
 
-EXTDIR=			idea-IC-129.SNAPSHOT
+EXTDIR=			idea-IC-135.SNAPSHOT
 
 do-build:
 # Build Java part
@@ -65,16 +66,20 @@ do-build:
 
 do-install:
 	cd ${WRKDIR} && \
-	zcat ${WRKSRC}/out/artifacts/ideaIC-129.SNAPSHOT.tar.gz | tar xf -
+	zcat ${WRKSRC}/out/artifacts/ideaIC-135.SNAPSHOT.tar.gz | tar xf -
 	cd ${WRKDIR} && rm ${EXTDIR}/bin/fsnotifier*
 	cd ${WRKDIR} && rm ${EXTDIR}/bin/libbreakgen.so
 	cd ${WRKDIR} && rm ${EXTDIR}/bin/libbreakgen64.so
+	cd ${WRKDIR} && rm -rf ${EXTDIR}/lib/libpty
 	cd ${WRKDIR} && ${CP} ${WRKSRC}/native/fsNotifier/linux/fsnotifier \
 		${EXTDIR}/bin
 	cd ${WRKDIR} && ${CP} ${WRKSRC}/native/breakgen/libbreakgen.so \
 		${EXTDIR}/bin
 	cd ${WRKDIR}/${EXTDIR} && ${FIND} * -print | \
 		pax -rw -pmp ${DESTDIR}${PREFIX}/${PKGNAME}
+	cd ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/lib && \
+	${RM} -f snappy-java-1.0.5.jar && \
+	${LN} -sf ${PREFIX}/lib/java/snappy-java/snappy-java-1.0.5.jar .
 
 .include "../../mk/java-env.mk"
 .include "../../mk/java-vm.mk"
