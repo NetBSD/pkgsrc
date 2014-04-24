@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.39 2014/02/12 23:17:32 tron Exp $
+# $NetBSD: Makefile,v 1.39.2.1 2014/04/24 09:34:06 tron Exp $
 #
 
 DISTNAME=	libarchive-2.8.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	archivers
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/libarchive/
+HOMEPAGE=	http://www.libarchive.org/
 COMMENT=	Library to read/create different archive formats
 
 GNU_CONFIGURE=	yes
