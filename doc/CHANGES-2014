@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1590 2014/04/23 18:10:50 tron Exp $
+$NetBSD: CHANGES-2014,v 1.1591 2014/04/24 00:19:05 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2297,3 +2297,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/suse131_openssl to 13.1nb5 [obache 2014-04-23]
 	Updated mail/offlineimap to 6.5.5 [schmonz 2014-04-23]
 	Updated net/wireshark to 1.10.7 [tron 2014-04-23]
+	Updated www/py-uwsgi to 2.0.4 [rodent 2014-04-24]
