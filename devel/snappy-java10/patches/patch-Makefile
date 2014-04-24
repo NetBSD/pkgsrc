@@ -1,0 +1,14 @@
+$NetBSD: patch-Makefile,v 1.1 2014/04/24 16:15:43 ryoon Exp $
+
+--- Makefile.orig	2013-05-17 01:29:31.000000000 +0000
++++ Makefile
+@@ -97,6 +97,9 @@ linux32:
+ freebsd64:
+ 	$(MAKE) native OS_NAME=FreeBSD OS_ARCH=amd64
+ 
++netbsd64:
++	$(MAKE) native OS_NAME=NetBSD OS_ARCH=amd64
++
+ # for cross-compilation on Ubuntu, install the g++-arm-linux-gnueabi package
+ linux-arm:
+ 	$(MAKE) native CROSS_PREFIX=arm-linux-gnueabi- OS_NAME=Linux OS_ARCH=arm
