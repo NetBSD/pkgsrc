@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1887 2014/04/21 13:36:06 wiz Exp $
+# $NetBSD: Makefile,v 1.1888 2014/04/24 16:16:41 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -1715,6 +1715,7 @@ SUBDIR+=	silc-toolkit
 SUBDIR+=	slib
 SUBDIR+=	sml-mode
 SUBDIR+=	snappy
+SUBDIR+=	snappy-java10
 SUBDIR+=	sofia-sip
 SUBDIR+=	sparse
 SUBDIR+=	sparsehash
