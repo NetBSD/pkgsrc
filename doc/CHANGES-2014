@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1593 2014/04/24 05:48:11 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1594 2014/04/24 09:03:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2300,3 +2300,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-uwsgi to 2.0.4 [rodent 2014-04-24]
 	Updated devel/p5-Date-Manip to 6.43 [schmonz 2014-04-24]
 	Updated databases/skytools to 3.2 [obache 2014-04-24]
+	Updated fonts/EB-Garamond to 0.016 [wiz 2014-04-24]
