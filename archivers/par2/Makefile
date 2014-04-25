@@ -1,21 +1,24 @@
-# $NetBSD: Makefile,v 1.15 2012/09/11 19:46:59 asau Exp $
-#
+# $NetBSD: Makefile,v 1.16 2014/04/25 09:22:13 wiz Exp $
 
-DISTNAME=		par2cmdline-0.4
-PKGNAME=		${DISTNAME:S/cmdline//}
-PKGREVISION=		1
+DISTNAME=		v0.6.5
+PKGNAME=		par2-${DISTNAME:S/v//}
 CATEGORIES=		misc
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=parchive/}
+MASTER_SITES=		https://github.com/BlackIkeEagle/par2cmdline/archive/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://parchive.sourceforge.net/
-COMMENT=		Create or use PAR2 parity volumes
+HOMEPAGE=		https://github.com/BlackIkeEagle/par2cmdline
+COMMENT=		PAR 2.0 compatible file verification and repair tool
 LICENSE=		gnu-gpl-v2
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
+DIST_SUBDIR=		par2
+WRKSRC=			${WRKDIR}/par2cmdline-${DISTNAME:S/v//}
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		autoconf automake autoreconf
 GNU_CONFIGURE=		yes
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fiv
 
 .include "../../mk/bsd.pkg.mk"
