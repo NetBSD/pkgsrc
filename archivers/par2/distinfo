@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.5 2010/02/21 15:07:40 wiz Exp $
+$NetBSD: distinfo,v 1.6 2014/04/25 09:22:13 wiz Exp $
 
-SHA1 (par2cmdline-0.4.tar.gz) = 2fcdc932b5d7b4b1c68c4a4ca855ca913d464d2f
-RMD160 (par2cmdline-0.4.tar.gz) = e98dc84fa7a4304b8d71c1d373fdce0bca1e6290
-Size (par2cmdline-0.4.tar.gz) = 239312 bytes
-SHA1 (patch-aa) = cb2cc7bb718cd003fea2afc1f278d5d8a46381e0
-SHA1 (patch-ab) = a00687c25aae48a9b684125cab9217bf2f1114fa
-SHA1 (patch-ac) = c8fe5a9cfa3183ad8e78d420fefb550c2dbbae2a
+SHA1 (par2/v0.6.5.tar.gz) = eea4428711b52a6a729f6e2f82b518aca92cd47e
+RMD160 (par2/v0.6.5.tar.gz) = 3eba56eee6b8c791c10a083b3e9130e7214b42a5
+Size (par2/v0.6.5.tar.gz) = 1142005 bytes
+SHA1 (patch-diskfile.cpp) = badffb25d54d9f62327106a9c0092927fafc6a78
