@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1610 2014/04/25 09:22:23 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1611 2014/04/25 09:27:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2320,3 +2320,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated math/isl to 0.13 [wiz 2014-04-25]
 	Added misc/ruby-mini_portile version 0.5.3 [jperkin 2014-04-25]
 	Updated archivers/par2 to 0.6.5 [wiz 2014-04-25]
+	Updated devel/memcached to 1.4.18 [wiz 2014-04-25]
