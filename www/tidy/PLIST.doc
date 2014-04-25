@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.doc,v 1.7 2013/01/30 21:00:01 wiz Exp $
+@comment $NetBSD: PLIST.doc,v 1.8 2014/04/25 21:04:24 wiz Exp $
 share/doc/tidy/Overview.html
 share/doc/tidy/api/annotated.html
 share/doc/tidy/api/annotated.js
@@ -17,7 +17,6 @@ share/doc/tidy/api/dynsections.js
 share/doc/tidy/api/files.html
 share/doc/tidy/api/files.js
 share/doc/tidy/api/ftv2blank.png
-share/doc/tidy/api/ftv2cl.png
 share/doc/tidy/api/ftv2doc.png
 share/doc/tidy/api/ftv2folderclosed.png
 share/doc/tidy/api/ftv2folderopen.png
@@ -25,9 +24,7 @@ share/doc/tidy/api/ftv2lastnode.png
 share/doc/tidy/api/ftv2link.png
 share/doc/tidy/api/ftv2mlastnode.png
 share/doc/tidy/api/ftv2mnode.png
-share/doc/tidy/api/ftv2mo.png
 share/doc/tidy/api/ftv2node.png
-share/doc/tidy/api/ftv2ns.png
 share/doc/tidy/api/ftv2plastnode.png
 share/doc/tidy/api/ftv2pnode.png
 share/doc/tidy/api/ftv2splitbar.png
