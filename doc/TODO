@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13241 2014/04/25 08:57:26 wiz Exp $
+$NetBSD: TODO,v 1.13242 2014/04/25 09:12:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -692,7 +692,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o instiki-0.13
 	o iodbc-3.52.9
 	o ircservices-5.1.21
-	o isl-0.13
 	o ispell-ga-4.6
 	o ja-vflib-lib-3.6.10
 	o ja-vflib-utils-2.25.6
