@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2013/07/12 10:44:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.36 2014/04/25 16:13:31 adam Exp $
 
-PKGNAME=	${DISTNAME}
-PKGREVISION=	2
+PKGNAME=	${DISTNAME:S/rc1//}
 COMMENT=	Tool for distributed C/C++ compiling
 
 .include "Makefile.common"
