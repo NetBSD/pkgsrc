@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13235 2014/04/24 20:18:24 adam Exp $
+$NetBSD: TODO,v 1.13236 2014/04/25 08:17:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -389,6 +389,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o asymptote-2.25
 	o aterm-1.0.1
 	o aubio-0.4.0
+	o audacious-3.5
 	o audacious-plugins-2.4.4
 	o audacity-2.0.2 [wip (audacity-devel)]
 	o autoconf-archive-20140228
@@ -423,6 +424,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cdk-5.0.20120323
 	o cdrkit-1.1.10
 	o cfitsio-3.350
+	o cgicc-3.2.14
 	o chasen-2.4.5
 	o cheese-2.32.0 [GNOME 2.32]
 	o cheese-3.12.1
@@ -564,6 +566,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gaupol-0.25
 	o gawk-4.1.1
 	o gbrainy-2.22
+	o gcc-4.9.0
 	o gcin-1.5.5
 	o gcombust-0.1.55
 	o gcompris-13.11
@@ -668,7 +671,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hdf-4.2.7
 	o hesiod-3.1.0
 	o heyu-2.9.0
-	o hiawatha-9.3
+	o hiawatha-9.5
 	o highlight-3.18
 	o holtz-1.4.0
 	o honeyd-1.5c
@@ -771,7 +774,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libxdg-basedir-1.2.0
 	o libxklavier-5.3
 	o licq-1.3.8
-	o liferea-1.10.7
+	o liferea-1.10.9
 	o lincvs-2.1.4 [now called CrossVC]
 	o liquidwar-6.0.0.11
 	o lldpd-0.7.7 [wip, perl module path]
@@ -808,7 +811,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mknmz-wwwoffle-0.7.2
 	o mksh-49
 	o mkvtoolnix-6.8.0
-	o mnemosyne-2.2.1
+	o mnemosyne-2.3
 	o modular-xorg-server-1.15.1
 	o molden-4.8 [after which PR 40252 can be closed]
 	o mono-3.4.0
@@ -838,6 +841,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o netatalk-3.1.0 [wip]
 	o netramet-50
 	o newmail-1.0.2
+	o nginx-1.6.0
 	o nikto-2.0.1
 	o nios2-binutils-2.24 [wip]
 	o ns-3.14.1
@@ -858,7 +862,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o opendnssec-1.4.5
 	o opengrok-0.12
 	o openmortal-0.7.1
-	o openmpi-1.8.0
+	o openmpi-1.8.1
 	o openoffice-3.4
 	o openoffice3-3.3
 	o openscad-2013.06
@@ -878,7 +882,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o packagekit-0.5.1
 	o pam-passwdqc-1.2.2
 	o par2-0.6.2 [https://github.com/BlackIkeEagle/par2cmdline]
-	o parallel-20140322
+	o parallel-20140422
 	o pari-2.7.0
 	o pcal-4.8
 	o pcmanfm-0.5.2 [pkg/42451]
