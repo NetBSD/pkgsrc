@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2013/07/03 08:12:24 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2014/04/25 08:33:57 wiz Exp $
 
-DISTNAME=	libgpg-error-1.12
+DISTNAME=	libgpg-error-1.13
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libgpg-error/ \
 		ftp://ftp.ring.gr.jp/pub/net/gnupg/libgpg-error/ \
@@ -17,6 +17,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 MAKE_ENV+=		LC_ALL="C"
