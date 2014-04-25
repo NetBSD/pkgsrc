@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1612 2014/04/25 09:29:07 jperkin Exp $
+$NetBSD: CHANGES-2014,v 1.1613 2014/04/25 16:15:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2322,3 +2322,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated archivers/par2 to 0.6.5 [wiz 2014-04-25]
 	Updated devel/memcached to 1.4.18 [wiz 2014-04-25]
 	Updated textproc/ruby-nokogiri to 1.6.1 [jperkin 2014-04-25]
+	Updated devel/distcc to 3.2 [adam 2014-04-25]
+	Updated devel/distcc-pump to 3.2 [adam 2014-04-25]
+	Updated devel/distccmon-gnome to 3.2 [adam 2014-04-25]
+	Updated devel/distccmon-gtk to 3.2 [adam 2014-04-25]
