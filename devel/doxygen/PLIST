@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2014/01/02 18:26:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.37 2014/04/25 08:32:22 wiz Exp $
 bin/doxygen
 man/man1/doxygen.1
 ${PLIST.latex}share/doc/doxygen/doxygen_manual.pdf
@@ -17,7 +17,6 @@ ${PLIST.latex}share/doc/doxygen/examples/afterdoc/html/doxygen.png
 ${PLIST.latex}share/doc/doxygen/examples/afterdoc/html/dynsections.js
 ${PLIST.latex}share/doc/doxygen/examples/afterdoc/html/files.html
 ${PLIST.latex}share/doc/doxygen/examples/afterdoc/html/ftv2blank.png
-${PLIST.latex}share/doc/doxygen/examples/afterdoc/html/ftv2cl.png
 ${PLIST.latex}share/doc/doxygen/examples/afterdoc/html/ftv2doc.png
 ${PLIST.latex}share/doc/doxygen/examples/afterdoc/html/ftv2folderclosed.png
 ${PLIST.latex}share/doc/doxygen/examples/afterdoc/html/ftv2folderopen.png
@@ -25,9 +24,7 @@ ${PLIST.latex}share/doc/doxygen/examples/afterdoc/html/ftv2lastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/afterdoc/html/ftv2link.png
 ${PLIST.latex}share/doc/doxygen/examples/afterdoc/html/ftv2mlastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/afterdoc/html/ftv2mnode.png
-${PLIST.latex}share/doc/doxygen/examples/afterdoc/html/ftv2mo.png
 ${PLIST.latex}share/doc/doxygen/examples/afterdoc/html/ftv2node.png
-${PLIST.latex}share/doc/doxygen/examples/afterdoc/html/ftv2ns.png
 ${PLIST.latex}share/doc/doxygen/examples/afterdoc/html/ftv2plastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/afterdoc/html/ftv2pnode.png
 ${PLIST.latex}share/doc/doxygen/examples/afterdoc/html/ftv2splitbar.png
@@ -63,7 +60,6 @@ ${PLIST.latex}share/doc/doxygen/examples/author/html/doxygen.css
 ${PLIST.latex}share/doc/doxygen/examples/author/html/doxygen.png
 ${PLIST.latex}share/doc/doxygen/examples/author/html/dynsections.js
 ${PLIST.latex}share/doc/doxygen/examples/author/html/ftv2blank.png
-${PLIST.latex}share/doc/doxygen/examples/author/html/ftv2cl.png
 ${PLIST.latex}share/doc/doxygen/examples/author/html/ftv2doc.png
 ${PLIST.latex}share/doc/doxygen/examples/author/html/ftv2folderclosed.png
 ${PLIST.latex}share/doc/doxygen/examples/author/html/ftv2folderopen.png
@@ -71,9 +67,7 @@ ${PLIST.latex}share/doc/doxygen/examples/author/html/ftv2lastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/author/html/ftv2link.png
 ${PLIST.latex}share/doc/doxygen/examples/author/html/ftv2mlastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/author/html/ftv2mnode.png
-${PLIST.latex}share/doc/doxygen/examples/author/html/ftv2mo.png
 ${PLIST.latex}share/doc/doxygen/examples/author/html/ftv2node.png
-${PLIST.latex}share/doc/doxygen/examples/author/html/ftv2ns.png
 ${PLIST.latex}share/doc/doxygen/examples/author/html/ftv2plastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/author/html/ftv2pnode.png
 ${PLIST.latex}share/doc/doxygen/examples/author/html/ftv2splitbar.png
@@ -107,7 +101,6 @@ ${PLIST.latex}share/doc/doxygen/examples/autolink/html/doxygen.png
 ${PLIST.latex}share/doc/doxygen/examples/autolink/html/dynsections.js
 ${PLIST.latex}share/doc/doxygen/examples/autolink/html/files.html
 ${PLIST.latex}share/doc/doxygen/examples/autolink/html/ftv2blank.png
-${PLIST.latex}share/doc/doxygen/examples/autolink/html/ftv2cl.png
 ${PLIST.latex}share/doc/doxygen/examples/autolink/html/ftv2doc.png
 ${PLIST.latex}share/doc/doxygen/examples/autolink/html/ftv2folderclosed.png
 ${PLIST.latex}share/doc/doxygen/examples/autolink/html/ftv2folderopen.png
@@ -115,9 +108,7 @@ ${PLIST.latex}share/doc/doxygen/examples/autolink/html/ftv2lastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/autolink/html/ftv2link.png
 ${PLIST.latex}share/doc/doxygen/examples/autolink/html/ftv2mlastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/autolink/html/ftv2mnode.png
-${PLIST.latex}share/doc/doxygen/examples/autolink/html/ftv2mo.png
 ${PLIST.latex}share/doc/doxygen/examples/autolink/html/ftv2node.png
-${PLIST.latex}share/doc/doxygen/examples/autolink/html/ftv2ns.png
 ${PLIST.latex}share/doc/doxygen/examples/autolink/html/ftv2plastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/autolink/html/ftv2pnode.png
 ${PLIST.latex}share/doc/doxygen/examples/autolink/html/ftv2splitbar.png
@@ -160,7 +151,6 @@ ${PLIST.latex}share/doc/doxygen/examples/class/html/doxygen.png
 ${PLIST.latex}share/doc/doxygen/examples/class/html/dynsections.js
 ${PLIST.latex}share/doc/doxygen/examples/class/html/files.html
 ${PLIST.latex}share/doc/doxygen/examples/class/html/ftv2blank.png
-${PLIST.latex}share/doc/doxygen/examples/class/html/ftv2cl.png
 ${PLIST.latex}share/doc/doxygen/examples/class/html/ftv2doc.png
 ${PLIST.latex}share/doc/doxygen/examples/class/html/ftv2folderclosed.png
 ${PLIST.latex}share/doc/doxygen/examples/class/html/ftv2folderopen.png
@@ -168,9 +158,7 @@ ${PLIST.latex}share/doc/doxygen/examples/class/html/ftv2lastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/class/html/ftv2link.png
 ${PLIST.latex}share/doc/doxygen/examples/class/html/ftv2mlastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/class/html/ftv2mnode.png
-${PLIST.latex}share/doc/doxygen/examples/class/html/ftv2mo.png
 ${PLIST.latex}share/doc/doxygen/examples/class/html/ftv2node.png
-${PLIST.latex}share/doc/doxygen/examples/class/html/ftv2ns.png
 ${PLIST.latex}share/doc/doxygen/examples/class/html/ftv2plastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/class/html/ftv2pnode.png
 ${PLIST.latex}share/doc/doxygen/examples/class/html/ftv2splitbar.png
@@ -202,7 +190,6 @@ ${PLIST.latex}share/doc/doxygen/examples/define/html/doxygen.png
 ${PLIST.latex}share/doc/doxygen/examples/define/html/dynsections.js
 ${PLIST.latex}share/doc/doxygen/examples/define/html/files.html
 ${PLIST.latex}share/doc/doxygen/examples/define/html/ftv2blank.png
-${PLIST.latex}share/doc/doxygen/examples/define/html/ftv2cl.png
 ${PLIST.latex}share/doc/doxygen/examples/define/html/ftv2doc.png
 ${PLIST.latex}share/doc/doxygen/examples/define/html/ftv2folderclosed.png
 ${PLIST.latex}share/doc/doxygen/examples/define/html/ftv2folderopen.png
@@ -210,9 +197,7 @@ ${PLIST.latex}share/doc/doxygen/examples/define/html/ftv2lastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/define/html/ftv2link.png
 ${PLIST.latex}share/doc/doxygen/examples/define/html/ftv2mlastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/define/html/ftv2mnode.png
-${PLIST.latex}share/doc/doxygen/examples/define/html/ftv2mo.png
 ${PLIST.latex}share/doc/doxygen/examples/define/html/ftv2node.png
-${PLIST.latex}share/doc/doxygen/examples/define/html/ftv2ns.png
 ${PLIST.latex}share/doc/doxygen/examples/define/html/ftv2plastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/define/html/ftv2pnode.png
 ${PLIST.latex}share/doc/doxygen/examples/define/html/ftv2splitbar.png
@@ -331,7 +316,6 @@ ${PLIST.latex}share/doc/doxygen/examples/diagrams/html/doxygen.png
 ${PLIST.latex}share/doc/doxygen/examples/diagrams/html/dynsections.js
 ${PLIST.latex}share/doc/doxygen/examples/diagrams/html/files.html
 ${PLIST.latex}share/doc/doxygen/examples/diagrams/html/ftv2blank.png
-${PLIST.latex}share/doc/doxygen/examples/diagrams/html/ftv2cl.png
 ${PLIST.latex}share/doc/doxygen/examples/diagrams/html/ftv2doc.png
 ${PLIST.latex}share/doc/doxygen/examples/diagrams/html/ftv2folderclosed.png
 ${PLIST.latex}share/doc/doxygen/examples/diagrams/html/ftv2folderopen.png
@@ -339,9 +323,7 @@ ${PLIST.latex}share/doc/doxygen/examples/diagrams/html/ftv2lastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/diagrams/html/ftv2link.png
 ${PLIST.latex}share/doc/doxygen/examples/diagrams/html/ftv2mlastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/diagrams/html/ftv2mnode.png
-${PLIST.latex}share/doc/doxygen/examples/diagrams/html/ftv2mo.png
 ${PLIST.latex}share/doc/doxygen/examples/diagrams/html/ftv2node.png
-${PLIST.latex}share/doc/doxygen/examples/diagrams/html/ftv2ns.png
 ${PLIST.latex}share/doc/doxygen/examples/diagrams/html/ftv2plastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/diagrams/html/ftv2pnode.png
 ${PLIST.latex}share/doc/doxygen/examples/diagrams/html/ftv2splitbar.png
@@ -393,7 +375,6 @@ ${PLIST.latex}share/doc/doxygen/examples/docstring/html/doxygen.png
 ${PLIST.latex}share/doc/doxygen/examples/docstring/html/dynsections.js
 ${PLIST.latex}share/doc/doxygen/examples/docstring/html/files.html
 ${PLIST.latex}share/doc/doxygen/examples/docstring/html/ftv2blank.png
-${PLIST.latex}share/doc/doxygen/examples/docstring/html/ftv2cl.png
 ${PLIST.latex}share/doc/doxygen/examples/docstring/html/ftv2doc.png
 ${PLIST.latex}share/doc/doxygen/examples/docstring/html/ftv2folderclosed.png
 ${PLIST.latex}share/doc/doxygen/examples/docstring/html/ftv2folderopen.png
@@ -401,9 +382,7 @@ ${PLIST.latex}share/doc/doxygen/examples/docstring/html/ftv2lastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/docstring/html/ftv2link.png
 ${PLIST.latex}share/doc/doxygen/examples/docstring/html/ftv2mlastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/docstring/html/ftv2mnode.png
-${PLIST.latex}share/doc/doxygen/examples/docstring/html/ftv2mo.png
 ${PLIST.latex}share/doc/doxygen/examples/docstring/html/ftv2node.png
-${PLIST.latex}share/doc/doxygen/examples/docstring/html/ftv2ns.png
 ${PLIST.latex}share/doc/doxygen/examples/docstring/html/ftv2plastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/docstring/html/ftv2pnode.png
 ${PLIST.latex}share/doc/doxygen/examples/docstring/html/ftv2splitbar.png
@@ -442,7 +421,6 @@ ${PLIST.latex}share/doc/doxygen/examples/enum/html/dynsections.js
 ${PLIST.latex}share/doc/doxygen/examples/enum/html/enum_8h_source.html
 ${PLIST.latex}share/doc/doxygen/examples/enum/html/files.html
 ${PLIST.latex}share/doc/doxygen/examples/enum/html/ftv2blank.png
-${PLIST.latex}share/doc/doxygen/examples/enum/html/ftv2cl.png
 ${PLIST.latex}share/doc/doxygen/examples/enum/html/ftv2doc.png
 ${PLIST.latex}share/doc/doxygen/examples/enum/html/ftv2folderclosed.png
 ${PLIST.latex}share/doc/doxygen/examples/enum/html/ftv2folderopen.png
@@ -450,9 +428,7 @@ ${PLIST.latex}share/doc/doxygen/examples/enum/html/ftv2lastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/enum/html/ftv2link.png
 ${PLIST.latex}share/doc/doxygen/examples/enum/html/ftv2mlastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/enum/html/ftv2mnode.png
-${PLIST.latex}share/doc/doxygen/examples/enum/html/ftv2mo.png
 ${PLIST.latex}share/doc/doxygen/examples/enum/html/ftv2node.png
-${PLIST.latex}share/doc/doxygen/examples/enum/html/ftv2ns.png
 ${PLIST.latex}share/doc/doxygen/examples/enum/html/ftv2plastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/enum/html/ftv2pnode.png
 ${PLIST.latex}share/doc/doxygen/examples/enum/html/ftv2splitbar.png
@@ -489,7 +465,6 @@ ${PLIST.latex}share/doc/doxygen/examples/example/html/dynsections.js
 ${PLIST.latex}share/doc/doxygen/examples/example/html/example_test_8cpp-example.html
 ${PLIST.latex}share/doc/doxygen/examples/example/html/examples.html
 ${PLIST.latex}share/doc/doxygen/examples/example/html/ftv2blank.png
-${PLIST.latex}share/doc/doxygen/examples/example/html/ftv2cl.png
 ${PLIST.latex}share/doc/doxygen/examples/example/html/ftv2doc.png
 ${PLIST.latex}share/doc/doxygen/examples/example/html/ftv2folderclosed.png
 ${PLIST.latex}share/doc/doxygen/examples/example/html/ftv2folderopen.png
@@ -497,9 +472,7 @@ ${PLIST.latex}share/doc/doxygen/examples/example/html/ftv2lastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/example/html/ftv2link.png
 ${PLIST.latex}share/doc/doxygen/examples/example/html/ftv2mlastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/example/html/ftv2mnode.png
-${PLIST.latex}share/doc/doxygen/examples/example/html/ftv2mo.png
 ${PLIST.latex}share/doc/doxygen/examples/example/html/ftv2node.png
-${PLIST.latex}share/doc/doxygen/examples/example/html/ftv2ns.png
 ${PLIST.latex}share/doc/doxygen/examples/example/html/ftv2plastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/example/html/ftv2pnode.png
 ${PLIST.latex}share/doc/doxygen/examples/example/html/ftv2splitbar.png
@@ -532,7 +505,6 @@ ${PLIST.latex}share/doc/doxygen/examples/file/html/file_8h.html
 ${PLIST.latex}share/doc/doxygen/examples/file/html/file_8h_source.html
 ${PLIST.latex}share/doc/doxygen/examples/file/html/files.html
 ${PLIST.latex}share/doc/doxygen/examples/file/html/ftv2blank.png
-${PLIST.latex}share/doc/doxygen/examples/file/html/ftv2cl.png
 ${PLIST.latex}share/doc/doxygen/examples/file/html/ftv2doc.png
 ${PLIST.latex}share/doc/doxygen/examples/file/html/ftv2folderclosed.png
 ${PLIST.latex}share/doc/doxygen/examples/file/html/ftv2folderopen.png
@@ -540,9 +512,7 @@ ${PLIST.latex}share/doc/doxygen/examples/file/html/ftv2lastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/file/html/ftv2link.png
 ${PLIST.latex}share/doc/doxygen/examples/file/html/ftv2mlastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/file/html/ftv2mnode.png
-${PLIST.latex}share/doc/doxygen/examples/file/html/ftv2mo.png
 ${PLIST.latex}share/doc/doxygen/examples/file/html/ftv2node.png
-${PLIST.latex}share/doc/doxygen/examples/file/html/ftv2ns.png
 ${PLIST.latex}share/doc/doxygen/examples/file/html/ftv2plastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/file/html/ftv2pnode.png
 ${PLIST.latex}share/doc/doxygen/examples/file/html/ftv2splitbar.png
@@ -576,7 +546,6 @@ ${PLIST.latex}share/doc/doxygen/examples/func/html/doxygen.png
 ${PLIST.latex}share/doc/doxygen/examples/func/html/dynsections.js
 ${PLIST.latex}share/doc/doxygen/examples/func/html/files.html
 ${PLIST.latex}share/doc/doxygen/examples/func/html/ftv2blank.png
-${PLIST.latex}share/doc/doxygen/examples/func/html/ftv2cl.png
 ${PLIST.latex}share/doc/doxygen/examples/func/html/ftv2doc.png
 ${PLIST.latex}share/doc/doxygen/examples/func/html/ftv2folderclosed.png
 ${PLIST.latex}share/doc/doxygen/examples/func/html/ftv2folderopen.png
@@ -584,9 +553,7 @@ ${PLIST.latex}share/doc/doxygen/examples/func/html/ftv2lastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/func/html/ftv2link.png
 ${PLIST.latex}share/doc/doxygen/examples/func/html/ftv2mlastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/func/html/ftv2mnode.png
-${PLIST.latex}share/doc/doxygen/examples/func/html/ftv2mo.png
 ${PLIST.latex}share/doc/doxygen/examples/func/html/ftv2node.png
-${PLIST.latex}share/doc/doxygen/examples/func/html/ftv2ns.png
 ${PLIST.latex}share/doc/doxygen/examples/func/html/ftv2plastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/func/html/ftv2pnode.png
 ${PLIST.latex}share/doc/doxygen/examples/func/html/ftv2splitbar.png
@@ -624,7 +591,6 @@ ${PLIST.latex}share/doc/doxygen/examples/group/html/doxygen.png
 ${PLIST.latex}share/doc/doxygen/examples/group/html/dynsections.js
 ${PLIST.latex}share/doc/doxygen/examples/group/html/files.html
 ${PLIST.latex}share/doc/doxygen/examples/group/html/ftv2blank.png
-${PLIST.latex}share/doc/doxygen/examples/group/html/ftv2cl.png
 ${PLIST.latex}share/doc/doxygen/examples/group/html/ftv2doc.png
 ${PLIST.latex}share/doc/doxygen/examples/group/html/ftv2folderclosed.png
 ${PLIST.latex}share/doc/doxygen/examples/group/html/ftv2folderopen.png
@@ -632,9 +598,7 @@ ${PLIST.latex}share/doc/doxygen/examples/group/html/ftv2lastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/group/html/ftv2link.png
 ${PLIST.latex}share/doc/doxygen/examples/group/html/ftv2mlastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/group/html/ftv2mnode.png
-${PLIST.latex}share/doc/doxygen/examples/group/html/ftv2mo.png
 ${PLIST.latex}share/doc/doxygen/examples/group/html/ftv2node.png
-${PLIST.latex}share/doc/doxygen/examples/group/html/ftv2ns.png
 ${PLIST.latex}share/doc/doxygen/examples/group/html/ftv2plastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/group/html/ftv2pnode.png
 ${PLIST.latex}share/doc/doxygen/examples/group/html/ftv2splitbar.png
@@ -677,7 +641,6 @@ ${PLIST.latex}share/doc/doxygen/examples/include/html/doxygen.png
 ${PLIST.latex}share/doc/doxygen/examples/include/html/dynsections.js
 ${PLIST.latex}share/doc/doxygen/examples/include/html/example.html
 ${PLIST.latex}share/doc/doxygen/examples/include/html/ftv2blank.png
-${PLIST.latex}share/doc/doxygen/examples/include/html/ftv2cl.png
 ${PLIST.latex}share/doc/doxygen/examples/include/html/ftv2doc.png
 ${PLIST.latex}share/doc/doxygen/examples/include/html/ftv2folderclosed.png
 ${PLIST.latex}share/doc/doxygen/examples/include/html/ftv2folderopen.png
@@ -685,9 +648,7 @@ ${PLIST.latex}share/doc/doxygen/examples/include/html/ftv2lastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/include/html/ftv2link.png
 ${PLIST.latex}share/doc/doxygen/examples/include/html/ftv2mlastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/include/html/ftv2mnode.png
-${PLIST.latex}share/doc/doxygen/examples/include/html/ftv2mo.png
 ${PLIST.latex}share/doc/doxygen/examples/include/html/ftv2node.png
-${PLIST.latex}share/doc/doxygen/examples/include/html/ftv2ns.png
 ${PLIST.latex}share/doc/doxygen/examples/include/html/ftv2plastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/include/html/ftv2pnode.png
 ${PLIST.latex}share/doc/doxygen/examples/include/html/ftv2splitbar.png
@@ -721,7 +682,6 @@ ${PLIST.latex}share/doc/doxygen/examples/jdstyle/html/doxygen.css
 ${PLIST.latex}share/doc/doxygen/examples/jdstyle/html/doxygen.png
 ${PLIST.latex}share/doc/doxygen/examples/jdstyle/html/dynsections.js
 ${PLIST.latex}share/doc/doxygen/examples/jdstyle/html/ftv2blank.png
-${PLIST.latex}share/doc/doxygen/examples/jdstyle/html/ftv2cl.png
 ${PLIST.latex}share/doc/doxygen/examples/jdstyle/html/ftv2doc.png
 ${PLIST.latex}share/doc/doxygen/examples/jdstyle/html/ftv2folderclosed.png
 ${PLIST.latex}share/doc/doxygen/examples/jdstyle/html/ftv2folderopen.png
@@ -729,9 +689,7 @@ ${PLIST.latex}share/doc/doxygen/examples/jdstyle/html/ftv2lastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/jdstyle/html/ftv2link.png
 ${PLIST.latex}share/doc/doxygen/examples/jdstyle/html/ftv2mlastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/jdstyle/html/ftv2mnode.png
-${PLIST.latex}share/doc/doxygen/examples/jdstyle/html/ftv2mo.png
 ${PLIST.latex}share/doc/doxygen/examples/jdstyle/html/ftv2node.png
-${PLIST.latex}share/doc/doxygen/examples/jdstyle/html/ftv2ns.png
 ${PLIST.latex}share/doc/doxygen/examples/jdstyle/html/ftv2plastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/jdstyle/html/ftv2pnode.png
 ${PLIST.latex}share/doc/doxygen/examples/jdstyle/html/ftv2splitbar.png
@@ -766,7 +724,6 @@ ${PLIST.latex}share/doc/doxygen/examples/manual/html/doxygen.png
 ${PLIST.latex}share/doc/doxygen/examples/manual/html/dynsections.js
 ${PLIST.latex}share/doc/doxygen/examples/manual/html/files.html
 ${PLIST.latex}share/doc/doxygen/examples/manual/html/ftv2blank.png
-${PLIST.latex}share/doc/doxygen/examples/manual/html/ftv2cl.png
 ${PLIST.latex}share/doc/doxygen/examples/manual/html/ftv2doc.png
 ${PLIST.latex}share/doc/doxygen/examples/manual/html/ftv2folderclosed.png
 ${PLIST.latex}share/doc/doxygen/examples/manual/html/ftv2folderopen.png
@@ -774,9 +731,7 @@ ${PLIST.latex}share/doc/doxygen/examples/manual/html/ftv2lastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/manual/html/ftv2link.png
 ${PLIST.latex}share/doc/doxygen/examples/manual/html/ftv2mlastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/manual/html/ftv2mnode.png
-${PLIST.latex}share/doc/doxygen/examples/manual/html/ftv2mo.png
 ${PLIST.latex}share/doc/doxygen/examples/manual/html/ftv2node.png
-${PLIST.latex}share/doc/doxygen/examples/manual/html/ftv2ns.png
 ${PLIST.latex}share/doc/doxygen/examples/manual/html/ftv2plastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/manual/html/ftv2pnode.png
 ${PLIST.latex}share/doc/doxygen/examples/manual/html/ftv2splitbar.png
@@ -827,7 +782,6 @@ ${PLIST.latex}share/doc/doxygen/examples/memgrp/html/doxygen.png
 ${PLIST.latex}share/doc/doxygen/examples/memgrp/html/dynsections.js
 ${PLIST.latex}share/doc/doxygen/examples/memgrp/html/files.html
 ${PLIST.latex}share/doc/doxygen/examples/memgrp/html/ftv2blank.png
-${PLIST.latex}share/doc/doxygen/examples/memgrp/html/ftv2cl.png
 ${PLIST.latex}share/doc/doxygen/examples/memgrp/html/ftv2doc.png
 ${PLIST.latex}share/doc/doxygen/examples/memgrp/html/ftv2folderclosed.png
 ${PLIST.latex}share/doc/doxygen/examples/memgrp/html/ftv2folderopen.png
@@ -835,9 +789,7 @@ ${PLIST.latex}share/doc/doxygen/examples/memgrp/html/ftv2lastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/memgrp/html/ftv2link.png
 ${PLIST.latex}share/doc/doxygen/examples/memgrp/html/ftv2mlastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/memgrp/html/ftv2mnode.png
-${PLIST.latex}share/doc/doxygen/examples/memgrp/html/ftv2mo.png
 ${PLIST.latex}share/doc/doxygen/examples/memgrp/html/ftv2node.png
-${PLIST.latex}share/doc/doxygen/examples/memgrp/html/ftv2ns.png
 ${PLIST.latex}share/doc/doxygen/examples/memgrp/html/ftv2plastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/memgrp/html/ftv2pnode.png
 ${PLIST.latex}share/doc/doxygen/examples/memgrp/html/ftv2splitbar.png
@@ -876,7 +828,6 @@ ${PLIST.latex}share/doc/doxygen/examples/mux/html/doxygen.png
 ${PLIST.latex}share/doc/doxygen/examples/mux/html/dynsections.js
 ${PLIST.latex}share/doc/doxygen/examples/mux/html/files.html
 ${PLIST.latex}share/doc/doxygen/examples/mux/html/ftv2blank.png
-${PLIST.latex}share/doc/doxygen/examples/mux/html/ftv2cl.png
 ${PLIST.latex}share/doc/doxygen/examples/mux/html/ftv2doc.png
 ${PLIST.latex}share/doc/doxygen/examples/mux/html/ftv2folderclosed.png
 ${PLIST.latex}share/doc/doxygen/examples/mux/html/ftv2folderopen.png
@@ -884,9 +835,7 @@ ${PLIST.latex}share/doc/doxygen/examples/mux/html/ftv2lastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/mux/html/ftv2link.png
 ${PLIST.latex}share/doc/doxygen/examples/mux/html/ftv2mlastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/mux/html/ftv2mnode.png
-${PLIST.latex}share/doc/doxygen/examples/mux/html/ftv2mo.png
 ${PLIST.latex}share/doc/doxygen/examples/mux/html/ftv2node.png
-${PLIST.latex}share/doc/doxygen/examples/mux/html/ftv2ns.png
 ${PLIST.latex}share/doc/doxygen/examples/mux/html/ftv2plastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/mux/html/ftv2pnode.png
 ${PLIST.latex}share/doc/doxygen/examples/mux/html/ftv2splitbar.png
@@ -920,7 +869,6 @@ ${PLIST.latex}share/doc/doxygen/examples/overload/html/doxygen.css
 ${PLIST.latex}share/doc/doxygen/examples/overload/html/doxygen.png
 ${PLIST.latex}share/doc/doxygen/examples/overload/html/dynsections.js
 ${PLIST.latex}share/doc/doxygen/examples/overload/html/ftv2blank.png
-${PLIST.latex}share/doc/doxygen/examples/overload/html/ftv2cl.png
 ${PLIST.latex}share/doc/doxygen/examples/overload/html/ftv2doc.png
 ${PLIST.latex}share/doc/doxygen/examples/overload/html/ftv2folderclosed.png
 ${PLIST.latex}share/doc/doxygen/examples/overload/html/ftv2folderopen.png
@@ -928,9 +876,7 @@ ${PLIST.latex}share/doc/doxygen/examples/overload/html/ftv2lastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/overload/html/ftv2link.png
 ${PLIST.latex}share/doc/doxygen/examples/overload/html/ftv2mlastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/overload/html/ftv2mnode.png
-${PLIST.latex}share/doc/doxygen/examples/overload/html/ftv2mo.png
 ${PLIST.latex}share/doc/doxygen/examples/overload/html/ftv2node.png
-${PLIST.latex}share/doc/doxygen/examples/overload/html/ftv2ns.png
 ${PLIST.latex}share/doc/doxygen/examples/overload/html/ftv2plastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/overload/html/ftv2pnode.png
 ${PLIST.latex}share/doc/doxygen/examples/overload/html/ftv2splitbar.png
@@ -959,7 +905,6 @@ ${PLIST.latex}share/doc/doxygen/examples/page/html/doxygen.css
 ${PLIST.latex}share/doc/doxygen/examples/page/html/doxygen.png
 ${PLIST.latex}share/doc/doxygen/examples/page/html/dynsections.js
 ${PLIST.latex}share/doc/doxygen/examples/page/html/ftv2blank.png
-${PLIST.latex}share/doc/doxygen/examples/page/html/ftv2cl.png
 ${PLIST.latex}share/doc/doxygen/examples/page/html/ftv2doc.png
 ${PLIST.latex}share/doc/doxygen/examples/page/html/ftv2folderclosed.png
 ${PLIST.latex}share/doc/doxygen/examples/page/html/ftv2folderopen.png
@@ -967,9 +912,7 @@ ${PLIST.latex}share/doc/doxygen/examples/page/html/ftv2lastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/page/html/ftv2link.png
 ${PLIST.latex}share/doc/doxygen/examples/page/html/ftv2mlastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/page/html/ftv2mnode.png
-${PLIST.latex}share/doc/doxygen/examples/page/html/ftv2mo.png
 ${PLIST.latex}share/doc/doxygen/examples/page/html/ftv2node.png
-${PLIST.latex}share/doc/doxygen/examples/page/html/ftv2ns.png
 ${PLIST.latex}share/doc/doxygen/examples/page/html/ftv2plastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/page/html/ftv2pnode.png
 ${PLIST.latex}share/doc/doxygen/examples/page/html/ftv2splitbar.png
@@ -1002,7 +945,6 @@ ${PLIST.latex}share/doc/doxygen/examples/par/html/doxygen.css
 ${PLIST.latex}share/doc/doxygen/examples/par/html/doxygen.png
 ${PLIST.latex}share/doc/doxygen/examples/par/html/dynsections.js
 ${PLIST.latex}share/doc/doxygen/examples/par/html/ftv2blank.png
-${PLIST.latex}share/doc/doxygen/examples/par/html/ftv2cl.png
 ${PLIST.latex}share/doc/doxygen/examples/par/html/ftv2doc.png
 ${PLIST.latex}share/doc/doxygen/examples/par/html/ftv2folderclosed.png
 ${PLIST.latex}share/doc/doxygen/examples/par/html/ftv2folderopen.png
@@ -1010,9 +952,7 @@ ${PLIST.latex}share/doc/doxygen/examples/par/html/ftv2lastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/par/html/ftv2link.png
 ${PLIST.latex}share/doc/doxygen/examples/par/html/ftv2mlastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/par/html/ftv2mnode.png
-${PLIST.latex}share/doc/doxygen/examples/par/html/ftv2mo.png
 ${PLIST.latex}share/doc/doxygen/examples/par/html/ftv2node.png
-${PLIST.latex}share/doc/doxygen/examples/par/html/ftv2ns.png
 ${PLIST.latex}share/doc/doxygen/examples/par/html/ftv2plastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/par/html/ftv2pnode.png
 ${PLIST.latex}share/doc/doxygen/examples/par/html/ftv2splitbar.png
@@ -1045,7 +985,6 @@ ${PLIST.latex}share/doc/doxygen/examples/pyexample/html/doxygen.css
 ${PLIST.latex}share/doc/doxygen/examples/pyexample/html/doxygen.png
 ${PLIST.latex}share/doc/doxygen/examples/pyexample/html/dynsections.js
 ${PLIST.latex}share/doc/doxygen/examples/pyexample/html/ftv2blank.png
-${PLIST.latex}share/doc/doxygen/examples/pyexample/html/ftv2cl.png
 ${PLIST.latex}share/doc/doxygen/examples/pyexample/html/ftv2doc.png
 ${PLIST.latex}share/doc/doxygen/examples/pyexample/html/ftv2folderclosed.png
 ${PLIST.latex}share/doc/doxygen/examples/pyexample/html/ftv2folderopen.png
@@ -1053,9 +992,7 @@ ${PLIST.latex}share/doc/doxygen/examples/pyexample/html/ftv2lastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/pyexample/html/ftv2link.png
 ${PLIST.latex}share/doc/doxygen/examples/pyexample/html/ftv2mlastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/pyexample/html/ftv2mnode.png
-${PLIST.latex}share/doc/doxygen/examples/pyexample/html/ftv2mo.png
 ${PLIST.latex}share/doc/doxygen/examples/pyexample/html/ftv2node.png
-${PLIST.latex}share/doc/doxygen/examples/pyexample/html/ftv2ns.png
 ${PLIST.latex}share/doc/doxygen/examples/pyexample/html/ftv2plastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/pyexample/html/ftv2pnode.png
 ${PLIST.latex}share/doc/doxygen/examples/pyexample/html/ftv2splitbar.png
@@ -1093,7 +1030,6 @@ ${PLIST.latex}share/doc/doxygen/examples/qtstyle/html/doxygen.css
 ${PLIST.latex}share/doc/doxygen/examples/qtstyle/html/doxygen.png
 ${PLIST.latex}share/doc/doxygen/examples/qtstyle/html/dynsections.js
 ${PLIST.latex}share/doc/doxygen/examples/qtstyle/html/ftv2blank.png
-${PLIST.latex}share/doc/doxygen/examples/qtstyle/html/ftv2cl.png
 ${PLIST.latex}share/doc/doxygen/examples/qtstyle/html/ftv2doc.png
 ${PLIST.latex}share/doc/doxygen/examples/qtstyle/html/ftv2folderclosed.png
 ${PLIST.latex}share/doc/doxygen/examples/qtstyle/html/ftv2folderopen.png
@@ -1101,9 +1037,7 @@ ${PLIST.latex}share/doc/doxygen/examples/qtstyle/html/ftv2lastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/qtstyle/html/ftv2link.png
 ${PLIST.latex}share/doc/doxygen/examples/qtstyle/html/ftv2mlastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/qtstyle/html/ftv2mnode.png
-${PLIST.latex}share/doc/doxygen/examples/qtstyle/html/ftv2mo.png
 ${PLIST.latex}share/doc/doxygen/examples/qtstyle/html/ftv2node.png
-${PLIST.latex}share/doc/doxygen/examples/qtstyle/html/ftv2ns.png
 ${PLIST.latex}share/doc/doxygen/examples/qtstyle/html/ftv2plastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/qtstyle/html/ftv2pnode.png
 ${PLIST.latex}share/doc/doxygen/examples/qtstyle/html/ftv2splitbar.png
@@ -1139,7 +1073,6 @@ ${PLIST.latex}share/doc/doxygen/examples/relates/html/doxygen.css
 ${PLIST.latex}share/doc/doxygen/examples/relates/html/doxygen.png
 ${PLIST.latex}share/doc/doxygen/examples/relates/html/dynsections.js
 ${PLIST.latex}share/doc/doxygen/examples/relates/html/ftv2blank.png
-${PLIST.latex}share/doc/doxygen/examples/relates/html/ftv2cl.png
 ${PLIST.latex}share/doc/doxygen/examples/relates/html/ftv2doc.png
 ${PLIST.latex}share/doc/doxygen/examples/relates/html/ftv2folderclosed.png
 ${PLIST.latex}share/doc/doxygen/examples/relates/html/ftv2folderopen.png
@@ -1147,9 +1080,7 @@ ${PLIST.latex}share/doc/doxygen/examples/relates/html/ftv2lastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/relates/html/ftv2link.png
 ${PLIST.latex}share/doc/doxygen/examples/relates/html/ftv2mlastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/relates/html/ftv2mnode.png
-${PLIST.latex}share/doc/doxygen/examples/relates/html/ftv2mo.png
 ${PLIST.latex}share/doc/doxygen/examples/relates/html/ftv2node.png
-${PLIST.latex}share/doc/doxygen/examples/relates/html/ftv2ns.png
 ${PLIST.latex}share/doc/doxygen/examples/relates/html/ftv2plastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/relates/html/ftv2pnode.png
 ${PLIST.latex}share/doc/doxygen/examples/relates/html/ftv2splitbar.png
@@ -1182,7 +1113,6 @@ ${PLIST.latex}share/doc/doxygen/examples/restypedef/html/doxygen.png
 ${PLIST.latex}share/doc/doxygen/examples/restypedef/html/dynsections.js
 ${PLIST.latex}share/doc/doxygen/examples/restypedef/html/files.html
 ${PLIST.latex}share/doc/doxygen/examples/restypedef/html/ftv2blank.png
-${PLIST.latex}share/doc/doxygen/examples/restypedef/html/ftv2cl.png
 ${PLIST.latex}share/doc/doxygen/examples/restypedef/html/ftv2doc.png
 ${PLIST.latex}share/doc/doxygen/examples/restypedef/html/ftv2folderclosed.png
 ${PLIST.latex}share/doc/doxygen/examples/restypedef/html/ftv2folderopen.png
@@ -1190,9 +1120,7 @@ ${PLIST.latex}share/doc/doxygen/examples/restypedef/html/ftv2lastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/restypedef/html/ftv2link.png
 ${PLIST.latex}share/doc/doxygen/examples/restypedef/html/ftv2mlastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/restypedef/html/ftv2mnode.png
-${PLIST.latex}share/doc/doxygen/examples/restypedef/html/ftv2mo.png
 ${PLIST.latex}share/doc/doxygen/examples/restypedef/html/ftv2node.png
-${PLIST.latex}share/doc/doxygen/examples/restypedef/html/ftv2ns.png
 ${PLIST.latex}share/doc/doxygen/examples/restypedef/html/ftv2plastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/restypedef/html/ftv2pnode.png
 ${PLIST.latex}share/doc/doxygen/examples/restypedef/html/ftv2splitbar.png
@@ -1228,7 +1156,6 @@ ${PLIST.latex}share/doc/doxygen/examples/structcmd/html/doxygen.png
 ${PLIST.latex}share/doc/doxygen/examples/structcmd/html/dynsections.js
 ${PLIST.latex}share/doc/doxygen/examples/structcmd/html/files.html
 ${PLIST.latex}share/doc/doxygen/examples/structcmd/html/ftv2blank.png
-${PLIST.latex}share/doc/doxygen/examples/structcmd/html/ftv2cl.png
 ${PLIST.latex}share/doc/doxygen/examples/structcmd/html/ftv2doc.png
 ${PLIST.latex}share/doc/doxygen/examples/structcmd/html/ftv2folderclosed.png
 ${PLIST.latex}share/doc/doxygen/examples/structcmd/html/ftv2folderopen.png
@@ -1236,9 +1163,7 @@ ${PLIST.latex}share/doc/doxygen/examples/structcmd/html/ftv2lastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/structcmd/html/ftv2link.png
 ${PLIST.latex}share/doc/doxygen/examples/structcmd/html/ftv2mlastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/structcmd/html/ftv2mnode.png
-${PLIST.latex}share/doc/doxygen/examples/structcmd/html/ftv2mo.png
 ${PLIST.latex}share/doc/doxygen/examples/structcmd/html/ftv2node.png
-${PLIST.latex}share/doc/doxygen/examples/structcmd/html/ftv2ns.png
 ${PLIST.latex}share/doc/doxygen/examples/structcmd/html/ftv2plastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/structcmd/html/ftv2pnode.png
 ${PLIST.latex}share/doc/doxygen/examples/structcmd/html/ftv2splitbar.png
@@ -1277,7 +1202,6 @@ ${PLIST.latex}share/doc/doxygen/examples/tag/html/doxygen.css
 ${PLIST.latex}share/doc/doxygen/examples/tag/html/doxygen.png
 ${PLIST.latex}share/doc/doxygen/examples/tag/html/dynsections.js
 ${PLIST.latex}share/doc/doxygen/examples/tag/html/ftv2blank.png
-${PLIST.latex}share/doc/doxygen/examples/tag/html/ftv2cl.png
 ${PLIST.latex}share/doc/doxygen/examples/tag/html/ftv2doc.png
 ${PLIST.latex}share/doc/doxygen/examples/tag/html/ftv2folderclosed.png
 ${PLIST.latex}share/doc/doxygen/examples/tag/html/ftv2folderopen.png
@@ -1285,9 +1209,7 @@ ${PLIST.latex}share/doc/doxygen/examples/tag/html/ftv2lastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/tag/html/ftv2link.png
 ${PLIST.latex}share/doc/doxygen/examples/tag/html/ftv2mlastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/tag/html/ftv2mnode.png
-${PLIST.latex}share/doc/doxygen/examples/tag/html/ftv2mo.png
 ${PLIST.latex}share/doc/doxygen/examples/tag/html/ftv2node.png
-${PLIST.latex}share/doc/doxygen/examples/tag/html/ftv2ns.png
 ${PLIST.latex}share/doc/doxygen/examples/tag/html/ftv2plastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/tag/html/ftv2pnode.png
 ${PLIST.latex}share/doc/doxygen/examples/tag/html/ftv2splitbar.png
@@ -1324,7 +1246,6 @@ ${PLIST.latex}share/doc/doxygen/examples/tclexample/html/doxygen.png
 ${PLIST.latex}share/doc/doxygen/examples/tclexample/html/dynsections.js
 ${PLIST.latex}share/doc/doxygen/examples/tclexample/html/files.html
 ${PLIST.latex}share/doc/doxygen/examples/tclexample/html/ftv2blank.png
-${PLIST.latex}share/doc/doxygen/examples/tclexample/html/ftv2cl.png
 ${PLIST.latex}share/doc/doxygen/examples/tclexample/html/ftv2doc.png
 ${PLIST.latex}share/doc/doxygen/examples/tclexample/html/ftv2folderclosed.png
 ${PLIST.latex}share/doc/doxygen/examples/tclexample/html/ftv2folderopen.png
@@ -1332,9 +1253,7 @@ ${PLIST.latex}share/doc/doxygen/examples/tclexample/html/ftv2lastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/tclexample/html/ftv2link.png
 ${PLIST.latex}share/doc/doxygen/examples/tclexample/html/ftv2mlastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/tclexample/html/ftv2mnode.png
-${PLIST.latex}share/doc/doxygen/examples/tclexample/html/ftv2mo.png
 ${PLIST.latex}share/doc/doxygen/examples/tclexample/html/ftv2node.png
-${PLIST.latex}share/doc/doxygen/examples/tclexample/html/ftv2ns.png
 ${PLIST.latex}share/doc/doxygen/examples/tclexample/html/ftv2plastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/tclexample/html/ftv2pnode.png
 ${PLIST.latex}share/doc/doxygen/examples/tclexample/html/ftv2splitbar.png
@@ -1381,7 +1300,6 @@ ${PLIST.latex}share/doc/doxygen/examples/template/html/doxygen.css
 ${PLIST.latex}share/doc/doxygen/examples/template/html/doxygen.png
 ${PLIST.latex}share/doc/doxygen/examples/template/html/dynsections.js
 ${PLIST.latex}share/doc/doxygen/examples/template/html/ftv2blank.png
-${PLIST.latex}share/doc/doxygen/examples/template/html/ftv2cl.png
 ${PLIST.latex}share/doc/doxygen/examples/template/html/ftv2doc.png
 ${PLIST.latex}share/doc/doxygen/examples/template/html/ftv2folderclosed.png
 ${PLIST.latex}share/doc/doxygen/examples/template/html/ftv2folderopen.png
@@ -1389,9 +1307,7 @@ ${PLIST.latex}share/doc/doxygen/examples/template/html/ftv2lastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/template/html/ftv2link.png
 ${PLIST.latex}share/doc/doxygen/examples/template/html/ftv2mlastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/template/html/ftv2mnode.png
-${PLIST.latex}share/doc/doxygen/examples/template/html/ftv2mo.png
 ${PLIST.latex}share/doc/doxygen/examples/template/html/ftv2node.png
-${PLIST.latex}share/doc/doxygen/examples/template/html/ftv2ns.png
 ${PLIST.latex}share/doc/doxygen/examples/template/html/ftv2plastnode.png
 ${PLIST.latex}share/doc/doxygen/examples/template/html/ftv2pnode.png
 ${PLIST.latex}share/doc/doxygen/examples/template/html/ftv2splitbar.png
@@ -1460,7 +1376,6 @@ ${PLIST.latex}share/doc/doxygen/html/form_9.png
 ${PLIST.latex}share/doc/doxygen/html/formula.repository
 ${PLIST.latex}share/doc/doxygen/html/formulas.html
 ${PLIST.latex}share/doc/doxygen/html/ftv2blank.png
-${PLIST.latex}share/doc/doxygen/html/ftv2cl.png
 ${PLIST.latex}share/doc/doxygen/html/ftv2doc.png
 ${PLIST.latex}share/doc/doxygen/html/ftv2folderclosed.png
 ${PLIST.latex}share/doc/doxygen/html/ftv2folderopen.png
@@ -1468,9 +1383,7 @@ ${PLIST.latex}share/doc/doxygen/html/ftv2lastnode.png
 ${PLIST.latex}share/doc/doxygen/html/ftv2link.png
 ${PLIST.latex}share/doc/doxygen/html/ftv2mlastnode.png
 ${PLIST.latex}share/doc/doxygen/html/ftv2mnode.png
-${PLIST.latex}share/doc/doxygen/html/ftv2mo.png
 ${PLIST.latex}share/doc/doxygen/html/ftv2node.png
-${PLIST.latex}share/doc/doxygen/html/ftv2ns.png
 ${PLIST.latex}share/doc/doxygen/html/ftv2plastnode.png
 ${PLIST.latex}share/doc/doxygen/html/ftv2pnode.png
 ${PLIST.latex}share/doc/doxygen/html/ftv2splitbar.png
