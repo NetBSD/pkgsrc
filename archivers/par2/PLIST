@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/29 19:36:07 tv Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/04/25 09:22:13 wiz Exp $
 bin/par2
 bin/par2create
 bin/par2repair
 bin/par2verify
+man/man1/par2.1
