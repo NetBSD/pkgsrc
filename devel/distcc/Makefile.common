@@ -1,17 +1,17 @@
-# $NetBSD: Makefile.common,v 1.10 2012/10/31 11:16:53 asau Exp $
+# $NetBSD: Makefile.common,v 1.11 2014/04/25 16:13:31 adam Exp $
 # used by devel/distcc-pump/Makefile
 # used by devel/distccmon-gnome/Makefile
 # used by devel/distccmon-gtk/Makefile
 
-DISTCC_VERSION=		3.1
+# XXX: in the future, remove rc1 substitutions from Makefiles mentioned above
+DISTNAME=	distcc-3.2rc1
+CATEGORIES=	devel
+MASTER_SITES=	http://distcc.googlecode.com/files/
+EXTRACT_SUFX=	.tar.bz2
 
-DISTNAME=		distcc-${DISTCC_VERSION}
-CATEGORIES=		devel
-MASTER_SITES=		http://distcc.googlecode.com/files/
-EXTRACT_SUFX=		.tar.bz2
-
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://distcc.org/
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://distcc.org/
+LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE=		${.CURDIR}/../../devel/distcc/distinfo
 PATCHDIR=		${.CURDIR}/../../devel/distcc/patches
@@ -32,7 +32,7 @@ SUBST_SED.doc=		-e "s|%s/distcc/hosts|%s/hosts|g"
 SUBST_MESSAGE.doc=	Fixing paths.
 
 .if empty(PKGNAME:Mdistcc-[0-9]*)
-DEPENDS+=		distcc>=${DISTCC_VERSION}:../../devel/distcc
+DEPENDS+=		distcc>=${PKGVERSION_NOREV}:../../devel/distcc
 .endif
 
 INSTALLATION_DIRS+=	bin
