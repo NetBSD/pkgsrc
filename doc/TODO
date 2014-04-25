@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13240 2014/04/25 08:55:50 wiz Exp $
+$NetBSD: TODO,v 1.13241 2014/04/25 08:57:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -950,7 +950,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-lasso-2.4.0
 	o py-logilab-astng-0.24.3
 	o py-logilab-common-0.60.1
-	o py-lxml-3.3.5
 	o py-markdown-2.3.1
 	o py-mezzanine-3.0.5
 	o py-mpmath-0.18
