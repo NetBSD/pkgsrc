@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13236 2014/04/25 08:17:49 wiz Exp $
+$NetBSD: TODO,v 1.13237 2014/04/25 08:32:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -483,7 +483,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o doclifter-2.14
 	o dolphin-4.0.2
 	o dos2unix-6.0.5
-	o doxygen-1.8.7
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
 	o drupal-7.27
