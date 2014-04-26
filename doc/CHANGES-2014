@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1617 2014/04/26 05:02:19 wen Exp $
+$NetBSD: CHANGES-2014,v 1.1618 2014/04/26 05:11:22 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2330,3 +2330,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/tidy to 20091027nb5 [wiz 2014-04-25]
 	Updated pkgtools/x11-links to 0.87 [ryoon 2014-04-26]
 	Updated devel/p5-Class-C3 to 0.26 [wen 2014-04-26]
+	Updated devel/p5-Class-ErrorHandler to 0.03 [wen 2014-04-26]
