@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1009 2014/04/22 00:09:00 rodent Exp $
+# $NetBSD: Makefile,v 1.1010 2014/04/26 03:29:30 jnemeth Exp $
 #
 
 COMMENT=	Networking tools
@@ -533,14 +533,15 @@ SUBDIR+=	publicfile
 SUBDIR+=	puf
 SUBDIR+=	pure-ftpd
 SUBDIR+=	pxe
-SUBDIR+=	py-apache-libcloud
 SUBDIR+=	py-GeoIP
 SUBDIR+=	py-IP
 SUBDIR+=	py-ORBit
 SUBDIR+=	py-adns
 SUBDIR+=	py-amqp
+SUBDIR+=	py-apache-libcloud
 SUBDIR+=	py-boto
 SUBDIR+=	py-caldav
+SUBDIR+=	py-celery
 SUBDIR+=	py-dns
 SUBDIR+=	py-dns3
 SUBDIR+=	py-dpkt
