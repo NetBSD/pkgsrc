@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1615 2014/04/25 21:04:33 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1616 2014/04/26 01:24:34 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2328,3 +2328,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/distccmon-gtk to 3.2 [adam 2014-04-25]
 	Updated math/cloog to 0.18.1 [wiz 2014-04-25]
 	Updated www/tidy to 20091027nb5 [wiz 2014-04-25]
+	Updated pkgtools/x11-links to 0.87 [ryoon 2014-04-26]
