@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1010 2014/04/26 03:29:30 jnemeth Exp $
+# $NetBSD: Makefile,v 1.1011 2014/04/26 15:55:12 manu Exp $
 #
 
 COMMENT=	Networking tools
@@ -323,6 +323,7 @@ SUBDIR+=	nagios-nrpe
 SUBDIR+=	nagios-nsca
 SUBDIR+=	nagios-plugin-dotpid
 SUBDIR+=	nagios-plugin-dumpdates
+SUBDIR+=	nagios-plugin-fstab
 SUBDIR+=	nagios-plugin-ldap
 SUBDIR+=	nagios-plugin-milter
 SUBDIR+=	nagios-plugin-mysql

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1629 2014/04/26 14:52:01 wen Exp $
+$NetBSD: CHANGES-2014,v 1.1630 2014/04/26 15:55:12 manu Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2343,3 +2343,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/spamassassin to 3.4.0 [tron 2014-04-26]
 	Updated devel/p5-Devel-Cover to 1.12 [wen 2014-04-26]
 	Updated devel/p5-Devel-PatchPerl to 1.22 [wen 2014-04-26]
+	Added net/nagios-plugin-fstab version 0.1 [manu 2014-04-26]
