@@ -99,7 +99,7 @@ sub write_entry
 sub finish
 {
     my ($self, $pkg2update, $pkgok, $pkgcrank) = @_;
-    say {$self->{fh}} "    <tbody>\n</table>\n";
+    say {$self->{fh}} "    </tbody>\n</table>\n";
     scalar(@_) > 1 and
       say {$self->{fh}} "$pkg2update p5-packages needing updates, $pkgok p5-packages are up-to-date, $pkgcrank p5-packages needs review";
     my $extro = <<EOE;
