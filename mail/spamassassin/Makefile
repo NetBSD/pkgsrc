@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.112 2014/02/12 23:18:10 tron Exp $
+# $NetBSD: Makefile,v 1.113 2014/04/26 13:55:10 tron Exp $
 
-DISTNAME=	Mail-SpamAssassin-3.3.2
-PKGNAME=	spamassassin-3.3.2
-PKGREVISION=	8
+DISTNAME=	Mail-SpamAssassin-3.4.0
+PKGNAME=	spamassassin-3.4.0
 SVR4_PKGNAME=	sa
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_APACHE:=spamassassin/source/}
@@ -21,7 +20,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../mk/bsd.prefs.mk"
 
-RULESARCHIVE=	Mail-SpamAssassin-rules-3.3.2-r1104058.tar.gz
+RULESARCHIVE=	Mail-SpamAssassin-rules-3.4.0.r1565117.tgz
 RULESARCHIVEASC=${RULESARCHIVE}.asc
 RULESARCHIVESHA=${RULESARCHIVE}.sha1
 FILES_SUBST+=	RULESARCHIVE=${RULESDIR}/${RULESARCHIVE}
@@ -40,6 +39,7 @@ DEPENDS+=	p5-Net-DNS>=0.58:../../net/p5-Net-DNS
 DEPENDS+=	{p5-MIME-Base64>=2.11,perl>=5.8.0}:../../converters/p5-MIME-Base64
 DEPENDS+=	{perl>=5.7.3,p5-Time-HiRes-[0-9]*}:../../time/p5-Time-HiRes
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
+DEPENDS+=	re2c>=0.13.6:../../devel/re2c
 
 USE_TOOLS+=	perl
 
@@ -93,7 +93,7 @@ DOCDIR=			${PREFIX}/${DOC_SUBDIR}
 RULE_SUBDIR=		share/spamassassin
 RULESDIR=		${PREFIX}/${RULE_SUBDIR}
 
-PRE_FILES=		init.pre v310.pre v312.pre v320.pre v330.pre
+PRE_FILES=		init.pre v310.pre v312.pre v320.pre v330.pre v340.pre
 .for p in ${PRE_FILES}
 CONF_FILES+=		${EGDIR}/${p}  ${PKG_SYSCONFDIR}/${p}
 .endfor
@@ -108,8 +108,6 @@ SA_INSTALLDIRS+=	${DOC_SUBDIR}/spamd ${DOC_SUBDIR}/sql ${RULE_SUBDIR}
 SA_DOCFILES=		INSTALL LICENSE README TRADEMARK UPGRADE USAGE NOTICE
 SA_DOCFILES+=		CREDITS PACKAGING Changes
 SA_DOCFILES+=		ldap/README ldap/README.testing ldap/sa_test.ldif
-SA_DOCFILES+=		rules/STATISTICS-set0.txt rules/STATISTICS-set1.txt
-SA_DOCFILES+=		rules/STATISTICS-set2.txt rules/STATISTICS-set3.txt
 SA_DOCFILES+=		rules/sa-update-pubkey.txt
 SA_DOCFILES+=		spamc/README.qmail
 SA_DOCFILES+=		sample-nonspam.txt sample-spam.txt
@@ -159,6 +157,24 @@ FILES_SUBST+=		INTERPRETER_SUPPORT=${INTERPRETER_SUPPORT}
 FILES_SUBST+=		OPSYS=${OPSYS}
 
 INSTALLATION_DIRS+=	${SA_INSTALLDIRS}
+
+# Configure the programe that "sa-update" uses for fetching files
+.if defined(TOOLS_PLATFORM.curl)
+SA_UPDATE_FETCH_PROG=	curl
+SA_UPDATE_FETCH_CMD=	${TOOLS_PLATFORM.curl}
+.elif defined(TOOLS_PLATFORM.fetch)
+SA_UPDATE_FETCH_PROG=	fetch
+SA_UPDATE_FETCH_CMD=	${TOOLS_PLATFORM.fetch}
+.else
+DEPENDS+=	wget-[0-9]*:../../net/wget
+
+SA_UPDATE_FETCH_PROG=	wget
+SA_UPDATE_FETCH_CMD=	${PREFIX}/bin/wget
+.endif
+SUBST_CLASSES+=		fetch
+SUBST_STAGE.fetch=	pre-configure
+SUBST_FILES.fetch=	sa-update.raw
+SUBST_VARS.fetch=	SA_UPDATE_FETCH_CMD SA_UPDATE_FETCH_PROG
 
 pre-configure: perl5-configure
 	# GNU configure needs version.h -> create it
