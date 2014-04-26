@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2014/01/28 08:19:30 tron Exp $
+# $NetBSD: options.mk,v 1.9 2014/04/26 11:17:18 tron Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wget
 PKG_SUPPORTED_OPTIONS=	idn inet6
@@ -28,12 +28,10 @@ CONFIGURE_ARGS+=	--disable-ipv6
 ###
 ### Support SSL
 ###
-.if !empty(PKG_OPTIONS:Mopenssl)
-.  include "../../security/openssl/buildlink3.mk"
-CONFIGURE_ARGS+=--with-ssl=openssl
-.elif !empty(PKG_OPTIONS:Mgnutls)
+.if !empty(PKG_OPTIONS:Mgnutls)
 .  include "../../security/gnutls/buildlink3.mk"
 CONFIGURE_ARGS+=--with-ssl=gnutls
 .else
-CONFIGURE_ARGS+=--without-ssl
+.  include "../../security/openssl/buildlink3.mk"
+CONFIGURE_ARGS+=--with-ssl=openssl
 .endif
