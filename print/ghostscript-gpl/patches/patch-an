@@ -1,4 +1,4 @@
-$NetBSD: patch-an,v 1.1 2013/03/16 21:32:01 dholland Exp $
+$NetBSD: patch-an,v 1.2 2014/04/26 13:51:40 wiz Exp $
 
 Do some initialization of global stuff earlier, in particular before
 "@file" args get processed, fixes PR pkg/42984 from T. M. Pederson.

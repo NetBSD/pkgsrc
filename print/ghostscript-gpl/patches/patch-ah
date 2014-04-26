@@ -1,23 +1,17 @@
-$NetBSD: patch-ah,v 1.2 2014/04/07 07:36:20 richard Exp $
+$NetBSD: patch-ah,v 1.3 2014/04/26 13:51:40 wiz Exp $
 
 (1) First chunk to fix the X11_TYPE=native problem, which
     freetype2 in /usr/X11R7/ is way old, and work around to 
     use ghostscript-provided freetype2.
+    This part is not necessary for NetBSD 6.0, 6.1.
 
-(2) Second chunk existed from old days, and no idea, sorry (mef@).
+(2) Second chunk for X11_TYPE=native, will have following problem without 
+    this patch:
+    |  Shared object "libpaper.so.1" not found
 
---- configure.orig	2012-02-08 08:50:31.000000000 +0000
+--- configure.orig	2012-08-08 17:04:57.000000000 +0900
 +++ configure
-@@ -3747,7 +3747,7 @@ CONTRIBINCLUDE="include contrib/contrib.
- INSTALL_CONTRIB="install-contrib-extras"
- 
- # This is just an arbitrary file in contrib to check
--if !(test -f contrib/gdevbjc_.c); then
-+if ! (test -f contrib/gdevbjc_.c); then
-    enable_contrib=no
- fi
- 
-@@ -3775,13 +3775,13 @@ case `uname` in
+@@ -3786,13 +3786,13 @@
          ;;
          *BSD)
          if test $ac_cv_c_compiler_gnu = yes; then
@@ -33,7 +27,7 @@ $NetBSD: patch-ah,v 1.2 2014/04/07 07:36:20 richard Exp $
              CC_DBG_FLAGS_TO_TRY="-g -O0"
          fi
          SET_DT_SONAME=""
-@@ -5290,7 +5290,7 @@ fi
+@@ -5331,7 +5331,7 @@
  fi
  
  if test x$with_libpaper != xno; then
@@ -42,12 +36,3 @@ $NetBSD: patch-ah,v 1.2 2014/04/07 07:36:20 richard Exp $
  
  $as_echo "#define USE_LIBPAPER 1" >>confdefs.h
  
-@@ -6426,7 +6426,7 @@ done
-                 LCUPSINCLUDE="include \$(GLSRCDIR)/lcups.mak"
-                 LCUPSIINCLUDE="include \$(GLSRCDIR)/lcupsi.mak"
-                 if ( test x$with_pdftoraster != xno ); then
--                    if test "$CUPSVERSION" ">" "1.2"; then
-+                    if echo "$CUPSVERSION" | grep -q '^1\.[2-9]'; then
-                         CUPSPDFTORASTER="1"
-                     fi
-                 fi
