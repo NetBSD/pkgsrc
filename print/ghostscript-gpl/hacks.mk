@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2013/03/16 21:32:00 dholland Exp $
+# $NetBSD: hacks.mk,v 1.2 2014/04/26 13:51:40 wiz Exp $
 
 ### [Tue Jan  9 15:57:05 EST 2007 : tv]
 ### Interix has u_int64_t, but not uint64_t
