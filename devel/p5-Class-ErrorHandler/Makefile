@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2013/05/31 14:59:52 schmonz Exp $
+# $NetBSD: Makefile,v 1.11 2014/04/26 05:10:21 wen Exp $
 
-DISTNAME=	Class-ErrorHandler-0.02
+DISTNAME=	Class-ErrorHandler-0.03
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5ceh
 CATEGORIES=	devel perl5
@@ -15,6 +15,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Class/ErrorHandler/.packlist
+
+PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
