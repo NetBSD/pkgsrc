@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1630 2014/04/26 15:55:12 manu Exp $
+$NetBSD: CHANGES-2014,v 1.1631 2014/04/26 16:05:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2344,3 +2344,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Devel-Cover to 1.12 [wen 2014-04-26]
 	Updated devel/p5-Devel-PatchPerl to 1.22 [wen 2014-04-26]
 	Added net/nagios-plugin-fstab version 0.1 [manu 2014-04-26]
+	Added devel/p5-CPAN-Mini version 1.111015 [wen 2014-04-26]
