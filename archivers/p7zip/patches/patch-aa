@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.18 2010/06/16 08:30:09 adam Exp $
+$NetBSD: patch-aa,v 1.19 2014/04/26 01:16:54 dsainty Exp $
 
 --- makefile.machine.orig	2010-05-30 08:33:48.000000000 +0000
 +++ makefile.machine
-@@ -2,21 +2,21 @@
+@@ -2,20 +2,20 @@
  # makefile for Linux (x86, PPC, alpha ...)
  #
  
@@ -26,9 +26,7 @@ $NetBSD: patch-aa,v 1.18 2010/06/16 08:30:09 adam Exp $
 +LINK_SHARED=-shared
  
 -LOCAL_LIBS=-lpthread
--LOCAL_LIBS_DLL=$(LOCAL_LIBS) -ldl
 +LOCAL_LIBS=${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
-+LOCAL_LIBS_DLL=$(LOCAL_LIBS)
+ LOCAL_LIBS_DLL=$(LOCAL_LIBS) -ldl
  
  OBJ_CRC32=$(OBJ_CRC32_C)
- 
