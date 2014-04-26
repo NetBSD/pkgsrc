@@ -1,0 +1,4 @@
+$NetBSD: DESCR,v 1.1 2014/04/26 15:55:12 manu Exp $
+
+This Nagios plugin checks that 'auto' volumes (filesystems and swaps)
+from fstab are active.
