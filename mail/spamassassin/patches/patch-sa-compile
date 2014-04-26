@@ -1,0 +1,25 @@
+$NetBSD: patch-sa-compile,v 1.1 2014/04/26 13:55:10 tron Exp $
+
+Use full path of "re2c" binary to make sure that "sa-compile" works
+with a default command search path.
+
+--- sa-compile.raw.orig	2014-02-07 08:36:38.000000000 +0000
++++ sa-compile.raw	2014-04-26 14:40:47.000000000 +0100
+@@ -108,7 +108,7 @@
+     or die "error writing: $!";
+   exit 1;
+ }
+-unless (qx(re2c -V)) {
++unless (qx($PREFIX/bin/re2c -V)) {
+   print "$0 requires re2c for proper operation.\n"
+     or die "error writing: $!";
+   exit 1;
+@@ -451,7 +451,7 @@
+   }
+ 
+   for (1..$numscans) {
+-    my $cmd = "re2c -i -b -o scanner$_.c scanner$_.re";
++    my $cmd = "$PREFIX/bin/re2c -i -b -o scanner$_.c scanner$_.re";
+     if (!run($cmd)) {
+       # this must be fatal; it can result in corrupt output modules missing
+       # scannerN() functions
