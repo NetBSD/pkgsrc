@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/01/19 17:38:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/04/26 17:44:52 kleink Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -149,6 +149,9 @@ ${PYSITELIB}/flask_admin/form/widgets.pyo
 ${PYSITELIB}/flask_admin/helpers.py
 ${PYSITELIB}/flask_admin/helpers.pyc
 ${PYSITELIB}/flask_admin/helpers.pyo
+${PYSITELIB}/flask_admin/menu.py
+${PYSITELIB}/flask_admin/menu.pyc
+${PYSITELIB}/flask_admin/menu.pyo
 ${PYSITELIB}/flask_admin/model/__init__.py
 ${PYSITELIB}/flask_admin/model/__init__.pyc
 ${PYSITELIB}/flask_admin/model/__init__.pyo
@@ -221,14 +224,15 @@ ${PYSITELIB}/flask_admin/templates/admin/model/layout.html
 ${PYSITELIB}/flask_admin/templates/admin/model/list.html
 ${PYSITELIB}/flask_admin/templates/admin/rediscli/console.html
 ${PYSITELIB}/flask_admin/templates/admin/rediscli/response.html
-${PYSITELIB}/flask_admin/tests/.coverage
+${PYSITELIB}/flask_admin/templates/admin/static.html
 ${PYSITELIB}/flask_admin/tests/__init__.py
 ${PYSITELIB}/flask_admin/tests/__init__.pyc
 ${PYSITELIB}/flask_admin/tests/__init__.pyo
+${PYSITELIB}/flask_admin/tests/data/copyleft.gif
+${PYSITELIB}/flask_admin/tests/data/copyleft.jpeg
 ${PYSITELIB}/flask_admin/tests/data/copyleft.jpg
 ${PYSITELIB}/flask_admin/tests/data/copyleft.png
 ${PYSITELIB}/flask_admin/tests/data/copyleft.tiff
-${PYSITELIB}/flask_admin/tests/dump.rdb
 ${PYSITELIB}/flask_admin/tests/fileadmin/__init__.py
 ${PYSITELIB}/flask_admin/tests/fileadmin/__init__.pyc
 ${PYSITELIB}/flask_admin/tests/fileadmin/__init__.pyo
@@ -282,8 +286,9 @@ ${PYSITELIB}/flask_admin/tests/test_form_upload.pyo
 ${PYSITELIB}/flask_admin/tests/test_model.py
 ${PYSITELIB}/flask_admin/tests/test_model.pyc
 ${PYSITELIB}/flask_admin/tests/test_model.pyo
+${PYSITELIB}/flask_admin/tests/tmp/copyleft.jpeg
+${PYSITELIB}/flask_admin/tests/tmp/copyleft.jpg
 ${PYSITELIB}/flask_admin/tests/tmp/inner/test1.txt
-${PYSITELIB}/flask_admin/tests/tmp/test1.jpg
 ${PYSITELIB}/flask_admin/tools.py
 ${PYSITELIB}/flask_admin/tools.pyc
 ${PYSITELIB}/flask_admin/tools.pyo
@@ -306,3 +311,22 @@ ${PYSITELIB}/flask_admin/translations/zh_CN/LC_MESSAGES/admin.mo
 ${PYSITELIB}/flask_admin/translations/zh_CN/LC_MESSAGES/admin.po
 ${PYSITELIB}/flask_admin/translations/zh_TW/LC_MESSAGES/admin.mo
 ${PYSITELIB}/flask_admin/translations/zh_TW/LC_MESSAGES/admin.po
+${EGDIR}/__init__.py
+${EGDIR}/auth/__init__.py
+${EGDIR}/auth/auth.py
+${EGDIR}/forms/__init__.py
+${EGDIR}/forms/simple.py
+${EGDIR}/index/__init__.py
+${EGDIR}/index/index.py
+${EGDIR}/layout/__init__.py
+${EGDIR}/layout/simple.py
+${EGDIR}/quickstart/__init__.py
+${EGDIR}/quickstart/first.py
+${EGDIR}/quickstart/second.py
+${EGDIR}/quickstart/third.py
+${EGDIR}/runserver.py
+${EGDIR}/simple/__init__.py
+${EGDIR}/simple/simple.py
+${EGDIR}/sqla/__init__.py
+${EGDIR}/sqla/multiple_pk.py
+${EGDIR}/sqla/simple.py
