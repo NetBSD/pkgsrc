@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/04/26 11:41:46 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/04/26 13:19:18 wiz Exp $
 
 DISTNAME=	swift-2.0
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://swift.im/downloads/releases/swift-2.0/
 
@@ -14,8 +15,7 @@ DEPENDS+=	scons>=1.3:../../devel/scons
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-# MAKE_ENV+= CPPPATH="${BUILDLINK_DIR}/include:${BUILDLINK_DIR}/qt4/include"
-# MAKE_ENV+= LIBPATH="${BUILDLINK_DIR}/lib:${BUILDLINK_DIR}/qt4/lib"
+INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
@@ -30,12 +30,14 @@ do-configure:
 	${ECHO} "allow_warnings=\"true\"" >> config.py ;
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons Swift
 
 do-install:
 	cd ${WRKSRC} && \
 	${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons \
 	    SWIFT_INSTALLDIR=${DESTDIR}/${PREFIX} ${DESTDIR}/${PREFIX}
+	${INSTALL_DATA} ${WRKSRC}/Swift/Packaging/Debian/debian/swift-im.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/python/application.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
