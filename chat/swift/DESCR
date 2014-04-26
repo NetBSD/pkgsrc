@@ -1,0 +1,18 @@
+Swift is trying to plug a hole in the XMPP client landscape, and has
+these aims:
+
+    * Wide platform availability.
+    * Doing the "Right Thing" for the user, without configuration.
+    * Doing the "Right Thing" with standards-compliance.
+    * Targeting the end-users, not the system administrators.
+    * Being an XMPP client - not multi-protocol.
+    * Concentrating on the most frequently performed tasks.
+    * Never interrupt the user with something that doesn't need attention.
+
+Features of interest
+
+    * Easy status setting.
+    * Easy room joining and bookmarking.
+    * XEP-0258 Labelling for secure environments.
+    * Stream compression for bandwidth-saving.
+    * Support for the new SCRAM authentication mechanism.
