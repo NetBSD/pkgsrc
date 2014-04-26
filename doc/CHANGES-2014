@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1633 2014/04/26 17:03:16 kleink Exp $
+$NetBSD: CHANGES-2014,v 1.1634 2014/04/26 17:45:47 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2347,3 +2347,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/p5-CPAN-Mini version 1.111015 [wen 2014-04-26]
 	Updated pkgtools/pkg_p5up2date to 0.06 [wiz 2014-04-26]
 	Updated www/py-flask-cache to 0.13.1 [kleink 2014-04-26]
+	Updated www/py-flask-admin to 1.0.8 [kleink 2014-04-26]
