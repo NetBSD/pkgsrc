@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2014/04/07 07:36:20 richard Exp $
+# $NetBSD: options.mk,v 1.4 2014/04/26 13:51:40 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ghostscript
 PKG_SUPPORTED_OPTIONS=	x11 cups debug fontconfig disable-compile-inits utf8
@@ -15,6 +15,11 @@ CONFIGURE_ARGS+=	--with-x
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+
+. if !empty(X11_TYPE:Mnative)
+.  include "../../x11/libxcb/buildlink3.mk"
+.  include "../../graphics/freetype2/buildlink3.mk"
+. endif
 .else
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--disable-freetype
@@ -24,7 +29,6 @@ PLIST_VARS+=		cups
 .if !empty(PKG_OPTIONS:Mcups)
 CONFIGURE_ARGS+=	--enable-cups
 PLIST.cups=		yes
-BUILD_TARGET+=		cups
 INSTALL_TARGET+=	install-cups
 
 CUPS_CONFDIR?=	${PKG_SYSCONFBASEDIR}/cups

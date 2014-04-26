@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.1 2013/03/16 21:32:01 dholland Exp $
+$NetBSD: patch-aj,v 1.2 2014/04/26 13:51:40 wiz Exp $
 
 http://bugs.ghostscript.com/show_bug.cgi?id=690883
 

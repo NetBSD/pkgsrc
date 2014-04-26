@@ -1,0 +1,31 @@
+$NetBSD: patch-base_configure_ac,v 1.1 2014/04/26 13:51:40 wiz Exp $
+
+The source for configure, see patch-ah
+
+--- base/configure.ac.orig	2012-08-08 17:01:36.000000000 +0900
++++ base/configure.ac	2013-04-08 10:51:50.000000000 +0900
+@@ -142,13 +142,13 @@
+         ;;
+         *BSD)
+         if test $ac_cv_prog_gcc = yes; then
+-            CC_OPT_FLAGS_TO_TRY="-O2"
++            CC_OPT_FLAGS_TO_TRY="-O2 -I./freetype/include"
+             CC_DBG_FLAGS_TO_TRY="-g -O0"
+         fi
+         ;;
+         Darwin*)
+         if test $ac_cv_prog_gcc = yes; then
+-            CC_OPT_FLAGS_TO_TRY="-O2"
++            CC_OPT_FLAGS_TO_TRY="-O2 -I./freetype/include"
+             CC_DBG_FLAGS_TO_TRY="-g -O0"
+         fi
+         SET_DT_SONAME=""
+@@ -457,7 +457,7 @@
+ fi
+ 
+ if test x$with_libpaper != xno; then
+-    LIBS="$LIBS -lpaper"
++    LIBS="$LIBS -L${LPLIBDIR} -Wl,-R${LPLIBDIR} -lpaper"
+     AC_DEFINE(USE_LIBPAPER, 1, [Using libpaper])
+     CFLAGS="$CFLAGS -DUSE_LIBPAPER"
+ fi
