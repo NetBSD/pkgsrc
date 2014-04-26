@@ -1,27 +1,22 @@
-$NetBSD: distinfo,v 1.61 2013/12/04 15:14:19 jperkin Exp $
+$NetBSD: distinfo,v 1.62 2014/04/26 13:55:10 tron Exp $
 
-SHA1 (Mail-SpamAssassin-3.3.2.tar.gz) = de954f69e190496eff4a796a9bab61747f03072b
-RMD160 (Mail-SpamAssassin-3.3.2.tar.gz) = 78e22ba6ba62a48fb7d24c40170124881b975fd9
-Size (Mail-SpamAssassin-3.3.2.tar.gz) = 1208182 bytes
-SHA1 (Mail-SpamAssassin-rules-3.3.2-r1104058.tar.gz) = a199d5f0f8c2381e3dfe421e7a774356b3ffda4b
-RMD160 (Mail-SpamAssassin-rules-3.3.2-r1104058.tar.gz) = 22843725705aca9a7c773d9cca50d6eb30ca295c
-Size (Mail-SpamAssassin-rules-3.3.2-r1104058.tar.gz) = 258995 bytes
-SHA1 (Mail-SpamAssassin-rules-3.3.2-r1104058.tar.gz.asc) = 102cbd61d3d37243d17a48748fc468a1a4e91d05
-RMD160 (Mail-SpamAssassin-rules-3.3.2-r1104058.tar.gz.asc) = 764ea0f583c370c3c11f7245005327afa6c19988
-Size (Mail-SpamAssassin-rules-3.3.2-r1104058.tar.gz.asc) = 823 bytes
-SHA1 (Mail-SpamAssassin-rules-3.3.2-r1104058.tar.gz.sha1) = 13003cfad508bd45863e02711aaee041ab9bc30e
-RMD160 (Mail-SpamAssassin-rules-3.3.2-r1104058.tar.gz.sha1) = aa218d53eb3dda0737171f75d63b7a64f97c2930
-Size (Mail-SpamAssassin-rules-3.3.2-r1104058.tar.gz.sha1) = 88 bytes
-SHA1 (patch-aa) = 0fff97dee1153332471aeadc2b96c357d1925f5c
-SHA1 (patch-ab) = 84ebc0f611365c00205a85cb84970772a0931ef8
+SHA1 (Mail-SpamAssassin-3.4.0.tar.gz) = 4dac1384282b6201f7d80cea8295933ef08e7e28
+RMD160 (Mail-SpamAssassin-3.4.0.tar.gz) = c3a9b4adaebfe62c279684349ce76ed36d304f26
+Size (Mail-SpamAssassin-3.4.0.tar.gz) = 1269753 bytes
+SHA1 (Mail-SpamAssassin-rules-3.4.0.r1565117.tgz) = d71a64cab9f5454d3b164e44d3649bff9cb87f87
+RMD160 (Mail-SpamAssassin-rules-3.4.0.r1565117.tgz) = fcf0bb481dee0fddc863ebab5772d6dbbde299f9
+Size (Mail-SpamAssassin-rules-3.4.0.r1565117.tgz) = 247283 bytes
+SHA1 (Mail-SpamAssassin-rules-3.4.0.r1565117.tgz.asc) = 3a726149419ea2d23b28920582ac0921335966ac
+RMD160 (Mail-SpamAssassin-rules-3.4.0.r1565117.tgz.asc) = 0db3057f2af1c4cf16f8eb48457553c81f769eec
+Size (Mail-SpamAssassin-rules-3.4.0.r1565117.tgz.asc) = 823 bytes
+SHA1 (Mail-SpamAssassin-rules-3.4.0.r1565117.tgz.sha1) = 9b4fc4c3b3dea74f0337c6b4c914943375616663
+RMD160 (Mail-SpamAssassin-rules-3.4.0.r1565117.tgz.sha1) = bab252971f0b1618ed5b28de9c377b10e54df169
+Size (Mail-SpamAssassin-rules-3.4.0.r1565117.tgz.sha1) = 85 bytes
+SHA1 (patch-Makefile.PL) = 965e6aa223f2e714630db45131918485a5730c48
 SHA1 (patch-ae) = d46b1d8f56c8c61936c307f74b39a49da1b1f353
 SHA1 (patch-aq) = 3a273c7742275647c2334382fed29c0ea33dfbd8
 SHA1 (patch-ay) = ca8ea0b1e6d8fddd29d6ae960e1bf6e534d2f424
-SHA1 (patch-ba) = 1842e3fc17b3d23309336e542635eeacb67461e8
-SHA1 (patch-lib_Mail_SpamAssassin_AsyncLoop.pm) = a305fc866785905bcb6b65b013525cb130ddf4a3
-SHA1 (patch-lib_Mail_SpamAssassin_Conf_Parser.pm) = bbb41a5667f88d485b027860973d205f6ccec0d1
-SHA1 (patch-lib_Mail_SpamAssassin_DnsResolver.pm) = ec66585e49d1cfa5acfb6989508958a75a824bc5
 SHA1 (patch-lib_Mail_SpamAssassin_Message.pm) = 402b9769df65ae87c3beebcc9441e29619eed367
-SHA1 (patch-lib_Mail_SpamAssassin_PerMsgStatus.pm) = 9eb3a5135ab7f2ca3aa18686bad9bbe818bdf761
-SHA1 (patch-lib_Mail_SpamAssassin_Util.pm) = 930b99127847057aeadf6c2c6c9558afec2ff2c8
-SHA1 (patch-sa-update) = 893d8c2ebe68524b620a438f30e2b9ba764aaa6e
+SHA1 (patch-sa-compile) = e8a92060eefbc1c95b7b2c674fc69686a66f230b
+SHA1 (patch-sa-update) = 6ea354aa6b11740df1d25a807f5610115218294a
+SHA1 (patch-spamd_netbsd-rc-script.sh) = 192fc1876ee30a4475c0efd9be6340e87d9fa2f4
