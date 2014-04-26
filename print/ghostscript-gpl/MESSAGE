@@ -1,0 +1,15 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2014/04/26 13:52:00 wiz Exp $
+
+To customize cidfmap, copy
+  ${GS_RESOURCEDIR}/Init/cidfmap.dist
+to
+  ${GS_RESOURCEDIR}/Init/cidfmap
+and modify it.
+Please consider installing another companion package
+fonts/ghostscript-cidfonts-ryumin for above purpose.
+
+Please note that the above statement only applies when the option
+disable-compile-inits selected while build time. Otherwise you may
+set GS_LIB environment variable to give search path for setup files.
+===========================================================================
