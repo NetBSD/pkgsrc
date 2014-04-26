@@ -1,24 +1,38 @@
-$NetBSD: patch-sa-update,v 1.1 2013/08/01 10:29:00 bouyer Exp $
+$NetBSD: patch-sa-update,v 1.2 2014/04/26 13:55:10 tron Exp $
 
-from https://issues.apache.org/SpamAssassin/show_bug.cgi?id=6872,
-fix for new Net::DNS
+Prepare for substitution.
 
-Index: sa-update.raw
-===================================================================
---- sa-update.raw	(revision 1421187)
-+++ sa-update	(working copy)
-@@ -1136,9 +1136,11 @@
-   if ($RR) {
-     foreach my $rr ($RR->answer) {
-       my $text = $rr->rdatastr;
--      local($1);
--      $text =~ /^"(.*)"$/;
--      push @result, $1;
-+      if (defined $text && $text ne '') {
-+        local($1);
-+        $text =~ s/^"(.*)"\z/$1/s;
-+        push(@result,$text);
-+      }
-     }
-   }
-   else {
+--- sa-update.raw.orig	2014-02-07 08:36:38.000000000 +0000
++++ sa-update.raw	2014-04-26 13:56:38.000000000 +0100
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl -w -T
++#!/usr/pkg/bin/perl -w -T
+ 
+ # <@LICENSE>
+ # Licensed to the Apache Software Foundation (ASF) under one or more
+@@ -340,10 +340,10 @@
+ if ($GPG_ENABLED || $opt{'import'}) {
+   # find GPG in the PATH
+   # bug 4958: for *NIX it's "gpg", in Windows it's "gpg.exe"
+-  $GPGPath = 'gpg' . $Config{_exe};
++  $GPGPath = '@GPGPATH@' . $Config{_exe};
+   dbg("gpg: Searching for '$GPGPath'");
+ 
+-  if ($GPGPath = Mail::SpamAssassin::Util::find_executable_in_env_path($GPGPath)) {
++  if (-f $GPGPath) {
+     dbg("gpg: found $GPGPath");
+ 
+     # bug 5030: if GPGPath has a space, put it in quotes
+@@ -1459,10 +1459,8 @@
+       !$out_fname_exists ? 'new' : $force_reload ? 'replace' : 'update');
+ 
+   my($ext_prog, $cmd, @args);
+-  foreach my $try_prog ('curl', 'wget', 'fetch') {
+-    $cmd = Mail::SpamAssassin::Util::find_executable_in_env_path($try_prog);
+-    if (defined $cmd && $cmd ne '') { $ext_prog = $try_prog; last }
+-  }
++  $ext_prog = '@SA_UPDATE_FETCH_PROG@';
++  $cmd = '@SA_UPDATE_FETCH_CMD@';
+ 
+   if (defined $ext_prog && $ext_prog eq 'curl') {
+     push(@args, qw(-s -L -O --remote-time -g --max-redirs 2
