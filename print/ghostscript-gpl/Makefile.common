@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.3 2014/01/10 01:35:42 mef Exp $
+# $NetBSD: Makefile.common,v 1.4 2014/04/26 13:51:40 wiz Exp $
 # used by print/ghostscript-gpl/Makefile
-# used by fonts/ghostscript-cidfonts/Makefile
-# used by fonts/ghostscript-cidfonts-ryumin/Makefile
+# used (potentially) by fonts/ghostscript-cidfonts/Makefile
+# used (potentially) by fonts/ghostscript-cidfonts-ryumin/Makefile
 
-GS_VERSION=	9.05
+GS_VERSION=	9.06

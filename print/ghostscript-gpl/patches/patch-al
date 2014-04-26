@@ -1,4 +1,12 @@
-$NetBSD: patch-al,v 1.1 2013/03/16 21:32:01 dholland Exp $
+$NetBSD: patch-al,v 1.2 2014/04/26 13:51:40 wiz Exp $
+
+Echogs is almost strings command and accepts some glue to output
+from its command line. The output, in this case ldt.tr, will be really
+shell script for ld command. The adding words with this patch,
+$(LDFLAGS_SO), will be included in the argument of ld command.
+
+$(LDFLAGS_SO) is defined in patch-af, for Mac OS X, Darwin.
+ -- added by mef@ --
 
 --- base/unixlink.mak.orig	2010-02-18 12:08:31.000000000 +0000
 +++ base/unixlink.mak

@@ -1,4 +1,4 @@
-$NetBSD: patch-base_gserrors_h,v 1.1 2013/03/16 21:32:01 dholland Exp $
+$NetBSD: patch-base_gserrors_h,v 1.2 2014/04/26 13:51:40 wiz Exp $
 # This suppresses the noisy warning that __func__ redefined
 
 --- base/gserrors.h.orig	2012-02-08 17:48:48.000000000 +0900

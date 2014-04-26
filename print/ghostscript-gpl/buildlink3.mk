@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2014/02/12 23:18:29 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2014/04/26 13:51:40 wiz Exp $
 
 BUILDLINK_TREE+=	ghostscript-gpl
 
