@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1622 2014/04/26 11:42:07 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1623 2014/04/26 13:12:08 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2336,3 +2336,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/drupal7 to 7.27 [taca 2014-04-26]
 	Updated devel/py-pep8 to 1.5.6 [wen 2014-04-26]
 	Added chat/swift version 2.0 [wiz 2014-04-26]
+	Updated devel/p5-Test-MinimumVersion to 0.101081 [wen 2014-04-26]
