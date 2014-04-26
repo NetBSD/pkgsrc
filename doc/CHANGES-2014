@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1625 2014/04/26 13:48:00 wen Exp $
+$NetBSD: CHANGES-2014,v 1.1626 2014/04/26 13:52:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2339,3 +2339,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Test-MinimumVersion to 0.101081 [wen 2014-04-26]
 	Updated chat/swift to 2.0nb1 [wiz 2014-04-26]
 	Updated devel/p5-Perl-Critic to 1.121 [wen 2014-04-26]
+	Updated print/ghostscript-gpl to 9.06 [wiz 2014-04-26]
