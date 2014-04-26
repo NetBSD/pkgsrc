@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1619 2014/04/26 05:28:22 wen Exp $
+$NetBSD: CHANGES-2014,v 1.1620 2014/04/26 09:30:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2332,3 +2332,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Class-C3 to 0.26 [wen 2014-04-26]
 	Updated devel/p5-Class-ErrorHandler to 0.03 [wen 2014-04-26]
 	Updated devel/p5-Class-InsideOut to 0.13 [wen 2014-04-26]
+	Updated www/drupal6 to 6.31 [taca 2014-04-26]
+	Updated www/drupal7 to 7.27 [taca 2014-04-26]
