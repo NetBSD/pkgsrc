@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4622 2014/01/20 14:30:02 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4623 2014/04/27 15:53:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1622,6 +1622,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/rabbitmq to 3.0.4 [fhajny 2013-04-02]
 	Updated misc/tmux to 1.8 [fhajny 2013-04-02]
 	Added audio/py-audioread version 1.0.0 [drochner 2013-04-02]
+	Added audio/chromaprint version 0.7 [drochner 2013-04-02]
 	Updated textproc/saxon to 9.4.0.7j [rodent 2013-04-03]
 	Updated www/p5-Plack to 1.0022 [wen 2013-04-03]
 	Updated devel/p5-Moose to 2.0801 [wen 2013-04-03]
