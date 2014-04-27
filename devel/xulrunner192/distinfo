@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2014/04/03 10:52:13 wiz Exp $
+$NetBSD: distinfo,v 1.18 2014/04/27 07:54:01 wiz Exp $
 
 SHA1 (firefox-3.6.28.source.tar.bz2) = adeaa9bdd367878c5b522766e681798178e31577
 RMD160 (firefox-3.6.28.source.tar.bz2) = 87cfca8e3f1df30e06eccffbf994825904eeedbc
@@ -36,6 +36,7 @@ SHA1 (patch-bf) = 6295d27762eb91162c00362306acbd47eeda61ac
 SHA1 (patch-bg) = ab79e04b5ac1453157cfb57754613210c74c3b90
 SHA1 (patch-build_autoconf_moznbytetype.m4) = c0299f856d074f220d29f6388d5b0d96ad4b3e51
 SHA1 (patch-embedding_browser_gtk_src_EmbedPrivate.cpp) = a0ec26c6ca751e51586498e33b4f51b63799e3d2
+SHA1 (patch-gfx_ots_src_os2.cc) = bf42e5aa49a24f44b49f0d80bdf5d3b0947a3ea5
 SHA1 (patch-gfx_thebes_src_gfxPangoFonts.cpp) = 3285c81fef35475a88e78192ab50bbbcb507c28b
 SHA1 (patch-js_src_build_autoconf_moznbytetype.m4) = 2409b0ee9e889886c3f0fd2317d109fe9b51c699
 SHA1 (patch-layout_style_nsCSSRuleProcessor.cpp) = 0b013cf6bb6ad7bdb1d20b48cb3e3c51ad813cbf
