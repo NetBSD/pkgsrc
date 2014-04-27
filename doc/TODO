@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13253 2014/04/27 16:27:27 wiz Exp $
+$NetBSD: TODO,v 1.13254 2014/04/27 20:30:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -386,7 +386,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o asapm-3.1
 	o asc-2.6.0
 	o aspell-nb-2.0.10
-	o asymptote-2.25
+	o asymptote-2.26
 	o aterm-1.0.1
 	o aubio-0.4.0
 	o audacious-3.5
@@ -889,6 +889,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o php-sugarcrm-6.5.16
 	o php-tiki6-6.10
 	o php-tt-rss-1.12
+	o phpmyadmin-4.1.14
 	o picp-0.6.8
 	o pim6dd-20040819a
 	o pim6sd-20040824a
