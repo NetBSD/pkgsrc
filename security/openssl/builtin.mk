@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.38 2014/03/03 06:56:35 obache Exp $
+# $NetBSD: builtin.mk,v 1.39 2014/04/27 01:57:51 obache Exp $
 
 BUILTIN_PKG:=	openssl
 
@@ -54,49 +54,6 @@ BUILTIN_VERSION.openssl!=						\
 			exit 0;						\
 		}							\
 	' ${H_OPENSSLV}
-
-.  if !empty(BUILTIN_VERSION.openssl:M0\.9\.6g) && \
-      empty(H_OPENSSLV:M__nonexistent__)
-#
-# If the native OpenSSL contains the security fixes pulled up to the
-# netbsd-1-6 branch on 2003-11-07, then pretend it's openssl-0.9.6l.
-#
-BUILTIN_OPENSSL_HAS_20031107_FIX!=					\
-	${AWK} 'BEGIN { ans = "no" }					\
-		/OPENSSL_HAS_20031107_FIX/ { ans = "yes" }		\
-		END { print ans; exit 0 }				\
-	' ${H_OPENSSLV}
-.    if !empty(BUILTIN_OPENSSL_HAS_20031107_FIX:M[yY][eE][sS])
-BUILTIN_VERSION.openssl=	0.9.6l
-.    endif
-#
-# If the native OpenSSL contains the security fixes pulled up to the
-# netbsd-1-6 branch on 2004-04-01, then pretend it's openssl-0.9.6m.
-#
-BUILTIN_OPENSSL_HAS_20040401_FIX!=					\
-	${AWK} 'BEGIN { ans = "no" }					\
-		/OPENSSL_HAS_20040401_FIX/ { ans = "yes" }		\
-		END { print ans; exit 0 }				\
-	' ${H_OPENSSLV}
-.    if !empty(BUILTIN_OPENSSL_HAS_20040401_FIX:M[yY][eE][sS])
-BUILTIN_VERSION.openssl=	0.9.6m
-.    endif
-.  elif !empty(BUILTIN_VERSION.openssl:M0\.9\.7d) && \
-        empty(H_OPENSSLV:M__nonexistent__)
-#
-# If the native OpenSSL contains the security fixes pulled up to the
-# netbsd-2-0, netbsd-2, and netbsd-3-0 branches on 2005-10-11, then
-# pretend it's openssl-0.9.7h.
-#
-BUILTIN_OPENSSL_HAS_20051011_FIX!=					\
-	${AWK} 'BEGIN { ans = "no" }					\
-		/OPENSSL_HAS_20051011_FIX/ { ans = "yes" }		\
-		END { print ans; exit 0 }				\
-	' ${H_OPENSSLV}
-.    if !empty(BUILTIN_OPENSSL_HAS_20051011_FIX:M[yY][eE][sS])
-BUILTIN_VERSION.openssl=	0.9.7h
-.    endif
-.  endif
 BUILTIN_PKG.openssl=	openssl-${BUILTIN_VERSION.openssl}
 .endif
 MAKEVARS+=	BUILTIN_PKG.openssl
