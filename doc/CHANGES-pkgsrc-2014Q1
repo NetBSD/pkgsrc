@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.18 2014/04/24 09:34:17 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.19 2014/04/27 17:02:43 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q1 branch:
@@ -71,3 +71,5 @@ Pullup ticket #4386 - requested by obache
 emulators/suse131_libjson: security update
 Pullup ticket #4388 - requested by he
 archivers/libarchive: security patch
+Pullup ticket #4387 - requested by tron
+net/wireshark: security update
