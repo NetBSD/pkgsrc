@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13250 2014/04/27 11:07:28 rodent Exp $
+$NetBSD: TODO,v 1.13251 2014/04/27 15:25:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -477,7 +477,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ddclient-3.7.3
 	o defendguin-0.0.11
 	o delegate-9.9.7
-	o denemo-1.1.2
+	o denemo-1.1.4
 	o dhid-5.3
 	o diffstat-1.58
 	o doclifter-2.14
@@ -638,6 +638,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gpsdrive-2.11
 	o gramofile-1.6P
 	o gramps-4.0.1
+	o graphviz-2.38.0
 	o grilo-0.2.10
 	o grilo-plugins-0.2.12
 	o groff-1.22.2
@@ -904,6 +905,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o polsms-2.1.0
 	o popa3d-1.0.3
 	o poppass-4.0.14
+	o poppler-0.26.0
 	o postal-0.72
 	o postgresql-postgis-2.1.0
 	o powermanga-0.91
@@ -913,7 +915,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o profit-2.5.3
 	o projclock-0.9
 	o psmisc-22.20
-	o pspp-0.8.1
+	o pspp-0.8.3
 	o pstoedit-3.61
 	o pulseaudio-5.0 [hal support is dropped]
 	o puzzles-10180
@@ -928,6 +930,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Scientific-doc-2.5.5
 	o py-Unidecode-0.04.14
 	o py-Whoosh-2.5.6
+	o py-anki2-2.0.26
 	o py-biggles-1.6.6
 	o py-bottle-0.11.6
 	o py-cassa-1.11.0
@@ -1107,6 +1110,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tomboy-1.10.2
 	o top-3.8beta1
 	o totem-3.4.1
+	o tree-1.7.0
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
 	o turba-4.1.4
