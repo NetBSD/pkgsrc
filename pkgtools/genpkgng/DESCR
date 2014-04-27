@@ -1,0 +1,12 @@
+This is a small utility to generate a FreeBSD pkg binary package
+from a pkgsrc binary package. It is invoked simply, using a command
+like:
+
+	genpkgng ssam-1.9nb1.tgz
+
+and it will convert the pkgsrc binary package to a pkg one:
+
+	% ./genpkgng.sh perl-5.18.1nb2.tgz
+	Converting perl-5.18.1nb2.tgz
+	-rw-r--r--  1 agc  users  16597860 Apr 24 19:01 perl-5.18.1nb2.txz
+	%

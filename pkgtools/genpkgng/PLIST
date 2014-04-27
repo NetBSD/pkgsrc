@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2014/04/27 00:10:34 agc Exp $
+bin/genpkgng
+libdata/genpkgng/MTREE_DIRS
+man/man1/genpkgng.1
