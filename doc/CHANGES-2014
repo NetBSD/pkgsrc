@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1634 2014/04/26 17:45:47 kleink Exp $
+$NetBSD: CHANGES-2014,v 1.1635 2014/04/27 00:12:54 agc Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2348,3 +2348,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated pkgtools/pkg_p5up2date to 0.06 [wiz 2014-04-26]
 	Updated www/py-flask-cache to 0.13.1 [kleink 2014-04-26]
 	Updated www/py-flask-admin to 1.0.8 [kleink 2014-04-26]
+	Added pkgtools/genpkgng version 20140425 [agc 2014-04-26]
