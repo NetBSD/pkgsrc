@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1637 2014/04/27 11:06:01 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.1638 2014/04/27 16:27:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2351,3 +2351,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added pkgtools/genpkgng version 20140425 [agc 2014-04-26]
 	Updated net/haproxy to 1.4.25 [rodent 2014-04-27]
 	Updated www/nginx to 1.6.0 [rodent 2014-04-27]
+	Updated audio/chromaprint to 1.1 [wiz 2014-04-27]
