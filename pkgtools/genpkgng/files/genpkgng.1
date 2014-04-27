@@ -1,0 +1,77 @@
+.\" $NetBSD: genpkgng.1,v 1.1.1.1 2014/04/27 00:10:34 agc Exp $
+.\"
+.\" Copyright (c) 2014 Alistair Crooks <agc@NetBSD.org>
+.\" All rights reserved.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, this list of conditions and the following disclaimer.
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+.\" IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+.\" OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+.\" IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+.\" INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+.\" NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+.\" DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+.\" THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+.\" (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+.\" THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+.\"
+.Dd April 25, 2014
+.Dt GENPKGNG 1
+.Os
+.Sh NAME
+.Nm genraidconf
+.Nd utility to configure RAID sets
+.Sh SYNOPSIS
+.Nm
+.Fl nv
+.Op Fl v
+.Ar binpkg ...
+.Sh DESCRIPTION
+The
+.Nm
+command converts from a binary package
+generated from the pkgsrc infratsructure to a binary
+package which can be installed using the
+.Fx
+pkg packaging tool.
+.Pp
+It generates
+.Dq +MANIFEST
+and
+.Dq +COMPACT_MANIFEST
+metadata files, and also preserves the
+.Dq build information
+and
+.Dq build versions
+pkgsrc metadata, placing entries in the file system.
+.Sh RETURN VALUES
+The
+.Nm
+utility will return 0 for success,
+and non-zero for failure.
+.Sh EXAMPLES
+.Bd -literal
+% cp /usr/pkgsrc/packages/All/nettle-2.7.1nb1.tgz .
+% genpkgng nettle-2.7.1nb1.tgz
+Converting nettle-2.7.1nb1.tgz
+-rw-r--r--  1 agc  agc  3962779 Apr 25 16:25 nettle-2.7.1nb1.txz
+%
+.Ed
+.Sh SEE ALSO
+.Xr pkg_info 1
+.Sh HISTORY
+The
+.Nm
+command first appeared in
+.Nx 7.0 .
+.Sh AUTHORS
+.An -nosplit
+.An Alistair Crooks Aq Mt agc@NetBSD.org
