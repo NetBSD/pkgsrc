@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2013/08/15 11:12:05 marino Exp $
+# $NetBSD: Makefile,v 1.106 2014/04/27 00:11:38 agc Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
@@ -13,6 +13,7 @@ SUBDIR+=	createbuildlink
 SUBDIR+=	dfdisk
 SUBDIR+=	digest
 SUBDIR+=	distbb
+SUBDIR+=	genpkgng
 SUBDIR+=	genrpm
 SUBDIR+=	gensolpkg
 SUBDIR+=	gnome-packagekit
