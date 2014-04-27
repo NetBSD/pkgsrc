@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2014/04/27 09:56:24 wiz Exp $
+include/ebur128.h
+lib/libebur128.a
+lib/libebur128.so
+lib/libebur128.so.1
+lib/libebur128.so.${PKGVERSION}
