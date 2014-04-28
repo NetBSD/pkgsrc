@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2014/01/05 20:23:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2014/04/28 12:14:27 joerg Exp $
 include/qof/deprecated.h
 include/qof/guid.h
 include/qof/kvpframe.h
@@ -69,7 +69,6 @@ share/doc/qof/html/doxy/dynsections.js
 share/doc/qof/html/doxy/files.html
 share/doc/qof/html/doxy/files.js
 share/doc/qof/html/doxy/ftv2blank.png
-share/doc/qof/html/doxy/ftv2cl.png
 share/doc/qof/html/doxy/ftv2doc.png
 share/doc/qof/html/doxy/ftv2folderclosed.png
 share/doc/qof/html/doxy/ftv2folderopen.png
@@ -77,9 +76,7 @@ share/doc/qof/html/doxy/ftv2lastnode.png
 share/doc/qof/html/doxy/ftv2link.png
 share/doc/qof/html/doxy/ftv2mlastnode.png
 share/doc/qof/html/doxy/ftv2mnode.png
-share/doc/qof/html/doxy/ftv2mo.png
 share/doc/qof/html/doxy/ftv2node.png
-share/doc/qof/html/doxy/ftv2ns.png
 share/doc/qof/html/doxy/ftv2plastnode.png
 share/doc/qof/html/doxy/ftv2pnode.png
 share/doc/qof/html/doxy/ftv2splitbar.png
