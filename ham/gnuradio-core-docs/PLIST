@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2014/01/05 21:22:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2014/04/28 12:19:30 joerg Exp $
 share/doc/gnuradio-${PKGVERSION}/README
 share/doc/gnuradio-${PKGVERSION}/README.hacking
 share/doc/gnuradio-${PKGVERSION}/html/ad9862_8h.html
@@ -5001,7 +5001,6 @@ share/doc/gnuradio-${PKGVERSION}/html/fsm_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/fsm_8h__incl.png
 share/doc/gnuradio-${PKGVERSION}/html/fsm_8h_source.html
 share/doc/gnuradio-${PKGVERSION}/html/ftv2blank.png
-share/doc/gnuradio-${PKGVERSION}/html/ftv2cl.png
 share/doc/gnuradio-${PKGVERSION}/html/ftv2doc.png
 share/doc/gnuradio-${PKGVERSION}/html/ftv2folderclosed.png
 share/doc/gnuradio-${PKGVERSION}/html/ftv2folderopen.png
@@ -5009,9 +5008,7 @@ share/doc/gnuradio-${PKGVERSION}/html/ftv2lastnode.png
 share/doc/gnuradio-${PKGVERSION}/html/ftv2link.png
 share/doc/gnuradio-${PKGVERSION}/html/ftv2mlastnode.png
 share/doc/gnuradio-${PKGVERSION}/html/ftv2mnode.png
-share/doc/gnuradio-${PKGVERSION}/html/ftv2mo.png
 share/doc/gnuradio-${PKGVERSION}/html/ftv2node.png
-share/doc/gnuradio-${PKGVERSION}/html/ftv2ns.png
 share/doc/gnuradio-${PKGVERSION}/html/ftv2plastnode.png
 share/doc/gnuradio-${PKGVERSION}/html/ftv2pnode.png
 share/doc/gnuradio-${PKGVERSION}/html/ftv2splitbar.png
