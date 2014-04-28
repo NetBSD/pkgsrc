@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2013/07/09 10:16:02 marino Exp $
+$NetBSD: distinfo,v 1.9 2014/04/28 22:14:51 marino Exp $
 
 SHA1 (gps-5.2.1-1-src.tgz) = 5e69d59e2e64a3ec5a35c7fb0cb29d0950e156e7
 RMD160 (gps-5.2.1-1-src.tgz) = 2ca95998ecc5eb7930e0b645cc550e99fe144177
@@ -12,3 +12,5 @@ SHA1 (patch-gnatlib_configure) = b1daedfcd766bf4713464988bb1d7977364e84d2
 SHA1 (patch-gnatlib_gnatcoll__shared.gpr.in) = 4c0d7544ea6adeafce9d2460bf347dfeb09ef286
 SHA1 (patch-gnatlib_src_gnatcoll__readline.gpr.in) = c56494c1d5ab68d22ae967b4f686a73b7dbaccf0
 SHA1 (patch-gps_gps.gpr) = 708943c00a8e35a22ab57d1fc0bf7978e7ed6311
+SHA1 (patch-src__editor_src_src__editor__buffer.adb) = 1bb19152910bc9e779c61503ad00049243930d24
+SHA1 (patch-src__editor_src_src__editor__view.adb) = 3ffb3a1ad3189991716ea807c7106ecac9b02293
