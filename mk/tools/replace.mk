@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.269 2014/03/13 17:06:43 taca Exp $
+# $NetBSD: replace.mk,v 1.270 2014/04/28 13:15:29 obache Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -940,6 +940,51 @@ TOOLS_PATH.${_t_}=		${TOOLS_PREFIX.${_t_}}/bin/${_t_}
 # These tools are all supplied by the lang/perl5 package if there is
 # no native tool available.
 #
+.if !empty(_TOOLS_USE_PKGSRC.perl:U:M[Nn][Oo]) &&  \
+	!defined(TOOLS_IGNORE.perl) && !empty(_USE_TOOLS:Mperl)
+.  if !empty(DEPENDS:Mp5-*) || !empty(BUILD_DEPENDS:Mp5-*) || !empty(TOOL_DEPENDS:Mp5-*)
+_TOOLS_USE_PKGSRC.perl=	yes
+.  endif
+.  include "../../lang/perl5/version.mk"
+_TOOLS_VERSION.perl!=							\
+	eval $$(${TOOLS_PLATFORM.perl} -V:version) && echo $$version
+_TOOLS_PKG.perl=		perl-${_TOOLS_VERSION.perl}
+.  if !empty(_TOOLS_USE_PKGSRC.perl:M[nN][oO])
+.    for _dep_ in perl>=${PERL5_REQD} 
+.      if !empty(_TOOLS_USE_PKGSRC.perl:M[nN][oO])
+_TOOLS_USE_PKGSRC.perl!=						\
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${_TOOLS_PKG.perl:Q}; then \
+		${ECHO} no;						\
+	else								\
+		${ECHO} yes;						\
+	fi
+.      endif
+.    endfor
+.  endif
+.  if !empty(_TOOLS_USE_PKGSRC.perl:M[nN][oO])
+.    for _dep_ in ${DEPENDS:M{perl[><=-]*,*}\:*} \
+		${DEPENDS:M{*,perl[><=-]*}\:*} \
+		${BUILD_DEPENDS:M{perl[><=-]*,*}\:*} \
+		${BUILD_DEPENDS:M{*,perl[><=-]*}\:*} \
+		${TOOL_DEPENDS:M{perl[><=-]*,*}\:*} \
+		${TOOL_DEPENDS:M{*,perl[><=-]*}\:*}
+.      if !empty(_TOOLS_USE_PKGSRC.perl:M[nN][oO])
+_TOOLS_USE_PKGSRC.perl!=						\
+	if ${PKG_ADMIN} pmatch ${_dep_:S/:/ /g:[1]:Q} ${_TOOLS_PKG.perl:Q}; then \
+		${ECHO} no;						\
+	else								\
+		${ECHO} yes;						\
+	fi
+.      endif
+.    endfor
+.    if !empty(_TOOLS_USE_PKGSRC.perl:M[nN][oO])
+DEPENDS:=	${DEPENDS:N{perl[><=-]*,*}\:*:N{*,perl[><=-]*}\:*}
+BUILD_DEPENDS:=	${BUILD_DEPENDS:N{perl[><=-]*,*}\:*:N{*,perl[><=-]*}\:*}
+TOOL_DEPENDS:=	${TOOL_DEPENDS:N{perl[><=-]*,*}\:*:N{*,perl[><=-]*}\:*}
+.    endif
+.  endif
+.endif
+
 _TOOLS.perl=			perl perldoc pod2html pod2man pod2text
 
 .for _t_ in ${_TOOLS.perl}
