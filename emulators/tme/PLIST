@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2010/07/05 10:20:38 obache Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/04/28 12:16:57 joerg Exp $
 bin/tme-sun-eeprom
 bin/tme-sun-idprom
 bin/tmesh
@@ -62,7 +62,7 @@ lib/tme/tme-plugins.txt
 lib/tme/tme_bus_multibus.la
 lib/tme/tme_bus_sbus.la
 lib/tme/tme_generic.la
-lib/tme/tme_host_bsd.la
+${PLIST.bsd}lib/tme/tme_host_bsd.la
 lib/tme/tme_host_posix.la
 lib/tme/tme_host_gtk.la
 lib/tme/tme_ic_ad184x.la
