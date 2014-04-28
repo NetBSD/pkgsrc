@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2014/02/07 08:54:06 dsainty Exp $
+@comment $NetBSD: PLIST,v 1.16 2014/04/28 12:14:27 joerg Exp $
 avr/include/alloca.h
 avr/include/assert.h
 avr/include/avr/boot.h
@@ -472,7 +472,6 @@ share/doc/avr-libc/avr-libc-user-manual/ffsl_8S.html
 share/doc/avr-libc/avr-libc-user-manual/ffsll_8S.html
 share/doc/avr-libc/avr-libc-user-manual/files.html
 share/doc/avr-libc/avr-libc-user-manual/ftv2blank.png
-share/doc/avr-libc/avr-libc-user-manual/ftv2cl.png
 share/doc/avr-libc/avr-libc-user-manual/ftv2doc.png
 share/doc/avr-libc/avr-libc-user-manual/ftv2folderclosed.png
 share/doc/avr-libc/avr-libc-user-manual/ftv2folderopen.png
@@ -480,9 +479,7 @@ share/doc/avr-libc/avr-libc-user-manual/ftv2lastnode.png
 share/doc/avr-libc/avr-libc-user-manual/ftv2link.png
 share/doc/avr-libc/avr-libc-user-manual/ftv2mlastnode.png
 share/doc/avr-libc/avr-libc-user-manual/ftv2mnode.png
-share/doc/avr-libc/avr-libc-user-manual/ftv2mo.png
 share/doc/avr-libc/avr-libc-user-manual/ftv2node.png
-share/doc/avr-libc/avr-libc-user-manual/ftv2ns.png
 share/doc/avr-libc/avr-libc-user-manual/ftv2plastnode.png
 share/doc/avr-libc/avr-libc-user-manual/ftv2pnode.png
 share/doc/avr-libc/avr-libc-user-manual/ftv2splitbar.png
@@ -558,6 +555,7 @@ share/doc/avr-libc/avr-libc-user-manual/group__avr__stdlib.html
 share/doc/avr-libc/avr-libc-user-manual/group__avr__string.html
 share/doc/avr-libc/avr-libc-user-manual/group__avr__version.html
 share/doc/avr-libc/avr-libc-user-manual/group__avr__watchdog.html
+share/doc/avr-libc/avr-libc-user-manual/group__asmdemo.html
 share/doc/avr-libc/avr-libc-user-manual/group__compat__ina90.html
 share/doc/avr-libc/avr-libc-user-manual/group__ctype.html
 share/doc/avr-libc/avr-libc-user-manual/group__demo__project.html
@@ -1115,6 +1113,7 @@ share/doc/avr-libc/man/man3/acosf.3
 share/doc/avr-libc/man/man3/alloca.3
 share/doc/avr-libc/man/man3/asin.3
 share/doc/avr-libc/man/man3/asinf.3
+share/doc/avr-libc/man/man3/asmdemo.3
 share/doc/avr-libc/man/man3/assembler.3
 share/doc/avr-libc/man/man3/assert.3
 share/doc/avr-libc/man/man3/assert.h.3
@@ -1182,6 +1181,7 @@ share/doc/avr-libc/man/man3/ceil.3
 share/doc/avr-libc/man/man3/ceilf.3
 share/doc/avr-libc/man/man3/clearerr.3
 share/doc/avr-libc/man/man3/cli.3
+share/doc/avr-libc/man/man3/clock_div_t.3
 share/doc/avr-libc/man/man3/clock_prescale_get.3
 share/doc/avr-libc/man/man3/clock_prescale_set.3
 share/doc/avr-libc/man/man3/compat_ina90.3

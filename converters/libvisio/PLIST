@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2014/01/05 20:13:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/04/28 12:14:27 joerg Exp $
 bin/vsd2raw
 bin/vsd2text
 bin/vsd2xhtml
@@ -311,7 +311,6 @@ share/doc/libvisio/html/doxygen.css
 share/doc/libvisio/html/doxygen.png
 share/doc/libvisio/html/files.html
 share/doc/libvisio/html/ftv2blank.png
-share/doc/libvisio/html/ftv2cl.png
 share/doc/libvisio/html/ftv2doc.png
 share/doc/libvisio/html/ftv2folderclosed.png
 share/doc/libvisio/html/ftv2folderopen.png
@@ -319,9 +318,7 @@ share/doc/libvisio/html/ftv2lastnode.png
 share/doc/libvisio/html/ftv2link.png
 share/doc/libvisio/html/ftv2mlastnode.png
 share/doc/libvisio/html/ftv2mnode.png
-share/doc/libvisio/html/ftv2mo.png
 share/doc/libvisio/html/ftv2node.png
-share/doc/libvisio/html/ftv2ns.png
 share/doc/libvisio/html/ftv2plastnode.png
 share/doc/libvisio/html/ftv2pnode.png
 share/doc/libvisio/html/ftv2splitbar.png
