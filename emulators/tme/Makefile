@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2014/04/16 21:03:05 joerg Exp $
+# $NetBSD: Makefile,v 1.50 2014/04/28 12:16:57 joerg Exp $
 #
 
 DISTNAME=		tme-0.8
@@ -34,6 +34,11 @@ _WRAP_EXTRA_ARGS.CC+=	-Wno-error=unused-but-set-variable	\
 	-fno-strict-aliasing
 .endif
 
+PLIST_VARS+=	bsd
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || \
+    ${OPSYS} == "OpenBSD" || ${OPSYS} == "DragonFly
+PLIST.bsd=	yes
+.endif
 
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
