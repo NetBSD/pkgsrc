@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/09/01 19:28:26 marino Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/04/28 12:19:30 joerg Exp $
 share/doc/${SUBDIR}/color.html
 share/doc/${SUBDIR}/doxygen-build.stamp
 share/doc/${SUBDIR}/draft-ietf-avt-rtp-theora-00.txt
@@ -17,7 +17,6 @@ share/doc/${SUBDIR}/html/doxygen.png
 share/doc/${SUBDIR}/html/dynsections.js
 share/doc/${SUBDIR}/html/files.html
 share/doc/${SUBDIR}/html/ftv2blank.png
-share/doc/${SUBDIR}/html/ftv2cl.png
 share/doc/${SUBDIR}/html/ftv2doc.png
 share/doc/${SUBDIR}/html/ftv2folderclosed.png
 share/doc/${SUBDIR}/html/ftv2folderopen.png
@@ -25,9 +24,7 @@ share/doc/${SUBDIR}/html/ftv2lastnode.png
 share/doc/${SUBDIR}/html/ftv2link.png
 share/doc/${SUBDIR}/html/ftv2mlastnode.png
 share/doc/${SUBDIR}/html/ftv2mnode.png
-share/doc/${SUBDIR}/html/ftv2mo.png
 share/doc/${SUBDIR}/html/ftv2node.png
-share/doc/${SUBDIR}/html/ftv2ns.png
 share/doc/${SUBDIR}/html/ftv2plastnode.png
 share/doc/${SUBDIR}/html/ftv2pnode.png
 share/doc/${SUBDIR}/html/ftv2splitbar.png
