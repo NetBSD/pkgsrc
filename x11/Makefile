@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.729 2014/03/13 07:28:38 jnemeth Exp $
+# $NetBSD: Makefile,v 1.730 2014/04/28 02:01:07 rodent Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -104,6 +104,7 @@ SUBDIR+=	gtk2-engines-bluecurve
 SUBDIR+=	gtk2-engines-murrine
 SUBDIR+=	gtk2-theme-switch
 SUBDIR+=	gtk3
+SUBDIR+=	gtk3-engines-unico
 SUBDIR+=	gtkada
 SUBDIR+=	gtkdatabox
 SUBDIR+=	gtkglarea
