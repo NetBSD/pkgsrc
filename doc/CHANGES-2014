@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1640 2014/04/28 19:57:00 tron Exp $
+$NetBSD: CHANGES-2014,v 1.1641 2014/04/28 22:32:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2354,3 +2354,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/chromaprint to 1.1 [wiz 2014-04-27]
 	Added x11/gtk3-engines-unico version 1.0.2 [rodent 2014-04-28]
 	Updated databases/phpmyadmin to 4.1.14 [tron 2014-04-28]
+	Updated misc/py-anki2 to 2.0.26 [wiz 2014-04-28]
