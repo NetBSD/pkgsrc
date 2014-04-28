@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/01/05 20:01:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/04/28 12:14:27 joerg Exp $
 include/openobex/obex.h
 include/openobex/obex_const.h
 include/openobex/version.h
@@ -24,7 +24,6 @@ share/doc/openobex/html/doxygen.png
 share/doc/openobex/html/dynsections.js
 share/doc/openobex/html/files.html
 share/doc/openobex/html/ftv2blank.png
-share/doc/openobex/html/ftv2cl.png
 share/doc/openobex/html/ftv2doc.png
 share/doc/openobex/html/ftv2folderclosed.png
 share/doc/openobex/html/ftv2folderopen.png
@@ -32,9 +31,7 @@ share/doc/openobex/html/ftv2lastnode.png
 share/doc/openobex/html/ftv2link.png
 share/doc/openobex/html/ftv2mlastnode.png
 share/doc/openobex/html/ftv2mnode.png
-share/doc/openobex/html/ftv2mo.png
 share/doc/openobex/html/ftv2node.png
-share/doc/openobex/html/ftv2ns.png
 share/doc/openobex/html/ftv2plastnode.png
 share/doc/openobex/html/ftv2pnode.png
 share/doc/openobex/html/ftv2splitbar.png
