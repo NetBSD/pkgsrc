@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2014/04/28 01:18:03 taca Exp $
+# $NetBSD: Makefile,v 1.22 2014/04/28 01:23:40 taca Exp $
 
 DISTNAME=	nokogiri-1.6.1
 CATEGORIES=	textproc
@@ -16,6 +16,7 @@ USE_GCC_RUNTIME=	yes
 MAKE_ENV+=		NOKOGIRI_USE_SYSTEM_LIBRARIES=yes
 OVERRIDE_GEMSPEC=	:files ports/archives/libxml2-2.8.0.tar.gz= \
 				ports/archives/libxslt-1.1.26.tar.gz=
+RUBY_VERSION_SUPPORTED=	200 193 21
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
