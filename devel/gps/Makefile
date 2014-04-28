@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2013/10/10 14:42:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.32 2014/04/28 22:14:51 marino Exp $
 #
 
 DISTNAME=	gps-${GPS_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://downloads.dragonlace.net/src/
 DISTFILES=	gps-5.2.1-1-src.tgz
@@ -20,6 +20,7 @@ USE_LANGUAGES=		c ada c++
 MY_CONFIGURE_ENV+=	ADA_PROJECT_PATH=${APP}
 MY_MAKE_ENV+=		PROCESSORS=${MAKE_JOBS} \
 			ADA_PROJECT_PATH=${APP}
+MAKE_ARGS=		Build=Production
 APP=			${PREFIX}/lib/gnat
 WRKSRC=			${WRKDIR}/gps-release-ide-${GPS_VERSION}-src
 MAKE_JOBS_SAFE=		yes
@@ -44,7 +45,7 @@ do-configure:
 		./configure ${CONFIGURE_ARGS}
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MY_MAKE_ENV} gmake default 
+	cd ${WRKSRC} && ${SETENV} ${MY_MAKE_ENV} gmake ${MAKE_ARGS} default 
 
 pre-install:
 .if !empty(PKG_OPTIONS:Mpython)
