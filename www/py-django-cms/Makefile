@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/04/24 19:54:15 adam Exp $
+# $NetBSD: Makefile,v 1.20 2014/04/28 12:13:36 joerg Exp $
 
 DISTNAME=	django-cms-3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,6 +23,8 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 EGG_NAME=		${DISTNAME:S/-/_/}
 USE_LANGUAGES=		# empty
+
+REPLACE_SH=	cms/static/cms/js/select2/release.sh
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
