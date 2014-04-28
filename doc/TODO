@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13255 2014/04/28 19:57:00 tron Exp $
+$NetBSD: TODO,v 1.13256 2014/04/28 22:32:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -930,7 +930,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Scientific-doc-2.5.5
 	o py-Unidecode-0.04.14
 	o py-Whoosh-2.5.6
-	o py-anki2-2.0.26
 	o py-biggles-1.6.6
 	o py-bottle-0.11.6
 	o py-cassa-1.11.0
