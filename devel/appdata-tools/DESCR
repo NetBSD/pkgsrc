@@ -1,0 +1,11 @@
+Every software center that exists allows the user to look at
+screenshots and a long description of the application before it is
+installed. For most users it allows them to answer the question Do
+I want to install this application?
+
+Traditionally in Linux distributions, we have none of this data
+for the vast majority of our desktop user-installable applications.
+To solve this, we have defined a new data file, which the upstream
+project can optionally translate using the same technique as GSetting
+schemas or Desktop files. Rather than create a new schema from
+scratch, we'll be using a subset of the AppStream metadata proposal.
