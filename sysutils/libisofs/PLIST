@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2014/04/29 20:03:06 wiz Exp $
+include/libisofs/libisofs.h
+lib/libisofs.la
+lib/pkgconfig/libisofs-1.pc
