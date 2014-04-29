@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.593 2014/03/31 14:03:18 wiz Exp $
+# $NetBSD: Makefile,v 1.594 2014/04/29 20:00:01 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -270,6 +270,7 @@ SUBDIR+=	ksystemlog
 SUBDIR+=	kuser
 SUBDIR+=	lambd
 SUBDIR+=	lavaps
+SUBDIR+=	libburn
 SUBDIR+=	libdevkit-gobject
 SUBDIR+=	libgamin
 SUBDIR+=	libgksu
