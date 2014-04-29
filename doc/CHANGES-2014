@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1649 2014/04/29 19:11:39 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1650 2014/04/29 19:19:40 agc Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2363,3 +2363,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/stunnel to 5.01 [ryoon 2014-04-29]
 	Updated textproc/yelp-xsl to 3.12.0 [wiz 2014-04-29]
 	Added devel/appdata-tools version 0.1.7 [wiz 2014-04-29]
+	Updated lang/tinyscheme to 1.40nb1 [agc 2014-04-29]
