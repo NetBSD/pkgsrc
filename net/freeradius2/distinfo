@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2013/04/12 13:45:47 joerg Exp $
+$NetBSD: distinfo,v 1.15.8.1 2014/04/29 08:37:02 tron Exp $
 
 SHA1 (freeradius-server-2.2.0.tar.bz2) = 8710b21972072241219f006d26f609cb58875cda
 RMD160 (freeradius-server-2.2.0.tar.bz2) = 243569a7ad93b292439e6938be8102dba12b843d
@@ -12,3 +12,4 @@ SHA1 (patch-aj) = 865882e6e6e935276529b98616c9059c555272b9
 SHA1 (patch-ak) = 751aba6a3f9716279f3a87871cf7008b7a921f9a
 SHA1 (patch-al) = 6d68e3e2d7dd50675f142be974b277da0f664c8b
 SHA1 (patch-man_man5_dictionary.5) = cc662beeb2351501c9761e4ce6fc8402c7907b30
+SHA1 (patch-src_modules_rlm__pap_rlm__pap.c) = 595c5dafb22d71fbcb00974e4fc56a1fd1e7c7c3
