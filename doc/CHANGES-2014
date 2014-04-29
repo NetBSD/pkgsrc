@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1651 2014/04/29 20:00:09 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1652 2014/04/29 20:03:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2365,3 +2365,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/appdata-tools version 0.1.7 [wiz 2014-04-29]
 	Updated lang/tinyscheme to 1.40nb1 [agc 2014-04-29]
 	Added sysutils/libburn version 1.3.6pl01 [wiz 2014-04-29]
+	Added sysutils/libisofs version 1.3.6 [wiz 2014-04-29]
