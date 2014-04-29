@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/29 05:07:08 asau Exp $
+# $NetBSD: Makefile,v 1.7 2014/04/29 06:30:26 obache Exp $
 #
 
 DISTNAME=		xf86driproto-2.1.1
@@ -14,9 +14,8 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	xf86driproto.pc.in
 USE_LANGUAGES=		c
 
-BUILDLINK_DEPMETHOD.libdrm?=	build
+BUILDLINK_DEPMETHOD.libpciaccess?=	build
 
-.include "../../x11/glproto/buildlink3.mk"
-.include "../../x11/libdrm/buildlink3.mk"
+.include "../../sysutils/libpciaccess/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
