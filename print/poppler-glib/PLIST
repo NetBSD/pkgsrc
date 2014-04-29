@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2013/03/24 07:09:26 spz Exp $
+@comment $NetBSD: PLIST,v 1.16 2014/04/29 07:56:48 wiz Exp $
 include/poppler/glib/poppler-action.h
 include/poppler/glib/poppler-annot.h
 include/poppler/glib/poppler-attachment.h
@@ -11,6 +11,7 @@ include/poppler/glib/poppler-layer.h
 include/poppler/glib/poppler-media.h
 include/poppler/glib/poppler-movie.h
 include/poppler/glib/poppler-page.h
+include/poppler/glib/poppler-structure-element.h
 include/poppler/glib/poppler.h
 lib/libpoppler-glib.la
 lib/pkgconfig/poppler-cairo.pc
@@ -23,6 +24,7 @@ share/gtk-doc/html/poppler/PopplerLayer.html
 share/gtk-doc/html/poppler/PopplerMedia.html
 share/gtk-doc/html/poppler/PopplerMovie.html
 share/gtk-doc/html/poppler/PopplerPage.html
+share/gtk-doc/html/poppler/PopplerStructureElement.html
 share/gtk-doc/html/poppler/annotation-glossary.html
 share/gtk-doc/html/poppler/api-index-0-12.html
 share/gtk-doc/html/poppler/api-index-0-14.html
@@ -36,11 +38,14 @@ share/gtk-doc/html/poppler/ch01.html
 share/gtk-doc/html/poppler/home.png
 share/gtk-doc/html/poppler/index.html
 share/gtk-doc/html/poppler/index.sgml
+share/gtk-doc/html/poppler/left-insensitive.png
 share/gtk-doc/html/poppler/left.png
 share/gtk-doc/html/poppler/poppler-PopplerAction.html
 share/gtk-doc/html/poppler/poppler-Version-and-Features-Information.html
 share/gtk-doc/html/poppler/poppler-poppler.html
 share/gtk-doc/html/poppler/poppler.devhelp2
+share/gtk-doc/html/poppler/right-insensitive.png
 share/gtk-doc/html/poppler/right.png
 share/gtk-doc/html/poppler/style.css
+share/gtk-doc/html/poppler/up-insensitive.png
 share/gtk-doc/html/poppler/up.png
