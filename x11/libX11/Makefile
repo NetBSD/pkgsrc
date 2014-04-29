@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2013/09/09 09:44:41 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2014/04/29 10:27:33 obache Exp $
 
 DISTNAME=		libX11-1.6.2
 CATEGORIES=		x11 devel
@@ -34,6 +34,7 @@ CPPFLAGS.MirBSD+=	-pthread
 LDFLAGS.MirBSD+=	-pthread
 
 BUILDLINK_API_DEPENDS.libxcb+=libxcb>=1.8.1
+BUILDLINK_API_DEPENDS.xproto+=xproto>=7.0.17
 
 TOOL_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
