@@ -1,20 +1,20 @@
-$NetBSD: patch-ar,v 1.5 2013/07/04 13:13:55 wiz Exp $
+$NetBSD: patch-ar,v 1.6 2014/04/29 07:56:48 wiz Exp $
 
 Use installed poppler library so we can have a separate poppler-cpp
 package.
 
---- cpp/Makefile.in.orig	2011-10-26 12:40:03.000000000 +0000
+--- cpp/Makefile.in.orig	2014-04-24 22:42:56.000000000 +0000
 +++ cpp/Makefile.in
-@@ -79,7 +79,7 @@ am__installdirs = "$(DESTDIR)$(libdir)" 
+@@ -130,7 +130,7 @@ am__installdirs = "$(DESTDIR)$(libdir)" 
  LTLIBRARIES = $(lib_LTLIBRARIES)
  am__DEPENDENCIES_1 =
  libpoppler_cpp_la_DEPENDENCIES =  \
 -	$(top_builddir)/poppler/libpoppler.la $(am__DEPENDENCIES_1)
 +	$(prefix)/lib/libpoppler.la $(am__DEPENDENCIES_1)
- am_libpoppler_cpp_la_OBJECTS = libpoppler_cpp_la-PNMWriter.lo \
- 	libpoppler_cpp_la-poppler-document.lo \
+ am_libpoppler_cpp_la_OBJECTS = libpoppler_cpp_la-poppler-document.lo \
  	libpoppler_cpp_la-poppler-embedded-file.lo \
-@@ -426,7 +426,7 @@ libpoppler_cpp_la_CXXFLAGS = \
+ 	libpoppler_cpp_la-poppler-font.lo \
+@@ -537,7 +537,7 @@ libpoppler_cpp_la_CXXFLAGS = \
  	-Dpoppler_cpp_EXPORTS
  
  libpoppler_cpp_la_LIBADD = \
