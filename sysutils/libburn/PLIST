@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2014/04/29 19:59:44 wiz Exp $
+bin/cdrskin
+include/libburn/libburn.h
+lib/libburn.la
+lib/pkgconfig/libburn-1.pc
+man/man1/cdrskin.1
