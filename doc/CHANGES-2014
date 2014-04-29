@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1647 2014/04/29 13:48:43 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.1648 2014/04/29 16:01:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2361,3 +2361,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added print/poppler-qt5 version 0.26.0 [wiz 2014-04-29]
 	Updated mail/mew to 6.6 [taca 2014-04-29]
 	Updated security/stunnel to 5.01 [ryoon 2014-04-29]
+	Updated textproc/yelp-xsl to 3.12.0 [wiz 2014-04-29]
