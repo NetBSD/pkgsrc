@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2014/01/04 16:21:00 prlw1 Exp $
+# $NetBSD: options.mk,v 1.7 2014/04/29 08:27:35 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk3
 PKG_SUPPORTED_OPTIONS=	gtk3-atk-bridge cups debug
@@ -44,7 +44,9 @@ CONFIGURE_ARGS+=	--without-atk-bridge
 .  endif
 
 BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2nb2
+BUILDLINK_API_DEPENDS.inputproto+=	inputproto>=2.0
 
+.include "../../x11/inputproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
