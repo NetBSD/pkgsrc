@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1644 2014/04/29 07:57:36 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1645 2014/04/29 08:05:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2358,3 +2358,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated pkgtools/x11-links to 0.88 [obache 2014-04-29]
 	Updated sysutils/tree to 1.7.0 [wiz 2014-04-29]
 	Updated print/poppler to 0.26.0 [wiz 2014-04-29]
+	Added print/poppler-qt5 version 0.26.0 [wiz 2014-04-29]
