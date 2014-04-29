@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.582 2014/04/04 12:35:52 drochner Exp $
+# $NetBSD: Makefile,v 1.583 2014/04/29 08:05:30 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -114,6 +114,7 @@ SUBDIR+=	poppler-glib
 SUBDIR+=	poppler-includes
 SUBDIR+=	poppler-qt
 SUBDIR+=	poppler-qt4
+SUBDIR+=	poppler-qt5
 SUBDIR+=	poppler-utils
 SUBDIR+=	poppler016
 SUBDIR+=	poster
