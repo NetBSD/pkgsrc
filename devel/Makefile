@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1889 2014/04/26 16:03:46 wen Exp $
+# $NetBSD: Makefile,v 1.1890 2014/04/29 19:11:28 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -39,6 +39,7 @@ SUBDIR+=	apache-ant15
 SUBDIR+=	apache-ivy
 SUBDIR+=	apache-maven
 SUBDIR+=	apel
+SUBDIR+=	appdata-tools
 SUBDIR+=	apr
 SUBDIR+=	apr-util
 SUBDIR+=	apr0
