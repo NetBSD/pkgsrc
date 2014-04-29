@@ -1,10 +1,11 @@
-# $NetBSD: Makefile.common,v 1.63 2014/04/29 07:56:48 wiz Exp $
+# $NetBSD: Makefile.common,v 1.64 2014/04/29 08:03:53 wiz Exp $
 #
 # used by print/poppler/Makefile
 # used by print/poppler-cpp/Makefile
 # used by print/poppler-glib/Makefile
 # used by print/poppler-includes/Makefile
 # used by print/poppler-qt4/Makefile
+# used by print/poppler-qt5/Makefile
 # used by print/poppler-utils/Makefile
 
 POPPLER_VERS=		0.26.0
@@ -25,4 +26,3 @@ USE_LANGUAGES=		c c++
 
 # Don't accidentally find libtiff
 CONFIGURE_ARGS+=	--disable-libtiff
-
