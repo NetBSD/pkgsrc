@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1645 2014/04/29 08:05:57 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1646 2014/04/29 13:41:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2359,3 +2359,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/tree to 1.7.0 [wiz 2014-04-29]
 	Updated print/poppler to 0.26.0 [wiz 2014-04-29]
 	Added print/poppler-qt5 version 0.26.0 [wiz 2014-04-29]
+	Updated mail/mew to 6.6 [taca 2014-04-29]
