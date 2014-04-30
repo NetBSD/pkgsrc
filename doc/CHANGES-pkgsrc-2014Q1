@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.20 2014/04/29 08:47:16 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.21 2014/04/30 22:52:35 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q1 branch:
@@ -79,3 +79,5 @@ Pullup ticket #4390 - requested by taca
 www/drupal6: security update
 Pullup ticket #4391 - requested by taca
 www/drupal7: security update
+Pullup ticket #4392 - requested by obache
+multimedia/adobe-flash-plugin11: security update
