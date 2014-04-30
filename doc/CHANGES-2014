@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1662 2014/04/30 12:44:07 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1663 2014/04/30 13:57:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2376,3 +2376,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/libtunepimp to 0.5.3nb15 [wiz 2014-04-30]
 	Updated textproc/docbook2mdoc to 0.0.8 [wiz 2014-04-30]
 	Updated audio/kid3 to 3.1 [wiz 2014-04-30]
+	Updated textproc/docbook2mdoc to 0.0.9 [wiz 2014-04-30]
