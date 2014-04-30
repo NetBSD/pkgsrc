@@ -1,14 +1,18 @@
-$NetBSD: patch-media_mtransport_third__party_nrappkit_src_port_generic_include_sys_queue.h,v 1.5 2014/02/20 13:19:03 ryoon Exp $
+$NetBSD: patch-media_mtransport_third__party_nrappkit_src_port_generic_include_sys_queue.h,v 1.6 2014/04/30 15:07:18 ryoon Exp $
 
---- media/mtransport/third_party/nrappkit/src/port/generic/include/sys/queue.h.orig	2013-12-05 16:07:48.000000000 +0000
+--- media/mtransport/third_party/nrappkit/src/port/generic/include/sys/queue.h.orig	2014-04-18 02:03:49.000000000 +0000
 +++ media/mtransport/third_party/nrappkit/src/port/generic/include/sys/queue.h
-@@ -30,12 +30,15 @@
+@@ -30,12 +30,19 @@
   * $FreeBSD: src/sys/sys/queue.h,v 1.58 2004/04/07 04:19:49 imp Exp $
   */
  
 -#ifndef _SYS_QUEUE_H_
 +#if (defined(BSD) && !defined(__OpenBSD__)) || defined(DARWIN)
 +#include_next <sys/queue.h>
++# if defined(__DragonFly__)
++#define STAILQ_FOREACH_SAFE STAILQ_FOREACH_MUTABLE
++#define TAILQ_FOREACH_SAFE TAILQ_FOREACH_MUTABLE
++# endif
 +#elif !defined(_SYS_QUEUE_H_)
  #define	_SYS_QUEUE_H_
  
@@ -21,7 +25,7 @@ $NetBSD: patch-media_mtransport_third__party_nrappkit_src_port_generic_include_s
  #endif
  
  #define STAILQ_FOREACH_SAFE(var, head, field, tvar)                     \
-@@ -43,8 +46,6 @@
+@@ -43,8 +50,6 @@
               (var) && ((tvar) = STAILQ_NEXT((var), field), 1);           \
               (var) = (tvar))
  
@@ -30,7 +34,7 @@ $NetBSD: patch-media_mtransport_third__party_nrappkit_src_port_generic_include_s
  /*
   * This file defines four types of data structures: singly-linked lists,
   * singly-linked tail queues, lists and tail queues.
-@@ -285,7 +286,7 @@ struct {								\
+@@ -285,7 +290,7 @@ struct {								\
  	(STAILQ_EMPTY((head)) ?						\
  		NULL :							\
  	        ((struct type *)					\
