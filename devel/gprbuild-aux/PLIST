@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2012/07/08 20:08:42 marino Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/04/30 16:28:09 marino Exp $
 bin/gprbuild
 bin/gprclean
 bin/gprconfig
+bin/gprinstall
+bin/gprslave
 libexec/gprbuild/gprbind
 libexec/gprbuild/gprlib
 share/doc/gprbuild/html/gnat_style.css
@@ -120,6 +122,7 @@ share/examples/gprbuild/subsystems/util_src/ada_lib.ads
 share/examples/gprbuild/subsystems/util_src/c_lib.ads
 share/examples/gprbuild/subsystems/util_src/lib.c
 share/examples/gprbuild/subsystems/util_src/lib.h
+share/gpr/_default.gpr
 share/gprconfig/asm.xml
 share/gprconfig/c.xml
 share/gprconfig/compilers.xml
@@ -131,29 +134,4 @@ share/gprconfig/gprconfig.xsd
 share/gprconfig/linker.xml
 share/gprconfig/nocompiler.xml
 share/gprconfig/targetset.xml
-@pkgdir share/gpr
-@pkgdir share/examples/gprbuild/subsystems/obj_util
-@pkgdir share/examples/gprbuild/subsystems/obj1
-@pkgdir share/examples/gprbuild/subsystems/obj
-@pkgdir share/examples/gprbuild/scenarios/obj1
-@pkgdir share/examples/gprbuild/scenarios/obj
-@pkgdir share/examples/gprbuild/ppc-elf/objs
-@pkgdir share/examples/gprbuild/namings/obj-case3
-@pkgdir share/examples/gprbuild/namings/obj-case2
-@pkgdir share/examples/gprbuild/namings/obj-case1
-@pkgdir share/examples/gprbuild/matrix/obj
-@pkgdir share/examples/gprbuild/libraries/obj2
-@pkgdir share/examples/gprbuild/libraries/obj1
-@pkgdir share/examples/gprbuild/libraries/obj
-@pkgdir share/examples/gprbuild/libraries/lib3
-@pkgdir share/examples/gprbuild/libraries/lib2
-@pkgdir share/examples/gprbuild/libraries/lib
-@pkgdir share/examples/gprbuild/first_steps/obj1
-@pkgdir share/examples/gprbuild/first_steps/obj
-@pkgdir share/examples/gprbuild/extended_projects/new_obj_util
-@pkgdir share/examples/gprbuild/extended_projects/new_obj
-@pkgdir share/examples/gprbuild/ada_f77/obj
-@pkgdir share/examples/gprbuild/ada_f77/lib
-@pkgdir share/examples/gprbuild/ada_f77/fobj
-@pkgdir share/examples/gprbuild/ada_f77/dobj
-@pkgdir share/examples/gprbuild/ada_f77/dlib
+share/gprconfig/windres.xml
