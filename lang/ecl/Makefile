@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2014/04/21 13:25:53 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2014/04/30 14:19:40 wiz Exp $
 
 DISTNAME=		ecl-13.5.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ecls/}
 EXTRACT_SUFX=		.tgz
