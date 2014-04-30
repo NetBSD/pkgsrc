@@ -1,4 +1,4 @@
-$NetBSD: patch-src__editor_src_src__editor__view.adb,v 1.1 2014/04/28 22:14:51 marino Exp $
+$NetBSD: patch-src__editor_src_src__editor__view.adb,v 1.2 2014/04/30 16:32:20 marino Exp $
 
 Disambiguation required to compile with FSF GNAT 4.9.0
 
