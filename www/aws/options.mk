@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2014/04/28 13:04:20 marino Exp $
+# $NetBSD: options.mk,v 1.9 2014/04/30 16:30:33 marino Exp $
 
 
 # xmlada is built-in (not optional) due to gprbuild dependency

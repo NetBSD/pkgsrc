@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2014/04/28 13:04:20 marino Exp $
+# $NetBSD: Makefile,v 1.16 2014/04/30 16:30:33 marino Exp $
 #
 
 DISTNAME=	aws-${AWS_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	http://downloads.dragonlace.net/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -23,8 +23,10 @@ USE_LANGUAGES=  	c ada c++ fortran
 
 .include "options.mk"
 
-MAKE_ENV+=		ADA_PROJECT_PATH=${PREFIX}/lib/gnat
-MAKE_ENV+=		AWK=awk
+MY_MAKE_ENV+=		ADA_PROJECT_PATH=${PREFIX}/lib/gnat
+MY_MAKE_ENV+=		AWK=awk
+MY_MAKE_ENV+=		PATH=${PREFIX}/gcc-aux/bin:${PATH}
+MY_CONF_ENV+=		PATH=${PREFIX}/gcc-aux/bin:${PATH}
 CONFIGURE_ARGS+=	LPATH=${PREFIX}/lib ZPATH=/usr/lib
 
 # Link options were added for the aws library
@@ -46,13 +48,15 @@ GENERATE_PLIST=  cd ${DESTDIR}${PREFIX};
 GENERATE_PLIST+= ${FIND} * -type f | ${SORT};
 
 do-configure:
-	cd ${WRKSRC} && ${GMAKE} setup ${CONFIGURE_ARGS}
+	cd ${WRKSRC} && ${SETENV} ${MY_CONF_ENV} \
+		${GMAKE} setup ${CONFIGURE_ARGS}
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} build build_doc
+	cd ${WRKSRC} && ${SETENV} ${MY_MAKE_ENV} \
+		${GMAKE} build build_doc
 
 do-test: install
-	cd ${WRKSRC}/regtests && ${SETENV} ${MAKE_ENV} \
+	cd ${WRKSRC}/regtests && ${SETENV} ${MY_MAKE_ENV} \
 		python${PYVERSSUFFIX} testsuite.py
 
 do-install:
