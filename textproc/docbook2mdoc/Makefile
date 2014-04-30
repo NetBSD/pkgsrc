@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/04/30 11:09:12 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/04/30 13:57:15 wiz Exp $
 
-DISTNAME=	docbook2mdoc-0.0.8
+DISTNAME=	docbook2mdoc-0.0.9
 CATEGORIES=	textproc
 MASTER_SITES=	http://mdocml.bsd.lv/docbook2mdoc/snapshots/
 EXTRACT_SUFX=	.tgz
@@ -11,12 +11,7 @@ COMMENT=	Convert DocBook documentation into man pages (mdoc)
 LICENSE=	isc
 
 BUILD_TARGET=	docbook2mdoc
-
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/docbook2mdoc ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/docbook2mdoc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+MAKE_FLAGS+=	PREFIX=${PREFIX}
 
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
