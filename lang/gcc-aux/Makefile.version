@@ -1,0 +1,7 @@
+# $NetBSD: Makefile.version,v 1.1 2014/04/30 16:24:39 marino Exp $
+#
+
+SNAPSHOT=	20140422
+GCC_BRANCH=	4.9
+GCC_POINT=	0
+GCC_VERSION=	${GCC_BRANCH}.${GCC_POINT}
