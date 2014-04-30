@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2014/04/30 23:42:52 wiz Exp $
+include/groove/encoder.h
+include/groove/groove.h
+include/groove/queue.h
+include/groovefingerprinter/fingerprinter.h
+include/grooveloudness/loudness.h
+include/grooveplayer/player.h
+lib/libgroove.a
+lib/libgroove.so
+lib/libgroove.so.3
+lib/libgroove.so.${PKGVERSION}
+lib/libgroovefingerprinter.a
+lib/libgroovefingerprinter.so
+lib/libgroovefingerprinter.so.3
+lib/libgroovefingerprinter.so.${PKGVERSION}
+lib/libgrooveloudness.a
+lib/libgrooveloudness.so
+lib/libgrooveloudness.so.3
+lib/libgrooveloudness.so.${PKGVERSION}
+lib/libgrooveplayer.a
+lib/libgrooveplayer.so
+lib/libgrooveplayer.so.3
+lib/libgrooveplayer.so.${PKGVERSION}
