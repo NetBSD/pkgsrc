@@ -1,4 +1,6 @@
-$NetBSD: patch-src_qibusserializable.cpp,v 1.1 2012/11/19 23:21:39 joerg Exp $
+$NetBSD: patch-src_qibusserializable.cpp,v 1.2 2014/04/30 06:53:19 obache Exp $
+
+* http://code.google.com/p/ibus/issues/detail?id=1706
 
 --- src/qibusserializable.cpp.orig	2012-11-19 16:47:11.000000000 +0000
 +++ src/qibusserializable.cpp
