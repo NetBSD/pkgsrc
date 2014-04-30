@@ -1,6 +1,8 @@
-$NetBSD: patch-share_gprconfig_targetset.xml,v 1.1 2012/07/08 20:08:42 marino Exp $
+$NetBSD: patch-share_gprconfig_targetset.xml,v 1.2 2014/04/30 16:28:09 marino Exp $
 
---- share/gprconfig/targetset.xml.orig	2011-10-20 17:41:48.000000000 +0000
+Add / correct BSD targets
+
+--- share/gprconfig/targetset.xml.orig	2012-12-19 17:55:05.000000000 +0000
 +++ share/gprconfig/targetset.xml
 @@ -52,8 +52,8 @@
  
@@ -13,30 +15,33 @@ $NetBSD: patch-share_gprconfig_targetset.xml,v 1.1 2012/07/08 20:08:42 marino Ex
    </targetset>
  
    <!-- x86-windows (mingw) -->
-@@ -144,10 +144,29 @@
+@@ -144,10 +144,32 @@
  
-  <!-- Freebsd -->
+   <!-- Freebsd -->
    <targetset>
 -    <target>x86-freebsd</target>
      <target>i.86-.*freebsd.*</target>
++    <target>amd64-.*-freebsd.*</target>
 +    <target>x86_64-.*-freebsd.*</target>
    </targetset>
  
-+ <!-- DragonFlyBSD -->
++  <!-- DragonFlyBSD -->
 +  <targetset>
 +    <target>i.86-.*-dragonfly.*</target>
 +    <target>x86_64-.*-dragonfly.*</target>
 +  </targetset>
 +
-+ <!-- NetBSD -->
++  <!-- NetBSD -->
 +  <targetset>
 +    <target>i.86-.*-netbsd.*</target>
++    <target>amd64-.*-netbsd.*</target>
 +    <target>x86_64-.*-netbsd.*</target>
 +  </targetset>
 +
-+ <!-- OpenBSD -->
++  <!-- OpenBSD -->
 +  <targetset>
 +    <target>i.86-.*-openbsd.*</target>
++    <target>amd64-.*-openbsd.*</target>
 +    <target>x86_64-.*-openbsd.*</target>
 +  </targetset>
 +
