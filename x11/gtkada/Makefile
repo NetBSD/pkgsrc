@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2013/10/10 14:41:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2014/04/30 16:31:41 marino Exp $
 #
 
 DISTNAME=	gtkada-${GTKADA_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	http://downloads.dragonlace.net/src/
 EXTRACT_SUFX=	.tar.bz2
