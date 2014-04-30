@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/04/02 08:21:16 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/04/30 11:09:12 wiz Exp $
 
-DISTNAME=	docbook2mdoc-0.0.6
+DISTNAME=	docbook2mdoc-0.0.8
 CATEGORIES=	textproc
 MASTER_SITES=	http://mdocml.bsd.lv/docbook2mdoc/snapshots/
 EXTRACT_SUFX=	.tgz
