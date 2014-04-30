@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1656 2014/04/30 05:43:19 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.1657 2014/04/30 06:15:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2370,3 +2370,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Update wm/awesome to 3.5.5 [degroote 2014-04-30]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.356 [obache 2014-04-30]
 	Updated devel/memcached to 1.4.18nb1 [rodent 2014-04-30]
+	Updated graphics/inkscape to 0.48.4nb22 [wiz 2014-04-30]
