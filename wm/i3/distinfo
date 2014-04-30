@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2013/10/17 22:41:12 tonnerre Exp $
+$NetBSD: distinfo,v 1.3 2014/04/30 21:38:37 degroote Exp $
 
-SHA1 (i3-4.6.tar.bz2) = b393eb6e57f5d6e11eb98691d8b392a639c3b516
-RMD160 (i3-4.6.tar.bz2) = 7f25c3b700e5255ad916b4348b22f3569d1f8c8d
-Size (i3-4.6.tar.bz2) = 891862 bytes
+SHA1 (i3-4.7.2.tar.bz2) = a324170f0fee581fd1f34549eda0800cab985ad8
+RMD160 (i3-4.7.2.tar.bz2) = 70af64384479a773ae3585ba1390b31e03eb625d
+Size (i3-4.7.2.tar.bz2) = 897398 bytes
 SHA1 (patch-Makefile) = 919f0e87efa951bde531b9172b74589d3e1c474a
 SHA1 (patch-src_log.c) = d555354ee2200ffcaa61c52f498de7e689084d90
 SHA1 (patch-src_main.c) = c03fcb12d404fcdfd14c1892b771ee0c7a86b39d
