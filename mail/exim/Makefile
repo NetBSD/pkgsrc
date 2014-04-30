@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2014/04/09 07:27:11 obache Exp $
+# $NetBSD: Makefile,v 1.130 2014/04/30 10:21:08 jperkin Exp $
 
 DISTNAME=	exim-4.82
 PKGREVISION=	2
@@ -35,6 +35,9 @@ PKG_USERS_VARS+=	EXIM_USER
 PKG_GECOS.${EXIM_USER}=	Exim mail server user
 PKG_HOME.${EXIM_USER}=	${VARBASE}/mail
 PKG_SHELL.${EXIM_USER}=	${NOLOGIN}
+
+FILES_SUBST+=		EXIM_GROUP=${EXIM_GROUP:Q}
+FILES_SUBST+=		EXIM_USER=${EXIM_USER:Q}
 
 PKG_SYSCONFSUBDIR=	exim
 EXAMPLESDIR=		${PREFIX}/share/examples/exim
