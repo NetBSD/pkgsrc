@@ -1,4 +1,6 @@
-$NetBSD: patch-configure.in,v 1.5 2012/07/09 05:52:14 marino Exp $
+$NetBSD: patch-configure.in,v 1.6 2014/04/30 16:27:04 marino Exp $
+
+  Establish DragonFly and NetBSD configuration.
 
 --- configure.in.orig	2009-02-17 19:15:53.000000000 +0000
 +++ configure.in

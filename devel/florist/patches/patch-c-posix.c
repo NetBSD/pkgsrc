@@ -1,4 +1,6 @@
-$NetBSD: patch-c-posix.c,v 1.5 2012/07/09 05:52:14 marino Exp $
+$NetBSD: patch-c-posix.c,v 1.6 2014/04/30 16:27:04 marino Exp $
+
+  Add DragonFly support and resolve BADSIG ambiguity
 
 --- c-posix.c.orig	2012-05-10 13:32:15.000000000 +0000
 +++ c-posix.c

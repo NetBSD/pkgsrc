@@ -1,4 +1,6 @@
-$NetBSD: patch-c-posix-signals.c,v 1.1 2012/07/09 05:52:14 marino Exp $
+$NetBSD: patch-c-posix-signals.c,v 1.2 2014/04/30 16:27:04 marino Exp $
+
+  Resolve BADSIG ambiguity
 
 --- c-posix-signals.c.orig	2012-05-10 13:32:15.000000000 +0000
 +++ c-posix-signals.c
