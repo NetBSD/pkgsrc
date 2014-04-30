@@ -1,8 +1,8 @@
-$NetBSD: patch-content_media_gstreamer_GStreamerAllocator.cpp,v 1.1 2014/03/20 21:02:00 ryoon Exp $
+$NetBSD: patch-content_media_gstreamer_GStreamerAllocator.cpp,v 1.2 2014/04/30 15:07:18 ryoon Exp $
 
---- content/media/gstreamer/GStreamerAllocator.cpp.orig	2014-03-20 11:09:40.000000000 +0000
+--- content/media/gstreamer/GStreamerAllocator.cpp.orig	2014-04-28 00:05:17.000000000 +0000
 +++ content/media/gstreamer/GStreamerAllocator.cpp
-@@ -0,0 +1,198 @@
+@@ -0,0 +1,197 @@
 +#ifdef HAVE_CONFIG_H
 +#include "config.h"
 +#endif
@@ -61,8 +61,7 @@ $NetBSD: patch-content_media_gstreamer_GStreamerAllocator.cpp,v 1.1 2014/03/20 2
 +    mem->image->Release();
 +
 +  ImageContainer* container = ((MozGfxMemoryAllocator*) mem->memory.allocator)->reader->GetImageContainer();
-+  ImageFormat format = PLANAR_YCBCR;
-+  mem->image = reinterpret_cast<PlanarYCbCrImage*>(container->CreateImage(&format, 1).get());
++  mem->image = reinterpret_cast<PlanarYCbCrImage*>(container->CreateImage(ImageFormat::PLANAR_YCBCR).get());
 +  mem->data = mem->image->AllocateAndGetNewBuffer(mem->memory.size);
 +}
 +
