@@ -1,6 +1,6 @@
-$NetBSD: patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_video__capture__linux.cc,v 1.6 2014/03/20 21:02:00 ryoon Exp $
+$NetBSD: patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_video__capture__linux.cc,v 1.7 2014/04/30 15:07:18 ryoon Exp $
 
---- media/webrtc/trunk/webrtc/modules/video_capture/linux/video_capture_linux.cc.orig	2014-03-15 05:19:30.000000000 +0000
+--- media/webrtc/trunk/webrtc/modules/video_capture/linux/video_capture_linux.cc.orig	2014-04-18 02:03:54.000000000 +0000
 +++ media/webrtc/trunk/webrtc/modules/video_capture/linux/video_capture_linux.cc
 @@ -18,13 +18,16 @@
  #include <unistd.h>
@@ -20,19 +20,10 @@ $NetBSD: patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_video__cap
  
  #include <new>
  
-@@ -34,6 +37,24 @@
+@@ -34,6 +37,15 @@
  #include "webrtc/system_wrappers/interface/thread_wrapper.h"
  #include "webrtc/system_wrappers/interface/trace.h"
  
-+#ifdef HAVE_LIBV4L2
-+#define open	v4l2_open
-+#define close	v4l2_close
-+#define dup	v4l2_dup
-+#define ioctl	v4l2_ioctl
-+#define mmap	v4l2_mmap
-+#define munmap	v4l2_munmap
-+#endif
-+
 +#ifdef HAVE_LIBV4L2
 +#define open	v4l2_open
 +#define close	v4l2_close
