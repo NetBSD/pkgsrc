@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1665 2014/04/30 16:40:30 marino Exp $
+$NetBSD: CHANGES-2014,v 1.1666 2014/04/30 21:40:30 degroote Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2381,3 +2381,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/gcc-aux to 20140422 [marino 2014-04-30]
 	Added lang/gnat_util version 20140422 [marino 2014-04-30]
 	Updated devel/gprbuild-aux to 20130416 [marino 2014-04-30]
+	Updated wm/i3 to 4.7.2 [degroote 2014-04-30]
