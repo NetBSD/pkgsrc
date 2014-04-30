@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13261 2014/04/30 12:44:08 wiz Exp $
+$NetBSD: TODO,v 1.13262 2014/04/30 22:40:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -406,7 +406,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bbweather-0.6.3
 	o benchfft-3.1
 	o blender-2.70a
-	o bluefish-2.2.5
+	o bluefish-2.2.6
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bomberclone-0.11.9
@@ -709,7 +709,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kapooka-0.3
 	o kbiff-4.0
 	o kdbg-2.5.4
-	o kde4-4.12.4
+	o kde4-4.12.5
 	o kde4-4.13.0
 	o kdrill-6.5
 	o kismet-2011.03r2 [pkg/45692]
@@ -858,7 +858,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o opengrok-0.12
 	o openmortal-0.7.1
 	o openmpi-1.8.1
-	o openoffice-3.4
+	o openoffice-4.1
 	o openoffice3-3.3
 	o openscad-2013.06
 	o openslp-2.0.0
@@ -1123,6 +1123,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o userppp-030706
 	o utilisp-1.14
 	o vala-0.24.0
+	o varnish-4.0
 	o vbetool-1.1
 	o vera-1.17
 	o verilog-current-20130827 [wip]
