@@ -1,41 +1,21 @@
-# $NetBSD: options.mk,v 1.1 2012/07/08 19:30:38 marino Exp $
+# $NetBSD: options.mk,v 1.2 2014/04/30 16:24:39 marino Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc-aux
-PKG_SUPPORTED_OPTIONS=  ada cxx fortran objc testsuite nls static
-PKG_SUGGESTED_OPTIONS=  ada cxx fortran objc
-
-.if ${OPSYS} == "NetBSD"
-PKG_SUGGESTED_OPTIONS+= static
-.endif
+PKG_SUPPORTED_OPTIONS=  fortran objc testsuite nls static bootstrap
+PKG_SUGGESTED_OPTIONS=  fortran objc nls
 
 .include "../../mk/bsd.options.mk"
 
 
-#########################
-##  ADD LANGUAGE: Ada  ##
-#########################
-
-.if !empty(PKG_OPTIONS:Mada)
-LANGS+= ada
-APPLY_DIFFS+= ada
-.endif
-
-
-#########################
-##  ADD LANGUAGE: C++  ##
-#########################
-
-.if !empty(PKG_OPTIONS:Mcxx)
-LANGS+= c++
-APPLY_DIFFS+= cxx
-.endif
+# Bootstrap is essentially a maintainer option and it will ignore
+# all other options because it is intent on building a bootstrap compiler.
 
 
 #############################
 ##  ADD LANGUAGE: Fortran  ##
 #############################
 
-.if empty(PKG_OPTIONS:Mfortran)
+.if empty(PKG_OPTIONS:Mfortran) || !empty(PKG_OPTIONS:Mbootstrap)
 EXTRA_CONFARGS+= --disable-libquadmath
 .else
 LANGS+= fortran
@@ -52,7 +32,7 @@ EXTRA_CONFARGS+= --enable-libquadmath
 ##  ADD LANGUAGE: Objective-C  ##
 #################################
 
-.if !empty(PKG_OPTIONS:Mobjc)
+.if !empty(PKG_OPTIONS:Mobjc) && empty(PKG_OPTIONS:Mbootstrap)
 LANGS+= objc
 .endif
 
@@ -61,7 +41,7 @@ LANGS+= objc
 ##  TESTSUITE SUPPORT  ##
 #########################
 
-.if !empty(PKG_OPTIONS:Mtestsuite)
+.if !empty(PKG_OPTIONS:Mtestsuite) && empty(PKG_OPTIONS:Mbootstrap)
 BUILD_DEPENDS+= dejagnu>=1.4:../../devel/dejagnu
 APPLY_DIFFS+= ada-testsuite
 APPLY_DIFFS+= cxx-testsuite
@@ -74,9 +54,13 @@ APPLY_DIFFS+= fortran-testsuite
 ##  NATIONAL LANGUAGE SUPPORT  ##
 #################################
 
-.if !empty(PKG_OPTIONS:Mnls)
+.if !empty(PKG_OPTIONS:Mnls) && empty(PKG_OPTIONS:Mbootstrap)
+USE_BUILTIN.iconv= no
 USE_TOOLS+= msgfmt
 EXTRA_CONFARGS+= --enable-nls
+EXTRA_CONFARGS+= --with-libiconv-prefix=${PREFIX}
+MY_MAKE_ENV+= ICONVPREFIX=${PREFIX}
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .else
 EXTRA_CONFARGS+= --disable-nls
@@ -87,10 +71,20 @@ EXTRA_CONFARGS+= --disable-nls
 ##  STATICALLY BUILT OPTION  ##
 ###############################
 
-# NetBSD must be built statically to support dl_iterate_phdr
-# error handling.  The base compiler doesn't support despite it although
-# NetBSD's realtime linker supports dl_iterate_phdr
-# Setting the option by default on NetBSD is cosmetic; regardless of
-# setting, NetBSD will always be built statically.
-#
-# The "static" option is handled in the post-extract phase.
+.if !empty(PKG_OPTIONS:Mstatic) && empty(PKG_OPTIONS:Mbootstrap)
+EXTRA_CONFARGS+= --with-stage1-ldflags=-static
+.endif
+
+
+#################################
+##  BOOTSTRAP COMPILER OPTION  ##
+#################################
+
+.if !empty(PKG_OPTIONS:Mbootstrap)
+EXTRA_CONFARGS+= --disable-shared --disable-lto
+EXTRA_CONFARGS+= --with-stage1-ldflags=-static
+EXTRA_CONFARGS+= --with-boot-ldflags=-static
+.else
+EXTRA_CONFARGS+= --enable-shared
+EXTRA_CONFARGS+= --disable-bootstrap
+.endif
