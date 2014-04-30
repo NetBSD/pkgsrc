@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.503 2014/04/27 09:56:40 wiz Exp $
+# $NetBSD: Makefile,v 1.504 2014/04/30 23:43:05 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -236,6 +236,7 @@ SUBDIR+=	libdiscid
 SUBDIR+=	libebur128
 SUBDIR+=	libfishsound
 SUBDIR+=	libgpod
+SUBDIR+=	libgroove
 SUBDIR+=	libid3tag
 SUBDIR+=	libifp
 SUBDIR+=	liblastfm
