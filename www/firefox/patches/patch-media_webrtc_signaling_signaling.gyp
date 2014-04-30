@@ -1,28 +1,8 @@
-$NetBSD: patch-media_webrtc_signaling_signaling.gyp,v 1.4 2014/02/20 13:19:03 ryoon Exp $
+$NetBSD: patch-media_webrtc_signaling_signaling.gyp,v 1.5 2014/04/30 15:07:18 ryoon Exp $
 
---- media/webrtc/signaling/signaling.gyp.orig	2013-12-05 16:07:48.000000000 +0000
+--- media/webrtc/signaling/signaling.gyp.orig	2014-04-18 02:03:50.000000000 +0000
 +++ media/webrtc/signaling/signaling.gyp
-@@ -244,6 +244,19 @@
-           'cflags_mozilla': [
-           ],
-         }],
-+        ['os_bsd==1', {
-+          'include_dirs': [
-+          ],
-+          'defines': [
-+            # avoiding pointless ifdef churn
-+            'SIP_OS_OSX',
-+            'OSX',
-+            'SECLIB_OPENSSL',
-+          ],
-+
-+          'cflags_mozilla': [
-+          ],
-+        }],
-         ['OS=="mac"', {
-           'include_dirs': [
-           ],
-@@ -823,14 +836,13 @@
+@@ -825,14 +825,13 @@
              ['OS=="mac"', {
                'defines' : [
                  'SIP_OS_OSX',
