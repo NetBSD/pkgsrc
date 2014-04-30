@@ -1,6 +1,9 @@
-$NetBSD: patch-src_gprlib.adb,v 1.1 2012/07/08 20:08:42 marino Exp $
+$NetBSD: patch-src_gprlib.adb,v 1.2 2014/04/30 16:28:09 marino Exp $
 
---- src/gprlib.adb.orig	2012-05-10 13:59:05.000000000 +0000
+Marino's modification to give Ada programs build with GPRBUILD proper
+-rpath support
+
+--- src/gprlib.adb.orig	2013-04-16 14:36:02.000000000 +0000
 +++ src/gprlib.adb
 @@ -390,6 +390,11 @@ procedure Gprlib is
  
