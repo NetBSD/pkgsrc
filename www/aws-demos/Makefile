@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2014/02/12 23:18:44 tron Exp $
+# $NetBSD: Makefile,v 1.12 2014/04/30 16:30:57 marino Exp $
 #
 
 DISTNAME=	aws-${AWS_VERSION}
 PKGNAME=	aws-demos-${AWS_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://downloads.dragonlace.net/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -25,8 +25,10 @@ CONFIGURE_ARGS+=	XMLADA=true
 CONFIGURE_ARGS+=	prefix=${PREFIX}
 CONFIGURE_ARGS+=	DEBUG=true
 
-MAKE_ENV+=		ADA_PROJECT_PATH=${PREFIX}/lib/gnat
-MAKE_ENV+=		AWK=awk
+MY_MAKE_ENV+=		ADA_PROJECT_PATH=${PREFIX}/lib/gnat
+MY_MAKE_ENV+=		AWK=awk
+MY_MAKE_ENV+=		PATH=${PREFIX}/gcc-aux/bin:${PATH}
+MY_CONF_ENV+=		PATH=${PREFIX}/gcc-aux/bin:${PATH}
 CONFIGURE_ARGS+=	LPATH=${PREFIX}/lib ZPATH=/usr/lib
 
 SUBST_CLASSES+= 	lpath
@@ -97,11 +99,12 @@ PLIST.ssl=		yes
 .endif
 
 do-configure:
-	cd ${WRKSRC} && ${GMAKE} setup ${CONFIGURE_ARGS}
+	cd ${WRKSRC} && ${SETENV} ${MY_CONF_ENV} \
+		${GMAKE} setup ${CONFIGURE_ARGS}
 
 do-build:
 .for dd in ${DEMO_DIRS}
-	cd ${WRKSRC}/demos/${dd} && ${SETENV} ${MAKE_ENV} ${GMAKE}
+	cd ${WRKSRC}/demos/${dd} && ${SETENV} ${MY_MAKE_ENV} ${GMAKE}
 .endfor
 
 do-install:
