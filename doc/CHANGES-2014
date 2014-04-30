@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1664 2014/04/30 15:08:44 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.1665 2014/04/30 16:40:30 marino Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2378,3 +2378,6 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/kid3 to 3.1 [wiz 2014-04-30]
 	Updated textproc/docbook2mdoc to 0.0.9 [wiz 2014-04-30]
 	Updated www/firefox to 29.0 [ryoon 2014-04-30]
+	Updated lang/gcc-aux to 20140422 [marino 2014-04-30]
+	Added lang/gnat_util version 20140422 [marino 2014-04-30]
+	Updated devel/gprbuild-aux to 20130416 [marino 2014-04-30]
