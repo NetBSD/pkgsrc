@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1655 2014/04/30 01:33:51 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1656 2014/04/30 05:43:19 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2369,3 +2369,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated print/luatex to 0.76.0nb3 [wiz 2014-04-29]
 	Update wm/awesome to 3.5.5 [degroote 2014-04-30]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.356 [obache 2014-04-30]
+	Updated devel/memcached to 1.4.18nb1 [rodent 2014-04-30]
