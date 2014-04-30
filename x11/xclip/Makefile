@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2012/10/29 05:06:59 asau Exp $
-#
+# $NetBSD: Makefile,v 1.18 2014/04/30 06:25:54 wiz Exp $
 
-DISTNAME=	xclip-0.11
+DISTNAME=	xclip-0.12
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xclip/}
 
