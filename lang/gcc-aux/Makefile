@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2014/01/07 02:30:11 marino Exp $
+# $NetBSD: Makefile,v 1.16 2014/04/30 16:24:39 marino Exp $
 #
 
 PKGNAME=	gcc-aux-${SNAPSHOT}
 DISTNAME=	gcc-${GCC_VERSION}
-PKGREVISION=	4
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 DISTFILES=	${DISTNAME}.tar.bz2
@@ -13,56 +12,45 @@ HOMEPAGE=	http://www.dragonlace.net/
 COMMENT=	GNAT Ada compiler based on GCC ${GCC_BRANCH}
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 
-SNAPSHOT=	20130411
-GCC_BRANCH=	4.7
-GCC_POINT=	3
-GCC_VERSION=	${GCC_BRANCH}.${GCC_POINT}
-LANGS=		c
-
-USE_TOOLS+=		gmake sed:run perl makeinfo bzip2 patch pod2man
-USE_BUILTIN.iconv=	no
-APPLY_DIFFS=		core
-
+.include "Makefile.version"
+.include "Makefile.testsuite"
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-# Requires bootstrap compiler, which is only available for NetBSD i386/AMD64
-# DragonFly i386/AMD64 and SunOS i386  Bootstrap compilers for OpenBSD and
-# FreeBSD also exist, but are currently reserved for the native package systems
-# of those platforms.
+LANGS=		c ada c++
+USE_TOOLS+=	gmake sed:run perl makeinfo bzip2 patch pod2man tar
+APPLY_DIFFS=	core ada cxx
+
+# Requires bootstrap compiler, which is only available for on selected systems
+# Disable SunOS for now until multilib version can be built and tested.
 
 ONLY_FOR_PLATFORM=	DragonFly-*-*        \
+			FreeBSD-*-i386       \
+			FreeBSD-*-x86_64     \
 			NetBSD-[5-9]*-i386   \
-			NetBSD-[5-9]*-x86_64 \
-			SunOS-5.1[1-9]*-i386
+			NetBSD-[5-9]*-x86_64
+
+#			SunOS-5.1[1-9]*-i386
+#			gnat-bootstrap.i386.solaris.tar.bz2
 
 BLD_TARGET=		${MACHINE_ARCH}-aux-${LOWER_OPSYS}${OS_VERSION}
-THREAD_MODEL=		posix
-OS_LABEL4VERS=		[pkgsrc]
-BOOTSTRAP_COMPILER=	NOT_REQUIRED
-INTENDED_COMPILER=	NATIVE
-BOOTSTRAP_TRIPLET=	NOT SET
+GARCH=			${MACHINE_ARCH:S/amd64/x86_64/}
+OS_LABEL4VERS=		[${OPSYS}${GARCH:M*64:S/amd_//:S/x86_//}]
 FULL_GNATGCC=		NOT SET
 FULL_PATH=		/sbin:/bin:/usr/sbin:/usr/bin:${PREFIX}/gcc-aux/bin:${PREFIX}/sbin:${PREFIX}/bin
-OLD_EH=			register_frame
-REBUILD_LIB=		Rebuild the following library first:
-STICONV=		${PREFIX}/lib/libiconv.a
-STINTL= 		\$${top_builddir}/../intl/libintl.a
 
-
-.if ${OPSYS} == "DragonFly"
-.if ${MACHINE_ARCH} == "i386"
-   OS_LABEL4VERS=	[DragonFly]
-   BOOTSTRAP_TRIPLET=	i386-bootstrap-dragonfly2.8/4.6.0
-.endif
-.if ${MACHINE_ARCH} == "x86_64"
-   OS_LABEL4VERS=	[DragonFly64]
-   BOOTSTRAP_TRIPLET=	x86_64-bootstrap-dragonfly2.8/4.6.0
-.endif
-BOOTSTRAP_COMPILER=	gnat-bootstrap.${MACHINE_ARCH}.dragonfly.tar.bz2
-LINK_HEADER=		/usr/include/sys/link_elf.h
+.if ${OPSYS} == DragonFly
+BOOTSTRAP_COMPILER=	ada-bootstrap.${GARCH}.dragonfly.36A.tar.bz2
 .endif
 
+.if ${OPSYS} == FreeBSD
+MODERN_BINUTILS=	yes
+.  if !empty(OS_VERSION:M[678].*)
+BOOTSTRAP_COMPILER=	ada-bootstrap.${GARCH}.freebsd.84.tar.bz2
+.  else
+BOOTSTRAP_COMPILER=	ada-bootstrap.${GARCH}.freebsd.100B.tar.bz2
+.  endif
+.endif
 
 .if ${OPSYS} == "NetBSD"
 .if !empty(OS_VERSION:M6.99.*)
@@ -70,58 +58,46 @@ LINK_HEADER=		/usr/include/sys/link_elf.h
 .else
    NSUFF=	${OS_VERSION}
 .endif
-# Special handling of clang may be required for all platforms
-# but currently this is confirmed only for NetBSD
-.if ${PKGSRC_COMPILER} == clang
-MY_CONFIGURE_ENV+=	LDFLAGS=-lm
+.if ${GARCH} == i386
+   NELF=	elf
 .endif
-.if ${MACHINE_ARCH} == "i386"
-   OS_LABEL4VERS=	[NetBSD]
-   BOOTSTRAP_TRIPLET=	i386-bootstrap-netbsdelf5.1/4.6.0
-   BLD_TARGET=		${MACHINE_ARCH}-aux-netbsdelf${NSUFF}
-   BOOTSTRAP_COMPILER=	gnat-bootstrap.${MACHINE_ARCH}.netbsd.tar.bz2
+BOOTSTRAP_COMPILER=	ada-bootstrap.${GARCH}.netbsd.614.tar.bz2
+BLD_TARGET=		${MACHINE_ARCH}-aux-netbsd${NELF}${NSUFF}
 .endif
-.if ${MACHINE_ARCH} == "x86_64"
-   OS_LABEL4VERS=	[NetBSD64]
-   BOOTSTRAP_TRIPLET=	x86_64-aux-netbsd6.1/4.7.3
-   BLD_TARGET=		${MACHINE_ARCH}-aux-netbsd${NSUFF}
-   BOOTSTRAP_COMPILER=	gnat-bootstrap2.${MACHINE_ARCH}.netbsd.tar.bz2
-.endif
-LINK_HEADER=		/usr/include/link_elf.h
-.endif
-
 
 .if ${OPSYS} == "SunOS"
-.if ${MACHINE_ARCH} == "i386"
-   OS_LABEL4VERS=	[Solaris]
-   BOOTSTRAP_TRIPLET=	i386-bootstrap-solaris5.11/4.6.1
-.endif
+BOOTSTRAP_TRIPLET=	i386-bootstrap-solaris5.11/4.6.1
 SOL_OSV=		`expr substr ${OS_VERSION} 3 2`
 BLD_TARGET=		${MACHINE_ARCH}-aux-${LOWER_OPSYS}2.${SOL_OSV}
 BOOTSTRAP_COMPILER=	gnat-bootstrap.${MACHINE_ARCH}.solaris.tar.bz2
-MY_CONFIGURE_ENV+=	OBJDUMP=/usr/sfw/bin/gobjdump
-. if exists(/usr/sfw/bin/gld)
-EXTRA_CONFARGS+=	--with-gnu-ld --with-ld=/usr/sfw/bin/gld
-. else
-EXTRA_CONFARGS+=	--without-gnu-ld --with-ld=/usr/ccs/bin/ld
-. endif
-. if exists(/usr/sfw/bin/gas)
-EXTRA_CONFARGS+=	--with-gnu-as --with-as=/usr/sfw/bin/gas
-. else
-EXTRA_CONFARGS+=	--without-gnu-as --with-as=/usr/ccs/bin/as
-. endif
+MODERN_BINUTILS=	yes
+.endif
+
+.if defined(MODERN_BINUTILS)
+BUILDLINK_DEPMETHOD.binutils=	full
+.include "../../devel/binutils/buildlink3.mk"
+EXTRA_CONFARGS+=	--with-gnu-ld --with-ld=${PREFIX}/bin/gld
+EXTRA_CONFARGS+=	--with-gnu-as --with-as=${PREFIX}/bin/gas
+MY_CONFIGURE_ENV+=	AR=${PREFIX}/bin/gar
+MY_CONFIGURE_ENV+=	AS=${PREFIX}/bin/gas
+MY_CONFIGURE_ENV+=	LD=${PREFIX}/bin/gld
+MY_CONFIGURE_ENV+=	NM=${PREFIX}/bin/gnm
+MY_CONFIGURE_ENV+=	RANLIB=${PREFIX}/bin/granlib
+.else
+EXTRA_CONFARGS+=	--with-gnu-ld --with-ld=/usr/bin/ld
+EXTRA_CONFARGS+=	--with-gnu-as --with-as=/usr/bin/as
 .endif
 
 
 # define some important directories and files
-BUILDDIR=		${WRKDIR}/build
 WRKSRC=			${WRKDIR}/gcc-${GCC_VERSION}
-PKG_PREFIX=		${PREFIX}/gcc-aux
+BUILDDIR=		${WRKDIR}/build
+NEWBSDIR=		${WRKDIR}/newbs/bootstrap
 CFG_SCRIPT=		${WRKSRC}/configure
-BOOTSTRAP_PREFIX=	${WRKDIR}/bootstrap
 REVFILE= 		${WRKSRC}/gcc/REVISION
-BASELIB=		${PREFIX}/lib
-
+BOOTSTRAP_PREFIX=	${WRKDIR}/bootstrap
+PKG_PREFIX=		${PREFIX}/gcc-aux
+BSFILENAME=		ada-bootstrap.${GARCH}.${LOWER_OPSYS}.${OS_VERSION:C/[A-Z_.-]//g}.tar
 
 
 # testing if gcc-aux is already installed - if so, use this compiler along with
@@ -133,33 +109,41 @@ FULL_GNATGCC=${LOCALBASE}/gcc-aux/bin/ada
 
 .if ${FULL_GNATGCC} == "NOT SET"
 # here we know we need to install the bootstrap compiler
-INTENDED_COMPILER=BOOTSTRAP
+.  if defined(BOOTSTRAP_TRIPLET)
 FULL_GNATGCC=${BOOTSTRAP_PREFIX}/bin/gnatgcc
+.  else
+FULL_GNATGCC=${BOOTSTRAP_PREFIX}/bin/gcc
+FULL_GNATGXX=${BOOTSTRAP_PREFIX}/bin/g++
+.  endif
 DISTFILES+= ${BOOTSTRAP_COMPILER}
 SITES.${BOOTSTRAP_COMPILER}=	http://downloads.dragonlace.net/src/
 FULL_PATH=${BOOTSTRAP_PREFIX}/bin:/sbin:/bin:/usr/sbin:/usr/bin:${PREFIX}/sbin:${PREFIX}/bin
-.  if ${OPSYS} == NetBSD && ${MACHINE_ARCH} == "x86_64"
-MY_CONFIGURE_ENV+= LD_LIBRARY_PATH=${BOOTSTRAP_PREFIX}/lib
-EXTRA_LLP=:${BOOTSTRAP_PREFIX}/lib
-.  endif
 .endif
 
 
-# For pkg maintenance, uncomment to invoke "bmake mdi"
-#DISTFILES+= \
-#  gnat-bootstrap.i386.dragonfly.tar.bz2 \
-#  gnat-bootstrap.x86_64.dragonfly.tar.bz2 \
-#  gnat-bootstrap.i386.netbsd.tar.bz2 \
-#  gnat-bootstrap2.x86_64.netbsd.tar.bz2 \
-#  gnat-bootstrap.i386.solaris.tar.bz2
+# for port maintenance, invoke "make mdi PLUS_BOOTSTRAPS=1"
+.if defined(PLUS_BOOTSTRAPS)
+MASTER_SITES= http://downloads.dragonlace.net/src/ \
+   ${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
+DISTFILES= \
+   ${DISTNAME}.tar.bz2 \
+   ada-bootstrap.i386.dragonfly.36A.tar.bz2 \
+   ada-bootstrap.i386.freebsd.84.tar.bz2 \
+   ada-bootstrap.i386.freebsd.100B.tar.bz2 \
+   ada-bootstrap.i386.netbsd.614.tar.bz2 \
+   ada-bootstrap.x86_64.dragonfly.36A.tar.bz2 \
+   ada-bootstrap.x86_64.freebsd.84.tar.bz2 \
+   ada-bootstrap.x86_64.freebsd.100B.tar.bz2 \
+   ada-bootstrap.x86_64.netbsd.614.tar.bz2
+.endif
 
 
 # establish ada-aware compiler for use
 MY_CONFIGURE_ENV+=	CC=${FULL_GNATGCC}
+MY_CONFIGURE_ENV+=	CXX=${FULL_GNATGXX}
 MY_CONFIGURE_ENV+=	PATH=${FULL_PATH}
-MY_CONFIGURE_ENV+=	LDFLAGS=${COMPILER_RPATH_FLAG:Q}${PKG_PREFIX:Q}/lib
-MY_MAKE_ENV=		PATH=${FULL_PATH}
-MY_MAKE_ENV+=		ICONVPREFIX=${PREFIX}
+MY_CONFIGURE_ENV+=	LDFLAGS="-lm ${COMPILER_RPATH_FLAG}${PREFIX}/lib"
+MY_MAKE_ENV+=		PATH=${FULL_PATH}
 MY_MAKE_ENV+=		LD_LIBRARY_PATH=${BUILDDIR}/gcc${EXTRA_LLP}
 # ${WRKSRC}/fixincludes/ looks for sed and compiles the path to sed into
 # a binary so we need to make sure we give it the installed sed and not
@@ -176,10 +160,7 @@ CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
 CONFIGURE_ARGS+=	--with-mpfr=${BUILDLINK_PREFIX.mpfr}
 CONFIGURE_ARGS+=	--with-mpc=${BUILDLINK_PREFIX.mpcomplex}
-CONFIGURE_ARGS+=	--with-libiconv-prefix=${PREFIX}
-CONFIGURE_ARGS+=	--enable-shared
-CONFIGURE_ARGS+=	--enable-threads=${THREAD_MODEL}
-CONFIGURE_ARGS+=	--disable-bootstrap
+CONFIGURE_ARGS+=	--enable-threads=posix
 CONFIGURE_ARGS+=	--disable-libmudflap
 CONFIGURE_ARGS+=	--disable-libgomp
 CONFIGURE_ARGS+=	--disable-libssp
@@ -193,109 +174,66 @@ GENERATE_PLIST+= ${FIND} * \( -type f -or -type l \) | ${SORT} -dr;
 post-extract:
 	# Personalize GNAT for each different machine
 	@${ECHO} "-=> GCC AUX ${OS_LABEL4VERS}" > ${REVFILE}
-
 	# Create new directories in preparation of applying diff files
-.if !empty(PKG_OPTIONS:Mcxx)
 	${MKDIR} ${WRKSRC}/libstdc++-v3/config/locale/dragonfly
 	${MKDIR} ${WRKSRC}/libstdc++-v3/config/os/bsd/dragonfly
-.endif
-
 	# Apply required composite diff files
 .for suffix in ${APPLY_DIFFS}
 	@${ECHO} "Applying composite patch diff-${suffix}"
-	@${PATCH} -d ${WRKSRC} -s -E < ${FILESDIR}/diff-${suffix}
+	${PATCH} -d ${WRKSRC} -s -E < ${FILESDIR}/diff-${suffix}
 .endfor
-
+	(cd ${WRKSRC}/libstdc++-v3/testsuite && ${PERL5} -i \
+	  -pe 's|\*-\*-freebsd\*|*-*-dragonfly* *-*-freebsd*|' ${CXXTS4DF})
+	(cd ${WRKSRC}/libstdc++-v3/testsuite/22_locale && ${PERL5} -i \
+	  -pe 's|ISO-8859|ISO8859|g;' \
+	  -pe 's|ja_JP.eucjp|ja_JP.eucJP|g;' \
+	  -pe 's|en_HK|zh_HK|g;' \
+	  -pe 's|en_PH|en_NZ|g;' \
+	  -pe 's|se_NO|no_NO|g;' \
+	  -pe 's|es_MX|es_ES|g;' \
+	  -pe 's|ru_RU.UTF8|ru_RU.UTF-8|g' ${LOCALE22FIX})
+.if !empty(PKG_OPTIONS:Mstatic) || !empty(PKG_OPTIONS:Mbootstrap)
+	# Ensure GNAT tools are built statically
+	${PERL5} -pi -e 's/^GCC_LINK_FLAGS=.*/GCC_LINK_FLAGS=-static/' \
+	  ${WRKSRC}/gcc/ada/gcc-interface/Makefile.in
+.endif
 	# Update LINK_SPEC to add gcc-aux lib runpath in every binary
 	@${ECHO} "Configuring LINK_SPEC runpath"
-	@perl -pi -e 's;\@PREFIX\@;${PREFIX};' \
+	${PERL5} -pi -e 's;\@PREFIX\@;${PREFIX};' \
 	  ${WRKSRC}/gcc/config/dragonfly.h \
 	  ${WRKSRC}/gcc/config/i386/freebsd.h \
 	  ${WRKSRC}/gcc/config/i386/netbsd-elf.h
 
-	# Handle static option
-.if !empty(PKG_OPTIONS:Mstatic) || ${OPSYS} == "NetBSD"
-	@${ECHO} "Reconfiguring GCC Makefile to build compiler statically"
-	@${PATCH} -d ${WRKSRC} -s -E < ${FILESDIR}/diff-static-version
-.if empty(PKG_OPTIONS:Mnls)
-	@perl -pi -e 's;\@LIBICONV\@;${STICONV};' \
-	  ${WRKSRC}/gcc/Makefile.in \
-	  ${WRKSRC}/libcpp/Makefile.in \
-	  ${WRKSRC}/gcc/ada/gcc-interface/Makefile.in
-.else
-	@perl -pi -e 's;\@LIBINTL\@;${STINTL} ${STICONV};' ${WRKSRC}/intl/config.intl.in
-	@perl -pi -e 's;\@LIBICONV\@;;' \
-	  ${WRKSRC}/gcc/Makefile.in \
-	  ${WRKSRC}/libcpp/Makefile.in \
-	  ${WRKSRC}/gcc/ada/gcc-interface/Makefile.in
-.endif
-.endif
-
-.if ${INTENDED_COMPILER} == "BOOTSTRAP"
+.if defined(BOOTSTRAP_TRIPLET)
 	# Bootstrap compiler has statically linked z, gmp, mpc, mpfr and iconv
 	# The only shared lib is libc.so.7, so it should work for a long time.
-	# It is at least 28MB and doesn't come with shared libraries.
+	# No longer used, only here to support future SunOS bootstrap generation
 
 	${MKDIR} ${BOOTSTRAP_PREFIX}
-	mv ${BOOTSTRAP_PREFIX}/../bin ${BOOTSTRAP_PREFIX}
-	mv ${BOOTSTRAP_PREFIX}/../lib ${BOOTSTRAP_PREFIX}
-	mv ${BOOTSTRAP_PREFIX}/../libexec ${BOOTSTRAP_PREFIX}
-
-	# Bootstrap compiler malfunctions in NetBSD 6 unless include-fixed
-	# directory is removed first.  It will eventually cause problems
-	# for DragonFly and Solaris as well, so just unconditionally kill it.
+	${MV} ${BOOTSTRAP_PREFIX}/../bin ${BOOTSTRAP_PREFIX}
+	${MV} ${BOOTSTRAP_PREFIX}/../lib ${BOOTSTRAP_PREFIX}
+	${MV} ${BOOTSTRAP_PREFIX}/../libexec ${BOOTSTRAP_PREFIX}
 	${RM} -rf ${BOOTSTRAP_PREFIX}/lib/gcc/${BOOTSTRAP_TRIPLET}/include-fixed
-.endif
-
-
-pre-configure:
-# NetBSD's system compiler is not configured to use dl_iterate_phdr which is
-# required to build shared libraries if gnat-aux handles exceptions via
-# dl_iterate_phdr.  Therefore the feature requires statically built
-# gmp, mpc, mpfr, and iconv libraries in order to build on NetBSD.
-# DragonFly introduced this functionality with 2.11, but it's possible the
-# shared libraries were built with an earlier compiler in the case of an
-# upgrade.  We need to detect this situation on shared library builds and
-# stop the build if the libraries need to be rebuilt.
-.if ${OPSYS} == "DragonFly" && empty(PKG_OPTIONS:Mstatic)
-	@if ${GREP} dl_iterate_phdr ${LINK_HEADER} > /dev/null; then \
-	  if ${GREP} ${OLD_EH} ${BASELIB}/libmpc.so > /dev/null; then \
-	    ${ERROR_MSG} "${REBUILD_LIB} math/mpcomplex"; \
-	    exit 101; \
-	  fi; \
-	  if ${GREP} ${OLD_EH} ${BASELIB}/libmpfr.so > /dev/null; then \
-	    ${ERROR_MSG} "${REBUILD_LIB} math/mpfr"; \
-	    exit 102; \
-	  fi; \
-	  if ${GREP} ${OLD_EH} ${BASELIB}/libgmp.so > /dev/null; then \
-	    ${ERROR_MSG} "${REBUILD_LIB} devel/gmp"; \
-	    exit 103; \
-	  fi; \
-	  if ${GREP} ${OLD_EH} ${BASELIB}/libiconv.so > /dev/null; then \
-	    ${ERROR_MSG} "${REBUILD_LIB} converters/libiconv"; \
-	    exit 104; \
-	  fi; \
-	fi
 .endif
 
 
 do-configure:
 	${MKDIR} ${BUILDDIR}
 	cd ${BUILDDIR} && ${SETENV} ${MY_CONFIGURE_ENV} \
-	${CFG_SCRIPT} ${CONFIGURE_ARGS}
+		${CFG_SCRIPT} ${CONFIGURE_ARGS}
 
 
 do-build:
 	# The unlimited stacksize is for NetBSD64
 	cd ${BUILDDIR} && \
-	${ULIMIT_CMD_stacksize} && \
-	${SETENV} ${MY_MAKE_ENV} ${GMAKE} -j${MAKE_JOBS:U1:Q} all
+		${ULIMIT_CMD_stacksize} && \
+		${SETENV} ${MY_MAKE_ENV} ${GMAKE} -j${MAKE_JOBS:U1:Q} all
 
 
+.if !empty(PKG_OPTIONS:Mtestsuite) && empty(PKG_OPTIONS:Mbootstrap)
 do-test: build test-ada test-fortran test-objc test-cxx test-c
 
 test-ada:
-.if !empty(PKG_OPTIONS:Mtestsuite) && !empty(PKG_OPTIONS:Mada)
 .if (${OPSYS} == "NetBSD") && (${MACHINE_ARCH} == "x86_64")
 	# NetBSD has an extremely small default stacksize of 2MB, which is
 	# insufficient for the gnat.dg testsuite.
@@ -308,38 +246,42 @@ test-ada:
 .else
 	cd ${BUILDDIR} && ${SETENV} ${MY_MAKE_ENV} ${GMAKE} -sk check-ada
 .endif
-.endif
 
 test-fortran:
-.if !empty(PKG_OPTIONS:Mtestsuite) && !empty(PKG_OPTIONS:Mfortran)
+.if !empty(PKG_OPTIONS:Mfortran)
 	cd ${BUILDDIR} && ${SETENV} ${MY_MAKE_ENV} ${GMAKE} -sk check-fortran
 .endif
 
 test-objc:
-.if !empty(PKG_OPTIONS:Mtestsuite) && !empty(PKG_OPTIONS:Mobjc)
+.if !empty(PKG_OPTIONS:Mobjc)
 	cd ${BUILDDIR} && ${SETENV} ${MY_MAKE_ENV} ${GMAKE} -sk check-objc
 .endif
 
 test-cxx:
-.if !empty(PKG_OPTIONS:Mtestsuite) && !empty(PKG_OPTIONS:Mcxx)
 	# libstdc++ always ends with error status, so ignore it
 	cd ${BUILDDIR} && ${SETENV} ${MY_MAKE_ENV} ${GMAKE} -sk \
 	check-c++ || ${TRUE}
-.endif
 
 test-c:
-.if !empty(PKG_OPTIONS:Mtestsuite)
 	cd ${BUILDDIR} && ${SETENV} ${MY_MAKE_ENV} ${GMAKE} -sk check-c
 .endif
 
-
 do-install:
 	cd ${BUILDDIR} && ${SETENV} ${MY_MAKE_ENV} ${GMAKE} install-strip \
-	DESTDIR=${DESTDIR}
+		DESTDIR=${DESTDIR}
+	${MV} ${DESTDIR}${PKG_PREFIX}/share ${WRKDIR}/moved_share
+.if !empty(PKG_OPTIONS:Mbootstrap)
+	${MKDIR} ${NEWBSDIR}
+	${CP} -a ${DESTDIR}${PKG_PREFIX}/bin ${NEWBSDIR}/
+	${CP} -a ${DESTDIR}${PKG_PREFIX}/lib ${NEWBSDIR}/
+	${CP} -a ${DESTDIR}${PKG_PREFIX}/include ${NEWBSDIR}/
+	${CP} -a ${DESTDIR}${PKG_PREFIX}/libexec ${NEWBSDIR}/
+	${RM} ${NEWBSDIR}/bin/${GARCH}*
+	${RM} -rf ${NEWBSDIR}/lib/gcc/${BLD_TARGET}/${GCC_VERSION}/include-fixed
+	(cd ${NEWBSDIR}/.. ; \
+		${TAR} -cf ${BSFILENAME} bootstrap; ${BZIP2} ${BSFILENAME})
+.endif
 
-
-
-.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
 .include "../../math/mpcomplex/buildlink3.mk"
