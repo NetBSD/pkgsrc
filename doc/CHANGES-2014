@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1666 2014/04/30 21:40:30 degroote Exp $
+$NetBSD: CHANGES-2014,v 1.1667 2014/04/30 23:14:06 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2382,3 +2382,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Added lang/gnat_util version 20140422 [marino 2014-04-30]
 	Updated devel/gprbuild-aux to 20130416 [marino 2014-04-30]
 	Updated wm/i3 to 4.7.2 [degroote 2014-04-30]
+	Updated lang/sun-jre7 to 7.0.55 [ryoon 2014-04-30]
+	Updated lang/sun-jdk7 to 7.0.55 [ryoon 2014-04-30]
