@@ -1,12 +1,12 @@
-$NetBSD: patch-js__src__vm__SPSProfiler.cpp,v 1.6 2014/02/20 13:19:03 ryoon Exp $
+$NetBSD: patch-js__src__vm__SPSProfiler.cpp,v 1.7 2014/04/30 15:07:18 ryoon Exp $
 
 Unclear fallout from our version of bug 840242, attachment v1: some architectures
 fail to link if we do not add the inlines here - might be compiler/arch specific.
 
 
---- js/src/vm/SPSProfiler.cpp.orig	2013-12-05 16:07:40.000000000 +0000
+--- js/src/vm/SPSProfiler.cpp.orig	2014-04-18 02:03:21.000000000 +0000
 +++ js/src/vm/SPSProfiler.cpp
-@@ -4,12 +4,15 @@
+@@ -4,6 +4,8 @@
   * License, v. 2.0. If a copy of the MPL was not distributed with this
   * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
  
@@ -15,10 +15,3 @@ fail to link if we do not add the inlines here - might be compiler/arch specific
  #include "vm/SPSProfiler.h"
  
  #include "mozilla/DebugOnly.h"
- 
- #include "jsnum.h"
- #include "jsscript.h"
-+#include "jscntxtinlines.h"
- 
- #include "jit/BaselineJIT.h"
- #include "vm/StringBuffer.h"

@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.28 2014/04/09 06:13:50 obache Exp $
+# $NetBSD: mozilla-common.mk,v 1.29 2014/04/30 15:07:17 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -26,7 +26,7 @@ GCC_REQD+=		4.5
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}js/src/tests/update-test262.sh
-
+CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}intl/icu/source/configure
 
 CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--disable-pedantic
@@ -35,6 +35,7 @@ CONFIGURE_ARGS+=	--with-pthreads
 CONFIGURE_ARGS+=	--disable-javaxpcom
 CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk2
 CONFIGURE_ARGS+=	--enable-gstreamer
+#CONFIGURE_ARGS+=	--disable-gstreamer
 CONFIGURE_ARGS+=	--enable-svg
 CONFIGURE_ARGS+=	--enable-mathml
 CONFIGURE_ARGS+=	--enable-pango
@@ -49,6 +50,15 @@ CONFIGURE_ARGS+=	--with-system-nspr
 CONFIGURE_ARGS+=	--with-system-jpeg
 CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--with-system-bz2
+# 1.2 or later is required.
+#CONFIGURE_ARGS+=	--with-system-theora
+#CONFIGURE_ARGS+=	--with-system-ogg
+#CONFIGURE_ARGS+=	--with-system-tremor
+#CONFIGURE_ARGS+=	--with-system-vorbis
+# opus support requires Ogg Theora support
+#CONFIGURE_ARGS+=	--with-system-opus
+CONFIGURE_ARGS+=	--with-system-graphite2
+CONFIGURE_ARGS+=	--with-system-harfbuzz
 CONFIGURE_ARGS+=	--with-system-libevent=${BUILDLINK_PREFIX.libevent}
 CONFIGURE_ARGS+=	--enable-system-sqlite
 CONFIGURE_ARGS+=	--disable-crashreporter
@@ -165,6 +175,9 @@ PREFER.bzip2?=	pkgsrc
 .endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
+#.include "../../audio/libopus/buildlink3.mk"
+#.include "../../audio/tremor/buildlink3.mk"
+#.include "../../audio/libvorbis/buildlink3.mk"
 BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.8.0.2
 CONFIGURE_ENV+=	ac_cv_sqlite_secure_delete=yes	# c.f. patches/patch-al
 .include "../../databases/sqlite3/buildlink3.mk"
@@ -181,6 +194,9 @@ BUILDLINK_API_DEPENDS.nss+=	nss>=3.15.4
 .include "../../graphics/MesaLib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.10.2nb4
 .include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/graphite2/buildlink3.mk"
+#.include "../../multimedia/libogg/buildlink3.mk"
+#.include "../../multimedia/libtheora/buildlink3.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
