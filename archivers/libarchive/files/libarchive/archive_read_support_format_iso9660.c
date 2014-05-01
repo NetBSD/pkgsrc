@@ -2677,7 +2677,7 @@ heap_add_entry(struct archive_read *a, struct heap_queue *heap,
 		parent_key = heap->files[parent]->key;
 		if (file_key >= parent_key) {
 			heap->files[hole] = file;
-			return;
+			return (ARCHIVE_OK);
 		}
 		// Move parent into hole <==> move hole up tree.
 		heap->files[hole] = heap->files[parent];
