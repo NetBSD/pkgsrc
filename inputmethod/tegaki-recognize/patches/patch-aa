@@ -1,6 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/08/07 12:52:21 obache Exp $
+$NetBSD: patch-aa,v 1.2 2014/05/01 09:55:19 obache Exp $
 
-destdir support.
+* destdir support.
+  https://github.com/tegaki/tegaki/commit/06df3223b6dd7f32a48a7cb8cf431bbb7ad48f22
 
 --- setup.py.orig	2010-03-22 07:05:39.000000000 +0000
 +++ setup.py
