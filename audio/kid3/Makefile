@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2014/04/30 12:43:46 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2014/05/01 12:51:06 wiz Exp $
 
 DISTNAME=		kid3-3.1
 CATEGORIES=		kde audio
@@ -23,14 +23,6 @@ CMAKE_ARGS+=		-DWITH_MANDIR:STRING=${PKGMANDIR}
 # seems to be ignored, so put it into LDFLAGS
 CMAKE_ARGS+=		-DCMAKE_INSTALL_RPATH:PATH=${PREFIX}/lib/kid3
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/kid3
-
-# workaround: qt5-dbus does not install these tools, but
-# CMake expects them to be there, since they are referenced from
-# qt5-installed .cmake files
-pre-configure:
-	cd ${PREFIX}/qt5/bin && \
-		if [ ! -f qdbuscpp2xml ]; then touch qdbuscpp2xml; fi; \
-		if [ ! -f qdbusxml2cpp ]; then touch qdbusxml2cpp; fi;
 
 .include "../../audio/chromaprint/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
