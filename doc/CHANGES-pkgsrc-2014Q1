@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.21 2014/04/30 22:52:35 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.22 2014/05/01 22:32:24 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q1 branch:
@@ -81,3 +81,10 @@ Pullup ticket #4391 - requested by taca
 www/drupal7: security update
 Pullup ticket #4392 - requested by obache
 multimedia/adobe-flash-plugin11: security update
+Pullup ticket #4393 - requested by ryoon
+lang/sun-jdk7: security update
+lang/sun-jre7: security update
+Pullup ticket #4394 - requested by wen
+www/mediawiki: security update
+Pullup ticket #4395 - requested by gdt
+archivers/libarchive: build fix
