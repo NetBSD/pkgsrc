@@ -1,6 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/08/07 12:54:45 obache Exp $
+$NetBSD: patch-aa,v 1.2 2014/05/01 10:28:30 obache Exp $
 
-use memalign(3) if possible.
+* use memalign(3) if possible.
+  https://github.com/tegaki/tegaki/pull/8
 
 --- wagomu.cpp.orig	2010-02-27 04:51:50.000000000 +0000
 +++ wagomu.cpp
