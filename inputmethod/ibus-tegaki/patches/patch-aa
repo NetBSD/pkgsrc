@@ -1,6 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/08/08 00:42:23 obache Exp $
+$NetBSD: patch-aa,v 1.2 2014/05/01 09:52:03 obache Exp $
 
-destdir support.
+* destdir support.
+  https://github.com/tegaki/tegaki/commit/09a3d7d91e9e9199a6a3b307f8831615ddf06512
 
 --- setup.py.orig	2010-03-23 07:07:56.000000000 +0000
 +++ setup.py
@@ -13,10 +14,3 @@ destdir support.
          out = os.path.join(outdir, filename.replace(".in", ""))
          if not os.path.exists(outdir):
              os.makedirs(outdir)
-@@ -76,4 +78,4 @@ setup(
-     data_files=[('share/ibus-tegaki/engine', glob("engine/*.py")),
-                 ('share/ibus-tegaki/icons', glob("*.svg"))],
-     cmdclass={'install':install}
--)
-\ No newline at end of file
-+)
