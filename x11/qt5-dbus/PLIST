@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2014/04/23 07:05:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/05/01 12:50:39 wiz Exp $
+qt5/bin/qdbuscpp2xml
+qt5/bin/qdbusxml2cpp
 lib/pkgconfig/Qt5DBus.pc
 qt5/include/QtDBus/${PKGVERSION}/QtDBus/private/qdbus_symbols_p.h
 qt5/include/QtDBus/${PKGVERSION}/QtDBus/private/qdbusabstractadaptor_p.h
