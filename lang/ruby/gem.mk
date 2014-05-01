@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.30 2014/03/15 12:30:26 taca Exp $
+# $NetBSD: gem.mk,v 1.31 2014/05/01 12:45:09 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -249,26 +249,26 @@ PLIST_SUBST+=		GEM_EXTSDIR=${GEM_EXTSDIR}
 PLIST_SUBST+=		GEM_EXTSDIR="@comment "
 .endif
 
-# print-PLIST support
-PRINT_PLIST_AWK+=	/${GEM_NAME}\.info$$/ \
+# Add indirect support for print-PLIST
+_RUBY_PRINT_PLIST_GEM=	/${GEM_NAME}\.info$$/ \
 			{ gsub(/${GEM_NAME}\.info/, "$${GEM_NAME}.info"); }
-PRINT_PLIST_AWK+=	/${GEM_NAME}\.(gem|gemspec)$$/ \
+_RUBY_PRINT_PLIST_GEM+=	/${GEM_NAME}\.(gem|gemspec)$$/ \
 			{ gsub(/${GEM_NAME}\.gem/, "$${GEM_NAME}.gem"); }
-PRINT_PLIST_AWK+=	/${GEM_NAME:S/./[.]/g}[.](gem|gemspec)$$/ \
+_RUBY_PRINT_PLIST_GEM+=	/${GEM_NAME:S/./[.]/g}[.](gem|gemspec)$$/ \
 	{ gsub(/${PKGVERSION_NOREV:S|/|\\/|g}[.]gem/, "$${PKGVERSION}.gem"); }
 .if !empty(GEM_EXTSDIR)
-PRINT_PLIST_AWK+=	/^${GEM_EXTSDIR:S|/|\\/|g}/ \
+_RUBY_PRINT_PLIST_GEM+=	/^${GEM_EXTSDIR:S|/|\\/|g}/ \
 		{ gsub(/${GEM_EXTSDIR:S|/|\\/|g}/, "$${GEM_EXTSDIR}"); \
 			print; next; }
 .endif
-PRINT_PLIST_AWK+=	/^${GEM_LIBDIR:S|/|\\/|g}/ \
+_RUBY_PRINT_PLIST_GEM+=	/^${GEM_LIBDIR:S|/|\\/|g}/ \
 	{ gsub(/${GEM_LIBDIR:S|/|\\/|g}/, "$${GEM_LIBDIR}"); print; next; }
-PRINT_PLIST_AWK+=	/^${GEM_DOCDIR:S|/|\\/|g}/ \
+_RUBY_PRINT_PLIST_GEM+=	/^${GEM_DOCDIR:S|/|\\/|g}/ \
 			{ next; }
-PRINT_PLIST_AWK+=	/^${GEM_HOME:S|/|\\/|g}/ \
+_RUBY_PRINT_PLIST_GEM+=	/^${GEM_HOME:S|/|\\/|g}/ \
 			{ gsub(/${GEM_HOME:S|/|\\/|g}/, "$${GEM_HOME}"); \
 			print; next; }
-PRINT_PLIST_AWK+=	/^${RUBY_GEM_BASE:S|/|\\/|g}/ \
+_RUBY_PRINT_PLIST_GEM+=	/^${RUBY_GEM_BASE:S|/|\\/|g}/ \
 		{ gsub(/${RUBY_GEM_BASE:S|/|\\/|g}/, "$${RUBY_GEM_BASE}"); \
 			print; next; }
 

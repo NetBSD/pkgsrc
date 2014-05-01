@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.116 2014/03/14 19:54:23 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.117 2014/05/01 12:45:09 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -625,6 +625,10 @@ PRINT_PLIST_AWK+=	/^${RUBY_SITERIDIR:S|/|\\/|g}/ \
 			print; next; }
 PRINT_PLIST_AWK+=	/^${RUBY_SYSRIDIR:S|/|\\/|g}\// \
 			{ next; }
+
+# Insert part of PRINT_PLIST_AWK from gem.mk
+PRINT_PLIST_AWK+=	${_RUBY_PRINT_PLIST_GEM}
+
 PRINT_PLIST_AWK+=	/\/${RUBY_NAME}/ \
 			{ sub(/${RUBY_NAME}/, "$${RUBY_NAME}"); }
 PRINT_PLIST_AWK+=	/^${GEM_HOME:S|/|\\/|g:S|.|\\.|g}/ \
