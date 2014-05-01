@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/01/25 10:30:12 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2014/05/01 09:42:42 obache Exp $
 
 DISTNAME=	tegaki-wagomu-0.3.1
 PKGREVISION=	6
@@ -19,6 +19,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
 # some files are missing in distfile, taken from 0.3.
+# http://sourceforge.net/p/tegaki/bugs/8/
 post-extract:
 		${CP} ${WRKDIR}/tegaki-wagomu-0.3/tegakiwagomu.py ${WRKSRC}
 		${CP} ${WRKDIR}/tegaki-wagomu-0.3/wagomu.h ${WRKSRC}
