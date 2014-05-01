@@ -1,4 +1,7 @@
-$NetBSD: patch-src_UI__gtk.c,v 1.1 2012/11/19 23:16:41 joerg Exp $
+$NetBSD: patch-src_UI__gtk.c,v 1.2 2014/05/01 07:48:51 obache Exp $
+
+* Nested functions are supported as an extension in GNU C.
+  http://code.google.com/p/ibus-handwrite/issues/detail?id=20
 
 --- src/UI_gtk.c.orig	2012-11-19 16:23:52.000000000 +0000
 +++ src/UI_gtk.c
