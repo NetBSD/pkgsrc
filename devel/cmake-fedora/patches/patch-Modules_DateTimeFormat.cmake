@@ -1,6 +1,7 @@
-$NetBSD: patch-Modules_DateTimeFormat.cmake,v 1.1 2014/01/29 08:34:47 obache Exp $
+$NetBSD: patch-Modules_DateTimeFormat.cmake,v 1.2 2014/05/01 12:44:19 obache Exp $
 
 * -u is much portable than --utc.
+  https://bugzilla.redhat.com/show_bug.cgi?id=1093336
 
 --- Modules/DateTimeFormat.cmake.orig	2012-07-13 05:44:02.000000000 +0000
 +++ Modules/DateTimeFormat.cmake
