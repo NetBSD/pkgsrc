@@ -1,12 +1,21 @@
-$NetBSD: patch-configure.ac,v 1.2 2014/02/02 07:43:40 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.3 2014/05/01 00:32:11 ryoon Exp $
 
 * Improve portability, replace == with =
 * Detect pkgsrc apache-ant library
 * Fix installation directory
 
---- configure.ac.orig	2014-01-27 21:35:34.000000000 +0000
+--- configure.ac.orig	2014-04-08 11:46:25.000000000 +0000
 +++ configure.ac
-@@ -11906,7 +11906,7 @@ EOF
+@@ -8930,7 +8930,7 @@ SYSTEM_GENBRK=
+ SYSTEM_GENCCODE=
+ SYSTEM_GENCMN=
+ 
+-ICU_MAJOR=52
++ICU_MAJOR=53
+ ICU_MINOR=1
+ ICU_RECLASSIFIED_CLOSE_PARENTHESIS="YES"
+ ICU_RECLASSIFIED_PREPEND_SET_EMPTY="YES"
+@@ -11918,7 +11918,7 @@ EOF
      dnl Checking for ant.jar
      if test "$ANT_HOME" != "NO_ANT_HOME"; then
          AC_MSG_CHECKING([Ant lib directory])
@@ -15,7 +24,7 @@ $NetBSD: patch-configure.ac,v 1.2 2014/02/02 07:43:40 ryoon Exp $
              ANT_LIB="$ANT_HOME/lib"
          else
              if test -f $ANT_HOME/ant.jar; then
-@@ -12322,7 +12322,7 @@ AC_SUBST(MANDIR)
+@@ -12334,7 +12334,7 @@ AC_SUBST(MANDIR)
  DOCDIR=[$(eval echo $(eval echo $docdir))]
  AC_SUBST(DOCDIR)
  
