@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.3 2014/04/26 13:51:40 wiz Exp $
+$NetBSD: patch-ah,v 1.4 2014/05/01 04:11:01 richard Exp $
 
 (1) First chunk to fix the X11_TYPE=native problem, which
     freetype2 in /usr/X11R7/ is way old, and work around to 
@@ -9,9 +9,18 @@ $NetBSD: patch-ah,v 1.3 2014/04/26 13:51:40 wiz Exp $
     this patch:
     |  Shared object "libpaper.so.1" not found
 
---- configure.orig	2012-08-08 17:04:57.000000000 +0900
+--- configure.orig	2012-08-08 08:04:57.000000000 +0000
 +++ configure
-@@ -3786,13 +3786,13 @@
+@@ -3756,7 +3756,7 @@ $as_echo "$as_me: WARNING: disabling con
+     ;;
+     *)
+ #     This is just an arbitrary file in contrib to check
+-      if !(test -f contrib/gdevbjc_.c); then
++      if ! (test -f contrib/gdevbjc_.c); then
+         enable_contrib=no
+       fi
+     ;;
+@@ -3786,13 +3786,13 @@ case `uname` in
          ;;
          *BSD)
          if test $ac_cv_c_compiler_gnu = yes; then
@@ -27,7 +36,7 @@ $NetBSD: patch-ah,v 1.3 2014/04/26 13:51:40 wiz Exp $
              CC_DBG_FLAGS_TO_TRY="-g -O0"
          fi
          SET_DT_SONAME=""
-@@ -5331,7 +5331,7 @@
+@@ -5331,7 +5331,7 @@ fi
  fi
  
  if test x$with_libpaper != xno; then
@@ -36,3 +45,12 @@ $NetBSD: patch-ah,v 1.3 2014/04/26 13:51:40 wiz Exp $
  
  $as_echo "#define USE_LIBPAPER 1" >>confdefs.h
  
+@@ -6474,7 +6474,7 @@ done
+                 LCUPSINCLUDE="include \$(GLSRCDIR)/lcups.mak"
+                 LCUPSIINCLUDE="include \$(GLSRCDIR)/lcupsi.mak"
+                 if ( test x$with_pdftoraster != xno ); then
+-                    if test "$CUPSVERSION" ">" "1.2"; then
++                    if echo "$CUPSVERSION" | grep -q '^1\.[2-9]'; then
+                         CUPSPDFTORASTER="1"
+                     fi
+                 fi
