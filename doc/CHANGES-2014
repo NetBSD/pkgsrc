@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1674 2014/05/01 16:11:39 wen Exp $
+$NetBSD: CHANGES-2014,v 1.1675 2014/05/01 21:05:17 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2391,3 +2391,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Dancer2 to 0.140001 [wen 2014-05-01]
 	Updated lang/php55 to 5.5.12 [taca 2014-05-01]
 	Updated www/mediawiki to 1.22.6 [wen 2014-05-01]
+	Updated misc/libreoffice4 to 4.2.3.3nb1 [ryoon 2014-05-01]
