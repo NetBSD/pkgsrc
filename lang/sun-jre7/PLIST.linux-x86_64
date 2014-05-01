@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-x86_64,v 1.6 2014/05/01 00:51:50 ryoon Exp $
+@comment $NetBSD: PLIST.linux-x86_64,v 1.7 2014/05/01 10:53:59 ryoon Exp $
 bin/sun7-java
 bin/sun7-javaws
 bin/sun7-keytool
@@ -35,18 +35,18 @@ java/sun-7/lib/amd64/fxavcodecplugin-52.so
 java/sun-7/lib/amd64/fxavcodecplugin-53.so
 java/sun-7/lib/amd64/fxplugins.so
 java/sun-7/lib/amd64/headless/libmawt.so
-java/sun-7/lib/amd64/jli/libX11.so.6
+${PLIST.native}java/sun-7/lib/amd64/jli/libX11.so.6
 java/sun-7/lib/amd64/jli/libjli.so
 java/sun-7/lib/amd64/jvm.cfg.default
 java/sun-7/lib/amd64/libJdbcOdbc.so
-java/sun-7/lib/amd64/libX11.so.6
-java/sun-7/lib/amd64/libXext.so.6
-java/sun-7/lib/amd64/libXi.so.6
-java/sun-7/lib/amd64/libXt.so.6
-java/sun-7/lib/amd64/libXtst.so.6
-java/sun-7/lib/amd64/libasound.so.2
-java/sun-7/lib/amd64/libodbc.so
-java/sun-7/lib/amd64/libodbcinst.so
+${PLIST.native}java/sun-7/lib/amd64/libX11.so.6
+${PLIST.native}java/sun-7/lib/amd64/libXext.so.6
+${PLIST.native}java/sun-7/lib/amd64/libXi.so.6
+${PLIST.native}java/sun-7/lib/amd64/libXt.so.6
+${PLIST.native}java/sun-7/lib/amd64/libXtst.so.6
+${PLIST.native}java/sun-7/lib/amd64/libasound.so.2
+${PLIST.native}java/sun-7/lib/amd64/libodbc.so
+${PLIST.native}java/sun-7/lib/amd64/libodbcinst.so
 java/sun-7/lib/amd64/libawt.so
 java/sun-7/lib/amd64/libdcpr.so
 java/sun-7/lib/amd64/libdeploy.so
