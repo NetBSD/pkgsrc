@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2014/04/23 07:05:31 adam Exp $
+# $NetBSD: Makefile,v 1.8 2014/05/01 12:50:39 wiz Exp $
 
 PKGNAME=	qt5-dbus-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	Qt5 DBus support plugin
 
 .include "../../x11/qt5-qtbase/Makefile.common"
@@ -17,12 +18,24 @@ INSTALLATION_DIRS=	${QTPREFIX}/bin lib/pkgconfig
 
 PC_FILES=		Qt5DBus.pc
 
+# XXX: this is an ugly hack
+# qdbuscpp2xml and qdbusxml2cpp should be built and installed, because
+# they are referenced from Qt5DBusConfigExtras.cmake, and cmake
+# fails to find qtdbus if they are not installed
+# I didn't manage to build them though, and the only customers so far
+# didn't need their functionality -- wiz 20140501
+post-build:
+	${ECHO} '#!/bin/sh' > ${WRKSRC}/dummy
+	${ECHO} 'false' >> ${WRKSRC}/dummy
+
 post-install:
 .for i in ${PC_FILES}
 	${RM} -f ${DESTDIR}${PREFIX}/lib/pkgconfig/${i} && \
 		cd ${DESTDIR}${PREFIX}/lib/pkgconfig && \
 		${LN} -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
 .endfor
+	${INSTALL_SCRIPT} ${WRKSRC}/dummy ${DESTDIR}${PREFIX}/qt5/bin/qdbuscpp2xml
+	${INSTALL_SCRIPT} ${WRKSRC}/dummy ${DESTDIR}${PREFIX}/qt5/bin/qdbusxml2cpp
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 # Use lib/dbus-1.0/include/dbus/dbus-arch-deps.h from sysutils/dbus
