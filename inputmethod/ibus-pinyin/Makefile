@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2014/05/02 11:17:08 obache Exp $
+# $NetBSD: Makefile,v 1.25 2014/05/02 11:26:52 obache Exp $
 #
 
 DISTNAME=	ibus-pinyin-1.5.0
@@ -16,11 +16,6 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config gmake intltool msgfmt
-
-SUBST_CLASSES+=		epython
-SUBST_STAGE.epython=	pre-configure
-SUBST_FILES.epython=	setup/ibus-setup-pinyin.in
-SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
 
 CONFIGURE_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 
