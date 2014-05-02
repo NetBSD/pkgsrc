@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1676 2014/05/02 05:11:08 tsutsui Exp $
+$NetBSD: CHANGES-2014,v 1.1677 2014/05/02 07:28:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2393,3 +2393,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/mediawiki to 1.22.6 [wen 2014-05-01]
 	Updated misc/libreoffice4 to 4.2.3.3nb1 [ryoon 2014-05-01]
 	Updated x11/mlterm to 3.3.5 [tsutsui 2014-05-02]
+	Updated devel/boehm-gc to 7.4.0nb2 [wiz 2014-05-02]
