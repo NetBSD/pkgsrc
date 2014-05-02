@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/04/30 16:24:39 marino Exp $
+# $NetBSD: Makefile,v 1.17 2014/05/02 15:54:16 marino Exp $
 #
 
 PKGNAME=	gcc-aux-${SNAPSHOT}
@@ -33,8 +33,8 @@ ONLY_FOR_PLATFORM=	DragonFly-*-*        \
 #			SunOS-5.1[1-9]*-i386
 #			gnat-bootstrap.i386.solaris.tar.bz2
 
-BLD_TARGET=		${MACHINE_ARCH}-aux-${LOWER_OPSYS}${OS_VERSION}
 GARCH=			${MACHINE_ARCH:S/amd64/x86_64/}
+BLD_TARGET=		${GARCH}-aux-${LOWER_OPSYS}${OS_VERSION}
 OS_LABEL4VERS=		[${OPSYS}${GARCH:M*64:S/amd_//:S/x86_//}]
 FULL_GNATGCC=		NOT SET
 FULL_PATH=		/sbin:/bin:/usr/sbin:/usr/bin:${PREFIX}/gcc-aux/bin:${PREFIX}/sbin:${PREFIX}/bin
