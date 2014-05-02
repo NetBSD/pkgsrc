@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.44 2014/03/26 16:47:39 tsutsui Exp $
+$NetBSD: distinfo,v 1.45 2014/05/02 05:09:29 tsutsui Exp $
 
-SHA1 (mlterm-3.3.4.tar.gz) = eb065d2048ab1b7a0bcb7d1bddf253eb02ceacca
-RMD160 (mlterm-3.3.4.tar.gz) = 5c63c78a5e602dc473eaf0c6f50546cb9c944819
-Size (mlterm-3.3.4.tar.gz) = 3589264 bytes
-SHA1 (patch-common_c__imagelib.c) = baf6de1fa4d6b55f7dd1ba77e42b0c91921fc872
+SHA1 (mlterm-3.3.5.tar.gz) = 67b9307b80e7b0e1d56ff841dc9d5705557f0b43
+RMD160 (mlterm-3.3.5.tar.gz) = 190f54aae5dcfb471287c4f7221a04ced8a760dc
+Size (mlterm-3.3.5.tar.gz) = 3596286 bytes
 SHA1 (patch-configure) = 5e3b0c709d447c49b0d26c40bde8ded4ade013c3
 SHA1 (patch-etc_font-fb) = 7e5c1ced916fdb2b6da1dc86dd37d7bad5a7ede7
-SHA1 (patch-kiklib_src_kik__debug.c) = 0e718f1ccafacf2ae282c8c672ca3c4c6b8aa991
+SHA1 (patch-xwindow_fb_x__display__wscons.c) = 4732655e60338883279c9a32161bcc804a52daf0
+SHA1 (patch-xwindow_x__draw__str.c) = 73f3160a2dbc363bfd4bfc8db079d95b830550c8
