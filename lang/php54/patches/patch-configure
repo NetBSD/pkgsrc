@@ -1,6 +1,6 @@
-$NetBSD: patch-configure,v 1.6 2014/03/19 21:50:23 asau Exp $
+$NetBSD: patch-configure,v 1.7 2014/05/02 13:04:12 taca Exp $
 
---- configure.orig	2014-03-05 08:26:39.000000000 +0000
+--- configure.orig	2014-04-30 03:00:42.000000000 +0000
 +++ configure
 @@ -23554,7 +23554,7 @@ fi
      if test "$found_openssl" = "no"; then
@@ -38,7 +38,7 @@ $NetBSD: patch-configure,v 1.6 2014/03/19 21:50:23 asau Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -105616,12 +105616,7 @@ old_CC=$CC
+@@ -105614,12 +105614,7 @@ old_CC=$CC
  if test "$PHP_THREAD_SAFETY" = "yes" && test -n "$ac_cv_pthreads_cflags"; then
    CXXFLAGS="$CXXFLAGS $ac_cv_pthreads_cflags"
    INLINE_CFLAGS="$INLINE_CFLAGS $ac_cv_pthreads_cflags"
@@ -52,7 +52,7 @@ $NetBSD: patch-configure,v 1.6 2014/03/19 21:50:23 asau Exp $
  fi
  
  if test "$PHP_THREAD_SAFETY" = "yes" && test "$PHP_MYSQL" = "yes"; then
-@@ -108735,7 +108730,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -108733,7 +108728,7 @@ if test -z "$aix_libpath"; then aix_libp
        hardcode_shlibpath_var=no
        ;;
  
@@ -61,7 +61,7 @@ $NetBSD: patch-configure,v 1.6 2014/03/19 21:50:23 asau Exp $
        ld_shlibs=no
        ;;
  
-@@ -109384,7 +109379,7 @@ dgux*)
+@@ -109382,7 +109377,7 @@ dgux*)
    shlibpath_var=LD_LIBRARY_PATH
    ;;
  
@@ -70,7 +70,7 @@ $NetBSD: patch-configure,v 1.6 2014/03/19 21:50:23 asau Exp $
    dynamic_linker=no
    ;;
  
-@@ -109395,7 +109390,7 @@ freebsd* | dragonfly*)
+@@ -109393,7 +109388,7 @@ freebsd* | dragonfly*)
      objformat=`/usr/bin/objformat`
    else
      case $host_os in
@@ -79,7 +79,7 @@ $NetBSD: patch-configure,v 1.6 2014/03/19 21:50:23 asau Exp $
      *) objformat=elf ;;
      esac
    fi
-@@ -111475,7 +111470,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -111473,7 +111468,7 @@ if test -z "$aix_libpath"; then aix_libp
  	;;
      esac
      ;;
@@ -88,7 +88,7 @@ $NetBSD: patch-configure,v 1.6 2014/03/19 21:50:23 asau Exp $
      # C++ shared libraries reported to be fairly broken before switch to ELF
      ld_shlibs_CXX=no
      ;;
-@@ -113021,7 +113016,7 @@ dgux*)
+@@ -113019,7 +113014,7 @@ dgux*)
    shlibpath_var=LD_LIBRARY_PATH
    ;;
  
@@ -97,7 +97,7 @@ $NetBSD: patch-configure,v 1.6 2014/03/19 21:50:23 asau Exp $
    dynamic_linker=no
    ;;
  
-@@ -113032,7 +113027,7 @@ freebsd* | dragonfly*)
+@@ -113030,7 +113025,7 @@ freebsd* | dragonfly*)
      objformat=`/usr/bin/objformat`
    else
      case $host_os in
