@@ -1,8 +1,13 @@
-# $NetBSD: options.mk,v 1.2 2014/04/30 14:19:17 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2014/05/02 07:28:00 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.boehm-gc
 PKG_SUPPORTED_OPTIONS=	threads
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
 PKG_SUGGESTED_OPTIONS=	threads
+.endif
 
 .include "../../mk/bsd.options.mk"
 
