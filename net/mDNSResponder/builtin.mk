@@ -1,9 +1,9 @@
-# $NetBSD: builtin.mk,v 1.6 2014/04/01 12:40:00 wiz Exp $
+# $NetBSD: builtin.mk,v 1.7 2014/05/02 02:29:39 obache Exp $
 
 BUILTIN_PKG:=	mDNSResponder
 
-BUILTIN_FIND_FILES_VAR:=	H_DNSSD
-BUILTIN_FIND_FILES.H_DNSSD=	/usr/include/dns_sd.h
+BUILTIN_FIND_HEADERS_VAR:=	H_DNSSD
+BUILTIN_FIND_HEADERS.H_DNSSD=	dns_sd.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
