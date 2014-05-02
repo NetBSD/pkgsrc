@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2014/01/25 13:53:22 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.15 2014/05/02 10:48:13 ryoon Exp $
 bin/openjdk7-jar
 bin/openjdk7-java
 bin/openjdk7-javac
@@ -361,6 +361,7 @@ ${PLIST.i386}java/openjdk7/jre/lib/${ARCH}/client/libjvm.so
 java/openjdk7/jre/lib/${ARCH}/headless/libmawt.so
 java/openjdk7/jre/lib/${ARCH}/jexec
 java/openjdk7/jre/lib/${ARCH}/jli/libjli.so
+java/openjdk7/jre/lib/${ARCH}/jspawnhelper
 java/openjdk7/jre/lib/${ARCH}/jvm.cfg
 java/openjdk7/jre/lib/${ARCH}/libattach.diz
 java/openjdk7/jre/lib/${ARCH}/libattach.so
