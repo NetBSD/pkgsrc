@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1678 2014/05/02 10:48:37 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.1679 2014/05/02 11:19:07 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2395,3 +2395,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/mlterm to 3.3.5 [tsutsui 2014-05-02]
 	Updated devel/boehm-gc to 7.4.0nb2 [wiz 2014-05-02]
 	Updated lang/openjdk7 to 1.7.55 [ryoon 2014-05-02]
+	Updated lang/nodejs to 0.10.27 [fhajny 2014-05-02]
