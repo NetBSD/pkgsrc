@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2014/04/29 07:57:14 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2014/05/02 11:22:45 wiz Exp $
 
-DISTNAME=	calibre-1.34.0
-PKGREVISION=	1
+DISTNAME=	calibre-1.35.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=calibre/}
 EXTRACT_SUFX=	.tar.xz
