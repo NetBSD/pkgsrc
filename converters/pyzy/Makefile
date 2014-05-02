@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/04/09 07:26:58 obache Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/02 10:07:06 obache Exp $
 
 DISTNAME=	pyzy-0.1.0
 PKGREVISION=	1
@@ -44,10 +44,6 @@ CONFIGURE_ARGS+=	--disable-boost
 CONFIGURE_ARGS+=	--enable-boost
 CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-headers}
 .include "../../devel/boost-headers/buildlink3.mk"
-SUBST_CLASSES+=		shared_ptr
-SUBST_STAGE.shared_ptr=	post-configure
-SUBST_FILES.shared_ptr=	src/*.h
-SUBST_SED.shared_ptr=	-e 's,std::shared_ptr,boost::shared_ptr,g'
 .endif
 
 .include "../../inputmethod/ibus/bad-env-usage.mk"
