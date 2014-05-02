@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2014/02/21 07:38:50 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.13 2014/05/02 11:18:55 fhajny Exp $
 bin/node
 bin/npm
 include/node/ares.h
@@ -32,6 +32,7 @@ include/node/zlib.h
 lib/dtrace/node.d
 lib/node_modules/npm/.npmignore
 lib/node_modules/npm/.tern-project
+lib/node_modules/npm/.travis.yml
 lib/node_modules/npm/AUTHORS
 lib/node_modules/npm/CONTRIBUTING.md
 lib/node_modules/npm/LICENSE
@@ -247,12 +248,12 @@ lib/node_modules/npm/html/doc/misc/npm-registry.html
 lib/node_modules/npm/html/doc/misc/npm-scripts.html
 lib/node_modules/npm/html/doc/misc/removing-npm.html
 lib/node_modules/npm/html/doc/misc/semver.html
-lib/node_modules/npm/html/docfoot-script.html
 lib/node_modules/npm/html/docfoot.html
 lib/node_modules/npm/html/dochead.html
 lib/node_modules/npm/html/favicon.ico
 lib/node_modules/npm/html/index.html
 lib/node_modules/npm/html/static/style.css
+lib/node_modules/npm/html/static/toc.js
 lib/node_modules/npm/lib/adduser.js
 lib/node_modules/npm/lib/bin.js
 lib/node_modules/npm/lib/bugs.js
@@ -559,6 +560,7 @@ lib/node_modules/npm/node_modules/ini/LICENSE
 lib/node_modules/npm/node_modules/ini/README.md
 lib/node_modules/npm/node_modules/ini/ini.js
 lib/node_modules/npm/node_modules/ini/package.json
+lib/node_modules/npm/node_modules/init-package-json/LICENSE
 lib/node_modules/npm/node_modules/init-package-json/README.md
 lib/node_modules/npm/node_modules/init-package-json/default-input.js
 lib/node_modules/npm/node_modules/init-package-json/example/example-basic.js
@@ -641,6 +643,7 @@ lib/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/easy_xml_test.py
 lib/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/flock_tool.py
 lib/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/generator/__init__.py
 lib/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/generator/android.py
+lib/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/generator/cmake.py
 lib/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/generator/dump_dependency_json.py
 lib/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/generator/eclipse.py
 lib/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/generator/gypd.py
@@ -657,6 +660,7 @@ lib/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/input_test.py
 lib/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/mac_tool.py
 lib/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py
 lib/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/ninja_syntax.py
+lib/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/ordered_dict.py
 lib/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/win_tool.py
 lib/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py
 lib/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/xcodeproj_file.py
@@ -757,8 +761,13 @@ lib/node_modules/npm/node_modules/path-is-inside/LICENSE.txt
 lib/node_modules/npm/node_modules/path-is-inside/README.md
 lib/node_modules/npm/node_modules/path-is-inside/lib/path-is-inside.js
 lib/node_modules/npm/node_modules/path-is-inside/package.json
+lib/node_modules/npm/node_modules/read-installed/.npmignore
 lib/node_modules/npm/node_modules/read-installed/LICENSE
 lib/node_modules/npm/node_modules/read-installed/README.md
+lib/node_modules/npm/node_modules/read-installed/node_modules/util-extend/README.md
+lib/node_modules/npm/node_modules/read-installed/node_modules/util-extend/extend.js
+lib/node_modules/npm/node_modules/read-installed/node_modules/util-extend/package.json
+lib/node_modules/npm/node_modules/read-installed/node_modules/util-extend/test.js
 lib/node_modules/npm/node_modules/read-installed/package.json
 lib/node_modules/npm/node_modules/read-installed/read-installed.js
 lib/node_modules/npm/node_modules/read-package-json/.npmignore
@@ -772,6 +781,7 @@ lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-packa
 lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/lib/core_module_names.json
 lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/lib/extract_description.js
 lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/lib/fixer.js
+lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/lib/make_warning.js
 lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/lib/normalize.js
 lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/lib/safe_format.js
 lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/lib/typos.json
@@ -1068,6 +1078,10 @@ lib/node_modules/npm/node_modules/slide/lib/bind-actor.js
 lib/node_modules/npm/node_modules/slide/lib/chain.js
 lib/node_modules/npm/node_modules/slide/lib/slide.js
 lib/node_modules/npm/node_modules/slide/package.json
+lib/node_modules/npm/node_modules/sorted-object/LICENSE.txt
+lib/node_modules/npm/node_modules/sorted-object/README.md
+lib/node_modules/npm/node_modules/sorted-object/lib/sorted-object.js
+lib/node_modules/npm/node_modules/sorted-object/package.json
 lib/node_modules/npm/node_modules/tar/.npmignore
 lib/node_modules/npm/node_modules/tar/.travis.yml
 lib/node_modules/npm/node_modules/tar/LICENCE
@@ -1097,6 +1111,7 @@ lib/node_modules/npm/node_modules/text-table/index.js
 lib/node_modules/npm/node_modules/text-table/package.json
 lib/node_modules/npm/node_modules/text-table/readme.markdown
 lib/node_modules/npm/node_modules/uid-number/LICENCE
+lib/node_modules/npm/node_modules/uid-number/LICENSE
 lib/node_modules/npm/node_modules/uid-number/README.md
 lib/node_modules/npm/node_modules/uid-number/get-uid-gid.js
 lib/node_modules/npm/node_modules/uid-number/package.json
@@ -1113,4 +1128,5 @@ lib/node_modules/npm/scripts/index-build.js
 lib/node_modules/npm/scripts/install.sh
 lib/node_modules/npm/scripts/release.sh
 lib/node_modules/npm/scripts/relocate.sh
+lib/node_modules/npm/wercker.yml
 man/man1/node.1
