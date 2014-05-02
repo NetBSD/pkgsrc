@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2014/04/25 07:40:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2014/05/02 11:22:45 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -1310,6 +1310,7 @@ share/applications/calibre-ebook-edit.desktop
 share/applications/calibre-ebook-viewer.desktop
 share/applications/calibre-gui.desktop
 share/applications/calibre-lrfviewer.desktop
+share/bash_completion.d/calibre
 share/calibre/builtin_recipes.xml
 share/calibre/builtin_recipes.zip
 share/calibre/calibre-ebook-root-CA.crt
