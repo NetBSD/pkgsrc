@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2013/06/07 15:51:04 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.16 2014/05/02 12:16:38 wiz Exp $
 bin/ant
 bin/antRun
 lib/java/ant/ant-antlr.jar
@@ -605,12 +605,14 @@ share/doc/java/ant/api/org/apache/tools/ant/taskdefs/WhichResource.html
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/XSLTLiaison.html
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/XSLTLiaison2.html
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/XSLTLiaison3.html
+share/doc/java/ant/api/org/apache/tools/ant/taskdefs/XSLTLiaison4.html
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/XSLTLogger.html
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/XSLTLoggerAware.html
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/XSLTProcess.Factory.Attribute.html
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/XSLTProcess.Factory.html
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/XSLTProcess.OutputProperty.html
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/XSLTProcess.Param.html
+share/doc/java/ant/api/org/apache/tools/ant/taskdefs/XSLTProcess.ParamType.html
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/XSLTProcess.TraceConfiguration.html
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/XSLTProcess.html
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/XmlProperty.html
