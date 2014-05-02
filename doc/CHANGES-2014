@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1681 2014/05/02 11:26:51 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1682 2014/05/02 12:16:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2398,3 +2398,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/nodejs to 0.10.27 [fhajny 2014-05-02]
 	Updated misc/calibre to 1.35.0 [wiz 2014-05-02]
 	Updated games/puzzles to 10180 [wiz 2014-05-02]
+	Updated devel/apache-ant to 1.9.3 [wiz 2014-05-02]
