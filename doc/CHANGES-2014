@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1683 2014/05/02 13:04:47 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1684 2014/05/02 22:59:42 asau Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2400,3 +2400,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated games/puzzles to 10180 [wiz 2014-05-02]
 	Updated devel/apache-ant to 1.9.3 [wiz 2014-05-02]
 	Updated lang/php54 to 5.4.28 [taca 2014-05-02]
+	Updated lang/sbcl to 1.1.18 [asau 2014-05-02]
