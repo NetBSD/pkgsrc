@@ -1,0 +1,13 @@
+$NetBSD: patch-setup_ibus-setup-pinyin.in,v 1.1 2014/05/02 11:26:52 obache Exp $
+
+* Set python full path properly
+
+--- setup/ibus-setup-pinyin.in.orig	2012-07-09 14:32:10.000000000 +0000
++++ setup/ibus-setup-pinyin.in
+@@ -26,5 +26,5 @@ export IBUS_PREFIX=@prefix@
+ export IBUS_DATAROOTDIR=@datarootdir@
+ export IBUS_LOCALEDIR=@localedir@
+ cd @prefix@/share/ibus-pinyin/setup/
+-exec python main.py $@
++exec @PYTHON@ main.py $@
+ 
