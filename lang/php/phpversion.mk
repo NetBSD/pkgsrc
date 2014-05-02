@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.61 2014/05/01 15:52:33 taca Exp $
+# $NetBSD: phpversion.mk,v 1.62 2014/05/02 13:04:12 taca Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -82,7 +82,7 @@ PHPVERSION_MK=	defined
 
 # Define each PHP's version.
 PHP53_VERSION=	5.3.28
-PHP54_VERSION=	5.4.27
+PHP54_VERSION=	5.4.28
 PHP55_VERSION=	5.5.12
 
 # Define initial release of major version.
