@@ -1,8 +1,8 @@
-$NetBSD: patch-jdk_src_solaris_native_java_net_NetworkInterface.c,v 1.2 2014/01/02 01:16:35 ryoon Exp $
+$NetBSD: patch-jdk_src_solaris_native_java_net_NetworkInterface.c,v 1.3 2014/05/02 10:48:13 ryoon Exp $
 
 Zones support.
 
---- jdk/src/solaris/native/java/net/NetworkInterface.c.orig	2014-01-01 05:53:43.000000000 +0000
+--- jdk/src/solaris/native/java/net/NetworkInterface.c.orig	2014-05-01 13:11:40.000000000 +0000
 +++ jdk/src/solaris/native/java/net/NetworkInterface.c
 @@ -43,6 +43,7 @@
  #include <fcntl.h>
@@ -12,7 +12,7 @@ Zones support.
  #endif
  
  #ifdef __linux__
-@@ -60,13 +61,11 @@
+@@ -60,14 +61,12 @@
  #include <sys/param.h>
  #include <sys/ioctl.h>
  #include <sys/sockio.h>
@@ -23,12 +23,13 @@ Zones support.
 -#elif defined(__OpenBSD__)
 +#elif defined(__OpenBSD__) || defined(__NetBSD__)
  #include <netinet/if_ether.h>
+ #include <netinet6/in6_var.h>
 -#elif defined(__NetBSD__)
 -#include <net/if_ether.h>
  #endif
  #include <net/if_dl.h>
  #include <netinet/in_var.h>
-@@ -1528,7 +1527,8 @@ static short getSubnet(JNIEnv *env, int 
+@@ -1529,7 +1528,8 @@ static short getSubnet(JNIEnv *env, int 
  
  
  
@@ -38,7 +39,7 @@ Zones support.
  
  /**
   * Solaris specific DLPI code to get hardware address from a device.
-@@ -1545,11 +1545,18 @@ static int getMacFromDevice(JNIEnv *env,
+@@ -1546,11 +1546,18 @@ static int getMacFromDevice(JNIEnv *env,
      int flags = 0;
  
     /**
