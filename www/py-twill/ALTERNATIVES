@@ -1,0 +1,2 @@
+bin/twill-fork @PREFIX@/bin/twill-fork@PYVERSSUFFIX@
+bin/twill-sh @PREFIX@/bin/twill-sh@PYVERSSUFFIX@

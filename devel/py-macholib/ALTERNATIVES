@@ -1,0 +1,3 @@
+bin/macho_dump @PREFIX@/bin/macho_dump@PYVERSSUFFIX@
+bin/macho_find @PREFIX@/bin/macho_find@PYVERSSUFFIX@
+bin/macho_standalone @PREFIX@/bin/macho_standalone@PYVERSSUFFIX@
