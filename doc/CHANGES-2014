@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1702 2014/05/03 11:54:08 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1703 2014/05/03 12:23:55 nonaka Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2419,3 +2419,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Twiggy to 0.1024 [wen 2014-05-03]
 	Updated textproc/p5-YAML-Tiny to 1.62 [wen 2014-05-03]
 	Updated devel/py-mercurial to 3.0 [wiz 2014-05-03]
+	Updated misc/vimpager to 1.8.8 [nonaka 2014-05-03]
