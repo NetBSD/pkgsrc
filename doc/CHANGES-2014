@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1694 2014/05/03 02:46:58 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.1695 2014/05/03 02:53:50 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2411,3 +2411,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added security/py-bcrypt version 1.0.2 [rodent 2014-05-03]
 	Added www/py-flask-user version 0.4.9 [rodent 2014-05-03]
 	Added archivers/py-yuicompressor version 2.4.8 [rodent 2014-05-03]
+	Updated devel/p5-Data-Section-Simple to 0.07 [wen 2014-05-03]
