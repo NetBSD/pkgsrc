@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/05/02 10:07:06 obache Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/03 08:11:53 obache Exp $
 
 DISTNAME=	pyzy-0.1.0
 PKGREVISION=	1
@@ -46,6 +46,7 @@ CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-headers}
 .include "../../devel/boost-headers/buildlink3.mk"
 .endif
 
+# http://code.google.com/p/pyzy/issues/detail?id=4
 .include "../../inputmethod/ibus/bad-env-usage.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.24.0
 .include "../../devel/glib2/buildlink3.mk"
