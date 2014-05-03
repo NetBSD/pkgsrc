@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/05/03 02:13:35 rodent Exp $
+
+SHA1 (Flask-Testing-0.4.1.tar.gz) = 80d154d5111d1856f8fa81b0d5a8805d62ac79cf
+RMD160 (Flask-Testing-0.4.1.tar.gz) = 4bd3e66943dbe4abe2f17d015be0e835cc00f075
+Size (Flask-Testing-0.4.1.tar.gz) = 39879 bytes
