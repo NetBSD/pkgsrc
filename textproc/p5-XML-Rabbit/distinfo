@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2013/08/24 02:17:01 wen Exp $
+$NetBSD: distinfo,v 1.6 2014/05/03 14:13:06 wen Exp $
 
-SHA1 (XML-Rabbit-0.3.0.tar.gz) = 3d1ddc2f93ade8db4015cf4327b949762f01b73c
-RMD160 (XML-Rabbit-0.3.0.tar.gz) = 772c0472c64eb6e70f916ab7e474e22dd279c85e
-Size (XML-Rabbit-0.3.0.tar.gz) = 55814 bytes
+SHA1 (XML-Rabbit-0.4.0.tar.gz) = abe92d3088c2dcc199bf1ecca8156edad9bac7a0
+RMD160 (XML-Rabbit-0.4.0.tar.gz) = 2342ddcf7fce611ae29d2a101988f2e6c2c1fd1b
+Size (XML-Rabbit-0.4.0.tar.gz) = 55987 bytes
