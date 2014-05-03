@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/02/18 22:22:14 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/03 12:54:36 rodent Exp $
 
-DISTNAME=	logan-0.5.9.1
+DISTNAME=	logan-0.5.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	https://pypi.python.org/packages/source/l/logan/
