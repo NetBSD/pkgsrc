@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1732 2014/05/03 21:10:56 adam Exp $
+$NetBSD: CHANGES-2014,v 1.1733 2014/05/03 21:32:06 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2449,3 +2449,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added sysutils/libisoburn version 1.3.6pl01 [wiz 2014-05-03]
 	Updated security/libtasn1 to 3.5 [adam 2014-05-03]
 	Updated graphics/enblend-enfuse to 4.1.3 [adam 2014-05-03]
+	Updated pkgtools/x11-links to 0.89 [ryoon 2014-05-03]
