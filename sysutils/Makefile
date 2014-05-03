@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.595 2014/04/29 20:03:39 wiz Exp $
+# $NetBSD: Makefile,v 1.596 2014/05/03 19:11:08 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -276,6 +276,7 @@ SUBDIR+=	libgamin
 SUBDIR+=	libgksu
 SUBDIR+=	libgtop
 SUBDIR+=	libirman
+SUBDIR+=	libisoburn
 SUBDIR+=	libisofs
 SUBDIR+=	libnotify
 SUBDIR+=	libol
