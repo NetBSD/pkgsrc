@@ -1,0 +1,13 @@
+$NetBSD: patch-etc_lua.pc,v 1.1 2014/05/03 13:00:44 alnsn Exp $
+
+--- etc/lua.pc.orig	2014-04-18 14:08:28.000000000 +0000
++++ etc/lua.pc
+@@ -19,7 +19,7 @@ INSTALL_CMOD= ${prefix}/lib/lua/${V}
+ # canonical vars
+ exec_prefix=${prefix}
+ libdir=${exec_prefix}/lib
+-includedir=${prefix}/include
++includedir=${prefix}/include/lua-5.1
+ 
+ Name: Lua
+ Description: An Extensible Extension Language

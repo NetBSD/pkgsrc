@@ -1,21 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1 2013/10/30 06:18:10 dholland Exp $
-bin/lua
-bin/luac
-include/lauxlib.h
-include/lua.h
-include/lua.hpp
-include/luaconf.h
-include/lualib.h
-lib/liblua.la
-lib/pkgconfig/lua.pc
-man/man1/lua.1
-man/man1/luac.1
-share/doc/lua/contents.html
-share/doc/lua/logo.gif
-share/doc/lua/lua.css
-share/doc/lua/manual.css
-share/doc/lua/manual.html
-share/doc/lua/osi-certified-72x60.png
-share/doc/lua/readme.html
+@comment $NetBSD: PLIST,v 1.2 2014/05/03 13:00:45 alnsn Exp $
+bin/lua5.2
+bin/luac5.2
+include/lua-5.2/lauxlib.h
+include/lua-5.2/lua.h
+include/lua-5.2/lua.hpp
+include/lua-5.2/luaconf.h
+include/lua-5.2/lualib.h
+lib/liblua5.2.la
+lib/pkgconfig/lua-5.2.pc
+man/man1/lua5.2.1
+man/man1/luac5.2.1
+share/doc/lua-5.2/contents.html
+share/doc/lua-5.2/logo.gif
+share/doc/lua-5.2/lua.css
+share/doc/lua-5.2/manual.css
+share/doc/lua-5.2/manual.html
+share/doc/lua-5.2/osi-certified-72x60.png
+share/doc/lua-5.2/readme.html
 @pkgdir share/lua/5.2
 @pkgdir lib/lua/5.2

@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2013/10/30 06:18:10 dholland Exp $
+$NetBSD: patch-ab,v 1.2 2014/05/03 13:00:44 alnsn Exp $
 
 --- src/Makefile.orig	2012-02-13 20:41:22.000000000 +0000
 +++ src/Makefile
@@ -28,8 +28,8 @@ $NetBSD: patch-ab,v 1.1 2013/10/30 06:18:10 dholland Exp $
  
 -LUA_A=	liblua.a
 -CORE_O=	lapi.o lcode.o ldebug.o ldo.o ldump.o lfunc.o lgc.o llex.o lmem.o \
-+LUA_XA=	liblua.a
-+LUA_A=	liblua.la
++LUA_XA=	liblua5.1.a
++LUA_A=	liblua5.1.la
 +XCORE_O=	lapi.o lcode.o ldebug.o ldo.o ldump.o lfunc.o lgc.o llex.o lmem.o \
  	lobject.o lopcodes.o lparser.o lstate.o lstring.o ltable.o ltm.o  \
  	lundump.o lvm.o lzio.o
@@ -39,13 +39,16 @@ $NetBSD: patch-ab,v 1.1 2013/10/30 06:18:10 dholland Exp $
 +CORE_O=	$(XCORE_O:.o=.lo)
 +LIB_O=	$(XLIB_O:.o=.lo)
  
- LUA_T=	lua
+-LUA_T=	lua
 -LUA_O=	lua.o
+-
+-LUAC_T=	luac
+-LUAC_O=	luac.o print.o
++LUA_T=	lua5.1
 +LUA_XO=	lua.o
 +LUA_O=	$(LUA_XO:.o=.lo)
- 
- LUAC_T=	luac
--LUAC_O=	luac.o print.o
++
++LUAC_T=	luac5.1
 +LUAC_XO=	luac.o print.o
 +LUAC_O=	$(LUAC_XO:.o=.lo)
  

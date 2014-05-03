@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2013/10/30 06:18:10 dholland Exp $
+$NetBSD: patch-ab,v 1.2 2014/05/03 13:00:45 alnsn Exp $
 
---- src/Makefile.orig	2012-12-27 10:51:43.000000000 +0000
+--- src/Makefile.orig	2013-11-11 11:45:49.000000000 +0000
 +++ src/Makefile
 @@ -6,8 +6,7 @@
  # Your platform. See PLATS for possible values.
@@ -26,7 +26,7 @@ $NetBSD: patch-ab,v 1.1 2013/10/30 06:18:10 dholland Exp $
  PLATS= aix ansi bsd freebsd generic linux macosx mingw posix solaris
  
 -LUA_A=	liblua.a
-+LUA_A=	liblua.la
++LUA_A=	liblua5.2.la
  CORE_O=	lapi.o lcode.o lctype.o ldebug.o ldo.o ldump.o lfunc.o lgc.o llex.o \
  	lmem.o lobject.o lopcodes.o lparser.o lstate.o lstring.o ltable.o \
  	ltm.o lundump.o lvm.o lzio.o
@@ -35,12 +35,14 @@ $NetBSD: patch-ab,v 1.1 2013/10/30 06:18:10 dholland Exp $
 -BASE_O= $(CORE_O) $(LIB_O) $(MYOBJS)
 +BASE_O= $(CORE_O:.o=.lo) $(LIB_O:.o=.lo) $(MYOBJS:.o=.lo)
  
- LUA_T=	lua
+-LUA_T=	lua
 -LUA_O=	lua.o
++LUA_T=	lua5.2
 +LUA_O=	lua.lo
  
- LUAC_T=	luac
+-LUAC_T=	luac
 -LUAC_O=	luac.o
++LUAC_T=	luac5.2
 +LUAC_O=	luac.lo
  
  ALL_O= $(BASE_O) $(LUA_O) $(LUAC_O)

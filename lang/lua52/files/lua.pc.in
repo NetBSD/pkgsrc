@@ -1,4 +1,4 @@
-# $NetBSD: lua.pc.in,v 1.1 2013/10/30 06:18:10 dholland Exp $
+# $NetBSD: lua.pc.in,v 1.2 2014/05/03 13:00:45 alnsn Exp $
 # lua.pc is not any longer distributed, but is still required by other packages.
 
 prefix= @PREFIX@
@@ -11,11 +11,11 @@ INSTALL_CMOD= ${prefix}/lib/lua/@VER@
 
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
-includedir=${prefix}/include
+includedir=${prefix}/include/lua-5.2
 
 Name: Lua
 Description: An Extensible Extension Language
 Version: @REV@
 Requires: 
-Libs: -L${libdir} -llua -lm
+Libs: -L${libdir} -llua5.2 -lm
 Cflags: -I${includedir}
