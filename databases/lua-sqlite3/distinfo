@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.1 2013/07/04 18:06:24 adam Exp $
+$NetBSD: distinfo,v 1.2 2014/05/03 13:01:24 alnsn Exp $
 
 SHA1 (lua-sqlite3-0.4.1.tar.bz2) = cdc1043c1c5a0d5456e5b5e9bfb23ad64644fb99
 RMD160 (lua-sqlite3-0.4.1.tar.bz2) = ab502207f8cdaaf7749500b2f02cf7990da1f87c
 Size (lua-sqlite3-0.4.1.tar.bz2) = 54780 bytes
-SHA1 (patch-configure) = b0e6f7045da2be407b3babe8098aa4d2a87248d8
+SHA1 (patch-Makefile.in) = 6a1482242354c6b1b5c935695fd49154312a9a5d
+SHA1 (patch-configure) = a9950af9c314bf3bc2ab813d3cc7d8e6c410b4dd
+SHA1 (patch-libluasqlite3.c) = 7eccef9ebdbc9e33b6bb52ce0b214a19786aa230

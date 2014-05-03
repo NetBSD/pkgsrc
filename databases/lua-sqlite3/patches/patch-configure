@@ -1,8 +1,8 @@
-$NetBSD: patch-configure,v 1.1 2013/07/04 18:06:24 adam Exp $
+$NetBSD: patch-configure,v 1.2 2014/05/03 13:01:24 alnsn Exp $
 
 nm -D is not portable, but -llua is needed anyway.
 
---- configure.orig	2013-07-04 17:48:44.000000000 +0000
+--- configure.orig	2006-05-11 11:23:29.000000000 +0000
 +++ configure
 @@ -3513,7 +3513,6 @@ fi
  echo "$as_me:$LINENO: checking if we need -llua" >&5

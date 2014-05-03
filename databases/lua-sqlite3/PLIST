@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2013/07/04 18:06:24 adam Exp $
-lib/lua/libluasqlite3-loader.lua
-lib/lua/libluasqlite3.so
-lib/lua/luasql-sqlite3.lua
-lib/lua/sqlite3.lua
+@comment $NetBSD: PLIST,v 1.2 2014/05/03 13:01:24 alnsn Exp $
+${LUA_CDIR}/libluasqlite3.so
+${LUA_LDIR}/libluasqlite3-loader.lua
+${LUA_LDIR}/luasql-sqlite3.lua
+${LUA_LDIR}/sqlite3.lua
