@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libSM,v 1.4 2011/09/09 09:08:07 abs Exp $
+# $NetBSD: xorg.libSM,v 1.5 2014/05/03 21:31:10 ryoon Exp $
 #
 include/X11/SM/SM.h
 include/X11/SM/SMlib.h
@@ -16,4 +16,5 @@ lib/libSM.so.6.0
 lib/libSM.so.7
 lib/libSM.so.7.0
 lib/libSM.so.8.0
+lib/libSM.so.9.0
 lib/pkgconfig/sm.pc
