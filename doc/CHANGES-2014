@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1728 2014/05/03 18:46:10 adam Exp $
+$NetBSD: CHANGES-2014,v 1.1729 2014/05/03 19:11:05 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2445,3 +2445,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/nodejs to 0.10.28 [fhajny 2014-05-03]
 	Updated www/py-django to 1.6.4 [adam 2014-05-03]
 	Updated www/py-django-cms to 3.0.1 [adam 2014-05-03]
+	Updated www/py-uwsgitop to 0.8nb1 [rodent 2014-05-03]
