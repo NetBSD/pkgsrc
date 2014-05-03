@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2014/01/31 12:30:50 rodent Exp $
-bin/trytond
+@comment $NetBSD: PLIST,v 1.2 2014/05/03 13:17:58 rodent Exp $
+bin/trytond${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -225,6 +225,7 @@ ${PYSITELIB}/trytond/ir/view/model_field_list.xml
 ${PYSITELIB}/trytond/ir/view/model_form.xml
 ${PYSITELIB}/trytond/ir/view/model_list.xml
 ${PYSITELIB}/trytond/ir/view/model_print_model_graph_start_form.xml
+${PYSITELIB}/trytond/ir/view/module_config_wizard_done_form.xml
 ${PYSITELIB}/trytond/ir/view/module_config_wizard_first_form.xml
 ${PYSITELIB}/trytond/ir/view/module_config_wizard_item_list.xml
 ${PYSITELIB}/trytond/ir/view/module_config_wizard_other_form.xml
@@ -452,6 +453,9 @@ ${PYSITELIB}/trytond/tests/copy_.pyo
 ${PYSITELIB}/trytond/tests/export_data.py
 ${PYSITELIB}/trytond/tests/export_data.pyc
 ${PYSITELIB}/trytond/tests/export_data.pyo
+${PYSITELIB}/trytond/tests/history.py
+${PYSITELIB}/trytond/tests/history.pyc
+${PYSITELIB}/trytond/tests/history.pyo
 ${PYSITELIB}/trytond/tests/import_data.py
 ${PYSITELIB}/trytond/tests/import_data.pyc
 ${PYSITELIB}/trytond/tests/import_data.pyo
@@ -462,6 +466,9 @@ ${PYSITELIB}/trytond/tests/model.pyo
 ${PYSITELIB}/trytond/tests/mptt.py
 ${PYSITELIB}/trytond/tests/mptt.pyc
 ${PYSITELIB}/trytond/tests/mptt.pyo
+${PYSITELIB}/trytond/tests/run-tests.py
+${PYSITELIB}/trytond/tests/run-tests.pyc
+${PYSITELIB}/trytond/tests/run-tests.pyo
 ${PYSITELIB}/trytond/tests/sequence.xml
 ${PYSITELIB}/trytond/tests/test.py
 ${PYSITELIB}/trytond/tests/test.pyc
@@ -481,6 +488,9 @@ ${PYSITELIB}/trytond/tests/test_exportdata.pyo
 ${PYSITELIB}/trytond/tests/test_fields.py
 ${PYSITELIB}/trytond/tests/test_fields.pyc
 ${PYSITELIB}/trytond/tests/test_fields.pyo
+${PYSITELIB}/trytond/tests/test_history.py
+${PYSITELIB}/trytond/tests/test_history.pyc
+${PYSITELIB}/trytond/tests/test_history.pyo
 ${PYSITELIB}/trytond/tests/test_importdata.py
 ${PYSITELIB}/trytond/tests/test_importdata.pyc
 ${PYSITELIB}/trytond/tests/test_importdata.pyo
@@ -514,6 +524,9 @@ ${PYSITELIB}/trytond/tests/test_trigger.pyo
 ${PYSITELIB}/trytond/tests/test_tryton.py
 ${PYSITELIB}/trytond/tests/test_tryton.pyc
 ${PYSITELIB}/trytond/tests/test_tryton.pyo
+${PYSITELIB}/trytond/tests/test_user.py
+${PYSITELIB}/trytond/tests/test_user.pyc
+${PYSITELIB}/trytond/tests/test_user.pyo
 ${PYSITELIB}/trytond/tests/test_wizard.py
 ${PYSITELIB}/trytond/tests/test_wizard.pyc
 ${PYSITELIB}/trytond/tests/test_wizard.pyo
@@ -544,9 +557,6 @@ ${PYSITELIB}/trytond/tools/datetime_strftime.pyo
 ${PYSITELIB}/trytond/tools/misc.py
 ${PYSITELIB}/trytond/tools/misc.pyc
 ${PYSITELIB}/trytond/tools/misc.pyo
-${PYSITELIB}/trytond/tools/ordereddict.py
-${PYSITELIB}/trytond/tools/ordereddict.pyc
-${PYSITELIB}/trytond/tools/ordereddict.pyo
 ${PYSITELIB}/trytond/tools/singleton.py
 ${PYSITELIB}/trytond/tools/singleton.pyc
 ${PYSITELIB}/trytond/tools/singleton.pyo
