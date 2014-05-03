@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1730 2014/05/03 19:11:18 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1731 2014/05/03 19:41:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2447,3 +2447,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-django-cms to 3.0.1 [adam 2014-05-03]
 	Updated www/py-uwsgitop to 0.8nb1 [rodent 2014-05-03]
 	Added sysutils/libisoburn version 1.3.6pl01 [wiz 2014-05-03]
+	Updated security/libtasn1 to 3.5 [adam 2014-05-03]
