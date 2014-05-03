@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libXpm,v 1.4 2012/04/08 05:55:48 obache Exp $
+# $NetBSD: xorg.libXpm,v 1.5 2014/05/03 21:31:10 ryoon Exp $
 #
 include/X11/xpm.h
 lib/libXpm.a
@@ -9,6 +9,7 @@ lib/libXpm.so.4.11
 lib/libXpm.so.5
 lib/libXpm.so.5.0
 lib/libXpm.so.8.0
+lib/libXpm.so.9.0
 lib/libXpm.dylib
 lib/libXpm.4.dylib
 lib/libXpm.4.11.dylib

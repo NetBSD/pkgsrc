@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libXmu,v 1.4 2010/11/23 13:24:26 wiz Exp $
+# $NetBSD: xorg.libXmu,v 1.5 2014/05/03 21:31:10 ryoon Exp $
 #
 include/X11/Xmu/Atoms.h
 include/X11/Xmu/CharSet.h
@@ -37,6 +37,7 @@ lib/libXmu.so.6.2
 lib/libXmu.so.7
 lib/libXmu.so.7.0
 lib/libXmu.so.10.0
+lib/libXmu.so.11.0
 lib/libXmuu.1.0.0.dylib
 lib/libXmuu.1.0.dylib
 lib/libXmuu.1.dylib
@@ -49,5 +50,6 @@ lib/libXmuu.so.1.0
 lib/libXmuu.so.2
 lib/libXmuu.so.2.0
 lib/libXmuu.so.5.0
+lib/libXmuu.so.6.0
 lib/pkgconfig/xmu.pc
 lib/pkgconfig/xmuu.pc

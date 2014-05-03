@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libXcomposite,v 1.1 2013/12/21 12:40:46 mrg Exp $
+# $NetBSD: xorg.libXcomposite,v 1.2 2014/05/03 21:31:10 ryoon Exp $
 include/X11/extensions/Xcomposite.h
 lib/libXcomposite.1.0.0.dylib
 lib/libXcomposite.1.dylib
@@ -10,5 +10,6 @@ lib/libXcomposite.so.1.0
 lib/libXcomposite.so.2
 lib/libXcomposite.so.2.0
 lib/libXcomposite.so.3.0
+lib/libXcomposite.so.4.0
 lib/libXcomposite.a
 lib/pkgconfig/xcomposite.pc
