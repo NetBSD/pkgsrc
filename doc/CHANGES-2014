@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1701 2014/05/03 10:49:39 wen Exp $
+$NetBSD: CHANGES-2014,v 1.1702 2014/05/03 11:54:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2418,3 +2418,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated inputmethod/ibus to 1.5.7 [obache 2014-05-03]
 	Updated www/p5-Twiggy to 0.1024 [wen 2014-05-03]
 	Updated textproc/p5-YAML-Tiny to 1.62 [wen 2014-05-03]
+	Updated devel/py-mercurial to 3.0 [wiz 2014-05-03]
