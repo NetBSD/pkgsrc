@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/03 01:38:37 rodent Exp $
+${PYSITELIB}/Flask_SSLify-${PKGVERSION}-py2.7.egg-info/PKG-INFO
+${PYSITELIB}/Flask_SSLify-${PKGVERSION}-py2.7.egg-info/SOURCES.txt
+${PYSITELIB}/Flask_SSLify-${PKGVERSION}-py2.7.egg-info/dependency_links.txt
+${PYSITELIB}/Flask_SSLify-${PKGVERSION}-py2.7.egg-info/not-zip-safe
+${PYSITELIB}/Flask_SSLify-${PKGVERSION}-py2.7.egg-info/requires.txt
+${PYSITELIB}/Flask_SSLify-${PKGVERSION}-py2.7.egg-info/top_level.txt
+${PYSITELIB}/flask_sslify.py
+${PYSITELIB}/flask_sslify.pyc
+${PYSITELIB}/flask_sslify.pyo
