@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.10 2014/01/03 06:11:46 rodent Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.11 2014/05/03 23:38:33 rodent Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/simplejson/__init__.py
 ${PYSITELIB}/simplejson/__init__.pyc
 ${PYSITELIB}/simplejson/__init__.pyo
