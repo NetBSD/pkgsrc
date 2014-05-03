@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2014/04/13 05:04:02 rodent Exp $
+$NetBSD: distinfo,v 1.3 2014/05/03 22:28:04 rodent Exp $
 
-SHA1 (trytond_account_invoice-3.0.2.tar.gz) = 768ca597b48f0e48c3911b650c736dea14da079e
-RMD160 (trytond_account_invoice-3.0.2.tar.gz) = 25f3c772e4e94041a76bf9c38748f88847e37337
-Size (trytond_account_invoice-3.0.2.tar.gz) = 120431 bytes
+SHA1 (trytond_account_invoice-3.2.0.tar.gz) = 352bf753ecdffa37c223ab47658ae250b6f812ed
+RMD160 (trytond_account_invoice-3.2.0.tar.gz) = 690e7a575aaa3d56e98742bc9a1a8042a60151f3
+Size (trytond_account_invoice-3.2.0.tar.gz) = 120607 bytes
