@@ -1,0 +1,3 @@
+YUI Compressor is a JavaScript and CSS minifier written in Java. This package
+bundles the YUI Compressor JAR file to ease its use in Python projects. Note
+that you still need to have Java Runtime Environment installed.
