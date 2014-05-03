@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1703 2014/05/03 12:23:55 nonaka Exp $
+$NetBSD: CHANGES-2014,v 1.1704 2014/05/03 12:40:14 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2420,3 +2420,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/p5-YAML-Tiny to 1.62 [wen 2014-05-03]
 	Updated devel/py-mercurial to 3.0 [wiz 2014-05-03]
 	Updated misc/vimpager to 1.8.8 [nonaka 2014-05-03]
+	Updated textproc/p5-XML-LibXML to 2.0116 [wen 2014-05-03]
