@@ -1,4 +1,4 @@
-# $NetBSD: xorg.xcb-util,v 1.5 2014/03/31 09:19:33 ryoon Exp $
+# $NetBSD: xorg.xcb-util,v 1.6 2014/05/03 21:31:10 ryoon Exp $
 include/xcb/xcb_atom.h
 include/xcb/xcb_aux.h
 include/xcb/xcb_bitops.h
@@ -19,6 +19,7 @@ lib/libxcb-atom.la
 lib/libxcb-atom.so
 lib/libxcb-atom.so.1
 lib/libxcb-atom.so.1.0
+lib/libxcb-atom.so.2.0
 lib/libxcb-aux.0.0.0.dylib
 lib/libxcb-aux.0.dylib
 lib/libxcb-aux.a
@@ -27,6 +28,7 @@ lib/libxcb-aux.la
 lib/libxcb-aux.so
 lib/libxcb-aux.so.0
 lib/libxcb-aux.so.0.0
+lib/libxcb-aux.so.1.0
 lib/libxcb-event.1.0.0.dylib
 lib/libxcb-event.1.dylib
 lib/libxcb-event.a
@@ -35,6 +37,7 @@ lib/libxcb-event.la
 lib/libxcb-event.so
 lib/libxcb-event.so.1
 lib/libxcb-event.so.1.0
+lib/libxcb-event.so.2.0
 lib/libxcb-icccm.1.0.0.dylib
 lib/libxcb-icccm.1.dylib
 lib/libxcb-icccm.a
@@ -44,6 +47,7 @@ lib/libxcb-icccm.so
 lib/libxcb-icccm.so.1
 lib/libxcb-icccm.so.1.0
 lib/libxcb-icccm.so.1.1
+lib/libxcb-icccm.so.2.0
 lib/libxcb-image.0.0.0.dylib
 lib/libxcb-image.0.dylib
 lib/libxcb-image.a
@@ -52,6 +56,7 @@ lib/libxcb-image.la
 lib/libxcb-image.so
 lib/libxcb-image.so.0
 lib/libxcb-image.so.0.0
+lib/libxcb-image.so.1.0
 lib/libxcb-keysyms.0.0.0.dylib
 lib/libxcb-keysyms.0.dylib
 lib/libxcb-keysyms.a
@@ -60,6 +65,7 @@ lib/libxcb-keysyms.la
 lib/libxcb-keysyms.so
 lib/libxcb-keysyms.so.1
 lib/libxcb-keysyms.so.1.0
+lib/libxcb-keysyms.so.2.0
 lib/libxcb-present.a
 lib/libxcb-present.so
 lib/libxcb-present.so.0
@@ -72,6 +78,7 @@ lib/libxcb-property.la
 lib/libxcb-property.so
 lib/libxcb-property.so.1
 lib/libxcb-property.so.1.0
+lib/libxcb-property.so.2.0
 lib/libxcb-render-util.0.0.0.dylib
 lib/libxcb-render-util.0.dylib
 lib/libxcb-render-util.a
@@ -88,6 +95,7 @@ lib/libxcb-reply.la
 lib/libxcb-reply.so
 lib/libxcb-reply.so.1
 lib/libxcb-reply.so.1.0
+lib/libxcb-reply.so.2.0
 lib/libxcb-util.0.dylib
 lib/libxcb-util.1.dylib
 lib/libxcb-util.dylib

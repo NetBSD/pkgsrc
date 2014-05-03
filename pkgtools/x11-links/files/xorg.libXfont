@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libXfont,v 1.6 2012/04/08 05:55:48 obache Exp $
+# $NetBSD: xorg.libXfont,v 1.7 2014/05/03 21:31:10 ryoon Exp $
 #
 include/X11/fonts/bdfint.h
 include/X11/fonts/bitmap.h
@@ -35,4 +35,5 @@ lib/libXfont.so.3
 lib/libXfont.so.3.0
 lib/libXfont.so.8.0
 lib/libXfont.so.9.0
+lib/libXfont.so.11.0
 lib/pkgconfig/xfont.pc

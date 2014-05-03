@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libXau,v 1.3 2010/02/18 12:32:19 obache Exp $
+# $NetBSD: xorg.libXau,v 1.4 2014/05/03 21:31:10 ryoon Exp $
 #
 include/X11/Xauth.h
 lib/libXau.6.0.0.dylib
@@ -12,4 +12,5 @@ lib/libXau.so.6.0
 lib/libXau.so.7
 lib/libXau.so.7.0
 lib/libXau.so.9.0
+lib/libXau.so.10.0
 lib/pkgconfig/xau.pc

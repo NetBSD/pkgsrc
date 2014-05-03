@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libXv,v 1.4 2012/04/08 05:55:48 obache Exp $
+# $NetBSD: xorg.libXv,v 1.5 2014/05/03 21:31:10 ryoon Exp $
 #
 include/X11/extensions/Xvlib.h
 lib/libXv.1.0.0.dylib
@@ -13,4 +13,5 @@ lib/libXv.so.1.0
 lib/libXv.so.2
 lib/libXv.so.2.0
 lib/libXv.so.5.0
+lib/libXv.so.6.0
 lib/pkgconfig/xv.pc
