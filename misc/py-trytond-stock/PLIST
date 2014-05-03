@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/02/01 20:23:35 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/05/03 13:42:19 rodent Exp $
 ${PYSITELIB}/trytond/modules/stock/__init__.py
 ${PYSITELIB}/trytond/modules/stock/__init__.pyc
 ${PYSITELIB}/trytond/modules/stock/__init__.pyo
@@ -53,6 +53,7 @@ ${PYSITELIB}/trytond/modules/stock/tests/__init__.py
 ${PYSITELIB}/trytond/modules/stock/tests/__init__.pyc
 ${PYSITELIB}/trytond/modules/stock/tests/__init__.pyo
 ${PYSITELIB}/trytond/modules/stock/tests/scenario_stock_average_cost_price.rst
+${PYSITELIB}/trytond/modules/stock/tests/scenario_stock_inventory.rst
 ${PYSITELIB}/trytond/modules/stock/tests/scenario_stock_shipment_out.rst
 ${PYSITELIB}/trytond/modules/stock/tests/test_stock.py
 ${PYSITELIB}/trytond/modules/stock/tests/test_stock.pyc
