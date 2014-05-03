@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1735 2014/05/03 22:32:26 markd Exp $
+$NetBSD: CHANGES-2014,v 1.1736 2014/05/03 23:38:48 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2452,3 +2452,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated pkgtools/x11-links to 0.89 [ryoon 2014-05-03]
 	Updated finance/py-trytond-account-invoice to 3.2.0 [rodent 2014-05-03]
 	Updated math/R to 3.1.0 [markd 2014-05-03]
+	Updated converters/py-simplejson to 3.4.1 [rodent 2014-05-03]
