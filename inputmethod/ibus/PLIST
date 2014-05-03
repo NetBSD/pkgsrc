@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/04/06 02:48:03 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/05/03 09:52:24 obache Exp $
 bin/ibus
 bin/ibus-daemon
 bin/ibus-setup
@@ -106,9 +106,12 @@ share/gtk-doc/html/ibus/ibus-ibusxml.html
 share/gtk-doc/html/ibus/ibus.devhelp2
 share/gtk-doc/html/ibus/index.html
 share/gtk-doc/html/ibus/index.sgml
+share/gtk-doc/html/ibus/left-insensitive.png
 share/gtk-doc/html/ibus/left.png
+share/gtk-doc/html/ibus/right-insensitive.png
 share/gtk-doc/html/ibus/right.png
 share/gtk-doc/html/ibus/style.css
+share/gtk-doc/html/ibus/up-insensitive.png
 share/gtk-doc/html/ibus/up.png
 share/ibus/component/dconf.xml
 share/ibus/component/gconf.xml
