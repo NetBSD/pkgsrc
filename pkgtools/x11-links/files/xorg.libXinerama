@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libXinerama,v 1.3 2010/02/18 12:32:19 obache Exp $
+# $NetBSD: xorg.libXinerama,v 1.4 2014/05/03 21:31:10 ryoon Exp $
 #
 lib/libXinerama.1.0.0.dylib
 lib/libXinerama.1.0.dylib
@@ -12,4 +12,5 @@ lib/libXinerama.so.1.0
 lib/libXinerama.so.2
 lib/libXinerama.so.2.0
 lib/libXinerama.so.5.0
+lib/libXinerama.so.6.0
 lib/pkgconfig/xinerama.pc
