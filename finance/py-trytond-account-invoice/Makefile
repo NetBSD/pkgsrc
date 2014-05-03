@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2014/04/13 05:04:02 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/03 22:28:04 rodent Exp $
 
-DISTNAME=	trytond_account_invoice-3.0.2
+DISTNAME=	trytond_account_invoice-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	finance python
-MASTER_SITES=	http://downloads.tryton.org/3.0/
+MASTER_SITES=	http://downloads.tryton.org/3.2/
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://www.tryton.org/
