@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/05/03 01:24:27 rodent Exp $
+
+SHA1 (Flask-DebugToolbar-0.9.0.tar.gz) = ffa743e98ae3c373047b3ff97a2559ddf75408e5
+RMD160 (Flask-DebugToolbar-0.9.0.tar.gz) = 45076b30f3de1168fe3451c0250d9bd9e84bc9a0
+Size (Flask-DebugToolbar-0.9.0.tar.gz) = 248947 bytes
