@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2013/06/09 21:19:02 tonio Exp $
+# $NetBSD: options.mk,v 1.11 2014/05/03 13:27:33 alnsn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.weechat
 PKG_SUPPORTED_OPTIONS=	charset gnutls python lua wide-curses perl ruby
@@ -34,6 +34,7 @@ CMAKE_ARGS+=		-DENABLE_PYTHON:BOOL=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mlua)
+LUA_VERSIONS_INCOMPATIBLE=	52
 .include "../../lang/lua/buildlink3.mk"
 CMAKE_ARGS+=		-DENABLE_LUA:BOOL=ON
 PLIST.lua=		yes
