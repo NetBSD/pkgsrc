@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2014/04/07 20:32:20 fhajny Exp $
+# $NetBSD: Makefile,v 1.15 2014/05/03 13:01:24 alnsn Exp $
 #
 
 DISTNAME=		prosody-0.9.4
+PKGREVISION=		1
 CATEGORIES=		chat
 MASTER_SITES=		http://prosody.im/downloads/source/
 
@@ -18,6 +19,8 @@ DEPENDS+=	${LUA_PKGPREFIX}-socket>=2.0:../../net/lua-socket
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 BUILD_DEFS+=		VARBASE
+
+CONFIGURE_ARGS+=	--with-lua-include=${PREFIX}/${LUA_INCDIR}
 
 RCD_SCRIPTS=		prosody
 
