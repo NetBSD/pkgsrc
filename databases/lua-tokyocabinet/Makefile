@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2013/10/30 13:27:22 obache Exp $
+# $NetBSD: Makefile,v 1.21 2014/05/03 13:01:24 alnsn Exp $
 #
 
 DISTNAME=	tokyocabinet-lua-1.10
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/-lua-/-/}
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	${HOMEPAGE:S/luadoc/luapkg/}
 
@@ -20,7 +21,7 @@ TEST_ENV+=	LUA_CDIR=${WRKSRC}
 
 REPLACE_LUA=		*.lua
 
-INSTALLATION_DIRS+=	share/tokyocabinet/doc/lua
+INSTALLATION_DIRS+=	${LUA_DOCDIR} ${LUA_EXAMPLESDIR}
 
 MAKE_ENV+=	INCLUDEDIR=${BUILDLINK_PREFIX.tokyocabinet}/include
 
@@ -29,12 +30,15 @@ post-extract:
 
 post-install:
 	cd ${WRKSRC}/doc && pax -rwpe . \
-		${DESTDIR}${PREFIX}/share/tokyocabinet/doc/lua
+		${DESTDIR}${PREFIX}/${LUA_DOCDIR}
+	mv ${DESTDIR}${PREFIX}/bin/*.lua \
+		${DESTDIR}${PREFIX}/${LUA_EXAMPLESDIR}
 
 BUILDLINK_API_DEPENDS.tokyocabinet+=	tokyocabinet>=1.4.29
 .include "../../databases/tokyocabinet/buildlink3.mk"
 .include "../../lang/lua/application.mk"
 .include "../../lang/lua/module.mk"
+.include "../../lang/lua/tool.mk"
 PTHREAD_AUTO_VARS=	yes
 .include "../../mk/pthread.buildlink3.mk"
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} != "none"

@@ -1,4 +1,4 @@
-$NetBSD: patch-system-autodetect.mk,v 1.2 2013/10/20 17:48:54 joerg Exp $
+$NetBSD: patch-system-autodetect.mk,v 1.3 2014/05/03 13:01:25 alnsn Exp $
 
 Adapt for pkgsrc.
 
@@ -37,18 +37,31 @@ Adapt for pkgsrc.
  
  
  ##
-@@ -67,8 +69,8 @@ DL_LIBS=-ldl
+@@ -63,18 +65,14 @@ DL_LIBS=-ldl
+ 
+ # To skip auto-detection of lua uncomment this and edit the variables below to
+ # suit your installation of lua.
+-#LUA_MANUAL=1
++LUA_MANUAL=1
  
  # Default to paths and names that should work for a build installed from the
  # official Lua 5.1 source tarball.
 -LUA_DIR=/usr/local
 -LUA_LIBS=-L$(LUA_DIR)/lib -llua
-+LUA_DIR=$(PREFIX)
-+LUA_LIBS=${COMPILER_RPATH_FLAG}$(LUA_DIR)/lib -L$(LUA_DIR)/lib -llua
- LUA_INCLUDES = -I$(LUA_DIR)/include
+-LUA_INCLUDES = -I$(LUA_DIR)/include
+-
+-ifneq ($(shell which lua),)
+-LUA=$(LUA_DIR)/bin/lua
+-LUAC=$(LUA_DIR)/bin/luac
+-endif
++LUA_LIBS=`pkg-config --libs lua`
++LUA_INCLUDES=`pkg-config --cflags lua`
++LUA=$(LUA_INTERPRETER)
++LUAC=$(LUA_COMPILER)
  
- ifneq ($(shell which lua),)
-@@ -132,11 +134,12 @@ endif # lua manual
+ # Attempt to autodect lua using pkg-config.
+ 
+@@ -132,11 +130,12 @@ endif # lua manual
  ##
  
  # Paths
@@ -63,7 +76,7 @@ Adapt for pkgsrc.
  X11_INCLUDES=-I$(X11_PREFIX)/include
  
  # XFree86 libraries up to 4.3.0 have a bug that can cause a segfault.
-@@ -164,7 +167,7 @@ DEFINES += -DCF_XFREE86_TEXTPROP_BUG_WOR
+@@ -164,7 +163,7 @@ DEFINES += -DCF_XFREE86_TEXTPROP_BUG_WOR
  #DEFINES += -DCF_NO_LOCALE -DCF_NO_GETTEXT
  
  # On some other systems you may need to explicitly link against libintl.
