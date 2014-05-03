@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/02/20 00:08:13 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/05/03 13:23:52 rodent Exp $
 ${PYSITELIB}/VERSION
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -11,6 +11,9 @@ ${PYSITELIB}/stripe/__init__.pyo
 ${PYSITELIB}/stripe/api_requestor.py
 ${PYSITELIB}/stripe/api_requestor.pyc
 ${PYSITELIB}/stripe/api_requestor.pyo
+${PYSITELIB}/stripe/certificate_blacklist.py
+${PYSITELIB}/stripe/certificate_blacklist.pyc
+${PYSITELIB}/stripe/certificate_blacklist.pyo
 ${PYSITELIB}/stripe/data/ca-certificates.crt
 ${PYSITELIB}/stripe/error.py
 ${PYSITELIB}/stripe/error.pyc
@@ -30,6 +33,9 @@ ${PYSITELIB}/stripe/test/__init__.pyo
 ${PYSITELIB}/stripe/test/helper.py
 ${PYSITELIB}/stripe/test/helper.pyc
 ${PYSITELIB}/stripe/test/helper.pyo
+${PYSITELIB}/stripe/test/test_blacklist.py
+${PYSITELIB}/stripe/test/test_blacklist.pyc
+${PYSITELIB}/stripe/test/test_blacklist.pyo
 ${PYSITELIB}/stripe/test/test_http_client.py
 ${PYSITELIB}/stripe/test/test_http_client.pyc
 ${PYSITELIB}/stripe/test/test_http_client.pyo
