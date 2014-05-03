@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/05/03 01:24:27 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/03 01:40:24 rodent Exp $
 
 DISTNAME=	Flask-DebugToolbar-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	https://pypi.python.org/packages/source/F/Flask-DebugToolbar/
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://flask-debugtoolbar.rtfd.org/
 COMMENT=	Port of the Django debug toolbar to Flask
-LICENSE=	apache-2.0 AND gnu-gpl-v3 AND gnu-lgpl-v2.1 AND mit
+LICENSE=	apache-2.0 AND gnu-gpl-v3 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-flask>0.8:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-blinker-[0-9]*:../../devel/py-blinker
