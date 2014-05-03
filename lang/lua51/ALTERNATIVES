@@ -1,0 +1,3 @@
+bin/lua5.1 @PREFIX@/bin/lua
+bin/luac5.1 @PREFIX@/bin/luac
+lib/pkgconfig/lua-5.1.pc @PREFIX@/lib/pkgconfig/lua.pc
