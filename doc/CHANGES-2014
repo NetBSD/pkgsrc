@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1707 2014/05/03 13:10:09 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.1708 2014/05/03 13:18:20 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2424,3 +2424,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-logan to 0.5.10 [rodent 2014-05-03]
 	Updated devel/py-modulegraph to 0.11.1 [rodent 2014-05-03]
 	Updated devel/py-tryton to 3.2.0 [rodent 2014-05-03]
+	Updated devel/py-trytond to 3.2.0 [rodent 2014-05-03]
