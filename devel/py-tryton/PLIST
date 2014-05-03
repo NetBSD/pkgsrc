@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2014/01/30 03:46:18 rodent Exp $
-bin/tryton
+@comment $NetBSD: PLIST,v 1.2 2014/05/03 13:09:55 rodent Exp $
+bin/tryton${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/tryton/__init__.py
@@ -68,6 +69,9 @@ ${PYSITELIB}/tryton/common/domain_inversion.pyo
 ${PYSITELIB}/tryton/common/domain_parser.py
 ${PYSITELIB}/tryton/common/domain_parser.pyc
 ${PYSITELIB}/tryton/common/domain_parser.pyo
+${PYSITELIB}/tryton/common/entry_position.py
+${PYSITELIB}/tryton/common/entry_position.pyc
+${PYSITELIB}/tryton/common/entry_position.pyo
 ${PYSITELIB}/tryton/common/environment.py
 ${PYSITELIB}/tryton/common/environment.pyc
 ${PYSITELIB}/tryton/common/environment.pyo
@@ -137,6 +141,9 @@ ${PYSITELIB}/tryton/gui/window/nomodal.pyo
 ${PYSITELIB}/tryton/gui/window/preference.py
 ${PYSITELIB}/tryton/gui/window/preference.pyc
 ${PYSITELIB}/tryton/gui/window/preference.pyo
+${PYSITELIB}/tryton/gui/window/revision.py
+${PYSITELIB}/tryton/gui/window/revision.pyc
+${PYSITELIB}/tryton/gui/window/revision.pyo
 ${PYSITELIB}/tryton/gui/window/shortcuts.py
 ${PYSITELIB}/tryton/gui/window/shortcuts.pyc
 ${PYSITELIB}/tryton/gui/window/shortcuts.pyo
@@ -242,6 +249,9 @@ ${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/many2many.pyo
 ${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/many2one.py
 ${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/many2one.pyc
 ${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/many2one.pyo
+${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/multiselection.py
+${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/multiselection.pyc
+${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/multiselection.pyo
 ${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/one2many.py
 ${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/one2many.pyc
 ${PYSITELIB}/tryton/gui/window/view_form/view/form_gtk/one2many.pyo
