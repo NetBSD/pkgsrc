@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1723 2014/05/03 14:14:11 wen Exp $
+$NetBSD: CHANGES-2014,v 1.1724 2014/05/03 14:27:18 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2439,3 +2439,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/py-trytond-calendar to 3.2.0 [rodent 2014-05-03]
 	Updated textproc/p5-XML-LibXSLT to 1.92 [wen 2014-05-03]
 	Updated textproc/p5-XML-Rabbit to 0.4.0 [wen 2014-05-03]
+	Updated textproc/p5-Text-Xslate to 3.2.4 [wen 2014-05-03]
