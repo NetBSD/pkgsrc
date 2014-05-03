@@ -1,4 +1,4 @@
-$NetBSD: patch-src_gallium_include_pipe_p__config.h,v 1.3 2014/02/04 10:51:30 obache Exp $
+$NetBSD: patch-src_gallium_include_pipe_p__config.h,v 1.4 2014/05/03 19:03:59 ryoon Exp $
 
 Adjust Endianness for PowerPC, NetBSD, OpenBSD or SunOS.
 
@@ -13,12 +13,16 @@ Adjust Endianness for PowerPC, NetBSD, OpenBSD or SunOS.
  #define PIPE_ARCH_PPC
  #if defined(__ppc64__) || defined(__PPC64__)
  #define PIPE_ARCH_PPC_64
-@@ -129,6 +129,24 @@
+@@ -129,6 +129,28 @@
  # define PIPE_ARCH_BIG_ENDIAN
  #endif
  
 +#elif defined(__NetBSD__) || defined(__OpenBSD__)
++#if defined(__NetBSD__)
 +#include <sys/endian.h>
++#else /* OpenBSD */
++#include <machine/endian.h>
++#endif
 +
 +#if _BYTE_ORDER == _LITTLE_ENDIAN
 +# define PIPE_ARCH_LITTLE_ENDIAN
