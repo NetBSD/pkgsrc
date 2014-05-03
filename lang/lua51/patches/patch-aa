@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2013/10/30 06:18:10 dholland Exp $
+$NetBSD: patch-aa,v 1.2 2014/05/03 13:00:44 alnsn Exp $
 
---- Makefile.orig	2008-08-12 01:40:48.000000000 +0100
-+++ Makefile	2009-12-17 16:36:32.000000000 +0000
+--- Makefile.orig	2012-02-10 09:50:23.000000000 +0000
++++ Makefile
 @@ -9,11 +9,11 @@ PLAT= none
  
  # Where to install. The installation starts in the src and doc directories,
@@ -9,7 +9,8 @@ $NetBSD: patch-aa,v 1.1 2013/10/30 06:18:10 dholland Exp $
 -INSTALL_TOP= /usr/local
 +INSTALL_TOP= ${PREFIX}
  INSTALL_BIN= $(INSTALL_TOP)/bin
- INSTALL_INC= $(INSTALL_TOP)/include
+-INSTALL_INC= $(INSTALL_TOP)/include
++INSTALL_INC= $(INSTALL_TOP)/include/lua-5.1
  INSTALL_LIB= $(INSTALL_TOP)/lib
 -INSTALL_MAN= $(INSTALL_TOP)/man/man1
 +INSTALL_MAN= $(INSTALL_TOP)/${PKGMANDIR}/man1
@@ -25,16 +26,19 @@ $NetBSD: patch-aa,v 1.1 2013/10/30 06:18:10 dholland Exp $
  #
  # If you don't have install you can use cp instead.
  # INSTALL= cp -p
-@@ -43,7 +43,7 @@ PLATS= aix ansi bsd freebsd generic linu
+@@ -41,9 +41,9 @@ RANLIB= ranlib
+ PLATS= aix ansi bsd freebsd generic linux macosx mingw posix solaris
+ 
  # What to install.
- TO_BIN= lua luac
+-TO_BIN= lua luac
++TO_BIN= lua5.1 luac5.1
  TO_INC= lua.h luaconf.h lualib.h lauxlib.h ../etc/lua.hpp
 -TO_LIB= liblua.a
-+TO_LIB= liblua.la
++TO_LIB= liblua5.1.la
  TO_MAN= lua.1 luac.1
  
  # Lua version and release.
-@@ -59,11 +59,11 @@ test:	dummy
+@@ -59,11 +59,12 @@ test:	dummy
  	src/lua test/hello.lua
  
  install: dummy
@@ -47,7 +51,8 @@ $NetBSD: patch-aa,v 1.1 2013/10/30 06:18:10 dholland Exp $
 +	cd src && $(LIBTOOL) --tag=CC --mode=install $(BSD_INSTALL_PROGRAM) $(TO_BIN) $(DESTDIR)$(INSTALL_BIN)
 +	cd src && $(INSTALL_DATA) $(TO_INC) $(DESTDIR)$(INSTALL_INC)
 +	cd src && $(LIBTOOL) --tag=CC --mode=install $(BSD_INSTALL_LIB) $(TO_LIB) $(DESTDIR)$(INSTALL_LIB)
-+	cd doc && $(INSTALL_DATA) $(TO_MAN) $(DESTDIR)$(INSTALL_MAN)
++	cd doc && $(INSTALL_DATA) lua.1  $(DESTDIR)$(INSTALL_MAN)/lua5.1.1
++	cd doc && $(INSTALL_DATA) luac.1 $(DESTDIR)$(INSTALL_MAN)/luac5.1.1
  
  ranlib:
  	cd src && cd $(INSTALL_LIB) && $(RANLIB) $(TO_LIB)
