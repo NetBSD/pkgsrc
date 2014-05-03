@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1726 2014/05/03 15:34:33 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.1727 2014/05/03 15:57:29 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2442,3 +2442,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/p5-Text-Xslate to 3.2.4 [wen 2014-05-03]
 	Added net/py-eventlib version 0.1.5 [rodent 2014-05-03]
 	Added textproc/py-cjson version 1.0.5 [rodent 2014-05-03]
+	Updated lang/nodejs to 0.10.28 [fhajny 2014-05-03]
