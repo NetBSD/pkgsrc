@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1690 2014/05/03 02:14:00 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1691 2014/05/03 02:19:42 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2407,3 +2407,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/suse131_openssl to 13.1nb6 [obache 2014-05-03]
 	Added www/py-flask-testing version 0.4.1 [rodent 2014-05-03]
 	Updated emulators/suse131_libcurl to 13.1nb3 [obache 2014-05-03]
+	Updated emulators/suse131_mozilla-nss to 13.1nb2 [obache 2014-05-03]
