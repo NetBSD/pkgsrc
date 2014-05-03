@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/02/01 20:12:32 rodent Exp $
+$NetBSD: distinfo,v 1.2 2014/05/03 13:44:53 rodent Exp $
 
-SHA1 (trytond_calendar-3.0.2.tar.gz) = f902df42b96e5e2a9f72070efb252f13bffa6f82
-RMD160 (trytond_calendar-3.0.2.tar.gz) = 30006fcbcb355afc975474a72f3b25c0df489b6f
-Size (trytond_calendar-3.0.2.tar.gz) = 59105 bytes
+SHA1 (trytond_calendar-3.2.0.tar.gz) = f279b5cd77914d628f3e98b976a50c0a19b7e840
+RMD160 (trytond_calendar-3.2.0.tar.gz) = fd09b375231d1c4ad05a25290bf3927cfed40209
+Size (trytond_calendar-3.2.0.tar.gz) = 59546 bytes
