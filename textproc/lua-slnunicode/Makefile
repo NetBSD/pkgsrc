@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2013/10/30 06:24:57 dholland Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/03 13:01:24 alnsn Exp $
 
 DISTNAME=	slnunicode-1.1apl1
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
@@ -12,10 +13,7 @@ COMMENT=	Unicode library for Lua
 BUILD_TARGET=	unicode.so
 LUA_VERSIONS_INCOMPATIBLE=	51
 
-FIND_PREFIX:=	LUADIR=lua
-.include "../../mk/find-prefix.mk"
-
-MAKE_ENV+=	LUADIR=${LUADIR}
+MAKE_ENV+=	LUA_EXECUTABLE=${LUA_INTERPRETER}
 
 INSTALLATION_DIRS=	${LUA_CDIR}
 
