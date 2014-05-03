@@ -1,0 +1,1 @@
+bin/trytond @PREFIX@/bin/trytond@PYVERSSUFFIX@
