@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1698 2014/05/03 09:27:14 wen Exp $
+$NetBSD: CHANGES-2014,v 1.1699 2014/05/03 09:53:34 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2415,3 +2415,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Mojolicious to 4.97 [wen 2014-05-03]
 	Updated devel/p5-Proc-Wait3 to 0.04 [wen 2014-05-03]
 	Updated sysutils/p5-Server-Starter to 0.17 [wen 2014-05-03]
+	Updated inputmethod/ibus to 1.5.7 [obache 2014-05-03]
