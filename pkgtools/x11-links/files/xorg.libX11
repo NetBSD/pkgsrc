@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libX11,v 1.13 2014/01/23 21:05:18 ryoon Exp $
+# $NetBSD: xorg.libX11,v 1.14 2014/05/03 21:31:10 ryoon Exp $
 #
 include/X11/ImUtil.h
 include/X11/XKBlib.h
@@ -21,6 +21,7 @@ lib/libX11-xcb.la
 lib/libX11-xcb.so
 lib/libX11-xcb.so.1
 lib/libX11-xcb.so.1.0
+lib/libX11-xcb.so.2.0
 lib/libX11.6.1.dylib
 lib/libX11.6.2.0.dylib 
 lib/libX11.6.2.dylib
@@ -35,6 +36,7 @@ lib/libX11.so.12.0
 lib/libX11.so.15.0
 lib/libX11.so.15.1
 lib/libX11.so.15.2
+lib/libX11.so.16.0
 lib/libX11.so.6
 lib/libX11.so.6.1
 lib/libX11.so.6.2

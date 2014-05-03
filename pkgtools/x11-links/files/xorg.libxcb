@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libxcb,v 1.8 2014/03/31 09:19:33 ryoon Exp $
+# $NetBSD: xorg.libxcb,v 1.9 2014/05/03 21:31:10 ryoon Exp $
 #
 include/xcb/bigreq.h
 include/xcb/composite.h
@@ -38,6 +38,7 @@ lib/libxcb-composite.so
 lib/libxcb-composite.so.0
 lib/libxcb-composite.so.0.0
 lib/libxcb-composite.so.0.1
+lib/libxcb-composite.so.1.0
 lib/libxcb-damage.0.0.0.dylib
 lib/libxcb-damage.0.dylib
 lib/libxcb-damage.a
@@ -47,6 +48,7 @@ lib/libxcb-damage.so
 lib/libxcb-damage.so.0
 lib/libxcb-damage.so.0.0
 lib/libxcb-damage.so.0.1
+lib/libxcb-damage.so.1.0
 lib/libxcb-dpms.0.0.0.dylib
 lib/libxcb-dpms.0.dylib
 lib/libxcb-dpms.a
@@ -56,6 +58,7 @@ lib/libxcb-dpms.so
 lib/libxcb-dpms.so.0
 lib/libxcb-dpms.so.0.0
 lib/libxcb-dpms.so.0.1
+lib/libxcb-dpms.so.1.0
 lib/libxcb-dri2.0.0.0.dylib
 lib/libxcb-dri2.0.dylib
 lib/libxcb-dri2.dylib
@@ -66,6 +69,7 @@ lib/libxcb-dri2.so.0
 lib/libxcb-dri2.so.0.0
 lib/libxcb-dri2.so.0.1
 lib/libxcb-dri2.so.0.2
+lib/libxcb-dri2.so.1.0
 lib/libxcb-dri3.a
 lib/libxcb-dri3.so
 lib/libxcb-dri3.so.0
@@ -81,6 +85,7 @@ lib/libxcb-glx.so.0.0
 lib/libxcb-glx.so.0.1
 lib/libxcb-glx.so.0.1
 lib/libxcb-glx.so.0.2
+lib/libxcb-glx.so.1.0
 lib/libxcb-randr.0.1.0.dylib
 lib/libxcb-randr.0.0.0.dylib
 lib/libxcb-randr.0.dylib
@@ -93,6 +98,7 @@ lib/libxcb-randr.so.0.0
 lib/libxcb-randr.so.0.1
 lib/libxcb-randr.so.1.0
 lib/libxcb-randr.so.1.1
+lib/libxcb-randr.so.2.0
 lib/libxcb-record.0.0.0.dylib
 lib/libxcb-record.0.dylib
 lib/libxcb-record.a
@@ -102,6 +108,7 @@ lib/libxcb-record.so
 lib/libxcb-record.so.0
 lib/libxcb-record.so.0.0
 lib/libxcb-record.so.0.1
+lib/libxcb-record.so.1.0
 lib/libxcb-render.0.0.0.dylib
 lib/libxcb-render.0.dylib
 lib/libxcb-render.a
@@ -111,6 +118,7 @@ lib/libxcb-render.so
 lib/libxcb-render.so.0
 lib/libxcb-render.so.0.0
 lib/libxcb-render.so.0.1
+lib/libxcb-render.so.1.0
 lib/libxcb-res.0.0.0.dylib
 lib/libxcb-res.0.dylib
 lib/libxcb-res.a
@@ -120,6 +128,7 @@ lib/libxcb-res.so
 lib/libxcb-res.so.0
 lib/libxcb-res.so.0.0
 lib/libxcb-res.so.0.1
+lib/libxcb-res.so.1.0
 lib/libxcb-screensaver.0.0.0.dylib
 lib/libxcb-screensaver.0.dylib
 lib/libxcb-screensaver.a
@@ -129,6 +138,7 @@ lib/libxcb-screensaver.so
 lib/libxcb-screensaver.so.0
 lib/libxcb-screensaver.so.0.0
 lib/libxcb-screensaver.so.0.1
+lib/libxcb-screensaver.so.1.0
 lib/libxcb-shape.0.0.0.dylib
 lib/libxcb-shape.0.dylib
 lib/libxcb-shape.a
@@ -138,6 +148,7 @@ lib/libxcb-shape.so
 lib/libxcb-shape.so.0
 lib/libxcb-shape.so.0.0
 lib/libxcb-shape.so.0.1
+lib/libxcb-shape.so.1.0
 lib/libxcb-shm.0.0.0.dylib
 lib/libxcb-shm.0.dylib
 lib/libxcb-shm.a
@@ -147,6 +158,7 @@ lib/libxcb-shm.so
 lib/libxcb-shm.so.0
 lib/libxcb-shm.so.0.0
 lib/libxcb-shm.so.0.1
+lib/libxcb-shm.so.1.0
 lib/libxcb-sync.0.0.0.dylib
 lib/libxcb-sync.0.dylib
 lib/libxcb-sync.a
@@ -157,6 +169,7 @@ lib/libxcb-sync.so.0
 lib/libxcb-sync.so.0.0
 lib/libxcb-sync.so.0.1
 lib/libxcb-sync.so.0.2
+lib/libxcb-sync.so.1.0
 lib/libxcb-wm.0.0.0.dylib
 lib/libxcb-wm.0.dylib
 lib/libxcb-wm.dylib
@@ -169,6 +182,7 @@ lib/libxcb-xevie.so
 lib/libxcb-xevie.so.0
 lib/libxcb-xevie.so.0.0
 lib/libxcb-xevie.so.0.1
+lib/libxcb-xevie.so.1.0
 lib/libxcb-xf86dri.0.0.0.dylib
 lib/libxcb-xf86dri.0.dylib
 lib/libxcb-xf86dri.a
@@ -181,6 +195,7 @@ lib/libxcb-xf86dri.so.0.1
 lib/libxcb-xf86dri.so.1.0
 lib/libxcb-xf86dri.so.1.1
 lib/libxcb-xf86dri.so.1.2
+lib/libxcb-xf86dri.so.2.0
 lib/libxcb-xfixes.0.0.0.dylib
 lib/libxcb-xfixes.0.dylib
 lib/libxcb-xfixes.a
@@ -190,6 +205,7 @@ lib/libxcb-xfixes.so
 lib/libxcb-xfixes.so.0
 lib/libxcb-xfixes.so.0.0
 lib/libxcb-xfixes.so.0.1
+lib/libxcb-xfixes.so.1.0
 lib/libxcb-xinerama.0.0.0.dylib
 lib/libxcb-xinerama.0.dylib
 lib/libxcb-xinerama.a
@@ -199,12 +215,14 @@ lib/libxcb-xinerama.so
 lib/libxcb-xinerama.so.0
 lib/libxcb-xinerama.so.0.0
 lib/libxcb-xinerama.so.0.1
+lib/libxcb-xinerama.so.1.0
 lib/libxcb-xprint.0.0.0.dylib
 lib/libxcb-xprint.0.dylib
 lib/libxcb-xprint.dylib
 lib/libxcb-xprint.la
 lib/libxcb-xprint.so.0.0
 lib/libxcb-xprint.so.1.0
+lib/libxcb-xprint.so.2.0
 lib/libxcb-xtest.0.0.0.dylib
 lib/libxcb-xtest.0.dylib
 lib/libxcb-xtest.a
@@ -214,6 +232,7 @@ lib/libxcb-xtest.so
 lib/libxcb-xtest.so.0
 lib/libxcb-xtest.so.0.0
 lib/libxcb-xtest.so.0.1
+lib/libxcb-xtest.so.1.0
 lib/libxcb-xv.0.0.0.dylib
 lib/libxcb-xv.0.dylib
 lib/libxcb-xv.a
@@ -223,6 +242,7 @@ lib/libxcb-xv.so
 lib/libxcb-xv.so.0
 lib/libxcb-xv.so.0.0
 lib/libxcb-xv.so.0.1
+lib/libxcb-xv.so.1.0
 lib/libxcb-xvmc.0.0.0.dylib
 lib/libxcb-xvmc.0.dylib
 lib/libxcb-xvmc.a
@@ -232,6 +252,7 @@ lib/libxcb-xvmc.so
 lib/libxcb-xvmc.so.0
 lib/libxcb-xvmc.so.0.0
 lib/libxcb-xvmc.so.0.1
+lib/libxcb-xvmc.so.1.0
 lib/libxcb.1.1.0.dylib
 lib/libxcb.1.dylib
 lib/libxcb.a
@@ -243,6 +264,7 @@ lib/libxcb.so.1.1
 lib/libxcb.so.2.2
 lib/libxcb.so.2.3
 lib/libxcb.so.2.4
+lib/libxcb.so.3.0
 lib/pkgconfig/xcb-composite.pc
 lib/pkgconfig/xcb-damage.pc
 lib/pkgconfig/xcb-dpms.pc

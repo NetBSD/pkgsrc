@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libXt,v 1.4 2012/05/03 13:55:45 obache Exp $
+# $NetBSD: xorg.libXt,v 1.5 2014/05/03 21:31:10 ryoon Exp $
 #
 bin/makestrs
 include/X11/CallbackI.h
@@ -47,4 +47,5 @@ lib/libXt.so.7
 lib/libXt.so.7.0
 lib/libXt.so.10.0
 lib/libXt.so.10.1
+lib/libXt.so.11.0
 lib/pkgconfig/xt.pc

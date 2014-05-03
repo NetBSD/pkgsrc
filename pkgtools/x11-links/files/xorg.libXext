@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libXext,v 1.6 2012/04/08 05:55:48 obache Exp $
+# $NetBSD: xorg.libXext,v 1.7 2014/05/03 21:31:10 ryoon Exp $
 #
 include/X11/extensions/MITMisc.h
 include/X11/extensions/XEVI.h
@@ -35,4 +35,5 @@ lib/libXext.so.7.0
 lib/libXext.so.7.1
 lib/libXext.so.10.0
 lib/libXext.so.12.0
+lib/libXext.so.13.0
 lib/pkgconfig/xext.pc

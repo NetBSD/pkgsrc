@@ -1,4 +1,4 @@
-# $NetBSD: xorg,v 1.22 2013/06/05 12:26:57 tron Exp $
+# $NetBSD: xorg,v 1.23 2014/05/03 21:31:10 ryoon Exp $
 #
 # The files listed below are the union of the sets of files installed by
 # the supported Xorg (and some XFree) distributions, minus the set of files
@@ -289,6 +289,7 @@ lib/libFS.so.7
 lib/libFS.so.7.0
 lib/libFS.so.8.0
 lib/libFS.so.9.0
+lib/libFS.so.10.0
 lib/libPEX5.6.0.dylib
 lib/libPEX5.6.dylib
 lib/libPEX5.a
@@ -335,6 +336,7 @@ lib/libXaw7.so.10
 lib/libXaw7.so.10.0
 lib/libXaw7.so.12.0
 lib/libXaw7.so.14.0
+lib/libXaw7.so.15.0
 lib/libXaw7.7.0.0.dylib
 lib/libXaw7.7.dylib
 lib/libXaw8.a
@@ -356,6 +358,7 @@ lib/libXaw.so.8
 lib/libXaw.so.8.0
 lib/libXaw.so.13.0
 lib/libXaw.so.14.0
+lib/libXaw.so.15.0
 lib/libXaw6.6.dylib
 lib/libXaw7.7.dylib
 lib/libXaw8.8.dylib
@@ -370,6 +373,7 @@ lib/libXfontcache.so.1.2
 lib/libXfontcache.so.2
 lib/libXfontcache.so.2.0
 lib/libXfontcache.so.4.0
+lib/libXfontcache.so.5.0
 lib/libXi.6.1.0.dylib
 lib/libXi.6.0.0.dylib
 lib/libXi.6.0.dylib
@@ -386,6 +390,7 @@ lib/libXi.so.7.0
 lib/libXi.so.10.1
 lib/libXi.so.11.0
 lib/libXi.so.11.1
+lib/libXi.so.12.0
 lib/libXp.6.2.0.dylib
 lib/libXp.6.2.dylib
 lib/libXp.6.dylib
@@ -422,6 +427,7 @@ lib/libXss.so.1.0
 lib/libXss.so.2
 lib/libXss.so.2.0
 lib/libXss.so.5.0
+lib/libXss.so.6.0
 lib/libXvMC.1.0.0.dylib
 lib/libXvMC.1.dylib
 lib/libXvMC.dylib
@@ -433,6 +439,7 @@ lib/libXvMC.so.1.0
 lib/libXvMC.so.2
 lib/libXvMC.so.2.0
 lib/libXvMC.so.5.0
+lib/libXvMC.so.6.0
 lib/libXvMCW.1.0.0.dylib
 lib/libXvMCW.1.dylib
 lib/libXvMCW.dylib
@@ -456,6 +463,7 @@ lib/libXxf86misc.so.1.1
 lib/libXxf86misc.so.2
 lib/libXxf86misc.so.2.0
 lib/libXxf86misc.so.5.0
+lib/libXxf86misc.so.6.0
 lib/libXxf86vm.a
 lib/libXxf86vm.la
 lib/libXxf86vm.so
@@ -464,6 +472,7 @@ lib/libXxf86vm.so.1.0
 lib/libXxf86vm.so.2
 lib/libXxf86vm.so.2.0
 lib/libXxf86vm.so.5.0
+lib/libXxf86vm.so.6.0
 lib/libdmx.1.0.0.dylib
 lib/libdmx.1.dylib
 lib/libdmx.dylib
@@ -472,6 +481,7 @@ lib/libdmx.la
 lib/libdmx.so
 lib/libdmx.so.1
 lib/libdmx.so.1.0
+lib/libdmx.so.2.0
 lib/libdps.1.0.dylib
 lib/libdps.1.dylib
 lib/libdps.a
@@ -498,6 +508,7 @@ lib/libfontenc.so.1.0
 lib/libfontenc.so.2
 lib/libfontenc.so.2.0
 lib/libfontenc.so.3.0
+lib/libfontenc.so.4.0
 lib/liboldX.6.0.0.dylib
 lib/liboldX.6.0.dylib
 lib/liboldX.6.dylib
@@ -515,6 +526,7 @@ lib/libpsres.so.1
 lib/libpsres.so.1.0
 lib/libpthread-stubs.a
 lib/libpthread-stubs.so.1.0
+lib/libpthread-stubs.so.2.0
 lib/libxf86config.a
 lib/libxkbfile.1.0.2.dylib
 lib/libxkbfile.1.dylib
@@ -540,6 +552,7 @@ lib/libxkbui.so.1.0
 lib/libxkbui.so.2
 lib/libxkbui.so.2.0
 lib/libxkbui.so.4.0
+lib/libxkbui.so.5.0
 lib/pkgconfig/pthread-stubs.pc
 lib/pkgconfig/xaw6.pc
 lib/pkgconfig/xaw7.pc
