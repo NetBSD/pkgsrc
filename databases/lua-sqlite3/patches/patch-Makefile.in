@@ -1,0 +1,30 @@
+$NetBSD: patch-Makefile.in,v 1.1 2014/05/03 13:01:24 alnsn Exp $
+
+--- Makefile.in.orig	2006-05-11 11:07:19.000000000 +0000
++++ Makefile.in
+@@ -9,7 +9,7 @@ libdir			:= @libdir@
+ libexecdir		:= @libexecdir@
+ mandir			:= @mandir@
+ 
+-luadir			:= @libdir@/lua
++luadir			:= @libdir@
+ 
+ install			:= install
+ install-data		:= $(install) -p -m 644
+@@ -27,7 +27,6 @@ LIBS			:= @LIBS@
+ 
+ COMPILE			= $(CC) -c $(CFLAGS) -o $@ $<
+ LINK			= $(CC) $(LDFLAGS) -o $@ $+ $(LIBS)
+-LINKSHARED		= $(CC) -shared  $(LDFLAGS) -o $@ $+ $(LIBS)
+ 
+ DESTDIR			=
+ 
+@@ -127,7 +126,7 @@ libluasqlite3.o:	libluasqlite3.c
+ 			$(COMPILE)
+ 
+ libluasqlite3.so:	libluasqlite3.o
+-			$(LINKSHARED)
++			$(CC) -shared  $(LDFLAGS) libluasqlite3.o -o $@ $(LIBS)
+ 
+ libluasqlite3-loader.lua.install: libluasqlite3-loader.lua.in
+ 			m4 -DSHARED_LIB_PATH=$(luadir)				\

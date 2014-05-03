@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2014/02/12 23:18:31 tron Exp $
+# $NetBSD: Makefile,v 1.30 2014/05/03 13:01:24 alnsn Exp $
 
 DISTNAME=	modsecurity-apache_2.7.7
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/apache_//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www security
 MASTER_SITES=	https://www.modsecurity.org/tarball/${PKGVERSION_NOREV}/
 
@@ -19,10 +19,11 @@ USE_LANGUAGES=		c++ c
 .include "../../mk/apache.mk"
 .include "options.mk"
 
-GNU_CONFIGURE=		YES
-USE_TOOLS+=		pax
-USE_LIBTOOL=		yes
-BUILD_DIRS=		apache2
+GNU_CONFIGURE=			YES
+USE_TOOLS+=			pax
+USE_LIBTOOL=			yes
+BUILD_DIRS=			apache2
+LUA_VERSIONS_INCOMPATIBLE=	52
 
 CONFIGURE_ARGS+=	--with-apxs=${APXS}
 CONFIGURE_ARGS+=	--with-pcre=${BUILDLINK_PREFIX.pcre}
@@ -49,5 +50,6 @@ post-install:
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
