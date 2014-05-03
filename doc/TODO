@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13264 2014/05/02 12:16:51 wiz Exp $
+$NetBSD: TODO,v 1.13265 2014/05/03 06:36:39 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -522,7 +522,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o evolution-couchdb-0.4.5
 	o evolution-mapi-0.32.2 [GNOME 2.32]
 	o ex-20050325
-	o ezmlm-idx-5.1.2 [schmonz]
+	o ezmlm-idx-7.2.0 [schmonz]
 	o faces-1.7.7
 	o fakeroot-1.6.5
 	o fcitx-3.6.2
