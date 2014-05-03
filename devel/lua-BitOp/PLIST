@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/03 13:02:38 alnsn Exp $
+${LUA_CDIR}/bit.so
+${LUA_DOCDIR}/api.html
+${LUA_DOCDIR}/bluequad-print.css
+${LUA_DOCDIR}/bluequad.css
+${LUA_DOCDIR}/changes.html
+${LUA_DOCDIR}/contact.html
+${LUA_DOCDIR}/img/contact.png
+${LUA_DOCDIR}/index.html
+${LUA_DOCDIR}/install.html
+${LUA_DOCDIR}/semantics.html
