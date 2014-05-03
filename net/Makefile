@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1011 2014/04/26 15:55:12 manu Exp $
+# $NetBSD: Makefile,v 1.1012 2014/05/03 15:21:03 rodent Exp $
 #
 
 COMMENT=	Networking tools
@@ -547,6 +547,7 @@ SUBDIR+=	py-dns
 SUBDIR+=	py-dns3
 SUBDIR+=	py-dpkt
 SUBDIR+=	py-dropbox
+SUBDIR+=	py-eventlib
 SUBDIR+=	py-foolscap
 SUBDIR+=	py-google
 SUBDIR+=	py-hatop
