@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/10/30 06:18:09 dholland Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/03 13:00:44 alnsn Exp $
 
 DISTNAME=	lua-${LUA_VERSION}
 PKGNAME=	lua51-${LUA_VERSION}
@@ -26,8 +26,8 @@ CFLAGS+=	-DLUA_ROOT=\"${PREFIX}/\"
 
 MAKE_FLAGS+=	CC=cc
 
-DOCDIR=		${PREFIX}/share/doc/lua
-EGDIR=		${PREFIX}/share/examples/lua
+DOCDIR=		${PREFIX}/share/doc/lua-5.1
+EGDIR=		${PREFIX}/share/examples/lua-5.1
 
 .if ${OPSYS} == "FreeBSD"
 BUILD_TARGET=	freebsd
@@ -74,8 +74,9 @@ post-install:
 	cd ${WRKSRC}/etc; for f in README *.c *.ico *.lua; do \
 		${INSTALL_DATA} "$$f" ${DESTDIR}${EGDIR}/etc;		\
 	done
-	${INSTALL_DATA} ${WRKSRC}/etc/lua.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
+	${INSTALL_DATA} ${WRKSRC}/etc/lua.pc \
+	    ${DESTDIR}${PREFIX}/lib/pkgconfig/lua-5.1.pc
 
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: luaversion.mk,v 1.4 2013/11/05 11:26:44 obache Exp $
+# $NetBSD: luaversion.mk,v 1.5 2014/05/03 13:00:44 alnsn Exp $
 
 # This file determins which Lua version is used as a dependency for
 # a package.
@@ -46,6 +46,17 @@
 #	The prefix to use in PKGNAME for multiversion packages.
 #
 #	Example: lua51
+#
+# LUA_INCDIR
+#	Relative path to include files.
+#
+#	Example: include/lua-51
+#
+# LUA_INTERPRETER
+#	Full path to Lua interpreter.
+#
+# LUA_COMPILER
+#	Full path to Lua bytecode compiler (luac).
 #
 # Keywords: Lua
 #
@@ -126,5 +137,9 @@ PKG_FAIL_REASION+=	"No valid Lua version found"
 
 .include "${LUA_PKGSRCDIR}/version.mk"
 _LUA_DOT_VERSION=	${LUA_VERSION_MAJOR}.${LUA_VERSION_MINOR}
+
+LUA_INCDIR=		include/lua-${_LUA_DOT_VERSION}
+LUA_INTERPRETER=	${LOCALBASE}/bin/lua${_LUA_DOT_VERSION}
+LUA_COMPILER=		${LOCALBASE}/bin/luac${_LUA_DOT_VERSION}
 
 .endif  # LUA_LUAVERSION_MK
