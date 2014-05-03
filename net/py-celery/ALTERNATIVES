@@ -1,0 +1,4 @@
+bin/celery @PREFIX@/bin/celery@PYVERSSUFFIX@
+bin/celerybeat@ @PREFIX@/bin/celerybeat@PYVERSSUFFIX@
+bin/celeryd @PREFIX@/bin/celeryd@PYVERSSUFFIX@
+bin/celeryd-multi @PREFIX@/bin/celeryd-multi@PYVERSSUFFIX@
