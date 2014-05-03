@@ -1,0 +1,23 @@
+$NetBSD: patch-Makefile,v 1.1 2014/05/03 13:02:38 alnsn Exp $
+
+--- Makefile.orig	2012-05-08 19:15:00.000000000 +0000
++++ Makefile
+@@ -3,7 +3,7 @@
+ # To compile with MinGW please run: mingw32-make -f Makefile.mingw
+ 
+ # Include path where lua.h, luaconf.h and lauxlib.h reside:
+-INCLUDES= -I/usr/local/include
++INCLUDES= -I $(LUA_INC)
+ 
+ DEFINES=
+ # Use this for the old ARM ABI with swapped FPA doubles.
+@@ -39,7 +39,8 @@ $(MODSO): $(MODNAME).o
+ 	$(SOCC) $(SOLDFLAGS) -o $@ $<
+ 
+ install: $(MODSO)
+-	$(INSTALL) $< `$(INSTALLPATH) $(MODNAME)`
++	${BSD_INSTALL_LIB} ${MODSO} ${DESTDIR}${PREFIX}/${LUA_CDIR}
++	cp -r doc/* ${DESTDIR}${PREFIX}/${LUA_DOCDIR}
+ 
+ test: $(MODSO)
+ 	@$(LUA) bittest.lua && echo "basic test OK"

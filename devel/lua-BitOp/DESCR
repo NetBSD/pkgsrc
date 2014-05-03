@@ -1,0 +1,2 @@
+Lua BitOp is a C extension module for Lua which adds bitwise
+operations on numbers.
