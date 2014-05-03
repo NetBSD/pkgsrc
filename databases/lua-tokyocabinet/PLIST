@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:43:18 joerg Exp $
-bin/tcbtest.lua
-bin/tcftest.lua
-bin/tchtest.lua
-bin/tcutest.lua
+@comment $NetBSD: PLIST,v 1.3 2014/05/03 13:01:24 alnsn Exp $
+${LUA_EXAMPLESDIR}/tcbtest.lua
+${LUA_EXAMPLESDIR}/tcftest.lua
+${LUA_EXAMPLESDIR}/tchtest.lua
+${LUA_EXAMPLESDIR}/tcutest.lua
 ${LUA_CDIR}/tokyocabinet.so
-share/tokyocabinet/doc/lua/index.html
-share/tokyocabinet/doc/lua/luadoc.css
-share/tokyocabinet/doc/lua/modules/tokyocabinet.html
+${LUA_DOCDIR}/index.html
+${LUA_DOCDIR}/luadoc.css
+${LUA_DOCDIR}/modules/tokyocabinet.html
