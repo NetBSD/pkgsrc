@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1712 2014/05/03 13:31:28 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.1713 2014/05/03 13:32:54 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2430,3 +2430,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated finance/py-stripe to 1.14.0 [rodent 2014-05-03]
 	Updated finance/py-trytond-currency to 3.2.0 [rodent 2014-05-03]
 	Updated geography/py-trytond-country to 3.2.0 [rodent 2014-05-03]
+	Updated misc/py-trytond-party to 3.2.0 [rodent 2014-05-03]
