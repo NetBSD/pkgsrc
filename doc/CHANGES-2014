@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1705 2014/05/03 12:54:49 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.1706 2014/05/03 12:58:54 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2422,3 +2422,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/vimpager to 1.8.8 [nonaka 2014-05-03]
 	Updated textproc/p5-XML-LibXML to 2.0116 [wen 2014-05-03]
 	Updated devel/py-logan to 0.5.10 [rodent 2014-05-03]
+	Updated devel/py-modulegraph to 0.11.1 [rodent 2014-05-03]
