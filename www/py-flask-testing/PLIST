@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/03 02:13:35 rodent Exp $
+${PYSITELIB}/Flask_Testing-${PKGVERSION}-py2.7.egg-info/PKG-INFO
+${PYSITELIB}/Flask_Testing-${PKGVERSION}-py2.7.egg-info/SOURCES.txt
+${PYSITELIB}/Flask_Testing-${PKGVERSION}-py2.7.egg-info/dependency_links.txt
+${PYSITELIB}/Flask_Testing-${PKGVERSION}-py2.7.egg-info/not-zip-safe
+${PYSITELIB}/Flask_Testing-${PKGVERSION}-py2.7.egg-info/requires.txt
+${PYSITELIB}/Flask_Testing-${PKGVERSION}-py2.7.egg-info/top_level.txt
+${PYSITELIB}/flask_testing/__init__.py
+${PYSITELIB}/flask_testing/__init__.pyc
+${PYSITELIB}/flask_testing/__init__.pyo
+${PYSITELIB}/flask_testing/twill.py
+${PYSITELIB}/flask_testing/twill.pyc
+${PYSITELIB}/flask_testing/twill.pyo
+${PYSITELIB}/flask_testing/utils.py
+${PYSITELIB}/flask_testing/utils.pyc
+${PYSITELIB}/flask_testing/utils.pyo
