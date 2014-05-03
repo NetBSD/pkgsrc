@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/02/01 18:26:44 rodent Exp $
+$NetBSD: distinfo,v 1.2 2014/05/03 13:32:42 rodent Exp $
 
-SHA1 (trytond_party-3.0.0.tar.gz) = 5fea84a9989fef2f230cb4765b8f0d35b351c2ae
-RMD160 (trytond_party-3.0.0.tar.gz) = b214cc9a5f08eddd8eeb97bcdd1f0eb9a557fefa
-Size (trytond_party-3.0.0.tar.gz) = 55472 bytes
+SHA1 (trytond_party-3.2.0.tar.gz) = 077ad59649defd76dbb2952c476580f617040621
+RMD160 (trytond_party-3.2.0.tar.gz) = 00936aa90d5d1da787cc84f7655a1de88854b94d
+Size (trytond_party-3.2.0.tar.gz) = 55529 bytes
