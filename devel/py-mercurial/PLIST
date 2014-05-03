@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/04/21 13:34:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/05/03 11:53:59 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -99,9 +99,6 @@ ${PYSITELIB}/hgext/highlight/highlight.pyo
 ${PYSITELIB}/hgext/histedit.py
 ${PYSITELIB}/hgext/histedit.pyc
 ${PYSITELIB}/hgext/histedit.pyo
-${PYSITELIB}/hgext/interhg.py
-${PYSITELIB}/hgext/interhg.pyc
-${PYSITELIB}/hgext/interhg.pyo
 ${PYSITELIB}/hgext/keyword.py
 ${PYSITELIB}/hgext/keyword.pyc
 ${PYSITELIB}/hgext/keyword.pyo
@@ -213,6 +210,9 @@ ${PYSITELIB}/mercurial/bookmarks.pyo
 ${PYSITELIB}/mercurial/branchmap.py
 ${PYSITELIB}/mercurial/branchmap.pyc
 ${PYSITELIB}/mercurial/branchmap.pyo
+${PYSITELIB}/mercurial/bundle2.py
+${PYSITELIB}/mercurial/bundle2.pyc
+${PYSITELIB}/mercurial/bundle2.pyo
 ${PYSITELIB}/mercurial/bundlerepo.py
 ${PYSITELIB}/mercurial/bundlerepo.pyc
 ${PYSITELIB}/mercurial/bundlerepo.pyo
@@ -271,6 +271,9 @@ ${PYSITELIB}/mercurial/encoding.pyo
 ${PYSITELIB}/mercurial/error.py
 ${PYSITELIB}/mercurial/error.pyc
 ${PYSITELIB}/mercurial/error.pyo
+${PYSITELIB}/mercurial/exchange.py
+${PYSITELIB}/mercurial/exchange.pyc
+${PYSITELIB}/mercurial/exchange.pyo
 ${PYSITELIB}/mercurial/extensions.py
 ${PYSITELIB}/mercurial/extensions.pyc
 ${PYSITELIB}/mercurial/extensions.pyo
