@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1721 2014/05/03 13:48:57 alnsn Exp $
+$NetBSD: CHANGES-2014,v 1.1722 2014/05/03 13:51:11 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2437,3 +2437,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/py-trytond-stock to 3.2.0 [rodent 2014-05-03]
 	Updated misc/py-trytond-stock-lot to 3.2.0 [rodent 2014-05-03]
 	Updated time/py-trytond-calendar to 3.2.0 [rodent 2014-05-03]
+	Updated textproc/p5-XML-LibXSLT to 1.92 [wen 2014-05-03]
