@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1710 2014/05/03 13:24:05 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.1711 2014/05/03 13:27:05 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2428,3 +2428,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added Lua multiversion support [alnsn 2014-05-03]
 	Added devel/lua-BitOp version 1.0.2 [alnsn 2014-05-03]
 	Updated finance/py-stripe to 1.14.0 [rodent 2014-05-03]
+	Updated finance/py-trytond-currency to 3.2.0 [rodent 2014-05-03]
