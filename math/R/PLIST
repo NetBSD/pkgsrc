@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2014/03/14 20:15:38 markd Exp $
+@comment $NetBSD: PLIST,v 1.20 2014/05/03 22:29:42 markd Exp $
 bin/R
 bin/Rscript
 info/R-FAQ.info.gz
@@ -8,18 +8,7 @@ info/R-exts.info.gz
 info/R-intro.info.gz
 info/R-ints.info.gz
 info/R-lang.info.gz
-lib/R/doc/manual/images/QQ.png
-lib/R/doc/manual/images/ecdf.png
-lib/R/doc/manual/images/fig11.png
-lib/R/doc/manual/images/fig12.png
-lib/R/doc/manual/images/hist.png
-lib/R/doc/manual/images/ice.png
 lib/R/COPYING
-lib/R/NEWS
-lib/R/NEWS.0
-lib/R/NEWS.1
-lib/R/NEWS.2
-lib/R/NEWS.pdf
 lib/R/SVN-REVISION
 lib/R/bin/BATCH
 lib/R/bin/COMPILE
@@ -53,6 +42,11 @@ lib/R/doc/CRAN_mirrors.csv
 lib/R/doc/FAQ
 lib/R/doc/KEYWORDS
 lib/R/doc/KEYWORDS.db
+lib/R/doc/NEWS
+lib/R/doc/NEWS.0
+lib/R/doc/NEWS.1
+lib/R/doc/NEWS.2
+lib/R/doc/NEWS.pdf
 lib/R/doc/NEWS.rds
 lib/R/doc/RESOURCES
 lib/R/doc/THANKS
@@ -78,6 +72,12 @@ lib/R/doc/manual/R-exts.html
 lib/R/doc/manual/R-intro.html
 lib/R/doc/manual/R-ints.html
 lib/R/doc/manual/R-lang.html
+lib/R/doc/manual/images/QQ.png
+lib/R/doc/manual/images/ecdf.png
+lib/R/doc/manual/images/fig11.png
+lib/R/doc/manual/images/fig12.png
+lib/R/doc/manual/images/hist.png
+lib/R/doc/manual/images/ice.png
 lib/R/etc/Makeconf
 lib/R/etc/Renviron
 lib/R/etc/javaconf
@@ -96,6 +96,7 @@ lib/R/include/R_ext/Error.h
 lib/R/include/R_ext/GetX11Image.h
 lib/R/include/R_ext/GraphicsDevice.h
 lib/R/include/R_ext/GraphicsEngine.h
+lib/R/include/R_ext/Itermacros.h
 lib/R/include/R_ext/Lapack.h
 lib/R/include/R_ext/Linpack.h
 lib/R/include/R_ext/MathThreads.h
@@ -107,6 +108,7 @@ lib/R/include/R_ext/QuartzDevice.h
 lib/R/include/R_ext/R-ftp-http.h
 lib/R/include/R_ext/RS.h
 lib/R/include/R_ext/RStartup.h
+lib/R/include/R_ext/Rallocators.h
 lib/R/include/R_ext/Random.h
 lib/R/include/R_ext/Rdynload.h
 lib/R/include/R_ext/Riconv.h
@@ -147,6 +149,7 @@ lib/R/library/KernSmooth/html/R.css
 lib/R/library/KernSmooth/libs/KernSmooth.so
 lib/R/library/KernSmooth/po/de/LC_MESSAGES/R-KernSmooth.mo
 lib/R/library/KernSmooth/po/en@quot/LC_MESSAGES/R-KernSmooth.mo
+lib/R/library/KernSmooth/po/fr/LC_MESSAGES/R-KernSmooth.mo
 lib/R/library/KernSmooth/po/ko/LC_MESSAGES/R-KernSmooth.mo
 lib/R/library/KernSmooth/po/pl/LC_MESSAGES/R-KernSmooth.mo
 lib/R/library/MASS/CITATION
@@ -262,6 +265,7 @@ lib/R/library/Matrix/po/de/LC_MESSAGES/Matrix.mo
 lib/R/library/Matrix/po/de/LC_MESSAGES/R-Matrix.mo
 lib/R/library/Matrix/po/en@quot/LC_MESSAGES/Matrix.mo
 lib/R/library/Matrix/po/en@quot/LC_MESSAGES/R-Matrix.mo
+lib/R/library/Matrix/po/fr/LC_MESSAGES/R-Matrix.mo
 lib/R/library/Matrix/po/pl/LC_MESSAGES/Matrix.mo
 lib/R/library/Matrix/po/pl/LC_MESSAGES/R-Matrix.mo
 lib/R/library/Matrix/test-tools-1.R
@@ -303,6 +307,7 @@ lib/R/library/boot/NAMESPACE
 lib/R/library/boot/R/boot
 lib/R/library/boot/R/boot.rdb
 lib/R/library/boot/R/boot.rdx
+lib/R/library/boot/bd.q
 lib/R/library/boot/data/Rdata.rdb
 lib/R/library/boot/data/Rdata.rds
 lib/R/library/boot/data/Rdata.rdx
@@ -371,6 +376,8 @@ lib/R/library/cluster/html/R.css
 lib/R/library/cluster/libs/cluster.so
 lib/R/library/cluster/po/de/LC_MESSAGES/R-cluster.mo
 lib/R/library/cluster/po/en@quot/LC_MESSAGES/R-cluster.mo
+lib/R/library/cluster/po/en@quot/LC_MESSAGES/cluster.mo
+lib/R/library/cluster/po/fr/LC_MESSAGES/R-cluster.mo
 lib/R/library/cluster/po/pl/LC_MESSAGES/R-cluster.mo
 lib/R/library/codetools/DESCRIPTION
 lib/R/library/codetools/INDEX
@@ -471,6 +478,10 @@ lib/R/library/grDevices/NAMESPACE
 lib/R/library/grDevices/R/grDevices
 lib/R/library/grDevices/R/grDevices.rdb
 lib/R/library/grDevices/R/grDevices.rdx
+lib/R/library/grDevices/afm/ArialMT-Bold.afm.gz
+lib/R/library/grDevices/afm/ArialMT-BoldItalic.afm.gz
+lib/R/library/grDevices/afm/ArialMT-Italic.afm.gz
+lib/R/library/grDevices/afm/ArialMT.afm.gz
 lib/R/library/grDevices/afm/CM_boldx_10.afm.gz
 lib/R/library/grDevices/afm/CM_boldx_italic_10.afm.gz
 lib/R/library/grDevices/afm/CM_italic_10.afm.gz
@@ -635,6 +646,7 @@ lib/R/library/grid/NAMESPACE
 lib/R/library/grid/R/grid
 lib/R/library/grid/R/grid.rdb
 lib/R/library/grid/R/grid.rdx
+lib/R/library/grid/doc/DivByZero.txt
 lib/R/library/grid/doc/changes.txt
 lib/R/library/grid/doc/displaylist.pdf
 lib/R/library/grid/doc/frame.pdf
@@ -691,7 +703,7 @@ lib/R/library/lattice/po/de/LC_MESSAGES/R-lattice.mo
 lib/R/library/lattice/po/en@quot/LC_MESSAGES/R-lattice.mo
 lib/R/library/lattice/po/fr/LC_MESSAGES/R-lattice.mo
 lib/R/library/lattice/po/ko/LC_MESSAGES/R-lattice.mo
-lib/R/library/lattice/po/pl_PL/LC_MESSAGES/R-lattice.mo
+lib/R/library/lattice/po/pl/LC_MESSAGES/R-lattice.mo
 lib/R/library/methods/DESCRIPTION
 lib/R/library/methods/INDEX
 lib/R/library/methods/Meta/Rd.rds
@@ -1126,6 +1138,7 @@ lib/R/library/translations/de/LC_MESSAGES/splines.mo
 lib/R/library/translations/de/LC_MESSAGES/stats.mo
 lib/R/library/translations/de/LC_MESSAGES/tcltk.mo
 lib/R/library/translations/de/LC_MESSAGES/tools.mo
+lib/R/library/translations/de/LC_MESSAGES/utils.mo
 lib/R/library/translations/en/LC_MESSAGES/R.mo
 lib/R/library/translations/en@quot/LC_MESSAGES/R-base.mo
 lib/R/library/translations/en@quot/LC_MESSAGES/R-compiler.mo
