@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.solaris-x86_64,v 1.5 2014/02/11 09:12:12 obache Exp $
+@comment $NetBSD: PLIST.solaris-x86_64,v 1.6 2014/05/03 11:23:56 richard Exp $
 bin/sun7-java
 bin/sun7-javaws
 bin/sun7-keytool
@@ -42,6 +42,7 @@ java/sun-7/bin/unpack200
 java/sun-7/lib/alt-rt.jar
 java/sun-7/lib/amd64/headless/libmawt.so
 java/sun-7/lib/amd64/jli/libjli.so
+java/sun-7/lib/amd64/jspawnhelper
 java/sun-7/lib/amd64/jvm.cfg.default
 java/sun-7/lib/amd64/libJdbcOdbc.so
 java/sun-7/lib/amd64/libawt.so
@@ -196,6 +197,7 @@ java/sun-7/lib/i386/client/libjvm_dtrace.so
 java/sun-7/lib/i386/headless/libmawt.so
 java/sun-7/lib/i386/jexec
 java/sun-7/lib/i386/jli/libjli.so
+java/sun-7/lib/i386/jspawnhelper
 java/sun-7/lib/i386/jvm.cfg.default
 java/sun-7/lib/i386/libJdbcOdbc.so
 java/sun-7/lib/i386/libawt.so
