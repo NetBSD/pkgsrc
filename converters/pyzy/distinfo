@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2013/11/22 15:43:05 dholland Exp $
+$NetBSD: distinfo,v 1.3 2014/05/03 07:14:45 obache Exp $
 
 SHA1 (pyzy-0.1.0.tar.gz) = ffe67a455a537c8ed8a0d138eb014945cd982927
 RMD160 (pyzy-0.1.0.tar.gz) = 26cf64a977b030456bd74cca40fc9c9f476f7b7d
@@ -6,4 +6,4 @@ Size (pyzy-0.1.0.tar.gz) = 1571946 bytes
 SHA1 (pyzy-database-1.0.0.tar.bz2) = e38a148a772e9909facda66b2d579e17b94cccbe
 RMD160 (pyzy-database-1.0.0.tar.bz2) = 1679567f31c20a235577f02175df38e16a05e7de
 Size (pyzy-database-1.0.0.tar.bz2) = 9977983 bytes
-SHA1 (patch-src_Database.h) = a35156bb6f7804ab2f7fcdd3c1d2fbaa39115b3b
+SHA1 (patch-src_Database.h) = 93615161afee7614899a8a7248b46a355de75de2
