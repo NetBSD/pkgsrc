@@ -6,4 +6,5 @@ lib/libpciaccess.so.0
 lib/libpciaccess.so.0.0
 lib/libpciaccess.so.0.1
 lib/libpciaccess.so.0.2
+lib/libpciaccess.so.2.0
 lib/pkgconfig/pciaccess.pc
