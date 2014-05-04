@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2014/04/09 07:27:03 obache Exp $
+# $NetBSD: Makefile,v 1.8 2014/05/04 16:56:01 wiz Exp $
 
-DISTNAME=	libcdr-0.0.14
-PKGREVISION=	1
+DISTNAME=	libcdr-0.0.16
 CATEGORIES=	converters
 MASTER_SITES=	http://dev-www.libreoffice.org/src/
 EXTRACT_SUFX=	.tar.xz
@@ -11,7 +10,7 @@ HOMEPAGE=	http://www.freedesktop.org/wiki/Software/libcdr/
 COMMENT=	Corel Draw file format importer library
 LICENSE=	gnu-lgpl-v2.1 OR mpl-1.1 OR gnu-gpl-v2
 
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
