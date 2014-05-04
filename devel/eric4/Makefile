@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.40 2014/02/12 23:17:46 tron Exp $
+# $NetBSD: Makefile,v 1.41 2014/05/04 13:10:47 rodent Exp $
 
 VERS=			4.5.18
 DISTNAME=		eric4-${VERS}
 PKGREVISION=		1
 CATEGORIES=		devel
-MASTER_SITES=	http://downloads.sourceforge.net/project/eric-ide/eric4/stable/${VERS}/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=eric-ide/}
 EXTRACT_USING=		gtar
 
 MAINTAINER=		helgoman@users.sourceforge.net
