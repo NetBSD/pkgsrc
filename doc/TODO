@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13282 2014/05/04 17:15:49 wiz Exp $
+$NetBSD: TODO,v 1.13283 2014/05/04 17:17:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -980,7 +980,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-sybase-0.37
 	o py-tlslite-0.4.6
 	o py-uliweb-0.2.4
-	o py-virtualenv-1.11.5
 	o py-wxWidgets-3.0.0
 	o py-zconfig-3.0.3
 	o python-3.4.0
