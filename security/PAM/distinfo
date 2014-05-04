@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2010/02/02 17:09:28 tnn Exp $
+$NetBSD: distinfo,v 1.18 2014/05/04 09:30:26 ryoon Exp $
 
 SHA1 (Linux-PAM-0.77.tar.gz) = 58dff29aec3c0b6a9e9b53af6fb643056ce0f304
 RMD160 (Linux-PAM-0.77.tar.gz) = 15391ed7bed7b506bb391608b735332d0391580c
@@ -18,7 +18,7 @@ SHA1 (patch-al) = 29c9ca136655d49d739d3c4dc664af9f0b1a5fa8
 SHA1 (patch-am) = 9cf69342d0c6665ff6d9eebec35d6c3898854c8a
 SHA1 (patch-an) = 46e85fc6db95eda99ed664e7d4282a49d95437c4
 SHA1 (patch-ao) = da8c42c2afa2c66fee4e8f453970d1a4b3a0f285
-SHA1 (patch-ap) = 0a923b67a909dde6f72129b0c853088f9d48bd91
+SHA1 (patch-ap) = 92fbf06fb0cbf89971ebd59e8172c3db2f406963
 SHA1 (patch-aq) = 91587c5b9c6587221708247decb0e82f665ae2bf
 SHA1 (patch-ar) = b8072ebbc1a38c26d44c0e087a2b8b93f1eb7768
 SHA1 (patch-as) = e4fdfef53c097985c2aa8ff8225fed1caa812c10
