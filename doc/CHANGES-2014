@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1746 2014/05/04 17:04:57 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1747 2014/05/04 17:06:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2463,3 +2463,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/liblangtag to 0.5.3 [wiz 2014-05-04]
 	Updated converters/libetonyek to 0.0.4 [wiz 2014-05-04]
 	Updated devel/memcached to 1.4.19 [wiz 2014-05-04]
+	Updated textproc/rasqal to 0.9.32 [wiz 2014-05-04]
