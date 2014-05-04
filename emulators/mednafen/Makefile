@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/01/08 10:43:02 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.21 2014/05/04 16:18:55 wiz Exp $
 
 DISTNAME=	mednafen-0.8.D.3
 PKGNAME=	mednafen-0.8.13.3
@@ -8,7 +7,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mednafen/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mednafen.sourceforge.net/
 COMMENT=	Portable multi-system emulator
 LICENSE=	gnu-gpl-v2
