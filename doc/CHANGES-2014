@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1742 2014/05/04 16:58:54 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1743 2014/05/04 17:00:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2459,3 +2459,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/libdrm to 2.4.54 [wiz 2014-05-04]
 	Updated converters/libcdr to 0.0.16 [wiz 2014-05-04]
 	Updated fonts/harfbuzz to 0.9.28 [wiz 2014-05-04]
+	Updated converters/libabw to 0.0.2 [wiz 2014-05-04]
