@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1740 2014/05/04 16:50:42 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1741 2014/05/04 16:56:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2457,3 +2457,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/dbus to 1.8.2 [wiz 2014-05-04]
 	Updated x11/xterm to 304 [wiz 2014-05-04]
 	Updated x11/libdrm to 2.4.54 [wiz 2014-05-04]
+	Updated converters/libcdr to 0.0.16 [wiz 2014-05-04]
