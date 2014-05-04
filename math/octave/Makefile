@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2014/05/04 13:46:42 rodent Exp $
+# $NetBSD: Makefile,v 1.121 2014/05/04 13:49:57 rodent Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
 PKGREVISION=	5
@@ -11,6 +11,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.octave.org/
 COMMENT=	High-level language, intended for numerical computations
+LICENSE=	gnu-gpl-v3
 
 BUILD_DEPENDS+=	gperf>=2.7:../../devel/gperf
 BUILD_DEPENDS+=	teTeX-[0-9]*:../../print/teTeX
