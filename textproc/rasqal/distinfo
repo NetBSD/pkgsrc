@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2013/01/29 06:15:51 wiz Exp $
+$NetBSD: distinfo,v 1.10 2014/05/04 17:06:35 wiz Exp $
 
-SHA1 (rasqal-0.9.30.tar.gz) = 8e104acd68fca9b3b97331746e08d53d07d2e20a
-RMD160 (rasqal-0.9.30.tar.gz) = 8315761da9343c8f247ac0ddcda93d8be191dad5
-Size (rasqal-0.9.30.tar.gz) = 1469921 bytes
+SHA1 (rasqal-0.9.32.tar.gz) = e16621cdc939cba3e35a9205fa4697de4940961b
+RMD160 (rasqal-0.9.32.tar.gz) = 1997e3d4247eb6ce901048b03922852032fc5cc5
+Size (rasqal-0.9.32.tar.gz) = 1544623 bytes
