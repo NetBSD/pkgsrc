@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1749 2014/05/04 17:12:43 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1750 2014/05/04 17:13:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2466,3 +2466,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/rasqal to 0.9.32 [wiz 2014-05-04]
 	Updated textproc/redland to 1.0.17 [wiz 2014-05-04]
 	Updated www/py-cherrypy to 3.3.0 [wiz 2014-05-04]
+	Updated textproc/py-yaml to 3.11 [wiz 2014-05-04]
