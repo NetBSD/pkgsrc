@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1744 2014/05/04 17:01:41 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1745 2014/05/04 17:03:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2461,3 +2461,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated fonts/harfbuzz to 0.9.28 [wiz 2014-05-04]
 	Updated converters/libabw to 0.0.2 [wiz 2014-05-04]
 	Updated devel/liblangtag to 0.5.3 [wiz 2014-05-04]
+	Updated converters/libetonyek to 0.0.4 [wiz 2014-05-04]
