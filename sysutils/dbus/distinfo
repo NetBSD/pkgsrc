@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.51 2014/04/29 10:18:54 obache Exp $
+$NetBSD: distinfo,v 1.52 2014/05/04 16:44:08 wiz Exp $
 
-SHA1 (dbus-1.8.0.tar.gz) = d14ab33e92e29fa732cdff69214913832181e737
-RMD160 (dbus-1.8.0.tar.gz) = f0a4e143d7bd9d97cee1e0e59140e17eee92c132
-Size (dbus-1.8.0.tar.gz) = 1860965 bytes
+SHA1 (dbus-1.8.2.tar.gz) = 00920d24935ce1fd28cf168b09706e09bf6d4746
+RMD160 (dbus-1.8.2.tar.gz) = 5ca50a12dd5bbdab55ed83a1a0eba3535d1e810a
+Size (dbus-1.8.2.tar.gz) = 1859949 bytes
 SHA1 (patch-aa) = 0c3d145979e3b2358261c9f7f34701d02eb6ecd4
 SHA1 (patch-ak) = 6d05ebde29acb3f6cb6f577dd2f2b734f590e8dd
 SHA1 (patch-al) = 57d08196e9daf49eb6bda2b30f019ce2cad77c6f
