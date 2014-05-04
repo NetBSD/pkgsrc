@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1751 2014/05/04 17:14:20 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1752 2014/05/04 17:15:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2468,3 +2468,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-cherrypy to 3.3.0 [wiz 2014-05-04]
 	Updated textproc/py-yaml to 3.11 [wiz 2014-05-04]
 	Updated devel/py-setuptools to 3.5 [wiz 2014-05-04]
+	Updated sysutils/py-psutil to 2.1.1 [wiz 2014-05-04]
