@@ -1,6 +1,6 @@
-$NetBSD: patch-ap,v 1.3 2002/12/23 21:23:59 jlam Exp $
+$NetBSD: patch-ap,v 1.4 2014/05/04 09:30:26 ryoon Exp $
 
---- modules/pam_unix/pam_unix_acct.c.orig	Wed Dec 20 00:15:05 2000
+--- modules/pam_unix/pam_unix_acct.c.orig	2000-12-20 05:15:05.000000000 +0000
 +++ modules/pam_unix/pam_unix_acct.c
 @@ -43,7 +43,9 @@
  #include <sys/types.h>
@@ -12,7 +12,18 @@ $NetBSD: patch-ap,v 1.3 2002/12/23 21:23:59 jlam Exp $
  #include <time.h>		/* for time() */
  
  #include <security/_pam_macros.h>
-@@ -71,8 +73,10 @@ PAM_EXTERN int pam_sm_acct_mgmt(pam_hand
+@@ -60,6 +62,10 @@
+ 
+ #include "support.h"
+  
++#ifndef _PASSWORD_WARNDAYS
++#define _PASSWORD_WARNDAYS 14
++#endif
++
+ /*
+  * PAM framework looks for this entry-point to pass control to the
+  * account management module.
+@@ -71,8 +77,10 @@ PAM_EXTERN int pam_sm_acct_mgmt(pam_hand
  	unsigned int ctrl;
  	const char *uname;
  	int retval, daysleft;
@@ -24,7 +35,7 @@ $NetBSD: patch-ap,v 1.3 2002/12/23 21:23:59 jlam Exp $
  	struct passwd *pwent;
  	char buf[80];
  
-@@ -113,7 +117,9 @@ PAM_EXTERN int pam_sm_acct_mgmt(pam_hand
+@@ -113,7 +121,9 @@ PAM_EXTERN int pam_sm_acct_mgmt(pam_hand
  					return PAM_CRED_INSUFFICIENT;
  			}
  		}
@@ -34,7 +45,7 @@ $NetBSD: patch-ap,v 1.3 2002/12/23 21:23:59 jlam Exp $
  		if (save_uid == pwent->pw_uid)
  			setreuid( save_uid, save_euid );
  		else {
-@@ -123,15 +129,21 @@ PAM_EXTERN int pam_sm_acct_mgmt(pam_hand
+@@ -123,15 +133,21 @@ PAM_EXTERN int pam_sm_acct_mgmt(pam_hand
  		}
  
  	} else if (!strcmp( pwent->pw_passwd, "x" )) {
@@ -57,7 +68,7 @@ $NetBSD: patch-ap,v 1.3 2002/12/23 21:23:59 jlam Exp $
  	D(("today is %d, last change %d", curdays, spent->sp_lstchg));
  	if ((curdays > spent->sp_expire) && (spent->sp_expire != -1)
  	    && (spent->sp_lstchg != 0)) {
-@@ -143,6 +155,29 @@ PAM_EXTERN int pam_sm_acct_mgmt(pam_hand
+@@ -143,6 +159,29 @@ PAM_EXTERN int pam_sm_acct_mgmt(pam_hand
  		D(("account expired"));
  		return PAM_ACCT_EXPIRED;
  	}
@@ -87,7 +98,7 @@ $NetBSD: patch-ap,v 1.3 2002/12/23 21:23:59 jlam Exp $
  	if ((curdays > (spent->sp_lstchg + spent->sp_max + spent->sp_inact))
  	    && (spent->sp_max != -1) && (spent->sp_inact != -1)
  	    && (spent->sp_lstchg != 0)) {
-@@ -154,7 +189,9 @@ PAM_EXTERN int pam_sm_acct_mgmt(pam_hand
+@@ -154,7 +193,9 @@ PAM_EXTERN int pam_sm_acct_mgmt(pam_hand
  		D(("account expired 2"));
  		return PAM_ACCT_EXPIRED;
  	}
@@ -97,7 +108,7 @@ $NetBSD: patch-ap,v 1.3 2002/12/23 21:23:59 jlam Exp $
  	if (spent->sp_lstchg == 0) {
  		_log_err(LOG_NOTICE, pamh
  			 ,"expired password for user %s (root enforced)"
-@@ -173,6 +210,19 @@ PAM_EXTERN int pam_sm_acct_mgmt(pam_hand
+@@ -173,6 +214,19 @@ PAM_EXTERN int pam_sm_acct_mgmt(pam_hand
  		D(("need a new password 2"));
  		return PAM_NEW_AUTHTOK_REQD;
  	}
@@ -117,14 +128,11 @@ $NetBSD: patch-ap,v 1.3 2002/12/23 21:23:59 jlam Exp $
  	if ((curdays > (spent->sp_lstchg + spent->sp_max - spent->sp_warn))
  	    && (spent->sp_max != -1) && (spent->sp_warn != -1)) {
  		daysleft = (spent->sp_lstchg + spent->sp_max) - curdays;
-@@ -183,6 +233,21 @@ PAM_EXTERN int pam_sm_acct_mgmt(pam_hand
+@@ -183,6 +237,18 @@ PAM_EXTERN int pam_sm_acct_mgmt(pam_hand
  			 daysleft, daysleft == 1 ? "" : "s");
  		_make_remark(pamh, ctrl, PAM_TEXT_INFO, buf);
  	}
 +#else
-+#ifndef _PASSWORD_WARNDAYS
-+#define _PASSWORD_WARNDAYS 14
-+#endif
 +	if ((now + _PASSWORD_WARNDAYS * 60 * 60 * 24 > pwent->pw_change)
 +	    && (pwent->pw_change != 0) && (pwent->pw_change != -1)) {
 +		daysleft = (pwent->pw_change - now) / (60 * 60 * 24);
