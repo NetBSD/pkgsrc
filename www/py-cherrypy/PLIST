@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/01/20 11:19:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/05/04 17:12:34 wiz Exp $
 bin/cherryd
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -103,6 +103,12 @@ ${PYSITELIB}/cherrypy/lib/httputil.pyo
 ${PYSITELIB}/cherrypy/lib/jsontools.py
 ${PYSITELIB}/cherrypy/lib/jsontools.pyc
 ${PYSITELIB}/cherrypy/lib/jsontools.pyo
+${PYSITELIB}/cherrypy/lib/lockfile.py
+${PYSITELIB}/cherrypy/lib/lockfile.pyc
+${PYSITELIB}/cherrypy/lib/lockfile.pyo
+${PYSITELIB}/cherrypy/lib/locking.py
+${PYSITELIB}/cherrypy/lib/locking.pyc
+${PYSITELIB}/cherrypy/lib/locking.pyo
 ${PYSITELIB}/cherrypy/lib/profiler.py
 ${PYSITELIB}/cherrypy/lib/profiler.pyc
 ${PYSITELIB}/cherrypy/lib/profiler.pyo
@@ -291,9 +297,6 @@ ${PYSITELIB}/cherrypy/tutorial/README.txt
 ${PYSITELIB}/cherrypy/tutorial/__init__.py
 ${PYSITELIB}/cherrypy/tutorial/__init__.pyc
 ${PYSITELIB}/cherrypy/tutorial/__init__.pyo
-${PYSITELIB}/cherrypy/tutorial/bonus-sqlobject.py
-${PYSITELIB}/cherrypy/tutorial/bonus-sqlobject.pyc
-${PYSITELIB}/cherrypy/tutorial/bonus-sqlobject.pyo
 ${PYSITELIB}/cherrypy/tutorial/custom_error.html
 ${PYSITELIB}/cherrypy/tutorial/pdf_file.pdf
 ${PYSITELIB}/cherrypy/tutorial/tut01_helloworld.py
