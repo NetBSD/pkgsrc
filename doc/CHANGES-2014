@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1737 2014/05/04 06:20:30 adam Exp $
+$NetBSD: CHANGES-2014,v 1.1738 2014/05/04 16:44:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2454,3 +2454,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated math/R to 3.1.0 [markd 2014-05-03]
 	Updated converters/py-simplejson to 3.4.1 [rodent 2014-05-03]
 	Updated www/serf to 1.3.5 [adam 2014-05-04]
+	Updated sysutils/dbus to 1.8.2 [wiz 2014-05-04]
