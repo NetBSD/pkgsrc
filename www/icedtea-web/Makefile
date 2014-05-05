@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2014/02/12 23:18:45 tron Exp $
+# $NetBSD: Makefile,v 1.34 2014/05/05 00:48:26 ryoon Exp $
 
 # Keep icedtea-web distfile in sync with lang/openjdk7/icedtea-extras.mk
 DISTNAME=	icedtea-web-81dfc0552a1c
 PKGNAME=	icedtea-web-1.5pre
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	www
 MASTER_SITES=	-http://icedtea.classpath.org/hg/icedtea-web/archive/81dfc0552a1c.tar.bz2
 EXTRACT_SUFX=	.tar.bz2
