@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2013/12/23 11:57:03 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2014/05/05 01:51:22 rh Exp $
 
-DISTNAME=	libobjc2-1.6.1
+DISTNAME=	libobjc2-1.7
 PKGNAME=	${DISTNAME:S/libobjc2/gnustep-objc/}
 CATEGORIES=	devel gnustep
 MASTER_SITES=	http://download.gna.org/gnustep/
@@ -12,12 +12,8 @@ COMMENT=	Objective-C runtime
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=			objc
-USE_TOOLS+=			gmake
-MAKE_FILE=			GNUmakefile
-MAKE_ENV+=			ADDITIONAL_LDFLAGS=-lpthread
-GNUSTEP_OVERRIDE_INSTALL=	YES
-NO_CONFIGURE=			YES
+USE_CMAKE=			YES
+#MAKE_ENV+=			ADDITIONAL_LDFLAGS=-lpthread
 
-.include "../../devel/gnustep-make/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
