@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2014/01/25 10:30:13 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2014/05/05 22:56:03 joerg Exp $
 
-DISTNAME=	bulk-medium-20140121
+DISTNAME=	bulk-medium-20140505
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -219,7 +219,6 @@ BUILD_DEPENDS+=	hicolor-icon-theme-[0-9]*:../../graphics/hicolor-icon-theme
 # 6. Other very small packages
 #
 BUILD_DEPENDS+=	${LUA_PKGPREFIX}-stdlib-[0-9]*:../../devel/lua-stdlib
-BUILD_DEPENDS+=	${LUA_PKGPREFIX}-stdlib-doc-[0-9]*:../../devel/lua-stdlib-doc
 
 #
 # Note that (unlike in bulk-small) we make no effort to list or track
