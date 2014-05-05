@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.26 2014/01/01 11:52:04 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.27 2014/05/05 00:48:24 ryoon Exp $
 
 BUILDLINK_TREE+=	compiz-fusion-plugins-main
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	compiz-fusion-plugins-main
 COMPIZ_FUSION_PLUGINS_MAIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.compiz-fusion-plugins-main+=	compiz-fusion-plugins-main>=0.6.0nb1
-BUILDLINK_ABI_DEPENDS.compiz-fusion-plugins-main+=	compiz-fusion-plugins-main>=0.8.8nb5
+BUILDLINK_ABI_DEPENDS.compiz-fusion-plugins-main+=	compiz-fusion-plugins-main>=0.8.8nb9
 BUILDLINK_PKGSRCDIR.compiz-fusion-plugins-main?=	../../wm/compiz-fusion-plugins-main
 
 .include "../../x11/libXrandr/buildlink3.mk"

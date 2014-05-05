@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2013/10/10 14:42:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2014/05/05 00:48:15 ryoon Exp $
 #
 
 DISTNAME=	nfdump-1.6.6
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nfdump/}
 

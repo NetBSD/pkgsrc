@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2013/10/10 14:41:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.36 2014/05/05 00:48:37 ryoon Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -6,7 +6,7 @@ XFCE4_VERSION=	0.3.101
 
 DISTNAME=	exo-${XFCE4_VERSION}
 PKGNAME=	xfce4-exo-${XFCE4_VERSION}
-PKGREVISION=	24
+PKGREVISION=	25
 CATEGORIES=	x11
 COMMENT=	Xfce extension library
 

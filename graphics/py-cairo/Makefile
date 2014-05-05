@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2014/02/12 00:30:03 prlw1 Exp $
+# $NetBSD: Makefile,v 1.45 2014/05/05 00:47:59 ryoon Exp $
 
 DISTNAME=		py2cairo-1.10.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py2//}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		graphics
 MASTER_SITES=		http://cairographics.org/releases/
 EXTRACT_SUFX=		.tar.bz2

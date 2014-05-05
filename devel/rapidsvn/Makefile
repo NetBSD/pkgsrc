@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.79 2014/04/09 07:27:06 obache Exp $
+# $NetBSD: Makefile,v 1.80 2014/05/05 00:47:46 ryoon Exp $
 
 DISTNAME=		rapidsvn-0.12.1
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		devel x11 scm
 MASTER_SITES=		http://www.rapidsvn.org/download/release/0.12.1/
 

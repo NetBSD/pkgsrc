@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2013/10/10 14:41:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2014/05/05 00:48:31 ryoon Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	libxfce4menu-${XFCE4_VERSION}
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	x11
 COMMENT=	Xfce menu library
 

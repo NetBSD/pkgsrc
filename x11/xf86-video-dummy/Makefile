@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2014/01/06 02:14:07 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/05 00:48:35 ryoon Exp $
 
 DISTNAME=	xf86-video-dummy-0.3.7
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2013/09/02 19:50:39 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2014/05/05 00:47:54 ryoon Exp $
 
 BUILDLINK_TREE+=	cairo-gobject
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	cairo-gobject
 CAIRO_GOBJECT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.cairo-gobject+=	cairo-gobject>=1.10.2
-BUILDLINK_ABI_DEPENDS.cairo-gobject+=	cairo-gobject>=1.12.16
+BUILDLINK_ABI_DEPENDS.cairo-gobject+=	cairo-gobject>=1.12.16nb1
 BUILDLINK_PKGSRCDIR.cairo-gobject?=	../../graphics/cairo-gobject
 
 .include "../../devel/glib2/buildlink3.mk"

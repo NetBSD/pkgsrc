@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2013/10/10 14:42:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2014/05/05 00:47:58 ryoon Exp $
 
 DISTNAME=	gthumb-3.0.2
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gthumb/3.0/}
 EXTRACT_SUFX=	.tar.xz

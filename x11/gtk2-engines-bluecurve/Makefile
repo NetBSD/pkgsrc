@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.39 2013/10/10 14:42:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.40 2014/05/05 00:48:29 ryoon Exp $
 #
 
 DISTNAME=	GTK2-Wonderland-Engine-1.0
 PKGNAME=	gtk2-engines-bluecurve-1.0
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=teams/art.gnome.org/themes/gtk2/}
 EXTRACT_SUFX=	.tar.bz2
