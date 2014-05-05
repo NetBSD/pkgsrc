@@ -1,4 +1,4 @@
-.\"	$NetBSD: revbump.1,v 1.16 2013/10/21 10:43:28 wiz Exp $
+.\"	$NetBSD: revbump.1,v 1.17 2014/05/05 04:38:53 obache Exp $
 .\"
 .\" Copyright (c) 2003, 2004, 2005, 2006, 2010, 2012, 2013 The NetBSD Foundation, Inc.
 .\"
@@ -98,7 +98,7 @@ blbump \*[Lt] bl3bump \*[Gt] bl3bump.manual
 [handle the *ABI_DEPENDS* bumps in bl3bump.manual manually, usually none]
 cvs diff `cat makebump` | less
 [look for PYPKGPREFIX -\*[Gt] py27
- and RUBY_PKGPREFIX -\*[Gt] ruby19 expansions
+ and RUBY_PKGPREFIX -\*[Gt] ruby200 expansions
  in buildlink files and any unrelated diffs you have in your
  local tree, and fix them]
 cvs diff `cat bl3bump makebump` | less
