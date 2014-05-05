@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.12 2014/01/02 15:18:01 ryoon Exp $
+$NetBSD: patch-ad,v 1.13 2014/05/05 21:16:28 ryoon Exp $
 
 *BSD and qnx are identified as linux.
 Add another SDK path on Mac OS X.
@@ -41,7 +41,7 @@ Add another SDK path on Mac OS X.
          grep '4f *32 *42 *45' >/dev/null 2>&1 && enable_feature big_endian
  
      # Try to find which inline keywords are supported
-@@ -1235,10 +1233,29 @@ EOF
+@@ -1235,10 +1233,32 @@ EOF
          case ${toolchain} in
              *-win*-vs*);;
              *-android-gcc);;
@@ -57,9 +57,12 @@ Add another SDK path on Mac OS X.
 +    solaris*)
 +       add_extralibs -lm -lrt
 +       ;;
-+       linux*)
++    linux*)
 +       case ${gcctarget} in
 +       *qnx6*)
++           add_extralibs -lm
++           ;;
++       *openbsd*)
 +           add_extralibs -lm
 +           ;;
 +       *)
