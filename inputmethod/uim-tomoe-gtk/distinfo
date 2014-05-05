@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2008/06/08 13:06:27 obache Exp $
+$NetBSD: distinfo,v 1.3 2014/05/05 06:11:16 obache Exp $
 
 SHA1 (uim-tomoe-gtk-0.6.0.tar.gz) = 7bf0154886ed0f06370be997d54633da3d1311fe
 RMD160 (uim-tomoe-gtk-0.6.0.tar.gz) = 61399037a5802b426fa1d17815b755145013d117
 Size (uim-tomoe-gtk-0.6.0.tar.gz) = 372357 bytes
-SHA1 (patch-aa) = e21b34e42c4a09ef2ebd61ea0040e988332983d5
+SHA1 (patch-aa) = 070e477a9e330c9918a78193524f1ea75e894881
