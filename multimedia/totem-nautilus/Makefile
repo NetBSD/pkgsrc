@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.43 2014/04/09 07:27:13 obache Exp $
+# $NetBSD: Makefile,v 1.44 2014/05/05 00:48:12 ryoon Exp $
 #
 
 .include "../../multimedia/totem/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/totem/totem-nautilus/}
-PKGREVISION=	27
+PKGREVISION=	28
 
 # override Makefile.common
 PLIST_SRC=      ${.CURDIR}/PLIST
