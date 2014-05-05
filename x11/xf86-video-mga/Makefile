@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2013/12/11 19:58:03 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2014/05/05 00:48:35 ryoon Exp $
 
 DISTNAME=	xf86-video-mga-1.6.3
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2

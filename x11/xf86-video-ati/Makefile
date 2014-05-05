@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2014/01/25 10:56:49 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2014/05/05 00:48:34 ryoon Exp $
 
 DISTNAME=	xf86-video-ati-7.3.0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2

@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2014/02/03 16:38:53 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2014/05/05 00:47:40 ryoon Exp $
 
+PKGREVISION=		1
 COMMENT=		Multi-protocol Instant Messaging client GTK frontend
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.10.8 (finch)
 
