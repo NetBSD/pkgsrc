@@ -1,24 +1,30 @@
-$NetBSD: patch-configure.ac,v 1.1 2014/03/04 12:07:16 obache Exp $
+$NetBSD: patch-configure.ac,v 1.2 2014/05/05 21:25:11 ryoon Exp $
 
 * Detect NetBSD libatomic
 * test(1) portability fix
 
---- configure.ac.orig	2013-10-04 20:54:58.000000000 +0000
+--- configure.ac.orig	2013-12-09 17:32:25.000000000 +0000
 +++ configure.ac
-@@ -407,6 +407,12 @@ if test "x$ac_cv_header_elf_h" = "xyes";
+@@ -407,6 +407,18 @@ if test "x$ac_cv_header_elf_h" = "xyes";
      CONFIG_CPPFLAGS="$CONFIG_CPPFLAGS -DU_HAVE_ELF_H=1";
  fi
  
 +# check if sys/atomic.h is present.
 +AC_CHECK_HEADERS([sys/atomic.h])
++case "${host}" in
++*-netbsd*)
 +if test "x$ac_cv_header_sys_atomic_h" = "xyes"; then
 +    CONFIG_CPPFLAGS="$CONFIG_CPPFLAGS -DU_HAVE_NETBSD_ATOMIC_OPS=1";
 +fi
++;;
++*)
++;;
++esac
 +
  U_ENABLE_DYLOAD=1
  enable=yes
  AC_MSG_CHECKING([whether to enable dynamic loading of plugins])
-@@ -1249,13 +1255,13 @@ fi
+@@ -1249,13 +1261,13 @@ fi
  # Now that we're done using CPPFLAGS etc. for tests, we can change it
  # for build.
  
