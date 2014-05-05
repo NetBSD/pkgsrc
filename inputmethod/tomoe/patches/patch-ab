@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2008/06/04 13:01:36 obache Exp $
+$NetBSD: patch-ab,v 1.2 2014/05/05 06:26:53 obache Exp $
+
+* localedir will be handled properly with pkgsrc framework.
 
 --- configure.orig	2007-06-18 03:09:07.000000000 +0000
 +++ configure
