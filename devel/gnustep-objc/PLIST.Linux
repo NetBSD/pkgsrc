@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2014/05/05 01:51:22 rh Exp $
+lib/libobjc.so.4
