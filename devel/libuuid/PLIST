@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/08 20:40:33 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/05/05 20:14:55 adam Exp $
 include/uuid/uuid.h
 lib/libuuid.la
 lib/pkgconfig/uuid.pc
@@ -9,6 +9,7 @@ man/man3/uuid_copy.3
 man/man3/uuid_generate.3
 man/man3/uuid_generate_random.3
 man/man3/uuid_generate_time.3
+man/man3/uuid_generate_time_safe.3
 man/man3/uuid_is_null.3
 man/man3/uuid_parse.3
 man/man3/uuid_time.3
