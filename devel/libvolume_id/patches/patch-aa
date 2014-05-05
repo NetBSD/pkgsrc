@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.5 2012/06/27 09:24:26 bsiegert Exp $
+$NetBSD: patch-aa,v 1.6 2014/05/05 21:13:16 ryoon Exp $
 
---- ddf_raid.c.orig	2007-12-27 02:05:32.000000000 +0100
-+++ ddf_raid.c	2011-07-26 16:09:33.749829676 +0200
+--- ddf_raid.c.orig	2007-12-27 01:05:32.000000000 +0000
++++ ddf_raid.c
 @@ -22,9 +22,9 @@
  #include <string.h>
  #include <errno.h>
  #include <ctype.h>
 -#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__MirBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__MirBSD__) || defined(__OpenBSD__)
  #include <sys/endian.h>
 -#else
 +#elif !defined(__APPLE__) && !defined(__sun)
