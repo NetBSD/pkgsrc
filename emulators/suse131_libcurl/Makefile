@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2.4.1 2014/04/14 10:41:53 tron Exp $
+# $NetBSD: Makefile,v 1.2.4.2 2014/05/05 17:13:44 tron Exp $
 
 DISTNAME=	suse_libcurl-${SUSE_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	emulators
-RPMUPDPKGS+=	libcurl4-7.32.0-2.16.1.${SUSE_ARCH}
+RPMUPDPKGS+=	libcurl4-7.32.0-2.23.1.${SUSE_ARCH}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Linux compatibility package for libcurl
