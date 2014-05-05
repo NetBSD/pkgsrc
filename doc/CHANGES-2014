@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1753 2014/05/04 17:17:10 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1754 2014/05/05 10:00:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2470,3 +2470,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-setuptools to 3.5 [wiz 2014-05-04]
 	Updated sysutils/py-psutil to 2.1.1 [wiz 2014-05-04]
 	Updated devel/py-virtualenv to 1.11.5 [wiz 2014-05-04]
+	Updated www/squid3 to 3.4.5 [adam 2014-05-05]
+	Updated www/squidanalyzer to 5.4 [adam 2014-05-05]
