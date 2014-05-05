@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.87 2013/10/10 14:42:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.88 2014/05/05 00:48:09 ryoon Exp $
 #
 
 DISTNAME=		gok-2.28.1
-PKGREVISION=		21
+PKGREVISION=		22
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gok/2.28/}
 EXTRACT_SUFX=		.tar.bz2

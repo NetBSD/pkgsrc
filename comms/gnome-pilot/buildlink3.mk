@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.61 2014/04/09 07:27:00 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.62 2014/05/05 00:47:41 ryoon Exp $
 
 BUILDLINK_TREE+=	gnome-pilot
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnome-pilot
 GNOME_PILOT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnome-pilot+=		gnome-pilot>=2.0.12nb2
-BUILDLINK_ABI_DEPENDS.gnome-pilot+=	gnome-pilot>=2.0.17nb42
+BUILDLINK_ABI_DEPENDS.gnome-pilot+=	gnome-pilot>=2.0.17nb43
 BUILDLINK_PKGSRCDIR.gnome-pilot?=	../../comms/gnome-pilot
 
 .include "../../devel/gettext-lib/buildlink3.mk"
