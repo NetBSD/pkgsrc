@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.24 2014/05/03 10:58:26 ryoon Exp $
+$NetBSD: patch-aa,v 1.25 2014/05/05 00:53:35 ryoon Exp $
 
 --- configure.in.orig	2014-04-18 02:02:39.000000000 +0000
 +++ configure.in
@@ -203,7 +203,7 @@ $NetBSD: patch-aa,v 1.24 2014/05/03 10:58:26 ryoon Exp $
  dnl backends for those platforms don't support floats.
 -if test "$OS_TARGET" = "Android"; then
 +case "$OS_TARGET" in
-+Android|OpenBSD)
++Android)
      MOZ_SAMPLE_TYPE_S16=1
      AC_DEFINE(MOZ_SAMPLE_TYPE_S16)
      AC_SUBST(MOZ_SAMPLE_TYPE_S16)
