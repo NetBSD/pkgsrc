@@ -1,6 +1,6 @@
-$NetBSD: patch-lib_glib-utils_h,v 1.1 2012/05/06 17:24:41 dholland Exp $
+$NetBSD: patch-lib_glib-utils_h,v 1.2 2014/05/05 06:26:53 obache Exp $
 
-Fix build with latest glib2.
+* It is no longer possible to include individual headers since glib2-2.32 
 
 --- lib/glib-utils.h~	2007-04-25 07:35:58.000000000 +0000
 +++ lib/glib-utils.h

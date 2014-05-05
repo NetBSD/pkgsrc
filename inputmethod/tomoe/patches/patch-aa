@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2008/05/31 14:16:47 obache Exp $
+$NetBSD: patch-aa,v 1.2 2014/05/05 06:26:53 obache Exp $
+
+* take care missing strerror(3).
 
 --- lib/tomoe-xml-parser.c.orig	2007-04-10 07:24:21.000000000 +0000
 +++ lib/tomoe-xml-parser.c
