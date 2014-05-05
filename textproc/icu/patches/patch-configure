@@ -1,10 +1,10 @@
-$NetBSD: patch-configure,v 1.3 2014/03/04 12:07:16 obache Exp $
+$NetBSD: patch-configure,v 1.4 2014/05/05 21:25:11 ryoon Exp $
 
 Portability fix.
 Solaris seems to need -std=c99 with recent pkgsrc so keep it
 and at the same time fix a typo involving CXXFLAGS.
 
---- configure.orig	2013-10-04 20:54:58.000000000 +0000
+--- configure.orig	2013-12-09 17:32:25.000000000 +0000
 +++ configure
 @@ -4083,9 +4083,6 @@ $as_echo "$ac_use_strict_options" >&6; }
          if test "$GCC" = yes
@@ -25,7 +25,7 @@ and at the same time fix a typo involving CXXFLAGS.
                          # 2. try xarch=v9 [deprecated]
                          ## TODO: cross compile: the following won't work.
                          SPARCV9=`isainfo -n 2>&1 | grep sparcv9`
-@@ -5452,6 +5449,23 @@ if test "x$ac_cv_header_elf_h" = "xyes";
+@@ -5452,6 +5449,29 @@ if test "x$ac_cv_header_elf_h" = "xyes";
      CONFIG_CPPFLAGS="$CONFIG_CPPFLAGS -DU_HAVE_ELF_H=1";
  fi
  
@@ -42,14 +42,20 @@ and at the same time fix a typo involving CXXFLAGS.
 +
 +done
 +
++case "${host}" in
++*-netbsd*)
 +if test "x$ac_cv_header_sys_atomic_h" = "xyes"; then
 +    CONFIG_CPPFLAGS="$CONFIG_CPPFLAGS -DU_HAVE_NETBSD_ATOMIC_OPS=1";
 +fi
++;;
++*)
++;;
++esac
 +
  U_ENABLE_DYLOAD=1
  enable=yes
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether to enable dynamic loading of plugins" >&5
-@@ -7442,13 +7456,13 @@ fi
+@@ -7442,13 +7462,13 @@ fi
  # Now that we're done using CPPFLAGS etc. for tests, we can change it
  # for build.
  
