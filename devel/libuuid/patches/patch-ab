@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.4 2012/09/05 13:03:04 jperkin Exp $
+$NetBSD: patch-ab,v 1.5 2014/05/05 20:14:55 adam Exp $
 
 fcntl is portable, flock is not.
 
 Solaris does not have ifr.ifr_hwaddr.
 
---- shlibs/uuid/src/gen_uuid.c.orig	Mon May  2 09:10:08 2011
-+++ shlibs/uuid/src/gen_uuid.c	Wed Sep  5 12:23:54 2012
-@@ -265,7 +265,7 @@
+--- libuuid/src/gen_uuid.c.orig	2013-09-18 13:50:12.000000000 +0000
++++ libuuid/src/gen_uuid.c
+@@ -172,7 +172,7 @@ static int get_node_id(unsigned char *no
  	for (i = 0; i < n; i+= ifreq_size(*ifrp) ) {
  		ifrp = (struct ifreq *)((char *) ifc.ifc_buf+i);
  		strncpy(ifr.ifr_name, ifrp->ifr_name, IFNAMSIZ);
@@ -15,7 +15,7 @@ Solaris does not have ifr.ifr_hwaddr.
  		if (ioctl(sd, SIOCGIFHWADDR, &ifr) < 0)
  			continue;
  		a = (unsigned char *) &ifr.ifr_hwaddr.sa_data;
-@@ -314,11 +314,16 @@
+@@ -227,12 +227,17 @@ static int get_clock(uint32_t *clock_hig
  	THREAD_LOCAL int		state_fd = -2;
  	THREAD_LOCAL FILE		*state_f;
  	THREAD_LOCAL uint16_t		clock_seq;
@@ -24,6 +24,7 @@ Solaris does not have ifr.ifr_hwaddr.
  	uint64_t			clock_reg;
  	mode_t				save_umask;
  	int				len;
+ 	int				ret = 0;
  
 +	lock.l_whence = SEEK_SET;
 +	lock.l_start = 0;
@@ -31,18 +32,18 @@ Solaris does not have ifr.ifr_hwaddr.
 +
  	if (state_fd == -2) {
  		save_umask = umask(0);
- 		state_fd = open("/var/lib/libuuid/clock.txt",
-@@ -334,7 +339,8 @@
+ 		state_fd = open(LIBUUID_CLOCK_FILE, O_RDWR|O_CREAT|O_CLOEXEC, 0660);
+@@ -250,7 +255,8 @@ static int get_clock(uint32_t *clock_hig
  	}
  	if (state_fd >= 0) {
  		rewind(state_f);
 -		while (flock(state_fd, LOCK_EX) < 0) {
 +		lock.l_type = F_WRLCK;
 +		while (fcntl(state_fd, F_SETLKW, &lock) < 0) {
- 			if (errno == EINTR)
+ 			if ((errno == EAGAIN) || (errno == EINTR))
  				continue;
  			fclose(state_f);
-@@ -405,7 +411,8 @@
+@@ -322,7 +328,8 @@ try_again:
  			fflush(state_f);
  		}
  		rewind(state_f);
