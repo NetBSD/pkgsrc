@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2012/09/05 13:03:04 jperkin Exp $
+$NetBSD: distinfo,v 1.5 2014/05/05 20:14:55 adam Exp $
 
-SHA1 (util-linux-2.19.1.tar.bz2) = 96af5d4a37c42296dae5365ba533316216a6b347
-RMD160 (util-linux-2.19.1.tar.bz2) = e4763d21a3a32029ccc525a0222e271f0946a4fd
-Size (util-linux-2.19.1.tar.bz2) = 4396543 bytes
-SHA1 (patch-aa) = 07d66ef414f5781d75159b446d6c822b1e543477
-SHA1 (patch-ab) = e0dee6d6de8460638ce3ca1ce2212bb3dfce5e9a
+SHA1 (util-linux-2.24.2.tar.xz) = 4d2159b2420b8090b31f7198ff9d392a5b3cf0ff
+RMD160 (util-linux-2.24.2.tar.xz) = 7db147ba5545aadef19920815b6461001afb1f4e
+Size (util-linux-2.24.2.tar.xz) = 3586580 bytes
+SHA1 (patch-aa) = 7e59f46e346e2b6e09dc4853215b95546f9c792c
+SHA1 (patch-ab) = 160c13ca5ff36c4ed78aaa9bd3b4d270a5a8b847
