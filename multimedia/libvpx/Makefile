@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2014/04/13 07:41:49 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2014/05/05 21:16:28 ryoon Exp $
 
 DISTNAME=	libvpx_1.3.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -10,6 +10,15 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/webm/
 COMMENT=	On2 VP8 library from Google
 LICENSE=	modified-bsd
+
+# PR pkg/48508: GCC 4.4 or later is required to compile ssse3 code.
+# And It seems that gcc 4.4 and 4.5 do not support OpenBSD/amd64 at least.
+.include "../../mk/bsd.prefs.mk"
+.if !empty(MACHINE_PLATFORM:MOpenBSD-*-amd64)
+GCC_REQD+=	4.6
+.else
+GCC_REQD+=	4.4
+.endif
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
@@ -26,7 +35,8 @@ CONFIGURE_ARGS+=	--disable-unit-tests
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64" || \
+	${MACHINE_ARCH} == "amd64"
 . if ${PKGSRC_COMPILER} == "gcc" && (${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS")
 # PR pkg/48508: GCC 4.4 or later is required to compile ssse3 code on NetBSD & Solaris.
 GCC_REQD+=	4.4
@@ -118,7 +128,9 @@ post-extract:
 	${CP} ${FILESDIR}/strip_fPIC.sh ${WRKSRC}
 
 # PR pkg/48508: newer gas from binutils is required to compile ssse3 code.
-.if !empty(MACHINE_PLATFORM:MNetBSD-5.*) || !empty(MACHINE_PLATFORM:MSunOS-5.10*)
+.if !empty(MACHINE_PLATFORM:MNetBSD-5.*) || \
+	!empty(MACHINE_PLATFORM:MSunOS-5.10*) || \
+	!empty(MACHINE_PLATFORM:MOpenBSD-5*)
 .include "../../devel/binutils/buildlink3.mk"
 .include "../../devel/binutils/override-as.mk"
 .endif
