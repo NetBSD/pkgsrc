@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.31 2014/05/05 05:04:46 obache Exp $
+# $NetBSD: mozilla-common.mk,v 1.32 2014/05/05 20:47:14 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -13,6 +13,7 @@ UNLIMIT_RESOURCES+=	datasize
 .include "../../mk/bsd.prefs.mk"
 # tar(1) of OpenBSD 5.5 has no --exclude command line option.
 .if ${OPSYS} == "OpenBSD"
+TOOLS_PLATFORM.tar=	${TOOLS_PREFIX.bsdtar}/bin/bsdtar
 USE_TOOLS+=		bsdtar
 .endif
 # gcc45-4.5.3 of lang/gcc45 does not generate proper binary,
@@ -143,8 +144,7 @@ PLIST.throwwrapper=	yes
 PLIST.sps=	yes
 .endif
 
-.if !empty(MACHINE_PLATFORM:MLinux-*-arm*) || ${OPSYS} == "DragonFly" \
-    || ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
+.if !empty(MACHINE_PLATFORM:MLinux-*-arm*)
 PLIST.tremor=	yes
 .else
 PLIST.vorbis=	yes
@@ -177,6 +177,14 @@ CONFIGURE_ENV+=	ac_cv_thread_keyword=no
 .if ${OPSYS} == "SunOS"
 # native libbz2.so hides BZ2_crc32Table
 PREFER.bzip2?=	pkgsrc
+.endif
+
+.if ${OPSYS} == "OpenBSD"
+PLIST_SUBST+=	DLL_SUFFIX=".so.1.0"
+.elif ${OPSYS} == "Darwin"
+PLIST_SUBST+=	DLL_SUFFIX=".dylib"
+.else
+PLIST_SUBST+=	DLL_SUFFIX=".so"
 .endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
