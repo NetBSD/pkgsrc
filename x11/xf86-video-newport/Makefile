@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2013/06/09 12:37:18 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/05 00:48:35 ryoon Exp $
 
 DISTNAME=	xf86-video-newport-0.2.4
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
