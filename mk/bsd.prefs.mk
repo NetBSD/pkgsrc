@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.345 2014/04/07 17:25:16 asau Exp $
+# $NetBSD: bsd.prefs.mk,v 1.346 2014/05/05 21:26:31 ryoon Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -789,9 +789,10 @@ _SYS_VARS.dirs=		WRKDIR DESTDIR PKG_SYSCONFBASEDIR
 
 # List of 64bit operating systems with sizeof(int) != sizeof(void *).
 # This can be used for software that is not 64bit clean.
+# amd64 is for OpenBSD.
 #
 # Keywords: ONLY_FOR_PLATFORM NOT_FOR_PLATFORM 64bit
 #
-LP64PLATFORMS=		*-*-alpha *-*-sparc64 *-*-x86_64
+LP64PLATFORMS=		*-*-alpha *-*-sparc64 *-*-x86_64 *-*-amd64
 
 .endif	# BSD_PKG_MK
