@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.8 2012/06/27 09:24:26 bsiegert Exp $
+$NetBSD: patch-ac,v 1.9 2014/05/05 21:13:16 ryoon Exp $
 
 --- util.c.orig	2009-03-02 18:17:35.000000000 +0000
 +++ util.c
@@ -10,7 +10,7 @@ $NetBSD: patch-ac,v 1.8 2012/06/27 09:24:26 bsiegert Exp $
 +#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__APPLE__) || defined(__MirBSD__)
  #include <sys/param.h>
 -#if __FreeBSD_version < 800067
-+#if __FreeBSD_version < 800067 && __DragonFly_version < 200202 && __NetBSD_Version__ < 599001100 && __ENVIRONMENT_MAC_OS_X_VERSION_MIN_REQUIRED__ < 1070
++#if __FreeBSD_version < 800067 && __DragonFly_version < 200202 && __NetBSD_Version__ < 599001100 && __ENVIRONMENT_MAC_OS_X_VERSION_MIN_REQUIRED__ < 1070 && __OpenBSD__
  static size_t strnlen (const char *s, size_t maxlen)
  {
  	size_t i;
