@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.5 2008/12/26 20:05:56 hasso Exp $
+$NetBSD: patch-ae,v 1.6 2014/05/05 21:19:40 ryoon Exp $
 
---- src/ck-sysdeps-unix.c.orig	2008-11-27 05:10:25 +0200
-+++ src/ck-sysdeps-unix.c	2008-11-27 05:09:59 +0200
+--- src/ck-sysdeps-unix.c.orig	2008-01-23 14:30:44.000000000 +0000
++++ src/ck-sysdeps-unix.c
 @@ -35,6 +35,11 @@
  #include <linux/kd.h>
  #endif
@@ -40,7 +40,19 @@ $NetBSD: patch-ae,v 1.5 2008/12/26 20:05:56 hasso Exp $
  /* Adapted from dbus-sysdeps-unix.c:_dbus_read_credentials_socket() */
  gboolean
  ck_get_socket_peer_credentials   (int      socket_fd,
-@@ -99,7 +123,16 @@ ck_get_socket_peer_credentials   (int   
+@@ -69,7 +93,11 @@ ck_get_socket_peer_credentials   (int   
+         ret = FALSE;
+ 
+ #ifdef SO_PEERCRED
++#if !defined(__OpenBSD__)
+         struct ucred cr;
++#else
++	struct sockpeercred cr;
++#endif
+         socklen_t    cr_len;
+ 
+         cr_len = sizeof (cr);
+@@ -99,7 +127,16 @@ ck_get_socket_peer_credentials   (int   
          if (ucred != NULL) {
                  ucred_free (ucred);
          }
@@ -58,7 +70,7 @@ $NetBSD: patch-ae,v 1.5 2008/12/26 20:05:56 hasso Exp $
          g_warning ("Socket credentials not supported on this OS\n");
  #endif
  
-@@ -126,17 +159,17 @@ ck_get_socket_peer_credentials   (int   
+@@ -126,17 +163,17 @@ ck_get_socket_peer_credentials   (int   
  gboolean
  ck_fd_is_a_console (int fd)
  {
@@ -80,7 +92,7 @@ $NetBSD: patch-ae,v 1.5 2008/12/26 20:05:56 hasso Exp $
          kb_ok = (ioctl (fd, CONS_GETVERS, &vers) == 0);
  #else
          kb_ok = 1;
-@@ -172,6 +205,15 @@ ck_get_a_console_fd (void)
+@@ -172,6 +209,15 @@ ck_get_a_console_fd (void)
  
          fd = -1;
  
@@ -96,7 +108,7 @@ $NetBSD: patch-ae,v 1.5 2008/12/26 20:05:56 hasso Exp $
  #ifdef __sun
          /* On Solaris, first try Sun VT device. */
          fd = open_a_console ("/dev/vt/active");
-@@ -184,6 +226,14 @@ ck_get_a_console_fd (void)
+@@ -184,6 +230,14 @@ ck_get_a_console_fd (void)
          }
  #endif
  

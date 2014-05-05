@@ -1,12 +1,16 @@
-$NetBSD: patch-ac,v 1.1.1.1 2008/11/22 03:32:22 jmcneill Exp $
+$NetBSD: patch-ac,v 1.2 2014/05/05 21:19:40 ryoon Exp $
 
---- tools/Makefile.am.orig	2008-02-12 22:46:39.000000000 -0500
+--- tools/Makefile.am.orig	2008-02-13 03:46:39.000000000 +0000
 +++ tools/Makefile.am
-@@ -18,6 +18,10 @@ if CK_COMPILE_SOLARIS
+@@ -18,6 +18,14 @@ if CK_COMPILE_SOLARIS
  SUBDIRS += solaris
  endif
  
 +if CK_COMPILE_NETBSD
++SUBDIRS += freebsd
++endif
++
++if CK_COMPILE_OPENBSD
 +SUBDIRS += freebsd
 +endif
 +

@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/11/22 03:32:22 jmcneill Exp $
+$NetBSD: patch-ab,v 1.2 2014/05/05 21:19:40 ryoon Exp $
 
---- src/Makefile.am.orig	2008-07-25 14:38:56.000000000 -0400
+--- src/Makefile.am.orig	2008-07-25 18:38:56.000000000 +0000
 +++ src/Makefile.am
-@@ -56,11 +56,18 @@ libck_la_SOURCES +=		\
+@@ -56,11 +56,25 @@ libck_la_SOURCES +=		\
  	$(NULL)
  libck_la_LIBADD = $(KVM_LIBS)
  endif
@@ -12,12 +12,19 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/11/22 03:32:22 jmcneill Exp $
 +	$(NULL)
 +libck_la_LIBADD = -lkvm
 +endif
++if CK_COMPILE_OPENBSD
++libck_la_SOURCES +=		\
++	ck-sysdeps-openbsd.c	\
++	$(NULL)
++libck_la_LIBADD = $(KVM_LIBS)
++endif
  
  EXTRA_libck_la_SOURCES =		\
  	ck-sysdeps-linux.c		\
  	ck-sysdeps-solaris.c		\
  	ck-sysdeps-freebsd.c		\
 +	ck-sysdeps-netbsd.c		\
++	ck-sysdeps-openbsd.c		\
  	$(NULL)
  
  sbin_PROGRAMS = 		\
