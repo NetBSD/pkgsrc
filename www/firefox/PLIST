@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.79 2014/04/30 15:07:17 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.80 2014/05/05 20:47:14 ryoon Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -835,7 +835,7 @@ lib/firefox/browser/components/components.manifest
 lib/firefox/browser/components/devtools-clhandler.js
 lib/firefox/browser/components/fuelApplication.js
 lib/firefox/browser/components/interfaces.xpt
-lib/firefox/browser/components/libbrowsercomps.so
+lib/firefox/browser/components/libbrowsercomps${DLL_SUFFIX}
 lib/firefox/browser/components/nsBrowserContentHandler.js
 lib/firefox/browser/components/nsBrowserGlue.js
 lib/firefox/browser/components/nsSessionStartup.js
@@ -1797,9 +1797,9 @@ lib/firefox/components/contentSecurityPolicy.js
 lib/firefox/components/crypto-SDR.js
 lib/firefox/components/interfaces.xpt
 lib/firefox/components/jsconsole-clhandler.js
-${PLIST.gnome}lib/firefox/components/libdbusservice.so
-lib/firefox/components/libmozgnome.so
-${PLIST.gnome}lib/firefox/components/libnkgnomevfs.so
+${PLIST.gnome}lib/firefox/components/libdbusservice${DLL_SUFFIX}
+lib/firefox/components/libmozgnome${DLL_SUFFIX}
+${PLIST.gnome}lib/firefox/components/libnkgnomevfs${DLL_SUFFIX}
 lib/firefox/components/marionettecomponent.js
 lib/firefox/components/messageWakeupService.js
 lib/firefox/components/nsBlocklistService.js
@@ -1881,9 +1881,9 @@ lib/firefox/hyphenation/hyph_sl.dic
 lib/firefox/hyphenation/hyph_sv.dic
 lib/firefox/hyphenation/hyph_tr.dic
 lib/firefox/hyphenation/hyph_uk.dic
-lib/firefox/libmozalloc.so
-lib/firefox/libmozjs.so
-lib/firefox/libxul.so
+lib/firefox/libmozalloc${DLL_SUFFIX}
+lib/firefox/libmozjs${DLL_SUFFIX}
+lib/firefox/libxul${DLL_SUFFIX}
 lib/firefox/modules/ActivitiesService.jsm
 lib/firefox/modules/ActivitiesServiceFilter.jsm
 lib/firefox/modules/AddonLogging.jsm
