@@ -1,6 +1,6 @@
-$NetBSD: patch-lib_tomoe_c,v 1.1 2012/05/06 17:24:41 dholland Exp $
+$NetBSD: patch-lib_tomoe_c,v 1.2 2014/05/05 06:26:53 obache Exp $
 
-Fix build with latest glib2.
+* It is no longer possible to include individual headers since glib2-2.32 
 
 --- lib/tomoe.c~	2007-06-06 07:35:53.000000000 +0000
 +++ lib/tomoe.c
