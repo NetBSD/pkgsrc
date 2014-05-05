@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.5 2013/11/23 11:29:35 obache Exp $
+# $NetBSD: builtin.mk,v 1.6 2014/05/05 20:14:55 adam Exp $
 
 BUILTIN_PKG:=	libuuid
 
@@ -43,12 +43,12 @@ BUILTIN_PKG.libuuid=	libuuid-2.18	# whatever, as long as it is big enough
 ###
 .if !defined(USE_BUILTIN.libuuid)
 .  if ${PREFER.libuuid} == "pkgsrc"
-USE_BUILTIN.libuuid=       no
+USE_BUILTIN.libuuid=	no
 .  else
-USE_BUILTIN.libuuid=       ${IS_BUILTIN.libuuid}
+USE_BUILTIN.libuuid=	${IS_BUILTIN.libuuid}
 .    if defined(BUILTIN_PKG.libuuid) && \
         !empty(IS_BUILTIN.libuuid:M[yY][eE][sS])
-USE_BUILTIN.libuuid=       yes
+USE_BUILTIN.libuuid=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.libuuid}
 .        if !empty(USE_BUILTIN.libuuid:M[yY][eE][sS])
 USE_BUILTIN.libuuid!=      \
