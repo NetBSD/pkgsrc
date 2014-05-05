@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13283 2014/05/04 17:17:10 wiz Exp $
+$NetBSD: TODO,v 1.13284 2014/05/05 20:15:56 adam Exp $
 
 Suggested new packages
 ======================
@@ -767,7 +767,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libthrift-0.8.0
 	o libusb-1.0.18
 	o libusbx-1.0.18 [but actually obsolete, switch to libusb]
-	o libuuid-2.24.1
 	o libv4l-0.8.5
 	o libvdpau-0.7
 	o libxdg-basedir-1.2.0
