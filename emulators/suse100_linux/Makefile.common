@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2012/10/03 12:55:18 asau Exp $
+# $NetBSD: Makefile.common,v 1.23 2014/05/05 01:31:49 obache Exp $
 
 SUSE_PKG=		yes
 SUSE_VERSION=		10.0
@@ -33,11 +33,7 @@ _SUSE_FTP_SUBDIR_UPD=	suse/update/${SUSE_VERSION}/rpm/${SUSE_ARCH}/
 
 MASTER_SITE_SUSE_${SUSE_VERSION}=	\
 	http://ftp.hosteurope.de/mirror/ftp.opensuse.org/discontinued/10.0/suse/${SUSE_ARCH}/ \
-	http://suse.bifi.unizar.es/opensuse/${_SUSE_FTP_SUBDIR} \
-	ftp://mirror.colorado.edu/pub/opensuse/${_SUSE_FTP_SUBDIR} \
-	http://opensuse.berkeley.edu/opensuse/${_SUSE_FTP_SUBDIR} \
-	http://opensuse.intergenia.de/${_SUSE_FTP_SUBDIR} \
-	ftp://ftp.uniroma2.it/Linux/opensuse/${_SUSE_FTP_SUBDIR}
+	http://ftp.man.poznan.pl/pub/linux/opensuse/opensuse/${_SUSE_FTP_SUBDIR}
 
 MASTER_SITE_SUSE_${SUSE_VERSION}_UPD=	\
 	ftp://gd.tuwien.ac.at/opsys/linux/suse.com/${_SUSE_FTP_SUBDIR_UPD} \
