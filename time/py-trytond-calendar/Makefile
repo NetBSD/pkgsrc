@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/05/03 13:44:53 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/05 22:58:41 joerg Exp $
 
 DISTNAME=	trytond_calendar-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/1}
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-trytond-[0-9]*:../../devel/py-trytond
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # XXX according to setup.py (v3.0.2)
+PYTHON_VERSIONS_INCOMPATIBLE=	26 33 # XXX according to setup.py (v3.0.2)
 PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 
 REPLACE_PYTHON+=	tests/scenario_calendar.py tests/test_calendar.py
