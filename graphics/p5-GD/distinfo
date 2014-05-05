@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2014/03/03 19:56:21 adam Exp $
+$NetBSD: distinfo,v 1.21 2014/05/05 11:01:12 adam Exp $
 
-SHA1 (GD-2.52.tar.gz) = ea4f9fa7bf3d013dad3879ce23b8c822e49c8481
-RMD160 (GD-2.52.tar.gz) = a1aec1b79c83a53ca115b0fe0d24906c2f7eb892
-Size (GD-2.52.tar.gz) = 326183 bytes
+SHA1 (GD-2.53.tar.gz) = 46221f08f221900bb5396c3ba47e4dfe9c04b846
+RMD160 (GD-2.53.tar.gz) = 9caa098c6578390d24667b0c7e91557134bc60fb
+Size (GD-2.53.tar.gz) = 328980 bytes
