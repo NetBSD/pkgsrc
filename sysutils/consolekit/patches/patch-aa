@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2008/12/23 21:46:14 jmcneill Exp $
+$NetBSD: patch-aa,v 1.4 2014/05/05 21:19:40 ryoon Exp $
 
---- configure.ac.orig	2008-07-30 20:35:53.000000000 -0400
-+++ configure.ac	2008-12-23 16:40:06.000000000 -0500
-@@ -68,10 +68,21 @@
+--- configure.ac.orig	2008-07-31 00:35:53.000000000 +0000
++++ configure.ac
+@@ -68,10 +68,21 @@ AC_SUBST(HAVE_POLKIT)
  PKG_CHECK_MODULES(LIBDBUS,
    dbus-1 >= $DBUS_REQUIRED_VERSION
  )
@@ -25,7 +25,7 @@ $NetBSD: patch-aa,v 1.3 2008/12/23 21:46:14 jmcneill Exp $
  
  PKG_CHECK_MODULES(HISTORY,
    glib-2.0 >= $GLIB_REQUIRED_VERSION
-@@ -190,12 +201,20 @@
+@@ -190,13 +201,30 @@ case "$host" in
          *-*-solaris*)
          CK_BACKEND="solaris"
          ;;
@@ -36,6 +36,14 @@ $NetBSD: patch-aa,v 1.3 2008/12/23 21:46:14 jmcneill Exp $
 +        CK_BACKEND="freebsd"
 +        KVM_LIBS="-lkvm"
 +        ;;
++	*-*-openbsd*)
++	CK_BACKEND="openbsd"
++	AC_CHECK_LIB(kvm, kvm_openfiles, have_kvm=yes,
++		AC_MSG_ERROR([Unable to find libkvm which is needed on OpenBSD]))
++	if test "x$have_kvm" = "xyes"; then
++		KVM_LIBS="-lkvm"
++	fi
++	;;
  esac
  
  AC_SUBST(KVM_LIBS)
@@ -44,9 +52,11 @@ $NetBSD: patch-aa,v 1.3 2008/12/23 21:46:14 jmcneill Exp $
  AM_CONDITIONAL(CK_COMPILE_FREEBSD, test x$CK_BACKEND = xfreebsd, [Compiling for FreeBSD])
 +AM_CONDITIONAL(CK_COMPILE_NETBSD, test x$CK_BACKEND = xnetbsd, [Compiling for NetBSD])
  AM_CONDITIONAL(CK_COMPILE_SOLARIS, test x$CK_BACKEND = xsolaris, [Compiling for Solaris])
++AM_CONDITIONAL(CK_COMPILE_OPENBSD, test x$CK_BACKEND = xopenbsd, [Compiling for OpenBSD])
  AC_SUBST(CK_BACKEND)
  
-@@ -441,4 +460,4 @@
+ dnl ---------------------------------------------------------------------------
+@@ -441,4 +469,4 @@ if test x${have_polkit} = xno -a x${msg_
     echo "         a huge SECURITY HOLE. I repeat: YOU NEED TO EDIT THE FILE"
     echo "         ConsoleKit.conf to match your distro/site to avoid NASTY SECURITY HOLES."
     echo ""
