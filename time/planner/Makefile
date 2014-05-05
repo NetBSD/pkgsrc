@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2014/02/12 23:18:42 tron Exp $
+# $NetBSD: Makefile,v 1.51 2014/05/05 00:48:24 ryoon Exp $
 #
 
 DISTNAME=	planner-0.14.4
-PKGREVISION=	32
+PKGREVISION=	33
 CATEGORIES=	time x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/planner/0.14/}
 EXTRACT_SUFX=	.tar.bz2

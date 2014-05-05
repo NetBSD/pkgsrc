@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.40 2014/04/29 07:56:48 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.41 2014/05/05 00:48:18 ryoon Exp $
 
 BUILDLINK_TREE+=	poppler-glib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	poppler-glib
 POPPLER_GLIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.poppler-glib+=	poppler-glib>=0.5.1
-BUILDLINK_ABI_DEPENDS.poppler-glib+=	poppler-glib>=0.26.0
+BUILDLINK_ABI_DEPENDS.poppler-glib+=	poppler-glib>=0.26.0nb1
 BUILDLINK_PKGSRCDIR.poppler-glib?=	../../print/poppler-glib
 
 .include "../../devel/glib2/buildlink3.mk"
