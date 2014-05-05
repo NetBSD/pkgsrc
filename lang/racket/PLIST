@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2013/08/23 17:19:40 asau Exp $
+@comment $NetBSD: PLIST,v 1.10 2014/05/05 13:29:02 szptvlfn Exp $
 bin/drracket
 bin/gracket
 bin/gracket-text
@@ -18275,6 +18275,7 @@ share/doc/racket/images/pict_190.png
 share/doc/racket/images/pict_191.png
 share/doc/racket/images/pict_192.png
 share/doc/racket/images/pict_193.png
+share/doc/racket/images/pict_194.png
 share/doc/racket/images/pict_2.png
 share/doc/racket/images/pict_20.png
 share/doc/racket/images/pict_21.png
