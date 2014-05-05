@@ -1,4 +1,4 @@
-# $NetBSD: plugins.mk,v 1.10 2010/11/07 20:31:37 jmmv Exp $
+# $NetBSD: plugins.mk,v 1.11 2014/05/05 21:21:47 ryoon Exp $
 #
 # This file is shared across the gst-plugins-{base,good} packages to
 # simplify their code.  It provides a framework to write simple packages
@@ -74,6 +74,21 @@ SUBST_FILES.libs+=	${_d_}/Makefile.in
 SUBST_SED.libs=		-e 's|$$(top_builddir)/gst-libs/gst/.*/libgst|${BUILDLINK_PREFIX.gst-plugins0.10-${GST_PLUGINS0.10_TYPE}}/lib/libgst|g'
 
 .include "../../multimedia/gst-plugins0.10-${GST_PLUGINS0.10_TYPE}/buildlink3.mk"
+.endif
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "OpenBSD"
+# libtool(1) of /usr/bin/libtool is required to build gstreamer 0.10.
+# I have no idea how to fix the build with libtool-base from pkgsrc...
+# https://bugzilla.gnome.org/show_bug.cgi?id=726518
+SUBST_CLASSES+=			fix-libtool
+SUBST_STAGE.fix-libtool=	pre-configure
+SUBST_MESSAGE.fix-libtool=	Fix libtool path
+.for _d_ in pbutils audio app video fft cdda rtsp sdp riff tag interfaces rtp netbuffer
+SUBST_FILES.fix-libtool+=	gst-libs/gst/${_d_}/Makefile.in
+.endfor
+#SUBST_SED.fix-libtool=		-e 's,--libtool=\"$$(top_builddir)/libtool\",--libtool=\"$${LIBTOOL}\",g'
+SUBST_SED.fix-libtool=		-e 's,--libtool=\"$$(top_builddir)/libtool\",--libtool=\"/usr/bin/libtool\",g'
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
