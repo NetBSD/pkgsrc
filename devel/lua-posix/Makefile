@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/05/03 13:01:24 alnsn Exp $
+# $NetBSD: Makefile,v 1.7 2014/05/05 22:55:24 joerg Exp $
 
 DISTNAME=	luaposix-release-v31
 PKGNAME=	${DISTNAME:S/lua/${LUA_PKGPREFIX}-/:S/release-v//}
@@ -24,7 +24,7 @@ INSTALLATION_DIRS+=	${LUA_LDIR} ${LUA_CDIR}
 .include "../../lang/lua/luaversion.mk"
 
 .if ${LUA_PKGPREFIX} == "lua51"
-DEPENDS+=	lua51-BitOp:../../devel/lua-BitOp
+DEPENDS+=	lua51-BitOp-[0-9]*:../../devel/lua-BitOp
 .endif
 
 post-patch:
