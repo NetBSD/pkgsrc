@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.8 2010/12/26 20:53:14 markd Exp $
+$NetBSD: distinfo,v 1.9 2014/05/05 21:19:40 ryoon Exp $
 
 SHA1 (ConsoleKit-0.3.0.tar.bz2) = e3b6156622cc14ebca7382a55b8ed15f2f2bad98
 RMD160 (ConsoleKit-0.3.0.tar.bz2) = 7a1ebd2f4bfb65690e70138c9923c3fd2fcaf671
 Size (ConsoleKit-0.3.0.tar.bz2) = 393694 bytes
-SHA1 (patch-aa) = a1589faf05d5358a0820da6d7da20f09ce4cec1b
-SHA1 (patch-ab) = 2e9fe9de1f27c635a4eefa77af8322cb8a02ab35
-SHA1 (patch-ac) = 0595a9cd1c4013eb4761e044b4b4b01b613f7d2b
+SHA1 (patch-aa) = f6b56bcb12d89ad794feaf345bef04e8a2edbfb0
+SHA1 (patch-ab) = 9ba984009ee9424b35fcb2c3454df4063dbbd953
+SHA1 (patch-ac) = 42a098a1210ad17f992713b03b834ea355c9b06d
 SHA1 (patch-ad) = a1c1a1d0452945550065da3eac2390318c1eb7be
-SHA1 (patch-ae) = 8a9612cd35d1ec86240fd17dfa6963c20edc0ad0
+SHA1 (patch-ae) = 775a3b460db0f2cd305882fcb782d666b8670d8a
 SHA1 (patch-af) = e86c63147798d61f7560cfe7547b0d06d18d5583
 SHA1 (patch-ag) = 724e2eb95f7ca78c5659fde1eec2f2c5c6bc5002
 SHA1 (patch-ah) = f62d8c661732a4ea47e29b99f883b539fb5c7468
