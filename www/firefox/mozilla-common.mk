@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.30 2014/05/05 00:52:10 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.31 2014/05/05 05:04:46 obache Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -7,14 +7,14 @@
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip
-.if ${OPSYS} == "OpenBSD"
-# tar(1) of OpenBSD 5.5 has no --exclude command line option.
-USE_TOOLS+=		bsdtar
-.endif
 USE_LANGUAGES+=		c99 c++
 UNLIMIT_RESOURCES+=	datasize
 
 .include "../../mk/bsd.prefs.mk"
+# tar(1) of OpenBSD 5.5 has no --exclude command line option.
+.if ${OPSYS} == "OpenBSD"
+USE_TOOLS+=		bsdtar
+.endif
 # gcc45-4.5.3 of lang/gcc45 does not generate proper binary,
 # but gcc 4.5.4 of NetBSD 6.99 generates working binary.
 # gcc45 has no OpenBSD support, and gcc46 has it.
