@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2013/11/26 13:11:23 wiz Exp $
+# $NetBSD: Makefile,v 1.116 2014/05/05 00:48:11 ryoon Exp $
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
 # that *both* distinfo files contain the correct, up-to-date files and
@@ -8,7 +8,7 @@
 #
 
 PKGNAME=	gmplayer-${MPLAYER_VERSION}
-PKGREVISION=	15
+PKGREVISION=	16
 
 SKIN_SITES=	http://www1.mplayerhq.hu/MPlayer/skins/		\
 		http://www2.mplayerhq.hu/MPlayer/skins/		\
