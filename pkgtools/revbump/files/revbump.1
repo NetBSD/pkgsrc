@@ -1,6 +1,6 @@
-.\"	$NetBSD: revbump.1,v 1.17 2014/05/05 04:38:53 obache Exp $
+.\"	$NetBSD: revbump.1,v 1.18 2014/05/06 12:41:46 wiz Exp $
 .\"
-.\" Copyright (c) 2003, 2004, 2005, 2006, 2010, 2012, 2013 The NetBSD Foundation, Inc.
+.\" Copyright (c) 2003, 2004, 2005, 2006, 2010, 2012, 2013, 2014 The NetBSD Foundation, Inc.
 .\"
 .\" This code was originally contributed to the NetBSD Foundation, Inc.
 .\" by Julio Merino <jmmv@NetBSD.org> and Thomas Klausner <wiz@NetBSD.org>.
@@ -31,7 +31,7 @@
 .\" OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 .\" IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd October 21, 2013
+.Dd May 6, 2014
 .Dt REVBUMP 1
 .Os
 .Sh NAME
@@ -87,9 +87,9 @@ would be:
 cd /usr/pkgsrc
 finddepends category/package \*[Gt] allbump
 grep buildlink3.mk allbump | sed 's/.buildlink3.mk//' \*[Gt] bl3bump
-grep -e Makefile.common -e mozilla-common.mk allbump > commonbump
+grep -e Makefile.common -e mk$ allbump > commonbump
 [read commonbump and replace entries with all packages including the
- corresponding Makefile.common or mozilla-common.mk file]
+ corresponding Makefile.common or *.mk file]
 cat allbump commonbump | sed 's,/[^/]*$,,' | sort -u \*[Gt] makebump
 revbump \*[Lt] makebump \*[Gt] makebump.manual
 [if a package is listed in makebump.manual outside a line
