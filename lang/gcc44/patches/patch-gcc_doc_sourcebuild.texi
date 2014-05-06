@@ -1,0 +1,15 @@
+$NetBSD: patch-gcc_doc_sourcebuild.texi,v 1.1 2014/05/06 15:28:16 richard Exp $
+
+-- Backpatch tweaks to support pkgsrc gtexinfo v5
+
+--- gcc/doc/sourcebuild.texi.orig	2010-05-19 17:21:58.000000000 +0000
++++ gcc/doc/sourcebuild.texi
+@@ -573,7 +573,7 @@ standard rule in @file{gcc/Makefile.in}
+ @code{lang_checks}.
+ 
+ @table @code
+-@itemx all.cross
++@item all.cross
+ @itemx start.encap
+ @itemx rest.encap
+ FIXME: exactly what goes in each of these targets?
