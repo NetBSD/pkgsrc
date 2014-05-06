@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/03/12 10:25:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/05/06 08:31:45 wiz Exp $
 bin/sdp-example
 bin/simple-example
 bin/stunbdc
@@ -42,6 +42,7 @@ share/gtk-doc/html/libnice/ix07.html
 share/gtk-doc/html/libnice/ix08.html
 share/gtk-doc/html/libnice/ix09.html
 share/gtk-doc/html/libnice/ix10.html
+share/gtk-doc/html/libnice/ix11.html
 share/gtk-doc/html/libnice/left.png
 share/gtk-doc/html/libnice/libnice-Bind.html
 share/gtk-doc/html/libnice/libnice-Debug-messages.html
