@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.7 2014/04/19 23:21:42 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.8 2014/05/06 13:56:38 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -122,8 +122,7 @@ PLIST.throwwrapper=	yes
 PLIST.sps=	yes
 .endif
 
-.if !empty(MACHINE_PLATFORM:MLinux-*-arm*) || ${OPSYS} == "DragonFly" \
-    || ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
+.if !empty(MACHINE_PLATFORM:MLinux-*-arm*)
 PLIST.tremor=	yes
 .else
 PLIST.vorbis=	yes
