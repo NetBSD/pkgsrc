@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.50 2013/05/06 14:42:53 joerg Exp $
+$NetBSD: distinfo,v 1.51 2014/05/06 08:21:15 wiz Exp $
 
-SHA1 (monotone-1.0.tar.bz2) = aac556bb26d92910b74b65450a0be6c5045e2052
-RMD160 (monotone-1.0.tar.bz2) = 4c0813ae0c11f271dc88f42dd8814e474a67e988
-Size (monotone-1.0.tar.bz2) = 3588074 bytes
-SHA1 (patch-src_automate__reader.hh) = 90da65f7eb0ae329ad6324b3c747e2d449cb25cb
-SHA1 (patch-src_database.cc) = 7f8213917256c395d0cf994eb218647c3f44a63f
-SHA1 (patch-src_hash__map.hh) = 03b3da72bc4a953ccc7b7ae0be4a2975e85ea0b3
-SHA1 (patch-src_key__store.cc) = 4225dff8f1533794c0390822c8e17795bf805b6a
-SHA1 (patch-src_ssh__agent.cc) = 404c17a7c0194ee8185fa26f377112ae35fd1ca2
+SHA1 (monotone-1.1.tar.bz2) = 2b97559b252decaee3a374b81bf714cf33441ba3
+RMD160 (monotone-1.1.tar.bz2) = c5e0f45028b806eb166b4aaecababa8e8e81b686
+Size (monotone-1.1.tar.bz2) = 3428699 bytes
+SHA1 (patch-src_hash__map.hh) = 3f8e83b651452aa87eb5409d6e852a49e3747db4
