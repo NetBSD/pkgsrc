@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/05/06 05:21:38 dsainty Exp $
+
+SHA1 (Crypt-Blowfish_PP-1.12.tar.gz) = c1c73beeedddf2496f3be51c44e22a6368f20391
+RMD160 (Crypt-Blowfish_PP-1.12.tar.gz) = c48511ba811739f8d5b2d104fa8c632de575bee6
+Size (Crypt-Blowfish_PP-1.12.tar.gz) = 10482 bytes
