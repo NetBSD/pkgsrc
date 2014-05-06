@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/05/06 08:41:38 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2014/05/06 10:44:08 wiz Exp $
 
 DISTNAME=		gloox-1.0.10
 CATEGORIES=		chat
@@ -8,7 +8,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		schnoebe@cirr.com
 HOMEPAGE=		http://camaya.net/gloox/
 COMMENT=		Jabber/XMPP client library
-LICENSE=		gnu-gpl-v2
+LICENSE=		gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
 
