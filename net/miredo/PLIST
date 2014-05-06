@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2014/03/11 14:05:09 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/05/06 14:59:18 jperkin Exp $
 bin/teredo-mire
 include/libteredo/teredo-udp.h
 include/libteredo/teredo.h
@@ -16,5 +16,6 @@ man/man8/miredo.8
 sbin/miredo
 sbin/miredo-checkconf
 sbin/miredo-server
+share/examples/miredo/client-hook
 share/examples/miredo/miredo-server.conf
 share/examples/miredo/miredo.conf
