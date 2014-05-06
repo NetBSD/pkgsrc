@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2013/02/06 19:30:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.23 2014/05/06 14:59:18 jperkin Exp $
 
 DISTNAME=	miredo-1.2.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://www.remlab.net/files/miredo/
 EXTRACT_SUFX=	.tar.bz2
@@ -26,6 +26,7 @@ EGDIR=		${PREFIX}/share/examples/miredo
 CONF_FILES=	${EGDIR}/miredo.conf ${PKG_SYSCONFDIR}/miredo.conf
 CONF_FILES+=	${EGDIR}/miredo-server.conf \
 		${PKG_SYSCONFDIR}/miredo-server.conf
+CONF_FILES+=	${EGDIR}/client-hook ${PKG_SYSCONFDIR}/client-hook
 
 RCD_SCRIPTS=	miredo
 

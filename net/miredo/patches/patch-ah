@@ -1,4 +1,6 @@
-$NetBSD: patch-ah,v 1.2 2010/06/15 23:49:30 pettai Exp $
+$NetBSD: patch-ah,v 1.3 2014/05/06 14:59:18 jperkin Exp $
+
+Install client-hook to the correct location.
 
 --- misc/Makefile.in.orig	2009-11-05 20:03:42.000000000 +0100
 +++ misc/Makefile.in	2010-06-08 23:15:53.000000000 +0200
@@ -7,7 +9,7 @@ $NetBSD: patch-ah,v 1.2 2010/06/15 23:49:30 pettai Exp $
  install-confSCRIPTS: $(conf_SCRIPTS)
  	@$(NORMAL_INSTALL)
 -	test -z "$(confdir)" || $(MKDIR_P) "$(DESTDIR)$(confdir)"
-+	test -z "$(examplesdir)/../rc.d" || $(MKDIR_P) "$(DESTDIR)$(examplesdir)/../rc.d"
++	test -z "$(examplesdir)" || $(MKDIR_P) "$(DESTDIR)$(examplesdir)"
  	@list='$(conf_SCRIPTS)'; test -n "$(confdir)" || list=; \
  	for p in $$list; do \
  	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
@@ -17,8 +19,8 @@ $NetBSD: patch-ah,v 1.2 2010/06/15 23:49:30 pettai Exp $
  	     test -z "$$files" || { \
 -	       echo " $(INSTALL_SCRIPT) $$files '$(DESTDIR)$(confdir)$$dir'"; \
 -	       $(INSTALL_SCRIPT) $$files "$(DESTDIR)$(confdir)$$dir" || exit $$?; \
-+	       echo " $(INSTALL_SCRIPT) $$files '$(DESTDIR)$(examplesdir)/../rc.d/$$dir'"; \
-+	       $(INSTALL_SCRIPT) $$files "$(DESTDIR)$(examplesdir)/../rc.d/$$dir" || exit $$?; \
++	       echo " $(INSTALL_SCRIPT) $$files '$(DESTDIR)$(examplesdir)$$dir'"; \
++	       $(INSTALL_SCRIPT) $$files "$(DESTDIR)$(examplesdir)$$dir" || exit $$?; \
  	     } \
  	; done
  
