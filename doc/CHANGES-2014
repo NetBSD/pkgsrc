@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1767 2014/05/06 13:50:24 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.1768 2014/05/06 13:58:31 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2485,3 +2485,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated pkgtools/revbump to 2.6 [wiz 2014-05-06]
 	Added fonts/koruri-ttf version 20140319 [ryoon 2014-05-06]
 	Updated databases/couchdb to 1.5.1 [fhajny 2014-05-06]
+	Updated www/firefox24 to 24.5.0 [ryoon 2014-05-06]
+	Updated devel/xulrunner24 to 24.5.0 [ryoon 2014-05-06]
