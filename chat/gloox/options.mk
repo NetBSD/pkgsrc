@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2011/02/06 19:46:48 schnoebe Exp $
+# $NetBSD: options.mk,v 1.2 2014/05/06 08:41:38 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gloox
 PKG_OPTIONS_REQUIRED_GROUPS=	tls
@@ -16,6 +16,8 @@ PLIST_VARS+=	gnutls openssl
 PLIST.gnutls=		yes
 CONFIGURE_ARGS+=	--with-gnutls=${BUILDLINK_PREFIX.gnutls}
 .  include "../../security/gnutls/buildlink3.mk"
+.  include "../../security/libgcrypt/buildlink3.mk"
+USE_TOOLS+=		pkg-config
 .else
 CONFIGURE_ARGS+=	--without-gnutls
 .endif

@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2014/05/06 08:41:38 wiz Exp $
+
+Fix unportable test(1) construct.
+
+--- configure.orig	2014-05-06 08:33:05.000000000 +0000
++++ configure
+@@ -15153,7 +15153,7 @@ $as_echo "#define HAVE_GCC_ATOMIC_BUILTI
+ 
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
+-	if test $cross_compiling == "yes"; then
++	if test $cross_compiling = "yes"; then
+ 		# Some platforms don't seem to be fully happy for libraries using GCC atomic builtins
+ 		#  unless -lgcc and -lgcc_s are explicitly included.
+ 		# (Errors like
