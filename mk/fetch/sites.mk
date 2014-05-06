@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.100 2014/03/31 09:06:29 ryoon Exp $
+# $NetBSD: sites.mk,v 1.101 2014/05/06 12:26:53 ryoon Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -112,26 +112,18 @@ MASTER_SITE_MOZILLA+=	\
 	http://releases.mozilla.org/pub/mozilla.org/ \
 	http://mirror.atlanticmetro.net/mozilla/ \
 	ftp://releases.mozilla.org/pub/mozilla.org/ \
-	http://www.artfiles.org/mozilla.org/ \
-	http://ftp.plusline.de/mozilla/ \
-	http://ftp.sunet.se/pub/www/clients/mozilla.org/ \
-	http://mirror.switch.ch/ftp/mirror/mozilla/ \
-	http://mozmirror01.true.nl/pub/mozilla.org/ \
 	http://mirror.yandex.ru/mozilla/ \
 	http://ftp.cvut.cz/mozilla/ \
-	http://ftp.pwr.wroc.pl/pub/mozilla/ \
 	http://ftp.heanet.ie/mirrors/ftp.mozilla.org/pub/mozilla.org/ \
-	http://mozilla.c3sl.ufpr.br/releases/ \
 	http://mozilla.mirror.ac.za/ \
 	http://mirror.waia.asn.au/pub/mozilla/ \
-	http://mozilla.mirror.ihug.co.nz/ \
 	http://download-origin.cdn.mozilla.net/pub/mozilla.org/
 
 # for Extended Support Release version
 MASTER_SITE_MOZILLA_ESR+=	\
 	http://download-origin.cdn.mozilla.net/pub/mozilla.org/ \
-	http://pv-mirror01.mozilla.org/pub/mozilla.org/ \
 	http://dm-download02.mozilla.org/pub/mozilla.org/ \
+	http://ftp.mozilla.org/pub/mozilla.org/ \
 	ftp://ftp.mozilla.org/pub/mozilla.org/
 
 MASTER_SITE_XEMACS+=    \
