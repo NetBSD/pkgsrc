@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1764 2014/05/06 10:58:03 imil Exp $
+$NetBSD: CHANGES-2014,v 1.1765 2014/05/06 12:41:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2482,3 +2482,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/graphviz to 2.38.0 [wiz 2014-05-06]
 	Updated security/py-cryptography to 0.4 [wiz 2014-05-06]
 	Updated sysutils/salt to 2014.1.3nb1 [imil 2014-05-06]
+	Updated pkgtools/revbump to 2.6 [wiz 2014-05-06]
