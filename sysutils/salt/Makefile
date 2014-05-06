@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2014/04/18 11:25:06 imil Exp $
+# $NetBSD: Makefile,v 1.22 2014/05/06 10:57:48 imil Exp $
 
 DISTNAME=	salt-2014.1.3
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://pypi.python.org/packages/source/s/salt/
 
@@ -53,10 +54,11 @@ SUBST_CLASSES+=		fix-paths
 SUBST_STAGE.fix-paths=	pre-configure
 SUBST_MESSAGE.fix-paths=Fixing hardcoded paths
 SUBST_FILES.fix-paths=	conf/*
-SUBST_FILES.fix-paths+=	doc/man/*
+SUBST_FILES.fix-paths+=	doc/man/* salt/modules/munin.py
 SUBST_SED.fix-paths=	-e 's,/etc/salt,${PKG_SYSCONFDIR},g'
 SUBST_SED.fix-paths+=	-e 's,/srv/salt,${PKG_SYSCONFDIR}/states,g'
 SUBST_SED.fix-paths+=	-e 's,/srv/pillar,${PKG_SYSCONFDIR}/pillar,g'
+SUBST_SED.fix-paths+=	-e 's,/etc/munin,${PKG_SYSCONFBASEDIR}/munin,g'
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/conf/master ${DESTDIR}${EGDIR}/
