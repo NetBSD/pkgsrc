@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.102 2014/05/06 12:53:31 ryoon Exp $
+# $NetBSD: sites.mk,v 1.103 2014/05/06 13:11:46 ryoon Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -90,10 +90,7 @@ MASTER_SITE_SOURCEFORGE+=	\
 
 MASTER_SITE_SOURCEFORGE_JP+=	\
 	http://osdn.dl.sourceforge.jp/ \
-	http://jaist.dl.sourceforge.jp/ \
-	http://globalbase.dl.sourceforge.jp/ \
-	http://iij.dl.sourceforge.jp/ \
-	http://download.sourceforge.jp/
+	http://jaist.dl.sourceforge.jp/
 
 MASTER_SITE_SUSE+=	\
 	ftp://rpmfind.net/linux/SuSE-Linux/${MACHINE_ARCH}/update/${SUSE_VERSION}/ \
