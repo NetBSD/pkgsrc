@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/12/15 14:07:13 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/05/06 13:56:38 ryoon Exp $
 bin/xulrunner24
 include/xulrunner24/AbstractMediaDecoder.h
 include/xulrunner24/AccEvent.h
@@ -3306,7 +3306,7 @@ include/xulrunner24/theora/codec.h
 include/xulrunner24/theora/theora.h
 include/xulrunner24/theora/theoradec.h
 include/xulrunner24/theora/theoraenc.h
-include/xulrunner24/tremor/ivorbiscodec.h
+${PLIST.tremor}include/xulrunner24/tremor/ivorbiscodec.h
 include/xulrunner24/txIEXSLTRegExFunctions.h
 include/xulrunner24/txIFunctionEvaluationContext.h
 include/xulrunner24/txINodeSet.h
@@ -3314,6 +3314,7 @@ include/xulrunner24/txIXPathObject.h
 include/xulrunner24/uconvutil.h
 include/xulrunner24/updatedefines.h
 include/xulrunner24/updatelogging.h
+${PLIST.vorbis}include/xulrunner24/vorbis/codec.h
 include/xulrunner24/webvtt/cue.h
 include/xulrunner24/webvtt/error.h
 include/xulrunner24/webvtt/node.h
