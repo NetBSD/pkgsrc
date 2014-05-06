@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/04/10 05:39:17 obache Exp $
+# $NetBSD: Makefile,v 1.9 2014/05/06 15:07:40 jperkin Exp $
 #
 
 DISTNAME=	ZoneMinder-1.25.0
@@ -145,6 +145,12 @@ SUBST_SED.files=	-e "s|@ZM_HTTPD_ROOT@|${PREFIX}/${ZM_HTTPD_ROOT}|g"
 SUBST_SED.files+=	-e "s|@ZM_HTTPD_CGIBIN@|${PREFIX}/${ZM_HTTPD_CGIBIN}|g"
 SUBST_MESSAGE.files=	Fixing ZoneMinder configuration file for Apache.
 
+PLIST_VARS+=		rcd
+
+.if ${INIT_SYSTEM} == "rc.d"
+PLIST.rcd=		yes
+.endif
+
 post-extract:
 	${CP} ${FILESDIR}/zoneminder.conf ${WRKSRC}/zoneminder.conf
 
@@ -171,7 +177,9 @@ INSTALLATION_DIRS+=	bin share/examples/rc.d share/zoneminder/db
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/zoneminder.conf ${DESTDIR}${PREFIX}/${EGDIR}/apache/zoneminder.conf
 	${INSTALL_DATA} ${WRKSRC}/zm.conf ${DESTDIR}${PREFIX}/${EGDIR}/config/zm.conf
+.if ${INIT_SYSTEM} == "rc.d"
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/zm ${DESTDIR}${PREFIX}/share/examples/rc.d/zoneminder
+.endif
 	${INSTALL_DATA} ${WRKSRC}/db/*.sql ${DESTDIR}${PREFIX}/share/zoneminder/db/
 	rmdir ${DESTDIR}${PREFIX}/${ZM_HTTPD_ROOT:Q}/events || true
 	rmdir ${DESTDIR}${PREFIX}/${ZM_HTTPD_ROOT:Q}/images || true

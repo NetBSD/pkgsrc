@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/23 19:51:20 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/06 15:10:13 jperkin Exp $
 #
 
 PKGNAME=	pluged-0.1
@@ -18,12 +18,22 @@ EGDIR=		${PREFIX}/share/examples/pluged
 RCDDIR=		${PREFIX}/share/examples/rc.d
 CONF_FILES+=	${EGDIR}/pluged.conf ${PREFIX}/etc/pluged.conf
 
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=	rcd
+
+.if ${INIT_SYSTEM} == "rc.d"
+PLIST.rcd=	yes
+.endif
+
 do-install:
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}/${PREFIX}/sbin
 	${INSTALL_DATA_DIR} ${DESTDIR}/${EGDIR}
-	${INSTALL_DATA_DIR} ${DESTDIR}/${RCDDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/pluged ${DESTDIR}/${PREFIX}/sbin/pluged
 	${INSTALL_DATA} ${WRKSRC}/pluged.conf ${DESTDIR}/${EGDIR}/pluged.conf
+.if ${INIT_SYSTEM} == "rc.d"
+	${INSTALL_DATA_DIR} ${DESTDIR}/${RCDDIR}
 	${INSTALL_DATA} ${WRKSRC}/rc.d/pluged ${DESTDIR}/${RCDDIR}/pluged
+.endif
 
 .include "../../mk/bsd.pkg.mk"
