@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2014/01/31 11:21:18 dsainty Exp $
+# $NetBSD: Makefile,v 1.7 2014/05/06 05:37:05 dsainty Exp $
 
 DISTNAME=	${GHACCOUNT}-${GHNAME}-${GHDESCRIBE}-g${GHCOMMIT}
 PKGNAME=	${GHNAME}-0.0.${GHDATE}
+PKGREVISION=	1
 GHNAME=		get-flash-videos
 
 # git describe + GHVERSION from the last commit + GHCOMMIT from the tar.
@@ -19,6 +20,7 @@ HOMEPAGE=	http://code.google.com/p/get-flash-videos/
 COMMENT=	Tool for using various Flash-based video hosting sites
 LICENSE=	apache-2.0
 
+DEPENDS+=	p5-Crypt-Blowfish_PP-[0-9]*:../../security/p5-Crypt-Blowfish_PP
 DEPENDS+=	p5-Data-AMF-[0-9]*:../../comms/p5-Data-AMF
 DEPENDS+=	p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree
 DEPENDS+=	p5-LWP-Protocol-https-[0-9]*:../../www/p5-LWP-Protocol-https
