@@ -1,8 +1,8 @@
-$NetBSD: patch-configure.ac,v 1.2 2013/09/09 20:35:07 wiz Exp $
+$NetBSD: patch-configure.ac,v 1.3 2014/05/06 09:33:13 wiz Exp $
 
---- configure.ac.orig	2013-09-07 01:07:52.000000000 +0000
+--- configure.ac.orig	2014-04-13 20:40:25.000000000 +0000
 +++ configure.ac
-@@ -87,9 +87,20 @@ case "${host_os}" in
+@@ -92,9 +92,20 @@ case "${host_os}" in
  	# Windows version numbers
  	# For the build number: months since Jan 2000, day of month from the timestamp
  	# For the revision number: hour, minute from the timestamp
@@ -26,10 +26,10 @@ $NetBSD: patch-configure.ac,v 1.2 2013/09/09 20:35:07 wiz Exp $
  	fi
  	;;
  esac
-@@ -103,14 +114,12 @@ if test -z "$LIBPOSTFIX"; then
+@@ -108,14 +119,12 @@ if test -z "$LIBPOSTFIX"; then
      *linux* )
        case "${host_cpu}" in
-         aarch64 | powerpc64 | s390x | x86_64 | sparc64 )
+         aarch64 | powerpc64 | powerpc64le | s390x | x86_64 | sparc64 )
 -          LIBPOSTFIX="64"
            ;;
        esac
@@ -41,7 +41,7 @@ $NetBSD: patch-configure.ac,v 1.2 2013/09/09 20:35:07 wiz Exp $
            ;;
        esac
        ;;
-@@ -889,7 +898,7 @@ else
+@@ -894,7 +903,7 @@ else
  		        LUA_VERSION=`$PKGCONFIG --modversion lua$l`
                          LUA_INCLUDES="$LUA_CFLAGS "`$PKGCONFIG --cflags lua$l`
                          LUA_LIBS="$LUA_LFLAGS "`$PKGCONFIG --libs lua$l`
@@ -50,7 +50,7 @@ $NetBSD: patch-configure.ac,v 1.2 2013/09/09 20:35:07 wiz Exp $
      
  		        pkgconfig_lualib_found=`$PKGCONFIG --exists lualib$l 2>/dev/null`
  		        if test  "x$?" = "x0"; then
-@@ -911,7 +920,7 @@ else
+@@ -916,7 +925,7 @@ else
                  LUA_INCLUDES=`$LUACONFIG --include`
                  LUA_LIBS=`$LUACONFIG --libs`
  	        LUA_VERSION="5.0.x"
@@ -59,7 +59,7 @@ $NetBSD: patch-configure.ac,v 1.2 2013/09/09 20:35:07 wiz Exp $
              fi
          fi
      
-@@ -1001,8 +1010,8 @@ else
+@@ -1006,8 +1015,8 @@ else
          use_ocaml="No (ocaml not available)"
        else
          AC_CHECK_PROG(OCAML_OPT,ocamlopt,ocamlopt)
@@ -70,7 +70,7 @@ $NetBSD: patch-configure.ac,v 1.2 2013/09/09 20:35:07 wiz Exp $
          save_CPPFLAGS=$CPPFLAGS
          CPPFLAGS="$CPPFLAGS $OCAML_INCLUDES"
          AC_CHECK_HEADER(caml/mlvalues.h,[
-@@ -1095,13 +1104,13 @@ else
+@@ -1105,13 +1114,13 @@ else
        if test "x$PHP" = "x"; then
          use_php="No (php not available)"
        else
@@ -89,7 +89,7 @@ $NetBSD: patch-configure.ac,v 1.2 2013/09/09 20:35:07 wiz Exp $
          PHP_LIBS=
          save_CPPFLAGS=$CPPFLAGS
          CPPFLAGS="$CPPFLAGS $PHP_INCLUDES"
-@@ -2621,7 +2630,7 @@ dnl INCLUDES and LIBS for PLATFORMSDK
+@@ -2658,7 +2667,7 @@ dnl INCLUDES and LIBS for PLATFORMSDK
  
  AC_ARG_WITH(platformsdkincludedir,
    [AS_HELP_STRING([--with-platformsdkincludedir=DIR],[use Platform SDK (Windows) includes from DIR])],
