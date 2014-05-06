@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1761 2014/05/06 09:33:03 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1762 2014/05/06 09:33:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2479,3 +2479,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/gst-plugins1-libnice to 0.1.6 [wiz 2014-05-06]
 	Updated chat/gloox to 1.0.10 [wiz 2014-05-06]
 	Updated pkgtools/pkglint to 4.138 [wiz 2014-05-06]
+	Updated graphics/graphviz to 2.38.0 [wiz 2014-05-06]
