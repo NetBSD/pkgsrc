@@ -1,4 +1,6 @@
-$NetBSD: patch-src_hash__map.hh,v 1.1 2013/05/06 14:42:54 joerg Exp $
+$NetBSD: patch-src_hash__map.hh,v 1.2 2014/05/06 08:21:15 wiz Exp $
+
+Add missing include. Use C++11 STL for libc++ and when in C++11 mode.
 
 --- src/hash_map.hh.orig	2013-05-06 13:12:19.000000000 +0000
 +++ src/hash_map.hh
