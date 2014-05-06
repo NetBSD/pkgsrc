@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/06 19:46:48 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/05/06 08:41:38 wiz Exp $
 bin/gloox-config
 include/gloox/adhoc.h
 include/gloox/adhoccommandprovider.h
@@ -6,6 +6,7 @@ include/gloox/adhochandler.h
 include/gloox/amp.h
 include/gloox/annotations.h
 include/gloox/annotationshandler.h
+include/gloox/atomicrefcount.h
 include/gloox/attention.h
 include/gloox/base64.h
 include/gloox/bookmarkhandler.h
@@ -14,6 +15,7 @@ include/gloox/bytestream.h
 include/gloox/bytestreamdatahandler.h
 include/gloox/bytestreamhandler.h
 include/gloox/capabilities.h
+include/gloox/carbons.h
 include/gloox/chatstate.h
 include/gloox/chatstatefilter.h
 include/gloox/chatstatehandler.h
@@ -51,6 +53,7 @@ include/gloox/eventhandler.h
 include/gloox/featureneg.h
 include/gloox/flexoff.h
 include/gloox/flexoffhandler.h
+include/gloox/forward.h
 include/gloox/gloox.h
 include/gloox/glooxversion.h
 include/gloox/gpgencrypted.h
@@ -60,8 +63,20 @@ include/gloox/instantmucroom.h
 include/gloox/iq.h
 include/gloox/iqhandler.h
 include/gloox/jid.h
+include/gloox/jinglecontent.h
+include/gloox/jinglefiletransfer.h
+include/gloox/jingleiceudp.h
+include/gloox/jingleplugin.h
+include/gloox/jinglepluginfactory.h
+include/gloox/jinglesession.h
+include/gloox/jinglesessionhandler.h
+include/gloox/jinglesessionmanager.h
 include/gloox/lastactivity.h
 include/gloox/lastactivityhandler.h
+include/gloox/linklocal.h
+include/gloox/linklocalclient.h
+include/gloox/linklocalhandler.h
+include/gloox/linklocalmanager.h
 include/gloox/loghandler.h
 include/gloox/logsink.h
 include/gloox/macros.h
