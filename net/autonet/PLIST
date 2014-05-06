@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2014/03/11 14:05:06 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/05/06 14:54:51 jperkin Exp $
 man/man8/autonet.8
 sbin/autonet
 share/examples/autonet/autonet.local
 share/examples/autonet/lid_switch
+${PLIST.rcd}share/examples/rc.d/autonet
