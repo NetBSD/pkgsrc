@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/06 13:16:18 ryoon Exp $
+lib/X11/fonts/TTF/Koruri-Bold.ttf
+lib/X11/fonts/TTF/Koruri-Extrabold.ttf
+lib/X11/fonts/TTF/Koruri-Light.ttf
+lib/X11/fonts/TTF/Koruri-Regular.ttf
+lib/X11/fonts/TTF/Koruri-Semibold.ttf
+share/doc/${PKGBASE}/LICENSE.txt
+share/doc/${PKGBASE}/README.md
