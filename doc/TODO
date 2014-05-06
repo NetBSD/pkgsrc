@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13291 2014/05/06 10:58:06 wiz Exp $
+$NetBSD: TODO,v 1.13292 2014/05/06 21:57:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -437,6 +437,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cinepaint-1.3
 	o cint-5.16
 	o cjk-lyx-1.4.4
+	o clamav-0.98.2
 	o classpath-0.98
 	o cln-1.33
 	o clutter-1.18.2
@@ -571,7 +572,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gcompris-13.11
 	o gdal-1.10.1
 	o gdb-7.6 [wip]
-	o gdb-7.7
+	o gdb-7.7.1
 	o gdbm-1.11
 	o gdeskcal-1.01
 	o gdl-3.12.0
@@ -917,7 +918,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o psmisc-22.20
 	o pspp-0.8.3
 	o pstoedit-3.61
-	o pulseaudio-5.0 [hal support is dropped]
+	o pulseaudio-5.0 [wip]
 	o pv-1.2.0
 	o pvs-5.0
 	o pwlib-1.11.1
@@ -1034,6 +1035,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o shmux-1.0.2
 	o showfont-1.0.4 [wip]
 	o sign-1.0.7
+	o silc-1.1.10
 	o singularity-0.30c
 	o sitescooper-3.1.2
 	o sjeng-11.2
@@ -1129,7 +1131,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vbetool-1.1
 	o vera-1.17
 	o verilog-current-20130827 [wip]
-	o veusz-1.20.1
+	o veusz-1.21
 	o vfu-4.09
 	o vicq-0.4.2
 	o viewvc-1.1.22
