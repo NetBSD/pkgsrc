@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.5 2013/11/20 07:17:22 richard Exp $
+$NetBSD: patch-configure,v 1.6 2014/05/06 09:33:13 wiz Exp $
 
 1. chunk: fix
 ./configure.lineno: 1: Syntax error: Bad substitution
@@ -10,9 +10,9 @@ last chunk: fix
 http://www.graphviz.org/mantisbt/view.php?id=2362
 last last chunk: fix sed expression not to use + which is not in BRE (guile)
 
---- configure.orig	2013-09-07 01:11:08.000000000 +0000
+--- configure.orig	2014-04-13 20:41:48.000000000 +0000
 +++ configure
-@@ -3504,8 +3504,15 @@ case "${host_os}" in
+@@ -3521,8 +3521,15 @@ case "${host_os}" in
  	# For the build number: months since Jan 2000, day of month from the timestamp
  	# For the revision number: hour, minute from the timestamp
  	if test $GRAPHVIZ_VERSION_MICRO != "0"; then
@@ -30,10 +30,10 @@ last last chunk: fix sed expression not to use + which is not in BRE (guile)
  	fi
  	;;
  esac
-@@ -3519,14 +3526,12 @@ if test -z "$LIBPOSTFIX"; then
+@@ -3536,14 +3543,12 @@ if test -z "$LIBPOSTFIX"; then
      *linux* )
        case "${host_cpu}" in
-         aarch64 | powerpc64 | s390x | x86_64 | sparc64 )
+         aarch64 | powerpc64 | powerpc64le | s390x | x86_64 | sparc64 )
 -          LIBPOSTFIX="64"
            ;;
        esac
@@ -45,7 +45,7 @@ last last chunk: fix sed expression not to use + which is not in BRE (guile)
            ;;
        esac
        ;;
-@@ -21094,7 +21099,7 @@ done
+@@ -21101,7 +21106,7 @@ done
        if test "x$GUILE" = "x"; then
          use_guile="No (guile not available)"
        else
@@ -54,7 +54,7 @@ last last chunk: fix sed expression not to use + which is not in BRE (guile)
          GUILE_VERSION_MAJOR=`echo $GUILE_VERSION | cut -d '.' -f 1`
          GUILE_VERSION_MINOR=`echo $GUILE_VERSION | cut -d '.' -f 2`
          if test 0$GUILE_VERSION_MAJOR -lt 2; then
-@@ -21726,7 +21731,7 @@ $as_echo_n "checking for Lua headers and
+@@ -21733,7 +21738,7 @@ $as_echo_n "checking for Lua headers and
  		        LUA_VERSION=`$PKGCONFIG --modversion lua$l`
                          LUA_INCLUDES="$LUA_CFLAGS "`$PKGCONFIG --cflags lua$l`
                          LUA_LIBS="$LUA_LFLAGS "`$PKGCONFIG --libs lua$l`
@@ -63,7 +63,7 @@ last last chunk: fix sed expression not to use + which is not in BRE (guile)
  
  		        pkgconfig_lualib_found=`$PKGCONFIG --exists lualib$l 2>/dev/null`
  		        if test  "x$?" = "x0"; then
-@@ -21790,7 +21795,7 @@ $as_echo_n "checking for Lua headers and
+@@ -21797,7 +21802,7 @@ $as_echo_n "checking for Lua headers and
                  LUA_INCLUDES=`$LUACONFIG --include`
                  LUA_LIBS=`$LUACONFIG --libs`
  	        LUA_VERSION="5.0.x"
@@ -72,7 +72,7 @@ last last chunk: fix sed expression not to use + which is not in BRE (guile)
              fi
          fi
  
-@@ -22068,8 +22073,8 @@ $as_echo "no" >&6; }
+@@ -22075,8 +22080,8 @@ $as_echo "no" >&6; }
  fi
  
  
@@ -83,7 +83,7 @@ last last chunk: fix sed expression not to use + which is not in BRE (guile)
          save_CPPFLAGS=$CPPFLAGS
          CPPFLAGS="$CPPFLAGS $OCAML_INCLUDES"
          ac_fn_c_check_header_mongrel "$LINENO" "caml/mlvalues.h" "ac_cv_header_caml_mlvalues_h" "$ac_includes_default"
-@@ -22279,13 +22284,13 @@ done
+@@ -22291,13 +22296,13 @@ done
        if test "x$PHP" = "x"; then
          use_php="No (php not available)"
        else
@@ -102,7 +102,7 @@ last last chunk: fix sed expression not to use + which is not in BRE (guile)
          PHP_LIBS=
          save_CPPFLAGS=$CPPFLAGS
          CPPFLAGS="$CPPFLAGS $PHP_INCLUDES"
-@@ -27212,10 +27217,6 @@ fi
+@@ -27347,10 +27352,6 @@ fi
  
  
  
