@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2014/04/03 09:34:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.47 2014/05/06 09:33:13 wiz Exp $
 bin/acyclic
 bin/bcomps
 bin/ccomps
@@ -10,6 +10,7 @@ bin/dot
 bin/dot_builtins
 bin/dot2gxl
 ${PLIST.x11}bin/dotty
+bin/edgepaint
 bin/fdp
 bin/gc
 bin/gml2gv
@@ -127,6 +128,7 @@ man/man1/diffimg.1
 man/man1/dijkstra.1
 man/man1/dot.1
 ${PLIST.x11}man/man1/dotty.1
+man/man1/edgepaint.1
 man/man1/fdp.1
 man/man1/gc.1
 man/man1/gml2gv.1
@@ -378,6 +380,7 @@ share/graphviz/doc/html/info/trapezium.gif
 share/graphviz/doc/html/info/triangle.gif
 share/graphviz/doc/html/info/tripleoctagon.gif
 share/graphviz/doc/html/info/underline.gif
+share/graphviz/doc/html/internal_todo.html
 share/graphviz/doc/html/pspdf.png
 share/graphviz/doc/html/schema/arguments.xml
 share/graphviz/doc/html/schema/attributes.xml
@@ -400,6 +403,7 @@ share/graphviz/doc/pdf/dot.1.pdf
 share/graphviz/doc/pdf/dotguide.pdf
 ${PLIST.x11}share/graphviz/doc/pdf/dotty.1.pdf
 share/graphviz/doc/pdf/dottyguide.pdf
+share/graphviz/doc/pdf/edgepaint.1.pdf
 share/graphviz/doc/pdf/expr.3.pdf
 share/graphviz/doc/pdf/fdp.1.pdf
 share/graphviz/doc/pdf/gc.1.pdf

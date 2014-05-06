@@ -1,8 +1,8 @@
-$NetBSD: patch-lib_gvc_Makefile.in,v 1.2 2014/04/03 09:34:03 wiz Exp $
+$NetBSD: patch-lib_gvc_Makefile.in,v 1.3 2014/05/06 09:33:13 wiz Exp $
 
---- lib/gvc/Makefile.in.orig	2014-01-11 23:15:53.000000000 +0000
+--- lib/gvc/Makefile.in.orig	2014-04-13 20:41:55.000000000 +0000
 +++ lib/gvc/Makefile.in
-@@ -569,7 +569,7 @@ libgvc_la_LIBADD = $(libgvc_C_la_LIBADD)
+@@ -570,7 +570,7 @@ libgvc_la_LIBADD = $(libgvc_C_la_LIBADD)
  	$(top_builddir)/lib/cdt/libcdt.la \
  	$(top_builddir)/lib/cgraph/libcgraph.la \
  	$(top_builddir)/lib/pathplan/libpathplan.la \
@@ -10,4 +10,4 @@ $NetBSD: patch-lib_gvc_Makefile.in,v 1.2 2014/04/03 09:34:03 wiz Exp $
 +	$(EXPAT_LIBS) $(Z_LIBS) $(MATH_LIBS) ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
  
  libgvc_la_DEPENDENCIES = $(libgvc_C_la_DEPENDENCIES)
- EXTRA_DIST = $(man_MANS) $(pdf_DATA) Makefile.old regex_win32.h regex_win32.c gvc.vcproj
+ EXTRA_DIST = $(man_MANS) $(pdf_DATA) regex_win32.h regex_win32.c gvc.vcproj
