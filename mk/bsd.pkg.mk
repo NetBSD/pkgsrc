@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1998 2014/04/15 18:55:18 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1999 2014/05/06 14:48:06 jperkin Exp $
 #
 # This file is in the public domain.
 #
@@ -314,14 +314,6 @@ OVERRIDE_DIRDEPTH?=	2
 # Handle alternatives
 #
 .include "alternatives.mk"
-
-# Support alternative init systems.
-#
-INIT_SYSTEM?=		rc.d
-.if ${INIT_SYSTEM} == "smf"
-.  include "smf.mk"
-.endif
-_BUILD_DEFS+=		INIT_SYSTEM
 
 # Define SMART_MESSAGES in /etc/mk.conf for messages giving the tree
 # of dependencies for building, and the current target.
