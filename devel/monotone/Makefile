@@ -1,22 +1,18 @@
-# $NetBSD: Makefile,v 1.89 2014/05/03 13:14:37 alnsn Exp $
-#
+# $NetBSD: Makefile,v 1.90 2014/05/06 08:21:15 wiz Exp $
 
-DISTNAME=	monotone-1.0
-PKGREVISION=	17
+DISTNAME=	monotone-1.1
 CATEGORIES=	devel scm
-MASTER_SITES=	http://monotone.ca/downloads/1.0/
+MASTER_SITES=	http://www.monotone.ca/downloads/1.1/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://monotone.ca/
 COMMENT=	Free distributed version control system
-
-LUA_VERSIONS_ACCEPTED=	51
+LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3 # OR newer
 
 GCC_REQD+=		3.0
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
-LICENSE=		gnu-gpl-v2 OR gnu-gpl-v3 # OR newer
 TEST_TARGET=		check
 UNLIMIT_RESOURCES+=	datasize
 USE_TOOLS+=		gmake makeinfo pax perl:run pkg-config
@@ -62,6 +58,7 @@ BUILDLINK_API_DEPENDS.pcre+=	pcre>=7.6
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
+# botan-devel is probably also fine
 .include "../../security/botan/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
