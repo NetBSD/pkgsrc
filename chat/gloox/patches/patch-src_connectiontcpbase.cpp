@@ -1,10 +1,10 @@
-$NetBSD: patch-src_connectiontcpbase.cpp,v 1.1 2012/02/16 13:57:16 hans Exp $
+$NetBSD: patch-src_connectiontcpbase.cpp,v 1.2 2014/05/06 08:41:38 wiz Exp $
 
---- src/connectiontcpbase.cpp.orig	2009-10-26 00:05:39.000000000 +0100
-+++ src/connectiontcpbase.cpp	2012-01-20 11:51:07.167505326 +0100
-@@ -20,6 +20,8 @@
- #include "prep.h"
+--- src/connectiontcpbase.cpp.orig	2013-08-30 07:17:35.000000000 +0000
++++ src/connectiontcpbase.cpp
+@@ -21,6 +21,8 @@
  #include "mutexguard.h"
+ #include "util.h"
  
 +#include <string.h>
 +
