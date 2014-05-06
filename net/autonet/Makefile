@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/23 17:18:10 asau Exp $
+# $NetBSD: Makefile,v 1.9 2014/05/06 14:54:51 jperkin Exp $
 
 DISTNAME=	autonet-0.22
 CATEGORIES=	net
@@ -12,5 +12,15 @@ ONLY_FOR_PLATFORM= NetBSD-*-*
 
 USE_LANGUAGES=	# empty
 NO_CONFIGURE=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+MAKE_ENV+=	INIT_SYSTEM="${INIT_SYSTEM}"
+
+PLIST_VARS+=	rcd
+
+.if ${INIT_SYSTEM} == "rc.d"
+PLIST.rcd=	yes
+.endif
 
 .include "../../mk/bsd.pkg.mk"
