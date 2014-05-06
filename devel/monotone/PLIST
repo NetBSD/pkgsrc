@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2011/04/01 13:51:54 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.24 2014/05/06 08:21:15 wiz Exp $
 bin/mtn
 bin/mtn-cleanup
 bin/mtnopt
@@ -12,11 +12,13 @@ share/doc/monotone/contrib/ChangeLog.sh
 share/doc/monotone/contrib/Monotone.pm
 share/doc/monotone/contrib/README
 share/doc/monotone/contrib/README.missing
+share/doc/monotone/contrib/basicio.vim
 share/doc/monotone/contrib/bisect.sh
 share/doc/monotone/contrib/ciabot_monotone.py
 share/doc/monotone/contrib/color-logs.conf
 share/doc/monotone/contrib/color-logs.sh
 share/doc/monotone/contrib/colorize
+share/doc/monotone/contrib/colortone.pl
 share/doc/monotone/contrib/command/README
 share/doc/monotone/contrib/command/base.lua
 share/doc/monotone/contrib/command/conflicts.lua
@@ -38,6 +40,8 @@ share/doc/monotone/contrib/monotone-mirror.sh
 share/doc/monotone/contrib/monotone-run-script-post-netsync.lua
 share/doc/monotone/contrib/monotone.zsh_completion
 share/doc/monotone/contrib/mtbrowse.sh
+share/doc/monotone/contrib/mtn-export-revisions.pl
+share/doc/monotone/contrib/mtncommit.vim
 share/doc/monotone/contrib/op2calltree.py
 share/doc/monotone/contrib/parse-accounting.pl
 share/doc/monotone/contrib/perf-test.sh
@@ -52,12 +56,12 @@ share/doc/monotone/examples/server-setup/serverrc
 share/doc/monotone/examples/user-setup/README
 share/doc/monotone/examples/user-setup/monotonerc
 share/doc/monotone/examples/write-permissions
+share/examples/monotone/monotone.bash_completion
 share/locale/de/LC_MESSAGES/monotone.mo
 share/locale/fr/LC_MESSAGES/monotone.mo
 share/locale/it/LC_MESSAGES/monotone.mo
 share/locale/pt/LC_MESSAGES/monotone.mo
 share/locale/sv/LC_MESSAGES/monotone.mo
-share/examples/monotone/monotone.bash_completion
 share/monotone/hooks/authorize_remote_automate.lua
 share/monotone/hooks/get_passphrase_from_file.lua
 share/monotone/hooks/monotone-buildbot.lua
