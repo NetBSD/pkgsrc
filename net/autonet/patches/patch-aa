@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.1 2008/06/20 01:10:02 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2014/05/06 14:54:51 jperkin Exp $
+
+Support DESTDIR, handle INIT_SYSTEM.
 
 --- Makefile.orig	2008-06-19 13:38:51.000000000 +0000
 +++ Makefile
-@@ -31,15 +31,15 @@ clean:	
+@@ -31,15 +31,17 @@
  	rm -f index.html ${GENFILES} ${PKGNAME}-*.tbz *~~
  
  install: ${PKGNAME}.${MANSECTION}
@@ -23,7 +25,9 @@ $NetBSD: patch-aa,v 1.1 2008/06/20 01:10:02 joerg Exp $
 +	${INSTALL_SCRIPT} autonet.local ${DESTDIR}${EXAMPLEDIR}
 +	${INSTALL_SCRIPT} lid_switch ${DESTDIR}${EXAMPLEDIR}
 +	${INSTALL_DIR} ${DESTDIR}${RCDIR}
++.if ${INIT_SYSTEM} == "rc.d"
 +	${INSTALL_SCRIPT} autonet-rc.d ${DESTDIR}${RCDIR}/autonet
++.endif
  
  # GENFILES
  
