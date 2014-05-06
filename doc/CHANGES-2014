@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1755 2014/05/05 20:15:56 adam Exp $
+$NetBSD: CHANGES-2014,v 1.1756 2014/05/06 05:25:48 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2473,3 +2473,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/squid3 to 3.4.5 [adam 2014-05-05]
 	Updated www/squidanalyzer to 5.4 [adam 2014-05-05]
 	Updated devel/libuuid to 2.24.2 [adam 2014-05-05]
+	Added security/p5-Crypt-Blowfish_PP version 1.12 [dsainty 2014-05-06]
