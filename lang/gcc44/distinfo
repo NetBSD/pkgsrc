@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2013/04/29 21:34:48 joerg Exp $
+$NetBSD: distinfo,v 1.18 2014/05/06 15:28:16 richard Exp $
 
 SHA1 (gcc-4.4.7.tar.bz2) = a6c834b0c2f58583da1d093de7a81a20ede9af75
 RMD160 (gcc-4.4.7.tar.bz2) = 481609ebff38bf8a1fdf9a300dc460c1f425836a
@@ -12,6 +12,10 @@ SHA1 (patch-aj) = 9baf098316200a19b2b4553f05b8fa6970a887e7
 SHA1 (patch-ak) = 08da661b8b19fdd9fa086f67b185266c1d378658
 SHA1 (patch-al) = 462059744f7f057f13d6c472d0aff9d012546082
 SHA1 (patch-am) = fcfabcec9e6d0b8e9ada348dc65e8ddb890f96ca
+SHA1 (patch-gcc_doc_c-tree.texi) = 2ba810a99ecd56a03d74818b6e52869cd6edc45e
+SHA1 (patch-gcc_doc_cppopts.texi) = d352618e29983ebff03d82c1d669c4258705fc59
+SHA1 (patch-gcc_doc_invoke.texi) = ed61af2e4bee1ed26bd9c5ee8d821828ce477a72
+SHA1 (patch-gcc_doc_sourcebuild.texi) = 0672ec36f2c4ae2dd44154e1553bf1add445e194
 SHA1 (patch-gcc_ginclude_stddef.h) = 867e3ff87f0b8865b37823c42c9b01935b94e5fb
 SHA1 (patch-gcc_toplev.h) = 536f52c86635b2a5ba894499fa6c398f9206c82a
 SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__inline.h) = 768705c3be094cba77ec0b20517ffb8cd579059c
