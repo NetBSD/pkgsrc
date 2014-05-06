@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13290 2014/05/06 10:31:16 wiz Exp $
+$NetBSD: TODO,v 1.13291 2014/05/06 10:58:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -337,8 +337,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GUIlib-1.1.2
 	o MAMEDiff-2.30
-	o Mesa-10.1.1
-	o MesaLib-10.1.1
+	o Mesa-10.1.2
+	o MesaLib-10.1.2
 	o PAM-0.99.7.1
 	o RBTools-0.5.5
 	o REminiscence-0.1.9
@@ -377,6 +377,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ap-xslt-1.4.3
 	o ap2-auth-ldap-3.11
 	o ap2-transform-0.6.0
+	o apache-ant-1.9.4
 	o apr0-2.4.1
 	o argtable-2.9
 	o aria2-1.18.5
@@ -594,7 +595,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glib2-2.40.0
 	o glibmm-2.40
 	o glom-1.14.2 [GNOME 2.26]
-	o glu-10.1.1
+	o glu-10.1.2
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.12.1
@@ -788,6 +789,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o maketool-0.8.4
 	o makeztxt-1.60
 	o manedit-1.2.1
+	o maradns-2.0.09
 	o matchbox-panel-0.9.3
 	o mc-4.8.12
 	o mcsim-5.5.0
@@ -1190,6 +1192,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xfs-1.1.1 [wip]
 	o xhippo-3.5
 	o xine-1.2.3
+	o xine-ui-0.99.8
 	o xinput-1.6.1
 	o xjman-0.7
 	o xli-2006.11.10
