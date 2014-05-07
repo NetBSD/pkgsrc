@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1770 2014/05/06 16:03:53 tron Exp $
+$NetBSD: CHANGES-2014,v 1.1771 2014/05/07 06:55:29 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2489,3 +2489,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/xulrunner24 to 24.5.0 [ryoon 2014-05-06]
 	Updated devel/nspr to 4.10.5 [ryoon 2014-05-06]
 	Updated mail/thunderbird to 24.5.0 [tron 2014-05-06]
+	Updated textproc/sphinxsearch to 2.1.8 [fhajny 2014-05-07]
