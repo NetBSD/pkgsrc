@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/08/24 16:15:10 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/05/07 18:44:07 jaapb Exp $
 include/liblangtag/langtag.h
 include/liblangtag/lt-database.h
 include/liblangtag/lt-error.h
@@ -25,6 +25,8 @@ include/liblangtag/lt-tag.h
 include/liblangtag/lt-variant-db.h
 include/liblangtag/lt-variant.h
 lib/liblangtag.la
+lib/liblangtag/liblangtag-ext-ldml-t.la
+lib/liblangtag/liblangtag-ext-ldml-u.la
 lib/pkgconfig/liblangtag.pc
 share/gtk-doc/html/liblangtag/Container.html
 share/gtk-doc/html/liblangtag/Module.html
