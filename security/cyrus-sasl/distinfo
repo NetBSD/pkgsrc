@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2013/10/20 17:56:02 joerg Exp $
+$NetBSD: distinfo,v 1.29 2014/05/07 15:41:08 fhajny Exp $
 
 SHA1 (cyrus-sasl-2.1.26.tar.gz) = d6669fb91434192529bd13ee95737a8a5040241c
 RMD160 (cyrus-sasl-2.1.26.tar.gz) = 861a06d663cf3da37a198d0f971d99b249b5f4b8
@@ -9,6 +9,7 @@ Size (cyrus-sasl-dedad73e5e7a75d01a5f3d5a6702ab8ccd2ff40d.patch) = 3836 bytes
 SHA1 (patch-configure) = 473e4bb41d6e5c6ac136288b673880bd123853cf
 SHA1 (patch-configure.in) = c1bc731ea44e13943dc3952c46a0e588364c1dc7
 SHA1 (patch-include_sasl.h) = 315e9e8236108b49955dbf304a56b17cd028a8d6
+SHA1 (patch-libsasl2.pc.in) = ef5679feef7afb12429071020892d88ecd7c43e6
 SHA1 (patch-saslauthd_Makefile.in) = b7962486aef16ec1e5b27a05a3405d79540f8e20
 SHA1 (patch-saslauthd_auth__rimap.c) = cc3e04ae0cf049eeb507df3226a2098528afaaab
 SHA1 (patch-saslauthd_md5global.h) = fc200c6aee12bf58877c7a755c121441ebaa1bde
