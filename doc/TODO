@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13294 2014/05/07 18:23:43 wiz Exp $
+$NetBSD: TODO,v 1.13295 2014/05/07 18:44:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1192,7 +1192,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xfs-1.1.1 [wip]
 	o xhippo-3.5
 	o xine-1.2.3
-	o xine-ui-0.99.8
 	o xinput-1.6.1
 	o xjman-0.7
 	o xli-2006.11.10
