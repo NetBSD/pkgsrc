@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1775 2014/05/07 15:41:20 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.1776 2014/05/07 15:44:15 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2494,3 +2494,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/php-memcached to 2.2.0 [fhajny 2014-05-07]
 	Updated net/rabbitmq to 3.3.1 [fhajny 2014-05-07]
 	Updated security/cyrus-sasl to 2.1.26nb4 [fhajny 2014-05-07]
+	Added devel/libbson version 0.6.8 [fhajny 2014-05-07]
