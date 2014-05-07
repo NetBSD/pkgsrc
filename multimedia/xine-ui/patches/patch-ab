@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2012/08/04 13:47:09 drochner Exp $
+$NetBSD: patch-ab,v 1.6 2014/05/07 18:44:28 wiz Exp $
+
+Pass in pthread flags from pkgsrc.
 
 --- configure.orig	2012-06-09 18:14:37.000000000 +0000
 +++ configure
