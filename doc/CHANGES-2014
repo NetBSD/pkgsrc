@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1779 2014/05/07 18:44:29 jaapb Exp $
+$NetBSD: CHANGES-2014,v 1.1780 2014/05/07 18:44:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2498,3 +2498,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added databases/mongo-c-driver version 0.94.2 [fhajny 2014-05-07]
 	Updated devel/apache-ant to 1.9.4 [wiz 2014-05-07]
 	Updated devel/liblangtag to 0.5.3nb1 [jaapb 2014-05-07]
+	Updated multimedia/xine-ui to 0.99.8 [wiz 2014-05-07]
