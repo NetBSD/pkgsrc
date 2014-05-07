@@ -1,9 +1,15 @@
-$NetBSD: patch-bb,v 1.5 2014/03/15 14:39:12 richard Exp $
+$NetBSD: patch-bb,v 1.6 2014/05/07 18:44:28 wiz Exp $
+
+Support NetBSD and DragonFlyBSD.
+https://bugs.xine-project.org/show_bug.cgi?id=515
+
 The CPPFunction typedef (among others) have been deprecated in favour of
 specific prototyped typedefs since readline 4.2.
 They've been working since because compatibility typedefs have been
 until they were removed in readline 6.3.
 Hint found here: https://bugs.gentoo.org/show_bug.cgi?id=504208
+Reported upstream at:
+https://bugs.xine-project.org/show_bug.cgi?id=516
 
 --- src/xitk/network.c.orig	2011-11-08 20:49:07.000000000 +0000
 +++ src/xitk/network.c

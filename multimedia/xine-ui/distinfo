@@ -1,12 +1,10 @@
-$NetBSD: distinfo,v 1.24 2014/03/15 14:39:12 richard Exp $
+$NetBSD: distinfo,v 1.25 2014/05/07 18:44:28 wiz Exp $
 
-SHA1 (xine-ui-0.99.7.tar.xz) = ca82e09cf8245d038813bc4dbd8384ba79cbf197
-RMD160 (xine-ui-0.99.7.tar.xz) = e2f2311f62a5c5c7b9912b4c8acc059c42406a7c
-Size (xine-ui-0.99.7.tar.xz) = 1752328 bytes
-SHA1 (patch-aa) = f812ef6651d364030bad754f386f4d64c5cd8022
-SHA1 (patch-ab) = 53b7754767882581084c64c8f858ea78db27d209
-SHA1 (patch-aj) = 8f9415d5ad6b8f0147b054432b5c2af76a49c497
-SHA1 (patch-at) = 2ced7674dee7026eb30c33a26c479e8becabded1
-SHA1 (patch-ba) = e654c0f552bb874d5ce39d40b1e6a61d4839a545
-SHA1 (patch-bb) = 5857d2f14c77eb0369d1f76923cd31bddbefad61
-SHA1 (patch-zz) = f3b33d65805a9e58daaf812a3b9eb572c86ee7b9
+SHA1 (xine-ui-0.99.8.tar.xz) = ffe8e6507a95f92f1e29aa4e3751f4b505e8da1a
+RMD160 (xine-ui-0.99.8.tar.xz) = 5f876d2dd24ab2bec8f1027dee071b8f3f3e76f9
+Size (xine-ui-0.99.8.tar.xz) = 1758372 bytes
+SHA1 (patch-ab) = 93cd824f2b85affb8847d84dd8562ef4bb12f6eb
+SHA1 (patch-aj) = 8030659d18f9a28c0d56a0a95748f070b912f95e
+SHA1 (patch-ba) = 58cb4076d7034b252015c51de9260452bf63f37d
+SHA1 (patch-bb) = 2dcc5d1df7d46226f4f2c2a53ff6772bc513bf51
+SHA1 (patch-zz) = d97dfaf773f5e69c18f6163e7262fdfbd330e5ed
