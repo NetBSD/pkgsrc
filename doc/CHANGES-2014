@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1773 2014/05/07 07:47:34 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.1774 2014/05/07 11:30:37 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2492,3 +2492,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/sphinxsearch to 2.1.8 [fhajny 2014-05-07]
 	Updated databases/redis to 2.8.9 [fhajny 2014-05-07]
 	Updated devel/php-memcached to 2.2.0 [fhajny 2014-05-07]
+	Updated net/rabbitmq to 3.3.1 [fhajny 2014-05-07]
