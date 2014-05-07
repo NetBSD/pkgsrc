@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/03/11 14:05:01 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/05/07 07:40:40 fhajny Exp $
 bin/redis-benchmark
 bin/redis-check-aof
 bin/redis-check-dump
@@ -45,6 +45,7 @@ share/examples/redis/tests/unit/basic.tcl
 share/examples/redis/tests/unit/bitops.tcl
 share/examples/redis/tests/unit/dump.tcl
 share/examples/redis/tests/unit/expire.tcl
+share/examples/redis/tests/unit/hyperloglog.tcl
 share/examples/redis/tests/unit/introspection.tcl
 share/examples/redis/tests/unit/limits.tcl
 share/examples/redis/tests/unit/maxmemory.tcl
@@ -69,6 +70,9 @@ share/examples/redis/tests/unit/type/set.tcl
 share/examples/redis/tests/unit/type/zset.tcl
 share/examples/redis/utils/build-static-symbols.tcl
 share/examples/redis/utils/generate-command-help.rb
+share/examples/redis/utils/hyperloglog/.gitignore
+share/examples/redis/utils/hyperloglog/hll-err.rb
+share/examples/redis/utils/hyperloglog/hll-gnuplot-graph.rb
 share/examples/redis/utils/install_server.sh
 share/examples/redis/utils/mkrelease.sh
 share/examples/redis/utils/redis-copy.rb
