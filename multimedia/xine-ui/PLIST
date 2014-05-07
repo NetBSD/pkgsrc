@@ -1,13 +1,28 @@
-@comment $NetBSD: PLIST,v 1.14 2014/02/24 22:40:44 richard Exp $
+@comment $NetBSD: PLIST,v 1.15 2014/05/07 18:44:28 wiz Exp $
 bin/fbxine
 bin/xine
 bin/xine-bugreport
 bin/xine-check
 bin/xine-remote
+man/de/man1/aaxine.1
+man/de/man1/xine-bugreport.1
+man/de/man1/xine-check.1
+man/de/man1/xine-remote.1
+man/de/man1/xine.1
+man/es/man1/aaxine.1
+man/es/man1/xine-bugreport.1
+man/es/man1/xine-check.1
+man/es/man1/xine-remote.1
+man/es/man1/xine.1
+man/fr/man1/xine.1
+man/man1/aaxine.1
 man/man1/xine-bugreport.1
 man/man1/xine-check.1
 man/man1/xine-remote.1
 man/man1/xine.1
+man/pl/man1/aaxine.1
+man/pl/man1/xine-remote.1
+man/pl/man1/xine.1
 share/applications/xine.desktop
 share/doc/xine-ui/README.config_en
 share/doc/xine-ui/README.cs.0.Introduction
