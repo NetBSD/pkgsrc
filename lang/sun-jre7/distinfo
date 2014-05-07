@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.17 2014/04/30 23:12:48 ryoon Exp $
+$NetBSD: distinfo,v 1.18 2014/05/07 03:48:16 dsainty Exp $
 
+SHA1 (UnlimitedJCEPolicyJDK7.zip) = 7d3c9ee89536b82cd21c680088b1bced16017253
+RMD160 (UnlimitedJCEPolicyJDK7.zip) = a4a6a284579f43d2df3532d279e143d2f03c2c3f
+Size (UnlimitedJCEPolicyJDK7.zip) = 7426 bytes
 SHA1 (jre-7u55-linux-i586.tar.gz) = 9ed2b9cc4aabf319edc9190672d2739ca98f109f
 RMD160 (jre-7u55-linux-i586.tar.gz) = 0257ac52fdabc7629a558420c83236b5e60ed779
 Size (jre-7u55-linux-i586.tar.gz) = 48340455 bytes
