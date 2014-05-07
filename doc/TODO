@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13292 2014/05/06 21:57:05 wiz Exp $
+$NetBSD: TODO,v 1.13293 2014/05/07 07:40:52 fhajny Exp $
 
 Suggested new packages
 ======================
@@ -991,7 +991,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rdp-1.6
 	o re-alpine-2.03 [pkg/47802]
 	o realboy-0.2.2
-	o redis-2.8.9
 	o rep-gtk-0.90.8.1
 	o reposurgeon-3.10
 	o resize_image-0.7
