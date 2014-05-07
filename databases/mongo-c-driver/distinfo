@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2014/05/07 15:47:00 fhajny Exp $
+
+SHA1 (mongo-c-driver-0.94.2.tar.gz) = 5cc4dbb6298323f978de2a7367fe7ca50922037c
+RMD160 (mongo-c-driver-0.94.2.tar.gz) = ad41e81c82081da8289cc378cd4ddc17156b0fb1
+Size (mongo-c-driver-0.94.2.tar.gz) = 5563498 bytes
+SHA1 (patch-configure) = 31d235d3040017c332b496579653b24d42ee1431
