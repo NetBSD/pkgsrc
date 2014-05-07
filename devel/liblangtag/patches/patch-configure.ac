@@ -1,5 +1,6 @@
-$NetBSD: patch-configure.ac,v 1.1 2014/05/07 18:44:07 jaapb Exp $
+$NetBSD: patch-configure.ac,v 1.2 2014/05/07 18:52:00 jaapb Exp $
 
+Fix problem with dlopen detection for NetBSD
 --- configure.ac.orig	2014-04-09 09:05:39.000000000 +0000
 +++ configure.ac
 @@ -325,14 +325,16 @@ if test "x$enable_modules" != "xno"; the
