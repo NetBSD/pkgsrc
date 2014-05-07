@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1780 2014/05/07 18:44:39 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1781 2014/05/07 19:44:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2499,3 +2499,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/apache-ant to 1.9.4 [wiz 2014-05-07]
 	Updated devel/liblangtag to 0.5.3nb1 [jaapb 2014-05-07]
 	Updated multimedia/xine-ui to 0.99.8 [wiz 2014-05-07]
+	Updated multimedia/ffmpeg2 to 2.2.2 [adam 2014-05-07]
+	Updated multimedia/ffplay2 to 2.2.2 [adam 2014-05-07]
