@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1777 2014/05/07 15:47:14 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.1778 2014/05/07 18:23:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2496,3 +2496,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/cyrus-sasl to 2.1.26nb4 [fhajny 2014-05-07]
 	Added devel/libbson version 0.6.8 [fhajny 2014-05-07]
 	Added databases/mongo-c-driver version 0.94.2 [fhajny 2014-05-07]
+	Updated devel/apache-ant to 1.9.4 [wiz 2014-05-07]
