@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13293 2014/05/07 07:40:52 fhajny Exp $
+$NetBSD: TODO,v 1.13294 2014/05/07 18:23:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -377,7 +377,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ap-xslt-1.4.3
 	o ap2-auth-ldap-3.11
 	o ap2-transform-0.6.0
-	o apache-ant-1.9.4
 	o apr0-2.4.1
 	o argtable-2.9
 	o aria2-1.18.5
