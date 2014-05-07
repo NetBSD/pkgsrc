@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.457 2014/05/07 15:47:58 fhajny Exp $
+# $NetBSD: Makefile,v 1.458 2014/05/07 15:48:14 fhajny Exp $
 
 COMMENT=	Databases
 
@@ -71,7 +71,7 @@ SUBDIR+=	lua-tokyocabinet
 SUBDIR+=	luma
 SUBDIR+=	maatkit
 SUBDIR+=	metakit-lib
-SUBDOR+=	mongo-c-driver
+SUBDIR+=	mongo-c-driver
 SUBDIR+=	myodbc
 SUBDIR+=	mysql-connector-c++
 SUBDIR+=	mysql-workbench
