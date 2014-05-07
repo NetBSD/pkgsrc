@@ -1,0 +1,14 @@
+$NetBSD: patch-configure,v 1.1 2014/05/07 15:43:59 fhajny Exp $
+
+Portability.
+--- configure.orig	2014-05-07 11:46:16.964134378 +0000
++++ configure
+@@ -20130,7 +20130,7 @@ else
+   ax_python_lib=no
+ fi
+ 
+-   if test x$ax_python_lib == xno; then
++   if test x$ax_python_lib = xno; then
+      as_ac_Lib=`$as_echo "ac_cv_lib_${ax_python_bin}m''_main" | $as_tr_sh`
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for main in -l${ax_python_bin}m" >&5
+ $as_echo_n "checking for main in -l${ax_python_bin}m... " >&6; }
