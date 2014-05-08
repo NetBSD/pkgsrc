@@ -1,4 +1,9 @@
-$NetBSD: patch-ac,v 1.1 2011/10/18 17:55:27 hans Exp $
+$NetBSD: patch-ac,v 1.2 2014/05/08 02:03:58 pho Exp $
+
+Add gcc libdir to a programs rpath so that _this gcc's_ support
+libraries are found. Note that there must not be a whitespace between
+$(LINKER_RPATH_FLAG) and the path. Otherwise the flag may be
+misinterpreted by linker (e.g. Apple's ld).
 
 --- gcc/Makefile.in.orig	2004-06-17 15:56:58.000000000 -0600
 +++ gcc/Makefile.in
@@ -6,7 +11,7 @@ $NetBSD: patch-ac,v 1.1 2011/10/18 17:55:27 hans Exp $
  # Language-independent files.
  
  DRIVER_DEFINES = \
-+  -DLINK_LIBGCC_SPEC="\"%D $(LINKER_RPATH_FLAG) $(exec_prefix)/lib\"" \
++  -DLINK_LIBGCC_SPEC="\"%D $(LINKER_RPATH_FLAG)$(exec_prefix)/lib\"" \
    -DSTANDARD_STARTFILE_PREFIX=\"$(unlibsubdir)/\" \
    -DSTANDARD_EXEC_PREFIX=\"$(libdir)/gcc/\" \
    -DSTANDARD_LIBEXEC_PREFIX=\"$(libexecdir)/gcc/\" \
