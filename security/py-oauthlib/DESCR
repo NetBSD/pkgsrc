@@ -1,0 +1,13 @@
+OAuth often seems complicated and difficult-to-implement. There are several
+prominent libraries for handling OAuth requests, but they all suffer from one
+or both of the following:
+
+  *  They predate the OAuth 1.0 spec, AKA RFC 5849.
+  *  They predate the OAuth 2.0 spec, AKA RFC 6749.
+  *  They assume the usage of a specific HTTP request library.
+
+OAuthLib is a generic utility which implements the logic of OAuth without
+assuming a specific HTTP request object or web framework. Use it to graft OAuth
+client support onto your favorite HTTP library, or provider support onto your
+favourite web framework. If you're a maintainer of such a library, write a thin
+veneer on top of OAuthLib and get OAuth support for very little effort.
