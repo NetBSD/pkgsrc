@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/05/08 15:25:54 imil Exp $
+
+SHA1 (requests-oauthlib-0.4.0.tar.gz) = c86bcc7f5773dede54ee1eb6f606313296ee1ad9
+RMD160 (requests-oauthlib-0.4.0.tar.gz) = 52a276daac9f2f66bc5f96bdcee78fd317bf0858
+Size (requests-oauthlib-0.4.0.tar.gz) = 12104 bytes
