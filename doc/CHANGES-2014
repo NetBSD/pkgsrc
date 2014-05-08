@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1787 2014/05/08 14:44:42 imil Exp $
+$NetBSD: CHANGES-2014,v 1.1788 2014/05/08 15:19:14 imil Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2507,3 +2507,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added misc/mbuffer version 20140310 [jperkin 2014-05-08]
 	Updated emulators/suse131_libpng to 13.1nb3 [obache 2014-05-08]
 	Added net/py-twython version 3.1.2 [imil 2014-05-08]
+	Added security/py-oauthlib version 0.6.1 [imil 2014-05-08]
