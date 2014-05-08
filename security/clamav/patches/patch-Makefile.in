@@ -1,15 +1,15 @@
-$NetBSD: patch-Makefile.in,v 1.1 2013/10/02 18:30:13 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2014/05/08 16:01:10 jperkin Exp $
 
 Install etc files manually.
 
---- Makefile.in.orig	2013-10-02 13:06:10.000000000 +0000
+--- Makefile.in.orig	2014-05-06 18:59:45.000000000 +0000
 +++ Makefile.in
-@@ -379,7 +379,7 @@ top_build_prefix = @top_build_prefix@
- top_builddir = @top_builddir@
+@@ -462,7 +462,7 @@ top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  ACLOCAL_AMFLAGS = -I m4
--SUBDIRS = libltdl libclamav clamscan clamd clamdscan freshclam sigtool clamconf database docs etc clamav-milter test clamdtop clambc unit_tests
-+SUBDIRS = libltdl libclamav clamscan clamd clamdscan freshclam sigtool clamconf database docs clamav-milter test clamdtop clambc unit_tests
+ SUBDIRS = libltdl libclamav clamscan clamd clamdscan freshclam sigtool \
+-	clamconf database docs etc clamav-milter test clamdtop clambc \
++	clamconf database docs clamav-milter test clamdtop clambc \
+ 	unit_tests $(am__append_1)
  EXTRA_DIST = FAQ examples BUGS shared libclamav.pc.in libclamunrar_iface/Makefile.am libclamunrar_iface/Makefile.in UPGRADE COPYING.bzip2 COPYING.lzma COPYING.unrar COPYING.LGPL COPYING.llvm COPYING.file COPYING.zlib COPYING.getopt COPYING.regex COPYING.sha256 platform.h.in clamdscan/clamdscan.map win32
  bin_SCRIPTS = clamav-config
- pkgconfigdir = $(libdir)/pkgconfig

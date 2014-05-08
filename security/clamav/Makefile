@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2014/05/08 10:19:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2014/05/08 16:01:09 jperkin Exp $
 
-DISTNAME=	clamav-0.98.1
+DISTNAME=	clamav-0.98.3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clamav/}
 
@@ -11,6 +11,7 @@ LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 SET_LIBDIR=		yes
@@ -19,8 +20,11 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-dbdir=${CLAMAV_DBDIR}
 CONFIGURE_ARGS+=	--with-group=${CLAMAV_GROUP}
 CONFIGURE_ARGS+=	--with-user=${CLAMAV_USER}
+CONFIGURE_ARGS+=	--with-libcurl=${BUILDLINK_PREFIX.curl}
 CONFIGURE_ARGS+=	--with-ltdl-include=${BUILDLINK_PREFIX.libltdl}/include
 CONFIGURE_ARGS+=	--with-ltdl-lib=${BUILDLINK_PREFIX.libltdl}/lib
+CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
+CONFIGURE_ARGS+=	--with-xml=${BUILDLINK_PREFIX.libxml2}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 # pkgsrc enforces a "secure" version of zlib, so don't let this check
 # bomb the build
@@ -38,6 +42,8 @@ CONFIGURE_ARGS+=	--disable-readdir-r
 CONFIGURE_ARGS+=	--enable-readdir_r
 .endif
 
+CFLAGS.SunOS+=		-D__EXTENSIONS__
+
 BUILD_DEFS+=	CLAMAV_USER CLAMAV_GROUP CLAMAV_DBDIR
 FILES_SUBST+=	CLAMAV_USER=${CLAMAV_USER}
 FILES_SUBST+=	CLAMAV_GROUP=${CLAMAV_GROUP}
@@ -46,7 +52,7 @@ MESSAGE_SUBST+=	CLAMAV_USER=${CLAMAV_USER}
 
 SUBST_CLASSES+=		vars
 SUBST_STAGE.vars=	pre-configure
-SUBST_FILES.vars=	etc/clamd.conf
+SUBST_FILES.vars=	etc/clamd.conf.sample
 SUBST_VARS.vars=	CLAMAV_DBDIR
 
 RCD_SCRIPTS=	clamd freshclamd
@@ -82,6 +88,8 @@ post-install:
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
