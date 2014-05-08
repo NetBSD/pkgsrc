@@ -1,3 +1,5 @@
+# $NetBSD: xorg.libpciaccess,v 1.3 2014/05/08 02:31:50 obache Exp $
+#
 include/pciaccess.h
 lib/libpciaccess.a
 lib/libpciaccess.la
