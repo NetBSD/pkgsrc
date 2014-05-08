@@ -1,0 +1,21 @@
+$NetBSD: patch-Makefile.in,v 1.1 2014/05/08 11:21:24 jperkin Exp $
+
+Fix install permissions.
+
+--- Makefile.in.orig	2014-03-10 22:41:15.000000000 +0000
++++ Makefile.in
+@@ -39,10 +39,10 @@ distclean: clean
+ 	config.status Makefile mbuffer.1 core
+ 
+ install: $(TARGET)
+-	-$(INSTALL) -d $(DESTDIR)$(bindir)
+-	$(INSTALL) $(TARGET) $(DESTDIR)$(bindir)
+-	-$(INSTALL) -d $(DESTDIR)$(mandir)
+-	$(INSTALL) mbuffer.1 $(DESTDIR)$(mandir)
++	-$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(bindir)
++	$(BSD_INSTALL_PROGRAM) $(TARGET) $(DESTDIR)$(bindir)
++	-$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(mandir)
++	$(BSD_INSTALL_MAN) mbuffer.1 $(DESTDIR)$(mandir)
+ 
+ lint:
+ 	lint $(DEFS) $(SOURCES)
