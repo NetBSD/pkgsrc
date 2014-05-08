@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1784 2014/05/08 10:36:22 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.1785 2014/05/08 11:22:42 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2504,3 +2504,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added www/py-gunicorn version 18.0 [imil 2014-05-08]
 	Added finance/py-python-bitcoinlib version 0.1 [rodent 2014-05-08]
 	Updated pkgtools/url2pkg to 2.19 [rodent 2014-05-08]
+	Added misc/mbuffer version 20140310 [jperkin 2014-05-08]
