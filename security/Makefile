@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.509 2014/05/08 15:22:51 imil Exp $
+# $NetBSD: Makefile,v 1.510 2014/05/08 15:27:10 imil Exp $
 #
 
 COMMENT=	Security tools
@@ -363,6 +363,7 @@ SUBDIR+=	py-openid
 SUBDIR+=	py-paramiko
 SUBDIR+=	py-passlib
 SUBDIR+=	py-prewikka
+SUBDIR+=	py-requests-oauthlib
 SUBDIR+=	py-smbpasswd
 SUBDIR+=	py-tlslite
 SUBDIR+=	py-xmlsec
