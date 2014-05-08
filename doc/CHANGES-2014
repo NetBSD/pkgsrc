@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1782 2014/05/08 09:08:30 imil Exp $
+$NetBSD: CHANGES-2014,v 1.1783 2014/05/08 10:14:23 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2502,3 +2502,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/ffmpeg2 to 2.2.2 [adam 2014-05-07]
 	Updated multimedia/ffplay2 to 2.2.2 [adam 2014-05-07]
 	Added www/py-gunicorn version 18.0 [imil 2014-05-08]
+	Added finance/py-python-bitcoinlib version 0.1 [rodent 2014-05-08]
