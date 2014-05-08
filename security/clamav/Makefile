@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/03/11 14:34:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2014/05/08 10:19:53 jperkin Exp $
 
 DISTNAME=	clamav-0.98.1
 CATEGORIES=	security
@@ -82,5 +82,6 @@ post-install:
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
