@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/05/08 09:05:51 imil Exp $
+
+SHA1 (gunicorn-18.0.tar.gz) = 74351882d74128fe34e6a8d27a3bca1d1db9919d
+RMD160 (gunicorn-18.0.tar.gz) = 7b73e1776dd6140ec82dfbe09cc4334fbbf216e0
+Size (gunicorn-18.0.tar.gz) = 366635 bytes
