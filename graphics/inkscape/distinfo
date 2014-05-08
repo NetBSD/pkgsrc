@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.51 2014/04/30 06:15:20 wiz Exp $
+$NetBSD: distinfo,v 1.52 2014/05/08 21:52:40 asau Exp $
 
 SHA1 (inkscape-0.48.4.tar.bz2) = 5f26f6ad191d1e7c2a9fb69a438722beb172224c
 RMD160 (inkscape-0.48.4.tar.bz2) = b089ced7694a9803fac8588d93e7e6239c71d3e8
@@ -27,6 +27,7 @@ SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.cpp) = 783251007ef69f4c3a
 SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.h) = 9e9e76049b9fdcc5192e225b4b477a104902894b
 SHA1 (patch-src_gc-core.h) = e23bba26094aa2203568fa5f2b98412994e87f19
 SHA1 (patch-src_gc.cpp) = 4395d00ffbcecb9f1d4947823312a2f176437840
+SHA1 (patch-src_io_inkjar.cpp) = 060d59225cfe7b66db5e9f41e76860df9ce12d01
 SHA1 (patch-src_libnrtype_FontFactory.h) = 282e6ea4da7bb40c5ba8c861fdbe303259d3e864
 SHA1 (patch-src_libnrtype_Layout-TNG-OutIter.cpp) = 28870d9970946b629657f1663cbe8b325ef42b69
 SHA1 (patch-src_libvpsc_csolve__VPSC.h) = 33aa27678fa9e802af6ab95b9ea28b69d822c4cb
