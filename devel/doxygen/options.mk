@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2013/11/20 04:50:47 dsainty Exp $
+# $NetBSD: options.mk,v 1.9 2014/05/08 23:41:52 dsainty Exp $
 #
 PKG_OPTIONS_VAR=	PKG_OPTIONS.doxygen
 PKG_SUPPORTED_OPTIONS=	latex
@@ -45,6 +45,7 @@ DEPENDS+=	tex-pspicture-[0-9]*:../../print/tex-pspicture
 DEPENDS+=	tex-sectsty-[0-9]*:../../print/tex-sectsty
 DEPENDS+=	tex-tocloft-[0-9]*:../../print/tex-tocloft
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
+DEPENDS+=	tex-wasysym-[0-9]*:../../fonts/tex-wasysym
 DEPENDS+=	tex-xcolor-[0-9]*:../../print/tex-xcolor
 DEPENDS+=	tex-xtab-[0-9]*:../../print/tex-xtab
 

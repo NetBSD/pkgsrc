@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2014/04/25 08:32:22 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2014/05/08 23:41:52 dsainty Exp $
 
 DISTNAME=	doxygen-1.8.7.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.doxygen.org/
 COMMENT=	Documentation system for C++, Java, IDL and C
 LICENSE=	gnu-gpl-v2
-
-DEPENDS+=	tex-wasysym-[0-9]*:../../fonts/tex-wasysym
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 UNLIMIT_RESOURCES+=	datasize
