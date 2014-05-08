@@ -1,11 +1,7 @@
-# $NetBSD: options.mk,v 1.7 2013/05/16 14:17:04 adam Exp $
+# $NetBSD: options.mk,v 1.8 2014/05/08 20:48:55 bad Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnuplot
-PKG_SUPPORTED_OPTIONS=	gd lua pdf x11 qt4
-.if ${OPSYS} != "NetBSD"
-# wxterminal is broken on NetBSD c.f. pkg/47177
-PKG_SUPPORTED_OPTIONS+=	wxwidgets
-.endif
+PKG_SUPPORTED_OPTIONS=	gd lua pdf x11 qt4 wxwidgets
 PKG_SUGGESTED_OPTIONS=	gd x11
 
 .include "../../mk/bsd.options.mk"
@@ -46,7 +42,9 @@ CONFIGURE_ARGS+=	--disable-qt
 
 .if !empty(PKG_OPTIONS:Mwxwidgets)
 USE_LANGUAGES+=		c++
-CONFIGURE_ARGS+=	--enable-wxwidgets
+# force wxt terminal into single threaded mode to avoid crashes
+# c.f. http://sourceforge.net/p/gnuplot/mailman/message/31928881/
+CONFIGURE_ARGS+=	--enable-wxwidgets --with-wx-single-threaded
 .include "../../x11/wxGTK28/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-wxwidgets
