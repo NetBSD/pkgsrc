@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2014/05/08 11:21:24 jperkin Exp $
+
+SHA1 (mbuffer-20140310.tgz) = 6646a7391470ee120bd8fdb754e16984d737f4e0
+RMD160 (mbuffer-20140310.tgz) = 2c67c3c0c6d87ea1c0bcfa6abe94d3d14e9db146
+Size (mbuffer-20140310.tgz) = 122422 bytes
+SHA1 (patch-Makefile.in) = 81118c470367b0136f868f8ccb0f35e3c389150c
+SHA1 (patch-configure) = e92b735b8ca0e03ee011522ce247bf3f242614f4
+SHA1 (patch-network.c) = 6d5b5a937ce71482b1b2f13cf0a3d8b2d8b45e4f
