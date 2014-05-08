@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.426 2014/04/25 09:17:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.427 2014/05/08 11:21:55 jperkin Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -179,6 +179,7 @@ SUBDIR+=	m17n-contrib
 SUBDIR+=	m17n-db
 SUBDIR+=	m17n-docs
 SUBDIR+=	marble
+SUBDIR+=	mbuffer
 SUBDIR+=	mirmon
 SUBDIR+=	mkcue
 SUBDIR+=	mmv
