@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.23 2013/12/28 16:46:29 ryoon Exp $
+# $NetBSD: url2pkg.pl,v 1.24 2014/05/08 10:35:58 rodent Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -372,7 +372,7 @@ sub adjust_package_from_extracted_distfiles()
 	my @files = ();
 	opendir(WRKDIR, $abs_wrkdir) or die;
 	while (defined(my $f = readdir(WRKDIR))) {
-		next if $f =~ qr"^\.";
+		next if ($f =~ qr"^\." || $f eq 'pax_global_header');
 		push(@files, $f);
 	}
 	closedir(WRKDIR);
