@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1789 2014/05/08 15:28:19 imil Exp $
+$NetBSD: CHANGES-2014,v 1.1790 2014/05/08 15:43:46 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2509,3 +2509,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added net/py-twython version 3.1.2 [imil 2014-05-08]
 	Added security/py-oauthlib version 0.6.1 [imil 2014-05-08]
 	Added security/py-requests-oauthlib version 0.4.0 [imil 2014-05-08]
+	Updated cad/gtkwave to 3.3.59 [mef 2014-05-08]
