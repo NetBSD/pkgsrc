@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1031 2014/05/03 02:36:16 rodent Exp $
+# $NetBSD: Makefile,v 1.1032 2014/05/08 09:06:50 imil Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -625,6 +625,7 @@ SUBDIR+=	py-flup
 SUBDIR+=	py-flup3
 SUBDIR+=	py-gdata
 SUBDIR+=	py-genshi
+SUBDIR+=	py-gunicorn
 SUBDIR+=	py-http-parser
 SUBDIR+=	py-httplib2
 SUBDIR+=	py-jonpy
