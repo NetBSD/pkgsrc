@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2014/05/02 11:18:55 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.14 2014/05/08 09:15:40 wiz Exp $
 bin/node
 bin/npm
 include/node/ares.h
@@ -29,7 +29,7 @@ include/node/v8.h
 include/node/v8stdint.h
 include/node/zconf.h
 include/node/zlib.h
-lib/dtrace/node.d
+${PLIST.dtrace}lib/dtrace/node.d
 lib/node_modules/npm/.npmignore
 lib/node_modules/npm/.tern-project
 lib/node_modules/npm/.travis.yml
