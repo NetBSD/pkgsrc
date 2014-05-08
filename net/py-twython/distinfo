@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/05/08 14:41:49 imil Exp $
+
+SHA1 (twython-3.1.2.tar.gz) = 512b5aa9b94ee44b513dbb45d173306873dec3e3
+RMD160 (twython-3.1.2.tar.gz) = 91ebdb68b72dc55241838e516df130bf590ec314
+Size (twython-3.1.2.tar.gz) = 32510 bytes
