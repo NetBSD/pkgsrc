@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2013/06/26 11:51:50 jperkin Exp $
+# $NetBSD: options.mk,v 1.4 2014/05/08 09:15:40 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.node
 PKG_SUPPORTED_OPTIONS=	openssl dtrace
@@ -11,8 +11,11 @@ PKG_SUGGESTED_OPTIONS+=	dtrace
 
 .include "../../mk/bsd.options.mk"
 
+PLIST_VARS+=	dtrace
+
 .if !empty(PKG_OPTIONS:Mdtrace)
 CONFIGURE_ARGS+=	--with-dtrace
+PLIST.dtrace=	yes
 .else
 CONFIGURE_ARGS+=	--without-dtrace
 .endif
