@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2014/05/08 11:21:24 jperkin Exp $
+
+Portability fix.
+
+--- configure.orig	2014-05-08 10:26:55.008091173 +0000
++++ configure
+@@ -3841,7 +3841,7 @@ fi
+ 	else
+ 		SUNCCVERSION=`${CC} -V 2>&1 | grep Sun`
+ 		SUNCC=$?
+-		if test "${SUNCC}" == "0" ; then
++		if test "${SUNCC}" = "0" ; then
+ 			CFLAGS="${CFLAGS} -O"
+ 			cflags_tmp="$CFLAGS"
+ 			HAS_M64=`${CC} -flags | grep m64`
