@@ -1,0 +1,22 @@
+$NetBSD: patch-tools_tools.gpr,v 1.1 2014/05/09 23:58:21 marino Exp $
+
+ Establish runpath to libssl for aws tools
+
+--- tools/tools.gpr.orig	2013-07-03 01:11:54.000000000 +0000
++++ tools/tools.gpr
+@@ -98,11 +98,13 @@ project Tools is
+ 
+    package Linker is
+ 
++      linx := ("@RFLAG@", "@SSL_RPATH@");
++
+       case Shared.Build is
+          when "Release" =>
+-            for Default_Switches ("Ada") use ("-s");
++            for Default_Switches ("Ada") use ("-s") & linx;
+          when others =>
+-            null;
++            for Default_Switches ("Ada") use linx;
+       end case;
+ 
+       case Shared.S_Target is
