@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/04/10 05:39:14 obache Exp $
+# $NetBSD: Makefile,v 1.21 2014/05/09 07:36:53 wiz Exp $
 
 DISTNAME=	picard-1.2
 PKGREVISION=	1
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-mutagen>=1.20:../../audio/py-mutagen
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	msgfmt pkg-config
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-mutagen
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-mutagen
 
 HAS_CONFIGURE=		yes
 CONFIG_SHELL=		${PYTHONBIN}
