@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1796 2014/05/09 08:12:50 tron Exp $
+$NetBSD: CHANGES-2014,v 1.1797 2014/05/09 08:21:23 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2516,3 +2516,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Mojolicious to 4.98 [wen 2014-05-09]
 	Added devel/p5-Class-Tiny version 0.014 [wen 2014-05-09]
 	Updated databases/openldap-server to 2.4.39nb2 [tron 2014-05-09]
+	Updated devel/p5-Test-File-ShareDir to 1.000000 [wen 2014-05-09]
