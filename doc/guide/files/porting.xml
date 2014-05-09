@@ -1,4 +1,4 @@
-<!-- $NetBSD: porting.xml,v 1.4 2007/04/19 16:54:58 joerg Exp $ -->
+<!-- $NetBSD: porting.xml,v 1.5 2014/05/09 06:52:15 obache Exp $ -->
 
 <chapter id="porting"> <?dbhtml filename="porting.html"?>
 <title>Porting pkgsrc</title>
@@ -36,26 +36,6 @@
 	definitions that are used by pkgsrc. Start by copying one of the
 	other files and edit it to your
 	needs.</para></listitem></varlistentry>
-
-	<varlistentry><term><filename>mk/platform/<replaceable>MyOS</replaceable>.pkg.dist</filename></term>
-	<listitem><para>This file contains a list of directories,
-	together with their permission bits and ownership. These
-	directories will be created automatically with every package
-	that explicitly sets <varname>USE_MTREE</varname>. This feature will
-	be removed.</para></listitem></varlistentry>
-
-	<varlistentry><term><filename>mk/platform/<replaceable>MyOS</replaceable>.x11.dist</filename></term>
-	<listitem><para>Just copy one of the pre-existing x11.dist files
-	to your
-	<filename><replaceable>MyOS</replaceable>.x11.dist</filename>.</para></listitem></varlistentry>
-
-	<varlistentry><term><filename>mk/tools/bootstrap.mk</filename></term>
-	<listitem><para>On some operating systems, the tools that are
-	provided with the base system are not good enough for pkgsrc.
-	For example, there are many versions of &man.sed.1; that have a
-	narrow limit on the line length they can process. Therefore
-	pkgsrc brings its own tools, which can be enabled
-	here.</para></listitem></varlistentry>
 
 	<varlistentry><term><filename>mk/tools/tools.<replaceable>MyOS</replaceable>.mk</filename></term>
 	<listitem><para>This file defines the paths to all the tools
