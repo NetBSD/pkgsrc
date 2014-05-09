@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/08/16 20:11:31 wiz Exp $
+$NetBSD: distinfo,v 1.3 2014/05/09 15:24:03 wen Exp $
 
-SHA1 (MARC-Record-2.0.3.tar.gz) = e30a9a627d072330f84bd1b893cdce060cbeb951
-RMD160 (MARC-Record-2.0.3.tar.gz) = 1f60c98245c0ee4835d0344ff0126a0af031fd38
-Size (MARC-Record-2.0.3.tar.gz) = 82625 bytes
+SHA1 (MARC-Record-2.0.6.tar.gz) = 9d38c2c54956d356834d7dafda16288fe7580bb1
+RMD160 (MARC-Record-2.0.6.tar.gz) = 14e7215c9547b43b1c93bce270a14fcfbedc4911
+Size (MARC-Record-2.0.6.tar.gz) = 85134 bytes
