@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2014/05/02 11:22:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2014/05/09 16:53:16 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -1824,7 +1824,6 @@ share/calibre/recipes/china_press.recipe
 share/calibre/recipes/china_times.recipe
 share/calibre/recipes/chinadaily.recipe
 share/calibre/recipes/chipro.recipe
-share/calibre/recipes/chouchoublog.recipe
 share/calibre/recipes/chowk.recipe
 share/calibre/recipes/chr_mon.recipe
 share/calibre/recipes/christian_post.recipe
@@ -2128,7 +2127,6 @@ share/calibre/recipes/freakonomics.recipe
 share/calibre/recipes/freenature.recipe
 share/calibre/recipes/freeway.recipe
 share/calibre/recipes/fria.recipe
-share/calibre/recipes/fronda.recipe
 share/calibre/recipes/frontlineonnet.recipe
 share/calibre/recipes/fstream.recipe
 share/calibre/recipes/ftd.recipe
@@ -2600,12 +2598,6 @@ share/calibre/recipes/nightflier.recipe
 share/calibre/recipes/nikkei_free.recipe
 share/calibre/recipes/nikkei_news.recipe
 share/calibre/recipes/nikkei_sub.recipe
-share/calibre/recipes/nikkei_sub_economy.recipe
-share/calibre/recipes/nikkei_sub_industry.recipe
-share/calibre/recipes/nikkei_sub_life.recipe
-share/calibre/recipes/nikkei_sub_main.recipe
-share/calibre/recipes/nikkei_sub_shakai.recipe
-share/calibre/recipes/nikkei_sub_sports.recipe
 share/calibre/recipes/nin.recipe
 share/calibre/recipes/njp.recipe
 share/calibre/recipes/njuz_net.recipe
