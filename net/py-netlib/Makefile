@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/21 11:38:03 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/09 07:37:15 wiz Exp $
 
 DISTNAME=	netlib-0.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.9.2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.9.2
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

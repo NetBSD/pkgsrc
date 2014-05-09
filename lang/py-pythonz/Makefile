@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/04/07 00:43:45 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/09 07:37:10 wiz Exp $
 
 DISTNAME=	pythonz-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ WRKSRC=		${WRKDIR}/pythonz-${DISTNAME}
 USE_LANGUAGES=	# none
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.2.1
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.2.1
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/pythonz \

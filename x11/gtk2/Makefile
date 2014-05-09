@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.261 2014/05/05 00:48:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.262 2014/05/09 07:37:27 wiz Exp $
 
 DISTNAME=	gtk+-2.24.22
 PKGNAME=	${DISTNAME:S/gtk/gtk2/}
@@ -76,7 +76,7 @@ CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
 #SUBST_SED.pthread=	-e 's,__PTHREAD_FLAGS__,${BUILDLINK_LDFLAGS.pthread},g'
 #SUBST_FILES.pthread=	gdk-pixbuf/Makefile.in
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.24.22
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2.24.22
 REPLACE_PYTHON=	gtk/gtk-builder-convert
 
 # We remove the module databases during post-install since we create them

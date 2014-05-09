@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/01/25 10:30:16 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2014/05/09 07:37:14 wiz Exp $
 
 DISTNAME=	boto-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ REPLACE_PYTHON+=	*.py
 REPLACE_PYTHON+=	boto/*/*.py
 REPLACE_PYTHON+=	bin/*
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-filechunkio
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-filechunkio
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/25 10:30:05 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/09 07:37:02 wiz Exp $
 
 DISTNAME=	tabular-0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.1
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.1
 
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"

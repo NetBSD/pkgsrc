@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.61 2014/01/25 10:30:15 wiz Exp $
+# $NetBSD: Makefile.common,v 1.62 2014/05/09 07:37:13 wiz Exp $
 #
 # used by multimedia/totem-browser-plugin/Makefile
 # used by multimedia/totem-nautilus/Makefile
@@ -28,7 +28,7 @@ GCONF_SCHEMAS+=	totem-video-thumbnail.schemas
 
 CONFIGURE_ARGS+=	--enable-vala=no
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2, py-gdata
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2, py-gdata
 
 .include "../../lang/python/application.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"

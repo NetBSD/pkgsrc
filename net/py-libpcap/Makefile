@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/01/25 10:30:17 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2014/05/09 07:37:15 wiz Exp $
 
 DISTNAME=	pylibpcap-0.6.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.9.3nb1
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.6.4
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.6.4
 
 pre-build:
 	(cd ${WRKSRC} && ${PYTHONBIN} mk-constants.py)

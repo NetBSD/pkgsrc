@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/01/18 19:05:38 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2014/05/09 07:37:25 wiz Exp $
 
 DISTNAME=	flup-1.0.2
 PKGNAME=	${PYPKGPREFIX}-flup-1.0.2
@@ -11,7 +11,7 @@ COMMENT=	WSGI support modules (python-2.x version)
 LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	# empty
-PYTHON_VERSIONS_INCOMPATIBLE=	33
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

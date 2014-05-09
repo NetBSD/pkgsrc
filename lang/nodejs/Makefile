@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2014/05/03 15:57:17 fhajny Exp $
+# $NetBSD: Makefile,v 1.24 2014/05/09 07:37:09 wiz Exp $
 
 DISTNAME=	node-v0.10.28
 CATEGORIES=	devel
@@ -15,7 +15,7 @@ USE_TOOLS+=	pkg-config
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.10.24
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.10.24
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"

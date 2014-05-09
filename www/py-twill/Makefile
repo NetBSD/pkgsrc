@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/05/04 13:45:27 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/09 07:37:26 wiz Exp $
 
 DISTNAME=	twill-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ USE_LANGUAGES=	# none
 
 PY_PATCHPLIST=	yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # setup fails for 1.8.0
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # setup fails for 1.8.0
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/twill-fork \

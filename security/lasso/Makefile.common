@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2014/01/20 16:40:26 wiz Exp $
+# $NetBSD: Makefile.common,v 1.9 2014/05/09 07:37:17 wiz Exp $
 #
 # used by security/lasso/Makefile
 # used by security/py-lasso/Makefile
@@ -23,7 +23,7 @@ USE_TOOLS+=	pkg-config perl
 
 PKGCONFIG_OVERRIDE+=	lasso.pc.in
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.3.6
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2.3.6
 
 .include "../../lang/python/application.mk"
 

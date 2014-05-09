@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2014/03/26 16:18:29 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.7 2014/05/09 07:37:07 wiz Exp $
 #
 # used by graphics/gimp-docs-de/Makefile
 # used by graphics/gimp-docs-en/Makefile
@@ -34,7 +34,7 @@ CONFIGURE_ENV=	ALL_LINGUAS=${HELPLANGUAGE}
 MAKE_FLAGS=	VERBOSE=2
 
 REPLACE_PYTHON=	tools/xml2po.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.8.0
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2.8.0
 
 CONFLICTS=	gimp-docs<=2.4.0
 SUPERSEDES=	gimp-docs<=2.4.0

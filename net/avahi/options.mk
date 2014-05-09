@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2014/01/25 10:30:15 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2014/05/09 07:37:13 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.avahi
 PKG_SUPPORTED_OPTIONS=	avahi-howl gdbm introspection gtk2 gtk3 mono python qt3
@@ -78,7 +78,7 @@ CONFIGURE_ARGS+=	--disable-qt4
 ###
 .if !empty(PKG_OPTIONS:Mpython)
 PY_PATCHPLIST=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2
 .  include "../../lang/python/application.mk"
 REPLACE_PYTHON+=	avahi-python/avahi-discover/__init__.py
 .  include "../../lang/python/extension.mk"

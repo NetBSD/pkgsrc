@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/01/25 09:24:26 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2014/05/09 07:37:23 wiz Exp $
 
 DISTNAME=	pytyle-0.7.5
 PKGNAME=	${DISTNAME:S/py/${PYPKGPREFIX}-/}
@@ -17,7 +17,7 @@ PYTHON_SELF_CONFLICT=	yes
 
 USE_LANGUAGES=	#none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.7.5
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.7.5
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

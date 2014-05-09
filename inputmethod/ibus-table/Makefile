@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/01/25 10:30:11 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2014/05/09 07:37:09 wiz Exp $
 
 DISTNAME=	ibus-table-1.5.0
 PKGREVISION=	1
@@ -24,7 +24,7 @@ SUBST_FILES.prefix=	engine/tabcreatedb.py
 SUBST_SED.prefix=	-e 's|/usr/share|${PREFIX}/share|g'
 
 REPLACE_PYTHON+=	engine/tabcreatedb.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.5.0
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.5.0
 
 .include "../../lang/python/application.mk"
 .include "../../inputmethod/ibus/buildlink3.mk"

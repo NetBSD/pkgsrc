@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2014/05/05 00:47:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.41 2014/05/09 07:37:06 wiz Exp $
 
 DISTNAME=		pytraffic-2.5.4
 PKGREVISION=		27
@@ -13,7 +13,7 @@ COMMENT=		Computer version of a popular board game
 DIST_SUBDIR=	pytraffic-2.5.4-070313
 
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2014/01/25 09:15:37 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2014/05/09 07:37:13 wiz Exp $
 
 .include "../../multimedia/ming/Makefile.common"
 
@@ -15,7 +15,7 @@ PY_PATCHPLIST=		yes
 PYSETUPSUBDIR=		py_ext
 EGG_NAME=		${DISTNAME:S/ming/mingc/}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

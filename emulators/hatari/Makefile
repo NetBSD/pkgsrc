@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2014/01/25 10:30:07 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2014/05/09 07:37:04 wiz Exp $
 
 DISTNAME=	hatari-${HATARI_VER}
 HATARI_VER=	1.7.0
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 USE_CMAKE=		yes
 USE_LANGUAGES=		c
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.7.0
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.7.0
 REPLACE_PYTHON+=	python-ui/config.py
 REPLACE_PYTHON+=	python-ui/debugui.py
 REPLACE_PYTHON+=	python-ui/dialogs.py

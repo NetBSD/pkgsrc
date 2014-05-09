@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/05/03 12:54:36 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/09 07:37:01 wiz Exp $
 
 DISTNAME=	logan-0.5.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Toolkit for building standalone Django applications
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.5.9.1
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.5.9.1
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

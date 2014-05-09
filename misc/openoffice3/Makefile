@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2014/05/05 00:48:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.102 2014/05/09 07:37:12 wiz Exp $
 
 OO_VER=			3.1.1
 OO_TAG=			OOO310_m19
@@ -32,7 +32,7 @@ WRKSRC=			${WRKDIR}/${OO_TAG}
 GCC_REQD+=		3.4
 USE_LANGUAGES+=		c c++
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 3.1.1
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 3.1.1
 
 CONFLICTS+=		staroffice-[0-9]*
 CONFLICTS+=		openoffice-[0-9]*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2014/05/05 00:48:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.32 2014/05/09 07:37:28 wiz Exp $
 
 DISTNAME=		tint2-0.11
 PKGREVISION=		22
@@ -21,7 +21,7 @@ CONF_FILES=		${PREFIX}/share/examples/tint2/tint2rc \
 			${PKG_SYSCONFDIR}/xdg/tint2/tint2rc
 
 REPLACE_PYTHON+=	src/tint2conf/tintwizard.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2
 
 CMAKE_OPTS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
 CMAKE_OPTS+=	-DSYSCONFDIR=${PKG_SYSCONFDIR}

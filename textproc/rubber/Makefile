@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2014/01/25 10:30:25 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2014/05/09 07:37:22 wiz Exp $
 
 DISTNAME=	rubber-1.1
 PKGREVISION=	5
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--infodir=${PREFIX:Q}/${PKGINFODIR:Q}
 PLIST_SUBST+=		RUBBERVERSUFFIX=${PKGVERSION_NOREV}
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.1
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.1
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

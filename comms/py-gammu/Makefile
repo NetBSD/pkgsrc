@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/25 10:29:58 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/09 07:36:56 wiz Exp $
 #
 
 .include "../../comms/gammu/Makefile.common"
@@ -18,7 +18,7 @@ PYSETUPBUILDTARGET=	build_ext
 PYSETUPBUILDARGS=	--gammu-incs=${BUILDLINK_PREFIX.gammu}/include/gammu
 PYSETUPBUILDARGS+=	--gammu-libs=${BUILDLINK_PREFIX.gammu}/lib
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.26.1
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.26.1
 
 EGG_NAME=	python_${DISTNAME}
 

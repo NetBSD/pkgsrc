@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/01/23 18:53:03 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2014/05/09 07:37:03 wiz Exp $
 
 DISTNAME=	qbzr-${VER}
 PKGREVISION=	3
@@ -17,7 +17,7 @@ USE_TOOLS+=	msgfmt
 
 WRKSRC=		${WRKDIR}/qbzr
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.22.1
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.22.1
 REPLACE_PYTHON=		lib/uifactory.py
 
 .include "../../devel/bzr/plugin.mk"

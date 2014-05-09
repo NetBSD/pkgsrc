@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/23 16:50:06 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/09 07:37:14 wiz Exp $
 
 DISTNAME=	exabgp-exabgp-3.2.19
 PKGNAME=	exabgp-3.2.19
@@ -29,7 +29,7 @@ REPLACE_PYTHON+=	etc/exabgp/processes/tcp-server
 REPLACE_PYTHON+=	etc/exabgp/processes/syslog-1.py
 
 EGG_NAME=	${PKGNAME_NOREV}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 3.2.19
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 3.2.19
 
 USE_LANGUAGES=  # none
 

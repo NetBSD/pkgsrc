@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/01/25 09:08:32 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2014/05/09 07:37:14 wiz Exp $
 
 DISTNAME=	GeoIP-Python-1.2.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Python-//}
@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 EGG_NAME=	${DISTNAME:S/-/_/}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.2.7
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.2.7
 
 .include "../../lang/python/distutils.mk"
 .include "../../net/GeoIP/buildlink3.mk"

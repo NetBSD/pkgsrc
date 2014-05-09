@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2014/01/31 19:32:04 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2014/05/09 07:37:02 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-tryton
 PKG_SUPPORTED_OPTIONS=	cdecimal goocalendar pytz simplejson
@@ -7,12 +7,12 @@ PKG_SUGGESTED_OPTIONS+=	cdecimal pytz simplejson
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mcdecimal)
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-cdecimal not available because obsolete
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 34 # py-cdecimal not available because obsolete
 DEPENDS+=		${PYPKGPREFIX}-cdecimal-[0-9]*:../../math/py-cdecimal
 .endif
 
 .if !empty(PKG_OPTIONS:Mgoocalendar)
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2 via py-goocanvas via py-goocalendar
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 34 # py-gtk2 via py-goocanvas via py-goocalendar
 DEPENDS+=		${PYPKGPREFIX}-goocalendar-[0-9]*:../../time/py-goocalendar
 .endif
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/01/25 10:30:26 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2014/05/09 07:37:23 wiz Exp $
 
 PKGVER=			0.8.4
 DISTNAME=		ccsm-${PKGVER}
@@ -19,7 +19,7 @@ USE_TOOLS+=		pkg-config gmake msgfmt intltool
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 REPLACE_PYTHON=		${WRKSRC}/setup.py ${WRKSRC}/ccm/*.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2
 
 MAKE_ENV+=	PYTHONBIN=${PYTHONBIN:Q}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2014/01/25 10:45:21 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2014/05/09 07:37:20 wiz Exp $
 
 VERSION=	3.3.2
 DISTNAME=	xen-${VERSION}
@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-curses>=0nb4:../../devel/py-curses
 BUILD_DEPENDS+= dev86-[0-9]*:../../devel/dev86 # needed to build firmware
 
 PKG_SYSCONFSUBDIR=	xen
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-xml
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-xml
 
 ONLY_FOR_PLATFORM=	Linux-2.6*-i386 Linux-2.6*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-[5-9].*-x86_64 NetBSD-[5-9].*-i386
