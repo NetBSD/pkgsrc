@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/05/05 22:56:03 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2014/05/09 07:37:11 wiz Exp $
 
 DISTNAME=	bulk-medium-20140505
 CATEGORIES=	meta-pkgs
@@ -10,7 +10,7 @@ COMMENT=	Meta-package for a standard medium-sized limited bulk build
 
 META_PACKAGE=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-postgresql, py-matplotlib-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-postgresql, py-matplotlib-gtk2
 
 RESTRICTED=		Just for test build purpose
 NO_BIN_ON_CDROM=	${RESTRICTED}

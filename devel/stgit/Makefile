@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2014/01/25 10:45:17 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2014/05/09 07:37:03 wiz Exp $
 
 DISTNAME=	stgit-0.14.3
 PKGREVISION=	7
@@ -23,7 +23,7 @@ REPLACE_BASH=	contrib/stg-*
 
 REPLACE_PYTHON=	*.py stgit/*.py stg
 PYSETUPINSTALLARGS=	--prefix=${PREFIX}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.14.3
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.14.3
 
 MAKE_ENV+=	ASCIIDOC=${PREFIX}/bin/asciidoc
 MAKE_ENV+=	ASCIIDOC_EXTRA=${ASCIIDOC_EXTRA:M*:Q}

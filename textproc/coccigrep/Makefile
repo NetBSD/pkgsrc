@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/01/25 10:30:23 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2014/05/09 07:37:21 wiz Exp $
 
 DISTNAME=	coccigrep-1.12
 CATEGORIES=	textproc
@@ -15,7 +15,7 @@ USE_LANGUAGES=	# none
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.12
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.12
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/coccigrep.1 \

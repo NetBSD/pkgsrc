@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2014/05/05 00:48:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.55 2014/05/09 07:37:27 wiz Exp $
 
 VERSION=	2.8.10.1
 DISTNAME=	wxPython-src-${VERSION}
@@ -19,7 +19,7 @@ USE_TOOLS+=	gmake pkg-config
 # previous name of the package
 CONFLICTS+=		${PYPKGPREFIX}-wxWindows-[0-9]*
 PYTHON_SELF_CONFLICT=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.8.10.1
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2.8.10.1
 
 WXARG=	WXPORT=gtk2 UNICODE=1
 

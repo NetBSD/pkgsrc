@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/01/25 10:30:08 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2014/05/09 07:37:06 wiz Exp $
 
 DISTNAME=	gpsd-2.96
 PKGREVISION=	1
@@ -17,7 +17,7 @@ BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 PY_PATCHPLIST=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.96
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2.96
 
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/25 10:30:21 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/09 07:37:19 wiz Exp $
 
 DISTNAME=	euca2ools-2.1.2
 CATEGORIES=	sysutils
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-m2crypto>=0.20.2:../../security/py-m2crypto
 DEPENDS+=	${PYPKGPREFIX}-xml-[0-9]*:../../textproc/py-xml
 DEPENDS+=	help2man-[0-9]*:../../converters/help2man
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-xml, py-m2crypto
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-xml, py-m2crypto
 
 #USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/20 11:35:00 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/09 07:36:57 wiz Exp $
 
 DISTNAME=	python-cdb-0.35
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 EGG_NAME=	${DISTNAME:S/-/_/}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.35
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.35
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

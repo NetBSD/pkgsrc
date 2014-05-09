@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/25 10:30:28 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/09 07:37:25 wiz Exp $
 
 DISTNAME=	django-photologue-2.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-django-tagging-[0-9]*:../../www/py-django-tagging
 
 EGG_NAME=		${DISTNAME:S/-/_/}
 USE_LANGUAGES=		# none
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-django-tagging, py-imaging
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-django-tagging, py-imaging
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

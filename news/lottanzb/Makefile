@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2014/01/25 10:30:18 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2014/05/09 07:37:16 wiz Exp $
 
 DISTNAME=	lottanzb-0.4.1
 PKGREVISION=	1
@@ -18,7 +18,7 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		intltool msgfmt
 
 REPLACE_PYTHON=	lottanzb/postprocessor.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2 via py-kiwi
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2 via py-kiwi
 
 SUBST_CLASSES+=		localedir
 SUBST_STAGE.localedir=	pre-configure

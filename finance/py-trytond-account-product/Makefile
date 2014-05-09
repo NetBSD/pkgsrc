@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/05/05 22:58:40 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/09 07:37:05 wiz Exp $
 
 DISTNAME=	trytond_account_product-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-trytond-[0-9]*:../../devel/py-trytond
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	26 33 # XXX according to setup.py
+PYTHON_VERSIONS_INCOMPATIBLE=	26 33 34 # XXX according to setup.py
 
 REPLACE_PYTHON+=	tests/test_account_product.py
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2014/02/24 16:19:39 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2014/05/09 07:36:53 wiz Exp $
 
 DISTNAME=		Csound${CSOUND_VERSION}
 PKGNAME=		csound5-${CSOUND_VERSION}
@@ -26,7 +26,7 @@ SCONS_ARGS+=		buildInterfaces=0
 # Has long files our tar doesn't understand.
 EXTRACT_USING=		gtar
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 5.01
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 5.01
 
 INSTALLATION_DIRS=	bin
 

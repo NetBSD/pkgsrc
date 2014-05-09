@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/01/25 10:30:15 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/05/09 07:37:14 wiz Exp $
 
 DISTNAME=	calypso-1.3
 CATEGORIES=	net time
@@ -14,7 +14,7 @@ DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 INSTALLATION_DIRS=	share/examples/calypso
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-vobject
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-vobject
 
 REPLACE_PYTHON=	calypso.py
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/01/25 10:30:26 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2014/05/09 07:37:23 wiz Exp $
 
 DISTNAME=		mod_python-2.7.11
 PKGNAME=		ap13-${PYPKGPREFIX}-python-2.7.11
@@ -21,7 +21,7 @@ CONFIGURE_ENV+=		PYTHON_BIN=${PYTHONBIN:Q} ac_cv_path_MKDEP=
 INSTALLATION_DIRS=	lib/httpd share/doc/ap-mod_python
 
 PY_PATCHPLIST=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.7.11; 3.5.0 is supposed to work
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2.7.11; 3.5.0 is supposed to work
 
 post-install:
 	cd ${WRKSRC}/doc-html && pax -rwpe . ${DESTDIR}${PREFIX}/share/doc/ap-mod_python
