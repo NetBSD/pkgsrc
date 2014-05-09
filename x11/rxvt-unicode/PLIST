@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2013/01/20 13:34:54 morr Exp $
+@comment $NetBSD: PLIST,v 1.13 2014/05/09 17:18:48 morr Exp $
 bin/urxvt
 bin/urxvtc
 bin/urxvtd
@@ -23,6 +23,7 @@ ${PLIST.perl}lib/urxvt/perl/selection
 ${PLIST.perl}lib/urxvt/perl/selection-autotransform
 ${PLIST.perl}lib/urxvt/perl/selection-pastebin
 ${PLIST.perl}lib/urxvt/perl/selection-popup
+${PLIST.perl}lib/urxvt/perl/selection-to-clipboard
 ${PLIST.perl}lib/urxvt/perl/tabbed
 ${PLIST.perl}lib/urxvt/perl/urxvt-popup
 ${PLIST.perl}lib/urxvt/perl/xim-onthespot
@@ -48,6 +49,7 @@ ${PLIST.perl}man/man1/urxvt-searchable-scrollback.1
 ${PLIST.perl}man/man1/urxvt-selection-autotransform.1
 ${PLIST.perl}man/man1/urxvt-selection-pastebin.1
 ${PLIST.perl}man/man1/urxvt-selection-popup.1
+${PLIST.perl}man/man1/urxvt-selection-to-clipboard.1
 ${PLIST.perl}man/man1/urxvt-selection.1
 ${PLIST.perl}man/man1/urxvt-tabbed.1
 ${PLIST.perl}man/man1/urxvt-xim-onthespot.1
