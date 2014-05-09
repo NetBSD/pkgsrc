@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/01/31 11:25:43 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2014/05/09 07:37:03 wiz Exp $
 
 DISTNAME=		unittest2-0.5.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ DOCDIR=			share/doc/${PKGBASE}
 INSTALLATION_DIRS+=	${DOCDIR}
 PLIST_SUBST+=		DOCDIR=${DOCDIR}
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # see versioned_dependencies.mk
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # see versioned_dependencies.mk
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.txt ${DESTDIR}${PREFIX}/${DOCDIR}

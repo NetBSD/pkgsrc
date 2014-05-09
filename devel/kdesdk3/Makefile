@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2014/04/10 06:21:19 obache Exp $
+# $NetBSD: Makefile,v 1.118 2014/05/09 07:36:59 wiz Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
 PKGREVISION=	50
@@ -80,7 +80,7 @@ REPLACE_PYTHON+= \
 		kcachegrind/converters/hotshot2calltree \
 		scripts/kdelnk2desktop.py \
 		scripts/zonetab2pot.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 3.5.10
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 3.5.10
 
 # REPLACE_PHP+= kcachegrind/converters/pprof2calltree
 SUBST_CLASSES+=		php

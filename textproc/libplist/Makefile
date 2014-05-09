@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/01/25 10:30:23 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2014/05/09 07:37:21 wiz Exp $
 
 DISTNAME=	libplist-1.8
 PKGREVISION=	3
@@ -19,7 +19,7 @@ MAKE_JOBS_SAFE=	no
 PKGCONFIG_OVERRIDE+=	libplist++.pc.in
 PKGCONFIG_OVERRIDE+=	libplist.pc.in
 PY_PATCHPLIST=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.8
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.8
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../lang/python/extension.mk"

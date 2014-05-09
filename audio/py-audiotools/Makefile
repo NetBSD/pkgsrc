@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/01/20 11:54:21 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2014/05/09 07:36:53 wiz Exp $
 
 DISTNAME=	audiotools-2.20
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ REPLACE_PYTHON+=	audiotools/py_decoders/*.py
 REPLACE_PYTHON+=	audiotools/py_encoders/*.py
 
 EGG_NAME=	Python_Audio_Tools-${PKGVERSION_NOREV}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.20
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2.20
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"

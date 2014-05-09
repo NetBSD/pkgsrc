@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2014/02/12 23:18:36 tron Exp $
+# $NetBSD: Makefile,v 1.33 2014/05/09 07:37:18 wiz Exp $
 
 DISTNAME=		M2Crypto-0.21.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:tl}
@@ -19,7 +19,7 @@ BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7i{,nb*}
 
 PYSETUPBUILDARGS=	build_ext --openssl=${BUILDLINK_PREFIX.openssl}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.21.1
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.21.1
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/egg.mk"

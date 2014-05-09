@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/05/05 00:47:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/09 07:37:00 wiz Exp $
 
 DISTNAME=		meld-3.11.0
 PKGREVISION=		2
@@ -17,7 +17,7 @@ DEPENDS+=		gsettings-desktop-schemas-[0-9]*:../../sysutils/gsettings-desktop-sch
 
 USE_TOOLS+=		intltool msgfmt
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 3.11; 3.12 will probably require 33+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 3.11; 3.12 will probably require 33+
 
 SUBST_CLASSES+=		man
 SUBST_FILES.man=	setup.py
