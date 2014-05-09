@@ -1,4 +1,4 @@
-$NetBSD: patch-gnatlib_src_gnatcoll__readline.gpr.in,v 1.2 2014/05/01 09:00:27 marino Exp $
+$NetBSD: patch-gnatlib_src_gnatcoll__readline.gpr.in,v 1.3 2014/05/09 18:37:34 marino Exp $
 
 Fix Readline support
 
@@ -18,7 +18,7 @@ Fix Readline support
        --  When linking an executable
        case Gnatcoll_Shared.Readline is
 -         when "yes" => for Linker_Options use ("-lreadline");
-+         when "yes" => for Linker_Options use ("-rpath=@PREFIX@/lib",
++         when "yes" => for Linker_Options use ("-rpath", "@PREFIX@/lib",
 +            "-L@PREFIX@/lib", "-lreadline");
           when "no"  => null;
        end case;
