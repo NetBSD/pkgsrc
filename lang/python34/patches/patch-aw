@@ -1,4 +1,7 @@
-$NetBSD: patch-aw,v 1.1 2014/05/09 02:27:14 wen Exp $
+$NetBSD: patch-aw,v 1.2 2014/05/09 09:19:06 wiz Exp $
+
+DragonFlyBSD support
+http://bugs.python.org/issue21459
 
 --- Modules/nismodule.c.orig	2010-08-19 09:03:03.000000000 +0000
 +++ Modules/nismodule.c
