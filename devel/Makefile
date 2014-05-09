@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1895 2014/05/09 21:23:49 imil Exp $
+# $NetBSD: Makefile,v 1.1896 2014/05/09 21:31:10 imil Exp $
 #
 
 COMMENT=	Development utilities
@@ -1483,6 +1483,7 @@ SUBDIR+=	py-ipython
 SUBDIR+=	py-ipython010
 SUBDIR+=	py-ipython013
 SUBDIR+=	py-ipython1
+SUBDIR+=	py-jaraco_util
 SUBDIR+=	py-jersey
 SUBDIR+=	py-kjbuckets
 SUBDIR+=	py-kqueue
