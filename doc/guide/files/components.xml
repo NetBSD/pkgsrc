@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.45 2014/05/09 08:14:06 obache Exp $ -->
+<!-- $NetBSD: components.xml,v 1.46 2014/05/09 09:45:27 obache Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -609,9 +609,21 @@ MESSAGE_SUBST+=  SOMEVAR="somevalue"
 	  </listitem>
 	</varlistentry>
 
-	<varlistentry><term><filename>ALTERNATIVES</filename></term>
-	<listitem><para>FIXME: There is no documentation on the
-	alternatives framework.</para></listitem></varlistentry>
+	<varlistentry>
+	  <term><filename>ALTERNATIVES</filename></term>
+
+	  <listitem>
+	    <para>This file is used by alternatives system.
+	    It creates, configure and destroys generic wrappers used to
+	    run programs with similar intterfaces.
+	    See pkg_alternatives(8) from pkgtools/pkg_alternatives
+            for more information.</para>
+
+	    <para>Each line of the file contains two filenames, first
+	    the wrapper and then the alternative provided by the package.
+	    Both paths are relative to <varname>PREFIX</varname>.</para>
+	  </listitem>
+	</varlistentry>
 
       </variablelist>
 
