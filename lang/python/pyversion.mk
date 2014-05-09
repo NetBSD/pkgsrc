@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.113 2014/01/25 10:31:01 wiz Exp $
+# $NetBSD: pyversion.mk,v 1.114 2014/05/09 05:23:41 obache Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -8,7 +8,7 @@
 # PYTHON_VERSION_DEFAULT
 #	The preferred Python version to use.
 #
-#	Possible values: 26 27 33
+#	Possible values: 26 27 33 34
 #	Default: 27
 #
 # === Infrastructure variables ===
@@ -27,13 +27,13 @@
 #	order of the entries matters, since earlier entries are
 #	preferred over later ones.
 #
-#	Possible values: 33 27 26
-#	Default: (33) 27 26
+#	Possible values: 34 33 27 26
+#	Default: 34 33 27 26
 #
 # PYTHON_VERSIONS_INCOMPATIBLE
 #	The Python versions that are NOT acceptable for the package.
 #
-#	Possible values: 26 27 33
+#	Possible values: 26 27 33 34
 #	Default: (empty)
 #
 # PYTHON_FOR_BUILD_ONLY
@@ -85,12 +85,8 @@ BUILD_DEFS+=		PYTHON_VERSION_DEFAULT
 BUILD_DEFS_EFFECTS+=	PYPACKAGE
 
 PYTHON_VERSION_DEFAULT?=		27
-PYTHON_VERSIONS_ACCEPTED?=		33 27 26
+PYTHON_VERSIONS_ACCEPTED?=		34 33 27 26
 PYTHON_VERSIONS_INCOMPATIBLE?=		# empty by default
-
-BUILDLINK_API_DEPENDS.python26?=		python26>=2.6
-BUILDLINK_API_DEPENDS.python27?=		python27>=2.7
-BUILDLINK_API_DEPENDS.python33?=		python33>=3.3
 
 # transform the list into individual variables
 .for pv in ${PYTHON_VERSIONS_ACCEPTED}
@@ -146,30 +142,17 @@ CONFLICTS +=	${PKGNAME:S/py${_PYTHON_VERSION}/py${i}/:C/-[0-9].*$/-[0-9]*/}
 #
 PLIST_VARS+=	py2x py3x
 
-.if ${_PYTHON_VERSION} == "33"
-PYPKGSRCDIR=	../../lang/python33
-PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python33}:${PYPKGSRCDIR}
-PYPACKAGE=	python33
-PYVERSSUFFIX=	3.3
-PYPKGPREFIX=	py33
+PYPACKAGE=	python${_PYTHON_VERSION}
+PYVERSSUFFIX=	${_PYTHON_VERSION:C/^([0-9])/\1./1}
+BUILDLINK_API_DEPENDS.${PYPACKAGE}?=		${PYPACKAGE}>=${PYVERSSUFFIX}
+PYPKGSRCDIR=	../../lang/${PYPACKAGE}
+PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.${PYPACKAGE}}:${PYPKGSRCDIR}
+PYPKGPREFIX=	py${_PYTHON_VERSION}
+.if !empty(_PYTHON_VERSION:M3*)
 PLIST.py3x=	yes
-.elif ${_PYTHON_VERSION} == "27"
-PYPKGSRCDIR=	../../lang/python27
-PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python27}:${PYPKGSRCDIR}
-PYPACKAGE=	python27
-PYVERSSUFFIX=	2.7
-PYPKGPREFIX=	py27
+.endif
+.if !empty(_PYTHON_VERSION:M2*)
 PLIST.py2x=	yes
-.elif ${_PYTHON_VERSION} == "26"
-PYPKGSRCDIR=	../../lang/python26
-PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python26}:${PYPKGSRCDIR}
-PYPACKAGE=	python26
-PYVERSSUFFIX=	2.6
-PYPKGPREFIX=	py26
-PLIST.py2x=	yes
-.else
-PKG_FAIL_REASON+=   "No valid Python version"
-PYPKGPREFIX=
 .endif
 
 PTHREAD_OPTS+=	require
