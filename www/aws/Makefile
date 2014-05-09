@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/04/30 16:30:33 marino Exp $
+# $NetBSD: Makefile,v 1.17 2014/05/09 22:45:15 marino Exp $
 #
 
 DISTNAME=	aws-${AWS_VERSION}
@@ -27,7 +27,8 @@ MY_MAKE_ENV+=		ADA_PROJECT_PATH=${PREFIX}/lib/gnat
 MY_MAKE_ENV+=		AWK=awk
 MY_MAKE_ENV+=		PATH=${PREFIX}/gcc-aux/bin:${PATH}
 MY_CONF_ENV+=		PATH=${PREFIX}/gcc-aux/bin:${PATH}
-CONFIGURE_ARGS+=	LPATH=${PREFIX}/lib ZPATH=/usr/lib
+CONFIGURE_ARGS+=	LPATH=${BUILDLINK_PREFIX.openssl}/lib
+CONFIGURE_ARGS+=	ZPATH=${BUILDLINK_PREFIX.zlib}/lib
 
 # Link options were added for the aws library
 # "-R" option disables all rpaths except adalib and compiler libs.  This is
@@ -61,7 +62,6 @@ do-test: install
 
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${GMAKE} install
-	@cd ${DESTDIR}/${PREFIX} && ${FIND} * -type d -empty -exec rmdir {} \;
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"

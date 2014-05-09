@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2014/04/30 16:30:33 marino Exp $
+# $NetBSD: options.mk,v 1.10 2014/05/09 22:45:15 marino Exp $
 
 
 # xmlada is built-in (not optional) due to gprbuild dependency
@@ -35,7 +35,7 @@ DOTBUILD=		release
 # NetBSD until NetBSD upgrades it's libgcc or until a new GNAT and GPRBuild
 # are delivered that don't have this bug.
 
-.if $(OPSYS) == "NetBSD"
+.if $(OPSYS) == NetBSD
 CONFIGURE_ARGS+=	ZLIB=false
 .else
 CONFIGURE_ARGS+=	ZLIB=true
