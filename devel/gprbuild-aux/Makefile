@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/04/30 16:28:09 marino Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/09 12:14:58 marino Exp $
 #
 
 DISTNAME=	gprbuild-aux-${SNAPSHOT}
@@ -33,10 +33,6 @@ do-build:
 	# Recreate the do-build target without the -J parameter
 	# It interferes with the PROCESSORS configure argument
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} gmake ${MAKE_ARGS} all
-
-post-install:
-	cd ${DESTDIR}${PREFIX}; ${FIND} share/examples -type d -empty | \
-		${SORT} -dr | ${XARGS} ${RMDIR}
 
 .include "../../textproc/xmlada/buildlink3.mk"
 .include "../../lang/gnat_util/buildlink3.mk"
