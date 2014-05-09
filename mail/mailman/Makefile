@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2014/01/25 10:45:19 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2014/05/09 07:37:10 wiz Exp $
 
 DISTNAME=	mailman-2.1.14-1
 PKGNAME=	mailman-2.1.14.1
@@ -69,7 +69,7 @@ RCD_SCRIPTS=		mailman
 INSTALL_TEMPLATES+=	${FILESDIR}/INSTALL
 DEINSTALL_TEMPLATES+=	${FILESDIR}/DEINSTALL
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.1.14.1
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2.1.14.1
 REPLACE_PYTHON+=	Mailman/Archiver/pipermail.py
 REPLACE_PYTHON+=	Mailman/Post.py
 REPLACE_PYTHON+=	bin/msgfmt.py

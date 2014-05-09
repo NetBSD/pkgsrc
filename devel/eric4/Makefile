@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2014/05/04 13:10:47 rodent Exp $
+# $NetBSD: Makefile,v 1.42 2014/05/09 07:36:59 wiz Exp $
 
 VERS=			4.5.18
 DISTNAME=		eric4-${VERS}
@@ -15,7 +15,7 @@ LICENSE=		gnu-gpl-v3
 NO_BUILD=				yes
 
 PY_PATCHPLIST=			yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 4.5.18
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 4.5.18
 
 CONFIGURE_ARGS+=		-b ${PREFIX}/bin
 CONFIGURE_ARGS+=		-d ${PREFIX}/${PYSITELIB}

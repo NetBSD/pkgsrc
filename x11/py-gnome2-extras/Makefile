@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2014/05/05 00:48:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.73 2014/05/09 07:37:27 wiz Exp $
 
 DISTNAME=	gnome-python-extras-2.25.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gnome-python/gnome2/}
@@ -16,7 +16,7 @@ BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 PY_PATCHPLIST=	YES
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ORBit via py-gnome2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-ORBit via py-gnome2
 USE_LIBTOOL=	YES
 PKGCONFIG_OVERRIDE+=	gnome-python-extras-2.0.pc.in
 GNU_CONFIGURE=	YES

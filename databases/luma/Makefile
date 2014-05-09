@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2014/01/25 10:45:16 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2014/05/09 07:36:57 wiz Exp $
 
 DISTNAME=	luma-2.3
 PKGREVISION=	14
@@ -17,7 +17,7 @@ SUBST_STAGE.luma=	pre-configure
 SUBST_FILES.luma=	bin/luma
 SUBST_SED.luma=		-e "s|@PREFIX@|${PREFIX}|"
 REPLACE_PYTHON=	bin/luma lib/luma/luma.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-qt3-base, py-ldap
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-qt3-base, py-ldap
 
 post-extract:
 	cd ${WRKSRC} && mv share/man man

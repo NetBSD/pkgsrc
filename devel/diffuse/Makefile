@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2014/01/25 10:30:01 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2014/05/09 07:36:59 wiz Exp $
 
 DISTNAME=	diffuse-0.4.7
 CATEGORIES=	devel
@@ -11,7 +11,7 @@ COMMENT=	Graphical tool for merging and comparing text files
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.10:../../x11/py-gtk2
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2
 
 USE_TOOLS+=	msgfmt
 USE_LANGUAGES=	# none

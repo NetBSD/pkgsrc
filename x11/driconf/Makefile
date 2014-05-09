@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2014/01/21 21:25:06 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2014/05/09 07:37:26 wiz Exp $
 
 DISTNAME=	driconf-0.9.1
 PKGREVISION=	10
@@ -19,7 +19,7 @@ USE_TOOLS+=		msgfmt msgmerge xgettext
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 REPLACE_PYTHON=		*.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2
 
 SUBST_CLASSES+=		fix-paths
 SUBST_FILES.fix-paths=	driconf driconf.desktop

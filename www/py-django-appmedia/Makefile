@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/25 10:30:27 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/09 07:37:24 wiz Exp $
 
 DISTNAME=	django-appmedia-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 EGG_NAME=		${DISTNAME:S/-/_/}
 USE_LANGUAGES=		# empty
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.0.1
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.0.1
 
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 
