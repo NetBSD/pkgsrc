@@ -1,17 +1,16 @@
-$NetBSD: patch-aa,v 1.6 2003/09/04 12:47:38 abs Exp $
+$NetBSD: patch-aa,v 1.7 2014/05/09 15:28:53 sborrill Exp $
 
---- fping.c.orig	Fri Jul 20 18:10:26 2001
-+++ fping.c
-@@ -1547,8 +1547,10 @@ int wait_for_reply( void )
+--- src/fping.c.orig	2014-05-04 21:33:12.000000000 +0100
++++ src/fping.c	2014-05-09 16:25:45.000000000 +0100
+@@ -1521,8 +1521,10 @@
  
- 	ip = ( struct ip* )buffer;
- 
+     ip = ( struct ip* )buffer;
+ #ifndef IPV6
 -#if defined( __alpha__ ) && __STDC__ && !defined( __GLIBC__ )
--	/* The alpha headers are decidedly broken.
 +#if defined( __alpha__ ) && __STDC__ && !defined( __GLIBC__ ) && !defined( __NetBSD__ )
-+	/* The alpha headers are decidedly broken. 
-+	 * XXX _WHAT_ 'alpha'? OSF? True64? Linux?... Certainly not NetBSD
-+	 * XXX If defining for a particular broken OS then _include the OS_.
- 	 * Using an ANSI compiler, it provides ip_vhl instead of ip_hl and
- 	 * ip_v.  So, to get ip_hl, we mask off the bottom four bits.
- 	 */
+     /* The alpha headers are decidedly broken.
++     * XXX _WHAT_ 'alpha'? OSF? True64? Linux?... Certainly not NetBSD
++     * XXX If defining for a particular broken OS then _include the OS_.
+      * Using an ANSI compiler, it provides ip_vhl instead of ip_hl and
+      * ip_v.  So, to get ip_hl, we mask off the bottom four bits.
+      */
