@@ -1,4 +1,13 @@
-$NetBSD: patch-al,v 1.1 2014/05/09 02:27:14 wen Exp $
+$NetBSD: patch-al,v 1.2 2014/05/09 09:19:06 wiz Exp $
+
+MirBSD support
+http://bugs.python.org/issue21458
+
+Interix support
+
+Changes for consistency across pkgsrc platforms.
+
+XXX: Not sure what the BLDSHARED changes are about.
 
 --- configure.orig	2013-05-15 16:33:00.000000000 +0000
 +++ configure
