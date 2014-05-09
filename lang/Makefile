@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.375 2014/04/30 16:25:20 marino Exp $
+# $NetBSD: Makefile,v 1.376 2014/05/09 02:29:17 wen Exp $
 #
 
 COMMENT=	Programming languages
@@ -163,6 +163,7 @@ SUBDIR+=	py27-html-docs
 SUBDIR+=	python26
 SUBDIR+=	python27
 SUBDIR+=	python33
+SUBDIR+=	python34
 SUBDIR+=	racket
 SUBDIR+=	racket-textual
 SUBDIR+=	rakudo-star
