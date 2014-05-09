@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2014/05/05 00:47:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.36 2014/05/09 18:37:34 marino Exp $
 #
 
 DISTNAME=	gps-${GPS_VERSION}
@@ -38,6 +38,7 @@ SUBST_CLASSES+= 	coll python
 SUBST_STAGE.coll=	post-patch
 SUBST_FILES.coll=	gnatlib/src/gnatcoll_readline.gpr.in
 SUBST_SED.coll=		-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_SED.coll+=	-e "s|-rpath|${LINKER_RPATH_FLAG}|g"
 SUBST_STAGE.python=	post-patch
 SUBST_FILES.python=	share/plug-ins/gps_utils/console_process.py
 SUBST_SED.python=	-e "s|/usr/bin/python|${PYTHONBIN}|"
@@ -61,7 +62,6 @@ pre-install:
 post-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/share/doc/gps/html/users_guide/_sources
 	${RM} -rf ${DESTDIR}${PREFIX}/share/doc/gps/html/tutorial/_sources
-	cd ${DESTDIR}${PREFIX}; ${FIND} * -type d -empty -print | xargs rmdir
 
 DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
