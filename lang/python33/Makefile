@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/03/27 08:50:00 obache Exp $
+# $NetBSD: Makefile,v 1.23 2014/05/09 02:29:09 obache Exp $
 
 .include "dist.mk"
 
@@ -120,6 +120,12 @@ SUBST_MESSAGE.findlib=	Fixing find_library_file on Darwin.
 SUBST_STAGE.findlib=	pre-configure
 SUBST_FILES.findlib=	Lib/distutils/unixccompiler.py
 SUBST_SED.findlib=	-e 's,/usr/local,${PREFIX},'
+
+SUBST_CLASSES+=		sslbase
+SUBST_MESSAGE.sslbase=	Fixing OpenSSL base directory to find header file.
+SUBST_STAGE.sslbase=	pre-configure
+SUBST_FILES.sslbase=	setup.py
+SUBST_VARS.sslbase=	SSLBASE
 
 CHECK_INTERPRETER_SKIP=	lib/python${PY_VER_SUFFIX}/venv/scripts/posix/pydoc
 
