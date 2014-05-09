@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2014/05/05 00:47:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.107 2014/05/09 07:37:07 wiz Exp $
 
 DISTNAME=	inkscape-0.48.4
 PKGREVISION=	24
@@ -44,7 +44,7 @@ SUBST_STAGE.pypath= pre-configure
 SUBST_FILES.pypath= src/extension/implementation/script.cpp
 SUBST_VARS.pypath= PYTHONBIN
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.48.4
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.48.4
 REPLACE_PYTHON+=	cxxtest/cxxtestgen.py
 REPLACE_PYTHON+=	share/filters/i18n.py
 REPLACE_PYTHON+=	share/extensions/*.py

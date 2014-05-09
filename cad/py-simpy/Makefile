@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/01/20 22:17:45 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2014/05/09 07:36:55 wiz Exp $
 
 DISTNAME=		SimPy-2.3
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:tl}
@@ -12,7 +12,7 @@ HOMEPAGE=		http://simpy.sourceforge.net/
 COMMENT=		Discrete event simulation framework
 LICENSE=		gnu-lgpl-v2.1
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.3
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2.3
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC:Q}/build/lib
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/21 10:40:19 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/09 07:37:01 wiz Exp $
 
 DISTNAME=	pylibmc-1.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://pypi.python.org/pypi/pylibmc
 COMMENT=	Quick and small memcached client for Python
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.2.3
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.2.3
 
 .include "../../devel/libmemcached/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

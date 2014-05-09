@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/25 10:29:56 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/09 07:36:53 wiz Exp $
 
 DISTNAME=	mutagen-1.22
 PKGNAME=	mutagen-tools-1.22
@@ -14,7 +14,7 @@ DEPENDS+= ${PYPKGPREFIX}-mutagen-[0-9]*:../../audio/py-mutagen
 
 USE_LANGUAGES=	# none
 PY_NO_EGG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.22
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.22
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

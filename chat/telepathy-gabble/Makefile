@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2014/04/09 07:27:02 obache Exp $
+# $NetBSD: Makefile,v 1.39 2014/05/09 07:36:56 wiz Exp $
 
 DISTNAME=	telepathy-gabble-0.11.10
 PKGREVISION=	19
@@ -17,7 +17,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 CONFIGURE_ENV+=	UUID_CFLAGS=" " UUID_LIBS=" "
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.11.10
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.11.10
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
