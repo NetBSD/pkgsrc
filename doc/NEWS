@@ -1,4 +1,4 @@
-# $NetBSD: NEWS,v 1.9 2014/05/03 13:48:57 alnsn Exp $
+# $NetBSD: NEWS,v 1.10 2014/05/09 06:29:57 obache Exp $
 
 PKGSRC NEWS
 ===========
@@ -12,6 +12,8 @@ Lua multiversion supoort [alnsn 2014-05-03]
 	to coexist without conflicts, infrastructure for supporting
 	multiple versions of Lua has been put in place and all
 	dependent packages has been adapted to the new infrastructure.
+
+SMF support is introduced [jperkin 2014-03-11]
 
 Unprivileged staged installation is default [asau 2012-08-14]
 	pkgsrc has changed to use unprivileged staged installation by default.
