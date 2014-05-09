@@ -1,7 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2014/05/09 02:27:14 wen Exp $
+$NetBSD: patch-aa,v 1.2 2014/05/09 09:19:06 wiz Exp $
 
 * On NetBSD, [n]curses.h and stdlib.h/wchar.h use different guards
   against multiple definition of wchar_t and wint_t.
+http://bugs.python.org/issue21457
 
 --- Include/py_curses.h.orig	2009-09-06 21:26:46.000000000 +0000
 +++ Include/py_curses.h
