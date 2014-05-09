@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1792 2014/05/09 02:35:37 wen Exp $
+$NetBSD: CHANGES-2014,v 1.1793 2014/05/09 07:31:57 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2512,3 +2512,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated cad/gtkwave to 3.3.59 [mef 2014-05-08]
 	Updated security/clamav to 0.98.3 [jperkin 2014-05-08]
 	Added lang/python34 version 3.4.0 [wen 2014-05-09]
+	Updated devel/p5-Perl-Tidy to 20140328 [wen 2014-05-09]
