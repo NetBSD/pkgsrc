@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1798 2014/05/09 08:31:15 wen Exp $
+$NetBSD: CHANGES-2014,v 1.1799 2014/05/09 15:25:31 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2518,3 +2518,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/openldap-server to 2.4.39nb2 [tron 2014-05-09]
 	Updated devel/p5-Test-File-ShareDir to 1.000000 [wen 2014-05-09]
 	Updated devel/p5-Test-File to 1.36 [wen 2014-05-09]
+	Updated databases/p5-MARC-Record to 2.0.6 [wen 2014-05-09]
