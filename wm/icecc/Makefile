@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2014/01/25 10:45:21 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2014/05/09 07:37:23 wiz Exp $
 
 # Package version reflects icecc version, with PKGREVISION incremented
 # for any tool updates, according to the authors scheme.
@@ -39,7 +39,7 @@ REPLACE_PYTHON=	icecursorscfg-0.6/icecurcfg.py iceiconcvt-1.0/iceiconcvt.py
 REPLACE_PYTHON+=	icemergeprefs-0.5/icemergeprefs.py icerrun-0.5/icerrrun.py
 REPLACE_PYTHON+=	icerrun-0.5/icerrun.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-qt3-base
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-qt3-base
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch

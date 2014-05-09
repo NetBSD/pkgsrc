@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/01/25 10:29:58 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2014/05/09 07:36:56 wiz Exp $
 
 DISTNAME=	JapaneseCodecs-1.4.11
 PKGNAME=	${PYPKGPREFIX}-jpCodecs-1.4.11
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.asahi-net.or.jp/~rd6t-kjym/python/
 COMMENT=	Python Unicode codecs for Japanese charsets
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

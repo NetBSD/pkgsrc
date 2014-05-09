@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/01/25 10:30:08 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2014/05/09 07:37:06 wiz Exp $
 
 DISTNAME=	blindmine-0.3-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -22,7 +22,7 @@ SUBST_FILES.path=	blindmine.py sdl_ui.py
 SUBST_SED.path=		-e 's,/usr/bin/env python,${PYTHONBIN},g'
 
 PYCOMPILEALL=	${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.3
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.3
 
 INSTALLATION_DIRS=	bin share/doc/blindmine share/blindmine/data
 

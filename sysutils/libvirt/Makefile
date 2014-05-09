@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2014/03/07 00:30:11 agc Exp $
+# $NetBSD: Makefile,v 1.22 2014/05/09 07:37:19 wiz Exp $
 
 DISTNAME=		libvirt-1.2.2
 CATEGORIES=		sysutils
@@ -17,7 +17,7 @@ USE_LIBTOOL=		yes
 
 BUILD_DEFS+=		VARBASE
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-xml
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-xml
 
 PY_PATCHPLIST=		yes
 REPLACE_PYTHON+=	docs/apibuild.py

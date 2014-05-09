@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/04/09 07:27:06 obache Exp $
+# $NetBSD: Makefile,v 1.27 2014/05/09 07:37:02 wiz Exp $
 
 DISTNAME=	subvertpy-0.8.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ LICENSE=	gnu-lgpl-v2.1
 MAKE_ENV+=	SVN_PREFIX=${BUILDLINK_PREFIX.subversion-base}
 
 PYTHON_SELF_CONFLICT=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.8.10
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.8.10
 
 .include "../../devel/subversion-base/buildlink3.mk"
 .include "../../lang/python/distutils.mk"

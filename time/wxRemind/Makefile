@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/01/25 10:30:26 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/05/09 07:37:23 wiz Exp $
 
 DISTNAME=		wxRemind-0.6.18
 PKGREVISION=		4
@@ -11,7 +11,7 @@ COMMENT=		Graphical front-end to Remind
 
 DEPENDS+=		${PYPKGPREFIX}-wxWidgets>=2.6.1:../../x11/py-wxWidgets
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-wxWidgets
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-wxWidgets
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
