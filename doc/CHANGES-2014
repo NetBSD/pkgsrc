@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1800 2014/05/09 15:29:41 sborrill Exp $
+$NetBSD: CHANGES-2014,v 1.1801 2014/05/09 15:48:27 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2520,3 +2520,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Test-File to 1.36 [wen 2014-05-09]
 	Updated databases/p5-MARC-Record to 2.0.6 [wen 2014-05-09]
 	Updated net/fping to 3.10 [sborrill 2014-05-09]
+	Updated databases/p5-MARC-XML to 1.0.3 [wen 2014-05-09]
