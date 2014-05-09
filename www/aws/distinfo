@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2013/07/07 23:46:50 marino Exp $
+$NetBSD: distinfo,v 1.8 2014/05/09 22:45:15 marino Exp $
 
 SHA1 (aws-3.1.0.0.tar.bz2) = a8135b10bad5a751840858acb305cbb01b5558db
 RMD160 (aws-3.1.0.0.tar.bz2) = d7c8dc904a0a91a8754aae8d07eb8b015fbf3b1f
@@ -13,5 +13,6 @@ SHA1 (patch-makefile) = 31a316463838c7ab38edcd92ee2a376043065832
 SHA1 (patch-regtests__0043_check_mem__test.opt) = abe81a8c9aeb10faac6ea9469408dd89b1c85a65
 SHA1 (patch-src_src.gpr) = 6b7d6732724dbcc5da5e917ee2f2f5d597b3441b
 SHA1 (patch-ssl__crypto_lib.gpr) = e6624d49c72e3dea73ad2b66044f0da5e7ef0a99
+SHA1 (patch-ssl_ssl.gpr) = c605957c0c77b90ba82573a230e1cec52d9cceae
 SHA1 (patch-templates_parser__docs__gentexifile) = d9019f7ee865d38e3cf3f4fb08d942e1a6bb1367
 SHA1 (patch-templates_parser__docs__makefile) = a26ea46580397c06c7a1148cdf9be44545bb124e

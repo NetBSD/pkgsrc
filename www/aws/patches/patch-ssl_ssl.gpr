@@ -1,0 +1,36 @@
+$NetBSD: patch-ssl_ssl.gpr,v 1.1 2014/05/09 22:45:15 marino Exp $
+
+ The vendor SSL gpr file does not support header inclusion at all.  No
+ matter what location is provided for SSL library, only standard header
+ locations (e.g. /usr/include) are searched.  This adds
+ "-I${SSL_LIB_LOCATION}/../include" to the compilation of C files.  The
+ problem was seen on SmartOS where SSL headers are not in the standard
+ locations.
+
+--- ssl/ssl.gpr.orig	2013-07-03 01:11:54.000000000 +0000
++++ ssl/ssl.gpr
+@@ -52,7 +52,23 @@ library project SSL is
+    -- Compiler --
+    --------------
+ 
+-   package Compiler renames Shared.Compiler;
++   Incs := ("-I" & SSL_Lib'Library_Dir & "/../include");
++
++   package Compiler is
++
++      case Shared.Build is
++         when "Debug" =>
++            for Default_Switches ("Ada") use Shared.Common_Options &
++               Shared.Debug_Options;
++            for Default_Switches ("C") use ("-g") & Incs;
++
++         when "Release" =>
++            for Default_Switches ("Ada") use Shared.Common_Options &
++               Shared.Release_Options;
++            for Default_Switches ("C") use ("-O2") & Incs;
++      end case;
++
++   end Compiler;
+ 
+    ------------
+    -- Naming --
