@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.6 2014/05/09 02:29:10 obache Exp $
+$NetBSD: patch-am,v 1.7 2014/05/09 16:33:29 adam Exp $
 
 --- setup.py.orig	2014-03-09 08:40:35.000000000 +0000
 +++ setup.py
@@ -58,15 +58,6 @@ $NetBSD: patch-am,v 1.6 2014/05/09 02:29:10 obache Exp $
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -774,7 +772,7 @@ class PyBuildExt(build_ext):
- 
-         # look for the openssl version header on the compiler search path.
-         opensslv_h = find_file('openssl/opensslv.h', [],
--                inc_dirs + search_for_ssl_incs_in)
-+                search_for_ssl_incs_in)
-         if opensslv_h:
-             name = os.path.join(opensslv_h[0], 'openssl/opensslv.h')
-             if host_platform == 'darwin' and is_macosx_sdk_path(name):
 @@ -1138,6 +1136,30 @@ class PyBuildExt(build_ext):
          dbm_order = ['gdbm']
          # The standard Unix dbm module:
