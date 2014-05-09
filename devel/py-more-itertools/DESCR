@@ -1,0 +1,2 @@
+A collection of several routines not found in itertools, meant to operate on
+itertables.
