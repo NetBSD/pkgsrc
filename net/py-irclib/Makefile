@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2014/04/20 12:44:01 imil Exp $
+# $NetBSD: Makefile,v 1.9 2014/05/09 21:37:03 imil Exp $
 #
 
-IRCVERS=	8.5.4
+IRCVERS=	8.9
 DISTNAME=	irc-${IRCVERS}
 PKGNAME=	${PYPKGPREFIX}-irclib-${IRCVERS}
-PKGREVISION=	4
 CATEGORIES=	net python
 MASTER_SITES=	http://pypi.python.org/packages/source/i/irc/
 EXTRACT_SUFX=	.zip
@@ -17,6 +16,7 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	# none
 
 DEPENDS+=	${PYPKGPREFIX}-six>=1.5.2:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-jaraco_util>=10.0.2:../../devel/py-jaraco_util
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-hgtools>=2.0.2:../../devel/py-hgtools
 
