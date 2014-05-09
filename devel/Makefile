@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1894 2014/05/09 08:08:28 wen Exp $
+# $NetBSD: Makefile,v 1.1895 2014/05/09 21:23:49 imil Exp $
 #
 
 COMMENT=	Development utilities
@@ -1499,6 +1499,7 @@ SUBDIR+=	py-mercurial
 SUBDIR+=	py-minimock
 SUBDIR+=	py-mock
 SUBDIR+=	py-modulegraph
+SUBDIR+=	py-more-itertools
 SUBDIR+=	py-msgpack
 SUBDIR+=	py-multiprocessing
 SUBDIR+=	py-newt
