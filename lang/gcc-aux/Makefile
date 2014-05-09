@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2014/05/02 15:54:16 marino Exp $
+# $NetBSD: Makefile,v 1.18 2014/05/09 09:50:47 marino Exp $
 #
 
 PKGNAME=	gcc-aux-${SNAPSHOT}
 DISTNAME=	gcc-${GCC_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 DISTFILES=	${DISTNAME}.tar.bz2
@@ -28,10 +29,13 @@ ONLY_FOR_PLATFORM=	DragonFly-*-*        \
 			FreeBSD-*-i386       \
 			FreeBSD-*-x86_64     \
 			NetBSD-[5-9]*-i386   \
-			NetBSD-[5-9]*-x86_64
-
-#			SunOS-5.1[1-9]*-i386
-#			gnat-bootstrap.i386.solaris.tar.bz2
+			NetBSD-[5-9]*-x86_64 \
+			SunOS-5.1[1-9]*-i386 \
+			SunOS-5.1[1-9]*-x86_64
+#			OpenBSD-*-amd64
+#			OpenBSD-*-i386
+#			MirBSD-*-amd64
+#			MirBSD-*-i386
 
 GARCH=			${MACHINE_ARCH:S/amd64/x86_64/}
 BLD_TARGET=		${GARCH}-aux-${LOWER_OPSYS}${OS_VERSION}
@@ -52,7 +56,7 @@ BOOTSTRAP_COMPILER=	ada-bootstrap.${GARCH}.freebsd.100B.tar.bz2
 .  endif
 .endif
 
-.if ${OPSYS} == "NetBSD"
+.if ${OPSYS} == NetBSD
 .if !empty(OS_VERSION:M6.99.*)
    NSUFF=	7.0_DEV
 .else
@@ -61,28 +65,43 @@ BOOTSTRAP_COMPILER=	ada-bootstrap.${GARCH}.freebsd.100B.tar.bz2
 .if ${GARCH} == i386
    NELF=	elf
 .endif
+XLDF=			-lm
 BOOTSTRAP_COMPILER=	ada-bootstrap.${GARCH}.netbsd.614.tar.bz2
 BLD_TARGET=		${MACHINE_ARCH}-aux-netbsd${NELF}${NSUFF}
 .endif
 
-.if ${OPSYS} == "SunOS"
-BOOTSTRAP_TRIPLET=	i386-bootstrap-solaris5.11/4.6.1
-SOL_OSV=		`expr substr ${OS_VERSION} 3 2`
+.if ${OPSYS} == SunOS
+SOL_OSV!=		expr substr ${OS_VERSION} 3 2
 BLD_TARGET=		${MACHINE_ARCH}-aux-${LOWER_OPSYS}2.${SOL_OSV}
-BOOTSTRAP_COMPILER=	gnat-bootstrap.${MACHINE_ARCH}.solaris.tar.bz2
+BOOTSTRAP_COMPILER=	ada-bootstrap.x86_64.solaris.511.tar.bz2
+.  if ${ABI} == 64
+EXTRA_CONFARGS+=	--enable-multilib
+.  else
+COMPILER_ABI_SWITCH=	-m32
+.  endif
+MY_CONFIGURE_ENV+=	OBJDUMP=${PREFIX}/bin/gobjdump
+MODERN_BINUTILS=x	yes
+NATIVE_LINKER!=		which ld
+.endif
+
+.if ${OPSYS} == OpenBSD || ${OPSYS} == MirBSD
 MODERN_BINUTILS=	yes
 .endif
 
 .if defined(MODERN_BINUTILS)
 BUILDLINK_DEPMETHOD.binutils=	full
 .include "../../devel/binutils/buildlink3.mk"
-EXTRA_CONFARGS+=	--with-gnu-ld --with-ld=${PREFIX}/bin/gld
 EXTRA_CONFARGS+=	--with-gnu-as --with-as=${PREFIX}/bin/gas
 MY_CONFIGURE_ENV+=	AR=${PREFIX}/bin/gar
 MY_CONFIGURE_ENV+=	AS=${PREFIX}/bin/gas
-MY_CONFIGURE_ENV+=	LD=${PREFIX}/bin/gld
 MY_CONFIGURE_ENV+=	NM=${PREFIX}/bin/gnm
 MY_CONFIGURE_ENV+=	RANLIB=${PREFIX}/bin/granlib
+.  if defined(NATIVE_LINKER)
+EXTRA_CONFARGS+=	--without-gnu-ld --with-ld=${NATIVE_LINKER}
+.  else
+EXTRA_CONFARGS+=	--with-gnu-ld --with-ld=${PREFIX}/bin/gld
+MY_CONFIGURE_ENV+=	LD=${PREFIX}/bin/gld
+.  endif
 .else
 EXTRA_CONFARGS+=	--with-gnu-ld --with-ld=/usr/bin/ld
 EXTRA_CONFARGS+=	--with-gnu-as --with-as=/usr/bin/as
@@ -104,6 +123,7 @@ BSFILENAME=		ada-bootstrap.${GARCH}.${LOWER_OPSYS}.${OS_VERSION:C/[A-Z_.-]//g}.t
 # its gnatlink, gnatbind, and gnatmake rather than the older bootstrap versions
 .if exists(${LOCALBASE}/gcc-aux/bin/ada)
 FULL_GNATGCC=${LOCALBASE}/gcc-aux/bin/ada
+FULL_GNATGXX=${LOCALBASE}/gcc-aux/bin/g++
 .endif
 
 
@@ -112,8 +132,8 @@ FULL_GNATGCC=${LOCALBASE}/gcc-aux/bin/ada
 .  if defined(BOOTSTRAP_TRIPLET)
 FULL_GNATGCC=${BOOTSTRAP_PREFIX}/bin/gnatgcc
 .  else
-FULL_GNATGCC=${BOOTSTRAP_PREFIX}/bin/gcc
-FULL_GNATGXX=${BOOTSTRAP_PREFIX}/bin/g++
+FULL_GNATGCC=${BOOTSTRAP_PREFIX}/bin/gcc ${COMPILER_ABI_SWITCH}
+FULL_GNATGXX=${BOOTSTRAP_PREFIX}/bin/g++ ${COMPILER_ABI_SWITCH}
 .  endif
 DISTFILES+= ${BOOTSTRAP_COMPILER}
 SITES.${BOOTSTRAP_COMPILER}=	http://downloads.dragonlace.net/src/
@@ -134,15 +154,16 @@ DISTFILES= \
    ada-bootstrap.x86_64.dragonfly.36A.tar.bz2 \
    ada-bootstrap.x86_64.freebsd.84.tar.bz2 \
    ada-bootstrap.x86_64.freebsd.100B.tar.bz2 \
-   ada-bootstrap.x86_64.netbsd.614.tar.bz2
+   ada-bootstrap.x86_64.netbsd.614.tar.bz2 \
+   ada-bootstrap.x86_64.openbsd.55.tar.bz2 \
+   ada-bootstrap.x86_64.solaris.511.tar.bz2
 .endif
 
-
 # establish ada-aware compiler for use
-MY_CONFIGURE_ENV+=	CC=${FULL_GNATGCC}
-MY_CONFIGURE_ENV+=	CXX=${FULL_GNATGXX}
+MY_CONFIGURE_ENV+=	CC=${FULL_GNATGCC:Q}
+MY_CONFIGURE_ENV+=	CXX=${FULL_GNATGXX:Q}
 MY_CONFIGURE_ENV+=	PATH=${FULL_PATH}
-MY_CONFIGURE_ENV+=	LDFLAGS="-lm ${COMPILER_RPATH_FLAG}${PREFIX}/lib"
+MY_CONFIGURE_ENV+=	LDFLAGS="${XLDF} ${COMPILER_RPATH_FLAG}${PREFIX}/lib"
 MY_MAKE_ENV+=		PATH=${FULL_PATH}
 MY_MAKE_ENV+=		LD_LIBRARY_PATH=${BUILDDIR}/gcc${EXTRA_LLP}
 # ${WRKSRC}/fixincludes/ looks for sed and compiles the path to sed into
@@ -156,10 +177,6 @@ MY_MAKE_ENV+=		lt_cv_path_SED=${TOOLS_SED}
 CONFIGURE_ARGS= 	--enable-languages=${LANGS:Q}
 CONFIGURE_ARGS+=	--build=${BLD_TARGET}
 CONFIGURE_ARGS+=	--prefix=${PKG_PREFIX:Q}
-CONFIGURE_ARGS+=	--with-system-zlib
-CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
-CONFIGURE_ARGS+=	--with-mpfr=${BUILDLINK_PREFIX.mpfr}
-CONFIGURE_ARGS+=	--with-mpc=${BUILDLINK_PREFIX.mpcomplex}
 CONFIGURE_ARGS+=	--enable-threads=posix
 CONFIGURE_ARGS+=	--disable-libmudflap
 CONFIGURE_ARGS+=	--disable-libgomp
@@ -193,10 +210,20 @@ post-extract:
 	  -pe 's|es_MX|es_ES|g;' \
 	  -pe 's|ru_RU.UTF8|ru_RU.UTF-8|g' ${LOCALE22FIX})
 .if !empty(PKG_OPTIONS:Mstatic) || !empty(PKG_OPTIONS:Mbootstrap)
+.  if ${OPSYS} != SunOS
 	# Ensure GNAT tools are built statically
 	${PERL5} -pi -e 's/^GCC_LINK_FLAGS=.*/GCC_LINK_FLAGS=-static/' \
 	  ${WRKSRC}/gcc/ada/gcc-interface/Makefile.in
+.  endif
 .endif
+.if !exists(${LOCALBASE}/gcc-aux/bin/ada) && ${OPSYS} == SunOS
+	# In case /usr/pkg/bin/gas doesn't exist, establish fallback
+	${LN} -s ${PREFIX}/bin/gas ${BOOTSTRAP_PREFIX}/bin/as
+.endif
+	# Illumos /usr/ccs binaries are symlinked to /usr/bin
+	# elfdump was present on OmniOS but not in Joyent dev area
+	${PERL5} -i -pe 's|/usr/ccs/bin|/usr/bin|g;' \
+	  -pe 's|readelf -s|greadelf -s|' ${WRKSRC}/contrib/make_sunver.pl
 	# Update LINK_SPEC to add gcc-aux lib runpath in every binary
 	@${ECHO} "Configuring LINK_SPEC runpath"
 	${PERL5} -pi -e 's;\@PREFIX\@;${PREFIX};' \
@@ -234,7 +261,7 @@ do-build:
 do-test: build test-ada test-fortran test-objc test-cxx test-c
 
 test-ada:
-.if (${OPSYS} == "NetBSD") && (${MACHINE_ARCH} == "x86_64")
+.if (${OPSYS} == NetBSD) && (${MACHINE_ARCH} == x86_64)
 	# NetBSD has an extremely small default stacksize of 2MB, which is
 	# insufficient for the gnat.dg testsuite.
 	# specifically: entry_queues test on AMD64
@@ -270,19 +297,18 @@ do-install:
 	cd ${BUILDDIR} && ${SETENV} ${MY_MAKE_ENV} ${GMAKE} install-strip \
 		DESTDIR=${DESTDIR}
 	${MV} ${DESTDIR}${PKG_PREFIX}/share ${WRKDIR}/moved_share
+
 .if !empty(PKG_OPTIONS:Mbootstrap)
+create-bootstrap: stage-install
 	${MKDIR} ${NEWBSDIR}
-	${CP} -a ${DESTDIR}${PKG_PREFIX}/bin ${NEWBSDIR}/
-	${CP} -a ${DESTDIR}${PKG_PREFIX}/lib ${NEWBSDIR}/
-	${CP} -a ${DESTDIR}${PKG_PREFIX}/include ${NEWBSDIR}/
-	${CP} -a ${DESTDIR}${PKG_PREFIX}/libexec ${NEWBSDIR}/
+	${CP} -RpP ${DESTDIR}${PKG_PREFIX}/bin ${NEWBSDIR}/
+	${CP} -RpP ${DESTDIR}${PKG_PREFIX}/lib ${NEWBSDIR}/
+	${CP} -RpP ${DESTDIR}${PKG_PREFIX}/include ${NEWBSDIR}/
+	${CP} -RpP ${DESTDIR}${PKG_PREFIX}/libexec ${NEWBSDIR}/
 	${RM} ${NEWBSDIR}/bin/${GARCH}*
 	${RM} -rf ${NEWBSDIR}/lib/gcc/${BLD_TARGET}/${GCC_VERSION}/include-fixed
 	(cd ${NEWBSDIR}/.. ; \
 		${TAR} -cf ${BSFILENAME} bootstrap; ${BZIP2} ${BSFILENAME})
 .endif
 
-.include "../../devel/gmp/buildlink3.mk"
-.include "../../math/mpfr/buildlink3.mk"
-.include "../../math/mpcomplex/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
