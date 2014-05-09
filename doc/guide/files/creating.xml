@@ -1,4 +1,4 @@
-<!-- $NetBSD: creating.xml,v 1.17 2014/05/09 06:59:19 obache Exp $ -->
+<!-- $NetBSD: creating.xml,v 1.18 2014/05/09 07:04:16 obache Exp $ -->
 
 <chapter id="creating">
 <title>Creating a new pkgsrc package from scratch</title>
@@ -122,11 +122,11 @@ package from the set of installed files.</para></step>
 </sect2>
 
 <sect2 id="creating.kde-app">
-<title>KDE applications</title>
+<title>KDE3 applications</title>
 
-<para>KDE applications should always include
+<para>KDE3 applications should always include
 <filename>meta-pkgs/kde3/kde3.mk</filename>, which contains numerous
-settings that are typical of KDE packages.</para>
+settings that are typical of KDE3 packages.</para>
 
 </sect2>
 
