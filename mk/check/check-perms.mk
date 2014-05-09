@@ -1,4 +1,4 @@
-# $NetBSD: check-perms.mk,v 1.14 2013/05/09 23:37:25 riastradh Exp $
+# $NetBSD: check-perms.mk,v 1.15 2014/05/09 11:59:27 richard Exp $
 #
 # This file checks that after installation of a package, all files and
 # directories of that package have sensible permissions set.
@@ -91,5 +91,5 @@ _check-perms: .PHONY
 		esac;							\
 		printf "%s\\n" "${DESTDIR}$$file";			\
 	  done								\
-	| awk ${_CHECK_PERMS_GETDIRS_AWK:Q}				\
+	| ${AWK} ${_CHECK_PERMS_GETDIRS_AWK:Q}				\
 	| ${_CHECK_PERMS_CMD} ${_CHECK_PERMS_FLAGS}
