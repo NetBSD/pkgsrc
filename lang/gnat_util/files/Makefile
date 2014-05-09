@@ -63,6 +63,6 @@ ${GEN_SRCS:R:S/$/.o/}:
 	ada ${ADA_FLAGS} -I../ -c ../${SRC}/${.TARGET:R}.adb
 
 libgnat_util.a: ${LIB_OBJS}
-	ar cq ${.TARGET} `lorder ${LIB_OBJS} | tsort -q`
+	ar cq ${.TARGET} `lorder ${LIB_OBJS} | tsort`
 	ranlib ${.TARGET}
 	mv ${.TARGET} *.ali ../lib
