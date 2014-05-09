@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/01/25 10:45:16 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2014/05/09 07:36:58 wiz Exp $
 
 PKGNAME=	bzrtools-${VER}
 DISTNAME=	bzrtools-${VER:R}
@@ -12,7 +12,7 @@ COMMENT=	Collection of plugins for Bazaar
 LICENSE=	gnu-gpl-v2
 
 REPLACE_PYTHON= check-release.py test.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.5.0
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2.5.0
 
 WRKSRC=		${WRKDIR}/bzrtools
 

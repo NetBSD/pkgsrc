@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.27 2014/01/25 10:45:19 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2014/05/09 07:37:08 wiz Exp $
 
 PKGNAME=	usrp-${VERSION}
 PKGREVISION=	10
 COMMENT=	Non GNU Radio specific part of the USRP code base
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 3.3.0
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 3.3.0
 
 .include "../../meta-pkgs/gnuradio/Makefile.common"
 

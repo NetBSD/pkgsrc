@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/01/19 22:18:53 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/05/09 07:37:08 wiz Exp $
 
 DISTNAME=	uniconvertor-1.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-sk1libs-[0-9]*:../../graphics/py-sk1libs
 USE_LANGUAGES=		c
 PYDISTUTILSPKG=		yes
 PYTHON_SELF_CONFLICT=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-sk1libs
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-sk1libs
 REPLACE_PYTHON+=	src/__init__.py
 
 .include "../../lang/python/application.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.lib,v 1.17 2014/01/25 10:30:09 wiz Exp $
+# $NetBSD: Makefile.lib,v 1.18 2014/05/09 07:37:07 wiz Exp $
 #
 # This Makefile fragment is included by all packages that build libraries
 # from the Mesa sources.
@@ -21,7 +21,7 @@ USE_LANGUAGES=		c99 c++
 USE_TOOLS+=		automake bison flex gmake pkg-config makedepend
 
 PYTHON_FOR_BUILD_ONLY=  yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 7.11.2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 7.11.2
 .include "../../lang/python/tool.mk"
 BUILDLINK_DEPMETHOD.libxml2?=   build
 .include "../../textproc/libxml2/buildlink3.mk"

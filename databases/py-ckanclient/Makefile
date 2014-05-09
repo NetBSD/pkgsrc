@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/01/20 11:12:21 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/05/09 07:36:57 wiz Exp $
 
 DISTNAME=	ckanclient-0.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 REPLACE_PYTHON=	ckanclient/datastore.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.10
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.10
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

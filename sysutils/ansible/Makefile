@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/01/25 10:30:20 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/05/09 07:37:18 wiz Exp $
 
 DISTNAME=	ansible-1.4.1
 CATEGORIES=	sysutils
@@ -34,7 +34,7 @@ SUBST_STAGE.pythonbin=	pre-configure
 SUBST_FILES.pythonbin=	Makefile
 SUBST_FILES.pythonbin=	-e "s,@PYTHONBIN@,${PYTHONBIN},"
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-paramiko
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-paramiko
 
 MANPAGES=	ansible-doc.1 ansible-pull.1 ansible-playbook.1 ansible.1
 

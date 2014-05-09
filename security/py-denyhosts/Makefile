@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/03/11 14:34:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2014/05/09 07:37:18 wiz Exp $
 
 VER=		2.6
 DISTNAME=	DenyHosts-${VER}
@@ -29,7 +29,7 @@ REPLACE_PYTHON+= scripts/restricted_from_invalid.py
 REPLACE_PYTHON+= scripts/restricted_from_passwd.py
 
 PYTHON_SELF_CONFLICT=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34
 
 RCD_SCRIPTS+=	denyhosts
 SMF_NAME=	denyhost

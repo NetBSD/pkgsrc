@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2014/01/25 10:29:58 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2014/05/09 07:36:56 wiz Exp $
 
 DISTNAME=	telepathy-glib-0.20.2
 PKGREVISION=	1
@@ -22,7 +22,7 @@ PKGCONFIG_OVERRIDE+=	telepathy-glib/telepathy-glib.pc.in
 PYTHON_FOR_BUILD_ONLY=	yes
 CONFIGURE_ENV+=		ac_cv_prog_PYTHON=${PYTHONBIN}
 REPLACE_PYTHON+=	tests/all-errors-documented.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.20.2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.20.2
 TEST_TARGET=		check
 
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.32.0

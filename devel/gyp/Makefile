@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/25 10:30:01 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/09 07:36:59 wiz Exp $
 
 SVN_REVISION=	1718
 DIST_VERSION=	0.1
@@ -13,7 +13,7 @@ HOMEPAGE=	http://code.google.com/p/gyp/
 COMMENT=	GYP can Generate Your Projects
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_INCOMPATIBLE=  33 # not yet ported as of 0.1pre1718
+PYTHON_VERSIONS_INCOMPATIBLE=  33 34 # not yet ported as of 0.1pre1718
 EGG_NAME=	gyp-${DIST_VERSION}
 
 # for test

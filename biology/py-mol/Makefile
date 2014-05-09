@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/02/17 14:32:48 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2014/05/09 07:36:55 wiz Exp $
 
 DISTNAME=	pymol-v1.5.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pymol-v/mol-/}
@@ -15,7 +15,7 @@ COMMENT=	Molecular Visualization System
 DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 
 PYTHON_VERSIONED_DEPENDENCIES=	Pmw
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.5.0.1
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.5.0.1
 
 WRKSRC=		${WRKDIR}/pymol
 

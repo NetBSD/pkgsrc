@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/01/25 10:30:09 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2014/05/09 07:37:07 wiz Exp $
 
 DISTNAME=	aafigure-0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-reportlab-[0-9]*:../../print/py-reportlab
 USE_LANGUAGES=	# none
 
 PYTHON_SELF_CONFLICT=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-reportlab, py-imaging
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-reportlab, py-imaging
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

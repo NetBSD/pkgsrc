@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/25 10:30:28 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/09 07:37:25 wiz Exp $
 
 DISTNAME=	django-registration-0.8-alpha-1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S:-alpha-:a:}
@@ -18,7 +18,7 @@ USE_LANGUAGES=		# none
 
 EGG_NAME=	${DISTNAME:S/-/_/g:S/registration_/registration-/}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.8a1
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.8a1
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

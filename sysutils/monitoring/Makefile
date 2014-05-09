@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/25 10:30:21 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/09 07:37:19 wiz Exp $
 
 VERSION=		e518a90eade4ca538468b6640dccb651e6034b9e
 DISTNAME=		${VERSION}
@@ -14,7 +14,7 @@ LICENSE=		modified-bsd
 WRKSRC=			${WRKDIR}/monitoring-${VERSION}
 
 REPLACE_PYTHON+=	Sources/monitoring.py Scripts/monitoring
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.9.5
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.9.5
 
 DOCDIR=			${PREFIX}/share/doc/monitoring
 EXPDIR=			${PREFIX}/share/examples/monitoring

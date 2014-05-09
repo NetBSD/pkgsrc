@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2014/01/25 10:45:17 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2014/05/09 07:37:03 wiz Exp $
 
 DISTNAME=	roundup-1.4.19
 PKGREVISION=	2
@@ -13,7 +13,7 @@ LICENSE=	mit AND zpl
 USE_LANGUAGES=	# empty
 USE_TOOLS+=	pax
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.4.19
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.4.19
 REPLACE_PYTHON+=	cgi-bin/roundup.cgi demo.py roundup/admin.py
 REPLACE_PYTHON+=	frontends/roundup.cgi
 REPLACE_PYTHON+=	roundup/backends/locking.py

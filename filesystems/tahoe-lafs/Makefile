@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2014/01/27 18:41:12 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2014/05/09 07:37:05 wiz Exp $
 
 VERSION=	1.10.0
 PKGREVISION=	2
@@ -44,7 +44,7 @@ DEPENDS+=	${PYPKGPREFIX}-cryptopp-[0-9]*:../../security/py-cryptopp
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-nevow-[0-9]*:../../www/py-nevow
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-twisted, py-xml via py-nevow, py-zbase32, py-cryptopp
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-twisted, py-xml via py-nevow, py-zbase32, py-cryptopp
 
 # Note that there is an upstream (inherited from setuptools) bug
 #   https://tahoe-lafs.org/trac/tahoe-lafs/ticket/1258#comment:29 that

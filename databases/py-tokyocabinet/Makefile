@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/01/25 10:30:00 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2014/05/09 07:36:58 wiz Exp $
 
 VERSION=	0.5
 DISTNAME=	tokyocabinet-${VERSION}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://code.google.com/p/python-tokyocabinet/
 COMMENT=	Python wrapper to tokyocabinet database
 LICENSE=	mit
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.5
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.5
 
 .include "../../databases/tokyocabinet/buildlink3.mk"
 .include "../../lang/python/egg.mk"

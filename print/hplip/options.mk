@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2014/01/25 10:30:18 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2014/05/09 07:37:17 wiz Exp $
 #
 # HPLIP dependencies are detailed in the following page:
 # http://hplipopensource.com/hplip-web/install/manual/distros/other.html
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=	--enable-dbus-build
 EGFILES+=		cups/pstotiff.convs cups/pstotiff.types
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/cups
 DEPENDS+=	${PYPKGPREFIX}-reportlab-[0-9]*:../../print/py-reportlab
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-reportlab
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 34 34 # py-reportlab
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/py-dbus/buildlink3.mk"
 .else
@@ -34,7 +34,7 @@ MESSAGE_SUBST+=		EGDIR=${EGDIR}
 .include "../../graphics/sane-backends/buildlink3.mk"
 # XXX: a dependency installs py-Pillow, which conflicts
 .include "../../graphics/py-imaging/buildlink3.mk"
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-imaging
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 34 34 # py-imaging
 .else
 CONFIGURE_ARGS+=	--disable-scan-build
 .endif
@@ -49,7 +49,7 @@ MAKE_DIRS+=		${PKG_SYSCONFDIR}/dbus-1/system.d
 .include "../../x11/py-qt4/buildlink3.mk"
 .include "../../security/policykit/buildlink3.mk"
 DEPENDS+=	${PYPKGPREFIX}-notify-[0-9]*:../../sysutils/py-notify
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-notify
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 34 34 # py-notify
 .else
 CONFIGURE_ARGS+=	--disable-policykit
 CONFIGURE_ARGS+=	--disable-qt4

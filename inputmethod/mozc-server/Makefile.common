@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2014/03/27 19:28:33 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.9 2014/05/09 07:37:09 wiz Exp $
 # used by inputmethod/ibus-mozc/Makefile
 # used by inputmethod/mozc-elisp/Makefile
 # used by inputmethod/mozc-server/Makefile
@@ -22,7 +22,7 @@ PATCHDIR=	${.CURDIR}/../../inputmethod/mozc-server/patches
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-gyp-[0-9]*:../../devel/gyp
 
-PYTHON_VERSIONS_INCOMPATIBLE=  33 # py-gyp
+PYTHON_VERSIONS_INCOMPATIBLE=  33 34 # py-gyp
 
 USE_LANGUAGES=	c c++
 # nullptr requires -std=c++11, and -std=c++11 requires gcc 4.7 or later

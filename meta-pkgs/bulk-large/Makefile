@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/04/22 14:16:56 adam Exp $
+# $NetBSD: Makefile,v 1.12 2014/05/09 07:37:11 wiz Exp $
 
 DISTNAME=	bulk-large-20130223
 PKGREVISION=	2
@@ -15,7 +15,7 @@ RESTRICTED=		Just for test build purpose
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2
 
 #
 # Note: the primary purpose of this package is to build the most

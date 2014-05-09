@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/01/21 13:33:31 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/09 07:37:15 wiz Exp $
 
 DISTNAME=	pymetar-0.19
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -11,7 +11,7 @@ COMMENT=	Downloads weather reports
 LICENSE=	gnu-gpl-v2 # or later
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.19
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.19
 
 SUBST_CLASSES+=		manpath
 SUBST_SED.manpath=	-e 's,share/man,${PKGMANDIR},'

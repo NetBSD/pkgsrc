@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/01/25 10:30:04 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2014/05/09 07:37:01 wiz Exp $
 
 VERSION=	0.21.0
 DISTNAME=	logilab-astng-${VERSION}
@@ -13,7 +13,7 @@ COMMENT=	Extend Python abstract syntax tree
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-mxDateTime via py-logilab-common
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-mxDateTime via py-logilab-common
 
 do-test:
 	cd ${WRKSRC} && ${SH} test/fulltest.sh ${PYVERSSUFFIX}

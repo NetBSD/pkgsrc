@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/25 10:29:56 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/09 07:36:54 wiz Exp $
 
 DISTNAME=	id3-py_1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py_//}
@@ -16,7 +16,7 @@ USE_LANGUAGES=	# empty
 WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/}
 EGG_NAME=	${DISTNAME:S/py_//:tu}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

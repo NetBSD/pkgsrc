@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/01/25 10:30:00 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2014/05/09 07:36:58 wiz Exp $
 
 DISTNAME=	bzr-explorer-${VER}
 PKGREVISION=	2
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-qt4>=4.4:../../x11/py-qt4
 
 USE_TOOLS+=	msgfmt
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # qbzr
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # qbzr
 
 .include "../../devel/bzr/plugin.mk"
 .include "../../lang/python/distutils.mk"

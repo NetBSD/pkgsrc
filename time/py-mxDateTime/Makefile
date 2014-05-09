@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2014/01/20 20:39:22 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2014/05/09 07:37:23 wiz Exp $
 
 DISTNAME=	egenix-mx-base-3.2.7
 PKGNAME=	${PYPKGPREFIX}-mxDateTime-3.2.7
@@ -11,7 +11,7 @@ COMMENT=	Python extension that provides types and conversions for dates
 LICENSE=	egenix-public-license
 
 EGG_NAME=	${DISTNAME:S/-mx-/_mx_/}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 3.2.7
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 3.2.7
 
 REPLACE_PYTHON+=	egenix_mx_base.py
 REPLACE_PYTHON+=	mx-base-3.2.7/mxSetup.py

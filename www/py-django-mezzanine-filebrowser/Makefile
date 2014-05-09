@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/20 16:25:17 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/09 07:37:24 wiz Exp $
 
 DISTNAME=	filebrowser-safe-0.2.13
 PKGNAME=	${PYPKGPREFIX}-django-mezzanine-${DISTNAME:S/-safe//}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.2.13
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.2.13
 
 EGG_NAME=	${DISTNAME:S/-/_/}
 

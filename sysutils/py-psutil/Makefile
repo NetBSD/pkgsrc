@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/05/04 17:15:39 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2014/05/09 07:37:19 wiz Exp $
 
 DISTNAME=	psutil-2.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Cross-platform process and system utilities module for Python
 LICENSE=	modified-bsd
 
 REPLACE_PYTHON=	psutil/*py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.1.0
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2.1.0
 
 .include "../../mk/bsd.prefs.mk"
 

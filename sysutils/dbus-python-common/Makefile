@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/01/25 10:30:21 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2014/05/09 07:37:19 wiz Exp $
 
 DISTNAME=	dbus-python-1.2.0
 PKGNAME=	dbus-python-common-1.2.0
@@ -7,7 +7,7 @@ MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus-python/
 
 #BUILD_DEPENDS+= ${PYPKGPREFIX}-docutils>=0:../../textproc/py-docutils
 #DEPENDS+=	${PYPKGPREFIX}-pyrex>=0.9.3:../../lang/py-pyrex
-#PYTHON_VERSIONS_INCOMPATIBLE=33 # py-pyrex
+#PYTHON_VERSIONS_INCOMPATIBLE=33 34 # py-pyrex
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/Software/dbus

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/01/19 17:45:51 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2014/05/09 07:37:05 wiz Exp $
 
 DISTNAME=		fonttools-2.4
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 PYTHON_SELF_CONFLICT=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.4
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2.4
 
 SUBST_CLASSES+=		fix-mandir
 SUBST_STAGE.fix-mandir=	pre-configure
