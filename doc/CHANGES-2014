@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1801 2014/05/09 15:48:27 wen Exp $
+$NetBSD: CHANGES-2014,v 1.1802 2014/05/09 16:20:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2521,3 +2521,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/p5-MARC-Record to 2.0.6 [wen 2014-05-09]
 	Updated net/fping to 3.10 [sborrill 2014-05-09]
 	Updated databases/p5-MARC-XML to 1.0.3 [wen 2014-05-09]
+	Updated wm/notion to 3.2014010900 [wiz 2014-05-09]
