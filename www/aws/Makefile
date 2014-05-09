@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2014/05/09 22:45:15 marino Exp $
+# $NetBSD: Makefile,v 1.18 2014/05/09 23:58:21 marino Exp $
 #
 
 DISTNAME=	aws-${AWS_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	http://downloads.dragonlace.net/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -40,9 +40,11 @@ SUBST_CLASSES+= 	rpath
 SUBST_STAGE.rpath=	pre-configure
 SUBST_MESSAGE.rpath=	Adjust rpaths of shared libraries
 SUBST_FILES.rpath=	src/src.gpr include/include.gpr \
-			demos/test_ldap/test_ldap.gpr
+			demos/test_ldap/test_ldap.gpr tools/tools.gpr
 SUBST_SED.rpath=	-e "s,@ADDITIONAL_RPATH@,${ADDITIONAL_RPATH}," \
-			-e "s,@PREFIX@,${PREFIX},g"
+			-e "s,@PREFIX@,${PREFIX},g" \
+			-e "s,@RFLAG@,${LINKER_RPATH_FLAG},g" \
+			-e "s,@SSL_RPATH@,${BUILDLINK_PREFIX.openssl}/lib,g"
 ADDITIONAL_RPATH=	${PREFIX}/lib:${PREFIX}/lib/aws/relocatable
 
 GENERATE_PLIST=  cd ${DESTDIR}${PREFIX};
