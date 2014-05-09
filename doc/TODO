@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13296 2014/05/08 16:01:21 jperkin Exp $
+$NetBSD: TODO,v 1.13297 2014/05/09 02:39:48 wen Exp $
 
 Suggested new packages
 ======================
@@ -977,7 +977,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-uliweb-0.2.4
 	o py-wxWidgets-3.0.0
 	o py-zconfig-3.0.3
-	o python-3.4.0
 	o qnetwalk-1.4
 	o qt4-qscintilla-2.8.1
 	o radiance-3.7.2
