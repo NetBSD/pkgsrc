@@ -1,0 +1,4 @@
+# $NetBSD: site.config.m4-libresolv,v 1.1 2014/05/10 14:38:26 richard Exp $
+
+# add -lresolv to prevent linker unresolved symbols
+APPENDDEF(`confLIBS', `-lresolv')

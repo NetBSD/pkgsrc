@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2014/02/12 23:18:09 tron Exp $
+# $NetBSD: Makefile,v 1.120 2014/05/10 14:38:26 richard Exp $
 
 PKGNAME=	sendmail-${DIST_VERS}
 PKGREVISION=	1
@@ -45,7 +45,7 @@ SUBST_MESSAGE.paths=	Fixing paths.
 
 REPLACE_PERL=		contrib/socketmapClient.pl contrib/socketmapServer.pl
 
-INSTALLATION_DIRS=	bin lib sbin
+INSTALLATION_DIRS+=	bin lib sbin
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 INSTALLATION_DIRS+=	${PREFIX}/libexec/sendmail ${SMRSH_CMDDIR}
 INSTALLATION_DIRS+=	${PREFIX}/share/examples/sendmail
