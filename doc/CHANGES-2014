@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1810 2014/05/10 16:47:46 adam Exp $
+$NetBSD: CHANGES-2014,v 1.1811 2014/05/10 22:38:40 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2534,3 +2534,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/git-docs to 1.9.3 [adam 2014-05-10]
 	Updated devel/git-svn to 1.9.3 [adam 2014-05-10]
 	Updated www/gitweb to 1.9.3 [adam 2014-05-10]
+	Updated multimedia/libhdhomerun to 20140121 [jakllsch 2014-05-10]
