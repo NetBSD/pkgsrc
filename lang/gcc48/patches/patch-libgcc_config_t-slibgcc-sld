@@ -1,0 +1,28 @@
+$NetBSD: patch-libgcc_config_t-slibgcc-sld,v 1.1 2014/05/10 14:14:59 richard Exp $
+
+--- libgcc/config/t-slibgcc-sld.orig	2011-06-01 14:39:17.000000000 +0000
++++ libgcc/config/t-slibgcc-sld
+@@ -3,3 +3,23 @@
+ 
+ SHLIB_LDFLAGS = -Wl,-h,$(SHLIB_SONAME) -Wl,-z,text -Wl,-z,defs \
+ 	-Wl,-M,$(SHLIB_MAP)
++
++# Linker mapfile to enforce direct binding to libgcc_s unwinder
++# (PR target/59788).
++libgcc-unwind.map: libgcc-std.ver
++	@(echo "{";				\
++	for f in `grep _Unwind_ $< | sort`; do	\
++	  echo "	$$f = EXTERN DIRECT;";	\
++	done;					\
++	echo "};" ) > $@
++
++# Copy libgcc-unwind.map to the place where gcc will look for it at build-time.
++install-libgcc-unwind-map-forbuild: libgcc-unwind.map
++	$(INSTALL_DATA) $< $(gcc_objdir)
++
++all: install-libgcc-unwind-map-forbuild
++
++install-libgcc-unwind-map: libgcc-unwind.map
++	$(INSTALL_DATA) $< $(DESTDIR)$(slibdir)
++
++install: install-libgcc-unwind-map

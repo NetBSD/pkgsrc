@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2014/04/22 20:46:41 ryoon Exp $
+$NetBSD: distinfo,v 1.16 2014/05/10 14:14:58 richard Exp $
 
 SHA1 (ecj-4.5.jar) = 58c1d79c64c8cd718550f32a932ccfde8d1e6449
 RMD160 (ecj-4.5.jar) = d3f4da657f086b6423f74e93f001132f4855368a
@@ -18,18 +18,22 @@ SHA1 (patch-gcc_config_dragonfly.opt) = 92f615c73c2e94664bae5b5935ab8b09bca15f73
 SHA1 (patch-gcc_config_host-netbsd.c) = 8f13b09dd7006d456cd1c66e895be504e9537880
 SHA1 (patch-gcc_config_i386_dragonfly.h) = 0d3f785434c02beb9c4561fe59842a970e8f7896
 SHA1 (patch-gcc_config_netbsd-stdint.h) = 025fc883101a187e84ed4c0772406720d645d550
+SHA1 (patch-gcc_config_sol2.h) = de6455ee88f281737501287759b7a83b8db05398
 SHA1 (patch-gcc_config_x-netbsd) = 6dc3d78e26df62054ea29f98ca51592858e671e3
 SHA1 (patch-gcc_configure) = a4b670d0c54c410d38715b7a2a572a7048e3ec5e
 SHA1 (patch-gcc_fortran_f95-lang.c) = 945aacf6b307f2120a4105c833b45a40feced68e
 SHA1 (patch-gcc_ggc-common.c) = fa577bc25260d7e6304f166686ba51c0b677d7f6
 SHA1 (patch-gcc_ginclude_stddef.h) = 220ec23aecffca81337ae4c06afc18051da89b9a
 SHA1 (patch-gcc_system.h) = 4c959a6b1c4d524cbdf44cfb80f0e5758ec20783
+SHA1 (patch-gcc_testsuite_g++.dg_eh_unwind-direct.C) = fd85ccee102e9618a8010d2dcbb2d9916b28f1cc
 SHA1 (patch-include_libiberty.h) = ad2c64e9a14405c89b02ff68811b1c889405d0a1
 SHA1 (patch-libgcc_config.host) = 1807e784c9808243d1a99b19534d94752d81ce6d
 SHA1 (patch-libgcc_config_i386_dragonfly-unwind.h) = 9d77252dd982495e90f95b82706bab29e581df9f
+SHA1 (patch-libgcc_config_t-slibgcc-sld) = 1b3ae1dc03eaad16a51311049ffc9e42c44dfcbc
 SHA1 (patch-libgcc_crtstuff.c) = 88500ea895cd683608f8f2b7177149f11947e3b4
 SHA1 (patch-libgcc_unwind-dw2-fde-dip.c) = 770f04f3cbeb0d794fa297b328f06f6e687419c0
 SHA1 (patch-libgo_Makefile.in) = 612987541f745c7be6835ce7fb7119884db294c3
+SHA1 (patch-libgo_config_ltmain.sh) = 703a27554e479cc2e48410a6bb0e5f5b4be2c150
 SHA1 (patch-libjava_boehm.cc) = b18bc9d410a62543583c77e011f50b86f41ca18a
 SHA1 (patch-libjava_configure) = 9c83d60e155d6a9aac542d65ff195a99c5c764ff
 SHA1 (patch-libjava_contrib_rebuild-gcj-db.in) = bb01d738fc7db05046ae37e8ade32574de1d8297
@@ -46,3 +50,4 @@ SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__inline.h) = 626fc1f9c035ac5
 SHA1 (patch-libstdc++-v3_configure) = 3821275fa698221d7665ea3c98b0a24f33954a5a
 SHA1 (patch-libstdc++-v3_configure.host) = 7426ea4a9735e5f886f4a3ffb4a9ba62734178c4
 SHA1 (patch-libstdc++-v3_libsupc++_unwind-cxx.h) = 9784bfa4323f8498b36565d0fea28fce69ffdbb1
+SHA1 (patch-ltmain.sh) = 86c1511bd8ff133ba208ec8ec7e206d77ce85d01
