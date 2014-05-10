@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2014/04/23 11:05:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2014/05/10 14:14:59 richard Exp $
 
 PKGNAME=	${GCC_PKGNAME}-libs-${GCC48_DIST_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 
 COMMENT=	Runtime libraries from the GNU Compiler Collection (GCC) 4.8
 
