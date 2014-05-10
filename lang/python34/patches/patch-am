@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.4 2014/05/10 04:35:55 obache Exp $
+$NetBSD: patch-am,v 1.5 2014/05/10 08:11:02 wiz Exp $
 
 --- setup.py.orig	2014-03-17 02:31:31.000000000 +0000
 +++ setup.py
@@ -63,7 +63,7 @@ $NetBSD: patch-am,v 1.4 2014/05/10 04:35:55 obache Exp $
          # look for the openssl version header on the compiler search path.
          opensslv_h = find_file('openssl/opensslv.h', [],
 -                inc_dirs + search_for_ssl_incs_in)
-+                search_for_ssl_incs_in, + inc_dirs)
++                search_for_ssl_incs_in + inc_dirs)
          if opensslv_h:
              name = os.path.join(opensslv_h[0], 'openssl/opensslv.h')
              if host_platform == 'darwin' and is_macosx_sdk_path(name):
