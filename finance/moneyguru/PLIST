@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/01/25 11:11:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/05/10 06:52:03 wiz Exp $
 bin/moneyguru
 share/applications/moneyguru.desktop
 share/moneyguru/ambuttonbar/AMButtonBar.h
@@ -122,7 +122,7 @@ share/moneyguru/build/help/plugins.html
 share/moneyguru/build/help/reconciliation.html
 share/moneyguru/build/help/search.html
 share/moneyguru/build/help/searchindex.js
-share/moneyguru/build/lib.netbsd-${OS_VERSION}-amd64-3.3/_amount.so
+share/moneyguru/build/lib.netbsd-${OS_VERSION}-amd64-${PYVERSSUFFIX}/_amount.so
 share/moneyguru/build/locale/cs/LC_MESSAGES/columns.mo
 share/moneyguru/build/locale/cs/LC_MESSAGES/core.mo
 share/moneyguru/build/locale/cs/LC_MESSAGES/hscommon.mo
@@ -153,7 +153,7 @@ share/moneyguru/build/locale/nl/LC_MESSAGES/core.mo
 share/moneyguru/build/locale/nl/LC_MESSAGES/hscommon.mo
 share/moneyguru/build/locale/nl/LC_MESSAGES/qtlib.mo
 share/moneyguru/build/locale/nl/LC_MESSAGES/ui.mo
-share/moneyguru/build/temp.netbsd-${OS_VERSION}-amd64-3.3/core/modules/amount.o
+share/moneyguru/build/temp.netbsd-${OS_VERSION}-amd64-${PYVERSSUFFIX}/core/modules/amount.o
 share/moneyguru/cocoa/InfoTemplate.plist
 share/moneyguru/cocoa/MGConst.h
 share/moneyguru/cocoa/controllers/MGAccountLookup.h
