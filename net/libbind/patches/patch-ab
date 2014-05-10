@@ -1,8 +1,106 @@
-$NetBSD: patch-ab,v 1.1 2010/12/31 14:36:07 obache Exp $
+$NetBSD: patch-ab,v 1.2 2014/05/10 09:53:43 obache Exp $
 
---- include/netdb.h.orig	2008-02-28 05:34:17.000000000 +0000
+--- include/netdb.h.orig	Thu Feb 28 05:34:17 2008
 +++ include/netdb.h
-@@ -492,7 +492,7 @@ int		innetgr_r __P((const char *, const 
+@@ -262,7 +262,7 @@ struct	addrinfo {
+ 
+ 
+ #ifdef _REENTRANT
+-#if defined (__hpux) || defined(__osf__) || defined(_AIX)
++#if defined (__hpux) || defined(__osf__) || defined(_AIX) || defined(__OpenBSD__)
+ #define	_MAXALIASES	35
+ #define	_MAXLINELEN	1024
+ #define	_MAXADDRS	35
+@@ -328,7 +328,14 @@ struct	protoent_data {
+ #ifdef __hpux
+ 	char	line[_MAXLINELEN+1];
+ #endif
++#ifdef __OpenBSD__
++	char	**aliases;
++	int	maxaliases;
++	int	stayopen;
++	char*	line;
++#else
+ 	char	*proto_aliases[_MAXALIASES];
++#endif
+ #ifdef __osf__
+ 	int	_proto_stayopen;
+ 	int	svc_getprotoflag;
+@@ -423,19 +430,31 @@ int		innetgr __P((const char *, const char *, const ch
+ #endif
+ 
+ #ifdef _REENTRANT
+-#if defined(__hpux) || defined(__osf__) || defined(_AIX)
++#if defined(__hpux) || defined(__osf__) || defined(_AIX) || defined(__OpenBSD__)
++#if defined(__OpenBSD__)
++struct hostent * gethostbyaddr_r __P((const char *, int, int, struct hostent *,
++		         char *, int, int *));
++struct hostent * gethostbyname_r __P((const char *, struct hostent *,
++		        char *, int, int *));
++struct hostent * gethostent_r __P((struct hostent *, char *, int, int *));
++#else
+ int		gethostbyaddr_r __P((const char *, int, int, struct hostent *,
+ 					struct hostent_data *));
+ int		gethostbyname_r __P((const char *, struct hostent *, 
+ 					struct hostent_data *));
+ int		gethostent_r __P((struct hostent *, struct hostent_data *));
++#endif
+ #if defined(_AIX)
+ void		sethostent_r __P((int, struct hostent_data *));
++#elif defined(__OpenBSD__)
++void		sethostent_r __P((int));
+ #else
+ int		sethostent_r __P((int, struct hostent_data *));
+ #endif 
+ #if defined(__hpux)
+ int		endhostent_r __P((struct hostent_data *));
++#elif defined(__OpenBSD__)
++void		endhostent_r __P((void));
+ #else
+ void		endhostent_r __P((struct hostent_data *));
+ #endif
+@@ -443,16 +462,28 @@ void		endhostent_r __P((struct hostent_data *));
+ #if defined(__hpux) || defined(__osf__)
+ int		getnetbyaddr_r __P((int, int,
+ 				struct netent *, struct netent_data *));
++#elif defined(__OpenBSD__)
++struct netent *	getnetbyaddr_r __P((long, int,
++				struct netent *, char *, int));
+ #else
+ int		getnetbyaddr_r __P((long, int,
+ 				struct netent *, struct netent_data *));
+ #endif
++#if defined(__OpenBSD__)
++struct netent *	getnetbyname_r __P((const char *,
++				struct netent *, char *, int));
++struct netent *	getnetent_r __P((struct netent *, char *, int));
++void		setnetent_r __P((int));
++#else
+ int		getnetbyname_r __P((const char *,
+ 				struct netent *, struct netent_data *));
+ int		getnetent_r __P((struct netent *, struct netent_data *));
+ int		setnetent_r __P((int, struct netent_data *));
++#endif
+ #ifdef __hpux
+ int		endnetent_r __P((struct netent_data *buffer));
++#elif defined(__OpenBSD__)
++void		endnetent_r __P((void));
+ #else
+ void		endnetent_r __P((struct netent_data *buffer));
+ #endif
+@@ -462,7 +493,11 @@ int		getprotobyname_r __P((const char *,
+ int		getprotobynumber_r __P((int,
+ 				struct protoent *, struct protoent_data *));
+ int		getprotoent_r __P((struct protoent *, struct protoent_data *));
++#ifdef __OpenBSD__
++void		setprotoent_r __P((int, struct protoent_data *));
++#else
+ int		setprotoent_r __P((int, struct protoent_data *));
++#endif
+ #ifdef __hpux
+ int		endprotoent_r __P((struct protoent_data *));
+ #else
+@@ -492,7 +527,7 @@ int		innetgr_r __P((const char *, const char *, const 
  #endif
  #else
   /* defined(sun) || defined(bsdi) */
@@ -11,7 +109,7 @@ $NetBSD: patch-ab,v 1.1 2010/12/31 14:36:07 obache Exp $
  int gethostbyaddr_r __P((const char *, int, int, struct hostent *,
  		         char *, size_t, struct hostent **, int *));
  int gethostbyname_r __P((const char *, struct hostent *,
-@@ -509,7 +509,7 @@ struct hostent	*gethostent_r __P((struct
+@@ -509,7 +544,7 @@ struct hostent	*gethostent_r __P((struct hostent *, ch
  void		sethostent_r __P((int));
  void		endhostent_r __P((void));
  
@@ -20,7 +118,7 @@ $NetBSD: patch-ab,v 1.1 2010/12/31 14:36:07 obache Exp $
  int getnetbyname_r __P((const char *, struct netent *,
  			char *, size_t, struct netent **, int*));
  int getnetbyaddr_r __P((unsigned long int, int, struct netent *,
-@@ -525,7 +525,7 @@ struct netent	*getnetent_r __P((struct n
+@@ -525,7 +560,7 @@ struct netent	*getnetent_r __P((struct netent *, char 
  void		setnetent_r __P((int));
  void		endnetent_r __P((void));
  
@@ -29,7 +127,7 @@ $NetBSD: patch-ab,v 1.1 2010/12/31 14:36:07 obache Exp $
  int getprotobyname_r __P((const char *, struct protoent *, char *,
  			  size_t, struct protoent **));
  int getprotobynumber_r __P((int, struct protoent *, char *, size_t,
-@@ -541,7 +541,7 @@ struct protoent	*getprotoent_r __P((stru
+@@ -541,7 +576,7 @@ struct protoent	*getprotoent_r __P((struct protoent *,
  void		setprotoent_r __P((int));
  void		endprotoent_r __P((void));
  
