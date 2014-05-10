@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1807 2014/05/09 21:37:19 imil Exp $
+$NetBSD: CHANGES-2014,v 1.1808 2014/05/10 15:19:40 nonaka Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2527,3 +2527,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/py-more-itertools version 2.2 [imil 2014-05-09]
 	Added devel/py-jaraco_util version 10.0.2 [imil 2014-05-09]
 	Updated net/py-irclib to 8.9 [imil 2014-05-09]
+	Updated fonts/koruri-ttf to 20140510 [nonaka 2014-05-10]
