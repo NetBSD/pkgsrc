@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/05/05 21:11:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/10 23:03:25 ryoon Exp $
 
 DISTNAME=	libexecinfo-1.1
 CATEGORIES=	devel
@@ -22,12 +22,5 @@ INSTALLATION_DIRS=	include lib
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/execinfo.h ${DESTDIR}${PREFIX}/include
-# OpenBSD's /usr/share/mk/bsd.lib.mk does not create the following symlinks.
-.if ${OPSYS} == "OpenBSD"
-	cd ${DESTDIR}${PREFIX}/lib && \
-		${LN} -sf libexecinfo.so.1.0 libexecinfo.so
-	cd ${DESTDIR}${PREFIX}/lib && \
-		${LN} -sf libexecinfo.so.1.0 libexecinfo.so.1
-.endif
 
 .include "../../mk/bsd.pkg.mk"
