@@ -1,12 +1,12 @@
-$NetBSD: patch-ae,v 1.30 2012/09/18 15:17:32 drochner Exp $
+$NetBSD: patch-ae,v 1.31 2014/05/10 13:42:08 richard Exp $
 
 For proper libtool usage split CC into CC_COMPILE and CC with libtool
 mode options compile/link respectively.
 
 Same for CXX.
 
---- Makedefs.in.orig	2012-03-01 01:05:55.000000000 +0100
-+++ Makedefs.in	2012-09-12 16:45:31.000000000 +0200
+--- Makedefs.in.orig	2012-03-01 00:05:55.000000000 +0000
++++ Makedefs.in
 @@ -19,9 +19,11 @@
  
  AR		=	@AR@
@@ -21,7 +21,7 @@ Same for CXX.
  DSO		=	@DSO@
  DSOXX		=	@DSOXX@
  HTMLDOC		=	@HTMLDOC@
-@@ -41,12 +43,12 @@
+@@ -41,12 +43,12 @@ SHELL		=	/bin/sh
  # Installation programs...
  #
  
@@ -37,7 +37,16 @@ Same for CXX.
  INSTALL_MAN	=	$(INSTALL) -c -m 444
  INSTALL_SCRIPT	=	$(INSTALL) -c -m 555
  
-@@ -279,19 +281,19 @@
+@@ -145,7 +147,7 @@ CXXLIBS		=	@CXXLIBS@
+ DBUS_NOTIFIER	=	@DBUS_NOTIFIER@
+ DBUS_NOTIFIERLIBS =	@DBUS_NOTIFIERLIBS@
+ DNSSD_BACKEND	=	@DNSSD_BACKEND@
+-DSOFLAGS	=	-L../cups @DSOFLAGS@
++DSOFLAGS	=	-L../cups @DSOFLAGS@ $(OPTIM)
+ DSOLIBS		=	@DSOLIBS@ $(COMMONLIBS)
+ DNSSDLIBS	=	@DNSSDLIBS@
+ FONTS		=	@FONTS@
+@@ -279,19 +281,19 @@ DBUSDIR		=	@DBUSDIR@
  
  .c.o:
  	echo Compiling $<...
