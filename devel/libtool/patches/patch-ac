@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.29 2014/05/10 13:29:41 richard Exp $
+$NetBSD: patch-ac,v 1.30 2014/05/10 13:35:10 richard Exp $
 
 --- libltdl/config/ltmain.sh.orig	2011-10-17 10:19:35.000000000 +0000
 +++ libltdl/config/ltmain.sh
@@ -14,6 +14,17 @@ $NetBSD: patch-ac,v 1.29 2014/05/10 13:29:41 richard Exp $
  : ${CP="cp -f"}
  test "${ECHO+set}" = set || ECHO=${as_echo-'printf %s\n'}
  : ${MAKE="make"}
+@@ -1180,7 +1181,9 @@ func_enable_tag "$optarg"
+   test "$opt_debug" = : || func_append preserve_args " --debug"
+ 
+   case $host in
+-    *cygwin* | *mingw* | *pw32* | *cegcc*)
++    # Solaris2 added to fix http://debbugs.gnu.org/cgi/bugreport.cgi?bug=1645
++    # see also: http://gcc.gnu.org/bugzilla/show_bug.cgi?id=59788
++    *cygwin* | *mingw* | *pw32* | *cegcc* | *solaris2* )
+       # don't eliminate duplications in $postdeps and $predeps
+       opt_duplicate_compiler_generated_deps=:
+       ;;
 @@ -5847,13 +5850,14 @@ func_mode_link ()
        # -m*, -t[45]*, -txscale* architecture-specific flags for GCC
        # -F/path              path to uninstalled frameworks, gcc on darwin
