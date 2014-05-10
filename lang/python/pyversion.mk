@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.114 2014/05/09 05:23:41 obache Exp $
+# $NetBSD: pyversion.mk,v 1.115 2014/05/10 04:25:40 obache Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -130,6 +130,7 @@ MULTI+=	PYTHON_VERSION_REQD=${_PYTHON_VERSION}
 # No supported version found, annotate to simplify statements below.
 .if !defined(_PYTHON_VERSION)
 _PYTHON_VERSION=	none
+PKG_FAIL_REASON+=	"No valid Python version"
 .endif
 
 # Additional CONFLICTS
@@ -142,12 +143,14 @@ CONFLICTS +=	${PKGNAME:S/py${_PYTHON_VERSION}/py${i}/:C/-[0-9].*$/-[0-9]*/}
 #
 PLIST_VARS+=	py2x py3x
 
+.if empty(_PYTHON_VERSION:Mnone)
 PYPACKAGE=	python${_PYTHON_VERSION}
 PYVERSSUFFIX=	${_PYTHON_VERSION:C/^([0-9])/\1./1}
 BUILDLINK_API_DEPENDS.${PYPACKAGE}?=		${PYPACKAGE}>=${PYVERSSUFFIX}
 PYPKGSRCDIR=	../../lang/${PYPACKAGE}
 PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.${PYPACKAGE}}:${PYPKGSRCDIR}
 PYPKGPREFIX=	py${_PYTHON_VERSION}
+.endif
 .if !empty(_PYTHON_VERSION:M3*)
 PLIST.py3x=	yes
 .endif
