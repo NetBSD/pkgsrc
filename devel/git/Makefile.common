@@ -1,14 +1,16 @@
-# $NetBSD: Makefile.common,v 1.1 2013/09/09 13:56:27 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2014/05/10 11:43:30 adam Exp $
 #
 # used by devel/git-base/Makefile
 # used by devel/git-docs/Makefile
 # used by devel/git-gitk/Makefile
+# used by www/gitweb/Makefile
 
 .include "../../devel/git/Makefile.version"
 
 DISTNAME=	git-${GIT_VERSION}
 CATEGORIES=	devel scm
-MASTER_SITES?=	http://git-core.googlecode.com/files/
+MASTER_SITES?=	https://www.kernel.org/pub/software/scm/git/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE?=	http://git-scm.com/
