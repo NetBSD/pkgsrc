@@ -1,0 +1,2 @@
+This package provides two startup scripts to autoconfigure
+a NetBSD VM on Openstack.

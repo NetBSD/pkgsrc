@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2014/05/10 16:38:03 manu Exp $
+
+Add the following in /etc/rc.conf
+
+# to configure hostname, root password and SSH keys from CD-ROM (run once)
+openstack_init=YES
+
+# to autoconfigure the network from hypervisor information (run on each boot)
+xen_network=YES
+
+===========================================================================
