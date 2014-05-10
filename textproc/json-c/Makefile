@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/04/20 00:26:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2014/05/10 04:09:41 pho Exp $
 
 DISTNAME=	json-c-0.12
 PKGREVISION=	1
@@ -23,6 +23,11 @@ CONFIGURE_ARGS+=	--disable-oldname-compat
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 CFLAGS+=	-Wno-tautological-compare -Wno-unused-value
+.endif
+
+# gcc < 4.2 does not have -Wno-error= option.
+.if !empty(CC_VERSION:Mgcc-3*) || !empty(CC_VERSION:Mgcc-4.[01]*)
+BUILDLINK_TRANSFORM+=	rm:-Werror rm:-Wno-error=deprecated-declarations
 .endif
 
 .include "../../mk/bsd.pkg.mk"
