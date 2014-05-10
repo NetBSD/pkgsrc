@@ -1,23 +1,17 @@
-# $NetBSD: Makefile,v 1.21 2014/01/01 11:14:38 adam Exp $
+# $NetBSD: Makefile,v 1.22 2014/05/10 11:43:30 adam Exp $
 
-.include "../../devel/git/Makefile.version"
+.include "../../devel/git/Makefile.common"
 
-DISTNAME=	git-${GIT_VERSION}
 PKGNAME=	${DISTNAME:S/git/gitweb/}
 CATEGORIES=	www
-MASTER_SITES=	http://www.kernel.org/pub/software/scm/git/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://git.or.cz/
 COMMENT=	Web interface for GIT repositories
 
 #DEPENDS+=	apache{,2,22}-[0-9]*:../../www/apache22
 DEPENDS+=	git-base>=${GIT_VERSION}:../../devel/git-base
 DEPENDS+=	{perl>=5.15.8,p5-Time-HiRes>=1.9725}:../../time/p5-Time-HiRes
 
-DISTINFO_FILE=	${.CURDIR}/../../devel/git-base/distinfo
-
-USE_TOOLS+=	gmake perl:run
+USE_TOOLS+=	perl:run
 
 BUILD_DIRS=	gitweb
 BUILD_TARGET=	gitweb.cgi
@@ -38,8 +32,7 @@ GITWEB_EGDIR=	${PREFIX}/share/examples/gitweb
 CONF_FILES=	${GITWEB_EGDIR}/gitweb.conf ${PKG_SYSCONFDIR}/gitweb.conf
 MESSAGE_SUBST+=	CONFFILE=${PKG_SYSCONFDIR}/gitweb.conf
 
-INSTALLATION_DIRS=	libexec/cgi-bin \
-			share/doc/gitweb \
+INSTALLATION_DIRS=	libexec/cgi-bin share/doc/gitweb \
 			${GITWEB_EGDIR} ${GITWEB_HTDOCS}
 
 do-install:
