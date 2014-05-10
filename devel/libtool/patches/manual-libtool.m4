@@ -1,9 +1,7 @@
-$NetBSD: manual-libtool.m4,v 1.38 2014/03/08 19:57:25 joerg Exp $
+$NetBSD: manual-libtool.m4,v 1.39 2014/05/10 13:29:41 richard Exp $
 
 --- libltdl/m4/libtool.m4.orig	2011-10-17 10:17:05.000000000 +0000
 +++ libltdl/m4/libtool.m4
---- libtool.m4.orig	2011-10-17 10:17:05.000000000 +0000
-+++ libtool.m4
 @@ -123,7 +123,10 @@ m4_defun([_LT_CC_BASENAME],
      *) break;;
    esac
@@ -378,7 +376,7 @@ $NetBSD: manual-libtool.m4,v 1.38 2014/03/08 19:57:25 joerg Exp $
    AC_PROG_CXXCPP
  else
    _lt_caught_CXX_error=yes
-@@ -6538,6 +6635,22 @@ if test "$_lt_caught_CXX_error" != yes; 
+@@ -6538,6 +6635,22 @@ if test "$_lt_caught_CXX_error" != yes;
          _LT_TAGVAR(ld_shlibs, $1)=no
  	;;
  
@@ -401,7 +399,7 @@ $NetBSD: manual-libtool.m4,v 1.38 2014/03/08 19:57:25 joerg Exp $
        mvs*)
          case $cc_basename in
            cxx*)
-@@ -6552,15 +6665,13 @@ if test "$_lt_caught_CXX_error" != yes; 
+@@ -6552,15 +6665,13 @@ if test "$_lt_caught_CXX_error" != yes;
  	;;
  
        netbsd*)
@@ -424,27 +422,27 @@ $NetBSD: manual-libtool.m4,v 1.38 2014/03/08 19:57:25 joerg Exp $
  	;;
  
        *nto* | *qnx*)
-@@ -6740,9 +6851,9 @@ if test "$_lt_caught_CXX_error" != yes; 
+@@ -6740,9 +6851,9 @@ if test "$_lt_caught_CXX_error" != yes;
  	    if test "$GXX" = yes && test "$with_gnu_ld" = no; then
  	      _LT_TAGVAR(no_undefined_flag, $1)=' ${wl}-z ${wl}defs'
  	      if $CC --version | $GREP -v '^2\.7' > /dev/null; then
 -	        _LT_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag -nostdlib $LDFLAGS $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-h $wl$soname -o $lib'
-+	        _LT_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag -nostdlib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-h $wl$soname -o $lib'
++	        _LT_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-h $wl$soname -o $lib'
  	        _LT_TAGVAR(archive_expsym_cmds, $1)='echo "{ global:" > $lib.exp~cat $export_symbols | $SED -e "s/\(.*\)/\1;/" >> $lib.exp~echo "local: *; };" >> $lib.exp~
 -		  $CC -shared $pic_flag -nostdlib ${wl}-M $wl$lib.exp -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags~$RM $lib.exp'
-+		  $CC -shared $pic_flag -nostdlib ${wl}-M $wl$lib.exp $wl-h $wl$soname -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags~$RM $lib.exp'
++		  $CC -shared $pic_flag ${wl}-M $wl$lib.exp ${wl}-h $wl$soname -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags~$RM $lib.exp'
  
  	        # Commands to make compiler produce verbose output that lists
  	        # what "hidden" libraries, object files and flags are used when
-@@ -6751,9 +6862,9 @@ if test "$_lt_caught_CXX_error" != yes; 
+@@ -6751,9 +6862,9 @@ if test "$_lt_caught_CXX_error" != yes;
  	      else
  	        # g++ 2.7 appears to require `-G' NOT `-shared' on this
  	        # platform.
 -	        _LT_TAGVAR(archive_cmds, $1)='$CC -G -nostdlib $LDFLAGS $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-h $wl$soname -o $lib'
-+	        _LT_TAGVAR(archive_cmds, $1)='$CC -G -nostdlib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-h $wl$soname -o $lib'
++	        _LT_TAGVAR(archive_cmds, $1)='$CC -G $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-h $wl$soname -o $lib'
  	        _LT_TAGVAR(archive_expsym_cmds, $1)='echo "{ global:" > $lib.exp~cat $export_symbols | $SED -e "s/\(.*\)/\1;/" >> $lib.exp~echo "local: *; };" >> $lib.exp~
 -		  $CC -G -nostdlib ${wl}-M $wl$lib.exp -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags~$RM $lib.exp'
-+		  $CC -G -nostdlib ${wl}-M $wl$lib.exp $wl$soname -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags~$RM $lib.exp'
++		  $CC -G ${wl}-M $wl$lib.exp ${wl}-h $wl$soname -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags~$RM $lib.exp'
  
  	        # Commands to make compiler produce verbose output that lists
  	        # what "hidden" libraries, object files and flags are used when
