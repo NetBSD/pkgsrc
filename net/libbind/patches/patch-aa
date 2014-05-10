@@ -1,19 +1,16 @@
-$NetBSD: patch-aa,v 1.2 2010/12/31 14:36:07 obache Exp $
+$NetBSD: patch-aa,v 1.3 2014/05/10 10:00:38 obache Exp $
 
 --- configure.orig	2009-03-05 01:37:31.000000000 +0000
 +++ configure
-@@ -25135,9 +25135,9 @@ case $use_libtool in
- 		O=lo
- 		A=la
- 		LIBTOOL_MKDEP_SED='s;\.o;\.lo;'
--		LIBTOOL_MODE_COMPILE='--mode=compile'
-+		LIBTOOL_MODE_COMPILE='--mode=compile --tag=CC'
- 		LIBTOOL_MODE_INSTALL='--mode=install'
--		LIBTOOL_MODE_LINK='--mode=link'
-+		LIBTOOL_MODE_LINK='--mode=link --tag=CC'
- 		;;
- 	*)
- 		O=o
+@@ -21891,7 +21891,7 @@ then
+ 		# currently work with bind9, but can be chosen with
+ 		# the --with-ptl2 option for those who wish to
+ 		# experiment with it.
+-		CC="gcc"
++		# CC="gcc"
+ 		{ echo "$as_me:$LINENO: checking which NetBSD thread library to use" >&5
+ echo $ECHO_N "checking which NetBSD thread library to use... $ECHO_C" >&6; }
+ 
 @@ -25928,7 +25928,7 @@ case "$host" in
  			PORT_NONBLOCK="#define PORT_NONBLOCK O_NDELAY"
  			PORT_DIR="port/cygwin";;
