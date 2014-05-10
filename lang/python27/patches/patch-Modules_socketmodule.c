@@ -1,6 +1,6 @@
-$NetBSD: patch-Modules_socketmodule.c,v 1.1 2014/02/09 09:02:50 tron Exp $
+$NetBSD: patch-Modules_socketmodule.c,v 1.2 2014/05/10 08:38:04 obache Exp $
 
-Fix vulnerability reported in SA56624. Patch taken from here:
+Fix CVE-2014-1912. Patch taken from here:
 
 http://hg.python.org/cpython/rev/87673659d8f7
 
