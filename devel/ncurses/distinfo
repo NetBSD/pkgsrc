@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.22 2013/07/08 05:54:24 richard Exp $
+$NetBSD: distinfo,v 1.23 2014/05/11 16:55:17 rodent Exp $
 
 SHA1 (ncurses-5.9.tar.gz) = 3e042e5f2c7223bffdaac9646a533b8c758b65b5
 RMD160 (ncurses-5.9.tar.gz) = dd7dffe38fcc908230ce3e036b71ced2d270ac9e
 Size (ncurses-5.9.tar.gz) = 2826473 bytes
-SHA1 (patch-aa) = ff83d492f6016af789ce8397c4bf87969095e4c4
-SHA1 (patch-ab) = 6bbc87f2189d184a120c77df68ac75a0b97e8e7a
-SHA1 (patch-ac) = 412f2b7aaba6aeeef99dff2b51eb9bda390f04c0
-SHA1 (patch-ad) = 82e81dec3798f81efefd1cbbaee95ae39b46350c
-SHA1 (patch-cxx_cursesf.h) = 98ea07e87f00ba2c67a8c3f8e6d54693c8869f9b
-SHA1 (patch-cxx_cursesm.h) = 24194189201782b457bd3e2c953dcaa34dde99ea
+SHA1 (patch-aa) = e2bafc25f1c9e39062de06eccbe1e71321dbd719
+SHA1 (patch-ab) = 12ed75d0228793d9ceac5933d8ac8741d2852c31
+SHA1 (patch-ac) = e88ab440c19d9087169325eaef8ec0144c82b1a3
+SHA1 (patch-ad) = 15d74d0105a22d0cb1aef5c841e6a6085c498bfe
+SHA1 (patch-cxx_cursesf.h) = ed10202764d97d7d94d4eb4b35e84424cabc4c20
+SHA1 (patch-cxx_cursesm.h) = 0b371901959ce9e36493e57d8df65356284b9ef3
+SHA1 (patch-ncurses_tinfo_lib__baudrate.c) = faaf60ec21e9e4e6a4b14d9f245e569b526572df

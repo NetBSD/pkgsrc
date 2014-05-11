@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.16 2011/02/28 11:02:46 adam Exp $
+$NetBSD: patch-ab,v 1.17 2014/05/11 16:55:17 rodent Exp $
 
---- mk-1st.awk.orig	2010-08-07 20:42:30.000000000 +0000
+--- mk-1st.awk.orig	Sat Aug  7 20:42:30 2010
 +++ mk-1st.awk
 @@ -396,11 +396,11 @@ END	{
  				end_name = lib_name;
