@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/11 16:26:14 imil Exp $
+${PYSITELIB}/daemonize.pyc
+${PYSITELIB}/daemonize.pyo
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/daemonize.py
