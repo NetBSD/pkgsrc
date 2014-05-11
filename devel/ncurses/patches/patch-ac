@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.19 2013/07/08 05:54:24 richard Exp $
+$NetBSD: patch-ac,v 1.20 2014/05/11 16:55:17 rodent Exp $
 
---- configure.orig	2011-02-21 01:40:36.000000000 +0000
+--- configure.orig	Thu Mar 31 23:35:51 2011
 +++ configure
 @@ -7096,6 +7096,13 @@ sco*) #(vi
  	# setting _XOPEN_SOURCE breaks Lynx on SCO Unix / OpenServer
@@ -29,7 +29,7 @@ $NetBSD: patch-ac,v 1.19 2013/07/08 05:54:24 richard Exp $
    ;;
  esac
  
-@@ -18449,7 +18444,7 @@ echo "${ECHO_T}$LIB_SUBSETS" >&6
+@@ -18592,7 +18594,7 @@ echo "${ECHO_T}$LIB_SUBSETS" >&6
  
  ### Construct the list of include-directories to be generated
  
