@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.QNX,v 1.1 2010/06/02 04:34:09 obache Exp $
-include/bind/sys/resource.h
+@comment $NetBSD: PLIST.QNX,v 1.2 2014/05/11 10:15:34 obache Exp $
 include/bind/sys/bitypes.h
 include/bind/sys/ioctl.h
+include/bind/sys/resource.h
