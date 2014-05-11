@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1812 2014/05/11 02:19:23 dholland Exp $
+$NetBSD: CHANGES-2014,v 1.1813 2014/05/11 09:55:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2536,3 +2536,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/gitweb to 1.9.3 [adam 2014-05-10]
 	Updated multimedia/libhdhomerun to 20140121 [jakllsch 2014-05-10]
 	Updated games/xfrisk to 1.2nb8 [dholland 2014-05-11]
+	Updated mail/postfix to 2.11.1 [taca 2014-05-11]
