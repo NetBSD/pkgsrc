@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2014/01/11 17:06:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/05/11 09:59:21 taca Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/COPYRIGHT.txt
 share/doc/drupal/INSTALL.mysql.txt
@@ -231,6 +231,7 @@ share/drupal/modules/aggregator/tests/aggregator_test.info
 share/drupal/modules/aggregator/tests/aggregator_test.module
 share/drupal/modules/aggregator/tests/aggregator_test_atom.xml
 share/drupal/modules/aggregator/tests/aggregator_test_rss091.xml
+share/drupal/modules/aggregator/tests/aggregator_test_title_entities.xml
 share/drupal/modules/block/block-admin-display-form.tpl.php
 share/drupal/modules/block/block.admin.inc
 share/drupal/modules/block/block.api.php
@@ -652,6 +653,7 @@ share/drupal/modules/simpletest/tests/entity_cache_test.info
 share/drupal/modules/simpletest/tests/entity_cache_test.module
 share/drupal/modules/simpletest/tests/entity_cache_test_dependency.info
 share/drupal/modules/simpletest/tests/entity_cache_test_dependency.module
+share/drupal/modules/simpletest/tests/entity_crud.test
 share/drupal/modules/simpletest/tests/entity_crud_hook_test.info
 share/drupal/modules/simpletest/tests/entity_crud_hook_test.module
 share/drupal/modules/simpletest/tests/entity_crud_hook_test.test
@@ -802,6 +804,7 @@ share/drupal/modules/syslog/syslog.info
 share/drupal/modules/syslog/syslog.install
 share/drupal/modules/syslog/syslog.module
 share/drupal/modules/syslog/syslog.test
+share/drupal/modules/system/form.api.php
 share/drupal/modules/system/html.tpl.php
 share/drupal/modules/system/image.gd.inc
 share/drupal/modules/system/language.api.php
@@ -833,6 +836,8 @@ share/drupal/modules/system/system.theme-rtl.css
 share/drupal/modules/system/system.theme.css
 share/drupal/modules/system/system.tokens.inc
 share/drupal/modules/system/system.updater.inc
+share/drupal/modules/system/tests/cron_queue_test.info
+share/drupal/modules/system/tests/cron_queue_test.module
 share/drupal/modules/system/theme.api.php
 share/drupal/modules/taxonomy/taxonomy-term.tpl.php
 share/drupal/modules/taxonomy/taxonomy.admin.inc
