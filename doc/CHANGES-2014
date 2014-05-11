@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1817 2014/05/11 16:28:55 imil Exp $
+$NetBSD: CHANGES-2014,v 1.1818 2014/05/11 16:30:08 imil Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2528,7 +2528,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/py-jaraco_util version 10.0.2 [imil 2014-05-09]
 	Updated net/py-irclib to 8.9 [imil 2014-05-09]
 	Updated fonts/koruri-ttf to 20140510 [nonaka 2014-05-10]
-	Added sysutils/openstack_init 0.1 version [manu 2014-05-10]
+	Added sysutils/openstack_init version 0.1 [manu 2014-05-10]
 	Updated devel/git to 1.9.3 [adam 2014-05-10]
 	Updated devel/git-base to 1.9.3 [adam 2014-05-10]
 	Updated devel/git-docs to 1.9.3 [adam 2014-05-10]
