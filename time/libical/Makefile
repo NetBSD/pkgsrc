@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/02/01 01:44:52 markd Exp $
+# $NetBSD: Makefile,v 1.9 2014/05/11 02:25:34 dsainty Exp $
 #
 
 DISTNAME=	libical-1.0
@@ -12,6 +12,7 @@ COMMENT=	Reference implementation of the iCalendar data type and format
 USE_TOOLS+=	perl
 USE_CMAKE=	yes
 CMAKE_ARGS+= -DUSE_BUILTIN_TZDATA=false
+MAKE_JOBS_SAFE=	no
 
 PKGCONFIG_OVERRIDE+=	libical.pc.in
 
