@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/05/11 02:25:34 dsainty Exp $
+# $NetBSD: Makefile,v 1.10 2014/05/11 23:42:10 dsainty Exp $
 #
 
 DISTNAME=	libical-1.0
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freeassociation/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://freeassociation.sourceforge.net/
 COMMENT=	Reference implementation of the iCalendar data type and format
+LICENSE=	gnu-lgpl-v2.1 OR mpl-1.0
 
 USE_TOOLS+=	perl
 USE_CMAKE=	yes
