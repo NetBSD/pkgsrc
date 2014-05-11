@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1816 2014/05/11 10:07:44 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1817 2014/05/11 16:28:55 imil Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2528,7 +2528,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/py-jaraco_util version 10.0.2 [imil 2014-05-09]
 	Updated net/py-irclib to 8.9 [imil 2014-05-09]
 	Updated fonts/koruri-ttf to 20140510 [nonaka 2014-05-10]
-	Added sysutils/openstack_init 0.1 [manu 2014-05-10]
+	Added sysutils/openstack_init 0.1 version [manu 2014-05-10]
 	Updated devel/git to 1.9.3 [adam 2014-05-10]
 	Updated devel/git-base to 1.9.3 [adam 2014-05-10]
 	Updated devel/git-docs to 1.9.3 [adam 2014-05-10]
@@ -2547,3 +2547,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/ruby-actionmailer32 to 3.2.18 [taca 2014-05-11]
 	Updated devel/ruby-railties32 to 3.2.18 [taca 2014-05-11]
 	Updated www/ruby-rails32 to 3.2.18 [taca 2014-05-11]
+	Added devel/py-daemonize version 2.2.3 [imil 2014-05-11]
