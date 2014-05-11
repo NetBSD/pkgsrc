@@ -1,0 +1,2 @@
+daemonize is a library for writing system daemons in Python. It has some bits
+from daemonize.sourceforge.net. It is distributed under MIT license.
