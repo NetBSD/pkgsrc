@@ -1,6 +1,6 @@
-$NetBSD: patch-integr.c,v 1.1 2013/11/04 16:41:43 joerg Exp $
+$NetBSD: patch-integr.c,v 1.2 2014/05/11 20:56:16 rodent Exp $
 
---- integr.c.orig	2013-11-04 16:18:17.000000000 +0000
+--- integr.c.orig	2005-06-21 18:27:18.000000000 +0000
 +++ integr.c
 @@ -5,7 +5,7 @@
   *
