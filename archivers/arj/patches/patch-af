@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.2 2009/05/13 14:26:24 hasso Exp $
+$NetBSD: patch-af,v 1.3 2014/05/11 20:56:16 rodent Exp $
 
---- fardata.c.orig	2004-04-17 14:39:42 +0300
-+++ fardata.c	2009-05-03 08:53:46 +0300
+--- fardata.c.orig	2004-04-17 11:39:42.000000000 +0000
++++ fardata.c
 @@ -190,7 +190,7 @@ int msg_sprintf(char *str, FMSG *fmt, ..
  
  /* Length-limited strlen() */

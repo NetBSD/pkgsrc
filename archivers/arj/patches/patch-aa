@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.8 2005/10/07 16:52:06 joerg Exp $
+$NetBSD: patch-aa,v 1.9 2014/05/11 20:56:16 rodent Exp $
+
+Add support for various OSes.
 
 --- environ.c.orig	2004-06-18 16:19:36.000000000 +0000
 +++ environ.c
@@ -7,7 +9,7 @@ $NetBSD: patch-aa,v 1.8 2005/10/07 16:52:06 joerg Exp $
    #include <sys/statfs.h>
    #include <sys/statvfs.h>
 - #elif defined(__FreeBSD__)||defined(__NetBSD__)
-+ #elif defined(__FreeBSD__)||defined(__NetBSD__)||defined(__APPLE__) || defined(__DragonFly__)
++ #elif defined(__FreeBSD__)||defined(__NetBSD__)||defined(__APPLE__) || defined(__DragonFly__) || defined(__OpenBSD__) || defined(__OpenBSD__)
    #include <sys/param.h>
    #include <sys/mount.h>
 - #elif defined(__QNXNTO__)

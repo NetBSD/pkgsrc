@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.1 2005/10/07 16:52:06 joerg Exp $
+$NetBSD: patch-ag,v 1.2 2014/05/11 20:56:16 rodent Exp $
 
---- arjdata.c.orig	2005-07-22 13:51:08.000000000 +0000
+--- arjdata.c.orig	2004-04-17 11:44:46.000000000 +0000
 +++ arjdata.c
 @@ -64,6 +64,8 @@ static char *resources[][2]=
    #elif TARGET==UNIX

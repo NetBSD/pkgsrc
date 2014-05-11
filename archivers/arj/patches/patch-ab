@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.7 2006/03/05 21:40:57 adam Exp $
+$NetBSD: patch-ab,v 1.8 2014/05/11 20:56:16 rodent Exp $
 
---- gnu/configure.in.orig	2005-06-21 20:27:20.000000000 +0200
+--- gnu/configure.in.orig	2005-06-21 18:27:20.000000000 +0000
 +++ gnu/configure.in
 @@ -12,13 +12,23 @@ dnl Installation script (let it be, temp
  AC_PROG_INSTALL([e:/os2apps/autoconf/install-sh])
