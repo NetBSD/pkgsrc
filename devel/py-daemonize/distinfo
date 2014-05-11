@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/05/11 16:26:14 imil Exp $
+
+SHA1 (daemonize-2.2.3.tar.gz) = 20c5b449ec0afa5e8c5db0a9c68eb4f9cc96b364
+RMD160 (daemonize-2.2.3.tar.gz) = 8ad03454b4cf37d0b15e31ee01d1e2032b151a92
+Size (daemonize-2.2.3.tar.gz) = 4465 bytes
