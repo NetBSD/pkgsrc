@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1815 2014/05/11 09:59:58 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1816 2014/05/11 10:07:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2539,3 +2539,11 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/postfix to 2.11.1 [taca 2014-05-11]
 	Updated mail/sylpheed to 3.4.1 [taca 2014-05-11]
 	Updated www/drupal7 to 7.28 [taca 2014-05-11]
+	Updated devel/ruby-activesupport32 to 3.2.18 [taca 2014-05-11]
+	Updated devel/ruby-activemodel32 to 3.2.18 [taca 2014-05-11]
+	Updated databases/ruby-activerecord32 to 3.2.18 [taca 2014-05-11]
+	Updated www/ruby-activeresource32 to 3.2.18 [taca 2014-05-11]
+	Updated www/ruby-actionpack32 to 3.2.18 [taca 2014-05-11]
+	Updated mail/ruby-actionmailer32 to 3.2.18 [taca 2014-05-11]
+	Updated devel/ruby-railties32 to 3.2.18 [taca 2014-05-11]
+	Updated www/ruby-rails32 to 3.2.18 [taca 2014-05-11]
