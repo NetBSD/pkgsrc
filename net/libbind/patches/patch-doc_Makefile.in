@@ -1,4 +1,6 @@
-$NetBSD: patch-doc_Makefile.in,v 1.1 2012/03/12 04:39:16 joerg Exp $
+$NetBSD: patch-doc_Makefile.in,v 1.2 2014/05/11 10:16:40 obache Exp $
+
+* prevent to install catman
 
 --- doc/Makefile.in.orig	2012-03-11 21:02:41.000000000 +0000
 +++ doc/Makefile.in

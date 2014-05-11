@@ -1,0 +1,15 @@
+$NetBSD: patch-config.threads.in,v 1.1 2014/05/11 10:16:40 obache Exp $
+
+* prevent to overwrite CC
+
+--- config.threads.in.orig	2008-09-19 18:46:17.000000000 +0000
++++ config.threads.in
+@@ -100,7 +100,7 @@ then
+ 		# currently work with bind9, but can be chosen with
+ 		# the --with-ptl2 option for those who wish to
+ 		# experiment with it.
+-		CC="gcc"
++		# CC="gcc"
+ 		AC_MSG_CHECKING(which NetBSD thread library to use)
+ 
+ 		AC_ARG_WITH(ptl2,
