@@ -1,0 +1,21 @@
+$NetBSD: patch-utils_c,v 1.1 2014/05/11 02:19:04 dholland Exp $
+
+Fall back to fixed if helvetica is missing, instead of croaking.
+
+--- utils.c~	1999-11-13 21:58:32.000000000 +0000
++++ utils.c
+@@ -700,8 +700,12 @@ Int32 UTIL_PopupDialog(CString strTitle,
+   if (pLabelFont==NULL)
+     if ((pLabelFont=XLoadQueryFont(hDisplay, "*helvetica-b*-o-*14*"))==NULL)
+       {
+-	printf("Can't find the font \"*helvetica-b*-o-*14*\"!!\n");
+-	UTIL_ExitProgram(-1);
++        pLabelFont = XLoadQueryFont(hDisplay, "fixed");
++        if (pLabelFont==NULL)
++          {
++            printf("Can't find the font \"fixed\"!!\n");
++            UTIL_ExitProgram(-1);
++          }
+       }
+ 
+   /* Sanity check */
