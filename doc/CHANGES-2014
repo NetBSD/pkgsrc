@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1814 2014/05/11 09:57:47 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1815 2014/05/11 09:59:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2538,3 +2538,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated games/xfrisk to 1.2nb8 [dholland 2014-05-11]
 	Updated mail/postfix to 2.11.1 [taca 2014-05-11]
 	Updated mail/sylpheed to 3.4.1 [taca 2014-05-11]
+	Updated www/drupal7 to 7.28 [taca 2014-05-11]
