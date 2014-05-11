@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2005/03/22 16:24:13 minskim Exp $
+$NetBSD: patch-ad,v 1.2 2014/05/11 20:56:16 rodent Exp $
 
---- gnu/config.h.in.orig	Sat Apr 17 05:33:38 2004
+--- gnu/config.h.in.orig	2004-04-17 10:33:38.000000000 +0000
 +++ gnu/config.h.in
 @@ -4,6 +4,7 @@
  #undef LIBC

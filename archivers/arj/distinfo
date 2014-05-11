@@ -1,13 +1,14 @@
-$NetBSD: distinfo,v 1.15 2013/11/04 16:41:43 joerg Exp $
+$NetBSD: distinfo,v 1.16 2014/05/11 20:56:16 rodent Exp $
 
 SHA1 (arj-3.10.22.tar.gz) = e8470f480e9eee14906e5485a8898e5c24738c8b
 RMD160 (arj-3.10.22.tar.gz) = 80f8a1a8cd203f73def8e957d96563a4dba80153
 Size (arj-3.10.22.tar.gz) = 431467 bytes
-SHA1 (patch-aa) = 7dc0000f3d0c0974a40bbea7d9103449cb89b4b9
-SHA1 (patch-ab) = da21aae85f1bf4b9c8cac78d45ad33c44fcd5d3d
+SHA1 (patch-aa) = 02a45f1365121b63020f3714cea142f9571d8f72
+SHA1 (patch-ab) = 062f3dc1eee6f009dfdfa432bb3c138a9c28a829
 SHA1 (patch-ac) = db8a0afa61f49242e9fd601d5fc3167cf75f748b
-SHA1 (patch-ad) = 186b05ec694daa25504123690f9b7bba9f22a7f4
-SHA1 (patch-ae) = 46181177d4a42b510a02ce8e138275dca453f1de
-SHA1 (patch-af) = c4e5a0dc8a2b42af471fd065ab28f162d94bd0b7
-SHA1 (patch-ag) = ce4d0fefed6ccf7ab7fad864a7cb7faa36e4e4ac
-SHA1 (patch-integr.c) = 8c3f9fd4db4d4b1323cceccd6cfa31dc09ab39af
+SHA1 (patch-ad) = 2cf609a6c7cb4e32441a433db3dc9cc04c23ae2a
+SHA1 (patch-ae) = 5bc829e43a4d45354905f061905e2810408847f1
+SHA1 (patch-af) = cbde8eccfa95e934714591974786fe94d7b4f19f
+SHA1 (patch-ag) = 898539d86abd3747b60d9f95a5a797f709f6360d
+SHA1 (patch-exe__sear.c) = 6d8db5a2cdb8f2452b96cf4d09687ae9d45d3e17
+SHA1 (patch-integr.c) = 67ae3fc4149a7b71a185bf45d2a457a109bcef9b
