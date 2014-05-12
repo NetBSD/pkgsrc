@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.13 2014/04/16 11:21:32 wiz Exp $
+$NetBSD: distinfo,v 1.14 2014/05/12 22:46:49 pho Exp $
 
 SHA1 (libatomic_ops-7.4.0.tar.gz) = 3397c2b2a02be3c27af6ed603332e81464447653
 RMD160 (libatomic_ops-7.4.0.tar.gz) = 30c4e30587cdd93260a53683a5ac3013375c7348
 Size (libatomic_ops-7.4.0.tar.gz) = 455143 bytes
 SHA1 (patch-ad) = 01b30be4d320a88bd8690e65bcd243d224c3146b
+SHA1 (patch-src_Makefile.am) = 0640a45507facfd28cfc56c87652268e65e96ada
