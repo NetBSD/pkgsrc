@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.8 2008/03/03 21:41:30 tnn Exp $
+$NetBSD: distinfo,v 1.9 2014/05/12 13:05:21 jperkin Exp $
 
 SHA1 (ffcall-1.10.tar.gz) = 6b4fdc7bd38b434bbf3d65508a3d117fc8b349f3
 RMD160 (ffcall-1.10.tar.gz) = 910af54fae0b992ceb5620f155e301827d2e03c5
 Size (ffcall-1.10.tar.gz) = 914870 bytes
-SHA1 (patch-aa) = 1aef05b97cf4da460325caddf9410dc7c1917d76
+SHA1 (patch-aa) = 13250616ed04a1a2135d7638dd6a83f86e635188
 SHA1 (patch-ab) = 7e4b587a080af5530c7bd883a71b614162522320
 SHA1 (patch-ad) = 4cfba7c4ce9fb709d1e857433c5caad293ca9c29
-SHA1 (patch-ae) = 183b4e0dcd194a47fd94c19573ffd698bab14392
-SHA1 (patch-af) = cff72d52332759b42f09acded753b08043b8aefc
+SHA1 (patch-ae) = 120d3104aa4e06a0dcc3119719998e0f260ffb79
+SHA1 (patch-af) = bec1789b42136929742e7bbaa73b88aaf102da6d
 SHA1 (patch-ag) = b21d51fc1d78d81a4f7a99183ca1033675ff04ac
 SHA1 (patch-ah) = 07781ee5caef0ca98e9f15c504fee0b43a111245
 SHA1 (patch-ai) = 03a5a572e94ddbcb78dd11201e0afd91998d1e3a
