@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1822 2014/05/12 14:53:17 pettai Exp $
+$NetBSD: CHANGES-2014,v 1.1823 2014/05/12 22:20:24 riz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2552,3 +2552,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/monit to 5.8 [imil 2014-05-12]
 	Updated devel/binutils to 2.24nb1 [jperkin 2014-05-12]
 	Updated net/knot to 1.4.5 [pettai 2014-05-12]
+	Updated sysutils/duplicity to 0.6.24 [riz 2014-05-12]
