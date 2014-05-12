@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1819 2014/05/12 03:12:14 minskim Exp $
+$NetBSD: CHANGES-2014,v 1.1820 2014/05/12 09:01:09 imil Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2549,3 +2549,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/ruby-rails32 to 3.2.18 [taca 2014-05-11]
 	Added devel/py-daemonize version 2.2.3 [imil 2014-05-11]
 	Updated devel/doxygen to 1.8.7nb1 [minskim 2014-05-12]
+	Updated sysutils/monit to 5.8 [imil 2014-05-12]
