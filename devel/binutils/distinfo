@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2014/05/12 16:33:20 marino Exp $
+$NetBSD: distinfo,v 1.19 2014/05/12 19:10:08 marino Exp $
 
 SHA1 (binutils-2.24.tar.bz2) = 7ac75404ddb3c4910c7594b51ddfc76d4693debb
 RMD160 (binutils-2.24.tar.bz2) = b4aa3ea5ba9d0d9f817b2cf136e7f911f692af8d
@@ -9,6 +9,7 @@ SHA1 (patch-configure.ac) = 7bd7b90e57d850705286f2cc6464ecc45e0657c0
 SHA1 (patch-gas_config_tc-i386.c) = 16b04ee6c3c46db375c883b4338bf5d796174458
 SHA1 (patch-gold_Makefile.in) = e65a81557c49a168e6bbd966e37ce1ad4be34d72
 SHA1 (patch-gold_options.h) = 3a1f9f59a1ce105f8f8d5a09fe60e0fe673b61a9
+SHA1 (patch-gold_resolve.cc) = 7e6c45cafddc73a4195c4bdacc43102a0fde3c13
 SHA1 (patch-ld_Makefile.am) = 908d0e0e366d08929d27416a3361e1869abd0076
 SHA1 (patch-ld_Makefile.in) = 68eba0b8a12211915a1eb99770011090f5c21ff2
 SHA1 (patch-ld_configure.tgt) = 7809d739e9a681c0ebe3d60f30dc759accdff6b9
