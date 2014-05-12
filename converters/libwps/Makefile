@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/01/09 09:35:29 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2014/05/12 12:09:43 ryoon Exp $
 
 DISTNAME=	libwps-0.2.4
 CATEGORIES=	converters
@@ -16,6 +16,12 @@ USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-docs
 PKGCONFIG_OVERRIDE+=	libwps-0.2.pc.in
+
+.include "../../mk/bsd.prefs.mk"
+# GCC 4.5 or later may be required, and gcc45 is not provided for OpenBSD
+.if ${OPSYS} == "OpenBSD"
+GCC_REQD+=      4.6
+.endif
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
