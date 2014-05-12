@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/04/09 07:27:07 obache Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/12 22:14:08 asau Exp $
 
 DISTNAME=	starbug1-1.6.01
 PKGREVISION=	1
@@ -47,6 +47,8 @@ PKG_GROUPS_VARS=	APACHE_GROUP
 BUILD_DEFS+=	APACHE_GROUP APACHE_USER
 FILES_SUBST+=	WWWGRP=${APACHE_GROUP} WWWOWN=${APACHE_USER} \
 		SB_DIR=${SB_DIR}
+
+INSTALLATION_DIRS=	share
 
 do-install:
 	chmod 644 ${WRKSRC}/dist/starbug1/debug.log
