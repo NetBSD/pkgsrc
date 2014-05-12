@@ -1,13 +1,15 @@
-$NetBSD: patch-ac,v 1.9 2011/01/12 08:53:52 adam Exp $
+$NetBSD: patch-ac,v 1.10 2014/05/12 15:06:56 ryoon Exp $
 
 * Fix build on FreeBSD and DragonFly, as shown in recent bulk builds and
   PR 34022.
 * Don't try to include nonexistant ipv6 header on Solaris.
   From Volker Stolz in PR pkg/34883.
+* For OpenBSD, from
+  http://lists.apple.com/archives/bonjour-dev/2007/Jan/msg00003.html
 
---- mDNSPosix/mDNSUNP.c.orig	2009-01-13 00:31:35.000000000 -0500
-+++ mDNSPosix/mDNSUNP.c	2010-12-04 19:25:49.000000000 -0500
-@@ -54,8 +54,10 @@ First checkin
+--- mDNSPosix/mDNSUNP.c.orig	2010-06-24 21:49:06.000000000 +0000
++++ mDNSPosix/mDNSUNP.c
+@@ -54,8 +54,10 @@
      #include <net/if_dl.h>
  #endif
  
@@ -36,3 +38,19 @@ $NetBSD: patch-ac,v 1.9 2011/01/12 08:53:52 adam Exp $
  			plen_to_mask(plen, ipv6addr);
  			ifi->ifi_netmask = calloc(1, sizeof(struct sockaddr_in6));
  			if (ifi->ifi_addr == NULL) {
+@@ -488,7 +491,15 @@ recvfrom_flags(int fd, void *ptr, size_t
+            set the value to 0, but I'm concerned that 0 
+            might be a valid interface value.
+         */
++#if HAVE_BROKEN_RECVDSTADDR
++       /* similar to the issue with OpenBSD in mDNSPosix.c, we need
++          to preset sin_family to IF_NET, because of broken IP_RECVDSTADDR
++        */
++        struct in_pktinfo *tmp;
++        struct sockaddr_in *sin = (struct sockaddr_in*)&pktp->ipi_addr;
+         memset(pktp, 0, sizeof(struct my_in_pktinfo));
++        sin->sin_family = AF_INET;
++#endif
+         pktp->ipi_ifindex = -1;
+     }
+ /* end recvfrom_flags1 */
