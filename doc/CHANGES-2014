@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1821 2014/05/12 13:17:14 jperkin Exp $
+$NetBSD: CHANGES-2014,v 1.1822 2014/05/12 14:53:17 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2551,3 +2551,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/doxygen to 1.8.7nb1 [minskim 2014-05-12]
 	Updated sysutils/monit to 5.8 [imil 2014-05-12]
 	Updated devel/binutils to 2.24nb1 [jperkin 2014-05-12]
+	Updated net/knot to 1.4.5 [pettai 2014-05-12]
