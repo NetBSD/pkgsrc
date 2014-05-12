@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.12 2013/11/26 20:36:22 drochner Exp $
+@comment $NetBSD: PLIST,v 1.13 2014/05/12 20:39:33 riz Exp $
 bin/duplicity
 bin/rdiffdir
-${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/duplicity/__init__.py
 ${PYSITELIB}/duplicity/__init__.pyc
 ${PYSITELIB}/duplicity/__init__.pyo
@@ -21,6 +24,12 @@ ${PYSITELIB}/duplicity/backends/_boto_multi.pyo
 ${PYSITELIB}/duplicity/backends/_boto_single.py
 ${PYSITELIB}/duplicity/backends/_boto_single.pyc
 ${PYSITELIB}/duplicity/backends/_boto_single.pyo
+${PYSITELIB}/duplicity/backends/_cf_cloudfiles.py
+${PYSITELIB}/duplicity/backends/_cf_cloudfiles.pyc
+${PYSITELIB}/duplicity/backends/_cf_cloudfiles.pyo
+${PYSITELIB}/duplicity/backends/_cf_pyrax.py
+${PYSITELIB}/duplicity/backends/_cf_pyrax.pyc
+${PYSITELIB}/duplicity/backends/_cf_pyrax.pyo
 ${PYSITELIB}/duplicity/backends/_ssh_paramiko.py
 ${PYSITELIB}/duplicity/backends/_ssh_paramiko.pyc
 ${PYSITELIB}/duplicity/backends/_ssh_paramiko.pyo
@@ -30,9 +39,9 @@ ${PYSITELIB}/duplicity/backends/_ssh_pexpect.pyo
 ${PYSITELIB}/duplicity/backends/botobackend.py
 ${PYSITELIB}/duplicity/backends/botobackend.pyc
 ${PYSITELIB}/duplicity/backends/botobackend.pyo
-${PYSITELIB}/duplicity/backends/cloudfilesbackend.py
-${PYSITELIB}/duplicity/backends/cloudfilesbackend.pyc
-${PYSITELIB}/duplicity/backends/cloudfilesbackend.pyo
+${PYSITELIB}/duplicity/backends/cfbackend.py
+${PYSITELIB}/duplicity/backends/cfbackend.pyc
+${PYSITELIB}/duplicity/backends/cfbackend.pyo
 ${PYSITELIB}/duplicity/backends/dpbxbackend.py
 ${PYSITELIB}/duplicity/backends/dpbxbackend.pyc
 ${PYSITELIB}/duplicity/backends/dpbxbackend.pyo
@@ -72,12 +81,12 @@ ${PYSITELIB}/duplicity/backends/swiftbackend.pyo
 ${PYSITELIB}/duplicity/backends/tahoebackend.py
 ${PYSITELIB}/duplicity/backends/tahoebackend.pyc
 ${PYSITELIB}/duplicity/backends/tahoebackend.pyo
-${PYSITELIB}/duplicity/backends/u1backend.py
-${PYSITELIB}/duplicity/backends/u1backend.pyc
-${PYSITELIB}/duplicity/backends/u1backend.pyo
 ${PYSITELIB}/duplicity/backends/webdavbackend.py
 ${PYSITELIB}/duplicity/backends/webdavbackend.pyc
 ${PYSITELIB}/duplicity/backends/webdavbackend.pyo
+${PYSITELIB}/duplicity/backends/~par2wrapperbackend.py
+${PYSITELIB}/duplicity/backends/~par2wrapperbackend.pyc
+${PYSITELIB}/duplicity/backends/~par2wrapperbackend.pyo
 ${PYSITELIB}/duplicity/cached_ops.py
 ${PYSITELIB}/duplicity/cached_ops.pyc
 ${PYSITELIB}/duplicity/cached_ops.pyo
@@ -132,9 +141,6 @@ ${PYSITELIB}/duplicity/log.pyo
 ${PYSITELIB}/duplicity/manifest.py
 ${PYSITELIB}/duplicity/manifest.pyc
 ${PYSITELIB}/duplicity/manifest.pyo
-${PYSITELIB}/duplicity/misc.py
-${PYSITELIB}/duplicity/misc.pyc
-${PYSITELIB}/duplicity/misc.pyo
 ${PYSITELIB}/duplicity/patchdir.py
 ${PYSITELIB}/duplicity/patchdir.pyc
 ${PYSITELIB}/duplicity/patchdir.pyo
