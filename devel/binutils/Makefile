@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2014/01/26 03:49:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.58 2014/05/12 12:49:59 marino Exp $
 
 DISTNAME=	binutils-2.24
 CATEGORIES=	devel
@@ -44,18 +44,29 @@ INSTALLATION_DIRS=	${PKGGNUDIR}bin ${PKGGNUDIR}${PKGMANDIR}/man1
 
 # gprof (XXX: and others?) cannot be built on all platforms
 #
-PLIST_VARS+=	gprof ld
+PLIST_VARS+=	gprof ld gold
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} != "IRIX"
+.if ${OPSYS} != IRIX
 PLIST.gprof=	yes
 EXTRA_FILES+=	gprof
 .endif
 
-.if ${OPSYS} != "SunOS"
+.if ${OPSYS} != SunOS
 PLIST.ld=	yes
 EXTRA_FILES+=	ld
+.endif
+
+.if ${OPSYS} == DragonFly \
+|| (${OPSYS} == FreeBSD && empty(OS_VERSION:M[12345678].*)) \
+|| (${OPSYS} == OpenBSD && empty(OS_VERSION:M[1234].*)) \
+|| (${OPSYS} == NetBSD && empty(OS_VERSION:M[12345].*))
+BUILD_GOLD=	yes
+PLIST.gold=	yes
+USE_TOOLS+=	bison
+EXTRA_FILES+=	dwp ld.gold
+CONFIGURE_ARGS+=--enable-gold --enable-plugins
 .endif
 
 CFLAGS.OpenBSD+=	-Wno-bounded
@@ -85,6 +96,9 @@ SYMLINK_FILES+=	gprof
 .endif
 .if defined(PLIST.ld)
 SYMLINK_FILES+=	ld
+.endif
+.if defined(BUILD_GOLD)
+SYMLINK_FILES+=	ld.gold dwp
 .endif
 
 post-install:
