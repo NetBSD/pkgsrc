@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/04/09 07:27:03 obache Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/12 12:10:11 ryoon Exp $
 
 DISTNAME=	libe-book-0.0.3
 PKGREVISION=	1
@@ -17,6 +17,12 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c++
+
+.include "../../mk/bsd.prefs.mk"
+# GCC 4.5 or later may be required, and gcc45 is not provided for OpenBSD
+.if ${OPSYS} == "OpenBSD"
+GCC_REQD+=      4.6
+.endif
 
 CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--without-docs
