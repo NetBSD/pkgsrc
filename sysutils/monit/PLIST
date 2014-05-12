@@ -1,12 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2014/03/11 14:05:15 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/05/12 09:00:54 imil Exp $
 bin/monit
 man/man1/monit.1
 share/docs/monit/CHANGES
 share/docs/monit/COPYING
 share/docs/monit/PLATFORMS
 share/docs/monit/README
-share/examples/monit/monit.service
-share/examples/monit/monit.upstart
-share/examples/monit/monitrc-gentoo
 share/examples/monit/monitrc.sample
-share/examples/monit/rc.monit
