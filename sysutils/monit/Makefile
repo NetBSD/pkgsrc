@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.14 2014/02/12 23:18:40 tron Exp $
+# $NetBSD: Makefile,v 1.15 2014/05/12 09:00:54 imil Exp $
 #
 
-DISTNAME=		monit-5.6
-PKGREVISION=		1
+DISTNAME=		monit-5.8
 CATEGORIES=		sysutils
 MASTER_SITES=		http://mmonit.com/monit/dist/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://mmonit.com/monit/
-COMMENT=		Utility for monitoring processes, files, directories and devices
+COMMENT=		Monitors processes, files, directories and devices
 LICENSE=		gnu-agpl-v3
 
 # no platform specific code yet
@@ -67,10 +66,6 @@ post-install:
 .endfor
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/monitrc ${DESTDIR}${EGDIR}/monitrc.sample
-	${INSTALL_DATA} ${WRKSRC}/contrib/monit.service ${DESTDIR}${EGDIR}/
-	${INSTALL_DATA} ${WRKSRC}/contrib/monit.upstart ${DESTDIR}${EGDIR}/
-	${INSTALL_DATA} ${WRKSRC}/contrib/monitrc-gentoo ${DESTDIR}${EGDIR}/
-	${INSTALL_DATA} ${WRKSRC}/contrib/rc.monit ${DESTDIR}${EGDIR}/
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

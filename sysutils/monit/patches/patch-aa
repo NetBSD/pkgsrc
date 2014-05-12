@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.3 2014/02/06 09:09:17 obache Exp $
+$NetBSD: patch-aa,v 1.4 2014/05/12 09:00:54 imil Exp $
 
 Fix for LP64 big-endian platforms.
 
---- src/http/engine.c.orig	2012-05-10 20:52:38.000000000 +0000
+--- src/http/engine.c.orig	2014-03-27 12:27:21.000000000 +0000
 +++ src/http/engine.c
-@@ -245,7 +245,7 @@ int add_host_allow(char *name) {
+@@ -247,7 +247,7 @@ int add_host_allow(char *name) {
         struct sockaddr_in *sin = (struct sockaddr_in *)_res->ai_addr;
  
-        NEW(h);      
+        NEW(h);
 -       memcpy(&h->network, &sin->sin_addr, 4);
 +       h->network = sin->sin_addr.s_addr;
-        h->mask=    0xffffffff;
+        h->mask =    0xffffffff;
         LOCK(hostlist_mutex)
         if(hostlist) {
