@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13298 2014/05/11 10:07:03 wiz Exp $
+$NetBSD: TODO,v 1.13299 2014/05/12 07:08:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -753,6 +753,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmcs-0.7.2
 	o libmicrohttpd-0.9.35
 	o libnasl-2.3.1
+	o libnice-0.1.7
 	o liboobs-2.32.0 [GNOME 2.32]
 	o libpcap-1.5.1
 	o libprelude-1.1.0
@@ -796,6 +797,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mc-4.8.12
 	o mcabber-0.10.3
 	o mcsim-5.5.0
+	o memcached-1.4.20
 	o mergeant-0.67
 	o mesure-0.7.2
 	o metis-5.1.0
@@ -844,6 +846,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nginx-devel-1.7.0
 	o nikto-2.0.1
 	o nios2-binutils-2.24 [wip]
+	o notmuch-0.18
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
 	o nspluginwrapper-1.4.4 [pkg/47208]
@@ -946,12 +949,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-gmpy-1.17
 	o py-gnome-menus-3.8.0
 	o py-greenlet-0.4.2
-	o py-gstreamer0.10-1.2.0
+	o py-gstreamer0.10-1.2.1
 	o py-hgtools-4.0
 	o py-lasso-2.4.0
 	o py-logilab-astng-0.24.3
 	o py-logilab-common-0.60.1
 	o py-markdown-2.3.1
+	o py-markupsafe-0.23
 	o py-mezzanine-3.0.5
 	o py-mpmath-0.18
 	o py-musicbrainz-0.7.4
@@ -970,6 +974,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-reportlab-3.0
 	o py-rope-0.9.4
 	o py-scgi-1.14
+	o py-setuptools-3.6
 	o py-simpletal-5.1
 	o py-sip-4.15.1 [don't update until pyqt3 and KDE problems are fixed -- still there in 4.15.1]
 	o py-sip-4.15.5
@@ -979,6 +984,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-suds-0.4.1
 	o py-sybase-0.37
 	o py-tlslite-0.4.6
+	o py-tornado-3.2.1
 	o py-uliweb-0.2.4
 	o py-wxWidgets-3.0.0
 	o py-zconfig-3.0.3
@@ -988,11 +994,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rails-4.1.0
 	o rainbowcrack-1.5
 	o raine-0.61.1
+	o raptor2-2.0.14
 	o rat-4.2.25
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rdp-1.6
 	o re-alpine-2.03 [pkg/47802]
 	o realboy-0.2.2
+	o redland-1.0.17.1
 	o rep-gtk-0.90.8.1
 	o reposurgeon-3.10
 	o resize_image-0.7
@@ -1048,6 +1056,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o snes9x-1.53
 	o snort-2.9.6.0
 	o socat-1.7.2.4
+	o solarus-1.2.0
 	o solfege-3.22.0
 	o sope-4.6
 	o sound-juicer-2.32.0
@@ -1170,7 +1179,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wxGTK-3.0
 	o wxRemind-101
 	o wyrd-1.4.6
-	o x264-devel-20140503
+	o x264-devel-20140510
 	o xanalyser-1.30
 	o xbindkeys-1.8.6
 	o xbindkeys-tk-1.8.0
