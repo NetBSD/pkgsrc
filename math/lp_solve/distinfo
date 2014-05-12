@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/10/16 15:35:08 wiz Exp $
+$NetBSD: distinfo,v 1.2 2014/05/12 11:41:46 ryoon Exp $
 
 SHA1 (lp_solve_5.5.2.0_source.tar.gz) = e2830053cf079839b9ce21662cbc886ac6d31c80
 RMD160 (lp_solve_5.5.2.0_source.tar.gz) = 23a69c71062747ddf4cbc57120cd7db5f9378ac2
 Size (lp_solve_5.5.2.0_source.tar.gz) = 799623 bytes
 SHA1 (patch-aa) = 17fbc9c80e5a8c34064d426adf2fdae2ce4a7db1
+SHA1 (patch-lp__utils.c) = c0ec019feeac7016f83c63454fa92b137f30675c
