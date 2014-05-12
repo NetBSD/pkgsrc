@@ -1,13 +1,15 @@
-$NetBSD: distinfo,v 1.31 2013/10/24 21:19:12 jperkin Exp $
+$NetBSD: distinfo,v 1.32 2014/05/12 15:06:55 ryoon Exp $
 
 SHA1 (mDNSResponder-258.14.tar.gz) = 2a34794ff9a5184ce1e57ccea4001b5af6635f7b
 RMD160 (mDNSResponder-258.14.tar.gz) = fbd9dcfa84dbeb9de379066958a0b509af074dbc
 Size (mDNSResponder-258.14.tar.gz) = 1833244 bytes
 SHA1 (patch-Clients_dns-sd.c) = 5adac63ba76497056c1abfd426460560b8a3f012
-SHA1 (patch-aa) = ca1e37346b7400649957da8470efb62a343aff68
-SHA1 (patch-ab) = 8567d3a9849377fdfd1fd98f1b0dd164561bb6c9
-SHA1 (patch-ac) = 3fb065c49ed434f031ea29214ec4140b24f8da64
+SHA1 (patch-aa) = 36bdbbe8d44391e6c625d38f5b77813b6d76f41e
+SHA1 (patch-ab) = 473db16e4d454899c364fb2d9fa8d344d47ca008
+SHA1 (patch-ac) = 1dd233e060f980eda9b11fbbf62f619e533ee96f
 SHA1 (patch-ad) = 612390897ad2f395ceb7394b644f977c4858d6cc
-SHA1 (patch-ae) = 551ddcaa508a2e77361a3b683f9de841ca4957b4
+SHA1 (patch-ae) = 49091d627fd3a800ed027566c728022b901d126b
 SHA1 (patch-af) = bce933daa008f081b72c5d509e84704be13360dc
 SHA1 (patch-mDNSShared_dnsextd__parser.y) = dde7eca76c2b5158c2ac96764f91ce773464094a
+SHA1 (patch-mDNSShared_dnssd__clientstub.c) = 591801ae08dce4a44c06dd52a46fcd63807eafcc
+SHA1 (patch-mDNSShared_uds__daemon.c) = df279d3871bb6ead1563c79c99c4d2dc6d91ff79
