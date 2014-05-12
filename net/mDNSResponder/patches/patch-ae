@@ -1,5 +1,7 @@
---- ./mDNSShared/CommonServices.h.orig	2009-08-11 01:13:47.000000000 +0000
-+++ ./mDNSShared/CommonServices.h	2011-08-29 03:29:36.000000000 +0000
+$NetBSD: patch-ae,v 1.5 2014/05/12 14:14:30 ryoon Exp $
+
+--- mDNSShared/CommonServices.h.orig	2009-08-11 01:13:47.000000000 +0000
++++ mDNSShared/CommonServices.h
 @@ -64,6 +64,32 @@
  	#endif
  #endif
