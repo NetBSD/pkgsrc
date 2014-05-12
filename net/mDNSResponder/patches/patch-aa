@@ -1,8 +1,9 @@
-$NetBSD: patch-aa,v 1.12 2013/10/24 21:19:12 jperkin Exp $
+$NetBSD: patch-aa,v 1.13 2014/05/12 15:06:56 ryoon Exp $
 
 Find libpthread.so when not on the default rpath.
 Allow custom CC and CFLAGS.
 Disable -Werror on OSX.
+Fix build failure under OpenBSD, __guard_local issue.
 
 --- mDNSPosix/Makefile.orig	2009-08-11 01:13:47.000000000 +0000
 +++ mDNSPosix/Makefile
@@ -41,7 +42,13 @@ Disable -Werror on OSX.
  JAVACFLAGS_OS += -I$(JDK)/include/freebsd
  LDCONFIG = ldconfig
  else
-@@ -139,9 +138,8 @@ else
+@@ -134,14 +133,14 @@ else
+ ifeq ($(os),openbsd)
+ CFLAGS_OS = -DHAVE_BROKEN_RECVDSTADDR
+ LDCONFIG = ldconfig
++LD = cc -shared
+ else
+ 
  ifeq ($(os),x)
  # We have to define __MAC_OS_X_VERSION_MIN_REQUIRED=__MAC_OS_X_VERSION_10_4 or on Leopard
  # we get build failures: ‘daemon’ is deprecated (declared at /usr/include/stdlib.h:283)
@@ -52,7 +59,7 @@ Disable -Werror on OSX.
  LD = $(CC) -dynamiclib
  LINKOPTS = -lSystem
  LDSUFFIX = dylib
-@@ -205,7 +203,7 @@ endif
+@@ -205,7 +204,7 @@ endif
  endif
  endif
  
