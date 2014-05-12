@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/05/04 17:00:09 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/12 12:09:11 ryoon Exp $
 
 DISTNAME=	libabw-0.0.2
 CATEGORIES=	converters
@@ -11,6 +11,12 @@ COMMENT=	Library for AbiWord documents
 LICENSE=	mpl-2.0
 
 TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
+
+.include "../../mk/bsd.prefs.mk"
+# GCC 4.5 or later may be required, and gcc45 is not provided for OpenBSD
+.if ${OPSYS} == "OpenBSD"
+GCC_REQD+=	4.6
+.endif
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
