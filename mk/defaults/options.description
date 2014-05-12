@@ -550,6 +550,7 @@ py-numpy		Enable support for NumPy.
 pyrex			Enable Pyrex language support.
 python			Enable Python support.
 qdbm			Enable qdbm support.
+qemu			Use qemu.
 qemu-0			Use qemu-0.x.
 qmail-badrcptto		Patch to SMTP-reject particular envelope recipients.
 qmail-bigdns		Patch to handle oversized responses to MX queries.
@@ -734,6 +735,7 @@ xaw			Enable Xaw support.
 xblast-mini		Use a 480x392 window instead a 960x784 window in xblast.
 xcb			Enable XCB (libxcb) support.
 xcursor			Enable Xcursor support.
+xen			Use xen.
 xft2			Enable Xft support.
 xim			Enable X Input Method support.
 xinerama		Enable Xinerama support.
