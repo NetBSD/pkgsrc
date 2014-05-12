@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.2 2004/03/02 16:05:01 adam Exp $
+$NetBSD: patch-ae,v 1.3 2014/05/12 13:05:21 jperkin Exp $
+
+Don't use pre-generated assembly on SunOS.
 
 --- callback/vacall_r/Makefile.in.orig	2004-01-25 14:17:01.000000000 +0000
 +++ callback/vacall_r/Makefile.in
@@ -18,3 +20,16 @@ $NetBSD: patch-ae,v 1.2 2004/03/02 16:05:01 adam Exp $
  
  vacall-m88k.lo : $(srcdir)/vacall-m88k.s
  	$(LIBTOOL_COMPILE) $(CC) @GCC_X_NONE@ -c $(srcdir)/vacall-m88k.s
+@@ -138,7 +139,11 @@ vacall-ia64.lo : $(srcdir)/vacall-ia64.s
+ 	$(LIBTOOL_COMPILE) $(CC) @GCC_X_NONE@ -c $(srcdir)/vacall-ia64.s
+ 
+ vacall-x86_64.lo : $(srcdir)/vacall-x86_64.s
+-	$(LIBTOOL_COMPILE) $(CC) @GCC_X_NONE@ -c $(srcdir)/vacall-x86_64.s
++	case "$(OS)" in \
++	  solaris*) xnone="-I../../vacall"; exten="c";; \
++	  *) xnone="@GCC_X_NONE@"; exten="s";; \
++	esac; \
++	$(LIBTOOL_COMPILE) $(CC) $${xnone} -c $(srcdir)/vacall-x86_64.$${exten}
+ 
+ misc.lo : $(srcdir)/misc.c vacall_r.h config.h
+ 	$(LIBTOOL_COMPILE) $(CC) $(CFLAGS) $(INCLUDES) -c $(srcdir)/misc.c

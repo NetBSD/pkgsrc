@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.2 2004/03/02 16:05:01 adam Exp $
+$NetBSD: patch-af,v 1.3 2014/05/12 13:05:21 jperkin Exp $
+
+Don't use pre-generated assembly on SunOS.
 
 --- vacall/Makefile.in.orig	2004-01-25 13:46:00.000000000 +0000
 +++ vacall/Makefile.in
@@ -11,3 +13,16 @@ $NetBSD: patch-af,v 1.2 2004/03/02 16:05:01 adam Exp $
  
  vacall-m88k.o : $(srcdir)/vacall-m88k.s
  	$(CC) @GCC_X_NONE@ -c $(srcdir)/vacall-m88k.s
+@@ -128,7 +128,11 @@ vacall-ia64.o : $(srcdir)/vacall-ia64.s
+ 	$(CC) @GCC_X_NONE@ -c $(srcdir)/vacall-ia64.s
+ 
+ vacall-x86_64.o : $(srcdir)/vacall-x86_64.s
+-	$(CC) @GCC_X_NONE@ -c $(srcdir)/vacall-x86_64.s
++	case "$(OS)" in \
++	  solaris*) xnone=""; exten="c";; \
++	  *) xnone="@GCC_X_NONE@"; exten="s";; \
++	esac; \
++	$(CC) $${xnone} -c $(srcdir)/vacall-x86_64.$${exten}
+ 
+ misc.o : $(srcdir)/misc.c vacall.h config.h
+ 	$(CC) $(CFLAGS) $(INCLUDES) -c $(srcdir)/misc.c
