@@ -1,6 +1,8 @@
-$NetBSD: patch-ab,v 1.8 2011/01/12 08:53:52 adam Exp $
+$NetBSD: patch-ab,v 1.9 2014/05/12 15:06:56 ryoon Exp $
 
-1) add patch from http://www.freebsd.org/cgi/query-pr.cgi?pr=ports/147007
+1) From http://lists.apple.com/archives/bonjour-dev/2007/Jan/msg00003.html
+
+2) add patch from http://www.freebsd.org/cgi/query-pr.cgi?pr=ports/147007
 
  -enable ipv6
  -fix some RFC2292 vs 3542 confusion which made the former fail
@@ -8,6 +10,15 @@ $NetBSD: patch-ab,v 1.8 2011/01/12 08:53:52 adam Exp $
 
 --- mDNSPosix/mDNSPosix.c.orig	2010-05-20 22:35:08.000000000 +0000
 +++ mDNSPosix/mDNSPosix.c
+@@ -256,7 +256,7 @@ mDNSlocal void SocketDataReady(mDNS *con
+ 		// so all we can do is just assume it's a multicast
+ 
+ 		#if HAVE_BROKEN_RECVDSTADDR || (!defined(IP_PKTINFO) && !defined(IP_RECVDSTADDR))
+-			if ((destAddr.NotAnInteger == 0) && (flags & MSG_MCAST))
++			if ((destAddr.ip.v4.NotAnInteger == 0) && (flags & MSG_MCAST))
+ 				{
+ 				destAddr.type = senderAddr.type;
+ 				if      (senderAddr.type == mDNSAddrType_IPv4) destAddr.ip.v4 = AllDNSLinkGroup_v4.ip.v4;
 @@ -467,7 +467,7 @@ mDNSexport int ParseDNSServers(mDNS *m, 
  	{
  	char line[256];
