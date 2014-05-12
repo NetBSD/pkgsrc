@@ -1,13 +1,15 @@
-@comment $NetBSD: PLIST.common,v 1.22 2014/01/06 14:58:41 wiz Exp $
+@comment $NetBSD: PLIST.common,v 1.23 2014/05/12 12:49:59 marino Exp $
 ${MACHINE_GNU_PLATFORM}/bin/ar
 ${MACHINE_GNU_PLATFORM}/bin/as
 ${MACHINE_GNU_PLATFORM}/bin/ld
 ${MACHINE_GNU_PLATFORM}/bin/ld.bfd
+${PLIST.gold}${MACHINE_GNU_PLATFORM}/bin/ld.gold
 ${MACHINE_GNU_PLATFORM}/bin/nm
 ${MACHINE_GNU_PLATFORM}/bin/objcopy
 ${MACHINE_GNU_PLATFORM}/bin/objdump
 ${MACHINE_GNU_PLATFORM}/bin/ranlib
 ${MACHINE_GNU_PLATFORM}/bin/strip
+${PLIST.gold}bin/gdwp
 bin/gaddr2line
 bin/gar
 bin/gas
@@ -16,6 +18,7 @@ ${PLIST.gprof}bin/ggprof
 bin/gelfedit
 bin/gld
 bin/gld.bfd
+${PLIST.gold}bin/gld.gold
 bin/gnm
 bin/gobjcopy
 bin/gobjdump
@@ -29,10 +32,12 @@ gnu/bin/addr2line
 gnu/bin/ar
 gnu/bin/as
 gnu/bin/c++filt
+${PLIST.gold}gnu/bin/dwp
 ${PLIST.gprof}gnu/bin/gprof
 gnu/bin/elfedit
 ${PLIST.ld}gnu/bin/ld
 gnu/bin/ld.bfd
+${PLIST.gold}gnu/bin/ld.gold
 gnu/bin/nm
 gnu/bin/objcopy
 gnu/bin/objdump
@@ -64,6 +69,7 @@ include/ansidecl.h
 include/bfd.h
 include/bfdlink.h
 include/dis-asm.h
+${PLIST.gold}include/plugin-api.h
 include/symcat.h
 info/as.info
 info/bfd.info
@@ -105,12 +111,14 @@ ${PLIST.gprof}share/locale/eo/LC_MESSAGES/gprof.mo
 share/locale/es/LC_MESSAGES/bfd.mo
 share/locale/es/LC_MESSAGES/binutils.mo
 share/locale/es/LC_MESSAGES/gas.mo
+${PLIST.gold}share/locale/es/LC_MESSAGES/gold.mo
 ${PLIST.gprof}share/locale/es/LC_MESSAGES/gprof.mo
 share/locale/es/LC_MESSAGES/ld.mo
 share/locale/es/LC_MESSAGES/opcodes.mo
 share/locale/fi/LC_MESSAGES/bfd.mo
 share/locale/fi/LC_MESSAGES/binutils.mo
 share/locale/fi/LC_MESSAGES/gas.mo
+${PLIST.gold}share/locale/fi/LC_MESSAGES/gold.mo
 ${PLIST.gprof}share/locale/fi/LC_MESSAGES/gprof.mo
 share/locale/fi/LC_MESSAGES/ld.mo
 share/locale/fi/LC_MESSAGES/opcodes.mo
@@ -128,6 +136,7 @@ ${PLIST.gprof}share/locale/id/LC_MESSAGES/gprof.mo
 share/locale/id/LC_MESSAGES/bfd.mo
 share/locale/id/LC_MESSAGES/binutils.mo
 share/locale/id/LC_MESSAGES/gas.mo
+${PLIST.gold}share/locale/id/LC_MESSAGES/gold.mo
 share/locale/id/LC_MESSAGES/ld.mo
 share/locale/id/LC_MESSAGES/opcodes.mo
 share/locale/it/LC_MESSAGES/binutils.mo
@@ -137,6 +146,7 @@ share/locale/it/LC_MESSAGES/opcodes.mo
 share/locale/ja/LC_MESSAGES/bfd.mo
 share/locale/ja/LC_MESSAGES/binutils.mo
 share/locale/ja/LC_MESSAGES/gas.mo
+${PLIST.gold}share/locale/it/LC_MESSAGES/gold.mo
 ${PLIST.gprof}share/locale/ja/LC_MESSAGES/gprof.mo
 share/locale/ja/LC_MESSAGES/ld.mo
 ${PLIST.gprof}share/locale/ms/LC_MESSAGES/gprof.mo
@@ -176,6 +186,7 @@ share/locale/uk/LC_MESSAGES/ld.mo
 share/locale/uk/LC_MESSAGES/opcodes.mo
 share/locale/vi/LC_MESSAGES/bfd.mo
 share/locale/vi/LC_MESSAGES/binutils.mo
+${PLIST.gold}share/locale/vi/LC_MESSAGES/gold.mo
 share/locale/vi/LC_MESSAGES/ld.mo
 share/locale/vi/LC_MESSAGES/opcodes.mo
 share/locale/zh_CN/LC_MESSAGES/bfd.mo
