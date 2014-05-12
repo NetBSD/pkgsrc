@@ -1,0 +1,17 @@
+$NetBSD: patch-src_Makefile.am,v 1.1 2014/05/12 22:46:50 pho Exp $
+
+atomic_ops_stack.c refers to AO_pause defined in atomic_ops.c so
+either removing -no-undefined or declaring the dependency is needed.
+
+TODO: This patch should be sent to the upstream.
+
+--- src/Makefile.am.orig	2013-11-17 10:19:19.000000000 +0000
++++ src/Makefile.am
+@@ -12,6 +12,7 @@ libatomic_ops_la_LDFLAGS = -version-info
+ 
+ libatomic_ops_gpl_la_SOURCES = atomic_ops_stack.c atomic_ops_malloc.c
+ libatomic_ops_gpl_la_LDFLAGS = -version-info 1:3:0 -no-undefined
++libatomic_ops_gpl_la_LIBADD  = libatomic_ops.la
+ 
+ EXTRA_DIST = Makefile.msft atomic_ops/sysdeps/README \
+         atomic_ops/generalize-arithm.template \
