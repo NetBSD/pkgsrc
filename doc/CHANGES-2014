@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1828 2014/05/13 13:21:15 imil Exp $
+$NetBSD: CHANGES-2014,v 1.1829 2014/05/13 14:19:03 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2558,3 +2558,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/firefox-l10n to 29.0.1 [ryoon 2014-05-13]
 	Added devel/py-iowait version 0.2 [imil 2014-05-13]
 	Updated www/py-tornado to 3.2.1 [imil 2014-05-13]
+	Updated databases/pgbouncer to 1.5.4 [fhajny 2014-05-13]
