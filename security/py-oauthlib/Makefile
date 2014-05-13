@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/05/08 15:18:10 imil Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/13 17:08:44 joerg Exp $
 
 DISTNAME=	oauthlib-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,5 +12,5 @@ LICENSE=	original-bsd
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
