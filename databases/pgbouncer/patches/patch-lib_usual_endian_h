@@ -1,8 +1,8 @@
-$NetBSD: patch-lib_usual_endian_h,v 1.1 2011/12/21 08:29:05 dholland Exp $
+$NetBSD: patch-lib_usual_endian_h,v 1.2 2014/05/13 14:18:50 fhajny Exp $
 
 Avoid trying to redefine bswap16/32/64 when on NetBSD.
 
---- lib/usual/endian.h~	2011-04-29 13:07:43.000000000 +0000
+--- lib/usual/endian.h.orig	2011-11-29 15:40:56.000000000 +0000
 +++ lib/usual/endian.h
 @@ -42,6 +42,8 @@
   * @{
@@ -13,7 +13,7 @@ Avoid trying to redefine bswap16/32/64 when on NetBSD.
  #ifndef bswap16
  #ifdef bswap_16
  #define bswap16(x) bswap_16(x)
-@@ -80,6 +82,8 @@ static inline uint64_t bswap64(uint64_t 
+@@ -80,6 +82,8 @@ static inline uint64_t bswap64(uint64_t
  #endif
  #endif
  
