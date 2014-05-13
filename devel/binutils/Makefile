@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2014/05/12 19:10:08 marino Exp $
+# $NetBSD: Makefile,v 1.62 2014/05/13 06:41:31 obache Exp $
 
 DISTNAME=	binutils-2.24
 PKGREVISION=	3
@@ -60,9 +60,9 @@ EXTRA_FILES+=	ld
 .endif
 
 .if ${OPSYS} == DragonFly \
-|| (${OPSYS} == FreeBSD && empty(OS_VERSION:M[12345678].*)) \
-|| (${OPSYS} == OpenBSD && empty(OS_VERSION:M[1234].*)) \
-|| (${OPSYS} == NetBSD && empty(OS_VERSION:M[12345].*))
+	|| (${OPSYS} == FreeBSD && empty(OS_VERSION:M[12345678].*)) \
+	|| (${OPSYS} == OpenBSD && empty(OS_VERSION:M[1234].*)) \
+	|| (${OPSYS} == NetBSD && empty(OS_VERSION:M[12345].*))
 BUILD_GOLD=	yes
 PLIST.gold=	yes
 USE_TOOLS+=	bison
