@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/05/01 00:32:11 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/05/13 18:36:02 ryoon Exp $
 bin/sbase
 bin/scalc
 bin/sdraw
@@ -7160,7 +7160,7 @@ ${PKGNAME}/share/Scripts/python/LibreLogo/icons/sc_runbasic.png
 ${PKGNAME}/share/Scripts/python/pythonSamples/TableSample.py
 ${PKGNAME}/share/autocorr/acor_af-ZA.dat
 ${PKGNAME}/share/autocorr/acor_bg-BG.dat
-${PKGNAME}/share/autocorr/acor_ca.dat
+${PKGNAME}/share/autocorr/acor_ca-ES.dat
 ${PKGNAME}/share/autocorr/acor_cs-CZ.dat
 ${PKGNAME}/share/autocorr/acor_da-DK.dat
 ${PKGNAME}/share/autocorr/acor_de-DE.dat
@@ -10486,13 +10486,13 @@ ${PKGNAME}/share/extensions/dict-bs/bs_BA.aff
 ${PKGNAME}/share/extensions/dict-bs/bs_BA.dic
 ${PKGNAME}/share/extensions/dict-bs/description.xml
 ${PKGNAME}/share/extensions/dict-bs/dictionaries.xcu
-${PKGNAME}/share/extensions/dict-ca/LICENCES-fr.txt
-${PKGNAME}/share/extensions/dict-ca/LICENCIAS-es.txt
 ${PKGNAME}/share/extensions/dict-ca/LICENSES-en.txt
 ${PKGNAME}/share/extensions/dict-ca/LLICENCIES-ca.txt
 ${PKGNAME}/share/extensions/dict-ca/META-INF/manifest.xml
-${PKGNAME}/share/extensions/dict-ca/SC_42x42.png
+${PKGNAME}/share/extensions/dict-ca/SC-logo.png
 ${PKGNAME}/share/extensions/dict-ca/ca.aff
+${PKGNAME}/share/extensions/dict-ca/ca-valencia.aff
+${PKGNAME}/share/extensions/dict-ca/ca-valencia.dic
 ${PKGNAME}/share/extensions/dict-ca/ca.dic
 ${PKGNAME}/share/extensions/dict-ca/description.xml
 ${PKGNAME}/share/extensions/dict-ca/dictionaries.xcu
@@ -11069,6 +11069,7 @@ ${PKGNAME}/share/extensions/dict-pt-PT/README_th_pt_PT_v2.txt
 ${PKGNAME}/share/extensions/dict-pt-PT/description.xml
 ${PKGNAME}/share/extensions/dict-pt-PT/dictionaries.xcu
 ${PKGNAME}/share/extensions/dict-pt-PT/hyph_pt_PT.dic
+${PKGNAME}/share/extensions/dict-pt-PT/icon.png
 ${PKGNAME}/share/extensions/dict-pt-PT/pt_PT.aff
 ${PKGNAME}/share/extensions/dict-pt-PT/pt_PT.dic
 ${PKGNAME}/share/extensions/dict-pt-PT/th_pt_PT_v2.dat
