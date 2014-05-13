@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2014/05/05 00:48:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2014/05/13 07:48:29 marino Exp $
 #
 
 DISTNAME=	gtkada-${GTKADA_VERSION}
@@ -37,6 +37,15 @@ SUBST_SED.lgnat=	-e 's|-largs|-largs -lgnat|'
 
 GENERATE_PLIST=	cd ${DESTDIR}${PREFIX}; \
 		${FIND} * \( -type f -or -type l \) | ${SORT};
+
+GTK2PC=		${BUILDLINK_DIR}/lib/pkgconfig/gtk+-2.0.pc
+
+post-wrapper:
+	# This hack works around missing gmodule entry in gtk2
+	# pkgconfig file.  Remove it when gtk2 is properly fixed
+	${CAT} ${GTK2PC} | ${SED} '/^Req/ s/$$/ gmodule-2.0/' > ${GTK2PC}.tmp
+	${RM} ${GTK2PC}
+	${MV} ${GTK2PC}.tmp ${GTK2PC}
 
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MY_CONFIGURE_ENV} \
