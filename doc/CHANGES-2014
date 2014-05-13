@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1824 2014/05/13 02:39:24 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.1825 2014/05/13 11:06:37 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2554,3 +2554,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/knot to 1.4.5 [pettai 2014-05-12]
 	Updated sysutils/duplicity to 0.6.24 [riz 2014-05-12]
 	Updated finance/py-python-bitcoinlib to 0.1.1 [rodent 2014-05-13]
+	Updated www/firefox to 29.0.1 [ryoon 2014-05-13]
