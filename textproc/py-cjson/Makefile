@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/05/03 15:34:22 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/13 17:20:38 joerg Exp $
 #
 
 DISTNAME=	python-cjson-1.0.5
@@ -12,6 +12,7 @@ COMMENT=	Fast JSON encoder/decoder for Python
 LICENSE=	gnu-lgpl-v2
 
 PYDISTUTILSPKG= yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # Uses old string API.
 
 do-test:
 	( cd ${WKSRC} && ${PYTHONBIN} jsontest.py )
