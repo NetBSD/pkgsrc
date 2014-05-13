@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2013/11/21 23:50:04 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.44 2014/05/13 18:48:49 ryoon Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -34,9 +34,16 @@ CONFLICTS+=		boost<1.36.0
 DISTINFO_FILE=		${.CURDIR}/../../meta-pkgs/boost/distinfo
 PATCHDIR=		${.CURDIR}/../../meta-pkgs/boost/patches
 
+.include "../../mk/bsd.prefs.mk"
+
 USE_TOOLS+=		pax
 USE_LANGUAGES=		c c++
-GCC_REQD+=		3.2 # if using gcc; ignored otherwise
+# GCC 4.5 or later is required to build, and GCC 4.5 is not provided for OpenBSD
+.if ${OPSYS} == "OpenBSD"
+GCC_REQD+=		4.6
+.else
+GCC_REQD+=		4.5
+.endif
 
 PLIST_SUBST+=		BOOST_VERSION="${BOOST_VERSION}"
 
@@ -51,8 +58,6 @@ SUBST_STAGE.darwin=	pre-configure
 SUBST_MESSAGE.darwin=	Fixing install_name for Darwin.
 SUBST_FILES.darwin=	tools/build/v2/tools/*darwin.jam
 SUBST_SED.darwin=	-e 's,-install_name ",-install_name "${PREFIX}/lib/,g'
-
-.include "../../mk/bsd.prefs.mk"
 
 # On SunOS, extract using pkgsrc nbtar to avoid warnings from native gtar.
 .if ${OPSYS} == "SunOS"
