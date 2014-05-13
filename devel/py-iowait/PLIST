@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/13 12:32:29 imil Exp $
+${PYSITELIB}/iowait.pyc
+${PYSITELIB}/iowait.pyo
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/iowait.py

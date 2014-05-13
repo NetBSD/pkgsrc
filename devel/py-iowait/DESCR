@@ -1,0 +1,10 @@
+Different operating systems provide different ways to wait for I/O completion
+events: there's select(), poll(), epoll() and kqueue(). For cross-platform
+applications it can be a pain to support all this system functions, especially
+because each one provides a different interface.
+
+IOWait solves this problem by providing a unified interface and using always
+the best and faster function available in the platform. Its only limitation is
+that, on Windows, it only works for sockets.
+
+This library is compatible both with Python 2 and 3.
