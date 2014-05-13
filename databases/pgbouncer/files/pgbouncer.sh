@@ -1,6 +1,6 @@
 #! @RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pgbouncer.sh,v 1.1.1.1 2011/09/03 22:15:51 mjl Exp $
+# $NetBSD: pgbouncer.sh,v 1.2 2014/05/13 14:18:49 fhajny Exp $
 #
 # PROVIDE: pgbouncer
 # REQUIRE: DAEMON
@@ -23,7 +23,7 @@ start_cmd="pgbouncer_start"
 
 pidfile="@VARBASE@/run/${name}/${name}.pid"
 if [ -r ${pgbouncer_conf} ] ; then
-	pidfile=`grep -i pidfile /usr/pkg/etc/pgbouncer.ini | cut -d= -f2`
+	pidfile=`grep -i pidfile ${pgbouncer_conf} | cut -d= -f2`
 fi
 
 pgbouncer_start()
