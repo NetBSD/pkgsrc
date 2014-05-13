@@ -1,8 +1,12 @@
-# $NetBSD: options.mk,v 1.2 2014/02/02 07:43:40 ryoon Exp $
+# $NetBSD: options.mk,v 1.3 2014/05/13 18:36:02 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libreoffice4
 PKG_SUPPORTED_OPTIONS=	java debug
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
 PKG_SUGGESTED_OPTIONS=	java
+.endif
 
 .include "../../mk/bsd.options.mk"
 

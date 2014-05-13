@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.24 2014/05/05 00:48:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2014/05/13 18:36:02 ryoon Exp $
 
-VER=		4.2.3.3
+VER=		4.2.4.2
 DISTNAME=	libreoffice-${VER}
 PKGNAME=	libreoffice4-${VER}
-PKGREVISION=	2
 CATEGORIES=	misc
-MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/4.2.3/
+MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/4.2.4/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -17,6 +16,10 @@ LICENSE=	gnu-lgpl-v3
 .include "../../mk/bsd.prefs.mk"
 .if !empty(MACHINE_PLATFORM:MNetBSD-5.*)
 BUILDLINK_TRANSFORM+=	rename:-O2:-O
+.endif
+
+.if ${OPSYS} == "OpenBSD"
+GCC_REQD+=	4.6
 .endif
 
 # LibreOfice's Makefile has its own pararell build mechanism. Avoid conflict.
