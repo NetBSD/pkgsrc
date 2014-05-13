@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1829 2014/05/13 14:19:03 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.1830 2014/05/13 15:31:54 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2559,3 +2559,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/py-iowait version 0.2 [imil 2014-05-13]
 	Updated www/py-tornado to 3.2.1 [imil 2014-05-13]
 	Updated databases/pgbouncer to 1.5.4 [fhajny 2014-05-13]
+	Updated mail/dnsbl-milter to 6.40 [sborrill 2014-05-13]
