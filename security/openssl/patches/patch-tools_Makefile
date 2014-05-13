@@ -1,9 +1,9 @@
-$NetBSD: patch-tools_Makefile,v 1.1 2014/04/02 12:11:35 he Exp $
+$NetBSD: patch-tools_Makefile,v 1.2 2014/05/13 02:23:11 rodent Exp $
 
 Adjust build procedure.
 
---- tools/Makefile.orig	2006-02-04 02:49:36.000000000 +0100
-+++ tools/Makefile	2007-07-31 17:20:05.000000000 +0200
+--- tools/Makefile.orig	Mon Mar 17 16:14:20 2014
++++ tools/Makefile
 @@ -4,6 +4,7 @@
  
  DIR=	tools

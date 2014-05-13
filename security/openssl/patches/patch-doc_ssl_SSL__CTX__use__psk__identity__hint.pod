@@ -1,10 +1,10 @@
-$NetBSD: patch-doc_ssl_SSL__CTX__use__psk__identity__hint.pod,v 1.2 2014/01/10 14:32:42 tron Exp $
+$NetBSD: patch-doc_ssl_SSL__CTX__use__psk__identity__hint.pod,v 1.3 2014/05/13 02:23:11 rodent Exp $
 
 Fix openssl pod docs to work with the very picky pod2man from perl-5.18.0.
 
---- doc/ssl/SSL_CTX_use_psk_identity_hint.pod.orig	2014-01-06 13:47:42.000000000 +0000
-+++ doc/ssl/SSL_CTX_use_psk_identity_hint.pod	2014-01-10 13:23:46.000000000 +0000
-@@ -96,7 +96,7 @@
+--- doc/ssl/SSL_CTX_use_psk_identity_hint.pod.orig	Mon Mar 17 16:14:20 2014
++++ doc/ssl/SSL_CTX_use_psk_identity_hint.pod
+@@ -96,7 +96,7 @@ data to B<psk> and return the length of the random dat
  connection will fail with decryption_error before it will be finished
  completely.
  
