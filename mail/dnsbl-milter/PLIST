@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/13 15:31:40 sborrill Exp $
+man/man1/dnsbl.1
+man/man5/dnsbl.conf.5
+sbin/dnsbl
+share/examples/dnsbl-milter/dnsbl.conf
+share/examples/dnsbl-milter/hosts-ignore.conf
+share/examples/dnsbl-milter/html-tags.conf
+share/examples/dnsbl-milter/tld.conf
