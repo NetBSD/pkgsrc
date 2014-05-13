@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/03/13 18:00:02 taca Exp $
+# $NetBSD: Makefile,v 1.11 2014/05/13 17:48:36 pho Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -22,6 +22,20 @@ CONFIGURE_ARGS+=	--enable-shared
 WRKSRC=			${RUBY_WRKSRC}
 
 MAKE_DIRS=		${RUBY_SITEARCHLIB} ${RUBY_VENDORARCHLIB}
+
+# On platforms where DTrace is available, we need to invoke dtrace(1)
+# with the original PATH. Otherwise it gets confused in the presence
+# of our cc wrapper because it tries to invoke the system-default gcc
+# with argv[0] set to "gcc", not the absolute path to gcc.
+.if exists(/usr/sbin/dtrace)
+# NOTE: This should probably be handled by ../../mk/bsd.wrapper.mk
+post-wrapper:
+	${RUN}(${ECHO} '#!${SH}'; \
+		${ECHO} 'PATH=/bin:/usr/bin:/sbin:/usr/sbin; export PATH'; \
+		${ECHO} '/usr/sbin/dtrace $$@') \
+		> "${WRAPPER_BINDIR}/dtrace"
+	${RUN}${CHMOD} +x "${WRAPPER_BINDIR}/dtrace"
+.endif
 
 #
 # Don't refrect pkgsrc's INSTALL macro since Ruby expect it could
