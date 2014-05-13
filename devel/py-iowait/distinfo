@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/05/13 12:32:29 imil Exp $
+
+SHA1 (iowait-0.2.tar.gz) = 5c8647a8ce6bfe40b962b81e929eccf844bde6b6
+RMD160 (iowait-0.2.tar.gz) = b46670b76c652219d79fa21565b73654ed4ceaa3
+Size (iowait-0.2.tar.gz) = 22339 bytes
