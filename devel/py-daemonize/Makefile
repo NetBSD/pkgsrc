@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/05/11 16:26:14 imil Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/13 17:08:44 joerg Exp $
 
 DISTNAME=	daemonize-2.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,5 +12,5 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
