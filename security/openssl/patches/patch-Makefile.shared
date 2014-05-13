@@ -1,8 +1,8 @@
-$NetBSD: patch-Makefile.shared,v 1.1 2014/04/02 12:11:35 he Exp $
+$NetBSD: patch-Makefile.shared,v 1.2 2014/05/13 02:23:11 rodent Exp $
 
 Adjust build procedure.
 
---- Makefile.shared.orig	2010-08-21 11:37:17.000000000 +0000
+--- Makefile.shared.orig	Mon Mar 17 16:14:20 2014
 +++ Makefile.shared
 @@ -315,6 +315,11 @@ link_o.alpha-osf1:
  	@ if $(DETECT_GNU_LD); then \
