@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1831 2014/05/13 15:32:34 sborrill Exp $
+$NetBSD: CHANGES-2014,v 1.1832 2014/05/13 18:36:51 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2560,3 +2560,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-tornado to 3.2.1 [imil 2014-05-13]
 	Updated databases/pgbouncer to 1.5.4 [fhajny 2014-05-13]
 	Added mail/dnsbl-milter version 6.40 [sborrill 2014-05-13]
+	Updated misc/libreoffice4 to 4.2.4.2 [ryoon 2014-05-13]
