@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2014/05/13 15:31:40 sborrill Exp $
+
+SHA1 (dnsbl-6.40.tar.gz) = c545055cbb2739925d3d3202a8c0b4aafb6dea43
+RMD160 (dnsbl-6.40.tar.gz) = 7057ef71d62c72bc96946082deb66d6341ed29d7
+Size (dnsbl-6.40.tar.gz) = 605285 bytes
+SHA1 (patch-src_context.cpp) = 9cfd237be9ac059acd741e4430f43c4152001fd8
+SHA1 (patch-src_dnsbl.cpp) = c5b7cfdd4656472f170c32c452e71741e9715323
+SHA1 (patch-src_tokenizer.cpp) = 3f628ffabcddd7c9a90118c8165b90f468d4a1b7
