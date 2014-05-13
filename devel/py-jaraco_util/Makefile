@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/05/09 21:30:26 imil Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/13 17:08:44 joerg Exp $
 
 DISTNAME=	jaraco.util-10.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/./_/}
@@ -16,5 +16,5 @@ USE_LANGUAGES=	# none
 
 DEPENDS+=	${PYPKGPREFIX}-more-itertools>=2.2:../../devel/py-more-itertools
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
