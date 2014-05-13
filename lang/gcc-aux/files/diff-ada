@@ -7741,7 +7741,7 @@
 +   Always_Compatible_Rep     : constant Boolean := False;
 +   Suppress_Standard_Library : constant Boolean := False;
 +   Use_Ada_Main_Program_Name : constant Boolean := False;
-+   ZCX_By_Default            : constant Boolean := True;
++   ZCX_By_Default            : constant Boolean := False;
 +
 +end System;
 --- /dev/null
@@ -7888,7 +7888,7 @@
 +   Always_Compatible_Rep     : constant Boolean := False;
 +   Suppress_Standard_Library : constant Boolean := False;
 +   Use_Ada_Main_Program_Name : constant Boolean := False;
-+   ZCX_By_Default            : constant Boolean := True;
++   ZCX_By_Default            : constant Boolean := False;
 +
 +end System;
 --- gcc/ada/terminals.c.orig
@@ -8372,7 +8372,7 @@
 +  EXTRA_GNATRTL_NONTASKING_OBJS=g-sse.o g-ssvety.o
 +  EXTRA_GNATRTL_TASKING_OBJS=a-exetim.o
 +
-+  EH_MECHANISM=-gcc
++  EH_MECHANISM=
 +  THREADSLIB= -lpthread
 +  GMEM_LIB = gmemlib
 +  LIBRARY_VERSION := $(LIB_VERSION)
@@ -8407,7 +8407,7 @@
 +  EXTRA_GNATRTL_NONTASKING_OBJS=g-sse.o g-ssvety.o
 +  EXTRA_GNATRTL_TASKING_OBJS=a-exetim.o
 +
-+  EH_MECHANISM=-gcc
++  EH_MECHANISM=
 +  THREADSLIB= -lpthread
 +  GMEM_LIB = gmemlib
 +  LIBRARY_VERSION := $(LIB_VERSION)

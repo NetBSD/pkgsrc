@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2014/05/09 09:50:47 marino Exp $
+# $NetBSD: Makefile,v 1.19 2014/05/13 08:18:04 marino Exp $
 #
 
 PKGNAME=	gcc-aux-${SNAPSHOT}
 DISTNAME=	gcc-${GCC_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 DISTFILES=	${DISTNAME}.tar.bz2
@@ -13,14 +13,14 @@ HOMEPAGE=	http://www.dragonlace.net/
 COMMENT=	GNAT Ada compiler based on GCC ${GCC_BRANCH}
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 
+LANGS=		c ada c++
+USE_TOOLS+=	gmake sed:run perl makeinfo bzip2 patch pod2man tar
+APPLY_DIFFS=	core ada cxx
+
 .include "Makefile.version"
 .include "Makefile.testsuite"
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
-
-LANGS=		c ada c++
-USE_TOOLS+=	gmake sed:run perl makeinfo bzip2 patch pod2man tar
-APPLY_DIFFS=	core ada cxx
 
 # Requires bootstrap compiler, which is only available for on selected systems
 # Disable SunOS for now until multilib version can be built and tested.
@@ -32,10 +32,8 @@ ONLY_FOR_PLATFORM=	DragonFly-*-*        \
 			NetBSD-[5-9]*-x86_64 \
 			SunOS-5.1[1-9]*-i386 \
 			SunOS-5.1[1-9]*-x86_64
-#			OpenBSD-*-amd64
-#			OpenBSD-*-i386
-#			MirBSD-*-amd64
-#			MirBSD-*-i386
+
+#ONLY_FOR_PLATFORM+=	OpenBSD-*-amd64 MirBSD-*-amd64
 
 GARCH=			${MACHINE_ARCH:S/amd64/x86_64/}
 BLD_TARGET=		${GARCH}-aux-${LOWER_OPSYS}${OS_VERSION}
@@ -66,6 +64,7 @@ BOOTSTRAP_COMPILER=	ada-bootstrap.${GARCH}.freebsd.100B.tar.bz2
    NELF=	elf
 .endif
 XLDF=			-lm
+MODERN_BINUTILS=	yes
 BOOTSTRAP_COMPILER=	ada-bootstrap.${GARCH}.netbsd.614.tar.bz2
 BLD_TARGET=		${MACHINE_ARCH}-aux-netbsd${NELF}${NSUFF}
 .endif
@@ -85,7 +84,10 @@ NATIVE_LINKER!=		which ld
 .endif
 
 .if ${OPSYS} == OpenBSD || ${OPSYS} == MirBSD
+OPENMIR=		yes
 MODERN_BINUTILS=	yes
+EXTRA_CONFARGS+=	--disable-libstdcxx-pch
+BOOTSTRAP_COMPILER=	ada-bootstrap.${GARCH}.openbsd.55.tar.bz2
 .endif
 
 .if defined(MODERN_BINUTILS)
@@ -99,8 +101,8 @@ MY_CONFIGURE_ENV+=	RANLIB=${PREFIX}/bin/granlib
 .  if defined(NATIVE_LINKER)
 EXTRA_CONFARGS+=	--without-gnu-ld --with-ld=${NATIVE_LINKER}
 .  else
-EXTRA_CONFARGS+=	--with-gnu-ld --with-ld=${PREFIX}/bin/gld
-MY_CONFIGURE_ENV+=	LD=${PREFIX}/bin/gld
+EXTRA_CONFARGS+=	--with-gnu-ld --with-ld=${PREFIX}/bin/gld.gold
+MY_CONFIGURE_ENV+=	LD=${PREFIX}/bin/gld.gold
 .  endif
 .else
 EXTRA_CONFARGS+=	--with-gnu-ld --with-ld=/usr/bin/ld
@@ -112,6 +114,7 @@ EXTRA_CONFARGS+=	--with-gnu-as --with-as=/usr/bin/as
 WRKSRC=			${WRKDIR}/gcc-${GCC_VERSION}
 BUILDDIR=		${WRKDIR}/build
 NEWBSDIR=		${WRKDIR}/newbs/bootstrap
+SYSLIBDIR=		${WRKDIR}/lib
 CFG_SCRIPT=		${WRKSRC}/configure
 REVFILE= 		${WRKSRC}/gcc/REVISION
 BOOTSTRAP_PREFIX=	${WRKDIR}/bootstrap
@@ -209,11 +212,30 @@ post-extract:
 	  -pe 's|se_NO|no_NO|g;' \
 	  -pe 's|es_MX|es_ES|g;' \
 	  -pe 's|ru_RU.UTF8|ru_RU.UTF-8|g' ${LOCALE22FIX})
-.if !empty(PKG_OPTIONS:Mstatic) || !empty(PKG_OPTIONS:Mbootstrap)
+.if defined(STATIC_BUILD) || !empty(PKG_OPTIONS:Mbootstrap)
 .  if ${OPSYS} != SunOS
 	# Ensure GNAT tools are built statically
 	${PERL5} -pi -e 's/^GCC_LINK_FLAGS=.*/GCC_LINK_FLAGS=-static/' \
 	  ${WRKSRC}/gcc/ada/gcc-interface/Makefile.in
+.  endif
+.else
+.  if defined(OPENMIR)
+	# OpenBSD has no system libraries ending in ".so" so the pkgsrc linker
+	# fails to link things like "-lutil -lm".  Work around this oddity.
+	${MKDIR} ${SYSLIBDIR}
+.    for sl in c m z util pthread
+	${LN} -s `ls /usr/lib/lib${sl}.so* | head -1` ${SYSLIBDIR}/lib${sl}.so
+.    endfor
+	${PERL5} -i -pe 's|\$$\(MISCLIB\)|-L${SYSLIBDIR} \$$(MISCLIB)|g;' \
+		-pe 's|\$$\(THREADSLIB\)|-L${SYSLIBDIR} \$$(THREADSLIB)|g' \
+		${WRKSRC}/gcc/ada/gcc-interface/Makefile.in
+	${PERL5} -i -pe 's|-lpthread|-L${SYSLIBDIR} -lpthread|g;' \
+		-pe 's|@XCFLAGS@|-L${SYSLIBDIR} @XCFLAGS@|g;' \
+		-pe 's|-lm|-L${SYSLIBDIR} -lm|g' \
+		${WRKSRC}/libquadmath/Makefile.in \
+		${WRKSRC}/libgfortran/Makefile.in \
+		${WRKSRC}/libcilkrts/Makefile.in \
+		${WRKSRC}/libitm/Makefile.in
 .  endif
 .endif
 .if !exists(${LOCALBASE}/gcc-aux/bin/ada) && ${OPSYS} == SunOS
