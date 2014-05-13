@@ -1,22 +1,25 @@
-$NetBSD: distinfo,v 1.65 2014/03/31 08:36:51 wiz Exp $
+$NetBSD: distinfo,v 1.66 2014/05/13 18:48:49 ryoon Exp $
 
 SHA1 (boost_1_55_0.tar.bz2) = cef9a0cc7084b1d639e06cd3bc34e4251524c840
 RMD160 (boost_1_55_0.tar.bz2) = de8ef647933a005119425326b59723aad4a6fd4f
 Size (boost_1_55_0.tar.bz2) = 58146647 bytes
 SHA1 (patch-aa) = 408a63a807aaa491130db018cd89bca6a427090d
-SHA1 (patch-ab) = f1c95ae229465a4d2da76ce6ff88d76ace52fdd8
+SHA1 (patch-ab) = 37c61bcfc27f1533df21f4392f80df2d2dbe51ef
 SHA1 (patch-ac) = 32d14b50682dae1950ed927ecb9318ad6b07687a
 SHA1 (patch-ad) = 0e5dc31c3425de94444f97a9b7dec97ed5967733
 SHA1 (patch-ae) = 2fb49c90bbb3fd797ccdfaaf44c93494a5988f52
 SHA1 (patch-ag) = c406e9beb9260db7861b13a6eb4c386f23346eb1
-SHA1 (patch-aq) = e5c7b72ffa2942ce401f3d9bf05498fd761df17a
+SHA1 (patch-aq) = 355a58864bf4d07617250d2587e0f7cf62a7b825
 SHA1 (patch-ar) = 2fec2c51272cc4ee376e6538d8f1fd8561a7f0a3
 SHA1 (patch-boost_archive_iterators_transform__width.hpp) = 5c08bac63fcc259997a8cf6fac1684f45ef7cd1a
 SHA1 (patch-boost_asio_detail_config.hpp) = b95ca6b0bb6c805624cb81c91c3f1b691a7425ca
+SHA1 (patch-boost_config_posix__features.hpp) = b4b66f36d052092cfebfe7739bdee766ea7dedd0
 SHA1 (patch-boost_config_stdlib_libcpp.hpp) = d243325d3aeb180e4ed7a1fd7d89782d832fa9fc
 SHA1 (patch-boost_config_stdlib_libstdcpp3.hpp) = 173271c60b3e2ba7bb1fe9390dcd864ce9742588
 SHA1 (patch-boost_dynamic__bitset_dynamic__bitset.hpp) = e38ec618da58fdfc086e32ab2c184a0c02ba2ced
 SHA1 (patch-boost_math_tools_config.hpp) = 81402bc38dc858d0818ed91e204966c8382be4ff
 SHA1 (patch-boost_noncopyable.hpp) = 6567b5932c6bb48e8b2fcae48ff47e0f230fc1b9
+SHA1 (patch-boost_regex_config.hpp) = bf74a71ccd427bee0806f3005d8c1c0cca2f4765
 SHA1 (patch-libs_config_configure) = e2f204d4fa4f1bd9b4131d28f9be0a1ac22bf711
 SHA1 (patch-libs_filesystem_src_unique_path.cpp) = 4693ea11cf464d82168cecaa143b48affa94563b
+SHA1 (patch-libs_log_src_timestamp.cpp) = 8b596b7973b3d05e5661bc0d800951bb97e0d69f

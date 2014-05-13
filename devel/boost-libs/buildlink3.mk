@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.31 2014/01/12 20:48:14 cheusov Exp $
+# $NetBSD: buildlink3.mk,v 1.32 2014/05/13 18:48:49 ryoon Exp $
 
 BUILDLINK_TREE+=	boost-libs
 
@@ -9,6 +9,13 @@ BOOST_LIBS_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.boost-libs+=	boost-libs-1.55.*
 BUILDLINK_ABI_DEPENDS.boost-libs?=	boost-libs>=1.55.0
 BUILDLINK_PKGSRCDIR.boost-libs?=	../../devel/boost-libs
+
+.include "../../mk/bsd.prefs.mk"
+# OpenBSD's gcc 4.2.1 is not sufficient, and gcc46 is minimal pkgsrc gcc
+# for OpenBSD. Avoid warning as error.
+.if ${OPSYS} == "OpenBSD"
+GCC_REQD+=	4.6
+.endif
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .endif # BOOST_LIBS_BUILDLINK3_MK
