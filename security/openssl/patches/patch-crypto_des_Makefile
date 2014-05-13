@@ -1,0 +1,19 @@
+$NetBSD: patch-crypto_des_Makefile,v 1.1 2014/05/13 02:23:11 rodent Exp $
+
+Not all m4 macro processors have severe buffer limitations.
+
+--- crypto/des/Makefile.orig	Mon Apr  7 16:55:27 2014
++++ crypto/des/Makefile
+@@ -60,7 +60,11 @@ des: des.o cbc3_enc.o lib
+ 	$(CC) $(CFLAGS) -o des des.o cbc3_enc.o $(LIB)
+ 
+ des_enc-sparc.S:	asm/des_enc.m4
+-	m4 -B 8192 asm/des_enc.m4 > des_enc-sparc.S
++ifeq ($(OPSYS),SunOS)
++		m4 -B 8192 asm/des_enc.m4 > des_enc-sparc.S
++else
++		m4 asm/des_enc.m4 > des_enc-sparc.S
++endif
+ 
+ des-586.s:	asm/des-586.pl ../perlasm/x86asm.pl ../perlasm/cbc.pl
+ 	$(PERL) asm/des-586.pl $(PERLASM_SCHEME) $(CFLAGS) > $@

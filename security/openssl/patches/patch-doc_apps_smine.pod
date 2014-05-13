@@ -1,8 +1,8 @@
-$NetBSD: patch-doc_apps_smine.pod,v 1.1 2013/06/01 08:03:55 sbd Exp $
+$NetBSD: patch-doc_apps_smine.pod,v 1.2 2014/05/13 02:23:11 rodent Exp $
 
 Fix openssl pod docs to work with the very picky pod2man from perl-5.18.0.
 
---- doc/apps/smime.pod.orig	2013-02-11 15:26:04.000000000 +0000
+--- doc/apps/smime.pod.orig	Mon Mar 17 16:14:20 2014
 +++ doc/apps/smime.pod
 @@ -312,24 +312,24 @@ remains DER.
  

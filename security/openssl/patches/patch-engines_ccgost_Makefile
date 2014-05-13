@@ -1,9 +1,9 @@
-$NetBSD: patch-engines_ccgost_Makefile,v 1.1 2013/02/06 21:40:34 jperkin Exp $
+$NetBSD: patch-engines_ccgost_Makefile,v 1.2 2014/05/13 02:23:11 rodent Exp $
 
 * Make sure rpath is set properly on the libgost.so engine lib.
 
---- engines/ccgost/Makefile.orig	2012-04-26 10:42:20.000000000 +0000
-+++ engines/ccgost/Makefile	2013-02-04 13:27:37.220193130 +0000
+--- engines/ccgost/Makefile.orig	Mon Apr  7 16:55:42 2014
++++ engines/ccgost/Makefile
 @@ -32,7 +32,7 @@ lib: $(LIBOBJ)
  		$(MAKE) -f $(TOP)/Makefile.shared -e \
  			LIBNAME=$(LIBNAME) \

@@ -1,10 +1,10 @@
-$NetBSD: patch-doc_ssl_SSL__CTX__load__verify__locations.pod,v 1.1 2013/06/01 08:03:55 sbd Exp $
+$NetBSD: patch-doc_ssl_SSL__CTX__load__verify__locations.pod,v 1.2 2014/05/13 02:23:11 rodent Exp $
 
 Fix openssl pod docs to work with the very picky pod2man from perl-5.18.0.
 
---- doc/ssl/SSL_CTX_load_verify_locations.pod.orig	2013-02-11 15:02:48.000000000 +0000
+--- doc/ssl/SSL_CTX_load_verify_locations.pod.orig	Mon Mar 17 16:14:20 2014
 +++ doc/ssl/SSL_CTX_load_verify_locations.pod
-@@ -106,7 +106,7 @@ The operation failed because B<CAfile> a
+@@ -106,7 +106,7 @@ The operation failed because B<CAfile> and B<CApath> a
  processing at one of the locations specified failed. Check the error
  stack to find out the reason.
  

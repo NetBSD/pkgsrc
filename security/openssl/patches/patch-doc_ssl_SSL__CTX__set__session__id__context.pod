@@ -1,10 +1,10 @@
-$NetBSD: patch-doc_ssl_SSL__CTX__set__session__id__context.pod,v 1.1 2013/06/01 08:03:55 sbd Exp $
+$NetBSD: patch-doc_ssl_SSL__CTX__set__session__id__context.pod,v 1.2 2014/05/13 02:23:11 rodent Exp $
 
 Fix openssl pod docs to work with the very picky pod2man from perl-5.18.0.
 
---- doc/ssl/SSL_CTX_set_session_id_context.pod.orig	2013-02-11 15:02:48.000000000 +0000
+--- doc/ssl/SSL_CTX_set_session_id_context.pod.orig	Mon Mar 17 16:14:20 2014
 +++ doc/ssl/SSL_CTX_set_session_id_context.pod
-@@ -70,7 +70,7 @@ The length B<sid_ctx_len> of the session
+@@ -70,7 +70,7 @@ The length B<sid_ctx_len> of the session id context B<
  the maximum allowed length of B<SSL_MAX_SSL_SESSION_ID_LENGTH>. The error
  is logged to the error stack.
  
