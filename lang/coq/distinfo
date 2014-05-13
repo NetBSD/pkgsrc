@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.18 2013/10/27 22:22:31 joerg Exp $
+$NetBSD: distinfo,v 1.19 2014/05/13 14:52:28 jaapb Exp $
 
-SHA1 (coq-8.4pl2.tar.gz) = adcef430b8e27663e8ea075e646112f7d4d51fa6
-RMD160 (coq-8.4pl2.tar.gz) = 4860eaff4c8f0a235d3fcf162199eaa5fe1db2da
-Size (coq-8.4pl2.tar.gz) = 4145112 bytes
+SHA1 (coq-8.4pl4.tar.gz) = 4dfc3a1ae65f5c480ddc4387d21549a526183e00
+RMD160 (coq-8.4pl4.tar.gz) = 19e3fe905f5db09710b1f862f21e9b57c28f9704
+Size (coq-8.4pl4.tar.gz) = 4067355 bytes
 SHA1 (patch-Makefile.build) = 3fa72d701a80f363ef637e3cbd0e4c2d410da6c4
-SHA1 (patch-configure) = 1ad232e16d397a762e61c000d1859c70d2447fc1
