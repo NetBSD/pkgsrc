@@ -1,5 +1,5 @@
 #!@AWK@ -f
-# $NetBSD: create-report-html.awk,v 1.14 2010/03/11 16:31:43 tnn Exp $
+# $NetBSD: create-report-html.awk,v 1.15 2014/05/14 14:45:26 abs Exp $
 #
 # Copyright (c) 2007, 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -298,20 +298,24 @@ BEGIN {
 		sort(top_count, sorted_top_count, "-rn")
 		print "    <h2>Packages causing the most breakage</h2>" > html_report
 		print "    <table>" > html_report
-		print "      <tr>" > html_report
-		print "        <th> Location </th>" > html_report
-		print "        <th> Package </th>" > html_report
-		print "        <th> Breaks </th>" > html_report
-		print "        <th> Maintainer </th>" > html_report
-		print "        <th> Status </th>" > html_report
-		print "        <th colspan=\"9\"> Build log </th>" > html_report
-		print "      </tr>" > html_report
+		print "      <thead>" > html_report
+		print "        <tr>" > html_report
+		print "          <th> Location </th>" > html_report
+		print "          <th> Package </th>" > html_report
+		print "          <th> Breaks </th>" > html_report
+		print "          <th> Maintainer </th>" > html_report
+		print "          <th> Status </th>" > html_report
+		print "          <th colspan=\"9\"> Build log </th>" > html_report
+		print "        </tr>" > html_report
+		print "      </thead>" > html_report
+		print "      <tbody>" > html_report
 
 		for (i = 0; i < 10 && sorted_top_count[i] != ""; ++i) {
 			pkg = top_count[sorted_top_count[i]]
 			print_failed(pkg)
 		}
 
+		print "      </tbody>" > html_report
 		print "    </table>" > html_report
 		print "    <hr />" > html_report
 	}
@@ -319,14 +323,17 @@ BEGIN {
 	print "    <h2> All unsuccessful builds </h2>" > html_report
 
 	print "    <table>" > html_report
-	print "      <tr>" > html_report
-	print "        <th> Location </th>" > html_report
-	print "        <th> Package </th>" > html_report
-	print "        <th> Breaks </th>" > html_report
-	print "        <th> Maintainer </th>" > html_report
-	print "        <th> Status </th>" > html_report
-	print "        <th colspan=\"9\"> Build log </th>" > html_report
-	print "      </tr>" > html_report
+	print "      <thead>" > html_report
+	print "        <tr>" > html_report
+	print "          <th> Location </th>" > html_report
+	print "          <th> Package </th>" > html_report
+	print "          <th> Breaks </th>" > html_report
+	print "          <th> Maintainer </th>" > html_report
+	print "          <th> Status </th>" > html_report
+	print "          <th colspan=\"9\"> Build log </th>" > html_report
+	print "        </tr>" > html_report
+	print "      </thead>" > html_report
+	print "      <tbody>" > html_report
 
 	for (pkg in status)
 		loc_pkg_array[location[pkg] " " pkg] = pkg
@@ -340,6 +347,7 @@ BEGIN {
 		print_failed(pkg)
 	}
 
+	print "      </tbody>" > html_report
 	print "    </table>" > html_report
 	print "  </body>" > html_report
 	print "</html>" > html_report
