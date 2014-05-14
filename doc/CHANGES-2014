@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1845 2014/05/14 15:24:12 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1846 2014/05/14 16:08:23 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2575,3 +2575,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/suse131_openssl to 13.1nb7 [obache 2014-05-14]
 	Updated devel/ffcall to 1.10nb3 [jperkin 2014-05-14]
 	Updated audio/libgroove to 3.1.1nb1 [wiz 2014-05-14]
+	Updated mail/rspamd to 0.6.9 [wiedi 2014-05-14]
