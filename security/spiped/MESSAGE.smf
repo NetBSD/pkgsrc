@@ -1,0 +1,24 @@
+===========================================================================
+$NetBSD: MESSAGE.smf,v 1.1 2014/05/14 13:53:53 wiedi Exp $
+
+ This package supports multiple SMF instances.
+
+ Configure using the SMF properties: mode, source, target and key.
+ Mode can have the value "encrypt" or "decrypt". Source and target are
+ formatted as described in spiped(1). The key is a path to the keyfile.
+
+ To generate a new keyfile:
+
+  dd if=/dev/urandom bs=32 count=1 > /opt/local/etc/spiped_example.key
+
+ Add a example service instance:
+
+  svccfg -s spiped add example
+  svccfg -s spiped:example addpg spiped application
+  svccfg -s spiped:example setprop spiped/mode = astring: decrypt
+  svccfg -s spiped:example setprop spiped/source = astring: [0.0.0.0]:2323
+  svccfg -s spiped:example setprop spiped/target = astring: [127.0.0.1]:23
+  svccfg -s spiped:example setprop \
+        spiped/key = astring: "/opt/local/etc/spiped_example.key"
+
+===========================================================================
