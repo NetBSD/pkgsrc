@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2014/05/14 04:35:20 rodent Exp $
+# $NetBSD: Makefile,v 1.48 2014/05/14 04:39:06 rodent Exp $
 
 DISTNAME=	dar-2.4.13
 CATEGORIES=	archivers sysutils
@@ -14,7 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config bash:run
+USE_TOOLS+=		gmake groff pkg-config bash:run
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-dar-static
