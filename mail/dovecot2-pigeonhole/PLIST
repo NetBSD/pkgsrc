@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.5 2013/05/14 15:49:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/05/14 06:10:36 adam Exp $
 bin/sieve-dump
 bin/sieve-filter
 bin/sieve-test
 bin/sievec
 include/dovecot/sieve/edit-mail.h
 include/dovecot/sieve/pigeonhole-config.h
+include/dovecot/sieve/program-client-private.h
+include/dovecot/sieve/program-client.h
 include/dovecot/sieve/rfc2822.h
 include/dovecot/sieve/sieve-actions.h
 include/dovecot/sieve/sieve-address-parts.h
