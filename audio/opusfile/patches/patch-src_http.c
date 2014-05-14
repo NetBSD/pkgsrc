@@ -1,7 +1,9 @@
-$NetBSD: patch-src_http.c,v 1.2 2014/04/12 08:15:03 wiz Exp $
+$NetBSD: patch-src_http.c,v 1.3 2014/05/14 10:20:15 pho Exp $
 
-Avoid using the obsolete ftime() function.
+* Avoid using the obsolete ftime() function.
 https://trac.xiph.org/ticket/2014
+
+* Not only Win32 lacks AI_NUMERICSERV. Some version of Darwin (at least Darwin 9) lacks it too.
 
 --- src/http.c.orig	2013-12-05 16:49:13.000000000 +0000
 +++ src/http.c
@@ -14,6 +16,15 @@ https://trac.xiph.org/ticket/2014
  # include <openssl/x509v3.h>
  
  /*The maximum number of simultaneous connections.
+@@ -721,7 +721,7 @@ static struct addrinfo *op_resolve(const
+   char             service[6];
+   memset(&hints,0,sizeof(hints));
+   hints.ai_socktype=SOCK_STREAM;
+-#if !defined(_WIN32)
++#if defined(AI_NUMERICSERV)
+   hints.ai_flags=AI_NUMERICSERV;
+ #endif
+   OP_ASSERT(_port<=65535U);
 @@ -788,7 +788,7 @@ struct OpusHTTPConn{
    /*The next connection in either the LRU or free list.*/
    OpusHTTPConn *next;
