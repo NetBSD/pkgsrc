@@ -1,12 +1,13 @@
-$NetBSD: patch-aa,v 1.18 2010/07/09 18:08:05 asau Exp $
+$NetBSD: patch-aa,v 1.19 2014/05/14 11:24:25 jperkin Exp $
 
 Override library subdirectory name for consistency.
 Don't use cache file to avoid trailing space problem.
 Support staged installation of modules.
+Fix SunOS linking.
 
---- src/makemake.in.orig	2010-07-07 19:15:35.000000000 +0400
-+++ src/makemake.in	2010-07-08 01:39:27.000000000 +0400
-@@ -1416,42 +1416,42 @@
+--- src/makemake.in.orig	2010-07-07 15:15:35.000000000 +0000
++++ src/makemake.in
+@@ -1416,42 +1416,42 @@ if [ "${with_dynamic_modules}" != no ];
        XCC_PICFLAG=''
        ;;
    esac
@@ -63,7 +64,16 @@ Support staged installation of modules.
        ;;
      *) echo "$0: how do you create a shared library on ${host_os}?" >&2;
        ;;
-@@ -1917,7 +1917,7 @@
+@@ -1542,7 +1542,7 @@ if [ $CROSS = false ] ; then
+       # Newer versions of Solaris (Solaris 2.2 and newer) don't have
+       # libdl_stubs.a any more. This means that you cannot link -static !
+       XCLFLAGS=`echol "$XCLFLAGS" | sed -e 's/-B*static//g'`
+-      SOLARIS_LINKING=1 # Even more hacks needed??
++      SOLARIS_LINKING= # Even more hacks needed??
+       BINARY_DISTRIB=1
+     ;;
+     hpux*)
+@@ -1917,7 +1917,7 @@ echol "htmldir = ${HTMLDIR}"
  echol "psdir   = ${PSDIR}"
  echol "pdfdir  = ${PDFDIR}"
  echol "libdir  = ${LIBDIR}"
@@ -72,7 +82,7 @@ Support staged installation of modules.
  test -n "$USE_GETTEXT" && echol "localedir = ${LOCALEDIR}"
  echol "elispdir = ${ELISPDIR}"
  echol "vimdir = ${VIMDIR}"
-@@ -3315,7 +3315,7 @@
+@@ -3315,7 +3315,7 @@ for var in ${PRECIOUS_VARS}; do
  done
  # we must use $(SHELL) for sub-configures because when the top CONFIG_SHELL
  # is bash, config.cache may be unparsable with sh on Solaris
