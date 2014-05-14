@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE.smf,v 1.1 2014/05/14 13:53:53 wiedi Exp $
+$NetBSD: MESSAGE.smf,v 1.2 2014/05/14 14:00:42 jperkin Exp $
 
  This package supports multiple SMF instances.
 
@@ -9,7 +9,7 @@ $NetBSD: MESSAGE.smf,v 1.1 2014/05/14 13:53:53 wiedi Exp $
 
  To generate a new keyfile:
 
-  dd if=/dev/urandom bs=32 count=1 > /opt/local/etc/spiped_example.key
+  dd if=/dev/urandom bs=32 count=1 > ${PKG_SYSCONFDIR}/spiped_example.key
 
  Add a example service instance:
 
@@ -19,6 +19,6 @@ $NetBSD: MESSAGE.smf,v 1.1 2014/05/14 13:53:53 wiedi Exp $
   svccfg -s spiped:example setprop spiped/source = astring: [0.0.0.0]:2323
   svccfg -s spiped:example setprop spiped/target = astring: [127.0.0.1]:23
   svccfg -s spiped:example setprop \
-        spiped/key = astring: "/opt/local/etc/spiped_example.key"
+        spiped/key = astring: "${PKG_SYSCONFDIR}/spiped_example.key"
 
 ===========================================================================
