@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.3 2014/05/12 13:05:21 jperkin Exp $
+$NetBSD: patch-ae,v 1.4 2014/05/14 11:13:04 jperkin Exp $
 
 Don't use pre-generated assembly on SunOS.
 
@@ -26,7 +26,7 @@ Don't use pre-generated assembly on SunOS.
  vacall-x86_64.lo : $(srcdir)/vacall-x86_64.s
 -	$(LIBTOOL_COMPILE) $(CC) @GCC_X_NONE@ -c $(srcdir)/vacall-x86_64.s
 +	case "$(OS)" in \
-+	  solaris*) xnone="-I../../vacall"; exten="c";; \
++	  solaris*) xnone="-I../../vacall -DREENTRANT -D__x86_64__=1"; exten="c";; \
 +	  *) xnone="@GCC_X_NONE@"; exten="s";; \
 +	esac; \
 +	$(LIBTOOL_COMPILE) $(CC) $${xnone} -c $(srcdir)/vacall-x86_64.$${exten}

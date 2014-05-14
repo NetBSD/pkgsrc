@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2014/04/08 04:19:16 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.29 2014/05/14 11:13:04 jperkin Exp $
 
 DISTNAME=	ffcall-1.10
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://www.haible.de/bruno/gnu/ \
 		${MASTER_SITE_GNUSTEP:=libs/}
