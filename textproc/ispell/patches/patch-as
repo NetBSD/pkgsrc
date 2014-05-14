@@ -1,11 +1,11 @@
-$NetBSD: patch-as,v 1.1 2013/04/24 02:20:37 rodent Exp $
+$NetBSD: patch-as,v 1.2 2014/05/14 02:28:13 rodent Exp $
 
 Avoid conflit with system getline.
 Fixes PR pkg/41746, thanks to Tom Stejskal.
 
---- correct.c.orig	2009-07-17 09:14:29.000000000 +0100
-+++ correct.c	2009-07-17 09:14:46.000000000 +0100
-@@ -245,7 +245,7 @@
+--- correct.c.orig	Thu Apr 28 14:46:51 2005
++++ correct.c
+@@ -245,7 +245,7 @@ static void	save_root_cap P ((ichar_t * word, ichar_t 
  		  struct flagent * sufent,
  		  ichar_t savearea[MAX_CAPS][INPUTWORDLEN + MAXAFFIXLEN],
  		  int * nsaved));
@@ -14,7 +14,7 @@ Fixes PR pkg/41746, thanks to Tom Stejskal.
  void		askmode P ((void));
  void		copyout P ((unsigned char ** cc, int cnt));
  static void	lookharder P ((unsigned char * string));
-@@ -571,7 +571,7 @@
+@@ -571,7 +571,7 @@ checkagain:
  
  		imove (li - 1, 0);
  		(void) putchar ('!');
@@ -23,7 +23,7 @@ Fixes PR pkg/41746, thanks to Tom Stejskal.
  		    {
  		    (void) putchar (7);
  		    ierase ();
-@@ -596,7 +596,7 @@
+@@ -596,7 +596,7 @@ checkagain:
  		    (void) printf ("%s ", CORR_C_READONLY);
  		    }
  		(void) printf (CORR_C_REPLACE_WITH);
@@ -32,7 +32,7 @@ Fixes PR pkg/41746, thanks to Tom Stejskal.
  		    {
  		    (void) putchar (7);
  		    /* Put it back */
-@@ -664,7 +664,7 @@
+@@ -664,7 +664,7 @@ checkagain:
  		unsigned char	buf[100];
  		imove (li - 1, 0);
  		(void) printf (CORR_C_LOOKUP_PROMPT);
@@ -41,7 +41,7 @@ Fixes PR pkg/41746, thanks to Tom Stejskal.
  		    {
  		    (void) putchar (7);
  		    ierase ();
-@@ -1583,7 +1583,7 @@
+@@ -1583,7 +1583,7 @@ static void save_root_cap (word, pattern, prestrip, pr
      return;
      }
  
