@@ -1,8 +1,17 @@
-$NetBSD: patch-xenstat_libxenstat_Makefile,v 1.1 2013/04/11 19:57:53 joerg Exp $
+$NetBSD: patch-xenstat_libxenstat_Makefile,v 1.2 2014/05/14 20:22:41 bouyer Exp $
 
 --- xenstat/libxenstat/Makefile.orig	2013-03-25 19:37:42.000000000 +0000
 +++ xenstat/libxenstat/Makefile
-@@ -57,13 +57,13 @@ $(SHLIB): $(OBJECTS-y)
+@@ -40,7 +40,7 @@
+ LDFLAGS+=-Lsrc -L$(XEN_XENSTORE)/ -L$(XEN_LIBXC)/
+ LDLIBS-y = -lxenstore -lxenctrl
+ LDLIBS-$(CONFIG_SunOS) += -lkstat
+-ARLIBS-y = $(XEN_XENSTORE)/libxenstore.so $(XEN_LIBXC)/libxenctrl.so
++ARLIBS-y =
+ ARLIBS-x86_64 = /usr/lib/amd64/libkstat.so
+ ARLIBS-x86_32 = /usr/lib/libkstat.so
+ ARLIBS-$(CONFIG_SunOS) += $(ARLIBS-$(XEN_TARGET_ARCH))
+@@ -57,13 +57,13 @@
  	    $(OBJECTS-y) $(LDLIBS-y)
  
  src/xenstat.o: src/xenstat.c src/xenstat.h src/xenstat_priv.h
