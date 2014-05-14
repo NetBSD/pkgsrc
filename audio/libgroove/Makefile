@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/04/30 23:42:52 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/14 15:24:00 wiz Exp $
 
 DISTNAME=	3.1.1
 PKGNAME=	libgroove-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/andrewrk/libgroove/archive/
 
@@ -18,15 +19,7 @@ USE_LANGUAGES=	c c++
 
 DIST_SUBDIR=	libgroove
 
-# libav has to be built first but isn't
-# https://github.com/andrewrk/libgroove/issues/59
-MAKE_JOBS_SAFE=	no
-
-# for included libav
-BUILD_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
-.include "../../audio/lame/buildlink3.mk"
-.include "../../archivers/bzip2/buildlink3.mk"
-
+.include "../../multimedia/ffmpeg2/buildlink3.mk"
 .include "../../audio/chromaprint/buildlink3.mk"
 .include "../../audio/libebur128/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
