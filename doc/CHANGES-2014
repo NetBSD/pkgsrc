@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1842 2014/05/14 09:22:35 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1843 2014/05/14 09:31:59 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2572,3 +2572,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/raptor2 to 2.0.14 [wiz 2014-05-14]
 	Updated devel/py-setuptools to 3.6 [wiz 2014-05-14]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.359 [obache 2014-05-14]
+	Updated emulators/suse131_openssl to 13.1nb7 [obache 2014-05-14]
