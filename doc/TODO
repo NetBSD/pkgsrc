@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13301 2014/05/14 04:36:00 rodent Exp $
+$NetBSD: TODO,v 1.13302 2014/05/14 06:02:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -428,7 +428,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cgicc-3.2.14
 	o chasen-2.4.5
 	o cheese-2.32.0 [GNOME 2.32]
-	o cheese-3.12.1
+	o cheese-3.12.2
 	o cherokee-1.2.103 [pkg/48268]
 	o chktex-1.7.2
 	o chromium-0.9.15
@@ -477,7 +477,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dd_rescue-1.42
 	o ddclient-3.7.3
 	o defendguin-0.0.11
-	o delegate-9.9.7
+	o delegate-9.9.8
 	o denemo-1.1.4
 	o dhid-5.3
 	o diffstat-1.58
@@ -511,7 +511,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o enlightenment-0.18
 	o eog-plugins-3.6.1
 	o epiphany-extensions-3.2.0
-	o eric5-5.4.3
+	o eric5-5.4.4
 	o erlang-17.0
 	o esh-0.8.5
 	o espeak-1.46.02 [wip]
@@ -727,7 +727,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o krusader-2.0
 	o ktorrent-4.3.1
 	o ktorrent3-3.3.4
-	o lbdb-0.38
+	o lbdb-0.39
 	o lcc-4.2
 	o ldapsdk-6.0.7
 	o leafnode-1.11.8
@@ -935,6 +935,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Scientific-doc-2.5.5
 	o py-Unidecode-0.04.14
 	o py-Whoosh-2.5.6
+	o py-beets-1.3.6
 	o py-biggles-1.6.6
 	o py-bottle-0.11.6
 	o py-cassa-1.11.0
@@ -967,6 +968,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-pep8-1.4.6
 	o py-pexpect-3.0
 	o py-ptt-1.10.2
+	o py-py-2.3
 	o py-pycha-0.7.0 [wait for fix to regression with bin/chavier - richard]
 	o py-qt4-4.10.3 [needs py-sip-4.15, see above]
 	o py-qt5-5.2.1
@@ -1043,6 +1045,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o showfont-1.0.4 [wip]
 	o sign-1.0.7
 	o silc-1.1.11
+	o silc-client-1.1.11
 	o silc-server-1.1.19
 	o singularity-0.30c
 	o sitescooper-3.1.2
@@ -1111,6 +1114,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tfmxplay-1.1.6
 	o tightvnc-2.7.10
 	o tile-0.7.4
+	o tinc-1.0.24
 	o tkgate-1.8.7
 	o tkhylafax-3.2
 	o tkpasman-2.2b
@@ -1145,7 +1149,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vicq-0.4.2
 	o viewvc-1.1.22
 	o vifm-0.7.6
-	o vinagre-3.12.1
+	o vinagre-3.12.2
 	o vino-3.12.0
 	o visual-regexp-3.1
 	o vlc-2.1.4 [wip]
