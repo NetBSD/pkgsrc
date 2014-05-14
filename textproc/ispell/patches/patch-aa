@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2013/04/24 02:20:36 rodent Exp $
+$NetBSD: patch-aa,v 1.5 2014/05/14 02:28:13 rodent Exp $
 
---- languages/english/english.2-orig	Mon Jan 23 19:28:44 1995
-+++ languages/english/english.2	Thu Apr 16 14:34:21 1998
-@@ -1867,7 +1867,6 @@
+--- languages/english/english.2.orig	Wed Apr 27 00:25:52 2005
++++ languages/english/english.2
+@@ -1865,7 +1865,6 @@ auxinically
  auxotroph
  auxotrophic
  auxotrophy
