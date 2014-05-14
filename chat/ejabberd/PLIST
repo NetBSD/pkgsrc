@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2014/03/11 14:04:58 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.25 2014/05/14 08:32:02 fhajny Exp $
 lib/erlang/lib/${PKGNAME}/ebin/acl.beam
 lib/erlang/lib/${PKGNAME}/ebin/adhoc.beam
 lib/erlang/lib/${PKGNAME}/ebin/beam_util.beam
@@ -48,6 +48,7 @@ lib/erlang/lib/${PKGNAME}/ebin/ejabberd_s2s.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_service.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_sm.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_socket.beam
+lib/erlang/lib/${PKGNAME}/ebin/ejabberd_stun.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_sup.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_system_monitor.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_tmp_sup.beam
@@ -65,6 +66,20 @@ lib/erlang/lib/${PKGNAME}/ebin/eldap_utils.beam
 lib/erlang/lib/${PKGNAME}/ebin/eldap.beam
 lib/erlang/lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/erlang/lib/${PKGNAME}/ebin/error_logger_lager_h.beam
+lib/erlang/lib/${PKGNAME}/ebin/esip_app.beam
+lib/erlang/lib/${PKGNAME}/ebin/esip_client_transaction.beam
+lib/erlang/lib/${PKGNAME}/ebin/esip_codec.beam
+lib/erlang/lib/${PKGNAME}/ebin/esip_dialog.beam
+lib/erlang/lib/${PKGNAME}/ebin/esip_listener.beam
+lib/erlang/lib/${PKGNAME}/ebin/esip_server_transaction.beam
+lib/erlang/lib/${PKGNAME}/ebin/esip_socket.beam
+lib/erlang/lib/${PKGNAME}/ebin/esip_sup.beam
+lib/erlang/lib/${PKGNAME}/ebin/esip_tmp_sup.beam
+lib/erlang/lib/${PKGNAME}/ebin/esip_transaction.beam
+lib/erlang/lib/${PKGNAME}/ebin/esip_transport.beam
+lib/erlang/lib/${PKGNAME}/ebin/esip_udp_sup.beam
+lib/erlang/lib/${PKGNAME}/ebin/esip.app
+lib/erlang/lib/${PKGNAME}/ebin/esip.beam
 lib/erlang/lib/${PKGNAME}/ebin/example_serv.beam
 lib/erlang/lib/${PKGNAME}/ebin/extauth.beam
 lib/erlang/lib/${PKGNAME}/ebin/ezlib_app.beam
@@ -153,6 +168,9 @@ lib/erlang/lib/${PKGNAME}/ebin/mod_service_log.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_shared_roster_ldap.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_shared_roster.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_sic.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_sip_proxy.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_sip_registrar.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_sip.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_stats.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_time.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_vcard_ldap.beam
@@ -181,6 +199,7 @@ lib/erlang/lib/${PKGNAME}/ebin/p1_cache_tab.app
 lib/erlang/lib/${PKGNAME}/ebin/p1_fsm.beam
 lib/erlang/lib/${PKGNAME}/ebin/p1_iconv.app
 lib/erlang/lib/${PKGNAME}/ebin/p1_mnesia.beam
+lib/erlang/lib/${PKGNAME}/ebin/p1_server.beam
 lib/erlang/lib/${PKGNAME}/ebin/p1_sha.beam
 lib/erlang/lib/${PKGNAME}/ebin/p1_stringprep.app
 lib/erlang/lib/${PKGNAME}/ebin/p1_stun.app
@@ -207,11 +226,19 @@ lib/erlang/lib/${PKGNAME}/ebin/stringprep_sup.beam
 lib/erlang/lib/${PKGNAME}/ebin/stringprep.beam
 lib/erlang/lib/${PKGNAME}/ebin/stun_app.beam
 lib/erlang/lib/${PKGNAME}/ebin/stun_codec.beam
+lib/erlang/lib/${PKGNAME}/ebin/stun_listener.beam
+lib/erlang/lib/${PKGNAME}/ebin/stun_shaper.beam
 lib/erlang/lib/${PKGNAME}/ebin/stun_sup.beam
+lib/erlang/lib/${PKGNAME}/ebin/stun_test.beam
+lib/erlang/lib/${PKGNAME}/ebin/stun_tmp_sup.beam
+lib/erlang/lib/${PKGNAME}/ebin/stun_treap.beam
 lib/erlang/lib/${PKGNAME}/ebin/stun.beam
 lib/erlang/lib/${PKGNAME}/ebin/tcp_serv.beam
 lib/erlang/lib/${PKGNAME}/ebin/translate.beam
 lib/erlang/lib/${PKGNAME}/ebin/treap.beam
+lib/erlang/lib/${PKGNAME}/ebin/turn_sm.beam
+lib/erlang/lib/${PKGNAME}/ebin/turn_tmp_sup.beam
+lib/erlang/lib/${PKGNAME}/ebin/turn.beam
 lib/erlang/lib/${PKGNAME}/ebin/url_util.beam
 lib/erlang/lib/${PKGNAME}/ebin/win32_dns.beam
 lib/erlang/lib/${PKGNAME}/ebin/xml_app.beam
@@ -235,6 +262,8 @@ lib/erlang/lib/${PKGNAME}/include/ejabberd_web_admin.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd.hrl
 lib/erlang/lib/${PKGNAME}/include/eldap.hrl
 lib/erlang/lib/${PKGNAME}/include/ELDAPv3.hrl
+lib/erlang/lib/${PKGNAME}/include/esip_lib.hrl
+lib/erlang/lib/${PKGNAME}/include/esip.hrl
 lib/erlang/lib/${PKGNAME}/include/http_bind.hrl
 lib/erlang/lib/${PKGNAME}/include/jlib.hrl
 lib/erlang/lib/${PKGNAME}/include/lager.hrl
@@ -251,6 +280,7 @@ lib/erlang/lib/${PKGNAME}/include/xml.hrl
 lib/erlang/lib/${PKGNAME}/include/xmlrpc.hrl
 lib/erlang/lib/${PKGNAME}/include/XmppAddr.hrl
 lib/erlang/lib/${PKGNAME}/priv/bin/captcha.sh
+lib/erlang/lib/${PKGNAME}/priv/lib/esip_drv.so
 lib/erlang/lib/${PKGNAME}/priv/lib/expat_erl.so
 lib/erlang/lib/${PKGNAME}/priv/lib/ezlib_drv.so
 lib/erlang/lib/${PKGNAME}/priv/lib/iconv.so
