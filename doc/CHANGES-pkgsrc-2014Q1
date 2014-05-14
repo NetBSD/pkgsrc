@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.26 2014/05/09 09:19:35 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.27 2014/05/14 18:21:29 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q1 branch:
@@ -100,3 +100,5 @@ Pullup ticket #4399 addendum - requested by tron
 mail/thunderbird: restore dropped enigmail distinfo
 Pullup ticket #4402 - requested by tron
 databases/openldap-server: security patch
+Pullup ticket #4403 - requested by obache
+multimedia/adobe-flash-plugin11: security update
