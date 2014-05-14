@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1833 2014/05/14 02:15:59 hiramatsu Exp $
+$NetBSD: CHANGES-2014,v 1.1834 2014/05/14 04:36:00 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2562,3 +2562,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added mail/dnsbl-milter version 6.40 [sborrill 2014-05-13]
 	Updated misc/libreoffice4 to 4.2.4.2 [ryoon 2014-05-13]
 	Updated devel/p5-Eval-Closure to 0.11 [hiramatsu 2014-05-14]
+	Updated archivers/dar to 2.4.13 [rodent 2014-05-14]
