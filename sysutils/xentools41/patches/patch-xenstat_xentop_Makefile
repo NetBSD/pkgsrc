@@ -1,0 +1,15 @@
+$NetBSD: patch-xenstat_xentop_Makefile,v 1.1 2014/05/14 20:22:41 bouyer Exp $
+
+--- xenstat/xentop/Makefile.orig	2014-05-14 15:15:54.000000000 +0200
++++ xenstat/xentop/Makefile	2014-05-14 15:15:56.000000000 +0200
+@@ -19,8 +19,8 @@
+ else
+ 
+ CFLAGS += -DGCC_PRINTF -Wall -Werror -I$(XEN_LIBXENSTAT)
+-LDFLAGS += -L$(XEN_LIBXENSTAT)
+-LDLIBS += -lxenstat $(CURSES_LIBS) $(SOCKET_LIBS)
++LDFLAGS += -L$(XEN_LIBXENSTAT) -L$(XEN_XENSTORE) -L$(XEN_LIBXC)
++LDLIBS += -lxenstat -lxenstore -lxenctrl $(CURSES_LIBS) $(SOCKET_LIBS)
+ CFLAGS += -DHOST_$(XEN_OS)
+ 
+ .PHONY: all
