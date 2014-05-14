@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/04/30 23:42:52 wiz Exp $
+$NetBSD: distinfo,v 1.2 2014/05/14 15:24:00 wiz Exp $
 
 SHA1 (libgroove/3.1.1.tar.gz) = e73b091eb9e6d81c5a223c216967f2344606a25c
 RMD160 (libgroove/3.1.1.tar.gz) = d494f8010188472dd0716920de760dae2b1fe7e5
 Size (libgroove/3.1.1.tar.gz) = 8584469 bytes
-SHA1 (patch-CMakeLists.txt) = d743ccd6eee1b9cee7af1ca61bc0c17dd9aee0d6
