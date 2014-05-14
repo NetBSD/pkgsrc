@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.3 2013/04/24 02:20:36 rodent Exp $
+$NetBSD: patch-ac,v 1.4 2014/05/14 02:28:13 rodent Exp $
 
---- ispell.h.orig	2005-04-29 02:46:51.000000000 +1200
+--- ispell.h.orig	Thu Apr 28 14:46:51 2005
 +++ ispell.h
 @@ -144,6 +144,16 @@
  #include "config.h"
