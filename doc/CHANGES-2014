@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1838 2014/05/14 08:41:13 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1839 2014/05/14 08:45:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2568,3 +2568,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Event-RPC to 1.04 [hiramatsu 2014-05-14]
 	Updated chat/ejabberd to 14.05 [fhajny 2014-05-14]
 	Updated sysutils/cdrtools to 3.01alpha24 [wiz 2014-05-14]
+	Updated textproc/py-markupsafe to 0.23 [wiz 2014-05-14]
