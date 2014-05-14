@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.6 2014/04/25 08:55:41 wiz Exp $
+$NetBSD: distinfo,v 1.7 2014/05/14 08:45:07 wiz Exp $
 
-SHA1 (MarkupSafe-0.21.tar.gz) = 35248d9dbba35882099e402813423edbb5bd3efc
-RMD160 (MarkupSafe-0.21.tar.gz) = f5aefbb46113b8a8d921ce551f034e3f2c94ca23
-Size (MarkupSafe-0.21.tar.gz) = 13091 bytes
-SHA1 (patch-markupsafe_____init____.py) = 7f4a4dfc74ebcd49359aa685d055a09f1bf57cdf
-SHA1 (patch-markupsafe_tests.py) = 17f11a7763b5995ea273e7e302d5979734959b06
+SHA1 (MarkupSafe-0.23.tar.gz) = cd5c22acf6dd69046d6cb6a3920d84ea66bdf62a
+RMD160 (MarkupSafe-0.23.tar.gz) = 8d1dd780a46a18b6f6bad78bf92eeca2d06a1f54
+Size (MarkupSafe-0.23.tar.gz) = 13416 bytes
