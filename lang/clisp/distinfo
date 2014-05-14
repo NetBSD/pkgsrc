@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.28 2013/10/26 22:03:49 joerg Exp $
+$NetBSD: distinfo,v 1.29 2014/05/14 11:24:24 jperkin Exp $
 
 SHA1 (clisp-2.49.tar.gz) = 1743e7917013162400c955af441e991db43b3323
 RMD160 (clisp-2.49.tar.gz) = ae30f3b681cb023e885c6e4ed12210ee5ba14c76
 Size (clisp-2.49.tar.gz) = 9823111 bytes
-SHA1 (patch-aa) = 1a0af21eb2c2de898a7cb3500ce72f15581bfeb8
+SHA1 (patch-aa) = aa7e25685ed5818f45b550eba0011683dc36bc90
 SHA1 (patch-ab) = 225873ed24e4a1f343acc8e3163c8151e9958c77
 SHA1 (patch-ac) = c31fcd65d7d37aeaf69c0eee9499bff596b6619b
-SHA1 (patch-src_configure) = 3bd4462cf8bb54ec68e03dd10076b4b09a172fc7
+SHA1 (patch-src_configure) = 861681456cb768b7f308aa88e77f1cee1edb2090
 SHA1 (patch-src_lispbibl.d) = 122cdcc570065b7518b391d9433c5994c3925880
