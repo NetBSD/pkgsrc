@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.7 2014/01/20 19:29:34 joerg Exp $
+$NetBSD: patch-ad,v 1.8 2014/05/14 04:35:20 rodent Exp $
 
 On Solaris 10 with SunPro, vector<> does not have a method assign().
 
---- src/libdar/mask_list.cpp.orig	2011-02-11 20:23:42.000000000 +0000
+--- src/libdar/mask_list.cpp.orig	2014-04-21 10:02:16.000000000 +0000
 +++ src/libdar/mask_list.cpp
 @@ -55,6 +55,21 @@ using namespace std;
  namespace libdar
@@ -73,7 +73,7 @@ On Solaris 10 with SunPro, vector<> does not have a method assign().
                  min = tmp;
              else
                  if(contenu[tmp] == target)
-@@ -246,57 +263,11 @@ namespace libdar
+@@ -246,59 +263,11 @@ namespace libdar
          ret = contenu[max] == target || contenu[min] == target;
          if(including && !ret) // if including files, we must also include directories leading to a listed file
  	{
@@ -105,11 +105,13 @@ On Solaris 10 with SunPro, vector<> does not have a method assign().
 -    basic_string<mask_list::my_char> mask_list::convert_string_char(const string & src)
 -    {
 -	basic_string<my_char> ret;
+-	my_char tmp;
 -
 -	string::const_iterator ut = src.begin();
 -	while(ut != src.end())
 -	{
--	    ret += my_char(*ut);
+- 	    tmp = *ut;
+-	    ret += tmp;
 -	    ++ut;
 -	}
 -

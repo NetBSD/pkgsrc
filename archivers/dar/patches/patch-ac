@@ -1,11 +1,11 @@
-$NetBSD: patch-ac,v 1.8 2011/08/20 16:02:23 cheusov Exp $
+$NetBSD: patch-ac,v 1.9 2014/05/14 04:35:20 rodent Exp $
 
 Solaris has <getopt.h>, but the plain getopt() function is defined in
 <unistd.h>, so it needs both headers.
 
---- configure.orig	2011-07-21 14:52:29.000000000 +0000
+--- configure.orig	2014-04-21 11:24:23.000000000 +0000
 +++ configure
-@@ -28383,11 +28383,10 @@ extern "C" {
+@@ -21763,11 +21763,10 @@ extern "C" {
  				   #endif
                                     #if HAVE_GETOPT_H
                                     #include <getopt.h>
