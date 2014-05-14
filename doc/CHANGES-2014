@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1834 2014/05/14 04:36:00 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.1835 2014/05/14 06:12:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2563,3 +2563,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/libreoffice4 to 4.2.4.2 [ryoon 2014-05-13]
 	Updated devel/p5-Eval-Closure to 0.11 [hiramatsu 2014-05-14]
 	Updated archivers/dar to 2.4.13 [rodent 2014-05-14]
+	Updated mail/dovecot2 to 2.2.13 [adam 2014-05-14]
+	Updated mail/dovecot2-pigeonhole to 0.4.3 [adam 2014-05-14]
