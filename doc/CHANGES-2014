@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1835 2014/05/14 06:12:01 adam Exp $
+$NetBSD: CHANGES-2014,v 1.1836 2014/05/14 07:20:33 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2565,3 +2565,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated archivers/dar to 2.4.13 [rodent 2014-05-14]
 	Updated mail/dovecot2 to 2.2.13 [adam 2014-05-14]
 	Updated mail/dovecot2-pigeonhole to 0.4.3 [adam 2014-05-14]
+	Updated devel/p5-Event-RPC to 1.04 [hiramatsu 2014-05-14]
