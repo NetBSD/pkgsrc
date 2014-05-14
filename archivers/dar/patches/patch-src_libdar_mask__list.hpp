@@ -1,6 +1,6 @@
-$NetBSD: patch-src_libdar_mask__list.hpp,v 1.2 2014/01/20 19:29:34 joerg Exp $
+$NetBSD: patch-src_libdar_mask__list.hpp,v 1.3 2014/05/14 04:35:20 rodent Exp $
 
---- src/libdar/mask_list.hpp.orig	2012-11-30 20:51:11.000000000 +0000
+--- src/libdar/mask_list.hpp.orig	2014-04-21 10:02:16.000000000 +0000
 +++ src/libdar/mask_list.hpp
 @@ -70,46 +70,10 @@ namespace libdar
  
@@ -13,8 +13,8 @@ $NetBSD: patch-src_libdar_mask__list.hpp,v 1.2 2014/01/20 19:29:34 joerg Exp $
 -	class my_char
 -	{
 -	public:
--	    my_char() { val = 0; };
--	    my_char(const char x) : val(x) {};
+- 	    const my_char & operator = (const char x) { val = x; return *this; };
+-	  
 -	    bool operator < (const my_char & x) const
 -	    {
 -		if(val == '/')

@@ -1,11 +1,11 @@
-$NetBSD: patch-af,v 1.5 2013/06/28 15:03:55 ryoon Exp $
+$NetBSD: patch-af,v 1.6 2014/05/14 04:35:20 rodent Exp $
 
 Make sure we link with AM_LDFLAGS, which arranges the link and rpath for
 libintl.so.
 
---- src/libdar/Makefile.in.orig	2013-03-09 12:40:16.000000000 +0000
+--- src/libdar/Makefile.in.orig	2014-04-21 11:24:25.000000000 +0000
 +++ src/libdar/Makefile.in
-@@ -98,7 +98,7 @@ am_libdar_la_OBJECTS = $(am__objects_1) 
+@@ -118,7 +118,7 @@ am_libdar_la_OBJECTS = $(am__objects_1) 
  libdar_la_OBJECTS = $(am_libdar_la_OBJECTS)
  libdar_la_LINK = $(LIBTOOL) --tag=CXX $(AM_LIBTOOLFLAGS) \
  	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(AM_CXXFLAGS) \
@@ -14,7 +14,7 @@ libintl.so.
  @BUILD_MODE32_FALSE@@BUILD_MODE64_FALSE@am_libdar_la_rpath = -rpath \
  @BUILD_MODE32_FALSE@@BUILD_MODE64_FALSE@	$(libdir)
  libdar32_la_LIBADD =
-@@ -106,14 +106,14 @@ am_libdar32_la_OBJECTS = $(am__objects_1
+@@ -126,14 +126,14 @@ am_libdar32_la_OBJECTS = $(am__objects_1
  libdar32_la_OBJECTS = $(am_libdar32_la_OBJECTS)
  libdar32_la_LINK = $(LIBTOOL) --tag=CXX $(AM_LIBTOOLFLAGS) \
  	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(AM_CXXFLAGS) \

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2014/04/15 20:36:06 asau Exp $
+# $NetBSD: Makefile,v 1.47 2014/05/14 04:35:20 rodent Exp $
 
-DISTNAME=	dar-2.4.10
-PKGREVISION=	3
+DISTNAME=	dar-2.4.13
 CATEGORIES=	archivers sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dar/}
 
@@ -113,6 +112,6 @@ BUILDLINK_TRANSFORM=	l:execinfo:execinfo:elf
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
+.include "../../security/libgcrypt/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,28 +1,13 @@
-$NetBSD: distinfo,v 1.29 2014/01/20 19:29:34 joerg Exp $
+$NetBSD: distinfo,v 1.30 2014/05/14 04:35:20 rodent Exp $
 
-SHA1 (dar-2.4.10.tar.gz) = bf02ba10bfcd2ad959017706f167fc390aafe932
-RMD160 (dar-2.4.10.tar.gz) = 26161a09a60e36a3094f94d8831a157b7c3e4d0a
-Size (dar-2.4.10.tar.gz) = 1760827 bytes
-SHA1 (patch-aa) = 734ec162dbc339b2015a169bb9fe723e45d0a29b
-SHA1 (patch-ab) = f07d55861f21545b0ae8ac6b187a94526e44e345
-SHA1 (patch-ac) = dcbf4e31071c83a167a60a20e4980b35f055a46e
-SHA1 (patch-ad) = e32c33d5670f39a04f8ceef94d6e9d5a6b524016
-SHA1 (patch-ae) = 54220384bf2031df64c38f5abea038382ca37e8e
-SHA1 (patch-af) = 414e58277c946b59f57352e260ac5d49673ef008
-SHA1 (patch-src_dar__suite_command__line.cpp) = 63d3004bf7d49277c1508fe5d9ac52ec0d5bf11f
-SHA1 (patch-src_dar__suite_crit__action__cmd__line.cpp) = bc9484e836fbde98f682f6031aaadd99cc8eb479
-SHA1 (patch-src_dar__suite_dar__manager.cpp) = 2ed9008b5e7629ef8e279b7d1218a4fae5101df1
-SHA1 (patch-src_dar__suite_dar__xform.cpp) = 929e7cbb933a8d58bd1b79ecb50404f5dbbfddfe
-SHA1 (patch-src_dar__suite_line__tools.cpp) = 076c5213aaa3e6dfa471322b6597c0ce8ccfd2a8
-SHA1 (patch-src_examples_factoriel.cpp) = 6c9e038b7a3bbfdc96dbbdf1b7e100c159353f87
-SHA1 (patch-src_examples_formula.cpp) = 583ceeba0a232e657ab0696711f630476ec2e495
-SHA1 (patch-src_examples_prime.cpp) = 09fc3b96642945042a2d13bb4c1995546cdb7607
-SHA1 (patch-src_libdar_mask__list.hpp) = b3b6eaa36875784432e53d5dfbfb33d7623054a3
-SHA1 (patch-src_libdar_secu__string.hpp) = 6793cb79bf5f8c4d3ac83ba4f2cd2fd9f452afb1
-SHA1 (patch-src_testing_Makefile.in) = e8d48b5fa9fcdd2f5bef3fca240850c0787f6647
-SHA1 (patch-src_testing_test__catalogue.cpp) = 2d1a8299f01776e3fa9996819aa8be523b73b4cc
-SHA1 (patch-src_testing_test__deci.cpp) = 053e2123a5219dc0cb827743e348f9463ce84615
-SHA1 (patch-src_testing_test__escape.cpp) = b7959b2e5e3675d2e64f232face3b18384f8e3da
-SHA1 (patch-src_testing_test__infinint.cpp) = 5ee29a1881b05881bb334f1cd7bfd30ea21baf7f
-SHA1 (patch-src_testing_test__terminateur.cpp) = 79d4efadfc4528d6def28985228a0d25d1fc6e78
-SHA1 (patch-src_testing_testtools.cpp) = 4cdd4a6fde69f40463464f6ead1d208a685a516b
+SHA1 (dar-2.4.13.tar.gz) = b20471ada21cd0cbe4687e7bdd3c2e6f70f5c0d1
+RMD160 (dar-2.4.13.tar.gz) = 20cf6492aedd82b3bc227603588c8e6f44560dde
+Size (dar-2.4.13.tar.gz) = 1799774 bytes
+SHA1 (patch-aa) = 86370bb2515795b2c5645beaafeb8af08d9f209b
+SHA1 (patch-ab) = 9b8fd96e3944aedeaa4f2df0d5bfe17a73d3f7eb
+SHA1 (patch-ac) = 0581af6c9229d614fcaa6df9d1e52ef773af9ea6
+SHA1 (patch-ad) = d3b7c3564462bc25e447d87af4ea005c88540ead
+SHA1 (patch-ae) = 95a00fb53851068e6e02bfe013b39970bc12230e
+SHA1 (patch-af) = 1ece254cecbec601da9a57c32f515f1008f87859
+SHA1 (patch-src_libdar_mask__list.hpp) = 33612489e2b2e14fc9e6606aac0c4988988d89e4
+SHA1 (patch-src_libdar_secu__string.hpp) = 073db488ceed38d9dc1999786ac666a9179c520e

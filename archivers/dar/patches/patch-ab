@@ -1,11 +1,13 @@
-$NetBSD: patch-ab,v 1.5 2013/06/28 15:03:55 ryoon Exp $
+$NetBSD: patch-ab,v 1.6 2014/05/14 04:35:20 rodent Exp $
 
---- doc/mini-howto/Makefile.in.orig	2013-03-09 12:40:15.000000000 +0000
+Fix DOCDIR path.
+
+--- doc/mini-howto/Makefile.in.orig	2014-04-21 11:24:24.000000000 +0000
 +++ doc/mini-howto/Makefile.in
-@@ -16,7 +16,7 @@
- @SET_MAKE@
- 
- VPATH = @srcdir@
+@@ -33,7 +33,7 @@ am__make_dryrun = \
+     esac; \
+     test $$am__dry = yes; \
+   }
 -pkgdatadir = $(datadir)/@PACKAGE@
 +pkgdatadir = $(datadir)/doc/@PACKAGE@
  pkgincludedir = $(includedir)/@PACKAGE@

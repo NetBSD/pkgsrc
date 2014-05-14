@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2013/06/28 15:03:55 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.13 2014/05/14 04:35:20 rodent Exp $
 bin/dar
 bin/dar_cp
 bin/dar_manager
@@ -36,6 +36,7 @@ include/dar/libdar_4_4.hpp
 include/dar/libdar_config.h
 include/dar/libdar_my_config.h
 include/dar/limitint.hpp
+include/dar/list_entry.hpp
 include/dar/mask.hpp
 include/dar/mask_list.hpp
 include/dar/mem_ui.hpp
@@ -126,6 +127,7 @@ share/doc/dar/mini-howto/dar-differential-backup-mini-howto.en.html
 share/doc/dar/mini-howto/dar-differential-backup-mini-howto.es.html
 share/doc/dar/mini-howto/dar-differential-backup-mini-howto.it.html
 share/doc/dar/mini-howto/index.html
+share/doc/dar/old_dar_key.txt
 share/doc/dar/presentation.html
 share/doc/dar/usage_notes.html
 share/examples/dar/darrc
