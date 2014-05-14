@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.247 2014/03/17 14:01:57 taca Exp $
+# $NetBSD: Makefile,v 1.248 2014/05/14 21:26:59 wiedi Exp $
 
 DISTNAME=	samba-${VERSION}
 CATEGORIES=	net
@@ -10,6 +10,8 @@ COMMENT=	SMB/CIFS protocol server suite
 LICENSE=	gnu-gpl-v3
 
 VERSION=	3.6.23
+PKGREVISION=	1
+
 CONFLICTS+=	ja-samba-[0-9]* pam-smbpass-[0-9]* winbind-[0-9]*
 
 USE_GCC_RUNTIME=	yes
@@ -33,6 +35,8 @@ SAMBA_PRIVATE?=		${SAMBA_ETCDIR}/private
 SAMBA_STATEDIR?=	${SAMBA_VARDIR}/db/samba
 SAMBA_VARDIR?=		${VARBASE}
 WINBINDD_RCD_SCRIPT=	# empty
+
+SMF_INSTANCES=		smbd nmbd
 
 FILES_SUBST+=		SAMBA_ETCDIR=${SAMBA_ETCDIR}
 FILES_SUBST+=		SAMBA_LOCKDIR=${SAMBA_LOCKDIR}
