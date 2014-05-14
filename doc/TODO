@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13300 2014/05/13 13:21:15 imil Exp $
+$NetBSD: TODO,v 1.13301 2014/05/14 04:36:00 rodent Exp $
 
 Suggested new packages
 ======================
@@ -468,7 +468,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cygwin_lib-1.5.24.2
 	o dante-1.4.0
 	o dap-3.10
-	o dar-2.4.13
 	o darcs-2.4
 	o darktable-1.4
 	o dasher-4.11
