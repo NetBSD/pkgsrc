@@ -1,4 +1,6 @@
-$NetBSD: patch-src_configure,v 1.1 2013/10/26 22:03:50 joerg Exp $
+$NetBSD: patch-src_configure,v 1.2 2014/05/14 11:24:25 jperkin Exp $
+
+Fix shell syntax.
 
 --- src/configure.orig	2010-07-07 17:22:03.000000000 +0000
 +++ src/configure
@@ -47,6 +49,15 @@ $NetBSD: patch-src_configure,v 1.1 2013/10/26 22:03:50 joerg Exp $
      done
    fi
  
+@@ -22898,7 +22898,7 @@ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $cl_cv_have_ffcall" >&5
+ $as_echo "$cl_cv_have_ffcall" >&6; }
+ if test $cl_use_ffcall = yes -a $cl_cv_have_ffcall = no; then
+-  if  "$ac_cv_build" = "$ac_cv_host" ; then host_arg="";
++  if test "$ac_cv_build" = "$ac_cv_host" ; then host_arg="";
+   else host_arg=" --host=$ac_cv_host";
+   fi
+   as_fn_error "despite --with-ffcall, FFCALL was not found
 @@ -23566,9 +23566,9 @@ _ACEOF
  if ac_fn_c_try_link "$LINENO"; then :
    { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
