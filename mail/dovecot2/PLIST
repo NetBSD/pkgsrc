@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2014/03/11 14:05:03 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.35 2014/05/14 06:09:53 adam Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -215,6 +215,7 @@ include/dovecot/istream-rawlog.h
 include/dovecot/istream-seekable.h
 include/dovecot/istream-sized.h
 include/dovecot/istream-tee.h
+include/dovecot/istream-timeout.h
 include/dovecot/istream-zlib.h
 include/dovecot/istream.h
 include/dovecot/json-parser.h
@@ -326,6 +327,7 @@ include/dovecot/message-header-parser.h
 include/dovecot/message-id.h
 include/dovecot/message-parser.h
 include/dovecot/message-part-serialize.h
+include/dovecot/message-part.h
 include/dovecot/message-search.h
 include/dovecot/message-size.h
 include/dovecot/mkdir-parents.h
@@ -540,7 +542,6 @@ share/doc/dovecot/solr-schema.xml
 share/doc/dovecot/thread-refs.txt
 share/doc/dovecot/wiki/ACL.txt
 share/doc/dovecot/wiki/AixPluginsSupport.txt
-share/doc/dovecot/wiki/AntiSpam.txt
 share/doc/dovecot/wiki/AuthDatabase.CheckPassword.txt
 share/doc/dovecot/wiki/AuthDatabase.Dict.txt
 share/doc/dovecot/wiki/AuthDatabase.LDAP.AuthBinds.txt
@@ -561,7 +562,6 @@ share/doc/dovecot/wiki/Authentication.Mechanisms.Winbind.txt
 share/doc/dovecot/wiki/Authentication.Mechanisms.txt
 share/doc/dovecot/wiki/Authentication.MultipleDatabases.txt
 share/doc/dovecot/wiki/Authentication.PasswordSchemes.txt
-share/doc/dovecot/wiki/Authentication.Penalty.txt
 share/doc/dovecot/wiki/Authentication.RestrictAccess.txt
 share/doc/dovecot/wiki/Authentication.txt
 share/doc/dovecot/wiki/BasicConfiguration.txt
@@ -611,17 +611,13 @@ share/doc/dovecot/wiki/DomainLost.txt
 share/doc/dovecot/wiki/Errors.ChgrpNoPerm.txt
 share/doc/dovecot/wiki/FindMailLocation.txt
 share/doc/dovecot/wiki/FinishBasicConfiguration.txt
-share/doc/dovecot/wiki/HowTo.ConvertPasswordSchemes.txt
 share/doc/dovecot/wiki/HowTo.EximAndDovecotSASL.txt
-share/doc/dovecot/wiki/HowTo.F5SLBTLSOffload.txt
 share/doc/dovecot/wiki/HowTo.ImapcProxy.txt
 share/doc/dovecot/wiki/HowTo.PopBSMTPAndDovecot.txt
 share/doc/dovecot/wiki/HowTo.PopRelay.txt
 share/doc/dovecot/wiki/HowTo.PostfixAndDovecotSASL.txt
 share/doc/dovecot/wiki/HowTo.Rootless.txt
 share/doc/dovecot/wiki/HowTo.SimpleVirtualInstall.txt
-share/doc/dovecot/wiki/HowTo.TriggerGetmailOnIMAPAccess.txt
-share/doc/dovecot/wiki/HowTo.Virtual(2b)Postfix(2b)Dspam(2b)Dovecot.txt
 share/doc/dovecot/wiki/HowTo.txt
 share/doc/dovecot/wiki/IndexFiles.txt
 share/doc/dovecot/wiki/LDA.Exim.txt
@@ -651,7 +647,6 @@ share/doc/dovecot/wiki/MailboxFormat.mbox.txt
 share/doc/dovecot/wiki/MailboxFormat.mbx.txt
 share/doc/dovecot/wiki/MailboxFormat.txt
 share/doc/dovecot/wiki/MailboxSettings.txt
-share/doc/dovecot/wiki/MainConfig.txt
 share/doc/dovecot/wiki/MboxChildFolders.txt
 share/doc/dovecot/wiki/MboxLocking.txt
 share/doc/dovecot/wiki/MboxProblems.txt
