@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1840 2014/05/14 08:52:04 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1841 2014/05/14 08:53:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2570,3 +2570,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/cdrtools to 3.01alpha24 [wiz 2014-05-14]
 	Updated textproc/py-markupsafe to 0.23 [wiz 2014-05-14]
 	Updated textproc/raptor2 to 2.0.14 [wiz 2014-05-14]
+	Updated devel/py-setuptools to 3.6 [wiz 2014-05-14]
