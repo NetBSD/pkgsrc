@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.2 2014/04/17 21:30:14 asau Exp $
+$NetBSD: distinfo,v 1.3 2014/05/14 02:28:13 rodent Exp $
 
 SHA1 (ispell-3.3.02.tar.gz) = c0d98e1af3afb8e0b642717c03439ff8881e3d60
 RMD160 (ispell-3.3.02.tar.gz) = 12edc94ebb7c1f4040bd8f5b0dbb8f40326aa781
 Size (ispell-3.3.02.tar.gz) = 619813 bytes
-SHA1 (patch-aa) = cf8e0863e62103526d75ba5f0f25c760d4ee8e32
-SHA1 (patch-ab) = 0a0569521b73761e969794e64d8ba8822c705720
-SHA1 (patch-ac) = 02b94c918164c19ec7cba5c9b88b7168a6f37925
-SHA1 (patch-ad) = 86bcb4c4b34a970b5f3eba6d406a8b8204fccf39
-SHA1 (patch-ae) = 0b19b5f4f2a0faf74ce130b7414bdf85b7588954
-SHA1 (patch-ai) = 210d80ca55fc1d4fb5aa308205d8630a7f4bfb67
-SHA1 (patch-ak) = 40b2c656bae16a6bfd6bada3574a02ec0789167a
-SHA1 (patch-al) = 27d87b52dc5507e9dbab73bb9643fa490920216d
-SHA1 (patch-ar) = 872cfc47e3652716afab9561fcf4a1bda2cee61a
-SHA1 (patch-as) = fd3b2ec1788a7ffc4c871f5564742aad41fadda9
+SHA1 (patch-aa) = 7617574ae1c53aa7b9389f0e75ddcab99dbeb07c
+SHA1 (patch-ab) = 94a33a906de66a55d4aa46beec4df9c8dde9546d
+SHA1 (patch-ac) = 4faa82bdd628500aa35d94b2d4a1860919097b72
+SHA1 (patch-ad) = c47a406acf52244868e7a561ab7f1c9d394d4034
+SHA1 (patch-ae) = adc803bd66f62236a2b879713f326b4c7ac7199f
+SHA1 (patch-ai) = 1fbf9385818e0a0fcd4049d0407212b1456d2744
+SHA1 (patch-ak) = c2f0d7749869f0bfd21f94b5fe57534259218b89
+SHA1 (patch-al) = ea63fc7dbc2200794157d9be781210cd8a4e671f
+SHA1 (patch-ar) = c5082129f55fb232db34e0796423e60fcd4ed5c2
+SHA1 (patch-as) = b459c015b33f6fb1aa71a3cc05cf40a7e445d0ca

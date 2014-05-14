@@ -1,8 +1,8 @@
-$NetBSD: patch-ar,v 1.1 2013/04/24 02:20:37 rodent Exp $
+$NetBSD: patch-ar,v 1.2 2014/05/14 02:28:13 rodent Exp $
 
---- ijoin.c.orig	Fri Mar 19 15:00:19 2004
-+++ ijoin.c	Fri Mar 19 15:01:51 2004
-@@ -133,8 +133,6 @@
+--- ijoin.c.orig	Thu Apr 14 14:38:23 2005
++++ ijoin.c
+@@ -169,8 +169,6 @@ static char *		tabchar = " \t"; /* Field separator cha
  static int		unpairable1 = 0; /* NZ if -a1 */
  static int		unpairable2 = 0; /* NZ if -a2 */
  

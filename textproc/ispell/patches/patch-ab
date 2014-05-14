@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.8 2013/04/24 02:20:36 rodent Exp $
+$NetBSD: patch-ab,v 1.9 2014/05/14 02:28:13 rodent Exp $
 
---- Makefile.orig	2005-05-25 15:57:02.000000000 +0200
+--- Makefile.orig	Wed May 25 13:57:02 2005
 +++ Makefile
 @@ -373,13 +373,10 @@ install-dictbuild:
  	    rm -f fixispell-a$$MAN1EXT
@@ -31,7 +31,7 @@ $NetBSD: patch-ab,v 1.8 2013/04/24 02:20:36 rodent Exp $
  	  MSGLANG POUNDBANG REGLIB STATSUFFIX \
  	  SPELL_XREF TERMLIB TIB_XREF WORDS YACC \
  	  ; do \
-@@ -518,6 +515,12 @@ config.sh:  config.X defhash.h local.h M
+@@ -518,6 +515,12 @@ config.sh:  config.X defhash.h local.h Makefile
  	      | sed -e 's/"[^"]*$$/'"'/" -e "s/=/='/" -e 's/\\"/"/g' \
  	      | sed -n -e '$$p'; \
  	  done > config.sh; \
