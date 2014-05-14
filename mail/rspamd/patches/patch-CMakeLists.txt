@@ -1,0 +1,13 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2014/05/14 16:07:06 wiedi Exp $
+Help CMake find Lua
+
+--- CMakeLists.txt.orig	2014-05-14 14:26:36.954076768 +0000
++++ CMakeLists.txt
+@@ -170,6 +170,7 @@ MACRO(FindLua _major _minor)
+ 	  $ENV{LUA_DIR}
+ 	  PATH_SUFFIXES "include/lua${_major}${_minor}" 
+ 	  				"include/lua${_major}.${_minor}" 
++	  				"include/lua-${_major}.${_minor}" 
+ 	  				include/lua include
+ 	  PATHS
+ 	  /usr/local
