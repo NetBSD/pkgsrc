@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/05/14 13:53:53 wiedi Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/14 14:00:42 jperkin Exp $
 
 DISTNAME=	spiped-1.3.1
 PKGREVISION=	2
@@ -26,6 +26,7 @@ INSTALLATION_DIRS=	share/doc/spiped ${PKGMANDIR}/man1
 SMF_METHODS=	spiped
 .if ${INIT_SYSTEM} == "smf"
 MESSAGE_SRC+=	MESSAGE.smf
+MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 .endif
 
 post-install:
