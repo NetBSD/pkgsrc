@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1857 2014/05/15 11:27:39 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1858 2014/05/15 12:01:12 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2589,3 +2589,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/libvpx to 1.3.0nb1 [martin 2014-05-15]
 	Updated devel/apache-maven to 3.2.1 [fhajny 2014-05-15]
 	Updated emulators/suse131_libxml2 to 13.1nb1 [obache 2014-05-15]
+	Updated emulators/suse131_alsa to 13.1nb1 [obache 2014-05-15]
