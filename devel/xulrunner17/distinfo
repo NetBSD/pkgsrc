@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2013/12/16 03:10:12 ryoon Exp $
+$NetBSD: distinfo,v 1.16 2014/05/15 21:16:16 joerg Exp $
 
 SHA1 (firefox-17.0.11esr.source.tar.bz2) = 593153bc2658be0bdf6d1361a079d4ce8fd516bd
 RMD160 (firefox-17.0.11esr.source.tar.bz2) = 9797f1553bf20008e62df2713a22c5844e7e3bdc
@@ -34,8 +34,23 @@ SHA1 (patch-config_baseconfig.mk) = 8fc7a064bda66c91488e27e7d49e615e49540c7d
 SHA1 (patch-config_stl__wrappers_ios) = 00d723e2f2f252485350ede5833f0bb84c1235c1
 SHA1 (patch-config_stl__wrappers_ostream) = 7be7fe36704ffbdc070a113b46b4f391a598206b
 SHA1 (patch-config_system-headers) = 02c71493cdbed0b966fe674c736916aa666ea4f0
+SHA1 (patch-config_system__wrappers_freetype.h) = 1835def5db7d6917651d675d07851b4a68b1e9c7
+SHA1 (patch-config_system__wrappers_ftadvanc.h) = 04873463bbcaa2c91fc36632fafd5737fa1e2d55
+SHA1 (patch-config_system__wrappers_ftbitmap.h) = 781220fe7d440feace49215b9c772afb7c00b2ec
+SHA1 (patch-config_system__wrappers_ftcache.h) = bec64e0acfec2331de7c4b820d4a0b62eb8b4725
+SHA1 (patch-config_system__wrappers_ftglyph.h) = 5afb40641c5c95dfb9f1736d354d8a1d8c6279ff
+SHA1 (patch-config_system__wrappers_ftlcdfil.h) = 20a20832543dd241353166f854b6bbbb1add107a
+SHA1 (patch-config_system__wrappers_ftoutln.h) = 6fab38e6939377556e54c0ff13ce6abc46a46beb
+SHA1 (patch-config_system__wrappers_ftsizes.h) = ae8f584d7408b86a0f56672f97b2bd2d0d526ab4
+SHA1 (patch-config_system__wrappers_ftsynth.h) = c1e9740beb0cb2f1f053ca4629eae98bd75793c0
+SHA1 (patch-config_system__wrappers_ftxf86.h) = 9ead175e83208aa3abb5fc4f4d96d7ac7b64fdf5
+SHA1 (patch-config_system__wrappers_t1tables.h) = 45a565c01c968e22394b0b26ddd4c2f9bf4354bb
+SHA1 (patch-config_system__wrappers_ttnameid.h) = 7f623f14fde4ed36983e7afbced734298fc37236
+SHA1 (patch-config_system__wrappers_tttables.h) = a0562947857dd3c37f7d67b45a9ac3018e180044
 SHA1 (patch-config_system__wrappers_unwind.h) = b3bdac0710179b9c8f8eabd824216d0114504491
 SHA1 (patch-content_media_nsAudioStream.cpp) = 75c9fc45d464ee332271142c3e29b826b6254d49
+SHA1 (patch-content_svg_content_src_nsSVGFilters.cpp) = 1f653a23d780d3465a964120ea6f5cf8b711f924
+SHA1 (patch-content_svg_content_src_nsSVGFilters.h) = c7e85c9c313005748773f0c216ad026367aec478
 SHA1 (patch-dist_stl__wrappers_ios) = a6a6a0b8489c4cbdc56f139125f6c9d9bbc89b08
 SHA1 (patch-dist_stl__wrappers_ostream) = fee1523904368f6dcaa040cebbc8e1d0fca494ca
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.cpp) = 66d023227b46582d30961cfac15506b9f29c23de

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2014/04/27 07:54:01 wiz Exp $
+$NetBSD: distinfo,v 1.19 2014/05/15 21:16:16 joerg Exp $
 
 SHA1 (firefox-3.6.28.source.tar.bz2) = adeaa9bdd367878c5b522766e681798178e31577
 RMD160 (firefox-3.6.28.source.tar.bz2) = 87cfca8e3f1df30e06eccffbf994825904eeedbc
@@ -35,6 +35,10 @@ SHA1 (patch-be) = 30d3285a10f62c7302b2c2809b1ab06bce0d3316
 SHA1 (patch-bf) = 6295d27762eb91162c00362306acbd47eeda61ac
 SHA1 (patch-bg) = ab79e04b5ac1453157cfb57754613210c74c3b90
 SHA1 (patch-build_autoconf_moznbytetype.m4) = c0299f856d074f220d29f6388d5b0d96ad4b3e51
+SHA1 (patch-content_svg_content_src_nsSVGFilters.cpp) = ab83b19616148054046f5b2befdd1c447e27d485
+SHA1 (patch-content_svg_content_src_nsSVGFilters.h) = d6a7b2616a450a182e227d917203b7369dbf184e
+SHA1 (patch-dom_src_threads_nsDOMWorkerEvents.cpp) = 2e29c52ddefa76a7ce28307d6dc8c0a87d8cecc2
+SHA1 (patch-dom_src_threads_nsDOMWorkerEvents.h) = ab131c359b0a354615381ba4991b7f2d9d4cb723
 SHA1 (patch-embedding_browser_gtk_src_EmbedPrivate.cpp) = a0ec26c6ca751e51586498e33b4f51b63799e3d2
 SHA1 (patch-gfx_ots_src_os2.cc) = bf42e5aa49a24f44b49f0d80bdf5d3b0947a3ea5
 SHA1 (patch-gfx_thebes_src_gfxPangoFonts.cpp) = 3285c81fef35475a88e78192ab50bbbcb507c28b
