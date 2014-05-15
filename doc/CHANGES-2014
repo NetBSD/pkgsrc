@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1847 2014/05/15 02:03:12 wen Exp $
+$NetBSD: CHANGES-2014,v 1.1848 2014/05/15 05:37:25 richard Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2577,3 +2577,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/libgroove to 3.1.1nb1 [wiz 2014-05-14]
 	Updated mail/rspamd to 0.6.9 [wiedi 2014-05-14]
 	Updated devel/p5-Moose to 2.1206 [wen 2014-05-15]
+	Updated finance/py-trytond-account-fr to 3.2.0 [richard 2014-05-15]
+	Updated misc/py-trytond-party-siret to 3.2.0 [richard 2014-05-15]
