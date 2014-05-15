@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2014/05/10 06:10:19 pho Exp $
+# $NetBSD: Makefile,v 1.46 2014/05/15 11:15:10 martin Exp $
 
 DISTNAME=	libvpx_1.3.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/libv/libvpx/}
 EXTRACT_SUFX=	.tar.bz2
