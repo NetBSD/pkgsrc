@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2014/04/24 19:39:05 adam Exp $
+# $NetBSD: Makefile,v 1.10 2014/05/15 14:14:54 adam Exp $
 
-DISTNAME=	openjpeg-2.0.1
+DISTNAME=	openjpeg-2.1.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openjpeg.mirror/}
 
