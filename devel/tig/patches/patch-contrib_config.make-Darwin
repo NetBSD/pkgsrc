@@ -1,0 +1,16 @@
+$NetBSD: patch-contrib_config.make-Darwin,v 1.1 2014/05/15 01:14:44 pho Exp $
+
+Do not override XML_CATALOG_FILES on Darwin. That will only make
+xmllint try to find a wrong catalog.
+
+--- contrib/config.make-Darwin.orig	2013-08-24 14:42:16.000000000 +0000
++++ contrib/config.make-Darwin
+@@ -1,8 +1,5 @@
+ # Example configuration for Darwin / Mac OS X.
+ 
+-# Work-around for Homebrew-based xmlto.
+-export XML_CATALOG_FILES=/usr/local/etc/xml/catalog
+-
+ LDLIBS = -lcurses -liconv
+ CPPFLAGS = -DHAVE_CURSES_H
+ 

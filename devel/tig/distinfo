@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.8 2014/04/04 21:00:24 ryoon Exp $
+$NetBSD: distinfo,v 1.9 2014/05/15 01:14:44 pho Exp $
 
 SHA1 (tig-1.2.1.tar.gz) = 5755bae7342debf94ef33973e0eaff6207e623dc
 RMD160 (tig-1.2.1.tar.gz) = cfb50c243d8a3aa4ec849232794144d5016d3cb5
 Size (tig-1.2.1.tar.gz) = 160039 bytes
 SHA1 (patch-aa) = f48be2c54131a100d3be6cae3051afc0a83b5fe0
+SHA1 (patch-contrib_config.make-Darwin) = b24435aceea930ea7a5f4c371c8b90360b6d4956
 SHA1 (patch-tig_c) = 1f309ad94737f11abc7e5f37d1ede91b2a17117c
 SHA1 (patch-tig_h) = 81c4623867f80888cdb10109a3cd373937e24f43
