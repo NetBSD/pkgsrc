@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1851 2014/05/15 10:00:27 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1852 2014/05/15 10:01:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2583,3 +2583,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/libnice to 0.1.7 [wiz 2014-05-15]
 	Updated www/p5-libwww to 6.06 [wiz 2014-05-15]
 	Updated security/p5-Net-SSLeay to 1.61 [wiz 2014-05-15]
+	Updated security/p5-IO-Socket-SSL to 1.985 [wiz 2014-05-15]
