@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.97 2014/05/10 13:42:08 richard Exp $
+$NetBSD: distinfo,v 1.98 2014/05/15 12:51:58 wiz Exp $
 
 SHA1 (cups-1.5.4-source.tar.bz2) = cb39961cbaf1851a47694828ad9a7cdf4da51fbd
 RMD160 (cups-1.5.4-source.tar.bz2) = 9d6a7fd69d3036ec1f3dfd9c70672a2c6fb517b6
@@ -18,4 +18,5 @@ SHA1 (patch-conf_Makefile) = 5b5d45abc1e8d6b73a1ad6b7a7098714d4c55395
 SHA1 (patch-config-scripts_cups-gssapi.m4) = 6f558ee1d2d56ceba3a9705d3278c7969495be5d
 SHA1 (patch-ppdc_Makefile) = 7dcc34217557a4c6f42064b61abf593bd7620b60
 SHA1 (patch-scheduler_auth.c) = 2056f20500e3c6e857f9dd2c83709c15be38fe0e
+SHA1 (patch-scheduler_client.c) = d4b6667199c0ff9617847ba119b82a50457cfd98
 SHA1 (patch-scheduler_dirsvc.c) = 62c6b47522a60b9f8042421e4a9d25a5dfa47c47
