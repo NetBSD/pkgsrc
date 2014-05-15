@@ -1,7 +1,7 @@
 #!@PERL@ -w
 # -*- perl -*-
 #
-# $NetBSD: finddepends,v 1.9 2014/05/06 12:41:46 wiz Exp $
+# $NetBSD: finddepends,v 1.10 2014/05/15 23:50:14 wiz Exp $
 #
 # Copyright (c) 2006, 2014 The NetBSD Foundation, Inc.
 #
@@ -61,6 +61,7 @@ if ($opt{p}) {
 
 usage if (1 ne @ARGV);
 $arg = shift;
+$arg =~ s,/$,,g;
 
 @searchlist = ();
 push @searchlist, $arg;
@@ -77,7 +78,8 @@ foreach $bl3 (@bl3files) {
     $content = "";
     while (<OUT>) {
 	chomp($_);
-	$content .= $_ unless $_ =~ m"^#";
+	next if m/^\s*#/;
+	$content .= $_;
     }
     close OUT;
     $bl3content{$bl3} = $content;
@@ -123,6 +125,7 @@ for $makefile (@makefiles) {
     $content = "";
     while (<OUT>) {
 	chomp($_);
+	next if m/^\s*#/;
 	$content .= $_;
     }
     close OUT;
