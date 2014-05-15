@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/01/25 10:30:28 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/15 14:41:15 kleink Exp $
 
-DISTNAME=	Flask-Security-1.7.1
+DISTNAME=	Flask-Security-1.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	http://pypi.python.org/packages/source/F/Flask-Security/
