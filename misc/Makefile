@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.427 2014/05/08 11:21:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.428 2014/05/15 05:35:43 richard Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -234,6 +234,7 @@ SUBDIR+=	py-carddav
 SUBDIR+=	py-stdnum
 SUBDIR+=	py-trytond-company
 SUBDIR+=	py-trytond-party
+SUBDIR+=	py-trytond-party-siret
 SUBDIR+=	py-trytond-product
 SUBDIR+=	py-trytond-stock
 SUBDIR+=	py-trytond-stock-lot
