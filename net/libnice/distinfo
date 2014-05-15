@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2014/05/06 08:31:45 wiz Exp $
+$NetBSD: distinfo,v 1.12 2014/05/15 09:18:38 wiz Exp $
 
-SHA1 (libnice-0.1.6.tar.gz) = 63966f8198c6a1840ac37349df510ccdf007a126
-RMD160 (libnice-0.1.6.tar.gz) = 8c29638c08cea406987052f7b64c0bc7772c0027
-Size (libnice-0.1.6.tar.gz) = 829225 bytes
+SHA1 (libnice-0.1.7.tar.gz) = 94d459fc409da9cf5e4ac30d680ee6c0ded2cb64
+RMD160 (libnice-0.1.7.tar.gz) = a925423f373182e328c9c765c65451897f4f4ac4
+Size (libnice-0.1.7.tar.gz) = 827258 bytes
 SHA1 (patch-ad) = abf11727342cbf5a48cdd394355ec2f93ce471f2
