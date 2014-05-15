@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2014/03/03 15:41:12 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2014/05/15 19:35:49 christos Exp $
 
 VERSION=	1.2.1
+PKGREVISION=	1
 DISTNAME=	go${VERSION}.src
 PKGNAME=	go-${VERSION}
 CATEGORIES=	lang
