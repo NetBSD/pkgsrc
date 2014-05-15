@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2014/05/07 20:23:22 ryoon Exp $
+$NetBSD: distinfo,v 1.12 2014/05/15 21:16:16 joerg Exp $
 
 SHA1 (firefox-24.5.0esr.source.tar.bz2) = 1b549d6dce80faec1c23f11b95122e607d2ed1bb
 RMD160 (firefox-24.5.0esr.source.tar.bz2) = 38a987d7c1283c3dd6476685eb025c308fb2f185
@@ -25,6 +25,9 @@ SHA1 (patch-config_stl__wrappers_ostream) = 7be7fe36704ffbdc070a113b46b4f391a598
 SHA1 (patch-config_system-headers) = 0da7f04309f7540a0038079568cf54d981f0d3f5
 SHA1 (patch-config_system__wrappers_unwind.h) = b3bdac0710179b9c8f8eabd824216d0114504491
 SHA1 (patch-content_media_gstreamer_GStreamerFormatHelper.cpp) = 450d8202977ef30e75166372fe405c0908450641
+SHA1 (patch-content_svg_content_src_SVGComponentTransferFunctionElement.h) = 071420d63fa106da305c8c1c3fa18899e011254e
+SHA1 (patch-content_svg_content_src_nsSVGFilters.cpp) = f5c52c32418044c99d00c73ede33ecfe631d3a8c
+SHA1 (patch-content_svg_content_src_nsSVGFilters.h) = 1091187361c8b49eadcd12f8b776dac8a645826f
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.cpp) = 69b0a51d733cd52e7d200052362e0faf4ec918f1
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.h) = 0a7f3167e939822013ae6195406657453578453e
 SHA1 (patch-extensions_auth_nsAuthGSSAPI.cpp) = 548886fc4a86a988f3f91650061ddc04f37653a8
