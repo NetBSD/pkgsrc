@@ -1,0 +1,18 @@
+$NetBSD: patch-build-tools_icon-theme-installer,v 1.3 2014/05/15 21:40:11 dsainty Exp $
+
+The icon-theme-installer tool makes use of a GNU sed extension, and so
+behaves incorrectly on many platforms (E.g. NetBSD)
+
+https://bugs.launchpad.net/geda/+bug/1319785
+
+--- build-tools/icon-theme-installer.orig	2012-12-18 00:04:20.000000000 +1300
++++ build-tools/icon-theme-installer	2014-05-15 23:14:31.969393769 +1200
+@@ -121,7 +121,7 @@
+ 	size=`echo $icon | sed -n 's/.*-\([0-9]*\).*/\1/p'`
+ 	category=`echo $icon | cut -d, -f1`
+ 	build_name=`echo $icon | cut -d, -f2`
+-	install_name=`echo $build_name | sed 's/-[0-9]\+//g'`
++	install_name=`echo $build_name | sed 's/-[0-9][0-9]*//g'`
+ 	install_name=`basename $install_name`
+ 
+ 	if test -z $size; then 
