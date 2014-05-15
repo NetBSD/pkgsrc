@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1863 2014/05/15 14:19:57 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1864 2014/05/15 14:53:05 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2597,3 +2597,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/giflib to 5.1.0 [adam 2014-05-15]
 	Updated graphics/giflib-util to 5.1.0 [adam 2014-05-15]
 	Updated wm/notion to 3.2014010900nb1 [wiz 2014-05-15]
+	Updated www/py-flask-security to 1.7.2 [kleink 2014-05-15]
+	Updated www/py-flask-script to 2.0.3 [kleink 2014-05-15]
