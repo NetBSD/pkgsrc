@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1864 2014/05/15 14:53:05 kleink Exp $
+$NetBSD: CHANGES-2014,v 1.1865 2014/05/15 21:16:28 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2599,3 +2599,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated wm/notion to 3.2014010900nb1 [wiz 2014-05-15]
 	Updated www/py-flask-security to 1.7.2 [kleink 2014-05-15]
 	Updated www/py-flask-script to 2.0.3 [kleink 2014-05-15]
+	Added devel/hs-transformers version 0.4.1.0 [szptvlfn 2014-05-15]
