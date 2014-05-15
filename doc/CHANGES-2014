@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1862 2014/05/15 14:18:08 adam Exp $
+$NetBSD: CHANGES-2014,v 1.1863 2014/05/15 14:19:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2596,3 +2596,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/openjpeg to 2.1.0 [adam 2014-05-15]
 	Updated graphics/giflib to 5.1.0 [adam 2014-05-15]
 	Updated graphics/giflib-util to 5.1.0 [adam 2014-05-15]
+	Updated wm/notion to 3.2014010900nb1 [wiz 2014-05-15]
