@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.94 2014/04/18 15:50:16 adam Exp $
+$NetBSD: distinfo,v 1.95 2014/05/15 12:28:13 wiz Exp $
 
 SHA1 (qemu-2.0.0.tar.bz2) = cc24a60a93ba697057a67b6a7224b95627eaf1a6
 RMD160 (qemu-2.0.0.tar.bz2) = ecd05e036431c14930ae2455a032495dd7ebaf85
@@ -10,6 +10,7 @@ SHA1 (patch-hw_net_etraxfs__eth.c) = e5dd1661d60dbcd27b332403e0843500ba9544bc
 SHA1 (patch-hw_net_xilinx__axienet.c) = ebcd2676d64ce6f31e4a8c976d4fdf530ad5e8b7
 SHA1 (patch-hw_ppc_mac__newworld.c) = 9a0ec3ba0b6da2879fdaba6a7937fb16a02685f5
 SHA1 (patch-hw_ppc_mac__oldworld.c) = 46322c77c87be6d517c43466325c344db99cd463
+SHA1 (patch-hw_virtio_virtio.c) = 9aa4553a4eda81fb014b116c2207ec4b59265fca
 SHA1 (patch-memory.c) = 14df9c835ca318fc79a8d3a46bb94d2f229277cc
 SHA1 (patch-slirp_tcp__subr.c) = cfc8289384fa987289e32b64532c13a83a890820
 SHA1 (patch-user-exec.c) = eb83832c7c9e5f69313f8cad2c2f77b304072556
