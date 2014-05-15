@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2013/08/29 12:56:15 joerg Exp $
+$NetBSD: distinfo,v 1.17 2014/05/15 21:16:16 joerg Exp $
 
 SHA1 (firefox-10.0.12esr.source.tar.bz2) = d9086cabf06e04ef5200a8731288c0df27eb84d7
 RMD160 (firefox-10.0.12esr.source.tar.bz2) = b112325fa37435d62e5e2737f2e87caf58f25b3c
@@ -34,6 +34,8 @@ SHA1 (patch-bi) = 9e76596ab9a48abdab0bfbcd9f8bb3d067c6f7bd
 SHA1 (patch-build_autoconf_gcc-pr49911.m4) = d994d058116875255af451c4bf411929caf8c1a9
 SHA1 (patch-build_autoconf_nss.m4) = a4519ad6274102512f73eabce1c4821801aa7e77
 SHA1 (patch-content_svg_content_src_SVGNumberList.cpp) = e0541b67954f8e49c98302dccd74e63a22d579c4
+SHA1 (patch-content_svg_content_src_nsSVGFilters.cpp) = 2e1db9ff49bf209f395171f6324830254901c76d
+SHA1 (patch-content_svg_content_src_nsSVGFilters.h) = 15a1f1ccbdcf197983805e4393053cbd6e02562b
 SHA1 (patch-dom_base_nsGlobalWindow.cpp) = 662c5c731d9b7fcc87d91962dad5e86c80347e32
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.cpp) = ac6bd27d98b25ebe393d40ec607a152e12783e6b
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.h) = 927c08622eae442bcf0bb40253d801b3fb2902db
