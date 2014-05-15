@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.14 2014/05/15 11:15:10 martin Exp $
+$NetBSD: patch-ad,v 1.15 2014/05/15 12:00:04 martin Exp $
 
 *BSD and qnx are identified as linux.
 Add another SDK path on Mac OS X.
@@ -6,12 +6,6 @@ All sparc cpus can not do unaligned access.
 
 --- build/make/configure.sh.orig	2013-12-17 18:05:18.000000000 +0100
 +++ build/make/configure.sh	2014-05-15 13:11:08.000000000 +0200
-@@ -1,4 +1,4 @@
--#!/bin/sh
-+#!/usr/pkg/bin/bash
- ##
- ##  configure.sh
- ##
 @@ -665,7 +665,7 @@
                  [ -z "$tgt_isa" ] && tgt_isa=x86
                  tgt_os=win32
