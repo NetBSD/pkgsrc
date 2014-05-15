@@ -1,4 +1,4 @@
-/*	$NetBSD: license.c,v 1.37 2014/04/16 14:41:21 wiz Exp $	*/
+/*	$NetBSD: license.c,v 1.38 2014/05/15 09:59:09 wiz Exp $	*/
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -71,6 +71,7 @@ const char *default_acceptable_licenses =
     "mpl-1.0 mpl-1.1 mpl-2.0 "
     "mplusfont "
     "ofl-v1.0 ofl-v1.1 "
+    "openssl "
     "original-bsd modified-bsd 2-clause-bsd "
     "php "
     "png-license "
