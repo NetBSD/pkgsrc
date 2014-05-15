@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2013/12/05 11:42:14 obache Exp $
+$NetBSD: distinfo,v 1.2 2014/05/15 12:00:59 obache Exp $
 
 SHA1 (suse131/alsa-1.0.27.2-3.5.1.i586.rpm) = 4adc0d62ab08589b3556c639dd8b8d863f97d2c9
 RMD160 (suse131/alsa-1.0.27.2-3.5.1.i586.rpm) = 79331029afa85f815bbea654b23a89be64e8022f
@@ -6,12 +6,12 @@ Size (suse131/alsa-1.0.27.2-3.5.1.i586.rpm) = 1154383 bytes
 SHA1 (suse131/alsa-1.0.27.2-3.5.1.x86_64.rpm) = 86542fcc52eb0bed875815e3e1dd19469a6c0873
 RMD160 (suse131/alsa-1.0.27.2-3.5.1.x86_64.rpm) = e9de1a5dd935cdc567daab339e79d57cf3681510
 Size (suse131/alsa-1.0.27.2-3.5.1.x86_64.rpm) = 1153491 bytes
-SHA1 (suse131/alsa-oss-1.0.25-8.1.2.i586.rpm) = 7a64b78d6d6e5f7bfc951aac2352f529bb1d2320
-RMD160 (suse131/alsa-oss-1.0.25-8.1.2.i586.rpm) = 243b192952c6f3e7a155a0716787eee6e33fc94d
-Size (suse131/alsa-oss-1.0.25-8.1.2.i586.rpm) = 33836 bytes
-SHA1 (suse131/alsa-oss-1.0.25-8.1.2.x86_64.rpm) = c665a44e5dc5fb3205a5cbf4e40facb7f50a77e0
-RMD160 (suse131/alsa-oss-1.0.25-8.1.2.x86_64.rpm) = 0ed5eed3493380cf375a154de41117cdadc8b9b0
-Size (suse131/alsa-oss-1.0.25-8.1.2.x86_64.rpm) = 35305 bytes
+SHA1 (suse131/alsa-oss-1.0.25-8.4.1.i586.rpm) = 44cdf19eb6cbc0fb3da07f747aad51154b096212
+RMD160 (suse131/alsa-oss-1.0.25-8.4.1.i586.rpm) = a5408bf0e06a78f631090bf915c1b929e5671d67
+Size (suse131/alsa-oss-1.0.25-8.4.1.i586.rpm) = 34010 bytes
+SHA1 (suse131/alsa-oss-1.0.25-8.4.1.x86_64.rpm) = ce8d9866cb1ff98578d4d27ea0debc52dde69d46
+RMD160 (suse131/alsa-oss-1.0.25-8.4.1.x86_64.rpm) = b17a7ce8a9cd6cd1aa5aa713d2112978ee3bce75
+Size (suse131/alsa-oss-1.0.25-8.4.1.x86_64.rpm) = 35426 bytes
 SHA1 (suse131/alsa-plugins-1.0.27-3.1.1.i586.rpm) = 05a119e0a0886ee8994e713580b3c36a17097c57
 RMD160 (suse131/alsa-plugins-1.0.27-3.1.1.i586.rpm) = e42d3b2353f5d2efcfb05290b66c86aebc5b2236
 Size (suse131/alsa-plugins-1.0.27-3.1.1.i586.rpm) = 50511 bytes
