@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1861 2014/05/15 12:44:04 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1862 2014/05/15 14:18:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2593,3 +2593,6 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/qemu to 2.0.0nb2 [wiz 2014-05-15]
 	Updated lang/python33 to 3.3.5nb2 [wiz 2014-05-15]
 	Updated lang/python34 to 3.4.0nb1 [wiz 2014-05-15]
+	Updated graphics/openjpeg to 2.1.0 [adam 2014-05-15]
+	Updated graphics/giflib to 5.1.0 [adam 2014-05-15]
+	Updated graphics/giflib-util to 5.1.0 [adam 2014-05-15]
