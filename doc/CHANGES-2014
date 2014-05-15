@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1858 2014/05/15 12:01:12 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1859 2014/05/15 12:28:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2590,3 +2590,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/apache-maven to 3.2.1 [fhajny 2014-05-15]
 	Updated emulators/suse131_libxml2 to 13.1nb1 [obache 2014-05-15]
 	Updated emulators/suse131_alsa to 13.1nb1 [obache 2014-05-15]
+	Updated emulators/qemu to 2.0.0nb2 [wiz 2014-05-15]
