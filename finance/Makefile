@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2014/05/08 10:14:56 rodent Exp $
+# $NetBSD: Makefile,v 1.34 2014/05/15 05:33:45 richard Exp $
 #
 
 COMMENT=	Monetary, financial and related applications
@@ -17,6 +17,7 @@ SUBDIR+=	p5-Locale-Currency-Format
 SUBDIR+=	py-python-bitcoinlib
 SUBDIR+=	py-stripe
 SUBDIR+=	py-trytond-account
+SUBDIR+=	py-trytond-account-fr
 SUBDIR+=	py-trytond-account-invoice
 SUBDIR+=	py-trytond-account-product
 SUBDIR+=	py-trytond-currency
