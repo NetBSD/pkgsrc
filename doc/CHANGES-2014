@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1860 2014/05/15 12:34:31 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1861 2014/05/15 12:44:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2592,3 +2592,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/suse131_alsa to 13.1nb1 [obache 2014-05-15]
 	Updated emulators/qemu to 2.0.0nb2 [wiz 2014-05-15]
 	Updated lang/python33 to 3.3.5nb2 [wiz 2014-05-15]
+	Updated lang/python34 to 3.4.0nb1 [wiz 2014-05-15]
