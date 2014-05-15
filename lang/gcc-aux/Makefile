@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/05/13 08:18:04 marino Exp $
+# $NetBSD: Makefile,v 1.20 2014/05/15 09:50:44 marino Exp $
 #
 
 PKGNAME=	gcc-aux-${SNAPSHOT}
@@ -87,6 +87,9 @@ NATIVE_LINKER!=		which ld
 OPENMIR=		yes
 MODERN_BINUTILS=	yes
 EXTRA_CONFARGS+=	--disable-libstdcxx-pch
+EXTRA_CONFARGS+=	--disable-tls
+EXTRA_CONFARGS+=	--enable-cpp
+EXTRA_CONFARGS+=	--enable-wchar_t
 BOOTSTRAP_COMPILER=	ada-bootstrap.${GARCH}.openbsd.55.tar.bz2
 .endif
 
@@ -181,6 +184,7 @@ CONFIGURE_ARGS= 	--enable-languages=${LANGS:Q}
 CONFIGURE_ARGS+=	--build=${BLD_TARGET}
 CONFIGURE_ARGS+=	--prefix=${PKG_PREFIX:Q}
 CONFIGURE_ARGS+=	--enable-threads=posix
+CONFIGURE_ARGS+=	--enable-checking=release
 CONFIGURE_ARGS+=	--disable-libmudflap
 CONFIGURE_ARGS+=	--disable-libgomp
 CONFIGURE_ARGS+=	--disable-libssp
@@ -226,14 +230,14 @@ post-extract:
 .    for sl in c m z util pthread
 	${LN} -s `ls /usr/lib/lib${sl}.so* | head -1` ${SYSLIBDIR}/lib${sl}.so
 .    endfor
-	${PERL5} -i -pe 's|\$$\(MISCLIB\)|-L${SYSLIBDIR} \$$(MISCLIB)|g;' \
+	${PERL5} -i.bak -pe 's|\$$\(MISCLIB\)|-L${SYSLIBDIR} \$$(MISCLIB)|g;' \
 		-pe 's|\$$\(THREADSLIB\)|-L${SYSLIBDIR} \$$(THREADSLIB)|g' \
 		${WRKSRC}/gcc/ada/gcc-interface/Makefile.in
-	${PERL5} -i -pe 's|-lpthread|-L${SYSLIBDIR} -lpthread|g;' \
-		-pe 's|@XCFLAGS@|-L${SYSLIBDIR} @XCFLAGS@|g;' \
-		-pe 's|-lm|-L${SYSLIBDIR} -lm|g' \
+	${PERL5} -i.bak -pe 's|-lm|-L${SYSLIBDIR} -lm|g' \
 		${WRKSRC}/libquadmath/Makefile.in \
-		${WRKSRC}/libgfortran/Makefile.in \
+		${WRKSRC}/libgfortran/Makefile.in
+	${PERL5} -i.bak -pe 's|-lpthread|-L${SYSLIBDIR} -lpthread|g;' \
+		-pe 's|\@XCFLAGS\@|-L${SYSLIBDIR} \@XCFLAGS\@|g;' \
 		${WRKSRC}/libcilkrts/Makefile.in \
 		${WRKSRC}/libitm/Makefile.in
 .  endif
@@ -293,7 +297,8 @@ test-ada:
 	${ULIMIT_CMD_stacksize} && \
 	${SETENV} ${MY_MAKE_ENV} ${GMAKE} -sk check-ada
 .else
-	cd ${BUILDDIR} && ${SETENV} ${MY_MAKE_ENV} ${GMAKE} -sk check-ada
+	cd ${BUILDDIR} && ${SETENV} ${MY_MAKE_ENV} DEJAGNU_TIMEOUT=30 \
+		${GMAKE} -sk check-ada
 .endif
 
 test-fortran:
