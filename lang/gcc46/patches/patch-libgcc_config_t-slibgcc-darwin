@@ -1,0 +1,26 @@
+$NetBSD: patch-libgcc_config_t-slibgcc-darwin,v 1.1 2014/05/15 12:04:41 pho Exp $
+
+If we don't install libgcc_s.10.[45].dylib, our gcc links binaries
+with *both* /usr/lib/libgcc_s.1.dylib and
+${GCC_PREFIX}/lib/libgcc_s.1.dylib, which is certainly a bad thing.
+
+The problem was already reported to the upstream but it caught
+seemingly no attention:
+http://gcc.gnu.org/ml/gcc-help/2010-07/msg00164.html
+
+--- libgcc/config/t-slibgcc-darwin.orig	2010-02-02 08:18:48.000000000 +0000
++++ libgcc/config/t-slibgcc-darwin
+@@ -26,13 +26,7 @@ SHLIB_MKMAP = $(gcc_srcdir)/mkmap-flat.a
+ SHLIB_MKMAP_OPTS = -v leading_underscore=1
+ SHLIB_MAPFILES += $(gcc_srcdir)/libgcc-std.ver $(gcc_srcdir)/libgcc-libsystem.ver
+ 
+-# we're only going to build the stubs if the target slib is /usr/lib
+-# there is no other case in which they're useful in a live system.
+-ifeq (/usr/lib,$(shlib_slibdir))
+ LGCC_STUBS = libgcc_s.10.4.dylib libgcc_s.10.5.dylib
+-else
+-LGCC_STUBS =
+-endif
+ 
+ LGCC_FILES = libgcc_s.$(SHLIB_SOVERSION)$(SHLIB_EXT)
+ LGCC_FILES += $(LGCC_STUBS)

@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.15 2014/03/29 20:50:03 ryoon Exp $
+$NetBSD: distinfo,v 1.16 2014/05/15 12:04:41 pho Exp $
 
 SHA1 (gcc-4.6.4.tar.bz2) = 63933a8a5cf725626585dbba993c8b0f6db1335d
 RMD160 (gcc-4.6.4.tar.bz2) = 6a58b053812cf75622bc4579e020cd9471f46916
 Size (gcc-4.6.4.tar.bz2) = 72006076 bytes
 SHA1 (patch-aa) = 8bb19e38cacf5dbf9e9f3cac71211d52ec8358c3
 SHA1 (patch-ab) = f25d0b276041e57dcfb00638bc4232b4e0f5abb6
-SHA1 (patch-ac) = 0f708412670eca90c2c8e3fa675cffb14be768cd
+SHA1 (patch-ac) = 1317d68b9c682384622bbc322c1b8a75db74ae79
 SHA1 (patch-ad) = b5e17219e7b7ba158b9f3e1a67e155fb158b4484
 SHA1 (patch-af) = e4e194ef29924eb986536972c5f5e9f37d98eba3
 SHA1 (patch-ag) = 1753d08075de8527d8f14afc3df4afeacb10d507
@@ -44,6 +44,7 @@ SHA1 (patch-gcc_lto_lto.c) = 3c7df0691d300d2915388e7ef019b9717a9673d7
 SHA1 (patch-gcc_opts.c) = e02ebec8a9de24492a3aba80ee8c742446f2c549
 SHA1 (patch-gcc_unwind-dw2-fde-glibc.c) = 704ccc2b1058344586e0ccb8bcd291f41d93ed0a
 SHA1 (patch-gcc_unwind-dw2-fde-openbsd.c) = 74b7df494848d8d52e4574bac3fa3742cd3ff0d7
+SHA1 (patch-libgcc_config_t-slibgcc-darwin) = 2ddda2dd979f27c623e47db70c5abb3befdb68c9
 SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__base.h) = eac78601d0f531c8a49c88eacc59691312f1cf25
 SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__inline.h) = 830038744cbbb713ecc3f960a9509bef16176db9
 SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__noninline.h) = ce481809b051cb281772a0ad4d561241731f7556
