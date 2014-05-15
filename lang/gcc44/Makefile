@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2013/05/31 12:41:11 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2014/05/15 22:53:46 pho Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc44-${GCC_VERSION}
@@ -69,6 +69,13 @@ CONFIGURE_ARGS+=	--enable-long-long
 CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX:Q}
 CONFIGURE_ARGS+=	--disable-libssp
 CONFIGURE_ARGS+=	--enable-threads=posix
+.if ${OPSYS} == "Darwin"
+# See ${WRKSRC}/libgcc/config/t-slibgcc-darwin: It uses strip(1) to
+# create a stub library, not just to remove symbols, so we must not
+# let strip(1) be a no-op regardless of ${INSTALL_UNSTRIPPED} or the
+# build fails for missing files.
+CONFIGURE_ARGS+=	STRIP_FOR_TARGET=${TOOLS_PLATFORM.strip}
+.endif
 
 CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
 
