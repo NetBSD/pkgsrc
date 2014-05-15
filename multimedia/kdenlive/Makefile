@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2014/04/10 06:21:33 obache Exp $
+# $NetBSD: Makefile,v 1.28 2014/05/15 14:41:56 adam Exp $
 
 DISTNAME=	kdenlive-0.9.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://download.kde.org/stable/kdenlive/0.9.6/src/
 EXTRACT_SUFX=	.tar.bz2

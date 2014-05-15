@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2013/10/09 17:39:01 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2014/05/15 14:41:46 adam Exp $
 
 BUILDLINK_TREE+=	devIL
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	devIL
 DEVIL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.devIL+=	devIL>=1.7.8
-BUILDLINK_ABI_DEPENDS.devIL+=	devIL>=1.7.8nb10
+BUILDLINK_ABI_DEPENDS.devIL+=	devIL>=1.7.8nb11
 BUILDLINK_PKGSRCDIR.devIL?=	../../devel/devIL
 
 .include "../../devel/SDL/buildlink3.mk"
