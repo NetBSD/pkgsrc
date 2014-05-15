@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2014/04/10 06:21:26 obache Exp $
+# $NetBSD: Makefile,v 1.13 2014/05/15 14:41:50 adam Exp $
 
 DISTNAME=	lskat-${_KDE_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 COMMENT=	Lieutenant Skat card game for two players
 
