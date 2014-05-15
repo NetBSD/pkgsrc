@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/08/31 18:41:33 adam Exp $
-bin/gif2raw
+@comment $NetBSD: PLIST,v 1.4 2014/05/15 14:16:11 adam Exp $
 bin/gif2rgb
 bin/gifbuild
 bin/gifclrmp
@@ -8,7 +7,6 @@ bin/giffix
 bin/gifinto
 bin/giftext
 bin/giftool
-man/man1/gif2raw.1
 man/man1/gif2rgb.1
 man/man1/gifbuild.1
 man/man1/gifclrmp.1
@@ -18,7 +16,6 @@ man/man1/gifinto.1
 man/man1/giflib.1
 man/man1/giftext.1
 man/man1/giftool.1
-share/doc/giflib/gif2raw.html
 share/doc/giflib/gif2rgb.html
 share/doc/giflib/gif87.txt
 share/doc/giflib/gif89.txt
