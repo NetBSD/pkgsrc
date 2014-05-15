@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2013/04/01 18:48:44 adam Exp $
+# $NetBSD: Makefile,v 1.15 2014/05/15 10:53:11 adam Exp $
 
-DISTNAME=	jpegoptim-1.3.0
+DISTNAME=	jpegoptim-1.4.0
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.kokkonen.net/tjko/src/
 
@@ -11,8 +11,7 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 
-INSTALL_MAKE_FLAGS+=	bindir=${DESTDIR}${PREFIX}/bin \
-			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
+INSTALL_MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
