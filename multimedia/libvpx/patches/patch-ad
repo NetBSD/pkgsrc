@@ -1,11 +1,18 @@
-$NetBSD: patch-ad,v 1.13 2014/05/05 21:16:28 ryoon Exp $
+$NetBSD: patch-ad,v 1.14 2014/05/15 11:15:10 martin Exp $
 
 *BSD and qnx are identified as linux.
 Add another SDK path on Mac OS X.
+All sparc cpus can not do unaligned access.
 
---- build/make/configure.sh.orig	2013-12-17 17:05:18.000000000 +0000
-+++ build/make/configure.sh
-@@ -665,7 +665,7 @@ process_common_toolchain() {
+--- build/make/configure.sh.orig	2013-12-17 18:05:18.000000000 +0100
++++ build/make/configure.sh	2014-05-15 13:11:08.000000000 +0200
+@@ -1,4 +1,4 @@
+-#!/bin/sh
++#!/usr/pkg/bin/bash
+ ##
+ ##  configure.sh
+ ##
+@@ -665,7 +665,7 @@
                  [ -z "$tgt_isa" ] && tgt_isa=x86
                  tgt_os=win32
                  ;;
@@ -14,7 +21,15 @@ Add another SDK path on Mac OS X.
                  tgt_os=linux
                  ;;
              *solaris2.10)
-@@ -799,7 +799,7 @@ process_common_toolchain() {
+@@ -704,6 +704,7 @@
+     case ${tgt_isa} in
+         arm*) enable_feature arm;;
+         mips*) enable_feature mips;;
++	sparc) disable_feature fast_unaligned;;
+     esac
+ 
+     # PIC is probably what we want when building shared libs
+@@ -799,7 +800,7 @@
  
          case ${tgt_cc} in
          gcc)
@@ -23,7 +38,7 @@ Add another SDK path on Mac OS X.
              link_with_cc=gcc
              setup_gnu_toolchain
              arch_int=${tgt_isa##armv}
-@@ -988,8 +988,6 @@ EOF
+@@ -988,8 +989,6 @@
              check_add_cflags -mips32r2 -mdspr2
              disable_feature fast_unaligned
          fi
@@ -32,7 +47,7 @@ Add another SDK path on Mac OS X.
          check_add_asflags -KPIC
      ;;
      ppc*)
-@@ -1219,7 +1217,7 @@ EOF
+@@ -1219,7 +1218,7 @@
      check_cc <<EOF
      unsigned int e = 'O'<<24 | '2'<<16 | 'B'<<8 | 'E';
  EOF
@@ -41,7 +56,7 @@ Add another SDK path on Mac OS X.
          grep '4f *32 *42 *45' >/dev/null 2>&1 && enable_feature big_endian
  
      # Try to find which inline keywords are supported
-@@ -1235,10 +1233,32 @@ EOF
+@@ -1235,10 +1234,32 @@
          case ${toolchain} in
              *-win*-vs*);;
              *-android-gcc);;
