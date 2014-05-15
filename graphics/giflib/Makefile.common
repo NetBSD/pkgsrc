@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.6 2014/04/01 06:34:34 adam Exp $
+# $NetBSD: Makefile.common,v 1.7 2014/05/15 14:16:11 adam Exp $
 # used by graphics/giflib/Makefile
 # used by graphics/giflib-util/Makefile
 
-DISTNAME=	giflib-5.0.6
+DISTNAME=	giflib-5.1.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=giflib/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,7 +17,6 @@ DISTINFO_FILE=	${.CURDIR}/../../graphics/giflib/distinfo
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-
 CONFIGURE_ARGS+=	--disable-rle
 CONFIGURE_ARGS+=	--disable-x11
 CONFIGURE_ARGS+=	--disable-gl
