@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1853 2014/05/15 10:13:25 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1854 2014/05/15 10:17:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2585,3 +2585,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/p5-Net-SSLeay to 1.61 [wiz 2014-05-15]
 	Updated security/p5-IO-Socket-SSL to 1.985 [wiz 2014-05-15]
 	Updated www/p5-LWP-Protocol-https to 6.06 [wiz 2014-05-15]
+	Updated www/p5-LWP-Protocol-https to 6.06nb1 [wiz 2014-05-15]
