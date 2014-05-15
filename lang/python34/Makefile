@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2014/05/09 05:59:09 obache Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/15 12:43:52 wiz Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python34-${PY_DISTVERSION}
+PKGREVISION=	1
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
