@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2014/05/09 16:20:24 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2014/05/15 14:19:48 wiz Exp $
 
 DISTNAME=	notion-3-2014010900-src
 PKGNAME=	${DISTNAME:S/3-/3./:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=notion/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,6 +18,7 @@ CONFLICTS=	ion3-[0-9]*
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 USE_LANGUAGES=	c99
 USE_TOOLS+=	gmake msgfmt pax pkg-config
+LUA_VERSIONS_ACCEPTED=	51
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	EXAMPLEDIR=${PREFIX}/share/examples/notion
