@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2013/05/18 05:37:03 markd Exp $
+# $NetBSD: Makefile,v 1.9 2014/05/15 11:17:29 fhajny Exp $
 #
 
-DISTNAME=	apache-maven-3.0.5
+DISTNAME=	apache-maven-3.2.1
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_APACHE:=maven/maven-3/${PKGVERSION_NOREV}/binaries/}
 DISTFILES=	${DISTNAME}-bin${EXTRACT_SUFX}
@@ -37,8 +37,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/boot/*.jar ${DESTDIR}${PREFIX}/lib/java/maven/boot
 	${INSTALL_DATA} ${WRKSRC}/lib/*.jar ${DESTDIR}${PREFIX}/lib/java/maven
 	${INSTALL_DATA} ${WRKSRC}/README.txt ${DESTDIR}${PREFIX}/share/doc/java/maven
-	${INSTALL_DATA} ${WRKSRC}/NOTICE.txt ${DESTDIR}${PREFIX}/share/doc/java/maven
-	${INSTALL_DATA} ${WRKSRC}/LICENSE.txt ${DESTDIR}${PREFIX}/share/doc/java/maven
+	${INSTALL_DATA} ${WRKSRC}/NOTICE ${DESTDIR}${PREFIX}/share/doc/java/maven
+	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/share/doc/java/maven
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
