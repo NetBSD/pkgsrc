@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1848 2014/05/15 05:37:25 richard Exp $
+$NetBSD: CHANGES-2014,v 1.1849 2014/05/15 09:19:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2579,3 +2579,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Moose to 2.1206 [wen 2014-05-15]
 	Updated finance/py-trytond-account-fr to 3.2.0 [richard 2014-05-15]
 	Updated misc/py-trytond-party-siret to 3.2.0 [richard 2014-05-15]
+	Updated net/gst-plugins1-libnice to 0.1.7 [wiz 2014-05-15]
+	Updated net/libnice to 0.1.7 [wiz 2014-05-15]
