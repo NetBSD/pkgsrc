@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/12/04 11:32:13 drochner Exp $
+# $NetBSD: Makefile,v 1.10 2014/05/16 12:57:09 ryoon Exp $
 #
 
 DISTNAME=	gstreamer-1.0.10
@@ -16,7 +16,7 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bison flex gmake perl pkg-config
 USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c
 FLEX_REQD=		2.5.31
 
 .include "options.mk"
