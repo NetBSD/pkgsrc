@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2013/11/24 04:41:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/16 13:54:50 ryoon Exp $
 
 DISTNAME=		gcc-4.6.4
 PKGNAME=		cross-freemint-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-4.6.4/}
 
@@ -62,12 +63,12 @@ pre-configure:
 	${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/${DISTNAME}
 
 post-install:
-	for f in h8300-elf-cpp    h8300-elf-gcc \
-		 h8300-elf-c++    h8300-elf-g++ \
-		 h8300-elf-gccbug h8300-elf-gcov \
+	for f in cpp    gcc \
+		 c++    g++ \
+		 gcov \
 		 ; do \
-		${LN} -sf ../cross-h8300-elf/bin/"$$f" \
-			${DESTDIR}${PREFIX}/bin/"$$f" || exit 1; \
+		${LN} -sf ../cross-atari-mint/bin/"m68k-atari-mint-$$f" \
+			${DESTDIR}${PREFIX}/bin/"m68k-atari-mint-$$f" || exit 1; \
 	done
 
 .include "../../cross/freemint-mintlib/buildlink3.mk"
