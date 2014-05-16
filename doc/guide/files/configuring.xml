@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.43 2014/05/16 03:09:14 obache Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.44 2014/05/16 03:16:40 obache Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -214,28 +214,56 @@ uid=1000(myusername) gid=100(users) groups=100(users),0(wheel)
 
 	  <!-- TODO: update this list after jlam's changes in May 2005 -->
 	  <itemizedlist>
-	    <listitem><para><varname>distcc</varname>:
-	    distributed C/C++ (chainable)</para>
+	    <listitem><para><varname>ccc</varname>:
+	    Compaq C Compilers (Tru64)</para>
 	    </listitem>
 
 	    <listitem><para><varname>ccache</varname>:
 	    compiler cache (chainable)</para>
 	    </listitem>
 
+	    <listitem><para><varname>clang</varname>:
+	    Clang C and Objective-C compiler</para>
+	    </listitem>
+
+	    <listitem><para><varname>distcc</varname>:
+	    distributed C/C++ (chainable)</para>
+	    </listitem>
+
+	    <listitem><para><varname>f2c</varname>:
+	    Fortran 77 to C compiler (chainable)</para>
+	    </listitem>
+
+	    <listitem><para><varname>icc</varname>:
+	    Intel C++ Compiler (Linux)</para>
+	    </listitem>
+
+	    <listitem><para><varname>ido</varname>:
+	    SGI IRIS Development Option cc (IRIX 5)</para>
+	    </listitem>
+
 	    <listitem><para><varname>gcc</varname>:
 	    GNU C/C++ Compiler</para>
+	    </listitem>
+
+	    <listitem><para><varname>hp</varname>:
+	    HP-UX C/aC++ compilers</para>
 	    </listitem>
 
 	    <listitem><para><varname>mipspro</varname>:
 	    Silicon Graphics, Inc. MIPSpro (n32/n64)</para>
 	    </listitem>
 
-	    <listitem><para><varname>mipspro</varname>:
+	    <listitem><para><varname>mipspro-ucode</varname>:
 	    Silicon Graphics, Inc. MIPSpro (o32)</para>
 	    </listitem>
 
 	    <listitem><para><varname>sunpro</varname>:
 	    Sun Microsystems, Inc. WorkShip/Forte/Sun ONE Studio</para>
+	    </listitem>
+
+	    <listitem><para><varname>xlc</varname>:
+	    IBM's XL C/C++ compiler suite (Darwin/MacOSX)</para>
 	    </listitem>
 	  </itemizedlist>
 
