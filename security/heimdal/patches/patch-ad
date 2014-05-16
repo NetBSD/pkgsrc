@@ -1,8 +1,9 @@
-$NetBSD: patch-ad,v 1.13 2013/08/16 08:30:14 adam Exp $
+$NetBSD: patch-ad,v 1.14 2014/05/16 12:49:42 ryoon Exp $
 
 * GNU/kFreeBSD parts: use host of Debian GNU/kFreeBSD 7.0.
+* OpenBSD's vish requires stdlib.h.
 
---- configure.orig	2012-01-11 13:04:10.000000000 +0000
+--- configure.orig	2012-12-09 22:09:32.000000000 +0000
 +++ configure
 @@ -6779,7 +6779,7 @@ ia64-*-hpux*)
    rm -rf conftest*
@@ -53,3 +54,75 @@ $NetBSD: patch-ad,v 1.13 2013/08/16 08:30:14 adam Exp $
  	native_pthread_support=yes
  	PTHREAD_CFLAGS=-pthread
  	PTHREAD_LIBADD=-pthread
+@@ -16057,6 +16061,7 @@ fi
+ for ac_header in vis.h
+ do :
+   ac_fn_c_check_header_compile "$LINENO" "vis.h" "ac_cv_header_vis_h" "
++#include <stdlib.h>
+ #include <vis.h>
+ #ifndef VIS_SP
+ #error invis
+@@ -20473,6 +20478,7 @@ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ #ifdef HAVE_VIS_H
++#include <stdlib.h>
+ #include <vis.h>
+ #endif
+ struct foo { int foo; } xx;
+@@ -20510,6 +20516,7 @@ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ #ifdef HAVE_VIS_H
++#include <stdlib.h>
+ #include <vis.h>
+ #endif
+ struct foo { int foo; } xx;
+@@ -20547,6 +20554,7 @@ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ #ifdef HAVE_VIS_H
++#include <stdlib.h>
+ #include <vis.h>
+ #endif
+ struct foo { int foo; } xx;
+@@ -20584,6 +20592,7 @@ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ #ifdef HAVE_VIS_H
++#include <stdlib.h>
+ #include <vis.h>
+ #endif
+ struct foo { int foo; } xx;
+@@ -20621,6 +20630,7 @@ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ #ifdef HAVE_VIS_H
++#include <stdlib.h>
+ #include <vis.h>
+ #endif
+ struct foo { int foo; } xx;
+@@ -20658,6 +20668,7 @@ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ #ifdef HAVE_VIS_H
++#include <stdlib.h>
+ #include <vis.h>
+ #endif
+ struct foo { int foo; } xx;
+@@ -20695,6 +20706,7 @@ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ #ifdef HAVE_VIS_H
++#include <stdlib.h>
+ #include <vis.h>
+ #endif
+ struct foo { int foo; } xx;
+@@ -20732,6 +20744,7 @@ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ #ifdef HAVE_VIS_H
++#include <stdlib.h>
+ #include <vis.h>
+ #endif
+ struct foo { int foo; } xx;
