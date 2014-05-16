@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.14 2014/05/16 10:00:33 obache Exp $
+$NetBSD: distinfo,v 1.15 2014/05/16 10:01:16 obache Exp $
 
 SHA1 (ming-0.4.5.tar.gz) = 97c201040729917bf7c62da9616a87f4a920f473
 RMD160 (ming-0.4.5.tar.gz) = 9ef9cf769a03c6e356dca299c85e06a2cdd6a155
 Size (ming-0.4.5.tar.gz) = 15029578 bytes
-<<<<<<< distinfo
-=======
->>>>>>> 1.13
 SHA1 (patch-ae) = 614e322330d2d2ab1e0ef1beadf1395014ecd880
 SHA1 (patch-src_blocks_gifdbl.c) = 212535b773d373a9836facb9bbc248749ca9d552
 SHA1 (patch-src_libming.h) = bba5e6f93913359b7109e3b18177f819989be98f
