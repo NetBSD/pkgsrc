@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.764 2014/05/03 15:35:25 rodent Exp $
+# $NetBSD: Makefile,v 1.765 2014/05/16 01:10:22 rodent Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -634,6 +634,7 @@ SUBDIR+=	py-mecab
 SUBDIR+=	py-pdf-parser
 SUBDIR+=	py-prettytable
 SUBDIR+=	py-pygments
+SUBDIR+=	py-pyquery
 SUBDIR+=	py-relatorio
 SUBDIR+=	py-sphinx
 SUBDIR+=	py-sphinx-theme-cloud
