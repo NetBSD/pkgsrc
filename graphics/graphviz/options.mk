@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2013/04/25 03:53:11 sbd Exp $
+# $NetBSD: options.mk,v 1.19 2014/05/16 12:27:34 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.graphviz
 PKG_SUPPORTED_OPTIONS=	gd ghostscript gtk guile lua ocaml pangocairo rsvg tcl x11 perl
@@ -113,6 +113,7 @@ USING_SWIG=	no
 
 .if !empty(PKG_OPTIONS:Mlua)
 USING_SWIG=	yes
+.include "../../lang/lua/tool.mk"
 .include "../../lang/lua/buildlink3.mk"
 PLIST.lua=		yes
 .else
