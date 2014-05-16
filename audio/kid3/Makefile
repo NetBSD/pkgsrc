@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2014/05/04 08:10:12 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2014/05/16 13:55:24 wiz Exp $
 
 DISTNAME=		kid3-3.1
 CATEGORIES=		kde audio
@@ -20,8 +20,8 @@ CMAKE_ARGS+=		-DQT_QMAKE_EXECUTABLE:PATH=${QTDIR}/bin/qmake
 CMAKE_ARGS+=		-DWITH_DOCBOOKDIR:PATH=${PREFIX}/share/xsl/docbook
 CMAKE_ARGS+=		-DWITH_APPS:STRING="Qt;CLI"
 CMAKE_ARGS+=		-DWITH_MANDIR:STRING=${PKGMANDIR}
-# seems to be ignored, so put it into LDFLAGS
-CMAKE_ARGS+=		-DCMAKE_INSTALL_RPATH:PATH=${PREFIX}/lib/kid3
+# program-specific rpath is ignored since pkgsrc passes
+# -DCMAKE_SKIP_RPATH:BOOL=TRUE, so re-add it manually
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/kid3
 
 .include "../../audio/chromaprint/buildlink3.mk"
