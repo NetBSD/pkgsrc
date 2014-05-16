@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1869 2014/05/16 01:34:55 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.1870 2014/05/16 01:36:01 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2604,3 +2604,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/p5-DateTime-TimeZone to 1.69 [wen 2014-05-16]
 	Added textproc/py-pyquery version 1.2.8 [rodent 2014-05-16]
 	Added textproc/py-tinycss version 0.3 [rodent 2014-05-16]
+	Updated devel/p5-IO-All to 0.61 [hiramatsu 2014-05-16]
