@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.40 2014/05/16 02:08:07 obache Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.41 2014/05/16 02:14:18 obache Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -151,14 +151,6 @@ works.</para>
     you can set
     <varname>USE_DESTDIR=no</varname>; this setting will be deprecated though,
     so it's preferable to convert a package to DESTDIR instead.</para>
-    <para>DESTDIR support changes the behaviour of various targets
-    slightly. To install a package after building it, use
-    <literal>package-install</literal>. <literal>package</literal> and
-    <literal>install</literal> don't do that any
-    longer. <literal>package-install</literal> can be used as
-    <varname>DEPENDS_TARGET</varname>.  <literal>bin-install</literal>
-    will ask for the root password to install the package and fail,
-    <literal>package-install</literal> will ask again.</para>
     <para>With basic DESTDIR support, <userinput>make
     clean</userinput> needs to be run as root.</para>
 
