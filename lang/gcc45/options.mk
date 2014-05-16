@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2012/04/13 11:10:09 hans Exp $
+# $NetBSD: options.mk,v 1.3 2014/05/16 12:01:17 pho Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc45
-PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran gcc-java gcc-objc #gcc-ada
-PKG_SUGGESTED_OPTIONS=	gcc-c++ gcc-fortran gcc-objc
+PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran gcc-java gcc-objc gcc-objc++ #gcc-ada
+PKG_SUGGESTED_OPTIONS=	gcc-c++ gcc-fortran gcc-objc gcc-objc++
 .if ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS+=	nls
 .elif ${OPSYS} == "SunOS"
@@ -82,6 +82,17 @@ MAKE_ENV+=		ac_cv_prog_JAR=no
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mgcc-objc++)
+.  if empty(PKG_OPTIONS:Mgcc-objc)
+PKG_OPTIONS+=		gcc-objc
+.  endif
+.  if empty(PKG_OPTIONS:Mgcc-c++)
+PKG_OPTIONS+=		gcc-c++
+.  endif
+
+LANGS+=			obj-c++
 .endif
 
 .if !empty(PKG_OPTIONS:Mgcc-c++)
