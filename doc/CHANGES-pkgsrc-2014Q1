@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.29 2014/05/16 14:02:04 schnoebe Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.30 2014/05/16 16:04:27 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q1 branch:
@@ -108,3 +108,7 @@ Pullup ticket #4404 - requested by obache
 emulators/suse131_openssl: security update
 Pullup ticket #4406 -- requested by wiz
 lang/python33: security update
+Pullup ticket #4407 - requested by wiz
+print/cups: security patch
+Pullup ticket #4408 - requested by wiz
+emulators/qemu: security update
