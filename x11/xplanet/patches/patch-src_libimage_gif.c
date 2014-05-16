@@ -1,6 +1,6 @@
-$NetBSD: patch-src_libimage_gif.c,v 1.1 2013/07/06 08:00:47 ryoon Exp $
+$NetBSD: patch-src_libimage_gif.c,v 1.2 2014/05/16 09:57:55 wiz Exp $
 
-* Fix build with giflib 5.0.
+* Fix build with giflib 5.1.
 
 --- src/libimage/gif.c.orig	2006-03-25 22:50:51.000000000 +0000
 +++ src/libimage/gif.c
@@ -81,6 +81,15 @@ $NetBSD: patch-src_libimage_gif.c,v 1.1 2013/07/06 08:00:47 ryoon Exp $
                      return(0);
                  }
              }
+@@ -154,7 +173,7 @@ read_gif(const char *filename, int *widt
+     
+     free(buffer);
+ 
+-    DGifCloseFile(infile);
++    DGifCloseFile(infile, NULL);
+     return(1);
+ }
+ 
 @@ -178,7 +197,7 @@ write_gif(const char *filename, int widt
          return(0);
      }
@@ -141,11 +150,13 @@ $NetBSD: patch-src_libimage_gif.c,v 1.1 2013/07/06 08:00:47 ryoon Exp $
              return(0);
          }
          ptr += width;
-@@ -233,7 +252,7 @@ write_gif(const char *filename, int widt
+@@ -232,8 +251,8 @@ write_gif(const char *filename, int widt
+ 
      EGifSpew(outfile);
  
-     if (EGifCloseFile(outfile) == GIF_ERROR) 
+-    if (EGifCloseFile(outfile) == GIF_ERROR) 
 -        PrintGifError();
++    if (EGifCloseFile(outfile, NULL) == GIF_ERROR) 
 +        PrintGifError(ErrorCode);
  
      free(buffer);
