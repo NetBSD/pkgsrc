@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2013/09/12 14:07:18 ryoon Exp $
-bin/h8300-elf-c++
-bin/h8300-elf-cpp
-bin/h8300-elf-g++
-bin/h8300-elf-gcc
-bin/h8300-elf-gccbug
-bin/h8300-elf-gcov
+@comment $NetBSD: PLIST,v 1.2 2014/05/16 13:54:50 ryoon Exp $
+bin/m68k-atari-mint-c++
+bin/m68k-atari-mint-cpp
+bin/m68k-atari-mint-g++
+bin/m68k-atari-mint-gcc
+bin/m68k-atari-mint-gcov
 cross-freemint/bin/m68k-atari-mint-c++
 cross-freemint/bin/m68k-atari-mint-cpp
 cross-freemint/bin/m68k-atari-mint-g++
