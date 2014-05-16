@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2014/01/15 18:26:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.37.2.1 2014/05/16 16:01:22 tron Exp $
 ${PLIST.alpha}bin/qemu-alpha
 ${PLIST.arm}bin/qemu-arm
 ${PLIST.armeb}bin/qemu-armeb
@@ -24,6 +24,7 @@ ${PLIST.sparc}bin/qemu-sparc
 ${PLIST.sparc32plus}bin/qemu-sparc32plus
 ${PLIST.sparc64}bin/qemu-sparc64
 ${PLIST.unicore32}bin/qemu-unicore32
+bin/qemu-system-aarch64
 bin/qemu-system-alpha
 bin/qemu-system-arm
 bin/qemu-system-cris
@@ -59,9 +60,11 @@ share/doc/qemu/qemu-doc.html
 share/doc/qemu/qemu-tech.html
 share/doc/qemu/qmp-commands.txt
 share/examples/qemu/target-x86_64.conf
+share/qemu/QEMU,cgthree.bin
 share/qemu/QEMU,tcx.bin
 share/qemu/acpi-dsdt.aml
 share/qemu/bamboo.dtb
+share/qemu/bios-256k.bin
 share/qemu/bios.bin
 share/qemu/efi-e1000.rom
 share/qemu/efi-eepro100.rom
