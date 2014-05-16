@@ -1,4 +1,4 @@
-$NetBSD: patch-util_gif2dbl.c,v 1.1 2013/07/06 07:43:13 ryoon Exp $
+$NetBSD: patch-util_gif2dbl.c,v 1.2 2014/05/16 09:43:30 wiz Exp $
 
 * Fix build with giflib 5.0.4.
 * Catch error with gifib 5.0 manner.
@@ -28,3 +28,12 @@ $NetBSD: patch-util_gif2dbl.c,v 1.1 2013/07/06 07:43:13 ryoon Exp $
      error("Error opening file");
  
    if(DGifSlurp(file) != GIF_OK)
+@@ -190,7 +192,7 @@ unsigned char *readGif(char *fileName, i
+   }
+ 
+ 	/* Done! */
+-  DGifCloseFile(file);
++  DGifCloseFile(file, NULL);
+ 
+   *length = size;
+   return data;

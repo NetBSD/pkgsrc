@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.12 2013/07/06 07:43:13 ryoon Exp $
+$NetBSD: distinfo,v 1.13 2014/05/16 09:43:30 wiz Exp $
 
 SHA1 (ming-0.4.5.tar.gz) = 97c201040729917bf7c62da9616a87f4a920f473
 RMD160 (ming-0.4.5.tar.gz) = 9ef9cf769a03c6e356dca299c85e06a2cdd6a155
 Size (ming-0.4.5.tar.gz) = 15029578 bytes
 SHA1 (patch-ae) = 614e322330d2d2ab1e0ef1beadf1395014ecd880
-SHA1 (patch-src_blocks_gifdbl.c) = a33f2dda09620961211ac367e872d994231d3f20
-SHA1 (patch-src_libming.h) = 49cab5c2d31115ea9ab909cea88dfc52f1bdbee0
-SHA1 (patch-util_gif2dbl.c) = 04383fd7a43af02d9e85e8bea0fa2328cfdfc617
+SHA1 (patch-src_blocks_gifdbl.c) = 8138151af51ed032561af3159814fc7ceae08a47
+SHA1 (patch-src_libming.h) = 130f02a12a28cc62afc6cfe007ebb301e30c161b
+SHA1 (patch-util_gif2dbl.c) = aca8c93c0dbe4cb637bc7efc48ab3ea724719a49
 SHA1 (patch-util_gif2mask.c) = 5a87deca141b561725725a32971e68837ac6f4e1

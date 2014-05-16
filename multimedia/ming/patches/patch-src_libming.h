@@ -1,4 +1,4 @@
-$NetBSD: patch-src_libming.h,v 1.1 2013/07/06 07:43:13 ryoon Exp $
+$NetBSD: patch-src_libming.h,v 1.2 2014/05/16 09:43:30 wiz Exp $
 
 * Introduce custom PrintGifError() from util/qprintf.c of giflib 5.0.4.
 
@@ -20,7 +20,7 @@ $NetBSD: patch-src_libming.h,v 1.1 2013/07/06 07:43:13 ryoon Exp $
 +PrintGifError(int ErrorCode)
  {
 -	fprintf(stderr, "\nGIF-LIB error: %s.\n", GifErrorString());
-+	char *Err = GifErrorString(ErrorCode);
++	const char *Err = GifErrorString(ErrorCode);
 +
 +	if (Err != NULL)
 +		fprintf(stderr, "\nGIF-LIB error: %s.\n", Err);

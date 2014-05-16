@@ -1,6 +1,6 @@
-$NetBSD: patch-libvo_vo__gif89a.c,v 1.1 2013/07/06 07:07:18 ryoon Exp $
+$NetBSD: patch-libvo_vo__gif89a.c,v 1.2 2014/05/16 09:49:06 wiz Exp $
 
-* Fix build with giflib 5.0.
+* Fix build with giflib 5.1.
 
 --- libvo/vo_gif89a.c.orig	2011-05-07 10:59:11.000000000 +0000
 +++ libvo/vo_gif89a.c
@@ -39,7 +39,15 @@ $NetBSD: patch-libvo_vo__gif89a.c,v 1.1 2013/07/06 07:07:18 ryoon Exp $
  }
  
  static void flip_page(void)
-@@ -365,7 +366,7 @@ static void uninit(void)
+@@ -358,14 +359,14 @@ static void uninit(void)
+ 			MPLAYER_VERSION, VO_GIF_REVISION,
+ 			"joey@nicewarrior.org");
+ 		EGifPutComment(new_gif, temp);
+-		EGifCloseFile(new_gif); // also frees gif storage space.
++		EGifCloseFile(new_gif, NULL); // also frees gif storage space.
+ 	}
+ 
+ 	// free our allocated ram
  	free(gif_filename);
  	free(slice_data);
  	free(reduce_data);
