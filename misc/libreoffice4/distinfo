@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2014/05/13 18:36:02 ryoon Exp $
+$NetBSD: distinfo,v 1.16 2014/05/16 11:53:56 ryoon Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -147,6 +147,7 @@ SHA1 (patch-i18npool_source_collator_collator__unicode.cxx) = 45bc3209137f9ddd22
 SHA1 (patch-i18npool_source_collator_data_zh__TW__charset.txt) = 7631d523dd1e0f0eeeed546ba355c54392fd7eb2
 SHA1 (patch-odk_CustomTarget__classes.mk) = 991896c402d1d2505e5aacec5df78439c8e9a767
 SHA1 (patch-solenv_gbuild_AllLangResTarget.mk) = c6fa51c74e3be0e9d4f18e1481039d44d6c3db98
+SHA1 (patch-solenv_gbuild_Deliver.mk) = 07ffb548a24edfe64fcf370423a2124c7a32cafb
 SHA1 (patch-solenv_gbuild_Module.mk) = 78d57071ac2c884bb6406356f45db3c55b61c678
 SHA1 (patch-solenv_gbuild_platform_NETBSD__INTEL__GCC.mk) = a0c2490d0ed5186278778f62505f3e4dc63422cd
 SHA1 (patch-solenv_gbuild_platform_NETBSD__X86__64__GCC.mk) = a3afc8c8d82854f187ef455651b492ac801a63a0
