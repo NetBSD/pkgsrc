@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2014/05/13 18:36:02 ryoon Exp $
+# $NetBSD: options.mk,v 1.4 2014/05/16 11:53:08 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libreoffice4
-PKG_SUPPORTED_OPTIONS=	java debug
+PKG_SUPPORTED_OPTIONS=	java debug kde4 gtk3
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
@@ -10,7 +10,7 @@ PKG_SUGGESTED_OPTIONS=	java
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	java
+PLIST_VARS+=	java kde4 gtk3
 
 .if !empty(PKG_OPTIONS:Mjava)
 USE_JAVA=		yes
@@ -41,4 +41,21 @@ CONFIGURE_ARGS+=	--enable-debug
 CONFIGURE_ARGS+=	--enable-selective-debuginfo="all"
 .else
 CONFIGURE_ARGS+=	--enable-release-build
+.endif
+
+.if !empty(PKG_OPTIONS:Mgtk3)
+CONFIGURE_ARGS+=	--enable-gtk3
+PLIST.gtk3=		yes
+.include "../../x11/gtk3+/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-gtk3
+.endif
+
+.if !empty(PKG_OPTIONS:Mkde4)
+CONFIGURE_ARGS+=	--enable-kde4
+CONFIGURE_ENV+=		KDE4DIR="${LOCALBASE}"
+PLIST.kde4=		yes
+.include "../../x11/kdelibs4/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-kde4
 .endif
