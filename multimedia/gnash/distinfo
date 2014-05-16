@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.23 2013/12/15 19:42:04 joerg Exp $
+$NetBSD: distinfo,v 1.24 2014/05/16 11:56:58 obache Exp $
 
 SHA1 (gnash-0.8.10.tar.bz2) = be3b12a5edcd3b05f2ae73d02f0991aa786e7300
 RMD160 (gnash-0.8.10.tar.bz2) = 0093174ec0a912309772c033b5f1c1ad46ab41dc
 Size (gnash-0.8.10.tar.bz2) = 4238106 bytes
 SHA1 (patch-aa) = 5e3cfa0c21f6bd9ad01ce4c9f68f245316d063a3
 SHA1 (patch-ae) = ca44e2559a1ce0a24baf6d5479636f967e011202
-SHA1 (patch-libbase_GnashImageGif.cpp) = e08a9657269ac7f37ad892a003ac9025deda6c9f
+SHA1 (patch-libbase_GnashImageGif.cpp) = 91da96fa6c5a92ab8035b29d0fbacb3516b9ec52
 SHA1 (patch-libbase_GnashSleep.h) = f713b29feb0153efa24c10df20e0ac8342b88265
 SHA1 (patch-libbase_IOChannel.h) = 6b2b66291598e574f13a6a5ee905d6d5f1a459e8
 SHA1 (patch-libbase_Makefile.in) = c5b6533f5ac2b2ee26d0547c3054375e72512ccf
