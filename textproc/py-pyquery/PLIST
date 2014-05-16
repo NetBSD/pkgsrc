@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/16 01:06:29 rodent Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pyquery/__init__.py
+${PYSITELIB}/pyquery/__init__.pyc
+${PYSITELIB}/pyquery/__init__.pyo
+${PYSITELIB}/pyquery/ajax.py
+${PYSITELIB}/pyquery/ajax.pyc
+${PYSITELIB}/pyquery/ajax.pyo
+${PYSITELIB}/pyquery/cssselectpatch.py
+${PYSITELIB}/pyquery/cssselectpatch.pyc
+${PYSITELIB}/pyquery/cssselectpatch.pyo
+${PYSITELIB}/pyquery/openers.py
+${PYSITELIB}/pyquery/openers.pyc
+${PYSITELIB}/pyquery/openers.pyo
+${PYSITELIB}/pyquery/pyquery.py
+${PYSITELIB}/pyquery/pyquery.pyc
+${PYSITELIB}/pyquery/pyquery.pyo
+${PYSITELIB}/pyquery/rules.py
+${PYSITELIB}/pyquery/rules.pyc
+${PYSITELIB}/pyquery/rules.pyo
