@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1874 2014/05/16 13:55:33 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.1875 2014/05/16 13:59:41 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2609,3 +2609,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/libreoffice4 to 4.2.4.2nb1 [ryoon 2014-05-16]
 	Updated misc/calibre to 1.37.0 [wiz 2014-05-16]
 	Updated cross/freemint-gcc to 4.6.4nb1 [ryoon 2014-05-16]
+	Updated devel/nss to 3.16.1 [ryoon 2014-05-16]
