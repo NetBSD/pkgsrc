@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1898 2014/05/13 12:33:35 imil Exp $
+# $NetBSD: Makefile,v 1.1899 2014/05/16 20:07:59 szptvlfn Exp $
 #
 
 COMMENT=	Development utilities
@@ -292,6 +292,7 @@ SUBDIR+=	heirloom-what
 SUBDIR+=	hg-git
 SUBDIR+=	hoe
 SUBDIR+=	hptools
+SUBDIR+=	hs-transformers
 SUBDIR+=	ht
 SUBDIR+=	hugs-HUnit
 SUBDIR+=	hugs-unix
