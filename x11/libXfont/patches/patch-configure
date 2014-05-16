@@ -1,0 +1,56 @@
+$NetBSD: patch-configure,v 1.1 2014/05/16 08:36:21 wiz Exp $
+
+Allow building with fontsproto-2.1.3.
+
+--- configure.orig	2014-05-16 08:33:28.000000000 +0000
++++ configure
+@@ -19138,12 +19138,12 @@ if test -n "$XFONT_CFLAGS"; then
+     pkg_cv_XFONT_CFLAGS="$XFONT_CFLAGS"
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"xproto xtrans fontsproto < 2.1.3 fontenc\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "xproto xtrans fontsproto < 2.1.3 fontenc") 2>&5
++    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"xproto xtrans fontsproto fontenc\""; } >&5
++  ($PKG_CONFIG --exists --print-errors "xproto xtrans fontsproto fontenc") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+-  pkg_cv_XFONT_CFLAGS=`$PKG_CONFIG --cflags "xproto xtrans fontsproto < 2.1.3 fontenc" 2>/dev/null`
++  pkg_cv_XFONT_CFLAGS=`$PKG_CONFIG --cflags "xproto xtrans fontsproto fontenc" 2>/dev/null`
+ else
+   pkg_failed=yes
+ fi
+@@ -19154,12 +19154,12 @@ if test -n "$XFONT_LIBS"; then
+     pkg_cv_XFONT_LIBS="$XFONT_LIBS"
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"xproto xtrans fontsproto < 2.1.3 fontenc\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "xproto xtrans fontsproto < 2.1.3 fontenc") 2>&5
++    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"xproto xtrans fontsproto fontenc\""; } >&5
++  ($PKG_CONFIG --exists --print-errors "xproto xtrans fontsproto fontenc") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+-  pkg_cv_XFONT_LIBS=`$PKG_CONFIG --libs "xproto xtrans fontsproto < 2.1.3 fontenc" 2>/dev/null`
++  pkg_cv_XFONT_LIBS=`$PKG_CONFIG --libs "xproto xtrans fontsproto fontenc" 2>/dev/null`
+ else
+   pkg_failed=yes
+ fi
+@@ -19177,14 +19177,14 @@ else
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        XFONT_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "xproto xtrans fontsproto < 2.1.3 fontenc" 2>&1`
++	        XFONT_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "xproto xtrans fontsproto fontenc" 2>&1`
+         else
+-	        XFONT_PKG_ERRORS=`$PKG_CONFIG --print-errors "xproto xtrans fontsproto < 2.1.3 fontenc" 2>&1`
++	        XFONT_PKG_ERRORS=`$PKG_CONFIG --print-errors "xproto xtrans fontsproto fontenc" 2>&1`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$XFONT_PKG_ERRORS" >&5
+ 
+-	as_fn_error $? "Package requirements (xproto xtrans fontsproto < 2.1.3 fontenc) were not met:
++	as_fn_error $? "Package requirements (xproto xtrans fontsproto fontenc) were not met:
+ 
+ $XFONT_PKG_ERRORS
+ 
