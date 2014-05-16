@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.41 2014/05/16 02:14:18 obache Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.42 2014/05/16 02:57:57 obache Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -168,20 +168,20 @@ uid=1000(myusername) gid=100(users) groups=100(users),0(wheel)
     should be needed
 
 <programlisting>
-&uprompt; make USE_DESTDIR=yes install
+&uprompt; make install
 </programlisting>
 
     Create a package without root privileges
 
 <programlisting>
-&uprompt; make USE_DESTDIR=yes PACKAGES=$HOME/packages package
+&uprompt; make PACKAGES=$HOME/packages package
 </programlisting>
 
     For the following command, you must be able to gain root
     privileges using &man.su.1;
 
 <programlisting>
-&uprompt; make USE_DESTDIR=yes PACKAGES=$HOME/packages package-install
+&uprompt; make PACKAGES=$HOME/packages package-install
 </programlisting>
 
     Then, as a simple user
