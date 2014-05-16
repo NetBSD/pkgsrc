@@ -1,7 +1,8 @@
-$NetBSD: patch-libbase_GnashImageGif.cpp,v 1.2 2014/05/16 11:56:58 obache Exp $
+$NetBSD: patch-libbase_GnashImageGif.cpp,v 1.3 2014/05/16 12:15:55 obache Exp $
 
 * for giflib-5.0 API changes
   https://savannah.gnu.org/bugs/index.php?39482
+* for giflib-5.1 API changes
 
 --- libbase/GnashImageGif.cpp.orig	2012-01-19 19:17:48.000000000 +0000
 +++ libbase/GnashImageGif.cpp
