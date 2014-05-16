@@ -1,0 +1,29 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2014/05/16 01:21:12 pho Exp $
+
+Don't pass -nodefaultlibs to compiler or the build fails for missing
+symbols on PowerPC and possibly other platforms. I can't see any
+reason why they do this at all.
+
+The problem is already reported to the upstream:
+http://sourceforge.net/p/silgraphite/bugs/56/
+
+--- src/CMakeLists.txt.orig	2013-11-29 06:21:26.000000000 +0000
++++ src/CMakeLists.txt
+@@ -113,7 +113,7 @@ endif (${CMAKE_BUILD_TYPE} STREQUAL "Cla
+ if  (${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
+     set_target_properties(graphite2 PROPERTIES 
+         COMPILE_FLAGS   "-Wall -Wextra -Wno-unknown-pragmas -Wendif-labels -Wshadow -Wctor-dtor-privacy -Wnon-virtual-dtor -fno-rtti -fno-exceptions -fvisibility=hidden -fvisibility-inlines-hidden -fno-stack-protector"
+-        LINK_FLAGS      "-nodefaultlibs ${GRAPHITE_LINK_FLAGS}" 
++        LINK_FLAGS      "${GRAPHITE_LINK_FLAGS}" 
+         LINKER_LANGUAGE C)
+     if (${CMAKE_CXX_COMPILER} MATCHES  ".*mingw.*")
+         target_link_libraries(graphite2 kernel32 msvcr90 mingw32 gcc user32)
+@@ -133,7 +133,7 @@ endif (${CMAKE_SYSTEM_NAME} STREQUAL "Li
+ if  (${CMAKE_SYSTEM_NAME} STREQUAL "Darwin")
+     set_target_properties(graphite2 PROPERTIES 
+         COMPILE_FLAGS   "-Wall -Wextra -Wno-unknown-pragmas -Wendif-labels -Wshadow -Wno-ctor-dtor-privacy -Wno-non-virtual-dtor -fno-rtti -fno-exceptions -fvisibility=hidden -fvisibility-inlines-hidden -fno-stack-protector"
+-        LINK_FLAGS      "-nodefaultlibs" 
++        LINK_FLAGS      "${GRAPHITE_LINK_FLAGS}" 
+         LINKER_LANGUAGE C)
+     target_link_libraries(graphite2 c)
+     include(Graphite)
