@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2013/07/06 05:58:03 ryoon Exp $
+$NetBSD: distinfo,v 1.32 2014/05/16 10:19:11 obache Exp $
 
 SHA1 (imlib2-1.4.5.tar.bz2) = af86a2c38f4bc3806db57e64e74dc9814ad474a0
 RMD160 (imlib2-1.4.5.tar.bz2) = 3b8fd51a854f628f8e8b38612da6c99a0609c6aa
@@ -10,4 +10,4 @@ SHA1 (patch-ae) = 9a2838ebfebe2db8bcd1f5fbe13a680122f0f8c0
 SHA1 (patch-imlib2-config.in) = 621831f2fe661db1d78632b4c1c0b36ab2e8916d
 SHA1 (patch-src_lib_amd64__blend.S) = 226de814e6c890ec1fea105641e036416e670a9f
 SHA1 (patch-src_lib_amd64__blend__cmod.S) = a02c7b101cc16889002101cfc689e8e39cb04016
-SHA1 (patch-src_modules_loaders_loader__gif.c) = 00b0eab470cee236764aa804f030ba7ea5331d7c
+SHA1 (patch-src_modules_loaders_loader__gif.c) = fc4b01b32d277a8aa8b471fa800b3797371ccc90
