@@ -1,6 +1,6 @@
-$NetBSD: patch-libmpdemux_demux__gif.c,v 1.1 2013/07/06 07:07:18 ryoon Exp $
+$NetBSD: patch-libmpdemux_demux__gif.c,v 1.2 2014/05/16 09:49:06 wiz Exp $
 
-* Fix build with giflib 5.0.
+* Fix build with giflib 5.1.
 
 --- libmpdemux/demux_gif.c.orig	2010-12-12 10:37:15.000000000 +0000
 +++ libmpdemux/demux_gif.c
@@ -98,11 +98,13 @@ $NetBSD: patch-libmpdemux_demux__gif.c,v 1.1 2013/07/06 07:07:18 ryoon Exp $
      free(priv);
      return NULL;
    }
-@@ -302,7 +314,7 @@ static void demux_close_gif(demuxer_t* d
+@@ -301,8 +313,8 @@ static void demux_close_gif(demuxer_t* d
+ {
    gif_priv_t *priv = demuxer->priv;
    if (!priv) return;
-   if (priv->gif && DGifCloseFile(priv->gif) == GIF_ERROR)
+-  if (priv->gif && DGifCloseFile(priv->gif) == GIF_ERROR)
 -    PrintGifError();
++  if (priv->gif && DGifCloseFile(priv->gif, NULL) == GIF_ERROR)
 +    PrintGifError(priv->gif->Error);
    free(priv->refimg);
    free(priv);
