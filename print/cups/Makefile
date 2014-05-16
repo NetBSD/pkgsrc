@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.204 2014/05/15 12:51:58 wiz Exp $
+# $NetBSD: Makefile,v 1.205 2014/05/16 12:27:48 richard Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -70,8 +70,8 @@ CONFIGURE_ENV+=		DSOFLAGS=${LDFLAGS:M*:Q}
 .include "options.mk"
 
 .if ${OPSYS} == "SunOS"
-#LIBS_SSP =		-lssp_nonshared -lssp
-#CONFIGURE_ENV+=		LIBS_SSP=${LIBS_SSP:M*:Q}
+LIBS_SSP =		-lssp_nonshared -lssp
+CONFIGURE_ENV+=	LIBS_SSP=${LIBS_SSP:M*:Q}
 LIBS.SunOS+=		-liconv
 .endif
 
