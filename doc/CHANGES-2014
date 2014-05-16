@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1867 2014/05/16 00:49:49 wen Exp $
+$NetBSD: CHANGES-2014,v 1.1868 2014/05/16 01:06:41 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2602,3 +2602,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/hs-transformers version 0.4.1.0 [szptvlfn 2014-05-15]
 	Updated pkgtools/revbump to 2.7 [wiz 2014-05-15]
 	Updated time/p5-DateTime-TimeZone to 1.69 [wen 2014-05-16]
+	Added textproc/py-pyquery version 1.2.8 [rodent 2014-05-16]
