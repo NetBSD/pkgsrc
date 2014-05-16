@@ -1,6 +1,6 @@
-$NetBSD: patch-src_libming.h,v 1.2 2014/05/16 09:43:30 wiz Exp $
+$NetBSD: patch-src_libming.h,v 1.3 2014/05/16 10:00:33 obache Exp $
 
-* Introduce custom PrintGifError() from util/qprintf.c of giflib 5.0.4.
+* Introduce custom PrintGifError() from util/qprintf.c of giflib>=5.
 
 --- src/libming.h.orig	2013-06-08 14:08:51.000000000 +0000
 +++ src/libming.h
@@ -12,20 +12,30 @@ $NetBSD: patch-src_libming.h,v 1.2 2014/05/16 09:43:30 wiz Exp $
  
  
  #include "ming.h"
-@@ -78,9 +79,14 @@ typedef unsigned char BOOL;
+@@ -78,9 +79,26 @@ typedef unsigned char BOOL;
  
  #if GIFLIB_GIFERRORSTRING
  static void
--PrintGifError(void)
++#if (GIFLIB_MAJOR + 0) >= 5
 +PrintGifError(int ErrorCode)
++#else
+ PrintGifError(void)
++#endif
  {
--	fprintf(stderr, "\nGIF-LIB error: %s.\n", GifErrorString());
++#if (GIFLIB_MAJOR + 0) >= 5
++#  if GIFLIB_MAJOR == 5 && GIFLIB_MINOR == 0
++	char *Err = GifErrorString(ErrorCode);
++#  else
 +	const char *Err = GifErrorString(ErrorCode);
++#  endif
 +
 +	if (Err != NULL)
 +		fprintf(stderr, "\nGIF-LIB error: %s.\n", Err);
 +	else
 +		fprintf(stderr, "\nGIF-LIB undefined error %d.\n", ErrorCode);
++#else
+ 	fprintf(stderr, "\nGIF-LIB error: %s.\n", GifErrorString());
++#endif
  }
  #endif
  
