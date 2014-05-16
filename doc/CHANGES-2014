@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1875 2014/05/16 13:59:41 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.1876 2014/05/16 19:55:49 morr Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2610,3 +2610,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/calibre to 1.37.0 [wiz 2014-05-16]
 	Updated cross/freemint-gcc to 4.6.4nb1 [ryoon 2014-05-16]
 	Updated devel/nss to 3.16.1 [ryoon 2014-05-16]
+	Updated www/wordpress to 3.9.1 [morr 2014-05-16]
