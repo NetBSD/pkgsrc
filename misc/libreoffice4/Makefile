@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2014/05/13 18:36:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2014/05/16 11:53:08 ryoon Exp $
 
 VER=		4.2.4.2
 DISTNAME=	libreoffice-${VER}
 PKGNAME=	libreoffice4-${VER}
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/4.2.4/
 EXTRACT_SUFX=	.tar.xz
@@ -16,10 +17,6 @@ LICENSE=	gnu-lgpl-v3
 .include "../../mk/bsd.prefs.mk"
 .if !empty(MACHINE_PLATFORM:MNetBSD-5.*)
 BUILDLINK_TRANSFORM+=	rename:-O2:-O
-.endif
-
-.if ${OPSYS} == "OpenBSD"
-GCC_REQD+=	4.6
 .endif
 
 # LibreOfice's Makefile has its own pararell build mechanism. Avoid conflict.
@@ -85,14 +82,6 @@ MORE_DISTFILES= \
 	185d60944ea767075d27247c3162b3bc-unowinreg.dll \
 	368f114c078f94214a308a74c7e991bc-crosextrafonts-20130214.tar.gz \
 	c74b7223abe75949b4af367942d96c7a-crosextrafonts-carlito-20130920.tar.gz
-#	libmwaw-0.1.10.tar.bz2
-#	17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip
-#	ac4781e01619be13461bb2d562b94a7b-cppunit-1.13.1.tar.gz
-#	ea2acaf140ae40a87a952caa75184f4d-liborcus-0.5.1.tar.bz2
-#	26b3e95ddf3d9c077c480ea45874b3b8-lp_solve_5.5.tar.gz
-#	libvisio-0.0.28.tar.bz2
-#	972afb8fdf02d9e7517e258b7fa7f0eb-libwpd-0.9.8.tar.bz2
-#	ae330b9493bd4503ac390106ff6060d7-libexttextcat-3.4.3.tar.bz2
 
 .for md in ${MORE_DISTFILES}
 DISTFILES+=		${md}
@@ -126,7 +115,7 @@ USE_LANGUAGES+=		c c++
 
 USE_LIBTOOL=		yes
 # GUN tar is really needed. Some Makefiles depends on GNUTAR.
-USE_TOOLS+=		automake bash bison gmake gtar perl pkg-config unzip zip
+USE_TOOLS+=		automake bash bison gmake gtar gsed perl pkg-config unzip zip
 PTHREAD_OPTS+=		require
 
 HAS_CONFIGURE=		yes
@@ -134,7 +123,7 @@ HAS_CONFIGURE=		yes
 # Do not use /tmp, outside of WRKSRC.
 CONFIGURE_ENV+=		TMPDIR=${WRKSRC}/tmp
 
-CONFIGURE_ARGS+=	--prefix=${DESTDIR}${PREFIX}/${PKGNAME_NOREV}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}/${PKGNAME_NOREV}
 CONFIGURE_ARGS+=	--disable-ccache
 CONFIGURE_ARGS+=	--enable-dbus
 CONFIGURE_ARGS+=	--disable-epm
@@ -142,8 +131,6 @@ CONFIGURE_ARGS+=	--disable-fetch-external
 CONFIGURE_ARGS+=	--disable-firebird-sdbc
 CONFIGURE_ARGS+=	--disable-gconf
 CONFIGURE_ARGS+=	--disable-gnome-vfs
-CONFIGURE_ARGS+=	--disable-kde4
-CONFIGURE_ARGS+=	--disable-lockdown
 CONFIGURE_ARGS+=	--disable-odk
 CONFIGURE_ARGS+=	--disable-opengl
 CONFIGURE_ARGS+=	--disable-randr-link
@@ -153,7 +140,6 @@ CONFIGURE_ARGS+=	--disable-crashdump
 # Enabling GIO causes error. losessioninstall.component not found.
 CONFIGURE_ARGS+=	--disable-gio
 CONFIGURE_ARGS+=	--enable-gstreamer
-CONFIGURE_ARGS+=	--enable-gtk3
 CONFIGURE_ARGS+=	--enable-lockdown
 CONFIGURE_ARGS+=	--enable-python=system
 #CONFIGURE_ARGS+=	--enable-release-build
@@ -172,7 +158,7 @@ CONFIGURE_ARGS+=	--with-system-dicts
 CONFIGURE_ARGS+=	--enable-scripting-beanshell
 CONFIGURE_ARGS+=	--without-system-beanshell
 CONFIGURE_ARGS+=	--enable-scripting-javascript
-# internal vigra should be used for effective developement.
+# internal vigra should be used because only header files are used.
 CONFIGURE_ARGS+=	--without-system-vigra
 CONFIGURE_ARGS+=	--with-vendor="pkgsrc"
 CONFIGURE_ARGS+=	--without-doxygen
@@ -183,7 +169,7 @@ CONFIGURE_ARGS+=	--without-system-apache-commons
 CONFIGURE_ARGS+=	--with-system-cppunit
 CONFIGURE_ARGS+=	--without-system-jfreereport
 CONFIGURE_ARGS+=	--without-system-npapi-headers
-# internal sane should be used for effective developement.
+# internal sane should be used because only header files are used.
 CONFIGURE_ARGS+=	--without-system-sane
 # sbin might not be in PATH
 CONFIGURE_ARGS+=	ac_cv_path_SYSTEM_GENCCODE=${BUILDLINK_PREFIX.icu}/sbin/genccode
@@ -224,12 +210,18 @@ post-extract:
 	mkdir ${WRKSRC}/tmp
 
 do-install:
-	cd ${WRKSRC} && make install
+	cd ${WRKSRC} && make DESTDIR="${DESTDIR}" install
+# make install cleans ${DESTDIR}${PREFIX}/*, so bin etc. are removed.
+.for d in ${INSTALLATION_DIRS}
+	cd ${DESTDIR}${PREFIX} && \
+		${MKDIR} ${d}
+.endfor
 
 post-install:
 .for f in ${LO_PROGRAMS}
 	cd ${DESTDIR}${PREFIX}/bin && ${LN} -s ../${PKGNAME_NOREV}/program/${f}
 .endfor
+	${LN} -s ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/program/soffice ${DESTDIR}${PREFIX}/bin/libreoffice
 .for f in ${LO_DESKTOP_FILES}
 	cd ${DESTDIR}${PREFIX}/share/applications && ${LN} -s ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/share/xdg/${f}
 .endfor
@@ -298,7 +290,6 @@ post-install:
 .include "../../www/curl/buildlink3.mk"
 .include "../../www/neon/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
