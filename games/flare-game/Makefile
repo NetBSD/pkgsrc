@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2014/02/24 16:16:11 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/17 16:10:44 wiz Exp $
 #
 
 DISTNAME=	v0.19
 PKGNAME=	flare-game-${DISTNAME:S/v//1}
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	https://github.com/clintbellanger/flare-game/archive/
 DIST_SUBDIR=	${PKGBASE}
