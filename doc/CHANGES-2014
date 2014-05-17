@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1882 2014/05/17 14:56:37 he Exp $
+$NetBSD: CHANGES-2014,v 1.1883 2014/05/17 16:01:56 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2617,3 +2617,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added converters/py-cairosvg version 1.0.7 [rodent 2014-05-17]
 	Added graphics/py-pygal version 1.4.6 [rodent 2014-05-17]
 	Updated net/ldns to 1.6.16nb4 [he 2014-05-17]
+	Added security/py-cybox version 2.1.0.4 [khorben 2014-05-17]
