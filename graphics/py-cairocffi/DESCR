@@ -1,0 +1,7 @@
+cairocffi is a CFFI-based drop-in replacement for Pycairo, a set of Python
+bindings and object-oriented API for Cairo. Cairo is a 2D vector graphics
+library with support for multiple backends including image buffers, PNG,
+PostScript, PDF, and SVG file output.
+
+Additionally, the cairocffi.pixbuf module uses GDK-PixBuf to decode various
+image formats for use in Cairo.
