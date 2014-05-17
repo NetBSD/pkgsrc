@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/05/17 13:59:37 rodent Exp $
+
+SHA1 (pygal-1.4.6.tar.gz) = b84d5b8e115ae8391dac896c4db535af97505cb8
+RMD160 (pygal-1.4.6.tar.gz) = 3d0c909d71edfa3834a976529223a75c9ad45aac
+Size (pygal-1.4.6.tar.gz) = 727605 bytes
