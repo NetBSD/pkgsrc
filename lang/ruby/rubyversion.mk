@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.117 2014/05/01 12:45:09 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.118 2014/05/17 11:34:35 obache Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -48,7 +48,7 @@
 #	If "Yes", the package dosen't depend on any version of Ruby, such
 #	as editing mode for emacs.  In this case, package's name would begin
 #	with "ruby-".  Otherwise, the package's name is begin with
-#	${RUBY_PKGPREFIX}; "ruby18", "ruby193" or "ruby200".
+#	${RUBY_PKGPREFIX}; "ruby18", "ruby193" , "ruby200" or "ruby21".
 #
 #		Possible values: Yes No
 #		Default: No
@@ -69,7 +69,7 @@
 # RUBY_VER
 #	Really selected version of ruby.
 #
-#		Possible values: 18 193 200
+#		Possible values: 18 193 200 21
 #
 #	Use this variable in pkgsrc's Makefile
 #
