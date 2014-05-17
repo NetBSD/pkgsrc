@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1884 2014/05/17 16:06:15 khorben Exp $
+$NetBSD: CHANGES-2014,v 1.1885 2014/05/17 16:09:32 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2619,3 +2619,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/ldns to 1.6.16nb4 [he 2014-05-17]
 	Added security/py-cybox version 2.1.0.4 [khorben 2014-05-17]
 	Added security/py-stix version 1.1.0.6 [khorben 2014-05-17]
+	Added security/py-libtaxii version 1.1.101 [khorben 2014-05-17]
