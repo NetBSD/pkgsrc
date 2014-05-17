@@ -1,0 +1,16 @@
+$NetBSD: patch-src_lib_Makefile.in,v 1.1 2014/05/17 09:25:01 adam Exp $
+
+Don't link against X11 libs, when X11 support has been disabled.
+
+--- src/lib/Makefile.in.orig	2014-05-17 07:59:57.000000000 +0000
++++ src/lib/Makefile.in
+@@ -443,7 +443,8 @@ amd64_blend_cmod.S
+ MMX_OBJS = $(MMX_SRCS:.S=.lo)
+ AMD64_OBJS = $(AMD64_SRCS:.S=.lo)
+ EXTRA_DIST = $(MMX_SRCS) $(AMD64_SRCS) asm_loadimmq.S
+-MY_LIBS = -lXext -lX11 $(FREETYPE_LIBS) $(DLOPEN_LIBS) -lm
++@BUILD_X11_FALSE@MY_LIBS = $(FREETYPE_LIBS) $(DLOPEN_LIBS) -lm
++@BUILD_X11_TRUE@MY_LIBS = -lXext -lX11 $(FREETYPE_LIBS) $(DLOPEN_LIBS) -lm
+ @BUILD_AMD64_FALSE@@BUILD_MMX_FALSE@libImlib2_la_LIBADD = $(MY_LIBS)
+ @BUILD_AMD64_TRUE@@BUILD_MMX_FALSE@libImlib2_la_LIBADD = $(AMD64_OBJS) $(MY_LIBS)
+ @BUILD_MMX_TRUE@libImlib2_la_LIBADD = $(MMX_OBJS) $(MY_LIBS)

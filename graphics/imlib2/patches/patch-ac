@@ -1,12 +1,12 @@
-$NetBSD: patch-ac,v 1.8 2011/11/07 12:14:15 drochner Exp $
+$NetBSD: patch-ac,v 1.9 2014/05/17 09:25:01 adam Exp $
 
 Add minimalist #ifndef blocks to rip out XShm support on Interix.
 
---- src/lib/grab.c.orig	2011-04-15 22:05:28.000000000 +0000
+--- src/lib/grab.c.orig	2013-12-21 10:16:10.000000000 +0000
 +++ src/lib/grab.c
-@@ -530,7 +530,9 @@ __imlib_GrabDrawableToRGBA(DATA32 * data
+@@ -528,7 +528,9 @@ __imlib_GrabDrawableToRGBA(DATA32 * data
     int                 i;
-    int                 src_x, src_y, src_w, src_h, origw, origh;
+    int                 src_x, src_y, src_w, src_h;
     int                 width, height, clipx, clipy;
 +#ifndef __INTERIX
     XShmSegmentInfo     shminfo, mshminfo;
@@ -14,7 +14,7 @@ Add minimalist #ifndef blocks to rip out XShm support on Interix.
     XImage             *xim, *mxim;
     XColor              cols[256];
  
-@@ -665,11 +667,13 @@ __imlib_GrabDrawableToRGBA(DATA32 * data
+@@ -661,11 +663,13 @@ __imlib_GrabDrawableToRGBA(DATA32 * data
        __imlib_ShmCheck(d);
  
     xim = NULL;
@@ -28,7 +28,7 @@ Add minimalist #ifndef blocks to rip out XShm support on Interix.
     if (!xim)
        xim = XGetImage(d, p, x, y, w, h, 0xffffffff, ZPixmap);
     if (!xim)
-@@ -740,8 +744,10 @@ __imlib_GrabDrawableToRGBA(DATA32 * data
+@@ -736,8 +740,10 @@ __imlib_GrabDrawableToRGBA(DATA32 * data
                              d, xim, mxim, v, xatt.depth, x, y, w, h, 0);
  
     /* destroy the Ximage */
