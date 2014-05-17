@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2014/04/20 01:45:18 schmonz Exp $
+# $NetBSD: Makefile,v 1.38 2014/05/17 16:10:46 wiz Exp $
 
 DISTNAME=		v3.8
 PKGNAME=		rss2email-3.8
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}archive/
 DIST_SUBDIR=		rss2email

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2013/10/24 12:32:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2014/05/17 16:10:44 wiz Exp $
 #
 
 DISTNAME=	duckmaze-pc-0.2
 PKGNAME=	duckmaze-0.2
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=duckmaze/}
 EXTRACT_SUFX=	.zip

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2012/10/23 17:18:42 asau Exp $
+# $NetBSD: Makefile,v 1.7 2014/05/17 16:10:47 wiz Exp $
 #
 
 DISTNAME=	nicovideo-dl-0.0.20120212
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=nicovideo-dl/56304/}
 

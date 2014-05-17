@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2013/02/17 19:18:04 dholland Exp $
+# $NetBSD: Makefile,v 1.13 2014/05/17 16:10:45 wiz Exp $
 #
 
 DISTNAME=	ibus-el-0.3.2
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://www11.atwiki.jp/s-irie/pub/emacs/ibus/
 
