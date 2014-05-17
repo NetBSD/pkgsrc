@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/17 16:57:55 khorben Exp $
+${PYSITELIB}/ordlookup/__init__.py
+${PYSITELIB}/ordlookup/__init__.pyc
+${PYSITELIB}/ordlookup/__init__.pyo
+${PYSITELIB}/ordlookup/oleaut32.py
+${PYSITELIB}/ordlookup/oleaut32.pyc
+${PYSITELIB}/ordlookup/oleaut32.pyo
+${PYSITELIB}/ordlookup/ws2_32.py
+${PYSITELIB}/ordlookup/ws2_32.pyc
+${PYSITELIB}/ordlookup/ws2_32.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pefile.py
+${PYSITELIB}/pefile.pyc
+${PYSITELIB}/pefile.pyo
+${PYSITELIB}/peutils.py
+${PYSITELIB}/peutils.pyc
+${PYSITELIB}/peutils.pyo
