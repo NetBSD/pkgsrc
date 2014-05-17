@@ -1,0 +1,14 @@
+$NetBSD: patch-configure.ac,v 1.1 2014/05/17 04:06:56 schmonz Exp $
+
+NetBSD does not support AI_V4MAPPED.
+
+--- configure.ac.orig	2013-12-13 17:54:37.000000000 +0000
++++ configure.ac
+@@ -30,6 +30,7 @@ fi
+ 
+ AC_CHECK_HEADERS(sys/poll.h sys/select.h)
+ AC_CHECK_FUNCS(vasprintf memrchr)
++AC_CHECK_DECLS([AI_V4MAPPED])
+ 
+ AC_CHECK_LIB(socket, socket, [SOCK_LIBS="-lsocket"])
+ AC_CHECK_LIB(nsl, inet_ntoa, [SOCK_LIBS="$SOCK_LIBS -lnsl"])
