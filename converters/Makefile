@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2014/02/05 21:43:39 abs Exp $
+# $NetBSD: Makefile,v 1.129 2014/05/17 13:50:37 rodent Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -84,6 +84,7 @@ SUBDIR+=	php-iconv
 SUBDIR+=	php-mbstring
 SUBDIR+=	psiconv
 SUBDIR+=	pstotext
+SUBDIR+=	py-cairosvg
 SUBDIR+=	py-chardet
 SUBDIR+=	py-jpCodecs
 SUBDIR+=	py-simplejson
