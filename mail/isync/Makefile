@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2014/04/24 14:48:44 schmonz Exp $
+# $NetBSD: Makefile,v 1.34 2014/05/17 04:06:56 schmonz Exp $
 
 DISTNAME=	isync-1.1.0
 CATEGORIES=	mail net
@@ -15,6 +15,9 @@ BDB_ACCEPTED=		db4 db5
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 LDFLAGS+=		-lcrypto
+
+post-patch:
+	${TOUCH} ${WRKSRC}/configure ${WRKSRC}/aclocal.m4 ${WRKSRC}/Makefile.in
 
 BUILDLINK_TRANSFORM+=	l:db:${BDB_TYPE}
 .include "../../security/openssl/buildlink3.mk"
