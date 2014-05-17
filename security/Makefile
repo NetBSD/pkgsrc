@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.510 2014/05/08 15:27:10 imil Exp $
+# $NetBSD: Makefile,v 1.511 2014/05/17 16:00:24 khorben Exp $
 #
 
 COMMENT=	Security tools
@@ -346,6 +346,7 @@ SUBDIR+=	py-cryptkit
 SUBDIR+=	py-crypto
 SUBDIR+=	py-cryptography
 SUBDIR+=	py-cryptopp
+SUBDIR+=	py-cybox
 SUBDIR+=	py-denyhosts
 SUBDIR+=	py-ecdsa
 SUBDIR+=	py-ezPyCrypto
