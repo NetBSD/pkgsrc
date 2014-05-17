@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2012/10/23 10:24:06 wiz Exp $
+# $NetBSD: options.mk,v 1.12 2014/05/17 09:25:01 adam Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -7,7 +7,7 @@ PKG_SUPPORTED_OPTIONS=	x11
 PKG_SUGGESTED_OPTIONS=	x11
 .if ${MACHINE_ARCH} == "i386"
 PKG_SUPPORTED_OPTIONS+=	mmx
-.elif ${MACHINE_ARCH} == "x86_64"
+.elif ${MACHINE_ARCH} == "x86_64" && empty(PKGSRC_COMPILER:Mclang)
 PKG_SUPPORTED_OPTIONS+=	imlib2-amd64
 PKG_SUGGESTED_OPTIONS+=	imlib2-amd64
 .endif
