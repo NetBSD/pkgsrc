@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/17 20:56:10 szptvlfn Exp $
+lib/tagged-${PKGVERSION}/${HASKELL_VERSION}/Data/Proxy.hi
+lib/tagged-${PKGVERSION}/${HASKELL_VERSION}/Data/Tagged.hi
+lib/tagged-${PKGVERSION}/${HASKELL_VERSION}/HStagged-${PKGVERSION}.o
+lib/tagged-${PKGVERSION}/${HASKELL_VERSION}/libHStagged-${PKGVERSION}.a
+lib/tagged-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/tagged-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/tagged-${PKGVERSION}/html/Data-Proxy.html
+${PLIST.doc}share/doc/tagged-${PKGVERSION}/html/Data-Tagged.html
+${PLIST.doc}share/doc/tagged-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/tagged-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/tagged-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/tagged-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/tagged-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/tagged-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/tagged-${PKGVERSION}/html/mini_Data-Proxy.html
+${PLIST.doc}share/doc/tagged-${PKGVERSION}/html/mini_Data-Tagged.html
+${PLIST.doc}share/doc/tagged-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/tagged-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/tagged-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/tagged-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/tagged-${PKGVERSION}/html/tagged.haddock
