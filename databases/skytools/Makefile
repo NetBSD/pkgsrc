@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2014/04/24 05:48:01 obache Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/17 16:10:42 wiz Exp $
 
 DISTNAME=	skytools-3.2
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://pgfoundry.org/frs/download.php/3622/
 
