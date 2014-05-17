@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2014/05/17 13:43:41 rodent Exp $
+
+SHA1 (cairocffi-0.5.3.tar.gz) = 28549601ae30a4be51f6db28958f65111dbde02a
+RMD160 (cairocffi-0.5.3.tar.gz) = a3159843687fe818f979563baa8db592cde9594b
+Size (cairocffi-0.5.3.tar.gz) = 71140 bytes
+SHA1 (patch-cairocffi_pixbuf.py) = 3cbc591caf75095b7316b0b932890b845e0a3bf4
