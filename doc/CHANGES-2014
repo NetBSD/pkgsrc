@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1880 2014/05/17 13:49:57 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.1881 2014/05/17 13:59:49 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2615,3 +2615,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/imlib2 to 1.4.6 [adam 2014-05-17]
 	Added graphics/py-cairocffi version 0.5.3 [rodent 2014-05-17]
 	Added converters/py-cairosvg version 1.0.7 [rodent 2014-05-17]
+	Added graphics/py-pygal version 1.4.6 [rodent 2014-05-17]
