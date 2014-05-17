@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.681 2014/05/17 13:44:40 rodent Exp $
+# $NetBSD: Makefile,v 1.682 2014/05/17 14:00:19 rodent Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -402,6 +402,7 @@ SUBDIR+=	py-matplotlib-tk
 SUBDIR+=	py-nwdiag
 SUBDIR+=	py-piddle
 SUBDIR+=	py-pycha
+SUBDIR+=	py-pygal
 SUBDIR+=	py-qrcode
 SUBDIR+=	py-seqdiag
 SUBDIR+=	py-sk1libs
