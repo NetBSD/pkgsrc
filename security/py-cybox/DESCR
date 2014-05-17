@@ -1,0 +1,7 @@
+A python library for parsing, manipulating, and generating CybOX content.
+
+A primary goal of the python-cybox library is to remain faithful to both the
+CybOX standard and to customary Python practices. There are places where these
+will conflict, and the goal is to make the library intuitive both to those
+familiar with the XML schemas (but less familiar with Python) and also to
+experienced Python developers who want to add CybOX support to their programs.
