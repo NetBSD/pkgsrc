@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.680 2014/03/31 10:12:07 adam Exp $
+# $NetBSD: Makefile,v 1.681 2014/05/17 13:44:40 rodent Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -386,6 +386,7 @@ SUBDIR+=	py-biggles
 SUBDIR+=	py-blockdiag
 SUBDIR+=	py-cairo
 SUBDIR+=	py-cairo3
+SUBDIR+=	py-cairocffi
 SUBDIR+=	py-dot
 SUBDIR+=	py-fits
 SUBDIR+=	py-gdchart
