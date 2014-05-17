@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1877 2014/05/16 20:32:42 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.1878 2014/05/17 09:26:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2612,3 +2612,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/nss to 3.16.1 [ryoon 2014-05-16]
 	Updated www/wordpress to 3.9.1 [morr 2014-05-16]
 	Added devel/hs-mtl version 2.2.0.1 [szptvlfn 2014-05-16]
+	Updated graphics/imlib2 to 1.4.6 [adam 2014-05-17]
