@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.597 2014/05/10 16:39:06 manu Exp $
+# $NetBSD: Makefile,v 1.598 2014/05/17 16:58:20 khorben Exp $
 #
 
 COMMENT=	System utilities
@@ -387,6 +387,7 @@ SUBDIR+=	py-dbus
 SUBDIR+=	py-gnome-menus
 SUBDIR+=	py-notify
 SUBDIR+=	py-notify-python
+SUBDIR+=	py-pefile
 SUBDIR+=	py-psutil
 SUBDIR+=	py-setproctitle
 SUBDIR+=	py-xattr
