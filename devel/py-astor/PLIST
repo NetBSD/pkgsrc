@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/18 03:22:03 rodent Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/astor/__init__.py
+${PYSITELIB}/astor/__init__.pyc
+${PYSITELIB}/astor/__init__.pyo
+${PYSITELIB}/astor/codegen.py
+${PYSITELIB}/astor/codegen.pyc
+${PYSITELIB}/astor/codegen.pyo
+${PYSITELIB}/astor/misc.py
+${PYSITELIB}/astor/misc.pyc
+${PYSITELIB}/astor/misc.pyo
+${PYSITELIB}/astor/treewalk.py
+${PYSITELIB}/astor/treewalk.pyc
+${PYSITELIB}/astor/treewalk.pyo
+${PYSITELIB}/setuputils.py
+${PYSITELIB}/setuputils.pyc
+${PYSITELIB}/setuputils.pyo
