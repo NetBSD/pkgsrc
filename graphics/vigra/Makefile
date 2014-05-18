@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2014/04/10 06:21:29 obache Exp $
+# $NetBSD: Makefile,v 1.26 2014/05/18 11:31:09 adam Exp $
 
-DISTNAME=	vigra-1.9.0-src
-PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	4
+DISTNAME=	vigra-1.10.0-src-with-docu
+PKGNAME=	vigra-1.10.0
 CATEGORIES=	graphics
-MASTER_SITES=	http://hci.iwr.uni-heidelberg.de/vigra/
+MASTER_SITES=	https://github.com/ukoethe/vigra/releases/download/Version-1-10-0/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hci.iwr.uni-heidelberg.de/vigra/
