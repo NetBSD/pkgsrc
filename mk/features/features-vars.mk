@@ -1,4 +1,4 @@
-# $NetBSD: features-vars.mk,v 1.21 2013/11/26 07:04:55 obache Exp $
+# $NetBSD: features-vars.mk,v 1.22 2014/05/18 08:38:07 obache Exp $
 #
 # The platforms that are supported by pkgsrc differ in the amount of
 # functions they provide in the C library (libc). Functions that are
@@ -133,7 +133,7 @@ MISSING_FEATURES+=	${_feature_}
 
 .for _feature_ in getprogname setprogname
 .  if !empty(USE_FEATURES:M${_feature_})
-.    if (${OPSYS} != NetBSD) && (${OPSYS} != FreeBSD) && (${OPSYS} != DragonFly)
+.    if (${OPSYS} != NetBSD) && (${OPSYS} != FreeBSD) && (${OPSYS} != DragonFly) && (${OPSYS} != Haiku)
 MISSING_FEATURES+=	${_feature_}
 .    endif
 .  endif
