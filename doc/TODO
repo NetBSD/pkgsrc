@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13309 2014/05/16 19:55:50 morr Exp $
+$NetBSD: TODO,v 1.13310 2014/05/18 08:00:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -385,7 +385,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o asapm-3.1
 	o asc-2.6.0
 	o aspell-nb-2.0.10
-	o asymptote-2.27
+	o asymptote-2.31
 	o at-spi2-atk-2.12.1
 	o aterm-1.0.1
 	o aubio-0.4.0
@@ -441,6 +441,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cln-1.33
 	o clutter-1.18.2
 	o clutter-gst-2.0.10 [require gstreamer1>=1.2.0]
+	o cmus-2.5.1
 	o coccigrep-2.13
 	o cogl-1.18.0
 	o colorize-0.3.4
@@ -480,6 +481,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o denemo-1.1.4
 	o dhid-5.3
 	o diffstat-1.58
+	o digikam-4.0
 	o doclifter-2.14
 	o dolphin-4.0.2
 	o dos2unix-6.0.5
@@ -648,7 +650,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gst-plugins1-base-1.2.0
 	o gstreamer-1.2
 	o gstreamer1-1.2.0
-	o gthumb-3.2.7
+	o gthumb-3.2.8
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
 	o gtk3-3.12.0 [needs glib2-2.40.0]
@@ -703,7 +705,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o jcabc2ps-20070110
 	o jed-0.99-18
 	o john-1.8.0
-	o jpegoptim-1.3.1
+	o jpegoptim-1.4.0
 	o jpilot-syncmal-0.81
 	o kadu-0.11.1
 	o kaffe-1.1.9
@@ -713,6 +715,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kdbg-2.5.4
 	o kde4-4.12.5
 	o kde4-4.13.0
+	o kdenlive-0.9.8
 	o kdrill-6.5
 	o kismet-2011.03r2 [pkg/45692]
 	o klavaro-3.0
@@ -1142,7 +1145,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vfu-4.09
 	o vicq-0.4.2
 	o viewvc-1.1.22
-	o vifm-0.7.6
+	o vifm-0.7.7
 	o vinagre-3.12.2
 	o vino-3.12.0
 	o visual-regexp-3.1
@@ -1162,7 +1165,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o webmin-1.680
 	o websvn-2.3.2
 	o windowlab-1.40
-	o wine-devel-1.7.18
+	o wine-devel-1.7.19
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wml-2.0.11
