@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1905 2014/05/18 03:23:29 rodent Exp $
+# $NetBSD: Makefile,v 1.1906 2014/05/18 21:19:20 szptvlfn Exp $
 #
 
 COMMENT=	Development utilities
@@ -295,6 +295,7 @@ SUBDIR+=	hptools
 SUBDIR+=	hs-mtl
 SUBDIR+=	hs-tagged
 SUBDIR+=	hs-transformers
+SUBDIR+=	hs-utf8-string
 SUBDIR+=	ht
 SUBDIR+=	hugs-HUnit
 SUBDIR+=	hugs-unix
