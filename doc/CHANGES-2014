@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1907 2014/05/18 15:39:25 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1908 2014/05/18 20:15:41 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2646,3 +2646,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/ts to 0.7.4 [wiz 2014-05-18]
 	Updated devel/py-tryton to 3.2.1 [rodent 2014-05-18]
 	Updated multimedia/xine-lib to 1.2.5nb1 [wiz 2014-05-18]
+	Updated textproc/p5-Text-vCard to 3.05 [kleink 2014-05-18]
