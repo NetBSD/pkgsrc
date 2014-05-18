@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.31 2014/05/17 18:57:42 schnoebe Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.32 2014/05/18 20:58:10 schnoebe Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q1 branch:
@@ -114,3 +114,5 @@ Pullup ticket #4408 - requested by wiz
 emulators/qemu: security update
 Pullup ticket $4409 - requested by he
 net/ldns: security update
+Pullup ticket #4405 - requested by obache
+emulators/suse131_libxml2: security update
