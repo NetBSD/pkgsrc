@@ -1,4 +1,6 @@
-$NetBSD: patch-src_libw32dll_wine_registry.c,v 1.1 2012/05/18 18:53:31 marino Exp $
+$NetBSD: patch-src_libw32dll_wine_registry.c,v 1.2 2014/05/18 15:38:18 wiz Exp $
+
+https://bugs.xine-project.org/show_bug.cgi?id=521
 
 --- src/libw32dll/wine/registry.c.orig	2012-02-04 00:41:43.000000000 +0000
 +++ src/libw32dll/wine/registry.c
