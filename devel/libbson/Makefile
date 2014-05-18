@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/05/07 15:43:59 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/18 21:19:36 joerg Exp $
 
 DISTNAME=	libbson-0.6.8
 CATEGORIES=	devel
@@ -10,6 +10,7 @@ COMMENT=	BSON utility library
 LICENSE=	apache-2.0
 
 BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
