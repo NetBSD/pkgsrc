@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1892 2014/05/18 02:52:54 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1893 2014/05/18 03:06:46 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2625,3 +2625,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added net/p5-Net-AMQP version 0.06 [mspo 2014-05-18]
 	Updated mail/milter-manager to 2.0.3 [obache 2014-05-18]
 	Added devel/ruby-delayer version 0.0.2 [obache 2014-05-18]
+	Added devel/py-rply version 0.7.2 [rodent 2014-05-18]
