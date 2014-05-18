@@ -1,0 +1,2 @@
+bin/hy @PREFIX@/bin/hy@PYVERSSUFFIX@
+bin/hyc @PREFIX@/bin/hyc@PYVERSSUFFIX@
