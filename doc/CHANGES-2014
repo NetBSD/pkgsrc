@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1913 2014/05/18 21:17:22 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.1914 2014/05/18 21:20:12 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2652,3 +2652,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added textproc/p5-String-Similarity version 1.04 [rodent 2014-05-18]
 	Added sysutils/p5-Config-Simple version 4.59 [rodent 2014-05-18]
 	Added devel/hs-utf8-string version 0.3.7 [szptvlfn 2014-05-18]
+	Added devel/hs-text version 1.1.1.2 [szptvlfn 2014-05-18]
