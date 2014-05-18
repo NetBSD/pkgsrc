@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1889 2014/05/18 00:15:19 mspo Exp $
+$NetBSD: CHANGES-2014,v 1.1890 2014/05/18 02:22:27 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2622,4 +2622,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added security/py-libtaxii version 1.1.101 [khorben 2014-05-17]
 	Added sysutils/py-pefile version 1.2.10.139 [khorben 2014-05-17]
 	Added devel/hs-tagged version 0.7.2 [szptvlfn 2014-05-17]
-	Added net/p5-Net-AMQP to 0.06 [mspo 2014-05-18]
+	Added net/p5-Net-AMQP version 0.06 [mspo 2014-05-18]
