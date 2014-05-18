@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.40 2014/05/18 11:18:17 obache Exp $
+# $NetBSD: builtin.mk,v 1.41 2014/05/18 11:20:53 obache Exp $
 
 BUILTIN_PKG:=	openssl
 
@@ -124,6 +124,8 @@ BUILDLINK_PREFIX.openssl=	/usr/sfw
 BUILDLINK_PASSTHRU_DIRS+=	/usr/sfw
 .      elif !empty(H_OPENSSLV:M/usr/*)
 BUILDLINK_PREFIX.openssl=	/usr
+.      elif !empty(H_OPENSSLV:M/boot/system/develop/*)
+BUILDLINK_PREFIX.openssl=	/boot/system/develop
 .      elif !empty(H_OPENSSLV:M/boot/common/*)
 BUILDLINK_PREFIX.openssl=	/boot/common
 .      endif
