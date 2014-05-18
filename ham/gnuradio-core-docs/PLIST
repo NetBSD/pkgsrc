@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2014/04/28 12:19:30 joerg Exp $
+@comment $NetBSD: PLIST,v 1.18 2014/05/18 21:22:49 joerg Exp $
 share/doc/gnuradio-${PKGVERSION}/README
 share/doc/gnuradio-${PKGVERSION}/README.hacking
 share/doc/gnuradio-${PKGVERSION}/html/ad9862_8h.html
@@ -5609,9 +5609,6 @@ share/doc/gnuradio-${PKGVERSION}/html/gr__binary__slicer__fb_8h__incl.png
 share/doc/gnuradio-${PKGVERSION}/html/gr__binary__slicer__fb_8h_source.html
 share/doc/gnuradio-${PKGVERSION}/html/gr__block_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/gr__block_8h.js
-share/doc/gnuradio-${PKGVERSION}/html/gr__block_8h__dep__incl.map
-share/doc/gnuradio-${PKGVERSION}/html/gr__block_8h__dep__incl.md5
-share/doc/gnuradio-${PKGVERSION}/html/gr__block_8h__dep__incl.png
 share/doc/gnuradio-${PKGVERSION}/html/gr__block_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/gr__block_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/gr__block_8h__incl.png
@@ -7508,9 +7505,6 @@ share/doc/gnuradio-${PKGVERSION}/html/gr__sub__ss_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/gr__sub__ss_8h__incl.png
 share/doc/gnuradio-${PKGVERSION}/html/gr__sub__ss_8h_source.html
 share/doc/gnuradio-${PKGVERSION}/html/gr__sync__block_8h.html
-share/doc/gnuradio-${PKGVERSION}/html/gr__sync__block_8h__dep__incl.map
-share/doc/gnuradio-${PKGVERSION}/html/gr__sync__block_8h__dep__incl.md5
-share/doc/gnuradio-${PKGVERSION}/html/gr__sync__block_8h__dep__incl.png
 share/doc/gnuradio-${PKGVERSION}/html/gr__sync__block_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/gr__sync__block_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/gr__sync__block_8h__incl.png
