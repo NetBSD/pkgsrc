@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.6 2014/04/21 16:14:40 wiz Exp $
+$NetBSD: patch-ab,v 1.7 2014/05/18 08:12:22 wiz Exp $
 
 o Handle the various operating systems in the same way avoiding hardcoding
-o Build and link with openjpeg-2.0
+o Build and link with openjpeg-2.1
 o libcurl (www/curl) support
 
 --- Makerules.orig	2014-04-11 15:10:41.000000000 +0000
@@ -60,8 +60,8 @@ o libcurl (www/curl) support
  SYS_FREETYPE_LIBS = $(shell pkg-config --libs freetype2)
 -SYS_OPENJPEG_CFLAGS = $(shell pkg-config --cflags libopenjpeg1)
 -SYS_OPENJPEG_LIBS = $(shell pkg-config --libs libopenjpeg1)
-+SYS_OPENJPEG_CFLAGS = -I/usr/pkg/include/openjpeg-2.0
-+SYS_OPENJPEG_LIBS = -lopenjp2
++SYS_OPENJPEG_CFLAGS = $(shell pkg-config --cflags libopenjp2)
++SYS_OPENJPEG_LIBS = $(shell pkg-config --libs libopenjp2)
  SYS_JBIG2DEC_LIBS = -ljbig2dec
  SYS_JPEG_LIBS = -ljpeg
  SYS_ZLIB_LIBS = -lz
