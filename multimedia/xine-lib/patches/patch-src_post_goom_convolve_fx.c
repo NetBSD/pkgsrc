@@ -1,8 +1,10 @@
-$NetBSD: patch-src_post_goom_convolve_fx.c,v 1.1 2012/09/20 15:33:40 jperkin Exp $
+$NetBSD: patch-src_post_goom_convolve_fx.c,v 1.2 2014/05/18 15:38:18 wiz Exp $
 
 Solaris cannot handle this MMX section, failing with:
 
  error: can't find a register in class GENERAL_REGS while reloading 'asm'.
+
+https://bugs.xine-project.org/show_bug.cgi?id=530
 
 --- src/post/goom/convolve_fx.c.orig	2012-09-20 15:19:11.848384461 +0000
 +++ src/post/goom/convolve_fx.c	2012-09-20 15:19:24.654150136 +0000

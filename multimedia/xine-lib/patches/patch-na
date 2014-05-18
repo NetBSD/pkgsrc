@@ -1,4 +1,6 @@
-$NetBSD: patch-na,v 1.1 2012/03/21 16:37:15 drochner Exp $
+$NetBSD: patch-na,v 1.2 2014/05/18 15:38:18 wiz Exp $
+
+https://bugs.xine-project.org/show_bug.cgi?id=522
 
 --- m4/audio_out.m4.orig	2012-02-05 12:50:15.000000000 +0000
 +++ m4/audio_out.m4
