@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1901 2014/05/17 20:58:19 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.1902 2014/05/18 02:53:42 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -1600,6 +1600,7 @@ SUBDIR+=	ruby-debug
 SUBDIR+=	ruby-debug-base
 SUBDIR+=	ruby-debug-extra
 SUBDIR+=	ruby-debug-ide
+SUBDIR+=	ruby-delayer
 SUBDIR+=	ruby-deprecated
 SUBDIR+=	ruby-dhaka
 SUBDIR+=	ruby-docile
