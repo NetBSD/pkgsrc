@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1903 2014/05/18 03:08:56 rodent Exp $
+# $NetBSD: Makefile,v 1.1904 2014/05/18 03:14:16 mspo Exp $
 #
 
 COMMENT=	Development utilities
@@ -570,6 +570,7 @@ SUBDIR+=	p5-Any-Moose
 SUBDIR+=	p5-AnyEvent
 SUBDIR+=	p5-AnyEvent-AIO
 SUBDIR+=	p5-AnyEvent-IRC
+SUBDIR+=	p5-AnyEvent-RabbitMQ
 SUBDIR+=	p5-AnyEvent-XMPP
 SUBDIR+=	p5-App-CLI
 SUBDIR+=	p5-App-Cache
