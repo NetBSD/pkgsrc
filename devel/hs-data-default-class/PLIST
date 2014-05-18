@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/18 21:26:26 szptvlfn Exp $
+lib/data-default-class-${PKGVERSION}/${HASKELL_VERSION}/Data/Default/Class.hi
+lib/data-default-class-${PKGVERSION}/${HASKELL_VERSION}/HSdata-default-class-${PKGVERSION}.o
+lib/data-default-class-${PKGVERSION}/${HASKELL_VERSION}/libHSdata-default-class-${PKGVERSION}.a
+lib/data-default-class-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/data-default-class-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/data-default-class-${PKGVERSION}/html/Data-Default-Class.html
+${PLIST.doc}share/doc/data-default-class-${PKGVERSION}/html/data-default-class.haddock
+${PLIST.doc}share/doc/data-default-class-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/data-default-class-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/data-default-class-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/data-default-class-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/data-default-class-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/data-default-class-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/data-default-class-${PKGVERSION}/html/mini_Data-Default-Class.html
+${PLIST.doc}share/doc/data-default-class-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/data-default-class-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/data-default-class-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/data-default-class-${PKGVERSION}/html/synopsis.png
