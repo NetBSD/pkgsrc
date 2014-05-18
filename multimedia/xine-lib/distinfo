@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.92 2014/05/18 15:38:18 wiz Exp $
+$NetBSD: distinfo,v 1.93 2014/05/18 20:48:21 wiz Exp $
 
 SHA1 (xine-lib-1.2.5.tar.xz) = c7ef38fa8ee301e44ba28d6549220546d02d053d
 RMD160 (xine-lib-1.2.5.tar.xz) = bb9c3a06666f454e8dfda85471eb6605e2dcb685
 Size (xine-lib-1.2.5.tar.xz) = 5007012 bytes
 SHA1 (patch-ag) = a0edf812dd3fa4baf273950430fa47b7579ae53e
 SHA1 (patch-aj) = df1759c9aaedc00fe55ea03aa5a0800efd68b02d
-SHA1 (patch-ak) = f8ef146351da7ed3dabfb611c12939e5e8a43af9
 SHA1 (patch-as) = 302acfbd2a9e7651bed428e513a36344e91f204e
 SHA1 (patch-at) = 9d83524bef9dacdb889b7d828053a3fef16a1689
 SHA1 (patch-cb) = 708ee946dd1708a40baef5ac193a46dc22bff8b5
