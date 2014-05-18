@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.766 2014/05/16 01:35:22 rodent Exp $
+# $NetBSD: Makefile,v 1.767 2014/05/18 20:53:50 rodent Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -430,6 +430,7 @@ SUBDIR+=	p5-String-Formatter
 SUBDIR+=	p5-String-Koremutake
 SUBDIR+=	p5-String-RewritePrefix
 SUBDIR+=	p5-String-ShellQuote
+SUBDIR+=	p5-String-Similarity
 SUBDIR+=	p5-String-ToIdentifier-EN
 SUBDIR+=	p5-String-Truncate
 SUBDIR+=	p5-Syntax-Highlight-Engine-Kate
