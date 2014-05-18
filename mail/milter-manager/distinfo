@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2014/01/28 12:41:40 obache Exp $
+$NetBSD: distinfo,v 1.23 2014/05/18 02:28:27 obache Exp $
 
-SHA1 (milter-manager-2.0.2.tar.gz) = b881e94d33d68b14073b4471438fa1092974b9d6
-RMD160 (milter-manager-2.0.2.tar.gz) = c1402126c8bd4bd8f825249c85943717382f0cd6
-Size (milter-manager-2.0.2.tar.gz) = 6715233 bytes
+SHA1 (milter-manager-2.0.3.tar.gz) = 1c205726581ae5173aec816636932f5f422d3c10
+RMD160 (milter-manager-2.0.3.tar.gz) = 6e028e4a95f55a9e72e26c20f5910b533f914512
+Size (milter-manager-2.0.3.tar.gz) = 6662920 bytes
 SHA1 (patch-configure) = ee1f31e83354c4c6b38ae1c0d4fda40f28ad92b6
