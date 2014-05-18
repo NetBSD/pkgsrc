@@ -1,4 +1,4 @@
-# $NetBSD: Haiku.mk,v 1.9 2013/11/23 07:50:51 obache Exp $
+# $NetBSD: Haiku.mk,v 1.10 2014/05/18 07:56:21 obache Exp $
 #
 # Variable definitions for the Haiku operating system.
 
@@ -26,9 +26,9 @@ ROOT_CMD?=		${SU} - root -c
 ROOT_GROUP?=		root
 ROOT_USER?=		user
 SERIAL_DEVICES?=	/dev/tty
-ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
-ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
-ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
+ULIMIT_CMD_datasize?=	:
+ULIMIT_CMD_stacksize?=	:
+ULIMIT_CMD_memorysize?=	:
 USERADD?=		/bin/useradd
 
 _OPSYS_SYSTEM_RPATH?=	/boot/common/lib:/boot/system/lib
