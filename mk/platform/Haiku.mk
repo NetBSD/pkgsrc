@@ -1,4 +1,4 @@
-# $NetBSD: Haiku.mk,v 1.11 2014/05/18 09:45:40 obache Exp $
+# $NetBSD: Haiku.mk,v 1.12 2014/05/18 10:13:59 obache Exp $
 #
 # Variable definitions for the Haiku operating system.
 
@@ -33,11 +33,18 @@ USERADD?=		/bin/useradd
 GROUPADD?=		/bin/groupadd
 .endif
 
+.if exists(/boot/system/develop)
+_OPSYS_SYSTEM_RPATH?=	/boot/system/lib
+_OPSYS_LIB_DIRS?=	/boot/system/develop/lib /boot/system/lib
+_OPSYS_INCLUDE_DIRS?=	/boot/system/develop/headers \
+			/boot/system/develop/headers/posix
+.else
 _OPSYS_SYSTEM_RPATH?=	/boot/common/lib:/boot/system/lib
 _OPSYS_LIB_DIRS?=	/boot/common/lib /boot/system/lib
 _OPSYS_INCLUDE_DIRS?=	/boot/common/include \
 			/boot/develop/headers/posix \
 			/boot/develop/headers/3rdparty
+.endif
 
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
 _OPSYS_HAS_JAVA=	no	# Java is not standard
