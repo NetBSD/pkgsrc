@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2014/05/05 00:47:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2014/05/18 15:08:33 rodent Exp $
 
-DISTNAME=	tryton-3.2.0
+DISTNAME=	tryton-3.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	http://downloads.tryton.org/3.2/
 
