@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1895 2014/05/18 03:22:14 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.1896 2014/05/18 03:32:29 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2629,3 +2629,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/p5-AnyEvent-RabbitMQ version 1.16 [mspo 2014-05-18]
 	Updated devel/p5-AnyEvent-RabbitMQ to 1.16 [mspo 2014-05-18]
 	Added devel/py-astor version 0.3 [rodent 2014-05-18]
+	Added lang/py-hy version 0.10.0 [rodent 2014-05-18]
