@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2014/01/18 19:49:32 wiz Exp $
-${PYSITELIB}/Pmw-2.0.0-py3.3.egg-info
+@comment $NetBSD: PLIST,v 1.2 2014/05/18 21:26:30 joerg Exp $
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/Pmw/Pmw_2_0_0/__init__.py
 ${PYSITELIB}/Pmw/Pmw_2_0_0/__init__.pyc
 ${PYSITELIB}/Pmw/Pmw_2_0_0/__init__.pyo
