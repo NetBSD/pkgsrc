@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1899 2014/05/18 04:28:30 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1900 2014/05/18 07:41:24 tron Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2631,3 +2631,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added lang/py-hy version 0.10.0 [rodent 2014-05-18]
 	Added net/p5-Net-RabbitFoot version 1.03 [mspo 2014-05-18]
 	Updated net/mikutter to 3.0.0alpha3 [obache 2014-05-18]
+	Updated net/youtube-dl to 20140516.1 [tron 2014-05-18]
