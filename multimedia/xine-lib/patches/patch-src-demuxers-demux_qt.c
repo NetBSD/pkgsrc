@@ -1,4 +1,6 @@
-$NetBSD: patch-src-demuxers-demux_qt.c,v 1.2 2014/04/17 13:53:47 wiz Exp $
+$NetBSD: patch-src-demuxers-demux_qt.c,v 1.3 2014/05/18 15:38:18 wiz Exp $
+
+https://bugs.xine-project.org/show_bug.cgi?id=527
 
 --- src/demuxers/demux_qt.c.orig	2014-02-26 15:49:10.000000000 +0000
 +++ src/demuxers/demux_qt.c
