@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2014/01/23 19:12:27 wiz Exp $
+$NetBSD: distinfo,v 1.18 2014/05/18 21:28:28 joerg Exp $
 
 SHA1 (enigmail-1.4.tar.gz) = 1ee4bcd8d38685af44c1aeeea4fbba7bf30513e4
 RMD160 (enigmail-1.4.tar.gz) = b3c717e150c826faae1daa09806e07dd16619c51
@@ -60,6 +60,8 @@ SHA1 (patch-mm) = e9b4e83d4fee0aee0c56f85f0a320587184e2cf4
 SHA1 (patch-mn) = 043ff332b494ddc9dfff3286a4c7e296a9b352f4
 SHA1 (patch-mozilla_build_autoconf_gcc-pr49911.m4) = 84f15ee18c95829b19127b6efa46e57380528315
 SHA1 (patch-mozilla_build_autoconf_nss.m4) = 3344fd1a92508acf627371cebbb43b6f603652d5
+SHA1 (patch-mozilla_content_svg_content_src_nsSVGFilters.cpp) = d751971e2d1237f220501e6ebf4262eb2416c8aa
+SHA1 (patch-mozilla_content_svg_content_src_nsSVGFilters.h) = 948c6c1459196f819a508539b67536763374d089
 SHA1 (patch-mozilla_dom_plugins_ipc_PluginModuleChild.cpp) = 2b8ad715181bd74966dcd941aead2c84658ad8a1
 SHA1 (patch-mozilla_dom_plugins_ipc_PluginModuleChild.h) = d2e60d0809eccb651ec8b17663a524004602c2db
 SHA1 (patch-mozilla_ipc_chromium_Makefile.in) = fc1e445bae48da5b3d4f97bf78b7ef3870032a06
