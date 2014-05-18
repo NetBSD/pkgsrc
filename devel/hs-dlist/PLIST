@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/18 21:29:39 szptvlfn Exp $
+lib/dlist-${PKGVERSION}/${HASKELL_VERSION}/Data/DList.hi
+lib/dlist-${PKGVERSION}/${HASKELL_VERSION}/HSdlist-${PKGVERSION}.o
+lib/dlist-${PKGVERSION}/${HASKELL_VERSION}/libHSdlist-${PKGVERSION}.a
+lib/dlist-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/dlist-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/dlist-${PKGVERSION}/html/Data-DList.html
+${PLIST.doc}share/doc/dlist-${PKGVERSION}/html/dlist.haddock
+${PLIST.doc}share/doc/dlist-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/dlist-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/dlist-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/dlist-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/dlist-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/dlist-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/dlist-${PKGVERSION}/html/mini_Data-DList.html
+${PLIST.doc}share/doc/dlist-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/dlist-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/dlist-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/dlist-${PKGVERSION}/html/synopsis.png
