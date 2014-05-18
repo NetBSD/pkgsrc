@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2014/01/25 10:30:31 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/18 21:26:30 joerg Exp $
 
 DISTNAME=	Pmw_2_0_0-rc1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/:S/_/./g:S/-rc/rc/}
+EGG_NAME=	Pmw-2.0.0
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pmw/}
 
