@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.225 2014/04/17 01:57:31 obache Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.226 2014/05/18 11:23:26 obache Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -339,7 +339,9 @@ BUILDLINK_IS_DEPOT.${_pkg_}?=	no
 # Usual systems has builtin packages in /usr
 .    if exists(/usr)
 BUILDLINK_PREFIX.${_pkg_}?=	/usr
-# Haiku OS has posix packages in /boot/common
+# Haiku OS has posix packages in /boot/sytem/develop (or /boot/common)
+.    elif exists(/boot/system/develop)
+BUILDLINK_PREFIX.${_pkg_}?=	/boot/system/develop
 .    elif exists(/boot/common)
 BUILDLINK_PREFIX.${_pkg_}?=	/boot/common
 .    else
