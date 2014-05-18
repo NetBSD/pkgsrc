@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2014/04/09 07:27:04 obache Exp $
+# $NetBSD: Makefile,v 1.35 2014/05/18 21:19:14 joerg Exp $
 
 DISTNAME=		sqlrelay-0.43
 PKGREVISION=		11
@@ -9,6 +9,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sqlrelay.sourceforge.net/
 COMMENT=		Enables pooling and sharing of database connections
 LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
+
+BROKEN=	Not working with newer devel/rudiments
 
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++
