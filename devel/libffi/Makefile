@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.22 2014/02/11 07:21:28 dholland Exp $
-#
+# $NetBSD: Makefile,v 1.23 2014/05/18 15:17:51 wiz Exp $
 
 DISTNAME=	libffi-3.0.13
 CATEGORIES=	devel
 MASTER_SITES=	ftp://sourceware.org/pub/libffi/
 
 MAINTAINER=	asau@inbox.ru
-HOMEPAGE=	http://sources.redhat.com/libffi/
+HOMEPAGE=	https://www.sourceware.org/libffi/
 COMMENT=	Foreign function interface
 LICENSE=	mit
 
