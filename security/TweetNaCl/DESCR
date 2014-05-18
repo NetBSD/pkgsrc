@@ -1,0 +1,3 @@
+TweetNaCl is the world's first auditable high-security cryptographic
+library. TweetNaCl fits into just 100 tweets while supporting all
+25 of the NaCl functions used by applications.
