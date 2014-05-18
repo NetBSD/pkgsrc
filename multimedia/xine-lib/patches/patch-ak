@@ -1,4 +1,6 @@
-$NetBSD: patch-ak,v 1.9 2009/12/09 10:13:03 drochner Exp $
+$NetBSD: patch-ak,v 1.10 2014/05/18 15:38:18 wiz Exp $
+
+https://bugs.xine-project.org/show_bug.cgi?id=523
 
 --- src/video_out/video_out_opengl.c.orig	2009-11-30 21:55:52.000000000 +0100
 +++ src/video_out/video_out_opengl.c
