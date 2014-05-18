@@ -1,30 +1,30 @@
-# $NetBSD: Makefile,v 1.78 2014/03/26 14:27:22 taca Exp $
+# $NetBSD: Makefile,v 1.79 2014/05/18 04:28:17 obache Exp $
 #
 
-DISTNAME=	mikutter.0.2.2.1537
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/./-/}
-PKGREVISION=	1
+DISTNAME=	mikutter.3.0.0-alpha3
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/-//:S/./-/}
 CATEGORIES=	net
 MASTER_SITES=	http://mikutter.hachune.net/bin/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://mikutter.hachune.net/
 COMMENT=	Simple, powerful, and moeful twitter client
-LICENSE=	gnu-gpl-v3 AND cc-by-sa-v3.0
+LICENSE=	mit AND cc-by-sa-v3.0
 
 RUBY_VERSION_SUPPORTED=	193 200 21
 
 .include "../../lang/ruby/rubyversion.mk"
 
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
-DEPENDS+=	${RUBY_PKGPREFIX}-hmac>=0.4.0:../../security/ruby-hmac
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtk>=2.2.0:../../x11/ruby-gnome2-gtk
-DEPENDS+=	${RUBY_PKGPREFIX}-oauth>=0.4.7:../../security/ruby-oauth
-DEPENDS+=	${RUBY_PKGPREFIX}-memoize>=1.3.1:../../devel/ruby-memoize
+DEPENDS+=	${RUBY_PKGPREFIX}-gettext>=3.0.1:../../devel/ruby-gettext
+DEPENDS+=	${RUBY_PKGPREFIX}-oauth>=0.4:../../security/ruby-oauth
 DEPENDS+=	${RUBY_PKGPREFIX}-bsearch>=1.5:../../devel/ruby-bsearch
 DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.3:../../net/ruby-addressable
+DEPENDS+=	${RUBY_PKGPREFIX}-memoize>=1.3.1:../../devel/ruby-memoize
+DEPENDS+=	${RUBY_PKGPREFIX}-hmac>=0.4.0:../../security/ruby-hmac
 DEPENDS+=	${RUBY_PKGPREFIX}-typed-array>=0.1:../../misc/ruby-typed-array
-#DEPENDS+=	${RUBY_PKGPREFIX}-test-unit-[0-9]*:../../devel/ruby-test-unit
+DEPENDS+=	${RUBY_PKGPREFIX}-delayer-[0-9]*:../../devel/ruby-delayer
 
 WRKSRC=		${WRKDIR}/mikutter
 USE_LANGUAGES=	# none
