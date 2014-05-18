@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1903 2014/05/18 11:45:19 adam Exp $
+$NetBSD: CHANGES-2014,v 1.1904 2014/05/18 13:17:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2642,3 +2642,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-subversion to 1.8.9 [adam 2014-04-18]
 	Updated devel/ruby-subversion to 1.8.9 [adam 2014-04-18]
 	Updated www/ap2-subversion to 1.8.9 [adam 2014-04-18]
+	Added security/TweetNaCl version 20140427 [wiz 2014-05-18]
