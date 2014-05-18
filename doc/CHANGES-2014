@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1905 2014/05/18 13:23:41 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1906 2014/05/18 15:08:49 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2644,3 +2644,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/ap2-subversion to 1.8.9 [adam 2014-04-18]
 	Added security/TweetNaCl version 20140427 [wiz 2014-05-18]
 	Updated sysutils/ts to 0.7.4 [wiz 2014-05-18]
+	Updated devel/py-tryton to 3.2.1 [rodent 2014-05-18]
