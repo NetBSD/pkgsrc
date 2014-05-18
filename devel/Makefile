@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1904 2014/05/18 03:14:16 mspo Exp $
+# $NetBSD: Makefile,v 1.1905 2014/05/18 03:23:29 rodent Exp $
 #
 
 COMMENT=	Development utilities
@@ -1443,6 +1443,7 @@ SUBDIR+=	py-Optik
 SUBDIR+=	py-Pyro
 SUBDIR+=	py-ZopeInterface
 SUBDIR+=	py-argparse
+SUBDIR+=	py-astor
 SUBDIR+=	py-astroid
 SUBDIR+=	py-at-spi
 SUBDIR+=	py-at-spi2
