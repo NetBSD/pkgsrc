@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1901 2014/05/18 07:42:38 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1902 2014/05/18 08:15:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2633,3 +2633,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/mikutter to 3.0.0alpha3 [obache 2014-05-18]
 	Updated net/youtube-dl to 20140516.1 [tron 2014-05-18]
 	Updated inputmethod/ibus-mozc to 1.13.1651.102nb3 [obache 2014-05-18]
+	Updated devel/memcached to 1.4.20 [wiz 2014-05-18]
