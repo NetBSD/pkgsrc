@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2014/01/20 10:39:29 ryoon Exp $
+$NetBSD: distinfo,v 1.7 2014/05/18 07:42:24 obache Exp $
 
 SHA1 (mozc-1.13.1651.102.tar.bz2) = 24680b3d350e5332f2235b9c1342127f6ef0fd63
 RMD160 (mozc-1.13.1651.102.tar.bz2) = 260a23c2f9f3b909aefe63c865f3b87013d2fb53
@@ -46,5 +46,5 @@ SHA1 (patch-protobuf_protobuf.gyp) = 60abe727c1475e50295a5e811dccf8deb710e18a
 SHA1 (patch-session_session.cc) = 0562f8646dc6f68e180d8ae98f00eeb0364fc473
 SHA1 (patch-session_session__converter__interface.h) = 93bda6e51b9a9ac7146aa23ac0aa28bb017a4465
 SHA1 (patch-session_session__test.cc) = a256caec45a45f4eaab0555ecc18cea09c417d95
-SHA1 (patch-unix_ibus_gen__mozc__xml.py) = 9d7e1da07854c2244a22ffe5034fabb25d16d266
+SHA1 (patch-unix_ibus_gen__mozc__xml.py) = a6e135a698cc04231b64808f0b2ed64191b4a5bb
 SHA1 (patch-unix_ibus_mozc__engine.cc) = 2ce0a680a0fad1abdc646737b6b5a4c3a9e87e6e
