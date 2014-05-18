@@ -1,11 +1,11 @@
-$NetBSD: patch-include-vigra-mathutil.hxx,v 1.3 2012/02/26 08:38:21 obache Exp $
+$NetBSD: patch-include-vigra-mathutil.hxx,v 1.4 2014/05/18 11:31:09 adam Exp $
 
 * missing abs(signed long long) in old GCC.
 * Fix ambiguous math functions for DragonFly.
 
---- include/vigra/mathutil.hxx.orig	2011-09-20 18:38:36.000000000 +0000
+--- include/vigra/mathutil.hxx.orig	2013-11-18 16:48:16.000000000 +0000
 +++ include/vigra/mathutil.hxx
-@@ -149,7 +149,7 @@ VIGRA_DEFINE_UNSIGNED_ABS(unsigned long 
+@@ -153,7 +153,7 @@ VIGRA_DEFINE_UNSIGNED_ABS(unsigned long 
  VIGRA_DEFINE_MISSING_ABS(signed char)
  VIGRA_DEFINE_MISSING_ABS(signed short)
  
@@ -14,7 +14,7 @@ $NetBSD: patch-include-vigra-mathutil.hxx,v 1.3 2012/02/26 08:38:21 obache Exp $
  VIGRA_DEFINE_MISSING_ABS(signed long long)
  #endif
  
-@@ -553,7 +553,12 @@ VIGRA_DEFINE_NORM(int)
+@@ -637,7 +637,12 @@ VIGRA_DEFINE_NORM(int)
  VIGRA_DEFINE_NORM(unsigned int)
  VIGRA_DEFINE_NORM(long)
  VIGRA_DEFINE_NORM(unsigned long)
