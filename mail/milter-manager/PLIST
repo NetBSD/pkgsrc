@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2014/03/11 14:05:04 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.17 2014/05/18 02:28:27 obache Exp $
 bin/milter-manager-log-analyzer
 bin/milter-performance-check
 bin/milter-report-statistics
@@ -199,9 +199,11 @@ share/doc/milter-manager/ja/install-to-ubuntu.html
 share/doc/milter-manager/ja/install-to.html
 share/doc/milter-manager/ja/install.html
 share/doc/milter-manager/ja/introduction.html
+share/doc/milter-manager/ja/left-insensitive.png
 share/doc/milter-manager/ja/left.png
 share/doc/milter-manager/ja/libmilter-compatible.xml
 share/doc/milter-manager/ja/log-list.html
+share/doc/milter-manager/ja/maintenance-policy.html
 share/doc/milter-manager/ja/manager.xml
 share/doc/milter-manager/ja/mfapi.xml
 share/doc/milter-manager/ja/mfdef.xml
@@ -269,6 +271,7 @@ share/doc/milter-manager/ja/mta-and-milter-manager-and-child-milter.png
 share/doc/milter-manager/ja/news.html
 share/doc/milter-manager/ja/readme.html
 share/doc/milter-manager/ja/reverse-dictionary.html
+share/doc/milter-manager/ja/right-insensitive.png
 share/doc/milter-manager/ja/right.png
 share/doc/milter-manager/ja/ruby-milter-configuration.html
 share/doc/milter-manager/ja/ruby-milter-reference.html
@@ -280,6 +283,7 @@ share/doc/milter-manager/ja/sendmail-and-postfix-and-milter-ja.png
 share/doc/milter-manager/ja/sendmail-and-postfix-and-milter.png
 share/doc/milter-manager/ja/start.html
 share/doc/milter-manager/ja/style.css
+share/doc/milter-manager/ja/up-insensitive.png
 share/doc/milter-manager/ja/up.png
 share/doc/milter-manager/ja/upgrade-on-centos.html
 share/doc/milter-manager/ja/upgrade-on-debian.html
@@ -291,8 +295,10 @@ share/doc/milter-manager/ja/upgrade-options-on-freebsd.html
 share/doc/milter-manager/ja/upgrade-options-on-ubuntu.html
 share/doc/milter-manager/ja/upgrade.html
 share/doc/milter-manager/ja/users.html
+share/doc/milter-manager/left-insensitive.png
 share/doc/milter-manager/left.png
 share/doc/milter-manager/log-list.html
+share/doc/milter-manager/maintenance-policy.html
 share/doc/milter-manager/milter-manager-log-analyzer-graphs.png
 share/doc/milter-manager/milter-manager-log-analyzer.html
 share/doc/milter-manager/milter-manager.devhelp2
@@ -306,6 +312,7 @@ share/doc/milter-manager/mta-and-milter-manager-and-child-milter.png
 share/doc/milter-manager/news.html
 share/doc/milter-manager/readme.html
 share/doc/milter-manager/reverse-dictionary.html
+share/doc/milter-manager/right-insensitive.png
 share/doc/milter-manager/right.png
 share/doc/milter-manager/ruby-milter-configuration.html
 share/doc/milter-manager/ruby-milter-reference.html
@@ -317,6 +324,7 @@ share/doc/milter-manager/sendmail-and-postfix-and-milter-ja.png
 share/doc/milter-manager/sendmail-and-postfix-and-milter.png
 share/doc/milter-manager/start.html
 share/doc/milter-manager/style.css
+share/doc/milter-manager/up-insensitive.png
 share/doc/milter-manager/up.png
 share/doc/milter-manager/upgrade-on-centos.html
 share/doc/milter-manager/upgrade-on-debian.html
