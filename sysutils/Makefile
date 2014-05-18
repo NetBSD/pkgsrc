@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.598 2014/05/17 16:58:20 khorben Exp $
+# $NetBSD: Makefile,v 1.599 2014/05/18 21:06:22 rodent Exp $
 #
 
 COMMENT=	System utilities
@@ -337,6 +337,7 @@ SUBDIR+=	open-vm-tools
 SUBDIR+=	openstack_init
 SUBDIR+=	openxenmanager
 SUBDIR+=	osname
+SUBDIR+=	p5-Config-Simple
 SUBDIR+=	p5-File-Copy-Recursive
 SUBDIR+=	p5-File-Inplace
 SUBDIR+=	p5-File-Remove
