@@ -1,4 +1,13 @@
-$NetBSD: patch-ag,v 1.26 2012/09/20 15:33:40 jperkin Exp $
+$NetBSD: patch-ag,v 1.27 2014/05/18 15:38:18 wiz Exp $
+
+1. chunk:
+https://bugs.xine-project.org/show_bug.cgi?id=536
+2. chunk:
+https://bugs.xine-project.org/show_bug.cgi?id=532
+3. chunk:
+https://bugs.xine-project.org/show_bug.cgi?id=526
+4. chunk
+https://bugs.xine-project.org/show_bug.cgi?id=531
 
 --- configure.ac.orig	2012-06-09 17:30:18.000000000 +0000
 +++ configure.ac	2012-09-20 14:41:33.687892237 +0000

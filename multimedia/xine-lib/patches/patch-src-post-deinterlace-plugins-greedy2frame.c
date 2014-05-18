@@ -1,4 +1,6 @@
-$NetBSD: patch-src-post-deinterlace-plugins-greedy2frame.c,v 1.1 2012/08/15 18:34:36 jdc Exp $
+$NetBSD: patch-src-post-deinterlace-plugins-greedy2frame.c,v 1.2 2014/05/18 15:38:18 wiz Exp $
+
+https://bugs.xine-project.org/show_bug.cgi?id=528
 
 --- src/post/deinterlace/plugins/greedy2frame.c.orig	2012-05-26 21:49:59.000000000 +0100
 +++ src/post/deinterlace/plugins/greedy2frame.c	2012-08-15 08:08:27.000000000 +0100

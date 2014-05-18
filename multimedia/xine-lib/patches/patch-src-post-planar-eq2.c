@@ -1,5 +1,6 @@
-$NetBSD: patch-src-post-planar-eq2.c,v 1.3 2012/10/23 19:57:33 apb Exp $
+$NetBSD: patch-src-post-planar-eq2.c,v 1.4 2014/05/18 15:38:18 wiz Exp $
 
+First half:
 In affine_1d_MMX(), move the initialisation of %mm3 and %mm4 registers
 into a separate asm statement, to give the compiler more freedom
 for register allocation.  Fixes a problem with gcc-4.5.4 on NetBSD/i386
@@ -8,6 +9,11 @@ in which gcc complained:
 eq2.c: In function 'affine_1d_MMX':
 eq2.c:128:5: error: can't find a register in class 'GENERAL_REGS' while reloading 'asm'
 eq2.c:128:5: error: 'asm' operand has impossible constraints
+
+https://bugs.xine-project.org/show_bug.cgi?id=525
+
+Last chunk:
+https://bugs.xine-project.org/show_bug.cgi?id=524
 
 --- src/post/planar/eq2.c.orig	2012-02-05 19:17:02.000000000 +0000
 +++ src/post/planar/eq2.c

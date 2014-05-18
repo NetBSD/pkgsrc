@@ -1,4 +1,6 @@
-$NetBSD: patch-aj,v 1.9 2005/11/01 06:15:33 reed Exp $
+$NetBSD: patch-aj,v 1.10 2014/05/18 15:38:18 wiz Exp $
+
+https://bugs.xine-project.org/show_bug.cgi?id=521
 
 --- src/input/libdvdnav/bswap.h.orig	2005-10-31 21:49:47.000000000 -0800
 +++ src/input/libdvdnav/bswap.h	2005-10-31 21:53:43.000000000 -0800

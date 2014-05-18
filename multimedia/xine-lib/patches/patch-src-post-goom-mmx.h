@@ -1,4 +1,6 @@
-$NetBSD: patch-src-post-goom-mmx.h,v 1.1 2011/09/04 14:34:52 joerg Exp $
+$NetBSD: patch-src-post-goom-mmx.h,v 1.2 2014/05/18 15:38:18 wiz Exp $
+
+https://bugs.xine-project.org/show_bug.cgi?id=529
 
 --- src/post/goom/mmx.h.orig	2011-08-30 13:41:26.000000000 +0000
 +++ src/post/goom/mmx.h

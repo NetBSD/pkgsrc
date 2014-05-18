@@ -1,4 +1,6 @@
-$NetBSD: patch-cb,v 1.4 2014/04/17 13:53:47 wiz Exp $
+$NetBSD: patch-cb,v 1.5 2014/05/18 15:38:18 wiz Exp $
+
+Adapt path to win32 codecs for pkgsrc.
 
 --- src/libw32dll/common.c.orig	2014-03-11 13:28:30.000000000 +0000
 +++ src/libw32dll/common.c
