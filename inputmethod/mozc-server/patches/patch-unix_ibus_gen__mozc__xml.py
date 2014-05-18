@@ -1,4 +1,4 @@
-$NetBSD: patch-unix_ibus_gen__mozc__xml.py,v 1.4 2014/01/19 01:18:50 ryoon Exp $
+$NetBSD: patch-unix_ibus_gen__mozc__xml.py,v 1.5 2014/05/18 07:42:24 obache Exp $
 
 * Fix for pkgsrc installation.
 
@@ -22,6 +22,15 @@ $NetBSD: patch-unix_ibus_gen__mozc__xml.py,v 1.4 2014/01/19 01:18:50 ryoon Exp $
      'rank': '80',
  }
  
+@@ -68,7 +68,7 @@ IBUS_ENGINE_COMMON_PROPS = {
+ IBUS_1_5_ENGINE_COMMON_PROPS = {
+     'description': '%(product_name)s (Japanese Input Method)',
+     'language': 'ja',
+-    'icon': '%(ibus_mozc_icon_path)s',
++    'icon': '@PREFIX@/share/ibus-mozc/product_icon.png',
+     'rank': '80',
+     'symbol': '&#x3042;',
+ }
 @@ -93,6 +93,22 @@ IBUS_ENGINES_PROPS = {
          'longname': ['%(product_name)s'],
          'layout': ['default'],
