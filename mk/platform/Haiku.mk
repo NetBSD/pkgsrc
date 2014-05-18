@@ -1,4 +1,4 @@
-# $NetBSD: Haiku.mk,v 1.10 2014/05/18 07:56:21 obache Exp $
+# $NetBSD: Haiku.mk,v 1.11 2014/05/18 09:45:40 obache Exp $
 #
 # Variable definitions for the Haiku operating system.
 
@@ -18,7 +18,6 @@ CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		022
 DEFAULT_SERIAL_DEVICE?=	/dev/tty
 EXPORT_SYMBOLS_LDFLAGS?=	# Don't add symbols to the dynamic symbol table
-#GROUPADD?=		/bin/groupadd
 MOTIF_TYPE_DEFAULT?=	motif	# default 2.0 compatible libs type
 NOLOGIN?=		/bin/false
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
@@ -29,7 +28,10 @@ SERIAL_DEVICES?=	/dev/tty
 ULIMIT_CMD_datasize?=	:
 ULIMIT_CMD_stacksize?=	:
 ULIMIT_CMD_memorysize?=	:
+.if exists(/bin/groupadd)
 USERADD?=		/bin/useradd
+GROUPADD?=		/bin/groupadd
+.endif
 
 _OPSYS_SYSTEM_RPATH?=	/boot/common/lib:/boot/system/lib
 _OPSYS_LIB_DIRS?=	/boot/common/lib /boot/system/lib
