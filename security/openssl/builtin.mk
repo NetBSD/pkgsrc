@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.39 2014/04/27 01:57:51 obache Exp $
+# $NetBSD: builtin.mk,v 1.40 2014/05/18 11:18:17 obache Exp $
 
 BUILTIN_PKG:=	openssl
 
@@ -206,7 +206,11 @@ SSLDIR=	${PKG_SYSCONFDIR.openssl}
 .    if ${OPSYS} == "NetBSD"
 SSLDIR=	/etc/openssl
 .    elif ${OPSYS} == "Haiku"
+.      if exists(/boot/system/data/ssl)
+SSLDIR=	/boot/system/data/ssl
+.      else
 SSLDIR=	/boot/common/data/ssl
+.      endif
 .    else
 SSLDIR=	/etc/ssl 		# most likely place
 .    endif
