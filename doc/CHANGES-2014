@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1902 2014/05/18 08:15:27 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1903 2014/05/18 11:45:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2634,3 +2634,11 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/youtube-dl to 20140516.1 [tron 2014-05-18]
 	Updated inputmethod/ibus-mozc to 1.13.1651.102nb3 [obache 2014-05-18]
 	Updated devel/memcached to 1.4.20 [wiz 2014-05-18]
+	Updated graphics/vigra to 1.10.0 [adam 2014-05-18]
+	Updated devel/subversion to 1.8.9 [adam 2014-04-18]
+	Updated devel/subversion-base to 1.8.9 [adam 2014-04-18]
+	Updated devel/java-subversion to 1.8.9 [adam 2014-04-18]
+	Updated devel/p5-subversion to 1.8.9 [adam 2014-04-18]
+	Updated devel/py-subversion to 1.8.9 [adam 2014-04-18]
+	Updated devel/ruby-subversion to 1.8.9 [adam 2014-04-18]
+	Updated www/ap2-subversion to 1.8.9 [adam 2014-04-18]
