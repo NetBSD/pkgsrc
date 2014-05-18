@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2014/05/18 13:16:13 wiz Exp $
+
+SHA1 (tweetnacl-20140427/tweetnacl.c) = 1d1d2dbd1219f1f360d92d43c501747d244462e5
+RMD160 (tweetnacl-20140427/tweetnacl.c) = 160cd3bd8a193347b3e216cfb9d491ec77308364
+Size (tweetnacl-20140427/tweetnacl.c) = 16637 bytes
+SHA1 (tweetnacl-20140427/tweetnacl.h) = 154477811bcf007801bce52883a778f746334783
+RMD160 (tweetnacl-20140427/tweetnacl.h) = 57cfcaa08bae73279e9e4574f8da2edb590251f5
+Size (tweetnacl-20140427/tweetnacl.h) = 20014 bytes
