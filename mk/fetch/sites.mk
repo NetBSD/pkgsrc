@@ -1,10 +1,10 @@
-# $NetBSD: sites.mk,v 1.105 2014/05/19 13:52:33 obache Exp $
+# $NetBSD: sites.mk,v 1.106 2014/05/19 14:02:52 wiz Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
 #
-# When variables are added/removed, pkgsrc guid (build.xml) also
-# should be updated.
+# When variables are added or removed, the pkgsrc guide (build.xml)
+# should also be updated.
 
 MASTER_SITE_XCONTRIB+=  \
 	ftp://ftp.gwdg.de/pub/x11/x.org/contrib/ \
