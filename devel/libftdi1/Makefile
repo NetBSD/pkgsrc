@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/05/09 07:37:00 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/19 22:44:14 dsainty Exp $
 
 DISTNAME=	libftdi1-1.0
 CATEGORIES=	devel
@@ -50,5 +50,6 @@ do-configure:
 .include "../../devel/swig/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../lang/${PYPACKAGE}/buildlink3.mk"
+.include "../../lang/python/tool.mk"
 
 .include "../../mk/bsd.pkg.mk"
