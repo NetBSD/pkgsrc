@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.68 2014/05/19 13:47:22 obache Exp $ -->
+<!-- $NetBSD: build.xml,v 1.69 2014/05/19 13:59:15 wiz Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -299,14 +299,18 @@ MASTER_SITES=   http://www.example.com/download.cgi?file=
 </programlisting>
 
       <para> The exception to this rule are URLs starting with a dash.
-      In that case the URL is taken as is, fetched and the result stored
-      under the name of the distfile.
-      You can use this style for the case download URL style does not
-      match to above usuall case.
-      For example, permanent download URL is a redirecter to real download URL,
-      or download file name is offerd by HTTP Content-Disposition header.</para>
+      In that case the URL is taken as is, fetched and the result
+      stored under the name of the distfile. You can use this style
+      for the case when the download URL style does not match the
+      above common case. For example, if permanent download URL is a
+      redirector to the real download URL, or the download file name
+      is offered by an HTTP Content-Disposition header. In the
+      following example, <filename>foo-1.0.0.tar.gz</filename> will be
+      created instead of the default
+      <filename>v1.0.0.tar.gz</filename>.</para>
 
 <programlisting>
+DISTNAME=       foo-1.0.0
 MASTER_SITES=   -http://www.example.com/archive/v1.0.0
 </programlisting>
 
