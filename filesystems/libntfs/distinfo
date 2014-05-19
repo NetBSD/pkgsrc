@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1 2014/05/19 12:22:06 adam Exp $
+
+SHA1 (ntfs-3g_ntfsprogs-2014.2.15.tgz) = c9836f340b508f5d7776156e5afb02434d3f0174
+RMD160 (ntfs-3g_ntfsprogs-2014.2.15.tgz) = 32418b98e60a483173352eb22cc101ed82c92ebf
+Size (ntfs-3g_ntfsprogs-2014.2.15.tgz) = 1143575 bytes
+SHA1 (patch-Makefile.in) = 874ba5084b5eea312a24d7a6b339f83a3f7896d8
+SHA1 (patch-include_ntfs-3g_compat.h) = 78ea127359416c9106eef7025a2ccc84fd0b4447
+SHA1 (patch-include_ntfs-3g_types.h) = b6731cee8e1cd72dfe1ef485f4f997e8dfa6e928
+SHA1 (patch-libntfs-3g_Makefile.in) = 50a318a1c9a0a68d42e5cac2557e781f8c728094
+SHA1 (patch-libntfs-3g_device.c) = 3ad49d69b03cdd500246f77d9f6e30ca3d2e2ec6
+SHA1 (patch-ntfsprogs_Makefile.in) = 9acd073006c54009cedeafc766c964e9b5f11468
+SHA1 (patch-ntfsprogs_ntfsclone.c) = 3306b501e94ce71a709f394516829a727aa743ad
+SHA1 (patch-src_Makefile.in) = 78d107a3ba0e9e0b39a4c5e4eaad2fd58bb9ade2

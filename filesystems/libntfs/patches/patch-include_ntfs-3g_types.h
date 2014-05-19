@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2008/03/08 08:56:47 adam Exp $
+$NetBSD: patch-include_ntfs-3g_types.h,v 1.1 2014/05/19 12:22:06 adam Exp $
 
---- include/ntfs/types.h.orig	2007-09-26 20:28:40.000000000 +0200
-+++ include/ntfs/types.h
-@@ -86,6 +86,16 @@ typedef sle64 leVCN;
+--- include/ntfs-3g/types.h.orig	2013-01-13 06:46:35.000000000 +0000
++++ include/ntfs-3g/types.h
+@@ -68,6 +68,16 @@ typedef sle64 leVCN;
  typedef s64 LCN;
  typedef sle64 leLCN;
  

@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.7 2008/03/08 08:56:47 adam Exp $
+$NetBSD: patch-ntfsprogs_ntfsclone.c,v 1.1 2014/05/19 12:22:06 adam Exp $
 
---- ntfsprogs/ntfsclone.c.orig	2007-09-19 18:51:09.000000000 +0200
+--- ntfsprogs/ntfsclone.c.orig	2014-02-15 14:07:52.000000000 +0000
 +++ ntfsprogs/ntfsclone.c
-@@ -61,6 +61,19 @@
+@@ -68,6 +68,19 @@
   */
  #define NTFS_DO_NOT_CHECK_ENDIANS
  
@@ -22,20 +22,21 @@ $NetBSD: patch-af,v 1.7 2008/03/08 08:56:47 adam Exp $
  #include "debug.h"
  #include "types.h"
  #include "support.h"
-@@ -116,7 +129,11 @@ static struct {
- 	int restore_image;
+@@ -161,8 +174,12 @@ static struct {
  	char *output;
  	char *volume;
+ #ifndef NO_STATFS
 +#if defined(__NetBSD__) && (__NetBSD_Version__ >= 299000900)
 +	struct statvfs stfs;
 +#else
  	struct statfs stfs;
+ #endif
 +#endif
  } opt;
  
  struct bitmap {
-@@ -590,7 +607,7 @@ static void copy_cluster(int rescue, u64
- 	if (write_all(&fd_out, buff, csize) == -1) {
+@@ -818,7 +835,7 @@ static void copy_cluster(int rescue, u64
+ #ifndef NO_STATFS
  		int err = errno;
  		perr_printf("Write failed");
 -		if (err == EIO && opt.stfs.f_type == 0x517b)
@@ -43,7 +44,7 @@ $NetBSD: patch-af,v 1.7 2008/03/08 08:56:47 adam Exp $
  			Printf("Apparently you tried to clone to a remote "
  			       "Windows computer but they don't\nhave "
  			       "efficient sparse file handling by default. "
-@@ -1492,7 +1509,7 @@ static void set_filesize(s64 filesize)
+@@ -2238,7 +2255,7 @@ static void set_filesize(s64 filesize)
  		Printf("WARNING: Couldn't get filesystem type: "
  		       "%s\n", strerror(errno));
  	else

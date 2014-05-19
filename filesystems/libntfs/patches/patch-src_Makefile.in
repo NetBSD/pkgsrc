@@ -1,0 +1,114 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2014/05/19 12:22:06 adam Exp $
+
+Link against already built and installed libntfs.
+Install binaries into PREFIX, not the root directory.
+
+--- src/Makefile.in.orig	2014-02-15 14:08:01.000000000 +0000
++++ src/Makefile.in
+@@ -68,8 +68,7 @@ lowntfs_3g_OBJECTS = $(am_lowntfs_3g_OBJ
+ am__DEPENDENCIES_1 =
+ @FUSE_INTERNAL_FALSE@am__DEPENDENCIES_2 = $(am__DEPENDENCIES_1)
+ @FUSE_INTERNAL_TRUE@am__DEPENDENCIES_2 = $(top_builddir)/libfuse-lite/libfuse-lite.la
+-@ENABLE_NTFS_3G_TRUE@lowntfs_3g_DEPENDENCIES = $(am__DEPENDENCIES_2) \
+-@ENABLE_NTFS_3G_TRUE@	$(top_builddir)/libntfs-3g/libntfs-3g.la
++@ENABLE_NTFS_3G_TRUE@lowntfs_3g_DEPENDENCIES = $(am__DEPENDENCIES_2)
+ lowntfs_3g_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
+ 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(lowntfs_3g_CFLAGS) \
+ 	$(CFLAGS) $(lowntfs_3g_LDFLAGS) $(LDFLAGS) -o $@
+@@ -77,8 +76,7 @@ am__ntfs_3g_SOURCES_DIST = ntfs-3g.c ntf
+ @ENABLE_NTFS_3G_TRUE@am_ntfs_3g_OBJECTS = ntfs_3g-ntfs-3g.$(OBJEXT) \
+ @ENABLE_NTFS_3G_TRUE@	ntfs_3g-ntfs-3g_common.$(OBJEXT)
+ ntfs_3g_OBJECTS = $(am_ntfs_3g_OBJECTS)
+-@ENABLE_NTFS_3G_TRUE@ntfs_3g_DEPENDENCIES = $(am__DEPENDENCIES_2) \
+-@ENABLE_NTFS_3G_TRUE@	$(top_builddir)/libntfs-3g/libntfs-3g.la
++@ENABLE_NTFS_3G_TRUE@ntfs_3g_DEPENDENCIES = $(am__DEPENDENCIES_2)
+ ntfs_3g_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
+ 	--mode=link $(CCLD) $(ntfs_3g_CFLAGS) $(CFLAGS) \
+ 	$(ntfs_3g_LDFLAGS) $(LDFLAGS) -o $@
+@@ -86,8 +84,7 @@ am__ntfs_3g_probe_SOURCES_DIST = ntfs-3g
+ @ENABLE_NTFS_3G_TRUE@am_ntfs_3g_probe_OBJECTS =  \
+ @ENABLE_NTFS_3G_TRUE@	ntfs_3g_probe-ntfs-3g.probe.$(OBJEXT)
+ ntfs_3g_probe_OBJECTS = $(am_ntfs_3g_probe_OBJECTS)
+-@ENABLE_NTFS_3G_TRUE@ntfs_3g_probe_DEPENDENCIES =  \
+-@ENABLE_NTFS_3G_TRUE@	$(top_builddir)/libntfs-3g/libntfs-3g.la
++@ENABLE_NTFS_3G_TRUE@ntfs_3g_probe_DEPENDENCIES =
+ ntfs_3g_probe_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
+ 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(ntfs_3g_probe_CFLAGS) \
+ 	$(CFLAGS) $(ntfs_3g_probe_LDFLAGS) $(LDFLAGS) -o $@
+@@ -95,8 +92,7 @@ am__ntfs_3g_secaudit_SOURCES_DIST = seca
+ @ENABLE_NTFS_3G_TRUE@am_ntfs_3g_secaudit_OBJECTS =  \
+ @ENABLE_NTFS_3G_TRUE@	ntfs_3g_secaudit-secaudit.$(OBJEXT)
+ ntfs_3g_secaudit_OBJECTS = $(am_ntfs_3g_secaudit_OBJECTS)
+-@ENABLE_NTFS_3G_TRUE@ntfs_3g_secaudit_DEPENDENCIES =  \
+-@ENABLE_NTFS_3G_TRUE@	$(top_builddir)/libntfs-3g/libntfs-3g.la
++@ENABLE_NTFS_3G_TRUE@ntfs_3g_secaudit_DEPENDENCIES =
+ ntfs_3g_secaudit_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
+ 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(ntfs_3g_secaudit_CFLAGS) \
+ 	$(CFLAGS) $(ntfs_3g_secaudit_LDFLAGS) $(LDFLAGS) -o $@
+@@ -104,8 +100,7 @@ am__ntfs_3g_usermap_SOURCES_DIST = userm
+ @ENABLE_NTFS_3G_TRUE@am_ntfs_3g_usermap_OBJECTS =  \
+ @ENABLE_NTFS_3G_TRUE@	ntfs_3g_usermap-usermap.$(OBJEXT)
+ ntfs_3g_usermap_OBJECTS = $(am_ntfs_3g_usermap_OBJECTS)
+-@ENABLE_NTFS_3G_TRUE@ntfs_3g_usermap_DEPENDENCIES =  \
+-@ENABLE_NTFS_3G_TRUE@	$(top_builddir)/libntfs-3g/libntfs-3g.la
++@ENABLE_NTFS_3G_TRUE@ntfs_3g_usermap_DEPENDENCIES =
+ ntfs_3g_usermap_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
+ 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(ntfs_3g_usermap_CFLAGS) \
+ 	$(CFLAGS) $(ntfs_3g_usermap_LDFLAGS) $(LDFLAGS) -o $@
+@@ -287,9 +282,9 @@ pkgconfigdir = @pkgconfigdir@
+ prefix = @prefix@
+ program_transform_name = @program_transform_name@
+ psdir = @psdir@
+-rootbindir = @rootbindir@
+-rootlibdir = @rootlibdir@
+-rootsbindir = @rootsbindir@
++rootbindir = @bindir@
++rootlibdir = @libdir@
++rootsbindir = @sbindir@
+ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ srcdir = @srcdir@
+@@ -313,7 +308,7 @@ MAINTAINERCLEANFILES = $(srcdir)/Makefil
+ @ENABLE_NTFS_3G_TRUE@		ntfs-3g.usermap.8 \
+ @ENABLE_NTFS_3G_TRUE@		ntfs-3g.secaudit.8
+ 
+-@ENABLE_NTFS_3G_TRUE@ntfs_3g_LDADD = $(FUSE_LIBS) $(top_builddir)/libntfs-3g/libntfs-3g.la
++@ENABLE_NTFS_3G_TRUE@ntfs_3g_LDADD = $(FUSE_LIBS) -lntfs-3g
+ @ENABLE_NTFS_3G_TRUE@@REALLYSTATIC_TRUE@ntfs_3g_LDFLAGS = $(AM_LDFLAGS) -all-static
+ @ENABLE_NTFS_3G_TRUE@ntfs_3g_CFLAGS = \
+ @ENABLE_NTFS_3G_TRUE@	$(AM_CFLAGS) 			\
+@@ -322,7 +317,7 @@ MAINTAINERCLEANFILES = $(srcdir)/Makefil
+ @ENABLE_NTFS_3G_TRUE@	-I$(top_srcdir)/include/ntfs-3g
+ 
+ @ENABLE_NTFS_3G_TRUE@ntfs_3g_SOURCES = ntfs-3g.c ntfs-3g_common.c
+-@ENABLE_NTFS_3G_TRUE@lowntfs_3g_LDADD = $(FUSE_LIBS) $(top_builddir)/libntfs-3g/libntfs-3g.la
++@ENABLE_NTFS_3G_TRUE@lowntfs_3g_LDADD = $(FUSE_LIBS) -lntfs-3g
+ @ENABLE_NTFS_3G_TRUE@@REALLYSTATIC_TRUE@lowntfs_3g_LDFLAGS = $(AM_LDFLAGS) -all-static
+ @ENABLE_NTFS_3G_TRUE@lowntfs_3g_CFLAGS = \
+ @ENABLE_NTFS_3G_TRUE@	$(AM_CFLAGS) 			\
+@@ -331,9 +326,9 @@ MAINTAINERCLEANFILES = $(srcdir)/Makefil
+ @ENABLE_NTFS_3G_TRUE@	-I$(top_srcdir)/include/ntfs-3g
+ 
+ @ENABLE_NTFS_3G_TRUE@lowntfs_3g_SOURCES = lowntfs-3g.c ntfs-3g_common.c
+-@ENABLE_NTFS_3G_TRUE@ntfs_3g_probe_LDADD = $(top_builddir)/libntfs-3g/libntfs-3g.la
+-@ENABLE_NTFS_3G_TRUE@ntfs_3g_usermap_LDADD = $(top_builddir)/libntfs-3g/libntfs-3g.la
+-@ENABLE_NTFS_3G_TRUE@ntfs_3g_secaudit_LDADD = $(top_builddir)/libntfs-3g/libntfs-3g.la
++@ENABLE_NTFS_3G_TRUE@ntfs_3g_probe_LDADD = -lntfs-3g
++@ENABLE_NTFS_3G_TRUE@ntfs_3g_usermap_LDADD = -lntfs-3g
++@ENABLE_NTFS_3G_TRUE@ntfs_3g_secaudit_LDADD = -lntfs-3g
+ @ENABLE_NTFS_3G_TRUE@@REALLYSTATIC_TRUE@ntfs_3g_probe_LDFLAGS = $(AM_LDFLAGS) -all-static
+ @ENABLE_NTFS_3G_TRUE@@REALLYSTATIC_TRUE@ntfs_3g_usermap_LDFLAGS = $(AM_LDFLAGS) -all-static
+ @ENABLE_NTFS_3G_TRUE@@REALLYSTATIC_TRUE@ntfs_3g_secaudit_LDFLAGS = $(AM_LDFLAGS) -all-static
+@@ -921,9 +916,9 @@ uninstall-man: uninstall-man8
+ @ENABLE_NTFS_3G_TRUE@@RUN_LDCONFIG_TRUE@	$(LDCONFIG)
+ 
+ @ENABLE_MOUNT_HELPER_TRUE@@ENABLE_NTFS_3G_TRUE@install-exec-local:	install-rootbinPROGRAMS
+-@ENABLE_MOUNT_HELPER_TRUE@@ENABLE_NTFS_3G_TRUE@	$(MKDIR_P) "$(DESTDIR)/sbin"
+-@ENABLE_MOUNT_HELPER_TRUE@@ENABLE_NTFS_3G_TRUE@	$(LN_S) -f "$(rootbindir)/ntfs-3g" "$(DESTDIR)/sbin/mount.ntfs-3g"
+-@ENABLE_MOUNT_HELPER_TRUE@@ENABLE_NTFS_3G_TRUE@	$(LN_S) -f "$(rootbindir)/lowntfs-3g" "$(DESTDIR)/sbin/mount.lowntfs-3g"
++@ENABLE_MOUNT_HELPER_TRUE@@ENABLE_NTFS_3G_TRUE@	$(MKDIR_P) "$(DESTDIR)/$(sbindir)"
++@ENABLE_MOUNT_HELPER_TRUE@@ENABLE_NTFS_3G_TRUE@	$(LN_S) -f "$(rootbindir)/ntfs-3g" "$(DESTDIR)/$(sbindir)/mount.ntfs-3g"
++@ENABLE_MOUNT_HELPER_TRUE@@ENABLE_NTFS_3G_TRUE@	$(LN_S) -f "$(rootbindir)/lowntfs-3g" "$(DESTDIR)/$(sbindir)/mount.lowntfs-3g"
+ 
+ @ENABLE_NTFS_3G_TRUE@install-data-local:	install-man8
+ @ENABLE_NTFS_3G_TRUE@	$(LN_S) -f ntfs-3g.8 "$(DESTDIR)$(man8dir)/mount.ntfs-3g.8"
