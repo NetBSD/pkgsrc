@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1922 2014/05/19 21:19:13 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.1923 2014/05/19 21:22:18 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2663,3 +2663,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/hs-utf8-string to 0.3.8 [szptvlfn 2014-05-19]
 	Added textproc/hs-parsec version 3.1.5 [szptvlfn 2014-05-19]
 	Added devel/hs-data-default-instances-base version 0.0.1 [szptvlfn 2014-05-19]
+	Added devel/hs-data-default-instances-containers version 0.0.1 [szptvlfn 2014-05-19]
