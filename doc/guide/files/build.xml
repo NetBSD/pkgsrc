@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.69 2014/05/19 13:59:15 wiz Exp $ -->
+<!-- $NetBSD: build.xml,v 1.70 2014/05/19 14:31:54 obache Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -311,7 +311,7 @@ MASTER_SITES=   http://www.example.com/download.cgi?file=
 
 <programlisting>
 DISTNAME=       foo-1.0.0
-MASTER_SITES=   -http://www.example.com/archive/v1.0.0
+MASTER_SITES=   -http://www.example.com/archive/v1.0.0.tar.gz
 </programlisting>
 
       <para>There are some predefined values for
