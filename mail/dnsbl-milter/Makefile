@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/05/13 15:31:40 sborrill Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/19 11:03:04 sborrill Exp $
 #
 
 VERSION=	6.40
@@ -15,6 +15,7 @@ LICENSE=	gnu-gpl-v3
 GNU_CONFIGURE=	yes
 PKG_SYSCONFSUBDIR?=	dnsbl-milter
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}/${PKG_SYSCONFSUBDIR}
+CONFIGURE_ARGS+=	ac_cv_path_BASH=${SH}
 
 USE_LANGUAGES=	c c++
 
