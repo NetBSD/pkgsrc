@@ -1,12 +1,13 @@
-$NetBSD: patch-ab,v 1.1 2013/07/15 01:42:47 ryoon Exp $
+$NetBSD: patch-ab,v 1.2 2014/05/19 10:40:40 jperkin Exp $
 
---- acinclude.m4.orig	2005-08-28 17:26:59.000000000 +0900
+Check for #pragma weak
+
+--- acinclude.m4.orig	2010-04-24 18:26:59.000000000 +0000
 +++ acinclude.m4
-@@ -65,3 +65,23 @@ AC_DEFUN([EL_GETPW_R_DRAFT],
-        AC_MSG_RESULT(yes)],
+@@ -65,6 +65,25 @@ AC_DEFUN([EL_GETPW_R_DRAFT],
        [AC_MSG_RESULT(no)])
  ])
-+
+ 
 +AC_DEFUN([EL_PRAGMA_WEAK],
 +[
 +    AC_MSG_CHECKING([if we can use C pragma weak SYM])
@@ -26,4 +27,6 @@ $NetBSD: patch-ab,v 1.1 2013/07/15 01:42:47 ryoon Exp $
 +                   [AC_MSG_RESULT(no)],
 +                   [AC_MSG_RESULT(cross compiling; assumed `no')])
 +])
-\ No newline at end of file
+ 
+ dnl
+ dnl use option --enable-widec to turn on use of wide-character support
