@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.767 2014/05/18 20:53:50 rodent Exp $
+# $NetBSD: Makefile,v 1.768 2014/05/19 21:18:14 szptvlfn Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -206,6 +206,7 @@ SUBDIR+=	helpdeco
 SUBDIR+=	hevea
 SUBDIR+=	highlight
 SUBDIR+=	hre
+SUBDIR+=	hs-parsec
 SUBDIR+=	html
 SUBDIR+=	html2text
 SUBDIR+=	html2wml
