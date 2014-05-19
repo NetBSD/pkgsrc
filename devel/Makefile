@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1909 2014/05/18 21:31:01 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.1910 2014/05/19 21:27:13 szptvlfn Exp $
 #
 
 COMMENT=	Development utilities
@@ -293,6 +293,10 @@ SUBDIR+=	hg-git
 SUBDIR+=	hoe
 SUBDIR+=	hptools
 SUBDIR+=	hs-data-default-class
+SUBDIR+=	hs-data-default-instances-base
+SUBDIR+=	hs-data-default-instances-containers
+SUBDIR+=	hs-data-default-instances-dlist
+SUBDIR+=	hs-data-default-instances-old-locale
 SUBDIR+=	hs-dlist
 SUBDIR+=	hs-mtl
 SUBDIR+=	hs-tagged
