@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/05/31 12:41:39 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2014/05/19 00:30:39 rodent Exp $
 
 DISTNAME=	Net-LibIDN-0.12
 PKGNAME=	p5-${DISTNAME}
@@ -18,6 +18,8 @@ MAKE_PARAMS.makemaker+=	--with-libidn-inc=${BUILDLINK_PREFIX.libidn}/include
 
 PERL5_PACKLIST=		auto/Net/LibIDN/.packlist
 
+BUILDLINK_API_DEPENDS.libgetopt+=	libgetopt>=1.4.5
+.include "../../devel/libgetopt/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
