@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1917 2014/05/19 08:21:23 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1918 2014/05/19 09:34:44 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2656,3 +2656,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/hs-data-default-class version 0.0.1 [szptvlfn 2014-05-18]
 	Added devel/hs-dlist version 0.7.0.1 [szptvlfn 2014-05-18]
 	Updated multimedia/xine-lib to 1.2.5nb2 [wiz 2014-05-19]
+	Updated chat/loudmouth to 1.4.3nb9 [jperkin 2014-05-19]
