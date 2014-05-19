@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2009/03/11 08:26:11 hasso Exp $
+$NetBSD: patch-aa,v 1.6 2014/05/19 09:34:34 jperkin Exp $
+
+Don't hardcode -lresolv
 
 --- loudmouth/Makefile.in.orig	2009-03-11 09:40:29 +0200
 +++ loudmouth/Makefile.in	2009-03-11 09:40:42 +0200
