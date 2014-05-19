@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/19 21:23:29 szptvlfn Exp $
+lib/data-default-instances-dlist-${PKGVERSION}/${HASKELL_VERSION}/Data/Default/Instances/DList.hi
+lib/data-default-instances-dlist-${PKGVERSION}/${HASKELL_VERSION}/HSdata-default-instances-dlist-${PKGVERSION}.o
+lib/data-default-instances-dlist-${PKGVERSION}/${HASKELL_VERSION}/libHSdata-default-instances-dlist-${PKGVERSION}.a
+lib/data-default-instances-dlist-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/data-default-instances-dlist-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/data-default-instances-dlist-${PKGVERSION}/html/Data-Default-Instances-DList.html
+${PLIST.doc}share/doc/data-default-instances-dlist-${PKGVERSION}/html/data-default-instances-dlist.haddock
+${PLIST.doc}share/doc/data-default-instances-dlist-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/data-default-instances-dlist-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/data-default-instances-dlist-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/data-default-instances-dlist-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/data-default-instances-dlist-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/data-default-instances-dlist-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/data-default-instances-dlist-${PKGVERSION}/html/mini_Data-Default-Instances-DList.html
+${PLIST.doc}share/doc/data-default-instances-dlist-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/data-default-instances-dlist-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/data-default-instances-dlist-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/data-default-instances-dlist-${PKGVERSION}/html/synopsis.png
