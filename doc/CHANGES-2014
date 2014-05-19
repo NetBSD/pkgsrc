@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1919 2014/05/19 13:50:42 adam Exp $
+$NetBSD: CHANGES-2014,v 1.1920 2014/05/19 21:15:16 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2660,3 +2660,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added filesystems/libntfs version 2014.2.15 [adam 2014-05-19]
 	Updated filesystems/fuse-ntfs-3g to 2014.2.15 [adam 2014-05-19]
 	Updated sysutils/ntfsprogs to 2014.2.15 [adam 2014-05-19]
+	Updated devel/hs-utf8-string to 0.3.8 [szptvlfn 2014-05-19]
