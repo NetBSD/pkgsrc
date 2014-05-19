@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2014/05/19 12:22:06 adam Exp $
+
+Don't install README.
+
+--- Makefile.in.orig	2014-05-19 07:53:27.000000000 +0000
++++ Makefile.in
+@@ -754,7 +754,7 @@ info: info-recursive
+ 
+ info-am:
+ 
+-install-data-am: install-docDATA
++install-data-am:
+ 
+ install-dvi: install-dvi-recursive
+ 
