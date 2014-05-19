@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/19 21:25:16 szptvlfn Exp $
+lib/data-default-instances-old-locale-${PKGVERSION}/${HASKELL_VERSION}/Data/Default/Instances/OldLocale.hi
+lib/data-default-instances-old-locale-${PKGVERSION}/${HASKELL_VERSION}/HSdata-default-instances-old-locale-${PKGVERSION}.o
+lib/data-default-instances-old-locale-${PKGVERSION}/${HASKELL_VERSION}/libHSdata-default-instances-old-locale-${PKGVERSION}.a
+lib/data-default-instances-old-locale-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/data-default-instances-old-locale-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/data-default-instances-old-locale-${PKGVERSION}/html/Data-Default-Instances-OldLocale.html
+${PLIST.doc}share/doc/data-default-instances-old-locale-${PKGVERSION}/html/data-default-instances-old-locale.haddock
+${PLIST.doc}share/doc/data-default-instances-old-locale-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/data-default-instances-old-locale-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/data-default-instances-old-locale-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/data-default-instances-old-locale-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/data-default-instances-old-locale-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/data-default-instances-old-locale-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/data-default-instances-old-locale-${PKGVERSION}/html/mini_Data-Default-Instances-OldLocale.html
+${PLIST.doc}share/doc/data-default-instances-old-locale-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/data-default-instances-old-locale-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/data-default-instances-old-locale-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/data-default-instances-old-locale-${PKGVERSION}/html/synopsis.png
