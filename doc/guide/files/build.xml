@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.64 2012/09/19 15:26:34 wiz Exp $ -->
+<!-- $NetBSD: build.xml,v 1.65 2014/05/19 13:15:10 obache Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -252,7 +252,8 @@ GTKDIR_DEFAULT= ${LOCALBASE}
 
       <para>The variable <varname>DISTFILES</varname> specifies
       the list of distfiles that have to be fetched. Its value
-      defaults to <literal>${DISTNAME}${EXTRACT_SUFX}</literal>,
+      defaults to <literal>${DEFAULT_DISTFILES}</literal> and
+      its value is <literal>${DISTNAME}${EXTRACT_SUFX}</literal>,
       so that most packages don't need to define it at all.
       <varname>EXTRACT_SUFX</varname> is
       <literal>.tar.gz</literal> by default, but can be changed
