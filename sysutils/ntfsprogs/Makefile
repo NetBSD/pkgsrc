@@ -1,24 +1,16 @@
-# $NetBSD: Makefile,v 1.11 2014/03/30 23:58:19 jakllsch Exp $
+# $NetBSD: Makefile,v 1.12 2014/05/19 12:22:06 adam Exp $
 
-DISTNAME=	ntfsprogs-2.0.0
-PKGREVISION=	2
+.include "../../filesystems/libntfs/Makefile.common"
+
+PKGNAME=	${DISTNAME:S/ntfs-3g_//}
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=linux-ntfs/}
-EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.linux-ntfs.org/
 COMMENT=	Linux-NTFS project utilities for the Windows NT Filesystem
 
-USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-ntfs-3g
 
-# XXX support for this should be possibly integrated with other
-# gnome pkgsrc and this could be a configurable option
-CONFIGURE_ARGS+=	--disable-gnome-vfs
-
-GCC_REQD+=	2.96
+BUILD_DIRS=		ntfsprogs
 
 .include "../../devel/libuuid/buildlink3.mk"
+.include "../../filesystems/libntfs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

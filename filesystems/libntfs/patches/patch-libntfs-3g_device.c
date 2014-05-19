@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.6 2014/03/30 23:58:19 jakllsch Exp $
+$NetBSD: patch-libntfs-3g_device.c,v 1.1 2014/05/19 12:22:06 adam Exp $
 
---- libntfs/device.c.orig	2007-09-26 18:28:34.000000000 +0000
-+++ libntfs/device.c
-@@ -85,6 +85,10 @@
+--- libntfs-3g/device.c.orig	2014-02-15 14:07:52.000000000 +0000
++++ libntfs-3g/device.c
+@@ -95,6 +95,10 @@
  #	define BLKBSZSET _IOW(0x12,113,size_t) /* Set device block size in bytes. */
  #endif
  
@@ -13,11 +13,11 @@ $NetBSD: patch-ae,v 1.6 2014/03/30 23:58:19 jakllsch Exp $
  /**
   * ntfs_device_alloc - allocate an ntfs device structure and pre-initialize it
   * @name:	name of the device (must be present)
-@@ -599,6 +603,23 @@ s64 ntfs_device_size_get(struct ntfs_dev
+@@ -596,6 +600,23 @@ s64 ntfs_device_size_get(struct ntfs_dev
  		}
  	}
  #endif
-+#ifdef DIOCGDINFO
++#ifdef DIOCGPART
 +	{
 +		struct stat st;
 +		if (dev->d_ops->stat(dev, &st) >= 0) {
@@ -27,8 +27,8 @@ $NetBSD: patch-ae,v 1.6 2014/03/30 23:58:19 jakllsch Exp $
 +			if (dev->d_ops->ioctl(dev, DIOCGDINFO, &disklabel) >= 0) {
 +				secsize = disklabel.d_secsize;
 +				psize = disklabel.d_partitions[DISKPART(st.st_rdev)].p_size;
-+				ntfs_log_debug("DIOCGDINFO part %d nr %d byte blocks = %lld (0x%llx)\n",
-+						DISKPART(st.st_rdev), secsize, psize, psize);
++				ntfs_log_debug("DIOCGPART nr %d byte blocks = %lld (0x%llx)\n",
++						secsize, psize, psize);
 +				return psize * secsize / block_size;
 +			}
 +		}
