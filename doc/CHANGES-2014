@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1931 2014/05/20 08:45:55 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1932 2014/05/20 08:47:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2672,3 +2672,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/musicpd to 0.18.11 [wiz 2014-05-20]
 	Updated devel/meld to 1.8.5 [wiz 2014-05-20]
 	Updated x11/libxkbcommon to 0.4.2 [wiz 2014-05-20]
+	Updated time/py-pytz to 2014.3 [wiz 2014-05-20]
