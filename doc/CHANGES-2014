@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1939 2014/05/20 12:45:45 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1940 2014/05/20 20:03:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2680,3 +2680,11 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-django to 1.6.5 [adam 2014-05-20]
 	Updated security/zoneminder to 1.25.0nb6 [dsainty 2014-05-20]
 	Updated emulators/xtrs to 4.9dnb3 [obache 2014-05-20]
+	Updated audio/mpg123 to 1.19.0 [adam 2014-05-20]
+	Updated audio/mpg123-arts to 1.19.0 [adam 2014-05-20]
+	Updated audio/mpg123-esound to 1.19.0 [adam 2014-05-20]
+	Updated audio/mpg123-nas to 1.19.0 [adam 2014-05-20]
+	Updated audio/mpg123-oss to 1.19.0 [adam 2014-05-20]
+	Updated audio/mpg123-pulse to 1.19.0 [adam 2014-05-20]
+	Updated audio/mpg123-sun to 1.19.0 [adam 2014-05-20]
+	Removed audio/libmpg123 [adam 2014-05-20]
