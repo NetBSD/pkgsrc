@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13320 2014/05/20 08:47:47 wiz Exp $
+$NetBSD: TODO,v 1.13321 2014/05/20 08:49:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -987,7 +987,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-tlslite-0.4.6
 	o py-twisted-14.0.0
 	o py-uliweb-0.2.4
-	o py-virtualenv-1.11.6
 	o py-wxWidgets-3.0.0
 	o py-zconfig-3.0.3
 	o qnetwalk-1.4
