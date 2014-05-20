@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1911 2014/05/20 21:19:13 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.1912 2014/05/20 21:21:28 szptvlfn Exp $
 #
 
 COMMENT=	Development utilities
@@ -292,6 +292,7 @@ SUBDIR+=	heirloom-what
 SUBDIR+=	hg-git
 SUBDIR+=	hoe
 SUBDIR+=	hptools
+SUBDIR+=	hs-data-default
 SUBDIR+=	hs-data-default-class
 SUBDIR+=	hs-data-default-instances-base
 SUBDIR+=	hs-data-default-instances-containers
