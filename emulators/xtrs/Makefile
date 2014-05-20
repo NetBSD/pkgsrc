@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2014/05/20 12:26:11 obache Exp $
+# $NetBSD: Makefile,v 1.25 2014/05/20 12:33:18 obache Exp $
 #
 
 DISTNAME=	xtrs-4.9d
@@ -21,7 +21,6 @@ SUBST_FILES.mf=		Makefile.local
 SUBST_SED.mf=		-e 's|/usr/local|${PREFIX}|g'
 SUBST_SED.mf+=		-e 's|/usr/X11/|${X11PREFIX}/|g'
 SUBST_SED.mf+=		-e 's|/usr/include/X11|${X11BASE}/include|g'
-SUBST_SED.mf+=		-e 's|^\#EXTRALIBS.*|EXTRALIBS=${BUILDLINK_LDADD.oss}|'
 SUBST_SED.mf+=		-e 's|/share/man|/${PKGMANDIR}|g'
 
 SUBST_CLASSES+=		oss
@@ -30,6 +29,10 @@ SUBST_FILES.oss=	trs_cassette.c cassette
 .if ${OSS_TYPE} != none
 SUBST_SED.oss=		-e 's|/dev/dsp|${DEVOSSSOUND}|g'
 SUBST_SED.oss+=		-e 's|if __linux|if 1|'
+.endif
+
+.if ${OSS_TYPE} != none
+MAKE_FLAGS+=		EXTRALIBS=${BUILDLINK_LDADD.oss}
 .endif
 
 SUBST_CLASSES+=		termcap
