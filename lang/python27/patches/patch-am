@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.15 2014/04/13 15:06:20 bsiegert Exp $
+$NetBSD: patch-am,v 1.16 2014/05/20 16:48:00 adam Exp $
 
 Disabled modules for normal build:
 bsddb
@@ -63,7 +63,7 @@ cygwin 2.7.3-no-libm.patch
              math_libs = []
  
          # XXX Omitted modules: gl, pure, dl, SGI-specific modules
-@@ -785,10 +790,9 @@ class PyBuildExt(build_ext):
+@@ -785,8 +790,7 @@ class PyBuildExt(build_ext):
                                 libraries=math_libs) )
          # Detect SSL support for the socket module (via _ssl)
          search_for_ssl_incs_in = [
@@ -71,11 +71,8 @@ cygwin 2.7.3-no-libm.patch
 -                              '/usr/contrib/ssl/include/'
 +                              '@SSLBASE@/include'
                               ]
--        ssl_incs = find_file('openssl/ssl.h', inc_dirs,
-+        ssl_incs = find_file('openssl/ssl.h', [],
+         ssl_incs = find_file('openssl/ssl.h', inc_dirs,
                               search_for_ssl_incs_in
-                              )
-         if ssl_incs is not None:
 @@ -797,9 +801,7 @@ class PyBuildExt(build_ext):
              if krb5_h:
                  ssl_incs += krb5_h
@@ -87,15 +84,6 @@ cygwin 2.7.3-no-libm.patch
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -818,7 +820,7 @@ class PyBuildExt(build_ext):
- 
-         # look for the openssl version header on the compiler search path.
-         opensslv_h = find_file('openssl/opensslv.h', [],
--                inc_dirs + search_for_ssl_incs_in)
-+                search_for_ssl_incs_in)
-         if opensslv_h:
-             name = os.path.join(opensslv_h[0], 'openssl/opensslv.h')
-             if host_platform == 'darwin' and is_macosx_sdk_path(name):
 @@ -918,175 +920,6 @@ class PyBuildExt(build_ext):
              else:
                  raise ValueError("unknown major BerkeleyDB version", major)
