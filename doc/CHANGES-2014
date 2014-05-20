@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1935 2014/05/20 09:08:52 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1936 2014/05/20 10:25:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2676,3 +2676,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-virtualenv to 1.11.6 [wiz 2014-05-20]
 	Updated lang/python34 to 3.4.1 [wen 2014-05-20]
 	Updated sysutils/testdisk to 6.14nb1 [obache 2014-05-20]
+	Updated databases/py-mysql-connector to 1.1.7 [adam 2014-05-20]
