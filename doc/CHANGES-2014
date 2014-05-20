@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1937 2014/05/20 11:07:19 adam Exp $
+$NetBSD: CHANGES-2014,v 1.1938 2014/05/20 11:34:45 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2678,3 +2678,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/testdisk to 6.14nb1 [obache 2014-05-20]
 	Updated databases/py-mysql-connector to 1.1.7 [adam 2014-05-20]
 	Updated www/py-django to 1.6.5 [adam 2014-05-20]
+	Updated security/zoneminder to 1.25.0nb6 [dsainty 2014-05-20]
