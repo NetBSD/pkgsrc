@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.93 2013/07/15 19:55:31 christos Exp $
+# $NetBSD: Makefile,v 1.94 2014/05/20 19:45:27 adam Exp $
 
-DISTNAME=	nas-1.9.3.src
+DISTNAME=	nas-1.9.4.src
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nas/}
 
@@ -78,8 +77,8 @@ PLIST_SRC+=	${PKGDIR}/PLIST.server
 EGDIR=		${PREFIX}/share/examples/nas
 CONF_FILES=	${EGDIR}/nasd.conf.eg ${PKG_SYSCONFDIR}/nasd.conf
 
-.  if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || \
-      ${OPSYS} == "DragonFly" || ${OPSYS} == "Linux" || ${OPSYS} == "UnixWare"
+.  if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" \
+   || ${OPSYS} == "DragonFly" || ${OPSYS} == "Linux" || ${OPSYS} == "UnixWare"
 .  include "../../mk/oss.buildlink3.mk"
 .  endif
 .endif
