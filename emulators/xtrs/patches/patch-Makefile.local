@@ -1,0 +1,30 @@
+$NetBSD: patch-Makefile.local,v 1.1 2014/05/20 12:26:11 obache Exp $
+
+* Honor CFLAGS/LDFLAGS, already defined as good enough.
+
+--- Makefile.local.orig	2009-06-15 23:32:57.000000000 +0000
++++ Makefile.local
+@@ -54,7 +54,7 @@ READLINELIBS = -lreadline -lncurses
+ 
+ # Select debugging symbols (-g) and/or optimization (-O2, etc.)
+ 
+-DEBUG = -O2 -g -Wall
++#DEBUG = -O2 -g -Wall
+ #DEBUG = -g -DKBDEBUG -DXDEBUG
+ #DEBUG = -g
+ #DEBUG = -Wall
+@@ -65,12 +65,12 @@ DEBUG = -O2 -g -Wall
+ 
+ # If you need a different path for libraries:
+ 
+-LDFLAGS = -L/usr/X11R6/lib
++#LDFLAGS = -L/usr/X11R6/lib
+ #LDFLAGS = -non_shared -L/usr/X11/lib
+ 
+ # If you need a different path for include files:
+ 
+-IFLAGS = -I/usr/include/X11
++#IFLAGS = -I/usr/include/X11
+ 
+ # Re-define this if your X library is strangely named:
+ 
