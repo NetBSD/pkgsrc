@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.29 2010/03/14 14:19:19 martin Exp $
+$NetBSD: patch-aa,v 1.30 2014/05/20 19:59:09 adam Exp $
 
---- configure.orig	2009-12-05 21:30:40.000000000 +0100
-+++ configure	2010-02-05 23:01:19.000000000 +0100
-@@ -14622,7 +14622,7 @@
+--- configure.orig	2014-03-08 12:12:59.000000000 +0000
++++ configure
+@@ -16363,7 +16363,7 @@ fi
  
  
  # The full list of supported modules to check, first come, first serve.
--check_modules="alsa oss coreaudio sndio sun win32 os2 esd jack portaudio pulse sdl nas arts openal dummy"
-+check_modules=${MPG123_MODULE}
- # The final list.
- output_modules=
- 
+-check_modules="alsa tinyalsa oss coreaudio sndio sun win32 win32_wasapi os2 esd jack portaudio pulse sdl nas arts openal dummy"
++check_modules="${MPG123_MODULE}"
+ # Only check qsa before all else on QNX.
+ # It would mask ALSA otherwise.
+ case $host in
