@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2014/04/22 20:46:41 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.2 2014/05/20 19:12:36 adam Exp $
 
 GCC_PKGNAME=	gcc48
 .include	"../../lang/gcc48/version.mk"
@@ -36,7 +36,7 @@ GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
 GNU_CONFIGURE_PREFIX=	${GCC_PREFIX}
 INFO_FILES=		yes
 
-PLIST_VARS+=		java
+PLIST_VARS+=		java darwin unix
 JAVA_MACHINE_ARCH=	${MACHINE_ARCH:S/x86_64/amd64/}
 PLIST_SUBST+=		JAVA_MACHINE_ARCH=${JAVA_MACHINE_ARCH}
 
@@ -55,6 +55,12 @@ SUBST_FILES.vars=	gcc/Makefile.in
 SUBST_VARS.vars=	GCC_TARGET_MACHINE
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+PLIST.darwin=		yes
+.else
+PLIST.unix=		yes
+.endif
 
 # In some cases LINKER_RPATH_FLAG needs a trailing space.
 LINKER_RPATH_FLAG:=	${LINKER_RPATH_FLAG:S/-rpath/& /}
