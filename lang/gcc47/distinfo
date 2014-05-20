@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2014/05/10 14:14:58 richard Exp $
+$NetBSD: distinfo,v 1.22 2014/05/20 01:59:05 pho Exp $
 
 SHA1 (ecj-4.5.jar) = 58c1d79c64c8cd718550f32a932ccfde8d1e6449
 RMD160 (ecj-4.5.jar) = d3f4da657f086b6423f74e93f001132f4855368a
@@ -23,6 +23,7 @@ SHA1 (patch-gcc_testsuite_g++.dg_eh_unwind-direct.C) = fd85ccee102e9618a8010d2dc
 SHA1 (patch-include_libiberty.h) = ad2c64e9a14405c89b02ff68811b1c889405d0a1
 SHA1 (patch-libgcc_config.host) = 6b54e18c6348c4aeb3fda3093fbe990b59456af7
 SHA1 (patch-libgcc_config_i386_dragonfly-unwind.h) = 9d77252dd982495e90f95b82706bab29e581df9f
+SHA1 (patch-libgcc_config_t-slibgcc-darwin) = 5e0d2df4622281f3f9bca3e948d0c7b209fab04c
 SHA1 (patch-libgcc_config_t-slibgcc-sld) = 1b3ae1dc03eaad16a51311049ffc9e42c44dfcbc
 SHA1 (patch-libgcc_crtstuff.c) = 88500ea895cd683608f8f2b7177149f11947e3b4
 SHA1 (patch-libgcc_unwind-dw2-fde-dip.c) = 6da81a310bc76db3ce88649d42658c748c958800
@@ -30,6 +31,7 @@ SHA1 (patch-libgfortran_configure) = b3bbc7d9201073a1bed0b7e10141465bab52c8be
 SHA1 (patch-libgo_Makefile.in) = 612987541f745c7be6835ce7fb7119884db294c3
 SHA1 (patch-libgo_config_ltmain.sh) = 703a27554e479cc2e48410a6bb0e5f5b4be2c150
 SHA1 (patch-libgo_runtime_proc.c) = 55b2c449f4d43fe9b6d7ca1c7f075feebca8ebd6
+SHA1 (patch-libjava_Makefile.in) = cbf10e212e3865f73f21557eda70d0ad1e860d66
 SHA1 (patch-libjava_boehm.cc) = b18bc9d410a62543583c77e011f50b86f41ca18a
 SHA1 (patch-libjava_configure) = 48ea2baffe87e09dda8133d286bd9b1bfe4c3f8a
 SHA1 (patch-libjava_contrib_rebuild-gcj-db.in) = bb01d738fc7db05046ae37e8ade32574de1d8297
