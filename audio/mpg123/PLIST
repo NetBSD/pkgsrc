@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2010/03/14 15:46:05 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/05/20 19:59:09 adam Exp $
 bin/mpg123
+bin/mpg123-id3dump
+bin/mpg123-strip
 include/mpg123.h
 lib/libmpg123.la
 lib/pkgconfig/libmpg123.pc

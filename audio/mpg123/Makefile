@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2012/10/02 23:48:00 asau Exp $
+# $NetBSD: Makefile,v 1.54 2014/05/20 19:59:09 adam Exp $
 
 PKGNAME=	${DISTNAME:C/[^[:alnum:]]*//}
-PKGREVISION=	1
 COMMENT=	MPEG layer 1, 2, and 3 audio player
 
 PKGCONFIG_OVERRIDE+=	libmpg123.pc.in
@@ -16,19 +15,17 @@ MPG123_BUILDING_BASE=	# empty
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=	oss
-PLIST_VARS+=	sun
-PLIST_VARS+=	coreaudio
+PLIST_VARS+=	coreaudio oss sun
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "SunOS"
 MPG123_DEFAULT_MODULE=	sun
-PLIST.sun	=	yes
+PLIST.sun=		yes
 .elif ${OPSYS} == "Darwin"
 MPG123_DEFAULT_MODULE=	coreaudio
-PLIST.coreaudio	=	yes
+PLIST.coreaudio=	yes
 .else
 MPG123_DEFAULT_MODULE=	oss
-PLIST.oss	=	yes
+PLIST.oss=		yes
 .include "../../mk/oss.buildlink3.mk"
 LIBS+=		${LIBOSSAUDIO}
 CPPFLAGS+=	-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
