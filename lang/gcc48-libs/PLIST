@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/04/22 20:46:41 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/05/20 19:12:36 adam Exp $
 ${PLIST.java}gcc48/lib/gcj-${PKGVERSION}-14/libjvm.la
 gcc48/lib/libatomic.la
 gcc48/lib/libgcc_s.so
@@ -9,11 +9,12 @@ gcc48/lib/libgfortran.la
 ${PLIST.java}gcc48/lib/libgij.la
 gcc48/lib/libgomp.la
 gcc48/lib/libitm.la
-gcc48/lib/libobjc.la
+${PLIST.darwin}gcc48/lib/libobjc-gnu.la
+${PLIST.unix}gcc48/lib/libobjc.la
 gcc48/lib/libssp.la
 gcc48/lib/libstdc++.la
-gcc48/libexec/gcc/${MACHINE_GNU_PLATFORM}/4.8.2/liblto_plugin.la
-gcc48/libexec/gcc/${MACHINE_GNU_PLATFORM}/4.8.2/lto-wrapper
-gcc48/libexec/gcc/${MACHINE_GNU_PLATFORM}/4.8.2/lto1
+${PLIST.unix}gcc48/libexec/gcc/${MACHINE_GNU_PLATFORM}/4.8.2/liblto_plugin.la
+${PLIST.unix}gcc48/libexec/gcc/${MACHINE_GNU_PLATFORM}/4.8.2/lto-wrapper
+${PLIST.unix}gcc48/libexec/gcc/${MACHINE_GNU_PLATFORM}/4.8.2/lto1
 ${PLIST.java}java/gcc48/jre/lib/${JAVA_MACHINE_ARCH}/client/libjvm.so
 ${PLIST.java}java/gcc48/jre/lib/${JAVA_MACHINE_ARCH}/server/libjvm.so
