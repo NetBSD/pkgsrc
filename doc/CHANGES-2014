@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1926 2014/05/20 05:10:37 hiramatsu Exp $
+$NetBSD: CHANGES-2014,v 1.1927 2014/05/20 08:27:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2667,3 +2667,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/hs-data-default-instances-dlist version 0.0.1 [szptvlfn 2014-05-19]
 	Added devel/hs-data-default-instances-old-locale version 0.0.1 [szptvlfn 2014-05-19]
 	Updated devel/p5-List-AllUtils to 0.08 [hiramatsu 2014-05-20]
+	Updated security/caff to 1.1.7 [wiz 2014-05-20]
