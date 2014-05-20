@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/05/20 11:29:25 obache Exp $
+# $NetBSD: Makefile,v 1.23 2014/05/20 11:43:02 obache Exp $
 #
 
 DISTNAME=	xtrs-4.9d
@@ -16,7 +16,7 @@ BUILD_TARGET=	default
 .include "../../mk/readline.buildlink3.mk"
 
 SUBST_CLASSES+=		mf
-SUBST_STAGE.mf=		post-patch
+SUBST_STAGE.mf=		post-configure
 SUBST_FILES.mf=		Makefile.local
 SUBST_SED.mf=		-e 's|/usr/local|${PREFIX}|g'
 SUBST_SED.mf+=		-e 's|/usr/X11/|${X11PREFIX}/|g'
@@ -26,7 +26,7 @@ SUBST_SED.mf+=		-e 's|^\#EXTRALIBS.*|EXTRALIBS=${BUILDLINK_LDADD.oss}|'
 SUBST_SED.mf+=		-e 's|/share/man|/${PKGMANDIR}|g'
 
 SUBST_CLASSES+=		oss
-SUBST_STAGE.oss=	post-patch
+SUBST_STAGE.oss=	post-configure
 SUBST_FILES.oss=	trs_cassette.c cassette
 .if ${OSS_TYPE} != none
 SUBST_SED.oss=		-e 's|/dev/dsp|${DEVOSSSOUND}|g'
@@ -34,7 +34,7 @@ SUBST_SED.oss+=		-e 's|if __linux|if 1|'
 .endif
 
 SUBST_CLASSES+=		termcap
-SUBST_STAGE.termcap=	post-patch
+SUBST_STAGE.termcap=	post-configure
 SUBST_FILES.termcap=	Makefile.local
 .if ${TERMCAP_TYPE} == none
 SUBST_SED.termcap+=	-e 's|-lncurses||'
