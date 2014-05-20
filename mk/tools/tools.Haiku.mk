@@ -1,4 +1,4 @@
-# $NetBSD: tools.Haiku.mk,v 1.12 2014/05/18 09:37:50 obache Exp $
+# $NetBSD: tools.Haiku.mk,v 1.13 2014/05/20 09:55:12 obache Exp $
 #
 # System-supplied tools for the Haiku operating system.
 
@@ -111,7 +111,8 @@ TOOLS_PLATFORM.openssl?=	/bin/openssl
 .elif exists(/boot/common/bin/openssl)
 TOOLS_PLATFORM.openssl?=	/boot/common/bin/openssl
 .endif
-TOOLS_PLATFORM.patch?=		/bin/patch
+# Don't use GNU patch
+#TOOLS_PLATFORM.patch?=		/bin/patch
 TOOLS_PLATFORM.printf?=		/bin/printf
 TOOLS_PLATFORM.pwd?=		/bin/pwd
 TOOLS_PLATFORM.readlink?=	/bin/readlink
