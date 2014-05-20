@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.70 2014/05/15 14:41:52 adam Exp $
+# $NetBSD: Makefile,v 1.71 2014/05/20 20:20:43 adam Exp $
 
-DISTNAME=	libgdiplus-2.10
-PKGREVISION=	14
+DISTNAME=	libgdiplus-2.10.9
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.mono-project.com/sources/libgdiplus/
 EXTRACT_SUFX=	.tar.bz2
@@ -9,11 +8,12 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	kefren@NetBSD.org
 HOMEPAGE=	http://www.mono-project.com/
 COMMENT=	Implementation of the GDI+ API
+LICENSE=	mit
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		autoconf gmake pkg-config
 USE_LIBTOOL=		yes
-USE_LANGUAGES+=		c c++
+USE_LANGUAGES=		c c++
 PKGCONFIG_OVERRIDE+=	libgdiplus.pc.in
 PKGCONFIG_OVERRIDE+=	cairo/src/cairo.pc.in
 PKGCONFIG_OVERRIDE+=	cairo/src/cairo-backend.pc.in
