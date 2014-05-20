@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1910 2014/05/19 21:27:13 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.1911 2014/05/20 21:19:13 szptvlfn Exp $
 #
 
 COMMENT=	Development utilities
@@ -298,6 +298,7 @@ SUBDIR+=	hs-data-default-instances-containers
 SUBDIR+=	hs-data-default-instances-dlist
 SUBDIR+=	hs-data-default-instances-old-locale
 SUBDIR+=	hs-dlist
+SUBDIR+=	hs-extensible-exceptions
 SUBDIR+=	hs-mtl
 SUBDIR+=	hs-tagged
 SUBDIR+=	hs-text
