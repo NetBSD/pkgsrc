@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/05/20 08:59:31 wen Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/20 09:13:37 wiz Exp $
 
 .include "dist.mk"
 
@@ -48,7 +48,7 @@ LIBS.SunOS+=		-lrt
 
 PY_VER_SUFFIX=		3.4
 
-.if ${OPSYS} == "Darwin" || ${OPSYS} == "Interix"
+.if ${OPSYS} == "Darwin"
 PY_PLATNAME=	${LOWER_OPSYS}
 USE_TOOLS+=	gmake
 .elif ${OPSYS} == "IRIX"
