@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2014/04/18 20:11:18 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2014/05/20 08:27:47 wiz Exp $
 
-DISTNAME=	signing-party_1.1.6.orig
+DISTNAME=	signing-party_1.1.7.orig
 PKGNAME=	${DISTNAME:C/signing-party_/caff-/C/.orig//}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/s/signing-party/}
@@ -10,7 +10,8 @@ HOMEPAGE=	http://pgp-tools.alioth.debian.org/
 COMMENT=	Various GnuPG related tools
 LICENSE=	gnu-gpl-v2 AND modified-bsd
 
-WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/:S/.orig//}
+#WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/:S/.orig//}
+WRKSRC=		${WRKDIR}
 
 USE_TOOLS+=	gmake pod2man
 USE_TOOLS+=	perl:run
