@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1943 2014/05/20 21:18:02 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.1944 2014/05/20 21:20:01 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2691,3 +2691,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/x3270 to 3.3.14ga11 [gls 2014-05-20]
 	Updated graphics/libgdiplus to 2.10.9 [adam 2014-05-20]
 	Added devel/hs-extensible-exceptions version 0.1.1.4 [szptvlfn 2014-05-20]
+	Added devel/hs-data-default version 0.5.3 [szptvlfn 2014-05-20]
