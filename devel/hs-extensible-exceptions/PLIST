@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/20 21:17:34 szptvlfn Exp $
+lib/extensible-exceptions-${PKGVERSION}/${HASKELL_VERSION}/Control/Exception/Extensible.hi
+lib/extensible-exceptions-${PKGVERSION}/${HASKELL_VERSION}/HSextensible-exceptions-${PKGVERSION}.o
+lib/extensible-exceptions-${PKGVERSION}/${HASKELL_VERSION}/libHSextensible-exceptions-${PKGVERSION}.a
+lib/extensible-exceptions-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/extensible-exceptions-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/extensible-exceptions-${PKGVERSION}/html/Control-Exception-Extensible.html
+${PLIST.doc}share/doc/extensible-exceptions-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/extensible-exceptions-${PKGVERSION}/html/extensible-exceptions.haddock
+${PLIST.doc}share/doc/extensible-exceptions-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/extensible-exceptions-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/extensible-exceptions-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/extensible-exceptions-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/extensible-exceptions-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/extensible-exceptions-${PKGVERSION}/html/mini_Control-Exception-Extensible.html
+${PLIST.doc}share/doc/extensible-exceptions-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/extensible-exceptions-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/extensible-exceptions-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/extensible-exceptions-${PKGVERSION}/html/synopsis.png
