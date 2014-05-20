@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1928 2014/05/20 08:35:18 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1929 2014/05/20 08:41:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2669,3 +2669,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-List-AllUtils to 0.08 [hiramatsu 2014-05-20]
 	Updated security/caff to 1.1.7 [wiz 2014-05-20]
 	Updated databases/py-psycopg2 to 2.5.3 [wiz 2014-05-20]
+	Updated audio/musicpd to 0.18.11 [wiz 2014-05-20]
