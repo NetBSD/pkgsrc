@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2014/05/19 00:23:35 rodent Exp $
+# $NetBSD: Makefile,v 1.52 2014/05/20 09:51:14 obache Exp $
 
 DISTNAME=	XML-LibXML-2.0116
 PKGNAME=	p5-${DISTNAME}
@@ -27,10 +27,6 @@ PERL5_PACKLIST=		auto/XML/LibXML/.packlist
 
 FILES_SUBST+=		PERL5_INSTALLVENDORLIB=${PERL5_INSTALLVENDORLIB:Q}
 
-BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.1.4
-.include "../../devel/zlib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.xz+=	xz>=5.0.0
-.include "../../archivers/xz/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
