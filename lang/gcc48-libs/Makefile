@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/05/10 14:14:59 richard Exp $
+# $NetBSD: Makefile,v 1.14 2014/05/20 19:12:36 adam Exp $
 
 PKGNAME=	${GCC_PKGNAME}-libs-${GCC48_DIST_VERSION}
 PKGREVISION=	5
@@ -30,7 +30,7 @@ do-install:
 
 # libgcc_s has no libtool la file.
 	${INSTALL_LIB} \
-		${WRKSRC}/${OBJDIR}/${MACHINE_GNU_PLATFORM}/libgcc/libgcc_s.so* \
+		${WRKSRC}/${OBJDIR}/${MACHINE_GNU_PLATFORM}/libgcc/libgcc_s.* \
 		${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib
 
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
@@ -45,16 +45,13 @@ do-install:
 		${WRKSRC}/${OBJDIR}/${MACHINE_GNU_PLATFORM}/libitm/libitm.la \
 		${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib
 
+.if ${OPSYS} == "Darwin"
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/${OBJDIR}/${MACHINE_GNU_PLATFORM}/libobjc/libobjc-gnu.la \
+		${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib
+.else
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
 		${WRKSRC}/${OBJDIR}/${MACHINE_GNU_PLATFORM}/libobjc/libobjc.la \
-		${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib
-
-	${LIBTOOL} --mode=install ${INSTALL_LIB} \
-		${WRKSRC}/${OBJDIR}/${MACHINE_GNU_PLATFORM}/libstdc++-v3/src/libstdc++.la \
-		${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib
-
-	${LIBTOOL} --mode=install ${INSTALL_LIB} \
-		${WRKSRC}/${OBJDIR}/${MACHINE_GNU_PLATFORM}/libssp/libssp.la \
 		${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib
 
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
@@ -66,6 +63,15 @@ do-install:
 
 	${INSTALL_PROGRAM} ${WRKSRC}/${OBJDIR}/gcc/lto-wrapper \
 		${DESTDIR}${PREFIX}/${GCC_PKGNAME}/libexec/gcc/${MACHINE_GNU_PLATFORM}/${GCC48_DIST_VERSION}
+.endif
+
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/${OBJDIR}/${MACHINE_GNU_PLATFORM}/libstdc++-v3/src/libstdc++.la \
+		${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib
+
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/${OBJDIR}/${MACHINE_GNU_PLATFORM}/libssp/libssp.la \
+		${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib
 
 .if !empty(PKG_OPTIONS:Mgcc-java)
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
