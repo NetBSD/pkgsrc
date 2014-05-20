@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2014/05/06 15:07:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2014/05/20 11:30:27 dsainty Exp $
 #
 
 DISTNAME=	ZoneMinder-1.25.0
 PKGNAME=	${DISTNAME:S/ZoneMinder-/zoneminder-/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	security
 MASTER_SITES=	http://www2.zoneminder.com/downloads/
 
@@ -131,12 +131,15 @@ SUBST_SED.dbpaths-path=		-e 's|/usr/local/bin/|${PREFIX}/bin/|g'
 SUBST_SED.dbpaths-path+=	-e 's|/usr/bin|${PREFIX}/bin|g'
 SUBST_SED.dbpaths-path+=	-e 's|/cgi-bin/nph-zms|/zm/cgi-bin/nph-zms|g'
 
-# Required to find the 'mysql' client executable.
+#
+# Required to find the 'mysql' client executable, and may also use 'sudo' if
+# installed.
+#
 SUBST_CLASSES+=			script-path
 SUBST_MESSAGE.script-path=	Adjusting paths in scripts.
 SUBST_STAGE.script-path=	pre-configure
-SUBST_FILES.script-path=	scripts/zmupdate.pl.in
-SUBST_SED.script-path=		-e 's|/usr/local/bin|${PREFIX}/bin|g'
+SUBST_FILES.script-path=	${REPLACE_PERL}
+SUBST_SED.script-path=	-e "s|^\\([\$$]ENV{PATH} *= *'\\).*';\$$|\\1${PREFIX}/bin:/bin:/usr/bin';|g"
 
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	pre-configure
