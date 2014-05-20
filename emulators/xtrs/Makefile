@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2014/05/20 12:33:18 obache Exp $
+# $NetBSD: Makefile,v 1.26 2014/05/20 12:38:25 obache Exp $
 #
 
 DISTNAME=	xtrs-4.9d
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.tim-mann.org/trs80/
 
@@ -42,6 +42,12 @@ SUBST_FILES.termcap=	Makefile.local
 SUBST_SED.termcap+=	-e 's|-lncurses||'
 .else
 SUBST_SED.termcap+=	-e 's|-lncurses|${BUILDLINK_LDADD.termcap}|'
+.endif
+
+.include "../../mk/endian.mk"
+# see ${WRKSRC}/Makefile.local
+.if ${MACHINE_ENDIAN} == "big"
+MAKE_FLAGS+=		ENDIAN=-Dbig_endian
 .endif
 
 INSTALL_MAKE_FLAGS+=	BINDIR=${DESTDIR}${PREFIX}/bin \
