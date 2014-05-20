@@ -1,0 +1,53 @@
+$NetBSD: patch-scripts_ZoneMinder_lib_ZoneMinder_General_pm,v 1.1 2014/05/20 11:30:27 dsainty Exp $
+
+Perl doesn't really support "> /dev/null", so just capture into $output.
+
+% ktruss -i perl -e 'qx(does-not-exist >/dev/null 2>&1);'|egrep 'dup2.*2'
+does-not-exist: not found
+% ktruss -i perl -e 'qx(does-not-exist 2>&1);'|egrep 'dup2.*2'           
+ 16954      1 perl     dup2(0x1, 0x2)              = 2
+
+The problem is that, whilst Perl supports 2>&1 internally (and does not use
+the shell at all) if there is no other redirection, it does not support file
+redirection - it defers that (and therefore necessarily must also defer the
+stderr redirection) to the shell.  If the system's shell happens to report
+"Not found" errors before redirection is processed (E.g. NetBSD shell) then
+the stderr redirection is happening too late to be captured.
+
+That leads to unintended errors reported on stderr - primarily if sudo is not
+installed on the system, or not in the $PATH.
+
+Use the -m parameter to su, as ZM_WEB_USER shouldn't require a login shell.
+
+--- scripts/ZoneMinder/lib/ZoneMinder/General.pm.orig	2014-05-13 22:59:22.229694642 +1200
++++ scripts/ZoneMinder/lib/ZoneMinder/General.pm	2014-05-13 23:03:06.377703932 +1200
+@@ -103,7 +103,7 @@
+ 	my $suffix = "";
+ 	my $command = $prefix.$null_command.$suffix;
+ 	Debug( "Testing \"$command\"\n" );
+-    $command .= " > /dev/null 2>&1"; 
++	$command .= " 2>&1";
+ 	my $output = qx($command);
+ 	my $status = $? >> 8;
+ 	if ( !$status )
+@@ -120,6 +120,7 @@
+ 		$suffix = "'";
+ 		$command = $prefix.$null_command.$suffix;
+ 		Debug( "Testing \"$command\"\n" );
++		$command .= " 2>&1";
+ 		my $output = qx($command);
+ 		my $status = $? >> 8;
+ 		if ( !$status )
+@@ -132,10 +133,11 @@
+ 			chomp( $output );
+ 			Debug( "Test failed, '$output'\n" );
+ 
+-			$prefix = "su ".ZM_WEB_USER." -c '";
++			$prefix = "su -m ".ZM_WEB_USER." -c '";
+ 			$suffix = "'";
+ 			$command = $prefix.$null_command.$suffix;
+ 			Debug( "Testing \"$command\"\n" );
++			$command .= " 2>&1";
+ 			$output = qx($command);
+ 			$status = $? >> 8;
+ 			if ( !$status )
