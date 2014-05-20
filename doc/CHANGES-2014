@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1941 2014/05/20 20:06:18 gls Exp $
+$NetBSD: CHANGES-2014,v 1.1942 2014/05/20 20:21:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2689,3 +2689,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/mpg123-sun to 1.19.0 [adam 2014-05-20]
 	Removed audio/libmpg123 [adam 2014-05-20]
 	Updated x11/x3270 to 3.3.14ga11 [gls 2014-05-20]
+	Updated graphics/libgdiplus to 2.10.9 [adam 2014-05-20]
