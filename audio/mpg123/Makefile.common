@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2012/10/02 23:48:00 asau Exp $
+# $NetBSD: Makefile.common,v 1.37 2014/05/20 19:59:09 adam Exp $
 #
 # used by audio/mpg123-arts/Makefile
 # used by audio/mpg123-esound/Makefile
@@ -7,30 +7,29 @@
 # used by audio/mpg123-pulse/Makefile
 # used by audio/mpg123-sun/Makefile
 
-DISTNAME=	mpg123-1.12.5
+DISTNAME=	mpg123-1.19.0
 PKGNAME?=	${DISTNAME:C/[[:alnum:]]*/&-${MPG123_MODULE}/}
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpg123/}
 EXTRACT_SUFX=	.tar.bz2
-DISTINFO_FILE=${.CURDIR}/../../audio/mpg123/distinfo
 LICENSE=	gnu-lgpl-v2.1
 
 MAINTAINER=	martin@NetBSD.org
 HOMEPAGE=	http://www.mpg123.org/
 COMMENT?=	Contains the ${MPG123_MODULE} module for mpg123
 
-GNU_CONFIGURE?=	yes
-USE_LIBTOOL?=	yes
-USE_TOOLS+=	pkg-config gmake
-
+USE_LIBTOOL?=		yes
+USE_TOOLS+=		pkg-config gmake
+GNU_CONFIGURE?=		yes
 CONFIGURE_ARGS+=	--enable-modules=yes
-MPG123_SUBDIRS?=		src
-MPG123_SUBDIRS.src?=		output
-
 CONFIGURE_ENV+=		BUILD_${MPG123_MODULE:tu}=yes
 CONFIGURE_ENV+=		MPG123_MODULE=${MPG123_MODULE:Q}
 MAKE_ENV+=		MPG123_SUBDIRS=${MPG123_SUBDIRS:Q}
 MAKE_ENV+=		MPG123_SUBDIRS.src=${MPG123_SUBDIRS.src:Q}
+MPG123_SUBDIRS?=	src
+MPG123_SUBDIRS.src?=	output
+
+DISTINFO_FILE=	${.CURDIR}/../../audio/mpg123/distinfo
 
 .if !defined(MPG123_BUILDING_BASE)
 INSTALLATION_DIRS+=	lib/mpg123
