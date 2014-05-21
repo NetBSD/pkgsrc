@@ -1,11 +1,11 @@
-$NetBSD: patch-configure,v 1.1 2014/03/14 19:40:47 taca Exp $
+$NetBSD: patch-configure,v 1.2 2014/05/21 03:19:57 taca Exp $
 
 * Adding Interix and MirBSD support.
 * Ignore doxygen.
 
---- configure.orig	2013-12-20 12:22:22.000000000 +0000
+--- configure.orig	2014-05-08 15:52:19.000000000 +0000
 +++ configure
-@@ -8430,6 +8430,10 @@ esac
+@@ -8571,6 +8571,10 @@ esac
  		ac_cv_func_isinf=yes
  		ac_cv_func_isnan=yes
  		 ;; #(
@@ -16,7 +16,7 @@ $NetBSD: patch-configure,v 1.1 2014/03/14 19:40:47 taca Exp $
    nacl) :
  
    LIBS="-lm $LIBS"
-@@ -16063,6 +16067,8 @@ else
+@@ -16204,6 +16208,8 @@ else
  # ifdef _MSC_VER
  #  include <malloc.h>
  #  define alloca _alloca
@@ -25,7 +25,7 @@ $NetBSD: patch-configure,v 1.1 2014/03/14 19:40:47 taca Exp $
  # else
  #  ifdef HAVE_ALLOCA_H
  #   include <alloca.h>
-@@ -19811,7 +19817,9 @@ esac ;; #(
+@@ -20007,7 +20013,9 @@ esac ;; #(
    interix*) :
      	: ${LDSHARED='$(CC) -shared'}
  			XLDFLAGS="$XLDFLAGS -Wl,-E"
@@ -35,7 +35,7 @@ $NetBSD: patch-configure,v 1.1 2014/03/14 19:40:47 taca Exp $
  			rb_cv_dlopen=yes ;; #(
    freebsd*|dragonfly*) :
  
-@@ -20797,7 +20805,7 @@ esac
+@@ -21008,7 +21016,7 @@ esac
    freebsd*|dragonfly*) :
  
  	SOLIBS='$(LIBS)'
@@ -44,7 +44,7 @@ $NetBSD: patch-configure,v 1.1 2014/03/14 19:40:47 taca Exp $
  	if test "$rb_cv_binary_elf" != "yes" ; then
  	    LIBRUBY_SO="$LIBRUBY_SO.\$(TEENY)"
  	    LIBRUBY_ALIASES=''
-@@ -20876,7 +20884,12 @@ esac
+@@ -21087,7 +21095,12 @@ esac
  	 ;; #(
    interix*) :
  
@@ -58,7 +58,7 @@ $NetBSD: patch-configure,v 1.1 2014/03/14 19:40:47 taca Exp $
  	 ;; #(
    mingw*|cygwin*|mswin*) :
  
-@@ -21034,7 +21047,7 @@ esac
+@@ -21245,7 +21258,7 @@ esac
  esac
  if test "$enable_rpath" = yes; then
      test -z "$LIBRUBY_RPATHFLAGS" || LIBRUBY_RPATHFLAGS="$LIBRUBY_RPATHFLAGS "
@@ -67,7 +67,7 @@ $NetBSD: patch-configure,v 1.1 2014/03/14 19:40:47 taca Exp $
      test "x$cross_compiling" = xyes || LIBRUBY_RPATHFLAGS="$LIBRUBY_RPATHFLAGS -L${libprefix}"
      LIBRUBYARG_SHARED="$LIBRUBY_RPATHFLAGS $LIBRUBYARG_SHARED"
      LIBRUBYARG_STATIC="$LIBRUBY_RPATHFLAGS $LIBRUBYARG_STATIC"
-@@ -21210,11 +21223,7 @@ if test "$install_doc" != no; then
+@@ -21421,11 +21434,7 @@ if test "$install_doc" != no; then
      else
  	RDOCTARGET="nodoc"
      fi
@@ -80,7 +80,7 @@ $NetBSD: patch-configure,v 1.1 2014/03/14 19:40:47 taca Exp $
  else
      RDOCTARGET="nodoc"
      CAPITARGET="nodoc"
-@@ -21799,7 +21808,7 @@ if test ${RUBY_LIB_VERSION_STYLE+set}; t
+@@ -22010,7 +22019,7 @@ if test ${RUBY_LIB_VERSION_STYLE+set}; t
  elif test -z "${ruby_version}"; then
      as_fn_error $? "No ruby version, No place for bundled libraries" "$LINENO" 5
  else
@@ -89,7 +89,7 @@ $NetBSD: patch-configure,v 1.1 2014/03/14 19:40:47 taca Exp $
  fi
  
  
-@@ -23305,17 +23314,7 @@ which seems to be undefined.  Please mak
+@@ -23516,17 +23525,7 @@ which seems to be undefined.  Please mak
      "Makefile":F)
      tmpmk=confmk$$.tmp
      {
