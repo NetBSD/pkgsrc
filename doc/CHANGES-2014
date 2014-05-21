@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1959 2014/05/21 21:02:41 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.1960 2014/05/21 21:05:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2710,3 +2710,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added net/hs-network version 2.5.0.0 [szptvlfn 2014-05-21]
 	Added devel/hs-syb version 0.4.1 [szptvlfn 2014-05-21]
 	Added devel/hs-random version 1.0.1.1 [szptvlfn 2014-05-21]
+	Added devel/gccmakedep version 1.0.3 [wiz 2014-05-21]
