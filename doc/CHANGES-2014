@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1947 2014/05/21 03:20:52 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1948 2014/05/21 03:31:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2697,3 +2697,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/ruby200 to 2.0.0p481 [taca 2014-05-21]
 	Updated lang/ruby21-base to 2.1.2 [taca 2014-05-21]
 	Updated lang/ruby21 to 2.1.2 [taca 2014-05-21]
+	Updated mail/pear-Mail_Mime to 1.8.9 [taca 2014-05-21]
