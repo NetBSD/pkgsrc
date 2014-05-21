@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/12/12 12:47:17 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/05/21 16:07:59 jperkin Exp $
 bin/ghc
 bin/${PKGNAME}
 bin/ghc-pkg
@@ -2689,9 +2689,7 @@ lib/${PKGNAME}/libHSrts_thr_debug-ghc${PKGVERSION}.so
 lib/${PKGNAME}/libHSrts_thr_debug.a
 lib/${PKGNAME}/libHSrts_thr_l.a
 lib/${PKGNAME}/libHSrts_thr_p.a
-lib/${PKGNAME}/libffi.so
-lib/${PKGNAME}/libffi.so.6
-lib/${PKGNAME}/libffi.so.6.0
+lib/${PKGNAME}/libffi.la
 lib/${PKGNAME}/old-locale-1.0.0.5/HSold-locale-1.0.0.5.o
 lib/${PKGNAME}/old-locale-1.0.0.5/System/Locale.dyn_hi
 lib/${PKGNAME}/old-locale-1.0.0.5/System/Locale.hi
