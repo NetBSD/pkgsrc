@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2014/05/18 11:43:51 adam Exp $
+# $NetBSD: Makefile,v 1.79 2014/05/21 08:34:13 wiz Exp $
 
 PKGNAME=	p5-subversion-${SVNVER}
 COMMENT=	Perl bindings for Subversion
@@ -13,6 +13,8 @@ USE_TOOLS+=		perl
 PERL5_CONFIGURE=	no
 PERL5_OPTIONS+=		threads
 PERL5_PACKLIST=		auto/SVN/_Core/.packlist
+
+MAKE_JOBS_SAFE=		no # https://bugs.gentoo.org/show_bug.cgi?id=388607
 
 BUILD_TARGET=		swig-pl
 INSTALL_TARGET=		install-swig-pl
