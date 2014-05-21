@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1952 2014/05/21 13:51:06 he Exp $
+$NetBSD: CHANGES-2014,v 1.1953 2014/05/21 14:52:22 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2703,3 +2703,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-flask-script to 2.0.5 [kleink 2014-05-21]
 	Added cad/diylc version 3.28.0 [dsainty 2014-05-21]
 	Updated graphics/gimp to 2.8.10nb2 [he 2014-05-21]
+	Updated devel/rudiments to 0.46nb1 [fhajny 2014-05-21]
