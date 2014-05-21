@@ -1,0 +1,14 @@
+$NetBSD: patch-mk_config.mk.in,v 1.1 2014/05/21 16:07:59 jperkin Exp $
+
+Support shared libraries on 64-bit SunOS.
+
+--- mk/config.mk.in.orig	2013-04-18 21:22:46.000000000 +0000
++++ mk/config.mk.in
+@@ -124,6 +124,7 @@ SharedLibsPlatformList =
+ 
+ ifeq "$(SOLARIS_BROKEN_SHLD)" "NO"
+ SharedLibsPlatformList += i386-unknown-solaris2
++SharedLibsPlatformList += x86_64-unknown-solaris2
+ endif
+ 
+ PlatformSupportsSharedLibs = $(if $(filter $(TARGETPLATFORM),\
