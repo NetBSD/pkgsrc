@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.52 2013/05/31 10:55:15 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.53 2014/05/21 13:35:23 obache Exp $
 
 BUILDLINK_TREE+=	perl
 
@@ -24,6 +24,10 @@ PERL5=		${PERLDIR}/bin/perl
 
 pkgbase := perl
 .include "../../mk/pkg-build-options.mk"
+
+.if !empty(PKG_BUILD_OPTIONS.perl:Mthreads)
+.  include "../../mk/pthread.buildlink3.mk"
+.endif
 
 PERL5_OPTIONS?=		# empty
 .if !empty(PERL5_OPTIONS:Mthreads)
