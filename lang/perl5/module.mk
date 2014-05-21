@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.70 2014/02/17 04:28:45 obache Exp $
+# $NetBSD: module.mk,v 1.71 2014/05/21 13:35:23 obache Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -229,7 +229,5 @@ LDFLAGS+=	${PERL5_LDFLAGS}
 .endif
 
 .include "../../lang/perl5/packlist.mk"
-
-.include "../../mk/pthread.buildlink3.mk"
 
 .endif	# PERL5_MODULE_MK
