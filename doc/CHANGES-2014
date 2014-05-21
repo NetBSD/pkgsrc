@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1954 2014/05/21 16:04:16 taca Exp $
+$NetBSD: CHANGES-2014,v 1.1955 2014/05/21 16:08:12 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2705,3 +2705,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/gimp to 2.8.10nb2 [he 2014-05-21]
 	Updated devel/rudiments to 0.46nb1 [fhajny 2014-05-21]
 	Updated www/contao32 to 3.2.10 [taca 2014-05-21]
+	Updated lang/ghc7 to 7.6.3nb2 [jperkin 2014-05-21]
