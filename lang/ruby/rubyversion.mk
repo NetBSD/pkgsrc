@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.118 2014/05/17 11:34:35 obache Exp $
+# $NetBSD: rubyversion.mk,v 1.119 2014/05/21 03:08:34 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -203,10 +203,10 @@ _RUBYVERSION_MK=	# defined
 .if defined(PKGNAME_REQD)
 . if !empty(PKGNAME_REQD:Mruby[0-9][0-9][0-9]-*) || !empty(PKGNAME_REQD:Mruby[0-9][0-9]-*)
 _RUBY_VERSION_REQD:= ${PKGNAME_REQD:C/ruby([0-9][0-9]+)-.*/\1/}
-.  if ${_RUBY_VERSION_REQD} != "211"
-RUBY_VERSION_REQD?= ${PKGNAME_REQD:C/ruby([0-9][0-9]+)-.*/\1/}
-.  else
+.  if ${_RUBY_VERSION_REQD} == "18" || ${_RUBY_VERSION_REQD} == "193"
 RUBY_VERSION_REQD?= ${PKGNAME_REQD:C/ruby([0-9][0-9])[0-9]-.*/\1/}
+.  else
+RUBY_VERSION_REQD?= ${PKGNAME_REQD:C/ruby([0-9][0-9]+)-.*/\1/}
 .  endif
 . endif
 .endif
