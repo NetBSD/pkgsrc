@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1957 2014/05/21 20:58:41 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.1958 2014/05/21 21:00:43 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2708,3 +2708,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/ghc7 to 7.6.3nb2 [jperkin 2014-05-21]
 	Added x11/hs-X11 version 1.6.1.2 [szptvlfn 2014-05-21]
 	Added net/hs-network version 2.5.0.0 [szptvlfn 2014-05-21]
+	Added devel/hs-syb version 0.4.1 [szptvlfn 2014-05-21]
