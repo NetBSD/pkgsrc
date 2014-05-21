@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/10/03 11:24:41 asau Exp $
+# $NetBSD: Makefile,v 1.29 2014/05/21 12:48:54 obache Exp $
 
 DISTNAME=	lrzsz-0.12.20
 PKGREVISION=	1
@@ -17,7 +17,7 @@ GNU_CONFIGURE=		yes
 .include "../../mk/bsd.prefs.mk"
 
 .if (${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" || ${OPSYS} == "Interix" \
-	|| ${OPSYS} == "Linux")
+	|| ${OPSYS} == "Linux"|| ${OPSYS} == "Haiku")
 BROKEN_GETTEXT_DETECTION=yes
 .  include "../../devel/gettext-lib/buildlink3.mk"
 LOCALE_SUFFIX=		mo
