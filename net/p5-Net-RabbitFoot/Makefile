@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/05/18 03:35:01 mspo Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/21 02:10:05 mspo Exp $
 
 DISTNAME=	Net-RabbitFoot-1.03
+PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/I/IK/IKUTA/
 MASTER_SITES+=	http://cpan.metacpan.org/authors/id/I/IK/
