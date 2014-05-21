@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2014/02/24 20:49:14 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/05/21 01:22:14 joerg Exp $
 bin/botan
 bin/botan-config-1.11
 include/botan-1.11/botan/adler32.h
 include/botan-1.11/botan/aead_filt.h
 include/botan-1.11/botan/aead.h
 include/botan-1.11/botan/aes.h
-include/botan-1.11/botan/aes_ni.h
-include/botan-1.11/botan/aes_ssse3.h
+${PLIST.x86}include/botan-1.11/botan/aes_ni.h
+${PLIST.x86}include/botan-1.11/botan/aes_ssse3.h
 include/botan-1.11/botan/alg_id.h
 include/botan-1.11/botan/algo_factory.h
 include/botan-1.11/botan/asn1_alt_name.h
@@ -109,7 +109,7 @@ include/botan-1.11/botan/hmac.h
 include/botan-1.11/botan/hmac_rng.h
 include/botan-1.11/botan/http_util.h
 include/botan-1.11/botan/idea.h
-include/botan-1.11/botan/idea_sse2.h
+${PLIST.x86}include/botan-1.11/botan/idea_sse2.h
 include/botan-1.11/botan/if_algo.h
 include/botan-1.11/botan/init.h
 include/botan-1.11/botan/kasumi.h
@@ -194,8 +194,8 @@ include/botan-1.11/botan/selftest.h
 include/botan-1.11/botan/serpent.h
 include/botan-1.11/botan/serp_simd.h
 include/botan-1.11/botan/sha160.h
-include/botan-1.11/botan/sha1_sse2.h
-include/botan-1.11/botan/sha1_${MACHINE_ARCH}.h
+${PLIST.x86}include/botan-1.11/botan/sha1_sse2.h
+${PLIST.x86_64}include/botan-1.11/botan/sha1_x86_64.h
 include/botan-1.11/botan/sha2_32.h
 include/botan-1.11/botan/sha2_64.h
 include/botan-1.11/botan/siv.h
@@ -207,7 +207,7 @@ include/botan-1.11/botan/stream_cipher.h
 include/botan-1.11/botan/sym_algo.h
 include/botan-1.11/botan/symkey.h
 include/botan-1.11/botan/tea.h
-include/botan-1.11/botan/threefish_avx2.h
+${PLIST.x86_64}include/botan-1.11/botan/threefish_avx2.h
 include/botan-1.11/botan/threefish.h
 include/botan-1.11/botan/tiger.h
 include/botan-1.11/botan/tls_alert.h
