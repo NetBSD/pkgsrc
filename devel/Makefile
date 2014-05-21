@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1913 2014/05/21 21:03:47 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.1914 2014/05/21 21:05:02 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -219,6 +219,7 @@ SUBDIR+=	frink
 SUBDIR+=	fromcvs
 SUBDIR+=	ftnchek
 SUBDIR+=	g-wrap
+SUBDIR+=	gccmakedep
 SUBDIR+=	gconfmm
 SUBDIR+=	gcvs
 SUBDIR+=	gdb
