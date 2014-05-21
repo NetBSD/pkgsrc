@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2014/02/08 12:42:25 obache Exp $
+# $NetBSD: Makefile,v 1.10 2014/05/21 16:07:59 jperkin Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
 DISTNAME=	ghc-7.6.3-src
 PKGNAME=	${DISTNAME:S/-src$//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	http://www.haskell.org/ghc/dist/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
@@ -39,7 +39,7 @@ DISTFILES=	${DEFAULT_DISTFILES}
 #DISTFILES+=	${PKGNAME_NOREV}-boot-powerpc-apple-darwin.tar.xz
 #DISTFILES+=	${PKGNAME_NOREV}-boot-x86_64-unknown-linux.tar.xz
 #DISTFILES+=	${PKGNAME_NOREV}-boot-x86_64-unknown-netbsd.tar.xz
-#DISTFILES+=	${PKGNAME_NOREV}-boot-i386-unknown-solaris2.tar.gz
+#DISTFILES+=	${PKGNAME_NOREV}-boot-i386-unknown-solaris2.tar.xz
 #DISTFILES+=	${PKGNAME_NOREV}-boot-x86_64-unknown-solaris2.tar.xz
 #.else
 #DISTFILES+=	${BOOT_ARCHIVE}
