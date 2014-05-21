@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/21 21:02:18 szptvlfn Exp $
+lib/random-${PKGVERSION}/${HASKELL_VERSION}/HSrandom-${PKGVERSION}.o
+lib/random-${PKGVERSION}/${HASKELL_VERSION}/System/Random.hi
+lib/random-${PKGVERSION}/${HASKELL_VERSION}/libHSrandom-${PKGVERSION}.a
+lib/random-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/random-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/random-${PKGVERSION}/html/System-Random.html
+${PLIST.doc}share/doc/random-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/random-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/random-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/random-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/random-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/random-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/random-${PKGVERSION}/html/mini_System-Random.html
+${PLIST.doc}share/doc/random-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/random-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/random-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/random-${PKGVERSION}/html/random.haddock
+${PLIST.doc}share/doc/random-${PKGVERSION}/html/synopsis.png
