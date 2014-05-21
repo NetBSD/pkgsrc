@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2013/09/11 12:22:33 joerg Exp $
+# $NetBSD: options.mk,v 1.2 2014/05/21 01:20:23 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.soci
-PKG_SUPPORTED_OPTIONS=	mysql pgsql sqlite
+PKG_SUPPORTED_OPTIONS=	mysql pgsql sqlite boost
 PKG_SUGGESTED_OPTIONS=	pgsql
 
 .include "../../mk/bsd.options.mk"
@@ -35,4 +35,11 @@ CMAKE_ARGS+=	-DWITH_SQLITE3=on
 PLIST.sqlite=	yes
 .else
 CMAKE_ARGS+=	-DWITH_SQLITE3=off
+.endif
+
+.if !empty(PKG_OPTIONS:Msqlite)
+.include "../../devel/boost-libs/buildlink3.mk"
+CMAKE_ARGS+=    -DWITH_BOOST=on
+.else
+CMAKE_ARGS+=    -DWITH_BOOST=off
 .endif
