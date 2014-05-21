@@ -1,4 +1,4 @@
-# $NetBSD: endian.mk,v 1.9 2013/11/26 07:25:53 obache Exp $
+# $NetBSD: endian.mk,v 1.10 2014/05/21 01:43:50 obache Exp $
 #
 # Determine the endianness of the platform by checking header files.
 #
@@ -20,7 +20,7 @@
 
 .if !defined(MACHINE_ENDIAN)
 BUILTIN_FIND_HEADERS_VAR:=	_ENDIAN_H
-BUILTIN_FIND_HEADERS.ENDIAN_H=	endian.h sys/endian.h machine/endian.h \
+BUILTIN_FIND_HEADERS._ENDIAN_H=	endian.h sys/endian.h machine/endian.h \
 				sys/byteorder.h
 .include "../../mk/buildlink3/find-headers.mk"
 .  if !empty(_ENDIAN_H:M__nonexistent__)
