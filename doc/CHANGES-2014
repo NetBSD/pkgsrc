@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1961 2014/05/21 21:06:12 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1962 2014/05/21 21:11:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2712,3 +2712,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/hs-random version 1.0.1.1 [szptvlfn 2014-05-21]
 	Added devel/gccmakedep version 1.0.3 [wiz 2014-05-21]
 	Updated meta-pkgs/modular-xorg to 1.12.4nb1 [wiz 2014-05-21]
+	Updated devel/imake to 1.0.7 [wiz 2014-05-21]
