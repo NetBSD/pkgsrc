@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/05/21 20:58:17 szptvlfn Exp $
+
+SHA1 (network-2.5.0.0.tar.gz) = 4cdd80a99ce87e3eb3cf5b30ff50e4dc8ed2d9c6
+RMD160 (network-2.5.0.0.tar.gz) = d004f0d99e66321c3231bfb85e7aebfb022b7998
+Size (network-2.5.0.0.tar.gz) = 141768 bytes
