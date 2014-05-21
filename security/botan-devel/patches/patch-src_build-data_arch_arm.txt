@@ -1,0 +1,12 @@
+$NetBSD: patch-src_build-data_arch_arm.txt,v 1.1 2014/05/21 01:22:14 joerg Exp $
+
+--- src/build-data/arch/arm.txt.orig	2014-05-20 11:40:23.000000000 +0000
++++ src/build-data/arch/arm.txt
+@@ -5,6 +5,7 @@ family arm
+ <aliases>
+ armel # For Debian
+ armhf # For Debian
++evbarm # NetBSD
+ </aliases>
+ 
+ <submodels>
