@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1015 2014/05/18 03:35:00 mspo Exp $
+# $NetBSD: Makefile,v 1.1016 2014/05/21 20:59:52 szptvlfn Exp $
 #
 
 COMMENT=	Networking tools
@@ -195,6 +195,7 @@ SUBDIR+=	host
 SUBDIR+=	howl
 SUBDIR+=	hping
 SUBDIR+=	hping3
+SUBDIR+=	hs-network
 SUBDIR+=	httping
 SUBDIR+=	httptunnel
 SUBDIR+=	iana-etc
