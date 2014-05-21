@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2014/02/17 20:41:58 bouyer Exp $
+# $NetBSD: Makefile,v 1.80 2014/05/21 12:27:46 dsainty Exp $
 #
 
 COMMENT=	CAD tools
@@ -14,6 +14,7 @@ SUBDIR+=	covered
 SUBDIR+=	covered-current
 SUBDIR+=	dinotrace
 SUBDIR+=	dinotrace-mode
+SUBDIR+=	diylc
 SUBDIR+=	eagle
 SUBDIR+=	electric
 SUBDIR+=	fastcap
