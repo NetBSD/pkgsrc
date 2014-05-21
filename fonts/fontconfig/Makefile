@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2014/05/21 08:42:55 adam Exp $
+# $NetBSD: Makefile,v 1.90 2014/05/21 08:45:39 wiz Exp $
 
 DISTNAME=	fontconfig-2.11.1
 CATEGORIES=	fonts
@@ -29,7 +29,7 @@ PKG_SYSCONFSUBDIR=	fontconfig
 
 .include "../../mk/bsd.prefs.mk"
 
-ADDFONTS=	${PREFIX}/share/fonts/urw,${PREFIX}/share/ghostscript/fonts
+ADDFONTS=	${PREFIX}/share/fonts/urw,${PREFIX}/share/ghostscript/fonts,${PREFIX}/share/fonts/X11
 .if ${X11BASE} != ${LOCALBASE}
 ADDFONTS:=	${X11BASE}/lib/X11/fonts,${ADDFONTS}
 .else
