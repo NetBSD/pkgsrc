@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/05/21 21:04:45 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/21 21:09:20 wiz Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-utils-1.0
@@ -22,7 +22,7 @@ DEPENDS+=	imake-[0-9]*:../../devel/imake
 # install-check
 # lndir
 DEPENDS+=	xorg-util-macros-[0-9]*:../../devel/xorg-util-macros
-# makedepend
+DEPENDS+=	makedepend-[0-9]*:../../devel/makedepend
 # modular
 # xmkmf
 
