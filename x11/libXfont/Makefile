@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2014/01/07 20:09:18 wiz Exp $
+# $NetBSD: Makefile,v 1.30.2.1 2014/05/21 13:14:03 tron Exp $
 
 DISTNAME=		libXfont-1.4.7
+PKGREVISION=		2
 CATEGORIES=		x11 devel fonts
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
@@ -24,6 +25,7 @@ CONFIGURE_ARGS+=	--disable-devel-docs
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/fontcacheproto/buildlink3.mk"
 .include "../../fonts/libfontenc/buildlink3.mk"
+BUILDLINK_API_DEPENDS.fontsproto+=	fontsproto>=2.1.3
 .include "../../x11/fontsproto/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
 .include "../../x11/xtrans/buildlink3.mk"
