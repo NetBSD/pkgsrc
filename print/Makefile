@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.583 2014/04/29 08:05:30 wiz Exp $
+# $NetBSD: Makefile,v 1.584 2014/05/21 01:34:53 joerg Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -73,6 +73,7 @@ SUBDIR+=	kbibtex
 SUBDIR+=	kbibtex-kde3
 SUBDIR+=	kpathsea
 SUBDIR+=	latex-mk
+SUBDIR+=	latexmk
 SUBDIR+=	lgrind
 SUBDIR+=	libgnomecups
 SUBDIR+=	libgnomeprint
