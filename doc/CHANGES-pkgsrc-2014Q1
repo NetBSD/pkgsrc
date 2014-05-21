@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.34 2014/05/21 13:14:24 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.35 2014/05/21 13:35:07 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q1 branch:
@@ -123,3 +123,5 @@ sysutils/xentools41: build fix on NetBSD 5.x and 6.x
 Pullup ticket #4413 - requested by he
 x11/fontsproto: security update
 x11/libXfont: security patch
+Pullup ticket #4414 - requested by he
+textproc/libxml2: security patch
