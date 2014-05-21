@@ -1,4 +1,4 @@
-$NetBSD: patch-rts_Linker.c,v 1.1 2013/12/12 12:47:17 obache Exp $
+$NetBSD: patch-rts_Linker.c,v 1.2 2014/05/21 16:07:59 jperkin Exp $
 
 Support 64-bit x86 SunOS.
 
@@ -10,7 +10,7 @@ Support 64-bit x86 SunOS.
          defined(openbsd_HOST_OS  ) || defined(darwin_HOST_OS ) || \
 -        defined(kfreebsdgnu_HOST_OS) || defined(gnu_HOST_OS)))
 +        defined(kfreebsdgnu_HOST_OS) || defined(gnu_HOST_OS) || \
-+        defined(solari2_HOST_OS)))
++        defined(solaris2_HOST_OS)))
  /* Don't use mmap on powerpc_HOST_ARCH as mmap doesn't support
   * reallocating but we need to allocate jump islands just after each
   * object images. Otherwise relative branches to jump islands can fail

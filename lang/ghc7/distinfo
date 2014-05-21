@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2013/12/16 06:23:09 obache Exp $
+$NetBSD: distinfo,v 1.3 2014/05/21 16:07:59 jperkin Exp $
 
 SHA1 (ghc-7.6.3-src.tar.bz2) = 8938e1ef08b37a4caa071fa169e79a3001d065ff
 RMD160 (ghc-7.6.3-src.tar.bz2) = 82a673ed38b7cf9a59afeb01057625fc761a822b
@@ -8,6 +8,8 @@ SHA1 (patch-ghc.mk) = c4210aaa3e2b4a319b0b70da375ac89fddde5cb7
 SHA1 (patch-libraries_integer-gmp_configure.ac) = bc5ce3a6c39d681c413eb08b66e7287e39406fe0
 SHA1 (patch-libraries_integer-simple_GHC_Integer.hs) = f079285bc489c194959b9bee2aa5c977ec77ae1e
 SHA1 (patch-libraries_integer-simple_GHC_Integer_Type.hs) = b3140e169726f78f6d3b4edcd4cc119b6f767bfa
-SHA1 (patch-rts_Linker.c) = 86c080636fd9b983baeb05f26a90282ffa6eec34
+SHA1 (patch-libraries_unix_System_Posix_Files.hsc) = f2e0892f9ebb9d82ddaf71b014d9af33967848dc
+SHA1 (patch-mk_config.mk.in) = 90a156f6c455d4b2c5d10fdf65b3a170dcfc4892
+SHA1 (patch-rts_Linker.c) = 39d1ca7a856a3ec25e493e97832ef255562c0719
 SHA1 (patch-rts_StgCRun.c) = dcbc883cb4826aeccac0be09647b7889c7809271
-SHA1 (patch-rts_ghc.mk) = 4dd33c5ac593736a9fa0fdbdd65df90549fac771
+SHA1 (patch-rts_ghc.mk) = 437e64cb7a52784b344b7e0ec7027fc8f63938b3
