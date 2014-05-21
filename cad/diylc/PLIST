@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/21 12:25:32 dsainty Exp $
+bin/diylc
+lib/java/diylc/app-framework.jar
+lib/java/diylc/diylc-core.jar
+lib/java/diylc/diylc.jar
+lib/java/diylc/iText-2.1.7.jar
+lib/java/diylc/jettison-1.0.1.jar
+lib/java/diylc/junit-4.7.jar
+lib/java/diylc/log4j-1.2.15.jar
+lib/java/diylc/main.jar
+lib/java/diylc/org-openide-awt.jar
+lib/java/diylc/org-openide-util-lookup.jar
+lib/java/diylc/org-openide-util.jar
+lib/java/diylc/poi-3.5-FINAL-20090928.jar
+lib/java/diylc/swing-framework.jar
+lib/java/diylc/xstream-1.4.3.jar

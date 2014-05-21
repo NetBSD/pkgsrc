@@ -1,0 +1,5 @@
+DIY Layout Creator (DIYLC in short) lets the user draw electronic schematics
+and board/chassis layouts quickly and without a steep learning curve.
+
+It's particularly useful for breadboard or stripboard-style layouts, where
+the board is inflexible and discrete components have variable leg lengths.
