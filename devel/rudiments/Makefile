@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2014/03/31 14:42:20 fhajny Exp $
+# $NetBSD: Makefile,v 1.27 2014/05/21 14:52:07 fhajny Exp $
 #
 
 DISTNAME=		rudiments-0.46
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rudiments/}
 
@@ -15,6 +16,7 @@ USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
+PTHREAD_AUTO_VARS=	YES
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
