@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2014/04/01 21:21:28 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2014/05/21 08:42:55 adam Exp $
 
 DISTNAME=	fontconfig-2.11.1
 CATEGORIES=	fonts
@@ -29,16 +29,18 @@ PKG_SYSCONFSUBDIR=	fontconfig
 
 .include "../../mk/bsd.prefs.mk"
 
-GSFONTS=	${PREFIX}/share/fonts/urw,${PREFIX}/share/ghostscript/fonts
+ADDFONTS=	${PREFIX}/share/fonts/urw,${PREFIX}/share/ghostscript/fonts
 .if ${X11BASE} != ${LOCALBASE}
-CONFIGURE_ARGS+=	--with-add-fonts=${X11BASE}/lib/X11/fonts,${GSFONTS}
+ADDFONTS:=	${X11BASE}/lib/X11/fonts,${ADDFONTS}
 .else
-CONFIGURE_ARGS+=	--with-add-fonts=${LOCALBASE}/share/fonts/X11,${GSFONTS}
+ADDFONTS:=	${LOCALBASE}/lib/X11/fonts,${ADDFONTS}
 .endif
 
 .if ${OPSYS} == "Darwin"
+ADDFONTS:=	~/Library/Fonts,/Library/Fonts,/System/Library/Fonts,${ADDFONTS}
 CONFIGURE_ARGS+=	--with-arch=${MACHINE_ARCH}
 .endif
+CONFIGURE_ARGS+=	--with-add-fonts=${ADDFONTS}
 
 SUBST_CLASSES+= prefix
 SUBST_STAGE.prefix=	post-build
@@ -73,8 +75,7 @@ CONFIGURE_ENV+=	CC_FOR_BUILD=${NATIVE_CC:Q}
 .endif
 
 post-install:
-	${INSTALL_DATA} ${FILESDIR}/30-pkgsrc-aliases.conf \
-		${DESTDIR}${TMPLDIR}
+	${INSTALL_DATA} ${FILESDIR}/30-pkgsrc-aliases.conf ${DESTDIR}${TMPLDIR}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
