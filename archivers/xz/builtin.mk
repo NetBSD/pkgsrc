@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2013/11/23 10:51:09 obache Exp $
+# $NetBSD: builtin.mk,v 1.4 2014/05/22 12:10:52 obache Exp $
 
 BUILTIN_PKG:=	xz
 
@@ -95,7 +95,6 @@ CHECK_BUILTIN.xz?=	no
 .if !empty(CHECK_BUILTIN.xz:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.xz:M[yY][eE][sS])
-BUILDLINK_PREFIX.xz=	${H_LZMA:S/\/include\/lzma.h//}
 BUILDLINK_FILES.xz+=	lib/pkgconfig/xz.pc
 .  endif
 
