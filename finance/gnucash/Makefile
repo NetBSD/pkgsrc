@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.203 2014/05/09 07:37:05 wiz Exp $
+# $NetBSD: Makefile,v 1.204 2014/05/22 07:19:48 wiz Exp $
 
 DISTNAME=		gnucash-2.6.3
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 EXTRACT_SUFX=		.tar.bz2
@@ -16,6 +16,8 @@ DEPENDS+=		guile-www>=2.21:../../devel/guile-www
 DEPENDS+=		p5-Finance-Quote-[0-9]*:../../finance/p5-Finance-Quote
 DEPENDS+=		p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
 DEPENDS+=		${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
+# /usr/pkg/share/gnucash/python/pycons/console.py imports readline
+DEPENDS+=		${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
 DEPENDS+=		dconf-[0-9]*:../../devel/dconf
 
 USE_LIBTOOL=		yes
