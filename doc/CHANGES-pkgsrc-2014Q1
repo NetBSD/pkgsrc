@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.36 2014/05/22 12:26:45 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.37 2014/05/22 13:56:18 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q1 branch:
@@ -127,3 +127,5 @@ Pullup ticket #4414 - requested by he
 textproc/libxml2: security patch
 Pullup ticket #4415 - requested by wen
 www/moodle: security update
+Pullup ticket #4416 - requested by he
+graphics/gimp: security patch
