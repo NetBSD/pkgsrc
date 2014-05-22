@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1968 2014/05/22 07:19:57 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1969 2014/05/22 08:18:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2719,3 +2719,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/openssh to 6.6.1nb1 [taca 2014-05-22]
 	Updated devel/p5-Test-TempDir to 0.08 [hiramatsu 2014-05-22]
 	Updated finance/gnucash to 2.6.3nb5 [wiz 2014-05-22]
+	Updated devel/swig2 to 2.0.12 [adam 2014-05-22]
+	Updated www/curl to 7.37.0 [adam 2014-05-22]
