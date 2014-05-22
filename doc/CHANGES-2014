@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1978 2014/05/22 12:58:58 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.1979 2014/05/22 12:59:15 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2730,3 +2730,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added databases/sqlrelay-mysql version 0.55 [fhajny 2014-05-22]
 	Added databases/sqlrelay-odbc version 0.55 [fhajny 2014-05-22]
 	Added databases/sqlrelay-pgsql version 0.55 [fhajny 2014-05-22]
+	Added databases/sqlrelay-sqlite version 0.55 [fhajny 2014-05-22]
