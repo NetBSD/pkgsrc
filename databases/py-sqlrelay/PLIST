@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/22 12:50:47 fhajny Exp $
+${PYSITELIB}/SQLRelay/CSQLRelay.so
+${PYSITELIB}/SQLRelay/PySQLRClient.py
+${PYSITELIB}/SQLRelay/PySQLRDB.py
+${PYSITELIB}/SQLRelay/__init__.py
