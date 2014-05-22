@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1969 2014/05/22 08:18:48 adam Exp $
+$NetBSD: CHANGES-2014,v 1.1970 2014/05/22 12:53:23 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2721,3 +2721,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated finance/gnucash to 2.6.3nb5 [wiz 2014-05-22]
 	Updated devel/swig2 to 2.0.12 [adam 2014-05-22]
 	Updated www/curl to 7.37.0 [adam 2014-05-22]
+	Updated databases/sqlrelay to 0.55 [fhajny 2014-05-22]
