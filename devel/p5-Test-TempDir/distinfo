@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/08/19 20:00:47 sno Exp $
+$NetBSD: distinfo,v 1.3 2014/05/22 06:36:37 hiramatsu Exp $
 
-SHA1 (Test-TempDir-0.05.tar.gz) = 52f715fd73a852866decc403f85d98d91fd6b2b5
-RMD160 (Test-TempDir-0.05.tar.gz) = aa930cb9c1e398cc94aa55714bcc3aad5622d3f2
-Size (Test-TempDir-0.05.tar.gz) = 7947 bytes
+SHA1 (Test-TempDir-0.08.tar.gz) = 50b6358dd6de8b8c430fb52d17b28a7eeb8d63b9
+RMD160 (Test-TempDir-0.08.tar.gz) = cc0591720f1b7a26e66f016a2af3143f7055ad12
+Size (Test-TempDir-0.08.tar.gz) = 20695 bytes
