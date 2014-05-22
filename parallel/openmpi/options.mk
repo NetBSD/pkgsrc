@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.6 2014/02/19 09:44:56 jperkin Exp $
+# $NetBSD: options.mk,v 1.7 2014/05/22 13:24:49 manu Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openmpi
-PKG_SUPPORTED_OPTIONS=	debug f90
+PKG_SUPPORTED_OPTIONS=	debug f90 sge
 
 .include "../../mk/bsd.options.mk"
 
@@ -25,6 +25,14 @@ SUBST_SED.f90+=		-e 's,^linker_flags=,linker_flags= -R${GCCDIR}/lib ,'
 SUBST_SED.f90+=		-e 's,^linker_flags=,linker_flags= -L${GCCDIR}/lib ,'
 .else
 CONFIGURE_ARGS+=	--disable-mpi-f90
+.endif
+
+
+.if !empty(PKG_OPTIONS:Msge)
+CONFIGURE_ARGS+=        --with-sge
+PLIST_SRC+=             ${PKGDIR}/PLIST.sge
+.else
+CONFIGURE_ARGS+=	--without-sge
 .endif
 
 PLIST_SRC+=		PLIST
