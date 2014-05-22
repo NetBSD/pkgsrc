@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/22 12:50:47 fhajny Exp $
+${PHP_EXTENSION_DIR}/pdo_sqlrelay.so
+${PHP_EXTENSION_DIR}/sql_relay.so

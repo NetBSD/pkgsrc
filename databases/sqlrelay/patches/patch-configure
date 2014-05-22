@@ -1,0 +1,23 @@
+$NetBSD: patch-configure,v 1.1 2014/05/22 12:50:48 fhajny Exp $
+
+Look for history/readline at proper places.
+--- configure.orig	2014-05-21 10:24:24.050393065 +0000
++++ configure
+@@ -17557,7 +17557,7 @@ fi
+ $as_echo_n "checking for history... " >&6; }
+ 
+ 
+-SEARCHPATH=/usr
++SEARCHPATH=${prefix}
+ NAME=history
+ HEADER=readline/history.h
+ LIBNAME=history
+@@ -17893,7 +17893,7 @@ fi
+ $as_echo_n "checking for readline... " >&6; }
+ 
+ 
+-SEARCHPATH=/usr
++SEARCHPATH=${prefix}
+ NAME=readline
+ HEADER=readline/readline.h
+ LIBNAME=readline
