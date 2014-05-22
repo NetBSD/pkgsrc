@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2014/04/09 21:05:58 tron Exp $
+# $NetBSD: options.mk,v 1.7 2014/05/22 08:17:10 martin Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.perl
 PKG_OPTIONS_REQUIRED_GROUPS=	perlbits
@@ -15,9 +15,6 @@ PERL5_BUILD_THREADS_SUPPORT=	yes
 .else
 PERL5_BUILD_THREADS_SUPPORT=	${DLOPEN_REQUIRE_PTHREADS}
 .endif
-
-# Needs to be include here for the broken-vax-pthreads hack
-.include "hacks.mk"
 
 .if !empty(PERL5_BUILD_THREADS_SUPPORT:M[yY][eE][sS])
 PKG_SUGGESTED_OPTIONS=		threads
