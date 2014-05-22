@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1971 2014/05/22 12:55:58 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.1972 2014/05/22 12:56:18 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2723,3 +2723,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/curl to 7.37.0 [adam 2014-05-22]
 	Updated databases/sqlrelay to 0.55 [fhajny 2014-05-22]
 	Added databases/p5-sqlrelay version 0.55 [fhajny 2014-05-22]
+	Added databases/php-sqlrelay version 0.55 [fhajny 2014-05-22]
