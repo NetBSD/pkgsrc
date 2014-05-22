@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/22 21:36:32 szptvlfn Exp $
+lib/X11-xft-${PKGVERSION}/${HASKELL_VERSION}/Graphics/X11/Xft.hi
+lib/X11-xft-${PKGVERSION}/${HASKELL_VERSION}/Graphics/X11/Xrender.hi
+lib/X11-xft-${PKGVERSION}/${HASKELL_VERSION}/HSX11-xft-${PKGVERSION}.o
+lib/X11-xft-${PKGVERSION}/${HASKELL_VERSION}/libHSX11-xft-${PKGVERSION}.a
+lib/X11-xft-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/X11-xft-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/X11-xft-${PKGVERSION}/html/Graphics-X11-Xft.html
+${PLIST.doc}share/doc/X11-xft-${PKGVERSION}/html/Graphics-X11-Xrender.html
+${PLIST.doc}share/doc/X11-xft-${PKGVERSION}/html/X11-xft.haddock
+${PLIST.doc}share/doc/X11-xft-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/X11-xft-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/X11-xft-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/X11-xft-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/X11-xft-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/X11-xft-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/X11-xft-${PKGVERSION}/html/mini_Graphics-X11-Xft.html
+${PLIST.doc}share/doc/X11-xft-${PKGVERSION}/html/mini_Graphics-X11-Xrender.html
+${PLIST.doc}share/doc/X11-xft-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/X11-xft-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/X11-xft-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/X11-xft-${PKGVERSION}/html/synopsis.png
