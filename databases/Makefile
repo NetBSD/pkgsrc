@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.458 2014/05/07 15:48:14 fhajny Exp $
+# $NetBSD: Makefile,v 1.459 2014/05/22 12:53:07 fhajny Exp $
 
 COMMENT=	Databases
 
@@ -202,6 +202,7 @@ SUBDIR+=	p5-gdbm
 SUBDIR+=	p5-perl-ldap
 SUBDIR+=	p5-postgresql
 SUBDIR+=	p5-qdbm
+SUBDIR+=	p5-sqlrelay
 SUBDIR+=	p5-sybperl
 SUBDIR+=	p5-tokyocabinet
 SUBDIR+=	p5-tokyotyrant
@@ -235,6 +236,7 @@ SUBDIR+=	php-pdo_sqlite
 SUBDIR+=	php-pgsql
 SUBDIR+=	php-redis
 SUBDIR+=	php-sqlite
+SUBDIR+=	php-sqlrelay
 SUBDIR+=	phpldapadmin
 SUBDIR+=	phpmyadmin
 SUBDIR+=	phppgadmin
@@ -345,6 +347,7 @@ SUBDIR+=	py-sqlite
 SUBDIR+=	py-sqlite2
 SUBDIR+=	py-sqlite3
 SUBDIR+=	py-sqlparse
+SUBDIR+=	py-sqlrelay
 SUBDIR+=	py-sqlsoup
 SUBDIR+=	py-sybase
 SUBDIR+=	py-table
@@ -419,6 +422,7 @@ SUBDIR+=	ruby-rrdtool
 SUBDIR+=	ruby-sequel
 SUBDIR+=	ruby-sqlite
 SUBDIR+=	ruby-sqlite3
+SUBDIR+=	ruby-sqlrelay
 SUBDIR+=	ruby-tokyocabinet
 SUBDIR+=	ruby-tokyotyrant
 SUBDIR+=	ruby-vapor
@@ -433,6 +437,11 @@ SUBDIR+=	sqlite3-docs
 SUBDIR+=	sqlite3-tcl
 SUBDIR+=	sqlitebrowser
 SUBDIR+=	sqlrelay
+SUBDIR+=	sqlrelay-freetds
+SUBDIR+=	sqlrelay-mysql
+SUBDIR+=	sqlrelay-odbc
+SUBDIR+=	sqlrelay-pgsql
+SUBDIR+=	sqlrelay-sqlite
 SUBDIR+=	sqsh
 SUBDIR+=	sqsh-motif
 SUBDIR+=	sqsh-x11
