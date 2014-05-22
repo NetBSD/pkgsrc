@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1967 2014/05/22 06:37:06 hiramatsu Exp $
+$NetBSD: CHANGES-2014,v 1.1968 2014/05/22 07:19:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2718,3 +2718,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-App-perlbrew to 0.67 [wen 2014-05-22]
 	Updated security/openssh to 6.6.1nb1 [taca 2014-05-22]
 	Updated devel/p5-Test-TempDir to 0.08 [hiramatsu 2014-05-22]
+	Updated finance/gnucash to 2.6.3nb5 [wiz 2014-05-22]
