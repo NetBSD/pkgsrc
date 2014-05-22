@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1964 2014/05/22 01:22:01 wen Exp $
+$NetBSD: CHANGES-2014,v 1.1965 2014/05/22 02:29:35 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2715,3 +2715,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/imake to 1.0.7 [wiz 2014-05-21]
 	Updated www/moodle to 2.5.6 [wen 2014-05-22]
 	Updated devel/p5-App-cpanminus to 1.7004 [wen 2014-05-22]
+	Updated devel/p5-App-perlbrew to 0.67 [wen 2014-05-22]
