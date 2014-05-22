@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.731 2014/05/21 20:57:40 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.732 2014/05/22 21:38:59 szptvlfn Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -123,6 +123,7 @@ SUBDIR+=	gxmessage
 SUBDIR+=	hanterm
 SUBDIR+=	hot-babe
 SUBDIR+=	hs-X11
+SUBDIR+=	hs-X11-xft
 SUBDIR+=	hsetroot
 SUBDIR+=	iceauth
 SUBDIR+=	ico
