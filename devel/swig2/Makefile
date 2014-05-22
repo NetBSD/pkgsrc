@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2013/11/20 20:04:37 adam Exp $
+# $NetBSD: Makefile,v 1.7 2014/05/22 07:36:22 adam Exp $
 
-DISTNAME=	swig-2.0.10
+DISTNAME=	swig-2.0.12
 PKGNAME=	${DISTNAME:S/swig-/swig2-/}
-PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=swig/}
 
@@ -36,10 +35,10 @@ CONFIGURE_ARGS+=	--with-swiglibdir=${PREFIX}/share/swig/2.0 \
 			--program-suffix=2.0
 BUILD_TARGET=		swig
 
-USE_TOOLS+=		gmake pax
-GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++
-USE_LIBTOOL=		YES
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake pax
+GNU_CONFIGURE=		yes
 
 INSTALLATION_DIRS+=	share/doc/swig/2.0 share/examples/swig/2.0
 
@@ -60,8 +59,7 @@ post-install:
 	${INSTALL_DATA} SWIGDocumentation.html SWIGDocumentation.pdf	\
 		*.png ${DESTDIR}${PREFIX}/share/doc/swig/2.0
 	cd ${WRKSRC}/Examples &&					\
-	pax -wr								\
-		-s ',.*CVS.*,,'						\
+	pax -wr	-s ',.*CVS.*,,'						\
 		-s ',.*Makefile\.in$$,,'				\
 		-s ',^test-suite.*,,'					\
 		. ${DESTDIR}${PREFIX}/share/examples/swig/2.0
