@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.9 2013/08/17 15:42:28 joerg Exp $
+$NetBSD: patch-ab,v 1.10 2014/05/22 11:50:41 obache Exp $
 
-Middle chunks: Fix build with png-1.5.
+Middle chunks: Fix build with png-1.5 and giflib>=5
 Others: ???
 
 --- Imlib/load.c.orig	2004-09-21 00:23:20.000000000 +0000
@@ -98,30 +98,21 @@ Others: ???
      {
         TIFFClose(tif);
         return NULL;
-@@ -432,7 +453,7 @@ _LoadGIF(ImlibData * id, FILE *f, int *w
-   int                 intoffset[] = {0, 4, 2, 1};
-   int                 intjump[] = {8, 8, 4, 2};
-   int                 istransp, transp;
--  int                 fd;
-+  int                 fd, giferror;
- 
-   done = 0;
-   istransp = 0;
 @@ -443,7 +464,7 @@ _LoadGIF(ImlibData * id, FILE *f, int *w
    fd = fileno(f);
    /* Apparently rewind(f) isn't sufficient */
    lseek(fd, (long) 0, 0);
 -  gif = DGifOpenFileHandle(fd);
-+  gif = DGifOpenFileHandle(fd, &giferror);
++  gif = DGifOpenFileHandle(fd, NULL);
  
    if (!gif)
      return NULL;
-@@ -451,19 +472,19 @@ _LoadGIF(ImlibData * id, FILE *f, int *w
+@@ -451,32 +472,32 @@ _LoadGIF(ImlibData * id, FILE *f, int *w
      {
        if (DGifGetRecordType(gif, &rec) == GIF_ERROR)
  	{
 -	  PrintGifError();
-+	  PrintGifError(giferror);
++	  PrintGifError(gif->Error);
  	  rec = TERMINATE_RECORD_TYPE;
  	}
        if ((rec == IMAGE_DESC_RECORD_TYPE) && (!done))
@@ -129,7 +120,7 @@ Others: ???
  	  if (DGifGetImageDesc(gif) == GIF_ERROR)
  	    {
 -	      PrintGifError();
-+	      PrintGifError(giferror);
++	      PrintGifError(gif->Error);
  	      rec = TERMINATE_RECORD_TYPE;
  	    }
  	  *w = gif->Image.Width;
@@ -139,6 +130,39 @@ Others: ???
  	    {
  	       return NULL;
  	    }
+ 	  rows = malloc(*h * sizeof(GifRowType *));
+ 	  if (!rows)
+ 	    {
+-	      DGifCloseFile(gif);
++	      DGifCloseFile(gif, NULL);
+ 	      return NULL;
+ 	    }
+ 	  data = _imlib_malloc_image(*w, *h);
+ 	  if (!data)
+ 	    {
+-	      DGifCloseFile(gif);
++	      DGifCloseFile(gif, NULL);
+ 	      free(rows);
+ 	      return NULL;
+ 	    }
+@@ -487,7 +508,7 @@ _LoadGIF(ImlibData * id, FILE *f, int *w
+ 	      rows[i] = malloc(*w * sizeof(GifPixelType));
+ 	      if (!rows[i])
+ 		{
+-		  DGifCloseFile(gif);
++		  DGifCloseFile(gif, NULL);
+ 		  for (i = 0; i < *h; i++)
+ 		    if (rows[i])
+ 		      free(rows[i]);
+@@ -576,7 +597,7 @@ _LoadGIF(ImlibData * id, FILE *f, int *w
+ 	    }
+ 	}
+     }
+-  DGifCloseFile(gif);
++  DGifCloseFile(gif, NULL);
+   for (i = 0; i < *h; i++)
+     free(rows[i]);
+   free(rows);
 @@ -1000,7 +1021,12 @@ _LoadXPM(ImlibData * id, FILE *file, int
    comment = 0;
    quote = 0;
