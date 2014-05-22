@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: sshd.sh,v 1.13 2011/05/17 03:26:52 taca Exp $
+# $NetBSD: sshd.sh,v 1.14 2014/05/22 03:14:01 taca Exp $
 #
 # PROVIDE: sshd
 # REQUIRE: DAEMON LOGIN
@@ -50,6 +50,14 @@ sshd_keygen()
 		${keygen_command} -t ecdsa -f @PKG_SYSCONFDIR@/ssh_host_ecdsa_key -N ''
 	fi
 /* HAVE_ECDSA_STOP */
+/* HAVE_ED25519_START */
+	if [ -f @PKG_SYSCONFDIR@/ssh_host_ed25519_key ]; then
+		@ECHO@ "You already have a ED25519 host key in @PKG_SYSCONFDIR@/ssh_host_ed25519_key"
+		@ECHO@ "Skipping protocol version 2 ED25519 Key Generation"
+	else
+		${keygen_command} -t ed25519 -f @PKG_SYSCONFDIR@/ssh_host_ed25519_key -N ''
+	fi
+/* HAVE_ED25519_STOP */
 	)
 }
 
@@ -58,7 +66,8 @@ sshd_precmd()
 	if [ ! -f @PKG_SYSCONFDIR@/ssh_host_key -o \
 	     ! -f @PKG_SYSCONFDIR@/ssh_host_dsa_key -o \
 	     ! -f @PKG_SYSCONFDIR@/ssh_host_rsa_key -o \
-	     ! -f @PKG_SYSCONFDIR@/ssh_host_ecdsa_key ]; then
+	     ! -f @PKG_SYSCONFDIR@/ssh_host_ecdsa_key -o \
+	     ! -f @PKG_SYSCONFDIR@/ssh_host_ed25519_key ]; then
 		if [ -f /etc/rc.subr -a -f /etc/rc.conf -a -f /etc/rc.d/DAEMON ]
 		then
 			run_rc_command keygen
