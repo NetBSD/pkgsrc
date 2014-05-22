@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/06/14 18:41:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/05/22 07:36:22 adam Exp $
 bin/ccache-swig2.0
 bin/swig2.0
 man/man1/ccache-swig2.0.1
@@ -1279,6 +1279,7 @@ share/examples/swig/2.0/test-suite/arrays_global_twodim.i
 share/examples/swig/2.0/test-suite/arrays_scope.i
 share/examples/swig/2.0/test-suite/autodoc.i
 share/examples/swig/2.0/test-suite/bloody_hell.i
+share/examples/swig/2.0/test-suite/bom_utf8.i
 share/examples/swig/2.0/test-suite/bools.i
 share/examples/swig/2.0/test-suite/callback.i
 share/examples/swig/2.0/test-suite/cast_operator.i
@@ -2407,6 +2408,7 @@ share/examples/swig/2.0/test-suite/overload_copy.i
 share/examples/swig/2.0/test-suite/overload_extend.i
 share/examples/swig/2.0/test-suite/overload_extendc.i
 share/examples/swig/2.0/test-suite/overload_method.i
+share/examples/swig/2.0/test-suite/overload_numeric.i
 share/examples/swig/2.0/test-suite/overload_rename.i
 share/examples/swig/2.0/test-suite/overload_return_type.i
 share/examples/swig/2.0/test-suite/overload_simple.i
@@ -2703,6 +2705,7 @@ share/examples/swig/2.0/test-suite/python/overload_complicated_runme.py
 share/examples/swig/2.0/test-suite/python/overload_copy_runme.py
 share/examples/swig/2.0/test-suite/python/overload_extend_runme.py
 share/examples/swig/2.0/test-suite/python/overload_extendc_runme.py
+share/examples/swig/2.0/test-suite/python/overload_numeric_runme.py
 share/examples/swig/2.0/test-suite/python/overload_rename_runme.py
 share/examples/swig/2.0/test-suite/python/overload_simple_runme.py
 share/examples/swig/2.0/test-suite/python/overload_subtype_runme.py
@@ -2815,6 +2818,7 @@ share/examples/swig/2.0/test-suite/r/overload_method_runme.R
 share/examples/swig/2.0/test-suite/r/r_copy_struct_runme.R
 share/examples/swig/2.0/test-suite/r/r_double_delete_runme.R
 share/examples/swig/2.0/test-suite/r/r_legacy_runme.R
+share/examples/swig/2.0/test-suite/r/r_sexp_runme.R
 share/examples/swig/2.0/test-suite/r/rename_simple_runme.R
 share/examples/swig/2.0/test-suite/r/simple_array_runme.R
 share/examples/swig/2.0/test-suite/r/unions_runme.R
@@ -2823,6 +2827,7 @@ share/examples/swig/2.0/test-suite/r_copy_struct.i
 share/examples/swig/2.0/test-suite/r_double_delete.i
 share/examples/swig/2.0/test-suite/r_legacy.i
 share/examples/swig/2.0/test-suite/r_overload_array.i
+share/examples/swig/2.0/test-suite/r_sexp.i
 share/examples/swig/2.0/test-suite/redefined.i
 share/examples/swig/2.0/test-suite/redefined_not.i
 share/examples/swig/2.0/test-suite/refcount.h
