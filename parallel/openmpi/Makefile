@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2014/02/18 22:21:33 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2014/05/22 13:24:49 manu Exp $
 
 DISTNAME=	openmpi-1.6.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.open-mpi.org/software/ompi/v1.6/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -20,7 +20,6 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool \
 SHLIBTOOL_OVERRIDE=	${WRKSRC}/config/libtool.m4 \
 			${WRKSRC}/opal/libltdl/m4/libtool.m4
 
-CONFIGURE_ARGS+=	--without-sge
 CONFIGURE_ARGS+=	--without-slurm
 CONFIGURE_ARGS+=	--enable-contrib-no-build=vt # in separate package
 CONFIGURE_ARGS+=	--with-libltdl=external # use our libltdl
