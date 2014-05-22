@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1972 2014/05/22 12:56:18 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.1973 2014/05/22 12:56:56 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2724,3 +2724,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/sqlrelay to 0.55 [fhajny 2014-05-22]
 	Added databases/p5-sqlrelay version 0.55 [fhajny 2014-05-22]
 	Added databases/php-sqlrelay version 0.55 [fhajny 2014-05-22]
+	Added databases/py-sqlrelay version 0.55 [fhajny 2014-05-22]
