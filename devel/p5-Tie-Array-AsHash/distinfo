@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/02/25 21:26:10 sno Exp $
+$NetBSD: distinfo,v 1.3 2014/05/23 07:09:07 hiramatsu Exp $
 
-SHA1 (Tie-Array-AsHash-0.11.tar.gz) = 983197aae4a56493a7eff03751334c67f181d861
-RMD160 (Tie-Array-AsHash-0.11.tar.gz) = 2af896d2feb53b5788ef17a940e6aebcd5098a39
-Size (Tie-Array-AsHash-0.11.tar.gz) = 6519 bytes
+SHA1 (Tie-Array-AsHash-0.200.tar.gz) = 3c753384fb874e3c569c679f90953401418c6c98
+RMD160 (Tie-Array-AsHash-0.200.tar.gz) = 7de36d9caef65cdc7760c54d41b016f7469e78a3
+Size (Tie-Array-AsHash-0.200.tar.gz) = 7522 bytes
