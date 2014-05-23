@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2013/09/19 08:07:05 obache Exp $
+$NetBSD: distinfo,v 1.8 2014/05/23 13:45:07 obache Exp $
 
 SHA1 (OpenSceneGraph-3.0.1.zip) = 13c7e39f6d62047ad944d8d28a0f0eb60384ce33
 RMD160 (OpenSceneGraph-3.0.1.zip) = 54b315c318b7ade2bcc65703cea5f41377e93a71
@@ -12,5 +12,5 @@ SHA1 (patch-applications_present3D_Cluster.cpp) = 7b9dd81805322eeb1a4a26a21faa0a
 SHA1 (patch-include_OpenThreads_Atomic) = 663f76cf4ffe5f52f24a1c68701c35bb8763063a
 SHA1 (patch-src_OpenThreads_common_Atomic.cpp) = 34687f53ba01832b7ea3e0b124a951efc0afe343
 SHA1 (patch-src_osgPlugins_ffmpeg_FFmpegHeaders.hpp) = 1552f78a0ed17fcdaed9d87fe3d1f8220712f403
-SHA1 (patch-src_osgPlugins_gif_ReaderWriterGIF.cpp) = 5bf99f6a688225e018b12e3708dae775158d03a3
+SHA1 (patch-src_osgPlugins_gif_ReaderWriterGIF.cpp) = f876bbdf2fe282c6435118adbabb0823f4550fde
 SHA1 (patch-src_osgViewer_DarwinUtils.mm) = 4ab021cb797cb6959bee4ba33caf257b2a6cedf3

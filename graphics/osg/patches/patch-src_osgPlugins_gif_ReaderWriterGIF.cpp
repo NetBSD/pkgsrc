@@ -1,4 +1,4 @@
-$NetBSD: patch-src_osgPlugins_gif_ReaderWriterGIF.cpp,v 1.1 2013/09/19 08:07:05 obache Exp $
+$NetBSD: patch-src_osgPlugins_gif_ReaderWriterGIF.cpp,v 1.2 2014/05/23 13:45:07 obache Exp $
 
 * GIFLIB 5.x API change 
 
@@ -16,3 +16,15 @@ $NetBSD: patch-src_osgPlugins_gif_ReaderWriterGIF.cpp,v 1.1 2013/09/19 08:07:05 
      if (!giffile)
      {
          giferror = ERR_OPEN;
+@@ -557,7 +561,11 @@ GifImageStream** obj)
+     *width_ret = giffile->SWidth;
+     *height_ret = giffile->SHeight;
+     *numComponents_ret = 4;
++#if GIFLIB_MAJOR == 5 && GIFLIB_MINOR >= 1 || GIFLIB_MAJOR > 5
++    DGifCloseFile(giffile, NULL);
++#else
+     DGifCloseFile(giffile);
++#endif
+     return buffer;
+ }
+ 
