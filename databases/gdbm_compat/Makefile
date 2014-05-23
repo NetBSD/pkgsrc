@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2013/04/06 03:45:08 rodent Exp $
-#
+# $NetBSD: Makefile,v 1.6 2014/05/23 20:49:15 wiz Exp $
 
 .include "../../databases/gdbm/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/_compat-/}
-PKGREVISION=	1
 
 COMMENT+=	Compat library for dbm and ndbm
 

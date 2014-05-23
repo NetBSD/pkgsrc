@@ -1,5 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2012/01/24 09:10:51 sbd Exp $
-#
+# $NetBSD: buildlink3.mk,v 1.5 2014/05/23 20:49:15 wiz Exp $
 
 BUILDLINK_TREE+=	gdbm_compat
 
