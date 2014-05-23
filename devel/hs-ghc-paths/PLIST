@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/23 21:46:44 szptvlfn Exp $
+lib/ghc-paths-${PKGVERSION}/${HASKELL_VERSION}/GHC/Paths.hi
+lib/ghc-paths-${PKGVERSION}/${HASKELL_VERSION}/HSghc-paths-${PKGVERSION}.o
+lib/ghc-paths-${PKGVERSION}/${HASKELL_VERSION}/libHSghc-paths-${PKGVERSION}.a
+lib/ghc-paths-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/ghc-paths-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/ghc-paths-${PKGVERSION}/html/GHC-Paths.html
+${PLIST.doc}share/doc/ghc-paths-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/ghc-paths-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/ghc-paths-${PKGVERSION}/html/ghc-paths.haddock
+${PLIST.doc}share/doc/ghc-paths-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/ghc-paths-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/ghc-paths-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/ghc-paths-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/ghc-paths-${PKGVERSION}/html/mini_GHC-Paths.html
+${PLIST.doc}share/doc/ghc-paths-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/ghc-paths-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/ghc-paths-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/ghc-paths-${PKGVERSION}/html/synopsis.png
