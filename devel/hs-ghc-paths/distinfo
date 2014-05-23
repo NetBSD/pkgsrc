@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/05/23 21:46:44 szptvlfn Exp $
+
+SHA1 (ghc-paths-0.1.0.9.tar.gz) = 3501b34907b63b8449badccb038da21f7ed33748
+RMD160 (ghc-paths-0.1.0.9.tar.gz) = e39c5a0baefbc66c748adba4ce4a3cb35e239e6d
+Size (ghc-paths-0.1.0.9.tar.gz) = 2402 bytes
