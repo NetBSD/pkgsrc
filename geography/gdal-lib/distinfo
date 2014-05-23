@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.21 2013/04/09 15:58:54 adam Exp $
+$NetBSD: distinfo,v 1.22 2014/05/23 13:04:09 obache Exp $
 
 SHA1 (gdal-1.9.2.tar.gz) = 7eda6a4d735b8d6903740e0acdd702b43515e351
 RMD160 (gdal-1.9.2.tar.gz) = 1ab34a85946bae4313cbd925cdbbf728d23d7b57
 Size (gdal-1.9.2.tar.gz) = 9495381 bytes
+SHA1 (patch-frmts_gif_biggifdataset.cpp) = ec591ad57fdc96e04713ef769f93df6b8e101e0d
+SHA1 (patch-frmts_gif_gifabstractdataset.cpp) = a36bfacd0c1c329d221af8554fa8d236033b970d
+SHA1 (patch-frmts_gif_gifdataset.cpp) = 7d307e0530bad5f5364e08c157e45c39b20b5026
