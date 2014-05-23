@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1983 2014/05/23 07:09:42 hiramatsu Exp $
+$NetBSD: CHANGES-2014,v 1.1984 2014/05/23 08:15:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2735,3 +2735,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added x11/hs-X11-xft version 0.3.1 [szptvlfn 2014-05-22]
 	Added devel/hs-cmdargs version 0.10.7 [szptvlfn 2014-05-22]
 	Updated devel/p5-Tie-Array-AsHash to 0.200 [hiramatsu 2014-05-23]
+	Updated misc/calibre to 1.38.0 [wiz 2014-05-23]
