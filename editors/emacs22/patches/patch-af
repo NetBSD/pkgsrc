@@ -1,7 +1,8 @@
-$NetBSD: patch-af,v 1.3 2013/07/05 13:39:05 ryoon Exp $
+$NetBSD: patch-af,v 1.4 2014/05/23 22:29:33 dholland Exp $
 
 * Build fix for newer versions of "libpng".
 * Build fix for 5.0 version of giflib.
+* Further build fixes for giflib 5.1.
 
 --- src/image.c.orig	2008-08-25 22:18:33.000000000 +0000
 +++ src/image.c
@@ -56,3 +57,57 @@ $NetBSD: patch-af,v 1.3 2013/07/05 13:39:05 ryoon Exp $
        if (!gif)
  	{
  	  image_error ("Cannot open memory source `%s'", img->spec, Qnil);
+@@ -8138,7 +8138,7 @@ gif_load (f, img)
+   if (!check_image_size (f, gif->SWidth, gif->SHeight))
+     {
+       image_error ("Invalid image size", Qnil, Qnil);
+-      fn_DGifCloseFile (gif);
++      fn_DGifCloseFile (gif, NULL);
+       UNGCPRO;
+       return 0;
+     }
+@@ -8148,7 +8148,7 @@ gif_load (f, img)
+   if (rc == GIF_ERROR)
+     {
+       image_error ("Error reading `%s'", img->spec, Qnil);
+-      fn_DGifCloseFile (gif);
++      fn_DGifCloseFile (gif, NULL);
+       UNGCPRO;
+       return 0;
+     }
+@@ -8159,7 +8159,7 @@ gif_load (f, img)
+     {
+       image_error ("Invalid image number `%s' in image `%s'",
+ 		   image, img->spec);
+-      fn_DGifCloseFile (gif);
++      fn_DGifCloseFile (gif, NULL);
+       UNGCPRO;
+       return 0;
+     }
+@@ -8181,7 +8181,7 @@ gif_load (f, img)
+   if (!check_image_size (f, width, height))
+     {
+       image_error ("Invalid image size", Qnil, Qnil);
+-      fn_DGifCloseFile (gif);
++      fn_DGifCloseFile (gif, NULL);
+       UNGCPRO;
+       return 0;
+     }
+@@ -8189,7 +8189,7 @@ gif_load (f, img)
+   /* Create the X image and pixmap.  */
+   if (!x_create_x_image_and_pixmap (f, width, height, 0, &ximg, &img->pixmap))
+     {
+-      fn_DGifCloseFile (gif);
++      fn_DGifCloseFile (gif, NULL);
+       UNGCPRO;
+       return 0;
+     }
+@@ -8296,7 +8296,7 @@ gif_load (f, img)
+ 				Fcons (make_number (gif->ImageCount),
+ 				       img->data.lisp_val));
+ 
+-  fn_DGifCloseFile (gif);
++  fn_DGifCloseFile (gif, NULL);
+ 
+   /* Maybe fill in the background field while we have ximg handy. */
+   if (NILP (image_spec_value (img->spec, QCbackground, NULL)))
