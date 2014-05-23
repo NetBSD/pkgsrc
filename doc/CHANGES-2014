@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1984 2014/05/23 08:15:02 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1985 2014/05/23 13:21:07 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2736,3 +2736,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/hs-cmdargs version 0.10.7 [szptvlfn 2014-05-22]
 	Updated devel/p5-Tie-Array-AsHash to 0.200 [hiramatsu 2014-05-23]
 	Updated misc/calibre to 1.38.0 [wiz 2014-05-23]
+	Updated emulators/suse131_x11 to 13.1nb5 [obache 2014-05-23]
