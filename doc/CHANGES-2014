@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1986 2014/05/23 20:50:04 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1987 2014/05/23 21:47:13 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2739,3 +2739,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/suse131_x11 to 13.1nb5 [obache 2014-05-23]
 	Updated databases/gdbm_compat to 1.11 [wiz 2014-05-23]
 	Updated databases/gdbm to 1.11 [wiz 2014-05-23]
+	Added devel/hs-ghc-paths version 0.1.0.9 [szptvlfn 2014-05-23]
