@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2013/04/08 11:17:10 rodent Exp $
+# $NetBSD: Makefile,v 1.50 2014/05/23 20:49:15 wiz Exp $
 
 .include "Makefile.common"
 
 COMMENT=	The GNU database manager
-PKGREVISION=	3
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
