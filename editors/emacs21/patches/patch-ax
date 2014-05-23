@@ -1,7 +1,8 @@
-$NetBSD: patch-ax,v 1.2 2013/07/05 13:43:44 ryoon Exp $
+$NetBSD: patch-ax,v 1.3 2014/05/23 22:34:41 dholland Exp $
 
 * Fix build with png-1.5.
 * Fix build with giflib 5.0.
+* Fix build with giflib 5.1.
 
 --- src/xfns.c.orig	2002-12-06 17:05:35.000000000 +0000
 +++ src/xfns.c
@@ -44,3 +45,39 @@ $NetBSD: patch-ax,v 1.2 2013/07/05 13:43:44 ryoon Exp $
        if (!gif)
  	{
  	  image_error ("Cannot open memory source `%s'", img->spec, Qnil);
+@@ -9789,7 +9793,7 @@ gif_load (f, img)
+   if (rc == GIF_ERROR)
+     {
+       image_error ("Error reading `%s'", img->spec, Qnil);
+-      DGifCloseFile (gif);
++      DGifCloseFile (gif, NULL);
+       UNGCPRO;
+       return 0;
+     }
+@@ -9800,7 +9804,7 @@ gif_load (f, img)
+     {
+       image_error ("Invalid image number `%s' in image `%s'",
+ 		   image, img->spec);
+-      DGifCloseFile (gif);
++      DGifCloseFile (gif, NULL);
+       UNGCPRO;
+       return 0;
+     }
+@@ -9811,7 +9815,7 @@ gif_load (f, img)
+   /* Create the X image and pixmap.  */
+   if (!x_create_x_image_and_pixmap (f, width, height, 0, &ximg, &img->pixmap))
+     {
+-      DGifCloseFile (gif);
++      DGifCloseFile (gif, NULL);
+       UNGCPRO;
+       return 0;
+     }
+@@ -9903,7 +9907,7 @@ gif_load (f, img)
+ 	  }
+     }
+ 
+-  DGifCloseFile (gif);
++  DGifCloseFile (gif, NULL);
+ 
+   /* Put the image into the pixmap, then free the X image and its buffer.  */
+   x_put_x_image (f, ximg, img->pixmap, width, height);
