@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2014/05/09 16:53:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2014/05/23 08:14:52 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -1010,6 +1010,7 @@ lib/calibre/calibre/gui2/tweak_book/editor/canvas.py
 lib/calibre/calibre/gui2/tweak_book/editor/image.py
 lib/calibre/calibre/gui2/tweak_book/editor/insert_resource.py
 lib/calibre/calibre/gui2/tweak_book/editor/smart/__init__.py
+lib/calibre/calibre/gui2/tweak_book/editor/smart/css.py
 lib/calibre/calibre/gui2/tweak_book/editor/smart/html.py
 lib/calibre/calibre/gui2/tweak_book/editor/syntax/__init__.py
 lib/calibre/calibre/gui2/tweak_book/editor/syntax/base.py
@@ -1020,6 +1021,7 @@ lib/calibre/calibre/gui2/tweak_book/editor/themes.py
 lib/calibre/calibre/gui2/tweak_book/editor/widget.py
 lib/calibre/calibre/gui2/tweak_book/file_list.py
 lib/calibre/calibre/gui2/tweak_book/job.py
+lib/calibre/calibre/gui2/tweak_book/live_css.py
 lib/calibre/calibre/gui2/tweak_book/main.py
 lib/calibre/calibre/gui2/tweak_book/preferences.py
 lib/calibre/calibre/gui2/tweak_book/preview.py
@@ -1120,6 +1122,7 @@ lib/calibre/calibre/plugins/progress_indicator.so
 lib/calibre/calibre/plugins/qt_hack.so
 lib/calibre/calibre/plugins/speedup.so
 lib/calibre/calibre/plugins/sqlite_custom.so
+lib/calibre/calibre/plugins/tokenizer.so
 lib/calibre/calibre/plugins/unrar.so
 lib/calibre/calibre/plugins/woff.so
 lib/calibre/calibre/ptempfile.py
@@ -1305,6 +1308,22 @@ lib/calibre/routes/route.py
 lib/calibre/routes/util.py
 lib/calibre/six.py
 lib/calibre/templite/__init__.py
+lib/calibre/tinycss/__init__.py
+lib/calibre/tinycss/color3.py
+lib/calibre/tinycss/css21.py
+lib/calibre/tinycss/decoding.py
+lib/calibre/tinycss/page3.py
+lib/calibre/tinycss/parsing.py
+lib/calibre/tinycss/tests/__init__.py
+lib/calibre/tinycss/tests/color3.py
+lib/calibre/tinycss/tests/css21.py
+lib/calibre/tinycss/tests/decoding.py
+lib/calibre/tinycss/tests/main.py
+lib/calibre/tinycss/tests/page3.py
+lib/calibre/tinycss/tests/tokenizing.py
+lib/calibre/tinycss/token_data.py
+lib/calibre/tinycss/tokenizer.py
+lib/calibre/tinycss/version.py
 ${PYSITELIB}/init_calibre.py
 share/applications/calibre-ebook-edit.desktop
 share/applications/calibre-ebook-viewer.desktop
@@ -1371,6 +1390,7 @@ share/calibre/content_server/stacktrace.js
 share/calibre/content_server/star-half.png
 share/calibre/content_server/star-off.png
 share/calibre/content_server/star-on.png
+share/calibre/csscolorparser.js
 share/calibre/default_tweaks.py
 share/calibre/dictionaries/en-GB/en-GB.aff
 share/calibre/dictionaries/en-GB/en-GB.dic
@@ -3385,3 +3405,4 @@ share/pixmaps/calibre-ebook-edit.png
 share/pixmaps/calibre-gui.png
 share/pixmaps/calibre-lrf.png
 share/pixmaps/calibre-viewer.png
+@pkgdir share/appdata
