@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.11 2013/08/30 22:34:51 joerg Exp $
+$NetBSD: distinfo,v 1.12 2014/05/24 04:05:24 obache Exp $
 
 SHA1 (camlimages-4.0.1/v4.0.1.tar.gz) = 4c1eee28f02749f53ed8345b448ce11375ce6dce
 RMD160 (camlimages-4.0.1/v4.0.1.tar.gz) = 6ae0f4c2ad3f0a8d7f4d84109d413e0b4bc1a86b
 Size (camlimages-4.0.1/v4.0.1.tar.gz) = 2190252 bytes
 SHA1 (patch-OMakefile) = 3d6343128c8c6d450463e2cf6a2e1f5b75d4285a
-SHA1 (patch-src_gifread.c) = d080d957cdfb6859413db4fd42beef987e2cb11f
-SHA1 (patch-src_gifwrite.c) = 339d3c9a4a4a366d1d7da936b785d511c6149c60
+SHA1 (patch-src_gifread.c) = 63aac1a76e809676f0000f37af63c79c4edbe316
+SHA1 (patch-src_gifwrite.c) = ab92107467b059d9541edacf60a5f73ed71fd687
 SHA1 (patch-src_jpegread.c) = e6aa9279e6efc0c8345b74344d56377ddfe77b74
 SHA1 (patch-src_pngread.c) = 00d753b8570b5ff9ffa71e6e62328496b03f9654
 SHA1 (patch-src_pngwrite.c) = 4df4f69851769e0eefc2249a30ac8dd53aa8d755
