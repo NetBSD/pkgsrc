@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2014/05/17 13:50:37 rodent Exp $
+# $NetBSD: Makefile,v 1.130 2014/05/24 13:11:16 obache Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -37,6 +37,7 @@ SUBDIR+=	libe-book
 SUBDIR+=	libetonyek
 SUBDIR+=	libfreehand
 SUBDIR+=	libiconv
+SUBDIR+=	libkkc
 SUBDIR+=	libmspub
 SUBDIR+=	libmwaw
 SUBDIR+=	libvisio
