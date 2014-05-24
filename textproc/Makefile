@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.768 2014/05/19 21:18:14 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.769 2014/05/24 10:24:41 obache Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -319,6 +319,7 @@ SUBDIR+=	lua-slnunicode
 SUBDIR+=	makeindexk
 SUBDIR+=	makeztxt
 SUBDIR+=	markdown-mode
+SUBDIR+=	marisa
 SUBDIR+=	mdoclint
 SUBDIR+=	mdocml
 SUBDIR+=	mecab
@@ -572,6 +573,7 @@ SUBDIR+=	p5-ack
 SUBDIR+=	p5-cabocha
 SUBDIR+=	p5-iCal-Parser
 SUBDIR+=	p5-libxml
+SUBDIR+=	p5-marisa
 SUBDIR+=	p5-mecab
 SUBDIR+=	p5-mobiperl
 SUBDIR+=	p5-native-hyperestraier
@@ -629,6 +631,7 @@ SUBDIR+=	py-jsonlib3
 SUBDIR+=	py-libxml2
 SUBDIR+=	py-libxslt
 SUBDIR+=	py-lxml
+SUBDIR+=	py-marisa
 SUBDIR+=	py-markdown
 SUBDIR+=	py-markdown2
 SUBDIR+=	py-markupsafe
@@ -692,6 +695,7 @@ SUBDIR+=	ruby-kramdown
 SUBDIR+=	ruby-levenshtein
 SUBDIR+=	ruby-libxml
 SUBDIR+=	ruby-mab
+SUBDIR+=	ruby-marisa
 SUBDIR+=	ruby-markaby
 SUBDIR+=	ruby-maruku
 SUBDIR+=	ruby-mecab
