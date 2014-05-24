@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.204 2014/05/22 07:19:48 wiz Exp $
+# $NetBSD: Makefile,v 1.205 2014/05/24 22:59:51 wiz Exp $
 
 DISTNAME=		gnucash-2.6.3
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 EXTRACT_SUFX=		.tar.bz2
@@ -45,17 +45,22 @@ CONF_FILES+=		${PREFIX}/share/examples/gnucash/gnucash/config ${PKG_SYSCONFDIR}/
 CONF_FILES+=		${PREFIX}/share/examples/gnucash/gnucash/environment ${PKG_SYSCONFDIR}/environment
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/gnucash
 
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.28.0
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../finance/libofx/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
+.include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../misc/goffice0.8/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gnome-keyring+=	gnome-keyring>=0.6
+.include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
