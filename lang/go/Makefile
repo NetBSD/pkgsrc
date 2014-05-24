@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2014/05/16 11:53:10 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2014/05/24 09:44:39 bsiegert Exp $
 
 VERSION=	1.2.1
-PKGREVISION=	1
+PKGREVISION=	2
 DISTNAME=	go${VERSION}.src
 PKGNAME=	go-${VERSION}
 CATEGORIES=	lang
@@ -25,12 +25,16 @@ BUILD_DEPENDS+=	bash>=4.2nb3:../../shells/bash
 ONLY_FOR_PLATFORM= *-*-i386 *-*-x86_64 *-*-evbarm
 .if ${MACHINE_ARCH} == "i386"
 GOARCH=		386
+GO_COMPILER=    8
 .elif ${MACHINE_ARCH} == "x86_64"
 GOARCH=		amd64
+GO_COMPILER=    6
 .elif ${MACHINE_ARCH} == "evbarm"
 GOARCH=		arm
+GO_COMPILER=    5
 .endif
 PLIST_SUBST+=	GO_PLATFORM=${LOWER_OPSYS:Q}_${GOARCH:Q} GOARCH=${GOARCH:Q}
+PLIST_SUBST+=  GO_COMPILER=${GO_COMPILER:Q}
 
 # cgo compiles under TMPDIR
 TMPDIR?=	/tmp

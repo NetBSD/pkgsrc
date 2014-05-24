@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/03/03 15:41:12 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/05/24 09:44:39 bsiegert Exp $
 bin/go
 bin/gofmt
 go/AUTHORS
@@ -502,10 +502,10 @@ go/pkg/obj/${GO_PLATFORM}/libbio.a
 go/pkg/obj/${GO_PLATFORM}/libcc.a
 go/pkg/obj/${GO_PLATFORM}/libgc.a
 go/pkg/obj/${GO_PLATFORM}/libmach.a
-go/pkg/tool/${GO_PLATFORM}/6a
-go/pkg/tool/${GO_PLATFORM}/6c
-go/pkg/tool/${GO_PLATFORM}/6g
-go/pkg/tool/${GO_PLATFORM}/6l
+go/pkg/tool/${GO_PLATFORM}/${GO_COMPILER}a
+go/pkg/tool/${GO_PLATFORM}/${GO_COMPILER}c
+go/pkg/tool/${GO_PLATFORM}/${GO_COMPILER}g
+go/pkg/tool/${GO_PLATFORM}/${GO_COMPILER}l
 go/pkg/tool/${GO_PLATFORM}/addr2line
 go/pkg/tool/${GO_PLATFORM}/cgo
 go/pkg/tool/${GO_PLATFORM}/dist
@@ -606,7 +606,7 @@ go/src/cmd/6l/6.out.h
 go/src/cmd/6l/Makefile
 go/src/cmd/6l/asm.c
 go/src/cmd/6l/doc.go
-go/src/cmd/6l/enam.c
+go/src/cmd/${GO_COMPILER}l/enam.c
 go/src/cmd/6l/l.h
 go/src/cmd/6l/list.c
 go/src/cmd/6l/mkenam
