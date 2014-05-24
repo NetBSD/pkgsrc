@@ -1,4 +1,4 @@
-$NetBSD: patch-rts_ghc.mk,v 1.2 2014/05/21 16:07:59 jperkin Exp $
+$NetBSD: patch-rts_ghc.mk,v 1.3 2014/05/24 04:49:40 obache Exp $
 
 This is pkgsrc specific: dtrace(1) gets confused when we have gcc
 wrappers in the PATH so we have to hide them:
@@ -16,7 +16,7 @@ Also install libffi.{a,la} so we can expand to figure out .so extensions.
  # depend on libffi.so, but copy libffi.so*
  rts/dist/build/libffi$(soext): libffi/build/inst/lib/libffi$(soext)
  	cp libffi/build/inst/lib/libffi$(soext)* rts/dist/build
-+	cp libffi/build/inst/lib/libffi.{a,la} rts/dist/build
++	cp libffi/build/inst/lib/libffi.*a rts/dist/build
  
  rts/dist/build/$(LIBFFI_DLL): libffi/build/inst/bin/$(LIBFFI_DLL)
  	cp $< $@
