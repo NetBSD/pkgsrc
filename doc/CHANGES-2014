@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1988 2014/05/24 02:13:49 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.1989 2014/05/24 07:27:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2741,3 +2741,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/gdbm to 1.11 [wiz 2014-05-23]
 	Added devel/hs-ghc-paths version 0.1.0.9 [szptvlfn 2014-05-23]
 	Updated graphics/py-cairocffi to 0.5.4 [rodent 2014-05-24]
+	Added fonts/fira version 3.105 [wiz 2014-05-24]
