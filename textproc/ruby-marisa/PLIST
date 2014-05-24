@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/24 10:21:13 obache Exp $
+${RUBY_VENDORARCHLIB}/marisa.${RUBY_DLEXT}
