@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1995 2014/05/24 22:08:12 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.1996 2014/05/24 23:00:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2751,3 +2751,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added inputmethod/ibus-kkc version 1.5.20 [obache 2014-05-24]
 	Added devel/hs-exceptions version 0.6.1 [szptvlfn 2014-05-24]
 	Added devel/hdevtools version 0.1.0.5 [szptvlfn 2014-05-24]
+	Updated finance/gnucash to 2.6.3nb6 [wiz 2014-05-24]
