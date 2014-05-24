@@ -1,0 +1,12 @@
+hdevtools is a backend for text editor plugins, to allow for things such as
+syntax and type checking of Haskell code, and retrieving type information,
+all directly from within your text editor.
+
+The advantage that hdevtools has over competitors, is that it runs silently
+in a persistent background process, and therefore is able to keeps all of
+your Haskell modules and dependent libraries loaded in memory. This way,
+when you change only a single source file, only it needs to be reloaded and
+rechecked, instead of having to reload everything.
+
+This makes hdevtools very fast for checking syntax and type errors (runs
+just as fast as the :reload command in GHCi).
