@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/24 22:00:42 szptvlfn Exp $
+lib/exceptions-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Catch.hi
+lib/exceptions-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Catch/Pure.hi
+lib/exceptions-${PKGVERSION}/${HASKELL_VERSION}/HSexceptions-${PKGVERSION}.o
+lib/exceptions-${PKGVERSION}/${HASKELL_VERSION}/libHSexceptions-${PKGVERSION}.a
+lib/exceptions-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/exceptions-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/exceptions-${PKGVERSION}/html/Control-Monad-Catch-Pure.html
+${PLIST.doc}share/doc/exceptions-${PKGVERSION}/html/Control-Monad-Catch.html
+${PLIST.doc}share/doc/exceptions-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/exceptions-${PKGVERSION}/html/exceptions.haddock
+${PLIST.doc}share/doc/exceptions-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/exceptions-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/exceptions-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/exceptions-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/exceptions-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/exceptions-${PKGVERSION}/html/mini_Control-Monad-Catch-Pure.html
+${PLIST.doc}share/doc/exceptions-${PKGVERSION}/html/mini_Control-Monad-Catch.html
+${PLIST.doc}share/doc/exceptions-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/exceptions-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/exceptions-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/exceptions-${PKGVERSION}/html/synopsis.png
