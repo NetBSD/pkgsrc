@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1990 2014/05/24 10:22:54 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1991 2014/05/24 13:10:21 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2746,3 +2746,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added textproc/p5-marisa version 0.2.4 [obache 2014-05-24]
 	Added textproc/py-marisa version 0.2.4 [obache 2014-05-24]
 	Added textproc/ruby-marisa version 0.2.4 [obache 2014-05-24]
+	Added converters/libkkc version 0.3.3 [obache 2014-05-24]
