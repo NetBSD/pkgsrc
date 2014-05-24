@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/05/24 13:10:04 obache Exp $
+
+SHA1 (libkkc-0.3.3.tar.gz) = 4fe7fbabc4db0d371053528b7cd4bf3c1ff9ae95
+RMD160 (libkkc-0.3.3.tar.gz) = 35260522486efa3cc5929fd435cefc63774c3868
+Size (libkkc-0.3.3.tar.gz) = 1388989 bytes
