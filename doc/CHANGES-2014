@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1993 2014/05/24 13:24:44 obache Exp $
+$NetBSD: CHANGES-2014,v 1.1994 2014/05/24 22:07:39 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2749,3 +2749,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added converters/libkkc version 0.3.3 [obache 2014-05-24]
 	Added misc/libkkc-data version 0.2.7 [obache 2014-05-24]
 	Added inputmethod/ibus-kkc version 1.5.20 [obache 2014-05-24]
+	Added devel/hs-exceptions version 0.6.1 [szptvlfn 2014-05-24]
