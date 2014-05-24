@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/24 22:01:30 szptvlfn Exp $
+bin/hdevtools
+share/doc/${PKGNAME}/LICENSE
