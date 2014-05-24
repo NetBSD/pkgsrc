@@ -1,0 +1,15 @@
+# $NetBSD: Makefile.common,v 1.1 2014/05/24 10:21:13 obache Exp $
+# used by textproc/p5-marisa/Makefile
+# used by textproc/py-marisa/Makefile
+# used by textproc/ruby-marisa/Makefile
+
+DISTNAME=	marisa-0.2.4
+CATEGORIES=	textproc
+MASTER_SITES=	http://marisa-trie.googlecode.com/files/
+
+DISTINFO_FILE=	${.CURDIR}/../../textproc/marisa/distinfo
+PATCHDIR=	${.CURDIR}/../../textproc/marisa/patches
+
+MAINTAINER=	ishit@users.sourceforge.net
+HOMEPAGE=	http://code.google.com/p/marisa-trie/
+LICENSE=	modified-bsd OR gnu-lgpl-v2.1

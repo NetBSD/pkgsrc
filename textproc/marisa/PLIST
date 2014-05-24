@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/24 10:21:13 obache Exp $
+bin/marisa-benchmark
+bin/marisa-build
+bin/marisa-common-prefix-search
+bin/marisa-dump
+bin/marisa-lookup
+bin/marisa-predictive-search
+bin/marisa-reverse-lookup
+include/marisa.h
+include/marisa/agent.h
+include/marisa/base.h
+include/marisa/exception.h
+include/marisa/iostream.h
+include/marisa/key.h
+include/marisa/keyset.h
+include/marisa/query.h
+include/marisa/scoped-array.h
+include/marisa/scoped-ptr.h
+include/marisa/stdio.h
+include/marisa/trie.h
+lib/libmarisa.la
+lib/pkgconfig/marisa.pc
