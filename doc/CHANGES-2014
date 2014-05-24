@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1989 2014/05/24 07:27:04 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.1990 2014/05/24 10:22:54 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2742,3 +2742,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/hs-ghc-paths version 0.1.0.9 [szptvlfn 2014-05-23]
 	Updated graphics/py-cairocffi to 0.5.4 [rodent 2014-05-24]
 	Added fonts/fira version 3.105 [wiz 2014-05-24]
+	Added textproc/marisa version 0.2.4 [obache 2014-05-24]
+	Added textproc/p5-marisa version 0.2.4 [obache 2014-05-24]
+	Added textproc/py-marisa version 0.2.4 [obache 2014-05-24]
+	Added textproc/ruby-marisa version 0.2.4 [obache 2014-05-24]
