@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.38 2014/05/05 00:48:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.39 2014/05/25 18:21:31 bouyer Exp $
 #
 
 .include "../../x11/wxGTK28/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/wxGTK/wxGTK28/}
-PKGREVISION=		5
+PKGREVISION=		6
 COMMENT=		GTK-based implementation of the wxWidgets GUI library
 
 BUILD_TARGET=	all
@@ -35,5 +35,6 @@ post-install:
 LIBS+=	-lexecinfo
 .endif
 
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
