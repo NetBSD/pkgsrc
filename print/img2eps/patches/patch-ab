@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2010/06/19 13:36:13 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2014/05/25 07:51:06 obache Exp $
+
+* Fix build for png-1.4.x.
 
 --- src/im_png.c.orig	2002-10-15 14:30:58.000000000 +0000
 +++ src/im_png.c
