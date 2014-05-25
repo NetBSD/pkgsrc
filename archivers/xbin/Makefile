@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2013/12/23 11:57:02 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2014/05/25 15:52:31 rodent Exp $
 
 DISTNAME=	${PRGNAME}unix
 PKGNAME=	${PRGNAME}-2.3
@@ -26,7 +26,9 @@ EXTRACT_ONLY=	# empty
 
 .if !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly"
 CFLAGS+=		-DBSD
+.if ${OPSYS} != "OpenBSD"
 LDFLAGS+=		-lcompat
+.endif
 .endif
 CFLAGS.Interix+=	-DBSD
 CFLAGS.Darwin+=		-DBSD

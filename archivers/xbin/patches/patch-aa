@@ -1,13 +1,17 @@
-$NetBSD: patch-aa,v 1.2 2012/02/29 20:17:32 hans Exp $
+$NetBSD: patch-aa,v 1.3 2014/05/25 15:52:32 rodent Exp $
 
---- xbinunix.c.orig	2005-08-17 18:43:47.000000000 +0000
+Add missing includes. Fix build for OpenBSD 5.5.
+
+--- xbinunix.c.orig	Sun May 25 13:15:05 2014
 +++ xbinunix.c
-@@ -2,12 +2,15 @@
+@@ -2,12 +2,17 @@
  static char version[] = "xbin.c Version 2.3 09/30/85";
  #endif lint
  
++#include <stdlib.h>
 +#include <limits.h>
  #include <stdio.h>
++#include <string.h>
  #include <sys/types.h>
  #include <sys/stat.h>
 -#include <sys/dir.h>
@@ -20,3 +24,44 @@ $NetBSD: patch-aa,v 1.2 2012/02/29 20:17:32 hans Exp $
  #define FNAMELEN MAXNAMLEN
  #else
  #define FNAMELEN DIRSIZ
+@@ -15,7 +20,12 @@ static char version[] = "xbin.c Version 2.3 09/30/85";
+ 
+ #ifdef BSD
+ #include <sys/time.h>
++#if defined(__OpenBSD__)
++#include <sys/param.h>
++#endif
++#if (defined(__OpenBSD__) && (OpenBSD < 201405)) || !defined(__OpenBSD__)
+ #include <sys/timeb.h>
++#endif
+ #define search_last rindex
+ extern char *rindex();
+ #else
+@@ -287,7 +297,7 @@ forge_info()
+ 	int n;
+ 	long tdiff;
+ 	struct tm *tp;
+-#ifdef BSD
++#if (defined(BSD) && !defined(__OpenBSD__)) || (defined(__OpenBSD__) && (OpenBSD < 201405))
+ 	struct timeb tbuf;
+ #else
+ 	long bs;
+@@ -310,7 +320,7 @@ forge_info()
+ 		put4(buf + H_RLENOFF, mh.m_rsrclen);
+ 
+ 		/* convert unix file time to mac time format */
+-#ifdef BSD
++#if (defined(BSD) && !defined(__OpenBSD__)) || (defined(__OpenBSD__) && (OpenBSD < 201405))
+ 		ftime(&tbuf);
+ 		tp = localtime(&tbuf.time);
+ 		tdiff = TIMEDIFF - tbuf.timezone * 60;
+@@ -320,7 +330,8 @@ forge_info()
+ 		/* I hope this is right! -andy */
+ 		time(&bs);
+ 		tp = localtime(&bs);
+-		tdiff = TIMEDIFF - timezone;
++		struct timezone tzone;
++		tdiff = TIMEDIFF - tzone.tz_minuteswest;
+ 		if (tp->tm_isdst)
+ 			tdiff += 60 * 60;
+ #endif
