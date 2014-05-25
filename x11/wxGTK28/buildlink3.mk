@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.28 2014/05/05 00:48:33 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.29 2014/05/25 18:21:31 bouyer Exp $
 
 BUILDLINK_TREE+=	wxGTK28
 
@@ -11,6 +11,7 @@ BUILDLINK_PKGSRCDIR.wxGTK28?=	../../x11/wxGTK28
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
