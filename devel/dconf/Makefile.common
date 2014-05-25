@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2013/10/29 10:37:39 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.4 2014/05/25 05:30:43 obache Exp $
 #
 # used by devel/dconf-editor/Makefile
 
@@ -16,3 +16,12 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c99
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake intltool msgfmt
+
+SUBST_CLASSES+=		sysdir
+SUBST_MESSAGE.sysdir=	Fixes hard-coded dconf database directory name
+SUBST_STAGE.sysdir=	post-configure
+SUBST_FILES.sysdir=	engine/dconf-engine-source-system.c
+SUBST_FILES.sysdir+=	tests/engine.c
+SUBST_FILES.sysdir+=	bin/dconf-update.c
+SUBST_FILES.sysdir+=	bin/dconf-update.vala
+SUBST_SED.sysdir=	-e s,/etc/dconf,${PKG_SYSCONFDIR}/dconf,g
