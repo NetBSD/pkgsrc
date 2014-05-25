@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/05/25 21:54:17 szptvlfn Exp $
+
+SHA1 (hashable-1.2.2.0.tar.gz) = dd234dab140836bde405f0d4e69efe9ddf4e27f8
+RMD160 (hashable-1.2.2.0.tar.gz) = 33f9040f2afcb93d6475d8872aef4c164a4cff5e
+Size (hashable-1.2.2.0.tar.gz) = 23456 bytes

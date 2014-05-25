@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/25 21:54:17 szptvlfn Exp $
+lib/hashable-${PKGVERSION}/${HASKELL_VERSION}/Data/Hashable.hi
+lib/hashable-${PKGVERSION}/${HASKELL_VERSION}/Data/Hashable/Class.hi
+lib/hashable-${PKGVERSION}/${HASKELL_VERSION}/Data/Hashable/Generic.hi
+lib/hashable-${PKGVERSION}/${HASKELL_VERSION}/HShashable-${PKGVERSION}.o
+lib/hashable-${PKGVERSION}/${HASKELL_VERSION}/libHShashable-${PKGVERSION}.a
+lib/hashable-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/hashable-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/hashable-${PKGVERSION}/html/Data-Hashable.html
+${PLIST.doc}share/doc/hashable-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/hashable-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/hashable-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/hashable-${PKGVERSION}/html/hashable.haddock
+${PLIST.doc}share/doc/hashable-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/hashable-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/hashable-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/hashable-${PKGVERSION}/html/mini_Data-Hashable.html
+${PLIST.doc}share/doc/hashable-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/hashable-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/hashable-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/hashable-${PKGVERSION}/html/synopsis.png
