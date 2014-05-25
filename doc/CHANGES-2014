@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2003 2014/05/25 18:22:48 bouyer Exp $
+$NetBSD: CHANGES-2014,v 1.2004 2014/05/25 18:28:05 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2760,3 +2760,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Removed sysutils/xenkernel20 [gdt 2014-05-25]
 	Removed sysutils/xentools20 [gdt 2014-05-25]
 	Updated x11/wxGTK28 to 2.8.12nb6 [bouyer 2014-05-25]
+	Added geography/opencpn version 3.2.2 [bouyer 2014-05-25]
