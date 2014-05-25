@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13325 2014/05/24 19:56:16 wiz Exp $
+$NetBSD: TODO,v 1.13326 2014/05/25 13:08:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -397,7 +397,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o audacity-2.0.5 [wip (audacity-devel)]
 	o autoconf-archive-20140228
 	o autoconvert-0.3.16
-	o autogen-5.18.2
+	o autogen-5.18.3
 	o avidemux-2.6
 	o avl-2.0.3 [2.x is not source and binary compatible with 1.x]
 	o avr-binutils-2.24 [wip]
@@ -995,6 +995,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-wxWidgets-3.0.0
 	o py-zconfig-3.0.3
 	o qnetwalk-1.4
+	o qt4-libs-4.8.6
 	o qt4-qscintilla-2.8.1
 	o qt5-qtbase-5.3
 	o radiance-3.7.2
