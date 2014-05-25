@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2014/04/19 15:00:52 joerg Exp $
+$NetBSD: distinfo,v 1.33 2014/05/25 08:24:24 obache Exp $
 
 SHA1 (kaffe-1.1.7.tar.gz) = 5951d16a4a7b11689932583d134520ca6de00817
 RMD160 (kaffe-1.1.7.tar.gz) = 7523a3470cd06cf60dbade8ea2f464dc9d85277b
@@ -17,6 +17,6 @@ SHA1 (patch-bc) = f00d541613db81540bcd21ddc68f7b27232024b6
 SHA1 (patch-ca) = 0dc783a8e78016ef5e5e2f3392644690e3a2de9a
 SHA1 (patch-cb) = c698b0a2e078cc035dfd7401617fc8d4c2ef5fbe
 SHA1 (patch-cc) = df48315c9470d433e33fd80136d7bf7f60f83e1d
-SHA1 (patch-libraries_clib_awt_X_imggif.c) = f886133219216af242839bb7af90ce45f8599db0
+SHA1 (patch-libraries_clib_awt_X_imggif.c) = c4da4eb55282b5c616612182e247f2080f6f249f
 SHA1 (patch-libraries_clib_awt_X_imgpng.c) = 0cb5d6ef9349c1f6e1ac1d5885f574f4e2a0aac9
 SHA1 (patch-libraries_javalib_external_classpath_native_jni_gtk-peer_gnu__java__awt__peer__gtk__GdkTextLayout.c) = 8a8fa9ca6811f225022aa89521b8efd8933138ea
