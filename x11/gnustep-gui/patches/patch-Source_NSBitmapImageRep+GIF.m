@@ -1,6 +1,8 @@
-$NetBSD: patch-Source_NSBitmapImageRep+GIF.m,v 1.1 2013/08/30 22:42:18 joerg Exp $
+$NetBSD: patch-Source_NSBitmapImageRep+GIF.m,v 1.2 2014/05/25 07:18:44 obache Exp $
 
---- Source/NSBitmapImageRep+GIF.m.orig	2013-08-30 19:58:11.000000000 +0000
+* Fixes build with giflib>5
+
+--- Source/NSBitmapImageRep+GIF.m.orig	2011-02-28 15:43:25.000000000 +0000
 +++ Source/NSBitmapImageRep+GIF.m
 @@ -140,7 +140,7 @@ static int gs_gif_output(GifFileType *fi
      }
@@ -11,6 +13,24 @@ $NetBSD: patch-Source_NSBitmapImageRep+GIF.m,v 1.1 2013/08/30 22:42:18 joerg Exp
    if (file == NULL)
      {
        /* we do not use giferror here because it doesn't
+@@ -149,7 +149,7 @@ static int gs_gif_output(GifFileType *fi
+       return NO;
+     }
+ 
+-  DGifCloseFile(file);
++  DGifCloseFile(file, NULL);
+   return YES;
+ }
+ 
+@@ -168,7 +168,7 @@ static int gs_gif_output(GifFileType *fi
+    SET_ERROR_MSG(msg); \
+    if (file != NULL) \
+      {\
+-       DGifCloseFile(file); \
++       DGifCloseFile(file, NULL); \
+      }\
+    if (imgBuffer != NULL) \
+      {\
 @@ -214,7 +214,7 @@ static int gs_gif_output(GifFileType *fi
  
    /* open the image */
@@ -20,6 +40,15 @@ $NetBSD: patch-Source_NSBitmapImageRep+GIF.m,v 1.1 2013/08/30 22:42:18 joerg Exp
    if (file == NULL)
      {
        /* we do not use giferror here because it doesn't
+@@ -376,7 +376,7 @@ static int gs_gif_output(GifFileType *fi
+           withValue: [NSNumber numberWithInt: 0]];
+ 
+   /* don't forget to close the gif */
+-  DGifCloseFile(file);
++  DGifCloseFile(file, NULL);
+ 
+   return self;
+ }
 @@ -457,10 +457,10 @@ static int gs_gif_output(GifFileType *fi
    // If you have a color table, you must be certain that it is GIF format
    colorTable = [self valueForProperty: NSImageRGBColorTable];	// nil is OK
@@ -69,3 +98,12 @@ $NetBSD: patch-Source_NSBitmapImageRep+GIF.m,v 1.1 2013/08/30 22:42:18 joerg Exp
    if (status == GIF_ERROR)
      {
        SET_ERROR_MSG(@"GIFRepresentation (giflib): EGifPutImageDesc() failed.");
+@@ -529,7 +529,7 @@ static int gs_gif_output(GifFileType *fi
+ 	}
+       GIFImageP += width;
+     }
+-  status = EGifCloseFile(GIFFile);
++  status = EGifCloseFile(GIFFile, NULL);
+ 
+   free(GIFImage);
+ 
