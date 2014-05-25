@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2013/06/15 02:30:57 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.16 2014/05/25 18:21:31 bouyer Exp $
 #
 # used by x11/wxGTK28/Makefile
 # used by x11/wxGTK28-contrib/Makefile
@@ -33,6 +33,7 @@ CONFIGURE_ARGS+=	--with-expat=sys
 CONFIGURE_ARGS+=	--with-zlib=sys
 CONFIGURE_ARGS+=	--with-regex=builtin
 CONFIGURE_ARGS+=	--enable-mediactrl
+CONFIGURE_ARGS+=	--enable-graphics_ctx
 
 DOCDIR=			${PREFIX}/share/doc/wxGTK
 PKGLOCALEDIR=		share
