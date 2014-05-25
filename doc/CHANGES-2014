@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2000 2014/05/25 07:16:03 msaitoh Exp $
+$NetBSD: CHANGES-2014,v 1.2001 2014/05/25 08:43:12 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2756,3 +2756,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/dconf to 0.18.0nb1 [obache 2014-05-25]
 	Updated inputmethod/ibus to 1.5.7nb3 [obache 2014-05-25]
 	Updated sysutils/pciutils to 3.2.1 [msaitoh 2014-05-25]
+	Updated inputmethod/ibus-el to 0.3.2nb3 [obache 2014-05-25]
