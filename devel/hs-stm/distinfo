@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/05/25 21:54:58 szptvlfn Exp $
+
+SHA1 (stm-2.4.3.tar.gz) = 72fbf401ee4be19bd509b2238879889037d11042
+RMD160 (stm-2.4.3.tar.gz) = 49497b5eae13a260ef81fc33092866405a4ef5e1
+Size (stm-2.4.3.tar.gz) = 10145 bytes
