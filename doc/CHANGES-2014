@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.1999 2014/05/25 06:07:44 obache Exp $
+$NetBSD: CHANGES-2014,v 1.2000 2014/05/25 07:16:03 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2755,3 +2755,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/mikutter to 3.0.0alpha4 [obache 2014-05-25]
 	Updated devel/dconf to 0.18.0nb1 [obache 2014-05-25]
 	Updated inputmethod/ibus to 1.5.7nb3 [obache 2014-05-25]
+	Updated sysutils/pciutils to 3.2.1 [msaitoh 2014-05-25]
