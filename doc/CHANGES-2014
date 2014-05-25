@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2001 2014/05/25 08:43:12 obache Exp $
+$NetBSD: CHANGES-2014,v 1.2002 2014/05/25 15:37:54 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2757,3 +2757,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated inputmethod/ibus to 1.5.7nb3 [obache 2014-05-25]
 	Updated sysutils/pciutils to 3.2.1 [msaitoh 2014-05-25]
 	Updated inputmethod/ibus-el to 0.3.2nb3 [obache 2014-05-25]
+	Removed sysutils/xenkernel20 [gdt 2014-05-25]
+	Removed sysutils/xentools20 [gdt 2014-05-25]
