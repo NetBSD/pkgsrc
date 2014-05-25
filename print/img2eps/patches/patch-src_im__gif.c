@@ -1,39 +1,50 @@
-$NetBSD: patch-src_im__gif.c,v 1.1 2013/08/17 11:17:48 joerg Exp $
+$NetBSD: patch-src_im__gif.c,v 1.2 2014/05/25 07:49:13 obache Exp $
 
---- src/im_gif.c.orig	2013-08-15 18:22:38.000000000 +0000
+* giflib>=5.0 API change
+
+--- src/im_gif.c.orig	2005-01-04 19:18:57.000000000 +0000
 +++ src/im_gif.c
-@@ -71,6 +71,7 @@ struct image_gif {
- IMAGE_DECLARE(gif);
- 
- static const char *_errstr(int err);
-+static int giferror;
- 
- 
- 
-@@ -80,7 +81,7 @@ gif_close(image_gif *im)
+@@ -77,10 +77,12 @@ static const char *_errstr(int err);
+ void
+ gif_close(image_gif *im)
+ {
++    int giferror;
++
      free(im->pal);
  
-     if (DGifCloseFile(im->gif) != GIF_OK)
+-    if (DGifCloseFile(im->gif) != GIF_OK)
 -	throwf(EIO, "error closing: %s", _errstr(GifLastError()));
++    if (DGifCloseFile(im->gif, &giferror) != GIF_OK)
 +	throwf(EIO, "error closing: %s", _errstr(giferror));
  
      image_free((image *)im);
  }
-@@ -116,7 +117,7 @@ gif_open(char *fname)
+@@ -115,8 +117,9 @@ gif_open(char *fname)
+     image_gif *im;
      GifFileType *gif;
      exception ex;
++    int giferror;
  
 -    if ((gif=DGifOpenFileName(fname)) == NULL)
 +    if ((gif=DGifOpenFileName(fname, &giferror)) == NULL)
  	return NULL;
  
      if (catch(&ex) == 0) {
-@@ -196,7 +197,7 @@ gif_read_start(image_gif *im)
+@@ -124,7 +127,7 @@ gif_open(char *fname)
+ 	drop();
+     }
+     else {
+-	DGifCloseFile(im->gif);
++	DGifCloseFile(im->gif, NULL);
+ 	throw(&ex);
+     }
+ 
+@@ -196,7 +199,7 @@ gif_read_start(image_gif *im)
  
      if (DGifSlurp(im->gif) != GIF_OK)
  	throwf(EIO, "error reading image: %s",
 -	       _errstr(GifLastError()));
-+	       _errstr(giferror));
++	       _errstr(im->gif->Error));
  
      if (im->gif->ImageCount != 1)
  	throws(EOPNOTSUPP, "multi-image GIFs not supported");
