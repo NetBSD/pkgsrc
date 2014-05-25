@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2014/02/01 18:11:45 rodent Exp $
+# $NetBSD: Makefile,v 1.41 2014/05/25 18:39:37 bouyer Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -27,6 +27,7 @@ SUBDIR+=	libdrg
 SUBDIR+=	libgeotiff
 SUBDIR+=	mapserver
 SUBDIR+=	merkaartor
+SUBDIR+=	opencpn
 SUBDIR+=	p5-Geo-Coordinates-UTM
 SUBDIR+=	p5-Geo-Distance
 SUBDIR+=	p5-Geo-Mercator
