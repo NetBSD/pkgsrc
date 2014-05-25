@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2014/03/22 20:15:20 spz Exp $
+$NetBSD: distinfo,v 1.16 2014/05/25 08:12:26 obache Exp $
 
 SHA1 (evas-1.7.7.tar.bz2) = 680e85a60363df84b81298138cc19629f9f139bc
 RMD160 (evas-1.7.7.tar.bz2) = 306b36018c5ab07712553a554e4a2deac13854ed
@@ -6,5 +6,5 @@ Size (evas-1.7.7.tar.bz2) = 9408256 bytes
 SHA1 (patch-configure) = b7bda6085449a0fdcc51d58371101bb2f8bbc232
 SHA1 (patch-configure.ac) = d9330c131859794beb29414c9afe66a08b6fe55d
 SHA1 (patch-src_lib_engines_common_evas__font__load.c) = b6a0cb75692efc95e81b000f48216f6dd0f1ea27
-SHA1 (patch-src_modules_loaders_gif_evas__image__load__gif.c) = c0f386bde5bbe43aee54d1864377d2d0dad08103
+SHA1 (patch-src_modules_loaders_gif_evas__image__load__gif.c) = 5a61a54fc67f64ba71aed37aba5a094e8d47294a
 SHA1 (patch-src_modules_loaders_psd_evas__image__load__psd.c) = 386f375a68eb4d49b05cc69c041641d11c306082
