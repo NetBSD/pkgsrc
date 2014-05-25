@@ -1,0 +1,17 @@
+# $NetBSD: database.tmpl,v 1.1 2014/05/25 06:06:00 obache Exp $
+#
+# Update the dconf database.
+#
+
+DCONF="@DCONF@"
+
+case "${STAGE}" in
+POST-INSTALL)
+	${DCONF} update
+	;;
+POST-DEINSTALL)
+	${DCONF} update
+	;;
+*)
+	;;
+esac
