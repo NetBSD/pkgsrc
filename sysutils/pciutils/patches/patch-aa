@@ -1,18 +1,18 @@
-$NetBSD: patch-aa,v 1.7 2012/07/01 15:49:14 wiz Exp $
+$Id: patch-aa,v 1.8 2014/05/25 07:15:40 msaitoh Exp $
 
---- Makefile.orig	2012-06-25 12:45:14.000000000 +0000
-+++ Makefile
+--- Makefile.orig	2013-11-10 21:22:09.000000000 +0900
++++ Makefile	2014-05-22 18:50:07.000000000 +0900
 @@ -1,8 +1,7 @@
  # Makefile for The PCI Utilities
- # (c) 1998--2012 Martin Mares <mj@ucw.cz>
+ # (c) 1998--2013 Martin Mares <mj@ucw.cz>
  
 -OPT=-O2
 -CFLAGS=$(OPT) -Wall -W -Wno-parentheses -Wstrict-prototypes -Wmissing-prototypes
 +CFLAGS=-Wall -W -Wno-parentheses -Wstrict-prototypes -Wmissing-prototypes
  
- VERSION=3.1.10
- DATE=2012-06-25
-@@ -13,7 +12,7 @@ RELEASE=
+ VERSION=3.2.1
+ DATE=2013-11-10
+@@ -13,7 +12,7 @@
  CROSS_COMPILE=
  
  # Support for compressed pci.ids (yes/no, default: detect)
@@ -21,10 +21,10 @@ $NetBSD: patch-aa,v 1.7 2012/07/01 15:49:14 wiz Exp $
  
  # Support for resolving ID's by DNS (yes/no, default: detect)
  DNS=
-@@ -22,23 +21,23 @@ DNS=
- SHARED=no
+@@ -26,23 +25,23 @@
  
  # ABI version suffix in the name of the shared library
+ # (as we use proper symbol versioning, this seldom needs changing)
 -ABI_VERSION=.3
 +ABI_VERSION=-version-info 3:0
  
@@ -54,7 +54,7 @@ $NetBSD: patch-aa,v 1.7 2012/07/01 15:49:14 wiz Exp $
  AR=$(CROSS_COMPILE)ar
  RANLIB=$(CROSS_COMPILE)ranlib
  
-@@ -100,23 +99,31 @@ distclean: clean
+@@ -107,12 +106,18 @@
  
  install: all
  # -c is ignored on Linux, but required on FreeBSD
@@ -77,23 +77,24 @@ $NetBSD: patch-aa,v 1.7 2012/07/01 15:49:14 wiz Exp $
 +	done
 +	$(BSD_INSTALL_MAN) pcilib.7 $(DESTDIR)$(MANDIR)/man7
  ifeq ($(SHARED),yes)
+ 	ln -sf $(PCILIB) $(DESTDIR)$(LIBDIR)/$(LIBNAME).so$(ABI_VERSION)
+ endif
+@@ -122,13 +127,14 @@
+ endif
+ 
+ install-pcilib: lib/$(PCILIB)
 -	$(DIRINSTALL) -m 755 $(DESTDIR)$(LIBDIR)
 -	$(INSTALL) -c -m 644 lib/$(PCILIB) $(DESTDIR)$(LIBDIR)
 +	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(LIBDIR)
 +	$(BSD_INSTALL_LIB) lib/$(PCILIB) $(DESTDIR)$(LIBDIR)
- 	ln -sf $(PCILIB) $(DESTDIR)$(LIBDIR)/$(LIBNAME).so$(ABI_VERSION)
- endif
  
- install-lib: $(PCIINC_INS) lib/$(PCILIB) lib/$(PCILIBPC)
--	$(DIRINSTALL) -m 755 $(DESTDIR)$(INCDIR)/pci $(DESTDIR)$(LIBDIR) $(DESTDIR)$(PKGCFDIR)
+ install-lib: $(PCIINC_INS) lib/$(PCILIBPC) install-pcilib
+-	$(DIRINSTALL) -m 755 $(DESTDIR)$(INCDIR)/pci $(DESTDIR)$(PKGCFDIR)
 -	$(INSTALL) -c -m 644 $(PCIINC_INS) $(DESTDIR)$(INCDIR)/pci
--	$(INSTALL) -c -m 644 lib/$(PCILIB) $(DESTDIR)$(LIBDIR)
 -	$(INSTALL) -c -m 644 lib/$(PCILIBPC) $(DESTDIR)$(PKGCFDIR)
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(INCDIR) 
-+	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(LIBDIR)
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(PKGCFDIR)
 +	$(BSD_INSTALL_DATA) $(PCIINC_INS) $(DESTDIR)$(INCDIR)
-+	$(BSD_INSTALL_LIB) lib/$(PCILIB) $(DESTDIR)$(LIBDIR)
 +	$(BSD_INSTALL_DATA) lib/$(PCILIBPC) $(DESTDIR)$(PKGCFDIR)
  ifeq ($(SHARED),yes)
  	ln -sf $(LIBNAME).so$(ABI_VERSION) $(DESTDIR)$(LIBDIR)/$(LIBNAME).so
