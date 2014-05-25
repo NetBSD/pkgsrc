@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2009/07/23 16:30:37 yyamano Exp $
+$NetBSD: patch-aa,v 1.2 2014/05/25 07:51:06 obache Exp $
+
+* Fix compilation error on Darwin.
 
 --- src/st_lzw.c.orig	2005-06-20 14:17:39.000000000 -0700
 +++ src/st_lzw.c
