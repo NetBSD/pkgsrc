@@ -1,10 +1,10 @@
-$NetBSD: patch-src_libimage_gif.c,v 1.2 2014/05/16 09:57:55 wiz Exp $
+$NetBSD: patch-src_libimage_gif.c,v 1.3 2014/05/25 09:18:06 obache Exp $
 
 * Fix build with giflib 5.1.
 
 --- src/libimage/gif.c.orig	2006-03-25 22:50:51.000000000 +0000
 +++ src/libimage/gif.c
-@@ -21,8 +21,27 @@
+@@ -21,8 +21,26 @@
  #include <stdio.h>
  #include <stdlib.h>
  
@@ -17,7 +17,6 @@ $NetBSD: patch-src_libimage_gif.c,v 1.2 2014/05/16 09:57:55 wiz Exp $
  #include <gif_lib.h>
  
 +/* from util/qprintf.c of giflib 5.0.4 */
-+int ErrorCode;
 +void
 +PrintGifError(int ErrorCode)
 +{
@@ -32,7 +31,13 @@ $NetBSD: patch-src_libimage_gif.c,v 1.2 2014/05/16 09:57:55 wiz Exp $
  /*
    A lot of this is based on the gif2rgb and rgb2gif codes in the libungif 
    distribution. 
-@@ -42,11 +61,11 @@ read_gif(const char *filename, int *widt
+@@ -37,16 +55,17 @@ read_gif(const char *filename, int *widt
+     GifFileType *infile;
+     GifRecordType record_type;
+     GifRowType *buffer = NULL;
++    int ErrorCode;
+ 
+     int i, j;
      int color_index;
      unsigned char *ptr = NULL;
  
@@ -51,7 +56,7 @@ $NetBSD: patch-src_libimage_gif.c,v 1.2 2014/05/16 09:57:55 wiz Exp $
          if (DGifGetRecordType(infile, &record_type) == GIF_ERROR) 
          {
 -            PrintGifError();
-+            PrintGifError(ErrorCode);
++            PrintGifError(infile->Error);
              return(0);
          }
  
@@ -60,7 +65,7 @@ $NetBSD: patch-src_libimage_gif.c,v 1.2 2014/05/16 09:57:55 wiz Exp $
              if (DGifGetImageDesc(infile) == GIF_ERROR)
              {
 -                PrintGifError();
-+                PrintGifError(ErrorCode);
++                PrintGifError(infile->Error);
                  return(0);
              }
  
@@ -69,7 +74,7 @@ $NetBSD: patch-src_libimage_gif.c,v 1.2 2014/05/16 09:57:55 wiz Exp $
              if (DGifGetExtension(infile, &ext_code, &ext) == GIF_ERROR) 
              {
 -                PrintGifError();
-+                PrintGifError(ErrorCode);
++                PrintGifError(infile->Error);
                  return(0);
              }
              while (ext != NULL) 
@@ -77,7 +82,7 @@ $NetBSD: patch-src_libimage_gif.c,v 1.2 2014/05/16 09:57:55 wiz Exp $
                  if (DGifGetExtensionNext(infile, &ext) == GIF_ERROR) 
                  {
 -                    PrintGifError();
-+                    PrintGifError(ErrorCode);
++                    PrintGifError(infile->Error);
                      return(0);
                  }
              }
@@ -90,7 +95,15 @@ $NetBSD: patch-src_libimage_gif.c,v 1.2 2014/05/16 09:57:55 wiz Exp $
      return(1);
  }
  
-@@ -178,7 +197,7 @@ write_gif(const char *filename, int widt
+@@ -166,6 +185,7 @@ write_gif(const char *filename, int widt
+     GifByteType *red, *green, *blue, *buffer, *ptr;
+     GifFileType *outfile;
+     ColorMapObject *colormap;
++    int ErrorCode;
+ 
+     red = malloc(width * height * sizeof(GifByteType));
+     green = malloc(width * height * sizeof(GifByteType));
+@@ -178,7 +198,7 @@ write_gif(const char *filename, int widt
          return(0);
      }
  
@@ -99,7 +112,7 @@ $NetBSD: patch-src_libimage_gif.c,v 1.2 2014/05/16 09:57:55 wiz Exp $
  
      for (i = 0; i < width * height; i++)
      {
-@@ -187,10 +206,10 @@ write_gif(const char *filename, int widt
+@@ -187,10 +207,10 @@ write_gif(const char *filename, int widt
          blue[i]  = (GifByteType) rgb[3*i+2];
      }
    
@@ -108,11 +121,11 @@ $NetBSD: patch-src_libimage_gif.c,v 1.2 2014/05/16 09:57:55 wiz Exp $
                         buffer, colormap->Colors) == GIF_ERROR)
      {
 -        PrintGifError();
-+        PrintGifError(ErrorCode);
++        PrintGifError(-1);
          return(0);
      }
  
-@@ -198,24 +217,24 @@ write_gif(const char *filename, int widt
+@@ -198,24 +218,24 @@ write_gif(const char *filename, int widt
      free(green);
      free(blue);
  
@@ -129,7 +142,7 @@ $NetBSD: patch-src_libimage_gif.c,v 1.2 2014/05/16 09:57:55 wiz Exp $
          == GIF_ERROR)
      {
 -        PrintGifError();
-+        PrintGifError(ErrorCode);
++        PrintGifError(outfile->Error);
          return(0);
      }
  
@@ -137,27 +150,27 @@ $NetBSD: patch-src_libimage_gif.c,v 1.2 2014/05/16 09:57:55 wiz Exp $
          == GIF_ERROR)
      {
 -        PrintGifError();
-+        PrintGifError(ErrorCode);
++        PrintGifError(outfile->Error);
          return(0);
      }
  
-@@ -224,7 +243,7 @@ write_gif(const char *filename, int widt
+@@ -224,7 +244,7 @@ write_gif(const char *filename, int widt
      {
          if (EGifPutLine(outfile, ptr, width) == GIF_ERROR)
          {
 -            PrintGifError();
-+            PrintGifError(ErrorCode);
++            PrintGifError(outfile->Error);
              return(0);
          }
          ptr += width;
-@@ -232,8 +251,8 @@ write_gif(const char *filename, int widt
+@@ -232,8 +252,8 @@ write_gif(const char *filename, int widt
  
      EGifSpew(outfile);
  
 -    if (EGifCloseFile(outfile) == GIF_ERROR) 
 -        PrintGifError();
 +    if (EGifCloseFile(outfile, NULL) == GIF_ERROR) 
-+        PrintGifError(ErrorCode);
++        PrintGifError(outfile->Error);
  
      free(buffer);
  
