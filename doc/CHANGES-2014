@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2004 2014/05/25 18:28:05 bouyer Exp $
+$NetBSD: CHANGES-2014,v 1.2005 2014/05/25 21:54:00 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2761,3 +2761,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Removed sysutils/xentools20 [gdt 2014-05-25]
 	Updated x11/wxGTK28 to 2.8.12nb6 [bouyer 2014-05-25]
 	Added geography/opencpn version 3.2.2 [bouyer 2014-05-25]
+	Added devel/hs-primitive version 0.5.3.0 [szptvlfn 2014-05-25]
