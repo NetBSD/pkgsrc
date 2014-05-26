@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2012 2014/05/26 22:03:11 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.2013 2014/05/26 22:03:52 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2769,3 +2769,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added print/pdfmod version 0.9.1nb1 [wiz 2014-05-26]
 	Added devel/hs-blaze-builder version 0.3.3.2 [szptvlfn 2014-05-26]
 	Added devel/hs-vector version 0.10.9.2 [szptvlfn 2014-05-26]
+	Added devel/hs-transformers-base version 0.4.2 [szptvlfn 2014-05-26]
