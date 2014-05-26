@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/26 22:03:29 szptvlfn Exp $
+lib/transformers-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Base.hi
+lib/transformers-base-${PKGVERSION}/${HASKELL_VERSION}/HStransformers-base-${PKGVERSION}.o
+lib/transformers-base-${PKGVERSION}/${HASKELL_VERSION}/libHStransformers-base-${PKGVERSION}.a
+lib/transformers-base-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/transformers-base-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/transformers-base-${PKGVERSION}/html/Control-Monad-Base.html
+${PLIST.doc}share/doc/transformers-base-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/transformers-base-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/transformers-base-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/transformers-base-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/transformers-base-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/transformers-base-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/transformers-base-${PKGVERSION}/html/mini_Control-Monad-Base.html
+${PLIST.doc}share/doc/transformers-base-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/transformers-base-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/transformers-base-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/transformers-base-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/transformers-base-${PKGVERSION}/html/transformers-base.haddock
