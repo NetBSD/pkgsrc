@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/26 22:04:11 szptvlfn Exp $
+lib/transformers-compat-${PKGVERSION}/${HASKELL_VERSION}/HStransformers-compat-${PKGVERSION}.o
+lib/transformers-compat-${PKGVERSION}/${HASKELL_VERSION}/Paths_transformers_compat.hi
+lib/transformers-compat-${PKGVERSION}/${HASKELL_VERSION}/libHStransformers-compat-${PKGVERSION}.a
+lib/transformers-compat-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/transformers-compat-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/transformers-compat-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/transformers-compat-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/transformers-compat-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/transformers-compat-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/transformers-compat-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/transformers-compat-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/transformers-compat-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/transformers-compat-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/transformers-compat-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/transformers-compat-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/transformers-compat-${PKGVERSION}/html/transformers-compat.haddock
