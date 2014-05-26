@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2008 2014/05/26 01:30:53 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2009 2014/05/26 09:35:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2765,3 +2765,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/hs-hashable version 1.2.2.0 [szptvlfn 2014-05-25]
 	Added devel/hs-stm version 2.4.3 [szptvlfn 2014-05-25]
 	Updated archivers/upx to 3.91 [rodent 2014-05-26]
+	Added x11/hyena version 0.5nb1 [wiz 2014-05-26]
