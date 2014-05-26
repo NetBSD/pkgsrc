@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/05/26 22:03:29 szptvlfn Exp $
+
+SHA1 (transformers-base-0.4.2.tar.gz) = 9d99c830e11760ad49ece2b26077c949077a3781
+RMD160 (transformers-base-0.4.2.tar.gz) = b95c8f529531ede1b261de41ff7397bcdb79b5c3
+Size (transformers-base-0.4.2.tar.gz) = 2538 bytes
