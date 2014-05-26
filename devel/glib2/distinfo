@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.198 2013/12/25 11:47:09 tron Exp $
+$NetBSD: distinfo,v 1.199 2014/05/26 22:29:23 wiz Exp $
 
 SHA1 (glib-2.38.2.tar.xz) = 685c5a4215b776b83dd5330ab9084c5dcb0a51b8
 RMD160 (glib-2.38.2.tar.xz) = 1dcc15ce6dac0faafaee448f393284bb038f2a76
@@ -31,3 +31,4 @@ SHA1 (patch-gio_gdbusmessage.c) = 63030dac620e2e098acf079e5288e356f1f44504
 SHA1 (patch-gio_gfile.c) = 6ad65bb17e6afe7bb9bca552ae1b1a7d8b7b2ee0
 SHA1 (patch-gio_glocalfile.c) = b09c78199ef2696905ce8a49e0c3590d243a83c8
 SHA1 (patch-gio_gresource-tool.c) = 4eb7c9df25e9ac3e977edf3be8fb977a6fb39182
+SHA1 (patch-glib_gtimezone.c) = 36f74724347f2947c71839bda4784b81e8b94a47
