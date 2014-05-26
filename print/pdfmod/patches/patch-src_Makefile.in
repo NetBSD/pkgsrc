@@ -1,0 +1,16 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2014/05/26 09:34:15 wiz Exp $
+
+Fix
+error CS1705: Assembly `Hyena.Gui, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null' references `Mono.Cairo, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756' which has a higher version number than imported assembly `Mono.Cairo, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756'
+
+--- src/Makefile.in.orig	2013-05-29 10:52:27.000000000 +0000
++++ src/Makefile.in
+@@ -223,7 +223,7 @@ EXTRA_DIST = $(build_sources) $(build_re
+ 	$(build_others_files) $(ASSEMBLY_WRAPPER_IN) $(EXTRAS) \
+ 	$(DATA_FILES) $(build_culture_res_files)
+ ASSEMBLY_COMPILER_COMMAND = $(MCS)
+-ASSEMBLY_COMPILER_FLAGS = -noconfig -codepage:utf8 -warn:4 -optimize+ -debug "-define:DEBUG"
++ASSEMBLY_COMPILER_FLAGS = -noconfig -codepage:utf8 -warn:4 -optimize+ -debug "-define:DEBUG" -sdk:4
+ ASSEMBLY = ../bin/PdfMod.exe
+ ASSEMBLY_MDB = $(ASSEMBLY).mdb
+ COMPILE_TARGET = exe
