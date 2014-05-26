@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/05/26 22:02:40 szptvlfn Exp $
+
+SHA1 (vector-0.10.9.2.tar.gz) = 49418b16f756f733e0a2ab0bb7f515bc63aff28c
+RMD160 (vector-0.10.9.2.tar.gz) = 2064b7b667b51491e592e321253f58d706c61ab8
+Size (vector-0.10.9.2.tar.gz) = 103229 bytes
