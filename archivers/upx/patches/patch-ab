@@ -1,8 +1,29 @@
-$NetBSD: patch-ab,v 1.4 2012/05/02 06:45:14 adam Exp $
+$NetBSD: patch-ab,v 1.5 2014/05/26 01:30:39 rodent Exp $
 
---- src/miniacc.h.orig	2012-05-02 06:06:11.000000000 +0000
+Add sparc{,64} support.
+
+--- src/miniacc.h.orig	2013-09-30 15:51:00.000000000 +0000
 +++ src/miniacc.h
-@@ -1944,7 +1944,6 @@ extern "C" {
+@@ -914,6 +914,9 @@
+ #elif defined(__sparc__) || defined(__sparc) || defined(__sparcv8)
+ #  define ACC_ARCH_SPARC            1
+ #  define ACC_INFO_ARCH             "sparc"
++#elif defined(__sparc64__) 
++#  define ACC_ARCH_SPARC64          1
++#  define ACC_INFO_ARCH             "sparc64"
+ #elif defined(__SPU__)
+ #  define ACC_ARCH_SPU              1
+ #  define ACC_INFO_ARCH             "spu"
+@@ -2005,6 +2008,8 @@ ACC_COMPILE_TIME_ASSERT_HEADER(ACC_SIZEO
+ #  define ACC_ABI_BIG_ENDIAN        1
+ #elif 1 && (ACC_ARCH_MIPS) && defined(__MIPSEL__) && !defined(__MIPSEB__)
+ #  define ACC_ABI_LITTLE_ENDIAN     1
++#elif (ACC_ARCH_SPARC || ACC_ARCH_SPARC64)
++#  define ACC_ABI_BIG_ENDIAN        1
+ #endif
+ #endif
+ #if (ACC_ABI_BIG_ENDIAN) && (ACC_ABI_LITTLE_ENDIAN)
+@@ -2623,7 +2628,6 @@ ACC_COMPILE_TIME_ASSERT_HEADER(sizeof(ac
  #define HAVE_FCNTL_H 1
  #define HAVE_FLOAT_H 1
  #define HAVE_LIMITS_H 1

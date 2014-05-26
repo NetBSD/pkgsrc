@@ -1,6 +1,6 @@
-$NetBSD: patch-src_p__exe.cpp,v 1.2 2012/05/02 06:45:14 adam Exp $
+$NetBSD: patch-src_p__exe.cpp,v 1.3 2014/05/26 01:30:39 rodent Exp $
 
---- src/p_exe.cpp.orig	2011-12-12 16:08:00.000000000 +0000
+--- src/p_exe.cpp.orig	2013-09-30 15:51:00.000000000 +0000
 +++ src/p_exe.cpp
 @@ -110,7 +110,7 @@ int PackExe::fillExeHeader(struct exe_he
          oh.ss += 0x20;

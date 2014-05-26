@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2013/05/31 12:39:35 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2014/05/26 01:30:39 rodent Exp $
 
-DISTNAME=	upx-3.08-src
-PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	2
-CATEGORIES=	misc archivers
+DISTNAME=	upx-3.91-src
+PKGNAME=	${DISTNAME:S/-src//1}
+CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=upx/}
 EXTRACT_SUFX=	.tar.bz2
 # consult src/stub/src/c/Makevars.lzma for the supported LZMA SDK version
@@ -15,9 +14,11 @@ HOMEPAGE=	http://upx.sourceforge.net/
 COMMENT=	Ultimate packer for executables
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake perl pod2man pod2html pod2text
-NO_CONFIGURE=		yes
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	gmake perl pod2man pod2html pod2text
+NO_CONFIGURE=	yes
+BUILD_DIRS=	src doc
+MAKE_ENV+=	PREFIX=${PREFIX} UCLDIR=${PREFIX} LDLIBDIRS=-L${PREFIX}/lib
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/upx
 
@@ -31,11 +32,6 @@ BUILDLINK_TRANSFORM+=	rm:-Wl,-Map rm:-Wl,upx.map
 post-extract:
 	mkdir -p ${WRKSRC}/src/stub/src/c/lzma-sdk
 	ln -sf ${WRKDIR}/C ${WRKSRC}/src/stub/src/c/lzma-sdk/C
-
-do-build:
-	cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}	\
-		PREFIX=${PREFIX} UCLDIR=${PREFIX} LDLIBDIRS=-L${PREFIX}/lib
-	cd ${WRKSRC}/doc && ${MAKE_PROGRAM}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/upx.out ${DESTDIR}${PREFIX}/bin/upx

@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.9 2012/05/02 08:26:21 adam Exp $
+$NetBSD: distinfo,v 1.10 2014/05/26 01:30:39 rodent Exp $
 
 SHA1 (lzma443.tar.bz2) = 1667abfb40da82d53fa2690f3cd58a0e7e751e55
 RMD160 (lzma443.tar.bz2) = f4f19c9f9bd8ded26318208e75ac14c8869c4ef8
 Size (lzma443.tar.bz2) = 178493 bytes
-SHA1 (upx-3.08-src.tar.bz2) = 5ccbc0aacfd3aaee407eceab06ec5989bf1d153a
-RMD160 (upx-3.08-src.tar.bz2) = 3fd7b3c4c66a90ddd622b5fb0ba0502c7145da62
-Size (upx-3.08-src.tar.bz2) = 877691 bytes
-SHA1 (patch-ab) = 710c49b92caeed1ac196abb5d45cfaff01faea6c
-SHA1 (patch-src_Makefile) = 9b97e10d6b11a75f64c64b49f6c6cd5aa51ddf23
-SHA1 (patch-src_p__exe.cpp) = 5455be2fe1e3335c784cb044b31046da2eb40ef4
-SHA1 (patch-src_p__exe.h) = 899f6dbc2e90167bd1cc44b0081fc1797d050430
+SHA1 (upx-3.91-src.tar.bz2) = da962c0affb27eae11aa9b6fbd751c3699717b36
+RMD160 (upx-3.91-src.tar.bz2) = 9da4a4136dc0a1f923dbcd68ceefc9c6afcd2345
+Size (upx-3.91-src.tar.bz2) = 904747 bytes
+SHA1 (patch-ab) = f7f963e90f0762325685c487dc9b13e5450d33a2
+SHA1 (patch-src_Makefile) = ccb781a80a6c15d46de863d8678cf7317b16c107
+SHA1 (patch-src_p__exe.cpp) = 21814e235022afe48102b0de021b066b717b3917
+SHA1 (patch-src_p__exe.h) = a03d88ad312c1e85ccc43b78c7bea5b5ce613a09
