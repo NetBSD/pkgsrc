@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1918 2014/05/25 21:58:39 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.1919 2014/05/26 22:07:21 szptvlfn Exp $
 #
 
 COMMENT=	Development utilities
@@ -294,6 +294,7 @@ SUBDIR+=	heirloom-what
 SUBDIR+=	hg-git
 SUBDIR+=	hoe
 SUBDIR+=	hptools
+SUBDIR+=	hs-blaze-builder
 SUBDIR+=	hs-cmdargs
 SUBDIR+=	hs-data-default
 SUBDIR+=	hs-data-default-class
@@ -314,7 +315,10 @@ SUBDIR+=	hs-syb
 SUBDIR+=	hs-tagged
 SUBDIR+=	hs-text
 SUBDIR+=	hs-transformers
+SUBDIR+=	hs-transformers-base
+SUBDIR+=	hs-transformers-compat
 SUBDIR+=	hs-utf8-string
+SUBDIR+=	hs-vector
 SUBDIR+=	ht
 SUBDIR+=	hugs-HUnit
 SUBDIR+=	hugs-unix
