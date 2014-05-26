@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2009 2014/05/26 09:35:58 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2010 2014/05/26 09:36:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2766,3 +2766,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/hs-stm version 2.4.3 [szptvlfn 2014-05-25]
 	Updated archivers/upx to 3.91 [rodent 2014-05-26]
 	Added x11/hyena version 0.5nb1 [wiz 2014-05-26]
+	Added print/pdfmod version 0.9.1nb1 [wiz 2014-05-26]
