@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2007 2014/05/25 21:55:18 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.2008 2014/05/26 01:30:53 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2764,3 +2764,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/hs-primitive version 0.5.3.0 [szptvlfn 2014-05-25]
 	Added devel/hs-hashable version 1.2.2.0 [szptvlfn 2014-05-25]
 	Added devel/hs-stm version 2.4.3 [szptvlfn 2014-05-25]
+	Updated archivers/upx to 3.91 [rodent 2014-05-26]
