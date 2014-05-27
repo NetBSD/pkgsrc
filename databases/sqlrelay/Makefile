@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2014/05/22 12:50:47 fhajny Exp $
+# $NetBSD: Makefile,v 1.37 2014/05/27 09:55:03 joerg Exp $
 
 COMMENT=		Database connection pooling middleware and API
 
@@ -52,6 +52,12 @@ FILES_SUBST+=		SQLR_DATA=${SQLR_DATA}
 RCD_SCRIPTS+=				sqlrelay sqlrcachemanager
 RCD_SCRIPT_SRC.sqlrelay=		${WRKSRC}/init/rc.sqlrelay
 RCD_SCRIPT_SRC.sqlrcachemanager=	${WRKSRC}/init/rc.sqlrcachemanager
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+_WRAP_EXTRA_ARGS.CXX+=	-Wno-error=unused-private-field -Wno-error=mismatched-tags
+.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/init/sqlrelay ${DESTDIR}${EGDIR}/sqlrelay
