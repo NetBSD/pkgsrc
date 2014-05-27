@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2012/06/29 14:56:16 taca Exp $
+$NetBSD: patch-aa,v 1.9 2014/05/27 01:57:14 taca Exp $
 
---- libsylph/prefs_common.c.orig	2012-06-20 02:49:04.000000000 +0000
+--- libsylph/prefs_common.c.orig	2014-03-19 06:56:27.000000000 +0000
 +++ libsylph/prefs_common.c
-@@ -493,7 +493,7 @@ static PrefParam param[] = {
+@@ -504,7 +504,7 @@ static PrefParam param[] = {
  	 P_STRING},
  
  	/* Update check */
