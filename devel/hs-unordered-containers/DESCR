@@ -1,0 +1,3 @@
+Efficient hashing-based container types. The containers have been
+optimized for performance critical use, both in terms of large data
+quantities and high speed.
