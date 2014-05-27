@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2022 2014/05/27 13:52:55 taca Exp $
+$NetBSD: CHANGES-2014,v 1.2023 2014/05/27 15:22:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2780,3 +2780,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/typo3_47 to 4.7.19 [taca 2014-05-27]
 	Updated www/typo3_60 to 6.0.14 [taca 2014-05-27]
 	Updated www/typo3_61 to 6.1.9 [taca 2014-05-27]
+	Updated www/contao211 to 2.11.17nb1 [taca 2014-05-27]
+	Updated www/contao32 to 3.2.10nb1 [taca 2014-05-27]
