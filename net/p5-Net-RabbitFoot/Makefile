@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/05/21 02:10:05 mspo Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/27 09:59:17 joerg Exp $
 
 DISTNAME=	Net-RabbitFoot-1.03
 PKGNAME=	p5-${DISTNAME}
@@ -11,6 +11,7 @@ HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/I/IK/IKUTA/
 COMMENT=        Asynchronous and multi channel Perl AMQP client
 LICENSE=        ${PERL5_LICENSE}
 
+PERL5_MODULE_TYPE=	Module::Install::Bundled
 DEPENDS+=       p5-AnyEvent>=0:../../devel/p5-AnyEvent
 DEPENDS+=       p5-AnyEvent-RabbitMQ>=0:../../devel/p5-AnyEvent-RabbitMQ
 DEPENDS+=       p5-Moose>=2:../../devel/p5-Moose
@@ -24,6 +25,5 @@ DEPENDS+=       p5-Moose>=2:../../devel/p5-Moose
 PERL5_PACKLIST=	auto/Net/RabbitFoot/.packlist
 REPLACE_PERL+=	rabbit_foot
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
