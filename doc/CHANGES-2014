@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2017 2014/05/27 11:45:52 prlw1 Exp $
+$NetBSD: CHANGES-2014,v 1.2018 2014/05/27 13:27:42 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2775,3 +2775,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/grep to 2.19 [adam 2014-05-27]
 	Updated sysutils/py-xattr to 0.7.6 [adam 2014-05-27]
 	Updated wm/metacity to 2.34.13 [prlw1 2014-05-27]
+	Updated emulators/suse131_libxml2 to 13.1nb2 [obache 2014-05-27]
