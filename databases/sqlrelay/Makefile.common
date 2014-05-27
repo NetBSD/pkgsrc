@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2014/05/22 12:50:48 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.2 2014/05/27 13:24:43 fhajny Exp $
 # used by databases/p5-sqlrelay/Makefile
 # used by databases/php-sqlrelay/Makefile
 # used by databases/py-sqlrelay/Makefile
@@ -38,6 +38,7 @@ CONFIGURE_ARGS+=	--with-rudiments-prefix=${BUILDLINK_PREFIX.rudiments}
 PKG_SYSCONFSUBDIR=	sqlrelay
 EGDIR=			${PREFIX}/share/examples/sqlrelay
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/rudiments/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

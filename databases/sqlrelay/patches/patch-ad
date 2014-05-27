@@ -1,9 +1,9 @@
-$NetBSD: patch-ad,v 1.2 2014/05/22 12:50:48 fhajny Exp $
+$NetBSD: patch-ad,v 1.3 2014/05/27 13:24:43 fhajny Exp $
 
 We install init scripts ourselves.
---- Makefile.orig	2008-10-03 18:08:41.000000000 +0000
+--- Makefile.orig	2013-10-19 12:27:13.000000000 +0000
 +++ Makefile
-@@ -25,7 +25,6 @@ install:
+@@ -17,7 +17,6 @@ install:
  	$(MAKE) -C src install
  	$(MAKE) -C bin install
  	$(MAKE) -C etc install
