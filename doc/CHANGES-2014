@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2028 2014/05/27 16:24:29 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2029 2014/05/27 18:11:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2788,3 +2788,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Moo to 1.004006 [wen 2014-05-27]
 	Updated devel/p5-Moose to 2.1207 [wen 2014-05-27]
 	Updated devel/p5-Mouse to 2.3.0 [wen 2014-05-27]
+	Updated devel/meld-devel to 3.11.1 [wiz 2014-05-27]
