@@ -1,16 +1,26 @@
-$NetBSD: patch-gold_Makefile.in,v 1.1 2014/05/12 12:50:00 marino Exp $
+$NetBSD: patch-gold_Makefile.in,v 1.2 2014/05/27 09:56:10 joerg Exp $
 
- Only DragonFly had -ldl stubs.  The other BSDs will fail to link libdl
- so this patch removes the -ldl linker flag.
+ Don't bail out on the deprecation warnings for <ext/hash_map>
 
---- gold/Makefile.in.orig	2014-05-12 12:02:19.000000000 +0000
+ Don't use hard-coded -ldl.
+
+--- gold/Makefile.in.orig	2013-11-04 15:33:39.000000000 +0000
 +++ gold/Makefile.in
+@@ -345,7 +345,7 @@ TARGETOBJS = @TARGETOBJS@
+ USE_NLS = @USE_NLS@
+ VERSION = @VERSION@
+ WARN_CFLAGS = @WARN_CFLAGS@
+-WARN_CXXFLAGS = @WARN_CXXFLAGS@
++WARN_CXXFLAGS = @WARN_CXXFLAGS@ -Wno-deprecated
+ XGETTEXT = @XGETTEXT@
+ YACC = @YACC@
+ YFLAGS = @YFLAGS@
 @@ -419,7 +419,7 @@ AM_CPPFLAGS = \
  	-DTOOLLIBDIR="\"$(tooldir)/lib\"" @INCINTL@
  
  LIBIBERTY = ../libiberty/libiberty.a
 -@PLUGINS_TRUE@LIBDL = @DLOPEN_LIBS@
-+@PLUGINS_TRUE@LIBDL =
++@PLUGINS_TRUE@LIBDL = ${DL_LDFLAGS}
  @THREADS_TRUE@THREADSLIB = -lpthread
  AM_YFLAGS = -d
  

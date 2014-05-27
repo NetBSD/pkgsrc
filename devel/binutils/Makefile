@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2014/05/13 06:41:31 obache Exp $
+# $NetBSD: Makefile,v 1.63 2014/05/27 09:56:10 joerg Exp $
 
 DISTNAME=	binutils-2.24
 PKGREVISION=	3
@@ -118,4 +118,5 @@ post-install:
 	fi
 .endfor
 
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
