@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2011/05/12 11:12:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2014/05/27 09:40:25 pho Exp $
 include/cairomm-1.0/cairomm/cairomm.h
 include/cairomm-1.0/cairomm/context.h
 include/cairomm-1.0/cairomm/device.h
@@ -23,9 +23,6 @@ lib/cairomm-1.0/include/cairommconfig.h
 lib/libcairomm-1.0.la
 lib/pkgconfig/cairomm-1.0.pc
 lib/pkgconfig/cairomm-ft-1.0.pc
-${PLIST.quartz}lib/pkgconfig/cairomm-quartz-1.0.pc
-${PLIST.quartz}lib/pkgconfig/cairomm-quartz-font-1.0.pc
-${PLIST.quartz}lib/pkgconfig/cairomm-quartz-image-1.0.pc
 lib/pkgconfig/cairomm-pdf-1.0.pc
 lib/pkgconfig/cairomm-png-1.0.pc
 lib/pkgconfig/cairomm-ps-1.0.pc
