@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13329 2014/05/27 06:37:07 adam Exp $
+$NetBSD: TODO,v 1.13330 2014/05/27 18:01:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -593,9 +593,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
 	o gl-7.8.2 [pkgrc-wip]
-	o glade-3.18.2
-	o glade3-3.8.3 [GNOME 2.34]
-	o glade3-3.14.2
+	o glade3-3.18.3
+	o glade3-3.8.5 [GNOME 2.34]
 	o gle-4.2.4
 	o glib2-2.40.0
 	o glibmm-2.40
@@ -603,7 +602,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glu-10.1.4
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-3.12.1
+	o gnome-3.12.2
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-chess-3.10.3
 	o gnome-color-manager-2.32.0 [GNOME 2.32]
@@ -644,7 +643,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gourmet-0.13.3
 	o gpsdrive-2.11
 	o gramofile-1.6P
-	o gramps-4.0.1
+	o gramps-4.0.4
 	o grilo-0.2.10
 	o grilo-plugins-0.2.12
 	o groff-1.22.2
@@ -763,7 +762,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libjit-1.0.2
 	o liblangtag-0.5.4
 	o libmcs-0.7.2
-	o libmicrohttpd-0.9.35
+	o libmicrohttpd-0.9.36
 	o libmspub-0.1.0
 	o libnasl-2.3.1
 	o liboobs-2.32.0 [GNOME 2.32]
@@ -810,6 +809,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mc-4.8.12
 	o mcabber-0.10.3
 	o mcsim-5.5.0
+	o meld-3.11.1
 	o mergeant-0.67
 	o mesure-0.7.2
 	o metis-5.1.0
@@ -836,6 +836,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mp3splt-2.6.0
 	o mp3splt-gtk-0.9.0
 	o mpeg4ip-1.6.1
+	o mpg123-1.20.0
 	o mpop-1.0.29
 	o mserv-devel-0.41
 	o mu-0.9.9.5
@@ -963,6 +964,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-gammu-1.33.0
 	o py-gmpy-1.17
 	o py-gnome-menus-3.8.0
+	o py-gobject3-3.12.2
 	o py-greenlet-0.4.2
 	o py-gstreamer0.10-1.2.1
 	o py-hgtools-4.0
@@ -1078,7 +1080,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o socat-1.7.2.4
 	o solfege-3.22.0
 	o sope-4.6
-	o sound-juicer-2.32.0
+	o sound-juicer-3.12.0
 	o spcaview-20060501
 	o spidermonkey-1.8.5
 	o spl-1.0pre6
@@ -1184,7 +1186,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wcalc-2.4
 	o wdiff-1.2.2
 	o webalizer-2.23.05
-	o webkit-gtk-2.4.1
+	o webkit-gtk-2.4.3
 	o webmin-1.690
 	o websvn-2.3.2
 	o windowlab-1.40
