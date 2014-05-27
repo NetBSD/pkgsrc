@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2013/08/31 22:19:32 adam Exp $
+# $NetBSD: Makefile.common,v 1.2 2014/05/27 08:43:55 pho Exp $
 #
 # used by graphics/cairo/Makefile
 # used by graphics/cairo-gobject/Makefile
@@ -29,19 +29,19 @@ CONFIGURE_ARGS+=	--enable-pdf
 CONFIGURE_ARGS+=	--enable-ps
 CONFIGURE_ARGS+=	--enable-tee
 
+# Darwin: Quartz backend interacts badly with our library stack. The
+# most notable issue is that when quartz-font is enabled, cairo will
+# never use fontconfig but instead uses CoreGraphics API to find fonts
+# in system-default font paths; as a result, any fonts installed with
+# pkgsrc will never be found. OTOH fontconfig by default searches for
+# fonts in MacOS X system-default paths too so sticking with it will
+# not cause a problem.
+CONFIGURE_ARGS+=	--disable-quartz
+CONFIGURE_ARGS+=	--disable-quartz-font
+CONFIGURE_ARGS+=	--disable-quartz-image
+
 PKGCONFIG_OVERRIDE+=	src/cairo.pc.in
 PKGCONFIG_OVERRIDE+=	src/cairo-features.pc.in
-
-.include "../../mk/bsd.prefs.mk"
-
-PLIST_VARS+=		quartz
-
-.if ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=	--enable-quartz
-CONFIGURE_ARGS+=	--enable-quartz-font
-CONFIGURE_ARGS+=	--enable-quartz-image
-PLIST.quartz=		yes
-.endif
 
 # For snprintf() and ctime_r()
 CPPFLAGS.SunOS+=		-D__EXTENSIONS__ -D_POSIX_PTHREAD_SEMANTICS
