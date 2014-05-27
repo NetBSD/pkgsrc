@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/05/05 00:47:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2014/05/27 09:40:25 pho Exp $
 
 DISTNAME=	cairomm-1.10.0
 PKGREVISION=	10
@@ -32,13 +32,9 @@ PKGCONFIG_OVERRIDE+=	data/cairomm-xlib-xrender-1.0.pc.in
 
 CONFIGURE_ARGS+=	--disable-docs
 
-PLIST_VARS+=	quartz x11
+PLIST_VARS+=	x11
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin"
-PLIST.quartz=	yes
-.endif
 
 .include "../../devel/libsigc++/buildlink3.mk"
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.8
