@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.142 2014/05/13 11:06:00 ryoon Exp $
+$NetBSD: distinfo,v 1.143 2014/05/27 09:58:51 joerg Exp $
 
 SHA1 (firefox-29.0.1.source.tar.bz2) = 2819ef63403de2bcfff5496bd21a3b8cb5dfce82
 RMD160 (firefox-29.0.1.source.tar.bz2) = f728179a12a46824971ca01cf79eb0318e4775c5
@@ -42,6 +42,11 @@ SHA1 (patch-content_media_gstreamer_GStreamerReader.cpp) = 99fd1f24ed5f3f350fdbc
 SHA1 (patch-content_media_gstreamer_GStreamerReader.h) = 118f83ebdec7bcda4f0ced8064a9b3c6cad78172
 SHA1 (patch-content_media_gstreamer_moz.build) = c38bd0d432577b55429ae5466b1b02c7b6fd1901
 SHA1 (patch-content_media_test_manifest.js) = 5b98d9eb16f898211fc0e30d821303bf72e8aaeb
+SHA1 (patch-content_svg_content_src_SVGComponentTransferFunctionElement.h) = 64aff36cbd72b5d61eb6d7dde6e57b7d77b56a50
+SHA1 (patch-content_svg_content_src_nsSVGFilters.cpp) = ed8810687e5f5b60b64c51286daeaf7787c09dda
+SHA1 (patch-content_svg_content_src_nsSVGFilters.h) = 37ead5c8f14551d843be8bc09be254175b38b4d7
+SHA1 (patch-dom_indexedDB_IDBEvents.cpp) = 4b3c649fe0119b8b883cd4bcf25a594510096d50
+SHA1 (patch-dom_indexedDB_IDBEvents.h) = 7558cd531ae408736e38efa2fdbff218e2d2124f
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.cpp) = 69b0a51d733cd52e7d200052362e0faf4ec918f1
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.h) = 0a7f3167e939822013ae6195406657453578453e
 SHA1 (patch-dom_system_OSFileConstants.cpp) = 6c45e3d5fa3369432ff59871a8cbc6176f297794
