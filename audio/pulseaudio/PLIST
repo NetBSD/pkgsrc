@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2013/05/06 20:44:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2014/05/27 15:51:45 pho Exp $
 bin/esdcompat
 bin/pacat
 bin/pacmd
@@ -79,6 +79,8 @@ lib/pulse-${PKGVERSION}/modules/module-always-sink.a
 lib/pulse-${PKGVERSION}/modules/module-always-sink.so
 lib/pulse-${PKGVERSION}/modules/module-augment-properties.a
 lib/pulse-${PKGVERSION}/modules/module-augment-properties.so
+${PLIST.bonjour}lib/pulse-${PKGVERSION}/modules/module-bonjour-publish.a
+${PLIST.bonjour}lib/pulse-${PKGVERSION}/modules/module-bonjour-publish.so
 lib/pulse-${PKGVERSION}/modules/module-card-restore.a
 lib/pulse-${PKGVERSION}/modules/module-card-restore.so
 lib/pulse-${PKGVERSION}/modules/module-cli-protocol-tcp.a
@@ -93,6 +95,10 @@ lib/pulse-${PKGVERSION}/modules/module-combine.a
 lib/pulse-${PKGVERSION}/modules/module-combine.so
 lib/pulse-${PKGVERSION}/modules/module-console-kit.a
 lib/pulse-${PKGVERSION}/modules/module-console-kit.so
+${PLIST.coreaudio}lib/pulse-${PKGVERSION}/modules/module-coreaudio-detect.a
+${PLIST.coreaudio}lib/pulse-${PKGVERSION}/modules/module-coreaudio-detect.so
+${PLIST.coreaudio}lib/pulse-${PKGVERSION}/modules/module-coreaudio-device.a
+${PLIST.coreaudio}lib/pulse-${PKGVERSION}/modules/module-coreaudio-device.so
 lib/pulse-${PKGVERSION}/modules/module-dbus-protocol.a
 lib/pulse-${PKGVERSION}/modules/module-dbus-protocol.so
 lib/pulse-${PKGVERSION}/modules/module-default-device-restore.a
