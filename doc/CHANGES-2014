@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2015 2014/05/26 22:29:31 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2016 2014/05/27 06:37:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2772,3 +2772,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/hs-transformers-base version 0.4.2 [szptvlfn 2014-05-26]
 	Added devel/hs-transformers-compat version 0.3.3 [szptvlfn 2014-05-26]
 	Updated devel/glib2 to 2.38.2nb1 [wiz 2014-05-26]
+	Updated textproc/grep to 2.19 [adam 2014-05-27]
+	Updated sysutils/py-xattr to 0.7.6 [adam 2014-05-27]
