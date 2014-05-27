@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2020 2014/05/27 13:49:44 taca Exp $
+$NetBSD: CHANGES-2014,v 1.2021 2014/05/27 13:51:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2778,3 +2778,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/suse131_libxml2 to 13.1nb2 [obache 2014-05-27]
 	Updated www/typo3_45 to 4.5.34 [taca 2014-05-27]
 	Updated www/typo3_47 to 4.7.19 [taca 2014-05-27]
+	Updated www/typo3_60 to 6.0.14 [taca 2014-05-27]
