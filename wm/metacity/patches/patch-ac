@@ -1,12 +1,21 @@
-$NetBSD: patch-ac,v 1.1 2010/02/11 18:19:13 drochner Exp $
+$NetBSD: patch-ac,v 1.2 2014/05/27 11:45:23 prlw1 Exp $
 
---- src/core/delete.c.orig	2010-01-26 11:11:27.000000000 +0000
+Look for WIFEXITED and WEXITSTATUS in sys/wait.h
+https://bugzilla.gnome.org/show_bug.cgi?id=681328
+commit 7b3e8f63eaa055fda49d48178e53b0ad2ae513ce
+
+--- src/core/delete.c.orig	2011-11-10 14:14:34.000000000 +0000
 +++ src/core/delete.c
-@@ -38,6 +38,7 @@
- #include <string.h>
- #include <stdlib.h>
- #include <stdio.h>
+@@ -32,11 +32,11 @@
+ #include "workspace.h"
+ 
+ #include <sys/types.h>
 +#include <sys/wait.h>
+ #include <signal.h>
+ #include <unistd.h>
+ #include <errno.h>
+ #include <string.h>
+-#include <stdlib.h>
+ #include <stdio.h>
  
  static void meta_window_present_delete_dialog (MetaWindow *window,
-                                                guint32     timestamp);

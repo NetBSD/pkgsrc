@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.44 2011/07/13 20:06:15 drochner Exp $
+$NetBSD: distinfo,v 1.45 2014/05/27 11:45:22 prlw1 Exp $
 
-SHA1 (metacity-2.34.1.tar.bz2) = 2b691c4a2c98be0b53deed2274b901880d3d6c84
-RMD160 (metacity-2.34.1.tar.bz2) = 965fcef1affb2308e54d99990909194780291b52
-Size (metacity-2.34.1.tar.bz2) = 2411563 bytes
-SHA1 (patch-aa) = e57853437a8485399f302553a4a4289e607d3780
-SHA1 (patch-ac) = bfdb91948f619a7021a6d1d7d0ff4b7995c8e91d
+SHA1 (metacity-2.34.13.tar.xz) = 7b5b20e84ffb86290955a726af946a78b7a45e26
+RMD160 (metacity-2.34.13.tar.xz) = c04af49aedb46207053c199c61974751461bfd37
+Size (metacity-2.34.13.tar.xz) = 1660136 bytes
+SHA1 (patch-ac) = a672cc7cc5cfa2dfe0be93be1f6dd764b11beeb2

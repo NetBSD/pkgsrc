@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2011/07/13 20:06:15 drochner Exp $
+@comment $NetBSD: PLIST,v 1.35 2014/05/27 11:45:22 prlw1 Exp $
 bin/metacity
 bin/metacity-message
 bin/metacity-theme-viewer
@@ -16,16 +16,15 @@ man/man1/metacity-message.1
 man/man1/metacity-theme-viewer.1
 man/man1/metacity-window-demo.1
 man/man1/metacity.1
+share/GConf/gsettings/metacity-schemas.convert
 share/applications/metacity.desktop
-share/gconf/schemas/metacity.schemas
-share/gnome-control-center/keybindings/50-metacity-launchers.xml
+share/glib-2.0/schemas/org.gnome.metacity.gschema.xml
 share/gnome-control-center/keybindings/50-metacity-navigation.xml
-share/gnome-control-center/keybindings/50-metacity-screenshot.xml
 share/gnome-control-center/keybindings/50-metacity-system.xml
 share/gnome-control-center/keybindings/50-metacity-windows.xml
-share/gnome/help/creating-metacity-themes/C/creating-metacity-themes.xml
-share/gnome/help/creating-metacity-themes/de/creating-metacity-themes.xml
 share/gnome/wm-properties/metacity-wm.desktop
+share/help/C/creating-metacity-themes/index.docbook
+share/help/de/creating-metacity-themes/index.docbook
 share/locale/am/LC_MESSAGES/metacity.mo
 share/locale/ar/LC_MESSAGES/metacity.mo
 share/locale/as/LC_MESSAGES/metacity.mo
