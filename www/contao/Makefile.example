@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.example,v 1.16 2013/12/16 01:49:06 taca Exp $
+# $NetBSD: Makefile.example,v 1.17 2014/05/27 15:17:32 taca Exp $
 #
 # used by www/contao211-example/Makefile
 # used by www/contao32-example/Makefile
 #
 
-DISTNAME=	${CT_VERSION}
+DISTNAME?=	contao-${CT_PKGVER}
 PKGNAME=	contao${CT_VER}-example-${CT_PKGVER}
 CATEGORIES=	www
 MASTER_SITES=	${CT_MASTER_SITE}
@@ -26,9 +26,13 @@ WWW_FILE=	templates/music_academy.sql
 
 .include "../../www/contao/Makefile.common"
 
+.if ${CT_VERS} == "211" || ${CT_VERS} == "32"
 .for f in ${WWW_EG_FILES} ${WWW_FILE}
 EXTRACT_ELEMENTS+=	core-${CT_VERSION}/${f}
 .endfor
+.else
+EXTRACT_ELEMENTS=	${WWW_EG_FILES} ${WWW_FILE}
+.endif
 
 PKG_GROUPS_VARS+=	APACHE_GROUP
 PKG_USERS_VARS+=	APACHE_USER
