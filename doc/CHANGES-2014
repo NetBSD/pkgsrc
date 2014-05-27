@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2024 2014/05/27 15:41:15 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2025 2014/05/27 15:44:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2783,3 +2783,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/contao211 to 2.11.17nb1 [taca 2014-05-27]
 	Updated www/contao32 to 3.2.10nb1 [taca 2014-05-27]
 	Updated devel/p5-Role-Tiny to 1.003003 [wen 2014-05-27]
+	Added www/contao33 version 3.3.0 [taca 2014-05-27]
+	Added www/contao33-example version 3.3.0 [taca 2014-05-27]
