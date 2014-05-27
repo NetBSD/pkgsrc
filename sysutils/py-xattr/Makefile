@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2014/05/09 07:37:19 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/05/27 06:35:19 adam Exp $
 
-DISTNAME=	v0.7.2
+DISTNAME=	v0.7.6
 PROPERNAME=	${DISTNAME:S/v/xattr-/}
 PKGNAME=	${PYPKGPREFIX}-${PROPERNAME}
-PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://github.com/xattr/xattr/archive/
 
@@ -21,8 +20,15 @@ WRKSRC=		${WRKDIR}/${PROPERNAME}
 EGG_NAME=	${PROPERNAME}
 USE_LANGUAGES=	c
 REPLACE_PYTHON=	xattr/tool.py
+FILES_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
+# XXX: builds, installs, but cannot be executed
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34
+
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/bin/xattr \
+		${DESTDIR}${PREFIX}/bin/xattr-${PYVERSSUFFIX}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
