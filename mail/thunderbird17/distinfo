@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2013/12/17 13:41:41 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2014/05/27 09:58:51 joerg Exp $
 
 SHA1 (enigmail-1.6.tar.gz) = 51a7eb7d86ce24d8199f741a0079f0d56ecd6368
 RMD160 (enigmail-1.6.tar.gz) = a854bb37a6a7f298f6cc268110dcb21d00909fa4
@@ -62,8 +62,25 @@ SHA1 (patch-mozilla_config_baseconfig.mk) = 6923112e0aae6dfd59f67473d0734eb46b29
 SHA1 (patch-mozilla_config_stl__wrappers_ios) = 066a9f3db9203afa8131b2ff91d212033e5950e0
 SHA1 (patch-mozilla_config_stl__wrappers_ostream) = 67559c5ab17088680b86dea6b081a48b781f59b5
 SHA1 (patch-mozilla_config_system-headers) = 03f0c0f4269289e4f8aa1a12b2fa870ff48b2bf4
+SHA1 (patch-mozilla_config_system__wrappers_freetype.h) = 8dd2b7b181a2c395fc7beb99fbed7ca7b93d324d
+SHA1 (patch-mozilla_config_system__wrappers_ftadvanc.h) = fb3de6060e950d967e1ee8ac3402a43af35778c6
+SHA1 (patch-mozilla_config_system__wrappers_ftbitmap.h) = 8716d57e890fd72f9b8c2d19eb6b9556e738ee66
+SHA1 (patch-mozilla_config_system__wrappers_ftcache.h) = 812984ef81d24c1c79e473f04ca50b59a277f4da
+SHA1 (patch-mozilla_config_system__wrappers_ftglyph.h) = 63a311b9c92ed5c15c5d39bfff2431ce218dc1b9
+SHA1 (patch-mozilla_config_system__wrappers_ftlcdfil.h) = 2044ba3881aa8b32cf94df07c6a09fb9cd6ab3af
+SHA1 (patch-mozilla_config_system__wrappers_ftoutln.h) = 2b6a406bcc03292c343d45956e2cc9c6b06582a1
+SHA1 (patch-mozilla_config_system__wrappers_ftsizes.h) = ba28f4c45778b704679564d786353de024eefed1
+SHA1 (patch-mozilla_config_system__wrappers_ftsynth.h) = d90b5bf15798b1127e6bff3584700988e80eb000
+SHA1 (patch-mozilla_config_system__wrappers_ftxf86.h) = 90585091273c1283c4936a8b3068618054f8d8ee
+SHA1 (patch-mozilla_config_system__wrappers_t1tables.h) = c3674d01fa19a6882ea825207da556d5fc30cba5
+SHA1 (patch-mozilla_config_system__wrappers_ttnameid.h) = b40057b839c2566c2031368e64de3604dffc16ba
+SHA1 (patch-mozilla_config_system__wrappers_tttables.h) = 05fa06c578c7181d5a1c5d0fbf09d05e620ae54d
 SHA1 (patch-mozilla_config_system__wrappers_unwind.h) = 32d4ab3fbf80bf19783dab7c4a875a7262f419cf
 SHA1 (patch-mozilla_content_media_nsAudioStream.cpp) = a89fae3e745d045138118e3a0ddb224718f7827e
+SHA1 (patch-mozilla_content_svg_content_src_nsSVGFilters.cpp) = 57f1d338c2b7744b4ea29a9338653a89d8957504
+SHA1 (patch-mozilla_content_svg_content_src_nsSVGFilters.h) = d24c7917bb13ba85188101f051387af9185dd8a3
+SHA1 (patch-mozilla_dist_stl__wrappers_ios) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-mozilla_dist_stl__wrappers_ostream) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-mozilla_dom_plugins_ipc_PluginModuleChild.cpp) = d81cb5b1c608bba1e1a8dd2ee3cf62549d6ee87a
 SHA1 (patch-mozilla_dom_plugins_ipc_PluginModuleChild.h) = ff7237f365df1d0bd6eaa8992854f29fe1870319
 SHA1 (patch-mozilla_gfx_thebes_gfxPlatform.cpp) = b4107fea2b683cec7be6c6179c4ecfe6b6a901ee
