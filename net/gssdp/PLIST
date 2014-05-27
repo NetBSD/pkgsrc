@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/07/17 13:31:33 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/05/27 18:12:38 wiz Exp $
 include/gssdp-1.0/libgssdp/gssdp-client.h
 include/gssdp-1.0/libgssdp/gssdp-error.h
 include/gssdp-1.0/libgssdp/gssdp-resource-browser.h
@@ -18,9 +18,12 @@ share/gtk-doc/html/gssdp/gssdp.devhelp2
 share/gtk-doc/html/gssdp/home.png
 share/gtk-doc/html/gssdp/index.html
 share/gtk-doc/html/gssdp/index.sgml
+share/gtk-doc/html/gssdp/left-insensitive.png
 share/gtk-doc/html/gssdp/left.png
+share/gtk-doc/html/gssdp/right-insensitive.png
 share/gtk-doc/html/gssdp/right.png
 share/gtk-doc/html/gssdp/style.css
+share/gtk-doc/html/gssdp/up-insensitive.png
 share/gtk-doc/html/gssdp/up.png
 share/vala/vapi/gssdp-1.0.deps
 share/vala/vapi/gssdp-1.0.vapi
