@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2016 2014/05/27 06:37:07 adam Exp $
+$NetBSD: CHANGES-2014,v 1.2017 2014/05/27 11:45:52 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2774,3 +2774,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/glib2 to 2.38.2nb1 [wiz 2014-05-26]
 	Updated textproc/grep to 2.19 [adam 2014-05-27]
 	Updated sysutils/py-xattr to 0.7.6 [adam 2014-05-27]
+	Updated wm/metacity to 2.34.13 [prlw1 2014-05-27]
