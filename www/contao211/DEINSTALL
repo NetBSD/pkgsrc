@@ -1,4 +1,4 @@
-# $NetBSD: DEINSTALL,v 1.1.1.1 2012/02/19 10:54:07 taca Exp $
+# $NetBSD: DEINSTALL,v 1.2 2014/05/27 15:20:13 taca Exp $
 
 CT_WEBDIR="@PREFIX@/@CT_WEBDIR@"
 CT_DIRS="system/config system/drivers system/libraries system/logs \
@@ -9,6 +9,7 @@ DEINSTALL)
 	# remove cache files.
 	${FIND} ${CT_WEBDIR}/system/html -type f ! -name index.html \
 		-exec ${RM} -f {} \;
+	test -d ${CT_WEBDIR}/plugins/tcpdf/cache &&
 	${FIND} ${CT_WEBDIR}/plugins/tcpdf/cache -type f ! -name .htaccess \
 		-exec ${RM} -f {} \;
 	;;
