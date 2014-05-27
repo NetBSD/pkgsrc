@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2014/02/24 12:24:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/05/27 18:10:52 wiz Exp $
 bin/meld
-man/man1/meld.1
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/meld/__init__.py
 ${PYSITELIB}/meld/__init__.pyc
@@ -11,6 +10,9 @@ ${PYSITELIB}/meld/build_helpers.pyo
 ${PYSITELIB}/meld/conf.py
 ${PYSITELIB}/meld/conf.pyc
 ${PYSITELIB}/meld/conf.pyo
+${PYSITELIB}/meld/const.py
+${PYSITELIB}/meld/const.pyc
+${PYSITELIB}/meld/const.pyo
 ${PYSITELIB}/meld/diffmap.py
 ${PYSITELIB}/meld/diffmap.pyc
 ${PYSITELIB}/meld/diffmap.pyo
@@ -172,6 +174,7 @@ ${PYSITELIB}/meld/vc/svn_17.pyo
 ${PYSITELIB}/meld/vcview.py
 ${PYSITELIB}/meld/vcview.pyc
 ${PYSITELIB}/meld/vcview.pyo
+man/man1/meld.1
 share/appdata/meld.appdata.xml
 share/applications/meld.desktop
 share/doc/${PKGNAME}/COPYING
@@ -193,6 +196,22 @@ share/help/C/meld/resolving-conflicts.page
 share/help/C/meld/text-filters.page
 share/help/C/meld/vc-mode.page
 share/help/C/meld/vc-supported.page
+share/help/el/meld/command-line.page
+share/help/el/meld/file-changes.page
+share/help/el/meld/file-filters.page
+share/help/el/meld/file-mode.page
+share/help/el/meld/flattened-view.page
+share/help/el/meld/folder-mode.page
+share/help/el/meld/index.page
+share/help/el/meld/introduction.page
+share/help/el/meld/keyboard-shortcuts.page
+share/help/el/meld/legal.xml
+share/help/el/meld/missing-functionality.page
+share/help/el/meld/preferences.page
+share/help/el/meld/resolving-conflicts.page
+share/help/el/meld/text-filters.page
+share/help/el/meld/vc-mode.page
+share/help/el/meld/vc-supported.page
 share/help/es/meld/command-line.page
 share/help/es/meld/file-changes.page
 share/help/es/meld/file-filters.page
@@ -293,5 +312,3 @@ share/meld/ui/tab-placeholder.ui
 share/meld/ui/vcview-ui.xml
 share/meld/ui/vcview.ui
 share/mime/packages/meld.xml
-@pkgdir share/help/es/meld/figures
-@pkgdir share/help/C/meld/figures
