@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST,v 1.34 2013/08/31 22:19:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.35 2014/05/27 08:43:55 pho Exp $
 bin/cairo-trace
 include/cairo/cairo-deprecated.h
 include/cairo/cairo-features.h
 include/cairo/cairo-ft.h
 include/cairo/cairo-pdf.h
 include/cairo/cairo-ps.h
-${PLIST.quartz}include/cairo/cairo-quartz.h
-${PLIST.quartz}include/cairo/cairo-quartz-image.h
 include/cairo/cairo-script-interpreter.h
 include/cairo/cairo-script.h
 include/cairo/cairo-svg.h
@@ -25,9 +23,6 @@ lib/pkgconfig/cairo-ft.pc
 lib/pkgconfig/cairo-pdf.pc
 lib/pkgconfig/cairo-png.pc
 lib/pkgconfig/cairo-ps.pc
-${PLIST.quartz}lib/pkgconfig/cairo-quartz-font.pc
-${PLIST.quartz}lib/pkgconfig/cairo-quartz-image.pc
-${PLIST.quartz}lib/pkgconfig/cairo-quartz.pc
 lib/pkgconfig/cairo-script.pc
 lib/pkgconfig/cairo-svg.pc
 lib/pkgconfig/cairo-tee.pc
