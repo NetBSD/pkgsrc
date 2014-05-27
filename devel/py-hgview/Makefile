@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2014/05/09 07:37:01 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2014/05/27 18:27:10 wiz Exp $
 
-DISTNAME=	hgview-1.8.0
+DISTNAME=	hgview-1.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	http://download.logilab.org/pub/hgview/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://download.logilab.org/pub/hgview/
+HOMEPAGE=	http://hgview.org/
 COMMENT=	Visually navigate in a Mercurial repository history
 LICENSE=	gnu-gpl-v2
 
