@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2031 2014/05/27 18:15:31 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2032 2014/05/27 18:27:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2791,3 +2791,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/meld-devel to 3.11.1 [wiz 2014-05-27]
 	Updated net/gssdp to 0.14.8 [wiz 2014-05-27]
 	Updated devel/liblangtag to 0.5.4 [wiz 2014-05-27]
+	Updated devel/py-hgview to 1.8.1 [wiz 2014-05-27]
