@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2013/12/10 15:18:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2014/05/27 13:47:25 taca Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -6,7 +6,6 @@ ${TYPO3DIR}/${TYPO3NAME}/INSTALL.txt
 ${TYPO3DIR}/${TYPO3NAME}/LICENSE.txt
 ${TYPO3DIR}/${TYPO3NAME}/NEWS.txt
 ${TYPO3DIR}/${TYPO3NAME}/README.txt
-${TYPO3DIR}/${TYPO3NAME}/RELEASE_NOTES.txt
 ${TYPO3DIR}/${TYPO3NAME}/_.htaccess
 ${TYPO3DIR}/${TYPO3NAME}/index.php
 ${TYPO3DIR}/${TYPO3NAME}/t3lib/GPL.txt
@@ -469,7 +468,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/extjs/locale/ext-lang-ukr.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/extjs/locale/ext-lang-vn.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/extjs/locale/ext-lang-zh_CN.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/extjs/locale/ext-lang-zh_TW.js
-${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/extjs/resources/charts.swf
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/extjs/resources/css/README.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/extjs/resources/css/debug.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/extjs/resources/css/ext-all-notheme.css
@@ -764,7 +762,10 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/jsmin/jsmin.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/json/json.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/modernizr/LICENSE.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/modernizr/modernizr.min.js
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/prototype/LICENSE
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/prototype/prototype.js
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/scriptaculous/CHANGELOG
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/scriptaculous/MIT-LICENSE
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/scriptaculous/builder.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/scriptaculous/controls.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/scriptaculous/dragdrop.js
