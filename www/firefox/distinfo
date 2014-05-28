@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.146 2014/05/28 07:18:28 pho Exp $
+$NetBSD: distinfo,v 1.147 2014/05/28 10:08:18 pho Exp $
 
 SHA1 (firefox-29.0.1.source.tar.bz2) = 2819ef63403de2bcfff5496bd21a3b8cb5dfce82
 RMD160 (firefox-29.0.1.source.tar.bz2) = f728179a12a46824971ca01cf79eb0318e4775c5
@@ -48,6 +48,9 @@ SHA1 (patch-content_svg_content_src_nsSVGFilters.cpp) = ed8810687e5f5b60b64c5128
 SHA1 (patch-content_svg_content_src_nsSVGFilters.h) = 37ead5c8f14551d843be8bc09be254175b38b4d7
 SHA1 (patch-dom_indexedDB_IDBEvents.cpp) = 4b3c649fe0119b8b883cd4bcf25a594510096d50
 SHA1 (patch-dom_indexedDB_IDBEvents.h) = 7558cd531ae408736e38efa2fdbff218e2d2124f
+SHA1 (patch-dom_plugins_base_npapi.h) = f0c9fa4ffbd6589afef70b69b08f1c03daa55676
+SHA1 (patch-dom_plugins_base_npfunctions.h) = 2ebb18a7d33ec035fc30e0bcd9af8b12958e6485
+SHA1 (patch-dom_plugins_ipc_PluginMessageUtils.h) = 66d653b2d765c74dba738e2f9a7b9f6aab44b465
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.cpp) = 69b0a51d733cd52e7d200052362e0faf4ec918f1
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.h) = 0a7f3167e939822013ae6195406657453578453e
 SHA1 (patch-dom_system_OSFileConstants.cpp) = 6c45e3d5fa3369432ff59871a8cbc6176f297794
@@ -63,6 +66,7 @@ SHA1 (patch-image_decoders_nsJPEGDecoder.cpp) = e5df11499b1ec14e1d4c9a1408c0611d
 SHA1 (patch-intl_hyphenation_src_hnjalloc.h) = 7fcc7b0fcf5a33486214197e925fbc8e6e22e2ee
 SHA1 (patch-intl_unicharutil_util_Makefile.in) = c8f37cc420ba26b63c66fbbf69b13a8b4fea43fc
 SHA1 (patch-ipc_chromium_Makefile.in) = 3a1f5b218217fc8e5e9a07195054618071c38059
+SHA1 (patch-ipc_chromium_moz.build) = de12255865e45cfdf0f7dc57ce101be75ac8ad54
 SHA1 (patch-ipc_chromium_src_base_base__paths.h) = 7bc83577a9678542db4dff7dda19d751ff6d78c1
 SHA1 (patch-ipc_chromium_src_base_debug__util__posix.cc) = 677f0b5ccdcde7a8551f2d07d2a472361a5da03f
 SHA1 (patch-ipc_chromium_src_base_file__util.h) = 9d6d074b1692c6b4e722bfac8d67c66040a6fa76
@@ -71,6 +75,7 @@ SHA1 (patch-ipc_chromium_src_base_message__pump__libevent.cc) = 12f3e063cf3fef23
 SHA1 (patch-ipc_chromium_src_base_platform__thread.h) = e6d7ac39a8b2a1b232638f7671e8530acfed0b97
 SHA1 (patch-ipc_chromium_src_base_platform__thread__posix.cc) = e386bfd56ae6f77ef1aaadd0fa81af147a09f75d
 SHA1 (patch-ipc_chromium_src_base_process__util.h) = 31b592d69d3c4f63642dae3c81c771ee3dfa8502
+SHA1 (patch-ipc_chromium_src_base_process__util__bsd.cc) = 4f05fce050796f86b5aedf910eb709c9969fa982
 SHA1 (patch-ipc_chromium_src_base_process__util__posix.cc) = 6b2611cc902f17e726aabcf4fb5fff2c71852408
 SHA1 (patch-ipc_chromium_src_base_sys__info__posix.cc) = 27890c56194e483fc0758ed767ca5795cc5112eb
 SHA1 (patch-ipc_chromium_src_base_time__posix.cc) = 337a0b4a5d51d68c7699b79c7591b953ea23ca67
@@ -106,6 +111,7 @@ SHA1 (patch-memory_mozalloc_mozalloc__abort.cpp) = 9d9036ddd28c7b8ce37860e0120df
 SHA1 (patch-mfbt_Poison.cpp) = b582943c02f57835451c9eecd004c9912d42ce84
 SHA1 (patch-modules_libjar_nsZipArchive.cpp) = 6aff0f8ed42575d8ca36a524e12e9a1f7351004a
 SHA1 (patch-netwerk_dns_Makefile.in) = b6bd9814d909dd6f7cff10dbeac3bedd79c2508e
+SHA1 (patch-netwerk_protocol_http_nsHttpHandler.cpp) = 517cf1ac41a06ce1d02c7e1a6c5e74a983307dd6
 SHA1 (patch-netwerk_sctp_src_netinet6_sctp6__usrreq.c) = 31d49db31b1e130f1b455f883e5b7c606d438771
 SHA1 (patch-netwerk_sctp_src_netinet_sctp__os__userspace.h) = b3f94ac0f2bd652371fef22c642b14bf30162998
 SHA1 (patch-netwerk_sctp_src_netinet_sctp__usrreq.c) = 421b6e071a9934567ccba337033a42208e6e4bd5
