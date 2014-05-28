@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.147 2014/05/28 10:08:18 pho Exp $
+$NetBSD: distinfo,v 1.148 2014/05/28 15:11:29 pho Exp $
 
 SHA1 (firefox-29.0.1.source.tar.bz2) = 2819ef63403de2bcfff5496bd21a3b8cb5dfce82
 RMD160 (firefox-29.0.1.source.tar.bz2) = f728179a12a46824971ca01cf79eb0318e4775c5
@@ -56,12 +56,22 @@ SHA1 (patch-dom_plugins_ipc_PluginModuleChild.h) = 0a7f3167e939822013ae619540665
 SHA1 (patch-dom_system_OSFileConstants.cpp) = 6c45e3d5fa3369432ff59871a8cbc6176f297794
 SHA1 (patch-extensions_spellcheck_hunspell_src_mozHunspell.cpp) = a2a0652d0eac018fda06e729bf5ba786dd8a3866
 SHA1 (patch-gfx__skia__include__core__SkPreConfig.h) = 6f99cf0eb5d4617d529c378707f537bc1e5cb28f
+SHA1 (patch-gfx_gl_GLContext.cpp) = 80625c5745722fdf05f9b03d00a43043da59d5e6
+SHA1 (patch-gfx_gl_GLContextFeatures.cpp) = 6e70ea9110ffe9e24baf728c03c4e2ac1219dd97
+SHA1 (patch-gfx_gl_GLContextProvider.h) = 5e43dda114f49c03f12a9bfaacb24d8ba408646e
 SHA1 (patch-gfx_graphite2_src_Bidi.cpp) = 5e80b4a32a47ae44d237fec69ea87bdd612a76ce
+SHA1 (patch-gfx_layers_ImageContainer.cpp) = 272cbcc0256b44a4f2c1ffe97c1d8c122fd93250
+SHA1 (patch-gfx_layers_basic_BasicImages.cpp) = 2b6fed10689ae4ea19cafa3b5fc8ac710faef529
+SHA1 (patch-gfx_layers_client_ClientCanvasLayer.cpp) = 5ea3410eed5e3a81527e138459ee87d058844c6d
+SHA1 (patch-gfx_layers_composite_LayerManagerComposite.cpp) = 0ff02f5c4e354e301d0acefcbc8d7623a44cc78b
+SHA1 (patch-gfx_layers_opengl_TextureHostOGL.cpp) = 32ad7dcf580cb7030511ce0dabb770da53d4d259
 SHA1 (patch-gfx_moz.build) = a98bda4727538f4a0f09a20b84f9dd883edaf7d9
 SHA1 (patch-gfx_skia_Makefile.in) = df1592fcab275a13e7015c9d73283f4326898186
 SHA1 (patch-gfx_skia_moz.build) = 1eb1b2c8948f7faaab267cace79f179fb258523c
 SHA1 (patch-gfx_skia_src_utils_SkThreadUtils__pthread__linux.cpp) = 19342e66383e224b34f98c9d58ad05d4041dd9f4
+SHA1 (patch-gfx_src_nsDeviceContext.cpp) = 9f6102ef7b66508f5ca8b2754331e59c7ccf79ef
 SHA1 (patch-gfx_thebes_Makefile.in) = 16b63bc42870aa8c042416c6e04b3513981ca6f0
+SHA1 (patch-gfx_thebes_gfxFont.cpp) = 7888a16944c4b6371a8bdeb3fc70ed395de8e1ea
 SHA1 (patch-image_decoders_nsJPEGDecoder.cpp) = e5df11499b1ec14e1d4c9a1408c0611d1c4e0574
 SHA1 (patch-intl_hyphenation_src_hnjalloc.h) = 7fcc7b0fcf5a33486214197e925fbc8e6e22e2ee
 SHA1 (patch-intl_unicharutil_util_Makefile.in) = c8f37cc420ba26b63c66fbbf69b13a8b4fea43fc
@@ -129,6 +139,7 @@ SHA1 (patch-toolkit_components_osfile_modules_osfile__unix__back.jsm) = 274b06bd
 SHA1 (patch-toolkit_library_Makefile.in) = 481172e5c62b862633708106a1708a941c9ffb9d
 SHA1 (patch-toolkit_toolkit.mozbuild) = 0993d50cc02c2b421e6de087dfb0a9cb30562c6b
 SHA1 (patch-toolkit_xre_nsEmbedFunctions.cpp) = 6ee6fba04a3ecc6596f8aed67f752a1075901fa8
+SHA1 (patch-uriloader_exthandler_nsExternalHelperAppService.cpp) = 65f882f3eda21cc78e7ea0ad03bef9ab98b7056e
 SHA1 (patch-xb) = 30eea880b40cee45d1235d3292fead4b5a54bbaa
 SHA1 (patch-xc) = 8575fdac2b47966ccfb5e1cc7ca8505163e358c9
 SHA1 (patch-xe) = ca4c87dbf9bb09e0e6c270d0fa76fc69a7d6df7f
