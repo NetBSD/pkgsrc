@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2014/04/14 00:02:49 rodent Exp $
+# $NetBSD: Makefile.common,v 1.32 2014/05/28 10:16:54 markd Exp $
 #
 # used by databases/mysql51-client/Makefile
 # used by databases/mysql51-server/Makefile
@@ -76,6 +76,10 @@ CONFIGURE_ARGS+=	--enable-assembler
 .if ${OPSYS} == "NetBSD" && !empty(MACHINE_ARCH:Mi386)
 GNU_ARCH.i386=		i486
 CFLAGS+=		-march=i486
+.endif
+
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ENV+=		ac_cv_func_gethostbyname_r="no"
 .endif
 
 CONFIGURE_ENV+=		mysql_cv_compress="yes"
