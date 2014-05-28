@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1920 2014/05/27 21:35:48 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.1921 2014/05/28 22:05:12 szptvlfn Exp $
 #
 
 COMMENT=	Development utilities
@@ -314,6 +314,7 @@ SUBDIR+=	hs-stm
 SUBDIR+=	hs-syb
 SUBDIR+=	hs-tagged
 SUBDIR+=	hs-text
+SUBDIR+=	hs-tf-random
 SUBDIR+=	hs-transformers
 SUBDIR+=	hs-transformers-base
 SUBDIR+=	hs-transformers-compat
