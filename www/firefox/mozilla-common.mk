@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.33 2014/05/09 07:37:24 wiz Exp $
+# $NetBSD: mozilla-common.mk,v 1.34 2014/05/28 03:33:19 pho Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -126,7 +126,7 @@ OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
 
-PLIST_VARS+=	sps vorbis tremor glskia throwwrapper
+PLIST_VARS+=	sps vorbis tremor glskia throwwrapper mozglue
 
 .include "../../mk/endian.mk"
 .if ${MACHINE_ENDIAN} == "little"
@@ -148,6 +148,12 @@ PLIST.sps=	yes
 PLIST.tremor=	yes
 .else
 PLIST.vorbis=	yes
+.endif
+
+# See ${WRKSRC}/mozglue/build/moz.build: libmozglue is built and
+# installed as a shared library on these platforms.
+.if ${OPSYS} == "Cygwin" || ${OPSYS} == "Darwin" # or Android
+PLIST.mozglue=	yes
 .endif
 
 #
