@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2013/07/26 09:29:34 is Exp $
+# $NetBSD: Makefile,v 1.23 2014/05/28 10:29:12 markd Exp $
 
 .include "Makefile.common"
 
 PKGNAME=		swi-prolog-lite-${SWIPLVERS}
-PKGREVISION=		2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		ISO/Edinburgh-style Prolog compiler
@@ -12,7 +11,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		src
 
 CONFIGURE_ENV+=		PL=swi-prolog
-CONFIGURE_ENV+=		ARCH=${MACHINE_GNU_PLATFORM}	# make PLIST consistent
+CONFIGURE_ENV+=		PLARCH=${MACHINE_GNU_PLATFORM}	# make PLIST consistent
 USE_TOOLS+=		gmake bash:run
 REPLACE_BASH+=		dotfiles/edit
 
