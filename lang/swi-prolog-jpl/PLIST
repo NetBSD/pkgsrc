@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/28 10:33:00 markd Exp $
+lib/swi-prolog-${PKGVERSION}/lib/jpl.jar
+lib/swi-prolog-${PKGVERSION}/library/jpl.pl
+lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_GNU_PLATFORM}/libjpl.so
