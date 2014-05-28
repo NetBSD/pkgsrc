@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13334 2014/05/27 18:27:20 wiz Exp $
+$NetBSD: TODO,v 1.13335 2014/05/28 07:09:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -901,6 +901,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pcmanfm-0.5.2 [pkg/42451]
 	o pdmenu-1.2.87
 	o pen-0.17.3
+	o perl-5.20.0
 	o pessulus-2.30.3 [GNOME 2.28]
 	o php-jpgraph-3.0.6
 	o php-owncloud-6
@@ -1041,6 +1042,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o samba-4.1.7
 	o sane-1.0.24
 	o sarg-2.2.5
+	o sbcl-1.2.0
 	o scew-0.4.0
 	o scilab-5.5.0
 	o scipy-0.13.3
