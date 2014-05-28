@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2037 2014/05/28 08:00:28 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2038 2014/05/28 10:37:54 markd Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2797,3 +2797,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/xkeyboard-config to 2.12 [wiz 2014-05-28]
 	Updated wm/notion to 3.2014052800 [wiz 2014-05-28]
 	Updated databases/p5-DBD-mysql to 4.027 [wen 2014-05-28]
+	Updated lang/swi-prolog to 6.6.5 [markd 2014-05-28]
+	Updated lang/swi-prolog-lite to 6.6.5 [markd 2014-05-28]
+	Updated lang/swi-prolog-packages to 6.6.5 [markd 2014-05-28]
+	Added lang/swi-prolog-jpl version 6.6.5 [markd 2014-05-28]
