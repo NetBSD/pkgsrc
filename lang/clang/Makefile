@@ -1,19 +1,21 @@
-# $NetBSD: Makefile,v 1.27 2014/05/17 16:10:45 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2014/05/28 15:49:34 adam Exp $
 
-DISTNAME=	clang-3.4
-PKGREVISION=	2
+DISTNAME=	clang-3.4.1
 CATEGORIES=	lang
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 DISTFILES=	llvm-${PKGVERSION_NOREV}.src.tar.gz \
-		libcxx-${PKGVERSION_NOREV}.src.tar.gz \
-		clang-${PKGVERSION_NOREV}.src.tar.gz
+		libcxx-3.4.src.tar.gz \
+		cfe-${PKGVERSION_NOREV}.src.tar.gz \
+		compiler-rt-3.4.src.tar.gz
+SITES.libcxx-3.4.src.tar.gz=http://llvm.org/releases/3.4/
+SITES.compiler-rt-3.4.src.tar.gz=http://llvm.org/releases/3.4/
 
 MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://llvm.org/
 COMMENT=	Low Level Virtual Machine compiler infrastructure
 LICENSE=	modified-bsd
 
-WRKSRC=			${WRKDIR}/llvm-${PKGVERSION_NOREV}
+WRKSRC=			${WRKDIR}/llvm-${PKGVERSION_NOREV}.src
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		chown gmake groff pod2html pod2man
@@ -84,8 +86,9 @@ SUBST_SED.fix-paths+=		-e 's,^.*cxa_finalize.*$$,		; //cxa_finalize.o,g'
 .endif
 
 post-extract:
-	mv ${WRKDIR}/libcxx-${PKGVERSION_NOREV} ${WRKSRC}/projects/libcxx
-	mv ${WRKDIR}/clang-${PKGVERSION_NOREV} ${WRKSRC}/tools/clang
+	mv ${WRKDIR}/libcxx-3.4 ${WRKSRC}/projects/libcxx
+	mv ${WRKDIR}/compiler-rt-3.4 ${WRKSRC}/projects/compiler-rt
+	mv ${WRKDIR}/cfe-${PKGVERSION_NOREV}.src ${WRKSRC}/tools/clang
 .if ${OPSYS} == "SunOS"
 	${ECHO} "int sun_ld_needs_a_symbol=0;" >> ${WRKSRC}/lib/Target/NVPTX/InstPrinter/NVPTXInstPrinter.cpp
 .endif
