@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2014/02/12 23:18:06 tron Exp $
+# $NetBSD: Makefile,v 1.42 2014/05/28 10:29:12 markd Exp $
 
 .include "../../lang/swi-prolog-lite/Makefile.common"
 
 PKGNAME=		swi-prolog-packages-${SWIPLVERS}
-PKGREVISION=		8
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Packages for SWI Prolog
@@ -19,20 +18,14 @@ BUILD_DEPENDS+=		modular-xorg-server-[0-9]*:../../x11/modular-xorg-server
 .endif
 
 CONFIGURE_ENV+=		PL=swi-prolog
-CONFIGURE_ENV+=		ARCH=${MACHINE_GNU_PLATFORM}	# make PLIST consistent
+CONFIGURE_ENV+=		PLARCH=${MACHINE_GNU_PLATFORM}	# make PLIST consistent
 CONFIGURE_ARGS+=	--without-jpl
 
 CONFIGURE_DIRS+=	. packages
 BUILD_DIRS+=		packages
 INSTALL_DIRS+=		packages
 
-INSTALLATION_DIRS=	bin lib/swi-prolog-${PKGVERSION_NOREV}/bin/${MACHINE_GNU_PLATFORM} \
-			lib/swi-prolog-${PKGVERSION_NOREV}/include ${PKGMANDIR}/man1
-
-XPCE_VERSION=		6.6.66
-PLIST_SUBST+=		XPCE_VERSION=${XPCE_VERSION}
-# Help with PLIST:
-PRINT_PLIST_AWK+=	{sub("${XPCE_VERSION}","$${XPCE_VERSION}")}
+INSTALLATION_DIRS=	bin lib/swi-prolog-${PKGVERSION_NOREV}/include ${PKGMANDIR}/man1
 
 TEST_TARGET=	check
 
@@ -47,6 +40,9 @@ post-configure:
 	${SETENV} \
 		CPP=${CPP:Q} \
 		${GMAKE} configure
+	mkdir ${WRKSRC}/include
+	${LN} -sf ${WRKSRC}/src/SWI-Prolog.h ${WRKSRC}/include
+	${LN} -sf ${WRKSRC}/src/os/SWI-Stream.h ${WRKSRC}/include
 
 pre-install: checkforx
 
