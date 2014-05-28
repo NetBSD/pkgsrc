@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2013/12/05 16:45:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.2.4.1 2014/05/28 19:19:10 tron Exp $
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
 ${TYPO3DIR}/${TYPO3NAME}/INSTALL.txt
 ${TYPO3DIR}/${TYPO3NAME}/LICENSE.txt
 ${TYPO3DIR}/${TYPO3NAME}/NEWS.txt
 ${TYPO3DIR}/${TYPO3NAME}/README.txt
-${TYPO3DIR}/${TYPO3NAME}/RELEASE_NOTES.txt
 ${TYPO3DIR}/${TYPO3NAME}/_.htaccess
 ${TYPO3DIR}/${TYPO3NAME}/index.php
 ${TYPO3DIR}/${TYPO3NAME}/t3lib/GPL.txt
@@ -495,7 +494,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/extjs/locale/ext-lang-ukr.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/extjs/locale/ext-lang-vn.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/extjs/locale/ext-lang-zh_CN.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/extjs/locale/ext-lang-zh_TW.js
-${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/extjs/resources/charts.swf
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/extjs/resources/css/README.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/extjs/resources/css/debug.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/extjs/resources/css/ext-all-notheme.css
@@ -904,9 +902,12 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/pear/HTTP/Request2/SocketWrapper.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/pear/Net/URL2.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/pear/PEAR/Exception.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/pear/data/public-suffix-list.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/prototype/LICENSE
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/prototype/prototype.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/requirejs/require.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/requirejs/require.min.js
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/scriptaculous/CHANGELOG
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/scriptaculous/MIT-LICENSE
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/scriptaculous/builder.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/scriptaculous/controls.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/scriptaculous/dragdrop.js
@@ -2428,6 +2429,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/backend/Classes/Wizard/NewContentElementWi
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/backend/Classes/Wizard/TsconfigWizard.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/backend/Migrations/Code/ClassAliasMap.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/backend/Tests/Unit/Configuration/TypoScript/ConditionMatching/ConditionMatcherTest.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/backend/Tests/Unit/Controller/File/FileControllerTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/backend/Tests/Unit/Form/Element/InlineElementTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/backend/Tests/Unit/Form/ElementConditionMatcherTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/backend/Tests/Unit/Module/ModuleControllerTest.php
@@ -2473,6 +2475,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/belog/Resources/Private/Partials/Content/F
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/belog/Resources/Private/Partials/Content/LogEntries.html
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/belog/Resources/Private/Templates/Tools/Index.html
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/belog/Resources/Private/Templates/WebInfo/Index.html
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/belog/Tests/Unit/Domain/Model/ConstraintTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/belog/Tests/Unit/Domain/Model/LogEntryTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/belog/Tests/Unit/Domain/Repository/HistoryEntryRepositoryTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/belog/Tests/Unit/Domain/Repository/LogEntryRepositoryTest.php
@@ -3098,6 +3101,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Utility/ArrayUtilityTest.p
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Utility/ClassNamingUtilityTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Utility/ClientUtilityTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Utility/ExtensionMangementUtilityTest.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Utility/Fixtures/GeneralUtilityFixture.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Utility/Fixtures/MathUtilityTestClassWithStringRepresentationFixture.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Utility/Fixtures/RuntimeException.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Utility/Fixtures/clear.gif
@@ -5772,6 +5776,9 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rsaauth/Classes/Storage/SplitStorage.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rsaauth/Classes/Storage/StorageFactory.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rsaauth/Configuration/TCA/tx_rsaauth_keys.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rsaauth/Migrations/Code/ClassAliasMap.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rsaauth/Tests/Unit/Backend/CommandLineBackendTest.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rsaauth/Tests/Unit/Backend/PhpBackendTest.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rsaauth/Tests/Unit/KeypairTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rsaauth/doc/manual.sxw
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rsaauth/ext_autoload.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rsaauth/ext_conf_template.txt
