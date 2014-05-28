@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/02/23 10:00:27 adam Exp $
+# $NetBSD: Makefile,v 1.12 2014/05/28 12:08:53 obache Exp $
 
 .include "../../devel/git/Makefile.common"
 
@@ -23,6 +23,7 @@ PERL5_CONFIGURE=	no
 PERL5_PACKLIST=		auto/Git/.packlist
 REPLACE_PERL+=		*.perl */*.perl */*/*.perl
 REPLACE_PERL+=		contrib/hooks/update-paranoid
+PERL5_PACKLIST=		auto/Git/.packlist
 
 CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
 
