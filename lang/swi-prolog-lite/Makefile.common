@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.10 2011/04/12 23:16:42 asau Exp $
+# $NetBSD: Makefile.common,v 1.11 2014/05/28 10:29:12 markd Exp $
 
-SWIPLVERS=		5.11.18
+SWIPLVERS=		6.6.5
 DISTNAME=		pl-${SWIPLVERS}
 CATEGORIES=		lang
 MASTER_SITES=		http://www.swi-prolog.org/download/stable/src/ \
