@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/28 22:01:27 szptvlfn Exp $
+lib/nats-${PKGVERSION}/${HASKELL_VERSION}/HSnats-${PKGVERSION}.o
+lib/nats-${PKGVERSION}/${HASKELL_VERSION}/Numeric/Natural.hi
+lib/nats-${PKGVERSION}/${HASKELL_VERSION}/Numeric/Natural/Internal.hi
+lib/nats-${PKGVERSION}/${HASKELL_VERSION}/libHSnats-${PKGVERSION}.a
+lib/nats-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/nats-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/nats-${PKGVERSION}/html/Numeric-Natural-Internal.html
+${PLIST.doc}share/doc/nats-${PKGVERSION}/html/Numeric-Natural.html
+${PLIST.doc}share/doc/nats-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/nats-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/nats-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/nats-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/nats-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/nats-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/nats-${PKGVERSION}/html/mini_Numeric-Natural-Internal.html
+${PLIST.doc}share/doc/nats-${PKGVERSION}/html/mini_Numeric-Natural.html
+${PLIST.doc}share/doc/nats-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/nats-${PKGVERSION}/html/nats.haddock
+${PLIST.doc}share/doc/nats-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/nats-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/nats-${PKGVERSION}/html/synopsis.png
