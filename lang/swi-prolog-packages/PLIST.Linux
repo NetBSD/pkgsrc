@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2014/05/28 10:29:12 markd Exp $
+lib/swi-prolog-${PKGVERSION}/library/tipc/tipc_broadcast.pl
+lib/swi-prolog-${PKGVERSION}/library/tipc/tipc_linda.pl
+lib/swi-prolog-${PKGVERSION}/library/tipc/tipc_overview.txt
+lib/swi-prolog-${PKGVERSION}/library/tipc/tipc_paxos.pl
+lib/swi-prolog-${PKGVERSION}/library/tipc/tipc.pl
+lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_GNU_PLATFORM}/tipc.so
