@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2013/05/29 22:36:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2014/05/28 05:55:22 wiz Exp $
 share/X11/xkb/compat/README
 share/X11/xkb/compat/accessx
 share/X11/xkb/compat/basic
@@ -120,6 +120,7 @@ share/X11/xkb/symbols/empty
 share/X11/xkb/symbols/epo
 share/X11/xkb/symbols/es
 share/X11/xkb/symbols/et
+share/X11/xkb/symbols/eu
 share/X11/xkb/symbols/eurosign
 share/X11/xkb/symbols/fi
 share/X11/xkb/symbols/fo
