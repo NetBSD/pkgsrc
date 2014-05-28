@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2014/05/09 16:20:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/05/28 06:25:49 wiz Exp $
 bin/notion
-bin/notionflux
 lib/notion/bin/ion-completefile
 lib/notion/bin/ion-statusd
+lib/notion/bin/notionflux
 lib/notion/lc/de.lc
 lib/notion/lc/ioncore_bindings.lc
 lib/notion/lc/ioncore_efbb.lc
@@ -45,10 +45,9 @@ man/cs/man1/notion.1
 man/fi/man1/notion.1
 man/man1/notion.1
 man/man1/notionflux.1
-share/doc/notion/ChangeLog
+share/doc/notion/CHANGELOG
 share/doc/notion/LICENSE
 share/doc/notion/README
-share/doc/notion/RELNOTES
 share/examples/notion/cfg_defaults.lua
 share/examples/notion/cfg_dock.lua
 share/examples/notion/cfg_kludges.lua

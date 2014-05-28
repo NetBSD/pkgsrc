@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2014/05/15 14:19:48 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2014/05/28 06:25:49 wiz Exp $
 
-DISTNAME=	notion-3-2014010900-src
+DISTNAME=	notion-3-2014052800-src
 PKGNAME=	${DISTNAME:S/3-/3./:S/-src//}
-PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=notion/}
 EXTRACT_SUFX=	.tar.bz2
