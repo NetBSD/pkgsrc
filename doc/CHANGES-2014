@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2034 2014/05/27 21:36:32 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.2035 2014/05/28 05:55:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2794,3 +2794,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-hgview to 1.8.1 [wiz 2014-05-27]
 	Added devel/hs-unordered-containers version 0.2.4.0 [szptvlfn 2014-05-27]
 	Added textproc/hs-blaze-markup version 0.6.1.0 [szptvlfn 2014-05-27]
+	Updated x11/xkeyboard-config to 2.12 [wiz 2014-05-28]
