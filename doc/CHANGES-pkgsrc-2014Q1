@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.37 2014/05/22 13:56:18 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.38 2014/05/28 19:53:47 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q1 branch:
@@ -129,3 +129,19 @@ Pullup ticket #4415 - requested by wen
 www/moodle: security update
 Pullup ticket #4416 - requested by he
 graphics/gimp: security patch
+Pullup ticket #4417 - requested by obache
+emulators/suse131_x11: security update
+Pullup ticket #4418 - requested by taca
+www/typo3_45: security update
+Pullup ticket #4419 - requested by taca
+www/typo3_47: security update
+Pullup ticket #4420 - requested by taca
+www/typo3_60: security update
+Pullup ticket #4421 - requested by taca
+www/typo3_61: security update
+Pullup ticket #4423 - requested by taca
+www/p5-LWP-Protocol-https: security patch
+Pullup ticket #4424 - requested by taca
+mail/dovecot2: security update
+Pullup ticket #4425 - requested by taca
+mail/dovecot2-pigeonhole: keep in step with mail/dovecot2
