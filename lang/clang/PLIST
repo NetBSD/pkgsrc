@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2014/02/27 17:35:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2014/05/28 15:49:34 adam Exp $
 bin/bugpoint
 bin/c-index-test
 bin/clang
@@ -1143,6 +1143,12 @@ lib/clang/${PKGVERSION}/include/popcntintrin.h
 lib/clang/${PKGVERSION}/include/prfchwintrin.h
 lib/clang/${PKGVERSION}/include/rdseedintrin.h
 lib/clang/${PKGVERSION}/include/rtmintrin.h
+lib/clang/${PKGVERSION}/include/sanitizer/asan_interface.h
+lib/clang/${PKGVERSION}/include/sanitizer/common_interface_defs.h
+lib/clang/${PKGVERSION}/include/sanitizer/dfsan_interface.h
+lib/clang/${PKGVERSION}/include/sanitizer/linux_syscall_hooks.h
+lib/clang/${PKGVERSION}/include/sanitizer/lsan_interface.h
+lib/clang/${PKGVERSION}/include/sanitizer/msan_interface.h
 lib/clang/${PKGVERSION}/include/shaintrin.h
 lib/clang/${PKGVERSION}/include/smmintrin.h
 lib/clang/${PKGVERSION}/include/stdalign.h
