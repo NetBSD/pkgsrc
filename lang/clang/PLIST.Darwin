@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2014/05/28 15:49:34 adam Exp $
+lib/clang/${PKGVERSION}/lib/darwin/libclang_rt.10.4.a
+lib/clang/${PKGVERSION}/lib/darwin/libclang_rt.asan_iossim_dynamic.dylib
+lib/clang/${PKGVERSION}/lib/darwin/libclang_rt.asan_osx_dynamic.dylib
+lib/clang/${PKGVERSION}/lib/darwin/libclang_rt.cc_kext.a
+lib/clang/${PKGVERSION}/lib/darwin/libclang_rt.cc_kext_ios5.a
+lib/clang/${PKGVERSION}/lib/darwin/libclang_rt.eprintf.a
+lib/clang/${PKGVERSION}/lib/darwin/libclang_rt.ios.a
+lib/clang/${PKGVERSION}/lib/darwin/libclang_rt.osx.a
+lib/clang/${PKGVERSION}/lib/darwin/libclang_rt.profile_ios.a
+lib/clang/${PKGVERSION}/lib/darwin/libclang_rt.profile_osx.a
+lib/clang/${PKGVERSION}/lib/darwin/libclang_rt.ubsan_osx.a
+lib/clang/${PKGVERSION}/lib/darwin_embedded/libclang_rt.hard_pic.a
+lib/clang/${PKGVERSION}/lib/darwin_embedded/libclang_rt.hard_static.a
+lib/clang/${PKGVERSION}/lib/darwin_embedded/libclang_rt.soft_pic.a
+lib/clang/${PKGVERSION}/lib/darwin_embedded/libclang_rt.soft_static.a
