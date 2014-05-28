@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2036 2014/05/28 06:25:58 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2037 2014/05/28 08:00:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2796,3 +2796,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added textproc/hs-blaze-markup version 0.6.1.0 [szptvlfn 2014-05-27]
 	Updated x11/xkeyboard-config to 2.12 [wiz 2014-05-28]
 	Updated wm/notion to 3.2014052800 [wiz 2014-05-28]
+	Updated databases/p5-DBD-mysql to 4.027 [wen 2014-05-28]
