@@ -1,14 +1,12 @@
-$NetBSD: patch-ca,v 1.19 2014/05/10 13:39:57 richard Exp $
+$NetBSD: patch-ca,v 1.20 2014/05/29 07:57:07 adam Exp $
 
 * Use "uname -r" to get OS version for *BSD.
-
 * Move $loclibpth to the end of $dlist, instead of the beginning.
-
 * Several other changes.
 
---- Configure.orig	2014-01-06 22:46:42.000000000 +0000
+--- Configure.orig	2014-05-26 13:34:18.000000000 +0000
 +++ Configure
-@@ -3274,13 +3274,14 @@ EOM
+@@ -3372,13 +3372,14 @@ EOM
  			osvers="$3"
  			;;
  		dragonfly) osname=dragonfly
@@ -25,7 +23,7 @@ $NetBSD: patch-ca,v 1.19 2014/05/10 13:39:57 richard Exp $
  		genix)	osname=genix ;;
  		gnu)	osname=gnu
  			osvers="$3" ;;
-@@ -3302,7 +3303,7 @@ EOM
+@@ -3401,7 +3402,7 @@ EOM
  		MiNT)	osname=mint
  			;;
  		netbsd*) osname=netbsd
@@ -34,7 +32,7 @@ $NetBSD: patch-ca,v 1.19 2014/05/10 13:39:57 richard Exp $
  			;;
  		news-os) osvers="$3"
  			case "$3" in
-@@ -3313,7 +3314,7 @@ EOM
+@@ -3412,7 +3413,7 @@ EOM
  		next*) osname=next ;;
  		nonstop-ux) osname=nonstopux ;;
  		openbsd) osname=openbsd
@@ -43,7 +41,7 @@ $NetBSD: patch-ca,v 1.19 2014/05/10 13:39:57 richard Exp $
                  	;;
  		os2)	osname=os2
  			osvers="$4"
-@@ -3328,6 +3329,9 @@ EOM
+@@ -3427,6 +3428,9 @@ EOM
  		qnx) osname=qnx
  			osvers="$4"
  			;;
@@ -53,7 +51,7 @@ $NetBSD: patch-ca,v 1.19 2014/05/10 13:39:57 richard Exp $
  		solaris) osname=solaris
  			case "$3" in
  			5*) osvers=`echo $3 | $sed 's/^5/2/g'` ;;
-@@ -4722,7 +4726,7 @@ case "$plibpth" in
+@@ -4941,14 +4945,14 @@ case "$plibpth" in
  esac
  case "$libpth" in
  ' ') dlist='';;
@@ -62,8 +60,7 @@ $NetBSD: patch-ca,v 1.19 2014/05/10 13:39:57 richard Exp $
  *) dlist="$libpth";;
  esac
  
-@@ -4730,7 +4734,7 @@ esac
- libpth=''
+ : Now check and see which directories actually exist, avoiding duplicates
  for xxx in $dlist
  do
 -    if $test -d $xxx; then
@@ -71,7 +68,7 @@ $NetBSD: patch-ca,v 1.19 2014/05/10 13:39:57 richard Exp $
  		case " $libpth " in
  		*" $xxx "*) ;;
  		*) libpth="$libpth $xxx";;
-@@ -4819,7 +4823,7 @@ lib_ext=$_a
+@@ -5064,7 +5068,7 @@ lib_ext=$_a
  obj_ext=$_o
  path_sep=$p_
  
@@ -80,7 +77,7 @@ $NetBSD: patch-ca,v 1.19 2014/05/10 13:39:57 richard Exp $
  
  : Which makefile gets called first.  This is used by make depend.
  case "$firstmakefile" in
-@@ -6486,7 +6492,9 @@ rp='Pathname for the site-specific libra
+@@ -6767,7 +6771,9 @@ rp='Pathname for the site-specific libra
  . ./getfile
  prefixvar=sitelib
  . ./setprefixvar
@@ -91,7 +88,7 @@ $NetBSD: patch-ca,v 1.19 2014/05/10 13:39:57 richard Exp $
  
  : Determine list of previous versions to include in @INC
  $cat > getverlist <<EOPL
-@@ -6999,7 +7007,9 @@ case "$vendorprefix" in
+@@ -7179,7 +7185,9 @@ case "$vendorprefix" in
  	vendorlibexp="$ansexp"
  	;;
  esac
@@ -102,7 +99,7 @@ $NetBSD: patch-ca,v 1.19 2014/05/10 13:39:57 richard Exp $
  prefixvar=vendorlib
  . ./installprefix
  
-@@ -7476,6 +7486,15 @@ case "$nm_so_opt" in
+@@ -7656,6 +7664,15 @@ case "$nm_so_opt" in
  	;;
  esac
  
@@ -118,15 +115,15 @@ $NetBSD: patch-ca,v 1.19 2014/05/10 13:39:57 richard Exp $
  : Figure out where the libc is located
  case "$runnm" in
  true)
-@@ -8048,6 +8067,7 @@ EOM
- 			      ;;
- 			linux|irix*|gnu*)  dflt="-shared $optimize" ;;
- 			next)  dflt='none' ;;
-+			sco_sv)  dflt='-shared' ;;
- 			solaris) # See [perl #66604].  On Solaris 11, gcc -m64 on amd64
- 				# appears not to understand -G.  gcc versions at
- 				# least as old as 3.4.3 support -shared, so just
-@@ -8347,7 +8361,7 @@ if "$useshrplib"; then
+@@ -8240,6 +8257,7 @@ EOM
+ 			  ;;
+ 		    *linux*|irix*|gnu*)  dflt="-shared $optimize" ;;
+ 		    next)  dflt='none' ;;
++		    sco_sv)  dflt='-shared' ;;
+ 		    solaris) # See [perl #66604].
+ 			    # On Solaris 11, gcc -m64 on amd64
+ 			    # appears not to understand -G.  gcc versions at
+@@ -8549,7 +8567,7 @@ if "$useshrplib"; then
  		# next doesn't like the default...
  		;;
  	haiku)
@@ -135,7 +132,7 @@ $NetBSD: patch-ca,v 1.19 2014/05/10 13:39:57 richard Exp $
  		;;
  	hpux*)
  		# hpux doesn't like the default, either.
-@@ -8356,6 +8376,9 @@ if "$useshrplib"; then
+@@ -8558,6 +8576,9 @@ if "$useshrplib"; then
  	cygwin)
  		# cygwin needs only ldlibpth
  		;;
@@ -145,7 +142,7 @@ $NetBSD: patch-ca,v 1.19 2014/05/10 13:39:57 richard Exp $
  	*)
  		tmp_shrpenv="env LD_RUN_PATH=$shrpdir"
  		;;
-@@ -9431,6 +9454,13 @@ esac
+@@ -9633,6 +9654,13 @@ esac
  : Check if we want perlio
  useperlio="$define"
  
@@ -159,7 +156,7 @@ $NetBSD: patch-ca,v 1.19 2014/05/10 13:39:57 richard Exp $
  : Set the vendorbin variables
  case "$vendorprefix" in
  '')	d_vendorbin="$undef"
-@@ -19243,7 +19273,15 @@ RCAT(Rei,ser)
+@@ -19366,7 +19394,15 @@ RCAT(Rei,ser)
  ACAT(Cir,cus)
  EOCP
  $cppstdin $cppflags $cppminus <cpp_stuff.c >cpp_stuff.out 2>&1
