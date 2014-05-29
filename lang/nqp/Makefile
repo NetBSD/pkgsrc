@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2014/04/09 07:27:00 obache Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/29 23:36:43 wiz Exp $
 
 DISTNAME=	nqp-2013.08
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang perl6
 MASTER_SITES=	http://rakudo.org/downloads/nqp/
 

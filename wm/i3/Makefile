@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2014/05/05 00:48:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2014/05/29 23:37:55 wiz Exp $
 #
 
 DISTNAME=	i3-4.7.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	wm
 MASTER_SITES=	http://i3wm.org/downloads/
 EXTRACT_SUFX=	.tar.bz2

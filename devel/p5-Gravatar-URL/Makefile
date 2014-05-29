@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2013/12/09 14:17:44 obache Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/29 23:35:57 wiz Exp $
 #
 
 DISTNAME=		Gravatar-URL-1.06
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Gravatar/}
 
