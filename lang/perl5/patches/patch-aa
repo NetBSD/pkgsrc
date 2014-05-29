@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.35 2012/10/03 19:59:47 adam Exp $
+$NetBSD: patch-aa,v 1.36 2014/05/29 07:57:07 adam Exp $
 
-- $Is{NetBSD} and $Is{Interix} are unified into $Is{BSD}.
-- Ignore installed packlist when creating new packlist.
+* $Is{NetBSD} and $Is{Interix} are unified into $Is{BSD}.
+* Ignore installed packlist when creating new packlist.
 
---- cpan/ExtUtils-MakeMaker/lib/ExtUtils/MM_Unix.pm.orig	2012-04-25 00:18:31.000000000 +0000
+--- cpan/ExtUtils-MakeMaker/lib/ExtUtils/MM_Unix.pm.orig	2014-05-26 13:34:19.000000000 +0000
 +++ cpan/ExtUtils-MakeMaker/lib/ExtUtils/MM_Unix.pm
-@@ -29,8 +29,6 @@ BEGIN { 
+@@ -29,8 +29,6 @@ BEGIN {
      $Is{VMS}     = $^O eq 'VMS';
      $Is{OSF}     = $^O eq 'dec_osf';
      $Is{IRIX}    = $^O eq 'irix';
@@ -14,21 +14,21 @@ $NetBSD: patch-aa,v 1.35 2012/10/03 19:59:47 adam Exp $
      $Is{SunOS4}  = $^O eq 'sunos';
      $Is{Solaris} = $^O eq 'solaris';
      $Is{SunOS}   = $Is{SunOS4} || $Is{Solaris};
-@@ -932,7 +930,7 @@ $(INST_DYNAMIC): $(OBJECT) $(MYEXTLIB) $
+@@ -934,7 +932,7 @@ $(INST_DYNAMIC): $(OBJECT) $(MYEXTLIB) $
  
      my $libs = '$(LDLOADLIBS)';
  
--    if (($Is{NetBSD} || $Is{Interix}) && $Config{'useshrplib'} eq 'true') {
+-    if (($Is{NetBSD} || $Is{Interix} || $Is{Android}) && $Config{'useshrplib'} eq 'true') {
 +    if ($Is{BSD} && $Config{'useshrplib'} eq 'true') {
  	# Use nothing on static perl platforms, and to the flags needed
  	# to link against the shared libperl library on shared perl
  	# platforms.  We peek at lddlflags to see if we need -Wl,-R
-@@ -2079,7 +2077,7 @@ pure_site_install :: all
- 
- pure_vendor_install :: all
+@@ -2116,7 +2114,7 @@ pure_vendor_install :: all
  	$(NOECHO) $(MOD_INSTALL) \
--		read }.$self->catfile('$(VENDORARCHEXP)','auto','$(FULLEXT)','.packlist').q{ \
-+		read "" \
+ };
+     push @m,
+-q{		read }.$self->catfile('$(VENDORARCHEXP)','auto','$(FULLEXT)','.packlist').q{ \
++q{		read "" \
  		write }.$self->catfile('$(DESTINSTALLVENDORARCH)','auto','$(FULLEXT)','.packlist').q{ \
- 		$(INST_LIB) $(DESTINSTALLVENDORLIB) \
- 		$(INST_ARCHLIB) $(DESTINSTALLVENDORARCH) \
+ } unless $self->{NO_PACKLIST};
+ 
