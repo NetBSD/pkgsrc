@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2013/05/31 12:42:15 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2014/05/29 23:37:41 wiz Exp $
 
 DISTNAME=		Text-ChaSen-1.04
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		4
+PKGREVISION=		5
 SVR4_PKGNAME=		p5tcs
 CATEGORIES=		japanese textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Text/}
