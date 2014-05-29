@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2014/05/03 10:04:24 wen Exp $
+# $NetBSD: Makefile,v 1.10 2014/05/29 23:38:15 wiz Exp $
 
 DISTNAME=	Twiggy-0.1024
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=AnyEvent/}
 

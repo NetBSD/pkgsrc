@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2013/12/09 14:17:50 obache Exp $
+# $NetBSD: Makefile,v 1.32 2014/05/29 23:37:05 wiz Exp $
 #
 
 DISTNAME=		netdisco-1.1_with_mibs
 PKGNAME=		netdisco-1.1
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=netdisco/}
 

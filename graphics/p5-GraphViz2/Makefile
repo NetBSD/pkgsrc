@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2013/12/09 14:17:47 obache Exp $
+# $NetBSD: Makefile,v 1.6 2014/05/29 23:36:40 wiz Exp $
 #
 
 DISTNAME=	GraphViz2-1.12
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=GraphViz2/}
 EXTRACT_SUFX=	.tgz

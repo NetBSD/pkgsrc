@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2013/05/31 12:41:50 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/05/29 23:37:18 wiz Exp $
 #
 
 DISTNAME=	Bastille-3.0.9
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bastille-linux/}
 EXTRACT_SUFX=	.tar.bz2

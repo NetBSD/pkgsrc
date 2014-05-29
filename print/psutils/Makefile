@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2013/05/31 12:41:49 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2014/05/29 23:37:17 wiz Exp $
 
 DISTNAME=	psutils-p17
 PKGNAME=	psutils-1.17
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	print
 MASTER_SITES=	http://gd.tuwien.ac.at/publishing/tex/tex-utils/psutils/
 

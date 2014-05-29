@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2014/01/01 09:20:33 wen Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/29 23:36:00 wiz Exp $
 #
 
 DISTNAME=	Import-Into-1.002000
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/H/HA/HAARG/}
 

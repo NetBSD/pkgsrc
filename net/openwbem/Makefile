@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2013/09/20 23:06:49 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2014/05/29 23:37:05 wiz Exp $
 
 DISTNAME=	openwbem-3.2.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openwbem/}
 

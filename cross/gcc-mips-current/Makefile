@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/04/05 11:05:38 martin Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/29 23:35:24 wiz Exp $
 
 GCC_PKGNAME=	gcc-mips-current
 
@@ -7,7 +7,7 @@ SNAPSHOT=	20140330
 GCC_DIST_VERSION=4.9-${SNAPSHOT}
 DISTNAME=	gcc-${GCC_DIST_VERSION}
 PKGNAME=	${GCC_PKGNAME}-${SNAPSHOT}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	cross lang
 MASTER_SITE_GCC=	\
 		ftp://ftp.fu-berlin.de/unix/languages/gcc/	\

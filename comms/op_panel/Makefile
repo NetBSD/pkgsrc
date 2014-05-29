@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2013/05/31 12:39:42 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/05/29 23:35:20 wiz Exp $
 #
 
 DISTNAME=	op_panel-0.29
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	comms
 MASTER_SITES=	http://www.asternic.org/files/
 

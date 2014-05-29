@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2014/04/09 07:27:07 obache Exp $
+# $NetBSD: Makefile,v 1.27 2014/05/29 23:36:33 wiz Exp $
 #
 
 DISTNAME=	svnfs-0.4
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	filesystems
 MASTER_SITES=	http://www.jmadden.eu/wp-content/uploads/svnfs/
 EXTRACT_SUFX=	.tgz

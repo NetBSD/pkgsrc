@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/02/20 11:43:56 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/29 23:35:17 wiz Exp $
 
 DISTNAME=	Bio-ASN1-EntrezGene-1.70
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	biology perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Bio/}
 

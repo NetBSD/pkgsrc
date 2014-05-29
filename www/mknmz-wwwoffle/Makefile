@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2013/05/31 12:42:33 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2014/05/29 23:37:58 wiz Exp $
 #
 
 DISTNAME=	mknmz-wwwoffle-0.7.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	japanese www
 MASTER_SITES=	http://www.naney.org/comp/distrib/mknmz-wwwoffle/archive/
 

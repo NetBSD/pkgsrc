@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2014/02/01 11:08:22 markd Exp $
+# $NetBSD: Makefile,v 1.27 2014/05/29 23:36:56 wiz Exp $
 
 DISTNAME=	kde4-4.11.5
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty

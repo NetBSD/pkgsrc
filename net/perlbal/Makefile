@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2013/12/09 14:17:51 obache Exp $
+# $NetBSD: Makefile,v 1.8 2014/05/29 23:37:11 wiz Exp $
 #
 
 DISTNAME=	Perlbal-1.80
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/D/DO/DORMANDO/
 USE_TOOLS+= perl

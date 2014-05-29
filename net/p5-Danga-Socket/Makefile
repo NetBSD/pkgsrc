@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2013/12/09 14:17:50 obache Exp $
+# $NetBSD: Makefile,v 1.6 2014/05/29 23:37:05 wiz Exp $
 #
 
 DISTNAME=	Danga-Socket-1.61
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/B/BR/BRADFITZ/
 

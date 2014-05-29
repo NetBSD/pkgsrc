@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2013/05/31 12:40:03 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/29 23:35:39 wiz Exp $
 
 GIT_COMMIT=	dd51ac5
 
 DISTNAME=	${GIT_COMMIT}
 PKGNAME=	p5-App-Prove-Plugin-ProgressBar-0.01
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	-http://nodeload.github.com/Ovid/App-Prove-Plugin-ProgressBar/tar.gz/${GIT_COMMIT}
 

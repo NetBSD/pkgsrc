@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2013/05/31 12:42:30 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2014/05/29 23:37:55 wiz Exp $
 #
 
 DISTNAME=	HTML-Embperl-1.2.0
 PKGNAME=	ap13-Embperl-1.2.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTML/} \
 		ftp://ftp.dev.ecos.de/pub/perl/embperl/

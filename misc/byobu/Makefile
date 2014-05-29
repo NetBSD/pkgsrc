@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2014/05/09 07:37:11 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/29 23:36:57 wiz Exp $
 
 DISTNAME=	byobu_5.69.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://byobu.co/download/
 
