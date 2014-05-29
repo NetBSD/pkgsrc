@@ -1,0 +1,7 @@
+# $NetBSD: DEINSTALL,v 1.1 2014/05/29 19:59:39 tron Exp $
+
+case ${STAGE} in
+POST-DEINSTALL)
+	rm -f /usr/lib/security/pam_ldap.so
+	;;
+esac
