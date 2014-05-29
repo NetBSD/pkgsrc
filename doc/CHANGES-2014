@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2051 2014/05/29 22:06:27 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.2052 2014/05/29 22:09:00 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2819,3 +2819,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/contao33 to 3.3.0nb1 [taca 2014-05-29]
 	Updated security/pam-ldap to 186nb4 [tron 2014-05-29]
 	Added devel/hs-mmorph version 1.0.3 [szptvlfn 2014-05-29]
+	Added textproc/hs-polyparse version 1.9 [szptvlfn 2014-05-29]
