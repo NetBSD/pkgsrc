@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2014/05/09 07:37:21 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2014/05/29 08:58:24 darcy Exp $
 
 DISTNAME=	dblatex-0.3.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dblatex/}
 EXTRACT_SUFX=	.tar.bz2
@@ -33,5 +33,5 @@ do-test:
 	cd ${WRKSRC}/tests/mathml && gmake
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
