@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.68 2013/11/24 04:01:07 dholland Exp $
+# $NetBSD: Makefile,v 1.69 2014/05/29 23:35:20 wiz Exp $
 #
 
 DISTNAME=	fidogate-4.4.10
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fidogate/}
 

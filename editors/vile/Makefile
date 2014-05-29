@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2013/05/31 12:41:00 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2014/05/29 23:36:32 wiz Exp $
 
 DISTNAME=		vile-9.8
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		editors
 MASTER_SITES=		ftp://invisible-island.net/vile/
 EXTRACT_SUFX=		.tgz

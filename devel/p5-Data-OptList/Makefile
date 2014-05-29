@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2013/09/05 18:39:35 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2014/05/29 23:35:48 wiz Exp $
 
 DISTNAME=	Data-OptList-0.108
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
 

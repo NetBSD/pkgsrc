@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2013/12/09 14:17:41 obache Exp $
+# $NetBSD: Makefile,v 1.19 2014/05/29 23:35:16 wiz Exp $
 
 # To the poor soul who wants to update this package:
 #
@@ -43,7 +43,7 @@
 
 DISTNAME=	${PRODUCT:tl:S/_v/-/}-noCPAN
 PKGNAME=	${DISTNAME:S/-noCPAN//}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.slimdevices.com/${PRODUCT}/
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/05/20 01:59:05 pho Exp $
+# $NetBSD: Makefile,v 1.30 2014/05/29 23:36:42 wiz Exp $
 
 GCC_PKGNAME=		gcc47
 .include		"version.mk"
@@ -8,7 +8,7 @@ PKGNAME=	${GCC_PKGNAME}-${GCC47_DIST_VERSION}
 ## When bumping the PKGREVISION of this package the PKGREVISION of
 ## lang/gcc47-libs needs to be bump to be at least 1 more than the
 ## PKGREVISION of this package!
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC47_DIST_VERSION}/}
 EXTRACT_SUFX=	.tar.bz2
