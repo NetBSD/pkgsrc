@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2014/05/27 15:21:57 taca Exp $
+# $NetBSD: Makefile,v 1.6 2014/05/29 15:44:57 taca Exp $
 #
 
 DISTNAME=	${CT_VERSION}
 PKGNAME=	contao${CT_VER}-${CT_PKGVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${CT_MASTER_SITE}
 
@@ -18,6 +18,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.3.2:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-{mysql,mysqli}>=5.3.2:../../databases/php-mysqli
 DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=5.3.2:../../security/php-mcrypt
 DEPENDS+=	${PHP_PKG_PREFIX}-soap>=5.3.2:../../net/php-soap
+DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.2.7:../../archivers/php-zlib
 DEPENDS+=	bash>=4.0:../../shells/bash
 
 CT_VERS=	32
