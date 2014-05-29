@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/05/29 22:08:37 szptvlfn Exp $
+
+SHA1 (polyparse-1.9.tar.gz) = 3eaa42c1f9edbc3802318d463484f9fcbc8c5012
+RMD160 (polyparse-1.9.tar.gz) = 07be0c999d94f1f5d914528b40fb3a601788141b
+Size (polyparse-1.9.tar.gz) = 22256 bytes
