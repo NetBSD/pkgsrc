@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2043 2014/05/29 01:30:05 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2044 2014/05/29 01:38:27 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2808,3 +2808,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/hs-tf-random version 0.5 [szptvlfn 2014-05-28]
 	Added devel/hs-tf-random version 0.5 [szptvlfn 2014-05-28]
 	Updated devel/p5-Module-CoreList to 3.11 [wen 2014-05-29]
+	Updated devel/p5-autodie to 2.25 [wen 2014-05-29]
