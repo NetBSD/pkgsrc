@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2013/06/26 14:26:47 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/29 23:37:28 wiz Exp $
 #
 
 DISTNAME=	etckeeper_1.3
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/e/etckeeper/}
 

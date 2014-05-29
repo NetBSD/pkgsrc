@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2014/03/18 15:34:04 mef Exp $
+# $NetBSD: Makefile,v 1.8 2014/05/29 23:35:24 wiz Exp $
 .include		"../../cross/nios2/Makefile.common"
 PKGNAME=		nios2-binutils-${PKG_VERSION}
 PKG_VERSION=		2.23
+PKGREVISION=		1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=

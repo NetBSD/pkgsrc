@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2014/03/04 00:32:19 obache Exp $
+# $NetBSD: Makefile,v 1.49 2014/05/29 23:36:27 wiz Exp $
 
 DISTNAME=	Glib-1.304
 PKGNAME=	p5-${DISTNAME:S/Glib/glib2/}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk2-perl/}
 
