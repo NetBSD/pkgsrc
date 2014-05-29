@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2014/05/06 05:37:05 dsainty Exp $
+# $NetBSD: Makefile,v 1.8 2014/05/29 23:37:03 wiz Exp $
 
 DISTNAME=	${GHACCOUNT}-${GHNAME}-${GHDESCRIBE}-g${GHCOMMIT}
 PKGNAME=	${GHNAME}-0.0.${GHDATE}
-PKGREVISION=	1
+PKGREVISION=	2
 GHNAME=		get-flash-videos
 
 # git describe + GHVERSION from the last commit + GHCOMMIT from the tar.

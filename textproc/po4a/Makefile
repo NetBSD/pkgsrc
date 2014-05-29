@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2013/06/18 19:24:20 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2014/05/29 23:37:49 wiz Exp $
 
 DISTNAME=		po4a-0.23
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		textproc
 MASTER_SITES=		http://alioth.debian.org/download.php/1317/
 

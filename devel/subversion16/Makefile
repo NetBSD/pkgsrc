@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2014/05/17 16:10:43 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2014/05/29 23:36:30 wiz Exp $
 
 PKGNAME=	subversion16-${SVNVER}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Version control system, meta-package
 
 META_PACKAGE=	# empty

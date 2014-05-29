@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2013/05/31 12:41:44 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2014/05/29 23:37:13 wiz Exp $
 #
 
 DISTNAME=	walker-3.8
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	http://josefsson.org/walker/releases/
 
