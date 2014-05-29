@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/29 08:54:02 darcy Exp $
+bin/chordii
+bin/a2crd
+man/man1/chordii.1
+man/man1/a2crd.1
