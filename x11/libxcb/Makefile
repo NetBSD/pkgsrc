@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2014/01/02 19:52:16 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2014/05/29 00:39:47 rodent Exp $
 
 DISTNAME=	libxcb-1.10
 CATEGORIES=	x11
@@ -61,6 +61,7 @@ PKGCONFIG_OVERRIDE+=	xcb.pc.in
 # addition to MIT-MAGIC-COOKIE-1.
 
 .include "../../mk/pthread.buildlink3.mk"
+LDFLAGS.OpenBSD+=	${PTHREAD_LDFLAGS}
 
 XTHREADLIB=	${${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}:L:M*}
 
