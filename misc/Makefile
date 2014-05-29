@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.429 2014/05/24 13:14:01 obache Exp $
+# $NetBSD: Makefile,v 1.430 2014/05/29 08:54:02 darcy Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -27,6 +27,7 @@ SUBDIR+=	calibre
 SUBDIR+=	celestia
 SUBDIR+=	chipmunk
 SUBDIR+=	chord
+SUBDIR+=	chordii
 SUBDIR+=	cksfv
 SUBDIR+=	color-theme
 SUBDIR+=	colorblind
