@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2049 2014/05/29 15:46:29 taca Exp $
+$NetBSD: CHANGES-2014,v 1.2050 2014/05/29 19:59:56 tron Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2817,3 +2817,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/contao211 to 2.11.17nb2 [taca 2014-05-29]
 	Updated www/contao32 to 3.2.10nb2 [taca 2014-05-29]
 	Updated www/contao33 to 3.3.0nb1 [taca 2014-05-29]
+	Updated security/pam-ldap to 186nb4 [tron 2014-05-29]
