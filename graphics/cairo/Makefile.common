@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2014/05/27 08:43:55 pho Exp $
+# $NetBSD: Makefile.common,v 1.3 2014/05/29 14:24:24 darcy Exp $
 #
 # used by graphics/cairo/Makefile
 # used by graphics/cairo-gobject/Makefile
@@ -16,7 +16,7 @@ LICENSE=	gnu-lgpl-v2.1 AND mpl-1.1
 DISTINFO_FILE=	${.CURDIR}/../../graphics/cairo/distinfo
 PATCHDIR=	${.CURDIR}/../../graphics/cairo/patches
 
-USE_LANGUAGES=		c99
+USE_LANGUAGES=		c99 c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
