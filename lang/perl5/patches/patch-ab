@@ -1,51 +1,14 @@
-$NetBSD: patch-ab,v 1.19 2013/03/04 11:56:29 obache Exp $
+$NetBSD: patch-ab,v 1.20 2014/05/29 07:57:07 adam Exp $
 
-* fixes packlist with destdir installation on Cygwin.
-  https://rt.perl.org/rt3/Ticket/Display.html?id=117033
 * XXX
 
---- installperl.orig	2012-10-26 02:44:15.000000000 +0000
+--- installperl.orig	2014-05-26 13:34:20.000000000 +0000
 +++ installperl
-@@ -275,7 +275,7 @@ if (($Is_W32 and ! $Is_NetWare) or $Is_C
-     safe_unlink("$installbin/$perldll");
-     copy("$perldll", "$installbin/$perldll");
-     chmod(0755, "$installbin/$perldll");
--    $packlist->{"$installbin/$perldll"} = { type => 'file' };
-+    $packlist->{"$Config{installbin}/$perldll"} = { type => 'file' };
- } # if (($Is_W32 and ! $Is_NetWare) or $Is_Cygwin)
- 
- # First we install the version-numbered executables.
-@@ -346,7 +346,6 @@ $do_installprivlib = 0 if $versiononly &
- mkpath($installprivlib, $opts{verbose}, 0777);
- mkpath($installarchlib, $opts{verbose}, 0777);
+@@ -332,7 +332,6 @@ $do_installprivlib = 0 if $versiononly &
+ mkpath($installprivlib);
+ mkpath($installarchlib);
  mkpath($installsitelib, $opts{verbose}, 0777) if ($installsitelib);
 -mkpath($installsitearch, $opts{verbose}, 0777) if ($installsitearch);
  
  if (-d 'lib') {
      find({no_chdir => 1, wanted => \&installlib}, 'lib')
-@@ -367,21 +366,22 @@ if ($Is_VMS) {  # We did core file selec
- elsif ($Is_Cygwin) { # On Cygwin symlink it to CORE to make Makefile happy
-     @corefiles = <*.h libperl*.* perl*$Config{lib_ext}>;
-     my $coredll = "$installarchlib/CORE/$libperl";
-+    my $instcoredll = "$Config{installarchlib}/CORE/$libperl";
-     safe_unlink($coredll);
-     ( $Config{'d_link'} eq 'define' &&
-       eval {
-           CORE::link("$installbin/$libperl", $coredll);
--          $packlist->{$coredll} = { from => "$installbin/$libperl",
-+          $packlist->{$instcoredll} = { from => "$Config{installbin}/$libperl",
-                                     type => 'link' };
-       }
-     ) ||
-     eval {
-         symlink("$installbin/$libperl", $coredll);
--        $packlist->{$coredll} = { from => "$installbin/$libperl",
-+        $packlist->{$instcoredll} = { from => "$Config{installbin}/$libperl",
-                                   type => 'link' };
-     } ||
-     ( copy("$installbin/$libperl", $coredll) &&
--      push(@corefiles, $coredll)
-+      push(@corefiles, $instcoredll)
-     )
- } else {
-     # [als] hard-coded 'libperl' name... not good!

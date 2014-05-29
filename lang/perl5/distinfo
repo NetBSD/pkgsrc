@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.116 2014/05/10 13:39:57 richard Exp $
+$NetBSD: distinfo,v 1.117 2014/05/29 07:57:07 adam Exp $
 
-SHA1 (perl-5.18.2.tar.bz2) = b8b87ef46630b5a2287b86b6e0c69088da36adfd
-RMD160 (perl-5.18.2.tar.bz2) = 1b656ae4f53845aac11e62b71c2d84c156ebfbd0
-Size (perl-5.18.2.tar.bz2) = 14058513 bytes
+SHA1 (perl-5.20.0.tar.bz2) = e925e4fc36e90eace19a1ca850f912618ba6788f
+RMD160 (perl-5.20.0.tar.bz2) = a14fa854f2d50aa5f16ff3a982244dd6cd0c4730
+Size (perl-5.20.0.tar.bz2) = 13770469 bytes
 SHA1 (patch-Makefile.SH) = 4fceb8bc225ea784ecda3920e888f0ddb1aad997
-SHA1 (patch-aa) = 9066746c6e6ed0d58962f52de1ae773e210cfcb5
-SHA1 (patch-ab) = ddddf24cfa96c3b95202c2081006e0c7216afa1d
-SHA1 (patch-ac) = cd918ae7aedddfcd3d555a1d1388c4c8719ccd12
-SHA1 (patch-ah) = f66b496ba8f7b7d3e5a1f0c6f03d051a652f426e
+SHA1 (patch-aa) = 441ad4f0d27d9be0fcdce31c9d35d35d98958518
+SHA1 (patch-ab) = c899b7221a78e74cc9b1480834baba047dd19f38
+SHA1 (patch-ac) = 7e26ac37d540fdb64a8c1b379f0bbb96efa77e56
+SHA1 (patch-ah) = c1cb4ddb6db49dcfe12bb1d47911668b2318b953
 SHA1 (patch-aq) = 4bf5a76f0277b0939b2ca7720f4bb045a788b5cc
-SHA1 (patch-ca) = 7061f28e599526b6f68087b232c3465aac87f1a2
+SHA1 (patch-ca) = 7340d2858d5969d519b43b12e5701677b219bc84
 SHA1 (patch-ch) = 5b6a89c82e158bab0a5f06add48c28e600678099
 SHA1 (patch-ck) = 5c381db130cdf4c315678e2d65380eaaa3065fee
 SHA1 (patch-cn) = d1877383e213a414562b5bb4c1e8aa785926fab7
@@ -18,8 +18,6 @@ SHA1 (patch-hints_cygwin.sh) = 1b21d927d6b7379754c4cd64a2b05d3632c35470
 SHA1 (patch-hints_darwin.sh) = c561d1862f8ca76652a35741c691394eb8cda70a
 SHA1 (patch-hints_netbsd.sh) = 027722c47bb01aa8db21e534178432cd26b49cdf
 SHA1 (patch-hints_sco.sh) = 8d43cdc0632799e1cdb5dc6fdb968052a9ae4216
-SHA1 (patch-hv.c) = 0ed39926d620724db6d612a717d84b4efa129162
-SHA1 (patch-locale.c) = e34500b5d0e2f868a4c9e3b3e4ae84e2ddbf1b18
 SHA1 (patch-ta) = a9d13eeec22733e4087942f217a0d47a19498a6f
 SHA1 (patch-zd) = 469602bc04b217f2d9929f5caeab43f77a74076f
-SHA1 (patch-ze) = 211ed6065ecf2ca02f8e95283c2d67a64c2e6b41
+SHA1 (patch-ze) = d6fb718a1417e37a7d6bee1ae89fe2beec51c81b
