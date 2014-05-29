@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2014/05/16 11:53:08 ryoon Exp $
+# $NetBSD: options.mk,v 1.5 2014/05/29 23:03:55 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libreoffice4
 PKG_SUPPORTED_OPTIONS=	java debug kde4 gtk3
@@ -46,7 +46,7 @@ CONFIGURE_ARGS+=	--enable-release-build
 .if !empty(PKG_OPTIONS:Mgtk3)
 CONFIGURE_ARGS+=	--enable-gtk3
 PLIST.gtk3=		yes
-.include "../../x11/gtk3+/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-gtk3
 .endif
