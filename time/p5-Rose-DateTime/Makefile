@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2014/02/06 13:00:59 abs Exp $
+# $NetBSD: Makefile,v 1.15 2014/05/29 23:37:53 wiz Exp $
 
 DISTNAME=	Rose-DateTime-0.540
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Rose/}
 

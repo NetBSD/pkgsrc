@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2013/07/12 10:44:56 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2014/05/29 23:36:45 wiz Exp $
 #
 
 DISTNAME=	fml-7.98.18-${FML_STAMP}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.fml.org/pub/fml8/
 

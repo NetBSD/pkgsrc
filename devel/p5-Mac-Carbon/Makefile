@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2013/05/31 12:40:29 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2014/05/29 23:36:02 wiz Exp $
 #
 
 DISTNAME=	Mac-Carbon-0.82
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mac/}
 

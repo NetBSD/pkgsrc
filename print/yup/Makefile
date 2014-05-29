@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2013/05/31 12:41:50 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2014/05/29 23:37:18 wiz Exp $
 #
 
 DISTNAME=		yup-r1-rel
 PKGNAME=		yup-1.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		print
 MASTER_SITES=		# http://redback.spyda.net/~mjch/yup/
 EXTRACT_SUFX=		.tgz

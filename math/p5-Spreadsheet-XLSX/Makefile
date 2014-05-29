@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2013/05/31 12:41:24 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/05/29 23:36:55 wiz Exp $
 #
 
 DISTNAME=	Spreadsheet-XLSX-0.13-withoutworldwriteables
 PKGNAME=	p5-${DISTNAME:S/-withoutworldwriteables//}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	math perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Spreadsheet/}
 

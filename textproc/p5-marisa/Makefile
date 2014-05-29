@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/05/24 10:21:13 obache Exp $
-#
+# $NetBSD: Makefile,v 1.2 2014/05/29 23:37:49 wiz Exp $
 
 .include "../../textproc/marisa/Makefile.common"
 
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES+=	perl5
 
 COMMENT=	MARISA perl module

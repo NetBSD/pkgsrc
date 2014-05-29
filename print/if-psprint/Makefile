@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2013/05/31 12:41:48 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2014/05/29 23:37:16 wiz Exp $
 #
 
 DISTNAME=	if-psprint-1.10
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	print
 MASTER_SITES=	http://if-psprint.googlecode.com/files/
 EXTRACT_SUFX=  	.tbz

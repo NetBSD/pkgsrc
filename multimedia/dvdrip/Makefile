@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2013/05/31 12:41:30 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2014/05/29 23:37:00 wiz Exp $
 #
 
 DISTNAME=	dvdrip-0.98.11
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	multimedia x11 sysutils
 MASTER_SITES=	http://www.exit1.org/dvdrip/dist/
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2013/12/09 14:17:48 obache Exp $
+# $NetBSD: Makefile,v 1.12 2014/05/29 23:36:44 wiz Exp $
 #
 
 DISTNAME=		YoSucker-pr37
 PKGNAME=		${DISTNAME:S/pr//}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=yosucker/}
 

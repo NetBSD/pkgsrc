@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2013/07/21 10:44:03 shattered Exp $
+# $NetBSD: Makefile,v 1.12 2014/05/29 23:36:58 wiz Exp $
 #
 
 DISTNAME=		mirmon-2.8
+PKGREVISION=		1
 CATEGORIES=		misc
 MASTER_SITES=		http://www.staff.science.uu.nl/~penni101/mirmon/
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2014/03/11 14:34:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.23 2014/05/29 23:37:04 wiz Exp $
 #
 
 DISTNAME=		nrpe-2.12
 PKGNAME=		nagios-${DISTNAME}
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		net sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=nagios/}
 

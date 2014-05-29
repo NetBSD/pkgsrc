@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2013/12/09 14:17:47 obache Exp $
+# $NetBSD: Makefile,v 1.14 2014/05/29 23:36:26 wiz Exp $
 
 DISTNAME=	VCP-autrijus-snapshot-0.9-${SNAPSHOT_VERS}
 SNAPSHOT_VERS=	20050110
 PKGNAME=	p5-${DISTNAME:S/-autrijus-snapshot-/-/:S/-${SNAPSHOT_VERS}$/beta${SNAPSHOT_VERS}/}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel perl5 scm
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S/${MODULE_DIR}/${AUTHOR_DIR}/}
 MODULE_DIR=	modules/by-module

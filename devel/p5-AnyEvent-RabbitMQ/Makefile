@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2014/05/18 03:29:55 mspo Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/29 23:35:38 wiz Exp $
 
 DISTNAME=	AnyEvent-RabbitMQ-1.16
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://cpan.metacpan.org/CPAN/authors/id/B/BO/BOBTFISH/
 MASTER_SITES+=	http://cpan.metacpan.org/authors/id/B/BO/BOBTFISH/

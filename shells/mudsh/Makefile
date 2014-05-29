@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2013/05/31 12:41:58 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2014/05/29 23:37:26 wiz Exp $
 #
 
 DISTNAME=	mudsh
 PKGNAME=	mudsh-20010311
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_FREEBSD}
 EXTRACT_SUFX=	# empty

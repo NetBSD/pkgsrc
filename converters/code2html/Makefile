@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2013/05/31 12:39:43 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2014/05/29 23:35:21 wiz Exp $
 #
 
 DISTNAME=	code2html-0.9.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	converters devel textproc
 MASTER_SITES=	http://www.palfrader.org/code2html/all/
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2013/05/31 12:41:10 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2014/05/29 23:36:42 wiz Exp $
 #
 
 .include "../../inputmethod/zinnia/Makefile.common"
 
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 
 COMMENT=	Zinnia perl module
 

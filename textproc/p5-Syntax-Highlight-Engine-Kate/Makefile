@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2014/03/03 00:24:52 rodent Exp $
+# $NetBSD: Makefile,v 1.8 2014/05/29 23:37:40 wiz Exp $
 #
 
 DISTNAME=	Syntax-Highlight-Engine-Kate-0.08
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Syntax/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2013/11/28 06:04:08 dholland Exp $
+# $NetBSD: Makefile,v 1.36 2014/05/29 23:37:16 wiz Exp $
 #
 
 DISTNAME=	html2ps-1.0b7
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	print
 MASTER_SITES=	http://user.it.uu.se/~jan/
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2014/05/09 07:36:56 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2014/05/29 23:35:19 wiz Exp $
 
 .include "../../chat/xchat/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/-/-python-/}
-PKGREVISION=		7
+PKGREVISION=		8
 OWNER=			tron@NetBSD.org
 
 COMMENT=		Python scripting plugin for XChat

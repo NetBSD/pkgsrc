@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2012/10/03 21:56:00 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2014/05/29 23:36:32 wiz Exp $
 #
 
 DISTNAME=		freebsd_lib-2.2.7
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.flame.org/NetBSD/
 

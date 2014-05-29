@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2013/05/31 12:40:40 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2014/05/29 23:36:13 wiz Exp $
 
 DISTNAME=	PerlIO-eol-0.14
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=PerlIO/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2013/10/11 09:58:53 roy Exp $
+# $NetBSD: Makefile,v 1.64 2014/05/29 23:35:19 wiz Exp $
 #
 
 DISTNAME=		${SILC_CLIENT_DISTNAME}
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		chat security
 MASTER_SITES=		http://www.silcnet.org/download/client/sources/ \
 			ftp://ftp.silcnet.org/silc/client/sources/ \

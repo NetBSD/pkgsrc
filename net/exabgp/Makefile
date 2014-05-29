@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2014/05/09 07:37:14 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/29 23:37:03 wiz Exp $
 
 DISTNAME=	exabgp-exabgp-3.2.19
 PKGNAME=	exabgp-3.2.19
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	-https://github.com/Exa-Networks/exabgp/tarball/3.2.19
 

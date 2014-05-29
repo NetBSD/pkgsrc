@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2014/05/09 07:37:21 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2014/05/29 23:37:34 wiz Exp $
 
 DISTNAME=	gtk-doc-1.20
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-doc/1.20/}
 EXTRACT_SUFX=	.tar.xz

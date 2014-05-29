@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2013/05/31 12:42:23 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2014/05/29 23:37:49 wiz Exp $
 
 .include "../../textproc/mecab/Makefile.common"
 
 DISTNAME=		mecab-perl-${MECAB_VERSION}
 PKGNAME=		p5-mecab-${MECAB_VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES+=		perl5
 
 COMMENT=		MeCab perl module

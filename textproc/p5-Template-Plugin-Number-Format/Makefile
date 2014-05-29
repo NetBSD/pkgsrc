@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2013/05/31 12:42:14 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2014/05/29 23:37:41 wiz Exp $
 #
 
 DISTNAME=	Template-Plugin-Number-Format-1.02
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Template/}
 

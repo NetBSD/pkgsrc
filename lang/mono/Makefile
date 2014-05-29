@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.148 2014/05/17 16:10:46 wiz Exp $
+# $NetBSD: Makefile,v 1.149 2014/05/29 23:36:43 wiz Exp $
 
 DISTNAME=	mono-3.0.10
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	lang
 MASTER_SITES=	http://download.mono-project.com/sources/mono/
 EXTRACT_SUFX=	.tar.bz2

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2013/05/31 12:42:04 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2014/05/29 23:37:32 wiz Exp $
 
 DISTNAME=	sarah-0.9.1b
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://prdownloads.sourceforge.net/sarah/
 

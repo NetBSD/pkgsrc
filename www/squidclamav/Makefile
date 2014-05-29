@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2013/09/03 13:39:11 adam Exp $
+# $NetBSD: Makefile,v 1.9 2014/05/29 23:38:17 wiz Exp $
 
 DISTNAME=	squidclamav-6.10
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squidclamav/}
 
