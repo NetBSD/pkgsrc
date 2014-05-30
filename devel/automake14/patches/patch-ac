@@ -1,11 +1,31 @@
-$NetBSD: patch-ac,v 1.1 2011/06/10 09:43:41 tron Exp $
+$NetBSD: patch-ac,v 1.2 2014/05/30 10:57:44 tron Exp $
 
-Fix for CVE-2009-4029 taken from here:
+1.) Fix for CVE-2009-4029 taken from here:
 
 http://git.savannah.gnu.org/gitweb/?p=automake.git;a=commitdiff;h=449d20aa12e13fefd848604225fc83d0c39c61d0
 
+2.) Make this work with Perl 5.20.0 and newer.
+
 --- automake.in.orig	2002-07-27 21:55:58.000000000 +0100
-+++ automake.in	2011-06-10 10:34:37.000000000 +0100
++++ automake.in	2014-05-30 11:50:32.000000000 +0100
+@@ -983,7 +983,7 @@
+ 
+ 	# Compute the function name of the finisher and then call it.
+ 	$name = 'lang_' . $lang . '_finish';
+-	do $name ();
++	eval "$name()";
+     }
+ 
+     # If the project is entirely C++ or entirely Fortran 77, don't
+@@ -1144,7 +1144,7 @@
+ 		# Found the language, so see what it says.
+ 		local ($subr) = 'lang_' . $lang . '_rewrite';
+ 		# Note: computed subr call.
+-		local ($r) = do $subr ($base, $extension);
++		local ($r) = eval "$subr(\$base, \$extension)";
+ 		# Skip this entry if we were asked not to process it.
+ 		next if ! $r;
+ 
 @@ -2336,7 +2336,7 @@
  	# Create dist directory.
  	$output_rules .= ("\t-rm -rf \$(distdir)\n"
