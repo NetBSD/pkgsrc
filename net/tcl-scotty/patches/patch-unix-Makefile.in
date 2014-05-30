@@ -1,4 +1,4 @@
-$NetBSD: patch-unix-Makefile.in,v 1.1 2014/03/05 13:52:29 he Exp $
+$NetBSD: patch-unix-Makefile.in,v 1.2 2014/05/30 11:35:35 joerg Exp $
 
 Put installed files under lib/tcl, so that tcl more easily picks it
 up using e.g. "package require Tnm".
@@ -26,6 +26,15 @@ since that's not used in pkgsrc.
  
  # Top-level directory for manual entries:
  MAN_INSTALL_DIR =	$(prefix)/man
+@@ -57,7 +57,7 @@ MANN_INSTALL_DIR =	$(MAN_INSTALL_DIR)/ma
+ 
+ # To change the compiler switches, for example to change from -O
+ # to -g, change the following line:
+-CFLAGS = -O
++#CFLAGS = -O
+ 
+ # NTPING should contain the full path to the installed ntping binary.
+ NTPING = $(BIN_INSTALL_DIR)/ntping
 @@ -82,7 +82,7 @@ TCL_EXEC_PREFIX=@TCL_EXEC_PREFIX@
  
  # The full name of the tclsh executable (including the full path
