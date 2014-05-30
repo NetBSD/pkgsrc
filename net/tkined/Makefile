@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/01/11 14:42:05 adam Exp $
+# $NetBSD: Makefile,v 1.27 2014/05/30 11:35:14 joerg Exp $
 #
 
 DISTNAME=	scotty-2.1.11
@@ -30,6 +30,8 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man1
 CONFIGURE_DIRS=	unix
 BUILD_DIRS=	unix
 INSTALL_TARGET=	tki-install
+
+CFLAGS+=	-DUSE_INTERP_RESULT
 
 .include "../../net/tcl-scotty/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
