@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2014/04/07 12:15:55 ryoon Exp $
+$NetBSD: distinfo,v 1.10 2014/05/30 11:33:32 joerg Exp $
 
 SHA1 (oiio-Release-1.3.13.tar.gz) = 2d996eacc12ce177c9bf7a946e05dc3f72196264
 RMD160 (oiio-Release-1.3.13.tar.gz) = b00909b1aeb5fb6c767e5f95cf1c1a5ab42995da
@@ -8,6 +8,7 @@ SHA1 (patch-src_cmake_modules_FindOpenJpeg.cmake) = 5c68708dc0c987c27719e63ab634
 SHA1 (patch-src_cmake_oiio__macros.cmake) = 37962a7256e1e82b6ffa1b16bfc771ea3812fae3
 SHA1 (patch-src_cmake_platform.cmake) = b7c8f459499563f6aeb0de270087d1993db67af3
 SHA1 (patch-src_dpx.imageio_libdpx_DPXColorConverter.cpp) = e758c6fc1960575f6471c28f03180031875cdf5d
+SHA1 (patch-src_gif.imageio_gifinput.cpp) = 5a4d0879c202e861c252a3c46bfcafdf41f48a68
 SHA1 (patch-src_include_tbb_tbb__machine.h) = 7e642a6f26193066c4ccae1ae7a4a7f14f9c6641
 SHA1 (patch-src_include_tbb_tbb__misc.h) = b12317c9652c93cf22dbe8bd34f19ac7808f3215
 SHA1 (patch-src_libOpenImageIO_formatspec.cpp) = 489ac7964258cd5f940a89ca217048fc1940ef8a
