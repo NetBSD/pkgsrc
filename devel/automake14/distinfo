@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2011/06/10 09:43:41 tron Exp $
+$NetBSD: distinfo,v 1.6 2014/05/30 10:57:44 tron Exp $
 
 SHA1 (automake-1.4-p6.tar.gz) = 330c75c98e6dcdf21cbb63cf94ced8ea564b9438
 RMD160 (automake-1.4-p6.tar.gz) = ae40b2200eec95b601ebc65bc3cc916bb2a54066
 Size (automake-1.4-p6.tar.gz) = 375060 bytes
 SHA1 (patch-aa) = e5e7f073a777be92f419173c9cc84dc42325a3a1
 SHA1 (patch-ab) = b074d0139e0b36f19a71304e739ea5b7f332fcc6
-SHA1 (patch-ac) = 3e9800a8592c6dfd56311ab6e3066066cb5bc46f
+SHA1 (patch-ac) = bb6ce6621d5c93fd4a0bbcea7ce0f5292d451c42
