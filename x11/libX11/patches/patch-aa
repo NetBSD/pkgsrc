@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.10 2012/07/10 03:03:01 mef Exp $
+$NetBSD: patch-aa,v 1.11 2014/05/30 12:51:29 wiz Exp $
 
 Include pthread.h as thread stubs might be macros like on NetBSD.
 
@@ -7,9 +7,9 @@ Define conditional for cross-compiling support.
 Also, don't look for keysmydef.h, as this could break cross
 builds (from GIT).
 
---- configure.ac.orig	2012-06-02 15:37:17.000000000 +0900
-+++ configure.ac	2012-06-28 19:14:45.000000000 +0900
-@@ -277,7 +277,7 @@
+--- configure.ac.orig	2013-09-09 01:37:20.000000000 +0000
++++ configure.ac
+@@ -276,7 +276,7 @@ xyes)
  	;;
  esac
  
@@ -18,7 +18,7 @@ builds (from GIT).
  AM_CONDITIONAL(THRSTUBS, test x$thrstubs = xyes)
  
  # XXX incomplete, please fill this in
-@@ -286,12 +286,12 @@
+@@ -285,12 +285,12 @@ if test x$xthreads = xyes ; then
      linux*|gnu*|k*bsd*-gnu)
          XTHREADLIB=-lpthread ;;
      netbsd*)

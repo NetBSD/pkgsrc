@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile.in,v 1.1 2013/06/04 07:57:13 wiz Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2014/05/30 12:51:29 wiz Exp $
 
 Avoid unnecessary auto* due to patch-aa modifying configure.ac.
 
---- Makefile.in.orig	2013-06-04 02:21:47.000000000 +0000
+--- Makefile.in.orig	2013-09-09 01:37:36.000000000 +0000
 +++ Makefile.in
-@@ -87,8 +87,7 @@ DIST_COMMON = $(srcdir)/Makefile.in $(sr
+@@ -88,8 +88,7 @@ DIST_COMMON = $(srcdir)/Makefile.in $(sr
  ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
  am__aclocal_m4_deps = $(top_srcdir)/m4/ax_define_dir.m4 \
  	$(top_srcdir)/configure.ac

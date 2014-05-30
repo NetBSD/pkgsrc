@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.12 2012/07/10 03:03:01 mef Exp $
+$NetBSD: patch-ac,v 1.13 2014/05/30 12:51:29 wiz Exp $
 
 See patch-aa.
 
---- configure.orig	2012-06-02 15:37:31.000000000 +0900
-+++ configure	2012-06-28 19:20:03.000000000 +0900
-@@ -19942,43 +19942,18 @@
+--- configure.orig	2013-09-09 01:37:35.000000000 +0000
++++ configure
+@@ -20104,43 +20104,18 @@ $as_echo "#define XUSE_MTSAFE_API 1" >>c
  	;;
  esac
  
@@ -57,7 +57,7 @@ See patch-aa.
    thrstubs="no"
  else
    thrstubs="yes"
-@@ -19999,12 +19974,12 @@
+@@ -20161,12 +20136,12 @@ if test x$xthreads = xyes ; then
      linux*|gnu*|k*bsd*-gnu)
          XTHREADLIB=-lpthread ;;
      netbsd*)
