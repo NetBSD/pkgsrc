@@ -1,10 +1,11 @@
-# $NetBSD: options.mk,v 1.33 2014/04/16 04:57:23 schmonz Exp $
+# $NetBSD: options.mk,v 1.34 2014/05/30 21:35:04 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qmail
 PKG_OPTIONS_OPTIONAL_GROUPS=	rcpt
 PKG_OPTIONS_GROUP.rcpt=	qmail-badrcptto qmail-qregex qmail-realrcptto
 PKG_SUPPORTED_OPTIONS+=	sasl syncdir tls qmail-bigdns qmail-netqmail
 PKG_SUPPORTED_OPTIONS+=	qmail-outgoingip qmail-viruscan
+PKG_SUGGESTED_OPTIONS+=	qmail-netqmail
 
 .include "../../mk/bsd.options.mk"
 
@@ -37,6 +38,7 @@ PLIST_VARS+=		qregex
 QREGEX_PATCH=		qregex-20060423.patch
 PATCHFILES+=		${QREGEX_PATCH}
 SITES.${QREGEX_PATCH}=	http://www.arda.homeunix.net/store/qmail/
+# actually http://www.arda.homeunix.net/?ddownload=409
 PATCH_DIST_STRIP.${QREGEX_PATCH}=	-p3
 PLIST.qregex=		yes
 .endif
@@ -58,9 +60,13 @@ TLSSASL_PATCH=		netqmail-1.05-tls-smtpauth-20070417.patch
 PATCHFILES+=		${TLSSASL_PATCH}
 SITES.${TLSSASL_PATCH}=	https://raw.githubusercontent.com/shupp/legacy-qmail-related/master/patches/
 .  if !empty(PKG_OPTIONS:Mtls)
-CFLAGS+=		-DTLS=20070408	# NOTE: update according to the patch
-DJB_INSTALL_TARGETS=	cert tmprsadh
-USE_TOOLS+=		gmake
+CFLAGS+=		-DTLS=20070408	# NOTE: match what's _in_ the patch
+USE_TOOLS+=		openssl
+SUBST_CLASSES+=		tmprsadh
+SUBST_STAGE.tmprsadh=	do-configure
+SUBST_FILES.tmprsadh=	update_tmprsadh.sh
+SUBST_SED.tmprsadh=	-e 's|^export PATH=.*||'
+SUBST_SED.tmprsadh+=	-e 's|^openssl |${OPENSSL} |'
 PLIST.tls=		yes
 .  endif
 .endif
@@ -77,6 +83,7 @@ SUBST_SED.load+=	-e '$$s|$$| -bind_at_load|'
 SUBST_MESSAGE.load=	Setting linker flags for syncdir.
 .endif
 
+PLIST_VARS+=		viruscan
 .if !empty(PKG_OPTIONS:Mqmail-viruscan)
 VIRUSCAN_PATCH=		qmail-smtpd-viruscan-1.3.patch
 VIRUSCAN_LOG_PATCH=	qmail-smtpd-viruscan-logging.patch
@@ -89,7 +96,20 @@ SUBST_CLASSES+=		viruscan
 SUBST_STAGE.viruscan=	do-configure
 SUBST_FILES.viruscan=	qmail-smtpd.c
 SUBST_SED.viruscan=	-e 's|qmail-smtpd: ||g'
-VIRUSCAN_SIGS_SRCFILE=	${DISTDIR}/${VIRUSCAN_PATCH}
+PLIST.viruscan=		yes
+post-extract-viruscan:
+	${SED} -e '1,15d' -e '34,$$d'		\
+		< ${DISTDIR}/${VIRUSCAN_PATCH}	\
+		> ${WRKSRC}/signatures
+	${CHMOD} 644 ${WRKSRC}/signatures
+post-install-viruscan:
+	${INSTALL_DATA} ${WRKSRC}/signatures ${DESTDIR}/${EGDIR}/control
+.  for i in control/signatures
+CONF_FILES+=		${EGDIR}/${i} ${PKG_SYSCONFDIR}/${i}
+.  endfor
 .else
-VIRUSCAN_SIGS_SRCFILE=	# undefined
+post-extract-viruscan:
+	${DO_NADA}
+post-install-viruscan:
+	${DO_NADA}
 .endif

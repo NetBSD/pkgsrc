@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2012/03/12 03:53:55 sbd Exp $
+@comment $NetBSD: PLIST,v 1.16 2014/05/30 21:35:04 schmonz Exp $
 bin/bouncesaying
 bin/condredirect
 bin/datemail
@@ -129,6 +129,7 @@ share/examples/qmail/boot/home
 share/examples/qmail/boot/home+df
 share/examples/qmail/boot/proc
 share/examples/qmail/boot/proc+df
+${PLIST.viruscan}share/examples/qmail/control/signatures
 share/qmail/setup/config
 share/qmail/setup/config-fast
 share/qmail/setup/dnsfq

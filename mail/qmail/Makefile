@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.68 2014/04/16 04:57:23 schmonz Exp $
+# $NetBSD: Makefile,v 1.69 2014/05/30 21:35:04 schmonz Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}
 PKGNAME=		qmail-1.03
-PKGREVISION=		18
+PKGREVISION=		19
 CATEGORIES=		mail
 MASTER_SITES=		http://qmail.org/
 
@@ -46,11 +46,11 @@ SHAREDIR=		${PREFIX}/share/qmail
 PLIST_SUBST+=		DARWINSUFX=${DARWINSUFX:Q}
 MESSAGE_SUBST+=		DOCDIR=${DOCDIR:Q} EGDIR=${EGDIR:Q}
 FILES_SUBST+=		DOCDIR=${DOCDIR:Q} EGDIR=${EGDIR:Q}
+FILES_SUBST+=		OPENSSL=${OPENSSL:Q}
 FILES_SUBST+=		PKGMANDIR=${PKGMANDIR:Q} SHAREDIR=${SHAREDIR:Q}
 FILES_SUBST+=		QMAILDIR=${QMAILDIR:Q}
 FILES_SUBST+=		QMAIL_QUEUE_DIR=${QMAIL_QUEUE_DIR:Q}
 FILES_SUBST+=		QMAIL_QUEUE_EXTRA=${QMAIL_QUEUE_EXTRA:Q}
-FILES_SUBST+=		VIRUSCAN_SIGS_SRCFILE=${VIRUSCAN_SIGS_SRCFILE:Q}
 FILES_SUBST+=		PKGNAME=${PKGNAME:Q}
 
 SETUP_PROGRAMS=		dnsfq dnsip dnsptr hostname install ipmeprint
@@ -96,6 +96,12 @@ SUBST_FILES.catpages=	hier.c
 SUBST_SED.catpages=	-e 's|.*"man/cat[0-9]".*||g'
 SUBST_SED.catpages+=	-e 's|.*"tcp-environ\.5".*||g'	# also in ucspi-tcp
 
+SUBST_CLASSES+=		destdir
+SUBST_STAGE.destdir=	do-configure
+SUBST_FILES.destdir=	Makefile
+SUBST_SED.destdir=	-e 's|\(^load inst.*\.o\) auto_qmail\.o\(.*\)|\1 auto_destdir.o\2|g'
+SUBST_SED.destdir+=	-e 's|\(^	\./load inst.*\) auto_qmail\.o\(.*\)|\1 auto_destdir.o\2|g'
+
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure
 SUBST_FILES.paths=	README.pkgsrc
@@ -123,7 +129,7 @@ DARWINSUFX=		.doc
 DARWINSUFX=		# empty
 .endif
 
-post-extract:
+post-extract: post-extract-viruscan
 	${CP} ${FILESDIR}/README.pkgsrc ${WRKSRC}
 .if ${OPSYS} == "Darwin"
 .	for i in INSTALL SENDMAIL
@@ -146,7 +152,7 @@ pre-install:
 	  ${LN} -s ${DESTDIR}${EGDIR}/users	${DESTDIR}${QMAILDIR}/users
 .	endif
 
-post-install:
+post-install: post-install-viruscan
 	# qmail's installer sets strange permissions, set them back
 .	if (${PKG_INSTALLATION_TYPE} == "overwrite")
 .	  for i in bin boot

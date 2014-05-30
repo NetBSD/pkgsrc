@@ -1,12 +1,12 @@
-$NetBSD: patch-Makefile,v 1.1 2013/08/15 15:43:48 schmonz Exp $
+$NetBSD: patch-Makefile,v 1.2 2014/05/30 21:35:04 schmonz Exp $
 
 DESTDIR support.
 
 --- Makefile.orig	1998-06-15 10:53:16.000000000 +0000
 +++ Makefile
-@@ -78,6 +78,14 @@ auto_break.o: \
- compile auto_break.c
- 	./compile auto_break.c
+@@ -4,6 +4,14 @@ SHELL=/bin/sh
+ 
+ default: it
  
 +auto_destdir.c: \
 +auto-str conf-destdir
@@ -16,38 +16,6 @@ DESTDIR support.
 +compile auto_destdir.c
 +	./compile auto_destdir.c
 +
- auto_patrn.c: \
- auto-int8 conf-patrn
- 	./auto-int8 auto_patrn `head -1 conf-patrn` > auto_patrn.c
-@@ -740,15 +748,15 @@ seek.h fork.h
- 	./compile idedit.c
- 
- install: \
--load install.o fifo.o hier.o auto_qmail.o auto_split.o auto_uids.o \
-+load install.o fifo.o hier.o auto_destdir.o auto_split.o auto_uids.o \
- strerr.a substdio.a open.a error.a str.a fs.a
--	./load install fifo.o hier.o auto_qmail.o auto_split.o \
-+	./load install fifo.o hier.o auto_destdir.o auto_split.o \
- 	auto_uids.o strerr.a substdio.a open.a error.a str.a fs.a 
- 
- install-big: \
--load install-big.o fifo.o install.o auto_qmail.o auto_split.o \
-+load install-big.o fifo.o install.o auto_destdir.o auto_split.o \
- auto_uids.o strerr.a substdio.a open.a error.a str.a fs.a
--	./load install-big fifo.o install.o auto_qmail.o \
-+	./load install-big fifo.o install.o auto_destdir.o \
- 	auto_split.o auto_uids.o strerr.a substdio.a open.a error.a \
- 	str.a fs.a 
- 
-@@ -763,9 +771,9 @@ exit.h
- 	./compile install.c
- 
- instcheck: \
--load instcheck.o fifo.o hier.o auto_qmail.o auto_split.o auto_uids.o \
-+load instcheck.o fifo.o hier.o auto_destdir.o auto_split.o auto_uids.o \
- strerr.a substdio.a error.a str.a fs.a
--	./load instcheck fifo.o hier.o auto_qmail.o auto_split.o \
-+	./load instcheck fifo.o hier.o auto_destdir.o auto_split.o \
- 	auto_uids.o strerr.a substdio.a error.a str.a fs.a 
- 
- instcheck.o: \
+ addresses.0: \
+ addresses.5
+ 	nroff -man addresses.5 > addresses.0
