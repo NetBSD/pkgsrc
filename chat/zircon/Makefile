@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2013/03/03 10:25:11 shattered Exp $
+# $NetBSD: Makefile,v 1.19 2014/05/30 11:32:22 joerg Exp $
 #
 
 DISTNAME=	zircon-1.18.256
-#KGREVISION=	2
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	ftp://catless.ncl.ac.uk/pub/
 
@@ -17,9 +17,9 @@ NO_BUILD=	yes
 USE_TOOLS+=	wish:run tclsh sed
 
 post-extract:
-	@${SED} -e 's|.8.4|.8.5|' ${WRKSRC}/installer/file84.tcl > ${WRKSRC}/installer/file85.tcl
-	@${SED} -e 's|.8.4|.8.5|' ${WRKSRC}/lib/tcl84.tcl > ${WRKSRC}/lib/tcl85.tcl
-	@${ECHO_MSG} 'package ifneeded unixfile 1.18.8.5 [list source [file join $$dir file85.tcl]]' \
+	@${SED} -e 's|.8.4|.8.6|' ${WRKSRC}/installer/file84.tcl > ${WRKSRC}/installer/file86.tcl
+	@${SED} -e 's|.8.4|.8.6|' ${WRKSRC}/lib/tcl84.tcl > ${WRKSRC}/lib/tcl86.tcl
+	@${ECHO_MSG} 'package ifneeded unixfile 1.18.8.6 [list source [file join $$dir file86.tcl]]' \
 		>> ${WRKSRC}/installer/pkgIndex.tcl
 
 do-install:
