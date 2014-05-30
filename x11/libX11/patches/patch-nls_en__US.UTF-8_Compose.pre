@@ -1,0 +1,25 @@
+$NetBSD: patch-nls_en__US.UTF-8_Compose.pre,v 1.1 2014/05/30 12:51:29 wiz Exp $
+
+commit 5dcb40f28d59587597d2ff6e6ac64c71cfe6ff7b
+Author: James Cloos <cloos@jhcloos.com>
+Date:   Tue Sep 17 12:50:42 2013 -0400
+
+    nls/en_US.UTF-8/Compose.pre: Fix typo.
+
+    Fix typo added in 215ce6a67863, s/actute/acute/.
+
+    Fixes bug #69476.  Reported by Jean Krohn.
+
+    Signed-off-by: James Cloos <cloos@jhcloos.com>
+
+--- nls/en_US.UTF-8/Compose.pre.orig	2013-09-09 01:37:20.000000000 +0000
++++ nls/en_US.UTF-8/Compose.pre
+@@ -743,7 +743,7 @@ XCOMM Part 3
+ <Multi_key> <i> <quotedbl> 		: "ï"   idiaeresis # LATIN SMALL LETTER I WITH DIAERESIS
+ <Multi_key> <diaeresis> <i> 		: "ï"   idiaeresis # LATIN SMALL LETTER I WITH DIAERESIS
+ <Multi_key> <i> <diaeresis> 		: "ï"   idiaeresis # LATIN SMALL LETTER I WITH DIAERESIS
+-<dead_actute> <j>	 		: "j́"    # LATIN SMALL LETTER J U006A with COMBINING ACUTE ACCENT U0301
++<dead_acute> <j>	 		: "j́"    # LATIN SMALL LETTER J U006A with COMBINING ACUTE ACCENT U0301
+ <Multi_key> <apostrophe> <j> 		: "j́"    # LATIN SMALL LETTER J U006A with COMBINING ACUTE ACCENT U0301
+ <Multi_key> <j> <apostrophe> 		: "j́"    # LATIN SMALL LETTER J U006A with COMBINING ACUTE ACCENT U0301
+ <Multi_key> <acute> <j> 		: "j́"    # LATIN SMALL LETTER J U006A with COMBINING ACUTE ACCENT U0301
