@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/04/23 16:11:31 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/05/30 15:28:06 schmonz Exp $
 bin/offlineimap
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/offlineimap/CustomConfig.py
@@ -22,6 +22,9 @@ ${PYSITELIB}/offlineimap/folder/Base.pyo
 ${PYSITELIB}/offlineimap/folder/Gmail.py
 ${PYSITELIB}/offlineimap/folder/Gmail.pyc
 ${PYSITELIB}/offlineimap/folder/Gmail.pyo
+${PYSITELIB}/offlineimap/folder/GmailMaildir.py
+${PYSITELIB}/offlineimap/folder/GmailMaildir.pyc
+${PYSITELIB}/offlineimap/folder/GmailMaildir.pyo
 ${PYSITELIB}/offlineimap/folder/IMAP.py
 ${PYSITELIB}/offlineimap/folder/IMAP.pyc
 ${PYSITELIB}/offlineimap/folder/IMAP.pyo
@@ -70,6 +73,9 @@ ${PYSITELIB}/offlineimap/repository/Base.pyo
 ${PYSITELIB}/offlineimap/repository/Gmail.py
 ${PYSITELIB}/offlineimap/repository/Gmail.pyc
 ${PYSITELIB}/offlineimap/repository/Gmail.pyo
+${PYSITELIB}/offlineimap/repository/GmailMaildir.py
+${PYSITELIB}/offlineimap/repository/GmailMaildir.pyc
+${PYSITELIB}/offlineimap/repository/GmailMaildir.pyo
 ${PYSITELIB}/offlineimap/repository/IMAP.py
 ${PYSITELIB}/offlineimap/repository/IMAP.pyc
 ${PYSITELIB}/offlineimap/repository/IMAP.pyo
