@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.26 2014/05/28 04:55:30 pho Exp $
+$NetBSD: patch-aa,v 1.27 2014/05/30 10:22:05 pho Exp $
 
-* On Darwin the profiler only supports x86 and x86_64.
+* The profiler does not support Darwin/PPC so don't try to enable it
+  on that platform.
 
 * Cocoa gamepad backend can only be used if the toolkit is cocoa too.
+
+* The preprocessor macro XP_MACOSX is misused everywhere. They tend to
+  say "#if defined(XP_MACOSX)" to actually mean
+  "#if defined(MOZ_WIDGET_COCOA)". It's okay to equate XP_MACOSX with
+  XP_DARWIN but equating it with MOZ_WIDGET_COCOA is just wrong. As a
+  result, cairo-gtk2 build on Darwin is completely broken and needs
+  heavy patching. Ideally they should be fixed individually but that
+  will be an extremely hard work, so don't define XP_MACOSX for now.
 
 --- configure.in.orig	2014-05-06 22:55:16.000000000 +0000
 +++ configure.in
@@ -21,7 +30,24 @@ $NetBSD: patch-aa,v 1.26 2014/05/28 04:55:30 pho Exp $
  *)
      MOZ_ENABLE_PROFILER_SPS=
      ;;
-@@ -2534,118 +2540,15 @@ MOZ_CXX11
+@@ -1717,7 +1723,7 @@ case "$host" in
+     ;;
+ 
+ *-darwin*)
+-    HOST_CFLAGS="$HOST_CFLAGS -DXP_UNIX -DXP_MACOSX -DNO_X11"
++    HOST_CFLAGS="$HOST_CFLAGS -DXP_UNIX"
+     HOST_NSPR_MDCPUCFG='\"md/_darwin.cfg\"'
+     HOST_OPTIMIZE_FLAGS="${HOST_OPTIMIZE_FLAGS=-O3}"
+     ;;
+@@ -1857,7 +1863,6 @@ case "$target" in
+         AC_DEFINE(XP_DARWIN)
+         _PLATFORM_DEFAULT_TOOLKIT='cairo-uikit'
+     else
+-        AC_DEFINE(XP_MACOSX)
+         AC_DEFINE(XP_DARWIN)
+         _PLATFORM_DEFAULT_TOOLKIT='cairo-cocoa'
+         # The ExceptionHandling framework is needed for Objective-C exception
+@@ -2534,118 +2539,15 @@ MOZ_CXX11
  
  AC_LANG_C
  
@@ -147,7 +173,7 @@ $NetBSD: patch-aa,v 1.26 2014/05/28 04:55:30 pho Exp $
  fi         # GNU_CC
  
  # visibility hidden flag for Sun Studio on Solaris
-@@ -3711,6 +3614,14 @@ if test -n "$YASM"; then
+@@ -3711,6 +3613,14 @@ if test -n "$YASM"; then
    _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
  fi
  
@@ -162,7 +188,7 @@ $NetBSD: patch-aa,v 1.26 2014/05/28 04:55:30 pho Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -3738,11 +3649,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
+@@ -3738,11 +3648,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
                       #include <jpeglib.h> ],
                     [ #if JPEG_LIB_VERSION < $MOZJPEG
                       #error "Insufficient JPEG library version ($MOZJPEG required)."
@@ -175,7 +201,7 @@ $NetBSD: patch-aa,v 1.26 2014/05/28 04:55:30 pho Exp $
                     MOZ_NATIVE_JPEG=1,
                     AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
  fi
-@@ -3940,6 +3847,22 @@ fi
+@@ -3940,6 +3846,22 @@ fi
  AC_SUBST(MOZ_NATIVE_ICU)
  
  dnl ========================================================
@@ -198,7 +224,7 @@ $NetBSD: patch-aa,v 1.26 2014/05/28 04:55:30 pho Exp $
  dnl Java SDK support
  dnl ========================================================
  
-@@ -3974,6 +3897,7 @@ MOZ_SAMPLE_TYPE_FLOAT32=
+@@ -3974,6 +3896,7 @@ MOZ_SAMPLE_TYPE_FLOAT32=
  MOZ_SAMPLE_TYPE_S16=
  MOZ_OPUS=1
  MOZ_WEBM=1
@@ -206,7 +232,18 @@ $NetBSD: patch-aa,v 1.26 2014/05/28 04:55:30 pho Exp $
  MOZ_DIRECTSHOW=
  MOZ_WMF=
  MOZ_FMP4=
-@@ -5135,6 +5059,9 @@ if test -n "$MOZ_WEBRTC"; then
+@@ -4433,6 +4356,10 @@ cairo-gonk)
+ 
+ esac
+ 
++if test "$MOZ_WIDGET_TOOLKIT" = "cocoa"; then
++   AC_DEFINE(XP_MACOSX)
++fi
++
+ AC_SUBST(MOZ_PDF_PRINTING)
+ if test "$MOZ_PDF_PRINTING"; then
+    PDF_SURFACE_FEATURE="#define CAIRO_HAS_PDF_SURFACE 1"
+@@ -5135,6 +5062,9 @@ if test -n "$MOZ_WEBRTC"; then
      MOZ_VPX=1
      MOZ_VPX_ERROR_CONCEALMENT=1
  
@@ -216,7 +253,7 @@ $NetBSD: patch-aa,v 1.26 2014/05/28 04:55:30 pho Exp $
  dnl enable once Signaling lands
      MOZ_WEBRTC_SIGNALING=1
      AC_DEFINE(MOZ_WEBRTC_SIGNALING)
-@@ -5157,15 +5084,18 @@ AC_SUBST(MOZ_SRTP)
+@@ -5157,15 +5087,18 @@ AC_SUBST(MOZ_SRTP)
  
  dnl Use integers over floats for audio on B2G and Android, because audio
  dnl backends for those platforms don't support floats.
@@ -238,7 +275,7 @@ $NetBSD: patch-aa,v 1.26 2014/05/28 04:55:30 pho Exp $
  
  dnl ========================================================
  dnl = Disable Speech API code
-@@ -5229,6 +5159,57 @@ if test -n "$MOZ_OGG"; then
+@@ -5229,6 +5162,57 @@ if test -n "$MOZ_OGG"; then
  fi
  
  dnl ========================================================
@@ -296,7 +333,7 @@ $NetBSD: patch-aa,v 1.26 2014/05/28 04:55:30 pho Exp $
  dnl = Disable Opus audio codec support
  dnl ========================================================
  MOZ_ARG_DISABLE_BOOL(opus,
-@@ -5237,6 +5218,76 @@ MOZ_ARG_DISABLE_BOOL(opus,
+@@ -5237,6 +5221,76 @@ MOZ_ARG_DISABLE_BOOL(opus,
      MOZ_OPUS=1)
  
  dnl ========================================================
@@ -373,7 +410,7 @@ $NetBSD: patch-aa,v 1.26 2014/05/28 04:55:30 pho Exp $
  dnl = Disable VP8 decoder support
  dnl ========================================================
  MOZ_ARG_DISABLE_BOOL(webm,
-@@ -5615,44 +5666,61 @@ WINNT|Darwin|Android)
+@@ -5615,44 +5669,61 @@ WINNT|Darwin|Android)
      ;;
  *)
      MOZ_GSTREAMER=1
@@ -459,7 +496,7 @@ $NetBSD: patch-aa,v 1.26 2014/05/28 04:55:30 pho Exp $
  fi
  
  
-@@ -5866,7 +5934,9 @@ MOZ_ARG_DISABLE_BOOL(gamepad,
+@@ -5866,7 +5937,9 @@ MOZ_ARG_DISABLE_BOOL(gamepad,
  if test "$MOZ_GAMEPAD"; then
      case "$OS_TARGET" in
      Darwin)
@@ -470,7 +507,7 @@ $NetBSD: patch-aa,v 1.26 2014/05/28 04:55:30 pho Exp $
          ;;
      WINNT)
          if test -n "$MOZ_DIRECTX_SDK_PATH" ; then
-@@ -7939,6 +8009,52 @@ if test "$USE_FC_FREETYPE"; then
+@@ -7939,6 +8012,52 @@ if test "$USE_FC_FREETYPE"; then
  fi
  
  dnl ========================================================
@@ -523,7 +560,7 @@ $NetBSD: patch-aa,v 1.26 2014/05/28 04:55:30 pho Exp $
  dnl Check for pixman and cairo
  dnl ========================================================
  
-@@ -8189,7 +8305,7 @@ case "$OS_TARGET" in
+@@ -8189,7 +8308,7 @@ case "$OS_TARGET" in
        NECKO_WIFI=1
      fi
      ;;
@@ -532,7 +569,7 @@ $NetBSD: patch-aa,v 1.26 2014/05/28 04:55:30 pho Exp $
      NECKO_WIFI=1
      ;;
    Linux)
-@@ -8736,6 +8852,20 @@ AC_SUBST(MOZ_ENABLE_SZIP)
+@@ -8736,6 +8855,20 @@ AC_SUBST(MOZ_ENABLE_SZIP)
  AC_SUBST(MOZ_SZIP_FLAGS)
  
  if test -n "$COMPILE_ENVIRONMENT"; then
