@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2014/05/03 23:38:33 rodent Exp $
+@comment $NetBSD: PLIST,v 1.12 2014/05/30 13:25:48 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -28,6 +28,9 @@ ${PYSITELIB}/simplejson/tests/__init__.pyo
 ${PYSITELIB}/simplejson/tests/test_bigint_as_string.py
 ${PYSITELIB}/simplejson/tests/test_bigint_as_string.pyc
 ${PYSITELIB}/simplejson/tests/test_bigint_as_string.pyo
+${PYSITELIB}/simplejson/tests/test_bitsize_int_as_string.py
+${PYSITELIB}/simplejson/tests/test_bitsize_int_as_string.pyc
+${PYSITELIB}/simplejson/tests/test_bitsize_int_as_string.pyo
 ${PYSITELIB}/simplejson/tests/test_check_circular.py
 ${PYSITELIB}/simplejson/tests/test_check_circular.pyc
 ${PYSITELIB}/simplejson/tests/test_check_circular.pyo
