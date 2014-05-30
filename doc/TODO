@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13338 2014/05/30 08:56:21 obache Exp $
+$NetBSD: TODO,v 1.13339 2014/05/30 12:53:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -348,7 +348,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o XaoS-3.6 [pkg/48836]
 	o YoSucker-81
 	o ZIPIdent-2.9
-	o abcm2ps-7.8.0
+	o abcm2ps-7.8.3
 	o abcmidi-20140120
 	o abiword-3.0
 	o acpica-utils-20110623
@@ -421,6 +421,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bzr-2.6.0
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
+	o calibre-1.39
 	o calligra-2.4.3 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -464,7 +465,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o crossfire-client-gtk2-1.60.0
 	o ctwm-3.8.2 [pkg/48820]
 	o cuisine-0.6.5
-	o cups-1.7.2
+	o cups-1.7.3
 	o cvs2p4-2.5.5 [schmonz]
 	o cwm-5.1
 	o cxref-1.6e
@@ -477,7 +478,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dateutils-0.2.7
 	o dbench-4.0
 	o dcc-1.3.147 [ask OWNER first]
-	o dd_rescue-1.44
+	o dd_rescue-1.45
 	o ddclient-3.7.3
 	o defendguin-0.0.11
 	o delegate-9.9.8
@@ -587,6 +588,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gentoo-0.20.4
 	o gfract-0.33
 	o ghc-7.8.1
+	o git-2.0
 	o gitolite-3.5.3.1
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
@@ -634,6 +636,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
 	o gnuchess-6.1.1
+	o gnutls-3.2.15
 	o gob-2.0.19
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
@@ -982,7 +985,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-ptt-1.10.2
 	o py-py-2.3
 	o py-pycha-0.7.0 [wait for fix to regression with bin/chavier - richard]
-	o py-qt4-4.10.3 [needs py-sip-4.15, see above]
+	o py-qt4-4.11 [needs py-sip-4.15, see above]
 	o py-qt5-5.3
 	o py-reportlab-3.0
 	o py-rope-0.9.4
@@ -990,7 +993,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-simplejson-3.5.2
 	o py-simpletal-5.1
 	o py-sip-4.15.1 [don't update until pyqt3 and KDE problems are fixed -- still there in 4.15.1]
-	o py-sip-4.15.5
+	o py-sip-4.16
 	o py-smb-1.1.8
 	o py-sphinx-theme-cloud-1.6
 	o py-sqlalchemy-0.9.1
@@ -1004,7 +1007,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o qdbm-1.8.78
 	o qnetwalk-1.4
 	o qt4-libs-4.8.6
-	o qt4-qscintilla-2.8.1
+	o qt4-qscintilla-2.8.2
 	o qt5-qtbase-5.3
 	o radiance-3.7.2
 	o rails-4.1.0
@@ -1035,7 +1038,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ruby-ncurses-1.3.1
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.7
-	o samba-4.0.17
+	o samba-4.0.18
 	o samba-4.1.0 [wip]
 	o samba-4.1.7
 	o sane-1.0.24
@@ -1230,6 +1233,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xmbdfed-4.6
 	o xmcd-3.3.2
 	o xml2-0.5
+	o xmlsec1-1.2.20
 	o xmlstarlet-1.5.0
 	o xmms-crossfade-0.3.14
 	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
@@ -1238,6 +1242,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xorp-1.8.5
 	o xosview-1.15
 	o xpaint-2.9.9
+	o xpdf-3.04
 	o xpr-1.0.4 [unpackaged]
 	o xpuyopuyo-0.9.8
 	o xrmap-base-2.33.1
