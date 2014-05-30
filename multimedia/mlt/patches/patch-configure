@@ -1,0 +1,31 @@
+$NetBSD: patch-configure,v 1.4 2014/05/30 11:34:51 joerg Exp $
+
+--- configure.orig	2014-05-28 20:18:38.000000000 +0000
++++ configure
+@@ -78,14 +78,18 @@ build_config()
+ 		[ "$amd64" = "true" ] && echo "ARCH_X86_64=1" && echo "CFLAGS+=-DARCH_X86_64"
+ 		[ "$arch" != "" ] && echo "TARGETARCH=-march=$arch"
+ 		[ "$cpu" != "" ] && echo "TARGETCPU=-mcpu=$cpu"
+-		if [ "$optimisations" = "true" ]
+-		then
+-			echo "OPTIMISATIONS=-O2 -pipe"
+-			# Since gcc 4.6, this optimization enabled with -O1 causes filter_line_sse2 to crash.
+-			echo "OPTIMISATIONS+=-fno-tree-dominator-opts"
+-			# Since gcc 4.6, this optimization enabled with -O2 causes filter_line_sse2 to crash.
+-			echo "OPTIMISATIONS+=-fno-tree-pre"
+-		fi
++		case $(${CC} --version 2> /dev/null) in
++		gcc*)
++			if [ "$optimisations" = "true" ]
++			then
++				echo "OPTIMISATIONS=-O2 -pipe"
++				# Since gcc 4.6, this optimization enabled with -O1 causes filter_line_sse2 to crash.
++				echo "OPTIMISATIONS+=-fno-tree-dominator-opts"
++				# Since gcc 4.6, this optimization enabled with -O2 causes filter_line_sse2 to crash.
++				echo "OPTIMISATIONS+=-fno-tree-pre"
++			fi
++			;;
++		esac
+ 
+ 		echo "CFLAGS+=-Wall -DPIC \$(TARGETARCH) \$(TARGETCPU) \$(OPTIMISATIONS) \$(MMX_FLAGS) \$(SSE_FLAGS) \$(SSE2_FLAGS) \$(DEBUG_FLAGS) \$(LARGE_FILE)"
+ 
