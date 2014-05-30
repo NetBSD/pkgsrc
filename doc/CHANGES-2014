@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2057 2014/05/30 13:25:57 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2058 2014/05/30 13:47:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2825,3 +2825,6 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/calibre to 1.39.0 [wiz 2014-05-30]
 	Updated security/gnutls to 3.2.15 [wiz 2014-05-30]
 	Updated converters/py-simplejson to 3.5.2 [wiz 2014-05-30]
+	Updated net/transmission to 2.83 [wiz 2014-05-30]
+	Updated net/transmission-gtk to 2.83 [wiz 2014-05-30]
+	Updated net/transmission-qt to 2.83 [wiz 2014-05-30]
