@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.35 2014/05/28 06:25:58 pho Exp $
+# $NetBSD: mozilla-common.mk,v 1.36 2014/05/30 03:03:36 pho Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -89,19 +89,6 @@ CONFIGURE_ARGS+=	--with-system-ply
 CONFIGURE_ARGS+=	--disable-icf
 CONFIGURE_ARGS+=	--disable-necko-wifi
 CONFIGURE_ARGS+=	--disable-updater
-
-# Set the MacOS X version requirement appropriately.
-# Otherwise ${WRKSRC}/media/libcubeb/src/cubeb_audiounit.c can not be
-# built on MacOS X < 10.6
-.if ${OPSYS} == "Darwin"
-.  if !empty(OS_VERSION:M[0-7].*)
-CONFIGURE_ARGS+=	--enable-macos-target=10.3
-.  elif !empty(OS_VERSION:M8.*)
-CONFIGURE_ARGS+=	--enable-macos-target=10.4
-.  elif !empty(OS_VERSION:M9.*)
-CONFIGURE_ARGS+=	--enable-macos-target=10.5
-.  endif
-.endif
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure

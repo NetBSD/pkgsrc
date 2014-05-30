@@ -1,6 +1,13 @@
-$NetBSD: patch-toolkit_library_Makefile.in,v 1.6 2014/04/30 15:07:18 ryoon Exp $
+$NetBSD: patch-toolkit_library_Makefile.in,v 1.7 2014/05/30 03:03:36 pho Exp $
 
---- toolkit/library/Makefile.in.orig	2014-04-18 02:04:27.000000000 +0000
+* It's true Mach-O systems aren't supported by
+  ${WRKSRC}/content/media/gstreamer/GStreamerLoader.cpp so
+  $(GSTREAMER_LIBS) must be directly appended to $(EXTRA_DSO_LDOPTS)
+  on such platforms. The problem is that "ifeq
+  (cocoa,$(MOZ_WIDGET_TOOLKIT))" ain't the right thing to do when
+  testing for Mach-O is what we need.
+
+--- toolkit/library/Makefile.in.orig	2014-05-06 22:56:33.000000000 +0000
 +++ toolkit/library/Makefile.in
 @@ -149,6 +149,34 @@ ifdef MOZ_NATIVE_HUNSPELL
  EXTRA_DSO_LDOPTS += $(MOZ_HUNSPELL_LIBS)
@@ -62,3 +69,12 @@ $NetBSD: patch-toolkit_library_Makefile.in,v 1.6 2014/04/30 15:07:18 ryoon Exp $
  ifdef MOZ_WEBRTC
  ifeq (WINNT,$(OS_TARGET))
  EXTRA_DSO_LDOPTS += \
+@@ -351,7 +391,7 @@ ifdef MOZ_ENABLE_QT
+ EXTRA_DSO_LDOPTS += $(MOZ_QT_LDFLAGS) $(XEXT_LIBS)
+ endif
+ 
+-ifeq (cocoa,$(MOZ_WIDGET_TOOLKIT))
++ifeq (Darwin,$(OS_ARCH))
+ ifdef MOZ_GSTREAMER
+ EXTRA_DSO_LDOPTS += $(GSTREAMER_LIBS)
+ endif
