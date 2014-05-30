@@ -1,13 +1,14 @@
-# $NetBSD: Makefile.common,v 1.66 2014/05/27 15:17:32 taca Exp $
+# $NetBSD: Makefile.common,v 1.67 2014/05/30 23:55:08 taca Exp $
 #
 # used by www/contao/Makefile.example"
 # used by www/contao211/Makefile
 # used by www/contao32/Makefile
+# used by www/contao33/Makefile
 
 # current release
 CT211_VERSION=	2.11.17
 CT32_VERSION=	3.2.10
-CT33_VERSION=	3.3.0
+CT33_VERSION=	3.3.1
 
 CT_VERS?=	32
 
