@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2060 2014/05/30 15:28:47 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2061 2014/05/30 21:06:56 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2830,3 +2830,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/transmission-qt to 2.83 [wiz 2014-05-30]
 	Updated devel/talloc to 2.1.1 [wiz 2014-05-30]
 	Updated mail/offlineimap to 6.5.6 [schmonz 2014-05-30]
+	Updated net/rbldnsd to 0.997a [pettai 2014-05-30]
