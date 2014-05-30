@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.example,v 1.17 2014/05/27 15:17:32 taca Exp $
+# $NetBSD: Makefile.example,v 1.18 2014/05/30 23:55:08 taca Exp $
 #
 # used by www/contao211-example/Makefile
 # used by www/contao32-example/Makefile
+# used by www/contao33-example/Makefile
 #
 
 DISTNAME?=	contao-${CT_PKGVER}
