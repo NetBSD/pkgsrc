@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2058 2014/05/30 13:47:08 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2059 2014/05/30 13:51:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2828,3 +2828,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/transmission to 2.83 [wiz 2014-05-30]
 	Updated net/transmission-gtk to 2.83 [wiz 2014-05-30]
 	Updated net/transmission-qt to 2.83 [wiz 2014-05-30]
+	Updated devel/talloc to 2.1.1 [wiz 2014-05-30]
