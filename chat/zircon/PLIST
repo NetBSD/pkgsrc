@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/08/21 21:41:03 marino Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/05/30 11:32:22 joerg Exp $
 bin/zircon
 share/doc/zircon/BUGS
 share/doc/zircon/COPYRIGHT
@@ -125,7 +125,7 @@ share/zircon/lib/tcl81.tcl
 share/zircon/lib/tcl82.tcl
 share/zircon/lib/tcl83.tcl
 share/zircon/lib/tcl84.tcl
-share/zircon/lib/tcl85.tcl
+share/zircon/lib/tcl86.tcl
 share/zircon/lib/upgrade.tcl
 share/zircon/lib/userCmds.tcl
 share/zircon/lib/zircon.tcl
