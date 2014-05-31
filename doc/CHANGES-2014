@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2062 2014/05/30 21:35:11 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2063 2014/05/31 02:14:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2832,3 +2832,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/offlineimap to 6.5.6 [schmonz 2014-05-30]
 	Updated net/rbldnsd to 0.997a [pettai 2014-05-30]
 	Updated mail/qmail to 1.03nb19 [schmonz 2014-05-30]
+	Updated www/contao33 to 3.3.1 [taca 2014-05-31]
+	Removed www/contao33-example [taca 2014-05-31]
