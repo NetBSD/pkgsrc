@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.68 2014/05/31 02:03:42 taca Exp $
+# $NetBSD: Makefile.common,v 1.69 2014/05/31 02:08:02 taca Exp $
 #
 # used by www/contao/Makefile.example"
 # used by www/contao211/Makefile
@@ -30,6 +30,8 @@ WRKSRC?=	${WRKDIR}/core-${CT_VERSION}
 .else
 FETCH_USING=	wget
 CT_MASTER_SITE=	https://github.com/contao/core/releases/download/${CT_VERSION}/
+WRKSRC?=	${WRKDIR}/contao
+EXTRACT_DIR=	${WRKSRC}
 .endif
 
 .if ${CT_VERS} == "211"
