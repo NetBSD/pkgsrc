@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1034 2014/05/31 02:12:21 taca Exp $
+# $NetBSD: Makefile,v 1.1035 2014/05/31 22:20:22 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -265,6 +265,7 @@ SUBDIR+=	p5-CGI-Compile
 SUBDIR+=	p5-CGI-Cookie-Splitter
 SUBDIR+=	p5-CGI-Cookie-XS
 SUBDIR+=	p5-CGI-Emulate-PSGI
+SUBDIR+=	p5-CGI-Fast
 SUBDIR+=	p5-CGI-FastTemplate
 SUBDIR+=	p5-CGI-FormBuilder
 SUBDIR+=	p5-CGI-Kwiki
