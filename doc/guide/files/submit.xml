@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.28 2014/02/25 02:30:06 mspo Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.29 2014/05/31 21:08:50 asau Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -12,7 +12,7 @@
 	protect our users! You're still free to put up your home-made
 	binary packages and tell the world where to get them. NetBSD
 	developers doing bulk builds and wanting to upload them please
-	see <xref linkend="bulk-upload"/>.</para>
+	see <xref linkend="bulk"/><!-- TODO: was "bulk-upload"-->.</para>
 
 </sect1>
 
