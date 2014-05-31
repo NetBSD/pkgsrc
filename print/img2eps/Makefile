@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2014/05/25 09:26:31 obache Exp $
+# $NetBSD: Makefile,v 1.33 2014/05/31 15:56:28 wiz Exp $
 #
 
 DISTNAME=	img2eps-0.2
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	print graphics
 MASTER_SITES=	http://www.nih.at/img2eps/
 
@@ -21,7 +21,7 @@ LDFLAGS.SunOS+=		-lm
 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
-.include "../../mk/giflib.buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
