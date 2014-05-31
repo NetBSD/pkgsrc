@@ -1,4 +1,4 @@
-$NetBSD: patch-uim_Makefile.am,v 1.1 2014/04/20 06:40:00 ryoon Exp $
+$NetBSD: patch-uim_Makefile.am,v 1.2 2014/05/31 22:41:32 ryoon Exp $
 
 https://github.com/uim/uim/pull/41
 
@@ -9,7 +9,7 @@ https://github.com/uim/uim/pull/41
  EXTRA_DIST = encoding-table.c test-gc.c version.h.in
  
 -uim_defs = -DSCM_FILES=\"$(datadir)/uim\"
-+uim_defs = -DSCM_FILES=\"$(datadir)/uim:$(sysconfdir)/uim\"
++uim_defs = -DSCM_FILES=\"$(sysconfdir)/uim:$(datadir)/uim\"
  # FIXME: $(UIM_SCM_CFLAGS) should only affect on uim-scm.c
  CFLAGS = @CFLAGS@ $(UIM_SCM_CFLAGS)
  # FIXME: $(SCIM_CFLAGS) should only affect on scim.cpp
