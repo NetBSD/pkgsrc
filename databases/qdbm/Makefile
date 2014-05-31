@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/02 21:25:50 asau Exp $
+# $NetBSD: Makefile,v 1.11 2014/05/31 07:28:57 obache Exp $
 #
 
 .include "Makefile.common"
@@ -11,6 +11,7 @@ LICENSE=	gnu-lgpl-v2.1
 USE_LIBTOOL=	yes
 MAKE_FILE=	LTmakefile
 GNU_CONFIGURE=	yes
+USE_TOOLS+=	pax
 
 CONFIGURE_ARGS+=	--enable-zlib
 CONFIGURE_ARGS+=	--enable-iconv
@@ -20,6 +21,9 @@ PKGCONFIG_OVERRIDE=	qdbm.pc.in
 TEST_TARGET=		check
 
 INSTALLATION_DIRS+=	bin include lib
+
+post-install:
+	cd ${WRKSRC}/doc;${PAX} -rwpp . -s /.*~$$//g ${DESTDIR}${PREFIX}/share/doc/qdbm
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/lzo/buildlink3.mk"
