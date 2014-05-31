@@ -1,0 +1,7 @@
+The function of disk-filltest is simple:
+
+* Write files random-######## to the current directory until the disk is full
+* Read the files again and verify the pseudo-random sequence written
+* Any write or read error will be reported, either by the operating
+  system or by checking the pseudo-random sequence
+* Optionally, delete the random files after a successful run

@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2014/05/31 22:04:35 abs Exp $
+bin/disk-filltest
+share/doc/disk-filltest/README
