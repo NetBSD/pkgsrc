@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2079 2014/05/31 21:34:15 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.2080 2014/05/31 22:06:19 abs Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2861,3 +2861,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/ruby-mercenary version 0.3.3 [bsiegert 2014-05-31]
 	Added math/hs-scientific version 0.2.0.2 [szptvlfn 2014-05-31]
 	Added converters/hs-base64-bytestring version 1.0.0.1 [szptvlfn 2014-05-31]
+	Added sysutils/disk-filltest version 0.7.1 [abs 2014-05-31]
