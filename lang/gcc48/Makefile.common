@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2014/05/20 19:12:36 adam Exp $
+# $NetBSD: Makefile.common,v 1.3 2014/05/31 13:06:25 ryoon Exp $
 
 GCC_PKGNAME=	gcc48
 .include	"../../lang/gcc48/version.mk"
@@ -15,16 +15,17 @@ MAINTAINER=	sbd@NetBSD.org
 HOMEPAGE=	http://gcc.gnu.org/
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
-DISTFILES=		${DEFAULT_DISTFILES}
-EXTRACT_ONLY=		${DEFAULT_DISTFILES}
+DISTFILES+=		${DEFAULT_DISTFILES}
+EXTRACT_ONLY+=		${DEFAULT_DISTFILES}
 
 DISTINFO_FILE=		${.CURDIR}/../../lang/gcc48/distinfo
 PATCHDIR=		${.CURDIR}/../../lang/gcc48/patches
+FILESDIR=		${.CURDIR}/../../lang/gcc48/files
 
 NOT_FOR_PLATFORM=	Interix-*-*
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake makeinfo sed:run
+USE_TOOLS+=		bison gmake makeinfo perl:build sed:run
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 ## Build outside ${WRKSRC}
@@ -36,9 +37,10 @@ GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
 GNU_CONFIGURE_PREFIX=	${GCC_PREFIX}
 INFO_FILES=		yes
 
-PLIST_VARS+=		java darwin unix
+PLIST_VARS+=		java darwin unix libgcc_s nonetbsd
 JAVA_MACHINE_ARCH=	${MACHINE_ARCH:S/x86_64/amd64/}
 PLIST_SUBST+=		JAVA_MACHINE_ARCH=${JAVA_MACHINE_ARCH}
+PLIST_SUBST+=		PKGVERSION_NOREV=${PKGVERSION_NOREV}
 
 # Errors in libgo/runtime/runtime.h
 #BUILDLINK_TRANSFORM+=	rm:-Werror
@@ -58,7 +60,11 @@ SUBST_VARS.vars=	GCC_TARGET_MACHINE
 
 .if ${OPSYS} == "Darwin"
 PLIST.darwin=		yes
-.else
+.elif ${OPSYS} != "NetBSD"
+PLIST.nonetbsd=		yes
+PLIST.unix=		yes
+.else # NetBSD
+PLIST.libgcc_s=		yes
 PLIST.unix=		yes
 .endif
 
@@ -71,7 +77,11 @@ LDFLAGS_FOR_TARGET=	${LDFLAGS:M${COMPILER_RPATH_FLAG}*:N*/usr/lib*}
 # The "-static-libstdc++ -static-libgcc" flags are normally added to the
 # boot-ldflags by configure but because we are supply the boot-ldflags
 # we mash supply them.
+.if ${OPSYS} == "OpenBSD"
+BOOT_LDFLAGS=		-static ${LDFLAGS_FOR_TARGET}
+.else
 BOOT_LDFLAGS=		-static-libstdc++ -static-libgcc ${LDFLAGS_FOR_TARGET}
+.endif
 # Needed on Darwin when LDFLAGS point to a SDK
 BOOT_LDFLAGS+=		${LDFLAGS:M-Wl,-syslibroot*}
 # GCC does not understand this option; remove it, or stage build will fail
@@ -128,9 +138,22 @@ BUILDLINK_DEPMETHOD.binutils=	full
 .    include "../../devel/binutils/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gnu-as --with-as=${PREFIX}/bin/gas
 .  endif
+.elif ${OPSYS} == "OpenBSD"
+BUILDLINK_DEPMETHOD.binutils=	full
+.  include "../../devel/binutils/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-gnu-as --with-as=${PREFIX}/bin/gas
+.endif
+
+# Create in-tree isl and cloog
+.if !empty(PKG_OPTIONS:Mgcc-graphite)
+post-extract: post-extract-graphite
 .endif
 
 pre-configure:
+.if ${OPSYS} == "OpenBSD"
+	cd ${WRKSRC}/gcc && \
+		patch -p1 < ${FILESDIR}/patch-gcc_targhooks.c-openbsd.diff
+.endif
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
 
 TEST_TARGET=	-k check || ${TRUE}
