@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.600 2014/05/25 15:34:09 gdt Exp $
+# $NetBSD: Makefile,v 1.601 2014/05/31 22:05:01 abs Exp $
 #
 
 COMMENT=	System utilities
@@ -98,6 +98,7 @@ SUBDIR+=	devkitd
 SUBDIR+=	di
 SUBDIR+=	dirsize
 SUBDIR+=	dirvish
+SUBDIR+=	disk-filltest
 SUBDIR+=	diskscrub
 SUBDIR+=	dmassage
 SUBDIR+=	dmesg2gif
