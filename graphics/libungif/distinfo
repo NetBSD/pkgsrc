@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.11 2006/02/01 07:10:03 wiz Exp $
-
-SHA1 (libungif-4.1.4.tar.bz2) = af687ffbcfe6afd1d76e33ea8cf27ffb02ed61fc
-RMD160 (libungif-4.1.4.tar.bz2) = f96782d4e305e393a22acd84317c13dc265a21f3
-Size (libungif-4.1.4.tar.bz2) = 482222 bytes
-SHA1 (patch-ab) = a93e2fe0a93aacda4566e723e681fd316fe2cb2a
