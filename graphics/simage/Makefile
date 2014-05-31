@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2014/05/15 14:41:53 adam Exp $
+# $NetBSD: Makefile,v 1.24 2014/05/31 15:56:27 wiz Exp $
 
 DISTNAME=		simage-1.7.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		graphics
 MASTER_SITES=		https://bitbucket.org/Coin3D/coin/downloads/
 
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=	--with-xwd --with-mpeg2enc
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../mk/giflib.buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

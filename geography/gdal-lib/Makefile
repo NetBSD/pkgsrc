@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.66 2014/05/15 14:41:50 adam Exp $
+# $NetBSD: Makefile,v 1.67 2014/05/31 15:56:26 wiz Exp $
 
 VERSION=	1.9.2
 DISTNAME=	gdal-${VERSION}
 PKGNAME=	gdal-lib-${VERSION}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	geography
 MASTER_SITES=	http://download.osgeo.org/gdal/
 
@@ -48,7 +48,7 @@ INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 share/gdal
 .include "../../geography/geos/buildlink3.mk"
 .include "../../geography/proj/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
-.include "../../mk/giflib.buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../textproc/xerces-c/buildlink3.mk"

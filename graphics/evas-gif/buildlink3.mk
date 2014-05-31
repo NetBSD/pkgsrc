@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2014/05/15 14:41:51 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2014/05/31 15:56:27 wiz Exp $
 
 BUILDLINK_TREE+=	evas-gif
 
@@ -12,7 +12,7 @@ BUILDLINK_PKGSRCDIR.evas-gif?=	../../graphics/evas-gif
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/evas/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../mk/giflib.buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
 
 .endif # EVAS_GIF_BUILDLINK3_MK
 
