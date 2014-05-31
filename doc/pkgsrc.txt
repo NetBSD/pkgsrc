@@ -115,25 +115,14 @@ I. The pkgsrc user's guide
 
         7.1. Think first, build later
         7.2. Requirements of a bulk build
-        7.3. Running an old-style bulk build
+        7.3. Running a pbulk-style bulk build
 
-            7.3.1. Configuration
-            7.3.2. Other environmental considerations
-            7.3.3. Operation
-            7.3.4. What it does
-            7.3.5. Disk space requirements
-            7.3.6. Setting up a sandbox for chrooted builds
-            7.3.7. Building a partial set of packages
-            7.3.8. Uploading results of a bulk build
+            7.3.1. Preparation
+            7.3.2. Configuration
 
-        7.4. Running a pbulk-style bulk build
+        7.4. Creating a multiple CD-ROM packages collection
 
-            7.4.1. Preparation
-            7.4.2. Configuration
-
-        7.5. Creating a multiple CD-ROM packages collection
-
-            7.5.1. Example of cdpack
+            7.4.1. Example of cdpack
 
     8. Directory layout of the installed files
 
@@ -170,7 +159,7 @@ II. The pkgsrc developer's guide
         10.1. Common types of packages
 
             10.1.1. Perl modules
-            10.1.2. KDE applications
+            10.1.2. KDE3 applications
             10.1.3. Python modules and programs
 
         10.2. Examples
@@ -772,25 +761,14 @@ Table of Contents
 
     7.1. Think first, build later
     7.2. Requirements of a bulk build
-    7.3. Running an old-style bulk build
+    7.3. Running a pbulk-style bulk build
 
-        7.3.1. Configuration
-        7.3.2. Other environmental considerations
-        7.3.3. Operation
-        7.3.4. What it does
-        7.3.5. Disk space requirements
-        7.3.6. Setting up a sandbox for chrooted builds
-        7.3.7. Building a partial set of packages
-        7.3.8. Uploading results of a bulk build
+        7.3.1. Preparation
+        7.3.2. Configuration
 
-    7.4. Running a pbulk-style bulk build
+    7.4. Creating a multiple CD-ROM packages collection
 
-        7.4.1. Preparation
-        7.4.2. Configuration
-
-    7.5. Creating a multiple CD-ROM packages collection
-
-        7.5.1. Example of cdpack
+        7.4.1. Example of cdpack
 
 8. Directory layout of the installed files
 
@@ -1962,8 +1940,8 @@ XXX
     up settings used by builds in /usr/src.
 
   * DEPENDS_TARGET: By default, dependencies are only installed, and no binary
-    package is created for them. You can set this variable to package to
-    automatically create binary packages after installing dependencies.
+    package is created for them. You can set this variable to package-install
+    to automatically create binary packages after installing dependencies.
 
 5.3. Variables affecting the installation process
 
@@ -1981,12 +1959,6 @@ DESTDIR support is now the default. To switch back to non-DESTDIR, you can set
 USE_DESTDIR=no; this setting will be deprecated though, so it's preferable to
 convert a package to DESTDIR instead.
 
-DESTDIR support changes the behaviour of various targets slightly. To install a
-package after building it, use package-install. package and install don't do
-that any longer. package-install can be used as DEPENDS_TARGET. bin-install
-will ask for the root password to install the package and fail, package-install
-will ask again.
-
 With basic DESTDIR support, make clean needs to be run as root.
 
 Considering the foo/bar package, DESTDIR full support can be tested using the
@@ -1999,15 +1971,15 @@ $ cd $PKGSRCDIR/foo/bar
 
 Verify DESTDIR full support, no root privileges should be needed
 
-$ make USE_DESTDIR=yes install
+$ make stage-install
 
 Create a package without root privileges
 
-$ make USE_DESTDIR=yes PACKAGES=$HOME/packages package
+$ make PACKAGES=$HOME/packages package
 
 For the following command, you must be able to gain root privileges using su(1)
 
-$ make USE_DESTDIR=yes PACKAGES=$HOME/packages package-install
+$ make PACKAGES=$HOME/packages install
 
 Then, as a simple user
 
@@ -2025,17 +1997,31 @@ PKGSRC_COMPILER:
     This is a list of values specifying the chain of compilers to invoke when
     building packages. Valid values are:
 
-      + distcc: distributed C/C++ (chainable)
+      + ccc: Compaq C Compilers (Tru64)
 
       + ccache: compiler cache (chainable)
 
+      + clang: Clang C and Objective-C compiler
+
+      + distcc: distributed C/C++ (chainable)
+
+      + f2c: Fortran 77 to C compiler (chainable)
+
+      + icc: Intel C++ Compiler (Linux)
+
+      + ido: SGI IRIS Development Option cc (IRIX 5)
+
       + gcc: GNU C/C++ Compiler
+
+      + hp: HP-UX C/aC++ compilers
 
       + mipspro: Silicon Graphics, Inc. MIPSpro (n32/n64)
 
-      + mipspro: Silicon Graphics, Inc. MIPSpro (o32)
+      + mipspro-ucode: Silicon Graphics, Inc. MIPSpro (o32)
 
       + sunpro: Sun Microsystems, Inc. WorkShip/Forte/Sun ONE Studio
+
+      + xlc: IBM's XL C/C++ compiler suite (Darwin/MacOSX)
 
     The default is "gcc". You can use ccache and/or distcc with an appropriate
     PKGSRC_COMPILER setting, e.g. "ccache gcc". This variable should always be
@@ -2193,31 +2179,20 @@ Table of Contents
 
 7.1. Think first, build later
 7.2. Requirements of a bulk build
-7.3. Running an old-style bulk build
+7.3. Running a pbulk-style bulk build
 
-    7.3.1. Configuration
-    7.3.2. Other environmental considerations
-    7.3.3. Operation
-    7.3.4. What it does
-    7.3.5. Disk space requirements
-    7.3.6. Setting up a sandbox for chrooted builds
-    7.3.7. Building a partial set of packages
-    7.3.8. Uploading results of a bulk build
+    7.3.1. Preparation
+    7.3.2. Configuration
 
-7.4. Running a pbulk-style bulk build
+7.4. Creating a multiple CD-ROM packages collection
 
-    7.4.1. Preparation
-    7.4.2. Configuration
-
-7.5. Creating a multiple CD-ROM packages collection
-
-    7.5.1. Example of cdpack
+    7.4.1. Example of cdpack
 
 When you have multiple machines that should run the same packages, it is wasted
-time if they all build their packages themselves from source. There are two
-ways of getting a set of binary packages: The old bulk build system, or the new
-(as of 2007) parallel bulk build (pbulk) system. This chapter describes how to
-set them up so that the packages are most likely to be usable later.
+time if they all build their packages themselves from source. There is a ways
+of getting a set of binary packages: The bulk build system, or pbulk ("p"
+stands for "parallel). This chapter describes how to set it up so that the
+packages are most likely to be usable later.
 
 7.1. Think first, build later
 
@@ -2269,354 +2244,7 @@ others must survive a sudden reboot.
 
   * 5 GB for temporary files (read-write, local, temporary)
 
-7.3. Running an old-style bulk build
-
-Note
-
-There are two ways of doing a bulk build. The old-style one and the new-style "
-pbulk". The latter is the recommended way.
-
-7.3.1. Configuration
-
-7.3.1.1. build.conf
-
-The build.conf file is the main configuration file for bulk builds. You can
-configure how your copy of pkgsrc is kept up to date, how the distfiles are
-downloaded, how the packages are built and how the report is generated. You can
-find an annotated example file in pkgsrc/mk/bulk/build.conf-example. To use it,
-copy build.conf-example to build.conf and edit it, following the comments in
-that file.
-
-7.3.1.2. mk.conf
-
-You may want to set variables in mk.conf. Look at pkgsrc/mk/defaults/mk.conf
-for details of the default settings. You will want to ensure that
-ACCEPTABLE_LICENSES meet your local policy. As used in this example,
-SKIP_LICENSE_CHECK=yes completely bypasses the license check.
-
-PACKAGES?=      ${_PKGSRCDIR}/packages/${MACHINE_ARCH}
-WRKOBJDIR?=     /usr/tmp/pkgsrc   # build here instead of in pkgsrc
-BSDSRCDIR=      /usr/src
-BSDXSRCDIR=     /usr/xsrc         # for x11/xservers
-OBJHOSTNAME?=   yes               # use work.`hostname`
-FAILOVER_FETCH= yes               # insist on the correct checksum
-PKG_DEVELOPER?= yes
-SKIP_LICENSE_CHECK=    yes
-
-Some options that are especially useful for bulk builds can be found at the top
-lines of the file mk/bulk/bsd.bulk-pkg.mk. The most useful options of these are
-briefly described here.
-
-  * If you are on a slow machine, you may want to set USE_BULK_BROKEN_CHECK to 
-    "no".
-
-  * If you are doing bulk builds from a read-only copy of pkgsrc, you have to
-    set BULKFILESDIR to the directory where all log files are created.
-    Otherwise the log files are created in the pkgsrc directory.
-
-  * Another important variable is BULK_PREREQ, which is a list of packages that
-    should be always available while building other packages.
-
-Some other options are scattered in the pkgsrc infrastructure:
-
-  * ALLOW_VULNERABLE_PACKAGES should be set to yes. The purpose of the bulk
-    builds is creating binary packages, no matter if they are vulnerable or
-    not. Leaving this variable unset would prevent the bulk build system from
-    even trying to build them, so possible building errors would not show up.
-
-  * CHECK_FILES (pkgsrc/mk/check/check-files.mk) can be set to "yes" to check
-    that the installed set of files matches the PLIST.
-
-  * CHECK_INTERPRETER (pkgsrc/mk/check/check-interpreter.mk) can be set to "yes
-    " to check that the installed "#!"-scripts will find their interpreter.
-
-  * PKGSRC_RUN_TEST can be set to "yes" to run each package's self-test before
-    installing it. Note that some packages make heavy use of "good" random
-    numbers, so you need to assure that the machine on which you are doing the
-    bulk builds is not completely idle. Otherwise some test programs will seem
-    to hang, while they are just waiting for new random data to be available.
-
-7.3.1.3. pre-build.local
-
-It is possible to configure the bulk build to perform certain site-specific
-tasks at the end of the pre-build stage. If the file pre-build.local exists in
-/usr/pkgsrc/mk/bulk, it will be executed (as a sh(1) script) at the end of the
-usual pre-build stage. An example use of pre-build.local is to have the line:
-
-echo "I do not have enough disk space to build this pig." \
-        > misc/openoffice/$BROKENF
-
-to prevent the system from trying to build a particular package which requires
-nearly 3 GB of disk space.
-
-7.3.2. Other environmental considerations
-
-As /usr/pkg will be completely deleted at the start of bulk builds, make sure
-your login shell is placed somewhere else. Either drop it into /usr/local/bin
-(and adjust your login shell in the passwd file), or (re-)install it via
-pkg_add(1) from /etc/rc.local, so you can login after a reboot (remember that
-your current process won't die if the package is removed, you just can't start
-any new instances of the shell any more). Also, if you use NetBSD earlier than
-1.5, or you still want to use the pkgsrc version of ssh for some reason, be
-sure to install ssh before starting it from rc.local:
-
-(cd /usr/pkgsrc/security/ssh && make bulk-install)
-if [ -f /usr/pkg/etc/rc.d/sshd ]; then
-  /usr/pkg/etc/rc.d/sshd
-fi
-
-Not doing so will result in you being not able to log in via ssh after the bulk
-build is finished or if the machine gets rebooted or crashes. You have been
-warned! :)
-
-7.3.3. Operation
-
-Make sure you don't need any of the packages still installed.
-
-Warning
-
-During the bulk build, all packages, their configuration files and some more
-files from /var, /home and possibly other locations will be removed! So don't
-run a bulk build with privileges that might harm your system.
-
-Be sure to remove all other things that might interfere with builds, like some
-libs installed in /usr/local, etc. then become root and type:
-
-# cd /usr/pkgsrc
-# sh mk/bulk/build
-
-
-If for some reason your last build didn't complete (power failure, system
-panic, ...), you can continue it by running:
-
-# sh mk/bulk/build restart
-
-At the end of the bulk build, you will get a summary via mail, and find build
-logs in the directory specified by FTP in the build.conf file.
-
-7.3.4. What it does
-
-The bulk builds consist of three steps:
-
-1. pre-build
-
-    The script updates your pkgsrc tree via (anon)cvs, then cleans out any
-    broken distfiles, and removes all packages installed.
-
-2. the bulk build
-
-    This is basically "make bulk-package" with an optimised order in which
-    packages will be built. Packages that don't require other packages will be
-    built first, and packages with many dependencies will be built later.
-
-3. post-build
-
-    Generates a report that's placed in the directory specified in the
-    build.conf file named broken.html, a short version of that report will also
-    be mailed to the build's admin.
-
-During the build, a list of broken packages will be compiled in /usr/pkgsrc
-/.broken (or .../.broken.${MACHINE} if OBJMACHINE is set), individual build
-logs of broken builds can be found in the package's directory. These files are
-used by the bulk-targets to mark broken builds to not waste time trying to
-rebuild them, and they can be used to debug these broken package builds later.
-
-7.3.5. Disk space requirements
-
-Currently, roughly the following requirements are valid for NetBSD 6.99/amd64:
-
-  * 40 GB - distfiles (NFS ok)
-
-  * 30 GB - full set of all binaries (NFS ok)
-
-  * 5 GB - temp space for compiling (local disk recommended)
-
-Note that all pkgs will be de-installed as soon as they are turned into a
-binary package, and that sources are removed, so there is no excessively huge
-demand to disk space. Afterwards, if the package is needed again, it will be
-installed via pkg_add(1) instead of building again, so there are no cycles
-wasted by recompiling.
-
-7.3.6. Setting up a sandbox for chrooted builds
-
-If you don't want all the packages nuked from a machine (rendering it useless
-for anything but pkg compiling), there is the possibility of doing the package
-bulk build inside a chroot environment.
-
-The first step is to set up a chroot sandbox, e.g. /usr/sandbox. This can be
-done by using null mounts, or manually.
-
-There is a shell script called mksandbox installed by the pkgtools/mksandbox
-package, which will set up the sandbox environment using null mounts. It will
-also create a script called sandbox in the root of the sandbox environment,
-which will allow the null mounts to be activated using the sandbox mount
-command and deactivated using the sandbox umount command.
-
-To set up a sandbox environment by hand, after extracting all the sets from a
-NetBSD installation or doing a make distribution DESTDIR=/usr/sandbox in /usr/
-src/etc, be sure the following items are present and properly configured:
-
- 1. Kernel
-
-    # cp /netbsd /usr/sandbox
-
- 2. /dev/*
-
-    # cd /usr/sandbox/dev ; sh MAKEDEV all
-
- 3. /etc/resolv.conf (for security/smtpd and mail):
-
-    # cp /etc/resolv.conf /usr/sandbox/etc
-
- 4. Working(!) mail config (hostname, sendmail.cf):
-
-    # cp /etc/mail/sendmail.cf /usr/sandbox/etc/mail
-
- 5. /etc/localtime (for security/smtpd):
-
-    # ln -sf /usr/share/zoneinfo/UTC /usr/sandbox/etc/localtime
-
- 6. /usr/src (system sources, rarely used by packages if at all:
-
-    # ln -s ../disk1/cvs .
-              # ln -s cvs/src-2.0 src
-
- 7. Create /var/db/pkg (not part of default install):
-
-    # mkdir /usr/sandbox/var/db/pkg
-
- 8. Create /usr/pkg (not part of default install):
-
-    # mkdir /usr/sandbox/usr/pkg
-
- 9. Checkout pkgsrc via cvs into /usr/sandbox/usr/pkgsrc:
-
-    # cd /usr/sandbox/usr
-    # cvs -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -d -P pkgsrc
-
-
-    Do not mount/link this to the copy of your pkgsrc tree you do development
-    in, as this will likely cause problems!
-
-10. Make /usr/sandbox/usr/pkgsrc/packages and .../distfiles point somewhere
-    appropriate. NFS- and/or nullfs-mounts may come in handy!
-
-11. Edit mk.conf, see Section 7.3.1.2, "mk.conf".
-
-12. Adjust mk/bulk/build.conf to suit your needs.
-
-When the chroot sandbox is set up, you can start the build with the following
-steps:
-
-# cd /usr/sandbox/usr/pkgsrc
-# sh mk/bulk/do-sandbox-build
-
-
-This will just jump inside the sandbox and start building. At the end of the
-build, mail will be sent with the results of the build. Created binary pkgs
-will be in /usr/sandbox/usr/pkgsrc/packages (wherever that points/mounts to/
-from).
-
-7.3.7. Building a partial set of packages
-
-In addition to building a complete set of all packages in pkgsrc, the pkgsrc/mk
-/bulk/build script may be used to build a subset of the packages contained in
-pkgsrc. By setting SPECIFIC_PKGS in mk.conf, the variables
-
-  * SITE_SPECIFIC_PKGS
-
-  * HOST_SPECIFIC_PKGS
-
-  * GROUP_SPECIFIC_PKGS
-
-  * USER_SPECIFIC_PKGS
-
-will define the set of packages which should be built. The bulk build code will
-also include any packages which are needed as dependencies for the explicitly
-listed packages.
-
-One use of this is to do a bulk build with SPECIFIC_PKGS in a chroot sandbox
-periodically to have a complete set of the binary packages needed for your site
-available without the overhead of building extra packages that are not needed.
-
-7.3.8. Uploading results of a bulk build
-
-This section describes how pkgsrc developers can upload binary pkgs built by
-bulk builds to ftp.NetBSD.org.
-
-If you would like to automatically create checksum files for the binary
-packages you intend to upload, remember to set MKSUMS=yes in your mk/bulk/
-build.conf.
-
-If you would like to PGP sign the checksum files (highly recommended!),
-remember to set SIGN_AS=username@NetBSD.org in your mk/bulk/build.conf. This
-will prompt you for your GPG password to sign the files before uploading
-everything.
-
-Then, make sure that you have RSYNC_DST set properly in your mk/bulk/build.conf
-file, i.e. adjust it to something like one of the following:
-
-RSYNC_DST=ftp.NetBSD.org:/pub/pkgsrc/packages/NetBSD/arch/a.b.c-20xxQy/upload
-
-Please use appropriate values for "20xxQy" (the branch), "a.b.c" (the OS
-version) and "arch" here. If your login on ftp.NetBSD.org is different from
-your local login, write your login directly into the variable, e.g. my local
-account is "feyrer", but for my login "hubertf", I use:
-
-RSYNC_DST=hubertf@ftp.NetBSD.org:/pub/pkgsrc/packages/NetBSD/arch/a.b.c-20xxQy/upload
-
-A separate upload directory is used here to allow "closing" the directory
-during upload. To do so, run the following command on ftp.NetBSD.org next:
-
-nbftp% mkdir -p -m 750 /pub/pkgsrc/packages/NetBSD/arch/a.b.c-20xxQy/upload
-
-Before uploading the binary pkgs, ssh authentication needs to be set up. This
-example shows how to set up temporary keys for the root account inside the
-sandbox (assuming that no keys should be present there usually):
-
-# chroot /usr/sandbox
-chroot-# rm $HOME/.ssh/id-dsa*
-chroot-# ssh-keygen -t rsa
-chroot-# cat $HOME/.ssh/id-rsa.pub
-
-
-Now take the output of id-rsa.pub and append it to your ~/.ssh/authorized_keys
-file on ftp.NetBSD.org. You should remove the key after the upload is done!
-
-Next, test if your ssh connection really works:
-
-chroot-# ssh ftp.NetBSD.org date
-
-Use "-l yourNetBSDlogin" here as appropriate!
-
-Now after all this works, you can exit the sandbox and start the upload:
-
-chroot-# exit
-# cd /usr/sandbox/usr/pkgsrc
-# sh mk/bulk/do-sandbox-upload
-
-
-The upload process may take quite some time. Use ls(1) or du(1) on the FTP
-server to monitor progress of the upload. The upload script will take care of
-not uploading restricted packages.
-
-After the upload has ended, first thing is to revoke ssh access:
-
-nbftp% vi ~/.ssh/authorized_keys
-      Gdd:x!
-
-Use whatever is needed to remove the key you've entered before! Last, move the
-uploaded packages out of the upload directory to have them accessible to
-everyone:
-
-nbftp% cd /pub/pkgsrc/packages/NetBSD/arch/a.b.c-20xxQy
-nbftp% mv upload/* .
-nbftp% rmdir upload
-nbftp% chgrp -R netbsd .
-nbftp% find . -type d | xargs chmod 775
-
-
-7.4. Running a pbulk-style bulk build
+7.3. Running a pbulk-style bulk build
 
 Running a pbulk-style bulk build works roughly as follows:
 
@@ -2625,7 +2253,7 @@ Running a pbulk-style bulk build works roughly as follows:
   * Then, build each of the packages from a clean installation directory using
     the infrastructure.
 
-7.4.1. Preparation
+7.3.1. Preparation
 
 First, you need to create a pkgsrc installation for the pbulk infrastructure.
 No matter on which platform you are (even on NetBSD), you should bootstrap into
@@ -2665,13 +2293,13 @@ Now the pbulk infrastructure is built and installed. It still needs to be
 configured, and after some more preparation, we will be able to start the real
 bulk build.
 
-7.4.2. Configuration
+7.3.2. Configuration
 
 TODO; see pkgsrc/doc/HOWTO-pbulk for more information.
 
 TODO: continue writing
 
-7.5. Creating a multiple CD-ROM packages collection
+7.4. Creating a multiple CD-ROM packages collection
 
 After your pkgsrc bulk-build has completed, you may wish to create a CD-ROM set
 of the resulting binary packages to assist in installing packages on other
@@ -2679,7 +2307,7 @@ machines. The pkgtools/cdpack package provides a simple tool for creating the
 ISO 9660 images. cdpack arranges the packages on the CD-ROMs in a way that
 keeps all the dependencies for a given package on the same CD as that package.
 
-7.5.1. Example of cdpack
+7.4.1. Example of cdpack
 
 Complete documentation for cdpack is found in the cdpack(1) man page. The
 following short example assumes that the binary packages are left in /usr/
@@ -3240,7 +2868,7 @@ Table of Contents
     10.1. Common types of packages
 
         10.1.1. Perl modules
-        10.1.2. KDE applications
+        10.1.2. KDE3 applications
         10.1.3. Python modules and programs
 
     10.2. Examples
@@ -3470,7 +3098,7 @@ Table of Contents
 10.1. Common types of packages
 
     10.1.1. Perl modules
-    10.1.2. KDE applications
+    10.1.2. KDE3 applications
     10.1.3. Python modules and programs
 
 10.2. Examples
@@ -3511,7 +3139,7 @@ package involves only a few steps.
 
     [...]
 
-    BUILD_DEPENDS+= lua>=5.0:../../lang/lua
+    BUILD_DEPENDS+= libxslt-[0-9]*:../../textproc/libxslt
     DEPENDS+=       screen-[0-9]*:../../misc/screen
     DEPENDS+=       screen>=4.0:../../misc/screen
 
@@ -3563,10 +3191,10 @@ package involves only a few steps.
 Simple Perl modules are handled automatically by url2pkg, including
 dependencies.
 
-10.1.2. KDE applications
+10.1.2. KDE3 applications
 
-KDE applications should always include meta-pkgs/kde3/kde3.mk, which contains
-numerous settings that are typical of KDE packages.
+KDE3 applications should always include meta-pkgs/kde3/kde3.mk, which contains
+numerous settings that are typical of KDE3 packages.
 
 10.1.3. Python modules and programs
 
@@ -3846,12 +3474,13 @@ mostly historical and has no further meaning.
   * DISTNAME is the basename of the distribution file to be downloaded from the
     package's website.
 
-  * PKGNAME is the name of the package, as used by pkgsrc. You only need to
-    provide it if DISTNAME (which is the default) is not a good name for the
-    package in pkgsrc. Usually it is the pkgsrc directory name together with
-    the version number. It must match the regular expression ^[A-Za-z0-9]
-    [A-Za-z0-9-_.+]*$, that is, it starts with a letter or digit, and contains
-    only letters, digits, dashes, underscores, dots and plus signs.
+  * PKGNAME is the name of the package, as used by pkgsrc. You need to provide
+    it if DISTNAME (which is the default) is not a good name for the package in
+    pkgsrc or DISTNAME is not provided (no distribution file is required).
+    Usually it is the pkgsrc directory name together with the version number.
+    It must match the regular expression ^[A-Za-z0-9][A-Za-z0-9-_.+]*$, that
+    is, it starts with a letter or digit, and contains only letters, digits,
+    dashes, underscores, dots and plus signs.
 
   * SVR4_PKGNAME is the name of the package file to create if the PKGNAME isn't
     unique on a SVR4 system. The default is PKGNAME, which may be shortened
@@ -4186,7 +3815,13 @@ MESSAGE
 
 ALTERNATIVES
 
-    FIXME: There is no documentation on the alternatives framework.
+    This file is used by the alternatives framework. It creates, configures,
+    and destroys generic wrappers used to run programs with similar interfaces.
+    See pkg_alternatives(8) from pkgtools/pkg_alternatives for more
+    information.
+
+    Each line of the file contains two filenames, first the wrapper and then
+    the alternative provided by the package. Both paths are relative to PREFIX.
 
 11.5.2. Files affecting the build process
 
@@ -5800,13 +5435,14 @@ name is derived from the DISTNAME variable, is fetched. The more complicated
 cases are described below.
 
 The variable DISTFILES specifies the list of distfiles that have to be fetched.
-Its value defaults to ${DISTNAME}${EXTRACT_SUFX}, so that most packages don't
-need to define it at all. EXTRACT_SUFX is .tar.gz by default, but can be
-changed freely. Note that if your package requires additional distfiles to the
-default one, you cannot just append the additional filenames using the +=
-operator, but you have write for example:
+Its value defaults to ${DEFAULT_DISTFILES} and its value is ${DISTNAME}$
+{EXTRACT_SUFX}, so that most packages don't need to define it at all.
+EXTRACT_SUFX is .tar.gz by default, but can be changed freely. Note that if
+your package requires additional distfiles to the default one, you cannot just
+append the additional filenames using the += operator, but you have write for
+example:
 
-DISTFILES=      ${DISTNAME}${EXTRACT_SUFX} additional-files.tar.gz
+DISTFILES=      ${DEFAULT_DISTFILES} additional-files.tar.gz
 
 Each distfile is fetched from a list of sites, usually MASTER_SITES. If the
 package has multiple DISTFILES or multiple PATCHFILES from different sites, you
@@ -5830,6 +5466,14 @@ MASTER_SITES=   http://www.example.com/download.cgi?file=
 
 The exception to this rule are URLs starting with a dash. In that case the URL
 is taken as is, fetched and the result stored under the name of the distfile.
+You can use this style for the case when the download URL style does not match
+the above common case. For example, if permanent download URL is a redirector
+to the real download URL, or the download file name is offered by an HTTP
+Content-Disposition header. In the following example, foo-1.0.0.tar.gz will be
+created instead of the default v1.0.0.tar.gz.
+
+DISTNAME=       foo-1.0.0
+MASTER_SITES=   -http://www.example.com/archive/v1.0.0.tar.gz
 
 There are some predefined values for MASTER_SITES, which can be used in
 packages. The names of the variables should speak for themselves.
@@ -5844,13 +5488,18 @@ ${MASTER_SITE_GENTOO}
 ${MASTER_SITE_GNOME}
 ${MASTER_SITE_GNU}
 ${MASTER_SITE_GNUSTEP}
+${MASTER_SITE_HASKELL_HACKAGE}
 ${MASTER_SITE_IFARCHIVE}
 ${MASTER_SITE_KDE}
 ${MASTER_SITE_MOZILLA}
+${MASTER_SITE_MOZILLA_ALL}
+${MASTER_SITE_MOZILLA_ESR}
 ${MASTER_SITE_MYSQL}
+${MASTER_SITE_NETLIB}
 ${MASTER_SITE_OPENOFFICE}
 ${MASTER_SITE_PERL_CPAN}
 ${MASTER_SITE_PGSQL}
+${MASTER_SITE_RUBYGEMS}
 ${MASTER_SITE_R_CRAN}
 ${MASTER_SITE_SOURCEFORGE}
 ${MASTER_SITE_SOURCEFORGE_JP}
@@ -5859,6 +5508,7 @@ ${MASTER_SITE_SUSE}
 ${MASTER_SITE_TEX_CTAN}
 ${MASTER_SITE_XCONTRIB}
 ${MASTER_SITE_XEMACS}
+${MASTER_SITE_XORG}
 
 Some explanations for the less self-explaining ones: MASTER_SITE_BACKUP
 contains backup sites for packages that are maintained in ftp://ftp.NetBSD.org/
@@ -6421,10 +6071,10 @@ bulk-package
 
     Used to do bulk builds. If an appropriate binary package already exists, no
     action is taken. If not, this target will compile, install and package it
-    (and its depends, if PKG_DEPENDS is set properly. See Section 7.3.1,
-    "Configuration"). After creating the binary package, the sources, the
-    just-installed package and its required packages are removed, preserving
-    free disk space.
+    (and its depends, if PKG_DEPENDS is set properly. See Chapter 7, Creating
+    binary packages for everything in pkgsrc (bulk builds)). After creating the
+    binary package, the sources, the just-installed package and its required
+    packages are removed, preserving free disk space.
 
     Beware that this target may deinstall all packages installed on a system!
 
@@ -8046,8 +7696,8 @@ Our policy is that we accept binaries only from pkgsrc developers to guarantee
 that the packages don't contain any trojan horses etc. This is not to annoy
 anyone but rather to protect our users! You're still free to put up your
 home-made binary packages and tell the world where to get them. NetBSD
-developers doing bulk builds and wanting to upload them please see
-Section 7.3.8, "Uploading results of a bulk build".
+developers doing bulk builds and wanting to upload them please see Chapter 7, 
+Creating binary packages for everything in pkgsrc (bulk builds).
 
 21.2. Submitting source packages (for non-NetBSD-developers)
 
@@ -8972,23 +8622,6 @@ mk/platform/MyOS.mk
 
     This file contains the platform-specific definitions that are used by
     pkgsrc. Start by copying one of the other files and edit it to your needs.
-
-mk/platform/MyOS.pkg.dist
-
-    This file contains a list of directories, together with their permission
-    bits and ownership. These directories will be created automatically with
-    every package that explicitly sets USE_MTREE. This feature will be removed.
-
-mk/platform/MyOS.x11.dist
-
-    Just copy one of the pre-existing x11.dist files to your MyOS.x11.dist.
-
-mk/tools/bootstrap.mk
-
-    On some operating systems, the tools that are provided with the base system
-    are not good enough for pkgsrc. For example, there are many versions of sed
-    (1) that have a narrow limit on the line length they can process. Therefore
-    pkgsrc brings its own tools, which can be enabled here.
 
 mk/tools/tools.MyOS.mk
 

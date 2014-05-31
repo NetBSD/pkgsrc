@@ -135,24 +135,13 @@ builds)</a></span></dt>
 <dd><dl>
 <dt><span class="sect1"><a href="#bulk.pre">7.1. Think first, build later</a></span></dt>
 <dt><span class="sect1"><a href="#bulk.req">7.2. Requirements of a bulk build</a></span></dt>
-<dt><span class="sect1"><a href="#bulk.old">7.3. Running an old-style bulk build</a></span></dt>
+<dt><span class="sect1"><a href="#bulk.pbulk">7.3. Running a pbulk-style bulk build</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#binary.configuration">7.3.1. Configuration</a></span></dt>
-<dt><span class="sect2"><a href="#other-environmental-considerations">7.3.2. Other environmental considerations</a></span></dt>
-<dt><span class="sect2"><a href="#operation">7.3.3. Operation</a></span></dt>
-<dt><span class="sect2"><a href="#what-it-does">7.3.4. What it does</a></span></dt>
-<dt><span class="sect2"><a href="#disk-space-requirements">7.3.5. Disk space requirements</a></span></dt>
-<dt><span class="sect2"><a href="#setting-up-a-sandbox">7.3.6. Setting up a sandbox for chrooted builds</a></span></dt>
-<dt><span class="sect2"><a href="#building-a-partial-set">7.3.7. Building a partial set of packages</a></span></dt>
-<dt><span class="sect2"><a href="#bulk-upload">7.3.8. Uploading results of a bulk build</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.pbulk.prepare">7.3.1. Preparation</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.pbulk.conf">7.3.2. Configuration</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#bulk.pbulk">7.4. Running a pbulk-style bulk build</a></span></dt>
-<dd><dl>
-<dt><span class="sect2"><a href="#bulk.pbulk.prepare">7.4.1. Preparation</a></span></dt>
-<dt><span class="sect2"><a href="#bulk.pbulk.conf">7.4.2. Configuration</a></span></dt>
-</dl></dd>
-<dt><span class="sect1"><a href="#creating-cdroms">7.5. Creating a multiple CD-ROM packages collection</a></span></dt>
-<dd><dl><dt><span class="sect2"><a href="#cdpack-example">7.5.1. Example of cdpack</a></span></dt></dl></dd>
+<dt><span class="sect1"><a href="#creating-cdroms">7.4. Creating a multiple CD-ROM packages collection</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="#cdpack-example">7.4.1. Example of cdpack</a></span></dt></dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="#files">8. Directory layout of the installed files</a></span></dt>
 <dd><dl>
@@ -189,7 +178,7 @@ builds)</a></span></dt>
 <dt><span class="sect1"><a href="#creating.common">10.1. Common types of packages</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#creating.perl-module">10.1.1. Perl modules</a></span></dt>
-<dt><span class="sect2"><a href="#creating.kde-app">10.1.2. KDE applications</a></span></dt>
+<dt><span class="sect2"><a href="#creating.kde-app">10.1.2. KDE3 applications</a></span></dt>
 <dt><span class="sect2"><a href="#creating.python-module">10.1.3. Python modules and programs</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#creating.examples">10.2. Examples</a></span></dt>
@@ -877,24 +866,13 @@ builds)</a></span></dt>
 <dd><dl>
 <dt><span class="sect1"><a href="#bulk.pre">7.1. Think first, build later</a></span></dt>
 <dt><span class="sect1"><a href="#bulk.req">7.2. Requirements of a bulk build</a></span></dt>
-<dt><span class="sect1"><a href="#bulk.old">7.3. Running an old-style bulk build</a></span></dt>
+<dt><span class="sect1"><a href="#bulk.pbulk">7.3. Running a pbulk-style bulk build</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#binary.configuration">7.3.1. Configuration</a></span></dt>
-<dt><span class="sect2"><a href="#other-environmental-considerations">7.3.2. Other environmental considerations</a></span></dt>
-<dt><span class="sect2"><a href="#operation">7.3.3. Operation</a></span></dt>
-<dt><span class="sect2"><a href="#what-it-does">7.3.4. What it does</a></span></dt>
-<dt><span class="sect2"><a href="#disk-space-requirements">7.3.5. Disk space requirements</a></span></dt>
-<dt><span class="sect2"><a href="#setting-up-a-sandbox">7.3.6. Setting up a sandbox for chrooted builds</a></span></dt>
-<dt><span class="sect2"><a href="#building-a-partial-set">7.3.7. Building a partial set of packages</a></span></dt>
-<dt><span class="sect2"><a href="#bulk-upload">7.3.8. Uploading results of a bulk build</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.pbulk.prepare">7.3.1. Preparation</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.pbulk.conf">7.3.2. Configuration</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#bulk.pbulk">7.4. Running a pbulk-style bulk build</a></span></dt>
-<dd><dl>
-<dt><span class="sect2"><a href="#bulk.pbulk.prepare">7.4.1. Preparation</a></span></dt>
-<dt><span class="sect2"><a href="#bulk.pbulk.conf">7.4.2. Configuration</a></span></dt>
-</dl></dd>
-<dt><span class="sect1"><a href="#creating-cdroms">7.5. Creating a multiple CD-ROM packages collection</a></span></dt>
-<dd><dl><dt><span class="sect2"><a href="#cdpack-example">7.5.1. Example of cdpack</a></span></dt></dl></dd>
+<dt><span class="sect1"><a href="#creating-cdroms">7.4. Creating a multiple CD-ROM packages collection</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="#cdpack-example">7.4.1. Example of cdpack</a></span></dt></dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="#files">8. Directory layout of the installed files</a></span></dt>
 <dd><dl>
@@ -2249,7 +2227,7 @@ works.</p>
 <li class="listitem"><p><code class="varname">DEPENDS_TARGET</code>:
 	    By default, dependencies are only installed, and no binary
 	    package is created for them. You can set this variable to
-	    <code class="literal">package</code> to automatically create binary
+	    <code class="literal">package-install</code> to automatically create binary
 	    packages after installing dependencies.</p></li>
 </ul></div>
 </div>
@@ -2271,14 +2249,6 @@ works.</p>
     you can set
     <code class="varname">USE_DESTDIR=no</code>; this setting will be deprecated though,
     so it's preferable to convert a package to DESTDIR instead.</p>
-<p>DESTDIR support changes the behaviour of various targets
-    slightly. To install a package after building it, use
-    <code class="literal">package-install</code>. <code class="literal">package</code> and
-    <code class="literal">install</code> don't do that any
-    longer. <code class="literal">package-install</code> can be used as
-    <code class="varname">DEPENDS_TARGET</code>.  <code class="literal">bin-install</code>
-    will ask for the root password to install the package and fail,
-    <code class="literal">package-install</code> will ask again.</p>
 <p>With basic DESTDIR support, <strong class="userinput"><code>make
     clean</code></strong> needs to be run as root.</p>
 <p>Considering the <code class="filename">foo/bar</code> package,
@@ -2298,7 +2268,7 @@ uid=1000(myusername) gid=100(users) groups=100(users),0(wheel)
 
 </p>
 <pre class="programlisting">
-<code class="prompt">$</code> make USE_DESTDIR=yes install
+<code class="prompt">$</code> make stage-install
 </pre>
 <p>
 
@@ -2306,7 +2276,7 @@ uid=1000(myusername) gid=100(users) groups=100(users),0(wheel)
 
 </p>
 <pre class="programlisting">
-<code class="prompt">$</code> make USE_DESTDIR=yes PACKAGES=$HOME/packages package
+<code class="prompt">$</code> make PACKAGES=$HOME/packages package
 </pre>
 <p>
 
@@ -2315,7 +2285,7 @@ uid=1000(myusername) gid=100(users) groups=100(users),0(wheel)
 
 </p>
 <pre class="programlisting">
-<code class="prompt">$</code> make USE_DESTDIR=yes PACKAGES=$HOME/packages package-install
+<code class="prompt">$</code> make PACKAGES=$HOME/packages install
 </pre>
 <p>
 
@@ -2344,18 +2314,32 @@ uid=1000(myusername) gid=100(users) groups=100(users),0(wheel)
 	  compilers to invoke when building packages.  Valid values
 	  are:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p><code class="varname">distcc</code>:
-	    distributed C/C++ (chainable)</p></li>
+<li class="listitem"><p><code class="varname">ccc</code>:
+	    Compaq C Compilers (Tru64)</p></li>
 <li class="listitem"><p><code class="varname">ccache</code>:
 	    compiler cache (chainable)</p></li>
+<li class="listitem"><p><code class="varname">clang</code>:
+	    Clang C and Objective-C compiler</p></li>
+<li class="listitem"><p><code class="varname">distcc</code>:
+	    distributed C/C++ (chainable)</p></li>
+<li class="listitem"><p><code class="varname">f2c</code>:
+	    Fortran 77 to C compiler (chainable)</p></li>
+<li class="listitem"><p><code class="varname">icc</code>:
+	    Intel C++ Compiler (Linux)</p></li>
+<li class="listitem"><p><code class="varname">ido</code>:
+	    SGI IRIS Development Option cc (IRIX 5)</p></li>
 <li class="listitem"><p><code class="varname">gcc</code>:
 	    GNU C/C++ Compiler</p></li>
+<li class="listitem"><p><code class="varname">hp</code>:
+	    HP-UX C/aC++ compilers</p></li>
 <li class="listitem"><p><code class="varname">mipspro</code>:
 	    Silicon Graphics, Inc. MIPSpro (n32/n64)</p></li>
-<li class="listitem"><p><code class="varname">mipspro</code>:
+<li class="listitem"><p><code class="varname">mipspro-ucode</code>:
 	    Silicon Graphics, Inc. MIPSpro (o32)</p></li>
 <li class="listitem"><p><code class="varname">sunpro</code>:
 	    Sun Microsystems, Inc. WorkShip/Forte/Sun ONE Studio</p></li>
+<li class="listitem"><p><code class="varname">xlc</code>:
+	    IBM's XL C/C++ compiler suite (Darwin/MacOSX)</p></li>
 </ul></div>
 <p>The default is
 	  <span class="quote">&#8220;<span class="quote"><code class="varname">gcc</code></span>&#8221;</span>.  You can use
@@ -2563,31 +2547,20 @@ builds)</h2></div></div></div>
 <dl>
 <dt><span class="sect1"><a href="#bulk.pre">7.1. Think first, build later</a></span></dt>
 <dt><span class="sect1"><a href="#bulk.req">7.2. Requirements of a bulk build</a></span></dt>
-<dt><span class="sect1"><a href="#bulk.old">7.3. Running an old-style bulk build</a></span></dt>
+<dt><span class="sect1"><a href="#bulk.pbulk">7.3. Running a pbulk-style bulk build</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#binary.configuration">7.3.1. Configuration</a></span></dt>
-<dt><span class="sect2"><a href="#other-environmental-considerations">7.3.2. Other environmental considerations</a></span></dt>
-<dt><span class="sect2"><a href="#operation">7.3.3. Operation</a></span></dt>
-<dt><span class="sect2"><a href="#what-it-does">7.3.4. What it does</a></span></dt>
-<dt><span class="sect2"><a href="#disk-space-requirements">7.3.5. Disk space requirements</a></span></dt>
-<dt><span class="sect2"><a href="#setting-up-a-sandbox">7.3.6. Setting up a sandbox for chrooted builds</a></span></dt>
-<dt><span class="sect2"><a href="#building-a-partial-set">7.3.7. Building a partial set of packages</a></span></dt>
-<dt><span class="sect2"><a href="#bulk-upload">7.3.8. Uploading results of a bulk build</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.pbulk.prepare">7.3.1. Preparation</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.pbulk.conf">7.3.2. Configuration</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#bulk.pbulk">7.4. Running a pbulk-style bulk build</a></span></dt>
-<dd><dl>
-<dt><span class="sect2"><a href="#bulk.pbulk.prepare">7.4.1. Preparation</a></span></dt>
-<dt><span class="sect2"><a href="#bulk.pbulk.conf">7.4.2. Configuration</a></span></dt>
-</dl></dd>
-<dt><span class="sect1"><a href="#creating-cdroms">7.5. Creating a multiple CD-ROM packages collection</a></span></dt>
-<dd><dl><dt><span class="sect2"><a href="#cdpack-example">7.5.1. Example of cdpack</a></span></dt></dl></dd>
+<dt><span class="sect1"><a href="#creating-cdroms">7.4. Creating a multiple CD-ROM packages collection</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="#cdpack-example">7.4.1. Example of cdpack</a></span></dt></dl></dd>
 </dl>
 </div>
 <p>When you have multiple machines that should run the same packages,
 it is wasted time if they all build their packages themselves from
-source. There are two ways of getting a set of binary packages: The old
-bulk build system, or the new (as of 2007) parallel bulk build (pbulk)
-system. This chapter describes how to set them up so that the packages
+source. There is a ways of getting a set of binary packages:
+The bulk build system, or pbulk ("p" stands for "parallel).
+This chapter describes how to set it up so that the packages
 are most likely to be usable later.</p>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -2643,404 +2616,7 @@ temporary filesystems, others must survive a sudden reboot.</p>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="bulk.old"></a>7.3. Running an old-style bulk build</h2></div></div></div>
-<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Note</h3>
-<p>There are two ways of doing a bulk build. The old-style
-one and the new-style <span class="quote">&#8220;<span class="quote">pbulk</span>&#8221;</span>. The latter is the recommended
-way.</p>
-</div>
-<div class="sect2">
-<div class="titlepage"><div><div><h3 class="title">
-<a name="binary.configuration"></a>7.3.1. Configuration</h3></div></div></div>
-<div class="sect3">
-<div class="titlepage"><div><div><h4 class="title">
-<a name="binary.bulk.build.conf"></a>7.3.1.1. <code class="filename">build.conf</code>
-</h4></div></div></div>
-<p>The <code class="filename">build.conf</code> file is the main
-	configuration file for bulk builds. You can configure how your
-	copy of pkgsrc is kept up to date, how the distfiles are
-	downloaded, how the packages are built and how the report is
-	generated. You can find an annotated example file in
-	<code class="filename">pkgsrc/mk/bulk/build.conf-example</code>. To use
-	it, copy <code class="filename">build.conf-example</code> to
-	<code class="filename">build.conf</code> and edit it, following the
-	comments in that file.</p>
-</div>
-<div class="sect3">
-<div class="titlepage"><div><div><h4 class="title">
-<a name="binary.mk.conf"></a>7.3.1.2. <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a>
-</h4></div></div></div>
-<p>You may want to set variables in <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a>.
-	Look at <code class="filename">pkgsrc/mk/defaults/mk.conf</code> for
-	details of the default settings. You will want to ensure that
-	<code class="varname">ACCEPTABLE_LICENSES</code> meet your local policy.
-	As used in this example, <code class="varname">SKIP_LICENSE_CHECK=yes</code>
-	completely bypasses the license check.</p>
-<pre class="programlisting">
-PACKAGES?=      ${_PKGSRCDIR}/packages/${MACHINE_ARCH}
-WRKOBJDIR?=     /usr/tmp/pkgsrc   # build here instead of in pkgsrc
-BSDSRCDIR=      /usr/src
-BSDXSRCDIR=     /usr/xsrc         # for x11/xservers
-OBJHOSTNAME?=   yes               # use work.`hostname`
-FAILOVER_FETCH= yes               # insist on the correct checksum
-PKG_DEVELOPER?= yes
-SKIP_LICENSE_CHECK=    yes
-</pre>
-<p>Some options that are especially useful for bulk builds
-	can be found at the top lines of the file
-	<code class="filename">mk/bulk/bsd.bulk-pkg.mk</code>. The most useful
-	options of these are briefly described here.</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>If you are on a slow machine, you may want to
-	  set <code class="varname">USE_BULK_BROKEN_CHECK</code> to
-	  <span class="quote">&#8220;<span class="quote">no</span>&#8221;</span>.</p></li>
-<li class="listitem"><p>If you are doing bulk builds from a read-only
-	  copy of pkgsrc, you have to set <code class="varname">BULKFILESDIR</code>
-	  to the directory where all log files are created. Otherwise the
-	  log files are created in the pkgsrc directory.</p></li>
-<li class="listitem"><p>Another important variable is
-	  <code class="varname">BULK_PREREQ</code>, which is a list of packages that
-	  should be always available while building other
-	  packages.</p></li>
-</ul></div>
-<p>Some other options are scattered in the pkgsrc
-	infrastructure:</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p><code class="varname">ALLOW_VULNERABLE_PACKAGES</code>
-	  should be set to <code class="literal">yes</code>. The purpose of the
-	  bulk builds is creating binary packages, no matter if they
-	  are vulnerable or not. Leaving this variable unset would
-	  prevent the bulk build system from even trying to build
-	  them, so possible building errors would not show
-	  up.</p></li>
-<li class="listitem"><p><code class="varname">CHECK_FILES</code>
-	  (<code class="filename">pkgsrc/mk/check/check-files.mk</code>) can be set to
-	  <span class="quote">&#8220;<span class="quote">yes</span>&#8221;</span> to check that the installed set of files
-	  matches the <code class="filename">PLIST</code>.</p></li>
-<li class="listitem"><p><code class="varname">CHECK_INTERPRETER</code>
-	  (<code class="filename">pkgsrc/mk/check/check-interpreter.mk</code>) can be set to
-	  <span class="quote">&#8220;<span class="quote">yes</span>&#8221;</span> to check that the installed
-	  <span class="quote">&#8220;<span class="quote">#!</span>&#8221;</span>-scripts will find their
-	  interpreter.</p></li>
-<li class="listitem"><p><code class="varname">PKGSRC_RUN_TEST</code> can be
-	  set to <span class="quote">&#8220;<span class="quote"><code class="literal">yes</code></span>&#8221;</span> to run each
-	  package's self-test before installing it. Note that some
-	  packages make heavy use of <span class="quote">&#8220;<span class="quote">good</span>&#8221;</span> random
-	  numbers, so you need to assure that the machine on which you
-	  are doing the bulk builds is not completely idle. Otherwise
-	  some test programs will seem to hang, while they are just
-	  waiting for new random data to be
-	  available.</p></li>
-</ul></div>
-</div>
-<div class="sect3">
-<div class="titlepage"><div><div><h4 class="title">
-<a name="pre-build.local"></a>7.3.1.3. <code class="filename">pre-build.local</code>
-</h4></div></div></div>
-<p>It is possible to configure the bulk build to perform
-	certain site-specific tasks at the end of the pre-build
-	stage.  If the file
-	<code class="filename">pre-build.local</code> exists in
-	<code class="filename">/usr/pkgsrc/mk/bulk</code>, it will be executed
-	(as a <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?sh+1+NetBSD-5.0.1+i386"><span class="citerefentry"><span class="refentrytitle">sh</span>(1)</span></a> script) at the end of the usual pre-build
-	stage.  An example use of
-	<code class="filename">pre-build.local</code> is to have the line:</p>
-<pre class="screen">echo "I do not have enough disk space to build this pig." \
-	&gt; misc/openoffice/$BROKENF</pre>
-<p>to prevent the system from trying to build a particular package
-	which requires nearly 3 GB of disk space.</p>
-</div>
-</div>
-<div class="sect2">
-<div class="titlepage"><div><div><h3 class="title">
-<a name="other-environmental-considerations"></a>7.3.2. Other environmental considerations</h3></div></div></div>
-<p>As <code class="filename">/usr/pkg</code> will be completely
-      deleted at the start of bulk builds, make sure your login
-      shell is placed somewhere else. Either drop it into
-      <code class="filename">/usr/local/bin</code> (and adjust your login
-      shell in the passwd file), or (re-)install it via
-      <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1+NetBSD-5.0.1+i386"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a> from <code class="filename">/etc/rc.local</code>, so
-      you can login after a reboot (remember that your current
-      process won't die if the package is removed, you just can't
-      start any new instances of the shell any more).  Also, if you
-      use NetBSD earlier than 1.5, or you still want to use the pkgsrc
-      version of ssh for some reason, be sure to install ssh before
-      starting it from <code class="filename">rc.local</code>:</p>
-<pre class="programlisting">
-(cd /usr/pkgsrc/security/ssh &amp;&amp; make bulk-install)
-if [ -f /usr/pkg/etc/rc.d/sshd ]; then
-  /usr/pkg/etc/rc.d/sshd
-fi
-</pre>
-<p>Not doing so will result in you being not able to log in
-      via ssh after the bulk build is finished or if the machine
-      gets rebooted or crashes. You have been warned! :)</p>
-</div>
-<div class="sect2">
-<div class="titlepage"><div><div><h3 class="title">
-<a name="operation"></a>7.3.3. Operation</h3></div></div></div>
-<p>Make sure you don't need any of the packages still
-      installed.</p>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p>During the bulk build, <span class="emphasis"><em>all packages, their
-	configuration files and some more files from
-	<code class="filename">/var</code>, <code class="filename">/home</code> and
-	possibly other locations will be removed! So don't run a bulk
-	build with privileges that might harm your
-	system.</em></span></p>
-</div>
-<p>Be sure to remove all other things that might
-      interfere with builds, like some libs installed in
-      <code class="filename">/usr/local</code>, etc. then become root and type:</p>
-<pre class="screen">
-<code class="prompt">#</code> <strong class="userinput"><code>cd /usr/pkgsrc</code></strong>
-<code class="prompt">#</code> <strong class="userinput"><code>sh mk/bulk/build</code></strong>
-      </pre>
-<p>If for some reason your last build didn't complete (power
-      failure, system panic, ...), you can continue it by
-      running:</p>
-<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>sh mk/bulk/build restart</code></strong></pre>
-<p>At the end of the bulk build, you will get a summary via mail,
-      and find build logs in the directory specified by
-      <code class="varname">FTP</code> in the <code class="filename">build.conf</code>
-      file.</p>
-</div>
-<div class="sect2">
-<div class="titlepage"><div><div><h3 class="title">
-<a name="what-it-does"></a>7.3.4. What it does</h3></div></div></div>
-<p>The bulk builds consist of three steps:</p>
-<div class="variablelist"><dl class="variablelist">
-<dt><span class="term">1. pre-build</span></dt>
-<dd><p>The script updates your pkgsrc tree via (anon)cvs, then
-	    cleans out any broken distfiles, and removes all
-	    packages installed.</p></dd>
-<dt><span class="term">2. the bulk build</span></dt>
-<dd><p>This is basically <span class="quote">&#8220;<span class="quote">make bulk-package</span>&#8221;</span> with
-	    an optimised order in which packages will be
-	    built. Packages that don't require other packages will
-	    be built first, and packages with many dependencies will
-	    be built later.</p></dd>
-<dt><span class="term">3. post-build</span></dt>
-<dd><p>Generates a report that's placed in the directory
-	    specified in the <code class="filename">build.conf</code> file
-	    named <code class="filename">broken.html</code>, a short version
-	    of that report will also be mailed to the build's
-	    admin.</p></dd>
-</dl></div>
-<p>During the build, a list of broken packages will be compiled
-      in <code class="filename">/usr/pkgsrc/.broken</code> (or
-      <code class="filename">.../.broken.${MACHINE}</code> if
-      <code class="varname">OBJMACHINE</code> is set), individual build logs
-      of broken builds can be found in the package's
-      directory. These files are used by the bulk-targets to mark
-      broken builds to not waste time trying to rebuild them, and
-      they can be used to debug these broken package builds
-      later.</p>
-</div>
-<div class="sect2">
-<div class="titlepage"><div><div><h3 class="title">
-<a name="disk-space-requirements"></a>7.3.5. Disk space requirements</h3></div></div></div>
-<p>Currently, roughly the following requirements are valid for
-      NetBSD 6.99/amd64:</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>40 GB - distfiles (NFS ok)</p></li>
-<li class="listitem"><p>30 GB - full set of all binaries (NFS ok)</p></li>
-<li class="listitem"><p>5 GB - temp space for compiling (local disk recommended)</p></li>
-</ul></div>
-<p>Note that all pkgs will be de-installed as soon as they are
-      turned into a binary package, and that sources are removed,
-      so there is no excessively huge demand to disk
-      space. Afterwards, if the package is needed again, it will
-      be installed via <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1+NetBSD-5.0.1+i386"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a> instead of building again, so
-      there are no cycles wasted by recompiling.</p>
-</div>
-<div class="sect2">
-<div class="titlepage"><div><div><h3 class="title">
-<a name="setting-up-a-sandbox"></a>7.3.6. Setting up a sandbox for chrooted builds</h3></div></div></div>
-<p>If you don't want all the packages nuked from a machine
-      (rendering it useless for anything but pkg compiling), there
-      is the possibility of doing the package bulk build inside a
-      chroot environment.</p>
-<p>The first step is to set up a chroot sandbox,
-      e.g. <code class="filename">/usr/sandbox</code>.  This can be done by
-      using null mounts, or manually.</p>
-<p>There is a shell script called
-      <code class="filename">mksandbox</code> installed by the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/mksandbox/README.html" target="_top"><code class="filename">pkgtools/mksandbox</code></a> package, which will set
-      up the sandbox environment using null mounts. It will also
-      create a script called <code class="filename">sandbox</code> in the
-      root of the sandbox environment, which will allow the null
-      mounts to be activated using the <span class="command"><strong>sandbox
-      mount</strong></span> command and deactivated using the
-      <span class="command"><strong>sandbox umount</strong></span> command.</p>
-<p>To set up a sandbox environment by hand, after extracting all
-      the sets from a NetBSD installation or doing a <span class="command"><strong>make
-      distribution DESTDIR=/usr/sandbox</strong></span> in
-      <code class="filename">/usr/src/etc</code>, be sure the following items
-      are present and properly configured:</p>
-<div class="procedure"><ol class="procedure" type="1">
-<li class="step">
-<p>Kernel</p>
-<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>cp /netbsd /usr/sandbox</code></strong></pre>
-</li>
-<li class="step">
-<p><code class="filename">/dev/*</code></p>
-<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>cd /usr/sandbox/dev ; sh MAKEDEV all</code></strong></pre>
-</li>
-<li class="step">
-<p><code class="filename">/etc/resolv.conf</code> (for <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/security/smtpd/README.html" target="_top"><code class="filename">security/smtpd</code></a> and mail):</p>
-<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>cp /etc/resolv.conf /usr/sandbox/etc</code></strong></pre>
-</li>
-<li class="step">
-<p>Working(!) mail config (hostname, sendmail.cf):</p>
-<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>cp /etc/mail/sendmail.cf /usr/sandbox/etc/mail</code></strong></pre>
-</li>
-<li class="step">
-<p><code class="filename">/etc/localtime</code> (for <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/security/smtpd/README.html" target="_top"><code class="filename">security/smtpd</code></a>):</p>
-<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>ln -sf /usr/share/zoneinfo/UTC /usr/sandbox/etc/localtime</code></strong></pre>
-</li>
-<li class="step">
-<p><code class="filename">/usr/src</code> (system sources,
-          rarely used by packages if at all:</p>
-<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>ln -s ../disk1/cvs .</code></strong>
-	  <code class="prompt">#</code> <strong class="userinput"><code>ln -s cvs/src-2.0 src</code></strong></pre>
-</li>
-<li class="step">
-<p>Create <code class="filename">/var/db/pkg</code> (not part of default install):</p>
-<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>mkdir /usr/sandbox/var/db/pkg</code></strong></pre>
-</li>
-<li class="step">
-<p>Create <code class="filename">/usr/pkg</code> (not part of default install):</p>
-<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>mkdir /usr/sandbox/usr/pkg</code></strong></pre>
-</li>
-<li class="step">
-<p>Checkout pkgsrc via cvs into
-	  <code class="filename">/usr/sandbox/usr/pkgsrc</code>:</p>
-<pre class="screen">
-<code class="prompt">#</code> <strong class="userinput"><code>cd /usr/sandbox/usr</code></strong>
-<code class="prompt">#</code> <strong class="userinput"><code>cvs -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -d -P pkgsrc</code></strong>
-	  </pre>
-<p>Do not mount/link this to the copy of your pkgsrc tree
-	  you do development in, as this will likely cause problems!</p>
-</li>
-<li class="step"><p>Make
-	  <code class="filename">/usr/sandbox/usr/pkgsrc/packages</code> and
-	  <code class="filename">.../distfiles</code> point somewhere
-	  appropriate. NFS- and/or nullfs-mounts may come in handy!</p></li>
-<li class="step"><p>Edit <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a>, see <a class="xref" href="#binary.mk.conf" title="7.3.1.2. mk.conf">Section 7.3.1.2, &#8220;<code class="filename">mk.conf</code>&#8221;</a>.</p></li>
-<li class="step"><p>Adjust <code class="filename">mk/bulk/build.conf</code> to suit your needs.</p></li>
-</ol></div>
-<p>When the chroot sandbox is set up, you can start
-      the build with the following steps:</p>
-<pre class="screen">
-<code class="prompt">#</code> <strong class="userinput"><code>cd /usr/sandbox/usr/pkgsrc</code></strong>
-<code class="prompt">#</code> <strong class="userinput"><code>sh mk/bulk/do-sandbox-build</code></strong>
-      </pre>
-<p>This will just jump inside the sandbox and start building.  At
-	the end of the build, mail will be sent with the results of
-	the build. Created binary pkgs will be in
-	<code class="filename">/usr/sandbox/usr/pkgsrc/packages</code>
-      (wherever that points/mounts to/from).</p>
-</div>
-<div class="sect2">
-<div class="titlepage"><div><div><h3 class="title">
-<a name="building-a-partial-set"></a>7.3.7. Building a partial set of packages</h3></div></div></div>
-<p>In addition to building a complete set of all packages in
-      pkgsrc, the <code class="filename">pkgsrc/mk/bulk/build</code> script
-      may be used to build a subset of the packages contained in
-      pkgsrc.  By setting <code class="varname">SPECIFIC_PKGS</code>
-      in <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a>, the variables</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>SITE_SPECIFIC_PKGS</p></li>
-<li class="listitem"><p>HOST_SPECIFIC_PKGS</p></li>
-<li class="listitem"><p>GROUP_SPECIFIC_PKGS</p></li>
-<li class="listitem"><p>USER_SPECIFIC_PKGS</p></li>
-</ul></div>
-<p>will define the set of packages which should be built.
-      The bulk build code will also include any packages which are
-      needed as dependencies for the explicitly listed packages.</p>
-<p>One use of this is to do a bulk build with
-      <code class="varname">SPECIFIC_PKGS</code> in a chroot sandbox
-      periodically to have a complete set of the binary packages
-      needed for your site available without the overhead of
-      building extra packages that are not needed.</p>
-</div>
-<div class="sect2">
-<div class="titlepage"><div><div><h3 class="title">
-<a name="bulk-upload"></a>7.3.8. Uploading results of a bulk build</h3></div></div></div>
-<p>This section describes how pkgsrc developers can upload binary
-      pkgs built by bulk builds to ftp.NetBSD.org.</p>
-<p>If you would like to automatically create checksum files for the
-      binary packages you intend to upload, remember to set
-      <code class="varname">MKSUMS=yes</code> in your
-      <code class="filename">mk/bulk/build.conf</code>.</p>
-<p>If you would like to PGP sign the checksum files (highly
-      recommended!), remember to set
-      <code class="varname">SIGN_AS=username@NetBSD.org</code> in your
-      <code class="filename">mk/bulk/build.conf</code>.  This will prompt you for
-      your GPG password to sign the files before uploading everything.</p>
-<p>Then, make sure that you have <code class="varname">RSYNC_DST</code>
-      set properly in your <code class="filename">mk/bulk/build.conf</code>
-      file, i.e. adjust it to something like one of the following:</p>
-<pre class="screen">RSYNC_DST=ftp.NetBSD.org:/pub/pkgsrc/packages/NetBSD/arch/a.b.c-20xxQy/upload</pre>
-<p>Please use appropriate values for "20xxQy" (the branch),
-      "a.b.c" (the OS version) and "arch" here. If your login on ftp.NetBSD.org
-      is different from your local login, write your login directly
-      into the variable, e.g. my local account is "feyrer", but for my
-      login "hubertf", I use:</p>
-<pre class="screen">RSYNC_DST=hubertf@ftp.NetBSD.org:/pub/pkgsrc/packages/NetBSD/arch/a.b.c-20xxQy/upload</pre>
-<p>A separate <code class="filename">upload</code> directory is used
-      here to allow "closing" the directory during upload. To do
-      so, run the following command on ftp.NetBSD.org next:</p>
-<pre class="screen">nbftp% <strong class="userinput"><code>mkdir -p -m 750 /pub/pkgsrc/packages/NetBSD/arch/a.b.c-20xxQy/upload</code></strong></pre>
-<p>Before uploading the binary pkgs, ssh authentication needs
-      to be set up. This example shows how to set up temporary keys
-      for the root account <span class="emphasis"><em>inside the sandbox</em></span>
-      (assuming that no keys should be present there usually):</p>
-<pre class="screen">
-<code class="prompt">#</code> <strong class="userinput"><code>chroot /usr/sandbox</code></strong>
-chroot-<code class="prompt">#</code> <strong class="userinput"><code>rm $HOME/.ssh/id-dsa*</code></strong>
-chroot-<code class="prompt">#</code> <strong class="userinput"><code>ssh-keygen -t rsa</code></strong>
-chroot-<code class="prompt">#</code> <strong class="userinput"><code>cat $HOME/.ssh/id-rsa.pub</code></strong>
-      </pre>
-<p>Now take the output of <code class="filename">id-rsa.pub</code> and
-      append it to your <code class="filename">~/.ssh/authorized_keys</code>
-      file on ftp.NetBSD.org. You should remove the key after the
-      upload is done!</p>
-<p>Next, test if your ssh connection really works:</p>
-<pre class="screen">chroot-<code class="prompt">#</code> <strong class="userinput"><code>ssh ftp.NetBSD.org date</code></strong> </pre>
-<p>Use "-l yourNetBSDlogin" here as appropriate!</p>
-<p>Now after all this works, you can exit the sandbox and start
-      the upload:</p>
-<pre class="screen">
-chroot-<code class="prompt">#</code> <strong class="userinput"><code>exit</code></strong>
-<code class="prompt">#</code> <strong class="userinput"><code>cd /usr/sandbox/usr/pkgsrc</code></strong>
-<code class="prompt">#</code> <strong class="userinput"><code>sh mk/bulk/do-sandbox-upload</code></strong>
-      </pre>
-<p>The upload process may take quite some time. Use <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?ls+1+NetBSD-5.0.1+i386"><span class="citerefentry"><span class="refentrytitle">ls</span>(1)</span></a> or
-      <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?du+1+NetBSD-5.0.1+i386"><span class="citerefentry"><span class="refentrytitle">du</span>(1)</span></a> on the FTP server to monitor progress of the
-      upload. The upload script will take care of not uploading
-      restricted packages.</p>
-<p>After the upload has ended, first thing is to revoke ssh access:</p>
-<pre class="screen">nbftp% <strong class="userinput"><code>vi ~/.ssh/authorized_keys</code></strong>
-      Gdd:x! </pre>
-<p>Use whatever is needed to remove the key you've entered
-      before! Last, move the uploaded packages out of the
-      <code class="filename">upload</code> directory to have them accessible
-      to everyone:</p>
-<pre class="screen">
-nbftp% <strong class="userinput"><code>cd /pub/pkgsrc/packages/NetBSD/arch/a.b.c-20xxQy</code></strong>
-nbftp% <strong class="userinput"><code>mv upload/* .</code></strong>
-nbftp% <strong class="userinput"><code>rmdir upload</code></strong>
-nbftp% <strong class="userinput"><code>chgrp -R netbsd .</code></strong>
-nbftp% <strong class="userinput"><code>find . -type d | xargs chmod 775</code></strong>
-      </pre>
-</div>
-</div>
-<div class="sect1">
-<div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="bulk.pbulk"></a>7.4. Running a pbulk-style bulk build</h2></div></div></div>
+<a name="bulk.pbulk"></a>7.3. Running a pbulk-style bulk build</h2></div></div></div>
 <p>Running a pbulk-style bulk build works roughly as follows:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>First, build the pbulk infrastructure in a fresh pkgsrc location.</p></li>
@@ -3048,7 +2624,7 @@ nbftp% <strong class="userinput"><code>find . -type d | xargs chmod 775</code></
 </ul></div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="bulk.pbulk.prepare"></a>7.4.1. Preparation</h3></div></div></div>
+<a name="bulk.pbulk.prepare"></a>7.3.1. Preparation</h3></div></div></div>
 <p>First, you need to create a pkgsrc installation for the pbulk infrastructure. No matter on which platform you are (even on NetBSD), you should bootstrap into its own directory. Let's take the directory <code class="filename">/usr/pbulk</code> or <code class="filename">$HOME/pbulk</code> for it. This installation will be bootstrapped and all the tools that are required for the bulk build will be installed there.</p>
 <pre class="screen">
 $ <strong class="userinput"><code>cd /usr/pkgsrc</code></strong>
@@ -3073,14 +2649,14 @@ $ <strong class="userinput"><code>rm -rf /tmp/pbulk-outer</code></strong>
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="bulk.pbulk.conf"></a>7.4.2. Configuration</h3></div></div></div>
+<a name="bulk.pbulk.conf"></a>7.3.2. Configuration</h3></div></div></div>
 <p>TODO; see pkgsrc/doc/HOWTO-pbulk for more information.</p>
 <p>TODO: continue writing</p>
 </div>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="creating-cdroms"></a>7.5. Creating a multiple CD-ROM packages collection</h2></div></div></div>
+<a name="creating-cdroms"></a>7.4. Creating a multiple CD-ROM packages collection</h2></div></div></div>
 <p>After your pkgsrc bulk-build has completed, you may wish to
     create a CD-ROM set of the resulting binary packages to assist
     in installing packages on other machines.  The
@@ -3091,7 +2667,7 @@ $ <strong class="userinput"><code>rm -rf /tmp/pbulk-outer</code></strong>
     CD as that package.</p>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="cdpack-example"></a>7.5.1. Example of cdpack</h3></div></div></div>
+<a name="cdpack-example"></a>7.4.1. Example of cdpack</h3></div></div></div>
 <p>Complete documentation for cdpack is found in the cdpack(1)
       man page. The following short example assumes that the binary
       packages are left in
@@ -3726,7 +3302,7 @@ anymore, you can remove that file and run <span class="command"><strong>cvs -q u
 <dt><span class="sect1"><a href="#creating.common">10.1. Common types of packages</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#creating.perl-module">10.1.1. Perl modules</a></span></dt>
-<dt><span class="sect2"><a href="#creating.kde-app">10.1.2. KDE applications</a></span></dt>
+<dt><span class="sect2"><a href="#creating.kde-app">10.1.2. KDE3 applications</a></span></dt>
 <dt><span class="sect2"><a href="#creating.python-module">10.1.3. Python modules and programs</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#creating.examples">10.2. Examples</a></span></dt>
@@ -3957,7 +3533,7 @@ anymore, you can remove that file and run <span class="command"><strong>cvs -q u
 <dt><span class="sect1"><a href="#creating.common">10.1. Common types of packages</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#creating.perl-module">10.1.1. Perl modules</a></span></dt>
-<dt><span class="sect2"><a href="#creating.kde-app">10.1.2. KDE applications</a></span></dt>
+<dt><span class="sect2"><a href="#creating.kde-app">10.1.2. KDE3 applications</a></span></dt>
 <dt><span class="sect2"><a href="#creating.python-module">10.1.3. Python modules and programs</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#creating.examples">10.2. Examples</a></span></dt>
@@ -4002,7 +3578,7 @@ Your package may then look like this:</p>
 <pre class="programlisting">
 [...]
 
-BUILD_DEPENDS+= lua&gt;=5.0:../../lang/lua
+BUILD_DEPENDS+= libxslt-[0-9]*:../../textproc/libxslt
 DEPENDS+=       screen-[0-9]*:../../misc/screen
 DEPENDS+=       screen&gt;=4.0:../../misc/screen
 
@@ -4060,10 +3636,10 @@ package from the set of installed files.</p></li>
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="creating.kde-app"></a>10.1.2. KDE applications</h3></div></div></div>
-<p>KDE applications should always include
+<a name="creating.kde-app"></a>10.1.2. KDE3 applications</h3></div></div></div>
+<p>KDE3 applications should always include
 <code class="filename">meta-pkgs/kde3/kde3.mk</code>, which contains numerous
-settings that are typical of KDE packages.</p>
+settings that are typical of KDE3 packages.</p>
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
@@ -4397,9 +3973,10 @@ sections.</p>
     distribution file to be downloaded from the package's
     website.</p></li>
 <li class="listitem"><p><code class="varname">PKGNAME</code> is the name of the
-    package, as used by pkgsrc. You only need to provide it if
+    package, as used by pkgsrc. You need to provide it if
     <code class="varname">DISTNAME</code> (which is the default) is not a good
-    name for the package in pkgsrc.  Usually it is the pkgsrc
+    name for the package in pkgsrc or <code class="varname">DISTNAME</code> is not
+    provided (no distribution file is required).  Usually it is the pkgsrc
     directory name together with the version number. It must match the
     regular expression
     <code class="varname">^[A-Za-z0-9][A-Za-z0-9-_.+]*$</code>, that is, it
@@ -4869,8 +4446,16 @@ MESSAGE_SUBST+=  SOMEVAR="somevalue"
 	    exists.</p>
 </dd>
 <dt><span class="term"><code class="filename">ALTERNATIVES</code></span></dt>
-<dd><p>FIXME: There is no documentation on the
-	alternatives framework.</p></dd>
+<dd>
+<p>This file is used by the alternatives framework.
+	    It creates, configures, and destroys generic wrappers used to
+	    run programs with similar interfaces.
+	    See pkg_alternatives(8) from pkgtools/pkg_alternatives
+            for more information.</p>
+<p>Each line of the file contains two filenames, first
+	    the wrapper and then the alternative provided by the package.
+	    Both paths are relative to <code class="varname">PREFIX</code>.</p>
+</dd>
 </dl></div>
 </div>
 <div class="sect2">
@@ -6853,7 +6438,8 @@ GTKDIR_DEFAULT= ${LOCALBASE}
       below.</p>
 <p>The variable <code class="varname">DISTFILES</code> specifies
       the list of distfiles that have to be fetched. Its value
-      defaults to <code class="literal">${DISTNAME}${EXTRACT_SUFX}</code>,
+      defaults to <code class="literal">${DEFAULT_DISTFILES}</code> and
+      its value is <code class="literal">${DISTNAME}${EXTRACT_SUFX}</code>,
       so that most packages don't need to define it at all.
       <code class="varname">EXTRACT_SUFX</code> is
       <code class="literal">.tar.gz</code> by default, but can be changed
@@ -6862,7 +6448,7 @@ GTKDIR_DEFAULT= ${LOCALBASE}
       additional filenames using the <code class="literal">+=</code>
       operator, but you have write for example:</p>
 <pre class="programlisting">
-DISTFILES=      ${DISTNAME}${EXTRACT_SUFX} additional-files.tar.gz
+DISTFILES=      ${DEFAULT_DISTFILES} additional-files.tar.gz
 </pre>
 <p>Each distfile is fetched from a list of sites, usually
       <code class="varname">MASTER_SITES</code>. If the package has multiple
@@ -6893,8 +6479,19 @@ http://www.somewhereelse.com/mirror/somehow/
 MASTER_SITES=   http://www.example.com/download.cgi?file=
 </pre>
 <p> The exception to this rule are URLs starting with a dash.
-      In that case the URL is taken as is, fetched and the result stored
-      under the name of the distfile.</p>
+      In that case the URL is taken as is, fetched and the result
+      stored under the name of the distfile. You can use this style
+      for the case when the download URL style does not match the
+      above common case. For example, if permanent download URL is a
+      redirector to the real download URL, or the download file name
+      is offered by an HTTP Content-Disposition header. In the
+      following example, <code class="filename">foo-1.0.0.tar.gz</code> will be
+      created instead of the default
+      <code class="filename">v1.0.0.tar.gz</code>.</p>
+<pre class="programlisting">
+DISTNAME=       foo-1.0.0
+MASTER_SITES=   -http://www.example.com/archive/v1.0.0.tar.gz
+</pre>
 <p>There are some predefined values for
       <code class="varname">MASTER_SITES</code>, which can be used in
       packages.  The names of the variables should speak for
@@ -6910,13 +6507,18 @@ ${MASTER_SITE_GENTOO}
 ${MASTER_SITE_GNOME}
 ${MASTER_SITE_GNU}
 ${MASTER_SITE_GNUSTEP}
+${MASTER_SITE_HASKELL_HACKAGE}
 ${MASTER_SITE_IFARCHIVE}
 ${MASTER_SITE_KDE}
 ${MASTER_SITE_MOZILLA}
+${MASTER_SITE_MOZILLA_ALL}
+${MASTER_SITE_MOZILLA_ESR}
 ${MASTER_SITE_MYSQL}
+${MASTER_SITE_NETLIB}
 ${MASTER_SITE_OPENOFFICE}
 ${MASTER_SITE_PERL_CPAN}
 ${MASTER_SITE_PGSQL}
+${MASTER_SITE_RUBYGEMS}
 ${MASTER_SITE_R_CRAN}
 ${MASTER_SITE_SOURCEFORGE}
 ${MASTER_SITE_SOURCEFORGE_JP}
@@ -6925,6 +6527,7 @@ ${MASTER_SITE_SUSE}
 ${MASTER_SITE_TEX_CTAN}
 ${MASTER_SITE_XCONTRIB}
 ${MASTER_SITE_XEMACS}
+${MASTER_SITE_XORG}
 </pre>
 <p>Some explanations for the less self-explaining ones:
       <code class="varname">MASTER_SITE_BACKUP</code> contains backup sites
@@ -7621,7 +7224,8 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 	  package already exists, no action is taken. If not, this
 	  target will compile, install and package it (and its
 	  depends, if <code class="varname">PKG_DEPENDS</code> is set
-	  properly. See <a class="xref" href="#binary.configuration" title="7.3.1. Configuration">Section 7.3.1, &#8220;Configuration&#8221;</a>).
+	  properly. See <a class="xref" href="#bulk" title="Chapter 7. Creating binary packages for everything in pkgsrc (bulk builds)">Chapter 7, <i>Creating binary packages for everything in pkgsrc (bulk
+builds)</i></a>).
 	  After creating the binary package, the sources, the
 	  just-installed package and its required packages are
 	  removed, preserving free disk space.</p>
@@ -7736,7 +7340,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="tools.questions"></a>18.4. Questions regarding the tools</h2></div></div></div>
 <div class="qandaset">
-<a name="idm73061424"></a><dl>
+<a name="idm25028420"></a><dl>
 <dt>18.4.1. <a href="#tools.new">How do I add a new tool?</a>
 </dt>
 <dt>18.4.2. <a href="#tools.listall">How do I get a list of all available
@@ -7755,7 +7359,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="idm73061040"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="idm25028228"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7765,7 +7369,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="idm73060016"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="idm25027716"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7776,7 +7380,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="idm73058992"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="idm25027204"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -9651,7 +9255,8 @@ PERL5_PACKLIST= auto/Pg/.packlist
 	protect our users! You're still free to put up your home-made
 	binary packages and tell the world where to get them. NetBSD
 	developers doing bulk builds and wanting to upload them please
-	see <a class="xref" href="#bulk-upload" title="7.3.8. Uploading results of a bulk build">Section 7.3.8, &#8220;Uploading results of a bulk build&#8221;</a>.</p>
+	see <a class="xref" href="#bulk" title="Chapter 7. Creating binary packages for everything in pkgsrc (bulk builds)">Chapter 7, <i>Creating binary packages for everything in pkgsrc (bulk
+builds)</i></a>.</p>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -9716,7 +9321,7 @@ PERL5_PACKLIST= auto/Pg/.packlist
   not the same as your NetBSD login name. The target also automatically
   removes possibly existing entries for the package in the
   <code class="filename">TODO</code> file. Don't forget to commit
-  the changes, e.g. by using <span class="command"><strong>make changes-entry-commit</strong></span>!
+  the changes, e.g. by using <span class="command"><strong>make commit-changes-entry</strong></span>!
   If you are not using a checkout directly from cvs.NetBSD.org, but e.g.
   a local copy of the repository, you can set USE_NETBSD_REPO=yes. This
   makes the cvs commands use the main repository.
@@ -9743,6 +9348,9 @@ you can check by running <span class="quote">&#8220;<span class="quote">cvs stat
 <code class="prompt">$</code> cd ..
 <code class="prompt">$</code> vi Makefile # add SUBDIRS+=pkgname line
 <code class="prompt">$</code> cvs commit Makefile
+<code class="prompt">$</code> cd pkgname
+<code class="prompt">$</code> make CTYPE=Added changes-entry
+<code class="prompt">$</code> make commit-changes-entry
 </pre>
 <p>The commit message of the initial import should include part of the
   <code class="filename">DESCR</code> file, so people reading the mailing lists know
@@ -9851,7 +9459,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm74589232"></a><dl>
+<a name="idm30948932"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9896,7 +9504,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm74588848"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm30948740"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9912,7 +9520,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm74584880"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idm30938372"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9930,7 +9538,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm74580400"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm30936068"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9948,7 +9556,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm74576304"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm30933956"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9961,7 +9569,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm74574128"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm30932868"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9977,7 +9585,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm74570928"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm30931268"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -10001,7 +9609,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm74554672"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm30927300"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -10026,7 +9634,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm74550960"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm30925252"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -10074,7 +9682,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm74544432"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm30921988"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
@@ -10855,23 +10463,6 @@ CFLAGS+=                -Wall
 	definitions that are used by pkgsrc. Start by copying one of the
 	other files and edit it to your
 	needs.</p></dd>
-<dt><span class="term"><code class="filename">mk/platform/<em class="replaceable"><code>MyOS</code></em>.pkg.dist</code></span></dt>
-<dd><p>This file contains a list of directories,
-	together with their permission bits and ownership. These
-	directories will be created automatically with every package
-	that explicitly sets <code class="varname">USE_MTREE</code>. This feature will
-	be removed.</p></dd>
-<dt><span class="term"><code class="filename">mk/platform/<em class="replaceable"><code>MyOS</code></em>.x11.dist</code></span></dt>
-<dd><p>Just copy one of the pre-existing x11.dist files
-	to your
-	<code class="filename"><em class="replaceable"><code>MyOS</code></em>.x11.dist</code>.</p></dd>
-<dt><span class="term"><code class="filename">mk/tools/bootstrap.mk</code></span></dt>
-<dd><p>On some operating systems, the tools that are
-	provided with the base system are not good enough for pkgsrc.
-	For example, there are many versions of <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?sed+1+NetBSD-5.0.1+i386"><span class="citerefentry"><span class="refentrytitle">sed</span>(1)</span></a> that have a
-	narrow limit on the line length they can process. Therefore
-	pkgsrc brings its own tools, which can be enabled
-	here.</p></dd>
 <dt><span class="term"><code class="filename">mk/tools/tools.<em class="replaceable"><code>MyOS</code></em>.mk</code></span></dt>
 <dd><p>This file defines the paths to all the tools
 	that are needed by one or the other package in pkgsrc, as well
