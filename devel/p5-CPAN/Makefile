@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2014/05/29 23:35:40 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.12 2014/05/31 11:42:32 wiz Exp $
 
-DISTNAME=	CPAN-2.00
+DISTNAME=	CPAN-2.05
 PKGNAME=	p5-${DISTNAME}00
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/A/AN/ANDK/}
 
