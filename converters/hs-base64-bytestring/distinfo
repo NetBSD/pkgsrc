@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/05/31 21:33:50 szptvlfn Exp $
+
+SHA1 (base64-bytestring-1.0.0.1.tar.gz) = ff4bfb12aa25a5947f9818dd6cd974dba145fb70
+RMD160 (base64-bytestring-1.0.0.1.tar.gz) = 2de8049cd79525f1590f70f75b7199217c664fc9
+Size (base64-bytestring-1.0.0.1.tar.gz) = 9080 bytes
