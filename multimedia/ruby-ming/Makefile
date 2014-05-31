@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2014/05/15 14:41:57 adam Exp $
+# $NetBSD: Makefile,v 1.24 2014/05/31 15:56:28 wiz Exp $
 
 DISTNAME=	ming-ruby-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-ming-${VER}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	multimedia
 MASTER_SITES=	http://rubyforge.org/frs/download.php/44137/
 
@@ -23,6 +23,11 @@ CONFIGURE_ARGS+=	--siteruby=${PREFIX}/${RUBY_VENDORLIB_BASE}
 CONFIGURE_ARGS+=	--siterubyver=${PREFIX}/${RUBY_VENDORLIB}
 CONFIGURE_ARGS+=	--siterubyverarch=${PREFIX}/${RUBY_VENDORARCHLIB}
 
+SUBST_CLASSES+=		giflib
+SUBST_STAGE.giflib=	pre-configure
+SUBST_FILES.giflib=	ext/ming/mingc/extconf.rb
+SUBST_SED.giflib=	-e 's/ungif/gif/g'
+
 INSTALLATION_DIRS+=	${RUBY_EG}/ming
 
 pre-configure:
@@ -38,12 +43,6 @@ post-install:
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../multimedia/ming/buildlink3.mk"
-.include "../../mk/giflib.buildlink3.mk"
-.if defined(GIFLIB_IMPLEMENTATION) && ${GIFLIB_IMPLEMENTATION} != "libungif"
-SUBST_CLASSES+=		giflib
-SUBST_STAGE.giflib=	pre-configure
-SUBST_FILES.giflib=	ext/ming/mingc/extconf.rb
-SUBST_SED.giflib=	-e 's/ungif/gif/g'
-.endif
+.include "../../graphics/giflib/buildlink3.mk"
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
