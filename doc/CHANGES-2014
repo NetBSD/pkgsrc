@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2066 2014/05/31 07:31:09 obache Exp $
+$NetBSD: CHANGES-2014,v 1.2067 2014/05/31 08:10:56 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2842,3 +2842,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/qdbm-cgi to 0.0.1.1.8.78 [obache 2014-05-31]
 	Updated databases/qdbm-plus to 1.0.0.1.8.78 [obache 2014-05-31]
 	Updated databases/ruby-qdbm to 1.0.0.1.8.78 [obache 2014-05-31]
+	Updated devel/cutter to 1.2.4 [obache 2014-05-31]
