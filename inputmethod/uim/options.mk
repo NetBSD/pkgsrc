@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.29 2014/01/20 13:26:54 ryoon Exp $
+# $NetBSD: options.mk,v 1.30 2014/05/31 14:22:38 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uim
 PKG_SUPPORTED_OPTIONS=	anthy canna curl eb expat ffi gnome gnome3 gtk gtk3 m17nlib openssl prime sj3 sqlite uim-fep wnn4 xim
@@ -81,7 +81,7 @@ CONFIGURE_ARGS+=	--disable-fep
 .  include "../../inputmethod/anthy/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-anthy-utf8
 PLIST.anthy=		yes
-UIM_MODULES+=		anthy
+UIM_MODULES+=		anthy anthy-utf8
 .else
 CONFIGURE_ARGS+=	--without-anthy
 .endif

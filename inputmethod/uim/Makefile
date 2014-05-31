@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.97 2014/05/15 14:41:53 adam Exp $
+# $NetBSD: Makefile,v 1.98 2014/05/31 14:22:38 obache Exp $
 #
 
 .include "../../inputmethod/uim/Makefile.common"
 
-PKGREVISION=		13
+PKGREVISION=		14
 COMMENT=		Multilingual input method library
 #LICENSE=		See ${WRKSRC}/COPYING
 
@@ -17,27 +17,25 @@ PKGCONFIG_OVERRIDE+=	${WRKSRC}/uim.pc.in
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-emacs
 CONFIGURE_ARGS+=	--with-libgcroots=installed
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 
 LDFLAGS.SunOS+=	-mimpure-text
 CFLAGS.SunOS+=	-std=c99 -D__EXTENSIONS__
 
 .include "options.mk"
 
-MAKE_DIRS+=		etc/uim
-INSTALLATION_DIRS+=	share/doc/uim share/examples/uim
+PKG_SYSCONFSUBDIR=	uim
+INSTALLATION_DIRS+=	share/doc/uim
+
+INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples
 
 EGDIR=			${PREFIX}/share/examples/uim
-CONF_FILES=		${EGDIR}/loader.scm.example \
-			${PKG_SYSCONFDIR}/uim/loader.scm
-CONF_FILES+=		${EGDIR}/installed-modules.scm.example \
-			${PKG_SYSCONFDIR}/uim/installed-modules.scm
+CONF_FILES=		${EGDIR}/loader.scm \
+			${PKG_SYSCONFDIR}/loader.scm
+CONF_FILES+=		${EGDIR}/installed-modules.scm \
+			${PKG_SYSCONFDIR}/installed-modules.scm
 
 post-install:
-# Register uim module infomation
-	${MKDIR} ${DESTDIR}${PREFIX}/share/uim/pkgsrc
-.for m in ${UIM_MODULES}
-	${TOUCH} ${DESTDIR}${PREFIX}/share/uim/pkgsrc/${m}
-.endfor
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/uim
 	${INSTALL_DATA} ${WRKSRC}/doc/COMPATIBILITY ${DESTDIR}${PREFIX}/share/doc/uim
 	${INSTALL_DATA} ${WRKSRC}/doc/CUSTOM ${DESTDIR}${PREFIX}/share/doc/uim
@@ -48,11 +46,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/PLUGIN ${DESTDIR}${PREFIX}/share/doc/uim
 	${INSTALL_DATA} ${WRKSRC}/doc/UIM-SCM ${DESTDIR}${PREFIX}/share/doc/uim
 	${INSTALL_DATA} ${WRKSRC}/doc/UIM-SH ${DESTDIR}${PREFIX}/share/doc/uim
-# loader.scm and installed-modules.scm is updated by uim-module-manager.
-	${MV} ${DESTDIR}${PREFIX}/etc/uim/loader.scm \
-		${DESTDIR}${EGDIR}/loader.scm.example
-	${MV} ${DESTDIR}${PREFIX}/etc/uim/installed-modules.scm \
-		${DESTDIR}${EGDIR}/installed-modules.scm.example
+_BUILDING_UIM=	YES
+.include "modules.mk"
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
