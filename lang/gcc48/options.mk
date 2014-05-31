@@ -1,21 +1,22 @@
-# $NetBSD: options.mk,v 1.5 2014/04/23 12:53:36 ryoon Exp $
+# $NetBSD: options.mk,v 1.6 2014/05/31 13:06:25 ryoon Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc48
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-graphite gcc-java
-PKG_SUGGESTED_OPTIONS=	gcc-graphite
+PKG_SUGGESTED_OPTIONS=	gcc-graphite gcc-inplace-math
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(PKG_OPTIONS:Mgcc-java)
-.include "../../lang/gcc48/java.mk"
-PKG_SUGGESTED_OPTIONS+=		gcc-java
-PLIST.java=			yes
-.endif
-
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "Linux" || ${OPSYS} == "DragonFly"
 PKG_SUGGESTED_OPTIONS+=	nls
-.elif ${OPSYS} == "SunOS"
-PKG_SUGGESTED_OPTIONS+=	gcc-inplace-math
+#.elif ${OPSYS} == "SunOS"
+#PKG_SUGGESTED_OPTIONS+=	gcc-inplace-math
+.endif
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mgcc-java)
+.include "../../lang/gcc48/java.mk"
+PLIST.java=			yes
 .endif
 
 ###
@@ -35,8 +36,6 @@ PKG_SUPPORTED_OPTIONS+=	gcc-multilib
 PKG_SUGGESTED_OPTIONS+=	gcc-multilib
 .endif
 
-.include "../../mk/bsd.options.mk"
-
 ###
 ### Native Language Support
 ###
@@ -47,6 +46,9 @@ CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 MAKE_ENV+=		ICONVPREFIX=${BUILDLINK_PREFIX.iconv}
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.  if ${PKGPATH} == "lang/gcc48-cc++"
+PLIST_SRC+=		${PLIST_SRC_DFLT} PLIST.nls
+.  endif
 .else
 CONFIGURE_ARGS+=	--disable-nls
 .endif
@@ -82,10 +84,17 @@ LIBS.SunOS+=		-lgmp
 ### Graphite Support
 ###
 .if !empty(PKG_OPTIONS:Mgcc-graphite)
-CONFIGURE_ARGS+=	--with-cloog=${BUILDLINK_PREFIX.cloog}
-CONFIGURE_ARGS+=	--enable-cloog-backend=isl
-.include "../../math/cloog/buildlink3.mk"
-.include "../../math/isl/buildlink3.mk"
+ISL12=				isl-0.12.2
+SITES.${ISL12}.tar.bz2=		${MASTER_SITE_GNU:=gcc/infrastructure/}
+CLOOG18=			cloog-0.18.1
+SITES.${CLOOG18}.tar.gz=	${MASTER_SITE_GNU:=gcc/infrastructure/}
+DISTFILES+=			${ISL12}.tar.bz2 ${CLOOG18}.tar.gz
+EXTRACT_ONLY+=			${ISL12}.tar.bz2 ${CLOOG18}.tar.gz
+post-extract-graphite:
+	${MV} ${WRKDIR}/${ISL12} ${WRKSRC}/isl
+	${MV} ${WRKDIR}/${CLOOG18} ${WRKSRC}/cloog
+.else
+CONFIGURE_ARGS+=		--without-cloog --without-isl
 .endif
 
 .include "../../mk/bsd.options.mk"

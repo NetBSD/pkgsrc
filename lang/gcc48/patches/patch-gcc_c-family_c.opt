@@ -1,0 +1,30 @@
+$NetBSD: patch-gcc_c-family_c.opt,v 1.1 2014/05/31 13:06:25 ryoon Exp $
+
+--- gcc/c-family/c.opt.orig	2014-04-07 06:40:18.000000000 +0000
++++ gcc/c-family/c.opt
+@@ -618,13 +618,9 @@ C ObjC C++ ObjC++ Var(warn_pointer_arith
+ Warn about function pointer arithmetic
+ 
+ Wpointer-sign
+-C ObjC Var(warn_pointer_sign) Warning LangEnabledBy(C ObjC,Wall)
++C ObjC Var(warn_pointer_sign) Warning LangEnabledBy(C ObjC,Wpedantic)
+ Warn when a pointer differs in signedness in an assignment
+ 
+-Wpointer-sign
+-C ObjC LangEnabledBy(C ObjC,Wpedantic)
+-;
+-
+ Wpointer-to-int-cast
+ C ObjC Var(warn_pointer_to_int_cast) Init(1) Warning
+ Warn when a pointer is cast to an integer of a different size
+@@ -1172,6 +1168,10 @@ fthreadsafe-statics
+ C++ ObjC++ Optimization Var(flag_threadsafe_statics) Init(1)
+ -fno-threadsafe-statics	Do not generate thread-safe code for initializing local statics
+ 
++ftrampolines
++Common Var(flag_trampolines)
++Allows trampolines
++
+ funsigned-bitfields
+ C ObjC C++ ObjC++ Var(flag_signed_bitfields, 0)
+ When \"signed\" or \"unsigned\" is not given make the bitfield unsigned

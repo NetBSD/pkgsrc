@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/04/22 20:46:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/31 13:06:25 ryoon Exp $
 
 PKGNAME=	${GCC_PKGNAME}-cc++-${GCC48_DIST_VERSION}
 
@@ -27,13 +27,14 @@ post-install:
 	rm -f ${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib/libitm.la
 	rm -f ${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib/libitm.so*
 	rm -f ${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib/libssp.a
+	rm -f ${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib/libquadmath*
 	rm -f ${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib/libssp.la
 	rm -f ${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib/libssp.so*
 	rm -f ${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib/libstdc++.a
 	rm -f ${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib/libstdc++.la
 	rm -f ${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib/libstdc++.so
 	rm -f ${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib/libstdc++.so.6
-	rm -f ${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib/libstdc++.so.6.18
+	rm -f ${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib/libstdc++.so.6.19
 	rm -f ${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib/libobjc.*
 	rm -f ${DESTDIR}${PREFIX}/${GCC_PKGNAME}/libexec/gcc/${MACHINE_GNU_PLATFORM}/${GCC48_DIST_VERSION}/*lto*
 	rm -f ${DESTDIR}${PREFIX}/${GCC_PKGNAME}/libexec/gcc/${MACHINE_GNU_PLATFORM}/${GCC48_DIST_VERSION}/cc1obj*

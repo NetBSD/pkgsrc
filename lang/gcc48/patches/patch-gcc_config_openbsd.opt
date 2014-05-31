@@ -1,0 +1,12 @@
+$NetBSD: patch-gcc_config_openbsd.opt,v 1.1 2014/05/31 13:06:25 ryoon Exp $
+
+--- gcc/config/openbsd.opt.orig	2013-01-10 20:38:27.000000000 +0000
++++ gcc/config/openbsd.opt
+@@ -32,4 +32,7 @@ Driver
+ pthread
+ Driver
+ 
++rdynamic
++Driver
++
+ ; This comment is to ensure we retain the blank line above.
