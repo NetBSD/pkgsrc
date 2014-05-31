@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.222 2014/05/30 09:48:52 wiz Exp $
+# $NetBSD: Makefile,v 1.223 2014/05/31 02:06:17 obache Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -16,7 +16,6 @@ CONFLICTS+=	p5-AutoLoader<5.74
 CONFLICTS+=	p5-CGI<3.65
 CONFLICTS+=	p5-CPAN<2.0500			# 2.05
 CONFLICTS+=	p5-CPAN-Meta<2.140640
-#			older for devel/p5-Module-CPANTS-Analyse
 CONFLICTS+=	p5-CPAN-Meta-Requirements<2.125
 CONFLICTS+=	p5-CPAN-Meta-YAML<0.012
 CONFLICTS+=	p5-Compress-Raw-Bzip2<2.064
@@ -36,7 +35,6 @@ CONFLICTS+=	p5-ExtUtils-Manifest<1.63
 CONFLICTS+=	p5-ExtUtils-ParseXS<3.24
 CONFLICTS+=	p5-File-Path<2.09
 CONFLICTS+=	p5-File-Temp<0.23.04	# 0.2304
-#			older for devel/p5-Tree-DAG_Node
 CONFLICTS+=	p5-Getopt-Long<2.42
 CONFLICTS+=	p5-HTTP-Tiny<0.043
 CONFLICTS+=	p5-I18N-LangTags<0.40
@@ -46,7 +44,6 @@ CONFLICTS+=	p5-IO-Zlib<1.10
 CONFLICTS+=	p5-IPC-Cmd<0.92
 CONFLICTS+=	p5-IPC-SysV<2.04
 CONFLICTS+=	p5-JSON-PP<2.27203
-#			older for devel/p5-ExtUtils-MakeMaker
 CONFLICTS+=	p5-Locale-Codes<3.30
 CONFLICTS+=	p5-Locale-Maketext<1.25
 CONFLICTS+=	p5-Locale-Maketext-Simple<0.21
@@ -54,15 +51,11 @@ CONFLICTS+=	p5-MIME-Base64<3.14
 CONFLICTS+=	p5-Math-Complex<1.59
 CONFLICTS+=	p5-Memoize<1.03
 CONFLICTS+=	p5-Module-Build<0.42050		# 0.4205
-#			older for devel/p5-Test-File-SharDir
 CONFLICTS+=	p5-Module-CoreList<3.10
 CONFLICTS+=	p5-Module-Load<0.32
-#			older for devel/p5-Alien-Packages
-#			older for devel/p5-MooX-Roles-Pluggable
 CONFLICTS+=	p5-NEXT<0.65
 CONFLICTS+=	p5-Package-Constants<0.04
 CONFLICTS+=	p5-Parse-CPAN-Meta<1.4414
-#			older for devel/p5-ExtUtils-MakeMaker
 CONFLICTS+=	p5-Pod-Escapes<1.06
 CONFLICTS+=	p5-Pod-Parser<1.62
 CONFLICTS+=	p5-Pod-Simple<3.28
