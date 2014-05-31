@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2014/05/29 23:36:03 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2014/05/31 01:46:51 obache Exp $
 
 DISTNAME=		Module-CPANTS-Analyse-0.9002
 PKGNAME=		p5-${DISTNAME:S/9002/90.02/}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Module/}
 
@@ -15,8 +15,7 @@ DEPENDS+=	p5-Archive-Any-Lite>=0.06:../../archivers/p5-Archive-Any-Lite
 DEPENDS+=	{perl>=5.10,p5-Archive-Tar>=1.30}:../../archivers/p5-Archive-Tar
 DEPENDS+=	p5-Array-Diff>=0.04:../../devel/p5-Array-Diff
 DEPENDS+=	p5-CPAN-DistnameInfo>=0.06:../../devel/p5-CPAN-DistnameInfo
-#DEPENDS+=	{perl>=5.19.1,p5-CPAN-Meta>=2.131490}:../../devel/p5-CPAN-Meta
-DEPENDS+=	p5-CPAN-Meta>=2.131490:../../devel/p5-CPAN-Meta
+DEPENDS+=	{perl>=5.19.1,p5-CPAN-Meta>=2.131490}:../../devel/p5-CPAN-Meta
 DEPENDS+=	p5-Class-Accessor>=0.19:../../devel/p5-Class-Accessor
 DEPENDS+=	p5-File-Find-Rule-VCS>=0:../../devel/p5-File-Find-Rule-VCS
 DEPENDS+=	p5-IO-Capture>=0.05:../../devel/p5-IO-Capture
