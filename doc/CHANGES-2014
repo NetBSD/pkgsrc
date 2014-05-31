@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2081 2014/05/31 22:20:33 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2082 2014/05/31 22:22:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2863,3 +2863,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added converters/hs-base64-bytestring version 1.0.0.1 [szptvlfn 2014-05-31]
 	Added sysutils/disk-filltest version 0.7.1 [abs 2014-05-31]
 	Added www/p5-CGI-Fast version 2.01 [wiz 2014-05-31]
+	Updated www/p5-CGI to 4.01nb1 [wiz 2014-05-31]
