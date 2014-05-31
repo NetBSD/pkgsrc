@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2014/05/29 23:36:29 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/05/31 12:22:42 wiz Exp $
 
 DISTNAME=	rt-4.2.1
 PKGNAME=	${DISTNAME:S/rt/rt4/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://download.bestpractical.com/pub/rt/release/
 
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 # Dependency info. from sbin/rt-test-dependencies
 # Core dependencies
 DEPENDS+=	p5-Apache-Session>=1.53:../../www/p5-Apache-Session
-DEPENDS+=	{perl>=5.004,p5-CGI>=3.38}:../../www/p5-CGI
+DEPENDS+=	p5-CGI>=3.38:../../www/p5-CGI
 # CGI::Cookie is a part of p5-CGI.
 DEPENDS+=	p5-CGI-Emulate-PSGI-[0-9]*:../../www/p5-CGI-Emulate-PSGI
 DEPENDS+=	p5-CGI-PSGI-[0-9]*:../../www/p5-CGI-PSGI

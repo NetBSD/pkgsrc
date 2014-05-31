@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2014/05/29 23:37:35 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2014/05/31 12:22:42 wiz Exp $
 
 DISTNAME=	Data-FormValidator-4.81
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	perl5 textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
 
@@ -19,7 +19,7 @@ DEPENDS+=	p5-MIME-Types>=1.005:../../mail/p5-MIME-Types
 DEPENDS+=	p5-Perl6-Junction-[0-9]*:../../devel/p5-Perl6-Junction
 DEPENDS+=	p5-Regexp-Common-[0-9]*:../../textproc/p5-Regexp-Common
 
-BUILD_DEPENDS+=	{perl>=5.11.1,p5-CGI>=3.48}:../../www/p5-CGI
+BUILD_DEPENDS+=	p5-CGI>=3.48:../../www/p5-CGI
 
 PERL5_REQD+=	5.8.0
 
