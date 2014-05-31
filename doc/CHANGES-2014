@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2064 2014/05/31 02:16:29 obache Exp $
+$NetBSD: CHANGES-2014,v 1.2065 2014/05/31 04:27:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2835,3 +2835,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/contao33 to 3.3.1 [taca 2014-05-31]
 	Removed www/contao33-example [taca 2014-05-31]
 	Updated devel/p5-experimental to 0.007 [obache 2014-05-31]
+	Updated lang/php55 to 5.5.13 [taca 2014-05-31]
