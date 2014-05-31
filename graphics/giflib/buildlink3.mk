@@ -1,8 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2014/05/16 10:23:28 obache Exp $
-
-.if !defined(MK_GIFLIB_BUILDLINK3_MK)
-PKG_FAIL_REASON= "please use giflib.buildlink3.mk"
-.endif
+# $NetBSD: buildlink3.mk,v 1.6 2014/05/31 23:44:19 wiz Exp $
 
 BUILDLINK_TREE+=	giflib
 
