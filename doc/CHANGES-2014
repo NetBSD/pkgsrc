@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2070 2014/05/31 12:11:16 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2071 2014/05/31 13:08:05 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2846,3 +2846,8 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/groonga to 4.0.2 [obache 2014-05-31]
 	Updated devel/p5-CPAN to 2.0500 [wiz 2014-05-31]
 	Updated www/p5-CGI to 4.01 [wiz 2014-05-31]
+	Updated lang/gcc48 to 4.8.3 [ryoon 2014-05-31]
+	Updated lang/gcc48-cc++ to 4.8.3 [ryoon 2014-05-31]
+	Updated lang/gcc48-fortran to 4.8.3 [ryoon 2014-05-31]
+	Updated lang/gcc48-libs to 4.8.3 [ryoon 2014-05-31]
+	Updated lang/gcc48-objc to 4.8.3 [ryoon 2014-05-31]
