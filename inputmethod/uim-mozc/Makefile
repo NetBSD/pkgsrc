@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2014/02/12 23:18:05 tron Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/31 14:24:23 obache Exp $
 
 PKGNAME=	uim-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} uim-mozc-331.tar.xz
 SITES.uim-mozc-331.tar.xz=	${MASTER_SITE_SOURCEFORGE:=pnsft-aur/}
@@ -48,6 +48,9 @@ do-install:
 		${DESTDIR}${PREFIX}/share/uim
 	${INSTALL_DATA} ${WRKSRC}/scm/mozc.scm \
 		${DESTDIR}${PREFIX}/share/uim
+
+UIM_MODULES=	mozc
+.include "../../inputmethod/uim/modules.mk"
 
 .include "../../inputmethod/uim/buildlink3.mk"
 .include "../../inputmethod/mozc-server/Makefile.common"
