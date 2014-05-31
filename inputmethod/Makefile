@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2014/05/30 01:25:27 jnemeth Exp $
+# $NetBSD: Makefile,v 1.63 2014/05/31 14:27:28 obache Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -123,6 +123,7 @@ SUBDIR+=	tegaki-zinnia-traditional-chinese-light
 SUBDIR+=	tomoe
 SUBDIR+=	tomoe-gtk
 SUBDIR+=	uim
+SUBDIR+=	uim-chewing
 SUBDIR+=	uim-elisp
 SUBDIR+=	uim-mozc
 SUBDIR+=	uim-tomoe-gtk
