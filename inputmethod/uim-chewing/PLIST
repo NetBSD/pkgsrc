@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/31 14:26:24 obache Exp $
+lib/uim/plugin/libuim-chewing.la
+share/uim/chewing-custom.scm
+share/uim/chewing-key-custom.scm
+share/uim/chewing.scm
+share/uim/pixmaps/chewing.png
+share/uim/pixmaps/chewing_dark_background.png
