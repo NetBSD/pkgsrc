@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2077 2014/05/31 17:00:46 bsiegert Exp $
+$NetBSD: CHANGES-2014,v 1.2078 2014/05/31 21:32:23 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2859,3 +2859,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated pkgtools/pkglint to 4.140 [wiz 2014-05-31]
 	Added sysutils/ruby-listen version 2.7.5 [bsiegert 2014-05-31]
 	Added devel/ruby-mercenary version 0.3.3 [bsiegert 2014-05-31]
+	Added math/hs-scientific version 0.2.0.2 [szptvlfn 2014-05-31]
