@@ -1,0 +1,22 @@
+# $NetBSD: modules.tmpl,v 1.1 2014/05/31 14:22:38 obache Exp $
+#
+# Manager UIM modules
+#
+
+case ${STAGE} in
+POST-INSTALL)
+	if [ "${PKGBASE}" = "uim" ]; then
+		cd @UIM_MODULE_LIST_DIR@ &&	\
+			@UIM_MODULE_MANAGER@ --register *
+	else
+		@UIM_MODULE_MANAGER@ --register @UIM_MODULES@ 
+	fi
+	;;
+DEINSTALL)
+	if [ "${PKGBASE}" = "uim" ]; then
+		@UIM_MODULE_MANAGER@ --unregister-all
+	else
+		@UIM_MODULE_MANAGER@ --unregister @UIM_MODULES@
+	fi
+	;;
+esac
