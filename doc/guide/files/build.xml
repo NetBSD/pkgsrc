@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.70 2014/05/19 14:31:54 obache Exp $ -->
+<!-- $NetBSD: build.xml,v 1.71 2014/05/31 21:08:50 asau Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -1291,6 +1291,7 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
       </varlistentry>
 
       <varlistentry>
+	<!-- TODO: old bulk build? --> 
 	<term>bulk-package</term>
 
 	<listitem>
@@ -1298,7 +1299,7 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 	  package already exists, no action is taken. If not, this
 	  target will compile, install and package it (and its
 	  depends, if <varname>PKG_DEPENDS</varname> is set
-	  properly. See <xref linkend="binary.configuration"/>).
+	  properly. See <xref linkend="bulk"/>).
 	  After creating the binary package, the sources, the
 	  just-installed package and its required packages are
 	  removed, preserving free disk space.</para>
