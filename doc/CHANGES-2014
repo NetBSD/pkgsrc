@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2075 2014/05/31 15:58:32 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2076 2014/05/31 15:59:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2855,3 +2855,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated inputmethod/uim-mozc to 1.13.1651.102nb2 [obache 2014-05-31]
 	Added inputmethod/uim-chewing version 0.1.0 [obache 2014-05-31]
 	Removed graphics/libungif successor graphics/giflib [wiz 2014-05-31]
+	Updated pkgtools/pkglint to 4.140 [wiz 2014-05-31]
