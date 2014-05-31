@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2011/03/09 16:28:21 drochner Exp $
+# $NetBSD: options.mk,v 1.4 2014/05/31 15:56:26 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.emacs
 PKG_SUPPORTED_OPTIONS=		x11
@@ -43,10 +43,7 @@ PKG_OPTIONS+=		xaw
 .  include "../../graphics/tiff/buildlink3.mk"
 .  include "../../graphics/png/buildlink3.mk"
 .  include "../../x11/libXpm/buildlink3.mk"
-
-# Need libungif>=4.1.0b1 (a bug in 4.1.0 can crash Emacs)
-BUILDLINK_API_DEPENDS.libungif+=	libungif>=4.1.0.1
-.  include "../../mk/giflib.buildlink3.mk"
+.  include "../../graphics/giflib/buildlink3.mk"
 
 CONFIGURE_ARGS+=	--with-gif
 CONFIGURE_ARGS+=	--with-jpeg

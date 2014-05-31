@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2014/05/25 09:25:32 obache Exp $
+# $NetBSD: Makefile,v 1.77 2014/05/31 15:56:28 wiz Exp $
 
 DISTNAME=		advi-1.10.1
-PKGREVISION=		35
+PKGREVISION=		36
 CATEGORIES=		print
 MASTER_SITES=		http://gallium.inria.fr/advi/
 
@@ -58,7 +58,7 @@ post-install:
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
-.include "../../mk/giflib.buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/lablgtk/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2014/05/25 08:51:05 obache Exp $
+# $NetBSD: Makefile,v 1.31 2014/05/31 15:56:27 wiz Exp $
 
 DISTNAME=	spamprobe-1.4d
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=spamprobe/}
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.43 2014/05/25 09:20:49 obache Exp $
+# $NetBSD: Makefile,v 1.44 2014/05/31 15:56:27 wiz Exp $
 #
 
 .include "../../lang/kaffe/Makefile.common"
 
 PKGNAME=    	${DISTNAME:S/kaffe/kaffe-x11/}
-PKGREVISION=	27
+PKGREVISION=	28
 
 COMMENT+=   (AWT support through X11)
 
@@ -35,7 +35,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../mk/giflib.buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/kaffe/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"

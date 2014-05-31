@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2014/05/15 14:41:47 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2014/05/31 15:56:26 wiz Exp $
 
 BUILDLINK_TREE+=	wine
 
@@ -17,7 +17,7 @@ pkgbase:= wine
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/glut/buildlink3.mk"
 .endif
-.include "../../mk/giflib.buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .endif # WINE_BUILDLINK3_MK
 

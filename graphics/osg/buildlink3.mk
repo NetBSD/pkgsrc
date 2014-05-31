@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.34 2014/05/15 14:41:52 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.35 2014/05/31 15:56:27 wiz Exp $
 
 BUILDLINK_TREE+=	osg
 
@@ -14,7 +14,7 @@ BUILDLINK_PKGSRCDIR.osg?=	../../graphics/osg
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../mk/giflib.buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.28 2014/05/15 14:41:51 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.29 2014/05/31 15:56:27 wiz Exp $
 
 BUILDLINK_TREE+=	imlib
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.imlib?=	../../graphics/imlib
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../mk/giflib.buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/netpbm/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"

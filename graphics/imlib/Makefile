@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.118 2014/05/15 14:41:51 adam Exp $
+# $NetBSD: Makefile,v 1.119 2014/05/31 15:56:27 wiz Exp $
 
 DISTNAME=	imlib-1.9.15
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/imlib/1.9/}
 EXTRACT_SUFX=	.tar.bz2
@@ -60,7 +60,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../mk/giflib.buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/netpbm/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
