@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2014/05/29 23:36:52 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.55 2014/05/31 12:22:42 wiz Exp $
 
 DISTNAME=	sympa-6.1.11
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	mail
 MASTER_SITES=	http://www.sympa.org/distribution/ \
 		http://www.sympa.org/distribution/old/
@@ -17,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	destdir
 DEPENDS+=	mhonarc-[0-9]*:../../mail/mhonarc
 DEPENDS+=	p5-Archive-Zip>=1.05:../../archivers/p5-Archive-Zip
 DEPENDS+=	p5-AuthCAS>=1.5:../../security/p5-AuthCAS
-DEPENDS+=	{perl>=5.10,p5-CGI>=2.52}:../../www/p5-CGI
+DEPENDS+=	p5-CGI>=2.52:../../www/p5-CGI
 DEPENDS+=	p5-Crypt-CipherSaber>=0.50:../../security/p5-Crypt-CipherSaber
 DEPENDS+=	p5-DBD-Sybase>=0.90:../../databases/p5-DBD-Sybase
 DEPENDS+=	p5-DBI>=1.06:../../databases/p5-DBI
