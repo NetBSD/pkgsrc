@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.223 2014/05/31 02:06:17 obache Exp $
+# $NetBSD: Makefile,v 1.224 2014/05/31 02:07:31 obache Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -79,6 +79,7 @@ CONFLICTS+=	p5-Unicode-Normalize<1.17
 CONFLICTS+=	p5-XSLoader<0.16
 CONFLICTS+=	p5-autodie<2.23
 CONFLICTS+=	p5-constant<1.31
+CONFLICTS+=	p5-experimental<0.007
 CONFLICTS+=	p5-parent<0.228
 CONFLICTS+=	p5-version<0.9908
 
