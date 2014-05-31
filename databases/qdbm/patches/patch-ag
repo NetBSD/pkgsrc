@@ -1,8 +1,22 @@
-$NetBSD: patch-ag,v 1.5 2008/06/14 14:48:01 obache Exp $
+$NetBSD: patch-ag,v 1.6 2014/05/31 07:28:57 obache Exp $
+
+* fixes MYDOCS same as Makefile.in
+* pkgsrc layout style
+* prevent to overwrite with unwanted hard coded variables
+* install files with wanted permissions.
 
 --- LTmakefile.in.orig	2007-03-05 06:58:16.000000000 +0000
 +++ LTmakefile.in
-@@ -37,7 +37,7 @@ MYLIBDIR = @libdir@
+@@ -26,7 +26,7 @@ MYMAN1S = dpmgr.1 dptest.1 dptsv.1 crmgr
+   cbtest.1 cbcodec.1 vlmgr.1 vltest.1 vltsv.1 odmgr.1 odtest.1 odidx.1 qmttest.1
+ MYMAN3S = qdbm.3 depot.3 dpopen.3 curia.3 cropen.3 relic.3 hovel.3 \
+   cabin.3 villa.3 vlopen.3 vista.3 odeum.3 odopen.3
+-MYDOCS = spex.html spex-ja.html COPYING ChangeLog NEWS THANKS
++MYDOCS = COPYING ChangeLog NEWS THANKS
+ MYPCS = qdbm.pc
+ 
+ # Install destinations
+@@ -37,20 +37,20 @@ MYLIBDIR = @libdir@
  MYBINDIR = @bindir@
  MYMAN1DIR = @mandir@/man1
  MYMAN3DIR = @mandir@/man3
@@ -11,14 +25,18 @@ $NetBSD: patch-ag,v 1.5 2008/06/14 14:48:01 obache Exp $
  MYPCDIR = @libdir@/pkgconfig
  
  # Building binaries
-@@ -46,11 +46,11 @@ CC = gcc
- CFLAGS = -I. -I$(MYHEADDIR) -I$(HOME)/include -I/usr/local/include @MYDEFS@ \
+ LIBTOOL = libtool
+-CC = gcc
+-CFLAGS = -I. -I$(MYHEADDIR) -I$(HOME)/include -I/usr/local/include @MYDEFS@ \
++CC = @CC@
++CFLAGS = -I. -I$(MYHEADDIR) @CFLAGS@ @MYDEFS@ \
    -D_XOPEN_SOURCE_EXTENDED=1 -D_GNU_SOURCE=1 -D__EXTENSIONS__=1 -D_HPUX_SOURCE=1 \
    -D_POSIX_MAPPED_FILES=1 -D_POSIX_SYNCHRONIZED_IO=1 \
 -  -DPIC=1 -D_THREAD_SAFE=1 -D_REENTRANT=1 -DNDEBUG -O3
-+  -DPIC=1 -D_THREAD_SAFE=1 ${PTHREAD_CFLAGS} -DNDEBUG -O3
- LD = gcc
+-LD = gcc
 -LIBLDFLAGS = -rpath $(MYLIBDIR) -R $(MYLIBDIR) \
++  -DPIC=1 -D_THREAD_SAFE=1 ${PTHREAD_CFLAGS} -DNDEBUG
++LD = @CC@
 +LIBLDFLAGS = @LDFLAGS@ -rpath $(MYLIBDIR) -R $(MYLIBDIR) \
    -version-info $$(($(LIBVER)+$(LIBREV))):0:$(LIBREV) @LIBS@
 -LDFLAGS = -rpath $(MYLIBDIR) -R $(MYLIBDIR) -L. -lqdbm @LIBS@
