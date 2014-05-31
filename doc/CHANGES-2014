@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2076 2014/05/31 15:59:38 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2077 2014/05/31 17:00:46 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2792,6 +2792,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/gssdp to 0.14.8 [wiz 2014-05-27]
 	Updated devel/liblangtag to 0.5.4 [wiz 2014-05-27]
 	Updated devel/py-hgview to 1.8.1 [wiz 2014-05-27]
+	Updated lang/go to 1.2.2 [bsiegert 2014-05-27]
 	Added devel/hs-unordered-containers version 0.2.4.0 [szptvlfn 2014-05-27]
 	Added textproc/hs-blaze-markup version 0.6.1.0 [szptvlfn 2014-05-27]
 	Updated x11/xkeyboard-config to 2.12 [wiz 2014-05-28]
@@ -2856,3 +2857,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Added inputmethod/uim-chewing version 0.1.0 [obache 2014-05-31]
 	Removed graphics/libungif successor graphics/giflib [wiz 2014-05-31]
 	Updated pkgtools/pkglint to 4.140 [wiz 2014-05-31]
+	Added sysutils/ruby-listen version 2.7.5 [bsiegert 2014-05-31]
+	Added devel/ruby-mercenary version 0.3.3 [bsiegert 2014-05-31]
