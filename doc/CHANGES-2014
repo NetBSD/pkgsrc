@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2073 2014/05/31 14:24:35 obache Exp $
+$NetBSD: CHANGES-2014,v 1.2074 2014/05/31 14:26:40 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2853,3 +2853,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/gcc48-objc to 4.8.3 [ryoon 2014-05-31]
 	Updated inputmethod/uim to 1.8.6nb14 [obache 2014-05-31]
 	Updated inputmethod/uim-mozc to 1.13.1651.102nb2 [obache 2014-05-31]
+	Added inputmethod/uim-chewing version 0.1.0 [obache 2014-05-31]
