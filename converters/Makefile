@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2014/05/24 13:11:16 obache Exp $
+# $NetBSD: Makefile,v 1.131 2014/05/31 21:35:46 szptvlfn Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -25,6 +25,7 @@ SUBDIR+=	fondu
 SUBDIR+=	fribidi
 SUBDIR+=	gbase
 SUBDIR+=	help2man
+SUBDIR+=	hs-base64-bytestring
 SUBDIR+=	hztty
 SUBDIR+=	ish
 SUBDIR+=	ja-dvi2tty
