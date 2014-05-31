@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2014/05/05 00:47:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.39 2014/05/31 08:10:48 obache Exp $
 #
 
-DISTNAME=	cutter-1.2.3
-PKGREVISION=	2
+DISTNAME=	cutter-1.2.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cutter/}
 
@@ -32,10 +31,6 @@ TEST_TARGET=	check
 # PR#lib/39986
 .if !empty(CC_VERSION:Mgcc*) && !empty(MACHINE_PLATFORM:MNetBSD-[0-5].*-*)
 LDFLAGS.NetBSD+=	-lgcc_s
-.endif
-# needed to use C code with C++ exception 
-.if !empty(CC_VERSION:Mgcc*) || !empty(CC_VERSION:Mclang*)
-CFLAGS+=	-fexceptions
 .endif
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.16.0
