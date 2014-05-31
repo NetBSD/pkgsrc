@@ -1,6 +1,10 @@
-$NetBSD: patch-ab,v 1.3 2007/03/05 15:56:27 obache Exp $
+$NetBSD: patch-ab,v 1.4 2014/05/31 07:28:57 obache Exp $
 
---- perl/Makefile.in.orig	2006-11-12 21:18:12.000000000 +0900
+* Change documentation path
+* Prevent to hard code, honor user settings.
+* install perl modules as vendor
+
+--- perl/Makefile.in.orig	2006-11-12 12:18:12.000000000 +0000
 +++ perl/Makefile.in
 @@ -21,16 +21,16 @@ MYDOCS = plspex.html plspex-ja.html plap
  prefix = @prefix@
@@ -11,13 +15,16 @@ $NetBSD: patch-ab,v 1.3 2007/03/05 15:56:27 obache Exp $
  DESTDIR =
  
  # Building binaries
- CC = gcc
+-CC = gcc
 -INC = -I. -I../.. -I$(HOME)/include -I/usr/local/include
-+INC = -I. -I../..
- OPTIMIZE = -O2
- LD = gcc
+-OPTIMIZE = -O2
+-LD = gcc
 -LIBS = -L../.. -I$(HOME)/lib -L/usr/local/lib -lqdbm @LIBS@
 -RUNENV = LD_LIBRARY_PATH=.:..:../..:/usr/local/lib:$(HOME)/lib
++CC = @CC@
++INC = -I. -I../..
++OPTIMIZE = @CFLAGS@
++LD = @CC@
 +LIBS = -L../.. -lqdbm @LIBS@
 +RUNENV = LD_LIBRARY_PATH=.:..:../..
  

@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.2 2011/07/31 23:45:22 dholland Exp $
+$NetBSD: patch-ak,v 1.3 2014/05/31 07:28:57 obache Exp $
 
-Out-of-class member declarations are invalid.
+* defined in xqdbm.h.
 
---- plus/xadbm.h.orig	2011-07-21 13:00:18.000000000 +0000
+--- plus/xadbm.h.orig	2006-01-01 05:23:58.000000000 +0000
 +++ plus/xadbm.h
 @@ -72,6 +72,7 @@ private:
   * @param latter the latter datum.

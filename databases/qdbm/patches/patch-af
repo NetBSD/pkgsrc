@@ -1,8 +1,12 @@
-$NetBSD: patch-af,v 1.4 2008/06/19 14:45:38 taca Exp $
+$NetBSD: patch-af,v 1.5 2014/05/31 07:28:57 obache Exp $
+
+* pkgsrc layout style
+* prevent to overwrite with unwanted hard coded variables
+* install modules as vendor.
 
 --- ruby/Makefile.in.orig	2006-09-06 03:37:33.000000000 +0000
 +++ ruby/Makefile.in
-@@ -21,7 +21,7 @@ MYDOCS = rbspex.html rbspex-ja.html rbap
+@@ -21,11 +21,11 @@ MYDOCS = rbspex.html rbspex-ja.html rbap
  prefix = @prefix@
  exec_prefix = @exec_prefix@
  MYBINDIR = @bindir@
@@ -11,6 +15,11 @@ $NetBSD: patch-af,v 1.4 2008/06/19 14:45:38 taca Exp $
  DESTDIR =
  
  # Building binaries
+-RUNENV = LD_LIBRARY_PATH=.:..:../..:/usr/local/lib
++RUNENV = LD_LIBRARY_PATH=.:..:../..
+ 
+ 
+ 
 @@ -35,9 +35,9 @@ RUNENV = LD_LIBRARY_PATH=.:..:../..:/usr
  
  
