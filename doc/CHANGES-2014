@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2065 2014/05/31 04:27:19 taca Exp $
+$NetBSD: CHANGES-2014,v 1.2066 2014/05/31 07:31:09 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2836,3 +2836,9 @@ Changes to the packages collection and infrastructure in 2014:
 	Removed www/contao33-example [taca 2014-05-31]
 	Updated devel/p5-experimental to 0.007 [obache 2014-05-31]
 	Updated lang/php55 to 5.5.13 [taca 2014-05-31]
+	Updated databases/qdbm to 1.8.78 [obache 2014-05-31]
+	Updated databases/java-qdbm to 1.0.0.1.8.78 [obache 2014-05-31]
+	Updated databases/p5-qdbm to 1.0.0.1.8.78 [obache 2014-05-31]
+	Updated databases/qdbm-cgi to 0.0.1.1.8.78 [obache 2014-05-31]
+	Updated databases/qdbm-plus to 1.0.0.1.8.78 [obache 2014-05-31]
+	Updated databases/ruby-qdbm to 1.0.0.1.8.78 [obache 2014-05-31]
