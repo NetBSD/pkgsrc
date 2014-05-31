@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.866 2014/03/03 05:18:23 obache Exp $
+# $NetBSD: pkglint.pl,v 1.867 2014/05/31 15:56:59 wiz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -5225,14 +5225,8 @@ sub checklines_mk($) {
 			if ($includefile =~ m"/x11-links/buildlink3\.mk$") {
 				$line->log_error("${includefile} must not be included directly. Include \"../../mk/x11.buildlink3.mk\" instead.");
 			}
-			if ($includefile =~ m"/giflib/buildlink3\.mk$") {
-				$line->log_error("${includefile} must not be included directly. Include \"../../mk/giflib.buildlink3.mk\" instead.");
-			}
 			if ($includefile =~ m"/jpeg/buildlink3\.mk$") {
 				$line->log_error("${includefile} must not be included directly. Include \"../../mk/jpeg.buildlink3.mk\" instead.");
-			}
-			if ($includefile =~ m"/libungif/buildlink3\.mk$") {
-				$line->log_error("${includefile} must not be included directly. Include \"../../mk/giflib.buildlink3.mk\" instead.");
 			}
 			if ($includefile =~ m"/intltool/buildlink3\.mk$") {
 				$line->log_warning("Please say \"USE_TOOLS+= intltool\" instead of this line.");
