@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2014/05/29 23:36:31 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2014/05/31 12:22:42 wiz Exp $
 
 DISTNAME=	Padre-0.96
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	editors perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Padre/}
 
@@ -30,7 +30,7 @@ BUILD_DEPENDS+= p5-Test-Script>=1.07:../../devel/p5-Test-Script
 #DEPENDS+=	p5-ack>=1.86:../../textproc/p5-ack
 DEPENDS+=	p5-Algorithm-Diff>=1.1900:../../devel/p5-Algorithm-Diff
 DEPENDS+=	p5-App-cpanminus>=0.9923:../../devel/p5-App-cpanminus
-DEPENDS+=	{perl>=5.11.1,p5-CGI>=3.47}:../../www/p5-CGI
+DEPENDS+=	p5-CGI>=3.47:../../www/p5-CGI
 DEPENDS+=	p5-Capture-Tiny>=0.06:../../devel/p5-Capture-Tiny
 DEPENDS+=	p5-Class-Adapter>=1.05:../../devel/p5-Class-Adapter
 DEPENDS+=	p5-Class-Inspector>=1.22:../../devel/p5-Class-Inspector
