@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:43:23 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/05/31 07:28:57 obache Exp $
 bin/cbcodec
 bin/cbtest
 bin/crmgr
@@ -64,5 +64,9 @@ share/doc/qdbm/COPYING
 share/doc/qdbm/ChangeLog
 share/doc/qdbm/NEWS
 share/doc/qdbm/THANKS
+share/doc/qdbm/icon16.png
+share/doc/qdbm/index.html
+share/doc/qdbm/index.ja.html
+share/doc/qdbm/logo.png
 share/doc/qdbm/spex-ja.html
 share/doc/qdbm/spex.html
