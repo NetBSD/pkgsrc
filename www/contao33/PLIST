@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/05/27 15:41:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/05/31 02:11:40 taca Exp $
 ${CT_WEBDIR}/.htaccess.default
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/1.1.3/ace.js
@@ -3196,6 +3196,7 @@ ${CT_WEBDIR}/system/themes/flexible/switch.css
 ${CT_WEBDIR}/system/themes/tinymce.css
 ${CT_WEBDIR}/templates/.htaccess
 ${CT_WEBDIR}/templates/index.html
+${CT_WEBDIR}/vendor/.htaccess
 ${CT_WEBDIR}/vendor/autoload.php
 ${CT_WEBDIR}/vendor/bin/pscss
 ${CT_WEBDIR}/vendor/composer/ClassLoader.php
