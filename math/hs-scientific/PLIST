@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/31 21:31:57 szptvlfn Exp $
+lib/scientific-${PKGVERSION}/${HASKELL_VERSION}/Data/Scientific.hi
+lib/scientific-${PKGVERSION}/${HASKELL_VERSION}/HSscientific-${PKGVERSION}.o
+lib/scientific-${PKGVERSION}/${HASKELL_VERSION}/libHSscientific-${PKGVERSION}.a
+lib/scientific-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/scientific-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/scientific-${PKGVERSION}/html/Data-Scientific.html
+${PLIST.doc}share/doc/scientific-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/scientific-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/scientific-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/scientific-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/scientific-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/scientific-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/scientific-${PKGVERSION}/html/mini_Data-Scientific.html
+${PLIST.doc}share/doc/scientific-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/scientific-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/scientific-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/scientific-${PKGVERSION}/html/scientific.haddock
+${PLIST.doc}share/doc/scientific-${PKGVERSION}/html/synopsis.png
