@@ -1,0 +1,14 @@
+$NetBSD: patch-libjava_libltdl_configure,v 1.1 2014/05/31 13:06:25 ryoon Exp $
+
+--- libjava/libltdl/configure.orig	2014-05-22 09:13:48.000000000 +0000
++++ libjava/libltdl/configure
+@@ -6897,9 +6897,6 @@ cc_basename=`$echo "X$cc_temp" | $Xsed -
+       with_gnu_ld=no
+     fi
+     ;;
+-  openbsd*)
+-    with_gnu_ld=no
+-    ;;
+   esac
+ 
+   ld_shlibs=yes
