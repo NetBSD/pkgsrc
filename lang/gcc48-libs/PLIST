@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2014/05/20 19:12:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/05/31 13:06:25 ryoon Exp $
 ${PLIST.java}gcc48/lib/gcj-${PKGVERSION}-14/libjvm.la
 gcc48/lib/libatomic.la
-gcc48/lib/libgcc_s.so
-gcc48/lib/libgcc_s.so.1
+${PLIST.libgcc_s}gcc48/lib/libgcc_s.so
+${PLIST.libgcc_s}gcc48/lib/libgcc_s.so.1
 ${PLIST.java}gcc48/lib/libgcj-tools.la
 ${PLIST.java}gcc48/lib/libgcj.la
 gcc48/lib/libgfortran.la
@@ -11,10 +11,11 @@ gcc48/lib/libgomp.la
 gcc48/lib/libitm.la
 ${PLIST.darwin}gcc48/lib/libobjc-gnu.la
 ${PLIST.unix}gcc48/lib/libobjc.la
+${PLIST.nonetbsd}gcc48/lib/libquadmath.la
 gcc48/lib/libssp.la
 gcc48/lib/libstdc++.la
-${PLIST.unix}gcc48/libexec/gcc/${MACHINE_GNU_PLATFORM}/4.8.2/liblto_plugin.la
-${PLIST.unix}gcc48/libexec/gcc/${MACHINE_GNU_PLATFORM}/4.8.2/lto-wrapper
-${PLIST.unix}gcc48/libexec/gcc/${MACHINE_GNU_PLATFORM}/4.8.2/lto1
+${PLIST.unix}gcc48/libexec/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION_NOREV}/liblto_plugin.la
+${PLIST.unix}gcc48/libexec/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION_NOREV}/lto-wrapper
+${PLIST.unix}gcc48/libexec/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION_NOREV}/lto1
 ${PLIST.java}java/gcc48/jre/lib/${JAVA_MACHINE_ARCH}/client/libjvm.so
 ${PLIST.java}java/gcc48/jre/lib/${JAVA_MACHINE_ARCH}/server/libjvm.so

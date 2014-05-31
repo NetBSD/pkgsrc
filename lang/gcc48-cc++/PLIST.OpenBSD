@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST.OpenBSD,v 1.1 2014/05/31 13:06:25 ryoon Exp $
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-fixed/README
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-fixed/limits.h
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-fixed/rpc/rpc_des.h
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-fixed/rpc/svc.h
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-fixed/stddef.h
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-fixed/stdio.h
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-fixed/stdlib.h
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-fixed/sys/types.h
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-fixed/syslimits.h
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-fixed/wchar.h
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/quadmath.h
+gcc48/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/quadmath_weak.h

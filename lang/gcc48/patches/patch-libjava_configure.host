@@ -1,0 +1,17 @@
+$NetBSD: patch-libjava_configure.host,v 1.1 2014/05/31 13:06:25 ryoon Exp $
+
+--- libjava/configure.host.orig	2012-03-14 16:33:37.000000000 +0000
++++ libjava/configure.host
+@@ -325,6 +325,12 @@ EOF
+   i?86-*-solaris2* | x86_64-*-solaris2.1[0-9]*)
+ 	can_unwind_signal=yes
+ 	;;
++  *-*-openbsd*)
++	enable_hash_synchronization_default=no
++	libgcj_flags="${libgcj_flags} -fno-omit-frame-pointer"
++	can_unwind_signal=no
++	slow_pthread_self=no
++	;;
+   *-*-freebsd*)
+ 	slow_pthread_self=
+ 	;;

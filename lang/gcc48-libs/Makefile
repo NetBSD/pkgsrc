@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2014/05/20 19:12:36 adam Exp $
+# $NetBSD: Makefile,v 1.15 2014/05/31 13:06:25 ryoon Exp $
 
 PKGNAME=	${GCC_PKGNAME}-libs-${GCC48_DIST_VERSION}
-PKGREVISION=	5
 
 COMMENT=	Runtime libraries from the GNU Compiler Collection (GCC) 4.8
 
@@ -24,14 +23,22 @@ INSTALLATION_DIRS+=	java/${GCC_PKGNAME}/jre/lib/${MACHINE_ARCH:S/x86_64/amd64/}/
 .endif
 
 do-install:
+.if ${OPSYS} != "NetBSD"
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/${OBJDIR}/${MACHINE_GNU_PLATFORM}/libquadmath/libquadmath.la \
+		${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib
+.endif
+
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
 		${WRKSRC}/${OBJDIR}/${MACHINE_GNU_PLATFORM}/libatomic/libatomic.la \
 		${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib
 
+.if ${OPSYS} == "NetBSD"
 # libgcc_s has no libtool la file.
 	${INSTALL_LIB} \
 		${WRKSRC}/${OBJDIR}/${MACHINE_GNU_PLATFORM}/libgcc/libgcc_s.* \
 		${DESTDIR}${PREFIX}/${GCC_PKGNAME}/lib
+.endif
 
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
 		${WRKSRC}/${OBJDIR}/${MACHINE_GNU_PLATFORM}/libgfortran/libgfortran.la \
