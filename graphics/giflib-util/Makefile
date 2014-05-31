@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2014/05/15 14:16:11 adam Exp $
+# $NetBSD: Makefile,v 1.9 2014/05/31 15:56:27 wiz Exp $
 
 .include "../../graphics/giflib/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-util-/}
+PKGREVISION=	1
 
 COMMENT=	GIF image format utility
 
@@ -20,8 +21,5 @@ post-install:
 	cd ${WRKSRC}/doc/whatsinagif && ${INSTALL_DATA} *.html *.gif \
 		${DESTDIR}${PREFIX}/${HTMLDIR}/whatsinagif
 
-.include "../../mk/giflib.buildlink3.mk"
-.if ${GIFLIB_IMPLEMENTATION} == "libungif"
-PKG_FAIL_REASON= "please use graphics/libungif"
-.endif
+.include "../../graphics/giflib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

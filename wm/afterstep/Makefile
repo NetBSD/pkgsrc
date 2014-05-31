@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.75 2014/05/29 23:37:54 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2014/05/31 15:56:28 wiz Exp $
 
 DISTNAME=	AfterStep-2.2.11
 PKGNAME=	${DISTNAME:S/AfterStep/afterstep/}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	wm
 MASTER_SITES=	ftp://ftp.afterstep.org/stable/
 EXTRACT_SUFX=	.tar.bz2
@@ -33,7 +33,7 @@ MAKE_ENV+=	EXTRA_LIBRARIES=-lexecinfo
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../mk/giflib.buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

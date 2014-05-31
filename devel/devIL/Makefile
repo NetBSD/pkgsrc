@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.36 2014/05/15 14:41:46 adam Exp $
+# $NetBSD: Makefile,v 1.37 2014/05/31 15:56:26 wiz Exp $
 #
 
 DISTNAME=	DevIL-${DEVIL_VERSION}
 PKGNAME=	${DISTNAME:S/D/d/}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openil/}
 
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--enable-ILUT
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../mk/giflib.buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/mng/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"

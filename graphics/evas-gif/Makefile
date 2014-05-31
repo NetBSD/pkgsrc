@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2014/05/15 14:41:51 adam Exp $
+# $NetBSD: Makefile,v 1.17 2014/05/31 15:56:27 wiz Exp $
 
 PKGNAME=	evas-gif-${EVAS_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	Evas GIF image loader
 
 EVAS_IMAGE_LOADERS=	gif
@@ -15,5 +15,5 @@ MAKE_FLAGS+=	module_la_LIBADD="\$${evas_image_loader_gif_libs} \$${EINA_LIBS} ${
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/evas/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../mk/giflib.buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

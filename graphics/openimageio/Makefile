@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2014/05/25 09:02:43 obache Exp $
+# $NetBSD: Makefile,v 1.26 2014/05/31 15:56:27 wiz Exp $
 
 OIIOVER=	1.3.13
 DISTNAME=	oiio-Release-${OIIOVER}
 PKGNAME=	${DISTNAME:S/oiio-Release/openimageio/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	-https://github.com/OpenImageIO/oiio/archive/Release-${OIIOVER}.tar.gz
 
@@ -48,7 +48,7 @@ CXXFLAGS+=	-Wno-deprecated-register
 .include "../../graphics/openjpeg15/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../mk/giflib.buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 BUILDLINK_DEPMETHOD.qt4-tools=	build
 .include "../../x11/qt4-tools/buildlink3.mk"

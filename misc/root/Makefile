@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2014/05/25 09:23:11 obache Exp $
+# $NetBSD: Makefile,v 1.55 2014/05/31 15:56:27 wiz Exp $
 
 DISTNAME=		root_v5.26.00b.source
 PKGNAME=		root-5.26
-PKGREVISION=		14
+PKGREVISION=		15
 CATEGORIES=		misc
 MASTER_SITES=		ftp://root.cern.ch/root/
 
@@ -45,7 +45,7 @@ CONFIGURE_ARGS+=	--disable-xml
 #CONFIGURE_ARGS+=	--disable-asimage
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../mk/giflib.buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 
 .include "../../math/gsl/buildlink3.mk"

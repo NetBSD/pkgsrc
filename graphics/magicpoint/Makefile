@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.92 2014/05/29 23:36:39 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2014/05/31 15:56:27 wiz Exp $
 
 DISTNAME=		magicpoint-1.13a
-PKGREVISION=		23
+PKGREVISION=		24
 CATEGORIES=		x11 graphics
 MASTER_SITES=		ftp://sh.wide.ad.jp/WIDE/free-ware/mgp/
 
@@ -71,7 +71,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/sample/${f} ${DESTDIR}${PREFIX}/${EGDIR}
 .endfor
 
-.include "../../mk/giflib.buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/mng/buildlink3.mk"
 .include "../../graphics/netpbm/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
