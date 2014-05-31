@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2014/02/07 08:56:52 obache Exp $
+# $NetBSD: options.mk,v 1.5 2014/05/31 15:56:26 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs
 PKG_SUPPORTED_OPTIONS=	dbus xft2 svg xml gnutls
@@ -81,7 +81,7 @@ CONFIGURE_ARGS+=	--with-png
 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../mk/giflib.buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
