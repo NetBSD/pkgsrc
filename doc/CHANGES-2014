@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2063 2014/05/31 02:14:53 taca Exp $
+$NetBSD: CHANGES-2014,v 1.2064 2014/05/31 02:16:29 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2834,3 +2834,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/qmail to 1.03nb19 [schmonz 2014-05-30]
 	Updated www/contao33 to 3.3.1 [taca 2014-05-31]
 	Removed www/contao33-example [taca 2014-05-31]
+	Updated devel/p5-experimental to 0.007 [obache 2014-05-31]
