@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/05/25 20:13:59 gls Exp $
-share/doc/p5-CGI/cgi_docs.html
+@comment $NetBSD: PLIST,v 1.5 2014/05/31 12:11:06 wiz Exp $
 share/doc/p5-CGI/examples/caution.xbm
 share/doc/p5-CGI/examples/clickable_image.cgi
 share/doc/p5-CGI/examples/clickable_image.txt
