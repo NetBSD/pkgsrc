@@ -1,12 +1,15 @@
-# $NetBSD: options.mk,v 1.15 2013/08/31 22:19:32 adam Exp $
+# $NetBSD: options.mk,v 1.16 2014/05/31 10:16:40 pho Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cairo
 PKG_SUPPORTED_OPTIONS=	x11 xcb
+.if exists(/System/Library/Frameworks/Quartz.framework)
+PKG_SUPPORTED_OPTIONS+=	quartz
+.endif
 PKG_SUGGESTED_OPTIONS=	x11 xcb
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		x11 xcb
+PLIST_VARS+=		x11 xcb quartz
 
 ###
 ### X11 and XCB support (XCB implies X11)
@@ -33,4 +36,26 @@ CONFIGURE_ARGS+=	--enable-xcb=no
 .else
 CONFIGURE_ARGS+=	--disable-xlib
 CONFIGURE_ARGS+=	--disable-xlib-xrender
+.endif
+
+###
+### Quartz backend
+###
+# Quartz backend interacts badly with our library stack. The most
+# notable issue is that when quartz-font is enabled, cairo will never
+# use fontconfig but instead uses CoreGraphics API to find fonts in
+# system-default font paths; as a result, any fonts installed with
+# pkgsrc will never be found. OTOH fontconfig by default searches for
+# fonts in MacOS X system-default paths too so sticking with it will
+# not be a problem.
+.if !empty(PKG_OPTIONS:Mquartz)
+CONFIGURE_ARGS+=	--enable-quartz
+CONFIGURE_ARGS+=	--enable-quartz-font
+CONFIGURE_ARGS+=	--enable-quartz-image
+PLIST.quartz=		yes
+WARNINGS+=		"You have enabled Quartz backend. No fonts installed with pkgsrc will be found."
+.else
+CONFIGURE_ARGS+=	--disable-quartz
+CONFIGURE_ARGS+=	--disable-quartz-font
+CONFIGURE_ARGS+=	--disable-quartz-image
 .endif
