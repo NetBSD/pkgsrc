@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2014/05/29 23:36:31 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.10 2014/05/31 12:56:54 wiz Exp $
 
 DISTNAME=	Padre-Plugin-Catalyst-0.09
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	editors perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Padre/}
 
@@ -21,7 +20,7 @@ DEPENDS+=	p5-Task-CatInABox>=0.03:../../www/p5-Task-CatInABox
 DEPENDS+=	p5-Task-Catalyst-Tutorial>=0.06:../../www/p5-Task-Catalyst-Tutorial
 
 BUILD_DEPENDS+=	p5-Locale-Msgfmt>=0.14:../../devel/p5-Locale-Msgfmt
-BUILD_DEPENDS+=	{perl>=5.10.1,p5-Module-Pluggable>=3.9}:../../devel/p5-Module-Pluggable
+BUILD_DEPENDS+=	p5-Module-Pluggable>=3.9:../../devel/p5-Module-Pluggable
 
 PERL5_PACKLIST=		auto/Padre/Plugin/Catalyst/.packlist
 PERL5_MODULE_TYPE=	Module::Build
