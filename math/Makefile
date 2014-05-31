@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.265 2014/05/28 22:03:46 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.266 2014/05/31 21:33:28 szptvlfn Exp $
 
 COMMENT=	Mathematics
 
@@ -118,6 +118,7 @@ SUBDIR+=	harminv
 SUBDIR+=	heirloom-factor
 SUBDIR+=	heirloom-units
 SUBDIR+=	hs-nats
+SUBDIR+=	hs-scientific
 SUBDIR+=	ipopt
 SUBDIR+=	isl
 SUBDIR+=	itpp
