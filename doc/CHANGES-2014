@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2100 2014/06/01 16:25:14 tsutsui Exp $
+$NetBSD: CHANGES-2014,v 1.2101 2014/06/01 17:09:19 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2882,3 +2882,6 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated games/onscripter to 20140504 [tsutsui 2014-06-01]
 	Updated x11/mlterm to 3.3.6 [tsutsui 2014-06-01]
 	Updated misc/ruby-parallel to 1.0.0 [tsutsui 2014-06-01]
+	Updated www/ruby-http version 0.6.0 [tsutsui 2014-06-01]
+	Updated net/ruby-twitter to 5.9.0 [tsutsui 2014-06-01]
+	Updated net/ruby-tw to 1.0.9 [tsutsui 2014-06-01]
