@@ -1,8 +1,8 @@
-$NetBSD: patch-bn,v 1.4 2013/06/15 09:31:05 jperkin Exp $
+$NetBSD: patch-bn,v 1.5 2014/06/01 17:55:33 wiz Exp $
 
 Use pkgsrc fonts.
 
---- jdk/src/solaris/classes/sun/awt/fontconfigs/bsd.fontconfig.properties.orig	2012-08-10 17:31:20.000000000 +0000
+--- jdk/src/solaris/classes/sun/awt/fontconfigs/bsd.fontconfig.properties.orig	2014-01-01 05:53:43.000000000 +0000
 +++ jdk/src/solaris/classes/sun/awt/fontconfigs/bsd.fontconfig.properties
 @@ -166,24 +166,24 @@ sequence.fallback=chinese-big5,chinese-g
  
@@ -12,28 +12,28 @@ Use pkgsrc fonts.
 -filename.DejaVu_LGC_Sans_Bold=/usr/share/fonts/dejavu-lgc/DejaVuLGCSans-Bold.ttf
 -filename.DejaVu_LGC_Sans_Oblique=/usr/share/fonts/dejavu-lgc/DejaVuLGCSans-Oblique.ttf
 -filename.DejaVu_LGC_Sans_Bold_Oblique=/usr/share/fonts/dejavu-lgc/DejaVuLGCSans-BoldOblique.ttf
-+filename.DejaVu_LGC_Sans=@PREFIX@/lib/X11/fonts/TTF/DejaVuSans.ttf
-+filename.DejaVu_LGC_Sans_Bold=@PREFIX@/lib/X11/fonts/TTF/DejaVuSans-Bold.ttf
-+filename.DejaVu_LGC_Sans_Oblique=@PREFIX@/lib/X11/fonts/TTF/DejaVuSans-Oblique.ttf
-+filename.DejaVu_LGC_Sans_Bold_Oblique=@PREFIX@/lib/X11/fonts/TTF/DejaVuSans-BoldOblique.ttf
++filename.DejaVu_LGC_Sans=@PREFIX@/share/fonts/X11/TTF/DejaVuSans.ttf
++filename.DejaVu_LGC_Sans_Bold=@PREFIX@/share/fonts/X11/TTF/DejaVuSans-Bold.ttf
++filename.DejaVu_LGC_Sans_Oblique=@PREFIX@/share/fonts/X11/TTF/DejaVuSans-Oblique.ttf
++filename.DejaVu_LGC_Sans_Bold_Oblique=@PREFIX@/share/fonts/X11/TTF/DejaVuSans-BoldOblique.ttf
  
 -filename.DejaVu_LGC_Sans_Mono=/usr/share/fonts/dejavu-lgc/DejaVuLGCSansMono.ttf
 -filename.DejaVu_LGC_Sans_Mono_Bold=/usr/share/fonts/dejavu-lgc/DejaVuLGCSansMono-Bold.ttf
 -filename.DejaVu_LGC_Sans_Mono_Oblique=/usr/share/fonts/dejavu-lgc/DejaVuLGCSansMono-Oblique.ttf
 -filename.DejaVu_LGC_Sans_Mono_Bold_Oblique=/usr/share/fonts/dejavu-lgc/DejaVuLGCSansMono-BoldOblique.ttf
-+filename.DejaVu_LGC_Sans_Mono=@PREFIX@/lib/X11/fonts/TTF/DejaVuSansMono.ttf
-+filename.DejaVu_LGC_Sans_Mono_Bold=@PREFIX@/lib/X11/fonts/TTF/DejaVuSansMono-Bold.ttf
-+filename.DejaVu_LGC_Sans_Mono_Oblique=@PREFIX@/lib/X11/fonts/TTF/DejaVuSansMono-Oblique.ttf
-+filename.DejaVu_LGC_Sans_Mono_Bold_Oblique=@PREFIX@/lib/X11/fonts/TTF/DejaVuSansMono-BoldOblique.ttf
++filename.DejaVu_LGC_Sans_Mono=@PREFIX@/share/fonts/X11/TTF/DejaVuSansMono.ttf
++filename.DejaVu_LGC_Sans_Mono_Bold=@PREFIX@/share/fonts/X11/TTF/DejaVuSansMono-Bold.ttf
++filename.DejaVu_LGC_Sans_Mono_Oblique=@PREFIX@/share/fonts/X11/TTF/DejaVuSansMono-Oblique.ttf
++filename.DejaVu_LGC_Sans_Mono_Bold_Oblique=@PREFIX@/share/fonts/X11/TTF/DejaVuSansMono-BoldOblique.ttf
  
 -filename.DejaVu_LGC_Serif=/usr/share/fonts/dejavu-lgc/DejaVuLGCSerif.ttf
 -filename.DejaVu_LGC_Serif_Bold=/usr/share/fonts/dejavu-lgc/DejaVuLGCSerif-Bold.ttf
 -filename.DejaVu_LGC_Serif_Oblique=/usr/share/fonts/dejavu-lgc/DejaVuLGCSerif-Oblique.ttf
 -filename.DejaVu_LGC_Serif_Bold_Oblique=/usr/share/fonts/dejavu-lgc/DejaVuLGCSerif-BoldOblique.ttf
-+filename.DejaVu_LGC_Serif=@PREFIX@/lib/X11/fonts/TTF/DejaVuSerif.ttf
-+filename.DejaVu_LGC_Serif_Bold=@PREFIX@/lib/X11/fonts/TTF/DejaVuSerif-Bold.ttf
-+filename.DejaVu_LGC_Serif_Oblique=@PREFIX@/lib/X11/fonts/TTF/DejaVuSerif-Italic.ttf
-+filename.DejaVu_LGC_Serif_Bold_Oblique=@PREFIX@/lib/X11/fonts/TTF/DejaVuSerif-BoldItalic.ttf
++filename.DejaVu_LGC_Serif=@PREFIX@/share/fonts/X11/TTF/DejaVuSerif.ttf
++filename.DejaVu_LGC_Serif_Bold=@PREFIX@/share/fonts/X11/TTF/DejaVuSerif-Bold.ttf
++filename.DejaVu_LGC_Serif_Oblique=@PREFIX@/share/fonts/X11/TTF/DejaVuSerif-Italic.ttf
++filename.DejaVu_LGC_Serif_Bold_Oblique=@PREFIX@/share/fonts/X11/TTF/DejaVuSerif-BoldItalic.ttf
  
 -filename.Sazanami_Gothic=/usr/share/fonts/japanese/TrueType/sazanami-gothic.ttf
 -filename.Sazanami_Mincho=/usr/share/fonts/japanese/TrueType/sazanami-mincho.ttf
@@ -41,9 +41,9 @@ Use pkgsrc fonts.
 -filename.AR_PL_ZenKai_Uni=/usr/share/fonts/chinese/TrueType/ukai.ttf
 -filename.Baekmuk_Gulim=/usr/share/fonts/korean/TrueType/gulim.ttf
 -filename.Baekmuk_Batang=/usr/share/fonts/korean/TrueType/batang.ttf
-+filename.Sazanami_Gothic=@PREFIX@/lib/X11/fonts/TTF/sazanami-gothic.ttf
-+filename.Sazanami_Mincho=@PREFIX@/lib/X11/fonts/TTF/sazanami-mincho.ttf
-+filename.AR_PL_ShanHeiSun_Uni=@PREFIX@/lib/X11/fonts/TTF/uming.ttf
-+filename.AR_PL_ZenKai_Uni=@PREFIX@/lib/X11/fonts/TTF/ukai.ttf
-+filename.Baekmuk_Gulim=@PREFIX@/lib/X11/fonts/TTF/gulim.ttf
-+filename.Baekmuk_Batang=@PREFIX@/lib/X11/fonts/TTF/batang.ttf
++filename.Sazanami_Gothic=@PREFIX@/share/fonts/X11/TTF/sazanami-gothic.ttf
++filename.Sazanami_Mincho=@PREFIX@/share/fonts/X11/TTF/sazanami-mincho.ttf
++filename.AR_PL_ShanHeiSun_Uni=@PREFIX@/share/fonts/X11/TTF/uming.ttf
++filename.AR_PL_ZenKai_Uni=@PREFIX@/share/fonts/X11/TTF/ukai.ttf
++filename.Baekmuk_Gulim=@PREFIX@/share/fonts/X11/TTF/gulim.ttf
++filename.Baekmuk_Batang=@PREFIX@/share/fonts/X11/TTF/batang.ttf
