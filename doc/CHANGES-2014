@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2104 2014/06/01 23:51:37 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2105 2014/06/01 23:57:10 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2888,3 +2888,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/sbcl to 1.2.0 [asau 2014-06-01]
 	Added textproc/py-defusedxml version 0.4.1 [rodent 2014-06-01]
 	Updated security/py-m2crypto to 0.22.3 [rodent 2014-06-01]
+	Updated security/ssdeep to 2.10 [rodent 2014-06-01]
