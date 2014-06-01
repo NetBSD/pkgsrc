@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2012/10/03 18:28:32 asau Exp $
+# $NetBSD: Makefile,v 1.21 2014/06/01 16:37:16 wiz Exp $
 
 DISTNAME=		vfontcap-kochi-0.0
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		fonts x11 japanese
 MASTER_SITES=		# empty
 DISTFILES=		# empty
