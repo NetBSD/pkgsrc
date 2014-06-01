@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2090 2014/06/01 08:26:24 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2091 2014/06/01 10:07:08 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2872,3 +2872,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/xcursorgen to 1.0.6 [wiz 2014-06-01]
 	Removed lang/gfortran [ryoon 2014-06-01]
 	Updated www/mediawiki to 1.22.7 [wen 2014-06-01]
+	Added textproc/ruby-toml version 0.1.1 [bsiegert 2014-06-01]
