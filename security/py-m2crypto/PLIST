@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/10/05 10:14:46 apb Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/06/01 23:51:25 rodent Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -33,24 +33,6 @@ ${PYSITELIB}/M2Crypto/Engine.pyo
 ${PYSITELIB}/M2Crypto/Err.py
 ${PYSITELIB}/M2Crypto/Err.pyc
 ${PYSITELIB}/M2Crypto/Err.pyo
-${PYSITELIB}/M2Crypto/PGP/PublicKey.py
-${PYSITELIB}/M2Crypto/PGP/PublicKey.pyc
-${PYSITELIB}/M2Crypto/PGP/PublicKey.pyo
-${PYSITELIB}/M2Crypto/PGP/PublicKeyRing.py
-${PYSITELIB}/M2Crypto/PGP/PublicKeyRing.pyc
-${PYSITELIB}/M2Crypto/PGP/PublicKeyRing.pyo
-${PYSITELIB}/M2Crypto/PGP/RSA.py
-${PYSITELIB}/M2Crypto/PGP/RSA.pyc
-${PYSITELIB}/M2Crypto/PGP/RSA.pyo
-${PYSITELIB}/M2Crypto/PGP/__init__.py
-${PYSITELIB}/M2Crypto/PGP/__init__.pyc
-${PYSITELIB}/M2Crypto/PGP/__init__.pyo
-${PYSITELIB}/M2Crypto/PGP/constants.py
-${PYSITELIB}/M2Crypto/PGP/constants.pyc
-${PYSITELIB}/M2Crypto/PGP/constants.pyo
-${PYSITELIB}/M2Crypto/PGP/packet.py
-${PYSITELIB}/M2Crypto/PGP/packet.pyc
-${PYSITELIB}/M2Crypto/PGP/packet.pyo
 ${PYSITELIB}/M2Crypto/RC4.py
 ${PYSITELIB}/M2Crypto/RC4.pyc
 ${PYSITELIB}/M2Crypto/RC4.pyo
