@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2012/06/13 08:15:14 mef Exp $
+$NetBSD: patch-aa,v 1.7 2014/06/01 18:49:41 wiz Exp $
 
 Convert hardcoded PATH to @PREFIX@
 
@@ -10,7 +10,7 @@ Convert hardcoded PATH to @PREFIX@
  
 -	mkdir /usr/share/fonts/truetype and put some *ttf fonts there, now
 -	run:
-+	mkdir @PREFIX@/lib/X11/fonts/TTF and put some *ttf fonts
++	mkdir @PREFIX@/share/fonts/X11/TTF and put some *ttf fonts
 +        there, now run:
  
  	make xfstt && make install
@@ -22,12 +22,12 @@ Convert hardcoded PATH to @PREFIX@
 -	Copy *.ttf fonts into the /usr/share/fonts/truetype/ directory or
 -	put some softlinks to font directories in there. A typical example
 -	is:
-+	Copy *.ttf fonts into the @PREFIX@/lib/X11/fonts/TTF/
++	Copy *.ttf fonts into the @PREFIX@/share/fonts/X11/TTF/
 +        directory or put some softlinks to font directories in there.
 +        A typical example is:
  
 -	ln -s /DOS/windows/fonts /usr/share/fonts/truetype/winfonts
-+	ln -s /DOS/windows/fonts @PREFIX@/lib/X11/fonts/TTF/winfonts
++	ln -s /DOS/windows/fonts @PREFIX@/share/fonts/X11/TTF/winfonts
  
  	Now run "xfstt --sync" in order to have the new fonts recognized.
  	Adding fonts while xfstt is running doesn't work yet.
@@ -37,7 +37,7 @@ Convert hardcoded PATH to @PREFIX@
  
 -	Create some subdirectories in /usr/share/fonts/truetype, e.g.
 -	modern, script, brush, old, symbol, ...
-+	Create some subdirectories in @PREFIX@/lib/X11/fonts/TTF,
++	Create some subdirectories in @PREFIX@/share/fonts/X11/TTF,
 +        e.g.  modern, script, brush, old, symbol, ...
  	and put the appropriate fonts in there. The corresponding font
  	names will be -modern-*, -script-*, -brush-* and so on.
