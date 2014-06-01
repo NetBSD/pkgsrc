@@ -1,15 +1,15 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2007/11/03 15:33:12 rillig Exp $
+$NetBSD: MESSAGE,v 1.2 2014/06/01 16:35:37 wiz Exp $
 
 To use the fonts you have just installed, add
 the line:
 
-    FontPath ${PREFIX}/lib/X11/fonts/thaixfonts
+    FontPath ${PREFIX}/share/fonts/X11/thaixfonts
 
 to your X window configuration file, or run the
 following command:
 
-    xset +fp ${PREFIX}/lib/X11/fonts/thaixfonts
+    xset +fp ${PREFIX}/share/fonts/X11/thaixfonts
     xset fp rehash
 
 ===========================================================================

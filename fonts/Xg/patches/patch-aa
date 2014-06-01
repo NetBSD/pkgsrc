@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.4 2012/02/21 06:39:54 sbd Exp $
+$NetBSD: patch-aa,v 1.5 2014/06/01 16:35:31 wiz Exp $
 
 --- Makefile.orig	2009-12-17 17:28:59.000000000 +0000
 +++ Makefile
 @@ -0,0 +1,15 @@
 + 
-+FONTDIR=$(DESTDIR)$(PREFIX)/lib/X11/fonts/Xg
++FONTDIR=$(DESTDIR)$(PREFIX)/share/fonts/X11/Xg
 + 
 +all:
 +	@echo nothing to be done for \`$@\'

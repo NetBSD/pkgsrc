@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/04/09 17:40:32 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 16:35:34 wiz Exp $
 
 DISTNAME=	inconsolata-g_font
 PKGNAME=	inconsolata-g-20090213
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.fantascienza.net/leonardo/ar/inconsolatag/
 EXTRACT_SUFX=	.zip
@@ -17,13 +18,13 @@ WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
-INSTALLATION_DIRS+=	lib/X11/fonts/TTF
-FONTS_DIRS.ttf=		${PREFIX}/lib/X11/fonts/TTF
-INSTALLATION_DIRS+=	lib/X11/fonts/OTF
-FONTS_DIRS.otf=		${PREFIX}/lib/X11/fonts/OTF
+INSTALLATION_DIRS+=	share/fonts/X11/TTF
+FONTS_DIRS.ttf=		${PREFIX}/share/fonts/X11/TTF
+INSTALLATION_DIRS+=	share/fonts/X11/OTF
+FONTS_DIRS.otf=		${PREFIX}/share/fonts/X11/OTF
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/Inconsolata-g.otf ${DESTDIR}${PREFIX}/lib/X11/fonts/OTF
-	${INSTALL_DATA} ${WRKSRC}/Inconsolata-g.ttf ${DESTDIR}${PREFIX}/lib/X11/fonts/TTF
+	${INSTALL_DATA} ${WRKSRC}/Inconsolata-g.otf ${DESTDIR}${PREFIX}/share/fonts/X11/OTF
+	${INSTALL_DATA} ${WRKSRC}/Inconsolata-g.ttf ${DESTDIR}${PREFIX}/share/fonts/X11/TTF
 
 .include "../../mk/bsd.pkg.mk"

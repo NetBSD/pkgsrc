@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 18:28:27 asau Exp $
+# $NetBSD: Makefile,v 1.5 2014/06/01 16:35:36 wiz Exp $
 #
 
 DISTNAME=	LinLibertineTTF_5.1.3_2011_06_21
 PKGNAME=	${DISTNAME:S/LinLibertineTTF_/linux-libertine-ttf-/:C/_[^_].*$//}
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=linuxlibertine/}
 EXTRACT_SUFX=	.tgz
@@ -16,7 +17,7 @@ WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-FONTDIR=	${PREFIX}/lib/X11/fonts/TTF
+FONTDIR=	${PREFIX}/share/fonts/X11/TTF
 DOCDIR=		${PREFIX}/share/doc/linux-libertine-ttf
 FONTS_DIRS.ttf=	${FONTDIR}
 
