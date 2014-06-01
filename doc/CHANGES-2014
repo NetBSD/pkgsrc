@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2094 2014/06/01 14:11:58 obache Exp $
+$NetBSD: CHANGES-2014,v 1.2095 2014/06/01 14:32:33 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2876,3 +2876,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added textproc/libpinyin version 1.0.0 [obache 2014-06-01]
 	Added inputmethod/ibus-libpinyin version 1.6.92 [obache 2014-06-01]
 	Updated net/mikutter to 3.0.0alpha5 [obache 2014-06-01]
+	Updated wm/jwm to 2.2.2 [tsutsui 2014-06-01]
