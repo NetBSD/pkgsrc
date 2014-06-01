@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 19:18:28 agc Exp $
+$NetBSD: distinfo,v 1.5 2014/06/01 16:35:35 wiz Exp $
 
 SHA1 (jisksp14.bdf.gz) = 8286f53311a81345bd16dd29b8f860d66bd048c6
 RMD160 (jisksp14.bdf.gz) = 46d3f9d433dd20cbf429e94ddbf6fd22e51017dd
@@ -12,5 +12,5 @@ Size (min-1-24.bdf.gz) = 336272 bytes
 SHA1 (jisksp40.bdf.Z) = 0ed56bc280a41da088fc9d5df00a7b989d0e8932
 RMD160 (jisksp40.bdf.Z) = 14afd07443e906663ae3f039d30db490f6f5ce32
 Size (jisksp40.bdf.Z) = 893895 bytes
-SHA1 (patch-aa) = 366d448cbf803d406945f2a4b9002a68bf346e52
+SHA1 (patch-aa) = 1a0e0bcb2aeeb667326bc1e4e2e8d0bb9f673369
 SHA1 (patch-ab) = e89c21ee2df5eb4312679cb58a7fdb9b243bf04b

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/11/17 20:47:13 ryoon Exp $
-lib/X11/fonts/TTF/MTLc3m.ttf
-lib/X11/fonts/TTF/MTLmr3m.ttf
+@comment $NetBSD: PLIST,v 1.3 2014/06/01 16:35:36 wiz Exp $
+share/fonts/X11/TTF/MTLc3m.ttf
+share/fonts/X11/TTF/MTLmr3m.ttf
 share/doc/motoya-fonts/NOTICE

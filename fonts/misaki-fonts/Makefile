@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2013/07/27 11:58:08 tsutsui Exp $
+# $NetBSD: Makefile,v 1.8 2014/06/01 16:35:36 wiz Exp $
 
 DISTNAME=		misaki_bdf_2012-06-03
 PKGNAME=		${DISTNAME:S/-//g:S/misaki_bdf_/misaki-fonts-1.0./}
+PKGREVISION=		1
 CATEGORIES=		fonts x11 japanese
 MASTER_SITES=		http://www.geocities.jp/littlimi/arc/misaki/
 
@@ -16,10 +17,10 @@ NO_CONFIGURE=		YES
 USE_TOOLS+=		bdftopcf gzip
 
 DOCSDIR=		${PREFIX}/share/doc/${PKGBASE}
-FONTDIR=		${PREFIX}/lib/X11/fonts/local
+FONTDIR=		${PREFIX}/share/fonts/X11/local
 FONTS_DIRS.x11=		${FONTDIR}
 
-INSTALLATION_DIRS=	lib/X11/fonts/local \
+INSTALLATION_DIRS=	share/fonts/X11/local \
 			${DOCSDIR}
 
 INSTALL_FONTS=		misaki_gothic.bdf \

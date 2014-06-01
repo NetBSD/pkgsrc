@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2012/10/03 18:28:25 asau Exp $
+# $NetBSD: Makefile,v 1.14 2014/06/01 16:35:35 wiz Exp $
 
 DISTNAME=	kcfonts-1.05
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
 
@@ -10,8 +10,8 @@ COMMENT=	Kuo Chauo Chinese Fonts collection
 
 WRKSRC=		${WRKDIR}
 USE_X11BASE=	yes
-FONTS_DIRS.x11=	${PREFIX}/lib/X11/fonts/local
-REQD_DIRS+=	${PREFIX}/lib/X11/fonts/local
+FONTS_DIRS.x11=	${PREFIX}/share/fonts/X11/local
+REQD_DIRS+=	${PREFIX}/share/fonts/X11/local
 
 USE_TOOLS+=	gzip ucs2any
 

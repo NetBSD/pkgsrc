@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2012/10/03 18:28:26 asau Exp $
+# $NetBSD: Makefile,v 1.22 2014/06/01 16:35:35 wiz Exp $
 #
 
 DISTNAME=	baekmuk-2.1
 PKGNAME=	ko-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	fonts x11 korean
 MASTER_SITES+=	ftp://ftp.mizi.com/pub/baekmuk/
 
@@ -26,7 +27,7 @@ BAEKMUK_BDF=	batang10.bdf batang10b.bdf batang12.bdf batang12b.bdf \
 		gulim20b.bdf gulim24.bdf gulim24b.bdf hline10.bdf hline12.bdf \
 		hline14.bdf hline16.bdf hline18.bdf hline20.bdf hline24.bdf
 
-FONTDIR=		${PREFIX}/lib/X11/fonts/local
+FONTDIR=		${PREFIX}/share/fonts/X11/local
 FONTS_DIRS.x11+=	${FONTDIR}
 REQD_DIRS+=		${FONTDIR}
 

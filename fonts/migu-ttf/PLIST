@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2012/11/25 16:48:17 ryoon Exp $
-lib/X11/fonts/TTF/migu-1c-bold.ttf
-lib/X11/fonts/TTF/migu-1c-regular.ttf
-lib/X11/fonts/TTF/migu-1m-bold.ttf
-lib/X11/fonts/TTF/migu-1m-regular.ttf
-lib/X11/fonts/TTF/migu-1p-bold.ttf
-lib/X11/fonts/TTF/migu-1p-regular.ttf
-lib/X11/fonts/TTF/migu-2m-bold.ttf
-lib/X11/fonts/TTF/migu-2m-regular.ttf
+@comment $NetBSD: PLIST,v 1.5 2014/06/01 16:35:36 wiz Exp $
+share/fonts/X11/TTF/migu-1c-bold.ttf
+share/fonts/X11/TTF/migu-1c-regular.ttf
+share/fonts/X11/TTF/migu-1m-bold.ttf
+share/fonts/X11/TTF/migu-1m-regular.ttf
+share/fonts/X11/TTF/migu-1p-bold.ttf
+share/fonts/X11/TTF/migu-1p-regular.ttf
+share/fonts/X11/TTF/migu-2m-bold.ttf
+share/fonts/X11/TTF/migu-2m-regular.ttf
 share/doc/migu-ttf/IPA_Font_License_Agreement_v1.0.txt
 share/doc/migu-ttf/migu-README.txt

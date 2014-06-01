@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2012/10/03 18:28:26 asau Exp $
+# $NetBSD: Makefile,v 1.16 2014/06/01 16:35:35 wiz Exp $
 #
 
 DISTNAME=	xfntmizi-1.1-2.noarch
 PKGNAME=	ko-mizi-20010718
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts x11 korean
 MASTER_SITES+=	ftp://ftp.mizi.co.kr/pub/hanIM/
 EXTRACT_SUFX=	.rpm
@@ -24,7 +24,7 @@ MAKE_ENV+=	FONTDIR=${FONTDIR:Q} GZIP_CMD=${GZIP_CMD:Q}
 MIZI_PCF=	mzgt16e.pcf mzgt16h1.pcf mzmj16h.pcf mzpg16h.pcf mzsm16h.pcf \
 		mzgt16h.pcf mzmj16e.pcf mzpg16e.pcf mzsm16e.pcf
 
-FONTDIR=	${PREFIX}/lib/X11/fonts/local
+FONTDIR=	${PREFIX}/share/fonts/X11/local
 FONTS_DIRS.x11=	${FONTDIR}
 INSTALLATION_DIRS+= ${FONTDIR}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2014/01/27 18:41:13 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2014/06/01 16:35:37 wiz Exp $
 
 DISTNAME=	Ricty-3.2.1
 PKGNAME=	ricty-ttf-3.2.1
+PKGREVISION=	1
 CATEGORIES=	fonts japanese
 MASTER_SITES=	-https://github.com/yascentur/Ricty/archive/3.2.1.zip
 EXTRACT_SUFX=	.zip
@@ -25,9 +26,9 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 USE_X11BASE=	YES
 NO_CONFIGURE=	YES
 
-INSTALLATION_DIRS=	lib/X11/fonts/TTF
+INSTALLATION_DIRS=	share/fonts/X11/TTF
 
-FONTDIR=	${PREFIX}/lib/X11/fonts/TTF
+FONTDIR=	${PREFIX}/share/fonts/X11/TTF
 FONTS_DIRS.ttf=	${FONTDIR}
 
 INSTALL_FONTS=	Ricty-Bold.ttf \
@@ -45,9 +46,9 @@ do-build:
 	set -e; \
 	cd ${WRKSRC}; \
 	./ricty_generator.sh \
-	${INCONSOLATADIR}/lib/X11/fonts/TTF/Inconsolata.otf \
-	${MIGUDIR}/lib/X11/fonts/TTF/migu-1m-regular.ttf \
-	${MIGUDIR}/lib/X11/fonts/TTF/migu-1m-bold.ttf
+	${INCONSOLATADIR}/share/fonts/X11/TTF/Inconsolata.otf \
+	${MIGUDIR}/share/fonts/X11/TTF/migu-1m-regular.ttf \
+	${MIGUDIR}/share/fonts/X11/TTF/migu-1m-bold.ttf
 
 post-build:
 	set -e; \

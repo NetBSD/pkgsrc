@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2014/04/24 09:02:54 wiz Exp $
-lib/X11/fonts/OTF/EBGaramond-Initials.otf
-lib/X11/fonts/OTF/EBGaramond-InitialsF1.otf
-lib/X11/fonts/OTF/EBGaramond-InitialsF2.otf
-lib/X11/fonts/OTF/EBGaramond08-Italic.otf
-lib/X11/fonts/OTF/EBGaramond08-Regular.otf
-lib/X11/fonts/OTF/EBGaramond12-AllSC.otf
-lib/X11/fonts/OTF/EBGaramond12-Italic.otf
-lib/X11/fonts/OTF/EBGaramond12-Regular.otf
-lib/X11/fonts/OTF/EBGaramondSC08-Regular.otf
-lib/X11/fonts/OTF/EBGaramondSC12-Regular.otf
+@comment $NetBSD: PLIST,v 1.4 2014/06/01 16:35:31 wiz Exp $
+share/fonts/X11/OTF/EBGaramond-Initials.otf
+share/fonts/X11/OTF/EBGaramond-InitialsF1.otf
+share/fonts/X11/OTF/EBGaramond-InitialsF2.otf
+share/fonts/X11/OTF/EBGaramond08-Italic.otf
+share/fonts/X11/OTF/EBGaramond08-Regular.otf
+share/fonts/X11/OTF/EBGaramond12-AllSC.otf
+share/fonts/X11/OTF/EBGaramond12-Italic.otf
+share/fonts/X11/OTF/EBGaramond12-Regular.otf
+share/fonts/X11/OTF/EBGaramondSC08-Regular.otf
+share/fonts/X11/OTF/EBGaramondSC12-Regular.otf
 share/doc/EBGaramond/Specimen.pdf

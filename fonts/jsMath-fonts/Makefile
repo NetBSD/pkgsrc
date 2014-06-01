@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/03/11 18:48:02 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 16:35:35 wiz Exp $
 #
 
 PKGNAME=	jsMath-fonts-20090709
 DISTNAME=	TeX-fonts-linux
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.math.union.edu/~dpvc/jsMath/download/
 EXTRACT_SUFX=	.tgz
@@ -16,7 +17,7 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 
 USE_LANGUAGES=	# none
 
-FONTDIR=		${PREFIX}/lib/X11/fonts/TTF
+FONTDIR=		${PREFIX}/share/fonts/X11/TTF
 FONTS_DIRS.ttf+=	${FONTDIR}
 INSTALLATION_DIRS+=	${FONTDIR}
 

@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:54:16 joerg Exp $
-lib/X11/fonts/TTF/Vera.ttf
-lib/X11/fonts/TTF/VeraBI.ttf
-lib/X11/fonts/TTF/VeraBd.ttf
-lib/X11/fonts/TTF/VeraIt.ttf
-lib/X11/fonts/TTF/VeraMoBI.ttf
-lib/X11/fonts/TTF/VeraMoBd.ttf
-lib/X11/fonts/TTF/VeraMoIt.ttf
-lib/X11/fonts/TTF/VeraMono.ttf
-lib/X11/fonts/TTF/VeraSe.ttf
-lib/X11/fonts/TTF/VeraSeBd.ttf
+@comment $NetBSD: PLIST,v 1.6 2014/06/01 16:35:37 wiz Exp $
+share/fonts/X11/TTF/Vera.ttf
+share/fonts/X11/TTF/VeraBI.ttf
+share/fonts/X11/TTF/VeraBd.ttf
+share/fonts/X11/TTF/VeraIt.ttf
+share/fonts/X11/TTF/VeraMoBI.ttf
+share/fonts/X11/TTF/VeraMoBd.ttf
+share/fonts/X11/TTF/VeraMoIt.ttf
+share/fonts/X11/TTF/VeraMono.ttf
+share/fonts/X11/TTF/VeraSe.ttf
+share/fonts/X11/TTF/VeraSeBd.ttf
 share/doc/vera-ttf/COPYRIGHT.TXT
 share/doc/vera-ttf/README.TXT
 share/doc/vera-ttf/RELEASENOTES.TXT

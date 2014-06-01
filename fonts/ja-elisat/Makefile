@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2013/07/27 11:58:07 tsutsui Exp $
+# $NetBSD: Makefile,v 1.18 2014/06/01 16:35:34 wiz Exp $
 
 DISTNAME=		elisat10
 PKGNAME=		ja-elisat-1.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		fonts x11 japanese
 MASTER_SITES=	${MASTER_SITE_FREEBSD}
 MAINTAINER=		tech-pkg-ja@jp.NetBSD.org
@@ -13,7 +13,7 @@ LICENSE=		no-commercial-use
 WRKSRC=			${WRKDIR}
 USE_X11BASE=		YES
 DOCDIR=			${PREFIX}/share/doc/elisat
-FONTDIR=		${PREFIX}/lib/X11/fonts/local
+FONTDIR=		${PREFIX}/share/fonts/X11/local
 FONTS_DIRS.x11=		${FONTDIR}
 USE_TOOLS+=		bdftopcf gzip
 

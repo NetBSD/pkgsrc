@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2012/10/03 18:28:18 asau Exp $
+# $NetBSD: Makefile.common,v 1.26 2014/06/01 16:35:32 wiz Exp $
 #
 
 DISTNAME=	# empty
@@ -27,7 +27,7 @@ USE_X11BASE=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
-FONTS_DIRS.ttf=	${PREFIX}/lib/X11/fonts/TTF
+FONTS_DIRS.ttf=	${PREFIX}/share/fonts/X11/TTF
 DOCDIR=		${PREFIX}/share/doc/html/cyberbit-ttf
 
 do-install:

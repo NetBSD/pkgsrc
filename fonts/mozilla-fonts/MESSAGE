@@ -1,10 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2002/04/09 13:17:24 wiz Exp $
+$NetBSD: MESSAGE,v 1.2 2014/06/01 16:35:36 wiz Exp $
 
 Once the files are in place, they need to be added to the font database.
 This can be accomplished with one of the following commands:
 
-	xset fp+ ${PREFIX}/lib/X11/fonts/Mozilla
+	xset fp+ ${PREFIX}/share/fonts/X11/Mozilla
 
 Note that the above will only make the fonts available for the duration of
 your current X session. If they are to be installed and usable

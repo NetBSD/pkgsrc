@@ -1,10 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2011/10/20 11:28:42 wiz Exp $
+$NetBSD: MESSAGE,v 1.2 2014/06/01 16:35:37 wiz Exp $
 
 Once the files are in place, they need to be added to the font database.
 This can be accomplished with one of the following commands:
 
-	xset fp+ ${PREFIX}/lib/X11/fonts/uni-vga
+	xset fp+ ${PREFIX}/share/fonts/X11/uni-vga
 
 Note that the above will only make the fonts available for the duration of
 your current X session. If they are to be installed and usable

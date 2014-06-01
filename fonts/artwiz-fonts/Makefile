@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2012/10/03 18:28:17 asau Exp $
+# $NetBSD: Makefile,v 1.17 2014/06/01 16:35:32 wiz Exp $
 #
 
 DISTNAME=	artwiz-aleczapka-1.3
 PKGNAME=	${DISTNAME:S/aleczapka/fonts/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	fonts
 MASTER_SITES=	http://fluxbox.org/artwiz-aleczapka/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,10 +18,10 @@ USE_X11BASE=	yes
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
 
-FONTS_DIRS.x11=	${PREFIX}/lib/X11/fonts/artwiz
-REQD_DIRS=	${PREFIX}/lib/X11/fonts/artwiz
+FONTS_DIRS.x11=	${PREFIX}/share/fonts/X11/artwiz
+REQD_DIRS=	${PREFIX}/share/fonts/X11/artwiz
 
-INSTALLATION_DIRS=	lib/X11/fonts/artwiz
+INSTALLATION_DIRS=	share/fonts/X11/artwiz
 
 do-install:
 	for i in ${WRKSRC}/*.pcf; do \

@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2012/07/14 21:18:26 wiz Exp $
-lib/X11/fonts/TTF/Alexander.ttf
-lib/X11/fonts/TTF/Alfios_B.ttf
-lib/X11/fonts/TTF/Alfios_I.ttf
-lib/X11/fonts/TTF/Alfios_J.ttf
-lib/X11/fonts/TTF/Alfios_R.ttf
-lib/X11/fonts/TTF/Anaktoria.ttf
-lib/X11/fonts/TTF/Aroania_B.ttf
-lib/X11/fonts/TTF/Aroania_R.ttf
-lib/X11/fonts/TTF/Atavyros.ttf
-lib/X11/fonts/TTF/Avdira_B.ttf
-lib/X11/fonts/TTF/Avdira_I.ttf
-lib/X11/fonts/TTF/Avdira_J.ttf
-lib/X11/fonts/TTF/Avdira_R.ttf
+@comment $NetBSD: PLIST,v 1.2 2014/06/01 16:35:31 wiz Exp $
+share/fonts/X11/TTF/Alexander.ttf
+share/fonts/X11/TTF/Alfios_B.ttf
+share/fonts/X11/TTF/Alfios_I.ttf
+share/fonts/X11/TTF/Alfios_J.ttf
+share/fonts/X11/TTF/Alfios_R.ttf
+share/fonts/X11/TTF/Anaktoria.ttf
+share/fonts/X11/TTF/Aroania_B.ttf
+share/fonts/X11/TTF/Aroania_R.ttf
+share/fonts/X11/TTF/Atavyros.ttf
+share/fonts/X11/TTF/Avdira_B.ttf
+share/fonts/X11/TTF/Avdira_I.ttf
+share/fonts/X11/TTF/Avdira_J.ttf
+share/fonts/X11/TTF/Avdira_R.ttf
 share/doc/TextFonts-ttf/TextFonts.pdf

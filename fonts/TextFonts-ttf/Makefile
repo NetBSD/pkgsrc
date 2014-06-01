@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 18:28:16 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/06/01 16:35:31 wiz Exp $
 #
 
 DISTNAME=	TextFonts
 DDATE=		20111217
 PKGNAME=	TextFonts-ttf-${DDATE}
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	http://users.teilar.gr/~g1951d/
 EXTRACT_SUFX=	.zip
@@ -18,7 +19,7 @@ DIST_SUBDIR=	TextFonts-${DDATE}
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
 
-FONTDIR=	${PREFIX}/lib/X11/fonts/TTF
+FONTDIR=	${PREFIX}/share/fonts/X11/TTF
 FONTS_DIRS.ttf=	${FONTDIR}
 
 INSTALLATION_DIRS=	${FONTDIR} share/doc/TextFonts-ttf

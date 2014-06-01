@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/17 03:06:51 obache Exp $
-lib/X11/fonts/TTF/ipaexg.ttf
-lib/X11/fonts/TTF/ipaexm.ttf
+@comment $NetBSD: PLIST,v 1.2 2014/06/01 16:35:34 wiz Exp $
+share/fonts/X11/TTF/ipaexg.ttf
+share/fonts/X11/TTF/ipaexm.ttf
 share/doc/${PKGBASE}/IPA_Font_License_Agreement_v1.0.txt
 share/doc/${PKGBASE}/Readme_IPAexfont${PKGVERSION}.txt
