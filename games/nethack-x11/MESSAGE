@@ -1,10 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2011/06/01 11:20:30 wiz Exp $
+$NetBSD: MESSAGE,v 1.6 2014/06/01 16:52:08 wiz Exp $
 
 You can run the X11 NetHack by typing "nethack x11".
 
 Two fonts were installed for NetHack.  You must add
-${PREFIX}/lib/X11/fonts/misc to fontpath and set one of
+${PREFIX}/share/fonts/X11/misc to fontpath and set one of
 
 NetHack*map*font: nh10
 NetHack*map*font: -misc-fixed-medium-r-normal-ibmpc-14-120-75-75-c-80-iso8859-1
