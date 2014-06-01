@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2013/02/16 11:25:30 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2014/06/01 08:03:27 wiz Exp $
 
-DISTNAME=	xcursorgen-1.0.5
-PKGREVISION=	1
+DISTNAME=	xcursorgen-1.0.6
 CATEGORIES=	x11 graphics
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
