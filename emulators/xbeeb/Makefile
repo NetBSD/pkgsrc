@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2012/10/03 12:55:21 asau Exp $
-#
+# $NetBSD: Makefile,v 1.29 2014/06/01 16:48:31 wiz Exp $
 
 DISTNAME=	xbeeb-0.4.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators x11
 MASTER_SITES=	http://bbc.nvg.org/emul/Xbeeb/
 EXTRACT_SUFX=	.tgz
@@ -19,8 +18,8 @@ XBEEBROOT=	share/xbeeb
 MESSAGE_SUBST+=	XBEEBROOT=${XBEEBROOT}
 PLIST_SUBST+=	XBEEBROOT=${XBEEBROOT:Q}
 
-FONTS_DIRS.x11=	${PREFIX}/lib/X11/fonts/xbeeb
-REQD_DIRS=	${PREFIX}/lib/X11/fonts/xbeeb
+FONTS_DIRS.x11=	${PREFIX}/share/fonts/X11/xbeeb
+REQD_DIRS=	${PREFIX}/share/fonts/X11/xbeeb
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
@@ -58,7 +57,7 @@ SUBST_MESSAGE.beebroot=	Adjusting XBEEBROOT path
 SUBST_FILES.beebroot=	src/Config.h
 SUBST_SED.beebroot=	-e "s|^\\(\#define[	 ]*XBEEBROOT[	 ]*\\)[^	 ].*\$$|\\1\"${PREFIX}/${XBEEBROOT}/\"|"
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${XBEEBROOT}/roms ${XBEEBROOT}/docs lib/X11/fonts/xbeeb
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${XBEEBROOT}/roms ${XBEEBROOT}/docs share/fonts/X11/xbeeb
 
 # xbeeb build starts in the source directory
 do-configure:
@@ -82,7 +81,7 @@ do-install:
 	${INSTALL_MAN} ${MAN_PAGE} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xbeeb.1
 	${INSTALL_DATA} ${WRKSRC}/roms/xdfs0.90.rom ${DESTDIR}${PREFIX}/${XBEEBROOT}/roms/xdfs0.90.rom
 	cd ${WRKSRC}/doc && ${INSTALL_DATA} * ${DESTDIR}${PREFIX}/${XBEEBROOT}/docs
-	cd ${WRKSRC}/fonts && ${INSTALL_DATA} *.pcf ${DESTDIR}${PREFIX}/lib/X11/fonts/xbeeb
+	cd ${WRKSRC}/fonts && ${INSTALL_DATA} *.pcf ${DESTDIR}${PREFIX}/share/fonts/X11/xbeeb
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
