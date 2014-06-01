@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:54:10 joerg Exp $
-lib/X11/fonts/TTF/batang.ttf
-lib/X11/fonts/TTF/dotum.ttf
-lib/X11/fonts/TTF/gulim.ttf
-lib/X11/fonts/TTF/hline.ttf
+@comment $NetBSD: PLIST,v 1.6 2014/06/01 16:35:32 wiz Exp $
+share/fonts/X11/TTF/batang.ttf
+share/fonts/X11/TTF/dotum.ttf
+share/fonts/X11/TTF/gulim.ttf
+share/fonts/X11/TTF/hline.ttf
 share/doc/baekmuk-ttf/COPYRIGHT
 share/doc/baekmuk-ttf/COPYRIGHT.ks

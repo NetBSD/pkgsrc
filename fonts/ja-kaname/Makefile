@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2013/07/27 11:58:08 tsutsui Exp $
+# $NetBSD: Makefile,v 1.16 2014/06/01 16:35:34 wiz Exp $
 
 DISTNAME=		kaname_k12_bdf
 PKGNAME=		ja-kaname-0.0.0.20030112
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		fonts x11 japanese
 MASTER_SITES=		${MASTER_SITE_LOCAL} # original site was closed.
 
@@ -14,7 +14,7 @@ WRKSRC=			${WRKDIR}
 USE_X11BASE=		YES
 USE_TOOLS+=		bdftopcf gzip
 DOCDIR=			${PREFIX}/share/doc/kaname
-FONTDIR=		${PREFIX}/lib/X11/fonts/local
+FONTDIR=		${PREFIX}/share/fonts/X11/local
 FONTS_DIRS.x11=		${FONTDIR}
 
 do-build:

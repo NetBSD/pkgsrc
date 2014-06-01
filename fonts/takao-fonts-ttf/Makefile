@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 18:28:30 asau Exp $
+# $NetBSD: Makefile,v 1.5 2014/06/01 16:35:37 wiz Exp $
 #
 
 DISTNAME=	takao-fonts-ttf-003.02.01
+PKGREVISION=	1
 CATEGORIES=	fonts japanese
 MASTER_SITES=	http://launchpad.net/takao-fonts/003.02/003.02.01/+download/
 
@@ -16,10 +17,10 @@ NO_BUILD=	YES
 
 DOCSDIR=	${PREFIX}/share/doc/${PKGBASE}
 
-INSTALLATION_DIRS=	lib/X11/fonts/TTF \
+INSTALLATION_DIRS=	share/fonts/X11/TTF \
 			${DOCSDIR}
 
-FONTDIR=	${PREFIX}/lib/X11/fonts/TTF
+FONTDIR=	${PREFIX}/share/fonts/X11/TTF
 FONTS_DIRS.ttf=	${FONTDIR}
 
 INSTALL_FONTS=	TakaoExGothic.ttf \

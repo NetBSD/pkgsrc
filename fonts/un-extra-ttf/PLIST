@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2008/12/21 00:26:11 minskim Exp $
-lib/X11/fonts/TTF/UnBom.ttf
-lib/X11/fonts/TTF/UnJamoBatang.ttf
-lib/X11/fonts/TTF/UnJamoDotum.ttf
-lib/X11/fonts/TTF/UnJamoNovel.ttf
-lib/X11/fonts/TTF/UnJamoSora.ttf
-lib/X11/fonts/TTF/UnPen.ttf
-lib/X11/fonts/TTF/UnPenheulim.ttf
-lib/X11/fonts/TTF/UnPilgia.ttf
-lib/X11/fonts/TTF/UnShinmun.ttf
-lib/X11/fonts/TTF/UnTaza.ttf
-lib/X11/fonts/TTF/UnVada.ttf
-lib/X11/fonts/TTF/UnYetgul.ttf
+@comment $NetBSD: PLIST,v 1.3 2014/06/01 16:35:37 wiz Exp $
+share/fonts/X11/TTF/UnBom.ttf
+share/fonts/X11/TTF/UnJamoBatang.ttf
+share/fonts/X11/TTF/UnJamoDotum.ttf
+share/fonts/X11/TTF/UnJamoNovel.ttf
+share/fonts/X11/TTF/UnJamoSora.ttf
+share/fonts/X11/TTF/UnPen.ttf
+share/fonts/X11/TTF/UnPenheulim.ttf
+share/fonts/X11/TTF/UnPilgia.ttf
+share/fonts/X11/TTF/UnShinmun.ttf
+share/fonts/X11/TTF/UnTaza.ttf
+share/fonts/X11/TTF/UnVada.ttf
+share/fonts/X11/TTF/UnYetgul.ttf

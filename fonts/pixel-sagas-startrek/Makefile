@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2014/04/02 21:26:29 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/06/01 16:35:36 wiz Exp $
 
 DISTNAME=	pixels-sagas-startrek-201404
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.pixelsagas.com/files/
 DISTFILES+=	PS_Font_Fontana.zip
@@ -24,8 +25,8 @@ NO_BIN_ON_FTP=	${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 
 WRKSRC=		${WRKDIR}
-OTFPATH=	lib/X11/fonts/OTF
-TTFPATH=	lib/X11/fonts/TTF
+OTFPATH=	share/fonts/X11/OTF
+TTFPATH=	share/fonts/X11/TTF
 FONTS_DIRS.otf+=	${PREFIX}/${OTFPATH:Q}
 FONTS_DIRS.ttf+=	${PREFIX}/${TTFPATH:Q}
 INSTALLATION_DIRS=	${OTFPATH:Q} ${TTFPATH:Q}
