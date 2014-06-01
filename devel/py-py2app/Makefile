@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2014/02/10 00:20:27 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2014/06/01 01:08:48 rodent Exp $
 
-DISTNAME=	py2app-0.8
+DISTNAME=	py2app-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://pypi.python.org/packages/source/p/py2app/
 
