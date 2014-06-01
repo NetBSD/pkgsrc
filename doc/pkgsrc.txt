@@ -5028,7 +5028,7 @@ directories. For convenience, if the directory path is relative, it is taken to
 be relative to the package's installation prefix. Consider the following
 example, taken from fonts/dbz-ttf:
 
-FONTS_DIRS.ttf= ${PREFIX}/lib/X11/fonts/TTF
+FONTS_DIRS.ttf= ${PREFIX}/share/fonts/X11/TTF
 
 15.6.1. Disabling automatic update of the fonts databases
 
