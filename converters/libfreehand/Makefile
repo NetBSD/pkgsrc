@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/05/29 23:35:21 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/06/01 04:01:06 ryoon Exp $
 
 DISTNAME=	libfreehand-0.0.0
 PKGREVISION=	1
@@ -16,7 +16,7 @@ TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	perl:build pkg-config
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 
 CONFIGURE_ARGS+=	--without-docs
 
