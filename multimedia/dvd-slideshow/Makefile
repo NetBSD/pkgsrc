@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2012/10/08 09:20:59 asau Exp $
+# $NetBSD: Makefile,v 1.16 2014/06/01 17:58:14 wiz Exp $
 # FreeBSD Id: ports/multimedia/dvd-slideshow/Makefile,v 1.12 2007/09/23 04:42:06 edwin Exp
 
 DISTNAME=	dvd-slideshow-0.7.5
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dvd-slideshow/}
 
@@ -39,7 +39,7 @@ REPLACE_BASH =	dir2slideshow dvd-burn dvd-encode dvd-iso dvd-menu \
 SUBST_CLASSES+=			fonts
 SUBST_STAGE.fonts=		post-configure
 SUBST_FILES.fonts=		dvd-menu dvd-slideshow
-SUBST_SED.fonts=		-e 's,/usr/share/fonts/,${X11BASE}/lib/X11/fonts/,g'
+SUBST_SED.fonts=		-e 's,/usr/share/fonts/,${PREFIX}/share/fonts/,g'
 SUBST_MESSAGE.fonts=	Fixing hardcoded fonts paths.
 
 SUBST_CLASSES+=			pipeline

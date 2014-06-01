@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2014/04/08 10:12:10 obache Exp $
+# $NetBSD: Makefile,v 1.14 2014/06/01 18:06:14 wiz Exp $
 
 DISTNAME=	acroread9	# overridden below
 PKGNAME=	acroread9-9.5.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	http://ardownload.adobe.com/pub/adobe/reader/unix/9.x/${PKGVERSION_NOREV}/enu/
 
@@ -40,7 +40,7 @@ BIN_PATCH=	${PATCH} --quiet ${_PATCH_BACKUP_ARG} .orig
 
 # Additional directories to search for fonts
 BUILD_DEFS+=		ACROREAD_FONTPATH
-ACROREAD_FONTPATH?=	${PREFIX}/lib/X11/fonts/TTF
+ACROREAD_FONTPATH?=	${PREFIX}/share/fonts/X11/TTF
 
 INSTALLATION_DIRS=	Acrobat9 bin ${PKGMANDIR}/man1
 
