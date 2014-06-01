@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2012/10/03 11:24:45 asau Exp $
-#
+# $NetBSD: Makefile,v 1.28 2014/06/01 16:44:38 wiz Exp $
 
 DISTNAME=	xtel-3.3.0
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	comms x11
 MASTER_SITES=	http://pficheux.free.fr/xtel/download/
 
@@ -19,7 +18,7 @@ MAKE_JOBS_SAFE=	no
 USE_IMAKE=	YES
 USE_TOOLS+=	mkfontdir bdftopcf
 
-FONTDIR=	${PREFIX}/lib/X11/fonts
+FONTDIR=	${PREFIX}/share/fonts/X11
 FONTS_DIRS.x11=	${FONTDIR}/xtel
 REQD_DIRS=	${FONTDIR}/xtel
 
