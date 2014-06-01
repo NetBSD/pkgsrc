@@ -1,4 +1,4 @@
-# $NetBSD: fonts,v 1.6 2010/04/23 12:47:14 jmmv Exp $
+# $NetBSD: fonts,v 1.7 2014/06/01 16:57:27 wiz Exp $
 #
 # Generate a +FONTS script that updates font databases for the package.
 #
@@ -17,9 +17,9 @@ UNPACK,|UNPACK,+FONTS)
 # Lines starting with "# FONTS: " are data read by this script that name
 # the directories in which the font database will be rebuilt.
 #
-#	# FONTS: /usr/pkg/lib/X11/fonts/TTF ttf
-#	# FONTS: /usr/pkg/lib/X11/fonts/Type1 type1
-#	# FONTS: /usr/pkg/lib/X11/fonts/misc x11
+#	# FONTS: /usr/pkg/share/fonts/X11/TTF ttf
+#	# FONTS: /usr/pkg/share/fonts/X11/Type1 type1
+#	# FONTS: /usr/pkg/share/fonts/X11/misc x11
 #
 # For each FONTS entry, if the path is relative, that it is taken to be
 # relative to ${PKG_PREFIX}.
