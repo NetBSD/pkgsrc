@@ -1,4 +1,4 @@
-<!-- $NetBSD: pkginstall.xml,v 1.17 2012/05/16 16:46:43 wiz Exp $ -->
+<!-- $NetBSD: pkginstall.xml,v 1.18 2014/06/01 16:42:45 wiz Exp $ -->
 
 <chapter id="pkginstall"> <?dbhtml filename="pkginstall.html"?>
 <title>The pkginstall framework</title>
@@ -538,7 +538,7 @@ installation prefix.  Consider the following example, taken from <filename
 role="pkg">fonts/dbz-ttf</filename>:</para>
 
 <programlisting>
-FONTS_DIRS.ttf= ${PREFIX}/lib/X11/fonts/TTF
+FONTS_DIRS.ttf= ${PREFIX}/share/fonts/X11/TTF
 </programlisting>
 
 <!-- ================================================================== -->
