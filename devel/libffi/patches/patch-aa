@@ -1,6 +1,9 @@
-$NetBSD: patch-aa,v 1.19 2014/02/11 07:21:28 dholland Exp $
+$NetBSD: patch-aa,v 1.20 2014/06/01 03:53:03 ryoon Exp $
 
---- configure.orig	2014-02-11 07:10:47.000000000 +0000
+* unwind: from https://github.com/atgreen/libffi/commit/76d19d004e36e99d261ee78261e2f52cea5e4ab1#diff-e2d5a00791bce9a01f99bc6fd613a39d
+  Fix build under OpenBSD 5.5
+
+--- configure.orig	2013-03-17 22:36:19.000000000 +0000
 +++ configure
 @@ -651,6 +651,8 @@ XTENSA_FALSE
  XTENSA_TRUE
@@ -86,7 +89,46 @@ $NetBSD: patch-aa,v 1.19 2014/02/11 07:21:28 dholland Exp $
  
  $as_echo "#define FFI_MMAP_EXEC_WRIT 1" >>confdefs.h
  
-@@ -14840,11 +14854,6 @@ if test "x$GCC" = "xyes"; then
+@@ -14678,16 +14692,32 @@ fi
+ 
+ 
+ if test x$TARGET = xX86_64; then
+-    { $as_echo "$as_me:${as_lineno-$LINENO}: checking assembler supports unwind section type" >&5
+-$as_echo_n "checking assembler supports unwind section type... " >&6; }
++    { $as_echo "$as_me:${as_lineno-$LINENO}: checking toolchain supports unwind section type" >&5
++$as_echo_n "checking toolchain supports unwind section type... " >&6; }
+ if ${libffi_cv_as_x86_64_unwind_section_type+:} false; then :
+   $as_echo_n "(cached) " >&6
+ else
+ 
+-	libffi_cv_as_x86_64_unwind_section_type=yes
+-	echo '.section .eh_frame,"a",@unwind' > conftest.s
+-	if $CC $CFLAGS -c conftest.s 2>&1 | grep -i warning > /dev/null; then
+-	    libffi_cv_as_x86_64_unwind_section_type=no
++        cat  > conftest1.s << EOF
++.text
++.globl foo
++foo:
++jmp bar
++.section .eh_frame,"a",@unwind
++bar:
++EOF
++
++        cat > conftest2.c  << EOF
++extern void foo();
++int main(){foo();}
++EOF
++
++	libffi_cv_as_x86_64_unwind_section_type=no
++	# we ensure that we can compile _and_ link an assembly file containing an @unwind section
++	# since the compiler can support it and not the linker (ie old binutils)
++	if $CC -Wa,--fatal-warnings $CFLAGS -c conftest1.s > /dev/null 2>&1 && \
++           $CC conftest2.c conftest1.o > /dev/null 2>&1 ; then
++	    libffi_cv_as_x86_64_unwind_section_type=yes
+ 	fi
+ 
+ fi
+@@ -14840,11 +14870,6 @@ if test "x$GCC" = "xyes"; then
      toolexecdir='$(libdir)/gcc-lib/$(target_alias)'
      toolexeclibdir='$(libdir)'
    fi
@@ -98,7 +140,7 @@ $NetBSD: patch-aa,v 1.19 2014/02/11 07:21:28 dholland Exp $
  
  else
    toolexeclibdir='$(libdir)'
-@@ -15135,6 +15144,10 @@ if test -z "${TILE_TRUE}" && test -z "${
+@@ -15135,6 +15160,10 @@ if test -z "${TILE_TRUE}" && test -z "${
    as_fn_error $? "conditional \"TILE\" was never defined.
  Usually this means the macro was only invoked conditionally." "$LINENO" 5
  fi
@@ -109,7 +151,7 @@ $NetBSD: patch-aa,v 1.19 2014/02/11 07:21:28 dholland Exp $
  if test -z "${XTENSA_TRUE}" && test -z "${XTENSA_FALSE}"; then
    as_fn_error $? "conditional \"XTENSA\" was never defined.
  Usually this means the macro was only invoked conditionally." "$LINENO" 5
-@@ -16734,13 +16749,13 @@ s/ [a-zA-Z0-9-]*-all [a-zA-Z0-9-]*-all-a
+@@ -16734,13 +16763,13 @@ s/ [a-zA-Z0-9-]*-all [a-zA-Z0-9-]*-all-a
  /-all-all/d
  a\\
  	@ HOST="\$(HOST)\" \\\\\\
