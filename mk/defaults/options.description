@@ -744,7 +744,6 @@ xlockmore-allow-root	Allow root to get access.
 xlockmore-dpms		Use DPMS.
 xml			Enable XML support.
 xmlrpc			Enable XMLRPC support.
-xnp2-ia32		Enable ia32 core instead of the default 80286 core
 xpm			Enable X PixMap image format support.
 xrandr			Enable Xrandr support.
 xrender			Enable Xrender support.
