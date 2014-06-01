@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/05/13 18:54:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2014/06/01 04:01:06 ryoon Exp $
 
 DISTNAME=	libwps-0.2.4
 CATEGORIES=	converters
@@ -16,6 +16,8 @@ USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-docs
 PKGCONFIG_OVERRIDE+=	libwps-0.2.pc.in
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)

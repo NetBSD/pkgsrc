@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/05/04 17:03:11 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/06/01 04:01:06 ryoon Exp $
 
 DISTNAME=	libetonyek-0.0.4
 CATEGORIES=	converters
@@ -15,7 +15,7 @@ TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 
 CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--without-docs
