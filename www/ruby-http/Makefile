@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/01/17 13:22:51 obache Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 16:36:48 tsutsui Exp $
 #
 
-DISTNAME=	http-0.5.0
+DISTNAME=	http-0.6.1
 CATEGORIES=	www
 
 MAINTAINER=	tsutsui@NetBSD.org
