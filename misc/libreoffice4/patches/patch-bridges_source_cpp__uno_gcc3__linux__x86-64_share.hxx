@@ -1,25 +1,15 @@
-$NetBSD: patch-bridges_source_cpp__uno_gcc3__linux__x86-64_share.hxx,v 1.3 2014/02/21 20:29:52 joerg Exp $
+$NetBSD: patch-bridges_source_cpp__uno_gcc3__linux__x86-64_share.hxx,v 1.4 2014/06/01 14:31:08 ryoon Exp $
 
---- bridges/source/cpp_uno/gcc3_linux_x86-64/share.hxx.orig	2014-01-27 21:35:34.000000000 +0000
+--- bridges/source/cpp_uno/gcc3_linux_x86-64/share.hxx.orig	2014-04-30 19:49:45.000000000 +0000
 +++ bridges/source/cpp_uno/gcc3_linux_x86-64/share.hxx
-@@ -19,6 +19,7 @@
- 
- #include "sal/config.h"
- 
-+#include <cxxabi.h>
- #include <typeinfo>
- #include <exception>
- #include <cstddef>
-@@ -31,11 +32,36 @@
+@@ -31,6 +31,32 @@
  #include "config_gcc.h"
  #include "uno/mapping.h"
  
--namespace CPPU_CURRENT_NAMESPACE
-+// ----- following decl from libstdc++-v3/libsupc++/unwind-cxx.h and unwind.h
 +#ifdef _LIBCPP_VERSION
 +
 +namespace __cxxabiv1
- {
++{
 +    struct __class_type_info : public std::type_info
 +    {
 +        explicit __class_type_info( const char *__n ) : type_info( __n ) { }
@@ -33,28 +23,37 @@ $NetBSD: patch-bridges_source_cpp__uno_gcc3__linux__x86-64_share.hxx,v 1.3 2014/
 +        virtual ~__si_class_type_info();
 +        const __class_type_info *__base_type;
 +    };
-+}
- 
--// ----- following decl from libstdc++-v3/libsupc++/unwind-cxx.h and unwind.h
-+#endif
 +
-+namespace CPPU_CURRENT_NAMESPACE
-+{
- 
-+#ifdef _LIBCPP_VERSION
-+using __cxxabiv1::__cxa_exception;
-+using __cxxabiv1::__cxa_eh_globals;
-+using ::_Unwind_Exception;
++extern "C" void *__cxa_allocate_exception( std::size_t thrown_size ) _NOEXCEPT;
++
++extern "C" _LIBCPP_NORETURN void __cxa_throw(
++    void *thrown_exception, std::type_info *tinfo, void (*dest) (void *) );
++}
++
 +#else
- struct _Unwind_Exception
++
+ namespace CPPU_CURRENT_NAMESPACE
  {
-     unsigned exception_class __attribute__((__mode__(__DI__)));
-@@ -70,7 +96,7 @@ struct __cxa_eh_globals
-     __cxa_exception *caughtExceptions;
-     unsigned int uncaughtExceptions;
- };
--
+ 
+@@ -101,6 +127,9 @@ extern "C" void __cxa_throw(
+     __attribute__((noreturn));
+ }
+ #endif
++
++
++#endif
+ 
+ namespace CPPU_CURRENT_NAMESPACE
+ {
+@@ -110,7 +139,11 @@ void raiseException(
+     uno_Any * pUnoExc, uno_Mapping * pUno2Cpp );
+ //==================================================================================================
+ void fillUnoException(
++#ifdef _LIBCPP_VERSION
++    __cxxabiv1::__cxa_exception * header, uno_Any *, uno_Mapping * pCpp2Uno );
++#else
+     __cxa_exception * header, uno_Any *, uno_Mapping * pCpp2Uno );
 +#endif
  }
  
- // __cxa_get_globals is exported from libstdc++ since GCC 3.4.0 (CXXABI_1.3),
+ /* vim:set shiftwidth=4 softtabstop=4 expandtab: */

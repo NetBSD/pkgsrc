@@ -1,12 +1,30 @@
-$NetBSD: patch-configure.ac,v 1.3 2014/05/01 00:32:11 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.4 2014/06/01 14:31:08 ryoon Exp $
 
 * Improve portability, replace == with =
 * Detect pkgsrc apache-ant library
 * Fix installation directory
 
---- configure.ac.orig	2014-04-08 11:46:25.000000000 +0000
+--- configure.ac.orig	2014-04-30 19:49:45.000000000 +0000
 +++ configure.ac
-@@ -8930,7 +8930,7 @@ SYSTEM_GENBRK=
+@@ -611,6 +611,8 @@ aix*)
+ 
+ openbsd*)
+     test_gtk=yes
++    build_gstreamer=yes
++    build_gstreamer_0_10=yes
+     test_tde=yes
+     test_kde=yes
+     test_freetype=yes
+@@ -6344,7 +6346,7 @@ if test \( "$_os" != "WINNT" -o "$WITH_M
+ 
+     # Assume visibility is not broken with libc++. The below test is very much designed for libstdc++
+     # only.
+-    if test "$HAVE_GCC_VISIBILITY_FEATURE" = "TRUE" -a "$CPP_LIBRARY" = GLIBCXX; then
++    if test "$HAVE_GCC_VISIBILITY_FEATURE" = "TRUE" -a "$CPP_LIBRARY" = GLIBCXX -a "$COM_GCC_IS_CLANG" != "TRUE"; then
+         dnl gcc#19664, gcc#22482, rhbz#162935
+         AC_MSG_CHECKING([if STL headers are visibility safe (GCC bug 22482)])
+         AC_EGREP_HEADER(visibility push, string, stlvisok=yes, stlvisok=no)
+@@ -8929,7 +8931,7 @@ SYSTEM_GENBRK=
  SYSTEM_GENCCODE=
  SYSTEM_GENCMN=
  
@@ -15,7 +33,18 @@ $NetBSD: patch-configure.ac,v 1.3 2014/05/01 00:32:11 ryoon Exp $
  ICU_MINOR=1
  ICU_RECLASSIFIED_CLOSE_PARENTHESIS="YES"
  ICU_RECLASSIFIED_PREPEND_SET_EMPTY="YES"
-@@ -11918,7 +11918,7 @@ EOF
+@@ -9788,8 +9790,8 @@ if test -z "$PATCH"; then
+     AC_MSG_ERROR([\"patch\" not found in \$PATH, install it])
+ fi
+ 
+-dnl On Solaris, FreeBSD or MacOS X, check if --with-gnu-patch was used
+-if test "$_os" = "SunOS" -o "$_os" = "FreeBSD" -o "$_os" = "Darwin"; then
++dnl On Solaris, or MacOS X, check if --with-gnu-patch was used
++if test "$_os" = "SunOS"  -o "$_os" = "Darwin"; then
+     if test -z "$with_gnu_patch"; then
+         GNUPATCH=$PATCH
+     else
+@@ -11954,7 +11956,7 @@ EOF
      dnl Checking for ant.jar
      if test "$ANT_HOME" != "NO_ANT_HOME"; then
          AC_MSG_CHECKING([Ant lib directory])
@@ -24,7 +53,7 @@ $NetBSD: patch-configure.ac,v 1.3 2014/05/01 00:32:11 ryoon Exp $
              ANT_LIB="$ANT_HOME/lib"
          else
              if test -f $ANT_HOME/ant.jar; then
-@@ -12334,7 +12334,7 @@ AC_SUBST(MANDIR)
+@@ -12370,7 +12372,7 @@ AC_SUBST(MANDIR)
  DOCDIR=[$(eval echo $(eval echo $docdir))]
  AC_SUBST(DOCDIR)
  
