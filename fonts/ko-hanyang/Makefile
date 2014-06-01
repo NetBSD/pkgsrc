@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 18:28:26 asau Exp $
+# $NetBSD: Makefile,v 1.13 2014/06/01 16:35:35 wiz Exp $
 #
 
 DISTNAME=	hanyang-font-pcf
 PKGNAME=	ko-hanyang-20010718
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts x11 korean
 MASTER_SITES+=	ftp://ftp.kaist.ac.kr/pub/hangul/fonts/ \
 		ftp://ftp.kreonet.re.kr/pub/hangul/cair-archive/fonts/
@@ -24,7 +24,7 @@ EXTRACT_ONLY+=	hanyang-font-pcf.tar.gz
 HANYANG_PCF=	hgm10.pcf hgm12.pcf hgm14.pcf hgm16.pcf hgm18.pcf hgm20.pcf \
 		hmm10.pcf hmm12.pcf hmm14.pcf hmm16.pcf hmm18.pcf hmm20.pcf
 
-FONTDIR=	${PREFIX}/lib/X11/fonts/local
+FONTDIR=	${PREFIX}/share/fonts/X11/local
 FONTS_DIRS.x11=	${FONTDIR}
 
 post-extract:

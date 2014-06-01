@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 18:28:31 asau Exp $
+# $NetBSD: Makefile,v 1.9 2014/06/01 16:35:37 wiz Exp $
 #
 
 DISTNAME=	thaixfonts-1.2.5
+PKGREVISION=	1
 CATEGORIES=	fonts x11
 MASTER_SITES=	http://linux.thai.net/pub/thailinux/software/thaixfonts/
 
@@ -14,7 +15,7 @@ GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--with-fontdir=${FONTDIR}
 
-FONTDIR=		${PREFIX}/lib/X11/fonts/thaixfonts
+FONTDIR=		${PREFIX}/share/fonts/X11/thaixfonts
 FONTS_DIRS.x11+=	${FONTDIR}
 INSTALLATION_DIRS=		${FONTDIR}
 
