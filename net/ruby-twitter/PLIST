@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/03/09 15:25:27 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/06/01 16:51:49 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGELOG.md
@@ -198,10 +198,12 @@ ${GEM_LIBDIR}/spec/twitter/settings_spec.rb
 ${GEM_LIBDIR}/spec/twitter/size_spec.rb
 ${GEM_LIBDIR}/spec/twitter/source_user_spec.rb
 ${GEM_LIBDIR}/spec/twitter/streaming/client_spec.rb
+${GEM_LIBDIR}/spec/twitter/streaming/connection_spec.rb
 ${GEM_LIBDIR}/spec/twitter/streaming/deleted_tweet_spec.rb
 ${GEM_LIBDIR}/spec/twitter/streaming/event_spec.rb
 ${GEM_LIBDIR}/spec/twitter/streaming/friend_list_spec.rb
 ${GEM_LIBDIR}/spec/twitter/streaming/message_parser_spec.rb
+${GEM_LIBDIR}/spec/twitter/streaming/response_spec.rb
 ${GEM_LIBDIR}/spec/twitter/suggestion_spec.rb
 ${GEM_LIBDIR}/spec/twitter/target_user_spec.rb
 ${GEM_LIBDIR}/spec/twitter/token_spec.rb
