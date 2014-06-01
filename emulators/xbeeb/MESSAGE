@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2006/06/13 13:24:35 dsainty Exp $
+$NetBSD: MESSAGE,v 1.5 2014/06/01 16:49:24 wiz Exp $
 
 You must copy the BBC "BASIC2" ROM image to
 
@@ -22,7 +22,7 @@ that many archives found on the Internet use.
 You also need to ensure that your X session can access the fonts
 needed. This can be done with:
 
-	$ xset fp+ ${PREFIX}/lib/X11/fonts/xbeeb
+	$ xset fp+ ${PREFIX}/share/fonts/X11/xbeeb
 
 To make the effect permanent for future X sessions, you can do this by
 editing certain files in your X installation.
@@ -45,6 +45,6 @@ For example:
 		  ${PREFIX}/lib/X11/fonts/Type1/,
 		  ${PREFIX}/lib/X11/fonts/100dpi/,
 		  ${PREFIX}/lib/X11/fonts/75dpi/,
-		  ${PREFIX}/lib/X11/fonts/xbeeb/
+		  ${PREFIX}/share/fonts/X11/xbeeb/
 
 ===========================================================================
