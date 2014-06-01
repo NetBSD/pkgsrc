@@ -1,17 +1,20 @@
-$NetBSD: patch-ah,v 1.2 2011/02/08 13:13:41 adam Exp $
+$NetBSD: patch-ah,v 1.3 2014/06/01 16:58:21 wiz Exp $
 
 Add NetBSD native X and pkgsrc modular X directories to the candidate
 font path list.
 
---- src/variable.c.orig	2008-12-15 04:18:36.000000000 +0000
+--- src/variable.c.orig	2013-07-03 16:31:53.000000000 +0000
 +++ src/variable.c
-@@ -275,6 +275,12 @@ static const struct path_table fontpath_
+@@ -281,6 +281,15 @@ static const struct path_table fontpath_
      { "$`kpsexpand '$TEXMFMAIN'`/fonts/type1!" },
      { "$`kpsexpand '$TEXMFDIST'`/fonts/type1!" },
  #endif
 +    /* NetBSD pkgsrc X.org */
 +    { @PKGSRC_PREFIX@ "/lib/X11/fonts/Type1" },
 +    { @PKGSRC_PREFIX@ "/lib/X11/fonts/truetype" },
++    /* NetBSD pkgsrc default font path */
++    { @PKGSRC_PREFIX@ "/share/fonts/X11/Type1" },
++    { @PKGSRC_PREFIX@ "/share/fonts/X11/TTF" },
 +    /* NetBSD native X.org */
 +    { "/usr/X11R7/lib/X11/fonts/Type1" },
 +    { "/usr/X11R7/lib/X11/fonts/truetype" },
