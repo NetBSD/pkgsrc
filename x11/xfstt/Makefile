@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2014/02/08 02:53:05 wiedi Exp $
-#
+# $NetBSD: Makefile,v 1.36 2014/06/01 18:49:41 wiz Exp $
 
 DISTNAME=		xfstt-1.9
 CATEGORIES=		x11 net fonts
@@ -25,7 +24,7 @@ LDFLAGS.SunOS+=		-lsocket -lnsl
 RCD_SCRIPTS=		xfstt
 INSTALLATION_DIRS=	bin			\
 			${PKGMANDIR}/man1	\
-			lib/X11/fonts/TTF	\
+			share/fonts/X11/TTF	\
 			share/doc/xfstt		\
 			share/examples/xfstt
 
