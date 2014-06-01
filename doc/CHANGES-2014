@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2084 2014/06/01 01:04:11 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2085 2014/06/01 01:06:38 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2866,3 +2866,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-CGI to 4.01nb1 [wiz 2014-05-31]
 	Updated inputmethod/uim to 1.8.6nb15 [ryoon 2014-05-31]
 	Updated www/py-flask-user to 0.5.0 [rodent 2014-06-01]
+	Updated finance/py-stripe to 1.16.0 [rodent 2014-06-01]
