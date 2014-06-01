@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.5 2014/05/10 08:11:02 wiz Exp $
+$NetBSD: patch-am,v 1.6 2014/06/01 10:11:29 wiz Exp $
 
 --- setup.py.orig	2014-03-17 02:31:31.000000000 +0000
 +++ setup.py
@@ -107,21 +107,6 @@ $NetBSD: patch-am,v 1.5 2014/05/10 08:11:02 wiz Exp $
                          # Some systems have -lndbm, others have -lgdbm_compat,
                          # others don't have either
                          if self.compiler.find_library_file(lib_dirs,
-@@ -1487,6 +1509,14 @@ class PyBuildExt(build_ext):
-             macros = dict()
-             libraries = []
- 
-+        elif host_platform.startswith('dragonfly'):
-+            macros = dict(
-+                HAVE_SEM_OPEN=0,
-+                HAVE_SEM_TIMEDWAIT=0,
-+                HAVE_FD_TRANSFER=1,
-+                )
-+            libraries = []
-+
-         else:                                   # Linux and other unices
-             macros = dict()
-             libraries = ['rt']
 @@ -1956,10 +1986,7 @@ class PyBuildExt(build_ext):
              depends = ['_decimal/docstrings.h']
          else:
