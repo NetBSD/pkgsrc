@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 18:28:26 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/06/01 16:35:35 wiz Exp $
 #
 
 DISTNAME=	Konatu_ver_26
 PKGNAME=	${DISTNAME:tl:S/_ver_/-ttf-/}
+PKGREVISION=	1
 CATEGORIES=	fonts japanese
 MASTER_SITES=	http://www.masuseki.com/be/konatu/
 EXTRACT_SUFX=	.zip
@@ -18,10 +19,10 @@ NO_BUILD=	YES
 
 DOCSDIR=	${PREFIX}/share/doc/${PKGBASE}
 
-FONTDIR=	${PREFIX}/lib/X11/fonts/TTF
+FONTDIR=	${PREFIX}/share/fonts/X11/TTF
 FONTS_DIRS.ttf=	${FONTDIR}
 
-INSTALLATION_DIRS=	lib/X11/fonts/TTF \
+INSTALLATION_DIRS=	share/fonts/X11/TTF \
 			${DOCSDIR}
 
 INSTALL_FONTS=	Konatu.ttf \

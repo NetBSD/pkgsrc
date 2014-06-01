@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/04 10:38:24 wiz Exp $
-lib/X11/fonts/TTF/Mothanna-Bold-Oblique.ttf
-lib/X11/fonts/TTF/Mothanna-Bold.ttf
-lib/X11/fonts/TTF/Mothanna-Oblique.ttf
-lib/X11/fonts/TTF/Mothanna.ttf
+@comment $NetBSD: PLIST,v 1.2 2014/06/01 16:35:36 wiz Exp $
+share/fonts/X11/TTF/Mothanna-Bold-Oblique.ttf
+share/fonts/X11/TTF/Mothanna-Bold.ttf
+share/fonts/X11/TTF/Mothanna-Oblique.ttf
+share/fonts/X11/TTF/Mothanna.ttf
 share/doc/mothanna-ttf/README

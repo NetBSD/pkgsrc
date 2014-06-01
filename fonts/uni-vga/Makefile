@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2013/07/27 11:58:08 tsutsui Exp $
+# $NetBSD: Makefile,v 1.6 2014/06/01 16:35:37 wiz Exp $
 #
 
 DISTNAME=	uni-vga
 PKGNAME=	${DISTNAME}-1
+PKGREVISION=	1
 CATEGORIES=	fonts x11
 MASTER_SITES=	http://www.inp.nsk.su/~bolkhov/files/fonts/univga/
 EXTRACT_SUFX=	.tgz
@@ -14,7 +15,7 @@ LICENSE=	mit
 
 USE_TOOLS+=		bdftopcf gzip
 
-FONTDIR=		${PREFIX}/lib/X11/fonts/uni-vga
+FONTDIR=		${PREFIX}/share/fonts/X11/uni-vga
 FONTS_DIRS.x11+=	${FONTDIR}
 WRKSRC=			${WRKDIR}/uni_vga
 

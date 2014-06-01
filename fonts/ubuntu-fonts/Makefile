@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2013/04/15 17:22:40 uwe Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 16:35:37 wiz Exp $
 
 VERSION=	0.80
 PKGNAME=	ubuntu-fonts-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	fonts
 DISTNAME=	ubuntu-font-family-${VERSION}
 EXTRACT_SUFX=	.zip
@@ -17,7 +18,7 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
-FONTDIR=	${PREFIX}/lib/X11/fonts/TTF
+FONTDIR=	${PREFIX}/share/fonts/X11/TTF
 FONTS_DIRS.ttf=	${FONTDIR}
 
 INSTALLATION_DIRS=	${DOCDIR} ${FONTDIR}
