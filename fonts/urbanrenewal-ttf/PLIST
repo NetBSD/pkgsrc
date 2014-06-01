@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2011/03/01 15:16:07 wiz Exp $
-lib/X11/fonts/TTF/Athene.ttf
-lib/X11/fonts/TTF/Liverpool.ttf
-lib/X11/fonts/TTF/Los Altos.ttf
-lib/X11/fonts/TTF/Parc Place.ttf
-lib/X11/fonts/TTF/Sanfrisco.ttf
-lib/X11/fonts/TTF/Torrance.ttf
-lib/X11/fonts/TTF/Valencia.ttf
+@comment $NetBSD: PLIST,v 1.3 2014/06/01 16:35:37 wiz Exp $
+share/fonts/X11/TTF/Athene.ttf
+share/fonts/X11/TTF/Liverpool.ttf
+share/fonts/X11/TTF/Los Altos.ttf
+share/fonts/X11/TTF/Parc Place.ttf
+share/fonts/X11/TTF/Sanfrisco.ttf
+share/fonts/X11/TTF/Torrance.ttf
+share/fonts/X11/TTF/Valencia.ttf
 share/doc/urbanrenewal-ttf/FreeLicense.txt
 share/doc/urbanrenewal-ttf/ReadMe.pdf

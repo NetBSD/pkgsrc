@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.4 2005/03/07 10:12:29 uebayasi Exp $
-lib/X11/fonts/TTF/kochi-gothic.ttf
-lib/X11/fonts/TTF/kochi-mincho.ttf
+@comment $NetBSD: PLIST,v 1.5 2014/06/01 16:35:35 wiz Exp $
+share/fonts/X11/TTF/kochi-gothic.ttf
+share/fonts/X11/TTF/kochi-mincho.ttf

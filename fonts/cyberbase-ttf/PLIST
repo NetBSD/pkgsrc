@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.6 2009/08/25 11:56:36 wiz Exp $
-lib/X11/fonts/TTF/Cyberbas.ttf
+@comment $NetBSD: PLIST,v 1.7 2014/06/01 16:35:32 wiz Exp $
+share/fonts/X11/TTF/Cyberbas.ttf
 share/doc/html/cyberbit-ttf/ReadMe.htm

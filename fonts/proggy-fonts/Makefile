@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 18:28:29 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/06/01 16:35:36 wiz Exp $
 
 DISTNAME=	proggy-fonts-1
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	http://dl.liveforge.org/fonts/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,8 +16,8 @@ NO_BUILD=		yes
 NO_CONFIGURE=		yes
 USE_X11BASE=		yes
 
-FONTS_DIRS.x11=		${PREFIX}/lib/X11/fonts/misc
-INSTALLATION_DIRS=	lib/X11/fonts/misc
+FONTS_DIRS.x11=		${PREFIX}/share/fonts/X11/misc
+INSTALLATION_DIRS=	share/fonts/X11/misc
 INSTALLATION_DIRS+=	share/doc/proggy-fonts
 
 do-install:

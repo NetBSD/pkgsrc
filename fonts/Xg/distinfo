@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2012/02/21 06:39:54 sbd Exp $
+$NetBSD: distinfo,v 1.6 2014/06/01 16:35:31 wiz Exp $
 
 SHA1 (libXg.utf.fonts.tar.gz) = 9c2088486cd8644a3771cc97e818a8ac43ce6f22
 RMD160 (libXg.utf.fonts.tar.gz) = b6314b4b3179c0851b1bb98eac21accaa2f2263c
 Size (libXg.utf.fonts.tar.gz) = 1147674 bytes
-SHA1 (patch-aa) = 91374446ea9b5608a9e0ddb03b6b883c9e102396
+SHA1 (patch-aa) = 26fc6f9d190857ea47a21df17be1b2bd4effea87

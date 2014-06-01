@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.3 2004/01/25 20:31:59 wiz Exp $
-lib/X11/fonts/TTF/geo703l.ttf
-lib/X11/fonts/TTF/geo703li.ttf
+@comment $NetBSD: PLIST,v 1.4 2014/06/01 16:35:34 wiz Exp $
+share/fonts/X11/TTF/geo703l.ttf
+share/fonts/X11/TTF/geo703li.ttf

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2013/07/27 11:58:08 tsutsui Exp $
+# $NetBSD: Makefile,v 1.19 2014/06/01 16:35:35 wiz Exp $
 #
 
 DISTNAME=	jisx0213fonts-0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts x11 japanese
 MASTER_SITES=	ftp://ftp.m17n.org/pub/character/fonts/imamura/jisx0213/
 DISTFILES=	${FONTS:C/$/.bdf.gz/}
@@ -15,7 +15,7 @@ USE_X11BASE=	yes
 USE_TOOLS+=	gzip bdftopcf
 
 FONTS=		K14-1 K14-2 jiskan16-2000-1 jiskan16-2000-2
-FONTDIR=	${PREFIX}/lib/X11/fonts/local
+FONTDIR=	${PREFIX}/share/fonts/X11/local
 FONTS_DIRS.x11=	${FONTDIR}
 
 WRKSRC=		${WRKDIR}

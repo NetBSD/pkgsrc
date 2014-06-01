@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/26 21:08:53 joerg Exp $
-lib/X11/fonts/TTF/genai102.ttf
-lib/X11/fonts/TTF/genar102.ttf
-lib/X11/fonts/TTF/geni102.ttf
-lib/X11/fonts/TTF/genr102.ttf
+@comment $NetBSD: PLIST,v 1.2 2014/06/01 16:35:34 wiz Exp $
+share/fonts/X11/TTF/genai102.ttf
+share/fonts/X11/TTF/genar102.ttf
+share/fonts/X11/TTF/geni102.ttf
+share/fonts/X11/TTF/genr102.ttf
