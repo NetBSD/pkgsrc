@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2005/09/28 12:41:40 rillig Exp $
+$NetBSD: MESSAGE,v 1.3 2014/06/01 16:48:50 wiz Exp $
 
 In case you have X11 installed, you can use
 
@@ -7,7 +7,7 @@ In case you have X11 installed, you can use
 
 as your terminal font to make cmatrix look more like original.
 
-To do that, copy the file to ${X11BASE}/lib/X11/fonts/misc, then
+To do that, copy the file to ${X11BASE}/share/fonts/X11/misc, then
 execute mkfontdir there; on running X you can then execute "xset fp rehash"
 to make the X server refresh its font list. Remember to use "-l" option to
 cmatrix then!
