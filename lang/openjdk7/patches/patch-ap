@@ -1,10 +1,10 @@
-$NetBSD: patch-ap,v 1.5 2013/06/15 09:31:05 jperkin Exp $
+$NetBSD: patch-ap,v 1.6 2014/06/01 17:55:33 wiz Exp $
 
 Use pkgsrc fontconfig.
 
---- jdk/src/solaris/native/sun/awt/fontpath.c.orig	2013-05-29 03:57:58.000000000 +0000
+--- jdk/src/solaris/native/sun/awt/fontpath.c.orig	2014-01-01 05:53:43.000000000 +0000
 +++ jdk/src/solaris/native/sun/awt/fontpath.c
-@@ -72,8 +72,8 @@ extern Display *awt_display;
+@@ -73,8 +73,8 @@ extern Display *awt_display;
  #define FONTCONFIG_DLL_VERSIONED X11_PATH "/lib/" VERSIONED_JNI_LIB_NAME("fontconfig", "1")
  #define FONTCONFIG_DLL X11_PATH "/lib/" JNI_LIB_NAME("fontconfig")
  #else
@@ -15,17 +15,17 @@ Use pkgsrc fontconfig.
  #endif
  
  #define MAXFDIRS 512    /* Max number of directories that contain fonts */
-@@ -181,6 +181,27 @@ static char *fullLinuxFontPath[] = {
+@@ -182,6 +182,27 @@ static char *fullLinuxFontPath[] = {
      NULL, /* terminates the list */
  };
  #endif
 +static char *pkgsrcFontPath[] = {
-+   "@PREFIX@/lib/X11/fonts/100dpi",
-+   "@PREFIX@/lib/X11/fonts/75dpi",
-+   "@PREFIX@/lib/X11/fonts/Type1",
-+   "@PREFIX@/lib/X11/fonts/cyrillic",
-+   "@PREFIX@/lib/X11/fonts/misc",
-+   "@PREFIX@/lib/X11/fonts/TTF",
++   "@PREFIX@/share/fonts/X11/100dpi",
++   "@PREFIX@/share/fonts/X11/75dpi",
++   "@PREFIX@/share/fonts/X11/Type1",
++   "@PREFIX@/share/fonts/X11/cyrillic",
++   "@PREFIX@/share/fonts/X11/misc",
++   "@PREFIX@/share/fonts/X11/TTF",
 +   "/usr/X11R7/lib/X11/fonts/100dpi",
 +   "/usr/X11R7/lib/X11/fonts/75dpi",
 +   "/usr/X11R7/lib/X11/fonts/Type1",
@@ -43,7 +43,7 @@ Use pkgsrc fontconfig.
  
  static char **getFontConfigLocations();
  
-@@ -545,6 +566,7 @@ static char *getPlatformFontPathChars(JN
+@@ -551,6 +572,7 @@ static char *getPlatformFontPathChars(JN
  #else /* IF SOLARIS */
      knowndirs = fullSolarisFontPath;
  #endif
