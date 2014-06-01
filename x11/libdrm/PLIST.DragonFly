@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.DragonFly,v 1.1 2014/06/01 06:37:46 ryoon Exp $
+include/libkms/libkms.h
+lib/libkms.la
+lib/pkgconfig/libkms.pc
