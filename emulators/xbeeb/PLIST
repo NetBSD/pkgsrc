@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:51:10 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/06/01 16:48:31 wiz Exp $
 bin/xbeeb
-lib/X11/fonts/xbeeb/ttext-grc-ldh.pcf
-lib/X11/fonts/xbeeb/ttext-grc-udh.pcf
-lib/X11/fonts/xbeeb/ttext-grc.pcf
-lib/X11/fonts/xbeeb/ttext-grs-ldh.pcf
-lib/X11/fonts/xbeeb/ttext-grs-udh.pcf
-lib/X11/fonts/xbeeb/ttext-grs.pcf
-lib/X11/fonts/xbeeb/ttext-std-ldh.pcf
-lib/X11/fonts/xbeeb/ttext-std-udh.pcf
-lib/X11/fonts/xbeeb/ttext-std.pcf
+share/fonts/X11/xbeeb/ttext-grc-ldh.pcf
+share/fonts/X11/xbeeb/ttext-grc-udh.pcf
+share/fonts/X11/xbeeb/ttext-grc.pcf
+share/fonts/X11/xbeeb/ttext-grs-ldh.pcf
+share/fonts/X11/xbeeb/ttext-grs-udh.pcf
+share/fonts/X11/xbeeb/ttext-grs.pcf
+share/fonts/X11/xbeeb/ttext-std-ldh.pcf
+share/fonts/X11/xbeeb/ttext-std-udh.pcf
+share/fonts/X11/xbeeb/ttext-std.pcf
 man/man1/xbeeb.1
 ${XBEEBROOT}/docs/64doc
 ${XBEEBROOT}/docs/Changes-v0.3
