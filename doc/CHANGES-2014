@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2096 2014/06/01 14:39:52 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2097 2014/06/01 15:00:58 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2878,3 +2878,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/mikutter to 3.0.0alpha5 [obache 2014-06-01]
 	Updated wm/jwm to 2.2.2 [tsutsui 2014-06-01]
 	Updated devel/py-pip to 1.5.6 [rodent 2014-06-01]
+	Updated emulators/xnp2 to 20140531 [tsutsui 2014-06-01]
