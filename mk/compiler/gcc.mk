@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.145 2014/04/22 20:49:38 ryoon Exp $
+# $NetBSD: gcc.mk,v 1.146 2014/06/01 08:14:27 ryoon Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -135,8 +135,8 @@ _GCC46_PATTERNS= 4.6 4.6.*
 # _GCC47_PATTERNS matches N s.t. 4.7 <= N < 4.8.
 _GCC47_PATTERNS= 4.7 4.7.*
 
-# _GCC48_PATTERNS matches N s.t. 4.8 <= N.
-_GCC48_PATTERNS= 4.[8-9] 4.[8-9].* 4.[1-9][0-9]* [5-9]*
+# _GCC48_PATTERNS matches N s.t. 4.8 <= N < 4.9.
+_GCC48_PATTERNS= 4.8 4.8.*
 
 # _GCC_AUX_PATTERNS matches 8-digit date YYYYMMDD*
 _GCC_AUX_PATTERNS= 20[1-2][0-9][0-1][0-9][0-3][0-9]*
@@ -462,33 +462,10 @@ _GCC_PKGBASE=		gcc48-cc++
 .  if !empty(PKGPATH:Mlang/gcc48-cc++)
 _IGNORE_GCC=		yes
 MAKEFLAGS+=		_IGNORE_GCC=yes
-_IGNORE_GCC48CXX=	yes
-MAKEFLAGS+=		_IGNORE_GCC48CXX=yes
-_USE_GCC_SHLIB?=	yes
 .  endif
-.  if !defined(_IGNORE_GCC) && \
-	(!empty(_LANGUAGES.gcc:Mc) || !empty(_LANGUAGES.gcc:Mc++))
+.  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc:Mc++)
 _GCC_PKGSRCDIR=		../../lang/gcc48-cc++
 _GCC_DEPENDENCY=	gcc48-cc++>=${_GCC_REQD}:../../lang/gcc48-cc++
-.  endif
-.  if !empty(PKGPATH:Mlang/gcc48-fortran)
-_IGNORE_GCC48FORTRAN=	yes
-MAKEFLAGS+=		_IGNORE_GCC48FORTRAN=yes
-.  endif
-.  if !defined(_IGNORE_GCC48FORTRAN) && \
-	(!empty(_LANGUAGES.gcc:Mfortran77) || !empty(_LANGUAGES.gcc:Mfortran))
-_GCC_PKGSRCDIR+=	../../lang/gcc48-fortran
-_GCC_DEPENDENCY+=	gcc48-fortran>=${_GCC_REQD}:../../lang/gcc48-fortran
-_USE_GCC_SHLIB?=	yes
-.  endif
-.  if !empty(PKGPATH:Mlang/gcc48-objc)
-_IGNORE_GCC48OBJC=	yes
-MAKEFLAGS+=		_IGNORE_GCC48OBJC=yes
-.  endif
-.  if !defined(_IGNORE_GCC48OBJC) && \
-	(!empty(_LANGUAGES.gcc:Mobjc) || !empty(_LANGUAGES.gcc:Mobj-c++))
-_GCC_PKGSRCDIR+=	../../lang/gcc48-objc
-_GCC_DEPENDENCY+=	gcc48-objc>=${_GCC_REQD}:../../lang/gcc48-objc
 _USE_GCC_SHLIB?=	yes
 .  endif
 .elif !empty(_NEED_GCC_AUX:M[yY][eE][sS])
@@ -540,6 +517,28 @@ MAKEFLAGS+=		_IGNORE_GCC3OBJC=yes
 .  if !defined(_IGNORE_GCC3OBJC) && !empty(_LANGUAGES.gcc:Mobjc)
 _GCC_PKGSRCDIR+=	../../lang/gcc3-objc
 _GCC_DEPENDENCY+=	gcc3-objc>=${_GCC_REQD}:../../lang/gcc3-objc
+_USE_GCC_SHLIB?=	yes
+.  endif
+.endif
+
+.if !empty(_NEED_GCC48:M[yY][eE][sS])
+.  if !empty(PKGPATH:Mlang/gcc48-fortran)
+_IGNORE_GCC48FORTRAN=	yes
+MAKEFLAGS+=		_IGNORE_GCC48FORTRAN=yes
+.  endif
+.  if !defined(_IGNORE_GCC48FORTRAN) && \
+	(!empty(_LANGUAGES.gcc:Mfortran77) || !empty(_LANGUAGES.gcc:Mfortran))
+_GCC_PKGSRCDIR+=	../../lang/gcc48-fortran
+_GCC_DEPENDENCY+=	gcc48-fortran>=${_GCC_REQD}:../../lang/gcc48-fortran
+_USE_GCC_SHLIB?=	yes
+.  endif
+.  if !empty(PKGPATH:Mlang/gcc48-objc)
+_IGNORE_GCC3OBJC=	yes
+MAKEFLAGS+=		_IGNORE_GCC48OBJC=yes
+.  endif
+.  if !defined(_IGNORE_GCC48OBJC) && !empty(_LANGUAGES.gcc:Mobjc)
+_GCC_PKGSRCDIR+=	../../lang/gcc48-objc
+_GCC_DEPENDENCY+=	gcc48-objc>=${_GCC_REQD}:../../lang/gcc48-objc
 _USE_GCC_SHLIB?=	yes
 .  endif
 .endif
@@ -811,7 +810,7 @@ PREPEND_PATH+=	${_GCC_DIR}/bin
 # Add dependency on GCC libraries if requested.
 .if (defined(_USE_GCC_SHLIB) && !empty(_USE_GCC_SHLIB:M[Yy][Ee][Ss])) && !empty(USE_PKGSRC_GCC_RUNTIME:M[Yy][Ee][Ss])
 #  Special case packages which are themselves a dependency of gcc runtime.
-.  if empty(PKGPATH:Mdevel/libtool-base) && empty(PKGPATH:Mdevel/binutils) && empty(PKGPATH:Mlang/gcc??)
+.  if empty(PKGPATH:Mdevel/libtool-base) && empty(PKGPATH:Mdevel/binutils) && empty(PKGPATH:Mlang/gcc??) && empty(PKGPATH:Mlang/gcc48-*)
 .    if !empty(CC_VERSION:Mgcc-4.7*)
 .      include "../../lang/gcc47-libs/buildlink3.mk"
 .    elif !empty(CC_VERSION:Mgcc-4.8*)
@@ -850,7 +849,13 @@ ${_GCC_${_var_}}:
 # The default is g95 as it supports a modern dialect, but it can
 # be overridden in mk.conf to use only f2c.
 #
+.if (!empty(MACHINE_PLATFORM:MNetBSD-6.99.[4-9]*) || \
+	!empty(MACHINE_PLATFORM:MNetBSD-[7-9]*)) && \
+	!empty(CC_VERSION:Mgcc-4.8*)
+PKGSRC_FORTRAN?=gfortran
+.else
 PKGSRC_FORTRAN?=g95
+.endif
 
 _GCC_NEEDS_A_FORTRAN=	no
 .if empty(_USE_PKGSRC_GCC:M[yY][eE][sS]) && !exists(${FCPATH})
