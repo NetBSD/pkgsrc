@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.6 2013/07/21 17:29:47 taca Exp $
+# $NetBSD: Makefile.php,v 1.6.6.1 2014/06/01 13:20:22 spz Exp $
 # used by lang/php54/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
@@ -72,7 +72,9 @@ CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--without-openssl
 .endif
 
-.if !empty(PKG_OPTIONS:Mmaintainer-zts)
+.if empty(PKG_OPTIONS:Mmaintainer-zts)
+CONFIGURE_ARGS+=	--disable-maintainer-zts
+.else
 CONFIGURE_ARGS+=	--enable-maintainer-zts
 .endif
 
