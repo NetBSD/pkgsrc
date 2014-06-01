@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2089 2014/06/01 08:10:08 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.2090 2014/06/01 08:26:24 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2871,3 +2871,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated converters/libmwaw to 0.2.1 [ryoon 2014-06-01]
 	Updated x11/xcursorgen to 1.0.6 [wiz 2014-06-01]
 	Removed lang/gfortran [ryoon 2014-06-01]
+	Updated www/mediawiki to 1.22.7 [wen 2014-06-01]
