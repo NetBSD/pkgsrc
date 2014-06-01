@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/06/05 19:49:36 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 23:56:56 rodent Exp $
 #
 
-DISTNAME=	ssdeep-2.9
+DISTNAME=	ssdeep-2.10
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ssdeep/}
 
