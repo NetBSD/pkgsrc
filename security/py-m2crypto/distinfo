@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2012/01/22 10:05:19 apb Exp $
+$NetBSD: distinfo,v 1.7 2014/06/01 23:51:25 rodent Exp $
 
-SHA1 (M2Crypto-0.21.1.tar.gz) = 3c7135b952092e4f2eee7a94c5153319cccba94e
-RMD160 (M2Crypto-0.21.1.tar.gz) = 313dcab450846a0363e7192a10364bdfd5dfae85
-Size (M2Crypto-0.21.1.tar.gz) = 413563 bytes
-SHA1 (patch-setup.py) = 9a1952e842353ab3ddf32482f34c7dbe705cd56d
+SHA1 (M2Crypto-0.22.3.tar.gz) = c5e39d928aff7a47e6d82624210a7a31b8220a50
+RMD160 (M2Crypto-0.22.3.tar.gz) = 3ba7498308949f4c40c7eb8b649d575afd665a55
+Size (M2Crypto-0.22.3.tar.gz) = 74795 bytes
+SHA1 (patch-setup.py) = 994ddaa88ef942967d344d84b34f0cbed2778910
