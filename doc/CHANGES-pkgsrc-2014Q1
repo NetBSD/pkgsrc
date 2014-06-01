@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.38 2014/05/28 19:53:47 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.39 2014/06/01 13:22:48 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q1 branch:
@@ -145,3 +145,11 @@ Pullup ticket #4424 - requested by taca
 mail/dovecot2: security update
 Pullup ticket #4425 - requested by taca
 mail/dovecot2-pigeonhole: keep in step with mail/dovecot2
+Pullup ticket #4422 - requested by taca
+graphics/php-gd: version bump
+lang/php: version bump
+lang/php53: security update
+lang/php54: security update
+lang/php55: security update
+Pullup ticket #4426 - requested by wen
+www/mediawiki: security update
