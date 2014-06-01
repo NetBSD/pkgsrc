@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2087 2014/06/01 03:58:11 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.2088 2014/06/01 08:03:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2869,3 +2869,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated finance/py-stripe to 1.16.0 [rodent 2014-06-01]
 	Updated devel/py-py2app to 0.8.1 [rodent 2014-06-01]
 	Updated converters/libmwaw to 0.2.1 [ryoon 2014-06-01]
+	Updated x11/xcursorgen to 1.0.6 [wiz 2014-06-01]
