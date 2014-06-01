@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.6 2010/11/03 11:39:08 adam Exp $
+$NetBSD: patch-af,v 1.7 2014/06/01 19:38:10 asau Exp $
 
 --- Makefile.in.orig	2009-11-06 10:28:08.000000000 +0000
 +++ Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-af,v 1.6 2010/11/03 11:39:08 adam Exp $
  	resolve.$(OBJEXT) dnsconfig.$(OBJEXT) irs-nss.$(OBJEXT) \
  	pagectrl.$(OBJEXT) aix_authmeth.$(OBJEXT) \
 -	ldap-init-krb5-cache.$(OBJEXT) vers.$(OBJEXT)
-+	ldap-init-krb5-cache.$(OBJEXT) netbsd.$(OBJEXT)
++	ldap-init-krb5-cache.$(OBJEXT) @OPSYS@.$(OBJEXT)
  NSS_LDAP_OBJECTS = $(am_NSS_LDAP_OBJECTS)
  NSS_LDAP_LDADD = $(LDADD)
  am_nss_ldap_so_OBJECTS = ldap-nss.$(OBJEXT) ldap-pwd.$(OBJEXT) \
@@ -16,7 +16,7 @@ $NetBSD: patch-af,v 1.6 2010/11/03 11:39:08 adam Exp $
  	snprintf.$(OBJEXT) resolve.$(OBJEXT) dnsconfig.$(OBJEXT) \
  	irs-nss.$(OBJEXT) pagectrl.$(OBJEXT) ldap-sldap.$(OBJEXT) \
 -	ldap-init-krb5-cache.$(OBJEXT) vers.$(OBJEXT)
-+	ldap-init-krb5-cache.$(OBJEXT) netbsd.$(OBJEXT)
++	ldap-init-krb5-cache.$(OBJEXT) @OPSYS@.$(OBJEXT)
  nss_ldap_so_OBJECTS = $(am_nss_ldap_so_OBJECTS)
  nss_ldap_so_LDADD = $(LDADD)
  DEFAULT_INCLUDES = -I. -I$(srcdir) -I.
@@ -34,12 +34,12 @@ $NetBSD: patch-af,v 1.6 2010/11/03 11:39:08 adam Exp $
  	ldap-bp.c ldap-automount.c util.c ltf.c snprintf.c resolve.c \
  	dnsconfig.c irs-nss.c pagectrl.c ldap-sldap.c ldap-init-krb5-cache.c \
 -	vers.c
-+	netbsd.c
++	@OPSYS@.c
  
  NSS_LDAP_SOURCES = ldap-nss.c ldap-grp.c ldap-pwd.c ldap-netgrp.c ldap-schema.c \
  	util.c ltf.c snprintf.c resolve.c dnsconfig.c \
 -	irs-nss.c pagectrl.c aix_authmeth.c ldap-init-krb5-cache.c vers.c
-+	irs-nss.c pagectrl.c aix_authmeth.c ldap-init-krb5-cache.c netbsd.c
++	irs-nss.c pagectrl.c aix_authmeth.c ldap-init-krb5-cache.c @OPSYS@.c
  
  @GCC_FALSE@MULTI_OS_DIRECTORY = .
  #INCLUDES = -I$(top_builddir) -I$(srcdir)
@@ -48,7 +48,7 @@ $NetBSD: patch-af,v 1.6 2010/11/03 11:39:08 adam Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/snprintf.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/util.Po@am__quote@
 -@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/vers.Po@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/netbsd.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/@OPSYS@.Po@am__quote@
  
  .c.o:
  @am__fastdepCC_TRUE@	if $(COMPILE) -MT $@ -MD -MP -MF "$(DEPDIR)/$*.Tpo" -c -o $@ $<; \
