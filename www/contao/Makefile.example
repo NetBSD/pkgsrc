@@ -1,6 +1,5 @@
-# $NetBSD: Makefile.example,v 1.19 2014/05/31 02:19:58 taca Exp $
+# $NetBSD: Makefile.example,v 1.20 2014/06/01 14:38:29 taca Exp $
 #
-# used by www/contao211-example/Makefile
 # used by www/contao32-example/Makefile
 #
 
