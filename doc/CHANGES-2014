@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2098 2014/06/01 15:51:21 tsutsui Exp $
+$NetBSD: CHANGES-2014,v 1.2099 2014/06/01 16:03:06 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2880,3 +2880,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-pip to 1.5.6 [rodent 2014-06-01]
 	Updated emulators/xnp2 to 20140531 [tsutsui 2014-06-01]
 	Updated games/onscripter to 20140504 [tsutsui 2014-06-01]
+	Updated x11/mlterm to 3.3.6 [tsutsui 2014-06-01]
