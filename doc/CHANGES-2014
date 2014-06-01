@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2088 2014/06/01 08:03:39 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2089 2014/06/01 08:10:08 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2870,3 +2870,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-py2app to 0.8.1 [rodent 2014-06-01]
 	Updated converters/libmwaw to 0.2.1 [ryoon 2014-06-01]
 	Updated x11/xcursorgen to 1.0.6 [wiz 2014-06-01]
+	Removed lang/gfortran [ryoon 2014-06-01]
