@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.146 2014/06/01 08:14:27 ryoon Exp $
+# $NetBSD: gcc.mk,v 1.147 2014/06/01 09:58:13 ryoon Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -851,7 +851,8 @@ ${_GCC_${_var_}}:
 #
 .if (!empty(MACHINE_PLATFORM:MNetBSD-6.99.[4-9]*) || \
 	!empty(MACHINE_PLATFORM:MNetBSD-[7-9]*)) && \
-	!empty(CC_VERSION:Mgcc-4.8*)
+    (!empty(CC_VERSION:Mgcc-4.[8-9]*) || \
+	!empty(CC_VERSION:Mgcc-[5-9].*))
 PKGSRC_FORTRAN?=gfortran
 .else
 PKGSRC_FORTRAN?=g95
