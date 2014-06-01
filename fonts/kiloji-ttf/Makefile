@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 18:28:26 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/06/01 16:35:35 wiz Exp $
 
 DISTNAME=	# empty
 PKGNAME=	kiloji-ttf-2.1.0
+PKGREVISION=	1
 CATEGORIES=	fonts japanese
 MASTER_SITES=	http://www.ez0.net/wp-content/uploads/distribution/font/kiloji/
 EXTRACT_SUFX=	.zip
@@ -20,7 +21,7 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 DIST_SUBDIR=	kiloji-ttf
-FONTDIR=	${PREFIX}/lib/X11/fonts/TTF
+FONTDIR=	${PREFIX}/share/fonts/X11/TTF
 FONTS_DIRS.ttf=	${FONTDIR}
 
 DOCDIR=		${PREFIX}/share/doc/${PKGBASE}

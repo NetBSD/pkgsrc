@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2010/10/02 07:10:01 obache Exp $
+$NetBSD: patch-aa,v 1.4 2014/06/01 16:35:35 wiz Exp $
 
 --- Makefile.orig	1995-12-16 20:00:46.000000000 +0000
 +++ Makefile
@@ -15,8 +15,8 @@ $NetBSD: patch-aa,v 1.3 2010/10/02 07:10:01 obache Exp $
  
 -CFONTDIR=/usr/X11R6/lib/X11/fonts/chinese
 -EFONTDIR=/usr/X11R6/lib/X11/fonts/misc
-+CFONTDIR=${PREFIX}/lib/X11/fonts/local
-+EFONTDIR=${PREFIX}/lib/X11/fonts/local
++CFONTDIR=${PREFIX}/share/fonts/X11/local
++EFONTDIR=${PREFIX}/share/fonts/X11/local
  FONTS	=kc24f.pcf.gz kc15f.pcf.gz kc8x15.pcf.gz kc12x24.pcf.gz
  PROGS	=kc24f kc15f kc8x15 kc12x24 kca2et
  OBJS	=tran.o kc24f.o kc15f.o kc8x15.o kc12x24.o kca2et.o

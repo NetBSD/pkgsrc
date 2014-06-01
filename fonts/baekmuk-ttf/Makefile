@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2012/10/03 18:28:17 asau Exp $
+# $NetBSD: Makefile,v 1.18 2014/06/01 16:35:32 wiz Exp $
 
 DISTNAME=	baekmuk-ttf-2.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	fonts korean
 MASTER_SITES=	http://kldp.net/download.php/1429/
 
@@ -13,7 +13,7 @@ USE_X11BASE=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
-FONTS_DIRS.ttf=	${PREFIX}/lib/X11/fonts/TTF
+FONTS_DIRS.ttf=	${PREFIX}/share/fonts/X11/TTF
 DOCDIR=		${PREFIX}/share/doc/baekmuk-ttf
 
 do-install:

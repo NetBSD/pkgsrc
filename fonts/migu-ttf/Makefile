@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2012/11/25 16:48:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2014/06/01 16:35:36 wiz Exp $
 #
 
 DISTNAME=	# empty
 PKGNAME=	migu-ttf-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=mix-mplus-ipa/57240/}
 DISTFILES=	migu-1p-${VERSION}.zip \
@@ -21,7 +22,7 @@ NO_BUILD=	yes
 
 VERSION=	20121030
 
-FONTDIR=	${PREFIX}/lib/X11/fonts/TTF
+FONTDIR=	${PREFIX}/share/fonts/X11/TTF
 FONTS_DIRS.ttf=	${FONTDIR}
 DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 INSTALLATION_DIRS=	${FONTDIR} ${DOCDIR}

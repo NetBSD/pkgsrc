@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2011/11/17 19:26:42 ryoon Exp $
-lib/X11/fonts/TTF/Roboto-Bold.ttf
-lib/X11/fonts/TTF/Roboto-BoldCondensed.ttf
-lib/X11/fonts/TTF/Roboto-BoldCondensedItalic.ttf
-lib/X11/fonts/TTF/Roboto-BoldItalic.ttf
-lib/X11/fonts/TTF/Roboto-Condensed.ttf
-lib/X11/fonts/TTF/Roboto-CondensedItalic.ttf
-lib/X11/fonts/TTF/Roboto-Italic.ttf
-lib/X11/fonts/TTF/Roboto-Regular.ttf
+@comment $NetBSD: PLIST,v 1.3 2014/06/01 16:35:37 wiz Exp $
+share/fonts/X11/TTF/Roboto-Bold.ttf
+share/fonts/X11/TTF/Roboto-BoldCondensed.ttf
+share/fonts/X11/TTF/Roboto-BoldCondensedItalic.ttf
+share/fonts/X11/TTF/Roboto-BoldItalic.ttf
+share/fonts/X11/TTF/Roboto-Condensed.ttf
+share/fonts/X11/TTF/Roboto-CondensedItalic.ttf
+share/fonts/X11/TTF/Roboto-Italic.ttf
+share/fonts/X11/TTF/Roboto-Regular.ttf
 share/doc/roboto-fonts/NOTICE

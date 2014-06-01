@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2005/12/29 18:17:21 jlam Exp $
-lib/X11/fonts/local/mzgt16e.pcf.gz
-lib/X11/fonts/local/mzgt16h.pcf.gz
-lib/X11/fonts/local/mzgt16h1.pcf.gz
-lib/X11/fonts/local/mzmj16e.pcf.gz
-lib/X11/fonts/local/mzmj16h.pcf.gz
-lib/X11/fonts/local/mzpg16e.pcf.gz
-lib/X11/fonts/local/mzpg16h.pcf.gz
-lib/X11/fonts/local/mzsm16e.pcf.gz
-lib/X11/fonts/local/mzsm16h.pcf.gz
+@comment $NetBSD: PLIST,v 1.4 2014/06/01 16:35:35 wiz Exp $
+share/fonts/X11/local/mzgt16e.pcf.gz
+share/fonts/X11/local/mzgt16h.pcf.gz
+share/fonts/X11/local/mzgt16h1.pcf.gz
+share/fonts/X11/local/mzmj16e.pcf.gz
+share/fonts/X11/local/mzmj16h.pcf.gz
+share/fonts/X11/local/mzpg16e.pcf.gz
+share/fonts/X11/local/mzpg16h.pcf.gz
+share/fonts/X11/local/mzsm16e.pcf.gz
+share/fonts/X11/local/mzsm16h.pcf.gz

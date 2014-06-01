@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 18:28:21 asau Exp $
+# $NetBSD: Makefile,v 1.6 2014/06/01 16:35:33 wiz Exp $
 #
 
 DISTNAME=		font-misc-misc-1.1.2
+PKGREVISION=		1
 CATEGORIES=		fonts
 MASTER_SITES=		${MASTER_SITE_XORG:=font/}
 EXTRACT_SUFX=		.tar.bz2
@@ -13,7 +14,7 @@ COMMENT=		Standard X11 "fixed" PCF font
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config bdftopcf ucs2any gzip
 
-FONTS_DIRS.x11=		lib/X11/fonts/misc
+FONTS_DIRS.x11=		share/fonts/X11/misc
 
 .include "../../fonts/font-util/buildlink3.mk"
 
