@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.45 2014/05/03 02:59:47 obache Exp $
+$NetBSD: distinfo,v 1.46 2014/06/01 17:55:33 wiz Exp $
 
 SHA1 (openjdk7/UnlimitedJCEPolicyJDK7.zip) = 7d3c9ee89536b82cd21c680088b1bced16017253
 RMD160 (openjdk7/UnlimitedJCEPolicyJDK7.zip) = a4a6a284579f43d2df3532d279e143d2f03c2c3f
@@ -76,7 +76,7 @@ SHA1 (patch-al) = d174343a5baa8a73d18ff1020cb0cc19e6714175
 SHA1 (patch-am) = d9b30616a7803d1f10751a2c6950317c167c5703
 SHA1 (patch-an) = da6a3a2451504a71faed11789fa7b015867a89cd
 SHA1 (patch-ao) = 6bfc842ceb0d7e03f9288e80fe762bd1d54cf503
-SHA1 (patch-ap) = 0ef305622c8d1ee1d5d6361b5af352251d52929a
+SHA1 (patch-ap) = cf1d5a79fdf57316f40a91fed30a87ae4a04d476
 SHA1 (patch-aq) = 97303ebcdcf0251406eef816ae56c82c703dab9d
 SHA1 (patch-ar) = 6544d4c7d4f30a3baeac95834e41ce8f7d41f9ec
 SHA1 (patch-as) = 0cef122fb4e8606a9f4923d44079156b89dca0c2
@@ -86,7 +86,7 @@ SHA1 (patch-bd) = b192cab222f76b5c05935946c6229117dd905423
 SHA1 (patch-bg) = 90328bd927c52e62d97c72fade2ceb70d42fe273
 SHA1 (patch-bh) = 33b56c77da352e710350a9e210660a78b11930a6
 SHA1 (patch-bi) = 9323d54054e5b3112e96ba311014c8228009de1a
-SHA1 (patch-bn) = e90012a3acbdeec1fe97d53ffa11816379ac90e9
+SHA1 (patch-bn) = 880785559645be0fc2a93dbb14695d83631f3620
 SHA1 (patch-corba_make_common_shared_Defs-java.gmk) = 548718a351fe6159d3de4120cba90701c064ddda
 SHA1 (patch-corba_make_common_shared_Defs-utils.gmk) = e3b6d4683f1128bc1b2e5d8453608228da54e3d2
 SHA1 (patch-corba_make_common_shared_Platform.gmk) = 057af9ea52ca257750267289e4f1a950df0ed756
