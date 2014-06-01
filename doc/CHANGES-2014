@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2086 2014/06/01 01:09:01 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2087 2014/06/01 03:58:11 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2868,3 +2868,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-flask-user to 0.5.0 [rodent 2014-06-01]
 	Updated finance/py-stripe to 1.16.0 [rodent 2014-06-01]
 	Updated devel/py-py2app to 0.8.1 [rodent 2014-06-01]
+	Updated converters/libmwaw to 0.2.1 [ryoon 2014-06-01]
