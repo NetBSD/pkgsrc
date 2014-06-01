@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2013/06/29 20:29:46 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.30 2014/06/01 16:00:30 tsutsui Exp $
 bin/mlcc
 bin/mlclient
 bin/mlclientx
@@ -39,8 +39,6 @@ lib/mlterm/libmotif.la
 lib/mlterm/libmozmodern.la
 lib/mlterm/libnext.la
 lib/mlterm/libsample.la
-${PLIST.fb}lib/mlterm/libsample-fb.la
-lib/mlterm/libsample2.la
 libexec/mlterm/mlconfig
 libexec/mlterm/mlimgloader
 libexec/mlterm/mlterm-menu
