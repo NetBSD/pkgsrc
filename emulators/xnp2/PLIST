@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/06/02 07:19:33 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/06/01 14:59:42 tsutsui Exp $
 bin/xnp2
+bin/xnp21
 man/ja/man1/xnp2.1
+man/ja/man1/xnp21.1
 man/man1/xnp2.1
+man/man1/xnp21.1
 share/doc/xnp2/README.ja
 share/xnp2/fddseek.wav
 share/xnp2/fddseek1.wav
