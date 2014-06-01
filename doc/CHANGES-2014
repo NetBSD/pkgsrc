@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2092 2014/06/01 13:26:09 obache Exp $
+$NetBSD: CHANGES-2014,v 1.2093 2014/06/01 13:30:47 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2874,3 +2874,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/mediawiki to 1.22.7 [wen 2014-06-01]
 	Added textproc/ruby-toml version 0.1.1 [bsiegert 2014-06-01]
 	Added textproc/libpinyin version 1.0.0 [obache 2014-06-01]
+	Added inputmethod/ibus-libpinyin version 1.6.92 [obache 2014-06-01]
