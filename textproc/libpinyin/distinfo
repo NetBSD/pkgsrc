@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/06/01 13:25:55 obache Exp $
+
+SHA1 (libpinyin-1.0.0.tar.gz) = fd1748074c61c4fc420bdbe61c957f3a13669b0e
+RMD160 (libpinyin-1.0.0.tar.gz) = 578c6e8193ee1162c4aafd83ed8d18cba8144b07
+Size (libpinyin-1.0.0.tar.gz) = 19726060 bytes
