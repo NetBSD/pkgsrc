@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2013/04/08 01:42:40 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2014/06/01 16:35:32 wiz Exp $
 #
 
 DISTNAME=	courier-prime
 # version number comes from include readme.
 PKGNAME=	${DISTNAME}-1.203
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	http://quoteunquoteapps.com/downloads/
 EXTRACT_SUFX=	.zip
@@ -17,7 +18,7 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 
 USE_LANGUAGES=	# none
 
-FONTS_DIRS.ttf=	${PREFIX}/lib/X11/fonts/TTF
+FONTS_DIRS.ttf=	${PREFIX}/share/fonts/X11/TTF
 INSTALLATION_DIRS=	${FONTS_DIRS.ttf}
 INSTALLATION_DIRS+=	share/doc/courier-prime
 

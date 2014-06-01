@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 18:28:31 asau Exp $
+# $NetBSD: Makefile,v 1.5 2014/06/01 16:35:37 wiz Exp $
 #
 
 DISTNAME=	tamsyn-font-1.9
+PKGREVISION=	1
 CATEGORIES=	fonts x11
 MASTER_SITES=	http://www.fial.com/~scott/tamsyn-font/download/
 
@@ -11,7 +12,7 @@ COMMENT=	Monospaced programming font
 # even less restrictions than that
 LICENSE=	isc
 
-FONTDIR=		${PREFIX}/lib/X11/fonts/tamsyn-font
+FONTDIR=		${PREFIX}/share/fonts/X11/tamsyn-font
 FONTS_DIRS.x11+=	${FONTDIR}
 
 INSTALLATION_DIRS=	${FONTDIR} share/doc/tamsyn-font

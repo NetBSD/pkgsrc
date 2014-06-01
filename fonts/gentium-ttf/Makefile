@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2013/04/08 00:35:44 rodent Exp $
+# $NetBSD: Makefile,v 1.6 2014/06/01 16:35:34 wiz Exp $
 #
 
 DISTNAME=	Gentium_102_W
 PKGNAME=	gentium-ttf-1.02
+PKGREVISION=	1
 CATEGORIES=	fonts
 EXTRACT_SUFX=	.zip
 
@@ -18,9 +19,9 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
-FONTS_DIRS.ttf+=	${PREFIX}/lib/X11/fonts/TTF
+FONTS_DIRS.ttf+=	${PREFIX}/share/fonts/X11/TTF
 
-INSTALLATION_DIRS=	lib/X11/fonts/TTF
+INSTALLATION_DIRS=	share/fonts/X11/TTF
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/GenAI102.TTF ${DESTDIR}${FONTS_DIRS.ttf}/genai102.ttf

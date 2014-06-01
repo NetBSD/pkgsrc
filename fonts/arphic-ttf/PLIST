@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:54:10 joerg Exp $
-lib/X11/fonts/TTF/bkai00mp.ttf
-lib/X11/fonts/TTF/bsmi00lp.ttf
-lib/X11/fonts/TTF/gbsn00lp.ttf
-lib/X11/fonts/TTF/gkai00mp.ttf
+@comment $NetBSD: PLIST,v 1.5 2014/06/01 16:35:32 wiz Exp $
+share/fonts/X11/TTF/bkai00mp.ttf
+share/fonts/X11/TTF/bsmi00lp.ttf
+share/fonts/X11/TTF/gbsn00lp.ttf
+share/fonts/X11/TTF/gkai00mp.ttf
 share/doc/arphic-ttf/ARPHICPL.TXT
 share/doc/arphic-ttf/logo.gif
 share/doc/arphic-ttf/release.txt

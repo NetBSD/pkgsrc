@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.90 2014/05/21 08:45:39 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2014/06/01 16:35:33 wiz Exp $
 
 DISTNAME=	fontconfig-2.11.1
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.fontconfig.org/release/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,7 +16,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-default-fonts=${LOCALBASE}/lib/X11/fonts
+CONFIGURE_ARGS+=	--with-default-fonts=${LOCALBASE}/share/fonts/X11
 CONFIGURE_ARGS+=	--with-expat-includes=${BUILDLINK_PREFIX.expat}/include
 CONFIGURE_ARGS+=	--with-expat-lib=${BUILDLINK_PREFIX.expat}/lib
 CONFIGURE_ARGS+=	--with-baseconfigdir=${PKG_SYSCONFDIR}
@@ -31,9 +32,9 @@ PKG_SYSCONFSUBDIR=	fontconfig
 
 ADDFONTS=	${PREFIX}/share/fonts/urw,${PREFIX}/share/ghostscript/fonts,${PREFIX}/share/fonts/X11
 .if ${X11BASE} != ${LOCALBASE}
-ADDFONTS:=	${X11BASE}/lib/X11/fonts,${ADDFONTS}
+ADDFONTS:=	${X11BASE}/share/fonts/X11,${ADDFONTS}
 .else
-ADDFONTS:=	${LOCALBASE}/lib/X11/fonts,${ADDFONTS}
+ADDFONTS:=	${LOCALBASE}/share/fonts/X11,${ADDFONTS}
 .endif
 
 .if ${OPSYS} == "Darwin"

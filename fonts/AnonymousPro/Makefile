@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2013/04/08 01:42:39 rodent Exp $
+# $NetBSD: Makefile,v 1.5 2014/06/01 16:35:31 wiz Exp $
 #
 
 DISTNAME=	AnonymousPro-1.001
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.ms-studio.com/FontSales/
 EXTRACT_SUFX=	.zip
@@ -19,9 +20,9 @@ NO_BUILD=	YES
 
 DOCSDIR=	${PREFIX}/share/doc/${PKGBASE}
 
-INSTALLATION_DIRS=	lib/X11/fonts/TTF ${DOCSDIR}
+INSTALLATION_DIRS=	share/fonts/X11/TTF ${DOCSDIR}
 
-FONTDIR=	${PREFIX}/lib/X11/fonts/TTF
+FONTDIR=	${PREFIX}/share/fonts/X11/TTF
 FONTS_DIRS.ttf=	${FONTDIR}
 
 INSTALL_FONTS=	AnonymousProB.ttf \

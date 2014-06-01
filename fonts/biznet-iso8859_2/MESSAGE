@@ -1,12 +1,12 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/03/17 14:17:44 skrll Exp $
+$NetBSD: MESSAGE,v 1.2 2014/06/01 16:35:32 wiz Exp $
 
 You can tell one existing X session on the installed host to use the
 new "biznet-iso8859-2" fonts with:
 
-	$ xset +fp ${PREFIX}/lib/X11/fonts/biznet/100dpi/
-	$ xset +fp ${PREFIX}/lib/X11/fonts/biznet/75dpi/
-	$ xset +fp ${PREFIX}/lib/X11/fonts/biznet/misc/
+	$ xset +fp ${PREFIX}/share/fonts/X11/biznet/100dpi/
+	$ xset +fp ${PREFIX}/share/fonts/X11/biznet/75dpi/
+	$ xset +fp ${PREFIX}/share/fonts/X11/biznet/misc/
 	$ xset fp rehash
 
 To make the effect permanent for future X sessions, you will have to
@@ -26,12 +26,12 @@ biznet-iso8859-2 install directory to the xfs/config file in the comma
 separated list of directories given for the "catalogue" setting.
 For example:
 
-	catalogue = ${PREFIX}/lib/X11/fonts/misc/,
-		  ${PREFIX}/lib/X11/fonts/Speedo/,
-		  ${PREFIX}/lib/X11/fonts/Type1/,
-		  ${PREFIX}/lib/X11/fonts/100dpi/,
-		  ${PREFIX}/lib/X11/fonts/75dpi/,
-		  ${PREFIX}/lib/X11/fonts/biznet/100dpi/,
-		  ${PREFIX}/lib/X11/fonts/biznet/75dpi/,
-		  ${PREFIX}/lib/X11/fonts/biznet/misc/
+	catalogue = ${PREFIX}/share/fonts/X11/misc/,
+		  ${PREFIX}/share/fonts/X11/Speedo/,
+		  ${PREFIX}/share/fonts/X11/Type1/,
+		  ${PREFIX}/share/fonts/X11/100dpi/,
+		  ${PREFIX}/share/fonts/X11/75dpi/,
+		  ${PREFIX}/share/fonts/X11/biznet/100dpi/,
+		  ${PREFIX}/share/fonts/X11/biznet/75dpi/,
+		  ${PREFIX}/share/fonts/X11/biznet/misc/
 ===========================================================================

@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/04/09 15:19:31 itojun Exp $
+$NetBSD: patch-aa,v 1.2 2014/06/01 16:35:35 wiz Exp $
 --- Makefile.orig	Thu Nov 12 11:49:58 1998
 +++ Makefile	Thu Nov 12 16:11:26 1998
 @@ -0,0 +1,25 @@
@@ -8,7 +8,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/04/09 15:19:31 itojun Exp $
 +BDF=	${TMP:C/.Z$//}
 +PCF=	${BDF:C/.bdf$/.pcf/}
 +
-+DIR=	${PREFIX}/lib/X11/fonts/local
++DIR=	${PREFIX}/share/fonts/X11/local
 +
 +all:	${PCF}
 +

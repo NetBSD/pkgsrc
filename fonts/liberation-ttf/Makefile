@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2014/01/27 18:41:12 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2014/06/01 16:35:36 wiz Exp $
 
 DISTNAME=	liberation-fonts-ttf-2.00.1
 PKGNAME=	${DISTNAME:S/-fonts//}
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	https://fedorahosted.org/releases/l/i/liberation-fonts/ \
 		${MASTER_SITE_LOCAL}
@@ -15,7 +16,7 @@ NO_BUILD=	yes
 NO_CONFIGURE=	yes
 
 DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
-FONTDIR=	${PREFIX}/lib/X11/fonts/TTF
+FONTDIR=	${PREFIX}/share/fonts/X11/TTF
 FONTS_DIRS.ttf=	${FONTDIR}
 
 INSTALLATION_DIRS=	${DOCDIR} ${FONTDIR}

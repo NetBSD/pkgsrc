@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 18:28:30 asau Exp $
+# $NetBSD: Makefile,v 1.4 2014/06/01 16:35:37 wiz Exp $
 #
 
 DISTNAME=	roboto-fonts-20111115a
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,10 +16,10 @@ USE_LANGUAGES=	# none
 USE_X11BASE=	yes
 NO_BUILD=	yes
 
-FONTDIR=	${PREFIX}/lib/X11/fonts/TTF
+FONTDIR=	${PREFIX}/share/fonts/X11/TTF
 FONTS_DIRS.ttf=	${FONTDIR}
 
-INSTALLATION_DIRS=	lib/X11/fonts/TTF \
+INSTALLATION_DIRS=	share/fonts/X11/TTF \
 			${PREFIX}/share/doc/${PKGBASE}
 
 INSTALL_FONTS=	Roboto-Bold.ttf \

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 18:28:28 asau Exp $
+# $NetBSD: Makefile,v 1.11 2014/06/01 16:35:36 wiz Exp $
 
 DISTNAME=	mozilla-fonts-1.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	fonts www
 #MASTER_SITES=	http://www.myrddin.demon.co.uk/dist/
 
@@ -10,8 +10,8 @@ MAINTAINER=	rxg@NetBSD.org
 COMMENT=	Optimized fonts for Netscape/Mozilla
 
 USE_TOOLS+=	bdftopcf gzip
-FONTS_DIRS.x11+=	${PREFIX}/lib/X11/fonts/Mozilla
-REQD_DIRS+=		${PREFIX}/lib/X11/fonts/Mozilla
+FONTS_DIRS.x11+=	${PREFIX}/share/fonts/X11/Mozilla
+REQD_DIRS+=		${PREFIX}/share/fonts/X11/Mozilla
 
 INSTALLATION_DIRS=	share/doc/mozilla-fonts
 

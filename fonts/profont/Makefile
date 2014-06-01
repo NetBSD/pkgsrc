@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 18:28:29 asau Exp $
+# $NetBSD: Makefile,v 1.11 2014/06/01 16:35:36 wiz Exp $
 #
 
 DISTNAME=	profontlinux
 PKGNAME=	profont-1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.tobiasjung.net/dl/
 EXTRACT_SUFX=	.zip
@@ -16,8 +16,8 @@ NO_BUILD=		yes
 NO_CONFIGURE=		yes
 USE_X11BASE=		yes
 
-FONTS_DIRS.x11=		${PREFIX}/lib/X11/fonts/misc
-INSTALLATION_DIRS=	lib/X11/fonts/misc
+FONTS_DIRS.x11=		${PREFIX}/share/fonts/X11/misc
+INSTALLATION_DIRS=	share/fonts/X11/misc
 
 do-install:
 	for i in ${WRKDIR}/*.pcf; do \

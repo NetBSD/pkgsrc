@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2013/04/08 01:42:40 rodent Exp $
+# $NetBSD: Makefile,v 1.5 2014/06/01 16:35:32 wiz Exp $
 #
 
 DISTNAME=	croscorefonts-1.21.0
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	http://gsdview.appspot.com/chromeos-localmirror/distfiles/
 
@@ -17,10 +18,10 @@ USE_LANGUAGES=	# none
 
 DOCSDIR=	${PREFIX}/share/doc/${PKGBASE}
 
-INSTALLATION_DIRS=	lib/X11/fonts/TTF \
+INSTALLATION_DIRS=	share/fonts/X11/TTF \
 			${DOCSDIR}
 
-FONTDIR=	${PREFIX}/lib/X11/fonts/TTF
+FONTDIR=	${PREFIX}/share/fonts/X11/TTF
 FONTS_DIRS.ttf=	${FONTDIR}
 
 INSTALL_FONTS=	Arimo-Bold.ttf \

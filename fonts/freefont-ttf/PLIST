@@ -1,16 +1,16 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:54:14 joerg Exp $
-lib/X11/fonts/TTF/FreeMono.ttf
-lib/X11/fonts/TTF/FreeMonoBold.ttf
-lib/X11/fonts/TTF/FreeMonoBoldOblique.ttf
-lib/X11/fonts/TTF/FreeMonoOblique.ttf
-lib/X11/fonts/TTF/FreeSans.ttf
-lib/X11/fonts/TTF/FreeSansBold.ttf
-lib/X11/fonts/TTF/FreeSansBoldOblique.ttf
-lib/X11/fonts/TTF/FreeSansOblique.ttf
-lib/X11/fonts/TTF/FreeSerif.ttf
-lib/X11/fonts/TTF/FreeSerifBold.ttf
-lib/X11/fonts/TTF/FreeSerifBoldItalic.ttf
-lib/X11/fonts/TTF/FreeSerifItalic.ttf
+@comment $NetBSD: PLIST,v 1.4 2014/06/01 16:35:34 wiz Exp $
+share/fonts/X11/TTF/FreeMono.ttf
+share/fonts/X11/TTF/FreeMonoBold.ttf
+share/fonts/X11/TTF/FreeMonoBoldOblique.ttf
+share/fonts/X11/TTF/FreeMonoOblique.ttf
+share/fonts/X11/TTF/FreeSans.ttf
+share/fonts/X11/TTF/FreeSansBold.ttf
+share/fonts/X11/TTF/FreeSansBoldOblique.ttf
+share/fonts/X11/TTF/FreeSansOblique.ttf
+share/fonts/X11/TTF/FreeSerif.ttf
+share/fonts/X11/TTF/FreeSerifBold.ttf
+share/fonts/X11/TTF/FreeSerifBoldItalic.ttf
+share/fonts/X11/TTF/FreeSerifItalic.ttf
 share/doc/freefont/AUTHORS
 share/doc/freefont/CREDITS
 share/doc/freefont/README

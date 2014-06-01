@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2012/10/03 18:28:17 asau Exp $
+# $NetBSD: Makefile,v 1.17 2014/06/01 16:35:32 wiz Exp $
 #
 
 DISTNAME=	ISO8859-2-pcf
 PKGNAME=	biznet-iso8859_2-1.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	fonts x11
 MASTER_SITES=	http://ultra.cto.us.edu.pl/pub/Unix/Fonts/
 
@@ -17,7 +17,7 @@ NO_BUILD=	YES
 
 USE_TOOLS+=	gzip
 
-FONTDIR=	${PREFIX}/lib/X11/fonts/biznet
+FONTDIR=	${PREFIX}/share/fonts/X11/biznet
 REQD_DIRS=	${FONTDIR} ${FONTDIR}/75dpi ${FONTDIR}/100dpi ${FONTDIR}/misc
 FONTS_DIRS.x11=	${FONTDIR}/75dpi ${FONTDIR}/100dpi ${FONTDIR}/misc
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2013/06/05 13:47:51 obache Exp $
+# $NetBSD: Makefile,v 1.21 2014/06/01 16:35:35 wiz Exp $
 
 DISTNAME=	jisx0212fonts-0.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	fonts x11 japanese
 MASTER_SITES=	ftp://ftp.jp.NetBSD.org/pub/NetBSD-jp/tut-jp/fonts/ \
 		http://www.freebsd.org/~itojun/distfiles/
@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	${DISTFILES}
 
 FONTS=		${DISTFILES:C/\.bdf.*$//}
-FONTDIR=	${PREFIX}/lib/X11/fonts/local
+FONTDIR=	${PREFIX}/share/fonts/X11/local
 FONTS_DIRS.x11=	${FONTDIR}
 
 USE_TOOLS+=	gzip gunzip bdftopcf

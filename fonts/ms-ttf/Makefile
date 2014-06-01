@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2013/04/06 14:58:18 rodent Exp $
+# $NetBSD: Makefile,v 1.21 2014/06/01 16:35:36 wiz Exp $
 
 DISTNAME=	# empty
 PKGNAME=	ms-ttf-20020306
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=corefonts/}
 DISTFILES=	andale32.exe webdin32.exe trebuc32.exe georgi32.exe \
@@ -30,7 +30,7 @@ DIST_SUBDIR=	ms-ttf
 EVAL_PREFIX+=	CABEXTRACT_PREFIX=cabextract
 CABEXTRACT_PREFIX_DEFAULT=${LOCALBASE}
 EXTRACT_CMD=	${CABEXTRACT_PREFIX}/bin/cabextract -q $${extract_file}
-FONTDIR=	${PREFIX}/lib/X11/fonts/TTF
+FONTDIR=	${PREFIX}/share/fonts/X11/TTF
 DOCDIR=		${PREFIX}/share/doc/ms-ttf
 FONTS_DIRS.ttf=	${FONTDIR}
 

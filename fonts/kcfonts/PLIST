@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2006/09/22 21:53:57 joerg Exp $
-lib/X11/fonts/local/fonts.alias
-lib/X11/fonts/local/kc8x15.pcf.gz
-lib/X11/fonts/local/kc12x24.pcf.gz
-lib/X11/fonts/local/kc15f.pcf.gz
-lib/X11/fonts/local/kc24f.pcf.gz
+@comment $NetBSD: PLIST,v 1.5 2014/06/01 16:35:35 wiz Exp $
+share/fonts/X11/local/fonts.alias
+share/fonts/X11/local/kc8x15.pcf.gz
+share/fonts/X11/local/kc12x24.pcf.gz
+share/fonts/X11/local/kc15f.pcf.gz
+share/fonts/X11/local/kc24f.pcf.gz

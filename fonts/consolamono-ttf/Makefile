@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2013/04/08 01:42:39 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2014/06/01 16:35:32 wiz Exp $
 #
 
 VER=		20121116
 DISTNAME=	consolamono
 PKGNAME=	${DISTNAME}-ttf-${VER}
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	http://openfontlibrary.org/assets/downloads/consolamono/7c6fa601cdc82be054fb2b8fd7e3c8cc/
 DIST_SUBDIR=	${PKGNAME_NOREV}
@@ -19,13 +20,13 @@ USE_LANGUAGES=	# none
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-INSTALLATION_DIRS=	lib/X11/fonts/TTF
-FONTS_DIRS.ttf=		${PREFIX}/lib/X11/fonts/TTF
+INSTALLATION_DIRS=	share/fonts/X11/TTF
+FONTS_DIRS.ttf=		${PREFIX}/share/fonts/X11/TTF
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/ConsolaMono-Bold.ttf \
-		${DESTDIR}${PREFIX}/lib/X11/fonts/TTF
+		${DESTDIR}${PREFIX}/share/fonts/X11/TTF
 	${INSTALL_DATA} ${WRKSRC}/ConsolaMono.ttf \
-		${DESTDIR}${PREFIX}/lib/X11/fonts/TTF
+		${DESTDIR}${PREFIX}/share/fonts/X11/TTF
 
 .include "../../mk/bsd.pkg.mk"

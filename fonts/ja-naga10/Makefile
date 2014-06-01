@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2013/06/09 13:00:47 obache Exp $
+# $NetBSD: Makefile,v 1.13 2014/06/01 16:35:34 wiz Exp $
 
 DISTNAME=		knj10-1.1
 PKGNAME=		ja-naga10-1.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		fonts x11 japanese
 MASTER_SITES=		http://hp.vector.co.jp/authors/VA013391/fonts/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
@@ -15,10 +15,10 @@ COMMENT=		10x10 dots X11 bitmap font for JIS X 0208
 USE_X11BASE=		YES
 USE_TOOLS+=		bdftopcf gzip patch
 DOCDIR=			${PREFIX}/share/doc
-FONTDIR=		${PREFIX}/lib/X11/fonts/local
+FONTDIR=		${PREFIX}/share/fonts/X11/local
 FONTS_DIRS.x11=		${FONTDIR}
 
-INSTALLATION_DIRS=	lib/X11/fonts/local share/doc
+INSTALLATION_DIRS=	share/fonts/X11/local share/doc
 
 post-extract:
 	cd ${WRKDIR}; \

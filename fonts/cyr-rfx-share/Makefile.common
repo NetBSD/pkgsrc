@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2013/01/11 23:25:48 joerg Exp $
+# $NetBSD: Makefile.common,v 1.16 2014/06/01 16:35:33 wiz Exp $
 
 # used by fonts/cyr-rfx-bulgarian-mik/Makefile
 # used by fonts/cyr-rfx-ibm-cp866/Makefile
@@ -32,16 +32,16 @@ NO_BUILD=	yes
 
 USE_TOOLS+=	tar gzcat
 
-FONTS_DIRS.x11+=	${PREFIX}/lib/X11/fonts/local/${CYR_RFX_ENCODING}/75dpi
-FONTS_DIRS.x11+=	${PREFIX}/lib/X11/fonts/local/${CYR_RFX_ENCODING}/misc
-REQD_DIRS+=		${PREFIX}/lib/X11/fonts/local/${CYR_RFX_ENCODING}
-REQD_DIRS+=		${PREFIX}/lib/X11/fonts/local/${CYR_RFX_ENCODING}/75dpi
-REQD_DIRS+=		${PREFIX}/lib/X11/fonts/local/${CYR_RFX_ENCODING}/misc
+FONTS_DIRS.x11+=	${PREFIX}/share/fonts/X11/local/${CYR_RFX_ENCODING}/75dpi
+FONTS_DIRS.x11+=	${PREFIX}/share/fonts/X11/local/${CYR_RFX_ENCODING}/misc
+REQD_DIRS+=		${PREFIX}/share/fonts/X11/local/${CYR_RFX_ENCODING}
+REQD_DIRS+=		${PREFIX}/share/fonts/X11/local/${CYR_RFX_ENCODING}/75dpi
+REQD_DIRS+=		${PREFIX}/share/fonts/X11/local/${CYR_RFX_ENCODING}/misc
 
-INSTALLATION_DIRS=	lib/X11/fonts/local
+INSTALLATION_DIRS=	share/fonts/X11/local
 
 do-install:
-	cd ${DESTDIR}${PREFIX}/lib/X11/fonts/local && \
+	cd ${DESTDIR}${PREFIX}/share/fonts/X11/local && \
 	${GZCAT} ${_DISTDIR}/${DISTFILES} | \
 	${TAR} xf - ${CYR_RFX_ENCODING}/misc ${CYR_RFX_ENCODING}/75dpi
 

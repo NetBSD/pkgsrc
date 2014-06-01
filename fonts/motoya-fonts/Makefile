@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 18:28:28 asau Exp $
+# $NetBSD: Makefile,v 1.4 2014/06/01 16:35:36 wiz Exp $
 #
 
 DISTNAME=	motoya-fonts-20111115
+PKGREVISION=	1
 CATEGORIES=	fonts japanese
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,12 +16,12 @@ USE_LANGUAGES=	# none
 USE_X11BASE=	YES
 NO_BUILD=	YES
 
-FONTDIR=	${PREFIX}/lib/X11/fonts/TTF
+FONTDIR=	${PREFIX}/share/fonts/X11/TTF
 FONTS_DIRS.ttf=	${FONTDIR}
 
 DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 
-INSTALLATION_DIRS=	lib/X11/fonts/TTF \
+INSTALLATION_DIRS=	share/fonts/X11/TTF \
 			${DOCDIR}
 
 INSTALL_FONTS=	MTLc3m.ttf \

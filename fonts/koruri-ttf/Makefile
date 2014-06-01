@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2014/05/10 15:17:22 nonaka Exp $
+# $NetBSD: Makefile,v 1.3 2014/06/01 16:35:35 wiz Exp $
 #
 
 DISTNAME=	Koruri-${KORURI_VERSION}
 PKGNAME=	koruri-ttf-${KORURI_VERSION}
+PKGREVISION=	1
 CATEGORIES=	fonts japanese
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=koruri/61152/}
 EXTRACT_SUFX=	.tar.xz
@@ -18,11 +19,11 @@ USE_X11BASE=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
-FONTDIR=	${PREFIX}/lib/X11/fonts/TTF
+FONTDIR=	${PREFIX}/share/fonts/X11/TTF
 FONTS_DIRS.ttf=	${FONTDIR}
 DOCSDIR=	${PREFIX}/share/doc/${PKGBASE}
 
-INSTALLATION_DIRS=	lib/X11/fonts/TTF \
+INSTALLATION_DIRS=	share/fonts/X11/TTF \
 			share/doc/${PKGBASE}
 
 INSTALL_FONTS=	Koruri-Bold.ttf \

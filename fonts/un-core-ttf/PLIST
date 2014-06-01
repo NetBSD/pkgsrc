@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2008/12/21 00:25:00 minskim Exp $
-lib/X11/fonts/TTF/UnBatang.ttf
-lib/X11/fonts/TTF/UnBatangBold.ttf
-lib/X11/fonts/TTF/UnDinaru.ttf
-lib/X11/fonts/TTF/UnDinaruBold.ttf
-lib/X11/fonts/TTF/UnDinaruLight.ttf
-lib/X11/fonts/TTF/UnDotum.ttf
-lib/X11/fonts/TTF/UnDotumBold.ttf
-lib/X11/fonts/TTF/UnGraphic.ttf
-lib/X11/fonts/TTF/UnGraphicBold.ttf
-lib/X11/fonts/TTF/UnGungseo.ttf
-lib/X11/fonts/TTF/UnPilgi.ttf
-lib/X11/fonts/TTF/UnPilgiBold.ttf
+@comment $NetBSD: PLIST,v 1.3 2014/06/01 16:35:37 wiz Exp $
+share/fonts/X11/TTF/UnBatang.ttf
+share/fonts/X11/TTF/UnBatangBold.ttf
+share/fonts/X11/TTF/UnDinaru.ttf
+share/fonts/X11/TTF/UnDinaruBold.ttf
+share/fonts/X11/TTF/UnDinaruLight.ttf
+share/fonts/X11/TTF/UnDotum.ttf
+share/fonts/X11/TTF/UnDotumBold.ttf
+share/fonts/X11/TTF/UnGraphic.ttf
+share/fonts/X11/TTF/UnGraphicBold.ttf
+share/fonts/X11/TTF/UnGungseo.ttf
+share/fonts/X11/TTF/UnPilgi.ttf
+share/fonts/X11/TTF/UnPilgiBold.ttf

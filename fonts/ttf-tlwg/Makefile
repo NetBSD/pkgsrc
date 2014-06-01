@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/03/31 08:11:14 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 16:35:37 wiz Exp $
 
 DISTNAME=	ttf-tlwg-0.6.0
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	ftp://linux.thai.net/pub/thailinux/software/thai-ttf/
 EXTRACT_SUFX=	.tar.xz
@@ -12,7 +13,7 @@ COMMENT=	Thai fonts in TTF format
 
 USE_LANGUAGES=	# none
 
-FONTDIR=	${PREFIX}/lib/X11/fonts/TTF
+FONTDIR=	${PREFIX}/share/fonts/X11/TTF
 FONTS_DIRS.ttf= ${FONTDIR}
 PKG_SYSCONFSUBDIR=	fontconfig
 CONF_FILES=	${PREFIX}/share/fontconfig/conf.avail/64-ttf-thai-tlwg.conf \

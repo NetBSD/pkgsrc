@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 18:28:27 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/06/01 16:35:36 wiz Exp $
 
 DISTNAME=		lohit-fonts-2.3.1
+PKGREVISION=		1
 CATEGORIES=		fonts
 MASTER_SITES=		http://rbhalera.fedorapeople.org/released/lohit/
 MASTER_SITES+=		${MASTER_SITE_GENTOO:=distfiles/}
@@ -13,10 +14,10 @@ USE_X11BASE=		yes
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
 
-FONTDIR=		${PREFIX}/lib/X11/fonts/TTF
+FONTDIR=		${PREFIX}/share/fonts/X11/TTF
 FONTS_DIRS.ttf+=	${FONTDIR}
 
-INSTALLATION_DIRS=	lib/X11/fonts/TTF
+INSTALLATION_DIRS=	share/fonts/X11/TTF
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/bengali/lohit_bn.ttf	${DESTDIR}${FONTDIR}/

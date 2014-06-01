@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2012/12/26 21:24:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2014/06/01 16:35:37 wiz Exp $
 #
 
 DISTNAME=	sgi-fonts-1.0-457.src
 PKGNAME=	sgi-fonts-1.0.457
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	fonts
 MASTER_SITES=	http://public.planetmirror.com/pub/suse/i386/8.2/suse/src/
 EXTRACT_SUFX=	.rpm
@@ -16,20 +16,20 @@ WRKSRC=		${WRKDIR}/sgi-fonts
 USE_LANGUAGES=	c
 
 USE_X11BASE=	yes
-FONTS_DIRS.x11=	${PREFIX}/lib/X11/fonts/misc/sgi
+FONTS_DIRS.x11=	${PREFIX}/share/fonts/X11/misc/sgi
 
 USE_IMAKE=	yes
 USE_TOOLS+=	bdftopcf bzcat tar pax
 
-INSTALLATION_DIRS=	lib/X11/fonts/misc/sgi
+INSTALLATION_DIRS=	share/fonts/X11/misc/sgi
 
 post-extract:
 	cd ${WRKDIR} && bzcat sgi-fonts.tar.bz2 | tar xf -
 
 do-install:
 	cd ${WRKSRC} && pax -rw -pm *pcf.gz \
-		${DESTDIR}${PREFIX}/lib/X11/fonts/misc/sgi
+		${DESTDIR}${PREFIX}/share/fonts/X11/misc/sgi
 	${INSTALL_DATA} ${WRKSRC}/Scr15.pcf \
-		${DESTDIR}${PREFIX}/lib/X11/fonts/misc/sgi
+		${DESTDIR}${PREFIX}/share/fonts/X11/misc/sgi
 
 .include "../../mk/bsd.pkg.mk"

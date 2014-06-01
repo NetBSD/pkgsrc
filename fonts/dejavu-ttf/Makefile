@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2013/09/02 16:47:42 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2014/06/01 16:35:33 wiz Exp $
 
 DISTNAME=	dejavu-fonts-ttf-2.34
 PKGNAME=	${DISTNAME:S/fonts-//}
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dejavu/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,7 +14,7 @@ COMMENT=	DejaVu family of TrueType fonts
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-FONTS_DIRS.ttf=	${PREFIX}/lib/X11/fonts/TTF
+FONTS_DIRS.ttf=	${PREFIX}/share/fonts/X11/TTF
 
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 FCEGDIR=	${EGDIR}/fontconfig-conf.d
@@ -39,7 +40,7 @@ CONF_FILES+=	${FCEGDIR}/57-dejavu-serif.conf \
 REQD_DIRS=	${EGDIR}
 REQD_DIRS+=	${FCEGDIR}
 
-INSTALLATION_DIRS=	lib/X11/fonts/TTF ${DOCSDIR} ${FCEGDIR}
+INSTALLATION_DIRS=	share/fonts/X11/TTF ${DOCSDIR} ${FCEGDIR}
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/ttf/*.ttf ${DESTDIR}${FONTS_DIRS.ttf}

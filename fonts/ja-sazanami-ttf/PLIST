@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/06 05:16:23 uebayasi Exp $
-lib/X11/fonts/TTF/sazanami-gothic.ttf
-lib/X11/fonts/TTF/sazanami-mincho.ttf
+@comment $NetBSD: PLIST,v 1.2 2014/06/01 16:35:34 wiz Exp $
+share/fonts/X11/TTF/sazanami-gothic.ttf
+share/fonts/X11/TTF/sazanami-mincho.ttf
