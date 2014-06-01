@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13346 2014/05/31 13:08:05 ryoon Exp $
+$NetBSD: TODO,v 1.13347 2014/06/01 13:51:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -663,6 +663,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gtodo-applet-0.16.2
 	o guile-2.0.11
 	o guile-gtk-2.0
+	o gupnp-0.20.12
 	o gutenprint-lib-5.2.10
 	o gwaei-3.6.2
 	o gworkspace-0.9.2
@@ -671,6 +672,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o handbrake-0.9.9
 	o hanzim-3.5
+	o harfbuzz-0.9.29
 	o haskell-mode-1.45
 	o hdf-4.2.7
 	o hesiod-3.1.0
@@ -697,6 +699,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o instiki-0.13
 	o iodbc-3.52.9
 	o ircservices-5.1.21
+	o irssi-0.8.16
 	o ispell-ga-4.6
 	o ja-vflib-lib-3.6.10
 	o ja-vflib-utils-2.25.6
@@ -730,6 +733,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o krusader-2.0
 	o ktorrent-4.3.1
 	o ktorrent3-3.3.4
+	o latexmk-439
 	o lbdb-0.39
 	o lcc-4.2
 	o ldapsdk-6.0.7
@@ -761,6 +765,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmicrohttpd-0.9.36
 	o libmspub-0.1.0
 	o libnasl-2.3.1
+	o libogg-1.3.2
 	o liboobs-2.32.0 [GNOME 2.32]
 	o libpcap-1.5.1
 	o libprelude-1.1.0
@@ -1044,6 +1049,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o scipy-0.13.3
 	o scm-5e7
 	o screen-4.2.1
+	o scribus-1.4.4
 	o scripts-1.0.1
 	o scrollz-1.9.99
 	o scsh-1.3.0
@@ -1194,7 +1200,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wxGTK-3.0
 	o wxRemind-101
 	o wyrd-1.4.6
-	o x264-devel-20140524
+	o x264-devel-20140531
 	o xanalyser-1.30
 	o xbindkeys-1.8.6
 	o xbindkeys-tk-1.8.0
