@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/04/09 07:27:03 obache Exp $
+# $NetBSD: Makefile,v 1.7 2014/06/01 04:01:06 ryoon Exp $
 
 DISTNAME=	libmspub-0.0.6
 PKGREVISION=	4
@@ -14,8 +14,10 @@ LICENSE=	mpl-1.1 OR gnu-lgpl-v2 OR gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 CONFIGURE_ARGS+=	--without-docs
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 PKGCONFIG_OVERRIDE+=	libmspub.pc.in
 
