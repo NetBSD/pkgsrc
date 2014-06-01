@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2012/10/08 13:45:35 asau Exp $
+# $NetBSD: Makefile,v 1.15 2014/06/01 18:06:14 wiz Exp $
 
 DISTNAME=	acroread8	# overridden below
 PKGNAME=	acroread8-8.1.7
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	print
 MASTER_SITES=	http://ardownload.adobe.com/pub/adobe/reader/unix/8.x/8.1.7/enu/
 
@@ -45,7 +45,7 @@ BIN_PATCH=	${PATCH} --quiet ${_PATCH_BACKUP_ARG} .orig
 
 # Additional directories to search for fonts
 BUILD_DEFS+=		ACROREAD_FONTPATH
-ACROREAD_FONTPATH?=	${PREFIX}/lib/X11/fonts/TTF
+ACROREAD_FONTPATH?=	${PREFIX}/share/fonts/X11/TTF
 
 INSTALLATION_DIRS=	Acrobat8 bin
 
