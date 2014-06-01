@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2099 2014/06/01 16:03:06 tsutsui Exp $
+$NetBSD: CHANGES-2014,v 1.2100 2014/06/01 16:25:14 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2881,3 +2881,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/xnp2 to 20140531 [tsutsui 2014-06-01]
 	Updated games/onscripter to 20140504 [tsutsui 2014-06-01]
 	Updated x11/mlterm to 3.3.6 [tsutsui 2014-06-01]
+	Updated misc/ruby-parallel to 1.0.0 [tsutsui 2014-06-01]
