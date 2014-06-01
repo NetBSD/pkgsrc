@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2012/10/08 13:45:49 asau Exp $
-#
+# $NetBSD: Makefile,v 1.22 2014/06/01 18:07:15 wiz Exp $
 
 DISTNAME=	xpdf-korean-2005-jul-07
 PKGNAME=	xpdf-korean-20050707
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/ \
 		http://gd.tuwien.ac.at/publishing/xpdf/
@@ -24,8 +23,8 @@ INSTALLATION_DIRS+=	share/xpdf/korean/CMap
 post-patch:
 	${MV} ${WRKSRC}/add-to-xpdfrc ${WRKSRC}/add-to-xpdfrc.orig
 	${SED} -e 's:/usr/local:'${PREFIX}':g' < ${WRKSRC}/add-to-xpdfrc.orig > ${WRKSRC}/add-to-xpdfrc
-	${ECHO} "displayCIDFontTT	Adobe-Korea1	${PREFIX}/lib/X11/fonts/TTF/batang.ttf" >> ${WRKSRC}/add-to-xpdfrc
-	${ECHO} "displayCIDFontTT	Unidocs-Korea1	${PREFIX}/lib/X11/fonts/TTF/batang.ttf" >> ${WRKSRC}/add-to-xpdfrc
+	${ECHO} "displayCIDFontTT	Adobe-Korea1	${PREFIX}/share/fonts/X11/TTF/batang.ttf" >> ${WRKSRC}/add-to-xpdfrc
+	${ECHO} "displayCIDFontTT	Unidocs-Korea1	${PREFIX}/share/fonts/X11/TTF/batang.ttf" >> ${WRKSRC}/add-to-xpdfrc
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/Adobe-Korea1.cidToUnicode \

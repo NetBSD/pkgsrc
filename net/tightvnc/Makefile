@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2014/05/29 23:37:12 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2014/06/01 18:04:07 wiz Exp $
 
 DISTNAME=		tightvnc-1.3.10
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		net x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vnc-tight/}
 DISTFILES=		${DISTNAME}_unixsrc.tar.bz2
@@ -44,7 +44,7 @@ RGBPATH=		${PREFIX}/share/X11/rgb
 .else
 RGBPATH=		${X11BASE}/lib/X11/rgb
 .endif
-FONTPATH=		${X11BASE}/share/fonts/X11/misc,${X11BASE}/share/fonts/X11/75dpi,${X11BASE}/lib/X11/fonts/misc,${X11BASE}/lib/X11/fonts/75dpi
+FONTPATH=		${PREFIX}/share/fonts/X11/misc,${PREFIX}/share/fonts/X11/75dpi,${X11BASE}/lib/X11/fonts/misc,${X11BASE}/lib/X11/fonts/75dpi
 
 SUBST_CLASSES+=		hpath
 SUBST_STAGE.hpath=	pre-configure

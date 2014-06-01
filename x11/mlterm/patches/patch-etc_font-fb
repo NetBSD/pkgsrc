@@ -1,4 +1,4 @@
-$NetBSD: patch-etc_font-fb,v 1.6 2014/03/23 07:04:00 tsutsui Exp $
+$NetBSD: patch-etc_font-fb,v 1.7 2014/06/01 18:11:36 wiz Exp $
 
 add more examples for typical NetBSD and pkgsrc installation
 
@@ -6,7 +6,7 @@ add more examples for typical NetBSD and pkgsrc installation
 +++ etc/font-fb
 @@ -1,10 +1,17 @@
  #DEFAULT = /usr/share/fonts/X11/misc/unifont.pcf.gz:100
-+#DEFAULT = /usr/pkg/lib/X11/fonts/efont/b16.pcf.gz
++#DEFAULT = /usr/pkg/share/fonts/X11/efont/b16.pcf.gz
  
  #ISO8859_1 = /usr/share/fonts/X11/misc/mplus_f12r.pcf.gz
 +#ISO8859_1 = /usr/X11R7/lib/X11/fonts/misc/8x16.pcf.gz
@@ -16,9 +16,9 @@ add more examples for typical NetBSD and pkgsrc installation
  JISC6226_1978 = &JISX0208_1983
  JISX0208_1990 = &JISX0208_1983
  JISX0213_2000_1 = &JISX0208_1983
-+#JISX0213_2000_1=/usr/pkg/lib/X11/fonts/local/jiskan16-2000-1.pcf.gz
-+#JISX0213_2000_2=/usr/pkg/lib/X11/fonts/local/jiskan16-2000-2.pcf.gz
++#JISX0213_2000_1=/usr/pkg/share/fonts/X11/local/jiskan16-2000-1.pcf.gz
++#JISX0213_2000_2=/usr/pkg/share/fonts/X11/local/jiskan16-2000-2.pcf.gz
  
  #ISO10646_UCS4_1 = /usr/share/fonts/X11/misc/unifont.pcf.gz:100
-+#ISO10646_UCS4_1 = /usr/pkg/lib/X11/fonts/efont/b16.pcf.gz
++#ISO10646_UCS4_1 = /usr/pkg/share/fonts/X11/efont/b16.pcf.gz
  ISO10646_UCS4_1_FULLWIDTH = &ISO10646_UCS4_1

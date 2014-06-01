@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.173 2014/05/29 23:37:01 wiz Exp $
+# $NetBSD: Makefile,v 1.174 2014/06/01 17:56:57 wiz Exp $
 
 DISTNAME=		vlc-${VLC_VERSION}
-PKGREVISION=		45
+PKGREVISION=		46
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vlc/} \
 			http://download.videolan.org/pub/videolan/vlc/${VLC_VERSION}/
@@ -85,7 +85,7 @@ post-install:
 # Let's use dejavu-ttf as it has nice unicode support
 #
 ORIGFNT=		/usr/share/fonts/truetype/freefont/FreeSerifBold.ttf
-DEFAULT_FONT?=		${PREFIX}/lib/X11/fonts/TTF/DejaVuSans.ttf
+DEFAULT_FONT?=		${PREFIX}/share/fonts/X11/TTF/DejaVuSans.ttf
 DEPENDS+=		dejavu-ttf>=2.26:../../fonts/dejavu-ttf
 
 SUBST_CLASSES+=		oss

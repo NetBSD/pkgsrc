@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2014/02/19 09:44:56 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.6 2014/06/01 18:08:24 wiz Exp $
 
 DISTNAME=		grub-2.00
-PKGNAME=		grub2-2.00
-PKGREVISION=		2
+PKGNAME=		${DISTNAME:S/grub/grub2/}
+PKGREVISION=		3
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.gnu.org/gnu/grub/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
@@ -128,7 +127,7 @@ SUBST_CLASSES+=			fix-dejavu
 SUBST_STAGE.fix-dejavu=		pre-configure
 SUBST_MESSAGE.fix-dejavu=	Fixing dejavu search paths in configure.
 SUBST_FILES.fix-dejavu=		configure
-SUBST_SED.fix-dejavu=		-e 's, \(/usr/share/fonts/dejavu\);, \1 ${PREFIX}/lib/X11/fonts/TTF;,g'
+SUBST_SED.fix-dejavu=		-e 's, \(/usr/share/fonts/dejavu\);, \1 ${PREFIX}/share/fonts/X11/TTF;,g'
 
 #
 # Do not use `\t' with sed, as it's not portable.
