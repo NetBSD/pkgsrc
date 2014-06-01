@@ -1,6 +1,7 @@
-$NetBSD: patch-Modules___multiprocessing_multiprocessing.c,v 1.1 2014/06/01 13:38:16 ryoon Exp $
+$NetBSD: patch-Modules___multiprocessing_multiprocessing.c,v 1.2 2014/06/01 13:48:42 wiz Exp $
 
-
+DragonFlyBSD support
+http://bugs.python.org/issue21459
 
 --- Modules/_multiprocessing/multiprocessing.c.orig	2014-05-19 05:19:39.000000000 +0000
 +++ Modules/_multiprocessing/multiprocessing.c
