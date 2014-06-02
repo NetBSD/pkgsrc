@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2116 2014/06/02 06:15:20 adam Exp $
+$NetBSD: CHANGES-2014,v 1.2117 2014/06/02 07:55:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2900,3 +2900,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Added www/py-python3-digest version 1.8b4 [rodent 2014-06-02]
 	Added www/py-django-tastypie version 0.11.1 [rodent 2014-06-02]
 	Updated lang/python27 to 2.7.7 [adam 2014-06-02]
+	Updated databases/mysql55-client to 5.5.38 [adam 2014-06-02]
+	Updated databases/mysql55-server to 5.5.38 [adam 2014-06-02]
+	Updated databases/mysql56-client to 5.6.19 [adam 2014-06-02]
+	Updated databases/mysql56-server to 5.6.19 [adam 2014-06-02]
