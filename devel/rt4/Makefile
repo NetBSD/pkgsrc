@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2014/05/31 12:22:42 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2014/06/02 10:12:19 obache Exp $
 
 DISTNAME=	rt-4.2.1
 PKGNAME=	${DISTNAME:S/rt/rt4/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://download.bestpractical.com/pub/rt/release/
 
@@ -72,7 +72,7 @@ DEPENDS+=	p5-Regexp-IPv6-[0-9]*:../../net/p5-Regexp-IPv6
 DEPENDS+=	p5-Role-Basic-[0-9]*:../../devel/p5-Role-Basic
 # Scalar::Util is a part of p5-Scalar-List-Utils.
 DEPENDS+=	p5-Scalar-List-Utils-[0-9]*:../../devel/p5-Scalar-List-Utils
-DEPENDS+=	p5-Storable>=2.08:../../devel/p5-Storable
+DEPENDS+=	{perl>=5.8.1,p5-Storable>=2.08}:../../devel/p5-Storable
 DEPENDS+=	p5-Symbol-Global-Name>=0.04:../../devel/p5-Symbol-Global-Name
 DEPENDS+=	{perl>=5.8.9,p5-Sys-Syslog>=0.16}:../../sysutils/p5-Sys-Syslog
 DEPENDS+=	p5-Text-Password-Pronounceable-[0-9]*:../../security/p5-Text-Password-Pronounceable
