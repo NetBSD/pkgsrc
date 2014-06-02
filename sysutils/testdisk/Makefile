@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/05/20 09:08:05 obache Exp $
+# $NetBSD: Makefile,v 1.9 2014/06/02 12:18:06 obache Exp $
 #
 
 DISTNAME=		testdisk-6.14
@@ -25,5 +25,8 @@ GNU_CONFIGURE=		yes
 # disabled.
 .include "../../filesystems/libntfs/buildlink3.mk"
 
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
