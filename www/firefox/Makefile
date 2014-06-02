@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.167 2014/05/29 23:37:57 wiz Exp $
+# $NetBSD: Makefile,v 1.168 2014/06/02 02:31:55 dholland Exp $
 
 FIREFOX_VER=	${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=	29.0.1
@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}/mozilla-release
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.mozilla.com/en-US/firefox/
-COMMENT=	Web browser with support for extensions
+COMMENT=	Web browser with support for extensions (version 29.x)
 LICENSE=	mpl-1.1
 
 MOZILLA_DIR=	# empty
