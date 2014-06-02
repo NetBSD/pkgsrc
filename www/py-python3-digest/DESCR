@@ -1,0 +1,4 @@
+A Python library to aid in implementing HTTP Digest Authentication.
+
+This is the python 3.x-only version of the package. See www/py-python-digest
+for the python 2.x version.
