@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2121 2014/06/02 14:09:26 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2122 2014/06/02 14:20:07 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2908,3 +2908,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/knot to 1.4.6 [pettai 2014-06-02]
 	Updated mail/mimedefang to 2.75 [pettai 2014-06-02]
 	Updated mail/qmqtool to 1.14 [schmonz 2014-06-02]
+	Updated www/moodle to 2.7 [wen 2014-06-02]
