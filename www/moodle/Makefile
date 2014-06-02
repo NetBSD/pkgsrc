@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2014/05/29 23:37:58 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2014/06/02 14:15:37 wen Exp $
 
-DISTNAME=	moodle-2.5.6
-PKGREVISION=	1
+DISTNAME=	moodle-2.7
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=moodle/}
 EXTRACT_SUFX=	.tgz
@@ -11,16 +10,17 @@ HOMEPAGE=	http://www.moodle.org/
 COMMENT=	Course management system based on social constructionism
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PHP_PKG_PREFIX}-gd>=4.3.3:../../graphics/php-gd
-DEPENDS+=	${PHP_PKG_PREFIX}-iconv-[0-9]*:../../converters/php-iconv
-DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.2.0:../../converters/php-mbstring
-DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.2.0:../../www/php-curl
-DEPENDS+=	${PHP_PKG_PREFIX}-xmlrpc>=5.2.0:../../net/php-xmlrpc
-DEPENDS+=	${PHP_PKG_PREFIX}-dom>=5.2.0:../../textproc/php-dom
-DEPENDS+=	${PHP_PKG_PREFIX}-soap>=5.2.0:../../net/php-soap
-DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.2.0:../../textproc/php-json
-DEPENDS+=	${PHP_PKG_PREFIX}-intl>=2.0.0:../../textproc/php-intl
-DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.2.0:../../archivers/php-zip
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.4.4:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=5.4.4:../../converters/php-iconv
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.4.4:../../converters/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.4.4:../../www/php-curl
+DEPENDS+=	${PHP_PKG_PREFIX}-xmlrpc>=5.4.4:../../net/php-xmlrpc
+DEPENDS+=	${PHP_PKG_PREFIX}-dom>=5.4.4:../../textproc/php-dom
+DEPENDS+=	${PHP_PKG_PREFIX}-soap>=5.4.4:../../net/php-soap
+DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.4.4:../../textproc/php-json
+DEPENDS+=	${PHP_PKG_PREFIX}-intl>=5.4.4:../../textproc/php-intl
+DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.4.4:../../archivers/php-zip
+DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.4.4:../../archivers/php-zlib
 
 EGDIR=			share/examples/moodle
 MOODLEDIR=		${PREFIX}/share/moodle
