@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2014/03/31 08:03:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2014/06/02 07:17:31 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -101,7 +101,6 @@ share/mysql/romanian/errmsg.sys
 share/mysql/russian/errmsg.sys
 share/mysql/serbian/errmsg.sys
 share/mysql/slovak/errmsg.sys
-share/mysql/solaris/postinstall-solaris
 share/mysql/spanish/errmsg.sys
 share/mysql/sql-bench/sql-bench/Data/ATIS/aircraft.txt
 share/mysql/sql-bench/sql-bench/Data/ATIS/airline.txt
@@ -1516,6 +1515,7 @@ share/mysql/test/suite/binlog/r/binlog_stm_user_variables.result
 share/mysql/test/suite/binlog/r/binlog_switch_inside_trans.result
 share/mysql/test/suite/binlog/r/binlog_tmp_table.result
 share/mysql/test/suite/binlog/r/binlog_truncate_innodb.result
+share/mysql/test/suite/binlog/r/binlog_truncate_kill.result
 share/mysql/test/suite/binlog/r/binlog_truncate_myisam.result
 share/mysql/test/suite/binlog/r/binlog_unsafe.result
 share/mysql/test/suite/binlog/r/binlog_write_error.result
@@ -1608,6 +1608,7 @@ share/mysql/test/suite/binlog/t/binlog_switch_inside_trans.test
 share/mysql/test/suite/binlog/t/binlog_tmp_table.test
 share/mysql/test/suite/binlog/t/binlog_truncate_innodb-master.opt
 share/mysql/test/suite/binlog/t/binlog_truncate_innodb.test
+share/mysql/test/suite/binlog/t/binlog_truncate_kill.test
 share/mysql/test/suite/binlog/t/binlog_truncate_myisam.test
 share/mysql/test/suite/binlog/t/binlog_unsafe-master.opt
 share/mysql/test/suite/binlog/t/binlog_unsafe.test
@@ -4020,6 +4021,7 @@ share/mysql/test/suite/rpl/r/rpl_row_blob_myisam.result
 share/mysql/test/suite/rpl/r/rpl_row_colSize.result
 share/mysql/test/suite/rpl/r/rpl_row_conflicts.result
 share/mysql/test/suite/rpl/r/rpl_row_corruption.result
+share/mysql/test/suite/rpl/r/rpl_row_create_select.result
 share/mysql/test/suite/rpl/r/rpl_row_create_table.result
 share/mysql/test/suite/rpl/r/rpl_row_delayed_ins.result
 share/mysql/test/suite/rpl/r/rpl_row_drop.result
@@ -4398,6 +4400,7 @@ share/mysql/test/suite/rpl/t/rpl_row_colSize.test
 share/mysql/test/suite/rpl/t/rpl_row_conflicts.test
 share/mysql/test/suite/rpl/t/rpl_row_corruption-slave.opt
 share/mysql/test/suite/rpl/t/rpl_row_corruption.test
+share/mysql/test/suite/rpl/t/rpl_row_create_select.test
 share/mysql/test/suite/rpl/t/rpl_row_create_table.test
 share/mysql/test/suite/rpl/t/rpl_row_delayed_ins.test
 share/mysql/test/suite/rpl/t/rpl_row_drop.test
