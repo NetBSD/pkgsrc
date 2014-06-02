@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.774 2014/06/01 23:27:38 rodent Exp $
+# $NetBSD: Makefile,v 1.775 2014/06/02 03:51:07 rodent Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -610,6 +610,7 @@ SUBDIR+=	py-X
 SUBDIR+=	py-X2
 SUBDIR+=	py-acora
 SUBDIR+=	py-anyjson
+SUBDIR+=	py-biplist
 SUBDIR+=	py-cElementTree
 SUBDIR+=	py-cabocha
 SUBDIR+=	py-cjson
