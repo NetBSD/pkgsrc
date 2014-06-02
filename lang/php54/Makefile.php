@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.6.6.1 2014/06/01 13:20:22 spz Exp $
+# $NetBSD: Makefile.php,v 1.6.6.2 2014/06/02 15:51:10 tron Exp $
 # used by lang/php54/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
@@ -42,9 +42,7 @@ CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX}
 
 .include "../../textproc/libxml2/buildlink3.mk"
 
-# Note: This expression is the same as ${PKGBASE}, but the latter is
-# not defined yet, so we cannot use it here.
-PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
+PKG_OPTIONS_VAR=	PKG_OPTIONS.${PHP_PKG_PREFIX}
 PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts readline
 PKG_SUGGESTED_OPTIONS+=	inet6 ssl
 
