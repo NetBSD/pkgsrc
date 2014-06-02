@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2014/05/29 19:59:39 tron Exp $
+# $NetBSD: Makefile,v 1.42 2014/06/02 10:22:17 tron Exp $
 
 DISTNAME=	pam_ldap-186
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.padl.com/pam_ldap.html
 COMMENT=	Pluggable authentication module for LDAP directories
 LICENSE=	gnu-lgpl-v2
+
+ONLY_FOR_PLATFORM=	NetBSD-[3-9]*-* FreeBSD-*-*
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
