@@ -1,0 +1,10 @@
+Python/C bindings for the ssdeep library at http://ssdeep.sourceforge.net:
+
+ * hash_buf / hash_bytes - returns the ssdeep hash for a given buffer
+ * hash_file - returns the ssdeep hash for filepath
+ * compare - returns the % match between 2 hashes
+
+import pydeep
+pydeep.hash_buf('somedata')
+pydeep.hash_file('path-to-file')
+pydeep.compare('hash1','hash2')
