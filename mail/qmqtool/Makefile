@@ -1,26 +1,25 @@
-# $NetBSD: Makefile,v 1.9 2014/06/02 14:09:20 schmonz Exp $
+# $NetBSD: Makefile,v 1.10 2014/06/02 14:11:43 schmonz Exp $
 #
 
-DISTNAME=	qmqtool-1.14
-CATEGORIES=	mail
-MASTER_SITES=	${HOMEPAGE}/files/
-EXTRACT_SUFX=	.tgz
+DISTNAME=		qmqtool-1.14
+CATEGORIES=		mail
+MASTER_SITES=		${HOMEPAGE}/files/
+EXTRACT_SUFX=		.tgz
 
-MAINTAINER=	schmonz@NetBSD.org
-HOMEPAGE=	http://jeremy.kister.net/code/qmqtool/
-COMMENT=	View and safely modify qmail queue
-LICENSE=	artistic
+MAINTAINER=		schmonz@NetBSD.org
+HOMEPAGE=		http://jeremy.kister.net/code/qmqtool/
+COMMENT=		View and safely modify qmail queue
+LICENSE=		artistic
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-USE_LANGUAGES=	# none
-USE_TOOLS+=	perl:run
-HAS_CONFIGURE=	yes
-CONFIGURE_ARGS+=--prefix=${PREFIX:Q}
-CONFIGURE_ARGS+=--mandir=${PREFIX:Q}/${PKGMANDIR:Q}
-CONFIGURE_ARGS+=--perl=${PERL5:Q}
-CONFIGURE_ARGS+=--qmaildir=${QMAILDIR:Q}
-CONFIGURE_ARGS+=--scriptdir=${PREFIX:Q}/sbin
-BUILD_TARGET=	qmqtool
+USE_LANGUAGES=		# none
+USE_TOOLS+=		perl:run
+HAS_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--mandir=${PREFIX:Q}/${PKGMANDIR:Q}
+CONFIGURE_ARGS+=	--perl=${PERL5:Q}
+CONFIGURE_ARGS+=	--qmaildir=${QMAILDIR:Q}
+CONFIGURE_ARGS+=	--scriptdir=${PREFIX:Q}/sbin
+BUILD_TARGET=		qmqtool
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKSRC}/src/qmqtool
