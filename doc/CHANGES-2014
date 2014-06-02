@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2108 2014/06/02 00:13:11 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2109 2014/06/02 00:24:40 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2892,3 +2892,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added security/py-pydeep version 0.2 [rodent 2014-06-01]
 	Updated devel/py-pyparsing to 2.0.2 [rodent 2014-06-02]
 	Added sysutils/py-magic version 0.4.6 [rodent 2014-06-02]
+	Updated security/py-stix to 1.1.1.0 [rodent 2014-06-02]
