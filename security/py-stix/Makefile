@@ -1,18 +1,14 @@
-# $NetBSD: Makefile,v 1.1 2014/05/17 16:03:45 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/02 00:24:24 rodent Exp $
 
-STIX_VERSION=	1.1.0.6
-DISTNAME=	python-stix-${STIX_VERSION}
-PKGNAME=	${PYPKGPREFIX}-stix-${STIX_VERSION}
-CATEGORIES=	security
-DISTFILES=	v${STIX_VERSION}${EXTRACT_SUFX}
-MASTER_SITES=	https://github.com/STIXProject/python-stix/archive/
+DISTNAME=	stix-1.1.1.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	python security
+MASTER_SITES=	https://pypi.python.org/packages/source/s/stix/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://github.com/STIXProject/python-stix
 COMMENT=	Python library for manipulating STIX content
 LICENSE=	modified-bsd
-
-EGG_NAME=	stix-${STIX_VERSION}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
