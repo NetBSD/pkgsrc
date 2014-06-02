@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2014/05/24 10:21:13 obache Exp $
+# $NetBSD: Makefile.common,v 1.2 2014/06/02 13:04:06 obache Exp $
 # used by textproc/p5-marisa/Makefile
 # used by textproc/py-marisa/Makefile
 # used by textproc/ruby-marisa/Makefile
@@ -12,4 +12,4 @@ PATCHDIR=	${.CURDIR}/../../textproc/marisa/patches
 
 MAINTAINER=	ishit@users.sourceforge.net
 HOMEPAGE=	http://code.google.com/p/marisa-trie/
-LICENSE=	modified-bsd OR gnu-lgpl-v2.1
+LICENSE=	2-clause-bsd OR gnu-lgpl-v2.1
