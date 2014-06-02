@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.39 2014/06/01 13:22:48 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.40 2014/06/02 16:04:03 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q1 branch:
@@ -153,3 +153,9 @@ lang/php54: security update
 lang/php55: security update
 Pullup ticket #4426 - requested by wen
 www/mediawiki: security update
+Pullup ticket #4427 - requested by taca
+lang/php55: security update
+Pullup ticket #4428 - requested by taca
+lang/php54: security update
+Pullup ticket #4429 - requested by taca
+lang/php53: match option handling of "php54" and "php55"
