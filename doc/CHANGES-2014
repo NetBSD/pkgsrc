@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2114 2014/06/02 04:43:23 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2115 2014/06/02 05:12:46 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2898,3 +2898,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added textproc/py-biplist version 0.6 [rodent 2014-06-02]
 	Added www/py-python-digest version 1.7 [rodent 2014-06-02]
 	Added www/py-python3-digest version 1.8b4 [rodent 2014-06-02]
+	Added www/py-django-tastypie version 0.11.1 [rodent 2014-06-02]
