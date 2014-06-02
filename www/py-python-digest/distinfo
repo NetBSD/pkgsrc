@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/06/02 04:27:32 rodent Exp $
+
+SHA1 (python-digest-1.7.tar.gz) = 8c1eb066fc192c6d2f670cceb6c980f1190141e8
+RMD160 (python-digest-1.7.tar.gz) = 06e12c20409a8fb21f60bacfad22f62f4d2413e2
+Size (python-digest-1.7.tar.gz) = 10073 bytes
