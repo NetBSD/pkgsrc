@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2014/05/29 23:37:09 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/06/02 12:38:27 obache Exp $
 
 DISTNAME=	Net-RabbitFoot-1.03
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/I/IK/IKUTA/
-MASTER_SITES+=	http://cpan.metacpan.org/authors/id/I/IK/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/I/IK/IKUTA/
+HOMEPAGE=	http://search.cpan.org/dist/Net-RabbitFoot
 COMMENT=        Asynchronous and multi channel Perl AMQP client
 LICENSE=        ${PERL5_LICENSE}
 
