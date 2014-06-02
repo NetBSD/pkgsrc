@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1036 2014/06/01 14:12:36 taca Exp $
+# $NetBSD: Makefile,v 1.1037 2014/06/02 03:20:19 rodent Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -634,6 +634,7 @@ SUBDIR+=	py-moin
 SUBDIR+=	py-nevow
 SUBDIR+=	py-paste
 SUBDIR+=	py-pendrell
+SUBDIR+=	py-python-mimeparse
 SUBDIR+=	py-pywebdav
 SUBDIR+=	py-recaptcha
 SUBDIR+=	py-rss2gen
