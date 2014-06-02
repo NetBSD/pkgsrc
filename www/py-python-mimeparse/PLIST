@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2014/06/02 03:19:30 rodent Exp $
+${PYSITELIB}/mimeparse.py
+${PYSITELIB}/mimeparse.pyc
+${PYSITELIB}/mimeparse.pyo
+${PYSITELIB}/${EGG_FILE}

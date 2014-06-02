@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/06/02 03:19:30 rodent Exp $
+
+SHA1 (python-mimeparse-0.1.4.tar.gz) = bebc26249214c66f8c65e904e8eede8453eb4840
+RMD160 (python-mimeparse-0.1.4.tar.gz) = 40df7a5b05913ea991eda84bba0c420e15cc9522
+Size (python-mimeparse-0.1.4.tar.gz) = 5228 bytes
