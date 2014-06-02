@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1038 2014/06/02 04:44:20 rodent Exp $
+# $NetBSD: Makefile,v 1.1039 2014/06/02 05:13:23 rodent Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -595,6 +595,7 @@ SUBDIR+=	py-django-reversion
 SUBDIR+=	py-django-sekizai
 SUBDIR+=	py-django-south
 SUBDIR+=	py-django-tagging
+SUBDIR+=	py-django-tastypie
 SUBDIR+=	py-django14
 SUBDIR+=	py-djangocms-admin-style
 SUBDIR+=	py-djangorestframework
