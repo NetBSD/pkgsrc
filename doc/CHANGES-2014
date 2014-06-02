@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2113 2014/06/02 04:27:46 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2114 2014/06/02 04:43:23 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2897,3 +2897,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added www/py-python-mimeparse version 0.1.4 [rodent 2014-06-02]
 	Added textproc/py-biplist version 0.6 [rodent 2014-06-02]
 	Added www/py-python-digest version 1.7 [rodent 2014-06-02]
+	Added www/py-python3-digest version 1.8b4 [rodent 2014-06-02]
