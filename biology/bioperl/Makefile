@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2014/06/02 10:06:06 obache Exp $
+# $NetBSD: Makefile,v 1.28 2014/06/02 12:51:38 obache Exp $
 
 DISTNAME=	BioPerl-1.6.923
 PKGNAME=	${DISTNAME:tl}
@@ -19,7 +19,7 @@ DEPENDS+=	p5-Array-Compare-[0-9]*:../../devel/p5-Array-Compare
 DEPENDS+=	p5-Bio-ASN1-EntrezGene-[0-9]*:../../biology/p5-Bio-ASN1-EntrezGene
 DEPENDS+=	p5-Clone-[0-9]*:../../devel/p5-Clone
 DEPENDS+=	p5-Convert-Binary-C-[0-9]*:../../devel/p5-Convert-Binary-C
-DEPENDS+=	p5-DB_File-[0-9]*:../../databases/p5-DB_File
+DEPENDS+=	{perl>=5,p5-DB_File-[0-9]*}:../../databases/p5-DB_File
 DEPENDS+=	p5-Data-Stag>=0.11:../../devel/p5-Data-Stag
 DEPENDS+=	p5-Error-[0-9]*:../../devel/p5-Error
 DEPENDS+=	{perl>=5.10.1,p5-ExtUtils-Manifest>=1.52}:../../devel/p5-ExtUtils-Manifest
