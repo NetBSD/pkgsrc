@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/06/15 19:57:20 pettai Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/06/02 12:26:39 pettai Exp $
 bin/dt-danechk
 bin/dt-getaddr
 bin/dt-gethost
@@ -54,9 +54,7 @@ ${PERL5_SUB_INSTALLVENDORARCH}/auto/Net/DNS/SEC/Tools/Drawvalmap/drawvalmap/.pac
 ${PERL5_SUB_INSTALLVENDORARCH}/auto/Net/DNS/SEC/Tools/Maketestzone/maketestzone/.packlist
 ${PERL5_SUB_INSTALLVENDORARCH}/auto/Net/DNS/SEC/Tools/Mapper/mapper/.packlist
 ${PERL5_SUB_INSTALLVENDORARCH}/auto/Net/DNS/SEC/Tools/conf/.packlist
-${PERL5_SUB_INSTALLVENDORARCH}/auto/Net/DNS/SEC/Validator/Validator.bs
 ${PERL5_SUB_INSTALLVENDORARCH}/auto/Net/DNS/SEC/Validator/Validator.so
-${PERL5_SUB_INSTALLVENDORARCH}/auto/Net/addrinfo/addrinfo.bs
 ${PERL5_SUB_INSTALLVENDORARCH}/auto/Net/addrinfo/addrinfo.so
 ${PERL5_SUB_INSTALLVENDORARCH}/auto/convertar/.packlist
 ${PERL5_SUB_INSTALLVENDORARCH}/auto/dnssec-tools/.packlist
