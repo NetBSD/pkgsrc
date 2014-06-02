@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2014/06/02 09:34:41 obache Exp $
+# $NetBSD: Makefile,v 1.4 2014/06/02 09:35:53 obache Exp $
 
 DISTNAME=	Test-Refcount-0.07
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/P/PE/PEVANS/}
 
