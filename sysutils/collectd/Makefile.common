@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2014/02/17 11:21:54 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.2 2014/06/02 13:27:08 fhajny Exp $
 #
 # used by sysutils/collectd/Makefile
 # used by sysutils/collectd-amqp/Makefile
@@ -32,7 +32,7 @@ PATCHDIR=		${.CURDIR}/../../sysutils/collectd/patches
 .if !empty(COLLECTD_PACKAGE)
 PKGNAME?=		${DISTNAME:S/collectd/collectd-${COLLECTD_PACKAGE}/}
 
-DEPENDS+=		${DISTNAME}:../../sysutils/collectd
+DEPENDS+=		collectd>=${PKGVERSION_NOREV}:../../sysutils/collectd
 
 COLLECTD_PLUGINS?=	${COLLECTD_PACKAGE:S/-/_/}
 
