@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2112 2014/06/02 03:49:53 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2113 2014/06/02 04:27:46 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2896,3 +2896,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-IO-Tty to 1.11 [schmonz 2014-06-02]
 	Added www/py-python-mimeparse version 0.1.4 [rodent 2014-06-02]
 	Added textproc/py-biplist version 0.6 [rodent 2014-06-02]
+	Added www/py-python-digest version 1.7 [rodent 2014-06-02]
