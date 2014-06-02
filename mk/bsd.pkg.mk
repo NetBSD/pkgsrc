@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1999 2014/05/06 14:48:06 jperkin Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2000 2014/06/02 10:24:05 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -386,11 +386,6 @@ USE_TOOLS+=								\
 # bsd.wrapper.mk
 USE_TOOLS+=	expr
 
-# bsd.bulk-pkg.mk uses certain tools
-.if defined(BATCH)
-USE_TOOLS+=	tee tsort
-.endif
-
 # scripts/shlib-type
 .if ${_OPSYS_SHLIB_TYPE} == "ELF/a.out"
 USE_TOOLS+=	file
@@ -746,14 +741,6 @@ tags:
 .include "bsd.utils.mk"
 
 .include "subst.mk"
-
-#
-# For bulk build targets (bulk-install, bulk-package), the
-# BATCH variable must be set in /etc/mk.conf:
-#
-.if defined(BATCH)
-.  include "bulk/bsd.bulk-pkg.mk"
-.endif
 
 # README generation code.
 .include "bsd.pkg.readme.mk"
