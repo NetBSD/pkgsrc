@@ -1,4 +1,4 @@
-# $NetBSD: toplevel.mk,v 1.5 2011/09/08 20:17:16 abs Exp $
+# $NetBSD: toplevel.mk,v 1.6 2014/06/02 10:24:05 wiz Exp $
 #
 # This file contains the make targets that can be used from the
 # top-level Makefile. They are in this separate file to keep the
@@ -28,13 +28,6 @@ README.html: .PRECIOUS
 .endif
 
 .include "../bsd.pkg.subdir.mk"
-
-# the bulk-cache and clean-bulk-cache targets are a global-pkgsrc
-# thing and thus it makes sense to run it from the top level pkgsrc
-# directory.
-.if make(bulk-cache) || make(clean-bulk-cache)
-.include "../bulk/bsd.bulk-pkg.mk"
-.endif
 
 .PHONY: ${.CURDIR}/PKGDB
 ${.CURDIR}/PKGDB:
