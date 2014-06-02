@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2013/12/11 13:41:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.32 2014/06/02 08:55:14 adam Exp $
 include/giomm-2.4/giomm.h
 include/giomm-2.4/giomm/action.h
 include/giomm-2.4/giomm/actiongroup.h
@@ -858,10 +858,8 @@ share/doc/glibmm-2.4/reference/html/classGlib_1_1Markup_1_1AttributeKeyLess-memb
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Markup_1_1AttributeKeyLess.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Markup_1_1ParseContext-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Markup_1_1ParseContext.html
-share/doc/glibmm-2.4/reference/html/classGlib_1_1Markup_1_1ParseContext__inherit__graph.png
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Markup_1_1Parser-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Markup_1_1Parser.html
-share/doc/glibmm-2.4/reference/html/classGlib_1_1Markup_1_1Parser__inherit__graph.png
 share/doc/glibmm-2.4/reference/html/classGlib_1_1MatchInfo-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1MatchInfo.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Module-members.html
@@ -1454,7 +1452,6 @@ share/doc/glibmm-2.4/reference/html/inherit_graph_97.png
 share/doc/glibmm-2.4/reference/html/inherit_graph_98.png
 share/doc/glibmm-2.4/reference/html/inherit_graph_99.png
 share/doc/glibmm-2.4/reference/html/inherits.html
-share/doc/glibmm-2.4/reference/html/jquery.js
 share/doc/glibmm-2.4/reference/html/modules.html
 share/doc/glibmm-2.4/reference/html/namespaceGio.html
 share/doc/glibmm-2.4/reference/html/namespaceGio_1_1DBus.html
