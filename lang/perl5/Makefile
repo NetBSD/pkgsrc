@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.224 2014/05/31 02:07:31 obache Exp $
+# $NetBSD: Makefile,v 1.225 2014/06/02 09:53:32 obache Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -14,6 +14,7 @@ CONFLICTS+=	p5-Archive-Tar<1.96
 CONFLICTS+=	p5-Attribute-Handlers<0.96
 CONFLICTS+=	p5-AutoLoader<5.74
 CONFLICTS+=	p5-CGI<3.65
+#		older for www/p5-CGI-Fast
 CONFLICTS+=	p5-CPAN<2.0500			# 2.05
 CONFLICTS+=	p5-CPAN-Meta<2.140640
 CONFLICTS+=	p5-CPAN-Meta-Requirements<2.125
