@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.435 2014/06/03 13:58:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.436 2014/06/03 15:08:51 jperkin Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -273,6 +273,7 @@ SUBDIR+=	ruby-naught
 SUBDIR+=	ruby-ohai
 SUBDIR+=	ruby-parallel
 SUBDIR+=	ruby-progressbar
+SUBDIR+=	ruby-pry
 SUBDIR+=	ruby-rainbow
 SUBDIR+=	ruby-slop
 SUBDIR+=	ruby-sprockets
