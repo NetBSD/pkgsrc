@@ -1,0 +1,2 @@
+Universal capture of stdout and stderr and handling of child process
+pid for Windows, *nix, etc.

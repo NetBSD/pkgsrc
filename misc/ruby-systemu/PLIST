@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2014/06/03 13:30:47 jperkin Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README
+${GEM_LIBDIR}/README.erb
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/systemu.rb
+${GEM_LIBDIR}/samples/a.rb
+${GEM_LIBDIR}/samples/b.rb
+${GEM_LIBDIR}/samples/c.rb
+${GEM_LIBDIR}/samples/d.rb
+${GEM_LIBDIR}/samples/e.rb
+${GEM_LIBDIR}/samples/f.rb
+${GEM_LIBDIR}/systemu.gemspec
+${GEM_LIBDIR}/test/systemu_test.rb
+${GEM_LIBDIR}/test/testing.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
