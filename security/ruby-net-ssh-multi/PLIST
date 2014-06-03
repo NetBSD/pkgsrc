@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2014/06/03 14:52:56 jperkin Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CHANGES.txt
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/gem-public_cert.pem
+${GEM_LIBDIR}/lib/net/ssh/multi.rb
+${GEM_LIBDIR}/lib/net/ssh/multi/channel.rb
+${GEM_LIBDIR}/lib/net/ssh/multi/channel_proxy.rb
+${GEM_LIBDIR}/lib/net/ssh/multi/dynamic_server.rb
+${GEM_LIBDIR}/lib/net/ssh/multi/pending_connection.rb
+${GEM_LIBDIR}/lib/net/ssh/multi/server.rb
+${GEM_LIBDIR}/lib/net/ssh/multi/server_list.rb
+${GEM_LIBDIR}/lib/net/ssh/multi/session.rb
+${GEM_LIBDIR}/lib/net/ssh/multi/session_actions.rb
+${GEM_LIBDIR}/lib/net/ssh/multi/subsession.rb
+${GEM_LIBDIR}/lib/net/ssh/multi/version.rb
+${GEM_LIBDIR}/net-ssh-multi.gemspec
+${GEM_LIBDIR}/test/channel_test.rb
+${GEM_LIBDIR}/test/common.rb
+${GEM_LIBDIR}/test/multi_test.rb
+${GEM_LIBDIR}/test/server_test.rb
+${GEM_LIBDIR}/test/session_actions_test.rb
+${GEM_LIBDIR}/test/session_test.rb
+${GEM_LIBDIR}/test/test_all.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
