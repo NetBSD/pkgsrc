@@ -1,0 +1,13 @@
+Pry is a powerful alternative to the standard IRB shell for Ruby. It
+is written from scratch to provide a number of advanced features.
+
+Pry also aims to be more than an IRB replacement; it is an attempt to
+bring REPL driven programming to the Ruby language. It is currently
+not as powerful as tools like SLIME for lisp, but that is the general
+direction Pry is heading.
+
+Pry is also fairly flexible and allows significant user customization
+is trivial to set it to read from any object that has a readline
+method and write to any object that has a puts method - many other
+aspects of Pry are also configurable making it a good choice for
+implementing custom shells.
