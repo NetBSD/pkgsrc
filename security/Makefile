@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.515 2014/06/02 00:00:58 rodent Exp $
+# $NetBSD: Makefile,v 1.516 2014/06/03 14:54:30 jperkin Exp $
 #
 
 COMMENT=	Security tools
@@ -393,6 +393,7 @@ SUBDIR+=	ruby-net-scp
 SUBDIR+=	ruby-net-sftp
 SUBDIR+=	ruby-net-ssh
 SUBDIR+=	ruby-net-ssh-gateway
+SUBDIR+=	ruby-net-ssh-multi
 SUBDIR+=	ruby-oauth
 SUBDIR+=	ruby-password
 SUBDIR+=	ruby-rc4
