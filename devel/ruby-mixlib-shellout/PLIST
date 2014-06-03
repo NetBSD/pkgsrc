@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2014/06/03 13:15:33 jperkin Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/lib/mixlib/shellout.rb
+${GEM_LIBDIR}/lib/mixlib/shellout/exceptions.rb
+${GEM_LIBDIR}/lib/mixlib/shellout/unix.rb
+${GEM_LIBDIR}/lib/mixlib/shellout/version.rb
+${GEM_LIBDIR}/lib/mixlib/shellout/windows.rb
+${GEM_LIBDIR}/lib/mixlib/shellout/windows/core_ext.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
