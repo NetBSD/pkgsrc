@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1923 2014/06/03 13:17:36 jperkin Exp $
+# $NetBSD: Makefile,v 1.1924 2014/06/03 13:54:46 jperkin Exp $
 #
 
 COMMENT=	Development utilities
@@ -1739,6 +1739,7 @@ SUBDIR+=	ruby-turn
 SUBDIR+=	ruby-uglifier
 SUBDIR+=	ruby-uuidtools
 SUBDIR+=	ruby-validatable
+SUBDIR+=	ruby-yajl-ruby
 SUBDIR+=	ruby2ruby
 SUBDIR+=	rubyforge
 SUBDIR+=	rudiments
