@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.46 2014/06/01 17:55:33 wiz Exp $
+$NetBSD: distinfo,v 1.47 2014/06/03 03:20:15 ryoon Exp $
 
 SHA1 (openjdk7/UnlimitedJCEPolicyJDK7.zip) = 7d3c9ee89536b82cd21c680088b1bced16017253
 RMD160 (openjdk7/UnlimitedJCEPolicyJDK7.zip) = a4a6a284579f43d2df3532d279e143d2f03c2c3f
@@ -117,6 +117,7 @@ SHA1 (patch-hotspot_src_os_solaris_dtrace_jhelper.d) = 43ae9934ce7cf477f7968bcf9
 SHA1 (patch-hotspot_src_os_solaris_vm_decoder__solaris.cpp) = 3be8a96525ead1df18a40b18dccfad4ef2765d47
 SHA1 (patch-hotspot_src_os_solaris_vm_os__solaris.cpp) = ea09ffd080fcf4c12b0b69cb622ee3945000cb68
 SHA1 (patch-hotspot_src_share_vm_opto_node.cpp) = 869d8ec9dc6dae6e0b8a23fe44f2583747059553
+SHA1 (patch-hotspot_src_share_vm_runtime_os.cpp) = c7a33e791e3b5fec5cca9a5343c6d1f685e0cd4b
 SHA1 (patch-hotspot_src_share_vm_utilities_globalDefinitions__gcc.hpp) = fe40909864fc561495b1e15a5bc6c7c6373830b2
 SHA1 (patch-hotspot_src_share_vm_utilities_hashtable.cpp) = 30084c64570e420fbda8fbd36fcd4aa2641eab8e
 SHA1 (patch-jdk_make_com_sun_Makefile) = 5826c64eb1971d69e8b874d6b8a60d25e0d02c5b
