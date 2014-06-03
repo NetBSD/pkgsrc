@@ -1,0 +1,20 @@
+Hashie is a growing collection of tools that extend Hashes and make
+them more useful. The library is broken up into a number of atomically
+includeable Hash extension modules as described below. This provides
+maximum flexibility for users to mix and match functionality while
+maintaining feature parity with earlier versions of Hashie.
+
+ * Mash is an extended Hash that gives simple pseudo-object
+   functionality that can be built from hashes and easily extended.
+
+ * Dash is an extended Hash that has a discrete set of defined
+   properties and only those properties may be set on the hash.
+
+ * A Trash is a Dash that allows you to translate keys on
+   initialization.
+
+ * Clash is a Chainable Lazy Hash that allows you to easily construct
+   complex hashes using method notation chaining
+
+ * Rash is a Hash whose keys can be Regexps or Ranges, which will map
+   many input keys to a value.
