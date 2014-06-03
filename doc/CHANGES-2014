@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2141 2014/06/03 14:31:29 jperkin Exp $
+$NetBSD: CHANGES-2014,v 1.2142 2014/06/03 14:53:19 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2933,3 +2933,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added misc/ruby-slop version 3.5.0 [jperkin 2014-06-03]
 	Added www/ruby-rest-client version 1.6.7 [jperkin 2014-06-03]
 	Added sysutils/ruby-chef-zero version 2.0.2 [jperkin 2014-06-03]
+	Added security/ruby-net-ssh-multi version 1.2.0 [jperkin 2014-06-03]
