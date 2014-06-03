@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2014/04/07 11:49:57 adam Exp $
+# $NetBSD: Makefile,v 1.89 2014/06/03 09:08:05 obache Exp $
 
 DISTNAME=	icu4c-53_1-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
@@ -28,11 +28,8 @@ CONFIGURE_ARGS+=	--disable-threads
 
 .include "../../mk/compiler.mk"
 
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "MirBSD"
-PLIST_SUBST+=		MH_NAME=mh-bsd-gcc
-.elif ${OPSYS} == "Linux"
-PLIST_SUBST+=		MH_NAME=mh-linux
-.elif ${OPSYS} == "SunOS"
+# from ICU_CHECK_MH_FRAG in source/acinclude.m4
+.if ${OPSYS} == "SunOS"
 .  if !empty(CC_VERSION:Mgcc*)
 PLIST_SUBST+=		MH_NAME=mh-solaris-gcc
 .  else
@@ -42,12 +39,46 @@ PLIST_SUBST+=		MH_NAME=mh-solaris
 BUILDLINK_TRANSFORM+=	rm:-D__STDC__=0
 .  endif
 BUILDLINK_TRANSFORM+=	rm:-ansi
-.elif ${OPSYS} == "IRIX"
-PLIST_SUBST+=		MH_NAME=mh-irix
-.elif ${OPSYS} == "Darwin"
-PLIST_SUBST+=		MH_NAME=mh-darwin
+.elif !empty(MACHINE_PLATFORM:MLinux-*-alpha)
+.  if !empty(CC_VERSION:Mgcc*)
+PLIST_SUBST+=		MH_NAME=mh-alpha-linux-gcc
+.  else
+PLIST_SUBST+=		MH_NAME=mh-alpha-linux-cc
+.  endif
+.elif !empty(MACHINE_PLATFORM:MLinux-*-powerpc*)
+.  if !empty(CC_VERSION:Mgcc*)
+PLIST_SUBST+=		MH_NAME=mh-linux
+.  else
+PLIST_SUBST+=		MH_NAME=mh-linux-va
+.  endif
+.elif ${OPSYS} == "Linux" || ${OPSYS} == "GNUkFreeBSD"
+PLIST_SUBST+=		MH_NAME=mh-linux
 .elif ${OPSYS} == "Cygwin"
 PLIST_SUBST+=		MH_NAME=mh-cygwin
+.elif !empty(OPSYS:M*BSD*) || ${OPSYS} == "DragonFly"
+PLIST_SUBST+=		MH_NAME=mh-bsd-gcc
+.elif ${OPSYS} == "AIX"
+.  if !empty(CC_VERSION:Mgcc*)
+PLIST_SUBST+=		MH_NAME=mh-aix-gcc
+.  else
+PLIST_SUBST+=		MH_NAME=mh-aix-va
+.  endif
+.elif ${OPSYS} == "HPUX"
+.  if !empty(CC_VERSION:Mgcc*)
+PLIST_SUBST+=		MH_NAME=mh-hpux-gcc
+.  else
+PLIST_SUBST+=		MH_NAME=mh-hpux-acc
+.  endif
+.elif ${OPSYS} == "Darwin"
+PLIST_SUBST+=		MH_NAME=mh-darwin
+.elif ${OPSYS} == "Haiku"
+PLIST_SUBST+=		MH_NAME=mh-haiku
+.elif ${OPSYS} == "IRIX"
+PLIST_SUBST+=		MH_NAME=mh-irix
+.elif ${OPSYS} == "OSF1"
+PLIST_SUBST+=		MH_NAME=mh-alpha-osf
+.elif ${OPSYS} == "QNX"
+PLIST_SUBST+=		MH_NAME=mh-qnx
 .else
 # For unknown systems, set the filename to mh-unknown so that the user
 # gets a warning about missing files.
