@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2135 2014/06/03 13:31:08 jperkin Exp $
+$NetBSD: CHANGES-2014,v 1.2136 2014/06/03 13:47:17 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2927,3 +2927,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/ruby-mixlib-log version 1.6.0 [jperkin 2014-06-03]
 	Added devel/ruby-mixlib-shellout version 1.4.0 [jperkin 2014-06-03]
 	Added misc/ruby-systemu version 2.5.2 [jperkin 2014-06-03]
+	Added net/ruby-ipaddress version 0.8.0 [jperkin 2014-06-03]
