@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2014/06/03 13:46:00 jperkin Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.document
+${GEM_LIBDIR}/CHANGELOG.rdoc
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/ipaddress.gemspec
+${GEM_LIBDIR}/lib/ipaddress.rb
+${GEM_LIBDIR}/lib/ipaddress/ipv4.rb
+${GEM_LIBDIR}/lib/ipaddress/ipv6.rb
+${GEM_LIBDIR}/lib/ipaddress/prefix.rb
+${GEM_LIBDIR}/test/ipaddress/ipv4_test.rb
+${GEM_LIBDIR}/test/ipaddress/ipv6_test.rb
+${GEM_LIBDIR}/test/ipaddress/prefix_test.rb
+${GEM_LIBDIR}/test/ipaddress_test.rb
+${GEM_LIBDIR}/test/test_helper.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
