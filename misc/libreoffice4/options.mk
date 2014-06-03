@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2014/05/29 23:03:55 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2014/06/03 03:21:39 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libreoffice4
 PKG_SUPPORTED_OPTIONS=	java debug kde4 gtk3
@@ -17,17 +17,19 @@ USE_JAVA=		yes
 USE_JAVA2=		yes
 BUILD_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
 FIND_PREFIX:=		ANTDIR=apache-ant
+CONFIGURE_ARGS+=	--with-ant-home=${ANTDIR}
+
 DEPENDS+=	hsqldb18-[0-9]*:../../databases/hsqldb18
-FIND_PREFIX:=		HSQLDB_SYSDIR=hsqldb18
+FIND_PREFIX+=		HSQLDB_SYSDIR=hsqldb18
+CONFIGURE_ARGS+=	--with-hsqldb-jar=${HSQLDB_SYSDIR}/lib/java/hsqldb18/hsqldb.jar
 .include "../../mk/find-prefix.mk"
 CONFIGURE_ARGS+=	--enable-ext-wiki-publisher \
 			--with-java \
 			--with-jdk-home=${PKG_JAVA_HOME} \
-			--with-ant-home=${ANTDIR} \
+			--without-system-beanshell \
 			--enable-scripting-beanshell \
-			--enable-scripting-javascript \
-			--with-system-hsqldb \
-			--with-hsqldb-jar=${HSQLDB_SYSDIR}/lib/java/hsqldb18/hsqldb.jar
+			--disable-scripting-javascript \
+			--with-system-hsqldb
 .include "../../mk/java-env.mk"
 .include "../../mk/java-vm.mk"
 PLIST_SRC+=		${PLIST_SRC_DFLT:Q} PLIST.java
