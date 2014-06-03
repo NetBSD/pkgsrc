@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/23 17:18:24 asau Exp $
+# $NetBSD: Makefile,v 1.12 2014/06/03 07:11:52 obache Exp $
 
 DISTNAME=	netcat-0.7.1
 PKGNAME=	gnetcat-0.7.1
@@ -12,7 +12,7 @@ COMMENT=	Read and write data across network connections
 
 GNU_CONFIGURE=		YES
 INFO_FILES=		yes
-USE_TOOLS+=		msgfmt
+USE_TOOLS+=		msgfmt makeinfo
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
