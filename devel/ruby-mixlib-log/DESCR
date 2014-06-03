@@ -1,0 +1,3 @@
+A simple class based Log mechanism, similar to Merb and Chef, that you
+can mix in to your project.  Mixlib::Log provides a mixin for enabling
+a class based logger object, a-la Merb, Chef, and Nanite.
