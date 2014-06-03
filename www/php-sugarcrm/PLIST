@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/02/26 12:37:46 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/06/03 06:52:45 wen Exp $
 share/sugercrm/HandleAjaxCall.php
 share/sugercrm/LICENSE.txt
 share/sugercrm/ModuleInstall/ModuleInstaller.php
@@ -470,7 +470,6 @@ share/sugercrm/examples/SoapTestPortal.php
 share/sugercrm/examples/SoapTestPortal2.php
 share/sugercrm/export.php
 share/sugercrm/files.md5
-share/sugercrm/get_url.php
 share/sugercrm/ical_server.php
 share/sugercrm/image.php
 share/sugercrm/include/Dashlets/Dashlet.php
@@ -506,6 +505,7 @@ share/sugercrm/include/HTMLPurifier/CREDITS
 share/sugercrm/include/HTMLPurifier/HTMLPurifier.autoload.php
 share/sugercrm/include/HTMLPurifier/HTMLPurifier.standalone.php
 share/sugercrm/include/HTMLPurifier/LICENSE
+share/sugercrm/include/HTMLPurifier/README.UPGRADE
 share/sugercrm/include/HTMLPurifier/VERSION
 share/sugercrm/include/HTMLPurifier/standalone/HTMLPurifier/ConfigSchema/Builder/ConfigSchema.php
 share/sugercrm/include/HTMLPurifier/standalone/HTMLPurifier/ConfigSchema/Builder/Xml.php
@@ -911,8 +911,6 @@ share/sugercrm/include/SugarFields/Fields/Address/DetailView.tpl
 share/sugercrm/include/SugarFields/Fields/Address/EditView.tpl
 share/sugercrm/include/SugarFields/Fields/Address/SugarFieldAddress.js
 share/sugercrm/include/SugarFields/Fields/Address/SugarFieldAddress.php
-share/sugercrm/include/SugarFields/Fields/Address/en_us.DetailView.tpl
-share/sugercrm/include/SugarFields/Fields/Address/en_us.EditView.tpl
 share/sugercrm/include/SugarFields/Fields/Assigned_user_name/EditViewFunction.tpl
 share/sugercrm/include/SugarFields/Fields/Assigned_user_name/SearchView.tpl
 share/sugercrm/include/SugarFields/Fields/Assigned_user_name/SugarFieldAssigned_user_name.php
@@ -1301,6 +1299,7 @@ share/sugercrm/include/generic/SugarWidgets/SugarWidgetFieldnum.php
 share/sugercrm/include/generic/SugarWidgets/SugarWidgetFieldparent_type.php
 share/sugercrm/include/generic/SugarWidgets/SugarWidgetFieldphone.php
 share/sugercrm/include/generic/SugarWidgets/SugarWidgetFieldradioenum.php
+share/sugercrm/include/generic/SugarWidgets/SugarWidgetFieldreadonly.php
 share/sugercrm/include/generic/SugarWidgets/SugarWidgetFieldrelate.php
 share/sugercrm/include/generic/SugarWidgets/SugarWidgetFieldsingleenum.php
 share/sugercrm/include/generic/SugarWidgets/SugarWidgetFieldtext.php
@@ -4264,6 +4263,7 @@ share/sugercrm/metadata/configMetaData.php
 share/sugercrm/metadata/contacts_bugsMetaData.php
 share/sugercrm/metadata/contacts_casesMetaData.php
 share/sugercrm/metadata/contacts_usersMetaData.php
+share/sugercrm/metadata/cron_remove_documentsMetaData.php
 share/sugercrm/metadata/custom_fieldsMetaData.php
 share/sugercrm/metadata/documents_accountsMetaData.php
 share/sugercrm/metadata/documents_bugsMetaData.php
@@ -4444,6 +4444,7 @@ share/sugercrm/modules/Administration/RepairIE.php
 share/sugercrm/modules/Administration/RepairIndex.php
 share/sugercrm/modules/Administration/RepairJSFile.php
 share/sugercrm/modules/Administration/RepairSeedUsers.php
+share/sugercrm/modules/Administration/RepairUploadFolder.php
 share/sugercrm/modules/Administration/RepairXSS.php
 share/sugercrm/modules/Administration/Save.php
 share/sugercrm/modules/Administration/SugarSpriteBuilder.php
@@ -4784,11 +4785,13 @@ share/sugercrm/modules/Configurator/tpls/addFontResult.tpl
 share/sugercrm/modules/Configurator/tpls/addFontView.tpl
 share/sugercrm/modules/Configurator/tpls/adminwizard.tpl
 share/sugercrm/modules/Configurator/tpls/fontmanager.tpl
+share/sugercrm/modules/Configurator/tpls/historyContactsEmails.tpl
 share/sugercrm/modules/Configurator/views/view.addfontresult.php
 share/sugercrm/modules/Configurator/views/view.addfontview.php
 share/sugercrm/modules/Configurator/views/view.adminwizard.php
 share/sugercrm/modules/Configurator/views/view.edit.php
 share/sugercrm/modules/Configurator/views/view.fontmanager.php
+share/sugercrm/modules/Configurator/views/view.historycontactsemails.php
 share/sugercrm/modules/Configurator/views/view.sugarpdfsettings.php
 share/sugercrm/modules/Connectors/Connector.js
 share/sugercrm/modules/Connectors/ConnectorRecord.php
@@ -4796,9 +4799,6 @@ share/sugercrm/modules/Connectors/Forms.php
 share/sugercrm/modules/Connectors/InstallDefaultConnectors.php
 share/sugercrm/modules/Connectors/Menu.php
 share/sugercrm/modules/Connectors/action_view_map.php
-share/sugercrm/modules/Connectors/connectors/formatters/ext/rest/linkedin/linkedin.php
-share/sugercrm/modules/Connectors/connectors/formatters/ext/rest/linkedin/tpls/default.tpl
-share/sugercrm/modules/Connectors/connectors/formatters/ext/rest/linkedin/tpls/linkedin.gif
 share/sugercrm/modules/Connectors/connectors/formatters/ext/rest/twitter/tpls/twitter.gif
 share/sugercrm/modules/Connectors/connectors/sources/ext/rest/insideview/InsideViewLogicHook.php
 share/sugercrm/modules/Connectors/connectors/sources/ext/rest/insideview/config.php
@@ -4811,11 +4811,6 @@ share/sugercrm/modules/Connectors/connectors/sources/ext/rest/insideview/insidev
 share/sugercrm/modules/Connectors/connectors/sources/ext/rest/insideview/language/en_us.lang.php
 share/sugercrm/modules/Connectors/connectors/sources/ext/rest/insideview/mapping.php
 share/sugercrm/modules/Connectors/connectors/sources/ext/rest/insideview/tpls/InsideView.tpl
-share/sugercrm/modules/Connectors/connectors/sources/ext/rest/linkedin/config.php
-share/sugercrm/modules/Connectors/connectors/sources/ext/rest/linkedin/language/en_us.lang.php
-share/sugercrm/modules/Connectors/connectors/sources/ext/rest/linkedin/linkedin.php
-share/sugercrm/modules/Connectors/connectors/sources/ext/rest/linkedin/mapping.php
-share/sugercrm/modules/Connectors/connectors/sources/ext/rest/linkedin/vardefs.php
 share/sugercrm/modules/Connectors/controller.php
 share/sugercrm/modules/Connectors/language/en_us.lang.php
 share/sugercrm/modules/Connectors/metadata/searchdefs.php
@@ -5013,6 +5008,7 @@ share/sugercrm/modules/DynamicFields/templates/Fields/TemplateIFrame.php
 share/sugercrm/modules/DynamicFields/templates/Fields/TemplateId.php
 share/sugercrm/modules/DynamicFields/templates/Fields/TemplateImage.php
 share/sugercrm/modules/DynamicFields/templates/Fields/TemplateInt.php
+share/sugercrm/modules/DynamicFields/templates/Fields/TemplateLink.php
 share/sugercrm/modules/DynamicFields/templates/Fields/TemplateMultiEnum.php
 share/sugercrm/modules/DynamicFields/templates/Fields/TemplateParent.php
 share/sugercrm/modules/DynamicFields/templates/Fields/TemplateParentType.php
@@ -5938,11 +5934,9 @@ share/sugercrm/modules/SavedSearch/metadata/listviewdefs.php
 share/sugercrm/modules/SavedSearch/vardefs.php
 share/sugercrm/modules/Schedulers/EditView.html
 share/sugercrm/modules/Schedulers/EditView.php
-share/sugercrm/modules/Schedulers/JobThread.php
 share/sugercrm/modules/Schedulers/Menu.php
 share/sugercrm/modules/Schedulers/Save.php
 share/sugercrm/modules/Schedulers/Scheduler.php
-share/sugercrm/modules/Schedulers/SchedulerDaemon.php
 share/sugercrm/modules/Schedulers/Schedulers.js
 share/sugercrm/modules/Schedulers/_AddJobsHere.php
 share/sugercrm/modules/Schedulers/field_arrays.php
@@ -6277,6 +6271,7 @@ share/sugercrm/soap/SoapRelationshipHelper.php
 share/sugercrm/soap/SoapStudio.php
 share/sugercrm/soap/SoapSugarUsers.php
 share/sugercrm/soap/SoapTypes.php
+share/sugercrm/sugar_version.json
 share/sugercrm/sugar_version.php
 share/sugercrm/sugarcrm.log
 share/sugercrm/themes/Sugar5/css/chart.css
