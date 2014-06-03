@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2014/05/29 23:36:58 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2014/06/03 03:21:39 ryoon Exp $
 
 VER=		4.2.4.2
 DISTNAME=	libreoffice-${VER}
 PKGNAME=	libreoffice4-${VER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/4.2.4/
 EXTRACT_SUFX=	.tar.xz
@@ -58,7 +58,6 @@ MORE_DISTFILES= \
 	3c219630e4302863a9a83d0efde889db-commons-logging-1.1.1-src.tar.gz \
 	46e92b68e31e858512b680b3b61dc4c1-mythes-1.2.3.tar.gz \
 	36271d3fa0d9dec1632029b6d7aac925-liblangtag-0.5.1.tar.bz2 \
-	798b2ffdc8bcfe7bca2cf92b62caf685-rhino1_5R5.zip \
 	7a15edea7d415ac5150ea403e27401fd-open-sans-font-ttf-1.10.tar.gz \
 	8ce2fcd72becf06c41f7201d15373ed9-librepository-1.1.6.zip \
 	97b2d4dba862397f446b217e2b623e71-libloader-1.1.6.zip \
@@ -155,9 +154,6 @@ CONFIGURE_ARGS+=	--with-parallelism=${MAKE_JOBS:Q}
 CONFIGURE_ARGS+=	--with-boost-libdir=${BUILDLINK_PREFIX.boost-libs}/lib
 CONFIGURE_ARGS+=	--with-system-libs
 CONFIGURE_ARGS+=	--with-system-dicts
-CONFIGURE_ARGS+=	--enable-scripting-beanshell
-CONFIGURE_ARGS+=	--without-system-beanshell
-CONFIGURE_ARGS+=	--enable-scripting-javascript
 # internal vigra should be used because only header files are used.
 CONFIGURE_ARGS+=	--without-system-vigra
 CONFIGURE_ARGS+=	--with-vendor="pkgsrc"
