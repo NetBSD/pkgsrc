@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.602 2014/06/02 00:14:01 rodent Exp $
+# $NetBSD: Makefile,v 1.603 2014/06/03 14:31:14 jperkin Exp $
 #
 
 COMMENT=	System utilities
@@ -406,6 +406,7 @@ SUBDIR+=	rox
 SUBDIR+=	rsnapshot
 SUBDIR+=	rtty
 SUBDIR+=	ruby-activesambaldap
+SUBDIR+=	ruby-chef-zero
 SUBDIR+=	ruby-directory-watcher
 SUBDIR+=	ruby-facter
 SUBDIR+=	ruby-fssm
