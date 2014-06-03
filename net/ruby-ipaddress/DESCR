@@ -1,0 +1,8 @@
+IPAddress is a Ruby library designed to make the use of IPv4 and IPv6
+addresses simple, powerful and enjoyable. It provides a complete set
+of methods to handle IP addresses for any need, from simple scripting
+to full network design.
+
+IPAddress is written with a full OO interface, and its code is easy to
+read, maintain and extend. The documentation is full of examples, to
+let you start being productive immediately.
