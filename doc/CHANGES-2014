@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2139 2014/06/03 13:58:25 jperkin Exp $
+$NetBSD: CHANGES-2014,v 1.2140 2014/06/03 14:07:06 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2931,3 +2931,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added misc/ruby-ohai version 7.0.4 [jperkin 2014-06-03]
 	Added devel/ruby-yajl-ruby version 1.2.0 [jperkin 2014-06-03]
 	Added misc/ruby-slop version 3.5.0 [jperkin 2014-06-03]
+	Added www/ruby-rest-client version 1.6.7 [jperkin 2014-06-03]
