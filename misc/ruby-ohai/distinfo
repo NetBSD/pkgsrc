@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/06/03 13:49:28 jperkin Exp $
+
+SHA1 (ohai-7.0.4.gem) = 778f0937302ddebb7373d03766388b87220fd4f1
+RMD160 (ohai-7.0.4.gem) = 67f6772688c43804b7ec3c86653fb76db317061d
+Size (ohai-7.0.4.gem) = 410112 bytes
