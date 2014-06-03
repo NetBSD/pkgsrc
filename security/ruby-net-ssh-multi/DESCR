@@ -1,0 +1,10 @@
+Net::SSH::Multi is a library for controlling multiple Net::SSH
+connections via a single interface. It exposes an API similar to that
+of Net::SSH::Connection::Session and Net::SSH::Connection::Channel,
+making it simpler to adapt programs designed for single connections to
+be used with multiple connections.
+
+This library is particularly useful for automating repetitive tasks
+that must be performed on multiple machines. It executes the commands
+in parallel, and allows commands to be executed on subsets of servers
+(defined by groups).
