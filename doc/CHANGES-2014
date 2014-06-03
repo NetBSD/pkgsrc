@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2123 2014/06/02 16:35:03 adam Exp $
+$NetBSD: CHANGES-2014,v 1.2124 2014/06/03 03:20:58 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2915,3 +2915,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/git-docs to 1.9.4 [adam 2014-06-02]
 	Updated devel/git-svn to 1.9.4 [adam 2014-06-02]
 	Updated www/gitweb to 1.9.4 [adam 2014-06-02]
+	Updated lang/openjdk7 to 1.7.55nb2 [ryoon 2014-06-03]
