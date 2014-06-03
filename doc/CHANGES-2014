@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2137 2014/06/03 13:50:16 jperkin Exp $
+$NetBSD: CHANGES-2014,v 1.2138 2014/06/03 13:53:33 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2929,3 +2929,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added misc/ruby-systemu version 2.5.2 [jperkin 2014-06-03]
 	Added net/ruby-ipaddress version 0.8.0 [jperkin 2014-06-03]
 	Added misc/ruby-ohai version 7.0.4 [jperkin 2014-06-03]
+	Added devel/ruby-yajl-ruby version 1.2.0 [jperkin 2014-06-03]
