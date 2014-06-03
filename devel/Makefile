@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1922 2014/05/29 22:07:32 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.1923 2014/06/03 13:17:36 jperkin Exp $
 #
 
 COMMENT=	Development utilities
@@ -1675,6 +1675,11 @@ SUBDIR+=	ruby-memoize
 SUBDIR+=	ruby-metaclass
 SUBDIR+=	ruby-metaid
 SUBDIR+=	ruby-minitest
+SUBDIR+=	ruby-mixlib-authentication
+SUBDIR+=	ruby-mixlib-cli
+SUBDIR+=	ruby-mixlib-config
+SUBDIR+=	ruby-mixlib-log
+SUBDIR+=	ruby-mixlib-shellout
 SUBDIR+=	ruby-mkrf
 SUBDIR+=	ruby-mocha
 SUBDIR+=	ruby-mode
