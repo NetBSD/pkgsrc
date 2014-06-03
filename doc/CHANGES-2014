@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2126 2014/06/03 06:56:22 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2127 2014/06/03 08:29:22 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2918,3 +2918,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/openjdk7 to 1.7.55nb2 [ryoon 2014-06-03]
 	Updated misc/libreoffice4 to 4.2.4.2nb3 [ryoon 2014-06-03]
 	Updated www/php-sugarcrm to 6.5.16 [wen 2014-06-03]
+	Updated security/sks to 1.1.5 [pettai 2014-06-03]
