@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.66 2014/06/01 17:55:33 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2014/06/03 03:20:15 ryoon Exp $
 
 DISTNAME=	openjdk-1.7.55-20140501
 PKGNAME=	openjdk7-1.7.55
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
 EXTRACT_SUFX=	.tar.bz2
@@ -42,7 +42,7 @@ DEPENDS+=		dejavu-ttf-[0-9]*:../../fonts/dejavu-ttf
 
 NO_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake pax unzip:run zip:run patch
+USE_TOOLS+=		gmake pax unzip:run zip:run # patch
 UNLIMIT_RESOURCES=	datasize stacksize
 WRKSRC=			${WRKDIR}/openjdk
 
