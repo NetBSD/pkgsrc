@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.432 2014/06/03 13:03:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.433 2014/06/03 13:31:43 jperkin Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -275,6 +275,7 @@ SUBDIR+=	ruby-progressbar
 SUBDIR+=	ruby-rainbow
 SUBDIR+=	ruby-sprockets
 SUBDIR+=	ruby-sprockets22
+SUBDIR+=	ruby-systemu
 SUBDIR+=	ruby-thread_safe
 SUBDIR+=	ruby-transaction-simple
 SUBDIR+=	ruby-typed-array
