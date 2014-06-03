@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/06/03 14:30:36 jperkin Exp $
+
+SHA1 (chef-zero-2.0.2.gem) = e2e1f40e792545f7168c9654104ddd09eb8778bd
+RMD160 (chef-zero-2.0.2.gem) = fbe6e0d12e57998aa897eaa8fcb6af9e86707cec
+Size (chef-zero-2.0.2.gem) = 40448 bytes
