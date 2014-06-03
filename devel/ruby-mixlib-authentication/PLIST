@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2014/06/03 13:11:32 jperkin Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/NOTICE
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/mixlib/authentication.rb
+${GEM_LIBDIR}/lib/mixlib/authentication/digester.rb
+${GEM_LIBDIR}/lib/mixlib/authentication/http_authentication_request.rb
+${GEM_LIBDIR}/lib/mixlib/authentication/signatureverification.rb
+${GEM_LIBDIR}/lib/mixlib/authentication/signedheaderauth.rb
+${GEM_LIBDIR}/spec/mixlib/authentication/http_authentication_request_spec.rb
+${GEM_LIBDIR}/spec/mixlib/authentication/mixlib_authentication_spec.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
