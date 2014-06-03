@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/05/31 22:20:08 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/03 06:49:52 wiz Exp $
 
 DISTNAME=		CGI-Fast-2.01
 PKGNAME=		p5-${DISTNAME}
@@ -11,6 +11,8 @@ COMMENT=		CGI Interface for Fast CGI
 
 DEPENDS+=	p5-CGI>=3.65.02:../../www/p5-CGI
 DEPENDS+=	p5-FCGI-[0-9]*:../../www/p5-FCGI
+
+CONFLICTS+=	p5-CGI<4.0
 
 PERL5_PACKLIST=		auto/CGI/Fast/.packlist
 
