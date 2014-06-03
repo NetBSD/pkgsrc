@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2014/06/01 14:31:08 ryoon Exp $
+$NetBSD: distinfo,v 1.18 2014/06/03 03:21:39 ryoon Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -66,9 +66,6 @@ Size (libreoffice/5c781723a0d9ed6188960defba8e91cf-liberation-fonts-ttf-2.00.1.t
 SHA1 (libreoffice/625ff5f2f968dd908bca43c9469d6e6b-commons-lang-2.4-src.tar.gz) = 61ec8be8c2cf8f4c4272545666f936dd9f7e2a29
 RMD160 (libreoffice/625ff5f2f968dd908bca43c9469d6e6b-commons-lang-2.4-src.tar.gz) = c474272aa3ebf7147a3cf6a59cfa97fa33979c9e
 Size (libreoffice/625ff5f2f968dd908bca43c9469d6e6b-commons-lang-2.4-src.tar.gz) = 522654 bytes
-SHA1 (libreoffice/798b2ffdc8bcfe7bca2cf92b62caf685-rhino1_5R5.zip) = 8a90669029e107b61953b90ba11545fef586c2ca
-RMD160 (libreoffice/798b2ffdc8bcfe7bca2cf92b62caf685-rhino1_5R5.zip) = 68e248ec03675458f0536282ef250efa42c4c154
-Size (libreoffice/798b2ffdc8bcfe7bca2cf92b62caf685-rhino1_5R5.zip) = 1521926 bytes
 SHA1 (libreoffice/7a15edea7d415ac5150ea403e27401fd-open-sans-font-ttf-1.10.tar.gz) = 8896e0e17c66d2ed134faa5f8b95794334b81f80
 RMD160 (libreoffice/7a15edea7d415ac5150ea403e27401fd-open-sans-font-ttf-1.10.tar.gz) = 46384cde5caf553206290a7c174297db0b98cc5a
 Size (libreoffice/7a15edea7d415ac5150ea403e27401fd-open-sans-font-ttf-1.10.tar.gz) = 466545 bytes

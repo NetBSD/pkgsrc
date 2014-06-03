@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST.java,v 1.3 2014/02/02 07:43:40 ryoon Exp $
+@comment $NetBSD: PLIST.java,v 1.4 2014/06/03 03:21:39 ryoon Exp $
 ${PKGNAME}/program/classes/ScriptFramework.jar
 ${PKGNAME}/program/classes/ScriptProviderForBeanShell.jar
 ${PKGNAME}/program/classes/ScriptProviderForJava.jar
-${PKGNAME}/program/classes/ScriptProviderForJavaScript.jar
 ${PKGNAME}/program/classes/XMergeBridge.jar
 ${PKGNAME}/program/classes/bsh.jar
 ${PKGNAME}/program/classes/commons-logging-1.1.1.jar
@@ -10,7 +9,6 @@ ${PKGNAME}/program/classes/commonwizards.jar
 ${PKGNAME}/program/classes/flow-engine.jar
 ${PKGNAME}/program/classes/flute-1.1.6.jar
 ${PKGNAME}/program/classes/form.jar
-${PKGNAME}/program/classes/js.jar
 ${PKGNAME}/program/classes/libbase-1.1.6.jar
 ${PKGNAME}/program/classes/libfonts-1.1.6.jar
 ${PKGNAME}/program/classes/libformula-1.1.7.jar
@@ -34,7 +32,6 @@ ${PKGNAME}/program/libhsqldb.so
 ${PKGNAME}/program/libjdbclo.so
 ${PKGNAME}/program/libofficebean.so
 ${PKGNAME}/program/services/scriptproviderforbeanshell.rdb
-${PKGNAME}/program/services/scriptproviderforjavascript.rdb
 ${PKGNAME}/share/Scripts/beanshell/Capitalise/capitalise.bsh
 ${PKGNAME}/share/Scripts/beanshell/Capitalise/parcel-descriptor.xml
 ${PKGNAME}/share/Scripts/beanshell/HelloWorld/helloworld.bsh
@@ -56,13 +53,6 @@ ${PKGNAME}/share/Scripts/java/Highlight/parcel-descriptor.xml
 ${PKGNAME}/share/Scripts/java/MemoryUsage/MemoryUsage.jar
 ${PKGNAME}/share/Scripts/java/MemoryUsage/MemoryUsage.java
 ${PKGNAME}/share/Scripts/java/MemoryUsage/parcel-descriptor.xml
-${PKGNAME}/share/Scripts/javascript/ExportSheetsToHTML/exportsheetstohtml.js
-${PKGNAME}/share/Scripts/javascript/ExportSheetsToHTML/parcel-descriptor.xml
-${PKGNAME}/share/Scripts/javascript/HelloWorld/helloworld.js
-${PKGNAME}/share/Scripts/javascript/HelloWorld/parcel-descriptor.xml
-${PKGNAME}/share/Scripts/javascript/Highlight/ButtonPressHandler.js
-${PKGNAME}/share/Scripts/javascript/Highlight/ShowDialog.js
-${PKGNAME}/share/Scripts/javascript/Highlight/parcel-descriptor.xml
 ${PKGNAME}/share/extensions/nlpsolver/EvolutionarySolver.jar
 ${PKGNAME}/share/extensions/nlpsolver/META-INF/manifest.xml
 ${PKGNAME}/share/extensions/nlpsolver/components.rdb
