@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/05/17 16:07:51 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/03 08:59:33 khorben Exp $
 
 LIBTAXII_VERSION=	1.1.101
 DISTNAME=	libtaxii-${LIBTAXII_VERSION}
@@ -11,6 +11,8 @@ MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://github.com/TAXIIProject/python-stix
 COMMENT=	Python library for handling TAXII Messages and Services
 LICENSE=	modified-bsd
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34
 
 EGG_NAME=	libtaxii-${LIBTAXII_VERSION}
 
