@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2014/06/03 13:58:10 jperkin Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/CHANGES.md
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/slop.rb
+${GEM_LIBDIR}/lib/slop/commands.rb
+${GEM_LIBDIR}/lib/slop/option.rb
+${GEM_LIBDIR}/slop.gemspec
+${GEM_LIBDIR}/test/commands_test.rb
+${GEM_LIBDIR}/test/helper.rb
+${GEM_LIBDIR}/test/option_test.rb
+${GEM_LIBDIR}/test/slop_test.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
