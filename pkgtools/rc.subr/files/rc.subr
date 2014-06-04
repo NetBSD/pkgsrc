@@ -1,4 +1,4 @@
-# $NetBSD: rc.subr,v 1.10 2009/01/18 22:35:35 shattered Exp $
+# $NetBSD: rc.subr,v 1.11 2014/06/04 14:16:00 ryoon Exp $
 #
 # Copyright (c) 1997-2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -112,6 +112,9 @@ case $_osname in
 #		_RCCMD_rcs="/usr/bin/rcs"		# not in Slackware 8.1
 #		_RCCMD_systrace="/bin/systrace"		# not in Slackware 8.1
 		_RCARG_ps="ax"
+		if [ -e /etc/redhat-release ]; then
+			_RCCMD_su="/bin/su"		# for CentOS/RHEL
+		fi
 		;;
 	QNX)
 		_RCCMD_chown="/bin/chown"
