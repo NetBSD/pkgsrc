@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2011/06/24 13:04:43 tron Exp $
+$NetBSD: patch-aa,v 1.6 2014/06/04 11:40:41 adam Exp $
 
---- build/generic/Makefile.orig	2005-12-30 14:45:30.000000000 +0000
+--- build/generic/Makefile.orig	2014-04-08 20:41:05.000000000 +0000
 +++ build/generic/Makefile
-@@ -83,7 +83,7 @@ $(OBJECTS): platform.inc
+@@ -85,7 +85,7 @@ $(OBJECTS): platform.inc
  
  $(BUILD_DIR):
  	@echo "  D: $(BUILD_DIR)"
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.5 2011/06/24 13:04:43 tron Exp $
  
  #-----------------------------------------------------------------------------
  # Generic assembly rule
-@@ -91,7 +91,7 @@ $(BUILD_DIR):
+@@ -93,7 +93,7 @@ $(BUILD_DIR):
  
  .$(ASSEMBLY_EXTENSION).$(OBJECT_EXTENSION):
  	@echo "  A: $(@D)/$(<F)"
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.5 2011/06/24 13:04:43 tron Exp $
  	@$(AS) $(AFLAGS) $< -o $(BUILD_DIR)/$@
  
  #-----------------------------------------------------------------------------
-@@ -100,7 +100,7 @@ $(BUILD_DIR):
+@@ -104,7 +104,7 @@ $(PPC_ALTIVEC_OBJECTS): CFLAGS+= $(ALTIV
  
  .c.$(OBJECT_EXTENSION):
  	@echo "  C: $(@D)/$(<F)"
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.5 2011/06/24 13:04:43 tron Exp $
  	@$(CC) -c $(ARCHITECTURE) $(BUS) $(ENDIANNESS) $(FEATURES) $(SPECIFIC_CFLAGS) $(CFLAGS) $< -o $(BUILD_DIR)/$@
  
  #-----------------------------------------------------------------------------
-@@ -128,8 +128,8 @@ $(STATIC_LIB): $(BUILD_DIR) $(OBJECTS)
+@@ -132,8 +132,8 @@ $(STATIC_LIB): $(BUILD_DIR) $(OBJECTS)
  
  $(SHARED_LIB): $(BUILD_DIR) $(OBJECTS)
  	@echo "  L: $(@F)"
@@ -40,14 +40,12 @@ $NetBSD: patch-aa,v 1.5 2011/06/24 13:04:43 tron Exp $
  	@cd $(BUILD_DIR) && $(CC) $(LDFLAGS) $(OBJECTS) -o $(PRE_SHARED_LIB) $(SPECIFIC_LDFLAGS)
  
  #-----------------------------------------------------------------------------
-@@ -140,7 +140,9 @@ install: $(BUILD_DIR)/$(STATIC_LIB) $(BU
- 	@echo "  D: $(libdir)"
- 	@$(INSTALL) -d $(DESTDIR)$(libdir)
+@@ -158,7 +158,7 @@ ifeq ($(SHARED_EXTENSION),dll)
+ 	@$(INSTALL) -m 755 $(BUILD_DIR)/$(SHARED_LIB) $(DESTDIR)$(bindir)/$(SHARED_LIB)
+ else
  	@echo "  I: $(libdir)/$(SHARED_LIB)"
 -	@$(INSTALL) -m 644 $(BUILD_DIR)/$(SHARED_LIB) $(DESTDIR)$(libdir)/$(SHARED_LIB)
 +	@$(BSD_INSTALL_LIB) $(BUILD_DIR)/$(SHARED_LIB) $(DESTDIR)$(libdir)/$(SHARED_LIB)
-+	@ln -s $(libdir)/$(SHARED_LIB) $(DESTDIR)$(libdir)/libxvidcore.so
-+	@ln -s $(libdir)/$(SHARED_LIB) $(DESTDIR)$(libdir)/libxvidcore.so.$(API_MAJOR)
- 	@echo "  I: $(libdir)/$(STATIC_LIB)"
- 	@$(INSTALL) -m 644 $(BUILD_DIR)/$(STATIC_LIB) $(DESTDIR)$(libdir)/$(STATIC_LIB)
- 	@echo "  D: $(includedir)"
+ 	@test -z "$(SO_API_MAJOR_LINK)" || \
+ 		$(LN_S) $(SHARED_LIB) $(DESTDIR)$(libdir)/$(SO_API_MAJOR_LINK)
+ 	@test -z "$(SO_LINK)" || \
