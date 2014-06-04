@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2014/04/28 19:56:40 tron Exp $
+# $NetBSD: Makefile,v 1.128 2014/06/04 20:40:33 tron Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}-all-languages
 PKGNAME=	phpmyadmin-${DIST_VERSION:S/-//}
@@ -16,7 +16,6 @@ DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.3.0:../../archivers/php-zip
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.3.0:../../archivers/php-zlib
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.3.0:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=5.3.0:../../devel/php-gettext
-DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=5.3.0:../../databases/php-mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=5.3.0:../../databases/php-mysqli
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.3.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=5.3.0:../../security/php-mcrypt
@@ -29,7 +28,7 @@ MESSAGE_SUBST+=	CONF_INC_PHP=${CONF_INC_PHP} PMCONFFILE=${PMCONFFILE:Q} \
 		EXDIR=${EXDIR:Q}
 
 CONF_INC_PHP=	${PREFIX}/share/phpmyadmin/config.inc.php
-DIST_VERSION=	4.1.14
+DIST_VERSION=	4.2.2
 DOC_FILES=	ChangeLog LICENSE README RELEASE-DATE-${DIST_VERSION}
 
 APACHE_USER?=	www
@@ -56,6 +55,7 @@ INSTALLATION_DIRS+=	${PREFIX}/share/doc/phpmyadmin \
 			${PMDIR} ${PMDIR}/scripts
 
 INSTALL_DIRS=	doc/html
+INSTALL_DIRS+=	doc/html/_static
 INSTALL_DIRS+=	js
 INSTALL_DIRS+=	js/canvg
 INSTALL_DIRS+=	js/jqplot
@@ -73,6 +73,53 @@ INSTALL_DIRS+=	js/jquery/src/jquery
 INSTALL_DIRS+=	js/jquery/src/jquery/ajax
 INSTALL_DIRS+=	js/openlayers
 INSTALL_DIRS+=	js/openlayers/img
+INSTALL_DIRS+=	js/openlayers/src
+INSTALL_DIRS+=	js/openlayers/src/openlayers
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/Firebug
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/Gears
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/BaseTypes
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Control
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Feature
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Filter
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Format
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Format/ArcXML
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Format/CSWGetDomain
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Format/CSWGetRecords
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Format/Filter
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Format/GML
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Format/OWSCommon
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Format/OWSContext
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Format/SLD
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Format/SOSCapabilities
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Format/WFSCapabilities
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Format/WFST
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Format/WMC
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Format/WMSCapabilities
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Format/WMSDescribeLayer
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Format/WMTSCapabilities
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Geometry
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Handler
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Lang
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Layer
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Layer/Google
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Layer/MapServer
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Layer/Vector
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Layer/WMS
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Marker
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Popup
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Protocol
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Protocol/SOS
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Protocol/SQL
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Protocol/WFS
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Renderer
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Request
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Strategy
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Symbolizer
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Tile
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/OpenLayers/Tile/Image
+INSTALL_DIRS+=	js/openlayers/src/openlayers/lib/Rico
 INSTALL_DIRS+=	js/openlayers/theme
 INSTALL_DIRS+=	js/openlayers/theme/default
 INSTALL_DIRS+=	js/openlayers/theme/default/img
