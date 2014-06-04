@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.5 2008/11/24 04:06:00 smb Exp $
+# $NetBSD: options.mk,v 1.6 2014/06/04 16:07:34 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.memtestplus
 PKG_SUPPORTED_OPTIONS=	iso serialconsole
-PKG_SUGGESTED_OPTIONS=
+PKG_SUGGESTED_OPTIONS=	iso
 
 .include "../../mk/bsd.options.mk"
 
