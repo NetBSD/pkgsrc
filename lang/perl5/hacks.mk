@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.12 2014/05/29 07:57:07 adam Exp $
+# $NetBSD: hacks.mk,v 1.13 2014/06/04 09:19:56 obache Exp $
 
 .if !defined(PERL5_HACKS_MK)
 PERL5_HACKS_MK=	defined
@@ -62,15 +62,6 @@ CFLAGS+=	-fno-cse-skip-blocks
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "m68k"
 PKG_HACKS+=		m68k-codegen
 BUILDLINK_TRANSFORM+=	rename:-O[0-9]*:-Os
-.endif
-
-### [Thr Mar 21 22:20:00 JST 2013 : obache]
-### from KNOWN PROBLEMS in README.haiku
-### Perl cannot be compiled with threading support ATM.
-###
-.if !empty(MACHINE_PLATFORM:MHaiku-*-*)
-PKG_HACKS+=			broken-haiku-pthreads
-PERL5_BUILD_THREADS_SUPPORT=	no
 .endif
 
 ### [Fri Jan 31 11:09:04 CST 2014 : schnoebe]
