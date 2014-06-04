@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2148 2014/06/04 11:44:19 adam Exp $
+$NetBSD: CHANGES-2014,v 1.2149 2014/06/04 14:16:33 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2939,3 +2939,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/libass to 0.11.2 [adam 2014-06-04]
 	Updated multimedia/ffmpeg2 to 2.2.3 [adam 2014-06-04]
 	Updated multimedia/xvidcore to 1.3.3 [adam 2014-06-04]
+	Updated pkgtools/rc.subr to 20140604 [ryoon 2014-06-04]
