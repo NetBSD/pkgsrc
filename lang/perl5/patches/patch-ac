@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.18 2014/05/29 07:57:07 adam Exp $
+$NetBSD: patch-ac,v 1.19 2014/06/04 00:21:33 dsainty Exp $
 
 We intentionally wire down the 'libswanted' list in the package Makefile,
 so don't let the hints file add new libraries that may be found outside
@@ -6,11 +6,14 @@ Pkgsrc control.
 
 --- hints/linux.sh.orig	2014-05-26 13:34:20.000000000 +0000
 +++ hints/linux.sh
-@@ -61,7 +61,6 @@ libswanted="$*"
+@@ -61,10 +61,6 @@
+ 
+ # Debian 4.0 puts ndbm in the -lgdbm_compat library.
  echo $libs
- if echo " $libswanted " | grep -q ' gdbm '; then
-     # Only add if gdbm is in libswanted.
+-if echo " $libswanted " | grep -q ' gdbm '; then
+-    # Only add if gdbm is in libswanted.
 -    libswanted="$libswanted gdbm_compat"
- fi
+-fi
  
  # Configure may fail to find lstat() since it's a static/inline
+ # function in <sys/stat.h>.
