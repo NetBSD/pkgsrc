@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2014/03/03 05:12:35 obache Exp $
+# $NetBSD: Makefile,v 1.28 2014/06/04 14:16:00 ryoon Exp $
 #
 
-PKGNAME=		rc.subr-20090118
+PKGNAME=		rc.subr-20140604
 CATEGORIES=		pkgtools
 
 MAINTAINER=		sbd@NetBSD.org
