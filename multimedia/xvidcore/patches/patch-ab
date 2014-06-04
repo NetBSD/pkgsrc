@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.8 2011/07/19 18:56:46 drochner Exp $
+$NetBSD: patch-ab,v 1.9 2014/06/04 11:40:41 adam Exp $
 
---- build/generic/configure.orig	2009-05-28 17:13:31.000000000 +0000
+--- build/generic/configure.orig	2014-04-08 20:41:05.000000000 +0000
 +++ build/generic/configure
-@@ -3802,7 +3802,7 @@ SHARED_EXTENSION=""
+@@ -4316,7 +4316,7 @@ SHARED_EXTENSION=""
  STATIC_EXTENSION=""
  OBJECT_EXTENSION=""
  case "$target_os" in
--     *bsd*|linux*|beos|irix*|solaris*)
-+     *bsd*|linux*|beos|irix*|solaris*|dragonfly*)
+-     *bsd*|linux*|beos|irix*|solaris*|gnu*|*qnx*)
++     *bsd*|linux*|beos|irix*|solaris*|gnu*|*qnx*|dragonfly*)
  	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: .so .a .o" >&5
  $as_echo ".so .a .o" >&6; }
  	STATIC_EXTENSION="a"
-@@ -4312,7 +4312,7 @@ $as_echo "ok" >&6; }
+@@ -4372,7 +4372,7 @@ $as_echo "ok" >&6; }
  	SPECIFIC_LDFLAGS="-Wl,-soname,libxvidcore.\$(SHARED_EXTENSION).\$(API_MAJOR) -shared -Wl,--version-script=libxvidcore.ld -lc -lm"
  	SPECIFIC_CFLAGS="-fPIC"
  	;;
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.8 2011/07/19 18:56:46 drochner Exp $
  	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: ok" >&5
  $as_echo "ok" >&6; }
  	STATIC_LIB="libxvidcore.\$(STATIC_EXTENSION)"
-@@ -4341,7 +4341,7 @@ $as_echo "dylib options" >&6; }
+@@ -4403,7 +4403,7 @@ $as_echo "dylib options" >&6; }
  $as_echo "module options" >&6; }
   	   PRE_SHARED_LIB="libxvidcore.\$(SHARED_EXTENSION)-temp.o"
  	   SHARED_LIB="libxvidcore.\$(SHARED_EXTENSION).\$(API_MAJOR)"
@@ -29,16 +29,16 @@ $NetBSD: patch-ab,v 1.8 2011/07/19 18:56:46 drochner Exp $
  	fi
  	;;
       beos)
-@@ -4538,7 +4538,7 @@ $as_echo "$as_me: WARNING: nasm version 
+@@ -4600,7 +4600,7 @@ $as_echo "$as_me: WARNING: nasm version 
         { $as_echo "$as_me:${as_lineno-$LINENO}: checking for asm object format" >&5
  $as_echo_n "checking for asm object format... " >&6; }
         case "$target_os" in
--           *bsd*|linux*|beos|irix*|solaris*)
-+           *bsd*|linux*|beos|irix*|solaris*|dragonfly*)
+-           *bsd*|linux*|beos|irix*|solaris*|gnu*|*qnx*)
++           *bsd*|linux*|beos|irix*|solaris*|gnu*|*qnx*|dragonfly*)
                 if test "$ARCHITECTURE" = "X86_64" ; then
                     { $as_echo "$as_me:${as_lineno-$LINENO}: result: elf64" >&5
  $as_echo "elf64" >&6; }
-@@ -4577,6 +4577,13 @@ $as_echo "macho32" >&6; }
+@@ -4647,6 +4647,13 @@ $as_echo "macho32" >&6; }
                 PREFIX="-DPREFIX"
                 MARK_FUNCS=""
                 ;;
