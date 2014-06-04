@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2014/06/04 09:19:56 obache Exp $
+# $NetBSD: options.mk,v 1.9 2014/06/04 14:24:37 richard Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.perl
 PKG_OPTIONS_REQUIRED_GROUPS=	perlbits
@@ -70,8 +70,6 @@ CFLAGS+=		-DDEBUGGING
 
 .if !empty(PKG_OPTIONS:Mdtrace)
 CONFIGURE_ARGS+=	-Dusedtrace
-# perldtrace.h has incorrect dependencies, needs to be built first.
-BUILD_TARGET=		perldtrace.h all
 .endif
 
 .if !empty(PKG_OPTIONS:Mmstats)

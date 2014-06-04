@@ -1,10 +1,13 @@
-$NetBSD: patch-Makefile.SH,v 1.1 2014/01/04 15:10:05 richard Exp $
+$NetBSD: patch-Makefile.SH,v 1.2 2014/06/04 14:24:37 richard Exp $
 due to bloody backward incompatible changes in recent dtrace on SunOS
 postpone invocation of dtrace to later with the actual probe objects.
 
---- Makefile.SH.orig	2013-08-12 02:44:47.000000000 +0000
+Ensure perldtrace.h is generated during makedepends in order to avoid
+compilation problems
+
+--- Makefile.SH.orig	2014-05-26 13:34:18.000000000 +0000
 +++ Makefile.SH
-@@ -234,10 +234,9 @@ dtrace_o=''
+@@ -225,10 +225,9 @@ dtrace_o=''
  minidtrace_o=''
  case "$usedtrace" in
  define|true)
@@ -18,3 +21,12 @@ postpone invocation of dtrace to later with the actual probe objects.
  	;;
  esac
  
+@@ -1579,7 +1578,7 @@ nokfilenack:	utilities
+ 
+ .PHONY: clist hlist
+ 
+-clist:	$(c)
++clist:	$(c) $(DTRACE_H)
+ 	echo $(c) | tr ' ' $(TRNL) >.clist
+ 
+ hlist:  $(h)
