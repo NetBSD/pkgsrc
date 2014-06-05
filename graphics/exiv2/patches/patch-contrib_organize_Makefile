@@ -1,4 +1,4 @@
-$NetBSD: patch-contrib_organize_Makefile,v 1.1 2011/02/28 20:37:56 adam Exp $
+$NetBSD: patch-contrib_organize_Makefile,v 1.1 2014/06/05 07:12:53 adam Exp $
 
 --- contrib/organize/Makefile.orig	2011-02-28 20:05:59.000000000 +0000
 +++ contrib/organize/Makefile

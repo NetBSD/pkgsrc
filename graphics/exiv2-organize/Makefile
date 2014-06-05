@@ -1,24 +1,10 @@
-# $NetBSD: Makefile,v 1.24 2014/06/05 06:43:54 adam Exp $
+# $NetBSD: Makefile,v 1.25 2014/06/05 07:12:53 adam Exp $
 
-DISTNAME=	exiv2-0.24
+.include "../../graphics/exiv2/Makefile.common"
+
 PKGNAME=	${DISTNAME:S/exiv2/exiv2-organize/}
-CATEGORIES=	graphics
-MASTER_SITES=	http://www.exiv2.org/
 
-MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://www.exiv2.org/
-COMMENT=	Image metadata manipulation
-LICENSE=	gnu-gpl-v2
-
-USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake pkg-config
-GNU_CONFIGURE=		yes
-# The visibility feature seems complicated and causes problems on DragonFly
-# (reported by Matt Madden) and on Gentoo (http://bugs.gentoo.org/185907).
-CONFIGURE_ARGS+=	--disable-visibility
-
-GCC_REQD+=		3.3
+USE_TOOLS+=		pkg-config
 BUILD_DIRS=		contrib/organize
 INSTALLATION_DIRS=	bin
 
