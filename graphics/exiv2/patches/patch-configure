@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2014/06/05 07:12:53 adam Exp $
+
+Don't add -ldl for all OS; this gets auto-detected somewhere else.
+
+--- configure.orig	2014-06-05 06:53:10.000000000 +0000
++++ configure
+@@ -17069,8 +17069,6 @@ fi
+ case "$host_os" in
+ *mingw* | *cygwin*)
+     LDFLAGS="$LDFLAGS -no-undefined -lpsapi" ;;
+-*)
+-    LDFLAGS="$LDFLAGS -ldl" ;;
+ esac
+ 
+ # ---------------------------------------------------------------------------
