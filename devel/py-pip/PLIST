@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.9 2014/06/01 14:39:39 rodent Exp $
+@comment $NetBSD: PLIST,v 1.10 2014/06/05 18:28:07 joerg Exp $
 bin/pip
-bin/pip2
-bin/pip2.7
+${PLIST.py2x}bin/pip2
+${PLIST.py3x}bin/pip3
+bin/pip${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
