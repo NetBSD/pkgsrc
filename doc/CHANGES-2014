@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2153 2014/06/05 03:14:14 obache Exp $
+$NetBSD: CHANGES-2014,v 1.2154 2014/06/05 07:13:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2944,3 +2944,6 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/libatomic_ops to 7.4.0nb1 [obache 2014-06-05]
 	Updated devel/libelf to 0.8.13nb1 [obache 2014-06-05]
 	Updated security/openssl to 1.0.1gnb2 [obache 2014-06-05]
+	Updated graphics/libpano13 to 2.9.19 [adam 2014-06-05]
+	Updated graphics/exiv2 to 0.24 [adam 2014-06-05]
+	Updated graphics/p5-Image-ExifTool to 9.60 [adam 2014-06-05]
