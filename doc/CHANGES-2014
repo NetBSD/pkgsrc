@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2161 2014/06/05 16:36:30 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2162 2014/06/05 16:37:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2956,3 +2956,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/sqlite3-tcl to 3.8.5 [adam 2014-04-03]
 	Updated graphics/png to 1.6.11 [wiz 2014-06-05]
 	Updated fonts/harfbuzz to 0.9.29 [wiz 2014-06-05]
+	Updated print/latexmk to 439 [wiz 2014-06-05]
