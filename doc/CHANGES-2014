@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2154 2014/06/05 07:13:49 adam Exp $
+$NetBSD: CHANGES-2014,v 1.2155 2014/06/05 07:59:59 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2947,3 +2947,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/libpano13 to 2.9.19 [adam 2014-06-05]
 	Updated graphics/exiv2 to 0.24 [adam 2014-06-05]
 	Updated graphics/p5-Image-ExifTool to 9.60 [adam 2014-06-05]
+	Updated devel/p5-Moose to 2.1209 [wen 2014-06-05]
