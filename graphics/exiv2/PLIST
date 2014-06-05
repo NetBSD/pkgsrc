@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.15 2011/10/11 09:55:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2014/06/05 06:43:53 adam Exp $
 bin/exiv2
+include/exiv2/asfvideo.hpp
 include/exiv2/basicio.hpp
 include/exiv2/bmpimage.hpp
 include/exiv2/convert.hpp
@@ -18,6 +19,7 @@ include/exiv2/image.hpp
 include/exiv2/iptc.hpp
 include/exiv2/jp2image.hpp
 include/exiv2/jpgimage.hpp
+include/exiv2/matroskavideo.hpp
 include/exiv2/metadatum.hpp
 include/exiv2/mrwimage.hpp
 include/exiv2/orfimage.hpp
@@ -26,7 +28,9 @@ include/exiv2/pngimage.hpp
 include/exiv2/preview.hpp
 include/exiv2/properties.hpp
 include/exiv2/psdimage.hpp
+include/exiv2/quicktimevideo.hpp
 include/exiv2/rafimage.hpp
+include/exiv2/riffvideo.hpp
 include/exiv2/rw2image.hpp
 include/exiv2/tags.hpp
 include/exiv2/tgaimage.hpp
