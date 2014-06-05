@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/05/10 23:03:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2014/06/05 19:48:33 tron Exp $
 
 DISTNAME=	libexecinfo-1.1
 CATEGORIES=	devel
@@ -19,6 +19,13 @@ CFLAGS.Linux+=	-Wno-unused-result # write(2) is declared specially
 INSTALLATION_DIRS=	include lib
 
 .include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=	mkpic
+.if empty(MACHINE_PLATFORM:MSunOS-5.10-*)
+PLIST.mkpic=	yes
+.else
+MAKE_ENV+=	MKPIC=no
+.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/execinfo.h ${DESTDIR}${PREFIX}/include
