@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2152 2014/06/05 02:41:18 obache Exp $
+$NetBSD: CHANGES-2014,v 1.2153 2014/06/05 03:14:14 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2943,3 +2943,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/phpmyadmin to 4.2.2 [tron 2014-06-04]
 	Updated devel/libatomic_ops to 7.4.0nb1 [obache 2014-06-05]
 	Updated devel/libelf to 0.8.13nb1 [obache 2014-06-05]
+	Updated security/openssl to 1.0.1gnb2 [obache 2014-06-05]
