@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.191 2014/06/05 02:53:18 obache Exp $
+# $NetBSD: Makefile,v 1.192 2014/06/05 03:14:05 obache Exp $
 
 DISTNAME=	openssl-1.0.1g
 MASTER_SITES=	http://ftp.openssl.org/source/
-PKGREVISION=	1
+PKGREVISION=	2
 SVR4_PKGNAME=	ossl
 CATEGORIES=	security
 
@@ -125,6 +125,9 @@ CONFIGURE_ARGS+=	linux-ppc64
 
 CONFIGURE_ARGS+=	${CFLAGS} ${LDFLAGS}
 CONFIGURE_ENV+=		PERL=${PERL5:Q}
+
+PKGCONFIG_OVERRIDE+=		libcrypto.pc libssl.pc openssl.pc
+PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 PLIST_SRC+=		${PKGDIR}/PLIST.common
 USE_PLIST_SHLIB?=	yes
