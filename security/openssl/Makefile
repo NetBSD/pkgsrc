@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.190 2014/05/29 23:37:20 wiz Exp $
+# $NetBSD: Makefile,v 1.191 2014/06/05 02:53:18 obache Exp $
 
 DISTNAME=	openssl-1.0.1g
 MASTER_SITES=	http://ftp.openssl.org/source/
@@ -24,7 +24,6 @@ USE_GCC_RUNTIME=	yes
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
 
-EXTRACT_USING=		gtar
 USE_TOOLS+=		fgrep gmake perl
 TEST_TARGET=		tests
 MAKE_JOBS_SAFE=		no
