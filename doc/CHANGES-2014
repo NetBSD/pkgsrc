@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2155 2014/06/05 07:59:59 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2156 2014/06/05 08:15:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2948,3 +2948,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/exiv2 to 0.24 [adam 2014-06-05]
 	Updated graphics/p5-Image-ExifTool to 9.60 [adam 2014-06-05]
 	Updated devel/p5-Moose to 2.1209 [wen 2014-06-05]
+	Updated www/p5-Mojolicious to 5.04 [wen 2014-06-05]
