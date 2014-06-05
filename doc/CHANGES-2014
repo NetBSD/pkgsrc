@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2159 2014/06/05 15:27:43 adam Exp $
+$NetBSD: CHANGES-2014,v 1.2160 2014/06/05 16:34:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2954,3 +2954,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/sqlite3 to 3.8.5 [adam 2014-04-03]
 	Updated databases/sqlite3-docs to 3.8.5 [adam 2014-04-03]
 	Updated databases/sqlite3-tcl to 3.8.5 [adam 2014-04-03]
+	Updated graphics/png to 1.6.11 [wiz 2014-06-05]
