@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2012/10/31 11:17:12 asau Exp $
+# $NetBSD: Makefile,v 1.17 2014/06/05 02:41:09 obache Exp $
 #
 
 DISTNAME=		libelf-0.8.13
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://www.mr511.de/software/
 
@@ -16,6 +17,8 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf
+
+PKGCONFIG_OVERRIDE+=	libelf.pc.in
 
 pre-configure:
 	(cd ${WRKSRC} && autoconf)
