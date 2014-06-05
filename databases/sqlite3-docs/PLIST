@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2014/04/03 19:44:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2014/06/05 15:10:20 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -176,6 +176,7 @@ share/doc/sqlite3/capi3.html
 share/doc/sqlite3/capi3ref.html
 share/doc/sqlite3/changes.html
 share/doc/sqlite3/cintro.html
+share/doc/sqlite3/cli.html
 share/doc/sqlite3/compile.html
 share/doc/sqlite3/conflict.html
 share/doc/sqlite3/consortium.html
@@ -203,6 +204,7 @@ share/doc/sqlite3/famous.html
 share/doc/sqlite3/faq.html
 share/doc/sqlite3/favicon.ico
 share/doc/sqlite3/features.html
+share/doc/sqlite3/fileformat.html
 share/doc/sqlite3/fileformat2.html
 share/doc/sqlite3/fileio.html
 share/doc/sqlite3/footprint.html
@@ -356,6 +358,7 @@ share/doc/sqlite3/images/qp/obfruitidx4.gif
 share/doc/sqlite3/images/qp/obfruitnoidx.gif
 share/doc/sqlite3/images/qp/obrowid.gif
 share/doc/sqlite3/images/qp/orquery.gif
+share/doc/sqlite3/images/qp/partial-sort.gif
 share/doc/sqlite3/images/qp/rowidlu.gif
 share/doc/sqlite3/images/qp/tab.gif
 share/doc/sqlite3/images/qp/tpchq8.gif
@@ -616,6 +619,7 @@ share/doc/sqlite3/releaselog/3_8_4.html
 share/doc/sqlite3/releaselog/3_8_4_1.html
 share/doc/sqlite3/releaselog/3_8_4_2.html
 share/doc/sqlite3/releaselog/3_8_4_3.html
+share/doc/sqlite3/releaselog/3_8_5.html
 share/doc/sqlite3/releaselog/current.html
 share/doc/sqlite3/requirements.html
 share/doc/sqlite3/robots.txt
