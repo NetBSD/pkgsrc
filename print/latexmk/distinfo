@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/05/21 01:33:59 joerg Exp $
+$NetBSD: distinfo,v 1.2 2014/06/05 16:37:33 wiz Exp $
 
-SHA1 (latexmk-435.zip) = 5d68194893747b76b826d382f635e4258be0ea1d
-RMD160 (latexmk-435.zip) = 6875f971dbc3470b84a5aaa5da3735e0bd7f734c
-Size (latexmk-435.zip) = 386766 bytes
+SHA1 (latexmk-439.zip) = dc925db1c81643d49754807bcc5ef0752b617b47
+RMD160 (latexmk-439.zip) = b53599a90330b891c2a48d625c10ab137a737e0c
+Size (latexmk-439.zip) = 418340 bytes

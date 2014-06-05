@@ -7,4 +7,3 @@ resolve cross references, and run auxiliary programs (bibtex, makeindex) if
 necessary. It can also be set to run continuously with a previewer, in which
 case the needed commands are re-run whenever one of the source files is
 modified.
-
