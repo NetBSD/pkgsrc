@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.106 2014/05/13 02:23:11 rodent Exp $
+$NetBSD: distinfo,v 1.107 2014/06/05 12:16:06 wiz Exp $
 
-SHA1 (openssl-1.0.1g.tar.gz) = b28b3bcb1dc3ee7b55024c9f795be60eb3183e3c
-RMD160 (openssl-1.0.1g.tar.gz) = cd2eb879646a2b91b2f67dfaf99eb9668ba5d7ea
-Size (openssl-1.0.1g.tar.gz) = 4509047 bytes
+SHA1 (openssl-1.0.1h.tar.gz) = b2239599c8bf8f7fc48590a55205c26abe560bf8
+RMD160 (openssl-1.0.1h.tar.gz) = aeb1e0f41074d499d5411510fd645455730ed05e
+Size (openssl-1.0.1h.tar.gz) = 4475692 bytes
 SHA1 (patch-Configure) = f8b8b3ecfa9d23530d13f8f93582db857f772fc4
 SHA1 (patch-Makefile.org) = be55df602286c7f0265a8c5c3d8edaea13b1d966
 SHA1 (patch-Makefile.shared) = 709283ba4bb4bd568e289fe111b8dea319968328
@@ -11,24 +11,5 @@ SHA1 (patch-config) = ac8ced00cfa7d31b84afb08aedc38102fd777824
 SHA1 (patch-crypto_bn_bn__prime.pl) = c07e8ccba319e4260af46e714c3be56f70579fa6
 SHA1 (patch-crypto_des_Makefile) = 31d772eb8c80b577b9cd05337262ddfad297d9b1
 SHA1 (patch-crypto_dso_dso__dlfcn.c) = 065a8254d9c93b17d300a4be9b9a35a919e8b364
-SHA1 (patch-doc_apps_cms.pod) = e111c0b0d74622e4a7e6d12d2bf9d561c69c9d5b
-SHA1 (patch-doc_apps_smine.pod) = bb188f893849aac2389eacffe7d0adbd0b29af58
-SHA1 (patch-doc_ssl_SSL__COMP__add__compression__method.pod) = 5e208ed7cd33f1cca74fd5bdd2e8f4944e4b9573
-SHA1 (patch-doc_ssl_SSL__CTX__add__session.pod) = 1e237699e2f1fcf839b658b747967a4cf75eba7f
-SHA1 (patch-doc_ssl_SSL__CTX__load__verify__locations.pod) = c9e68f02d950e1f525d7dc23f70b423cff722d91
-SHA1 (patch-doc_ssl_SSL__CTX__set__client__CA__list.pod) = 49e1d7c0d4e875b6fcb43f2af5eb88d1421c5eb5
-SHA1 (patch-doc_ssl_SSL__CTX__set__session__id__context.pod) = ca148386fd507a1a3f50a9ec21023ded386251c8
-SHA1 (patch-doc_ssl_SSL__CTX__set__ssl__version.pod) = 5d9c9982e914323d5b04a472cb566ee6f78dbcfa
-SHA1 (patch-doc_ssl_SSL__CTX__use__psk__identity__hint.pod) = 70ff7ba97cee03169bab4a613a96306d911b37c6
-SHA1 (patch-doc_ssl_SSL__accept.pod) = 3aa90470a88b89c0ad434f2f8205db915a6d174d
-SHA1 (patch-doc_ssl_SSL__clear.pod) = 6c65ae616976b7d6d770d15f97dfb4613b9808c1
-SHA1 (patch-doc_ssl_SSL__connect.pod) = 2b960e52115bcf7376601b1e67a092db289419c6
-SHA1 (patch-doc_ssl_SSL__do__handshake.pod) = a5d09e9e89e268c3e366e8c7be6b210072d4097d
-SHA1 (patch-doc_ssl_SSL__read.pod) = ce0ba545ed5d1a4198d5deecedb7e4ee0afd36ed
-SHA1 (patch-doc_ssl_SSL__session__reused.pod) = aef3cede850eda892ab73d52b08caa4a10274d55
-SHA1 (patch-doc_ssl_SSL__set__fd.pod) = 3a57fa02613960790b3a275f979c7741559bcf6f
-SHA1 (patch-doc_ssl_SSL__set__session.pod) = c5fdc448bde809435f060bceb4d36f7665147112
-SHA1 (patch-doc_ssl_SSL__shutdown.pod) = 1adf6eaab219fc0fc2416199c07b1a7aa8789dc1
-SHA1 (patch-doc_ssl_SSL__write.pod) = 968ac804a295c31d6c71508866e3623b619eadd8
 SHA1 (patch-engines_ccgost_Makefile) = 8834074c74abab604ef1ba7959750c22c0ffb6e7
 SHA1 (patch-tools_Makefile) = 6e7324d01c0cd5e290085fe8124315bcac8cf198

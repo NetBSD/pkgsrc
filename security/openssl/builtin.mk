@@ -1,11 +1,11 @@
-# $NetBSD: builtin.mk,v 1.41 2014/05/18 11:20:53 obache Exp $
+# $NetBSD: builtin.mk,v 1.42 2014/06/05 12:16:06 wiz Exp $
 
 BUILTIN_PKG:=	openssl
 
 BUILTIN_FIND_LIBS:=		crypto des ssl
 BUILTIN_FIND_HEADERS_VAR:=	H_OPENSSLCONF H_OPENSSLV
 BUILTIN_FIND_HEADERS.H_OPENSSLCONF=	openssl/opensslconf.h
-BUILTIN_FIND_HEADERS.H_OPENSSLV=	openssl/opensslv.h 
+BUILTIN_FIND_HEADERS.H_OPENSSLV=	openssl/opensslv.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -234,6 +234,7 @@ BUILDLINK_TARGETS+=	openssl-fake-pc
 .    if !defined(HAS_OPENSSL_FAKE_PC)
 HAS_OPENSSL_FAKE_PC=
 
+.PHONY: openssl-fake-pc
 openssl-fake-pc:
 	${RUN} \
 	src=${BUILDLINK_PREFIX.openssl}/lib${LIBABISUFFIX}/pkgconfig/libcrypto.pc; \
