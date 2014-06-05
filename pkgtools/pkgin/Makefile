@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.46 2014/04/09 07:27:15 obache Exp $
+# $NetBSD: Makefile,v 1.47 2014/06/05 13:36:38 gdt Exp $
 
 GHCOMMIT=		3859170568fbe4fe21b5660dbaeca8d65ac10f1b
 DISTNAME=		${GHCOMMIT}
 PKGNAME=		pkgin-0.6.4
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		pkgtools
 MASTER_SITES=		https://github.com/NetBSDfr/pkgin/archive/
 
@@ -82,5 +82,6 @@ do-install:
 
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../net/libfetch/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
