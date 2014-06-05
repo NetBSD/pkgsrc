@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.185.2.1 2014/04/08 10:09:26 tron Exp $
+# $NetBSD: Makefile,v 1.185.2.2 2014/06/05 13:20:18 tron Exp $
 
-DISTNAME=	openssl-1.0.1g
+DISTNAME=	openssl-1.0.1h
 MASTER_SITES=	http://ftp.openssl.org/source/
 SVR4_PKGNAME=	ossl
 CATEGORIES=	security
@@ -8,6 +8,7 @@ CATEGORIES=	security
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openssl.org/
 COMMENT=	Secure Socket Layer and cryptographic library
+LICENSE=	openssl
 
 CONFLICTS=	SSLeay-[0-9]* ssleay-[0-9]*
 
@@ -22,7 +23,6 @@ USE_GCC_RUNTIME=	yes
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
 
-EXTRACT_USING=		gtar
 USE_TOOLS+=		fgrep gmake perl
 TEST_TARGET=		tests
 MAKE_JOBS_SAFE=		no
@@ -124,6 +124,9 @@ CONFIGURE_ARGS+=	linux-ppc64
 
 CONFIGURE_ARGS+=	${CFLAGS} ${LDFLAGS}
 CONFIGURE_ENV+=		PERL=${PERL5:Q}
+
+PKGCONFIG_OVERRIDE+=		libcrypto.pc libssl.pc openssl.pc
+PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 PLIST_SRC+=		${PKGDIR}/PLIST.common
 USE_PLIST_SHLIB?=	yes
