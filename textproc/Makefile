@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.776 2014/06/05 05:05:28 obache Exp $
+# $NetBSD: Makefile,v 1.777 2014/06/05 05:08:48 obache Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -725,6 +725,7 @@ SUBDIR+=	ruby-syntax
 SUBDIR+=	ruby-text
 SUBDIR+=	ruby-textpow
 SUBDIR+=	ruby-tilt
+SUBDIR+=	ruby-toml
 SUBDIR+=	ruby-treetop
 SUBDIR+=	ruby-ultraviolet
 SUBDIR+=	ruby-will-paginate
