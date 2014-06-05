@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2012/04/26 12:41:25 adam Exp $
+$NetBSD: distinfo,v 1.23 2014/06/05 06:43:53 adam Exp $
 
-SHA1 (exiv2-0.23.tar.gz) = 5f342bf642477526f41add11d6ee7787cdcd639f
-RMD160 (exiv2-0.23.tar.gz) = ac58f8b5df70ee56c49d387f0666e5e2578d942e
-Size (exiv2-0.23.tar.gz) = 3524381 bytes
-SHA1 (patch-aa) = 05a70bc0ea212fd463074ecc40f5840574a2cbad
+SHA1 (exiv2-0.24.tar.gz) = 2f19538e54f8c21c180fa96d17677b7cff7dc1bb
+RMD160 (exiv2-0.24.tar.gz) = 453247926e8626bf888578afd5a0dde42c6f6962
+Size (exiv2-0.24.tar.gz) = 4635028 bytes
+SHA1 (patch-aa) = e98a4f1ae3ff2ad5ce0cd0d107ae21752a4edb45
