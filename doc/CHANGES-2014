@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2169 2014/06/06 12:33:50 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2170 2014/06/06 12:35:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2964,3 +2964,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated math/py-mpmath to 0.18 [wen 2014-06-06]
 	Updated x11/xterm to 305 [wiz 2014-06-06]
 	Updated net/gupnp to 0.20.12 [wiz 2014-06-06]
+	Updated security/py-keyring to 3.8 [wiz 2014-06-06]
