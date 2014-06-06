@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2166 2014/06/06 12:10:09 obache Exp $
+$NetBSD: CHANGES-2014,v 1.2167 2014/06/06 12:14:13 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2961,3 +2961,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/libXft to 2.3.2 [wiz 2014-06-06]
 	Updated emulators/suse131_openssl to 13.1nb8 [obache 2014-06-06]
 	Updated textproc/kakasi to 2.3.6 [obache 2014-06-06]
+	Updated math/py-mpmath to 0.18 [wen 2014-06-06]
