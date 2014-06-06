@@ -536,6 +536,7 @@ pinfo-native-curses	Use NetBSD native curses rather than ncurses.
 pkcs11			Use certificate-on-a-stick (or card) support.
 png			Enable PNG support.
 poppler			Enable poppler-utils support.
+portals			Enable BSD Portals support
 portaudio		Enable PortAudio audio library support.
 postfix-milter		Build the milter with support for the Postfix MTA.
 postfix-stress		Enable Postfix stress-adaptive behaviour.
