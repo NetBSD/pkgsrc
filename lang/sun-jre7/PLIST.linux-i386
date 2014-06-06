@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.4 2014/02/11 09:12:12 obache Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.5 2014/06/06 14:28:40 ryoon Exp $
 bin/sun7-java
 bin/sun7-javaws
 bin/sun7-keytool
@@ -460,6 +460,7 @@ java/sun-7/lib/zi/Antarctica/Mawson
 java/sun-7/lib/zi/Antarctica/Palmer
 java/sun-7/lib/zi/Antarctica/Rothera
 java/sun-7/lib/zi/Antarctica/Syowa
+java/sun-7/lib/zi/Antarctica/Troll
 java/sun-7/lib/zi/Antarctica/Vostok
 java/sun-7/lib/zi/Asia/Aden
 java/sun-7/lib/zi/Asia/Almaty
