@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/02/24 19:40:53 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/06/06 12:11:46 wen Exp $
 ${PYSITELIB}/mpmath/__init__.py
 ${PYSITELIB}/mpmath/__init__.pyc
 ${PYSITELIB}/mpmath/__init__.pyo
@@ -98,10 +98,6 @@ ${PYSITELIB}/mpmath/libmp/__init__.pyo
 ${PYSITELIB}/mpmath/libmp/backend.py
 ${PYSITELIB}/mpmath/libmp/backend.pyc
 ${PYSITELIB}/mpmath/libmp/backend.pyo
-${PYSITELIB}/mpmath/libmp/exec_py2.py
-${PYSITELIB}/mpmath/libmp/exec_py2.pyc
-${PYSITELIB}/mpmath/libmp/exec_py2.pyo
-${PYSITELIB}/mpmath/libmp/exec_py3.py
 ${PYSITELIB}/mpmath/libmp/gammazeta.py
 ${PYSITELIB}/mpmath/libmp/gammazeta.pyc
 ${PYSITELIB}/mpmath/libmp/gammazeta.pyo
@@ -123,6 +119,9 @@ ${PYSITELIB}/mpmath/libmp/libmpf.pyo
 ${PYSITELIB}/mpmath/libmp/libmpi.py
 ${PYSITELIB}/mpmath/libmp/libmpi.pyc
 ${PYSITELIB}/mpmath/libmp/libmpi.pyo
+${PYSITELIB}/mpmath/libmp/six.py
+${PYSITELIB}/mpmath/libmp/six.pyc
+${PYSITELIB}/mpmath/libmp/six.pyo
 ${PYSITELIB}/mpmath/math2.py
 ${PYSITELIB}/mpmath/math2.pyc
 ${PYSITELIB}/mpmath/math2.pyo
@@ -132,6 +131,12 @@ ${PYSITELIB}/mpmath/matrices/__init__.pyo
 ${PYSITELIB}/mpmath/matrices/calculus.py
 ${PYSITELIB}/mpmath/matrices/calculus.pyc
 ${PYSITELIB}/mpmath/matrices/calculus.pyo
+${PYSITELIB}/mpmath/matrices/eigen.py
+${PYSITELIB}/mpmath/matrices/eigen.pyc
+${PYSITELIB}/mpmath/matrices/eigen.pyo
+${PYSITELIB}/mpmath/matrices/eigen_symmetric.py
+${PYSITELIB}/mpmath/matrices/eigen_symmetric.pyc
+${PYSITELIB}/mpmath/matrices/eigen_symmetric.pyo
 ${PYSITELIB}/mpmath/matrices/linalg.py
 ${PYSITELIB}/mpmath/matrices/linalg.pyc
 ${PYSITELIB}/mpmath/matrices/linalg.pyo
@@ -148,6 +153,8 @@ ${PYSITELIB}/mpmath/tests/extratest_bessel.py
 ${PYSITELIB}/mpmath/tests/extratest_bessel.pyc
 ${PYSITELIB}/mpmath/tests/extratest_bessel.pyo
 ${PYSITELIB}/mpmath/tests/extratest_gamma.py
+${PYSITELIB}/mpmath/tests/extratest_gamma.pyc
+${PYSITELIB}/mpmath/tests/extratest_gamma.pyo
 ${PYSITELIB}/mpmath/tests/extratest_zeta.py
 ${PYSITELIB}/mpmath/tests/extratest_zeta.pyc
 ${PYSITELIB}/mpmath/tests/extratest_zeta.pyo
@@ -175,6 +182,12 @@ ${PYSITELIB}/mpmath/tests/test_diff.pyo
 ${PYSITELIB}/mpmath/tests/test_division.py
 ${PYSITELIB}/mpmath/tests/test_division.pyc
 ${PYSITELIB}/mpmath/tests/test_division.pyo
+${PYSITELIB}/mpmath/tests/test_eigen.py
+${PYSITELIB}/mpmath/tests/test_eigen.pyc
+${PYSITELIB}/mpmath/tests/test_eigen.pyo
+${PYSITELIB}/mpmath/tests/test_eigen_symmetric.py
+${PYSITELIB}/mpmath/tests/test_eigen_symmetric.pyc
+${PYSITELIB}/mpmath/tests/test_eigen_symmetric.pyo
 ${PYSITELIB}/mpmath/tests/test_elliptic.py
 ${PYSITELIB}/mpmath/tests/test_elliptic.pyc
 ${PYSITELIB}/mpmath/tests/test_elliptic.pyo
@@ -199,6 +212,9 @@ ${PYSITELIB}/mpmath/tests/test_identify.pyo
 ${PYSITELIB}/mpmath/tests/test_interval.py
 ${PYSITELIB}/mpmath/tests/test_interval.pyc
 ${PYSITELIB}/mpmath/tests/test_interval.pyo
+${PYSITELIB}/mpmath/tests/test_levin.py
+${PYSITELIB}/mpmath/tests/test_levin.pyc
+${PYSITELIB}/mpmath/tests/test_levin.pyo
 ${PYSITELIB}/mpmath/tests/test_linalg.py
 ${PYSITELIB}/mpmath/tests/test_linalg.pyc
 ${PYSITELIB}/mpmath/tests/test_linalg.pyo
@@ -239,6 +255,8 @@ ${PYSITELIB}/mpmath/tests/test_visualization.py
 ${PYSITELIB}/mpmath/tests/test_visualization.pyc
 ${PYSITELIB}/mpmath/tests/test_visualization.pyo
 ${PYSITELIB}/mpmath/tests/torture.py
+${PYSITELIB}/mpmath/tests/torture.pyc
+${PYSITELIB}/mpmath/tests/torture.pyo
 ${PYSITELIB}/mpmath/usertools.py
 ${PYSITELIB}/mpmath/usertools.pyc
 ${PYSITELIB}/mpmath/usertools.pyo
