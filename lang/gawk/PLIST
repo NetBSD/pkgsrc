@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2014/02/05 20:25:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2014/06/06 23:24:10 ryoon Exp $
 bin/gawk
 bin/${PKGNAME}
 bin/igawk
@@ -26,6 +26,7 @@ man/man1/igawk.1
 ${PLIST.extension}man/man3am/filefuncs.3am
 ${PLIST.extension}man/man3am/fnmatch.3am
 ${PLIST.extension}man/man3am/fork.3am
+${PLIST.extension}man/man3am/inplace.3am
 ${PLIST.extension}man/man3am/ordchr.3am
 ${PLIST.extension}man/man3am/readdir.3am
 ${PLIST.extension}man/man3am/readfile.3am
@@ -49,11 +50,13 @@ share/awk/ord.awk
 share/awk/passwd.awk
 share/awk/quicksort.awk
 share/awk/readable.awk
+share/awk/readfile.awk
 share/awk/rewind.awk
 share/awk/round.awk
 share/awk/strtonum.awk
 share/awk/walkarray.awk
 share/awk/zerofile.awk
+share/locale/ca/LC_MESSAGES/gawk.mo
 share/locale/da/LC_MESSAGES/gawk.mo
 share/locale/de/LC_MESSAGES/gawk.mo
 share/locale/es/LC_MESSAGES/gawk.mo
