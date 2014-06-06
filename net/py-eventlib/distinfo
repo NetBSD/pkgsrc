@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/05/03 15:20:12 rodent Exp $
+$NetBSD: distinfo,v 1.2 2014/06/06 12:49:23 joerg Exp $
 
 SHA1 (eventlib-0.1.5.tar.gz) = 580a067739b4fa2e75764cbe2d0d5dcbeeec769a
 RMD160 (eventlib-0.1.5.tar.gz) = 253dea5ef9d6ecad70a991722f28106356ba64ef
 Size (eventlib-0.1.5.tar.gz) = 11278 bytes
+SHA1 (patch-eventlib_core.py) = f2617df1e77421c2367aaf6079071a3d417dbd9d
