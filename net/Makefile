@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1018 2014/06/03 13:46:22 jperkin Exp $
+# $NetBSD: Makefile,v 1.1019 2014/06/06 14:57:30 abs Exp $
 #
 
 COMMENT=	Networking tools
@@ -169,6 +169,7 @@ SUBDIR+=	gopher
 SUBDIR+=	grilo
 SUBDIR+=	grilo-plugins
 SUBDIR+=	grilo-testui
+SUBDIR+=	grive
 SUBDIR+=	gsnmp
 SUBDIR+=	gssdp
 SUBDIR+=	gst-plugins0.10-mms
