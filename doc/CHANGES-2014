@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2171 2014/06/06 14:30:04 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.2172 2014/06/06 23:24:40 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2967,3 +2967,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/py-keyring to 3.8 [wiz 2014-06-06]
 	Updated lang/sun-jre7 to 7.0.60 [ryoon 2014-06-06]
 	Updated lang/sun-jdk7 to 7.0.60 [ryoon 2014-06-06]
+	Updated lang/gawk to 4.1.1 [ryoon 2014-06-06]
