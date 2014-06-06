@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2168 2014/06/06 12:22:52 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2169 2014/06/06 12:33:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2963,3 +2963,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/kakasi to 2.3.6 [obache 2014-06-06]
 	Updated math/py-mpmath to 0.18 [wen 2014-06-06]
 	Updated x11/xterm to 305 [wiz 2014-06-06]
+	Updated net/gupnp to 0.20.12 [wiz 2014-06-06]
