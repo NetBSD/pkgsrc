@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2014/06/06 14:57:00 abs Exp $
+
+SHA1 (grive-20130502-27817e835fe115ebbda5410ec904aa49a2ad01f1.tar.gz) = e3059b0ce32ea05d7b5457948317b39358dbb239
+RMD160 (grive-20130502-27817e835fe115ebbda5410ec904aa49a2ad01f1.tar.gz) = f2a8c3e67f24c01b45ba831f2b3b8c2b5e39fe5c
+Size (grive-20130502-27817e835fe115ebbda5410ec904aa49a2ad01f1.tar.gz) = 162471 bytes
+SHA1 (patch-cmake_Modules_FindJSONC.cmake) = 3038261ef82ad501ffeae18abbba562cc73ae435
+SHA1 (patch-libgrive_src_protocol_Json.cc) = 81087f290cba4f37aeac09742973a78fd9be0bb9
+SHA1 (patch-libgrive_src_util_OS.cc) = 79cdfe8f89e28901b44c1e8dc5f054a9ca03f061
