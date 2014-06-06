@@ -1,0 +1,9 @@
+The purpose of this project is to provide an independent open
+source implementation of Google Drive client for GNU/Linux. It
+uses the Google Document List API to talk to the servers in Google.
+The code is written in standard C++.
+
+Currently as of version 0.2.0, grive can do two-side synchronization
+between the Google Drive and local directory. It can download and
+upload changed files. New directories in Google Drive and local
+directory will also be downloaded/uploaded.
