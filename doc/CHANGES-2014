@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2186 2014/06/07 20:37:42 pettai Exp $
+$NetBSD: CHANGES-2014,v 1.2187 2014/06/07 23:59:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2982,3 +2982,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added print/cups-filters version 1.0.54 [wiz 2014-06-07]
 	Updated sysutils/libvirt to 1.2.5 [agc 2014-06-07]
 	Updated security/softhsm to 1.3.7 [pettai 2014-06-07]
+	Updated fonts/terminus-font to 4.39 [wiz 2014-06-07]
