@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2178 2014/06/07 07:34:20 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2179 2014/06/07 07:41:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2974,3 +2974,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/xscope to 1.4.1 [wiz 2014-06-07]
 	Updated textproc/diffstat to 1.59 [wiz 2014-06-07]
 	Updated print/cups to 1.7.3 [wiz 2014-06-07]
+	Updated www/ap2-wsgi to 3.5 [wiz 2014-06-07]
