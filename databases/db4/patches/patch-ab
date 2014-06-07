@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.24 2014/03/17 19:07:36 asau Exp $
+$NetBSD: patch-ab,v 1.25 2014/06/07 08:19:14 obache Exp $
 
 --- dist/configure.orig	2010-04-12 20:25:23.000000000 +0000
 +++ dist/configure
-@@ -4523,7 +4523,7 @@ bsdi3*)	CC=${CC-"shlicc2"}
+@@ -4523,11 +4523,12 @@ bsdi3*)	CC=${CC-"shlicc2"}
  	LIBSO_LIBS="$LIBSO_LIBS -lipc";;
  cygwin*)
  	CPPFLAGS="$CPPFLAGS -D_GNU_SOURCE -D_REENTRANT";;
@@ -11,7 +11,12 @@ $NetBSD: patch-ab,v 1.24 2014/03/17 19:07:36 asau Exp $
  	CPPFLAGS="$CPPFLAGS -D_THREAD_SAFE"
  	LDFLAGS="$LDFLAGS -pthread";;
  gnu*|k*bsd*-gnu|linux*)
-@@ -6282,7 +6282,7 @@ fi
+ 	CPPFLAGS="$CPPFLAGS -D_GNU_SOURCE -D_REENTRANT";;
++haiku*)	LIBSO_LIBS="$LIBSO_LIBS -lnetwork";;
+ hpux*)	CPPFLAGS="$CPPFLAGS -D_REENTRANT";;
+ irix*)	optimize_debug="-O2"
+ 	CPPFLAGS="$CPPFLAGS -D_SGI_MP_SOURCE";;
+@@ -6282,7 +6283,7 @@ fi
  # we're using.
  case "$host_os" in
  sysv5UnixWare*|sysv5OpenUNIX8*)
@@ -20,7 +25,31 @@ $NetBSD: patch-ab,v 1.24 2014/03/17 19:07:36 asau Exp $
  		CPPFLAGS="$CPPFLAGS -pthread"
  		LDFLAGS="$LDFLAGS -pthread"
  	else
-@@ -11202,7 +11202,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -7343,6 +7344,10 @@ gnu*)
+   lt_cv_deplibs_check_method=pass_all
+   ;;
+ 
++haiku*)
++  lt_cv_deplibs_check_method=pass_all
++  ;;
++
+ hpux10.20* | hpux11*)
+   lt_cv_file_magic_cmd=/usr/bin/file
+   case $host_cpu in
+@@ -10131,6 +10136,12 @@ $as_echo_n "checking for $compiler optio
+       lt_prog_compiler_pic='-fno-common'
+       ;;
+ 
++    haiku*)
++      # PIC is the default for Haiku
++      # The "-static" flag exists, but is broken.
++      lt_prog_compiler_static=
++      ;;
++
+     hpux*)
+       # PIC is the default for 64-bit PA HP-UX, but not for 32-bit
+       # PA HP-UX.  On IA64 HP-UX, PIC is the default but the pic flag
+@@ -11202,7 +11213,7 @@ if test -z "$aix_libpath"; then aix_libp
        hardcode_shlibpath_var=no
        ;;
  
@@ -29,7 +58,27 @@ $NetBSD: patch-ab,v 1.24 2014/03/17 19:07:36 asau Exp $
        ld_shlibs=no
        ;;
  
-@@ -12077,7 +12077,7 @@ dgux*)
+@@ -11977,6 +11988,19 @@ beos*)
+   shlibpath_var=LIBRARY_PATH
+   ;;
+ 
++haiku*)
++  version_type=linux
++  need_lib_prefix=no
++  need_version=no
++  dynamic_linker="$host_os runtime_loader"
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}${major} ${libame}${shared_ext}'
++  soname_spec='${libname}${release}${shared_ext}$major'
++  shlibpath_overrides_runpath=yes
++  sys_lib_dlsearch_path_spec='/boot/system/lib'
++  hardcode_into_libs=yes
++  shlibpath_var=LIBRARY_PATH
++  ;;
++
+ bsdi[45]*)
+   version_type=linux
+   need_version=no
+@@ -12077,7 +12101,7 @@ dgux*)
    shlibpath_var=LD_LIBRARY_PATH
    ;;
  
@@ -38,7 +87,7 @@ $NetBSD: patch-ab,v 1.24 2014/03/17 19:07:36 asau Exp $
    dynamic_linker=no
    ;;
  
-@@ -12088,7 +12088,7 @@ freebsd* | dragonfly*)
+@@ -12088,7 +12112,7 @@ freebsd* | dragonfly*)
      objformat=`/usr/bin/objformat`
    else
      case $host_os in
@@ -47,7 +96,7 @@ $NetBSD: patch-ab,v 1.24 2014/03/17 19:07:36 asau Exp $
      *) objformat=elf ;;
      esac
    fi
-@@ -13772,7 +13772,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -13772,7 +13796,7 @@ if test -z "$aix_libpath"; then aix_libp
          esac
          ;;
  
@@ -56,7 +105,19 @@ $NetBSD: patch-ab,v 1.24 2014/03/17 19:07:36 asau Exp $
          # C++ shared libraries reported to be fairly broken before
  	# switch to ELF
          ld_shlibs_CXX=no
-@@ -15530,7 +15530,7 @@ dgux*)
+@@ -14666,6 +14690,11 @@ $as_echo_n "checking for $compiler optio
+       # Common symbols not allowed in MH_DYLIB files
+       lt_prog_compiler_pic_CXX='-fno-common'
+       ;;
++    haiku*)
++      # PIC is the default for Haiku.
++      # The "-static" flag exists, but is broken.
++      lt_prog_compiler_static=
++      ;;
+     *djgpp*)
+       # DJGPP does not support shared libraries at all
+       lt_prog_compiler_pic_CXX=
+@@ -15530,7 +15559,7 @@ dgux*)
    shlibpath_var=LD_LIBRARY_PATH
    ;;
  
@@ -65,7 +126,7 @@ $NetBSD: patch-ab,v 1.24 2014/03/17 19:07:36 asau Exp $
    dynamic_linker=no
    ;;
  
-@@ -15541,7 +15541,7 @@ freebsd* | dragonfly*)
+@@ -15541,7 +15570,7 @@ freebsd* | dragonfly*)
      objformat=`/usr/bin/objformat`
    else
      case $host_os in
@@ -74,7 +135,27 @@ $NetBSD: patch-ab,v 1.24 2014/03/17 19:07:36 asau Exp $
      *) objformat=elf ;;
      esac
    fi
-@@ -16161,7 +16161,7 @@ LIBTOOL="./libtool"
+@@ -15588,6 +15617,19 @@ gnu*)
+   hardcode_into_libs=yes
+   ;;
+ 
++haiku*)
++  version_type=linux
++  need_lib_prefix=no
++  need_version=no
++  dynamic_linker="$host_os runtime_loader"
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}${major} ${libame}${shared_ext}'
++  soname_spec='${libname}${release}${shared_ext}$major'
++  shlibpath_overrides_runpath=yes
++  sys_lib_dlsearch_path_spec='/boot/system/lib'
++  hardcode_into_libs=yes
++  shlibpath_var=LIBRARY_PATH
++  ;;
++
+ hpux9* | hpux10* | hpux11*)
+   # Give a soname corresponding to the major version so that dld.sl refuses to
+   # link against other versions.
+@@ -16161,7 +16203,7 @@ LIBTOOL="./libtool"
  INSTALLER="\$(LIBTOOL) --mode=install cp -p"
  
  MAKEFILE_CC="\$(LIBTOOL) --mode=compile ${MAKEFILE_CC}"
@@ -83,7 +164,7 @@ $NetBSD: patch-ab,v 1.24 2014/03/17 19:07:36 asau Exp $
  MAKEFILE_CCLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CCLINK}"
  MAKEFILE_CXX="\$(LIBTOOL) --mode=compile ${MAKEFILE_CXX}"
  MAKEFILE_XSOLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CXXLINK} -avoid-version"
-@@ -16890,7 +16890,7 @@ if test "$_JTOPDIR" != "/usr"; then
+@@ -16890,7 +16932,7 @@ if test "$_JTOPDIR" != "/usr"; then
  	aix*)		_JNI_INC_SUBDIRS="aix";;
  	bsdi*)		_JNI_INC_SUBDIRS="bsdos";;
  	cygwin*)	_JNI_INC_SUBDIRS="win32";;
