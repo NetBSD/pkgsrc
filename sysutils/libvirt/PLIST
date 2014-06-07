@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/03/11 14:05:15 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/06/07 16:18:38 agc Exp $
 bin/virsh
 bin/virt-host-validate
 bin/virt-pki-validate
@@ -186,8 +186,7 @@ share/libvirt/schemas/networkcommon.rng
 share/libvirt/schemas/nodedev.rng
 share/libvirt/schemas/nwfilter.rng
 share/libvirt/schemas/secret.rng
-share/libvirt/schemas/storageencryption.rng
-share/libvirt/schemas/storagefilefeatures.rng
+share/libvirt/schemas/storagecommon.rng
 share/libvirt/schemas/storagepool.rng
 share/libvirt/schemas/storagevol.rng
 share/locale/af/LC_MESSAGES/libvirt.mo
