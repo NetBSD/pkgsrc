@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2012/10/08 12:47:23 marino Exp $
+# $NetBSD: options.mk,v 1.17 2014/06/07 11:54:54 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cups
 PKG_OPTIONS_REQUIRED_GROUPS=	pdftops
@@ -55,11 +55,13 @@ CONFIGURE_ARGS+=	--enable-gssapi
 CONFIGURE_ARGS+=	--disable-gssapi
 .endif
 
+PLIST_VARS+=		libusb
 .if !empty(PKG_OPTIONS:Mlibusb)
 .include "../../devel/libusb1/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-libusb
 MESSAGE_SRC+=		${PKGDIR}/MESSAGE.libusb
 USE_TOOLS+=		pkg-config
+PLIST.libusb=		yes
 .else
 CONFIGURE_ARGS+=	--disable-libusb
 .endif
