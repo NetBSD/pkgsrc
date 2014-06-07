@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2013/07/04 13:14:07 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2014/06/07 10:56:09 wiz Exp $
 
 .include "../../print/poppler/Makefile.common"
 
 PKGNAME=		poppler-includes-${POPPLER_VERS}
+PKGREVISION=		1
 
 COMMENT=		Poppler Xpdf includes (unsupported)
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -18,7 +19,7 @@ INCDIR=${DESTDIR}${PREFIX}/include
 
 do-install:
 	${INSTALL_DATA_DIR} ${INCDIR}
-	for subdir in poppler goo splash;				\
+	for subdir in fofi poppler goo splash;				\
 	do								\
           mf=${WRKSRC}/"$$subdir"/Makefile.am;				\
 	  d=`sed -n -f ${FILESDIR}/dir.sed "$$mf"`;			\
