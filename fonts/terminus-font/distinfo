@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2012/10/21 12:52:14 cheusov Exp $
+$NetBSD: distinfo,v 1.7 2014/06/07 23:59:48 wiz Exp $
 
-SHA1 (terminus-font-4.38.tar.gz) = 7f5d251e4b7c8c8f1b1ad9dec38f32079a79d115
-RMD160 (terminus-font-4.38.tar.gz) = 460a9fe77faf62fc6c16e7389be4c397d5adea3f
-Size (terminus-font-4.38.tar.gz) = 316507 bytes
+SHA1 (terminus-font-4.39.tar.gz) = 33cbfe321443d0a79abed148586dfd3aedd483c2
+RMD160 (terminus-font-4.39.tar.gz) = 1a8a1a6087f070bf835db07a289ed721558e5604
+Size (terminus-font-4.39.tar.gz) = 324890 bytes
