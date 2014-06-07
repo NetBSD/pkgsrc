@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/06/02 04:43:12 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/07 14:26:24 wiz Exp $
 
 DISTNAME=	python3-digest-1.8b4
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python3/python/}
 CATEGORIES=	python www
 MASTER_SITES=	https://pypi.python.org/packages/source/p/python3-digest/
 
