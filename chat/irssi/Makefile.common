@@ -1,12 +1,13 @@
-# $NetBSD: Makefile.common,v 1.12 2012/08/26 14:06:29 wiz Exp $
+# $NetBSD: Makefile.common,v 1.13 2014/06/07 23:49:47 ryoon Exp $
 # used by chat/irssi-icb/Makefile
 # used by chat/irssi-xmpp/Makefile
 
 # Specific distribution information.
-IRSSI_VERSION=		0.8.15
+IRSSI_VERSION=		0.8.16
 IRSSI_DISTNAME=		irssi-${IRSSI_VERSION}
 IRSSI_EXTRACT_SUFX=	.tar.bz2
 IRSSI_DISTFILE=		${IRSSI_DISTNAME}${IRSSI_EXTRACT_SUFX}
+SITES.${IRSSI_DISTFILE}=	http://www.irssi.org/files/
 
 # These files are generated during Irssi's build, but are required by
 # plugins to compile properly.
