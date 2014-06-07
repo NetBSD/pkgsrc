@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2012/10/29 05:06:33 asau Exp $
-#
+# $NetBSD: Makefile,v 1.11 2014/06/07 06:53:34 wiz Exp $
 
-DISTNAME=		libICE-1.0.8
+DISTNAME=		libICE-1.0.9
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
