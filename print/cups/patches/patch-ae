@@ -1,11 +1,11 @@
-$NetBSD: patch-ae,v 1.31 2014/05/10 13:42:08 richard Exp $
+$NetBSD: patch-ae,v 1.32 2014/06/07 07:34:05 wiz Exp $
 
 For proper libtool usage split CC into CC_COMPILE and CC with libtool
 mode options compile/link respectively.
 
 Same for CXX.
 
---- Makedefs.in.orig	2012-03-01 00:05:55.000000000 +0000
+--- Makedefs.in.orig	2013-07-17 15:21:18.000000000 +0000
 +++ Makedefs.in
 @@ -19,9 +19,11 @@
  
@@ -20,16 +20,16 @@ Same for CXX.
 +CXX		=	@LIBTOOL@ --mode=link @CXX@
  DSO		=	@DSO@
  DSOXX		=	@DSOXX@
- HTMLDOC		=	@HTMLDOC@
-@@ -41,12 +43,12 @@ SHELL		=	/bin/sh
+ GZIP		=	@GZIP@
+@@ -40,12 +42,12 @@ SHELL		=	/bin/sh
  # Installation programs...
  #
  
 -INSTALL_BIN	=	$(LIBTOOL) $(INSTALL) -c -m 555 @INSTALL_STRIP@
-+INSTALL_BIN	=	$(LIBTOOL) --mode=install $(INSTALL) -c -m 755 @INSTALL_STRIP@
- INSTALL_CONFIG	=	$(INSTALL) -c -m @CUPS_CONFIG_FILE_PERM@
 -INSTALL_COMPDATA =	$(INSTALL) -c -m 444 @INSTALL_GZIP@
++INSTALL_BIN	=	$(LIBTOOL) --mode=install $(INSTALL) -c -m 755 @INSTALL_STRIP@
 +INSTALL_COMPDATA =	$(INSTALL) -c -m 444
+ INSTALL_CONFIG	=	$(INSTALL) -c -m @CUPS_CONFIG_FILE_PERM@
  INSTALL_DATA	=	$(INSTALL) -c -m 444
  INSTALL_DIR	=	$(INSTALL) -d
 -INSTALL_LIB	=	$(LIBTOOL) $(INSTALL) -c -m 555 @INSTALL_STRIP@
@@ -37,7 +37,7 @@ Same for CXX.
  INSTALL_MAN	=	$(INSTALL) -c -m 444
  INSTALL_SCRIPT	=	$(INSTALL) -c -m 555
  
-@@ -145,7 +147,7 @@ CXXLIBS		=	@CXXLIBS@
+@@ -135,7 +137,7 @@ CXXLIBS		=	@CXXLIBS@
  DBUS_NOTIFIER	=	@DBUS_NOTIFIER@
  DBUS_NOTIFIERLIBS =	@DBUS_NOTIFIERLIBS@
  DNSSD_BACKEND	=	@DNSSD_BACKEND@
@@ -45,23 +45,13 @@ Same for CXX.
 +DSOFLAGS	=	-L../cups @DSOFLAGS@ $(OPTIM)
  DSOLIBS		=	@DSOLIBS@ $(COMMONLIBS)
  DNSSDLIBS	=	@DNSSDLIBS@
- FONTS		=	@FONTS@
-@@ -279,19 +281,19 @@ DBUSDIR		=	@DBUSDIR@
+ IPPFIND_BIN	=	@IPPFIND_BIN@
+@@ -243,11 +245,11 @@ DBUSDIR		=	@DBUSDIR@
  
  .c.o:
  	echo Compiling $<...
 -	$(CC) $(ARCHFLAGS) $(OPTIM) $(ALL_CFLAGS) -c -o $@ $<
 +	$(CC_COMPILE) $(ARCHFLAGS) $(OPTIM) $(ALL_CFLAGS) -c -o $@ $<
- 
- .c.32.o:
- 	echo Compiling 32-bit $<...
--	$(CC) $(ARCH32FLAGS) $(OPTIM) $(ALL_CFLAGS) -c -o $@ $<
-+	$(CC_COMPILE) $(ARCH32FLAGS) $(OPTIM) $(ALL_CFLAGS) -c -o $@ $<
- 
- .c.64.o:
- 	echo Compiling 64-bit $<...
--	$(CC) $(ARCH64FLAGS) $(OPTIM) $(ALL_CFLAGS) -c -o $@ $<
-+	$(CC_COMPILE) $(ARCH64FLAGS) $(OPTIM) $(ALL_CFLAGS) -c -o $@ $<
  
  .cxx.o:
  	echo Compiling $<...

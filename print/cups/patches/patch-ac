@@ -1,14 +1,14 @@
-$NetBSD: patch-ac,v 1.15 2010/05/21 10:05:20 sbd Exp $
+$NetBSD: patch-ac,v 1.16 2014/06/07 07:34:05 wiz Exp $
 
 libtoolize.
 
---- configure.in.orig	2008-11-14 19:32:22.000000000 +0000
+--- configure.in.orig	2013-07-08 21:15:13.000000000 +0000
 +++ configure.in
-@@ -22,7 +22,6 @@ sinclude(config-scripts/cups-manpages.m4
+@@ -21,7 +21,6 @@ sinclude(config-scripts/cups-directories
+ sinclude(config-scripts/cups-manpages.m4)
  
- sinclude(config-scripts/cups-3264.m4)
  sinclude(config-scripts/cups-sharedlibs.m4)
 -sinclude(config-scripts/cups-libtool.m4)
  sinclude(config-scripts/cups-compiler.m4)
  
- sinclude(config-scripts/cups-image.m4)
+ sinclude(config-scripts/cups-network.m4)

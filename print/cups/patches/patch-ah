@@ -1,18 +1,22 @@
-$NetBSD: patch-ah,v 1.20 2011/12/02 14:14:58 hans Exp $
+$NetBSD: patch-ah,v 1.21 2014/06/07 07:34:05 wiz Exp $
 
 Some builds of gcc seem to support this for compiling but then fail during
 linking with undefined reference to `__stack_chk_fail_local'
 
---- config-scripts/cups-compiler.m4.orig	2009-05-17 00:13:47.000000000 +0000
+--- config-scripts/cups-compiler.m4.orig	2014-03-05 20:01:48.000000000 +0000
 +++ config-scripts/cups-compiler.m4
-@@ -140,8 +140,9 @@ if test -n "$GCC"; then
+@@ -113,12 +113,13 @@ if test -n "$GCC"; then
  	AC_MSG_CHECKING(if GCC supports -fstack-protector)
  	OLDCFLAGS="$CFLAGS"
  	CFLAGS="$CFLAGS -fstack-protector"
 -	AC_TRY_LINK(,,
 +	AC_TRY_LINK(, [return 0;],
- 		OPTIM="$OPTIM -fstack-protector"
-+		LIBS="$LIBS $LIBS_SSP"
+ 		if test "x$LSB_BUILD" = xy; then
+ 			# Can't use stack-protector with LSB binaries...
+ 			OPTIM="$OPTIM -fno-stack-protector"
+ 		else
+ 			OPTIM="$OPTIM -fstack-protector"
++			LIBS="$LIBS $LIBS_SSP"
+ 		fi
  		AC_MSG_RESULT(yes),
  		AC_MSG_RESULT(no))
- 	CFLAGS="$OLDCFLAGS"

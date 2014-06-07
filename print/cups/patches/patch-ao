@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.11 2010/05/21 10:05:21 sbd Exp $
+$NetBSD: patch-ao,v 1.12 2014/06/07 07:34:05 wiz Exp $
 
 Add '--with-manext' configure option.
 
---- config-scripts/cups-manpages.m4.orig	2009-01-12 19:17:09.000000000 +0000
+--- config-scripts/cups-manpages.m4.orig	2012-10-15 21:02:10.000000000 +0000
 +++ config-scripts/cups-manpages.m4
 @@ -13,6 +13,8 @@ dnl   which should have been included wi
  dnl   file is missing or damaged, see the license at "http://www.cups.org/".
@@ -13,21 +13,17 @@ Add '--with-manext' configure option.
  dnl Fix "mandir" variable...
  if test "$mandir" = "\${datarootdir}/man" -a "$prefix" = "/"; then
  	# New GNU "standards" break previous ones, so make sure we use
-@@ -50,8 +52,33 @@ AC_SUBST(AMANDIR)
+@@ -44,8 +46,28 @@ AC_SUBST(AMANDIR)
  AC_SUBST(PMANDIR)
  
  dnl Setup manpage extensions...
 -case "$uname" in
--	IRIX*)
+-	SunOS* | HP-UX*)
 +if test x$manext = x; then
 +	case "$uname" in
 +		*BSD* | DragonFly*)
 +			# *BSD and Darwin (MacOS X)
 +			manext=bsd
-+			;;
-+		IRIX*)
-+			# SGI IRIX
-+			manext=irix
 +			;;
 +		SunOS* | HP-UX*)
 +			# Solaris and HP-UX
@@ -39,35 +35,25 @@ Add '--with-manext' configure option.
 +			;;
 +		*)
 +			# All others
-+			manext=none
 +			;;
 +	esac
 +fi
 +
 +case "$manext" in
-+	irix)
- 		# SGI IRIX
- 		MAN1EXT=1
- 		MAN5EXT=5
-@@ -59,7 +86,7 @@ case "$uname" in
- 		MAN8EXT=1m
- 		MAN8DIR=1
- 		;;
--	SunOS* | HP-UX*)
 +	sysv)
  		# Solaris and HP-UX
  		MAN1EXT=1
  		MAN5EXT=5
-@@ -67,7 +94,7 @@ case "$uname" in
+@@ -53,7 +75,7 @@ case "$uname" in
  		MAN8EXT=1m
  		MAN8DIR=1m
  		;;
 -	Linux* | GNU* | Darwin*)
 +	linux)
- 		# Linux, GNU Hurd, and Mac OS X
+ 		# Linux, GNU Hurd, and OS X
  		MAN1EXT=1.gz
  		MAN5EXT=5.gz
-@@ -75,7 +102,7 @@ case "$uname" in
+@@ -61,7 +83,7 @@ case "$uname" in
  		MAN8EXT=8.gz
  		MAN8DIR=8
  		;;
