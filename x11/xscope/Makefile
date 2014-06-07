@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2012/12/02 13:13:59 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.3 2014/06/07 06:54:41 wiz Exp $
 
-DISTNAME=	xscope-1.4
+DISTNAME=	xscope-1.4.1
 CATEGORIES=	x11 devel
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
