@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13363 2014/06/06 23:24:40 ryoon Exp $
+$NetBSD: TODO,v 1.13364 2014/06/07 07:18:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -337,8 +337,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GUIlib-1.1.2
 	o MAMEDiff-2.30
-	o Mesa-10.1.4
-	o MesaLib-10.1.4
+	o Mesa-10.1.5
+	o MesaLib-10.1.5
 	o PAM-0.99.7.1
 	o RBTools-0.5.5
 	o REminiscence-0.1.9
@@ -466,6 +466,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ctwm-3.8.2 [pkg/48820]
 	o cuisine-0.6.5
 	o cups-1.7.3
+	o cvs-fast-export-1.11
 	o cvs2p4-2.5.5 [schmonz]
 	o cwm-5.1
 	o cxref-1.6e
@@ -484,7 +485,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o delegate-9.9.8
 	o denemo-1.1.4
 	o dhid-5.3
-	o diffstat-1.58
+	o diffstat-1.59
 	o digikam-4.0
 	o doclifter-2.15
 	o dolphin-4.0.2
@@ -600,7 +601,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glib2-2.40.0
 	o glibmm-2.40
 	o glom-1.14.2 [GNOME 2.26]
-	o glu-10.1.4
+	o glu-10.1.5
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.12.2
@@ -729,6 +730,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kmymoney2-4.6.1
 	o knights-2.5.0
 	o koffice-l10n-de-2.0.2
+	o kpcli-2.6
 	o kphotobook-0.0.7
 	o kronolith-4.1.5
 	o krusader-2.0
@@ -816,7 +818,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mgetty+sendfax-1.1.35
 	o midori-0.5.8
 	o milkytracker-0.90.85
-	o mined-2013.23
+	o mined-2014.24
 	o minicom-2.7
 	o miniupnpd-1.8.20140401
 	o minivmac-3.2.3
