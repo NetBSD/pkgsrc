@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/06/14 21:15:24 wiz Exp $
+$NetBSD: distinfo,v 1.5 2014/06/07 09:37:20 wiz Exp $
 
-SHA1 (kpcli-2.1.pl) = f5d024401e8078c9efb34a65669b7b8c8d05ef28
-RMD160 (kpcli-2.1.pl) = 3797fa67196aeb9f168e9772c6be231c1ee3e07e
-Size (kpcli-2.1.pl) = 89196 bytes
+SHA1 (kpcli-2.6.pl) = 38ef7d8d305d637f938710c659d0041c491e0402
+RMD160 (kpcli-2.6.pl) = 35ce982c44dd7c02d9f071200528e91ebbc9962b
+Size (kpcli-2.6.pl) = 166222 bytes
