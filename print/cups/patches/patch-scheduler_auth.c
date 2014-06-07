@@ -1,11 +1,11 @@
-$NetBSD: patch-scheduler_auth.c,v 1.2 2014/06/01 06:19:02 ryoon Exp $
+$NetBSD: patch-scheduler_auth.c,v 1.3 2014/06/07 07:34:05 wiz Exp $
 
 Don't pull in sys/ucred.h on Solaris as it results in procfs.h being
 included and conflicts between _FILE_OFFSET_BITS=64 and 32-bit procfs.
 
 OpenBSD defines SO_PEERCRED, but it is different from Linux's one.
 
---- scheduler/auth.c.orig	2011-08-31 04:58:33.000000000 +0000
+--- scheduler/auth.c.orig	2014-01-06 22:21:15.000000000 +0000
 +++ scheduler/auth.c
 @@ -84,7 +84,7 @@ extern const char *cssmErrorString(int e
  #ifdef HAVE_SYS_PARAM_H
@@ -16,7 +16,7 @@ OpenBSD defines SO_PEERCRED, but it is different from Linux's one.
  #  include <sys/ucred.h>
  typedef struct xucred cupsd_ucred_t;
  #  define CUPSD_UCRED_UID(c) (c).cr_uid
-@@ -493,7 +493,7 @@ cupsdAuthorize(cupsd_client_t *con)	/* I
+@@ -500,7 +500,7 @@ cupsdAuthorize(cupsd_client_t *con)	/* I
      con->type = CUPSD_AUTH_BASIC;
    }
  #endif /* HAVE_AUTHORIZATION_H */
@@ -25,7 +25,7 @@ OpenBSD defines SO_PEERCRED, but it is different from Linux's one.
    else if (!strncmp(authorization, "PeerCred ", 9) &&
             con->http.hostaddr->addr.sa_family == AF_LOCAL)
    {
-@@ -1120,7 +1120,7 @@ cupsdAuthorize(cupsd_client_t *con)	/* I
+@@ -1142,7 +1142,7 @@ cupsdAuthorize(cupsd_client_t *con)	/* I
  
      gss_delete_sec_context(&minor_status, &context, GSS_C_NO_BUFFER);
  
