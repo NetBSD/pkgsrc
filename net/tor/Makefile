@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.97 2014/02/12 23:18:26 tron Exp $
+# $NetBSD: Makefile,v 1.98 2014/06/07 09:11:36 wiz Exp $
 
-DISTNAME=		tor-0.2.3.25
-PKGREVISION=		4
+DISTNAME=		tor-0.2.4.22
 CATEGORIES=		net security
 MASTER_SITES=		http://www.torproject.org/dist/
 
@@ -13,10 +12,6 @@ LICENSE=		modified-bsd
 .include "../../mk/bsd.prefs.mk"
 
 USE_LANGUAGES=		c99
-# tor is not documented to require GNU make, but it fails to build on
-# NetBSD 5.1 with (system) BSD make.  Reported to
-# tor-talk@lists.torproject.org on 20110907.
-USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
@@ -45,8 +40,6 @@ OWN_DIRS_PERMS+=	${PKG_HOME.${TOR_USER}} ${USER_GROUP} 0700
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
-CONF_FILES+=		${PREFIX}/share/examples/tor/tor-tsocks.conf 	\
-				${PKG_SYSCONFDIR}/tor-tsocks.conf
 CONF_FILES+=		${PREFIX}/share/examples/tor/torrc.sample 	\
 				${PKG_SYSCONFDIR}/torrc
 
@@ -67,7 +60,6 @@ CHECK_PORTABILITY_SKIP+=contrib/*
 CFLAGS+=		-c99
 .endif
 
-BUILD_DEPENDS+= asciidoc-[0-9]*:../../textproc/asciidoc
 BUILDLINK_API_DEPENDS.libevent+= libevent>=1.2
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
