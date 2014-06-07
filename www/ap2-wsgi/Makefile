@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.16 2014/01/25 10:30:26 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2014/06/07 07:41:25 wiz Exp $
 
-DISTNAME=	mod_wsgi-${VERSION}
+DISTNAME=	${VERSION}
 PKGNAME=	${APACHE_PKG_PREFIX}-${PYPKGPREFIX}-wsgi-${VERSION}
 CATEGORIES=	www python
-MASTER_SITES=	http://modwsgi.googlecode.com/files/
+MASTER_SITES=	https://github.com/GrahamDumpleton/mod_wsgi/archive/
 
 MAINTAINER=	jan.m.danielsson@gmail.com
-HOMEPAGE=	http://modwsgi.googlecode.com/
+HOMEPAGE=	https://code.google.com/p/modwsgi/
 COMMENT=	WSGI module for apache
 LICENSE=	apache-2.0
 
 APACHE_MODULE=	yes
-VERSION=	3.4
+VERSION=	3.5
+DIST_SUBDIR=	mod_wsgi
+WRKSRC=		${WRKDIR}/mod_wsgi-${VERSION}
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
