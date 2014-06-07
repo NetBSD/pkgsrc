@@ -1,4 +1,4 @@
-/*	$NetBSD: stdio.h,v 1.4 2008/04/29 05:46:08 martin Exp $	*/
+/*	$NetBSD: stdio.h,v 1.5 2014/06/07 19:17:42 cheusov Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -61,7 +61,7 @@ int	snprintf(char *, size_t, const char *, ...);
 int	vsnprintf(char *, size_t, const char *, va_list);
 #endif
 
-#if !HAVE_DECL_ASPRINTF
+#if !HAVE_DECL_VASPRINTF
 int	asprintf(char **, const char *, ...);
 int	vasprintf(char **, const char *, va_list);
 #endif
