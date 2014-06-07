@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/10/04 14:38:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/07 14:33:00 ryoon Exp $
 
 DISTNAME=	hsqldb_1_8_0_10
 PKGNAME=	${DISTNAME:S/hsqldb_/hsqldb18-/:S/_/./g}
@@ -15,7 +15,6 @@ WRKSRC=		${WRKDIR}/hsqldb
 
 USE_JAVA=	run
 USE_JAVA2=	yes
-USE_TOOLS+=	pax
 NO_BUILD=	yes
 
 HSQLDB_DIR=	lib/java/hsqldb18
