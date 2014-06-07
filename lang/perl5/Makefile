@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.225 2014/06/02 09:53:32 obache Exp $
+# $NetBSD: Makefile,v 1.226 2014/06/07 12:07:43 obache Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -214,7 +214,6 @@ SYSLIBPATH.Cygwin=	/usr/lib
 SYSLIBPATH.Darwin=	/usr/lib
 SYSLIBPATH.DragonFly=	/usr/lib
 SYSLIBPATH.FreeBSD=	/usr/lib
-SYSLIBPATH.Haiku=	/boot/common/lib
 SYSLIBPATH.Interix=	/usr/lib
 SYSLIBPATH.MirBSD=	/usr/lib
 SYSLIBPATH.NetBSD=	/usr/lib
@@ -222,7 +221,7 @@ SYSLIBPATH.OpenBSD=	/usr/lib
 SYSLIBPATH.SunOS=	/usr/lib
 SYSLIBPATH.AIX=		/usr/lib
 SYSLIBPATH.SCO_SV=	/usr/lib
-SYSLIBPATH=		${SYSLIBPATH.${OPSYS}}
+SYSLIBPATH=		${SYSLIBPATH.${OPSYS}:U${COMPILER_LIB_DIRS}}
 SUBST_VARS.policysh+=	SYSLIBPATH
 
 .include "../../mk/dlopen.buildlink3.mk"
