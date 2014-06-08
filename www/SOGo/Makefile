@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2014/04/09 07:27:17 obache Exp $
+# $NetBSD: Makefile,v 1.18 2014/06/08 13:21:37 taca Exp $
 #
 
-DISTNAME=	SOGo-2.2.1
-PKGREVISION=	1
+DISTNAME=	SOGo-2.2.5
 CATEGORIES=	www
 MASTER_SITES=	http://www.sogo.nu/files/downloads/SOGo/Sources/
 
@@ -12,7 +11,6 @@ COMMENT=	Groupware server supporting CalDAV, CardDAV and GroupDAV
 LICENSE=	gnu-gpl-v2
 
 HAS_CONFIGURE=	yes
-USE_LANGUAGES=	c
 USE_TOOLS+=     gmake zip:run
 
 CONFIGURE_ARGS= --enable-debug --disable-strip
