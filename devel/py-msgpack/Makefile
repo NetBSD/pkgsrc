@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2014/01/25 10:30:04 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/06/08 23:17:37 rodent Exp $
 
-DISTNAME=	msgpack-python-0.4.0
+DISTNAME=	msgpack-python-0.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python-/-/}
 CATEGORIES=	devel
 MASTER_SITES=	http://pypi.python.org/packages/source/m/msgpack-python/
