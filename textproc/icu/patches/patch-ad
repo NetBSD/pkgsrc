@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.13 2013/10/19 08:47:36 adam Exp $
+$NetBSD: patch-ad,v 1.14 2014/06/08 08:32:10 obache Exp $
 
 --- icudefs.mk.in.orig	2013-10-04 20:54:58.000000000 +0000
 +++ icudefs.mk.in
@@ -18,13 +18,3 @@ $NetBSD: patch-ad,v 1.13 2013/10/19 08:47:36 adam Exp $
  LIBSICU = $(LIBPREFIX)$(STATIC_PREFIX)$(ICUPREFIX)
  A = a
  SOBJ = $(SO)
-@@ -311,5 +311,9 @@ ifneq ($(TEST_STATUS_FILE),)
- TEST_OUTPUT_OPTS="-E$(TEST_STATUS_FILE)"
- endif
- 
-+ifeq ($(DSO_LIBDIR),)
-+DSO_LIBDIR=	$(DESTDIR)$(libdir)
-+endif
-+
- # optional include at top
- -include $(top_builddir)/icudefs.local

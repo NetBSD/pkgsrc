@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2014/06/03 09:08:05 obache Exp $
+# $NetBSD: Makefile,v 1.90 2014/06/08 08:32:10 obache Exp $
 
 DISTNAME=	icu4c-53_1-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
@@ -98,11 +98,26 @@ CFLAGS+=	-march=i486
 .  endif
 .endif
 
-INSTALLATION_DIRS=	bin
-
 .if ${OPSYS} == "Cygwin"
+SO_MAJOR=		${PKGVERSION_NOREV:R}	
+.  for l in data i18n io le lx test tu uc
+GENERATE_PLIST+=	${ECHO} bin/cygicu${l}${SO_MAJOR}.dll;
+GENERATE_PLIST+=	${ECHO} lib/libicu${l}${SO_MAJOR}.dll.a;
+.  endfor
+
 post-install:
-	mv ${DESTDIR}${PREFIX}/lib/cygicudata.dll ${DESTDIR}${PREFIX}/bin/
+	mv ${DESTDIR}${PREFIX}/lib/cygicu*.dll ${DESTDIR}${PREFIX}/bin/
+.  for l in data i18n io le lx test tu uc
+	${LN} -s libicu${l}${SO_MAJOR}.dll.a ${DESTDIR}${PREFIX}/lib/libicu${l}.dll.a
+.  endfor
+
+SUBST_CLASSES+=		icu-config
+SUBST_STAGE.icu-config=	post-install
+SUBST_FILES.icu-config=	${DESTDIR}${PREFIX}/bin/icu-config
+SUBST_SED.icu-config+=	-e '/^ICUUC_FILE=/ s/libdir/bindir/'
+SUBST_SED.icu-config+=	-e 's/l$${LIBICU}/l$${ICUPREFIX}/g'
+SUBST_SED.icu-config+=	-e '/l$${ICUPREFIX}/ s/$${ICULIBSUFFIX_VERSION}//g'
+
 .endif
 
 .include "../../mk/bsd.pkg.mk"
