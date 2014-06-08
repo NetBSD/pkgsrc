@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2203 2014/06/08 23:39:24 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2204 2014/06/08 23:59:03 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3000,3 +3000,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-msgpack to 0.4.2 [rodent 2014-06-08]
 	Updated www/py-httplib2 to 0.9 [rodent 2014-06-08]
 	Added databases/py-couchdb version 0.9 [rodent 2014-06-08]
+	Updated net/py-zmq to 14.3.0 [rodent 2014-06-08]
