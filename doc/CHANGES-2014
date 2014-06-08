@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2201 2014/06/08 23:17:49 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2202 2014/06/08 23:26:50 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2998,3 +2998,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added net/py-beanstalkc version 0.4.0 [rodent 2014-06-08]
 	Added net/py-softlayer_messaging version 1.0.3 [rodent 2014-06-08]
 	Updated devel/py-msgpack to 0.4.2 [rodent 2014-06-08]
+	Updated www/py-httplib2 to 0.9 [rodent 2014-06-08]
