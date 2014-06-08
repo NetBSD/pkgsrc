@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2198 2014/06/08 22:51:16 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2199 2014/06/08 22:56:02 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2995,3 +2995,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added databases/py-mongo version 2.7.1 [rodent 2014-06-08]
 	Added net/py-gevent version 1.0.1 [rodent 2014-06-08]
 	Added sysutils/py-kazoo version 2.0b1 [rodent 2014-06-08]
+	Added net/py-beanstalkc version 0.4.0 [rodent 2014-06-08]
