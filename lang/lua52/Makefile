@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/05/04 06:10:41 alnsn Exp $
+# $NetBSD: Makefile,v 1.4 2014/06/08 19:05:00 rodent Exp $
 
 DISTNAME=	lua-${LUA_VERSION}
 PKGNAME=	lua52-${LUA_VERSION}
@@ -60,6 +60,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/lua.pc \
 	    ${DESTDIR}${PREFIX}/lib/pkgconfig/lua-5.2.pc
 
-.include "../../mk/readline.buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
