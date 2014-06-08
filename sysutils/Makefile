@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.605 2014/06/05 05:08:04 obache Exp $
+# $NetBSD: Makefile,v 1.606 2014/06/08 22:51:56 rodent Exp $
 #
 
 COMMENT=	System utilities
@@ -387,6 +387,7 @@ SUBDIR+=	pv
 SUBDIR+=	pwgen
 SUBDIR+=	py-dbus
 SUBDIR+=	py-gnome-menus
+SUBDIR+=	py-kazoo
 SUBDIR+=	py-magic
 SUBDIR+=	py-notify
 SUBDIR+=	py-notify-python
