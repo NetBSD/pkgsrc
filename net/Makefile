@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1020 2014/06/08 22:37:36 rodent Exp $
+# $NetBSD: Makefile,v 1.1021 2014/06/08 22:56:27 rodent Exp $
 #
 
 COMMENT=	Networking tools
@@ -544,6 +544,7 @@ SUBDIR+=	py-ORBit
 SUBDIR+=	py-adns
 SUBDIR+=	py-amqp
 SUBDIR+=	py-apache-libcloud
+SUBDIR+=	py-beanstalkc
 SUBDIR+=	py-boto
 SUBDIR+=	py-caldav
 SUBDIR+=	py-celery
