@@ -1,8 +1,23 @@
-@comment $NetBSD: PLIST,v 1.5 2014/03/01 08:55:17 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/06/08 23:58:51 rodent Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/zmq/__init__.py
 ${PYSITELIB}/zmq/__init__.pyc
 ${PYSITELIB}/zmq/__init__.pyo
+${PYSITELIB}/zmq/auth/__init__.py
+${PYSITELIB}/zmq/auth/__init__.pyc
+${PYSITELIB}/zmq/auth/__init__.pyo
+${PYSITELIB}/zmq/auth/base.py
+${PYSITELIB}/zmq/auth/base.pyc
+${PYSITELIB}/zmq/auth/base.pyo
+${PYSITELIB}/zmq/auth/certs.py
+${PYSITELIB}/zmq/auth/certs.pyc
+${PYSITELIB}/zmq/auth/certs.pyo
+${PYSITELIB}/zmq/auth/ioloop.py
+${PYSITELIB}/zmq/auth/ioloop.pyc
+${PYSITELIB}/zmq/auth/ioloop.pyo
+${PYSITELIB}/zmq/auth/thread.py
+${PYSITELIB}/zmq/auth/thread.pyc
+${PYSITELIB}/zmq/auth/thread.pyo
 ${PYSITELIB}/zmq/backend/__init__.py
 ${PYSITELIB}/zmq/backend/__init__.pyc
 ${PYSITELIB}/zmq/backend/__init__.pyo
@@ -188,6 +203,9 @@ ${PYSITELIB}/zmq/sugar/version.pyo
 ${PYSITELIB}/zmq/tests/__init__.py
 ${PYSITELIB}/zmq/tests/__init__.pyc
 ${PYSITELIB}/zmq/tests/__init__.pyo
+${PYSITELIB}/zmq/tests/test_auth.py
+${PYSITELIB}/zmq/tests/test_auth.pyc
+${PYSITELIB}/zmq/tests/test_auth.pyo
 ${PYSITELIB}/zmq/tests/test_cffi_backend.py
 ${PYSITELIB}/zmq/tests/test_cffi_backend.pyc
 ${PYSITELIB}/zmq/tests/test_cffi_backend.pyo
@@ -258,6 +276,8 @@ ${PYSITELIB}/zmq/utils/__init__.py
 ${PYSITELIB}/zmq/utils/__init__.pyc
 ${PYSITELIB}/zmq/utils/__init__.pyo
 ${PYSITELIB}/zmq/utils/buffers.pxd
+${PYSITELIB}/zmq/utils/compiler.json
+${PYSITELIB}/zmq/utils/config.json
 ${PYSITELIB}/zmq/utils/constant_names.py
 ${PYSITELIB}/zmq/utils/constant_names.pyc
 ${PYSITELIB}/zmq/utils/constant_names.pyo
@@ -265,7 +285,9 @@ ${PYSITELIB}/zmq/utils/garbage.py
 ${PYSITELIB}/zmq/utils/garbage.pyc
 ${PYSITELIB}/zmq/utils/garbage.pyo
 ${PYSITELIB}/zmq/utils/getpid_compat.h
-${PYSITELIB}/zmq/utils/initthreads.so
+${PYSITELIB}/zmq/utils/interop.py
+${PYSITELIB}/zmq/utils/interop.pyc
+${PYSITELIB}/zmq/utils/interop.pyo
 ${PYSITELIB}/zmq/utils/ipcmaxlen.h
 ${PYSITELIB}/zmq/utils/jsonapi.py
 ${PYSITELIB}/zmq/utils/jsonapi.pyc
@@ -274,7 +296,9 @@ ${PYSITELIB}/zmq/utils/monitor.py
 ${PYSITELIB}/zmq/utils/monitor.pyc
 ${PYSITELIB}/zmq/utils/monitor.pyo
 ${PYSITELIB}/zmq/utils/pyversion_compat.h
-${PYSITELIB}/zmq/utils/rebuffer.so
+${PYSITELIB}/zmq/utils/sixcerpt.py
+${PYSITELIB}/zmq/utils/sixcerpt.pyc
+${PYSITELIB}/zmq/utils/sixcerpt.pyo
 ${PYSITELIB}/zmq/utils/strtypes.py
 ${PYSITELIB}/zmq/utils/strtypes.pyc
 ${PYSITELIB}/zmq/utils/strtypes.pyo
@@ -283,6 +307,3 @@ ${PYSITELIB}/zmq/utils/z85.pyc
 ${PYSITELIB}/zmq/utils/z85.pyo
 ${PYSITELIB}/zmq/utils/zmq_compat.h
 ${PYSITELIB}/zmq/utils/zmq_constants.h
-${PYSITELIB}/zmq/web.py
-${PYSITELIB}/zmq/web.pyc
-${PYSITELIB}/zmq/web.pyo
