@@ -1,15 +1,15 @@
-$NetBSD: patch-installer_rcube__install.php,v 1.3 2013/09/13 11:13:49 taca Exp $
+$NetBSD: patch-installer_rcube__install.php,v 1.4 2014/06/08 13:35:25 taca Exp $
 
 Use template from examples dir.
 
---- installer/rcube_install.php.orig	2013-09-06 12:20:52.000000000 +0000
+--- installer/rcube_install.php.orig	2014-04-06 14:13:17.000000000 +0000
 +++ installer/rcube_install.php
-@@ -147,7 +147,7 @@ class rcube_install
-    */
-   function create_config($which, $force = false)
+@@ -87,7 +87,7 @@ class rcube_install
+   function load_config()
    {
--    $out = @file_get_contents(RCUBE_CONFIG_DIR . $which . '.inc.php.dist');
-+    $out = @file_get_contents('@PKG_EXAMPLES@/' . $which . '.inc.php.dist');
- 
-     if (!$out)
-       return '[Warning: could not read the config template file]';
+     // defaults
+-    if ($config = $this->load_config_file(RCUBE_CONFIG_DIR . 'defaults.inc.php')) {
++    if ($config = $this->load_config_file('@PKG_EXAMPLES@/' . 'defaults.inc.php')) {
+         $this->config = (array) $config;
+         $this->defaults = $this->config;
+     }
