@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2014/06/08 00:20:30 spz Exp $
+# $NetBSD: Makefile,v 1.47 2014/06/08 00:59:09 spz Exp $
 
 DISTNAME=	sed-4.2.2
 PKGNAME=	g${DISTNAME}
@@ -29,7 +29,6 @@ CONFIGURE_ARGS+=	--program-prefix=g
 .include "../../mk/bsd.prefs.mk"
 
 post-install:
-	${MV}  ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/gsed1  ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/gsed.1
 .for g n in bin/gsed ${PKGGNUDIR}bin/sed ${PKGMANDIR}/man1/gsed.1 ${PKGGNUDIR}${PKGMANDIR}/man1/sed.1
 	${LN} -sf ${PREFIX}/${g} ${DESTDIR}${PREFIX}/${n}
 .endfor
