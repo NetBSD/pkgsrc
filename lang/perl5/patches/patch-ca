@@ -1,4 +1,4 @@
-$NetBSD: patch-ca,v 1.20 2014/05/29 07:57:07 adam Exp $
+$NetBSD: patch-ca,v 1.21 2014/06/08 23:35:55 joerg Exp $
 
 * Use "uname -r" to get OS version for *BSD.
 * Move $loclibpth to the end of $dlist, instead of the beginning.
@@ -51,6 +51,15 @@ $NetBSD: patch-ca,v 1.20 2014/05/29 07:57:07 adam Exp $
  		solaris) osname=solaris
  			case "$3" in
  			5*) osvers=`echo $3 | $sed 's/^5/2/g'` ;;
+@@ -4865,7 +4869,7 @@ esac
+ # If using gcc or clang, we can get better values for libpth, incpth
+ # and usrinc directly from the compiler.
+ # Note that ccname for clang is also gcc.
+-case "$ccname" in
++case "xx$ccname" in
+     gcc)
+ 	$echo 'extern int foo;' > try.c
+ 	set X `$cppstdin -v try.c 2>&1 | $awk '/^#include </,/^End of search /'|$cppfilter $grep '/include'`
 @@ -4941,14 +4945,14 @@ case "$plibpth" in
  esac
  case "$libpth" in
