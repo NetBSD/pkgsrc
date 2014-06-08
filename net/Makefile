@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1021 2014/06/08 22:56:27 rodent Exp $
+# $NetBSD: Makefile,v 1.1022 2014/06/08 23:10:52 rodent Exp $
 #
 
 COMMENT=	Networking tools
@@ -576,6 +576,7 @@ SUBDIR+=	py-soaplib
 SUBDIR+=	py-soappy
 SUBDIR+=	py-socketpool
 SUBDIR+=	py-softlayer
+SUBDIR+=	py-softlayer_messaging
 SUBDIR+=	py-spreadmodule
 SUBDIR+=	py-suds
 SUBDIR+=	py-twisted
