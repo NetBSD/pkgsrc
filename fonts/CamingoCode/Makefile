@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/06/08 00:17:58 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/08 09:34:11 wiz Exp $
 
 DISTNAME=	CamingoCode-v1.0
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.janfromm.de/typefaces/camingomono/camingocode/
 COMMENT=	Font designed for source-code editors
-#LICENSE=	cc-by-nd-v3.0-license
+LICENSE=	cc-by-nd-v3.0-license
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
