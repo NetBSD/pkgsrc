@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2195 2014/06/08 22:04:08 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2196 2014/06/08 22:13:47 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2992,3 +2992,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/py-redis-py to 2.10.1 [rodent 2014-06-08]
 	Updated x11/mlterm to 3.3.6nb2 [tsutsui 2014-06-08]
 	Added www/py-boto version 2.29.1 [rodent 2014-06-08]
+	Added databases/py-mongo version 2.7.1 [rodent 2014-06-08]
