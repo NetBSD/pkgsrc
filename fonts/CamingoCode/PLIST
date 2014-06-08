@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2014/06/08 00:17:58 wiz Exp $
+share/doc/CamingoCode/readme.txt
+share/fonts/X11/TTF/CamingoCode-Bold.ttf
+share/fonts/X11/TTF/CamingoCode-BoldItalic.ttf
+share/fonts/X11/TTF/CamingoCode-Italic.ttf
+share/fonts/X11/TTF/CamingoCode-Regular.ttf
