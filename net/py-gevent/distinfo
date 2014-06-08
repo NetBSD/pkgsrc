@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/06/08 22:36:22 rodent Exp $
+
+SHA1 (gevent-1.0.1.tar.gz) = 2cc1b6e1fa29b30ea881fa6a195e57faaf089ae8
+RMD160 (gevent-1.0.1.tar.gz) = 430fb627b4f7350969e2e0bfc45eedaf18aa6325
+Size (gevent-1.0.1.tar.gz) = 1455636 bytes
