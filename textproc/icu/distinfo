@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.46 2014/05/05 21:25:11 ryoon Exp $
+$NetBSD: distinfo,v 1.47 2014/06/08 08:32:10 obache Exp $
 
 SHA1 (icu4c-53_1-src.tgz) = 7eca017fdd101e676d425caaf28ef862d3655e0f
 RMD160 (icu4c-53_1-src.tgz) = 9bd1b4bdc2010545c76a927dcf46049686beeab9
@@ -7,23 +7,13 @@ SHA1 (patch-aa) = fcbebb03f4a48294faeebd600fee989cab351230
 SHA1 (patch-ab) = 32f0e4c241535e37e4cad9b871ed3d36b4184199
 SHA1 (patch-ac) = e7cee161315321d2580074054d87714b55319886
 SHA1 (patch-acinclude.m4) = 40ddfb09cbc951928296c35e8a4303cf7fbe7e17
-SHA1 (patch-ad) = 8189e81e9c624e3b7a42f9af65a4b2f334747284
+SHA1 (patch-ad) = c2a9469bf896b5f0702d5795c3b1c2b394893663
 SHA1 (patch-af) = dcfbaf16844292a9ae57536ae2fb62fd1659d067
-SHA1 (patch-common_Makefile.in) = 20fa472bd0e5e5fac15153774a58a8ce034d1996
 SHA1 (patch-common_putilimp.h) = a68faa97c2bffeecaca1586e26f5bbe48e71b262
 SHA1 (patch-common_umutex.h) = 096d3e15ef7b84533456af4570ed70747a4ef70c
 SHA1 (patch-common_unicode_platform.h) = 82786dff790782eb07cdc527061de33e771ec63c
 SHA1 (patch-common_uposixdefs.h) = abe1989ea4312702e5d0172b662409957b3e2d91
 SHA1 (patch-config_icu-config-bottom) = 168b89ee9180d4ae545125866ee91eb004010501
-SHA1 (patch-config_mh-cygwin) = e3aa7a926244b448ce12ab2f89156348a02c0659
 SHA1 (patch-config_mh-solaris-gcc) = f81fec8f0d232b9125c7ea7ec334b78872aa2025
 SHA1 (patch-configure) = 6888d11d4e0eb809c50780fec7fbff53861d1901
 SHA1 (patch-configure.ac) = 8a273518838ecb38378ca4577f8b93985e4e86b6
-SHA1 (patch-data_Makefile.in) = a5dcfe848a0444f0a1c036b7f4e343468bf3b3d1
-SHA1 (patch-i18n_Makefile.in) = 935965c0418994271d844a4c908cd9e1fe8279fd
-SHA1 (patch-io_Makefile.in) = f5f5eabb31ea7120130d13c397fab1feddd30447
-SHA1 (patch-layout_Makefile.in) = 6914279785c618d4078d4595a9097df006043eed
-SHA1 (patch-layoutex_Makefile.in) = b1284874108d22b1ca6803c98b1ce9bd6d1682fe
-SHA1 (patch-stubdata_Makefile.in) = 358c84811cd8138fed2e108d33f8bcfdac1ac585
-SHA1 (patch-tools_ctestfw_Makefile.in) = 7d7874baee8785b6f1c889e7db1dd4acff5d5797
-SHA1 (patch-tools_toolutil_Makefile.in) = be08c92bef0f367f502a712acbad869952102cc8
