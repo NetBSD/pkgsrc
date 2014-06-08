@@ -1,0 +1,1 @@
+kazoo implements a higher level API to Apache Zookeeper for Python clients.
