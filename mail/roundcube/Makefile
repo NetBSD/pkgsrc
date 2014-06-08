@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2014/05/17 16:10:46 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2014/06/08 13:35:24 taca Exp $
 
-DISTNAME=	roundcubemail-0.9.5-dep
+DISTNAME=	roundcubemail-1.0.1-dep
 PKGNAME=	${DISTNAME:S/mail-/-/:S/-dep//}
-PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundcubemail/}
 
@@ -18,6 +17,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-intl>=${PHP_BASE_VERS}:../../textproc/php-intl
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=${PHP_BASE_VERS}:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=${PHP_BASE_VERS}:../../security/php-mcrypt
 
+DEPENDS+=	${PHP_PKG_PREFIX}-pear-Net_Sieve>=1.3.2:../../net/pear-Net_Sieve
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Net_SMTP>=1.4.2:../../net/pear-Net_SMTP
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Net_IDNA2>=0.1.1:../../net/pear-Net_IDNA2
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Mail_Mime>=1.8.1:../../mail/pear-Mail_Mime
@@ -66,11 +66,11 @@ CONF_FILES=		${EGDIR}/roundcube.conf \
 			${PKG_SYSCONFDIR}/roundcube.conf
 CONF_FILES+=		${EGDIR}/mimetypes.php \
 			${PKG_SYSCONFDIR}/mimetypes.php
-CONF_FILES_PERMS+=	${EGDIR}/db.inc.php.dist \
-			${PKG_SYSCONFDIR}/db.inc.php \
+CONF_FILES_PERMS+=	${EGDIR}/config.inc.php \
+			${PKG_SYSCONFDIR}/config.inc.php \
 			${WWW_USER} ${WWW_GROUP} 0640
-CONF_FILES_PERMS+=	${EGDIR}/main.inc.php.dist \
-			${PKG_SYSCONFDIR}/main.inc.php \
+CONF_FILES_PERMS+=	${EGDIR}/defaults.inc.php \
+			${PKG_SYSCONFDIR}/defaults.inc.php \
 			${WWW_USER} ${WWW_GROUP} 0640
 
 .for f in ${CONF_PLUGINS}
@@ -82,7 +82,7 @@ CONF_FILES_PERMS+=	${EGDIR}/plugins/${f}/config.inc.php \
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	do-configure
 SUBST_FILES.files=	roundcube.conf
-SUBST_FILES.files+=	config/main.inc.php.dist
+SUBST_FILES.files+=	config/defaults.inc.php
 SUBST_FILES.files+=	installer/index.php installer/rcube_install.php
 SUBST_FILES.files+=	program/include/iniset.php
 SUBST_SED.files=	-e "s|@RCDIR@|${RCDIR}|g"
@@ -94,10 +94,11 @@ SUBST_MESSAGE.files=	Fixing configuration files.
 REPLACE_INTERPRETER+=	php
 REPLACE.php.old=	/usr/bin/env php
 REPLACE.php.new=	${PREFIX}/bin/php
-REPLACE_FILES.php=	bin/cleandb.sh bin/decrypt.sh bin/indexcontacts.sh
-REPLACE_FILES.php+=	bin/installto.sh bin/moduserprefs.sh bin/msgexport.sh
-REPLACE_FILES.php+=	bin/msgimport.sh bin/update.sh bin/updatecss.sh
-REPLACE_FILES.php+=	bin/updatedb.sh
+REPLACE_FILES.php=	bin/cleandb.sh bin/decrypt.sh bin/exportgettext.sh \
+			bin/gc.sh bin/importgettext.sh bin/indexcontacts.sh \
+			bin/installto.sh bin/moduserprefs.sh bin/msgexport.sh \
+			bin/msgimport.sh bin/package2composer.sh \
+			bin/update.sh bin/updatecss.sh bin/updatedb.sh
 
 REPLACE_PYTHON=		plugins/password/helpers/chpass-wrapper.py
 
@@ -119,10 +120,10 @@ do-install:
 		${DESTDIR}${EGDIR}/roundcube.conf
 	${INSTALL_DATA} ${WRKSRC}/config/mimetypes.php \
 		${DESTDIR}${EGDIR}/mimetypes.php
-	${INSTALL_DATA} ${WRKSRC}/config/db.inc.php.dist \
-		${DESTDIR}${EGDIR}/db.inc.php.dist
-	${INSTALL_DATA} ${WRKSRC}/config/main.inc.php.dist \
-		${DESTDIR}${EGDIR}/main.inc.php.dist
+	${INSTALL_DATA} ${WRKSRC}/config/config.inc.php.sample \
+		${DESTDIR}${EGDIR}/config.inc.php
+	${INSTALL_DATA} ${WRKSRC}/config/defaults.inc.php \
+		${DESTDIR}${EGDIR}/defaults.inc.php
 
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/*.sh ${DESTDIR}${RCDIR}/bin/
 
