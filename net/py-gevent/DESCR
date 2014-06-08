@@ -1,0 +1,2 @@
+gevent is a coroutine-based Python networking library that uses greenlet
+to provide a high-level synchronous API on top of libevent event loop.
