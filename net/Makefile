@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1019 2014/06/06 14:57:30 abs Exp $
+# $NetBSD: Makefile,v 1.1020 2014/06/08 22:37:36 rodent Exp $
 #
 
 COMMENT=	Networking tools
@@ -553,6 +553,7 @@ SUBDIR+=	py-dpkt
 SUBDIR+=	py-dropbox
 SUBDIR+=	py-eventlib
 SUBDIR+=	py-foolscap
+SUBDIR+=	py-gevent
 SUBDIR+=	py-google
 SUBDIR+=	py-hatop
 SUBDIR+=	py-irclib
