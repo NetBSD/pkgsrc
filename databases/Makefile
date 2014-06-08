@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.460 2014/06/08 22:14:36 rodent Exp $
+# $NetBSD: Makefile,v 1.461 2014/06/08 23:40:12 rodent Exp $
 
 COMMENT=	Databases
 
@@ -326,6 +326,7 @@ SUBDIR+=	py-bsddb3
 SUBDIR+=	py-cassa
 SUBDIR+=	py-cdb
 SUBDIR+=	py-ckanclient
+SUBDIR+=	py-couchdb
 SUBDIR+=	py-cx_Oracle
 SUBDIR+=	py-datapkg
 SUBDIR+=	py-elasticsearch
