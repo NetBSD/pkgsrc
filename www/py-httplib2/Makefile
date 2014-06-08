@@ -1,23 +1,14 @@
-# $NetBSD: Makefile,v 1.4 2014/01/18 17:53:18 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/06/08 23:26:35 rodent Exp $
 
-DISTNAME=	httplib2-0.8
+DISTNAME=	httplib2-0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	http://httplib2.googlecode.com/files/
+MASTER_SITES=	https://pypi.python.org/packages/source/h/httplib2/
 
 MAINTAINER=	mj@mjturner.net
-HOMEPAGE=	http://code.google.com/p/httplib2/
+HOMEPAGE=	https://github.com/jcgregorio/httplib2
 COMMENT=	Comprehensive http client library for Python
 LICENSE=	mit
-
-# Install README manually
-DOCDIR=		${PREFIX}/share/doc/py-httplib2
-
-INSTALLATION_DIRS=	${DOCDIR}
-
-post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
