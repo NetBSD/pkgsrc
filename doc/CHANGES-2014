@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2190 2014/06/08 13:06:49 taca Exp $
+$NetBSD: CHANGES-2014,v 1.2191 2014/06/08 13:22:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2986,3 +2986,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Added fonts/CamingoCode version 1.0 [wiz 2014-06-08]
 	Updated net/mikutter to 3.0.0 [obache 2014-06-08]
 	Updated www/fengoffice to 2.6.1 [taca 2014-06-08]
+	Updated devel/SOPE to 2.2.5 [taca 2014-06-08]
+	Updated www/SOGo to 2.2.5 [taca 2014-06-08]
