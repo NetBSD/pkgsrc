@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2194 2014/06/08 16:47:45 tsutsui Exp $
+$NetBSD: CHANGES-2014,v 1.2195 2014/06/08 22:04:08 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2991,3 +2991,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/roundcube to 1.0.1 [taca 2014-06-08]
 	Updated databases/py-redis-py to 2.10.1 [rodent 2014-06-08]
 	Updated x11/mlterm to 3.3.6nb2 [tsutsui 2014-06-08]
+	Added www/py-boto version 2.29.1 [rodent 2014-06-08]
