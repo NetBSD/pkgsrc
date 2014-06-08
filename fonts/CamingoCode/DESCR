@@ -1,0 +1,7 @@
+CamingoCode is designed for source-code editors. It is based on
+CamingoMono, but has several specially drawn glyphs that work well
+at small sizes, including Q, l, &, *, ~ and #. The stroke weights
+are relatively light, which makes CamingoCode suitable for both
+bright and dark visual themes. The family consists of four style-linked
+fonts (Regular, Italic, Bold and Bold Italic) and is manually hinted
+to give the best possible appearance on screens.
