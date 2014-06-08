@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/02/17 00:39:26 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/08 15:56:39 rodent Exp $
 
-DISTNAME=	redis-2.9.1
+DISTNAME=	redis-2.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-/-py-/1}
 CATEGORIES=	databases python
 MASTER_SITES=	https://pypi.python.org/packages/source/r/redis/
