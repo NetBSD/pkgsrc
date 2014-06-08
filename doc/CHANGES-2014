@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2192 2014/06/08 13:36:03 taca Exp $
+$NetBSD: CHANGES-2014,v 1.2193 2014/06/08 15:56:57 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2989,3 +2989,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/SOPE to 2.2.5 [taca 2014-06-08]
 	Updated www/SOGo to 2.2.5 [taca 2014-06-08]
 	Updated mail/roundcube to 1.0.1 [taca 2014-06-08]
+	Updated databases/py-redis-py to 2.10.1 [rodent 2014-06-08]
