@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13372 2014/06/08 13:06:49 taca Exp $
+$NetBSD: TODO,v 1.13373 2014/06/08 13:36:55 taca Exp $
 
 Suggested new packages
 ======================
@@ -1021,7 +1021,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o root-5.34.01
 	o root-tail-1.2
 	o rosegarden4-1.7.0 [replacing audio/rosegarden|pkgsrc-wip]
-	o roundcube-1.0.0 [wait for fix for http://trac.roundcube.net/ticket/1489729]
 	o rox-session-0.29
 	o roxirc-2.0
 	o rp-l2tp-0.4
