@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/06/08 23:39:13 rodent Exp $
+
+SHA1 (CouchDB-0.9.tar.gz) = 323e3460da6064a0aeed63a07febc6ec82479f57
+RMD160 (CouchDB-0.9.tar.gz) = f581679a63834890ac00d6d0dee89c13de24359e
+Size (CouchDB-0.9.tar.gz) = 55189 bytes
