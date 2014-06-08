@@ -1,0 +1,2 @@
+beanstalkc is a simple beanstalkd client library for Python. beanstalkd is a
+fast, distributed, in-memory workqueue service.
