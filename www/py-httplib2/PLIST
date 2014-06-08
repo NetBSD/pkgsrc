@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/01/18 17:53:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/06/08 23:26:35 rodent Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -13,4 +13,3 @@ ${PYSITELIB}/httplib2/iri2uri.pyo
 ${PLIST.py2x}${PYSITELIB}/httplib2/socks.py
 ${PLIST.py2x}${PYSITELIB}/httplib2/socks.pyc
 ${PLIST.py2x}${PYSITELIB}/httplib2/socks.pyo
-share/doc/py-httplib2/README
