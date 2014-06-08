@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2189 2014/06/08 00:56:00 obache Exp $
+$NetBSD: CHANGES-2014,v 1.2190 2014/06/08 13:06:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -2985,3 +2985,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated fonts/terminus-font to 4.39 [wiz 2014-06-07]
 	Added fonts/CamingoCode version 1.0 [wiz 2014-06-08]
 	Updated net/mikutter to 3.0.0 [obache 2014-06-08]
+	Updated www/fengoffice to 2.6.1 [taca 2014-06-08]
