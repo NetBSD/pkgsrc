@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2256 2014/06/09 19:25:49 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2257 2014/06/09 19:44:01 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3055,3 +3055,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-UNIVERSAL-require to 0.17 [schmonz 2014-06-09]
 	Updated mail/p5-Mail-DKIM to 0.40 [schmonz 2014-06-09]
 	Updated mail/p5-MIME-Lite to 3.030 [schmonz 2014-06-09]
+	Updated security/p5-IO-Socket-SSL to 1.992 [schmonz 2014-06-09]
