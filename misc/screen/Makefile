@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.85 2012/10/08 09:57:37 asau Exp $
+# $NetBSD: Makefile,v 1.86 2014/06/09 10:24:13 jperkin Exp $
 
 DISTNAME=	screen-4.0.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	misc shells
 MASTER_SITES=	ftp://ftp.uni-erlangen.de/pub/utilities/screen/ \
 		http://people.freebsd.org/~cy/distfiles/
@@ -36,7 +36,8 @@ SUBST_SED.paths+=	-e 's,@EXAMPLES@,${PREFIX}/share/examples/screen,g'
 SUBST_STAGE.paths=	post-patch
 
 PLIST_VARS+=		terminfo
-.if (${OPSYS} == "SunOS") && exists(/usr/5bin/tic)
+
+.if ${OPSYS} == "SunOS" && ${CURSES_DEFAULT} == "curses"
 INSTALLATION_DIRS+=	share/lib/terminfo
 PLIST.terminfo=		yes
 post-install: screen-terminfo
@@ -60,7 +61,7 @@ post-install:
 screen-terminfo:
 	cd ${WRKSRC}/terminfo &&					\
 	${SETENV} TERMINFO=${DESTDIR}${PREFIX}/share/lib/terminfo	\
-		/usr/5bin/tic screeninfo.src
+		/usr/bin/tic screeninfo.src
 
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
