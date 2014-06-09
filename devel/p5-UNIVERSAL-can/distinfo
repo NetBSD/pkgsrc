@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2012/09/11 07:38:33 sno Exp $
+$NetBSD: distinfo,v 1.7 2014/06/09 19:10:20 schmonz Exp $
 
-SHA1 (UNIVERSAL-can-1.20120726.tar.gz) = ceea2e2bad8373faebaf545f23ae187608135e29
-RMD160 (UNIVERSAL-can-1.20120726.tar.gz) = d5d4feb523195455dce1dba68a2edbaa4c19d52c
-Size (UNIVERSAL-can-1.20120726.tar.gz) = 14417 bytes
+SHA1 (UNIVERSAL-can-1.20140328.tar.gz) = c929622cbf968e09c146469533ab3bb8df347b23
+RMD160 (UNIVERSAL-can-1.20140328.tar.gz) = 05ff69a1ea0c9b3aa133bc1ccb2e1c298502f94e
+Size (UNIVERSAL-can-1.20140328.tar.gz) = 14654 bytes
