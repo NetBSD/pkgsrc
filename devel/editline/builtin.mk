@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.4 2013/11/23 11:29:35 obache Exp $
+# $NetBSD: builtin.mk,v 1.5 2014/06/09 00:19:05 obache Exp $
 
 BUILTIN_PKG:=	editline
 
@@ -43,7 +43,7 @@ CHECK_BUILTIN.editline?=	no
 .if !empty(CHECK_BUILTIN.editline:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.editline:M[yY][eE][sS])
-.    if !empty(H_EDITLINE:M/usr/include/editline/readline.h)
+.    if !empty(H_EDITLINE:M*/editline/readline.h)
 BUILDLINK_TARGETS+=	buildlink-readline-readline-h
 BUILDLINK_TARGETS+=	buildlink-readline-history-h
 .    endif
