@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2253 2014/06/09 19:10:25 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2254 2014/06/09 19:11:41 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3052,3 +3052,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Test-Trap to 0.2.4 [schmonz 2014-06-09]
 	Updated devel/p5-Try-Tiny to 0.22 [schmonz 2014-06-09]
 	Updated devel/p5-UNIVERSAL-can to 1.20140328 [schmonz 2014-06-09]
+	Updated devel/p5-UNIVERSAL-require to 0.17 [schmonz 2014-06-09]
