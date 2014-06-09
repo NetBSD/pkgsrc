@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2014/05/14 02:28:18 mspo Exp $
+$NetBSD: distinfo,v 1.9 2014/06/09 12:36:51 wiz Exp $
 
-SHA1 (Jinja2-2.7.2.tar.gz) = 1ce4c8bc722444ec3e77ef9db76faebbd17a40d8
-RMD160 (Jinja2-2.7.2.tar.gz) = 7bf0278d6fd75fc402b5dba785b29badeb507650
-Size (Jinja2-2.7.2.tar.gz) = 378300 bytes
-SHA1 (patch-jinja2_bccache.py) = 0c1cab3fcc83d210569071ddb2e2c6713f8f9325
+SHA1 (Jinja2-2.7.3.tar.gz) = 25ab3881f0c1adfcf79053b58de829c5ae65d3ac
+RMD160 (Jinja2-2.7.3.tar.gz) = e84a4c27dfb4cdd58c4f9625fcc48b0851a2b5c9
+Size (Jinja2-2.7.3.tar.gz) = 378470 bytes
