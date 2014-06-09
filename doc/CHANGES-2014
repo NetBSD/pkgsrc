@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2208 2014/06/09 00:52:53 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2209 2014/06/09 01:12:30 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3003,3 +3003,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/py-kombu to 3.0.18 [rodent 2014-06-09]
 	Updated sysutils/spice-protocol to 0.12.7 [rodent 2014-06-09]
 	Updated net/py-boto to 2.29.1 [rodent 2014-06-09]
+	Updated print/hplip to 3.14.6 [schnoebe 2014-06-09]
