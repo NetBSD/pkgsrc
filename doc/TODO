@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13380 2014/06/09 12:29:31 wiz Exp $
+$NetBSD: TODO,v 1.13381 2014/06/09 12:30:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -982,7 +982,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-ptt-1.10.2
 	o py-py-2.3
 	o py-pycha-0.7.0 [wait for fix to regression with bin/chavier - richard]
-	o py-pytz-2014.4
 	o py-qt4-4.11 [needs py-sip-4.15, see above]
 	o py-qt5-5.3
 	o py-reportlab-3.0
