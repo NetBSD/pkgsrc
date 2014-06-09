@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/08/31 14:25:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/06/09 12:21:07 ryoon Exp $
 bin/aserver
 include/alsa/alisp.h
 include/alsa/asoundef.h
@@ -29,10 +29,12 @@ include/alsa/seqmid.h
 include/alsa/sound/asound_fm.h
 include/alsa/sound/emu10k1.h
 include/alsa/sound/hdsp.h
+include/alsa/sound/hdspm.h
 include/alsa/sound/sb16_csp.h
 include/alsa/sound/sscape_ioctl.h
 include/alsa/sound/type_compat.h
 include/alsa/timer.h
+include/alsa/use-case.h
 include/alsa/version.h
 include/sys/asoundlib.h
 lib/alsa-lib/smixer/smixer-ac97.la
@@ -42,6 +44,7 @@ lib/libasound.la
 lib/pkgconfig/alsa.pc
 share/aclocal/alsa.m4
 share/alsa/alsa.conf
+share/alsa/alsa.conf.d/README
 share/alsa/cards/AACI.conf
 share/alsa/cards/ATIIXP-MODEM.conf
 share/alsa/cards/ATIIXP-SPDMA.conf
@@ -65,7 +68,10 @@ share/alsa/cards/EMU10K1X.conf
 share/alsa/cards/ENS1370.conf
 share/alsa/cards/ENS1371.conf
 share/alsa/cards/ES1968.conf
+share/alsa/cards/Echo_Echo3G.conf
 share/alsa/cards/FM801.conf
+share/alsa/cards/FWSpeakers.conf
+share/alsa/cards/FireWave.conf
 share/alsa/cards/GUS.conf
 share/alsa/cards/HDA-Intel.conf
 share/alsa/cards/ICE1712.conf
@@ -115,3 +121,27 @@ share/alsa/pcm/surround51.conf
 share/alsa/pcm/surround71.conf
 share/alsa/smixer.conf
 share/alsa/sndo-mixer.alisp
+share/alsa/ucm/DAISY-I2S/DAISY-I2S.conf
+share/alsa/ucm/DAISY-I2S/HiFi.conf
+share/alsa/ucm/PandaBoard/FMAnalog
+share/alsa/ucm/PandaBoard/PandaBoard.conf
+share/alsa/ucm/PandaBoard/hifi
+share/alsa/ucm/PandaBoard/hifiLP
+share/alsa/ucm/PandaBoard/record
+share/alsa/ucm/PandaBoard/voice
+share/alsa/ucm/PandaBoard/voiceCall
+share/alsa/ucm/PandaBoardES/FMAnalog
+share/alsa/ucm/PandaBoardES/PandaBoardES.conf
+share/alsa/ucm/PandaBoardES/hifi
+share/alsa/ucm/PandaBoardES/hifiLP
+share/alsa/ucm/PandaBoardES/record
+share/alsa/ucm/PandaBoardES/voice
+share/alsa/ucm/PandaBoardES/voiceCall
+share/alsa/ucm/SDP4430/FMAnalog
+share/alsa/ucm/SDP4430/SDP4430.conf
+share/alsa/ucm/SDP4430/hifi
+share/alsa/ucm/SDP4430/hifiLP
+share/alsa/ucm/SDP4430/record
+share/alsa/ucm/SDP4430/voice
+share/alsa/ucm/SDP4430/voiceCall
+share/alsa/ucm/tegraalc5632/tegraalc5632.conf

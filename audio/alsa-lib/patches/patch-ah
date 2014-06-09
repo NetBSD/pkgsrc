@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.2 2014/03/25 23:06:07 asau Exp $
+$NetBSD: patch-ah,v 1.3 2014/06/09 12:21:07 ryoon Exp $
 
---- src/pcm/pcm.c.orig	2009-12-16 15:18:51.000000000 +0000
+--- src/pcm/pcm.c.orig	2013-07-08 12:31:36.000000000 +0000
 +++ src/pcm/pcm.c
 @@ -630,7 +630,7 @@ playback devices.
  
@@ -10,8 +10,8 @@ $NetBSD: patch-ah,v 1.2 2014/03/25 23:06:07 asau Exp $
 +#include <stdlib.h>
  #include <stdarg.h>
  #include <signal.h>
- #include <sys/poll.h>
-@@ -639,6 +639,10 @@ playback devices.
+ #include <ctype.h>
+@@ -640,6 +640,10 @@ playback devices.
  #include <limits.h>
  #include "pcm_local.h"
  
