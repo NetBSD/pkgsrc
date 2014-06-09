@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13383 2014/06/09 12:33:52 wiz Exp $
+$NetBSD: TODO,v 1.13384 2014/06/09 12:35:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -987,7 +987,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-reportlab-3.0
 	o py-rope-0.9.4
 	o py-scgi-1.14
-	o py-setuptools-4.0.1
 	o py-simpletal-5.1
 	o py-sip-4.15.1 [don't update until pyqt3 and KDE problems are fixed -- still there in 4.15.1]
 	o py-sip-4.16
