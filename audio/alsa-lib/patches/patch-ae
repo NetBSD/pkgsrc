@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.4 2014/03/25 23:06:07 asau Exp $
+$NetBSD: patch-ae,v 1.5 2014/06/09 12:21:07 ryoon Exp $
 
---- include/local.h.orig	2008-10-29 08:42:10.000000000 -0400
+--- include/local.h.orig	2013-07-08 12:31:36.000000000 +0000
 +++ include/local.h
-@@ -28,7 +28,20 @@
+@@ -28,11 +28,26 @@
  #include <string.h>
  #include <fcntl.h>
  #include <assert.h>
@@ -23,7 +23,13 @@ $NetBSD: patch-ae,v 1.4 2014/03/25 23:06:07 asau Exp $
  #include <stdarg.h>
  #include <sys/poll.h>
  #include <errno.h>
-@@ -182,7 +195,9 @@ extern snd_lib_error_handler_t snd_err_m
++#if defined(__linux__)
+ #include <linux/ioctl.h>
++#endif
+ 
+ #include "config.h"
+ #ifdef SUPPORT_RESMGR
+@@ -228,7 +245,9 @@ extern snd_lib_error_handler_t snd_err_m
  
  /*
   */
