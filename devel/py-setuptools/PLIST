@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2014/03/31 08:32:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2014/06/09 12:35:19 wiz Exp $
 bin/easy_install-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -196,6 +196,9 @@ ${PYSITELIB}/setuptools/tests/test_test.pyo
 ${PYSITELIB}/setuptools/tests/test_upload_docs.py
 ${PYSITELIB}/setuptools/tests/test_upload_docs.pyc
 ${PYSITELIB}/setuptools/tests/test_upload_docs.pyo
+${PYSITELIB}/setuptools/unicode_utils.py
+${PYSITELIB}/setuptools/unicode_utils.pyc
+${PYSITELIB}/setuptools/unicode_utils.pyo
 ${PYSITELIB}/setuptools/version.py
 ${PYSITELIB}/setuptools/version.pyc
 ${PYSITELIB}/setuptools/version.pyo
