@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.147 2014/06/01 09:58:13 ryoon Exp $
+# $NetBSD: gcc.mk,v 1.148 2014/06/09 23:29:31 ryoon Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -849,14 +849,7 @@ ${_GCC_${_var_}}:
 # The default is g95 as it supports a modern dialect, but it can
 # be overridden in mk.conf to use only f2c.
 #
-.if (!empty(MACHINE_PLATFORM:MNetBSD-6.99.[4-9]*) || \
-	!empty(MACHINE_PLATFORM:MNetBSD-[7-9]*)) && \
-    (!empty(CC_VERSION:Mgcc-4.[8-9]*) || \
-	!empty(CC_VERSION:Mgcc-[5-9].*))
-PKGSRC_FORTRAN?=gfortran
-.else
 PKGSRC_FORTRAN?=g95
-.endif
 
 _GCC_NEEDS_A_FORTRAN=	no
 .if empty(_USE_PKGSRC_GCC:M[yY][eE][sS]) && !exists(${FCPATH})
