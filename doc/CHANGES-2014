@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2242 2014/06/09 18:42:59 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2243 2014/06/09 18:44:15 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3041,3 +3041,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/p5-SQL-Abstract to 1.78 [schmonz 2014-06-09]
 	Updated devel/p5-Class-Load to 0.21 [schmonz 2014-06-09]
 	Updated devel/p5-Class-Load-XS to 0.08 [schmonz 2014-06-09]
+	Updated devel/p5-Class-Unload to 0.08 [schmonz 2014-06-09]
