@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.29 2012/10/23 18:16:31 asau Exp $
+# $NetBSD: Makefile,v 1.30 2014/06/09 10:30:20 fhajny Exp $
 
 DISTNAME=	keychain-2.7.1
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://www.funtoo.org/archive/keychain/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.funtoo.org/en/security/keychain/intro/
+HOMEPAGE=	http://www.funtoo.org/index.php?title=Keychain
 COMMENT=	Nice ssh-agent front-end
 LICENSE=	gnu-gpl-v2
 
@@ -16,7 +17,10 @@ DEPENDS+=	openssh-[0-9]*:../../security/openssh
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_TOOLS+=		bash:run
 NO_BUILD=		yes
+
+REPLACE_BASH+=		keychain
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/${PKGBASE}
 
