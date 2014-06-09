@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2014/05/04 04:29:20 rodent Exp $
+# $NetBSD: Makefile,v 1.12 2014/06/09 12:34:26 ryoon Exp $
 #
 
-DISTNAME=	alsa-utils-1.0.22
+DISTNAME=	alsa-utils-1.0.27.2
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.alsa-project.org/pub/utils/
 MASTER_SITES+=	ftp://gd.tuwien.ac.at/opsys/linux/alsa/utils/
@@ -17,6 +17,10 @@ USE_PKGLOCALEDIR=	yes
 USE_NCURSES=		yes
 LDFLAGS.DragonFly=	-lm
 LDFLAGS.SunOS+=		-lm -lsocket -lnsl
+CPPFLAGS.NetBSD+=	-D__u32=uint32_t -D__u64=uint64_t
+CPPFLAGS.NetBSD+=	-Dbswap_16=bswap16 -Dbswap_32=bswap32
+
+CFLAGS+=		-g
 
 REPLACE_BASH=		alsaconf/alsaconf.in
 

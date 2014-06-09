@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:01 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/06/09 12:34:26 ryoon Exp $
 bin/aconnect
+bin/alsaloop
 bin/alsamixer
+bin/alsaucm
 bin/amidi
 bin/amixer
 bin/aplay
@@ -14,6 +16,7 @@ bin/speaker-test
 man/fr/man8/alsaconf.8
 man/man1/aconnect.1
 man/man1/alsactl.1
+man/man1/alsaloop.1
 man/man1/alsamixer.1
 man/man1/amidi.1
 man/man1/amixer.1
@@ -30,6 +33,7 @@ man/man8/alsaconf.8
 sbin/alsaconf
 sbin/alsactl
 share/alsa/init/00main
+share/alsa/init/ca0106
 share/alsa/init/default
 share/alsa/init/hda
 share/alsa/init/help
