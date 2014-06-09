@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2234 2014/06/09 18:13:09 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2235 2014/06/09 18:14:48 he Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3033,3 +3033,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-FindBin-libs to 1.9 [schmonz 2014-06-09]
 	Updated devel/p5-Test-BDD-Cucumber to 0.24 [schmonz 2014-06-09]
 	Updated databases/p5-DB_File to 1.831 [schmonz 2014-06-09]
+	Updated lang/python27 to 2.7.7nb1 [he 2014-06-09]
