@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2012/08/18 01:21:25 wen Exp $
+$NetBSD: distinfo,v 1.10 2014/06/09 19:25:33 schmonz Exp $
 
-SHA1 (MIME-Lite-3.029.tar.gz) = f5133a04dcb4c32f39860d32ccbca3fe38e8e092
-RMD160 (MIME-Lite-3.029.tar.gz) = dcd1df78097e3d2812ce08643871c6ece45361e0
-Size (MIME-Lite-3.029.tar.gz) = 64651 bytes
+SHA1 (MIME-Lite-3.030.tar.gz) = 786e16420b79677dc1474676c8b4fde3fd5fb2e8
+RMD160 (MIME-Lite-3.030.tar.gz) = 86d89bc33764b51ffd3efb529ab30e68ef6475a5
+Size (MIME-Lite-3.030.tar.gz) = 81830 bytes
