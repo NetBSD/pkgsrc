@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2245 2014/06/09 18:50:48 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2246 2014/06/09 18:54:57 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3044,3 +3044,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Class-Unload to 0.08 [schmonz 2014-06-09]
 	Updated devel/p5-Modern-Perl to 1.20140107 [schmonz 2014-06-09]
 	Updated devel/p5-Params-Validate to 1.10 [schmonz 2014-06-09]
+	Updated devel/p5-Readonly to 1.04 [schmonz 2014-06-09]
