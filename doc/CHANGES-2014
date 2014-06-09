@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2261 2014/06/09 19:55:20 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2262 2014/06/09 19:59:21 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3060,3 +3060,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/p5-Net-SSLeay to 1.63 [schmonz 2014-06-09]
 	Updated textproc/p5-Text-CSV_XS to 1.08 [schmonz 2014-06-09]
 	Updated textproc/p5-XML-RSS to 1.55 [schmonz 2014-06-09]
+	Updated textproc/p5-YAML to 0.92 [schmonz 2014-06-09]
