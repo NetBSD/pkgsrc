@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2263 2014/06/09 20:01:23 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2264 2014/06/09 20:04:47 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3062,3 +3062,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/p5-XML-RSS to 1.55 [schmonz 2014-06-09]
 	Updated textproc/p5-YAML to 0.92 [schmonz 2014-06-09]
 	Updated time/p5-DateTime to 1.1000 [schmonz 2014-06-09]
+	Updated www/p5-Kwiki-Archive-Rcs to 0.16 [schmonz 2014-06-09]
