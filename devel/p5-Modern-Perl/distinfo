@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/07/10 02:17:05 schmonz Exp $
+$NetBSD: distinfo,v 1.4 2014/06/09 18:47:51 schmonz Exp $
 
-SHA1 (Modern-Perl-1.20121103.tar.gz) = 04fead947e70fe335f9e307f2f1cec88ace35f18
-RMD160 (Modern-Perl-1.20121103.tar.gz) = 9e4db718bc3e595ec6033fa1b9e75832a5dcfe6a
-Size (Modern-Perl-1.20121103.tar.gz) = 12922 bytes
+SHA1 (Modern-Perl-1.20140107.tar.gz) = e6d5126cf75566fa471a4b6f984681db05f87839
+RMD160 (Modern-Perl-1.20140107.tar.gz) = b4e092afe9a9773f0be6e53ff262527b96824f06
+Size (Modern-Perl-1.20140107.tar.gz) = 13152 bytes
