@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2014/01/28 09:24:09 wiz Exp $
+$NetBSD: distinfo,v 1.21 2014/06/09 18:27:16 schmonz Exp $
 
-SHA1 (DBD-SQLite-1.40.tar.gz) = 4f55414e0e3a29de90fee89eaec4e29b50c72575
-RMD160 (DBD-SQLite-1.40.tar.gz) = 6682b57f82b3c3ae590933045cc7e6bf8d679c75
-Size (DBD-SQLite-1.40.tar.gz) = 1571899 bytes
+SHA1 (DBD-SQLite-1.42.tar.gz) = 02fb90e17dc8c815ed59c73800e54cb99742b21a
+RMD160 (DBD-SQLite-1.42.tar.gz) = 71d43b1e731f8ec6ece58dbd171182ab451df9fd
+Size (DBD-SQLite-1.42.tar.gz) = 1629815 bytes
 SHA1 (patch-Makefile.PL) = 8caa350b9e380a0eeae5dea3ee3f3ab239f685ea
