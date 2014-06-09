@@ -1,4 +1,4 @@
-# $NetBSD: Haiku.mk,v 1.12 2014/05/18 10:13:59 obache Exp $
+# $NetBSD: Haiku.mk,v 1.13 2014/06/09 08:47:29 obache Exp $
 #
 # Variable definitions for the Haiku operating system.
 
@@ -51,7 +51,7 @@ _OPSYS_HAS_JAVA=	no	# Java is not standard
 _OPSYS_HAS_MANZ=	no	# no MANZ for gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no	# libossaudio is available
 _OPSYS_PERL_REQD=		# no base version of perl required
-_OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
+_OPSYS_PTHREAD_AUTO=	yes	# -lpthread not needed for pthreads
 _OPSYS_SHLIB_TYPE=	ELF	# shared lib type
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
 _PATCH_BACKUP_ARG?= 	-b -V simple -z	# switch to patch(1) for backup suffix
