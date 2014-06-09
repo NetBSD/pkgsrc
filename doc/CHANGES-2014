@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2248 2014/06/09 19:00:26 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2249 2014/06/09 19:02:23 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3047,3 +3047,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Readonly to 1.04 [schmonz 2014-06-09]
 	Updated devel/p5-Test-Class to 0.42 [schmonz 2014-06-09]
 	Updated devel/p5-Test-Deep to 0.112 [schmonz 2014-06-09]
+	Updated devel/p5-Test-Most to 0.33 [schmonz 2014-06-09]
