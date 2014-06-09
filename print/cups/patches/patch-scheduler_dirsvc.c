@@ -1,6 +1,10 @@
-$NetBSD: patch-scheduler_dirsvc.c,v 1.3 2014/06/07 11:54:54 wiz Exp $
+$NetBSD: patch-scheduler_dirsvc.c,v 1.4 2014/06/09 09:27:10 wiz Exp $
 
---- scheduler/dirsvc.c.orig     2014-03-05 21:11:32.000000000 +0000
+o Fix building without dnssd option.
+o net/mDNSResponder-258.14 does not define kDNSServiceErr_Timeout, just threat
+ it like kDNSServiceErr_Unknown.
+
+--- scheduler/dirsvc.c.orig	2014-03-05 21:11:32.000000000 +0000
 +++ scheduler/dirsvc.c
 @@ -237,11 +237,13 @@ cupsdStartBrowsing(void)
    if (BrowseLocalProtocols & BROWSE_SMB)
@@ -32,3 +36,13 @@ $NetBSD: patch-scheduler_dirsvc.c,v 1.3 2014/06/07 11:54:54 wiz Exp $
    if ((BrowseLocalProtocols & BROWSE_DNSSD) && DNSSDMaster)
      dnssdStop();
  #endif /* HAVE_DNSSD || HAVE_AVAHI */
+@@ -829,9 +831,6 @@ dnssdErrorString(int error)		/* I - Erro
+ 
+     case kDNSServiceErr_PollingMode :
+         return ("Service polling mode error.");
+-
+-    case kDNSServiceErr_Timeout :
+-        return ("Service timeout.");
+   }
+ 
+ #  else /* HAVE_AVAHI */
