@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2230 2014/06/09 17:31:12 tron Exp $
+$NetBSD: CHANGES-2014,v 1.2231 2014/06/09 17:52:15 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3029,3 +3029,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/opendkim to 2.9.2 [pettai 2014-06-09]
 	Updated mail/isync to 1.1.1 [schmonz 2014-06-09]
 	Updated databases/phpmyadmin to 4.2.3 [tron 2014-06-09]
+	Updated databases/p5-App-Sqitch to 0.993 [schmonz 2014-06-09]
