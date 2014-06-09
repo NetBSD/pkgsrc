@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2228 2014/06/09 14:59:23 pettai Exp $
+$NetBSD: CHANGES-2014,v 1.2229 2014/06/09 17:29:20 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3027,3 +3027,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/pulseaudio to 5.0 [ryoon 2014-06-09]
 	Updated devel/scons to 2.3.1nb1 [wiz 2014-06-09]
 	Updated mail/opendkim to 2.9.2 [pettai 2014-06-09]
+	Updated mail/isync to 1.1.1 [schmonz 2014-06-09]
