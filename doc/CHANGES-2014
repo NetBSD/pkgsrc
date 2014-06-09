@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2259 2014/06/09 19:49:51 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2260 2014/06/09 19:52:16 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3058,3 +3058,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/p5-IO-Socket-SSL to 1.992 [schmonz 2014-06-09]
 	Updated security/p5-Crypt-SSLeay to 0.72 [schmonz 2014-06-09]
 	Updated security/p5-Net-SSLeay to 1.63 [schmonz 2014-06-09]
+	Updated textproc/p5-Text-CSV_XS to 1.08 [schmonz 2014-06-09]
