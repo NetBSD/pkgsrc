@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2218 2014/06/09 12:30:06 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2219 2014/06/09 12:31:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3016,3 +3016,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/mpc to 0.26 [wiz 2014-06-09]
 	Updated time/py-icalendar to 3.7 [wiz 2014-06-09]
 	Updated time/py-pytz to 2014.4 [wiz 2014-06-09]
+	Updated x11/xterm to 306 [wiz 2014-06-09]
