@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.solaris-i386,v 1.5 2014/02/14 16:24:35 jperkin Exp $
+@comment $NetBSD: PLIST.solaris-i386,v 1.6 2014/06/09 11:12:45 jperkin Exp $
 bin/sun7-appletviewer
 bin/sun7-apt
 bin/sun7-extcheck
@@ -98,8 +98,8 @@ java/sun-7/include/solaris/jni_md.h
 java/sun-7/jre
 java/sun-7/lib/ct.sym
 java/sun-7/lib/dt.jar
-java/sun-7/lib/${JAVA_ARCH}/libattach.so
-java/sun-7/lib/${JAVA_ARCH}/libsaproc.so
+java/sun-7/lib/i386/libattach.so
+java/sun-7/lib/i386/libsaproc.so
 java/sun-7/lib/ir.idl
 java/sun-7/lib/jconsole.jar
 java/sun-7/lib/orb.idl
@@ -114,6 +114,7 @@ java/sun-7/lib/visualvm/platform/config/ModuleAutoDeps/org-netbeans-modules-opti
 java/sun-7/lib/visualvm/platform/config/ModuleAutoDeps/org-netbeans-modules-queries.xml
 java/sun-7/lib/visualvm/platform/config/ModuleAutoDeps/org-openide-execution.xml
 java/sun-7/lib/visualvm/platform/config/ModuleAutoDeps/org-openide-explorer.xml
+java/sun-7/lib/visualvm/platform/config/ModuleAutoDeps/org-openide-filesystems.xml
 java/sun-7/lib/visualvm/platform/config/ModuleAutoDeps/org-openide-loaders.xml
 java/sun-7/lib/visualvm/platform/config/ModuleAutoDeps/org-openide-modules.xml
 java/sun-7/lib/visualvm/platform/config/ModuleAutoDeps/org-openide-nodes.xml
@@ -131,6 +132,7 @@ java/sun-7/lib/visualvm/platform/config/Modules/org-netbeans-core-ui.xml
 java/sun-7/lib/visualvm/platform/config/Modules/org-netbeans-core-windows.xml
 java/sun-7/lib/visualvm/platform/config/Modules/org-netbeans-core.xml
 java/sun-7/lib/visualvm/platform/config/Modules/org-netbeans-modules-applemenu.xml
+java/sun-7/lib/visualvm/platform/config/Modules/org-netbeans-modules-autoupdate-cli.xml
 java/sun-7/lib/visualvm/platform/config/Modules/org-netbeans-modules-autoupdate-services.xml
 java/sun-7/lib/visualvm/platform/config/Modules/org-netbeans-modules-autoupdate-ui.xml
 java/sun-7/lib/visualvm/platform/config/Modules/org-netbeans-modules-core-kit.xml
@@ -215,6 +217,8 @@ java/sun-7/lib/visualvm/platform/modules/locale/org-netbeans-core_ja.jar
 java/sun-7/lib/visualvm/platform/modules/locale/org-netbeans-core_zh_CN.jar
 java/sun-7/lib/visualvm/platform/modules/locale/org-netbeans-modules-applemenu_ja.jar
 java/sun-7/lib/visualvm/platform/modules/locale/org-netbeans-modules-applemenu_zh_CN.jar
+java/sun-7/lib/visualvm/platform/modules/locale/org-netbeans-modules-autoupdate-cli_ja.jar
+java/sun-7/lib/visualvm/platform/modules/locale/org-netbeans-modules-autoupdate-cli_zh_CN.jar
 java/sun-7/lib/visualvm/platform/modules/locale/org-netbeans-modules-autoupdate-services_ja.jar
 java/sun-7/lib/visualvm/platform/modules/locale/org-netbeans-modules-autoupdate-services_zh_CN.jar
 java/sun-7/lib/visualvm/platform/modules/locale/org-netbeans-modules-autoupdate-ui_ja.jar
@@ -299,6 +303,7 @@ java/sun-7/lib/visualvm/platform/modules/org-netbeans-core-ui.jar
 java/sun-7/lib/visualvm/platform/modules/org-netbeans-core-windows.jar
 java/sun-7/lib/visualvm/platform/modules/org-netbeans-core.jar
 java/sun-7/lib/visualvm/platform/modules/org-netbeans-modules-applemenu.jar
+java/sun-7/lib/visualvm/platform/modules/org-netbeans-modules-autoupdate-cli.jar
 java/sun-7/lib/visualvm/platform/modules/org-netbeans-modules-autoupdate-services.jar
 java/sun-7/lib/visualvm/platform/modules/org-netbeans-modules-autoupdate-ui.jar
 java/sun-7/lib/visualvm/platform/modules/org-netbeans-modules-core-kit.jar
@@ -349,6 +354,7 @@ java/sun-7/lib/visualvm/platform/update_tracking/org-netbeans-core-ui.xml
 java/sun-7/lib/visualvm/platform/update_tracking/org-netbeans-core-windows.xml
 java/sun-7/lib/visualvm/platform/update_tracking/org-netbeans-core.xml
 java/sun-7/lib/visualvm/platform/update_tracking/org-netbeans-modules-applemenu.xml
+java/sun-7/lib/visualvm/platform/update_tracking/org-netbeans-modules-autoupdate-cli.xml
 java/sun-7/lib/visualvm/platform/update_tracking/org-netbeans-modules-autoupdate-services.xml
 java/sun-7/lib/visualvm/platform/update_tracking/org-netbeans-modules-autoupdate-ui.xml
 java/sun-7/lib/visualvm/platform/update_tracking/org-netbeans-modules-core-kit.xml
