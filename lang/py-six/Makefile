@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/04/12 20:45:14 adam Exp $
+# $NetBSD: Makefile,v 1.3 2014/06/09 10:21:34 adam Exp $
 
-DISTNAME=	six-1.6.1
+DISTNAME=	six-1.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel lang python
 MASTER_SITES=	https://pypi.python.org/packages/source/s/six/
