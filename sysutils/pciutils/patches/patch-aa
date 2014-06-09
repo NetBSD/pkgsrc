@@ -1,4 +1,4 @@
-$Id: patch-aa,v 1.9 2014/06/09 03:36:57 rodent Exp $
+$Id: patch-aa,v 1.10 2014/06/09 04:05:34 rodent Exp $
 
 --- Makefile.orig	2013-11-10 21:22:09.000000000 +0900
 +++ Makefile	2014-05-22 18:50:07.000000000 +0900
@@ -26,7 +26,7 @@ $Id: patch-aa,v 1.9 2014/06/09 03:36:57 rodent Exp $
  # ABI version suffix in the name of the shared library
  # (as we use proper symbol versioning, this seldom needs changing)
 -ABI_VERSION=.3
-+ABI_VERSION=,-version-info=3:0
++ABI_VERSION=-version-info 3:0
  
  # Installation directories
 -PREFIX=/usr/local
