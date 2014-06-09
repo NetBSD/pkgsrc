@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2011/08/10 06:35:42 adam Exp $
+$NetBSD: distinfo,v 1.4 2014/06/09 18:44:05 schmonz Exp $
 
-SHA1 (Class-Unload-0.07.tar.gz) = ba9bf935a0af82f59bc6a1cbd9941a2218480c28
-RMD160 (Class-Unload-0.07.tar.gz) = 040c7d38159578d3de68c4c1d2879d23e8033ca1
-Size (Class-Unload-0.07.tar.gz) = 10088 bytes
+SHA1 (Class-Unload-0.08.tar.gz) = 84b2bb578c9dfc8df5a699f3658f9656c6b5701e
+RMD160 (Class-Unload-0.08.tar.gz) = 1e359f6aa2857b114d6bb0109080578e1d091d77
+Size (Class-Unload-0.08.tar.gz) = 10431 bytes
