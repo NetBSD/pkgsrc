@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2243 2014/06/09 18:44:15 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2244 2014/06/09 18:47:56 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3042,3 +3042,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Class-Load to 0.21 [schmonz 2014-06-09]
 	Updated devel/p5-Class-Load-XS to 0.08 [schmonz 2014-06-09]
 	Updated devel/p5-Class-Unload to 0.08 [schmonz 2014-06-09]
+	Updated devel/p5-Modern-Perl to 1.20140107 [schmonz 2014-06-09]
