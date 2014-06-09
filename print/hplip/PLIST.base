@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.base,v 1.14 2014/04/22 00:09:30 schnoebe Exp $
+@comment $NetBSD: PLIST.base,v 1.15 2014/06/09 01:11:32 schnoebe Exp $
 bin/hp-align
 bin/hp-check
 bin/hp-clean
@@ -505,6 +505,7 @@ share/hplip/ppd/HP/hp-designjet_4500mfp.ppd.gz
 share/hplip/ppd/HP/hp-designjet_4500ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_4520mfp-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_4520ps-ps.ppd.gz
+share/hplip/ppd/HP/hp-designjet_d5800-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t1100ps_24in-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t1100ps_44in-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t1120ps_24in-ps.ppd.gz
@@ -514,8 +515,10 @@ share/hplip/ppd/HP/hp-designjet_t1300_postscript-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t1500-postscript.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t2300_postscript-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t2500-postscript.ppd.gz
+share/hplip/ppd/HP/hp-designjet_t3500-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t7100ps-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t7100ps_monochrome-ps.ppd.gz
+share/hplip/ppd/HP/hp-designjet_t7200-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t770_postscript-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t770ps_24in-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t790ps_24in-ps.ppd.gz
@@ -528,6 +531,8 @@ share/hplip/ppd/HP/hp-designjet_z6100ps_42in_photo-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_z6100ps_60in_photo-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_z6200_42in_photo-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_z6200_60in_photo-ps.ppd.gz
+share/hplip/ppd/HP/hp-designjet_z6600-postscript.ppd.gz
+share/hplip/ppd/HP/hp-designjet_z6800_photo-postscript.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_1000_j110_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_1000_j110_series.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_1010_series-hpijs.ppd.gz
@@ -1631,6 +1636,10 @@ share/hplip/ppd/HP/hp-officejet_pro_8620-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_8620.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_8630-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_8630.ppd.gz
+share/hplip/ppd/HP/hp-officejet_pro_8640-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-officejet_pro_8640.ppd.gz
+share/hplip/ppd/HP/hp-officejet_pro_8660-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-officejet_pro_8660.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_k5300-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_k5300.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_k5400-hpijs.ppd.gz
