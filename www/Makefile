@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1041 2014/06/08 22:04:45 rodent Exp $
+# $NetBSD: Makefile,v 1.1042 2014/06/09 00:51:48 rodent Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -574,7 +574,6 @@ SUBDIR+=	py-beautifulsoup
 SUBDIR+=	py-beautifulsoup4
 SUBDIR+=	py-bleach
 SUBDIR+=	py-blosxom
-SUBDIR+=	py-boto
 SUBDIR+=	py-bottle
 SUBDIR+=	py-cherrypy
 SUBDIR+=	py-clearsilver
