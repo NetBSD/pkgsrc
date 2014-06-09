@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.5 2014/05/29 23:37:03 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2014/06/09 10:42:38 pettai Exp $
 
-DISTNAME=	exabgp-exabgp-3.2.19
-PKGNAME=	exabgp-3.2.19
-PKGREVISION=	2
+DISTNAME=	exabgp-exabgp-3.3.2
+PKGNAME=	exabgp-3.3.2
 CATEGORIES=	net
-MASTER_SITES=	-https://github.com/Exa-Networks/exabgp/tarball/3.2.19
+MASTER_SITES=	https://github.com/Exa-Networks/exabgp/tarball/3.3.2
 
 MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	https://github.com/Exa-Networks/exabgp/
 COMMENT=	ExaBGP is a userspace BGP daemon written in python
 LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}/Exa-Networks-exabgp-d1b60dd
+WRKSRC=		${WRKDIR}/Exa-Networks-exabgp-d73251b
 
 USE_TOOLS+=	perl:run
 
