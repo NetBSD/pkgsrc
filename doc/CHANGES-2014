@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2216 2014/06/09 12:28:00 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2217 2014/06/09 12:29:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3014,3 +3014,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-django-cms to 3.0.2 [adam 2014-06-09]
 	Updated audio/alsa-lib to 1.0.27.2 [ryoon 2014-06-09]
 	Updated audio/mpc to 0.26 [wiz 2014-06-09]
+	Updated time/py-icalendar to 3.7 [wiz 2014-06-09]
