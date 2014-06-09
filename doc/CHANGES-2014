@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2224 2014/06/09 12:44:02 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.2225 2014/06/09 12:49:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3023,3 +3023,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/py-jinja2 to 2.7.3 [wiz 2014-06-09]
 	Updated audio/alsa-plugins-oss to 1.0.27 [ryoon 2014-06-09]
 	Updated audio/alsa-plugins-pulse to 1.0.27 [ryoon 2014-06-09]
+	Updated graphics/gif2png to 2.5.9 [wiz 2014-06-09]
