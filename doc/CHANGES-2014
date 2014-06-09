@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2227 2014/06/09 13:15:24 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2228 2014/06/09 14:59:23 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3026,3 +3026,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/gif2png to 2.5.9 [wiz 2014-06-09]
 	Updated audio/pulseaudio to 5.0 [ryoon 2014-06-09]
 	Updated devel/scons to 2.3.1nb1 [wiz 2014-06-09]
+	Updated mail/opendkim to 2.9.2 [pettai 2014-06-09]
