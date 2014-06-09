@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2214 2014/06/09 11:09:06 adam Exp $
+$NetBSD: CHANGES-2014,v 1.2215 2014/06/09 12:22:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3012,3 +3012,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-django-reversion to 1.8.1 [adam 2014-06-09]
 	Updated lang/py-six to 1.7.2 [adam 2014-06-09]
 	Updated www/py-django-cms to 3.0.2 [adam 2014-06-09]
+	Updated audio/alsa-lib to 1.0.27.2 [ryoon 2014-06-09]
