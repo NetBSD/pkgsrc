@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2250 2014/06/09 19:04:51 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2251 2014/06/09 19:07:19 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3049,3 +3049,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Test-Deep to 0.112 [schmonz 2014-06-09]
 	Updated devel/p5-Test-Most to 0.33 [schmonz 2014-06-09]
 	Updated devel/p5-Test-Spec to 0.47 [schmonz 2014-06-09]
+	Updated devel/p5-Test-Trap to 0.2.4 [schmonz 2014-06-09]
