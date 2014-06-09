@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2014/04/09 07:27:16 obache Exp $
+# $NetBSD: Makefile,v 1.43 2014/06/09 10:18:12 pettai Exp $
 #
 
-DISTNAME=	opendnssec-1.4.4
-PKGREVISION=	1
+DISTNAME=	opendnssec-1.4.5
 CATEGORIES=	security net
 MASTER_SITES=	http://www.opendnssec.org/files/source/
 
@@ -25,6 +24,13 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
+
+REPLACE_PERL=	enforcer/utils/convert_database.pl
+REPLACE_PERL+=	enforcer/utils/migrate_id_mysql.pl
+REPLACE_PERL+=	enforcer/utils/migrate_keyshare_mysql.pl
+REPLACE_PERL+=	enforcer/utils/migrate_keyshare_sqlite3.pl
+REPLACE_PERL+=	enforcer/utils/migrate_to_ng_mysql.pl
+REPLACE_PERL+=	enforcer/utils/migrate_to_ng_sqlite.pl
 
 ODS_USER?=	opendnssec
 ODS_GROUP?=	opendnssec
