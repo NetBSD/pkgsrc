@@ -1,14 +1,18 @@
-$NetBSD: distinfo,v 1.40 2013/12/16 19:00:03 asau Exp $
+$NetBSD: distinfo,v 1.41 2014/06/09 13:08:19 ryoon Exp $
 
-SHA1 (pulseaudio-2.1.tar.xz) = 56b4ad9207ea3aec0ad1b8be4b55793b426a4f01
-RMD160 (pulseaudio-2.1.tar.xz) = 87f6051bbbe59c26e505a9765f388d3ee4d3a485
-Size (pulseaudio-2.1.tar.xz) = 1355004 bytes
-SHA1 (patch-aa) = 2fb8b36669e34f3ca0108176171be567a9eeda44
-SHA1 (patch-configure) = 8754fc3493e43baef14c99a6b9a24bbb2800b2ea
-SHA1 (patch-dc) = 1e8d79a37617aae18f55564757b5065fef2b9025
+SHA1 (pulseaudio-5.0.tar.xz) = e420931a0b9cf37331cd06e30ba415046317ab85
+RMD160 (pulseaudio-5.0.tar.xz) = 4ba13e92c58f8ada4542d521131094a55e3b6991
+Size (pulseaudio-5.0.tar.xz) = 1455428 bytes
+SHA1 (patch-aa) = c8bd0e5b6e4c4068d8706aea62ce248bb79184d7
+SHA1 (patch-configure.ac) = 38e2b4b1da406cd59c29b0ee5d17d92498265e01
+SHA1 (patch-src_Makefile.am) = debe40be5d1155f6cb0d5ae90119dece4e090b02
 SHA1 (patch-src_Makefile.in) = 21daf6069ae067dd235de6d43a013e4e70bbca78
-SHA1 (patch-src_pulsecore_semaphore-osx.c) = f9b1962a700932434e05471b2d4df4a5ff5c1b00
-SHA1 (patch-src_pulsecore_svolume__mmx.c) = a3af18563fd11e3813d7a474ff8807ee9bf62390
-SHA1 (patch-src_pulsecore_svolume__sse.c) = 6d2406ad0889219bae96f52f9b525da9b19b9af9
-SHA1 (patch-src_tests_once-test.c) = ba0ca03e9f1cbc47e7985497397d03e7406420c6
-SHA1 (patch-src_tests_rtstutter.c) = e6d1627cb8a150cc5a106bb98ed31147ce8689d2
+SHA1 (patch-src_daemon_caps.c) = e819c26cd3d91d93ae5877725ed6a1b59183d89a
+SHA1 (patch-src_daemon_main.c) = e87f764d18345056210427bea52bf27f3f2999b6
+SHA1 (patch-src_modules_module-detect.c) = 1679519bc8a46a85790babe9c729850d10b9da6c
+SHA1 (patch-src_modules_oss_module-oss.c) = 43a0c2eeb5a9a37c7a231a531caa3658fe8d49b0
+SHA1 (patch-src_pulsecore_sample-util.h) = b6bd83cfdc1c337453d9a728f07205a2cf0af831
+SHA1 (patch-src_pulsecore_svolume__mmx.c) = b500530bcc9792b97050c7fa6e47639ac8e261a2
+SHA1 (patch-src_pulsecore_svolume__sse.c) = 07da6faa8529d7308d8a6a9f11958ef9faf46409
+SHA1 (patch-src_tests_mult-s16-test.c) = 3a0fbec804ebefbd88688e84b8d45e0aca597b84
+SHA1 (patch-src_tests_rtpoll-test.c) = 3584aeda2b6f7eb14af9cb5c665a31d972a306ae

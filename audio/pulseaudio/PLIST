@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2014/05/27 15:51:45 pho Exp $
+@comment $NetBSD: PLIST,v 1.14 2014/06/09 13:08:19 ryoon Exp $
 bin/esdcompat
 bin/pacat
 bin/pacmd
@@ -13,8 +13,6 @@ ${PLIST.x11}bin/pax11publish
 bin/pulseaudio
 ${PLIST.x11}bin/start-pulseaudio-kde
 ${PLIST.x11}bin/start-pulseaudio-x11
-${PLIST.x11}share/examples/pulseaudio/pulseaudio-kde.desktop
-${PLIST.x11}share/examples/pulseaudio/pulseaudio.desktop
 include/pulse/cdecl.h
 include/pulse/channelmap.h
 include/pulse/context.h
@@ -125,8 +123,6 @@ lib/pulse-${PKGVERSION}/modules/module-filter-apply.a
 lib/pulse-${PKGVERSION}/modules/module-filter-apply.so
 lib/pulse-${PKGVERSION}/modules/module-filter-heuristics.a
 lib/pulse-${PKGVERSION}/modules/module-filter-heuristics.so
-${PLIST.hal}lib/pulse-${PKGVERSION}/modules/module-hal-detect.a
-${PLIST.hal}lib/pulse-${PKGVERSION}/modules/module-hal-detect.so
 lib/pulse-${PKGVERSION}/modules/module-http-protocol-tcp.a
 lib/pulse-${PKGVERSION}/modules/module-http-protocol-tcp.so
 lib/pulse-${PKGVERSION}/modules/module-http-protocol-unix.a
@@ -137,8 +133,6 @@ lib/pulse-${PKGVERSION}/modules/module-ladspa-sink.a
 lib/pulse-${PKGVERSION}/modules/module-ladspa-sink.so
 lib/pulse-${PKGVERSION}/modules/module-loopback.a
 lib/pulse-${PKGVERSION}/modules/module-loopback.so
-${PLIST.evdev}lib/pulse-${PKGVERSION}/modules/module-mmkbd-evdev.a
-${PLIST.evdev}lib/pulse-${PKGVERSION}/modules/module-mmkbd-evdev.so
 lib/pulse-${PKGVERSION}/modules/module-match.a
 lib/pulse-${PKGVERSION}/modules/module-match.so
 lib/pulse-${PKGVERSION}/modules/module-native-protocol-fd.a
@@ -151,24 +145,28 @@ lib/pulse-${PKGVERSION}/modules/module-null-sink.a
 lib/pulse-${PKGVERSION}/modules/module-null-sink.so
 lib/pulse-${PKGVERSION}/modules/module-null-source.a
 lib/pulse-${PKGVERSION}/modules/module-null-source.so
-${PLIST.oss}lib/pulse-${PKGVERSION}/modules/module-oss.a
-${PLIST.oss}lib/pulse-${PKGVERSION}/modules/module-oss.so
+lib/pulse-${PKGVERSION}/modules/module-oss.a
+lib/pulse-${PKGVERSION}/modules/module-oss.so
 lib/pulse-${PKGVERSION}/modules/module-pipe-sink.a
 lib/pulse-${PKGVERSION}/modules/module-pipe-sink.so
 lib/pulse-${PKGVERSION}/modules/module-pipe-source.a
 lib/pulse-${PKGVERSION}/modules/module-pipe-source.so
 lib/pulse-${PKGVERSION}/modules/module-position-event-sounds.a
 lib/pulse-${PKGVERSION}/modules/module-position-event-sounds.so
-${PLIST.avahi}lib/pulse-${PKGVERSION}/modules/module-raop-discover.a
-${PLIST.avahi}lib/pulse-${PKGVERSION}/modules/module-raop-discover.so
+lib/pulse-${PKGVERSION}/modules/module-raop-discover.a
+lib/pulse-${PKGVERSION}/modules/module-raop-discover.so
 lib/pulse-${PKGVERSION}/modules/module-raop-sink.a
 lib/pulse-${PKGVERSION}/modules/module-raop-sink.so
 lib/pulse-${PKGVERSION}/modules/module-remap-sink.a
 lib/pulse-${PKGVERSION}/modules/module-remap-sink.so
+lib/pulse-${PKGVERSION}/modules/module-remap-source.a
+lib/pulse-${PKGVERSION}/modules/module-remap-source.so
 lib/pulse-${PKGVERSION}/modules/module-rescue-streams.a
 lib/pulse-${PKGVERSION}/modules/module-rescue-streams.so
 lib/pulse-${PKGVERSION}/modules/module-role-cork.a
 lib/pulse-${PKGVERSION}/modules/module-role-cork.so
+lib/pulse-${PKGVERSION}/modules/module-role-ducking.a
+lib/pulse-${PKGVERSION}/modules/module-role-ducking.so
 lib/pulse-${PKGVERSION}/modules/module-rtp-recv.a
 lib/pulse-${PKGVERSION}/modules/module-rtp-recv.so
 lib/pulse-${PKGVERSION}/modules/module-rtp-send.a
@@ -183,8 +181,6 @@ lib/pulse-${PKGVERSION}/modules/module-sine-source.a
 lib/pulse-${PKGVERSION}/modules/module-sine-source.so
 lib/pulse-${PKGVERSION}/modules/module-sine.a
 lib/pulse-${PKGVERSION}/modules/module-sine.so
-${PLIST.sun}lib/pulse-${PKGVERSION}/modules/module-solaris.a
-${PLIST.sun}lib/pulse-${PKGVERSION}/modules/module-solaris.so
 lib/pulse-${PKGVERSION}/modules/module-stream-restore.a
 lib/pulse-${PKGVERSION}/modules/module-stream-restore.so
 lib/pulse-${PKGVERSION}/modules/module-suspend-on-idle.a
@@ -193,8 +189,12 @@ lib/pulse-${PKGVERSION}/modules/module-switch-on-connect.a
 lib/pulse-${PKGVERSION}/modules/module-switch-on-connect.so
 lib/pulse-${PKGVERSION}/modules/module-switch-on-port-available.a
 lib/pulse-${PKGVERSION}/modules/module-switch-on-port-available.so
+lib/pulse-${PKGVERSION}/modules/module-tunnel-sink-new.a
+lib/pulse-${PKGVERSION}/modules/module-tunnel-sink-new.so
 lib/pulse-${PKGVERSION}/modules/module-tunnel-sink.a
 lib/pulse-${PKGVERSION}/modules/module-tunnel-sink.so
+lib/pulse-${PKGVERSION}/modules/module-tunnel-source-new.a
+lib/pulse-${PKGVERSION}/modules/module-tunnel-source-new.so
 lib/pulse-${PKGVERSION}/modules/module-tunnel-source.a
 lib/pulse-${PKGVERSION}/modules/module-tunnel-source.so
 lib/pulse-${PKGVERSION}/modules/module-virtual-sink.a
@@ -234,10 +234,13 @@ man/man5/default.pa.5
 man/man5/pulse-cli-syntax.5
 man/man5/pulse-client.conf.5
 man/man5/pulse-daemon.conf.5
+share/bash-completion/completions/pulseaudio-bash-completion.sh
 share/examples/pulseaudio/client.conf
 share/examples/pulseaudio/daemon.conf
 share/examples/pulseaudio/default.pa
+${PLIST.x11}share/examples/pulseaudio/pulseaudio-kde.desktop
 share/examples/pulseaudio/pulseaudio-system.conf
+${PLIST.x11}share/examples/pulseaudio/pulseaudio.desktop
 share/examples/pulseaudio/system.pa
 share/locale/as/LC_MESSAGES/pulseaudio.mo
 share/locale/bn_IN/LC_MESSAGES/pulseaudio.mo
@@ -253,6 +256,7 @@ share/locale/gu/LC_MESSAGES/pulseaudio.mo
 share/locale/he/LC_MESSAGES/pulseaudio.mo
 share/locale/hi/LC_MESSAGES/pulseaudio.mo
 share/locale/hu/LC_MESSAGES/pulseaudio.mo
+share/locale/id/LC_MESSAGES/pulseaudio.mo
 share/locale/it/LC_MESSAGES/pulseaudio.mo
 share/locale/ja/LC_MESSAGES/pulseaudio.mo
 share/locale/kn/LC_MESSAGES/pulseaudio.mo
@@ -278,4 +282,3 @@ share/vala/vapi/libpulse-mainloop-glib.vapi
 share/vala/vapi/libpulse.deps
 share/vala/vapi/libpulse.vapi
 @pkgdir share/examples/pulse
-@pkgdir libexec/pulse

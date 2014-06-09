@@ -1,0 +1,83 @@
+$NetBSD: patch-configure.ac,v 1.1 2014/06/09 13:08:19 ryoon Exp $
+
+* Fix NetBSD detection for libatomics_ops check.
+* Fix unportable test(1) construct.
+* Adapt /var-paths for pkgsrc defaults.
+* Install default config files in example directory; pkgsrc config
+  file framework will install them in the right place.
+
+--- configure.ac.orig	2014-02-15 08:33:32.000000000 +0000
++++ configure.ac
+@@ -251,6 +251,11 @@ else
+     # HW specific atomic ops stuff
+     AC_MSG_CHECKING([architecture for native atomic operations])
+     case $host in
++	*-netbsd*)
++	    { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
++$as_echo "yes" >&6; }
++	    need_libatomic_ops=no
++	;;
+         arm*)
+             AC_MSG_RESULT([arm])
+             AC_MSG_CHECKING([whether we can use Linux kernel helpers])
+@@ -286,10 +291,6 @@ else
+                 ])
+             fi
+         ;;
+-        *-netbsdelf5*)
+-            AC_MSG_RESULT([yes])
+-            need_libatomic_ops=no
+-        ;;
+         *-freebsd*)
+             AC_MSG_RESULT([yes])
+             need_libatomic_ops=no
+@@ -478,14 +479,14 @@ AS_IF([test "$pulseaudio_cv__Bool" = "ye
+ #### Thread support ####
+ 
+ AX_TLS
+-AS_IF([test "$ac_cv_tls" == "__thread"],
++AS_IF([test "$ac_cv_tls" = "__thread"],
+     AC_DEFINE([SUPPORT_TLS___THREAD], 1, [Define this if the compiler supports __thread for Thread-Local Storage]))
+ 
+ # Win32 build breaks with win32 pthread installed
+ AS_IF([test "x$os_is_win32" != "x1"],
+   [AX_PTHREAD])
+ 
+-AS_IF([test "x$ax_pthread_ok" == "xyes"],
++AS_IF([test "x$ax_pthread_ok" = "xyes"],
+     AC_DEFINE([_POSIX_PTHREAD_SEMANTICS], 1, [Needed on Solaris]))
+ 
+ 
+@@ -988,7 +989,7 @@ AS_IF([test "x$HAVE_DBUS" = "x1"], AC_DE
+ 
+ PA_MACHINE_ID="${sysconfdir}/machine-id"
+ AX_DEFINE_DIR(PA_MACHINE_ID, PA_MACHINE_ID, [D-Bus machine-id file])
+-PA_MACHINE_ID_FALLBACK="${localstatedir}/lib/dbus/machine-id"
++PA_MACHINE_ID_FALLBACK="${localstatedir}/db/dbus/machine-id"
+ AX_DEFINE_DIR(PA_MACHINE_ID_FALLBACK, PA_MACHINE_ID_FALLBACK,
+ 	      [Fallback machine-id file])
+ 
+@@ -1234,9 +1235,9 @@ fi
+ 
+ PA_SYSTEM_RUNTIME_PATH="${localstatedir}/run/pulse"
+ AX_DEFINE_DIR(PA_SYSTEM_RUNTIME_PATH, PA_SYSTEM_RUNTIME_PATH, [System runtime dir])
+-PA_SYSTEM_CONFIG_PATH="${localstatedir}/lib/pulse"
++PA_SYSTEM_CONFIG_PATH="${localstatedir}/db/pulse"
+ AX_DEFINE_DIR(PA_SYSTEM_CONFIG_PATH, PA_SYSTEM_CONFIG_PATH, [System config dir])
+-PA_SYSTEM_STATE_PATH="${localstatedir}/lib/pulse"
++PA_SYSTEM_STATE_PATH="${localstatedir}/db/pulse"
+ AX_DEFINE_DIR(PA_SYSTEM_STATE_PATH, PA_SYSTEM_STATE_PATH, [System state dir])
+ 
+ PA_BINARY=${bindir}/pulseaudio${EXEEXT}
+@@ -1248,8 +1249,9 @@ AX_DEFINE_DIR(PACTL_BINARY, PACTL_BINARY
+ AC_SUBST(PA_SOEXT, [.so])
+ AC_DEFINE(PA_SOEXT, [".so"], [Shared object extension])
+ 
+-AC_SUBST(pulseconfdir, ["${sysconfdir}/pulse"])
+-AX_DEFINE_DIR(PA_DEFAULT_CONFIG_DIR, pulseconfdir, [Location of configuration files])
++AC_SUBST(pulseconfdirreal, ["${sysconfdir}/pulse"])
++AC_SUBST(pulseconfdir, ["${EGDIR}"])
++AX_DEFINE_DIR(PA_DEFAULT_CONFIG_DIR, pulseconfdirreal, [Location of configuration files])
+ 
+ #### Mac OSX specific stuff #####
+ 
