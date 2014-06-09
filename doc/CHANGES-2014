@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2209 2014/06/09 01:12:30 schnoebe Exp $
+$NetBSD: CHANGES-2014,v 1.2210 2014/06/09 10:18:50 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3004,3 +3004,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/spice-protocol to 0.12.7 [rodent 2014-06-09]
 	Updated net/py-boto to 2.29.1 [rodent 2014-06-09]
 	Updated print/hplip to 3.14.6 [schnoebe 2014-06-09]
+	Updated security/opendnssec to 1.4.5 [pettai 2014-06-09]
