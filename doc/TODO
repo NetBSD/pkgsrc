@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13384 2014/06/09 12:35:27 wiz Exp $
+$NetBSD: TODO,v 1.13385 2014/06/09 12:36:03 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -359,7 +359,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o alacarte-0.13.2
 	o album-4.12
 	o alsa-plugins-1.0.27
-	o alsa-utils-1.0.27
 	o amavis-perl-0.3.12 [called just amavis]
 	o amavisd-new-2.8.1
 	o amaya-11.4.4 [wip]
