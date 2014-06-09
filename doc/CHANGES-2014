@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2206 2014/06/09 00:18:38 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2207 2014/06/09 00:49:49 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3003,3 +3003,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/py-zmq to 14.3.0 [rodent 2014-06-08]
 	Updated net/py-kombu to 3.0.18 [rodent 2014-06-09]
 	Updated sysutils/spice-protocol to 0.12.7 [rodent 2014-06-09]
+	Updated net/py-boto to 2.29.1 [rodent 2014-06-09]
