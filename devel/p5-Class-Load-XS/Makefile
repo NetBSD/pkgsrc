@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2014/05/29 23:35:44 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2014/06/09 18:42:49 schmonz Exp $
 
-DISTNAME=	Class-Load-XS-0.06
+DISTNAME=	Class-Load-XS-0.08
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
 
@@ -21,7 +20,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/Class/Load/XS/.packlist
-PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
