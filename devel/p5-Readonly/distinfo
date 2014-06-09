@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/05/09 02:56:53 seb Exp $
+$NetBSD: distinfo,v 1.2 2014/06/09 18:54:52 schmonz Exp $
 
-SHA1 (Readonly-1.03.tar.gz) = 31220d04adc3b407cfe2d5bcb04d7ff07e923ab8
-RMD160 (Readonly-1.03.tar.gz) = 734555fa17b8d1dc9326c0998da1c561c4443bab
-Size (Readonly-1.03.tar.gz) = 13677 bytes
+SHA1 (Readonly-1.04.tar.gz) = d0bd689940695f4299cb587aac881371ab42fc34
+RMD160 (Readonly-1.04.tar.gz) = e1e869ddadea01cb298cc69847712c1739a239d9
+Size (Readonly-1.04.tar.gz) = 25609 bytes
