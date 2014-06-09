@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2225 2014/06/09 12:49:04 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2226 2014/06/09 13:08:52 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3024,3 +3024,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/alsa-plugins-oss to 1.0.27 [ryoon 2014-06-09]
 	Updated audio/alsa-plugins-pulse to 1.0.27 [ryoon 2014-06-09]
 	Updated graphics/gif2png to 2.5.9 [wiz 2014-06-09]
+	Updated audio/pulseaudio to 5.0 [ryoon 2014-06-09]
