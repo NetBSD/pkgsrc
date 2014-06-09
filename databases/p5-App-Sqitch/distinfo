@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2014/03/16 21:16:03 schmonz Exp $
+$NetBSD: distinfo,v 1.4 2014/06/09 17:52:10 schmonz Exp $
 
-SHA1 (App-Sqitch-0.992.tar.gz) = cc3dd8828f98d83b171a86005a2235bcc4ac8d6d
-RMD160 (App-Sqitch-0.992.tar.gz) = 1a77ed3895cbd0c06c4877ab172a2378c5aa159c
-Size (App-Sqitch-0.992.tar.gz) = 389189 bytes
+SHA1 (App-Sqitch-0.993.tar.gz) = 76b94e7d692b5375b3a5cd7cafbf5ca30ebe8852
+RMD160 (App-Sqitch-0.993.tar.gz) = 97a6e779906a17124cd6a7102bf1fc9a1f5c6fa0
+Size (App-Sqitch-0.993.tar.gz) = 390104 bytes
