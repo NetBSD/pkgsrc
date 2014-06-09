@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2264 2014/06/09 20:04:47 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2265 2014/06/09 20:08:21 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3063,3 +3063,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/p5-YAML to 0.92 [schmonz 2014-06-09]
 	Updated time/p5-DateTime to 1.1000 [schmonz 2014-06-09]
 	Updated www/p5-Kwiki-Archive-Rcs to 0.16 [schmonz 2014-06-09]
+	Updated www/p5-LWPx-ParanoidAgent to 1.10 [schmonz 2014-06-09]
