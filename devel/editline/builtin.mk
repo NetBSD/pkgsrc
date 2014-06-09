@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.5 2014/06/09 00:19:05 obache Exp $
+# $NetBSD: builtin.mk,v 1.6 2014/06/09 00:26:19 obache Exp $
 
 BUILTIN_PKG:=	editline
 
@@ -42,14 +42,16 @@ MAKEVARS+=	USE_BUILTIN.editline
 CHECK_BUILTIN.editline?=	no
 .if !empty(CHECK_BUILTIN.editline:M[nN][oO])
 
+.  if !empty(_PKG_USE_READLINE:U:M[yY][eE][sS])
+BUILDLINK_TRANSFORM+=	l:history:edit:${BUILTIN_LIBNAME.termcap}
+BUILDLINK_TRANSFORM+=	l:readline:edit:${BUILTIN_LIBNAME.termcap}
+.  endif
+
 .  if !empty(USE_BUILTIN.editline:M[yY][eE][sS])
 .    if !empty(H_EDITLINE:M*/editline/readline.h)
 BUILDLINK_TARGETS+=	buildlink-readline-readline-h
 BUILDLINK_TARGETS+=	buildlink-readline-history-h
 .    endif
-
-BUILDLINK_TRANSFORM+=	l:history:edit:${BUILTIN_LIBNAME.termcap}
-BUILDLINK_TRANSFORM+=	l:readline:edit:${BUILTIN_LIBNAME.termcap}
 
 .    if !target(buildlink-readline-readline-h)
 .PHONY: buildlink-readline-readline-h
