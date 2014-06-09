@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2231 2014/06/09 17:52:15 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2232 2014/06/09 17:56:53 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3030,3 +3030,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/isync to 1.1.1 [schmonz 2014-06-09]
 	Updated databases/phpmyadmin to 4.2.3 [tron 2014-06-09]
 	Updated databases/p5-App-Sqitch to 0.993 [schmonz 2014-06-09]
+	Updated devel/p5-FindBin-libs to 1.9 [schmonz 2014-06-09]
