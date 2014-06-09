@@ -1,0 +1,21 @@
+$NetBSD: patch-Misc_NEWS,v 1.3 2014/06/09 17:58:31 he Exp $
+
+Apply a fix for CVE-2013-1752 for the SMTP and Pop parts.
+From http://bugs.python.org/issue16042 and issue16041.
+ 
+--- Misc/NEWS.orig      2014-06-09 11:29:34.000000000 +0000
++++ Misc/NEWS
+@@ -585,6 +585,13 @@ Library
+   prevent readline() calls from consuming too much memory.  Patch by Jyrki
+   Pulliainen.
+ 
++- Issue #16041: CVE-2013-1752: poplib: Limit maximum line lengths to 2048 to
++  prevent readline() calls from consuming too much memory.  Patch by Jyrki
++  Pulliainen.
++
++- Issue #16042: CVE-2013-1752: smtplib: Limit amount of data read by
++  limiting the call to readline().  Original patch by Christian Heimes.
++
+ - Issue #12641: Avoid passing "-mno-cygwin" to the mingw32 compiler, except
+   when necessary.  Patch by Oscar Benjamin.
+ 
