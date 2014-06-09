@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.89 2014/06/06 12:22:43 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2014/06/09 12:31:45 wiz Exp $
 
-DISTNAME=	xterm-305
+DISTNAME=	xterm-306
 CATEGORIES=	x11
 MASTER_SITES=	ftp://invisible-island.net/xterm/ \
 		http://www.sfr-fresh.com/unix/misc/
