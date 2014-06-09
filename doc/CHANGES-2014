@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2212 2014/06/09 10:28:28 jperkin Exp $
+$NetBSD: CHANGES-2014,v 1.2213 2014/06/09 10:42:54 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3007,3 +3007,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/opendnssec to 1.4.5 [pettai 2014-06-09]
 	Updated misc/screen to 4.0.3nb6 [jperkin 2014-06-09]
 	Updated devel/ncurses to 5.9nb3 [jperkin 2014-06-09]
+	Updated net/exabgp to 3.3.2 [pettai 2014-06-09]
