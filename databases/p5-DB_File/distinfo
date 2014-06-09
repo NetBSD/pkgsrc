@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2013/07/10 02:21:34 schmonz Exp $
+$NetBSD: distinfo,v 1.15 2014/06/09 18:13:04 schmonz Exp $
 
-SHA1 (DB_File-1.829.tar.gz) = f2c9c5f0bfe8af8694bea44fa204b033dbb6fa36
-RMD160 (DB_File-1.829.tar.gz) = b69ef9a8a70121e7294cec0bd4a0f9d0acef88ad
-Size (DB_File-1.829.tar.gz) = 90363 bytes
-SHA1 (patch-aa) = a9ce27f844b0ea53fb1f6f6dd4e93d227bd25719
+SHA1 (DB_File-1.831.tar.gz) = 1029cf2d1f682564d979009d3f8df352727b132e
+RMD160 (DB_File-1.831.tar.gz) = b6746f4284b540603f865ac706cbb46973ad0612
+Size (DB_File-1.831.tar.gz) = 90436 bytes
