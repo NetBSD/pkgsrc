@@ -4852,7 +4852,7 @@ shall be installed. Its contents are set based upon the following variables:
     definition of this variable only makes sense in the package's Makefile
     (i.e., it is not user-customizable).
 
-    As an example, consider the Apache package, www/apache2, which places its
+    As an example, consider the Apache package, www/apache24, which places its
     configuration files under the httpd/ subdirectory of PKG_SYSCONFBASE. This
     should be set in the package Makefile.
 
