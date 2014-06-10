@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2284 2014/06/10 19:45:29 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2285 2014/06/10 19:50:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3081,3 +3081,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/dbus to 1.8.4 [wiz 2014-06-10]
 	Updated lang/mono2 to 2.10.9nb9 [wiz 2014-06-10]
 	Updated devel/pcre to 8.35nb1 [wiz 2014-06-10]
+	Updated x11/libXtst to 1.2.2nb1 [wiz 2014-06-10]
