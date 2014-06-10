@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2013/05/31 08:30:24 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2014/06/10 19:50:11 wiz Exp $
 
 DISTNAME=		libXtst-1.2.2
+PKGREVISION=		1
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
@@ -16,6 +17,21 @@ USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE+=	xtst.pc.in
 
 CONFIGURE_ENV+=		ac_cv_path_XMLTO=	# empty
+
+SUBST_CLASSES+=		sofix
+SUBST_SED.sofix+=	-e 's,^.so ,.so man3/,'
+SUBST_FILES.sofix+=	man/XTestSetGContextOfGC.man
+SUBST_FILES.sofix+=	man/XTestFakeButtonEvent.man
+SUBST_FILES.sofix+=	man/XTestFakeKeyEvent.man
+SUBST_FILES.sofix+=	man/XTestSetVisualIDOfVisual.man
+SUBST_FILES.sofix+=	man/XTestFakeRelativeMotionEvent.man
+SUBST_FILES.sofix+=	man/XTestDiscard.man
+SUBST_FILES.sofix+=	man/XTestCompareCurrentCursorWithWindow.man
+SUBST_FILES.sofix+=	man/XTestGrabControl.man
+SUBST_FILES.sofix+=	man/XTestFakeMotionEvent.man
+SUBST_FILES.sofix+=	man/XTestCompareCursorWithWindow.man
+SUBST_STAGE.sofix=	post-configure
+SUBST_MESSAGE.sofix=	Fix .so arguments.
 
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 
