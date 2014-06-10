@@ -1,4 +1,4 @@
-# $NetBSD: apache.mk,v 1.27 2012/04/14 12:58:19 adam Exp $
+# $NetBSD: apache.mk,v 1.28 2014/06/10 15:22:13 joerg Exp $
 #
 # This file is meant to be included by packages that require an apache
 # web server.
@@ -9,7 +9,7 @@
 #	The default apache server to use and install. If there already
 #	is an apache installed, this will have no effect.
 #
-#	Possible values: apache13 apache2 apache22 apache24
+#	Possible values: apache22 apache24
 #
 # Package-settable variables:
 #
@@ -20,9 +20,8 @@
 #	Possible values: (see PKG_APACHE_DEFAULT)
 #
 # USE_APR
-#	If apache2 is chosen by this file and this variable is set to
-#	"yes", a full dependency to the Apache Portable Runtime library
-#	will be added.
+#	If this variable is set to "yes", a full dependency to the
+#	Apache Portable Runtime library will be added.
 #
 # Variables defined by this file:
 #
@@ -34,7 +33,7 @@
 # APACHE_PKG_PREFIX
 #	The package name prefix for apache modules.
 #
-#	Possible values: ap13 ap2 ap22 ap24
+#	Possible values: ap22 ap24
 #
 
 .if !defined(APACHE_MK)
@@ -56,15 +55,7 @@ PKG_APACHE_ACCEPTED?=		${_PKG_APACHES}
 USE_APR?=			no
 
 # The available apache packages:
-_PKG_APACHES=			apache13 apache2 apache22 apache24
-
-_APACHE_PKGBASE.apache13=	apache-1*
-_APACHE_PKG_PREFIX.apache13=	ap13
-_APACHE_PKGSRCDIR.apache13=	../../www/apache
-
-_APACHE_PKGBASE.apache2=	apache-2.0*
-_APACHE_PKG_PREFIX.apache2=	ap2
-_APACHE_PKGSRCDIR.apache2=	../../www/apache2
+_PKG_APACHES=			apache22 apache24
 
 _APACHE_PKGBASE.apache22=	apache-2.[23]*
 _APACHE_PKG_PREFIX.apache22=	ap22
@@ -80,7 +71,7 @@ _APACHE_PKGSRCDIR.apache24=	../../www/apache24
 
 .if empty(_PKG_APACHES:M${PKG_APACHE_DEFAULT})
 PKG_FAIL_REASON+=		"[apache.mk] Invalid apache package \""${PKG_APACHE_DEFAULT:Q}"\" in PKG_APACHE_DEFAULT."
-PKG_APACHE_DEFAULT=		apache2
+PKG_APACHE_DEFAULT=		apache22
 .endif
 
 .for _ap_ in ${PKG_APACHE_ACCEPTED}
@@ -132,9 +123,7 @@ PKG_APACHE=		none
 
 APACHE_PKG_PREFIX=	${_APACHE_PKG_PREFIX.${PKG_APACHE}}
 
-.if (${PKG_APACHE} == "apache2") && !empty(USE_APR:M[yY][eE][sS])
-.  include "../../devel/apr0/buildlink3.mk"
-.elif (${PKG_APACHE} != "apache13") && !empty(USE_APR:M[Yy][Ee][Ss])
+.if !empty(USE_APR:M[Yy][Ee][Ss])
 .  include "../../devel/apr/buildlink3.mk"
 .  include "../../devel/apr-util/buildlink3.mk"
 .endif

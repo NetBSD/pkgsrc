@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.8 2012/11/23 11:37:41 joerg Exp $
-
-SHA1 (modxslt-1.1.tar.gz) = 136edef75ef6caf53eb865102a2ebfa15383df47
-RMD160 (modxslt-1.1.tar.gz) = 463aeb1afd8f375bb6dd25fd85022c37dd35cba7
-Size (modxslt-1.1.tar.gz) = 11693 bytes
-SHA1 (patch-ab) = 01a10351878013ba6ecedc86afd5ee2461c863e8

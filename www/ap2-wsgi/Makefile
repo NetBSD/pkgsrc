@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2014/06/07 07:44:09 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2014/06/10 15:22:17 joerg Exp $
 
 DISTNAME=	${VERSION}
 PKGNAME=	${APACHE_PKG_PREFIX}-${PYPKGPREFIX}-wsgi-${VERSION}
@@ -20,7 +20,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-apxs=${APXS:Q}
 CONFIGURE_ARGS+=	--with-python=${PYTHONBIN:Q}
 
-PKG_APACHE_ACCEPTED=	apache2 apache22 apache24
+PKG_APACHE_ACCEPTED=	apache22 apache24
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/apache.mk"

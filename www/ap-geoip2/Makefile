@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/28 06:30:04 asau Exp $
+# $NetBSD: Makefile,v 1.4 2014/06/10 15:22:15 joerg Exp $
 #
 
 DISTNAME=	mod_geoip2_1.2.5
@@ -14,7 +14,7 @@ LICENSE=	apache-1.1
 .include "../../mk/apache.mk"
 APACHE_MODULE=	yes
 APACHE_MODULE_NAME=	mod_geoip.so
-PKG_APACHE_ACCEPTED=	apache2 apache22
+PKG_APACHE_ACCEPTED=	apache22
 NO_CONFIGURE=	yes
 CPPFLAGS+=	-I${DESTDIR}/include
 LDFLAGS+=	-L${DESTDIR}/lib -lGeoIP
