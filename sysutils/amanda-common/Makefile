@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2014/06/09 21:07:01 joerg Exp $
+# $NetBSD: Makefile,v 1.67 2014/06/10 15:51:37 gdt Exp $
 
 PKGNAME=		amanda-common-${AMANDA_VERSION}
 PKGREVISION=		6
@@ -32,11 +32,5 @@ CONF_FILES_PERMS=	${PREFIX}/share/doc/amanda/example/amanda-client.conf \
 REQD_FILES_PERMS+=	/dev/null ${AMANDA_VAR}/amandates ${AMANDA_USER} ${AMANDA_GROUP} 0640
 
 SPECIAL_PERMS+=		sbin/amservice ${AM_PROG_PERMS}
-
-SUBST_CLASSES+=		bool
-SUBST_MESSAGE.bool=	Fix SWIG messing with stdbool.h.
-SUBST_STAGE.bool=	post-patch
-SUBST_FILES.bool=	perl/Amanda/*.c perl/Amanda/*/*.c
-SUBST_SED.bool=	-e '/undef bool/d'
 
 .include "../../mk/bsd.pkg.mk"
