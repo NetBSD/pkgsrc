@@ -1,4 +1,4 @@
-# $NetBSD: pgsql.buildlink3.mk,v 1.36 2013/09/10 15:35:30 adam Exp $
+# $NetBSD: pgsql.buildlink3.mk,v 1.37 2014/06/10 14:21:37 joerg Exp $
 #
 # User-settable variables:
 #
@@ -24,7 +24,7 @@ _SYS_VARS.pgsql=	PG_LIB_EXT PGSQL_TYPE PGPKGSRCDIR
 
 .include "../../mk/bsd.prefs.mk"
 
-PGSQL_VERSION_DEFAULT?=		91
+PGSQL_VERSION_DEFAULT?=		93
 PGSQL_VERSIONS_ACCEPTED?=	93 92 91 90 84
 
 # transform the list into individual variables
