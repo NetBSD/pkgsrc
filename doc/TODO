@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13391 2014/06/09 14:59:23 pettai Exp $
+$NetBSD: TODO,v 1.13392 2014/06/10 08:28:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -536,6 +536,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.2
+	o firefox-30
 	o fish-2.1.1
 	o flashplayer-0.4.13
 	o flightgear-2.12
@@ -696,7 +697,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o instiki-0.13
 	o iodbc-3.52.9
 	o ircservices-5.1.21
-	o irssi-0.8.16 [pkg/48866]
 	o ispell-ga-4.6
 	o ja-vflib-lib-3.6.10
 	o ja-vflib-utils-2.25.6
@@ -714,7 +714,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kbiff-4.0
 	o kdbg-2.5.4
 	o kde4-4.12.5
-	o kde4-4.13.0
+	o kde4-4.13.2
 	o kdenlive-0.9.8
 	o kdrill-6.5
 	o kismet-2011.03r2 [pkg/45692]
@@ -981,7 +981,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-scgi-1.14
 	o py-simpletal-5.1
 	o py-sip-4.15.1 [don't update until pyqt3 and KDE problems are fixed -- still there in 4.15.1]
-	o py-sip-4.16
+	o py-sip-4.16.1
 	o py-smb-1.1.8
 	o py-sphinx-theme-cloud-1.6
 	o py-sqlalchemy-0.9.1
@@ -1179,7 +1179,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wml-2.0.11
 	o wmweather-2.4.4
 	o wmx-7
-	o worker-3.4.0
+	o worker-3.4.1
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9i
 	o wxGTK-3.0
