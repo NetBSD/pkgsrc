@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2285 2014/06/10 19:50:19 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2286 2014/06/10 22:17:25 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3082,3 +3082,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/mono2 to 2.10.9nb9 [wiz 2014-06-10]
 	Updated devel/pcre to 8.35nb1 [wiz 2014-06-10]
 	Updated x11/libXtst to 1.2.2nb1 [wiz 2014-06-10]
+	Removed www/p5-Apache-AuthCookieDBI [joerg 2014-06-10]
