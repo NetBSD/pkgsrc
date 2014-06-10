@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2271 2014/06/10 11:58:24 joerg Exp $
+$NetBSD: CHANGES-2014,v 1.2272 2014/06/10 12:06:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3068,3 +3068,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/contao32 to 3.2.11 [taca 2014-06-10]
 	Updated www/contao33 to 3.3.2 [taca 2014-06-10]
 	Updated www/py-django14 to 1.4.13 [joerg 2014-06-10]
+	Updated math/py-networkx to 1.8.1 [wen 2014-06-10]
