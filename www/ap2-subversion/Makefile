@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2014/05/18 11:43:51 adam Exp $
+# $NetBSD: Makefile,v 1.69 2014/06/10 14:40:50 joerg Exp $
 
 PKGNAME=	${APACHE_PKG_PREFIX}-subversion-${SVNVER}
 COMMENT=	WebDAV server (Apache module) for Subversion
@@ -20,11 +20,8 @@ post-patch:
 	${RM} ${WRKSRC}/build-outputs.mk
 	${CP} ${FILESDIR}/build-outputs.mk ${WRKSRC}/build-outputs.mk
 
-PKG_APACHE_ACCEPTED=	apache2 apache22 apache24
+PKG_APACHE_ACCEPTED=	apache22 apache24
 
 .include "../../devel/subversion-base/buildlink3.mk"
 .include "../../mk/apache.mk"
-.if ${PKG_APACHE} == "apache2" && !empty(PKG_BUILD_OPTIONS.subversion-base:Mapr1)
-PKG_FAIL_REASON=	"subversion-base package must be built without apr1 option."
-.endif
 .include "../../mk/bsd.pkg.mk"
