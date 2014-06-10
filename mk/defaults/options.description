@@ -30,7 +30,6 @@ apache-mpm-event	Use multi-threaded workers in Apache web server.
 apache-mpm-prefork	Use pre-forked workers in Apache web server.
 apache-mpm-worker	Use multiple processes of multi-threaded workers in Apache web server.
 apache-shared-modules	Build all modules as shared for apache22.
-apr1			Use Apache Portable Runtime 1.x rather than 0.x.
 ares			Use the ares library for asynchronous name resolution.
 aria2-metalink		Enable Metalink support.
 arts			Use the aRts audio daemon.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/04/09 07:26:58 obache Exp $
+# $NetBSD: Makefile,v 1.9 2014/06/10 14:40:50 joerg Exp $
 
 PKGNAME=	subversion16-base-${SVNVER}
 PKGREVISION=	5
@@ -17,27 +17,16 @@ USE_TOOLS+=		msgfmt
 CONFIGURE_ARGS+=	--disable-neon-version-check
 CONFIGURE_ARGS+=	--without-apxs
 
-.if !empty(PKG_OPTIONS:Mapr1)
 APU_OPTIONS=		PKG_BUILD_OPTIONS.apr-util
-.else
-APU_OPTIONS=		PKG_BUILD_OPTIONS.apr
-.endif
 BUILD_DEFS+=		${APU_OPTIONS}
-
-.if !empty(PKG_OPTIONS:Mapr1)
-.  include "../../devel/apr/buildlink3.mk"
-.  include "../../devel/apr-util/buildlink3.mk"
-.else
-BUILDLINK_API_DEPENDS.apr+=	apr>=0.9.5
-.  include "../../devel/apr0/buildlink3.mk"
-.endif
 
 BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.4
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 
 PLIST_VARS+=		db4
-.if !empty(PKG_OPTIONS:Mapr1) && !empty(PKG_BUILD_OPTIONS.apr-util:Mdb4)
+.include "../../devel/apr-util/buildlink3.mk"
+.if !empty(PKG_BUILD_OPTIONS.apr-util:Mdb4)
 PLIST.db4=		yes
 #CONFIGURE_ARGS+=	--with-berkeley-db=:${BUILDLINK_PREFIX.db4:Q}/include:${BUILDLINK_PREFIX.db4:Q}/lib:${BUILDLINK_LDADD.db4:S/^-l//:Q}
 CONFIGURE_ARGS+=	--with-berkeley-db
@@ -103,5 +92,6 @@ svn-build-outputs-hack:
 	cd ${WRKSRC} && ./gen-make.py --release --installed-libs libsvn_client16,libsvn_delta16,libsvn_diff16,libsvn_fs16,libsvn_ra16,libsvn_repos16,libsvn_subr16,libsvn_wc16
 	${MV} -f ${WRKSRC}/build-outputs.mk ${FILESDIR}/build-outputs.mk
 
+.include "../../devel/apr/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
