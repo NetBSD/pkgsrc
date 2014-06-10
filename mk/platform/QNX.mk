@@ -98,8 +98,6 @@ GAMEMODE=		2555
 GAMEDIRMODE=		0775
 .endif
 
-PAM_DEFAULT?=		openpam
-
 _OPSYS_PREFER.zlib?=	pkgsrc
 _OPSYS_PREFER.bzip2?=	pkgsrc
 _OPSYS_PREFER.curses?=	pkgsrc
