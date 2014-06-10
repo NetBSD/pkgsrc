@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2014/03/29 14:17:06 taca Exp $
+@comment $NetBSD: PLIST,v 1.18 2014/06/10 00:36:20 taca Exp $
 ${FO_DIR}/application/application.php
 ${FO_DIR}/application/controllers/AccessController.class.php
 ${FO_DIR}/application/controllers/AccountController.class.php
@@ -39,6 +39,7 @@ ${FO_DIR}/application/controllers/WebpageController.class.php
 ${FO_DIR}/application/controllers/WidgetController.class.php
 ${FO_DIR}/application/cron_functions.php
 ${FO_DIR}/application/functions.php
+${FO_DIR}/application/helpers/add_object_to_sharing_table.php
 ${FO_DIR}/application/helpers/application.php
 ${FO_DIR}/application/helpers/breadcrumbs.php
 ${FO_DIR}/application/helpers/calendar.php
@@ -122,6 +123,8 @@ ${FO_DIR}/application/models/config_handlers/complex/InitialWorkspaceConfigHandl
 ${FO_DIR}/application/models/config_handlers/complex/LocalizationConfigHandler.class.php
 ${FO_DIR}/application/models/config_handlers/complex/MailDragDropPromptConfigHandler.class.php
 ${FO_DIR}/application/models/config_handlers/complex/MailTransportConfigHandler.class.php
+${FO_DIR}/application/models/config_handlers/complex/ManageableDimensionsConfigHandler.class.php
+${FO_DIR}/application/models/config_handlers/complex/MilestoneSelectorFilterConfigHandler.class.php
 ${FO_DIR}/application/models/config_handlers/complex/RememberGUIConfigHandler.class.php
 ${FO_DIR}/application/models/config_handlers/complex/RootDimensionsConfigHandler.class.php
 ${FO_DIR}/application/models/config_handlers/complex/SearchEngineConfigHandler.class.php
@@ -276,6 +279,14 @@ ${FO_DIR}/application/models/linked_objects/LinkedObject.class.php
 ${FO_DIR}/application/models/linked_objects/LinkedObjects.class.php
 ${FO_DIR}/application/models/linked_objects/base/BaseLinkedObject.class.php
 ${FO_DIR}/application/models/linked_objects/base/BaseLinkedObjects.class.php
+${FO_DIR}/application/models/member_custom_properties/MemberCustomProperties.class.php
+${FO_DIR}/application/models/member_custom_properties/MemberCustomProperty.class.php
+${FO_DIR}/application/models/member_custom_properties/base/BaseMemberCustomProperties.class.php
+${FO_DIR}/application/models/member_custom_properties/base/BaseMemberCustomProperty.class.php
+${FO_DIR}/application/models/member_custom_property_values/MemberCustomPropertyValue.class.php
+${FO_DIR}/application/models/member_custom_property_values/MemberCustomPropertyValues.class.php
+${FO_DIR}/application/models/member_custom_property_values/base/BaseMemberCustomPropertyValue.class.php
+${FO_DIR}/application/models/member_custom_property_values/base/BaseMemberCustomPropertyValues.class.php
 ${FO_DIR}/application/models/member_property_members/MemberPropertyMember.class.php
 ${FO_DIR}/application/models/member_property_members/MemberPropertyMembers.class.php
 ${FO_DIR}/application/models/member_property_members/base/BaseMemberPropertyMember.class.php
@@ -549,6 +560,7 @@ ${FO_DIR}/application/views/contact/user_card.php
 ${FO_DIR}/application/views/contact/vcard_import.php
 ${FO_DIR}/application/views/contact/view_company.php
 ${FO_DIR}/application/views/cron/getmails.php
+${FO_DIR}/application/views/custom_properties/member_custom_properties.php
 ${FO_DIR}/application/views/custom_properties/object_custom_properties.php
 ${FO_DIR}/application/views/custom_properties/view.php
 ${FO_DIR}/application/views/dashboard/activity_feed.php
@@ -571,7 +583,9 @@ ${FO_DIR}/application/views/dashboard/widget_messages.php
 ${FO_DIR}/application/views/dashboard/widget_pending_tasks.php
 ${FO_DIR}/application/views/dashboard/widget_workspace_description.php
 ${FO_DIR}/application/views/dashboard/widgets/pepe.php
+${FO_DIR}/application/views/dimension/components/default_view.php
 ${FO_DIR}/application/views/dimension/components/multiple_dimension_selector.php
+${FO_DIR}/application/views/dimension/components/small_view.php
 ${FO_DIR}/application/views/empty.php
 ${FO_DIR}/application/views/error/db_connect.php
 ${FO_DIR}/application/views/error/error_message.php
@@ -593,6 +607,7 @@ ${FO_DIR}/application/views/files/add_file_revision.php
 ${FO_DIR}/application/views/files/add_folder.php
 ${FO_DIR}/application/views/files/add_presentation.php
 ${FO_DIR}/application/views/files/add_spreadsheet.php
+${FO_DIR}/application/views/files/add_weblink.php
 ${FO_DIR}/application/views/files/download_file.php
 ${FO_DIR}/application/views/files/empty.php
 ${FO_DIR}/application/views/files/fckImagesBrowser.php
@@ -703,6 +718,8 @@ ${FO_DIR}/application/views/tool/translate.php
 ${FO_DIR}/application/views/webpage/add.php
 ${FO_DIR}/application/views/webpage/view.php
 ${FO_DIR}/application/views/webpage/view_content.php
+${FO_DIR}/application/widgets/active_context_info/index.php
+${FO_DIR}/application/widgets/active_context_info/template.php
 ${FO_DIR}/application/widgets/activity_feed/index.php
 ${FO_DIR}/application/widgets/activity_feed/template.php
 ${FO_DIR}/application/widgets/calendar/index.php
@@ -975,6 +992,28 @@ ${FO_DIR}/language/es_la/site_interface.php
 ${FO_DIR}/language/es_la/slimey.js
 ${FO_DIR}/language/es_la/timezones.php
 ${FO_DIR}/language/es_la/upgrade.php
+${FO_DIR}/language/fr_ca.php
+${FO_DIR}/language/fr_ca/_config.php
+${FO_DIR}/language/fr_ca/actions.php
+${FO_DIR}/language/fr_ca/administration.php
+${FO_DIR}/language/fr_ca/calendar.php
+${FO_DIR}/language/fr_ca/countries.php
+${FO_DIR}/language/fr_ca/emails.php
+${FO_DIR}/language/fr_ca/errors.php
+${FO_DIR}/language/fr_ca/export.php
+${FO_DIR}/language/fr_ca/fields.php
+${FO_DIR}/language/fr_ca/general.php
+${FO_DIR}/language/fr_ca/help.php
+${FO_DIR}/language/fr_ca/help/dummy.txt
+${FO_DIR}/language/fr_ca/lang.js
+${FO_DIR}/language/fr_ca/messages.php
+${FO_DIR}/language/fr_ca/objects.php
+${FO_DIR}/language/fr_ca/project_interface.php
+${FO_DIR}/language/fr_ca/reporting.php
+${FO_DIR}/language/fr_ca/site_interface.php
+${FO_DIR}/language/fr_ca/slimey.js
+${FO_DIR}/language/fr_ca/timezones.php
+${FO_DIR}/language/fr_ca/upgrade.php
 ${FO_DIR}/language/fr_fr.php
 ${FO_DIR}/language/fr_fr/_config.php
 ${FO_DIR}/language/fr_fr/actions.php
@@ -1276,6 +1315,7 @@ ${FO_DIR}/language/tr_tr/_config.php
 ${FO_DIR}/language/tr_tr/actions.php
 ${FO_DIR}/language/tr_tr/administration.php
 ${FO_DIR}/language/tr_tr/calendar.php
+${FO_DIR}/language/tr_tr/countries.php
 ${FO_DIR}/language/tr_tr/emails.php
 ${FO_DIR}/language/tr_tr/errors.php
 ${FO_DIR}/language/tr_tr/fields.php
@@ -2301,9 +2341,6 @@ ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/URI.M
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/URI.MungeSecretKey.txt
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/URI.OverrideAllowedSchemes.txt
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/info.ini
-${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/DefinitionCache/Serializer/CSS/4.1.1,801ad73acbcf9d3127e1d01768d26453,1.ser
-${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/DefinitionCache/Serializer/HTML/4.1.1,ddc9b993d7fc8d4a185e8dbf5b9a0996,1.ser
-${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/DefinitionCache/Serializer/URI/4.1.1,05c766101e813c246917b022f97b5e6e,1.ser
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/DefinitionCache/Serializer/dummy.php
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/EntityLookup/entities.ser
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/Filter/ExtractStyleBlocks.php
@@ -3064,6 +3101,8 @@ ${FO_DIR}/plugins/core_dimensions/language/es_es/lang.js
 ${FO_DIR}/plugins/core_dimensions/language/es_es/lang.php
 ${FO_DIR}/plugins/core_dimensions/language/es_la/lang.js
 ${FO_DIR}/plugins/core_dimensions/language/es_la/lang.php
+${FO_DIR}/plugins/core_dimensions/language/fr_ca/lang.js
+${FO_DIR}/plugins/core_dimensions/language/fr_ca/lang.php
 ${FO_DIR}/plugins/core_dimensions/language/fr_fr/lang.js
 ${FO_DIR}/plugins/core_dimensions/language/fr_fr/lang.php
 ${FO_DIR}/plugins/core_dimensions/language/hr_hr/lang.js
@@ -3162,6 +3201,8 @@ ${FO_DIR}/plugins/mail/language/es_es/lang.js
 ${FO_DIR}/plugins/mail/language/es_es/lang.php
 ${FO_DIR}/plugins/mail/language/es_la/lang.js
 ${FO_DIR}/plugins/mail/language/es_la/lang.php
+${FO_DIR}/plugins/mail/language/fr_ca/lang.js
+${FO_DIR}/plugins/mail/language/fr_ca/lang.php
 ${FO_DIR}/plugins/mail/language/fr_fr/lang.js
 ${FO_DIR}/plugins/mail/language/fr_fr/lang.php
 ${FO_DIR}/plugins/mail/language/hr_hr/lang.js
@@ -3236,6 +3277,8 @@ ${FO_DIR}/plugins/workspaces/language/es_es/lang.js
 ${FO_DIR}/plugins/workspaces/language/es_es/lang.php
 ${FO_DIR}/plugins/workspaces/language/es_la/lang.js
 ${FO_DIR}/plugins/workspaces/language/es_la/lang.php
+${FO_DIR}/plugins/workspaces/language/fr_ca/lang.js
+${FO_DIR}/plugins/workspaces/language/fr_ca/lang.php
 ${FO_DIR}/plugins/workspaces/language/fr_fr/lang.js
 ${FO_DIR}/plugins/workspaces/language/fr_fr/lang.php
 ${FO_DIR}/plugins/workspaces/language/hr_hr/lang.js
@@ -4508,6 +4551,7 @@ ${FO_DIR}/public/assets/javascript/og/CalendarFunctions.js
 ${FO_DIR}/public/assets/javascript/og/CalendarManager.js
 ${FO_DIR}/public/assets/javascript/og/CalendarPrint.js
 ${FO_DIR}/public/assets/javascript/og/CalendarToolbar.js
+${FO_DIR}/public/assets/javascript/og/ContactCombo.js
 ${FO_DIR}/public/assets/javascript/og/ContactManager.js
 ${FO_DIR}/public/assets/javascript/og/ContentPanel.js
 ${FO_DIR}/public/assets/javascript/og/ContentPanelLayout.js
@@ -5556,6 +5600,7 @@ ${FO_DIR}/public/upgrade/scripts/BondiolaUpgradeScript.class.php
 ${FO_DIR}/public/upgrade/scripts/ChinchulinUpgradeScript.class.php
 ${FO_DIR}/public/upgrade/scripts/ChivitoUpgradeScript.class.php
 ${FO_DIR}/public/upgrade/scripts/ChorizoUpgradeScript.class.php
+${FO_DIR}/public/upgrade/scripts/ChotoUpgradeScript.class.php
 ${FO_DIR}/public/upgrade/scripts/ChurroUpgradeScript.class.php
 ${FO_DIR}/public/upgrade/scripts/DulceDeLecheUpgradeScript.class.php
 ${FO_DIR}/public/upgrade/scripts/EmpanadaUpgradeScript.class.php
@@ -5589,6 +5634,7 @@ ${FO_DIR}/public/upgrade/templates/db_migration/2_2_pamplona.php
 ${FO_DIR}/public/upgrade/templates/db_migration/2_3_chorizo.php
 ${FO_DIR}/public/upgrade/templates/db_migration/2_4_morcilla.php
 ${FO_DIR}/public/upgrade/templates/db_migration/2_5_vacio.php
+${FO_DIR}/public/upgrade/templates/db_migration/2_6_choto.php
 ${FO_DIR}/public/upgrade/templates/installed_version.php
 ${FO_DIR}/public/upgrade/templates/layout.php
 ${FO_DIR}/public/webservices/FilesServices.php
