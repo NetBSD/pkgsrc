@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:00:15 joerg Exp $
-lib/httpd/mod_auth_pg.so
-share/doc/mod_auth_pg/README
-share/doc/mod_auth_pg/README.ko
-share/doc/mod_auth_pg/mod_auth_pg.html
-share/doc/mod_auth_pg/mod_auth_pg.ko.html
-share/examples/mod_auth_pg/mod_auth_pg.htaccess
-share/examples/mod_auth_pg/mod_auth_pg.sql

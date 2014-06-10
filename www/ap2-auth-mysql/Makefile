@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2013/03/28 21:40:50 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2014/06/10 15:22:17 joerg Exp $
 #
 
 DISTNAME=		mod_auth_mysql.c
@@ -23,7 +23,7 @@ NO_CONFIGURE=		yes
 APACHE_MODULE_NAME=	mod_auth_mysql
 DOC_DIR=		${PREFIX}/share/doc/${APACHE_MODULE_NAME}
 
-PKG_APACHE_ACCEPTED=	apache2 apache22
+PKG_APACHE_ACCEPTED=	apache22
 
 INSTALLATION_DIRS+=	${DOC_DIR} lib/httpd
 

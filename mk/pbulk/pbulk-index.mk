@@ -1,4 +1,4 @@
-#	$NetBSD: pbulk-index.mk,v 1.19 2013/10/30 06:18:34 dholland Exp $
+#	$NetBSD: pbulk-index.mk,v 1.20 2014/06/10 15:22:14 joerg Exp $
 
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to the parallel bulk build
@@ -78,7 +78,7 @@ pbulk-index: pbulk-index-item
 # Use an ODE for loop to compute the carthesian product of
 # the support settings.  This expands to something like
 #
-#	for apache in apache13 apache2; do \
+#	for apache in apache22 apache24; do \
 #		_PBULK_MULTI_VALUE.apache=$apache; \
 #		export _PBULK_MULTI_VALUE.apache; \
 #		PKG_APACHE=$apache; \

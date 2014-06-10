@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/03/20 19:59:21 joerg Exp $
-
-SHA1 (AuthPG-1.4.tar.gz) = 06c73b8ea8b5e6145e351d5575d26eef4527532e
-RMD160 (AuthPG-1.4.tar.gz) = 7fcfeb2ff1321f7bf128321f54da8210e04bc1be
-Size (AuthPG-1.4.tar.gz) = 12681 bytes
-SHA1 (patch-aa) = 4654bae71c324c9614c3c8334717d8638c57ac42

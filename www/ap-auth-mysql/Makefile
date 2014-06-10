@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2013/03/28 21:40:50 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2014/06/10 15:22:14 joerg Exp $
 #
 
 DISTNAME=		mod-auth-mysql_4.3.9.orig
@@ -12,7 +12,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://packages.debian.org/sid/libapache2-mod-auth-mysql
 COMMENT=		Module to allow apache authentication against a MySQL database
 
-PKG_APACHE_ACCEPTED=	apache2 apache22
+PKG_APACHE_ACCEPTED=	apache22
 
 CONFLICTS=	ap-auth-mysql-[0-9]*
 
@@ -27,11 +27,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME:S/.orig//:S/_/-/}
 
 .include "../../mk/apache.mk"
 
-.if ${PKG_APACHE} == "apache13"
-CONFIGURE_ARGS+=	--enable-apache13 --disable-apache2
-.else
 CONFIGURE_ARGS+=	--disable-apache13 --enable-apache2
-.endif
 
 APACHE_MODULE=		YES
 APACHE_MODULE_NAME=	mod_auth_mysql.so

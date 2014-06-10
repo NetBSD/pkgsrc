@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/02/18 15:34:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2014/06/10 15:22:17 joerg Exp $
 
 DISTNAME=	tomcat-connectors-${JK_VERSION}-src
 PKGNAME=	${APACHE_PKG_PREFIX}-jk-${JK_VERSION}
@@ -6,7 +6,7 @@ PKGNAME=	${APACHE_PKG_PREFIX}-jk-${JK_VERSION}
 MAKE_PARAMS+=		USE_APXS=1
 MAKE_PARAMS+=		WITH_APXS=${APXS}
 
-PKG_APACHE_ACCEPTED=	apache2 apache22 apache24
+PKG_APACHE_ACCEPTED=	apache22 apache24
 
 INSTALLATION_DIRS+=	lib/httpd
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2014/03/07 15:58:27 adam Exp $
+# $NetBSD: Makefile,v 1.19 2014/06/10 15:22:17 joerg Exp $
 
 DISTNAME=	suphp-0.7.2
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME}
@@ -27,7 +27,7 @@ EGDIR=			${PREFIX}/share/examples/suphp
 CONF_FILES=		${EGDIR}/suphp.conf ${PKG_SYSCONFDIR}/suphp.conf
 
 USE_APR=		yes
-PKG_APACHE_ACCEPTED=	apache2 apache22
+PKG_APACHE_ACCEPTED=	apache22
 
 SUBST_CLASSES+=		suphp
 SUBST_STAGE.suphp=	post-configure

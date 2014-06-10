@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/05/29 23:38:10 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2014/06/10 15:22:19 joerg Exp $
 
 DISTNAME=	Kwiki-ModPerl-0.09
 PKGNAME=	p5-${DISTNAME}
@@ -15,10 +15,6 @@ DEPENDS+=	p5-Kwiki>=0.38:../../www/p5-Kwiki
 PERL5_PACKLIST=		auto/Kwiki/ModPerl/.packlist
 
 .include "../../mk/apache.mk"
-.if ${PKG_APACHE} == "apache13"
-.include "../../www/ap-perl/buildlink3.mk"
-.else
 .include "../../www/ap2-perl/buildlink3.mk"
-.endif
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
