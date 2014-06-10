@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2012/10/28 06:30:03 asau Exp $
+# $NetBSD: Makefile,v 1.37 2014/06/10 14:21:37 joerg Exp $
 
 DISTNAME=	AuthPG-1.4
 PKGNAME=	ap13-auth-postgresql-1.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=authpg/}
 
