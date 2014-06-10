@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2273 2014/06/10 13:17:54 joerg Exp $
+$NetBSD: CHANGES-2014,v 1.2274 2014/06/10 13:41:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3070,3 +3070,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-django14 to 1.4.13 [joerg 2014-06-10]
 	Updated math/py-networkx to 1.8.1 [wen 2014-06-10]
 	Updated security/openpam to 20130907 [joerg 2014-06-10]
+	Updated net/gupnp-av to 0.12.6 [wiz 2014-06-10]
