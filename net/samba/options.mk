@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.30 2012/08/19 07:28:36 sbd Exp $
+# $NetBSD: options.mk,v 1.31 2014/06/10 16:45:49 joerg Exp $
 
 # Recommended package options for various setups:
 #
@@ -100,10 +100,11 @@ CONFIGURE_ARGS+=	--without-ldap
 ###
 PLIST_VARS+=		pam
 .if !empty(PKG_OPTIONS:Mpam)
-.  include "../../security/PAM/module.mk"
+.  include "../../mk/pam.buildlink3.mk"
+
 CONFIGURE_ARGS+=	--with-pam
 CONFIGURE_ARGS+=	--with-pam_smbpass
-CONFIGURE_ARGS+=	--with-pammodulesdir=${PAM_INSTMODULEDIR}
+CONFIGURE_ARGS+=	--with-pammodulesdir=${PREFIX}/lib/security
 PLIST.pam=		yes
 INSTALLATION_DIRS+=	${EGDIR}/pam_smbpass
 
