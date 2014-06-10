@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2268 2014/06/09 23:49:15 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2269 2014/06/10 03:48:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3065,3 +3065,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Kwiki-Archive-Rcs to 0.16 [schmonz 2014-06-09]
 	Updated www/p5-LWPx-ParanoidAgent to 1.10 [schmonz 2014-06-09]
 	Updated www/p5-URI-Escape-XS to 0.12 [schmonz 2014-06-09]
+	Updated www/contao32 to 3.2.11 [taca 2014-06-10]
