@@ -1,4 +1,4 @@
-# $NetBSD: pam.buildlink3.mk,v 1.11 2009/03/20 19:25:01 joerg Exp $
+# $NetBSD: pam.buildlink3.mk,v 1.12 2014/06/10 13:52:57 joerg Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a PAM implementation.
@@ -9,20 +9,11 @@
 #	The preferred PAM implementation.
 #
 #	Possible: linux-pam openpam solaris-pam
-#	Default: (from the base system, fallback: linux-pam)
+#	Default: (from the base system, fallback: openpam)
 #
 # Package-settable variables:
 #
-# PAM_ACCEPTED
-#	The PAM implementations that this package can use.
-#
-#	Possible: (see PAM_DEFAULT)
-#	Default: all
-#
 # System-provided variables:
-#
-# PAM_TYPE
-#	The PAM implementation that will be used for this package.
 #
 # PAMBASE
 #	The directory where the PAM implementation is installed.
@@ -35,28 +26,16 @@ PAM_BUILDLINK3_MK:=	${PAM_BUILDLINK3_MK}+
 .if !empty(PAM_BUILDLINK3_MK:M+)
 #
 # This is an exhaustive list of all of the PAM implementations
-# that may be used with PAM.buildlink3.mk, in order of precedence.
-#
-# OS conditionals can exclude implementations not available on
-# some platforms.
-#
-.if ${OPSYS} != "Interix"
-_PAM_PKGS+=	linux-pam
-.endif
+# that may be used with pam.buildlink3.mk, in order of precedence.
 
-.if ${OPSYS} != "Interix"
-_PAM_PKGS+=	openpam
-.endif
+_PAM_PKGS=	openpam linux-pam solaris-pam
 
-# builtin only, so no conditional needed
-_PAM_PKGS+=	solaris-pam
-
-BUILDLINK_BUILTIN_MK.linux-pam=		../../security/PAM/builtin.mk
+BUILDLINK_BUILTIN_MK.linux-pam=		../../mk/linux-pam.builtin.mk
 BUILDLINK_BUILTIN_MK.openpam=		../../security/openpam/builtin.mk
 BUILDLINK_BUILTIN_MK.solaris-pam=	../../mk/solaris-pam.builtin.mk
 
 # If we have a particular PAM implementation in the base system, then
-# default to using that PAM type.  Otherwise, default to "linux-pam".
+# default to using that PAM type.  Otherwise, default to "openpam".
 #
 .  for _pam_ in ${_PAM_PKGS}
 .    if exists(${BUILDLINK_BUILTIN_MK.${_pam_}})
@@ -69,32 +48,18 @@ PAM_DEFAULT?=	${_pam_}
 CHECK_BUILTIN.${_pam_}:=	no
 .    endif
 .  endfor
-PAM_DEFAULT?=	linux-pam
-PAM_ACCEPTED?=	${_PAM_PKGS}
+PAM_DEFAULT?=	openpam
 
-_PAM_DEFAULT=	${PAM_DEFAULT}
-_PAM_ACCEPTED=	${PAM_ACCEPTED}
-
-_PAM_TYPE?=	${_PAM_DEFAULT}
-
-.  if !empty(_PAM_ACCEPTED:M${_PAM_TYPE})
-PAM_TYPE=	${_PAM_TYPE}
-.  else
-PAM_TYPE=	none
-.  endif
-PAMBASE=	${BUILDLINK_PREFIX.${PAM_TYPE}}
+PAMBASE=	${BUILDLINK_PREFIX.${PAM_DEFAULT}}
 
 BUILD_DEFS+=		PAM_DEFAULT
-BUILD_DEFS_EFFECTS+=	PAMBASE PAM_TYPE
+BUILD_DEFS_EFFECTS+=	PAMBASE
 .endif	# PAM_BUILDLINK3_MK
 
-.if ${PAM_TYPE} == "none"
-PKG_FAIL_REASON=	\
-	"${_PAM_TYPE} is not an acceptable PAM type for ${PKGNAME}."
-.elif ${PAM_TYPE} == "linux-pam"
-.  include "../../security/PAM/buildlink3.mk"
-.elif ${PAM_TYPE} == "openpam"
-.  include "../../security/openpam/buildlink3.mk"
-.elif ${PAM_TYPE} == "solaris-pam"
+.if ${PAM_DEFAULT} == "openpam"
+.include "../../security/openpam/buildlink3.mk"
+.elif ${PAM_DEFAULT} == "linux-pam"
+BUILDLINK_TREE+=	linux-pam -linux-pam
+.elif ${PAM_DEFAULT} == "solaris-pam"
 BUILDLINK_TREE+=	solaris-pam -solaris-pam
 .endif
