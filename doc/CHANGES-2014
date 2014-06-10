@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2270 2014/06/10 03:57:38 taca Exp $
+$NetBSD: CHANGES-2014,v 1.2271 2014/06/10 11:58:24 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3067,3 +3067,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-URI-Escape-XS to 0.12 [schmonz 2014-06-09]
 	Updated www/contao32 to 3.2.11 [taca 2014-06-10]
 	Updated www/contao33 to 3.3.2 [taca 2014-06-10]
+	Updated www/py-django14 to 1.4.13 [joerg 2014-06-10]
