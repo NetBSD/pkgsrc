@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13392 2014/06/10 08:28:14 wiz Exp $
+$NetBSD: TODO,v 1.13393 2014/06/10 13:44:03 obache Exp $
 
 Suggested new packages
 ======================
@@ -396,6 +396,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o avidemux-2.6
 	o avl-2.0.3 [2.x is not source and binary compatible with 1.x]
 	o avr-binutils-2.24 [wip]
+	o avr-gcc-4.8.3 [pkg/48890]
 	o baci-20040415
 	o balance-3.56
 	o bbcim-1.0
