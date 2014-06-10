@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2014/05/29 23:38:17 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2014/06/10 15:22:19 joerg Exp $
 
 DISTNAME=	libapreq2-2.12
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://httpd.apache.org/apreq/
 COMMENT=	Lots of Apache specific httpd handling modules
 LICENSE=	apache-2.0
-
-PKG_APACHE_ACCEPTED=	apache2 apache22
 
 DEPENDS+=	p5-ExtUtils-XSBuilder>=0.23:../../devel/p5-ExtUtils-XSBuilder
 

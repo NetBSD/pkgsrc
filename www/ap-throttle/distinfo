@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/01/02 21:29:36 joerg Exp $
-
-SHA1 (mod_throttle312.tgz) = a813beb97d4a23f467e07bcc24d9464d2ee91ef5
-RMD160 (mod_throttle312.tgz) = 81a45042d96f01f423b934cf70930c7561e8eb51
-Size (mod_throttle312.tgz) = 41397 bytes
-SHA1 (patch-aa) = 183974becac517d2f95c1bdc073b07d0a9927baf

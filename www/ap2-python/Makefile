@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2014/02/23 11:40:00 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2014/06/10 15:22:17 joerg Exp $
 
 DISTNAME=	mod_python-3.5.0
 PKGNAME=	${APACHE_PKG_PREFIX}-${PYPKGPREFIX}-${DISTNAME:S/mod_//}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.modpython.org/
 COMMENT=	Apache module that embeds the Python interpreter
 LICENSE=	apache-2.0
 
-PKG_APACHE_ACCEPTED=	apache2 apache22 apache24
+PKG_APACHE_ACCEPTED=	apache22 apache24
 
 MAKE_JOBS_SAFE=		no
 

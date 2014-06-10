@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.13 2010/02/20 14:58:46 joerg Exp $
+# $NetBSD: module.mk,v 1.14 2014/06/10 15:22:18 joerg Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install apache modules.
@@ -41,13 +41,6 @@ apache-module-build:
 
 do-build: apache-module-build
 
-.if !defined(PKG_APACHE) || ${PKG_APACHE} == "apache13"
-.PHONY: apache-module-install
-apache-module-install:
-	${INSTALL_LIB_DIR} ${APACHE_MODULE_DESTDIR}
-	${INSTALL_LIB} ${APACHE_MODULE_SRCDIR}/${APACHE_MODULE_NAME} \
-	    ${APACHE_MODULE_DESTDIR}
-.else
 .PHONY: apache-module-install
 apache-module-install:
 	${INSTALL_LIB_DIR} ${APACHE_MODULE_DESTDIR}
@@ -55,7 +48,6 @@ apache-module-install:
 	    SH_LIBTOOL=${PREFIX}/share/httpd/build/libtool \
 	    ${APACHE_MODULE_SRCDIR}/${APACHE_MODULE_NAME} \
 	    ${APACHE_MODULE_DESTDIR}
-.endif
 
 do-install: apache-module-install
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/28 06:30:05 asau Exp $
+# $NetBSD: Makefile,v 1.10 2014/06/10 15:22:16 joerg Exp $
 #
 
 DISTNAME=		mod_rpaf-0.5
@@ -16,7 +16,7 @@ APACHE_MODULE=		yes
 INSTALLATION_DIRS=	share/doc
 
 # does not compile with apache24
-PKG_APACHE_ACCEPTED=	apache13 apache2 apache22
+PKG_APACHE_ACCEPTED=	apache22
 
 .include "../../mk/apache.mk"
 
@@ -28,14 +28,10 @@ INSTALLATION_DIRS+=	share/doc/mod_rpaf
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/mod_rpaf.txt
 
-.if ${PKG_APACHE} == "apache13"
-MODULE_EXT=	so
-.else
 MODULE_EXT=	la
 do-configure:
 	${RM} -f ${WRKSRC}/mod_rpaf.c
 	${CP} -f ${WRKSRC}/mod_rpaf-2.0.c ${WRKSRC}/mod_rpaf.c
-.endif
 
 .include "../../www/apache/module.mk"
 .include "../../mk/bsd.pkg.mk"

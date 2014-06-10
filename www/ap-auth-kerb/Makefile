@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/28 06:30:02 asau Exp $
+# $NetBSD: Makefile,v 1.10 2014/06/10 15:22:14 joerg Exp $
 
 DISTNAME=	mod_auth_kerb-5.4
 PKGNAME=	${DISTNAME:S/mod/${APACHE_PKG_PREFIX}/:S/_/-/g}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://modauthkerb.sourceforge.net/
 COMMENT=	Module to allow Apache authentication using Kerberos
 LICENSE=	modified-bsd
 
-PKG_APACHE_ACCEPTED=	apache2 apache22
+PKG_APACHE_ACCEPTED=	apache22
 
 CONFLICTS=	ap-auth-kerb-[0-9]*
 

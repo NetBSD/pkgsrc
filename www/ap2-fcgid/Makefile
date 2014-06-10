@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/03/06 15:04:53 prlw1 Exp $
+# $NetBSD: Makefile,v 1.11 2014/06/10 15:22:17 joerg Exp $
 
 DISTNAME=	mod_fcgid-2.3.9
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://httpd.apache.org/mod_fcgid/
 COMMENT=	High performance alternative to mod_cgi or mod_cgid
 LICENSE=	apache-2.0
 
-PKG_APACHE_ACCEPTED=	apache2 apache22 apache24
+PKG_APACHE_ACCEPTED=	apache22 apache24
 APACHE_MODULE=		YES
 USE_LIBTOOL=		YES
 

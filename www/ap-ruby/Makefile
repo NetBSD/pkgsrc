@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2012/10/28 06:30:05 asau Exp $
+# $NetBSD: Makefile,v 1.38 2014/06/10 15:22:16 joerg Exp $
 #
 
 DISTNAME=	mod_ruby-${VERSION}
@@ -14,7 +14,7 @@ COMMENT=	Apache module that embeds Ruby interpreter within
 RUBY_VERSION_SUPPORTED= 18
 
 APACHE_MODULE=		yes
-PKG_APACHE_ACCEPTED=	apache13 apache2 apache22
+PKG_APACHE_ACCEPTED=	apache22
 USE_APR=		yes
 VERSION=		1.3.0
 HAS_CONFIGURE=  	yes
