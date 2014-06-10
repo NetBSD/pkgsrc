@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.6 2008/06/19 15:02:17 taca Exp $
+$NetBSD: MESSAGE,v 1.7 2014/06/10 15:06:56 joerg Exp $
 
 In order to use this module in your Apache installation, you need to
 add the following to your httpd.conf file:
@@ -9,7 +9,7 @@ add the following to your httpd.conf file:
 You may also need to create a htpasswd file, if you introduce basic
 authentication.
 
-Note for apache2 (and lator):
+Note for apache2 (and later):
 
 * Some methods are not implemented because of different API.
 
