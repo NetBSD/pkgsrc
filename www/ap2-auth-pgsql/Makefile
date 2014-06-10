@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2014/06/10 14:21:37 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2014/06/10 15:22:17 joerg Exp $
 
 DISTNAME=		mod_auth_pgsql-2.0.3
 PKGNAME=		${APACHE_PKG_PREFIX}-auth-pgsql-2.0.3
@@ -15,7 +15,7 @@ CONFLICTS=		ap-auth-postgresql-*
 APACHE_MODULE=		yes
 APACHE_MODULE_NAME=	mod_auth_pgsql.la
 
-PKG_APACHE_ACCEPTED=	apache2 apache22
+PKG_APACHE_ACCEPTED=	apache22
 
 .include "../../mk/apache.mk"
 .include "../../www/apache/module.mk"

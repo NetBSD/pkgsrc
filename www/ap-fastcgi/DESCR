@@ -5,5 +5,5 @@ processes running between requests.  So, unlike CGI, you do not have the
 overhead of starting up a new process and doing application initialization
 (e.g. connecting to a database) each time somebody requests a document.
 
-This package works with Apache version 1.3 series.  In order to use FastCGI
-with the version 2 series, use www/ap2-fastcgi instead.
+This package works with Apache version 2 series.  In order to use FastCGI
+with the version 1.3 series, use www/ap-fastcgi instead.
