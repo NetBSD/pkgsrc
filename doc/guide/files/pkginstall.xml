@@ -1,4 +1,4 @@
-<!-- $NetBSD: pkginstall.xml,v 1.18 2014/06/01 16:42:45 wiz Exp $ -->
+<!-- $NetBSD: pkginstall.xml,v 1.19 2014/06/10 15:09:42 joerg Exp $ -->
 
 <chapter id="pkginstall"> <?dbhtml filename="pkginstall.html"?>
 <title>The pkginstall framework</title>
@@ -219,7 +219,7 @@ set based upon the following variables:</para>
     <filename>Makefile</filename> (i.e., it is not user-customizable).</para>
 
     <para>As an example, consider the Apache package,
-    <filename role="pkg">www/apache2</filename>, which places its
+    <filename role="pkg">www/apache24</filename>, which places its
     configuration files under the
     <filename>httpd/</filename> subdirectory of
     <varname>PKG_SYSCONFBASE</varname>.  This should be set in the package
