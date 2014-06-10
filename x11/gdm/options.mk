@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2012/06/12 15:46:04 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2014/06/10 13:53:47 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gdm
 PKG_SUPPORTED_OPTIONS=	consolekit inet6 pam
@@ -25,7 +25,7 @@ PLIST_VARS+=		pam
 .if !empty(PKG_OPTIONS:Mpam)
 .  include "../../mk/pam.buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-authentication-scheme=pam
-.  if ${PAM_TYPE} == "linux-pam"
+.  if ${PAM_DEFAULT} == "linux-pam"
 PLIST.pam=		yes
 .  endif
 .elif exists(/etc/shadow)
