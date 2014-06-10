@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.516 2014/06/03 14:54:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.517 2014/06/10 13:54:30 joerg Exp $
 #
 
 COMMENT=	Security tools
@@ -11,7 +11,6 @@ SUBDIR+=	HElib
 SUBDIR+=	KeePass
 SUBDIR+=	MyPasswordSafe
 SUBDIR+=	PACK
-SUBDIR+=	PAM
 SUBDIR+=	PortableSigner
 SUBDIR+=	TweetNaCl
 SUBDIR+=	aide
