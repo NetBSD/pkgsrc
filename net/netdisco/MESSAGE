@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2005/05/25 17:06:49 bouyer Exp $
+$NetBSD: MESSAGE,v 1.2 2014/06/10 15:22:14 joerg Exp $
 
 Here is a summary of the steps needed to complete the netdisco setup.
 Please look at the documentation in ${PREFIX}/doc/ for details.
@@ -22,8 +22,8 @@ Please look at the documentation in ${PREFIX}/doc/ for details.
   can be inclued in the httpd.conf to make netdisco available though
   http://your.host.name/netdisco/
   You will have to set the database password in netdisco_apache_dir.conf.
-  If you are using apache2, make sure you load mod_apreq.so in addition
-  to mod_perl.so, and that you have "PerlModule Apache::compat"
+  Make sure you load mod_apreq.so in addition to mod_perl.so, and that
+  you have "PerlModule Apache::compat"
 - Make netdisco discover one of your devices:
   ${PREFIX}/netdisco/netdisco -d devicename
 - Make netdisco discover your network topology, if supported by your

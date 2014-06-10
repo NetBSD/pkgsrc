@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/01/01 11:52:37 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2014/06/10 15:22:17 joerg Exp $
 #
 
 DISTNAME=	mod_transform-0.4.0
@@ -16,7 +16,7 @@ USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-PKG_APACHE_ACCEPTED=	apache2 apache22
+PKG_APACHE_ACCEPTED=	apache22
 
 CONFIGURE_ARGS+=	--with-apxs=${APXS:Q}
 
