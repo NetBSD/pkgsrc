@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2279 2014/06/10 14:48:10 joerg Exp $
+$NetBSD: CHANGES-2014,v 1.2280 2014/06/10 14:49:34 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3076,3 +3076,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Removed devel/apr0 [joerg 2014-06-10]
 	Removed www/apache2 [joerg 2014-06-10]
 	Removed www/apache [joerg 2014-06-10]
+	Removed www/p5-Apache-AuthCookie [joerg 2014-06-10]
