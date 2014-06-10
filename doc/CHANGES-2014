@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2275 2014/06/10 13:54:29 joerg Exp $
+$NetBSD: CHANGES-2014,v 1.2276 2014/06/10 13:55:21 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3072,3 +3072,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/openpam to 20130907 [joerg 2014-06-10]
 	Updated net/gupnp-av to 0.12.6 [wiz 2014-06-10]
 	Removed security/PAM [joerg 2014-06-10]
+	Updated pkgtools/pkglint to 4.141 [joerg 2014-06-10]
