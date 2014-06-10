@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/07/13 14:00:32 wen Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/06/10 12:04:58 wen Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/networkx/__init__.py
 ${PYSITELIB}/networkx/__init__.pyc
@@ -156,6 +156,9 @@ ${PYSITELIB}/networkx/algorithms/centrality/eigenvector.pyo
 ${PYSITELIB}/networkx/algorithms/centrality/flow_matrix.py
 ${PYSITELIB}/networkx/algorithms/centrality/flow_matrix.pyc
 ${PYSITELIB}/networkx/algorithms/centrality/flow_matrix.pyo
+${PYSITELIB}/networkx/algorithms/centrality/katz.py
+${PYSITELIB}/networkx/algorithms/centrality/katz.pyc
+${PYSITELIB}/networkx/algorithms/centrality/katz.pyo
 ${PYSITELIB}/networkx/algorithms/centrality/load.py
 ${PYSITELIB}/networkx/algorithms/centrality/load.pyc
 ${PYSITELIB}/networkx/algorithms/centrality/load.pyo
@@ -186,6 +189,9 @@ ${PYSITELIB}/networkx/algorithms/centrality/tests/test_degree_centrality.pyo
 ${PYSITELIB}/networkx/algorithms/centrality/tests/test_eigenvector_centrality.py
 ${PYSITELIB}/networkx/algorithms/centrality/tests/test_eigenvector_centrality.pyc
 ${PYSITELIB}/networkx/algorithms/centrality/tests/test_eigenvector_centrality.pyo
+${PYSITELIB}/networkx/algorithms/centrality/tests/test_katz_centrality.py
+${PYSITELIB}/networkx/algorithms/centrality/tests/test_katz_centrality.pyc
+${PYSITELIB}/networkx/algorithms/centrality/tests/test_katz_centrality.pyo
 ${PYSITELIB}/networkx/algorithms/centrality/tests/test_load_centrality.py
 ${PYSITELIB}/networkx/algorithms/centrality/tests/test_load_centrality.pyc
 ${PYSITELIB}/networkx/algorithms/centrality/tests/test_load_centrality.pyo
@@ -246,6 +252,21 @@ ${PYSITELIB}/networkx/algorithms/components/tests/test_weakly_connected.pyo
 ${PYSITELIB}/networkx/algorithms/components/weakly_connected.py
 ${PYSITELIB}/networkx/algorithms/components/weakly_connected.pyc
 ${PYSITELIB}/networkx/algorithms/components/weakly_connected.pyo
+${PYSITELIB}/networkx/algorithms/connectivity/__init__.py
+${PYSITELIB}/networkx/algorithms/connectivity/__init__.pyc
+${PYSITELIB}/networkx/algorithms/connectivity/__init__.pyo
+${PYSITELIB}/networkx/algorithms/connectivity/connectivity.py
+${PYSITELIB}/networkx/algorithms/connectivity/connectivity.pyc
+${PYSITELIB}/networkx/algorithms/connectivity/connectivity.pyo
+${PYSITELIB}/networkx/algorithms/connectivity/cuts.py
+${PYSITELIB}/networkx/algorithms/connectivity/cuts.pyc
+${PYSITELIB}/networkx/algorithms/connectivity/cuts.pyo
+${PYSITELIB}/networkx/algorithms/connectivity/tests/test_connectivity.py
+${PYSITELIB}/networkx/algorithms/connectivity/tests/test_connectivity.pyc
+${PYSITELIB}/networkx/algorithms/connectivity/tests/test_connectivity.pyo
+${PYSITELIB}/networkx/algorithms/connectivity/tests/test_cuts.py
+${PYSITELIB}/networkx/algorithms/connectivity/tests/test_cuts.pyc
+${PYSITELIB}/networkx/algorithms/connectivity/tests/test_cuts.pyo
 ${PYSITELIB}/networkx/algorithms/core.py
 ${PYSITELIB}/networkx/algorithms/core.pyc
 ${PYSITELIB}/networkx/algorithms/core.pyo
@@ -577,12 +598,12 @@ ${PYSITELIB}/networkx/external/__init__.pyo
 ${PYSITELIB}/networkx/external/decorator/__init__.py
 ${PYSITELIB}/networkx/external/decorator/__init__.pyc
 ${PYSITELIB}/networkx/external/decorator/__init__.pyo
-${PYSITELIB}/networkx/external/decorator/_decorator.py
-${PYSITELIB}/networkx/external/decorator/_decorator.pyc
-${PYSITELIB}/networkx/external/decorator/_decorator.pyo
-${PYSITELIB}/networkx/external/decorator/_decorator3.py
-${PYSITELIB}/networkx/external/decorator/_decorator3.pyc
-${PYSITELIB}/networkx/external/decorator/_decorator3.pyo
+${PYSITELIB}/networkx/external/decorator/decorator2/__init__.py
+${PYSITELIB}/networkx/external/decorator/decorator2/__init__.pyc
+${PYSITELIB}/networkx/external/decorator/decorator2/__init__.pyo
+${PYSITELIB}/networkx/external/decorator/decorator2/_decorator2.py
+${PYSITELIB}/networkx/external/decorator/decorator2/_decorator2.pyc
+${PYSITELIB}/networkx/external/decorator/decorator2/_decorator2.pyo
 ${PYSITELIB}/networkx/generators/__init__.py
 ${PYSITELIB}/networkx/generators/__init__.pyc
 ${PYSITELIB}/networkx/generators/__init__.pyo
@@ -697,9 +718,9 @@ ${PYSITELIB}/networkx/linalg/spectrum.pyo
 ${PYSITELIB}/networkx/linalg/tests/test_graphmatrix.py
 ${PYSITELIB}/networkx/linalg/tests/test_graphmatrix.pyc
 ${PYSITELIB}/networkx/linalg/tests/test_graphmatrix.pyo
-${PYSITELIB}/networkx/linalg/tests/test_laplaican.py
-${PYSITELIB}/networkx/linalg/tests/test_laplaican.pyc
-${PYSITELIB}/networkx/linalg/tests/test_laplaican.pyo
+${PYSITELIB}/networkx/linalg/tests/test_laplacian.py
+${PYSITELIB}/networkx/linalg/tests/test_laplacian.pyc
+${PYSITELIB}/networkx/linalg/tests/test_laplacian.pyo
 ${PYSITELIB}/networkx/linalg/tests/test_spectrum.py
 ${PYSITELIB}/networkx/linalg/tests/test_spectrum.pyc
 ${PYSITELIB}/networkx/linalg/tests/test_spectrum.pyo
