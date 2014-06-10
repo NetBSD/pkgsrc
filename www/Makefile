@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1043 2014/06/10 15:22:14 joerg Exp $
+# $NetBSD: Makefile,v 1.1044 2014/06/10 22:17:57 joerg Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -205,7 +205,6 @@ SUBDIR+=	p5-AnyEvent-HTTPD
 SUBDIR+=	p5-AnyEvent-ReverseHTTP
 SUBDIR+=	p5-AnyEvent-SCGI
 SUBDIR+=	p5-Apache-ASP
-SUBDIR+=	p5-Apache-AuthCookieDBI
 SUBDIR+=	p5-Apache-DBILogConfig
 SUBDIR+=	p5-Apache-DBILogger
 SUBDIR+=	p5-Apache-Filter

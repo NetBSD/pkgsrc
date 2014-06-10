@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2008/07/21 10:02:13 rhaen Exp $
-
-SHA1 (Apache-AuthCookieDBI-2.1.tar.gz) = 70b5627dc5ec281d4fcc6f0c77ac2a304f720ca0
-RMD160 (Apache-AuthCookieDBI-2.1.tar.gz) = 60a810cd5015de6bcb072c2d42467688b391b8ff
-Size (Apache-AuthCookieDBI-2.1.tar.gz) = 22696 bytes
