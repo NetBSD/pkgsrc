@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2014/05/29 23:37:20 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2014/06/10 13:17:42 joerg Exp $
 
-DISTNAME=	openpam-20071221
-PKGREVISION=	4
+DISTNAME=	openpam-20130907
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openpam/}
 
@@ -18,6 +17,8 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--without-pam-su
 CONFIGURE_ARGS+=	--with-pam-unix
 CONFIGURE_ARGS+=	--with-modules-dir=${PREFIX}/lib/security
+
+CPPFLAGS+=		-DSYSCONFDIR=\"$(PKG_SYSCONFDIR)\"
 
 OWN_DIRS=		${PKG_SYSCONFDIR}/pam.d
 
