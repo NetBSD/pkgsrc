@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/23 18:16:48 asau Exp $
+# $NetBSD: Makefile,v 1.6 2014/06/10 13:45:16 joerg Exp $
 
 DISTNAME=	pam-mkhomedir-1
 CATEGORIES=	security
@@ -39,7 +39,4 @@ CFLAGS+=		-DNO_STATIC_MODULES
 .endif
 
 .include "../../mk/pam.buildlink3.mk"
-.if "${PAM_TYPE}" == "linux-pam"
-PKG_FAIL_REASON+= "Disabled: The PAM mkhomedir module is included in the PAM package."
-.endif
 .include "../../mk/bsd.pkg.mk"
