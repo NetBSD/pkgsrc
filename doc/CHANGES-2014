@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2281 2014/06/10 15:13:56 joerg Exp $
+$NetBSD: CHANGES-2014,v 1.2282 2014/06/10 19:10:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3078,3 +3078,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Removed www/apache [joerg 2014-06-10]
 	Removed www/p5-Apache-AuthCookie [joerg 2014-06-10]
 	Updated pkgtools/pkglint to 4.142 [joerg 2014-06-10]
+	Updated sysutils/dbus to 1.8.4 [wiz 2014-06-10]
