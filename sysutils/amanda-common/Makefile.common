@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.38 2013/01/23 17:58:19 wiz Exp $
+# $NetBSD: Makefile.common,v 1.39 2014/06/10 15:51:37 gdt Exp $
 
 # used by sysutils/amanda-common/Makefile
 # used by sysutils/amanda-client/Makefile
@@ -51,6 +51,12 @@ USE_TOOLS+=		gmake pkg-config autoconf automake
 BUILD_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
 PERL5_CONFIGURE=	no
 AUTO_MKDIRS=		yes
+
+SUBST_CLASSES+=		bool
+SUBST_MESSAGE.bool=	Fix SWIG messing with stdbool.h.
+SUBST_STAGE.bool=	post-patch
+SUBST_FILES.bool=	perl/Amanda/*.c perl/Amanda/*/*.c
+SUBST_SED.bool=	-e '/undef bool/d'
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		ac_cv_path_GZIP=${TOOLS_GZIP_CMD:Q}
