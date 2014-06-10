@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2012/10/28 06:30:03 asau Exp $
+# $NetBSD: Makefile,v 1.17 2014/06/10 14:21:37 joerg Exp $
 
 DISTNAME=	mod_auth_pgsql-0.9.12
 PKGNAME=	ap13-auth-pgsql-0.9.12
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www databases
 MASTER_SITES=	http://www.giuseppetanzilli.it/mod_auth_pgsql/dist/
 
