@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.52 2014/04/15 08:37:55 wiz Exp $
+$NetBSD: distinfo,v 1.53 2014/06/10 19:45:17 wiz Exp $
 
 SHA1 (pcre-8.35.tar.bz2) = a10e0040475644bfc97f7d0c0556988acfc52c6f
 RMD160 (pcre-8.35.tar.bz2) = 85565cfb183fdef1408309b9f02d19c4d85ff458
 Size (pcre-8.35.tar.bz2) = 1522220 bytes
 SHA1 (patch-aa) = 02c03145827eaf5ce5d267836d0a4c5f6c00ba99
 SHA1 (patch-ab) = 2e680087b9b302cf2ba2fbafc758820dfd85d9e1
+SHA1 (patch-doc_pcredemo.3) = 90f9b3a021f58973149d839735d40c5e2e245912
