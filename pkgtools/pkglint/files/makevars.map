@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.249 2014/05/06 09:32:53 wiz Exp $
+# $NetBSD: makevars.map,v 1.250 2014/06/10 13:55:07 joerg Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -519,9 +519,7 @@ OWNER			Mail_Address [m:s,c:d]
 OWN_DIRS		List of Pathname [$package_list]
 OWN_DIRS_PERMS		List of ShellWord [$package_list]
 PAMBASE			Pathname [$system]
-PAM_ACCEPTED		List of { linux-pam openpam solaris-pam }
 PAM_DEFAULT		{ linux-pam openpam solaris-pam } [$user]
-PAM_TYPE		{ linux-pam openpam solaris-pam } [$system]
 PATCHDIR		RelativePkgPath [m:s,c:ds]
 PATCHFILES		List of Filename [$package_list]
 PATCH_ARGS		List of ShellWord
