@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2278 2014/06/10 14:47:53 joerg Exp $
+$NetBSD: CHANGES-2014,v 1.2279 2014/06/10 14:48:10 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3075,3 +3075,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated pkgtools/pkglint to 4.141 [joerg 2014-06-10]
 	Removed devel/apr0 [joerg 2014-06-10]
 	Removed www/apache2 [joerg 2014-06-10]
+	Removed www/apache [joerg 2014-06-10]
