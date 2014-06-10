@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2014/05/29 23:37:05 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2014/06/10 15:22:14 joerg Exp $
 #
 
 DISTNAME=		netdisco-1.1_with_mibs
@@ -115,17 +115,10 @@ RCD_SCRIPT_SRC.netdisco=	${WRKSRC:Q}/bin/netdisco_daemon
 
 .include "../../mk/apache.mk"
 
-.if ${PKG_APACHE} == "apache13"
-SUBST_STAGE.apachevers=	pre-configure
-SUBST_FILES.apachevers=	netdisco_apache.conf
-SUBST_SED.apachevers=	-e "s|@APACHE2@|\#uncomment for apache2|g"
-SUBST_MESSAGE.apachevers= Fixing config files for apache-1.3
-.elif ${PKG_APACHE} == "apache2"
 SUBST_STAGE.apachevers=	pre-configure
 SUBST_FILES.apachevers=	netdisco_apache.conf
 SUBST_SED.apachevers=	-e "s|@APACHE2@||g"
 SUBST_MESSAGE.apachevers= Fixing config files for apache-2
-.endif
 
 do-build:
 	${RM} -f ${WRKSRC:Q}/html/doc/ChangeLog.txt

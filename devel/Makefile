@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1926 2014/06/05 05:06:45 obache Exp $
+# $NetBSD: Makefile,v 1.1927 2014/06/10 15:22:13 joerg Exp $
 #
 
 COMMENT=	Development utilities
@@ -42,7 +42,6 @@ SUBDIR+=	apel
 SUBDIR+=	appdata-tools
 SUBDIR+=	apr
 SUBDIR+=	apr-util
-SUBDIR+=	apr0
 SUBDIR+=	arena
 SUBDIR+=	argp
 SUBDIR+=	argtable

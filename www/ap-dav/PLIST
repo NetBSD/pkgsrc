@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:00:15 joerg Exp $
-lib/httpd/mod_dav.so
-share/doc/html/mod_dav/LICENSE.html
-share/doc/mod_dav/README
-share/doc/mod_dav/INSTALL
