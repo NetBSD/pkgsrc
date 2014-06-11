@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2302 2014/06/11 20:19:26 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2303 2014/06/11 20:51:11 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3100,3 +3100,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/couchdb to 1.6.0 [fhajny 2014-06-11]
 	Updated security/p5-Module-Signature to 0.73 [wiz 2014-06-11]
 	Updated security/p5-Crypt-Primes to 0.50nb9 [wiz 2014-06-11]
+	Added math/p5-Number-Range version 0.11 [schmonz 2014-06-11]
