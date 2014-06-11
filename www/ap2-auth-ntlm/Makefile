@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/06/10 15:22:17 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2014/06/11 12:57:23 joerg Exp $
 #
 
 DISTNAME=	ntlm2
@@ -11,8 +11,6 @@ HOMEPAGE=	http://modntlm.sourceforge.net/
 COMMENT=	Apache module for NTLM authentication
 
 PKG_APACHE_ACCEPTED=	apache22
-
-.include "../../mk/apache.mk"
 
 APACHE_MODULE_NAME=	mod_ntlm.${MODULE_EXT}
 
@@ -31,5 +29,5 @@ INSTALLATION_DIRS+=	${EGDIR}
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/ntlm.conf ${DESTDIR}${EGDIR}
 
-.include "../../www/apache/module.mk"
+.include "../../mk/apache.module.mk"
 .include "../../mk/bsd.pkg.mk"

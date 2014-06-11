@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/12/16 01:52:37 obache Exp $
+# $NetBSD: Makefile,v 1.5 2014/06/11 12:57:23 joerg Exp $
 
 DISTNAME=	mod_authn_sasl-${DISTVERS}
 #PKGREVISION=	1
@@ -23,5 +23,5 @@ MODULE_EXT=	la
 MESSAGE_SUBST+=	MODULE_NAME=authn_sasl_module
 
 .include "../../security/cyrus-sasl/buildlink3.mk"
-.include "../../www/apache/module.mk"
+.include "../../mk/apache.module.mk"
 .include "../../mk/bsd.pkg.mk"
