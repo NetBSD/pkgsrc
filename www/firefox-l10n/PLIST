@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2014/05/01 04:08:09 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.27 2014/06/11 02:35:32 ryoon Exp $
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome.manifest
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/.mkdir.done
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af.manifest
@@ -9455,6 +9455,7 @@ lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/searchplugins/amazon-en-GB.xml
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/searchplugins/bbc-alba.xml
+lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/searchplugins/duckduckgo.xml
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/searchplugins/faclair-beag.xml
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/searchplugins/wikipedia-gd.xml
