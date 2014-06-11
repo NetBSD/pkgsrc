@@ -1,8 +1,8 @@
-$NetBSD: patch-config_system-headers,v 1.8 2014/04/30 15:07:18 ryoon Exp $
+$NetBSD: patch-config_system-headers,v 1.9 2014/06/11 00:40:59 ryoon Exp $
 
---- config/system-headers.orig	2014-04-18 02:02:39.000000000 +0000
+--- config/system-headers.orig	2014-05-29 23:30:30.000000000 +0000
 +++ config/system-headers
-@@ -1051,8 +1051,6 @@ X11/Xutil.h
+@@ -1050,8 +1050,6 @@ X11/Xutil.h
  xpt_struct.h
  xpt_xdr.h
  zmouse.h
@@ -11,7 +11,7 @@ $NetBSD: patch-config_system-headers,v 1.8 2014/04/30 15:07:18 ryoon Exp $
  #if MOZ_NATIVE_PNG==1
  png.h
  #endif
-@@ -1118,6 +1116,8 @@ ogg/ogg.h
+@@ -1119,6 +1117,8 @@ ogg/ogg.h
  ogg/os_types.h
  nestegg/nestegg.h
  cubeb/cubeb.h
@@ -20,13 +20,12 @@ $NetBSD: patch-config_system-headers,v 1.8 2014/04/30 15:07:18 ryoon Exp $
  #endif
  gst/gst.h
  gst/app/gstappsink.h
-@@ -1146,3 +1146,39 @@ unicode/utypes.h
+@@ -1147,3 +1147,38 @@ unicode/utypes.h
  #endif
  libutil.h
  unwind.h
 +cairo-qt.h
 +#if MOZ_NATIVE_GRAPHITE2==1
-+unwind.h
 +graphite2/Font.h
 +graphite2/Segment.h
 +#endif
