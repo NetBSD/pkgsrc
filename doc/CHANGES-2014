@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2299 2014/06/11 14:57:33 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.2300 2014/06/11 15:34:30 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3097,3 +3097,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/ccid to 1.4.17 [gdt 2014-06-11]
 	Updated databases/mongo-c-driver to 0.96.2 [fhajny 2014-06-11]
 	Updated net/rabbitmq to 3.3.2 [fhajny 2014-06-11]
+	Updated databases/couchdb to 1.6.0 [fhajny 2014-06-11]
