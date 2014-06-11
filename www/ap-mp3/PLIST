@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:16 joerg Exp $
-lib/httpd/mod_mp3.so
-share/httpd/htdocs/manual/mod/mod_mp3/faq.html
