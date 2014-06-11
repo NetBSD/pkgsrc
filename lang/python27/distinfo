@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.41 2014/06/09 17:58:31 he Exp $
+$NetBSD: distinfo,v 1.42 2014/06/11 05:55:58 richard Exp $
 
 SHA1 (Python-2.7.7.tar.xz) = 5f82557cac5abf18d1df6f8bb2029aa335b321f4
 RMD160 (Python-2.7.7.tar.xz) = 988da9490e8d66a2456accdce5dbe9ba875d5a18
 Size (Python-2.7.7.tar.xz) = 10496500 bytes
 SHA1 (patch-Include_node.h) = 673d148b625711ac47e4bfeb0f5b0d5b31f94d7e
 SHA1 (patch-Include_pyerrors.h) = 3eba043c83b1d1df4918524f7b53047a6ed372ae
+SHA1 (patch-Include_pyport.h) = 3f21c910cf7f002184d2b054a1a362e4a98a218f
 SHA1 (patch-Lib_distutils_unixccompiler.py) = 39b967dc2ae648143d5841f22602a21063b4d5ea
 SHA1 (patch-Lib_poplib.py) = 5d7f64b028abd2fd43651f27a7f2ce7efe5b0859
 SHA1 (patch-Lib_smtplib.py) = f1118bbc53b4e292eb9a28ef3ef10eb4aa553bc3
