@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2288 2014/06/11 01:57:07 obache Exp $
+$NetBSD: CHANGES-2014,v 1.2289 2014/06/11 02:42:16 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3085,3 +3085,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Removed www/p5-Apache-AuthCookieDBI [joerg 2014-06-10]
 	Updated www/firefox to 30.0 [ryoon 2014-06-11]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.378 [obache 2014-06-11]
+	Updated devel/nspr to 4.10.6 [ryoon 2014-06-11]
+	Updated www/firefox-l10n to 30.0 [ryoon 2014-06-11]
