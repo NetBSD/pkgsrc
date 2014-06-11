@@ -1,16 +1,8 @@
-$NetBSD: patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info__linux.cc,v 1.7 2014/04/30 15:07:18 ryoon Exp $
+$NetBSD: patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info__linux.cc,v 1.8 2014/06/11 00:40:59 ryoon Exp $
 
---- media/webrtc/trunk/webrtc/modules/video_capture/linux/device_info_linux.cc.orig	2014-04-18 02:03:54.000000000 +0000
+--- media/webrtc/trunk/webrtc/modules/video_capture/linux/device_info_linux.cc.orig	2014-05-29 23:31:23.000000000 +0000
 +++ media/webrtc/trunk/webrtc/modules/video_capture/linux/device_info_linux.cc
-@@ -18,17 +18,28 @@
- #include <sys/stat.h>
- #include <unistd.h>
- //v4l includes
--#if defined(__DragonFly__) || defined(__NetBSD__) || defined(__OpenBSD__)
-+#if defined(__NetBSD__) || defined(__OpenBSD__)
- #include <sys/videoio.h>
- #elif defined(__sun)
- #include <sys/videodev2.h>
+@@ -25,10 +25,21 @@
  #else
  #include <linux/videodev2.h>
  #endif

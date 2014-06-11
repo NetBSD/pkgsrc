@@ -1,8 +1,8 @@
-$NetBSD: patch-ipc_chromium_src_base_message__loop.cc,v 1.1 2014/05/30 03:03:36 pho Exp $
+$NetBSD: patch-ipc_chromium_src_base_message__loop.cc,v 1.2 2014/06/11 00:40:59 ryoon Exp $
 
 Don't assume cocoa toolkit just because OS_ARCH is Darwin.
 
---- ipc/chromium/src/base/message_loop.cc.orig	2014-05-06 22:55:41.000000000 +0000
+--- ipc/chromium/src/base/message_loop.cc.orig	2014-05-29 23:30:52.000000000 +0000
 +++ ipc/chromium/src/base/message_loop.cc
 @@ -14,20 +14,18 @@
  #include "base/string_util.h"
@@ -26,7 +26,7 @@ Don't assume cocoa toolkit just because OS_ARCH is Darwin.
  #ifdef ANDROID
  #include "base/message_pump_android.h"
  #endif
-@@ -135,11 +133,11 @@ MessageLoop::MessageLoop(Type type)
+@@ -135,9 +133,9 @@ MessageLoop::MessageLoop(Type type)
    }
  #elif defined(OS_POSIX)
    if (type_ == TYPE_UI) {
@@ -38,5 +38,3 @@ Don't assume cocoa toolkit just because OS_ARCH is Darwin.
      pump_ = new base::MessagePumpForUI();
  #endif  // OS_LINUX
    } else if (type_ == TYPE_IO) {
-     pump_ = new base::MessagePumpLibevent();
-   } else {
