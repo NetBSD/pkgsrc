@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2014/05/07 11:30:27 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.15 2014/06/11 14:57:15 fhajny Exp $
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/INSTALL
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-APACHE2-ExplorerCanvas
@@ -182,6 +182,7 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_mqtt-${PKGVERSION}
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_shovel-${PKGVERSION}.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_shovel_management-${PKGVERSION}.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_stomp-${PKGVERSION}.ez
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_test-${PKGVERSION}.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_tracing-${PKGVERSION}.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_web_dispatch-${PKGVERSION}.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_web_stomp-${PKGVERSION}.ez
