@@ -1,12 +1,18 @@
-$NetBSD: patch-config_external_moz.build,v 1.2 2014/04/30 15:07:18 ryoon Exp $
+$NetBSD: patch-config_external_moz.build,v 1.3 2014/06/11 00:40:59 ryoon Exp $
 
---- config/external/moz.build.orig	2014-04-18 02:02:39.000000000 +0000
+--- config/external/moz.build.orig	2014-05-29 23:30:30.000000000 +0000
 +++ config/external/moz.build
-@@ -15,13 +15,13 @@ if CONFIG['MOZ_UPDATER']:
+@@ -15,13 +15,19 @@ if CONFIG['MOZ_UPDATER']:
      if not CONFIG['MOZ_NATIVE_BZ2']:
          external_dirs += ['modules/libbz2']
  
 -if CONFIG['MOZ_VORBIS']:
++if not CONFIG['MOZ_NATIVE_OGG']:
++    external_dirs += ['media/libogg']
++
++if not CONFIG['MOZ_NATIVE_THEORA']:
++    external_dirs += ['media/libtheora']
++
 +if CONFIG['MOZ_VORBIS'] and not CONFIG['MOZ_NATIVE_VORBIS']:
      external_dirs += ['media/libvorbis']
  
@@ -19,16 +25,7 @@ $NetBSD: patch-config_external_moz.build,v 1.2 2014/04/30 15:07:18 ryoon Exp $
      external_dirs += ['media/libopus']
  
  if CONFIG['MOZ_WEBM']:
-@@ -34,16 +34,23 @@ if CONFIG['MOZ_VPX'] and not CONFIG['MOZ
-     external_dirs += ['media/libvpx']
- 
- if CONFIG['MOZ_OGG']:
--    external_dirs += ['media/libogg', 'media/libtheora']
-+    if not CONFIG['MOZ_NATIVE_OGG']:
-+        external_dirs += ['media/libogg']
-+    if not CONFIG['MOZ_NATIVE_THEORA']:
-+        external_dirs += ['media/libtheora']
- 
+@@ -36,13 +42,15 @@ if CONFIG['MOZ_VPX'] and not CONFIG['MOZ
  if not CONFIG['MOZ_NATIVE_PNG']:
      external_dirs += ['media/libpng']
  
@@ -41,6 +38,8 @@ $NetBSD: patch-config_external_moz.build,v 1.2 2014/04/30 15:07:18 ryoon Exp $
  external_dirs += [
      'media/kiss_fft',
      'media/libcubeb',
+-    'media/libogg',
+-    'media/libtheora',
 -    'media/libspeex_resampler',
 -    'media/libsoundtouch',
  ]

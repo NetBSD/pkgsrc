@@ -1,19 +1,10 @@
-$NetBSD: patch-xpcom_build_PoisonIOInterposer.h,v 1.1 2014/05/30 10:22:06 pho Exp $
+$NetBSD: patch-xpcom_build_PoisonIOInterposer.h,v 1.2 2014/06/11 00:40:59 ryoon Exp $
 
 Replace XP_MACOSX with XP_DARWIN as the former is not defined when
 the toolkit is not cocoa.
 
---- xpcom/build/PoisonIOInterposer.h.orig	2014-05-06 22:56:38.000000000 +0000
+--- xpcom/build/PoisonIOInterposer.h.orig	2014-05-29 23:31:50.000000000 +0000
 +++ xpcom/build/PoisonIOInterposer.h
-@@ -26,7 +26,7 @@ void MozillaUnRegisterDebugFILE(FILE *f)
- 
- MOZ_END_EXTERN_C
- 
--#if defined(MOZ_ENABLE_PROFILER_SPS) && (defined(XP_WIN) || defined(XP_MACOSX))
-+#if defined(MOZ_ENABLE_PROFILER_SPS) && (defined(XP_WIN) || defined(XP_DARWIN))
- 
- #ifdef __cplusplus
- namespace mozilla {
 @@ -44,7 +44,7 @@ bool IsDebugFile(intptr_t aFileID);
   */
  void InitPoisonIOInterposer();
@@ -32,15 +23,7 @@ the toolkit is not cocoa.
  
  /**
   * Clear IO poisoning, this is only safe to do on the main-thread when no other
-@@ -63,19 +63,19 @@ void ClearPoisonIOInterposer();
- } // namespace mozilla
- #endif /* __cplusplus */
- 
--#else /* MOZ_ENABLE_PROFILER_SPS && (XP_WIN || XP_MACOSX) */
-+#else /* MOZ_ENABLE_PROFILER_SPS && (XP_WIN || XP_DARWIN) */
- 
- #ifdef __cplusplus
- namespace mozilla {
+@@ -70,9 +70,9 @@ namespace mozilla {
  inline bool IsDebugFile(intptr_t aFileID){ return true; }
  inline void InitPoisonIOInterposer(){}
  inline void ClearPoisonIOInterposer(){}
@@ -52,7 +35,3 @@ the toolkit is not cocoa.
  } // namespace mozilla
  #endif /* __cplusplus */
  
--#endif /* MOZ_ENABLE_PROFILER_SPS && (XP_WIN || XP_MACOSX) */
-+#endif /* MOZ_ENABLE_PROFILER_SPS && (XP_WIN || XP_DARWIN) */
- 
- #endif // mozilla_PoisonIOInterposer_h
