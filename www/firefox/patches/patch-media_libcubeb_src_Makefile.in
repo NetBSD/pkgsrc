@@ -1,15 +1,12 @@
-$NetBSD: patch-media_libcubeb_src_Makefile.in,v 1.1 2014/04/30 15:07:18 ryoon Exp $
+$NetBSD: patch-media_libcubeb_src_Makefile.in,v 1.2 2014/06/11 00:40:59 ryoon Exp $
 
---- media/libcubeb/src/Makefile.in.orig	2014-04-18 02:03:46.000000000 +0000
+--- media/libcubeb/src/Makefile.in.orig	2014-05-29 23:31:19.000000000 +0000
 +++ media/libcubeb/src/Makefile.in
-@@ -10,6 +10,10 @@ CFLAGS += \
+@@ -9,3 +9,7 @@ CFLAGS += \
+         $(MOZ_ALSA_CFLAGS) \
          $(MOZ_PULSEAUDIO_CFLAGS) \
          $(NULL)
- 
++
 +ifdef MOZ_NATIVE_SPEEX
 +CFLAGS += $(MOZ_SPEEX_CFLAGS)
 +endif
-+
- ifeq ($(MOZ_WIDGET_TOOLKIT),gonk)
- LOCAL_INCLUDES += -I$(ANDROID_SOURCE)/frameworks/wilhelm/include \
-                   -I$(ANDROID_SOURCE)/system/media/wilhelm/include
