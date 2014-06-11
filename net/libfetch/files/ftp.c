@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.45 2014/06/07 19:22:51 cheusov Exp $	*/
+/*	$NetBSD: ftp.c,v 1.46 2014/06/11 13:12:12 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008, 2009, 2010 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -59,9 +59,7 @@
 
 #ifdef __linux__
 /* Keep this down to Linux, it can create surprises else where. */
-#ifndef _GNU_SOURCE
 #define _GNU_SOURCE
-#endif
 #endif
 
 #if HAVE_CONFIG_H
