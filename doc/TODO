@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13396 2014/06/11 12:07:24 wiz Exp $
+$NetBSD: TODO,v 1.13397 2014/06/11 13:25:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -442,6 +442,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cln-1.33
 	o clutter-1.18.2
 	o clutter-gst-2.0.10 [require gstreamer1>=1.2.0]
+	o cmake-3.0.0
 	o cmus-2.5.1 [pkg/48819]
 	o coccigrep-2.13
 	o cogl-1.18.0
@@ -1040,6 +1041,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o scsh-1.3.0
 	o seahorse-3.12.0
 	o seahorse-nautilus-3.10.1
+	o seamonkey-2.26
 	o secpanel-0.6.1
 	o sendfile-20010424
 	o sendmail-8.14.9
@@ -1117,6 +1119,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o texmaker-4.1.1 [wip]
 	o texmaker-4.2
 	o tfmxplay-1.1.6
+	o thunderbird-24.6.0
 	o tightvnc-2.7.10
 	o tile-0.7.4
 	o tinc-1.0.24
