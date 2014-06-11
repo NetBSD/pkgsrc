@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2294 2014/06/11 12:34:34 joerg Exp $
+$NetBSD: CHANGES-2014,v 1.2295 2014/06/11 12:34:51 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3092,3 +3092,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Removed mail/thunderbird10 [joerg 2014-06-11]
 	Removed mail/thunderbird10-l10n [joerg 2014-06-11]
 	Removed mail/thunderbird17 [joerg 2014-06-11]
+	Removed mail/thunderbird17-l10n [joerg 2014-06-11]
