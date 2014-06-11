@@ -1,0 +1,26 @@
+$NetBSD: patch-ap,v 1.1 2014/06/11 11:03:56 hauke Exp $
+
+Fix build on DragonFlyBSD
+
+Fixes loading of pam modules on older versions on NetBSD, where
+the dependency of the module on libpam was not explicit.
+
+--- include/atalk/util.h.orig	2010-11-15 09:10:15.000000000 +0000
++++ include/atalk/util.h
+@@ -17,6 +17,7 @@
+ 
+ #include <sys/cdefs.h>
+ #include <sys/types.h>
++#include <sys/socket.h>
+ #ifdef HAVE_UNISTD_H
+ #include <unistd.h>
+ #endif /* HAVE_UNISTD_H */
+@@ -78,7 +79,7 @@ extern void mod_close    (void *);
+  * OpenBSD currently does not use the second arg for dlopen(). For
+  * future compatibility we define DL_LAZY */
+ #ifdef __NetBSD__
+-#define mod_open(a)      dlopen(a, RTLD_LAZY)
++#define mod_open(a)      dlopen(a, RTLD_LAZY|RTLD_GLOBAL)
+ #elif defined(__OpenBSD__)
+ #define mod_open(a)      dlopen(a, DL_LAZY)
+ #else /* ! __NetBSD__ && ! __OpenBSD__ */
