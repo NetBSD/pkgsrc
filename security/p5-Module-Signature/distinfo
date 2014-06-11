@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2011/11/13 12:29:01 hiramatsu Exp $
+$NetBSD: distinfo,v 1.10 2014/06/11 20:17:58 wiz Exp $
 
-SHA1 (Module-Signature-0.68.tar.gz) = d7d640650d6917e30d46d50b9d8806c7abf88a6e
-RMD160 (Module-Signature-0.68.tar.gz) = 085be64591540e9b18b5c7a861f8222904ef9871
-Size (Module-Signature-0.68.tar.gz) = 76485 bytes
+SHA1 (Module-Signature-0.73.tar.gz) = 0bb005a69aae5f7f7511f5d6b1a61762bca27173
+RMD160 (Module-Signature-0.73.tar.gz) = f3bdb440092f876d48ef550ccc6544630bb20f48
+Size (Module-Signature-0.73.tar.gz) = 77407 bytes
