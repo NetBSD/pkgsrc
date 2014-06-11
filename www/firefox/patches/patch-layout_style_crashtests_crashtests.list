@@ -1,0 +1,9 @@
+$NetBSD: patch-layout_style_crashtests_crashtests.list,v 1.1 2014/06/11 00:41:36 ryoon Exp $
+
+--- layout/style/crashtests/crashtests.list.orig	2014-05-29 23:31:17.000000000 +0000
++++ layout/style/crashtests/crashtests.list
+@@ -104,3 +104,4 @@ load 945048-1.html
+ load 972199-1.html
+ load 989965-1.html
+ load large_border_image_width.html
++load border-image-visited-link.html
