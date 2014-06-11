@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/06/10 15:22:17 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2014/06/11 12:57:23 joerg Exp $
 #
 
 DISTNAME=		bw_mod-0.6
@@ -24,6 +24,5 @@ INSTALLATION_DIRS+=	share/doc
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}.txt ${DESTDIR}${PREFIX}/share/doc/apache_mod_bw.txt
 
-.include "../../mk/apache.mk"
-.include "../../www/apache/module.mk"
+.include "../../mk/apache.module.mk"
 .include "../../mk/bsd.pkg.mk"
