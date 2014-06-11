@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.27 2014/05/30 10:22:05 pho Exp $
+$NetBSD: patch-aa,v 1.28 2014/06/11 00:40:59 ryoon Exp $
 
 * The profiler does not support Darwin/PPC so don't try to enable it
   on that platform.
@@ -13,9 +13,9 @@ $NetBSD: patch-aa,v 1.27 2014/05/30 10:22:05 pho Exp $
   heavy patching. Ideally they should be fixed individually but that
   will be an extremely hard work, so don't define XP_MACOSX for now.
 
---- configure.in.orig	2014-05-06 22:55:16.000000000 +0000
+--- configure.in.orig	2014-05-29 23:30:30.000000000 +0000
 +++ configure.in
-@@ -1613,7 +1613,13 @@ Linux)
+@@ -1673,7 +1673,13 @@ Linux)
          MOZ_ENABLE_PROFILER_SPS=
      esac
      ;;
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.27 2014/05/30 10:22:05 pho Exp $
  *)
      MOZ_ENABLE_PROFILER_SPS=
      ;;
-@@ -1717,7 +1723,7 @@ case "$host" in
+@@ -1777,7 +1783,7 @@ case "$host" in
      ;;
  
  *-darwin*)
@@ -39,7 +39,7 @@ $NetBSD: patch-aa,v 1.27 2014/05/30 10:22:05 pho Exp $
      HOST_NSPR_MDCPUCFG='\"md/_darwin.cfg\"'
      HOST_OPTIMIZE_FLAGS="${HOST_OPTIMIZE_FLAGS=-O3}"
      ;;
-@@ -1857,7 +1863,6 @@ case "$target" in
+@@ -1909,7 +1915,6 @@ case "$target" in
          AC_DEFINE(XP_DARWIN)
          _PLATFORM_DEFAULT_TOOLKIT='cairo-uikit'
      else
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.27 2014/05/30 10:22:05 pho Exp $
          AC_DEFINE(XP_DARWIN)
          _PLATFORM_DEFAULT_TOOLKIT='cairo-cocoa'
          # The ExceptionHandling framework is needed for Objective-C exception
-@@ -2534,118 +2539,15 @@ MOZ_CXX11
+@@ -2514,118 +2519,15 @@ MOZ_CXX11
  
  AC_LANG_C
  
@@ -173,7 +173,16 @@ $NetBSD: patch-aa,v 1.27 2014/05/30 10:22:05 pho Exp $
  fi         # GNU_CC
  
  # visibility hidden flag for Sun Studio on Solaris
-@@ -3711,6 +3613,14 @@ if test -n "$YASM"; then
+@@ -2996,7 +2898,7 @@ dnl Checks for library functions.
+ dnl ========================================================
+ AC_PROG_GCC_TRADITIONAL
+ AC_FUNC_MEMCMP
+-AC_CHECK_FUNCS(stat64 lstat64 truncate64 statvfs64 statvfs statfs64 statfs getpagesize localtime_r)
++AC_CHECK_FUNCS(stat64 lstat64 truncate64 statvfs64 statvfs statfs64 statfs getpagesize localtime_r arc4random arc4random_buf)
+ 
+ dnl check for clock_gettime(), the CLOCK_MONOTONIC clock
+ AC_CACHE_CHECK(for clock_gettime(CLOCK_MONOTONIC),
+@@ -3683,6 +3585,14 @@ if test -n "$YASM"; then
    _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
  fi
  
@@ -188,7 +197,7 @@ $NetBSD: patch-aa,v 1.27 2014/05/30 10:22:05 pho Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -3738,11 +3648,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
+@@ -3710,11 +3620,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
                       #include <jpeglib.h> ],
                     [ #if JPEG_LIB_VERSION < $MOZJPEG
                       #error "Insufficient JPEG library version ($MOZJPEG required)."
@@ -201,38 +210,7 @@ $NetBSD: patch-aa,v 1.27 2014/05/30 10:22:05 pho Exp $
                     MOZ_NATIVE_JPEG=1,
                     AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
  fi
-@@ -3940,6 +3846,22 @@ fi
- AC_SUBST(MOZ_NATIVE_ICU)
- 
- dnl ========================================================
-+dnl system icu support
-+dnl ========================================================
-+MOZ_NATIVE_ICU=
-+MOZ_ARG_WITH_BOOL(system-icu,
-+[  --with-system-icu
-+                          Use system icu (located with pkgconfig)],
-+    MOZ_NATIVE_ICU=1)
-+
-+if test -n "$MOZ_NATIVE_ICU"; then
-+    PKG_CHECK_MODULES(MOZ_ICU, icu-i18n >= 50.1)
-+    MOZ_JS_STATIC_LIBS="$MOZ_JS_STATIC_LIBS $MOZ_ICU_LIBS"
-+fi
-+
-+AC_SUBST(MOZ_NATIVE_ICU)
-+
-+dnl ========================================================
- dnl Java SDK support
- dnl ========================================================
- 
-@@ -3974,6 +3896,7 @@ MOZ_SAMPLE_TYPE_FLOAT32=
- MOZ_SAMPLE_TYPE_S16=
- MOZ_OPUS=1
- MOZ_WEBM=1
-+MOZ_GSTREAMER=
- MOZ_DIRECTSHOW=
- MOZ_WMF=
- MOZ_FMP4=
-@@ -4433,6 +4356,10 @@ cairo-gonk)
+@@ -4378,6 +4284,10 @@ cairo-gonk)
  
  esac
  
@@ -243,7 +221,7 @@ $NetBSD: patch-aa,v 1.27 2014/05/30 10:22:05 pho Exp $
  AC_SUBST(MOZ_PDF_PRINTING)
  if test "$MOZ_PDF_PRINTING"; then
     PDF_SURFACE_FEATURE="#define CAIRO_HAS_PDF_SURFACE 1"
-@@ -5135,6 +5062,9 @@ if test -n "$MOZ_WEBRTC"; then
+@@ -5098,6 +5008,9 @@ if test -n "$MOZ_WEBRTC"; then
      MOZ_VPX=1
      MOZ_VPX_ERROR_CONCEALMENT=1
  
@@ -253,7 +231,7 @@ $NetBSD: patch-aa,v 1.27 2014/05/30 10:22:05 pho Exp $
  dnl enable once Signaling lands
      MOZ_WEBRTC_SIGNALING=1
      AC_DEFINE(MOZ_WEBRTC_SIGNALING)
-@@ -5157,15 +5087,18 @@ AC_SUBST(MOZ_SRTP)
+@@ -5122,15 +5035,18 @@ AC_SUBST(MOZ_SRTP)
  
  dnl Use integers over floats for audio on B2G and Android, because audio
  dnl backends for those platforms don't support floats.
@@ -275,10 +253,67 @@ $NetBSD: patch-aa,v 1.27 2014/05/30 10:22:05 pho Exp $
  
  dnl ========================================================
  dnl = Disable Speech API code
-@@ -5229,6 +5162,57 @@ if test -n "$MOZ_OGG"; then
+@@ -5182,6 +5098,114 @@ if test "${ac_cv_c_attribute_aligned}" !
  fi
  
  dnl ========================================================
++dnl Check for libogg
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-ogg,
++[  --with-system-ogg       Use system libogg (located with pkgconfig)],
++MOZ_NATIVE_OGG=1,
++MOZ_NATIVE_OGG=)
++
++if test -n "$MOZ_NATIVE_OGG"; then
++    PKG_CHECK_MODULES(MOZ_OGG, ogg >= 1.2.1)
++
++    _SAVE_LIBS=$LIBS
++    LIBS="$LIBS $MOZ_OGG_LIBS"
++    AC_CHECK_FUNC(ogg_set_mem_functions, [],
++      [AC_DEFINE(MOZ_OGG_NO_MEM_REPORTING)])
++    LIBS=$_SAVE_LIBS
++fi
++
++AC_SUBST(MOZ_NATIVE_OGG)
++AC_SUBST(MOZ_OGG_CFLAGS)
++AC_SUBST(MOZ_OGG_LIBS)
++
++dnl ========================================================
++dnl Check for libvorbis
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-vorbis,
++[  --with-system-vorbis    Use system libvorbis (located with pkgconfig)],
++MOZ_NATIVE_VORBIS=1,
++MOZ_NATIVE_VORBIS=)
++
++if test -n "$MOZ_NATIVE_VORBIS"; then
++    PKG_CHECK_MODULES(MOZ_VORBIS, vorbis vorbisenc >= 1.3.4)
++fi
++
++AC_SUBST(MOZ_NATIVE_VORBIS)
++AC_SUBST(MOZ_VORBIS_CFLAGS)
++AC_SUBST(MOZ_VORBIS_LIBS)
++
++dnl ========================================================
++dnl Check for integer-only libvorbis aka tremor
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-tremor,
++[  --with-system-tremor    Use system libtremor (located with pkgconfig)],
++MOZ_NATIVE_TREMOR=1,
++MOZ_NATIVE_TREMOR=)
++
++if test -n "$MOZ_NATIVE_TREMOR"; then
++    PKG_CHECK_MODULES(MOZ_TREMOR, vorbisidec >= 1.2.1)
++fi
++
++AC_SUBST(MOZ_NATIVE_TREMOR)
++AC_SUBST(MOZ_TREMOR_CFLAGS)
++AC_SUBST(MOZ_TREMOR_LIBS)
++
++dnl ========================================================
 +dnl Check for libogg
 +dnl ========================================================
 +
@@ -333,7 +368,7 @@ $NetBSD: patch-aa,v 1.27 2014/05/30 10:22:05 pho Exp $
  dnl = Disable Opus audio codec support
  dnl ========================================================
  MOZ_ARG_DISABLE_BOOL(opus,
-@@ -5237,6 +5221,76 @@ MOZ_ARG_DISABLE_BOOL(opus,
+@@ -5190,6 +5214,97 @@ MOZ_ARG_DISABLE_BOOL(opus,
      MOZ_OPUS=1)
  
  dnl ========================================================
@@ -400,6 +435,27 @@ $NetBSD: patch-aa,v 1.27 2014/05/30 10:22:05 pho Exp $
 +
 +if test -n "$MOZ_NATIVE_SOUNDTOUCH"; then
 +    PKG_CHECK_MODULES(MOZ_SOUNDTOUCH, soundtouch >= 1.7.0)
++
++    AC_LANG_SAVE
++    AC_LANG_CPLUSPLUS
++    _SAVE_CXXFLAGS=$CXXFLAGS
++    CXXFLAGS="$CXXFLAGS $MOZ_SOUNDTOUCH_CFLAGS"
++    AC_CACHE_CHECK(for soundtouch sample type,
++                   ac_cv_soundtouch_sample_type,
++                   [AC_TRY_COMPILE([#include <SoundTouch.h>
++                                    #ifndef SOUNDTOUCH_INTEGER_SAMPLES
++                                    #error soundtouch expects float samples
++                                    #endif],
++                                   [],
++                                   [ac_cv_soundtouch_sample_type=short],
++                                   [ac_cv_soundtouch_sample_type=float])])
++    CXXFLAGS=$_SAVE_CXXFLAGS
++    AC_LANG_RESTORE
++
++    if test \( -n "$MOZ_SAMPLE_TYPE_S16" -a "$ac_cv_soundtouch_sample_type" != short \) \
++         -o \( -n "$MOZ_SAMPLE_TYPE_FLOAT32" -a "$ac_cv_soundtouch_sample_type" != float \) ; then
++        AC_MSG_ERROR([SoundTouch library is built with incompatible sample type. Either rebuild the library with/without --enable-integer-samples, chase default Mozilla sample type or remove --with-system-soundtouch.])
++    fi
 +fi
 +
 +AC_SUBST(MOZ_NATIVE_SOUNDTOUCH)
@@ -410,93 +466,7 @@ $NetBSD: patch-aa,v 1.27 2014/05/30 10:22:05 pho Exp $
  dnl = Disable VP8 decoder support
  dnl ========================================================
  MOZ_ARG_DISABLE_BOOL(webm,
-@@ -5615,44 +5669,61 @@ WINNT|Darwin|Android)
-     ;;
- *)
-     MOZ_GSTREAMER=1
-+    GST_API_VERSION=0.10
-     ;;
- esac
- 
--MOZ_ARG_ENABLE_BOOL(gstreamer,
--[  --enable-gstreamer           Enable GStreamer support],
--MOZ_GSTREAMER=1,
--MOZ_GSTREAMER=)
--
--if test "$MOZ_GSTREAMER"; then
--    # API version, eg 0.10, 1.0 etc
-+MOZ_ARG_ENABLE_STRING(gstreamer,
-+[  --enable-gstreamer[=0.10]           Enable GStreamer support],
-+[ MOZ_GSTREAMER=1
-+  # API version, eg 0.10, 1.0 etc
-+  if test -z "$enableval" -o "$enableval" = "yes"; then
-     GST_API_VERSION=0.10
-+  elif test "$enableval" = "no"; then
-+    MOZ_GSTREAMER=
-+  else
-+    GST_API_VERSION=$enableval
-+  fi],
-+)
-+
-+if test -n "$MOZ_GSTREAMER"; then
-     # core/base release number
--    GST_VERSION=0.10.25
-+    if test "$GST_API_VERSION" = "1.0"; then
-+      GST_VERSION=1.0
-+    else
-+      GST_VERSION=0.10.25
-+    fi
-+
-     PKG_CHECK_MODULES(GSTREAMER,
-                       gstreamer-$GST_API_VERSION >= $GST_VERSION
-                       gstreamer-app-$GST_API_VERSION
--                      gstreamer-plugins-base-$GST_API_VERSION, ,
--                      AC_MSG_ERROR([gstreamer and gstreamer-plugins-base development packages are needed to build gstreamer backend. Install them or disable gstreamer support with --disable-gstreamer]))
--    if test -n "$GSTREAMER_LIBS"; then
--       _SAVE_LDFLAGS=$LDFLAGS
--       LDFLAGS="$LDFLAGS $GSTREAMER_LIBS -lgstvideo-$GST_API_VERSION"
--       AC_TRY_LINK(,[return 0;],_HAVE_LIBGSTVIDEO=1,_HAVE_LIBGSTVIDEO=)
--       if test -n "$_HAVE_LIBGSTVIDEO" ; then
--          GSTREAMER_LIBS="$GSTREAMER_LIBS -lgstvideo-$GST_API_VERSION"
--       else
--          AC_MSG_ERROR([gstreamer-plugins-base found, but no libgstvideo. Something has gone terribly wrong. Try reinstalling gstreamer-plugins-base; failing that, disable the gstreamer backend with --disable-gstreamer.])
--       fi
--       LDFLAGS=$_SAVE_LDFLAGS
-+                      gstreamer-plugins-base-$GST_API_VERSION,
-+                      [_HAVE_GSTREAMER=1],
-+                      [_HAVE_GSTREAMER=])
-+    if test -z "$_HAVE_GSTREAMER"; then
-+        AC_MSG_ERROR([gstreamer and gstreamer-plugins-base development packages are needed to build gstreamer backend. Install them or disable gstreamer support with --disable-gstreamer])
-+    fi
-+
-+    _SAVE_LDFLAGS=$LDFLAGS
-+    LDFLAGS="$LDFLAGS $GSTREAMER_LIBS -lgstvideo-$GST_API_VERSION"
-+    AC_TRY_LINK(,[return 0;],_HAVE_LIBGSTVIDEO=1,_HAVE_LIBGSTVIDEO=)
-+    if test -n "$_HAVE_LIBGSTVIDEO" ; then
-+        GSTREAMER_LIBS="$GSTREAMER_LIBS -lgstvideo-$GST_API_VERSION"
-     else
--       AC_MSG_ERROR([gstreamer and gstreamer-plugins-base development packages are needed to build gstreamer backend. Install them or disable gstreamer support with --disable-gstreamer])
-+        AC_MSG_ERROR([gstreamer-plugins-base found, but no libgstvideo. Something has gone terribly wrong. Try reinstalling gstreamer-plugins-base; failing that, disable the gstreamer backend with --disable-gstreamer.])
-     fi
-+    LDFLAGS=$_SAVE_LDFLAGS
-+
-+    AC_SUBST(GSTREAMER_CFLAGS)
-+    AC_SUBST(GSTREAMER_LIBS)
- fi
--AC_SUBST(GSTREAMER_CFLAGS)
--AC_SUBST(GSTREAMER_LIBS)
-+
- AC_SUBST(MOZ_GSTREAMER)
-+AC_SUBST(GST_API_VERSION)
- 
- if test -n "$MOZ_GSTREAMER"; then
--   AC_DEFINE(MOZ_GSTREAMER)
-+     AC_DEFINE(MOZ_GSTREAMER)
-+     AC_DEFINE_UNQUOTED(GST_API_VERSION, "$GST_API_VERSION")
- fi
- 
- 
-@@ -5866,7 +5937,9 @@ MOZ_ARG_DISABLE_BOOL(gamepad,
+@@ -5839,7 +5954,9 @@ MOZ_ARG_DISABLE_BOOL(gamepad,
  if test "$MOZ_GAMEPAD"; then
      case "$OS_TARGET" in
      Darwin)
@@ -507,7 +477,7 @@ $NetBSD: patch-aa,v 1.27 2014/05/30 10:22:05 pho Exp $
          ;;
      WINNT)
          if test -n "$MOZ_DIRECTX_SDK_PATH" ; then
-@@ -7939,6 +8012,52 @@ if test "$USE_FC_FREETYPE"; then
+@@ -7912,6 +8029,52 @@ if test "$USE_FC_FREETYPE"; then
  fi
  
  dnl ========================================================
@@ -560,7 +530,7 @@ $NetBSD: patch-aa,v 1.27 2014/05/30 10:22:05 pho Exp $
  dnl Check for pixman and cairo
  dnl ========================================================
  
-@@ -8189,7 +8308,7 @@ case "$OS_TARGET" in
+@@ -8161,7 +8324,7 @@ case "$OS_TARGET" in
        NECKO_WIFI=1
      fi
      ;;
@@ -569,24 +539,3 @@ $NetBSD: patch-aa,v 1.27 2014/05/30 10:22:05 pho Exp $
      NECKO_WIFI=1
      ;;
    Linux)
-@@ -8736,6 +8855,20 @@ AC_SUBST(MOZ_ENABLE_SZIP)
- AC_SUBST(MOZ_SZIP_FLAGS)
- 
- if test -n "$COMPILE_ENVIRONMENT"; then
-+AC_MSG_CHECKING([for posix_fadvise])
-+AC_TRY_LINK([#define _XOPEN_SOURCE 600
-+  #include <fcntl.h>],
-+                 [posix_fadvise(0, 0, 0, 0);],
-+                 [ac_cv___posix_fadvise=true],
-+                 [ac_cv___posix_fadvise=false])
-+
-+if test "$ac_cv___posix_fadvise" = true ; then
-+  AC_DEFINE(HAVE_POSIX_FADVISE)
-+  AC_MSG_RESULT(yes)
-+else
-+  AC_MSG_RESULT(no)
-+fi
-+
- AC_MSG_CHECKING([for posix_fallocate])
- AC_TRY_LINK([#define _XOPEN_SOURCE 600
-   #include <fcntl.h>],

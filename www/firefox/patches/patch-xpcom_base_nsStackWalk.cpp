@@ -1,22 +1,11 @@
-$NetBSD: patch-xpcom_base_nsStackWalk.cpp,v 1.6 2014/05/30 10:22:06 pho Exp $
+$NetBSD: patch-xpcom_base_nsStackWalk.cpp,v 1.7 2014/06/11 00:40:59 ryoon Exp $
 
 * Replace XP_MACOSX with XP_DARWIN as the former is not defined when
   the toolkit is not cocoa.
 
---- xpcom/base/nsStackWalk.cpp.orig	2014-05-06 22:56:38.000000000 +0000
+--- xpcom/base/nsStackWalk.cpp.orig	2014-05-29 23:31:50.000000000 +0000
 +++ xpcom/base/nsStackWalk.cpp
-@@ -23,12 +23,18 @@ struct CriticalAddress {
- };
- static CriticalAddress gCriticalAddress;
- 
--#if defined(HAVE_DLOPEN) || defined(XP_MACOSX)
-+// for _Unwind_Backtrace from libcxxrt or libunwind
-+// cxxabi.h from libcxxrt implicitly includes unwind.h first
-+#if defined(HAVE__UNWIND_BACKTRACE) && !defined(_GNU_SOURCE)
-+#define _GNU_SOURCE
-+#endif
-+
-+#if defined(HAVE_DLOPEN) || defined(XP_DARWIN)
+@@ -33,8 +33,8 @@ static CriticalAddress gCriticalAddress;
  #include <dlfcn.h>
  #endif
  
@@ -27,7 +16,7 @@ $NetBSD: patch-xpcom_base_nsStackWalk.cpp,v 1.6 2014/05/30 10:22:06 pho Exp $
       (defined(__i386) || defined(__ppc__) || defined(HAVE__UNWIND_BACKTRACE)))
  
  #define NSSTACKWALK_SUPPORTS_LINUX \
-@@ -36,11 +42,11 @@ static CriticalAddress gCriticalAddress;
+@@ -42,11 +42,11 @@ static CriticalAddress gCriticalAddress;
       ((defined(__GNUC__) && (defined(__i386) || defined(PPC))) || \
        defined(HAVE__UNWIND_BACKTRACE)))
  
@@ -41,7 +30,7 @@ $NetBSD: patch-xpcom_base_nsStackWalk.cpp,v 1.6 2014/05/30 10:22:06 pho Exp $
  #include <pthread.h>
  #include <CoreServices/CoreServices.h>
  
-@@ -832,7 +838,7 @@ NS_FormatCodeAddressDetails(void *aPC, c
+@@ -838,7 +838,7 @@ NS_FormatCodeAddressDetails(void *aPC, c
  
  // WIN32 x86 stack walking code
  // i386 or PPC Linux stackwalking code or Solaris
@@ -50,7 +39,7 @@ $NetBSD: patch-xpcom_base_nsStackWalk.cpp,v 1.6 2014/05/30 10:22:06 pho Exp $
  
  #include <stdlib.h>
  #include <string.h>
-@@ -1156,7 +1162,7 @@ FramePointerStackWalk(NS_WalkStackCallba
+@@ -1162,7 +1162,7 @@ FramePointerStackWalk(NS_WalkStackCallba
          (long(next) & 3)) {
        break;
      }
@@ -59,7 +48,7 @@ $NetBSD: patch-xpcom_base_nsStackWalk.cpp,v 1.6 2014/05/30 10:22:06 pho Exp $
      // ppc mac or powerpc64 linux
      void *pc = *(bp+2);
      bp += 3;
-@@ -1186,7 +1192,7 @@ FramePointerStackWalk(NS_WalkStackCallba
+@@ -1192,7 +1192,7 @@ FramePointerStackWalk(NS_WalkStackCallba
  }
  
  #define X86_OR_PPC (defined(__i386) || defined(PPC) || defined(__ppc__))
@@ -68,13 +57,3 @@ $NetBSD: patch-xpcom_base_nsStackWalk.cpp,v 1.6 2014/05/30 10:22:06 pho Exp $
  
  EXPORT_XPCOM_API(nsresult)
  NS_StackWalk(NS_WalkStackCallback aCallback, uint32_t aSkipFrames,
-@@ -1222,9 +1228,6 @@ NS_StackWalk(NS_WalkStackCallback aCallb
- #elif defined(HAVE__UNWIND_BACKTRACE)
- 
- // libgcc_s.so symbols _Unwind_Backtrace@@GCC_3.3 and _Unwind_GetIP@@GCC_3.0
--#ifndef _GNU_SOURCE
--#define _GNU_SOURCE
--#endif
- #include <unwind.h>
- 
- struct unwind_info {

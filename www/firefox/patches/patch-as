@@ -1,10 +1,10 @@
-$NetBSD: patch-as,v 1.10 2014/04/30 15:07:18 ryoon Exp $
+$NetBSD: patch-as,v 1.11 2014/06/11 00:40:59 ryoon Exp $
 
 Treat DragonFly like FreeBSD.
 
---- js/src/configure.in.orig	2014-04-18 02:03:06.000000000 +0000
+--- js/src/configure.in.orig	2014-05-29 23:30:53.000000000 +0000
 +++ js/src/configure.in
-@@ -2165,116 +2165,13 @@ AC_LANG_CPLUSPLUS
+@@ -2082,116 +2082,13 @@ AC_LANG_CPLUSPLUS
  
  MOZ_CXX11
  
@@ -126,7 +126,7 @@ Treat DragonFly like FreeBSD.
  fi         # GNU_CC
  
  # visibility hidden flag for Sun Studio on Solaris
-@@ -3280,7 +3177,7 @@ if test "$MOZ_MEMORY"; then
+@@ -3162,7 +3059,7 @@ if test "$MOZ_MEMORY"; then
    *-darwin*)
      AC_DEFINE(MOZ_MEMORY_DARWIN)
      ;;
@@ -135,28 +135,7 @@ Treat DragonFly like FreeBSD.
      AC_DEFINE(MOZ_MEMORY_BSD)
      ;;
    *-android*|*-linuxandroid*)
-@@ -4144,6 +4041,20 @@ AC_SUBST(CXX_VERSION)
- AC_SUBST(MSMANIFEST_TOOL)
- AC_SUBST(MOZ_LINKER)
- 
-+AC_MSG_CHECKING([for posix_fadvise])
-+AC_TRY_LINK([#define _XOPEN_SOURCE 600
-+  #include <fcntl.h>],
-+                 [posix_fadvise(0, 0, 0, 0);],
-+                 [ac_cv___posix_fadvise=true],
-+                 [ac_cv___posix_fadvise=false])
-+
-+if test "$ac_cv___posix_fadvise" = true ; then
-+  AC_DEFINE(HAVE_POSIX_FADVISE)
-+  AC_MSG_RESULT(yes)
-+else
-+  AC_MSG_RESULT(no)
-+fi
-+
- AC_MSG_CHECKING([for posix_fallocate])
- AC_TRY_LINK([#define _XOPEN_SOURCE 600
-   #include <fcntl.h>],
-@@ -4512,6 +4423,16 @@ fi
+@@ -4100,6 +3997,16 @@ MOZ_SUBCONFIGURE_ICU()
  dnl ========================================================
  dnl JavaScript shell
  dnl ========================================================
