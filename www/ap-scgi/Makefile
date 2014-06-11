@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/06/10 15:22:16 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2014/06/11 12:57:23 joerg Exp $
 #
 
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME}
@@ -15,9 +15,6 @@ PKG_APACHE_ACCEPTED=	apache22
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-quixote via py-scgi
 
-.include "../../mk/apache.mk"
-.include "../../www/apache/module.mk"
-
 MODULE_EXT=	la
 APACHE_MODULE_SRCDIR=	${WRKDIR}/${DISTNAME}/apache2
 
@@ -25,4 +22,5 @@ APACHE_MODULE_NAME=	mod_scgi.${MODULE_EXT}
 APACHE_MODULE_SRC=	mod_scgi.c
 
 .include "../../lang/python/pyversion.mk"
+.include "../../mk/apache.module.mk"
 .include "../../www/py-scgi/Makefile.common"

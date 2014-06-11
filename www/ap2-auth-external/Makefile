@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/06/10 15:22:16 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2014/06/11 12:57:23 joerg Exp $
 #
 
 DISTNAME=	mod_auth_external-${DISTVERS}
@@ -13,13 +13,11 @@ COMMENT=	Apache module for external program authentication
 
 PKG_APACHE_ACCEPTED=	apache22
 
-.include "../../mk/apache.mk"
-
 APACHE_MODULE_NAME=	mod_auth_external.${MODULE_EXT}
 
 DISTVERS=	2.2.11
 MODULE_EXT=	la
 MESSAGE_SUBST+=	MODULE_NAME=auth_external_module
 
-.include "../../www/apache/module.mk"
+.include "../../mk/apache.module.mk"
 .include "../../mk/bsd.pkg.mk"
