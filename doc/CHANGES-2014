@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2292 2014/06/11 12:32:42 joerg Exp $
+$NetBSD: CHANGES-2014,v 1.2293 2014/06/11 12:33:07 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3090,3 +3090,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Moved net/netatalk to net/netatalk22 [hauke 2014-06-11]
 	Added net/netatalk30 version 3.0.8 [hauke 2014-06-11]
 	Removed mail/thunderbird10 [joerg 2014-06-11]
+	Removed mail/thunderbird10-l10n [joerg 2014-06-11]
