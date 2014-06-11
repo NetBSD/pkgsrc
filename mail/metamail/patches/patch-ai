@@ -1,8 +1,14 @@
-$NetBSD: patch-ai,v 1.2 2012/10/26 20:27:15 joerg Exp $
+$NetBSD: patch-ai,v 1.3 2014/06/11 19:07:02 christos Exp $
 
---- metamail/metamail.c.orig	1994-02-17 01:57:19.000000000 +0000
-+++ metamail/metamail.c
-@@ -83,7 +83,7 @@ extern char *MkRmScript();
+- clean up junk decls that exist in headers, and include the right headers
+- use fgets instead of gets
+- fix printf to always have format
+- when executing a child metamail, propagate the parents options as much as
+  possible
+
+--- metamail/metamail.c.orig	1994-02-16 20:57:19.000000000 -0500
++++ metamail/metamail.c	2014-06-11 15:02:23.000000000 -0400
+@@ -83,7 +83,7 @@
  #define MAX_FILE_NAME_SIZE 256
  #define WRITE_BINARY	"w"
  #else /* AMIGA */
@@ -11,7 +17,7 @@ $NetBSD: patch-ai,v 1.2 2012/10/26 20:27:15 joerg Exp $
  #define CATCOMMAND  "cat"
  #define CATTEMPLATE "cat %s"
  #define METAMAIL    "metamail"
-@@ -100,15 +100,14 @@ extern char **environ, *gets();
+@@ -100,15 +100,14 @@
  #define CMDSIZE 1200 /* Maximum size of command to execute */
  
  #define LINE_BUF_SIZE       2000
@@ -33,7 +39,52 @@ $NetBSD: patch-ai,v 1.2 2012/10/26 20:27:15 joerg Exp $
  char *FindParam();
  extern FILE *popen();
  static char *nomem = "Out of memory!";
-@@ -579,7 +578,7 @@ int nestingdepth;
+@@ -151,6 +150,32 @@
+     JustWriteFiles = 0,
+     ProcessingErrors = 0;
+ 
++static const char *
++makeoptions(void)
++{
++    static char buf[1024];
++    buf[0] = 0;
++    if (!MightAskBeforeExecuting)
++	strlcat(buf, " -d", sizeof(buf));
++    if (DefinitelyNotTty && MustNotBeTty)
++	strlcat(buf, " -x", sizeof(buf));
++    if (MaybePageOutput)
++	strlcat(buf, MustPageOutput ? " -P" : " -p", sizeof(buf));
++    if (EatLeadingNewlines)
++	strlcat(buf, " -e", sizeof(buf));
++    if (!PrintSomeHeaders && Quiet)
++	strlcat(buf, " -q", sizeof(buf));
++    if (DoInBackground)
++	strlcat(buf, " -B", sizeof(buf));
++    if (!Is822Format)
++	strlcat(buf, " -b", sizeof(buf));
++    if (PrintingMode)
++	strlcat(buf, " -h", sizeof(buf));
++    if (JustWriteFiles)
++	strlcat(buf, " -w", sizeof(buf));
++    return buf;
++}
++
+ char *ContentType = NULL,
+     *ContentEncoding = NULL,
+     *MailerName = "unknown",
+@@ -497,8 +522,9 @@
+         if (IsAlternative) {
+             if (WroteSquirrelFile) {
+                 int retcode; 
+-                char Cmd[TMPFILE_NAME_SIZE + 15];
+-                sprintf(Cmd, "%s %s", METAMAIL, NewSquirrelFile);
++                char Cmd[TMPFILE_NAME_SIZE + 15 + 1024];
++                snprintf(Cmd, sizeof(Cmd), "%s %s %s", METAMAIL, makeoptions(),
++		    NewSquirrelFile);
+                 fflush(stdout); fflush(stderr);
+                 retcode = system(Cmd);
+ #ifdef MSDOS
+@@ -579,7 +605,7 @@
                                  int overwriteans = -1;
                                  do {
                                      printf("File %s exists.  Do you want to overwrite it (y/n) ?\n", Fname);
@@ -42,7 +93,7 @@ $NetBSD: patch-ai,v 1.2 2012/10/26 20:27:15 joerg Exp $
                                      if (!s) {
                                          overwriteans = 0;
                                      } else {
-@@ -1202,9 +1201,9 @@ char *SquirrelFile;
+@@ -1202,9 +1228,9 @@
      fprintf(outfp, "Content-type: %s", ContentType);
      for (j=0; j<CParamsUsed; ++j) {
          fprintf(outfp, " ; ");
@@ -54,7 +105,7 @@ $NetBSD: patch-ai,v 1.2 2012/10/26 20:27:15 joerg Exp $
      }
      fprintf(outfp, "\n\n"); 
      TranslateInputToOutput(InputFP, outfp, EncodingCode, ContentType);
-@@ -1823,7 +1822,7 @@ char *ctype, *progname, *label;
+@@ -1823,7 +1849,7 @@
          } else {
              printf("This message contains '%s'-format data.\nDo you want to view it using the '%s' command (y/n) [y] ? ", ctype, ShortCommand(progname));
          }
@@ -63,7 +114,7 @@ $NetBSD: patch-ai,v 1.2 2012/10/26 20:27:15 joerg Exp $
          if (!s) return(0); /* EOF */
  	while (s && *s && isspace((unsigned char) *s)) ++s;
  	if (*s == 'y' || *s == 'Y' || !*s || *s == '\n') return(1);
-@@ -1900,7 +1899,7 @@ char *hdr;
+@@ -1900,7 +1926,7 @@
  }
  
  /* check the header given to see if it matches any in the KeyHeadList */
@@ -72,7 +123,7 @@ $NetBSD: patch-ai,v 1.2 2012/10/26 20:27:15 joerg Exp $
  char *hdr;
  {
      char *s;
-@@ -2022,7 +2021,8 @@ int ShowLeadingWhitespace;
+@@ -2022,7 +2048,8 @@
      if (lc2strcmp(charset, PrevCharset)) {
          char *s2, *charsetinuse;
  
@@ -82,7 +133,7 @@ $NetBSD: patch-ai,v 1.2 2012/10/26 20:27:15 joerg Exp $
          for (s2=PrevCharset; *s2; ++s2) {
              if (isupper((unsigned char) *s2)) *s2 = tolower((unsigned char) *s2);
          }
-@@ -2032,7 +2032,7 @@ int ShowLeadingWhitespace;
+@@ -2032,7 +2059,7 @@
          }
      }
      if (ecode == ENCODING_NONE) {
@@ -91,7 +142,7 @@ $NetBSD: patch-ai,v 1.2 2012/10/26 20:27:15 joerg Exp $
      } else {
          /* What follows is REALLY bogus, but all my encoding stuff is pipe-oriented right now... */
          MkTmpFileName(TmpFile);
-@@ -2655,12 +2655,12 @@ char *s2;
+@@ -2655,12 +2682,12 @@
  #endif
  }
  
