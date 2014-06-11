@@ -1,14 +1,23 @@
-$NetBSD: patch-configure.ac,v 1.1 2014/06/09 13:08:19 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.2 2014/06/11 01:33:59 dsainty Exp $
 
+* Don't assume sys/capability.h is guaranteed present on Linux.
 * Fix NetBSD detection for libatomics_ops check.
 * Fix unportable test(1) construct.
 * Adapt /var-paths for pkgsrc defaults.
 * Install default config files in example directory; pkgsrc config
   file framework will install them in the right place.
 
---- configure.ac.orig	2014-02-15 08:33:32.000000000 +0000
-+++ configure.ac
-@@ -251,6 +251,11 @@ else
+--- configure.ac.orig	2014-02-15 21:33:32.000000000 +1300
++++ configure.ac	2014-06-10 22:41:22.709548244 +1200
+@@ -130,7 +130,6 @@
+ case "$host_os" in
+     linux*)
+         AC_MSG_RESULT([linux])
+-        host_has_caps=1
+         os_is_linux=1
+     ;;
+     freebsd*)
+@@ -251,6 +250,11 @@
      # HW specific atomic ops stuff
      AC_MSG_CHECKING([architecture for native atomic operations])
      case $host in
@@ -20,7 +29,7 @@ $NetBSD: patch-configure.ac,v 1.1 2014/06/09 13:08:19 ryoon Exp $
          arm*)
              AC_MSG_RESULT([arm])
              AC_MSG_CHECKING([whether we can use Linux kernel helpers])
-@@ -286,10 +291,6 @@ else
+@@ -286,10 +290,6 @@
                  ])
              fi
          ;;
@@ -31,7 +40,7 @@ $NetBSD: patch-configure.ac,v 1.1 2014/06/09 13:08:19 ryoon Exp $
          *-freebsd*)
              AC_MSG_RESULT([yes])
              need_libatomic_ops=no
-@@ -478,14 +479,14 @@ AS_IF([test "$pulseaudio_cv__Bool" = "ye
+@@ -478,14 +478,14 @@
  #### Thread support ####
  
  AX_TLS
@@ -48,7 +57,7 @@ $NetBSD: patch-configure.ac,v 1.1 2014/06/09 13:08:19 ryoon Exp $
      AC_DEFINE([_POSIX_PTHREAD_SEMANTICS], 1, [Needed on Solaris]))
  
  
-@@ -988,7 +989,7 @@ AS_IF([test "x$HAVE_DBUS" = "x1"], AC_DE
+@@ -988,7 +988,7 @@
  
  PA_MACHINE_ID="${sysconfdir}/machine-id"
  AX_DEFINE_DIR(PA_MACHINE_ID, PA_MACHINE_ID, [D-Bus machine-id file])
@@ -57,7 +66,7 @@ $NetBSD: patch-configure.ac,v 1.1 2014/06/09 13:08:19 ryoon Exp $
  AX_DEFINE_DIR(PA_MACHINE_ID_FALLBACK, PA_MACHINE_ID_FALLBACK,
  	      [Fallback machine-id file])
  
-@@ -1234,9 +1235,9 @@ fi
+@@ -1234,9 +1234,9 @@
  
  PA_SYSTEM_RUNTIME_PATH="${localstatedir}/run/pulse"
  AX_DEFINE_DIR(PA_SYSTEM_RUNTIME_PATH, PA_SYSTEM_RUNTIME_PATH, [System runtime dir])
@@ -69,7 +78,7 @@ $NetBSD: patch-configure.ac,v 1.1 2014/06/09 13:08:19 ryoon Exp $
  AX_DEFINE_DIR(PA_SYSTEM_STATE_PATH, PA_SYSTEM_STATE_PATH, [System state dir])
  
  PA_BINARY=${bindir}/pulseaudio${EXEEXT}
-@@ -1248,8 +1249,9 @@ AX_DEFINE_DIR(PACTL_BINARY, PACTL_BINARY
+@@ -1248,8 +1248,9 @@
  AC_SUBST(PA_SOEXT, [.so])
  AC_DEFINE(PA_SOEXT, [".so"], [Shared object extension])
  
