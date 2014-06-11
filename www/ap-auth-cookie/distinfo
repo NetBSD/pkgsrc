@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/07/21 16:24:37 wiz Exp $
-
-SHA1 (ap13-auth-cookie-1.9/mod_auth_cookie.c) = c6f66cbc70a7daf4eba1587d79376e29b8ae6965
-RMD160 (ap13-auth-cookie-1.9/mod_auth_cookie.c) = cc130b03931ceb9326a49e4bb5e0d2c53b7f371c
-Size (ap13-auth-cookie-1.9/mod_auth_cookie.c) = 8790 bytes
