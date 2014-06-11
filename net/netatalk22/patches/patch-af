@@ -1,0 +1,30 @@
+$NetBSD: patch-af,v 1.1 2014/06/11 11:03:56 hauke Exp $
+
+--- etc/psf/etc2ps.sh.orig	2009-03-29 16:23:23.000000000 +0900
++++ etc/psf/etc2ps.sh
+@@ -9,15 +9,12 @@
+ # tag in the case.
+ #
+ 
+-DVIPSPATH=/usr/local/tex/bin
+ DVIPS=/usr/local/tex/bin/dvips
+ DVIPSARGS="-f -q"
+ 
+-TROFF2PS=/usr/local/psroff/troff2/troff2ps
++TROFF2PS="groff -Tps"
+ TROFF2PSARGS="-Z -O-.10"
+ 
+-PATH=/usr/bin:$DVIPSPATH; export PATH
+-
+ case $1 in
+ 
+ #
+@@ -40,7 +37,7 @@ df*)
+ # troff2ps is from psroff by Chris Lewis.
+ #
+ tf*)
+-    if [ -x "$TROFF2PS" ]; then
++    if [ -x "/usr/bin/groff" ]; then
+ 	exec $TROFF2PS $TROFF2PSARGS
+     else
+ 	echo "$0: filter troff2ps uninstalled" 1>&2
