@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2297 2014/06/11 14:05:46 gdt Exp $
+$NetBSD: CHANGES-2014,v 1.2298 2014/06/11 14:31:42 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3095,3 +3095,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Removed mail/thunderbird17-l10n [joerg 2014-06-11]
 	Updated devel/libbson to 0.8.2 [fhajny 2014-06-11]
 	Updated security/ccid to 1.4.17 [gdt 2014-06-11]
+	Updated databases/mongo-c-driver to 0.96.2 [fhajny 2014-06-11]
