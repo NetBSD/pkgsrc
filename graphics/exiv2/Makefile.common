@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.1 2014/06/05 07:12:53 adam Exp $
+# $NetBSD: Makefile.common,v 1.2 2014/06/11 10:59:20 jperkin Exp $
 # used by graphics/exiv2
-# used by graphics/exiv2-organizer
+# used by graphics/exiv2-organize
 
 DISTNAME=	exiv2-0.24
 CATEGORIES=	graphics
