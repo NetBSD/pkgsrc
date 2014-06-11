@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/06/10 15:22:17 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2014/06/11 12:57:23 joerg Exp $
 
 DISTNAME=	mod_auth_radius
 PKGNAME=	${APACHE_PKG_PREFIX}-auth-radius-1.5.7
@@ -19,10 +19,6 @@ APACHE_MODULE_SRC=	mod_auth_radius.c
 USE_LIBTOOL=		YES
 
 PKG_APACHE_ACCEPTED=	apache22
-.include "../../mk/apache.mk"
-.include "../../www/apache/module.mk"
-
-.include "../../security/openssl/buildlink3.mk"
 
 post-extract:
 	${MV} ${WRKSRC}/mod_auth_radius.c ${WRKSRC}/mod_auth_radius-1.0.c
@@ -39,4 +35,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/httpd.conf \
 	    ${DESTDIR}${PREFIX}/share/examples/mod_auth_radius
 
+.include "../../security/openssl/buildlink3.mk"
+.include "../../mk/apache.module.mk"
 .include "../../mk/bsd.pkg.mk"
