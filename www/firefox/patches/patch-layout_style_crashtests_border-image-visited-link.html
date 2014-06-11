@@ -1,0 +1,15 @@
+$NetBSD: patch-layout_style_crashtests_border-image-visited-link.html,v 1.1 2014/06/11 00:41:36 ryoon Exp $
+
+--- layout/style/crashtests/border-image-visited-link.html.orig	2014-06-09 02:26:27.000000000 +0000
++++ layout/style/crashtests/border-image-visited-link.html
+@@ -0,0 +1,10 @@
++<!DOCTYPE HTML>
++<title>border-image on link with visited styles</title>
++<style>
++
++:link { color: blue }
++:visited { color: purple }
++:link, :visited { border: medium solid; border-image: url(blue-32x32.png) 4 4 4 4; }
++
++</style>
++<a href="http://example.com/">test</a>
