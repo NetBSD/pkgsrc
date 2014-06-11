@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE.pam,v 1.2 2010/07/20 06:47:37 adam Exp $
-
-A netatalk PAM configuration file needs to be installed in the pam.d
-directory.  An example file can be found at
-${PREFIX}/share/examples/netatalk/netatalk.pam
-
-===========================================================================

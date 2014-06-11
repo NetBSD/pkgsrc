@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2014/06/11 11:03:56 hauke Exp $
+
+For users migrating from Netatalk 1.x, note that CAP encoding is not
+supported by Netatalk 2 any more. There are tools to convert CAP
+encoded file names to UTF-8, but that is not a simple and safe way.
+
+Instead, consider backing up your Netatalk 1.x volumes to a client before
+the update, and restoring the backups from the client to the Netatalk 2
+server.
+
+===========================================================================

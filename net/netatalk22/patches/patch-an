@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1 2014/06/11 11:03:56 hauke Exp $
+
+--- etc/uams/uams_randnum.c.orig	2005-05-26 17:24:26.000000000 +1200
++++ etc/uams/uams_randnum.c
+@@ -47,7 +47,7 @@ char *strchr (), *strrchr ();
+ #include <atalk/uam.h>
+ 
+ 
+-#include <des.h>
++#include <openssl/des.h>
+ 
+ #ifdef USE_CRACKLIB
+ #include <crack.h>
