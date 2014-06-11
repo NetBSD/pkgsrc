@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2291 2014/06/11 12:07:24 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2292 2014/06/11 12:32:42 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3089,3 +3089,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/firefox-l10n to 30.0 [ryoon 2014-06-11]
 	Moved net/netatalk to net/netatalk22 [hauke 2014-06-11]
 	Added net/netatalk30 version 3.0.8 [hauke 2014-06-11]
+	Removed mail/thunderbird10 [joerg 2014-06-11]
