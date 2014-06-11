@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13395 2014/06/11 02:42:16 ryoon Exp $
+$NetBSD: TODO,v 1.13396 2014/06/11 12:07:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -425,7 +425,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cdk-5.0.20120323
 	o cdrkit-1.1.10
 	o cfitsio-3.350
-	o cgicc-3.2.14
+	o cgicc-3.2.15
 	o chasen-2.4.5
 	o cheese-2.32.0 [GNOME 2.32]
 	o cheese-3.12.2
@@ -581,7 +581,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o geany-1.24.1
 	o gedit-plugins-2.32.0 [GNOME 2.32]
 	o gentoo-0.20.4
-	o gettext-0.19
+	o gettext-0.19.1
 	o gfract-0.33
 	o ghc-7.8.1
 	o git-2.0
@@ -595,6 +595,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gle-4.2.4
 	o glib2-2.40.0
 	o glibmm-2.40
+	o global-6.3
 	o glom-1.14.2 [GNOME 2.26]
 	o glu-10.2.1
 	o gnet1-1.1.9
