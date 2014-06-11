@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2286 2014/06/10 22:17:25 joerg Exp $
+$NetBSD: CHANGES-2014,v 1.2287 2014/06/11 00:42:01 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3083,3 +3083,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/pcre to 8.35nb1 [wiz 2014-06-10]
 	Updated x11/libXtst to 1.2.2nb1 [wiz 2014-06-10]
 	Removed www/p5-Apache-AuthCookieDBI [joerg 2014-06-10]
+	Updated www/firefox to 30.0 [ryoon 2014-06-11]
