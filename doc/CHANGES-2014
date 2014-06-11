@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2290 2014/06/11 11:03:56 hauke Exp $
+$NetBSD: CHANGES-2014,v 1.2291 2014/06/11 12:07:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3087,5 +3087,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.378 [obache 2014-06-11]
 	Updated devel/nspr to 4.10.6 [ryoon 2014-06-11]
 	Updated www/firefox-l10n to 30.0 [ryoon 2014-06-11]
-        Renamed net/netatalk (version 2.2.5) to netatalk22 [hauke 2014-06-11]
-        Added wip/netatalk30 (version 3.0.8) as net/netatalk30 [hauke 2014-06-11]
+	Moved net/netatalk to net/netatalk22 [hauke 2014-06-11]
+	Added net/netatalk30 version 3.0.8 [hauke 2014-06-11]
