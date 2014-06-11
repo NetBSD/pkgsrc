@@ -1,4 +1,4 @@
-/*	$NetBSD: http.c,v 1.36 2014/06/07 19:22:51 cheusov Exp $	*/
+/*	$NetBSD: http.c,v 1.37 2014/06/11 13:12:12 joerg Exp $	*/
 /*-
  * Copyright (c) 2000-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2003 Thomas Klausner <wiz@NetBSD.org>
@@ -69,9 +69,7 @@
    __FreeBSD_kernel__ is defined for GNU/kFreeBSD.
    See http://glibc-bsd.alioth.debian.org/porting/PORTING .
 */
-#ifndef _GNU_SOURCE
 #define _GNU_SOURCE
-#endif
 #endif
 
 /* Needed for gmtime_r on Interix */
