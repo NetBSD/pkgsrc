@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2014/06/07 19:22:51 cheusov Exp $
+# $NetBSD: Makefile,v 1.53 2014/06/11 13:12:12 joerg Exp $
 #
 
 DISTNAME=	libfetch-2.36
@@ -27,8 +27,6 @@ INSTALLATION_DIRS=	include lib ${PKGMANDIR}/cat3 ${PKGMANDIR}/man3
 
 BUILD_TARGET=	depend all
 INSTALL_TARGET=	install includes
-
-CPPFLAGS=	-D_GNU_SOURCE
 
 do-extract:
 	${CP} -r ${FILESDIR} ${WRKSRC}
