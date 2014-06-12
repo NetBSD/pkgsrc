@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/05/29 23:37:59 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2014/06/12 13:31:41 joerg Exp $
 
 DISTNAME=	Apache-Reload-0.11
 PKGNAME=	p5-${DISTNAME}
@@ -19,7 +19,7 @@ PKG_APACHE_ACCEPTED=	apache13
 
 PERL5_PACKLIST=		auto/Apache/Reload/.packlist
 
-.include "../../www/ap-perl/buildlink3.mk"
+.include "../../www/ap2-perl/buildlink3.mk"
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
