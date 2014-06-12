@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2013/10/20 17:02:02 gls Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/06/12 00:43:28 gls Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -55,9 +55,6 @@ ${PYSITELIB}/paramiko/kex_gex.pyo
 ${PYSITELIB}/paramiko/kex_group1.py
 ${PYSITELIB}/paramiko/kex_group1.pyc
 ${PYSITELIB}/paramiko/kex_group1.pyo
-${PYSITELIB}/paramiko/logging22.py
-${PYSITELIB}/paramiko/logging22.pyc
-${PYSITELIB}/paramiko/logging22.pyo
 ${PYSITELIB}/paramiko/message.py
 ${PYSITELIB}/paramiko/message.pyc
 ${PYSITELIB}/paramiko/message.pyo
@@ -76,6 +73,9 @@ ${PYSITELIB}/paramiko/primes.pyo
 ${PYSITELIB}/paramiko/proxy.py
 ${PYSITELIB}/paramiko/proxy.pyc
 ${PYSITELIB}/paramiko/proxy.pyo
+${PYSITELIB}/paramiko/py3compat.py
+${PYSITELIB}/paramiko/py3compat.pyc
+${PYSITELIB}/paramiko/py3compat.pyo
 ${PYSITELIB}/paramiko/resource.py
 ${PYSITELIB}/paramiko/resource.pyc
 ${PYSITELIB}/paramiko/resource.pyo
