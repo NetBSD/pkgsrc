@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2306 2014/06/12 00:44:49 gls Exp $
+$NetBSD: CHANGES-2014,v 1.2307 2014/06/12 00:53:59 gls Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3104,3 +3104,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Test-BDD-Cucumber to 0.25 [schmonz 2014-06-11]
 	Updated security/py-ecdsa to 0.11 [gls 2014-06-11]
 	Updated security/py-paramiko to 1.14.0 [gls 2014-06-11]
+	Updated sysutils/fabric to 1.9.0 [gls 2014-06-11]
