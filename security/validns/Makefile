@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/05/29 23:37:26 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2014/06/12 23:02:57 wiedi Exp $
 #
 
 DISTNAME=	validns-0.8
@@ -35,4 +35,5 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/validns.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../devel/libjudy/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
