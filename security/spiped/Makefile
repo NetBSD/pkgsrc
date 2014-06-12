@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/05/14 14:00:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2014/06/12 23:05:28 wiedi Exp $
 
 DISTNAME=	spiped-1.3.1
 PKGREVISION=	2
@@ -32,4 +32,5 @@ MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/spiped
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
