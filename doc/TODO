@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13397 2014/06/11 13:25:41 wiz Exp $
+$NetBSD: TODO,v 1.13398 2014/06/12 07:23:37 asau Exp $
 
 Suggested new packages
 ======================
@@ -430,7 +430,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cheese-2.32.0 [GNOME 2.32]
 	o cheese-3.12.2
 	o cherokee-1.2.103 [pkg/48268]
-	o chicken-4.9.0 [broken, don't update]
 	o chktex-1.7.2
 	o chromium-0.9.15
 	o chromium-bsu-0.9.15.1
