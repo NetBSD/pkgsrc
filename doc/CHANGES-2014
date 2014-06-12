@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2308 2014/06/12 00:59:26 gls Exp $
+$NetBSD: CHANGES-2014,v 1.2309 2014/06/12 07:23:37 asau Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3106,3 +3106,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/py-paramiko to 1.14.0 [gls 2014-06-11]
 	Updated sysutils/fabric to 1.9.0 [gls 2014-06-11]
 	Updated sysutils/cuisine to 0.7.1 [gls 2014-06-11]
+	Updated lang/chicken to 4.9.0.1 [asau 2014-06-12]
