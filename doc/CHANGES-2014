@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2311 2014/06/12 09:06:48 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2312 2014/06/12 13:32:02 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3109,3 +3109,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/chicken to 4.9.0.1 [asau 2014-06-12]
 	Updated graphics/png to 1.6.12 [wiz 2014-06-12]
 	Updated devel/global to 6.3 [wiz 2014-06-12]
+	Updated mail/postgrey to 1.35 [fhajny 2014-06-12]
