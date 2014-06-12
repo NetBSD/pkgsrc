@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/02/23 00:40:04 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/12 23:04:16 wiedi Exp $
 
 DISTNAME=	toilet-0.3
 CATEGORIES=	misc
@@ -15,4 +15,5 @@ DEPENDS+=	libcaca>=0.99.18:../../graphics/libcaca
 GNU_CONFIGURE=	yes
 
 .include "../../graphics/libcaca/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
