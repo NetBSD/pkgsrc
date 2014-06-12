@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2013/10/02 06:59:08 yyamano Exp $
+# $NetBSD: Makefile,v 1.10 2014/06/12 17:35:46 yyamano Exp $
 
-DISTNAME=	scala-2.10.3
+DISTNAME=	scala-2.11.1
 CATEGORIES=	lang
 MASTER_SITES=	http://www.scala-lang.org/files/archive/
 EXTRACT_SUFX=	.tgz
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.scala-lang.org/
 COMMENT=	Scala is a multi-paradigm programming language
 
 USE_JAVA=	run
-USE_JAVA2=	1.5
+USE_JAVA2=	6
 NO_BUILD=	yes
 
 USE_TOOLS+=	bash:run
@@ -37,7 +37,7 @@ do-install:
 	@${RM} -f ${WRKSRC}/bin/*.orig
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/* ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/man/man1/* ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	@cd ${WRKSRC} && ${TAR} cf - doc lib misc src | ${TAR} xf - -C ${DESTDIR}${SCALA_HOME}
+	@cd ${WRKSRC} && ${TAR} cf - doc lib | ${TAR} xf - -C ${DESTDIR}${SCALA_HOME}
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
