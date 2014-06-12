@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/04/04 21:00:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2014/06/12 04:15:48 pho Exp $
 
 DISTNAME=	tig-1.2.1
 CATEGORIES=	devel scm
@@ -25,6 +25,16 @@ CONFIGURE_ENV+=	GIT_CONFIG=${GIT_CONFIG:Q}
 
 CONFIGURE_ARGS+=		${CONFIGURE_ARGS.${ICONV_TYPE}-iconv}
 CONFIGURE_ARGS.gnu-iconv=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
+
+.include "../../mk/bsd.prefs.mk"
+.if !empty(GLIBC_VERSION)
+# Some version of glibc requires _XOPEN_SOURCE being defined to
+# provide S_IFMT in <sys/stat.h>
+CFLAGS+=	-D_XOPEN_SOURCE
+# It is also required to define _BSD_SOURCE to get struct timezone
+# defined in <sys/time.h>
+CFLAGS+=	-D_BSD_SOURCE
+.endif
 
 BUILD_TARGET=	all doc
 INSTALL_TARGET=	install install-doc
