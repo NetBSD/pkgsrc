@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2014/05/09 07:37:19 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/06/12 00:58:38 gls Exp $
 
-VERSION=		b79718f8f69d17a075b7a626e32c1ed1200445f8
-DISTNAME=		${VERSION}
-PKGNAME=		cuisine-0.6.4
+VERSION=		0.7.1
+DISTNAME=		cuisine-${VERSION}
+#PKGNAME=		cuisine-0.7.1
 CATEGORIES=		sysutils
-MASTER_SITES=		https://github.com/sebastien/cuisine/archive/
+MASTER_SITES=		https://pypi.python.org/packages/source/c/cuisine/
 
 MAINTAINER=		imil@NetBSD.org
 HOMEPAGE=		https://github.com/sebastien/cuisine
@@ -22,7 +22,6 @@ DOCDIR=			${PREFIX}/share/doc/cuisine
 INSTALLATION_DIRS+=	${DOCDIR}
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/api/cuisine-api.html ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.rst ${DESTDIR}${DOCDIR}
 
 .include "../../lang/python/egg.mk"
