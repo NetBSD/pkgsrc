@@ -1,0 +1,22 @@
+$NetBSD: patch-scripts_csc-trans,v 1.1 2014/06/12 07:22:12 asau Exp $
+
+--- scripts/csc-trans.orig	2014-05-18 17:01:17.000000000 +0000
++++ scripts/csc-trans
+@@ -35,7 +35,7 @@ shift $(($OPTIND - 1))
+ 
+ # First argument after options is the file
+ FILE=$1
+-if [ "x$FILE" == "x" ]; then
++if [ -z "$FILE" ]; then
+     FILE="/dev/stdin"
+ fi
+ 
+@@ -55,7 +55,7 @@ if [ -n "$NOENSCRIPT" ]; then
+ fi
+ 
+ # Are we filtering out just the user code?
+-if [ "x$ALL" == "x1" ]; then
++if [ -z "$ALL" ]; then
+   $CSC $CSC_OPTS $FILE | $PASS2 2>/dev/null | $PASS3 2>/dev/null
+ else
+   $CSC $CSC_OPTS $FILE |\
