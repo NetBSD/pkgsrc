@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2014/05/29 23:36:51 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2014/06/12 13:31:44 fhajny Exp $
 
-DISTNAME=	postgrey-1.34
-PKGREVISION=	1
+DISTNAME=	postgrey-1.35
 CATEGORIES=	mail
 MASTER_SITES=	http://postgrey.schweikert.ch/pub/
 
@@ -71,7 +70,7 @@ SUBST_SED.postgrey+=	-e 's,/etc/postfix,${PKG_SYSCONFDIR},g'
 #
 SUBST_MESSAGE.postgrey=	Fixing defaults.
 
-INSTALLATION_DIRS=	sbin ${DOCDIR} ${EGDIR}
+INSTALLATION_DIRS+=	sbin ${DOCDIR} ${EGDIR}
 
 do-build:
 
