@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2014/05/29 23:38:17 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2014/06/12 13:31:41 joerg Exp $
 
 DISTNAME=	libapreq-1.34
 PKGNAME=	p5-${DISTNAME}
@@ -22,5 +22,5 @@ PERL5_PACKLIST=	auto/libapreq/.packlist
 LDFLAGS+=	${COMPILER_RPATH_FLAG}auto/libapreq
 
 .include "../../lang/perl5/module.mk"
-.include "../../www/ap-perl/buildlink3.mk"
+.include "../../www/ap2-perl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

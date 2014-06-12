@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/05/29 23:37:59 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2014/06/12 13:31:41 joerg Exp $
 
 DISTNAME=	Apache-Filter-1.024
 PKGNAME=	p5-${DISTNAME}
@@ -14,5 +14,5 @@ COMMENT=	Perl5 module to alter the output of previous Apache handlers
 PERL5_PACKLIST=		auto/Apache/Filter/.packlist
 
 .include "../../lang/perl5/module.mk"
-.include "../../www/ap-perl/buildlink3.mk"
+.include "../../www/ap2-perl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
