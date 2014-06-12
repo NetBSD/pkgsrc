@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2014/05/29 23:37:05 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2014/06/12 15:36:33 fhajny Exp $
 #
 
 PKGREVISION=	9
@@ -22,7 +22,8 @@ BUILD_DEFS+=	${NAGIOS_GROUP}
 
 CONFIGURE_ARGS+= --without-pgsql --without-mysql \
 		--without-smbclient-command --without-snmpget-command \
-		--without-snmpgetnext-command --without-fping-command
+		--without-snmpgetnext-command --without-fping-command \
+		--without-apt-get-command
 
 SPECIAL_PERMS+=	${PREFIX}/libexec/nagios/check_icmp ${SETUID_ROOT_PERMS}
 SPECIAL_PERMS+=	${PREFIX}/libexec/nagios/check_dhcp ${SETUID_ROOT_PERMS}
