@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2305 2014/06/12 00:29:31 gls Exp $
+$NetBSD: CHANGES-2014,v 1.2306 2014/06/12 00:44:49 gls Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3103,3 +3103,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added math/p5-Number-Range version 0.11 [schmonz 2014-06-11]
 	Updated devel/p5-Test-BDD-Cucumber to 0.25 [schmonz 2014-06-11]
 	Updated security/py-ecdsa to 0.11 [gls 2014-06-11]
+	Updated security/py-paramiko to 1.14.0 [gls 2014-06-11]
