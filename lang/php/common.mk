@@ -1,6 +1,7 @@
-# $NetBSD: common.mk,v 1.1 2013/07/21 17:29:47 taca Exp $
+# $NetBSD: common.mk,v 1.2 2014/06/13 02:58:19 obache Exp $
 # used by lang/php53/Makefile.common
 # used by lang/php54/Makefile.common
+# used by lang/php55/Makefile.common
 # 
 .if !defined(PHPCOMMON_MK)
 PHPCOMMON_MK=	defined
