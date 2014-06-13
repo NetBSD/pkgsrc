@@ -1,8 +1,64 @@
-$NetBSD: patch-configure,v 1.6 2014/05/01 15:52:33 taca Exp $
+$NetBSD: patch-configure,v 1.7 2014/06/13 14:31:19 fhajny Exp $
 
---- configure.orig	2014-04-30 08:40:22.000000000 +0000
+--- configure.orig	2014-05-28 09:23:59.000000000 +0000
 +++ configure
-@@ -23604,7 +23604,7 @@ fi
+@@ -8321,27 +8321,6 @@ EOF
+     ;;
+   esac
+ 
+-  if test "$APACHE_VERSION" -lt 2004001; then
+-    APXS_MPM=`$APXS -q MPM_NAME`
+-    if test "$APXS_MPM" != "prefork" && test "$APXS_MPM" != "peruser" && test "$APXS_MPM" != "itk"; then
+-
+-  enable_maintainer_zts=yes
+-  if test "$pthreads_working" != "yes"; then
+-    as_fn_error $? "ZTS currently requires working POSIX threads. We were unable to verify that your system supports Pthreads." "$LINENO" 5
+-  fi
+-
+-    fi
+-  else
+-    APACHE_THREADED_MPM=`$APXS_HTTPD -V | grep 'threaded:.*yes'`
+-    if test -n "$APACHE_THREADED_MPM"; then
+-
+-  enable_maintainer_zts=yes
+-  if test "$pthreads_working" != "yes"; then
+-    as_fn_error $? "ZTS currently requires working POSIX threads. We were unable to verify that your system supports Pthreads." "$LINENO" 5
+-  fi
+-
+-    fi
+-  fi
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
+ 
+@@ -9145,27 +9124,6 @@ EOF
+     ;;
+   esac
+ 
+-  if test "$APACHE_VERSION" -lt 2004001; then
+-    APXS_MPM=`$APXS -q MPM_NAME`
+-    if test "$APXS_MPM" != "prefork" && test "$APXS_MPM" != "peruser" && test "$APXS_MPM" != "itk"; then
+-
+-  enable_maintainer_zts=yes
+-  if test "$pthreads_working" != "yes"; then
+-    as_fn_error $? "ZTS currently requires working POSIX threads. We were unable to verify that your system supports Pthreads." "$LINENO" 5
+-  fi
+-
+-    fi
+-  else
+-    APACHE_THREADED_MPM=`$APXS_HTTPD -V | grep 'threaded:.*yes'`
+-    if test -n "$APACHE_THREADED_MPM"; then
+-
+-  enable_maintainer_zts=yes
+-  if test "$pthreads_working" != "yes"; then
+-    as_fn_error $? "ZTS currently requires working POSIX threads. We were unable to verify that your system supports Pthreads." "$LINENO" 5
+-  fi
+-
+-    fi
+-  fi
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
+ 
+@@ -23604,7 +23562,7 @@ fi
      if test "$found_openssl" = "no"; then
  
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -11,7 +67,7 @@ $NetBSD: patch-configure,v 1.6 2014/05/01 15:52:33 taca Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -25754,7 +25754,7 @@ $as_echo "yes" >&6; }
+@@ -25754,7 +25712,7 @@ $as_echo "yes" >&6; }
      PHP_SQLITE3_CFLAGS="-I@ext_srcdir@/libsqlite $other_flags $threadsafe_flags $debug_flags"
  
  
@@ -20,7 +76,7 @@ $NetBSD: patch-configure,v 1.6 2014/05/01 15:52:33 taca Exp $
  
  
    unique=`echo $header_file|$SED 's/[^a-zA-Z0-9]/_/g'`
-@@ -36811,7 +36811,7 @@ fi
+@@ -36811,7 +36769,7 @@ fi
      if test "$found_openssl" = "no"; then
  
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -29,7 +85,7 @@ $NetBSD: patch-configure,v 1.6 2014/05/01 15:52:33 taca Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -48213,7 +48213,7 @@ fi
+@@ -48213,7 +48171,7 @@ fi
      if test "$found_openssl" = "no"; then
  
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -38,7 +94,7 @@ $NetBSD: patch-configure,v 1.6 2014/05/01 15:52:33 taca Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -65189,7 +65189,7 @@ rm -f core *.core core.conftest.* gmon.o
+@@ -65189,7 +65147,7 @@ rm -f core *.core core.conftest.* gmon.o
  fi
  
  
@@ -47,7 +103,7 @@ $NetBSD: patch-configure,v 1.6 2014/05/01 15:52:33 taca Exp $
  	as_fn_error $? "Don't know how to define struct flock on this system, set --enable-opcache=no" "$LINENO" 5
  fi
  
-@@ -104582,12 +104582,7 @@ old_CC=$CC
+@@ -104582,12 +104540,7 @@ old_CC=$CC
  if test "$PHP_THREAD_SAFETY" = "yes" && test -n "$ac_cv_pthreads_cflags"; then
    CXXFLAGS="$CXXFLAGS $ac_cv_pthreads_cflags"
    INLINE_CFLAGS="$INLINE_CFLAGS $ac_cv_pthreads_cflags"
@@ -61,7 +117,7 @@ $NetBSD: patch-configure,v 1.6 2014/05/01 15:52:33 taca Exp $
  fi
  
  if test "$PHP_THREAD_SAFETY" = "yes" && test "$PHP_MYSQL" = "yes"; then
-@@ -107701,7 +107696,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -107701,7 +107654,7 @@ if test -z "$aix_libpath"; then aix_libp
        hardcode_shlibpath_var=no
        ;;
  
@@ -70,7 +126,7 @@ $NetBSD: patch-configure,v 1.6 2014/05/01 15:52:33 taca Exp $
        ld_shlibs=no
        ;;
  
-@@ -108350,7 +108345,7 @@ dgux*)
+@@ -108350,7 +108303,7 @@ dgux*)
    shlibpath_var=LD_LIBRARY_PATH
    ;;
  
@@ -79,7 +135,7 @@ $NetBSD: patch-configure,v 1.6 2014/05/01 15:52:33 taca Exp $
    dynamic_linker=no
    ;;
  
-@@ -108361,7 +108356,7 @@ freebsd* | dragonfly*)
+@@ -108361,7 +108314,7 @@ freebsd* | dragonfly*)
      objformat=`/usr/bin/objformat`
    else
      case $host_os in
@@ -88,7 +144,7 @@ $NetBSD: patch-configure,v 1.6 2014/05/01 15:52:33 taca Exp $
      *) objformat=elf ;;
      esac
    fi
-@@ -110441,7 +110436,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -110441,7 +110394,7 @@ if test -z "$aix_libpath"; then aix_libp
  	;;
      esac
      ;;
@@ -97,7 +153,7 @@ $NetBSD: patch-configure,v 1.6 2014/05/01 15:52:33 taca Exp $
      # C++ shared libraries reported to be fairly broken before switch to ELF
      ld_shlibs_CXX=no
      ;;
-@@ -111987,7 +111982,7 @@ dgux*)
+@@ -111987,7 +111940,7 @@ dgux*)
    shlibpath_var=LD_LIBRARY_PATH
    ;;
  
@@ -106,7 +162,7 @@ $NetBSD: patch-configure,v 1.6 2014/05/01 15:52:33 taca Exp $
    dynamic_linker=no
    ;;
  
-@@ -111998,7 +111993,7 @@ freebsd* | dragonfly*)
+@@ -111998,7 +111951,7 @@ freebsd* | dragonfly*)
      objformat=`/usr/bin/objformat`
    else
      case $host_os in
