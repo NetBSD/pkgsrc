@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.47 2014/03/12 19:52:04 asau Exp $
+# $NetBSD: Makefile,v 1.48 2014/06/13 14:13:20 fhajny Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
 #
 PKGNAME=		php-${PHP_BASE_VERS}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		lang
 
 HOMEPAGE=		http://www.php.net/
