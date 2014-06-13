@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/11/15 16:33:14 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/06/13 14:13:20 fhajny Exp $
 bin/phar
 bin/phar.phar
 bin/php
@@ -94,6 +94,26 @@ include/php/ext/hash/php_hash_snefru.h
 include/php/ext/hash/php_hash_tiger.h
 include/php/ext/hash/php_hash_types.h
 include/php/ext/hash/php_hash_whirlpool.h
+include/php/ext/mysqlnd/config-win.h
+include/php/ext/mysqlnd/mysqlnd.h
+include/php/ext/mysqlnd/mysqlnd_alloc.h
+include/php/ext/mysqlnd/mysqlnd_block_alloc.h
+include/php/ext/mysqlnd/mysqlnd_charset.h
+include/php/ext/mysqlnd/mysqlnd_debug.h
+include/php/ext/mysqlnd/mysqlnd_enum_n_def.h
+include/php/ext/mysqlnd/mysqlnd_ext_plugin.h
+include/php/ext/mysqlnd/mysqlnd_libmysql_compat.h
+include/php/ext/mysqlnd/mysqlnd_net.h
+include/php/ext/mysqlnd/mysqlnd_portability.h
+include/php/ext/mysqlnd/mysqlnd_priv.h
+include/php/ext/mysqlnd/mysqlnd_result.h
+include/php/ext/mysqlnd/mysqlnd_result_meta.h
+include/php/ext/mysqlnd/mysqlnd_reverse_api.h
+include/php/ext/mysqlnd/mysqlnd_statistics.h
+include/php/ext/mysqlnd/mysqlnd_structs.h
+include/php/ext/mysqlnd/mysqlnd_wireprotocol.h
+include/php/ext/mysqlnd/php_mysqlnd.h
+include/php/ext/mysqlnd/php_mysqlnd_config.h
 include/php/ext/libxml/php_libxml.h
 include/php/ext/pcre/pcrelib/config.h
 include/php/ext/pcre/pcrelib/pcre.h
