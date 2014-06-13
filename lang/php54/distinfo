@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.40 2014/05/31 04:28:57 taca Exp $
+$NetBSD: distinfo,v 1.41 2014/06/13 14:09:34 fhajny Exp $
 
 SHA1 (php-5.4.29.tar.bz2) = 199cfe6ba44732d737e03e5321ea9399823759d7
 RMD160 (php-5.4.29.tar.bz2) = 38e3d70fe04cf458f4615355857ded9a90df67e4
@@ -20,4 +20,5 @@ SHA1 (patch-php.ini-development) = 056a74646cbeb0b2bcfc18463348343d817b54bc
 SHA1 (patch-php.ini-production) = ac61016e18077a0870b8c8c42e89e3848c26d1f2
 SHA1 (patch-run-tests.php) = ff80b8ad52d7c0a43fa318ed9bffca9d7b3e688d
 SHA1 (patch-sapi_cgi_Makefile.frag) = c271096b8565e89a85b0189c6f503f3fb5cd4b27
+SHA1 (patch-sapi_fpm_fpm_events_port.c) = ad45bcebadf923ee8cb3f2ad4d78d21dd178a8e3
 SHA1 (patch-sapi_fpm_php-fpm.conf.in) = 2369bb6a426a7fb47dc73c88f0daa0f6fa67b593
