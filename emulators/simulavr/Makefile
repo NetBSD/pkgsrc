@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/02/22 03:26:53 mef Exp $
+# $NetBSD: Makefile,v 1.23 2014/06/13 03:41:46 dsainty Exp $
 #
 DISTNAME=		simulavr-1.0.0
 PKGREVISION=		1
@@ -16,6 +16,8 @@ BUILD_DEPENDS+=		avr-libc-[0-9]*:../../cross/avr-libc
 CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--enable-python=python${PYVERSSUFFIX}
 CONFIGURE_ARGS+=	--with-bfd=${PREFIX}/avr
+CONFIGURE_ENV+=		TEX=no
+
 # Following line does not work yet (examples/python directory)
 #CONFIGURE_ENV+=	az_python_use=true
 #MAKE_ENV+=		az_python_use=true
