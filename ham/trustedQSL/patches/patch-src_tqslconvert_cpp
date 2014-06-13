@@ -1,11 +1,11 @@
-$NetBSD: patch-src_tqslconvert_cpp,v 1.1 2013/09/13 08:45:52 mef Exp $
+$NetBSD: patch-src_tqslconvert_cpp,v 1.2 2014/06/13 11:38:03 mef Exp $
 
 Convert db.h name to pkgsrc current name
 
---- src/tqslconvert.cpp.orig	2013-04-20 21:51:36.000000000 +0900
-+++ src/tqslconvert.cpp	2013-04-25 10:54:50.000000000 +0900
+--- src/tqslconvert.cpp.orig	2014-01-12 23:39:24.000000000 +0900
++++ src/tqslconvert.cpp	2014-01-14 00:46:23.000000000 +0900
 @@ -22,7 +22,7 @@
- #include <vector>
+ #include <string>
  #include <ctype.h>
  #include <set>
 -#include <db.h>
