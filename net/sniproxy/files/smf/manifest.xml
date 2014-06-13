@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE service_bundle SYSTEM "/usr/share/lib/xml/dtd/service_bundle.dtd.1">
+<service_bundle type='manifest' name='@SMF_NAME@'>
+<service name='@SMF_PREFIX@/@SMF_NAME@' type='service' version='1'>
+	<create_default_instance enabled="false"/>
+	<dependency name='fs-root' grouping='require_all' restart_on='none' type='service'>
+		<service_fmri value='svc:/system/filesystem/root' />
+	</dependency>
+	<dependency name='network-service' grouping='require_all' restart_on='none' type='service'>
+		<service_fmri value='svc:/network/service'/>
+	</dependency>
+
+	<exec_method name='start' type='method' exec='@PREFIX@/sbin/sniproxy -c %{config_file}' timeout_seconds='20'/>
+	<exec_method name='stop'  type='method' exec=':kill' timeout_seconds='60'/>
+
+	<property_group name="application" type="application">
+		<propval name="config_file" type="astring" value="@PKG_SYSCONFDIR@/sniproxy.conf" />
+	</property_group>
+
+	<stability value='Unstable'/>
+	<template>
+		<common_name>
+			<loctext xml:lang='C'>HTTPS SNI Proxy</loctext>
+		</common_name>
+	</template>
+</service>
+</service_bundle>
