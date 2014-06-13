@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.41 2014/06/13 14:09:34 fhajny Exp $
+$NetBSD: distinfo,v 1.42 2014/06/13 14:31:19 fhajny Exp $
 
 SHA1 (php-5.4.29.tar.bz2) = 199cfe6ba44732d737e03e5321ea9399823759d7
 RMD160 (php-5.4.29.tar.bz2) = 38e3d70fe04cf458f4615355857ded9a90df67e4
@@ -6,7 +6,7 @@ Size (php-5.4.29.tar.bz2) = 12293765 bytes
 SHA1 (patch-acinclude.m4) = 71635e5381abf99a9fc9f2537b1c2f18e8096f00
 SHA1 (patch-aclocal.m4) = eae2ed8ea2985933c4fe88ba52577c14ac88eb92
 SHA1 (patch-build_libtool.m4) = 6dfef7c07a42dc54611c104265ef43c50a4e88ca
-SHA1 (patch-configure) = 7d14d78b6bb1b70d8467afb7baf54e51f313542c
+SHA1 (patch-configure) = a7b2e15625d6005ed3ce16280b0e26a378e0b5f2
 SHA1 (patch-ext_gd_config.m4) = 2353efe6f25e1081b41d61033c3185cc643c7891
 SHA1 (patch-ext_gd_libgd_gdxpm.c) = 9a175417fad9ac23037a24122f8d1258b9eebbcb
 SHA1 (patch-ext_imap_config.m4) = 01681e8b54ee586ec4db72a5da2d0aec3fa89fcc
