@@ -1,18 +1,41 @@
-$NetBSD: patch-apps_tqsl_cpp,v 1.1 2013/09/13 08:45:52 mef Exp $
+$NetBSD: patch-apps_tqsl_cpp,v 1.2 2014/06/13 11:38:03 mef Exp $
 
+(1)
 Avoid following error (interim, only valid with db5)
 /usr/pkgsrc/wip/trustedQSL/work/tqsl-2.0/apps/tqsl.cpp:1133:36: error: 'DB_VERSION_STRING' was not declared in this scope
 gmake[2]: *** [apps/CMakeFiles/tqsl.dir/tqsl.cpp.o] Error 1
 gmake[1]: *** [apps/CMakeFiles/tqsl.dir/all] Error 2
 
---- apps/tqsl.cpp.orig	2013-08-18 22:07:48.000000000 +0900
-+++ apps/tqsl.cpp	2013-09-01 00:39:30.000000000 +0900
-@@ -71,7 +71,7 @@
+(2)
+tqsl-2.0.1/apps/tqsl.cpp:2963:10: error: #pragma GCC diagnostic not allowed inside functions
+tqsl-2.0.1/apps/tqsl.cpp:2967:10: error: #pragma GCC diagnostic not allowed inside functions
+
+--- apps/tqsl.cpp.orig	2014-02-27 03:07:41.000000000 +0900
++++ apps/tqsl.cpp	2014-02-27 20:21:11.000000000 +0900
+@@ -55,7 +55,7 @@
  #endif
  #include <zlib.h>
  #include <openssl/opensslv.h> // only for version info!
 -#include <db.h> //only for version info!
 +#include <db5/db.h> //only for version info!
- #include "tqslwiz.h"
- #include "qsodatadialog.h"
- #include "tqslerrno.h"
+ 
+ #include <iostream>
+ #include <fstream>
+@@ -3022,7 +3022,7 @@ MyFrame::OnUpdateCheckDone(wxCommandEven
+ // The macro for declaring a hash map defines a couple of typedefs
+ // that it never uses. Current GCC warns about those. The pragma
+ // below suppresses those warnings for those.
+-#if !defined(__APPLE__) && !defined(_WIN32)
++#if !defined(__APPLE__) && !defined(_WIN32) && !defined(__NetBSD__) && !defined(__DragonFly__) && !defined(__FreeBSD__)
+ 	#pragma GCC diagnostic ignored "-Wunused-local-typedefs"
+ #endif
+ void
+@@ -3192,7 +3192,7 @@ MyFrame::DoCheckForUpdates(bool silent, 
+ 	DoCheckExpiringCerts(noGUI);
+ 	return;
+ }
+-#if !defined(__APPLE__) && !defined(_WIN32)
++#if !defined(__APPLE__) && !defined(_WIN32) && !defined(__NetBSD__) && !defined(__DragonFly__) && !defined(__FreeBSD__)
+ 	#pragma GCC diagnostic warning "-Wunused-local-typedefs"
+ #endif
+ 
