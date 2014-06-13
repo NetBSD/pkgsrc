@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.8 2014/05/31 04:28:57 taca Exp $
+# $NetBSD: Makefile.php,v 1.9 2014/06/13 14:13:20 fhajny Exp $
 # used by lang/php54/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
@@ -37,6 +37,7 @@ CONFIGURE_ARGS+=	--disable-pdo
 CONFIGURE_ARGS+=	--disable-json
 
 CONFIGURE_ARGS+=	--enable-cgi
+CONFIGURE_ARGS+=	--enable-mysqlnd
 CONFIGURE_ARGS+=	--enable-xml
 CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX}
 
