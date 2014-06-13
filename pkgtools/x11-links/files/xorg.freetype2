@@ -1,4 +1,4 @@
-# $NetBSD: xorg.freetype2,v 1.15 2014/05/03 21:31:10 ryoon Exp $
+# $NetBSD: xorg.freetype2,v 1.16 2014/06/13 22:42:18 gdt Exp $
 #
 bin/freetype-config
 include/freetype2/config/ftconfig.h
@@ -55,6 +55,7 @@ include/freetype2/freetype/ttnameid.h
 include/freetype2/freetype/tttables.h
 include/freetype2/freetype/tttags.h
 include/freetype2/freetype/ttunpat.h
+include/freetype2/ft2build.h
 include/freetype2/ftadvanc.h
 include/freetype2/ftautoh.h
 include/freetype2/ftbbox.h
@@ -90,6 +91,7 @@ include/freetype2/ftstroke.h
 include/freetype2/ftsynth.h
 include/freetype2/ftsystem.h
 include/freetype2/fttrigon.h
+include/freetype2/ftttdrv.h
 include/freetype2/fttypes.h
 include/freetype2/ftwinfnt.h
 include/freetype2/ftxf86.h
