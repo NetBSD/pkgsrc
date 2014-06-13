@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2324 2014/06/13 22:42:31 gdt Exp $
+$NetBSD: CHANGES-2014,v 1.2325 2014/06/13 23:47:22 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3124,3 +3124,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/rancid to 3.1 [pettai 2014-06-13]
 	Updated www/ikiwiki to 3.20140613 [schmonz 2014-06-13]
 	Updated pkgtools/x11-links to 0.90 [gdt 2014-06-13]
+	Updated mail/thunderbird to 24.6.0 [ryoon 2014-06-13]
