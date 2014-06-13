@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1023 2014/06/11 11:03:56 hauke Exp $
+# $NetBSD: Makefile,v 1.1024 2014/06/13 00:14:22 wiedi Exp $
 #
 
 COMMENT=	Networking tools
@@ -648,6 +648,7 @@ SUBDIR+=	skype21
 SUBDIR+=	slurm
 SUBDIR+=	smokeping
 SUBDIR+=	sniffit
+SUBDIR+=	sniproxy
 SUBDIR+=	snmptt
 SUBDIR+=	snort
 SUBDIR+=	snort-rules
