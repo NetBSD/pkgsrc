@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2316 2014/06/13 00:19:42 wiedi Exp $
+$NetBSD: CHANGES-2014,v 1.2317 2014/06/13 03:06:54 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3114,3 +3114,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/scala to 2.11.1 [yyamano 2014-06-12]
 	Updated fonts/koruri-ttf to 20140524 [nonaka 2014-06-12]
 	Added net/sniproxy version 0.3.4 [wiedi 2014-06-13]
+	Updated net/lldpd to 0.7.9 [mef 2014-06-13]
