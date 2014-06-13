@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2318 2014/06/13 07:41:26 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2319 2014/06/13 11:39:51 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3116,3 +3116,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added net/sniproxy version 0.3.4 [wiedi 2014-06-13]
 	Updated net/lldpd to 0.7.9 [mef 2014-06-13]
 	Updated x11/xcb-util-renderutil to 0.3.9 [wiz 2014-06-13]
+	Updated ham/trustedQSL to 2.0.2RC4 [mef 2014-06-13]
