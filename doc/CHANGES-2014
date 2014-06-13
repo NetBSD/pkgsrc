@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2320 2014/06/13 15:44:23 kleink Exp $
+$NetBSD: CHANGES-2014,v 1.2321 2014/06/13 17:47:14 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3120,3 +3120,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-werkzeug to 0.9.6 [kleink 2014-06-13]
 	Updated www/py-werkzeug-docs to 0.9.6 [kleink 2014-06-13]
 	Updated www/py-flask-security to 1.7.3 [kleink 2014-06-13]
+	Updated devel/p5-File-MimeInfo to 0.26 [schmonz 2014-06-13]
