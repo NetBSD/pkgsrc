@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/05/29 23:36:56 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2014/06/13 09:52:38 jperkin Exp $
 
 DISTNAME=	bulk-large-20130223
 PKGREVISION=	3
@@ -91,8 +91,6 @@ BUILD_DEPENDS+=	roundcube-[0-9]*:../../mail/roundcube
 BUILD_DEPENDS+=	squirrelmail-[0-9]*:../../mail/squirrelmail
 BUILD_DEPENDS+=	thunderbird-[0-9]*:../../mail/thunderbird
 BUILD_DEPENDS+=	thunderbird-l10n-[0-9]*:../../mail/thunderbird-l10n
-BUILD_DEPENDS+=	thunderbird10-[0-9]*:../../mail/thunderbird10
-BUILD_DEPENDS+=	thunderbird10-l10n-[0-9]*:../../mail/thunderbird10-l10n
 BUILD_DEPENDS+=	R-[0-9]*:../../math/R
 BUILD_DEPENDS+=	octave-[0-9]*:../../math/octave
 BUILD_DEPENDS+=	zyGrib-[0-9]*:../../misc/zyGrib
