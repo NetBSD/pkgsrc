@@ -1,11 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2013/12/06 05:52:42 mef Exp $
-If you see following with "Sign log and upload it automatically to LoTW",
-  "Peer certificate cannot be authenticated with given CA certificates"
-  (SSL certificate problem: self signed certificate in certificate chain)
-please see the info shown by following command and follow what to do:
-   pkg_info -D  mozilla-rootcerts
-
+$NetBSD: MESSAGE,v 1.2 2014/06/13 11:38:54 mef Exp $
 To start the application, just type tqsl in shell. You will see
 the icons for operations (with Window facility).
 
