@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2322 2014/06/13 21:20:27 pettai Exp $
+$NetBSD: CHANGES-2014,v 1.2323 2014/06/13 21:51:57 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3122,3 +3122,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-flask-security to 1.7.3 [kleink 2014-06-13]
 	Updated devel/p5-File-MimeInfo to 0.26 [schmonz 2014-06-13]
 	Updated net/rancid to 3.1 [pettai 2014-06-13]
+	Updated www/ikiwiki to 3.20140613 [schmonz 2014-06-13]
