@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.461 2014/06/08 23:40:12 rodent Exp $
+# $NetBSD: Makefile,v 1.462 2014/06/14 14:05:24 rodent Exp $
 
 COMMENT=	Databases
 
@@ -341,6 +341,7 @@ SUBDIR+=	py-mysqldb
 SUBDIR+=	py-pgnotify
 SUBDIR+=	py-postgresql
 SUBDIR+=	py-psycopg2
+SUBDIR+=	py-pymysql
 SUBDIR+=	py-python-sql
 SUBDIR+=	py-redis-py
 SUBDIR+=	py-sqlalchemy
