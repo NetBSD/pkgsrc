@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.49 2013/03/02 10:44:35 tron Exp $
+# $NetBSD: Makefile,v 1.50 2014/06/14 10:13:46 adam Exp $
 
-DISTNAME=	rocksndiamonds-3.3.0.1
-PKGREVISION=	3
+DISTNAME=	rocksndiamonds-3.3.1.2
 CATEGORIES=	games x11
 MASTER_SITES=	http://www.artsoft.org/RELEASES/unix/rocksndiamonds/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.artsoft.org/rocksndiamonds/
 COMMENT=	Game like Boulder Dash, Emerald Mine, or Sokoban
+LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=		gmake
 
@@ -22,7 +22,7 @@ SCORE_PATH=	${VARBASE}/games/rocksndiamonds
 
 REQD_DIRS+=		${SHARESUBDIR}
 
-SETGIDGAME=		yes
+USE_GAMESGROUP=		yes
 
 OWN_DIRS_PERMS+=	${SCORE_PATH:Q}
 OWN_DIRS_PERMS+=	${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
@@ -41,12 +41,16 @@ OWN_DIRS_PERMS+=	${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
 OWN_DIRS_PERMS+=	${SCORE_PATH:Q}/scores/rnd_tutorial_niko_boehm
 OWN_DIRS_PERMS+=	${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "Darwin"
 SPECIAL_PERMS=		bin/rocksndiamonds ${SETGID_GAMES_PERMS}
+.endif
 
 PLIST_SRC=	PLIST ${WRKDIR}/PLIST.F
 
-.if ( ${MACHINE} == "i386" || ${MACHINE} == "prep" || ${MACHINE} == "cats" || \
-      ${MACHINE} == "shark" )
+.if (${MACHINE} == "i386" || ${MACHINE} == "prep" || ${MACHINE} == "cats" || \
+      ${MACHINE} == "shark")
 MAKE_FLAGS+=	JOYSTICK=-DHAVE_JOYSTICK
 .endif
 
