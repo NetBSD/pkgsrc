@@ -1,0 +1,14 @@
+$NetBSD: patch-Makefile.am,v 1.1 2014/06/14 09:56:16 wiedi Exp $
+
+deploy example config in the correct place
+--- Makefile.am.orig	2014-05-04 01:12:19.000000000 +0000
++++ Makefile.am
+@@ -1,7 +1,7 @@
+ #AUTOMAKE_OPTIONS = foreign
+ bin_PROGRAMS = goaccess
+ 
+-confdir = $(sysconfdir)
++confdir = $(PREFIX)/share/examples/goaccess
+ dist_conf_DATA = config/goaccess.conf
+ 
+ goaccess_SOURCES = \
