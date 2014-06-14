@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2328 2014/06/14 06:04:02 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2329 2014/06/14 09:18:05 tron Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3128,3 +3128,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/thunderbird-l10n to 24.6.0 [ryoon 2014-06-13]
 	Updated security/kpcli to 2.7 [wiz 2014-06-14]
 	Updated misc/calibre to 1.40.0 [wiz 2014-06-14]
+	Updated net/wireshark to 1.10.8 [tron 2014-06-14]
