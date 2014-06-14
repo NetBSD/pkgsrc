@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2326 2014/06/13 23:48:30 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.2327 2014/06/14 05:40:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3126,3 +3126,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated pkgtools/x11-links to 0.90 [gdt 2014-06-13]
 	Updated mail/thunderbird to 24.6.0 [ryoon 2014-06-13]
 	Updated mail/thunderbird-l10n to 24.6.0 [ryoon 2014-06-13]
+	Updated security/kpcli to 2.7 [wiz 2014-06-14]
