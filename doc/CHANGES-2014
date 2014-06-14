@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2342 2014/06/14 14:35:42 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2343 2014/06/14 15:02:29 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3143,3 +3143,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added time/py-arrow version 0.4.2 [rodent 2014-06-14]
 	Updated devel/py-decorator to 3.4.0 [rodent 2014-06-14]
 	Added textproc/py-validators version 0.5.0 [rodent 2014-06-14]
+	Added www/py-wtforms-test version 0.1.1 [rodent 2014-06-14]
