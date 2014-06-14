@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.158 2014/06/13 22:42:18 gdt Exp $
+# $NetBSD: Makefile,v 1.159 2014/06/14 21:06:52 jperkin Exp $
 #
 # NOTE:	If you update this package, then you'll likely need to also update
 #	the x11-links dependency in buildlink3.mk to the correct version,
 #	usually the most recent.
 
-PKGNAME=	x11-links-0.90
+PKGNAME=	x11-links-0.91
 CATEGORIES=	pkgtools x11
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -71,7 +71,7 @@ X11_LINKS_DIR=		${PREFIX}/${X11_LINKS_SUBDIR}
 FILES_LIST_CMD=	${SED} -e "s/@ABI@/${ABI}/" ${FILES_LIST} | ${GREP} -v "^\#"
 
 .if ${OPSYS} == "Linux" && !empty(LIBABISUFFIX)
-FILES_LIST_CMD+=	| awk '{print;} /^lib\// { sub(/^lib\//, "lib${LIBABISUFFIX}/"); print; }'
+FILES_LIST_CMD+=	| awk '/^lib\// { sub(/^lib\//, "lib${LIBABISUFFIX}/") } { print }'
 .endif
 
 CREATE_X11LINK?=	${LN} -fs $$src $$dest
