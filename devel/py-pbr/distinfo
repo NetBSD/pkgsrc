@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/06/14 16:46:52 rodent Exp $
+
+SHA1 (pbr-0.8.2.tar.gz) = dbd01780be2f1547292c2a914d098cf6ddf5fa91
+RMD160 (pbr-0.8.2.tar.gz) = 0d99a6fadce30d96e094275ddf3c1d84cdb78614
+Size (pbr-0.8.2.tar.gz) = 77790 bytes
