@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2014/05/29 23:37:04 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2014/06/14 10:19:41 wiedi Exp $
 #
 
 DISTNAME=		nrpe-2.12
@@ -39,7 +39,7 @@ FILES_SUBST+=		NAGIOS_USER=${NAGIOS_USER}
 FILES_SUBST+=		NAGIOS_GROUP=${NAGIOS_GROUP}
 FILES_SUBST+=		NAGIOSDIR=${NAGIOSDIR}
 
-INSTALLATION_DIRS=	sbin libexec/nagios share/examples/nagios
+INSTALLATION_DIRS+=	sbin libexec/nagios share/examples/nagios
 
 .include "options.mk"
 
