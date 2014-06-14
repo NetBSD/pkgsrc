@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2014/05/29 23:36:45 wiz Exp $
+# $NetBSD: Makefile,v 1.133 2014/06/14 10:18:05 wiedi Exp $
 
 DISTNAME=	exim-4.82.1
 PKGREVISION=	1
@@ -115,7 +115,7 @@ post-build:
 	    ${FILESDIR}/mailer.conf.exim \
 	    > ${WRKDIR}/mailer.conf
 
-INSTALLATION_DIRS = ${PKGMANDIR}/man8 sbin share/examples/exim share/doc/exim
+INSTALLATION_DIRS+= ${PKGMANDIR}/man8 sbin share/examples/exim share/doc/exim
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${DESTDIR}${EXAMPLESDIR}

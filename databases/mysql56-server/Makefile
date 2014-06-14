@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/04/14 00:02:50 rodent Exp $
+# $NetBSD: Makefile,v 1.16 2014/06/14 10:22:27 wiedi Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 SVR4_PKGNAME=	mysqs
@@ -76,7 +76,7 @@ SUBST_STAGE.python=	pre-configure
 SUBST_FILES.python+=	mysql-test/suite/opt_trace/validate_json.py
 SUBST_SED.python+=	-e 's,/usr/bin/python,${PREFIX}/bin/python2.7,'
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS+=	bin
 
 .include "../../mk/compiler.mk"
 

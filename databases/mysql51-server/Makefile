@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2014/04/14 00:02:49 rodent Exp $
+# $NetBSD: Makefile,v 1.22 2014/06/14 10:21:21 wiedi Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 PKGREVISION=	1
@@ -75,7 +75,7 @@ REPLACE_PERL+=		mysql-test/lib/My/SafeProcess/safe_process.pl \
 			mysql-test/mtr \
 			scripts/mysqld_multi.sh
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS+=	bin
 
 .include "../../mk/bsd.prefs.mk"
 
