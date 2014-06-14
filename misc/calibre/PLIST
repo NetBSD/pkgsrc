@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2014/05/23 08:14:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2014/06/14 06:03:50 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -433,6 +433,7 @@ lib/calibre/calibre/ebooks/oeb/polish/create.py
 lib/calibre/calibre/ebooks/oeb/polish/css.py
 lib/calibre/calibre/ebooks/oeb/polish/embed.py
 lib/calibre/calibre/ebooks/oeb/polish/errors.py
+lib/calibre/calibre/ebooks/oeb/polish/fonts.py
 lib/calibre/calibre/ebooks/oeb/polish/import_book.py
 lib/calibre/calibre/ebooks/oeb/polish/jacket.py
 lib/calibre/calibre/ebooks/oeb/polish/main.py
@@ -1023,6 +1024,7 @@ lib/calibre/calibre/gui2/tweak_book/file_list.py
 lib/calibre/calibre/gui2/tweak_book/job.py
 lib/calibre/calibre/gui2/tweak_book/live_css.py
 lib/calibre/calibre/gui2/tweak_book/main.py
+lib/calibre/calibre/gui2/tweak_book/manage_fonts.py
 lib/calibre/calibre/gui2/tweak_book/preferences.py
 lib/calibre/calibre/gui2/tweak_book/preview.py
 lib/calibre/calibre/gui2/tweak_book/save.py
@@ -1312,13 +1314,17 @@ lib/calibre/tinycss/__init__.py
 lib/calibre/tinycss/color3.py
 lib/calibre/tinycss/css21.py
 lib/calibre/tinycss/decoding.py
+lib/calibre/tinycss/fonts3.py
+lib/calibre/tinycss/media3.py
 lib/calibre/tinycss/page3.py
 lib/calibre/tinycss/parsing.py
 lib/calibre/tinycss/tests/__init__.py
 lib/calibre/tinycss/tests/color3.py
 lib/calibre/tinycss/tests/css21.py
 lib/calibre/tinycss/tests/decoding.py
+lib/calibre/tinycss/tests/fonts3.py
 lib/calibre/tinycss/tests/main.py
+lib/calibre/tinycss/tests/media3.py
 lib/calibre/tinycss/tests/page3.py
 lib/calibre/tinycss/tests/tokenizing.py
 lib/calibre/tinycss/token_data.py
@@ -2819,7 +2825,8 @@ share/calibre/recipes/reptantes.recipe
 share/calibre/recipes/republica.recipe
 share/calibre/recipes/republika.recipe
 share/calibre/recipes/res_publica.recipe
-share/calibre/recipes/respekt.recipe
+share/calibre/recipes/respekt_magazine.recipe
+share/calibre/recipes/respekt_web.recipe
 share/calibre/recipes/resurgence.recipe
 share/calibre/recipes/reuters.recipe
 share/calibre/recipes/reuters_ja.recipe
