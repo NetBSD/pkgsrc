@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2331 2014/06/14 09:57:16 wiedi Exp $
+$NetBSD: CHANGES-2014,v 1.2332 2014/06/14 10:14:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3131,3 +3131,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/wireshark to 1.10.8 [tron 2014-06-14]
 	Updated mail/mailman to 2.1.18.1 [fhajny 2014-06-14]
 	Updated www/goaccess to 0.8 [wiedi 2014-06-14]
+	Updated games/rocksndiamonds to 3.3.1.2 [adam 2014-06-14]
