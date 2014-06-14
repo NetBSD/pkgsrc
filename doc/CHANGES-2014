@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2340 2014/06/14 14:13:30 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2341 2014/06/14 14:28:28 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3141,3 +3141,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added math/py-infinity version 1.3 [rodent 2014-06-14]
 	Added databases/py-pymysql version 0.6.2 [rodent 2014-06-14]
 	Added time/py-arrow version 0.4.2 [rodent 2014-06-14]
+	Updated devel/py-decorator to 3.4.0 [rodent 2014-06-14]
