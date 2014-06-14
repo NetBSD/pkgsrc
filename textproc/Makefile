@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.778 2014/06/14 13:49:18 rodent Exp $
+# $NetBSD: Makefile,v 1.779 2014/06/14 14:36:19 rodent Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -653,6 +653,7 @@ SUBDIR+=	py-sphinx
 SUBDIR+=	py-sphinx-theme-cloud
 SUBDIR+=	py-textile
 SUBDIR+=	py-tinycss
+SUBDIR+=	py-validators
 SUBDIR+=	py-vobject
 SUBDIR+=	py-xlrd
 SUBDIR+=	py-xlwt
