@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2336 2014/06/14 13:47:37 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2337 2014/06/14 13:54:16 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3137,3 +3137,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added textproc/py-color version 0.1 [rodent 2014-06-14]
 	Added textproc/py-colour version 0.0.5 [rodent 2014-06-14]
 	Added textproc/py-phonenumbers version 6.1.0 [rodent 2014-06-14]
+	Added devel/py-flexmock version 0.9.7 [rodent 2014-06-14]
