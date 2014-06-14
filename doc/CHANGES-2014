@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2349 2014/06/14 17:07:24 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2350 2014/06/14 21:07:05 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3150,3 +3150,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/py-sqlalchemy to 0.9.4 [rodent 2014-06-14]
 	Added devel/py-pbr version 0.8.2 [rodent 2014-06-14]
 	Updated databases/py-sqlalchemy-migrate to 0.9.1 [rodent 2014-06-14]
+	Updated pkgtools/x11-links to 0.91 [jperkin 2014-06-14]
