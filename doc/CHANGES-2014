@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2343 2014/06/14 15:02:29 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2344 2014/06/14 15:19:04 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3144,3 +3144,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-decorator to 3.4.0 [rodent 2014-06-14]
 	Added textproc/py-validators version 0.5.0 [rodent 2014-06-14]
 	Added www/py-wtforms-test version 0.1.1 [rodent 2014-06-14]
+	Updated devel/py-ipaddr to 2.1.11 [rodent 2014-06-14]
