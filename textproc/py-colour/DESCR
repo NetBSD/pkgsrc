@@ -1,0 +1,12 @@
+Converts and manipulates common colour representations (RGB, HSV, web, ...)
+
+Features:
+
+ * Damn simple and pythonic way to manipulate colour representations
+ * Full conversion between RGB, HSV, 6-digit hex, 3-digit hex, human colour
+ * One object (Color) or bunch of single purpose function (rgb2hex, hsl2rgb ...)
+ * Web format that uses the smallest representation between 6-digit, 3-digit,
+   fully-spelled colour, that is following W3C color naming for CSS or HTML
+   colour specifications.
+ * Smooth intuitive colour scale generation choosing N colour gradients.
+ * Can pick colours for you to identify objects of your application.
