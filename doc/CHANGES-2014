@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2334 2014/06/14 13:41:56 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2335 2014/06/14 13:44:22 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3135,3 +3135,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/xulrunner24 to 24.6.0 [ryoon 2014-06-14]
 	Updated www/firefox24 to 24.6.0 [ryoon 2014-06-14]
 	Added textproc/py-color version 0.1 [rodent 2014-06-14]
+	Added textproc/py-colour version 0.0.5 [rodent 2014-06-14]
