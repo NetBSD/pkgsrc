@@ -1,0 +1,18 @@
+$NetBSD: patch-etc_Makefile.in,v 1.1 2014/06/14 23:43:29 markd Exp $
+
+Make rancid.types.base install conditional as we will install it
+in example dir (in package Makefile)
+
+--- etc/Makefile.in.orig	2014-04-01 22:47:39.000000000 +0000
++++ etc/Makefile.in
+@@ -541,8 +541,8 @@ install-data-local: all
+ 	else \
+ 	    $(INSTALL_DATA) lg.conf.sample $(DESTDIR)$(sysconfdir)/lg.conf; \
+ 	fi; \
+-	fi; \
+-	$(INSTALL_DATA) rancid.types.base $(DESTDIR)$(sysconfdir)/rancid.types.base
++	$(INSTALL_DATA) rancid.types.base $(DESTDIR)$(sysconfdir)/rancid.types.base; \
++	fi
+ 
+ lg.conf.sample: Makefile $(srcdir)/lg.conf.sample.in
+ 	rm -f lg.conf.sample lg.conf.sample.tmp; \
