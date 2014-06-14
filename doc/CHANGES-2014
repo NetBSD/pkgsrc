@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2330 2014/06/14 09:22:04 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.2331 2014/06/14 09:57:16 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3130,3 +3130,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/calibre to 1.40.0 [wiz 2014-06-14]
 	Updated net/wireshark to 1.10.8 [tron 2014-06-14]
 	Updated mail/mailman to 2.1.18.1 [fhajny 2014-06-14]
+	Updated www/goaccess to 0.8 [wiedi 2014-06-14]
