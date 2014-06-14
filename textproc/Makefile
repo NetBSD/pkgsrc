@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.777 2014/06/05 05:08:48 obache Exp $
+# $NetBSD: Makefile,v 1.778 2014/06/14 13:49:18 rodent Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -615,6 +615,8 @@ SUBDIR+=	py-cElementTree
 SUBDIR+=	py-cabocha
 SUBDIR+=	py-cjson
 SUBDIR+=	py-cmTemplate
+SUBDIR+=	py-color
+SUDBIR+=	py-colour
 SUBDIR+=	py-creole
 SUBDIR+=	py-cssselect
 SUBDIR+=	py-cssutils
@@ -642,6 +644,7 @@ SUBDIR+=	py-markdown2
 SUBDIR+=	py-markupsafe
 SUBDIR+=	py-mecab
 SUBDIR+=	py-pdf-parser
+SUBDIR+=	py-phonenumbers
 SUBDIR+=	py-prettytable
 SUBDIR+=	py-pygments
 SUBDIR+=	py-pyquery
