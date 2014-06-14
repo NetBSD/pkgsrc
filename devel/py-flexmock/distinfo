@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/06/14 13:53:44 rodent Exp $
+
+SHA1 (flexmock-0.9.7.tar.gz) = b0fcd20d3755e6d4d008e15a9eda583e702e6ae9
+RMD160 (flexmock-0.9.7.tar.gz) = 079d0ffa06749b17d9cb65d8270c46f5298c96a2
+Size (flexmock-0.9.7.tar.gz) = 24997 bytes
