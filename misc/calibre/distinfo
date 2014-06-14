@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.23 2014/05/30 13:00:02 wiz Exp $
+$NetBSD: distinfo,v 1.24 2014/06/14 06:03:50 wiz Exp $
 
-SHA1 (calibre-1.39.0.tar.xz) = 6b9c9d628a8c97392241818bded334741578eb53
-RMD160 (calibre-1.39.0.tar.xz) = f360157f5a475c3714ab94424e3263e4c7fb539e
-Size (calibre-1.39.0.tar.xz) = 34446476 bytes
+SHA1 (calibre-1.40.0.tar.xz) = c2bf4b7d50ce661eb66ab8e73f13a7e0de87a0b1
+RMD160 (calibre-1.40.0.tar.xz) = 061b6f9d9ad38ab891f7a94b4c80311ea17c8331
+Size (calibre-1.40.0.tar.xz) = 34457004 bytes
 SHA1 (qt-everywhere-opensource-src-4.8.5.tar.gz) = 745f9ebf091696c0d5403ce691dc28c039d77b9e
 RMD160 (qt-everywhere-opensource-src-4.8.5.tar.gz) = 1e7bb099d5d1cda0b663cebe207c846c8d04750d
 Size (qt-everywhere-opensource-src-4.8.5.tar.gz) = 241491467 bytes
