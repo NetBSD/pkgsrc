@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/06/14 14:03:33 rodent Exp $
+
+SHA1 (PyMySQL-0.6.2.tar.gz) = daaadc0c5a5bc565128194e5720c77ae33f25cbc
+RMD160 (PyMySQL-0.6.2.tar.gz) = c056d2ad6d60081216436ff8b7f20cc7ba28bb57
+Size (PyMySQL-0.6.2.tar.gz) = 53600 bytes
