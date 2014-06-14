@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/05/29 23:37:33 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2014/06/14 16:19:02 joerg Exp $
 #
 
 DISTNAME=	cmigemo-default-src-20110227
@@ -13,6 +13,8 @@ MAINTAINER=	goro@venus.dti.ne.jp
 HOMEPAGE=	http://www.kaoriya.net/software/cmigemo
 COMMENT=	Migemo library implemented in C
 LICENSE=	mit
+
+MAKE_JOBS_SAFE=	no
 
 # sync with inputmethod/skk-jisyo-cdb
 SKKJISYO_VERS=	201102
