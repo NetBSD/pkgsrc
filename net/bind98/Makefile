@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2014/05/29 23:37:02 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2014/06/14 10:14:06 wiedi Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -71,7 +71,7 @@ PLIST.inet6=	yes
 RCD_SCRIPTS=		lwresd named9
 SMF_METHODS=		named
 
-INSTALLATION_DIRS=	${DOCDIR} share/doc/bind9/arm share/doc/bind9/misc
+INSTALLATION_DIRS+=	${DOCDIR} share/doc/bind9/arm share/doc/bind9/misc
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
