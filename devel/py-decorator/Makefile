@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/10/31 11:19:30 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/06/14 14:27:53 rodent Exp $
 #
 
-DISTNAME=		decorator-3.3.2
+DISTNAME=		decorator-3.4.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 EGG_NAME=		${DISTNAME}
 CATEGORIES=		devel python
