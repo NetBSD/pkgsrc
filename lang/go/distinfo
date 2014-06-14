@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2014/05/27 18:56:53 bsiegert Exp $
+$NetBSD: distinfo,v 1.9 2014/06/14 16:22:25 joerg Exp $
 
 SHA1 (go1.2.2.src.tar.gz) = 3ce0ac4db434fc1546fec074841ff40dc48c1167
 RMD160 (go1.2.2.src.tar.gz) = 06674def74b0a579d87ec983e350a7169e5c7ddf
 Size (go1.2.2.src.tar.gz) = 9520571 bytes
+SHA1 (patch-src_cmd_go_build.go) = e8bdd5ad005feeb806a6cec024a9b6553234757c
 SHA1 (patch-src_cmd_ld_elf.c) = fd65c28a0191d06b2cab3c33a12276393d615bc8
