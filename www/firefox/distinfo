@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.154 2014/06/11 00:40:59 ryoon Exp $
+$NetBSD: distinfo,v 1.155 2014/06/14 16:20:07 joerg Exp $
 
 SHA1 (firefox-30.0.source.tar.bz2) = 21dce1a2d4b8085c5f7f66b5f4f60bc37598285d
 RMD160 (firefox-30.0.source.tar.bz2) = a1fce7102f9dde33c6db7869ebe600d028998875
@@ -30,9 +30,14 @@ SHA1 (patch-config_system-headers) = a582df0242d4347a03e3aa3ca0463bf0e710e654
 SHA1 (patch-config_system__wrappers_unwind.h) = b3bdac0710179b9c8f8eabd824216d0114504491
 SHA1 (patch-content_base_src_moz.build) = fc2660dcc82f11c89d6d5a5772f27c9827f58f44
 SHA1 (patch-content_media_AudioStream.cpp) = 70021dfd1cc86e8999f144b49a23bfb27dd24157
-SHA1 (patch-content_media_AudioStream.h) = ab3f68071f8ee891ccda6c2653f936582b1af58a
+SHA1 (patch-content_media_AudioStream.h) = 101cfc3714e6169753f7c0d21d9c4857d5858180
 SHA1 (patch-content_media_Makefile.in) = 54c8c5e41eb36bae0ce544360ded9f75ba3acc13
 SHA1 (patch-content_media_gstreamer_GStreamerAllocator.cpp) = 524a669e411189926e142912b6d94d3d8dbdb0eb
+SHA1 (patch-content_svg_content_src_SVGComponentTransferFunctionElement.h) = 6fb38a9a110271466f155dc4491810efb9be1dc4
+SHA1 (patch-content_svg_content_src_nsSVGFilters.cpp) = 87438dbd3e74a545e3572a2e5e7ddffcf39ce927
+SHA1 (patch-content_svg_content_src_nsSVGFilters.h) = f7bf7dc7635be2961d4ca5c5f7b35b6c93e627d4
+SHA1 (patch-dom_indexedDB_IDBEvents.cpp) = ce1a8f2449f93fa123d56c58526f5e935d829f2d
+SHA1 (patch-dom_indexedDB_IDBEvents.h) = c1da2b3c39f61c8d2ee0d234d56ca7d1a62ed83a
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.cpp) = 69b0a51d733cd52e7d200052362e0faf4ec918f1
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.h) = 0a7f3167e939822013ae6195406657453578453e
 SHA1 (patch-dom_plugins_ipc_PluginProcessChild.cpp) = 5ab28cc0398b72cb5e1b0586406845495b9f87e4
