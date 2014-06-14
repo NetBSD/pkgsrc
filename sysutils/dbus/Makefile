@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2014/06/10 19:10:04 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2014/06/14 21:11:34 cheusov Exp $
 
 DISTNAME=	dbus-1.8.4
 CATEGORIES=	sysutils
@@ -104,14 +104,6 @@ BUILDLINK_TRANSFORM+=	rm:-lrt
 .endif
 
 .include "options.mk"
-
-.if ${OPSYS} == "Linux"
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/bus/rc.messagebus \
-		${DESTDIR}${PREFIX}/share/examples/rc.d/rc.messagebus.slackware
-	${INSTALL_DATA} ${WRKSRC}/bus/messagebus \
-		${DESTDIR}${PREFIX}/share/examples/rc.d/messagebus.redhat
-.endif
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
