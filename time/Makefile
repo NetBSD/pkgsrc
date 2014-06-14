@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.134 2014/03/31 08:10:17 wiz Exp $
+# $NetBSD: Makefile,v 1.135 2014/06/14 14:14:51 rodent Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -118,6 +118,7 @@ SUBDIR+=	planner
 SUBDIR+=	polclock
 SUBDIR+=	projclock
 SUBDIR+=	ptimetracker
+SUBDIR+=	py-arrow
 SUBDIR+=	py-dateutil
 SUBDIR+=	py-dateutil2
 SUBDIR+=	py-goocalendar
