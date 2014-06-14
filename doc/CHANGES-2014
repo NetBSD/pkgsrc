@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2345 2014/06/14 15:22:32 asau Exp $
+$NetBSD: CHANGES-2014,v 1.2346 2014/06/14 16:15:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3146,3 +3146,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added www/py-wtforms-test version 0.1.1 [rodent 2014-06-14]
 	Updated devel/py-ipaddr to 2.1.11 [rodent 2014-06-14]
 	Updated databases/phppgadmin to 5.1 [asau 2014-06-14]
+	Updated net/bind99 to 9.9.5pl1 [taca 2014-06-14]
