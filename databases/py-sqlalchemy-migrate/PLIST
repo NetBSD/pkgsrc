@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/13 23:05:32 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/06/14 17:06:32 rodent Exp $
 bin/migrate
 bin/migrate-repository
 ${PYSITELIB}/migrate/__init__.py
@@ -19,6 +19,9 @@ ${PYSITELIB}/migrate/changeset/databases/__init__.pyo
 ${PYSITELIB}/migrate/changeset/databases/firebird.py
 ${PYSITELIB}/migrate/changeset/databases/firebird.pyc
 ${PYSITELIB}/migrate/changeset/databases/firebird.pyo
+${PYSITELIB}/migrate/changeset/databases/ibmdb2.py
+${PYSITELIB}/migrate/changeset/databases/ibmdb2.pyc
+${PYSITELIB}/migrate/changeset/databases/ibmdb2.pyo
 ${PYSITELIB}/migrate/changeset/databases/mysql.py
 ${PYSITELIB}/migrate/changeset/databases/mysql.pyc
 ${PYSITELIB}/migrate/changeset/databases/mysql.pyo
@@ -37,6 +40,9 @@ ${PYSITELIB}/migrate/changeset/databases/visitor.pyo
 ${PYSITELIB}/migrate/changeset/schema.py
 ${PYSITELIB}/migrate/changeset/schema.pyc
 ${PYSITELIB}/migrate/changeset/schema.pyo
+${PYSITELIB}/migrate/changeset/util.py
+${PYSITELIB}/migrate/changeset/util.pyc
+${PYSITELIB}/migrate/changeset/util.pyo
 ${PYSITELIB}/migrate/exceptions.py
 ${PYSITELIB}/migrate/exceptions.pyc
 ${PYSITELIB}/migrate/exceptions.pyo
@@ -46,6 +52,12 @@ ${PYSITELIB}/migrate/tests/__init__.pyo
 ${PYSITELIB}/migrate/tests/changeset/__init__.py
 ${PYSITELIB}/migrate/tests/changeset/__init__.pyc
 ${PYSITELIB}/migrate/tests/changeset/__init__.pyo
+${PYSITELIB}/migrate/tests/changeset/databases/__init__.py
+${PYSITELIB}/migrate/tests/changeset/databases/__init__.pyc
+${PYSITELIB}/migrate/tests/changeset/databases/__init__.pyo
+${PYSITELIB}/migrate/tests/changeset/databases/test_ibmdb2.py
+${PYSITELIB}/migrate/tests/changeset/databases/test_ibmdb2.pyc
+${PYSITELIB}/migrate/tests/changeset/databases/test_ibmdb2.pyo
 ${PYSITELIB}/migrate/tests/changeset/test_changeset.py
 ${PYSITELIB}/migrate/tests/changeset/test_changeset.pyc
 ${PYSITELIB}/migrate/tests/changeset/test_changeset.pyo
@@ -222,5 +234,6 @@ ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
