@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2011/04/04 09:26:00 adam Exp $
-
-SHA1 (Apache-Reload-0.11.tar.gz) = 15c83e96ca323de8f32e059e6520aa6308510c82
-RMD160 (Apache-Reload-0.11.tar.gz) = 54c921442a31f2ea282842ac4e90aa90f92d7706
-Size (Apache-Reload-0.11.tar.gz) = 17992 bytes
