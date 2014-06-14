@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.171 2014/04/09 07:27:11 obache Exp $
+# $NetBSD: Makefile,v 1.172 2014/06/14 10:16:40 wiedi Exp $
 
 DOVECOT_VERSION=	1.2
 DOVECOT_SUBVERSION=	.17
@@ -46,7 +46,7 @@ PKG_GECOS.${DOVECOT_USER}=	Dovecot IMAP/POP3 user
 EGDIR=		${PREFIX}/share/examples/dovecot
 CONF_FILES=	${EGDIR}/dovecot-example.conf ${PKG_SYSCONFDIR}/dovecot.conf
 
-INSTALLATION_DIRS=	libexec/dovecot sbin share/doc/dovecot		\
+INSTALLATION_DIRS+=	libexec/dovecot sbin share/doc/dovecot		\
 			share/examples/dovecot
 
 SUBST_CLASSES+=		paths
