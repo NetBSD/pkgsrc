@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2014/01/14 17:24:42 abs Exp $
+# $NetBSD: options.mk,v 1.5 2014/06/14 22:44:53 ryoon Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openjdk7
 PKG_SUPPORTED_OPTIONS=		sun-jre-jce # jdk-zero-vm
@@ -9,7 +9,7 @@ PKG_SUGGESTED_OPTIONS=		#
 ###
 ### Java(TM) Cryptography Extension (JCE)
 ###
-.if !empty(PKG_OPTIONS:Msun-jre-jce)
+.if !empty(PKG_OPTIONS:Msun-jre-jce) || make(distinfo) || make(mdi)
 JCE_DISTFILE=	UnlimitedJCEPolicyJDK7.zip
 DISTFILES+=	${JCE_DISTFILE}
 EXTRACT_ONLY+=	${JCE_DISTFILE}
