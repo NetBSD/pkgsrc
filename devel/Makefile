@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1927 2014/06/10 15:22:13 joerg Exp $
+# $NetBSD: Makefile,v 1.1928 2014/06/14 13:55:21 rodent Exp $
 #
 
 COMMENT=	Development utilities
@@ -1498,6 +1498,7 @@ SUBDIR+=	py-enum34
 SUBDIR+=	py-expect
 SUBDIR+=	py-filechunkio
 SUBDIR+=	py-flakes
+SUBDIR+=	py-flexmock
 SUBDIR+=	py-funcparserlib
 SUBDIR+=	py-game
 SUBDIR+=	py-generate
