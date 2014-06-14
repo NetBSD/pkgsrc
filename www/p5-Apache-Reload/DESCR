@@ -1,1 +1,0 @@
-Apache::Reload reloads perl modules only if they are changed.
