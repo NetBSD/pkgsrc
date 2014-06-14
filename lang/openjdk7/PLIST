@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2014/05/02 10:48:13 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.16 2014/06/14 22:44:53 ryoon Exp $
 bin/openjdk7-jar
 bin/openjdk7-java
 bin/openjdk7-javac
@@ -649,6 +649,7 @@ java/openjdk7/jre/lib/zi/Antarctica/Mawson
 java/openjdk7/jre/lib/zi/Antarctica/Palmer
 java/openjdk7/jre/lib/zi/Antarctica/Rothera
 java/openjdk7/jre/lib/zi/Antarctica/Syowa
+java/openjdk7/jre/lib/zi/Antarctica/Troll
 java/openjdk7/jre/lib/zi/Antarctica/Vostok
 java/openjdk7/jre/lib/zi/Asia/Aden
 java/openjdk7/jre/lib/zi/Asia/Almaty
