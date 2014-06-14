@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/04/02 09:11:11 pettai Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/06/14 23:43:29 markd Exp $
 bin/agmrancid
 bin/alogin
 bin/anlogin
@@ -58,7 +58,6 @@ bin/xilogin
 bin/xirancid
 bin/xrancid
 bin/zrancid
-etc/rancid/rancid.types.base
 lib/rancid/arbor.pm
 lib/rancid/dell.pm
 lib/rancid/eos.pm
@@ -153,3 +152,4 @@ share/doc/rancid/rancid.conf.sample
 share/doc/rancid/rtrfilter
 share/examples/rancid/lg.conf.sample
 share/examples/rancid/rancid.conf.sample
+share/examples/rancid/rancid.types.base
