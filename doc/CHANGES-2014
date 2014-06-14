@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2347 2014/06/14 16:21:24 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2348 2014/06/14 16:47:26 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3148,3 +3148,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/phppgadmin to 5.1 [asau 2014-06-14]
 	Updated net/bind99 to 9.9.5pl1 [taca 2014-06-14]
 	Updated databases/py-sqlalchemy to 0.9.4 [rodent 2014-06-14]
+	Added devel/py-pbr version 0.8.2 [rodent 2014-06-14]
