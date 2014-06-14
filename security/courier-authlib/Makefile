@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2014/05/29 23:37:19 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2014/06/14 10:15:59 wiedi Exp $
 
 .include "Makefile.common"
 
@@ -87,7 +87,7 @@ GENERATE_PLIST+=	${TEST} -f ${DESTDIR}${PREFIX}/${file} &&	\
 .endfor
 GENERATE_PLIST+=	${TRUE};
 
-INSTALLATION_DIRS=	bin sbin
+INSTALLATION_DIRS+=	bin sbin
 
 post-install: ${POST_INSTALL_TARGETS}
 
