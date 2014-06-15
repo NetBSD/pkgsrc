@@ -1,9 +1,7 @@
-$NetBSD: manual-libtool.m4,v 1.40 2014/05/10 15:32:08 joerg Exp $
+$NetBSD: manual-libtool.m4,v 1.41 2014/06/15 14:42:05 joerg Exp $
 
 --- libltdl/m4/libtool.m4.orig	2011-10-17 10:17:05.000000000 +0000
 +++ libltdl/m4/libtool.m4
---- libtool.m4.orig	2011-10-17 10:17:05.000000000 +0000
-+++ libtool.m4
 @@ -123,7 +123,10 @@ m4_defun([_LT_CC_BASENAME],
      *) break;;
    esac
@@ -424,27 +422,39 @@ $NetBSD: manual-libtool.m4,v 1.40 2014/05/10 15:32:08 joerg Exp $
  	;;
  
        *nto* | *qnx*)
-@@ -6740,9 +6851,9 @@ if test "$_lt_caught_CXX_error" != yes; 
+@@ -6739,27 +6850,14 @@ if test "$_lt_caught_CXX_error" != yes; 
+ 	    # GNU C++ compiler with Solaris linker
  	    if test "$GXX" = yes && test "$with_gnu_ld" = no; then
  	      _LT_TAGVAR(no_undefined_flag, $1)=' ${wl}-z ${wl}defs'
- 	      if $CC --version | $GREP -v '^2\.7' > /dev/null; then
+-	      if $CC --version | $GREP -v '^2\.7' > /dev/null; then
 -	        _LT_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag -nostdlib $LDFLAGS $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-h $wl$soname -o $lib'
-+	        _LT_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag -nostdlib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-h $wl$soname -o $lib'
- 	        _LT_TAGVAR(archive_expsym_cmds, $1)='echo "{ global:" > $lib.exp~cat $export_symbols | $SED -e "s/\(.*\)/\1;/" >> $lib.exp~echo "local: *; };" >> $lib.exp~
+-	        _LT_TAGVAR(archive_expsym_cmds, $1)='echo "{ global:" > $lib.exp~cat $export_symbols | $SED -e "s/\(.*\)/\1;/" >> $lib.exp~echo "local: *; };" >> $lib.exp~
 -		  $CC -shared $pic_flag -nostdlib ${wl}-M $wl$lib.exp -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags~$RM $lib.exp'
-+		  $CC -shared $pic_flag -nostdlib ${wl}-M $wl$lib.exp $wl-h $wl$soname -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags~$RM $lib.exp'
- 
- 	        # Commands to make compiler produce verbose output that lists
- 	        # what "hidden" libraries, object files and flags are used when
-@@ -6751,9 +6862,9 @@ if test "$_lt_caught_CXX_error" != yes; 
- 	      else
- 	        # g++ 2.7 appears to require `-G' NOT `-shared' on this
- 	        # platform.
+-
+-	        # Commands to make compiler produce verbose output that lists
+-	        # what "hidden" libraries, object files and flags are used when
+-	        # linking a shared library.
+-	        output_verbose_link_cmd='$CC -shared $CFLAGS -v conftest.$objext 2>&1 | $GREP -v "^Configured with:" | $GREP "\-L"'
+-	      else
+-	        # g++ 2.7 appears to require `-G' NOT `-shared' on this
+-	        # platform.
 -	        _LT_TAGVAR(archive_cmds, $1)='$CC -G -nostdlib $LDFLAGS $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-h $wl$soname -o $lib'
-+	        _LT_TAGVAR(archive_cmds, $1)='$CC -G -nostdlib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-h $wl$soname -o $lib'
- 	        _LT_TAGVAR(archive_expsym_cmds, $1)='echo "{ global:" > $lib.exp~cat $export_symbols | $SED -e "s/\(.*\)/\1;/" >> $lib.exp~echo "local: *; };" >> $lib.exp~
+-	        _LT_TAGVAR(archive_expsym_cmds, $1)='echo "{ global:" > $lib.exp~cat $export_symbols | $SED -e "s/\(.*\)/\1;/" >> $lib.exp~echo "local: *; };" >> $lib.exp~
 -		  $CC -G -nostdlib ${wl}-M $wl$lib.exp -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags~$RM $lib.exp'
-+		  $CC -G -nostdlib ${wl}-M $wl$lib.exp $wl$soname -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags~$RM $lib.exp'
+-
+-	        # Commands to make compiler produce verbose output that lists
+-	        # what "hidden" libraries, object files and flags are used when
+-	        # linking a shared library.
+-	        output_verbose_link_cmd='$CC -G $CFLAGS -v conftest.$objext 2>&1 | $GREP -v "^Configured with:" | $GREP "\-L"'
+-	      fi
++	      _LT_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-h $wl$soname -o $lib'
++	      _LT_TAGVAR(archive_expsym_cmds, $1)='echo "{ global:" > $lib.exp~cat $export_symbols | $SED -e "s/\(.*\)/\1;/" >> $lib.exp~echo "local: *; };" >> $lib.exp~
++		$CC -shared $pic_flag ${wl}-M $wl$lib.exp $wl-h $wl$soname -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags~$RM $lib.exp'
++
++	      # Commands to make compiler produce verbose output that lists
++	      # what "hidden" libraries, object files and flags are used when
++	      # linking a shared library.
++	      output_verbose_link_cmd='$CC -shared $CFLAGS -v conftest.$objext 2>&1 | $GREP -v "^Configured with:" | $GREP "\-L"'
  
- 	        # Commands to make compiler produce verbose output that lists
- 	        # what "hidden" libraries, object files and flags are used when
+ 	      _LT_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-R $wl$libdir'
+ 	      case $host_os in
