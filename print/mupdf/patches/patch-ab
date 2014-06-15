@@ -1,8 +1,7 @@
-$NetBSD: patch-ab,v 1.8 2014/06/15 14:14:18 wiz Exp $
+$NetBSD: patch-ab,v 1.9 2014/06/15 19:15:51 wiz Exp $
 
 o Handle the various operating systems in the same way avoiding hardcoding
 o Build and link with openjpeg-2.1
-o libcurl (www/curl) support
 
 --- Makerules.orig	2014-06-10 15:09:28.000000000 +0000
 +++ Makerules
