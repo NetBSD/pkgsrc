@@ -1,17 +1,19 @@
-$NetBSD: patch-lib_ansible_constants.py,v 1.4 2013/12/02 22:54:46 hubertf Exp $
+$NetBSD: patch-lib_ansible_constants.py,v 1.5 2014/06/15 00:15:08 rodent Exp $
 
---- lib/ansible/constants.py.orig	2013-11-19 19:12:32.000000000 +0000
+Fix hardcoded paths to be replaced with SUBST framework.
+
+--- lib/ansible/constants.py.orig	2014-06-09 21:23:31.000000000 +0000
 +++ lib/ansible/constants.py
-@@ -59,7 +59,7 @@ def load_config_file():
-     p = ConfigParser.ConfigParser()
+@@ -65,7 +65,7 @@ def load_config_file():
+         path0 = os.path.expanduser(path0)
      path1 = os.getcwd() + "/ansible.cfg"
-     path2 = os.path.expanduser(os.environ.get('ANSIBLE_CONFIG', "~/.ansible.cfg"))
+     path2 = os.path.expanduser("~/.ansible.cfg")
 -    path3 = "/etc/ansible/ansible.cfg"
 +    path3 = "@PKG_SYSCONFDIR@/ansible/ansible.cfg"
  
-     if os.path.exists(path1):
-         p.read(path1)
-@@ -88,7 +88,7 @@ if getattr(sys, "real_prefix", None):
+     for path in [path0, path1, path2, path3]:
+         if path is not None and os.path.exists(path):
+@@ -90,7 +90,7 @@ if getattr(sys, "real_prefix", None):
      # in a virtualenv
      DIST_MODULE_PATH = os.path.join(sys.prefix, 'share/ansible/')
  else:
@@ -19,19 +21,19 @@ $NetBSD: patch-lib_ansible_constants.py,v 1.4 2013/12/02 22:54:46 hubertf Exp $
 +    DIST_MODULE_PATH = '@PREFIX@/share/ansible/'
  
  # check all of these extensions when looking for yaml files for things like
- # group variables
-@@ -98,7 +98,7 @@ YAML_FILENAME_EXTENSIONS = [ "", ".yml",
+ # group variables -- really anything we can load
+@@ -100,7 +100,7 @@ YAML_FILENAME_EXTENSIONS = [ "", ".yml",
  DEFAULTS='defaults'
  
  # configurable things
 -DEFAULT_HOST_LIST         = shell_expand_path(get_config(p, DEFAULTS, 'hostfile', 'ANSIBLE_HOSTS', '/etc/ansible/hosts'))
 +DEFAULT_HOST_LIST         = shell_expand_path(get_config(p, DEFAULTS, 'hostfile', 'ANSIBLE_HOSTS', '@PKG_SYSCONFDIR@/ansible/hosts'))
  DEFAULT_MODULE_PATH       = get_config(p, DEFAULTS, 'library',          'ANSIBLE_LIBRARY',          DIST_MODULE_PATH)
- DEFAULT_ROLES_PATH        = get_config(p, DEFAULTS, 'roles_path',       'ANSIBLE_ROLES_PATH',       None)
+ DEFAULT_ROLES_PATH        = get_config(p, DEFAULTS, 'roles_path',       'ANSIBLE_ROLES_PATH',       '/etc/ansible/roles')
  DEFAULT_REMOTE_TMP        = shell_expand_path(get_config(p, DEFAULTS, 'remote_tmp',       'ANSIBLE_REMOTE_TEMP',      '$HOME/.ansible/tmp'))
-@@ -128,12 +128,12 @@ DEFAULT_LEGACY_PLAYBOOK_VARIABLES = get_
- DEFAULT_JINJA2_EXTENSIONS = get_config(p, DEFAULTS, 'jinja2_extensions', 'ANSIBLE_JINJA2_EXTENSIONS', None)
- DEFAULT_EXECUTABLE        = get_config(p, DEFAULTS, 'executable', 'ANSIBLE_EXECUTABLE', '/bin/sh')
+@@ -136,12 +136,12 @@ DEFAULT_SU_USER = get_config(p, DEFAULTS
+ DEFAULT_ASK_SU_PASS = get_config(p, DEFAULTS, 'ask_su_pass', 'ANSIBLE_ASK_SU_PASS', False, boolean=True)
+ DEFAULT_GATHERING = get_config(p, DEFAULTS, 'gathering', 'ANSIBLE_GATHERING', 'implicit').lower()
  
 -DEFAULT_ACTION_PLUGIN_PATH     = get_config(p, DEFAULTS, 'action_plugins',     'ANSIBLE_ACTION_PLUGINS', '/usr/share/ansible_plugins/action_plugins')
 -DEFAULT_CALLBACK_PLUGIN_PATH   = get_config(p, DEFAULTS, 'callback_plugins',   'ANSIBLE_CALLBACK_PLUGINS', '/usr/share/ansible_plugins/callback_plugins')
@@ -47,4 +49,4 @@ $NetBSD: patch-lib_ansible_constants.py,v 1.4 2013/12/02 22:54:46 hubertf Exp $
 +DEFAULT_FILTER_PLUGIN_PATH     = get_config(p, DEFAULTS, 'filter_plugins',     'ANSIBLE_FILTER_PLUGINS', '@PREFIX@/share/ansible_plugins/filter_plugins')
  DEFAULT_LOG_PATH               = shell_expand_path(get_config(p, DEFAULTS, 'log_path',           'ANSIBLE_LOG_PATH', ''))
  
- ANSIBLE_NOCOLOR                = get_config(p, DEFAULTS, 'nocolor', 'ANSIBLE_NOCOLOR', None, boolean=True)
+ ANSIBLE_FORCE_COLOR            = get_config(p, DEFAULTS, 'force_color', 'ANSIBLE_FORCE_COLOR', None, boolean=True)
