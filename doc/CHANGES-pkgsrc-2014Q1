@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.43 2014/06/12 08:31:22 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q1,v 1.1.2.44 2014/06/15 12:56:26 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q1 branch:
@@ -165,3 +165,5 @@ Pullup ticket #4431 - requested by wiz
 security/openssl: security update
 Pullup ticket #4433 - requested by obache
 multimedia/adobe-flash-plugin11: security update
+Pullup ticket #4432 - requested by obache
+emulators/suse131_openssl: security update
