@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2359 2014/06/15 10:02:58 asau Exp $
+$NetBSD: CHANGES-2014,v 1.2360 2014/06/15 13:09:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3160,3 +3160,8 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/mikutter to 3.0.1 [obache 2014-06-15]
 	Updated lang/racket-textual to 6.0.1 [asau 2014-06-15]
 	Updated lang/racket to 6.0.1 [asau 2014-06-15]
+	Updated inputmethod/mozc-server to 1.15.1785.102 [ryoon 2014-06-15]
+	Updated inputmethod/mozc-renderer to 1.15.1785.102 [ryoon 2014-06-15]
+	Updated inputmethod/mozc-tool to 1.15.1785.102 [ryoon 2014-06-15]
+	Updated inputmethod/ibus-mozc to 1.15.1785.102 [ryoon 2014-06-15]
+	Updated inputmethod/uim-mozc to 1.15.1785.102 [ryoon 2014-06-15]
