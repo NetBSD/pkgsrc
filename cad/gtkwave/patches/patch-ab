@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.4 2014/01/21 15:07:38 drochner Exp $
+$NetBSD: patch-ab,v 1.5 2014/06/15 14:03:03 mef Exp $
+
+add tcl option (off per default), fix mime handling
 
 --- src/tcl_helper.c.orig	2012-03-09 21:50:21.000000000 +0000
 +++ src/tcl_helper.c
