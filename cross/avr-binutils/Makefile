@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2013/12/31 00:56:17 mef Exp $
+# $NetBSD: Makefile,v 1.24 2014/06/15 15:54:41 mef Exp $
 
-DISTNAME=		binutils-2.23.2
+DISTNAME=		binutils-2.24
 PKGNAME=		${DISTNAME:S/^/avr-/}
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=binutils/}
@@ -45,16 +45,6 @@ post-install:
 	${LIBTOOL} --mode install ${INSTALL_DATA} libbfd.la ${DESTDIR}${PREFIX}/avr/lib;	\
 	${INSTALL_DATA} bfd.h ${DESTDIR}${PREFIX}/avr/include;	\
 	)
-	# Rename to avoid conflict to native and other cross assembler.
-	# and clang differs its path so, (the same as h8300-elf-binutils).
-	# (SunOS 5.11 places at amd64 instead of x86_64)
-	(cd ${DESTDIR}${PREFIX};				\
-	for d in amd64/libiberty.a ${MACHINE_ARCH}/libiberty.a libiberty.a;	\
-	  do if [ -f lib/$$d ]; then				\
-		${MV}	lib/$$d	 avr/lib/libiberty.a;		\
-		break;						\
-	     fi;						\
-	  done;	)
 	# emulator/simulavr wants following header files
 	(cd ${WRKSRC}/include;					\
 	for f in ansidecl.h symcat.h; do			\
@@ -62,3 +52,10 @@ post-install:
 	done;	\
 	)
 .include "../../mk/bsd.pkg.mk"
+
+# ./configure.lineno: 3239: Syntax error: Missing '}'
+# Makefile:2991: recipe for target 'configure-opcodes' failed
+# gmake[1]: *** [configure-opcodes] Error 1
+# gmake[1]: Leaving directory 'cross/avr-binutils/work/binutils-2.24'
+# see avr-binutils
+PKGSRC_MAKE_ENV+=       SH=/bin/ksh
