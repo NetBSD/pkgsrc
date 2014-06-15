@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2367 2014/06/15 15:34:24 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2368 2014/06/15 15:36:15 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3172,3 +3172,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/boehm-gc to 7.4.2 [wiz 2014-06-15]
 	Updated ham/fldigi to 3.21.82 [mef 2014-06-15]
 	Updated finance/py-stripe to 1.17.0 [rodent 2014-06-15]
+	Updated net/py-kombu to 3.0.19 [rodent 2014-06-15]
