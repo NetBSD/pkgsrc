@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2368 2014/06/15 15:36:15 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2369 2014/06/15 15:55:49 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3173,3 +3173,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated ham/fldigi to 3.21.82 [mef 2014-06-15]
 	Updated finance/py-stripe to 1.17.0 [rodent 2014-06-15]
 	Updated net/py-kombu to 3.0.19 [rodent 2014-06-15]
+	Updated cross/avr-binutils to 2.24 [mef 2014-06-15]
