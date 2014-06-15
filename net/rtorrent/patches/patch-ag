@@ -1,41 +1,11 @@
-$NetBSD: patch-ag,v 1.5 2013/09/18 16:33:08 joerg Exp $
+$NetBSD: patch-ag,v 1.6 2014/06/15 22:44:15 tron Exp $
 
-Fix handling of command line options. Please look here for details:
+Fix handling of command line options.
 
 http://libtorrent.rakshasa.no/ticket/2657
 
 --- src/main.cc.orig	2012-03-20 15:09:58.000000000 +0000
 +++ src/main.cc
-@@ -79,6 +79,14 @@
- 
- #include "thread_worker.h"
- 
-+#if __cplusplus >= 201103L
-+#include <functional>
-+using std::bind;
-+#else
-+#include <tr1/functional>
-+using std::tr1::bind;
-+#endif
-+
- void handle_sigbus(int signum, siginfo_t* sa, void* ptr);
- void do_panic(int signum);
- void print_help();
-@@ -208,11 +216,11 @@ main(int argc, char** argv) {
-     torrent::log_add_group_output(torrent::LOG_NOTICE, "important");
-     torrent::log_add_group_output(torrent::LOG_INFO, "complete");
- 
--    torrent::Poll::slot_create_poll() = std::tr1::bind(&core::create_poll);
-+    torrent::Poll::slot_create_poll() = bind(&core::create_poll);
- 
-     torrent::initialize();
--    torrent::main_thread()->slot_do_work() = tr1::bind(&client_perform);
--    torrent::main_thread()->slot_next_timeout() = tr1::bind(&client_next_timeout, control);
-+    torrent::main_thread()->slot_do_work() = bind(&client_perform);
-+    torrent::main_thread()->slot_next_timeout() = bind(&client_next_timeout, control);
- 
-     worker_thread = new ThreadWorker();
-     worker_thread->init_thread();
 @@ -843,14 +851,14 @@ main(int argc, char** argv) {
      }
  #endif
