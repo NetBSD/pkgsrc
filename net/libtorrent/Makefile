@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.51 2014/02/12 23:18:22 tron Exp $
+# $NetBSD: Makefile,v 1.52 2014/06/15 22:44:15 tron Exp $
 
-DISTNAME=	libtorrent-0.13.2
-PKGREVISION=	6
+DISTNAME=	libtorrent-0.13.4
 CATEGORIES=	net
-MASTER_SITES=	${HOMEPAGE:=downloads/}
+MASTER_SITES=	http://libtorrent.rakshasa.no/downloads/
 
 OWNER=		tron@NetBSD.org
-HOMEPAGE=	http://libtorrent.rakshasa.no/
+HOMEPAGE=	http://rakshasa.github.io/rtorrent/
 COMMENT=	BitTorrent library written in C++ for *nix
 LICENSE=	gnu-gpl-v2
 
@@ -15,6 +14,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-debug
+LDFLAGS+=		-lz
 
 .include "../../mk/bsd.prefs.mk"
 .if ${MACHINE_ARCH} == "alpha" || \
@@ -61,5 +61,6 @@ CONFIGURE_ENV+=	OPENSSL_LIBS=${OPENSSL_LIBS:Q}
 CXXFLAGS+=	-std=c++11
 .endif
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/libsigc++/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
