@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2014/05/29 23:36:52 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/06/15 19:39:32 jnemeth Exp $
 
 PKGNAME=	sendmail-cidrexpand-${DIST_VERS}
-PKGREVISION=	1
 MAINTAINER=	hauke@NetBSD.org
 COMMENT=	CIDR pre-parser for Sendmail access maps
 
