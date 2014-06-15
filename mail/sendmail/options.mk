@@ -1,10 +1,11 @@
-# $NetBSD: options.mk,v 1.21 2014/06/15 20:48:49 jnemeth Exp $
+# $NetBSD: options.mk,v 1.22 2014/06/15 21:04:30 jnemeth Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sendmail
-PKG_SUPPORTED_OPTIONS=	inet6 db2 db4 ldap sasl tls tcpwrappers ffr-tls
+PKG_SUPPORTED_OPTIONS=	inet6 db2 db4 ldap sasl tls tcpwrappers
+PKG_SUPPORTED_OPTIONS+=	sendmail-ffr-tls
 PKG_SUGGESTED_OPTIONS=	inet6 tcpwrappers
 
-PKG_OPTIONS_LEGACY_OPTS+=	starttls:tls ffr_tls_1:ffr-tls
+PKG_OPTIONS_LEGACY_OPTS+=	starttls:tls ffr_tls_1:sendmail-ffr-tls
 
 .include "../../mk/bsd.options.mk"
 
