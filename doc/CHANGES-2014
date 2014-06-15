@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2373 2014/06/15 21:56:02 pettai Exp $
+$NetBSD: CHANGES-2014,v 1.2374 2014/06/15 22:44:59 tron Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3178,3 +3178,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/ruby-sequel to 4.11.0 [taca 2014-06-15]
 	Updated mail/sendmail to 8.14.9 [jnemeth 2014-06-15]
 	Added chat/psybnc version 2.4b2 [pettai 2014-06-15]
+	Updated net/libtorrent to 0.13.4 [tron 2014-06-15]
+	Updated net/rtorrent to 0.9.4 [tron 2014-06-15]
