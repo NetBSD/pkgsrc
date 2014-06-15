@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2361 2014/06/15 14:05:25 mef Exp $
+$NetBSD: CHANGES-2014,v 1.2362 2014/06/15 14:14:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3166,3 +3166,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated inputmethod/ibus-mozc to 1.15.1785.102 [ryoon 2014-06-15]
 	Updated inputmethod/uim-mozc to 1.15.1785.102 [ryoon 2014-06-15]
 	Updated cad/gtkwave to 3.3.60 [mef 2014-06-15]
+	Updated print/mupdf to 1.5 [wiz 2014-06-15]
