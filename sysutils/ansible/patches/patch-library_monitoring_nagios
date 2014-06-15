@@ -1,6 +1,8 @@
-$NetBSD: patch-library_monitoring_nagios,v 1.1 2013/12/02 22:54:46 hubertf Exp $
+$NetBSD: patch-library_monitoring_nagios,v 1.2 2014/06/15 00:15:08 rodent Exp $
 
---- library/monitoring/nagios.orig	2013-08-22 02:50:24.000000000 +0000
+Fix hardcoded paths to be replaced with SUBST framework.
+
+--- library/monitoring/nagios.orig	2014-06-09 21:23:31.000000000 +0000
 +++ library/monitoring/nagios
 @@ -125,6 +125,8 @@ import os.path
  
