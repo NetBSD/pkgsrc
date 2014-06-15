@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2014/06/01 01:06:24 rodent Exp $
+$NetBSD: distinfo,v 1.5 2014/06/15 15:34:12 rodent Exp $
 
-SHA1 (stripe-1.16.0.tar.gz) = aa3d55c80c0f0640714bf6074213533a5c20818b
-RMD160 (stripe-1.16.0.tar.gz) = 4fba6c0348d231dca4528af60614fafeddd8aa6b
-Size (stripe-1.16.0.tar.gz) = 171208 bytes
+SHA1 (stripe-1.17.0.tar.gz) = f17e45186b52c28fa879759a173ee324aa6639b7
+RMD160 (stripe-1.17.0.tar.gz) = cc99317797c874cbfb41323dccb725c52d097e31
+Size (stripe-1.17.0.tar.gz) = 171234 bytes
