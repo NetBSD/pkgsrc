@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2374 2014/06/15 22:44:59 tron Exp $
+$NetBSD: CHANGES-2014,v 1.2375 2014/06/15 23:44:11 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3180,3 +3180,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added chat/psybnc version 2.4b2 [pettai 2014-06-15]
 	Updated net/libtorrent to 0.13.4 [tron 2014-06-15]
 	Updated net/rtorrent to 0.9.4 [tron 2014-06-15]
+	Updated cross/nios2-binutils to 2.24 [mef 2014-06-15]
