@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2013/08/23 17:19:40 asau Exp $
+# $NetBSD: Makefile,v 1.20 2014/06/15 09:35:28 asau Exp $
 
-PKGNAME=	racket-textual-5.3.6
-DISTNAME=	$(PKGNAME_NOREV)-src-unix
+PKGNAME=	racket-minimal-6.0.1
+DISTNAME=	$(PKGNAME_NOREV)-src
 CATEGORIES=	lang
 MASTER_SITES_PLT=	http://download.racket-lang.org/installers/$(PKGVERSION_NOREV)/ \
 		http://www.eecs.northwestern.edu/racket/$(PKGVERSION_NOREV)/ \
@@ -9,7 +9,7 @@ MASTER_SITES_PLT=	http://download.racket-lang.org/installers/$(PKGVERSION_NOREV)
 		http://mirror.informatik.uni-tuebingen.de/mirror/racket/$(PKGVERSION_NOREV)/ \
 		ftp://infogroep.be/pub/racket/installers/$(PKGVERSION_NOREV)/ \
 		http://russell.cs.bilgi.edu.tr/racket-installers/$(PKGVERSION_NOREV)/
-MASTER_SITES=	${MASTER_SITES_PLT:=racket-textual/}
+MASTER_SITES=	$(MASTER_SITES_PLT)
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	asau@inbox.ru
@@ -21,7 +21,7 @@ CONFLICTS+=	drscheme-[0-9]* mzscheme-[0-9]* racket-[0-9]*
 
 PATCHDIR=	$(.CURDIR)/../../lang/racket/patches
 
-WRKSRC=		$(WRKDIR)/$(PKGNAME_NOREV)
+WRKSRC=		$(WRKDIR)/racket-$(PKGVERSION_NOREV)
 
 GNU_CONFIGURE=	yes
 CONFIGURE_DIRS=	src
