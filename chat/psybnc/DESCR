@@ -1,0 +1,5 @@
+psyBNC is an easy-to-use, multi-user, permanent IRC-Bouncer with many features.
+Some of its features include symmetric ciphering of talk and connections
+(Blowfish and IDEA), the possibility of linking multiple bouncers to an
+internal network including a shared partyline, vhost- and relay support to
+connected bouncers and an extensive online help system.

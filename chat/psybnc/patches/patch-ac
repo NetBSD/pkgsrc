@@ -1,0 +1,41 @@
+$NetBSD: patch-ac,v 1.1 2014/06/15 21:55:17 pettai Exp $
+
+add pkgsrc path to openssl
+
+--- tools/autoconf.c.orig	2011-07-14 18:11:35.000000000 +0000
++++ tools/autoconf.c
+@@ -290,7 +290,7 @@ int checkssl()
+     strcat(sysbuf,DN);
+     system(sysbuf);
+ #else
+-    system(CC " tools/chkssl.c -I/usr/local/ssl/include -L/usr/local/ssl/lib -lssl -lcrypto -o tools/chkssl" DN);
++    system(CC " tools/chkssl.c -I@PREFIX@/include -L@PREFIX@/lib -lssl -lcrypto -o tools/chkssl" DN);
+ #endif
+     return checkcmp();
+ }
+@@ -394,6 +394,7 @@ int main()
+ 	"/usr/sbin/openssl",
+ 	"/usr/local/bin/openssl",
+ 	"/usr/local/ssl/bin/openssl",
++	"@PREFIX@/bin/openssl",
+ 	NULL
+     };
+ #endif
+@@ -566,7 +567,7 @@ int main()
+ 	    strcpy(sslbin,sslblist[sslin]);
+ 	    printf("Yes.\n");
+ 	    strcpy(sslopt,"-DHAVE_SSL ");
+-	    strcpy(ssllib,"-L/usr/local/ssl/lib -lssl -lcrypto ");
++	    strcpy(ssllib,"-L@PREFIX@/lib -lssl -lcrypto ");
+ 	}
+ #else
+ 	if(strlen(SSLPATH)+13<sizeof(mbuf))
+@@ -625,7 +626,7 @@ int main()
+ #ifdef SSLPATH
+ 	fprintf(makefile,"INCLUDE = -I./src/ -I. -I%sinclude %s %s\n", SSLPATH, mysqlheaders, dnsinc);
+ #else
+-	fprintf(makefile,"INCLUDE = -I./src/ -I. -I/usr/local/ssl/include %s %s\n", mysqlheaders, dnsinc);
++	fprintf(makefile,"INCLUDE = -I./src/ -I. -I@PREFIX@/include %s %s\n", mysqlheaders, dnsinc);
+ #endif
+     else
+ 	fprintf(makefile,"INCLUDE = -I./src/ -I. %s %s\n", mysqlheaders, dnsinc);
