@@ -1,8 +1,6 @@
-$NetBSD: patch-Makethird,v 1.3 2014/06/15 14:14:18 wiz Exp $
+$NetBSD: patch-Makethird,v 1.4 2014/06/15 19:15:51 wiz Exp $
 
 o mujs building support with libtool
-o libcurl (www/curl) support. By default mupdf can be installed with curl
- support *only* building it in ${WRKSRC}/thirdparty.
 
 --- Makethird.orig	2014-06-10 15:09:28.000000000 +0000
 +++ Makethird
@@ -24,13 +22,3 @@ o libcurl (www/curl) support. By default mupdf can be installed with curl
  	$(CC_CMD)
  
  MUJS_CFLAGS := -I$(MUJS_DIR)
-@@ -460,6 +460,9 @@ CURL_CFLAGS := $(SYS_CURL_CFLAGS)
- CURL_LIBS := $(SYS_CURL_LIBS)
- endif
- 
-+CURL_CFLAGS := $(SYS_CURL_CFLAGS)
-+CURL_LIBS := $(SYS_CURL_LIBS) $(SYS_CURL_DEPS)
-+
- # --- X11 ---
- 
- ifeq "$(HAVE_X11)" "yes"
