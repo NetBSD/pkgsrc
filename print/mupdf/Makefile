@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/06/15 14:14:18 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2014/06/15 16:01:58 richard Exp $
 
 DISTNAME=	mupdf-1.5-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -10,6 +10,7 @@ HOMEPAGE=	http://mupdf.com/
 COMMENT=	Lightweight PDF viewer and toolkit
 LICENSE=	gnu-agpl-v3
 
+USE_LANGUAGES+=	c99
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 
@@ -18,7 +19,10 @@ INSTALL_MAKE_FLAGS+=	prefix=${PREFIX}
 INSTALL_MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
 LDFLAGS=	${COMPILER_RPATH_FLAG}${X11BASE}/lib
 MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
+MAKE_FLAGS+=	XCFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=	build=release
+
+CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
 
 .include "options.mk"
 
