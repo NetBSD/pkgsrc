@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2014/06/15 20:48:49 jnemeth Exp $
+# $NetBSD: Makefile,v 1.122 2014/06/15 21:04:30 jnemeth Exp $
 
 PKGNAME=	sendmail-${DIST_VERS}
 COMMENT=	The well known Mail Transport Agent
@@ -95,7 +95,7 @@ post-patch: make-sendmail-siteconfig
 .if !empty(PKG_OPTIONS:Mtls)
 	cat ${FILESDIR}/site.config.m4-starttls >>${SITECONFIG}
 .endif
-.if !empty(PKG_OPTIONS:Mffr_tls)
+.if !empty(PKG_OPTIONS:Msendmail-ffr-tls)
 	cat ${FILESDIR}/site.config.m4-ffr_tls >>${SITECONFIG}
 .endif
 .if !empty(PKG_OPTIONS:Msasl)
