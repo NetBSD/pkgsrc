@@ -1,0 +1,24 @@
+$NetBSD: patch-ag,v 1.1 2014/06/15 23:43:14 mef Exp $
+
+Avoid installing info (which duplicates with other CPU)
+
+--- ld/Makefile.in.orig	2012-09-04 21:53:47.000000000 +0900
++++ ld/Makefile.in	2013-01-27 07:19:44.000000000 +0900
+@@ -118,7 +118,7 @@ LTYACCCOMPILE = $(LIBTOOL) $(AM_LIBTOOLF
+ 	--mode=compile $(YACC) $(YFLAGS) $(AM_YFLAGS)
+ SOURCES = $(libldtestplug_la_SOURCES) $(ld_new_SOURCES) \
+ 	$(EXTRA_ld_new_SOURCES)
+-INFO_DEPS = ld.info
++INFO_DEPS =
+ am__TEXINFO_TEX_DIR = $(srcdir)/../texinfo
+ DVIS = ld.dvi
+ PDFS = ld.pdf
+@@ -345,7 +345,7 @@ use_sysroot = @use_sysroot@
+ AUTOMAKE_OPTIONS = dejagnu no-texinfo.tex no-dist foreign
+ ACLOCAL_AMFLAGS = -I .. -I ../config -I ../bfd
+ TEXINFO_TEX = ../texinfo/texinfo.tex
+-SUBDIRS = po
++SUBDIRS =
+ tooldir = $(exec_prefix)/$(target_alias)
+ 
+ # Automake 1.10+ disables lex and yacc output file regeneration if
