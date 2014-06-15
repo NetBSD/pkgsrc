@@ -173,6 +173,7 @@ farsight		Enable farsight2 support.
 fastcgi			Use FastCGI as the CGI manager.
 fd-small		Build smaller misc/fd package.
 ffmpeg			Enable ffmpeg support.
+ffr-tls			Enable various FFR_TLS_* options.  FFR = For Future Release.
 fftw			Use the fftw library for Discrete Fourier Transforms.
 fftw-fortran		Enable Fortran support.
 finger			Enable finger support.
