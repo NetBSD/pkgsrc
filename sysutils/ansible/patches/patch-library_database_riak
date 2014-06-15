@@ -1,8 +1,10 @@
-$NetBSD: patch-library_database_riak,v 1.1 2013/12/02 22:54:46 hubertf Exp $
+$NetBSD: patch-library_database_riak,v 1.2 2014/06/15 00:15:08 rodent Exp $
 
---- library/database/riak.orig	2013-09-13 20:37:23.000000000 +0000
+Fix hardcoded paths to be replaced with SUBST framework.
+
+--- library/database/riak.orig	2014-06-09 21:23:31.000000000 +0000
 +++ library/database/riak
-@@ -110,7 +110,7 @@ def main():
+@@ -118,7 +118,7 @@ def main():
          argument_spec=dict(
          command=dict(required=False, default=None, choices=[
                      'ping', 'kv_test', 'join', 'plan', 'commit']),
