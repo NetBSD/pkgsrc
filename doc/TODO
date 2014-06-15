@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13416 2014/06/15 20:49:06 jnemeth Exp $
+$NetBSD: TODO,v 1.13417 2014/06/15 23:44:11 mef Exp $
 
 Suggested new packages
 ======================
@@ -854,7 +854,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o newmail-1.0.2
 	o nginx-devel-1.7.0
 	o nikto-2.0.1
-	o nios2-binutils-2.24 [wip]
 	o notmuch-0.18
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
