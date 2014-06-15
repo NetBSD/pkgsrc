@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2014/04/16 14:20:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2014/06/15 14:19:07 wiz Exp $
 include/gc.h
 include/gc/cord.h
 include/gc/gc.h
@@ -47,7 +47,6 @@ share/doc/gc/README.symbian
 share/doc/gc/README.uts
 share/doc/gc/README.win32
 share/doc/gc/README.win64
-share/doc/gc/barrett_diagram
 share/doc/gc/debugging.html
 share/doc/gc/finalization.html
 share/doc/gc/gc.man
