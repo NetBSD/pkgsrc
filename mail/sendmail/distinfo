@@ -1,18 +1,24 @@
-$NetBSD: distinfo,v 1.50 2014/02/09 02:02:46 jnemeth Exp $
+$NetBSD: distinfo,v 1.51 2014/06/15 20:48:49 jnemeth Exp $
 
-SHA1 (sendmail.8.14.8.tar.gz) = dabe370ff9c6a95039e4e58e4e2a67ab48f8b9b5
-RMD160 (sendmail.8.14.8.tar.gz) = cd6a3c9a9cd154dcbff186c9391f038c72cc56c9
-Size (sendmail.8.14.8.tar.gz) = 2114959 bytes
-SHA1 (patch-aa) = d58a1e2415a8fb1423536c58b460c0a49e0de2be
-SHA1 (patch-ab) = a2abf6e78772e257e2a1973e7730159ff24a91aa
-SHA1 (patch-ac) = 96c19300b4188dbcbd202768eea912f675dadc27
-SHA1 (patch-ad) = 7232cc7ceb46a2dbf631d61185e4c6ca4af18a13
-SHA1 (patch-ae) = ae06caa125fe4d4fc85123dc0a5d0016cd099ebd
-SHA1 (patch-af) = f1fb00d9d27f512c550ad7dbcd014563122488b5
+SHA1 (sendmail.8.14.9.tar.gz) = fcf92eb0c119da1593ccda96ee24b4d0b0b21fd7
+RMD160 (sendmail.8.14.9.tar.gz) = da36f900a94c9300521a60bf917ed3e5d6c88d1e
+Size (sendmail.8.14.9.tar.gz) = 2114293 bytes
+SHA1 (patch-aa) = bd1ab754f7146d002eaf8c0347e114b4049a7776
+SHA1 (patch-af) = bd3e26b0e78eadd610713430ae6deac888176442
 SHA1 (patch-ag) = f76de45c7e8d16207670e151265b7edbca4c045c
 SHA1 (patch-ah) = e6be09008b9230ffdd1560aaacbdbb2ee4fb8028
-SHA1 (patch-ai) = aca71358618e8c1dc785a8b2dc049b97232b8795
+SHA1 (patch-ai) = 0bd3676dce988cf1167fae09443da0d1a1363abb
 SHA1 (patch-aj) = e65e6fe44380de2f9c397c1a97677eb4ad285433
-SHA1 (patch-al) = f5d8cef8c4abba5d5ae813b754c16037190a7ef1
-SHA1 (patch-am) = d84eedbff0f037c1db341255dc9e1877866f12c7
 SHA1 (patch-an) = 82d2df0c609099f295eb00f1f5e19391ae97833c
+SHA1 (patch-ao) = 88dd76b71ad57a8d0efdb6e8518ff01689ecf634
+SHA1 (patch-ap) = 9c83d9ed1b4d8c851c106597638763515923a4ab
+SHA1 (patch-aq) = 722382daf085ac2f4a06d0c812bb00f49bcdfd2c
+SHA1 (patch-ar) = d68984a057d7a0a674a8d46cf903585c8279f7a8
+SHA1 (patch-as) = 652b107d5f68507a0b2fb7c5402186eff96c6bc0
+SHA1 (patch-at) = 7c206df88d29671faef950276a5119ef2f525f4b
+SHA1 (patch-au) = 08449c9c00cc0161af94a4994abf1d12b5785dcb
+SHA1 (patch-av) = 1b6bd4547930507ab67427bcf8a390c0afce0fb0
+SHA1 (patch-aw) = f1089cb4d97580097ed0449a448f1cbd874aedd9
+SHA1 (patch-ax) = adba9177404e10d5f461e1e8f0c4dd5840d78dd1
+SHA1 (patch-ay) = 5e003a2c5ec9c42556b7c2fe141ff65c86345029
+SHA1 (patch-az) = e067d46657593348e7df912d1d54c02c0dfd54ed
