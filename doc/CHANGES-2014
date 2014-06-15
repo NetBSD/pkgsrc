@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2356 2014/06/15 06:41:07 obache Exp $
+$NetBSD: CHANGES-2014,v 1.2357 2014/06/15 09:00:20 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3157,3 +3157,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-uwsgi to 2.0.5.1 [rodent 2014-06-15]
 	Updated comms/p5-Device-XBee-API to 0.7 [dsainty 2014-06-15]
 	Updated textproc/xerces-j to 1.4.4 [obache 2014-06-15]
+	Updated net/mikutter to 3.0.1 [obache 2014-06-15]
