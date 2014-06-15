@@ -1,17 +1,8 @@
-$NetBSD: patch-protobuf_protobuf.gyp,v 1.3 2014/01/19 01:18:50 ryoon Exp $
+$NetBSD: patch-protobuf_protobuf.gyp,v 1.4 2014/06/15 13:08:34 ryoon Exp $
 
---- protobuf/protobuf.gyp.orig	2014-01-06 07:10:31.000000000 +0000
+--- protobuf/protobuf.gyp.orig	2014-05-21 10:49:57.000000000 +0000
 +++ protobuf/protobuf.gyp
-@@ -161,7 +161,7 @@
-           ],
-           'conditions': [
-             # for gcc and clang
--            ['OS=="linux" or OS=="mac"', {
-+            ['OS=="linux" or OS=="mac" or OS=="netbsd"', {
-               'cflags': [
-                 '-Wno-conversion-null',  # coded_stream.cc uses NULL to bool.
-                 '-Wno-unused-function',
-@@ -201,7 +201,7 @@
+@@ -211,7 +211,7 @@
          '<(protobuf_root)/src',
        ],
        'conditions': [
@@ -20,7 +11,7 @@ $NetBSD: patch-protobuf_protobuf.gyp,v 1.3 2014/01/19 01:18:50 ryoon Exp $
            'conditions': [
              ['use_libprotobuf!=1', {
                'cflags': [
-@@ -237,7 +237,7 @@
+@@ -247,7 +247,7 @@
        },
        'conditions': [
          # use system-installed protoc on Linux

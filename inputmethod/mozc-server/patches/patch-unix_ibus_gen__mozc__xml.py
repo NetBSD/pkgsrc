@@ -1,36 +1,9 @@
-$NetBSD: patch-unix_ibus_gen__mozc__xml.py,v 1.5 2014/05/18 07:42:24 obache Exp $
+$NetBSD: patch-unix_ibus_gen__mozc__xml.py,v 1.6 2014/06/15 13:08:34 ryoon Exp $
 
 * Fix for pkgsrc installation.
 
---- unix/ibus/gen_mozc_xml.py.orig	2014-01-06 07:10:26.000000000 +0000
+--- unix/ibus/gen_mozc_xml.py.orig	2014-05-21 10:49:56.000000000 +0000
 +++ unix/ibus/gen_mozc_xml.py
-@@ -47,7 +47,7 @@ import sys
- IBUS_COMPONENT_PROPS = {
-     'name': 'com.google.IBus.Mozc',
-     'description': '%(product_name)s Component',
--    'exec': '%(ibus_mozc_path)s --ibus',
-+    'exec': '@PREFIX@/libexec/ibus-engine-mozc --ibus',
-     # TODO(mazda): Generate the version number.
-     'version': '0.0.0.0',
-     'author': 'Google Inc.',
-@@ -60,7 +60,7 @@ IBUS_COMPONENT_PROPS = {
- IBUS_ENGINE_COMMON_PROPS = {
-     'description': '%(product_name)s (Japanese Input Method)',
-     'language': 'ja',
--    'icon': '%(ibus_mozc_icon_path)s',
-+    'icon': '@PREFIX@/share/ibus-mozc/product_icon.png',
-     'rank': '80',
- }
- 
-@@ -68,7 +68,7 @@ IBUS_ENGINE_COMMON_PROPS = {
- IBUS_1_5_ENGINE_COMMON_PROPS = {
-     'description': '%(product_name)s (Japanese Input Method)',
-     'language': 'ja',
--    'icon': '%(ibus_mozc_icon_path)s',
-+    'icon': '@PREFIX@/share/ibus-mozc/product_icon.png',
-     'rank': '80',
-     'symbol': '&#x3042;',
- }
 @@ -93,6 +93,22 @@ IBUS_ENGINES_PROPS = {
          'longname': ['%(product_name)s'],
          'layout': ['default'],
