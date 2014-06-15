@@ -1,4 +1,4 @@
-# $NetBSD: site.config.m4,v 1.10 2009/12/16 09:46:36 jnemeth Exp $
+# $NetBSD: site.config.m4,v 1.11 2014/06/15 20:48:49 jnemeth Exp $
 
 # pathnames specific to pkgsrc
 #
@@ -17,18 +17,12 @@ define(`confMAN4EXT', `4')
 define(`confMAN5EXT', `5')
 define(`confMAN8EXT', `8')
 APPENDDEF(`confENVDEF', `-I${PREFIX}/include -DSMRSH_CMDDIR=\"${SMRSH_CMDDIR}\"')
-APPENDDEF(`confLIBS', `-L${PREFIX}/lib')
+define(`confLDOPTS', `${LDFLAGS}')
 APPENDDEF(`confMAPDEF', `-DSOCKETMAP')
 
 # the following are handled by pkgsrc
 define(`confINST_DEP',`')
 define(`confNO_STATISTICS_INSTALL')
-
-# set file ownership to pkgsrc default
-define(`confLIBOWN', `${BINOWN}')
-define(`confLIBGRP', `${BINGRP}')
-define(`confINCOWN', `${SHAREOWN}')
-define(`confINCGRP', `${SHAREGRP}')
 
 # have libmilter use poll(2) instead of select(2)
 # XXX all supported systems should support poll(2), if one is discovered
