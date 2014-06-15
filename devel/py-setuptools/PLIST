@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2014/06/09 12:35:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2014/06/15 14:17:08 wiz Exp $
 bin/easy_install-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -118,12 +118,6 @@ ${PYSITELIB}/setuptools/py31compat.pyo
 ${PYSITELIB}/setuptools/sandbox.py
 ${PYSITELIB}/setuptools/sandbox.pyc
 ${PYSITELIB}/setuptools/sandbox.pyo
-${PYSITELIB}/setuptools/script template (dev).py
-${PYSITELIB}/setuptools/script template (dev).pyc
-${PYSITELIB}/setuptools/script template (dev).pyo
-${PYSITELIB}/setuptools/script template.py
-${PYSITELIB}/setuptools/script template.pyc
-${PYSITELIB}/setuptools/script template.pyo
 ${PYSITELIB}/setuptools/site-patch.py
 ${PYSITELIB}/setuptools/site-patch.pyc
 ${PYSITELIB}/setuptools/site-patch.pyo
