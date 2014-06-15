@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2369 2014/06/15 15:55:49 mef Exp $
+$NetBSD: CHANGES-2014,v 1.2370 2014/06/15 15:56:29 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3174,3 +3174,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated finance/py-stripe to 1.17.0 [rodent 2014-06-15]
 	Updated net/py-kombu to 3.0.19 [rodent 2014-06-15]
 	Updated cross/avr-binutils to 2.24 [mef 2014-06-15]
+	Updated www/py-flask-user to 0.5.1 [rodent 2014-06-15]
