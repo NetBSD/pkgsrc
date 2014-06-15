@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2353 2014/06/15 00:15:50 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2354 2014/06/15 05:20:36 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3154,3 +3154,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/dbus to 1.8.4nb1 [wiz 2014-06-14]
 	Updated lang/openjdk7 to 1.7.60 [ryoon 2014-06-14]
 	Updated sysutils/ansible to 1.6.3 [rodent 2014-06-15]
+	Updated www/py-uwsgi to 2.0.5.1 [rodent 2014-06-15]
