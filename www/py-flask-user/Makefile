@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/06/01 01:03:58 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2014/06/15 15:56:14 rodent Exp $
 
-DISTNAME=	Flask-User-0.5.0
+DISTNAME=	Flask-User-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python www
 MASTER_SITES=	https://pypi.python.org/packages/source/F/Flask-User/

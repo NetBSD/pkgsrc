@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/05/03 02:35:35 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/06/15 15:56:14 rodent Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -54,6 +54,7 @@ ${PYSITELIB}/flask_user/templates/flask_user/emails/username_changed_subject.txt
 ${PYSITELIB}/flask_user/templates/flask_user/forgot_password.html
 ${PYSITELIB}/flask_user/templates/flask_user/login.html
 ${PYSITELIB}/flask_user/templates/flask_user/login_or_register.html
+${PYSITELIB}/flask_user/templates/flask_user/manage_emails.html
 ${PYSITELIB}/flask_user/templates/flask_user/member_base.html
 ${PYSITELIB}/flask_user/templates/flask_user/public_base.html
 ${PYSITELIB}/flask_user/templates/flask_user/register.html
