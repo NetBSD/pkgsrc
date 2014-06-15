@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2014/05/05 19:57:12 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.37 2014/06/15 09:35:28 asau Exp $
 
-PKGNAME=	racket-5.3.6
-DISTNAME=	$(PKGNAME_NOREV)-src-unix
-PKGREVISION=	4
+PKGNAME=	racket-6.0.1
+DISTNAME=	$(PKGNAME_NOREV)-src
 CATEGORIES=	lang
 MASTER_SITES_PLT=	http://download.racket-lang.org/installers/$(PKGVERSION_NOREV)/ \
 		http://www.eecs.northwestern.edu/racket/$(PKGVERSION_NOREV)/ \
@@ -10,7 +9,7 @@ MASTER_SITES_PLT=	http://download.racket-lang.org/installers/$(PKGVERSION_NOREV)
 		http://mirror.informatik.uni-tuebingen.de/mirror/racket/$(PKGVERSION_NOREV)/ \
 		ftp://infogroep.be/pub/racket/installers/$(PKGVERSION_NOREV)/ \
 		http://russell.cs.bilgi.edu.tr/racket-installers/$(PKGVERSION_NOREV)/
-MASTER_SITES=	${MASTER_SITES_PLT:=racket/}
+MASTER_SITES=	$(MASTER_SITES_PLT)
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	asau@inbox.ru
@@ -44,7 +43,7 @@ CHECK_INTERPRETER_SKIP=	lib/racket/collects/meta/build/sitemap/setup.py \
 CHECK_INTERPRETER_SKIP+=	lib/racket/collects/tests/jpr/mon-script.ss
 
 .for f in use-c-printf.rkt use-crypt.rkt use-esd.rkt use-magick.rkt use-sndfile.rkt use-tcl.rkt use-xmmsctrl.rkt use-xosd.rkt
-REPLACE_RACKET+=	collects/ffi/examples/${f}
+REPLACE_RACKET+=	share/pkgs/racket-doc/ffi/examples/${f}
 .endfor
 
 REPLACE_INTERPRETER+=	racket
@@ -55,9 +54,6 @@ REPLACE_FILES.racket=	$(REPLACE_RACKET)
 post-install:
 	$(RM) -f $(DESTDIR)$(PREFIX)/lib/racket/collects/racket/draw/unsafe/png.rkt.orig
 	$(RM) -f $(DESTDIR)$(PREFIX)/lib/racket/collects/racket/draw/unsafe/jpeg.rkt.orig
-
-do-test:
-	$(RUN) cd $(WRKSRC)/collects/tests/racket && $(WRKSRC)/src/racket/racket3m -f quiet.rktl
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
