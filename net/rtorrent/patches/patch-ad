@@ -1,26 +1,32 @@
-$NetBSD: patch-ad,v 1.4 2012/05/24 17:01:43 marino Exp $
+$NetBSD: patch-ad,v 1.5 2014/06/15 22:44:15 tron Exp $
 
---- src/utils/directory.cc.orig	2012-03-29 13:06:11.000000000 +0000
-+++ src/utils/directory.cc
-@@ -38,6 +38,7 @@
- 
- #include <algorithm>
- #include <functional>
-+#include <sys/stat.h>
- #include <dirent.h>
+Fix build under DragonFly.
+
+--- src/utils/directory.cc.orig	2014-04-21 14:34:45.000000000 +0100
++++ src/utils/directory.cc	2014-06-15 21:07:36.000000000 +0100
+@@ -44,6 +44,10 @@
  #include <rak/path.h>
  #include <torrent/exceptions.h>
-@@ -45,6 +46,9 @@
- #ifdef __sun__
- #include <sys/stat.h>
- #endif
+ 
 +#ifdef __DragonFly__
 +#define d_reclen d_namlen
 +#endif
- 
++
  #include "directory.h"
  
-@@ -67,7 +71,9 @@ Directory::update(int flags) {
+ namespace utils {
+@@ -54,7 +58,9 @@
+   if (m_path.empty())
+     return false;
+ 
+-  DIR* d = opendir(rak::path_expand(m_path).c_str());
++  std::string path=rak::path_expand(m_path);
++
++  DIR* d = opendir(path.c_str());
+   closedir(d);
+ 
+   return d;
+@@ -65,7 +71,9 @@
    if (m_path.empty())
      throw torrent::input_error("Directory::update() tried to open an empty path.");
  
