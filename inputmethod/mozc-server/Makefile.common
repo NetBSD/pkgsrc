@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2014/05/09 07:37:09 wiz Exp $
+# $NetBSD: Makefile.common,v 1.10 2014/06/15 13:08:34 ryoon Exp $
 # used by inputmethod/ibus-mozc/Makefile
 # used by inputmethod/mozc-elisp/Makefile
 # used by inputmethod/mozc-server/Makefile
@@ -7,10 +7,11 @@
 # used by inputmethod/uim-mozc/Makefile
 #
 
-DISTNAME=	mozc-1.13.1651.102
+DISTNAME=	mozc-1.15.1785.102
 CATEGORIES=	inputmethod
-MASTER_SITES=	http://mozc.googlecode.com/files/
-EXTRACT_SUFX=	.tar.bz2
+#MASTER_SITES=	http://mozc.googlecode.com/files/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pnsft-aur/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/mozc/
@@ -22,7 +23,7 @@ PATCHDIR=	${.CURDIR}/../../inputmethod/mozc-server/patches
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-gyp-[0-9]*:../../devel/gyp
 
-PYTHON_VERSIONS_INCOMPATIBLE=  33 34 # py-gyp
+PYTHON_VERSIONS_INCOMPATIBLE=  33 # py-gyp
 
 USE_LANGUAGES=	c c++
 # nullptr requires -std=c++11, and -std=c++11 requires gcc 4.7 or later
@@ -47,6 +48,7 @@ SUBST_FILES.gyp+=	base/process.cc
 SUBST_FILES.gyp+=	base/system_util.cc
 SUBST_FILES.gyp+=	handwriting/zinnia_handwriting.cc
 SUBST_FILES.gyp+=	unix/ibus/gen_mozc_xml.py
+SUBST_FILES.gyp+=	unix/ibus/ibus.gyp
 SUBST_FILES.gyp+=	gyp/common.gypi
 SUBST_VARS.gyp+=	OPENSSL_CFLAGS OPENSSL_INC OPENSSL_LDFLAGS OPENSSL_LIBS
 SUBST_VARS.gyp+=	PREFIX QTDIR
