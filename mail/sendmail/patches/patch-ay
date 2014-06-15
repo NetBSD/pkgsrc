@@ -1,0 +1,53 @@
+$NetBSD: patch-ay,v 1.1 2014/06/15 20:48:50 jnemeth Exp $
+
+--- sendmail/sm_resolve.c.orig	2014-05-16 20:40:15.000000000 +0000
++++ sendmail/sm_resolve.c
+@@ -54,2 +54,6 @@ SM_RCSID("$Id: sm_resolve.c,v 8.40 2013-
+ 
++#if NAMED_BIND
++extern struct __res_state sm_res;
++#endif
++
+ static struct stot
+@@ -410,4 +414,4 @@ dns_lookup_int(domain, rr_class, rr_type
+ 	{
+-		old_options = _res.options;
+-		_res.options |= RES_DEBUG;
++		old_options = sm_res.options;
++		sm_res.options |= RES_DEBUG;
+ 		sm_dprintf("dns_lookup(%s, %d, %s)\n", domain,
+@@ -417,4 +421,4 @@ dns_lookup_int(domain, rr_class, rr_type
+ 	{
+-		save_retrans = _res.retrans;
+-		_res.retrans = retrans;
++		save_retrans = sm_res.retrans;
++		sm_res.retrans = retrans;
+ 	}
+@@ -422,4 +426,4 @@ dns_lookup_int(domain, rr_class, rr_type
+ 	{
+-		save_retry = _res.retry;
+-		_res.retry = retry;
++		save_retry = sm_res.retry;
++		sm_res.retry = retry;
+ 	}
+@@ -428,3 +432,7 @@ dns_lookup_int(domain, rr_class, rr_type
+ 	reply = (unsigned char *)&reply_buf;
++#if NAMED_RESN
++	len = res_nsearch(&sm_res, domain, rr_class, rr_type, reply, SMRBSIZE);
++#else
+ 	len = res_search(domain, rr_class, rr_type, reply, SMRBSIZE);
++#endif
+ 	if (len >= SMRBSIZE)
+@@ -454,3 +462,3 @@ dns_lookup_int(domain, rr_class, rr_type
+ 	{
+-		_res.options = old_options;
++		sm_res.options = old_options;
+ 		sm_dprintf("dns_lookup(%s, %d, %s) --> %d\n",
+@@ -466,5 +474,5 @@ dns_lookup_int(domain, rr_class, rr_type
+ 	if (retrans > 0)
+-		_res.retrans = save_retrans;
++		sm_res.retrans = save_retrans;
+ 	if (retry > 0)
+-		_res.retry = save_retry;
++		sm_res.retry = save_retry;
+ 	return r;

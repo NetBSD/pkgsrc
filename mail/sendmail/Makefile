@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.120 2014/05/10 14:38:26 richard Exp $
+# $NetBSD: Makefile,v 1.121 2014/06/15 20:48:49 jnemeth Exp $
 
 PKGNAME=	sendmail-${DIST_VERS}
-PKGREVISION=	1
 COMMENT=	The well known Mail Transport Agent
 
 CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 postfix-[0-9]*
@@ -33,7 +32,8 @@ PKG_GROUPS=		smmsp
 PKG_USERS=		smmsp:smmsp
 PKG_GECOS.smmsp=	Sendmail Message Submission Program
 
-SUBST_CLASSES+=		paths
+SUBST_CLASSES+=		paths cf-paths
+
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	../mailer.conf smrsh/smrsh.8 cf/cf/Makefile
 SUBST_SED.paths+=	-e "s|@@BINGRP@@|${BINGRP}|g"
@@ -43,13 +43,41 @@ SUBST_SED.paths+=	-e "s|@@PREFIX@@|${PREFIX}|g"
 SUBST_SED.paths+=	-e "s|@@SMRSH_CMDDIR@@|${SMRSH_CMDDIR}|g"
 SUBST_MESSAGE.paths=	Fixing paths.
 
+SUBST_STAGE.cf-paths=	pre-build
+.for f in cf/README cf/cf/generic-bsd4.4.cf cf/cf/generic-hpux10.cf	\
+	cf/cf/generic-hpux9.cf cf/cf/generic-linux.cf			\
+	cf/cf/generic-mpeix.cf cf/cf/generic-nextstep3.3.cf		\
+	cf/cf/generic-osf1.cf cf/cf/generic-solaris.cf			\
+	cf/cf/generic-sunos4.1.cf cf/cf/generic-ultrix4.cf		\
+	cf/cf/knecht.mc cf/cf/submit.cf cf/feature/local_lmtp.m4	\
+	cf/feature/msp.m4 cf/feature/smrsh.m4 cf/m4/proto.m4		\
+	cf/mailer/pop.m4 cf/mailer/usenet.m4 cf/ostype/a-ux.m4		\
+	cf/ostype/aix3.m4 cf/ostype/aix4.m4 cf/ostype/aix5.m4		\
+	cf/ostype/amdahl-uts.m4 cf/ostype/darwin.m4 cf/ostype/dgux.m4	\
+	cf/ostype/domainos.m4 cf/ostype/dragonfly.m4			\
+	cf/ostype/dynix3.2.m4 cf/ostype/freebsd4.m4			\
+	cf/ostype/freebsd5.m4 cf/ostype/freebsd6.m4 cf/ostype/hpux10.m4	\
+	cf/ostype/irix4.m4 cf/ostype/irix5.m4 cf/ostype/irix6.m4	\
+	cf/ostype/isc4.1.m4 cf/ostype/maxion.m4 cf/ostype/nextstep.m4	\
+	cf/ostype/openbsd.m4 cf/ostype/ptx2.m4 cf/ostype/riscos4.5.m4	\
+	cf/ostype/sco-uw-2.1.m4 cf/ostype/sco3.2.m4 cf/ostype/sinix.m4	\
+	cf/ostype/solaris11.m4 cf/ostype/solaris2.m4			\
+	cf/ostype/solaris2.ml.m4 cf/ostype/solaris2.pre5.m4		\
+	cf/ostype/solaris8.m4 cf/ostype/sunos3.5.m4			\
+	cf/ostype/sunos4.1.m4 cf/ostype/ultrix4.m4 cf/ostype/unicos.m4	\
+	cf/ostype/unicosmk.m4 cf/ostype/unicosmp.m4			\
+	cf/ostype/unixware7.m4
+SUBST_FILES.cf-paths+=	${f}
+.endfor
+SUBST_SED.cf-paths+=	-e "s|/var/spool|${VARBASE}/spool|g"
+SUBST_SED.cf-paths+=	-e "s|/var/run|${VARBASE}/run|g"
+SUBST_SED.cf-paths+=	-e "s|/usr/libexec|${PREFIX}/libexec/sendmail|g"
+SUBST_SED.cf-paths+=	-e "s|/usr/lib|${PREFIX}/libexec/sendmail|g"
+SUBST_SED.cf-paths+=	-e "s|/system/volatile|${VARBASE}/run|g"
+
 REPLACE_PERL=		contrib/socketmapClient.pl contrib/socketmapServer.pl
 
-INSTALLATION_DIRS+=	bin lib sbin
-INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
-INSTALLATION_DIRS+=	${PREFIX}/libexec/sendmail ${SMRSH_CMDDIR}
-INSTALLATION_DIRS+=	${PREFIX}/share/examples/sendmail
-INSTALLATION_DIRS+=	${PREFIX}/share/sendmail ${PREFIX}/share/doc/sendmail
+AUTO_MKDIRS=	yes
 
 post-patch: make-sendmail-siteconfig
 .if !empty(PKG_OPTIONS:Mtcpwrappers)
@@ -67,8 +95,8 @@ post-patch: make-sendmail-siteconfig
 .if !empty(PKG_OPTIONS:Mtls)
 	cat ${FILESDIR}/site.config.m4-starttls >>${SITECONFIG}
 .endif
-.if !empty(PKG_OPTIONS:Mffr_tls_1)
-	cat ${FILESDIR}/site.config.m4-ffr_tls_1 >>${SITECONFIG}
+.if !empty(PKG_OPTIONS:Mffr_tls)
+	cat ${FILESDIR}/site.config.m4-ffr_tls >>${SITECONFIG}
 .endif
 .if !empty(PKG_OPTIONS:Msasl)
 	cat ${FILESDIR}/site.config.m4-sasl2 >>${SITECONFIG}
@@ -79,15 +107,20 @@ post-extract:
 
 do-build:
 	(cd ${WRKSRC} && env ${MAKE_ENV} ./Build)
+	(cd ${WRKSRC}/cf/cf && env ${MAKE_ENV} ./Build)
 
 post-build:
 	cp ${PKGDIR}/MESSAGE ${MESSAGE_SRC}
 	cp ${PKGDIR}/PLIST ${WRKDIR}/.PLIST_SRC
 
 post-install:
+	(cd ${WRKSRC}/mail.local && env ${INSTALL_ENV} ${MAKE_ENV} ./Build force-install)
+	(cd ${WRKSRC}/rmail && env ${INSTALL_ENV} ${MAKE_ENV} ./Build force-install)
+
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf \
 		${DESTDIR}${PREFIX}/share/examples/sendmail/
 	cd ${WRKSRC}/cf && pax -rw -pp -pm -s',^.*\.orig$$,,' . ${DESTDIR}${PREFIX}/share/sendmail
+	cp ${FILESDIR}/netbsd-proto.mc ${DESTDIR}${PREFIX}/share/sendmail/cf
 
 	${INSTALL_DATA} ${WRKSRC}/obj.`${UNAME} -srm | tr \  . | tr \/ - | sed s/sun4./sun4/`/libsm/libsm.a \
 		${DESTDIR}${PREFIX}/lib

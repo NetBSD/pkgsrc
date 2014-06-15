@@ -1,0 +1,6 @@
+$NetBSD: TODO,v 1.1 2014/06/15 20:48:49 jnemeth Exp $
+
+- get helpfile installed somewhere useful
+  - alternatively, adjust default "O HelpFile"
+- install sample aliases somewhere
+- look into using ${LOCALBASE}/etc/mail instead of /etc/mail
