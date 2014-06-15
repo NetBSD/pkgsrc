@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.7 2014/05/18 08:12:22 wiz Exp $
+$NetBSD: patch-ab,v 1.8 2014/06/15 14:14:18 wiz Exp $
 
 o Handle the various operating systems in the same way avoiding hardcoding
 o Build and link with openjpeg-2.1
 o libcurl (www/curl) support
 
---- Makerules.orig	2014-04-11 15:10:41.000000000 +0000
+--- Makerules.orig	2014-06-10 15:09:28.000000000 +0000
 +++ Makerules
 @@ -25,37 +25,6 @@ else
  $(error unknown build setting: '$(build)')
@@ -44,25 +44,7 @@ o libcurl (www/curl) support
  HAVE_X11 ?= yes
  
  ifeq "$(shell pkg-config --exists libcrypto && echo yes)" "yes"
-@@ -63,22 +32,21 @@ SYS_OPENSSL_CFLAGS = -DHAVE_OPENSSL $(sh
- SYS_OPENSSL_LIBS = $(shell pkg-config --libs libcrypto)
- endif
- 
--# TODO: use pkg-config for system CURL
-+SYS_CURL_CFLAGS = $(shell pkg-config --cflags libcurl)
- SYS_CURL_DEPS = -lpthread -lrt
-+SYS_CURL_LIBS = $(shell pkg-config --libs libcurl)
- 
- SYS_X11_CFLAGS = $(shell pkg-config --cflags x11 xext)
- SYS_X11_LIBS = $(shell pkg-config --libs x11 xext)
- 
- SYS_FREETYPE_CFLAGS = $(shell pkg-config --cflags freetype2)
- SYS_FREETYPE_LIBS = $(shell pkg-config --libs freetype2)
--SYS_OPENJPEG_CFLAGS = $(shell pkg-config --cflags libopenjpeg1)
--SYS_OPENJPEG_LIBS = $(shell pkg-config --libs libopenjpeg1)
-+SYS_OPENJPEG_CFLAGS = $(shell pkg-config --cflags libopenjp2)
-+SYS_OPENJPEG_LIBS = $(shell pkg-config --libs libopenjp2)
- SYS_JBIG2DEC_LIBS = -ljbig2dec
+@@ -81,8 +50,6 @@ SYS_JBIG2DEC_LIBS = -ljbig2dec
  SYS_JPEG_LIBS = -ljpeg
  SYS_ZLIB_LIBS = -lz
  
