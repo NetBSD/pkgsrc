@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2014/03/13 18:24:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.28 2014/06/15 16:32:31 taca Exp $
 bin/sequel
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -96,6 +96,8 @@ ${GEM_LIBDIR}/doc/release_notes/3.8.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.9.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.0.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.1.0.txt
+${GEM_LIBDIR}/doc/release_notes/4.10.0.txt
+${GEM_LIBDIR}/doc/release_notes/4.11.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.2.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.3.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.4.0.txt
@@ -103,6 +105,7 @@ ${GEM_LIBDIR}/doc/release_notes/4.5.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.6.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.7.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.8.0.txt
+${GEM_LIBDIR}/doc/release_notes/4.9.0.txt
 ${GEM_LIBDIR}/doc/schema_modification.rdoc
 ${GEM_LIBDIR}/doc/security.rdoc
 ${GEM_LIBDIR}/doc/sharding.rdoc
@@ -204,6 +207,7 @@ ${GEM_LIBDIR}/lib/sequel/dataset/features.rb
 ${GEM_LIBDIR}/lib/sequel/dataset/graph.rb
 ${GEM_LIBDIR}/lib/sequel/dataset/misc.rb
 ${GEM_LIBDIR}/lib/sequel/dataset/mutation.rb
+${GEM_LIBDIR}/lib/sequel/dataset/placeholder_literalizer.rb
 ${GEM_LIBDIR}/lib/sequel/dataset/prepared_statements.rb
 ${GEM_LIBDIR}/lib/sequel/dataset/query.rb
 ${GEM_LIBDIR}/lib/sequel/dataset/sql.rb
@@ -217,6 +221,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/connection_validator.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/constraint_validations.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/core_extensions.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/core_refinements.rb
+${GEM_LIBDIR}/lib/sequel/extensions/current_datetime_timestamp.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/date_arithmetic.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/empty_array_ignore_nulls.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/error_sql.rb
@@ -354,6 +359,7 @@ ${GEM_LIBDIR}/spec/core/deprecated_spec.rb
 ${GEM_LIBDIR}/spec/core/expression_filters_spec.rb
 ${GEM_LIBDIR}/spec/core/mock_adapter_spec.rb
 ${GEM_LIBDIR}/spec/core/object_graph_spec.rb
+${GEM_LIBDIR}/spec/core/placeholder_literalizer_spec.rb
 ${GEM_LIBDIR}/spec/core/schema_generator_spec.rb
 ${GEM_LIBDIR}/spec/core/schema_spec.rb
 ${GEM_LIBDIR}/spec/core/spec_helper.rb
@@ -377,6 +383,7 @@ ${GEM_LIBDIR}/spec/extensions/connection_validator_spec.rb
 ${GEM_LIBDIR}/spec/extensions/constraint_validations_plugin_spec.rb
 ${GEM_LIBDIR}/spec/extensions/constraint_validations_spec.rb
 ${GEM_LIBDIR}/spec/extensions/core_refinements_spec.rb
+${GEM_LIBDIR}/spec/extensions/current_datetime_timestamp_spec.rb
 ${GEM_LIBDIR}/spec/extensions/dataset_associations_spec.rb
 ${GEM_LIBDIR}/spec/extensions/date_arithmetic_spec.rb
 ${GEM_LIBDIR}/spec/extensions/defaults_setter_spec.rb
