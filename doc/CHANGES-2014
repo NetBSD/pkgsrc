@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2371 2014/06/15 16:33:02 taca Exp $
+$NetBSD: CHANGES-2014,v 1.2372 2014/06/15 20:49:06 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3176,3 +3176,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated cross/avr-binutils to 2.24 [mef 2014-06-15]
 	Updated www/py-flask-user to 0.5.1 [rodent 2014-06-15]
 	Updated databases/ruby-sequel to 4.11.0 [taca 2014-06-15]
+	Updated mail/sendmail to 8.14.9 [jnemeth 2014-06-15]
