@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1 2014/06/15 23:43:14 mef Exp $
+
+Avoid installing info (which duplicates with other CPU)
+
+--- gas/doc/Makefile.in.orig	2008-08-15 10:31:50 +0200
++++ gas/doc/Makefile.in
+@@ -62,7 +62,7 @@ CONFIG_CLEAN_FILES =
+ depcomp =
+ am__depfiles_maybe =
+ SOURCES =
+-INFO_DEPS = as.info
++INFO_DEPS =
+ TEXINFO_TEX = $(top_srcdir)/../texinfo/texinfo.tex
+ am__TEXINFO_TEX_DIR = $(top_srcdir)/../texinfo
+ DVIS = as.dvi
