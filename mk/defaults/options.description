@@ -173,7 +173,6 @@ farsight		Enable farsight2 support.
 fastcgi			Use FastCGI as the CGI manager.
 fd-small		Build smaller misc/fd package.
 ffmpeg			Enable ffmpeg support.
-ffr-tls			Enable various FFR_TLS_* options.  FFR = For Future Release.
 fftw			Use the fftw library for Discrete Fourier Transforms.
 fftw-fortran		Enable Fortran support.
 finger			Enable finger support.
@@ -590,6 +589,7 @@ scapy-pyx		Add in py-X support.
 sdl			Use SDL as display library.
 sdl2			Use SDL2 as display library.
 seamonkey		Use seamonkey as gecko rendering engine.
+sendmail-ffr-tls	Enable various FFR_TLS_* options.  FFR = For Future Release.
 sendmail-milter		Build the milter with support for the Sendmail MTA.
 sendmail-socketmap	Enable Sendmail SOCKETMAP support.
 serf			Use serf HTTP/WebDAV client library.
