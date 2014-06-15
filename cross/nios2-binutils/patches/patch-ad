@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 2014/06/15 23:43:14 mef Exp $
+
+Avoid installing info (which duplicates with other CPU)
+
+--- etc/Makefile.in.orig	2010-11-21 04:37:57.000000000 +0900
++++ etc/Makefile.in	2012-02-06 21:50:04.000000000 +0900
+@@ -64,7 +64,7 @@
+ HTMLFILES = standards.html configure.html
+ 
+ all: info
+-install install-strip: install-info
++install install-strip:
+ 
+ uninstall:
+ 

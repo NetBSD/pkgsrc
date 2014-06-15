@@ -1,49 +1,32 @@
-# $NetBSD: Makefile,v 1.8 2014/05/29 23:35:24 wiz Exp $
-.include		"../../cross/nios2/Makefile.common"
-PKGNAME=		nios2-binutils-${PKG_VERSION}
-PKG_VERSION=		2.23
-PKGREVISION=		1
+# $NetBSD: Makefile,v 1.9 2014/06/15 23:43:13 mef Exp $
+
+DISTNAME=		binutils-2.24
+PKGNAME=		${DISTNAME:S/^/nios2-/}
+CATEGORIES=		cross
+MASTER_SITES=		${MASTER_SITE_GNU:=binutils/}
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-#HOMEPAGE=
+HOMEPAGE=		http://www.gnu.org/software/binutils/
 COMMENT=		GNU binutils for Altera FPGA Nios2 processor
 LICENSE=		gnu-gpl-v3
 
+# No need to use makeinfo - this package doesn't install the documentation.
+USE_TOOLS+=		gmake
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-WRKSRC=			${WRKDIR}/binutils-2013.05
+USE_GNU_CONFIGURE_HOST=	no
+INFO_FILES=		# empty
 
-USE_TOOLS+=		ksh gettext gmake makeinfo perl tar automake autoconf gawk
-USE_LIBTOOL=		yes
-USE_LANGUAGES+=		c c++
-BUILD_DEFS+=		${NIOS_INFO_DIR}
+NIOS2_TARGET=		nios2-elf
+CONFIGURE_ARGS+=	--disable-werror --target=${NIOS2_TARGET} --disable-nls
+PLIST_SUBST+=		NIOS2_TARGET=${NIOS2_TARGET:Q}
 
-CONFIGURE_ARGS+=	--disable-nls
-# install libiberty by architecture
-GNU_CONFIGURE_LIBDIR=	${PREFIX}/${NIOS2_TARGET}/lib
-
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-CFLAGS+=	-Wno-string-plus-int -Wno-self-assign
-.endif
-
-# To avoid conflict with other cross/native info files,
-NIOS_INFO_DIR=		${PREFIX}/info/${NIOS2_TARGET}
-.include "../../mk/bsd.prefs.mk"
-INFO_DIR?=		${NIOS_INFO_DIR}
-
-# CONFIGURE_ARGS+=	--infodir=
-#  doesn't make it, will be overridden by following variables
-#  see mk/configure/gnu-configure.mk
-GNU_CONFIGURE_INFODIR=	${NIOS_INFO_DIR}
-
-.include "options.mk"
-
-do-extract:
-	(cd ${WRKDIR}; tar jxf ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}	\
-	        sourceryg++-2013.05-43-nios2-linux-gnu/binutils-2013.05-43.tar.bz2;\
-	tar jxf sourceryg++-2013.05-43-nios2-linux-gnu/binutils-2013.05-43.tar.bz2;\
-	)
+BUILD_DEFS+=		CROSSBASE
+PATH:=			${CROSSBASE}/bin:${PATH}
+AUTO_MKDIRS=		yes
 
 # following file installed is reference only, not used at all for the moment
 post-install:
@@ -51,8 +34,10 @@ post-install:
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-CONFIGURE_ENV+=		PATH=${CROSSBASE}/bin:${PATH}
 
-# ./configure.lineno: 3238: Syntax error: "else" unexpected
-#  gmake[1]: *** [configure-gas] Error 1
+# ./configure.lineno: 3239: Syntax error: Missing '}'
+# Makefile:2991: recipe for target 'configure-opcodes' failed
+# gmake[1]: *** [configure-opcodes] Error 1
+# gmake[1]: Leaving directory '/export/WRKOBJDIR/wip/avr-binutils/work/binutils-2.24'
+# see avr-binutils
 PKGSRC_MAKE_ENV+=	SH=/bin/ksh

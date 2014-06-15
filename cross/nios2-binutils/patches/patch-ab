@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2014/06/15 23:43:14 mef Exp $
+
+Avoid installing info file.
+
+--- bfd/Makefile.in.orig	2011-11-21 20:55:49.000000000 +0900
++++ bfd/Makefile.in	2012-02-06 22:14:51.000000000 +0900
+@@ -1713,7 +1713,6 @@
+ 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
+ 	done
+ install: $(BUILT_SOURCES)
+-	$(MAKE) $(AM_MAKEFLAGS) install-recursive
+ install-exec: install-exec-recursive
+ install-data: install-data-recursive
+ uninstall: uninstall-recursive
