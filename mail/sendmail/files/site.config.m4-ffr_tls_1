@@ -1,4 +1,0 @@
-# $NetBSD: site.config.m4-ffr_tls_1,v 1.1 2013/09/19 10:54:05 manu Exp $
-
-# enable _FFR_TLS_1
-APPENDDEF(`conf_sendmail_ENVDEF', `-D_FFR_TLS_1')

@@ -1,0 +1,4 @@
+# $NetBSD: site.config.m4-stdbool,v 1.1 2014/06/15 20:48:49 jnemeth Exp $
+
+# PM: stdbool.h on SunOS needs -std=c99
+APPENDDEF(`confENVDEF', `-DSM_CONF_STDBOOL_H=1')
