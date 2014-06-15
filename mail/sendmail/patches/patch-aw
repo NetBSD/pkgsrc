@@ -1,0 +1,32 @@
+$NetBSD: patch-aw,v 1.1 2014/06/15 20:48:50 jnemeth Exp $
+
+--- sendmail/readcf.c.orig	2014-05-16 20:40:15.000000000 +0000
++++ sendmail/readcf.c
+@@ -20,6 +20,10 @@ SM_RCSID("@(#)$Id: readcf.c,v 8.692 2013
+ # include <arpa/inet.h>
+ #endif /* NETINET || NETINET6 */
+ 
++#if NAMED_BIND
++extern struct __res_state sm_res;
++#endif
++
+ 
+ #define SECONDS
+ #define MINUTES	* 60
+@@ -2810,13 +2814,13 @@ setoption(opt, val, safe, sticky, e)
+ 			if (rfp->rf_name == NULL)
+ 				syserr("readcf: I option value %s unrecognized", q);
+ 			else if (clearmode)
+-				_res.options &= ~rfp->rf_bits;
++				sm_res.options &= ~rfp->rf_bits;
+ 			else
+-				_res.options |= rfp->rf_bits;
++				sm_res.options |= rfp->rf_bits;
+ 		}
+ 		if (tTd(8, 2))
+ 			sm_dprintf("_res.options = %x, HasWildcardMX = %d\n",
+-				   (unsigned int) _res.options, HasWildcardMX);
++				   (unsigned int) sm_res.options, HasWildcardMX);
+ #else /* NAMED_BIND */
+ 		usrerr("name server (I option) specified but BIND not compiled in");
+ #endif /* NAMED_BIND */

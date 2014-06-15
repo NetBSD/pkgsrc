@@ -1,8 +1,36 @@
-$NetBSD: patch-af,v 1.11 2007/04/26 06:26:27 jnemeth Exp $
+$NetBSD: patch-af,v 1.12 2014/06/15 20:48:50 jnemeth Exp $
 
---- sendmail/conf.c.orig	2007-04-03 14:32:29.000000000 -0700
+--- sendmail/conf.c.orig	2014-05-20 17:24:39.000000000 +0000
 +++ sendmail/conf.c
-@@ -4393,7 +4393,8 @@ sm_gethostbyaddr(addr, len, type)
+@@ -43,6 +43,10 @@ SM_RCSID("@(#)$Id: conf.c,v 8.1191 2014-
+ # include <ulimit.h>
+ #endif /* HASULIMIT && defined(HPUX11) */
+ 
++#if !HAS_GETHOSTBYNAME2
++extern struct __res_state sm_res;
++#endif
++
+ static void	setupmaps __P((void));
+ static void	setupmailers __P((void));
+ static void	setupqueues __P((void));
+@@ -4242,13 +4246,13 @@ sm_getipnodebyname(name, family, flags, 
+ 	if (family == AF_INET6)
+ 	{
+ 		/* From RFC2133, section 6.1 */
+-		resv6 = bitset(RES_USE_INET6, _res.options);
+-		_res.options |= RES_USE_INET6;
++		resv6 = bitset(RES_USE_INET6, sm_res.options);
++		sm_res.options |= RES_USE_INET6;
+ 	}
+ 	SM_SET_H_ERRNO(0);
+ 	h = gethostbyname(name);
+ 	if (!resv6)
+-		_res.options &= ~RES_USE_INET6;
++		sm_res.options &= ~RES_USE_INET6;
+ 
+ 	/* the function is supposed to return only the requested family */
+ 	if (h != NULL && h->h_addrtype != family)
+@@ -4463,7 +4467,8 @@ sm_gethostbyaddr(addr, len, type)
  
  #if NETINET6
  	if (type == AF_INET6 &&

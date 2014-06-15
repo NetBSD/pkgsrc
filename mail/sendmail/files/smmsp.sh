@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: smmsp.sh,v 1.2 2012/07/27 17:46:01 jnemeth Exp $
+# $NetBSD: smmsp.sh,v 1.3 2014/06/15 20:48:49 jnemeth Exp $
 #
 
 # REQUIRE: mail
@@ -18,13 +18,13 @@
 
 name="smmsp"
 rcvar=$name
-command="/usr/sbin/sendmail"
 pidfile="@VARBASE@/spool/clientmqueue/sm-client.pid"
 required_files="/etc/mail/submit.cf"
 extra_commands="reload"
 
 smbin="@PREFIX@/libexec/sendmail/sendmail"
 smmsp_flags="-Lsm-msp-queue -Ac -q30m"
+command=$smbin
 
 load_rc_config $name
 run_rc_command "$1"

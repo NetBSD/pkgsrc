@@ -1,27 +1,22 @@
-$NetBSD: patch-aa,v 1.20 2013/03/23 10:06:12 joerg Exp $
+$NetBSD: patch-aa,v 1.21 2014/06/15 20:48:50 jnemeth Exp $
 
---- devtools/OS/NetBSD.orig	2004-06-16 17:50:00.000000000 +0000
+--- devtools/OS/NetBSD.orig	2014-03-06 17:31:29.000000000 +0000
 +++ devtools/OS/NetBSD
-@@ -5,15 +5,16 @@ dnl	Place personal settings in devtools/
+@@ -5,15 +5,11 @@ dnl	Place personal settings in devtools/
  
  define(`confMAPDEF', `-DNEWDB -DNIS -DMAP_REGEX')
  define(`confLIBS', `-lutil')
 -define(`confENVDEF', ` -DNETISO')
-+define(`confENVDEF', ` -DSM_CONF_STDBOOL_H=1')
++define(`confSM_OS_HEADER', `sm_os_netbsd')
  define(`confDEPEND_TYPE', `CC-M')
 -define(`confSBINGRP', `wheel')
 -define(`confUBINOWN', `root')
 -define(`confUBINGRP', `wheel')
 -define(`confMANOWN', `root')
 -define(`confMANGRP', `wheel')
-+define(`confSBINGRP', `${BSD_BINGRP}')
-+define(`confUBINOWN', `${BSD_BINOWN}')
-+define(`confUBINGRP', `${BSD_BINGRP}')
-+define(`confMANOWN', `${BSD_MANOWN}')
-+define(`confMANGRP', `${BSD_MANGRP}')
  define(`confMAN1EXT', `0')
  define(`confMAN3EXT', `0')
  define(`confMAN4EXT', `0')
  define(`confMAN5EXT', `0')
  define(`confMAN8EXT', `0')
-+define(`confLDOPTS', `${LDFLAGS}')
++define(`conf_sendmail_ENVDEF', `-D_FFR_USE_GETPWNAM_ERRNO=1')

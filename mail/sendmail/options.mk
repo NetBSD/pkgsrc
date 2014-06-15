@@ -1,18 +1,20 @@
-# $NetBSD: options.mk,v 1.20 2013/09/19 10:54:05 manu Exp $
+# $NetBSD: options.mk,v 1.21 2014/06/15 20:48:49 jnemeth Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sendmail
-PKG_SUPPORTED_OPTIONS=	inet6 db2 ldap sasl tls tcpwrappers  ffr_tls_1
+PKG_SUPPORTED_OPTIONS=	inet6 db2 db4 ldap sasl tls tcpwrappers ffr-tls
 PKG_SUGGESTED_OPTIONS=	inet6 tcpwrappers
 
-PKG_OPTIONS_LEGACY_OPTS+=	starttls:tls
+PKG_OPTIONS_LEGACY_OPTS+=	starttls:tls ffr_tls_1:ffr-tls
 
 .include "../../mk/bsd.options.mk"
 
 ###
-### Berkeley DB version 2 format for on disk databases e.g. aliases
+### Berkeley DB version 2/4 format for on disk databases e.g. aliases
 ###
 .if !empty(PKG_OPTIONS:Mdb2)
 .  include "../../databases/db/buildlink3.mk"
+.elif !empty(PKG_OPTIONS:Mdb4)
+.  include "../../databases/db4/buildlink3.mk"
 .endif
 
 ###
@@ -37,7 +39,7 @@ PKG_OPTIONS_LEGACY_OPTS+=	starttls:tls
 .endif
 
 ###
-### 'For Future Release' FFR_TLS_1 options: CipherList, multiple certs
+### 'For Future Release' FFR_TLS_* options: CipherList, multiple certs
 ###
 # Nothing to do here, activation is done in Makefile
 

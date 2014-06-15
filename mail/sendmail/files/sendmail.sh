@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: sendmail.sh,v 1.2 2012/07/27 17:46:01 jnemeth Exp $
+# $NetBSD: sendmail.sh,v 1.3 2014/06/15 20:48:49 jnemeth Exp $
 #
 
 # PROVIDE: mail
@@ -13,7 +13,6 @@
 
 name="sendmail"
 rcvar=$name
-command="/usr/sbin/${name}"
 pidfile="@VARBASE@/run/${name}.pid"
 required_files="/etc/mail/sendmail.cf"
 start_precmd="sendmail_precmd"
@@ -24,6 +23,7 @@ newaliases="@PREFIX@/bin/newaliases"
 smbin="@PREFIX@/libexec/sendmail/sendmail"
 check_files="aliases access genericstable virtusertable domaintable mailertable"
 sendmail_flags="-Lsm-mta -bd -q30m"
+command=$smbin
 
 sendmail_precmd()
 {

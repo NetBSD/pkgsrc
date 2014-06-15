@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.8 2008/06/14 08:58:06 tron Exp $
+$NetBSD: patch-ai,v 1.9 2014/06/15 20:48:50 jnemeth Exp $
 
---- sendmail/mci.c.orig	2007-11-13 23:44:25.000000000 +0000
-+++ sendmail/mci.c	2008-06-08 15:28:50.000000000 +0100
-@@ -20,6 +20,7 @@
+--- sendmail/mci.c.orig	2014-03-06 17:31:31.000000000 +0000
++++ sendmail/mci.c
+@@ -20,6 +20,7 @@ SM_RCSID("@(#)$Id: mci.c,v 8.225 2013-11
  #endif /* NETINET || NETINET6 */
  
  #include <dirent.h>
@@ -10,7 +10,7 @@ $NetBSD: patch-ai,v 1.8 2008/06/14 08:58:06 tron Exp $
  
  static int	mci_generate_persistent_path __P((const char *, char *,
  						  int, bool));
-@@ -717,7 +718,11 @@
+@@ -744,7 +745,11 @@ mci_lock_host_statfile(mci)
  {
  	int save_errno = errno;
  	int retVal = EX_OK;
