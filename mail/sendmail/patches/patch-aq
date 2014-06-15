@@ -1,0 +1,15 @@
+$NetBSD: patch-aq,v 1.1 2014/06/15 20:48:50 jnemeth Exp $
+
+--- sendmail/conf.h.orig	2014-03-06 17:31:31.000000000 +0000
++++ sendmail/conf.h
+@@ -234,6 +234,10 @@ struct rusage;	/* forward declaration to
+ # define PIPELINING	1	/* SMTP PIPELINING */
+ #endif /* PIPELINING */
+ 
++#ifndef NAMED_RESN
++# define NAMED_RESN	1	/* res_n* functions are available */
++#endif
++
+ /**********************************************************************
+ **  End of site-specific configuration.
+ **********************************************************************/
