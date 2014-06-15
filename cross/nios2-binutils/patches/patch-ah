@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1 2014/06/15 23:43:14 mef Exp $
+
+Avoid installing po (nls) files
+
+--- binutils/Makefile.in.orig	2011-08-08 09:27:15.000000000 +0900
++++ binutils/Makefile.in	2012-02-06 21:51:20.000000000 +0900
+@@ -405,7 +405,7 @@
+ top_srcdir = @top_srcdir@
+ AUTOMAKE_OPTIONS = dejagnu no-dist foreign
+ ACLOCAL_AMFLAGS = -I .. -I ../config -I ../bfd
+-SUBDIRS = doc po
++SUBDIRS = doc
+ tooldir = $(exec_prefix)/$(target_alias)
+ 
+ # Automake 1.10+ disables lex and yacc output file regeneration if

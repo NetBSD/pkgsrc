@@ -1,6 +1,13 @@
-$NetBSD: distinfo,v 1.4 2013/12/08 22:31:54 joerg Exp $
+$NetBSD: distinfo,v 1.5 2014/06/15 23:43:13 mef Exp $
 
-SHA1 (sourceryg++-2013.05-43-nios2-linux-gnu.src.tar.bz2) = 94a0dadc4c1370dadfacf4bc6cac591e3e47959b
-RMD160 (sourceryg++-2013.05-43-nios2-linux-gnu.src.tar.bz2) = de056d240a73236d6d8be4851813d8b15d16808f
-Size (sourceryg++-2013.05-43-nios2-linux-gnu.src.tar.bz2) = 251136787 bytes
-SHA1 (patch-libiberty_Makefile.in) = 1e446461751d036eec91110fa094bf4fbbfee128
+SHA1 (binutils-2.24.tar.bz2) = 7ac75404ddb3c4910c7594b51ddfc76d4693debb
+RMD160 (binutils-2.24.tar.bz2) = b4aa3ea5ba9d0d9f817b2cf136e7f911f692af8d
+Size (binutils-2.24.tar.bz2) = 22716802 bytes
+SHA1 (patch-ab) = e2bc22866d8e04b0d670509f3295da5f0e535ac8
+SHA1 (patch-ad) = 6d1acfd834c692abcc4f454db5f5107b7f77e34e
+SHA1 (patch-ae) = fff6693a610b26aa60e1d96ad634d15d11afbe05
+SHA1 (patch-af) = 5fa08da0b31da042eb30cce683f7b7b1feb3196b
+SHA1 (patch-ag) = e778ddd88f34e264e6b2d6d31a56a02be565e916
+SHA1 (patch-ah) = b6e91279475c41bc78b3df227938a91948fc377c
+SHA1 (patch-ai) = 3cd298ac0364f913c1261fc87f7f474281bae9cf
+SHA1 (patch-aj) = fd2a66979f68350a53960defdaf5e9e5018ec59a
