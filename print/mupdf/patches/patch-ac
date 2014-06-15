@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.8 2014/04/21 16:14:40 wiz Exp $
+$NetBSD: patch-ac,v 1.9 2014/06/15 14:14:18 wiz Exp $
 
 o libtool support 
 o Install target cleanup
@@ -6,7 +6,7 @@ o Install only one "mupdf" binary, prefer the featureful one and always
  install it as "mupdf"
 o libmujs support: install like a non-thirdparty mupdf's library
 
---- Makefile.orig	2014-04-11 15:10:41.000000000 +0000
+--- Makefile.orig	2014-06-10 15:09:28.000000000 +0000
 +++ Makefile
 @@ -41,22 +41,12 @@ CFLAGS += $(ZLIB_CFLAGS)
  
@@ -147,12 +147,12 @@ o libmujs support: install like a non-thirdparty mupdf's library
 -$(OUT)/pdf/pdf-fontfile.o : $(FONT_GEN)
 -$(OUT)/pdf/pdf-pkcs7.o : $(ADOBECA_GEN)
 -$(OUT)/pdf/js/pdf-js.o : $(JAVASCRIPT_GEN)
--$(OUT)/cmapdump.o : source/pdf/pdf-cmap.c source/pdf/pdf-cmap-parse.c
+-$(OUT)/cmapdump.o : include/mupdf/pdf/cmap.h source/pdf/pdf-cmap.c source/pdf/pdf-cmap-parse.c
 +$(OUT)/pdf/pdf-cmap-table.lo : $(CMAP_GEN)
 +$(OUT)/pdf/pdf-fontfile.lo : $(FONT_GEN)
 +$(OUT)/pdf/pdf-pkcs7.lo : $(ADOBECA_GEN)
 +$(OUT)/pdf/js/pdf-js.lo : $(JAVASCRIPT_GEN)
-+$(OUT)/cmapdump.lo : source/pdf/pdf-cmap.c source/pdf/pdf-cmap-parse.c
++$(OUT)/cmapdump.lo : include/mupdf/pdf/cmap.h source/pdf/pdf-cmap.c source/pdf/pdf-cmap-parse.c
  
  # --- Tools and Apps ---
  
@@ -170,7 +170,7 @@ o libmujs support: install like a non-thirdparty mupdf's library
  $(MUTOOL_OBJ): $(FITZ_HDR) $(PDF_HDR)
  $(MUTOOL) : $(MUPDF_LIB) $(THIRD_LIBS)
  $(MUTOOL) : $(MUTOOL_OBJ)
-@@ -246,24 +239,24 @@ $(MUTOOL) : $(MUTOOL_OBJ)
+@@ -246,25 +239,25 @@ $(MUTOOL) : $(MUTOOL_OBJ)
  
  MJSGEN := $(OUT)/mjsgen
  $(MJSGEN) : $(MUPDF_LIB) $(THIRD_LIBS)
@@ -186,22 +186,23 @@ o libmujs support: install like a non-thirdparty mupdf's library
  
  ifeq "$(HAVE_X11)" "yes"
 -MUVIEW_X11 := $(OUT)/mupdf-x11
+-MUVIEW_X11_OBJ := $(addprefix $(OUT)/platform/x11/, x11_main.o x11_image.o pdfapp.o)
 +MUVIEW_X11 := $(OUT)/platform/x11/mupdf
++MUVIEW_X11_OBJ := $(addprefix $(OUT)/platform/x11/, x11_main.lo x11_image.lo pdfapp.lo)
+ $(MUVIEW_X11_OBJ) : $(FITZ_HDR) $(PDF_HDR)
  $(MUVIEW_X11) : $(MUPDF_LIB) $(THIRD_LIBS)
--$(MUVIEW_X11) : $(addprefix $(OUT)/platform/x11/, x11_main.o x11_image.o pdfapp.o)
-+$(MUVIEW_X11) : $(addprefix $(OUT)/platform/x11/, x11_main.lo x11_image.lo pdfapp.lo)
+ $(MUVIEW_X11) : $(MUVIEW_X11_OBJ)
  	$(LINK_CMD) $(X11_LIBS)
  
  ifeq "$(HAVE_CURL)" "yes"
 -MUVIEW_X11_CURL := $(OUT)/mupdf-x11-curl
+-MUVIEW_X11_CURL_OBJ := $(addprefix $(OUT)/platform/x11/curl/, x11_main.o x11_image.o pdfapp.o curl_stream.o)
 +MUVIEW_X11_CURL := $(OUT)/platform/x11/curl/mupdf
++MUVIEW_X11_CURL_OBJ := $(addprefix $(OUT)/platform/x11/curl/, x11_main.lo x11_image.lo pdfapp.lo curl_stream.lo)
+ $(MUVIEW_X11_CURL_OBJ) : $(FITZ_HDR) $(PDF_HDR)
  $(MUVIEW_X11_CURL) : $(MUPDF_LIB) $(THIRD_LIBS) $(CURL_LIB)
--$(MUVIEW_X11_CURL) : $(addprefix $(OUT)/platform/x11/curl/, x11_main.o x11_image.o pdfapp.o curl_stream.o)
-+$(MUVIEW_X11_CURL) : $(addprefix $(OUT)/platform/x11/curl/, x11_main.lo x11_image.lo pdfapp.lo curl_stream.lo)
- 	$(LINK_CMD) $(X11_LIBS) $(CURL_LIBS)
- endif
- endif
-@@ -271,7 +264,12 @@ endif
+ $(MUVIEW_X11_CURL) : $(MUVIEW_X11_CURL_OBJ)
+@@ -275,7 +268,12 @@ endif
  MUVIEW := $(MUVIEW_X11)
  MUVIEW_CURL := $(MUVIEW_X11_CURL)
  
@@ -215,7 +216,7 @@ o libmujs support: install like a non-thirdparty mupdf's library
  
  # --- Update version string header ---
  
-@@ -304,24 +302,26 @@ libs: $(INSTALL_LIBS)
+@@ -308,24 +306,26 @@ libs: $(INSTALL_LIBS)
  apps: $(INSTALL_APPS)
  
  install: libs apps
