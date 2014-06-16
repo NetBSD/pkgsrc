@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2375 2014/06/15 23:44:11 mef Exp $
+$NetBSD: CHANGES-2014,v 1.2376 2014/06/16 00:39:51 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3181,3 +3181,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/libtorrent to 0.13.4 [tron 2014-06-15]
 	Updated net/rtorrent to 0.9.4 [tron 2014-06-15]
 	Updated cross/nios2-binutils to 2.24 [mef 2014-06-15]
+	Updated devel/p5-Error to 0.17022 [schmonz 2014-06-16]
