@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2376 2014/06/16 00:39:51 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2377 2014/06/16 02:48:23 agc Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1728,7 +1728,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/opensc to 0.13.0 [gdt 2014-03-14]
 	Updated devel/bmake to 20140314 [ryoon 2014-03-14]
 	Updated pkgtools/bootstrap-mk-files to 20140314 [ryoon 2014-03-14]
-	mk/bsd.pkg.mk: started freeze for pkgsrc-2014Q1 branch [agc 2013-03-14]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2014Q1 branch [agc 2014-03-14]
 	Updated graphics/freetype2 to 2.5.3nb1 [obache 2014-03-15]
 	Updated misc/libreoffice4 to 4.2.2.1 [ryoon 2014-03-15]
 	Updated x11/qt5-qtwebkit to 5.2.0nb5 [obache 2014-03-15]
@@ -3182,3 +3182,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/rtorrent to 0.9.4 [tron 2014-06-15]
 	Updated cross/nios2-binutils to 2.24 [mef 2014-06-15]
 	Updated devel/p5-Error to 0.17022 [schmonz 2014-06-16]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2014Q2 branch [agc 2014-06-15]
