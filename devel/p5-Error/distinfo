@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2013/09/05 18:52:42 wiz Exp $
+$NetBSD: distinfo,v 1.14 2014/06/16 00:39:37 schmonz Exp $
 
-SHA1 (Error-0.17021.tar.gz) = 4ae7d68fbf2d64693773eab9dcd5a25a9775b2c3
-RMD160 (Error-0.17021.tar.gz) = 172e039a16a20ad9aee184b7a6f139cb97d7b5fd
-Size (Error-0.17021.tar.gz) = 22400 bytes
+SHA1 (Error-0.17022.tar.gz) = 2e638bd8e9f9e241733a6f199287154a039d3700
+RMD160 (Error-0.17022.tar.gz) = 36161f5cc276c4027a60513551a429ca42b0c869
+Size (Error-0.17022.tar.gz) = 31045 bytes
