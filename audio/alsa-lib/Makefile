@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/06/09 12:21:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2014/06/16 14:09:03 jperkin Exp $
 #
 
 DISTNAME=	alsa-lib-1.0.27.2
@@ -24,6 +24,7 @@ CPPFLAGS.SunOS+=	-std=c99 -D_POSIX_C_SOURCE=200112L
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__ -DBSD_COMP -DMAP_FILE=0
 CPPFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t
 CPPFLAGS.SunOS+=	-Du_int32_t=uint32_t -Du_int64_t=uint64_t
+CPPFLAGS.SunOS+=	-D__u32=uint32_t -D__u64=uint64_t
 CPPFLAGS.SunOS+=	-Dbswap_64=BSWAP_64 -Dbswap_32=BSWAP_32 -Dbswap_16=BSWAP_16
 
 CPPFLAGS.NetBSD+=	-D__u32=uint32_t -D__u64=uint64_t
