@@ -1,6 +1,7 @@
-$NetBSD: patch-src_conf.c,v 1.1 2014/06/09 12:21:07 ryoon Exp $
+$NetBSD: patch-src_conf.c,v 1.2 2014/06/16 14:09:03 jperkin Exp $
 
 * NetBSD has no PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP
+* SunOS has no versionsort or dirent d_type
 
 --- src/conf.c.orig	2013-07-08 12:31:36.000000000 +0000
 +++ src/conf.c
@@ -41,12 +42,32 @@ $NetBSD: patch-src_conf.c,v 1.1 2014/06/09 12:21:07 ryoon Exp $
  }
  
  #else
-@@ -3506,7 +3519,7 @@ int snd_config_hook_load(snd_config_t *r
+@@ -3376,11 +3389,19 @@ static int snd_config_hooks(snd_config_t
+ 
+ static int config_filename_filter(const struct dirent *dirent)
+ {
++#ifdef __sun
++	struct stat s;
++#endif
+ 	size_t flen;
+ 
+ 	if (dirent == NULL)
+ 		return 0;
++#ifdef __sun
++	stat(dirent->d_name, &s);
++	if (s.st_mode & S_IFDIR)
++#else
+ 	if (dirent->d_type == DT_DIR)
++#endif
+ 		return 0;
+ 
+ 	flen = strlen(dirent->d_name);
+@@ -3506,7 +3527,7 @@ int snd_config_hook_load(snd_config_t *r
  			int n;
  
  #ifndef DOC_HIDDEN
 -#ifdef _GNU_SOURCE
-+#if defined(_GNU_SOURCE) && !defined(__NetBSD__)
++#if defined(_GNU_SOURCE) && !defined(__NetBSD__) && !defined(__sun)
  #define SORTFUNC	versionsort
  #else
  #define SORTFUNC	alphasort
