@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2014/05/05 00:48:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.55 2014/06/16 19:23:42 gdt Exp $
 
 DISTNAME=		avahi-0.6.31
 PKGREVISION=		20
@@ -51,6 +51,8 @@ CFLAGS+=		-D_NETBSD_SOURCE
 .endif
 
 CPPFLAGS.SunOS+=	--std=c99 -D_XOPEN_SOURCE=600
+# Not yet reported upstream.
+CPPFLAGS.Darwin+=	-D__APPLE_USE_RFC_3542
 
 PLIST_SRC+=		${PKGDIR}/PLIST.shared
 
