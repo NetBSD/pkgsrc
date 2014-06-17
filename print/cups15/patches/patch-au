@@ -1,0 +1,14 @@
+$NetBSD: patch-au,v 1.1 2014/06/17 13:17:13 wiz Exp $
+
+--- scheduler/printers.c.orig	2011-06-15 00:46:13.000000000 +0000
++++ scheduler/printers.c
+@@ -80,6 +80,9 @@
+ #  include <asl.h>
+ #endif /* __APPLE__ */
+ 
++#if defined(HAVE_STATVFS) && ( defined(__NetBSD__) || defined(__sun) )
++#undef HAVE_STATFS
++#endif
+ 
+ /*
+  * Local functions...

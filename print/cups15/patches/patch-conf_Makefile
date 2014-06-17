@@ -1,0 +1,29 @@
+$NetBSD: patch-conf_Makefile,v 1.1 2014/06/17 13:17:13 wiz Exp $
+
+Don't install the config files (leave it up to pkgsrc).
+
+--- conf/Makefile.orig	2011-05-12 05:21:56.000000000 +0000
++++ conf/Makefile
+@@ -70,22 +70,8 @@ install:	all install-data install-header
+ #
+ 
+ install-data:
+-	for file in $(KEEP); do \
+-		if test -r $(SERVERROOT)/$$file ; then \
+-			$(INSTALL_CONFIG) -g $(CUPS_GROUP) $$file $(SERVERROOT)/$$file.N ; \
+-		else \
+-			$(INSTALL_CONFIG) -g $(CUPS_GROUP) $$file $(SERVERROOT) ; \
+-		fi ; \
+-	done
+-	$(INSTALL_CONFIG) -g $(CUPS_GROUP) cupsd.conf $(SERVERROOT)/cupsd.conf.default
+ 	$(INSTALL_DIR) -m 755 $(DATADIR)/mime
+ 	for file in $(REPLACE); do \
+-		if test -r $(DATADIR)/mime/$$file ; then \
+-			$(MV) $(DATADIR)/mime/$$file $(DATADIR)/mime/$$file.O ; \
+-		fi ; \
+-		if test -r $(SERVERROOT)/$$file ; then \
+-			$(MV) $(SERVERROOT)/$$file $(DATADIR)/mime/$$file.O ; \
+-		fi ; \
+ 		$(INSTALL_DATA) $$file $(DATADIR)/mime ; \
+ 	done
+ 	-if test x$(PAMDIR) != x; then \
