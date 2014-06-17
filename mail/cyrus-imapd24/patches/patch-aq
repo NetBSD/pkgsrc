@@ -1,4 +1,4 @@
-$NetBSD: patch-aq,v 1.5 2014/06/17 00:32:10 obache Exp $
+$NetBSD: patch-aq,v 1.6 2014/06/17 01:08:59 obache Exp $
 
 * cast to unsigned long for platform sizeof(time_t) > sizeof(unsigned long).
   https://bugzilla.cyrusimap.org/show_bug.cgi?id=3376
@@ -14,12 +14,15 @@ $NetBSD: patch-aq,v 1.5 2014/06/17 00:32:10 obache Exp $
  {
      const char *cmd = "SIEVE";
      struct dlist *kl;
-@@ -915,7 +915,7 @@ static void log_record(const char *name,
+@@ -913,9 +913,9 @@ static void log_record(const char *name,
+ 		       struct index_record *record)
+ {
      syslog(LOG_NOTICE, "SYNCNOTICE: %s uid:%u modseq:" MODSEQ_FMT " "
- 	  "last_updated:%lu internaldate:%lu flags:(%s)",
+-	  "last_updated:%lu internaldate:%lu flags:(%s)",
++	  "last_updated:" MODSEQ_FMT " internaldate:" MODSEQ_FMT " flags:(%s)",
  	   name, record->uid, record->modseq,
 -	   record->last_updated, record->internaldate,
-+	   (unsigned long)record->last_updated, (unsigned long)record->internaldate,
++	   (modseq_t)record->last_updated, (modseq_t)record->internaldate,
  	   make_flags(mailbox, record));
  }
  
