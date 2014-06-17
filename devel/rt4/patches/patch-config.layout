@@ -1,4 +1,4 @@
-$NetBSD: patch-config.layout,v 1.2 2014/01/01 03:31:50 ryoon Exp $
+$NetBSD: patch-config.layout,v 1.3 2014/06/17 11:10:40 markd Exp $
 
 * Add layout for pkgsrc.
 
@@ -13,7 +13,7 @@ $NetBSD: patch-config.layout,v 1.2 2014/01/01 03:31:50 ryoon Exp $
 +  exec_prefix:		${prefix}
 +  bindir:		@RT4DIR@/bin
 +  sbindir:		@RT4DIR@/sbin
-+  sysconfdir:		@RT4DIR@/etc
++  sysconfdir:		@PKG_SYSCONFDIR@
 +  mandir:		@PREFIX@/@PKGMANDIR@
 +  plugindir:		@RT4DIR@/plugins
 +  libdir:		@RT4DIR@/lib
@@ -22,12 +22,12 @@ $NetBSD: patch-config.layout,v 1.2 2014/01/01 03:31:50 ryoon Exp $
 +  fontdir:		${datadir}/fonts
 +  lexdir:		${datadir}/po
 +  manualdir:		${datadir}/docs
-+  localstatedir:	@RT4DIR@/var
++  localstatedir:	@RT_VAR_DIR@
 +  logfiledir:		${localstatedir}/log
 +  masonstatedir:	${localstatedir}/mason_data
 +  sessionstatedir:	${localstatedir}/session_data
 +  staticdir:	${datadir}/static
-+  customdir:		@RT4DIR@/local
++  customdir:		@RT_LOCAL_DIR@
 +  custometcdir:		${customdir}/etc
 +  customhtmldir:	${customdir}/html
 +  customlexdir:		${customdir}/po
