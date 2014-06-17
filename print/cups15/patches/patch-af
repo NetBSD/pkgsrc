@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1 2014/06/17 13:17:13 wiz Exp $
+
+* Remove unneeded $(LIBTOOL), it's now in $(INSTALL_BIN).
+
+--- backend/Makefile.orig	2011-05-04 04:28:00.000000000 +0000
++++ backend/Makefile
+@@ -89,7 +89,7 @@ install-exec:	$(INSTALLXPC)
+ 	echo Installing backends in $(SERVERBIN)/backend
+ 	$(INSTALL_DIR) -m 755 $(SERVERBIN)/backend
+ 	for file in $(RBACKENDS); do \
+-		$(LIBTOOL) $(INSTALL_BIN) -m 700 $$file $(SERVERBIN)/backend; \
++		$(INSTALL_BIN) -m 700 $$file $(SERVERBIN)/backend; \
+ 	done
+ 	for file in $(UBACKENDS); do \
+ 		$(INSTALL_BIN) $$file $(SERVERBIN)/backend; \
