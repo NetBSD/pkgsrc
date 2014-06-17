@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2008/08/28 13:15:27 ahoka Exp $
+$NetBSD: patch-aa,v 1.6 2014/06/17 22:22:57 asau Exp $
 
 NetBSD definition for makefile, and make solaris into SunOS so
 that we can use ${OPSYS}.
@@ -36,7 +36,7 @@ that we can use ${OPSYS}.
  	SO="so" \
          build_driver
  
-+NetBSD DragonFly:
++NetBSD FreeBSD DragonFly:
 +	$(MAKE) $(LDLP) \
 +	PROGS="siod ndbm.so tar.so parser_pratt.so ss.so regex.so" \
 +	LD=ld \
