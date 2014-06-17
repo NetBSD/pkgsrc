@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2014/05/08 09:15:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2014/06/17 11:03:14 fhajny Exp $
 bin/node
 bin/npm
 include/node/ares.h
@@ -31,6 +31,7 @@ include/node/zconf.h
 include/node/zlib.h
 ${PLIST.dtrace}lib/dtrace/node.d
 lib/node_modules/npm/.npmignore
+lib/node_modules/npm/.npmrc
 lib/node_modules/npm/.tern-project
 lib/node_modules/npm/.travis.yml
 lib/node_modules/npm/AUTHORS
@@ -48,6 +49,7 @@ lib/node_modules/npm/cli.js
 lib/node_modules/npm/configure
 lib/node_modules/npm/doc/api/npm-bin.md
 lib/node_modules/npm/doc/api/npm-bugs.md
+lib/node_modules/npm/doc/api/npm-cache.md
 lib/node_modules/npm/doc/api/npm-commands.md
 lib/node_modules/npm/doc/api/npm-config.md
 lib/node_modules/npm/doc/api/npm-deprecate.md
@@ -148,6 +150,7 @@ lib/node_modules/npm/doc/misc/semver.md
 lib/node_modules/npm/html/doc/README.html
 lib/node_modules/npm/html/doc/api/npm-bin.html
 lib/node_modules/npm/html/doc/api/npm-bugs.html
+lib/node_modules/npm/html/doc/api/npm-cache.html
 lib/node_modules/npm/html/doc/api/npm-commands.html
 lib/node_modules/npm/html/doc/api/npm-config.html
 lib/node_modules/npm/html/doc/api/npm-deprecate.html
@@ -259,6 +262,13 @@ lib/node_modules/npm/lib/bin.js
 lib/node_modules/npm/lib/bugs.js
 lib/node_modules/npm/lib/build.js
 lib/node_modules/npm/lib/cache.js
+lib/node_modules/npm/lib/cache/add-local-tarball.js
+lib/node_modules/npm/lib/cache/add-local.js
+lib/node_modules/npm/lib/cache/add-named.js
+lib/node_modules/npm/lib/cache/add-remote-git.js
+lib/node_modules/npm/lib/cache/add-remote-tarball.js
+lib/node_modules/npm/lib/cache/get-stat.js
+lib/node_modules/npm/lib/cache/maybe-github.js
 lib/node_modules/npm/lib/completion.js
 lib/node_modules/npm/lib/config.js
 lib/node_modules/npm/lib/dedupe.js
@@ -305,13 +315,14 @@ lib/node_modules/npm/lib/utils/completion.sh
 lib/node_modules/npm/lib/utils/completion/file-completion.js
 lib/node_modules/npm/lib/utils/completion/installed-deep.js
 lib/node_modules/npm/lib/utils/completion/installed-shallow.js
+lib/node_modules/npm/lib/utils/depr-check.js
 lib/node_modules/npm/lib/utils/error-handler.js
 lib/node_modules/npm/lib/utils/fetch.js
-lib/node_modules/npm/lib/utils/find-prefix.js
 lib/node_modules/npm/lib/utils/gently-rm.js
 lib/node_modules/npm/lib/utils/is-git-url.js
 lib/node_modules/npm/lib/utils/lifecycle.js
 lib/node_modules/npm/lib/utils/link.js
+lib/node_modules/npm/lib/utils/locker.js
 lib/node_modules/npm/lib/utils/tar.js
 lib/node_modules/npm/lib/version.js
 lib/node_modules/npm/lib/view.js
@@ -369,6 +380,7 @@ lib/node_modules/npm/man/man1/npm-whoami.1
 lib/node_modules/npm/man/man1/npm.1
 lib/node_modules/npm/man/man3/npm-bin.3
 lib/node_modules/npm/man/man3/npm-bugs.3
+lib/node_modules/npm/man/man3/npm-cache.3
 lib/node_modules/npm/man/man3/npm-commands.3
 lib/node_modules/npm/man/man3/npm-config.3
 lib/node_modules/npm/man/man3/npm-deprecate.3
@@ -421,10 +433,12 @@ lib/node_modules/npm/man/man7/npm-registry.7
 lib/node_modules/npm/man/man7/npm-scripts.7
 lib/node_modules/npm/man/man7/removing-npm.7
 lib/node_modules/npm/man/man7/semver.7
+lib/node_modules/npm/node_modules/abbrev/CONTRIBUTING.md
 lib/node_modules/npm/node_modules/abbrev/LICENSE
 lib/node_modules/npm/node_modules/abbrev/README.md
-lib/node_modules/npm/node_modules/abbrev/lib/abbrev.js
+lib/node_modules/npm/node_modules/abbrev/abbrev.js
 lib/node_modules/npm/node_modules/abbrev/package.json
+lib/node_modules/npm/node_modules/abbrev/test.js
 lib/node_modules/npm/node_modules/ansi/.npmignore
 lib/node_modules/npm/node_modules/ansi/README.md
 lib/node_modules/npm/node_modules/ansi/color-spaces.pl
@@ -455,6 +469,10 @@ lib/node_modules/npm/node_modules/block-stream/bench/dropper-pause.js
 lib/node_modules/npm/node_modules/block-stream/bench/dropper.js
 lib/node_modules/npm/node_modules/block-stream/block-stream.js
 lib/node_modules/npm/node_modules/block-stream/package.json
+lib/node_modules/npm/node_modules/char-spinner/LICENSE
+lib/node_modules/npm/node_modules/char-spinner/README.md
+lib/node_modules/npm/node_modules/char-spinner/package.json
+lib/node_modules/npm/node_modules/char-spinner/spin.js
 lib/node_modules/npm/node_modules/child-process-close/README.md
 lib/node_modules/npm/node_modules/child-process-close/index.js
 lib/node_modules/npm/node_modules/child-process-close/package.json
@@ -550,12 +568,18 @@ lib/node_modules/npm/node_modules/graceful-fs/README.md
 lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js
 lib/node_modules/npm/node_modules/graceful-fs/package.json
 lib/node_modules/npm/node_modules/graceful-fs/polyfills.js
+lib/node_modules/npm/node_modules/inflight/LICENSE
+lib/node_modules/npm/node_modules/inflight/README.md
+lib/node_modules/npm/node_modules/inflight/inflight.js
+lib/node_modules/npm/node_modules/inflight/package.json
+lib/node_modules/npm/node_modules/inflight/test.js
 lib/node_modules/npm/node_modules/inherits/LICENSE
 lib/node_modules/npm/node_modules/inherits/README.md
 lib/node_modules/npm/node_modules/inherits/inherits.js
 lib/node_modules/npm/node_modules/inherits/inherits_browser.js
 lib/node_modules/npm/node_modules/inherits/package.json
 lib/node_modules/npm/node_modules/inherits/test.js
+lib/node_modules/npm/node_modules/ini/.npmignore
 lib/node_modules/npm/node_modules/ini/LICENSE
 lib/node_modules/npm/node_modules/ini/README.md
 lib/node_modules/npm/node_modules/ini/ini.js
@@ -699,6 +723,11 @@ lib/node_modules/npm/node_modules/nopt/bin/nopt.js
 lib/node_modules/npm/node_modules/nopt/examples/my-program.js
 lib/node_modules/npm/node_modules/nopt/lib/nopt.js
 lib/node_modules/npm/node_modules/nopt/package.json
+lib/node_modules/npm/node_modules/npm-cache-filename/LICENSE
+lib/node_modules/npm/node_modules/npm-cache-filename/README.md
+lib/node_modules/npm/node_modules/npm-cache-filename/index.js
+lib/node_modules/npm/node_modules/npm-cache-filename/package.json
+lib/node_modules/npm/node_modules/npm-cache-filename/test.js
 lib/node_modules/npm/node_modules/npm-install-checks/LICENSE
 lib/node_modules/npm/node_modules/npm-install-checks/README.md
 lib/node_modules/npm/node_modules/npm-install-checks/index.js
@@ -729,6 +758,10 @@ lib/node_modules/npm/node_modules/npmconf/.npmignore
 lib/node_modules/npm/node_modules/npmconf/LICENSE
 lib/node_modules/npm/node_modules/npmconf/README.md
 lib/node_modules/npm/node_modules/npmconf/config-defs.js
+lib/node_modules/npm/node_modules/npmconf/lib/find-prefix.js
+lib/node_modules/npm/node_modules/npmconf/lib/load-prefix.js
+lib/node_modules/npm/node_modules/npmconf/lib/load-uid.js
+lib/node_modules/npm/node_modules/npmconf/lib/set-user.js
 lib/node_modules/npm/node_modules/npmconf/node_modules/config-chain/.npmignore
 lib/node_modules/npm/node_modules/npmconf/node_modules/config-chain/LICENCE
 lib/node_modules/npm/node_modules/npmconf/node_modules/config-chain/index.js
@@ -1110,7 +1143,6 @@ lib/node_modules/npm/node_modules/text-table/example/table.js
 lib/node_modules/npm/node_modules/text-table/index.js
 lib/node_modules/npm/node_modules/text-table/package.json
 lib/node_modules/npm/node_modules/text-table/readme.markdown
-lib/node_modules/npm/node_modules/uid-number/LICENCE
 lib/node_modules/npm/node_modules/uid-number/LICENSE
 lib/node_modules/npm/node_modules/uid-number/README.md
 lib/node_modules/npm/node_modules/uid-number/get-uid-gid.js
