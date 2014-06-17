@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2014/06/02 10:12:19 obache Exp $
+# $NetBSD: Makefile,v 1.12 2014/06/17 11:10:40 markd Exp $
 
 DISTNAME=	rt-4.2.1
 PKGNAME=	${DISTNAME:S/rt/rt4/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	http://download.bestpractical.com/pub/rt/release/
 
@@ -52,7 +52,7 @@ DEPENDS+=	p5-HTML-Scrubber>=0.08:../../www/p5-HTML-Scrubber
 DEPENDS+=	p5-IPC-Run3-[0-9]*:../../devel/p5-IPC-Run3
 DEPENDS+=	p5-JSON-[0-9]*:../../converters/p5-JSON
 DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
-DEPENDS+=	p5-Locale-Maketext>=1.06:../../misc/p5-Locale-Maketext
+DEPENDS+=	{perl>=5.20.0,p5-Locale-Maketext>=1.06}:../../misc/p5-Locale-Maketext
 DEPENDS+=	p5-Locale-Maketext-Fuzzy-[0-9]*:../../misc/p5-Locale-Maketext-Fuzzy
 DEPENDS+=	p5-Locale-Maketext-Lexicon>=0.32:../../misc/p5-Locale-Maketext-Lexicon
 DEPENDS+=	p5-Log-Dispatch>=2.30:../../devel/p5-Log-Dispatch
@@ -139,6 +139,7 @@ DEPENDS+=	p5-Crypt-X509-[0-9]*:../../security/p5-Crypt-X509
 DEPENDS+=	p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
 DEPENDS+=	p5-Convert-Color-[0-9]*:../../converters/p5-Convert-Color
 
+.include "dirs.mk"
 .include "options.mk"
 
 RT4DIR=		${PREFIX}/share/rt4
@@ -153,11 +154,24 @@ SUBST_MESSAGE.prefix=	Setting prefix.
 SUBST_FILES.prefix=	config.layout
 SUBST_VARS.prefix=	PREFIX PKG_SYSCONFDIR PKGMANDIR
 SUBST_VARS.prefix+=	RT4DIR
+SUBST_VARS.prefix+=	RT_VAR_DIR RT_LOCAL_DIR
+
+SUBST_CLASSES+=		etcpath
+SUBST_FILES.etcpath=	sbin/rt-setup-database.in share/html/Install/Initialize.html
+SUBST_SED.etcpath=	-e 's,\$$RT::EtcPath,"${RT4DIR}/etc",'
+SUBST_STAGE.etcpath=	post-patch
+
+SUBST_CLASSES+=		egpath
+SUBST_FILES.egpath=	Makefile.in
+SUBST_SED.egpath=	-e 's,@CONFIG_FILE_PATH_R@,${RT_EXAMPLE_DIR},'
+SUBST_SED.egpath+=	-e 's,@RT_ETC_PATH_R@,${RT4DIR}/etc,'
+SUBST_STAGE.egpath=	post-patch
 
 GNU_CONFIGURE=	yes
 NO_BUILD=	yes
 USE_LANGUAGES=	c
 USE_TOOLS+=	perl:run
+PKG_SYSCONFSUBDIR=	rt4
 
 USE_PKGLOCALEDIR=	yes
 
@@ -165,14 +179,29 @@ CONFIGURE_ARGS+=	--enable-layout=pkgsrc
 CONFIGURE_ARGS+=	--with-db-type=${RT_DB_TYPE}
 CONFIGURE_ARGS+=	--with-my-user-group
 
-CONF_FILES_PERMS=	share/rt4/etc/RT_SiteConfig.pm.dist \
-			share/rt4/etc/RT_SiteConfig.pm \
+RT_CONFIG_FILES=	RT_Config.pm RT_SiteConfig.pm
+
+.for _file_ in ${RT_CONFIG_FILES}
+CONF_FILES_PERMS+=	${RT_EXAMPLE_DIR}/${_file_} \
+			${PKG_SYSCONFDIR}/${_file_} \
 			${APACHE_USER} ${APACHE_GROUP} \
 			640
+.endfor
+
+OWN_DIRS+=              ${RT_VAR_DIR} ${RT_LOCAL_DIR} ${RT_LOCAL_DIR}/etc
+OWN_DIRS+=              ${RT_LOCAL_DIR}/lib ${RT_LOCAL_DIR}/po ${RT_LOCAL_DIR}/plugins
+OWN_DIRS+=              ${RT_LOCAL_DIR}/html ${RT_LOCAL_DIR}/static
+
+OWN_DIRS_PERMS+=	${RT_VAR_DIR}/mason_data	${APACHE_USER}	${APACHE_GROUP}	0770
+OWN_DIRS_PERMS+=	${RT_VAR_DIR}/mason_data/cache	${APACHE_USER}	${APACHE_GROUP}	0770
+OWN_DIRS_PERMS+=	${RT_VAR_DIR}/mason_data/etc	${APACHE_USER}	${APACHE_GROUP}	0770
+OWN_DIRS_PERMS+=	${RT_VAR_DIR}/mason_data/obj	${APACHE_USER}	${APACHE_GROUP}	0770
+OWN_DIRS_PERMS+=	${RT_VAR_DIR}/session_data	${APACHE_USER}	${APACHE_GROUP}	0770
+
+REPLACE_PERL+=		etc/upgrade/shrink_cgm_table.pl etc/upgrade/shrink_transactions_table.pl
+REPLACE_PERL+=		etc/upgrade/time-worked-history.pl etc/upgrade/upgrade-mysql-schema.pl
 
 post-install:
-	mv ${DESTDIR}${PREFIX}/share/rt4/etc/RT_SiteConfig.pm \
-		${DESTDIR}${PREFIX}/share/rt4/etc/RT_SiteConfig.pm.dist
 	rm ${DESTDIR}${PREFIX}/share/rt4/data/html/Install/Initialize.html.orig
 
 .include "../../mk/bsd.pkg.mk"
