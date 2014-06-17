@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2380 2014/06/17 11:03:27 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.2381 2014/06/17 11:49:53 kleink Exp $
 
 # PLEASE NOTE THAT WE ARE NOW IN A FREEZE IN PREPARATION FOR THE
 # PKGSRC-2014Q2 BRANCH.
@@ -3188,3 +3188,4 @@ Changes to the packages collection and infrastructure in 2014:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2014Q2 branch [agc 2014-06-15]
 	Updated graphics/ImageMagick to 6.8.9.0nb2 [wiz 2014-06-17]
 	Updated lang/nodejs to 0.10.29 [fhajny 2014-06-17]
+	Updated textproc/p5-Text-vCard to 3.06 [kleink 2014-06-17]
