@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2383 2014/06/17 13:16:34 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.2384 2014/06/17 13:18:16 wiz Exp $
 
 # PLEASE NOTE THAT WE ARE NOW IN A FREEZE IN PREPARATION FOR THE
 # PKGSRC-2014Q2 BRANCH.
@@ -2976,6 +2976,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/libICE to 1.0.9 [wiz 2014-06-07]
 	Updated x11/xscope to 1.4.1 [wiz 2014-06-07]
 	Updated textproc/diffstat to 1.59 [wiz 2014-06-07]
+	Moved print/cups to print/cups15 [wiz 2014-06-07]
 	Updated print/cups to 1.7.3 [wiz 2014-06-07]
 	Updated www/ap2-wsgi to 3.5 [wiz 2014-06-07]
 	Updated www/ap2-wsgi to 4.1.3 [wiz 2014-06-07]
