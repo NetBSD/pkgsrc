@@ -1,0 +1,18 @@
+$NetBSD: patch-config.h.in,v 1.1 2014/06/17 13:17:13 wiz Exp $
+
+* OpenBSD has no arc4random_stir
+
+--- config.h.in.orig	2012-03-21 04:45:48.000000000 +0000
++++ config.h.in
+@@ -674,7 +674,11 @@
+ 
+ #ifdef HAVE_ARC4RANDOM
+ #  define CUPS_RAND() arc4random()
++#if defined(__OpenBSD__)
++#  define CUPS_SRAND(v)
++#else
+ #  define CUPS_SRAND(v) arc4random_stir()
++#endif
+ #elif defined(HAVE_RANDOM)
+ #  define CUPS_RAND() random()
+ #  define CUPS_SRAND(v) srandom(v)
