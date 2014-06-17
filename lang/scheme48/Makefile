@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2013/11/10 20:28:50 joerg Exp $
+# $NetBSD: Makefile,v 1.39 2014/06/17 22:23:40 asau Exp $
 
 DISTNAME=		scheme48-1.9
 PKGREVISION=		1
@@ -32,7 +32,7 @@ REPLACE.scheme.new=	${PREFIX}/bin/scheme-srfi-7
 REPLACE_FILES.scheme=	build/scheme48-config.in
 
 .include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "DragonFly"
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 SUBST_CLASSES+= 	pthr
 SUBST_STAGE.pthr=	post-patch
 SUBST_FILES.pthr=	configure
