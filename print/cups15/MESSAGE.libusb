@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE.libusb,v 1.1 2014/06/17 13:17:12 wiz Exp $
+
+With cups 1.4 from pkgsrc, USB printing can use libusb in addition to
+traditional USB printer devices.
+
+To see the DeviceURI of all attached printers run:
+
+${PREFIX}/libexec/cups/backend/usb
+
+libusb DeviceURIs start with "usb://".
+
+ulpt(4)/usblp DeviceURIs start with "usb:/dev/" (e.g., "usb:/dev/ulpt0".)
+===========================================================================

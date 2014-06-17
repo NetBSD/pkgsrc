@@ -1,0 +1,72 @@
+$NetBSD: patch-ae,v 1.1 2014/06/17 13:17:13 wiz Exp $
+
+For proper libtool usage split CC into CC_COMPILE and CC with libtool
+mode options compile/link respectively.
+
+Same for CXX.
+
+--- Makedefs.in.orig	2012-03-01 00:05:55.000000000 +0000
++++ Makedefs.in
+@@ -19,9 +19,11 @@
+ 
+ AR		=	@AR@
+ AWK		=	@AWK@
+-CC		=	@LIBTOOL@ @CC@
++CC_COMPILE	=	@LIBTOOL@ --mode=compile @CC@
++CC		=	@LIBTOOL@ --mode=link @CC@
+ CHMOD		=	@CHMOD@
+-CXX		=	@LIBTOOL@ @CXX@
++CXX_COMPILE	=	@LIBTOOL@ --mode=compile @CXX@
++CXX		=	@LIBTOOL@ --mode=link @CXX@
+ DSO		=	@DSO@
+ DSOXX		=	@DSOXX@
+ HTMLDOC		=	@HTMLDOC@
+@@ -41,12 +43,12 @@ SHELL		=	/bin/sh
+ # Installation programs...
+ #
+ 
+-INSTALL_BIN	=	$(LIBTOOL) $(INSTALL) -c -m 555 @INSTALL_STRIP@
++INSTALL_BIN	=	$(LIBTOOL) --mode=install $(INSTALL) -c -m 755 @INSTALL_STRIP@
+ INSTALL_CONFIG	=	$(INSTALL) -c -m @CUPS_CONFIG_FILE_PERM@
+-INSTALL_COMPDATA =	$(INSTALL) -c -m 444 @INSTALL_GZIP@
++INSTALL_COMPDATA =	$(INSTALL) -c -m 444
+ INSTALL_DATA	=	$(INSTALL) -c -m 444
+ INSTALL_DIR	=	$(INSTALL) -d
+-INSTALL_LIB	=	$(LIBTOOL) $(INSTALL) -c -m 555 @INSTALL_STRIP@
++INSTALL_LIB	=	$(LIBTOOL) --mode=install $(INSTALL) -c -m 755 @INSTALL_STRIP@
+ INSTALL_MAN	=	$(INSTALL) -c -m 444
+ INSTALL_SCRIPT	=	$(INSTALL) -c -m 555
+ 
+@@ -145,7 +147,7 @@ CXXLIBS		=	@CXXLIBS@
+ DBUS_NOTIFIER	=	@DBUS_NOTIFIER@
+ DBUS_NOTIFIERLIBS =	@DBUS_NOTIFIERLIBS@
+ DNSSD_BACKEND	=	@DNSSD_BACKEND@
+-DSOFLAGS	=	-L../cups @DSOFLAGS@
++DSOFLAGS	=	-L../cups @DSOFLAGS@ $(OPTIM)
+ DSOLIBS		=	@DSOLIBS@ $(COMMONLIBS)
+ DNSSDLIBS	=	@DNSSDLIBS@
+ FONTS		=	@FONTS@
+@@ -279,19 +281,19 @@ DBUSDIR		=	@DBUSDIR@
+ 
+ .c.o:
+ 	echo Compiling $<...
+-	$(CC) $(ARCHFLAGS) $(OPTIM) $(ALL_CFLAGS) -c -o $@ $<
++	$(CC_COMPILE) $(ARCHFLAGS) $(OPTIM) $(ALL_CFLAGS) -c -o $@ $<
+ 
+ .c.32.o:
+ 	echo Compiling 32-bit $<...
+-	$(CC) $(ARCH32FLAGS) $(OPTIM) $(ALL_CFLAGS) -c -o $@ $<
++	$(CC_COMPILE) $(ARCH32FLAGS) $(OPTIM) $(ALL_CFLAGS) -c -o $@ $<
+ 
+ .c.64.o:
+ 	echo Compiling 64-bit $<...
+-	$(CC) $(ARCH64FLAGS) $(OPTIM) $(ALL_CFLAGS) -c -o $@ $<
++	$(CC_COMPILE) $(ARCH64FLAGS) $(OPTIM) $(ALL_CFLAGS) -c -o $@ $<
+ 
+ .cxx.o:
+ 	echo Compiling $<...
+-	$(CXX) $(ARCHFLAGS) $(OPTIM) $(ALL_CXXFLAGS) -c -o $@ $<
++	$(CXX_COMPILE) $(ARCHFLAGS) $(OPTIM) $(ALL_CXXFLAGS) -c -o $@ $<
+ 
+ .man.1 .man.1m .man.3 .man.5 .man.7 .man.8:
+ 	echo Linking $<...
