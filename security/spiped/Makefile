@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/06/12 23:05:28 wiedi Exp $
+# $NetBSD: Makefile,v 1.7 2014/06/17 04:03:51 wiedi Exp $
 
 DISTNAME=	spiped-1.3.1
 PKGREVISION=	2
@@ -21,7 +21,7 @@ CFLAGS.SunOS+=	-D__EXTENSIONS__
 MAKE_ENV+=	LDADD_EXTRA="-lsocket -lnsl"
 .endif
 
-INSTALLATION_DIRS=	share/doc/spiped ${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	share/doc/spiped ${PKGMANDIR}/man1
 
 SMF_METHODS=	spiped
 .if ${INIT_SYSTEM} == "smf"
