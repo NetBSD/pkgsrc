@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2014/02/12 23:18:30 tron Exp $
+# $NetBSD: Makefile,v 1.50 2014/06/18 09:26:12 wiz Exp $
 
 DISTNAME=	xpp-1.5
 PKGREVISION=	11
@@ -20,6 +20,6 @@ INSTALLATION_DIRS+=	${DOCDIR}
 post-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} LICENSE README ${DESTDIR}${DOCDIR}
 
-.include "../../print/cups/buildlink3.mk"
+.include "../../print/cups15/buildlink3.mk"
 .include "../../x11/fltk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

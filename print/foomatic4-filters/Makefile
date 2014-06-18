@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2014/05/29 23:37:15 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2014/06/18 09:26:11 wiz Exp $
 
 DISTNAME=	foomatic-filters-4.0.17
 PKGREVISION=	6
@@ -36,7 +36,7 @@ INSTALL_TARGET=	install-bin install-man
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mcups)
-DEPENDS+=	cups>=1.0:../../print/cups
+DEPENDS+=	cups>=1.0:../../print/cups15
 EVAL_PREFIX+=	CUPS_PREFIX=cups
 CUPS_FILTERDIR=	${CUPS_PREFIX:Q}/libexec/cups/filter
 CONFIGURE_ENV+=	CUPS_FILTERS=${CUPS_FILTERDIR}

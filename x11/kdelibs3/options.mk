@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2008/04/12 22:43:14 jlam Exp $
+# $NetBSD: options.mk,v 1.3 2014/06/18 09:26:12 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kdelibs
 PKG_SUPPORTED_OPTIONS=	cups debug
@@ -7,7 +7,7 @@ PKG_SUPPORTED_OPTIONS=	cups debug
 
 PLIST_VARS+=		cups
 .if !empty(PKG_OPTIONS:Mcups)
-.include "../../print/cups/buildlink3.mk"
+.include "../../print/cups15/buildlink3.mk"
 PLIST.cups=		yes
 .else
 CONFIGURE_ARGS+=	--disable-cups

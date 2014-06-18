@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2011/05/02 21:23:01 adam Exp $
+# $NetBSD: options.mk,v 1.6 2014/06/18 09:26:09 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wine
 PKG_SUPPORTED_OPTIONS=	cups dbus esound hal ldap opengl sane ssl x11
@@ -9,7 +9,7 @@ PKG_SUGGESTED_OPTIONS=	opengl ssl x11
 PLIST_VARS+=		esd opengl x11
 
 .if !empty(PKG_OPTIONS:Mcups)
-.include "../../print/cups/buildlink3.mk"
+.include "../../print/cups15/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-cups
 .endif

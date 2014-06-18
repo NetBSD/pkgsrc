@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2014/05/29 23:37:16 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2014/06/18 09:26:11 wiz Exp $
 
 VERSION=	5.2.9
 DISTNAME=	gutenprint-${VERSION}
@@ -106,6 +106,6 @@ TEST_TARGET=		check
 .include "../../x11/gtk2/buildlink3.mk"
 
 # gutenprint-cups: cups support
-.include "../../print/cups/buildlink3.mk"
+.include "../../print/cups15/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

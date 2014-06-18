@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/06/14 16:18:27 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2014/06/18 09:26:10 wiz Exp $
 
 DISTNAME=	bulk-large-20140614
 CATEGORIES=	meta-pkgs
@@ -96,7 +96,7 @@ BUILD_DEPENDS+=	zyGrib-[0-9]*:../../misc/zyGrib
 BUILD_DEPENDS+=	mplayer-[0-9]*:../../multimedia/mplayer
 BUILD_DEPENDS+=	xine-ui-[0-9]*:../../multimedia/xine-ui
 BUILD_DEPENDS+=	gstreamer0.10-plugins-[0-9]*:../../meta-pkgs/gstreamer0.10-plugins
-BUILD_DEPENDS+=	cups-[0-9]*:../../print/cups
+BUILD_DEPENDS+=	cups-[0-9]*:../../print/cups15
 BUILD_DEPENDS+=	evince-[0-9]*:../../print/evince
 BUILD_DEPENDS+=	lilypond-[0-9]*:../../print/lilypond
 BUILD_DEPENDS+=	mit-krb5-appl-[0-9]*:../../security/mit-krb5-appl

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.56 2014/04/10 06:21:19 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.57 2014/06/18 09:26:12 wiz Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -15,7 +15,7 @@ pkgbase := kdelibs
 .include "../../mk/pkg-build-options.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.kdelibs:Mcups)
-.  include "../../print/cups/buildlink3.mk"
+.  include "../../print/cups15/buildlink3.mk"
 .endif
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../audio/arts/buildlink3.mk"
