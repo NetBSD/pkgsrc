@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2014/06/18 09:26:11 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2014/06/18 09:28:17 wiz Exp $
 
 META_PACKAGE=	yes
 
 .include "../../print/foomatic-filters/Makefile.common"
 
 DISTNAME=	foomatic-filters-cups-${FOOMATIC_FILTERS_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Foomatic support for CUPS
