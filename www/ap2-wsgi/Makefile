@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/06/10 15:22:17 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2014/06/18 11:35:38 wiz Exp $
 
 DISTNAME=	${VERSION}
 PKGNAME=	${APACHE_PKG_PREFIX}-${PYPKGPREFIX}-wsgi-${VERSION}
@@ -11,7 +11,7 @@ COMMENT=	WSGI module for apache
 LICENSE=	apache-2.0
 
 APACHE_MODULE=	yes
-VERSION=	4.1.3
+VERSION=	4.2.4
 DIST_SUBDIR=	mod_wsgi
 WRKSRC=		${WRKDIR}/mod_wsgi-${VERSION}
 
