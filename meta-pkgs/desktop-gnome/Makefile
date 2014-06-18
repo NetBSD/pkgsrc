@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/05/05 21:59:56 rodent Exp $
+# $NetBSD: Makefile,v 1.9 2014/06/18 09:26:10 wiz Exp $
 #
 
 DISTNAME=	desktop-gnome-0.5
@@ -14,7 +14,7 @@ META_PACKAGE=	yes
 # implements http://wiki.netbsd.se/Desktop_Phase_1
 #
 DEPENDS+=	pkgin-[0-9]*:../../pkgtools/pkgin
-DEPENDS+=	cups-[0-9]*:../../print/cups
+DEPENDS+=	cups-[0-9]*:../../print/cups15
 DEPENDS+=	firefox-[0-9]*:../../www/firefox
 DEPENDS+=	gnome-[0-9]*:../../meta-pkgs/gnome
 DEPENDS+=	gimp-[0-9]*:../../graphics/gimp
