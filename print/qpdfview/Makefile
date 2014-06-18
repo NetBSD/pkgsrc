@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2014/04/29 07:57:15 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2014/06/18 09:26:11 wiz Exp $
 
 VER=		0.4
 DISTNAME=	qpdfview-${VER}
@@ -29,7 +29,7 @@ do-configure:
 		${QTDIR}/bin/qmake qpdfview.pro
 
 .include "../../graphics/djvulibre-lib/buildlink3.mk"
-.include "../../print/cups/buildlink3.mk"
+.include "../../print/cups15/buildlink3.mk"
 .include "../../print/libspectre/buildlink3.mk"
 .include "../../print/poppler-qt4/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
