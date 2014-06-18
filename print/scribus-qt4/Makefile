@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2014/05/29 23:37:17 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2014/06/18 09:26:11 wiz Exp $
 
 DISTNAME=		scribus-1.4.3
 PKGREVISION=		3
@@ -34,7 +34,7 @@ post-install:
 		${DESTDIR}${PREFIX}/share/pixmaps
 
 .include "../../devel/boost-headers/buildlink3.mk"
-.include "../../print/cups/buildlink3.mk"
+.include "../../print/cups15/buildlink3.mk"
 .include "../../print/podofo/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
