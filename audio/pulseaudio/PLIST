@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2014/06/11 01:23:07 dsainty Exp $
+@comment $NetBSD: PLIST,v 1.16 2014/06/18 11:12:05 jperkin Exp $
 bin/esdcompat
 bin/pacat
 bin/pacmd
@@ -183,6 +183,8 @@ lib/pulse-${PKGVERSION}/modules/module-sine-source.a
 lib/pulse-${PKGVERSION}/modules/module-sine-source.so
 lib/pulse-${PKGVERSION}/modules/module-sine.a
 lib/pulse-${PKGVERSION}/modules/module-sine.so
+${PLIST.sun}lib/pulse-${PKGVERSION}/modules/module-solaris.a
+${PLIST.sun}lib/pulse-${PKGVERSION}/modules/module-solaris.so
 lib/pulse-${PKGVERSION}/modules/module-stream-restore.a
 lib/pulse-${PKGVERSION}/modules/module-stream-restore.so
 lib/pulse-${PKGVERSION}/modules/module-suspend-on-idle.a

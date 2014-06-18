@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2014/06/17 13:10:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.90 2014/06/18 11:12:05 jperkin Exp $
 
 DISTNAME=	pulseaudio-5.0
 CATEGORIES=	audio
@@ -30,6 +30,7 @@ CONFIGURE_ENV+=		ac_cv_tls=none
 .endif
 
 CONFIGURE_ENV+=		DATADIRNAME=${PKGLOCALEDIR}
+USE_PKGLOCALEDIR=	yes
 
 # Wrong sys/capability.h assumptions, incompatible implementation:
 .if ${OPSYS} == "FreeBSD"
