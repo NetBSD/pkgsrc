@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.75 2012/06/12 15:46:05 wiz Exp $
+# $NetBSD: Makefile.common,v 1.76 2014/06/18 09:26:12 wiz Exp $
 # used by x11/qt3-docs/Makefile
 # used by x11/qt3-libs/Makefile
 # used by x11/qt3-tools/Makefile
@@ -100,7 +100,7 @@ CONFIGURE_ARGS+=	-no-ipv6
 .endif
 
 .if !empty(PKG_OPTIONS:Mcups)
-.  include "../../print/cups/buildlink3.mk"
+.  include "../../print/cups15/buildlink3.mk"
 CONFIGURE_ARGS+=	-cups
 .else
 CONFIGURE_ARGS+=	-no-cups
