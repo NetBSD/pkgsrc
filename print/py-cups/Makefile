@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/02/12 23:18:30 tron Exp $
+# $NetBSD: Makefile,v 1.23 2014/06/18 09:26:11 wiz Exp $
 
 DISTNAME=	pycups-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-cups-${VERSION}
@@ -22,5 +22,5 @@ SUBST_SED.paths=	-e 's:"/usr/share/cups":"${BUILDLINK_PREFIX.cups}/share/cups/",
 SUBST_STAGE.paths=	post-patch
 
 .include "../../lang/python/distutils.mk"
-.include "../../print/cups/buildlink3.mk"
+.include "../../print/cups15/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

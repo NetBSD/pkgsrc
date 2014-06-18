@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2012/07/08 07:45:25 sbd Exp $
+# $NetBSD: options.mk,v 1.7 2014/06/18 09:26:11 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xfce4-print
 
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=        --disable-bsdlpr
 
 PLIST_VARS+=		cups
 .if !empty(PKG_OPTIONS:Mcups)
-.include "../../print/cups/buildlink3.mk"
+.include "../../print/cups15/buildlink3.mk"
 PLIST.cups=		yes
 .else
 CONFIGURE_ARGS+=	--disable-cups
