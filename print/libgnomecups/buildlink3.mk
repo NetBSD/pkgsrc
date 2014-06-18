@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.26 2014/02/12 23:18:29 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.27 2014/06/18 09:26:11 wiz Exp $
 
 BUILDLINK_TREE+=	libgnomecups
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.libgnomecups?=	../../print/libgnomecups
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../print/cups/buildlink3.mk"
+.include "../../print/cups15/buildlink3.mk"
 .endif # LIBGNOMECUPS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libgnomecups

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.51 2014/05/05 00:48:18 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.52 2014/06/18 09:26:11 wiz Exp $
 
 BUILDLINK_TREE+=	xfce4-print
 
@@ -17,7 +17,7 @@ pkgbase := xfce4-print
 .include "../../mk/pkg-build-options.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.xfce4-print:Mcups)
-.  include "../../print/cups/buildlink3.mk"
+.  include "../../print/cups15/buildlink3.mk"
 .endif
 .endif # XFCE4_PRINT_BUILDLINK3_MK
 

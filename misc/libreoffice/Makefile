@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2014/05/29 23:36:58 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2014/06/18 09:26:10 wiz Exp $
 
 VER=			3.5.6.2
 DISTNAME=		libreoffice-${VER}
@@ -191,7 +191,7 @@ post-install:
 .include "../../math/lp_solve/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
-.include "../../print/cups/buildlink3.mk"
+.include "../../print/cups15/buildlink3.mk"
 .include "../../print/poppler-cpp/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

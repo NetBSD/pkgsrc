@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/04/06 12:04:01 rodent Exp $
+# $NetBSD: Makefile,v 1.12 2014/06/18 09:26:10 wiz Exp $
 
 DISTNAME=	winsteng
 PKGNAME=	adobeps-win-1.0.6
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.adobe.com/products/printerdrivers/windows.html
 COMMENT=	Adobe PostScript MS Windows drivers for CUPS/Samba
 
 BUILD_DEPENDS+=	cabextract-[0-9]*:../../archivers/cabextract
-DEPENDS+=	cups>=1.1.15:../../print/cups
+DEPENDS+=	cups>=1.1.15:../../print/cups15
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 WRKSRC=		${WRKDIR}

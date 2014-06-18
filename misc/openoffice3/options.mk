@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.24 2013/05/25 11:11:14 ryoon Exp $
+# $NetBSD: options.mk,v 1.25 2014/06/18 09:26:10 wiz Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice3
@@ -67,7 +67,7 @@ CONFIGURE_ARGS+=	--with-system-libwpd
 
 .if !empty(PKG_OPTIONS:Mcups)
 CONFIGURE_ARGS+=	--enable-cups
-.include "../../print/cups/buildlink3.mk"
+.include "../../print/cups15/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-cups
 .endif

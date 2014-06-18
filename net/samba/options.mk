@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.31 2014/06/10 16:45:49 joerg Exp $
+# $NetBSD: options.mk,v 1.32 2014/06/18 09:26:10 wiz Exp $
 
 # Recommended package options for various setups:
 #
@@ -59,7 +59,7 @@ CONFIGURE_ARGS+=	--with-acl-support
 ###
 PLIST_VARS+=		cups
 .if !empty(PKG_OPTIONS:Mcups)
-.  include "../../print/cups/buildlink3.mk"
+.  include "../../print/cups15/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-cups
 PLIST.cups=		yes
 INSTALLATION_DIRS+=	libexec/cups/backend
