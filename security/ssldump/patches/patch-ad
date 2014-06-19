@@ -1,0 +1,18 @@
+$NetBSD: patch-ad,v 1.1 2014/06/19 03:48:18 manu Exp $
+
+Fix list overrun that causes a crash
+Submitted upstream as https://sourceforge.net/p/ssldump/patches/9/
+
+--- ssl/sslprint.c.orig	2014-06-17 10:51:42.000000000 +0200
++++ ssl/sslprint.c	2014-06-17 10:55:41.000000000 +0200
+@@ -208,9 +208,9 @@
+   int dir;
+   segment *seg;
+   Data *data;
+   {
+-    while(dtable && dtable->type!=-1){
++    while(dtable && dtable->type!=-1 && dtable->name!=NULL){
+       if(dtable->type == value){
+         INDENT_INCR;
+         explain(ssl,"%s",dtable->name);
+ 	if(dtable->print) {
