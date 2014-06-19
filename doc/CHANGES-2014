@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2386 2014/06/19 07:22:11 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2387 2014/06/19 20:32:38 martin Exp $
 
 # PLEASE NOTE THAT WE ARE NOW IN A FREEZE IN PREPARATION FOR THE
 # PKGSRC-2014Q2 BRANCH.
@@ -3194,3 +3194,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated inputmethod/mozc-elisp to 1.15.1785.102 [ryoon 2014-06-17]
 	Updated www/ap2-wsgi to 4.2.4 [wiz 2014-06-18]
 	Updated pkgtools/pkglint to 4.143 [wiz 2014-06-19]
+	Updated www/firefox to 30.0nb1 [martin 2014-06-19]
