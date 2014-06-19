@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.6 2014/06/19 16:38:26 wiz Exp $
+
+SHA1 (rt-4.2.1.tar.gz) = 08bd8e4d28c065030aac7b33c0a15a789a6e11f9
+RMD160 (rt-4.2.1.tar.gz) = 0a6bd58d228914de518d1707b62a34be50d2c6ab
+Size (rt-4.2.1.tar.gz) = 7630594 bytes
+SHA1 (patch-Makefile.in) = d46b5cd6e9de77409ac8d6b6c172bc9dd3ed96be
+SHA1 (patch-config.layout) = fe45ef102868b8c90107d1844bb6765e58bef51b
+SHA1 (patch-share_html_Install_Initialize.html) = 44b2ae9727ca3de7f0fafa226ec9e83c424e6ade
