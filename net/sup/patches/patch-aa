@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.3 2010/02/11 22:52:52 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2014/06/19 07:12:44 asau Exp $
 
---- Makefile.orig	2007-12-20 15:16:34.000000000 -0500
-+++ Makefile	2007-12-20 15:21:40.000000000 -0500
-@@ -72,8 +72,8 @@
+libutil is needed on FreeBSD for fparseln.
+
+--- Makefile.orig	2008-05-30 14:23:54.000000000 +0000
++++ Makefile
+@@ -75,8 +75,8 @@ NON_MACH_DEFINES	= -UMACH
  #INSTALLATION PARAMETERS
  PREFIX		       ?= /usr/local/
  NETBSD_BINDIR		= ${PREFIX}/sbin
@@ -13,7 +15,16 @@ $NetBSD: patch-aa,v 1.3 2010/02/11 22:52:52 joerg Exp $
  
  CFLAGS			= ${DEFS} -O -I.
  
-@@ -130,9 +130,9 @@
+@@ -96,7 +96,7 @@ AFS_LIBPATH		= /usr/afs/lib
+ AFS_LIBS		= -L${AFS_LIBPATH}/afs -lkauth -lprot -L${AFS_LIBPATH} -lubik -lauth -lrxkad -lsys -ldes -lrx -llwp -lcmd -lcom_err -lc ${AFS_LIBPATH}/afs/util.a
+ 
+ NETBSD_LIBS		= -lcrypt
+-FREEBSD_LIBS		= -lcrypt
++FREEBSD_LIBS		= -lcrypt -lutil
+ DRAGONFLY_LIBS		= -lcrypt
+ LINUX_LIBS		= -lcrypt
+ CYGWIN_LIBS		= -lcrypt
+@@ -134,9 +134,9 @@ clean cleandir distclean:
  	rm -f ${PROGRAMS} libextra.a netcrypt.c *.o core a.out
  
  install: ${PROGRAMS}
