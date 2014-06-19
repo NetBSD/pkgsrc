@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/04/21 13:34:44 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/19 07:58:57 wiz Exp $
 
 DISTNAME=	mercurial-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,12 +25,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/*.5  ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 	${INSTALL_DATA} ${WRKSRC}/README  \
 		${DESTDIR}${PREFIX}/share/doc/mercurial
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Linux" && empty(OS_VERSION:M2.4.*) && empty(OS_VERSION:M2.2.*)
-PLIST_SRC+=	${.CURDIR}/PLIST ${.CURDIR}/PLIST.inotify
-.endif
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
