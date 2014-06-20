@@ -1,4 +1,4 @@
-# $NetBSD: netbsd-proto.mc,v 1.1 2014/06/15 20:48:49 jnemeth Exp $
+# $NetBSD: netbsd-proto.mc,v 1.2 2014/06/20 05:24:32 jnemeth Exp $
 
 divert(-1)
 #
@@ -42,14 +42,14 @@ divert(-1)
 #
 
 include(`../m4/cf.m4')
-VERSIONID(`@(#)netbsd-proto.mc	$Revision: 1.1 $')
+VERSIONID(`@(#)netbsd-proto.mc	$Revision: 1.2 $')
 OSTYPE(bsd4.4)dnl
 DOMAIN(generic)dnl
 FEATURE(genericstable,DATABASE_MAP_TYPE` -o 'MAIL_SETTINGS_DIR`genericstable')
 FEATURE(mailertable,  DATABASE_MAP_TYPE` -o 'MAIL_SETTINGS_DIR`mailertable')
 FEATURE(virtusertable,DATABASE_MAP_TYPE` -o 'MAIL_SETTINGS_DIR`virtusertable')
 FEATURE(domaintable,  DATABASE_MAP_TYPE` -o 'MAIL_SETTINGS_DIR`domaintable')
-FEATURE(access_db,    DATABASE_MAP_TYPE` -T&lt;TMPF&gt; -o 'MAIL_SETTINGS_DIR`access')
+FEATURE(access_db,    DATABASE_MAP_TYPE` -T<TMPF>; -o 'MAIL_SETTINGS_DIR`access')
 FEATURE(`redirect')
 FEATURE(`no_default_msa')
 MAILER(local)dnl
