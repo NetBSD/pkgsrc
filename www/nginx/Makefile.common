@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2014/06/14 10:20:22 wiedi Exp $
+# $NetBSD: Makefile.common,v 1.5 2014/06/20 18:48:37 fhajny Exp $
 # used by www/nginx/Makefile
 # used by www/nginx-devel/Makefile
 
@@ -103,8 +103,6 @@ do-install:
 .if !empty(PKG_OPTIONS:Mperl)
 	${INSTALL_LIB_DIR} ${DESTDIR}${PERL5_INSTALLVENDORARCH}/auto/nginx
 	${INSTALL_LIB} ${WRKSRC}/objs/src/http/modules/perl/blib/arch/auto/nginx/nginx.so \
-		${DESTDIR}${PERL5_INSTALLVENDORARCH}/auto/nginx
-	${INSTALL_DATA} ${WRKSRC}/objs/src/http/modules/perl/blib/arch/auto/nginx/nginx.bs \
 		${DESTDIR}${PERL5_INSTALLVENDORARCH}/auto/nginx
 	${INSTALL_DATA} ${WRKSRC}/objs/src/http/modules/perl/blib/lib/nginx.pm \
 		${DESTDIR}${PERL5_INSTALLVENDORARCH}
