@@ -102,6 +102,7 @@ db4			Enable db4 support.
 dbh			Enable DBH support.
 dbus			Enable dbus (desktop bus) support.
 debug			Enable debugging facilities in the package.
+debug-info		Enable debug info in generated binaries (e.g. for crash analysis), but not full scale debugging.
 deliver-suid		Install deliver executable setuid root.
 disable-compile-inits	Disable compile time implicit initialization.
 djbdns-cachestats	Patch to add stats for cache hits/misses.
@@ -724,6 +725,7 @@ w3m-image-imlib2	Use imlib2 as imaging library for W3m.
 w3m-lynx-key		Enable lynx-like key bindings.
 wavpack			Enable wavpack support.
 webkit-jit		Enable JIT compilation.
+webrtc			Enable web realtime communications API.
 webvmail		Install CGI script for voicemail.
 wide-curses		Enable wide curses support.
 winbind			Enable name-service switch daemon support using Windows Servers.
