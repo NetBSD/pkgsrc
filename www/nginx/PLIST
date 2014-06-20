@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2014/05/30 08:14:07 fhajny Exp $
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/nginx/nginx.bs
+@comment $NetBSD: PLIST,v 1.9 2014/06/20 18:48:37 fhajny Exp $
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/nginx/nginx.so
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/nginx.pm
 man/man8/nginx.8
