@@ -1,4 +1,4 @@
-$NetBSD: patch-au,v 1.1 2014/06/15 20:48:50 jnemeth Exp $
+$NetBSD: patch-au,v 1.2 2014/06/20 05:24:32 jnemeth Exp $
 
 --- sendmail/main.c.orig	2014-05-16 20:40:15.000000000 +0000
 +++ sendmail/main.c
@@ -13,19 +13,32 @@ $NetBSD: patch-au,v 1.1 2014/06/15 20:48:50 jnemeth Exp $
  int
  main(argc, argv, envp)
  	int argc;
-@@ -683,21 +687,27 @@ main(argc, argv, envp)
+@@ -210,6 +214,15 @@ main(argc, argv, envp)
+ 	envp = environ;
+ #endif /* USE_ENVIRON */
+ 
++#if NAMED_BIND
++# if NAMED_RESN
++	sm_res = *(struct __res_state *)sm_malloc(sizeof(struct __res_state));
++	memset(&sm_res, 0, sizeof(struct __res_state));
++# else
++	sm_res = _res;
++# endif
++#endif
++
+ 	/* turn off profiling */
+ 	SM_PROF(0);
+ 
+@@ -683,21 +696,25 @@ main(argc, argv, envp)
  	*/
  
  #if NAMED_BIND
 -	if (!bitset(RES_INIT, _res.options))
--		(void) res_init();
++	if (!bitset(RES_INIT, sm_res.options))
 +# if NAMED_RESN
-+	sm_res = *(struct __res_state *)sm_malloc(sizeof(struct __res_state));
-+	memset(&sm_res, 0, sizeof(struct __res_state));
-+	(void) res_ninit(&sm_res);
++		(void) res_ninit(&sm_res);
 +# else
-+	sm_res = _res;
-+	(void) res_init();
+ 		(void) res_init();
 +# endif
  	if (tTd(8, 8))
 -		_res.options |= RES_DEBUG;
@@ -52,7 +65,7 @@ $NetBSD: patch-au,v 1.1 2014/06/15 20:48:50 jnemeth Exp $
  #endif /* NAMED_BIND */
  
  	errno = 0;
-@@ -1380,8 +1390,8 @@ main(argc, argv, envp)
+@@ -1380,8 +1397,8 @@ main(argc, argv, envp)
  	}
  
  #if NAMED_BIND
@@ -63,7 +76,7 @@ $NetBSD: patch-au,v 1.1 2014/06/15 20:48:50 jnemeth Exp $
  #endif /* NAMED_BIND */
  
  	/*
-@@ -2884,8 +2894,8 @@ main(argc, argv, envp)
+@@ -2884,8 +2901,8 @@ main(argc, argv, envp)
  		sm_getla();
  		GrabTo = false;
  #if NAMED_BIND
