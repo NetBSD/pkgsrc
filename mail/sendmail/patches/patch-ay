@@ -1,4 +1,4 @@
-$NetBSD: patch-ay,v 1.1 2014/06/15 20:48:50 jnemeth Exp $
+$NetBSD: patch-ay,v 1.2 2014/06/20 05:24:32 jnemeth Exp $
 
 --- sendmail/sm_resolve.c.orig	2014-05-16 20:40:15.000000000 +0000
 +++ sendmail/sm_resolve.c
@@ -38,12 +38,22 @@ $NetBSD: patch-ay,v 1.1 2014/06/15 20:48:50 jnemeth Exp $
  	len = res_search(domain, rr_class, rr_type, reply, SMRBSIZE);
 +#endif
  	if (len >= SMRBSIZE)
-@@ -454,3 +462,3 @@ dns_lookup_int(domain, rr_class, rr_type
+@@ -448,4 +456,9 @@ dns_lookup_int(domain, rr_class, rr_type
+ 			else
++#if NAMED_RESN
++				len = res_nsearch(&sm_res, domain, rr_class,
++						 rr_type, reply, IP_MAXPACKET);
++#else
+ 				len = res_search(domain, rr_class, rr_type,
+ 						 reply, IP_MAXPACKET);
++#endif
+ 		}
+@@ -454,3 +467,3 @@ dns_lookup_int(domain, rr_class, rr_type
  	{
 -		_res.options = old_options;
 +		sm_res.options = old_options;
  		sm_dprintf("dns_lookup(%s, %d, %s) --> %d\n",
-@@ -466,5 +474,5 @@ dns_lookup_int(domain, rr_class, rr_type
+@@ -466,5 +479,5 @@ dns_lookup_int(domain, rr_class, rr_type
  	if (retrans > 0)
 -		_res.retrans = save_retrans;
 +		sm_res.retrans = save_retrans;
