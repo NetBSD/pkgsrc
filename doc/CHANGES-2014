@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2388 2014/06/20 02:10:12 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2389 2014/06/20 05:25:04 jnemeth Exp $
 
 # PLEASE NOTE THAT WE ARE NOW IN A FREEZE IN PREPARATION FOR THE
 # PKGSRC-2014Q2 BRANCH.
@@ -3196,3 +3196,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated pkgtools/pkglint to 4.143 [wiz 2014-06-19]
 	Updated www/firefox to 30.0nb1 [martin 2014-06-19]
 	Updated archivers/ruby-zip to 1.1.4 [rodent 2014-06-20]
+	Updated mail/sendmail to 8.14.9nb1 [jnemeth 2014-06-20]
