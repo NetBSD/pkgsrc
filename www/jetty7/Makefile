@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/07/12 10:45:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2014/06/20 13:15:50 fhajny Exp $
 #
 
 JETTYVER=	7.6.8.v20121106
@@ -81,14 +81,7 @@ CONFS=		README.spnego \
 CONF_FILES+=		${EGDIR}/${i} ${PKG_SYSCONFDIR}/${i}
 .endfor
 
-FIND_PREFIX:=	BASHDIR=bash
-.include "../../mk/find-prefix.mk"
-
-SUBST_CLASSES+=		bash
-SUBST_STAGE.bash=	pre-configure
-SUBST_MESSAGE.bash=	Fixing for bash
-SUBST_FILES.bash+=	bin/jetty.sh
-SUBST_SED.bash+=	-e 's,/usr/bin/env bash,${BASHDIR}/bin/bash,'
+REPLACE_BASH+=	bin/jetty.sh
 
 pre-configure:
 	${RM} -r ${WRKSRC}/bin/README.jetty-cygwin.txt.txt \
