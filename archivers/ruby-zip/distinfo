@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2012/07/31 13:44:30 taca Exp $
+$NetBSD: distinfo,v 1.10 2014/06/20 02:09:43 rodent Exp $
 
-SHA1 (rubyzip-0.9.9.gem) = 5756f7bd2f68ef2084afe3d1f379bed26ab302eb
-RMD160 (rubyzip-0.9.9.gem) = 50f7176df85a2280f4283bc1f38ab887f4cff1be
-Size (rubyzip-0.9.9.gem) = 31744 bytes
+SHA1 (rubyzip-1.1.4.gem) = d73099f8b58ddce313642efae794d51bd68b1657
+RMD160 (rubyzip-1.1.4.gem) = 27b4cb047c707012ed9fabf23e3bacdbeefb32e6
+Size (rubyzip-1.1.4.gem) = 34816 bytes
