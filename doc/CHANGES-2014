@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2387 2014/06/19 20:32:38 martin Exp $
+$NetBSD: CHANGES-2014,v 1.2388 2014/06/20 02:10:12 rodent Exp $
 
 # PLEASE NOTE THAT WE ARE NOW IN A FREEZE IN PREPARATION FOR THE
 # PKGSRC-2014Q2 BRANCH.
@@ -3195,3 +3195,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/ap2-wsgi to 4.2.4 [wiz 2014-06-18]
 	Updated pkgtools/pkglint to 4.143 [wiz 2014-06-19]
 	Updated www/firefox to 30.0nb1 [martin 2014-06-19]
+	Updated archivers/ruby-zip to 1.1.4 [rodent 2014-06-20]
