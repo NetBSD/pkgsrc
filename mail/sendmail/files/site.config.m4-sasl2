@@ -1,5 +1,8 @@
-# $NetBSD: site.config.m4-sasl2,v 1.2 2004/08/30 20:16:28 adrianp Exp $
+# $NetBSD: site.config.m4-sasl2,v 1.3 2014/06/20 16:26:55 jnemeth Exp $
 
 # enable SASL 2
 APPENDDEF(`confENVDEF', `-DSASL=2')
 APPENDDEF(`conf_sendmail_LIBS', `-lsasl2')
+
+# for some strange reason SASL, and NAMED_RESN and MILTER are incompatible
+APPENDDEF(`confENVDEF', `-DNAMED_RESN=0')
