@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2396 2014/06/21 18:16:49 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2397 2014/06/21 18:40:02 jnemeth Exp $
 
 # PLEASE NOTE THAT WE ARE NOW IN A FREEZE IN PREPARATION FOR THE
 # PKGSRC-2014Q2 BRANCH.
@@ -3202,3 +3202,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/suse131_mozilla-nspr to 13.1nb2 [obache 2014-06-21]
 	Updated emulators/suse131_libdbus to 13.1nb1 [obache 2014-06-21]
 	Updated net/youtube-dl to 20140516.1nb1 [wiz 2014-06-21]
+	Updated mail/sendmail to 8.14.9nb3 [jnemeth 2014-06-21]
