@@ -1,9 +1,9 @@
-# $NetBSD: spec,v 1.1 2005/02/12 14:45:53 gavan Exp $
+# $NetBSD: spec,v 1.2 2014/06/21 16:34:13 bsiegert Exp $
 
 # Trigger the circular dependency detection logic to fail the package build before
 # actually wasting time building anything.
 
-_PKGSRC_DEPS=`cd ../../devel/bison && make show-var VARNAME=PKGNAME`
+_PKGSRC_DEPS=`cd ../../devel/bison && ${TEST_MAKE} show-var VARNAME=PKGNAME`
 MAKEARGS_TEST="install _PKGSRC_DEPS=${_PKGSRC_DEPS}"
 MAKEARGS_CLEAN="clean clean-depends"
 
