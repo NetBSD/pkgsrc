@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2394 2014/06/21 13:53:21 obache Exp $
+$NetBSD: CHANGES-2014,v 1.2395 2014/06/21 13:57:22 obache Exp $
 
 # PLEASE NOTE THAT WE ARE NOW IN A FREEZE IN PREPARATION FOR THE
 # PKGSRC-2014Q2 BRANCH.
@@ -3200,5 +3200,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/xnp2 to 20140607 [tsutsui 2014-06-20]
 	Updated www/contao33 to 3.3.3 [taca 2014-06-21]
 	Updated emulators/suse131_mozilla-nspr to 13.1nb2 [obache 2014-06-21]
-	Updated emulators/suse131_libdbus to 13.1nb1 [obache 2014-06-21]
 	Updated emulators/suse131_libdbus to 13.1nb1 [obache 2014-06-21]
