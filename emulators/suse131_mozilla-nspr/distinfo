@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2014/04/04 10:02:24 obache Exp $
+$NetBSD: distinfo,v 1.3 2014/06/21 13:35:54 obache Exp $
 
-SHA1 (suse131/mozilla-nspr-4.10.4-8.1.i586.rpm) = 4e27f2875df381b248c19f6ae3ef5c68db83358c
-RMD160 (suse131/mozilla-nspr-4.10.4-8.1.i586.rpm) = cc3ca3a77338d0fbed751b3e8ab4268aa451f803
-Size (suse131/mozilla-nspr-4.10.4-8.1.i586.rpm) = 112131 bytes
-SHA1 (suse131/mozilla-nspr-4.10.4-8.1.x86_64.rpm) = c1c9f707d28b03cadb6be5bc9ecaf5825e870748
-RMD160 (suse131/mozilla-nspr-4.10.4-8.1.x86_64.rpm) = 32d91713b8a6fbe39ebf4116cd7385fde831aab7
-Size (suse131/mozilla-nspr-4.10.4-8.1.x86_64.rpm) = 112001 bytes
+SHA1 (suse131/mozilla-nspr-4.10.6-12.1.i586.rpm) = 317d2f940779233b9c9f752cfe76f7ada76ffc12
+RMD160 (suse131/mozilla-nspr-4.10.6-12.1.i586.rpm) = 16427351e963b51a541c87e552bab8bb8b50286a
+Size (suse131/mozilla-nspr-4.10.6-12.1.i586.rpm) = 112768 bytes
+SHA1 (suse131/mozilla-nspr-4.10.6-12.1.x86_64.rpm) = 3aa5d17de30478131b5f314e979cee3085a5d87f
+RMD160 (suse131/mozilla-nspr-4.10.6-12.1.x86_64.rpm) = be186b94fc864e6069bc44405f10188802122440
+Size (suse131/mozilla-nspr-4.10.6-12.1.x86_64.rpm) = 112530 bytes
