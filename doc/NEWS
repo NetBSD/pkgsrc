@@ -1,4 +1,4 @@
-# $NetBSD: NEWS,v 1.10 2014/05/09 06:29:57 obache Exp $
+# $NetBSD: NEWS,v 1.11 2014/06/21 16:01:17 alnsn Exp $
 
 PKGSRC NEWS
 ===========
@@ -7,11 +7,11 @@ PKGSRC NEWS
   pkgsrc. The intended readers are the pkgsrc developers as well as anyone
   tracking pkgsrc-current.
 
-Lua multiversion supoort [alnsn 2014-05-03]
+Lua multiversion support [alnsn 2014-05-03]
 	Lua packages lang/lua51 and lang/lua52 have been modified
 	to coexist without conflicts, infrastructure for supporting
 	multiple versions of Lua has been put in place and all
-	dependent packages has been adapted to the new infrastructure.
+	dependent packages have been adapted to the new infrastructure.
 
 SMF support is introduced [jperkin 2014-03-11]
 
