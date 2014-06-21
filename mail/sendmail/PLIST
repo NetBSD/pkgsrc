@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.20 2014/06/15 20:48:49 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.21 2014/06/21 18:39:27 jnemeth Exp $
 bin/hoststat
 bin/mailq
 bin/newaliases
 bin/purgestat
-bin/rmail
 bin/vacation
 lib/libsm.a
 lib/libsmutil.a
