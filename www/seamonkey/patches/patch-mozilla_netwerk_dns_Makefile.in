@@ -1,12 +1,15 @@
-$NetBSD: patch-mozilla_netwerk_dns_Makefile.in,v 1.1 2014/03/30 04:13:17 ryoon Exp $
+$NetBSD: patch-mozilla_netwerk_dns_Makefile.in,v 1.2 2014/06/22 08:54:39 ryoon Exp $
 
---- mozilla/netwerk/dns/Makefile.in.orig	2014-03-19 01:42:11.000000000 +0000
+--- mozilla/netwerk/dns/Makefile.in.orig	2014-06-13 00:45:47.000000000 +0000
 +++ mozilla/netwerk/dns/Makefile.in
-@@ -9,3 +9,7 @@ include $(topsrcdir)/config/rules.mk
+@@ -5,6 +5,10 @@
+ 
+ include $(topsrcdir)/config/rules.mk
+ 
++ifdef MOZ_NATIVE_HARFBUZZ
++CXXFLAGS += $(MOZ_HARFBUZZ_CFLAGS)
++endif
++
+ # Generate the include file containing compact, static definitions
  # for effective TLD data.
  etld_data.inc: $(srcdir)/prepare_tlds.py $(srcdir)/effective_tld_names.dat
- 	$(PYTHON) $(srcdir)/prepare_tlds.py $(srcdir)/effective_tld_names.dat > etld_data.inc
-+
-+ifdef MOZ_NATIVE_HARFBUZZ
-+nsIDNService.$(OBJ_SUFFIX): CXXFLAGS+=$(MOZ_HARFBUZZ_CFLAGS)
-+endif

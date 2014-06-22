@@ -1,16 +1,16 @@
-$NetBSD: patch-mozilla_media_webrtc_signaling_test_Makefile.in,v 1.3 2014/03/30 04:13:17 ryoon Exp $
+$NetBSD: patch-mozilla_media_webrtc_signaling_test_Makefile.in,v 1.4 2014/06/22 08:54:39 ryoon Exp $
 
---- mozilla/media/webrtc/signaling/test/Makefile.in.orig	2014-03-19 01:42:08.000000000 +0000
+--- mozilla/media/webrtc/signaling/test/Makefile.in.orig	2014-06-13 00:46:10.000000000 +0000
 +++ mozilla/media/webrtc/signaling/test/Makefile.in
-@@ -8,6 +8,7 @@ LIBS = \
+@@ -7,6 +7,7 @@ LIBS = \
+   $(NSPR_LIBS) \
    $(NSS_LIBS) \
    $(REALTIME_LIBS) \
-   $(MOZ_JS_LIBS) \
 +  $(MOZ_LIBV4L2_LIBS) \
    $(DEPTH)/xpcom/glue/$(LIB_PREFIX)xpcomglue_s.$(LIB_SUFFIX) \
    $(DEPTH)/media/mtransport/standalone/$(LIB_PREFIX)mtransport_s.$(LIB_SUFFIX) \
    $(DEPTH)/media/webrtc/signalingtest/signaling_ecc/$(LIB_PREFIX)ecc.$(LIB_SUFFIX) \
-@@ -40,6 +41,12 @@ LIBS += \
+@@ -43,6 +44,12 @@ LIBS += \
    $(NULL)
  endif
  
