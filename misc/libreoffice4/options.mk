@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2014/06/03 03:21:39 ryoon Exp $
+# $NetBSD: options.mk,v 1.7 2014/06/22 23:59:35 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libreoffice4
 PKG_SUPPORTED_OPTIONS=	java debug kde4 gtk3
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--enable-ext-wiki-publisher \
 			--with-system-hsqldb
 .include "../../mk/java-env.mk"
 .include "../../mk/java-vm.mk"
-PLIST_SRC+=		${PLIST_SRC_DFLT:Q} PLIST.java
+PLIST_SRC+=		${PLIST_SRC_DFLT:Q} ${PKGDIR}/PLIST.java
 PLIST.java=		yes
 .else
 CONFIGURE_ARGS+=	--without-java
@@ -41,6 +41,7 @@ CONFIGURE_ARGS+=	--without-java
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug
 CONFIGURE_ARGS+=	--enable-selective-debuginfo="all"
+PLIST_SRC=		${PLIST_SRC_DFLT:Q} ${PKGDIR}/PLIST.debug
 .else
 CONFIGURE_ARGS+=	--enable-release-build
 .endif

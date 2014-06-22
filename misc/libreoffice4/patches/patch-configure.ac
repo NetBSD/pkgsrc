@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.4 2014/06/01 14:31:08 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.5 2014/06/22 23:59:36 ryoon Exp $
 
 * Improve portability, replace == with =
 * Detect pkgsrc apache-ant library
@@ -24,6 +24,27 @@ $NetBSD: patch-configure.ac,v 1.4 2014/06/01 14:31:08 ryoon Exp $
          dnl gcc#19664, gcc#22482, rhbz#162935
          AC_MSG_CHECKING([if STL headers are visibility safe (GCC bug 22482)])
          AC_EGREP_HEADER(visibility push, string, stlvisok=yes, stlvisok=no)
+@@ -7986,7 +7988,7 @@ no|disable)
+     else
+         # Unset variables set by the above AM_PATH_PYTHON so that
+         # we actually do check anew.
+-        unset PYTHON am_cv_pathless_PYTHON ac_cv_path_PYTHON am_cv_python_version am_cv_python_platform am_cv_python_pythondir am_cv_python_pyexecdir
++        #unset PYTHON am_cv_pathless_PYTHON ac_cv_path_PYTHON am_cv_python_version am_cv_python_platform am_cv_python_pythondir am_cv_python_pyexecdir
+         AM_PATH_PYTHON([3.3],, [:])
+         if test "$PYTHON" = :; then
+             AC_MSG_RESULT([internal])
+@@ -8039,9 +8041,9 @@ if test $enable_python = system; then
+     elif test "$cross_compiling" != yes; then
+         # Unset variables set by the above AM_PATH_PYTHON so that
+         # we actually do check anew.
+-        unset PYTHON am_cv_pathless_PYTHON ac_cv_path_PYTHON am_cv_python_version am_cv_python_platform am_cv_python_pythondir am_cv_python_pyexecdir
++        #unset PYTHON am_cv_pathless_PYTHON ac_cv_path_PYTHON am_cv_python_version am_cv_python_platform am_cv_python_pythondir am_cv_python_pyexecdir
+         # This causes an error if no python command is found
+-        AM_PATH_PYTHON([3.3])
++        AM_PATH_PYTHON([2.6])
+         python_include=`$PYTHON -c "import distutils.sysconfig; print(distutils.sysconfig.get_config_var('INCLUDEPY'));"`
+         python_version=`$PYTHON -c "import distutils.sysconfig; print(distutils.sysconfig.get_config_var('VERSION'));"`
+         python_libs=`$PYTHON -c "import distutils.sysconfig; print(distutils.sysconfig.get_config_var('LIBS'));"`
 @@ -8929,7 +8931,7 @@ SYSTEM_GENBRK=
  SYSTEM_GENCCODE=
  SYSTEM_GENCMN=
