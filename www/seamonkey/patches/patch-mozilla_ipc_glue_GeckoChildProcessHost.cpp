@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_ipc_glue_GeckoChildProcessHost.cpp,v 1.9 2014/03/30 04:13:17 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_glue_GeckoChildProcessHost.cpp,v 1.10 2014/06/22 08:54:39 ryoon Exp $
 
---- mozilla/ipc/glue/GeckoChildProcessHost.cpp.orig	2014-03-19 01:41:56.000000000 +0000
+--- mozilla/ipc/glue/GeckoChildProcessHost.cpp.orig	2014-06-13 00:46:08.000000000 +0000
 +++ mozilla/ipc/glue/GeckoChildProcessHost.cpp
 @@ -4,7 +4,13 @@
   * License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -16,7 +16,7 @@ $NetBSD: patch-mozilla_ipc_glue_GeckoChildProcessHost.cpp,v 1.9 2014/03/30 04:13
  
  #if defined(XP_WIN) && defined(MOZ_CONTENT_SANDBOX)
  #include "sandboxBroker.h"
-@@ -499,7 +505,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
+@@ -504,7 +510,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
    // and passing wstrings from one config to the other is unsafe.  So
    // we split the logic here.
  
@@ -25,7 +25,7 @@ $NetBSD: patch-mozilla_ipc_glue_GeckoChildProcessHost.cpp,v 1.9 2014/03/30 04:13
    base::environment_map newEnvVars;
    ChildPrivileges privs = mPrivileges;
    if (privs == base::PRIVILEGES_DEFAULT) {
-@@ -518,7 +524,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
+@@ -523,7 +529,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
        if (NS_SUCCEEDED(rv)) {
          nsCString path;
          greDir->GetNativePath(path);
@@ -34,7 +34,34 @@ $NetBSD: patch-mozilla_ipc_glue_GeckoChildProcessHost.cpp,v 1.9 2014/03/30 04:13
  #  if defined(MOZ_WIDGET_ANDROID)
          path += "/lib";
  #  endif  // MOZ_WIDGET_ANDROID
-@@ -627,7 +633,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
+@@ -538,7 +544,17 @@ GeckoChildProcessHost::PerformAsyncLaunc
+             newEnvVars["LD_LIBRARY_PATH"] = path.get();
+         }
+ # elif OS_MACOSX
+-        newEnvVars["DYLD_LIBRARY_PATH"] = path.get();
++        const char *dyld_library_path = PR_GetEnv("DYLD_LIBRARY_PATH");
++        nsCString new_dyld_lib_path;
++        if (dyld_library_path && *dyld_library_path) {
++            new_dyld_lib_path.Assign(path.get());
++            new_dyld_lib_path.AppendLiteral(":");
++            new_dyld_lib_path.Append(dyld_library_path);
++            newEnvVars["DYLD_LIBRARY_PATH"] = new_dyld_lib_path.get();
++        } else {
++            newEnvVars["DYLD_LIBRARY_PATH"] = path.get();
++        }
++#   if defined(MOZ_WIDGET_COCOA)
+         // XXX DYLD_INSERT_LIBRARIES should only be set when launching a plugin
+         //     process, and has no effect on other subprocesses (the hooks in
+         //     libplugin_child_interpose.dylib become noops).  But currently it
+@@ -558,6 +574,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
+         interpose.Append(path.get());
+         interpose.AppendLiteral("/libplugin_child_interpose.dylib");
+         newEnvVars["DYLD_INSERT_LIBRARIES"] = interpose.get();
++#    endif // MOZ_WIDGET_COCOA
+ # endif  // OS_LINUX
+       }
+     }
+@@ -632,7 +649,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
    childArgv.push_back(pidstring);
  
  #if defined(MOZ_CRASHREPORTER)
@@ -43,7 +70,7 @@ $NetBSD: patch-mozilla_ipc_glue_GeckoChildProcessHost.cpp,v 1.9 2014/03/30 04:13
    int childCrashFd, childCrashRemapFd;
    if (!CrashReporter::CreateNotificationPipeForChild(
          &childCrashFd, &childCrashRemapFd))
-@@ -660,7 +666,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
+@@ -665,7 +682,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
    childArgv.push_back(childProcessType);
  
    base::LaunchApp(childArgv, mFileMap,

@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_toolkit_library_Makefile.in,v 1.3 2014/03/30 04:13:17 ryoon Exp $
+$NetBSD: patch-mozilla_toolkit_library_Makefile.in,v 1.4 2014/06/22 08:54:39 ryoon Exp $
 
---- mozilla/toolkit/library/Makefile.in.orig	2014-03-19 01:42:16.000000000 +0000
+--- mozilla/toolkit/library/Makefile.in.orig	2014-06-13 00:46:13.000000000 +0000
 +++ mozilla/toolkit/library/Makefile.in
-@@ -164,6 +164,18 @@ ifdef MOZ_NATIVE_HUNSPELL
+@@ -149,6 +149,34 @@ ifdef MOZ_NATIVE_HUNSPELL
  EXTRA_DSO_LDOPTS += $(MOZ_HUNSPELL_LIBS)
  endif
  
@@ -10,18 +10,34 @@ $NetBSD: patch-mozilla_toolkit_library_Makefile.in,v 1.3 2014/03/30 04:13:17 ryo
 +EXTRA_DSO_LDOPTS += $(MOZ_OGG_LIBS)
 +endif
 +
++ifdef MOZ_NATIVE_THEORA
++EXTRA_DSO_LDOPTS += $(MOZ_THEORA_LIBS)
++endif
++
 +ifdef MOZ_NATIVE_VORBIS
 +EXTRA_DSO_LDOPTS += $(MOZ_VORBIS_LIBS)
++endif
++
++ifdef MOZ_NATIVE_TREMOR
++EXTRA_DSO_LDOPTS += $(MOZ_TREMOR_LIBS)
 +endif
 +
 +ifdef MOZ_NATIVE_OPUS
 +EXTRA_DSO_LDOPTS += $(MOZ_OPUS_LIBS)
 +endif
 +
++ifdef MOZ_NATIVE_SPEEX
++EXTRA_DSO_LDOPTS += $(MOZ_SPEEX_LIBS)
++endif
++
++ifdef MOZ_NATIVE_SOUNDTOUCH
++EXTRA_DSO_LDOPTS += $(MOZ_SOUNDTOUCH_LIBS)
++endif
++
  ifdef MOZ_NATIVE_LIBEVENT
  EXTRA_DSO_LDOPTS += $(MOZ_LIBEVENT_LIBS)
  endif
-@@ -176,6 +188,14 @@ ifndef MOZ_TREE_PIXMAN
+@@ -161,12 +189,24 @@ ifndef MOZ_TREE_PIXMAN
  EXTRA_DSO_LDOPTS += $(MOZ_PIXMAN_LIBS)
  endif
  
@@ -36,11 +52,22 @@ $NetBSD: patch-mozilla_toolkit_library_Makefile.in,v 1.3 2014/03/30 04:13:17 ryo
  ifdef MOZ_DMD
  EXTRA_DSO_LDOPTS += $(call EXPAND_LIBNAME_PATH,dmd,$(DIST)/lib)
  endif
-@@ -183,6 +203,7 @@ endif
+ 
  EXTRA_DSO_LDOPTS += $(call EXPAND_LIBNAME_PATH,gkmedias,$(DIST)/lib)
  
- ifdef MOZ_WEBRTC
++ifdef MOZ_LIBV4L2_LIBS
 +EXTRA_DSO_LDOPTS += $(MOZ_LIBV4L2_LIBS)
- ifdef MOZ_WEBRTC_SIGNALING
- SHARED_LIBRARY_LIBS += \
-   $(DEPTH)/media/webrtc/signaling/signaling_ecc/$(LIB_PREFIX)ecc.$(LIB_SUFFIX) \
++endif
++
+ ifdef MOZ_WEBRTC
+ ifeq (WINNT,$(OS_TARGET))
+ EXTRA_DSO_LDOPTS += \
+@@ -351,7 +391,7 @@ ifdef MOZ_ENABLE_QT
+ EXTRA_DSO_LDOPTS += $(MOZ_QT_LDFLAGS) $(XEXT_LIBS)
+ endif
+ 
+-ifeq (cocoa,$(MOZ_WIDGET_TOOLKIT))
++ifeq (Darwin,$(OS_ARCH))
+ ifdef MOZ_GSTREAMER
+ EXTRA_DSO_LDOPTS += $(GSTREAMER_LIBS)
+ endif
