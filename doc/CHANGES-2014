@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2399 2014/06/22 03:25:59 taca Exp $
+$NetBSD: CHANGES-2014,v 1.2400 2014/06/22 08:57:03 ryoon Exp $
 
 # PLEASE NOTE THAT WE ARE NOW IN A FREEZE IN PREPARATION FOR THE
 # PKGSRC-2014Q2 BRANCH.
@@ -3205,3 +3205,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/sendmail to 8.14.9nb3 [jnemeth 2014-06-21]
 	Removed www/contao32-example [taca 2014-06-22]
 	Updated www/contao32 to 3.2.12 [taca 2014-06-22]
+	Updated www/seamonkey to 2.26.1 [ryoon 2014-06-22]
