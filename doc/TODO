@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13421 2014/06/22 16:31:15 richard Exp $
+$NetBSD: TODO,v 1.13422 2014/06/22 16:53:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -741,6 +741,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o leafnode-1.11.8
 	o lftp-4.5.2
 	o lgeneral-1.2.3
+	o lgogdownloader-2.13
 	o libAppleWM-1.4.1
 	o libabw-0.1.0
 	o libarchive-3.1.2
@@ -921,6 +922,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o polsms-2.1.0
 	o popa3d-1.0.3
 	o poppass-4.0.14
+	o poppler-0.26.2
 	o postal-0.72
 	o postgresql-postgis-2.1.0
 	o powermanga-0.91
@@ -932,6 +934,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o psmisc-22.20
 	o pspp-0.8.3
 	o pstoedit-3.61
+	o puzzles-10196
 	o pv-1.2.0
 	o pvs-5.0
 	o pwlib-1.11.1
@@ -948,10 +951,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-bottle-0.11.6
 	o py-cassa-1.11.0
 	o py-creole-1.1.1
+	o py-cython-0.20.2
 	o py-datapkg-0.9
 	o py-django-photologue-2.7
 	o py-django-registration-1.0
 	o py-djangorestframework-2.3.12
+	o py-enchant-1.6.6
 	o py-gammu-1.33.0
 	o py-gmpy-1.17
 	o py-gnome-menus-3.8.0
@@ -979,6 +984,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-reportlab-3.0
 	o py-rope-0.9.4
 	o py-scgi-1.14
+	o py-setuptools-5.1
 	o py-simpletal-5.1
 	o py-sip-4.15.1 [don't update until pyqt3 and KDE problems are fixed -- still there in 4.15.1]
 	o py-sip-4.16.1
@@ -987,6 +993,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-suds-0.4.1
 	o py-sybase-0.37
 	o py-tlslite-0.4.6
+	o py-trueskill-0.4.2
 	o py-twisted-14.0.0
 	o py-uliweb-0.2.4
 	o py-wxWidgets-3.0.0
@@ -1183,7 +1190,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wxGTK-3.0
 	o wxRemind-101
 	o wyrd-1.4.6
-	o x264-devel-20140614
+	o x264-devel-20140621
 	o xanalyser-1.30
 	o xbindkeys-1.8.6
 	o xbindkeys-tk-1.8.0
@@ -1232,7 +1239,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xscreensaver-5.24
 	o xsd-3.3.0
 	o xsoldier-1.4
-	o xterm-307
+	o xterm-308
 	o xtraceroute-0.9.1
 	o xtux-20030306
 	o xvidcap-1.1.7
