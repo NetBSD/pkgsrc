@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.117 2014/05/05 00:48:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.118 2014/06/22 08:54:39 ryoon Exp $
 
 DISTNAME=	# empty
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
-SM_VER=		2.25
+SM_VER=		2.26.1
 #LIGHTNINGVER=	1.9
-PKGREVISION=	2
 CATEGORIES=	www
-#${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/}
-MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=seamonkey/releases/${SM_VER}/source/}
+MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/}
+#MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=seamonkey/releases/${SM_VER}/source/}
 DISTFILES=	seamonkey-${SM_VER}.source.tar.bz2
 #		lightning-${LIGHTNINGVER}.source.tar.bz2
 #SITES.lightning-${LIGHTNINGVER}.source.tar.bz2=	${MASTER_SITE_MOZILLA:=calendar/lightning/releases/${LIGHTNINGVER}/source/}
@@ -25,6 +24,9 @@ USE_TOOLS+=	unzip pax
 
 .include "../../www/firefox/mozilla-common.mk"
 .include "options.mk"
+
+# Workaround to fix pixman.h detection
+CFLAGS+=	-I${BUILDLINK_PREFIX.pixman}/include/pixman-1
 
 CONFIG_GUESS_OVERRIDE+=	ldap/sdks/c-sdk/config/autoconf/config.guess
 CONFIG_SUB_OVERRIDE+=	ldap/sdks/c-sdk/config/autoconf/config.sub
@@ -67,7 +69,9 @@ pre-configure:
 	cd ${WRKSRC}/mozilla/js/src && ${SETENV} ${CONFIGURE_ENV} autoconf
 	cd ${WRKSRC}/mozilla/nsprpub && ${SETENV} ${CONFIGURE_ENV} autoconf
 	cd ${WRKSRC}/ldap/sdks/c-sdk && ${SETENV} ${CONFIGURE_ENV} autoconf
-	mkdir ${WRKSRC}/mozilla/js/src/.deps
+#	mkdir ${WRKSRC}/mozilla/js/src/.deps
+# If there is no .mozconfig, codegen.pp target fails.
+	touch ${WRKSRC}/.mozconfig
 
 post-install:
 #	${TOUCH} ${TOUCH_FLAGS} \

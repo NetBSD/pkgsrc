@@ -1,11 +1,12 @@
-$NetBSD: patch-mozilla_media_libsoundtouch_src_cpu__detect__x86.cpp,v 1.2 2013/07/12 12:24:10 ryoon Exp $
+$NetBSD: patch-mozilla_media_libsoundtouch_src_cpu__detect__x86.cpp,v 1.3 2014/06/22 08:54:39 ryoon Exp $
 
---- mozilla/media/libsoundtouch/src/cpu_detect_x86.cpp.orig	2013-06-20 04:35:15.000000000 +0000
+--- mozilla/media/libsoundtouch/src/cpu_detect_x86.cpp.orig	2014-06-13 00:45:42.000000000 +0000
 +++ mozilla/media/libsoundtouch/src/cpu_detect_x86.cpp
-@@ -131,6 +131,9 @@ uint detectCPUextensions(void)
+@@ -130,7 +130,9 @@ uint detectCPUextensions(void)
+ #endif
  
      return res & ~_dwDisabledISA;
- 
+-
 +#elif defined(__GNUC__)
 +    // No cpuid.h --> no cpuid support
 +    return 0;

@@ -1,0 +1,16 @@
+$NetBSD: patch-mozilla_ipc_chromium_moz.build,v 1.1 2014/06/22 08:54:39 ryoon Exp $
+
+--- mozilla/ipc/chromium/moz.build.orig	2014-06-13 00:46:08.000000000 +0000
++++ mozilla/ipc/chromium/moz.build
+@@ -19,7 +19,10 @@ if CONFIG['OS_ARCH'] == 'WINNT':
+ else:
+     os_posix = 1
+     if CONFIG['OS_ARCH'] == 'Darwin':
+-        os_macosx = 1
++        if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'cocoa':
++            os_macosx = 1
++        else:
++            os_bsd = 1
+     elif CONFIG['OS_ARCH'] == 'DragonFly':
+         os_dragonfly = 1
+         os_bsd = 1

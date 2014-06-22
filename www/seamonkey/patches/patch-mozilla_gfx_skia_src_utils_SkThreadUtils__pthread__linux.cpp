@@ -1,10 +1,10 @@
-$NetBSD: patch-mozilla_gfx_skia_src_utils_SkThreadUtils__pthread__linux.cpp,v 1.1 2013/11/08 12:55:52 ryoon Exp $
+$NetBSD: patch-mozilla_gfx_skia_src_utils_SkThreadUtils__pthread__linux.cpp,v 1.2 2014/06/22 08:54:39 ryoon Exp $
 
 * Use cpuset(3) for NetBSD. From rmind@.
 
---- mozilla/gfx/skia/src/utils/SkThreadUtils_pthread_linux.cpp.orig	2013-10-29 01:20:50.000000000 +0000
+--- mozilla/gfx/skia/src/utils/SkThreadUtils_pthread_linux.cpp.orig	2014-06-13 00:46:07.000000000 +0000
 +++ mozilla/gfx/skia/src/utils/SkThreadUtils_pthread_linux.cpp
-@@ -12,26 +12,47 @@
+@@ -12,16 +12,20 @@
  #include "SkThreadUtils.h"
  #include "SkThreadUtils_pthread.h"
  
@@ -26,13 +26,11 @@ $NetBSD: patch-mozilla_gfx_skia_src_utils_SkThreadUtils__pthread__linux.cpp,v 1.
  static int CPU_COUNT(cpu_set_t *set) {
      int count = 0;
      for (int i = 0; i < CPU_SETSIZE; i++) {
-         if (CPU_ISSET(i, set)) {
-             count++;
--	}
-+        }
-+    }
-+    return count;
-+}
+@@ -31,7 +35,24 @@ static int CPU_COUNT(cpu_set_t *set) {
+     }
+     return count;
+ }
+-#endif /* !CPU_COUNT */
 +#endif
 +
 +#if defined(__NetBSD__)
@@ -47,10 +45,9 @@ $NetBSD: patch-mozilla_gfx_skia_src_utils_SkThreadUtils__pthread__linux.cpp,v 1.
 +        if (cpuset_isset(i, set)) {
 +            count++;
 +        }
-     }
-     return count;
- }
--#endif /* !CPU_COUNT */
++     }
++     return count;
++ }
 +#endif
  
  static int nth_set_cpu(unsigned int n, cpu_set_t* cpuSet) {

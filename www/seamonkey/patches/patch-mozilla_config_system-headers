@@ -1,11 +1,29 @@
-$NetBSD: patch-mozilla_config_system-headers,v 1.10 2014/03/30 04:13:17 ryoon Exp $
+$NetBSD: patch-mozilla_config_system-headers,v 1.11 2014/06/22 08:54:39 ryoon Exp $
 
---- mozilla/config/system-headers.orig	2014-03-19 01:41:46.000000000 +0000
+--- mozilla/config/system-headers.orig	2014-06-13 00:46:03.000000000 +0000
 +++ mozilla/config/system-headers
-@@ -1144,4 +1144,28 @@ unicode/unum.h
- unicode/ustring.h
- unicode/utypes.h
+@@ -1051,8 +1051,6 @@ X11/Xutil.h
+ xpt_struct.h
+ xpt_xdr.h
+ zmouse.h
+-speex/speex_resampler.h
+-soundtouch/SoundTouch.h
+ #if MOZ_NATIVE_PNG==1
+ png.h
  #endif
+@@ -1118,6 +1116,8 @@ ogg/ogg.h
+ ogg/os_types.h
+ nestegg/nestegg.h
+ cubeb/cubeb.h
++speex/speex_resampler.h
++soundtouch/SoundTouch.h
+ #endif
+ gst/gst.h
+ gst/app/gstappsink.h
+@@ -1146,3 +1146,39 @@ unicode/utypes.h
+ #endif
+ libutil.h
+ unwind.h
 +cairo-qt.h
 +#if MOZ_NATIVE_GRAPHITE2==1
 +unwind.h
@@ -20,9 +38,15 @@ $NetBSD: patch-mozilla_config_system-headers,v 1.10 2014/03/30 04:13:17 ryoon Ex
 +ogg/ogg.h
 +ogg/os_types.h
 +#endif
++#if MOZ_NATIVE_THEORA==1
++theora/theoradec.h
++#endif
 +#if MOZ_NATIVE_VORBIS==1
 +vorbis/codec.h
 +vorbis/vorbisenc.h
++#endif
++#if MOZ_NATIVE_TREMOR==1
++tremor/ivorbiscodec.h
 +#endif
 +#if MOZ_NATIVE_OPUS==1
 +opus.h
@@ -30,4 +54,9 @@ $NetBSD: patch-mozilla_config_system-headers,v 1.10 2014/03/30 04:13:17 ryoon Ex
 +opus/opus.h
 +opus/opus_multistream.h
 +#endif
- libutil.h
++#if MOZ_NATIVE_SPEEX==1
++speex/speex_resampler.h
++#endif
++#if MOZ_NATIVE_SOUNDTOUCH==1
++soundtouch/SoundTouch.h
++#endif

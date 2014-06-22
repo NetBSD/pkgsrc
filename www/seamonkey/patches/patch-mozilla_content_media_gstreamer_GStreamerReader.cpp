@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader.cpp,v 1.1 2014/03/30 04:13:17 ryoon Exp $
+$NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader.cpp,v 1.2 2014/06/22 08:54:39 ryoon Exp $
 
---- mozilla/content/media/gstreamer/GStreamerReader.cpp.orig	2014-03-19 01:41:47.000000000 +0000
+--- mozilla/content/media/gstreamer/GStreamerReader.cpp.orig	2014-06-13 00:46:04.000000000 +0000
 +++ mozilla/content/media/gstreamer/GStreamerReader.cpp
 @@ -10,8 +10,10 @@
  #include "AbstractMediaDecoder.h"
@@ -168,7 +168,7 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader.cpp,v 1.1 2014/03
  
    g_object_set(mPlayBin, "uri", "appsrc://",
                 "video-sink", mVideoSink,
-@@ -331,7 +340,7 @@ nsresult GStreamerReader::ReadMetadata(M
+@@ -331,13 +340,12 @@ nsresult GStreamerReader::ReadMetadata(M
        /* Little trick: set the target caps to "skip" so that playbin2 fails to
         * find a decoder for the stream we want to skip.
         */
@@ -177,7 +177,13 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader.cpp,v 1.1 2014/03
        g_object_set(filter, "caps", filterCaps, nullptr);
        gst_caps_unref(filterCaps);
        gst_object_unref(filter);
-@@ -358,6 +367,7 @@ nsresult GStreamerReader::ReadMetadata(M
+     }
+ 
+-    /* start the pipeline */
+     LOG(PR_LOG_DEBUG, "starting metadata pipeline");
+     gst_element_set_state(mPlayBin, GST_STATE_PAUSED);
+ 
+@@ -358,6 +366,7 @@ nsresult GStreamerReader::ReadMetadata(M
        gst_message_unref(message);
        ret = NS_ERROR_FAILURE;
      } else {
@@ -185,7 +191,7 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader.cpp,v 1.1 2014/03
        gst_message_unref(message);
        ret = NS_OK;
        break;
-@@ -371,23 +381,8 @@ nsresult GStreamerReader::ReadMetadata(M
+@@ -371,23 +380,8 @@ nsresult GStreamerReader::ReadMetadata(M
      /* we couldn't get this to play */
      return ret;
  
@@ -209,7 +215,7 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader.cpp,v 1.1 2014/03
  
    if (isMP3 && mMP3FrameParser.IsMP3()) {
      // The MP3FrameParser has reported a duration; use that over the gstreamer
-@@ -396,17 +391,25 @@ nsresult GStreamerReader::ReadMetadata(M
+@@ -396,17 +390,25 @@ nsresult GStreamerReader::ReadMetadata(M
      mUseParserDuration = true;
      mLastParserDuration = mMP3FrameParser.GetDuration();
      mDecoder->SetMediaDuration(mLastParserDuration);
@@ -245,7 +251,7 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader.cpp,v 1.1 2014/03
    }
  
    int n_video = 0, n_audio = 0;
-@@ -419,7 +422,11 @@ nsresult GStreamerReader::ReadMetadata(M
+@@ -419,7 +421,11 @@ nsresult GStreamerReader::ReadMetadata(M
    *aTags = nullptr;
  
    // Watch the pipeline for fatal errors
@@ -257,7 +263,7 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader.cpp,v 1.1 2014/03
  
    /* set the pipeline to PLAYING so that it starts decoding and queueing data in
     * the appsinks */
-@@ -433,19 +440,35 @@ nsresult GStreamerReader::CheckSupported
+@@ -433,19 +439,35 @@ nsresult GStreamerReader::CheckSupported
    bool done = false;
    bool unsupported = false;
  
@@ -297,7 +303,7 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader.cpp,v 1.1 2014/03
  
              if (caps) {
                /* check for demuxers but ignore elements like id3demux */
-@@ -460,7 +483,11 @@ nsresult GStreamerReader::CheckSupported
+@@ -460,7 +482,11 @@ nsresult GStreamerReader::CheckSupported
            }
          }
  
@@ -309,7 +315,7 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader.cpp,v 1.1 2014/03
          done = unsupported;
          break;
        }
-@@ -484,6 +511,8 @@ nsresult GStreamerReader::ResetDecode()
+@@ -484,6 +510,8 @@ nsresult GStreamerReader::ResetDecode()
  {
    nsresult res = NS_OK;
  
@@ -318,7 +324,7 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader.cpp,v 1.1 2014/03
    if (NS_FAILED(MediaDecoderReader::ResetDecode())) {
      res = NS_ERROR_FAILURE;
    }
-@@ -494,6 +523,11 @@ nsresult GStreamerReader::ResetDecode()
+@@ -494,6 +522,11 @@ nsresult GStreamerReader::ResetDecode()
    mVideoSinkBufferCount = 0;
    mAudioSinkBufferCount = 0;
    mReachedEos = false;
@@ -330,7 +336,7 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader.cpp,v 1.1 2014/03
  
    return res;
  }
-@@ -517,11 +551,11 @@ bool GStreamerReader::DecodeAudioData()
+@@ -517,11 +550,11 @@ bool GStreamerReader::DecodeAudioData()
          /* We have nothing decoded so it makes no sense to return to the state machine
           * as it will call us back immediately, we'll return again and so on, wasting
           * CPU cycles for no job done. So, block here until there is either video or
@@ -344,7 +350,7 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader.cpp,v 1.1 2014/03
             * something else has happened (Eos, etc...). Return to the state machine
             * to process it.
             */
-@@ -533,24 +567,43 @@ bool GStreamerReader::DecodeAudioData()
+@@ -533,24 +566,44 @@ bool GStreamerReader::DecodeAudioData()
        }
      }
  
@@ -362,8 +368,9 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader.cpp,v 1.1 2014/03
    int64_t timestamp = GST_BUFFER_TIMESTAMP(buffer);
    timestamp = gst_segment_to_stream_time(&mAudioSegment,
        GST_FORMAT_TIME, timestamp);
-+  
++
    timestamp = GST_TIME_AS_USECONDS(timestamp);
++
    int64_t duration = 0;
    if (GST_CLOCK_TIME_IS_VALID(GST_BUFFER_DURATION(buffer)))
      duration = GST_TIME_AS_USECONDS(GST_BUFFER_DURATION(buffer));
@@ -430,7 +437,7 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader.cpp,v 1.1 2014/03
    if ((aKeyFrameSkip && !isKeyframe)) {
      gst_buffer_unref(buffer);
      return true;
-@@ -618,73 +677,55 @@ bool GStreamerReader::DecodeVideoFrame(b
+@@ -618,10 +677,18 @@ bool GStreamerReader::DecodeVideoFrame(b
                 "frame has invalid timestamp");
  
    timestamp = GST_TIME_AS_USECONDS(timestamp);
@@ -443,16 +450,14 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader.cpp,v 1.1 2014/03
 +
    if (timestamp < aTimeThreshold) {
      LOG(PR_LOG_DEBUG, "skipping frame %" GST_TIME_FORMAT
--                      " threshold %" GST_TIME_FORMAT,
+                       " threshold %" GST_TIME_FORMAT,
 -                      GST_TIME_ARGS(timestamp), GST_TIME_ARGS(aTimeThreshold));
-+                       " threshold %" GST_TIME_FORMAT,
-+                       GST_TIME_ARGS(timestamp * 1000),
-+                       GST_TIME_ARGS(aTimeThreshold * 1000));
++                      GST_TIME_ARGS(timestamp * 1000),
++                      GST_TIME_ARGS(aTimeThreshold * 1000));
      gst_buffer_unref(buffer);
      return true;
    }
--
-   if (!buffer)
+@@ -630,61 +697,36 @@ bool GStreamerReader::DecodeVideoFrame(b
      /* no more frames */
      return false;
  
@@ -532,7 +537,7 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader.cpp,v 1.1 2014/03
    gst_buffer_unref(buffer);
  
    return true;
-@@ -707,6 +748,10 @@ nsresult GStreamerReader::Seek(int64_t a
+@@ -707,6 +749,10 @@ nsresult GStreamerReader::Seek(int64_t a
      return NS_ERROR_FAILURE;
    }
    LOG(PR_LOG_DEBUG, "seek succeeded");
@@ -543,7 +548,7 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader.cpp,v 1.1 2014/03
  
    return DecodeToTarget(aTarget);
  }
-@@ -718,7 +763,9 @@ nsresult GStreamerReader::GetBuffered(do
+@@ -718,7 +764,9 @@ nsresult GStreamerReader::GetBuffered(do
      return NS_OK;
    }
  
@@ -553,7 +558,7 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader.cpp,v 1.1 2014/03
    MediaResource* resource = mDecoder->GetResource();
    nsTArray<MediaByteRange> ranges;
    resource->GetCachedRanges(ranges);
-@@ -740,12 +787,21 @@ nsresult GStreamerReader::GetBuffered(do
+@@ -740,12 +788,21 @@ nsresult GStreamerReader::GetBuffered(do
      int64_t endOffset = ranges[index].mEnd;
      gint64 startTime, endTime;
  
@@ -575,7 +580,7 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader.cpp,v 1.1 2014/03
  
      double start = (double) GST_TIME_AS_USECONDS (startTime) / GST_MSECOND;
      double end = (double) GST_TIME_AS_USECONDS (endTime) / GST_MSECOND;
-@@ -766,7 +822,13 @@ void GStreamerReader::ReadAndPushData(gu
+@@ -766,7 +823,13 @@ void GStreamerReader::ReadAndPushData(gu
    nsresult rv = NS_OK;
  
    GstBuffer* buffer = gst_buffer_new_and_alloc(aLength);
@@ -589,7 +594,7 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader.cpp,v 1.1 2014/03
    uint32_t size = 0, bytesRead = 0;
    while(bytesRead < aLength) {
      rv = resource->Read(reinterpret_cast<char*>(data + bytesRead),
-@@ -780,7 +842,12 @@ void GStreamerReader::ReadAndPushData(gu
+@@ -780,7 +843,12 @@ void GStreamerReader::ReadAndPushData(gu
    int64_t offset2 = resource->Tell();
    unused << offset2;
  
@@ -602,7 +607,7 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader.cpp,v 1.1 2014/03
  
    GstFlowReturn ret = gst_app_src_push_buffer(mSource, gst_buffer_ref(buffer));
    if (ret != GST_FLOW_OK) {
-@@ -813,8 +880,13 @@ int64_t GStreamerReader::QueryDuration()
+@@ -813,8 +881,13 @@ int64_t GStreamerReader::QueryDuration()
    gint64 duration = 0;
    GstFormat format = GST_FORMAT_TIME;
  
@@ -616,7 +621,7 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader.cpp,v 1.1 2014/03
      if (format == GST_FORMAT_TIME) {
        LOG(PR_LOG_DEBUG, "pipeline duration %" GST_TIME_FORMAT,
              GST_TIME_ARGS (duration));
-@@ -893,108 +965,6 @@ gboolean GStreamerReader::SeekData(GstAp
+@@ -893,109 +966,6 @@ gboolean GStreamerReader::SeekData(GstAp
    return NS_SUCCEEDED(rv);
  }
  
@@ -680,8 +685,9 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader.cpp,v 1.1 2014/03
 -    // element.
 -    return GST_FLOW_NOT_SUPPORTED;
 -  }
--  ImageFormat format = PLANAR_YCBCR;
--  PlanarYCbCrImage* img = reinterpret_cast<PlanarYCbCrImage*>(container->CreateImage(&format, 1).get());
+-  PlanarYCbCrImage* img =
+-    reinterpret_cast<PlanarYCbCrImage*>(
+-      container->CreateImage(ImageFormat::PLANAR_YCBCR).get());
 -  nsRefPtr<PlanarYCbCrImage> image = dont_AddRef(img);
 -
 -  /* prepare a GstBuffer pointing to the underlying PlanarYCbCrImage buffer */
@@ -725,7 +731,7 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader.cpp,v 1.1 2014/03
  GstFlowReturn GStreamerReader::NewPrerollCb(GstAppSink* aSink,
                                                gpointer aUserData)
  {
-@@ -1011,8 +981,12 @@ void GStreamerReader::AudioPreroll()
+@@ -1012,8 +982,12 @@ void GStreamerReader::AudioPreroll()
  {
    /* The first audio buffer has reached the audio sink. Get rate and channels */
    LOG(PR_LOG_DEBUG, "Audio preroll");
@@ -739,7 +745,7 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader.cpp,v 1.1 2014/03
    GstStructure* s = gst_caps_get_structure(caps, 0);
    mInfo.mAudio.mRate = mInfo.mAudio.mChannels = 0;
    gst_structure_get_int(s, "rate", (gint*) &mInfo.mAudio.mRate);
-@@ -1030,9 +1004,18 @@ void GStreamerReader::VideoPreroll()
+@@ -1031,9 +1005,18 @@ void GStreamerReader::VideoPreroll()
  {
    /* The first video buffer has reached the video sink. Get width and height */
    LOG(PR_LOG_DEBUG, "Video preroll");
@@ -759,7 +765,7 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader.cpp,v 1.1 2014/03
    GstStructure* structure = gst_caps_get_structure(caps, 0);
    gst_structure_get_fraction(structure, "framerate", &fpsNum, &fpsDen);
    NS_ASSERTION(mPicture.width && mPicture.height, "invalid video resolution");
-@@ -1061,6 +1044,7 @@ void GStreamerReader::NewVideoBuffer()
+@@ -1062,6 +1045,7 @@ void GStreamerReader::NewVideoBuffer()
    /* We have a new video buffer queued in the video sink. Increment the counter
     * and notify the decode thread potentially blocked in DecodeVideoFrame
     */
@@ -767,7 +773,7 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader.cpp,v 1.1 2014/03
    mDecoder->NotifyDecodedFrames(1, 0);
    mVideoSinkBufferCount++;
    mon.NotifyAll();
-@@ -1197,5 +1181,199 @@ void GStreamerReader::NotifyDataArrived(
+@@ -1198,5 +1182,199 @@ void GStreamerReader::NotifyDataArrived(
    }
  }
  
@@ -908,16 +914,16 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader.cpp,v 1.1 2014/03
 +               "Unsupported number of components in video frame");
 +
 +  aData->mPicX = aData->mPicY = 0;
-+  aData->mPicSize = nsIntSize(mPicture.width, mPicture.height);
-+  aData->mStereoMode = STEREO_MODE_MONO;
++  aData->mPicSize = gfx::IntSize(mPicture.width, mPicture.height);
++  aData->mStereoMode = StereoMode::MONO;
 +
 +  aData->mYChannel = GST_VIDEO_FRAME_COMP_DATA(aFrame, 0);
 +  aData->mYStride = GST_VIDEO_FRAME_COMP_STRIDE(aFrame, 0);
-+  aData->mYSize = nsIntSize(GST_VIDEO_FRAME_COMP_WIDTH(aFrame, 0),
++  aData->mYSize = gfx::IntSize(GST_VIDEO_FRAME_COMP_WIDTH(aFrame, 0),
 +                          GST_VIDEO_FRAME_COMP_HEIGHT(aFrame, 0));
 +  aData->mYSkip = GST_VIDEO_FRAME_COMP_PSTRIDE(aFrame, 0) - 1;
 +  aData->mCbCrStride = GST_VIDEO_FRAME_COMP_STRIDE(aFrame, 1);
-+  aData->mCbCrSize = nsIntSize(GST_VIDEO_FRAME_COMP_WIDTH(aFrame, 1),
++  aData->mCbCrSize = gfx::IntSize(GST_VIDEO_FRAME_COMP_WIDTH(aFrame, 1),
 +                             GST_VIDEO_FRAME_COMP_HEIGHT(aFrame, 1));
 +  aData->mCbChannel = GST_VIDEO_FRAME_COMP_DATA(aFrame, 1);
 +  aData->mCrChannel = GST_VIDEO_FRAME_COMP_DATA(aFrame, 2);

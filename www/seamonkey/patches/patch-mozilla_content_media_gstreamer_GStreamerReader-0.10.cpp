@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader-0.10.cpp,v 1.1 2014/03/30 04:13:17 ryoon Exp $
+$NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader-0.10.cpp,v 1.2 2014/06/22 08:54:39 ryoon Exp $
 
---- mozilla/content/media/gstreamer/GStreamerReader-0.10.cpp.orig	2014-03-29 04:22:17.000000000 +0000
+--- mozilla/content/media/gstreamer/GStreamerReader-0.10.cpp.orig	2014-06-21 11:28:32.000000000 +0000
 +++ mozilla/content/media/gstreamer/GStreamerReader-0.10.cpp
-@@ -0,0 +1,203 @@
+@@ -0,0 +1,200 @@
 +#include "nsError.h"
 +#include "MediaDecoderStateMachine.h"
 +#include "AbstractMediaDecoder.h"
@@ -47,13 +47,10 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader-0.10.cpp,v 1.1 20
 +{
 +  /* allocate an image using the container */
 +  ImageContainer* container = mDecoder->GetImageContainer();
-+  if (!container) {
-+    // We don't have an ImageContainer. We probably belong to an <audio>
-+    // element.
-+    return GST_FLOW_NOT_SUPPORTED;
++  if (container == nullptr) {
++    return GST_FLOW_ERROR;
 +  }
-+  ImageFormat format = PLANAR_YCBCR;
-+  PlanarYCbCrImage* img = reinterpret_cast<PlanarYCbCrImage*>(container->CreateImage(&format, 1).get());
++  PlanarYCbCrImage* img = reinterpret_cast<PlanarYCbCrImage*>(container->CreateImage(ImageFormat::PLANAR_YCBCR).get());
 +  nsRefPtr<PlanarYCbCrImage> image = dont_AddRef(img);
 +
 +  /* prepare a GstBuffer pointing to the underlying PlanarYCbCrImage buffer */
@@ -131,16 +128,16 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerReader-0.10.cpp,v 1.1 20
 +
 +  PlanarYCbCrImage::Data data;
 +  data.mPicX = data.mPicY = 0;
-+  data.mPicSize = nsIntSize(mPicture.width, mPicture.height);
-+  data.mStereoMode = STEREO_MODE_MONO;
++  data.mPicSize = gfx::IntSize(mPicture.width, mPicture.height);
++  data.mStereoMode = StereoMode::MONO;
 +
 +  data.mYChannel = GST_BUFFER_DATA(aBuffer);
 +  data.mYStride = gst_video_format_get_row_stride(mFormat, 0, mPicture.width);
-+  data.mYSize = nsIntSize(data.mYStride,
++  data.mYSize = gfx::IntSize(data.mYStride,
 +      gst_video_format_get_component_height(mFormat, 0, mPicture.height));
 +  data.mYSkip = 0;
 +  data.mCbCrStride = gst_video_format_get_row_stride(mFormat, 1, mPicture.width);
-+  data.mCbCrSize = nsIntSize(data.mCbCrStride,
++  data.mCbCrSize = gfx::IntSize(data.mCbCrStride,
 +      gst_video_format_get_component_height(mFormat, 1, mPicture.height));
 +  data.mCbChannel = data.mYChannel + gst_video_format_get_component_offset(mFormat, 1,
 +      mPicture.width, mPicture.height);

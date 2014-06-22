@@ -1,0 +1,13 @@
+$NetBSD: patch-mozilla_media_libcubeb_src_moz.build,v 1.1 2014/06/22 08:54:39 ryoon Exp $
+
+--- mozilla/media/libcubeb/src/moz.build.orig	2014-06-13 00:46:10.000000000 +0000
++++ mozilla/media/libcubeb/src/moz.build
+@@ -28,7 +28,7 @@ if CONFIG['OS_ARCH'] == 'OpenBSD':
+     ]
+     DEFINES['USE_SNDIO'] = True
+ 
+-if CONFIG['OS_TARGET'] == 'Darwin':
++if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'cocoa':
+     SOURCES += [
+         'cubeb_audiounit.c',
+     ]
