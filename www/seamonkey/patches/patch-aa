@@ -1,8 +1,40 @@
-$NetBSD: patch-aa,v 1.21 2014/03/30 04:13:17 ryoon Exp $
+$NetBSD: patch-aa,v 1.22 2014/06/22 08:54:39 ryoon Exp $
 
---- mozilla/configure.in.orig	2014-03-19 01:41:46.000000000 +0000
+--- mozilla/configure.in.orig	2014-06-13 00:46:03.000000000 +0000
 +++ mozilla/configure.in
-@@ -2544,118 +2544,15 @@ MOZ_CXX11
+@@ -1613,7 +1613,13 @@ Linux)
+         MOZ_ENABLE_PROFILER_SPS=
+     esac
+     ;;
+-WINNT|Darwin) ;;
++WINNT|Darwin)
++    case "${CPU_ARCH}" in
++    x86 | x86_64) ;;
++    *)
++        MOZ_ENABLE_PROFILER_SPS=
++    esac
++    ;;
+ *)
+     MOZ_ENABLE_PROFILER_SPS=
+     ;;
+@@ -1717,7 +1723,7 @@ case "$host" in
+     ;;
+ 
+ *-darwin*)
+-    HOST_CFLAGS="$HOST_CFLAGS -DXP_UNIX -DXP_MACOSX -DNO_X11"
++    HOST_CFLAGS="$HOST_CFLAGS -DXP_UNIX"
+     HOST_NSPR_MDCPUCFG='\"md/_darwin.cfg\"'
+     HOST_OPTIMIZE_FLAGS="${HOST_OPTIMIZE_FLAGS=-O3}"
+     ;;
+@@ -1857,7 +1863,6 @@ case "$target" in
+         AC_DEFINE(XP_DARWIN)
+         _PLATFORM_DEFAULT_TOOLKIT='cairo-uikit'
+     else
+-        AC_DEFINE(XP_MACOSX)
+         AC_DEFINE(XP_DARWIN)
+         _PLATFORM_DEFAULT_TOOLKIT='cairo-cocoa'
+         # The ExceptionHandling framework is needed for Objective-C exception
+@@ -2534,118 +2539,15 @@ MOZ_CXX11
  
  AC_LANG_C
  
@@ -128,7 +160,7 @@ $NetBSD: patch-aa,v 1.21 2014/03/30 04:13:17 ryoon Exp $
  fi         # GNU_CC
  
  # visibility hidden flag for Sun Studio on Solaris
-@@ -3724,6 +3621,14 @@ if test -n "$YASM"; then
+@@ -3711,6 +3613,14 @@ if test -n "$YASM"; then
    _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
  fi
  
@@ -143,7 +175,7 @@ $NetBSD: patch-aa,v 1.21 2014/03/30 04:13:17 ryoon Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -3751,11 +3656,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
+@@ -3738,11 +3648,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
                       #include <jpeglib.h> ],
                     [ #if JPEG_LIB_VERSION < $MOZJPEG
                       #error "Insufficient JPEG library version ($MOZJPEG required)."
@@ -156,7 +188,7 @@ $NetBSD: patch-aa,v 1.21 2014/03/30 04:13:17 ryoon Exp $
                     MOZ_NATIVE_JPEG=1,
                     AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
  fi
-@@ -3921,6 +3822,22 @@ fi
+@@ -3940,6 +3846,22 @@ fi
  AC_SUBST(MOZ_NATIVE_ICU)
  
  dnl ========================================================
@@ -179,7 +211,7 @@ $NetBSD: patch-aa,v 1.21 2014/03/30 04:13:17 ryoon Exp $
  dnl Java SDK support
  dnl ========================================================
  
-@@ -3955,6 +3872,7 @@ MOZ_SAMPLE_TYPE_FLOAT32=
+@@ -3974,6 +3896,7 @@ MOZ_SAMPLE_TYPE_FLOAT32=
  MOZ_SAMPLE_TYPE_S16=
  MOZ_OPUS=1
  MOZ_WEBM=1
@@ -187,9 +219,20 @@ $NetBSD: patch-aa,v 1.21 2014/03/30 04:13:17 ryoon Exp $
  MOZ_DIRECTSHOW=
  MOZ_WMF=
  MOZ_FMP4=
-@@ -5136,6 +5054,9 @@ if test -n "$MOZ_WEBRTC"; then
-     MOZ_VP8=1
-     MOZ_VP8_ERROR_CONCEALMENT=1
+@@ -4433,6 +4356,10 @@ cairo-gonk)
+ 
+ esac
+ 
++if test "$MOZ_WIDGET_TOOLKIT" = "cocoa"; then
++   AC_DEFINE(XP_MACOSX)
++fi
++
+ AC_SUBST(MOZ_PDF_PRINTING)
+ if test "$MOZ_PDF_PRINTING"; then
+    PDF_SURFACE_FEATURE="#define CAIRO_HAS_PDF_SURFACE 1"
+@@ -5135,6 +5062,9 @@ if test -n "$MOZ_WEBRTC"; then
+     MOZ_VPX=1
+     MOZ_VPX_ERROR_CONCEALMENT=1
  
 +    dnl with libv4l2 we can support more cameras
 +    PKG_CHECK_MODULES(MOZ_LIBV4L2, libv4l2)
@@ -197,13 +240,13 @@ $NetBSD: patch-aa,v 1.21 2014/03/30 04:13:17 ryoon Exp $
  dnl enable once Signaling lands
      MOZ_WEBRTC_SIGNALING=1
      AC_DEFINE(MOZ_WEBRTC_SIGNALING)
-@@ -5158,15 +5079,18 @@ AC_SUBST(MOZ_SRTP)
+@@ -5157,15 +5087,18 @@ AC_SUBST(MOZ_SRTP)
  
  dnl Use integers over floats for audio on B2G and Android, because audio
  dnl backends for those platforms don't support floats.
 -if test "$OS_TARGET" = "Android"; then
 +case "$OS_TARGET" in
-+ndroid|DragonFly|FreeBSD|NetBSD|OpenBSD)
++Android)
      MOZ_SAMPLE_TYPE_S16=1
      AC_DEFINE(MOZ_SAMPLE_TYPE_S16)
      AC_SUBST(MOZ_SAMPLE_TYPE_S16)
@@ -219,7 +262,7 @@ $NetBSD: patch-aa,v 1.21 2014/03/30 04:13:17 ryoon Exp $
  
  dnl ========================================================
  dnl = Disable Speech API code
-@@ -5230,6 +5154,40 @@ if test -n "$MOZ_OGG"; then
+@@ -5229,6 +5162,57 @@ if test -n "$MOZ_OGG"; then
  fi
  
  dnl ========================================================
@@ -229,7 +272,7 @@ $NetBSD: patch-aa,v 1.21 2014/03/30 04:13:17 ryoon Exp $
 +MOZ_ARG_WITH_BOOL(system-ogg,
 +[  --with-system-ogg       Use system libogg (located with pkgconfig)],
 +MOZ_NATIVE_OGG=1,
-+MOZ_NATIVE_OGG= )
++MOZ_NATIVE_OGG=)
 +
 +if test -n "$MOZ_NATIVE_OGG"; then
 +    PKG_CHECK_MODULES(MOZ_OGG, ogg >= 1.2.1)
@@ -246,7 +289,7 @@ $NetBSD: patch-aa,v 1.21 2014/03/30 04:13:17 ryoon Exp $
 +MOZ_ARG_WITH_BOOL(system-vorbis,
 +[  --with-system-vorbis    Use system libvorbis (located with pkgconfig)],
 +MOZ_NATIVE_VORBIS=1,
-+MOZ_NATIVE_VORBIS= )
++MOZ_NATIVE_VORBIS=)
 +
 +if test -n "$MOZ_NATIVE_VORBIS"; then
 +    PKG_CHECK_MODULES(MOZ_VORBIS, vorbis vorbisenc >= 1.3.4)
@@ -257,10 +300,27 @@ $NetBSD: patch-aa,v 1.21 2014/03/30 04:13:17 ryoon Exp $
 +AC_SUBST(MOZ_VORBIS_LIBS)
 +
 +dnl ========================================================
++dnl Check for integer-only libvorbis aka tremor
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-tremor,
++[  --with-system-tremor    Use system libtremor (located with pkgconfig)],
++MOZ_NATIVE_TREMOR=1,
++MOZ_NATIVE_TREMOR=)
++
++if test -n "$MOZ_NATIVE_TREMOR"; then
++    PKG_CHECK_MODULES(MOZ_TREMOR, vorbisidec >= 1.2.1)
++fi
++
++AC_SUBST(MOZ_NATIVE_TREMOR)
++AC_SUBST(MOZ_TREMOR_CFLAGS)
++AC_SUBST(MOZ_TREMOR_LIBS)
++
++dnl ========================================================
  dnl = Disable Opus audio codec support
  dnl ========================================================
  MOZ_ARG_DISABLE_BOOL(opus,
-@@ -5238,6 +5196,25 @@ MOZ_ARG_DISABLE_BOOL(opus,
+@@ -5237,6 +5221,76 @@ MOZ_ARG_DISABLE_BOOL(opus,
      MOZ_OPUS=1)
  
  dnl ========================================================
@@ -270,7 +330,7 @@ $NetBSD: patch-aa,v 1.21 2014/03/30 04:13:17 ryoon Exp $
 +MOZ_ARG_WITH_BOOL(system-opus,
 +[  --with-system-opus      Use system libopus (located with pkgconfig)],
 +MOZ_NATIVE_OPUS=1,
-+MOZ_NATIVE_OPUS= )
++MOZ_NATIVE_OPUS=)
 +
 +if test -n "$MOZ_NATIVE_OPUS"; then
 +    PKG_CHECK_MODULES(MOZ_OPUS, opus >= 1.1)
@@ -283,15 +343,67 @@ $NetBSD: patch-aa,v 1.21 2014/03/30 04:13:17 ryoon Exp $
 +AC_SUBST(MOZ_OPUS_LIBS)
 +
 +dnl ========================================================
++dnl Check for libtheora
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-theora,
++[  --with-system-theora    Use system libtheora (located with pkgconfig)],
++MOZ_NATIVE_THEORA=1,
++MOZ_NATIVE_THEORA=)
++
++if test -n "$MOZ_NATIVE_THEORA"; then
++    PKG_CHECK_MODULES(MOZ_THEORA, theora >= 1.2)
++fi
++
++AC_SUBST(MOZ_NATIVE_THEORA)
++AC_SUBST(MOZ_THEORA_CFLAGS)
++AC_SUBST(MOZ_THEORA_LIBS)
++
++dnl ========================================================
++dnl Check for libspeex resampler
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-speex,
++[  --with-system-speex     Use system libspeex (located with pkgconfig)],
++MOZ_NATIVE_SPEEX=1,
++MOZ_NATIVE_SPEEX=)
++
++if test -n "$MOZ_NATIVE_SPEEX"; then
++    PKG_CHECK_MODULES(MOZ_SPEEX, speexdsp >= 1.2)
++fi
++
++AC_SUBST(MOZ_NATIVE_SPEEX)
++AC_SUBST(MOZ_SPEEX_CFLAGS)
++AC_SUBST(MOZ_SPEEX_LIBS)
++
++dnl ========================================================
++dnl Check for libsoundtouch
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-soundtouch,
++[  --with-system-soundtouch Use system libsoundtouch (located with pkgconfig)],
++MOZ_NATIVE_SOUNDTOUCH=1,
++MOZ_NATIVE_SOUNDTOUCH=)
++
++if test -n "$MOZ_NATIVE_SOUNDTOUCH"; then
++    PKG_CHECK_MODULES(MOZ_SOUNDTOUCH, soundtouch >= 1.7.0)
++fi
++
++AC_SUBST(MOZ_NATIVE_SOUNDTOUCH)
++AC_SUBST(MOZ_SOUNDTOUCH_CFLAGS)
++AC_SUBST(MOZ_SOUNDTOUCH_LIBS)
++
++dnl ========================================================
  dnl = Disable VP8 decoder support
  dnl ========================================================
  MOZ_ARG_DISABLE_BOOL(webm,
-@@ -5606,43 +5583,60 @@ dnl = Enable GStreamer
- dnl ========================================================
- if test "$OS_TARGET" = "Linux"; then
-   MOZ_GSTREAMER=1
-+  GST_API_VERSION=0.10
- fi
+@@ -5615,44 +5669,61 @@ WINNT|Darwin|Android)
+     ;;
+ *)
+     MOZ_GSTREAMER=1
++    GST_API_VERSION=0.10
+     ;;
+ esac
  
 -MOZ_ARG_ENABLE_BOOL(gstreamer,
 -[  --enable-gstreamer           Enable GStreamer support],
@@ -371,44 +483,62 @@ $NetBSD: patch-aa,v 1.21 2014/03/30 04:13:17 ryoon Exp $
  fi
  
  
-@@ -7424,7 +7418,10 @@ dnl ====================================
- dnl = Support for gcc stack unwinding (from gcc 3.3)
- dnl ========================================================
- if test -z "$SKIP_LIBRARY_CHECKS"; then
-+    AC_LANG_SAVE
-+    AC_LANG_CPLUSPLUS
-     MOZ_CHECK_HEADER(unwind.h, AC_CHECK_FUNCS(_Unwind_Backtrace))
-+    AC_LANG_RESTORE
+@@ -5866,7 +5937,9 @@ MOZ_ARG_DISABLE_BOOL(gamepad,
+ if test "$MOZ_GAMEPAD"; then
+     case "$OS_TARGET" in
+     Darwin)
+-        MOZ_GAMEPAD_BACKEND=cocoa
++        if test "$MOZ_WIDGET_TOOLKIT" = "cocoa"; then
++            MOZ_GAMEPAD_BACKEND=cocoa
++        fi
+         ;;
+     WINNT)
+         if test -n "$MOZ_DIRECTX_SDK_PATH" ; then
+@@ -7939,6 +8012,52 @@ if test "$USE_FC_FREETYPE"; then
  fi
  
  dnl ========================================================
-@@ -7870,6 +7867,34 @@ if test "$USE_FC_FREETYPE"; then
- fi
- 
- dnl ========================================================
-+dnl Check for graphite2 and harfbuzz
++dnl Check for harfbuzz
 +dnl ========================================================
 +
 +MOZ_ARG_WITH_BOOL(system-harfbuzz,
 +[  --with-system-harfbuzz  Use system harfbuzz (located with pkgconfig)],
 +MOZ_NATIVE_HARFBUZZ=1,
-+MOZ_NATIVE_HARFBUZZ= )
++MOZ_NATIVE_HARFBUZZ=)
 +
 +if test -n "$MOZ_NATIVE_HARFBUZZ"; then
 +    PKG_CHECK_MODULES(MOZ_HARFBUZZ, harfbuzz >= 0.9.25)
 +fi
++
 +AC_SUBST(MOZ_NATIVE_HARFBUZZ)
 +AC_SUBST(MOZ_HARFBUZZ_CFLAGS)
 +AC_SUBST(MOZ_HARFBUZZ_LIBS)
 +
++dnl ========================================================
++dnl Check for graphite2
++dnl ========================================================
 +MOZ_ARG_WITH_BOOL(system-graphite2,
 +[  --with-system-graphite2 Use system graphite2 (located with pkgconfig)],
 +MOZ_NATIVE_GRAPHITE2=1,
-+MOZ_NATIVE_GRAPHITE2= )
++MOZ_NATIVE_GRAPHITE2=)
 +
 +if test -n "$MOZ_NATIVE_GRAPHITE2"; then
-+    PKG_CHECK_MODULES(MOZ_GRAPHITE2, graphite2 >= 1.2.4)
++    PKG_CHECK_MODULES(MOZ_GRAPHITE2, graphite2)
++
++    dnl graphite2.pc has bogus version, check manually
++    AC_TRY_COMPILE([ #include <graphite2/Font.h>
++                     #define GR2_VERSION_REQUIRE(major,minor,bugfix)  \
++                             ( GR2_VERSION_MAJOR * 10000 + GR2_VERSION_MINOR \
++                               * 100 + GR2_VERSION_BUGFIX >= \
++                               (major) * 10000 + (minor) * 100 + (bugfix) )
++                   ], [
++                     #if !GR2_VERSION_REQUIRE(1,2,4)
++                     #error "Insufficient graphite2 version."
++                     #endif
++                   ], [],
++                   [AC_MSG_ERROR([--with-system-graphite2 requested but no working libgraphite2 found])])
 +fi
++
 +AC_SUBST(MOZ_NATIVE_GRAPHITE2)
 +AC_SUBST(MOZ_GRAPHITE2_CFLAGS)
 +AC_SUBST(MOZ_GRAPHITE2_LIBS)
@@ -417,7 +547,7 @@ $NetBSD: patch-aa,v 1.21 2014/03/30 04:13:17 ryoon Exp $
  dnl Check for pixman and cairo
  dnl ========================================================
  
-@@ -8118,7 +8143,7 @@ case "$OS_TARGET" in
+@@ -8189,7 +8308,7 @@ case "$OS_TARGET" in
        NECKO_WIFI=1
      fi
      ;;
@@ -426,7 +556,7 @@ $NetBSD: patch-aa,v 1.21 2014/03/30 04:13:17 ryoon Exp $
      NECKO_WIFI=1
      ;;
    Linux)
-@@ -8665,6 +8690,20 @@ AC_SUBST(MOZ_ENABLE_SZIP)
+@@ -8736,6 +8855,20 @@ AC_SUBST(MOZ_ENABLE_SZIP)
  AC_SUBST(MOZ_SZIP_FLAGS)
  
  if test -n "$COMPILE_ENVIRONMENT"; then
@@ -447,14 +577,3 @@ $NetBSD: patch-aa,v 1.21 2014/03/30 04:13:17 ryoon Exp $
  AC_MSG_CHECKING([for posix_fallocate])
  AC_TRY_LINK([#define _XOPEN_SOURCE 600
    #include <fcntl.h>],
-@@ -8918,6 +8957,10 @@ if test -n "$INTEL_ARCHITECTURE"; then
-   fi
- fi
- 
-+if test -n "$MOZ_LIBV4L2_LIBS"; then
-+   EXTRA_GYP_DEFINES="$EXTRA_GYP_DEFINES -D use_libv4l2=1"
-+fi
-+
- if test -n "$MOZ_WEBRTC"; then
-    AC_MSG_RESULT("generating WebRTC Makefiles...")
- 
