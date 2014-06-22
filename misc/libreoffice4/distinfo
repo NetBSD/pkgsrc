@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2014/06/03 03:21:39 ryoon Exp $
+$NetBSD: distinfo,v 1.19 2014/06/22 23:59:35 ryoon Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -138,9 +138,9 @@ Size (libreoffice/libreoffice-translations-4.2.4.2.tar.xz) = 127819696 bytes
 SHA1 (patch-bridges_source_cpp__uno_gcc3__linux__intel_except.cxx) = b7eb550e24f6fa5ff5a6c4121836803360a0883f
 SHA1 (patch-bridges_source_cpp__uno_gcc3__linux__intel_share.hxx) = 5e02fb3bf5b446ed705b1ca4d6e38d9d3dbd73b6
 SHA1 (patch-bridges_source_cpp__uno_gcc3__linux__intel_uno2cpp.cxx) = b01d697451973a873247a370ebec2cd5c3a8029d
-SHA1 (patch-bridges_source_cpp__uno_gcc3__linux__x86-64_share.hxx) = 2becfe2404078ad6729c236dcc39994dc277eca6
+SHA1 (patch-bridges_source_cpp__uno_gcc3__linux__x86-64_share.hxx) = de4e7978cd364d3aff5d1495199f60759c53380e
 SHA1 (patch-bridges_source_cpp__uno_gcc3__linux__x86-64_uno2cpp.cxx) = 5022ad96533aa1681e6fab323cadf803281a6c17
-SHA1 (patch-configure.ac) = 63ebfaae5d119dad6ce87d221fc71598b25f0b93
+SHA1 (patch-configure.ac) = 181d1b37eebe892cb0999d55c0d0de0ce286a332
 SHA1 (patch-connectivity_source_parse_sqlbison.y) = 2dd006e2a039a4dddaca4357466bb45f3a1e0cd1
 SHA1 (patch-i18npool_CustomTarget__collator.mk) = 8d5304470e47f48e0febdbe0072bf99016334828
 SHA1 (patch-i18npool_Library__collator__data.mk) = a50574288ed7d6ad0bf45b6f0c30ad63a4043721

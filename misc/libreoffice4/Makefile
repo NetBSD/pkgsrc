@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2014/06/18 09:28:16 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2014/06/22 23:59:35 ryoon Exp $
 
 VER=		4.2.4.2
 DISTNAME=	libreoffice-${VER}
 PKGNAME=	libreoffice4-${VER}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/4.2.4/
 EXTRACT_SUFX=	.tar.xz
@@ -25,8 +25,6 @@ MAKE_JOBS_SAFE=	no
 CHECK_SHLIBS_SUPPORTED=	no
 
 DIST_SUBDIR=	libreoffice
-
-PYTHON_VERSIONS_ACCEPTED=	33
 
 LO_BOOTSTRAP=	${DISTNAME}
 LO_COMPONENTS=	dictionaries help translations
@@ -197,6 +195,11 @@ BUILD_MAKE_FLAGS+=	VERBOSE=true
 BUILDLINK_TRANSFORM+=	rm:-ldl
 
 INSTALLATION_DIRS=	bin share/applications
+
+.PHONY: debugrun
+# For debugging
+debugrun:
+	cd ${WRKSRC} && gmake debugrun
 
 post-extract:
 	${MKDIR} -p ${WRKSRC}/src

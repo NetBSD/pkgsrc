@@ -1,4 +1,4 @@
-$NetBSD: patch-bridges_source_cpp__uno_gcc3__linux__x86-64_share.hxx,v 1.4 2014/06/01 14:31:08 ryoon Exp $
+$NetBSD: patch-bridges_source_cpp__uno_gcc3__linux__x86-64_share.hxx,v 1.5 2014/06/22 23:59:36 ryoon Exp $
 
 --- bridges/source/cpp_uno/gcc3_linux_x86-64/share.hxx.orig	2014-04-30 19:49:45.000000000 +0000
 +++ bridges/source/cpp_uno/gcc3_linux_x86-64/share.hxx
@@ -35,16 +35,16 @@ $NetBSD: patch-bridges_source_cpp__uno_gcc3__linux__x86-64_share.hxx,v 1.4 2014/
  namespace CPPU_CURRENT_NAMESPACE
  {
  
-@@ -101,6 +127,9 @@ extern "C" void __cxa_throw(
-     __attribute__((noreturn));
+@@ -102,6 +128,9 @@ extern "C" void __cxa_throw(
  }
  #endif
-+
+ 
 +
 +#endif
- 
++
  namespace CPPU_CURRENT_NAMESPACE
  {
+ 
 @@ -110,7 +139,11 @@ void raiseException(
      uno_Any * pUnoExc, uno_Mapping * pUno2Cpp );
  //==================================================================================================
