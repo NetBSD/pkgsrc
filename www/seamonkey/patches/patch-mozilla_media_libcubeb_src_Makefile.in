@@ -1,0 +1,15 @@
+$NetBSD: patch-mozilla_media_libcubeb_src_Makefile.in,v 1.5 2014/06/22 08:54:39 ryoon Exp $
+
+--- mozilla/media/libcubeb/src/Makefile.in.orig	2014-06-13 00:46:10.000000000 +0000
++++ mozilla/media/libcubeb/src/Makefile.in
+@@ -10,6 +10,10 @@ CFLAGS += \
+         $(MOZ_PULSEAUDIO_CFLAGS) \
+         $(NULL)
+ 
++ifdef MOZ_NATIVE_SPEEX
++CFLAGS += $(MOZ_SPEEX_CFLAGS)
++endif
++
+ ifeq ($(MOZ_WIDGET_TOOLKIT),gonk)
+ LOCAL_INCLUDES += -I$(ANDROID_SOURCE)/frameworks/wilhelm/include \
+                   -I$(ANDROID_SOURCE)/system/media/wilhelm/include
