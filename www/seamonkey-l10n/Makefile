@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.28 2014/03/30 04:23:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2014/06/22 09:15:43 ryoon Exp $
 #
 
-SM_VER=		2.25
+SM_VER=		2.26.1
 PKGNAME=	seamonkey-l10n-${SM_VER:S/b/beta/}
 DISTNAME=	# empty
 CATEGORIES=	www
-#MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/langpack/}
-MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=seamonkey/releases/${SM_VER}/langpack/}
+MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/langpack/}
+#MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=seamonkey/releases/${SM_VER}/langpack/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.seamonkey-project.org/
