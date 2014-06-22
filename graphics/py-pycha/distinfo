@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2013/08/15 20:57:14 richard Exp $
+$NetBSD: distinfo,v 1.3 2014/06/22 16:28:55 richard Exp $
 
-SHA1 (pycha-0.6.0.tar.gz) = b1030f05b472686cec500da4d6ffcd09f825e319
-RMD160 (pycha-0.6.0.tar.gz) = a731748d00f1c50c8959609d96ff58be81845c11
-Size (pycha-0.6.0.tar.gz) = 39267 bytes
+SHA1 (pycha-0.7.0.tar.gz) = a03b5d2a8ac35e21d8db3d3c2135e1b3245757ef
+RMD160 (pycha-0.7.0.tar.gz) = fb79e48bfcc8871f6b527f9a11df0a2ad860f481
+Size (pycha-0.7.0.tar.gz) = 41570 bytes
 SHA1 (patch-chavier_app.py) = 11f3e5d310772fc8bf5c8eba48a5e9b9acdbcc1f
