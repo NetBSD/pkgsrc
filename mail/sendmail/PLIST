@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2014/06/21 18:39:27 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.22 2014/06/22 11:42:35 hauke Exp $
 bin/hoststat
 bin/mailq
 bin/newaliases
@@ -18,7 +18,6 @@ man/man8/mail.local.8
 man/man8/mailstats.8
 man/man8/makemap.8
 man/man8/praliases.8
-man/man8/rmail.8
 man/man8/sendmail.8
 man/man8/smrsh.8
 sbin/editmap
