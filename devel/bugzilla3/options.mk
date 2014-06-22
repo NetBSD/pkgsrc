@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2014/05/31 12:22:42 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2014/06/22 19:47:22 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bugzilla
 
@@ -58,13 +58,7 @@ DEPENDS+=	p5-HTML-Parser>=3.40:../../www/p5-HTML-Parser
 DEPENDS+=	p5-CGI>=3.11:../../www/p5-CGI
 DEPENDS+=	p5-Apache-DBI>=0.96:../../databases/p5-Apache-DBI
 . if defined(PKG_APACHE)
-.  if !empty(PKG_APACHE:Mapache2)
-.   include "../../www/ap2-perl/buildlink3.mk"
-.  elif !empty(PKG_APACHE:Mapache22)
-.   include "../../www/ap2-perl/buildlink3.mk"
-.  elif !empty(PKG_APACHE:Mapache13)
-.   include "../../www/ap-perl/buildlink3.mk"
-.  endif
+.  include "../../www/ap2-perl/buildlink3.mk"
 . endif
 .endif
 
