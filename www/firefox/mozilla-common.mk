@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.38 2014/06/17 13:06:09 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.39 2014/06/22 08:56:08 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -122,7 +122,7 @@ SUBST_FILES.python+=	media/webrtc/trunk/build/common.gypi
 SUBST_SED.python+=	-e 's,<!(python,<!(${PYTHONBIN},'
 
 # Build outside ${WRKSRC}
-# Try to conflict with config/makefiles/xpidl/Makefile.in
+# Try to avoid conflict with config/makefiles/xpidl/Makefile.in
 OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
