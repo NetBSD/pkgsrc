@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info__linux.cc,v 1.4 2014/03/30 04:13:17 ryoon Exp $
+$NetBSD: patch-mozilla_media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info__linux.cc,v 1.5 2014/06/22 08:54:39 ryoon Exp $
 
---- mozilla/media/webrtc/trunk/webrtc/modules/video_capture/linux/device_info_linux.cc.orig	2014-03-19 01:42:09.000000000 +0000
+--- mozilla/media/webrtc/trunk/webrtc/modules/video_capture/linux/device_info_linux.cc.orig	2014-06-13 00:46:10.000000000 +0000
 +++ mozilla/media/webrtc/trunk/webrtc/modules/video_capture/linux/device_info_linux.cc
-@@ -18,17 +18,37 @@
+@@ -18,17 +18,28 @@
  #include <sys/stat.h>
  #include <unistd.h>
  //v4l includes
@@ -29,19 +29,10 @@ $NetBSD: patch-mozilla_media_webrtc_trunk_webrtc_modules_video__capture_linux_de
 +#define mmap	v4l2_mmap
 +#define munmap	v4l2_munmap
 +#endif
-+
-+#ifdef HAVE_LIBV4L2
-+#define open	v4l2_open
-+#define close	v4l2_close
-+#define dup	v4l2_dup
-+#define ioctl	v4l2_ioctl
-+#define mmap	v4l2_mmap
-+#define munmap	v4l2_munmap
-+#endif
  
  namespace webrtc
  {
-@@ -136,6 +156,11 @@ int32_t DeviceInfoLinux::GetDeviceName(
+@@ -136,6 +147,11 @@ int32_t DeviceInfoLinux::GetDeviceName(
      memset(deviceNameUTF8, 0, deviceNameLength);
      memcpy(cameraName, cap.card, sizeof(cap.card));
  
