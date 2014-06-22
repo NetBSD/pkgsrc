@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/05/09 07:37:08 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/06/22 16:28:55 richard Exp $
 
-DISTNAME=	pycha-0.6.0
-PKGREVISION=	1
+DISTNAME=	pycha-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	https://pypi.python.org/packages/source/p/pycha/
