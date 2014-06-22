@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.28 2013/12/26 13:17:37 ryoon Exp $
+# $NetBSD: options.mk,v 1.29 2014/06/22 08:54:39 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.seamonkey
-PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome mozilla-enigmail
-PKG_SUPPORTED_OPTIONS+=	mozilla-lightning webrtc mozilla-chatzilla
+PKG_SUPPORTED_OPTIONS=	alsa debug mozilla-jemalloc gnome mozilla-enigmail
+PKG_SUPPORTED_OPTIONS+=	mozilla-lightning webrtc mozilla-chatzilla pulseaudio
 
 PLIST_VARS+=	debug gnome jemalloc
 
@@ -15,7 +15,20 @@ PKG_SUGGESTED_OPTIONS+=	mozilla-jemalloc
 PKG_SUGGESTED_OPTIONS+=	webrtc
 .endif
 
+.if ${OPSYS} == "Linux"
+PKG_SUGGESTED_OPTIONS+=	alsa
+.else
+PKG_SUGGESTED_OPTIONS+=	pulseaudio
+.endif
+
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Malsa)
+CONFIGURE_ARGS+=	--enable-alsa
+.include "../../audio/alsa-lib/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-alsa
+.endif
 
 .if !empty(PKG_OPTIONS:Mmozilla-chatzilla)
 PLIST_SRC+=		PLIST.chatzilla
@@ -58,6 +71,13 @@ XPI_FILES+=		${WRKSRC}/${OBJDIR}/mozilla/dist/xpi-stage/gdata-provider*.xpi
 XPI_FILES+=		${WRKSRC}/${OBJDIR}/mozilla/dist/xpi-stage/lightning*.xpi
 .else
 CONFIGURE_ARGS+=	--disable-calendar
+.endif
+
+.if !empty(PKG_OPTIONS:Mpulseaudio)
+.include "../../audio/pulseaudio/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-pulseaudio
+.else
+CONFIGURE_ARGS+=	--disable-pulseaudio
 .endif
 
 PLIST_VARS+=            webrtc

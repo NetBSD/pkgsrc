@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_config_external_moz.build,v 1.1 2014/03/30 04:13:17 ryoon Exp $
+$NetBSD: patch-mozilla_config_external_moz.build,v 1.2 2014/06/22 08:54:39 ryoon Exp $
 
---- mozilla/config/external/moz.build.orig	2014-03-19 01:41:46.000000000 +0000
+--- mozilla/config/external/moz.build.orig	2014-06-13 00:46:03.000000000 +0000
 +++ mozilla/config/external/moz.build
 @@ -15,13 +15,13 @@ if CONFIG['MOZ_UPDATER']:
      if not CONFIG['MOZ_NATIVE_BZ2']:
@@ -10,7 +10,8 @@ $NetBSD: patch-mozilla_config_external_moz.build,v 1.1 2014/03/30 04:13:17 ryoon
 +if CONFIG['MOZ_VORBIS'] and not CONFIG['MOZ_NATIVE_VORBIS']:
      external_dirs += ['media/libvorbis']
  
- if CONFIG['MOZ_TREMOR']:
+-if CONFIG['MOZ_TREMOR']:
++if CONFIG['MOZ_TREMOR'] and not CONFIG['MOZ_NATIVE_TREMOR']:
      external_dirs += ['media/libtremor']
  
 -if CONFIG['MOZ_OPUS']:
@@ -18,14 +19,30 @@ $NetBSD: patch-mozilla_config_external_moz.build,v 1.1 2014/03/30 04:13:17 ryoon
      external_dirs += ['media/libopus']
  
  if CONFIG['MOZ_WEBM']:
-@@ -31,7 +31,9 @@ if CONFIG['MOZ_VP8'] and not CONFIG['MOZ
+@@ -34,16 +34,23 @@ if CONFIG['MOZ_VPX'] and not CONFIG['MOZ
      external_dirs += ['media/libvpx']
  
  if CONFIG['MOZ_OGG']:
 -    external_dirs += ['media/libogg', 'media/libtheora']
 +    if not CONFIG['MOZ_NATIVE_OGG']:
 +        external_dirs += ['media/libogg']
-+    external_dirs += ['media/libtheora']
++    if not CONFIG['MOZ_NATIVE_THEORA']:
++        external_dirs += ['media/libtheora']
  
  if not CONFIG['MOZ_NATIVE_PNG']:
      external_dirs += ['media/libpng']
+ 
++if not CONFIG['MOZ_NATIVE_SPEEX']:
++    external_dirs += ['media/libspeex_resampler']
++
++if not CONFIG['MOZ_NATIVE_SOUNDTOUCH']:
++    external_dirs += ['media/libsoundtouch']
++
+ external_dirs += [
+     'media/kiss_fft',
+     'media/libcubeb',
+-    'media/libspeex_resampler',
+-    'media/libsoundtouch',
+ ]
+ 
+ PARALLEL_DIRS += ['../../' + i for i in external_dirs]

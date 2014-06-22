@@ -1,10 +1,10 @@
-$NetBSD: patch-mozilla_gfx_thebes_Makefile.in,v 1.1 2014/03/30 04:13:17 ryoon Exp $
+$NetBSD: patch-mozilla_gfx_thebes_Makefile.in,v 1.2 2014/06/22 08:54:39 ryoon Exp $
 
---- mozilla/gfx/thebes/Makefile.in.orig	2014-03-19 01:41:54.000000000 +0000
+--- mozilla/gfx/thebes/Makefile.in.orig	2014-06-13 00:46:07.000000000 +0000
 +++ mozilla/gfx/thebes/Makefile.in
 @@ -13,6 +13,14 @@ DEFINES := $(filter-out -DUNICODE,$(DEFI
- CXXFLAGS += $(MOZ_CAIRO_CFLAGS) $(MOZ_PIXMAN_CFLAGS) $(TK_CFLAGS)
- CFLAGS += $(MOZ_CAIRO_CFLAGS) $(MOZ_PIXMAN_CFLAGS) $(TK_CFLAGS)
+ CXXFLAGS += $(MOZ_CAIRO_CFLAGS) $(TK_CFLAGS)
+ CFLAGS += $(MOZ_CAIRO_CFLAGS) $(TK_CFLAGS)
  
 +ifdef MOZ_NATIVE_GRAPHITE2
 +CXXFLAGS += $(MOZ_GRAPHITE2_CFLAGS)

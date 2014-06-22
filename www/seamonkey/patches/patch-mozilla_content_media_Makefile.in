@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_content_media_Makefile.in,v 1.1 2014/03/30 04:13:17 ryoon Exp $
+$NetBSD: patch-mozilla_content_media_Makefile.in,v 1.2 2014/06/22 08:54:39 ryoon Exp $
 
---- mozilla/content/media/Makefile.in.orig	2014-03-19 01:41:47.000000000 +0000
+--- mozilla/content/media/Makefile.in.orig	2014-06-13 00:46:03.000000000 +0000
 +++ mozilla/content/media/Makefile.in
-@@ -7,4 +7,16 @@ include $(topsrcdir)/config/rules.mk
+@@ -7,4 +7,32 @@ include $(topsrcdir)/config/rules.mk
  CFLAGS   += $(GSTREAMER_CFLAGS)
  CXXFLAGS += $(GSTREAMER_CFLAGS)
  
@@ -10,12 +10,28 @@ $NetBSD: patch-mozilla_content_media_Makefile.in,v 1.1 2014/03/30 04:13:17 ryoon
 +CXXFLAGS += $(MOZ_OGG_CFLAGS)
 +endif
 +
++ifdef MOZ_NATIVE_THEORA
++CXXFLAGS += $(MOZ_THEORA_CFLAGS)
++endif
++
 +ifdef MOZ_NATIVE_VORBIS
 +CXXFLAGS += $(MOZ_VORBIS_CFLAGS)
 +endif
 +
++ifdef MOZ_NATIVE_TREMOR
++CXXFLAGS += $(MOZ_TREMOR_CFLAGS)
++endif
++
 +ifdef MOZ_NATIVE_OPUS
 +CXXFLAGS += $(MOZ_OPUS_CFLAGS)
++endif
++
++ifdef MOZ_NATIVE_SPEEX
++CXXFLAGS += $(MOZ_SPEEX_CFLAGS)
++endif
++
++ifdef MOZ_NATIVE_SOUNDTOUCH
++CXXFLAGS += $(MOZ_SOUNDTOUCH_CFLAGS)
 +endif
 +
  AudioNodeEngineNEON.$(OBJ_SUFFIX): CXXFLAGS += -mfpu=neon

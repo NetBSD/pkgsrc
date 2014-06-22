@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_ipc_chromium_src_base_file__util__posix.cc,v 1.2 2013/12/26 13:17:37 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_src_base_file__util__posix.cc,v 1.3 2014/06/22 08:54:39 ryoon Exp $
 
---- mozilla/ipc/chromium/src/base/file_util_posix.cc.orig	2013-12-11 04:28:40.000000000 +0000
+--- mozilla/ipc/chromium/src/base/file_util_posix.cc.orig	2014-06-13 00:45:30.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/file_util_posix.cc
 @@ -8,7 +8,7 @@
  #include <errno.h>
@@ -29,3 +29,20 @@ $NetBSD: patch-mozilla_ipc_chromium_src_base_file__util__posix.cc,v 1.2 2013/12/
    // XXX Need ftsless impl for bionic
    return false;
  #else
+@@ -435,7 +435,7 @@ bool SetCurrentDirectory(const FilePath&
+   return !ret;
+ }
+ 
+-#if !defined(OS_MACOSX)
++#if !defined(MOZ_WIDGET_COCOA)
+ bool GetTempDir(FilePath* path) {
+   const char* tmp = getenv("TMPDIR");
+   if (tmp)
+@@ -499,6 +499,6 @@ bool CopyFile(const FilePath& from_path,
+ 
+   return result;
+ }
+-#endif // !defined(OS_MACOSX)
++#endif // !defined(MOZ_WIDGET_COCOA)
+ 
+ } // namespace file_util

@@ -1,11 +1,11 @@
-$NetBSD: patch-as,v 1.16 2014/03/30 04:13:17 ryoon Exp $
+$NetBSD: patch-as,v 1.17 2014/06/22 08:54:39 ryoon Exp $
 
 * Fix _res is not supported for multi-threaded programs. error.
 * Treat DragonFly like FreeBSD.
 
---- mozilla/js/src/configure.in.orig	2014-03-19 01:41:57.000000000 +0000
+--- mozilla/js/src/configure.in.orig	2014-06-13 00:46:08.000000000 +0000
 +++ mozilla/js/src/configure.in
-@@ -2148,116 +2148,13 @@ AC_LANG_CPLUSPLUS
+@@ -2165,116 +2165,13 @@ AC_LANG_CPLUSPLUS
  
  MOZ_CXX11
  
@@ -112,7 +112,7 @@ $NetBSD: patch-as,v 1.16 2014/03/30 04:13:17 ryoon Exp $
 -                       ])
 -        if test "$ac_cv_have_visibility_builtin_bug" = "no" -a \
 -                "$ac_cv_have_visibility_class_bug" = "no"; then
--          VISIBILITY_FLAGS='-I$(DIST)/system_wrappers_js -include $(topsrcdir)/config/gcc_hidden.h'
+-          VISIBILITY_FLAGS='-I$(DIST)/system_wrappers -include $(topsrcdir)/config/gcc_hidden.h'
 -          WRAP_SYSTEM_INCLUDES=1
 -        else
 -          VISIBILITY_FLAGS='-fvisibility=hidden'
@@ -122,21 +122,12 @@ $NetBSD: patch-as,v 1.16 2014/03/30 04:13:17 ryoon Exp $
 -  fi       # have visibility(hidden) attribute
 +  AC_DEFINE(HAVE_VISIBILITY_HIDDEN_ATTRIBUTE)
 +  AC_DEFINE(HAVE_VISIBILITY_ATTRIBUTE)
-+  VISIBILITY_FLAGS='-I$(DIST)/system_wrappers_js -include $(topsrcdir)/config/gcc_hidden.h'
++  VISIBILITY_FLAGS='-I$(DIST)/system_wrappers -include $(topsrcdir)/config/gcc_hidden.h'
 +  WRAP_SYSTEM_INCLUDES=1
  fi         # GNU_CC
  
  # visibility hidden flag for Sun Studio on Solaris
-@@ -2456,7 +2353,7 @@ then
-     fi
- 
- 	case "$target" in
--	    *-*-freebsd*)
-+	    *-*-freebsd*|*-dragonfly*)
- 			AC_DEFINE(_REENTRANT)
- 			AC_DEFINE(_THREAD_SAFE)
- 			dnl -pthread links in -lpthread, so don't specify it explicitly.
-@@ -3270,7 +3167,7 @@ if test "$MOZ_MEMORY"; then
+@@ -3280,7 +3177,7 @@ if test "$MOZ_MEMORY"; then
    *-darwin*)
      AC_DEFINE(MOZ_MEMORY_DARWIN)
      ;;
@@ -145,18 +136,7 @@ $NetBSD: patch-as,v 1.16 2014/03/30 04:13:17 ryoon Exp $
      AC_DEFINE(MOZ_MEMORY_BSD)
      ;;
    *-android*|*-linuxandroid*)
-@@ -3632,7 +3529,10 @@ dnl ====================================
- dnl = Support for gcc stack unwinding (from gcc 3.3)
- dnl ========================================================
- if test -z "$SKIP_LIBRARY_CHECKS"; then
-+    AC_LANG_SAVE
-+    AC_LANG_CPLUSPLUS
-     MOZ_CHECK_HEADER(unwind.h, AC_CHECK_FUNCS(_Unwind_Backtrace))
-+    AC_LANG_RESTORE
- fi
- 
- dnl ========================================================
-@@ -4086,6 +3986,20 @@ AC_SUBST(CXX_VERSION)
+@@ -4144,6 +4041,20 @@ AC_SUBST(CXX_VERSION)
  AC_SUBST(MSMANIFEST_TOOL)
  AC_SUBST(MOZ_LINKER)
  
@@ -177,7 +157,7 @@ $NetBSD: patch-as,v 1.16 2014/03/30 04:13:17 ryoon Exp $
  AC_MSG_CHECKING([for posix_fallocate])
  AC_TRY_LINK([#define _XOPEN_SOURCE 600
    #include <fcntl.h>],
-@@ -4436,6 +4350,16 @@ fi
+@@ -4512,6 +4423,16 @@ fi
  dnl ========================================================
  dnl JavaScript shell
  dnl ========================================================

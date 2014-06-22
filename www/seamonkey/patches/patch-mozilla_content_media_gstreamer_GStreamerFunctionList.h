@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_content_media_gstreamer_GStreamerFunctionList.h,v 1.1 2014/03/30 04:13:17 ryoon Exp $
+$NetBSD: patch-mozilla_content_media_gstreamer_GStreamerFunctionList.h,v 1.2 2014/06/22 08:54:39 ryoon Exp $
 
---- mozilla/content/media/gstreamer/GStreamerFunctionList.h.orig	2014-03-19 01:41:47.000000000 +0000
+--- mozilla/content/media/gstreamer/GStreamerFunctionList.h.orig	2014-06-13 00:46:04.000000000 +0000
 +++ mozilla/content/media/gstreamer/GStreamerFunctionList.h
 @@ -9,7 +9,6 @@
   * List of symbol names we need to dlsym from the gstreamer library.
@@ -71,7 +71,7 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerFunctionList.h,v 1.1 201
  GST_FUNC(LIBGSTREAMER, gst_segment_to_stream_time)
  GST_FUNC(LIBGSTREAMER, gst_static_caps_get)
  GST_FUNC(LIBGSTREAMER, gst_structure_copy)
-@@ -86,11 +73,82 @@ GST_FUNC(LIBGSTREAMER, gst_structure_get
+@@ -86,11 +73,83 @@ GST_FUNC(LIBGSTREAMER, gst_structure_get
  GST_FUNC(LIBGSTREAMER, gst_structure_get_value)
  GST_FUNC(LIBGSTREAMER, gst_structure_new)
  GST_FUNC(LIBGSTREAMER, gst_util_uint64_scale)
@@ -123,6 +123,7 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerFunctionList.h,v 1.1 201
 +GST_FUNC(LIBGSTREAMER, gst_buffer_unmap)
 +GST_FUNC(LIBGSTREAMER, gst_element_factory_get_metadata)
 +GST_FUNC(LIBGSTREAMER, gst_event_parse_segment)
++GST_FUNC(LIBGSTREAMER, gst_event_type_get_name)
 +GST_FUNC(LIBGSTREAMER, gst_memory_init)
 +GST_FUNC(LIBGSTREAMER, gst_memory_map)
 +GST_FUNC(LIBGSTREAMER, gst_memory_unmap)
@@ -154,7 +155,7 @@ $NetBSD: patch-mozilla_content_media_gstreamer_GStreamerFunctionList.h,v 1.1 201
  
  /*
   * Functions that have been defined in the header file. We replace them so that
-@@ -100,6 +158,11 @@ GST_FUNC(LIBGSTVIDEO, gst_video_format_p
+@@ -100,6 +159,11 @@ GST_FUNC(LIBGSTVIDEO, gst_video_format_p
  REPLACE_FUNC(gst_buffer_ref);
  REPLACE_FUNC(gst_buffer_unref);
  REPLACE_FUNC(gst_message_unref);
