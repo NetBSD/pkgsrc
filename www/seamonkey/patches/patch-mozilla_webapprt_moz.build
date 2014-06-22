@@ -1,0 +1,20 @@
+$NetBSD: patch-mozilla_webapprt_moz.build,v 1.1 2014/06/22 08:54:39 ryoon Exp $
+
+--- mozilla/webapprt/moz.build.orig	2014-06-13 00:46:13.000000000 +0000
++++ mozilla/webapprt/moz.build
+@@ -6,7 +6,7 @@
+ 
+ if CONFIG['OS_ARCH'] == 'WINNT':
+     DIRS += ['win']
+-elif CONFIG['OS_ARCH'] == 'Darwin':
++elif CONFIG['MOZ_WIDGET_TOOLKIT'] == 'cocoa':
+     DIRS += ['mac']
+ elif CONFIG['MOZ_WIDGET_TOOLKIT'] == 'gtk2':
+     DIRS += ['gtk2']
+@@ -45,4 +45,4 @@ if CONFIG['MOZILLA_OFFICIAL']:
+ DEFINES['GRE_MILESTONE'] = CONFIG['GRE_MILESTONE']
+ DEFINES['MOZ_APP_BASENAME'] = CONFIG['MOZ_APP_BASENAME']
+ 
+-JAR_MANIFESTS += ['jar.mn']
+\ No newline at end of file
++JAR_MANIFESTS += ['jar.mn']
