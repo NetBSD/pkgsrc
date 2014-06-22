@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2402 2014/06/22 14:51:49 bsiegert Exp $
+$NetBSD: CHANGES-2014,v 1.2403 2014/06/22 16:31:15 richard Exp $
 
 # PLEASE NOTE THAT WE ARE NOW IN A FREEZE IN PREPARATION FOR THE
 # PKGSRC-2014Q2 BRANCH.
@@ -3208,3 +3208,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/seamonkey to 2.26.1 [ryoon 2014-06-22]
 	Updated www/seamonkey-l10n to 2.26.1 [ryoon 2014-06-22]
 	Updated lang/go to 1.3 [bsiegert 2014-06-22]
+	Updated graphics/py-pycha to 0.7.0 [richard 2014-06-22]
