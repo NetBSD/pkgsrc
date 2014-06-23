@@ -1,0 +1,2 @@
+bin/unit2 bin/unit2-@PYVERSSUFFIX@
+bin/unit2.py @PREFIX@/bin/unit2-@PYVERSSUFFIX@.py
