@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/01/31 11:23:13 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/23 10:50:43 rodent Exp $
 
 DISTNAME=		unittest2py3k-0.5.1
 # to match python-2.x name
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py3k//}
+PKGREVISION=		1
 CATEGORIES=		devel python
 MASTER_SITES=		http://pypi.python.org/packages/source/u/unittest2py3k/
 
@@ -20,6 +21,9 @@ PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.txt ${DESTDIR}${PREFIX}/${DOCDIR}
+	${RM} ${DESTDIR}${PREFIX}/bin/unit2
+	${MV} ${DESTDIR}${PREFIX}/bin/unit2.py \
+		${DESTDIR}${PREFIX}/bin/unit2-${PYVERSSUFFIX}.py
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
