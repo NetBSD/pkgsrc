@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13422 2014/06/22 16:53:27 wiz Exp $
+$NetBSD: TODO,v 1.13423 2014/06/23 12:35:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -421,6 +421,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bzr-2.6.0
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
+	o calibre-1.41
 	o calligra-2.4.3 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -494,7 +495,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o drivel-3.0.3
 	o dvtm-0.11
 	o easymenu-0.7.2p1
-	o easytag-2.2.2
+	o easytag-2.2.3
 	o eboard-1.1.1
 	o echinus-0.4.9
 	o eclipse-3.2.0
@@ -608,7 +609,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-chess-3.10.3
 	o gnome-color-manager-2.32.0 [GNOME 2.32]
-	o gnome-commander-1.4.2
+	o gnome-commander-1.4.3
 	o gnome-control-center-3.8.3
 	o gnome-devel-docs-2.30.0 [GNOME 2.30]
 	o gnome-disk-utility-2.32.0 [GNOME 2.32]
