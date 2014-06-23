@@ -1,7 +1,7 @@
 #!@PERL5@
 #
 # $OpenBSD: mdoclint,v 1.42 2014/03/18 22:36:30 miod Exp $
-# $NetBSD: mdoclint,v 1.48 2014/03/31 08:40:47 wiz Exp $
+# $NetBSD: mdoclint,v 1.49 2014/06/23 18:10:21 wiz Exp $
 #
 # Copyright (c) 2001-2013 Thomas Klausner
 # All rights reserved.
@@ -407,12 +407,11 @@ sub set_section_header
 
 sub process_and_save_line
 {
-	my $s;
-	($s, $_) = @_;
-	my $result = $s->process_line($_);
+	my ($s, $input) = @_;
+	my $result = $s->process_line($input);
 	# note that process_line chomps \n, then re-adds it,
 	# so we detect a change on last lines without a \n.
-	if ($result ne $_) {
+	if ($result ne "$input") {
 		$s->{changes} = 1;
 	}
 	push(@{$s->{all}}, $result);
@@ -464,7 +463,7 @@ sub process_line
 
 	if ($s->{mandoc_p}) {
 		if (/^\.Sh\s+(.*)$/o) {
-			my $line = $_;
+	        	my $line = $_;
 			$s->set_section_header($1);
 			return "$line\n";
 		}
