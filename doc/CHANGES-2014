@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2409 2014/06/23 13:00:38 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.2410 2014/06/23 18:10:31 wiz Exp $
 
 # PLEASE NOTE THAT WE ARE NOW IN A FREEZE IN PREPARATION FOR THE
 # PKGSRC-2014Q2 BRANCH.
@@ -3214,3 +3214,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-unittest2py3k to 0.5.1nb1 [rodent 2014-06-23]
 	Updated www/apache24 to 2.4.9nb3 [wiz 2014-06-23]
 	Updated misc/libreoffice4-bin to 4.2.5 [ryoon 2014-06-23]
+	Updated textproc/mdoclint to 1.30 [wiz 2014-06-23]
