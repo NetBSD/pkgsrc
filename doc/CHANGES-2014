@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2407 2014/06/23 11:49:47 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2408 2014/06/23 12:24:51 wiz Exp $
 
 # PLEASE NOTE THAT WE ARE NOW IN A FREEZE IN PREPARATION FOR THE
 # PKGSRC-2014Q2 BRANCH.
@@ -2954,9 +2954,9 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Mojolicious to 5.04 [wen 2014-06-05]
 	Updated textproc/p5-XML-LibXML to 2.0116nb2 [wiz 2014-06-05]
 	Updated security/openssl to 1.0.1h [wiz 2014-06-05]
-	Updated databases/sqlite3 to 3.8.5 [adam 2014-04-03]
-	Updated databases/sqlite3-docs to 3.8.5 [adam 2014-04-03]
-	Updated databases/sqlite3-tcl to 3.8.5 [adam 2014-04-03]
+	Updated databases/sqlite3 to 3.8.5 [adam 2014-06-05]
+	Updated databases/sqlite3-docs to 3.8.5 [adam 2014-06-05]
+	Updated databases/sqlite3-tcl to 3.8.5 [adam 2014-06-05]
 	Updated graphics/png to 1.6.11 [wiz 2014-06-05]
 	Updated fonts/harfbuzz to 0.9.29 [wiz 2014-06-05]
 	Updated print/latexmk to 439 [wiz 2014-06-05]
