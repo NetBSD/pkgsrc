@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.250 2014/06/18 09:28:16 wiz Exp $
+# $NetBSD: Makefile,v 1.251 2014/06/24 14:06:30 taca Exp $
 
 DISTNAME=	samba-${VERSION}
-PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${SAMBA_MIRRORS:=stable/}
 
@@ -10,7 +9,7 @@ HOMEPAGE=	http://www.samba.org/
 COMMENT=	SMB/CIFS protocol server suite
 LICENSE=	gnu-gpl-v3
 
-VERSION=	3.6.23
+VERSION=	3.6.24
 
 CONFLICTS+=	ja-samba-[0-9]* pam-smbpass-[0-9]* winbind-[0-9]*
 
