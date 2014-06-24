@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2414 2014/06/24 14:07:35 taca Exp $
+$NetBSD: CHANGES-2014,v 1.2415 2014/06/24 15:00:37 wiz Exp $
 
 # PLEASE NOTE THAT WE ARE NOW IN A FREEZE IN PREPARATION FOR THE
 # PKGSRC-2014Q2 BRANCH.
@@ -3219,3 +3219,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/at-spi2-core to 2.10.2nb1 [wiz 2014-06-24]
 	Updated security/gnupg to 1.4.17 [wiz 2014-06-24]
 	Updated net/samba to 3.6.24 [taca 2014-06-24]
+	Updated pkgtools/revbump to 2.8 [wiz 2014-06-24]
