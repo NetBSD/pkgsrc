@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2012/03/03 00:17:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.27 2014/06/24 07:35:10 wiz Exp $
 bin/gpg
 bin/gpg-zip
 bin/gpgsplit
@@ -10,7 +10,6 @@ libexec/gnupg/gpgkeys_hkp
 ${PLIST.ldap}libexec/gnupg/gpgkeys_ldap
 man/man1/gpg-zip.1
 man/man1/gpg.1
-man/man1/gpg.ru.1
 man/man1/gpgv.1
 man/man7/gnupg.7
 share/gnupg/DETAILS
