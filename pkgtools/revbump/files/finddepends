@@ -1,7 +1,7 @@
 #!@PERL@ -w
 # -*- perl -*-
 #
-# $NetBSD: finddepends,v 1.10 2014/05/15 23:50:14 wiz Exp $
+# $NetBSD: finddepends,v 1.11 2014/06/24 15:00:27 wiz Exp $
 #
 # Copyright (c) 2006, 2014 The NetBSD Foundation, Inc.
 #
@@ -123,8 +123,12 @@ for $makefile (@makefiles) {
 #    print "* reading $makefile\n";
     open OUT, $makefile or die "can't open $makefile";
     $content = "";
+    my @used_by;
     while (<OUT>) {
 	chomp($_);
+	if (m/^# used by (.*)/) {
+	    push @used_by, $1;
+	}
 	next if m/^\s*#/;
 	$content .= $_;
     }
@@ -140,6 +144,9 @@ for $makefile (@makefiles) {
     if ($found) {
 	$makefile =~ s,$PKGSRCDIR/,,;
 	print "$makefile\n";
+	for my $user (@used_by) {
+	    print "$user\n";
+	}
     }
 }
 
