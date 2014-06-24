@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2412 2014/06/24 07:26:30 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2413 2014/06/24 07:35:19 wiz Exp $
 
 # PLEASE NOTE THAT WE ARE NOW IN A FREEZE IN PREPARATION FOR THE
 # PKGSRC-2014Q2 BRANCH.
@@ -3217,3 +3217,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/mdoclint to 1.30 [wiz 2014-06-23]
 	Updated wm/golem to 0.0.5nb6 [dholland 2014-06-24]
 	Updated devel/at-spi2-core to 2.10.2nb1 [wiz 2014-06-24]
+	Updated security/gnupg to 1.4.17 [wiz 2014-06-24]
