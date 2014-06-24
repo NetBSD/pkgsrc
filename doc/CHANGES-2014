@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2410 2014/06/23 18:10:31 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2411 2014/06/24 06:28:34 dholland Exp $
 
 # PLEASE NOTE THAT WE ARE NOW IN A FREEZE IN PREPARATION FOR THE
 # PKGSRC-2014Q2 BRANCH.
@@ -3215,3 +3215,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/apache24 to 2.4.9nb3 [wiz 2014-06-23]
 	Updated misc/libreoffice4-bin to 4.2.5 [ryoon 2014-06-23]
 	Updated textproc/mdoclint to 1.30 [wiz 2014-06-23]
+	Updated wm/golem to 0.0.5nb6 [dholland 2014-06-24]
