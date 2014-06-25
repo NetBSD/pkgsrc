@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2014/05/09 07:37:05 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2014/06/25 06:03:37 richard Exp $
 
-DISTNAME=	trytond_account_product-3.2.0
+.include "../../devel/py-trytond/Makefile.common"
+DISTNAME=	trytond_account_product-${TRYTOND_VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	finance python
-MASTER_SITES=	http://downloads.tryton.org/3.2/
+MASTER_SITES=	${TRYTON_SITES}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://www.tryton.org/
@@ -16,8 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-trytond-company-[0-9]*:../../misc/py-trytond-company
 DEPENDS+=	${PYPKGPREFIX}-trytond-[0-9]*:../../devel/py-trytond
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	26 33 34 # XXX according to setup.py
 
 REPLACE_PYTHON+=	tests/test_account_product.py
 
