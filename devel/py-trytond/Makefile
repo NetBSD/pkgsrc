@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2014/05/09 07:37:03 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/06/25 06:00:39 richard Exp $
 
-DISTNAME=	trytond-3.2.0
+.include "../../devel/py-trytond/Makefile.common"
+DISTNAME=	trytond-${TRYTOND_VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	http://downloads.tryton.org/3.2/
+MASTER_SITES=	${TRYTON_SITES}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://www.tryton.org/
@@ -32,7 +33,6 @@ REPLACE_PYTHON+=	trytond/tests/test_trigger.py
 REPLACE_PYTHON+=	trytond/tests/test_tryton.py
 
 PYTHON_VERSIONED_DEPENDENCIES=	dateutil
-PYTHON_VERSIONS_INCOMPATIBLE=	26 33 34 # 26: upstream dropped support; 33: py-gtk2 via py-pycha via py-relatorio
 PY_PATCHPLIST=			yes
 PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX}
 

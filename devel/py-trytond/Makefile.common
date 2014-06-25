@@ -1,0 +1,35 @@
+# $NetBSD: Makefile.common,v 1.1 2014/06/25 06:00:39 richard Exp $
+
+# used by devel/py-tryton/Makefile
+# used by devel/py-trytond/Makefile
+# used by finance/py-trytond-account-asset/Makefile
+# used by finance/py-trytond-account-fr/Makefile
+# used by finance/py-trytond-account-invoice/Makefile
+# used by finance/py-trytond-account-payment-sepa/Makefile
+# used by finance/py-trytond-account-payment/Makefile
+# used by finance/py-trytond-account-product/Makefile
+# used by finance/py-trytond-account-statement/Makefile
+# used by finance/py-trytond-account/Makefile
+# used by finance/py-trytond-bank/Makefile
+# used by finance/py-trytond-currency/Makefile
+# used by geography/py-trytond-country/Makefile
+# used by misc/py-trytond-company/Makefile
+# used by misc/py-trytond-party-siret/Makefile
+# used by misc/py-trytond-party/Makefile
+# used by misc/py-trytond-product/Makefile
+# used by misc/py-trytond-stock-lot/Makefile
+# used by misc/py-trytond-stock/Makefile
+# used by time/py-trytond-calendar/Makefile
+
+
+TRYTON_BASEVER=		3.2
+
+TRYTON_CLIENT_REVISION?=	0
+TRYTON_VERSION=		${TRYTON_BASEVER}.${TRYTON_CLIENT_REVISION}
+
+TRYTOND_MODULE_REVISION?=	0
+TRYTOND_VERSION=	${TRYTON_BASEVER}.${TRYTOND_MODULE_REVISION}
+
+TRYTON_SITES=   http://downloads.tryton.org/${TRYTON_BASEVER}/
+
+PYTHON_VERSIONS_INCOMPATIBLE=   26 33 34 # 26: upstream dropped support; 33: py-gtk2 via py-pycha via py-relatorio
