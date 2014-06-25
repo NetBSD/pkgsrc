@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.252 2014/06/19 07:22:02 wiz Exp $
+# $NetBSD: makevars.map,v 1.253 2014/06/25 17:51:55 wiz Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -427,6 +427,7 @@ LIBOSSAUDIO		Pathname [$system]
 LIBS*			List of LdFlag [$package_list]
 LIBTOOL			ShellCommand [$system]
 LIBTOOL_OVERRIDE	List of Pathmask [m:as]
+LIBTOOL_REQD		List of Version [$package_list]
 LICENCE			License [m:s,c:s,o:s]
 LICENSE			License [m:s,c:s,o:s]
 LICENSE_FILE		Pathname [$package]
