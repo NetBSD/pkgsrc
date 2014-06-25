@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/07/21 12:02:18 richard Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/06/25 07:35:11 richard Exp $
 bin/chavier
 ${PYSITELIB}/chavier/__init__.py
 ${PYSITELIB}/chavier/__init__.pyc
@@ -36,6 +36,15 @@ ${PYSITELIB}/pycha/line.pyo
 ${PYSITELIB}/pycha/pie.py
 ${PYSITELIB}/pycha/pie.pyc
 ${PYSITELIB}/pycha/pie.pyo
+${PYSITELIB}/pycha/polygonal.py
+${PYSITELIB}/pycha/polygonal.pyc
+${PYSITELIB}/pycha/polygonal.pyo
+${PYSITELIB}/pycha/radial.py
+${PYSITELIB}/pycha/radial.pyc
+${PYSITELIB}/pycha/radial.pyo
+${PYSITELIB}/pycha/ring.py
+${PYSITELIB}/pycha/ring.pyc
+${PYSITELIB}/pycha/ring.pyo
 ${PYSITELIB}/pycha/scatter.py
 ${PYSITELIB}/pycha/scatter.pyc
 ${PYSITELIB}/pycha/scatter.pyo
