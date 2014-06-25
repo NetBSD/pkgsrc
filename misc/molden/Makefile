@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.29 2013/04/06 13:01:26 rodent Exp $
+# $NetBSD: Makefile,v 1.30 2014/06/25 08:45:23 jperkin Exp $
 
 DISTNAME=	molden4.6
 PKGNAME=	${DISTNAME:S/molden/&-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc # chemistry
-MASTER_SITES=	ftp://ftp.cmbi.kun.nl/pub/molgraph/molden/
+MASTER_SITES=	ftp://ftp.cmbi.ru.nl/pub/molgraph/molden/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cmbi.ru.nl/molden/molden.html
