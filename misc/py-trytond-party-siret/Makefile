@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2014/05/15 05:35:27 richard Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/25 06:07:57 richard Exp $
 
-DISTNAME=	trytond_party_siret-3.2.0
+.include "../../devel/py-trytond/Makefile.common"
+DISTNAME=	trytond_party_siret-${TRYTOND_VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/1}
 CATEGORIES=	misc python
-MASTER_SITES=	http://downloads.tryton.org/3.2/
+MASTER_SITES=	${TRYTON_SITES}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tryton.org/
@@ -15,7 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-trytond-party-[0-9]*:../../misc/py-trytond-party
 USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=	tests/test_party_siret.py
-PYTHON_VERSIONS_INCOMPATIBLE=	26 33 34 # XXX according to setup.py
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
