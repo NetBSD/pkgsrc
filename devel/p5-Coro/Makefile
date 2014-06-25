@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2014/05/29 23:35:47 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2014/06/25 22:30:54 schmonz Exp $
 #
 
-DISTNAME=	Coro-6.31
+DISTNAME=	Coro-6.39
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Coro/}
 
