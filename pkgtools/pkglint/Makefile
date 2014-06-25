@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.448 2014/06/19 07:22:02 wiz Exp $
+# $NetBSD: Makefile,v 1.449 2014/06/25 17:51:55 wiz Exp $
 
 # Note: if you update the version number, please have a look at the
 # changes between the CVS tag "pkglint_current" and HEAD.
 # After updating, please re-set the CVS tag to HEAD.
-PKGNAME=	pkglint-4.143
+PKGNAME=	pkglint-4.144
 CATEGORIES=	pkgtools
 
 OWNER=		wiz@NetBSD.org
