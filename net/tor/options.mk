@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2014/06/07 09:11:36 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2014/06/25 13:08:37 drochner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tor
 PKG_SUPPORTED_OPTIONS=	threads doc
@@ -29,7 +29,6 @@ CONFIGURE_ARGS+=	--disable-asciidoc
 ### I don't trust configure scripts to do this properly on all platforms.
 ###
 .if !empty(PKG_OPTIONS:Mthreads)
-CONFIGURE_ARGS+=	--enable-eventdns
 CONFIGURE_ARGS+=	--enable-threads
 PTHREAD_OPTS+=		require
 PTHREAD_AUTO_VARS=	yes
