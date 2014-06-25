@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/06/25 06:03:37 richard Exp $
+
+SHA1 (trytond_account_payment_sepa-3.2.0.tar.gz) = 5d21a69398c5708453b42b931b9a650ebee768ec
+RMD160 (trytond_account_payment_sepa-3.2.0.tar.gz) = 536cd36b496d7bbff8e5294254c91ef683660396
+Size (trytond_account_payment_sepa-3.2.0.tar.gz) = 45070 bytes
