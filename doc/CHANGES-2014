@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2423 2014/06/25 17:53:46 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2424 2014/06/25 22:13:52 schmonz Exp $
 
 # PLEASE NOTE THAT WE ARE NOW IN A FREEZE IN PREPARATION FOR THE
 # PKGSRC-2014Q2 BRANCH.
@@ -3232,3 +3232,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated pkgtools/url2pkg to 2.20 [rodent 2014-06-25]
 	Updated audio/pulseaudio to 5.0nb1 [ryoon 2014-06-25]
 	Updated pkgtools/pkglint to 4.144 [wiz 2014-06-25]
+	Updated devel/p5-ExtUtils-MakeMaker to 6.98 [schmonz 2014-06-25]
