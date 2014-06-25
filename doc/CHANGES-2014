@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2418 2014/06/25 06:12:12 richard Exp $
+$NetBSD: CHANGES-2014,v 1.2419 2014/06/25 08:39:28 wiz Exp $
 
 # PLEASE NOTE THAT WE ARE NOW IN A FREEZE IN PREPARATION FOR THE
 # PKGSRC-2014Q2 BRANCH.
@@ -3227,3 +3227,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated finance/py-trytond-account-payment-sepa to 3.2.0 [richard 2014-06-25]
 	Updated finance/py-trytond-account-statement to 3.2.0 [richard 2014-06-25]
 	Updated finance/py-trytond-bank to 3.2.0 [richard 2014-06-25]
+	Updated shells/zsh to 5.0.5nb1 [wiz 2014-06-25]
