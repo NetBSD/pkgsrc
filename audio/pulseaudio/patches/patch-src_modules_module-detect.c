@@ -1,4 +1,4 @@
-$NetBSD: patch-src_modules_module-detect.c,v 1.1 2014/06/09 13:08:19 ryoon Exp $
+$NetBSD: patch-src_modules_module-detect.c,v 1.2 2014/06/25 15:26:40 ryoon Exp $
 
 Hack to set proper sound device on NetBSD.
 
@@ -10,11 +10,11 @@ Hack to set proper sound device on NetBSD.
  
 +#if defined(__NetBSD__)
 +/*
-+ * Assume primary sound device is used (/dev/sound).
++ * Assume primary sound device is used (/dev/audio).
 + * And only primary sound device will be used (n=1).
 + */
 +    char args[64];
-+    pa_snprintf(args, sizeof(args), "device=/dev/sound");
++    pa_snprintf(args, sizeof(args), "device=/dev/audio");
 +    if (!pa_module_load(c, "module-oss", args))
 +	exit(1);
 +    n = 1;
