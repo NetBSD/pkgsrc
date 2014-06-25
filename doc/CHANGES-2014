@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2416 2014/06/24 21:53:24 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2417 2014/06/25 01:23:44 schmonz Exp $
 
 # PLEASE NOTE THAT WE ARE NOW IN A FREEZE IN PREPARATION FOR THE
 # PKGSRC-2014Q2 BRANCH.
@@ -3221,3 +3221,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/samba to 3.6.24 [taca 2014-06-24]
 	Updated pkgtools/revbump to 2.8 [wiz 2014-06-24]
 	Updated security/gnupg2 to 2.0.24 [wiz 2014-06-24]
+	Updated devel/p5-Test-BDD-Cucumber to 0.26 [schmonz 2014-06-25]
