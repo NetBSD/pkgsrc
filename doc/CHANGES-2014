@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2422 2014/06/25 15:27:08 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.2423 2014/06/25 17:53:46 wiz Exp $
 
 # PLEASE NOTE THAT WE ARE NOW IN A FREEZE IN PREPARATION FOR THE
 # PKGSRC-2014Q2 BRANCH.
@@ -3231,3 +3231,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/molden to 4.6nb2 [jperkin 2014-06-25]
 	Updated pkgtools/url2pkg to 2.20 [rodent 2014-06-25]
 	Updated audio/pulseaudio to 5.0nb1 [ryoon 2014-06-25]
+	Updated pkgtools/pkglint to 4.144 [wiz 2014-06-25]
