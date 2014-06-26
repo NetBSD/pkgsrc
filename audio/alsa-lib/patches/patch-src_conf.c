@@ -1,4 +1,4 @@
-$NetBSD: patch-src_conf.c,v 1.2 2014/06/16 14:09:03 jperkin Exp $
+$NetBSD: patch-src_conf.c,v 1.3 2014/06/26 20:23:14 asau Exp $
 
 * NetBSD has no PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP
 * SunOS has no versionsort or dirent d_type
@@ -67,7 +67,7 @@ $NetBSD: patch-src_conf.c,v 1.2 2014/06/16 14:09:03 jperkin Exp $
  
  #ifndef DOC_HIDDEN
 -#ifdef _GNU_SOURCE
-+#if defined(_GNU_SOURCE) && !defined(__NetBSD__) && !defined(__sun)
++#if defined(_GNU_SOURCE) && !defined(__NetBSD__) && !defined(__FreeBSD__) && !defined(__sun)
  #define SORTFUNC	versionsort
  #else
  #define SORTFUNC	alphasort
