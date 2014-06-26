@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.2 2014/06/18 10:33:30 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2014/06/26 09:27:04 jperkin Exp $
 
 BUILDLINK_TREE+=	cups
 
 .if !defined(CUPS_BUILDLINK3_MK)
 CUPS_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.cups+=	cups>=1.1.19nb3
+BUILDLINK_API_DEPENDS.cups+=	cups>=1.1.19nb3<1.7
 BUILDLINK_ABI_DEPENDS.cups+=	cups>=1.5.4nb9<1.7
 BUILDLINK_PKGSRCDIR.cups?=	../../print/cups15
 
