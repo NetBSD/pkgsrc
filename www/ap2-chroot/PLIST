@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2011/02/04 11:40:12 obache Exp $
-lib/httpd/mod_chroot.so
-share/doc/mod_chroot/CAVEATS
-share/doc/mod_chroot/ChangeLog
-share/doc/mod_chroot/INSTALL
-share/doc/mod_chroot/LICENSE
-share/doc/mod_chroot/README
-share/doc/mod_chroot/README.Apache20
