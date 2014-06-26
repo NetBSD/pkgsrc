@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2014/03/13 17:53:36 taca Exp $
+# $NetBSD: Makefile,v 1.43 2014/06/26 15:59:31 jperkin Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -51,7 +51,8 @@ CONFIGURE_ENV+=	ac_cv_prog_PKG_CONFIG=""
 CONFIGURE_ENV+=	ac_cv_func_getgrnam_r=no
 .endif
 
-.if ${OPSYS} == "Cygwin"
+# bmake doesn't like the codesign/POSTLINK constructs for Darwin.
+.if ${OPSYS} == "Cygwin" || ${OPSYS} == "Darwin"
 USE_TOOLS+=	gmake
 MAKE_FILE=	GNUmakefile
 .endif
