@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/06/14 14:35:09 rodent Exp $
+$NetBSD: distinfo,v 1.2 2014/06/26 01:19:04 rodent Exp $
 
-SHA1 (validators-0.5.0.tar.gz) = 811f6505db3928049a02dbd009d2efab8cef5edd
-RMD160 (validators-0.5.0.tar.gz) = 0e65ce4cfddce47926e52f24641b78c8d7653361
-Size (validators-0.5.0.tar.gz) = 8391 bytes
+SHA1 (validators-0.6.0.tar.gz) = 9360456ae5598aa7ca8b7a78feb54c48ca8172f8
+RMD160 (validators-0.6.0.tar.gz) = ef772ce8db64f33e6fc763d18b331507f64aaaa6
+Size (validators-0.6.0.tar.gz) = 16400 bytes
