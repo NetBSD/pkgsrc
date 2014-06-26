@@ -1,7 +1,43 @@
-$NetBSD: patch-ae,v 1.7 2010/01/30 14:54:48 tnn Exp $
+$NetBSD: patch-ae,v 1.8 2014/06/26 20:34:02 asau Exp $
 
---- configure.orig	2010-01-30 14:35:05.000000000 +0000
+--- configure.orig	2007-01-26 20:08:32.000000000 +0000
 +++ configure
+@@ -7520,7 +7520,7 @@ fi
+       hardcode_shlibpath_var=no
+       ;;
+ 
+-    freebsd1*)
++    freebsd1|freebsd1.*)
+       ld_shlibs=no
+       ;;
+ 
+@@ -7536,7 +7536,7 @@ fi
+       ;;
+ 
+     # Unfortunately, older versions of FreeBSD 2 do not have this feature.
+-    freebsd2*)
++    freebsd2|freebsd2.*)
+       archive_cmds='$LD -Bshareable -o $lib $libobjs $deplibs $linker_flags'
+       hardcode_direct=yes
+       hardcode_minus_L=yes
+@@ -8364,7 +8364,7 @@ dgux*)
+   shlibpath_var=LD_LIBRARY_PATH
+   ;;
+ 
+-freebsd1*)
++freebsd1|freebsd1.*)
+   dynamic_linker=no
+   ;;
+ 
+@@ -8387,7 +8387,7 @@ freebsd* | dragonfly*)
+     objformat=`/usr/bin/objformat`
+   else
+     case $host_os in
+-    freebsd[123]*) objformat=aout ;;
++    freebsd[123]|freebsd[123].*) objformat=aout ;;
+     *) objformat=elf ;;
+     esac
+   fi
 @@ -25260,7 +25260,7 @@ _ACEOF
  
  
