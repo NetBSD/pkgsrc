@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 14:45:27 agc Exp $
+$NetBSD: distinfo,v 1.6 2014/06/26 20:12:43 asau Exp $
 
 SHA1 (unarj-2.65.tar.gz) = 56843e95e6b6ac7577dfdfbfee5af166b5e2c74f
 RMD160 (unarj-2.65.tar.gz) = 59984fc428d1fc99aa3e18485f82e9ee45a801ba
 Size (unarj-2.65.tar.gz) = 74911 bytes
-SHA1 (patch-aa) = 2029b106a498624902639897ae539fd54a0d1052
+SHA1 (patch-aa) = e64a69fc4f91ba69fc642e6d742a0cc36cfddbb0
 SHA1 (patch-ab) = 15216bc07298ce0956bfbadfaae763622ee88a0c
 SHA1 (patch-ac) = 59245f61d731e2fd6dc101fefe0f62db0c55b55e
 SHA1 (patch-ad) = 46c469ade1a20da7e3ac633652e4ec926ba2b08f
