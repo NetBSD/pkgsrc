@@ -1,4 +1,4 @@
-$NetBSD: patch-libtest_lite.h,v 1.2 2014/04/01 13:51:56 fhajny Exp $
+$NetBSD: patch-libtest_lite.h,v 1.3 2014/06/26 20:31:03 asau Exp $
 
 NetBSD doesn't have alloca.h.
 --- libtest/lite.h.orig	2014-02-09 11:52:42.000000000 +0000
@@ -8,7 +8,7 @@ NetBSD doesn't have alloca.h.
  #if defined(WIN32)
  # include <malloc.h>
 -#else
-+#elif !defined(__NetBSD__)
++#elif !defined(__NetBSD__) && !defined(__FreeBSD__)
  # include <alloca.h>
  #endif
  
