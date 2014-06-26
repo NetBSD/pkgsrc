@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2014/05/14 04:39:06 rodent Exp $
+# $NetBSD: Makefile,v 1.49 2014/06/26 20:08:53 asau Exp $
 
 DISTNAME=	dar-2.4.13
 CATEGORIES=	archivers sysutils
@@ -103,7 +103,7 @@ SUBST_FILES.static=	src/testing/Makefile.in
 SUBST_SED.static=	-e 's,-all-static,-static,g'
 .endif
 
-.if ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
 BUILDLINK_TRANSFORM=	l:execinfo:execinfo:elf
 .endif
 
