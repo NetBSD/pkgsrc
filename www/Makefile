@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1049 2014/06/22 03:21:01 taca Exp $
+# $NetBSD: Makefile,v 1.1050 2014/06/26 04:30:47 jnemeth Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -20,6 +20,7 @@ SUBDIR+=	ap-php
 SUBDIR+=	ap-rpaf
 SUBDIR+=	ap-ruby
 SUBDIR+=	ap-scgi
+SUBDIR+=	ap2-auth-external
 SUBDIR+=	ap2-auth-mellon
 SUBDIR+=	ap2-auth-mysql
 SUBDIR+=	ap2-auth-ntlm
@@ -29,6 +30,7 @@ SUBDIR+=	ap2-auth-xradius
 SUBDIR+=	ap2-authn-otp
 SUBDIR+=	ap2-bw
 SUBDIR+=	ap2-cband
+SUBDIR+=	ap2-chroot
 SUBDIR+=	ap2-fcgid
 SUBDIR+=	ap2-jk
 SUBDIR+=	ap2-perl
