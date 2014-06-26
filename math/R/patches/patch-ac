@@ -1,6 +1,7 @@
-$NetBSD: patch-ac,v 1.32 2014/01/13 11:25:54 jperkin Exp $
+$NetBSD: patch-ac,v 1.33 2014/06/26 20:34:54 asau Exp $
 
 Do not include system paths in R_LD_LIBRARY_PATH.
+FreeBSD 10 is not FreeBSD 1.
 
 --- configure.orig	2013-05-08 22:06:02.000000000 +0000
 +++ configure
@@ -21,6 +22,15 @@ Do not include system paths in R_LD_LIBRARY_PATH.
 +if test "x${want_lto}" = xyes; then
    LTOALL=-flto
  fi
+ 
+@@ -19899,7 +19899,7 @@ dgux*)
+   shlibpath_var=LD_LIBRARY_PATH
+   ;;
+ 
+-freebsd1*)
++freebsd1|freebsd1.*)
+   dynamic_linker=no
+   ;;
  
 @@ -20375,7 +20375,7 @@ case "${host_os}" in
      ## look-up sequence. Such automatic override has proven to break things
