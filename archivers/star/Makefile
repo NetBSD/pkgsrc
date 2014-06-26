@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/09/11 19:47:01 asau Exp $
+# $NetBSD: Makefile,v 1.30 2014/06/26 20:10:38 asau Exp $
 #
 
 DISTNAME=	star-1.4.3
@@ -32,6 +32,8 @@ pre-build:
 		${LN} -s i586-linux-cc.rul x86_64-linux-cc.rul;	\
 		${LN} -s os-freebsd.id os-dragonfly.id;		\
 		${LN} -s i386-freebsd-gcc.rul x86_64-freebsd-gcc.rul;	\
-		${LN} -s i386-freebsd-cc.rul x86_64-freebsd-cc.rul
+		${LN} -s i386-freebsd-cc.rul x86_64-freebsd-cc.rul;	\
+		${LN} -s i386-freebsd-gcc.rul amd64-freebsd-gcc.rul;	\
+		${LN} -s i386-freebsd-cc.rul amd64-freebsd-cc.rul
 
 .include "../../mk/bsd.pkg.mk"
