@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/07/12 10:44:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2014/06/26 18:54:09 wiz Exp $
 
-DISTNAME=		iodine-0.6.0-rc1
-PKGNAME=		iodine-0.6.0rc1
-PKGREVISION=		1
+DISTNAME=		iodine-0.7.0
 CATEGORIES=		net
 MASTER_SITES=		http://code.kryo.se/iodine/
 
@@ -17,6 +15,8 @@ PKG_GROUPS=		iodine
 BUILD_DEFS+=		VARBASE
 MAKE_DIRS=		${VARBASE}/chroot
 OWN_DIRS=		${VARBASE}/chroot/iodine
+MAKE_FLAGS+=		prefix=${PREFIX}
+MAKE_FLAGS+=		mandir=${PREFIX}/${PKGMANDIR}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
