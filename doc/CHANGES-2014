@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2426 2014/06/26 01:19:20 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2427 2014/06/26 18:54:18 wiz Exp $
 
 # PLEASE NOTE THAT WE ARE NOW IN A FREEZE IN PREPARATION FOR THE
 # PKGSRC-2014Q2 BRANCH.
@@ -3235,3 +3235,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-ExtUtils-MakeMaker to 6.98 [schmonz 2014-06-25]
 	Updated devel/p5-Coro to 6.39 [schmonz 2014-06-25]
 	Updated textproc/py-validators to 0.6.0 [rodent 2014-06-26]
+	Updated net/iodine to 0.7.0 [wiz 2014-06-26]
