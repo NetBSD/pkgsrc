@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2005/01/21 14:41:16 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2014/06/26 20:12:43 asau Exp $
 
---- unarj.h.orig	2002-06-05 12:28:06.000000000 +0200
+--- unarj.h.orig	2002-06-05 10:28:06.000000000 +0000
 +++ unarj.h
-@@ -106,9 +106,13 @@
+@@ -106,9 +106,16 @@
  #endif
  
  typedef unsigned char  uchar;   /*  8 bits or more */
@@ -12,6 +12,9 @@ $NetBSD: patch-aa,v 1.6 2005/01/21 14:41:16 wiz Exp $
  typedef unsigned long  ulong;   /* 32 bits or more */
 +#else
 +#  include <sys/types.h>
++#if defined(__FreeBSD__) && __FreeBSD__ >= 10
++typedef unsigned long  ulong;   /* 32 bits or more */
++#endif
 +#endif
  
  #define USHRT_BIT   (CHAR_BIT * sizeof(ushort))
