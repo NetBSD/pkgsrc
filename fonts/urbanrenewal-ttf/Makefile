@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/06/01 16:35:37 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/06/26 20:32:25 asau Exp $
 #
 
 DISTNAME=	urbanrenewal
@@ -23,6 +23,13 @@ INSTALLATION_DIRS=	${TTFPATH}
 INSTALLATION_DIRS+=	share/doc/${PKGBASE}
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+# FreeBSD's unzip doesn't handle the archive:
+.if ${OPSYS} == "FreeBSD"
+TOOLS_PLATFORM.unzip=	# empty
+.endif
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.[Tt][Tt][Ff] ${DESTDIR}${FONTS_DIRS.ttf}
