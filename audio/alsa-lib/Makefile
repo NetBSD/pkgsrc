@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/06/16 14:09:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2014/06/26 20:18:11 asau Exp $
 #
 
 DISTNAME=	alsa-lib-1.0.27.2
@@ -28,6 +28,7 @@ CPPFLAGS.SunOS+=	-D__u32=uint32_t -D__u64=uint64_t
 CPPFLAGS.SunOS+=	-Dbswap_64=BSWAP_64 -Dbswap_32=BSWAP_32 -Dbswap_16=BSWAP_16
 
 CPPFLAGS.NetBSD+=	-D__u32=uint32_t -D__u64=uint64_t
+CPPFLAGS.FreeBSD+=	-D__u32=uint32_t -D__u64=uint64_t
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "SunOS"
