@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2014/06/22 23:59:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.33 2014/06/27 14:23:20 ryoon Exp $
 
 VER=		4.2.4.2
 DISTNAME=	libreoffice-${VER}
@@ -263,6 +263,7 @@ post-install:
 #.include "../../graphics/sane-backends/buildlink3.mk"
 #.include "../../graphics/vigra/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../lang/python/tool.mk"
 .include "../../math/lp_solve/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
