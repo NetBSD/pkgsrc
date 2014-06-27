@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.12 2013/02/24 18:41:25 wiz Exp $
+# $NetBSD: options.mk,v 1.13 2014/06/27 00:41:47 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pango
-PKG_SUPPORTED_OPTIONS=	x11 libthai
+PKG_SUPPORTED_OPTIONS=	libthai quartz x11
 PKG_SUGGESTED_OPTIONS=	x11
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		x11 thai
+PLIST_VARS+=		coretext quartz x11 thai
 
 ###
 ### X11 support
@@ -32,4 +32,18 @@ CONFIGURE_ARGS+=	--without-xft
 .if !empty(PKG_OPTIONS:Mlibthai)
 PLIST.thai=		yes
 .include "../../devel/libthai/buildlink3.mk"
+.endif
+
+.include "../../mk/bsd.prefs.mk"
+
+###
+### Quartz "support"
+###
+.if ${OPSYS} == "Darwin"
+### always looks for system CoreText
+PLIST.coretext=		yes
+. if !empty(PKG_OPTIONS:Mquartz)
+### installs its coretext header file if cairo was built with "quartz" option
+PLIST.quartz=		yes
+. endif
 .endif
