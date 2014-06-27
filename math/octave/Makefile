@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2014/05/29 23:36:53 wiz Exp $
+# $NetBSD: Makefile,v 1.123 2014/06/27 23:04:38 asau Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
 PKGREVISION=	6
@@ -15,6 +15,7 @@ LICENSE=	gnu-gpl-v3
 
 BUILD_DEPENDS+=	gperf>=2.7:../../devel/gperf
 BUILD_DEPENDS+=	teTeX-[0-9]*:../../print/teTeX
+TOOL_DEPENDS+=	gtexinfo>=5.1:../../devel/gtexinfo
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 
 OCTAVE_VER=	3.6.4
