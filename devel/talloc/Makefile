@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/05/30 13:51:12 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2014/06/27 23:02:04 asau Exp $
 
 DISTNAME=	talloc-2.1.1
 CATEGORIES=	devel
@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
-GNU_CONFIGURE=	yes
+HAS_CONFIGURE=	yes	# wrapper script around WAF
 USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	talloc.pc.in
