@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2428 2014/06/27 00:00:47 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2429 2014/06/27 03:29:15 schmonz Exp $
 
 # PLEASE NOTE THAT WE ARE NOW IN A FREEZE IN PREPARATION FOR THE
 # PKGSRC-2014Q2 BRANCH.
@@ -3237,3 +3237,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/py-validators to 0.6.0 [rodent 2014-06-26]
 	Updated net/iodine to 0.7.0 [wiz 2014-06-26]
 	Updated databases/percona-toolkit to 2.2.8 [rodent 2014-06-26]
+	Updated x11/p5-Alien-wxWidgets to 0.60nb15 [schmonz 2014-06-27]
