@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2431 2014/06/27 11:34:57 taca Exp $
+$NetBSD: CHANGES-2014,v 1.2432 2014/06/27 14:09:29 ryoon Exp $
 
 # PLEASE NOTE THAT WE ARE NOW IN A FREEZE IN PREPARATION FOR THE
 # PKGSRC-2014Q2 BRANCH.
@@ -3240,3 +3240,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/p5-Alien-wxWidgets to 0.60nb15 [schmonz 2014-06-27]
 	Updated lang/php54 to 5.4.30 [taca 2014-06-27]
 	Updated lang/php55 to 5.5.14 [taca 2014-06-27]
+	Updated devel/libvolume_id to 0.81.1nb1 [ryoon 2014-06-27]
