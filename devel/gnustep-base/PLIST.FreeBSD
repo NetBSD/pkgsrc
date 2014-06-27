@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.FreeBSD,v 1.1 2014/06/27 22:59:15 asau Exp $
+lib/libgnustep-base.so.1.24
