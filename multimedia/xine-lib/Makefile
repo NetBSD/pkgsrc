@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2014/05/29 23:37:02 wiz Exp $
+# $NetBSD: Makefile,v 1.128 2014/06/27 12:17:22 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -40,7 +40,7 @@ PLIST.oss=	yes
 .endif
 .endif
 
-CPPFLAGS.SunOS+=	-D__u32=uint32_t -DHAVE_SYSI86
+CPPFLAGS.SunOS+=	-D__u32=uint32_t -DHAVE_SYSI86 -DHAVE_MMX_FALSE
 LDFLAGS.SunOS+=		-lresolv
 
 # flac is supported internally; don't know what the plugin is good for
