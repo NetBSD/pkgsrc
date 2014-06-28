@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/12/31 16:51:46 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/28 14:23:33 asau Exp $
 
 DISTNAME=	fever-1.2
 PKGNAME=	${PHP_PKG_PREFIX}-tt-rss-${DISTNAME:S/-/-plugin-/}
@@ -21,7 +21,7 @@ INSTALLATION_DIRS=	share/tt-rss/plugins/fever
 do-build:
 
 do-install:
-	cd ${WRKSRC} && pax -pe -rw * ${DESTDIR}${PREFIX}/share/tt-rss/plugins/fever
+	cd ${WRKSRC} && pax -rw -pp * ${DESTDIR}${PREFIX}/share/tt-rss/plugins/fever
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
