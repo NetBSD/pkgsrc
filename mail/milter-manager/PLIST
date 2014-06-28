@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2014/05/18 02:28:27 obache Exp $
+@comment $NetBSD: PLIST,v 1.18 2014/06/28 06:42:12 obache Exp $
 bin/milter-manager-log-analyzer
 bin/milter-performance-check
 bin/milter-report-statistics
@@ -92,9 +92,11 @@ lib/milter-manager/binding/lib/milter/client/command-line.rb
 lib/milter-manager/binding/lib/milter/client/composite-session.rb
 lib/milter-manager/binding/lib/milter/client/configuration.rb
 lib/milter-manager/binding/lib/milter/client/context-state.rb
+lib/milter-manager/binding/lib/milter/client/envelope-address.rb
 lib/milter-manager/binding/lib/milter/client/fallback-session.rb
 lib/milter-manager/binding/lib/milter/client/session-context.rb
 lib/milter-manager/binding/lib/milter/client/session.rb
+lib/milter-manager/binding/lib/milter/client/testing.rb
 lib/milter-manager/binding/lib/milter/core.rb
 lib/milter-manager/binding/lib/milter/core/callback.rb
 lib/milter-manager/binding/lib/milter/core/compatible.rb
