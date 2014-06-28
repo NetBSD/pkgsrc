@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2014/05/18 04:28:17 obache Exp $
+@comment $NetBSD: PLIST,v 1.27 2014/06/28 06:45:25 obache Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -267,6 +267,7 @@ share/mikutter/core/plugin/gtk/Gemfile
 share/mikutter/core/plugin/gtk/account_box.rb
 share/mikutter/core/plugin/gtk/delayer.rb
 share/mikutter/core/plugin/gtk/gtk.rb
+share/mikutter/core/plugin/gtk/konami_watcher.rb
 share/mikutter/core/plugin/gtk/mainloop.rb
 share/mikutter/core/plugin/gtk/mikutter_window.rb
 share/mikutter/core/plugin/gtk/po/ar/gtk.po
