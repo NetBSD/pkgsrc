@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2014/02/15 13:46:12 mef Exp $
+# $NetBSD: Makefile,v 1.39 2014/06/28 21:05:11 dholland Exp $
 #
 
 DISTNAME=	verilog-0.9.7
@@ -64,8 +64,13 @@ post-install:
 		disciplines.vams \
 	${DESTDIR}${PREFIX}/lib/ivl/include )
 
+#
+# 1. this should be BUILD_DEPENDS
+# 2. it doesn't actually run it during the build anyhow
+#
+#.include "../../devel/gperf/buildlink3.mk"
+
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
-.include "../../devel/gperf/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
