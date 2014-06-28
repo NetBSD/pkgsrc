@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2014/04/21 18:14:23 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2014/06/28 21:28:14 dholland Exp $
 #
 
 DISTNAME=	unfs3-0.9.22
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=unfs3/}
 
@@ -35,5 +35,4 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/exports \
 	    ${DESTDIR}${PREFIX}/share/examples/unfs3
 
-.include "../../devel/flex/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
