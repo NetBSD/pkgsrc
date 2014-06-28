@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/04 11:36:08 sno Exp $
+$NetBSD: distinfo,v 1.2 2014/06/28 19:52:05 schmonz Exp $
 
 SHA1 (PerlIO-gzip-0.18.tar.gz) = f16b4a1710cf6a4bfdc589ab8c3b056a6d994a9d
 RMD160 (PerlIO-gzip-0.18.tar.gz) = 36b4991424fdfa4dbb824411cbd57f49922ad026
 Size (PerlIO-gzip-0.18.tar.gz) = 19179 bytes
+SHA1 (patch-Makefile.PL) = 2b2868138bb1ae3d14e1c419a233ef9b8a6c0102
