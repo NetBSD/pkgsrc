@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.112 2014/06/22 08:54:39 ryoon Exp $
+$NetBSD: distinfo,v 1.113 2014/06/28 22:51:38 joerg Exp $
 
 SHA1 (enigmail-1.6.1_pre20140112.tar.xz) = abb4ce7a5512095c18af7e68f4cbeb52b1e95179
 RMD160 (enigmail-1.6.1_pre20140112.tar.xz) = 617cf51d64458b9e1df332e3759cddd2b2bb34df
@@ -53,6 +53,11 @@ SHA1 (patch-mozilla_content_media_gstreamer_GStreamerReader.cpp) = e2e4826c87752
 SHA1 (patch-mozilla_content_media_gstreamer_GStreamerReader.h) = c0813c20d5e64a9f6f72f90fe17be623e9a6cf04
 SHA1 (patch-mozilla_content_media_gstreamer_moz.build) = fa47b7f00063bee5d737c567f0cb0c05abea8afe
 SHA1 (patch-mozilla_content_media_test_manifest.js) = 30de2ee779ca7f3f38a6cffe41eda9d57e3dc9c2
+SHA1 (patch-mozilla_content_svg_content_src_SVGComponentTransferFunctionElement.h) = b6fea8dee6df0b1ede7d7b4393c180bd4070081e
+SHA1 (patch-mozilla_content_svg_content_src_nsSVGFilters.cpp) = 14ac1ccb7266bb069e540eaf07dd55213d3c5466
+SHA1 (patch-mozilla_content_svg_content_src_nsSVGFilters.h) = 188c804e459c9389f0862bc47ed6a943b7a9c7d5
+SHA1 (patch-mozilla_dom_indexedDB_IDBEvents.cpp) = 24bc14e0c573a686df718ae0fecd6eb0fcd79b58
+SHA1 (patch-mozilla_dom_indexedDB_IDBEvents.h) = 16014a04e30027025dff96756c5ba6ad28cbcca8
 SHA1 (patch-mozilla_dom_plugins_ipc_PluginModuleChild.cpp) = 400a5af9988d4392d92e493c73bbe61cd1915edb
 SHA1 (patch-mozilla_dom_plugins_ipc_PluginModuleChild.h) = 14038ce0ee2b38db6c7952056a97a65839a2c1a9
 SHA1 (patch-mozilla_dom_plugins_ipc_PluginProcessChild.cpp) = f29ed121d90a6fc4c02e36da8d440d6c3337e63a
