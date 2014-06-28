@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2014/06/28 20:19:41 dholland Exp $
+$NetBSD: distinfo,v 1.24 2014/06/28 23:40:12 dholland Exp $
 
 SHA1 (xorp-1.6.tar.gz) = 366d32068ed76b8ec69958b601d4fbde61ef4cbb
 RMD160 (xorp-1.6.tar.gz) = 32b3f6d03defc816ed983088e61b5e808de17f98
@@ -62,7 +62,7 @@ SHA1 (patch-policy_backend_backend.l) = 07bc0c71dafa4e3fd91e8825a3322342b60f20a7
 SHA1 (patch-policy_backend_iv__exec.cc) = de92d8103c6921c6c530539aa2d3e6526bd222e2
 SHA1 (patch-policy_backend_policytags.hh) = 22f31e64c162435be5de5885c56292cca5395fe9
 SHA1 (patch-policy_backend_single__varrw.cc) = 84fc7c9ffdb79401fc469b46fa24f9e418d8b278
-SHA1 (patch-policy_policy.l) = 9bec462ff62794ac9154d3ed66637109dcd0e84c
+SHA1 (patch-policy_policy.l) = 7344e2152bb9325ed843edc1a98097f5bd6ba7e7
 SHA1 (patch-policy_test_compilepolicy.l) = 7c2985af63524c669d9bb3781457c8cc53359903
 SHA1 (patch-rib_redist__xrl.cc) = ae886ad350b9e9e779bf8220be4e262df8c673a9
 SHA1 (patch-rib_rt__tab__deletion.cc) = 77c5a30bb02ac84aa8669cce948fa5a4f6d067e9
