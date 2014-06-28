@@ -1,8 +1,13 @@
-$NetBSD: distinfo,v 1.13 2013/10/27 20:33:39 joerg Exp $
+$NetBSD: distinfo,v 1.14 2014/06/28 23:10:39 dholland Exp $
 
 SHA1 (sather-1.2.3.tar.gz) = 85678468dc99ee1880a38d994d4231e799fcaae6
 RMD160 (sather-1.2.3.tar.gz) = 219594b2621df4f4bb75bd41c67b1a26ecb04042
 Size (sather-1.2.3.tar.gz) = 5535747 bytes
+SHA1 (patch-Library_System_Socket_socket__support__unix.c) = c8d31aacf1d36c7dea00462f6535d38e9443e2e0
+SHA1 (patch-Library_System_TclTk_c__interface.c) = 44667a9b8ce9d622e5bc030e80e822785d4712a2
+SHA1 (patch-Library_System_TclTk_tkRaster.c) = 49b6e788c2b511608d8f2613f2c8aaa1f6d1ef0d
+SHA1 (patch-Library_System_TclTk_tkRaster.h) = bb88dd405b071988075446a7a1e1cae9622a538a
+SHA1 (patch-Library_System_TclTk_tkRasterBuiltIn.c) = 4f32743b86c9b34d9f5b803187b1c7b8f2837873
 SHA1 (patch-aa) = d326038193ce2fb459ed19f9ab2ae2b6dce1ace3
 SHA1 (patch-ab) = e45f8a8230d1fbe3fc72babbecfa8148699f7906
 SHA1 (patch-ac) = 586cdebde7a2c1b49f9b75a33d26980a2c0397f3
@@ -12,7 +17,7 @@ SHA1 (patch-af) = 1ab2a67446f48c088ec77550d199a9779c50ffb8
 SHA1 (patch-ag) = 5cd0a0ab1c1fbf80c6ba424fa1926957ede35715
 SHA1 (patch-ah) = 9dad48a3bc7e6af65eb51ae6070b8e67cab9ca2b
 SHA1 (patch-ai) = 032b6a4355bdd059d5b88ebe00ae2c1bf35c8eba
-SHA1 (patch-aj) = a64522fa97e91cb8704f572f1670921590840976
+SHA1 (patch-aj) = c27e27a98c722ec09fd1b647c0ae20852d59fa33
 SHA1 (patch-ak) = 9efae5b96d5e8b8040d74eebc20b3aa7153d2aee
 SHA1 (patch-al) = 52d12bc03d041dfa28140842f46a423644952a91
 SHA1 (patch-am) = b75d6812ee2bcb81205d82316c8215d500df077c
