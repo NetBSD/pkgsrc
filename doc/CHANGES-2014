@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2433 2014/06/28 06:42:22 obache Exp $
+$NetBSD: CHANGES-2014,v 1.2434 2014/06/28 06:45:34 obache Exp $
 
 # PLEASE NOTE THAT WE ARE NOW IN A FREEZE IN PREPARATION FOR THE
 # PKGSRC-2014Q2 BRANCH.
@@ -3242,3 +3242,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/php55 to 5.5.14 [taca 2014-06-27]
 	Updated devel/libvolume_id to 0.81.1nb1 [ryoon 2014-06-27]
 	Updated mail/milter-manager to 2.0.4 [obache 2014-06-28]
+	Updated net/mikutter to 3.0.2 [obache 2014-06-28]
