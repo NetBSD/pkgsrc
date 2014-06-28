@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.21 2014/01/19 10:58:23 adam Exp $
+$NetBSD: distinfo,v 1.22 2014/06/28 21:20:06 dholland Exp $
 
 SHA1 (wine-1.7.11.tar.bz2) = ebe30cf1a93782a958e8b1e3ed898310c37676fe
 RMD160 (wine-1.7.11.tar.bz2) = ea565f9f46eeabf803cc5ab319469831a4afa93d
 Size (wine-1.7.11.tar.bz2) = 21359534 bytes
 SHA1 (patch-configure) = 2d540b149e59298ca0fcc43d50873c986fbe0140
+SHA1 (patch-dlls_ntdll_signal__x86__64.c) = 27cff56a8e3886298effbbfa5bbab5af9579d447
 SHA1 (patch-dlls_wbemprox_builtin.c) = a11f910d8b94047f2dcf8b45c27fb1c6c3f3ce59
 SHA1 (patch-dlls_wineoss.drv_mmdevdrv.c) = fc44346b889ee7486a92e9704a8447334f48f4d1
 SHA1 (patch-dlls_ws2__32_socket.c) = 98ebaa7b0831e558f49a484ffb3a1b28adb9bcf2
