@@ -1,14 +1,14 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2013/06/09 04:24:11 ryoon Exp $
+$NetBSD: MESSAGE,v 1.5 2014/06/29 15:23:47 ryoon Exp $
 
-To use php-tt-rss with Apache 2.4 and php 5.4, you will need to perform
+To use php-tt-rss with nginx 1.6 and php 5.4, you will need to perform
 the following steps.
 
-1. Install www/apache24 and www/ap-php
+1. Install www/nginx and www/php-fpm.
 
 2. Install PostgreSQL database server.
 
-	# cd databases/postgresql91-server
+	# cd databases/postgresql93-server
 	# make install
 
 3. Start PostgreSQL server.
@@ -17,15 +17,12 @@ the following steps.
 
 4. Add PostgreSQL user, ttrss
 
-	$ createuser -U pgsql ttrss
-	Shall the new role be a superuser? (y/n) n
-	Shall the new role be allowed to create databases? (y/n) y
-	Shall the new role be allowed to create more new roles? (y/n) n
+	$ createuser -d -U pgsql ttrss
 
 5. Set password for ttrss user
 
 	$ psql -U pgsql template1
-	psql (9.1.7)
+	psql (9.3.4)
 	Type "help" for help.
 
 	template1=# alter user ttrss with password 'ttrss_user_password';
@@ -58,20 +55,37 @@ the following steps.
 	extension=mbstring.so
 	extension=pgsql.so
 
-8. Be sure to have the following lines in ${PREFIX}/etc/httpd/httpd.conf
+10. Be sure to have the following in ${PREFIX}/etc/php-fpm.conf
 
-	DocumentRoot "${PREFIX}/share/tt-rss"
-	LoadModule php5_module lib/httpd/mod_php5.so
-	AddType application/x-httpd-php .php
-	<Directory "${PREFIX}/share/tt-rss">
-		DirectoryIndex index.php
-		Options All
-		Allow from All
-		AllowOverride All
-		Require all granted
-	</Directory>
+	listen.allowed_clients = 127.0.0.1
 
-9. Edit ${PREFIX}/share/tt-rss/config.php, be sure to have the following
+11. Be sure to have the following lines in ${PREFIX}/etc/nginx/nginx.conf
+
+	http {
+	upstream php-handler {
+		server 127.0.0.1:9000;
+	}
+
+	server {
+		listen 80;
+		root ${PREFIX}/share/tt-rss;
+		server_name YOUR_SERVER_NAME;
+
+		location ~ \..*/.*\.php$ {return 404;}
+
+		location ~* ^/(.*\.php)$ {
+			try_files $uri $uri/ index.php;
+
+			include fastcgi_params;
+			fastcgi_index index.php;
+			fastcgi_param SCRIPT_FILENAME $document_root$1;
+			fastcgi_param PATH_INFO $2;
+			fastcgi_pass php-handler;
+	}
+	}
+
+
+12. Edit ${PREFIX}/share/tt-rss/config.php, be sure to have the following
    lines.
 
 	define('DB_TYPE', "pgsql");
@@ -81,11 +95,14 @@ the following steps.
         define('DB_PASS', "ttrss_user_password");
 	define('SELF_URL_PATH', 'http://localhost/');
 
-10. Start Apache httpd 2.4
+13. Start PHP-FPM daemon.
 
-	# ${RCD_SCRIPTS_DIR}/apache start
+	${RCD_SCRIPTS_DIR}/php_fpm start
 
-11. Access http://localhost/ , and login with
+14. Start nginx httpd server.
+
+	${RCD_SCRIPTS_DIR}/nginx start
+
+15. Access http://localhost/ , and login with
     login/password = "admin"/"password".
-
 ===========================================================================
