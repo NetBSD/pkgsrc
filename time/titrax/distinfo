@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2011/01/17 12:52:15 he Exp $
+$NetBSD: distinfo,v 1.7 2014/06/29 19:12:51 dholland Exp $
 
 SHA1 (titrax-1.98.tar.gz) = 2849f8930aac945d435f58ad0a2a98fc19477da0
 RMD160 (titrax-1.98.tar.gz) = 519898ed0d74b50d1a01041a6479fb4974823f3e
 Size (titrax-1.98.tar.gz) = 41154 bytes
-SHA1 (patch-aa) = 3e303f061b9f92397f01fe9cb337adfa85194dde
+SHA1 (patch-aa) = 67b1aadb6e8ad5bc86959fe41c71dd5467d35f2c
 SHA1 (patch-ab) = 03ea1f434ab68ccd408830c778a462c083729c95
 SHA1 (patch-ac) = 2fbad9d6cdbc5239cf2a25ab057f640452c5a33e
 SHA1 (patch-ad) = 49ab87c6c5d1574bcef3baf6d0c8a4c8e0220583
