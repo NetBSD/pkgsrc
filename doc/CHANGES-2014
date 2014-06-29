@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2437 2014/06/29 06:08:01 dholland Exp $
+$NetBSD: CHANGES-2014,v 1.2438 2014/06/29 06:58:57 dholland Exp $
 
 # PLEASE NOTE THAT WE ARE NOW IN A FREEZE IN PREPARATION FOR THE
 # PKGSRC-2014Q2 BRANCH.
@@ -3246,3 +3246,6 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/unfs3 to 0.9.22nb2 [dholland 2014-06-28]
 	Updated misc/yrolo to 1.1nb6 [dholland 2014-06-29]
 	Updated x11/blt to 2.4znb9 [dholland 2014-06-29]
+	Updated chat/xaric to 0.13.6nb1 [dholland 2014-06-29]
+	Updated net/knot to 1.4.6nb1 [dholland 2014-06-29]
+	Updated net/drill to 1.6.15nb1 [dholland 2014-06-29]
