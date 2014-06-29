@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2013/07/21 11:29:55 shattered Exp $
+# $NetBSD: Makefile,v 1.22 2014/06/29 06:23:28 dholland Exp $
 #
 
 DISTNAME=	xaric-0.13.6
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://xaric.org/software/xaric/releases/
 
@@ -14,5 +15,6 @@ USE_TOOLS+=	gmake
 
 CONFIGURE_ARGS+=	--enable-optimize
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
