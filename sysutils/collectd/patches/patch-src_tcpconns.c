@@ -1,4 +1,4 @@
-$NetBSD: patch-src_tcpconns.c,v 1.2 2014/06/14 12:21:02 fhajny Exp $
+$NetBSD: patch-src_tcpconns.c,v 1.3 2014/06/29 18:01:06 dholland Exp $
 
 --- src/tcpconns.c.orig	2014-01-26 08:09:14.000000000 +0000
 +++ src/tcpconns.c
@@ -14,7 +14,7 @@ $NetBSD: patch-src_tcpconns.c,v 1.2 2014/06/14 12:21:02 fhajny Exp $
    /* Get the `head' pcb */
    head = (struct inpcb *) &(inpcbtable_ptr->inpt_queue);
    /* Get the first pcb */
-+#if __NetBSD_Version__ >= 699000000
++#if __NetBSD_Version__ > 699002700
 +  next = (struct inpcb *)TAILQ_FIRST (&table.inpt_queue);
 +#else
    next = (struct inpcb *)CIRCLEQ_FIRST (&table.inpt_queue);
@@ -26,7 +26,7 @@ $NetBSD: patch-src_tcpconns.c,v 1.2 2014/06/14 12:21:02 fhajny Exp $
      kread ((u_long) next, &inpcb, sizeof (inpcb));
  
      /* Advance `next' */
-+#if __NetBSD_Version__ >= 699000000
++#if __NetBSD_Version__ > 699002700
 +    next = (struct inpcb *)TAILQ_NEXT (&inpcb, inp_queue);
 +#else
      next = (struct inpcb *)CIRCLEQ_NEXT (&inpcb, inp_queue);
