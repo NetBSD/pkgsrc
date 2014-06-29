@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.2 2013/06/03 21:17:25 asau Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/29 06:27:07 dholland Exp $
 
 DISTNAME=	openrcs-20110824192219
 CATEGORIES=	devel
@@ -10,7 +10,7 @@ COMMENT=	OpenRCS is RCS clone from OpenBSD project
 
 WRKSRC=		$(WRKDIR)/openrcs
 
-USE_TOOLS=	aclocal automake autoconf
+USE_TOOLS=	aclocal automake autoconf yacc
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
