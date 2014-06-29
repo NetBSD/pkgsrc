@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2013/07/18 12:06:10 joerg Exp $
+$NetBSD: distinfo,v 1.12 2014/06/29 19:43:54 dholland Exp $
 
 SHA1 (vfu-3.04.src.tar.gz) = 75e87d102114dc08136420e7927e687f72a52dfd
 RMD160 (vfu-3.04.src.tar.gz) = a0d1ba84d9c66216b444226ceace190ada0e795a
@@ -6,13 +6,21 @@ Size (vfu-3.04.src.tar.gz) = 187519 bytes
 SHA1 (patch-aa) = ce204485f8c781a6ffeb25e4de4de21cdf33b473
 SHA1 (patch-ab) = bb935cd9127479517daf36480e2637cd5447b978
 SHA1 (patch-ac) = 72c05012c39bb785b4eea5d41c51bd1787e463f8
-SHA1 (patch-ad) = 1410335b46d58ad9ec973b5a6b9ebe52091c0012
+SHA1 (patch-ad) = 0777dcc38998562c9f8f70c64a6c2dce02c20c7c
 SHA1 (patch-ae) = a2076bb4754bc433898529734f7b25a5efd2ba57
 SHA1 (patch-af) = 056851af215dbf1195b9e7f00b6b654261473945
 SHA1 (patch-ag) = 3e87916630a0e9628cc28097bf2d011d15fadc42
-SHA1 (patch-ah) = 50b211c8ca93393f38ed7e279795e1df0606884c
+SHA1 (patch-ah) = 65bcc3b139f688c4407bb14cfb8d2d61962994f7
 SHA1 (patch-ai) = 4a161a1df84001bdefc81384128ea74bf9d7f61d
 SHA1 (patch-aj) = 265fbb0873ce0b910ba6a53da57a18269af34b82
 SHA1 (patch-ak) = cfcfb94f1ba6169ef471ae47fdcd9ccc81196a39
-SHA1 (patch-al) = bd947171f2027243bebe889c537426124459e2e1
+SHA1 (patch-al) = ee31aca39c8f4ba7254f9a79c8488d8592b465e5
+SHA1 (patch-vfu_vfuopt.cpp) = f504bea56db4ebe07fe313733c02a38fb65805f8
+SHA1 (patch-vfu_vfuopt.h) = d64d243deff488fad9c46fb022f20b303d80bd03
+SHA1 (patch-vfu_vfusys.cpp) = 3a4f57f381d10c6d4f66d84d8c57338a0e17b77c
+SHA1 (patch-vfu_vfuview.cpp) = 573c1df0d515d328de300ed1e418f065ac43887e
+SHA1 (patch-vslib_conmenu.h) = 8fbfc954abb7d713ef66ab565d66ecb285cd86f0
+SHA1 (patch-vslib_getopt2.cpp) = b5cb783a8660a267c5dca03ff29e37415ad6fb2b
+SHA1 (patch-vslib_regexp3.cpp) = 48017429d1f10559f37cbdc901fa247e6cd8e600
+SHA1 (patch-vslib_vstring.cpp) = 56fc269b175405821533e11c86e1c6a12cc5d7e7
 SHA1 (patch-vslib_vstring.h) = d93cb8362ad11d0a62acaf8ab56e4aace0fd4f7f
