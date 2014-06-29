@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2013/09/05 18:47:16 wiz Exp $
+$NetBSD: distinfo,v 1.20 2014/06/29 17:06:52 schmonz Exp $
 
-SHA1 (Compress-Raw-Bzip2-2.062.tar.gz) = a0debfd5504243ce18c84518318a4a4439a7454b
-RMD160 (Compress-Raw-Bzip2-2.062.tar.gz) = 133d63de18fc27bc25a1887a7b28b2f155e23ca0
-Size (Compress-Raw-Bzip2-2.062.tar.gz) = 135942 bytes
+SHA1 (Compress-Raw-Bzip2-2.064.tar.gz) = 9c39d0ffd5414c052efa0893f03f23e59229ee8f
+RMD160 (Compress-Raw-Bzip2-2.064.tar.gz) = 370e6fd2320eae3c87624291723f7b0859a90e69
+Size (Compress-Raw-Bzip2-2.064.tar.gz) = 136412 bytes
 SHA1 (patch-Makefile.PL) = cf740129a00cb58f3bae93d96ddac67434a52f55
