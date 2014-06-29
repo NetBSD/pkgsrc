@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2012/10/25 20:59:46 he Exp $
+# $NetBSD: Makefile,v 1.9 2014/06/29 06:55:16 dholland Exp $
 
 VERSION=	1.6.15
 DISTNAME=	ldns-${VERSION}
 PKGNAME=	drill-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/ldns/
 
@@ -22,4 +23,5 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/drill
 BUILDLINK_API_DEPENDS.ldns+=    ldns>=${VERSION}
 
 .include "../../net/ldns/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
