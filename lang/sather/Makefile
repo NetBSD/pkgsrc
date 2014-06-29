@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2014/05/29 23:36:44 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2014/06/29 05:12:42 dholland Exp $
 
 DISTNAME=		sather-1.2.3
 PKGREVISION=		10
@@ -55,6 +55,7 @@ INSTALLATION_DIRS=	bin ${PKGINFODIR} ${PKGMANDIR}/man1 lib/sather \
 
 post-patch:
 	ln -s netbsd ${WRKSRC}/System/Platforms/dragonfly
+	ln -s netbsd ${WRKSRC}/System/Platforms/darwin
 
 post-build:
 	cd ${WRKSRC}/Emacs;						\
