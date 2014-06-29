@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2014/05/29 23:35:57 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2014/06/29 15:03:25 joerg Exp $
 #
 
 DISTNAME=	Gnome2-1.042
@@ -20,6 +20,9 @@ MAKE_JOBS_SAFE=	no
 USE_TOOLS+=	pkg-config
 
 PERL5_PACKLIST=	auto/Gnome2/.packlist
+
+post-extract:
+	${MKDIR} ${WRKSRC}/blib/lib/Gnome2
 
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
