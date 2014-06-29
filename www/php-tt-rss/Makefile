@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2014/01/27 18:41:15 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/06/29 15:23:47 ryoon Exp $
 
-TTRVER=		1.10
+TTRVER=		1.12
 DISTNAME=	Tiny-Tiny-RSS-${TTRVER}
 PKGNAME=	${PHP_PKG_PREFIX}-tt-rss-${TTRVER}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	-http://github.com/gothfox/Tiny-Tiny-RSS/archive/${TTRVER}.tar.gz
 

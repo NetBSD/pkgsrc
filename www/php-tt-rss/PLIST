@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/10/12 13:14:28 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/06/29 15:23:47 ryoon Exp $
 share/tt-rss/LICENSE
 share/tt-rss/README.md
 share/tt-rss/api/index.php
@@ -54,10 +54,12 @@ share/tt-rss/classes/rpc.php
 share/tt-rss/classes/ttrssmailer.php
 share/tt-rss/config.php-dist
 share/tt-rss/css/cdm.css
+share/tt-rss/css/dijit.css
 share/tt-rss/css/layout.css
 share/tt-rss/css/prefs.css
 share/tt-rss/css/tt-rss.css
 share/tt-rss/css/utility.css
+share/tt-rss/css/zoom.css
 share/tt-rss/errors.php
 share/tt-rss/feed-icons/.empty
 share/tt-rss/feed-icons/index.html
@@ -95,8 +97,11 @@ share/tt-rss/images/score_low.png
 share/tt-rss/images/score_neutral.png
 share/tt-rss/images/star.png
 share/tt-rss/images/tag.png
+share/tt-rss/images/tick.png
 share/tt-rss/images/time.png
 share/tt-rss/images/toolbar.png
+share/tt-rss/images/treeExpandImages.png
+share/tt-rss/images/untick.png
 share/tt-rss/images/user.png
 share/tt-rss/include/autoload.php
 share/tt-rss/include/ccache.php
@@ -108,6 +113,7 @@ share/tt-rss/include/digest.php
 share/tt-rss/include/errorhandler.php
 share/tt-rss/include/feedbrowser.php
 share/tt-rss/include/functions.php
+share/tt-rss/include/functions2.php
 share/tt-rss/include/labels.php
 share/tt-rss/include/login_form.php
 share/tt-rss/include/rssfuncs.php
@@ -1994,7 +2000,6 @@ share/tt-rss/lib/pubsubhubbub/README.txt
 share/tt-rss/lib/pubsubhubbub/publisher.php
 share/tt-rss/lib/pubsubhubbub/subscriber.php
 share/tt-rss/lib/scriptaculous/controls.js
-share/tt-rss/lib/scriptaculous/dragdrop.js
 share/tt-rss/lib/scriptaculous/effects.js
 share/tt-rss/lib/scriptaculous/scriptaculous.js
 share/tt-rss/lib/sphinxapi.php
@@ -2035,23 +2040,31 @@ share/tt-rss/locale/ru_RU/LC_MESSAGES/messages.mo
 share/tt-rss/locale/ru_RU/LC_MESSAGES/messages.po
 share/tt-rss/locale/sv_SE/LC_MESSAGES/messages.mo
 share/tt-rss/locale/sv_SE/LC_MESSAGES/messages.po
+share/tt-rss/locale/tr_TR/LC_MESSAGES/messages.mo
+share/tt-rss/locale/tr_TR/LC_MESSAGES/messages.po
 share/tt-rss/locale/zh_CN/LC_MESSAGES/messages.mo
 share/tt-rss/locale/zh_CN/LC_MESSAGES/messages.po
+share/tt-rss/locale/zh_TW/LC_MESSAGES/messages.mo
+share/tt-rss/locale/zh_TW/LC_MESSAGES/messages.po
 share/tt-rss/lock/.empty
 share/tt-rss/lock/.htaccess
 share/tt-rss/messages.pot
 share/tt-rss/opml.php
-share/tt-rss/plugins/af_buni/init.php
-share/tt-rss/plugins/af_buttersafe/init.php
-share/tt-rss/plugins/af_dilbert/init.php
-share/tt-rss/plugins/af_explosm/init.php
-share/tt-rss/plugins/af_gocomics/init.php
+share/tt-rss/plugins/af_comics/af_comics_template.php
+share/tt-rss/plugins/af_comics/filter_base.php
+share/tt-rss/plugins/af_comics/filters/af_comics_cad.php
+share/tt-rss/plugins/af_comics/filters/af_comics_comicpress.php
+share/tt-rss/plugins/af_comics/filters/af_comics_dilbert.php
+share/tt-rss/plugins/af_comics/filters/af_comics_explosm.php
+share/tt-rss/plugins/af_comics/filters/af_comics_gocomics.php
+share/tt-rss/plugins/af_comics/filters/af_comics_pa.php
+share/tt-rss/plugins/af_comics/filters/af_comics_twp.php
+share/tt-rss/plugins/af_comics/init.php
+share/tt-rss/plugins/af_fsckportal/init.php
 share/tt-rss/plugins/af_natgeo/init.php
-share/tt-rss/plugins/af_pennyarcade/init.php
 share/tt-rss/plugins/af_redditimgur/init.php
 share/tt-rss/plugins/af_sciam/init.php
 share/tt-rss/plugins/af_unburn/init.php
-share/tt-rss/plugins/af_whomp/init.php
 share/tt-rss/plugins/auth_internal/init.php
 share/tt-rss/plugins/auth_remote/init.php
 share/tt-rss/plugins/bookmarklets/init.php
@@ -2080,6 +2093,8 @@ share/tt-rss/plugins/mark_button/init.php
 share/tt-rss/plugins/no_iframes/init.php
 share/tt-rss/plugins/no_title_counters/init.js
 share/tt-rss/plugins/no_title_counters/init.php
+share/tt-rss/plugins/no_url_hashes/init.js
+share/tt-rss/plugins/no_url_hashes/init.php
 share/tt-rss/plugins/note/init.php
 share/tt-rss/plugins/note/note.js
 share/tt-rss/plugins/note/note.png
@@ -2131,6 +2146,7 @@ share/tt-rss/schema/versions/mysql/120.sql
 share/tt-rss/schema/versions/mysql/121.sql
 share/tt-rss/schema/versions/mysql/122.sql
 share/tt-rss/schema/versions/mysql/123.sql
+share/tt-rss/schema/versions/mysql/124.sql
 share/tt-rss/schema/versions/mysql/13.sql
 share/tt-rss/schema/versions/mysql/14.sql
 share/tt-rss/schema/versions/mysql/15.sql
@@ -2252,6 +2268,7 @@ share/tt-rss/schema/versions/pgsql/120.sql
 share/tt-rss/schema/versions/pgsql/121.sql
 share/tt-rss/schema/versions/pgsql/122.sql
 share/tt-rss/schema/versions/pgsql/123.sql
+share/tt-rss/schema/versions/pgsql/124.sql
 share/tt-rss/schema/versions/pgsql/13.sql
 share/tt-rss/schema/versions/pgsql/14.sql
 share/tt-rss/schema/versions/pgsql/15.sql
@@ -2351,9 +2368,11 @@ share/tt-rss/templates/digest_template.txt
 share/tt-rss/templates/digest_template_html.txt
 share/tt-rss/templates/email_article_template.txt
 share/tt-rss/templates/generated_feed.txt
+share/tt-rss/templates/resetpass_link_template.txt
 share/tt-rss/templates/resetpass_template.txt
 share/tt-rss/themes/.empty
 share/tt-rss/themes/default.css
+share/tt-rss/themes/night.css
 share/tt-rss/update.php
 share/tt-rss/update_daemon2.php
 share/tt-rss/utils/.htaccess
