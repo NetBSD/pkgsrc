@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2440 2014/06/29 14:00:34 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.2441 2014/06/29 15:24:25 ryoon Exp $
 
 # PLEASE NOTE THAT WE ARE NOW IN A FREEZE IN PREPARATION FOR THE
 # PKGSRC-2014Q2 BRANCH.
@@ -3251,3 +3251,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/drill to 1.6.15nb1 [dholland 2014-06-29]
 	Updated archivers/lzo to 2.0.8 [schwarz 2014-06-29]
 	Updated www/php-owncloud to 6.0.4 [ryoon 2014-06-29]
+	Updated www/php-tt-rss to 1.12 [ryoon 2014-06-29]
