@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2012/09/11 19:46:57 asau Exp $
+# $NetBSD: Makefile,v 1.14 2014/06/29 13:05:38 schwarz Exp $
 
 DISTNAME=	lzo-2.06
 CATEGORIES=	archivers
-MASTER_SITES=	http://ftp.uni-koeln.de/util/arc/ \
-		http://www.oberhumer.com/opensource/lzo/download/
+MASTER_SITES=	http://www.oberhumer.com/opensource/lzo/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.oberhumer.com/opensource/lzo/
