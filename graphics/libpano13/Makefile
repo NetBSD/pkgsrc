@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2014/06/05 06:18:28 adam Exp $
+# $NetBSD: Makefile,v 1.15 2014/06/29 21:42:25 dholland Exp $
 
 DISTNAME=	libpano13-2.9.19
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=panotools/}
 
@@ -21,6 +22,7 @@ BUILDLINK_TRANSFORM+=	rm:-lsunmath
 .endif
 
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/gimp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
