@@ -1,6 +1,9 @@
-$NetBSD: patch-al,v 1.1 2008/10/02 14:33:58 joerg Exp $
+$NetBSD: patch-al,v 1.2 2014/06/29 19:43:54 dholland Exp $
 
---- vslib/getopt2.h.orig	2008-10-02 16:00:52.000000000 +0200
+- use extern "C" around the stuff here (why?)
+- sprinkle const to make more modern C++ compilers happier
+
+--- vslib/getopt2.h.orig	2001-10-28 13:53:02.000000000 +0000
 +++ vslib/getopt2.h
 @@ -15,7 +15,7 @@
  /* next line added by <cade@biscom.net> see getopt2.cpp for changes */
@@ -11,10 +14,13 @@ $NetBSD: patch-al,v 1.1 2008/10/02 14:33:58 joerg Exp $
  extern char *optarg;
  extern int optind;
  extern int opterr;
-@@ -32,4 +32,6 @@ extern int opterr_report;
+@@ -30,6 +30,8 @@ extern int opterr_report;
  
- int getopt2(int argc, char *argv[], char *optstring);
+ /* name changed to getopt2 to avoid library function mismatch */
  
-+}
+-int getopt2(int argc, char *argv[], char *optstring);
++int getopt2(int argc, char *argv[], const char *optstring);
 +
++}
+ 
  #endif
