@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2007/07/25 15:32:43 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2014/06/29 13:38:53 schwarz Exp $
 
---- src/miniacc.h.orig	2007-07-25 15:07:34.000000000 +0000
-+++ src/miniacc.h
-@@ -1635,7 +1635,7 @@ extern "C" {
+--- src/lzo_supp.h.orig	2014-06-29 15:25:50.000000000 +0200
++++ src/lzo_supp.h	2014-06-29 15:27:27.000000000 +0200
+@@ -53,7 +53,7 @@
  #define HAVE_FCNTL_H 1
  #define HAVE_FLOAT_H 1
  #define HAVE_LIMITS_H 1

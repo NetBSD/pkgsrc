@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2014/06/29 13:05:38 schwarz Exp $
+# $NetBSD: Makefile,v 1.15 2014/06/29 13:38:53 schwarz Exp $
 
-DISTNAME=	lzo-2.06
+DISTNAME=	lzo-2.08
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.oberhumer.com/opensource/lzo/download/
 
