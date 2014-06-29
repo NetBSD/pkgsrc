@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2012/11/01 19:49:32 joerg Exp $
+$NetBSD: distinfo,v 1.5 2014/06/29 06:32:02 dholland Exp $
 
 SHA1 (ratfor77.tar.gz) = 81a25d292c9c6daf5d244fce523fe97da6d068e5
 RMD160 (ratfor77.tar.gz) = ce4dfc948060ff2e61afb727e4ade967e81e29a4
 Size (ratfor77.tar.gz) = 17286 bytes
 SHA1 (patch-aa) = 00f40005d8291389a452d99e58647b00fdf742b7
 SHA1 (patch-ab) = 9f6d2d1a1a323cbc13865210893c00b295a5ab75
-SHA1 (patch-lookup.c) = 3a1ee2fc11b080f479ce2268516b33901ef9d436
+SHA1 (patch-lookup.c) = 810c21a5daa60d562620c615611938571364cb30
 SHA1 (patch-rat4.c) = 5f0baa3e30fa84211506e4ccec5230cfb32f2a48
