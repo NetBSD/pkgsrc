@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2443 2014/06/29 17:07:24 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2444 2014/06/29 17:07:45 schmonz Exp $
 
 # PLEASE NOTE THAT WE ARE NOW IN A FREEZE IN PREPARATION FOR THE
 # PKGSRC-2014Q2 BRANCH.
@@ -3254,3 +3254,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/php-tt-rss to 1.12 [ryoon 2014-06-29]
 	Updated devel/p5-Compress-Raw-Bzip2 to 2.064 [schmonz 2014-06-29]
 	Updated devel/p5-Compress-Raw-Zlib to 2.065 [schmonz 2014-06-29]
+	Updated devel/p5-IO-Compress to 2.064 [schmonz 2014-06-29]
