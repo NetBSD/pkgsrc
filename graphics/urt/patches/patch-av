@@ -1,4 +1,6 @@
-$NetBSD: patch-av,v 1.1 2006/05/11 14:46:35 joerg Exp $
+$NetBSD: patch-av,v 1.2 2014/06/29 04:26:19 dholland Exp $
+
+stdout is not necessarily a compile-time constant.
 
 --- lib/rle_global.c.orig	1992-01-28 18:23:03.000000000 +0000
 +++ lib/rle_global.c
@@ -6,7 +8,7 @@ $NetBSD: patch-av,v 1.1 2006/05/11 14:46:35 joerg Exp $
      8,				/* cmaplen (log2 of length of color map) */
      NULL,			/* pointer to color map */
      NULL,			/* pointer to comment strings */
-+#if defined(__DragonFly__)
++#if defined(__DragonFly__) || defined(__APPLE__)
 +    NULL,			/* output file, overriden with stdout at startup */
 +#else
      stdout,			/* output file */
@@ -18,7 +20,7 @@ $NetBSD: patch-av,v 1.1 2006/05/11 14:46:35 joerg Exp $
      /* Can't initialize the union */
  };
  
-+#if defined(__DragonFly__)
++#if defined(__DragonFly__) || defined(__APPLE__)
 +static void _rle_init(void) __attribute__((__constructor__));
 +
 +static void
