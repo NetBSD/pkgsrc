@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/05/29 23:37:54 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2014/06/29 19:12:51 dholland Exp $
 #
 
 DISTNAME=		titrax-1.98
@@ -20,7 +20,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 USE_IMAKE=		YES
 USE_TOOLS+=		perl:run
 
-post-patch:
+pre-configure:
 	${MV} ${WRKSRC}/Imakefile ${WRKSRC}/Imakefile.bak
 	${SED}	-e "s|@LOCALBASE@|${LOCALBASE}|g"			\
 		-e "s|@X11BASE@|${X11PREFIX}|g"				\
