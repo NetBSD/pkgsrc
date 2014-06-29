@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/01/23 11:11:09 wiz Exp $
+$NetBSD: distinfo,v 1.2 2014/06/29 15:04:40 joerg Exp $
 
 SHA1 (pycairo-1.10.0.tar.bz2) = b4283aa1cc9aafd12fd72ad371303a486da1d014
 RMD160 (pycairo-1.10.0.tar.bz2) = 7d1c1c05113e5bbad32dbe96c65c918b170cac33
 Size (pycairo-1.10.0.tar.bz2) = 246556 bytes
+SHA1 (patch-.waf3-1.6.4-e3c1e08604b18a10567cfcd2d02eb6e6_waflib_Tools_python.py) = 44bd5b6f82476df48bec7976da5e488063ff9f07
