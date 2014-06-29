@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2014/02/01 18:12:13 adam Exp $
+# $NetBSD: Makefile,v 1.30 2014/06/29 06:07:30 dholland Exp $
 
 DISTNAME=	BLT2.4z
 PKGNAME=	blt-2.4z
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=blt/}
 
@@ -41,4 +41,5 @@ INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
