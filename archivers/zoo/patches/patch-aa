@@ -1,8 +1,19 @@
-$NetBSD: patch-aa,v 1.5 2009/04/25 23:46:47 gdt Exp $
+$NetBSD: patch-aa,v 1.6 2014/06/29 03:24:33 dholland Exp $
 
---- ar.h.orig	1993-05-01 06:04:22.000000000 +0200
+- use standard headers
+- don't redeclare memmove
+
+--- ar.h.orig	1993-05-01 04:04:22.000000000 +0000
 +++ ar.h
-@@ -15,11 +15,15 @@ Adapted from "ar" archiver written by Ha
+@@ -7,6 +7,7 @@ Adapted from "ar" archiver written by Ha
+ ***********************************************************/
+ 
+ #include <stdio.h>
++#include <string.h>
+ 
+ #ifdef ANSI_HDRS
+ # include <limits.h>
+@@ -15,11 +16,15 @@ Adapted from "ar" archiver written by Ha
  /* uchar should be 8 bits or more */
  /* typedef unsigned char  uchar;   -- already in zoo.h */
  
@@ -18,3 +29,11 @@ $NetBSD: patch-aa,v 1.5 2009/04/25 23:46:47 gdt Exp $
  
  /* T_UINT16 must be #defined in options.h to be 
  a 16-bit unsigned integer type */
+@@ -116,7 +121,6 @@ int make_tree
+   void move_left();
+ #else
+ # define MOVE_LEFT memmove
+- extern VOIDPTR memmove();
+ #endif
+ 
+ #if 0

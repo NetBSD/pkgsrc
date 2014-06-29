@@ -1,6 +1,10 @@
-$NetBSD: patch-am,v 1.2 2009/04/25 23:46:47 gdt Exp $
+$NetBSD: patch-am,v 1.3 2014/06/29 03:24:33 dholland Exp $
 
---- portable.c.orig	1991-07-16 17:55:11.000000000 +0200
+- provide zoocreate_fd
+- use <ctype.h> properly
+- provide and use to_signed_long (why?)
+
+--- portable.c.orig	1991-07-16 15:55:11.000000000 +0000
 +++ portable.c
 @@ -87,6 +87,12 @@ ZOOFILE zoocreate (fname)
  char *fname;
@@ -15,6 +19,28 @@ $NetBSD: patch-am,v 1.2 2009/04/25 23:46:47 gdt Exp $
  #endif /* FIZ */
  
  #ifndef zooseek
+@@ -133,7 +139,7 @@ char *str;
+    s = str;
+    while (*s != '\0') {
+       *s = toascii(*s);
+-		*s = low_ch(*s);
++		*s = low_ch((unsigned char)*s);
+       s++;
+    }
+    return (str);
+@@ -146,10 +152,10 @@ case.
+ int str_icmp (s1, s2)
+ register char *s1, *s2;
+ {
+-   for ( ; low_ch(*s1) == low_ch(*s2);  s1++, s2++)
++   for ( ; low_ch((unsigned char)*s1) == low_ch((unsigned char)*s2);  s1++, s2++)
+       if (*s1 == '\0')
+          return(0);
+-   return(low_ch(*s1) - low_ch(*s2));
++   return(low_ch((unsigned char)*s1) - low_ch((unsigned char)*s2));
+ }
+ 
+ #ifdef NEED_MEMSET
 @@ -220,6 +226,13 @@ BYTE data[];
           ((unsigned long) data[2] << 16) | ((unsigned long) data[3] << 24));
  }

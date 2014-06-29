@@ -1,20 +1,25 @@
-$NetBSD: distinfo,v 1.12 2009/04/25 23:50:58 gdt Exp $
+$NetBSD: distinfo,v 1.13 2014/06/29 03:24:33 dholland Exp $
 
 SHA1 (zoo-2.10pl1.tar.gz) = c02d96148ee57df01596d0c8d07a3e327b821600
 RMD160 (zoo-2.10pl1.tar.gz) = 971d388b8cb29def1e4e31011463563e91c3d700
 Size (zoo-2.10pl1.tar.gz) = 172096 bytes
-SHA1 (patch-aa) = d8b9747df17619e9ff0fdcba897ff20af7b76c9f
-SHA1 (patch-ab) = 5a8d87307750d967120481e54afe588636dfddf4
+SHA1 (patch-aa) = 22faf3fdc38c7d75867327718d23db50fb6013d3
+SHA1 (patch-ab) = 205936660e84f17c9ec49830acd3b46e343268bd
 SHA1 (patch-ac) = e5c9e18461b86fbfba4526f685fb65a507bb6f97
 SHA1 (patch-ad) = d8992d565f48aab10521ecbd346d233a1e717790
 SHA1 (patch-ae) = d1e60cea71bb1c56e76a6ffc9923341664283a0c
 SHA1 (patch-af) = 2a1b67cf50fed58e5caf83a8ca4c8529d8e22c24
 SHA1 (patch-ag) = 30fd80a1127f7625db9f0c9889ad5ef43f68d7fb
 SHA1 (patch-ah) = 488753b5a49404b908713cd6dcfc0356b0cab40c
-SHA1 (patch-ai) = b6102770f1f0318510a21b444bf9b7e4cfce51c3
+SHA1 (patch-ai) = 711e03f57ce19e3d2d5b0690cf4988f13c3cca11
 SHA1 (patch-aj) = 2c764ca5c164ae3744e6447fef7815025c125c36
-SHA1 (patch-ak) = c6b44cd1e45728ba227728c1527da5209ece1e00
+SHA1 (patch-ak) = 121dfd5f25afc7a27a510cdb144d845dcf7c3121
 SHA1 (patch-al) = 6272e830b028789398cf052c36d6a311eecc1311
-SHA1 (patch-am) = b294d0589ecf74ad0d1fe0ed4c53f7b34376f19d
+SHA1 (patch-am) = 5bafebb97eeeb47225283ad4b21e350289544b5d
 SHA1 (patch-an) = 8d74579ab5b7df59b9684828b356a3d4415bdd63
 SHA1 (patch-ao) = 3f82cd62968f0e510f75411192560f70b608560d
+SHA1 (patch-makelist.c) = 67db92491cdd9c1224765edbca4d1cba95362189
+SHA1 (patch-mstime.i) = 43c22a19a1507b3e7b887c03e35a268831f5708c
+SHA1 (patch-zoo.c) = f26d2e4f909c3d27e95a45ddde8ff19f1b28e6cc
+SHA1 (patch-zooadd.c) = cf495d2e6090195a6f155d68d692b5ee53d52445
+SHA1 (patch-zoofilt.c) = 762e185468163be255f69b89e660f6ea77fa1dc5

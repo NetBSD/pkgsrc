@@ -1,8 +1,18 @@
-$NetBSD: patch-ai,v 1.4 2009/04/25 23:46:47 gdt Exp $
+$NetBSD: patch-ai,v 1.5 2014/06/29 03:24:33 dholland Exp $
 
---- zoolist.c.orig	1991-07-20 00:57:27.000000000 +0200
+- use standard headers
+- use printf formats matching types
+- add zoo_pointer and logic related to it, appears to be a bug fix
+- changes calling gettz() that should be reverted now that gettz() has
+  been fixed up
+
+--- zoolist.c.orig	1991-07-19 22:57:27.000000000 +0000
 +++ zoolist.c
-@@ -21,7 +21,7 @@ Copyright (C) 1986, 1987 Rahul Dhesi -- 
+@@ -18,10 +18,11 @@ duplicate information will be dumped.
+ Copyright (C) 1986, 1987 Rahul Dhesi -- All rights reserved
+ (C) Copyright 1988 Rahul Dhesi -- All rights reserved
+ */
++#include <stdio.h>
  #include "options.h"
  #include "portable.h"
  #include "zoomem.h"  /* to get ZOOCOUNT */
@@ -11,7 +21,7 @@ $NetBSD: patch-ai,v 1.4 2009/04/25 23:46:47 gdt Exp $
  /* Lists files in archive */
  #include "zoo.h"
  #include "errors.i"
-@@ -92,6 +92,7 @@ int genson = 1;					/* enable/disable ge
+@@ -92,6 +93,7 @@ int genson = 1;					/* enable/disable ge
  int show_mode = 0;				/* show file protection */
  #endif
  int first_dir = 1;				/* if first direntry -- to adjust dat_ofs */
@@ -19,7 +29,7 @@ $NetBSD: patch-ai,v 1.4 2009/04/25 23:46:47 gdt Exp $
  
  while (*option) {
     switch (*option) {
-@@ -211,6 +212,9 @@ if (fiz_ofs != 0L) {                /* i
+@@ -211,6 +213,9 @@ if (fiz_ofs != 0L) {                /* i
  		show_acmt (&zoo_header, zoo_file, 0);		/* show archive comment */
  	}
  
@@ -29,7 +39,7 @@ $NetBSD: patch-ai,v 1.4 2009/04/25 23:46:47 gdt Exp $
     /* Seek to the beginning of the first directory entry */
     if (zooseek (zoo_file, zoo_header.zoo_start, 0) != 0) {
        ercount++;
-@@ -414,7 +418,7 @@ if (fiz_ofs != 0L) {                /* i
+@@ -414,7 +419,7 @@ if (fiz_ofs != 0L) {                /* i
  					if (direntry.fattr == 0)
  						printf ("--- ");
  					else if ((direntry.fattr >> 22) == 1)
@@ -38,7 +48,7 @@ $NetBSD: patch-ai,v 1.4 2009/04/25 23:46:47 gdt Exp $
  					else
  						printf ("??? ");
  				}
-@@ -437,6 +441,11 @@ if (fiz_ofs != 0L) {                /* i
+@@ -437,6 +442,11 @@ if (fiz_ofs != 0L) {                /* i
           if (verb_list && !fast)
              show_comment (&direntry, zoo_file, 0, (char *) NULL);
        } /* end if (lots of conditions) */
@@ -50,7 +60,7 @@ $NetBSD: patch-ai,v 1.4 2009/04/25 23:46:47 gdt Exp $
     
  		/* ..seek to next dir entry */
        zooseek (zoo_file, direntry.next, 0);
-@@ -539,10 +548,12 @@ int file_tz;
+@@ -539,10 +549,12 @@ int file_tz;
  {
  	long gettz();
  	int diff_tz;				/* timezone difference */
