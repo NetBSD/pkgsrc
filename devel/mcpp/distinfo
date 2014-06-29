@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/10/20 15:06:58 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2014/06/29 03:52:47 dholland Exp $
 
 SHA1 (mcpp-2.7.2.tar.gz) = 703356b7c2cd30d7fb6000625bf3ccc2eb977ecb
 RMD160 (mcpp-2.7.2.tar.gz) = 05bc2c8d8e032e75b8a9b1d22f11c007d5829d1f
 Size (mcpp-2.7.2.tar.gz) = 1533457 bytes
+SHA1 (patch-src_internal.H) = 0c874d8fc2c90dae325515d80355a6ee9bfd0e9c
