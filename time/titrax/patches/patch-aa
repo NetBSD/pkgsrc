@@ -1,7 +1,11 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/12/17 23:32:20 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2014/06/29 19:12:51 dholland Exp $
 
---- Imakefile.orig	Tue Oct 17 14:44:48 1995
-+++ Imakefile	Tue Dec  8 12:16:34 1998
+- configure for pkgsrc
+- do ratty interpreter fixes (XXX: change to REPLACE_PERL)
+- use tail -n +2 instead of tail +2 to work around broken Linux userlands
+
+--- Imakefile.orig	1995-10-17 13:44:48.000000000 +0000
++++ Imakefile
 @@ -1,10 +1,10 @@
  # Installation options
  #=====================
@@ -15,7 +19,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/17 23:32:20 wiz Exp $
  # PERL - where your Perl executable is located (is in sumtitrax)
  PERL = $(NONXBINDIR)/perl
  #
-@@ -12,7 +12,7 @@
+@@ -12,7 +12,7 @@ PERL = $(NONXBINDIR)/perl
  # XAWLIB = -lXaw3d
  #
  # If you want to stop UDP packets to the author, uncomment this
@@ -24,7 +28,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/17 23:32:20 wiz Exp $
  #
  # If you have problems with undefined variables, you may have
  # hit the linker bug with SunOS 4.1.2 and X11R4; uncomment this line
-@@ -44,13 +44,13 @@
+@@ -44,13 +44,13 @@ LASTVERSION = V1_97
  # functions that are declared, but not used
  LINTOPTS = -az
  
@@ -41,23 +45,25 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/17 23:32:20 wiz Exp $
  InstallManPage(sumtitra,$(MANDIR))
  InstallNonExec(weekno.perl,$(PERLLIBDIR))
  
-@@ -61,7 +61,7 @@
+@@ -61,14 +61,19 @@ titrax.o: Titrax_ad.h
  # Modifying PERL scripts - technique courtesy of Lindsay (of Zircon fame)
  sumtitra: Makefile
  	mv sumtitra sumtitra.tmp
 -	echo '#!$(PERL)' > sumtitra
+-	tail +2 sumtitra.tmp >> sumtitra
 +	echo '#!$(PERL) -I$(PERLLIBDIR)' > sumtitra
- 	tail +2 sumtitra.tmp >> sumtitra
++	tail -n +2 sumtitra.tmp >> sumtitra
  	rm sumtitra.tmp
  titrat: Makefile
-@@ -69,6 +69,11 @@
+ 	mv titrat titrat.tmp
  	echo '#!$(PERL)' > titrat
- 	tail +2 titrat.tmp >> titrat
+-	tail +2 titrat.tmp >> titrat
++	tail -n +2 titrat.tmp >> titrat
  	rm titrat.tmp
 +weekno.perl: Makefile
 +	mv weekno.perl weekno.perl.tmp
 +	echo '#!$(PERL)' > weekno.perl
-+	tail +2 weekno.perl.tmp >> weekno.perl
++	tail -n +2 weekno.perl.tmp >> weekno.perl
 +	rm weekno.perl.tmp
  
  #------------------------------------------------------------------
