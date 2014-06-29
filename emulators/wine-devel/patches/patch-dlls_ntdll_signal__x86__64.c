@@ -1,4 +1,4 @@
-$NetBSD: patch-dlls_ntdll_signal__x86__64.c,v 1.1 2014/06/28 21:20:06 dholland Exp $
+$NetBSD: patch-dlls_ntdll_signal__x86__64.c,v 1.2 2014/06/29 18:11:32 dholland Exp $
 
 Teach this how to set %gs on NetBSD. Not actually tested as so far
 Wine doesn't actually run, but fixes a build failure.
@@ -11,7 +11,7 @@ Wine doesn't actually run, but fixes a build failure.
  #elif defined(__NetBSD__)
 -#include <sys/ucontext.h>
  #include <sys/types.h>
-+#include <sys/sysarch.h>
++#include <x86/sysarch.h>
 +#include <sys/ucontext.h>
  #include <signal.h>
  
