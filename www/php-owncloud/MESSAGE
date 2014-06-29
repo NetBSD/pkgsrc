@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.15 2014/06/29 13:59:22 ryoon Exp $
+$NetBSD: MESSAGE,v 1.16 2014/06/29 14:25:17 ryoon Exp $
 
 To use ownCloud, you will need to perform the following steps.
 
@@ -65,7 +65,6 @@ server {
 		include fastcgi_params;
 		fastcgi_param SCRIPT_FILENAME $document_root$1;
 		fastcgi_param PATH_INFO $2;
-		fastcgi_param HTTPS on;
 		fastcgi_pass php-handler;
 	}
 
