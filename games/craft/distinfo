@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2013/01/21 05:19:45 dholland Exp $
+$NetBSD: distinfo,v 1.10 2014/06/29 04:10:55 dholland Exp $
 
 SHA1 (craft-jumbo-patch-20130120.gz) = 6396b3f4b30fd62aeb1b0d7ee4baf4bdde093f0d
 RMD160 (craft-jumbo-patch-20130120.gz) = 699a9114acc2fac56c47cce437a54850b47ab475
@@ -6,3 +6,4 @@ Size (craft-jumbo-patch-20130120.gz) = 12457 bytes
 SHA1 (craftcc35.tar.Z) = 8862b9001aa7d752a597033ef45d38ebfcee533f
 RMD160 (craftcc35.tar.Z) = 402a2c2ca37df4d86381b434437395424199859e
 Size (craftcc35.tar.Z) = 3123677 bytes
+SHA1 (patch-xfile.hc) = 76815f0e03322eb6022c7f26d9db802df7be9ba1
