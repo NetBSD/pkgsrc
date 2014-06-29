@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2014/06/02 11:57:17 pettai Exp $
+# $NetBSD: Makefile,v 1.20 2014/06/29 06:53:41 dholland Exp $
 
 DISTNAME=	knot-1.4.6
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://secure.nic.cz/files/knot-dns/
 
@@ -40,4 +41,5 @@ INSTALLATION_DIRS=	${EGDIR} ${KNOT_SYSCONFDIR}
 OWN_DIRS+=		${VARBASE}/knot
 
 .include "../../devel/userspace-rcu/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
