@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2013/04/06 20:27:22 rodent Exp $
+# $NetBSD: Makefile,v 1.36 2014/06/29 05:08:36 dholland Exp $
 
 DISTNAME=		gpc-2.1
 PKGREVISION=		5
@@ -15,7 +15,7 @@ COMMENT=		GNU Pascal Compiler
 PATCH_SITES=		${MASTER_SITE_LOCAL}
 PATCHFILES=		gcc-2.95.3-diff-2002-08-29.gz
 
-NOT_FOR_PLATFORM+=	Interix-*-* *-*-x86_64
+NOT_FOR_PLATFORM+=	Darwin-*-* Interix-*-* *-*-x86_64
 
 WRKSRC=			${WRKDIR}/gcc-2.95.3
 USE_TOOLS+=		gmake gsed
