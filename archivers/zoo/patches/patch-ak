@@ -1,7 +1,19 @@
-$NetBSD: patch-ak,v 1.2 2009/04/25 23:46:47 gdt Exp $
+$NetBSD: patch-ak,v 1.3 2014/06/29 03:24:33 dholland Exp $
 
---- misc.c.orig	1991-07-16 17:52:54.000000000 +0200
+- use <ctype.h> correctly
+- avoid string overflow
+
+--- misc.c.orig	1991-07-16 15:52:54.000000000 +0000
 +++ misc.c
+@@ -41,7 +41,7 @@ char *str;
+    char *p;
+    retval = 0L;
+    p = str; /* save for error message */
+-   while (isdigit(*str)) {
++   while (isdigit((unsigned char)*str)) {
+       retval = retval * 10L + (*str-'0');
+       str++;
+    }
 @@ -135,11 +135,17 @@ if available, else the short filename is
  char *fullpath (direntry)
  struct direntry *direntry;
