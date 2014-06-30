@@ -1,4 +1,4 @@
-$NetBSD: patch-src_pulsecore_svolume__sse.c,v 1.2 2014/06/09 13:08:19 ryoon Exp $
+$NetBSD: patch-src_pulsecore_svolume__sse.c,v 1.3 2014/06/30 11:08:54 jperkin Exp $
 
 Avoid bad register usage on OSX 32-bit.
 
@@ -9,7 +9,7 @@ Avoid bad register usage on OSX 32-bit.
  #include "sample-util.h"
  
 -#if (!defined(__FreeBSD__) && defined (__i386__)) || defined (__amd64__)
-+#if ((!defined(__FreeBSD__) || defined(__APPLE__)) && defined (__i386__)) || defined (__amd64__)
++#if ((!defined(__FreeBSD__) && !defined(__APPLE__)) && defined (__i386__)) || defined (__amd64__)
  
  #define VOLUME_32x16(s,v)                  /* .. |   vh  |   vl  | */                   \
        " pxor %%xmm4, %%xmm4          \n\t" /* .. |    0  |    0  | */                   \
@@ -18,7 +18,7 @@ Avoid bad register usage on OSX 32-bit.
  
  void pa_volume_func_init_sse(pa_cpu_x86_flag_t flags) {
 -#if (!defined(__FreeBSD__) && defined (__i386__)) || defined (__amd64__)
-+#if ((!defined(__FreeBSD__) || defined(__APPLE__)) && defined (__i386__)) || defined (__amd64__)
++#if ((!defined(__FreeBSD__) && !defined(__APPLE__)) && defined (__i386__)) || defined (__amd64__)
      if (flags & PA_CPU_X86_SSE2) {
          pa_log_info("Initialising SSE2 optimized volume functions.");
  
