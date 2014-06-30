@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2014/06/08 23:39:13 rodent Exp $
-bin/couchdb-dump2.7
-bin/couchdb-load2.7
-bin/couchdb-replicate2.7
-bin/couchpy2.7
+@comment $NetBSD: PLIST,v 1.2 2014/06/30 14:25:40 joerg Exp $
+bin/couchdb-dump${PYVERSSUFFIX}
+bin/couchdb-load${PYVERSSUFFIX}
+bin/couchdb-replicate${PYVERSSUFFIX}
+bin/couchpy${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
