@@ -1,4 +1,4 @@
-$NetBSD: patch-src_pulsecore_svolume__mmx.c,v 1.2 2014/06/09 13:08:19 ryoon Exp $
+$NetBSD: patch-src_pulsecore_svolume__mmx.c,v 1.3 2014/06/30 11:08:54 jperkin Exp $
 
 Avoid bad register usage on OSX 32-bit.
 
@@ -9,7 +9,7 @@ Avoid bad register usage on OSX 32-bit.
  #include "sample-util.h"
  
 -#if (!defined(__FreeBSD__) && defined (__i386__)) || defined (__amd64__)
-+#if ((!defined(__FreeBSD__) || defined(__APPLE__)) && defined (__i386__)) || defined (__amd64__)
++#if ((!defined(__FreeBSD__) && !defined(__APPLE__)) && defined (__i386__)) || defined (__amd64__)
  /* in s: 2 int16_t samples
   * in v: 2 int32_t volumes, fixed point 16:16
   * out s: contains scaled and clamped int16_t samples.
@@ -18,7 +18,7 @@ Avoid bad register usage on OSX 32-bit.
  
  void pa_volume_func_init_mmx(pa_cpu_x86_flag_t flags) {
 -#if (!defined(__FreeBSD__) && defined (__i386__)) || defined (__amd64__)
-+#if ((!defined(__FreeBSD__) || defined(__APPLE__)) && defined (__i386__)) || defined (__amd64__)
++#if ((!defined(__FreeBSD__) && !defined(__APPLE__)) && defined (__i386__)) || defined (__amd64__)
      if ((flags & PA_CPU_X86_MMX) && (flags & PA_CPU_X86_CMOV)) {
          pa_log_info("Initialising MMX optimized volume functions.");
  
