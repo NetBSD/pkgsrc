@@ -1,4 +1,4 @@
-$NetBSD: patch-src-post-deinterlace-plugins-greedy2frame.c,v 1.2 2014/05/18 15:38:18 wiz Exp $
+$NetBSD: patch-src-post-deinterlace-plugins-greedy2frame.c,v 1.3 2014/06/30 13:41:00 jperkin Exp $
 
 https://bugs.xine-project.org/show_bug.cgi?id=528
 
@@ -8,7 +8,7 @@ https://bugs.xine-project.org/show_bug.cgi?id=528
                                      int bottom_field, int second_field, int width, int height )
  
  {
-+#if defined(ARCH_X86) || defined(ARCH_X86_64)
++#if (!defined(__APPLE__) && defined(ARCH_X86)) || defined(ARCH_X86_64)
 +
      if (xine_mm_accel() & MM_ACCEL_X86_SSE2) {
          if (((uintptr_t)output & 15) || (outstride & 15) ||
