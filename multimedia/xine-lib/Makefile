@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2014/06/27 12:17:22 jperkin Exp $
+# $NetBSD: Makefile,v 1.129 2014/06/30 13:41:00 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -32,6 +32,11 @@ SUBST_MESSAGE.w32path=	Fixing win32 dll path.
 
 # Needed to fix build problems under, at least, NetBSD/amd64.
 BUILDLINK_API_DEPENDS.libcdio+=	libcdio>=0.75
+
+PLIST_VARS+=	qtw32
+.if empty(MACHINE_PLATFORM:MDarwin-*-i386)
+PLIST.qtw32=	yes
+.endif
 
 .if ${OPSYS} == "SunOS"
 PLIST_VARS+=	oss
