@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/06/29 15:04:40 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2014/06/30 14:25:59 joerg Exp $
 
 DISTNAME=		pycairo-1.10.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -14,6 +14,7 @@ LICENSE=		gnu-lgpl-v2.1 OR mpl-1.1
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
