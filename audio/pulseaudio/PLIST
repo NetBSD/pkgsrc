@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2014/06/18 11:12:05 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.17 2014/06/30 11:00:15 jperkin Exp $
 bin/esdcompat
 bin/pacat
 bin/pacmd
@@ -147,8 +147,8 @@ lib/pulse-${PKGVERSION}/modules/module-null-sink.a
 lib/pulse-${PKGVERSION}/modules/module-null-sink.so
 lib/pulse-${PKGVERSION}/modules/module-null-source.a
 lib/pulse-${PKGVERSION}/modules/module-null-source.so
-lib/pulse-${PKGVERSION}/modules/module-oss.a
-lib/pulse-${PKGVERSION}/modules/module-oss.so
+${PLIST.oss}lib/pulse-${PKGVERSION}/modules/module-oss.a
+${PLIST.oss}lib/pulse-${PKGVERSION}/modules/module-oss.so
 lib/pulse-${PKGVERSION}/modules/module-pipe-sink.a
 lib/pulse-${PKGVERSION}/modules/module-pipe-sink.so
 lib/pulse-${PKGVERSION}/modules/module-pipe-source.a
