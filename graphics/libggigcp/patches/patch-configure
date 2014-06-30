@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.9 2014/06/30 17:45:32 asau Exp $
+$NetBSD: patch-configure,v 1.1 2014/06/30 17:45:40 asau Exp $
 
---- configure.orig	2007-01-26 20:28:56.000000000 +0000
+--- configure.orig	2014-06-30 09:44:33.000000000 +0000
 +++ configure
-@@ -7528,7 +7528,7 @@ fi
+@@ -7349,7 +7349,7 @@ fi
        hardcode_shlibpath_var=no
        ;;
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.9 2014/06/30 17:45:32 asau Exp $
        ld_shlibs=no
        ;;
  
-@@ -8372,7 +8372,7 @@ dgux*)
+@@ -8193,7 +8193,7 @@ dgux*)
    shlibpath_var=LD_LIBRARY_PATH
    ;;
  
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.9 2014/06/30 17:45:32 asau Exp $
    dynamic_linker=no
    ;;
  
-@@ -8395,7 +8395,7 @@ freebsd* | dragonfly*)
+@@ -8216,7 +8216,7 @@ freebsd* | dragonfly*)
      objformat=`/usr/bin/objformat`
    else
      case $host_os in
@@ -29,12 +29,3 @@ $NetBSD: patch-aa,v 1.9 2014/06/30 17:45:32 asau Exp $
      *) objformat=elf ;;
      esac
    fi
-@@ -22245,7 +22245,7 @@ _ACEOF
- 
- 
- cat >>confdefs.h <<_ACEOF
--#define GGICONFDIR "$PATHTAG$static_sysconfdir/$ggi_subdir"
-+#define GGICONFDIR "$PATHTAG$static_sysconfdir"
- _ACEOF
- 
- 
