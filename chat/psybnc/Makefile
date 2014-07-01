@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/06/15 21:55:17 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2014/07/01 12:05:49 pettai Exp $
 #
 
 DISTNAME=	psyBNC-2.4BETA2
@@ -38,6 +38,9 @@ SUBST_STAGE.openssl=	post-configure
 
 INSTALLATION_DIRS=	bin share/examples/psybnc
 INSTALLATION_DIRS+=	share/doc/psybnc
+
+post-extract:
+	cd ${WRKSRC} && ${RM} src/c-ares/configure
 
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
