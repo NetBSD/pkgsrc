@@ -1,7 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2444 2014/06/29 17:07:45 schmonz Exp $
-
-# PLEASE NOTE THAT WE ARE NOW IN A FREEZE IN PREPARATION FOR THE
-# PKGSRC-2014Q2 BRANCH.
+$NetBSD: CHANGES-2014,v 1.2445 2014/07/01 17:00:06 agc Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3255,3 +3252,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Compress-Raw-Bzip2 to 2.064 [schmonz 2014-06-29]
 	Updated devel/p5-Compress-Raw-Zlib to 2.065 [schmonz 2014-06-29]
 	Updated devel/p5-IO-Compress to 2.064 [schmonz 2014-06-29]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2014Q2 branch [agc 2014-07-01]
