@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2448 2014/07/02 03:22:36 jnemeth Exp $
+$NetBSD: CHANGES-2014,v 1.2449 2014/07/02 03:30:07 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3256,3 +3256,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added net/bind910 version 9.10.0pl2 [jnemeth 2014-07-02]
 	Updated comms/asterisk to 11.10.2 [jnemeth 2014-07-02]
 	Updated comms/asterisk18 to 1.8.28.2 [jnemeth 2014-07-02]
+	Added graphics/py-chart version 1.39 [darcy 2014-07-01]
