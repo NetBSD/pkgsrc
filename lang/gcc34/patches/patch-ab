@@ -1,8 +1,17 @@
-$NetBSD: patch-ab,v 1.1 2009/04/22 18:59:54 hasso Exp $
+$NetBSD: patch-ab,v 1.2 2014/07/02 22:10:40 asau Exp $
 
---- ../gcc-3.4.6/gcc/config.gcc	2005-07-20 00:08:48 +0300
-+++ gcc/config.gcc	2009-04-09 09:26:24 +0300
-@@ -451,6 +451,33 @@ case ${target} in
+--- ../gcc-3.4.6/gcc/config.gcc.orig	2005-07-19 21:08:48.000000000 +0000
++++ gcc/config.gcc
+@@ -412,6 +412,8 @@ case ${target} in
+       tm_defines="${tm_defines} FBSD_MAJOR=8" ;;
+     *-*-freebsd9 | *-*-freebsd[9].*)
+       tm_defines="${tm_defines} FBSD_MAJOR=9" ;;
++    *-*-freebsd10 | *-*-freebsd10.*)
++      tm_defines="${tm_defines} FBSD_MAJOR=10" ;;
+     *)
+       echo 'Please update *-*-freebsd* in gcc/config.gcc'
+       exit 1
+@@ -451,6 +453,33 @@ case ${target} in
      "" | yes | posix) thread_file='posix' ;;
    esac
    ;;
@@ -36,7 +45,7 @@ $NetBSD: patch-ab,v 1.1 2009/04/22 18:59:54 hasso Exp $
  *-*-linux*libc1* | *-*-linux*aout*)
    # Avoid the generic linux case.
    ;;
-@@ -964,6 +991,12 @@ i[34567]86-*-freebsd*)
+@@ -964,6 +993,12 @@ i[34567]86-*-freebsd*)
  x86_64-*-freebsd*)
  	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h ${fbsd_tm_file} i386/x86-64.h i386/freebsd.h i386/freebsd64.h"
  	;;
