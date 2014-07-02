@@ -1,8 +1,10 @@
-$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.2 2014/07/02 06:19:35 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.3 2014/07/02 19:17:40 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q2 branch:
 
 Created pkgsrc-2014Q2 branch [agc Tue Jul  1 16:10:51 UTC 2014]
-
 fix www/Makefile by removing reference to a deleted package [spz 20140702]
+
+Pullup ticket #4440 - requested by asau
+devel/boost-libs: build fix
