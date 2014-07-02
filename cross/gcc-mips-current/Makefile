@@ -1,26 +1,18 @@
-# $NetBSD: Makefile,v 1.3 2014/05/29 23:35:24 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/07/02 12:53:35 martin Exp $
 
-GCC_PKGNAME=	gcc-mips-current
+GCC_DIST_VERSION=4.9.0
+GCC_PKGNAME=	gcc-mips-${GCC_DIST_VERSION}
 
-SNAPSHOT=	20140330
-
-GCC_DIST_VERSION=4.9-${SNAPSHOT}
 DISTNAME=	gcc-${GCC_DIST_VERSION}
-PKGNAME=	${GCC_PKGNAME}-${SNAPSHOT}
-PKGREVISION=	2
+PKGNAME=	${GCC_PKGNAME}
+PKGREVISION=	3
 CATEGORIES=	cross lang
-MASTER_SITE_GCC=	\
-		ftp://ftp.fu-berlin.de/unix/languages/gcc/	\
-		ftp://gd.tuwien.ac.at/gnu/gcc/ 			\
-		http://ftp.tsukuba.wide.ad.jp/software/gcc/	\
-		ftp://ftp.mirrorservice.org/sites/sourceware.org/pub/gcc/ \
-		http://www.netgull.com/gcc/
-MASTER_SITES=	${MASTER_SITE_GCC:=snapshots/${GCC_DIST_VERSION}/}
+MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_DIST_VERSION}/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	martin@NetBSD.org
 HOMEPAGE=	http://gcc.gnu.org/
-COMMENT=	The GNU Compiler Collection (GCC) - 4.9 current for mips
+COMMENT=	The GNU Compiler Collection (GCC) - 4.9 for mips (especially playstation2)
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
 DISTFILES=		${DEFAULT_DISTFILES}
@@ -62,6 +54,12 @@ BUILDLINK_TRANSFORM+=	rm:-stdlib=libc++
 ## For target librarys and libjava programs.
 CONFIGURE_ENV+=		LDFLAGS_FOR_TARGET=${LDFLAGS_FOR_TARGET:Q}
 
+# Make sure the target binutils are both in PATH and supplied explicitly
+# to configure
+# .for prg in as ar ld nm strip objcopy objdump ranlib readelf
+# CONFIGURE_ENV+=		${prg:tu}_FOR_TARGET=${PREFIX}/bin/${TARGET}-${prg}
+# .endfor
+
 CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	--disable-libquadmath
 CONFIGURE_ARGS+=	--disable-libquadmath-support 
@@ -69,6 +67,7 @@ CONFIGURE_ARGS+=	--disable-libssp
 CONFIGURE_ARGS+=	--disable-libgomp
 CONFIGURE_ARGS+=	--disable-libstdc++-v3
 CONFIGURE_ARGS+=	--disable-libatomic
+CONFIGURE_ARGS+=	--disable-libgcc
 CONFIGURE_ARGS+=	--enable-languages=${LANGS:Q}
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-long-long
@@ -82,7 +81,8 @@ MAKE_ENV+=		ac_cv_func_clock_gettime=yes
 CONFIGURE_ARGS+=	--disable-bootstrap
 .endif
 
-CONFIGURE_ARGS+=	--target=mipsel--netbsdelf
+TARGET=			mipsel--netbsd
+CONFIGURE_ARGS+=	--target=${TARGET}
 
 # ${WRKSRC}/fixincludes/ looks for sed and compiles the path to sed into
 # a binary so we need to make sure we give it the installed sed and not
