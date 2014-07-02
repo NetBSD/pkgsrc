@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2014/03/11 14:04:59 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.24 2014/07/02 03:20:43 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -356,15 +356,15 @@ libdata/asterisk/phoneprov/000000000000.cfg
 libdata/asterisk/phoneprov/polycom.xml
 libdata/asterisk/phoneprov/polycom_line.xml
 libdata/asterisk/phoneprov/snom-mac.xml
-libdata/asterisk/sounds/en/.asterisk-core-sounds-en-gsm-1.4.24
+libdata/asterisk/sounds/en/.asterisk-core-sounds-en-gsm-1.4.25
 libdata/asterisk/sounds/en/1-for-am-2-for-pm.gsm
 libdata/asterisk/sounds/en/1-yes-2-no.gsm
-libdata/asterisk/sounds/en/CHANGES-asterisk-core-en-1.4.24
-libdata/asterisk/sounds/en/CHANGES-asterisk-extra-en-1.4.13
-libdata/asterisk/sounds/en/CREDITS-asterisk-core-en-1.4.24
-libdata/asterisk/sounds/en/CREDITS-asterisk-extra-en-1.4.13
-libdata/asterisk/sounds/en/LICENSE-asterisk-core-en-1.4.24
-libdata/asterisk/sounds/en/LICENSE-asterisk-extra-en-1.4.13
+libdata/asterisk/sounds/en/CHANGES-asterisk-core-en-1.4.25
+libdata/asterisk/sounds/en/CHANGES-asterisk-extra-en-1.4.14
+libdata/asterisk/sounds/en/CREDITS-asterisk-core-en-1.4.25
+libdata/asterisk/sounds/en/CREDITS-asterisk-extra-en-1.4.14
+libdata/asterisk/sounds/en/LICENSE-asterisk-core-en-1.4.25
+libdata/asterisk/sounds/en/LICENSE-asterisk-extra-en-1.4.14
 libdata/asterisk/sounds/en/OfficeSpace.gsm
 libdata/asterisk/sounds/en/Randulo-allison.gsm
 libdata/asterisk/sounds/en/SIP_Test_Failure.gsm
@@ -422,7 +422,6 @@ libdata/asterisk/sounds/en/all-reps-busy.gsm
 libdata/asterisk/sounds/en/all-your-base.gsm
 libdata/asterisk/sounds/en/altitude.gsm
 libdata/asterisk/sounds/en/ampersand.gsm
-libdata/asterisk/sounds/en/an-error-has-occured.gsm
 libdata/asterisk/sounds/en/an-error-has-occurred.gsm
 libdata/asterisk/sounds/en/and-area-code.gsm
 libdata/asterisk/sounds/en/and-or.gsm
@@ -1341,6 +1340,7 @@ libdata/asterisk/sounds/en/loss.gsm
 libdata/asterisk/sounds/en/lots-o-monkeys.gsm
 libdata/asterisk/sounds/en/louisiana.gsm
 libdata/asterisk/sounds/en/low.gsm
+libdata/asterisk/sounds/en/lowercase.gsm
 libdata/asterisk/sounds/en/lunch.gsm
 libdata/asterisk/sounds/en/lyrics-louie-louie.gsm
 libdata/asterisk/sounds/en/machine.gsm
@@ -2036,6 +2036,7 @@ libdata/asterisk/sounds/en/units.gsm
 libdata/asterisk/sounds/en/unix.gsm
 libdata/asterisk/sounds/en/unwelcomecall.gsm
 libdata/asterisk/sounds/en/up.gsm
+libdata/asterisk/sounds/en/uppercase.gsm
 libdata/asterisk/sounds/en/uptime.gsm
 libdata/asterisk/sounds/en/user.gsm
 libdata/asterisk/sounds/en/users.gsm
@@ -2095,6 +2096,7 @@ libdata/asterisk/sounds/en/vm-message.gsm
 libdata/asterisk/sounds/en/vm-messages.gsm
 libdata/asterisk/sounds/en/vm-minutes.gsm
 libdata/asterisk/sounds/en/vm-mismatch.gsm
+libdata/asterisk/sounds/en/vm-msgforwarded.gsm
 libdata/asterisk/sounds/en/vm-msginstruct.gsm
 libdata/asterisk/sounds/en/vm-msgsaved.gsm
 libdata/asterisk/sounds/en/vm-newpassword.gsm
