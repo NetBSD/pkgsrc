@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2014/05/05 20:14:55 adam Exp $
+# $NetBSD: Makefile,v 1.9 2014/07/02 03:45:50 jnemeth Exp $
 
 DISTNAME=	util-linux-2.24.2
 PKGNAME=	${DISTNAME:S/util-linux/libuuid/}
 CATEGORIES=	devel
 MASTER_SITES=	http://www.kernel.org/pub/linux/utils/util-linux/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
+EXTRACT_USING=	gtar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://kernel.org/~kzak/util-linux-ng/
