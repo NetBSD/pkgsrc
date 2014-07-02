@@ -1,4 +1,5 @@
-$NetBSD: patch-Include_pyport.h,v 1.1 2014/06/11 05:55:58 richard Exp $
+$NetBSD: patch-Include_pyport.h,v 1.2 2014/07/02 09:53:16 adam Exp $
+
 SunOS defines gethostname in <unistd.h>
 http://bugs.python.org/issue19561
 
