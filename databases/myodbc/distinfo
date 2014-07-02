@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.10 2013/03/24 17:03:14 joerg Exp $
+$NetBSD: distinfo,v 1.11 2014/07/02 03:41:51 jnemeth Exp $
 
-SHA1 (mysql-connector-odbc-5.2.2-src.tar.gz) = f289c1127a67e15d6b179eea3b202a00044624b9
-RMD160 (mysql-connector-odbc-5.2.2-src.tar.gz) = f4485a76be39e4534dcdfceb6b5c92a8a812d171
-Size (mysql-connector-odbc-5.2.2-src.tar.gz) = 573157 bytes
-SHA1 (patch-CMakeLists.txt) = 584d003286c190e03e16a69ebf546587795e55eb
-SHA1 (patch-driver_myutil.h) = af9eda7430c9eea44695e568c93fdbff539080db
-SHA1 (patch-test_CMakeLists.txt) = 8d02fccbac6e09d97618ea188320fe2d35dbf00b
+SHA1 (mysql-connector-odbc-5.3.2-src.tar.gz) = 5507903fb14aadf6b7c14f7142eef2c9fff1250c
+RMD160 (mysql-connector-odbc-5.3.2-src.tar.gz) = 0fb1343c1a1754e6c88f2ee8af480a839c7c769b
+Size (mysql-connector-odbc-5.3.2-src.tar.gz) = 655634 bytes
+SHA1 (patch-CMakeLists.txt) = 95c05823ef706fe9344eae4606306d3abc9ab519
+SHA1 (patch-test_CMakeLists.txt) = 7d004271310243f8ccca1bfe8f7b1e8333f6ffdc

@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.9 2012/11/22 10:01:10 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.10 2014/07/02 03:41:51 jnemeth Exp $
 bin/myodbc-installer
 ${PLIST.gui}lib/libmyodbc5S.so
+lib/libmyodbc5a.so
 lib/libmyodbc5w.so
 share/doc/mysql-connector-odbc/COPYING
 share/doc/mysql-connector-odbc/ChangeLog
@@ -13,7 +14,9 @@ share/mysql-connector-odbc/test/my_basics
 share/mysql-connector-odbc/test/my_blob
 share/mysql-connector-odbc/test/my_bug13766
 share/mysql-connector-odbc/test/my_bulk
-share/mysql-connector-odbc/test/my_catalog
+share/mysql-connector-odbc/test/my_catalog1
+share/mysql-connector-odbc/test/my_catalog2
+share/mysql-connector-odbc/test/my_crash
 share/mysql-connector-odbc/test/my_curext
 share/mysql-connector-odbc/test/my_cursor
 share/mysql-connector-odbc/test/my_datetime
@@ -22,11 +25,15 @@ share/mysql-connector-odbc/test/my_dyn_cursor
 share/mysql-connector-odbc/test/my_error
 share/mysql-connector-odbc/test/my_info
 share/mysql-connector-odbc/test/my_keys
+share/mysql-connector-odbc/test/my_nodma
 share/mysql-connector-odbc/test/my_param
+share/mysql-connector-odbc/test/my_pooling
 share/mysql-connector-odbc/test/my_prepare
 share/mysql-connector-odbc/test/my_relative
-share/mysql-connector-odbc/test/my_result
+share/mysql-connector-odbc/test/my_result1
+share/mysql-connector-odbc/test/my_result2
 share/mysql-connector-odbc/test/my_scroll
+share/mysql-connector-odbc/test/my_setup
 share/mysql-connector-odbc/test/my_tran
 share/mysql-connector-odbc/test/my_types
 share/mysql-connector-odbc/test/my_unicode

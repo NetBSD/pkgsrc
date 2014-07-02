@@ -1,17 +1,17 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2012/11/22 10:01:10 jnemeth Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2014/07/02 03:41:51 jnemeth Exp $
 
---- CMakeLists.txt.orig	2012-09-18 10:56:28.000000000 +0000
+--- CMakeLists.txt.orig	2014-03-26 21:20:55.000000000 +0000
 +++ CMakeLists.txt
-@@ -232,6 +232,8 @@ IF(RPM_BUILD AND CMAKE_SYSTEM_PROCESSOR 
-   SET(LIB_SUBDIR "lib64")
- ENDIF()
+@@ -257,6 +257,8 @@ ENDIF()
+ 
+ MESSAGE(STATUS "Installation library subdir: ${LIB_SUBDIR}")
  
 +SET(DOC_SUBDIR "share/doc/mysql-connector-odbc")
 +
  INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR})
  
  ADD_SUBDIRECTORY(util)
-@@ -329,18 +331,18 @@ IF(WIN32)
+@@ -382,18 +384,18 @@ IF(WIN32)
  
  ELSE(WIN32)
  
