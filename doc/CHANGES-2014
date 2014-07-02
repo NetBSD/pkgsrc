@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2463 2014/07/02 13:36:32 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.2464 2014/07/02 13:39:50 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3271,3 +3271,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated cross/gcc-mips-current to 4.9.0nb4 [martin 2014-07-02]
 	Updated devel/mdds to 0.10.3 [ryoon 2014-07-02]
 	Updated misc/libreoffice4 to 4.2.5.2 [ryoon 2014-07-02]
+	Updated devel/nss to 3.16.2 [ryoon 2014-07-02]
