@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.83 2014/06/09 14:18:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.84 2014/07/02 14:02:38 ryoon Exp $
 
 DISTNAME=		mpd-0.18.11
 PKGNAME=		${DISTNAME:S/mpd/musicpd/}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		audio
 MASTER_SITES=		http://www.musicpd.org/download/mpd/0.18/
 #MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=musicpd/}
@@ -34,6 +34,7 @@ CPPFLAGS.SunOS+=	-std=gnu99 -D_XOPEN_SOURCE=600 -D__EXTENSIONS__
 .include "options.mk"
 
 EGDIR=			${PREFIX}/share/examples/mpd
+CONF_FILES=		${EGDIR}/mpd.conf ${PKG_SYSCONFDIR}/mpd.conf
 RCD_SCRIPTS=		mpd
 
 FILES_SUBST+=		DEVOSSAUDIO=${DEVOSSAUDIO:Q}
