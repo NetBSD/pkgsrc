@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2014/07/02 12:53:35 martin Exp $
+# $NetBSD: Makefile,v 1.5 2014/07/02 13:20:51 martin Exp $
 
 GCC_DIST_VERSION=4.9.0
 GCC_PKGNAME=	gcc-mips-${GCC_DIST_VERSION}
 
 DISTNAME=	gcc-${GCC_DIST_VERSION}
 PKGNAME=	${GCC_PKGNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	cross lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_DIST_VERSION}/}
 EXTRACT_SUFX=	.tar.bz2
@@ -56,9 +56,10 @@ CONFIGURE_ENV+=		LDFLAGS_FOR_TARGET=${LDFLAGS_FOR_TARGET:Q}
 
 # Make sure the target binutils are both in PATH and supplied explicitly
 # to configure
-# .for prg in as ar ld nm strip objcopy objdump ranlib readelf
+.for prg in as ar ld nm strip objcopy objdump ranlib readelf
 # CONFIGURE_ENV+=		${prg:tu}_FOR_TARGET=${PREFIX}/bin/${TARGET}-${prg}
-# .endfor
+CONFIGURE_ARGS+=	--with-${prg}=${PREFIX}/bin/${TARGET}-${prg}
+.endfor
 
 CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	--disable-libquadmath
