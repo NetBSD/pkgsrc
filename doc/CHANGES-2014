@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2461 2014/07/02 13:21:17 martin Exp $
+$NetBSD: CHANGES-2014,v 1.2462 2014/07/02 13:30:54 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3269,3 +3269,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated cross/gcc-mips-current to 4.9.0nb3 [martin 2014-07-02]
 	Updated lang/python33 to 3.3.5nb4 [he 2014-07-02]
 	Updated cross/gcc-mips-current to 4.9.0nb4 [martin 2014-07-02]
+	Updated devel/mdds to 0.10.3 [ryoon 2014-07-02]
