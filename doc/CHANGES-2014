@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2458 2014/07/02 12:54:00 martin Exp $
+$NetBSD: CHANGES-2014,v 1.2459 2014/07/02 12:54:15 martin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3266,3 +3266,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/python27 to 2.7.8 [adam 2014-07-02]
 	Updated textproc/groonga to 4.0.3 [obache 2014-07-02]
 	Updated cross/binutils-mips-current to 2.24nb2 [martin 2014-07-02]
+	Updated cross/gcc-mips-current to 4.9.0nb3 [martin 2014-07-02]
