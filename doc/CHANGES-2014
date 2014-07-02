@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2453 2014/07/02 09:09:13 taca Exp $
+$NetBSD: CHANGES-2014,v 1.2454 2014/07/02 09:10:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3261,3 +3261,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/python27 to 2.7.7nb2 [he 2014-07-02]
 	Updated www/squid3 to 3.4.6 [adam 2014-07-02]
 	Updated editors/emacs24 to 24.3nb14 [taca 2014-07-02]
+	Updated www/contao33 to 3.3.3nb1 [taca 2014-07-02]
