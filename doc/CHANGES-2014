@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2456 2014/07/02 10:01:37 adam Exp $
+$NetBSD: CHANGES-2014,v 1.2457 2014/07/02 12:42:48 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3264,3 +3264,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/contao33 to 3.3.3nb1 [taca 2014-07-02]
 	Updated www/php-sugarcrm to 6.5.17 [taca 2014-07-02]
 	Updated lang/python27 to 2.7.8 [adam 2014-07-02]
+	Updated textproc/groonga to 4.0.3 [obache 2014-07-02]
