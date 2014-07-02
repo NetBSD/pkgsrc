@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.2 2014/04/05 10:07:11 martin Exp $
+# $NetBSD: Makefile,v 1.3 2014/07/02 12:53:06 martin Exp $
 #
 # GNU binutils snapshot, configured to target MIPS (NetBSD/playstation2)
 
-BINUTILS_VER=		2.23.91
+BINUTILS_VER=		2.24
 
 DISTNAME=		binutils-${BINUTILS_VER}
-PKGREVISION=		1
+PKGREVISION=		2
 PKGNAME=		binutils-mips-${BINUTILS_VER}
 CATEGORIES=		cross lang
-MASTER_SITES=		ftp://sourceware.org/pub/binutils/snapshots/
+MASTER_SITES=		${MASTER_SITE_GNU:=binutils/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		martin@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/
 COMMENT=		binutils for NetBSD/playstation2
-PLATFORM=		mipsel--netbsdelf
+PLATFORM=		mipsel--netbsd
 LICENSE=		gnu-gpl-v3 AND gnu-lgpl-v3
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
@@ -44,7 +44,7 @@ post-patch:
 
 # we use MKDIR, not INSTALL_PROGRAM_DIR, deliberately.
 do-install:
-	${MKDIR} ${DESTDIR}${BINDIR} ${DESTDIR}${PREFIX}/lib/ldscripts ${DESTDIR}${PREFIX}/include
+	${MKDIR} -p ${DESTDIR}${BINDIR} ${DESTDIR}${PREFIX}/lib/ldscripts ${DESTDIR}${PREFIX}/include
 	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/addr2line ${DESTDIR}${BINDIR}/${PLATFORM}-addr2line
 	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/gas/as-new ${DESTDIR}${BINDIR}/${PLATFORM}-as
 	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/ar ${DESTDIR}${BINDIR}/${PLATFORM}-ar
