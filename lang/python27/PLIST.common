@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.10 2014/06/02 06:12:03 adam Exp $
+@comment $NetBSD: PLIST.common,v 1.11 2014/07/02 09:53:16 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -479,9 +479,6 @@ lib/python${PY_VER_SUFFIX}/ctypes/test/test_checkretval.pyo
 lib/python${PY_VER_SUFFIX}/ctypes/test/test_delattr.py
 lib/python${PY_VER_SUFFIX}/ctypes/test/test_delattr.pyc
 lib/python${PY_VER_SUFFIX}/ctypes/test/test_delattr.pyo
-lib/python${PY_VER_SUFFIX}/ctypes/test/test_errcheck.py
-lib/python${PY_VER_SUFFIX}/ctypes/test/test_errcheck.pyc
-lib/python${PY_VER_SUFFIX}/ctypes/test/test_errcheck.pyo
 lib/python${PY_VER_SUFFIX}/ctypes/test/test_errno.py
 lib/python${PY_VER_SUFFIX}/ctypes/test/test_errno.pyc
 lib/python${PY_VER_SUFFIX}/ctypes/test/test_errno.pyo
@@ -503,9 +500,6 @@ lib/python${PY_VER_SUFFIX}/ctypes/test/test_incomplete.pyo
 lib/python${PY_VER_SUFFIX}/ctypes/test/test_init.py
 lib/python${PY_VER_SUFFIX}/ctypes/test/test_init.pyc
 lib/python${PY_VER_SUFFIX}/ctypes/test/test_init.pyo
-lib/python${PY_VER_SUFFIX}/ctypes/test/test_integers.py
-lib/python${PY_VER_SUFFIX}/ctypes/test/test_integers.pyc
-lib/python${PY_VER_SUFFIX}/ctypes/test/test_integers.pyo
 lib/python${PY_VER_SUFFIX}/ctypes/test/test_internals.py
 lib/python${PY_VER_SUFFIX}/ctypes/test/test_internals.pyc
 lib/python${PY_VER_SUFFIX}/ctypes/test/test_internals.pyo
@@ -1703,6 +1697,12 @@ lib/python${PY_VER_SUFFIX}/idlelib/idle_test/mock_idle.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/mock_tk.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/mock_tk.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/mock_tk.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_autocomplete.py
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_autocomplete.pyc
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_autocomplete.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_autoexpand.py
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_autoexpand.pyc
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_autoexpand.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_calltips.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_calltips.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_calltips.pyo
@@ -1718,9 +1718,15 @@ lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_formatparagraph.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_grep.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_grep.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_grep.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_hyperparser.py
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_hyperparser.pyc
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_hyperparser.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_idlehistory.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_idlehistory.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_idlehistory.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_parenmatch.py
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_parenmatch.pyc
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_parenmatch.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_pathbrowser.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_pathbrowser.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_pathbrowser.pyo
@@ -1733,6 +1739,9 @@ lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_searchengine.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_text.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_text.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_text.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_textview.py
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_textview.pyc
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_textview.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_warning.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_warning.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_warning.pyo
@@ -1948,6 +1957,12 @@ lib/python${PY_VER_SUFFIX}/lib-tk/test/runtktests.pyo
 lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/__init__.py
 lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/__init__.pyc
 lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/__init__.pyo
+lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/test_geometry_managers.py
+lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/test_geometry_managers.pyc
+lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/test_geometry_managers.pyo
+lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/test_images.py
+lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/test_images.pyc
+lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/test_images.pyo
 lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/test_loadtk.py
 lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/test_loadtk.pyc
 lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/test_loadtk.pyo
@@ -3900,6 +3915,9 @@ lib/python${PY_VER_SUFFIX}/test/test_softspace.pyo
 lib/python${PY_VER_SUFFIX}/test/test_sort.py
 lib/python${PY_VER_SUFFIX}/test/test_sort.pyc
 lib/python${PY_VER_SUFFIX}/test/test_sort.pyo
+lib/python${PY_VER_SUFFIX}/test/test_spwd.py
+lib/python${PY_VER_SUFFIX}/test/test_spwd.pyc
+lib/python${PY_VER_SUFFIX}/test/test_spwd.pyo
 lib/python${PY_VER_SUFFIX}/test/test_sqlite.py
 lib/python${PY_VER_SUFFIX}/test/test_sqlite.pyc
 lib/python${PY_VER_SUFFIX}/test/test_sqlite.pyo

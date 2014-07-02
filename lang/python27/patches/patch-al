@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.12 2014/06/02 06:12:03 adam Exp $
+$NetBSD: patch-al,v 1.13 2014/07/02 09:53:16 adam Exp $
 
 - recognize MirBSD, Interix
 - remove special-case library version hack for FreeBSD
@@ -6,7 +6,7 @@ $NetBSD: patch-al,v 1.12 2014/06/02 06:12:03 adam Exp $
 - honor pkgsrc LDFLAGS
 - other stuff not previously commented (XXX)
 
---- configure.orig	2014-05-31 18:58:40.000000000 +0000
+--- configure.orig	2014-06-30 02:05:48.000000000 +0000
 +++ configure
 @@ -3252,7 +3252,7 @@ case $ac_sys_system/$ac_sys_release in
    # Reconfirmed for OpenBSD 3.3 by Zachary Hamm, for 3.4 by Jason Ish.
@@ -34,16 +34,17 @@ $NetBSD: patch-al,v 1.12 2014/06/02 06:12:03 adam Exp $
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
  	  ;;
      hp*|HP*)
-@@ -6046,7 +6041,7 @@ $as_echo "$CC" >&6; }
- 	    # Calculate the right deployment target for this build.
- 	    #
- 	    cur_target=`sw_vers -productVersion | sed 's/\(10\.[0-9]*\).*/\1/'`
--	    if test ${cur_target} '>' 10.2; then
-+	    if false; then
+@@ -6050,8 +6045,7 @@ $as_echo "$CC" >&6; }
+ 		cur_target_minor=`sw_vers -productVersion | \
+ 				sed 's/\([0-9]*\)\.\([0-9]*\).*/\2/'`
+ 		cur_target="${cur_target_major}.${cur_target_minor}"
+-		if test ${cur_target_major} -eq 10 && \
+-		   test ${cur_target_minor} -ge 3
++		if false
+ 		then
  		    cur_target=10.3
  		    if test ${enable_universalsdk}; then
- 			    if test "${UNIVERSAL_ARCHS}" = "all"; then
-@@ -8203,9 +8198,9 @@ then
+@@ -8209,9 +8203,9 @@ then
  			LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  		else
  			# No framework, use the Python app as bundle-loader
@@ -56,7 +57,7 @@ $NetBSD: patch-al,v 1.12 2014/06/02 06:12:03 adam Exp $
  		fi ;;
  	Darwin/*)
  		# Use -undefined dynamic_lookup whenever possible (10.3 and later).
-@@ -8229,15 +8224,15 @@ then
+@@ -8234,9 +8228,9 @@ then
  				LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  			else
  				# No framework, use the Python app as bundle-loader
@@ -67,7 +68,9 @@ $NetBSD: patch-al,v 1.12 2014/06/02 06:12:03 adam Exp $
 +				LDSHARED="$LDSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
 +				LDCXXSHARED="$LDCXXSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
  			fi
- 		fi
+ 		else
+ 			# building for OS X 10.3 and later
+@@ -8250,7 +8244,7 @@ then
  		;;
  	Linux*|GNU*|QNX*)
  		LDSHARED='$(CC) -shared'
@@ -76,7 +79,7 @@ $NetBSD: patch-al,v 1.12 2014/06/02 06:12:03 adam Exp $
  	BSD/OS*/4*)
  		LDSHARED="gcc -shared"
  		LDCXXSHARED="g++ -shared";;
-@@ -8265,9 +8260,15 @@ then
+@@ -8278,9 +8272,15 @@ then
  				   ;;
  				esac
  		fi;;
@@ -92,7 +95,7 @@ $NetBSD: patch-al,v 1.12 2014/06/02 06:12:03 adam Exp $
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes" ; then
  			LDSHARED='$(CC) -shared'
-@@ -8311,7 +8312,8 @@ then
+@@ -8324,7 +8324,8 @@ then
  		 fi;;
  	Linux*|GNU*) CCSHARED="-fPIC";;
  	BSD/OS*/4*) CCSHARED="-fpic";;
@@ -102,7 +105,7 @@ $NetBSD: patch-al,v 1.12 2014/06/02 06:12:03 adam Exp $
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then CCSHARED="-fPIC"
-@@ -8363,11 +8365,12 @@ then
+@@ -8376,11 +8377,12 @@ then
  	OpenUNIX*|UnixWare*) LINKFORSHARED="-Wl,-Bexport";;
  	SCO_SV*) LINKFORSHARED="-Wl,-Bexport";;
  	ReliantUNIX*) LINKFORSHARED="-W1 -Blargedynsym";;
