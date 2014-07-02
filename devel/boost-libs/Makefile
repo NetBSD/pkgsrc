@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2014/05/13 18:48:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.27.2.1 2014/07/02 19:17:26 tron Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
@@ -12,7 +12,7 @@ INSTALLATION_DIRS+=	lib
 BJAM_ARGS+=		--without-python
 PLIST_VARS+=		context log
 
-.if !empty(OPSYS:MNetBSD) && !empty(MACHINE_ARCH:Msparc64)
+.if $(OPSYS) == "NetBSD" && ($(MACHINE_ARCH) == "i386" || $(MACHINE_ARCH) == "sparc64")
 BJAM_ARGS+=		pch=off
 .elif !empty(MACHINE_ARCH:Malpha) || !empty(MACHINE_ARCH:Mm68k)
 BJAM_ARGS+=		--without-context
