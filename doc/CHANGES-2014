@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2466 2014/07/02 13:58:06 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.2467 2014/07/02 14:02:59 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3276,3 +3276,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added multimedia/x265 version 1.1 [adam 2014-07-02]
 	Updated multimedia/ffmpeg2 to 2.2.4 [adam 2014-07-02]
 	Updated devel/editline to 3.1.20140620 [ryoon 2014-07-02]
+	Updated audio/musicpd to 0.18.11nb2 [ryoon 2014-07-02]
