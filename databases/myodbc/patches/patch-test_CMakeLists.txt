@@ -1,21 +1,29 @@
-$NetBSD: patch-test_CMakeLists.txt,v 1.1 2012/11/22 10:01:10 jnemeth Exp $
+$NetBSD: patch-test_CMakeLists.txt,v 1.2 2014/07/02 03:41:51 jnemeth Exp $
 
---- test/CMakeLists.txt.orig	2012-09-18 10:56:28.000000000 +0000
+--- test/CMakeLists.txt.orig	2014-03-26 21:20:55.000000000 +0000
 +++ test/CMakeLists.txt
-@@ -44,7 +44,7 @@ FOREACH(T my_basics my_blob my_bulk my_c
- 		my_types my_unicode my_unixodbc my_use_result my_bug13766)
- 	ADD_EXECUTABLE(${T} ${T}.c)
+@@ -55,7 +55,7 @@ FOREACH(T my_basics my_blob my_bulk my_c
+           COMPILE_FLAGS "${MYSQLODBCCONN_COMPILE_FLAGS_ENV} ${MYSQL_CXXFLAGS}")
+   ENDIF(MYSQL_CXX_LINKAGE)
  
--    INSTALL(TARGETS ${T} DESTINATION test COMPONENT tests)
-+    INSTALL(TARGETS ${T} DESTINATION share/mysql-connector-odbc/test COMPONENT tests)
+-  INSTALL(TARGETS ${T} DESTINATION test COMPONENT tests)
++  INSTALL(TARGETS ${T} DESTINATION share/mysql-connector-odbc/test COMPONENT tests)
+   SET_TARGET_PROPERTIES(${T} PROPERTIES 
+       LINK_FLAGS "${MYSQLODBCCONN_LINK_FLAGS_ENV} ${MYSQL_LINK_FLAGS}")
  
- 	IF(WIN32)
- 	  TARGET_LINK_LIBRARIES(${T} ${ODBCLIB} ${ODBCINSTLIB})
-@@ -59,6 +59,6 @@ INSTALL(FILES
+@@ -102,7 +102,7 @@ IF(NOT ${CMAKE_SYSTEM_NAME} MATCHES "Dar
+               COMPILE_FLAGS "${MYSQLODBCCONN_COMPILE_FLAGS_ENV} ${MYSQL_CXXFLAGS}")
+       ENDIF(MYSQL_CXX_LINKAGE)
+ 
+-      INSTALL(TARGETS ${T} DESTINATION test COMPONENT tests)
++      INSTALL(TARGETS ${T} DESTINATION share/mysql-connector-odbc/test COMPONENT tests)
+       SET_TARGET_PROPERTIES(${T} PROPERTIES 
+           LINK_FLAGS "${MYSQLODBCCONN_LINK_FLAGS_ENV} ${MYSQL_LINK_FLAGS}")
+ 
+@@ -130,5 +130,5 @@ INSTALL(FILES
  	${CMAKE_CURRENT_BINARY_DIR}/CTestTestfile.cmake
  	${CMAKE_CURRENT_BINARY_DIR}/odbc.ini
  	${CMAKE_CURRENT_BINARY_DIR}/odbcinst.ini
 -        DESTINATION test COMPONENT tests)
 +        DESTINATION share/mysql-connector-odbc/test COMPONENT tests)
- 
  
