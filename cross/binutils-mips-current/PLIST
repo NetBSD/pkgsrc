@@ -1,18 +1,18 @@
-@comment $NetBSD: PLIST,v 1.2 2014/04/05 10:07:11 martin Exp $
-bin/mipsel--netbsdelf-addr2line
-bin/mipsel--netbsdelf-ar
-bin/mipsel--netbsdelf-as
-bin/mipsel--netbsdelf-cxxfilt
-bin/mipsel--netbsdelf-ld
-bin/mipsel--netbsdelf-nm
-bin/mipsel--netbsdelf-objcopy
-bin/mipsel--netbsdelf-objdump
-bin/mipsel--netbsdelf-ranlib
-bin/mipsel--netbsdelf-readelf
-bin/mipsel--netbsdelf-size
-bin/mipsel--netbsdelf-strings
-bin/mipsel--netbsdelf-strip
-bin/mipsel--netbsdelf-sysinfo
+@comment $NetBSD: PLIST,v 1.3 2014/07/02 12:53:06 martin Exp $
+bin/mipsel--netbsd-addr2line
+bin/mipsel--netbsd-ar
+bin/mipsel--netbsd-as
+bin/mipsel--netbsd-cxxfilt
+bin/mipsel--netbsd-ld
+bin/mipsel--netbsd-nm
+bin/mipsel--netbsd-objcopy
+bin/mipsel--netbsd-objdump
+bin/mipsel--netbsd-ranlib
+bin/mipsel--netbsd-readelf
+bin/mipsel--netbsd-size
+bin/mipsel--netbsd-strings
+bin/mipsel--netbsd-strip
+bin/mipsel--netbsd-sysinfo
 lib/ldscripts/elf32btsmip.x
 lib/ldscripts/elf32btsmip.xbn
 lib/ldscripts/elf32btsmip.xc
