@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2450 2014/07/02 03:42:06 jnemeth Exp $
+$NetBSD: CHANGES-2014,v 1.2451 2014/07/02 08:23:28 he Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3258,3 +3258,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated comms/asterisk18 to 1.8.28.2 [jnemeth 2014-07-02]
 	Added graphics/py-chart version 1.39 [darcy 2014-07-01]
 	Updated databases/myodbc to 5.3.2 [jnemeth 2014-07-02]
+	Updated lang/python27 to 2.7.7nb2 [he 2014-07-02]
