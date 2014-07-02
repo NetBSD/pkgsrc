@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/07/01 11:23:05 obache Exp $
+# $NetBSD: Makefile,v 1.9 2014/07/02 13:49:06 adam Exp $
 
 PKGNAME=	${DISTNAME:S/ffmpeg/ffmpeg2/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -49,10 +49,6 @@ CONFIGURE_ARGS+=	--disable-asm
 .  elif !empty(CC_VERSION:Mgcc-4.[2345]*)
 CFLAGS+=		-mstackrealign -mpreferred-stack-boundary=4
 .  endif
-.endif
-
-.if !empty(PKGSRC_COMPILER:Mclang)
-CFLAGS+=	-no-integrated-as
 .endif
 
 .include "../../multimedia/ffmpeg2/Makefile.common"
