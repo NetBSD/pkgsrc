@@ -1,21 +1,23 @@
-# $NetBSD: Makefile,v 1.3 2013/10/11 14:24:29 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/07/02 13:57:18 ryoon Exp $
 #
 
-DISTNAME=		libedit-20130712-3.1
-PKGNAME=		editline-3.1.20130712
-PKGREVISION=		1
+DISTNAME=		libedit-20140620-3.1
+PKGNAME=		editline-3.1.20140620
 CATEGORIES=		devel
-MASTER_SITES=		http://www.thrysoee.dk/editline/
+MASTER_SITES=		http://thrysoee.dk/editline/
 
 MAINTAINER=		ryoon@NetBSD.org
 HOMEPAGE=		http://www.thrysoee.dk/editline/
 COMMENT=		NetBSD Editline library (libedit) for generic line editing
 LICENSE=		modified-bsd
 
+PKGCONFIG_OVERRIDE+=	libedit.pc.in
+
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		automake autoreconf
+CONFIGURE_ARGS+=	--enable-widec
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fiv
