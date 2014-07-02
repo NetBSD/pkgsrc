@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1024 2014/06/13 00:14:22 wiedi Exp $
+# $NetBSD: Makefile,v 1.1025 2014/07/02 02:44:01 jnemeth Exp $
 #
 
 COMMENT=	Networking tools
@@ -40,6 +40,12 @@ SUBDIR+=	bftpd
 SUBDIR+=	bind96
 SUBDIR+=	bind98
 SUBDIR+=	bind99
+SUBDIR+=	bind910
+SUBDIR+=	bing
+SUBDIR+=	bird
+SUBDIR+=	bird6
+SUBDIR+=	bittornado
+SUBDIR+=	bittornado-gui
 SUBDIR+=	bing
 SUBDIR+=	bird
 SUBDIR+=	bird6
@@ -580,6 +586,7 @@ SUBDIR+=	py-softlayer
 SUBDIR+=	py-softlayer_messaging
 SUBDIR+=	py-spreadmodule
 SUBDIR+=	py-suds
+SUBDIR+=	py-tweepy
 SUBDIR+=	py-twisted
 SUBDIR+=	py-twisted-docs
 SUBDIR+=	py-twython
