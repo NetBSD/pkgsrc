@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2447 2014/07/02 03:08:46 jnemeth Exp $
+$NetBSD: CHANGES-2014,v 1.2448 2014/07/02 03:22:36 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3255,3 +3255,4 @@ Changes to the packages collection and infrastructure in 2014:
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2014Q2 branch [agc 2014-07-01]
 	Added net/bind910 version 9.10.0pl2 [jnemeth 2014-07-02]
 	Updated comms/asterisk to 11.10.2 [jnemeth 2014-07-02]
+	Updated comms/asterisk18 to 1.8.28.2 [jnemeth 2014-07-02]
