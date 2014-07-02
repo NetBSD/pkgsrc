@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/07/02 03:27:22 darcy Exp $
+
+SHA1 (PyChart-1.39.tar.gz) = 651ada2d8aae7d97cf530162524265e96f305eee
+RMD160 (PyChart-1.39.tar.gz) = 40a19d1eb68d9d628162e080bd3612f8a0ccebcd
+Size (PyChart-1.39.tar.gz) = 115908 bytes
