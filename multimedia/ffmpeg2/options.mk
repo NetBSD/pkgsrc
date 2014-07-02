@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2014/04/10 06:51:07 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2014/07/02 13:49:06 adam Exp $
 
 # Global and legacy options
 
@@ -98,10 +98,9 @@ CONFIGURE_ARGS+=	--disable-libx264
 .endif
 
 # x265 support
-# XXX: x265-devel is NOT yet in pkgsrc, but leave it here for testing purposes
 .if !empty(PKG_OPTIONS:Mx265)
 CONFIGURE_ARGS+=	--enable-libx265
-#.include "../../multimedia/x265-devel/buildlink3.mk"
+.include "../../multimedia/x265/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-libx265
 .endif
