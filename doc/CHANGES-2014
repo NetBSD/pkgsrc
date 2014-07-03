@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2470 2014/07/03 15:02:21 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2471 2014/07/03 18:22:15 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3252,6 +3252,8 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Compress-Raw-Bzip2 to 2.064 [schmonz 2014-06-29]
 	Updated devel/p5-Compress-Raw-Zlib to 2.065 [schmonz 2014-06-29]
 	Updated devel/p5-IO-Compress to 2.064 [schmonz 2014-06-29]
+	Updated news/trn to 4.76nb8 [dholland 2014-06-29]
+	Updated graphics/libpano13 to 2.9.19nb1 [dholland 2014-06-29]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2014Q2 branch [agc 2014-07-01]
 	Added net/bind910 version 9.10.0pl2 [jnemeth 2014-07-02]
 	Updated comms/asterisk to 11.10.2 [jnemeth 2014-07-02]
