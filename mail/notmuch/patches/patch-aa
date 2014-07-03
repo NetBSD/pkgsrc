@@ -1,10 +1,19 @@
-$NetBSD: patch-aa,v 1.1 2014/01/09 12:15:23 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2014/07/03 15:01:46 wiz Exp $
 
 Install completion files into example directory.
 
---- configure.orig	2013-08-03 11:29:40.000000000 +0000
+--- configure.orig	2014-05-06 07:27:29.000000000 +0000
 +++ configure
-@@ -668,10 +668,10 @@ HAVE_EMACS = ${have_emacs}
+@@ -418,7 +418,7 @@ else
+     have_sphinx=0
+ 
+     printf "Checking if rst2man is available... "
+-    if rst2man -V > /dev/null 2>&1; then
++    if rst2man.py -V > /dev/null 2>&1; then
+        printf "Yes.\n"
+        have_rst2man=1
+     else
+@@ -824,10 +824,10 @@ HAVE_RST2MAN=${have_rst2man}
  desktop_dir = \$(prefix)/share/applications
  
  # The directory to which bash completions files should be installed
@@ -15,5 +24,5 @@ Install completion files into example directory.
 -zsh_completion_dir = ${ZSHCOMLETIONDIR:=\$(prefix)/share/zsh/functions/Completion/Unix}
 +zsh_completion_dir = ${ZSHCOMLETIONDIR:=\$(prefix)/share/examples/notmuch/zsh/functions/Completion/Unix}
  
- # Whether the getline function is available (if not, then notmuch will
+ # Whether the canonicalize_file_name function is available (if not, then notmuch will
  # build its own version)
