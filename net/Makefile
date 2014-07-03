@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1025 2014/07/02 02:44:01 jnemeth Exp $
+# $NetBSD: Makefile,v 1.1026 2014/07/03 16:58:19 jnemeth Exp $
 #
 
 COMMENT=	Networking tools
@@ -37,16 +37,15 @@ SUBDIR+=	balance
 SUBDIR+=	barnyard
 SUBDIR+=	batchftp
 SUBDIR+=	bftpd
+SUBDIR+=	bind910
 SUBDIR+=	bind96
 SUBDIR+=	bind98
 SUBDIR+=	bind99
-SUBDIR+=	bind910
 SUBDIR+=	bing
 SUBDIR+=	bird
 SUBDIR+=	bird6
 SUBDIR+=	bittornado
 SUBDIR+=	bittornado-gui
-SUBDIR+=	bing
 SUBDIR+=	bird
 SUBDIR+=	bird6
 SUBDIR+=	bittornado
