@@ -1,0 +1,15 @@
+$NetBSD: patch-doc_Makefile.local,v 1.1 2014/07/03 15:01:46 wiz Exp $
+
+--- doc/Makefile.local.orig	2014-05-06 07:27:29.000000000 +0000
++++ doc/Makefile.local
+@@ -7,8 +7,8 @@ SPHINXOPTS    := -q
+ SPHINXBUILD   = sphinx-build
+ DOCBUILDDIR      := $(dir)/_build
+ 
+-prerst2man := python $(srcdir)/$(dir)/prerst2man.py
+-mkdocdeps := python $(srcdir)/$(dir)/mkdocdeps.py
++prerst2man := ${PYTHONBIN} $(srcdir)/$(dir)/prerst2man.py
++mkdocdeps := ${PYTHONBIN} $(srcdir)/$(dir)/mkdocdeps.py
+ 
+ # Internal variables.
+ ALLSPHINXOPTS   := -d $(DOCBUILDDIR)/doctrees $(SPHINXOPTS) $(srcdir)/$(dir)
