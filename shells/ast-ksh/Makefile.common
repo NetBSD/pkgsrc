@@ -1,4 +1,7 @@
-# $NetBSD: Makefile.common,v 1.32 2013/04/08 11:17:22 rodent Exp $
+# $NetBSD: Makefile.common,v 1.33 2014/07/03 15:00:41 wiz Exp $
+#
+# used by shells/ast-ksh/Makefile
+# used by shells/static-ast-ksh/Makefile
 
 DISTNAME=	ast-ksh-${ASTKSH_VERSION}
 PKGNAME=	ast-ksh-${ASTKSH_VERSION:S/-//g}
@@ -58,7 +61,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/arch/"$${arch}"/bin/ksh		\
 		${DESTDIR}${PREFIX}/bin/ksh93;				\
 	${INSTALL_MAN} ${WRKSRC}/arch/"$${arch}"/man/man1/sh.1	\
-		${DESTDIR}${PREFIX}/man/man1/ksh93.1
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/ksh93.1
 
 # Part of regression test
 do-test:
