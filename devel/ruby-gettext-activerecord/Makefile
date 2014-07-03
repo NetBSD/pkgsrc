@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/12/13 15:52:04 taca Exp $
+# $NetBSD: Makefile,v 1.7 2014/07/03 13:04:22 obache Exp $
 
 DISTNAME=	gettext_activerecord-2.1.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/}
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.yotabanana.com/hiki/ruby-gettext.html
 COMMENT=	Localization for ActiveRecord using Ruby-GetText-Package
 LICENSE=	ruby-license
+
+RUBY_VERSION_SUPPORTED=	193 200 21
 
 DEPENDS+=	${RUBY_PKGPREFIX}-gettext>=2.1.0:../../devel/ruby-gettext
 DEPENDS+=	${RUBY_ACTIVERECORD_DEPENDS}
