@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2467 2014/07/02 14:02:59 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.2468 2014/07/03 12:50:20 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3277,3 +3277,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/ffmpeg2 to 2.2.4 [adam 2014-07-02]
 	Updated devel/editline to 3.1.20140620 [ryoon 2014-07-02]
 	Updated audio/musicpd to 0.18.11nb2 [ryoon 2014-07-02]
+	Updated textproc/ruby-text to 1.3.0 [obache 2014-07-03]
