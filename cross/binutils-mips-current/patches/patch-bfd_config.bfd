@@ -1,0 +1,15 @@
+$NetBSD: patch-bfd_config.bfd,v 1.1 2014/07/03 20:31:16 martin Exp $
+
+Add support for a few missing abi variants
+
+--- bfd/config.bfd.orig	2013-11-04 16:33:37.000000000 +0100
++++ bfd/config.bfd	2014-07-03 22:06:48.000000000 +0200
+@@ -960,7 +960,7 @@
+ #ifdef BFD64
+   mips*el-*-netbsd*)
+     targ_defvec=bfd_elf32_tradlittlemips_vec
+-    targ_selvecs="bfd_elf32_tradbigmips_vec bfd_elf64_tradbigmips_vec bfd_elf64_tradlittlemips_vec ecoff_little_vec ecoff_big_vec"
++    targ_selvecs="bfd_elf32_ntradlittlemips_vec bfd_elf32_tradbigmips_vec bfd_elf32_ntradbigmips_vec bfd_elf64_tradbigmips_vec bfd_elf64_tradlittlemips_vec ecoff_little_vec ecoff_big_vec"
+     ;;
+   mips*-*-netbsd*)
+     targ_defvec=bfd_elf32_tradbigmips_vec
