@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2013/08/27 12:07:41 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/07/03 12:50:03 obache Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/COPYING.txt
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/text.rb
@@ -10,14 +11,13 @@ ${GEM_LIBDIR}/lib/text/porter_stemming.rb
 ${GEM_LIBDIR}/lib/text/soundex.rb
 ${GEM_LIBDIR}/lib/text/version.rb
 ${GEM_LIBDIR}/lib/text/white_similarity.rb
-${GEM_LIBDIR}/test/data/big.txt
-${GEM_LIBDIR}/test/data/chunky.flf
-${GEM_LIBDIR}/test/data/chunky.txt
 ${GEM_LIBDIR}/test/data/double_metaphone.csv
-${GEM_LIBDIR}/test/data/metaphone.txt
-${GEM_LIBDIR}/test/data/metaphone_buggy.txt
+${GEM_LIBDIR}/test/data/metaphone.yml
+${GEM_LIBDIR}/test/data/metaphone_buggy.yml
 ${GEM_LIBDIR}/test/data/porter_stemming_input.txt
 ${GEM_LIBDIR}/test/data/porter_stemming_output.txt
+${GEM_LIBDIR}/test/data/soundex.yml
+${GEM_LIBDIR}/test/double_metaphone_test.rb
 ${GEM_LIBDIR}/test/levenshtein_test.rb
 ${GEM_LIBDIR}/test/metaphone_test.rb
 ${GEM_LIBDIR}/test/porter_stemming_test.rb
