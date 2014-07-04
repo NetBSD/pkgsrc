@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/04/20 01:44:53 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/07/04 13:01:12 schmonz Exp $
 bin/html2text
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -9,9 +9,3 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/html2text.py
 ${PYSITELIB}/html2text.pyc
 ${PYSITELIB}/html2text.pyo
-${PYSITELIB}/test/__init__.py
-${PYSITELIB}/test/__init__.pyc
-${PYSITELIB}/test/__init__.pyo
-${PYSITELIB}/test/test_html2text.py
-${PYSITELIB}/test/test_html2text.pyc
-${PYSITELIB}/test/test_html2text.pyo
