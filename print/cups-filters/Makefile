@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/06/18 09:28:17 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/07/04 14:31:49 wiz Exp $
 
 DISTNAME=	cups-filters-1.0.54
 PKGREVISION=	1
@@ -43,7 +43,7 @@ post-install:
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../net/avahi/buildlink3.mk"
 BUILDLINK_ABI_DEPENDS.cups+=	cups>=1.6
-.include "../../print/cups15/buildlink3.mk"
+.include "../../print/cups/buildlink3.mk"
 .include "../../print/ghostscript/buildlink3.mk"
 .include "../../print/ijs/buildlink3.mk"
 .include "../../print/poppler-cpp/buildlink3.mk"
