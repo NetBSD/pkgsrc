@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2472 2014/07/03 20:31:37 martin Exp $
+$NetBSD: CHANGES-2014,v 1.2473 2014/07/04 00:20:28 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3283,3 +3283,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/ruby-gettext to 3.1.2 [obache 2014-07-03]
 	Updated mail/notmuch to 0.18.1 [wiz 2014-07-03]
 	Updated cross/binutils-mips-current to 2.24nb3 [martin 2014-07-03]
+	Added databases/ruby-awesome_nested_set version 2.1.6 [rodent 2014-07-04]
