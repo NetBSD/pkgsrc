@@ -1,0 +1,3 @@
+OpenID support for Ruby. OpenID is a decentralized identification system that
+allows users to prove they own a url. OpenID for Ruby currently includes only
+consumer modules.
