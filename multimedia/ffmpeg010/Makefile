@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/06/27 17:58:09 drochner Exp $
+# $NetBSD: Makefile,v 1.17 2014/07/04 10:27:43 jperkin Exp $
 
 PKGNAME=	ffmpeg010-20130731.${DISTVERSION}
 PKGREVISION=	2
@@ -43,9 +43,6 @@ CFLAGS+=-mstackrealign -mpreferred-stack-boundary=4
 CONFIGURE_ARGS+=	--disable-asm
 .endif
 .endif
-
-# "error: can't find a register in class 'GENERAL_REGS' while reloading 'asm'"
-CFLAGS.SunOS+=	-DBROKEN_RELOCATIONS=1
 
 TEST_TARGET=	check
 
