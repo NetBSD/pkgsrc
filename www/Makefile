@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1051 2014/07/03 17:00:59 jnemeth Exp $
+# $NetBSD: Makefile,v 1.1052 2014/07/04 12:28:20 rodent Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -630,6 +630,7 @@ SUBDIR+=	ramaze
 SUBDIR+=	ruby-actionpack32
 SUBDIR+=	ruby-activeresource32
 SUBDIR+=	ruby-borges
+SUBDIR+=	ruby-capybara
 SUBDIR+=	ruby-clearsilver
 SUBDIR+=	ruby-coffee-rails32
 SUBDIR+=	ruby-compass
