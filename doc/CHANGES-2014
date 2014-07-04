@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2480 2014/07/04 12:36:48 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2481 2014/07/04 12:39:55 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3291,3 +3291,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added sysutils/ruby-childprocess version 0.5.3 [rodent 2014-07-04]
 	Added security/ruby-openid version 0.0.1 [rodent 2014-07-04]
 	Added security/ruby-ruby-openid version 2.5.0 [rodent 2014-07-04]
+	Added security/ruby-rack-openid version 1.4.2 [rodent 2014-07-04]
