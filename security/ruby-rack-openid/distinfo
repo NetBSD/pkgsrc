@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/07/04 12:39:38 rodent Exp $
+
+SHA1 (rack-openid-1.4.2.gem) = 8ef6de949a4547701d93f57b48ffe64afd117293
+RMD160 (rack-openid-1.4.2.gem) = d4be6e862e18e7f11cac95e060ace4fdfb801552
+Size (rack-openid-1.4.2.gem) = 11264 bytes
