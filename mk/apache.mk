@@ -1,4 +1,4 @@
-# $NetBSD: apache.mk,v 1.28 2014/06/10 15:22:13 joerg Exp $
+# $NetBSD: apache.mk,v 1.29 2014/07/04 21:20:52 dholland Exp $
 #
 # This file is meant to be included by packages that require an apache
 # web server.
@@ -70,7 +70,8 @@ _APACHE_PKGSRCDIR.apache24=	../../www/apache24
 #
 
 .if empty(_PKG_APACHES:M${PKG_APACHE_DEFAULT})
-PKG_FAIL_REASON+=		"[apache.mk] Invalid apache package \""${PKG_APACHE_DEFAULT:Q}"\" in PKG_APACHE_DEFAULT."
+_PKG_APACHE_MESSAGE:=		"[apache.mk] Invalid apache package \""${PKG_APACHE_DEFAULT:Q}"\" in PKG_APACHE_DEFAULT."
+PKG_FAIL_REASON+=		${_PKG_APACHE_MESSAGE}
 PKG_APACHE_DEFAULT=		apache22
 .endif
 
