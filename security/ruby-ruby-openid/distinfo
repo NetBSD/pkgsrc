@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/07/04 12:36:34 rodent Exp $
+
+SHA1 (ruby-openid-2.5.0.gem) = ef0bf3afb0c2e2520754135a337df1f5a2bc1d32
+RMD160 (ruby-openid-2.5.0.gem) = e11bbb3442f29d41e24e561340c18a22aa1d1f78
+Size (ruby-openid-2.5.0.gem) = 328192 bytes
