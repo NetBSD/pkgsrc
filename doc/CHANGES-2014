@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2475 2014/07/04 10:35:36 adam Exp $
+$NetBSD: CHANGES-2014,v 1.2476 2014/07/04 11:37:47 he Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3286,3 +3286,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added databases/ruby-awesome_nested_set version 2.1.6 [rodent 2014-07-04]
 	Added textproc/ruby-xpath version 2.0.0 [rodent 2014-07-04]
 	Updated multimedia/ffmpeg to 20140623.1.2.7 [adam 2014-07-04]
+	Updated lang/python34 to 3.4.1nb1 [he 2014-07-04]
