@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/07/04 12:30:02 rodent Exp $
+
+SHA1 (childprocess-0.5.3.gem) = c8856f74b8d16b231cab53454fef7155c018b05c
+RMD160 (childprocess-0.5.3.gem) = 503dbbdeef6488a68df279a12a48337b3b2ea3f3
+Size (childprocess-0.5.3.gem) = 28160 bytes
