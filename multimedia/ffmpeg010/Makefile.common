@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2013/08/03 09:22:58 obache Exp $
+# $NetBSD: Makefile.common,v 1.9 2014/07/04 10:27:43 jperkin Exp $
 # used by multimedia/ffmpeg010/Makefile
 
 DISTNAME=	ffmpeg-${DISTVERSION:S/-//g}
@@ -57,12 +57,7 @@ CONFIGURE_ARGS+=	--enable-pthreads
 CONFIGURE_ARGS+=	--enable-gpl
 
 .if ${OPSYS} == "SunOS"
-CONFIGURE_ARGS+=	--disable-amd3dnow
-CONFIGURE_ARGS+=	--disable-amd3dnowext
-CONFIGURE_ARGS+=	--disable-mmx
-CONFIGURE_ARGS+=	--disable-mmx2
-CONFIGURE_ARGS+=	--disable-sse
-CONFIGURE_ARGS+=	--disable-ssse3
+CONFIGURE_ARGS+=	--disable-asm
 .else
 CONFIGURE_ARGS+=	--enable-runtime-cpudetect
 .endif
