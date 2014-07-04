@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.34 2014/05/30 21:35:04 schmonz Exp $
+# $NetBSD: options.mk,v 1.35 2014/07/04 03:34:43 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qmail
 PKG_OPTIONS_OPTIONAL_GROUPS=	rcpt
@@ -20,6 +20,7 @@ PATCH_DIST_STRIP.${BADRCPTTO_PATCH}=	-p1
 BIGDNS_PATCH=		qmail-103.patch
 PATCHFILES+=		${BIGDNS_PATCH}
 SITES.${BIGDNS_PATCH}=	http://www.ckdhr.com/ckd/
+SITES.${BIGDNS_PATCH}+=	${MASTER_SITE_LOCAL}
 PATCH_DIST_STRIP.${BIGDNS_PATCH}=	-p1
 .endif
 
