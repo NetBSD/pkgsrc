@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/07/05 12:34:44 rodent Exp $
+
+SHA1 (websocket-1.1.4.gem) = 9d21f573d44d4816c2f07a8b74a523fc856b6bf6
+RMD160 (websocket-1.1.4.gem) = 0795cfffc383041b622e536ffa6496e9a13a653a
+Size (websocket-1.1.4.gem) = 25600 bytes
