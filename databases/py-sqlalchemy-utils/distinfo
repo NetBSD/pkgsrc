@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/07/05 19:40:25 rodent Exp $
+
+SHA1 (SQLAlchemy-Utils-0.26.3.tar.gz) = ff31be7cfd6168a57ef1d23246d18be2a6513cde
+RMD160 (SQLAlchemy-Utils-0.26.3.tar.gz) = c233ff2fa07cb2279c921ffa83a8f84c6d373400
+Size (SQLAlchemy-Utils-0.26.3.tar.gz) = 77263 bytes
