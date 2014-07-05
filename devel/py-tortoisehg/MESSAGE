@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2014/07/05 15:33:03 wiz Exp $
+
+Including TortoiseHG's mergetools.rc in your ~/.hgrc file is
+recommended, especially if the merge tool you use is devel/kdiff3.
+
+%include ${PREFIX}/share/tortoisehg/mergetools.rc
+
+===========================================================================
