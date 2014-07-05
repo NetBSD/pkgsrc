@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.268 2014/06/14 13:59:28 rodent Exp $
+# $NetBSD: Makefile,v 1.269 2014/07/05 19:34:12 rodent Exp $
 
 COMMENT=	Mathematics
 
@@ -216,6 +216,7 @@ SUBDIR+=	py-ephem3
 SUBDIR+=	py-fpconst
 SUBDIR+=	py-gmpy
 SUBDIR+=	py-infinity
+SUBDIR+=	py-intervals
 SUBDIR+=	py-mpmath
 SUBDIR+=	py-munkres
 SUBDIR+=	py-networkx
