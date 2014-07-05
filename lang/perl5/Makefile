@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.228 2014/06/08 23:35:55 joerg Exp $
+# $NetBSD: Makefile,v 1.229 2014/07/05 05:10:48 richard Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -119,6 +119,11 @@ HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-sde
 MAKE_ENV+=		LC_ALL="C"
+
+.if ${OPSYS} == "SunOS"
+USE_TOOLS+=	bash
+CONFIG_SHELL=	${TOOLS_PATH.bash}
+.endif
 
 TEST_TARGET=		test
 
