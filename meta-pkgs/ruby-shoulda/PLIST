@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2014/07/05 12:24:50 rodent Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_DOCDIR}/ri/cache.ri
+${GEM_DOCDIR}/ri/Shoulda/cdesc-Shoulda.ri
+${GEM_LIBDIR}/Appraisals
+${GEM_LIBDIR}/.autotest
+${GEM_LIBDIR}/CONTRIBUTING.md
+${GEM_LIBDIR}/features/rails_integration.feature
+${GEM_LIBDIR}/features/step_definitions/rails_steps.rb
+${GEM_LIBDIR}/features/support/env.rb
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/gemfiles/3.0.gemfile
+${GEM_LIBDIR}/gemfiles/3.0.gemfile.lock
+${GEM_LIBDIR}/gemfiles/3.1.gemfile
+${GEM_LIBDIR}/gemfiles/3.1.gemfile.lock
+${GEM_LIBDIR}/gemfiles/3.2.gemfile
+${GEM_LIBDIR}/gemfiles/3.2.gemfile.lock
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/lib/shoulda.rb
+${GEM_LIBDIR}/lib/shoulda/version.rb
+${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/shoulda.gemspec
+${GEM_LIBDIR}/.travis.yml
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/2.0.0/build_info

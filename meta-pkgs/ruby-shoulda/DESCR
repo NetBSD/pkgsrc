@@ -1,0 +1,4 @@
+The shoulda gem is a meta gem with two dependencies:
+
+ * shoulda-context (official documentation)
+ * shoulda-matchers (official documentation)

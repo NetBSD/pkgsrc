@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/07/05 12:24:50 rodent Exp $
+
+SHA1 (shoulda-3.5.0.gem) = 473f0a8f5cdcaf298b70cb4dd0c418a853a35058
+RMD160 (shoulda-3.5.0.gem) = ba82ac19dc194930e22ff4867aca675083306aab
+Size (shoulda-3.5.0.gem) = 11264 bytes
