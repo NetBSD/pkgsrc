@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2489 2014/07/05 12:30:31 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2490 2014/07/05 12:33:26 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3300,3 +3300,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/ruby-shoulda-context version 1.2.1 [rodent 2014-07-05]
 	Added meta-pkgs/ruby-shoulda version 3.5.0 [rodent 2014-07-05]
 	Added databases/ruby-tiny_tds version 0.6.2 [rodent 2014-07-05]
+	Added textproc/ruby-yard version 0.8.7.4 [rodent 2014-07-05]
