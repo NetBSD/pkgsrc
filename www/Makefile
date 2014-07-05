@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1053 2014/07/05 12:48:11 rodent Exp $
+# $NetBSD: Makefile,v 1.1054 2014/07/05 19:31:04 rodent Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -589,6 +589,7 @@ SUBDIR+=	py-flask-user
 SUBDIR+=	py-flask-wtf
 SUBDIR+=	py-flup
 SUBDIR+=	py-flup3
+SUBDIR+=	py-furl
 SUBDIR+=	py-gdata
 SUBDIR+=	py-genshi
 SUBDIR+=	py-gunicorn
