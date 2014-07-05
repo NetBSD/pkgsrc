@@ -1,11 +1,20 @@
-$NetBSD: patch-Misc_NEWS,v 1.3 2014/06/09 17:58:31 he Exp $
+$NetBSD: patch-Misc_NEWS,v 1.3.2.1 2014/07/05 11:13:52 tron Exp $
 
-Apply a fix for CVE-2013-1752 for the SMTP and Pop parts.
-From http://bugs.python.org/issue16042 and issue16041.
- 
---- Misc/NEWS.orig      2014-06-09 11:29:34.000000000 +0000
+Note added fixes.
+
+--- Misc/NEWS.orig	2014-05-31 18:58:39.000000000 +0000
 +++ Misc/NEWS
-@@ -585,6 +585,13 @@ Library
+@@ -63,6 +63,9 @@ Core and Builtins
+ Library
+ -------
+ 
++- Issue #21766: Prevent a security hole in CGIHTTPServer by URL unquoting paths
++  before checking for a CGI script at that path.
++
+ - Issue #10744: Fix PEP 3118 format strings on ctypes objects with a nontrivial
+   shape.
+ 
+@@ -585,6 +588,13 @@ Library
    prevent readline() calls from consuming too much memory.  Patch by Jyrki
    Pulliainen.
  
