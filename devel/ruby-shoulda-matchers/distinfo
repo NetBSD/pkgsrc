@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/07/05 12:20:51 rodent Exp $
+
+SHA1 (shoulda-matchers-2.6.1.gem) = c3b67e4fc1fecdeb44c45447eb380df1050c200b
+RMD160 (shoulda-matchers-2.6.1.gem) = 8c11ffe9ab3a8b953e633dc924d17513dc37f2f0
+Size (shoulda-matchers-2.6.1.gem) = 91648 bytes
