@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2014/05/21 21:05:23 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2014/07/05 12:25:31 rodent Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -45,6 +45,7 @@ SUBDIR+=	pkgsrc-guide-tools
 SUBDIR+=	pulseaudio-tools
 SUBDIR+=	py-gnome-bindings
 SUBDIR+=	ruby-gnome2
+SUBDIR+=	ruby-shoulda
 SUBDIR+=	suse100
 SUBDIR+=	suse121
 SUBDIR+=	suse131
