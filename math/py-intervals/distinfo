@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/07/05 19:33:17 rodent Exp $
+
+SHA1 (intervals-0.3.1.tar.gz) = cc52b6f3523528b4f21a0bd35f28e60d6d23fe2f
+RMD160 (intervals-0.3.1.tar.gz) = 97c2e5f64232de2aeb33aeaa0a0ed9a3ba875b36
+Size (intervals-0.3.1.tar.gz) = 11250 bytes
