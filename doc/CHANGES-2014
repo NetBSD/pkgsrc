@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2501 2014/07/05 23:22:29 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2502 2014/07/05 23:23:26 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3312,3 +3312,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added www/py-wtforms-alchemy version 0.12.6 [rodent 2014-07-05]
 	Updated devel/libexecinfo to 1.1nb1 [schmonz 2014-07-05]
 	Updated databases/py-orderedmultidict to 0.7.3 [rodent 2014-07-05]
+	Updated www/py-furl to 0.3.94 [rodent 2014-07-05]
