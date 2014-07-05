@@ -1,0 +1,3 @@
+bin/yard @PREFIX@/bin/yard@RUBY_VER@
+bin/yardoc @PREFIX@/bin/yardoc@RUBY_VER@
+bin/yri @PREFIX@/bin/yri@RUBY_VER@
