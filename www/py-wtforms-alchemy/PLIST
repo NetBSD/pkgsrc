@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2014/07/05 19:44:34 rodent Exp $
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/wtforms_alchemy/exc.py
+${PYSITELIB}/wtforms_alchemy/exc.pyc
+${PYSITELIB}/wtforms_alchemy/exc.pyo
+${PYSITELIB}/wtforms_alchemy/fields.py
+${PYSITELIB}/wtforms_alchemy/fields.pyc
+${PYSITELIB}/wtforms_alchemy/fields.pyo
+${PYSITELIB}/wtforms_alchemy/generator.py
+${PYSITELIB}/wtforms_alchemy/generator.pyc
+${PYSITELIB}/wtforms_alchemy/generator.pyo
+${PYSITELIB}/wtforms_alchemy/__init__.py
+${PYSITELIB}/wtforms_alchemy/__init__.pyc
+${PYSITELIB}/wtforms_alchemy/__init__.pyo
+${PYSITELIB}/wtforms_alchemy/utils.py
+${PYSITELIB}/wtforms_alchemy/utils.pyc
+${PYSITELIB}/wtforms_alchemy/utils.pyo
