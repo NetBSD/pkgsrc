@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1929 2014/06/14 16:49:41 rodent Exp $
+# $NetBSD: Makefile,v 1.1930 2014/07/05 12:23:24 rodent Exp $
 #
 
 COMMENT=	Development utilities
@@ -1719,6 +1719,8 @@ SUBDIR+=	ruby-rspec-mocks
 SUBDIR+=	ruby-rspec-rails
 SUBDIR+=	ruby-setup
 SUBDIR+=	ruby-sexp-processor
+SUBDIR+=	ruby-shoulda-context
+SUBDIR+=	ruby-shoulda-matchers
 SUBDIR+=	ruby-simple_uuid
 SUBDIR+=	ruby-simplecov
 SUBDIR+=	ruby-simplecov-html
