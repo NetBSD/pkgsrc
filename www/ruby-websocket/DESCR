@@ -1,0 +1,11 @@
+Universal Ruby library to handle WebSocket protocol. It focuses on providing
+abstraction layer over WebSocket API instead of providing server or client
+functionality.
+
+Currently, WebSocket Ruby supports all existing drafts of WebSocket, which
+include:
+
+ * hixie-75
+ * hixie-76
+ * all hybi drafts (00-13)
+ * RFC 6455
