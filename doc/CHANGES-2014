@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2492 2014/07/05 15:34:12 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2493 2014/07/05 19:28:22 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3303,3 +3303,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added textproc/ruby-yard version 0.8.7.4 [rodent 2014-07-05]
 	Added www/ruby-websocket version 1.1.4 [rodent 2014-07-05]
 	Added devel/py-tortoisehg version 3.0.1 [wiz 2014-07-05]
+	Added databases/py-orderedmultidict version 0.7.2 [rodent 2014-07-05]
