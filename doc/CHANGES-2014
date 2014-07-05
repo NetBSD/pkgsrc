@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2487 2014/07/05 12:21:59 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2488 2014/07/05 12:25:01 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3298,3 +3298,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated cross/gcc-mips-current to 4.9.0nb5 [martin 2014-07-05]
 	Added devel/ruby-shoulda-matchers version 2.6.1 [rodent 2014-07-05]
 	Added devel/ruby-shoulda-context version 1.2.1 [rodent 2014-07-05]
+	Added meta-pkgs/ruby-shoulda version 3.5.0 [rodent 2014-07-05]
