@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2485 2014/07/05 09:04:10 martin Exp $
+$NetBSD: CHANGES-2014,v 1.2486 2014/07/05 12:21:03 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3296,3 +3296,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/nss to 3.16.3 [ryoon 2014-07-05]
 	Updated security/kpcli to 2.7nb1 [wiz 2014-07-05]
 	Updated cross/gcc-mips-current to 4.9.0nb5 [martin 2014-07-05]
+	Added devel/ruby-shoulda-matchers version 2.6.1 [rodent 2014-07-05]
