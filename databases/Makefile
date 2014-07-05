@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.465 2014/07/05 19:29:09 rodent Exp $
+# $NetBSD: Makefile,v 1.466 2014/07/05 19:41:18 rodent Exp $
 
 COMMENT=	Databases
 
@@ -347,6 +347,7 @@ SUBDIR+=	py-python-sql
 SUBDIR+=	py-redis-py
 SUBDIR+=	py-sqlalchemy
 SUBDIR+=	py-sqlalchemy-migrate
+SUBDIR+=	py-sqlalchemy-utils
 SUBDIR+=	py-sqlite
 SUBDIR+=	py-sqlite2
 SUBDIR+=	py-sqlite3
