@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2499 2014/07/05 19:44:52 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2500 2014/07/05 20:15:30 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3310,3 +3310,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added databases/py-sqlalchemy-utils version 0.26.3 [rodent 2014-07-05]
 	Added www/py-wtforms-components version 0.9.3 [rodent 2014-07-05]
 	Added www/py-wtforms-alchemy version 0.12.6 [rodent 2014-07-05]
+	Updated devel/libexecinfo to 1.1nb1 [schmonz 2014-07-05]
