@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.464 2014/07/05 12:31:11 rodent Exp $
+# $NetBSD: Makefile,v 1.465 2014/07/05 19:29:09 rodent Exp $
 
 COMMENT=	Databases
 
@@ -338,6 +338,7 @@ SUBDIR+=	py-mongo
 SUBDIR+=	py-mssql
 SUBDIR+=	py-mysql-connector
 SUBDIR+=	py-mysqldb
+SUBDIR+=	py-orderedmultidict
 SUBDIR+=	py-pgnotify
 SUBDIR+=	py-postgresql
 SUBDIR+=	py-psycopg2
