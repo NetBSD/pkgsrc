@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.463 2014/07/04 00:21:17 rodent Exp $
+# $NetBSD: Makefile,v 1.464 2014/07/05 12:31:11 rodent Exp $
 
 COMMENT=	Databases
 
@@ -427,6 +427,7 @@ SUBDIR+=	ruby-sequel
 SUBDIR+=	ruby-sqlite
 SUBDIR+=	ruby-sqlite3
 SUBDIR+=	ruby-sqlrelay
+SUBDIR+=	ruby-tiny_tds
 SUBDIR+=	ruby-tokyocabinet
 SUBDIR+=	ruby-tokyotyrant
 SUBDIR+=	ruby-vapor
