@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2491 2014/07/05 12:34:55 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2492 2014/07/05 15:34:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3302,3 +3302,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added databases/ruby-tiny_tds version 0.6.2 [rodent 2014-07-05]
 	Added textproc/ruby-yard version 0.8.7.4 [rodent 2014-07-05]
 	Added www/ruby-websocket version 1.1.4 [rodent 2014-07-05]
+	Added devel/py-tortoisehg version 3.0.1 [wiz 2014-07-05]
