@@ -1,0 +1,7 @@
+Ordered Multivalue Dictionary - omdict.
+
+A multivalue dictionary is a dictionary that can store multiple values for the
+same key. An ordered multivalue dictionary is a multivalue dictionary that
+retains the order of insertions and deletions.
+
+omdict retains method parity with dict.
