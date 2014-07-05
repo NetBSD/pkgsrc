@@ -1,0 +1,3 @@
+shoulda-matchers provides Test::Unit- and RSpec-compatible one-liners that test
+common Rails functionality. These tests would otherwise be much longer, more
+complex, and error-prone.
