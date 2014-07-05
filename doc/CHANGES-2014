@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2484 2014/07/05 05:17:38 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2485 2014/07/05 09:04:10 martin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3295,3 +3295,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/py-html2text to 2014.7.3 [schmonz 2014-07-04]
 	Updated devel/nss to 3.16.3 [ryoon 2014-07-05]
 	Updated security/kpcli to 2.7nb1 [wiz 2014-07-05]
+	Updated cross/gcc-mips-current to 4.9.0nb5 [martin 2014-07-05]
