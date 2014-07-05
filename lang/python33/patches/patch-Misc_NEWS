@@ -1,0 +1,16 @@
+$NetBSD: patch-Misc_NEWS,v 1.1.2.2 2014/07/05 11:21:49 tron Exp $
+
+Note fix for directory traversal vulnerability is included.
+
+--- Misc/NEWS.orig	2014-03-09 08:40:23.000000000 +0000
++++ Misc/NEWS
+@@ -30,6 +30,9 @@ Core and Builtins
+ Library
+ -------
+ 
++- Issue #21766: Prevent a security hole in CGIHTTPServer by URL unquoting paths
++  before checking for a CGI script at that path.
++
+ - Issue #20778: Fix modulefinder to work with bytecode-only modules.
+ 
+ - Issue #20791: copy.copy() now doesn't make a copy when the input is
