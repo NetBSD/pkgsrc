@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2482 2014/07/04 13:01:17 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2483 2014/07/05 04:54:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3293,3 +3293,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added security/ruby-ruby-openid version 2.5.0 [rodent 2014-07-04]
 	Added security/ruby-rack-openid version 1.4.2 [rodent 2014-07-04]
 	Updated textproc/py-html2text to 2014.7.3 [schmonz 2014-07-04]
+	Updated devel/nss to 3.16.3 [ryoon 2014-07-05]
