@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1054 2014/07/05 19:31:04 rodent Exp $
+# $NetBSD: Makefile,v 1.1055 2014/07/05 19:45:57 rodent Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -623,6 +623,8 @@ SUBDIR+=	py-webpy
 SUBDIR+=	py-werkzeug
 SUBDIR+=	py-werkzeug-docs
 SUBDIR+=	py-wtforms
+SUBDIR+=	py-wtforms-alchemy
+SUBDIR+=	py-wtforms-components
 SUBDIR+=	py-wtforms-recaptcha
 SUBDIR+=	py-wtforms-test
 SUBDIR+=	qDecoder
