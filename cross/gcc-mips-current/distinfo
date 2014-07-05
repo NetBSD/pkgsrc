@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.3 2014/07/02 12:53:35 martin Exp $
+$NetBSD: distinfo,v 1.4 2014/07/05 09:03:49 martin Exp $
 
 SHA1 (gcc-4.9.0.tar.bz2) = fbde8eb49f2b9e6961a870887cf7337d31cd4917
 RMD160 (gcc-4.9.0.tar.bz2) = ac561660744127fa009ae75202d1ac81ac8d7668
 Size (gcc-4.9.0.tar.bz2) = 89677407 bytes
 SHA1 (patch-gcc_config.host) = 1b1e11cd199eb93f49443d51c0063b09b7327858
 SHA1 (patch-gcc_config_host-netbsd.c) = 8f13b09dd7006d456cd1c66e895be504e9537880
+SHA1 (patch-gcc_config_mips_netbsd.h) = 094c373421eca14076e55df65aed66e722582ddd
 SHA1 (patch-gcc_config_x-netbsd) = 6dc3d78e26df62054ea29f98ca51592858e671e3
 SHA1 (patch-gcc_system.h) = 4c959a6b1c4d524cbdf44cfb80f0e5758ec20783
 SHA1 (patch-libgcc_config.host) = 353f4d17581d619bb4fd55ad27ab4576f28023b7
