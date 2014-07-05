@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1052 2014/07/04 12:28:20 rodent Exp $
+# $NetBSD: Makefile,v 1.1053 2014/07/05 12:48:11 rodent Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -695,6 +695,7 @@ SUBDIR+=	ruby-tag
 SUBDIR+=	ruby-unicorn
 SUBDIR+=	ruby-url_mount
 SUBDIR+=	ruby-webrobots
+SUBDIR+=	ruby-websocket
 SUBDIR+=	ruby-webunit
 SUBDIR+=	screws
 SUBDIR+=	seamonkey
