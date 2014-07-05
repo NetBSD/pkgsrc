@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2495 2014/07/05 19:33:32 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2496 2014/07/05 19:38:12 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3306,3 +3306,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added databases/py-orderedmultidict version 0.7.2 [rodent 2014-07-05]
 	Added www/py-furl version 0.3.93 [rodent 2014-07-05]
 	Added math/py-intervals version 0.3.1 [rodent 2014-07-05]
+	Added devel/py-fann2 version 1.0.0 [rodent 2014-07-05]
