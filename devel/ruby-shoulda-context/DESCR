@@ -1,0 +1,3 @@
+Shoulda's contexts make it easy to write understandable and maintainable tests
+for Test::Unit. It's fully compatible with your existing tests in Test::Unit,
+and requires no retooling to use.
