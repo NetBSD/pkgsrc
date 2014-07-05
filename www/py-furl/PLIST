@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2014/07/05 19:30:14 rodent Exp $
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/furl/furl.py
+${PYSITELIB}/furl/furl.pyc
+${PYSITELIB}/furl/furl.pyo
+${PYSITELIB}/furl/__init__.py
+${PYSITELIB}/furl/__init__.pyc
+${PYSITELIB}/furl/__init__.pyo
+${PYSITELIB}/furl/omdict1D.py
+${PYSITELIB}/furl/omdict1D.pyc
+${PYSITELIB}/furl/omdict1D.pyo
