@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2521 2014/07/06 15:26:27 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2522 2014/07/06 15:31:37 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3340,3 +3340,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/xapian-omega to 1.2.18 [schmonz 2014-07-06]
 	Updated textproc/p5-Search-Xapian to 1.2.18.0 [schmonz 2014-07-06]
 	Updated textproc/p5-Text-CSV_XS to 1.09 [schmonz 2014-07-06]
+	Updated devel/p5-Test-Class to 0.45 [schmonz 2014-07-06]
