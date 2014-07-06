@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2504 2014/07/06 06:27:10 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.2505 2014/07/06 06:28:17 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3315,3 +3315,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-furl to 0.3.94 [rodent 2014-07-05]
 	Updated devel/py-mercurial to 3.0.2 [wiz 2014-07-06]
 	Updated devel/p5-Symbol-Global-Name to 0.05 [ryoon 2014-07-06]
+	Updated mail/p5-Email-Address-List to 0.05 [ryoon 2014-07-06]
