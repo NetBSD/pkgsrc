@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2509 2014/07/06 12:22:58 obache Exp $
+$NetBSD: CHANGES-2014,v 1.2510 2014/07/06 12:28:32 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3327,3 +3327,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/ruby-rails32 to 3.2.19 [taca 2014-07-06]
 	Updated graphics/py-Pillow to 2.5.0 [obache 2014-07-06]
 	Updated graphics/py-blockdiag to 1.4.1 [obache 2014-07-06]
+	Updated graphics/py-seqdiag to 0.9.3 [obache 2014-07-06]
