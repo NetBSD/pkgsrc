@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2518 2014/07/06 15:21:13 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2519 2014/07/06 15:21:45 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3337,3 +3337,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/p5-App-Sqitch to 0.994 [schmonz 2014-07-06]
 	Updated sysutils/dbus to 1.8.6 [wiz 2014-07-06]
 	Updated textproc/xapian to 1.2.18 [schmonz 2014-07-06]
+	Updated textproc/xapian-omega to 1.2.18 [schmonz 2014-07-06]
