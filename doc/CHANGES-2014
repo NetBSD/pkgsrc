@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2516 2014/07/06 14:37:37 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2517 2014/07/06 14:54:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3335,3 +3335,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-gobject3 to 3.12.2 [ryoon 2014-07-06]
 	Updated games/lgogdownloader to 2.13 [wiz 2014-07-06]
 	Updated databases/p5-App-Sqitch to 0.994 [schmonz 2014-07-06]
+	Updated sysutils/dbus to 1.8.6 [wiz 2014-07-06]
