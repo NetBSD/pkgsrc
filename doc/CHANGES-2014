@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2519 2014/07/06 15:21:45 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2520 2014/07/06 15:22:06 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3338,3 +3338,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/dbus to 1.8.6 [wiz 2014-07-06]
 	Updated textproc/xapian to 1.2.18 [schmonz 2014-07-06]
 	Updated textproc/xapian-omega to 1.2.18 [schmonz 2014-07-06]
+	Updated textproc/p5-Search-Xapian to 1.2.18.0 [schmonz 2014-07-06]
