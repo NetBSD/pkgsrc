@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13431 2014/07/06 13:54:41 ryoon Exp $
+$NetBSD: TODO,v 1.13432 2014/07/06 14:34:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -739,7 +739,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o leafnode-1.11.8
 	o lftp-4.5.2
 	o lgeneral-1.2.3
-	o lgogdownloader-2.13
 	o libAppleWM-1.4.1
 	o libabw-0.1.0
 	o libarchive-3.1.2
