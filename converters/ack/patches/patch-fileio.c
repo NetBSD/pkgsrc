@@ -1,4 +1,4 @@
-$NetBSD: patch-fileio.c,v 1.1 2012/12/26 21:21:38 dholland Exp $
+$NetBSD: patch-fileio.c,v 1.2 2014/07/06 18:50:20 dholland Exp $
 
 - use standard headers
 - declare own functions
@@ -11,15 +11,17 @@ $NetBSD: patch-fileio.c,v 1.1 2012/12/26 21:21:38 dholland Exp $
 
 --- fileio.c.orig	1994-06-12 05:31:00.000000000 +0000
 +++ fileio.c
-@@ -5,14 +5,18 @@
+@@ -4,15 +4,20 @@
+ /*			oga@dgw.yz.yamagata-u.ac.jp	*/
  /* v1.10  1994 03/19	Ogasawara Hiroyuki		*/
  
++#include	<sys/types.h>
++#include	<sys/time.h>
  #include	<stdio.h>
-+#include	<utime.h>
-+
+ 
 +#include	"kanjicode.h"
 +#include	"misc.h"
- 
++
  #define	EMPTY		0
  #define	STACKSIZE	256
  #define	PRESIZE		(1024*16)
@@ -32,7 +34,7 @@ $NetBSD: patch-fileio.c,v 1.1 2012/12/26 21:21:38 dholland Exp $
  unsigned char	prebuf[PRESIZE],
  		*preptr= prebuf;
  
-@@ -36,7 +40,7 @@ unsigned int	code;
+@@ -36,7 +41,7 @@ unsigned int	code;
  }
  
  int
@@ -41,7 +43,7 @@ $NetBSD: patch-fileio.c,v 1.1 2012/12/26 21:21:38 dholland Exp $
  {
  	if( cstackptr > cstack )
  		return	*--cstackptr;
-@@ -48,7 +52,7 @@ getcode()
+@@ -48,7 +53,7 @@ getcode()
  }
  
  void
@@ -50,7 +52,7 @@ $NetBSD: patch-fileio.c,v 1.1 2012/12/26 21:21:38 dholland Exp $
  {
  	*cstackptr++= code;
  }
-@@ -62,31 +66,33 @@ void	*cp;
+@@ -62,31 +67,33 @@ void	*cp;
  }
  
  #if HUMAN
