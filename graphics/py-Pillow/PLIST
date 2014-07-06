@@ -1,7 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/04/18 13:00:49 obache Exp $
-${PYSITELIB}/PIL/ArgImagePlugin.py
-${PYSITELIB}/PIL/ArgImagePlugin.pyc
-${PYSITELIB}/PIL/ArgImagePlugin.pyo
+@comment $NetBSD: PLIST,v 1.5 2014/07/06 12:15:53 obache Exp $
 ${PYSITELIB}/PIL/BdfFontFile.py
 ${PYSITELIB}/PIL/BdfFontFile.pyc
 ${PYSITELIB}/PIL/BdfFontFile.pyo
@@ -110,6 +107,9 @@ ${PYSITELIB}/PIL/ImageMath.pyo
 ${PYSITELIB}/PIL/ImageMode.py
 ${PYSITELIB}/PIL/ImageMode.pyc
 ${PYSITELIB}/PIL/ImageMode.pyo
+${PYSITELIB}/PIL/ImageMorph.py
+${PYSITELIB}/PIL/ImageMorph.pyc
+${PYSITELIB}/PIL/ImageMorph.pyo
 ${PYSITELIB}/PIL/ImageOps.py
 ${PYSITELIB}/PIL/ImageOps.pyc
 ${PYSITELIB}/PIL/ImageOps.pyo
@@ -256,13 +256,11 @@ ${PYSITELIB}/PIL/_imaging.so
 ${PYSITELIB}/PIL/_imagingcms.so
 ${PYSITELIB}/PIL/_imagingft.so
 ${PYSITELIB}/PIL/_imagingmath.so
+${PYSITELIB}/PIL/_imagingmorph.so
 ${PYSITELIB}/PIL/_util.py
 ${PYSITELIB}/PIL/_util.pyc
 ${PYSITELIB}/PIL/_util.pyo
 ${PYSITELIB}/PIL/_webp.so
-${PYSITELIB}/PIL/tests.py
-${PYSITELIB}/PIL/tests.pyc
-${PYSITELIB}/PIL/tests.pyo
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
