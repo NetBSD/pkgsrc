@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/01/01 03:11:08 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2014/07/06 06:26:30 ryoon Exp $
 
-SHA1 (Symbol-Global-Name-0.04.tar.gz) = 6a39f998cbd57e67cac1acd3a6cc9224d45d754a
-RMD160 (Symbol-Global-Name-0.04.tar.gz) = 47a9a79bf42f17e682254d2a7b7b751164df0bec
-Size (Symbol-Global-Name-0.04.tar.gz) = 21635 bytes
+SHA1 (Symbol-Global-Name-0.05.tar.gz) = b2c4a9d21411c11541c191ed4fa5b1c39607d5de
+RMD160 (Symbol-Global-Name-0.05.tar.gz) = e2400fb2ef8bf3ddf3b1b637705b1749a531a8ef
+Size (Symbol-Global-Name-0.05.tar.gz) = 22113 bytes
