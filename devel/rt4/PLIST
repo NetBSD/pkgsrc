@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/06/17 11:10:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/07/06 06:32:32 ryoon Exp $
 share/examples/rt4/RT_Config.pm
 share/examples/rt4/RT_SiteConfig.pm
 share/rt4/bin/rt
@@ -21,6 +21,7 @@ share/rt4/data/docs/charts.pod
 share/rt4/data/docs/customizing/approvals.pod
 share/rt4/data/docs/customizing/articles_introduction.pod
 share/rt4/data/docs/customizing/lifecycles.pod
+share/rt4/data/docs/customizing/search_result_columns.pod
 share/rt4/data/docs/customizing/styling_rt.pod
 share/rt4/data/docs/customizing/templates.pod
 share/rt4/data/docs/customizing/timezones_in_charts.pod
@@ -56,6 +57,7 @@ share/rt4/data/docs/rt_perl.pod
 share/rt4/data/docs/schema.dot
 share/rt4/data/docs/security.pod
 share/rt4/data/docs/web_deployment.pod
+share/rt4/data/docs/writing_extensions.pod
 share/rt4/data/fonts/Droid.README
 share/rt4/data/fonts/DroidSans.ttf
 share/rt4/data/fonts/DroidSansFallback.ttf
@@ -371,6 +373,7 @@ share/rt4/data/html/Elements/ShowUser
 share/rt4/data/html/Elements/ShowUserEmailFrequency
 share/rt4/data/html/Elements/SimpleSearch
 share/rt4/data/html/Elements/Submit
+share/rt4/data/html/Elements/TSVExport
 share/rt4/data/html/Elements/Tabs
 share/rt4/data/html/Elements/TicketList
 share/rt4/data/html/Elements/TitleBox
@@ -452,7 +455,6 @@ share/rt4/data/html/REST/1.0/autohandler
 share/rt4/data/html/REST/1.0/dhandler
 share/rt4/data/html/REST/1.0/logout
 share/rt4/data/html/REST/1.0/search/dhandler
-share/rt4/data/html/REST/1.0/search/ticket
 share/rt4/data/html/REST/1.0/ticket/comment
 share/rt4/data/html/REST/1.0/ticket/link
 share/rt4/data/html/REST/1.0/ticket/merge
@@ -631,6 +633,7 @@ share/rt4/data/po/en_GB.po
 share/rt4/data/po/es.po
 share/rt4/data/po/et.po
 share/rt4/data/po/eu.po
+share/rt4/data/po/fa.po
 share/rt4/data/po/fi.po
 share/rt4/data/po/fr.po
 share/rt4/data/po/hr.po
@@ -641,7 +644,6 @@ share/rt4/data/po/it.po
 share/rt4/data/po/ja.po
 share/rt4/data/po/lt.po
 share/rt4/data/po/lv.po
-share/rt4/data/po/mk.po
 share/rt4/data/po/nb.po
 share/rt4/data/po/nl.po
 share/rt4/data/po/nn.po
@@ -942,6 +944,7 @@ share/rt4/data/static/css/base/jquery.modal.css
 share/rt4/data/static/css/base/login.css
 share/rt4/data/static/css/base/main.css
 share/rt4/data/static/css/base/misc.css
+share/rt4/data/static/css/base/msie6.css
 share/rt4/data/static/css/base/nav.css
 share/rt4/data/static/css/base/portlets.css
 share/rt4/data/static/css/base/print.css
@@ -1145,6 +1148,7 @@ share/rt4/etc/upgrade/3.9.8/schema.Oracle
 share/rt4/etc/upgrade/3.9.8/schema.Pg
 share/rt4/etc/upgrade/3.9.8/schema.SQLite
 share/rt4/etc/upgrade/3.9.8/schema.mysql
+share/rt4/etc/upgrade/4.0-customfield-checkbox-extension
 share/rt4/etc/upgrade/4.0.0rc2/schema.mysql
 share/rt4/etc/upgrade/4.0.0rc4/schema.Oracle
 share/rt4/etc/upgrade/4.0.0rc4/schema.Pg
@@ -1159,6 +1163,8 @@ share/rt4/etc/upgrade/4.0.13/schema.Oracle
 share/rt4/etc/upgrade/4.0.13/schema.Pg
 share/rt4/etc/upgrade/4.0.13/schema.mysql
 share/rt4/etc/upgrade/4.0.18/content
+share/rt4/etc/upgrade/4.0.19/content
+share/rt4/etc/upgrade/4.0.19/schema.mysql
 share/rt4/etc/upgrade/4.0.3/content
 share/rt4/etc/upgrade/4.0.4/content
 share/rt4/etc/upgrade/4.0.6/content
@@ -1220,7 +1226,10 @@ share/rt4/etc/upgrade/4.1.8/schema.Pg
 share/rt4/etc/upgrade/4.1.8/schema.SQLite
 share/rt4/etc/upgrade/4.1.8/schema.mysql
 share/rt4/etc/upgrade/4.1.9/content
-share/rt4/etc/upgrade/${PKGVERSION}/content
+share/rt4/etc/upgrade/4.2.1/content
+share/rt4/etc/upgrade/4.2.2/content
+share/rt4/etc/upgrade/4.2.2/schema.mysql
+share/rt4/etc/upgrade/4.2.4/content
 share/rt4/etc/upgrade/generate-rtaddressregexp
 share/rt4/etc/upgrade/sanity-check-stylesheets.pl
 share/rt4/etc/upgrade/shrink_cgm_table.pl
@@ -1326,6 +1335,7 @@ share/rt4/lib/RT/Interface/REST.pm
 share/rt4/lib/RT/Interface/Web.pm
 share/rt4/lib/RT/Interface/Web/Handler.pm
 share/rt4/lib/RT/Interface/Web/Menu.pm
+share/rt4/lib/RT/Interface/Web/Middleware/StaticHeaders.pm
 share/rt4/lib/RT/Interface/Web/QueryBuilder.pm
 share/rt4/lib/RT/Interface/Web/QueryBuilder/Tree.pm
 share/rt4/lib/RT/Interface/Web/Request.pm
@@ -1464,7 +1474,9 @@ share/rt4/sbin/rt-email-dashboards
 share/rt4/sbin/rt-email-digest
 share/rt4/sbin/rt-email-group-admin
 share/rt4/sbin/rt-fulltext-indexer
+share/rt4/sbin/rt-importer
 share/rt4/sbin/rt-preferences-viewer
+share/rt4/sbin/rt-serializer
 share/rt4/sbin/rt-server
 share/rt4/sbin/rt-server.fcgi
 share/rt4/sbin/rt-session-viewer
