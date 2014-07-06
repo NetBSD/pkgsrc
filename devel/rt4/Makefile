@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2014/06/17 11:10:40 markd Exp $
+# $NetBSD: Makefile,v 1.13 2014/07/06 06:32:32 ryoon Exp $
 
-DISTNAME=	rt-4.2.1
+DISTNAME=	rt-4.2.5
 PKGNAME=	${DISTNAME:S/rt/rt4/}
-PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	http://download.bestpractical.com/pub/rt/release/
 
@@ -24,6 +23,7 @@ DEPENDS+=	p5-Data-GUID-[0-9]*:../../devel/p5-Data-GUID
 DEPENDS+=	p5-CSS-Squish>=0.06:../../www/p5-CSS-Squish
 DEPENDS+=	p5-Date-Extract>=0.02:../../time/p5-Date-Extract
 DEPENDS+=	p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
+DEPENDS+=	p5-Email-Address-List>=0.02:../../mail/p5-Email-Address-List
 DEPENDS+=	p5-DateTime>=0.44:../../time/p5-DateTime
 DEPENDS+=	p5-DateTime-Format-Natural>0.67:../../time/p5-DateTime-Format-Natural
 DEPENDS+=	p5-DateTime-Locale>=0.40:../../time/p5-DateTime-Locale
@@ -78,6 +78,7 @@ DEPENDS+=	{perl>=5.8.9,p5-Sys-Syslog>=0.16}:../../sysutils/p5-Sys-Syslog
 DEPENDS+=	p5-Text-Password-Pronounceable-[0-9]*:../../security/p5-Text-Password-Pronounceable
 DEPENDS+=	p5-Text-Quoted>=2.02:../../textproc/p5-Text-Quoted
 DEPENDS+=	p5-Text-Template>=1.44:../../textproc/p5-Text-Template
+DEPENDS+=	p5-Symbol-Global-Name>=0.05:../../devel/p5-Symbol-Global-Name
 DEPENDS+=	p5-Text-WikiFormat>=0.76:../../textproc/p5-Text-WikiFormat
 DEPENDS+=	p5-Text-Wrapper-[0-9]*:../../textproc/p5-Text-Wrapper
 DEPENDS+=	{perl>=5.7.3,p5-Time-HiRes-[0-9]*}:../../time/p5-Time-HiRes
@@ -157,15 +158,18 @@ SUBST_VARS.prefix+=	RT4DIR
 SUBST_VARS.prefix+=	RT_VAR_DIR RT_LOCAL_DIR
 
 SUBST_CLASSES+=		etcpath
-SUBST_FILES.etcpath=	sbin/rt-setup-database.in share/html/Install/Initialize.html
-SUBST_SED.etcpath=	-e 's,\$$RT::EtcPath,"${RT4DIR}/etc",'
-SUBST_STAGE.etcpath=	post-patch
+SUBST_MESSAGE.etcpath=	Setting non-sysconfdir etcpath
+SUBST_FILES.etcpath=	sbin/rt-setup-database.in
+SUBST_FILES.etcpath+=	share/html/Install/Initialize.html
+SUBST_FILES.etcpath+=	lib/RT/Handle.pm
+SUBST_SED.etcpath=	-e 's,\$$RT::EtcPath,"${PREFIX}/share/rt4/etc",'
+SUBST_STAGE.etcpath=	pre-configure
 
 SUBST_CLASSES+=		egpath
 SUBST_FILES.egpath=	Makefile.in
 SUBST_SED.egpath=	-e 's,@CONFIG_FILE_PATH_R@,${RT_EXAMPLE_DIR},'
 SUBST_SED.egpath+=	-e 's,@RT_ETC_PATH_R@,${RT4DIR}/etc,'
-SUBST_STAGE.egpath=	post-patch
+SUBST_STAGE.egpath=	pre-configure
 
 GNU_CONFIGURE=	yes
 NO_BUILD=	yes
@@ -200,8 +204,5 @@ OWN_DIRS_PERMS+=	${RT_VAR_DIR}/session_data	${APACHE_USER}	${APACHE_GROUP}	0770
 
 REPLACE_PERL+=		etc/upgrade/shrink_cgm_table.pl etc/upgrade/shrink_transactions_table.pl
 REPLACE_PERL+=		etc/upgrade/time-worked-history.pl etc/upgrade/upgrade-mysql-schema.pl
-
-post-install:
-	rm ${DESTDIR}${PREFIX}/share/rt4/data/html/Install/Initialize.html.orig
 
 .include "../../mk/bsd.pkg.mk"
