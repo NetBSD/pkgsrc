@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2507 2014/07/06 07:45:27 taca Exp $
+$NetBSD: CHANGES-2014,v 1.2508 2014/07/06 12:16:03 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3325,3 +3325,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/ruby-actionmailer32 to 3.2.19 [taca 2014-07-06]
 	Updated devel/ruby-railties32 to 3.2.19 [taca 2014-07-06]
 	Updated www/ruby-rails32 to 3.2.19 [taca 2014-07-06]
+	Updated graphics/py-Pillow to 2.5.0 [obache 2014-07-06]
