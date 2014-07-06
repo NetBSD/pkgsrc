@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/12/06 11:30:53 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/07/06 12:28:22 obache Exp $
 bin/seqdiag
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -27,6 +27,17 @@ ${PYSITELIB}/seqdiag/metrics.pyo
 ${PYSITELIB}/seqdiag/parser.py
 ${PYSITELIB}/seqdiag/parser.pyc
 ${PYSITELIB}/seqdiag/parser.pyo
+${PYSITELIB}/seqdiag/tests/diagrams/alt_block.diag
+${PYSITELIB}/seqdiag/tests/diagrams/altblock.diag
+${PYSITELIB}/seqdiag/tests/diagrams/diagram_class.diag
+${PYSITELIB}/seqdiag/tests/diagrams/diagram_edge_length.diag
+${PYSITELIB}/seqdiag/tests/diagrams/nested_altblock.diag
+${PYSITELIB}/seqdiag/tests/diagrams/node_activated.diag
+${PYSITELIB}/seqdiag/tests/diagrams/node_fontsize.diag
+${PYSITELIB}/seqdiag/tests/diagrams/node_notes.diag
+${PYSITELIB}/seqdiag/tests/diagrams/plugin_autoclass.diag
+${PYSITELIB}/seqdiag/tests/diagrams/separators.diag
+${PYSITELIB}/seqdiag/tests/diagrams/separators_in_subedge.diag
 ${PYSITELIB}/seqdiag/tests/test_generate_diagram.py
 ${PYSITELIB}/seqdiag/tests/test_generate_diagram.pyc
 ${PYSITELIB}/seqdiag/tests/test_generate_diagram.pyo
