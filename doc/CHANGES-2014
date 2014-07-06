@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2506 2014/07/06 06:33:02 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.2507 2014/07/06 07:45:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3317,3 +3317,11 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Symbol-Global-Name to 0.05 [ryoon 2014-07-06]
 	Updated mail/p5-Email-Address-List to 0.05 [ryoon 2014-07-06]
 	Updated devel/rt4 to 4.2.5 [ryoon 2014-07-06]
+	Updated devel/ruby-activesupport32 to 3.2.19 [taca 2014-07-06]
+	Updated devel/ruby-activemodel32 to 3.2.19 [taca 2014-07-06]
+	Updated databases/ruby-activerecord32 to 3.2.19 [taca 2014-07-06]
+	Updated www/ruby-activeresource32 to 3.2.19 [taca 2014-07-06]
+	Updated www/ruby-actionpack32 to 3.2.19 [taca 2014-07-06]
+	Updated mail/ruby-actionmailer32 to 3.2.19 [taca 2014-07-06]
+	Updated devel/ruby-railties32 to 3.2.19 [taca 2014-07-06]
+	Updated www/ruby-rails32 to 3.2.19 [taca 2014-07-06]
