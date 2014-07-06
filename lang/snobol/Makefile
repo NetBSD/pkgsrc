@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2014/07/06 17:46:12 jakllsch Exp $
+# $NetBSD: Makefile,v 1.28 2014/07/06 18:05:38 jakllsch Exp $
 #
 
 DISTNAME=	snobol4-1.3
 PKGNAME=	snobol-1.3
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.snobol4.org/snobol/ \
 		ftp://ftp.ultimate.com/snobol/
@@ -12,8 +13,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.snobol4.org/csnobol4/curr/
 COMMENT=	Macro implementation of SNOBOL4 in C
 LICENSE=	2-clause-bsd
-
-BROKEN=	Distfile doesn't match
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -30,14 +29,13 @@ CONFIGURE_ARGS+=--prefix=${PREFIX}
 
 BUILD_TARGET=	all pv
 
-USE_TOOLS+=		gzip m4 unzip
+USE_TOOLS+=		gzip m4
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 MAKE_JOBS_SAFE=		NO
 
 post-build:
 	${CP} ${WRKSRC}/doc/head ${WRKSRC}/doc/tutorial
-	unzip -d ${WRKSRC} -joqqLC ${DISTDIR}/vanilla.zip pm.exe
-	unzip -p -opaaqqLC ${WRKSRC}/pm.exe >> ${WRKSRC}/doc/tutorial
+	tar -Ozxf ${DISTDIR}/vanilla.tar.gz vanilla/snobol4.man >> ${WRKSRC}/doc/tutorial
 	${GZIP_CMD} ${WRKSRC}/doc/tutorial
 
 post-install:
