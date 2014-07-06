@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2502 2014/07/05 23:23:26 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2503 2014/07/06 02:24:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3313,3 +3313,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/libexecinfo to 1.1nb1 [schmonz 2014-07-05]
 	Updated databases/py-orderedmultidict to 0.7.3 [rodent 2014-07-05]
 	Updated www/py-furl to 0.3.94 [rodent 2014-07-05]
+	Updated devel/py-mercurial to 3.0.2 [wiz 2014-07-06]
