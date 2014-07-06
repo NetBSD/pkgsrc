@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/04/19 08:19:31 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/07/06 14:34:15 wiz Exp $
 
-DISTNAME=	lgogdownloader-2.12
+DISTNAME=	lgogdownloader-2.13
 CATEGORIES=	games
 MASTER_SITES=	http://sites.google.com/site/gogdownloader/
 
@@ -17,6 +17,12 @@ USE_TOOLS+=	gmake gunzip
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.boost-libs}/lib
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+SUBST_CLASSES+=		json
+SUBST_SED.json+=	-e 's,jsoncpp/json/json.h,json/json.h,'
+SUBST_FILES.json+=	src/api.cpp src/downloader.cpp
+SUBST_STAGE.json=	post-configure
+SUBST_MESSAGE.json=	Fixing path to jsoncpp headers.
 
 post-build:
 	cd ${WRKSRC}/man && gunzip lgogdownloader.1
