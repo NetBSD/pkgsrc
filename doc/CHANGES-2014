@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2514 2014/07/06 13:54:41 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.2515 2014/07/06 14:34:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3333,3 +3333,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/mikutter to 3.0.3 [obache 2014-07-06]
 	Updated devel/py-gobject3-common to 3.12.2 [ryoon 2014-07-06]
 	Updated devel/py-gobject3 to 3.12.2 [ryoon 2014-07-06]
+	Updated games/lgogdownloader to 2.13 [wiz 2014-07-06]
