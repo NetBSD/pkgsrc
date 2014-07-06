@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/02/12 18:06:05 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2014/07/06 13:52:02 ryoon Exp $
 
 PYTHON_FOR_BUILD_ONLY=	yes
 
@@ -15,7 +15,7 @@ do-build:
 INSTALLATION_DIRS+=	include/pygobject-3.0 lib/pkgconfig
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/gi/_gobject/pygobject.h \
+	${INSTALL_SCRIPT} ${WRKSRC}/gi/pygobject.h \
 		${DESTDIR}${PREFIX}/include/pygobject-3.0/pygobject.h
 	${INSTALL_SCRIPT} ${WRKSRC}/pygobject-3.0.pc \
 		${DESTDIR}${PREFIX}/lib/pkgconfig/pygobject-3.0.pc
