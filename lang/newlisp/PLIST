@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/10/12 10:30:40 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/07/07 14:25:31 ryoon Exp $
 bin/newlisp
 bin/${PKGNAME}
 bin/newlisp-edit
@@ -39,7 +39,9 @@ share/${PKGNAME}/guiserver/rotation-demo.lsp
 share/${PKGNAME}/guiserver/shapes-demo.lsp
 share/${PKGNAME}/guiserver/sound-demo.lsp
 share/${PKGNAME}/guiserver/stroke-demo.lsp
+share/${PKGNAME}/guiserver/table-demo.lsp
 share/${PKGNAME}/guiserver/tabs-demo.lsp
+share/${PKGNAME}/guiserver/textfield-demo.lsp
 share/${PKGNAME}/guiserver/textrot-demo.lsp
 share/${PKGNAME}/guiserver/uppercase.lsp
 share/${PKGNAME}/guiserver/widgets-demo.lsp
@@ -52,7 +54,6 @@ share/${PKGNAME}/modules/getopts.lsp
 share/${PKGNAME}/modules/gmp.lsp
 share/${PKGNAME}/modules/gsl.lsp
 share/${PKGNAME}/modules/infix.lsp
-share/${PKGNAME}/modules/macro.lsp
 share/${PKGNAME}/modules/mysql.lsp
 share/${PKGNAME}/modules/odbc.lsp
 share/${PKGNAME}/modules/plot.lsp
