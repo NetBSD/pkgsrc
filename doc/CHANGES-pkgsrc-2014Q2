@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.4 2014/07/05 11:31:19 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.5 2014/07/07 09:23:44 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q2 branch:
@@ -14,3 +14,5 @@ Pullup ticket #4441 - requested by he
 lang/python33: security patch
 Pullup ticket #4441 - requested by he
 lang/python34: security patch
+Pullup ticket #4442 - requested by wiz
+sysutils/dbus: security update
