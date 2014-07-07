@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2014/06/08 23:58:51 rodent Exp $
+# $NetBSD: Makefile,v 1.15 2014/07/07 13:05:35 obache Exp $
 
 DISTNAME=	pyzmq-14.3.0
 PKGNAME=        ${DISTNAME:S/py/${PYPKGPREFIX}-/1}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	https://pypi.python.org/packages/source/p/pyzmq/
 
