@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/07/07 12:54:22 obache Exp $
+# $NetBSD: Makefile,v 1.17 2014/07/07 12:56:26 obache Exp $
 
 DISTNAME=	zeromq-4.0.4
 CATEGORIES=	net devel
@@ -26,6 +26,7 @@ CXXFLAGS+=	-std=gnu++0x
 .endif
 
 .include "../../security/libsodium/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-libsodium=${BUILDLINK_PREFIX.libsodium}
 
 .if ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
 .include "../../devel/libuuid/buildlink3.mk"
