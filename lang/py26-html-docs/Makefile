@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/02 20:11:50 asau Exp $
+# $NetBSD: Makefile,v 1.4 2014/07/07 20:01:14 asau Exp $
 #
 
 VERS=		2.6.7
@@ -25,7 +25,7 @@ PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 INSTALLATION_DIRS=	${HTMLDIR}
 
 do-install:
-	cd ${WRKSRC} && pax -rw -pe [a-z]* ${DESTDIR}${PREFIX}/${HTMLDIR}
+	cd ${WRKSRC} && pax -rw -pp [a-z]* ${DESTDIR}${PREFIX}/${HTMLDIR}
 	cd ${DESTDIR}${PREFIX} && ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
