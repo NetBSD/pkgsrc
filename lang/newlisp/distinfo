@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2013/10/12 10:30:40 ryoon Exp $
+$NetBSD: distinfo,v 1.9 2014/07/07 14:25:31 ryoon Exp $
 
-SHA1 (newlisp-10.5.4.tgz) = a1fa37eb21f8045858a30493429d243ababc2488
-RMD160 (newlisp-10.5.4.tgz) = 389e6522d2e2629dbba5235ae7cda979b596749b
-Size (newlisp-10.5.4.tgz) = 1637762 bytes
+SHA1 (newlisp-10.6.0.tgz) = 8a3b23a72acfdbb00306f8c7419892b553b8026e
+RMD160 (newlisp-10.6.0.tgz) = 3f710834a68f1a43fe2e22b21a273dc8a77c35fe
+Size (newlisp-10.6.0.tgz) = 1670428 bytes
 SHA1 (patch-configure-alt) = f8669b8432fe460af18d0f2d3d1135debfd74654
+SHA1 (patch-guiserver_guiserver.lsp) = b1ef345be637cf3640c6181b592420aaae5d636f
 SHA1 (patch-newlisp.c) = 0ec358377dcae961d89fbbf00474e2feda3f53ae
