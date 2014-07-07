@@ -1,8 +1,18 @@
-$NetBSD: patch-af,v 1.2 2012/12/12 12:47:50 wiz Exp $
+$NetBSD: patch-af,v 1.3 2014/07/07 18:06:58 jperkin Exp $
+
+Include limits.h for INT_{MIN,MAX}
 
 --- grep.c.orig	2011-01-02 22:57:56.000000000 +0000
 +++ grep.c
-@@ -152,7 +152,7 @@ gid(int f, int n)
+@@ -8,6 +8,7 @@
+ 
+ #include <sys/types.h>
+ #include <ctype.h>
++#include <limits.h>
+ 
+ #include "libgen.h"
+ 
+@@ -152,7 +153,7 @@ gid(int f, int n)
  	/* Skip backwards over delimiters we are currently on */
  	while (i > 0) {
  		c = lgetc(curwp->w_dotp, i);
@@ -11,7 +21,7 @@ $NetBSD: patch-af,v 1.2 2012/12/12 12:47:50 wiz Exp $
  			break;
  
  		i--;
-@@ -161,14 +161,14 @@ gid(int f, int n)
+@@ -161,14 +162,14 @@ gid(int f, int n)
  	/* Skip the symbol itself */
  	for (; i > 0; i--) {
  		c = lgetc(curwp->w_dotp, i - 1);
