@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/06/22 14:50:47 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.10 2014/07/07 16:44:18 jperkin Exp $
 bin/go
 bin/gofmt
 go/AUTHORS
@@ -502,7 +502,7 @@ go/pkg/${GO_PLATFORM}/regexp.a
 go/pkg/${GO_PLATFORM}/regexp/syntax.a
 go/pkg/${GO_PLATFORM}/runtime.a
 go/pkg/${GO_PLATFORM}/runtime.h
-go/pkg/${GO_PLATFORM}/runtime/cgo.a
+${PLIST.cgo}go/pkg/${GO_PLATFORM}/runtime/cgo.a
 go/pkg/${GO_PLATFORM}/runtime/debug.a
 go/pkg/${GO_PLATFORM}/runtime/pprof.a
 go/pkg/${GO_PLATFORM}/runtime/race.a
@@ -2783,6 +2783,7 @@ go/src/pkg/runtime/zslice_${GO_PLATFORM}.c
 go/src/pkg/runtime/zstring_${GO_PLATFORM}.c
 go/src/pkg/runtime/zsymtab_${GO_PLATFORM}.c
 go/src/pkg/runtime/zsys_${GO_PLATFORM}.s
+${PLIST.zsyscall}go/src/pkg/runtime/zsyscall_${LOWER_OPSYS}_${GO_PLATFORM}.c
 go/src/pkg/runtime/ztime_${GO_PLATFORM}.c
 go/src/pkg/runtime/zversion.go
 go/src/pkg/sort/example_interface_test.go
