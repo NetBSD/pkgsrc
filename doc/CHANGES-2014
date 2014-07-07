@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2525 2014/07/07 03:02:32 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2526 2014/07/07 11:44:33 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3344,3 +3344,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added lang/snobol version 1.3nb1 [jakllsch 2014-07-06]
 	Updated devel/p5-Test-Harness to 3.32 [wen 2014-07-07]
 	Updated devel/p5-ExtUtils-Config to 0.008 [wen 2014-07-07]
+	Updated devel/py-testtools to 0.9.35 [obache 2014-07-07]
