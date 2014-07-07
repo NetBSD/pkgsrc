@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2011/10/11 13:03:18 ryoon Exp $
-
-To use guiserver, you must have /usr/bin/java symlink.
-
-For example, install pkgsrc/lang/openjdk7 and create /usr/bin/java symlink.
-===========================================================================
