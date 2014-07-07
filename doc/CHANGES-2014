@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2523 2014/07/06 18:06:21 jakllsch Exp $
+$NetBSD: CHANGES-2014,v 1.2524 2014/07/07 02:55:29 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3342,3 +3342,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/p5-Text-CSV_XS to 1.09 [schmonz 2014-07-06]
 	Updated devel/p5-Test-Class to 0.45 [schmonz 2014-07-06]
 	Added lang/snobol version 1.3nb1 [jakllsch 2014-07-06]
+	Updated devel/p5-Test-Harness to 3.32 [wen 2014-07-07]
