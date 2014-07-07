@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/07/02 08:00:04 mbalmer Exp $
+# $NetBSD: Makefile,v 1.16 2014/07/07 12:54:22 obache Exp $
 
 DISTNAME=	zeromq-4.0.4
 CATEGORIES=	net devel
@@ -19,9 +19,9 @@ PKGCONFIG_OVERRIDE+=	src/libzmq.pc.in
 
 TEST_TARGET=	check
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/compiler.mk"
 
-.if !empty(PKGSRC_COMPILER:Mgcc)
+.if !empty(CC_VERSION:Mgcc-*)
 CXXFLAGS+=	-std=gnu++0x
 .endif
 
