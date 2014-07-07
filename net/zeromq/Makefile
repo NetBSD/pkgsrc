@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/07/07 12:56:26 obache Exp $
+# $NetBSD: Makefile,v 1.18 2014/07/07 13:21:27 joerg Exp $
 
 DISTNAME=	zeromq-4.0.4
 CATEGORIES=	net devel
@@ -23,6 +23,10 @@ TEST_TARGET=	check
 
 .if !empty(CC_VERSION:Mgcc-*)
 CXXFLAGS+=	-std=gnu++0x
+.endif
+
+.if !empty(CC_VERSION:Mclang-*)
+CXXFLAGS+=	-std=gnu++11
 .endif
 
 .include "../../security/libsodium/buildlink3.mk"
