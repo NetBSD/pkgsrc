@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2014/03/31 08:29:44 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2014/07/07 17:01:57 jperkin Exp $
 
 DISTNAME=		physfs-2.0.3
 CATEGORIES=		devel
@@ -14,11 +14,7 @@ USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 PTHREAD_AUTO_VARS=	yes
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ARGS+=	--disable-cdrom
-.endif
+CFLAGS.SunOS+=		-DPHYSFS_NO_CDROM_SUPPORT=1
 
 .include "../../mk/readline.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
