@@ -1,0 +1,3 @@
+The pageslts package is an extension of the lastpage package. It
+provides labels like LastPage (at the time of \AtEndDocument) as well as
+VeryLastPage (at the time of \AfterLastShipout).

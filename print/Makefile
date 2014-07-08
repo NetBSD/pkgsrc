@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.587 2014/06/17 13:17:25 wiz Exp $
+# $NetBSD: Makefile,v 1.588 2014/07/08 14:47:39 joerg Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -559,6 +559,7 @@ SUBDIR+=	tex-optional
 SUBDIR+=	tex-optional-doc
 SUBDIR+=	tex-oubraces
 SUBDIR+=	tex-oubraces-doc
+SUBDIR+=	tex-pageslts
 SUBDIR+=	tex-paralist
 SUBDIR+=	tex-paralist-doc
 SUBDIR+=	tex-parskip
