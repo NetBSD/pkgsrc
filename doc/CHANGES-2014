@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2532 2014/07/08 14:47:59 joerg Exp $
+$NetBSD: CHANGES-2014,v 1.2533 2014/07/08 14:57:16 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3352,3 +3352,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/aranym to 0.9.16 [ryoon 2014-07-08]
 	Updated www/bozohttpd to 20140708 [mrg 2014-07-08]
 	Added print/tex-pageslts version 1.2c [joerg 2014-07-08]
+	Updated textproc/tinyxml to 2.6.2nb2 [jperkin 2014-07-08]
