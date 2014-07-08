@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2529 2014/07/08 13:27:10 jperkin Exp $
+$NetBSD: CHANGES-2014,v 1.2530 2014/07/08 13:38:46 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3349,3 +3349,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/firefox to 30.0nb2 [ryoon 2014-07-08]
 	Updated www/seamonkey to 2.26.1nb1 [ryoon 2014-07-08]
 	Updated devel/gob2 to 2.0.20nb1 [jperkin 2014-07-08]
+	Updated emulators/aranym to 0.9.16 [ryoon 2014-07-08]
