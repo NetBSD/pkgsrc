@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2013/12/31 17:32:51 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2014/07/08 13:26:51 jperkin Exp $
 
 DISTNAME=	gob2-2.0.20
+PKGREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	http://ftp.5z.com/pub/gob/
 
@@ -9,7 +10,7 @@ HOMEPAGE=	http://www.5z.com/jirka/gob.html
 COMMENT=	GNOME object builder for glib2
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=		lex pkg-config
+USE_TOOLS+=		lex:run pkg-config
 GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
