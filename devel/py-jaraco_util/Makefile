@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/05/13 17:08:44 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2014/07/08 13:50:31 jperkin Exp $
 
 DISTNAME=	jaraco.util-10.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/./_/}
@@ -16,5 +16,12 @@ USE_LANGUAGES=	# none
 
 DEPENDS+=	${PYPKGPREFIX}-more-itertools>=2.2:../../devel/py-more-itertools
 
+REPLACE_PYTHON+=	jaraco/lang/python.py
+REPLACE_PYTHON+=	jaraco/util/filesystem.py
+
+pre-build:
+	${CHMOD} go-w ${WRKSRC}/jaraco.util.egg-info/*
+
+.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
