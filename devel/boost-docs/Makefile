@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2012/10/31 11:16:42 asau Exp $
+# $NetBSD: Makefile,v 1.12 2014/07/08 19:59:42 joerg Exp $
 
 BOOST_PACKAGE=		docs
 BOOST_COMMENT=		(documentation)
 BOOST_CONFIG=		no
+PKGREVISION=		1
 
 USE_TOOLS+=	pax
 
@@ -22,7 +23,7 @@ do-install:
 		-s':^libs/.*/test$$::' \
 		-s':^libs/.*/test/.*$$::' \
 		-s':^.*\.orig$$::' \
-		*.png *.css *.htm libs more ${DESTDIR}${DOCDIR}
+		*.png *.css *.htm *.html libs more ${DESTDIR}${DOCDIR}
 	${FIND} ${DESTDIR}${DOCDIR} \
 		-type f -print | ${XARGS} ${CHOWN} ${SHAREOWN}:${SHAREGRP}
 	${FIND} ${DESTDIR}${DOCDIR} \
