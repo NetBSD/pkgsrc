@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2528 2014/07/08 13:15:24 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.2529 2014/07/08 13:27:10 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3348,3 +3348,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/newlisp to 10.6.0 [ryoon 2014-07-07]
 	Updated www/firefox to 30.0nb2 [ryoon 2014-07-08]
 	Updated www/seamonkey to 2.26.1nb1 [ryoon 2014-07-08]
+	Updated devel/gob2 to 2.0.20nb1 [jperkin 2014-07-08]
