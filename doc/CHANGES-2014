@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2527 2014/07/07 14:25:51 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.2528 2014/07/08 13:15:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3346,3 +3346,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-ExtUtils-Config to 0.008 [wen 2014-07-07]
 	Updated devel/py-testtools to 0.9.35 [obache 2014-07-07]
 	Updated lang/newlisp to 10.6.0 [ryoon 2014-07-07]
+	Updated www/firefox to 30.0nb2 [ryoon 2014-07-08]
+	Updated www/seamonkey to 2.26.1nb1 [ryoon 2014-07-08]
