@@ -1,8 +1,8 @@
-$NetBSD: patch-build__files_scons_config_netbsd6-config.py,v 1.4 2014/04/07 12:21:25 ryoon Exp $
+$NetBSD: patch-build__files_scons_config_netbsd6-config.py,v 1.5 2014/07/09 20:01:08 ryoon Exp $
 
 * config file for NetBSD 6
 
---- build_files/scons/config/netbsd6-config.py.orig	2013-11-20 14:12:04.000000000 +0000
+--- build_files/scons/config/netbsd6-config.py.orig	2014-07-09 12:42:15.000000000 +0000
 +++ build_files/scons/config/netbsd6-config.py
 @@ -0,0 +1,227 @@
 +CC = 'gcc'
@@ -231,4 +231,4 @@ $NetBSD: patch-build__files_scons_config_netbsd6-config.py,v 1.4 2014/04/07 12:2
 +BF_INSTALLDIR='../install/netbsd6'
 +
 +#Link against pthread and libexecinfo
-+PLATFORM_LINKFLAGS = ['-pthread', @PYLDFLAGS@]
++PLATFORM_LINKFLAGS = ['-pthread', '-lexecinfo', '-Wl,-R/usr/pkg/lib',  '-Wl,-R/usr/X11R7/lib']
