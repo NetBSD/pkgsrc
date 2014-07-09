@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.106 2014/04/10 06:21:26 obache Exp $
+# $NetBSD: Makefile,v 1.107 2014/07/09 20:01:08 ryoon Exp $
 
-DISTNAME=	blender-2.70
-PKGREVISION=	2
+DISTNAME=	blender-2.71
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.blender.org/source/
 
@@ -10,10 +9,12 @@ HOMEPAGE=	http://www.blender.org/
 COMMENT=	Fully integrated 3D graphics creation suite
 LICENSE=	gnu-gpl-v2
 
+#WRKSRC=		${WRKDIR}/blender-2.71
+
 USE_TOOLS+=		gmake sed
 USE_LANGUAGES=		c c++
 
-PYTHON_VERSIONS_ACCEPTED=	33
+PYTHON_VERSIONS_ACCEPTED=	34 33
 
 BUILD_DEPENDS+=		scons-[0-9]*:../../devel/scons
 
@@ -44,7 +45,9 @@ SCONS_ARGS+=	WITH_BF_FFMPEG=False
 SCONS_ARGS+=	WITH_BF_3DMOUSE=False
 
 SCONS_ARGS+=	BF_PYTHON=${PREFIX}
+#SCONS_ARGS+=	BF_PYTHON_INC=${PREFIX}/include/python${PYVERSSUFFIX}
 SCONS_ARGS+=	BF_PYTHON_ABI_FLAGS=''
+SCONS_ARGS+=	BF_PYTHON_VERSION=${PYVERSSUFFIX}
 SCONS_ARGS+=	BF_SDL=${BUILDLINK_PREFIX.SDL}
 SCONS_ARGS+=	BF_OPENEXR=${BUILDLINK_PREFIX.openexr}
 SCONS_ARGS+=	BF_JPEG=${BUILDLINK_PREFIX.jpeg}
@@ -61,6 +64,8 @@ SCONS_ARGS+=	BF_PCRE=${BUILDLINK_PREFIX.pcre}
 #SCONS_ARGS+=	BF_FFMPEG_LIBPATH='${BUILDLINK_PREFIX.ffmpeg010}/lib/ffmpeg010'
 SCONS_ARGS+=	BF_FFTW3=${BUILDLINK_PREFIX.fftw}
 SCONS_ARGS+=	BF_INSTALLDIR=${DESTDIR}${PREFIX}/share/blender
+
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 # I cannot separate build and install...
 do-build:
