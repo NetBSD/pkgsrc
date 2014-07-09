@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2538 2014/07/09 20:00:32 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.2539 2014/07/09 20:01:26 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3359,3 +3359,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.394 [obache 2014-07-09]
 	Updated graphics/opencv to 2.4.9 [ryoon 2014-07-09]
 	Updated graphics/openimageio to 1.4.10 [ryoon 2014-07-09]
+	Updated graphics/blender to 2.71 [ryoon 2014-07-09]
