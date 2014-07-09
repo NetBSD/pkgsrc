@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.6 2014/07/09 18:32:18 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.7 2014/07/09 21:17:51 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q2 branch:
@@ -21,3 +21,17 @@ converters/ack: build fix
 Pullup ticket #4444 - requested by taca
 editors/emacs24: security patch
 editors/emacs24-nox11: security patch
+Pullup ticket #4446 - requested by taca
+www/contao33: installation fix
+Pullup ticket #4447 - requested by taca
+www/php-sugarcrm: security update
+Pullup ticket #4448 - requested by taca
+databases/ruby-activerecord32: security update
+devel/ruby-activemodel32: security update
+devel/ruby-activesupport32: security update
+devel/ruby-railties32: security update
+mail/ruby-actionmailer32: security update
+www/ruby-actionpack32: security update
+www/ruby-activeresource32: security update
+Pullup ticket #4449 - requested by obache
+multimedia/adobe-flash-plugin11: security update
