@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2014/06/03 06:52:45 wen Exp $
+# $NetBSD: Makefile,v 1.7.2.1 2014/07/09 20:31:45 tron Exp $
 #
 
-SCVER=		6.5.16
+SCVER=		6.5.17
 DISTNAME=	SugarCE-${SCVER}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/SugarCE/sugarcrm/}
 CATEGORIES=	www
