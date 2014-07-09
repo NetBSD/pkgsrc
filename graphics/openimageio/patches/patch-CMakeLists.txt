@@ -1,21 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2014/04/07 12:15:55 ryoon Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2014/07/09 20:00:01 ryoon Exp $
 
 * Enable in-tree build
 * Remove rpath handling
 
 --- CMakeLists.txt.orig	2014-04-03 06:08:57.000000000 +0000
 +++ CMakeLists.txt
-@@ -13,10 +13,6 @@ endif ()
- message (STATUS "Project source dir = ${PROJECT_SOURCE_DIR}")
- message (STATUS "Project build dir = ${CMAKE_BINARY_DIR}")
- 
--if ("${PROJECT_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
--    message (FATAL_ERROR "Not allowed to run in-source build!")
--endif ()
--
- if (NOT CMAKE_BUILD_TYPE)
-     set (CMAKE_BUILD_TYPE "Release")
- endif ()
 @@ -217,26 +213,6 @@ endif()
  
  set (INSTALL_DOCS ON CACHE BOOL "Install documentation")
