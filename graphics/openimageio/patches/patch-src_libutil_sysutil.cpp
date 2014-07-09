@@ -1,6 +1,6 @@
-$NetBSD: patch-src_libutil_sysutil.cpp,v 1.1 2014/04/07 12:15:55 ryoon Exp $
+$NetBSD: patch-src_libutil_sysutil.cpp,v 1.2 2014/07/09 20:00:01 ryoon Exp $
 
---- src/libutil/sysutil.cpp.orig	2014-04-03 06:08:57.000000000 +0000
+--- src/libutil/sysutil.cpp.orig	2014-06-21 06:21:09.000000000 +0000
 +++ src/libutil/sysutil.cpp
 @@ -70,6 +70,12 @@
  # include <sys/ioctl.h>
@@ -12,10 +12,10 @@ $NetBSD: patch-src_libutil_sysutil.cpp,v 1.1 2014/04/07 12:15:55 ryoon Exp $
 +# include <sys/sysctl.h>
 +#endif
 +
- #include "dassert.h"
+ #include "OpenImageIO/dassert.h"
+ #include "OpenImageIO/sysutil.h"
  
- #include "sysutil.h"
-@@ -109,6 +115,12 @@ Sysutil::memory_used (bool resident)
+@@ -108,6 +114,12 @@ Sysutil::memory_used (bool resident)
      return size;
  #endif
  
@@ -28,7 +28,7 @@ $NetBSD: patch-src_libutil_sysutil.cpp,v 1.1 2014/04/07 12:15:55 ryoon Exp $
  #elif defined(__APPLE__)
      // Inspired by:
      // http://miknight.blogspot.com/2005/11/resident-set-size-in-mac-os-x.html
-@@ -193,7 +205,12 @@ Sysutil::physical_memory ()
+@@ -192,7 +204,12 @@ Sysutil::physical_memory ()
      size_t length = sizeof(physical_memory);
      sysctl (mib, 2, &physical_memory, &length, NULL, 0);
      return physical_memory;
@@ -42,7 +42,7 @@ $NetBSD: patch-src_libutil_sysutil.cpp,v 1.1 2014/04/07 12:15:55 ryoon Exp $
  #else
      // No idea what platform this is
      ASSERT (0 && "Need to implement Sysutil::physical_memory on this platform");
-@@ -245,6 +262,10 @@ Sysutil::this_program_path ()
+@@ -244,6 +261,10 @@ Sysutil::this_program_path ()
      size_t cb = sizeof(filename);
      int r=1;
      sysctl(mib, 4, filename, &cb, NULL, 0);
@@ -53,7 +53,7 @@ $NetBSD: patch-src_libutil_sysutil.cpp,v 1.1 2014/04/07 12:15:55 ryoon Exp $
  #elif defined(__GNU__) || defined(__OpenBSD__)
      int r = 0;
  #else
-@@ -276,7 +297,7 @@ Sysutil::terminal_columns ()
+@@ -275,7 +296,7 @@ Sysutil::terminal_columns ()
  {
      int columns = 80;   // a decent guess, if we have nothing more to go on
  
