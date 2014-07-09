@@ -1,10 +1,10 @@
-$NetBSD: patch-extern_libmv_third__party_glog_src_config__netbsd.h,v 1.2 2013/01/02 02:22:08 ryoon Exp $
+$NetBSD: patch-extern_libmv_third__party_glog_src_config__netbsd.h,v 1.3 2014/07/09 20:01:08 ryoon Exp $
 
 * config file for NetBSD
 
---- extern/libmv/third_party/glog/src/config_netbsd.h.orig	2012-12-03 06:03:04.000000000 +0000
+--- extern/libmv/third_party/glog/src/config_netbsd.h.orig	2014-07-09 12:42:15.000000000 +0000
 +++ extern/libmv/third_party/glog/src/config_netbsd.h
-@@ -0,0 +1,171 @@
+@@ -0,0 +1,177 @@
 +/* src/config.h.  Generated from config.h.in by configure.  */
 +/* src/config.h.in.  Generated from configure.ac by autoheader.  */
 +
@@ -58,11 +58,17 @@ $NetBSD: patch-extern_libmv_third__party_glog_src_config__netbsd.h,v 1.2 2013/01
 +/* define if the compiler implements namespaces */
 +#define HAVE_NAMESPACES 1
 +
++/* Define if you have the 'pread' function */
++#define HAVE_PREAD 1
++
 +/* Define if you have POSIX threads libraries and header files. */
 +#define HAVE_PTHREAD 1
 +
 +/* Define to 1 if you have the <pwd.h> header file. */
 +#define HAVE_PWD_H 1
++
++/* Define if you have the 'pwrite' function */
++#define HAVE_PWRITE 1
 +
 +/* define if the compiler implements pthread_rwlock_* */
 +#define HAVE_RWLOCK 1
