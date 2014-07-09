@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2013/02/17 06:07:46 dholland Exp $
+# $NetBSD: Makefile,v 1.6 2014/07/09 01:50:44 taca Exp $
 
 PKGNAME=	${DISTNAME:S/emacs/emacs24/:S/-/-nox11-/}
+PKGREVISION=	1
 
 CONFLICTS+=	emacs24-[0-9]*
 
