@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2013/02/17 04:59:42 dholland Exp $
+$NetBSD: patch-aa,v 1.2 2014/07/09 03:18:44 taca Exp $
+
+* Add support for DragonFly.
+* Honor GAMEOWN.
 
 --- work/emacs-23.2/configure.in~	2010-05-08 12:09:12.000000000 +0900
 +++ ./configure.in	2010-05-12 20:23:07.000000000 +0900
