@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2535 2014/07/09 03:20:47 taca Exp $
+$NetBSD: CHANGES-2014,v 1.2536 2014/07/09 04:57:37 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3356,3 +3356,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated editors/emacs24-nox11 to 24.3nb1 [taca 2014-07-09]
 	Updated editors/emacs23 to 23.4nb27 [taca 2014-07-09]
 	Updated editors/emacs23-nox11 to 23.4nb3 [taca 2014-07-09]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.394 [obache 2014-07-09]
