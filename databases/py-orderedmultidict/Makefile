@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/07/05 23:22:16 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2014/07/09 00:09:30 obache Exp $
 
 DISTNAME=	orderedmultidict-0.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,4 +13,7 @@ LICENSE=	unlicense
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+.if ${PYPKGPREFIX} == "py26"
+DEPENDS+=	${PYPKGPREFIX}-ordereddict-[0-9]*:../../devel/py-ordereddict
+.endif
 .include "../../mk/bsd.pkg.mk"
