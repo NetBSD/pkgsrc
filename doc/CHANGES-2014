@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2534 2014/07/09 01:51:17 taca Exp $
+$NetBSD: CHANGES-2014,v 1.2535 2014/07/09 03:20:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3354,3 +3354,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Added print/tex-pageslts version 1.2c [joerg 2014-07-08]
 	Updated textproc/tinyxml to 2.6.2nb2 [jperkin 2014-07-08]
 	Updated editors/emacs24-nox11 to 24.3nb1 [taca 2014-07-09]
+	Updated editors/emacs23 to 23.4nb27 [taca 2014-07-09]
+	Updated editors/emacs23-nox11 to 23.4nb3 [taca 2014-07-09]
