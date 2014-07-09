@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/05/31 07:28:57 obache Exp $
+# $NetBSD: Makefile,v 1.12 2014/07/09 14:31:32 asau Exp $
 #
 
 .include "Makefile.common"
@@ -23,7 +23,7 @@ TEST_TARGET=		check
 INSTALLATION_DIRS+=	bin include lib
 
 post-install:
-	cd ${WRKSRC}/doc;${PAX} -rwpp . -s /.*~$$//g ${DESTDIR}${PREFIX}/share/doc/qdbm
+	cd ${WRKSRC}/doc;${PAX} -rwpp -s /.*~$$//g . ${DESTDIR}${PREFIX}/share/doc/qdbm
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/lzo/buildlink3.mk"
