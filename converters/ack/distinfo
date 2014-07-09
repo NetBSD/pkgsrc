@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2012/12/26 21:21:38 dholland Exp $
+$NetBSD: distinfo,v 1.3.14.1 2014/07/09 18:30:49 tron Exp $
 
 SHA1 (ack139.tar.gz) = d9ae53238176d46c303a48e736c5bafa9743250c
 RMD160 (ack139.tar.gz) = 859af65bb4e4d3e1bc42840b23d571510f095d18
@@ -10,7 +10,7 @@ SHA1 (patch-codetojis.c) = 2c9959113c77bc98340c3ad7596bc7d85bfe66b5
 SHA1 (patch-codetosjis.c) = 1cf4a11d584a1a4412002d112cd743500275bf99
 SHA1 (patch-codetozen.c) = 9612cf1811489bc251140d611000af551f88ee1a
 SHA1 (patch-euctocode.c) = 75486f92a700fa684602d933dcd337f19ab28763
-SHA1 (patch-fileio.c) = 29485831fff5686bb30c9dc62eefed42727999f3
+SHA1 (patch-fileio.c) = d0b097ccf936c1a44a9ec9cc43a51d6dc9997cc9
 SHA1 (patch-kanjicheck.c) = c37f252c11df5960f9018d21eda9d12bc272c8ef
 SHA1 (patch-kanjicode.h) = f44671c45d2ed7f0a173db84e6c1f10ad1c13f82
 SHA1 (patch-kmain.c) = d0e0d31598febf75c633cf29989279e1aa492de8
