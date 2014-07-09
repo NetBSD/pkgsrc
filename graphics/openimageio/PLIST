@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/04/07 12:15:55 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/07/09 20:00:01 ryoon Exp $
 bin/iconvert
 bin/idiff
 bin/igrep
@@ -6,7 +6,9 @@ bin/iinfo
 bin/iv
 bin/maketx
 bin/oiiotool
+include/OpenImageIO/SHA1.h
 include/OpenImageIO/argparse.h
+include/OpenImageIO/array_view.h
 include/OpenImageIO/color.h
 include/OpenImageIO/dassert.h
 include/OpenImageIO/errorhandler.h
@@ -15,11 +17,13 @@ include/OpenImageIO/filesystem.h
 include/OpenImageIO/filter.h
 include/OpenImageIO/fmath.h
 include/OpenImageIO/hash.h
+include/OpenImageIO/image_view.h
 include/OpenImageIO/imagebuf.h
 include/OpenImageIO/imagebufalgo.h
 include/OpenImageIO/imagebufalgo_util.h
 include/OpenImageIO/imagecache.h
 include/OpenImageIO/imageio.h
+include/OpenImageIO/oiioversion.h
 include/OpenImageIO/optparser.h
 include/OpenImageIO/osdep.h
 include/OpenImageIO/paramlist.h
@@ -28,7 +32,9 @@ include/OpenImageIO/pugiconfig.hpp
 include/OpenImageIO/pugixml.cpp
 include/OpenImageIO/pugixml.hpp
 include/OpenImageIO/refcnt.h
+include/OpenImageIO/strided_ptr.h
 include/OpenImageIO/string_ref.h
+include/OpenImageIO/string_view.h
 include/OpenImageIO/strutil.h
 include/OpenImageIO/sysutil.h
 include/OpenImageIO/texture.h
@@ -36,9 +42,14 @@ include/OpenImageIO/thread.h
 include/OpenImageIO/timer.h
 include/OpenImageIO/tinyformat.h
 include/OpenImageIO/typedesc.h
+include/OpenImageIO/unittest.h
+include/OpenImageIO/unordered_map_concurrent.h
 include/OpenImageIO/ustring.h
 include/OpenImageIO/varyingref.h
 include/OpenImageIO/version.h
 lib/libOpenImageIO.so
-lib/libOpenImageIO.so.1.3
+lib/libOpenImageIO.so.1.4
 lib/libOpenImageIO.so.${PKGVERSION}
+lib/libOpenImageIO_Util.so
+lib/libOpenImageIO_Util.so.1.4
+lib/libOpenImageIO_Util.so.${PKGVERSION}
