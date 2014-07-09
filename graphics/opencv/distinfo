@@ -1,14 +1,12 @@
-$NetBSD: distinfo,v 1.25 2014/05/27 09:57:21 joerg Exp $
+$NetBSD: distinfo,v 1.26 2014/07/09 19:57:36 ryoon Exp $
 
-SHA1 (opencv-2.4.6.1.tar.gz) = e015bd67218844b38daf3cea8aab505b592a66c0
-RMD160 (opencv-2.4.6.1.tar.gz) = 805193fc2e129bc4183c48057ca305774dfa5ed4
-Size (opencv-2.4.6.1.tar.gz) = 80762052 bytes
+SHA1 (opencv-2.4.9.zip) = 4f5166e2bd22bd6167cb56dd04f2c6ed68148b2c
+RMD160 (opencv-2.4.9.zip) = 1b0b80ecb50270fa7e4b1dea6f075982b5d15d81
+Size (opencv-2.4.9.zip) = 91684751 bytes
 SHA1 (patch-modules_contrib_src_inputoutput.cpp) = dc3413182c94b670823d509ab38f21ce36d4f432
 SHA1 (patch-modules_contrib_src_spinimages.cpp) = b3e465700059616be991d597230bc8dc42f15be1
 SHA1 (patch-modules_core_include_opencv2_core_types_c.h) = c056068c01c417dc262f21c00324da7f86c0cd8e
 SHA1 (patch-modules_core_src_system.cpp) = 3b7ac545585a430d28c7077f360357079f127580
 SHA1 (patch-modules_flann_include_opencv2_flann_defines.h) = ab848e67c4e03219670598ac2d21071a617a5c33
 SHA1 (patch-modules_legacy_src_calibfilter.cpp) = a388e646cd0b09af1b9ad4844f1097855808f316
-SHA1 (patch-modules_legacy_src_dpstereo.cpp) = da9955fb6cc81054427b69efb97a58160b64f262
-SHA1 (patch-modules_ts_include_opencv2_ts_ts__perf.hpp) = ecaba97683c0f389aa911d405d8a9f37a58be541
 SHA1 (patch-modules_ts_src_ts.cpp) = 61e4ab59f2ca57f75212743bf869616dfc9e5f13
