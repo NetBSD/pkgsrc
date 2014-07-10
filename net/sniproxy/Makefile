@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/06/13 00:13:13 wiedi Exp $
+# $NetBSD: Makefile,v 1.2 2014/07/10 00:12:57 wiedi Exp $
 
 DISTNAME=	0.3.4
 PKGNAME=	sniproxy-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	2-clause-bsd
 WRKSRC=		${WRKDIR}/sniproxy-${DISTNAME}
 
 USE_LANGUAGES=	c99
-USE_TOOLS+=	autoconf aclocal automake
+USE_TOOLS+=	autoconf aclocal automake pkg-config
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 
