@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.41 2012/04/06 11:17:53 markd Exp $
+$NetBSD: distinfo,v 1.42 2014/07/10 17:00:21 jperkin Exp $
 
 SHA1 (kdemultimedia-3.5.10.tar.bz2) = c85337b959882ec9f3bb51f5e1ee4ec74a988518
 RMD160 (kdemultimedia-3.5.10.tar.bz2) = b03b5363f29e1e75dcb3f13fddb7a01d17e337b5
@@ -12,7 +12,7 @@ SHA1 (patch-af) = 0336b3def99c649a635e6f5eb0cc962944e890b2
 SHA1 (patch-ag) = c9d1d9d3cf8f18ed9bc8c2054dc641af961d8fb1
 SHA1 (patch-ah) = 78c85113db99f386145cf701db4723d8534342f6
 SHA1 (patch-ai) = 8f724e5e96996913906dfd2034f577fee66d0db2
-SHA1 (patch-aj) = f142ee5df76460d5e8c32b6b8279c4ad5ec19919
+SHA1 (patch-aj) = 753f39af0f4350ed5b2b9f2da9e9b650d763f754
 SHA1 (patch-am) = d08ebf77d69d8c9527728eccaa430b28664a74dd
 SHA1 (patch-an) = 79b26912aeeacb881664cd1557417bd99b96451e
 SHA1 (patch-ap) = 66368931f92a83e03b879e98440756620e65ddeb
@@ -20,4 +20,7 @@ SHA1 (patch-aq) = 2c804af0ff952e50e909002a4b4c53422b1ba59c
 SHA1 (patch-ar) = 820defab2ffe3868b237b2264bace82c6aa298ad
 SHA1 (patch-cs) = 6b00976b20b3d6af611f75921e20f88086061ce5
 SHA1 (patch-cu) = 778e1d00bf485c55ddec7cebb47406f87b9e4ec8
+SHA1 (patch-mpeglib_lib_util_audio_audioIO__SunOS.cpp) = 35d27ef4a2c562c7b75dc3097b3ed9888f5f2d58
+SHA1 (patch-noatun_modules_voiceprint_voiceprint.cpp) = 6f1e67aac69ce7ad91c462579db844ccda220515
+SHA1 (patch-noatun_modules_winskin_vis_winSkinFFT__impl.cpp) = d400bb285d0dab571443f3bb898f923ac23bcbb3
 SHA1 (patch-xine_artsplugin_xinePlayObject_impl.cpp) = f0cdaf7193d94a3262aed25254f4b4f150c620be
