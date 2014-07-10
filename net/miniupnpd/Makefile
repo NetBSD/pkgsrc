@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2014/02/10 11:45:52 adam Exp $
+# $NetBSD: Makefile,v 1.12 2014/07/10 13:44:22 adam Exp $
 
-DISTNAME=	miniupnpd-1.8.20140203
+DISTNAME=	miniupnpd-1.8.20140523
 CATEGORIES=	net
 MASTER_SITES=	http://miniupnp.free.fr/files/download.php?file=
 
@@ -21,5 +21,11 @@ INSTALL_MAKE_FLAGS+=	INSTALLETCDIR=${EGDIR}
 INSTALL_MAKE_FLAGS+=	INSTALLMANDIR=${PREFIX}/${PKGMANDIR}/man1
 
 RCD_SCRIPTS=	miniupnpd
+
+SUBST_CLASSES+=		fwname
+SUBST_STAGE.fwname=	pre-configure
+SUBST_MESSAGE.fwname=	Setting desired firewall type.
+SUBST_FILES.fwname=	genconfig.sh
+SUBST_VARS.fwname=	FWNAME
 
 .include "../../mk/bsd.pkg.mk"
