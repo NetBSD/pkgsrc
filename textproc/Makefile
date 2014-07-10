@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.781 2014/07/04 00:24:24 rodent Exp $
+# $NetBSD: Makefile,v 1.782 2014/07/10 16:00:21 jnemeth Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -738,6 +738,7 @@ SUBDIR+=	ruby-xpath
 SUBDIR+=	ruby-xslt
 SUBDIR+=	ruby-yajl
 SUBDIR+=	ruby-yamcha
+SUBDIR+=	ruby-yard
 SUBDIR+=	sablotron
 SUBDIR+=	sary
 SUBDIR+=	saxon
