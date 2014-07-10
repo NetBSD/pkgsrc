@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.589 2014/07/08 15:21:48 joerg Exp $
+# $NetBSD: Makefile,v 1.590 2014/07/10 15:38:17 jnemeth Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -722,9 +722,9 @@ SUBDIR+=	tex-umlaute
 SUBDIR+=	tex-umlaute-doc
 SUBDIR+=	tex-underscore
 SUBDIR+=	tex-underscore-doc
+SUBDIR+=	tex-undolabl
 SUBDIR+=	tex-units
 SUBDIR+=	tex-units-doc
-SUBDIR+=	tex-undolabl
 SUBDIR+=	tex-upquote
 SUBDIR+=	tex-upquote-doc
 SUBDIR+=	tex-url
