@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2014/07/09 03:18:44 taca Exp $
+$NetBSD: distinfo,v 1.5 2014/07/10 02:25:10 taca Exp $
 
 SHA1 (emacs-23.4.tar.gz) = 0a78466fff52d1f43c0db0ea66651a0b13b7e473
 RMD160 (emacs-23.4.tar.gz) = 5fb7e4cd4270a524b8723ad86a145a0e47336bf7
@@ -12,7 +12,7 @@ SHA1 (patch-bf) = 9ff58581e7b9c865397729169fadd3baecc4a1e3
 SHA1 (patch-lisp_emacs-lisp_find-gc.el) = f6531e8c44789392527792e819ab3b23e53c4e60
 SHA1 (patch-lisp_files.el) = e10c6949029ca7933ea632693843a911b7e010c2
 SHA1 (patch-lisp_gnus_gnus-fun.el) = a8ec0ffa065a40b3b5666aba567679b72e8c2d75
-SHA1 (patch-lisp_net_tramp.el) = f268a3dbf95ed5bec9162c4413a6aee53bee8d2b
+SHA1 (patch-lisp_net_tramp.el) = c47e8594d47ad6d4e39b895fb6d720d8fc426e0d
 SHA1 (patch-src_config.in) = a4d1a718b7d560c5e55beaeb1a2eb214cad3b104
 SHA1 (patch-src_image.c) = 2712e1df3d5eac9e919163d47a2a331ac0bd0b9a
 SHA1 (patch-src_m_amdx86-64.h) = fd4c791c7d9213381bc73294ef998297923d952b

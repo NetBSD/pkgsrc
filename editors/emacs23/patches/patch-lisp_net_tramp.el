@@ -37,7 +37,7 @@ Fix for CVE-2014-3424.
 +Perl or Shell implementation for this functionality.  This
 +program will be transferred to the remote host, and it is
 +available as shell function with the same name.  A \"%t\" format
-+specifier in the variable value denotes a temporary file.
++specifier in the variable value denotes a temporary file.")
  
  (defun tramp-find-inline-encoding (vec)
    "Find an inline transfer encoding that works.
