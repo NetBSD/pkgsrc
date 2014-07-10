@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13434 2014/07/10 13:54:25 adam Exp $
+$NetBSD: TODO,v 1.13435 2014/07/10 15:33:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -419,7 +419,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bzr-2.6.0
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
-	o calibre-1.41
+	o calibre-1.43
 	o calligra-2.4.3 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -739,6 +739,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lftp-4.5.2
 	o lgeneral-1.2.3
 	o libAppleWM-1.4.1
+	o libXi-1.7.3
 	o libabw-0.1.0
 	o libarchive-3.1.2
 	o libburn-1.3.8
@@ -780,7 +781,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libusb-1.0.19
 	o libusbx-1.0.18 [but actually obsolete, switch to libusb]
 	o libv4l-0.8.5
-	o libvdpau-0.7
+	o libvdpau-0.8
 	o libvisio-0.1.0
 	o libxdg-basedir-1.2.0
 	o libxklavier-5.3
@@ -814,7 +815,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mgetty+sendfax-1.1.35
 	o midori-0.5.8
 	o milkytracker-0.90.85
-	o mined-2014.24
+	o mined-2014.24.2
 	o minicom-2.7
 	o minivmac-3.2.3
 	o miredo-1.2.4
@@ -909,6 +910,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pinfo-0.6.10
 	o pingus-0.7.4
 	o pioneers-15.1
+	o pixman-0.32.6
 	o pks-0.9.6
 	o planner-0.14.6
 	o ploticus-examples-230
@@ -946,6 +948,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-biggles-1.6.6
 	o py-bottle-0.11.6
 	o py-cassa-1.11.0
+	o py-cffi-0.8.6
 	o py-cherrypy-3.5.0
 	o py-creole-1.1.1
 	o py-cython-0.20.2
@@ -980,11 +983,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-reportlab-3.0
 	o py-rope-0.9.4
 	o py-scgi-1.14
-	o py-setuptools-5.3
+	o py-setuptools-5.4
 	o py-simplejson-3.5.3
 	o py-simpletal-5.1
 	o py-sip-4.15.1 [don't update until pyqt3 and KDE problems are fixed -- still there in 4.15.1]
 	o py-sip-4.16.1
+	o py-six-1.7.3
 	o py-smb-1.1.8
 	o py-sphinx-theme-cloud-1.6
 	o py-suds-0.4.1
@@ -1132,6 +1136,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tomboy-1.10.2
 	o top-3.8beta1
 	o totem-3.4.1
+	o transmission-2.84
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
 	o turba-4.1.4
@@ -1176,7 +1181,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o webmin-1.690
 	o websvn-2.3.2
 	o windowlab-1.40
-	o wine-devel-1.7.20
+	o wine-devel-1.7.21
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wml-2.0.11
@@ -1188,7 +1193,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wxGTK-3.0
 	o wxRemind-101
 	o wyrd-1.4.6
-	o x264-devel-20140628
+	o x264-devel-20140705
 	o xanalyser-1.30
 	o xbindkeys-1.8.6
 	o xbindkeys-tk-1.8.0
