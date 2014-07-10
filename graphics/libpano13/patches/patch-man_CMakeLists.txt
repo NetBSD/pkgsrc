@@ -1,0 +1,12 @@
+$NetBSD: patch-man_CMakeLists.txt,v 1.1 2014/07/10 13:41:48 adam Exp $
+
+Fix man path.
+
+--- man/CMakeLists.txt.orig	2014-07-10 11:21:45.000000000 +0000
++++ man/CMakeLists.txt
+@@ -25,4 +25,4 @@ endforeach(_m)
+ 
+ add_custom_target(man ALL DEPENDS ${_manuals})
+ 
+-install(FILES ${_manuals} DESTINATION "share/man/man1" COMPONENT doc)
++install(FILES ${_manuals} DESTINATION "man/man1" COMPONENT doc)
