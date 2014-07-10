@@ -1,4 +1,6 @@
-$NetBSD: patch-src_config.in,v 1.1 2013/02/17 04:59:43 dholland Exp $
+$NetBSD: patch-src_config.in,v 1.1.12.1 2014/07/10 07:39:12 tron Exp $
+
+Add support for DragonFly.
 
 --- src/config.in.orig	2011-11-26 03:20:20.000000000 +0000
 +++ src/config.in
