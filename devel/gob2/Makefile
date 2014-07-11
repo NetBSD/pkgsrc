@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2014/07/08 13:26:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.26 2014/07/11 09:57:23 jperkin Exp $
 
 DISTNAME=	gob2-2.0.20
 PKGREVISION=	1
@@ -15,7 +15,7 @@ GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} != "SunOS"
+.if ${OPSYS} != "SunOS" && ${OPSYS} != "Linux"
 LIBS+=	-lfl
 .endif
 
