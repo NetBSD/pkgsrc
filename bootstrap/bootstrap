@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.208 2014/04/17 18:29:01 asau Exp $
+# $NetBSD: bootstrap,v 1.209 2014/07/11 17:29:21 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -520,6 +520,7 @@ Darwin)
 	set_opsys=no
 	machine_arch=`uname -p`
 	CC=${CC:-"gcc -isystem /usr/include"}; export CC
+	check_compiler=yes
 	osrev=`uname -r`
 	macosx_version=`echo $osrev | awk -F . '{ print "10."$1-4; }'`
 	case "$macosx_version" in
