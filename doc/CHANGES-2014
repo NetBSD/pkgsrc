@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2542 2014/07/11 10:10:24 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2543 2014/07/11 19:16:40 gson Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3364,3 +3364,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/miniupnpd to 1.8.20140523 [adam 2014-07-10]
 	Updated textproc/pod2mdoc to 0.0.12 [wiz 2014-07-11]
 	Updated net/transmission to 2.84 [wiz 2014-07-11]
+	Updated emulators/qemu to 2.0.0nb4 [gson 2014-07-11]
