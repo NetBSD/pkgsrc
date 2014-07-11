@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2012/08/12 13:15:12 marino Exp $
+$NetBSD: distinfo,v 1.3 2014/07/11 10:58:43 jperkin Exp $
 
 SHA1 (grub-2.00.tar.gz) = fcb39b621680caf34071abcb9ec913d5da458554
 RMD160 (grub-2.00.tar.gz) = 7a4d4fc2a22dfe169c03ec54b9c9a078679aa506
@@ -13,4 +13,5 @@ SHA1 (patch-grub-core_loader_i386_pc_plan9.c) = 07c909c02210ef59647185cd9b7f43b3
 SHA1 (patch-grub-core_script_yylex.l) = 1645d167b90d1862b2d9990dfe7c357778d9a952
 SHA1 (patch-stpcpy-1.diff) = d31f8d607900fdde950d3828279d5b3b09812a39
 SHA1 (patch-stpcpy-2-gen.diff) = 8b2d08cfe798386eec7d70a3946e7a9430e75254
+SHA1 (patch-util_grub-mkfont.c) = c93b8497672ea038f65af7d8cf0db021fd023761
 SHA1 (patch-util_grub.d_10__netbsd.in) = c7ad93fc60594233d71962e625320091d8cc67e5
