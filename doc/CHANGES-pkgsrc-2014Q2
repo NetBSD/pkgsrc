@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.8 2014/07/10 07:39:32 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.9 2014/07/11 14:08:31 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q2 branch:
@@ -38,3 +38,5 @@ multimedia/adobe-flash-plugin11: security update
 Pullup ticket #4445 - requested by taca
 editors/emacs23: security patch
 editors/emacs23-nox11: security patch
+Pullup ticket #4450 - requested by wiz
+net/transmission: security update
