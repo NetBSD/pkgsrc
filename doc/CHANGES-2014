@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2540 2014/07/10 13:54:25 adam Exp $
+$NetBSD: CHANGES-2014,v 1.2541 2014/07/11 09:52:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3362,3 +3362,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/blender to 2.71 [ryoon 2014-07-09]
 	Updated graphics/libpano13 to 2.9.19nb2 [adam 2014-07-10]
 	Updated net/miniupnpd to 1.8.20140523 [adam 2014-07-10]
+	Updated textproc/pod2mdoc to 0.0.12 [wiz 2014-07-11]
