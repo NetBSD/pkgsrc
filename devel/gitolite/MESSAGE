@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2013/01/31 11:12:51 ryoon Exp $
+$NetBSD: MESSAGE,v 1.4 2014/07/12 04:56:09 ryoon Exp $
 
 To use gitolite, you will need to perform the following steps.
 
@@ -25,9 +25,10 @@ To use gitolite, you will need to perform the following steps.
 
 3. Setup gitolite.
 
-   On server,
+   On server, run
 	$ gitolite setup -pk git.pub
 
+   You can get gitolite-admin.git and testing.git repositories.
    And edit config file.
 
 4. Setup ~/.ssh/config on client.
