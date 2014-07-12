@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2545 2014/07/12 07:04:21 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2546 2014/07/12 14:34:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3366,4 +3366,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/transmission to 2.84 [wiz 2014-07-11]
 	Updated emulators/qemu to 2.0.0nb4 [gson 2014-07-11]
 	Updated devel/gitolite to 3.6.1 [ryoon 2014-07-12]
-	Updated devel/p5-Moose to 2.1210 [wen 2014-07-2]
+	Updated devel/p5-Moose to 2.1210 [wen 2014-07-12]
+	Updated devel/meld-devel to 3.11.2 [wiz 2014-07-12]
