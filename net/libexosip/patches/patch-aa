@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.1 2013/07/16 02:12:26 rodent Exp $
+$NetBSD: patch-aa,v 1.2 2014/07/12 16:48:27 schwarz Exp $
 
 Defines INADDR_NONE, which is needed on Solaris.
 
---- src/eXutils.c.orig	2012-11-26 10:04:37.000000000 +0000
-+++ src/eXutils.c
-@@ -542,6 +542,10 @@ _eXosip_guess_ip_for_via (struct eXosip_
+--- src/eXutils.c.orig	2014-01-06 19:30:21.000000000 +0100
++++ src/eXutils.c	2014-07-12 18:15:15.000000000 +0200
+@@ -509,6 +509,10 @@
  
  #include <stdio.h>
  
