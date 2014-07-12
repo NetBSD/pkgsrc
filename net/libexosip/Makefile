@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/02/12 23:18:22 tron Exp $
+# $NetBSD: Makefile,v 1.3 2014/07/12 16:48:26 schwarz Exp $
 
-DISTNAME=	libeXosip2-4.0.0
-PKGREVISION=	1
+DISTNAME=	libeXosip2-4.1.0
 CATEGORIES=	devel net
 MASTER_SITES=	http://download.savannah.nongnu.org/releases/exosip/
 
@@ -18,6 +17,7 @@ USE_FEATURES+=	getopt_long
 .include "options.mk"
 
 LIBS.SunOS+=	-lsocket -lnsl
+LIBS.Darwin+=	-framework CoreServices -framework Security
 
 .include "../../net/libcares/buildlink3.mk"
 .include "../../devel/libosip/buildlink3.mk"
