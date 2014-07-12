@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2013/07/14 14:55:16 rodent Exp $
+$NetBSD: patch-aa,v 1.7 2014/07/12 16:48:26 schwarz Exp $
 
---- src/osip2/port_sema.c.orig	2012-11-16 21:24:10.000000000 +0000
-+++ src/osip2/port_sema.c
-@@ -302,7 +302,6 @@ osip_sem_trywait (struct osip_sem *_sem)
+--- src/osip2/port_sema.c.orig	2013-12-18 19:36:46.000000000 +0100
++++ src/osip2/port_sema.c	2014-07-12 18:20:40.000000000 +0200
+@@ -305,7 +305,6 @@
  struct osip_sem *
  osip_sem_init (unsigned int value)
  {
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.6 2013/07/14 14:55:16 rodent Exp $
    int i;
    osip_sem_t *sem = (osip_sem_t *) osip_malloc (sizeof (osip_sem_t));
  
-@@ -315,8 +314,7 @@ osip_sem_init (unsigned int value)
+@@ -318,8 +317,7 @@
      osip_free (sem);
      return NULL;
    }
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.6 2013/07/14 14:55:16 rodent Exp $
    if (i != 0) {
      perror ("semctl error");
      osip_free (sem);
-@@ -328,13 +326,11 @@ osip_sem_init (unsigned int value)
+@@ -331,13 +329,11 @@
  int
  osip_sem_destroy (struct osip_sem *_sem)
  {

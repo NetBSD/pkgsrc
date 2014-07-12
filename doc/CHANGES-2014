@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2551 2014/07/12 15:48:14 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2552 2014/07/12 16:48:27 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3373,3 +3373,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/pixman to 0.32.6 [wiz 2014-07-12]
 	Updated security/netpgpverify to 20140712 [agc 2014-07-12]
 	Updated misc/calibre to 1.44.0 [wiz 2014-07-12]
+	Updated devel/libosip to 4.1.0 [schwarz 2014-07-12]
+	Updated net/libexosip to 4.1.0 [schwarz 2014-07-12]
