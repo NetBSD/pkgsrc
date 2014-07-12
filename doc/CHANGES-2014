@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2549 2014/07/12 14:51:13 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2550 2014/07/12 15:46:53 agc Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3371,3 +3371,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/libXi to 1.7.3 [wiz 2014-07-12]
 	Updated x11/xterm to 308 [wiz 2014-07-12]
 	Updated x11/pixman to 0.32.6 [wiz 2014-07-12]
+	Updated security/netpgpverify to 20140712 [agc 2014-07-12]
