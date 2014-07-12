@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13436 2014/07/11 10:10:24 wiz Exp $
+$NetBSD: TODO,v 1.13437 2014/07/12 04:56:50 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -588,7 +588,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gfract-0.33
 	o ghc-7.8.1
 	o git-2.0
-	o gitolite-3.5.3.1
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
