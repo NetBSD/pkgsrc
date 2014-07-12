@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/05/09 07:37:09 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/07/12 12:22:22 obache Exp $
 
 .include "../../inputmethod/ibus/Makefile.common"
 
@@ -37,6 +37,7 @@ INSTALL_DIRS=	bindings ibus
 CONFIGURE_ARGS+=		--disable-dconf
 CONFIGURE_ARGS+=		--disable-gconf
 CONFIGURE_ARGS+=		--enable-python-library
+CONFIGURE_ENV+=			PYTHON2=${PYTHONBIN}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	26 33 34 # py-gtk2
 
