@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.80 2014/06/14 06:03:50 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2014/07/12 15:48:01 wiz Exp $
 
-DISTNAME=	calibre-1.40.0
+DISTNAME=	calibre-1.44.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=calibre/}
 EXTRACT_SUFX=	.tar.xz
@@ -77,6 +77,8 @@ SUBST_FILES.path=	${FIX_PYTHON_PATHS}
 
 # These ones are for replacing python[0-9*] with PYTHONBIN
 REPLACE_PYTHON+=	recipes/animal_politico.recipe
+REPLACE_PYTHON+=	recipes/respekt_magazine.recipe
+REPLACE_PYTHON+=	recipes/respekt_web.recipe
 REPLACE_PYTHON+=	recipes/kompiutierra.recipe
 REPLACE_PYTHON+=	recipes/trouw.recipe
 REPLACE_PYTHON+=	src/calibre/ebooks/markdown/extensions/*.py

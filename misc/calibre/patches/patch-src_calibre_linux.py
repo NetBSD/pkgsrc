@@ -1,4 +1,4 @@
-$NetBSD: patch-src_calibre_linux.py,v 1.3 2014/04/16 17:22:30 wiz Exp $
+$NetBSD: patch-src_calibre_linux.py,v 1.4 2014/07/12 15:48:02 wiz Exp $
 
 Lifted from ArchLinux, saves mime and desktop files on disk
 instead of trying to add them directly.
@@ -7,9 +7,9 @@ See https://www.archlinux.org/packages/community/x86_64/calibre/ ->
 https://projects.archlinux.org/svntogit/community.git/tree/trunk?h=packages/calibre ->
 https://projects.archlinux.org/svntogit/community.git/plain/trunk/desktop_integration.patch?h=packages/calibre
 
---- src/calibre/linux.py.orig	2014-04-04 02:33:40.000000000 +0000
+--- src/calibre/linux.py.orig	2014-07-11 02:19:43.000000000 +0000
 +++ src/calibre/linux.py
-@@ -495,18 +495,6 @@ class PostInstall:
+@@ -644,18 +644,6 @@ class PostInstall:
              self.setup_completion()
          if islinux or isbsd:
              self.setup_desktop_integration()
@@ -28,16 +28,7 @@ https://projects.archlinux.org/svntogit/community.git/plain/trunk/desktop_integr
  
          if warn is None and self.warnings:
              self.info('\n\nThere were %d warnings\n'%len(self.warnings))
-@@ -564,7 +552,7 @@ class PostInstall:
-                 if isnetbsd:
-                     f = os.path.join(self.opts.staging_root, 'share/bash_completion.d/calibre')
-                 else:
--                    f = os.path.join(self.opts.staging_etc, 'bash_completion.d/calibre')
-+                    f = os.path.join(self.opts.staging_root, 'usr/share/bash_completion.d/calibre')
-             if not os.path.exists(os.path.dirname(f)):
-                 os.makedirs(os.path.dirname(f))
-             bash_comp_dest, zsh_comp_dest = f, None
-@@ -713,56 +701,39 @@ class PostInstall:
+@@ -729,56 +717,39 @@ class PostInstall:
  
              with TemporaryDirectory() as tdir, CurrentDir(tdir), \
                                  PreserveMIMEDefaults():

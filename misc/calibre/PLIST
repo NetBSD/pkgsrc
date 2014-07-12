@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2014/06/14 06:03:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2014/07/12 15:48:01 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -623,6 +623,7 @@ lib/calibre/calibre/gui2/actions/delete.py
 lib/calibre/calibre/gui2/actions/device.py
 lib/calibre/calibre/gui2/actions/edit_collections.py
 lib/calibre/calibre/gui2/actions/edit_metadata.py
+lib/calibre/calibre/gui2/actions/embed.py
 lib/calibre/calibre/gui2/actions/fetch_news.py
 lib/calibre/calibre/gui2/actions/help.py
 lib/calibre/calibre/gui2/actions/mark_books.py
@@ -1025,6 +1026,8 @@ lib/calibre/calibre/gui2/tweak_book/job.py
 lib/calibre/calibre/gui2/tweak_book/live_css.py
 lib/calibre/calibre/gui2/tweak_book/main.py
 lib/calibre/calibre/gui2/tweak_book/manage_fonts.py
+lib/calibre/calibre/gui2/tweak_book/plugin.py
+lib/calibre/calibre/gui2/tweak_book/polish.py
 lib/calibre/calibre/gui2/tweak_book/preferences.py
 lib/calibre/calibre/gui2/tweak_book/preview.py
 lib/calibre/calibre/gui2/tweak_book/save.py
@@ -1112,6 +1115,7 @@ lib/calibre/calibre/plugins/calibre_style.so
 lib/calibre/calibre/plugins/chm_extra.so
 lib/calibre/calibre/plugins/chmlib.so
 lib/calibre/calibre/plugins/freetype.so
+lib/calibre/calibre/plugins/html.so
 lib/calibre/calibre/plugins/hunspell.so
 lib/calibre/calibre/plugins/icu.so
 lib/calibre/calibre/plugins/lzx.so
@@ -1335,7 +1339,7 @@ share/applications/calibre-ebook-edit.desktop
 share/applications/calibre-ebook-viewer.desktop
 share/applications/calibre-gui.desktop
 share/applications/calibre-lrfviewer.desktop
-share/bash_completion.d/calibre
+share/bash-completion/completions/calibre
 share/calibre/builtin_recipes.xml
 share/calibre/builtin_recipes.zip
 share/calibre/calibre-ebook-root-CA.crt
@@ -1645,7 +1649,9 @@ share/calibre/localization/pykakasi/kanwadict2.pickle
 share/calibre/localization/stats.pickle
 share/calibre/metadata_sqlite.sql
 share/calibre/mime.types
-share/calibre/quick_start.epub
+share/calibre/quick_start/deu.epub
+share/calibre/quick_start/eng.epub
+share/calibre/quick_start/fra.epub
 share/calibre/recipes/10minutos.recipe
 share/calibre/recipes/180.recipe
 share/calibre/recipes/20_minutos.recipe
@@ -1923,6 +1929,7 @@ share/calibre/recipes/dallas.recipe
 share/calibre/recipes/danas.recipe
 share/calibre/recipes/dani.recipe
 share/calibre/recipes/dark_horizons.recipe
+share/calibre/recipes/dark_reading.recipe
 share/calibre/recipes/darknet.recipe
 share/calibre/recipes/datasport.recipe
 share/calibre/recipes/daum_net.recipe
@@ -2084,6 +2091,7 @@ share/calibre/recipes/endgadget_ja.recipe
 share/calibre/recipes/entrepeneur.recipe
 share/calibre/recipes/epicurious.recipe
 share/calibre/recipes/epl_talk.recipe
+share/calibre/recipes/epw.recipe
 share/calibre/recipes/equipped.recipe
 share/calibre/recipes/escrevinhador.recipe
 share/calibre/recipes/esenja.recipe
