@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2554 2014/07/13 02:06:38 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2555 2014/07/13 03:39:16 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3377,3 +3377,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/libexosip to 4.1.0 [schwarz 2014-07-12]
 	Updated devel/p5-Date-Manip to 6.46 [wen 2014-07-13]
 	Updated devel/p5-Moo to 1.005000 [wen 2014-07-13]
+	Updated sysutils/file to 5.19 [ryoon 2014-07-13]
