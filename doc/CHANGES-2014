@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2582 2014/07/13 20:46:23 cheusov Exp $
+$NetBSD: CHANGES-2014,v 1.2583 2014/07/13 21:17:18 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3405,3 +3405,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/runawk to 1.5.1 [cheusov 2014-07-13]
 	Updated parallel/paexec to 1.0.0 [cheusov 2014-07-13]
 	Updated pkgtools/pkg_summary-utils to 0.65.0 [cheusov 2014-07-13]
+	Updated math/hs-nats to 0.2 [szptvlfn 2014-07-13]
