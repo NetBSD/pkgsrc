@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2578 2014/07/13 15:25:34 taca Exp $
+$NetBSD: CHANGES-2014,v 1.2579 2014/07/13 20:42:47 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3401,3 +3401,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/micro_httpd to 2010710 [schwarz 2014-07-13]
 	Updated lang/php55 to 5.5.14nb1 [taca 2014-07-13]
 	Updated lang/php54 to 5.4.30nb1 [taca 2014-07-13]
+	Updated devel/mk-configure to 0.27.0 [cheusov 2014-07-13]
