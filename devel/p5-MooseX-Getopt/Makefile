@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2014/05/29 23:36:06 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2014/07/13 10:00:26 wen Exp $
 #
 
-DISTNAME=	MooseX-Getopt-0.61
+DISTNAME=	MooseX-Getopt-0.63
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/E/ET/ETHER/}
 
@@ -27,7 +26,7 @@ BUILD_DEPENDS+=	p5-Test-Pod>=1.41:../../devel/p5-Test-Pod
 BUILD_DEPENDS+=	p5-Test-Pod-Coverage>=1.08:../../devel/p5-Test-Pod-Coverage
 BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 BUILD_DEPENDS+=	p5-Test-Trap-[0-9]*:../../devel/p5-Test-Trap
-BUILD_DEPENDS+=	p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
+BUILD_DEPENDS+=	p5-Test-Warnings>=0.009:../../devel/p5-Test-Warnings
 # recommended modules ...
 #BUILD_DEPENDS+=	p5-CPAN-Meta-[0-9]*:../../devel/p5-CPAN-Meta
 #BUILD_DEPENDS+=	p5-CPAN-Meta-Requirements>=2.120900:../../devel/p5-CPAN-Meta-Requirements
