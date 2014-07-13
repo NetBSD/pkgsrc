@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.35 2013/02/16 11:24:56 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2014/07/13 09:17:04 mbalmer Exp $
 #
 
-DISTNAME=		xaos-3.5
-PKGREVISION=		1
+DISTNAME=		xaos-3.6
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xaos/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://xaos.sourceforge.net/
+HOMEPAGE=		http://matek.hu/xaos/
 COMMENT=		Zoomable fractal rendering doodad
 LICENSE=		gnu-gpl-v2
 
