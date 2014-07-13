@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2579 2014/07/13 20:42:47 cheusov Exp $
+$NetBSD: CHANGES-2014,v 1.2580 2014/07/13 20:43:55 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3402,3 +3402,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/php55 to 5.5.14nb1 [taca 2014-07-13]
 	Updated lang/php54 to 5.4.30nb1 [taca 2014-07-13]
 	Updated devel/mk-configure to 0.27.0 [cheusov 2014-07-13]
+	Updated lang/runawk to 1.5.1 [cheusov 2014-07-13]
