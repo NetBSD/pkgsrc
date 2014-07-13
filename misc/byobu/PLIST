@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/01/01 07:15:58 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/07/13 07:13:21 ryoon Exp $
 bin/byobu
 bin/byobu-config
 bin/byobu-ctrl-a
@@ -28,6 +28,9 @@ bin/byobu-status-detail
 bin/byobu-tmux
 bin/byobu-ugraph
 bin/byobu-ulevel
+bin/col1
+bin/ctail
+bin/wifi-status
 lib/byobu/apport
 lib/byobu/arch
 lib/byobu/battery
@@ -44,6 +47,7 @@ lib/byobu/ec2_cost
 lib/byobu/entropy
 lib/byobu/fan_speed
 lib/byobu/hostname
+lib/byobu/include/colors
 lib/byobu/include/common
 lib/byobu/include/config.py
 lib/byobu/include/constants
@@ -56,6 +60,8 @@ lib/byobu/include/notify_osd
 lib/byobu/include/select-session.py
 lib/byobu/include/shutil
 lib/byobu/include/tmux-detach-all-but-current-client
+lib/byobu/include/tmux-send-command-to-all-panes
+lib/byobu/include/tmux-send-command-to-all-windows
 lib/byobu/include/toggle-utf8
 lib/byobu/ip_address
 lib/byobu/load_average
@@ -110,6 +116,9 @@ man/man1/byobu-tmux.1
 man/man1/byobu-ugraph.1
 man/man1/byobu-ulevel.1
 man/man1/byobu.1
+man/man1/col1.1
+man/man1/ctail.1
+man/man1/wifi-status.1
 share/applications/byobu.desktop
 share/byobu/keybindings/common
 share/byobu/keybindings/f-keys
@@ -126,6 +135,7 @@ share/byobu/profiles/NONE
 share/byobu/profiles/bashrc
 share/byobu/profiles/byoburc
 share/byobu/profiles/common
+share/byobu/profiles/dircolors
 share/byobu/profiles/screenrc
 share/byobu/profiles/tmux
 share/byobu/profiles/tmuxrc
