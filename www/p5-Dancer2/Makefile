@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2014/05/29 23:38:04 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/07/13 04:37:30 wen Exp $
 
-DISTNAME=	Dancer2-0.140001
+DISTNAME=	Dancer2-0.143000
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/X/XS/XSAWYERX/}
 
@@ -30,6 +29,7 @@ DEPENDS+=	p5-HTTP-Message>=0:../../www/p5-HTTP-Message
 DEPENDS+=	p5-HTTP-Server-Simple-PSGI>=0:../../www/p5-HTTP-Server-Simple-PSGI
 DEPENDS+=	p5-JSON>=0:../../converters/p5-JSON
 DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64>=0}:../../converters/p5-MIME-Base64
+DEPENDS+=	p5-MIME-Types>=0:../../mail/p5-MIME-Types
 DEPENDS+=	p5-Module-Pluggable>=0:../../devel/p5-Module-Pluggable
 DEPENDS+=	p5-Moo>=0.009014:../../devel/p5-Moo
 DEPENDS+=	p5-MooX-Types-MooseLike>=0.16:../../devel/p5-MooX-Types-MooseLike
