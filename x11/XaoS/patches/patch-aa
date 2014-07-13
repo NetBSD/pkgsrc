@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.4 2012/07/30 01:19:16 dholland Exp $
+$NetBSD: patch-aa,v 1.5 2014/07/13 09:17:04 mbalmer Exp $
 
 Rip out the 16 bit i387 specific code.
 
---- src/engine/fractal.c.orig	2009-07-17 23:50:31.000000000 +0000
+--- src/engine/fractal.c.orig	2013-11-01 07:54:21.000000000 +0000
 +++ src/engine/fractal.c
-@@ -49,13 +49,6 @@
+@@ -47,13 +47,6 @@
  #include <complex.h>
  #include <plane.h>
  #include "../include/timers.h"
@@ -18,7 +18,7 @@ Rip out the 16 bit i387 specific code.
  #ifdef __alpha__
  #ifdef __linux__
  #include <asm/fpu.h>
-@@ -357,15 +350,6 @@ fractal_context *make_fractalc(CONST int
+@@ -355,15 +348,6 @@ fractal_context *make_fractalc(const int
  {
      fractal_context *new_ctxt;
  
