@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2013/07/27 08:10:13 wen Exp $
+$NetBSD: distinfo,v 1.4 2014/07/13 09:54:21 wen Exp $
 
-SHA1 (MooseX-Daemonize-0.18.tar.gz) = ca48c9874452d905293c238910f1b193af0e960c
-RMD160 (MooseX-Daemonize-0.18.tar.gz) = b8c22204357bf006e1b1fa1e167a3d11367255c5
-Size (MooseX-Daemonize-0.18.tar.gz) = 30820 bytes
+SHA1 (MooseX-Daemonize-0.19.tar.gz) = 2ebbba3e4bee77f97affc3cf19a23fdd18baac8e
+RMD160 (MooseX-Daemonize-0.19.tar.gz) = e46846d1cfaecb2019b6424517d6933805bb92b9
+Size (MooseX-Daemonize-0.19.tar.gz) = 40543 bytes
+SHA1 (patch-Makefile.PL) = f45acf0a20a688443f421a819552ff45b49fe82b
