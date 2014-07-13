@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2567 2014/07/13 11:06:52 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2568 2014/07/13 11:16:49 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3390,3 +3390,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-MooseX-MethodAttributes to 0.29 [wen 2014-07-13]
 	Updated devel/p5-MooseX-MultiInitArg to 0.02 [wen 2014-07-13]
 	Updated devel/p5-MooseX-NonMoose to 0.26 [wen 2014-07-13]
+	Updated devel/ruby-test-unit-notify to 1.0.2 [obache 2014-07-13]
