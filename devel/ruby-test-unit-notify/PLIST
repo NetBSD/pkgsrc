@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2013/10/01 10:40:27 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/07/13 11:16:02 obache Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/README.textile
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/data/icons/kinotan/default.png
 ${GEM_LIBDIR}/data/icons/kinotan/error.png
@@ -11,9 +11,10 @@ ${GEM_LIBDIR}/data/icons/kinotan/omission.png
 ${GEM_LIBDIR}/data/icons/kinotan/pass.png
 ${GEM_LIBDIR}/data/icons/kinotan/pending.png
 ${GEM_LIBDIR}/doc/text/lgpl.txt
-${GEM_LIBDIR}/doc/text/news.textile
+${GEM_LIBDIR}/doc/text/news.md
 ${GEM_LIBDIR}/lib/test-unit-notify.rb
 ${GEM_LIBDIR}/lib/test/unit/notify.rb
+${GEM_LIBDIR}/lib/test/unit/notify/version.rb
 ${GEM_LIBDIR}/screenshot/notify-on-gnome.png
 ${GEM_LIBDIR}/screenshot/notify-on-mac-os-x.png
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
