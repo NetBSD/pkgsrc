@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/09/16 19:22:18 sno Exp $
+$NetBSD: distinfo,v 1.2 2014/07/13 10:25:54 wen Exp $
 
-SHA1 (MooseX-MultiInitArg-0.01.tar.gz) = 261aaebf3bf65db9c6f3da65d41e878e18730939
-RMD160 (MooseX-MultiInitArg-0.01.tar.gz) = 3fcb6f7a03fa5e71ca78f12436c9a12f7ad345a3
-Size (MooseX-MultiInitArg-0.01.tar.gz) = 2980 bytes
+SHA1 (MooseX-MultiInitArg-0.02.tar.gz) = 566a6a27ff3a7cfa902608fb3022af279a5c7b56
+RMD160 (MooseX-MultiInitArg-0.02.tar.gz) = d89ccf81cab5dfa40a864f97ec0dfecb6e49a0e6
+Size (MooseX-MultiInitArg-0.02.tar.gz) = 10306 bytes
