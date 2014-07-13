@@ -209,6 +209,7 @@ gdal			Use the GDAL library.
 gdb6-tui		Build the tui application.
 gdbm			Use the GNU gdbm database library.
 gdk-pixbuf		Use gdk-pixbuf as imaging library.
+gdk-pixbuf2		Use gdk-pixbuf2 as imaging library.
 geoip			Enable IP-to-country-lookup using the GeoIP C library.
 ggi			Enable GGI support.
 ghostscript		Enable GhostScript support.
