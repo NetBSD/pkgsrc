@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2013/08/26 16:20:03 cheusov Exp $
+# $NetBSD: Makefile,v 1.15 2014/07/13 16:25:28 cheusov Exp $
 #
 
-DISTNAME=	paexec-0.19.1
+DISTNAME=	paexec-1.0.0
 CATEGORIES=	parallel sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=paexec/} \
 		http://mova.org/~cheusov/pub/paexec/
