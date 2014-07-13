@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2561 2014/07/13 09:21:10 mbalmer Exp $
+$NetBSD: CHANGES-2014,v 1.2562 2014/07/13 09:55:54 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3384,3 +3384,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/phpmyadmin to 4.2.5 [tron 2014-07-13]
 	Updated devel/p5-Sub-Exporter-ForMethods to 0.100051 [wen 2014-07-13]
 	Updated x11/XaoS to 3.6 [mbalmer 2014-07-13]
+	Updated devel/p5-MooseX-Daemonize to 0.19 [wen 2014-07-13]
