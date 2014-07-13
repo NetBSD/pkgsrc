@@ -1,4 +1,4 @@
-# $NetBSD: mk-c.mk,v 1.3 2014/07/13 15:23:41 cheusov Exp $
+# $NetBSD: mk-c.mk,v 1.4 2014/07/13 15:52:36 cheusov Exp $
 
 TOOL_DEPENDS+=	${BUILDLINK_API_DEPENDS.mk-c}:${BUILDLINK_PKGSRCDIR.mk-c}
 
@@ -18,7 +18,7 @@ BUILDLINK_TREE+=	mk-c
 .if !defined(MK_CONFIGURE_BUILDLINK3_MK)
 MK_CONFIGURE_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.mk-c+=	mk-configure>=0.26.0
+BUILDLINK_API_DEPENDS.mk-c+=	mk-configure>=0.27.0
 BUILDLINK_PKGSRCDIR.mk-c=	../../devel/mk-configure
 BUILDLINK_DEPMETHOD.mk-c=	build
 BUILDLINK_INCDIRS.mk-c=		include share/mk-configure/features
