@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2014/05/29 23:36:06 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/07/13 09:54:21 wen Exp $
 #
 
-DISTNAME=	MooseX-Daemonize-0.18
+DISTNAME=	MooseX-Daemonize-0.19
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 
@@ -15,6 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Moose>=0.33:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-Getopt>=0.07:../../devel/p5-MooseX-Getopt
 DEPENDS+=	p5-MooseX-Types-Path-Class-[0-9]*:../../devel/p5-MooseX-Types-Path-Class
+DEPENDS+=	p5-Sub-Exporter-ForMethods>=0:../../devel/p5-Sub-Exporter-ForMethods
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/MooseX/Daemonize/.packlist
