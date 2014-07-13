@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2573 2014/07/13 12:48:50 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2574 2014/07/13 13:34:13 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3396,3 +3396,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated math/R-zoo to 1.7.11 [wen 2014-07-13]
 	Updated math/p5-Statistics-Descriptive to 3.0607 [wen 2014-07-13]
 	Updated math/R-statmod to 1.4.20 [wen 2014-07-13]
+	Updated math/R-splancs to 2.01.34 [wen 2014-07-13]
