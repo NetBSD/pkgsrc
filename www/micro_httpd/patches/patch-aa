@@ -1,16 +1,24 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/01/09 09:44:55 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2014/07/13 14:49:14 schwarz Exp $
 
---- Makefile.orig	1999-09-17 09:17:18.000000000 +0200
-+++ Makefile
-@@ -1,11 +1,5 @@
+--- Makefile.orig	2014-07-13 16:31:48.000000000 +0200
++++ Makefile	2014-07-13 16:33:59.000000000 +0200
+@@ -1,17 +1,13 @@
  BINDIR =	/usr/local/sbin
  MANDIR =	/usr/local/man/man8
--CC =		gcc
--CFLAGS =	-O
--#CFLAGS =	-g
+-CC =		cc
+-CFLAGS =	-O -ansi -pedantic -Wall -Wno-long-long -Wmissing-prototypes -Wstrict-prototypes
 -#SYSVLIBS =	-lnsl -lsocket
--LDFLAGS =	-s ${SYSVLIBS}
--#LDFLAGS =	-g ${SYSVLIBS}
+-LDFLAGS =	-s $(SYSVLIBS)
  
  all:		micro_httpd
  
+ micro_httpd:	micro_httpd.o
+-	$(CC) micro_httpd.o $(LDFLAGS) -o micro_httpd
++	$(CC) micro_httpd.o $(LDFLAGS) $(LIBS) -o micro_httpd
+ 
+ micro_httpd.o:	micro_httpd.c
+-	$(CC) $(CFLAGS) -c micro_httpd.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c micro_httpd.c
+ 
+ install:	all
+ 	rm -f $(BINDIR)/micro_httpd
