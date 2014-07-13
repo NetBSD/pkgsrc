@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2556 2014/07/13 04:38:27 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2557 2014/07/13 04:45:07 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3379,3 +3379,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Moo to 1.005000 [wen 2014-07-13]
 	Updated sysutils/file to 5.19 [ryoon 2014-07-13]
 	Updated www/p5-Dancer2 to 0.143000 [wen 2014-07-13]
+	Updated www/p5-Mojolicious to 5.13 [wen 2014-07-13]
