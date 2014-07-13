@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/07/05 15:35:34 sno Exp $
+$NetBSD: distinfo,v 1.2 2014/07/13 08:04:23 wen Exp $
 
-SHA1 (Sub-Exporter-ForMethods-0.100050.tar.gz) = 82fc3eb643cfd6a843f30595e62630598768ee01
-RMD160 (Sub-Exporter-ForMethods-0.100050.tar.gz) = 67bded74e9bf036457da6c648e76ab1f6d958ccf
-Size (Sub-Exporter-ForMethods-0.100050.tar.gz) = 9886 bytes
+SHA1 (Sub-Exporter-ForMethods-0.100051.tar.gz) = 9f647253bb62b9a12b4d961fcbc25ffb1c9ca78e
+RMD160 (Sub-Exporter-ForMethods-0.100051.tar.gz) = 7f278df2053648c85b005a22fdf30147ce0b2554
+Size (Sub-Exporter-ForMethods-0.100051.tar.gz) = 13686 bytes
