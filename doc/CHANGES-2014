@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2571 2014/07/13 12:07:09 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2572 2014/07/13 12:42:59 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3394,3 +3394,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-MooseX-Object-Pluggable to 0.0013 [wen 2014-07-13]
 	Updated devel/p5-MooseX-OneArgNew to 0.004 [wen 2014-07-13]
 	Updated math/R-zoo to 1.7.11 [wen 2014-07-13]
+	Updated math/p5-Statistics-Descriptive to 3.0607 [wen 2014-07-13]
