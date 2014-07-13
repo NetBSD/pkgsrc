@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2013/08/26 16:20:03 cheusov Exp $
+$NetBSD: distinfo,v 1.8 2014/07/13 16:25:29 cheusov Exp $
 
-SHA1 (paexec-0.19.1.tar.gz) = af903d2be89a2f564d96830ec9c9d0895b59a562
-RMD160 (paexec-0.19.1.tar.gz) = 0cba593838a66d77622be422677dacfd0a646dd1
-Size (paexec-0.19.1.tar.gz) = 147668 bytes
+SHA1 (paexec-1.0.0.tar.gz) = 8f3416ef5bc312bfbeac5027125aa9fa69621ba1
+RMD160 (paexec-1.0.0.tar.gz) = b25c83ab32e5b795726453edac0ab056f4162334
+Size (paexec-1.0.0.tar.gz) = 141483 bytes
