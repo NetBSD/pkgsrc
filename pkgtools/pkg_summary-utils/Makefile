@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2014/01/14 01:09:20 cheusov Exp $
+# $NetBSD: Makefile,v 1.31 2014/07/13 16:45:56 cheusov Exp $
 
-DISTNAME=	pkg_summary-utils-0.63.0
+DISTNAME=	pkg_summary-utils-0.65.0
 CATEGORIES=	pkgtools
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/cheusov/psu/ \
 		http://www.mova.org/~cheusov/pub/pkg_summary-utils/
