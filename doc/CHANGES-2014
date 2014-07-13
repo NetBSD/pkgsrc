@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2575 2014/07/13 13:41:08 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2576 2014/07/13 14:49:14 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3398,3 +3398,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated math/R-statmod to 1.4.20 [wen 2014-07-13]
 	Updated math/R-splancs to 2.01.34 [wen 2014-07-13]
 	Updated math/R-sp to 1.0.15 [wen 2014-07-13]
+	Updated www/micro_httpd to 2010710 [schwarz 2014-07-13]
