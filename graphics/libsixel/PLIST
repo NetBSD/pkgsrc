@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2014/07/13 10:10:56 obache Exp $
+bin/img2sixel
+bin/sixel2png
+include/sixel.h
+lib/libsixel.la
+lib/pkgconfig/libsixel.pc
+man/man1/img2sixel.1
+man/man1/sixel2png.1
+man/man5/sixel.5
+share/bash-completion/completions/img2sixel
+share/zsh/site-functions/_img2sixel
