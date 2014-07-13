@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/10/01 10:40:27 obache Exp $
+# $NetBSD: Makefile,v 1.2 2014/07/13 11:16:02 obache Exp $
 
-DISTNAME=	test-unit-notify-1.0.1
+DISTNAME=	test-unit-notify-1.0.2
 CATEGORIES=	devel
 
 MAINTAINER=	obache@NetBSD.org
