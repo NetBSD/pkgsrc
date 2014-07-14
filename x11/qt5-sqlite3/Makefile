@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/04/23 07:05:32 adam Exp $
+# $NetBSD: Makefile,v 1.7 2014/07/14 10:41:13 jperkin Exp $
 
 PKGNAME=	qt5-sqlite3-${QTVERSION}
 COMMENT=	Qt5 SQLite3 plugin
@@ -13,6 +13,8 @@ MAKE_ENV+=		QTDIR=${QTDIR}
 
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 INSTALLATION_DIRS+=	lib/pkgconfig qt5/plugins/sqldrivers
+
+CFLAGS.SunOS+=	-D__EXTENSIONS__	# posix_fallocate()
 
 post-configure:
 	cd ${WRKSRC}/${BUILD_DIRS} && \
