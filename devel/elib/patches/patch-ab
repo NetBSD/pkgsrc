@@ -1,8 +1,10 @@
-$NetBSD: patch-ab,v 1.1 2003/05/04 21:42:54 seb Exp $
+$NetBSD: patch-ab,v 1.2 2014/07/14 10:51:33 jperkin Exp $
 
---- elib.texi.orig	2003-05-04 20:53:26.000000000 +0000
+Fix for texinfo 5.x
+
+--- elib.texi.orig	1995-12-11 00:50:55.000000000 +0000
 +++ elib.texi
-@@ -27,6 +27,11 @@
+@@ -27,15 +27,20 @@
  @ifinfo
  Copyright @copyright{} 1991, 1992 Free Software Foundation
  @end ifinfo
@@ -14,3 +16,14 @@ $NetBSD: patch-ab,v 1.1 2003/05/04 21:42:54 seb Exp $
       
  @comment The titlepage section does not appear in the Info file.
  @titlepage
+ @sp 4
+ @comment The title is printed in a large font.
+ @center @titlefont{User's Guide}
+-@sp
++@sp 1
+ @center @titlefont{to}
+-@sp
++@sp 1
+ @center @titlefont{Elib - The Emacs Lisp Library}
+ @sp 2
+ @center version 1.0
