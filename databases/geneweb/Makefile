@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2013/11/01 11:30:21 jaapb Exp $
+# $NetBSD: Makefile,v 1.38 2014/07/14 16:47:46 jperkin Exp $
 #
 
 DISTNAME=	geneweb-5.01
@@ -82,7 +82,7 @@ do-install:
 		${TOUCH} ${DESTDIR}${PREFIX}/share/geneweb/gwtp_tmp/gwtp.log
 		${CHMOD} 600 ${DESTDIR}${PREFIX}/share/geneweb/gwtp_tmp/passwd
 		${CHMOD} 600 ${DESTDIR}${PREFIX}/share/geneweb/gwtp_tmp/gwtp.log
-		${CHOWN} -R root.${ROOT_GROUP} ${DESTDIR}${PREFIX}/share/geneweb
+		${CHOWN} -R root:${ROOT_GROUP} ${DESTDIR}${PREFIX}/share/geneweb
 
 .include "../../lang/camlp5/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
