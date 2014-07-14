@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.PL,v 1.1 2014/01/10 15:40:28 jperkin Exp $
+$NetBSD: patch-Makefile.PL,v 1.2 2014/07/14 11:59:02 jperkin Exp $
 
 Do not override CCFLAGS and LIBS.
 
@@ -15,3 +15,12 @@ Do not override CCFLAGS and LIBS.
  }
  
  for my $arg (@ARGV) {
+@@ -530,7 +530,7 @@ sub have_functions {
+     my @funcs = ();
+     print "detecting available functions... ";
+ 
+-    my @paths = DynaLoader::dl_findfile(qw(-lpcap));
++    my @paths = DynaLoader::dl_findfile(qw(-L@PCAP_LIBDIR@ -lpcap));
+     my $libref = DynaLoader::dl_load_file($paths[0]);
+ 
+     for my $func (@_) {
