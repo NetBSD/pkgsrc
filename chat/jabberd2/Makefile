@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2014/05/29 23:35:18 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2014/07/14 14:41:04 jperkin Exp $
 
 DISTNAME=	jabberd-2.3.2
 PKGREVISION=	2
@@ -26,6 +26,8 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 # XXX force linking against pthread, so some modules do not fail to dlopen()
 LDFLAGS+=	${PTHREAD_LDFLAGS}
 LIBS+=		${PTHREAD_LIBS}
+
+CFLAGS.SunOS+=		-D__EXTENSIONS__	# sockaddr_storage
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch
