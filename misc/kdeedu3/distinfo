@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.43 2013/01/15 15:27:19 joerg Exp $
+$NetBSD: distinfo,v 1.44 2014/07/14 09:35:47 jperkin Exp $
 
 SHA1 (kdeedu-3.5.10.tar.bz2) = c43f7bcd9cb7af7c77a78bc0bd7f51c0e572f589
 RMD160 (kdeedu-3.5.10.tar.bz2) = 312d0384fbf243d580b0d3d90e3e21b46a117d0d
@@ -10,10 +10,16 @@ SHA1 (patch-ad) = f936f907fb1c283a5470498c4c78027804b8d13f
 SHA1 (patch-ae) = 643cc5c94c96d8cc5d0b601e8210998ff7fb3ab1
 SHA1 (patch-af) = 75798ce6bc4edf3563fbdebc21b9a04127732e4b
 SHA1 (patch-kalzium_src_spectrumviewimpl.cpp) = f2ee83534c7ee477e92227d2f3eee9f582ce7722
+SHA1 (patch-kalzium_src_spectrumwidget.cpp) = b168a5adcb2eb4677e4d45f319bfe61ff4d37250
 SHA1 (patch-kbruch_src_fractionbasewidget.cpp) = caf54b0d8bd03b6494e55bee3d4c9c49262f08c7
+SHA1 (patch-kbruch_src_mainqtwidget.cpp) = d312d5ffb9a32ab35cdb01d60f80889e647b265d
 SHA1 (patch-kbruch_src_ratiowidget.cpp) = a2c4fca8e12cd4c5e5a08267e2966091e0f4b814
 SHA1 (patch-kbruch_src_resultwidget.cpp) = b005f0bb7a8ffd58cabf2ea153ec28dd4cbf9643
+SHA1 (patch-kbruch_src_taskview.cpp) = 3bd61c8ba28ce35e1b4c174459efbe545b2531ae
 SHA1 (patch-kbruch_src_taskwidget.cpp) = e31c5cfd937c4df4b7a519ee5edff28fb318587f
 SHA1 (patch-kiten_dict.h) = 7b6b27dd9935ef3262eb1defc9d84c0884ae6b94
 SHA1 (patch-kiten_xjdxgen.c) = 6c01e2a7d53833e1f38ea85b6626b8460f729a6e
+SHA1 (patch-kmplot_kmplot_View.cpp) = 979a7d76afbd7a0839b3ac28f203a008201a0579
+SHA1 (patch-kstars_kstars_fitshistogram.cpp) = 922c674cae2c81e3034eb0d935101860457b50f8
+SHA1 (patch-kstars_kstars_fitsviewer.cpp) = 57b4f4238c78287a788da20661de69f6e123687a
 SHA1 (patch-kstars_kstars_skyobject.cpp) = e0fbe76e6d485c651b5dddb8ef09bc8069d306b4
