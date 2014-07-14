@@ -1,4 +1,4 @@
-$NetBSD: README.OpenServer5,v 1.1 2014/03/14 21:54:25 ryoon Exp $
+$NetBSD: README.OpenServer5,v 1.2 2014/07/14 13:54:24 ryoon Exp $
 
 XXX You should change your /bin/sh to shells/pdksh under OpenServer 5.0.7/3.2!!
 
@@ -45,7 +45,7 @@ and put the following line to your mk.conf.
 
 	TOOLS_PLATFORM.rm?=/a/pkg/bin/grm
 
-How to build gcc-4.2.4 for SCO OpenServer 5.0.7/.3.2
+How to build gcc-4.2.4 for SCO OpenServer 5.0.7/3.2
 ====================================================
 To follow these steps, you must have SCO OpenServer 5 Development System.
 
