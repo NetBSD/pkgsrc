@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2584 2014/07/14 11:56:25 roy Exp $
+$NetBSD: CHANGES-2014,v 1.2585 2014/07/14 14:10:44 roy Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3407,3 +3407,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated pkgtools/pkg_summary-utils to 0.65.0 [cheusov 2014-07-13]
 	Updated math/hs-nats to 0.2 [szptvlfn 2014-07-13]
 	Updated net/dhcpcd to 6.4.1 [roy 2014-07-14]
+	Updated net/dhcpcd to 6.4.2 [roy 2014-07-14]
