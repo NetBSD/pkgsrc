@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/31 11:17:12 asau Exp $
+# $NetBSD: Makefile,v 1.18 2014/07/14 19:20:46 jperkin Exp $
 #
 
 DISTNAME=		ETM-1.09
@@ -15,7 +15,7 @@ MAKE_JOBS_SAFE=		no
 WRKSRC=			${WRKDIR}/etm
 INSTALLATION_DIRS=	include lib
 
-USE_TOOLS+=		nroff
+USE_TOOLS+=		groff
 
 post-patch:
 	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.bak
@@ -26,7 +26,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/libetm.a ${DESTDIR}${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/etm.h ${DESTDIR}${PREFIX}/include
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/libetm
-	${NROFF} -ms ${WRKSRC}/etm.ms \
+	nroff -ms ${WRKSRC}/etm.ms \
 		>${DESTDIR}${PREFIX}/share/doc/libetm/etm.txt
 
 .include "../../mk/bsd.pkg.mk"
