@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2008/08/24 20:07:42 he Exp $
+$NetBSD: patch-aa,v 1.2 2014/07/14 11:59:02 jperkin Exp $
+
+Handle *BSD.
 
 --- t/03-openlive.t.orig	2007-12-22 20:46:39.000000000 +0100
 +++ t/03-openlive.t
