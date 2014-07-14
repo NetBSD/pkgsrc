@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.39 2013/09/08 16:35:24 joerg Exp $
+$NetBSD: distinfo,v 1.40 2014/07/14 09:15:08 jperkin Exp $
 
 SHA1 (kdeaddons-3.5.10.tar.bz2) = 5342e2f0a21e9028d9aaa2ee253f89f615ee57de
 RMD160 (kdeaddons-3.5.10.tar.bz2) = eada207a25f9cff0c10732e03bc8d9d813f79bd2
@@ -7,3 +7,4 @@ SHA1 (patch-aa) = 68cea80eaf8f9c457f9d4a74a32f0da549699878
 SHA1 (patch-ab) = 863ba6f46568a30f16bb0564c2cb969ce1c999b7
 SHA1 (patch-konq-plugins_domtreeviewer_domtreecommands.cpp) = 258ba801a0eb57f81514f0a6b673fc9fa5ecafc9
 SHA1 (patch-konq-plugins_sidebar_Makefile.in) = e6914b1e7e65dad40f981eaea8e37e1f67d5a268
+SHA1 (patch-noatun-plugins_noatunmadness_madness.cpp) = ea1278e6ccdcad322e4ee5b769952dd35b69fc29
