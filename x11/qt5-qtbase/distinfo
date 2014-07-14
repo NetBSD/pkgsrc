@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2014/04/23 07:05:31 adam Exp $
+$NetBSD: distinfo,v 1.10 2014/07/14 16:32:14 jperkin Exp $
 
 SHA1 (qt-everywhere-opensource-src-5.2.1.tar.xz) = cc68265c62321670bd40e29bdd484ea881bd6af3
 RMD160 (qt-everywhere-opensource-src-5.2.1.tar.xz) = 9b716c5875a6186968392896ac8bd3261fae9b24
@@ -29,7 +29,12 @@ SHA1 (patch-qtbase_src_widgets_graphicsview_qgraphicsitem__p.h) = a30402585f0b7e
 SHA1 (patch-qtbase_tests_auto_corelib_io_qprocess_qprocess.pro) = 729e57819a0477c2bb06015b3bd106e1f972eb51
 SHA1 (patch-qtbase_tests_auto_widgets_itemviews_qtreewidgetitemiterator_qtreewidgetitemiterator.pro) = ec68f41ccdc622eb5457ea7a3c37c1f54058b595
 SHA1 (patch-qtdeclarative_examples_quick_customitems_painteditem_painteditem.pro) = 4eb38df598145da3bb8272dfc4c34649d54cf9fe
-SHA1 (patch-qtdeclarative_src_qml_jsruntime_qv4alloca__p.h) = 9a1a4bb03776e3e6331120933accd0cf46503533
+SHA1 (patch-qtdeclarative_src_3rdparty_masm_wtf_MathExtras.h) = 5cef3ed89e333f3386bd61cbf5af6632ad400499
+SHA1 (patch-qtdeclarative_src_qml_jsruntime_qv4alloca__p.h) = 5eb9eba79d6564b9375910dd7ed6ad406c8b0c8e
+SHA1 (patch-qtdeclarative_src_qml_jsruntime_qv4engine.cpp) = 1447ade56250f2645d13669c5cab85cd299dfdf5
+SHA1 (patch-qtdeclarative_src_qml_jsruntime_qv4globalobject.cpp) = d0c1b5b190d350a30dee609c37be9ec467fce02f
+SHA1 (patch-qtdeclarative_src_qml_jsruntime_qv4mm.cpp) = f37900af31ed15040499d9a28125ad32909a393c
+SHA1 (patch-qtdeclarative_src_qml_jsruntime_qv4stringobject.cpp) = a51bbafc307663e150da89efc29175424d733f1a
 SHA1 (patch-qtdeclarative_src_qmldevtools_qmldevtools.pro) = 6f0e65eb6c4a5bfd05a603d9cbfc6fdc22e46d3b
 SHA1 (patch-qtdeclarative_tests_auto_qml_qjsengine_tst__qjsengine.cpp) = b1cc5a386dd0f1b3651adb9babee87be84221998
 SHA1 (patch-qtmultimedia_src_gsttools_qgstreamervideoinputdevicecontrol.cpp) = 122c629340578670876571e10c5946c4f359ed04
