@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2586 2014/07/14 15:32:01 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.2587 2014/07/15 03:49:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3409,3 +3409,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/dhcpcd to 6.4.1 [roy 2014-07-14]
 	Updated net/dhcpcd to 6.4.2 [roy 2014-07-14]
 	Updated net/haproxy to 1.5.2 [fhajny 2014-07-14]
+	Updated time/ruby-tzinfo to 0.3.40 [taca 2014-07-15]
