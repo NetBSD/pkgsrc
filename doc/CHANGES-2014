@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2594 2014/07/15 20:27:10 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2595 2014/07/15 20:29:22 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3417,3 +3417,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/x265 to 1.2 [adam 2014-07-15]
 	Updated multimedia/ffmpeg2 to 2.2.5 [adam 2014-07-15]
 	Updated time/p5-Time-Piece to 1.27 [schmonz 2014-07-15]
+	Updated textproc/p5-Pod-Escapes to 1.06 [schmonz 2014-07-15]
