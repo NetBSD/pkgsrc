@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2599 2014/07/15 20:38:10 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2600 2014/07/15 20:39:47 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3422,3 +3422,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/p5-Locale-Maketext to 1.25 [schmonz 2014-07-15]
 	Updated textproc/p5-Encode to 2.62 [schmonz 2014-07-15]
 	Updated devel/p5-Pod-Usage to 1.64 [schmonz 2014-07-15]
+	Updated devel/p5-Parse-CPAN-Meta to 1.4414 [schmonz 2014-07-15]
