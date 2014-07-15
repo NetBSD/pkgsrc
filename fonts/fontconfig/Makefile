@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2014/06/01 16:35:33 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2014/07/15 14:48:34 ryoon Exp $
 
 DISTNAME=	fontconfig-2.11.1
 PKGREVISION=	1
@@ -27,6 +27,18 @@ CONFIGURE_ENV+=		HASDOCBOOK=no
 PKGCONFIG_OVERRIDE=	fontconfig.pc.in
 
 PKG_SYSCONFSUBDIR=	fontconfig
+
+.include "../../mk/compiler.mk"
+# Workaround for GCC 4.2 bug, http://gcc.gnu.org/bugzilla/show_bug.cgi?id=46861
+# GCC 4.2 and -fPIC with visibility
+.if !empty(CC_VERSION:Mgcc-4.2.*)
+SUBST_CLASSES+=			visibility
+SUBST_STAGE.visibility=		pre-configure
+SUBST_MESSAGE.visibility=	Removing visibility
+SUBST_FILES.visibility=		src/makealias
+SUBST_SED.visibility=		-e 's/__attribute((visibility("hidden")))//g'
+SUBST_SED.visibility+=		-e 's/, visibility("default")//g'
+.endif
 
 .include "../../mk/bsd.prefs.mk"
 
