@@ -1,4 +1,4 @@
-#	$NetBSD: gnustep.mk,v 1.21 2012/10/22 02:06:19 rh Exp $
+#	$NetBSD: gnustep.mk,v 1.22 2014/07/15 22:35:15 jperkin Exp $
 
 .if !defined(GNUSTEP_MK)
 GNUSTEP_MK=		#defined
@@ -6,11 +6,11 @@ GNUSTEP_MK=		#defined
 .ifndef GNUSTEP_SKIP_DEFAULT_OPTIONS
 PKG_OPTIONS_VAR?=	PKG_OPTIONS.gnustep
 PKG_SUPPORTED_OPTIONS+=	fragile
-PKGSRC_COMPILER+=	clang
 
 .include "../../mk/bsd.options.mk"
 
 .if empty(PKG_OPTIONS:Mfragile)
+PKGSRC_COMPILER+=	clang
 ONLY_FOR_COMPILER=	clang
 BUILDLINK_API_DEPENDS.clang+=   clang>=3.1
 .include "../../lang/clang/buildlink3.mk"
