@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2589 2014/07/15 14:03:32 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.2590 2014/07/15 14:28:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3412,3 +3412,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/ruby-tzinfo to 0.3.40 [taca 2014-07-15]
 	Added graphics/py-mcomix version 1.00 [obache 2014-07-15]
 	Added net/p5-Net-Domain-TLD version 1.72 [fhajny 2014-07-15]
+	Updated textproc/grep to 2.19nb2 [ryoon 2014-07-15]
