@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2014/03/13 16:43:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.21 2014/07/15 03:48:48 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGES
@@ -240,6 +240,7 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/Antarctica/Palmer.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Antarctica/Rothera.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Antarctica/South_Pole.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Antarctica/Syowa.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/Antarctica/Troll.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Antarctica/Vostok.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Arctic/Longyearbyen.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Aden.rb
