@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2608 2014/07/15 20:53:44 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2609 2014/07/15 20:57:23 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3431,3 +3431,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-ExtUtils-Command to 1.18 [schmonz 2014-07-15]
 	Updated devel/p5-ExtUtils-ParseXS to 3.24 [schmonz 2014-07-15]
 	Updated devel/p5-CPAN-Meta-Requirements to 2.125 [schmonz 2014-07-15]
+	Updated devel/p5-CPAN-Meta to 2.141520 [schmonz 2014-07-15]
