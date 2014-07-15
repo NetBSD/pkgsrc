@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2013/12/04 15:12:04 wen Exp $
+$NetBSD: distinfo,v 1.14 2014/07/15 20:27:05 schmonz Exp $
 
-SHA1 (Time-Piece-1.24.tar.gz) = 42542275e5406edf23c9262bd4786bf4324b1eb6
-RMD160 (Time-Piece-1.24.tar.gz) = 95a7dd878326cf87216f5b3f6a060192739ff322
-Size (Time-Piece-1.24.tar.gz) = 26347 bytes
+SHA1 (Time-Piece-1.27.tar.gz) = 44ca9840eee4191859034e514d09079ca360e14f
+RMD160 (Time-Piece-1.27.tar.gz) = c8ca21d68856b506cbb1b39873e2f1cf1c6b06b6
+Size (Time-Piece-1.27.tar.gz) = 27281 bytes
