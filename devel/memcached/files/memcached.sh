@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: memcached.sh,v 1.2 2014/04/30 05:39:19 rodent Exp $
+# $NetBSD: memcached.sh,v 1.3 2014/07/15 17:30:26 fhajny Exp $
 #
 
 # PROVIDE: memcached
@@ -15,7 +15,7 @@ command_args="-d"
 start_cmd="memcached_start"
 stop_cmd="memcached_stop"
 status_cmd="memcached_status"
-pidfile_base="@PKG_HOME@/memcached-"
+pidfile_base="@MEMCACHED_HOME@/memcached-"
 
 memcached_pid()
 {
