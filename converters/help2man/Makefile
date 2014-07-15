@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2014/05/29 23:35:21 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2014/07/15 14:54:52 ryoon Exp $
 
 DISTNAME=	help2man-1.45.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GNU:=help2man/}
 EXTRACT_SUFX=	.tar.xz
@@ -46,6 +46,9 @@ _STRIPFLAG_INSTALL=
 USE_PKGLOCALEDIR=	yes
 PLIST.nls=		yes
 .endif
+
+post-patch:
+	${TOUCH} -r ${WRKSRC}/help2man.PL.orig ${WRKSRC}/help2man.PL
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
