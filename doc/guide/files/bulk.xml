@@ -1,4 +1,4 @@
-<!-- $NetBSD: bulk.xml,v 1.13 2014/05/31 20:49:16 asau Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.14 2014/07/15 23:41:55 asau Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
@@ -127,9 +127,68 @@ $ <userinput>rm -rf /tmp/pbulk-outer</userinput>
 <sect2 id="bulk.pbulk.conf">
 <title>Configuration</title>
 
-<para>TODO; see pkgsrc/doc/HOWTO-pbulk for more information.</para>
+<para>To simplify configuration we provide helper script <filename>mk/pbulk/pbulk.sh</filename>.</para>
 
-<para>TODO: continue writing</para>
+<para>In order to use it, prepare a clear system (real one, chroot environment, jail, zone, virtual machine).
+Configure network access to fetch distribution files.
+Create user with name "pbulk".</para>
+
+<para>Fetch and extract pkgsrc. Use a command like one of these:</para>
+
+<screen>
+&rprompt; <userinput>(cd /usr &amp;&amp; ftp -o - http://ftp.netbsd.org/pub/pkgsrc/current/pkgsrc.tar.gz | tar -zxf-)</userinput>
+&rprompt; <userinput>(cd /usr &amp;&amp; fetch -o - http://ftp.netbsd.org/pub/pkgsrc/current/pkgsrc.tar.gz | tar -zxf-)</userinput>
+&rprompt; <userinput>(cd /usr &amp;&amp; cvs -Q -z3 -d anoncvs@anoncvs.netbsd.org:/cvsroot get -P pkgsrc)</userinput>
+</screen>
+
+<para>Or any other way that fits (e.g., curl, wget).</para>
+
+<para>Deploy and configure pbulk tools, e.g.:</para>
+
+<screen>
+&rprompt; <userinput>sh pbulk.sh -n # native (NetBSD)</userinput>
+&rprompt; <userinput>sh pbulk.sh -n -c mk.conf.frag # native, apply settings from given mk.conf fragment</userinput>
+&rprompt; <userinput>sh pbulk.sh -nlc mk.conf.frag # native, apply settings, configure for limited build</userinput>
+</screen>
+
+<note><para><filename>mk.conf.frag</filename> is a fragment of
+<filename>mk.conf</filename> that contains settings you want to
+apply to packages you build. For instance,</para>
+
+<programlisting>
+PKG_DEVELOPER=		yes		# perform more checks
+X11_TYPE=		modular		# use pkgsrc X11
+SKIP_LICENSE_CHECK=	yes		# accept all licences (useful when building all packages)
+</programlisting>
+</note>
+
+<para>If configured for limited list, replace the list in <filename>/usr/pbulk/etc/pbulk.list</filename>
+with your list of packages one per line without empty lines or comments. E.g.:</para>
+
+<programlisting>
+www/firefox
+mail/thunderbird
+misc/libreoffice4
+</programlisting>
+
+<para>Start it:</para>
+
+<screen>
+&rprompt; <userinput>/usr/pbulk/bin/bulkbuild</userinput>
+</screen>
+
+<para>After it finishes, you'll have <filename>/mnt</filename> filled with distribution files, binary packages, and reports,
+plain text summary in <filename>/mnt/bulklog/meta/report.txt</filename>
+</para>
+
+<note><para>The <filename>pbulk.sh</filename> script does not cover all possible use cases.
+While being ready to run, it serves as a good starting point to understand and build more complex setups.
+The script is kept small enough for better understanding.</para>
+</note>
+
+<note><para>The <filename>pbulk.sh</filename> script supports running
+unprivileged bulk build and helps configuring distributed bulk builds.</para>
+</note>
 
 </sect2>
 
