@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2604 2014/07/15 20:46:43 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2605 2014/07/15 20:49:12 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3427,3 +3427,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Storable to 2.51 [schmonz 2014-07-15]
 	Updated misc/p5-Locale-Codes to 3.31 [schmonz 2014-07-15]
 	Updated devel/p5-IPC-SysV to 2.04 [schmonz 2014-07-15]
+	Updated devel/p5-ExtUtils-CBuilder to 0.28.02.16 [schmonz 2014-07-15]
