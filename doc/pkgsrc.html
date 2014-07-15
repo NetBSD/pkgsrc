@@ -2650,8 +2650,59 @@ $ <strong class="userinput"><code>rm -rf /tmp/pbulk-outer</code></strong>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="bulk.pbulk.conf"></a>7.3.2. Configuration</h3></div></div></div>
-<p>TODO; see pkgsrc/doc/HOWTO-pbulk for more information.</p>
-<p>TODO: continue writing</p>
+<p>To simplify configuration we provide helper script <code class="filename">mk/pbulk/pbulk.sh</code>.</p>
+<p>In order to use it, prepare a clear system (real one, chroot environment, jail, zone, virtual machine).
+Configure network access to fetch distribution files.
+Create user with name "pbulk".</p>
+<p>Fetch and extract pkgsrc. Use a command like one of these:</p>
+<pre class="screen">
+<code class="prompt">#</code> <strong class="userinput"><code>(cd /usr &amp;&amp; ftp -o - http://ftp.netbsd.org/pub/pkgsrc/current/pkgsrc.tar.gz | tar -zxf-)</code></strong>
+<code class="prompt">#</code> <strong class="userinput"><code>(cd /usr &amp;&amp; fetch -o - http://ftp.netbsd.org/pub/pkgsrc/current/pkgsrc.tar.gz | tar -zxf-)</code></strong>
+<code class="prompt">#</code> <strong class="userinput"><code>(cd /usr &amp;&amp; cvs -Q -z3 -d anoncvs@anoncvs.netbsd.org:/cvsroot get -P pkgsrc)</code></strong>
+</pre>
+<p>Or any other way that fits (e.g., curl, wget).</p>
+<p>Deploy and configure pbulk tools, e.g.:</p>
+<pre class="screen">
+<code class="prompt">#</code> <strong class="userinput"><code>sh pbulk.sh -n # native (NetBSD)</code></strong>
+<code class="prompt">#</code> <strong class="userinput"><code>sh pbulk.sh -n -c mk.conf.frag # native, apply settings from given mk.conf fragment</code></strong>
+<code class="prompt">#</code> <strong class="userinput"><code>sh pbulk.sh -nlc mk.conf.frag # native, apply settings, configure for limited build</code></strong>
+</pre>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>
+<p><code class="filename">mk.conf.frag</code> is a fragment of
+<code class="filename">mk.conf</code> that contains settings you want to
+apply to packages you build. For instance,</p>
+<pre class="programlisting">
+PKG_DEVELOPER=		yes		# perform more checks
+X11_TYPE=		modular		# use pkgsrc X11
+SKIP_LICENSE_CHECK=	yes		# accept all licences (useful when building all packages)
+</pre>
+</div>
+<p>If configured for limited list, replace the list in <code class="filename">/usr/pbulk/etc/pbulk.list</code>
+with your list of packages one per line without empty lines or comments. E.g.:</p>
+<pre class="programlisting">
+www/firefox
+mail/thunderbird
+misc/libreoffice4
+</pre>
+<p>Start it:</p>
+<pre class="screen">
+<code class="prompt">#</code> <strong class="userinput"><code>/usr/pbulk/bin/bulkbuild</code></strong>
+</pre>
+<p>After it finishes, you'll have <code class="filename">/mnt</code> filled with distribution files, binary packages, and reports,
+plain text summary in <code class="filename">/mnt/bulklog/meta/report.txt</code>
+</p>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>
+<p>The <code class="filename">pbulk.sh</code> script does not cover all possible use cases.
+While being ready to run, it serves as a good starting point to understand and build more complex setups.
+The script is kept small enough for better understanding.</p>
+</div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>
+<p>The <code class="filename">pbulk.sh</code> script supports running
+unprivileged bulk build and helps configuring distributed bulk builds.</p>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -7340,7 +7391,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="tools.questions"></a>18.4. Questions regarding the tools</h2></div></div></div>
 <div class="qandaset">
-<a name="idm73208848"></a><dl>
+<a name="idm31250244"></a><dl>
 <dt>18.4.1. <a href="#tools.new">How do I add a new tool?</a>
 </dt>
 <dt>18.4.2. <a href="#tools.listall">How do I get a list of all available
@@ -7359,7 +7410,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="idm73208464"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="idm31250052"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7369,7 +7420,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="idm73207440"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="idm31249540"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7380,7 +7431,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="idm73206416"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="idm31249028"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -9459,7 +9510,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm72642064"></a><dl>
+<a name="idm30928452"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9504,7 +9555,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm72641680"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm30928260"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9520,7 +9571,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm72637584"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idm30926084"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9538,7 +9589,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm72633232"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm30923780"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9556,7 +9607,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm72624912"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm30921668"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9569,7 +9620,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm72622736"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm30920580"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9585,7 +9636,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm72619664"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm30918980"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9609,7 +9660,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm72611600"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm30915012"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9634,7 +9685,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm72607760"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm30912964"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9682,7 +9733,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm74682000"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm30909700"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
