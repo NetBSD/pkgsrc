@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.9 2014/07/11 14:08:31 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.10 2014/07/15 06:54:54 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q2 branch:
@@ -40,3 +40,5 @@ editors/emacs23: security patch
 editors/emacs23-nox11: security patch
 Pullup ticket #4450 - requested by wiz
 net/transmission: security update
+Pullup ticket #4451 - requested by tron
+databases/phpmyadmin: security update
