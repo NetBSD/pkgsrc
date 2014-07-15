@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2596 2014/07/15 20:31:13 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2597 2014/07/15 20:33:45 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3419,3 +3419,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/p5-Time-Piece to 1.27 [schmonz 2014-07-15]
 	Updated textproc/p5-Pod-Escapes to 1.06 [schmonz 2014-07-15]
 	Updated textproc/p5-Pod-Parser to 1.62 [schmonz 2014-07-15]
+	Updated misc/p5-Locale-Maketext to 1.25 [schmonz 2014-07-15]
