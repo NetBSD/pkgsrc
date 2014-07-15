@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2590 2014/07/15 14:28:43 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.2591 2014/07/15 14:55:14 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3413,3 +3413,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added graphics/py-mcomix version 1.00 [obache 2014-07-15]
 	Added net/p5-Net-Domain-TLD version 1.72 [fhajny 2014-07-15]
 	Updated textproc/grep to 2.19nb2 [ryoon 2014-07-15]
+	Updated converters/help2man to 1.45.1nb2 [ryoon 2014-07-15]
