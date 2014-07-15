@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.30 2014/06/06 23:24:10 ryoon Exp $
+$NetBSD: distinfo,v 1.31 2014/07/15 14:58:08 ryoon Exp $
 
 SHA1 (gawk-4.1.1.tar.xz) = 547feb48d20e923aff58daccee97c94e047fdc18
 RMD160 (gawk-4.1.1.tar.xz) = a5a6ab9491bf702310cef7c035531cc7fad0a62d
@@ -7,4 +7,5 @@ SHA1 (patch-Makefile.in) = 12eb8f205fa224634b9f5122cfca55803382516f
 SHA1 (patch-awk.h) = 2292be5ec392e7fea5688fbb18012a735e43803f
 SHA1 (patch-extension_Makefile.in) = bc735eebe2e094c97e46b08a782b143d2042a865
 SHA1 (patch-extension_filefuncs.c) = 212774354ab55f69ff67728470ab23b43e038093
+SHA1 (patch-extension_gawkfts.c) = a6c59c42c3f5564ee078b373c9a8d09aa6732a0b
 SHA1 (patch-test_Makefile.in) = 7610407e0735f4b78b568e24717f3f103f8566d3
