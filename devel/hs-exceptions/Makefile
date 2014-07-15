@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/05/24 22:00:42 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2014/07/15 21:06:41 szptvlfn Exp $
 
 DISTNAME=	exceptions-0.6.1
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@NetBSD.org
