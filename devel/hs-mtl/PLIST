@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2014/05/16 20:31:58 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/07/15 21:01:04 szptvlfn Exp $
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Cont.hi
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Cont/Class.hi
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Error.hi
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Error/Class.hi
+lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Except.hi
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Identity.hi
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/List.hi
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/RWS.hi
@@ -28,6 +29,7 @@ ${PLIST.doc}share/doc/mtl-${PKGVERSION}/html/Control-Monad-Cont-Class.html
 ${PLIST.doc}share/doc/mtl-${PKGVERSION}/html/Control-Monad-Cont.html
 ${PLIST.doc}share/doc/mtl-${PKGVERSION}/html/Control-Monad-Error-Class.html
 ${PLIST.doc}share/doc/mtl-${PKGVERSION}/html/Control-Monad-Error.html
+${PLIST.doc}share/doc/mtl-${PKGVERSION}/html/Control-Monad-Except.html
 ${PLIST.doc}share/doc/mtl-${PKGVERSION}/html/Control-Monad-Identity.html
 ${PLIST.doc}share/doc/mtl-${PKGVERSION}/html/Control-Monad-List.html
 ${PLIST.doc}share/doc/mtl-${PKGVERSION}/html/Control-Monad-RWS-Class.html
@@ -78,6 +80,7 @@ ${PLIST.doc}share/doc/mtl-${PKGVERSION}/html/mini_Control-Monad-Cont-Class.html
 ${PLIST.doc}share/doc/mtl-${PKGVERSION}/html/mini_Control-Monad-Cont.html
 ${PLIST.doc}share/doc/mtl-${PKGVERSION}/html/mini_Control-Monad-Error-Class.html
 ${PLIST.doc}share/doc/mtl-${PKGVERSION}/html/mini_Control-Monad-Error.html
+${PLIST.doc}share/doc/mtl-${PKGVERSION}/html/mini_Control-Monad-Except.html
 ${PLIST.doc}share/doc/mtl-${PKGVERSION}/html/mini_Control-Monad-Identity.html
 ${PLIST.doc}share/doc/mtl-${PKGVERSION}/html/mini_Control-Monad-List.html
 ${PLIST.doc}share/doc/mtl-${PKGVERSION}/html/mini_Control-Monad-RWS-Class.html

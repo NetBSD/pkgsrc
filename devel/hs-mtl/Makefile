@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/05/16 20:31:58 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2014/07/15 21:01:04 szptvlfn Exp $
 
-DISTNAME=	mtl-2.2.0.1
+DISTNAME=	mtl-2.2.1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
