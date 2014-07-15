@@ -2295,9 +2295,59 @@ bulk build.
 
 7.3.2. Configuration
 
-TODO; see pkgsrc/doc/HOWTO-pbulk for more information.
+To simplify configuration we provide helper script mk/pbulk/pbulk.sh.
 
-TODO: continue writing
+In order to use it, prepare a clear system (real one, chroot environment, jail,
+zone, virtual machine). Configure network access to fetch distribution files.
+Create user with name "pbulk".
+
+Fetch and extract pkgsrc. Use a command like one of these:
+
+# (cd /usr && ftp -o - http://ftp.netbsd.org/pub/pkgsrc/current/pkgsrc.tar.gz | tar -zxf-)
+# (cd /usr && fetch -o - http://ftp.netbsd.org/pub/pkgsrc/current/pkgsrc.tar.gz | tar -zxf-)
+# (cd /usr && cvs -Q -z3 -d anoncvs@anoncvs.netbsd.org:/cvsroot get -P pkgsrc)
+
+Or any other way that fits (e.g., curl, wget).
+
+Deploy and configure pbulk tools, e.g.:
+
+# sh pbulk.sh -n # native (NetBSD)
+# sh pbulk.sh -n -c mk.conf.frag # native, apply settings from given mk.conf fragment
+# sh pbulk.sh -nlc mk.conf.frag # native, apply settings, configure for limited build
+
+Note
+
+mk.conf.frag is a fragment of mk.conf that contains settings you want to apply
+to packages you build. For instance,
+
+PKG_DEVELOPER=          yes             # perform more checks
+X11_TYPE=               modular         # use pkgsrc X11
+SKIP_LICENSE_CHECK=     yes             # accept all licences (useful when building all packages)
+
+If configured for limited list, replace the list in /usr/pbulk/etc/pbulk.list
+with your list of packages one per line without empty lines or comments. E.g.:
+
+www/firefox
+mail/thunderbird
+misc/libreoffice4
+
+Start it:
+
+# /usr/pbulk/bin/bulkbuild
+
+After it finishes, you'll have /mnt filled with distribution files, binary
+packages, and reports, plain text summary in /mnt/bulklog/meta/report.txt
+
+Note
+
+The pbulk.sh script does not cover all possible use cases. While being ready to
+run, it serves as a good starting point to understand and build more complex
+setups. The script is kept small enough for better understanding.
+
+Note
+
+The pbulk.sh script supports running unprivileged bulk build and helps
+configuring distributed bulk builds.
 
 7.4. Creating a multiple CD-ROM packages collection
 
