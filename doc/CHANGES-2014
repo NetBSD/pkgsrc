@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2602 2014/07/15 20:42:12 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2603 2014/07/15 20:45:00 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3425,3 +3425,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Parse-CPAN-Meta to 1.4414 [schmonz 2014-07-15]
 	Updated devel/p5-Package-Constants to 0.04 [schmonz 2014-07-15]
 	Updated devel/p5-Storable to 2.51 [schmonz 2014-07-15]
+	Updated misc/p5-Locale-Codes to 3.31 [schmonz 2014-07-15]
