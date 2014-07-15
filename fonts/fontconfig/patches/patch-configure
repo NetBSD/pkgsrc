@@ -1,0 +1,25 @@
+$NetBSD: patch-configure,v 1.1 2014/07/15 14:48:34 ryoon Exp $
+
+--- configure.orig	2014-03-24 06:04:16.000000000 +0000
++++ configure
+@@ -13976,6 +13976,10 @@ $as_echo_n "checking for scandir... " >&
+ /* end confdefs.h.  */
+ 
+ 		#include <dirent.h>
++		#if defined(_SCO_DS)
++		/* bogus */
++		#include <prot.h>
++		#endif
+ 		int main(void);
+ 
+ int
+@@ -14004,6 +14008,9 @@ else
+ /* end confdefs.h.  */
+ 
+ 			#include <dirent.h>
++			#if defined(_SCO_DS)
++			#include <prot.h>
++			#endif
+ 			int main(void);
+ 
+ int
