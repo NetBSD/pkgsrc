@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2014/04/30 05:39:19 rodent Exp $
+$NetBSD: MESSAGE,v 1.2 2014/07/15 17:30:26 fhajny Exp $
 
 If using the rc.d init system, set the following variables in rc.conf:
 
@@ -12,7 +12,7 @@ memcached_jobN_args="-p 1121N -m 64 -c 1024"
 to start as many memcached instances as desired with the required options.
 PID files for each instance will be created in:
 
-${PKG_HOME} named as:
+${MEMCACHED_HOME} named as:
 
 ${PKGBASE}-job0.pid ... ${PKGBASE}-jobN.pid.
 
