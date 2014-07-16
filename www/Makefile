@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1055 2014/07/05 19:45:57 rodent Exp $
+# $NetBSD: Makefile,v 1.1056 2014/07/16 08:57:44 imil Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -594,6 +594,7 @@ SUBDIR+=	py-gdata
 SUBDIR+=	py-genshi
 SUBDIR+=	py-gunicorn
 SUBDIR+=	py-http-parser
+SUBDIR+=	py-httpie
 SUBDIR+=	py-httplib2
 SUBDIR+=	py-jonpy
 SUBDIR+=	py-mechanize
