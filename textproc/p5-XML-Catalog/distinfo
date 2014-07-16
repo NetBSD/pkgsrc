@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/11/30 11:30:31 wen Exp $
+$NetBSD: distinfo,v 1.2 2014/07/16 08:22:26 wen Exp $
 
-SHA1 (XML-Catalog-v1.0.1.tar.gz) = ccaeac46ffc788bcfd08655dfd322b50f20dc829
-RMD160 (XML-Catalog-v1.0.1.tar.gz) = d818d9614a1dbaae09f5fd3b1693b8ca943b43ea
-Size (XML-Catalog-v1.0.1.tar.gz) = 11531 bytes
+SHA1 (XML-Catalog-1.03.tar.gz) = a89181f2ad11bb8ab07cbdb4b13d74137e4b9116
+RMD160 (XML-Catalog-1.03.tar.gz) = 51a7bd25bc68afd0ab6327b6bbdb00436b52c092
+Size (XML-Catalog-1.03.tar.gz) = 12266 bytes
