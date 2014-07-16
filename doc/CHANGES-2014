@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2633 2014/07/16 21:03:11 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.2634 2014/07/16 23:17:28 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3453,3 +3453,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/mpdas to 0.3.1 [gls 2014-07-16]
 	Updated devel/hs-unordered-containers to 0.2.5.0 [szptvlfn 2014-07-16]
 	Updated devel/hs-dlist to 0.7.1 [szptvlfn 2014-07-16]
+	Updated parallel/py-billiard to 3.3.0.18 [rodent 2014-07-16]
