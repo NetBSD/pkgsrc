@@ -136,10 +136,7 @@ builds)</a></span></dt>
 <dt><span class="sect1"><a href="#bulk.pre">7.1. Think first, build later</a></span></dt>
 <dt><span class="sect1"><a href="#bulk.req">7.2. Requirements of a bulk build</a></span></dt>
 <dt><span class="sect1"><a href="#bulk.pbulk">7.3. Running a pbulk-style bulk build</a></span></dt>
-<dd><dl>
-<dt><span class="sect2"><a href="#bulk.pbulk.prepare">7.3.1. Preparation</a></span></dt>
-<dt><span class="sect2"><a href="#bulk.pbulk.conf">7.3.2. Configuration</a></span></dt>
-</dl></dd>
+<dd><dl><dt><span class="sect2"><a href="#bulk.pbulk.conf">7.3.1. Configuration</a></span></dt></dl></dd>
 <dt><span class="sect1"><a href="#creating-cdroms">7.4. Creating a multiple CD-ROM packages collection</a></span></dt>
 <dd><dl><dt><span class="sect2"><a href="#cdpack-example">7.4.1. Example of cdpack</a></span></dt></dl></dd>
 </dl></dd>
@@ -867,10 +864,7 @@ builds)</a></span></dt>
 <dt><span class="sect1"><a href="#bulk.pre">7.1. Think first, build later</a></span></dt>
 <dt><span class="sect1"><a href="#bulk.req">7.2. Requirements of a bulk build</a></span></dt>
 <dt><span class="sect1"><a href="#bulk.pbulk">7.3. Running a pbulk-style bulk build</a></span></dt>
-<dd><dl>
-<dt><span class="sect2"><a href="#bulk.pbulk.prepare">7.3.1. Preparation</a></span></dt>
-<dt><span class="sect2"><a href="#bulk.pbulk.conf">7.3.2. Configuration</a></span></dt>
-</dl></dd>
+<dd><dl><dt><span class="sect2"><a href="#bulk.pbulk.conf">7.3.1. Configuration</a></span></dt></dl></dd>
 <dt><span class="sect1"><a href="#creating-cdroms">7.4. Creating a multiple CD-ROM packages collection</a></span></dt>
 <dd><dl><dt><span class="sect2"><a href="#cdpack-example">7.4.1. Example of cdpack</a></span></dt></dl></dd>
 </dl></dd>
@@ -2548,10 +2542,7 @@ builds)</h2></div></div></div>
 <dt><span class="sect1"><a href="#bulk.pre">7.1. Think first, build later</a></span></dt>
 <dt><span class="sect1"><a href="#bulk.req">7.2. Requirements of a bulk build</a></span></dt>
 <dt><span class="sect1"><a href="#bulk.pbulk">7.3. Running a pbulk-style bulk build</a></span></dt>
-<dd><dl>
-<dt><span class="sect2"><a href="#bulk.pbulk.prepare">7.3.1. Preparation</a></span></dt>
-<dt><span class="sect2"><a href="#bulk.pbulk.conf">7.3.2. Configuration</a></span></dt>
-</dl></dd>
+<dd><dl><dt><span class="sect2"><a href="#bulk.pbulk.conf">7.3.1. Configuration</a></span></dt></dl></dd>
 <dt><span class="sect1"><a href="#creating-cdroms">7.4. Creating a multiple CD-ROM packages collection</a></span></dt>
 <dd><dl><dt><span class="sect2"><a href="#cdpack-example">7.4.1. Example of cdpack</a></span></dt></dl></dd>
 </dl>
@@ -2609,7 +2600,7 @@ temporary filesystems, others must survive a sudden reboot.</p>
 <li class="listitem"><p>40 GB for the distfiles (read-write, remote, temporary)</p></li>
 <li class="listitem"><p>30 GB for the binary packages (read-write, remote, permanent)</p></li>
 <li class="listitem"><p>1 GB for the pkgsrc tree (read-only, remote, permanent)</p></li>
-<li class="listitem"><p>5 GB for <code class="filename">LOCALBASE</code> (read-write, local, temporary for pbulk, permanent for old-bulk)</p></li>
+<li class="listitem"><p>5 GB for <code class="filename">LOCALBASE</code> (read-write, local, temporary)</p></li>
 <li class="listitem"><p>10 GB for the log files (read-write, remote, permanent)</p></li>
 <li class="listitem"><p>5 GB for temporary files (read-write, local, temporary)</p></li>
 </ul></div>
@@ -2624,32 +2615,7 @@ temporary filesystems, others must survive a sudden reboot.</p>
 </ul></div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="bulk.pbulk.prepare"></a>7.3.1. Preparation</h3></div></div></div>
-<p>First, you need to create a pkgsrc installation for the pbulk infrastructure. No matter on which platform you are (even on NetBSD), you should bootstrap into its own directory. Let's take the directory <code class="filename">/usr/pbulk</code> or <code class="filename">$HOME/pbulk</code> for it. This installation will be bootstrapped and all the tools that are required for the bulk build will be installed there.</p>
-<pre class="screen">
-$ <strong class="userinput"><code>cd /usr/pkgsrc</code></strong>
-$ <strong class="userinput"><code>./bootstrap/bootstrap --prefix=/usr/pbulk --varbase=/usr/pbulk/var --workdir=/tmp/pbulk-bootstrap</code></strong>
-$ <strong class="userinput"><code>rm -rf /tmp/pbulk-bootstrap</code></strong>
-</pre>
-<p>Now the basic environment for the pbulk infrastructure is installed. The specific tools are still missing. This is a good time to edit the pkgsrc configuration file <code class="filename">/usr/pbulk/etc/mk.conf</code> to fit your needs. Typical things you might set now are:</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p><code class="literal"><code class="varname">PKG_DEVELOPER</code>=yes</code>, to enable many consistency checks,</p></li>
-<li class="listitem"><p><code class="literal"><code class="varname">WRKOBJDIR</code>=/tmp/pbulk-outer</code>, to keep <code class="filename">/usr/pkgsrc</code> free from any modifications,</p></li>
-<li class="listitem"><p><code class="literal"><code class="varname">DISTDIR</code>=/distfiles</code>, to have only one directory in which all distfiles (for the infrastructure and for the actual packages) are downloaded,</p></li>
-<li class="listitem"><p><code class="literal"><code class="varname">ACCEPTABLE_LICENSES</code>+=...</code>, to select some licenses additional to the usual Free/Open Source licenses that are acceptable to you,</p></li>
-<li class="listitem"><p><code class="literal"><code class="varname">SKIP_LICENSE_CHECK</code>=yes</code>, to bypass the license checks.</p></li>
-</ul></div>
-<p>Now you are ready to build the rest of the pbulk infrastructure.</p>
-<pre class="screen">
-$ <strong class="userinput"><code>cd pkgtools/pbulk</code></strong>
-$ <strong class="userinput"><code>/usr/pbulk/bin/bmake install</code></strong>
-$ <strong class="userinput"><code>rm -rf /tmp/pbulk-outer</code></strong>
-</pre>
-<p>Now the pbulk infrastructure is built and installed. It still needs to be configured, and after some more preparation, we will be able to start the real bulk build.</p>
-</div>
-<div class="sect2">
-<div class="titlepage"><div><div><h3 class="title">
-<a name="bulk.pbulk.conf"></a>7.3.2. Configuration</h3></div></div></div>
+<a name="bulk.pbulk.conf"></a>7.3.1. Configuration</h3></div></div></div>
 <p>To simplify configuration we provide helper script <code class="filename">mk/pbulk/pbulk.sh</code>.</p>
 <p>In order to use it, prepare a clear system (real one, chroot environment, jail, zone, virtual machine).
 Configure network access to fetch distribution files.
@@ -2685,6 +2651,8 @@ www/firefox
 mail/thunderbird
 misc/libreoffice4
 </pre>
+<p>At this point you can also review configuration in <code class="filename">/usr/pbulk/etc</code>
+and make final amendments, if wanted.</p>
 <p>Start it:</p>
 <pre class="screen">
 <code class="prompt">#</code> <strong class="userinput"><code>/usr/pbulk/bin/bulkbuild</code></strong>
@@ -7391,7 +7359,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="tools.questions"></a>18.4. Questions regarding the tools</h2></div></div></div>
 <div class="qandaset">
-<a name="idm31250244"></a><dl>
+<a name="idm29413124"></a><dl>
 <dt>18.4.1. <a href="#tools.new">How do I add a new tool?</a>
 </dt>
 <dt>18.4.2. <a href="#tools.listall">How do I get a list of all available
@@ -7410,7 +7378,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="idm31250052"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="idm29412932"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7420,7 +7388,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="idm31249540"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="idm29408260"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7431,7 +7399,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="idm31249028"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="idm29407748"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -9510,7 +9478,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm30928452"></a><dl>
+<a name="idm31184324"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9555,7 +9523,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm30928260"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm31184132"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9571,7 +9539,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm30926084"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idm31177860"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9589,7 +9557,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm30923780"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm31175620"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9607,7 +9575,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm30921668"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm31173444"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9620,7 +9588,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm30920580"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm31172356"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9636,7 +9604,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm30918980"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm31170820"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9660,7 +9628,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm30915012"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm31166852"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9685,7 +9653,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm30912964"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm31164740"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9733,7 +9701,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm30909700"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm31161476"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
