@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2614 2014/07/16 07:51:14 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2615 2014/07/16 08:04:27 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3437,3 +3437,14 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated math/p5-Spreadsheet-Read to 0.54 [schmonz 2014-07-16]
 	Updated time/p5-DateTime-TimeZone to 1.71 [wen 2014-07-16]
 	Updated time/p5-MooseX-Types-DateTime to 0.10 [wen 2014-07-16]
+	Updated databases/ruby-awesome_nested_set to 2.1.6nb1 [rodent 2014-07-16]
+	Updated databases/ruby-tiny_tds to 0.6.2nb1 [rodent 2014-07-16]
+	Updated devel/ruby-shoulda-context to 1.2.1nb1 [rodent 2014-07-16]
+	Updated devel/ruby-shoulda-matchers to 2.6.1nb1 [rodent 2014-07-16] 
+	Updated meta-pkgs/ruby-shoulda to 3.5.0nb1 [rodent 2014-07-16]
+	Updated security/ruby-openid to 0.0.1nb1 [rodent 2014-07-16]
+	Updated security/ruby-rack-openid 1.4.2nb1 [rodent 2014-07-16]
+	Updated security/ruby-ruby-openid to 2.5.0nb1 [rodent 2014-07-16]
+	Updated sysutils/ruby-childprocess to 0.5.3nb1 [rodent 2014-07-16]
+	Updated textproc/ruby-xpath to 2.0.0nb1 [rodent 2014-07-16]
+	Updated www/ruby-websocket to 1.1.4nb1 [rodent 2014-07-16]
