@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2624 2014/07/16 12:14:00 mef Exp $
+$NetBSD: CHANGES-2014,v 1.2625 2014/07/16 12:20:12 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3445,3 +3445,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/p5-XML-Twig to 3.48 [wen 2014-07-16]
 	Updated security/polarssl to 1.2.11 [obache 2014-07-16]
 	Added textproc/p5-Net-IDN-Encode 2.200 [mef 2014-07-16]
+	Updated finance/py-stripe to 1.18.0 [rodent 2014-07-16]
