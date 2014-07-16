@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/04/02 07:27:09 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2014/07/16 23:30:01 rodent Exp $
 
-DISTNAME=	wtforms-recaptcha-0.3.1
+DISTNAME=	wtforms-recaptcha-0.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python www
 MASTER_SITES=	https://pypi.python.org/packages/source/w/wtforms-recaptcha/
