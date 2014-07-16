@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2620 2014/07/16 08:53:36 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2621 2014/07/16 09:00:40 imil Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3441,3 +3441,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/p5-XML-Encoding to 2.0.9 [wen 2014-07-16]
 	Updated textproc/p5-XML-Tidy to 1.12 [wen 2014-07-16]
 	Updated textproc/p5-XML-TreeBuilder to 5.4 [wen 2014-07-16]
+	Added www/py-httpie version 0.8.0 [imil 2014-07-16]
