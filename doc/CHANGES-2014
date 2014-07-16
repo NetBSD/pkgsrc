@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2615 2014/07/16 08:04:27 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2616 2014/07/16 08:24:23 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3448,3 +3448,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/ruby-childprocess to 0.5.3nb1 [rodent 2014-07-16]
 	Updated textproc/ruby-xpath to 2.0.0nb1 [rodent 2014-07-16]
 	Updated www/ruby-websocket to 1.1.4nb1 [rodent 2014-07-16]
+	Updated textproc/p5-XML-Catalog to 1.0.3 [wen 2014-07-16]
