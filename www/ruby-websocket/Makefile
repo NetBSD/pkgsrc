@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2014/07/16 07:56:29 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2014/07/16 08:37:21 rodent Exp $
 
 DISTNAME=	websocket-1.1.4
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	ruby www
 
 MAINTAINER=	rodent@NetBSD.org
