@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/06/09 12:40:58 asau Exp $
+# $NetBSD: Makefile,v 1.23 2014/07/16 01:47:17 rodent Exp $
 
 DISTNAME=	g95_source
 PKGNAME=	g95-0.93
@@ -14,7 +14,7 @@ HOMEPAGE=	http://www.g95.org/
 COMMENT=	Fortran 95 compiler from g95.org
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=		gmake gtar automake autoconf
+USE_TOOLS+=		gmake gtar automake autoconf perl:build
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-gcc-dir=${GCC_DIR}
