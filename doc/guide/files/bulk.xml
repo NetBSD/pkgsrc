@@ -1,4 +1,4 @@
-<!-- $NetBSD: bulk.xml,v 1.19 2014/07/16 21:57:43 asau Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.20 2014/07/16 22:27:17 asau Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
@@ -16,8 +16,32 @@ This chapter describes how to set it up so that the packages
 are most likely to be usable later.</para>
 
 <sect1 id="bulk.pre">
-<title>Think first, build later</title>
+<title>Preparations</title>
 
+<para>First of all, you have to decide whether you build all packages
+or a limited set of them. Full bulk builds usually consume a lot more resources,
+both space and time, than builds for some practical sets of packages.
+There exists a number of particularly heavy packages that are not actually
+interesting to a wide audience.
+<!-- approximate resource consumption for full bulk build is given in section <put a reference here/> -->
+For a limited bulk builds you need to make a list of packages you want to build.
+Note, that all their dependencies will be built, so you don't need to track them manually.
+</para>
+
+<para>During bulk builds various packages are installed and deinstalled
+in <filename>/usr/pkg</filename> (or whatever <filename>LOCALBASE</filename> is),
+so make sure that you don't need any package during the builds.
+Essentially, you should provide fresh system, either a chroot environment
+or something even more restrictive, depending on what the operating system provides,
+or dedicate the whole physical machine.
+As a useful side effect this makes sure that bulk builds cannot
+break anything in your system. There have been numerous cases where
+certain packages tried to install files outside the
+<filename>LOCALBASE</filename> or wanted to edit some files in
+<filename>/etc</filename>.
+</para>
+
+<!-- Developer-only information follows:
 <para>Since a bulk build takes several days or even weeks to finish, you
 should think about the setup before you start everything. Pay attention
 to at least the following points:</para>
@@ -46,18 +70,8 @@ unprivileged user doesn't work well at the moment.</para></listitem>
 </itemizedlist>
 </listitem>
 
-<listitem><para>Make sure that the bulk build cannot break anything in
-your system. Most bulk builds run as root, so they should be run at least
-in a chroot environment or something even more restrictive, depending on
-what the operating system provides. There have been numerous cases where
-certain packages tried to install files outside the
-<filename>LOCALBASE</filename> or wanted to edit some files in
-<filename>/etc</filename>. Furthermore, the bulk builds install and
-deinstall packages in <filename>/usr/pkg</filename> (or whatever
-<filename>LOCALBASE</filename> is) during their operation, so be sure
-that you don't need any package during the build.</para></listitem>
-
 </itemizedlist>
+-->
 </sect1>
 
 <sect1 id="bulk.pbulk">
