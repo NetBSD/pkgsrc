@@ -1,22 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2014/07/05 12:29:25 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/07/16 07:56:28 rodent Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_DOCDIR}/ri/cache.ri
-${GEM_DOCDIR}/ri/TinyTds/cdesc-TinyTds.ri
-${GEM_DOCDIR}/ri/TinyTds/Client/active%3f-i.ri
-${GEM_DOCDIR}/ri/TinyTds/Client/cdesc-Client.ri
-${GEM_DOCDIR}/ri/TinyTds/Client/default_query_options-i.ri
-${GEM_DOCDIR}/ri/TinyTds/Client/local_offset-c.ri
-${GEM_DOCDIR}/ri/TinyTds/Client/new-c.ri
-${GEM_DOCDIR}/ri/TinyTds/Client/query_options-i.ri
-${GEM_DOCDIR}/ri/TinyTds/Client/tds_version_info-i.ri
-${GEM_DOCDIR}/ri/TinyTds/Client/transpose_iconv_encoding-i.ri
-${GEM_DOCDIR}/ri/TinyTds/Error/cdesc-Error.ri
-${GEM_DOCDIR}/ri/TinyTds/Error/db_error_number-i.ri
-${GEM_DOCDIR}/ri/TinyTds/Error/new-c.ri
-${GEM_DOCDIR}/ri/TinyTds/Error/os_error_number-i.ri
-${GEM_DOCDIR}/ri/TinyTds/Error/severity-i.ri
-${GEM_DOCDIR}/ri/TinyTds/Error/source-i.ri
-${GEM_DOCDIR}/ri/TinyTds/Result/cdesc-Result.ri
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/compile/rake-compiler-dev-box.patch
 ${GEM_LIBDIR}/ext/patch/dblib-30-char-username.diff

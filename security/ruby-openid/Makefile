@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/07/04 12:35:20 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2014/07/16 07:56:28 rodent Exp $
 
 DISTNAME=	openid-0.0.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	ruby security
 
 MAINTAINER=	rodent@NetBSD.org

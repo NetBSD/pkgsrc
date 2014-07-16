@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/07/04 12:30:02 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2014/07/16 07:56:29 rodent Exp $
 
 DISTNAME=	childprocess-0.5.3
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	ruby sysutils
 
 MAINTAINER=	rodent@NetBSD.org
