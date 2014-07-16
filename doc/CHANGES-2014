@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2636 2014/07/16 23:22:05 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2637 2014/07/16 23:25:12 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3456,3 +3456,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated parallel/py-billiard to 3.3.0.18 [rodent 2014-07-16]
 	Updated net/py-kombu to 3.0.21 [rodent 2014-07-16]
 	Updated textproc/py-biplist to 0.7 [rodent 2014-07-16]
+	Updated textproc/py-phonenumbers to 6.2.0 [rodent 2014-07-16]
