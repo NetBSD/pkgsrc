@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2627 2014/07/16 15:52:37 taca Exp $
+$NetBSD: CHANGES-2014,v 1.2628 2014/07/16 18:25:27 tron Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3448,3 +3448,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated finance/py-stripe to 1.18.0 [rodent 2014-07-16]
 	Updated security/caff to 1.1.7nb2 [mef 2014-07-16]
 	Updated mail/p5-Email-Address to 1.905 [taca 2014-07-16]
+	Updated net/youtube-dl to 20140715 [tron 2014-07-16]
