@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2014/05/29 23:37:48 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/07/16 08:52:39 wen Exp $
 
-DISTNAME=	XML-TreeBuilder-5.1
+DISTNAME=	XML-TreeBuilder-5.4
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
