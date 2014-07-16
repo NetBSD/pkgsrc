@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2630 2014/07/16 20:40:07 gls Exp $
+$NetBSD: CHANGES-2014,v 1.2631 2014/07/16 20:44:11 gls Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3450,3 +3450,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/p5-Email-Address to 1.905 [taca 2014-07-16]
 	Updated net/youtube-dl to 20140715 [tron 2014-07-16]
 	Updated lang/pcc-current to 20140706 [plunky 2014-07-16]
+	Updated audio/mpdas to 0.3.1 [gls 2014-07-16]
