@@ -1,4 +1,4 @@
-$NetBSD: patch-as,v 1.14 2014/07/16 02:50:55 dholland Exp $
+$NetBSD: patch-as,v 1.15 2014/07/16 02:56:52 dholland Exp $
 
 --- texk/tetex/Makefile.in.orig	2005-02-04 22:20:54.000000000 +0000
 +++ texk/tetex/Makefile.in
@@ -11,10 +11,10 @@ $NetBSD: patch-as,v 1.14 2014/07/16 02:50:55 dholland Exp $
 -  kpsetool kpsewhere ps2frag pslatex rubibtex rumakeindex \
 -  texconfig texconfig-dialog texdoc texdoctk texexec texlinks updmap \
 -  ps4pdf fmtutil-sys texconfig-sys updmap-sys
-+SCRIPTS = ""
++SCRIPTS =
  
 -PDFSCRIPTS = a2ping e2pall epstopdf
-+PDFSCRIPTS = ""
++PDFSCRIPTS =
  
  PERLWRAPPED = fdf2tan fdf2tex makempy texfind texfont texshow texutil \
 -  thumbpdf pdfcrop uniqleaf
@@ -36,7 +36,7 @@ $NetBSD: patch-as,v 1.14 2014/07/16 02:50:55 dholland Exp $
  default: all
  
  install: install-data install-exec
-@@ -39,49 +32,11 @@ install-data:: $(INFOFILES)
+@@ -39,73 +32,18 @@ install-data:: $(INFOFILES)
  	for p in $(manpgs); do \
  	  $(INSTALL_DATA) $(srcdir)/$$p.man $(man1dir)/$$p.$(manext); \
  	done
@@ -86,10 +86,17 @@ $NetBSD: patch-as,v 1.14 2014/07/16 02:50:55 dholland Exp $
  
  install-exec:
  	-$(SHELL) $(srcdir)/../mkinstalldirs $(scriptdir)
-@@ -96,16 +51,10 @@ install-exec:
- 	else \
- 	  true; \
- 	fi
+-	for s in $(SCRIPTS); do \
+-	  $(INSTALL_SCRIPT) $(srcdir)/$$s $(scriptdir)/$$s; \
+-	done
+-	if test -f $(bindir)/pdfetex; then \
+-	  for s in $(PDFSCRIPTS); do \
+-	    $(INSTALL_SCRIPT) $(srcdir)/$$s $(scriptdir)/$$s; \
+-	  done; \
+-	  cd $(scriptdir); rm -f mptopdf; ln -s texexec mptopdf; \
+-	else \
+-	  true; \
+-	fi
 -	cd $(scriptdir); rm -f allec kpsepath kpsexpand texhash; \
 -	  ln -s allcm allec; \
 -	  ln -s kpsetool kpsepath; \
