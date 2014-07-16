@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/04/02 07:27:09 rodent Exp $
+$NetBSD: distinfo,v 1.2 2014/07/16 23:30:01 rodent Exp $
 
-SHA1 (wtforms-recaptcha-0.3.1.tar.gz) = b9930c9cb3f2f70c421d0b84077f8617311f0229
-RMD160 (wtforms-recaptcha-0.3.1.tar.gz) = c91734cf35d39e6062947ceadbcbe0cf7a3feafc
-Size (wtforms-recaptcha-0.3.1.tar.gz) = 6288 bytes
+SHA1 (wtforms-recaptcha-0.3.2.tar.gz) = 86e2bc0792417920620969b61f0636d58ed0b909
+RMD160 (wtforms-recaptcha-0.3.2.tar.gz) = b7ccfa509ff84eae82a0fb266443c0a37e171539
+Size (wtforms-recaptcha-0.3.2.tar.gz) = 6339 bytes
