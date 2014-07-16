@@ -1,4 +1,4 @@
-<!-- $NetBSD: bulk.xml,v 1.17 2014/07/16 21:26:09 asau Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.18 2014/07/16 21:47:10 asau Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
@@ -54,32 +54,6 @@ deinstall packages in <filename>/usr/pkg</filename> (or whatever
 that you don't need any package during the build.</para></listitem>
 
 </itemizedlist>
-</sect1>
-
-<sect1 id="bulk.req">
-<title>Requirements of a bulk build</title>
-
-<para>A complete bulk build requires lots of disk space. Some of the
-disk space can be read-only, some other must be writable. Some can be on
-remote filesystems (such as NFS) and some should be local. Some can be
-temporary filesystems, others must survive a sudden reboot.</para>
-
-<itemizedlist>
-
-<listitem><para>40 GB for the distfiles (read-write, remote, temporary)</para></listitem>
-
-<listitem><para>30 GB for the binary packages (read-write, remote, permanent)</para></listitem>
-
-<listitem><para>1 GB for the pkgsrc tree (read-only, remote, permanent)</para></listitem>
-
-<listitem><para>5 GB for <filename>LOCALBASE</filename> (read-write, local, temporary)</para></listitem>
-
-<listitem><para>10 GB for the log files (read-write, remote, permanent)</para></listitem>
-
-<listitem><para>5 GB for temporary files (read-write, local, temporary)</para></listitem>
-
-</itemizedlist>
-
 </sect1>
 
 <sect1 id="bulk.pbulk">
@@ -171,6 +145,32 @@ unprivileged bulk build and helps configuring distributed bulk builds.</para>
 </note>
 
 </sect2>
+
+</sect1>
+
+<sect1 id="bulk.req">
+<title>Requirements of a full bulk build</title>
+
+<para>A complete bulk build requires lots of disk space. Some of the
+disk space can be read-only, some other must be writable. Some can be on
+remote filesystems (such as NFS) and some should be local. Some can be
+temporary filesystems, others must survive a sudden reboot.</para>
+
+<itemizedlist>
+
+<listitem><para>40 GB for the distfiles (read-write, remote, temporary)</para></listitem>
+
+<listitem><para>30 GB for the binary packages (read-write, remote, permanent)</para></listitem>
+
+<listitem><para>1 GB for the pkgsrc tree (read-only, remote, permanent)</para></listitem>
+
+<listitem><para>5 GB for <filename>LOCALBASE</filename> (read-write, local, temporary)</para></listitem>
+
+<listitem><para>10 GB for the log files (read-write, remote, permanent)</para></listitem>
+
+<listitem><para>5 GB for temporary files (read-write, local, temporary)</para></listitem>
+
+</itemizedlist>
 
 </sect1>
 
