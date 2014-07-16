@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2616 2014/07/16 08:24:23 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2617 2014/07/16 08:32:03 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3440,12 +3440,13 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/ruby-awesome_nested_set to 2.1.6nb1 [rodent 2014-07-16]
 	Updated databases/ruby-tiny_tds to 0.6.2nb1 [rodent 2014-07-16]
 	Updated devel/ruby-shoulda-context to 1.2.1nb1 [rodent 2014-07-16]
-	Updated devel/ruby-shoulda-matchers to 2.6.1nb1 [rodent 2014-07-16] 
+	Updated devel/ruby-shoulda-matchers to 2.6.1nb1 [rodent 2014-07-16]
 	Updated meta-pkgs/ruby-shoulda to 3.5.0nb1 [rodent 2014-07-16]
 	Updated security/ruby-openid to 0.0.1nb1 [rodent 2014-07-16]
-	Updated security/ruby-rack-openid 1.4.2nb1 [rodent 2014-07-16]
+	Updated security/ruby-rack-openid to 1.4.2nb1 [rodent 2014-07-16]
 	Updated security/ruby-ruby-openid to 2.5.0nb1 [rodent 2014-07-16]
 	Updated sysutils/ruby-childprocess to 0.5.3nb1 [rodent 2014-07-16]
 	Updated textproc/ruby-xpath to 2.0.0nb1 [rodent 2014-07-16]
 	Updated www/ruby-websocket to 1.1.4nb1 [rodent 2014-07-16]
 	Updated textproc/p5-XML-Catalog to 1.0.3 [wen 2014-07-16]
+	Updated textproc/p5-XML-Encoding to 2.0.9 [wen 2014-07-16]
