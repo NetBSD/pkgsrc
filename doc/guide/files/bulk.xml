@@ -1,12 +1,16 @@
-<!-- $NetBSD: bulk.xml,v 1.18 2014/07/16 21:47:10 asau Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.19 2014/07/16 21:57:43 asau Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
 builds)</title>
 
-<para>When you have multiple machines that should run the same packages,
-it is wasted time if they all build their packages themselves from
-source. There is a ways of getting a set of binary packages:
+<para>For a number of reasons you may want to build binary packages
+for a large selected set of packages in pkgsrc or even for all pkgsrc packages.
+For instance, when you have multiple machines that should run the same software,
+it is wasted time if they all build their packages themselves from source.
+Or you may want to build a list of packages you want and check them before
+deploying onto production system.
+There is a way of getting a set of binary packages:
 The bulk build system, or pbulk ("p" stands for "parallel).
 This chapter describes how to set it up so that the packages
 are most likely to be usable later.</para>
