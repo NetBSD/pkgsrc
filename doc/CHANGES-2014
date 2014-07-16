@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2631 2014/07/16 20:44:11 gls Exp $
+$NetBSD: CHANGES-2014,v 1.2632 2014/07/16 21:02:06 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3451,3 +3451,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/youtube-dl to 20140715 [tron 2014-07-16]
 	Updated lang/pcc-current to 20140706 [plunky 2014-07-16]
 	Updated audio/mpdas to 0.3.1 [gls 2014-07-16]
+	Updated devel/hs-unordered-containers to 0.2.5.0 [szptvlfn 2014-07-16]
