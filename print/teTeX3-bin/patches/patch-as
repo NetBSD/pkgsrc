@@ -1,4 +1,4 @@
-$NetBSD: patch-as,v 1.13 2013/12/18 02:30:32 minskim Exp $
+$NetBSD: patch-as,v 1.14 2014/07/16 02:50:55 dholland Exp $
 
 --- texk/tetex/Makefile.in.orig	2005-02-04 22:20:54.000000000 +0000
 +++ texk/tetex/Makefile.in
@@ -11,7 +11,7 @@ $NetBSD: patch-as,v 1.13 2013/12/18 02:30:32 minskim Exp $
 -  kpsetool kpsewhere ps2frag pslatex rubibtex rumakeindex \
 -  texconfig texconfig-dialog texdoc texdoctk texexec texlinks updmap \
 -  ps4pdf fmtutil-sys texconfig-sys updmap-sys
-+SCRIPTS =
++SCRIPTS = ""
  
 -PDFSCRIPTS = a2ping e2pall epstopdf
 +PDFSCRIPTS = ""
@@ -32,7 +32,7 @@ $NetBSD: patch-as,v 1.13 2013/12/18 02:30:32 minskim Exp $
  INFOFILES= latex.info
  POOLFILES = pdfetex-pl.pool
 -all: $(SCRIPTS) $(PDFSCRIPTS)
-+all: $(SCRIPTS)
++all:
  default: all
  
  install: install-data install-exec
