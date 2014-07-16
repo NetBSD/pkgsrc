@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2014/05/29 23:37:25 wiz Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2014/07/16 11:53:40 tron Exp $
 #
 
-DISTNAME=		polarssl-1.2.8-gpl
+DISTNAME=		polarssl-1.2.11-gpl
 PKGNAME=		${DISTNAME:-gpl=}
-PKGREVISION=		1
 CATEGORIES=		security devel
-MASTER_SITES=		http://polarssl.org/code/releases/
+MASTER_SITES=		https://polarssl.org/download/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
