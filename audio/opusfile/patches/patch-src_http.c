@@ -1,13 +1,25 @@
-$NetBSD: patch-src_http.c,v 1.3 2014/05/14 10:20:15 pho Exp $
+$NetBSD: patch-src_http.c,v 1.4 2014/07/16 21:50:24 jperkin Exp $
 
 * Avoid using the obsolete ftime() function.
 https://trac.xiph.org/ticket/2014
 
 * Not only Win32 lacks AI_NUMERICSERV. Some version of Darwin (at least Darwin 9) lacks it too.
 
+* Need sys/filio.h on SunOS for FIONREAD.
+
 --- src/http.c.orig	2013-12-05 16:49:13.000000000 +0000
 +++ src/http.c
-@@ -347,7 +347,7 @@ typedef int op_sock;
+@@ -14,6 +14,9 @@
+ #endif
+ 
+ #include "internal.h"
++#ifdef __sun
++#include <sys/filio.h>
++#endif
+ #include <ctype.h>
+ #include <errno.h>
+ #include <limits.h>
+@@ -347,7 +350,7 @@ typedef int op_sock;
  #  define op_reset_errno() (errno=0)
  
  # endif
@@ -16,7 +28,7 @@ https://trac.xiph.org/ticket/2014
  # include <openssl/x509v3.h>
  
  /*The maximum number of simultaneous connections.
-@@ -721,7 +721,7 @@ static struct addrinfo *op_resolve(const
+@@ -721,7 +724,7 @@ static struct addrinfo *op_resolve(const
    char             service[6];
    memset(&hints,0,sizeof(hints));
    hints.ai_socktype=SOCK_STREAM;
@@ -25,7 +37,7 @@ https://trac.xiph.org/ticket/2014
    hints.ai_flags=AI_NUMERICSERV;
  #endif
    OP_ASSERT(_port<=65535U);
-@@ -788,7 +788,7 @@ struct OpusHTTPConn{
+@@ -788,7 +791,7 @@ struct OpusHTTPConn{
    /*The next connection in either the LRU or free list.*/
    OpusHTTPConn *next;
    /*The last time we blocked for reading from this connection.*/
@@ -34,7 +46,7 @@ https://trac.xiph.org/ticket/2014
    /*The number of bytes we've read since the last time we blocked.*/
    opus_int64    read_bytes;
    /*The estimated throughput of this connection, in bytes/s.*/
-@@ -838,7 +838,7 @@ struct OpusHTTPStream{
+@@ -838,7 +841,7 @@ struct OpusHTTPStream{
      struct sockaddr_in6 v6;
    }                addr;
    /*The last time we re-resolved the host.*/
@@ -43,7 +55,7 @@ https://trac.xiph.org/ticket/2014
    /*A buffer used to build HTTP requests.*/
    OpusStringBuf    request;
    /*A buffer used to build proxy CONNECT requests.*/
-@@ -992,26 +992,26 @@ static int op_http_conn_estimate_availab
+@@ -992,26 +995,26 @@ static int op_http_conn_estimate_availab
    return available;
  }
  
@@ -78,7 +90,7 @@ https://trac.xiph.org/ticket/2014
    read_delta_ms=op_time_diff_ms(&read_time,&_conn->read_time);
    read_rate=_conn->read_rate;
    read_delta_ms=OP_MAX(read_delta_ms,1);
-@@ -1902,7 +1902,7 @@ static int op_sock_connect_next(op_sock 
+@@ -1902,7 +1905,7 @@ static int op_sock_connect_next(op_sock
  # define OP_NPROTOS (2)
  
  static int op_http_connect_impl(OpusHTTPStream *_stream,OpusHTTPConn *_conn,
@@ -87,7 +99,7 @@ https://trac.xiph.org/ticket/2014
    const struct addrinfo *addr;
    const struct addrinfo *addrs[OP_NPROTOS];
    struct pollfd          fds[OP_NPROTOS];
-@@ -1932,7 +1932,7 @@ static int op_http_connect_impl(OpusHTTP
+@@ -1932,7 +1935,7 @@ static int op_http_connect_impl(OpusHTTP
    _stream->free_head=_conn->next;
    _conn->next=_stream->lru_head;
    _stream->lru_head=_conn;
@@ -96,7 +108,7 @@ https://trac.xiph.org/ticket/2014
    *&_conn->read_time=*_start_time;
    _conn->read_bytes=0;
    _conn->read_rate=0;
-@@ -2034,14 +2034,14 @@ static int op_http_connect_impl(OpusHTTP
+@@ -2034,14 +2037,14 @@ static int op_http_connect_impl(OpusHTTP
  }
  
  static int op_http_connect(OpusHTTPStream *_stream,OpusHTTPConn *_conn,
@@ -114,7 +126,7 @@ https://trac.xiph.org/ticket/2014
    if(_addrs!=&_stream->addr_info||op_time_diff_ms(&resolve_time,
     &_stream->resolve_time)>=OP_RESOLVE_CACHE_TIMEOUT_MS){
      new_addrs=op_resolve(_stream->connect_host,_stream->connect_port);
-@@ -2191,8 +2191,8 @@ static int op_http_stream_open(OpusHTTPS
+@@ -2191,8 +2194,8 @@ static int op_http_stream_open(OpusHTTPS
    addrs=NULL;
    for(nredirs=0;nredirs<OP_REDIRECT_LIMIT;nredirs++){
      OpusParsedURL  next_url;
@@ -125,7 +137,7 @@ https://trac.xiph.org/ticket/2014
      char          *next;
      char          *status_code;
      int            minor_version_pos;
-@@ -2321,7 +2321,7 @@ static int op_http_stream_open(OpusHTTPS
+@@ -2321,7 +2324,7 @@ static int op_http_stream_open(OpusHTTPS
      if(OP_UNLIKELY(ret<0))return ret;
      ret=op_http_conn_read_response(_stream->conns+0,&_stream->response);
      if(OP_UNLIKELY(ret<0))return ret;
@@ -134,7 +146,7 @@ https://trac.xiph.org/ticket/2014
      next=op_http_parse_status_line(&v1_1_compat,&status_code,
       _stream->response.buf);
      if(OP_UNLIKELY(next==NULL))return OP_FALSE;
-@@ -2733,8 +2733,8 @@ static int op_http_conn_handle_response(
+@@ -2733,8 +2736,8 @@ static int op_http_conn_handle_response(
                  converted into a request for the rest.*/
  static int op_http_conn_open_pos(OpusHTTPStream *_stream,
   OpusHTTPConn *_conn,opus_int64 _pos,opus_int32 _chunk_size){
@@ -145,7 +157,7 @@ https://trac.xiph.org/ticket/2014
    opus_int32    connect_rate;
    opus_int32    connect_time;
    int           ret;
-@@ -2744,7 +2744,7 @@ static int op_http_conn_open_pos(OpusHTT
+@@ -2744,7 +2747,7 @@ static int op_http_conn_open_pos(OpusHTT
    if(OP_UNLIKELY(ret<0))return ret;
    ret=op_http_conn_handle_response(_stream,_conn);
    if(OP_UNLIKELY(ret!=0))return OP_FALSE;
@@ -154,7 +166,7 @@ https://trac.xiph.org/ticket/2014
    _stream->cur_conni=_conn-_stream->conns;
    OP_ASSERT(_stream->cur_conni>=0&&_stream->cur_conni<OP_NCONNS_MAX);
    /*The connection has been successfully opened.
-@@ -2996,7 +2996,7 @@ static int op_http_conn_read_ahead(OpusH
+@@ -2996,7 +2999,7 @@ static int op_http_conn_read_ahead(OpusH
  }
  
  static int op_http_stream_seek(void *_stream,opus_int64 _offset,int _whence){
@@ -163,7 +175,7 @@ https://trac.xiph.org/ticket/2014
    OpusHTTPStream  *stream;
    OpusHTTPConn    *conn;
    OpusHTTPConn   **pnext;
-@@ -3037,7 +3037,7 @@ static int op_http_stream_seek(void *_st
+@@ -3037,7 +3040,7 @@ static int op_http_stream_seek(void *_st
      op_http_conn_read_rate_update(stream->conns+ci);
      *&seek_time=*&stream->conns[ci].read_time;
    }
