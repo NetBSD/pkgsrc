@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/02/02 00:27:38 rodent Exp $
+$NetBSD: distinfo,v 1.2 2014/07/16 23:36:23 rodent Exp $
 
-SHA1 (qrcode-4.0.4.tar.gz) = e4960a9889b985cd92f404539f0aeace3f6552b3
-RMD160 (qrcode-4.0.4.tar.gz) = bdf677e98ea250ba15fddce58961d1ce5e76a89e
-Size (qrcode-4.0.4.tar.gz) = 18769 bytes
+SHA1 (qrcode-5.0.1.tar.gz) = ac89d395d578b9e4c0f05884f649a9135962c4bc
+RMD160 (qrcode-5.0.1.tar.gz) = 4b79d1be2088884b2e9273b787c6d5bceaf5a437
+Size (qrcode-5.0.1.tar.gz) = 20546 bytes

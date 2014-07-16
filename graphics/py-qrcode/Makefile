@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/02/02 00:27:38 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2014/07/16 23:36:23 rodent Exp $
 
-DISTNAME=	qrcode-4.0.4
+DISTNAME=	qrcode-5.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	https://pypi.python.org/packages/source/q/qrcode/
