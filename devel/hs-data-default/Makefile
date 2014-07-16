@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/05/20 21:19:36 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2014/07/16 21:05:04 szptvlfn Exp $
 
 DISTNAME=	data-default-0.5.3
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
