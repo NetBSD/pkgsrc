@@ -1,4 +1,4 @@
-<!-- $NetBSD: bulk.xml,v 1.15 2014/07/16 20:53:44 asau Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.16 2014/07/16 21:12:33 asau Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
@@ -170,6 +170,9 @@ www/firefox
 mail/thunderbird
 misc/libreoffice4
 </programlisting>
+
+<para>At this point you can also review configuration in <filename>/usr/pbulk/etc</filename>
+and make final amendments, if wanted.</para>
 
 <para>Start it:</para>
 
