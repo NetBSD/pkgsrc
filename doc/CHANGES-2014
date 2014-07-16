@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2628 2014/07/16 18:25:27 tron Exp $
+$NetBSD: CHANGES-2014,v 1.2629 2014/07/16 20:21:48 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3449,3 +3449,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/caff to 1.1.7nb2 [mef 2014-07-16]
 	Updated mail/p5-Email-Address to 1.905 [taca 2014-07-16]
 	Updated net/youtube-dl to 20140715 [tron 2014-07-16]
+	Updated lang/pcc-current to 20140706 [plunky 2014-07-16]
