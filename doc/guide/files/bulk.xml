@@ -1,4 +1,4 @@
-<!-- $NetBSD: bulk.xml,v 1.16 2014/07/16 21:12:33 asau Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.17 2014/07/16 21:26:09 asau Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
@@ -92,38 +92,6 @@ temporary filesystems, others must survive a sudden reboot.</para>
 <listitem><para>Then, build each of the packages from a clean installation directory using the infrastructure.</para></listitem>
 </itemizedlist>
 
-<sect2 id="bulk.pbulk.prepare">
-<title>Preparation</title>
-
-<para>First, you need to create a pkgsrc installation for the pbulk infrastructure. No matter on which platform you are (even on NetBSD), you should bootstrap into its own directory. Let's take the directory <filename>/usr/pbulk</filename> or <filename>$HOME/pbulk</filename> for it. This installation will be bootstrapped and all the tools that are required for the bulk build will be installed there.</para>
-
-<screen>
-$ <userinput>cd /usr/pkgsrc</userinput>
-$ <userinput>./bootstrap/bootstrap --prefix=/usr/pbulk --varbase=/usr/pbulk/var --workdir=/tmp/pbulk-bootstrap</userinput>
-$ <userinput>rm -rf /tmp/pbulk-bootstrap</userinput>
-</screen>
-
-<para>Now the basic environment for the pbulk infrastructure is installed. The specific tools are still missing. This is a good time to edit the pkgsrc configuration file <filename>/usr/pbulk/etc/mk.conf</filename> to fit your needs. Typical things you might set now are:</para>
-
-<itemizedlist>
-<listitem><para><literal><varname>PKG_DEVELOPER</varname>=yes</literal>, to enable many consistency checks,</para></listitem>
-<listitem><para><literal><varname>WRKOBJDIR</varname>=/tmp/pbulk-outer</literal>, to keep <filename>/usr/pkgsrc</filename> free from any modifications,</para></listitem>
-<listitem><para><literal><varname>DISTDIR</varname>=/distfiles</literal>, to have only one directory in which all distfiles (for the infrastructure and for the actual packages) are downloaded,</para></listitem>
-<listitem><para><literal><varname>ACCEPTABLE_LICENSES</varname>+=...</literal>, to select some licenses additional to the usual Free/Open Source licenses that are acceptable to you,</para></listitem>
-<listitem><para><literal><varname>SKIP_LICENSE_CHECK</varname>=yes</literal>, to bypass the license checks.</para></listitem>
-</itemizedlist>
-
-<para>Now you are ready to build the rest of the pbulk infrastructure.</para>
-
-<screen>
-$ <userinput>cd pkgtools/pbulk</userinput>
-$ <userinput>/usr/pbulk/bin/bmake install</userinput>
-$ <userinput>rm -rf /tmp/pbulk-outer</userinput>
-</screen>
-
-<para>Now the pbulk infrastructure is built and installed. It still needs to be configured, and after some more preparation, we will be able to start the real bulk build.</para>
-</sect2>
-
 <sect2 id="bulk.pbulk.conf">
 <title>Configuration</title>
 
@@ -161,6 +129,15 @@ X11_TYPE=		modular		# use pkgsrc X11
 SKIP_LICENSE_CHECK=	yes		# accept all licences (useful when building all packages)
 </programlisting>
 </note>
+<!-- Think how to merge this or maintain short reference of useful settings.
+<itemizedlist>
+<listitem><para><literal><varname>PKG_DEVELOPER</varname>=yes</literal>, to enable many consistency checks,</para></listitem>
+<listitem><para><literal><varname>WRKOBJDIR</varname>=/tmp/pbulk-outer</literal>, to keep <filename>/usr/pkgsrc</filename> free from any modifications,</para></listitem>
+<listitem><para><literal><varname>DISTDIR</varname>=/distfiles</literal>, to have only one directory in which all distfiles (for the infrastructure and for the actual packages) are downloaded,</para></listitem>
+<listitem><para><literal><varname>ACCEPTABLE_LICENSES</varname>+=...</literal>, to select some licenses additional to the usual Free/Open Source licenses that are acceptable to you,</para></listitem>
+<listitem><para><literal><varname>SKIP_LICENSE_CHECK</varname>=yes</literal>, to bypass the license checks.</para></listitem>
+</itemizedlist>
+-->
 
 <para>If configured for limited list, replace the list in <filename>/usr/pbulk/etc/pbulk.list</filename>
 with your list of packages one per line without empty lines or comments. E.g.:</para>
