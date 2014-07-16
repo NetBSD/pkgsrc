@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2014/07/16 01:47:17 rodent Exp $
+# $NetBSD: Makefile,v 1.24 2014/07/16 12:16:31 rodent Exp $
 
 DISTNAME=	g95_source
 PKGNAME=	g95-0.93
@@ -14,7 +14,7 @@ HOMEPAGE=	http://www.g95.org/
 COMMENT=	Fortran 95 compiler from g95.org
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=		gmake gtar automake autoconf perl:build
+USE_TOOLS+=		gmake gtar automake autoconf
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-gcc-dir=${GCC_DIR}
@@ -42,6 +42,8 @@ GCC_CONFIGURE_ARGS+=	--without-gnu-as --with-as=/usr/ccs/bin/as
 .  else
 GCC_CONFIGURE_ARGS+=	--with-gnu-as --with-as=/usr/sfw/bin/gas
 .  endif
+.elif ${OPSYS} == "Linux"
+USE_TOOLS+=	perl:build
 .endif
 
 post-extract:
