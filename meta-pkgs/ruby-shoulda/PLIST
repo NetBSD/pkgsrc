@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2014/07/05 12:24:50 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/07/16 07:56:28 rodent Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_DOCDIR}/ri/cache.ri
-${GEM_DOCDIR}/ri/Shoulda/cdesc-Shoulda.ri
 ${GEM_LIBDIR}/Appraisals
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/CONTRIBUTING.md
