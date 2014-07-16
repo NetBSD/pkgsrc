@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2613 2014/07/16 07:42:07 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2614 2014/07/16 07:51:14 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3436,3 +3436,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Devel-PPPort to 3.24 [schmonz 2014-07-16]
 	Updated math/p5-Spreadsheet-Read to 0.54 [schmonz 2014-07-16]
 	Updated time/p5-DateTime-TimeZone to 1.71 [wen 2014-07-16]
+	Updated time/p5-MooseX-Types-DateTime to 0.10 [wen 2014-07-16]
