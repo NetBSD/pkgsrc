@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2623 2014/07/16 10:04:15 obache Exp $
+$NetBSD: CHANGES-2014,v 1.2624 2014/07/16 12:14:00 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3444,3 +3444,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added www/py-httpie version 0.8.0 [imil 2014-07-16]
 	Updated textproc/p5-XML-Twig to 3.48 [wen 2014-07-16]
 	Updated security/polarssl to 1.2.11 [obache 2014-07-16]
+	Added textproc/p5-Net-IDN-Encode 2.200 [mef 2014-07-16]
