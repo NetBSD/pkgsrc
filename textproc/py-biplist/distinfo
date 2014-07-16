@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/06/02 03:49:42 rodent Exp $
+$NetBSD: distinfo,v 1.2 2014/07/16 23:21:51 rodent Exp $
 
-SHA1 (biplist-0.6.tar.gz) = d11bc240eed5e12dd14a5684aa90d8586603784a
-RMD160 (biplist-0.6.tar.gz) = 8a7a4bbc3450251c736cb90b624bef813dfde33b
-Size (biplist-0.6.tar.gz) = 13282 bytes
+SHA1 (biplist-0.7.tar.gz) = 53d03067e994741c53f68153190c5336173f41cb
+RMD160 (biplist-0.7.tar.gz) = 2de672be180032d6d89c24a5218e50cc0f5528d9
+Size (biplist-0.7.tar.gz) = 13983 bytes
