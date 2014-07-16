@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2638 2014/07/16 23:27:13 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2639 2014/07/16 23:30:13 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3458,3 +3458,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/py-biplist to 0.7 [rodent 2014-07-16]
 	Updated textproc/py-phonenumbers to 6.2.0 [rodent 2014-07-16]
 	Updated www/py-flask-user to 0.5.2 [rodent 2014-07-16]
+	Updated www/py-wtforms-recaptcha to 0.3.2 [rodent 2014-07-16]
