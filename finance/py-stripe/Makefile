@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2014/06/15 15:34:12 rodent Exp $
+# $NetBSD: Makefile,v 1.6 2014/07/16 12:19:57 rodent Exp $
 
-DISTNAME=	stripe-1.17.0
+DISTNAME=	stripe-1.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	finance python
 MASTER_SITES=	https://pypi.python.org/packages/source/s/stripe/
