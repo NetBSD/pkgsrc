@@ -1,4 +1,4 @@
-<!-- $NetBSD: bulk.xml,v 1.14 2014/07/15 23:41:55 asau Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.15 2014/07/16 20:53:44 asau Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
@@ -72,7 +72,7 @@ temporary filesystems, others must survive a sudden reboot.</para>
 
 <listitem><para>1 GB for the pkgsrc tree (read-only, remote, permanent)</para></listitem>
 
-<listitem><para>5 GB for <filename>LOCALBASE</filename> (read-write, local, temporary for pbulk, permanent for old-bulk)</para></listitem>
+<listitem><para>5 GB for <filename>LOCALBASE</filename> (read-write, local, temporary)</para></listitem>
 
 <listitem><para>10 GB for the log files (read-write, remote, permanent)</para></listitem>
 
