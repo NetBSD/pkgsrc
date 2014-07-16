@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2014/05/29 23:37:18 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2014/07/16 12:21:29 mef Exp $
 
 DISTNAME=	signing-party_1.1.7.orig
 PKGNAME=	${DISTNAME:C/signing-party_/caff-/C/.orig//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/s/signing-party/}
 
@@ -20,6 +20,7 @@ USE_TOOLS+=	autoconf automake autoreconf
 
 DEPENDS+=	gnupg>=1.3.92:../../security/gnupg
 DEPENDS+=	p5-Text-Template-[0-9]*:../../textproc/p5-Text-Template
+DEPENDS+=	p5-Net-IDN-Encode-[0-9]*:../../textproc/p5-Net-IDN-Encode
 DEPENDS+=	p5-MIME-tools-[0-9]*:../../mail/p5-MIME-tools
 DEPENDS+=	p5-GnuPG-Interface-[0-9]*:../../security/p5-GnuPG-Interface
 DEPENDS+=	dialog>=1.0:../../misc/dialog
