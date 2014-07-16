@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2629 2014/07/16 20:21:48 plunky Exp $
+$NetBSD: CHANGES-2014,v 1.2630 2014/07/16 20:40:07 gls Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3444,7 +3444,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Added www/py-httpie version 0.8.0 [imil 2014-07-16]
 	Updated textproc/p5-XML-Twig to 3.48 [wen 2014-07-16]
 	Updated security/polarssl to 1.2.11 [obache 2014-07-16]
-	Added textproc/p5-Net-IDN-Encode 2.200 [mef 2014-07-16]
+	Added textproc/p5-Net-IDN-Encode version 2.200 [mef 2014-07-16]
 	Updated finance/py-stripe to 1.18.0 [rodent 2014-07-16]
 	Updated security/caff to 1.1.7nb2 [mef 2014-07-16]
 	Updated mail/p5-Email-Address to 1.905 [taca 2014-07-16]
