@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2652 2014/07/17 12:48:17 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2653 2014/07/17 12:52:58 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3473,3 +3473,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated biology/bioperl to 1.6.924 [wen 2014-07-17]
 	Updated devel/p5-Log-Agent to 1.000 [wen 2014-07-17]
 	Updated devel/p5-Perl-Tidy to 20140711 [wen 2014-07-17]
+	Updated devel/p5-strictures to 1.005004 [wen 2014-07-17]
