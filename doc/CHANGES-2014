@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2641 2014/07/17 03:59:00 taca Exp $
+$NetBSD: CHANGES-2014,v 1.2642 2014/07/17 05:29:46 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3462,3 +3462,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/py-qrcode to 5.0.1 [rodent 2014-07-16]
 	Updated www/drupal7 to 7.29 [taca 2014-07-17]
 	Updated www/drupal6 to 6.32 [taca 2014-07-17]
+	Updated devel/p5-Import-Into to 1.002004 [wen 2014-07-17]
