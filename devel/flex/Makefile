@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2014/04/17 16:44:30 adam Exp $
+# $NetBSD: Makefile,v 1.41 2014/07/17 12:53:49 ryoon Exp $
 
 DISTNAME=	flex-2.5.39
 CATEGORIES=	lang
@@ -29,6 +29,10 @@ LIBS.SunOS+=		-lm
 
 .if ${LOWER_OPSYS} == "aix"
 CFLAGS+=		-D_LINUX_SOURCE_COMPAT
+.endif
+
+.if ${OS_VARIANT} == "SCOOSR5"
+LDFLAGS.SCO_SV+=	-lsocket
 .endif
 
 #.if !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
