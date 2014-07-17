@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.11 2014/07/16 11:53:48 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.12 2014/07/17 19:29:47 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q2 branch:
@@ -44,3 +44,15 @@ Pullup ticket #4451 - requested by tron
 databases/phpmyadmin: security update
 Pullup ticket #4452 - requested by obache
 security/polarssl: security update
+Pullup ticket #4453 - requested by taca
+lang/php55: security patch
+Pullup ticket #4454 - requested by taca
+lang/php54: security patch
+Pullup ticket #4455 - requested by taca
+mail/p5-Email-Address: security update
+Pullup ticket #4456 - requested by taca
+www/drupal7: security update
+Pullup ticket #4457 - requested by taca
+www/drupal6: security update
+Pullup ticket #4458 - requested by obache
+textproc/json-c: bug fix patch
