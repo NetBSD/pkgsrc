@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2014/05/09 07:30:09 wen Exp $
+$NetBSD: distinfo,v 1.13 2014/07/17 12:47:17 wen Exp $
 
-SHA1 (Perl-Tidy-20140328.tar.gz) = 5a85d893615a89afd0313200295f2d55ec9ef9fa
-RMD160 (Perl-Tidy-20140328.tar.gz) = a43242c08856441d67d0698e49266e0f8759f1bf
-Size (Perl-Tidy-20140328.tar.gz) = 420008 bytes
+SHA1 (Perl-Tidy-20140711.tar.gz) = 40ab9efd98c732c6f4f43a60f74ca0af8f15ed6f
+RMD160 (Perl-Tidy-20140711.tar.gz) = fdcf2981a45a4e701428ebd1a316f1b227cf4790
+Size (Perl-Tidy-20140711.tar.gz) = 422397 bytes
