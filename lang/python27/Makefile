@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2014/07/02 09:53:16 adam Exp $
+# $NetBSD: Makefile,v 1.45 2014/07/17 15:26:49 ryoon Exp $
 
 .include "dist.mk"
 
@@ -29,7 +29,8 @@ CHECK_PORTABILITY_SKIP=	Tools/faqwiz/move-faqwiz.sh
 
 USE_LANGUAGES=		c c++
 
-PTHREAD_OPTS+=	require
+PTHREAD_OPTS+=		require
+PTHREAD_AUTO_VARS=	yes
 .include "../../mk/pthread.buildlink3.mk"
 .if ${PTHREAD_TYPE} == "pth"
 CONFIGURE_ARGS+=	--with-pth
@@ -74,6 +75,8 @@ PY_PLATNAME=	sunos${OS_VERSION:C/\..*//}
 PY_PLATNAME=	hp-ux11
 .elif ${OPSYS} == "Linux"
 PY_PLATNAME=	linux2
+.elif ${OS_VARIANT} == "SCOOSR5"
+PY_PLATNAME=	sco_sv3
 .else
 PY_PLATNAME=	${LOWER_OPSYS}${OS_VERSION:C/\..*//}
 .endif
@@ -176,6 +179,12 @@ post-extract:
 post-install:
 	${LN} -fs ${DESTDIR}${PREFIX}/lib/libpython2.7.sl \
 		${DESTDIR}${PREFIX}/lib/libpython2.7.sl.1.0
+.endif
+
+.if ${OS_VARIANT} == "SCOOSR5"
+# SCO OpenServer 5.0.7/3.2 has no socklen_t in system headers, but has in
+# GNU pth's header. It should be used in this case.
+CONFIGURE_ENV+=		ac_cv_type_socklen_t=yes
 .endif
 
 BUILDLINK_DEPMETHOD.readline=		build

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.44 2014/07/02 09:53:16 adam Exp $
+$NetBSD: distinfo,v 1.45 2014/07/17 15:26:49 ryoon Exp $
 
 SHA1 (Python-2.7.8.tar.xz) = 9c6281eeace0c3646fa556c8087bb1b7e033c9c4
 RMD160 (Python-2.7.8.tar.xz) = 04d7d55ea65074a9b419e5d0920414e54691d907
@@ -7,19 +7,24 @@ SHA1 (patch-Include_node.h) = 673d148b625711ac47e4bfeb0f5b0d5b31f94d7e
 SHA1 (patch-Include_pyerrors.h) = 3eba043c83b1d1df4918524f7b53047a6ed372ae
 SHA1 (patch-Include_pyport.h) = 971c7c548b92595712d0d70a0917a0ccc83b6c7e
 SHA1 (patch-Lib_distutils_unixccompiler.py) = 39b967dc2ae648143d5841f22602a21063b4d5ea
+SHA1 (patch-Lib_multiprocessing_process.py) = b47ad4cbeddbcfb4342c08c84d0d515a793815d4
 SHA1 (patch-Lib_poplib.py) = 5d7f64b028abd2fd43651f27a7f2ce7efe5b0859
 SHA1 (patch-Lib_smtplib.py) = f1118bbc53b4e292eb9a28ef3ef10eb4aa553bc3
 SHA1 (patch-Lib_test_test__poplib.py) = 1bdef76b687d042272e35c08521d4244d2c7fbe1
 SHA1 (patch-Lib_test_test_smtplib.py) = 9e8a7f826c7d0f493746718b49fc27ac97c2cbb1
 SHA1 (patch-Misc_NEWS) = c9171e10227567750db8e11881aca305cd8c3a42
 SHA1 (patch-Modules___ssl.c) = aaddaea5bcd6c84d3d896c7c37f710933b8228bc
+SHA1 (patch-Modules_getaddrinfo.c) = 696c58c4c4bbb710fb1508d7d88864d0b08cfc79
 SHA1 (patch-Modules_getpath.c) = f68b38eb90f974b67ceab3922ce7f92eb77f25c3
+SHA1 (patch-Modules_mmapmodule.c) = 87ea76e6d8263045c1ca794ff5c75ed631a74b6d
+SHA1 (patch-Modules_posixmodule.c) = b8960592611499202bb5ff8521d619e0637177b6
+SHA1 (patch-Modules_socketmodule.c) = 960ce4af2a142c471c707de446f2d390044bbc13
 SHA1 (patch-aa) = 990e4025bb6a37715e1f5df1831499f0ab08acfa
 SHA1 (patch-ab) = 0d0ae9802dfe3b85659adb16793affd8c4ffce43
 SHA1 (patch-ad) = de730b9f5a5efb56afa8bed05824b5f6579242ec
 SHA1 (patch-ae) = ff6d8c6164fe3c6dc4fb33d88eb8a49d5c5442f6
 SHA1 (patch-ah) = ae3ce0656d890ca34292920bf0185f94ba847139
-SHA1 (patch-al) = d07699c6987da69fca911a15ab8011a82e43143d
+SHA1 (patch-al) = 43457e0749366e65bc139d0905ca95c6d6d79ecf
 SHA1 (patch-am) = 366ce0b130cc9b6d6c5354769da05bb4b5845e01
 SHA1 (patch-an) = 6098fbf0fc31422196cc40d3a227934523db11ca
 SHA1 (patch-ao) = 3a1cd2b255340fd23fc1fce8680e692581ffcec1
