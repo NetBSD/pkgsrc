@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2014/06/02 12:51:38 obache Exp $
+# $NetBSD: Makefile,v 1.29 2014/07/17 12:12:26 wen Exp $
 
-DISTNAME=	BioPerl-1.6.923
+DISTNAME=	BioPerl-1.6.924
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	2
 CATEGORIES=	biology perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Bio/}
 
@@ -48,9 +47,12 @@ DEPENDS+=	p5-YAML-[0-9]*:../../textproc/p5-YAML
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-libxml-[0-9]*:../../textproc/p5-libxml
 
+# Suggested
+DEPENDS+=	p5-XML-DOM>=0:../../textproc/p5-XML-DOM
+
 USE_TOOLS+=		pax
 
-REPLACE_PERL+=		scripts/*/*.pl
+REPLACE_PERL+=		scripts/*/*.pl Bio/LiveSeq/Chain.pm
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/Bio/.packlist
