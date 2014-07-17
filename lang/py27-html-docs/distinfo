@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/06/17 12:38:05 obache Exp $
+$NetBSD: distinfo,v 1.2 2014/07/17 10:04:45 obache Exp $
 
-SHA1 (python/python-2.7.2-docs-html.tar.bz2) = 0886850a5bcf3e14e903cd33d51d1a8b664cfe36
-RMD160 (python/python-2.7.2-docs-html.tar.bz2) = d898264a2f0da8be8722396d25149c987e3614f8
-Size (python/python-2.7.2-docs-html.tar.bz2) = 4249897 bytes
+SHA1 (python/python-2.7.8-docs-html.tar.bz2) = d83b8cc59c5fd646344b0a5cae16bd5594624e68
+RMD160 (python/python-2.7.8-docs-html.tar.bz2) = 3165152c6fd41f97b46df379fcfc1d29f2bfaa4b
+Size (python/python-2.7.8-docs-html.tar.bz2) = 4511331 bytes
