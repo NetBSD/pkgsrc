@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2014/06/27 11:34:19 taca Exp $
+$NetBSD: distinfo,v 1.25.2.1 2014/07/17 18:03:59 tron Exp $
 
 SHA1 (php-5.5.14.tar.bz2) = 062d351da165aa0568e4d8cbc53a18d73b99f49a
 RMD160 (php-5.5.14.tar.bz2) = d3f87693d3118cfdc64a7b77e9b765ce4eb7ae60
@@ -16,6 +16,8 @@ SHA1 (patch-ext_pdo__mysql_config.m4) = 3526e737da25129710218e7141d5a05ae0a51390
 SHA1 (patch-ext_pdo_config.m4) = 26a4ad02e5c6b7a54c3c54a6d026a3ccfed62c59
 SHA1 (patch-ext_phar_Makefile.frag) = 1af23d9135557bc7ba2f3627b317d4cbef37aaba
 SHA1 (patch-ext_phar_phar_phar.php) = 011f2d68048dbc63f5efcab4e23062daa9e8e08c
+SHA1 (patch-ext_spl_spl__array.c) = de3ac1ade2201fedb41fb23efb03887307de45bc
+SHA1 (patch-ext_spl_spl__dllist.c) = f98d5dc1199eb021e776599761e0823ce8463f2e
 SHA1 (patch-ext_sqlite3_libsqlite_sqlite3.c) = b384b9daa466f2a8a3e6cfd4ea6cff81f9342941
 SHA1 (patch-ext_standard_basic__functions.c) = f2a44998145306c2cb2d2f3822c0e7cc70c778b4
 SHA1 (patch-makedist) = 3f6b0621d30264824f2cb4c2903d15ba95be3937
