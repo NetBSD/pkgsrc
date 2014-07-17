@@ -1,16 +1,20 @@
-# $NetBSD: Makefile,v 1.4 2014/06/01 16:35:37 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/07/17 14:31:46 ryoon Exp $
 #
 
-DISTNAME=	roboto-fonts-20111115a
-PKGREVISION=	1
+DISTNAME=	RobotoTTF
+PKGNAME=	roboto-fonts-20140716
 CATEGORIES=	fonts
-MASTER_SITES=	${MASTER_SITE_LOCAL}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	http://material-design.storage.googleapis.com/downloads/
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://source.android.com/
+HOMEPAGE=	http://www.google.com/design/spec/style/typography.html
 COMMENT=	Roboto font family from Google's Android 4
 LICENSE=	apache-2.0
+
+DIST_SUBDIR=	${PKGNAME_NOREV}
+
+WRKSRC=		${WRKDIR}
 
 USE_LANGUAGES=	# none
 USE_X11BASE=	yes
@@ -19,22 +23,29 @@ NO_BUILD=	yes
 FONTDIR=	${PREFIX}/share/fonts/X11/TTF
 FONTS_DIRS.ttf=	${FONTDIR}
 
-INSTALLATION_DIRS=	share/fonts/X11/TTF \
-			${PREFIX}/share/doc/${PKGBASE}
+INSTALLATION_DIRS=	share/fonts/X11/TTF
 
-INSTALL_FONTS=	Roboto-Bold.ttf \
-		Roboto-BoldCondensed.ttf \
-		Roboto-BoldCondensedItalic.ttf \
+INSTALL_FONTS=	Roboto-Black.ttf \
+		Roboto-BlackItalic.ttf \
+		Roboto-Bold.ttf \
 		Roboto-BoldItalic.ttf \
-		Roboto-Condensed.ttf \
-		Roboto-CondensedItalic.ttf \
 		Roboto-Italic.ttf \
-		Roboto-Regular.ttf
+		Roboto-Light.ttf \
+		Roboto-LightItalic.ttf \
+		Roboto-Medium.ttf \
+		Roboto-MediumItalic.ttf \
+		Roboto-Regular.ttf \
+		Roboto-Thin.ttf \
+		Roboto-ThinItalic.ttf \
+		RobotoCondensed-Bold.ttf \
+		RobotoCondensed-BoldItalic.ttf \
+		RobotoCondensed-Italic.ttf \
+		RobotoCondensed-Light.ttf \
+		RobotoCondensed-LightItalic.ttf
 
 do-install:
 .for i in ${INSTALL_FONTS}
 	${INSTALL_DATA} ${WRKSRC}/${i} ${DESTDIR}${FONTDIR}
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/NOTICE ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../mk/bsd.pkg.mk"
