@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2644 2014/07/17 09:56:33 obache Exp $
+$NetBSD: CHANGES-2014,v 1.2645 2014/07/17 10:04:53 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3465,3 +3465,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Import-Into to 1.002004 [wen 2014-07-17]
 	Updated devel/p5-Inline to 0.62 [wen 2014-07-17]
 	Updated lang/py26-html-docs to 2.6.9 [obache 2014-07-17]
+	Updated lang/py27-html-docs to 2.7.8 [obache 2014-07-17]
