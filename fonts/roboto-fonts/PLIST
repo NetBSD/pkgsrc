@@ -1,10 +1,18 @@
-@comment $NetBSD: PLIST,v 1.3 2014/06/01 16:35:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/07/17 14:31:47 ryoon Exp $
+share/fonts/X11/TTF/Roboto-Black.ttf
+share/fonts/X11/TTF/Roboto-BlackItalic.ttf
 share/fonts/X11/TTF/Roboto-Bold.ttf
-share/fonts/X11/TTF/Roboto-BoldCondensed.ttf
-share/fonts/X11/TTF/Roboto-BoldCondensedItalic.ttf
 share/fonts/X11/TTF/Roboto-BoldItalic.ttf
-share/fonts/X11/TTF/Roboto-Condensed.ttf
-share/fonts/X11/TTF/Roboto-CondensedItalic.ttf
 share/fonts/X11/TTF/Roboto-Italic.ttf
+share/fonts/X11/TTF/Roboto-Light.ttf
+share/fonts/X11/TTF/Roboto-LightItalic.ttf
+share/fonts/X11/TTF/Roboto-Medium.ttf
+share/fonts/X11/TTF/Roboto-MediumItalic.ttf
 share/fonts/X11/TTF/Roboto-Regular.ttf
-share/doc/roboto-fonts/NOTICE
+share/fonts/X11/TTF/Roboto-Thin.ttf
+share/fonts/X11/TTF/Roboto-ThinItalic.ttf
+share/fonts/X11/TTF/RobotoCondensed-Bold.ttf
+share/fonts/X11/TTF/RobotoCondensed-BoldItalic.ttf
+share/fonts/X11/TTF/RobotoCondensed-Italic.ttf
+share/fonts/X11/TTF/RobotoCondensed-Light.ttf
+share/fonts/X11/TTF/RobotoCondensed-LightItalic.ttf
