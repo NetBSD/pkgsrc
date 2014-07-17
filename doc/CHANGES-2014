@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2646 2014/07/17 11:31:08 obache Exp $
+$NetBSD: CHANGES-2014,v 1.2647 2014/07/17 11:34:52 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3467,3 +3467,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/py26-html-docs to 2.6.9 [obache 2014-07-17]
 	Updated lang/py27-html-docs to 2.7.8 [obache 2014-07-17]
 	Updated lang/py26-html-docs to 2.6.9nb1 [obache 2014-07-17]
+	Updated lang/py27-html-docs to 2.7.8nb1 [obache 2014-07-17]
