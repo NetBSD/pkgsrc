@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2649 2014/07/17 11:45:51 obache Exp $
+$NetBSD: CHANGES-2014,v 1.2650 2014/07/17 12:13:50 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3470,3 +3470,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/py27-html-docs to 2.7.8nb1 [obache 2014-07-17]
 	Added lang/py33-html-docs version 3.3.5 [obache 2014-07-17]
 	Added lang/py34-html-docs version 3.4.1 [obache 2014-07-17]
+	Updated biology/bioperl to 1.6.924 [wen 2014-07-17]
