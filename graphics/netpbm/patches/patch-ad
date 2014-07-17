@@ -1,8 +1,19 @@
-$NetBSD: patch-ad,v 1.20 2006/02/02 16:04:13 joerg Exp $
+$NetBSD: patch-ad,v 1.21 2014/07/17 15:52:26 ryoon Exp $
 
---- converter/ppm/ppmtompeg/parallel.c.orig	2006-02-02 15:52:14.000000000 +0000
+--- converter/ppm/ppmtompeg/parallel.c.orig	2006-08-19 03:12:28.000000000 +0000
 +++ converter/ppm/ppmtompeg/parallel.c
-@@ -27,6 +27,7 @@
+@@ -12,7 +12,10 @@
+  * HEADER FILES *
+  *==============*/
+ 
++/* SCO OpenServer 5.0.7/3.2 does not typedef u_long, when _XOPEN_SOURCE is defined. */
++#if !defined(_SCO_DS)
+ #define _XOPEN_SOURCE 500 /* Make sure stdio.h contains pclose() */
++#endif
+ /* _ALL_SOURCE is needed on AIX to make the C library include the 
+    socket services (e.g. define struct sockaddr) 
+ 
+@@ -27,6 +30,7 @@
  */
  
  
@@ -10,7 +21,7 @@ $NetBSD: patch-ad,v 1.20 2006/02/02 16:04:13 joerg Exp $
  #include <stdarg.h>
  #include <time.h>
  #include <unistd.h>
-@@ -36,7 +37,6 @@
+@@ -36,7 +40,6 @@
  #include <signal.h>
  #include <netdb.h>
  #include <assert.h>
