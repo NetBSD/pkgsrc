@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.86 2014/05/16 12:43:52 ryoon Exp $
+$NetBSD: distinfo,v 1.87 2014/07/17 15:52:25 ryoon Exp $
 
 SHA1 (netpbm-10.35.80.tgz) = e2bc82c2fc76775a837596f9774f4b24275f794a
 RMD160 (netpbm-10.35.80.tgz) = f8c6dc01ada947f27dd851d954d240f248e07c55
@@ -6,7 +6,7 @@ Size (netpbm-10.35.80.tgz) = 2547601 bytes
 SHA1 (patch-aa) = fd533685c5b0058f19d1b4525a4b2b9f2b239627
 SHA1 (patch-ab) = 4d6508ad837d455ea3f8ebaa704f33f9e089f6e0
 SHA1 (patch-ac) = 11c029673a53e9344a477db6cfcb46f32e9f6a93
-SHA1 (patch-ad) = b4a5833e18afd5a991aad897674386a3f00c3ee1
+SHA1 (patch-ad) = c9ed6aed9d503a94c94a39c8ee088f9ba2a6dd25
 SHA1 (patch-ae) = 33a5be2843dd85b530f5e6ba496cd0380cd5edd1
 SHA1 (patch-af) = e8965899d577648c6144098f2aa8e1594551666a
 SHA1 (patch-ag) = 093fe392a3e6156cc55f225a6f139842c0d00570
@@ -20,11 +20,12 @@ SHA1 (patch-aw) = bd890324e95fa7bb893d9d5cdab9d5a33dcff777
 SHA1 (patch-ax) = d50e56191192b4caf423ed081581868bb1a63de8
 SHA1 (patch-ay) = 60ab532de6d6ec498ada140f795bba327a562e13
 SHA1 (patch-cb) = b1be33ae6acfe57bf2f407cd48a6b140c3ddea85
+SHA1 (patch-converter_ppm_ppmtompeg_psocket.c) = ebb11ea1867ed401a0299eeb907aad70276ce843
 SHA1 (patch-da) = 8ae329469bf0bd55b671dffeb4253b8d14621f5c
 SHA1 (patch-db) = 23a05e54043ee84a0b7ec507a383d5cd8adfcca5
 SHA1 (patch-dc) = 8ed1365dccf5abb0e158a4f7a65749ff5b244ef3
 SHA1 (patch-dd) = 9f9c53959f5afd444ce427b782f9ba2c73068f27
 SHA1 (patch-eb) = 8af326d4be7e280764843ce213672186fce3f9a8
 SHA1 (patch-lib_libpbm3.c) = 42e7d49fecb559fb1d55345e5053337e60f7458b
-SHA1 (patch-lib_libsystem.c) = 6458ae8eac15a13e3b92ddcb546c24ff85067209
+SHA1 (patch-lib_libsystem.c) = a140994267e62a90dd63667a0f87c65a2278ed0f
 SHA1 (patch-ppmdraw) = d901a690f8f21a1af940129d1edef509b369ea1a
