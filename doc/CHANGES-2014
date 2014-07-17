@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2654 2014/07/17 12:57:49 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2655 2014/07/17 13:01:12 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3475,3 +3475,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Perl-Tidy to 20140711 [wen 2014-07-17]
 	Updated devel/p5-strictures to 1.005004 [wen 2014-07-17]
 	Updated security/p5-Digest-SHA3 to 0.22 [wen 2014-07-17]
+	Updated security/p5-Digest-SHA to 5.92 [wen 2014-07-17]
