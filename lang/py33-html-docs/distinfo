@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/07/17 11:37:38 obache Exp $
+
+SHA1 (python/python-3.3.5-docs-html.tar.bz2) = 3f1104de2af4eceaed0775b31ba1d47a2372cb8b
+RMD160 (python/python-3.3.5-docs-html.tar.bz2) = c6d6e31594ba1b4bc0a8fd7700bdb9a3a2efb5e3
+Size (python/python-3.3.5-docs-html.tar.bz2) = 4955315 bytes
