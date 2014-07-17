@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.13 2014/07/02 09:53:16 adam Exp $
+$NetBSD: patch-al,v 1.14 2014/07/17 15:26:49 ryoon Exp $
 
 - recognize MirBSD, Interix
 - remove special-case library version hack for FreeBSD
@@ -34,17 +34,29 @@ $NetBSD: patch-al,v 1.13 2014/07/02 09:53:16 adam Exp $
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
  	  ;;
      hp*|HP*)
-@@ -6050,8 +6045,7 @@ $as_echo "$CC" >&6; }
+@@ -5393,6 +5388,11 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
+ 	LDLIBRARY='libpython$(VERSION).so'
+ 	RUNSHARED=LIBPATH=`pwd`${LIBPATH:+:${LIBPATH}}
+ 	;;
++    SCO_SV*)
++	LDLIBRARY='libpython$(VERSION).so'
++	RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
++	INSTSONAME="$LDLIBRARY".$SOVERSION
++	;;
+ 
+   esac
+ else # shared is disabled
+@@ -6050,8 +6050,7 @@ $as_echo "$CC" >&6; }
  		cur_target_minor=`sw_vers -productVersion | \
  				sed 's/\([0-9]*\)\.\([0-9]*\).*/\2/'`
  		cur_target="${cur_target_major}.${cur_target_minor}"
 -		if test ${cur_target_major} -eq 10 && \
 -		   test ${cur_target_minor} -ge 3
-+		if false
++		if test false
  		then
  		    cur_target=10.3
  		    if test ${enable_universalsdk}; then
-@@ -8209,9 +8203,9 @@ then
+@@ -8209,9 +8208,9 @@ then
  			LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  		else
  			# No framework, use the Python app as bundle-loader
@@ -52,12 +64,12 @@ $NetBSD: patch-al,v 1.13 2014/07/02 09:53:16 adam Exp $
 -			LDSHARED="$LDSHARED "'-bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
 -			LDCXXSHARED="$LDCXXSHARED "'-bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
 +			BLDSHARED="$LDSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BUILDPYTHON)'
-+			LDSHARED="$LDSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
++			DSHARED="$LDSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
 +			LDCXXSHARED="$LDCXXSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
  		fi ;;
  	Darwin/*)
  		# Use -undefined dynamic_lookup whenever possible (10.3 and later).
-@@ -8234,9 +8228,9 @@ then
+@@ -8234,9 +8233,9 @@ then
  				LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  			else
  				# No framework, use the Python app as bundle-loader
@@ -70,7 +82,7 @@ $NetBSD: patch-al,v 1.13 2014/07/02 09:53:16 adam Exp $
  			fi
  		else
  			# building for OS X 10.3 and later
-@@ -8250,7 +8244,7 @@ then
+@@ -8250,7 +8249,7 @@ then
  		;;
  	Linux*|GNU*|QNX*)
  		LDSHARED='$(CC) -shared'
@@ -79,7 +91,7 @@ $NetBSD: patch-al,v 1.13 2014/07/02 09:53:16 adam Exp $
  	BSD/OS*/4*)
  		LDSHARED="gcc -shared"
  		LDCXXSHARED="g++ -shared";;
-@@ -8278,9 +8272,15 @@ then
+@@ -8278,6 +8277,9 @@ then
  				   ;;
  				esac
  		fi;;
@@ -89,13 +101,7 @@ $NetBSD: patch-al,v 1.13 2014/07/02 09:53:16 adam Exp $
  	NetBSD*|DragonFly*)
  		LDSHARED='$(CC) -shared'
  		LDCXXSHARED='$(CXX) -shared';;
-+	Interix*)
-+		LDSHARED='$(CC) -shared'" ${LDFLAGS}"
-+		LDCXXSHARED='$(CXX) -shared'" ${LDFLAGS}";; # XXX tv needs image-base hack
- 	OpenUNIX*|UnixWare*)
- 		if test "$GCC" = "yes" ; then
- 			LDSHARED='$(CC) -shared'
-@@ -8324,7 +8324,8 @@ then
+@@ -8324,7 +8326,8 @@ then
  		 fi;;
  	Linux*|GNU*) CCSHARED="-fPIC";;
  	BSD/OS*/4*) CCSHARED="-fpic";;
@@ -105,7 +111,7 @@ $NetBSD: patch-al,v 1.13 2014/07/02 09:53:16 adam Exp $
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then CCSHARED="-fPIC"
-@@ -8376,11 +8377,12 @@ then
+@@ -8376,11 +8379,12 @@ then
  	OpenUNIX*|UnixWare*) LINKFORSHARED="-Wl,-Bexport";;
  	SCO_SV*) LINKFORSHARED="-Wl,-Bexport";;
  	ReliantUNIX*) LINKFORSHARED="-W1 -Blargedynsym";;
@@ -119,3 +125,14 @@ $NetBSD: patch-al,v 1.13 2014/07/02 09:53:16 adam Exp $
  	SunOS/5*) case $CC in
  		  *gcc*)
  		    if $CC -Xlinker --help 2>&1 | grep export-dynamic >/dev/null
+@@ -10370,6 +10374,10 @@ int
+ main ()
+ {
+ int x=kqueue()
++/* SCO OpenServer 5.0.7/3.2 has not kqueue, but detected as yes. */
++#if defined(_SCO_DS)
++#error no kqueue
++#endif
+   ;
+   return 0;
+ }
