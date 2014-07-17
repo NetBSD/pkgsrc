@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2657 2014/07/17 14:32:32 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.2658 2014/07/17 14:53:05 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3478,3 +3478,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/p5-Digest-SHA to 5.92 [wen 2014-07-17]
 	Updated security/p5-Digest-Perl-MD5 to 1.9 [wen 2014-07-17]
 	Updated fonts/roboto-fonts to 20140716 [ryoon 2014-07-17]
+	Added fonts/sourcehansans-fonts version 1.000 [ryoon 2014-07-17]
