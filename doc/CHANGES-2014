@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2643 2014/07/17 05:40:07 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2644 2014/07/17 09:56:33 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3464,3 +3464,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/drupal6 to 6.32 [taca 2014-07-17]
 	Updated devel/p5-Import-Into to 1.002004 [wen 2014-07-17]
 	Updated devel/p5-Inline to 0.62 [wen 2014-07-17]
+	Updated lang/py26-html-docs to 2.6.9 [obache 2014-07-17]
