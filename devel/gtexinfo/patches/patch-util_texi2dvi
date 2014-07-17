@@ -1,7 +1,10 @@
-$NetBSD: patch-util_texi2dvi,v 1.3 2014/04/15 05:27:00 richard Exp $
+$NetBSD: patch-util_texi2dvi,v 1.4 2014/07/17 12:56:23 ryoon Exp $
+
 As indicated in pkg/48075, pdksh doesn't support double-parens
 if not containing an arithmetic expression of a particular form.
 Older bash and ast-ksh apparently also had problems with this.
+
+Second part: fix PR pkg/48075. This should work with pdksh.
  
 --- util/texi2dvi.orig	2013-09-26 23:04:02.000000000 +0000
 +++ util/texi2dvi
