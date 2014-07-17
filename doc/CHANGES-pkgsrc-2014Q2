@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.12 2014/07/17 19:29:47 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.13 2014/07/17 22:32:56 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q2 branch:
@@ -56,3 +56,4 @@ Pullup ticket #4457 - requested by taca
 www/drupal6: security update
 Pullup ticket #4458 - requested by obache
 textproc/json-c: bug fix patch
+
