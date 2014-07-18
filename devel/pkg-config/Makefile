@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2013/09/28 06:32:08 obache Exp $
+# $NetBSD: Makefile,v 1.30 2014/07/18 19:50:47 ryoon Exp $
 
 DISTNAME=	pkg-config-0.28
 CATEGORIES=	devel
@@ -32,6 +32,11 @@ post-configure:
 	cd ${WRKSRC}/glib; \
 	${GREP} -v HAVE_DTRACE config.h >config.h.new; \
 	${MV} config.h.new config.h
+.endif
+
+.if ${OS_VARIANT} == "SCOOSR5"
+# SCO OpenServer 5.0.7/3.2 has no IPv6 support.
+CONFIGURE_ENV+=		glib_cv_value_AF_INET6=yes
 .endif
 
 .if ${OPSYS} == "SunOS"
