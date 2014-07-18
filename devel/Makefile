@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1932 2014/07/05 19:38:59 rodent Exp $
+# $NetBSD: Makefile,v 1.1933 2014/07/18 02:02:57 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -956,6 +956,7 @@ SUBDIR+=	p5-IPC-SysV
 SUBDIR+=	p5-IPC-System-Simple
 SUBDIR+=	p5-Import-Into
 SUBDIR+=	p5-Inline
+SUBDIR+=	p5-Inline-C
 SUBDIR+=	p5-InlineX-C2XS
 SUBDIR+=	p5-Internals
 SUBDIR+=	p5-LDAP
