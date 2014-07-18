@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2668 2014/07/18 10:32:00 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.2669 2014/07/18 10:41:02 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3489,3 +3489,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/sphinxsearch to 2.1.9 [fhajny 2014-07-18]
 	Updated databases/redis to 2.8.13 [fhajny 2014-07-18]
 	Updated devel/libbson to 0.98.0 [fhajny 2014-07-18]
+	Updated wm/ctwm to 3.8.2 [obache 2014-07-18]
