@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.28 2014/05/28 15:49:34 adam Exp $
+# $NetBSD: Makefile,v 1.29 2014/07/18 13:54:05 adam Exp $
 
-DISTNAME=	clang-3.4.1
+DISTNAME=	clang-3.4.2
 CATEGORIES=	lang
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 DISTFILES=	llvm-${PKGVERSION_NOREV}.src.tar.gz \
-		libcxx-3.4.src.tar.gz \
+		libcxx-${PKGVERSION_NOREV}.src.tar.gz \
 		cfe-${PKGVERSION_NOREV}.src.tar.gz \
 		compiler-rt-3.4.src.tar.gz
-SITES.libcxx-3.4.src.tar.gz=http://llvm.org/releases/3.4/
 SITES.compiler-rt-3.4.src.tar.gz=http://llvm.org/releases/3.4/
 
 MAINTAINER=	adam.hoka@gmail.com
@@ -86,7 +85,7 @@ SUBST_SED.fix-paths+=		-e 's,^.*cxa_finalize.*$$,		; //cxa_finalize.o,g'
 .endif
 
 post-extract:
-	mv ${WRKDIR}/libcxx-3.4 ${WRKSRC}/projects/libcxx
+	mv ${WRKDIR}/libcxx-${PKGVERSION_NOREV}.src ${WRKSRC}/projects/libcxx
 	mv ${WRKDIR}/compiler-rt-3.4 ${WRKSRC}/projects/compiler-rt
 	mv ${WRKDIR}/cfe-${PKGVERSION_NOREV}.src ${WRKSRC}/tools/clang
 .if ${OPSYS} == "SunOS"
