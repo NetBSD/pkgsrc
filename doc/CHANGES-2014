@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2666 2014/07/18 09:01:54 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.2667 2014/07/18 09:34:09 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3487,3 +3487,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added textproc/p5-Text-Soundex version 3.04 [obache 2014-07-18]
 	Updated devel/gettext-tools to 0.18.3.2nb1 [jperkin 2014-07-18]
 	Updated textproc/sphinxsearch to 2.1.9 [fhajny 2014-07-18]
+	Updated databases/redis to 2.8.13 [fhajny 2014-07-18]
