@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2014/06/02 14:15:37 wen Exp $
+$NetBSD: distinfo,v 1.21 2014/07/18 13:34:17 wen Exp $
 
-SHA1 (moodle-2.7.tgz) = 2661c183214c40da7122c01018d9dd13f15dc091
-RMD160 (moodle-2.7.tgz) = e0396e9766afd06dd8b2d688ac0bfb6fa7db5cd8
-Size (moodle-2.7.tgz) = 34676653 bytes
+SHA1 (moodle-2.7.1.tgz) = b0474b2cac4d05897b181f1db7d921586a771903
+RMD160 (moodle-2.7.1.tgz) = deed447a568a71a5b137ee97356900f8a3707eb9
+Size (moodle-2.7.1.tgz) = 34818166 bytes
