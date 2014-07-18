@@ -1,0 +1,13 @@
+$NetBSD: patch-dist_s__sig,v 1.1 2014/07/18 11:20:39 ryoon Exp $
+
+--- dist/s_sig.orig	2010-04-12 20:25:23.000000000 +0000
++++ dist/s_sig
+@@ -34,4 +34,8 @@ cat << END_OF_TEXT > $b
+  */
+ 
++#if !defined(u_int64_t)
++typedef unsigned long long u_int64_t;
++#endif
++
+ #include "db_config.h"
+ 
