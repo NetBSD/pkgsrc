@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2014/07/17 12:49:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.63 2014/07/18 20:08:24 ryoon Exp $
 
 BASH_VERSION=		4.3
 
@@ -29,8 +29,6 @@ CONFIGURE_ARGS=		LOCAL_LDFLAGS=${EXPORT_SYMBOLS_LDFLAGS:M*:Q}
 CPPFLAGS+=		-DDEFAULT_PATH_VALUE="\"/usr/bin:/bin:${LOCALBASE}/bin:/usr/local/bin\""
 MAKE_JOBS_SAFE=		no
 TEST_TARGET=		test
-
-CFLAGS+=		-g
 
 INFO_FILES=		YES # PLIST
 PKG_SHELL=		bin/bash
