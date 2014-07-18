@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2014/03/01 02:15:14 wen Exp $
+$NetBSD: distinfo,v 1.7 2014/07/18 01:32:42 wen Exp $
 
-SHA1 (boolean-0.32.tar.gz) = c982a0864274883e129f6a89c9f6661657e4bfc1
-RMD160 (boolean-0.32.tar.gz) = ce3c02bad177e54a9c3ceb340b8ddba03b9f6c53
-Size (boolean-0.32.tar.gz) = 13096 bytes
+SHA1 (boolean-0.38.tar.gz) = 378207f4de70fd5f9fdc9006c464d09ad4b60b1a
+RMD160 (boolean-0.38.tar.gz) = 7b3dc2a6ca9cad2d9a2bd48b5e23eca9313f96bb
+Size (boolean-0.38.tar.gz) = 13969 bytes
