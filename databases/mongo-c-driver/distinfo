@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2014/06/11 14:31:29 fhajny Exp $
+$NetBSD: distinfo,v 1.3 2014/07/18 10:41:43 fhajny Exp $
 
-SHA1 (mongo-c-driver-0.96.2.tar.gz) = 6a69db4d2e5e2fc68fd2959666802786111c9275
-RMD160 (mongo-c-driver-0.96.2.tar.gz) = 9fd69c5844ab05a1012a7c2a3f73f8ce55b87274
-Size (mongo-c-driver-0.96.2.tar.gz) = 5355379 bytes
-SHA1 (patch-configure) = 31d235d3040017c332b496579653b24d42ee1431
+SHA1 (mongo-c-driver-0.98.0.tar.gz) = 7265e5f7865687e2e1dd59a106e5170534dfa3e1
+RMD160 (mongo-c-driver-0.98.0.tar.gz) = 5643d086a1fd4d108695f25146d2e085a1f41ebe
+Size (mongo-c-driver-0.98.0.tar.gz) = 5338868 bytes
