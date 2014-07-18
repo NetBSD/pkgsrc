@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.59 2014/07/17 13:44:28 ryoon Exp $
+$NetBSD: distinfo,v 1.60 2014/07/18 10:00:18 ryoon Exp $
 
 SHA1 (cmake-2.8.12.2.tar.gz) = cca70b307aa32a6a32c72e01fdfcecc84c1c2690
 RMD160 (cmake-2.8.12.2.tar.gz) = ee92327c3870f3ae2ea997d0258b0ef141e90525
@@ -9,7 +9,7 @@ SHA1 (patch-Modules_FindX11.cmake) = e5c9f5fd382effb85ae75fe603de00e5e58d788a
 SHA1 (patch-Modules_Platform_SCO__SV.cmake) = 3ed230b3a06ea693812db8f57bc73aebec12b99f
 SHA1 (patch-Modules_Platform_SunOS.cmake) = 7a53ae3c902dd69ee22ef9fe0ae2a022d5284f16
 SHA1 (patch-Source_cmELF.cxx) = da40cca878c400cbb3f1867b3a1e919c0183a68a
-SHA1 (patch-Source_kwsys_SystemInformation.cxx) = 7bad025ea21164f8a4b835665bea87166a5c478c
+SHA1 (patch-Source_kwsys_SystemInformation.cxx) = e259da70601cf1b4641f253de3d4f3aaec5e68f6
 SHA1 (patch-Source_kwsys_SystemTools.cxx) = 8fb75a9afd7f9b0efa0ee3d8fc004853fc3d650d
 SHA1 (patch-Utilities_KWIML_CMakeLists.txt) = 4e8cef0eab2ad8cb27cd7076e077bb5e7425a95c
 SHA1 (patch-aa) = 97bfad3d2c357e9af01677ba86057b78f0661b9b
