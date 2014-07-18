@@ -1,4 +1,4 @@
-$NetBSD: patch-Source_kwsys_SystemInformation.cxx,v 1.7 2014/03/25 07:11:52 asau Exp $
+$NetBSD: patch-Source_kwsys_SystemInformation.cxx,v 1.8 2014/07/18 10:00:18 ryoon Exp $
 
 * Add more conditional handling for NetBSD, same as others.
 * Treat FreeBSD and DragonFly the same way as NetBSD and OpenBSD.
@@ -45,7 +45,7 @@ $NetBSD: patch-Source_kwsys_SystemInformation.cxx,v 1.7 2014/03/25 07:11:52 asau
  #endif
  
 -#ifdef __linux
-+#if defined(__linux) || defined (__sun)
++#if defined(__linux) || defined (__sun) || defined(_SCO_DS)
  # include <fenv.h>
  # include <sys/socket.h>
  # include <netdb.h>
