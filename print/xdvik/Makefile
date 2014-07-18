@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2013/11/17 16:56:47 minskim Exp $
+# $NetBSD: Makefile,v 1.15 2014/07/18 04:49:42 dbj Exp $
 
 DISTNAME=	texlive-20130530-source
 PKGNAME=	xdvik-22.86
@@ -71,6 +71,7 @@ XDVI_PAPERSIZE=	a4
 .include "../../mk/xaw.buildlink3.mk"
 
 post-build:
+	${RM} ${WRKSRC}/texmf/XDvi
 	${MKDIR} -p ${WRKSRC}/texmf/xdvi
 	${CP} ${LOCALBASE}/share/texmf-dist/xdvi/XDvi ${WRKSRC}/texmf/xdvi
 	env TEXMFCONFIG=${LOCALBASE}/share/texmf \
