@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/06/11 13:50:19 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/07/18 10:31:48 fhajny Exp $
 include/libbson-1.0/bcon.h
 include/libbson-1.0/bson-atomic.h
 include/libbson-1.0/bson-clock.h
@@ -130,6 +130,7 @@ man/man3/bson_md5_append.3
 man/man3/bson_md5_finish.3
 man/man3/bson_md5_init.3
 man/man3/bson_md5_t.3
+man/man3/bson_mem_set_vtable.3
 man/man3/bson_new.3
 man/man3/bson_new_from_buffer.3
 man/man3/bson_new_from_data.3
