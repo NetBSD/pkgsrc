@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.9 2014/04/22 12:21:15 obache Exp $
+# $NetBSD: builtin.mk,v 1.10 2014/07/18 14:30:15 jperkin Exp $
 
 BUILTIN_PKG:=	xextproto
 
@@ -37,11 +37,11 @@ MAKEVARS+=	IS_BUILTIN.xextproto
 .if !defined(BUILTIN_PKG.xextproto) && \
     !empty(IS_BUILTIN.xextproto:M[yY][eE][sS])
 .  if empty(PC_XEXTPROTO:M__nonexistent__)
-BUILTIN_VERSION.xextproto!= ${SED} -n -e 's/Version: //p' ${PC_XEXTPROTO}
+BUILTIN_VERSION.xextproto!=	${SED} -n -e 's/Version: //p' ${PC_XEXTPROTO}
 .  else
-BUILTIN_VERSION.xextproto!= 1.0.1
+BUILTIN_VERSION.xextproto=	1.0.1
 .  endif
-BUILTIN_PKG.xextproto= xextproto-${BUILTIN_VERSION.xextproto}
+BUILTIN_PKG.xextproto=	xextproto-${BUILTIN_VERSION.xextproto}
 .endif
 MAKEVARS+=	BUILTIN_PKG.xextproto
 
