@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.2 2014/05/05 21:25:11 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.3 2014/07/18 10:28:11 ryoon Exp $
 
 * Detect NetBSD libatomic
 * test(1) portability fix
@@ -24,7 +24,15 @@ $NetBSD: patch-configure.ac,v 1.2 2014/05/05 21:25:11 ryoon Exp $
  U_ENABLE_DYLOAD=1
  enable=yes
  AC_MSG_CHECKING([whether to enable dynamic loading of plugins])
-@@ -1249,13 +1261,13 @@ fi
+@@ -1232,6 +1244,7 @@ case "${host}" in
+ 	*-*-beos)		platform=U_BEOS ;;
+ 	*-*-irix*)		platform=U_IRIX ;;
+ 	*-ncr-*)		platform=U_MPRAS ;;
++	*-*-sco3.2v5*)		platform=USCOOSR5 ;;
+ 	*) 		platform=U_UNKNOWN_PLATFORM ;;
+ esac
+ AC_SUBST(ICUDATA_CHAR)
+@@ -1249,13 +1262,13 @@ fi
  # Now that we're done using CPPFLAGS etc. for tests, we can change it
  # for build.
  
