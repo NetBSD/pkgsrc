@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2014/02/12 23:17:38 tron Exp $
+# $NetBSD: Makefile,v 1.52 2014/07/18 11:22:23 ryoon Exp $
 
 DISTNAME=	freetds-0.91
 PKGREVISION=	2
@@ -36,6 +36,14 @@ CONF_FILES+=	${EGDIR}/pool.conf ${PKG_SYSCONFDIR}/pool.conf
 # in doc/freetds through symlinks and by overriding DOCDIR.
 MAKE_FLAGS+=		DOCDIR=doc/freetds
 INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS} ETC=${DESTDIR}${EGDIR}
+
+SUBST_CLASSES+=			visibility
+SUBST_STAGE.visibility+=	pre-configure
+SUBST_MESSAGE.visibility+=	Turn off visibility for GCC 4.2
+SUBST_FILES.visibility+=	src/tds/tds_checks.h
+SUBST_FILES.visibility+=	include/*.h
+SUBST_FILES.visibility+=	include/*/*.h
+SUBST_SED.visibility+=		-e 's,!defined(__MINGW32__),!defined(__MINGW32__) \&\& !(__GNUC__ == 4 \&\& __GNUC_MINOR__ == 2),g'
 
 pre-build:
 	cd ${WRKSRC}/doc/doc && ln -sf ${DISTNAME} freetds
