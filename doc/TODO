@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13444 2014/07/16 17:37:16 wiz Exp $
+$NetBSD: TODO,v 1.13445 2014/07/18 10:41:02 obache Exp $
 
 Suggested new packages
 ======================
@@ -462,7 +462,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cross-h8300-hms-binutils-2.17
 	o crossfire-1.71.0
 	o crossfire-client-gtk2-1.60.0
-	o ctwm-3.8.2 [pkg/48820]
 	o cuisine-0.6.5
 	o cvs-fast-export-1.11
 	o cvs2p4-2.5.5 [schmonz]
