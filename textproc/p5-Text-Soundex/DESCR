@@ -1,0 +1,2 @@
+Text::Soundex provides an implementation of an algorithm for indexing
+names by sound, as pronounced in English.
