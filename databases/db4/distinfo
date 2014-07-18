@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.41 2014/06/07 08:19:30 obache Exp $
+$NetBSD: distinfo,v 1.42 2014/07/18 11:20:39 ryoon Exp $
 
 SHA1 (db-4.8.30.tar.gz) = ab36c170dda5b2ceaad3915ced96e41c6b7e493c
 RMD160 (db-4.8.30.tar.gz) = dd2fcd4c9b857a91e2f491fd4fadb0c51b993a9c
@@ -8,4 +8,6 @@ SHA1 (patch-ab) = 961c4ef5ad84739bd7eae57f407b89f42864b66e
 SHA1 (patch-ac) = 045a3b83b9c6c164382ec546b06ae248620552cf
 SHA1 (patch-ae) = 43e574154de93dba60392b09d6ebddbca1036849
 SHA1 (patch-dbinc_atomic.h) = ff60e3af41ac1b000ebccc91bc673adde5c7463b
+SHA1 (patch-dist_s__sig) = 740640dee4bf18dbffac442d46757d5f434b33af
+SHA1 (patch-env_env__sig.c) = 6a28cb1e226790c8bc255ea70bd9b44559fc8ec5
 SHA1 (patch-repmgr_repmgr__posix.c) = 98ca8bbb1a82b02db2be6f0a69c5d74d8563fe74
