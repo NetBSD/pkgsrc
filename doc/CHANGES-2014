@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2664 2014/07/18 08:27:24 obache Exp $
+$NetBSD: CHANGES-2014,v 1.2665 2014/07/18 08:32:52 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3485,3 +3485,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Devel-Cover to 1.15 [wen 2014-07-18]
 	Updated ham/trustedQSL to 2.0.3 [mef 2014-07-18]
 	Added textproc/p5-Text-Soundex version 3.04 [obache 2014-07-18]
+	Updated devel/gettext-tools to 0.18.3.2nb1 [jperkin 2014-07-18]
