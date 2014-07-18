@@ -1,0 +1,20 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2014/07/18 11:12:41 ryoon Exp $
+
+--- src/Makefile.in.orig	2013-11-17 16:18:38.000000000 +0000
++++ src/Makefile.in
+@@ -1300,6 +1300,15 @@ installcheck-binPROGRAMS: $(bin_PROGRAMS
+ 	  done; \
+ 	done; rm -f c$${pid}_.???; exit $$bad
+ 
++# SCO OpenServer 5.0.7/3.2 requires strtoimax().
++OS!= uname -s
++REL!= uname -r
++.if $(OS) == "SCO_SV"
++.if $(REL) == "3.2"
++tar_OBJECTS += ../strtoimax.o
++.endif
++.endif
++
+ tar$(EXEEXT): $(tar_OBJECTS) $(tar_DEPENDENCIES) $(EXTRA_tar_DEPENDENCIES) 
+ 	@rm -f tar$(EXEEXT)
+ 	$(AM_V_CCLD)$(LINK) $(tar_OBJECTS) $(tar_LDADD) $(LIBS)

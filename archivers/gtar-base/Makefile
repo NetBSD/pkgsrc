@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2014/03/18 18:11:26 bsiegert Exp $
+# $NetBSD: Makefile,v 1.83 2014/07/18 11:12:41 ryoon Exp $
 #
 # Please run 'make files/gtar.1' when updating version of this package
 # to regenerate the man page. converters/help2man is needed.
@@ -38,12 +38,19 @@ CONFIGURE_ENV+=		gt_cv_func_gnugettext2_libintl=yes
 # allow configure to run as root
 CONFIGURE_ENV+=		FORCE_UNSAFE_CONFIGURE=1
 
+.if ${OS_VARIANT} == "SCOOSR5"
+# SCO OpenServer 5.0.7/3.2 has strtoimax in inttypes.h, but not in library.
+CONFIGURE_ENV+=		gl_cv_have_raw_decl_strtoimax=no
+CONFIGURE_ENV+=		ac_cv_have_decl_strtoimax=no
+LDFLAGS.SCO_SV+=	-lsocket
+.endif
+
 PLIST_VARS+=		gtar rmt
 
 TEST_TARGET=		check
 
 # don't include rmt if gtar won't build it
-.if ${OPSYS} != "Interix" && ${OPSYS} != "Darwin"
+.if ${OPSYS} != "Interix" && ${OPSYS} != "Darwin" && ${OS_VARIANT} != "SCOOSR5"
 PLIST.rmt=		yes
 .endif
 
@@ -61,6 +68,14 @@ SYMLINKS=		bin/gtar ${PKGGNUDIR}bin/tar \
 
 .if defined(PLIST.rmt) && ${PLIST.rmt} == "yes"
 SYMLINKS+=		libexec/grmt ${PKGGNUDIR}libexec/rmt
+.endif
+
+.if ${OS_VARIANT} == "SCOOSR5"
+# SCO OpenServer 5.0.7/3.2 has strtoimax() declaration in inttypes.h,
+# but libc.so has no implementation. And gnulib in GNU tar 1.27 has broken
+# strtoimax() support. We have to use BSDL implementation instead.
+pre-configure:
+	cd ${WRKSRC} && ${CC} -c -o strtoimax.o strtoimax.c
 .endif
 
 files/gtar.1: build
