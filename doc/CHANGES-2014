@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2673 2014/07/18 13:35:45 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2674 2014/07/18 13:56:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3494,3 +3494,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/rudiments to 0.47 [fhajny 2014-07-18]
 	Updated devel/readline to 6.3nb1 [ryoon 2014-07-18]
 	Updated www/moodle to 2.7.1 [wen 2014-07-18]
+	Updated lang/clang to 3.4.2 [adam 2014-07-18]
