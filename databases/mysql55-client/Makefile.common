@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.37 2014/06/02 07:17:31 adam Exp $
+# $NetBSD: Makefile.common,v 1.38 2014/07/18 13:42:24 ryoon Exp $
 #
 # used by databases/mysql55-client/Makefile
 # used by databases/mysql55-server/Makefile
@@ -96,9 +96,15 @@ CFLAGS+=		-DHAVE_CURSES_H
 CXXFLAGS+=		-DHAVE_CURSES_H
 .endif
 
+# SCO OpenServer 5.0.7/3.2's readdir_r has 2 arguments and return struct dirent.
+.if ${OS_VARIANT} == "SCOOSR5"
+CMAKE_ARGS+=		-DHAVE_READDIR_R=OFF
+.endif
+
 .include "../../mk/pthread.buildlink3.mk"
 
-.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "pth")
+.if (defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "pth")) || \
+	${OS_VARIANT} == "SCOOSR5"
 CFLAGS+=		-DSIGNALS_DONT_BREAK_READ
 CXXFLAGS+=		-DSIGNALS_DONT_BREAK_READ
 .endif
