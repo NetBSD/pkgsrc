@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2014/02/12 23:18:08 tron Exp $
+# $NetBSD: Makefile,v 1.141 2014/07/18 10:40:28 ryoon Exp $
 #
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
@@ -66,6 +66,9 @@ BUILD_TARGET.IRIX=	sgi
 BUILD_TARGET.OSF1=	osf
 BUILD_TARGET.OpenBSD=	bso
 BUILD_TARGET.*=		neb
+.if ${OS_VARIANT} == "SCOOSR5"
+BUILD_TARGET.SCO_SV=	sc5
+.endif
 MESSAGE_SRC=		${PKGDIR}/MESSAGE
 
 # XXX this is not the right approach - should either depend on pam or
