@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.12 2014/03/31 14:42:20 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.13 2014/07/18 11:39:11 fhajny Exp $
 bin/rudiments-config
+include/rudiments/bytebuffer.h
+include/rudiments/bytestring.h
 include/rudiments/character.h
 include/rudiments/charstring.h
 include/rudiments/chat.h
@@ -34,6 +36,9 @@ include/rudiments/modemserver.h
 include/rudiments/parameterstring.h
 include/rudiments/passwdentry.h
 include/rudiments/permissions.h
+include/rudiments/private/bytebuffer.h
+include/rudiments/private/bytebufferincludes.h
+include/rudiments/private/bytestringincludes.h
 include/rudiments/private/characterincludes.h
 include/rudiments/private/charstring.h
 include/rudiments/private/charstringincludes.h
@@ -115,7 +120,6 @@ include/rudiments/private/processincludes.h
 include/rudiments/private/protocolentry.h
 include/rudiments/private/protocolentryincludes.h
 include/rudiments/private/randomnumberincludes.h
-include/rudiments/private/rawbufferincludes.h
 include/rudiments/private/regularexpression.h
 include/rudiments/private/regularexpressionincludes.h
 include/rudiments/private/rpcentry.h
@@ -140,6 +144,10 @@ include/rudiments/private/shmfileincludes.h
 include/rudiments/private/signalclassesincludes.h
 include/rudiments/private/signalhandler.h
 include/rudiments/private/signalset.h
+include/rudiments/private/singlylinkedlist.h
+include/rudiments/private/singlylinkedlistincludes.h
+include/rudiments/private/singlylinkedlistinlines.h
+include/rudiments/private/singlylinkedlistnode.h
 include/rudiments/private/snoozeincludes.h
 include/rudiments/private/socketclient.h
 include/rudiments/private/socketclientincludes.h
@@ -162,8 +170,6 @@ include/rudiments/private/unixsocketserver.h
 include/rudiments/private/unixsocketserverincludes.h
 include/rudiments/private/unixsocketutil.h
 include/rudiments/private/unixsocketutilincludes.h
-include/rudiments/private/variablebuffer.h
-include/rudiments/private/variablebufferincludes.h
 include/rudiments/private/winsock.h
 include/rudiments/private/xmldom.h
 include/rudiments/private/xmldomincludes.h
@@ -174,7 +180,6 @@ include/rudiments/private/xmlsaxincludes.h
 include/rudiments/process.h
 include/rudiments/protocolentry.h
 include/rudiments/randomnumber.h
-include/rudiments/rawbuffer.h
 include/rudiments/regularexpression.h
 include/rudiments/resultcodes.h
 include/rudiments/rpcentry.h
@@ -187,6 +192,7 @@ include/rudiments/shadowentry.h
 include/rudiments/sharedmemory.h
 include/rudiments/shmfile.h
 include/rudiments/signalclasses.h
+include/rudiments/singlylinkedlist.h
 include/rudiments/snooze.h
 include/rudiments/socketclient.h
 include/rudiments/socketserver.h
@@ -198,7 +204,6 @@ include/rudiments/threadmutex.h
 include/rudiments/unixsocketclient.h
 include/rudiments/unixsocketserver.h
 include/rudiments/unixsocketutil.h
-include/rudiments/variablebuffer.h
 include/rudiments/xmldom.h
 include/rudiments/xmldomnode.h
 include/rudiments/xmlsax.h
@@ -208,12 +213,20 @@ man/man1/rudiments-config.1
 share/doc/rudiments/classes/html/annotated.html
 share/doc/rudiments/classes/html/bc_s.png
 share/doc/rudiments/classes/html/bdwn.png
+share/doc/rudiments/classes/html/bytebuffer_8h_source.html
+share/doc/rudiments/classes/html/bytebufferincludes_8h_source.html
+share/doc/rudiments/classes/html/bytestring_8h_source.html
+share/doc/rudiments/classes/html/bytestringincludes_8h_source.html
 share/doc/rudiments/classes/html/character_8h_source.html
 share/doc/rudiments/classes/html/characterincludes_8h_source.html
 share/doc/rudiments/classes/html/charstring_8h_source.html
 share/doc/rudiments/classes/html/charstringincludes_8h_source.html
 share/doc/rudiments/classes/html/chat_8h_source.html
 share/doc/rudiments/classes/html/chatincludes_8h_source.html
+share/doc/rudiments/classes/html/classbytebuffer-members.html
+share/doc/rudiments/classes/html/classbytebuffer.html
+share/doc/rudiments/classes/html/classbytestring-members.html
+share/doc/rudiments/classes/html/classbytestring.html
 share/doc/rudiments/classes/html/classcharacter-members.html
 share/doc/rudiments/classes/html/classcharacter.html
 share/doc/rudiments/classes/html/classcharstring-members.html
@@ -300,8 +313,6 @@ share/doc/rudiments/classes/html/classprotocolentry-members.html
 share/doc/rudiments/classes/html/classprotocolentry.html
 share/doc/rudiments/classes/html/classrandomnumber-members.html
 share/doc/rudiments/classes/html/classrandomnumber.html
-share/doc/rudiments/classes/html/classrawbuffer-members.html
-share/doc/rudiments/classes/html/classrawbuffer.html
 share/doc/rudiments/classes/html/classregularexpression-members.html
 share/doc/rudiments/classes/html/classregularexpression.html
 share/doc/rudiments/classes/html/classrpcentry-members.html
@@ -328,6 +339,10 @@ share/doc/rudiments/classes/html/classsignalmanager-members.html
 share/doc/rudiments/classes/html/classsignalmanager.html
 share/doc/rudiments/classes/html/classsignalset-members.html
 share/doc/rudiments/classes/html/classsignalset.html
+share/doc/rudiments/classes/html/classsinglylinkedlist-members.html
+share/doc/rudiments/classes/html/classsinglylinkedlist.html
+share/doc/rudiments/classes/html/classsinglylinkedlistnode-members.html
+share/doc/rudiments/classes/html/classsinglylinkedlistnode.html
 share/doc/rudiments/classes/html/classsnooze-members.html
 share/doc/rudiments/classes/html/classsnooze.html
 share/doc/rudiments/classes/html/classsocketclient-members.html
@@ -352,8 +367,6 @@ share/doc/rudiments/classes/html/classunixsocketserver-members.html
 share/doc/rudiments/classes/html/classunixsocketserver.html
 share/doc/rudiments/classes/html/classunixsocketutil-members.html
 share/doc/rudiments/classes/html/classunixsocketutil.html
-share/doc/rudiments/classes/html/classvariablebuffer-members.html
-share/doc/rudiments/classes/html/classvariablebuffer.html
 share/doc/rudiments/classes/html/classwinsock-members.html
 share/doc/rudiments/classes/html/classwinsock.html
 share/doc/rudiments/classes/html/classxmldom-members.html
@@ -524,6 +537,7 @@ share/doc/rudiments/classes/html/passwdentry_8h_source.html
 share/doc/rudiments/classes/html/passwdentryincludes_8h_source.html
 share/doc/rudiments/classes/html/permissions_8h_source.html
 share/doc/rudiments/classes/html/permissionsincludes_8h_source.html
+share/doc/rudiments/classes/html/private_2bytebuffer_8h_source.html
 share/doc/rudiments/classes/html/private_2charstring_8h_source.html
 share/doc/rudiments/classes/html/private_2chat_8h_source.html
 share/doc/rudiments/classes/html/private_2client_8h_source.html
@@ -567,6 +581,7 @@ share/doc/rudiments/classes/html/private_2serviceentry_8h_source.html
 share/doc/rudiments/classes/html/private_2shadowentry_8h_source.html
 share/doc/rudiments/classes/html/private_2sharedmemory_8h_source.html
 share/doc/rudiments/classes/html/private_2shmfile_8h_source.html
+share/doc/rudiments/classes/html/private_2singlylinkedlist_8h_source.html
 share/doc/rudiments/classes/html/private_2socketclient_8h_source.html
 share/doc/rudiments/classes/html/private_2socketserver_8h_source.html
 share/doc/rudiments/classes/html/private_2stringbuffer_8h_source.html
@@ -576,7 +591,6 @@ share/doc/rudiments/classes/html/private_2threadmutex_8h_source.html
 share/doc/rudiments/classes/html/private_2unixsocketclient_8h_source.html
 share/doc/rudiments/classes/html/private_2unixsocketserver_8h_source.html
 share/doc/rudiments/classes/html/private_2unixsocketutil_8h_source.html
-share/doc/rudiments/classes/html/private_2variablebuffer_8h_source.html
 share/doc/rudiments/classes/html/private_2xmldom_8h_source.html
 share/doc/rudiments/classes/html/private_2xmldomnode_8h_source.html
 share/doc/rudiments/classes/html/private_2xmlsax_8h_source.html
@@ -586,8 +600,6 @@ share/doc/rudiments/classes/html/protocolentry_8h_source.html
 share/doc/rudiments/classes/html/protocolentryincludes_8h_source.html
 share/doc/rudiments/classes/html/randomnumber_8h_source.html
 share/doc/rudiments/classes/html/randomnumberincludes_8h_source.html
-share/doc/rudiments/classes/html/rawbuffer_8h_source.html
-share/doc/rudiments/classes/html/rawbufferincludes_8h_source.html
 share/doc/rudiments/classes/html/regularexpression_8h_source.html
 share/doc/rudiments/classes/html/regularexpressionincludes_8h_source.html
 share/doc/rudiments/classes/html/resultcodes_8h_source.html
@@ -614,6 +626,10 @@ share/doc/rudiments/classes/html/signalclasses_8h_source.html
 share/doc/rudiments/classes/html/signalclassesincludes_8h_source.html
 share/doc/rudiments/classes/html/signalhandler_8h_source.html
 share/doc/rudiments/classes/html/signalset_8h_source.html
+share/doc/rudiments/classes/html/singlylinkedlist_8h_source.html
+share/doc/rudiments/classes/html/singlylinkedlistincludes_8h_source.html
+share/doc/rudiments/classes/html/singlylinkedlistinlines_8h_source.html
+share/doc/rudiments/classes/html/singlylinkedlistnode_8h_source.html
 share/doc/rudiments/classes/html/snooze_8h_source.html
 share/doc/rudiments/classes/html/snoozeincludes_8h_source.html
 share/doc/rudiments/classes/html/socketclient_8h_source.html
@@ -649,8 +665,6 @@ share/doc/rudiments/classes/html/unixsocketserver_8h_source.html
 share/doc/rudiments/classes/html/unixsocketserverincludes_8h_source.html
 share/doc/rudiments/classes/html/unixsocketutil_8h_source.html
 share/doc/rudiments/classes/html/unixsocketutilincludes_8h_source.html
-share/doc/rudiments/classes/html/variablebuffer_8h_source.html
-share/doc/rudiments/classes/html/variablebufferincludes_8h_source.html
 share/doc/rudiments/classes/html/winsock_8h_source.html
 share/doc/rudiments/classes/html/xmldom_8h_source.html
 share/doc/rudiments/classes/html/xmldomincludes_8h_source.html
@@ -663,6 +677,4 @@ share/doc/rudiments/index.html
 share/doc/rudiments/installing.html
 share/doc/rudiments/introduction.html
 share/doc/rudiments/invisible.gif
-share/doc/rudiments/programming/baseclasses.html
-share/doc/rudiments/programming/utilclasses.html
-share/doc/rudiments/programming/wrapperclasses.html
+share/doc/rudiments/programming/guide.html
