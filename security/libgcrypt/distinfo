@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.48 2014/04/01 09:48:37 obache Exp $
+$NetBSD: distinfo,v 1.49 2014/07/18 10:36:28 ryoon Exp $
 
 SHA1 (libgcrypt-1.6.1.tar.bz2) = f03d9b63ac3b17a6972fc11150d136925b702f02
 RMD160 (libgcrypt-1.6.1.tar.bz2) = df69424afa6fa27a1ad54b9ffae1d5bb4903f6b2
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = 6fac21daa26b7de3b13839d076f78a74400efce7
 SHA1 (patch-ad) = 19345b7d164521d526a44eb3f1a465ff09d8266c
 SHA1 (patch-configure) = c4e10bdb7e00a44d507f5b964f3e71a63828cd0a
 SHA1 (patch-mpi_config.links) = 3ada0ae5a68605ab6817dc611ceacf904e11c0d0
+SHA1 (patch-src_visibility.h) = 9b97ee91e8ea4e806ff8da3154a5982c6147d93a
