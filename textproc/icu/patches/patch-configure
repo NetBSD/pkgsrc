@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.4 2014/05/05 21:25:11 ryoon Exp $
+$NetBSD: patch-configure,v 1.5 2014/07/18 10:28:11 ryoon Exp $
 
 Portability fix.
 Solaris seems to need -std=c99 with recent pkgsrc so keep it
@@ -25,7 +25,15 @@ and at the same time fix a typo involving CXXFLAGS.
                          # 2. try xarch=v9 [deprecated]
                          ## TODO: cross compile: the following won't work.
                          SPARCV9=`isainfo -n 2>&1 | grep sparcv9`
-@@ -5452,6 +5449,29 @@ if test "x$ac_cv_header_elf_h" = "xyes";
+@@ -4942,6 +4939,7 @@ rm -f core conftest.err conftest.$ac_obj
+ *-dec-osf*) icu_cv_host_frag=mh-alpha-osf ;;
+ *-*-nto*)	icu_cv_host_frag=mh-qnx ;;
+ *-ncr-*)	icu_cv_host_frag=mh-mpras ;;
++-*-sco3.2v5*)	icu_cv_host_frag=mh-scoosr5 ;;
+ *) 		icu_cv_host_frag=mh-unknown ;;
+ esac
+ 
+@@ -5452,6 +5450,29 @@ if test "x$ac_cv_header_elf_h" = "xyes";
      CONFIG_CPPFLAGS="$CONFIG_CPPFLAGS -DU_HAVE_ELF_H=1";
  fi
  
@@ -55,7 +63,7 @@ and at the same time fix a typo involving CXXFLAGS.
  U_ENABLE_DYLOAD=1
  enable=yes
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether to enable dynamic loading of plugins" >&5
-@@ -7442,13 +7462,13 @@ fi
+@@ -7442,13 +7463,13 @@ fi
  # Now that we're done using CPPFLAGS etc. for tests, we can change it
  # for build.
  

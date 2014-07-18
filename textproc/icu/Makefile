@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2014/06/08 09:09:01 obache Exp $
+# $NetBSD: Makefile,v 1.93 2014/07/18 10:28:11 ryoon Exp $
 
 DISTNAME=	icu4c-53_1-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
@@ -75,6 +75,10 @@ PLIST_SUBST+=		MH_NAME=mh-darwin
 PLIST_SUBST+=		MH_NAME=mh-haiku
 .elif ${OPSYS} == "IRIX"
 PLIST_SUBST+=		MH_NAME=mh-irix
+.elif ${OPSYS} == "Cygwin"
+PLIST_SUBST+=		MH_NAME=mh-cygwin
+.elif ${OS_VARIANT} == "SCOOSR5"
+PLIST_SUBST+=		MH_NAME=mh-scoosr5
 .elif ${OPSYS} == "OSF1"
 PLIST_SUBST+=		MH_NAME=mh-alpha-osf
 .elif ${OPSYS} == "QNX"
