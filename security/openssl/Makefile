@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.193 2014/06/05 12:16:06 wiz Exp $
+# $NetBSD: Makefile,v 1.194 2014/07/18 10:32:37 ryoon Exp $
 
 DISTNAME=	openssl-1.0.1h
 MASTER_SITES=	http://ftp.openssl.org/source/
@@ -118,6 +118,9 @@ CONFIGURE_ARGS+=	hpux-ia64-${CC}
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	linux-ppc64
 .  endif
+.elif ${OS_VARIANT} == "SCOOSR5"
+# SIGILL in _sha1_block_data_order_ssse3().
+CONFIGURE_ARGS+=	no-sse2
 .endif
 
 .include "../../security/openssl/options.mk"
