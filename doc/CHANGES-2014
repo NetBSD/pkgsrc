@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2660 2014/07/18 01:43:33 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2661 2014/07/18 02:03:49 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3481,3 +3481,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added fonts/sourcehansans-fonts version 1.000 [ryoon 2014-07-17]
 	Updated devel/p5-boolean to 0.38 [wen 2014-07-18]
 	Updated devel/p5-Inline to 0.63 [wen 2014-07-18]
+	Added devel/p5-Inline-C version 0.61 [wen 2014-07-18]
