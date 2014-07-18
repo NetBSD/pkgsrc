@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2014/05/29 23:37:34 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2014/07/18 10:11:35 ryoon Exp $
 #
 
 DISTNAME=	groff-1.20.1
@@ -56,6 +56,9 @@ CONFIGURE_ENV+=	PAGE=${PAPERSIZE:Q}
 .if !empty(CC_VERSION:Mgcc-4.[6-9].*)
 CFLAGS.SunOS+=		-std=c99 -D_XOPEN_SOURCE=600
 .endif
+
+post-extract:
+	${CP} -p ${FILESDIR}/*.c ${WRKSRC}
 
 # Usually the mdoc.local "volume-operating-system" definition is for
 # the operating system name often displayed on top of man pages. And
