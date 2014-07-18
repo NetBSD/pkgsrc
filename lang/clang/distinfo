@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.24 2014/05/28 15:49:34 adam Exp $
+$NetBSD: distinfo,v 1.25 2014/07/18 13:54:05 adam Exp $
 
-SHA1 (cfe-3.4.1.src.tar.gz) = ecd38fa89e837e6cb8305b8d05e88baecb0bda55
-RMD160 (cfe-3.4.1.src.tar.gz) = 0e1c14ca4e2915dc9117a148454895a5b1e7d2f4
-Size (cfe-3.4.1.src.tar.gz) = 10611194 bytes
+SHA1 (cfe-3.4.2.src.tar.gz) = add5420b10c3c3a38c4dc2322f8b64ba0a5def97
+RMD160 (cfe-3.4.2.src.tar.gz) = f6b177408f5f9d3a453d41f1f60534f8e1e2845b
+Size (cfe-3.4.2.src.tar.gz) = 10612313 bytes
 SHA1 (compiler-rt-3.4.src.tar.gz) = d644b1e4f306f7ad35df0a134d14a1123cd9f082
 RMD160 (compiler-rt-3.4.src.tar.gz) = 530225a44fa743f80df759e5354a0854eb422306
 Size (compiler-rt-3.4.src.tar.gz) = 1858593 bytes
-SHA1 (libcxx-3.4.src.tar.gz) = c45333dce3e6bdac2583682417c03b6bb149ceb0
-RMD160 (libcxx-3.4.src.tar.gz) = 146a49dc0ae9635f87b13038d36ad816b7245666
-Size (libcxx-3.4.src.tar.gz) = 1377487 bytes
-SHA1 (llvm-3.4.1.src.tar.gz) = 3711baa6f5ef9df07418ce76039fc3848a7bde7c
-RMD160 (llvm-3.4.1.src.tar.gz) = ae0dfa387dfdb70916706edeed52d8715c7c49c6
-Size (llvm-3.4.1.src.tar.gz) = 15937474 bytes
+SHA1 (libcxx-3.4.2.src.tar.gz) = 7daa55bd1e9d87c3657d08d14d6f83566e6a1c04
+RMD160 (libcxx-3.4.2.src.tar.gz) = 7984caf2d055ea967544107ae1f948c77556d764
+Size (libcxx-3.4.2.src.tar.gz) = 1393477 bytes
+SHA1 (llvm-3.4.2.src.tar.gz) = c5287384d0b95ecb0fd7f024be2cdfb60cd94bc9
+RMD160 (llvm-3.4.2.src.tar.gz) = 5fab44850977afccee34b21c6d339bc8dea21fce
+Size (llvm-3.4.2.src.tar.gz) = 15938155 bytes
 SHA1 (patch-ab) = 8dd0da6d47a57ac25eea358996cf874dd3289e08
 SHA1 (patch-ac) = 0f0cc98d443ec957fc5374fb491809d27e4f9d4e
 SHA1 (patch-ad) = ad1f6720e4c73e57fce10ba968b03637a133602d
