@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2662 2014/07/18 02:17:18 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2663 2014/07/18 02:41:03 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3483,3 +3483,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Inline to 0.63 [wen 2014-07-18]
 	Added devel/p5-Inline-C version 0.61 [wen 2014-07-18]
 	Updated devel/p5-Devel-Cover to 1.15 [wen 2014-07-18]
+	Updated ham/trustedQSL to 2.0.3 [mef 2014-07-18]
