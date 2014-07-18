@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2014/06/05 15:10:20 adam Exp $
+# $NetBSD: Makefile,v 1.80 2014/07/18 11:25:14 ryoon Exp $
 
 DISTNAME=	sqlite-autoconf-3080500
 PKGNAME=	sqlite3-3.8.5
@@ -42,6 +42,10 @@ CFLAGS+=		-DSQLITE_ENABLE_LOAD_EXTENSION
 # Uses dlopen and friends but doesn't use -ldl on Linux.
 # See http://www.sqlite.org/cvstrac/tktview?tn=3555
 LIBS+=			${BUILDLINK_LDADD.dl}
+
+.if ${OS_VARIANT} == "SCOOSR5"
+LDFLAGS.SCO_SV+=	-lpthread
+.endif
 
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"

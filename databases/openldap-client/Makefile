@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/02/12 23:17:39 tron Exp $
+# $NetBSD: Makefile,v 1.17 2014/07/18 11:31:25 ryoon Exp $
 
 PKGNAME=	${DISTNAME:S/-/-client-/}
 PKGREVISION=	1
@@ -15,6 +15,11 @@ BUILD_DEFS+=		OPENLDAP_ETCDIR
 CNFS=			ldap.conf
 
 .include "options.mk"
+
+.if ${OS_VARIANT} == "SCOOSR5"
+# SCO OpenServer 5.0.7/3.2 has sockelen_t definition in pthread.h of GNU pth.
+CONFIGURE_ENV+=		ac_cv_type_socklen_t=yes
+.endif
 
 .include "../../databases/openldap/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
