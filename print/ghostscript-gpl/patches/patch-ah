@@ -1,13 +1,15 @@
-$NetBSD: patch-ah,v 1.4 2014/05/01 04:11:01 richard Exp $
+$NetBSD: patch-ah,v 1.5 2014/07/18 08:56:37 ryoon Exp $
 
 (1) First chunk to fix the X11_TYPE=native problem, which
     freetype2 in /usr/X11R7/ is way old, and work around to 
     use ghostscript-provided freetype2.
     This part is not necessary for NetBSD 6.0, 6.1.
 
-(2) Second chunk for X11_TYPE=native, will have following problem without 
+(2) Second chunk for X11_TYPE=native, will have following problem without
     this patch:
     |  Shared object "libpaper.so.1" not found
+
+(3) SCO_SV chunk for SCO OpenServer 5.0.7/3.2's linker.
 
 --- configure.orig	2012-08-08 08:04:57.000000000 +0000
 +++ configure
@@ -36,7 +38,17 @@ $NetBSD: patch-ah,v 1.4 2014/05/01 04:11:01 richard Exp $
              CC_DBG_FLAGS_TO_TRY="-g -O0"
          fi
          SET_DT_SONAME=""
-@@ -5331,7 +5331,7 @@ fi
+@@ -3806,6 +3806,9 @@ case `uname` in
+         fi
+         CC_DBG_FLAGS_TO_TRY="-g -O0"
+         ;;
++	SCO_SV)
++	SET_DT_SONAME="-h,"
++	;;
+ esac
+ 
+ 
+@@ -5331,7 +5334,7 @@ fi
  fi
  
  if test x$with_libpaper != xno; then
@@ -45,7 +57,7 @@ $NetBSD: patch-ah,v 1.4 2014/05/01 04:11:01 richard Exp $
  
  $as_echo "#define USE_LIBPAPER 1" >>confdefs.h
  
-@@ -6474,7 +6474,7 @@ done
+@@ -6474,7 +6477,7 @@ done
                  LCUPSINCLUDE="include \$(GLSRCDIR)/lcups.mak"
                  LCUPSIINCLUDE="include \$(GLSRCDIR)/lcupsi.mak"
                  if ( test x$with_pdftoraster != xno ); then
