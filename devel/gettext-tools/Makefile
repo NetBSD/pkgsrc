@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.24 2014/01/11 10:52:46 adam Exp $
+# $NetBSD: Makefile,v 1.25 2014/07/18 08:32:43 jperkin Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-tools-/}
+PKGREVISION=	1
 COMMENT=	Tools for providing messages in different languages
 
 DISTINFO_FILE=	${.CURDIR}/../../devel/gettext/distinfo
 PATCHDIR=	${.CURDIR}/../../devel/gettext/patches
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		xz
+USE_TOOLS+=		xz:run
 USE_PKGLOCALEDIR=	yes
 CONFIGURE_ARGS+=	--disable-csharp
 CONFIGURE_ARGS+=	--with-included-libcroco
