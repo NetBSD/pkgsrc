@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/06/18 09:28:17 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2014/07/18 08:56:37 ryoon Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-gpl/}
@@ -88,6 +88,11 @@ CONFIGURE_ENV+=	LPLIBDIR=${PREFIX}/lib
 # On OpenBSD 5.3, libxcb is required libXt.
 LDFLAGS.OpenBSD+=	-lxcb
 
+.if ${OS_VARIANT} == "SCOOSR5"
+# SCO OpenServer 5.0.7/3.2 has windows.h, and configure expacts it for MS Windows.
+CONFIGURE_ENV+=		ac_cv_header_windows_h=no
+.endif
+
 .include "options.mk"
 
 post-extract:
@@ -96,7 +101,10 @@ post-extract:
 #	${RM} -rf ${WRKSRC}/jasper
 	${RM} -rf ${WRKSRC}/libpng
 #	${RM} -rf ${WRKSRC}/tiff
-#	${RM} -rf ${WRKSRC}/zlib
+# UX:i386ld: ERROR: symbol: 'deflate_copyright' defined in two shared objects: libgs.so: size = 53, libz.so.1: size = 68
+.if ${OS_VARIANT} == "SCOOSR5"
+	${RM} -rf ${WRKSRC}/zlib
+.endif
 	${RM} -rf ${WRKSRC}/freetype
 #
 #  To allow outside customization, rename cidfmap
