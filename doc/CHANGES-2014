@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2671 2014/07/18 11:39:23 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.2672 2014/07/18 13:02:52 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3492,3 +3492,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated wm/ctwm to 3.8.2 [obache 2014-07-18]
 	Updated databases/mongo-c-driver to 0.98.0 [fhajny 2014-07-18]
 	Updated devel/rudiments to 0.47 [fhajny 2014-07-18]
+	Updated devel/readline to 6.3nb1 [ryoon 2014-07-18]
