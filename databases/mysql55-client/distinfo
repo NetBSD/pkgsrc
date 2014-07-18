@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2014/06/02 07:17:31 adam Exp $
+$NetBSD: distinfo,v 1.34 2014/07/18 13:42:24 ryoon Exp $
 
 SHA1 (mysql-5.5.38.tar.gz) = 569c76385b24b981df35e703eefd34f9f76a2ee2
 RMD160 (mysql-5.5.38.tar.gz) = 57034b4b0642de0b08a4cf4e7e2641c775485e06
@@ -6,8 +6,9 @@ Size (mysql-5.5.38.tar.gz) = 21739681 bytes
 SHA1 (patch-BUILD_compile-pentium-gcov) = a1ac666efa953a98455a726e5db359c903d699b6
 SHA1 (patch-CMakeLists.txt) = 632e036cd9578d0636328c2259a8529c36f2d14a
 SHA1 (patch-client_completion_hash.cc) = e27fd7072a8206380f0a932b1a31d2843c985cbf
-SHA1 (patch-client_mysqladmin.cc) = 382486c2f336eed87052e682b52d1acf444452a0
+SHA1 (patch-client_mysqladmin.cc) = c640d3ca742dc1b200701d21d82d8f2093917cf2
 SHA1 (patch-client_mysqlbinlog.cc) = e38abe026c10a07808ccd24b596cf13c5079e206
+SHA1 (patch-client_mysqlshow.c) = a12b06241eee91d1ec11e3b7e4f3125aa6c79905
 SHA1 (patch-client_sql_string.cc) = 1547b8d3889af2831c89b97aecdbe8158711a600
 SHA1 (patch-cmake_dtrace.cmake) = 5ae3284589a17a8375b8a546136965fa337f3767
 SHA1 (patch-cmake_libutils.cmake) = 5d75a1762e3db6724bec2d75b45d40b17a5e9d09
@@ -18,8 +19,10 @@ SHA1 (patch-include_my_compare.h) = f45bac4b488332a668b0005751856279b67401f5
 SHA1 (patch-include_my_net.h) = 162c97a87ab00b407f6796b55ef839ba2e3ac2af
 SHA1 (patch-include_my_pthread.h) = 109d376b4cf5b64c5243f9e91300667441131f86
 SHA1 (patch-include_myisam.h) = 475070d41b06c04c6ae692743fc1b0244afe0a88
+SHA1 (patch-include_violite.h) = 4cf2a353f6e45b43e184fb412d962307f82ef00d
 SHA1 (patch-libmysql_CMakeLists.txt) = 80c8a7d1c1ed8dca49fba647aba31561981f3913
 SHA1 (patch-mysql-test_CMakeLists.txt) = d089a79df443ab2d8f97e7a1334aee2098dbb892
+SHA1 (patch-mysys_my__getopt.c) = 6d03782c2ed50e9dc4cb57de9590d6734afa7d43
 SHA1 (patch-mysys_stacktrace.c) = 294b043984f740b99ba25abc8256ce8ad54d84c3
 SHA1 (patch-scripts_CMakeLists.txt) = 17ec1d8d5f0c9e453c64f2b59e757e645a3a1a59
 SHA1 (patch-scripts_mysqld_safe.sh) = cc34d8b4a8d4b34a6766a1123782ce3d0ad64478
@@ -38,4 +41,7 @@ SHA1 (patch-storage_myisam_CMakeLists.txt) = cad3fd135d30a9d3800a9bc525595ead92f
 SHA1 (patch-storage_myisammrg_CMakeLists.txt) = 7ec499b4c8a146c551fc129e86acf2a7ead8ca7b
 SHA1 (patch-storage_ndb_include_util_Parser.hpp) = ca9406a8b01dffb3f515f132fa7aaef66c78f2be
 SHA1 (patch-strings_decimal.c) = dafedbfbd71149890f3356f3cafa77d6d0466f0f
+SHA1 (patch-strtoll.c) = fe0c586ba0475c16df5cd6ecaae41e2c5b89c509
+SHA1 (patch-strtoull.c) = 1f334e5b89390de41594de6d22e0071ceeaed951
+SHA1 (patch-vio_viosocket.c) = 49964371be640a029c295fe4178801e9f0b6be18
 SHA1 (patch-vio_viossl.c) = bc1922f1170ff55a6ed832b90c110e788b49d4be
