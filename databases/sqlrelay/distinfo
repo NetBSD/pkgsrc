@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.10 2014/05/27 13:24:43 fhajny Exp $
+$NetBSD: distinfo,v 1.11 2014/07/18 18:16:30 fhajny Exp $
 
-SHA1 (sqlrelay-0.55.tar.gz) = ce47d8564e13d03b1eda8ff5d497fb056b5752e2
-RMD160 (sqlrelay-0.55.tar.gz) = 9e727d2307f471ea935b5a8831a53929f0400c98
-Size (sqlrelay-0.55.tar.gz) = 3644680 bytes
+SHA1 (sqlrelay-0.56.tar.gz) = c859745bebe5ec4c0c514117d3fe7fcc2454433c
+RMD160 (sqlrelay-0.56.tar.gz) = abe9d999d12e1c44e657beb873796171f3ea12f8
+Size (sqlrelay-0.56.tar.gz) = 3717761 bytes
 SHA1 (patch-ad) = b822a43854848641feba34a5331082bb95f5d419
 SHA1 (patch-configure) = 72175a91d2892d5325ec619f45a5b2f571bcdbf5
 SHA1 (patch-etc_Makefile) = 262968ad43d34d53b4fe65514c1351127660e12c

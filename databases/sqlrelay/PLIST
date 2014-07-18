@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2014/05/22 12:50:48 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/07/18 18:16:30 fhajny Exp $
 bin/backupschema
 bin/sqlr-cachemanager
 bin/sqlr-connection
@@ -53,6 +53,8 @@ lib/libsqlrserver.la
 lib/libsqlrutil.la
 lib/pkgconfig/sqlrelay-c++.pc
 lib/pkgconfig/sqlrelay-c.pc
+libexec/sqlrelay/sqlrauth_default.so
+libexec/sqlrelay/sqlrauth_sqlrelay.so
 libexec/sqlrelay/sqlrconnection_router.so
 libexec/sqlrelay/sqlrlogger_custom_nw.so
 libexec/sqlrelay/sqlrlogger_custom_sc.so
@@ -73,7 +75,8 @@ man/man8/sqlr-listener.8
 man/man8/sqlr-scaler.8
 man/man8/sqlr-start.8
 man/man8/sqlr-stop.8
-share/doc/sqlrelay/admin/configuring.html
+share/doc/sqlrelay/admin/configguide.html
+share/doc/sqlrelay/admin/configreference.html
 share/doc/sqlrelay/admin/installing.html
 share/doc/sqlrelay/admin/loadbalfailover.html
 share/doc/sqlrelay/admin/oraclentier.html
@@ -442,6 +445,8 @@ share/doc/sqlrelay/gettingstarted/sybase/12.5.1.html
 share/doc/sqlrelay/gettingstarted/sybase/12.5.2.html
 share/doc/sqlrelay/gettingstarted/sybase/15.0.2.html
 share/doc/sqlrelay/images/WPM_4877_1.PNG
+share/doc/sqlrelay/images/app-pdo-mysql.png
+share/doc/sqlrelay/images/app-pdo-sqlr-mysql.png
 share/doc/sqlrelay/images/app-to-db.png
 share/doc/sqlrelay/images/app-to-sqlr-to-db.png
 share/doc/sqlrelay/images/arm-linux-uclibc-thumb.png
