@@ -625,9 +625,12 @@ parse_file(struct archive_read *a, struct archive_entry *entry,
 		if ((st->st_mode & S_IFMT) == S_IFLNK &&
 		    archive_entry_filetype(entry) != AE_IFLNK)
 			mismatched_type = 1;
+/* SCO OpenServer 5.0.7/3.2 has no S_IFSOCK. */
+#if defined(S_IFSOCK)
 		if ((st->st_mode & S_IFSOCK) == S_IFSOCK &&
 		    archive_entry_filetype(entry) != AE_IFSOCK)
 			mismatched_type = 1;
+#endif
 		if ((st->st_mode & S_IFMT) == S_IFCHR &&
 		    archive_entry_filetype(entry) != AE_IFCHR)
 			mismatched_type = 1;
