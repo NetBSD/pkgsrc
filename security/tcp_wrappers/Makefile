@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2012/10/23 18:17:00 asau Exp $
+# $NetBSD: Makefile,v 1.38 2014/07/18 10:34:34 ryoon Exp $
 
 DISTNAME=	tcp_wrappers_7.6-ipv6.4
 PKGNAME=	${DISTNAME:S/_7.6-ipv6/-7.6/}
@@ -28,6 +28,10 @@ BUILD_TARGET.${OPSYS}=	netbsd
 .endif
 BUILD_TARGET.SunOS=	sunos5
 BUILD_TARGET.IRIX=	irix5
+.if ${OS_VARIANT} == "SCOOSR5"
+BUILD_TARGET.SCO_SV=	sco-os5
+LDFLAGS.SCO_SV+=	-lsocket
+.endif
 BUILD_TARGET=		${BUILD_TARGET.${OPSYS}}
 
 .if !empty(PKG_OPTIONS:Minet6)
