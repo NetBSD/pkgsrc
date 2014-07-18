@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/05/07 07:40:40 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/07/18 09:33:58 fhajny Exp $
 bin/redis-benchmark
 bin/redis-check-aof
 bin/redis-check-dump
@@ -14,6 +14,7 @@ share/examples/redis/tests/assets/encodings.rdb
 share/examples/redis/tests/assets/hash-zipmap.rdb
 share/examples/redis/tests/helpers/bg_complex_data.tcl
 share/examples/redis/tests/helpers/gen_write_load.tcl
+share/examples/redis/tests/instances.tcl
 share/examples/redis/tests/integration/aof-race.tcl
 share/examples/redis/tests/integration/aof.tcl
 share/examples/redis/tests/integration/convert-zipmap-hash-on-load.tcl
@@ -24,14 +25,15 @@ share/examples/redis/tests/integration/replication-3.tcl
 share/examples/redis/tests/integration/replication-4.tcl
 share/examples/redis/tests/integration/replication-psync.tcl
 share/examples/redis/tests/integration/replication.tcl
-share/examples/redis/tests/sentinel-tests/00-base.tcl
-share/examples/redis/tests/sentinel-tests/01-conf-update.tcl
-share/examples/redis/tests/sentinel-tests/02-slaves-reconf.tcl
-share/examples/redis/tests/sentinel-tests/03-runtime-reconf.tcl
-share/examples/redis/tests/sentinel-tests/04-slave-selection.tcl
-share/examples/redis/tests/sentinel-tests/includes/init-tests.tcl
-share/examples/redis/tests/sentinel-tmp/.gitignore
-share/examples/redis/tests/sentinel.tcl
+share/examples/redis/tests/sentinel/run.tcl
+share/examples/redis/tests/sentinel/tests/00-base.tcl
+share/examples/redis/tests/sentinel/tests/01-conf-update.tcl
+share/examples/redis/tests/sentinel/tests/02-slaves-reconf.tcl
+share/examples/redis/tests/sentinel/tests/03-runtime-reconf.tcl
+share/examples/redis/tests/sentinel/tests/04-slave-selection.tcl
+share/examples/redis/tests/sentinel/tests/05-manual.tcl
+share/examples/redis/tests/sentinel/tests/includes/init-tests.tcl
+share/examples/redis/tests/sentinel/tmp/.gitignore
 share/examples/redis/tests/support/redis.tcl
 share/examples/redis/tests/support/server.tcl
 share/examples/redis/tests/support/test.tcl
@@ -47,6 +49,7 @@ share/examples/redis/tests/unit/dump.tcl
 share/examples/redis/tests/unit/expire.tcl
 share/examples/redis/tests/unit/hyperloglog.tcl
 share/examples/redis/tests/unit/introspection.tcl
+share/examples/redis/tests/unit/latency-monitor.tcl
 share/examples/redis/tests/unit/limits.tcl
 share/examples/redis/tests/unit/maxmemory.tcl
 share/examples/redis/tests/unit/memefficiency.tcl
