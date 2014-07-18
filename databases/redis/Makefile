@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2014/05/07 07:40:40 fhajny Exp $
+# $NetBSD: Makefile,v 1.9 2014/07/18 09:33:58 fhajny Exp $
 
-DISTNAME=	redis-2.8.9
+DISTNAME=	redis-2.8.13
 CATEGORIES=	databases
 MASTER_SITES=	http://download.redis.io/releases/
 
@@ -50,6 +50,8 @@ SUBST_STAGE.fix-paths=	post-patch
 SUBST_MESSAGE.fix-paths= Fixing paths.
 SUBST_FILES.fix-paths=	redis.conf
 SUBST_VARS.fix-paths=	REDIS_DATADIR REDIS_LOGDIR REDIS_PIDDIR
+
+CHECK_PORTABILITY_SKIP+=	deps/jemalloc/configure
 
 post-extract:
 	${CHMOD} -R g-w ${WRKSRC}
