@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1933 2014/07/18 02:02:57 wen Exp $
+# $NetBSD: Makefile,v 1.1934 2014/07/19 09:02:29 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -547,6 +547,7 @@ SUBDIR+=	msgpack
 SUBDIR+=	nana
 SUBDIR+=	nant
 SUBDIR+=	nasm
+SUBDIR+=	ninja
 SUBDIR+=	nbitools
 SUBDIR+=	nbpatch
 SUBDIR+=	ncc
