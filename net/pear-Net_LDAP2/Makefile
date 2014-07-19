@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2012/10/23 17:18:57 asau Exp $
+# $NetBSD: Makefile,v 1.6 2014/07/19 02:50:41 wen Exp $
 
-DISTNAME=	Net_LDAP2-2.0.12
+DISTNAME=	Net_LDAP2-2.1.0
 CATEGORIES+=	net
 
 MAINTAINER=	wenheping@gmail.com
