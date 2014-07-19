@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/06/19 15:40:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/07/19 05:13:07 taca Exp $
 bin/pear
 bin/peardev
 bin/pecl
@@ -151,7 +151,6 @@ lib/php/pearcmd.php
 lib/php/peclcmd.php
 lib/php/test/Structures_Graph/tests/AllTests.php
 lib/php/test/Structures_Graph/tests/testCase/BasicGraph.php
-lib/php/test/XML_Util/tests/AllTests.php
 lib/php/test/XML_Util/tests/testBasic_apiVersion.phpt
 lib/php/test/XML_Util/tests/testBasic_attributesToString.phpt
 lib/php/test/XML_Util/tests/testBasic_collapseEmptyTags.phpt
@@ -168,6 +167,7 @@ lib/php/test/XML_Util/tests/testBasic_raiseError.phpt
 lib/php/test/XML_Util/tests/testBasic_replaceEntities.phpt
 lib/php/test/XML_Util/tests/testBasic_reverseEntities.phpt
 lib/php/test/XML_Util/tests/testBasic_splitQualifiedName.phpt
+lib/php/test/XML_Util/tests/testBug_18343.phpt
 lib/php/test/XML_Util/tests/testBug_4950.phpt
 lib/php/test/XML_Util/tests/testBug_5392.phpt
 share/examples/pear/pear.conf
