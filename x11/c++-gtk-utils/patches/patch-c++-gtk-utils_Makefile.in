@@ -1,0 +1,15 @@
+$NetBSD: patch-c++-gtk-utils_Makefile.in,v 1.1 2014/07/19 06:39:31 ryoon Exp $
+
+* Fix not found errors of essential functions
+
+--- c++-gtk-utils/Makefile.in.orig	2014-05-30 22:41:36.000000000 +0000
++++ c++-gtk-utils/Makefile.in
+@@ -411,7 +411,7 @@ pkginclude_HEADERS = fdstream.h fdstream
+ 		      task_manager.h task_manager.tpp	     \
+ 		      parallel.h cgu_config.h
+ 
+-AM_CXXFLAGS = -D_XOPEN_SOURCE=600 @PTHREAD_FLAG_CXX@ @GTK_UNIX_PRINT_CFLAGS@	\
++AM_CXXFLAGS = @PTHREAD_FLAG_CXX@ @GTK_UNIX_PRINT_CFLAGS@	\
+ 	      @GTK_CFLAGS@ @GIO_CFLAGS@ @DBUS_GLIB_CFLAGS@ @GTHREAD_CFLAGS@	\
+ 	      @GLIB_CFLAGS@ -I..
+ 
