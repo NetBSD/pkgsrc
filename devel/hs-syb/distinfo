@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/05/21 21:00:19 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2014/07/19 13:12:02 szptvlfn Exp $
 
-SHA1 (syb-0.4.1.tar.gz) = 3bd53266e8ddb1c1c31edadb7e2bf905dbcadd39
-RMD160 (syb-0.4.1.tar.gz) = 4ed2329f3c915adb91fb5b1f6b3735e219d1fdd6
-Size (syb-0.4.1.tar.gz) = 38699 bytes
+SHA1 (syb-0.4.2.tar.gz) = 62e0ca5d3f119be47f127f4748c03a6e118a6495
+RMD160 (syb-0.4.2.tar.gz) = 97ab393c2a6f3373a604b2ae26993acbcb193681
+Size (syb-0.4.2.tar.gz) = 38388 bytes
