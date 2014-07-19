@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.28 2014/05/20 08:44:14 wiz Exp $
+$NetBSD: distinfo,v 1.29 2014/07/19 06:13:37 wiz Exp $
 
-SHA1 (meld-1.8.5.tar.xz) = a1f01bc68820c7e35c374dfb1923ed20ac28e603
-RMD160 (meld-1.8.5.tar.xz) = 3e5c23c39d8334d31df0ed809b248755edb1c8bf
-Size (meld-1.8.5.tar.xz) = 444872 bytes
+SHA1 (meld-1.8.6.tar.xz) = 33e23f2e56b27f2ac5cd21032c7eefe9dd469480
+RMD160 (meld-1.8.6.tar.xz) = 7c981c08a015a1a0706cbe98416a25e0963af0cb
+Size (meld-1.8.6.tar.xz) = 447196 bytes
