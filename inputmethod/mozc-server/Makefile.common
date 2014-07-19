@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2014/06/15 13:08:34 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.11 2014/07/19 09:03:04 ryoon Exp $
 # used by inputmethod/ibus-mozc/Makefile
 # used by inputmethod/mozc-elisp/Makefile
 # used by inputmethod/mozc-server/Makefile
@@ -7,9 +7,8 @@
 # used by inputmethod/uim-mozc/Makefile
 #
 
-DISTNAME=	mozc-1.15.1785.102
+DISTNAME=	mozc-1.15.1834.102
 CATEGORIES=	inputmethod
-#MASTER_SITES=	http://mozc.googlecode.com/files/
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pnsft-aur/}
 EXTRACT_SUFX=	.tar.xz
 
@@ -22,6 +21,7 @@ DISTINFO_FILE=	${.CURDIR}/../../inputmethod/mozc-server/distinfo
 PATCHDIR=	${.CURDIR}/../../inputmethod/mozc-server/patches
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-gyp-[0-9]*:../../devel/gyp
+BUILD_DEPENDS+=	ninja-[0-9]*:../../devel/ninja
 
 PYTHON_VERSIONS_INCOMPATIBLE=  33 # py-gyp
 
@@ -33,6 +33,7 @@ CXXFLAGS+=	-std=c++11
 USE_TOOLS+=	gmake pkg-config
 
 FIND_PREFIX:=	GYPDIR=${PYPKGPREFIX}-gyp
+#FIND_PREFIX:=	NINJADIR=ninja
 .include "../../mk/find-prefix.mk"
 
 OPENSSL_CFLAGS=		-I${BUILDLINK_PREFIX.openssl}/include
@@ -68,16 +69,16 @@ MOZC_BUILD_MODE=	Release # or Debug
 do-configure:
 	cd ${WRKSRC} && env ${MAKE_ENV} \
 		GYP_DEFINES="use_libprotobuf=1" \
-		${PYTHONBIN} build_mozc.py gyp \
-		--gypdir=${GYPDIR}/bin && \
-		${PYTHONBIN} build_mozc.py build_tools -c ${MOZC_BUILD_MODE} \
-		${_MAKE_JOBS}
+		${PYTHONBIN} build_mozc.py \
+		gyp \
+		--gypdir=${GYPDIR}/bin
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/protobuf/buildlink3.mk"
 # gmock is not used yet...
 #.include "../../devel/gmock/buildlink3.mk"
 .include "../../inputmethod/zinnia/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 
