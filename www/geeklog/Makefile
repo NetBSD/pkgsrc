@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.39 2013/04/02 15:46:36 taca Exp $
+# $NetBSD: Makefile,v 1.40 2014/07/19 05:19:39 taca Exp $
 #
 
 DISTNAME=	geeklog-${VER}
 PKGNAME=	geeklog-${VER:C/(sr|-)/./g}
 CATEGORIES=	www
-MASTER_SITES=	http://www.geeklog.net/filemgmt/upload_dir/
+MASTER_SITES=	https://www.geeklog.net/filemgmt/upload_dir/
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://www.geeklog.net/
+HOMEPAGE=	https://www.geeklog.net/
 COMMENT=	PHP/MySQL based application for managing dynamic web content
 LICENSE=	gnu-gpl-v2
 
@@ -16,7 +16,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.0:../../databases/php-mysql
 
 USE_TOOLS+=	pax
 
-VER=		2.0.0
+VER=		2.1.0
 NO_BUILD=	YES
 
 PKG_GROUPS_VARS+=	APACHE_GROUP
