@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2014/06/09 11:05:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2014/07/19 11:47:43 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -59,6 +59,9 @@ ${PYSITELIB}/cms/apphook_pool.pyo
 ${PYSITELIB}/cms/appresolver.py
 ${PYSITELIB}/cms/appresolver.pyc
 ${PYSITELIB}/cms/appresolver.pyo
+${PYSITELIB}/cms/apps.py
+${PYSITELIB}/cms/apps.pyc
+${PYSITELIB}/cms/apps.pyo
 ${PYSITELIB}/cms/cache/__init__.py
 ${PYSITELIB}/cms/cache/__init__.pyc
 ${PYSITELIB}/cms/cache/__init__.pyo
@@ -71,12 +74,6 @@ ${PYSITELIB}/cms/cms_plugins.pyo
 ${PYSITELIB}/cms/cms_toolbar.py
 ${PYSITELIB}/cms/cms_toolbar.pyc
 ${PYSITELIB}/cms/cms_toolbar.pyo
-${PYSITELIB}/cms/compat.py
-${PYSITELIB}/cms/compat.pyc
-${PYSITELIB}/cms/compat.pyo
-${PYSITELIB}/cms/compat_forms.py
-${PYSITELIB}/cms/compat_forms.pyc
-${PYSITELIB}/cms/compat_forms.pyo
 ${PYSITELIB}/cms/constants.py
 ${PYSITELIB}/cms/constants.pyc
 ${PYSITELIB}/cms/constants.pyo
@@ -660,12 +657,21 @@ ${PYSITELIB}/cms/migrations/0064_staticplaceholder_site_change.pyo
 ${PYSITELIB}/cms/migrations/0065_auto__add_unique_usersettings_user.py
 ${PYSITELIB}/cms/migrations/0065_auto__add_unique_usersettings_user.pyc
 ${PYSITELIB}/cms/migrations/0065_auto__add_unique_usersettings_user.pyo
+${PYSITELIB}/cms/migrations/0066_auto__add_aliaspluginmodel.py
+${PYSITELIB}/cms/migrations/0066_auto__add_aliaspluginmodel.pyc
+${PYSITELIB}/cms/migrations/0066_auto__add_aliaspluginmodel.pyo
+${PYSITELIB}/cms/migrations/0067_auto__add_field_aliaspluginmodel_alias_placeholder__chg_field_aliasplu.py
+${PYSITELIB}/cms/migrations/0067_auto__add_field_aliaspluginmodel_alias_placeholder__chg_field_aliasplu.pyc
+${PYSITELIB}/cms/migrations/0067_auto__add_field_aliaspluginmodel_alias_placeholder__chg_field_aliasplu.pyo
 ${PYSITELIB}/cms/migrations/__init__.py
 ${PYSITELIB}/cms/migrations/__init__.pyc
 ${PYSITELIB}/cms/migrations/__init__.pyo
 ${PYSITELIB}/cms/models/__init__.py
 ${PYSITELIB}/cms/models/__init__.pyc
 ${PYSITELIB}/cms/models/__init__.pyo
+${PYSITELIB}/cms/models/aliaspluginmodel.py
+${PYSITELIB}/cms/models/aliaspluginmodel.pyc
+${PYSITELIB}/cms/models/aliaspluginmodel.pyo
 ${PYSITELIB}/cms/models/fields.py
 ${PYSITELIB}/cms/models/fields.pyc
 ${PYSITELIB}/cms/models/fields.pyo
@@ -1020,10 +1026,12 @@ ${PYSITELIB}/cms/templates/admin/cms/page/tree/menu_item.html
 ${PYSITELIB}/cms/templates/admin/cms/usersettings/change_form.html
 ${PYSITELIB}/cms/templates/cms/content.html
 ${PYSITELIB}/cms/templates/cms/dummy.html
+${PYSITELIB}/cms/templates/cms/plugins/alias.html
 ${PYSITELIB}/cms/templates/cms/toolbar/clipboard.html
 ${PYSITELIB}/cms/templates/cms/toolbar/content.html
 ${PYSITELIB}/cms/templates/cms/toolbar/dragbar.html
 ${PYSITELIB}/cms/templates/cms/toolbar/dragitem.html
+${PYSITELIB}/cms/templates/cms/toolbar/dragitem_extra_menu.html
 ${PYSITELIB}/cms/templates/cms/toolbar/dragitem_menu.html
 ${PYSITELIB}/cms/templates/cms/toolbar/items/break.html
 ${PYSITELIB}/cms/templates/cms/toolbar/items/button.html
@@ -1091,9 +1099,18 @@ ${PYSITELIB}/cms/test_utils/project/brokenpluginapp/__init__.pyo
 ${PYSITELIB}/cms/test_utils/project/brokenpluginapp/cms_plugins.py
 ${PYSITELIB}/cms/test_utils/project/brokenpluginapp/cms_plugins.pyc
 ${PYSITELIB}/cms/test_utils/project/brokenpluginapp/cms_plugins.pyo
+${PYSITELIB}/cms/test_utils/project/bunch_of_plugins/__init__.py
+${PYSITELIB}/cms/test_utils/project/bunch_of_plugins/__init__.pyc
+${PYSITELIB}/cms/test_utils/project/bunch_of_plugins/__init__.pyo
+${PYSITELIB}/cms/test_utils/project/bunch_of_plugins/models.py
+${PYSITELIB}/cms/test_utils/project/bunch_of_plugins/models.pyc
+${PYSITELIB}/cms/test_utils/project/bunch_of_plugins/models.pyo
 ${PYSITELIB}/cms/test_utils/project/cms_urls_for_apphook_tests.py
 ${PYSITELIB}/cms/test_utils/project/cms_urls_for_apphook_tests.pyc
 ${PYSITELIB}/cms/test_utils/project/cms_urls_for_apphook_tests.pyo
+${PYSITELIB}/cms/test_utils/project/custom_templates/__init__.py
+${PYSITELIB}/cms/test_utils/project/custom_templates/__init__.pyc
+${PYSITELIB}/cms/test_utils/project/custom_templates/__init__.pyo
 ${PYSITELIB}/cms/test_utils/project/customuserapp/__init__.py
 ${PYSITELIB}/cms/test_utils/project/customuserapp/__init__.pyc
 ${PYSITELIB}/cms/test_utils/project/customuserapp/__init__.pyo
@@ -1256,6 +1273,9 @@ ${PYSITELIB}/cms/test_utils/project/sampleapp/cms_app.pyo
 ${PYSITELIB}/cms/test_utils/project/sampleapp/cms_toolbar.py
 ${PYSITELIB}/cms/test_utils/project/sampleapp/cms_toolbar.pyc
 ${PYSITELIB}/cms/test_utils/project/sampleapp/cms_toolbar.pyo
+${PYSITELIB}/cms/test_utils/project/sampleapp/forms.py
+${PYSITELIB}/cms/test_utils/project/sampleapp/forms.pyc
+${PYSITELIB}/cms/test_utils/project/sampleapp/forms.pyo
 ${PYSITELIB}/cms/test_utils/project/sampleapp/menu.py
 ${PYSITELIB}/cms/test_utils/project/sampleapp/menu.pyc
 ${PYSITELIB}/cms/test_utils/project/sampleapp/menu.pyo
@@ -1295,6 +1315,12 @@ ${PYSITELIB}/cms/test_utils/project/third_urls_for_apphook_tests.pyo
 ${PYSITELIB}/cms/test_utils/project/urls.py
 ${PYSITELIB}/cms/test_utils/project/urls.pyc
 ${PYSITELIB}/cms/test_utils/project/urls.pyo
+${PYSITELIB}/cms/test_utils/project/urls_2.py
+${PYSITELIB}/cms/test_utils/project/urls_2.pyc
+${PYSITELIB}/cms/test_utils/project/urls_2.pyo
+${PYSITELIB}/cms/test_utils/project/urls_3.py
+${PYSITELIB}/cms/test_utils/project/urls_3.pyc
+${PYSITELIB}/cms/test_utils/project/urls_3.pyo
 ${PYSITELIB}/cms/test_utils/project/urls_for_apphook_tests.py
 ${PYSITELIB}/cms/test_utils/project/urls_for_apphook_tests.pyc
 ${PYSITELIB}/cms/test_utils/project/urls_for_apphook_tests.pyo
@@ -1340,6 +1366,9 @@ ${PYSITELIB}/cms/tests/__init__.pyo
 ${PYSITELIB}/cms/tests/admin.py
 ${PYSITELIB}/cms/tests/admin.pyc
 ${PYSITELIB}/cms/tests/admin.pyo
+${PYSITELIB}/cms/tests/alias.py
+${PYSITELIB}/cms/tests/alias.pyc
+${PYSITELIB}/cms/tests/alias.pyo
 ${PYSITELIB}/cms/tests/api.py
 ${PYSITELIB}/cms/tests/api.pyc
 ${PYSITELIB}/cms/tests/api.pyo
@@ -1454,6 +1483,9 @@ ${PYSITELIB}/cms/tests/static_placeholder.pyo
 ${PYSITELIB}/cms/tests/staticfiles.py
 ${PYSITELIB}/cms/tests/staticfiles.pyc
 ${PYSITELIB}/cms/tests/staticfiles.pyo
+${PYSITELIB}/cms/tests/templates.py
+${PYSITELIB}/cms/tests/templates.pyc
+${PYSITELIB}/cms/tests/templates.pyo
 ${PYSITELIB}/cms/tests/templatetags.py
 ${PYSITELIB}/cms/tests/templatetags.pyc
 ${PYSITELIB}/cms/tests/templatetags.pyo
@@ -1502,6 +1534,9 @@ ${PYSITELIB}/cms/utils/compat/__init__.pyo
 ${PYSITELIB}/cms/utils/compat/dj.py
 ${PYSITELIB}/cms/utils/compat/dj.pyc
 ${PYSITELIB}/cms/utils/compat/dj.pyo
+${PYSITELIB}/cms/utils/compat/forms.py
+${PYSITELIB}/cms/utils/compat/forms.pyc
+${PYSITELIB}/cms/utils/compat/forms.pyo
 ${PYSITELIB}/cms/utils/compat/input.py
 ${PYSITELIB}/cms/utils/compat/input.pyc
 ${PYSITELIB}/cms/utils/compat/input.pyo
@@ -1526,6 +1561,9 @@ ${PYSITELIB}/cms/utils/conf.pyo
 ${PYSITELIB}/cms/utils/copy_plugins.py
 ${PYSITELIB}/cms/utils/copy_plugins.pyc
 ${PYSITELIB}/cms/utils/copy_plugins.pyo
+${PYSITELIB}/cms/utils/decorators.py
+${PYSITELIB}/cms/utils/decorators.pyc
+${PYSITELIB}/cms/utils/decorators.pyo
 ${PYSITELIB}/cms/utils/django_load.py
 ${PYSITELIB}/cms/utils/django_load.pyc
 ${PYSITELIB}/cms/utils/django_load.pyo
@@ -1559,6 +1597,9 @@ ${PYSITELIB}/cms/utils/plugins.pyo
 ${PYSITELIB}/cms/utils/reversion_hacks.py
 ${PYSITELIB}/cms/utils/reversion_hacks.pyc
 ${PYSITELIB}/cms/utils/reversion_hacks.pyo
+${PYSITELIB}/cms/utils/transaction.py
+${PYSITELIB}/cms/utils/transaction.pyc
+${PYSITELIB}/cms/utils/transaction.pyo
 ${PYSITELIB}/cms/utils/urlutils.py
 ${PYSITELIB}/cms/utils/urlutils.pyc
 ${PYSITELIB}/cms/utils/urlutils.pyo
@@ -1568,6 +1609,9 @@ ${PYSITELIB}/cms/views.pyo
 ${PYSITELIB}/menus/__init__.py
 ${PYSITELIB}/menus/__init__.pyc
 ${PYSITELIB}/menus/__init__.pyo
+${PYSITELIB}/menus/apps.py
+${PYSITELIB}/menus/apps.pyc
+${PYSITELIB}/menus/apps.pyo
 ${PYSITELIB}/menus/base.py
 ${PYSITELIB}/menus/base.pyc
 ${PYSITELIB}/menus/base.pyo
