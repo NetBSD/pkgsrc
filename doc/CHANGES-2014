@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2698 2014/07/19 13:16:59 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.2699 2014/07/19 13:18:48 bad Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3525,3 +3525,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/scons to 2.3.2 [adam 2014-07-19]
 	Updated devel/hs-syb to 0.4.2 [szptvlfn 2014-07-19]
 	Updated devel/hs-vector to 0.10.11.0 [szptvlfn 2014-07-19]
+	Updated math/py-pandas to 0.14.1 [bad 2014-07-19]
