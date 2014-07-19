@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2687 2014/07/19 06:49:47 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.2688 2014/07/19 09:02:01 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3509,3 +3509,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added x11/c++-gtk-utils version 2.2.7 [ryoon 2014-07-19]
 	Updated comms/efax-gtk to 3.2.13 [ryoon 2014-07-19]
 	Updated x11/c++-gtk-utils to 2.2.8 [ryoon 2014-07-19]
+	Added devel/ninja version 1.5.1 [ryoon 2014-07-19]
