@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2693 2014/07/19 11:14:04 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2694 2014/07/19 11:15:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3520,3 +3520,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/libburn to 1.3.8 [wiz 2014-07-19]
 	Updated sysutils/libisofs to 1.3.8 [wiz 2014-07-19]
 	Updated sysutils/libisoburn to 1.3.8 [wiz 2014-07-19]
+	Updated textproc/pod2mdoc to 0.0.13 [wiz 2014-07-19]
