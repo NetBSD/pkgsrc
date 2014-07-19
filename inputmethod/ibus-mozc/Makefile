@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/06/15 13:08:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2014/07/19 09:03:04 ryoon Exp $
 
 PKGNAME=	ibus-${DISTNAME}
 
@@ -18,7 +18,7 @@ do-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/out_${OSDEST}/${MOZC_BUILD_MODE}/ibus_mozc \
 		${DESTDIR}${PREFIX}/libexec/ibus-engine-mozc
-	${INSTALL_DATA} ${WRKSRC}/out_${OSDEST}/${MOZC_BUILD_MODE}/obj/gen/unix/ibus/mozc.xml \
+	${INSTALL_DATA} ${WRKSRC}/out_${OSDEST}/${MOZC_BUILD_MODE}/gen/unix/ibus/mozc.xml \
 		${DESTDIR}${PREFIX}/share/ibus/component
 	${INSTALL_DATA} ${WRKSRC}/data/images/unix/ime_product_icon_opensource-32.png \
 		${DESTDIR}${PREFIX}/share/ibus-mozc/product_icon.png
