@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.13 2014/06/09 13:15:13 wiz Exp $
+$NetBSD: distinfo,v 1.14 2014/07/19 12:30:49 adam Exp $
 
-SHA1 (scons-2.3.1.tar.gz) = 775e715e49fe5fd8e1d29551a296fdc9267509e7
-RMD160 (scons-2.3.1.tar.gz) = 7ec92fb98d818a0b02c906f29d30c7ce62f0ab2c
-Size (scons-2.3.1.tar.gz) = 499037 bytes
-SHA1 (patch-aa) = d88233a885a142836f5985fa579fc454f68ef3ab
+SHA1 (scons-2.3.2.tar.gz) = 2937f20b86d0c5f86cf31e1fa378307ed34fc20a
+RMD160 (scons-2.3.2.tar.gz) = bba097fafb5e7a99e3e904df9b668e0269ea6b71
+Size (scons-2.3.2.tar.gz) = 621932 bytes
+SHA1 (patch-aa) = 3175e49f2ef8575f7097d9af8a7f6067258bd085
 SHA1 (patch-engine_SCons_Platform___init__.py) = 51ea2b6b3bc0ee11c863c924d60ec4b5cbde8416

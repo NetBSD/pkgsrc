@@ -1,19 +1,9 @@
-$NetBSD: patch-aa,v 1.5 2014/06/09 13:15:13 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2014/07/19 12:30:49 adam Exp $
 
-Don't install empty man pages (zero bytes as of 2.3.1)
+Use PKGMANDIR.
 
 --- setup.py.orig	2014-03-02 19:19:50.000000000 +0000
 +++ setup.py
-@@ -41,9 +41,6 @@ import sys
- Version = "2.3.1"
- 
- man_pages = [
--    'scons.1',
--    'sconsign.1',
--    'scons-time.1',
- ]
- 
- # Exit with error if trying to install with Python >= 3.0
 @@ -365,7 +362,7 @@ class install_data(_install_data):
              if is_win32:
                  dir = 'Doc'
