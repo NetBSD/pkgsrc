@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2014/07/19 11:12:28 cheusov Exp $
+lib/clang/${PKGVERSION}/lib/linux/libclang_rt.asan-x86_64.a
+lib/clang/${PKGVERSION}/lib/linux/libclang_rt.dfsan-x86_64.a
+lib/clang/${PKGVERSION}/lib/linux/libclang_rt.full-x86_64.a
+lib/clang/${PKGVERSION}/lib/linux/libclang_rt.lsan-x86_64.a
+lib/clang/${PKGVERSION}/lib/linux/libclang_rt.msan-x86_64.a
+lib/clang/${PKGVERSION}/lib/linux/libclang_rt.profile-x86_64.a
+lib/clang/${PKGVERSION}/lib/linux/libclang_rt.san-x86_64.a
+lib/clang/${PKGVERSION}/lib/linux/libclang_rt.tsan-x86_64.a
+lib/clang/${PKGVERSION}/lib/linux/libclang_rt.ubsan_cxx-x86_64.a
+lib/clang/${PKGVERSION}/lib/linux/libclang_rt.ubsan-x86_64.a
