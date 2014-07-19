@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2678 2014/07/19 02:51:37 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2679 2014/07/19 05:11:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3499,3 +3499,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Mojolicious to 5.15 [wen 2014-07-19]
 	Updated sysutils/pear-Log to 1.12.8 [wen 2014-07-19]
 	Updated net/pear-Net_LDAP2 to 2.1.0 [wen 2014-07-19]
+	Updated net/bind99 to 9.9.5pl1nb1 [taca 2014-07-19]
