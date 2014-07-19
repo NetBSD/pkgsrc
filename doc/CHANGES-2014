@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2697 2014/07/19 13:12:52 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.2698 2014/07/19 13:16:59 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3524,3 +3524,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-django-cms to 3.0.3 [adam 2014-07-19]
 	Updated devel/scons to 2.3.2 [adam 2014-07-19]
 	Updated devel/hs-syb to 0.4.2 [szptvlfn 2014-07-19]
+	Updated devel/hs-vector to 0.10.11.0 [szptvlfn 2014-07-19]
