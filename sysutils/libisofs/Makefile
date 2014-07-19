@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/04/29 20:03:06 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/07/19 11:10:20 wiz Exp $
 
-DISTNAME=	libisofs-1.3.6
+DISTNAME=	libisofs-1.3.8
 CATEGORIES=	sysutils
 MASTER_SITES=	http://files.libburnia-project.org/releases/
 
