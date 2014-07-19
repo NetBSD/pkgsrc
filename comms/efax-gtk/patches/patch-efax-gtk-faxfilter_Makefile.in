@@ -1,0 +1,15 @@
+$NetBSD: patch-efax-gtk-faxfilter_Makefile.in,v 1.1 2014/07/19 06:44:05 ryoon Exp $
+
+--- efax-gtk-faxfilter/Makefile.in.orig	2014-04-11 10:10:35.000000000 +0000
++++ efax-gtk-faxfilter/Makefile.in
+@@ -664,8 +664,8 @@ uninstall-am: uninstall-spoolPROGRAMS un
+ 
+ 
+ install-data-hook:
+-	-chown lp $(spooldir) 2> /dev/null
+-	-chgrp lp $(spooldir) 2> /dev/null
++	#-chown lp $(spooldir) 2> /dev/null
++	#-chgrp lp $(spooldir) 2> /dev/null
+
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
