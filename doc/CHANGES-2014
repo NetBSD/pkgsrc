@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2696 2014/07/19 12:32:02 adam Exp $
+$NetBSD: CHANGES-2014,v 1.2697 2014/07/19 13:12:52 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3523,3 +3523,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/pod2mdoc to 0.0.13 [wiz 2014-07-19]
 	Updated www/py-django-cms to 3.0.3 [adam 2014-07-19]
 	Updated devel/scons to 2.3.2 [adam 2014-07-19]
+	Updated devel/hs-syb to 0.4.2 [szptvlfn 2014-07-19]
