@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2014/06/09 13:15:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2014/07/19 12:30:49 adam Exp $
 bin/scons
 bin/${PKGNAME}
 bin/scons-time
@@ -168,6 +168,9 @@ lib/${PKGNAME}/SCons/Tool/BitKeeper.pyo
 lib/${PKGNAME}/SCons/Tool/CVS.py
 lib/${PKGNAME}/SCons/Tool/CVS.pyc
 lib/${PKGNAME}/SCons/Tool/CVS.pyo
+lib/${PKGNAME}/SCons/Tool/DCommon.py
+lib/${PKGNAME}/SCons/Tool/DCommon.pyc
+lib/${PKGNAME}/SCons/Tool/DCommon.pyo
 lib/${PKGNAME}/SCons/Tool/FortranCommon.py
 lib/${PKGNAME}/SCons/Tool/FortranCommon.pyc
 lib/${PKGNAME}/SCons/Tool/FortranCommon.pyo
@@ -300,6 +303,9 @@ lib/${PKGNAME}/SCons/Tool/gas.pyo
 lib/${PKGNAME}/SCons/Tool/gcc.py
 lib/${PKGNAME}/SCons/Tool/gcc.pyc
 lib/${PKGNAME}/SCons/Tool/gcc.pyo
+lib/${PKGNAME}/SCons/Tool/gdc.py
+lib/${PKGNAME}/SCons/Tool/gdc.pyc
+lib/${PKGNAME}/SCons/Tool/gdc.pyo
 lib/${PKGNAME}/SCons/Tool/gettext.py
 lib/${PKGNAME}/SCons/Tool/gettext.pyc
 lib/${PKGNAME}/SCons/Tool/gettext.pyo
@@ -360,6 +366,9 @@ lib/${PKGNAME}/SCons/Tool/javah.pyo
 lib/${PKGNAME}/SCons/Tool/latex.py
 lib/${PKGNAME}/SCons/Tool/latex.pyc
 lib/${PKGNAME}/SCons/Tool/latex.pyo
+lib/${PKGNAME}/SCons/Tool/ldc.py
+lib/${PKGNAME}/SCons/Tool/ldc.pyc
+lib/${PKGNAME}/SCons/Tool/ldc.pyo
 lib/${PKGNAME}/SCons/Tool/lex.py
 lib/${PKGNAME}/SCons/Tool/lex.pyc
 lib/${PKGNAME}/SCons/Tool/lex.pyo
@@ -588,3 +597,6 @@ lib/${PKGNAME}/SCons/dblite.pyo
 lib/${PKGNAME}/SCons/exitfuncs.py
 lib/${PKGNAME}/SCons/exitfuncs.pyc
 lib/${PKGNAME}/SCons/exitfuncs.pyo
+man/man1/scons-time.1
+man/man1/scons.1
+man/man1/sconsign.1
