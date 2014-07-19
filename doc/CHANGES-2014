@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2675 2014/07/18 18:16:43 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.2676 2014/07/19 00:35:30 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3496,3 +3496,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/moodle to 2.7.1 [wen 2014-07-18]
 	Updated lang/clang to 3.4.2 [adam 2014-07-18]
 	Updated databases/sqlrelay to 0.56 [fhajny 2014-07-18]
+	Updated www/p5-Mojolicious to 5.15 [wen 2014-07-19]
