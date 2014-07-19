@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2680 2014/07/19 05:13:45 taca Exp $
+$NetBSD: CHANGES-2014,v 1.2681 2014/07/19 05:18:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3501,3 +3501,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/pear-Net_LDAP2 to 2.1.0 [wen 2014-07-19]
 	Updated net/bind99 to 9.9.5pl1nb1 [taca 2014-07-19]
 	Updated lang/pear to 1.9.5 [taca 2014-07-19]
+	Updated www/typo3_45 to 4.5.35 [taca 2014-07-19]
+	Updated www/typo3_61 to 6.1.10 [taca 2014-07-19]
