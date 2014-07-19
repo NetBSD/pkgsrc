@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.8 2014/06/15 13:08:34 ryoon Exp $
+$NetBSD: distinfo,v 1.9 2014/07/19 09:03:04 ryoon Exp $
 
-SHA1 (mozc-1.15.1785.102.tar.xz) = e3114c30007c9c1d6c449a015091b67a3f1f77ae
-RMD160 (mozc-1.15.1785.102.tar.xz) = 972f26eaa824efe4a5a18106cae2acb68b28f869
-Size (mozc-1.15.1785.102.tar.xz) = 35417096 bytes
+SHA1 (mozc-1.15.1834.102.tar.xz) = 77f062eb9b8f860a9a566c8e70160c038a7f8a1a
+RMD160 (mozc-1.15.1834.102.tar.xz) = a9c7ed8cca7cc22152c2967e722764b26750aaec
+Size (mozc-1.15.1834.102.tar.xz) = 32444272 bytes
 SHA1 (uim-mozc-334.tar.xz) = af86ce7a04b291629bd5dc56d5c1115332954a91
 RMD160 (uim-mozc-334.tar.xz) = b988667237f65e61fabf3935f83f5d21a8059f4e
 Size (uim-mozc-334.tar.xz) = 30544 bytes
-SHA1 (patch-base_base.gyp) = a54c372450cf2e64d1318ae434d1bfd79cc142d0
+SHA1 (patch-base_base.gyp) = d1b0c6133bcef09a58bb02da0154fe54a5e71564
 SHA1 (patch-base_cpu__stats.cc) = cda8bbcbc963d8ed635435375cc80ee5e7ca2191
 SHA1 (patch-base_iconv.cc) = 1bf65dfc6152bf152cbe2714835a61436df2a48b
 SHA1 (patch-base_logging.cc) = 96ee9d1426ef1cf946a00fb15c9754603ab15bb8
@@ -14,11 +14,11 @@ SHA1 (patch-base_mutex.cc) = aed8588d4ff7b057fed072097ef09ddbc2696d31
 SHA1 (patch-base_mutex.h) = 6c3c8f0845f0fdad815c4877026894000d5eac2c
 SHA1 (patch-base_password__manager.cc) = f16982447f54e397d1aa103260d8f4d10aa76f96
 SHA1 (patch-base_process.cc) = abdd6a955e87506972e7f71fd4bc3a300f49b304
-SHA1 (patch-base_run__level.cc) = 8aa169a8be51674898906740cb8f6103b99021b4
+SHA1 (patch-base_run__level.cc) = bf9897527494fda5e5f97366e2fd26a283225450
 SHA1 (patch-base_system__util.cc) = f3ef575a15cd518fe7d29264b39f775ccf502802
 SHA1 (patch-base_thread.h) = 8aaacbb1421cf0e886f3b58dfd2c653f3d82ef70
 SHA1 (patch-base_util.cc) = c473cb595535075b53c9c235fc28f5e7da26d087
-SHA1 (patch-build__mozc.py) = a8b4596c9c5f86ca8dbbf3ea03e1873ff86baa00
+SHA1 (patch-build__mozc.py) = b6e94a43564cd4a7032cc9c6d5bd297453010d36
 SHA1 (patch-build__tools_mozc__version.py) = a6ff8a82b1328086b7d758f73a7d3c31e87bccc9
 SHA1 (patch-build__tools_util.py) = 6416884ba288d60eb8e558e8c5de7ef6e538b82e
 SHA1 (patch-client_client.cc) = 7ca43dde3f207331005599653c6520667e3ca93c
@@ -40,7 +40,6 @@ SHA1 (patch-ipc_ipc__path__manager__test.cc) = 90ea81daef93dc1ad5cee792ced26a9a2
 SHA1 (patch-ipc_named__event.cc) = 92283261e7580569587e43156f13567b593c9a32
 SHA1 (patch-ipc_unix__ipc.cc) = d821deb2f38bf77bf6b364eb31d419c0a86c1a7f
 SHA1 (patch-net_net.gyp) = 937b28ad663605373d6b772097318b17dbea2eea
-SHA1 (patch-protobuf_genproto.gypi) = 601165a376bcd05983f87733285737ee043c13fe
 SHA1 (patch-protobuf_protobuf.gyp) = c1b08a30b8f9b2ca0d7cac180891cf3d9bc257f3
 SHA1 (patch-session_session.cc) = 0562f8646dc6f68e180d8ae98f00eeb0364fc473
 SHA1 (patch-session_session__converter__interface.h) = 93bda6e51b9a9ac7146aa23ac0aa28bb017a4465
@@ -48,4 +47,3 @@ SHA1 (patch-session_session__test.cc) = a256caec45a45f4eaab0555ecc18cea09c417d95
 SHA1 (patch-third__party_protobuf_post__process__dist.sh) = c54363572de0afc2c49b4ed06bc0eb329e4ad237
 SHA1 (patch-unix_ibus_gen__mozc__xml.py) = 566d567ae4f911766309e035697a23350f24bbf5
 SHA1 (patch-unix_ibus_ibus.gyp) = 2fc9309216270846f7ce33d1854d9d76e65e6e96
-SHA1 (patch-unix_ibus_mozc__engine.cc) = 2ce0a680a0fad1abdc646737b6b5a4c3a9e87e6e
