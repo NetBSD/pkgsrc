@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2014/06/18 09:28:18 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2014/07/19 20:32:15 richard Exp $
 
 DISTNAME=	gtk+-3.10.7
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
@@ -22,7 +22,7 @@ BUILD_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 GNU_CONFIGURE=		yes
 # XXX there is a subtle bashism in "configure" or a bug in NetBSD's sh
-CONFIG_SHELL=		bash
+CONFIG_SHELL=		${TOOLS_PATH.bash}
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/libdata
 # Work around build problems, disable unstable PAPI, PR #41608:
 CONFIGURE_ARGS+=	--disable-papi
