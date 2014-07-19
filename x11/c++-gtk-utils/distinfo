@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/07/19 06:39:31 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2014/07/19 06:49:27 ryoon Exp $
 
-SHA1 (c++-gtk-utils-2.2.7.tar.gz) = 4f6b3f80197dc710fce636ef27a2c437016ab5eb
-RMD160 (c++-gtk-utils-2.2.7.tar.gz) = 8ec4889d2cd8eac02d2737e757c41bb74cc72136
-Size (c++-gtk-utils-2.2.7.tar.gz) = 2588140 bytes
+SHA1 (c++-gtk-utils-2.2.8.tar.gz) = be937d47b8d565fb55cc14c096b1e36f1d52c6f7
+RMD160 (c++-gtk-utils-2.2.8.tar.gz) = b9a149f68364bbd922ac354e1b3905115bbb2804
+Size (c++-gtk-utils-2.2.8.tar.gz) = 2604121 bytes
 SHA1 (patch-c++-gtk-utils_Makefile.in) = 48dcf35c63a7397ad83329ab4c841482d38a99b8
