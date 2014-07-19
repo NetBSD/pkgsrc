@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2014/07/19 09:01:23 ryoon Exp $
+
+SHA1 (ninja-1.5.1.tar.gz) = c5a3af39f6d7ee3a30263f34091c046964d442f0
+RMD160 (ninja-1.5.1.tar.gz) = c2bbb37038925a34f0f62bab4893441290b26783
+Size (ninja-1.5.1.tar.gz) = 163437 bytes
+SHA1 (patch-bootstrap.py) = 20448a3a7e96f7ddeec72182d64e237cabc017ab
+SHA1 (patch-platform__helper.py) = 62b7db93bc16fc7862da9fb2c25d507d6630ec95
