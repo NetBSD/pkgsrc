@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/09/08 16:33:25 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/07/19 09:08:36 ryoon Exp $
 bin/gyp
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -44,12 +44,21 @@ ${PYSITELIB}/gyp/easy_xml.pyo
 ${PYSITELIB}/gyp/easy_xml_test.py
 ${PYSITELIB}/gyp/easy_xml_test.pyc
 ${PYSITELIB}/gyp/easy_xml_test.pyo
+${PYSITELIB}/gyp/flock_tool.py
+${PYSITELIB}/gyp/flock_tool.pyc
+${PYSITELIB}/gyp/flock_tool.pyo
 ${PYSITELIB}/gyp/generator/__init__.py
 ${PYSITELIB}/gyp/generator/__init__.pyc
 ${PYSITELIB}/gyp/generator/__init__.pyo
+${PYSITELIB}/gyp/generator/analyzer.py
+${PYSITELIB}/gyp/generator/analyzer.pyc
+${PYSITELIB}/gyp/generator/analyzer.pyo
 ${PYSITELIB}/gyp/generator/android.py
 ${PYSITELIB}/gyp/generator/android.pyc
 ${PYSITELIB}/gyp/generator/android.pyo
+${PYSITELIB}/gyp/generator/cmake.py
+${PYSITELIB}/gyp/generator/cmake.pyc
+${PYSITELIB}/gyp/generator/cmake.pyo
 ${PYSITELIB}/gyp/generator/dump_dependency_json.py
 ${PYSITELIB}/gyp/generator/dump_dependency_json.pyc
 ${PYSITELIB}/gyp/generator/dump_dependency_json.pyo
@@ -98,15 +107,21 @@ ${PYSITELIB}/gyp/msvs_emulation.pyo
 ${PYSITELIB}/gyp/ninja_syntax.py
 ${PYSITELIB}/gyp/ninja_syntax.pyc
 ${PYSITELIB}/gyp/ninja_syntax.pyo
-${PYSITELIB}/gyp/sun_tool.py
-${PYSITELIB}/gyp/sun_tool.pyc
-${PYSITELIB}/gyp/sun_tool.pyo
+${PYSITELIB}/gyp/ordered_dict.py
+${PYSITELIB}/gyp/ordered_dict.pyc
+${PYSITELIB}/gyp/ordered_dict.pyo
+${PYSITELIB}/gyp/simple_copy.py
+${PYSITELIB}/gyp/simple_copy.pyc
+${PYSITELIB}/gyp/simple_copy.pyo
 ${PYSITELIB}/gyp/win_tool.py
 ${PYSITELIB}/gyp/win_tool.pyc
 ${PYSITELIB}/gyp/win_tool.pyo
 ${PYSITELIB}/gyp/xcode_emulation.py
 ${PYSITELIB}/gyp/xcode_emulation.pyc
 ${PYSITELIB}/gyp/xcode_emulation.pyo
+${PYSITELIB}/gyp/xcode_ninja.py
+${PYSITELIB}/gyp/xcode_ninja.pyc
+${PYSITELIB}/gyp/xcode_ninja.pyo
 ${PYSITELIB}/gyp/xcodeproj_file.py
 ${PYSITELIB}/gyp/xcodeproj_file.pyc
 ${PYSITELIB}/gyp/xcodeproj_file.pyo
