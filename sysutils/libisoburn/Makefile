@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/05/03 19:03:39 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/07/19 11:13:55 wiz Exp $
 
-DISTNAME=	libisoburn-1.3.6.pl01
-PKGNAME=	${DISTNAME:S/.pl/pl/}
+DISTNAME=	libisoburn-1.3.8
+#PKGNAME=	${DISTNAME:S/.pl/pl/}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://files.libburnia-project.org/releases/
 
@@ -34,4 +34,5 @@ SUBST_SED.fix-wish+=	-e 's,/usr/bin/wish,${TCLDIR}/bin/wish,'
 .include "../../sysutils/libisofs/buildlink3.mk"
 .include "../../sysutils/libburn/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
