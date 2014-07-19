@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2691 2014/07/19 11:09:19 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2692 2014/07/19 11:10:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3518,3 +3518,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated inputmethod/ibus-mozc to 1.15.1834.102 [ryoon 2014-07-19]
 	Updated inputmethod/uim-mozc to 1.15.1834.102 [ryoon 2014-07-19]
 	Updated sysutils/libburn to 1.3.8 [wiz 2014-07-19]
+	Updated sysutils/libisofs to 1.3.8 [wiz 2014-07-19]
