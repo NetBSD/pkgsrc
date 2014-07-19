@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2014/07/19 09:01:23 ryoon Exp $
+bin/ninja
+share/doc/ninja/manual.asciidoc
+share/ninja/bash-completion
+share/ninja/ninja-mode.el
+share/ninja/ninja.vim
+share/ninja/zsh-completion
