@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/21 13:26:52 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/07/19 12:46:53 bad Exp $
 
 DISTNAME=	numexpr-2.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,6 +17,6 @@ do-test:
 	${PYTHONBIN} -c "import numexpr; numexpr.test()"
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
