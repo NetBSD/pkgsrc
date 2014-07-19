@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2684 2014/07/19 06:13:46 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2685 2014/07/19 06:40:07 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3506,3 +3506,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/geeklog to 2.1.0 [taca 2014-07-19]
 	Updated x11/libXi to 1.7.4 [wiz 2014-07-19]
 	Updated devel/meld to 1.8.6 [wiz 2014-07-19]
+	Added x11/c++-gtk-utils version 2.2.7 [ryoon 2014-07-19]
