@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2700 2014/07/20 01:16:58 obache Exp $
+$NetBSD: CHANGES-2014,v 1.2701 2014/07/20 03:07:15 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3527,3 +3527,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/hs-vector to 0.10.11.0 [szptvlfn 2014-07-19]
 	Updated math/py-pandas to 0.14.1 [bad 2014-07-19]
 	Updated net/ruby-twitter-stream to 0.1.16nb2 [obache 2014-07-20]
+	Updated www/ap2-python to 3.5.0nb1 [obache 2014-07-20]
