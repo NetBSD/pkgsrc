@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2702 2014/07/20 08:29:38 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2703 2014/07/20 17:46:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3529,3 +3529,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/ruby-twitter-stream to 0.1.16nb2 [obache 2014-07-20]
 	Updated www/ap2-python to 3.5.0nb1 [obache 2014-07-20]
 	Updated x11/libdrm to 2.4.54nb1 [wiz 2014-07-20]
+	Updated net/openvpn to 2.3.4 [adam 2014-07-20]
