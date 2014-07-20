@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2703 2014/07/20 17:46:40 adam Exp $
+$NetBSD: CHANGES-2014,v 1.2704 2014/07/20 22:04:24 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3530,3 +3530,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/ap2-python to 3.5.0nb1 [obache 2014-07-20]
 	Updated x11/libdrm to 2.4.54nb1 [wiz 2014-07-20]
 	Updated net/openvpn to 2.3.4 [adam 2014-07-20]
+	Updated security/libssh2 to 1.4.3 [schnoebe 2014-07-20]
