@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2014/07/20 03:07:05 obache Exp $
+$NetBSD: distinfo,v 1.8 2014/07/20 12:39:48 obache Exp $
 
 SHA1 (mod_python-3.5.0.tgz) = 9208bb813172ab51d601d78e439ea552f676d2d1
 RMD160 (mod_python-3.5.0.tgz) = 03315af0843892059a11758209f350c82164acc3
 Size (mod_python-3.5.0.tgz) = 571403 bytes
-SHA1 (patch-configure) = 98dae04eaf0762c89190d3afd0f49c580e1f5039
-SHA1 (patch-configure.in) = 5ce62332d1381ef671e5ff1e3858b81d4d8eca01
+SHA1 (patch-configure) = 721dc5200205889106c502247a4b4a4a6995b4e2
+SHA1 (patch-configure.in) = 1c77f43224f3c9ae555f91ac4479c60121ad950b
 SHA1 (patch-dist_version.sh) = 9f3dbf596238aa106e06ec1c8b27a90619ef4978
