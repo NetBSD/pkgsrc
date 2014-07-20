@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2014/07/09 20:00:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.28 2014/07/20 11:16:14 obache Exp $
 
 OIIOVER=	1.4.10
 DISTNAME=	oiio-Release-${OIIOVER}
@@ -25,11 +25,6 @@ CMAKE_ARGS+=		-DINSTALL_DOCS:BOOL=OFF
 # For redefinition of _rotl macro.
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-CXXFLAGS+=	-Wno-deprecated-register
-.endif
-
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/hdf5/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
@@ -44,4 +39,10 @@ CXXFLAGS+=	-Wno-deprecated-register
 .include "../../x11/qt4-libs/buildlink3.mk"
 BUILDLINK_DEPMETHOD.qt4-tools=	build
 .include "../../x11/qt4-tools/buildlink3.mk"
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CXXFLAGS+=	-Wno-deprecated-register
+.endif
+
 .include "../../mk/bsd.pkg.mk"
