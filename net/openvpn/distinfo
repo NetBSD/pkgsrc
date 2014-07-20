@@ -1,13 +1,12 @@
-$NetBSD: distinfo,v 1.29 2013/07/31 06:53:21 adam Exp $
+$NetBSD: distinfo,v 1.30 2014/07/20 17:43:29 adam Exp $
 
-SHA1 (openvpn-2.3.2.tar.gz) = 23a2e0b6867c7d45f6448029b8a8e13eb299eec0
-RMD160 (openvpn-2.3.2.tar.gz) = 3fdaada730908f5130a4a7c65fac0ce32644b47a
-Size (openvpn-2.3.2.tar.gz) = 1145108 bytes
-SHA1 (patch-aa) = e856b156656c575bfcb339eee17ed694b541872e
+SHA1 (openvpn-2.3.4.tar.xz) = 20adb275760b0cfe99eb9cb34228d74bccb48ad8
+RMD160 (openvpn-2.3.4.tar.xz) = 849a00f399283778facc64e4198d3ee201ea3573
+Size (openvpn-2.3.4.tar.xz) = 791676 bytes
 SHA1 (patch-ac) = d1918a08f8b3dd150b44737a236da58be7fa1f8c
 SHA1 (patch-ad) = 1406764c57687665df34a489474255ab0c3c8179
 SHA1 (patch-ae) = e6e3e5977d1d9c09c0638d84e599c1c4956e27c8
 SHA1 (patch-af) = 6c5cbb2fcd465a8519e947532cd8b09eb3499f65
 SHA1 (patch-src_compat_compat-basename.c) = 45a58ef2e05f6e0265f229da8540760e60e65143
-SHA1 (patch-src_openvpn_socket.c) = 714e3bc08f4748ea7aef8c44594a185551758034
+SHA1 (patch-src_openvpn_socket.c) = 74668d39f5e6fdab64825d38d4b287c8004f5af3
 SHA1 (patch-src_openvpn_socket.h) = b4b952af347e0f2d0aff307a5025b3d27a2e6ee5
