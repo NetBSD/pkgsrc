@@ -1,10 +1,19 @@
-$NetBSD: patch-aa,v 1.3 2013/11/17 16:56:47 minskim Exp $
+$NetBSD: patch-aa,v 1.4 2014/07/20 00:06:19 dholland Exp $
 
 - Do not install XDvi; it is installed by tex-xdvi.
-- Fix texmf paths for pkgsrc.
+- Don't depend on it either as it's removed by the pkgsrc makefile.
 
---- Makefile.in.orig	2009-06-16 05:01:38.000000000 -0700
+--- Makefile.in.orig	2013-04-08 06:34:46.000000000 +0000
 +++ Makefile.in
+@@ -533,7 +533,7 @@ EXTRA_DIST = psheader.txt mksedscript xd
+ CLEANFILES = psheader.c sedscript xdvi.1
+ nodist_man1_MANS = xdvi.1
+ xdvidir = $(datarootdir)/texmf-dist/xdvi
+-dist_xdvi_DATA = texmf/XDvi
++dist_xdvi_DATA =
+ pixmapdir = $(datarootdir)/texmf-dist/xdvi/pixmap
+ dist_pixmap_DATA = pixmaps/toolbar.xpm pixmaps/toolbar2.xpm
+ dvipsconfdir = $(datarootdir)/texmf-dist/dvips/config
 @@ -1297,7 +1297,7 @@ info: info-recursive
  
  info-am:
