@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2014/05/31 15:56:27 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2014/07/20 11:18:23 obache Exp $
 #
 
 DISTNAME=		gnash-0.8.10
@@ -39,11 +39,6 @@ CONF_FILES+=		${EGDIR}/gnashrc ${PKG_SYSCONFDIR}/gnashrc
 # against symbol `_ZNKSs5c_strEv'
 BUILDLINK_TRANSFORM+=	rm:-fvisibility-inlines-hidden
 
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-CXXFLAGS+=	-std=c++11
-.endif
-
 .include "../../audio/speex/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
@@ -56,4 +51,10 @@ CXXFLAGS+=	-std=c++11
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CXXFLAGS+=	-std=c++11
+.endif
+
 .include "../../mk/bsd.pkg.mk"
