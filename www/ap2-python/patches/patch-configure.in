@@ -1,0 +1,16 @@
+$NetBSD: patch-configure.in,v 1.1 2014/07/20 03:07:05 obache Exp $
+
+* Set RPATH if supported.
+
+--- configure.in.orig	2013-11-12 03:21:34.000000000 +0000
++++ configure.in
+@@ -212,6 +212,9 @@ if test "${PYTHONFRAMEWORKDIR}" = "no-fr
+     # this directory may contain the .so library, our preference, list 1st
+     LDFLAGS1=`${PYTHON_BIN} -c 'import distutils.sysconfig; \
+         print("-L" + distutils.sysconfig.get_config_var("LIBDIR"))'`
++    if test -n "${COMPILER_RPATH_FLAG}"; then
++        LDFLAGS1="${LDFLAGS1} ${COMPILER_RPATH_FLAG}${LDFLAGS1}"
++    fi
+     LDFLAGS2=`${PYTHON_BIN} -c 'import distutils.sysconfig; \
+         print("-L" + distutils.sysconfig.get_python_lib(plat_specific=1, \
+         standard_lib=1) +"/config")'`
