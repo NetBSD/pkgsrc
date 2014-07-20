@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.52 2014/02/12 23:18:24 tron Exp $
+# $NetBSD: Makefile,v 1.53 2014/07/20 17:43:29 adam Exp $
 
 DISTNAME=	${OPENVPN_DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${OPENVPN_MASTER_SITES}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://openvpn.net/
@@ -13,8 +13,7 @@ LICENSE=	gnu-gpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		grep:run
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		aclocal autoconf autom4te grep:run pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--disable-dependency-tracking
