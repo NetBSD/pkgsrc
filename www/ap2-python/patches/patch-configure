@@ -1,15 +1,20 @@
-$NetBSD: patch-configure,v 1.1 2014/07/20 03:07:05 obache Exp $
+$NetBSD: patch-configure,v 1.2 2014/07/20 12:39:48 obache Exp $
 
 * Set RPATH if supported.
 
 --- configure.orig	2013-11-12 03:21:34.000000000 +0000
 +++ configure
-@@ -3389,6 +3389,9 @@ if test "${PYTHONFRAMEWORKDIR}" = "no-fr
+@@ -3387,8 +3387,12 @@ PYTHONFRAMEWORK=`${PYTHON_BIN} -c 'from 
+ 
+ if test "${PYTHONFRAMEWORKDIR}" = "no-framework"; then
      # this directory may contain the .so library, our preference, list 1st
-     LDFLAGS1=`${PYTHON_BIN} -c 'import distutils.sysconfig; \
-         print("-L" + distutils.sysconfig.get_config_var("LIBDIR"))'`
+-    LDFLAGS1=`${PYTHON_BIN} -c 'import distutils.sysconfig; \
+-        print("-L" + distutils.sysconfig.get_config_var("LIBDIR"))'`
++    PyLIBDIR=`${PYTHON_BIN} -c 'import distutils.sysconfig; \
++        print(distutils.sysconfig.get_config_var("LIBDIR"))'`
++    LDFLAGS1="-L${PyLIBDIR}"
 +    if test -n "${COMPILER_RPATH_FLAG}"; then
-+        LDFLAGS1="${LDFLAGS1} ${COMPILER_RPATH_FLAG}${LDFLAGS1}"
++        LDFLAGS1="${LDFLAGS1} ${COMPILER_RPATH_FLAG}${PyLIBDIR}"
 +    fi
      LDFLAGS2=`${PYTHON_BIN} -c 'import distutils.sysconfig; \
          print("-L" + distutils.sysconfig.get_python_lib(plat_specific=1, \
