@@ -1,4 +1,4 @@
-Gauche is an R5RS Scheme implementation developed to be a handy script
+Gauche is an R7RS Scheme implementation developed to be a handy script
 interpreter, which allows programmers and system administrators to write small
 to large scripts for their daily chores. Quick startup, built-in system
 interface, native multilingual support are some of my goals.
