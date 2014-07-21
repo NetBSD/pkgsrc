@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.11 2010/12/16 03:42:09 asau Exp $
+$NetBSD: patch-aa,v 1.12 2014/07/21 07:40:07 enami Exp $
 
 --- configure.orig	2010-12-13 03:45:32.000000000 +0300
 +++ configure	2010-12-16 06:00:33.000000000 +0300
@@ -12,12 +12,12 @@ $NetBSD: patch-aa,v 1.11 2010/12/16 03:42:09 asau Exp $
    arm*)
      # ARM processor may use a special mixed endian for doubles.  It can
      # be switched by processor configuration.  So we check it at runtime.
-@@ -6161,7 +6164,7 @@
+@@ -6377,7 +6380,7 @@ _ACEOF
  
  fi
  
--for ac_func in isnan isinf trunc rint
-+for ac_func in isnan isinf trunc
+-for ac_func in isnan isinf trunc rint tgamma lgamma
++for ac_func in isnan isinf trunc tgamma lgamma
  do :
    as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
  ac_fn_c_check_func "$LINENO" "$ac_func" "$as_ac_var"
