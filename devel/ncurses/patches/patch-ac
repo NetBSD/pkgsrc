@@ -1,22 +1,8 @@
-$NetBSD: patch-ac,v 1.20 2014/05/11 16:55:17 rodent Exp $
+$NetBSD: patch-ac,v 1.21 2014/07/21 07:50:45 richard Exp $
 
---- configure.orig	Thu Mar 31 23:35:51 2011
+--- configure.orig	2011-03-31 23:35:51.000000000 +0000
 +++ configure
-@@ -7096,6 +7096,13 @@ sco*) #(vi
- 	# setting _XOPEN_SOURCE breaks Lynx on SCO Unix / OpenServer
- 	;;
- solaris2.1[0-9]) #(vi
-+	case "$GCC_VERSION" in 
-+		4.[678].*)
-+			cf_XOPEN_SOURCE=600
-+			cf_add_cflags=-std=c99
-+			CPPFLAGS="$CPPFLAGS -std=c99"
-+			;;
-+	esac
- 	cf_xopen_source="-D__EXTENSIONS__ -D_XOPEN_SOURCE=$cf_XOPEN_SOURCE"
- 	;;
- solaris2.[1-9]) #(vi
-@@ -9640,12 +9647,7 @@ case ".$MANPAGE_RENAMES" in #(vi
+@@ -9640,12 +9645,7 @@ case ".$MANPAGE_RENAMES" in #(vi
  .no) #(vi
    ;;
  .|.yes)
@@ -29,7 +15,7 @@ $NetBSD: patch-ac,v 1.20 2014/05/11 16:55:17 rodent Exp $
    ;;
  esac
  
-@@ -18592,7 +18594,7 @@ echo "${ECHO_T}$LIB_SUBSETS" >&6
+@@ -18592,7 +18592,7 @@ echo "${ECHO_T}$LIB_SUBSETS" >&6
  
  ### Construct the list of include-directories to be generated
  
