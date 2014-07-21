@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2706 2014/07/21 07:45:08 enami Exp $
+$NetBSD: CHANGES-2014,v 1.2707 2014/07/21 08:19:44 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3533,3 +3533,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/libssh2 to 1.4.3 [schnoebe 2014-07-20]
 	Updated lang/openjdk7 to 1.7.60nb2 [ryoon 2014-07-21]
 	Updated lang/gauche to 0.9.4 [enami 2014-07-21]
+	Updated emulators/suse131_libdbus to 13.1nb2 [obache 2014-07-21]
