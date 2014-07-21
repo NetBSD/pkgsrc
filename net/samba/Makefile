@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.251 2014/06/24 14:06:30 taca Exp $
+# $NetBSD: Makefile,v 1.252 2014/07/21 06:44:30 obache Exp $
 
 DISTNAME=	samba-${VERSION}
 CATEGORIES=	net
@@ -73,12 +73,6 @@ CONFIGURE_ARGS+=	--enable-external-libtdb
 CONFIGURE_ARGS+=	--enable-merged-build=no
 
 .include "../../net/samba/options.mk"
-
-PLIST_VARS+=		macosx
-
-.if ${OPSYS} == "Darwin"
-PLIST.macosx=		yes
-.endif
 
 .if ${_OPSYS_SHLIB_TYPE} == "dylib"
 PLIST_SUBST+=	LIBEXT=dylib
