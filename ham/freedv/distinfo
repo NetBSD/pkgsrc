@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2014/07/21 07:34:17 dbj Exp $
+
+SHA1 (fdmdv2-0.97.0.1696.tgz) = c99311738ffb6960416dd261a11b08756827dc6e
+RMD160 (fdmdv2-0.97.0.1696.tgz) = 122f630f7651607501c84a2109c92f989c04e519
+Size (fdmdv2-0.97.0.1696.tgz) = 1537981 bytes
+SHA1 (patch-configure.ac) = 6a4ad2f97879c0a04f1911c204cc5c40e7423580
