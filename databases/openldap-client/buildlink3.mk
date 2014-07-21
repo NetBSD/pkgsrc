@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2014/07/21 12:57:20 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2014/07/21 12:58:31 obache Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -20,12 +20,12 @@ CHECK_BUILTIN.openldap-client:=	no
 
 .  if empty(USE_BUILTIN.openldap-client:M[yY][eE][sS])
 pkgbase := openldap-client
-.include "../../mk/pkg-build-options.mk"
+.    include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.openldap-client:Mkerberos) || \
-    !empty(PKG_BUILD_OPTIONS.openldap-client:Msasl)
-.  include "../../security/cyrus-sasl/buildlink3.mk"
-.endif
+.    if !empty(PKG_BUILD_OPTIONS.openldap-client:Mkerberos) || \
+        !empty(PKG_BUILD_OPTIONS.openldap-client:Msasl)
+.      include "../../security/cyrus-sasl/buildlink3.mk"
+.    endif
 .  endif
 .include "../../security/openssl/buildlink3.mk"
 .endif # OPENLDAP_BUILDLINK3_MK
