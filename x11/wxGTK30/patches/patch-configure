@@ -1,0 +1,79 @@
+$NetBSD: patch-configure,v 1.1 2014/07/21 06:53:24 dbj Exp $
+Fix shell script portability
+Add dragonfly support
+tweak SEARCH_LIB
+
+--- configure.orig	2014-06-14 21:48:48.000000000 +0000
++++ configure
+@@ -3947,7 +3947,7 @@ case "${host}" in
+ 
+     DEFAULT_DEFAULT_wxUSE_MOTIF=1
+   ;;
+-  *-*-freebsd*)
++  *-*-freebsd* | *-*-dragonfly*)
+     USE_BSD=1
+     USE_FREEBSD=1
+     $as_echo "#define __FREEBSD__ 1" >>confdefs.h
+@@ -19447,7 +19447,7 @@ $as_echo_n "checking SDK deployment vers
+         MACOSX_SDK_PLIST_VERSION_MIN=`defaults read "$wxUSE_MACOSX_SDK/SDKSettings" buildSettings | grep '^ *"\{0,1\}MACOSX_DEPLOYMENT_TARGET"\{0,1\} *= *"\{0,1\}[^"]*"\{0,1\}; *$' | sed 's/^ *"\{0,1\}MACOSX_DEPLOYMENT_TARGET"\{0,1\} *= *"\{0,1\}\([^"]*\)"\{0,1\} *; *$/\1/'`
+ 
+         # If that failed, try again with the new key
+-        if test "x$MACOSX_SDK_PLIST_VERSION_MIN" == "x"; then
++        if test "x$MACOSX_SDK_PLIST_VERSION_MIN" = "x"; then
+ 
+             MACOSX_SDK_PLIST_VERSION_MIN=`defaults read "$wxUSE_MACOSX_SDK/SDKSettings" DefaultProperties | grep '^ *"\{0,1\}MACOSX_DEPLOYMENT_TARGET"\{0,1\} *= *"\{0,1\}[^"]*"\{0,1\}; *$' | sed 's/^ *"\{0,1\}MACOSX_DEPLOYMENT_TARGET"\{0,1\} *= *"\{0,1\}\([^"]*\)"\{0,1\} *; *$/\1/'`
+ 
+@@ -22015,7 +22015,7 @@ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $wx_cv_std_libfullpath" >&5
+ $as_echo "$wx_cv_std_libfullpath" >&6; }
+ 
+-SEARCH_LIB="`echo "$SEARCH_INCLUDE" | sed s@include@$wx_cv_std_libpath@g` $wx_cv_std_libfullpath"
++SEARCH_LIB="`echo "$SEARCH_INCLUDE" | sed s@include@$wx_cv_std_libpath@g` $wx_cv_std_libfullpath @PREFIX@/lib"
+ 
+ if test "$build" != "$host" -a "$GCC" = yes; then
+                     if cross_root=`$CC -print-prog-name=ld 2>/dev/null`; then
+@@ -31852,6 +31852,9 @@ $as_echo "$as_me: WARNING: BeOS threads 
+                                         THREAD_OPTS="-pthreads $THREAD_OPTS"
+                 fi
+                 ;;
++	  *-*-dragonfly*)
++                THREAD_OPTS="-pthread $THREAD_OPTS"
++                ;;
+           *-*-freebsd*)
+                                                 THREAD_OPTS="-kthread lthread $THREAD_OPTS c_r"
+                 ;;
+@@ -31971,7 +31974,7 @@ $as_echo_n "checking if more special fla
+                 WXCONFIG_LDFLAGS="-L/usr/lib/threads $WXCONFIG_LDFLAGS"
+                 flag="-D_THREAD_SAFE"
+                 ;;
+-            *-freebsd*)
++            *-freebsd*|*-*-dragonfly*)
+                 flag="-D_THREAD_SAFE"
+                 ;;
+             *-hp-hpux* )
+@@ -38819,7 +38822,7 @@ $as_echo "$bakefile_cv_gcc31" >&6; }
+             SHARED_LD_CXX="\${CXX} -dynamiclib -single_module -headerpad_max_install_names -o"
+         fi
+ 
+-        if test "x$GCC" == "xyes"; then
++        if test "x$GCC" = "xyes"; then
+             PIC_FLAG="-dynamic -fPIC"
+         fi
+         if test "x$XLCC" = "xyes"; then
+@@ -39388,6 +39391,7 @@ EOF
+ 
+       powerpc-apple-macos* | \
+       *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | *-*-gnu* | *-*-k*bsd*-gnu | \
++      *-*-dragonfly* | \
+       *-*-mirbsd* | \
+       *-*-sunos4* | \
+       *-*-osf* | \
+@@ -39429,7 +39433,7 @@ EOF
+ 
+     case "${BAKEFILE_HOST}" in
+       *-*-linux* | *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | \
+-      *-*-k*bsd*-gnu | *-*-mirbsd* | *-*-gnu* )
++      *-*-k*bsd*-gnu | *-*-mirbsd* | *-*-gnu* | *-*-dragonfly*)
+         if test "x$SUNCXX" = "xyes"; then
+             SONAME_FLAG="-h "
+         else

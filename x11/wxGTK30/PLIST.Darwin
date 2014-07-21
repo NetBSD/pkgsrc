@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2014/07/21 06:53:24 dbj Exp $
+include/wx-3.0/wx/osx/core/cfdataref.h
+include/wx-3.0/wx/osx/core/cfref.h
+include/wx-3.0/wx/osx/core/cfstring.h
+include/wx-3.0/wx/osx/core/evtloop.h
+include/wx-3.0/wx/osx/core/hid.h
+include/wx-3.0/wx/osx/core/objcid.h
+include/wx-3.0/wx/osx/core/private.h
+include/wx-3.0/wx/osx/core/stdpaths.h
