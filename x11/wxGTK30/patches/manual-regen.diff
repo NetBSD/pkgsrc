@@ -1,0 +1,98 @@
+$NetBSD: manual-regen.diff,v 1.1 2014/07/21 06:53:24 dbj Exp $
+To regenerate the libtool patch, get the full wxWidgets tarball,
+cd to build/bakefiles, and run
+	./bakefile_gen -f autoconf
+manual-bakefile.diff contains the necessary patch for the bakefile
+ruleset to use libtool.
+
+diff -ru wxWidgets-3.0.1.dist/build/bakefiles/common.bkl wxWidgets-3.0.1/build/bakefiles/common.bkl
+--- wxWidgets-3.0.1.dist/build/bakefiles/common.bkl	2014-06-14 14:48:48.000000000 -0700
++++ wxWidgets-3.0.1/build/bakefiles/common.bkl	2014-07-20 15:07:09.000000000 -0700
+@@ -706,7 +706,6 @@
+         <if cond="FORMAT=='autoconf'">
+             <res-include>$(RCDEFDIR)</res-include>
+             <res-include>$(TOP_SRCDIR)include</res-include>
+-            <postlink-command>$(DYLIB_RPATH_POSTLINK)</postlink-command>
+         </if>
+         <win32-res>$(WXTOPDIR)src/msw/version.rc</win32-res>
+ 
+diff -ru wxWidgets-3.0.1.dist/build/bakefiles/config.bkl wxWidgets-3.0.1/build/bakefiles/config.bkl
+--- wxWidgets-3.0.1.dist/build/bakefiles/config.bkl	2014-06-14 14:48:48.000000000 -0700
++++ wxWidgets-3.0.1/build/bakefiles/config.bkl	2014-07-20 15:07:09.000000000 -0700
+@@ -425,8 +425,6 @@
+         <option name="EXTRALIBS_SDL"/>
+         <option name="CXXWARNINGS"/>
+         <option name="HOST_SUFFIX"/>
+-        <option name="DYLIB_RPATH_INSTALL"/>
+-        <option name="DYLIB_RPATH_POSTLINK"/>
+         <option name="SAMPLES_RPATH_FLAG"/>
+ 
+         <!-- see configure.in; it's required by some samples on Mac OS X -->
+diff -ru wxWidgets-3.0.1.dist/build/bakefiles/regex.bkl wxWidgets-3.0.1/build/bakefiles/regex.bkl
+--- wxWidgets-3.0.1.dist/build/bakefiles/regex.bkl	2014-06-14 14:48:48.000000000 -0700
++++ wxWidgets-3.0.1/build/bakefiles/regex.bkl	2014-07-20 15:07:09.000000000 -0700
+@@ -26,16 +26,13 @@
+         <if cond="wxUSE_REGEX=='builtin'">$(TOP_SRCDIR)src/regex</if>
+     </set>
+ 
+-    <lib id="wxregex" template="msvc_setup_h,3rdparty_lib"
++    <dll id="wxregex" template="msvc_setup_h,anylib"
+          cond="wxUSE_REGEX=='builtin' and BUILDING_LIB=='1'">
+-        <libname cond="FORMAT=='autoconf'">
+-            $(id)$(WXUNICODEFLAG)$(WXDEBUGFLAG)$(WX_LIB_FLAVOUR)-$(WX_RELEASE)$(HOST_SUFFIX)
+-        </libname>
+-        <libname cond="FORMAT!='autoconf'">
+-            $(id)$(WXUNICODEFLAG)$(WXDEBUGFLAG)$(HOST_SUFFIX)
+-        </libname>
+-        <include cond="FORMAT!='autoconf'">$(TOP_SRCDIR)include</include>
+-        <include cond="FORMAT!='autoconf'">$(SETUPHDIR)</include>
++        <dllname>
++            $(id)$(WXUNICODEFLAG)$(WXDEBUGFLAG)$(WX_LIB_FLAVOUR)-$(WX_RELEASE)
++	</dllname>
++        <version>$(WX_VERSION)</version>
++        <so_version>$(WXSOVERSION)</so_version>
+         <define>__WX$(TOOLKIT)__</define>
+         <define>$(WXUNIV_DEFINE)</define>
+         <define>$(UNICODE_DEFINE)</define>
+@@ -48,6 +45,6 @@
+             src/regex/regerror.c
+             src/regex/regfree.c
+         </sources>
+-    </lib>
++    </dll>
+ 
+ </makefile>
+diff -ru wxWidgets-3.0.1.dist/build/bakefiles/wx.bkl wxWidgets-3.0.1/build/bakefiles/wx.bkl
+--- wxWidgets-3.0.1.dist/build/bakefiles/wx.bkl	2014-06-14 14:48:48.000000000 -0700
++++ wxWidgets-3.0.1/build/bakefiles/wx.bkl	2014-07-20 15:07:09.000000000 -0700
+@@ -95,17 +95,11 @@
+             <command>
+                 $(INSTALL_DIR) $(DESTDIR)$(BINDIR)
+                 $(INSTALL_DIR) $(DESTDIR)$(LIBDIR)/wx/config
+-                $(INSTALL_PROGRAM) lib/wx/config/$(TOOLCHAIN_FULLNAME) $(DESTDIR)$(LIBDIR)/wx/config
++                ${BSD_INSTALL_SCRIPT} lib/wx/config/$(TOOLCHAIN_FULLNAME) $(DESTDIR)$(LIBDIR)/wx/config
+                 (cd $(DESTDIR)$(BINDIR) &amp;&amp; rm -f wx-config &amp;&amp; $(LN_S) $(LIBDIR)/wx/config/$(TOOLCHAIN_FULLNAME) wx-config || cp -p $(DESTDIR)$(LIBDIR)/wx/config/$(TOOLCHAIN_FULLNAME) wx-config)
+             </command>
+         </action>
+ 
+-        <modify-target target="install">
+-            <command>
+-                $(DYLIB_RPATH_INSTALL)
+-            </command>
+-        </modify-target>
+-
+         <set var="RCDEFS_H">
+             <if cond="TOOLKIT=='MSW'">msw/rcdefs.h</if>
+         </set>
+diff -ru wxWidgets-3.0.1.dist/utils/wxrc/wxrc.bkl wxWidgets-3.0.1/utils/wxrc/wxrc.bkl
+--- wxWidgets-3.0.1.dist/utils/wxrc/wxrc.bkl	2014-06-14 14:48:48.000000000 -0700
++++ wxWidgets-3.0.1/utils/wxrc/wxrc.bkl	2014-07-20 15:07:09.000000000 -0700
+@@ -21,7 +21,7 @@
+         <modify-target target="install_wxrc">
+             <command>
+ 	        rm -f $(DESTDIR)$(BINDIR)/wxrc$(EXEEXT) $(DESTDIR)$(BINDIR)/$(versioned_name)
+-		$(INSTALL_PROGRAM) wxrc$(EXEEXT) $(DESTDIR)$(BINDIR)
++		${LIBTOOL} --mode=install $(INSTALL_PROGRAM) wxrc$(EXEEXT) $(DESTDIR)$(BINDIR)
+                 mv -f $(DESTDIR)$(BINDIR)/wxrc$(EXEEXT) $(DESTDIR)$(BINDIR)/$(versioned_name)
+                 (cd $(DESTDIR)$(BINDIR) &amp;&amp; $(LN_S) $(versioned_name) wxrc$(EXEEXT))
+             </command>

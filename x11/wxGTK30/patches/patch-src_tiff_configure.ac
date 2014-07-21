@@ -1,0 +1,14 @@
+$NetBSD: patch-src_tiff_configure.ac,v 1.1 2014/07/21 06:53:24 dbj Exp $
+Fix shell script portability
+
+--- src/tiff/configure.ac.orig	2014-06-14 21:48:48.000000000 +0000
++++ src/tiff/configure.ac
+@@ -772,7 +772,7 @@ AC_ARG_WITH(jpeg12-lib,
+ 	    AS_HELP_STRING([--with-jpeg12-lib=LIBRARY],
+ 			   [path to libjpeg 12bit library]),,)
+ 
+-if test "x$enable_jpeg12" == "xyes" ; then
++if test "x$enable_jpeg12" = "xyes" ; then
+ 
+   if test "x$with_jpeg12_lib" != "x" ; then
+     LIBS="$with_jpeg12_lib $LIBS"
