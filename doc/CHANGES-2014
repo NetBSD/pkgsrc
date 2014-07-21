@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2704 2014/07/20 22:04:24 schnoebe Exp $
+$NetBSD: CHANGES-2014,v 1.2705 2014/07/21 00:16:20 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3531,3 +3531,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/libdrm to 2.4.54nb1 [wiz 2014-07-20]
 	Updated net/openvpn to 2.3.4 [adam 2014-07-20]
 	Updated security/libssh2 to 1.4.3 [schnoebe 2014-07-20]
+	Updated lang/openjdk7 to 1.7.60nb2 [ryoon 2014-07-21]
