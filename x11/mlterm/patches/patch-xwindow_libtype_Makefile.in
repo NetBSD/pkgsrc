@@ -1,0 +1,17 @@
+$NetBSD: patch-xwindow_libtype_Makefile.in,v 1.1 2014/07/21 15:42:56 tsutsui Exp $
+
+- pull post 3.3.7 fixes:
+http://sourceforge.net/projects/mlterm/files/01release/mlterm-3.3.7/mlterm-3.3.7-fixes.patch/download
+ * libtype/Makefile.in: Compiling error is fixed.
+
+--- xwindow/libtype/Makefile.in.orig	2014-07-21 09:30:22.000000000 +0000
++++ xwindow/libtype/Makefile.in
+@@ -59,7 +59,7 @@ libtype_cairo.la: $(CAIRO_OBJ)
+ libtype.a: $(NODL_OBJ)
+ 	$(LIBTOOL_LINK) -o libtype.a $(NODL_OBJ:.o=.lo)
+ 
+-x_font_ft.o:
++x_font_ft.o: x_font_ft.c
+ 	$(LIBTOOL_CC) @TYPE_CFLAGS@ -c $<
+ 
+ .SUFFIXES: .c .o
