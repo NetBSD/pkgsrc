@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2708 2014/07/21 11:24:15 kleink Exp $
+$NetBSD: CHANGES-2014,v 1.2709 2014/07/21 15:45:01 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3535,3 +3535,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/gauche to 0.9.4 [enami 2014-07-21]
 	Updated emulators/suse131_libdbus to 13.1nb2 [obache 2014-07-21]
 	Updated www/py-flask-babelex to 0.9.2 [kleink 2014-07-21]
+	Updated x11/mlterm to 3.3.7 [tsutsui 2014-07-21]
