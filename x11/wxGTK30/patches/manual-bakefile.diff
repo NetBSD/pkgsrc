@@ -1,0 +1,230 @@
+$NetBSD: manual-bakefile.diff,v 1.1 2014/07/21 06:53:24 dbj Exp $
+This is a patch to the bakefile-0.2.9 rules to use libtool.
+
+diff -ru rules.orig/autoconf.bkl rules/autoconf.bkl
+--- rules.orig/autoconf.bkl	2011-02-02 14:04:25.000000000 -0800
++++ rules/autoconf.bkl	2013-04-06 21:35:57.000000000 -0700
+@@ -200,82 +200,19 @@
+ 
+         <set var="__linkname1">$(__linkname)</set>
+ 
+-        <set var="__targetsuf2">
+-            <if cond="USE_SOVERSION=='1' and PLATFORM_MACOSX=='0'">
+-                $(DLLEXT).$(__soversion1)
+-            </if>
+-            <if cond="USE_SOVERSION=='1' and PLATFORM_MACOSX=='1'">
+-                .$(__soversion1)$(DLLEXT)
+-            </if>
+-            <if cond="USE_SOVERSION=='0'">$(DLLEXT)</if>
+-        </set>
++        <set var="__targetsuf2">$(DLLEXT)</set>
+         <set var="__linkname2" eval="0">
+             $(DLLPREFIX)$(__dllname)$(__targetsuf2)
+         </set>
+ 
+-        <set var="__targetsuf3">
+-            <if cond="USE_SOVERSION=='1' and PLATFORM_MACOSX=='0' and USE_SOVERCYGWIN=='0'">
+-                $(DLLEXT).$(__soversion1).$(__soversion2).$(__soversion3)
+-            </if>
+-            <if cond="USE_SOVERSION=='1' and PLATFORM_MACOSX=='1'">
+-                .$(__soversion1).$(__soversion2).$(__soversion3)$(DLLEXT)
+-            </if>
+-            <if cond="USE_SOVERSION=='1' and USE_SOVERSOLARIS=='1'">
+-                $(DLLEXT).$(__soversion1)
+-            </if>
+-            <if cond="USE_SOVERSION=='1' and USE_SOVERCYGWIN=='1'">
+-                -$(__soversion1)$(DLLEXT)
+-            </if>
+-            <if cond="USE_SOVERSION=='0'">$(DLLEXT)</if>
+-        </set>
++        <set var="__targetsuf3">$(DLLEXT)</set>
+         <set var="__targetname" eval="0">
+             $(DLLPREFIX)$(__dllname)$(__targetsuf3)
+         </set>
+ 
+-        <set var="__soname_flags">
+-            <if cond="USE_SOVERLINUX=='1'"> <!-- Linux -->
+-                $(SONAME_FLAG)$(__linkname2)
+-            </if>
+-            <if cond="USE_SOVERSOLARIS=='1'"> <!-- Solaris -->
+-                $(SONAME_FLAG)$(__targetname)
+-            </if>
+-        </set>
++        <set var="__soname_flags">-version-number $(__soversion1):$(__soversion2):$(__soversion3)</set>
+         <ldflags>$(__soname_flags)</ldflags>
+ 
+-        <set var="__so_symlinks_cmd">
+-            <if cond="USE_SOTWOSYMLINKS=='1'">
+-                (cd $(pathPrefixToPath(__targetdir));
+-                $(RM) $(__linkname1) $(__linkname2);
+-                $(LN_S) $(__targetname) $(__linkname2);
+-                $(LN_S) $(__linkname2) $(__linkname1))
+-            </if>
+-            <if cond="USE_SOVERSOLARIS=='1'">
+-                (cd $(pathPrefixToPath(__targetdir));
+-                $(RM) $(__linkname1);
+-                $(LN_S) $(__targetname) $(__linkname1))
+-            </if>
+-        </set>
+-        <set var="__so_symlinks_inst_cmd">
+-            <if cond="USE_SOTWOSYMLINKS=='1'">
+-                $(RM) $(__linkname1) $(__linkname2);
+-                $(LN_S) $(__targetname) $(__linkname2);
+-                $(LN_S) $(__linkname2) $(__linkname1)
+-            </if>
+-            <if cond="USE_SOVERSOLARIS=='1'">
+-                $(RM) $(__linkname1);
+-                $(LN_S) $(__targetname) $(__linkname1);
+-            </if>
+-        </set>
+-        <set var="__so_symlinks_uninst_cmd">
+-            <if cond="USE_SOTWOSYMLINKS=='1'">
+-                $(RM) $(__linkname2) $(__linkname1)
+-            </if>
+-            <if cond="USE_SOVERSOLARIS=='1'">
+-                $(RM) $(__linkname1)
+-            </if>
+-        </set>
+-        <__command>$(LF)$(__so_symlinks_cmd)</__command>
+-
+         <set var="__mac_instname">$(__linkname2)</set>
+ 
+         <clean-files>
+@@ -298,12 +235,6 @@
+         <set var="__macinstname" eval="0">
+             $(ifthenelse(__mac_instname=='',ref('__targetname',id),ref('__mac_instname',id)))
+         </set>
+-        <set var="__macinstnamecmd">
+-            <if cond="PLATFORM_MACOSX=='1'">
+-                -install_name $(value)/$(__macinstname)
+-            </if>
+-        </set>
+-        <ldflags>$(__macinstnamecmd)</ldflags>
+ 
+         <modify-target target="install_$(id)">
+             <command>(cd $(DESTDIR)$(value) ; $(ref('__so_symlinks_inst_cmd',id)))</command>
+Only in rules: autoconf.bkl.orig
+Only in rules: autoconf.bkl.rej
+Only in rules: autoconf.bkl.save1
+Only in rules: autoconf.bkl.~1~
+diff -ru rules.orig/makefile.bkl rules/makefile.bkl
+--- rules.orig/makefile.bkl	2011-02-02 14:04:25.000000000 -0800
++++ rules/makefile.bkl	2013-04-06 21:30:45.000000000 -0700
+@@ -749,7 +749,7 @@
+         <define-tag name="install-to" rules="exe">
+             <modify-target target="install_$(id)">
+                 <command>
+-                    $(INSTALL_PROGRAM) $(ref('__targetdir',id))$(ref('__targetname',id)) $(DESTDIR)$(nativePaths(value))
++                    ${LIBTOOL} --mode=install $(INSTALL_PROGRAM) $(ref('__targetdir',id))$(ref('__targetname',id)) $(DESTDIR)$(nativePaths(value))
+                 </command>
+             </modify-target>
+             <modify-target target="uninstall_$(id)">
+@@ -762,8 +762,7 @@
+         <define-tag name="install-to" rules="dll">
+             <modify-target target="install_$(id)">
+                 <command>
+-                    $(INSTALL_DATA) $(ref('__targetdir',id))$(ref('__linkname',id)) $(DESTDIR)$(nativePaths(value))
+-                    $(INSTALL_PROGRAM) $(ref('__targetdir',id))$(ref('__targetname',id)) $(DESTDIR)$(nativePaths(value))
++                    ${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} $(ref('__targetdir',id))$(ref('__targetname',id)) $(DESTDIR)$(nativePaths(value))
+                 </command>
+             </modify-target>
+             <modify-target target="uninstall_$(id)">
+@@ -777,7 +776,7 @@
+         <define-tag name="install-to" rules="module">
+             <modify-target target="install_$(id)">
+                 <command>
+-                    $(INSTALL_PROGRAM) $(ref('__targetdir',id))$(ref('__targetname',id)) $(DESTDIR)$(nativePaths(value))
++                    ${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} $(ref('__targetdir',id))$(ref('__targetname',id)) $(DESTDIR)$(nativePaths(value))
+                 </command>
+             </modify-target>
+             <modify-target target="uninstall_$(id)">
+diff -ru rules.orig/makefile_defs_gnu.bkl rules/makefile_defs_gnu.bkl
+--- rules.orig/makefile_defs_gnu.bkl	2011-02-02 14:04:25.000000000 -0800
++++ rules/makefile_defs_gnu.bkl	2013-04-06 21:30:45.000000000 -0700
+@@ -62,12 +62,12 @@
+ 
+             <template id="__commands_templ_C">
+                 <set var="__COMPILE_C_CMD" eval="0">
+-                    $(CCC) -c -o $@ $(__cflags) $(CPPDEPS) $&lt;
++                    ${LIBTOOL} --mode=compile --tag=CC $(CCC) -c -o $@ $(__cflags) $(CPPDEPS) $&lt;
+                 </set>
+             </template>
+             <template id="__commands_templ_CXX">
+                 <set var="__COMPILE_CXX_CMD" eval="0">
+-                    $(CXXC) -c -o $@ $(__cxxflags) $(CPPDEPS) $&lt;
++                    ${LIBTOOL} --mode=compile --tag=CXX $(CXXC) -c -o $@ $(__cxxflags) $(CPPDEPS) $&lt;
+                 </set>
+             </template>
+ 
+diff -ru rules.orig/makefile_defs_unix.bkl rules/makefile_defs_unix.bkl
+--- rules.orig/makefile_defs_unix.bkl	2011-02-02 14:04:25.000000000 -0800
++++ rules/makefile_defs_unix.bkl	2013-04-06 21:30:45.000000000 -0700
+@@ -39,22 +39,23 @@
+ 
+     <set var="DIRSEP">/</set>
+ 
+-    <set var="OBJEXT">.o</set>
++    <set var="LIBTOOL">${LIBTOOL}</set>
++    <set var="OBJEXT">.lo</set>
+     <set var="LIBEXT" overwrite="0">.a</set>
+     <set var="LIBPREFIX" overwrite="0">lib</set>
+     <set var="EXEEXT" overwrite="0"></set>
+-    <set var="DLLEXT" overwrite="0">.so</set>
++    <set var="DLLEXT" overwrite="1">.la</set>
+     <set var="DLLEXT_MODULE" overwrite="0">$(DLLEXT)</set>
+     <set var="DLLIMPEXT" overwrite="0">$(DLLEXT)</set>
+     <set var="DLLPREFIX" overwrite="0">$(LIBPREFIX)</set>
+     <set var="DLLPREFIX_MODULE" overwrite="0">$(DLLPREFIX)</set>
+-    <set var="PIC_CFLAGS" overwrite="0">-fPIC -DPIC</set>
++    <set var="PIC_CFLAGS" overwrite="0"></set>
+ 
+    <set var="RM">rm -f</set>
+ 
+-    <set var="INSTALL_PROGRAM" overwrite="0">install -c</set>
+-    <set var="INSTALL_DATA" overwrite="0">$(INSTALL) -m 644</set>
+-    <set var="INSTALL_DIR" overwrite="0">$(INSTALL) -d</set>
++    <set var="INSTALL_PROGRAM" overwrite="1">${BSD_INSTALL_PROGRAM}</set>
++    <set var="INSTALL_DATA" overwrite="1">${BSD_INSTALL_DATA}</set>
++    <set var="INSTALL_DIR" overwrite="1">${BSD_INSTALL_DATA_DIR}</set>
+ 
+     <set var="UNINSTALL_PROGRAM" overwrite="0">$(RM)</set>
+     <set var="UNINSTALL_DATA" overwrite="0">$(RM)</set>
+@@ -122,12 +123,12 @@
+     <if cond="FORMAT not in ['gnu','suncc']">
+         <template id="__commands_templ_C">
+             <set var="__COMPILE_C_CMD" eval="0">
+-                $(CCC) -c -o $@ $(__cflags) $(src)
++                $(LIBTOOL) --mode=compile --tag=CC $(CCC) -c -o $@ $(__cflags) $(src)
+             </set>
+         </template>
+         <template id="__commands_templ_CXX">
+             <set var="__COMPILE_CXX_CMD" eval="0">
+-                $(CXXC) -c -o $@ $(__cxxflags) $(src)
++                $(LIBTOOL) --mode=compile --tag=CXX $(CXXC) -c -o $@ $(__cxxflags) $(src)
+             </set>
+         </template>
+         <!-- FIXME: We should allow for a different Objective-C compiler -->
+@@ -154,18 +155,16 @@
+         </set>
+ 
+         <set var="__LINK_EXE_CMD" eval="0">
+-            $(__linker) -o $@ $(__objects_var) $(__ldargs)
++            $(LIBTOOL) --mode=link --tag=CC $(__linker) -o $@ $(__objects_var) $(__ldargs)
+         </set>        
+         <set var="__LINK_LIB_CMD" eval="0">
+-            $(RM) $@
+-            $(AR) $(AROPTIONS) $@ $(__objects_var)
+-            $(RANLIB) $@
++	    $(LIBTOOL) --mode=link --tag=CC $(__linker) -o $@ $(__objects_var) $(__ldflags) $(__ldlibs)
+         </set>
+         <set var="__LINK_DLL_CMD" eval="0">
+-            $(__dll_linker) $@ $(__objects_var) $(__ldargs)
++	    $(LIBTOOL) --mode=link --tag=CC $(__linker) -rpath $(libdir) -o $@ $(__objects_var) $(__ldflags) $(__ldlibs)
+         </set>
+         <set var="__LINK_MODULE_CMD" eval="0">
+-            $(__module_linker) $@ $(__objects_var) $(__ldargs)
++	    $(LIBTOOL) --mode=link --tag=CC $(__linker) -rpath $(libdir) -o $@ $(__objects_var) $(__ldflags) $(__ldlibs)
+         </set>
+     </template>
+     
+Only in rules: makefile_defs_unix.bkl.orig

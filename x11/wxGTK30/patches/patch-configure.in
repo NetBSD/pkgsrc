@@ -1,0 +1,53 @@
+$NetBSD: patch-configure.in,v 1.1 2014/07/21 06:53:24 dbj Exp $
+Fix shell script portability
+Add dragonfly support
+tweak SEARCH_LIB
+
+--- configure.in.orig	2014-06-14 21:48:48.000000000 +0000
++++ configure.in
+@@ -203,7 +203,7 @@ case "${host}" in
+     AC_DEFINE(__BSD__)
+     DEFAULT_DEFAULT_wxUSE_MOTIF=1
+   ;;
+-  *-*-freebsd*)
++  *-*-freebsd* | *-*-dragonfly*)
+     USE_BSD=1
+     USE_FREEBSD=1
+     AC_DEFINE(__FREEBSD__)
+@@ -1238,7 +1238,7 @@ dnl We need to quote the next line where
+         MACOSX_SDK_PLIST_VERSION_MIN=`defaults read "$wxUSE_MACOSX_SDK/SDKSettings" buildSettings | grep '^ *"\{0,1\}MACOSX_DEPLOYMENT_TARGET"\{0,1\} *= *"\{0,1\}[^"]*"\{0,1\}; *$' | sed 's/^ *"\{0,1\}MACOSX_DEPLOYMENT_TARGET"\{0,1\} *= *"\{0,1\}\([^"]*\)"\{0,1\} *; *$/\1/'`
+ ]
+         # If that failed, try again with the new key
+-        if test "x$MACOSX_SDK_PLIST_VERSION_MIN" == "x"; then
++        if test "x$MACOSX_SDK_PLIST_VERSION_MIN" = "x"; then
+ [
+             MACOSX_SDK_PLIST_VERSION_MIN=`defaults read "$wxUSE_MACOSX_SDK/SDKSettings" DefaultProperties | grep '^ *"\{0,1\}MACOSX_DEPLOYMENT_TARGET"\{0,1\} *= *"\{0,1\}[^"]*"\{0,1\}; *$' | sed 's/^ *"\{0,1\}MACOSX_DEPLOYMENT_TARGET"\{0,1\} *= *"\{0,1\}\([^"]*\)"\{0,1\} *; *$/\1/'`
+ ]
+@@ -2245,7 +2245,7 @@ fi
+ 
+ AC_MSG_RESULT($wx_cv_std_libfullpath)
+ 
+-SEARCH_LIB="`echo "$SEARCH_INCLUDE" | sed s@include@$wx_cv_std_libpath@g` $wx_cv_std_libfullpath"
++SEARCH_LIB="`echo "$SEARCH_INCLUDE" | sed s@include@$wx_cv_std_libpath@g` $wx_cv_std_libfullpath @PREFIX@/lib"
+ 
+ dnl Cross compiling with gcc?
+ if test "$build" != "$host" -a "$GCC" = yes; then
+@@ -4722,6 +4722,9 @@ if test "$TOOLKIT" != "MSW" -a "$USE_OS2
+                     THREAD_OPTS="-pthreads $THREAD_OPTS"
+                 fi
+                 ;;
++          *-*-dragonfly*)
++                THREAD_OPTS="-pthread $THREAD_OPTS"
++                ;;
+           *-*-freebsd*)
+                 dnl look, in order, for the kernel threads, then Linux threads
+                 dnl and finally the userland threads
+@@ -4858,7 +4861,7 @@ if test "$TOOLKIT" != "MSW" -a "$USE_OS2
+                 WXCONFIG_LDFLAGS="-L/usr/lib/threads $WXCONFIG_LDFLAGS"
+                 flag="-D_THREAD_SAFE"
+                 ;;
+-            *-freebsd*)
++            *-freebsd*|*-*-dragonfly*)
+                 flag="-D_THREAD_SAFE"
+                 ;;
+             *-hp-hpux* )

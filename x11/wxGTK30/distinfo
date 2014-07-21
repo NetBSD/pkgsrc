@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1 2014/07/21 06:53:24 dbj Exp $
+
+SHA1 (wxWidgets-3.0.1-libtool.diff.bz2) = 8910c29ce7c3427c51380d5d192c772a15b0b23a
+RMD160 (wxWidgets-3.0.1-libtool.diff.bz2) = 3ff40c89ac70b3d5cdfbf2456239c50fa13dc24f
+Size (wxWidgets-3.0.1-libtool.diff.bz2) = 199354 bytes
+SHA1 (wxWidgets-3.0.1.tar.bz2) = 73e58521d6871c9f4d1e7974c6e3a81629fddcf8
+RMD160 (wxWidgets-3.0.1.tar.bz2) = d4cfb25a5e15f9238addd48a98faf5a525d8fb5c
+Size (wxWidgets-3.0.1.tar.bz2) = 20068143 bytes
+SHA1 (patch-build_aclocal_bakefile.m4) = 7d3d6fb1e6a72e370dc6147010fa5bf2c46f1206
+SHA1 (patch-configure) = 897f13daa5bc8246902d7d864096d621f2e54928
+SHA1 (patch-configure.in) = e49b9a83040201f01c22b3e1cbc4b331985f4e99
+SHA1 (patch-src_tiff_configure) = e1c002f5b7d0bf2c0bec399dbb62d0146c14ec20
+SHA1 (patch-src_tiff_configure.ac) = 0d51a7c251f897aa00e58c3a7ec5f348b50d1821
+SHA1 (patch-src_unix_threadpsx.cpp) = 3ae587d56c5ea1722ff29d80ff25e894dbc16313

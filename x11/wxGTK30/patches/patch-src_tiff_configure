@@ -1,0 +1,14 @@
+$NetBSD: patch-src_tiff_configure,v 1.1 2014/07/21 06:53:24 dbj Exp $
+Fix shell script portability
+
+--- src/tiff/configure.orig	2014-06-14 21:48:48.000000000 +0000
++++ src/tiff/configure
+@@ -18145,7 +18145,7 @@ if test "${with_jpeg12_lib+set}" = set; 
+ fi
+ 
+ 
+-if test "x$enable_jpeg12" == "xyes" ; then
++if test "x$enable_jpeg12" = "xyes" ; then
+ 
+   if test "x$with_jpeg12_lib" != "x" ; then
+     LIBS="$with_jpeg12_lib $LIBS"
