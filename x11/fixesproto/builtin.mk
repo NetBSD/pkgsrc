@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.8 2014/07/18 05:25:42 obache Exp $
+# $NetBSD: builtin.mk,v 1.9 2014/07/21 09:12:03 obache Exp $
 
 BUILTIN_PKG:=	fixesproto
 PKGCONFIG_FILE.fixesproto=	${X11BASE}/lib/pkgconfig/fixesproto.pc
@@ -15,7 +15,7 @@ CHECK_BUILTIN.fixesproto?=	no
 BUILDLINK_TARGETS+=	fixesext-symlink-pc
 
 fixesext-symlink-pc:
-	src=${BUILDLINK_PREFIX.fixesproto}/lib/pkgconfig/fixesproto.pc \
+	src=${FIND_FILES_fixesproto} \
 	dst=${BUILDLINK_DIR}/lib/pkgconfig/fixesext.pc; \
 	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig; \
 	if ${TEST} -f $${src}; then \
