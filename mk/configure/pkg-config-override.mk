@@ -1,4 +1,4 @@
-# $NetBSD: pkg-config-override.mk,v 1.3 2007/07/25 18:07:34 rillig Exp $
+# $NetBSD: pkg-config-override.mk,v 1.4 2014/07/21 12:10:40 wiz Exp $
 
 # Package-settable variables:
 #
@@ -30,15 +30,15 @@ PKGCONFIG_OVERRIDE_SED=	\
 	'/^Libs:.*[ 	]/s|-L\([ 	]*[^ 	]*\)|${COMPILER_RPATH_FLAG}\1 -L\1|g'
 PKGCONFIG_OVERRIDE_STAGE?=	pre-configure
 
-SUBST_CLASSES+=			pkgconfig
+SUBST_CLASSES+=			_pkgconfig
 .  if ${PKGCONFIG_OVERRIDE_STAGE} == "pre-configure"
-SUBST_STAGE.pkgconfig=		do-configure-pre-hook
+SUBST_STAGE._pkgconfig=		do-configure-pre-hook
 .  elif ${PKGCONFIG_OVERRIDE_STAGE} == "post-configure"
-SUBST_STAGE.pkgconfig=		do-configure-post-hook
+SUBST_STAGE._pkgconfig=		do-configure-post-hook
 .  else
-SUBST_STAGE.pkgconfig=		${PKGCONFIG_OVERRIDE_STAGE}
+SUBST_STAGE._pkgconfig=		${PKGCONFIG_OVERRIDE_STAGE}
 .  endif
-SUBST_MESSAGE.pkgconfig=	Adding run-time search paths to pkg-config files.
-SUBST_FILES.pkgconfig=		${PKGCONFIG_OVERRIDE:S/^${WRKSRC}\///}
-SUBST_SED.pkgconfig=		${PKGCONFIG_OVERRIDE_SED}
+SUBST_MESSAGE._pkgconfig=	Adding run-time search paths to pkg-config files.
+SUBST_FILES._pkgconfig=		${PKGCONFIG_OVERRIDE:S/^${WRKSRC}\///}
+SUBST_SED._pkgconfig=		${PKGCONFIG_OVERRIDE_SED}
 .endif
