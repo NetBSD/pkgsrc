@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2013/10/04 10:46:25 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.21 2014/07/21 07:50:45 richard Exp $
 #
 # used by devel/ncursesw/Makefile
 
@@ -58,8 +58,11 @@ CONFIGURE_ARGS+=	--without-manpage-tbl
 .endif
 
 .if ${OPSYS} == "SunOS"
+USE_LANGUAGES+=	c99
 .include "../../mk/compiler.mk"
-. if !empty(CC_VERSION:Mgcc-4.[6-9].*)
+. if !empty(CC_VERSION:Mgcc-4.*)
+#This may yet need to be adapted for systems prior to Solaris 10
+BUILDLINK_TRANSFORM+=	rename:-D_XOPEN_SOURCE=500:-D_XOPEN_SOURCE=600
 BUILDLINK_TRANSFORM+=	rm:-D_XOPEN_SOURCE_EXTENDED
 . endif
 TERMINFO_SRC=	${WRKSRC}/misc/terminfo.src
