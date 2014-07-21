@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2014/07/21 07:57:21 dbj Exp $
+
+SHA1 (chirp-0.4.0.tar.gz) = ee193c2a5c1960eb988d09cbd12fc290065fe36c
+RMD160 (chirp-0.4.0.tar.gz) = b052c72531797cb311c8ec87689b566e83baa2fe
+Size (chirp-0.4.0.tar.gz) = 416572 bytes
+SHA1 (patch-chirp_platform.py) = 724fb28f38582c5b1e3b6666bc15a128800cab8c
+SHA1 (patch-chirpui_mainapp.py) = 0a9953fb55d92b612d440b63431cb6e6a0bfa563
+SHA1 (patch-setup.py) = e42a85a66ce21d6745202d182e41771915c58c5f
