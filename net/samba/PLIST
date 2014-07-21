@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.57 2014/03/11 14:05:11 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.58 2014/07/21 06:44:30 obache Exp $
 bin/eventlogadm
 bin/findsmb
 bin/net
@@ -47,7 +47,6 @@ lib/libtevent.${LIBEXT}.0.9.11
 lib/samba/auth/script.${LIBEXT}
 lib/samba/charset/CP437.${LIBEXT}
 lib/samba/charset/CP850.${LIBEXT}
-${PLIST.macosx}lib/samba/charset/macosxfs.${LIBEXT}
 lib/samba/de.msg
 lib/samba/en.msg
 lib/samba/fi.msg
@@ -69,7 +68,6 @@ lib/samba/vfs/cap.${LIBEXT}
 lib/samba/vfs/catia.${LIBEXT}
 lib/samba/vfs/crossrename.${LIBEXT}
 lib/samba/vfs/default_quota.${LIBEXT}
-${PLIST.macosx}lib/samba/vfs/dirsort.${LIBEXT}
 lib/samba/vfs/expand_msdfs.${LIBEXT}
 lib/samba/vfs/extd_audit.${LIBEXT}
 lib/samba/vfs/fake_perms.${LIBEXT}
@@ -87,7 +85,6 @@ lib/samba/vfs/shadow_copy2.${LIBEXT}
 lib/samba/vfs/smb_traffic_analyzer.${LIBEXT}
 lib/samba/vfs/streams_depot.${LIBEXT}
 lib/samba/vfs/streams_xattr.${LIBEXT}
-${PLIST.macosx}lib/samba/vfs/syncops.${LIBEXT}
 lib/samba/vfs/time_audit.${LIBEXT}
 lib/samba/vfs/xattr_tdb.${LIBEXT}
 ${PLIST.pam}lib/security/pam_smbpass.${LIBEXT}

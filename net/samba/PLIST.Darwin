@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2014/07/21 06:44:30 obache Exp $
+lib/samba/charset/macosxfs.${LIBEXT}
+lib/samba/vfs/dirsort.${LIBEXT}
+lib/samba/vfs/syncops.${LIBEXT}
