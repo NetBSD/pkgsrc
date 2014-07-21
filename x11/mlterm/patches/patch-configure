@@ -1,10 +1,38 @@
-$NetBSD: patch-configure,v 1.7 2014/03/23 07:04:00 tsutsui Exp $
+$NetBSD: patch-configure,v 1.8 2014/07/21 15:42:56 tsutsui Exp $
 
 - setuid root is handled by SPECIAL_PERMS in pkgsrc
 
---- configure.orig	2014-03-22 22:06:40.000000000 +0000
+- pull post 3.3.7 fixes:
+http://sourceforge.net/projects/mlterm/files/01release/mlterm-3.3.7/mlterm-3.3.7-fixes.patch/download
+ * configure.in: "-lfontconfig -lfreetype" is added to CAIRO_LIBS and XFT_LIBS
+   because mlterm has undefined symbols if --disable-shared is specified on
+   some platforms where dependency_libs="" in libcairo.la.
+
+--- configure.orig	2014-07-05 21:40:48.000000000 +0000
 +++ configure
-@@ -21377,7 +21377,7 @@ else
+@@ -21066,6 +21066,10 @@ if test "x$ac_cv_lib_Xft_XftDrawCreate" 
+ fi
+ 
+ 		fi
++	elif test "$gui" = "xlib" -a "$enable_shared" = "no" ; then
++		# In case --disable-shared is specified on some platforms
++		# (e.g. ubuntu 14.04) where dependency_libs="" in libXft.la.
++		XFT_LIBS="$XFT_LIBS -lfontconfig -lfreetype"
+ 	fi
+ 
+ 	if test "$have_xft" = "yes" ; then
+@@ -21193,6 +21197,10 @@ if test "x$ac_cv_lib_cairo_cairo_create"
+ 
+ fi
+ 
++	elif test "$gui" = "xlib" -a "$enable_shared" = "no" ; then
++		# In case --disable-shared is specified on some platforms
++		# (e.g. ubuntu 14.04) where dependency_libs="" in libcairo.la.
++		CAIRO_LIBS="$CAIRO_LIBS -lfontconfig -lfreetype"
+ 	fi
+ 
+ 	if test "$have_cairo" = "yes" ; then
+@@ -21382,7 +21390,7 @@ else
  fi
  
  if test "$gui" = "fb" ; then
