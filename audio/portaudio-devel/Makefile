@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/07/21 07:15:07 dbj Exp $
+# $NetBSD: Makefile,v 1.9 2014/07/21 10:17:54 wiz Exp $
 
 DISTNAME=	pa_stable_v19_20140130
 PKGNAME=	portaudio-devel-20140130
@@ -33,11 +33,11 @@ SUBST_FILES.pthread=    configure
 SUBST_SED.pthread=      -e 's/-D_REENTRANT/${PTHREAD_CFLAGS}/g'
 SUBST_SED.pthread+=     -e 's/-lpthread/${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}/g'
 
-SUBST_CLASSES+=         pkgconfig
-SUBST_STAGE.pkgconfig=  pre-configure
-SUBST_MESSAGE.pkgconfig=Fixing pkgconfig directory
-SUBST_FILES.pkgconfig=  Makefile.in
-SUBST_SED.pkgconfig=    -e 's/$$(libdir)\/pkgconfig/$$(prefix)\/lib\/pkgconfig/g'
+SUBST_CLASSES+=		pc
+SUBST_STAGE.pc=		pre-configure
+SUBST_MESSAGE.pc=	Fixing pkgconfig directory
+SUBST_FILES.pc=		Makefile.in
+SUBST_SED.pc=		-e 's/$$(libdir)\/pkgconfig/$$(prefix)\/lib\/pkgconfig/g'
 
 .include "../../mk/bsd.prefs.mk"
 
