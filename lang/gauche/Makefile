@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2012/10/02 20:11:39 asau Exp $
+# $NetBSD: Makefile,v 1.63 2014/07/21 07:40:07 enami Exp $
 #
 
-DISTNAME=	Gauche-0.9.3.3
+DISTNAME=	Gauche-0.9.4
 #PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gauche/}
