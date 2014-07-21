@@ -1,0 +1,14 @@
+FreeDV is a GUI application for Windows and Linux (MacOS and BSD are
+in testing) that allows any SSB radio to be used for low bit rate
+digital voice.
+
+Speech is compressed down to 1400 bit/s then modulated onto a 1100 Hz
+wide QPSK signal which is sent to the Mic input of a SSB radio. On
+receive, the signal is received by the SSB radio, then demodulated and
+decoded by FreeDV.
+
+FreeDV was built by an international team of Radio Amateurs working
+together on coding, design, user interface and testing. FreeDV is open
+source software, released under the GNU Public License version
+2.1. The FDMDV modem and Codec 2 Speech codec used in FreeDV are also
+open source.
