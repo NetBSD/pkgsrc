@@ -1,4 +1,4 @@
-# $NetBSD: tools.Darwin.mk,v 1.52 2014/07/21 00:25:48 obache Exp $
+# $NetBSD: tools.Darwin.mk,v 1.53 2014/07/21 00:33:11 obache Exp $
 #
 # System-supplied tools for the Darwin (Mac OS X) operating system.
 
@@ -44,9 +44,7 @@ TOOLS_PLATFORM.fgrep?=		/usr/bin/fgrep
 TOOLS_PLATFORM.file?=		/usr/bin/file
 TOOLS_PLATFORM.find?=		/usr/bin/find
 TOOLS_PLATFORM.flex?=		/usr/bin/flex
-.if empty(MACHINE_PLATFORM:MDarwin-[0-9].*-*)
 TOOLS_PLATFORM.ftp?=		/usr/bin/ftp
-.endif
 .if empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
 TOOLS_PLATFORM.gmake?=		/usr/bin/gnumake
 TOOLS_PLATFORM.gm4?=		/usr/bin/gm4
