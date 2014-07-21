@@ -1,0 +1,53 @@
+$NetBSD: patch-configure.ac,v 1.1 2014/07/21 07:34:17 dbj Exp $
+
+--- configure.ac.orig	2013-09-29 21:31:58.000000000 +0000
++++ configure.ac
+@@ -18,7 +18,7 @@ AC_ARG_ENABLE([about-dialog],
+         [enable_about_dialog=yes],
+         [enable_about_dialog=no])
+ 
+-if test "$enable_about_dialog" == "yes"; then
++if test "$enable_about_dialog" = "yes"; then
+    AC_DEFINE([_USE_ABOUT_DIALOG],,[use dlg_about.cpp/h])
+ fi
+ 
+@@ -45,8 +45,7 @@ AC_CHECK_LIB([m], [main])
+ AC_CHECK_LIB([ole32], [main])
+ # FIXME: Replace `main' with a function in `-loleaut32':
+ AC_CHECK_LIB([oleaut32], [main])
+-# FIXME: Replace `main' with a function in `-lportaudio':
+-AC_CHECK_LIB([portaudio], [src_new])
++AC_CHECK_LIB([portaudio], [Pa_Initialize])
+ # FIXME: Replace `main' with a function in `-lportaudiocpp':
+ AC_CHECK_LIB([portaudiocpp], [main])
+ # FIXME: Replace `main' with a function in `-lpthread':
+@@ -83,18 +82,8 @@ AC_CHECK_LIB([wxzlib], [main])
+ AC_SEARCH_LIBS([src_new], [samplerate])
+ AC_SEARCH_LIBS([sf_format_check], [sndfile])
+ AC_SEARCH_LIBS([sox_init], [sox])
+-
+-AC_MSG_CHECKING([for libctb-0.16])
+-AC_LANG_PUSH(C++)
+-LIBS="-lctb-0.16 $LIBS"
+-AC_LINK_IFELSE([AC_LANG_PROGRAM(
+-                   [#include <ctb-0.16/ctb.h>],
+-                   [ctb::SerialPort*        m_serialPort;]
+-                   [m_serialPort = new ctb::SerialPort();])],
+-               ,
+-               [AC_MSG_ERROR([failed. Maybe you need to set LDPATH or CXXPATH. See configure --help])])
+-AC_LANG_POP
+-AC_MSG_RESULT([yes])
++AC_SEARCH_LIBS([golay23_init], [golay23])
++AC_SEARCH_LIBS([rig_open], [hamlib])
+ 
+ # Checks for header files. 
+ AC_CHECK_HEADERS([limits.h stddef.h stdlib.h string.h])
+@@ -112,7 +101,7 @@ AC_CONFIG_FILES([Makefile src/Makefile])
+ 
+ ## wxWidgets, from http://wiki.wxwidgets.org/Autoconf
+ AM_OPTIONS_WXCONFIG
+-WX_CONFIG_CHECK([2.9.0], [wxWin=1], , [aui,html,net] )
++WX_CONFIG_CHECK([2.9.0], [wxWin=1], , [core,adv,aui,html,net] )
+ if test "$wxWin" != 1; then
+ 	AC_MSG_ERROR([
+ 		wxWidgets must be installed on your system.
