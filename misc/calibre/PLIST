@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2014/07/12 15:48:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2014/07/22 12:35:27 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -372,6 +372,7 @@ lib/calibre/calibre/ebooks/metadata/xmp.py
 lib/calibre/calibre/ebooks/metadata/zip.py
 lib/calibre/calibre/ebooks/mobi/__init__.py
 lib/calibre/calibre/ebooks/mobi/debug/__init__.py
+lib/calibre/calibre/ebooks/mobi/debug/containers.py
 lib/calibre/calibre/ebooks/mobi/debug/headers.py
 lib/calibre/calibre/ebooks/mobi/debug/index.py
 lib/calibre/calibre/ebooks/mobi/debug/main.py
@@ -381,6 +382,7 @@ lib/calibre/calibre/ebooks/mobi/huffcdic.py
 lib/calibre/calibre/ebooks/mobi/langcodes.py
 lib/calibre/calibre/ebooks/mobi/mobiml.py
 lib/calibre/calibre/ebooks/mobi/reader/__init__.py
+lib/calibre/calibre/ebooks/mobi/reader/containers.py
 lib/calibre/calibre/ebooks/mobi/reader/headers.py
 lib/calibre/calibre/ebooks/mobi/reader/index.py
 lib/calibre/calibre/ebooks/mobi/reader/markup.py
@@ -1009,6 +1011,7 @@ lib/calibre/calibre/gui2/tweak_book/diff/main.py
 lib/calibre/calibre/gui2/tweak_book/diff/view.py
 lib/calibre/calibre/gui2/tweak_book/editor/__init__.py
 lib/calibre/calibre/gui2/tweak_book/editor/canvas.py
+lib/calibre/calibre/gui2/tweak_book/editor/help.py
 lib/calibre/calibre/gui2/tweak_book/editor/image.py
 lib/calibre/calibre/gui2/tweak_book/editor/insert_resource.py
 lib/calibre/calibre/gui2/tweak_book/editor/smart/__init__.py
@@ -1412,6 +1415,12 @@ share/calibre/dictionaries/es-ES/es-ES.aff
 share/calibre/dictionaries/es-ES/es-ES.dic
 share/calibre/dictionaries/es-ES/locales
 share/calibre/ebook-convert-complete.pickle
+share/calibre/editor-help/css.json
+share/calibre/editor-help/html.json
+share/calibre/editor-help/mathml.json
+share/calibre/editor-help/opf2.json
+share/calibre/editor-help/opf3.json
+share/calibre/editor-help/svg.json
 share/calibre/fonts/calibreSymbols.otf
 share/calibre/fonts/liberation/LiberationMono-Bold.ttf
 share/calibre/fonts/liberation/LiberationMono-BoldItalic.ttf
