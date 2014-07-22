@@ -1,8 +1,11 @@
-# $NetBSD: options.mk,v 1.5 2011/01/20 08:54:56 adam Exp $
+# $NetBSD: options.mk,v 1.6 2014/07/22 11:30:00 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnupg2
-PKG_SUPPORTED_OPTIONS=	gpgsm
-PKG_SUGGESTED_OPTIONS=	gpgsm
+PKG_SUPPORTED_OPTIONS=	gnupg2-gpgsm
+PKG_SUGGESTED_OPTIONS=	gnupg2-gpgsm
+
+# remove after 2014Q3
+PKG_OPTIONS_LEGACY_OPTS+=     gpgsm:gnupg2-gpgsm
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
