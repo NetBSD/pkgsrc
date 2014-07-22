@@ -1,0 +1,98 @@
+$NetBSD: patch-aa,v 1.1 2014/07/22 08:20:24 manu Exp $
+
+Disable the NFS code
+
+--- src/killall5.c.orig	2014-07-01 02:01:37.000000000 +0200
++++ src/killall5.c	2014-07-03 09:53:15.000000000 +0200
+@@ -42,9 +42,11 @@
+  */
+ #include <dirent.h>
+ #include <errno.h>
+ #include <getopt.h>
++#ifdef linux
+ #include <mntent.h>
++#endif
+ #include <stdarg.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <signal.h>
+@@ -236,8 +238,9 @@
+ 	}
+ 	return 0;
+ }
+ 
++#ifdef linux
+ /*
+  *     Remember all NFS typed partitions.
+  */
+ void init_nfs(void)
+@@ -301,8 +304,9 @@
+ 		}
+ 	}
+ 	endmntent(mnt);
+ }
++#endif /* linux */
+ 
+ static void clear_shadow(SHADOW *restrict shadow)
+ {
+ 	SHADOW *s, *n, *l;
+@@ -365,8 +369,9 @@
+ out:
+ 	return 0;
+ }
+ 
++#ifdef linux
+ /*
+  *     Check path is located on a network based partition.
+  */
+ int check4nfs(const char * path, char * real)
+@@ -430,8 +435,9 @@
+ 	}
+ 
+ 	return 0;
+ }
++#endif /* linux */
+ 
+ int readarg(FILE *fp, char *buf, int sz)
+ {
+ 	int		c = 0, f = 0;
+@@ -607,11 +613,13 @@
+ 
+ 		p->nfs = 0;
+ 
+ 		switch (do_stat) {
++#ifdef linux
+ 		case DO_NETFS:
+ 			if ((p->nfs = check4nfs(path, buf)))
+ 				break;
++#endif
+ 		case DO_STAT:
+ 			if (stat(path, &st) != 0)
+ 				break;
+ 			p->dev = st.st_dev;
+@@ -695,10 +703,12 @@
+ 	/* Try to stat the executable. */
+ 	if (prog[0] == '/') {
+ 		memset(&real[0], 0, sizeof(real));
+ 
++#ifdef linux
+ 		if (check4nfs(prog, real))
+ 			nfs++;
++#endif
+ 
+ 		if (real[0] != '\0')
+ 			prog = &real[0];	/* Binary located on network FS. */
+ 
+@@ -926,10 +936,12 @@
+ 			exit(1);
+ 		}
+ 	}
+ 
++#ifdef linux
+ 	if (flags & PIDOF_NETFS)
+ 		init_nfs();		/* Which network based FS are online? */
++#endif
+ 
+ 	/* Print out process-ID's one by one. */
+ 	readproc((flags & PIDOF_NETFS) ? DO_NETFS : DO_STAT);
+ 
