@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.784 2014/07/18 08:29:13 obache Exp $
+# $NetBSD: Makefile,v 1.785 2014/07/22 17:17:05 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -776,6 +776,7 @@ SUBDIR+=	texi2html
 SUBDIR+=	texi2roff
 SUBDIR+=	the_silver_searcher
 SUBDIR+=	tinyxml
+SUBDIR+=	tinyxml2
 SUBDIR+=	tokyodystopia
 SUBDIR+=	trang
 SUBDIR+=	troffcvt
