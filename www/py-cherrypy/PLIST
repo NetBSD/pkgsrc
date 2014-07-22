@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/05/04 17:12:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/07/22 09:52:54 wiz Exp $
 bin/cherryd
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -230,6 +230,9 @@ ${PYSITELIB}/cherrypy/test/test_httpauth.pyo
 ${PYSITELIB}/cherrypy/test/test_httplib.py
 ${PYSITELIB}/cherrypy/test/test_httplib.pyc
 ${PYSITELIB}/cherrypy/test/test_httplib.pyo
+${PYSITELIB}/cherrypy/test/test_iterator.py
+${PYSITELIB}/cherrypy/test/test_iterator.pyc
+${PYSITELIB}/cherrypy/test/test_iterator.pyo
 ${PYSITELIB}/cherrypy/test/test_json.py
 ${PYSITELIB}/cherrypy/test/test_json.pyc
 ${PYSITELIB}/cherrypy/test/test_json.pyo
