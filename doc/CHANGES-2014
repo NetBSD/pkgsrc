@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2723 2014/07/22 10:10:29 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2724 2014/07/22 10:13:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3554,3 +3554,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/py-six to 1.7.3 [wiz 2014-07-22]
 	Updated devel/py-setuptools to 5.4.1 [wiz 2014-07-22]
 	Added math/py-almost version 0.1.5 [wiz 2014-07-22]
+	Updated math/py-mpmath to 0.19 [wiz 2014-07-22]
