@@ -1,0 +1,19 @@
+$NetBSD: patch-doc_Makefile,v 1.1 2014/07/22 08:25:54 manu Exp $
+
+BSD sed does not like \\ as search separator
+
+--- doc/Makefile.orig	2013-01-17 16:02:38.000000000 +0100
++++ doc/Makefile	2013-01-17 16:04:07.000000000 +0100
+@@ -7,10 +7,10 @@
+ 	rm -f *~ $(BIN).$(MAN_SEC)* $(SBIN).$(MAN_SEC)* DEADJOE
+ 
+ manpage:
+ 	@echo Generating manpage...
+-	@sed "s\\_CONFDIR_\\$(CONFDIR)\\g ; s\\_HOMEDIR_\\$(HOMEDIR)\\g ; s\\_MANSEC_\\$(MAN_SEC)\\g" < $(BIN).man | groff -man -Tascii > $(BIN).$(MAN_SEC)
+-	@sed "s\\_CONFDIR_\\$(CONFDIR)\\g ; s\\_HOMEDIR_\\$(HOMEDIR)\\g ; s\\_MANSEC_\\$(MAN_SEC)\\g" < $(SBIN).man | groff -man -Tascii > $(SBIN).$(MAN_SEC)
++	@sed "s|_CONFDIR_|$(CONFDIR)|g ; s|_HOMEDIR_|$(HOMEDIR)|g ; s|_MANSEC_|$(MAN_SEC)|g" < $(BIN).man | groff -man -Tascii > $(BIN).$(MAN_SEC)
++	@sed "s|_CONFDIR_|$(CONFDIR)|g ; s|_HOMEDIR_|$(HOMEDIR)|g ; s|_MANSEC_|$(MAN_SEC)|g" < $(SBIN).man | groff -man -Tascii > $(SBIN).$(MAN_SEC)
+ 
+ 
+ install:
+ 	mkdir -m 755 -p $(DOCDIR) $(MANDIR)/man$(MAN_SEC)
