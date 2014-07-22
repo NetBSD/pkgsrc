@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2014/01/27 19:58:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/07/22 12:41:28 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/tornado/__init__.py
 ${PYSITELIB}/tornado/__init__.pyc
@@ -13,7 +13,6 @@ ${PYSITELIB}/tornado/auth.pyo
 ${PYSITELIB}/tornado/autoreload.py
 ${PYSITELIB}/tornado/autoreload.pyc
 ${PYSITELIB}/tornado/autoreload.pyo
-${PYSITELIB}/tornado/ca-certificates.crt
 ${PYSITELIB}/tornado/concurrent.py
 ${PYSITELIB}/tornado/concurrent.pyc
 ${PYSITELIB}/tornado/concurrent.pyo
@@ -26,6 +25,9 @@ ${PYSITELIB}/tornado/escape.pyo
 ${PYSITELIB}/tornado/gen.py
 ${PYSITELIB}/tornado/gen.pyc
 ${PYSITELIB}/tornado/gen.pyo
+${PYSITELIB}/tornado/http1connection.py
+${PYSITELIB}/tornado/http1connection.pyc
+${PYSITELIB}/tornado/http1connection.pyo
 ${PYSITELIB}/tornado/httpclient.py
 ${PYSITELIB}/tornado/httpclient.pyc
 ${PYSITELIB}/tornado/httpclient.pyo
@@ -99,6 +101,9 @@ ${PYSITELIB}/tornado/speedups.so
 ${PYSITELIB}/tornado/stack_context.py
 ${PYSITELIB}/tornado/stack_context.pyc
 ${PYSITELIB}/tornado/stack_context.pyo
+${PYSITELIB}/tornado/tcpclient.py
+${PYSITELIB}/tornado/tcpclient.pyc
+${PYSITELIB}/tornado/tcpclient.pyo
 ${PYSITELIB}/tornado/tcpserver.py
 ${PYSITELIB}/tornado/tcpserver.pyc
 ${PYSITELIB}/tornado/tcpserver.pyo
@@ -109,6 +114,9 @@ ${PYSITELIB}/tornado/test/README
 ${PYSITELIB}/tornado/test/__init__.py
 ${PYSITELIB}/tornado/test/__init__.pyc
 ${PYSITELIB}/tornado/test/__init__.pyo
+${PYSITELIB}/tornado/test/__main__.py
+${PYSITELIB}/tornado/test/__main__.pyc
+${PYSITELIB}/tornado/test/__main__.pyo
 ${PYSITELIB}/tornado/test/auth_test.py
 ${PYSITELIB}/tornado/test/auth_test.pyc
 ${PYSITELIB}/tornado/test/auth_test.pyo
@@ -175,6 +183,9 @@ ${PYSITELIB}/tornado/test/stack_context_test.pyc
 ${PYSITELIB}/tornado/test/stack_context_test.pyo
 ${PYSITELIB}/tornado/test/static/dir/index.html
 ${PYSITELIB}/tornado/test/static/robots.txt
+${PYSITELIB}/tornado/test/tcpclient_test.py
+${PYSITELIB}/tornado/test/tcpclient_test.pyc
+${PYSITELIB}/tornado/test/tcpclient_test.pyo
 ${PYSITELIB}/tornado/test/template_test.py
 ${PYSITELIB}/tornado/test/template_test.pyc
 ${PYSITELIB}/tornado/test/template_test.pyo

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2014/06/09 12:33:43 wiz Exp $
+$NetBSD: distinfo,v 1.6 2014/07/22 12:41:28 wiz Exp $
 
-SHA1 (tornado-3.2.2.tar.gz) = ede9603adcceaf1b6085fd5a973cec50c7391888
-RMD160 (tornado-3.2.2.tar.gz) = d1cd5f74dd32a618deb0c3e55661692a1c47f0de
-Size (tornado-3.2.2.tar.gz) = 405596 bytes
+SHA1 (tornado-4.0.tar.gz) = 466e73db0d9e7a030f6933346e191637ae6ddd8a
+RMD160 (tornado-4.0.tar.gz) = 89dd21f39567d645456d727854be7060e95b7cd0
+Size (tornado-4.0.tar.gz) = 313742 bytes
