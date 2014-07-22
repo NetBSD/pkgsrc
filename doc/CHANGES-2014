@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2722 2014/07/22 10:03:18 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2723 2014/07/22 10:10:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3553,3 +3553,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/py-icalendar to 3.8.1 [wiz 2014-07-22]
 	Updated lang/py-six to 1.7.3 [wiz 2014-07-22]
 	Updated devel/py-setuptools to 5.4.1 [wiz 2014-07-22]
+	Added math/py-almost version 0.1.5 [wiz 2014-07-22]
