@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2733 2014/07/22 11:02:33 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2734 2014/07/22 11:08:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3564,3 +3564,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated converters/libwpd to 0.10.0 [wiz 2014-07-22]
 	Updated converters/libwpg to 0.3.0 [wiz 2014-07-22]
 	Updated converters/libabw to 0.1.0 [wiz 2014-07-22]
+	Updated converters/libcdr to 0.1.0 [wiz 2014-07-22]
