@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.686 2014/07/15 12:13:10 obache Exp $
+# $NetBSD: Makefile,v 1.687 2014/07/22 17:37:10 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -283,6 +283,7 @@ SUBDIR+=	libksane
 SUBDIR+=	liblqr
 SUBDIR+=	libotf
 SUBDIR+=	libpano13
+SUBDIR+=	libpgf
 SUBDIR+=	libpuzzle
 SUBDIR+=	libraw
 SUBDIR+=	libraw013
