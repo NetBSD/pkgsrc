@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2014/05/04 16:56:01 wiz Exp $
+$NetBSD: distinfo,v 1.4 2014/07/22 11:07:58 wiz Exp $
 
-SHA1 (libcdr-0.0.16.tar.xz) = 41536778ebce9e241f3c743ed90cc1aa7e1db41b
-RMD160 (libcdr-0.0.16.tar.xz) = c1fe5b74634385fc9c5ab71d45b1dd063469ded9
-Size (libcdr-0.0.16.tar.xz) = 569644 bytes
+SHA1 (libcdr-0.1.0.tar.xz) = e42dbf8cb4ac4271b38a6105a0c2e4c2259038f5
+RMD160 (libcdr-0.1.0.tar.xz) = 2d249e5367f1355536a38a7691e09bbc41e9b8c4
+Size (libcdr-0.1.0.tar.xz) = 562240 bytes
