@@ -1,0 +1,9 @@
+Khal is a standards based CLI (console) calendar program. CalDAV
+compatibiliy is achieved by using vdir/vdirsyncer as a backend,
+allowing syncing of calendars with a variety of other programs on
+a host of different platforms.
+
+khal is currently in an early stage of development, has a limited
+feature set and is probably full of bugs. If you do try it out,
+please make sure you have a backup of your date and please report
+back any bugs you might encounter.
