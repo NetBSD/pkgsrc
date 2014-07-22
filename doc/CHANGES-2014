@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2756 2014/07/22 17:17:33 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2757 2014/07/22 17:37:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3587,3 +3587,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/qt4 to 4.8.6 [wiz 2014-07-22]
 	Added time/khal version 0.2.0 [wiz 2014-07-22]
 	Added textproc/tinyxml2 version 2.1.0 [wiz 2014-07-22]
+	Added graphics/libpgf version 6.14.12 [wiz 2014-07-22]
