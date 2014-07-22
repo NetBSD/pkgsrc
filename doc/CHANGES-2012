@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.4032 2013/10/23 09:12:24 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.4033 2014/07/22 17:54:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -177,6 +177,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed lang/py-html-docs [obache 2012-01-13]
 	Added audio/mp3gain version 1.5.2 [drochner 2012-01-13]
 	Updated x11/qt4-qscintilla to 2.6 [drochner 2012-01-13]
+	Updated x11/py-qt4-qscintilla to 2.6 [drochner 2012-01-13]
 	Updated editors/scite to 2.29 [drochner 2012-01-13]
 	Updated devel/scintilla to 2.29 [drochner 2012-01-13]
 	Updated www/bluefish to 2.2.1 [drochner 2012-01-13]
@@ -742,6 +743,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/py-sip to 4.13.2 [drochner 2012-02-17]
 	Updated x11/py-qt4 to 4.9.1 [drochner 2012-02-17]
 	Updated x11/qt4-qscintilla to 2.6.1 [drochner 2012-02-17]
+	Updated x11/py-qt4-qscintilla to 2.6.1 [drochner 2012-02-17]
 	Updated lang/ruby193-base to 1.9.3p125nb1 [taca 2012-02-18]
 	Updated net/httping to 1.5.2 [shattered 2012-02-18]
 	Updated devel/p5-CPAN-Checksums to 2.08 [sno 2012-02-18]
@@ -3330,6 +3332,8 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated fonts/umefont-ttf to 0.441 [ryoon 2012-07-03]
 	Updated parallel/slurm to 2.4.1 [asau 2012-07-03]
 	Updated lang/parrot to 4.2.0 [he 2012-07-03]
+	Updated x11/qt4-qscintilla to 2.6.2 [drochner 2012-07-03]
+	Updated x11/py-qt4-qscintilla to 2.6.2 [drochner 2012-07-03]
 	Updated emulators/suse121_libtiff to 12.1nb2 [obache 2012-07-04]
 	Updated net/dnsmasq to 2.62 [roy 2012-07-04]
 	Updated audio/sox to 14.4.0 [adam 2012-07-04]
