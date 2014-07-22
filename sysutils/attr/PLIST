@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2014/07/22 08:00:36 manu Exp $
+bin/attr
+bin/getfattr
+bin/setfattr
+lib/libattr.so.1
+lib/libattr.so.1.1.0
+man/man1/attr.1
+man/man1/getfattr.1
+man/man1/setfattr.1
+man/man5/attr.5
+share/doc/attr/CHANGES.gz
+share/doc/attr/COPYING
+share/doc/attr/COPYING.LGPL
+share/doc/attr/PORTING
+share/doc/attr/README
+share/locale/cs/LC_MESSAGES/attr.mo
+share/locale/de/LC_MESSAGES/attr.mo
+share/locale/es/LC_MESSAGES/attr.mo
+share/locale/fr/LC_MESSAGES/attr.mo
+share/locale/gl/LC_MESSAGES/attr.mo
+share/locale/nl/LC_MESSAGES/attr.mo
+share/locale/pl/LC_MESSAGES/attr.mo
+share/locale/sv/LC_MESSAGES/attr.mo
