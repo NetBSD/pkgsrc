@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2750 2014/07/22 12:42:02 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2751 2014/07/22 12:45:04 manu Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3581,3 +3581,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/libexttextcat to 3.4.4 [wiz 2014-07-22]
 	Updated misc/calibre to 1.45.0 [wiz 2014-07-22]
 	Updated www/py-tornado to 4.0 [wiz 2014-07-22]
+	Added mail/gnarwl version 3.6 [manu 2014-07-22]
