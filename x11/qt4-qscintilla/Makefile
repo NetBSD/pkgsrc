@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2014/07/22 17:52:11 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2014/07/22 17:55:16 wiz Exp $
 #
+# when updating this, also update py-qt4-qscintilla
+# XXX: these two should share a Makefile.common
 
 DISTNAME=	QScintilla-gpl-2.8
 PKGNAME=	qt4-${DISTNAME:tl:S/-gpl-/-/}
