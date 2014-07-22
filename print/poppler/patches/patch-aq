@@ -1,4 +1,6 @@
-$NetBSD: patch-aq,v 1.6 2013/12/29 22:29:35 bsiegert Exp $
+$NetBSD: patch-aq,v 1.7 2014/07/22 12:13:28 wiz Exp $
+
+Add workaround for lack of fmax/fmin on NetBSD<6 and DragonFly before 200204.
 
 --- poppler/TextOutputDev.cc.orig	Mon Jan 24 19:06:00 2011
 +++ poppler/TextOutputDev.cc
