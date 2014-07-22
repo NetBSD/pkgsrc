@@ -1,19 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2010/11/25 10:27:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/07/22 10:52:24 wiz Exp $
 bin/wpd2html
 bin/wpd2raw
 bin/wpd2text
-include/libwpd-0.9/libwpd-stream/WPXStream.h
-include/libwpd-0.9/libwpd-stream/WPXStreamImplementation.h
-include/libwpd-0.9/libwpd-stream/libwpd-stream.h
-include/libwpd-0.9/libwpd/WPDocument.h
-include/libwpd-0.9/libwpd/WPXBinaryData.h
-include/libwpd-0.9/libwpd/WPXDocumentInterface.h
-include/libwpd-0.9/libwpd/WPXProperty.h
-include/libwpd-0.9/libwpd/WPXPropertyList.h
-include/libwpd-0.9/libwpd/WPXPropertyListVector.h
-include/libwpd-0.9/libwpd/WPXString.h
-include/libwpd-0.9/libwpd/libwpd.h
-lib/libwpd-0.9.la
-lib/libwpd-stream-0.9.la
-lib/pkgconfig/libwpd-0.9.pc
-lib/pkgconfig/libwpd-stream-0.9.pc
+include/libwpd-0.10/libwpd/WPDocument.h
+include/libwpd-0.10/libwpd/libwpd.h
+lib/libwpd-0.10.la
+lib/pkgconfig/libwpd-0.10.pc

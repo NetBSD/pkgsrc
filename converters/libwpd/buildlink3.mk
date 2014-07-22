@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2013/08/24 21:50:24 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2014/07/22 10:52:24 wiz Exp $
 
 BUILDLINK_TREE+=	libwpd
 
@@ -6,8 +6,10 @@ BUILDLINK_TREE+=	libwpd
 LIBWPD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libwpd+=	libwpd>=0.9.5
+BUILDLINK_ABI_DEPENDS.libwpd+=	libwpd>=0.10.0nb1
 BUILDLINK_PKGSRCDIR.libwpd?=	../../converters/libwpd
 
+.include "../../converters/librevenge/buildlink3.mk"
 .endif # LIBWPD_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libwpd
