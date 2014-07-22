@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/02/02 07:31:30 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2014/07/22 10:53:30 wiz Exp $
 
-SHA1 (libfreehand-0.0.0.tar.bz2) = 2b7a5a91c3fe0eea76a0a7074d2a8752d81c0a0b
-RMD160 (libfreehand-0.0.0.tar.bz2) = 557bec6d6abe490691190c21875aa7844c908bdd
-Size (libfreehand-0.0.0.tar.bz2) = 345436 bytes
+SHA1 (libfreehand-0.1.0.tar.bz2) = 8f4bf5486b3a89c807a590cd5623270a4c20f7ce
+RMD160 (libfreehand-0.1.0.tar.bz2) = 04001e9cc01b757d4ec371f425799c3ccdc43cee
+Size (libfreehand-0.1.0.tar.bz2) = 340549 bytes

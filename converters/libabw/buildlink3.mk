@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2014/02/02 07:27:04 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2014/07/22 10:53:29 wiz Exp $
 
 BUILDLINK_TREE+=	libabw
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libabw
 LIBABW_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libabw+=	libabw>=0.0.1
+BUILDLINK_ABI_DEPENDS.libabw?=	libabw>=0.0.2nb2
 BUILDLINK_PKGSRCDIR.libabw?=	../../converters/libabw
 
 .include "../../converters/libwpd/buildlink3.mk"
