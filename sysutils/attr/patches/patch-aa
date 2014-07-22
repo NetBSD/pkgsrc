@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1 2014/07/22 08:23:31 manu Exp $
+
+Portability fixes:
+- <features.h>  is Linux specific
+- Define __THROW for systems non glibc based systems
+
+--- include/xattr.h.orig	2014-06-27 11:39:56.000000000 +0200
++++ include/xattr.h	2014-06-27 11:43:07.000000000 +0200
+@@ -19,9 +19,20 @@
+  */
+ #ifndef __XATTR_H__
+ #define __XATTR_H__
+ 
++#if defined(linux)
+ #include <features.h>
++#endif
++
++/* Portability non glibc c++ build systems */
++#ifndef __THROW
++# if defined __cplusplus
++#  define __THROW       throw ()
++# else
++#  define __THROW
++# endif
++#endif
+ 
+ #include <errno.h>
+ #ifndef ENOATTR
+ # define ENOATTR ENODATA        /* No such attribute */
