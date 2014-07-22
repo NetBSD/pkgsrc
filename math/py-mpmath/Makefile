@@ -1,20 +1,18 @@
-# $NetBSD: Makefile,v 1.9 2014/06/06 12:11:46 wen Exp $
+# $NetBSD: Makefile,v 1.10 2014/07/22 10:11:42 wiz Exp $
 
-DISTNAME=	mpmath-0.18
+DISTNAME=	mpmath-0.19
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
 MASTER_SITES=	http://pypi.python.org/packages/source/m/mpmath/ \
-		http://mpmath.googlecode.com/files/
+		http://mpmath.org/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/mpmath/
+HOMEPAGE=	http://mpmath.org/
 COMMENT=	Python library for arbitrary-precision FP arithmetic
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes
-
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 
