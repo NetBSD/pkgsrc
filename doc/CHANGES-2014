@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2739 2014/07/22 11:23:48 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2740 2014/07/22 11:25:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3570,3 +3570,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated converters/libmspub to 0.1.1 [wiz 2014-07-22]
 	Updated converters/libvisio to 0.1.0 [wiz 2014-07-22]
 	Updated security/caff to 1.1.8 [wiz 2014-07-22]
+	Updated security/gnupg to 1.4.18 [wiz 2014-07-22]
