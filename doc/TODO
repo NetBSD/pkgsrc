@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13454 2014/07/22 09:47:16 wiz Exp $
+$NetBSD: TODO,v 1.13455 2014/07/22 09:48:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1038,7 +1038,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rp-l2tp-0.4
 	o rp-pppoe-3.11
 	o rpm-5.3.6 [rpm5.org]
-	o rsync-3.1.1
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o ruby-ncurses-1.3.1
