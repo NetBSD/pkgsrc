@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13468 2014/07/22 11:14:14 wiz Exp $
+$NetBSD: TODO,v 1.13469 2014/07/22 11:15:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -756,7 +756,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libffi-3.1 [wip]
 	o libflash-0.4.13
 	o libfolks-0.8.0
-	o libfreehand-0.1.0
 	o libgdata-0.14.1
 	o libgdiplus-3.0
 	o libgee-0.14.0
