@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/07/22 07:52:49 manu Exp $
+
+SHA1 (patchelf-0.8.tar.gz) = 34ad5ff3feaf52fe198a7078714339860a06af30
+RMD160 (patchelf-0.8.tar.gz) = 8e22e12f47fc6d5bca7d24527f89eb7768526a7c
+Size (patchelf-0.8.tar.gz) = 144271 bytes
