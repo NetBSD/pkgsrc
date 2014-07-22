@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/08/24 16:06:56 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2014/07/22 11:17:44 wiz Exp $
 
-SHA1 (libmspub-0.0.6.tar.xz) = cfebfdf832cf582c57134f851614c1cecc5540c0
-RMD160 (libmspub-0.0.6.tar.xz) = e36f64141642c9d0af6b5a247ce3c0d41d92893c
-Size (libmspub-0.0.6.tar.xz) = 353356 bytes
+SHA1 (libmspub-0.1.1.tar.xz) = d3052160c5fd0c116b1e54c7238b1b5fdd8eceff
+RMD160 (libmspub-0.1.1.tar.xz) = 31c6d4172a0e7a8a4a6eb8c7250809dc9f499050
+Size (libmspub-0.1.1.tar.xz) = 340096 bytes
