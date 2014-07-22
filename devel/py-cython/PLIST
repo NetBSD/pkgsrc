@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2014/02/18 16:13:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2014/07/22 11:42:51 wiz Exp $
 bin/cygdb${PYVERSSUFFIX}
 bin/cython${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -330,6 +330,8 @@ ${PYSITELIB}/Cython/Includes/libcpp/queue.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/set.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/stack.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/string.pxd
+${PYSITELIB}/Cython/Includes/libcpp/unordered_map.pxd
+${PYSITELIB}/Cython/Includes/libcpp/unordered_set.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/utility.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/vector.pxd
 ${PYSITELIB}/Cython/Includes/numpy/__init__.pxd
@@ -422,6 +424,7 @@ ${PYSITELIB}/Cython/Utility/CommonTypes.c
 ${PYSITELIB}/Cython/Utility/CppConvert.pyx
 ${PYSITELIB}/Cython/Utility/CppSupport.cpp
 ${PYSITELIB}/Cython/Utility/CythonFunction.c
+${PYSITELIB}/Cython/Utility/Embed.c
 ${PYSITELIB}/Cython/Utility/Exceptions.c
 ${PYSITELIB}/Cython/Utility/ExtensionTypes.c
 ${PYSITELIB}/Cython/Utility/FunctionArguments.c
