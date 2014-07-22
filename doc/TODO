@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13482 2014/07/22 12:42:02 wiz Exp $
+$NetBSD: TODO,v 1.13483 2014/07/22 12:45:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -924,7 +924,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o psmisc-22.20
 	o pspp-0.8.3
 	o pstoedit-3.61
-	o puzzles-10196
 	o pv-1.2.0
 	o pvs-5.0
 	o pwlib-1.11.1
