@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2727 2014/07/22 10:22:12 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2728 2014/07/22 10:23:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3558,3 +3558,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated games/py-trueskill to 0.4.2 [wiz 2014-07-22]
 	Updated time/py-icalendar to 3.8.2 [wiz 2014-07-22]
 	Updated devel/py-py to 1.4.22 [wiz 2014-07-22]
+	Updated textproc/py-enchant to 1.6.6 [wiz 2014-07-22]
