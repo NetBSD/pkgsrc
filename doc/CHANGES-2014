@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2713 2014/07/22 08:25:12 manu Exp $
+$NetBSD: CHANGES-2014,v 1.2714 2014/07/22 09:46:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3544,3 +3544,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added sysutils/attr version 2.4.47 [manu 2014-07-22]
 	Added devel/patchelf version 0.8 [manu 2014-07-22]
 	Added sysutils/pidof version 2.88dsf [manu 2014-07-22]
+	Updated misc/py-anki2 to 2.0.28 [wiz 2014-07-22]
