@@ -1,4 +1,4 @@
-.\"	$NetBSD: revbump.1,v 1.19 2014/06/24 15:00:27 wiz Exp $
+.\"	$NetBSD: revbump.1,v 1.20 2014/07/22 10:51:17 wiz Exp $
 .\"
 .\" Copyright (c) 2003, 2004, 2005, 2006, 2010, 2012, 2013, 2014 The NetBSD Foundation, Inc.
 .\"
@@ -87,7 +87,7 @@ would be:
 cd /usr/pkgsrc
 finddepends category/package | sort -u \*[Gt] allbump
 grep buildlink3.mk allbump | sed 's/.buildlink3.mk//' \*[Gt] bl3bump
-grep -e Makefile.common -e mk$ allbump > commonbump
+grep -e Makefile.common -e mk$ allbump | grep -v -e buildlink3.mk -e options.mk > commonbump
 [read commonbump and replace entries with all packages including the
  corresponding Makefile.common or *.mk file]
 cat allbump commonbump | sed 's,/[^/]*$,,' | sort -u \*[Gt] makebump
