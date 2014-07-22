@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2725 2014/07/22 10:17:50 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2726 2014/07/22 10:18:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3556,3 +3556,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added math/py-almost version 0.1.5 [wiz 2014-07-22]
 	Updated math/py-mpmath to 0.19 [wiz 2014-07-22]
 	Updated games/py-trueskill to 0.4.2 [wiz 2014-07-22]
+	Updated time/py-icalendar to 3.8.2 [wiz 2014-07-22]
