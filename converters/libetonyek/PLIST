@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2014/02/02 07:29:34 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/07/22 11:13:26 wiz Exp $
 bin/key2raw
 bin/key2text
 bin/key2xhtml
-include/libetonyek-0.0/libetonyek/KEYDocument.h
-include/libetonyek-0.0/libetonyek/KEYPresentationInterface.h
-include/libetonyek-0.0/libetonyek/KEYStringVector.h
-include/libetonyek-0.0/libetonyek/libetonyek.h
-lib/libetonyek-0.0.la
-lib/pkgconfig/libetonyek-0.0.pc
+bin/numbers2csv
+bin/numbers2raw
+bin/numbers2text
+bin/pages2html
+bin/pages2raw
+bin/pages2text
+include/libetonyek-0.1/libetonyek/EtonyekDocument.h
+include/libetonyek-0.1/libetonyek/libetonyek.h
+lib/libetonyek-0.1.la
+lib/pkgconfig/libetonyek-0.1.pc
