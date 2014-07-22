@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2014/02/02 08:25:05 wiz Exp $
+$NetBSD: distinfo,v 1.7 2014/07/22 10:58:04 wiz Exp $
 
-SHA1 (libwpg-0.2.2.tar.bz2) = e9484e795259485ece9a984f60776704d55afeeb
-RMD160 (libwpg-0.2.2.tar.bz2) = 4b631a8f3fcb261205b04c4b0849256d159e8f31
-Size (libwpg-0.2.2.tar.bz2) = 376802 bytes
+SHA1 (libwpg-0.3.0.tar.bz2) = c8422f9a01e98ff3cb5d64d518e61f6a0bb77551
+RMD160 (libwpg-0.3.0.tar.bz2) = fc88602ffea6da4a5b931c359092bdcc8b34b04e
+Size (libwpg-0.3.0.tar.bz2) = 381878 bytes

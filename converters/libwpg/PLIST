@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2010/11/25 10:43:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/07/22 10:58:04 wiz Exp $
 bin/wpg2raw
 bin/wpg2svg
 bin/wpg2svgbatch.pl
-include/libwpg-0.2/libwpg/WPGPaintInterface.h
-include/libwpg-0.2/libwpg/WPGraphics.h
-include/libwpg-0.2/libwpg/libwpg.h
-lib/libwpg-0.2.la
-lib/pkgconfig/libwpg-0.2.pc
+include/libwpg-0.3/libwpg/WPGraphics.h
+include/libwpg-0.3/libwpg/libwpg.h
+lib/libwpg-0.3.la
+lib/pkgconfig/libwpg-0.3.pc
