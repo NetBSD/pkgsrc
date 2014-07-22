@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.1 2006/01/09 19:46:01 joerg Exp $
+$NetBSD: patch-ad,v 1.2 2014/07/22 11:33:47 wiz Exp $
 
---- grap_lex.l.orig	2006-01-09 19:42:35.000000000 +0000
-+++ grap_lex.l
+--- grap_lex.ll.orig	2006-01-09 19:42:35.000000000 +0000
++++ grap_lex.ll
 @@ -25,7 +25,7 @@ extern "C" {
  #include "grap_draw.h" 
  #include "y.tab.h"
