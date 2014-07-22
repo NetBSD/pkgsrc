@@ -1,0 +1,16 @@
+TinyXML-2 parses an XML document, and builds from that a Document
+Object Model (DOM) that can be read, modified, and saved.
+
+TinyXML-2 uses a Document Object Model (DOM), meaning the XML data is
+parsed into a C++ objects that can be browsed and manipulated, and then
+written to disk or another output stream. You can also construct an XML
+document from scratch with C++ objects and write this to disk or another
+output stream.
+
+TinyXML (textproc/tinyxml) served the needs of the original author for
+many years; but it uses memory inefficiently, and doesn't perform as
+well as desired for mobile devices. The author wanted an XML parser that
+was a little more modern, a little simpler (the "tiny" had been lost a
+little over the years), and was a good fit for Android.
+
+This led to TinyXML-2.
