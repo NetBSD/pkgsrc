@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2014/07/22 08:25:54 manu Exp $
+
+SHA1 (gnarwl-3.6.tgz) = f1c06f176c1782077d01235c5d21b293c2b0ac8b
+RMD160 (gnarwl-3.6.tgz) = c1b60da88d0f2cb5e74073d6b69d636d7e13ca65
+Size (gnarwl-3.6.tgz) = 73111 bytes
+SHA1 (patch-Makefile.in) = e8a1c016e4cc416c2a5d601ac8e4996bfa8110ce
+SHA1 (patch-configure) = 2896e95c6013a4c471f1f8e8fb1fa5b6541db1b8
+SHA1 (patch-configure.ac) = 72f994f187df6f5dde2645d38c1af964afb13c82
+SHA1 (patch-data_Makefile) = 84e846f76a0656f2a46a7a01bd51dc04fb302426
+SHA1 (patch-doc_Makefile) = 2a7a8b2aa81738b3fa8046e62f094001fd313a4f
