@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1934 2014/07/19 09:02:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.1935 2014/07/22 08:00:03 manu Exp $
 #
 
 COMMENT=	Development utilities
@@ -1423,6 +1423,7 @@ SUBDIR+=	pangox-compat
 SUBDIR+=	papaya
 SUBDIR+=	pardiff
 SUBDIR+=	patch
+SUBDIR+=	patchelf
 SUBDIR+=	patchutils
 SUBDIR+=	pcc-libs
 SUBDIR+=	pccts
