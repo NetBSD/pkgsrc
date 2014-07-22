@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2731 2014/07/22 10:53:51 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2732 2014/07/22 11:00:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3562,3 +3562,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated fonts/harfbuzz to 0.9.32 [wiz 2014-07-22]
 	Added converters/librevenge version 0.0.1 [wiz 2014-07-22]
 	Updated converters/libwpd to 0.10.0 [wiz 2014-07-22]
+	Updated converters/libwpg to 0.3.0 [wiz 2014-07-22]
