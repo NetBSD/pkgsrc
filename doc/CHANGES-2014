@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2729 2014/07/22 10:27:36 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2730 2014/07/22 10:41:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3560,3 +3560,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-py to 1.4.22 [wiz 2014-07-22]
 	Updated textproc/py-enchant to 1.6.6 [wiz 2014-07-22]
 	Updated fonts/harfbuzz to 0.9.32 [wiz 2014-07-22]
+	Added converters/librevenge version 0.0.1 [wiz 2014-07-22]
