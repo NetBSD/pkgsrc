@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2013/04/08 11:17:23 rodent Exp $
-#
+# $NetBSD: Makefile,v 1.11 2014/07/22 10:22:39 wiz Exp $
 
-DISTNAME=	pyenchant-1.6.5
+DISTNAME=	pyenchant-1.6.6
 PKGNAME=	${DISTNAME:S/py/${PYPKGPREFIX}-/}
 CATEGORIES=	textproc
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pyenchant/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.rfk.id.au/software/pyenchant/
+HOMEPAGE=	https://pythonhosted.org/pyenchant/
 COMMENT=	Spellchecking library for Python
 LICENSE=	gnu-lgpl-v2.1
 
@@ -31,10 +30,6 @@ SUBST_CLASSES+=		dlpath
 SUBST_STAGE.dlpath=	pre-configure
 SUBST_FILES.dlpath=	enchant/_enchant.py
 SUBST_VARS.dlpath=	PYENCHANT_LIBRARY_PATH
-
-post-extract:
-	# fix README file permissions
-	${CHMOD} 644 ${WRKSRC}/enchant/share/enchant/ispell/README.txt
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
