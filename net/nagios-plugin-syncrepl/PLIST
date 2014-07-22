@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2014/07/22 12:52:53 manu Exp $
+libexec/nagios/check_syncrepl

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1028 2014/07/15 14:04:16 fhajny Exp $
+# $NetBSD: Makefile,v 1.1029 2014/07/22 12:53:33 manu Exp $
 #
 
 COMMENT=	Networking tools
@@ -335,6 +335,7 @@ SUBDIR+=	nagios-plugin-radius
 SUBDIR+=	nagios-plugin-raidctl
 SUBDIR+=	nagios-plugin-snmp
 SUBDIR+=	nagios-plugin-spamd
+SUBDIR+=	nagios-plugin-syncrepl
 SUBDIR+=	nagios-plugins
 SUBDIR+=	nagstamon
 SUBDIR+=	nam
