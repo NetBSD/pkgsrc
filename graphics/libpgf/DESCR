@@ -1,0 +1,4 @@
+LibPGF is a library for encoding and decoding the progressive graphics
+file (PGF) format. PGF is is based on discrete, fast wavelet transform
+with progressive coding features and has both lossy and lossless
+compression.
