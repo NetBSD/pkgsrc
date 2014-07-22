@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2014/05/21 12:19:12 gdt Exp $
+# $NetBSD: options.mk,v 1.6 2014/07/22 18:18:43 gson Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-anita
 PKG_SUPPORTED_OPTIONS=		xen
@@ -26,7 +26,8 @@ DEPENDS+=	qemu>=0.12.3nb2:../../emulators/qemu0
 .endif
 
 .if !empty(PKG_OPTIONS:Mqemu)
-# qemu1/2 does not work reliably.  See the anita(1) man page.
+# Some versions of qemu1/2 do not work reliably, see the anita(1)
+# man page.  Version 2.0.0nb4 or newer should work.
 DEPENDS+=	qemu>=1.0:../../emulators/qemu
 .endif
 
