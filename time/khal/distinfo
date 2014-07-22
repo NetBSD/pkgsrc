@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/07/22 17:08:46 wiz Exp $
+
+SHA1 (khal-0.2.0.tar.gz) = 703f68454f3e47a7f8786fb63b7348541ef919c4
+RMD160 (khal-0.2.0.tar.gz) = 624d2f14a225fa846d5997e983a542f612cc2c8f
+Size (khal-0.2.0.tar.gz) = 165316 bytes
