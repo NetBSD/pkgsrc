@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2742 2014/07/22 11:34:44 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2743 2014/07/22 11:39:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3573,3 +3573,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/gnupg to 1.4.18 [wiz 2014-07-22]
 	Updated security/gnupg2 to 2.0.25 [wiz 2014-07-22]
 	Updated graphics/grap to 1.44 [wiz 2014-07-22]
+	Updated www/curl to 7.37.1 [wiz 2014-07-22]
