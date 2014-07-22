@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2744 2014/07/22 11:43:32 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2745 2014/07/22 12:09:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3575,3 +3575,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/grap to 1.44 [wiz 2014-07-22]
 	Updated www/curl to 7.37.1 [wiz 2014-07-22]
 	Updated devel/py-cython to 0.20.2 [wiz 2014-07-22]
+	Updated net/py-twisted to 14.0.0 [wiz 2014-07-22]
