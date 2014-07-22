@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2013/08/24 16:06:56 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/07/22 11:17:44 wiz Exp $
 bin/pub2raw
 bin/pub2xhtml
-include/libmspub-0.0/libmspub/MSPUBDocument.h
-include/libmspub-0.0/libmspub/MSPUBStringVector.h
-include/libmspub-0.0/libmspub/libmspub.h
-lib/libmspub-0.0.la
-lib/pkgconfig/libmspub-0.0.pc
+include/libmspub-0.1/libmspub/MSPUBDocument.h
+include/libmspub-0.1/libmspub/libmspub.h
+lib/libmspub-0.1.la
+lib/pkgconfig/libmspub-0.1.pc
