@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2014/06/09 12:29:23 wiz Exp $
+$NetBSD: distinfo,v 1.12 2014/07/22 09:57:15 wiz Exp $
 
-SHA1 (icalendar-3.7.tar.gz) = dbaf8406534f7b218aee3e33e900361196d563f8
-RMD160 (icalendar-3.7.tar.gz) = d6d06f1f59d1c4898029e6d53380c14b062ca2fb
-Size (icalendar-3.7.tar.gz) = 63205 bytes
+SHA1 (icalendar-3.8.1.tar.gz) = 55b7c50bd272107caef58cb75ef4cc51e14b3dfa
+RMD160 (icalendar-3.8.1.tar.gz) = 88d8223c978eb46c63a67a90de8f08a2a36903d0
+Size (icalendar-3.8.1.tar.gz) = 68294 bytes
