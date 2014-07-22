@@ -1,0 +1,19 @@
+$NetBSD: patch-doc_Makefile.am,v 1.1 2014/07/22 17:36:49 wiz Exp $
+
+* install manpages in mandir
+https://sourceforge.net/p/libpgf/patches/9/
+
+* do not install _usr_...3 manpage files
+https://sourceforge.net/p/libpgf/patches/10/
+
+--- doc/Makefile.am.orig	2013-10-25 11:24:17.000000000 +0000
++++ doc/Makefile.am
+@@ -11,6 +11,6 @@ html/index.html: Doxyfile
+ 
+ install-data-local: html/index.html
+ 	$(mkinstalldirs) $(DOC_DIR)/html
+-	$(mkinstalldirs) $(DESTDIR)$(datadir)/man/man3	
++	$(mkinstalldirs) $(DESTDIR)$(mandir)/man3	
+ 	-(cd html && for f in *.html *.png; do $(INSTALL) -m 644 "$$f" "$(DOC_DIR)/html/$$f"; done) 	
+-	-(cd man/man3; for f in *.3; do $(INSTALL) -m 644 "$$f" "$(DESTDIR)$(datadir)/man/man3/$$f"; done) 
++	-(cd man/man3; for f in [!_]*.3; do $(INSTALL) -m 644 "$$f" "$(DESTDIR)$(mandir)/man3/$$f"; done) 
