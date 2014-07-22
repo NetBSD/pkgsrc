@@ -1,0 +1,29 @@
+$NetBSD: patch-Makefile.in,v 1.1 2014/07/22 08:25:54 manu Exp $
+
+Use autoconf to detect libs.
+BSD sed does not like \\ as search separator
+
+--- Makefile.in.orig	2013-01-17 15:25:07.000000000 +0100
++++ Makefile.in	2013-01-17 17:09:40.000000000 +0100
+@@ -9,9 +9,9 @@
+ 
+ BIN=gnarwl
+ SBIN=damnit
+ MAN_SEC=8
+-VER=$(shell basename `pwd` | sed s\\$(BIN)-\\\\)
++VER=$(shell basename `pwd` | sed "s|$(BIN)-||")
+ 
+ ##
+ # Path settings (no trailing slashes!)
+ ##
+@@ -39,9 +39,9 @@
+ ##
+ 
+ CC=@CC@
+ CFLAGS=-DLDAP_DEPRECATED -DBLOCKDIR=\"$(BLOCKDIR)\" -DCFGFILE=\"$(CONFDIR)/gnarwl.cfg\" -DVERSION=\"$(VER)\" -g -Wall -O2 -I..
+-LFLAGS=-lldap -lgdbm -ldl -lresolv
++LFLAGS=@LDFLAGS@ @LIBS@
+ 
+ ##
+ ## No serviceable parts below
+ ##
