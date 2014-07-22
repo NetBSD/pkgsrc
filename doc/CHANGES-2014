@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2749 2014/07/22 12:35:52 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2750 2014/07/22 12:42:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3580,3 +3580,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated print/poppler to 0.26.3 [wiz 2014-07-22]
 	Updated textproc/libexttextcat to 3.4.4 [wiz 2014-07-22]
 	Updated misc/calibre to 1.45.0 [wiz 2014-07-22]
+	Updated www/py-tornado to 4.0 [wiz 2014-07-22]
