@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13465 2014/07/22 10:27:36 wiz Exp $
+$NetBSD: TODO,v 1.13466 2014/07/22 11:02:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -747,7 +747,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lgeneral-1.2.3
 	o libAppleWM-1.4.1
 	o libXfont-1.5.0 [will break modular-xorg-server<1.16, so update together]
-	o libabw-0.1.0
 	o libarchive-3.1.2
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libcdr-0.1.0
