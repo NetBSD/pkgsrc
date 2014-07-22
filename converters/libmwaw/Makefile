@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2014/06/01 03:57:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2014/07/22 10:53:30 wiz Exp $
 
 DISTNAME=	libmwaw-0.2.1
+PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libmwaw/}
 EXTRACT_SUFX=	.tar.xz
