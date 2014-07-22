@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2747 2014/07/22 12:23:13 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2748 2014/07/22 12:27:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3578,3 +3578,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/py-twisted to 14.0.0 [wiz 2014-07-22]
 	Updated print/poppler to 0.26.2 [wiz 2014-07-22]
 	Updated print/poppler to 0.26.3 [wiz 2014-07-22]
+	Updated textproc/libexttextcat to 3.4.4 [wiz 2014-07-22]
