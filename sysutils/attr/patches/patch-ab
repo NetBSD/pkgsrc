@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.1 2014/07/22 08:23:31 manu Exp $
+
+Portability fix: <alloca.h> is Linux specific
+
+--- libattr/attr_copy_action.c.orig	2014-06-27 11:43:54.000000000 +0200
++++ libattr/attr_copy_action.c	2014-06-27 11:45:05.000000000 +0200
+@@ -14,9 +14,11 @@
+   You should have received a copy of the GNU Lesser General Public License
+   along with this manual.  If not, see <http://www.gnu.org/licenses/>.
+ */
+ 
++#if defined(linux)
+ #include <alloca.h>
++#endif
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <errno.h>
+ #include <string.h>
