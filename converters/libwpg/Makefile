@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2014/07/22 10:53:30 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2014/07/22 10:58:04 wiz Exp $
 
-DISTNAME=	libwpg-0.2.2
-PKGREVISION=	2
+DISTNAME=	libwpg-0.3.0
 CATEGORIES=	converters graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libwpg/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,7 +15,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		perl pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-docs
-PKGCONFIG_OVERRIDE+=	libwpg-0.2.pc.in
+PKGCONFIG_OVERRIDE+=	libwpg.pc.in
 
 REPLACE_PERL=		src/conv/svg/wpg2svgbatch.pl
 
@@ -27,5 +26,6 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 .endif
 
 .include "../../converters/libwpd/buildlink3.mk"
+.include "../../converters/librevenge/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
