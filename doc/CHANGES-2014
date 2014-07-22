@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2717 2014/07/22 09:50:19 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2718 2014/07/22 09:51:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3548,3 +3548,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/xterm to 309 [wiz 2014-07-22]
 	Updated net/rsync to 3.1.1 [wiz 2014-07-22]
 	Updated devel/py-test to 2.6.0 [wiz 2014-07-22]
+	Updated devel/py-cffi to 0.8.6 [wiz 2014-07-22]
