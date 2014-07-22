@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.common,v 1.8 2014/01/09 05:07:05 obache Exp $
+# $NetBSD: Makefile.common,v 1.9 2014/07/22 09:47:37 manu Exp $
 #
 # used by security/cy2-saml/Makefile
 # used by security/pam-saml/Makefile
 
 DISTNAME=	crudesaml-1.4
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://ftp.espci.fr/pub/crudesaml/
 
@@ -15,10 +16,9 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES+=	c
 
 DISTINFO_FILE=	${.CURDIR}/../../security/crudesaml/distinfo
+PATCHDIR=	${.CURDIR}/../../security/crudesaml/patches
 
-CONFIGURE_ARGS+=--with-sasl2=${BUILDLINK_PREFIX.cyrus-sasl}
-CONFIGURE_ARGS+=--with-lasso=${BUILDLINK_PREFIX.lasso}
-CONFIGURE_ARGS+=--with-pam=${PAMBASE}
+CONFIGURE_ARGS+=--with-sasl2=${PREFIX}
 
 .include "../../security/cyrus-sasl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
