@@ -1,0 +1,3 @@
+Gnarwl is a email autoreply/vacation agent, intented to be used on
+mailservers, where users may not (nescessarily) have systemaccoounts,
+but accountinformation is stored within an LDAP database.
