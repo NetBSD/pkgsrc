@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2758 2014/07/22 17:41:37 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2759 2014/07/22 17:54:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -971,6 +971,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/veusz to 1.20 [drochner 2014-02-06]
 	Updated devel/scintilla to 3.3.9 [drochner 2014-02-06]
 	Updated x11/qt4-qscintilla to 2.8 [drochner 2014-02-06]
+	Updated x11/py-qt4-qscintilla to 2.8 [drochner 2014-02-06]
 	Updated devel/git to 1.8.5.4 [adam 2014-02-06]
 	Updated devel/git-base to 1.8.5.4 [adam 2014-02-06]
 	Updated devel/git-docs to 1.8.5.4 [adam 2014-02-06]
@@ -3588,4 +3589,3 @@ Changes to the packages collection and infrastructure in 2014:
 	Added time/khal version 0.2.0 [wiz 2014-07-22]
 	Added textproc/tinyxml2 version 2.1.0 [wiz 2014-07-22]
 	Added graphics/libpgf version 6.14.12 [wiz 2014-07-22]
-	Updated x11/qt4-qscintilla to 2.8.2 [wiz 2014-07-22]
