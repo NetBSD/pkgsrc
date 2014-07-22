@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2014/06/15 14:17:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2014/07/22 10:00:06 wiz Exp $
 bin/easy_install-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -118,6 +118,8 @@ ${PYSITELIB}/setuptools/py31compat.pyo
 ${PYSITELIB}/setuptools/sandbox.py
 ${PYSITELIB}/setuptools/sandbox.pyc
 ${PYSITELIB}/setuptools/sandbox.pyo
+${PYSITELIB}/setuptools/script (dev).tmpl
+${PYSITELIB}/setuptools/script.tmpl
 ${PYSITELIB}/setuptools/site-patch.py
 ${PYSITELIB}/setuptools/site-patch.pyc
 ${PYSITELIB}/setuptools/site-patch.pyo
@@ -130,9 +132,6 @@ ${PYSITELIB}/setuptools/svn_utils.pyo
 ${PYSITELIB}/setuptools/tests/__init__.py
 ${PYSITELIB}/setuptools/tests/__init__.pyc
 ${PYSITELIB}/setuptools/tests/__init__.pyo
-${PYSITELIB}/setuptools/tests/doctest.py
-${PYSITELIB}/setuptools/tests/doctest.pyc
-${PYSITELIB}/setuptools/tests/doctest.pyo
 ${PYSITELIB}/setuptools/tests/environment.py
 ${PYSITELIB}/setuptools/tests/environment.pyc
 ${PYSITELIB}/setuptools/tests/environment.pyo
@@ -166,6 +165,9 @@ ${PYSITELIB}/setuptools/tests/test_egg_info.pyo
 ${PYSITELIB}/setuptools/tests/test_find_packages.py
 ${PYSITELIB}/setuptools/tests/test_find_packages.pyc
 ${PYSITELIB}/setuptools/tests/test_find_packages.pyo
+${PYSITELIB}/setuptools/tests/test_integration.py
+${PYSITELIB}/setuptools/tests/test_integration.pyc
+${PYSITELIB}/setuptools/tests/test_integration.pyo
 ${PYSITELIB}/setuptools/tests/test_markerlib.py
 ${PYSITELIB}/setuptools/tests/test_markerlib.pyc
 ${PYSITELIB}/setuptools/tests/test_markerlib.pyo
