@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2014/04/29 07:56:48 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2014/07/22 17:52:54 wiz Exp $
 
 .include "../../print/poppler/Makefile.common"
 
@@ -30,6 +30,7 @@ post-install:
 
 BUILDLINK_DEPMETHOD.qt4-tools?=	full
 
+BUILDLINK_API_DEPENDS.qt4-libs+=	qt4-libs>=4.7.0
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
