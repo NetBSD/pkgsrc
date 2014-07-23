@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13487 2014/07/23 15:27:02 adam Exp $
+$NetBSD: TODO,v 1.13488 2014/07/23 21:23:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -377,7 +377,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ap-xslt-1.4.3
 	o ap2-auth-ldap-3.11
 	o ap2-transform-0.6.0
-	o apache24-2.4.10
 	o apr0-2.4.1
 	o argtable-2.9
 	o aria2-1.18.5
@@ -796,6 +795,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mailscanner-4.74
 	o maketool-0.8.4
 	o makeztxt-1.60
+	o mame-0.154
 	o manedit-1.2.1
 	o maradns-2.0.09
 	o matchbox-panel-0.9.3
@@ -803,6 +803,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mcabber-0.10.3
 	o mcsim-5.5.0
 	o mergeant-0.67
+	o mess-0.154
 	o mesure-0.7.2
 	o metacity-3.12.0
 	o metis-5.1.0
