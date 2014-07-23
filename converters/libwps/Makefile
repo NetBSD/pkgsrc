@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2014/07/22 10:53:30 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2014/07/23 06:29:53 wiz Exp $
 
-DISTNAME=	libwps-0.2.4
-PKGREVISION=	1
+DISTNAME=	libwps-0.3.0
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libwps/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,7 +15,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-docs
-PKGCONFIG_OVERRIDE+=	libwps-0.2.pc.in
+PKGCONFIG_OVERRIDE+=	libwps.pc.in
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
@@ -25,6 +24,8 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 _WRAP_EXTRA_ARGS.CXX+=	-Wno-unused-private-field -Wno-unused-const-variable
 .endif
 
+.include "../../converters/librevenge/buildlink3.mk"
 .include "../../converters/libwpd/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
