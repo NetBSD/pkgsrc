@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2014/06/08 13:35:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.32 2014/07/23 15:25:28 adam Exp $
 share/doc/roundcube/INSTALL
 share/doc/roundcube/LICENSE
 share/doc/roundcube/README.md
@@ -26,17 +26,13 @@ share/roundcube/SQL/sqlite.initial.sql
 share/roundcube/bin/cleandb.sh
 share/roundcube/bin/cssshrink.sh
 share/roundcube/bin/decrypt.sh
-share/roundcube/bin/exportgettext.sh
 share/roundcube/bin/gc.sh
-share/roundcube/bin/importgettext.sh
 share/roundcube/bin/indexcontacts.sh
 share/roundcube/bin/installto.sh
 share/roundcube/bin/jsshrink.sh
 share/roundcube/bin/moduserprefs.sh
 share/roundcube/bin/msgexport.sh
 share/roundcube/bin/msgimport.sh
-share/roundcube/bin/package2composer.sh
-share/roundcube/bin/transifexpull.sh
 share/roundcube/bin/update.sh
 share/roundcube/bin/updatecss.sh
 share/roundcube/bin/updatedb.sh
@@ -2579,8 +2575,10 @@ share/roundcube/program/localization/cy_GB/labels.inc
 share/roundcube/program/localization/cy_GB/messages.inc
 share/roundcube/program/localization/da_DK/labels.inc
 share/roundcube/program/localization/da_DK/messages.inc
+share/roundcube/program/localization/de_CH/csv2vcard.inc
 share/roundcube/program/localization/de_CH/labels.inc
 share/roundcube/program/localization/de_CH/messages.inc
+share/roundcube/program/localization/de_DE/csv2vcard.inc
 share/roundcube/program/localization/de_DE/labels.inc
 share/roundcube/program/localization/de_DE/messages.inc
 share/roundcube/program/localization/el_GR/labels.inc
@@ -2762,7 +2760,6 @@ share/roundcube/program/steps/mail/sendmdn.inc
 share/roundcube/program/steps/mail/show.inc
 share/roundcube/program/steps/mail/viewsource.inc
 share/roundcube/program/steps/settings/about.inc
-share/roundcube/program/steps/settings/delete_identity.inc
 share/roundcube/program/steps/settings/edit_folder.inc
 share/roundcube/program/steps/settings/edit_identity.inc
 share/roundcube/program/steps/settings/edit_prefs.inc
