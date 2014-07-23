@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2769 2014/07/23 14:07:25 adam Exp $
+$NetBSD: CHANGES-2014,v 1.2770 2014/07/23 15:27:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3599,3 +3599,6 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/digikam to 3.5.0nb8 [wiz 2014-07-23]
 	Updated www/apache24 to 2.4.10 [tron 2014-07-23]
 	Updated net/pear-Net_Socket to 1.0.14 [adam 2014-07-23]
+	Updated mail/exim to 4.83 [adam 2014-07-23]
+	Updated mail/exim-html to 4.83 [adam 2014-07-23]
+	Updated mail/roundcube to 1.0.2 [adam 2014-07-23]
