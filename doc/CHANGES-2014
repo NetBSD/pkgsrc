@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2763 2014/07/23 06:24:53 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2764 2014/07/23 06:30:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3594,3 +3594,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated converters/libe-book to 0.1.1 [wiz 2014-07-23]
 	Updated converters/libmwaw to 0.3.1 [wiz 2014-07-23]
 	Updated textproc/libodfgen to 0.1.1 [wiz 2014-07-23]
+	Updated converters/libwps to 0.3.0 [wiz 2014-07-23]
