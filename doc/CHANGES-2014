@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2768 2014/07/23 10:36:42 tron Exp $
+$NetBSD: CHANGES-2014,v 1.2769 2014/07/23 14:07:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3598,3 +3598,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/p5-String-Random to 0.26 [hiramatsu 2014-07-23]
 	Updated graphics/digikam to 3.5.0nb8 [wiz 2014-07-23]
 	Updated www/apache24 to 2.4.10 [tron 2014-07-23]
+	Updated net/pear-Net_Socket to 1.0.14 [adam 2014-07-23]
