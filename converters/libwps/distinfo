@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2012/04/07 15:08:02 wiz Exp $
+$NetBSD: distinfo,v 1.8 2014/07/23 06:29:53 wiz Exp $
 
-SHA1 (libwps-0.2.4.tar.bz2) = 9fff59d92d9f34259ea5b1d9eca5c30313453a64
-RMD160 (libwps-0.2.4.tar.bz2) = de70ce0d5769692a482573a573e6bdfcfaba4196
-Size (libwps-0.2.4.tar.bz2) = 314984 bytes
-SHA1 (patch-src_lib_WPS8.cpp) = aa4a14aeb9858dbe2ef09d4334eac04f7dbf85c1
+SHA1 (libwps-0.3.0.tar.bz2) = 526323bd59b5f59f8533882fb455e5886bf1f6dc
+RMD160 (libwps-0.3.0.tar.bz2) = 6e3f8b0964474ca4a241a4bcc4fcacdd525e3361
+Size (libwps-0.3.0.tar.bz2) = 502782 bytes
