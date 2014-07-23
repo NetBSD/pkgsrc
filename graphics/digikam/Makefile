@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.112 2014/05/29 23:36:37 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2014/07/23 08:25:39 wiz Exp $
 
 DISTNAME=	digikam-3.5.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_KDE:=digikam/}
 EXTRACT_SUFX=	.tar.bz2
@@ -31,12 +31,13 @@ post-patch:
 .include "../../databases/mysql55-server/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libkdcraw/buildlink3.mk"
 .include "../../graphics/libkexiv2/buildlink3.mk"
 .include "../../graphics/libkipi/buildlink3.mk"
 .include "../../graphics/libksane/buildlink3.mk"
 .include "../../graphics/libkface/buildlink3.mk"
-.include "../../graphics/lcms/buildlink3.mk"
+.include "../../graphics/libpgf/buildlink3.mk"
 .include "../../graphics/liblqr/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
