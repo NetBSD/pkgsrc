@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2014/02/02 07:25:39 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/07/23 06:20:48 wiz Exp $
 bin/mwaw2csv
 bin/mwaw2html
 bin/mwaw2raw
+bin/mwaw2svg
 bin/mwaw2text
 bin/mwawFile
 bin/mwawZip
-include/libmwaw-0.2/libmwaw/MWAWDocument.hxx
-include/libmwaw-0.2/libmwaw/libmwaw.hxx
-lib/libmwaw-0.2.la
-lib/pkgconfig/libmwaw-0.2.pc
+include/libmwaw-0.3/libmwaw/MWAWDocument.hxx
+include/libmwaw-0.3/libmwaw/libmwaw.hxx
+lib/libmwaw-0.3.la
+lib/pkgconfig/libmwaw-0.3.pc
