@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.133 2014/06/14 10:18:05 wiedi Exp $
+# $NetBSD: Makefile,v 1.134 2014/07/23 14:09:52 adam Exp $
 
-DISTNAME=	exim-4.82.1
-PKGREVISION=	1
+DISTNAME=	exim-4.83
 CATEGORIES=	mail net
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/ \
 		http://dl.ambiweb.de/mirrors/ftp.exim.org/exim/exim4/
@@ -36,8 +35,8 @@ PKG_GECOS.${EXIM_USER}=	Exim mail server user
 PKG_HOME.${EXIM_USER}=	${VARBASE}/mail
 PKG_SHELL.${EXIM_USER}=	${NOLOGIN}
 
-FILES_SUBST+=		EXIM_GROUP=${EXIM_GROUP:Q}
-FILES_SUBST+=		EXIM_USER=${EXIM_USER:Q}
+FILES_SUBST+=		EXIM_GROUP=${EXIM_GROUP}
+FILES_SUBST+=		EXIM_USER=${EXIM_USER}
 
 PKG_SYSCONFSUBDIR=	exim
 EXAMPLESDIR=		${PREFIX}/share/examples/exim
