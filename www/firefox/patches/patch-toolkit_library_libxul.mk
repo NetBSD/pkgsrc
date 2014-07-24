@@ -1,15 +1,8 @@
-$NetBSD: patch-toolkit_library_Makefile.in,v 1.7 2014/05/30 03:03:36 pho Exp $
+$NetBSD: patch-toolkit_library_libxul.mk,v 1.1 2014/07/24 14:57:12 ryoon Exp $
 
-* It's true Mach-O systems aren't supported by
-  ${WRKSRC}/content/media/gstreamer/GStreamerLoader.cpp so
-  $(GSTREAMER_LIBS) must be directly appended to $(EXTRA_DSO_LDOPTS)
-  on such platforms. The problem is that "ifeq
-  (cocoa,$(MOZ_WIDGET_TOOLKIT))" ain't the right thing to do when
-  testing for Mach-O is what we need.
-
---- toolkit/library/Makefile.in.orig	2014-05-06 22:56:33.000000000 +0000
-+++ toolkit/library/Makefile.in
-@@ -149,6 +149,34 @@ ifdef MOZ_NATIVE_HUNSPELL
+--- toolkit/library/libxul.mk.orig	2014-07-17 01:45:41.000000000 +0000
++++ toolkit/library/libxul.mk
+@@ -77,6 +77,34 @@ ifdef MOZ_NATIVE_HUNSPELL
  EXTRA_DSO_LDOPTS += $(MOZ_HUNSPELL_LIBS)
  endif
  
@@ -44,7 +37,7 @@ $NetBSD: patch-toolkit_library_Makefile.in,v 1.7 2014/05/30 03:03:36 pho Exp $
  ifdef MOZ_NATIVE_LIBEVENT
  EXTRA_DSO_LDOPTS += $(MOZ_LIBEVENT_LIBS)
  endif
-@@ -161,12 +189,24 @@ ifndef MOZ_TREE_PIXMAN
+@@ -89,12 +117,24 @@ ifndef MOZ_TREE_PIXMAN
  EXTRA_DSO_LDOPTS += $(MOZ_PIXMAN_LIBS)
  endif
  
@@ -68,8 +61,8 @@ $NetBSD: patch-toolkit_library_Makefile.in,v 1.7 2014/05/30 03:03:36 pho Exp $
 +
  ifdef MOZ_WEBRTC
  ifeq (WINNT,$(OS_TARGET))
- EXTRA_DSO_LDOPTS += \
-@@ -351,7 +391,7 @@ ifdef MOZ_ENABLE_QT
+ ifndef MOZ_HAS_WINSDK_WITH_D3D
+@@ -231,7 +271,7 @@ ifdef MOZ_ENABLE_QT
  EXTRA_DSO_LDOPTS += $(MOZ_QT_LDFLAGS) $(XEXT_LIBS)
  endif
  

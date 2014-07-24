@@ -1,12 +1,12 @@
-$NetBSD: patch-ipc_ipdl_ipdl_lower.py,v 1.5 2014/06/19 20:31:03 martin Exp $
+$NetBSD: patch-ipc_ipdl_ipdl_lower.py,v 1.6 2014/07/24 14:57:12 ryoon Exp $
 
 Part of https://bugzilla.mozilla.org/show_bug.cgi?id=1026499:
 Make sure storage provided for attributes is properly aligned
 in the generated C++ code.
 
---- ipc/ipdl/ipdl/lower.py.orig	2014-06-06 03:15:27.000000000 +0200
-+++ ipc/ipdl/ipdl/lower.py	2014-06-17 22:35:35.000000000 +0200
-@@ -768,7 +768,7 @@
+--- ipc/ipdl/ipdl/lower.py.orig	2014-07-17 01:45:18.000000000 +0000
++++ ipc/ipdl/ipdl/lower.py
+@@ -768,7 +768,7 @@ IPDL union type."""
          if self.recursive:
              return self.ptrToType()
          else:
@@ -15,4 +15,3 @@ in the generated C++ code.
  
      def unionValue(self):
          # NB: knows that Union's storage C union is named |mValue|
-
