@@ -1,6 +1,6 @@
-$NetBSD: patch-xpcom_base_nsUUIDGenerator.cpp,v 1.3 2014/06/11 00:41:36 ryoon Exp $
+$NetBSD: patch-xpcom_base_nsUUIDGenerator.cpp,v 1.4 2014/07/24 14:57:12 ryoon Exp $
 
---- xpcom/base/nsUUIDGenerator.cpp.orig	2014-05-29 23:31:50.000000000 +0000
+--- xpcom/base/nsUUIDGenerator.cpp.orig	2014-07-17 01:45:42.000000000 +0000
 +++ xpcom/base/nsUUIDGenerator.cpp
 @@ -15,6 +15,10 @@
  
@@ -12,7 +12,7 @@ $NetBSD: patch-xpcom_base_nsUUIDGenerator.cpp,v 1.3 2014/06/11 00:41:36 ryoon Ex
 +
  using namespace mozilla;
  
- NS_IMPL_ISUPPORTS1(nsUUIDGenerator, nsIUUIDGenerator)
+ NS_IMPL_ISUPPORTS(nsUUIDGenerator, nsIUUIDGenerator)
 @@ -34,7 +38,7 @@ nsUUIDGenerator::Init()
      // We're a service, so we're guaranteed that Init() is not going
      // to be reentered while we're inside Init().
