@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2013/04/02 09:57:51 jperkin Exp $
+# $NetBSD: options.mk,v 1.11 2014/07/24 12:43:20 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran gcc-java \
@@ -161,7 +161,9 @@ LANGS+=			fortran
 .if !empty(PKG_OPTIONS:Mgcc-c++)
 LANGS+=			c++
 USE_TOOLS+=		perl
+.if ${OPSYS} != "SunOS"
 CONFIGURE_ARGS+=	--enable-__cxa_atexit
+.endif
 CONFIGURE_ARGS+=	--with-gxx-include-dir=${GCC_PREFIX}/include/c++/
 .else
 CONFIGURE_ARGS+=	--disable-build-with-cxx
