@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/02/12 23:17:46 tron Exp $
+# $NetBSD: Makefile,v 1.13 2014/07/24 13:22:59 jperkin Exp $
 
 DISTNAME=		gsoap_2.7.17
 PKGNAME=		${DISTNAME:S/_/-/}
@@ -16,7 +16,7 @@ MAKE_JOBS_SAFE=		no
 WRKSRC=			${WRKDIR}/gsoap-2.7
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		yacc flex gmake pax
+USE_TOOLS+=		yacc flex:run gmake pax
 
 PKGCONFIG_OVERRIDE+=	gsoap++.pc.in
 PKGCONFIG_OVERRIDE+=	gsoap.pc.in
