@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2774 2014/07/24 21:34:34 markd Exp $
+$NetBSD: CHANGES-2014,v 1.2775 2014/07/24 22:08:26 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3607,3 +3607,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/gcc47-libs to 4.7.3nb7 [jperkin 2014-07-24]
 	Updated www/firefox to 31.0 [ryoon 2014-07-24]
 	Updated math/R to 3.1.1 [markd 2014-07-24]
+	Added www/hs-HTTP version 4000.2.17 [szptvlfn 2014-07-24]
