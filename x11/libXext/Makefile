@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2014/04/22 11:17:08 obache Exp $
+# $NetBSD: Makefile,v 1.21 2014/07/24 06:32:36 wiz Exp $
 
-DISTNAME=		libXext-1.3.2
+DISTNAME=		libXext-1.3.3
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
@@ -30,7 +30,7 @@ CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 
-BUILDLINK_API_DEPENDS.libX11+=	libX11>=1.2
+BUILDLINK_API_DEPENDS.libX11+=	libX11>=1.6
 .include "../../x11/libX11/buildlink3.mk"
 BUILDLINK_API_DEPENDS.xextproto+=	xextproto>=7.1.99
 .include "../../x11/xextproto/buildlink3.mk"
