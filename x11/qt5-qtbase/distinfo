@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2014/07/14 16:32:14 jperkin Exp $
+$NetBSD: distinfo,v 1.11 2014/07/24 15:51:56 jperkin Exp $
 
 SHA1 (qt-everywhere-opensource-src-5.2.1.tar.xz) = cc68265c62321670bd40e29bdd484ea881bd6af3
 RMD160 (qt-everywhere-opensource-src-5.2.1.tar.xz) = 9b716c5875a6186968392896ac8bd3261fae9b24
@@ -37,12 +37,12 @@ SHA1 (patch-qtdeclarative_src_qml_jsruntime_qv4mm.cpp) = f37900af31ed15040499d9a
 SHA1 (patch-qtdeclarative_src_qml_jsruntime_qv4stringobject.cpp) = a51bbafc307663e150da89efc29175424d733f1a
 SHA1 (patch-qtdeclarative_src_qmldevtools_qmldevtools.pro) = 6f0e65eb6c4a5bfd05a603d9cbfc6fdc22e46d3b
 SHA1 (patch-qtdeclarative_tests_auto_qml_qjsengine_tst__qjsengine.cpp) = b1cc5a386dd0f1b3651adb9babee87be84221998
-SHA1 (patch-qtmultimedia_src_gsttools_qgstreamervideoinputdevicecontrol.cpp) = 122c629340578670876571e10c5946c4f359ed04
+SHA1 (patch-qtmultimedia_src_gsttools_qgstreamervideoinputdevicecontrol.cpp) = 235140fa9d5e4ffbb954621e50b83a719c5ef636
 SHA1 (patch-qtmultimedia_src_plugins_gstreamer_audiodecoder_qgstreameraudiodecoderserviceplugin.cpp) = ac97ed7ec63e3cfc060ce7e90dfe7f053f9dd851
 SHA1 (patch-qtmultimedia_src_plugins_gstreamer_camerabin_camerabincontrol.cpp) = e2b0022da1f523324159efdcd29237f82380aed8
-SHA1 (patch-qtmultimedia_src_plugins_gstreamer_camerabin_camerabinserviceplugin.cpp) = 4c5f0d3d5a0c6b3075232272abe00b467575194f
+SHA1 (patch-qtmultimedia_src_plugins_gstreamer_camerabin_camerabinserviceplugin.cpp) = 5f79e39dba119b9c0c757268a0a13332040e36a5
 SHA1 (patch-qtmultimedia_src_plugins_gstreamer_mediacapture_qgstreamercaptureserviceplugin.cpp) = 224a3097498d12284f10a9adb5a774356092f374
-SHA1 (patch-qtmultimedia_src_plugins_gstreamer_mediacapture_qgstreamerv4l2input.cpp) = 55aee0426b057461861605dadd4687932988bd78
+SHA1 (patch-qtmultimedia_src_plugins_gstreamer_mediacapture_qgstreamerv4l2input.cpp) = 16efe4a42cf7cb2718cb03062d2d132edfc2fedc
 SHA1 (patch-qtmultimedia_src_plugins_gstreamer_mediaplayer_qgstreamerplayerserviceplugin.cpp) = 729d69245a1ab6fe9b01a63673102685b39d7add
 SHA1 (patch-qtquick1_tests_auto_declarative_qdeclarativeimage_tst__qdeclarativeimage.cpp) = b1efdea5596a76eeae37a70bd49bb7741a8b7c5f
 SHA1 (patch-qtscript_src_3rdparty_javascriptcore_JavaScriptCore_config.h) = 66dc22ee78727c84f1e82dc10bb342d514f8f9a0
