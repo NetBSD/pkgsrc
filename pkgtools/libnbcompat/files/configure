@@ -4383,9 +4383,9 @@ $as_echo "#define HAVE_STDBOOL_H 1" >>confdefs.h
 fi
 
 
-for ac_header in alloca.h assert.h ctype.h dirent.h endian.h err.h errno.h \
-	fcntl.h fnmatch.h fts.h grp.h inttypes.h libutil.h limits.h \
-	machine/endian.h ndir.h netdb.h paths.h pwd.h signal.h \
+for ac_header in alloca.h assert.h bsd/libutil.h ctype.h dirent.h endian.h \
+	err.h errno.h fcntl.h fnmatch.h fts.h grp.h inttypes.h libutil.h \
+	limits.h machine/endian.h ndir.h netdb.h paths.h pwd.h signal.h \
 	stdarg.h stddef.h stdint.h stdio.h \
 	stdlib.h string.h sys/byteorder.h sys/cdefs.h sys/dir.h sys/endian.h \
 	sys/file.h sys/mkdev.h sys/ndir.h sys/param.h sys/socket.h sys/stat.h \

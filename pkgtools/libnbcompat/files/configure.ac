@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.82 2014/03/14 22:08:17 ryoon Exp $
+dnl $NetBSD: configure.ac,v 1.83 2014/07/25 13:26:24 jperkin Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -33,9 +33,9 @@ AC_HEADER_STDC
 AC_HEADER_TIME
 AC_HEADER_STDBOOL
 
-AC_CHECK_HEADERS([alloca.h assert.h ctype.h dirent.h endian.h err.h errno.h \
-	fcntl.h fnmatch.h fts.h grp.h inttypes.h libutil.h limits.h \
-	machine/endian.h ndir.h netdb.h paths.h pwd.h signal.h \
+AC_CHECK_HEADERS([alloca.h assert.h bsd/libutil.h ctype.h dirent.h endian.h \
+	err.h errno.h fcntl.h fnmatch.h fts.h grp.h inttypes.h libutil.h \
+	limits.h machine/endian.h ndir.h netdb.h paths.h pwd.h signal.h \
 	stdarg.h stddef.h stdint.h stdio.h \
 	stdlib.h string.h sys/byteorder.h sys/cdefs.h sys/dir.h sys/endian.h \
 	sys/file.h sys/mkdev.h sys/ndir.h sys/param.h sys/socket.h sys/stat.h \

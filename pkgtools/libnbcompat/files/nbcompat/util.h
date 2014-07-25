@@ -1,4 +1,4 @@
-/*	$NetBSD: util.h,v 1.2 2008/04/29 05:46:08 martin Exp $	*/
+/*	$NetBSD: util.h,v 1.3 2014/07/25 13:26:24 jperkin Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -35,7 +35,9 @@
 #if HAVE_UTIL_H
 # include <util.h>
 #endif
-#if HAVE_LIBUTIL_H
+#if HAVE_BSD_LIBUTIL_H
+# include <bsd/libutil.h>
+#elif HAVE_LIBUTIL_H
 # include <libutil.h>
 #endif
 
