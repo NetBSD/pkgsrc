@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2014/05/05 00:48:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.40 2014/07/25 13:19:34 jperkin Exp $
 #
 
 DISTNAME=		xymon-4.3.17
@@ -188,6 +188,7 @@ MAKE_ENV+=		MAKE=${MAKE_PROGRAM:Q}
 MAKE_ENV+=		PKGDIR=${PREFIX}
 MAKE_ENV+=		INSTALLROOT=${DESTDIR}
 MAKE_ENV+=		PKGBUILD=y
+MAKE_ENV+=		RPATH=${COMPILER_RPATH_FLAG}
 MAKE_ENV+=		${TOOLS_ENV}
 
 MENUFILES=		b2t-blue.gif b2t-grey.gif t2b-blue.gif t2b-grey.gif
