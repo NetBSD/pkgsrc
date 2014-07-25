@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/07/25 10:52:17 szptvlfn Exp $
+
+SHA1 (cpphs-1.18.5.tar.gz) = 3bd7c9d541d155bd8fb0fa640cd282921f6fb116
+RMD160 (cpphs-1.18.5.tar.gz) = 1feeef55324c823b866911c535e06fda526d3ad8
+Size (cpphs-1.18.5.tar.gz) = 72221 bytes
