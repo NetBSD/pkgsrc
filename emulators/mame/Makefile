@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2014/06/09 14:18:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.32 2014/07/25 15:28:56 wiz Exp $
 
-DISTNAME=	mame0153s
+DISTNAME=	mame0154s
 PKGNAME=	${DISTNAME:S/0/-0./:S/s$//}
-PKGREVISION=	2
 MASTER_SITES=	http://mamedev.org/downloader.php?file=releases/
 
 COMMENT=	Multiple Arcade Machine Emulator
@@ -11,11 +10,6 @@ CONFLICTS=		xmame-[0-9]* sdlmame-[0-9]*
 
 DOCDIR=			share/doc/mame
 INSTALLATION_DIRS=	bin ${DOCDIR} ${PKGMANDIR}/man1 ${PKGMANDIR}/man6
-
-# mame source is double-zipped
-post-extract:
-	cd ${WRKDIR} && ${.CURDIR}/../../mk/extract/extract mame.zip
-	rm ${WRKDIR}/mame.zip
 
 # not installed, because not found necessary so far:
 # regrep, split, src2html, srcclean, testkeys

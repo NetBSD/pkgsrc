@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2014/04/17 12:09:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2014/07/25 15:28:56 wiz Exp $
 bin/castool
 bin/floptool
 bin/imgtool
@@ -74,6 +74,7 @@ share/mess/hash/cbm2_cart.xml
 share/mess/hash/cbm2_flop.xml
 share/mess/hash/cbm8096_flop.xml
 share/mess/hash/cbm8296_flop.xml
+share/mess/hash/cc40_cart.xml
 share/mess/hash/cd32.xml
 share/mess/hash/cdi.xml
 share/mess/hash/cdtv.xml
@@ -112,10 +113,14 @@ share/mess/hash/gbcolor.xml
 share/mess/hash/genius.xml
 share/mess/hash/gl2000.xml
 share/mess/hash/gl6000sl.xml
+share/mess/hash/glcolor.xml
 share/mess/hash/gmaster.xml
 share/mess/hash/gp32.xml
 share/mess/hash/gx4000.xml
 share/mess/hash/horizon.xml
+share/mess/hash/hp9835a_rom.xml
+share/mess/hash/hp9845a_rom.xml
+share/mess/hash/hp9845b_rom.xml
 share/mess/hash/hx20_flop.xml
 share/mess/hash/ibm5140.xml
 share/mess/hash/ibm5150.xml
@@ -147,6 +152,7 @@ share/mess/hash/m20.xml
 share/mess/hash/m5.xml
 share/mess/hash/mac_flop.xml
 share/mess/hash/mac_hdd.xml
+share/mess/hash/mbc200.xml
 share/mess/hash/mbc55x.xml
 share/mess/hash/mc1502_flop.xml
 share/mess/hash/megacd.xml
@@ -167,6 +173,7 @@ share/mess/hash/msx1_cass.xml
 share/mess/hash/msx1_flop.xml
 share/mess/hash/msx2.hsi
 share/mess/hash/msx2_cart.xml
+share/mess/hash/msx2_flop.xml
 share/mess/hash/myvision.xml
 share/mess/hash/mz2000_cass.xml
 share/mess/hash/mz2000_flop.xml
@@ -195,6 +202,7 @@ share/mess/hash/orion_cass.xml
 share/mess/hash/orion_flop.xml
 share/mess/hash/orionpro_flop.xml
 share/mess/hash/osborne1.xml
+share/mess/hash/osborne2.xml
 share/mess/hash/p500_flop.xml
 share/mess/hash/partner_cass.xml
 share/mess/hash/partner_flop.xml
@@ -245,6 +253,8 @@ share/mess/hash/samcoupe_flop.xml
 share/mess/hash/sat_cart.xml
 share/mess/hash/saturn.xml
 share/mess/hash/sawatte.xml
+share/mess/hash/sc3000_cart.xml
+share/mess/hash/sc3000_cass.xml
 share/mess/hash/scv.xml
 share/mess/hash/segacd.xml
 share/mess/hash/sf7000.xml
