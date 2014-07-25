@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2014/05/09 07:37:04 wiz Exp $
+# $NetBSD: Makefile.common,v 1.16 2014/07/25 15:28:56 wiz Exp $
 #
 # used by emulators/mame/Makefile
 # used by emulators/mess/Makefile
@@ -18,9 +18,8 @@ DEPENDS+=		liberation-ttf-[0-9]*:../../fonts/liberation-ttf
 
 WRKSRC=			${WRKDIR}
 
-# separate distinfos though, so don't forget 'make mdi' when
-# adding or changing patches
-#PATCHDIR=		${.CURDIR}/../../emulators/mame/patches
+PATCHDIR=		${.CURDIR}/../../emulators/mame/patches
+DISTINFO_FILE=		${.CURDIR}/../../emulators/mame/distinfo
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config
@@ -60,6 +59,11 @@ SUBST_MESSAGE.exe=	Fixing executable name.
 
 PYTHON_FOR_BUILD_ONLY=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.151
+
+# mame source is double-zipped
+post-extract:
+	cd ${WRKDIR} && ${.CURDIR}/../../mk/extract/extract mame.zip
+	rm ${WRKDIR}/mame.zip
 
 .include "../../lang/python/application.mk"
 .include "../../devel/GConf/buildlink3.mk"
