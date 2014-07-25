@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2775 2014/07/24 22:08:26 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.2776 2014/07/25 07:25:37 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3608,3 +3608,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/firefox to 31.0 [ryoon 2014-07-24]
 	Updated math/R to 3.1.1 [markd 2014-07-24]
 	Added www/hs-HTTP version 4000.2.17 [szptvlfn 2014-07-24]
+	Updated devel/p5-Sub-Name to 0.07 [hiramatsu 2014-07-25]
