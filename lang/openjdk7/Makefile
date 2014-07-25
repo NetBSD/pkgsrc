@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.71 2014/07/21 00:15:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.72 2014/07/25 20:35:14 ryoon Exp $
 
 DISTNAME=	openjdk-1.7.60-20140614
 PKGNAME=	openjdk7-1.7.60
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
 EXTRACT_SUFX=	.tar.bz2
@@ -87,6 +87,11 @@ PLIST_SUBST+=	LOWER_OPSYS=${LOWER_OPSYS}
 MAKE_ENV+=	USE_GCC=1
 MAKE_ENV+=	ARCH_DATA_MODEL=${ABI:Q}
 .endif
+
+SUBST_CLASSES+=		libpath
+SUBST_STAGE.libpath=	pre-build
+SUBST_FILES.libpath+=	hotspot/src/os/bsd/vm/os_bsd.cpp
+SUBST_VARS.libpath=	PREFIX
 
 # SmartOS has ccs tools in /usr/bin
 .if ${OS_VARIANT} == "SmartOS"
