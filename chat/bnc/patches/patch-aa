@@ -1,10 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2005/06/25 14:48:46 zuntum Exp $
+$NetBSD: patch-aa,v 1.5 2014/07/25 15:35:01 jperkin Exp $
 
---- Makefile.in.orig	2005-01-26 05:15:06.000000000 +0100
+Pass through CFLAGS and LDFLAGS.
+
+--- Makefile.in.orig	2005-01-26 04:15:06.000000000 +0000
 +++ Makefile.in
 @@ -1,8 +1,8 @@
- LIBS=@LIBS@
+-LIBS=@LIBS@
 -CFLAGS=-O3 -Wall -include config.h
++LIBS=@LIBS@ ${LDFLAGS}
 +CFLAGS+=-include config.h
  CC=@CC@
  
