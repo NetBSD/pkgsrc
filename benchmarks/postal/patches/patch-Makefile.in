@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile.in,v 1.1 2014/07/25 15:52:06 jperkin Exp $
+
+Pass through LDFLAGS for rpath.
+
+--- Makefile.in.orig	2008-05-26 09:32:26.000000000 +0000
++++ Makefile.in
+@@ -17,8 +17,8 @@ INSTALL=@INSTALL@
+ 
+ TESTEXE=ex-test
+ BASEOBJS=userlist.o thread.o results.o address.o tcp.o cmd5.o mutex.o logit.o expand.o @extra_objs@
+-LFLAGS=-lstdc++ @extra_ldflags@
+-CRYPTLFLAGS=-lstdc++ @crypt_ldflags@
++LFLAGS=${LDFLAGS} -lstdc++ @extra_ldflags@
++CRYPTLFLAGS=${LDFLAGS} -lstdc++ @crypt_ldflags@
+ 
+ 
+ ALLOBJS=$(BASEOBJS) smtp.o client.o basictcp.o bhmusers.o smtpserver.o
