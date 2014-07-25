@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/21 11:39:12 cheusov Exp $
+# $NetBSD: Makefile,v 1.23 2014/07/25 15:21:39 jperkin Exp $
 
 DISTNAME=		siod
 PKGNAME=		siod-3.0
@@ -19,6 +19,9 @@ MAKE_JOBS_SAFE=		no
 BUILD_TARGET=		${OPSYS:S/Linux/linux/}
 MAKE_ENV+=		CC=${CC:Q}
 CPPFLAGS+=		-Dunix=1
+
+# XXX: cannot check as WRKSRC == WRKDIR so paths are stripped
+CHECK_SHLIBS_SUPPORTED=	no
 
 REPLACE_INTERPRETER+=	siod
 REPLACE.siod.old=	/usr/local/bin/siod
