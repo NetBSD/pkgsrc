@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1935 2014/07/22 08:00:03 manu Exp $
+# $NetBSD: Makefile,v 1.1936 2014/07/25 10:53:48 szptvlfn Exp $
 #
 
 COMMENT=	Development utilities
@@ -295,6 +295,7 @@ SUBDIR+=	hoe
 SUBDIR+=	hptools
 SUBDIR+=	hs-blaze-builder
 SUBDIR+=	hs-cmdargs
+SUBDIR+=	hs-cpphs
 SUBDIR+=	hs-data-default
 SUBDIR+=	hs-data-default-class
 SUBDIR+=	hs-data-default-instances-base
