@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/04/06 12:04:00 rodent Exp $
+# $NetBSD: Makefile,v 1.24 2014/07/25 15:39:00 jperkin Exp $
 #
 
 DISTNAME=	heretic2-demo-x86
@@ -27,7 +27,8 @@ USE_TOOLS+=	gtar pax
 TOOLS_PLATFORM.gtar=	/usr/bin/bsdtar
 .endif
 
-ONLY_FOR_PLATFORM=*-*-i386
+ONLY_FOR_PLATFORM=	*-*-i386
+NOT_FOR_PLATFORM=	SunOS-*-*
 
 DISTBINNAME=	heretic2_demo.x86
 BINNAME=	heretic2-demo
