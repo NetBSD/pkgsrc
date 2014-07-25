@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2014/07/06 14:34:15 wiz Exp $
+$NetBSD: distinfo,v 1.3 2014/07/25 23:35:21 wiz Exp $
 
-SHA1 (lgogdownloader-2.13.tar.gz) = 870ffb3cf1782f0db73d41c9682a8c5e7ab83c7a
-RMD160 (lgogdownloader-2.13.tar.gz) = f916fc6d713bda84fcba9a41f64ed0cfa0b1b672
-Size (lgogdownloader-2.13.tar.gz) = 30478 bytes
+SHA1 (lgogdownloader-2.15.tar.gz) = 8611e308c8f63d206b26feb2c98f09a6d3dede97
+RMD160 (lgogdownloader-2.15.tar.gz) = 107f10f211ec42e99b5564b9325259a3698e61a9
+Size (lgogdownloader-2.15.tar.gz) = 33380 bytes
 SHA1 (patch-Makefile) = da552759c9eac90e8870d2f721775e25b7a85b9f
