@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2786 2014/07/25 23:26:07 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.2787 2014/07/25 23:35:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3689,3 +3689,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/ffmpeg2 to 2.3 [adam 2014-07-25]
 	Updated multimedia/ffplay2 to 2.3 [adam 2014-07-25]
 	Updated lang/openjdk7 to 1.7.65 [ryoon 2014-07-25]
+	Updated games/lgogdownloader to 2.15 [wiz 2014-07-25]
