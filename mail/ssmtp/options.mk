@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2012/06/12 15:45:59 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2014/07/25 15:29:38 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ssmtp
 PKG_SUPPORTED_OPTIONS=	inet6 ssl
@@ -12,5 +12,6 @@ CONFIGURE_ARGS+=	--enable-inet6
 
 .if !empty(PKG_OPTIONS:Mssl)
 CONFIGURE_ARGS+=	--enable-ssl
+CFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 .include "../../security/openssl/buildlink3.mk"
 .endif
