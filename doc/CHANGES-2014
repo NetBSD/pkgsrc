@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2781 2014/07/25 15:29:40 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2782 2014/07/25 15:32:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3615,3 +3615,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/calibre to 1.46.0 [wiz 2014-07-25]
 	Updated emulators/mess to 0.154 [wiz 2014-07-25]
 	Updated emulators/mame to 0.154 [wiz 2014-07-25]
+	Updated x11/libdrm to 2.4.55 [wiz 2014-07-25]
