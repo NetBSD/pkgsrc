@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2014/07/22 12:35:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.26 2014/07/25 14:04:17 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -1497,6 +1497,7 @@ share/calibre/images/eject.png
 share/calibre/images/embed-fonts.png
 share/calibre/images/exec.png
 share/calibre/images/filter.png
+share/calibre/images/folder_saved_search.png
 share/calibre/images/font.png
 share/calibre/images/font_size_larger.png
 share/calibre/images/font_size_smaller.png
