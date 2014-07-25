@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2777 2014/07/25 10:52:56 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.2778 2014/07/25 13:26:43 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3610,3 +3610,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added www/hs-HTTP version 4000.2.17 [szptvlfn 2014-07-24]
 	Updated devel/p5-Sub-Name to 0.07 [hiramatsu 2014-07-25]
 	Added devel/hs-cpphs version 1.18.5 [szptvlfn 2014-07-25]
+	Updated pkgtools/libnbcompat to 20140725 [jperkin 2014-07-25]
