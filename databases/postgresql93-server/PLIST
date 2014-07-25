@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/03/11 14:05:01 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/07/25 22:14:57 adam Exp $
 bin/postgres
 bin/postmaster
 include/postgresql/server/plpgsql.h
@@ -296,6 +296,7 @@ share/postgresql/timezone/Antarctica/Palmer
 share/postgresql/timezone/Antarctica/Rothera
 share/postgresql/timezone/Antarctica/South_Pole
 share/postgresql/timezone/Antarctica/Syowa
+share/postgresql/timezone/Antarctica/Troll
 share/postgresql/timezone/Antarctica/Vostok
 share/postgresql/timezone/Arctic/Longyearbyen
 share/postgresql/timezone/Asia/Aden
