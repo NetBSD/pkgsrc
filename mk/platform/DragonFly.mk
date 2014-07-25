@@ -1,4 +1,4 @@
-# $NetBSD: DragonFly.mk,v 1.44 2013/04/28 12:53:56 obache Exp $
+# $NetBSD: DragonFly.mk,v 1.45 2014/07/25 23:40:01 ryoon Exp $
 #
 # Variable definitions for the DragonFly operating system.
 
@@ -26,8 +26,8 @@ ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 
 _OPSYS_EMULDIR.linux=	/compat/linux
 
-_OPSYS_SYSTEM_RPATH?=		/usr/lib:/usr/lib/gcc41:/usr/lib/gcc34
-_OPSYS_LIB_DIRS?=		/usr/lib
+_OPSYS_SYSTEM_RPATH?=		/lib:/usr/lib:/usr/lib/gcc41:/usr/lib/gcc34:/usr/lib/gcc47
+_OPSYS_LIB_DIRS?=		/lib:/usr/lib
 _OPSYS_INCLUDE_DIRS?=		/usr/include
 
 .if exists(/usr/include/netinet6)
