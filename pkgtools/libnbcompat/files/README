@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.19 2013/09/08 16:24:43 ryoon Exp $
+$NetBSD: README,v 1.20 2014/07/25 13:26:24 jperkin Exp $
 
  0 Introduction
  ==============
@@ -90,6 +90,11 @@ on the following operating systems:
 	OpenBSD/amd64 5.3		<ryoon@NetBSD.org>
 	DragonFly/amd64 3.4.1		<ryoon@NetBSD.org>
 	Debian GNU/Linux/amd64 7.1	<ryoon@NetBSD.org>
+
+libnbcompat-20140725 has been tested to build and install correctly
+on the following operating systems:
+
+	Ubuntu GNU/Linux/amd64 12.04	<jperkin@joyent.com>
 
  3 Usage
  =======
