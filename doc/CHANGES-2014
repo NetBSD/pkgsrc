@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2784 2014/07/25 22:47:19 adam Exp $
+$NetBSD: CHANGES-2014,v 1.2785 2014/07/25 23:25:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3688,3 +3688,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/postgresql84-server to 8.4.22 [adam 2014-07-25]
 	Updated multimedia/ffmpeg2 to 2.3 [adam 2014-07-25]
 	Updated multimedia/ffplay2 to 2.3 [adam 2014-07-25]
+	Updated lang/openjdk7.new to 1.7.65 [ryoon 2014-07-25]
