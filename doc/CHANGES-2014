@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2779 2014/07/25 14:02:23 jperkin Exp $
+$NetBSD: CHANGES-2014,v 1.2780 2014/07/25 14:04:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3612,3 +3612,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/hs-cpphs version 1.18.5 [szptvlfn 2014-07-25]
 	Updated pkgtools/libnbcompat to 20140725 [jperkin 2014-07-25]
 	Updated x11/xorg-cf-files to 1.0.5nb2 [jperkin 2014-07-25]
+	Updated misc/calibre to 1.46.0 [wiz 2014-07-25]
