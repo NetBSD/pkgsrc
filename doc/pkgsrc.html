@@ -133,10 +133,10 @@
 <dt><span class="chapter"><a href="#bulk">7. Creating binary packages for everything in pkgsrc (bulk
 builds)</a></span></dt>
 <dd><dl>
-<dt><span class="sect1"><a href="#bulk.pre">7.1. Think first, build later</a></span></dt>
-<dt><span class="sect1"><a href="#bulk.req">7.2. Requirements of a bulk build</a></span></dt>
-<dt><span class="sect1"><a href="#bulk.pbulk">7.3. Running a pbulk-style bulk build</a></span></dt>
-<dd><dl><dt><span class="sect2"><a href="#bulk.pbulk.conf">7.3.1. Configuration</a></span></dt></dl></dd>
+<dt><span class="sect1"><a href="#bulk.pre">7.1. Preparations</a></span></dt>
+<dt><span class="sect1"><a href="#bulk.pbulk">7.2. Running a pbulk-style bulk build</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="#bulk.pbulk.conf">7.2.1. Configuration</a></span></dt></dl></dd>
+<dt><span class="sect1"><a href="#bulk.req">7.3. Requirements of a full bulk build</a></span></dt>
 <dt><span class="sect1"><a href="#creating-cdroms">7.4. Creating a multiple CD-ROM packages collection</a></span></dt>
 <dd><dl><dt><span class="sect2"><a href="#cdpack-example">7.4.1. Example of cdpack</a></span></dt></dl></dd>
 </dl></dd>
@@ -861,10 +861,10 @@ minutes!</p>
 <dt><span class="chapter"><a href="#bulk">7. Creating binary packages for everything in pkgsrc (bulk
 builds)</a></span></dt>
 <dd><dl>
-<dt><span class="sect1"><a href="#bulk.pre">7.1. Think first, build later</a></span></dt>
-<dt><span class="sect1"><a href="#bulk.req">7.2. Requirements of a bulk build</a></span></dt>
-<dt><span class="sect1"><a href="#bulk.pbulk">7.3. Running a pbulk-style bulk build</a></span></dt>
-<dd><dl><dt><span class="sect2"><a href="#bulk.pbulk.conf">7.3.1. Configuration</a></span></dt></dl></dd>
+<dt><span class="sect1"><a href="#bulk.pre">7.1. Preparations</a></span></dt>
+<dt><span class="sect1"><a href="#bulk.pbulk">7.2. Running a pbulk-style bulk build</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="#bulk.pbulk.conf">7.2.1. Configuration</a></span></dt></dl></dd>
+<dt><span class="sect1"><a href="#bulk.req">7.3. Requirements of a full bulk build</a></span></dt>
 <dt><span class="sect1"><a href="#creating-cdroms">7.4. Creating a multiple CD-ROM packages collection</a></span></dt>
 <dd><dl><dt><span class="sect2"><a href="#cdpack-example">7.4.1. Example of cdpack</a></span></dt></dl></dd>
 </dl></dd>
@@ -2539,75 +2539,52 @@ builds)</h2></div></div></div>
 <div class="toc">
 <p><b>Table of Contents</b></p>
 <dl>
-<dt><span class="sect1"><a href="#bulk.pre">7.1. Think first, build later</a></span></dt>
-<dt><span class="sect1"><a href="#bulk.req">7.2. Requirements of a bulk build</a></span></dt>
-<dt><span class="sect1"><a href="#bulk.pbulk">7.3. Running a pbulk-style bulk build</a></span></dt>
-<dd><dl><dt><span class="sect2"><a href="#bulk.pbulk.conf">7.3.1. Configuration</a></span></dt></dl></dd>
+<dt><span class="sect1"><a href="#bulk.pre">7.1. Preparations</a></span></dt>
+<dt><span class="sect1"><a href="#bulk.pbulk">7.2. Running a pbulk-style bulk build</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="#bulk.pbulk.conf">7.2.1. Configuration</a></span></dt></dl></dd>
+<dt><span class="sect1"><a href="#bulk.req">7.3. Requirements of a full bulk build</a></span></dt>
 <dt><span class="sect1"><a href="#creating-cdroms">7.4. Creating a multiple CD-ROM packages collection</a></span></dt>
 <dd><dl><dt><span class="sect2"><a href="#cdpack-example">7.4.1. Example of cdpack</a></span></dt></dl></dd>
 </dl>
 </div>
-<p>When you have multiple machines that should run the same packages,
-it is wasted time if they all build their packages themselves from
-source. There is a ways of getting a set of binary packages:
+<p>For a number of reasons you may want to build binary packages
+for a large selected set of packages in pkgsrc or even for all pkgsrc packages.
+For instance, when you have multiple machines that should run the same software,
+it is wasted time if they all build their packages themselves from source.
+Or you may want to build a list of packages you want and check them before
+deploying onto production system.
+There is a way of getting a set of binary packages:
 The bulk build system, or pbulk ("p" stands for "parallel).
 This chapter describes how to set it up so that the packages
 are most likely to be usable later.</p>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="bulk.pre"></a>7.1. Think first, build later</h2></div></div></div>
-<p>Since a bulk build takes several days or even weeks to finish, you
-should think about the setup before you start everything. Pay attention
-to at least the following points:</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem">
-<p>If you want to upload the binary packages to
-ftp.NetBSD.org, make sure the setup complies to the requirements for binary
-packages:</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
-<li class="listitem"><p>To end up on ftp.NetBSD.org, the packages must be built
-by a NetBSD developer on a trusted machine (that is, where you and only
-you have root access).</p></li>
-<li class="listitem"><p>Packages on ftp.NetBSD.org should only be created from
-the stable branches (like 2009Q1), so that users browsing the available
-collections can see at a glance how old the packages
-are.</p></li>
-<li class="listitem"><p>The packages must be built as root, since some packages
-require set-uid binaries at runtime, and creating those packages as
-unprivileged user doesn't work well at the moment.</p></li>
-</ul></div>
-</li>
-<li class="listitem"><p>Make sure that the bulk build cannot break anything in
-your system. Most bulk builds run as root, so they should be run at least
-in a chroot environment or something even more restrictive, depending on
-what the operating system provides. There have been numerous cases where
+<a name="bulk.pre"></a>7.1. Preparations</h2></div></div></div>
+<p>First of all, you have to decide whether you build all packages
+or a limited set of them. Full bulk builds usually consume a lot more resources,
+both space and time, than builds for some practical sets of packages.
+There exists a number of particularly heavy packages that are not actually
+interesting to a wide audience.
+
+For a limited bulk builds you need to make a list of packages you want to build.
+Note, that all their dependencies will be built, so you don't need to track them manually.
+</p>
+<p>During bulk builds various packages are installed and deinstalled
+in <code class="filename">/usr/pkg</code> (or whatever <code class="filename">LOCALBASE</code> is),
+so make sure that you don't need any package during the builds.
+Essentially, you should provide fresh system, either a chroot environment
+or something even more restrictive, depending on what the operating system provides,
+or dedicate the whole physical machine.
+As a useful side effect this makes sure that bulk builds cannot
+break anything in your system. There have been numerous cases where
 certain packages tried to install files outside the
 <code class="filename">LOCALBASE</code> or wanted to edit some files in
-<code class="filename">/etc</code>. Furthermore, the bulk builds install and
-deinstall packages in <code class="filename">/usr/pkg</code> (or whatever
-<code class="filename">LOCALBASE</code> is) during their operation, so be sure
-that you don't need any package during the build.</p></li>
-</ul></div>
+<code class="filename">/etc</code>.
+</p>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="bulk.req"></a>7.2. Requirements of a bulk build</h2></div></div></div>
-<p>A complete bulk build requires lots of disk space. Some of the
-disk space can be read-only, some other must be writable. Some can be on
-remote filesystems (such as NFS) and some should be local. Some can be
-temporary filesystems, others must survive a sudden reboot.</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>40 GB for the distfiles (read-write, remote, temporary)</p></li>
-<li class="listitem"><p>30 GB for the binary packages (read-write, remote, permanent)</p></li>
-<li class="listitem"><p>1 GB for the pkgsrc tree (read-only, remote, permanent)</p></li>
-<li class="listitem"><p>5 GB for <code class="filename">LOCALBASE</code> (read-write, local, temporary)</p></li>
-<li class="listitem"><p>10 GB for the log files (read-write, remote, permanent)</p></li>
-<li class="listitem"><p>5 GB for temporary files (read-write, local, temporary)</p></li>
-</ul></div>
-</div>
-<div class="sect1">
-<div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="bulk.pbulk"></a>7.3. Running a pbulk-style bulk build</h2></div></div></div>
+<a name="bulk.pbulk"></a>7.2. Running a pbulk-style bulk build</h2></div></div></div>
 <p>Running a pbulk-style bulk build works roughly as follows:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>First, build the pbulk infrastructure in a fresh pkgsrc location.</p></li>
@@ -2615,7 +2592,7 @@ temporary filesystems, others must survive a sudden reboot.</p>
 </ul></div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="bulk.pbulk.conf"></a>7.3.1. Configuration</h3></div></div></div>
+<a name="bulk.pbulk.conf"></a>7.2.1. Configuration</h3></div></div></div>
 <p>To simplify configuration we provide helper script <code class="filename">mk/pbulk/pbulk.sh</code>.</p>
 <p>In order to use it, prepare a clear system (real one, chroot environment, jail, zone, virtual machine).
 Configure network access to fetch distribution files.
@@ -2672,6 +2649,22 @@ The script is kept small enough for better understanding.</p>
 unprivileged bulk build and helps configuring distributed bulk builds.</p>
 </div>
 </div>
+</div>
+<div class="sect1">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="bulk.req"></a>7.3. Requirements of a full bulk build</h2></div></div></div>
+<p>A complete bulk build requires lots of disk space. Some of the
+disk space can be read-only, some other must be writable. Some can be on
+remote filesystems (such as NFS) and some should be local. Some can be
+temporary filesystems, others must survive a sudden reboot.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>40 GB for the distfiles (read-write, remote, temporary)</p></li>
+<li class="listitem"><p>30 GB for the binary packages (read-write, remote, permanent)</p></li>
+<li class="listitem"><p>1 GB for the pkgsrc tree (read-only, remote, permanent)</p></li>
+<li class="listitem"><p>5 GB for <code class="filename">LOCALBASE</code> (read-write, local, temporary)</p></li>
+<li class="listitem"><p>10 GB for the log files (read-write, remote, permanent)</p></li>
+<li class="listitem"><p>5 GB for temporary files (read-write, local, temporary)</p></li>
+</ul></div>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -7359,7 +7352,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="tools.questions"></a>18.4. Questions regarding the tools</h2></div></div></div>
 <div class="qandaset">
-<a name="idm29413124"></a><dl>
+<a name="idm73252240"></a><dl>
 <dt>18.4.1. <a href="#tools.new">How do I add a new tool?</a>
 </dt>
 <dt>18.4.2. <a href="#tools.listall">How do I get a list of all available
@@ -7378,7 +7371,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="idm29412932"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="idm73251856"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7388,7 +7381,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="idm29408260"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="idm73250832"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7399,7 +7392,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="idm29407748"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="idm73249680"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -9478,7 +9471,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm31184324"></a><dl>
+<a name="idm72693648"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9523,7 +9516,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm31184132"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm72693136"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9539,7 +9532,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm31177860"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idm72689168"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9557,7 +9550,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm31175620"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm72684688"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9575,7 +9568,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm31173444"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm72680592"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9588,7 +9581,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm31172356"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm72678416"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9604,7 +9597,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm31170820"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm72671120"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9628,7 +9621,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm31166852"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm72654864"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9653,7 +9646,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm31164740"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm72651152"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9701,7 +9694,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm31161476"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm72644624"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
@@ -9721,7 +9714,7 @@ anyway.</p>
     cleanups and enhancements for pkgsrc that would be nice to
     have.</p></li>
 <li class="listitem"><p>Review packages for which review was requested on
-    the <a class="ulink" href="http://pkgsrc-wip.sourceforge.net/" target="_top">pkgsrc-wip</a> review
+    the <a class="ulink" href="http://www.NetBSD.org/mailinglists/index.html#tech-pkg" target="_top">tech-pkg</a>
     mailing list.</p></li>
 </ul></div>
 </td>
