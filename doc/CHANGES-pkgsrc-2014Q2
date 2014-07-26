@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.15 2014/07/26 07:19:12 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.16 2014/07/26 10:08:29 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q2 branch:
@@ -60,3 +60,5 @@ Pullup ticket #4459 - requested by obache
 sysutils/libpciaccess: build fix for dependent packages under NetBSD 5.*
 Pullup ticket #4462 - requested by markd
 x11/kdelibs4: security patch
+Pullup ticket #4460 - requested by obache
+emulators/suse131_libdbus: security update
