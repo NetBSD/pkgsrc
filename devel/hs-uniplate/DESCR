@@ -1,0 +1,4 @@
+Uniplate is library for writing simple and concise generic operations.
+Uniplate has similar goals to the original Scrap Your Boilerplate work, but
+is substantially simpler and faster. The Uniplate manual is available at
+http://community.haskell.org/~ndm/darcs/uniplate/uniplate.htm.
