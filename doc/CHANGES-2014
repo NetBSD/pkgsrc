@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2787 2014/07/25 23:35:35 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2788 2014/07/26 00:13:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3690,3 +3690,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/ffplay2 to 2.3 [adam 2014-07-25]
 	Updated lang/openjdk7 to 1.7.65 [ryoon 2014-07-25]
 	Updated games/lgogdownloader to 2.15 [wiz 2014-07-25]
+	Updated lang/php55 to 5.5.15 [taca 2014-07-26]
+	Updated lang/php54 to 5.4.31 [taca 2014-07-26]
