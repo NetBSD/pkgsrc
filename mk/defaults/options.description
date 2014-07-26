@@ -646,6 +646,13 @@ squid-netfilter		Enable use of transparent proxy with Linux Net Filter.
 squid-pam-helper	Enable use of PAM helper support.
 squid-pf		Enable use of transparent proxy with Packet Filter.
 squid-unlinkd		Enable use of unlinkd.
+sshguard-aix		Select AIX firewall backend for SSHGuard.
+sshguard-hosts		Select host firewall backend for SSHGuard.
+sshguard-ipfilter	Select IPFilter firewall backend for SSHGuard.
+sshguard-ipfw		Select ipfw firewall backend for SSHGuard.
+sshguard-iptables	Select iptables firewall backend for SSHGuard.
+sshguard-null		Select null firewall backend for SSHGuard.
+sshguard-pf		Select PF firewall backend for SSHGuard.
 ssl			Enable SSL support.
 starttls		Enable TLS support.
 static			Allows you to build static libraries.
