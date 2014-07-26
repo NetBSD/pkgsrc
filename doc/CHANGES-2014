@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2795 2014/07/26 20:30:22 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2796 2014/07/26 21:50:48 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3699,3 +3699,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added security/sshguard version 1.5 [tron 2014-07-26]
 	Updated sysutils/libvirt to 1.2.6 [schnoebe 2014-07-26]
 	Updated x11/xf86-video-ati to 7.4.0 [wiz 2014-07-26]
+	Added devel/hs-uniplate version 1.6.12 [szptvlfn 2014-07-26]
