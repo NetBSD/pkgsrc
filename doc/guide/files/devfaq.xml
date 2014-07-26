@@ -1,4 +1,4 @@
-<!-- $NetBSD: devfaq.xml,v 1.11 2007/07/30 21:13:00 kano Exp $ -->
+<!-- $NetBSD: devfaq.xml,v 1.12 2014/07/26 11:51:05 wiz Exp $ -->
 
 <chapter id="devfaq"> <?dbhtml filename="devfaq.html"?>
 <title>Frequently Asked Questions</title>
@@ -199,8 +199,7 @@ anyway.</para>
     have.</para></listitem>
 
     <listitem><para>Review packages for which review was requested on
-    the <ulink
-    url="http://pkgsrc-wip.sourceforge.net/">pkgsrc-wip</ulink> review
+    the url="http://www.NetBSD.org/mailinglists/index.html#tech-pkg">tech-pkg</ulink></term>
     mailing list.</para></listitem>
   </itemizedlist>
 </answer></qandaentry>
