@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.67 2014/07/22 12:22:39 wiz Exp $
+# $NetBSD: Makefile.common,v 1.68 2014/07/26 08:16:36 adam Exp $
 #
 # used by print/poppler/Makefile
 # used by print/poppler-cpp/Makefile
@@ -26,3 +26,8 @@ USE_LANGUAGES=		c c++
 
 # Don't accidentally find libtiff
 CONFIGURE_ARGS+=	--disable-libtiff
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+BUILDLINK_TRANSFORM+=   rm:-fno-check-new
+.endif
