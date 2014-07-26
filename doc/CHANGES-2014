@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2788 2014/07/26 00:13:51 taca Exp $
+$NetBSD: CHANGES-2014,v 1.2789 2014/07/26 07:03:42 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3692,3 +3692,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated games/lgogdownloader to 2.15 [wiz 2014-07-25]
 	Updated lang/php55 to 5.5.15 [taca 2014-07-26]
 	Updated lang/php54 to 5.4.31 [taca 2014-07-26]
+	Updated comms/asterisk18 to 1.8.29.0 [jnemeth 2014-07-26]
