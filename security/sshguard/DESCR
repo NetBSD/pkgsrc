@@ -1,0 +1,8 @@
+Sshguard is a small program that monitors services running on your
+machine from the log files. When it detects that someone is doing
+something bad to a service, sshguard blocks the IP address of the bad
+guy with a firewall rule.
+
+Sshguard was started in 2006 to mitigate the growing brute force
+attacks to SSH servers. Because of the generality of its infrastructure,
+however, it was soon extended to monitor and protect more and more services.
