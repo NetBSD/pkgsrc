@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2014/06/07 16:18:38 agc Exp $
+# $NetBSD: Makefile,v 1.25 2014/07/26 20:25:03 schnoebe Exp $
 
-DISTNAME=		libvirt-1.2.5
+DISTNAME=		libvirt-1.2.6
 CATEGORIES=		sysutils
 MASTER_SITES=		http://libvirt.org/sources/
 
@@ -37,6 +37,8 @@ CONF_FILES+=		${EGDIR}/sasl2/libvirt.conf ${PKG_SYSCONFDIR}/sasl2/libvirt.conf
 
 AUTO_MKDIRS=		yes
 RCD_SCRIPTS=            libvirtd
+
+.include "options.mk"
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
