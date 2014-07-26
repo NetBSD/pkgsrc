@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.14 2014/07/17 15:26:49 ryoon Exp $
+$NetBSD: patch-al,v 1.15 2014/07/26 06:19:38 adam Exp $
 
 - recognize MirBSD, Interix
 - remove special-case library version hack for FreeBSD
@@ -52,7 +52,7 @@ $NetBSD: patch-al,v 1.14 2014/07/17 15:26:49 ryoon Exp $
  		cur_target="${cur_target_major}.${cur_target_minor}"
 -		if test ${cur_target_major} -eq 10 && \
 -		   test ${cur_target_minor} -ge 3
-+		if test false
++		if false
  		then
  		    cur_target=10.3
  		    if test ${enable_universalsdk}; then
@@ -64,7 +64,7 @@ $NetBSD: patch-al,v 1.14 2014/07/17 15:26:49 ryoon Exp $
 -			LDSHARED="$LDSHARED "'-bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
 -			LDCXXSHARED="$LDCXXSHARED "'-bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
 +			BLDSHARED="$LDSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BUILDPYTHON)'
-+			DSHARED="$LDSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
++			LDSHARED="$LDSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
 +			LDCXXSHARED="$LDCXXSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
  		fi ;;
  	Darwin/*)
