@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2014/07/25 22:14:56 adam Exp $
+# $NetBSD: Makefile.common,v 1.8 2014/07/26 23:58:33 wiz Exp $
 #
 # used by databases/postgresql93-adminpack/Makefile
 # used by databases/postgresql93-client/Makefile
@@ -37,7 +37,7 @@ CONFLICTS+=	postgresql9[0124-9]-[0-9]*
 .if !empty(PKGNAME:M*-*-*)
 module=		${PKGNAME:C/-[0-9].*$//:C/^.*-//}
 CONFLICTS+=	postgresql[0-8][0-9]-${module}-[0-9]*
-CONFLICTS+=	postgresql9[013-9]-${module}-[0-9]*
+CONFLICTS+=	postgresql9[0124-9]-${module}-[0-9]*
 .endif
 
 DISTINFO_FILE?=		${.CURDIR}/../../databases/postgresql93/distinfo
