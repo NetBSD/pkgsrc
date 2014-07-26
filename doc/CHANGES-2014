@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2793 2014/07/26 20:00:05 tron Exp $
+$NetBSD: CHANGES-2014,v 1.2794 2014/07/26 20:26:59 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3697,3 +3697,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/phpmyadmin to 4.2.6 [tron 2014-07-26]
 	Updated wm/notion to 3.2014052800nb1 [wiz 2014-07-26]
 	Added security/sshguard version 1.5 [tron 2014-07-26]
+	Updated sysutils/libvirt to 1.2.6 [schnoebe 2014-07-26]
