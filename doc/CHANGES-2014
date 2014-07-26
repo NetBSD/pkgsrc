@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2792 2014/07/26 19:58:50 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2793 2014/07/26 20:00:05 tron Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3696,3 +3696,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/pango to 1.36.5 [adam 2014-07-26]
 	Updated databases/phpmyadmin to 4.2.6 [tron 2014-07-26]
 	Updated wm/notion to 3.2014052800nb1 [wiz 2014-07-26]
+	Added security/sshguard version 1.5 [tron 2014-07-26]
