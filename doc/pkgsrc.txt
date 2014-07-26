@@ -113,12 +113,12 @@ I. The pkgsrc user's guide
 
     7. Creating binary packages for everything in pkgsrc (bulk builds)
 
-        7.1. Think first, build later
-        7.2. Requirements of a bulk build
-        7.3. Running a pbulk-style bulk build
+        7.1. Preparations
+        7.2. Running a pbulk-style bulk build
 
-            7.3.1. Configuration
+            7.2.1. Configuration
 
+        7.3. Requirements of a full bulk build
         7.4. Creating a multiple CD-ROM packages collection
 
             7.4.1. Example of cdpack
@@ -758,12 +758,12 @@ Table of Contents
 
 7. Creating binary packages for everything in pkgsrc (bulk builds)
 
-    7.1. Think first, build later
-    7.2. Requirements of a bulk build
-    7.3. Running a pbulk-style bulk build
+    7.1. Preparations
+    7.2. Running a pbulk-style bulk build
 
-        7.3.1. Configuration
+        7.2.1. Configuration
 
+    7.3. Requirements of a full bulk build
     7.4. Creating a multiple CD-ROM packages collection
 
         7.4.1. Example of cdpack
@@ -2175,72 +2175,45 @@ Chapter 7. Creating binary packages for everything in pkgsrc (bulk builds)
 
 Table of Contents
 
-7.1. Think first, build later
-7.2. Requirements of a bulk build
-7.3. Running a pbulk-style bulk build
+7.1. Preparations
+7.2. Running a pbulk-style bulk build
 
-    7.3.1. Configuration
+    7.2.1. Configuration
 
+7.3. Requirements of a full bulk build
 7.4. Creating a multiple CD-ROM packages collection
 
     7.4.1. Example of cdpack
 
-When you have multiple machines that should run the same packages, it is wasted
-time if they all build their packages themselves from source. There is a ways
-of getting a set of binary packages: The bulk build system, or pbulk ("p"
-stands for "parallel). This chapter describes how to set it up so that the
-packages are most likely to be usable later.
+For a number of reasons you may want to build binary packages for a large
+selected set of packages in pkgsrc or even for all pkgsrc packages. For
+instance, when you have multiple machines that should run the same software, it
+is wasted time if they all build their packages themselves from source. Or you
+may want to build a list of packages you want and check them before deploying
+onto production system. There is a way of getting a set of binary packages: The
+bulk build system, or pbulk ("p" stands for "parallel). This chapter describes
+how to set it up so that the packages are most likely to be usable later.
 
-7.1. Think first, build later
+7.1. Preparations
 
-Since a bulk build takes several days or even weeks to finish, you should think
-about the setup before you start everything. Pay attention to at least the
-following points:
+First of all, you have to decide whether you build all packages or a limited
+set of them. Full bulk builds usually consume a lot more resources, both space
+and time, than builds for some practical sets of packages. There exists a
+number of particularly heavy packages that are not actually interesting to a
+wide audience. For a limited bulk builds you need to make a list of packages
+you want to build. Note, that all their dependencies will be built, so you
+don't need to track them manually.
 
-  * If you want to upload the binary packages to ftp.NetBSD.org, make sure the
-    setup complies to the requirements for binary packages:
+During bulk builds various packages are installed and deinstalled in /usr/pkg
+(or whatever LOCALBASE is), so make sure that you don't need any package during
+the builds. Essentially, you should provide fresh system, either a chroot
+environment or something even more restrictive, depending on what the operating
+system provides, or dedicate the whole physical machine. As a useful side
+effect this makes sure that bulk builds cannot break anything in your system.
+There have been numerous cases where certain packages tried to install files
+outside the LOCALBASE or wanted to edit some files in /etc.
 
-      + To end up on ftp.NetBSD.org, the packages must be built by a NetBSD
-        developer on a trusted machine (that is, where you and only you have
-        root access).
-
-      + Packages on ftp.NetBSD.org should only be created from the stable
-        branches (like 2009Q1), so that users browsing the available
-        collections can see at a glance how old the packages are.
-
-      + The packages must be built as root, since some packages require set-uid
-        binaries at runtime, and creating those packages as unprivileged user
-        doesn't work well at the moment.
-
-  * Make sure that the bulk build cannot break anything in your system. Most
-    bulk builds run as root, so they should be run at least in a chroot
-    environment or something even more restrictive, depending on what the
-    operating system provides. There have been numerous cases where certain
-    packages tried to install files outside the LOCALBASE or wanted to edit
-    some files in /etc. Furthermore, the bulk builds install and deinstall
-    packages in /usr/pkg (or whatever LOCALBASE is) during their operation, so
-    be sure that you don't need any package during the build.
-
-7.2. Requirements of a bulk build
-
-A complete bulk build requires lots of disk space. Some of the disk space can
-be read-only, some other must be writable. Some can be on remote filesystems
-(such as NFS) and some should be local. Some can be temporary filesystems,
-others must survive a sudden reboot.
-
-  * 40 GB for the distfiles (read-write, remote, temporary)
-
-  * 30 GB for the binary packages (read-write, remote, permanent)
-
-  * 1 GB for the pkgsrc tree (read-only, remote, permanent)
-
-  * 5 GB for LOCALBASE (read-write, local, temporary)
-
-  * 10 GB for the log files (read-write, remote, permanent)
-
-  * 5 GB for temporary files (read-write, local, temporary)
-
-7.3. Running a pbulk-style bulk build
+7.2. Running a pbulk-style bulk build
 
 Running a pbulk-style bulk build works roughly as follows:
 
@@ -2249,7 +2222,7 @@ Running a pbulk-style bulk build works roughly as follows:
   * Then, build each of the packages from a clean installation directory using
     the infrastructure.
 
-7.3.1. Configuration
+7.2.1. Configuration
 
 To simplify configuration we provide helper script mk/pbulk/pbulk.sh.
 
@@ -2307,6 +2280,25 @@ Note
 
 The pbulk.sh script supports running unprivileged bulk build and helps
 configuring distributed bulk builds.
+
+7.3. Requirements of a full bulk build
+
+A complete bulk build requires lots of disk space. Some of the disk space can
+be read-only, some other must be writable. Some can be on remote filesystems
+(such as NFS) and some should be local. Some can be temporary filesystems,
+others must survive a sudden reboot.
+
+  * 40 GB for the distfiles (read-write, remote, temporary)
+
+  * 30 GB for the binary packages (read-write, remote, permanent)
+
+  * 1 GB for the pkgsrc tree (read-only, remote, permanent)
+
+  * 5 GB for LOCALBASE (read-write, local, temporary)
+
+  * 10 GB for the log files (read-write, remote, permanent)
+
+  * 5 GB for temporary files (read-write, local, temporary)
 
 7.4. Creating a multiple CD-ROM packages collection
 
@@ -8003,8 +7995,8 @@ pkgsrc-users mailing list.
           and a list of cleanups and enhancements for pkgsrc that would be nice
           to have.
 
-        * Review packages for which review was requested on the pkgsrc-wip
-          review mailing list.
+        * Review packages for which review was requested on the tech-pkg
+          mailing list.
 
 Chapter 23. GNOME packaging and porting
 
