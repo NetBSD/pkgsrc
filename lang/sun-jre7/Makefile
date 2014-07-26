@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2014/03/02 09:53:41 obache Exp $
+# $NetBSD: Makefile,v 1.22 2014/07/26 00:06:50 ryoon Exp $
 
 # Note: Regen distinfo with PKG_OPTIONS.sun-jre7+=sun-jre-jce
 # Note: Update DOWNLOAD_NAME when you update the JRE version
@@ -53,8 +53,10 @@ PKG_SUPPORTED_OPTIONS=	sun-jre-jce
 PLIST_SRC=	PLIST.${DIST_OS}-${EMUL_ARCH}
 
 PLIST_VARS+=	jce native
-.if !empty(PKG_OPTIONS:Msun-jre-jce)
+.if !empty(PKG_OPTIONS:Msun-jre-jce) || make(distinfo)
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} UnlimitedJCEPolicyJDK7.zip
+.endif
+.if !empty(PKG_OPTIONS:Msun-jre-jce)
 PLIST.jce=	yes
 FETCH_MESSAGE+=	""
 FETCH_MESSAGE+=	"As sun-jre-jce is enabled UnlimitedJCEPolicyJDK7.zip is also needed"
