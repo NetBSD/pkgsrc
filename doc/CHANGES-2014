@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2807 2014/07/27 23:10:41 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2808 2014/07/27 23:39:00 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3711,3 +3711,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/thunderbird-l10n to 31.0 [ryoon 2014-07-27]
 	Updated www/p5-Dancer to 1.3126 [wen 2014-07-27]
 	Updated www/p5-Mojolicious to 5.21 [wen 2014-07-27]
+	Updated databases/p5-DBD-postgresql to 3.3.0 [wen 2014-07-27]
