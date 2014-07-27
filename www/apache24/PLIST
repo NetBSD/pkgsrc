@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2014/03/18 20:09:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.15.4.1 2014/07/27 06:12:47 spz Exp $
 bin/ab
 bin/apxs
 bin/dbmmanage
@@ -1123,6 +1123,8 @@ share/httpd/manual/mod/mod_authn_file.html.ko.euc-kr
 share/httpd/manual/mod/mod_authn_socache.html
 share/httpd/manual/mod/mod_authn_socache.html.en
 share/httpd/manual/mod/mod_authn_socache.html.fr
+share/httpd/manual/mod/mod_authnz_fcgi.html
+share/httpd/manual/mod/mod_authnz_fcgi.html.en
 share/httpd/manual/mod/mod_authnz_ldap.html
 share/httpd/manual/mod/mod_authnz_ldap.html.en
 share/httpd/manual/mod/mod_authnz_ldap.html.fr
