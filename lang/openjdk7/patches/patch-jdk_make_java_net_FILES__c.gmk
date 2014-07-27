@@ -1,0 +1,13 @@
+$NetBSD: patch-jdk_make_java_net_FILES__c.gmk,v 1.1.2.2 2014/07/27 12:36:21 spz Exp $
+
+--- jdk/make/java/net/FILES_c.gmk.orig	2014-06-14 20:38:28.000000000 +0000
++++ jdk/make/java/net/FILES_c.gmk
+@@ -44,7 +44,7 @@ ifeq ($(PLATFORM), linux)
+     FILES_c += linux_close.c
+ endif
+ 
+-ifeq ($(PLATFORM), macosx)
++ifeq ($(PLATFORM), bsd)
+     FILES_c += bsd_close.c
+ endif
+ 

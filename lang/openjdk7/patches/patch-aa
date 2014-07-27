@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.11 2014/01/14 17:24:42 abs Exp $
+$NetBSD: patch-aa,v 1.11.4.1 2014/07/27 12:36:21 spz Exp $
 
 DragonFly support.
 Add workaround for missing  sem_timedwait() in NetBSD < 6.99.4
 
---- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2014-01-01 05:50:05.000000000 +0000
+--- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2014-06-14 20:38:20.000000000 +0000
 +++ hotspot/src/os/bsd/vm/os_bsd.cpp
 @@ -126,8 +126,11 @@
  # include <inttypes.h>
@@ -26,7 +26,7 @@ Add workaround for missing  sem_timedwait() in NetBSD < 6.99.4
  
    /* get processors count via hw.ncpus sysctl */
    mib[0] = CTL_HW;
-@@ -370,14 +374,11 @@ void os::Bsd::initialize_system_info() {
+@@ -372,14 +376,11 @@ void os::Bsd::initialize_system_info() {
         _physical_memory = 256*1024*1024;       // fallback (XXXBSD?)
    }
  
@@ -46,7 +46,16 @@ Add workaround for missing  sem_timedwait() in NetBSD < 6.99.4
  #endif
  }
  #else
-@@ -2222,7 +2223,9 @@ void * os::dll_load(const char *filename
+@@ -458,7 +459,7 @@ void os::init_system_properties_values()
+  *        7: The default directories, normally /lib and /usr/lib.
+  */
+ #ifndef DEFAULT_LIBPATH
+-#define DEFAULT_LIBPATH "/lib:/usr/lib"
++#define DEFAULT_LIBPATH "/lib:/usr/lib:@PREFIX@/lib"
+ #endif
+ 
+ #define EXTENSIONS_DIR  "/lib/ext"
+@@ -2224,7 +2225,9 @@ void * os::dll_load(const char *filename
      {EM_PPC,         EM_PPC,     ELFCLASS32, ELFDATA2MSB, (char*)"Power PC 32"},
      {EM_PPC64,       EM_PPC64,   ELFCLASS64, ELFDATA2MSB, (char*)"Power PC 64"},
      {EM_ARM,         EM_ARM,     ELFCLASS32,   ELFDATA2LSB, (char*)"ARM"},
@@ -56,7 +65,7 @@ Add workaround for missing  sem_timedwait() in NetBSD < 6.99.4
      {EM_ALPHA,       EM_ALPHA,   ELFCLASS64, ELFDATA2LSB, (char*)"Alpha"},
      {EM_MIPS_RS3_LE, EM_MIPS_RS3_LE, ELFCLASS32, ELFDATA2LSB, (char*)"MIPSel"},
      {EM_MIPS,        EM_MIPS,    ELFCLASS32, ELFDATA2MSB, (char*)"MIPS"},
-@@ -2818,6 +2821,33 @@ bool Semaphore::timedwait(unsigned int s
+@@ -2820,6 +2823,33 @@ bool Semaphore::timedwait(unsigned int s
  
  #else
  
@@ -90,7 +99,7 @@ Add workaround for missing  sem_timedwait() in NetBSD < 6.99.4
  bool Semaphore::trywait() {
    return sem_trywait(&_semaphore) == 0;
  }
-@@ -3880,7 +3910,7 @@ OSReturn os::set_native_priority(Thread*
+@@ -3884,7 +3914,7 @@ OSReturn os::set_native_priority(Thread*
  #ifdef __OpenBSD__
    // OpenBSD pthread_setprio starves low priority threads
    return OS_OK;
@@ -99,7 +108,7 @@ Add workaround for missing  sem_timedwait() in NetBSD < 6.99.4
    int ret = pthread_setprio(thread->osthread()->pthread_id(), newpri);
    return (ret == 0) ? OS_OK : OS_ERR;
  #elif defined(__APPLE__) || defined(__NetBSD__)
-@@ -3909,7 +3939,7 @@ OSReturn os::get_native_priority(const T
+@@ -3913,7 +3943,7 @@ OSReturn os::get_native_priority(const T
    }
  
    errno = 0;
