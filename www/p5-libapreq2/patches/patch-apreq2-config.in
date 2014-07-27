@@ -1,0 +1,15 @@
+$NetBSD: patch-apreq2-config.in,v 1.1 2014/07/27 22:59:11 jperkin Exp $
+
+Avoid WRKDIR rpaths.
+
+--- apreq2-config.in.orig	2009-03-06 00:39:06.000000000 +0000
++++ apreq2-config.in
+@@ -216,7 +216,7 @@ done
+ 
+ if test -n "$flags"; then
+     if test -n "$SOLARIS"; then
+-        flags=`echo $flags | sed -e 's/-L\([^ ]*\)/-R\1 -L\1/g'`
++        : flags=`echo $flags | sed -e 's/-L\([^ ]*\)/-R\1 -L\1/g'`
+     fi
+     echo "$flags"
+ fi
