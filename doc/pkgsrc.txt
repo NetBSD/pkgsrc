@@ -2232,9 +2232,9 @@ Create user with name "pbulk".
 
 Fetch and extract pkgsrc. Use a command like one of these:
 
-# (cd /usr && ftp -o - http://ftp.netbsd.org/pub/pkgsrc/current/pkgsrc.tar.gz | tar -zxf-)
-# (cd /usr && fetch -o - http://ftp.netbsd.org/pub/pkgsrc/current/pkgsrc.tar.gz | tar -zxf-)
-# (cd /usr && cvs -Q -z3 -d anoncvs@anoncvs.netbsd.org:/cvsroot get -P pkgsrc)
+# (cd /usr && ftp -o - http://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc.tar.gz | tar -zxf-)
+# (cd /usr && fetch -o - http://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc.tar.gz | tar -zxf-)
+# (cd /usr && cvs -Q -z3 -d anoncvs@anoncvs.NetBSD.org:/cvsroot get -P pkgsrc)
 
 Or any other way that fits (e.g., curl, wget).
 
