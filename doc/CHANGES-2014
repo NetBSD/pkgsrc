@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2798 2014/07/27 00:05:02 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2799 2014/07/27 05:17:38 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3702,3 +3702,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/hs-uniplate version 1.6.12 [szptvlfn 2014-07-26]
 	Updated converters/py-simplejson to 3.5.3 [wiz 2014-07-27]
 	Updated net/gssdp to 0.14.9 [wiz 2014-07-27]
+	Updated www/firefox-l10n to 31.0 [ryoon 2014-07-27]
