@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2802 2014/07/27 16:27:31 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.2803 2014/07/27 16:33:50 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3706,3 +3706,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added mail/thunderbird24 version 24.7.0 [ryoon 2014-07-27]
 	Added mail/thunderbird24-l10n version 24.7.0 [ryoon 2014-07-27]
 	Updated databases/elasticsearch to 1.3.0 [fhajny 2014-07-27]
+	Updated net/haproxy to 1.5.3 [fhajny 2014-07-27]
