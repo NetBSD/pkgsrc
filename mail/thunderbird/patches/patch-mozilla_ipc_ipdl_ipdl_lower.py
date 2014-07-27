@@ -1,13 +1,13 @@
-$NetBSD: patch-mozilla_ipc_ipdl_ipdl_lower.py,v 1.1 2013/11/12 20:50:51 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_ipdl_ipdl_lower.py,v 1.2 2014/07/27 20:04:59 ryoon Exp $
 
---- mozilla/ipc/ipdl/ipdl/lower.py.orig	2013-10-23 22:09:00.000000000 +0000
+--- mozilla/ipc/ipdl/ipdl/lower.py.orig	2014-07-18 00:05:24.000000000 +0000
 +++ mozilla/ipc/ipdl/ipdl/lower.py
-@@ -1803,7 +1803,7 @@ def _generateMessageClass(md, clsname, m
-         StmtExpr(ExprCall(
-             ExprVar('StringAppendF'),
-             args=[ ExprAddrOf(msgvar),
--                   ExprLiteral.String('[time:%" PRId64 "][%d]'),
-+                   ExprLiteral.String('[time:%\\" PRId64 \\"][%d]'),
-                    ExprCall(ExprVar('PR_Now')),
-                    ExprCall(ExprVar('base::GetCurrentProcId')) ])),
-         appendToMsg(pfxvar),
+@@ -768,7 +768,7 @@ IPDL union type."""
+         if self.recursive:
+             return self.ptrToType()
+         else:
+-            return TypeArray(Type('char'), ExprSizeof(self.internalType()))
++            return TypeArray(Type('char'), ExprSizeof(self.internalType()), self.internalType())
+ 
+     def unionValue(self):
+         # NB: knows that Union's storage C union is named |mValue|

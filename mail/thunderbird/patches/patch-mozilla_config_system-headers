@@ -1,19 +1,60 @@
-$NetBSD: patch-mozilla_config_system-headers,v 1.3 2013/11/12 20:50:51 ryoon Exp $
+$NetBSD: patch-mozilla_config_system-headers,v 1.4 2014/07/27 20:04:59 ryoon Exp $
 
---- mozilla/config/system-headers.orig	2013-10-23 22:08:50.000000000 +0000
+--- mozilla/config/system-headers.orig	2014-07-18 00:05:11.000000000 +0000
 +++ mozilla/config/system-headers
-@@ -1132,3 +1132,14 @@ kvm.h
- spawn.h
- err.h
- xlocale.h
-+#if MOZ_NATIVE_ICU==1
-+unicode/locid.h
-+unicode/numsys.h
-+unicode/ucal.h
-+unicode/ucol.h
-+unicode/udat.h
-+unicode/udatpg.h
-+unicode/uenum.h
-+unicode/unum.h
-+unicode/ustring.h
+@@ -1048,8 +1048,6 @@ X11/Xlocale.h
+ X11/Xos.h
+ X11/Xutil.h
+ zmouse.h
+-speex/speex_resampler.h
+-soundtouch/SoundTouch.h
+ #if MOZ_NATIVE_PNG==1
+ png.h
+ #endif
+@@ -1117,6 +1115,8 @@ ogg/ogg.h
+ ogg/os_types.h
+ nestegg/nestegg.h
+ cubeb/cubeb.h
++speex/speex_resampler.h
++soundtouch/SoundTouch.h
+ #endif
+ gst/gst.h
+ gst/app/gstappsink.h
+@@ -1145,3 +1145,37 @@ unicode/utypes.h
+ #endif
+ libutil.h
+ unwind.h
++#if MOZ_NATIVE_GRAPHITE2==1
++graphite2/Font.h
++graphite2/Segment.h
++#endif
++#if MOZ_NATIVE_HARFBUZZ==1
++harfbuzz/hb-ot.h
++harfbuzz/hb.h
++#endif
++#if MOZ_NATIVE_OGG==1
++ogg/ogg.h
++ogg/os_types.h
++#endif
++#if MOZ_NATIVE_THEORA==1
++theora/theoradec.h
++#endif
++#if MOZ_NATIVE_VORBIS==1
++vorbis/codec.h
++vorbis/vorbisenc.h
++#endif
++#if MOZ_NATIVE_TREMOR==1
++tremor/ivorbiscodec.h
++#endif
++#if MOZ_NATIVE_OPUS==1
++opus.h
++opus_multistream.h
++opus/opus.h
++opus/opus_multistream.h
++#endif
++#if MOZ_NATIVE_SPEEX==1
++speex/speex_resampler.h
++#endif
++#if MOZ_NATIVE_SOUNDTOUCH==1
++soundtouch/SoundTouch.h
 +#endif
