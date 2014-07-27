@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13495 2014/07/27 00:02:48 wiz Exp $
+$NetBSD: TODO,v 1.13496 2014/07/27 00:05:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -653,7 +653,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o groff-1.22.2
 	o gsharutils-4.14
 	o gss-1.0.2
-	o gssdp-0.14.9
 	o gst-plugins1-base-1.2.0
 	o gstreamer-1.4.0
 	o gstreamer1-1.2.0
