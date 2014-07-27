@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13494 2014/07/27 00:01:06 wiz Exp $
+$NetBSD: TODO,v 1.13495 2014/07/27 00:02:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -337,8 +337,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GUIlib-1.1.2
 	o MAMEDiff-2.30
-	o Mesa-10.2.2 [do not update since it removes support for DRI features by NetBSD]
-	o MesaLib-10.2.2 [do not update since it removes support for DRI features by NetBSD]
+	o Mesa-10.2.2 [do not update since it removes support for DRI features needed by NetBSD]
+	o MesaLib-10.2.2 [do not update since it removes support for DRI features needed by NetBSD]
 	o PAM-0.99.7.1
 	o RBTools-0.5.5
 	o REminiscence-0.1.9
@@ -570,6 +570,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gated-3.6
 	o gaupol-0.25
 	o gbrainy-2.23
+	o gcc-4.9.1
 	o gcc47-4.7.4
 	o gcc49-4.9.1
 	o gcin-1.5.5
@@ -652,8 +653,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o groff-1.22.2
 	o gsharutils-4.14
 	o gss-1.0.2
+	o gssdp-0.14.9
 	o gst-plugins1-base-1.2.0
-	o gstreamer-1.2
+	o gstreamer-1.4.0
 	o gstreamer1-1.2.0
 	o gthumb-3.2.8
 	o gtk-gnutella-0.98.4
@@ -741,7 +743,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lgeneral-1.2.3
 	o libAppleWM-1.4.1
 	o libXfont-1.5.0 [will break modular-xorg-server<1.16, so update together]
+	o libaacs-0.7.1
 	o libarchive-3.1.2
+	o libbdplus-0.1.1
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libchamplain08-0.12.8
 	o libchewing-0.4.0
@@ -894,7 +898,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pen-0.17.3
 	o pessulus-2.30.3 [GNOME 2.28]
 	o php-jpgraph-3.0.6
-	o php-owncloud-6
+	o php-owncloud-7
 	o php-tiki6-6.10
 	o php-tt-rss-1.13
 	o picp-0.6.8
@@ -1017,6 +1021,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o samba-4.1.9 [wip]
 	o sane-1.0.24
 	o sarg-2.2.5
+	o sbcl-1.2.1
 	o scew-0.4.0
 	o scilab-5.5.0
 	o scipy-0.13.3
@@ -1106,6 +1111,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o texmaker-4.1.1 [wip]
 	o texmaker-4.2
 	o tfmxplay-1.1.6
+	o thunderbird-31.0
 	o tightvnc-2.7.10
 	o tile-0.7.4
 	o tinc-1.0.24
@@ -1162,7 +1168,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o webmin-1.690
 	o websvn-2.3.2
 	o windowlab-1.40
-	o wine-devel-1.7.22
+	o wine-devel-1.7.23
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wml-2.0.11
