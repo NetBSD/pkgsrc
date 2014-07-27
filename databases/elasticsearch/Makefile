@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/04/25 08:47:51 imil Exp $
+# $NetBSD: Makefile,v 1.3 2014/07/27 16:27:15 fhajny Exp $
 
-DISTNAME=	elasticsearch-1.1.0
-PKGREVISION=	1
+DISTNAME=	elasticsearch-1.3.0
 CATEGORIES=	textproc
 MASTER_SITES=	https://download.elasticsearch.org/elasticsearch/elasticsearch/
 
@@ -28,6 +27,38 @@ BINS=		elasticsearch elasticsearch.in.sh plugin
 
 .include "../../mk/bsd.prefs.mk"
 
+.if !empty(MACHINE_PLATFORM:MDarwin-*-i386)
+SIGAR_PLATFORM=	universal-macosx
+.elif !empty(MACHINE_PLATFORM:MDarwin-*-x86_64)
+SIGAR_PLATFORM=	universal64-macosx
+.elif !empty(MACHINE_PLATFORM:MFreeBSD-5*-i386)
+SIGAR_PLATFORM=	x86-freebsd-5
+.elif !empty(MACHINE_PLATFORM:MFreeBSD-6*-i386)
+SIGAR_PLATFORM=	x86-freebsd-6
+.elif !empty(MACHINE_PLATFORM:MFreeBSD-6*-x86_64)
+SIGAR_PLATFORM=	amd64-freebsd-6
+.elif !empty(MACHINE_PLATFORM:MLinux-*-i386)
+SIGAR_PLATFORM=	x86-linux
+.elif !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
+SIGAR_PLATFORM=	amd64-linux
+.elif !empty(MACHINE_PLATFORM:MSunOS-*-i386)
+SIGAR_PLATFORM=	x86-solaris
+.elif !empty(MACHINE_PLATFORM:MSunOS-*-sparc)
+SIGAR_PLATFORM=	sparc-solaris
+.elif !empty(MACHINE_PLATFORM:MSunOS-*-sparc64)
+SIGAR_PLATFORM=	sparc64-solaris
+.elif !empty(MACHINE_PLATFORM:MSunOS-*-x86_64)
+SIGAR_PLATFORM=	amd64-solaris
+.endif
+
+.if ${_OPSYS_SHLIB_TYPE} == "dylib"
+SHLIB_EXT=	dylib
+.else
+SHLIB_EXT=	so
+.endif
+
+BUILD_DEFS+=	ES_USER ES_GROUP ES_DBDIR ES_LOGDIR ES_PIDDIR ES_TMPDIR
+
 ES_USER?=	elasticsearch
 ES_GROUP?=	${ES_USER}
 ES_LIBDIR?=	${PREFIX}/lib/elasticsearch
@@ -44,23 +75,29 @@ PKG_USERS=		${ES_USER}:${ES_GROUP}
 FILES_SUBST+=		JAVA_HOME=${PKG_JAVA_HOME} ES_USER=${ES_USER}	\
 			ES_GROUP=${ES_GROUP} ES_LIBDIR=${ES_LIBDIR}	\
 			ES_LOGDIR=${ES_LOGDIR} ES_PIDDIR=${ES_PIDDIR}	\
-			ES_DBDIR=${ES_DBDIR} DISTNAME=${DISTNAME}
-
+			ES_DBDIR=${ES_DBDIR} ES_TMPDIR=${ES_TMPDIR}	\
+			DISTNAME=${DISTNAME}
 
 RCD_SCRIPTS=		elasticsearch
 
 OWN_DIRS_PERMS+=	${ES_LOGDIR} ${ES_USER} ${ES_GROUP} 0700
 OWN_DIRS_PERMS+=	${ES_DBDIR} ${ES_USER} ${ES_GROUP} 0700
+OWN_DIRS_PERMS+=	${ES_TMPDIR} ${ES_USER} ${ES_GROUP} 0700
 INSTALLATION_DIRS+=	${EXDIR} ${ES_LIBDIR} ${PREFIX}/share/doc/elasticsearch
 INSTALLATION_DIRS+=	${ES_LIBDIR}/plugins ${EGDIR}
+
+PLIST_VARS+=		sigar
+.if !empty(SIGAR_PLATFORM)
+PLIST.sigar=		yes
+PLIST_SUBST+=		SIGAR_FILE=libsigar-${SIGAR_PLATFORM}.${SHLIB_EXT}
+PRINT_PLIST_AWK+=	{gsub(/libsigar-$(SIGAR_PLATFORM).$(SHLIB_EXT)/,"$${SIGAR_FILE}", $$0);}
+INSTALLATION_DIRS+=	${ES_LIBDIR}/sigar
+.endif
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	config/elasticsearch.yml
-SUBST_SED.paths=	-e 's,%%PKG_SYSCONFDIR%%,${PKG_SYSCONFDIR},g'
-SUBST_SED.paths+=	-e 's,%%VARBASE%%,${VARBASE},g'
-SUBST_SED.paths+=	-e 's,%%PREFIX%%,${PREFIX},g'
-SUBST_SED.paths+=	-e 's,%%ES_TMPDIR%%,${ES_TMPDIR},g'
+SUBST_VARS.paths=	PKG_SYSCONFDIR ES_DBDIR ES_LIBDIR ES_LOGDIR ES_TMPDIR
 
 do-install:
 .for f in ${CONFS}
@@ -75,6 +112,10 @@ do-install:
 		${DESTDIR}${PREFIX}/share/elasticsearch
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/lib/*.jar ${DESTDIR}${ES_LIBDIR}
+.if !empty(SIGAR_PLATFORM)
+	${INSTALL_DATA} ${WRKSRC}/lib/sigar/sigar-*.jar ${DESTDIR}${ES_LIBDIR}/sigar/
+	${INSTALL_LIB} ${WRKSRC}/lib/sigar/libsigar-${SIGAR_PLATFORM}.${SHLIB_EXT} ${DESTDIR}${ES_LIBDIR}/sigar/
+.endif
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

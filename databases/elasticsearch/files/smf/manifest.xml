@@ -1,0 +1,48 @@
+<?xml version='1.0'?>
+<!DOCTYPE service_bundle SYSTEM '/usr/share/lib/xml/dtd/service_bundle.dtd.1'>
+<service_bundle type='manifest' name='elasticsearch'>
+  <service name='@SMF_PREFIX@/@SMF_NAME@' type='service' version='0'>
+    <create_default_instance enabled='false' />
+    <single_instance />
+    <dependency name='fs' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/system/filesystem/local' />
+    </dependency>
+    <dependency name='net' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/network/loopback' />
+    </dependency>
+    <dependent name='elasticsearch' restart_on='none' grouping='optional_all'>
+      <service_fmri value='svc:/milestone/multi-user' />
+    </dependent>
+    <method_context working_directory='@ES_TMPDIR@'>
+      <method_credential user='@ES_USER@' group='@ES_GROUP@' />
+      <method_environment>
+        <envvar name='PATH' value='@PREFIX@/bin:@PREFIX@/sbin:/usr/bin:/usr/sbin' />
+        <envvar name='JAVA_HOME' value='@PKG_JAVA_HOME@' />
+      </method_environment>
+    </method_context>
+    <exec_method name="start" type="method" exec="@PKG_JAVA_HOME@/bin/java -Delasticsearch -Des.index.store.type=%{store_type} -Des.pidfile=@ES_PIDDIR@/elasticsearch.pid -Des.config=%{config_file} %{java_opts} -Xms%{min_heap} -Xmx%{max_heap} -cp %{class_path} org.elasticsearch.bootstrap.Elasticsearch" timeout_seconds="3600" />
+    <exec_method type="method" name="stop" exec=":kill" timeout_seconds="60" />
+    <exec_method type="method" name="refresh" exec=":kill -HUP" timeout_seconds="60" />
+    <property_group name="application" type="application">
+      <propval name="min_heap" type="astring" value="256m" />
+      <propval name="max_heap" type="astring" value="1g" />
+      <propval name="store_type" type="astring" value="niofs" />
+      <propval name="class_path" type="astring" value="@ES_LIBDIR@/@DISTNAME@.jar:@ES_LIBDIR@/*:@ES_LIBDIR@/sigar/*.jar" />
+      <propval name="config_file" type="astring" value="@PKG_SYSCONFDIR@/elasticsearch.yml" />
+      <propval name="java_opts" type="astring" value="-Djava.awt.headless=true -Xss256k -XX:+DisableExplicitGC -XX:+HeapDumpOnOutOfMemoryError -XX:+UseCMSInitiatingOccupancyOnly -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -XX:CMSInitiatingOccupancyFraction=75" />
+    </property_group>
+    <property_group name='startd' type='framework'>
+      <propval name='duration' type='astring' value='child' />
+    </property_group>
+    <stability value='Evolving' />
+    <template>
+      <common_name>
+        <loctext xml:lang='C'>ElasticSearch: A Distributed RESTful Search Engine</loctext>
+      </common_name>
+      <documentation>
+        <doc_link name='ElasticSearch Home Page' uri='http://www.elasticsearch.org/' />
+        <doc_link name='ElasticSearch Guides' uri='http://www.elasticsearch.org/guide/' />
+      </documentation>
+    </template>
+  </service>
+</service_bundle>
