@@ -1,10 +1,10 @@
-$NetBSD: patch-mozilla_media_webrtc_trunk_webrtc_system__wrappers_source_spreadsortlib_spreadsort.hpp,v 1.1 2013/11/12 20:50:51 ryoon Exp $
+$NetBSD: patch-mozilla_media_webrtc_trunk_webrtc_system__wrappers_source_spreadsortlib_spreadsort.hpp,v 1.2 2014/07/27 20:04:59 ryoon Exp $
 
---- mozilla/media/webrtc/trunk/webrtc/system_wrappers/source/spreadsortlib/spreadsort.hpp.orig	2013-10-23 22:09:13.000000000 +0000
+--- mozilla/media/webrtc/trunk/webrtc/system_wrappers/source/spreadsortlib/spreadsort.hpp.orig	2014-07-18 00:05:43.000000000 +0000
 +++ mozilla/media/webrtc/trunk/webrtc/system_wrappers/source/spreadsortlib/spreadsort.hpp
 @@ -21,6 +21,13 @@ Scott McMurray
- #include "constants.hpp"
- #include <cstring>
+ #include <vector>
+ #include "webrtc/system_wrappers/source/spreadsortlib/constants.hpp"
  
 +#ifdef __FreeBSD__
 +# include <osreldate.h>

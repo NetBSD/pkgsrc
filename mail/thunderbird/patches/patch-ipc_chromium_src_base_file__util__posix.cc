@@ -1,6 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_base_file__util__posix.cc,v 1.7 2013/11/12 20:50:51 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_file__util__posix.cc,v 1.8 2014/07/27 20:04:59 ryoon Exp $
 
---- mozilla/ipc/chromium/src/base/file_util_posix.cc.orig	2013-10-23 22:09:00.000000000 +0000
+--- mozilla/ipc/chromium/src/base/file_util_posix.cc.orig	2014-07-18 00:05:24.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/file_util_posix.cc
 @@ -8,7 +8,7 @@
  #include <errno.h>
@@ -11,7 +11,7 @@ $NetBSD: patch-ipc_chromium_src_base_file__util__posix.cc,v 1.7 2013/11/12 20:50
  #include <fts.h>
  #endif
  #include <libgen.h>
-@@ -121,7 +121,7 @@ bool Delete(const FilePath& path, bool r
+@@ -67,7 +67,7 @@ bool Delete(const FilePath& path, bool r
    if (!recursive)
      return (rmdir(path_str) == 0);
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ipc_chromium_src_base_file__util__posix.cc,v 1.7 2013/11/12 20:50
    // XXX Need ftsless impl for bionic
    return false;
  #else
-@@ -194,7 +194,7 @@ bool CopyDirectory(const FilePath& from_
+@@ -140,7 +140,7 @@ bool CopyDirectory(const FilePath& from_
      return false;
    }
  
@@ -29,30 +29,20 @@ $NetBSD: patch-ipc_chromium_src_base_file__util__posix.cc,v 1.7 2013/11/12 20:50
    // XXX Need ftsless impl for bionic
    return false;
  #else
-@@ -613,7 +613,7 @@ FileEnumerator::FileEnumerator(const Fil
+@@ -435,7 +435,7 @@ bool SetCurrentDirectory(const FilePath&
+   return !ret;
  }
  
- FileEnumerator::~FileEnumerator() {
--#ifndef ANDROID
-+#if !defined(ANDROID) && !defined(OS_SOLARIS)
-   if (fts_)
-     fts_close(fts_);
- #endif
-@@ -625,7 +625,7 @@ void FileEnumerator::GetFindInfo(FindInf
-   if (!is_in_find_op_)
-     return;
+-#if !defined(OS_MACOSX)
++#if !defined(MOZ_WIDGET_COCOA)
+ bool GetTempDir(FilePath* path) {
+   const char* tmp = getenv("TMPDIR");
+   if (tmp)
+@@ -499,6 +499,6 @@ bool CopyFile(const FilePath& from_path,
  
--#ifndef ANDROID
-+#if !defined(ANDROID) && !defined(OS_SOLARIS)
-   memcpy(&(info->stat), fts_ent_->fts_statp, sizeof(info->stat));
-   info->filename.assign(fts_ent_->fts_name);
- #endif
-@@ -636,7 +636,7 @@ void FileEnumerator::GetFindInfo(FindInf
- // large directories with many files this can be quite deep.
- // TODO(erikkay) - get rid of this recursive pattern
- FilePath FileEnumerator::Next() {
--#ifdef ANDROID
-+#if defined(ANDROID) || defined(OS_SOLARIS)
-   return FilePath();
- #else
-   if (!is_in_find_op_) {
+   return result;
+ }
+-#endif // !defined(OS_MACOSX)
++#endif // !defined(MOZ_WIDGET_COCOA)
+ 
+ } // namespace file_util
