@@ -1,10 +1,11 @@
-$NetBSD: patch-mozilla_config_baseconfig.mk,v 1.3 2013/11/12 20:50:51 ryoon Exp $
+$NetBSD: patch-mozilla_config_baseconfig.mk,v 1.4 2014/07/27 20:04:59 ryoon Exp $
 
---- mozilla/config/baseconfig.mk.orig	2013-10-23 22:08:50.000000000 +0000
+--- mozilla/config/baseconfig.mk.orig	2014-07-18 00:05:10.000000000 +0000
 +++ mozilla/config/baseconfig.mk
-@@ -1,9 +1,9 @@
- INCLUDED_AUTOCONF_MK = 1
- 
+@@ -2,10 +2,10 @@
+ # directly in python/mozbuild/mozbuild/base.py for gmake validation.
+ # We thus use INCLUDED_AUTOCONF_MK to enable/disable some parts depending
+ # whether a normal build is happening or whether the check is running.
 -includedir := $(includedir)/$(MOZ_APP_NAME)-$(MOZ_APP_VERSION)
 -idldir = $(datadir)/idl/$(MOZ_APP_NAME)-$(MOZ_APP_VERSION)
 -installdir = $(libdir)/$(MOZ_APP_NAME)-$(MOZ_APP_VERSION)
@@ -12,7 +13,7 @@ $NetBSD: patch-mozilla_config_baseconfig.mk,v 1.3 2013/11/12 20:50:51 ryoon Exp 
 +includedir := $(includedir)/${MOZILLA_PKG_NAME}
 +idldir = $(datadir)/idl/${MOZILLA_PKG_NAME}
 +installdir = $(libdir)/${MOZILLA_PKG_NAME}
-+sdkdir = $(libdir)/${MOZILLA_PKG_NAME}-sdk
- DIST = $(DEPTH)/dist
- 
- # We do magic with OBJ_SUFFIX in config.mk, the following ensures we don't
++sdkdir = $(libdir)/${MOZILLA_PKG_NAME}
+ ifndef TOP_DIST
+ TOP_DIST = dist
+ endif
