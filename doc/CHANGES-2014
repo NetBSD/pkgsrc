@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2797 2014/07/27 00:01:06 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2798 2014/07/27 00:05:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3701,3 +3701,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/xf86-video-ati to 7.4.0 [wiz 2014-07-26]
 	Added devel/hs-uniplate version 1.6.12 [szptvlfn 2014-07-26]
 	Updated converters/py-simplejson to 3.5.3 [wiz 2014-07-27]
+	Updated net/gssdp to 0.14.9 [wiz 2014-07-27]
