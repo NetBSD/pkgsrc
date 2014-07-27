@@ -1,10 +1,10 @@
-$NetBSD: patch-ak,v 1.6 2013/06/15 09:31:05 jperkin Exp $
+$NetBSD: patch-ak,v 1.6.10.1 2014/07/27 12:36:21 spz Exp $
 
 Additional rpaths.
 
---- jdk/make/common/Defs-bsd.gmk.orig	2013-05-29 03:57:57.000000000 +0000
+--- jdk/make/common/Defs-bsd.gmk.orig	2014-06-14 20:38:28.000000000 +0000
 +++ jdk/make/common/Defs-bsd.gmk
-@@ -336,8 +336,8 @@ Z_ORIGIN_FLAG/zero  = -Xlinker -z -Xlink
+@@ -328,8 +328,8 @@ Z_ORIGIN_FLAG/zero  = -Xlinker -z -Xlink
  
  LDFLAG_Z_ORIGIN = $(Z_ORIGIN_FLAG/$(ARCH_FAMILY))
  
@@ -15,7 +15,19 @@ Additional rpaths.
  
  #
  # -L paths for finding and -ljava
-@@ -399,7 +399,7 @@ endif
+@@ -380,6 +380,11 @@ endif
+ 
+ # Using map files currently break compilation on FreeBSD during shared library
+ # checks for some of the AWT native libraries.
++ifeq ($(OS_VENDOR), DragonFly)
++LDNOMAP=true
++endif
++
++#
+ ifeq ($(OS_VENDOR), FreeBSD)
+ LDNOMAP=true
+ endif
+@@ -391,7 +396,7 @@ endif
  # the library itself should not.
  #
  VM_NAME         = server
@@ -24,7 +36,7 @@ Additional rpaths.
  JAVALIB         = -ljava $(JVMLIB)
  
  #
-@@ -462,6 +462,14 @@ ifeq ($(OS_VENDOR), OpenBSD)
+@@ -454,6 +459,14 @@ ifeq ($(OS_VENDOR), OpenBSD)
    SYSTEM_ZLIB = true
  endif
  
