@@ -1,4 +1,4 @@
-<!-- $NetBSD: bulk.xml,v 1.20 2014/07/16 22:27:17 asau Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.21 2014/07/27 08:28:28 wiz Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
@@ -96,9 +96,9 @@ Create user with name "pbulk".</para>
 <para>Fetch and extract pkgsrc. Use a command like one of these:</para>
 
 <screen>
-&rprompt; <userinput>(cd /usr &amp;&amp; ftp -o - http://ftp.netbsd.org/pub/pkgsrc/current/pkgsrc.tar.gz | tar -zxf-)</userinput>
-&rprompt; <userinput>(cd /usr &amp;&amp; fetch -o - http://ftp.netbsd.org/pub/pkgsrc/current/pkgsrc.tar.gz | tar -zxf-)</userinput>
-&rprompt; <userinput>(cd /usr &amp;&amp; cvs -Q -z3 -d anoncvs@anoncvs.netbsd.org:/cvsroot get -P pkgsrc)</userinput>
+&rprompt; <userinput>(cd /usr &amp;&amp; ftp -o - http://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc.tar.gz | tar -zxf-)</userinput>
+&rprompt; <userinput>(cd /usr &amp;&amp; fetch -o - http://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc.tar.gz | tar -zxf-)</userinput>
+&rprompt; <userinput>(cd /usr &amp;&amp; cvs -Q -z3 -d anoncvs@anoncvs.NetBSD.org:/cvsroot get -P pkgsrc)</userinput>
 </screen>
 
 <para>Or any other way that fits (e.g., curl, wget).</para>
