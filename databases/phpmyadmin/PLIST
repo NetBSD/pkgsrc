@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2014/06/04 20:40:33 tron Exp $
+@comment $NetBSD: PLIST,v 1.36.2.1 2014/07/27 06:37:19 spz Exp $
 share/doc/phpmyadmin/ChangeLog
 share/doc/phpmyadmin/LICENSE
 share/doc/phpmyadmin/README
@@ -87,7 +87,6 @@ share/phpmyadmin/js/codemirror/LICENSE
 share/phpmyadmin/js/codemirror/addon/runmode/runmode.js
 share/phpmyadmin/js/codemirror/lib/codemirror.js
 share/phpmyadmin/js/codemirror/mode/sql/sql.js
-share/phpmyadmin/js/columndelete.js
 share/phpmyadmin/js/common.js
 share/phpmyadmin/js/config.js
 share/phpmyadmin/js/cross_framing_protection.js
@@ -197,6 +196,7 @@ share/phpmyadmin/js/keyhandler.js
 share/phpmyadmin/js/line_counts.php
 share/phpmyadmin/js/makegrid.js
 share/phpmyadmin/js/messages.php
+share/phpmyadmin/js/multi_column_sort.js
 share/phpmyadmin/js/navigation.js
 share/phpmyadmin/js/openlayers/OpenLayers.js
 share/phpmyadmin/js/openlayers/img/blank.gif
