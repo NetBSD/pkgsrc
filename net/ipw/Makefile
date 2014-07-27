@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/23 17:18:29 asau Exp $
-#
+# $NetBSD: Makefile,v 1.14 2014/07/27 08:38:33 tron Exp $
 
 DISTNAME=	ipw-3.3a
 PKGREVISION=	1
@@ -7,7 +6,6 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	mipam@ibb.net
-HOMEPAGE=	http://mjhb.marina-del-rey.ca.us/ipw/
 COMMENT=	"whois" replacement that automatically queries several databases
 
 WRKSRC=		${WRKDIR}
