@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/07/26 19:57:44 tron Exp $
+# $NetBSD: Makefile,v 1.2 2014/07/27 08:32:06 tron Exp $
 
 DISTNAME=	sshguard-1.5
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sshguard/}
 EXTRACT_SUFX=	.tar.bz2

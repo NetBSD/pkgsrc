@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: sshguard.sh,v 1.1 2014/07/26 19:57:44 tron Exp $
+# $NetBSD: sshguard.sh,v 1.2 2014/07/27 08:32:06 tron Exp $
 #
 # PROVIDE: sshguard
 # REQUIRE: DAEMON
@@ -14,7 +14,7 @@ name=sshguard
 rcvar=$name
 command="@PREFIX@/sbin/${name}"
 pidfile="@VARBASE@/run/${name}.pid"
-sshguard_flags="-f 100:@VARBASE@/run/sshd.pid -l /var/log/authlog"
+sshguard_flags="-b @VARBASE@/db/sshguard-blacklist.db -l /var/log/authlog -l /var/log/maillog"
 command_args="-i $pidfile"
 start_cmd=sshguard_start
 
@@ -31,7 +31,9 @@ then
 else
 	case ${1:-start} in
 	start)
-		sshguard_start
+		if [ -x ${command} ]; then
+			sshguard_start
+		fi
 		;;
 	stop)
 		if [ -f ${pidfile} ]; then
