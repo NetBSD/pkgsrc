@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.466 2014/07/05 19:41:18 rodent Exp $
+# $NetBSD: Makefile,v 1.467 2014/07/28 00:24:55 wen Exp $
 
 COMMENT=	Databases
 
@@ -156,6 +156,7 @@ SUBDIR+=	p5-DBIx-Connector
 SUBDIR+=	p5-DBIx-ContextualFetch
 SUBDIR+=	p5-DBIx-DBSchema
 SUBDIR+=	p5-DBIx-Datasource
+SUBDIR+=	p5-DBIx-Introspector
 SUBDIR+=	p5-DBIx-Schema
 SUBDIR+=	p5-DBIx-SearchBuilder
 SUBDIR+=	p5-DBM-Deep
