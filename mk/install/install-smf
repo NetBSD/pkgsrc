@@ -1,4 +1,4 @@
-# $NetBSD: install-smf,v 1.1 2014/03/11 14:07:04 jperkin Exp $
+# $NetBSD: install-smf,v 1.2 2014/07/28 10:05:53 jperkin Exp $
 #
 # Print post-install messages instructing the user how to handle the
 # newly-installed SMF services.
@@ -7,7 +7,7 @@
 case ${STAGE} in
 POST-INSTALL)
 	cat <<EOF
-============================================================================
+===========================================================================
 This package has SMF support.  You may use svcadm(1M) to 'enable', 'disable'
 or 'restart' services.  To enable the instance(s) for this package, run:
 
@@ -34,7 +34,7 @@ skipped.  You must import the SMF manifest first with:
 EOF
 	fi
 	cat <<EOF
-============================================================================
+===========================================================================
 EOF
 	;;
 esac
