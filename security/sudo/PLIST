@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2010/09/21 03:05:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/07/28 20:07:42 jperkin Exp $
 bin/sudo
 bin/sudoedit
 bin/sudoreplay
-libexec/sudo_noexec.so
+${PLIST.noexec}libexec/sudo_noexec.so
 man/man5/sudoers.5
 ${PLIST.ldap}man/man5/sudoers.ldap.5
 man/man8/sudo.8
