@@ -1,0 +1,9 @@
+DBIx::Introspector is a module factored out of the DBIx::Class
+database detection code. Most code that needs to detect which
+database it is connected to assumes that there is a one-to-one
+mapping from database drivers to database engines. Unfortunately
+reality is rarely that simple. For instance, DBD::ODBC is typically
+used to connect to SQL Server, but ODBC can be used to connect
+to PostgreSQL, MySQL, and Oracle. Additionally, while ODBC is the
+most common way to connect to SQL Server, it is not the only option,
+as DBD::ADO can also be used.
