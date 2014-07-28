@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2012/12/10 14:50:15 wen Exp $
+$NetBSD: distinfo,v 1.10 2014/07/28 13:43:07 wen Exp $
 
-SHA1 (Class-XSAccessor-1.16.tar.gz) = 7b1f44522ca504376e259094d8c20e5e76ddd056
-RMD160 (Class-XSAccessor-1.16.tar.gz) = 5a26a53505be84e92067d3e951fbc1f505224610
-Size (Class-XSAccessor-1.16.tar.gz) = 81459 bytes
+SHA1 (Class-XSAccessor-1.19.tar.gz) = 77a6a7e2893f93666a6ad1438efd17bf65bbbafc
+RMD160 (Class-XSAccessor-1.19.tar.gz) = 5f6c08a4cf26570370929755cfeade84fd5ddfe6
+Size (Class-XSAccessor-1.19.tar.gz) = 80786 bytes
