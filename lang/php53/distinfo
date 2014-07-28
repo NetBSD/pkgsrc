@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.74 2014/06/13 14:09:34 fhajny Exp $
+$NetBSD: distinfo,v 1.75 2014/07/28 16:12:57 prlw1 Exp $
 
 SHA1 (php-5.3.28.tar.bz2) = f985ca1f6a5f49ebfb25a08f1837a44c563b31f8
 RMD160 (php-5.3.28.tar.bz2) = e4910c0c365f39a5009807801bd5ee6e25be020d
@@ -6,6 +6,7 @@ Size (php-5.3.28.tar.bz2) = 11051714 bytes
 SHA1 (suhosin-patch-5.3.25-0.9.10.patch.bz2) = ce5883b05daf91e8a44fffbfa4d3989ac3311dd1
 RMD160 (suhosin-patch-5.3.25-0.9.10.patch.bz2) = 6c4d0cfe070802481121be465b66d3cefe44da83
 Size (suhosin-patch-5.3.25-0.9.10.patch.bz2) = 32447 bytes
+SHA1 (patch-Zend_zend_language_parser.h) = b2bcf33a44d39baa2caf00b7907b5b69a3af4ad6
 SHA1 (patch-aa) = fd930d0d9b1c60e8c7c514cfb6864b61ce4d158d
 SHA1 (patch-ab) = 36789fea71e316d5c4358e597df1928d94f8ea6a
 SHA1 (patch-ac) = b194eaed2d81877166b13db58b37c5ddff0210a6
