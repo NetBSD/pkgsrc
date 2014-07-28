@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2014/06/10 12:04:58 wen Exp $
+$NetBSD: distinfo,v 1.7 2014/07/28 12:16:23 wen Exp $
 
-SHA1 (networkx-1.8.1.tar.gz) = d6c1524724d3e47f7621bb2072863463924bfb99
-RMD160 (networkx-1.8.1.tar.gz) = 2add3237d7c30c4aecb68cd4c01dd8401005a6ea
-Size (networkx-1.8.1.tar.gz) = 806766 bytes
+SHA1 (networkx-1.9.tar.gz) = c69e50b6272a79112358fdda811a03582012ea57
+RMD160 (networkx-1.9.tar.gz) = 4818fd7f17289a5b9725de850a9c69100c8dd9eb
+Size (networkx-1.9.tar.gz) = 1035166 bytes

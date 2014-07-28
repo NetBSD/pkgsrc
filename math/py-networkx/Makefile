@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2014/06/10 12:04:58 wen Exp $
+# $NetBSD: Makefile,v 1.15 2014/07/28 12:16:23 wen Exp $
 
-DISTNAME=	networkx-1.8.1
+DISTNAME=	networkx-1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	http://pypi.python.org/packages/source/n/networkx/ \
@@ -13,6 +13,10 @@ LICENSE=	modified-bsd
 
 PYTHON_SELF_CONFLICT=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34
+
+BUILD_DEPENDS+=	${PYPKGPREFIX}-nose>=0.11:../../devel/py-nose
+
+DEPENDS+=	${PYPKGPREFIX}-decorator>=3.4.0:../../devel/py-decorator
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	post-patch
