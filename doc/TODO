@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13501 2014/07/28 12:18:55 wen Exp $
+$NetBSD: TODO,v 1.13502 2014/07/28 20:14:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -289,10 +289,6 @@ Suggested new packages
 	shellcheck
 	http://www.shellcheck.net/about.html
 	Static analysis program for POSIX sh, written in haskell
-
-	cups-filters
-	http://www.linuxfoundation.org/collaborate/workgroups/openprinting/cups-filters	
-	gstoraster and friends, formerly the cups option in ghostscript
 
 	softether
 	http://www.softether.org/
