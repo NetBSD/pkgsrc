@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.142 2014/03/08 11:51:56 kim Exp $
+# $NetBSD: Makefile,v 1.143 2014/07/28 20:07:42 jperkin Exp $
 #
 
 DISTNAME=		sudo-1.7.10p8
@@ -21,7 +21,7 @@ USE_LIBTOOL=		yes
 OWN_DIRS+=		${VARBASE}/run
 GNU_CONFIGURE=		yes
 BUILD_DEFS+=		VARBASE
-PLIST_VARS+=		ldap
+PLIST_VARS+=		ldap noexec
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -33,6 +33,12 @@ CONFIGURE_ARGS+=	--disable-root-mailer --with-ignore-dot
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-timedir=${VARBASE}/run/sudo
 CONFIGURE_ARGS+=	--with-logpath=${VARBASE}/log/sudo.log
+
+.if ${OPSYS} == "Darwin"
+CONFIGURE_ARGS+=	--with-noexec=no
+.else
+PLIST.noexec=		yes
+.endif
 
 .include "options.mk"
 
