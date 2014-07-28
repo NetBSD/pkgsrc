@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2823 2014/07/28 20:09:43 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2824 2014/07/28 20:13:29 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3727,3 +3727,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Class-XSAccessor to 1.19 [wen 2014-07-28]
 	Updated x11/xorg-cf-files to 1.0.5nb3 [jperkin 2014-07-28]
 	Updated devel/p5-FindBin-libs to 2.08 [schmonz 2014-07-28]
+	Updated databases/p5-App-Sqitch to 0.995 [schmonz 2014-07-28]
