@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13499 2014/07/28 02:50:25 wen Exp $
+$NetBSD: TODO,v 1.13500 2014/07/28 11:02:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -676,8 +676,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o handbrake-0.9.9
 	o hanzim-3.5
+	o harfbuzz-0.9.33
 	o haskell-mode-1.45
 	o hdf-4.2.7
+	o help2man-1.46.1
 	o hesiod-3.1.0
 	o heyu-2.9.0
 	o hiawatha-9.5
@@ -973,6 +975,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-reportlab-3.0
 	o py-rope-0.9.4
 	o py-scgi-1.14
+	o py-simplejson-3.6.0
 	o py-simpletal-5.1
 	o py-sip-4.16.2 [might need to import separate older version for py-qt3 and KDE]
 	o py-smb-1.1.8
@@ -1175,7 +1178,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wwwoffle-2.9i
 	o wxRemind-101
 	o wyrd-1.4.6
-	o x264-devel-20140719
+	o x264-devel-20140726
 	o xanalyser-1.30
 	o xbindkeys-1.8.6
 	o xbindkeys-tk-1.8.0
@@ -1224,6 +1227,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xscreensaver-5.24
 	o xsd-3.3.0
 	o xsoldier-1.4
+	o xterm-310
 	o xtraceroute-0.9.1
 	o xtux-20030306
 	o xvidcap-1.1.7
