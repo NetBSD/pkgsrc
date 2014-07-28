@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.7 2014/07/25 14:02:12 jperkin Exp $
+$NetBSD: patch-af,v 1.8 2014/07/28 14:38:17 jperkin Exp $
 
 - Ensure all programs and libraries have a LOCALBASE rpath.
 - Disable Solaris64bitSubdir, at least until multi-arch is supported.
@@ -18,7 +18,7 @@ $NetBSD: patch-af,v 1.7 2014/07/25 14:02:12 jperkin Exp $
  # endif
  #ifndef LargefileDefines
  # if (OSMajorVersion > 5) || (OSMajorVersion == 5 && OSMinorVersion >= 6)
-@@ -682,19 +682,19 @@ XCOMM SunPro C++ CplusplusCompilerMajorV
+@@ -682,29 +682,29 @@ XCOMM SunPro C++ CplusplusCompilerMajorV
  # endif
  # if HasGcc2
  #  ifndef CcCmd
@@ -45,7 +45,19 @@ $NetBSD: patch-af,v 1.7 2014/07/25 14:02:12 jperkin Exp $
 +#   define OptimizedCDebugFlags @@PKGSRC_CFLAGS@@
  #  endif
  #  if !defined(SharedLibraryLoadFlags) && !defined(SharedLibraryLdCmd)
- #   if OSMajorVersion == 5 && OSMinorVersion > 6 && defined(i386Architecture)
+-#   if OSMajorVersion == 5 && OSMinorVersion > 6 && defined(i386Architecture)
++#   if OSMajorVersion == 5 && OSMinorVersion > 6 && OSMinorVersion < 8 && defined(i386Architecture)
+     /* This is to work around what appears to be a PIC bug in some gcc/egcs
+        versions that shows up with the Solaris 7/x86 <ctype.h>. */
+ #    define SharedLibraryLdCmd $(LD)
+ #    define SharedLibraryLoadFlags -G -z textwarn
+ #   else
+ #    define SharedLibraryLdCmd $(CC)
+-#    define SharedLibraryLoadFlags -shared -z text
++#    define SharedLibraryLoadFlags -shared -z text RpathLoadFlags
+ #   endif
+ #  endif
+ # else
 @@ -836,7 +836,7 @@ XCOMM SunPro C++ CplusplusCompilerMajorV
  MAPFILES_FOR_PROGS = Mapfile_BssAlign Mapfile_NoExStack
  /* ExtraLoadFlags apply to all binaries - programs & libraries */
