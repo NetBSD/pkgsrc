@@ -1,7 +1,9 @@
-# $NetBSD: INSTALL,v 1.1 2014/05/29 19:59:39 tron Exp $
+# $NetBSD: INSTALL,v 1.2 2014/07/28 18:23:39 fhajny Exp $
 
 case ${STAGE} in
 POST-INSTALL)
-	ln -sf ${PREFIX}/lib/security/pam_ldap.so /usr/lib/security/pam_ldap.so
+	if test "`uname -s`" != "SunOS"; then
+	  ln -sf ${PREFIX}/lib/security/pam_ldap.so /usr/lib/security/pam_ldap.so
+	fi
 	;;
 esac
