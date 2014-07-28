@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2819 2014/07/28 13:26:56 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2820 2014/07/28 13:34:04 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3723,3 +3723,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/gnupg2 to 2.0.25nb1 [wiz 2014-07-28]
 	Updated math/py-networkx to 1.9 [wen 2014-07-28]
 	Updated databases/p5-DBIx-DBSchema to 0.44 [wen 2014-07-28]
+	Updated devel/p5-Class-Tiny to 1.000 [wen 2014-07-28]
