@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2014/07/22 11:30:00 wiz Exp $
+# $NetBSD: options.mk,v 1.7 2014/07/28 11:02:11 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnupg2
 PKG_SUPPORTED_OPTIONS=	gnupg2-gpgsm
@@ -19,7 +19,7 @@ PLIST_SRC=	${.CURDIR}/PLIST
 # XXX It looks like that gpgsm support could be split into its own package,
 # according to the configure script.  If that's true, this use of the options
 # framework is incorrect and should be fixed.
-.if empty(PKG_OPTIONS:Mgpgsm)
+.if empty(PKG_OPTIONS:Mgnupg2-gpgsm)
 CONFIGURE_ARGS+=	--enable-agent-only
 .else
 CONFIGURE_ARGS+=	--enable-gpgsm
