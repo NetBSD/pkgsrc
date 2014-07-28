@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1938 2014/07/28 00:09:20 wen Exp $
+# $NetBSD: Makefile,v 1.1939 2014/07/28 21:02:55 szptvlfn Exp $
 #
 
 COMMENT=	Development utilities
@@ -322,6 +322,7 @@ SUBDIR+=	hs-transformers-compat
 SUBDIR+=	hs-uniplate
 SUBDIR+=	hs-unordered-containers
 SUBDIR+=	hs-utf8-string
+SUBDIR+=	hs-vault
 SUBDIR+=	hs-vector
 SUBDIR+=	ht
 SUBDIR+=	hugs-HUnit
