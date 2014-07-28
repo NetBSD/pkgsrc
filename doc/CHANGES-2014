@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2813 2014/07/28 02:16:42 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2814 2014/07/28 02:30:30 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3717,3 +3717,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/p5-DBIx-Class-Helpers to 2.023003 [wen 2014-07-28]
 	Updated devel/p5-Devel-NYTProf to 5.06 [wen 2014-07-28]
 	Updated devel/p5-Exporter-Lite to 0.05 [wen 2014-07-28]
+	Updated devel/p5-Test-Warnings to 0.016 [wen 2014-07-28]
