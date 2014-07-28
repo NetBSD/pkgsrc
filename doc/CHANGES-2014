@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2810 2014/07/28 00:26:00 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2811 2014/07/28 00:34:15 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3714,3 +3714,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/p5-DBD-postgresql to 3.3.0 [wen 2014-07-27]
 	Added devel/p5-Test-Roo version 1.003 [wen 2014-07-28]
 	Added databases/p5-DBIx-Introspector version 0.001003 [wen 2014-07-28]
+	Updated databases/p5-DBIx-Class-Helpers to 2.023003 [wen 2014-07-28]
