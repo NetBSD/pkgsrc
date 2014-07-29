@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.9 2012/11/18 15:40:55 adam Exp $
+$NetBSD: patch-ac,v 1.10 2014/07/29 07:03:27 adam Exp $
 
---- configure.orig	2012-02-19 01:43:51.000000000 +0000
+--- configure.orig	2014-06-20 22:05:43.000000000 +0000
 +++ configure
-@@ -7349,7 +7349,6 @@ fi
+@@ -7483,7 +7483,6 @@ fi
    { $as_echo "$as_me:${as_lineno-$LINENO}: checking compiler support for -Werror=format-security" >&5
  $as_echo_n "checking compiler support for -Werror=format-security... " >&6; }
    ink_svd_CPPFLAGS="$CPPFLAGS"
@@ -10,16 +10,7 @@ $NetBSD: patch-ac,v 1.9 2012/11/18 15:40:55 adam Exp $
  
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
-@@ -7450,7 +7449,7 @@ fi
- 
- ACLOCAL="$ACLOCAL $ACLOCAL_FLAGS"
- 
--if test "x$GXX" = "xyes"; then
-+if 0; then
- 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking GNU compiler version" >&5
- $as_echo_n "checking GNU compiler version... " >&6; }
- 
-@@ -7578,7 +7577,7 @@ cat >>confdefs.h <<_ACEOF
+@@ -7686,7 +7685,7 @@ cat >>confdefs.h <<_ACEOF
  #define GETTEXT_PACKAGE "$GETTEXT_PACKAGE"
  _ACEOF
  
@@ -28,7 +19,7 @@ $NetBSD: patch-ac,v 1.9 2012/11/18 15:40:55 adam Exp $
  
     for ac_header in locale.h
  do :
-@@ -8445,11 +8444,11 @@ for ax_openmp_flag in $ax_openmp_flags; 
+@@ -8553,11 +8552,11 @@ for ax_openmp_flag in $ax_openmp_flags; 
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -42,7 +33,7 @@ $NetBSD: patch-ac,v 1.9 2012/11/18 15:40:55 adam Exp $
    ;
    return 0;
  }
-@@ -9620,11 +9619,11 @@ fi
+@@ -9731,11 +9730,11 @@ fi
  
  
  if test "x$with_python" = "xyes"; then
@@ -56,7 +47,7 @@ $NetBSD: patch-ac,v 1.9 2012/11/18 15:40:55 adam Exp $
          if test "$?" -gt "0"; then
              with_python="no"
          else
-@@ -9684,7 +9683,7 @@ if test "x$enable_lcms" = "xno"; then
+@@ -9795,7 +9794,7 @@ if test "x$enable_lcms" = "xno"; then
      have_lcms2=no
  else
      # Have to test LittleCms presence
@@ -65,7 +56,7 @@ $NetBSD: patch-ac,v 1.9 2012/11/18 15:40:55 adam Exp $
         # lcms 2.2 & 2.3 have problems on OSX
  
  pkg_failed=no
-@@ -11095,7 +11094,7 @@ $as_echo "#define HAVE_CAIRO_PDF 1" >>co
+@@ -11356,7 +11355,7 @@ $as_echo "#define HAVE_CAIRO_PDF 1" >>co
  
  fi
  
