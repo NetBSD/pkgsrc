@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1939 2014/07/28 21:02:55 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.1940 2014/07/29 15:25:42 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -550,7 +550,6 @@ SUBDIR+=	msgpack
 SUBDIR+=	nana
 SUBDIR+=	nant
 SUBDIR+=	nasm
-SUBDIR+=	ninja
 SUBDIR+=	nbitools
 SUBDIR+=	nbpatch
 SUBDIR+=	ncc
@@ -561,6 +560,7 @@ SUBDIR+=	netbsd-iscsi-lib
 SUBDIR+=	netcdf
 SUBDIR+=	netcdf-fortran
 SUBDIR+=	newfile
+SUBDIR+=	ninja
 SUBDIR+=	noweb
 SUBDIR+=	npapi-sdk
 SUBDIR+=	nqc
