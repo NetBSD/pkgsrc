@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2840 2014/07/29 11:47:09 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2841 2014/07/29 11:48:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3744,3 +3744,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/xterm to 310 [wiz 2014-07-29]
 	Updated fonts/harfbuzz to 0.9.33 [wiz 2014-07-29]
 	Updated converters/help2man to 1.46.1 [wiz 2014-07-29]
+	Updated converters/py-simplejson to 3.6.0 [wiz 2014-07-29]
