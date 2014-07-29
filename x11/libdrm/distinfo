@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.44 2014/07/25 15:32:22 wiz Exp $
+$NetBSD: distinfo,v 1.45 2014/07/29 21:30:44 wiz Exp $
 
-SHA1 (libdrm-2.4.55.tar.bz2) = fcff4f407456f719b51b98343567269bba75a71e
-RMD160 (libdrm-2.4.55.tar.bz2) = 5f93ce4fe97350e120213ea67498152d5247a8c7
-Size (libdrm-2.4.55.tar.bz2) = 589443 bytes
+SHA1 (libdrm-2.4.56.tar.bz2) = c61feed76db0ca729febbc45794d13d04a3eeb53
+RMD160 (libdrm-2.4.56.tar.bz2) = 10ef0d7af7f0cbe0cc05fadace0678c60e1bc8ba
+Size (libdrm-2.4.56.tar.bz2) = 590856 bytes
 SHA1 (patch-ab) = 66dadd3244bfa9c69be0982fd2108deb94483de2
 SHA1 (patch-ac) = 67c998df7dfc0dabc86320ea6d015cede3e464ea
 SHA1 (patch-ad) = b9c8d708830c8b182c8e491fe5a9e5d0f2d44a5f
