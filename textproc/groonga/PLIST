@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2014/07/02 12:42:34 obache Exp $
+@comment $NetBSD: PLIST,v 1.23 2014/07/29 10:00:22 obache Exp $
 bin/groonga
 bin/groonga-benchmark
 bin/groonga-suggest-create-dataset
@@ -787,8 +787,8 @@ share/groonga/examples/dictionary/html/css/smoothness/images/ui-icons_cd0a0a_256
 share/groonga/examples/dictionary/html/css/smoothness/jquery-ui-1.8.12.custom.css
 share/groonga/examples/dictionary/html/index.html
 share/groonga/examples/dictionary/html/js/dictionary.js
-share/groonga/examples/dictionary/html/js/jquery-1.6.0.min.js
-share/groonga/examples/dictionary/html/js/jquery-ui-1.8.12.min.js
+share/groonga/examples/dictionary/html/js/jquery-1.7.2.min.js
+share/groonga/examples/dictionary/html/js/jquery-ui-1.8.18.custom.min.js
 share/groonga/examples/dictionary/init-db.sh
 share/groonga/examples/dictionary/jmdict/jmdict.rb
 share/groonga/examples/dictionary/readme.txt
@@ -816,6 +816,8 @@ share/groonga/html/admin/images/groonga.png
 share/groonga/html/admin/images/groonga.svg
 share/groonga/html/admin/images/loading.gif
 share/groonga/html/admin/index.html
+share/groonga/html/admin/index.ja.html
+share/groonga/html/admin/js/groonga-admin.ja.js
 share/groonga/html/admin/js/groonga-admin.js
 share/groonga/html/admin/js/jquery-1.7.2.min.js
 share/groonga/html/admin/js/jquery-ui-1.8.18.custom.min.js
