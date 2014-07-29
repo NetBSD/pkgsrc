@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.108 2014/07/02 03:06:24 jnemeth Exp $
+# $NetBSD: Makefile,v 1.109 2014/07/29 04:20:55 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked
 
-DISTNAME=	asterisk-11.10.2
+DISTNAME=	asterisk-11.11.0
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${DEFAULT_DISTFILES}
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
@@ -16,6 +16,7 @@ OWNER=		jnemeth@NetBSD.org
 HOMEPAGE=	http://www.asterisk.org/
 COMMENT=	The Asterisk Software PBX
 LICENSE=	gnu-gpl-v2
+MAKE_JOBS_SAFE=	NO
 
 # known to have issues on i386, block the package until the bug is fixed
 NOT_FOR_PLATFORM=	NetBSD-*-i386
