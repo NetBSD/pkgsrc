@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2835 2014/07/29 07:04:18 adam Exp $
+$NetBSD: CHANGES-2014,v 1.2836 2014/07/29 10:00:35 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3739,3 +3739,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated comms/asterisk to 11.11.0 [jnemeth 2014-07-29]
 	Updated devel/p5-AnyEvent-RabbitMQ to 1.17 [wen 2014-07-29]
 	Updated graphics/inkscape to 0.48.5 [adam 2014-07-29]
+	Updated textproc/groonga to 4.0.4 [obache 2014-07-29]
