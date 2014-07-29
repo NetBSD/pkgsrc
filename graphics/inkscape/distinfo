@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.52 2014/05/08 21:52:40 asau Exp $
+$NetBSD: distinfo,v 1.53 2014/07/29 07:03:27 adam Exp $
 
-SHA1 (inkscape-0.48.4.tar.bz2) = 5f26f6ad191d1e7c2a9fb69a438722beb172224c
-RMD160 (inkscape-0.48.4.tar.bz2) = b089ced7694a9803fac8588d93e7e6239c71d3e8
-Size (inkscape-0.48.4.tar.bz2) = 19712522 bytes
+SHA1 (inkscape-0.48.5.tar.bz2) = 83ddb0c96069638f712a869039989bfd7d79c6a8
+RMD160 (inkscape-0.48.5.tar.bz2) = c05e861dd458245193373f40790035339aac3e01
+Size (inkscape-0.48.5.tar.bz2) = 19719332 bytes
 SHA1 (patch-aa) = d946236902fc6cf0d2ddcbb9dd667b4d9c6f99d4
 SHA1 (patch-ab) = b70ffa613c054c26185d4728da4133aed6d88e63
-SHA1 (patch-ac) = 01caeac029e0ce7e4c4e2b6a9a80b76d9f9b495e
+SHA1 (patch-ac) = e6877bb4698c74622f0302328ad959b75b070ff9
 SHA1 (patch-ad) = 3136850b7d34370feb951fc8fdde8cda78d54d60
 SHA1 (patch-ae) = 2b3f06a545d3cf27f59d41619528c59ac142c758
 SHA1 (patch-af) = 5f9317fcb7a798afc569aada9683fb1c7f6ba4c7
@@ -15,27 +15,10 @@ SHA1 (patch-ai) = 1cd8e744848d6b52ffb4f07922e09689b5e43f61
 SHA1 (patch-aj) = 8564ee2d4e884dc31e4ad4232267f6fad09f71ee
 SHA1 (patch-ap) = 134a47053020547703906140ff744e875ca1284f
 SHA1 (patch-aq) = dd307f598741cd5f0ff35eb06dff7c685752a979
-SHA1 (patch-src_2geom_basic-intersection.cpp) = 743b13293191a74d4c0c22231e5ed7866219dfee
-SHA1 (patch-src_2geom_sbasis.h) = 483353f56f7fb01ca8c76241aca5e63d0513aba5
-SHA1 (patch-src_2geom_solve-bezier-parametric.cpp) = 71cca994451b1e7d5aba625600089d1e4a47888e
-SHA1 (patch-src_Makefile.in) = 4c07142f3a554a01d4c2b352df27c0a83ac4352b
-SHA1 (patch-src_color-profile.cpp) = 14932b25ed333925518d5140b3691a29e155cd9a
-SHA1 (patch-src_display_nr-filter-gaussian.cpp) = 344109eb4360560bfe8481b25588ef37e5140135
 SHA1 (patch-src_dom_io_domstream.cpp) = 6b525b8e730e4497afdf1da0ae27f0dc69bfad40
 SHA1 (patch-src_dom_io_domstream.h) = 9325fc9d211eb3349628a736283ed0c475399a8b
-SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.cpp) = 783251007ef69f4c3af1f8840f2d6ba88d9b97db
+SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.cpp) = cdf23f9d98c1c2096bf99b05b23b1d8184fc007c
 SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.h) = 9e9e76049b9fdcc5192e225b4b477a104902894b
-SHA1 (patch-src_gc-core.h) = e23bba26094aa2203568fa5f2b98412994e87f19
-SHA1 (patch-src_gc.cpp) = 4395d00ffbcecb9f1d4947823312a2f176437840
 SHA1 (patch-src_io_inkjar.cpp) = 060d59225cfe7b66db5e9f41e76860df9ce12d01
-SHA1 (patch-src_libnrtype_FontFactory.h) = 282e6ea4da7bb40c5ba8c861fdbe303259d3e864
-SHA1 (patch-src_libnrtype_Layout-TNG-OutIter.cpp) = 28870d9970946b629657f1663cbe8b325ef42b69
-SHA1 (patch-src_libvpsc_csolve__VPSC.h) = 33aa27678fa9e802af6ab95b9ea28b69d822c4cb
-SHA1 (patch-src_live__effects_lpe-perp__bisector.h) = 08c911a629d1f247bddd001716ae9b0b04a2e357
-SHA1 (patch-src_remove-last.h) = 7ae01e509216680c063bbd8acdc0fb697ebf8552
-SHA1 (patch-src_sp-item-rm-unsatisfied-cns.cpp) = 40e25393233a18372ee86655e3730a7a87701a9b
-SHA1 (patch-src_trace_siox.cpp) = 1b91dd39a07dea9de34646e37ff11cca14abae24
-SHA1 (patch-src_ui_dialog_inkscape-preferences.cpp) = f95af6d326ddf7512b67f68efe0b23bc3ebe651e
-SHA1 (patch-src_ui_tool_node.h) = 18237624e07881cf9985b0a6f2c75bbc082bede6
-SHA1 (patch-src_ui_widget_registered-widget.h) = a5c16bcd28a015959121ed8b92423762f182a71b
-SHA1 (patch-src_widgets_desktop-widget.h) = 6528b3105590bfa8b5d33d428aa8c9cbc3561225
+SHA1 (patch-src_trace_siox.cpp) = daeff4626dace6997f64ab9c96b0bfb304e724c8
+SHA1 (patch-src_ui_tool_node.h) = 6ca23dddadcef8318bc81b7a67c69580db4a7b9f
