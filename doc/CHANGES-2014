@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2837 2014/07/29 11:38:53 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2838 2014/07/29 11:40:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3741,3 +3741,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/inkscape to 0.48.5 [adam 2014-07-29]
 	Updated textproc/groonga to 4.0.4 [obache 2014-07-29]
 	Updated print/cups to 1.7.4 [wiz 2014-07-29]
+	Updated x11/xterm to 310 [wiz 2014-07-29]
