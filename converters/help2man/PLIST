@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2012/10/13 12:25:02 wen Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/07/29 11:46:56 wiz Exp $
 bin/help2man
+info/help2man-de.info
+info/help2man-pl.info
+info/help2man-uk.info
 info/help2man.info
 ${PLIST.nls}lib/bindtextdomain.so
 ${PLIST.nls}man/de/man1/help2man.1
@@ -8,9 +11,11 @@ ${PLIST.nls}man/eo/man1/help2man.1
 ${PLIST.nls}man/fi/man1/help2man.1
 ${PLIST.nls}man/fr/man1/help2man.1
 ${PLIST.nls}man/hr/man1/help2man.1
+${PLIST.nls}man/hu/man1/help2man.1
 ${PLIST.nls}man/it/man1/help2man.1
 ${PLIST.nls}man/ja/man1/help2man.1
 ${PLIST.nls}man/man1/help2man.1
+${PLIST.nls}man/nb/man1/help2man.1
 ${PLIST.nls}man/pl/man1/help2man.1
 ${PLIST.nls}man/pt_BR/man1/help2man.1
 ${PLIST.nls}man/ru/man1/help2man.1
@@ -24,8 +29,10 @@ ${PLIST.nls}share/locale/eo/LC_MESSAGES/help2man.mo
 ${PLIST.nls}share/locale/fi/LC_MESSAGES/help2man.mo
 ${PLIST.nls}share/locale/fr/LC_MESSAGES/help2man.mo
 ${PLIST.nls}share/locale/hr/LC_MESSAGES/help2man.mo
+${PLIST.nls}share/locale/hu/LC_MESSAGES/help2man.mo
 ${PLIST.nls}share/locale/it/LC_MESSAGES/help2man.mo
 ${PLIST.nls}share/locale/ja/LC_MESSAGES/help2man.mo
+${PLIST.nls}share/locale/nb/LC_MESSAGES/help2man.mo
 ${PLIST.nls}share/locale/pl/LC_MESSAGES/help2man.mo
 ${PLIST.nls}share/locale/pt_BR/LC_MESSAGES/help2man.mo
 ${PLIST.nls}share/locale/ru/LC_MESSAGES/help2man.mo
