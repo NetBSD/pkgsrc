@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2014/07/25 23:24:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.74 2014/07/29 09:11:02 wiz Exp $
 
 DISTNAME=	openjdk-1.7.65-20140719
 PKGNAME=	openjdk7-1.7.65
@@ -25,6 +25,8 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 CACERTS=	cacerts-20091013.tar.bz2
 DISTFILES+=	${CACERTS}
 EXTRACT_ONLY+=	${CACERTS}
+
+ULIMIT_RESOURCES=	datasize stacksize
 
 JAVA_NAME=	openjdk7
 JAVA_HOME=	${PREFIX}/java/${JAVA_NAME}
