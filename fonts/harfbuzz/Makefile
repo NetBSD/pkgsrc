@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2014/07/22 10:26:01 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2014/07/29 11:45:10 wiz Exp $
 
-DISTNAME=	harfbuzz-0.9.32
+DISTNAME=	harfbuzz-0.9.33
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.freedesktop.org/software/harfbuzz/release/
 EXTRACT_SUFX=	.tar.bz2
