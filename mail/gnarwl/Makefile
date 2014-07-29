@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/07/22 08:25:54 manu Exp $
-#
+# $NetBSD: Makefile,v 1.2 2014/07/29 15:24:37 wiz Exp $
 
 DISTNAME=	gnarwl-3.6
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.onyxbits.de/sites/default/files/upload_cck/node/526/
 EXTRACT_SUFX=	.tgz
@@ -28,7 +28,7 @@ GNARWL_GROUP?=	gnarwl
 GNARWL_HOME?=	${VARBASE}/gnarwl
 BUILD_DEFS+=	GNARWL_USER GNARWL_GROUP 
 PKG_USERS+=	${GNARWL_USER}:${GNARWL_GROUP}
-PKG_HO%E.gnarwl=${GNARWL_HOME}
+PKG_HOME.gnarwl=${GNARWL_HOME}
 
 GNARWL_MANDIR=		${DESTDIR}${PREFIX}/${PKGMANDIR}
 
