@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2833 2014/07/29 04:21:14 jnemeth Exp $
+$NetBSD: CHANGES-2014,v 1.2834 2014/07/29 04:38:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3737,3 +3737,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-AnyEvent to 7.07 [wen 2014-07-29]
 	Updated devel/p5-AnyEvent-XMPP to 0.55 [wen 2014-07-29]
 	Updated comms/asterisk to 11.11.0 [jnemeth 2014-07-29]
+	Updated devel/p5-AnyEvent-RabbitMQ to 1.17 [wen 2014-07-29]
