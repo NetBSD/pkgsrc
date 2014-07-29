@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2842 2014/07/29 11:51:46 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2843 2014/07/29 15:24:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3746,3 +3746,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated converters/help2man to 1.46.1 [wiz 2014-07-29]
 	Updated converters/py-simplejson to 3.6.0 [wiz 2014-07-29]
 	Updated security/py-cryptography to 0.5.2 [wiz 2014-07-29]
+	Updated mail/gnarwl to 3.6nb1 [wiz 2014-07-29]
