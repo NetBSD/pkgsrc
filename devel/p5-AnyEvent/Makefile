@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2014/05/29 23:35:38 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2014/07/29 03:34:56 wen Exp $
 
-DISTNAME=	AnyEvent-7.05
+DISTNAME=	AnyEvent-7.07
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
-#MASTER_SITES=	http://www.cpan.org/modules/by-authors/Marc_Lehmann/
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/ML/MLEHMANN/}
 
 MAINTAINER=	rhaen@NetBSD.org
