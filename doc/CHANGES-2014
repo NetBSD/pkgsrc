@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2831 2014/07/29 03:35:42 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2832 2014/07/29 03:45:21 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3735,3 +3735,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/wdiff to 1.2.2 [wen 2014-07-29]
 	Updated www/p5-AnyEvent-HTTP to 2.21 [wen 2014-07-29]
 	Updated devel/p5-AnyEvent to 7.07 [wen 2014-07-29]
+	Updated devel/p5-AnyEvent-XMPP to 0.55 [wen 2014-07-29]
