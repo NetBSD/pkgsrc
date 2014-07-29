@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13503 2014/07/29 02:43:46 wen Exp $
+$NetBSD: TODO,v 1.13504 2014/07/29 02:54:17 wen Exp $
 
 Suggested new packages
 ======================
@@ -1155,7 +1155,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o warzone2100-2.3.8
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
-	o wdiff-1.2.2
 	o webalizer-2.23.05
 	o webkit-gtk-2.4.4
 	o webmin-1.690
