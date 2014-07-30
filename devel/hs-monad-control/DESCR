@@ -1,0 +1,14 @@
+This package defines the type class MonadBaseControl, a subset of
+MonadBase into which generic control operations such as catch can be
+lifted from IO or any other base monad. Instances are based on monad
+transformers in MonadTransControl, which includes all standard monad
+transformers in the transformers library except ContT.
+
+See the lifted-base package which uses monad-control to lift IO
+operations from the base library (like catch or bracket) into any
+monad that is an instance of MonadBase or MonadBaseControl.
+
+Note that this package is a rewrite of Anders Kaseorg's monad-peel
+library. The main difference is that this package provides CPS style
+operators and exploits the RankNTypes and TypeFamilies language
+extensions to simplify and speedup most definitions.
