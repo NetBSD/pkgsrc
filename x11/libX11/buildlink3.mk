@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2014/05/27 04:45:33 rodent Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2014/07/30 20:34:50 jperkin Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -17,8 +17,8 @@ BUILDLINK_API_DEPENDS.libX11+=	libX11>=1.1
 BUILDLINK_ABI_DEPENDS.libX11+=	libX11>=0.99
 BUILDLINK_PKGSRCDIR.libX11?=	../../x11/libX11
 
-X11_LDFLAGS+=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib${LIBABISUFFIX}
-X11_LDFLAGS+=	-L${BUILDLINK_PREFIX.libX11}/lib${LIBABISUFFIX}
+X11_LDFLAGS+=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
+X11_LDFLAGS+=	-L${BUILDLINK_PREFIX.libX11}/lib
 
 .if ${OPSYS} == "OSF1" || ${OPSYS} == "MirBSD" || ${OPSYS} == "OpenBSD"
 .include "../../mk/pthread.buildlink3.mk"
