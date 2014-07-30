@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2014/05/29 23:37:27 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/07/30 12:28:18 fhajny Exp $
 
 .include "../../sysutils/collectd/Makefile.common"
 
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Statistics collection daemon base
 
 RCD_SCRIPTS=	collectd
