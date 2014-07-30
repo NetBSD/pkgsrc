@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2847 2014/07/30 11:49:43 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2848 2014/07/30 21:34:51 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3752,3 +3752,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/contao33 to 3.3.4 [taca 2014-07-30]
 	Updated chat/ejabberd to 14.07 [fhajny 2014-07-30]
 	Updated net/tor to 0.2.4.23 [wiz 2014-07-30]
+	Added devel/hs-monad-control version 0.3.3.0 [szptvlfn 2014-07-30]
