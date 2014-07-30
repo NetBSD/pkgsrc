@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/07/21 07:30:50 dbj Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/07/30 03:52:40 dbj Exp $
 bin/c2dec
 bin/c2demo
 bin/c2enc
@@ -17,4 +17,5 @@ include/codec2/codec2_fifo.h
 include/codec2/comp.h
 include/codec2/golay23.h
 lib/libcodec2.so
-lib/libcodec2.0.3.so
+lib/libcodec2.so.0
+lib/libcodec2.so.0.3
