@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.209 2014/07/11 17:29:21 jperkin Exp $
+# $NetBSD: bootstrap,v 1.210 2014/07/30 16:30:26 schmonz Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -159,7 +159,9 @@ EOF
 
 	cat >${wrkdir}/$$.c <<EOF
 #ifdef __GNUC__
+#ifndef __clang__
 indeed
+#endif
 #endif
 EOF
 	compiler_is_gnu=`${testcc:-cc} -E ${wrkdir}/$$.c 2>/dev/null | grep -c indeed`
@@ -519,12 +521,12 @@ Darwin)
 	need_sed=no
 	set_opsys=no
 	machine_arch=`uname -p`
-	CC=${CC:-"gcc -isystem /usr/include"}; export CC
+	CC=${CC:-"cc -isystem /usr/include"}; export CC
 	check_compiler=yes
 	osrev=`uname -r`
 	macosx_version=`echo $osrev | awk -F . '{ print "10."$1-4; }'`
 	case "$macosx_version" in
-	10.[7-8])
+	10.[7-9])
 		packagemaker=/Applications/PackageMaker.app/Contents/MacOS/PackageMaker
 		;;
 	10.[0-4])
