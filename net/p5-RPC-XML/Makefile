@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2014/05/29 23:37:10 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2014/07/30 21:55:25 schmonz Exp $
 
-DISTNAME=	RPC-XML-0.76
+DISTNAME=	RPC-XML-0.78
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	net www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=RPC/}
 
@@ -13,12 +12,14 @@ COMMENT=	XML-RPC client and server library for Perl
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	{perl>=5.10,p5-PathTools>=0.8}:../../devel/p5-PathTools
-DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils>=1.2}:../../devel/p5-Scalar-List-Utils
-DEPENDS+=	p5-XML-LibXML>=1.70:../../textproc/p5-XML-LibXML
+DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils>=1.19}:../../devel/p5-Scalar-List-Utils
+#DEPENDS+=	p5-Module-Load>=0.24:../../devel/p5-Module-Load
+DEPENDS+=	p5-XML-LibXML>=1.85:../../textproc/p5-XML-LibXML
 DEPENDS+=	p5-XML-Parser>=2.31:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-libwww>=5.834:../../www/p5-libwww
 DEPENDS+=	p5-DateTime>=0.70:../../time/p5-DateTime
 DEPENDS+=	p5-DateTime-Format-ISO8601>=0.07:../../time/p5-DateTime-Format-ISO8601
+DEPENDS+=	p5-Compress-Raw-Zlib>=2.063:../../devel/p5-Compress-Raw-Zlib
 
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		# empty
