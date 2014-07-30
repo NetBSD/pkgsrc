@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2844 2014/07/29 21:31:01 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2845 2014/07/30 03:29:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3748,3 +3748,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/py-cryptography to 0.5.2 [wiz 2014-07-29]
 	Updated mail/gnarwl to 3.6nb1 [wiz 2014-07-29]
 	Updated x11/libdrm to 2.4.56 [wiz 2014-07-29]
+	Updated www/contao32 to 3.2.13 [taca 2014-07-30]
+	Updated www/contao33 to 3.3.4 [taca 2014-07-30]
