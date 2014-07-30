@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2014/07/30 21:34:26 szptvlfn Exp $
+lib/monad-control-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans/Control.hi
+lib/monad-control-${PKGVERSION}/${HASKELL_VERSION}/HSmonad-control-${PKGVERSION}.o
+lib/monad-control-${PKGVERSION}/${HASKELL_VERSION}/libHSmonad-control-${PKGVERSION}.a
+lib/monad-control-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/monad-control-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/monad-control-${PKGVERSION}/html/Control-Monad-Trans-Control.html
+${PLIST.doc}share/doc/monad-control-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/monad-control-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/monad-control-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/monad-control-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/monad-control-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/monad-control-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/monad-control-${PKGVERSION}/html/mini_Control-Monad-Trans-Control.html
+${PLIST.doc}share/doc/monad-control-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/monad-control-${PKGVERSION}/html/monad-control.haddock
+${PLIST.doc}share/doc/monad-control-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/monad-control-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/monad-control-${PKGVERSION}/html/synopsis.png
