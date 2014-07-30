@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/07/21 06:53:24 dbj Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/07/30 06:53:21 dbj Exp $
 bin/wx-config
 bin/wxrc
 bin/wxrc-3.0
@@ -735,6 +735,7 @@ share/bakefile/presets/wx_unix.bkl
 share/bakefile/presets/wx_win32.bkl
 share/bakefile/presets/wx_xrc.bkl
 share/doc/wxGTK/changes.txt
+share/doc/wxGTK/lgpl.txt
 share/doc/wxGTK/licence.txt
 share/doc/wxGTK/readme.txt
 share/locale/ca/LC_MESSAGES/wxstd.mo
