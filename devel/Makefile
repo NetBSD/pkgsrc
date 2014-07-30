@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1940 2014/07/29 15:25:42 wiz Exp $
+# $NetBSD: Makefile,v 1.1941 2014/07/30 21:35:53 szptvlfn Exp $
 #
 
 COMMENT=	Development utilities
@@ -308,6 +308,7 @@ SUBDIR+=	hs-extensible-exceptions
 SUBDIR+=	hs-ghc-paths
 SUBDIR+=	hs-hashable
 SUBDIR+=	hs-mmorph
+SUBDIR+=	hs-monad-control
 SUBDIR+=	hs-mtl
 SUBDIR+=	hs-primitive
 SUBDIR+=	hs-random
