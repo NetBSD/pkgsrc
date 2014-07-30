@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2845 2014/07/30 03:29:37 taca Exp $
+$NetBSD: CHANGES-2014,v 1.2846 2014/07/30 09:46:03 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3750,3 +3750,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/libdrm to 2.4.56 [wiz 2014-07-29]
 	Updated www/contao32 to 3.2.13 [taca 2014-07-30]
 	Updated www/contao33 to 3.3.4 [taca 2014-07-30]
+	Updated chat/ejabberd to 14.07 [fhajny 2014-07-30]
