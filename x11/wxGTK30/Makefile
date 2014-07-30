@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/07/21 06:53:24 dbj Exp $
+# $NetBSD: Makefile,v 1.2 2014/07/30 06:53:21 dbj Exp $
 #
 
 VERSION=	3.0.1
+PKGREVISION=	1
 DISTNAME=	wxWidgets-${VERSION}
 PKGNAME=	wxGTK30-${VERSION}
 CATEGORIES=	x11
@@ -11,7 +12,9 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	dbj@NetBSD.org
 HOMEPAGE=	http://www.wxwidgets.org/
 COMMENT=	GTK-based implementation of the wxWidgets GUI library
-LICENSE=	wxwindows-3.1
+
+# LGPLv2 with additional permission; http://opensource.org/licenses/wxwindows
+LICENSE=        gnu-lgpl-v2
 
 PATCHFILES=		${DISTNAME}-libtool.diff.bz2
 PATCH_SITES=		${MASTER_SITE_LOCAL}
@@ -62,6 +65,7 @@ post-build:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/licence.txt ${DESTDIR}${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/lgpl.txt ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/changes.txt ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/readme.txt ${DESTDIR}${PREFIX}/${DOCDIR}
 
