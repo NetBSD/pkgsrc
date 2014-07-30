@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2848 2014/07/30 21:34:51 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.2849 2014/07/30 21:55:43 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3753,3 +3753,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated chat/ejabberd to 14.07 [fhajny 2014-07-30]
 	Updated net/tor to 0.2.4.23 [wiz 2014-07-30]
 	Added devel/hs-monad-control version 0.3.3.0 [szptvlfn 2014-07-30]
+	Updated net/p5-RPC-XML to 0.78 [schmonz 2014-07-30]
