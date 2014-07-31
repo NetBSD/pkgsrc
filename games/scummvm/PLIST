@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2012/08/04 14:45:34 drochner Exp $
+@comment $NetBSD: PLIST,v 1.14 2014/07/31 06:52:22 adam Exp $
 bin/scummvm
 man/man6/scummvm.6
 share/doc/scummvm/AUTHORS
@@ -14,11 +14,14 @@ share/scummvm/drascula.dat
 share/scummvm/hugo.dat
 share/scummvm/kyra.dat
 share/scummvm/lure.dat
+share/scummvm/mort.dat
+share/scummvm/neverhood.dat
 share/scummvm/pred.dic
 share/scummvm/queen.tbl
 share/scummvm/scummclassic.zip
 share/scummvm/scummmodern.zip
 share/scummvm/sky.cpt
 share/scummvm/teenagent.dat
+share/scummvm/tony.dat
 share/scummvm/toon.dat
 share/scummvm/translations.dat
