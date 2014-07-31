@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2850 2014/07/31 00:00:47 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2851 2014/07/31 06:53:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3755,3 +3755,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/hs-monad-control version 0.3.3.0 [szptvlfn 2014-07-30]
 	Updated net/p5-RPC-XML to 0.78 [schmonz 2014-07-30]
 	Added textproc/php-excel version 1.8.0 [rodent 2014-07-30]
+	Updated games/scummvm to 1.7.0 [adam 2014-07-30]
