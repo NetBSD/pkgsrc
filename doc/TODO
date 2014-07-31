@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13511 2014/07/31 06:53:14 adam Exp $
+$NetBSD: TODO,v 1.13512 2014/07/31 10:16:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -519,8 +519,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o et-2.60
 	o etach-1.4.1
 	o eterm-0.9.6
-	o etm-891
-	o etm2-2.3.27 [etm successor]
+	o etm-3.0.34
 	o ettercap-0.7.6
 	o evolution-3.0.0
 	o evolution-couchdb-0.4.5
@@ -533,6 +532,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o felt-3.07
 	o fetchmail-6.3.26
 	o fetchyahoo-2.14.0
+	o ffmpeg2-2.3.1
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.2
@@ -573,7 +573,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gcompris-14.05
 	o gdal-1.10.1
 	o gdb-7.6 [wip]
-	o gdb-7.7.1
+	o gdb-7.8
 	o gdeskcal-1.01
 	o gdl-3.12.0
 	o gdm-2.32.2 [GNOME 2.32]
@@ -639,6 +639,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o goocanvas-2.0.2
 	o gossip-0.31
 	o gourmet-0.13.3
+	o gpgme-1.5.1
 	o gpsdrive-2.11
 	o gramofile-1.6P
 	o gramps-4.0.4
@@ -765,6 +766,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o libraw-0.16.0
 	o libreoffice-4.2.3
+	o libreoffice4-4.3
+	o libreoffice4-bin-4.3
 	o libstree-0.4.3pre2 [pkg/43748]
 	o libtar-1.2.20
 	o libtcl-nothread-8.5.1
