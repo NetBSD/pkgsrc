@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2852 2014/07/31 07:54:00 hiramatsu Exp $
+$NetBSD: CHANGES-2014,v 1.2853 2014/07/31 10:03:34 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3757,3 +3757,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added textproc/php-excel version 1.8.0 [rodent 2014-07-30]
 	Updated games/scummvm to 1.7.0 [adam 2014-07-30]
 	Updated devel/p5-OOTools to 2.30 [hiramatsu 2014-07-31]
+	Updated inputmethod/ibus to 1.5.8 [obache 2014-07-31]
