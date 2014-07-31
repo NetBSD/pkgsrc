@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2853 2014/07/31 10:03:34 obache Exp $
+$NetBSD: CHANGES-2014,v 1.2854 2014/07/31 14:06:15 roy Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3758,3 +3758,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated games/scummvm to 1.7.0 [adam 2014-07-30]
 	Updated devel/p5-OOTools to 2.30 [hiramatsu 2014-07-31]
 	Updated inputmethod/ibus to 1.5.8 [obache 2014-07-31]
+	Updated net/dhcpcd to 6.4.3 [roy 2014-07-31]
