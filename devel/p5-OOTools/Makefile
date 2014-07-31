@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/07/31 07:45:15 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.16 2014/07/31 07:53:22 hiramatsu Exp $
 
 DISTNAME=	OOTools-2.3
 PKGNAME=	p5-${DISTNAME}0
@@ -13,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		auto/OOTools/.packlist
+PERL5_PACKLIST=		auto/Class/props/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
