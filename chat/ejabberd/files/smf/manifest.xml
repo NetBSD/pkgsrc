@@ -23,6 +23,9 @@
     </dependency>
     <method_context working_directory='@EJABBERD_DB@'>
       <method_credential user='@EJABBERD_USER@' group='@EJABBERD_GROUP@' />
+      <method_environment>
+        <envvar name='HOME' value='@EJABBERD_DB@' />
+      </method_environment>
     </method_context>
     <exec_method name='start' type='method' exec='@PREFIX@/sbin/ejabberdctl start' timeout_seconds='120' />
     <exec_method name='stop' type='method' exec='@PREFIX@/sbin/ejabberdctl stop' timeout_seconds='60' />

@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: ejabberd.sh,v 1.3 2013/10/11 13:32:25 fhajny Exp $
+# $NetBSD: ejabberd.sh,v 1.4 2014/07/31 10:31:51 fhajny Exp $
 # $FreeBSD: ejabberd.sh.in,v 1.1 2005/08/28 15:51:48 vsevolod Exp $
 #
 # PROVIDE: ejabberd
@@ -29,7 +29,7 @@ EJABBERDCTL=@PREFIX@/sbin/ejabberdctl
 
 ejabberd_status()
 {
-    su -m $ejabberd_user -c "$EJABBERDCTL status >/dev/null"
+    su $ejabberd_user -c "$EJABBERDCTL status >/dev/null"
 }
 
 ejabberd_start()
@@ -39,7 +39,7 @@ ejabberd_start()
 	echo " already running."
 	exit 1
     else
-	su -m $ejabberd_user -c "$EJABBERDCTL start"
+	su $ejabberd_user -c "$EJABBERDCTL start"
     fi
     echo "$name."
 }
@@ -47,7 +47,7 @@ ejabberd_start()
 ejabberd_stop()
 {
     echo -n "Stopping $name: "
-    if su -m $ejabberd_user -c "$EJABBERDCTL stop"; then
+    if su $ejabberd_user -c "$EJABBERDCTL stop"; then
 	cnt=0
         while ejabberd_status; do
             cnt=`expr $cnt + 1`
@@ -68,7 +68,7 @@ ejabberd_reload()
 {
     echo -n "Restarting $name: "
     if ejabberd_status; then
-        su -m $ejabberd_user -c "$EJABBERDCTL restart"
+        su $ejabberd_user -c "$EJABBERDCTL restart"
     else
         ejabberd_start
     fi
