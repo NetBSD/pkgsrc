@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2014/05/25 06:07:34 obache Exp $
+# $NetBSD: Makefile,v 1.42 2014/07/31 10:03:14 obache Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=	3
 COMMENT=	Intelligent Input Bus
 
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
