@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/07/31 00:00:32 rodent Exp $
+
+SHA1 (php-excel/1.8.0.tar.gz) = 8c09e3a6a1cabd1d0174866e0c2d2694f3b75435
+RMD160 (php-excel/1.8.0.tar.gz) = 04a4ce7c0301d77d522f1fe58a0b089d256b87b3
+Size (php-excel/1.8.0.tar.gz) = 1751506 bytes
