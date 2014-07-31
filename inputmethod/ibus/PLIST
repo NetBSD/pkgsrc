@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/05/03 09:52:24 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/07/31 10:03:14 obache Exp $
 bin/ibus
 bin/ibus-daemon
 bin/ibus-setup
@@ -129,6 +129,9 @@ share/ibus/setup/engineabout.pyo
 share/ibus/setup/enginecombobox.py
 share/ibus/setup/enginecombobox.pyc
 share/ibus/setup/enginecombobox.pyo
+share/ibus/setup/enginedialog.py
+share/ibus/setup/enginedialog.pyc
+share/ibus/setup/enginedialog.pyo
 share/ibus/setup/enginetreeview.py
 share/ibus/setup/enginetreeview.pyc
 share/ibus/setup/enginetreeview.pyo
