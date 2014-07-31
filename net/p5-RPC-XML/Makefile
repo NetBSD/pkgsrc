@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2014/07/30 21:55:25 schmonz Exp $
+# $NetBSD: Makefile,v 1.18 2014/07/31 19:53:38 schmonz Exp $
 
 DISTNAME=	RPC-XML-0.78
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=RPC/}
 
@@ -23,6 +24,11 @@ DEPENDS+=	p5-Compress-Raw-Zlib>=2.063:../../devel/p5-Compress-Raw-Zlib
 
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		# empty
+
+SUBST_CLASSES+=		usebase
+SUBST_STAGE.usebase=	post-patch
+SUBST_FILES.usebase=	lib/RPC/XML.pm
+SUBST_SED.usebase=	-e "s|^use base 'RPC::XML::|use parent -norequire, 'RPC::XML::|g"
 
 PERL5_PACKLIST=		auto/RPC/XML/.packlist
 
