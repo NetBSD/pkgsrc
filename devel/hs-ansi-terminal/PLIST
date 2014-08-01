@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2014/08/01 12:07:44 szptvlfn Exp $
+lib/ansi-terminal-${PKGVERSION}/${HASKELL_VERSION}/HSansi-terminal-${PKGVERSION}.o
+lib/ansi-terminal-${PKGVERSION}/${HASKELL_VERSION}/System/Console/ANSI.hi
+lib/ansi-terminal-${PKGVERSION}/${HASKELL_VERSION}/System/Console/ANSI/Common.hi
+lib/ansi-terminal-${PKGVERSION}/${HASKELL_VERSION}/System/Console/ANSI/Unix.hi
+lib/ansi-terminal-${PKGVERSION}/${HASKELL_VERSION}/libHSansi-terminal-${PKGVERSION}.a
+lib/ansi-terminal-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/ansi-terminal-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/ansi-terminal-${PKGVERSION}/html/System-Console-ANSI.html
+${PLIST.doc}share/doc/ansi-terminal-${PKGVERSION}/html/ansi-terminal.haddock
+${PLIST.doc}share/doc/ansi-terminal-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/ansi-terminal-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/ansi-terminal-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/ansi-terminal-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/ansi-terminal-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/ansi-terminal-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/ansi-terminal-${PKGVERSION}/html/mini_System-Console-ANSI.html
+${PLIST.doc}share/doc/ansi-terminal-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/ansi-terminal-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/ansi-terminal-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/ansi-terminal-${PKGVERSION}/html/synopsis.png
