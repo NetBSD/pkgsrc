@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2863 2014/08/01 12:31:46 tron Exp $
+$NetBSD: CHANGES-2014,v 1.2864 2014/08/01 15:55:23 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3768,3 +3768,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/hs-ansi-terminal version 0.6.1.1 [szptvlfn 2014-08-01]
 	Added textproc/hs-stringsearch version 0.3.6.5 [szptvlfn 2014-08-01]
 	Updated print/xpdf to 3.04 [tron 2014-08-01]
+	Updated databases/percona-toolkit to 2.2.9 [fhajny 2014-08-01]
