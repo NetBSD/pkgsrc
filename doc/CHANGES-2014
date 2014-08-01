@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2866 2014/08/01 20:54:23 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.2867 2014/08/01 20:56:27 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3771,3 +3771,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/percona-toolkit to 2.2.9 [fhajny 2014-08-01]
 	Updated devel/git-base to 1.9.4nb1 [schmonz 2014-08-01]
 	Added devel/hs-lifted-base version 0.2.3.0 [szptvlfn 2014-08-01]
+	Added textproc/hs-regex-base version 0.93.2 [szptvlfn 2014-08-01]
