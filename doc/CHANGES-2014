@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2857 2014/08/01 09:29:02 obache Exp $
+$NetBSD: CHANGES-2014,v 1.2858 2014/08/01 11:26:47 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3762,3 +3762,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/p5-RPC-XML to 0.78nb1 [schmonz 2014-07-31]
 	Updated devel/mr to 1.20140613 [schmonz 2014-08-01]
 	Updated emulators/suse131_mozilla-nss to 13.1nb3 [obache 2014-08-01]
+	Updated devel/p5-enum to 1.090 [hiramatsu 2014-08-01]
