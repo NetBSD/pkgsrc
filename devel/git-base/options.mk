@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2014/01/03 17:31:25 richard Exp $
+# $NetBSD: options.mk,v 1.3 2014/08/01 19:18:39 schmonz Exp $
 #
 PKG_OPTIONS_VAR=	PKG_OPTIONS.git
-PKG_SUPPORTED_OPTIONS=	python
+PKG_SUPPORTED_OPTIONS=	python apple-common-crypto
 # python is not suggested because upstream's INSTALL does not list python
 # as a dependency and because all it does is install a python module,
 # which does not seem worth the dependency for everyone else.
@@ -22,4 +22,15 @@ CHECK_INTERPRETER_SKIP+= ${PYSITELIB}/git_remote_helpers/git/*.py
 .include "../../lang/python/extension.mk"
 .else
 CONFIGURE_ARGS+=	--without-python
+.endif
+
+.if !empty(PKG_OPTIONS:Mapple-common-crypto)
+.  if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
+PKG_FAIL_REASON=	"apple-common-crypto not available on this system"
+.  endif
+CONFIGURE_ARGS+=	--without-openssl
+.else
+CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
+.include "../../security/openssl/buildlink3.mk"
+MAKE_FLAGS+=		NO_APPLE_COMMON_CRYPTO=1
 .endif
