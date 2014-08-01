@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2014/06/02 16:32:36 adam Exp $
+# $NetBSD: Makefile,v 1.16 2014/08/01 19:18:39 schmonz Exp $
 
 .include "../../devel/git/Makefile.common"
 
 PKGNAME=	git-base-${GIT_VERSION}
+PKGREVISION=	1
 COMMENT=	GIT Tree History Storage Tool (base package)
 
 CONFLICTS+=		scmgit-base-[0-9]*
@@ -29,7 +30,6 @@ CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
 CONFIGURE_ARGS+=	--with-curl=${BUILDLINK_PREFIX.curl}
 CONFIGURE_ARGS+=	--with-expat=${BUILDLINK_PREFIX.expat}
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
-CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 CONFIGURE_ARGS+=	--without-tcltk
@@ -110,7 +110,6 @@ post-install:
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
