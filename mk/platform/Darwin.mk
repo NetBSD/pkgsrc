@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.61 2013/12/31 11:13:43 jperkin Exp $
+# $NetBSD: Darwin.mk,v 1.62 2014/08/01 14:59:14 schmonz Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -16,6 +16,7 @@
 # Lion		10.7.x	11.x.y	4.1 (llvm gcc 4.2.1)
 # Mountain Lion	10.8.x	12.x.y	4.5 (llvm gcc 4.2.1)
 # Mavericks	10.9.x	13.x.y	5 (llvm clang 5.0)
+# Yosemite	10.10.x	14.x.y	? (llvm clang 6.0)
 
 # Tiger (and earlier) use Xfree 4.4.0 (and earlier)
 .if empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
