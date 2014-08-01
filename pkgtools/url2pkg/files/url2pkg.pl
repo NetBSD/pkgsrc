@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.25 2014/06/25 12:15:10 rodent Exp $
+# $NetBSD: url2pkg.pl,v 1.26 2014/08/01 15:44:13 schmonz Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -373,6 +373,7 @@ sub adjust_package_from_extracted_distfiles()
 	my @files = ();
 	opendir(WRKDIR, $abs_wrkdir) or die;
 	while (defined(my $f = readdir(WRKDIR))) {
+		no if $] >= 5.018, warnings => "experimental::smartmatch";
 		given ($f) {
 			next when qr"^\.";
 			next when 'pax_global_header';
