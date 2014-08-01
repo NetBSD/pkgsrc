@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2861 2014/08/01 12:08:14 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.2862 2014/08/01 12:10:12 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3766,3 +3766,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/elasticsearch to 1.3.1 [fhajny 2014-08-01]
 	Updated lang/nodejs to 0.10.30 [fhajny 2014-08-01]
 	Added devel/hs-ansi-terminal version 0.6.1.1 [szptvlfn 2014-08-01]
+	Added textproc/hs-stringsearch version 0.3.6.5 [szptvlfn 2014-08-01]
