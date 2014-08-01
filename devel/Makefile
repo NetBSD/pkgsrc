@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1941 2014/07/30 21:35:53 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.1942 2014/08/01 12:09:16 szptvlfn Exp $
 #
 
 COMMENT=	Development utilities
@@ -293,6 +293,7 @@ SUBDIR+=	heirloom-what
 SUBDIR+=	hg-git
 SUBDIR+=	hoe
 SUBDIR+=	hptools
+SUBDIR+=	hs-ansi-terminal
 SUBDIR+=	hs-blaze-builder
 SUBDIR+=	hs-cmdargs
 SUBDIR+=	hs-cpphs
