@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2855 2014/07/31 19:53:43 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2856 2014/08/01 07:29:21 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3760,3 +3760,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated inputmethod/ibus to 1.5.8 [obache 2014-07-31]
 	Updated net/dhcpcd to 6.4.3 [roy 2014-07-31]
 	Updated net/p5-RPC-XML to 0.78nb1 [schmonz 2014-07-31]
+	Updated devel/mr to 1.20140613 [schmonz 2014-08-01]
