@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2877 2014/08/02 21:38:47 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.2878 2014/08/02 21:40:42 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3782,3 +3782,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/youtube-dl to 20140802 [tron 2014-08-02]
 	Added security/pev version 0.60 [khorben 2014-08-02]
 	Added textproc/hs-regex-posix version 0.95.2 [szptvlfn 2014-08-02]
+	Added devel/hs-safe version 0.3.7 [szptvlfn 2014-08-02]
