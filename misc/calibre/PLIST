@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2014/07/25 14:04:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.27 2014/08/02 08:57:01 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -1048,7 +1048,6 @@ lib/calibre/calibre/gui2/viewer/bookmarkmanager.py
 lib/calibre/calibre/gui2/viewer/bookmarkmanager_ui.py
 lib/calibre/calibre/gui2/viewer/config.py
 lib/calibre/calibre/gui2/viewer/config_ui.py
-lib/calibre/calibre/gui2/viewer/dictionary.py
 lib/calibre/calibre/gui2/viewer/documentview.py
 lib/calibre/calibre/gui2/viewer/flip.py
 lib/calibre/calibre/gui2/viewer/gestures.py
@@ -1158,7 +1157,6 @@ lib/calibre/calibre/utils/complete.py
 lib/calibre/calibre/utils/config.py
 lib/calibre/calibre/utils/config_base.py
 lib/calibre/calibre/utils/date.py
-lib/calibre/calibre/utils/dictclient.py
 lib/calibre/calibre/utils/file_associations.py
 lib/calibre/calibre/utils/filenames.py
 lib/calibre/calibre/utils/fonts/__init__.py
@@ -1477,6 +1475,7 @@ share/calibre/images/dialog_warning.png
 share/calibre/images/dictionary.png
 share/calibre/images/diff.png
 share/calibre/images/document-encrypt.png
+share/calibre/images/document-import.png
 share/calibre/images/document-new.png
 share/calibre/images/document_open.png
 share/calibre/images/donate.png
