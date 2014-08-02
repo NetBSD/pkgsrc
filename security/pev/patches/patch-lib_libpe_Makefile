@@ -1,0 +1,27 @@
+$NetBSD: patch-lib_libpe_Makefile,v 1.1 2014/08/02 14:11:08 khorben Exp $
+
+Fixed generation and installation of the libpe shared library on NetBSD
+
+--- lib/libpe/Makefile.orig	2012-10-31 03:59:14.000000000 +0000
++++ lib/libpe/Makefile
+@@ -30,6 +30,8 @@ all: pe.c pe.h
+ 	$(CC) -o $(LIBNAME).o $(CFLAGS) $(SRC)
+ ifeq ($(PLATFORM_OS), Linux)
+ 	$(CC) -shared -Wl,-soname,$(LIBNAME).so.1 -o $(LIBNAME).so $(LIBNAME).o
++else ifeq ($(PLATFORM_OS), NetBSD)
++	$(CC) -shared -Wl,-soname,$(LIBNAME).so.1 -o $(LIBNAME).so $(LIBNAME).o
+ else ifeq ($(PLATFORM_OS), Darwin)
+ 	$(CC) -headerpad_max_install_names -dynamiclib \
+ 		-flat_namespace -install_name $(LIBNAME).$(VERSION).dylib \
+@@ -46,6 +48,11 @@ ifeq ($(PLATFORM_OS), Linux)
+ 	$(INSTALL) $(LIBNAME).so $(DEST)/$(LIBNAME).so.$(VERSION)
+ 	cd $(DEST); $(SYMLINK) $(LIBNAME).so.$(VERSION) $(LIBNAME).so
+ 	cd $(DEST); $(SYMLINK) $(LIBNAME).so.$(VERSION) $(LIBNAME).so.1
++else ifeq ($(PLATFORM_OS), NetBSD)
++	$(STRIP) $(LIBNAME).so
++	$(INSTALL) $(LIBNAME).so $(DEST)/$(LIBNAME).so.$(VERSION)
++	cd $(DEST); $(SYMLINK) $(LIBNAME).so.$(VERSION) $(LIBNAME).so
++	cd $(DEST); $(SYMLINK) $(LIBNAME).so.$(VERSION) $(LIBNAME).so.1
+ else ifeq ($(PLATFORM_OS), Darwin)
+ 	$(STRIP) $(LIBNAME).dylib
+ 	$(INSTALL) $(LIBNAME).dylib $(DEST)/$(LIBNAME).$(VERSION).dylib
