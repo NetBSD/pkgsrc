@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.18 2014/08/01 13:05:07 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.19 2014/08/02 12:23:14 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q2 branch:
@@ -70,3 +70,5 @@ Pullup ticket #4465 - requested by dholland
 lang/openjdk7: fix for netbsd-5
 Pullup ticket #4467 - requested by wiz
 net/tor: security update
+Pullup ticket #4468 - requested by obache
+emulators/suse131_mozilla-nss: security update
