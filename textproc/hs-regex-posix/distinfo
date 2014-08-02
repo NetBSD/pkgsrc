@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/08/02 21:38:25 szptvlfn Exp $
+
+SHA1 (regex-posix-0.95.2.tar.gz) = 280a3aec0de94f03909d67e644f67bd918dff43f
+RMD160 (regex-posix-0.95.2.tar.gz) = 7ee59eb760bb8c0c7fe17e17d90eb0623b9fd5bb
+Size (regex-posix-0.95.2.tar.gz) = 42916 bytes
