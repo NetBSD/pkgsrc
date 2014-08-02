@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2014/08/02 21:40:16 szptvlfn Exp $
+lib/safe-${PKGVERSION}/${HASKELL_VERSION}/HSsafe-${PKGVERSION}.o
+lib/safe-${PKGVERSION}/${HASKELL_VERSION}/Safe.hi
+lib/safe-${PKGVERSION}/${HASKELL_VERSION}/Safe/Exact.hi
+lib/safe-${PKGVERSION}/${HASKELL_VERSION}/Safe/Foldable.hi
+lib/safe-${PKGVERSION}/${HASKELL_VERSION}/Safe/Util.hi
+lib/safe-${PKGVERSION}/${HASKELL_VERSION}/libHSsafe-${PKGVERSION}.a
+lib/safe-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/safe-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/safe-${PKGVERSION}/html/Safe-Exact.html
+${PLIST.doc}share/doc/safe-${PKGVERSION}/html/Safe-Foldable.html
+${PLIST.doc}share/doc/safe-${PKGVERSION}/html/Safe.html
+${PLIST.doc}share/doc/safe-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/safe-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/safe-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/safe-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/safe-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/safe-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/safe-${PKGVERSION}/html/mini_Safe-Exact.html
+${PLIST.doc}share/doc/safe-${PKGVERSION}/html/mini_Safe-Foldable.html
+${PLIST.doc}share/doc/safe-${PKGVERSION}/html/mini_Safe.html
+${PLIST.doc}share/doc/safe-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/safe-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/safe-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/safe-${PKGVERSION}/html/safe.haddock
+${PLIST.doc}share/doc/safe-${PKGVERSION}/html/synopsis.png
