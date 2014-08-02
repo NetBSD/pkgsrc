@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2875 2014/08/02 11:59:34 tron Exp $
+$NetBSD: CHANGES-2014,v 1.2876 2014/08/02 14:14:53 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3780,3 +3780,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-tortoisehg to 3.0.2 [wiz 2014-08-02]
 	Updated misc/calibre to 1.47.0 [wiz 2014-08-02]
 	Updated net/youtube-dl to 20140802 [tron 2014-08-02]
+	Added security/pev version 0.60 [khorben 2014-08-02]
