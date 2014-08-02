@@ -1,0 +1,3 @@
+pev is a PE file analysis toolkit that includes some nice programs to work with
+PE files in many systems. It can be useful for programmers, security analysts
+and forensic investigators. It's licensed under GPLv3+ terms.

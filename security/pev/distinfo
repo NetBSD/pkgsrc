@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2014/08/02 14:11:08 khorben Exp $
+
+SHA1 (pev-0.60.tar.gz) = fb61e4cb2fd62d0957f0637dabcd17202b41b181
+RMD160 (pev-0.60.tar.gz) = 27d88a10dfedd68c46163d17ba483b45f57389d4
+Size (pev-0.60.tar.gz) = 216584 bytes
+SHA1 (patch-lib_libpe_Makefile) = 5adf4a60f3320da9deddf74a740dd152b1810f0a
+SHA1 (patch-src_Makefile) = f8b1a5e33820626b4afad487b50ec184239db3bf
