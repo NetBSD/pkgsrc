@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.519 2014/07/26 19:57:59 tron Exp $
+# $NetBSD: Makefile,v 1.520 2014/08/02 14:12:56 khorben Exp $
 #
 
 COMMENT=	Security tools
@@ -304,6 +304,7 @@ SUBDIR+=	pam_ssh_agent_auth
 SUBDIR+=	paperkey
 SUBDIR+=	pcsc-lite
 SUBDIR+=	pcsc-tools
+SUBDIR+=	pev
 SUBDIR+=	pgp2
 SUBDIR+=	pgp5
 SUBDIR+=	pgpdump
