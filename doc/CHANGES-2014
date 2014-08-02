@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2871 2014/08/02 06:52:49 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2872 2014/08/02 07:04:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3776,3 +3776,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/mediawiki to 1.22.9 [wen 2014-08-01]
 	Updated inputmethod/libchewing to 0.4.0 [obache 2014-08-02]
 	Updated x11/xrandr to 1.4.3 [wiz 2014-08-02]
+	Updated devel/py-mercurial to 3.1 [wiz 2014-08-02]
