@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2869 2014/08/01 23:47:59 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2870 2014/08/02 04:54:19 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3774,3 +3774,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added textproc/hs-regex-base version 0.93.2 [szptvlfn 2014-08-01]
 	Added devel/hs-split version 0.2.2 [szptvlfn 2014-08-01]
 	Updated www/mediawiki to 1.22.9 [wen 2014-08-01]
+	Updated inputmethod/libchewing to 0.4.0 [obache 2014-08-02]
