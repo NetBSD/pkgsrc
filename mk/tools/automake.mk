@@ -1,4 +1,4 @@
-# $NetBSD: automake.mk,v 1.21 2013/11/30 06:24:38 richard Exp $
+# $NetBSD: automake.mk,v 1.22 2014/08/02 04:27:51 obache Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -78,8 +78,7 @@ PKG_FAIL_REASON+=	"\`\`automake'' and \`\`automake14'' conflict in USE_TOOLS."
 .endif
 
 # This is an exhaustive list of all of the scripts supplied by GNU
-# automake, up to but not including the current version as supplied
-# by the automake package itself.
+# automake.
 #
 _TOOLS_AM_NAMES=	aclocal		aclocal-1.4			\
 					aclocal-1.5			\
@@ -90,7 +89,8 @@ _TOOLS_AM_NAMES=	aclocal		aclocal-1.4			\
 					aclocal-1.10			\
 					aclocal-1.11			\
 					aclocal-1.12			\
-					aclocal-1.13
+					aclocal-1.13			\
+					aclocal-1.14
 _TOOLS_AM_NAMES+=	automake	automake-1.4			\
 					automake-1.5			\
 					automake-1.6			\
@@ -100,7 +100,8 @@ _TOOLS_AM_NAMES+=	automake	automake-1.4			\
 					automake-1.10			\
 					automake-1.11			\
 					automake-1.12			\
-					automake-1.13
+					automake-1.13			\
+					automake-1.14
 
 .for _t_ in ${_TOOLS_AM_NAMES}
 _TOOLS_AM_TYPE.${_t_}?=	TOOLS_GNU_MISSING
