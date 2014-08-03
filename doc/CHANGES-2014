@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2883 2014/08/03 19:18:22 tron Exp $
+$NetBSD: CHANGES-2014,v 1.2884 2014/08/03 21:29:32 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3788,3 +3788,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Mojolicious to 5.24 [wiz 2014-08-03]
 	Updated devel/ruby-test-unit-notify to 1.0.3 [obache 2014-08-03]
 	Updated net/wireshark to 1.10.9 [tron 2014-08-03]
+	Added textproc/hs-xml version 1.3.13 [szptvlfn 2014-08-03]
