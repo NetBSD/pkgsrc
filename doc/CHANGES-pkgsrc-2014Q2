@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.19 2014/08/02 12:23:14 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.20 2014/08/03 18:07:08 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q2 branch:
@@ -72,3 +72,5 @@ Pullup ticket #4467 - requested by wiz
 net/tor: security update
 Pullup ticket #4468 - requested by obache
 emulators/suse131_mozilla-nss: security update
+Pullup ticket #4469 - requested by tron
+print/xpdf: security update
