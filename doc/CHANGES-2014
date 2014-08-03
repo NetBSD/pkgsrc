@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2879 2014/08/02 21:42:46 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.2880 2014/08/03 08:15:00 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3784,3 +3784,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added textproc/hs-regex-posix version 0.95.2 [szptvlfn 2014-08-02]
 	Added devel/hs-safe version 0.3.7 [szptvlfn 2014-08-02]
 	Added math/hs-distributive version 0.4.4 [szptvlfn 2014-08-02]
+	Updated lang/ghc7 to 7.6.3nb4 [obache 2014-08-03]
