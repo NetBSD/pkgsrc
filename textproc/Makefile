@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.790 2014/08/02 21:39:50 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.791 2014/08/03 21:34:32 szptvlfn Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -208,11 +208,14 @@ SUBDIR+=	highlight
 SUBDIR+=	hre
 SUBDIR+=	hs-blaze-html
 SUBDIR+=	hs-blaze-markup
+SUBDIR+=	hs-cgrep
 SUBDIR+=	hs-parsec
 SUBDIR+=	hs-polyparse
 SUBDIR+=	hs-regex-base
 SUBDIR+=	hs-regex-posix
 SUBDIR+=	hs-stringsearch
+SUBDIR+=	hs-tagsoup
+SUBDIR+=	hs-xml
 SUBDIR+=	html
 SUBDIR+=	html2text
 SUBDIR+=	html2wml
