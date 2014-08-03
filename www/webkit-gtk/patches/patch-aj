@@ -1,13 +1,13 @@
-$NetBSD: patch-aj,v 1.2 2012/10/30 12:46:30 drochner Exp $
+$NetBSD: patch-aj,v 1.3 2014/08/03 22:30:05 wiz Exp $
 
---- Source/WTF/wtf/InlineASM.h.orig	2012-10-16 15:22:38.000000000 +0000
+--- Source/WTF/wtf/InlineASM.h.orig	2014-04-14 06:40:45.000000000 +0000
 +++ Source/WTF/wtf/InlineASM.h
 @@ -42,7 +42,7 @@
  #define THUMB_FUNC_PARAM(name)
  #endif
  
 -#if (OS(LINUX) || OS(FREEBSD)) && CPU(X86_64)
-+#if (OS(LINUX) || OS(FREEBSD) || OS(NETBSD) || OS(SOLARIS)) && CPU(X86_64) || (OS(SOLARIS) && CPU(X86))
++#if (OS(LINUX) || OS(FREEBSD) || OS(NETBSD) || OS(SOLARIS)) && CPU(X86_64) || (OS(SOLARIS) && CPU(X86)) 
  #define GLOBAL_REFERENCE(name) #name "@plt"
  #elif CPU(X86) && COMPILER(MINGW)
  #define GLOBAL_REFERENCE(name) "@" #name "@4"

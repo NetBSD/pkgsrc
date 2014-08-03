@@ -1,33 +1,73 @@
-$NetBSD: patch-configure,v 1.5 2012/10/30 12:46:30 drochner Exp $
+$NetBSD: patch-configure,v 1.6 2014/08/03 22:30:05 wiz Exp $
 
---- configure.orig	2012-10-16 22:11:45.000000000 +0000
+--- configure.orig	2014-05-12 06:05:21.000000000 +0000
 +++ configure
-@@ -18587,10 +18587,6 @@ install-data-am: install-gsettings-schem
+@@ -4703,7 +4703,7 @@ else
+     We can't simply define LARGE_OFF_T to be 9223372036854775807,
+     since some C++ compilers masquerading as C compilers
+     incorrectly reject 9223372036854775807.  */
+-#define LARGE_OFF_T ((((off_t) 1 << 31) << 31) - 1 + (((off_t) 1 << 31) << 31))
++#define LARGE_OFF_T (((off_t) 1 << 62) - 1 + ((off_t) 1 << 62))
+   int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
+ 		       && LARGE_OFF_T % 2147483647 == 1)
+ 		      ? 1 : -1];
+@@ -4749,7 +4749,7 @@ else
+     We can't simply define LARGE_OFF_T to be 9223372036854775807,
+     since some C++ compilers masquerading as C compilers
+     incorrectly reject 9223372036854775807.  */
+-#define LARGE_OFF_T ((((off_t) 1 << 31) << 31) - 1 + (((off_t) 1 << 31) << 31))
++#define LARGE_OFF_T (((off_t) 1 << 62) - 1 + ((off_t) 1 << 62))
+   int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
+ 		       && LARGE_OFF_T % 2147483647 == 1)
+ 		      ? 1 : -1];
+@@ -4773,7 +4773,7 @@ rm -f core conftest.err conftest.$ac_obj
+     We can't simply define LARGE_OFF_T to be 9223372036854775807,
+     since some C++ compilers masquerading as C compilers
+     incorrectly reject 9223372036854775807.  */
+-#define LARGE_OFF_T ((((off_t) 1 << 31) << 31) - 1 + (((off_t) 1 << 31) << 31))
++#define LARGE_OFF_T (((off_t) 1 << 62) - 1 + ((off_t) 1 << 62))
+   int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
+ 		       && LARGE_OFF_T % 2147483647 == 1)
+ 		      ? 1 : -1];
+@@ -4818,7 +4818,7 @@ else
+     We can't simply define LARGE_OFF_T to be 9223372036854775807,
+     since some C++ compilers masquerading as C compilers
+     incorrectly reject 9223372036854775807.  */
+-#define LARGE_OFF_T ((((off_t) 1 << 31) << 31) - 1 + (((off_t) 1 << 31) << 31))
++#define LARGE_OFF_T (((off_t) 1 << 62) - 1 + ((off_t) 1 << 62))
+   int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
+ 		       && LARGE_OFF_T % 2147483647 == 1)
+ 		      ? 1 : -1];
+@@ -4842,7 +4842,7 @@ rm -f core conftest.err conftest.$ac_obj
+     We can't simply define LARGE_OFF_T to be 9223372036854775807,
+     since some C++ compilers masquerading as C compilers
+     incorrectly reject 9223372036854775807.  */
+-#define LARGE_OFF_T ((((off_t) 1 << 31) << 31) - 1 + (((off_t) 1 << 31) << 31))
++#define LARGE_OFF_T (((off_t) 1 << 62) - 1 + ((off_t) 1 << 62))
+   int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
+ 		       && LARGE_OFF_T % 2147483647 == 1)
+ 		      ? 1 : -1];
+@@ -17312,10 +17312,13 @@ int
+ main ()
+ {
+   unsigned int major, minor, micro;
++  char *tmp_version;
  
- .SECONDARY: $(gsettings_SCHEMAS)
+   fclose (fopen ("conf.glibtest", "w"));
  
--gsettings__base_list = \
--  sed "$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g" | \
--  sed "$$!N;$$!N;$$!N;$$!N;s/\n/ /g"
--
- install-gsettings-schemas: $(gsettings_SCHEMAS:.xml=.valid) $(gsettings__enum_file)
- 	@$(NORMAL_INSTALL)
- 	test -z "$(gsettingsschemadir)" || $(MKDIR_P) "$(DESTDIR)$(gsettingsschemadir)"
-@@ -18598,7 +18594,7 @@ install-gsettings-schemas: $(gsettings_S
- 	for p in $$list; do \
- 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
- 	  echo "$$d$$p"; \
--	done | $(gsettings__base_list) | \
-+	done | \
- 	while read files; do \
- 	  echo " $(INSTALL_DATA) $$files '\''$(DESTDIR)$(gsettingsschemadir)'\''"; \
- 	  $(INSTALL_DATA) $$files "$(DESTDIR)$(gsettingsschemadir)" || exit $$?; \
-@@ -22297,7 +22293,7 @@ fi
- fi
- 
- if test "$with_acceleration_backend" = "opengl"; then
--    OPENGL_LIBS="-lGL -ldl"
-+    OPENGL_LIBS="-lGL"
- fi
+-  if (sscanf("$min_glib_version", "%u.%u.%u", &major, &minor, &micro) != 3) {
++  /* HP/UX 9 (%@#!) writes to sscanf strings */
++  tmp_version = g_strdup("$min_glib_version");
++  if (sscanf(tmp_version, "%u.%u.%u", &major, &minor, &micro) != 3) {
+      printf("%s, bad version string\n", "$min_glib_version");
+      exit(1);
+    }
+@@ -21110,7 +21113,7 @@ fi
  
  
+     # On some Linux/Unix platforms, shm_* may only be available if linking against librt
+-    if test "$os_win32" = "no"; then
++    if test "$os_win32" = "no" && test "$os_openbsd" = "no" && test "$os_netbsd" = "no"; then
+         { $as_echo "$as_me:${as_lineno-$LINENO}: checking for library containing shm_open" >&5
+ $as_echo_n "checking for library containing shm_open... " >&6; }
+ if ${ac_cv_search_shm_open+:} false; then :
