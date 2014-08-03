@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.1 2012/08/23 19:00:42 spz Exp $
+$NetBSD: patch-al,v 1.2 2014/08/03 17:33:34 spz Exp $
 
---- ./lib/fdlimit.c.orig	2009-10-12 18:24:04.000000000 +0000
-+++ ./lib/fdlimit.c
+--- lib/fdlimit.c.orig	2014-05-17 08:24:49.000000000 +0000
++++ lib/fdlimit.c
 @@ -59,6 +59,10 @@ setfdlimit(unsigned int limit)
      }
  #endif

@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.12 2009/09/22 13:17:00 spz Exp $
+$NetBSD: patch-aa,v 1.13 2014/08/03 17:33:34 spz Exp $
 
---- configure.orig	2009-05-21 20:08:33.000000000 +0000
+--- configure.orig	2014-05-17 08:24:49.000000000 +0000
 +++ configure
-@@ -13549,7 +13549,7 @@ else
+@@ -13018,7 +13018,7 @@ else
    RANLIB="$ac_cv_prog_RANLIB"
  fi
  

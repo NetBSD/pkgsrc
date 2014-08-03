@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2014/03/11 14:05:12 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.25 2014/08/03 17:33:34 spz Exp $
 bin/inews
 bin/rnews
 include/inn/buffer.h
@@ -187,7 +187,7 @@ man/man5/nntpsend.ctl.5
 man/man5/nocem.ctl.5
 man/man5/ovdb.5
 man/man5/passwd.nntp.5
-man/man5/radius.conf.5
+man/man5/inn-radius.conf.5
 man/man5/readers.conf.5
 man/man5/storage.conf.5
 man/man5/subscriptions.5
@@ -315,7 +315,7 @@ share/examples/inn/nntpsend.ctl
 share/examples/inn/nocem.ctl
 share/examples/inn/ovdb.conf
 share/examples/inn/passwd.nntp
-share/examples/inn/radius.conf
+share/examples/inn/inn-radius.conf
 share/examples/inn/readers.conf
 share/examples/inn/send-uucp.cf
 share/examples/inn/storage.conf
