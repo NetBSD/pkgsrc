@@ -1,13 +1,13 @@
-$NetBSD: README.MacOSX,v 1.17 2014/03/18 01:28:26 gdt Exp $
+$NetBSD: README.MacOSX,v 1.18 2014/08/03 01:16:41 schmonz Exp $
 
 * system tools issues
 
 ** gcc vs clang
 
 Older versions of Mac OS X (with XCode, of course) provided gcc, and
-pkgsrc defaulted to using gcc.  With 10.9, gcc is no longer present
-and one must bootstrap with "--compiler=clang".  (Arguably, pkgsrc
-should default to clang on 10.9.)
+pkgsrc defaulted to using gcc.  With 10.9, gcc is no longer present.
+(In 2014Q2 and earlier, one must explicitly bootstrap with
+"--compiler=clang".)
 
 ** i386 vs x86_64 ABI issue
 
@@ -48,7 +48,7 @@ App Store.
 
 Note that as of 10.9, cvs is no longer provided.  You can build
 devel/scmcvs.  To obtain pkgsrc in order to bootstrap and build cvs,
-it may be useful to use git to clone https://github.com/jsonn/pkgsrc
+it may be useful to `git clone https://github.com/jsonn/pkgsrc.git`.
 
 ** X11
 
