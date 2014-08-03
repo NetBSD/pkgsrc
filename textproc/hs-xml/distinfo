@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/08/03 21:28:58 szptvlfn Exp $
+
+SHA1 (xml-1.3.13.tar.gz) = 4dc92d926bdad13dd28a40e5c495f082420ea807
+RMD160 (xml-1.3.13.tar.gz) = d984bf1eef612e7ef31d5e58e6a3c2bbfd0d95c0
+Size (xml-1.3.13.tar.gz) = 12082 bytes
