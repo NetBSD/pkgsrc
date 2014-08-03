@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.152 2014/05/05 00:48:26 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.153 2014/08/03 22:13:19 wiz Exp $
 
 DISTNAME=	epiphany-2.30.6
 PKGREVISION=	37
@@ -40,7 +39,7 @@ GCONF_SCHEMAS+=	epiphany-lockdown.schemas
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.18.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
-.include "../../www/webkit-gtk/buildlink3.mk"
+.include "../../www/webkit1-gtk/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
