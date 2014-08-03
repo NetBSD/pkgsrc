@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1057 2014/07/24 21:22:15 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.1058 2014/08/03 22:09:30 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -756,6 +756,8 @@ SUBDIR+=	webalizer
 SUBDIR+=	webby
 SUBDIR+=	webkit-gtk
 SUBDIR+=	webkit-gtk3
+SUBDIR+=	webkit1-gtk
+SUBDIR+=	webkit1-gtk3
 SUBDIR+=	weblint
 SUBDIR+=	webnew
 SUBDIR+=	websvn
