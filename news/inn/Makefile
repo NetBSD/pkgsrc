@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.117 2014/05/29 23:37:13 wiz Exp $
+# $NetBSD: Makefile,v 1.118 2014/08/03 17:33:34 spz Exp $
 
-DISTNAME=		inn-2.5.3
-PKGREVISION=		7
+DISTNAME=		inn-2.5.4
 CATEGORIES=		news
 MASTER_SITES=		ftp://ftp.isc.org/isc/inn/ \
 			ftp://ftp.fu-berlin.de/unix/news/inn/
@@ -120,7 +119,7 @@ CFILES=			actsync.cfg actsync.ign buffindexed.conf \
 			motd.innd motd.nnrpd \
 			news2mail.cf newsfeeds nnrpd.track \
 			nntpsend.ctl nocem.ctl ovdb.conf passwd.nntp \
-			radius.conf readers.conf send-uucp.cf \
+			inn-radius.conf readers.conf send-uucp.cf \
 			storage.conf subscriptions
 .for file in ${CFILES}
 CONF_FILES_PERMS+=	${EXAMPLEDIR}/${file} ${PKG_SYSCONFDIR}/${file} \
