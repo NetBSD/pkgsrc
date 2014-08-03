@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.15 2012/08/23 19:00:42 spz Exp $
+$NetBSD: patch-ah,v 1.16 2014/08/03 17:33:34 spz Exp $
 
---- site/Makefile.orig	2012-06-15 18:25:36.000000000 +0000
+--- site/Makefile.orig	2014-05-17 08:24:49.000000000 +0000
 +++ site/Makefile
 @@ -75,35 +75,11 @@ REST		= \
  
