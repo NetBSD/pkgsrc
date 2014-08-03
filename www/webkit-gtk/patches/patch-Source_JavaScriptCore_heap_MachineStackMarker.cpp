@@ -1,6 +1,6 @@
-$NetBSD: patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp,v 1.2 2012/10/30 12:46:30 drochner Exp $
+$NetBSD: patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp,v 1.3 2014/08/03 22:30:05 wiz Exp $
 
---- Source/JavaScriptCore/heap/MachineStackMarker.cpp.orig	2012-10-16 15:22:38.000000000 +0000
+--- Source/JavaScriptCore/heap/MachineStackMarker.cpp.orig	2014-04-14 06:40:44.000000000 +0000
 +++ Source/JavaScriptCore/heap/MachineStackMarker.cpp
 @@ -20,6 +20,9 @@
   */
@@ -23,7 +23,7 @@ $NetBSD: patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp,v 1.2 2012/10/3
  #include <thread.h>
  #else
  #include <pthread.h>
-@@ -313,6 +320,7 @@ typedef pthread_attr_t PlatformThreadReg
+@@ -310,6 +317,7 @@ typedef pthread_attr_t PlatformThreadReg
  #error Need a thread register struct for this platform
  #endif
  
@@ -31,7 +31,7 @@ $NetBSD: patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp,v 1.2 2012/10/3
  static size_t getPlatformThreadRegisters(const PlatformThread& platformThread, PlatformThreadRegisters& regs)
  {
  #if OS(DARWIN)
-@@ -379,6 +387,7 @@ static size_t getPlatformThreadRegisters
+@@ -363,6 +371,7 @@ static size_t getPlatformThreadRegisters
  #error Need a way to get thread registers on this platform
  #endif
  }
@@ -39,15 +39,15 @@ $NetBSD: patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp,v 1.2 2012/10/3
  
  static inline void* otherThreadStackPointer(const PlatformThreadRegisters& regs)
  {
-@@ -442,6 +451,7 @@ static inline void* otherThreadStackPoin
+@@ -425,6 +434,7 @@ static inline void* otherThreadStackPoin
  #endif
  }
  
 +#if !OS(SOLARIS)
  static void freePlatformThreadRegisters(PlatformThreadRegisters& regs)
  {
- #if USE(PTHREADS) && !OS(WINDOWS) && !OS(DARWIN) && !OS(QNX)
-@@ -450,20 +460,36 @@ static void freePlatformThreadRegisters(
+ #if USE(PTHREADS) && !OS(WINDOWS) && !OS(DARWIN)
+@@ -433,20 +443,36 @@ static void freePlatformThreadRegisters(
      UNUSED_PARAM(regs);
  #endif
  }

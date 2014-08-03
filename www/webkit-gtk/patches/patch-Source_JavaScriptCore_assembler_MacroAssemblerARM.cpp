@@ -1,8 +1,8 @@
-$NetBSD: patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp,v 1.1 2013/08/14 22:16:54 jmcneill Exp $
+$NetBSD: patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp,v 1.2 2014/08/03 22:30:05 wiz Exp $
 
---- Source/JavaScriptCore/assembler/MacroAssemblerARM.cpp.orig	2012-11-23 20:12:15.000000000 +0000
+--- Source/JavaScriptCore/assembler/MacroAssemblerARM.cpp.orig	2014-03-19 11:10:05.000000000 +0000
 +++ Source/JavaScriptCore/assembler/MacroAssemblerARM.cpp
-@@ -37,6 +37,8 @@
+@@ -42,6 +42,8 @@
  #include <unistd.h>
  #include <elf.h>
  #include <asm/hwcap.h>
@@ -11,9 +11,9 @@ $NetBSD: patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp,v 1.1 2013/
  #endif
  
  namespace JSC {
-@@ -57,6 +59,16 @@ static bool isVFPPresent()
+@@ -62,6 +64,16 @@ static bool isVFPPresent()
      }
- #endif
+ #endif // OS(LINUX)
  
 +#if OS(NETBSD)
 +    size_t len;
@@ -23,8 +23,8 @@ $NetBSD: patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp,v 1.1 2013/
 +    if (sysctlbyname("machdep.fpu_present", &flag, &len, NULL, 0) == 0) {
 +        return flag == 1;
 +    }
-+#endif
++#endif // OS(NETBSD)
 +
- #if (COMPILER(RVCT) && defined(__TARGET_FPU_VFP)) || (COMPILER(GCC) && defined(__VFP_FP__))
+ #if (COMPILER(GCC) && defined(__VFP_FP__))
      return true;
  #else

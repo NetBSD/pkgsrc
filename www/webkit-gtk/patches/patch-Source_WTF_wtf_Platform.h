@@ -1,8 +1,8 @@
-$NetBSD: patch-Source_WTF_wtf_Platform.h,v 1.1 2013/08/14 22:16:54 jmcneill Exp $
+$NetBSD: patch-Source_WTF_wtf_Platform.h,v 1.2 2014/08/03 22:30:05 wiz Exp $
 
---- Source/WTF/wtf/Platform.h.orig	2012-11-23 20:12:16.000000000 +0000
+--- Source/WTF/wtf/Platform.h.orig	2014-04-14 06:40:45.000000000 +0000
 +++ Source/WTF/wtf/Platform.h
-@@ -484,6 +484,11 @@
+@@ -618,6 +618,11 @@
  #define USE_SYSTEM_MALLOC 1
  #endif
  
@@ -11,6 +11,6 @@ $NetBSD: patch-Source_WTF_wtf_Platform.h,v 1.1 2013/08/14 22:16:54 jmcneill Exp 
 +#define USE_SYSTEM_MALLOC 1
 +#endif
 +
- #if PLATFORM(BLACKBERRY)
- #define WTF_USE_MERSENNE_TWISTER_19937 1
- #define WTF_USE_SKIA 1
+ #if !defined(ENABLE_GLOBAL_FASTMALLOC_NEW)
+ #define ENABLE_GLOBAL_FASTMALLOC_NEW 1
+ #endif
