@@ -1,8 +1,10 @@
-$NetBSD: patch-al,v 1.4 2011/10/27 02:35:41 tez Exp $
+$NetBSD: patch-al,v 1.4.22.1 2014/08/03 18:06:12 spz Exp $
 
---- xpdf/GlobalParams.cc.orig	2011-08-15 16:08:53.000000000 -0500
-+++ xpdf/GlobalParams.cc	2011-10-26 20:15:39.959345400 -0500
-@@ -110,11 +110,13 @@
+Adapt list of directories with fonts.
+
+--- xpdf/GlobalParams.cc.orig	2014-05-28 19:50:50.000000000 +0100
++++ xpdf/GlobalParams.cc	2014-08-01 11:10:09.000000000 +0100
+@@ -120,11 +120,13 @@
  };
  #else
  static const char *displayFontDirs[] = {
@@ -17,6 +19,6 @@ $NetBSD: patch-al,v 1.4 2011/10/27 02:35:41 tez Exp $
 +  "/usr/X11R7/lib/X11/fonts/Type1",
 +  PREFIX"/xorg/lib/X11/fonts/Type1",
 +  PREFIX"/share/fonts/urw",
-   NULL
- };
+ #if defined(__sun) && defined(__SVR4)
+   "/usr/sfw/share/ghostscript/fonts",
  #endif
