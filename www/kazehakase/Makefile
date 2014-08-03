@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2014/05/05 00:48:26 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.66 2014/08/03 22:13:19 wiz Exp $
 
 DISTNAME=	kazehakase-0.5.8
 PKGREVISION=	32
@@ -42,7 +41,7 @@ CONF_FILES+=	${EGDIR}/mozilla/encodings.xml ${PKG_SYSCONFDIR}/mozilla/encodings.
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../www/webkit-gtk/buildlink3.mk"
+.include "../../www/webkit1-gtk/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.12.0
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
