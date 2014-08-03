@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2014/05/29 23:37:58 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2014/08/03 22:13:19 wiz Exp $
 
 DISTNAME=		liferea-1.8.15
 PKGREVISION=		9
@@ -31,7 +31,7 @@ GCONF_SCHEMAS=		liferea.schemas
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-.include "../../www/webkit-gtk/buildlink3.mk"
+.include "../../www/webkit1-gtk/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libunique/buildlink3.mk"
