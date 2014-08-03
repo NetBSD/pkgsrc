@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/05/05 00:47:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2014/08/03 22:13:19 wiz Exp $
 
 DISTNAME=	gmpc-wikipedia-11.8.16
 PKGREVISION=	5
@@ -16,5 +16,5 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	intltool pkg-config
 
 .include "../../audio/gmpc/buildlink3.mk"
-.include "../../www/webkit-gtk/buildlink3.mk"
+.include "../../www/webkit1-gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

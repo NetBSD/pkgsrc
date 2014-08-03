@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2014/05/29 23:37:57 wiz Exp $
+# $NetBSD: Makefile,v 1.130 2014/08/03 22:13:19 wiz Exp $
 
 DISTNAME=		liferea-1.4.28
 PKGREVISION=		42
@@ -29,7 +29,7 @@ PLIST.gtkhtml=	yes
 .endif
 .if !empty(PKG_OPTIONS:Mliferea-webkit)
 CONFIGURE_ARGS+=	--disable-gecko
-.include "../../www/webkit-gtk/buildlink3.mk"
+.include "../../www/webkit1-gtk/buildlink3.mk"
 PLIST.webkit=	yes
 .endif
 

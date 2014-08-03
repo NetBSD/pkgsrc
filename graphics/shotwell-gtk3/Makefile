@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/06/07 12:11:24 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.30 2014/08/03 22:13:19 wiz Exp $
 
 DISTNAME=		shotwell-0.15.1
 PKGREVISION=		4
@@ -45,7 +44,7 @@ BUILDLINK_DEPMETHOD.vala= build
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
-.include "../../www/webkit-gtk3/buildlink3.mk"
+.include "../../www/webkit1-gtk3/buildlink3.mk"
 .include "../../www/librest07/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libunique3/buildlink3.mk"

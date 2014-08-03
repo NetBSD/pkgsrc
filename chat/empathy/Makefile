@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2014/05/17 16:10:41 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2014/08/03 22:13:19 wiz Exp $
 
 DISTNAME=	empathy-2.34.0
 PKGREVISION=	40
@@ -56,7 +56,7 @@ BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.12.0
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libunique/buildlink3.mk"
 # notyet
-#.include "../../www/webkit-gtk/buildlink3.mk"
+#.include "../../www/webkit1-gtk/buildlink3.mk"
 #.include "../../graphics/clutter-mx/buildlink3.mk"
 #.include "../../chat/telepathy-logger/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
