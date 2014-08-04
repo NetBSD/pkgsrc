@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2894 2014/08/04 09:27:48 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2895 2014/08/04 09:28:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3799,3 +3799,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/devhelp to 2.32.0nb32 [wiz 2014-08-04]
 	Updated www/deforaos-surfer to 0.2.6nb15 [wiz 2014-08-04]
 	Updated www/epiphany to 2.30.6nb38 [wiz 2014-08-04]
+	Updated audio/gmpc-wikipedia to 11.8.16nb6 [wiz 2014-08-04]
