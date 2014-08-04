@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2014/08/03 22:13:19 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/08/04 09:28:33 wiz Exp $
 
 DISTNAME=	gmpc-wikipedia-11.8.16
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	http://download.sarine.nl/Programs/gmpc/11.8/ \
 		${MASTER_SITE_SOURCEFORGE:=musicpd/}
@@ -16,5 +16,5 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	intltool pkg-config
 
 .include "../../audio/gmpc/buildlink3.mk"
-.include "../../www/webkit1-gtk/buildlink3.mk"
+.include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
