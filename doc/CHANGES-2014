@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2892 2014/08/04 09:25:42 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2893 2014/08/04 09:26:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3797,3 +3797,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated inputmethod/ibus-chewing to 1.4.10.1 [obache 2014-08-04]
 	Updated www/midori to 0.4.9nb14 [wiz 2014-08-04]
 	Updated devel/devhelp to 2.32.0nb32 [wiz 2014-08-04]
+	Updated www/deforaos-surfer to 0.2.6nb15 [wiz 2014-08-04]
