@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2889 2014/08/03 22:34:20 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2890 2014/08/04 09:11:34 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3794,3 +3794,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Removed www/webkit-gtk3 [wiz 2014-08-04]
 	Updated www/webkit-gtk to 2.4.4 [wiz 2014-08-03]
 	Updated finance/gnucash to 2.6.3nb9 [wiz 2014-08-03]
+	Updated inputmethod/ibus-chewing to 1.4.10.1 [obache 2014-08-04]
