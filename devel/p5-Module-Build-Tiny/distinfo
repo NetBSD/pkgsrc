@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2014/03/09 13:01:26 wen Exp $
+$NetBSD: distinfo,v 1.7 2014/08/04 12:00:53 wen Exp $
 
-SHA1 (Module-Build-Tiny-0.035.tar.gz) = 0fa85d0636c3d1d3b2782cf399363a4f945611b1
-RMD160 (Module-Build-Tiny-0.035.tar.gz) = 1c092f8a61ce3b4ddc3d496b89ad8f869533959f
-Size (Module-Build-Tiny-0.035.tar.gz) = 20312 bytes
+SHA1 (Module-Build-Tiny-0.037.tar.gz) = c5c5ffa246c57a8326bfc9ea5215af52d2f2dc91
+RMD160 (Module-Build-Tiny-0.037.tar.gz) = 993855e15c3cd6d0f0d7120c9eef67a78ddf3312
+Size (Module-Build-Tiny-0.037.tar.gz) = 20507 bytes
