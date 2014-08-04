@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.16 2014/08/03 22:13:19 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2014/08/04 09:26:24 wiz Exp $
 
 DISTNAME=	Surfer-0.2.6
 PKGNAME=	deforaos-surfer-0.2.6
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	www
 MASTER_SITES=	http://www.defora.org/os/download/download/3709/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
 COMMENT=	DeforaOS desktop web browser
-
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config
@@ -32,7 +31,7 @@ post-install:
 .include "options.mk"
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../www/webkit1-gtk/buildlink3.mk"
+.include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../x11/deforaos-libdesktop/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
