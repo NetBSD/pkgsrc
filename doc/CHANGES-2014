@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2896 2014/08/04 09:29:29 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2897 2014/08/04 09:32:25 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3801,3 +3801,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/epiphany to 2.30.6nb38 [wiz 2014-08-04]
 	Updated audio/gmpc-wikipedia to 11.8.16nb6 [wiz 2014-08-04]
 	Updated www/liferea-current to 1.8.15nb10 [wiz 2014-08-04]
+	Updated graphics/rabbit to 2.1.3 [obache 2014-08-04]
