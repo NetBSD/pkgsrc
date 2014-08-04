@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2898 2014/08/04 11:08:46 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2899 2014/08/04 11:20:20 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3803,3 +3803,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/liferea-current to 1.8.15nb10 [wiz 2014-08-04]
 	Updated graphics/rabbit to 2.1.3 [obache 2014-08-04]
 	Updated www/p5-Plack to 1.0031 [wen 2014-08-04]
+	Updated textproc/p5-Text-Xslate to 3.3.3 [wen 2014-08-04]
