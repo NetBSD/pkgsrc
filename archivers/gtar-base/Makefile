@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2014/07/18 11:12:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.84 2014/08/04 10:27:29 joerg Exp $
 #
 # Please run 'make files/gtar.1' when updating version of this package
 # to regenerate the man page. converters/help2man is needed.
@@ -80,7 +80,7 @@ pre-configure:
 
 files/gtar.1: build
 	${ECHO} .\\\" > ${FILESDIR}/gtar.1
-	${ECHO} .\\\" \$$NetBSD\$$ >> ${FILESDIR}/gtar.1
+	${ECHO} .\\\" \$$""NetBSD\$$ >> ${FILESDIR}/gtar.1
 	help2man --name "The GNU version of the tar archiving utility" \
 		--info-page tar ${WRKSRC}/src/tar | \
 		${SED} '/help2man/d' >> ${FILESDIR}/gtar.1
