@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.37 2014/08/02 04:56:25 obache Exp $
+# $NetBSD: Makefile,v 1.38 2014/08/04 09:11:23 obache Exp $
 #
 
-DISTNAME=	ibus-chewing-1.4.7-Source
+DISTNAME=	ibus-chewing-1.4.10.1-Source
 PKGNAME=	${DISTNAME:S/-Source//}
-PKGREVISION=	2
 CATEGORIES=	inputmethod chinese
-MASTER_SITES=	http://ibus.googlecode.com/files/
+MASTER_SITES=	https://github.com/definite/ibus-chewing/releases/download/${PKGVERSION_NOREV}/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/ibus/
