@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2895 2014/08/04 09:28:47 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2896 2014/08/04 09:29:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3800,3 +3800,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/deforaos-surfer to 0.2.6nb15 [wiz 2014-08-04]
 	Updated www/epiphany to 2.30.6nb38 [wiz 2014-08-04]
 	Updated audio/gmpc-wikipedia to 11.8.16nb6 [wiz 2014-08-04]
+	Updated www/liferea-current to 1.8.15nb10 [wiz 2014-08-04]
