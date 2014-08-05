@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.SunOS,v 1.1 2013/09/20 17:26:14 ryoon Exp $
+@comment $NetBSD: PLIST.SunOS,v 1.2 2014/08/05 06:12:57 jperkin Exp $
 lib/rpm/platform/aarch64-solaris/macros
 lib/rpm/platform/alpha-solaris/macros
 lib/rpm/platform/alphaev5-solaris/macros
@@ -16,7 +16,7 @@ lib/rpm/platform/armv6l-solaris/macros
 lib/rpm/platform/armv7l-solaris/macros
 lib/rpm/platform/athlon-solaris/macros
 lib/rpm/platform/geode-solaris/macros
-lib/rpm/platform/${MACHINE_ARCH}-solaris/macros
+lib/rpm/platform/i386-solaris/macros
 lib/rpm/platform/i486-solaris/macros
 lib/rpm/platform/i586-solaris/macros
 lib/rpm/platform/i686-solaris/macros
