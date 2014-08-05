@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2014/01/02 19:52:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/08/05 18:38:02 wiz Exp $
 include/xcb/bigreq.h
 include/xcb/composite.h
 include/xcb/damage.h
@@ -1863,6 +1863,9 @@ man/man3/xcb_x_print_print_end_job_checked.3
 man/man3/xcb_x_print_print_end_page.3
 man/man3/xcb_x_print_print_end_page_checked.3
 man/man3/xcb_x_print_print_get_attributes.3
+man/man3/xcb_x_print_print_get_attributes_attributes.3
+man/man3/xcb_x_print_print_get_attributes_attributes_end.3
+man/man3/xcb_x_print_print_get_attributes_attributes_length.3
 man/man3/xcb_x_print_print_get_attributes_reply.3
 man/man3/xcb_x_print_print_get_attributes_unchecked.3
 man/man3/xcb_x_print_print_get_context.3
