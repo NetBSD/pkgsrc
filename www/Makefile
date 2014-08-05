@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1059 2014/08/03 22:31:45 wiz Exp $
+# $NetBSD: Makefile,v 1.1060 2014/08/05 12:35:43 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -157,7 +157,6 @@ SUBDIR+=	librest
 SUBDIR+=	librest07
 SUBDIR+=	libwww
 SUBDIR+=	liferea
-SUBDIR+=	liferea-current
 SUBDIR+=	lighttpd
 SUBDIR+=	links
 SUBDIR+=	links-gui
