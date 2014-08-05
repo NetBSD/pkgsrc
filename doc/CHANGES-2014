@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2903 2014/08/05 12:23:56 he Exp $
+$NetBSD: CHANGES-2014,v 1.2904 2014/08/05 12:35:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3808,3 +3808,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/py-anita to 1.33 [gson 2014-08-04]
 	Updated audio/hydrogen to 0.9.6 [mrg 2014-08-05]
 	Added net/py-netsnmp version 5.7.2.1 [he 2014-08-05]
+	Updated www/liferea to 1.8.15nb10 [wiz 2014-08-05]
