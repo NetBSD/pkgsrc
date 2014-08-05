@@ -1,4 +1,6 @@
-$NetBSD: patch-Opcodes_cpumeter.c,v 1.1 2014/03/06 10:16:53 mrg Exp $
+$NetBSD: patch-Opcodes_cpumeter.c,v 1.2 2014/08/05 05:12:38 mrg Exp $
+
+Add NetBSD and DragonFlyBSD support.
 
 be best to patch this to use eg, getloadavg() or something not /proc.
 

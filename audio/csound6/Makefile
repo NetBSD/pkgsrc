@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2014/05/09 07:36:53 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/08/05 05:12:38 mrg Exp $
 
 DISTNAME=		Csound${CSOUND_VERSION}
 PKGNAME=		csound6-${CSOUND_VERSION}
+PKGREVISION=		1
 CATEGORIES=		audio
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=csound/csound6/Csound6.02/}
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=csound/csound6/Csound${CSOUND_VERSION}/}
 WRKSRC=			${WRKDIR}/Csound${CSOUND_VERSION}
 
 MAINTAINER=		mrg@eterna.com.au
@@ -16,7 +17,7 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison
 CFLAGS+=		-g -D__PKGSRC_PREFIX__=\"${PREFIX}/\" -DBETA
 USE_CMAKE=		yes
-CMAKE_ARGS+=		-DUSE_PORTAUDIO:BOOL=OFF
+CMAKE_ARGS+=		-DUSE_PORTAUDIO:BOOL=ON
 CMAKE_ARGS+=		-DBUILD_RELEASE=1 -DCMAKE_BUILD_TYPE=Release 
 # CMAKE_INSTALL_RPATH doesn't work for some reason, so do it here.
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/csound6
@@ -39,7 +40,7 @@ post-install:
 
 .include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
-.include "../../audio/portaudio/buildlink3.mk"
+.include "../../audio/portaudio-devel/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
