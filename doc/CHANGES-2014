@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2913 2014/08/05 19:22:03 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2914 2014/08/05 19:22:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3818,3 +3818,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated print/tex-leaflet to 1.0e [wiz 2014-08-05]
 	Updated print/tex-leaflet-doc to 1.0e [wiz 2014-08-05]
 	Updated fonts/harfbuzz to 0.9.34 [wiz 2014-08-05]
+	Updated security/py-keyring to 4.0 [wiz 2014-08-05]
