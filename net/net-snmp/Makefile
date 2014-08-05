@@ -1,14 +1,11 @@
-# $NetBSD: Makefile,v 1.104 2014/05/29 23:37:05 wiz Exp $
+# $NetBSD: Makefile,v 1.105 2014/08/05 12:25:13 he Exp $
 
-DISTNAME=	net-snmp-5.7.2.1
+.include "Makefile.common"
 PKGREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=net-snmp/}
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://www.net-snmp.org/
 COMMENT=	Extensible SNMP implementation
-LICENSE=	modified-bsd
 
 CONFLICTS=	ucd-snmp-[0-9]*
 CONFLICTS+=	nocol-[0-9]*	# bin/snmpget bin/snmpwalk
