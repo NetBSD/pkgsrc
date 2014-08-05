@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2014/08/05 12:22:43 he Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/netsnmp/__init__.py
+${PYSITELIB}/netsnmp/__init__.pyc
+${PYSITELIB}/netsnmp/__init__.pyo
+${PYSITELIB}/netsnmp/client.py
+${PYSITELIB}/netsnmp/client.pyc
+${PYSITELIB}/netsnmp/client.pyo
+${PYSITELIB}/netsnmp/client_intf.so
+${PYSITELIB}/netsnmp/tests/__init__.py
+${PYSITELIB}/netsnmp/tests/__init__.pyc
+${PYSITELIB}/netsnmp/tests/__init__.pyo
+${PYSITELIB}/netsnmp/tests/test.py
+${PYSITELIB}/netsnmp/tests/test.pyc
+${PYSITELIB}/netsnmp/tests/test.pyo
