@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2902 2014/08/05 05:00:09 mrg Exp $
+$NetBSD: CHANGES-2014,v 1.2903 2014/08/05 12:23:56 he Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3807,3 +3807,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Module-Build-Tiny to 0.037 [wen 2014-08-04]
 	Updated misc/py-anita to 1.33 [gson 2014-08-04]
 	Updated audio/hydrogen to 0.9.6 [mrg 2014-08-05]
+	Added net/py-netsnmp version 5.7.2.1 [he 2014-08-05]
