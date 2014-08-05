@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2908 2014/08/05 18:37:47 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2909 2014/08/05 18:38:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3813,3 +3813,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/libreoffice4 to 4.2.5.2nb2 [wiz 2014-08-05]
 	Updated x11/xcb-proto to 1.11 [wiz 2014-08-05]
 	Updated x11/py-xcbgen to 1.11 [wiz 2014-08-05]
+	Updated x11/libxcb to 1.11 [wiz 2014-08-05]
