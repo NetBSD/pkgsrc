@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13520 2014/08/05 07:58:58 wiz Exp $
+$NetBSD: TODO,v 1.13521 2014/08/05 18:37:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1186,7 +1186,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xbindkeys-1.8.6
 	o xbindkeys-tk-1.8.0
 	o xboard-4.7.0
-	o xcb-proto-1.11
 	o xcmsdb-1.0.4 [unpackaged]
 	o xemacs-current-21.5.31
 	o xentools44-4.4.0
