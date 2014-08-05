@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2906 2014/08/05 15:55:18 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2907 2014/08/05 18:37:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3811,3 +3811,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/liferea to 1.8.15nb10 [wiz 2014-08-05]
 	Removed www/liferea-current successor www/liferea [wiz 2014-08-05]
 	Updated misc/libreoffice4 to 4.2.5.2nb2 [wiz 2014-08-05]
+	Updated x11/xcb-proto to 1.11 [wiz 2014-08-05]
