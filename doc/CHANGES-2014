@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2904 2014/08/05 12:35:02 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2905 2014/08/05 12:36:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3809,3 +3809,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/hydrogen to 0.9.6 [mrg 2014-08-05]
 	Added net/py-netsnmp version 5.7.2.1 [he 2014-08-05]
 	Updated www/liferea to 1.8.15nb10 [wiz 2014-08-05]
+	Removed www/liferea-current successor www/liferea [wiz 2014-08-05]
