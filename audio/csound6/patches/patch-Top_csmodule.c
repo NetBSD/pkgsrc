@@ -1,4 +1,7 @@
-$NetBSD: patch-Top_csmodule.c,v 1.1 2014/03/06 10:16:53 mrg Exp $
+$NetBSD: patch-Top_csmodule.c,v 1.2 2014/08/05 05:12:38 mrg Exp $
+
+Fix the installation path for csound6 plugins.
+Add NetBSD and DragonFlyBSD support.
 
 --- Top/csmodule.c.orig	2014-01-07 08:54:20.000000000 -0800
 +++ Top/csmodule.c	2014-02-13 02:01:01.000000000 -0800
