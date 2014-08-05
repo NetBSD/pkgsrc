@@ -1,4 +1,6 @@
-$NetBSD: patch-frontends_CsoundVST_ScoreGeneratorVstMain.cpp,v 1.1 2014/03/06 10:16:53 mrg Exp $
+$NetBSD: patch-frontends_CsoundVST_ScoreGeneratorVstMain.cpp,v 1.2 2014/08/05 05:12:38 mrg Exp $
+
+Add NetBSD and DragonFlyBSD support.
 
 +++ frontends/CsoundVST/ScoreGeneratorVstMain.cpp.orig	2013-01-07 04:49:35.000000000 -0800
 --- frontends/CsoundVST/ScoreGeneratorVstMain.cpp	2014-02-12 20:42:30.000000000 -0800

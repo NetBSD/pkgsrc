@@ -1,4 +1,6 @@
-$NetBSD: patch-InOut_widgets.cpp,v 1.1 2014/03/06 10:16:53 mrg Exp $
+$NetBSD: patch-InOut_widgets.cpp,v 1.2 2014/08/05 05:12:38 mrg Exp $
+
+Add NetBSD and DragonFlyBSD support.
 
 --- InOut/widgets.cpp.orig	2014-01-07 08:53:47.000000000 -0800
 +++ InOut/widgets.cpp	2014-02-12 23:46:20.000000000 -0800
