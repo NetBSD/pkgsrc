@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.35 2014/07/22 10:53:30 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2014/08/05 15:55:05 wiz Exp $
 
 VERREL=		4.2.5
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
 PKGNAME=	libreoffice4-${VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -80,6 +80,17 @@ MORE_DISTFILES= \
 	d62650a6f908e85643e557a236ea989c-vigra1.6.0.tar.gz \
 	185d60944ea767075d27247c3162b3bc-unowinreg.dll \
 	368f114c078f94214a308a74c7e991bc-crosextrafonts-20130214.tar.gz \
+      a3dcac551fae5ebbec16e844810828c4-libwpd-0.9.9.tar.bz2 \
+      libabw-0.0.2.tar.bz2 \
+      libcdr-0.0.15.tar.bz2 \
+      libe-book-0.0.3.tar.bz2 \
+      libetonyek-0.0.4.tar.bz2 \
+      libfreehand-0.0.0.tar.bz2 \
+      libmspub-0.0.6.tar.bz2 \
+      libvisio-0.0.31.tar.bz2 \
+      b85436266b2ac91d351ab5684b181151-libwpg-0.2.2.tar.bz2 \
+      libmwaw-0.2.0.tar.bz2 \
+      libodfgen-0.0.4.tar.bz2 \
 	c74b7223abe75949b4af367942d96c7a-crosextrafonts-carlito-20130920.tar.gz
 
 .for md in ${MORE_DISTFILES}
@@ -167,6 +178,18 @@ CONFIGURE_ARGS+=	--without-system-jfreereport
 CONFIGURE_ARGS+=	--without-system-npapi-headers
 # internal sane should be used because only header files are used.
 CONFIGURE_ARGS+=	--without-system-sane
+CONFIGURE_ARGS+=        --without-system-libabw
+CONFIGURE_ARGS+=        --without-system-libcdr
+CONFIGURE_ARGS+=        --without-system-libebook
+CONFIGURE_ARGS+=        --without-system-libetonyek
+CONFIGURE_ARGS+=        --without-system-libfreehand
+CONFIGURE_ARGS+=        --without-system-libmspub
+CONFIGURE_ARGS+=        --without-system-libvisio
+CONFIGURE_ARGS+=        --without-system-libwpd
+CONFIGURE_ARGS+=        --without-system-libwpg
+CONFIGURE_ARGS+=        --without-system-libwps
+CONFIGURE_ARGS+=        --without-system-libmwaw
+CONFIGURE_ARGS+=        --without-system-libodfgen
 # sbin might not be in PATH
 CONFIGURE_ARGS+=	ac_cv_path_SYSTEM_GENCCODE=${BUILDLINK_PREFIX.icu}/sbin/genccode
 CONFIGURE_ARGS+=	ac_cv_path_SYSTEM_GENCMN=${BUILDLINK_PREFIX.icu}/sbin/gencmn
@@ -227,17 +250,6 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/share/applications && ${LN} -s ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/share/xdg/${f}
 .endfor
 
-.include "../../converters/libabw/buildlink3.mk"
-.include "../../converters/libcdr/buildlink3.mk"
-.include "../../converters/libe-book/buildlink3.mk"
-.include "../../converters/libetonyek/buildlink3.mk"
-.include "../../converters/libfreehand/buildlink3.mk"
-.include "../../converters/libmspub/buildlink3.mk"
-.include "../../converters/libvisio/buildlink3.mk"
-.include "../../converters/libwpd/buildlink3.mk"
-.include "../../converters/libwpg/buildlink3.mk"
-.include "../../converters/libwps/buildlink3.mk"
-.include "../../converters/libmwaw/buildlink3.mk"
 .include "../../converters/orcus/buildlink3.mk"
 .include "../../databases/db4/buildlink3.mk"
 .include "../../databases/openldap-client/buildlink3.mk"
@@ -283,7 +295,6 @@ post-install:
 .include "../../textproc/hyphen/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libclucene/buildlink3.mk"
-.include "../../textproc/libodfgen/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/redland/buildlink3.mk"
