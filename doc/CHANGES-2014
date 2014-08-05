@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2910 2014/08/05 18:39:13 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2911 2014/08/05 19:15:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3815,3 +3815,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/py-xcbgen to 1.11 [wiz 2014-08-05]
 	Updated x11/libxcb to 1.11 [wiz 2014-08-05]
 	Updated devel/py-setuptools to 5.4.2 [wiz 2014-08-05]
+	Updated print/tex-leaflet to 1.0e [wiz 2014-08-05]
