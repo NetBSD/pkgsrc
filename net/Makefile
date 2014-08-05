@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1029 2014/07/22 12:53:33 manu Exp $
+# $NetBSD: Makefile,v 1.1030 2014/08/05 12:22:53 he Exp $
 #
 
 COMMENT=	Networking tools
@@ -570,6 +570,7 @@ SUBDIR+=	py-medusa
 SUBDIR+=	py-metar
 SUBDIR+=	py-netifaces
 SUBDIR+=	py-netlib
+SUBDIR+=	py-netsnmp
 SUBDIR+=	py-omniORBpy
 SUBDIR+=	py-pcap
 SUBDIR+=	py-ptt
