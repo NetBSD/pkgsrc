@@ -1,4 +1,6 @@
-$NetBSD: patch-InOut_winFLTK.c,v 1.1 2014/03/06 10:16:53 mrg Exp $
+$NetBSD: patch-InOut_winFLTK.c,v 1.2 2014/08/05 05:12:38 mrg Exp $
+
+Add NetBSD and DragonFlyBSD support.
 
 --- InOut/winFLTK.c.orig	2014-01-07 08:53:47.000000000 -0800
 +++ InOut/winFLTK.c	2014-02-12 23:47:05.000000000 -0800
