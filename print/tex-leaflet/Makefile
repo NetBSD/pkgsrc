@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/05/20 18:01:30 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2014/08/05 19:15:22 wiz Exp $
 
 DISTNAME=	leaflet
-PKGNAME=	tex-${DISTNAME}-1.0c
-TEXLIVE_REV=	15878
+PKGNAME=	tex-${DISTNAME}-1.0e
+TEXLIVE_REV=	32093
 
 MAINTAINER=	leot1990@users.sourceforge.net
 COMMENT=	Create small handouts (flyers)
