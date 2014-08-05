@@ -1,0 +1,4 @@
+This is the Python 'netsnmp' extension module. The 'netsnmp' module
+provides a full featured, tri-lingual SNMP (SNMPv3, SNMPv2c,
+SNMPv1) client API. The 'netsnmp' module internals rely on the
+Net-SNMP toolkit library.
