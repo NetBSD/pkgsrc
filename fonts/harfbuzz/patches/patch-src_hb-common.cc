@@ -1,7 +1,8 @@
-$NetBSD: patch-src_hb-common.cc,v 1.1 2014/08/06 11:59:32 wiz Exp $
+$NetBSD: patch-src_hb-common.cc,v 1.2 2014/08/06 12:04:32 wiz Exp $
 
 Libraries should not call atexit().
 Remove wrong inline.
+https://bugs.freedesktop.org/show_bug.cgi?id=82246
 
 --- src/hb-common.cc.orig	2014-07-30 21:55:33.000000000 +0000
 +++ src/hb-common.cc
