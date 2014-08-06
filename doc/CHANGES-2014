@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2915 2014/08/05 19:25:34 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2916 2014/08/06 06:17:58 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3807,6 +3807,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Module-Build-Tiny to 0.037 [wen 2014-08-04]
 	Updated misc/py-anita to 1.33 [gson 2014-08-04]
 	Updated audio/hydrogen to 0.9.6 [mrg 2014-08-05]
+	Updated audio/csound6 to 6.02nb1 [mrg 2014-08-05]
 	Added net/py-netsnmp version 5.7.2.1 [he 2014-08-05]
 	Updated www/liferea to 1.8.15nb10 [wiz 2014-08-05]
 	Removed www/liferea-current successor www/liferea [wiz 2014-08-05]
@@ -3820,3 +3821,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated fonts/harfbuzz to 0.9.34 [wiz 2014-08-05]
 	Updated security/py-keyring to 4.0 [wiz 2014-08-05]
 	Updated audio/musicpd to 0.18.12 [wiz 2014-08-05]
+	Updated audio/csound6 to 6.03.2 [mrg 2014-08-06]
