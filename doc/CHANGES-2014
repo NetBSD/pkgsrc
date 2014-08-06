@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2920 2014/08/06 10:53:02 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2921 2014/08/06 10:55:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3826,3 +3826,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/atk to 2.12.0 [wiz 2014-08-06]
 	Added archivers/lz4 version 120 [fhajny 2014-08-06]
 	Updated devel/at-spi2-core to 2.12.0 [wiz 2014-08-06]
+	Updated devel/at-spi2-atk to 2.12.1 [wiz 2014-08-06]
