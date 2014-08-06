@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/08/05 05:12:38 mrg Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/08/06 06:17:07 mrg Exp $
 bin/csound6
 include/csound6/CppSound.hpp
 include/csound6/CsoundFile.hpp
@@ -7,6 +7,7 @@ include/csound6/cfgvar.h
 include/csound6/csPerfThread.hpp
 include/csound6/cs_par_structs.h
 include/csound6/cscore.h
+include/csound6/csdebug.h
 include/csound6/csdl.h
 include/csound6/csound.h
 include/csound6/csound.hpp
@@ -16,7 +17,6 @@ include/csound6/csound_standard_types.h
 include/csound6/csound_type_system.h
 include/csound6/cwindow.h
 include/csound6/filebuilding.h
-include/csound6/float-version-double.h
 include/csound6/float-version.h
 include/csound6/interlocks.h
 include/csound6/msg_attr.h
@@ -32,6 +32,7 @@ lib/csound6/cs
 lib/csound6/csanalyze
 lib/csound6/csb64enc
 lib/csound6/csbeats
+lib/csound6/csdebugger
 lib/csound6/csound
 lib/csound6/cvanal
 lib/csound6/dnoise
