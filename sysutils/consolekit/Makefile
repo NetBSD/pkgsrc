@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2014/05/29 23:37:27 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2014/08/06 12:21:03 obache Exp $
 #
 
 CONSOLEKIT_VER=		0.3.0
@@ -9,7 +9,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		http://www.freedesktop.org/software/ConsoleKit/dist/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=	netbsd-desktop@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/wiki/Software/ConsoleKit
 COMMENT=	Framework for defining and tracking users, login sessions, and seats
 LICENSE=	gnu-gpl-v2
