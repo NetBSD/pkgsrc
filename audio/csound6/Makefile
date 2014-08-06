@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2014/08/05 05:12:38 mrg Exp $
+# $NetBSD: Makefile,v 1.5 2014/08/06 06:17:07 mrg Exp $
 
 DISTNAME=		Csound${CSOUND_VERSION}
 PKGNAME=		csound6-${CSOUND_VERSION}
 PKGREVISION=		1
 CATEGORIES=		audio
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=csound/csound6/Csound${CSOUND_VERSION}/}
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=csound/csound6/Csound6.03/}
 WRKSRC=			${WRKDIR}/Csound${CSOUND_VERSION}
 
 MAINTAINER=		mrg@eterna.com.au
@@ -12,7 +12,7 @@ HOMEPAGE=		http://sourceforge.net/projects/csound/
 COMMENT=		Software synthesizer and sequencer
 LICENSE=		gnu-lgpl-v2.1 # or later
 
-CSOUND_VERSION=		6.02
+CSOUND_VERSION=		6.03.2
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison
 CFLAGS+=		-g -D__PKGSRC_PREFIX__=\"${PREFIX}/\" -DBETA
