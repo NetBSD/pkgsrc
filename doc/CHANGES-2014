@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2916 2014/08/06 06:17:58 mrg Exp $
+$NetBSD: CHANGES-2014,v 1.2917 2014/08/06 10:25:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3822,3 +3822,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/py-keyring to 4.0 [wiz 2014-08-05]
 	Updated audio/musicpd to 0.18.12 [wiz 2014-08-05]
 	Updated audio/csound6 to 6.03.2 [mrg 2014-08-06]
+	Updated graphics/MesaLib to 7.11.2nb5 [wiz 2014-08-06]
