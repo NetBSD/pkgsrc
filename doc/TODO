@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13529 2014/08/06 10:55:23 wiz Exp $
+$NetBSD: TODO,v 1.13530 2014/08/06 13:53:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -437,7 +437,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cln-1.33
 	o clutter-1.18.2
 	o clutter-gst-2.0.10 [require gstreamer1>=1.2.0]
-	o cmake-3.0.0
+	o cmake-3.0.1
 	o cmus-2.5.1 [pkg/48819]
 	o coccigrep-2.13
 	o cogl-1.18.2
@@ -459,7 +459,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cross-h8300-hms-binutils-2.17
 	o crossfire-1.71.0
 	o crossfire-client-gtk2-1.60.0
-	o csound6-6.03.2
 	o cssc-1.4.0
 	o cuisine-0.6.5
 	o cups-1.7.5
@@ -675,6 +674,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o handbrake-0.9.9
 	o hanzim-3.5
 	o haskell-mode-1.45
+	o hatari-1.8.0
 	o hdf-4.2.7
 	o hesiod-3.1.0
 	o heyu-2.9.0
@@ -844,7 +844,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ncview-2.1.1
 	o ne-2.01
 	o nessus-4.4.1
-	o net-snmp-5.7.2.1
 	o netatalk-3.1.0 [wip]
 	o netpbm-10.35.92
 	o netramet-50
@@ -1105,7 +1104,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tetrinetx-1.40c
 	o texlive-2014
 	o texmaker-4.1.1 [wip]
-	o texmaker-4.2
+	o texmaker-4.3
 	o tfmxplay-1.1.6
 	o tightvnc-2.7.10
 	o tile-0.7.4
