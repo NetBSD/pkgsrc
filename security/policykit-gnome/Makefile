@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2014/05/29 23:37:25 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2014/08/06 12:21:03 obache Exp $
 #
 
 POLICYKIT_GNOME_VER=	0.9.2
@@ -9,7 +9,7 @@ CATEGORIES=		security
 MASTER_SITES=		http://hal.freedesktop.org/releases/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		netbsd-desktop@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://hal.freedesktop.org/
 COMMENT=		GNOME dialogs for PolicyKit
 LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
