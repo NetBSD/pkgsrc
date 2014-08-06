@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2014/08/06 10:41:33 fhajny Exp $
+bin/lz4
+bin/lz4c
+bin/lz4cat
+include/lz4.h
+include/lz4hc.h
+lib/liblz4.a
+lib/liblz4.so
+lib/liblz4.so.1
+lib/liblz4.so.1.3.0
+lib/pkgconfig/liblz4.pc
+man/man1/lz4.1
+man/man1/lz4c.1
+man/man1/lz4cat.1
