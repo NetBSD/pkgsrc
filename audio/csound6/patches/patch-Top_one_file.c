@@ -1,9 +1,9 @@
-$NetBSD: patch-Top_one_file.c,v 1.2 2014/08/05 05:12:38 mrg Exp $
+$NetBSD: patch-Top_one_file.c,v 1.3 2014/08/06 06:17:07 mrg Exp $
 
 Add NetBSD and DragonFlyBSD support.
 
---- Top/one_file.c.orig	2014-01-07 08:54:20.000000000 -0800
-+++ Top/one_file.c	2014-02-12 23:53:28.000000000 -0800
+--- Top/one_file.c.orig	2014-05-04 04:49:41.000000000 -0700
++++ Top/one_file.c	2014-08-04 22:21:26.000000000 -0700
 @@ -29,7 +29,7 @@
  #include <stdlib.h>
  #include "corfile.h"
@@ -13,16 +13,16 @@ Add NetBSD and DragonFlyBSD support.
  #  include <sys/types.h>
  #  include <sys/stat.h>
  #endif
-@@ -77,7 +77,7 @@
+@@ -62,7 +62,7 @@
  {
-     size_t  nBytes = 256;
+ #define   nBytes (256)
      char lbuf[256];
 -#if defined(LINUX) || defined(__MACH__)
 +#if defined(LINUX) || defined(__MACH__) || defined(__NetBSD__) || defined(__DragonFly__)
      struct stat tmp;
  #elif defined(WIN32)
      struct _stat tmp;
-@@ -109,7 +109,7 @@
+@@ -94,7 +94,7 @@
        }
  #endif
        if (ext != NULL && ext[0] != (char) 0) {
@@ -31,7 +31,7 @@ Add NetBSD and DragonFlyBSD support.
          char  *p;
          /* remove original extension (does not work on OS X */
          /* and may be a bad idea) */
-@@ -129,7 +129,7 @@
+@@ -114,7 +114,7 @@
            } while (lbuf[i] != '\0');
        }
  #endif
