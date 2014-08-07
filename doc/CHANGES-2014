@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2939 2014/08/07 02:33:03 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2940 2014/08/07 02:37:19 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3845,3 +3845,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-flask-testing to 0.4.2 [rodent 2014-08-07]
 	Updated www/py-wtforms-components to 0.9.5 [rodent 2014-08-07]
 	Updated www/py-wtforms-alchemy to 0.12.8 [rodent 2014-08-07]
+	Updated net/py-celery to 3.1.13 [rodent 2014-08-07]
