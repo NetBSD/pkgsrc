@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2925 2014/08/07 01:15:48 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2926 2014/08/07 01:28:14 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3831,3 +3831,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/phpmyadmin to 4.2.7 [tron 2014-08-06]
 	Updated converters/py-cairosvg to 1.0.8 [rodent 2014-08-07]
 	Updated databases/py-python-sql to 0.4 [rodent 2014-08-07]
+	Updated databases/py-sqlalchemy-utils to 0.26.9 [rodent 2014-08-07]
