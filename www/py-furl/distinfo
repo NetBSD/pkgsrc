@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2014/07/05 23:23:14 rodent Exp $
+$NetBSD: distinfo,v 1.3 2014/08/07 02:22:27 rodent Exp $
 
-SHA1 (furl-0.3.94.tar.gz) = 82ef4115ed2ee21a96adec893256269aff58825e
-RMD160 (furl-0.3.94.tar.gz) = 2a50a5f735fdd9fda07e0563475deebe7f46acaf
-Size (furl-0.3.94.tar.gz) = 28877 bytes
+SHA1 (furl-0.3.95.tar.gz) = abdf7431ae4b254f0e7ce252769a5463e03629c2
+RMD160 (furl-0.3.95.tar.gz) = 7c7d1e2f525ec52c356aa3f4f01902eb231b2db8
+Size (furl-0.3.95.tar.gz) = 28886 bytes
