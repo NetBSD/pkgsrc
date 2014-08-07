@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2932 2014/08/07 01:59:20 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2933 2014/08/07 02:05:48 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3838,3 +3838,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-macholib to 1.7 [rodent 2014-08-07]
 	Updated devel/py-modulegraph to 0.12 [rodent 2014-08-07]
 	Updated devel/py-py2app to 0.9 [rodent 2014-08-07]
+	Updated finance/py-stripe to 1.19.0 [rodent 2014-08-07]
