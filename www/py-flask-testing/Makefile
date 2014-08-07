@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2014/05/13 17:08:45 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2014/08/07 02:29:08 rodent Exp $
 
-DISTNAME=	Flask-Testing-0.4.1
+DISTNAME=	Flask-Testing-0.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-EGG_NAME=	${DISTNAME:S,-,_,}
 CATEGORIES=	python www
 MASTER_SITES=	https://pypi.python.org/packages/source/F/Flask-Testing/
 
@@ -14,6 +13,8 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=	# none
 
 .include "options.mk"
+
+EGG_NAME=	${DISTNAME:S,-,_,}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
