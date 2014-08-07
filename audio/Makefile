@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.508 2014/08/07 20:36:53 wiz Exp $
+# $NetBSD: Makefile,v 1.509 2014/08/07 20:53:52 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -415,6 +415,7 @@ SUBDIR+=	sound-juicer
 SUBDIR+=	sound-theme-freedesktop
 SUBDIR+=	soundtouch
 SUBDIR+=	sox
+SUBDIR+=	spectro-edit
 SUBDIR+=	speex
 SUBDIR+=	spiralloops
 SUBDIR+=	spiralsynth
