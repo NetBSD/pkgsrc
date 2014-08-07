@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2936 2014/08/07 02:25:35 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2937 2014/08/07 02:29:25 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3842,3 +3842,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated games/solarus to 1.2.1 [rodent 2014-08-07]
 	Updated www/py-furl to 0.3.95 [rodent 2014-08-07]
 	Updated www/py-flask-bootstrap to 3.2.0.2 [rodent 2014-08-07]
+	Updated www/py-flask-testing to 0.4.2 [rodent 2014-08-07]
