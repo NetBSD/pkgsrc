@@ -8,5 +8,5 @@ simple plugin with a clean, generic interface.
 
 GStreamer is released under the LGPL.
 
-This package is part of the 'ugly' plugins for GStreamer.  It provides the
+This package is part of the 'bad' plugins for GStreamer.  It provides the
 spcdec plugin, which allows playback of SNES SPC audio files.
