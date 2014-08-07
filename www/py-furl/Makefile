@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/07/05 23:23:14 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2014/08/07 02:22:27 rodent Exp $
 
-DISTNAME=	furl-0.3.94
+DISTNAME=	furl-0.3.95
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python www
 MASTER_SITES=	https://pypi.python.org/packages/source/f/furl/
