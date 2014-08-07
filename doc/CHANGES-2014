@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2949 2014/08/07 20:37:09 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2950 2014/08/07 20:54:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3855,3 +3855,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added audio/gst-plugins0.10-soundtouch version 0.10.23 [wiz 2014-08-07]
 	Updated pkgtools/pkglint to 4.145 [wiz 2014-08-07]
 	Added audio/playitslowly version 1.4.0 [wiz 2014-08-07]
+	Added audio/spectro-edit version 0.4 [wiz 2014-08-07]
