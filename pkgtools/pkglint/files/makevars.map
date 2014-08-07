@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.253 2014/06/25 17:51:55 wiz Exp $
+# $NetBSD: makevars.map,v 1.254 2014/08/07 20:35:34 wiz Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -656,6 +656,7 @@ PYTHON_VERSIONS_ACCEPTED List of Version [$package]
 PYTHON_VERSIONS_INCOMPATIBLE List of Version [$package]
 PYTHON_VERSION_DEFAULT	Version [$user]
 PYTHON_VERSION_REQD	Version [$user]
+PYTHON_VERSIONED_DEPENDENCIES	List of Identifier [$package_list]
 RANLIB			ShellCommand [$system]
 RCD_SCRIPTS		List of Filename [$package_list]
 RCD_SCRIPT_SRC.*	List of Pathname [m:s]
