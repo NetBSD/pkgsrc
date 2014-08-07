@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/07/07 05:55:13 obache Exp $
+# $NetBSD: Makefile,v 1.3 2014/08/07 02:32:37 rodent Exp $
 
-DISTNAME=	WTForms-Alchemy-0.12.6
+DISTNAME=	WTForms-Alchemy-0.12.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	databases python www
 MASTER_SITES=	https://pypi.python.org/packages/source/W/WTForms-Alchemy/
