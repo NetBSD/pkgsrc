@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2923 2014/08/06 20:24:17 tron Exp $
+$NetBSD: CHANGES-2014,v 1.2924 2014/08/07 01:13:46 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3829,3 +3829,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/at-spi2-atk to 2.12.1 [wiz 2014-08-06]
 	Updated fonts/harfbuzz to 0.9.34nb1 [wiz 2014-08-06]
 	Updated databases/phpmyadmin to 4.2.7 [tron 2014-08-06]
+	Updated converters/py-cairosvg to 1.0.8 [rodent 2014-08-07]
