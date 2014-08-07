@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2014/08/07 20:27:42 wiz Exp $
+lib/gstreamer-0.10/libgstsoundtouch.la
