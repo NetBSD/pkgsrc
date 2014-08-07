@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2928 2014/08/07 01:34:45 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2929 2014/08/07 01:37:38 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3834,3 +3834,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/py-sqlalchemy-utils to 0.26.9 [rodent 2014-08-07]
 	Updated security/openssl to 1.0.1i [obache 2014-08-07]
 	Updated devel/py-pbr to 0.10.0 [rodent 2014-08-07]
+	Updated graphics/py-altgraph to 0.12 [rodent 2014-08-07]
