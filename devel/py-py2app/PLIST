@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2014/02/10 00:20:27 rodent Exp $
-bin/py2applet${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.3 2014/08/07 01:58:35 rodent Exp $
+bin/py2applet2.7
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/py2app/__init__.py
@@ -63,6 +64,9 @@ ${PYSITELIB}/py2app/bootstrap/boot_plugin.pyo
 ${PYSITELIB}/py2app/bootstrap/chdir_resource.py
 ${PYSITELIB}/py2app/bootstrap/chdir_resource.pyc
 ${PYSITELIB}/py2app/bootstrap/chdir_resource.pyo
+${PYSITELIB}/py2app/bootstrap/ctypes_setup.py
+${PYSITELIB}/py2app/bootstrap/ctypes_setup.pyc
+${PYSITELIB}/py2app/bootstrap/ctypes_setup.pyo
 ${PYSITELIB}/py2app/bootstrap/disable_linecache.py
 ${PYSITELIB}/py2app/bootstrap/disable_linecache.pyc
 ${PYSITELIB}/py2app/bootstrap/disable_linecache.pyo
@@ -157,9 +161,15 @@ ${PYSITELIB}/py2app/recipes/__init__.pyo
 ${PYSITELIB}/py2app/recipes/cjkcodecs.py
 ${PYSITELIB}/py2app/recipes/cjkcodecs.pyc
 ${PYSITELIB}/py2app/recipes/cjkcodecs.pyo
+${PYSITELIB}/py2app/recipes/ctypes.py
+${PYSITELIB}/py2app/recipes/ctypes.pyc
+${PYSITELIB}/py2app/recipes/ctypes.pyo
 ${PYSITELIB}/py2app/recipes/docutils.py
 ${PYSITELIB}/py2app/recipes/docutils.pyc
 ${PYSITELIB}/py2app/recipes/docutils.pyo
+${PYSITELIB}/py2app/recipes/ftplib.py
+${PYSITELIB}/py2app/recipes/ftplib.pyc
+${PYSITELIB}/py2app/recipes/ftplib.pyo
 ${PYSITELIB}/py2app/recipes/lxml.py
 ${PYSITELIB}/py2app/recipes/lxml.pyc
 ${PYSITELIB}/py2app/recipes/lxml.pyo
@@ -203,6 +213,9 @@ ${PYSITELIB}/py2app/recipes/virtualenv.pyo
 ${PYSITELIB}/py2app/recipes/wx.py
 ${PYSITELIB}/py2app/recipes/wx.pyc
 ${PYSITELIB}/py2app/recipes/wx.pyo
+${PYSITELIB}/py2app/recipes/xml.py
+${PYSITELIB}/py2app/recipes/xml.pyc
+${PYSITELIB}/py2app/recipes/xml.pyo
 ${PYSITELIB}/py2app/script_py2applet.py
 ${PYSITELIB}/py2app/script_py2applet.pyc
 ${PYSITELIB}/py2app/script_py2applet.pyo
