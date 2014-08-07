@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.507 2014/08/07 20:28:16 wiz Exp $
+# $NetBSD: Makefile,v 1.508 2014/08/07 20:36:53 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -360,6 +360,7 @@ SUBDIR+=	pavucontrol
 SUBDIR+=	pavumeter
 SUBDIR+=	pd
 SUBDIR+=	picard
+SUBDIR+=	playitslowly
 SUBDIR+=	portaudio
 SUBDIR+=	portaudio-devel
 SUBDIR+=	pulseaudio
