@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.505 2014/05/20 20:01:08 adam Exp $
+# $NetBSD: Makefile,v 1.506 2014/08/07 20:24:05 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -411,6 +411,7 @@ SUBDIR+=	solfege
 SUBDIR+=	sonata
 SUBDIR+=	sound-juicer
 SUBDIR+=	sound-theme-freedesktop
+SUBDIR+=	soundtouch
 SUBDIR+=	sox
 SUBDIR+=	speex
 SUBDIR+=	spiralloops
