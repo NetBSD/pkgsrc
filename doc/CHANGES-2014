@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2941 2014/08/07 05:06:10 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.2942 2014/08/07 05:34:49 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3847,3 +3847,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-wtforms-alchemy to 0.12.8 [rodent 2014-08-07]
 	Updated net/py-celery to 3.1.13 [rodent 2014-08-07]
 	Updated www/nginx to 1.6.1 [rodent 2014-08-07]
+	Updated www/py-uwsgi to 2.0.6 [rodent 2014-08-07]
