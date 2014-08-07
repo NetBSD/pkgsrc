@@ -1,0 +1,15 @@
+Spectro-Edit reads in regular PCM audio files (currently, only
+16-bit mono WAV is supported), then shows you the audio visually
+in a time vs. frequency plot.
+
+The fun part is, you can "paint out" any part of the visualization
+and play back the audio subject to your modifications. When you
+are happy with the result, you can save your work back to a WAV
+file.
+
+This could be useful for podcasting (edit out microphone noise,
+chair squeaks, phones ringing, and other background noise), music
+(make strange and unusual modifications to the sound for artistic
+reasons), research (visualize animal calls or noise pollution from
+nearby industrial activity), and general purpose geekery (which is
+why I made it).
