@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.506 2014/08/07 20:24:05 wiz Exp $
+# $NetBSD: Makefile,v 1.507 2014/08/07 20:28:16 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -169,6 +169,7 @@ SUBDIR+=	gst-plugins0.10-musepack
 SUBDIR+=	gst-plugins0.10-oss
 SUBDIR+=	gst-plugins0.10-pulse
 SUBDIR+=	gst-plugins0.10-sid
+SUBDIR+=	gst-plugins0.10-soundtouch
 SUBDIR+=	gst-plugins0.10-spc
 SUBDIR+=	gst-plugins0.10-speex
 SUBDIR+=	gst-plugins0.10-twolame
