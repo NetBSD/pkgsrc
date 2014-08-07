@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2014/07/19 09:03:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.21 2014/08/07 03:03:32 obache Exp $
 
 PKGNAME=	${DISTNAME:S/mozc-/mozc-server-/}
 
 INSTALLATION_DIRS+=	libexec
 
 do-build:
-	cd ${WRKSRC} && env ${MAKE_ENV} \
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${PYTHONBIN} build_mozc.py build -c ${MOZC_BUILD_MODE} \
 		${_MAKE_JOBS} \
 			server/server.gyp:mozc_server
