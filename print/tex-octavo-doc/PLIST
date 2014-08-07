@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2014/08/07 21:25:05 wiz Exp $
+share/texmf-dist/doc/latex/octavo/README
+share/texmf-dist/doc/latex/octavo/changes
+share/texmf-dist/doc/latex/octavo/tub-octavo.pdf
