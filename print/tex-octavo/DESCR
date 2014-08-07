@@ -1,0 +1,13 @@
+The octavo class is a modification of the standard LaTeX book class.
+Its purpose is to typeset books following classical design and
+layout principles, with the express intention of encouraging the
+making of beautiful books by anyone with access to a good printer
+and with an inclination towards venerable crafts, e.g., bookbinding.
+
+The octavo class differs from the book class by implementing many
+of the proposals and insights of respected experts, especially Jan
+Tschichold and Hugh Williamson.
+
+The documentation discusses methods to organise and print out any
+text into signatures, which can then be gathered, folded and sewn
+into a book.
