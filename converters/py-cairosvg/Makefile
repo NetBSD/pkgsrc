@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/05/17 13:49:46 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2014/08/07 01:13:18 rodent Exp $
 
-DISTNAME=	CairoSVG-1.0.7
+DISTNAME=	CairoSVG-1.0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	converters graphics python
 MASTER_SITES=	https://pypi.python.org/packages/source/C/CairoSVG/
