@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13530 2014/08/06 13:53:49 wiz Exp $
+$NetBSD: TODO,v 1.13531 2014/08/07 02:19:41 rodent Exp $
 
 Suggested new packages
 ======================
@@ -1050,7 +1050,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o snes9x-1.53
 	o snort-2.9.6.0
 	o socat-1.7.2.4
-	o solarus-1.2.1
 	o solfege-3.22.0
 	o sope-4.6
 	o sound-juicer-3.12.0
