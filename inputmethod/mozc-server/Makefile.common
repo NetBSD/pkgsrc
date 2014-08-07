@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2014/07/19 09:03:04 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.12 2014/08/07 03:03:32 obache Exp $
 # used by inputmethod/ibus-mozc/Makefile
 # used by inputmethod/mozc-elisp/Makefile
 # used by inputmethod/mozc-server/Makefile
@@ -67,7 +67,7 @@ OSDEST=		linux
 MOZC_BUILD_MODE=	Release # or Debug
 
 do-configure:
-	cd ${WRKSRC} && env ${MAKE_ENV} \
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		GYP_DEFINES="use_libprotobuf=1" \
 		${PYTHONBIN} build_mozc.py \
 		gyp \
