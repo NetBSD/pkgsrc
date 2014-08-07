@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/07/19 09:08:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2014/08/07 02:52:53 obache Exp $
 
 SVN_REVISION=	1949
 DIST_VERSION=	0.1
@@ -7,7 +7,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/gyp/
 COMMENT=	GYP can Generate Your Projects
 LICENSE=	modified-bsd
