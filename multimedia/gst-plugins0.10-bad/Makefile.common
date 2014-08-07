@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2012/02/28 18:34:14 drochner Exp $
+# $NetBSD: Makefile.common,v 1.33 2014/08/07 20:03:41 wiz Exp $
 #
 # used by audio/gst-plugins0.10-dts/Makefile
 # used by audio/gst-plugins0.10-faac/Makefile
@@ -14,18 +14,15 @@ GST_PLUGINS0.10_TYPE=	bad
 GST_PLUGINS0.10_VER=	0.10.23
 
 # Disable all drivers and features by default.
-.for driver in	amrwb \
-		cdaudio \
+.for driver in	cdaudio \
 		directfb \
 		dts \
 		dvb \
-		dvdnav \
 		divx \
 		faac \
 		faad \
 		fbdev \
 		gsm \
-		ivorbis \
 		libmms \
 		musepack \
 		musicbrainz \
@@ -35,7 +32,6 @@ GST_PLUGINS0.10_VER=	0.10.23
 		shm \
 		soundtouch \
 		swfdec \
-		theoradec \
 		vcd \
 		vdpau \
 		xvid
