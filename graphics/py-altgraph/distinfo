@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/02/09 15:01:18 rodent Exp $
+$NetBSD: distinfo,v 1.2 2014/08/07 01:37:17 rodent Exp $
 
-SHA1 (altgraph-0.11.tar.gz) = 817078c1a65c1c1a13367f0ed4b1e939e9386746
-RMD160 (altgraph-0.11.tar.gz) = 1c540217fed214503bbb6410072064360b7db844
-Size (altgraph-0.11.tar.gz) = 491834 bytes
+SHA1 (altgraph-0.12.tar.gz) = 63b333e9cf3bd9c6977a386cb89e3f3ee66d9a83
+RMD160 (altgraph-0.12.tar.gz) = c37307bb4c724122b0c1b8dc31b42eb8f32b8b26
+Size (altgraph-0.12.tar.gz) = 492343 bytes
