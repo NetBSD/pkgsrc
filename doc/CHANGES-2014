@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2946 2014/08/07 20:24:43 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2947 2014/08/07 20:28:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3852,3 +3852,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/cppcheck to 1.66 [wiz 2014-08-07]
 	Added net/p5-Zabbix-Sender version 0.03 [he 2014-08-07]
 	Added audio/soundtouch version 1.8.0 [wiz 2014-08-07]
+	Added audio/gst-plugins0.10-soundtouch version 0.10.23 [wiz 2014-08-07]
