@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2014/08/07 21:59:02 wiz Exp $
+bin/fet
+bin/fet-cl
+man/man1/fet.1
+share/doc/fet/README
