@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2014/07/05 19:40:25 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/08/07 01:27:48 rodent Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/sqlalchemy_utils/__init__.py
+${PYSITELIB}/sqlalchemy_utils/__init__.pyc
+${PYSITELIB}/sqlalchemy_utils/__init__.pyo
 ${PYSITELIB}/sqlalchemy_utils/aggregates.py
 ${PYSITELIB}/sqlalchemy_utils/aggregates.pyc
 ${PYSITELIB}/sqlalchemy_utils/aggregates.pyo
@@ -23,6 +26,9 @@ ${PYSITELIB}/sqlalchemy_utils/expression_parser.pyo
 ${PYSITELIB}/sqlalchemy_utils/expressions.py
 ${PYSITELIB}/sqlalchemy_utils/expressions.pyc
 ${PYSITELIB}/sqlalchemy_utils/expressions.pyo
+${PYSITELIB}/sqlalchemy_utils/functions/__init__.py
+${PYSITELIB}/sqlalchemy_utils/functions/__init__.pyc
+${PYSITELIB}/sqlalchemy_utils/functions/__init__.pyo
 ${PYSITELIB}/sqlalchemy_utils/functions/database.py
 ${PYSITELIB}/sqlalchemy_utils/functions/database.pyc
 ${PYSITELIB}/sqlalchemy_utils/functions/database.pyo
@@ -32,9 +38,6 @@ ${PYSITELIB}/sqlalchemy_utils/functions/defer_except.pyo
 ${PYSITELIB}/sqlalchemy_utils/functions/foreign_keys.py
 ${PYSITELIB}/sqlalchemy_utils/functions/foreign_keys.pyc
 ${PYSITELIB}/sqlalchemy_utils/functions/foreign_keys.pyo
-${PYSITELIB}/sqlalchemy_utils/functions/__init__.py
-${PYSITELIB}/sqlalchemy_utils/functions/__init__.pyc
-${PYSITELIB}/sqlalchemy_utils/functions/__init__.pyo
 ${PYSITELIB}/sqlalchemy_utils/functions/mock.py
 ${PYSITELIB}/sqlalchemy_utils/functions/mock.pyc
 ${PYSITELIB}/sqlalchemy_utils/functions/mock.pyo
@@ -53,12 +56,12 @@ ${PYSITELIB}/sqlalchemy_utils/generic.pyo
 ${PYSITELIB}/sqlalchemy_utils/i18n.py
 ${PYSITELIB}/sqlalchemy_utils/i18n.pyc
 ${PYSITELIB}/sqlalchemy_utils/i18n.pyo
-${PYSITELIB}/sqlalchemy_utils/__init__.py
-${PYSITELIB}/sqlalchemy_utils/__init__.pyc
-${PYSITELIB}/sqlalchemy_utils/__init__.pyo
 ${PYSITELIB}/sqlalchemy_utils/listeners.py
 ${PYSITELIB}/sqlalchemy_utils/listeners.pyc
 ${PYSITELIB}/sqlalchemy_utils/listeners.pyo
+${PYSITELIB}/sqlalchemy_utils/models.py
+${PYSITELIB}/sqlalchemy_utils/models.pyc
+${PYSITELIB}/sqlalchemy_utils/models.pyo
 ${PYSITELIB}/sqlalchemy_utils/operators.py
 ${PYSITELIB}/sqlalchemy_utils/operators.pyc
 ${PYSITELIB}/sqlalchemy_utils/operators.pyo
@@ -80,6 +83,9 @@ ${PYSITELIB}/sqlalchemy_utils/proxy_dict.pyo
 ${PYSITELIB}/sqlalchemy_utils/query_chain.py
 ${PYSITELIB}/sqlalchemy_utils/query_chain.pyc
 ${PYSITELIB}/sqlalchemy_utils/query_chain.pyo
+${PYSITELIB}/sqlalchemy_utils/types/__init__.py
+${PYSITELIB}/sqlalchemy_utils/types/__init__.pyc
+${PYSITELIB}/sqlalchemy_utils/types/__init__.pyo
 ${PYSITELIB}/sqlalchemy_utils/types/arrow.py
 ${PYSITELIB}/sqlalchemy_utils/types/arrow.pyc
 ${PYSITELIB}/sqlalchemy_utils/types/arrow.pyo
@@ -98,9 +104,6 @@ ${PYSITELIB}/sqlalchemy_utils/types/country.pyo
 ${PYSITELIB}/sqlalchemy_utils/types/email.py
 ${PYSITELIB}/sqlalchemy_utils/types/email.pyc
 ${PYSITELIB}/sqlalchemy_utils/types/email.pyo
-${PYSITELIB}/sqlalchemy_utils/types/__init__.py
-${PYSITELIB}/sqlalchemy_utils/types/__init__.pyc
-${PYSITELIB}/sqlalchemy_utils/types/__init__.pyo
 ${PYSITELIB}/sqlalchemy_utils/types/ip_address.py
 ${PYSITELIB}/sqlalchemy_utils/types/ip_address.pyc
 ${PYSITELIB}/sqlalchemy_utils/types/ip_address.pyo
