@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/06/15 13:08:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2014/08/07 03:03:32 obache Exp $
 
 PKGNAME=	${DISTNAME:S/mozc-/mozc-renderer-/}
 
@@ -10,7 +10,7 @@ DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 DEPENDS+=	mozc-server-[0-9]*:../../inputmethod/mozc-server
 
 do-build:
-	cd ${WRKSRC} && env ${MAKE_ENV} \
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${PYTHONBIN} build_mozc.py build -c ${MOZC_BUILD_MODE} ${_MAKE_JOBS} \
 			renderer/renderer.gyp:mozc_renderer
 
