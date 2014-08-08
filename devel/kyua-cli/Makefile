@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.21 2014/05/03 13:14:37 alnsn Exp $
+# $NetBSD: Makefile,v 1.22 2014/08/08 14:30:24 jmmv Exp $
 #
 
-DISTNAME=	kyua-cli-0.8
-PKGREVISION=	3
+DISTNAME=	kyua-cli-0.9
 CATEGORIES=	devel
-MASTER_SITES=	http://kyua.googlecode.com/files/
+MASTER_SITES=	https://github.com/jmmv/kyua/releases/download/${DISTNAME}/
 
 MAINTAINER=	jmmv@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/kyua/
+HOMEPAGE=	https://github.com/jmmv/kyua/
 COMMENT=	Kyua (automated testing framework) - Command line interface
 LICENSE=	modified-bsd
 
