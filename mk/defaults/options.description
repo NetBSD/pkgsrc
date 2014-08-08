@@ -240,6 +240,7 @@ gsasl			Enable SASL support with gsasl.
 gsl			Use GNU Scientific Library.
 gssapi			Enable gssapi (Kerberos V) support.
 gstreamer		Enable gstreamer support.
+gstreamer-gstcheck	Enable gstcheck support in gstreamer.
 gtk			Enable support for GTK.
 gtk2			Enable support for GTK2.
 gtk3			Enable support for GTK3.
