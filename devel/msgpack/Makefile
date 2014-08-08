@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2014/02/19 09:44:56 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2014/08/08 12:27:44 obache Exp $
 #
 
-DISTNAME=	msgpack-0.5.8
+DISTNAME=	msgpack-0.5.9
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/msgpack/msgpack-c/releases/download/cpp-${PKGVERSION_NOREV}/
 
