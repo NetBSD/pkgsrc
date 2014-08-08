@@ -1,0 +1,13 @@
+# $NetBSD: buildlink3.mk,v 1.1 2014/08/08 13:16:45 fhajny Exp $
+
+BUILDLINK_TREE+=	lz4
+
+.if !defined(LZ4_BUILDLINK3_MK)
+LZ4_BUILDLINK3_MK:=
+
+BUILDLINK_ABI_DEPENDS.lz4+=	lz4>=120
+BUILDLINK_API_DEPENDS.lz4+=	lz4>=120
+BUILDLINK_PKGSRCDIR.lz4?=	../../archivers/lz4
+.endif # LZ4_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-lz4
