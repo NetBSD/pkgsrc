@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2014/05/29 23:37:00 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2014/08/08 15:00:54 dholland Exp $
 
 DISTNAME=	rpm-4.11.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://rpm.org/releases/rpm-4.11.x/
 EXTRACT_SUFX=	.tar.bz2
@@ -59,8 +59,6 @@ FILES_SUBST+=		RPMDIR=${RPMDIR:Q}
 BROKEN_GETTEXT_DETECTION=	yes
 
 .if ${OPSYS} == "SunOS"
-# for libmagic.
-.include "../../sysutils/file/buildlink3.mk"
 CFLAGS+=	-fno-stack-protector
 BUILDLINK_TRANSFORM+=	rm:-fstack-protector
 .endif
@@ -82,6 +80,7 @@ SUBST_SED.mkd+=		-e 's,${TOOLS_CMD.mkdir},${TOOLS_PATH.mkdir},'
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../sysutils/file/buildlink3.mk" # for libmagic.
 
 .include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
