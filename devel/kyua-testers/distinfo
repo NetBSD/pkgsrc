@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/12/08 01:21:12 jmmv Exp $
+$NetBSD: distinfo,v 1.3 2014/08/08 14:29:53 jmmv Exp $
 
-SHA1 (kyua-testers-0.2.tar.gz) = c41496c1eb8a8c2eb2ccf71f3c006f6d4b7337c4
-RMD160 (kyua-testers-0.2.tar.gz) = 3cf8a49e9fcfeffc5f6121e4daa9bfeb16b47ad6
-Size (kyua-testers-0.2.tar.gz) = 179731 bytes
+SHA1 (kyua-testers-0.3.tar.gz) = 0f347efa73de306539363d36c8435571bfa31f7f
+RMD160 (kyua-testers-0.3.tar.gz) = 48c88d9341cd5910661d641727da75f14cb7cfbf
+Size (kyua-testers-0.3.tar.gz) = 185769 bytes
