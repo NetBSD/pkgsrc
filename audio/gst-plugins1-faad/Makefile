@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/11/29 09:06:28 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.2 2014/08/08 21:31:06 wiz Exp $
 
 GST_PLUGINS1_NAME=	faad
 GST_PLUGINS1_DIRS=	ext/faad
