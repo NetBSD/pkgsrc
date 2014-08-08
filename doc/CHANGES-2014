@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2971 2014/08/08 21:40:01 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2972 2014/08/08 21:53:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3880,3 +3880,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/gst-plugins1-bad to 1.4.0 [wiz 2014-08-08]
 	Updated multimedia/gst-plugins1-ugly to 1.4.0 [wiz 2014-08-08]
 	Added multimedia/py-gstreamer1 version 1.2.1 [wiz 2014-08-08]
+	Updated multimedia/gst-plugins1-libav to 1.4.0 [wiz 2014-08-08]
