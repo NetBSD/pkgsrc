@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/07/05 15:33:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/08/08 08:49:03 wiz Exp $
 bin/thg
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/tortoisehg/__init__.py
@@ -124,9 +124,6 @@ ${PYSITELIB}/tortoisehg/hgqt/lexers.pyo
 ${PYSITELIB}/tortoisehg/hgqt/lfprompt.py
 ${PYSITELIB}/tortoisehg/hgqt/lfprompt.pyc
 ${PYSITELIB}/tortoisehg/hgqt/lfprompt.pyo
-${PYSITELIB}/tortoisehg/hgqt/license.py
-${PYSITELIB}/tortoisehg/hgqt/license.pyc
-${PYSITELIB}/tortoisehg/hgqt/license.pyo
 ${PYSITELIB}/tortoisehg/hgqt/manifestmodel.py
 ${PYSITELIB}/tortoisehg/hgqt/manifestmodel.pyc
 ${PYSITELIB}/tortoisehg/hgqt/manifestmodel.pyo
@@ -145,9 +142,6 @@ ${PYSITELIB}/tortoisehg/hgqt/modeltest.pyo
 ${PYSITELIB}/tortoisehg/hgqt/mq.py
 ${PYSITELIB}/tortoisehg/hgqt/mq.pyc
 ${PYSITELIB}/tortoisehg/hgqt/mq.pyo
-${PYSITELIB}/tortoisehg/hgqt/mqutil.py
-${PYSITELIB}/tortoisehg/hgqt/mqutil.pyc
-${PYSITELIB}/tortoisehg/hgqt/mqutil.pyo
 ${PYSITELIB}/tortoisehg/hgqt/p4pending.py
 ${PYSITELIB}/tortoisehg/hgqt/p4pending.pyc
 ${PYSITELIB}/tortoisehg/hgqt/p4pending.pyo
@@ -280,9 +274,6 @@ ${PYSITELIB}/tortoisehg/hgqt/update.pyo
 ${PYSITELIB}/tortoisehg/hgqt/visdiff.py
 ${PYSITELIB}/tortoisehg/hgqt/visdiff.pyc
 ${PYSITELIB}/tortoisehg/hgqt/visdiff.pyo
-${PYSITELIB}/tortoisehg/hgqt/wctxactions.py
-${PYSITELIB}/tortoisehg/hgqt/wctxactions.pyc
-${PYSITELIB}/tortoisehg/hgqt/wctxactions.pyo
 ${PYSITELIB}/tortoisehg/hgqt/wctxcleaner.py
 ${PYSITELIB}/tortoisehg/hgqt/wctxcleaner.pyc
 ${PYSITELIB}/tortoisehg/hgqt/wctxcleaner.pyo
@@ -322,6 +313,9 @@ ${PYSITELIB}/tortoisehg/util/editor.pyo
 ${PYSITELIB}/tortoisehg/util/gpg.py
 ${PYSITELIB}/tortoisehg/util/gpg.pyc
 ${PYSITELIB}/tortoisehg/util/gpg.pyo
+${PYSITELIB}/tortoisehg/util/hgdispatch.py
+${PYSITELIB}/tortoisehg/util/hgdispatch.pyc
+${PYSITELIB}/tortoisehg/util/hgdispatch.pyo
 ${PYSITELIB}/tortoisehg/util/hglib.py
 ${PYSITELIB}/tortoisehg/util/hglib.pyc
 ${PYSITELIB}/tortoisehg/util/hglib.pyo
