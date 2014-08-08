@@ -1,4 +1,4 @@
-$NetBSD: patch-sys_v4l2_gstv4l2object.c,v 1.2 2013/08/03 08:29:22 ryoon Exp $
+$NetBSD: patch-sys_v4l2_gstv4l2object.c,v 1.3 2014/08/08 21:28:06 wiz Exp $
 
 * take care some video standard macros added by V4L2
 
@@ -34,13 +34,3 @@ $NetBSD: patch-sys_v4l2_gstv4l2object.c,v 1.2 2013/08/03 08:29:22 ryoon Exp $
  
        {0, NULL, NULL}
      };
-@@ -1500,8 +1508,8 @@ gst_v4l2_object_get_caps_info (GstV4l2Ob
- #ifdef V4L2_PIX_FMT_PWC2
-     } else if (g_str_equal (mimetype, "video/x-pwc2")) {
-       fourcc = V4L2_PIX_FMT_PWC2;
--    }
- #endif
-+    }
- 
-     if (dimensions) {
-       const gchar *interlace_mode;
