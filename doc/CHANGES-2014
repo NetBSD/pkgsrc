@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2952 2014/08/07 21:59:39 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2953 2014/08/08 06:24:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3859,3 +3859,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added print/tex-octavo version 1.2 [wiz 2014-08-07]
 	Added print/tex-octavo-doc version 1.2 [wiz 2014-08-07]
 	Added time/fet version 5.23.1 [wiz 2014-08-07]
+	Updated wm/spectrwm to 2.5.1 [wiz 2014-08-08]
