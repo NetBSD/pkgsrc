@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2962 2014/08/08 13:31:34 obache Exp $
+$NetBSD: CHANGES-2014,v 1.2963 2014/08/08 14:31:25 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3869,3 +3869,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/py-markdown2 to 2.2.1 [obache 2014-08-08]
 	Updated textproc/py-xlrd to 0.9.3 [obache 2014-08-08]
 	Updated graphics/libsixel to 0.28.0 [obache 2014-08-08]
+	Updated devel/kyua-testers to 0.3 [jmmv 2014-08-08]
+	Updated devel/kyua-cli to 0.9 [jmmv 2014-08-08]
