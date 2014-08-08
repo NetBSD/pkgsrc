@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2963 2014/08/08 14:31:25 jmmv Exp $
+$NetBSD: CHANGES-2014,v 1.2964 2014/08/08 15:01:25 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3871,3 +3871,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/libsixel to 0.28.0 [obache 2014-08-08]
 	Updated devel/kyua-testers to 0.3 [jmmv 2014-08-08]
 	Updated devel/kyua-cli to 0.9 [jmmv 2014-08-08]
+	Updated misc/rpm to 4.11.1nb2 [dholland 2014-08-08]
