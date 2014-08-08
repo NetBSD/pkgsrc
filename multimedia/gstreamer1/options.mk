@@ -1,12 +1,14 @@
-# $NetBSD: options.mk,v 1.2 2013/04/08 11:17:17 rodent Exp $
+# $NetBSD: options.mk,v 1.3 2014/08/08 21:24:51 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gstreamer
-PKG_SUPPORTED_OPTIONS=	gstcheck
+PKG_SUPPORTED_OPTIONS=	gstreamer-gstcheck
+
+PKG_OPTIONS_LEGACY_OPTS+=	gstcheck:gstreamer-gstcheck
 
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=	gstcheck
-.if !empty(PKG_OPTIONS:Mgstcheck)
+.if !empty(PKG_OPTIONS:Mgstreamer-gstcheck)
 .include "../../devel/check/buildlink3.mk"
 PLIST.gstcheck=	yes
 # don't worry if the "GstABI" check fails -- GstPlugin contains
