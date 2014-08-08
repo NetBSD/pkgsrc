@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/02/12 23:18:17 tron Exp $
-
-PKGREVISION=	1
+# $NetBSD: Makefile,v 1.9 2014/08/08 21:28:48 wiz Exp $
 
 USE_LANGUAGES=	c c++
 
