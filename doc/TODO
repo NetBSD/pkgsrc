@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13537 2014/08/08 21:25:54 wiz Exp $
+$NetBSD: TODO,v 1.13538 2014/08/08 21:40:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -436,7 +436,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o classpath-0.98
 	o cln-1.33
 	o clutter-1.18.2
-	o clutter-gst-2.0.10 [require gstreamer1>=1.2.0]
+	o clutter-gst-2.0.10
 	o cmake-3.0.1
 	o cmus-2.5.1 [pkg/48819]
 	o coccigrep-2.13
@@ -648,7 +648,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o groff-1.22.2
 	o gsharutils-4.14
 	o gss-1.0.2
-	o gstreamer-1.4.0
 	o gtar-1.28
 	o gthumb-3.2.8
 	o gtk-gnutella-0.98.4
@@ -948,7 +947,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-gmpy-1.17
 	o py-gnome-menus-3.8.0
 	o py-greenlet-0.4.2
-	o py-gstreamer0.10-1.2.1
 	o py-hgtools-4.0
 	o py-lasso-2.4.0
 	o py-logilab-astng-0.24.3
