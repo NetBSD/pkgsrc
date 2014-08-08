@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2956 2014/08/08 12:04:10 wen Exp $
+$NetBSD: CHANGES-2014,v 1.2957 2014/08/08 12:09:41 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3863,3 +3863,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-tortoisehg to 3.1 [wiz 2014-08-08]
 	Updated cad/gtkwave to 3.3.61 [mef 2014-08-08]
 	Updated devel/p5-Inline to 0.67 [wen 2014-08-08]
+	Updated graphics/py-Pillow to 2.5.1 [obache 2014-08-08]
