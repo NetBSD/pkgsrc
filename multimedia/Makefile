@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.222 2014/07/02 12:18:38 adam Exp $
+# $NetBSD: Makefile,v 1.223 2014/08/08 21:39:50 wiz Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -160,6 +160,7 @@ SUBDIR+=	php-ming
 SUBDIR+=	pitivi
 SUBDIR+=	pspvc
 SUBDIR+=	py-gstreamer0.10
+SUBDIR+=	py-gstreamer1
 SUBDIR+=	py-ming
 SUBDIR+=	realplayer-codecs
 SUBDIR+=	regionset
