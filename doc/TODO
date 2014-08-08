@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13534 2014/08/08 02:33:54 mef Exp $
+$NetBSD: TODO,v 1.13535 2014/08/08 15:55:37 taca Exp $
 
 Suggested new packages
 ======================
@@ -358,7 +358,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o alsa-plugins-1.0.28
 	o alsa-utils-1.0.28
 	o amavis-perl-0.3.12 [called just amavis]
-	o amavisd-new-2.8.1
+	o amavisd-new-2.9.1
 	o amaya-11.4.4 [wip]
 	o amsn-0.98.4
 	o angband-3.2
