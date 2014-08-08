@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2014/01/10 11:14:31 adam Exp $
+# $NetBSD: Makefile,v 1.9 2014/08/08 13:15:32 obache Exp $
 
-DISTNAME=	xlrd-0.9.2
+DISTNAME=	xlrd-0.9.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	http://pypi.python.org/packages/source/x/xlrd/
