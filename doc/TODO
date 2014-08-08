@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13538 2014/08/08 21:40:34 wiz Exp $
+$NetBSD: TODO,v 1.13539 2014/08/08 21:47:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -406,6 +406,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bmon-2.1.0
 	o bochs-2.6.5
 	o bomberclone-0.11.9
+	o boost-libs-1.56.0
 	o bos-2.5
 	o boson-0.13
 	o brasero-3.4.0
@@ -415,6 +416,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bzr-2.6.0
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
+	o calibre-1.48
 	o calligra-2.4.3 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -765,6 +767,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libreoffice-4.2.3
 	o libreoffice4-4.3
 	o libreoffice4-bin-4.3
+	o libsigc++-2.3.2
 	o libstree-0.4.3pre2 [pkg/43748]
 	o libtar-1.2.20
 	o libtcl-nothread-8.5.1
