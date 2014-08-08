@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/02/12 23:18:20 tron Exp $
-
-PKGREVISION=		1
+# $NetBSD: Makefile,v 1.5 2014/08/08 21:31:08 wiz Exp $
 
 GST_PLUGINS1_NAME=	rtmp
 GST_PLUGINS1_DIRS=	ext/rtmp
