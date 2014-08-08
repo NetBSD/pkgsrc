@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2014/01/22 13:18:19 obache Exp $
+$NetBSD: distinfo,v 1.4 2014/08/08 12:56:21 obache Exp $
 
-SHA1 (markdown2-2.2.0.zip) = 27c3017fe6a89d4e4b7651f662a421101dc38fc1
-RMD160 (markdown2-2.2.0.zip) = b42eb0f3b05c8ebd8e1de93725ee0fa36aef902a
-Size (markdown2-2.2.0.zip) = 132265 bytes
+SHA1 (markdown2-2.2.1.zip) = 3b9a1b0a814705fa6c956e7d2b31e177e391e5e4
+RMD160 (markdown2-2.2.1.zip) = 002c35103482a7b309e0274bdeac9aeaceccde4c
+Size (markdown2-2.2.1.zip) = 138508 bytes
