@@ -12,5 +12,5 @@ To build the kernel module
     $ cp MakefileProto.NBSD Makefile
     $ make obj && make && make install
 
-For instructions how to create a cell:
-    http://wiki.openafs.org/AFSLore/FedoraAFSInstall/
+The OpenAFS Quick-Start Guide for UNIX can be found at:
+    http://docs.openafs.org/QuickStartUnix/index.html
