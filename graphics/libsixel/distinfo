@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/07/13 10:10:56 obache Exp $
+$NetBSD: distinfo,v 1.2 2014/08/08 13:31:24 obache Exp $
 
-SHA1 (libsixel-0.23.2.tar.gz) = 281c7b7ab534e4c4bc112bab08427f5cfe0db336
-RMD160 (libsixel-0.23.2.tar.gz) = 40e8a5896b579e48f8e60d14266d6dca42853796
-Size (libsixel-0.23.2.tar.gz) = 2193597 bytes
+SHA1 (libsixel-0.28.0.tar.gz) = 1e4330248b92f944e9a7bfc622ba27e5d7519c06
+RMD160 (libsixel-0.28.0.tar.gz) = d904e037f70b7b59f586475fa4148ae3e8a55f1c
+Size (libsixel-0.28.0.tar.gz) = 7936704 bytes
