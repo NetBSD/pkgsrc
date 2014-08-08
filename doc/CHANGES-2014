@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2965 2014/08/08 15:55:12 taca Exp $
+$NetBSD: CHANGES-2014,v 1.2966 2014/08/08 21:25:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3874,3 +3874,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/rpm to 4.11.1nb2 [dholland 2014-08-08]
 	Updated www/drupal7 to 7.31 [taca 2014-08-08]
 	Updated www/drupal6 to 6.33 [taca 2014-08-08]
+	Updated multimedia/gstreamer1 to 1.4.0 [wiz 2014-08-08]
