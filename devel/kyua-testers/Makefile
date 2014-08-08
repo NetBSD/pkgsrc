@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2014/02/08 15:59:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2014/08/08 14:29:53 jmmv Exp $
 #
 
-DISTNAME=	kyua-testers-0.2
-PKGREVISION=	1
+DISTNAME=	kyua-testers-0.3
 CATEGORIES=	devel
-MASTER_SITES=	http://kyua.googlecode.com/files/
+MASTER_SITES=	https://github.com/jmmv/kyua/releases/download/${DISTNAME}/
 
 MAINTAINER=	jmmv@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/kyua/
+HOMEPAGE=	https://github.com/jmmv/kyua/
 COMMENT=	Kyua (automated testing framework) - Testers
 LICENSE=	modified-bsd
 
