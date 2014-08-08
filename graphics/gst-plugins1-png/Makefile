@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/03/15 18:36:47 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.4 2014/08/08 21:31:08 wiz Exp $
 
 GST_PLUGINS1_NAME=	png
 GST_PLUGINS1_DIRS=	ext/libpng

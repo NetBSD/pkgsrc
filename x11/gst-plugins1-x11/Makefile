@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/11/29 08:38:20 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.2 2014/08/08 21:31:08 wiz Exp $
 
 GST_PLUGINS1_NAME=	x11
 GST_PLUGINS1_DIRS=	sys/ximage sys/xvimage
