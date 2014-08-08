@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2960 2014/08/08 12:56:30 obache Exp $
+$NetBSD: CHANGES-2014,v 1.2961 2014/08/08 13:15:44 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3867,3 +3867,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/msgpack to 0.5.9 [obache 2014-08-08]
 	Updated math/py-roman to 2.0.0 [obache 2014-08-08]
 	Updated textproc/py-markdown2 to 2.2.1 [obache 2014-08-08]
+	Updated textproc/py-xlrd to 0.9.3 [obache 2014-08-08]
