@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2959 2014/08/08 12:48:55 obache Exp $
+$NetBSD: CHANGES-2014,v 1.2960 2014/08/08 12:56:30 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3866,3 +3866,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/py-Pillow to 2.5.1 [obache 2014-08-08]
 	Updated devel/msgpack to 0.5.9 [obache 2014-08-08]
 	Updated math/py-roman to 2.0.0 [obache 2014-08-08]
+	Updated textproc/py-markdown2 to 2.2.1 [obache 2014-08-08]
