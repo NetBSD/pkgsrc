@@ -1,3 +1,26 @@
-@comment $NetBSD: PLIST,v 1.1 2012/11/29 09:27:37 ryoon Exp $
-lib/gstreamer-1.0/libgstavscale.la
+@comment $NetBSD: PLIST,v 1.2 2014/08/08 21:52:58 wiz Exp $
 lib/gstreamer-1.0/libgstlibav.la
+share/gtk-doc/html/gst-libav-plugins-1.0/ch01.html
+share/gtk-doc/html/gst-libav-plugins-1.0/ch02.html
+share/gtk-doc/html/gst-libav-plugins-1.0/ch03.html
+share/gtk-doc/html/gst-libav-plugins-1.0/gst-libav-plugins-1.0.devhelp2
+share/gtk-doc/html/gst-libav-plugins-1.0/gst-libav-plugins-GstFFMpegAudDec.html
+share/gtk-doc/html/gst-libav-plugins-1.0/gst-libav-plugins-GstFFMpegAudEnc.html
+share/gtk-doc/html/gst-libav-plugins-1.0/gst-libav-plugins-GstFFMpegVidDec.html
+share/gtk-doc/html/gst-libav-plugins-1.0/gst-libav-plugins-GstFFMpegVidEnc.html
+share/gtk-doc/html/gst-libav-plugins-1.0/gst-libav-plugins-gstav.html
+share/gtk-doc/html/gst-libav-plugins-1.0/gst-libav-plugins-gstavcfg.html
+share/gtk-doc/html/gst-libav-plugins-1.0/gst-libav-plugins-gstavcodecmap.html
+share/gtk-doc/html/gst-libav-plugins-1.0/gst-libav-plugins-gstavprotocol.html
+share/gtk-doc/html/gst-libav-plugins-1.0/gst-libav-plugins-gstavutils.html
+share/gtk-doc/html/gst-libav-plugins-1.0/gst-libav-plugins-plugin-libav.html
+share/gtk-doc/html/gst-libav-plugins-1.0/home.png
+share/gtk-doc/html/gst-libav-plugins-1.0/index.html
+share/gtk-doc/html/gst-libav-plugins-1.0/index.sgml
+share/gtk-doc/html/gst-libav-plugins-1.0/left-insensitive.png
+share/gtk-doc/html/gst-libav-plugins-1.0/left.png
+share/gtk-doc/html/gst-libav-plugins-1.0/right-insensitive.png
+share/gtk-doc/html/gst-libav-plugins-1.0/right.png
+share/gtk-doc/html/gst-libav-plugins-1.0/style.css
+share/gtk-doc/html/gst-libav-plugins-1.0/up-insensitive.png
+share/gtk-doc/html/gst-libav-plugins-1.0/up.png
