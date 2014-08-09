@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.735 2014/07/21 06:53:24 dbj Exp $
+# $NetBSD: Makefile,v 1.736 2014/08/09 16:34:39 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -684,6 +684,7 @@ SUBDIR+=	xterm
 SUBDIR+=	xtermset
 SUBDIR+=	xtoolwait
 SUBDIR+=	xtrans
+SUBDIR+=	xtruss
 SUBDIR+=	xvattr
 SUBDIR+=	xvidcap
 SUBDIR+=	xvidcap-gtk2
