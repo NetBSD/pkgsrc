@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2014/08/09 10:38:18 kim Exp $
+# $NetBSD: Makefile,v 1.32 2014/08/09 11:27:31 kim Exp $
 
 DISTNAME=	rtty-3.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://gatekeeper.hpl.hp.com/archive/pub/misc/vixie/ \
 		ftp://gatekeeper.hpl.hp.com/pub/misc/vixie/
@@ -19,11 +19,15 @@ CFLAGS.SunOS+=	-Du_int16_t=uint16_t -Du_int32_t=uint32_t
 MAKE_ENV+=	LIBS="-lcrypt"
 .endif
 
-# Use pre-patch so that all patches can be made against what is there
-# in the work directory after failed compiles. Also feels more logical
-# to have "make patch" complete *all* patching.
+# If you need to regenerate patch-aa for Makefile, you should save
+# your changes, run "make clean patch", apply your changes again,
+# regenerate the diff for patch-aa. Same applies for any other files
+# with /usr/local in them, should they acquire patches.
+#
+# This cannot be moved to pre-patch, because ${PREFIX} can differ
+# between installations.
 
-pre-patch:
+pre-configure:
 	${CHMOD} u+w ${WRKDIR}/*
 	for f in `echo ${WRKDIR}/* | ${XARGS} ${GREP} -l '/usr/local'`; do \
 		${ECHO} patching $$f ; \
