@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2984 2014/08/09 20:12:32 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2985 2014/08/09 20:20:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3898,3 +3898,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated wm/i3 to 4.8 [degroote 2014-08-09]
 	Added multimedia/libdvbcsa version 1.1.0 [wiz 2014-08-09]
 	Updated multimedia/libdvdcss to 1.3.0 [wiz 2014-08-09]
+	Added multimedia/libbluray version 0.6.0 [wiz 2014-08-09]
