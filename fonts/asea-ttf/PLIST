@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2014/08/09 16:21:28 wiz Exp $
+share/doc/asea-ttf/Asea.docx
+share/fonts/X11/TTF/AseaB.ttf
+share/fonts/X11/TTF/AseaB_hint.ttf
+share/fonts/X11/TTF/AseaI.ttf
+share/fonts/X11/TTF/AseaI_hint.ttf
+share/fonts/X11/TTF/AseaJ.ttf
+share/fonts/X11/TTF/AseaJ_hint.ttf
+share/fonts/X11/TTF/AseaR.ttf
+share/fonts/X11/TTF/AseaR_hint.ttf
