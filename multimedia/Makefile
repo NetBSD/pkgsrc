@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.223 2014/08/08 21:39:50 wiz Exp $
+# $NetBSD: Makefile,v 1.224 2014/08/09 20:10:10 wiz Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -98,6 +98,7 @@ SUBDIR+=	libassetml
 SUBDIR+=	libbdplus
 SUBDIR+=	libdv
 SUBDIR+=	libdv-tools
+SUBDIR+=	libdvbcsa
 SUBDIR+=	libdvbpsi
 SUBDIR+=	libdvbpsi0
 SUBDIR+=	libdvdcss
