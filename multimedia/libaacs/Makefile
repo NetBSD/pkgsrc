@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/01/08 23:04:43 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/08/09 20:22:51 wiz Exp $
 
-DISTNAME=	libaacs-0.7.0
+DISTNAME=	libaacs-0.7.1
 CATEGORIES=	multimedia
-MASTER_SITES=	ftp://ftp.videolan.org/pub/videolan/libaacs/0.7.0/
+MASTER_SITES=	ftp://ftp.videolan.org/pub/videolan/libaacs/${PKGVERSION}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
