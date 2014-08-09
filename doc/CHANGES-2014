@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2988 2014/08/09 21:24:50 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2989 2014/08/09 21:54:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3902,3 +3902,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/libaacs to 0.7.1 [wiz 2014-08-09]
 	Added multimedia/bitstream version 1.0 [wiz 2014-08-09]
 	Added mail/trojita version 0.4.1 [wiz 2014-08-09]
+	Added textproc/py-numpydoc version 0.5 [wiz 2014-08-09]
