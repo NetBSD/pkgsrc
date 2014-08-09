@@ -8,4 +8,4 @@ Vala source code into C source and header files. It uses the GObject
 type system to create classes and interfaces declared in the Vala source
 code.
 
-This package contains the 0.14 release.
+This package contains the old 0.14 release.
