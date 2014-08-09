@@ -1,0 +1,6 @@
+EasyAI is a pure-Python artificial intelligence framework for
+two-players abstract games such as Tic Tac Toe, Connect 4, Reversi,
+etc.  It makes it easy to define the mechanisms of a game, and play
+against the computer or solve the game.  Under the hood, the AI is
+a Negamax algorithm with alpha-beta pruning and transposition
+tables.
