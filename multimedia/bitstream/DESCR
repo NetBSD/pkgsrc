@@ -1,0 +1,2 @@
+biTStream is a set of C headers allowing a simpler access to binary
+structures such as specified by MPEG, DVB, IETF, etc.
