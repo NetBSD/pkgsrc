@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.4 2006/12/17 20:09:26 minskim Exp $
+$NetBSD: patch-aa,v 1.5 2014/08/09 10:38:18 kim Exp $
 
---- Makefile.orig	1996-08-23 23:46:42.000000000 +0000
-+++ Makefile
-@@ -23,7 +23,7 @@ DESTROOT =
- DESTPATH = $(DESTROOT)/usr/local/rtty
+--- Makefile.orig	2014-08-09 08:48:45.000000000 +0000
++++ Makefile	2014-08-09 08:52:19.000000000 +0000
+@@ -23,7 +23,7 @@
+ DESTPATH = $(DESTROOT)/usr/pkg/rtty
  DESTBIN = $(DESTPATH)/bin
  
 -CC = cc
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.4 2006/12/17 20:09:26 minskim Exp $
  CDEBUG = -O -g
  #
  # use -U to undefine, -D to define
-@@ -35,16 +35,25 @@ CDEBUG = -O -g
+@@ -35,16 +35,25 @@
  #	NO_SOCKADDR_LEN	if your "struct sockaddr_in" lacks a sin_len field
  #	NO_HSTRERROR	if your C library has no hstrerror() function
  #
@@ -19,7 +19,7 @@ $NetBSD: patch-aa,v 1.4 2006/12/17 20:09:26 minskim Exp $
 +CDEFS = -DDEBUG -UWANT_TCPIP -UNEED_BITYPES_H -UNEED_STRDUP \
  	-UNO_SOCKADDR_LEN -UNO_HSTRERROR
  #
--CFLAGS = $(CDEBUG) $(CDEFS) -I/usr/local/include
+-CFLAGS = $(CDEBUG) $(CDEFS) -I/usr/pkg/include
 -LIBS = 
 +CFLAGS+= $(CDEBUG) $(CDEFS)
 +#LIBS =
@@ -40,3 +40,16 @@ $NetBSD: patch-aa,v 1.4 2006/12/17 20:09:26 minskim Exp $
  BINARY = ttysrv rtty locbrok
  SCRIPT = Startup console startsrv agelogs agelog
  ALL = $(BINARY) $(SCRIPT)
+@@ -63,10 +72,10 @@
+ 		test -d $(DESTPATH)/$$x || mkdir $(DESTPATH)/$$x; \
+ 	done
+ 	set -x; for x in $(BINARY); do \
+-		install -c -m 111 $$x $(DESTBIN)/$$x; \
++		install -c -m 755 $$x $(DESTBIN)/$$x; \
+ 	done
+ 	set -x; for x in $(SCRIPT); do \
+-		install -c -m 555 $$x $(DESTBIN)/$$x; \
++		install -c -m 755 $$x $(DESTBIN)/$$x; \
+ 	done
+ 
+ ttysrv: ttysrv.o ttyprot.o connutil.o misc.o version.o
