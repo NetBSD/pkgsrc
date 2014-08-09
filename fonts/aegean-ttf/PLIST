@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2014/08/09 16:21:27 wiz Exp $
+share/doc/aegean-ttf/Aegean.docx
+share/doc/aegean-ttf/Alphabets.docx
+share/doc/aegean-ttf/Cretan.docx
+share/doc/aegean-ttf/CyproMinoan.docx
+share/doc/aegean-ttf/CyproMinoanCorpus.xlsx
+share/doc/aegean-ttf/Linear.docx
+share/doc/aegean-ttf/LinearAwords.xlsx
+share/fonts/X11/TTF/Aegean.ttf
+share/fonts/X11/TTF/Aegean_hint.ttf
+share/fonts/X11/TTF/Cretan.ttf
+share/fonts/X11/TTF/Cretan_hint.ttf
+share/fonts/X11/TTF/CyproMinoan.ttf
+share/fonts/X11/TTF/CyproMinoan_hint.ttf
