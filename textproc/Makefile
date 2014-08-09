@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.791 2014/08/03 21:34:32 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.792 2014/08/09 21:53:53 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -653,6 +653,7 @@ SUBDIR+=	py-markdown
 SUBDIR+=	py-markdown2
 SUBDIR+=	py-markupsafe
 SUBDIR+=	py-mecab
+SUBDIR+=	py-numpydoc
 SUBDIR+=	py-pdf-parser
 SUBDIR+=	py-phonenumbers
 SUBDIR+=	py-prettytable
