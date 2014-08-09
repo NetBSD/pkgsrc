@@ -1,14 +1,21 @@
-$NetBSD: patch-ab,v 1.3 2009/03/02 22:10:27 rh Exp $
+$NetBSD: patch-ab,v 1.4 2014/08/09 16:55:03 schmonz Exp $
 
---- src/makefile.orig	2009-01-06 12:17:29.000000000 +1000
+Use pkgsrc-specified compiler and flags.
+
+--- src/makefile.orig	2014-04-04 17:26:25.000000000 +0000
 +++ src/makefile
-@@ -10,9 +10,7 @@
- # Add -DCONFIG_FILE_PATH=\"/your/path/.highlightrc\" if you want to define a
- # custom path to the highlight configuration file (default: $HOME/.highlightrc)
+@@ -12,12 +12,12 @@
+ 
+ # See src/gui-qt/highlight.pro for the Qt GUI compilation options
  
 -CXX=c++
++#CXX=c++
  
--CFLAGS:=-O2 ${CFLAGS}
+ # Added -qt4 because of Arch Linux Qt5 migration
+ QMAKE=qmake-qt4
  
- # Source paths
- CORE_DIR=./core/
+-CFLAGS:=-Wall -O2 ${CFLAGS} -DNDEBUG
++#CFLAGS:=-Wall -O2 ${CFLAGS} -DNDEBUG
+ #CFLAGS:=-ggdb ${CFLAGS}
+ 
+ CFLAGS_DILU=-fno-strict-aliasing
