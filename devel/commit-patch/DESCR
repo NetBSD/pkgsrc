@@ -1,0 +1,4 @@
+A neat little utility that lets you check in select portions of a
+file into Darcs, Git, Mercurial, Bazaar, Subversion, or CVS
+repositories. It comes as a command line app and also and emacs
+interface.
