@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.28 2013/04/28 01:50:57 markd Exp $
+# $NetBSD: Makefile,v 1.29 2014/08/09 20:12:13 wiz Exp $
 #
 # In order to ensure compliance with U.S. and international law, please
 # do not modify this file to provide pointers to the source or homepage
 # for this software or submit any PRs telling us the contents of the
 # HOMEPAGE or MASTER_SITES definitions in this Makefile.
 
-DISTNAME=	libdvdcss-1.2.13
+DISTNAME=	libdvdcss-1.3.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${LIBDVDCSS_MASTER_SITES}/${DISTNAME:S/libdvdcss-//}/
 EXTRACT_SUFX=	.tar.bz2
@@ -13,8 +13,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${LIBDVDCSS_HOMEPAGE}
 COMMENT=	Simple library designed for accessing DVDs
-# XXX missing
-LICENSE=	libdvdcss-license
+LICENSE=	gnu-gpl-v2
 
 RESTRICTED=	Legal problems due to CSS code
 NO_BIN_ON_CDROM=	${RESTRICTED}
