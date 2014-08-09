@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2014/08/09 16:21:27 wiz Exp $
+share/doc/aegyptus-ttf/Aegyptus.docx
+share/doc/aegyptus-ttf/AegyptusTable.docx
+share/doc/aegyptus-ttf/Gardiner.docx
+share/doc/aegyptus-ttf/Nilus.docx
+share/fonts/X11/TTF/AegyptusB.ttf
+share/fonts/X11/TTF/AegyptusB_hint.ttf
+share/fonts/X11/TTF/AegyptusR.ttf
+share/fonts/X11/TTF/AegyptusR_hint.ttf
+share/fonts/X11/TTF/Gardiner.ttf
+share/fonts/X11/TTF/Gardiner_hint.ttf
+share/fonts/X11/TTF/Nilus.ttf
+share/fonts/X11/TTF/Nilus_hint.ttf
