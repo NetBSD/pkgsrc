@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2974 2014/08/09 05:09:56 obache Exp $
+$NetBSD: CHANGES-2014,v 1.2975 2014/08/09 06:32:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3883,3 +3883,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/gst-plugins1-libav to 1.4.0 [wiz 2014-08-08]
 	Updated misc/calibre to 1.48.0 [wiz 2014-08-08]
 	Updated fonts/thaixfonts to 1.2.6 [obache 2014-08-09]
+	Added graphics/gmic version 1.5.9.3 [wiz 2014-08-09]
