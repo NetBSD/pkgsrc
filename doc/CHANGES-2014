@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2980 2014/08/09 16:55:09 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.2981 2014/08/09 17:43:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3894,3 +3894,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added fonts/symbola-ttf version 7.17 [wiz 2014-08-09]
 	Added x11/xtruss version 10030 [wiz 2014-08-09]
 	Updated textproc/highlight to 3.18 [schmonz 2014-08-09]
+	Updated multimedia/ffmpeg2 to 2.3.1 [adam 2014-08-09]
