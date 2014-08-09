@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2014/02/15 23:54:46 wiedi Exp $
+# $NetBSD: Makefile,v 1.31 2014/08/09 10:38:18 kim Exp $
 
 DISTNAME=	rtty-3.2
 PKGREVISION=	1
@@ -19,7 +19,11 @@ CFLAGS.SunOS+=	-Du_int16_t=uint16_t -Du_int32_t=uint32_t
 MAKE_ENV+=	LIBS="-lcrypt"
 .endif
 
-pre-configure:
+# Use pre-patch so that all patches can be made against what is there
+# in the work directory after failed compiles. Also feels more logical
+# to have "make patch" complete *all* patching.
+
+pre-patch:
 	${CHMOD} u+w ${WRKDIR}/*
 	for f in `echo ${WRKDIR}/* | ${XARGS} ${GREP} -l '/usr/local'`; do \
 		${ECHO} patching $$f ; \
