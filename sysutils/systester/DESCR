@@ -1,0 +1,12 @@
+System Stability Tester tries to test the system's stability by
+calculating up to 128 millions of Pi digits. It supports multiple
+calculation algorithms. For the moment only two have been implemented.
+The Quadratic Convergence of Borwein and Gauss-Legendre, the
+algorithm SuperPi uses. The testing process includes the creation
+of two or more threads. After each step of the calculation, the
+results of all the threads are compared. Any differences between
+them are reported. There is also the option for single threaded
+calculation, but in this case there is no stability check. This is
+useful for benchmarking purposes only. The calculation of Pi itself
+is multi threaded since version 0.7.2, for the Borwein algorithm
+only.
