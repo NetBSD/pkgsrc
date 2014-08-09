@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13544 2014/08/09 20:23:01 wiz Exp $
+$NetBSD: TODO,v 1.13545 2014/08/09 23:18:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -297,6 +297,10 @@ Suggested new packages
 	ddar
 	http://www.synctus.com/ddar/
 	de-duplicating archiver for Unix.
+
+	jitsi
+	https://jitsi.org/
+	Secure Video Calls and Chat
 
 	Missing xorg packages
 	app: constype, intel-gpu-tools
