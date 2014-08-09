@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.6 2014/08/09 16:55:03 schmonz Exp $
+#	$NetBSD: Makefile,v 1.7 2014/08/09 17:15:59 schmonz Exp $
 
 DISTNAME=		highlight-3.18
 CATEGORIES=		textproc
@@ -33,5 +33,4 @@ SUBST_SED.paths+=	-e 's,/usr/share,${PREFIX}/share,g'
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
