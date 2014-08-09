@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2978 2014/08/09 16:23:31 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2979 2014/08/09 16:34:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3892,3 +3892,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added fonts/anatolian-ttf version 5.02 [wiz 2014-08-09]
 	Added fonts/asea-ttf version 4.13 [wiz 2014-08-09]
 	Added fonts/symbola-ttf version 7.17 [wiz 2014-08-09]
+	Added x11/xtruss version 10030 [wiz 2014-08-09]
