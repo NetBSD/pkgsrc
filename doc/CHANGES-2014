@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2991 2014/08/09 22:13:25 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2992 2014/08/09 22:27:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3905,3 +3905,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added textproc/py-numpydoc version 0.5 [wiz 2014-08-09]
 	Added devel/bugs-everywhere version 1.1.1 [wiz 2014-08-09]
 	Added lang/vala024 version 0.24.0 [wiz 2014-08-09]
+	Added games/py-easyAI version 0.0.0.4 [wiz 2014-08-09]
