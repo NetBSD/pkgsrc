@@ -1,0 +1,24 @@
+# $NetBSD: Makefile,v 1.1 2014/08/09 21:24:08 wiz Exp $
+
+DISTNAME=	trojita-0.4.1
+CATEGORIES=	mail
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=trojita/}
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://trojita.flaska.net/
+COMMENT=	Fast Qt IMAP e-mail client
+LICENSE=	gnu-gpl-v2
+
+DEPENDS+=	qt4-sqlite3-[0-9]*:../../x11/qt4-sqlite3
+
+USE_CMAKE=	yes
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config
+CFLAGS+=	-I${BUILDLINK_DIR}/qt4/mkspecs/netbsd-g++/
+
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
