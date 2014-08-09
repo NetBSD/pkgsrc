@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2975 2014/08/09 06:32:20 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2976 2014/08/09 15:07:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3884,3 +3884,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/calibre to 1.48.0 [wiz 2014-08-08]
 	Updated fonts/thaixfonts to 1.2.6 [obache 2014-08-09]
 	Added graphics/gmic version 1.5.9.3 [wiz 2014-08-09]
+	Updated net/youtube-dl to 20140805 [wiz 2014-08-09]
