@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2014/08/09 16:21:28 wiz Exp $
+share/doc/anatolian-ttf/Anatolian.docx
+share/fonts/X11/TTF/Anatolian.ttf
+share/fonts/X11/TTF/Anatolian_hint.ttf
