@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2014/08/09 06:26:09 wiz Exp $
+bin/gmic
+include/gmic.h
+lib/gimp/2.0/plug-ins/gmic_gimp
+lib/libgmic.so
+lib/libgmic.so.1
+lib/libgmic.so.1.5.9
+man/fr/man1/gmic.1
+man/man1/gmic.1

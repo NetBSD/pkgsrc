@@ -1,0 +1,53 @@
+$NetBSD: patch-src_Makefile,v 1.1 2014/08/09 06:26:09 wiz Exp $
+
+Add NetBSD.
+Adapt installation paths.
+Add compiler rpath flag.
+
+--- src/Makefile.orig	2014-06-20 13:02:38.000000000 +0000
++++ src/Makefile
+@@ -51,6 +51,9 @@ CC = g++
+ ifeq ($(OS),Linux)
+ OS = Unix
+ endif
++ifeq ($(OS),NetBSD)
++OS = Unix
++endif
+ ifeq ($(OS),GNU/kFreeBSD)
+ OS = Unix
+ endif
+@@ -62,7 +65,7 @@ PLUGINDIR = ~/Library/Application\ Suppo
+ USR = /opt/local
+ else
+ PLUGINDIR = `gimptool-2.0 --gimpplugindir`/plug-ins
+-USR = /usr
++USR = ${PREFIX}
+ endif
+ ifeq ($(OSTYPE),msys)
+ EXE = .exe
+@@ -77,7 +80,7 @@ IS_BETA_CFLAGS = 
+ 
+ # Flags that are mandatory to compile 'gmic'.
+ MANDATORY_CFLAGS += -Dgmic_build -I$(USR)/include
+-MANDATORY_LDFLAGS += -L$(USR)/lib
++MANDATORY_LDFLAGS += ${COMPILER_RPATH_FLAG}$(USR)/lib -L$(USR)/lib
+ ifeq ($(CC),g++)
+ MANDATORY_CFLAGS += -Wall -W
+ MANDATORY_LDFLAGS += -lm
+@@ -422,11 +425,11 @@ ifneq ($(OS),Darwin)
+ 	ln -s libgmic.so.1.5.9 $(DESTDIR)$(USR)/lib/libgmic.so.1
+ 	ln -s libgmic.so.1 $(DESTDIR)$(USR)/lib/libgmic.so
+ endif
+-	mkdir -p $(DESTDIR)$(USR)/share/man/
+-	mkdir -p $(DESTDIR)$(USR)/share/man/man1/
+-	mkdir -p $(DESTDIR)$(USR)/share/man/fr/man1/
+-	cp -f ../man/gmic.1.gz $(DESTDIR)$(USR)/share/man/man1/gmic.1.gz
+-	cp -f ../man/gmic.1.gz $(DESTDIR)$(USR)/share/man/fr/man1/gmic.1.gz
++	mkdir -p $(DESTDIR)$(USR)/${PKGMANDIR}/
++	mkdir -p $(DESTDIR)$(USR)/${PKGMANDIR}/man1/
++	mkdir -p $(DESTDIR)$(USR)/${PKGMANDIR}/fr/man1/
++	cp -f ../man/gmic.1.gz $(DESTDIR)$(USR)/${PKGMANDIR}/man1/gmic.1.gz
++	cp -f ../man/gmic.1.gz $(DESTDIR)$(USR)/${PKGMANDIR}/fr/man1/gmic.1.gz
+ 	if [ -d /etc/bash_completion.d/ ]; then mkdir -p $(DESTDIR)/etc/bash_completion.d/; cp -f ../resources/gmic_bashcompletion.sh $(DESTDIR)/etc/bash_completion.d/gmic; fi
+ 	if [ -d /opt/local/etc/bash_completion.d/ ]; then mkdir -p $(DESTDIR)/opt/local/etc/bash_completion.d/; cp -f ../resources/gmic_bashcompletion.sh $(DESTDIR)/opt/local/etc/bash_completion.d/gmic; fi
+ 
