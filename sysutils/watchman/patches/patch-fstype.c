@@ -1,6 +1,7 @@
-$NetBSD: patch-fstype.c,v 1.1 2014/08/09 22:59:30 wiz Exp $
+$NetBSD: patch-fstype.c,v 1.2 2014/08/09 23:08:41 wiz Exp $
 
 NetBSD also supports statvfs, adapt checks.
+https://github.com/facebook/watchman/issues/49
 
 --- fstype.c.orig	2014-05-20 21:14:24.000000000 +0000
 +++ fstype.c
