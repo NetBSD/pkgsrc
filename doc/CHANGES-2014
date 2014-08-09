@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2977 2014/08/09 15:51:47 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.2978 2014/08/09 16:23:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3886,3 +3886,9 @@ Changes to the packages collection and infrastructure in 2014:
 	Added graphics/gmic version 1.5.9.3 [wiz 2014-08-09]
 	Updated net/youtube-dl to 20140805 [wiz 2014-08-09]
 	Added sysutils/systester version 1.5.1 [wiz 2014-08-09]
+	Added fonts/aegean-ttf version 7.42 [wiz 2014-08-09]
+	Added fonts/aegyptus-ttf version 5.03 [wiz 2014-08-09]
+	Added fonts/akkadian-ttf version 7.15 [wiz 2014-08-09]
+	Added fonts/anatolian-ttf version 5.02 [wiz 2014-08-09]
+	Added fonts/asea-ttf version 4.13 [wiz 2014-08-09]
+	Added fonts/symbola-ttf version 7.17 [wiz 2014-08-09]
