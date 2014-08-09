@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.225 2014/08/09 20:19:49 wiz Exp $
+# $NetBSD: Makefile,v 1.226 2014/08/09 20:26:40 wiz Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -9,6 +9,7 @@ SUBDIR+=	adobe-flash-plugin11
 SUBDIR+=	alevt
 SUBDIR+=	audiocd-kio
 SUBDIR+=	avidemux
+SUBDIR+=	bitstream
 SUBDIR+=	bsdav
 SUBDIR+=	ccxstream
 SUBDIR+=	cfourcc
