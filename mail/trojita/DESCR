@@ -1,0 +1,14 @@
+This is Trojita, a Qt IMAP e-mail client.
+
+Features:
+
+* A pure Qt4 (and Qt5!) application with no additional dependencies
+* Robust IMAP core implemented using Qt's Model-View framework
+* Standards compliance is a design goal
+* On-demand message list and body part loading
+* Offline IMAP support
+* Support for bandwidth-saving mode aimed at mobile users with
+  expensive connection
+* IMAP over SSH -- in addition to usual SSL/TLS connections, the
+  server could be accessed via SSH
+* Safe and robust dealing with HTML mail
