@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.18 2013/02/06 21:40:33 jperkin Exp $
+@comment $NetBSD: PLIST.common,v 1.18.12.1 2014/08/09 20:43:14 spz Exp $
 bin/c_rehash
 bin/openssl
 include/openssl/aes.h
@@ -967,6 +967,7 @@ man/man3/SSL_CTX_set_session_cache_mode.3
 man/man3/SSL_CTX_set_session_id_context.3
 man/man3/SSL_CTX_set_ssl_version.3
 man/man3/SSL_CTX_set_timeout.3
+man/man3/SSL_CTX_set_tlsext_ticket_key_cb.3
 man/man3/SSL_CTX_set_tmp_dh.3
 man/man3/SSL_CTX_set_tmp_dh_callback.3
 man/man3/SSL_CTX_set_tmp_rsa.3
