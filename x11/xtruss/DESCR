@@ -1,0 +1,19 @@
+Any programmer accustomed to writing programs on Linux or System
+V-type Unixes will have encountered the program variously known as
+strace or truss, which monitors another program and produces a
+detailed log of every system call the program makes - in other
+words, all the program's interactions with the OS kernel. This is
+often an invaluable debugging tool, and almost as good an educational
+one.
+
+When it's a GUI program (or rather, the GUI-related behaviour of
+a program) that you want to understand or debug, though, the level
+of interaction with the OS kernel is rarely the most useful one.
+More helpfully, one would like to log all the program's interactions
+with the X server in the same way.
+
+This package provides xtruss, an X protocol loggers. It has a
+command-line syntax similar to strace in its default mode, you just
+prefix "xtruss" to the same command line you would have run anyway
+and its output format is also more like strace, putting requests
+and responses on the same line of output where reasonably possible.
