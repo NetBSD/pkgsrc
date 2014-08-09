@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/08/09 21:53:31 wiz Exp $
+
+SHA1 (numpydoc-0.5.tar.gz) = 5ac7ae0122669dc457d5abba1f9b81f03098bd38
+RMD160 (numpydoc-0.5.tar.gz) = a44f50895bf3fdcfbdb95d10aa64acd87cae624b
+Size (numpydoc-0.5.tar.gz) = 32051 bytes
