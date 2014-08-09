@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.611 2014/08/09 15:51:36 wiz Exp $
+# $NetBSD: Makefile,v 1.612 2014/08/09 22:59:47 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -493,6 +493,7 @@ SUBDIR+=	virt-manager
 SUBDIR+=	virtinst
 SUBDIR+=	vobcopy
 SUBDIR+=	vxargs
+SUBDIR+=	watchman
 SUBDIR+=	wbm-apache
 SUBDIR+=	wbm-at
 SUBDIR+=	wbm-bandwidth
