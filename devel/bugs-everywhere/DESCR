@@ -1,0 +1,8 @@
+This is Bugs Everywhere (BE), a bugtracker built on distributed
+version control.  It works with Arch, Bazaar, Darcs, Git, Mercurial,
+and Monotone at the moment, but is easily extensible.  It can also
+function with no VCS at all.
+
+The idea is to package the bug information with the source code,
+so that bugs can be marked "fixed" in the branches that fix them.
+So, instead of numbers, bugs have globally unique ids.
