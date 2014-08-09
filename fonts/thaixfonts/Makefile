@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2014/06/01 16:35:37 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/08/09 05:09:47 obache Exp $
 #
 
-DISTNAME=	thaixfonts-1.2.5
-PKGREVISION=	1
+DISTNAME=	thaixfonts-1.2.6
 CATEGORIES=	fonts x11
 MASTER_SITES=	http://linux.thai.net/pub/thailinux/software/thaixfonts/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://linux.thai.net/projects/thaixfonts
