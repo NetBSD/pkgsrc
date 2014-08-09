@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2014/08/09 20:19:35 wiz Exp $
+bin/bd_info
+include/libbluray/bluray-version.h
+include/libbluray/bluray.h
+include/libbluray/clpi_data.h
+include/libbluray/filesystem.h
+include/libbluray/keys.h
+include/libbluray/log_control.h
+include/libbluray/meta_data.h
+include/libbluray/overlay.h
+lib/libbluray.la
+lib/pkgconfig/libbluray.pc
