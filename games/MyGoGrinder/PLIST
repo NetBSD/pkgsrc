@@ -1,0 +1,49 @@
+@comment $NetBSD: PLIST,v 1.1 2014/08/10 13:12:31 wiz Exp $
+bin/MyGoGrinder.sh
+share/MyGoGrinder/MyGoGrinder.jar
+share/MyGoGrinder/Tags list English.txt
+share/MyGoGrinder/Tags-Liste teilw.Deutsch.txt
+share/doc/MyGoGrinder/License.txt
+share/doc/MyGoGrinder/Notizen HTML.txt
+share/doc/MyGoGrinder/collections.html
+share/doc/MyGoGrinder/docs.html
+share/doc/MyGoGrinder/download.html
+share/doc/MyGoGrinder/features.html
+share/doc/MyGoGrinder/imgs/About.png
+share/doc/MyGoGrinder/imgs/AutoAdv.png
+share/doc/MyGoGrinder/imgs/Banner.png
+share/doc/MyGoGrinder/imgs/BannerOld.png
+share/doc/MyGoGrinder/imgs/Edit.png
+share/doc/MyGoGrinder/imgs/Find.png
+share/doc/MyGoGrinder/imgs/Help.png
+share/doc/MyGoGrinder/imgs/Import.png
+share/doc/MyGoGrinder/imgs/NextProb.png
+share/doc/MyGoGrinder/imgs/Open.png
+share/doc/MyGoGrinder/imgs/Prefs.png
+share/doc/MyGoGrinder/imgs/PrevProb.png
+share/doc/MyGoGrinder/imgs/Save.png
+share/doc/MyGoGrinder/imgs/SelProbs.png
+share/doc/MyGoGrinder/imgs/Split.png
+share/doc/MyGoGrinder/imgs/fullscreen.png
+share/doc/MyGoGrinder/imgs/index2.jpg
+share/doc/MyGoGrinder/imgs/probframe.png
+share/doc/MyGoGrinder/imgs/probframethumb.png
+share/doc/MyGoGrinder/imgs/selectiondialog.png
+share/doc/MyGoGrinder/imgs/selectiondialogthumb.png
+share/doc/MyGoGrinder/imgs/settingsdialog.png
+share/doc/MyGoGrinder/imgs/settingsfolder.png
+share/doc/MyGoGrinder/imgs/sflogo.png
+share/doc/MyGoGrinder/index.html
+share/doc/MyGoGrinder/license.html
+share/doc/MyGoGrinder/readme.txt
+share/doc/MyGoGrinder/tagssortorder1.png
+share/doc/MyGoGrinder/tagssortorder2.png
+share/doc/MyGoGrinder/tips.html
+share/doc/MyGoGrinder/wgf.html
+share/examples/MyGoGrinder/Xuan-Xuan-Qi-Jing-(problems).zip
+share/examples/MyGoGrinder/demo.wgf
+share/pixmaps/Grinder128.png
+share/pixmaps/Grinder32.png
+share/pixmaps/Grinder48.png
+share/pixmaps/Grinder64.png
+share/pixmaps/MyGrinder.ico
