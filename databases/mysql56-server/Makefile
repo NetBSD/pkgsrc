@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/06/14 10:22:27 wiedi Exp $
+# $NetBSD: Makefile,v 1.17 2014/08/10 15:11:57 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 SVR4_PKGNAME=	mysqs
@@ -67,6 +67,15 @@ REPLACE_PERL+=		mysql-test/suite/funcs_1/lib/DataGen_modify.pl
 REPLACE_PERL+=		mysql-test/suite/funcs_2/lib/gen_charset_utf8.pl
 REPLACE_PERL+=		mysql-test/suite/rpl/extension/bhs.pl
 REPLACE_PERL+=		mysql-test/suite/rpl/extension/checksum.pl
+
+REPLACE_SH+=		mysql-test/suite/rpl/t/rpl_loaddata_symlink-master.sh
+REPLACE_SH+=		mysql-test/suite/rpl/t/rpl_loaddata_symlink-slave.sh
+REPLACE_SH+=		mysql-test/suite/rpl/t/rpl_misc_functions-slave.sh
+REPLACE_SH+=		mysql-test/t/long_tmpdir-master.sh
+REPLACE_SH+=		mysql-test/t/lowercase_mixed_tmpdir-master.sh
+REPLACE_SH+=		mysql-test/t/lowercase_mixed_tmpdir_innodb-master.sh
+
+CHECK_INTERPRETER_SKIP+=share/mysql/test/std_data/dtrace.d
 
 # Replace interpreter without pulling in Python dependecy
 # Update when PYTHON_VERSION_DEFAULT changes!
