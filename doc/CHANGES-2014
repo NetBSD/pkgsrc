@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3000 2014/08/10 12:21:49 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3001 2014/08/10 13:13:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3914,3 +3914,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/xf86-video-vmware to 13.0.2nb2 [wiz 2014-08-10]
 	Updated sysutils/nautilus to 2.32.2.1nb21 [wiz 2014-08-10]
 	Added textproc/igor version 0.0.20140517 [wiz 2014-08-10]
+	Added games/MyGoGrinder version 2.0.0.J6 [wiz 2014-08-10]
