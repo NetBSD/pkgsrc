@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.144 2014/07/27 20:04:59 ryoon Exp $
+$NetBSD: distinfo,v 1.145 2014/08/10 12:52:08 abs Exp $
 
 SHA1 (enigmail-1.7.tar.gz) = 79185762ed502cbbf88e0dbf4704dbfedaf429b5
 RMD160 (enigmail-1.7.tar.gz) = c9321d919da53498839bf265acad2dcff94e422a
@@ -28,6 +28,7 @@ SHA1 (patch-ipc_chromium_src_base_sys__info__posix.cc) = f5545ffcee1b5b02d8e130c
 SHA1 (patch-ipc_chromium_src_build_build__config.h) = 7e5f6e195884d7fc629c10aefe13dba768001daf
 SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = a7385ed3b8a5011651c07a239b2d8a2a99e14624
 SHA1 (patch-ldap_sdks_c-sdk_build.mk) = 171d81697d136abb6e02cb81445cd88fd8580de2
+SHA1 (patch-mail_components_shell_nsMailGNOMEIntegration.cpp) = 2b086ad7d3e4efa594ef04aac358e5271993bfcb
 SHA1 (patch-mail_installer_package-manifest.in) = 9f79382d6e17a839d3ba90dab4f657a80340141a
 SHA1 (patch-mail_installer_removed-files.in) = 26d69b9b8747f25130af75ea057cf2abc615bfff
 SHA1 (patch-mb) = 0e2a36a38147f112a3e1bace0ad1ccd295e8265c
