@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2014/06/02 07:17:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2014/08/10 14:27:40 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -565,6 +565,7 @@ share/mysql/test/include/show_slave_hosts.inc
 share/mysql/test/include/show_slave_status.inc
 share/mysql/test/include/sp-vars.inc
 share/mysql/test/include/start_slave.inc
+share/mysql/test/include/stop_dump_threads.inc
 share/mysql/test/include/stop_slave.inc
 share/mysql/test/include/stop_slave_io.inc
 share/mysql/test/include/stop_slave_sql.inc
@@ -1177,6 +1178,7 @@ share/mysql/test/r/server_id.require
 share/mysql/test/r/server_id1.require
 share/mysql/test/r/shm.result
 share/mysql/test/r/show_check.result
+share/mysql/test/r/show_processlist.result
 share/mysql/test/r/show_profile.result
 share/mysql/test/r/signal.result
 share/mysql/test/r/signal_code.result
@@ -2910,6 +2912,7 @@ share/mysql/test/suite/innodb/r/innodb-autoinc.result
 share/mysql/test/suite/innodb/r/innodb-blob.result
 share/mysql/test/suite/innodb/r/innodb-change-buffer-recovery.result
 share/mysql/test/suite/innodb/r/innodb-consistent.result
+share/mysql/test/suite/innodb/r/innodb-fk.result
 share/mysql/test/suite/innodb/r/innodb-index.result
 share/mysql/test/suite/innodb/r/innodb-index_ucs2.result
 share/mysql/test/suite/innodb/r/innodb-lock.result
@@ -3014,6 +3017,7 @@ share/mysql/test/suite/innodb/t/innodb-change-buffer-recovery-master.opt
 share/mysql/test/suite/innodb/t/innodb-change-buffer-recovery.test
 share/mysql/test/suite/innodb/t/innodb-consistent-master.opt
 share/mysql/test/suite/innodb/t/innodb-consistent.test
+share/mysql/test/suite/innodb/t/innodb-fk.test
 share/mysql/test/suite/innodb/t/innodb-index.test
 share/mysql/test/suite/innodb/t/innodb-index_ucs2.test
 share/mysql/test/suite/innodb/t/innodb-lock.test
@@ -3854,6 +3858,7 @@ share/mysql/test/suite/rpl/r/rpl_000010.result
 share/mysql/test/suite/rpl/r/rpl_000011.result
 share/mysql/test/suite/rpl/r/rpl_000013.result
 share/mysql/test/suite/rpl/r/rpl_000017.result
+share/mysql/test/suite/rpl/r/rpl_4threads_deadlock.result
 share/mysql/test/suite/rpl/r/rpl_EE_err.result
 share/mysql/test/suite/rpl/r/rpl_LD_INFILE.result
 share/mysql/test/suite/rpl/r/rpl_alter.result
@@ -4078,6 +4083,7 @@ share/mysql/test/suite/rpl/r/rpl_row_wide_table.result
 share/mysql/test/suite/rpl/r/rpl_savepoint.result
 share/mysql/test/suite/rpl/r/rpl_semi_sync.result
 share/mysql/test/suite/rpl/r/rpl_semi_sync_event.result
+share/mysql/test/suite/rpl/r/rpl_semi_sync_uninstall_plugin.result
 share/mysql/test/suite/rpl/r/rpl_server_id1.result
 share/mysql/test/suite/rpl/r/rpl_server_id2.result
 share/mysql/test/suite/rpl/r/rpl_server_id_ignore.result
@@ -4159,6 +4165,7 @@ share/mysql/test/suite/rpl/t/rpl_000010.test
 share/mysql/test/suite/rpl/t/rpl_000011.test
 share/mysql/test/suite/rpl/t/rpl_000013.test
 share/mysql/test/suite/rpl/t/rpl_000017.test
+share/mysql/test/suite/rpl/t/rpl_4threads_deadlock.test
 share/mysql/test/suite/rpl/t/rpl_EE_err.test
 share/mysql/test/suite/rpl/t/rpl_LD_INFILE.test
 share/mysql/test/suite/rpl/t/rpl_alter.test
@@ -4464,6 +4471,9 @@ share/mysql/test/suite/rpl/t/rpl_semi_sync.test
 share/mysql/test/suite/rpl/t/rpl_semi_sync_event-master.opt
 share/mysql/test/suite/rpl/t/rpl_semi_sync_event-slave.opt
 share/mysql/test/suite/rpl/t/rpl_semi_sync_event.test
+share/mysql/test/suite/rpl/t/rpl_semi_sync_uninstall_plugin-master.opt
+share/mysql/test/suite/rpl/t/rpl_semi_sync_uninstall_plugin-slave.opt
+share/mysql/test/suite/rpl/t/rpl_semi_sync_uninstall_plugin.test
 share/mysql/test/suite/rpl/t/rpl_server_id1.test
 share/mysql/test/suite/rpl/t/rpl_server_id2-slave.opt
 share/mysql/test/suite/rpl/t/rpl_server_id2.test
@@ -6149,6 +6159,7 @@ share/mysql/test/t/shm-master.opt
 share/mysql/test/t/shm.test
 share/mysql/test/t/show_check-master.opt
 share/mysql/test/t/show_check.test
+share/mysql/test/t/show_processlist.test
 share/mysql/test/t/show_profile.test
 share/mysql/test/t/signal.test
 share/mysql/test/t/signal_code.test
