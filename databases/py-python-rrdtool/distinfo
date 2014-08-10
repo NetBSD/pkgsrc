@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/08/10 18:26:33 fhajny Exp $
+
+SHA1 (python-rrdtool-1.4.7.tar.gz) = cf2678f806e343198c140b91de1001a9f9554125
+RMD160 (python-rrdtool-1.4.7.tar.gz) = e1e593a855d27edca21b28c9b39d178bbb6af2a2
+Size (python-rrdtool-1.4.7.tar.gz) = 1396786 bytes
