@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.371 2014/08/09 22:27:16 wiz Exp $
+# $NetBSD: Makefile,v 1.372 2014/08/10 13:12:45 wiz Exp $
 #
 
 COMMENT=	Games
@@ -8,6 +8,7 @@ SUBDIR+=	4stAttack
 SUBDIR+=	InterLOGIC
 SUBDIR+=	KoboDeluxe
 SUBDIR+=	LostPixels
+SUBDIR+=	MyGoGrinder
 SUBDIR+=	REminiscence
 SUBDIR+=	abuse
 SUBDIR+=	adom
