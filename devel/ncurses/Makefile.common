@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2014/07/21 07:50:45 richard Exp $
+# $NetBSD: Makefile.common,v 1.22 2014/08/10 09:10:10 richard Exp $
 #
 # used by devel/ncursesw/Makefile
 
@@ -62,7 +62,7 @@ USE_LANGUAGES+=	c99
 .include "../../mk/compiler.mk"
 . if !empty(CC_VERSION:Mgcc-4.*)
 #This may yet need to be adapted for systems prior to Solaris 10
-BUILDLINK_TRANSFORM+=	rename:-D_XOPEN_SOURCE=500:-D_XOPEN_SOURCE=600
+BUILDLINK_TRANSFORM+=	rename:-D_XOPEN_SOURCE=500:-D_POSIX_C_SOURCE=200112L
 BUILDLINK_TRANSFORM+=	rm:-D_XOPEN_SOURCE_EXTENDED
 . endif
 TERMINFO_SRC=	${WRKSRC}/misc/terminfo.src
