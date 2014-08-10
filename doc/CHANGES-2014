@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3008 2014/08/10 14:55:26 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3009 2014/08/10 15:42:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3922,3 +3922,9 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated games/rftg to 0.9.2 [wiz 2014-08-10]
 	Updated security/stunnel to 5.03 [wiz 2014-08-10]
 	Updated converters/py-simplejson to 3.6.2 [wiz 2014-08-10]
+	Updated devel/cmake to 3.0.1 [adam 2014-08-10]
+	Updated databases/mysql55-client to 5.5.39 [adam 2014-08-10]
+        Updated databases/mysql55-server to 5.5.39 [adam 2014-08-10]
+	Updated databases/mysql56-client to 5.6.20 [adam 2014-08-10]
+	Updated databases/mysql56-server to 5.6.20 [adam 2014-08-10]
+	Updated multimedia/x264-devel to 20140809 [adam 2014-08-10]
