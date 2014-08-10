@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/05/24 13:10:04 obache Exp $
+# $NetBSD: Makefile,v 1.2 2014/08/10 02:27:24 obache Exp $
 
-DISTNAME=	libkkc-0.3.3
+DISTNAME=	libkkc-0.3.4
 CATEGORIES=	converters textproc japanese inputmethod
 MASTER_SITES=	https://bitbucket.org/libkkc/libkkc/downloads/
 
@@ -26,7 +26,7 @@ PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
-.include "../../devel/libgee/buildlink3.mk"
+.include "../../devel/libgee0.8/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../textproc/marisa/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
