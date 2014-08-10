@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/06/02 19:42:47 fhajny Exp $
+# $NetBSD: Makefile,v 1.20 2014/08/10 09:06:48 tron Exp $
 #
 
 DISTNAME=	apg-2.3.0b
@@ -23,8 +23,15 @@ MAKE_ENV+=	APG_CS_CLIBS=${APG_CS_CLIBS:Q}
 
 INSTALLATION_DIRS+=	bin sbin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+BUILDLINK_TRANSFORM+=	rm:-lcrypt
+.endif
+
 post-extract:
 	${CHMOD} -R u+w ${WRKSRC}
+	${RM} -f ${WRKSRC}/INSTALL
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/perl/apgcli.pl ${DESTDIR}${PREFIX}/bin/apgcli
