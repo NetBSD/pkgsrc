@@ -1,0 +1,16 @@
+$NetBSD: patch-data_nautilus-folder-handler.desktop.in.in,v 1.1 2014/08/10 09:19:28 wiz Exp $
+
+desktop-file: remove obsolete x-directory/* mimetypes
+https://mail.gnome.org/archives/commits-list/2011-February/msg09328.html
+
+--- data/nautilus-folder-handler.desktop.in.in.orig	2010-11-30 17:20:09.000000000 +0000
++++ data/nautilus-folder-handler.desktop.in.in
+@@ -7,7 +7,7 @@ Terminal=false
+ Icon=folder-open
+ StartupNotify=true
+ Type=Application
+-MimeType=x-directory/gnome-default-handler;x-directory/normal;inode/directory;application/x-gnome-saved-search;
++MimeType=inode/directory;application/x-gnome-saved-search;
+ OnlyShowIn=GNOME;
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=nautilus
