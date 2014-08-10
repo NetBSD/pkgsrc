@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2014/01/06 17:43:50 tez Exp $
+# $NetBSD: Makefile,v 1.43 2014/08/10 20:51:01 wiz Exp $
 
-DISTNAME=	mdocml-1.12.3
-PKGREVISION=	1
+DISTNAME=	mdocml-1.13.1
 CATEGORIES=	textproc devel
 MASTER_SITES=	http://mdocml.bsd.lv/snapshots/
 
@@ -10,7 +9,7 @@ HOMEPAGE=	http://mdocml.bsd.lv/
 COMMENT=	Convert man pages from mdoc, man, and tbl to txt, html, ps, or pdf
 LICENSE=	2-clause-bsd # not exactly, but near enough
 
-MAKE_FLAGS+=	PREFIX=${PREFIX} DBLIB=${BDB_LIBS:Q}
+MAKE_FLAGS+=	PREFIX=${PREFIX}
 
 CONFLICTS=	man-pages-[0-9]*
 
@@ -30,5 +29,10 @@ MAKE_FLAGS+=	STATIC=
 post-extract:
 	${CP} -p ${FILESDIR}/*.c ${WRKSRC}
 
-.include "../../mk/bdb.buildlink3.mk"
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && mv preconv mandoc-preconv
+	cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 && mv preconv.1 mandoc-preconv.1
+	cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/man7 && mv roff.7 mandoc-roff.7
+
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
