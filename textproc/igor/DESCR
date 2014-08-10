@@ -1,0 +1,12 @@
+The many rules for man pages and DocBook are a bit much to remember when
+months can pass between working on the various types.
+
+After not finding much to do automated checking, I slapped together a
+Perl program called "igor" that does some of this.  At present it checks
+all types of files for repeated words ("is is"), common spelling
+mistakes collected from FreeBSD documents, FreeBSD obsolete features
+(just "cvsup" so far), bad phrases ("the to"), and bad whitespace (blank
+lines with whitespace or lines with trailing whitespace).
+There's a separate style check that makes some subjective suggestions.
+
+There are also particular tests for mdoc(7) and DocBook files.
