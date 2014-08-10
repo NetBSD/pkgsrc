@@ -1,11 +1,11 @@
-$NetBSD: patch-CMakeLists.txt,v 1.3 2014/02/13 14:38:08 jperkin Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.4 2014/08/10 15:11:57 adam Exp $
 
 Split configuration between mysql-client and mysql-server.
 Build with newer DTrace.
 
---- CMakeLists.txt.orig	2013-11-17 18:02:53.000000000 +0000
+--- CMakeLists.txt.orig	2014-07-18 15:48:39.000000000 +0000
 +++ CMakeLists.txt
-@@ -205,6 +205,7 @@ IF(DISABLE_SHARED)
+@@ -215,6 +215,7 @@ IF(DISABLE_SHARED)
    SET(WITHOUT_DYNAMIC_PLUGINS 1)
  ENDIF()
  OPTION(ENABLED_PROFILING "Enable profiling" ON)
@@ -13,7 +13,7 @@ Build with newer DTrace.
  OPTION(CYBOZU "" OFF)
  OPTION(BACKUP_TEST "" OFF)
  OPTION(WITHOUT_SERVER OFF)
-@@ -443,7 +443,6 @@ ADD_SUBDIRECTORY(vio)
+@@ -472,7 +473,6 @@ ADD_SUBDIRECTORY(vio)
  ADD_SUBDIRECTORY(regex)
  ADD_SUBDIRECTORY(mysys)
  ADD_SUBDIRECTORY(mysys_ssl)
@@ -21,31 +21,33 @@ Build with newer DTrace.
  
  IF(WITH_UNIT_TESTS)
    ADD_SUBDIRECTORY(unittest)
-@@ -458,9 +457,13 @@ IF(WITH_UNIT_TESTS)
+@@ -491,16 +491,16 @@ IF(WITH_UNIT_TESTS)
  ENDIF()
  
  ADD_SUBDIRECTORY(extra)
--IF(NOT WITHOUT_SERVER)
--  ADD_SUBDIRECTORY(tests)
+-ADD_SUBDIRECTORY(client)
+ ADD_SUBDIRECTORY(sql/share)
+ ADD_SUBDIRECTORY(libservices)
+ 
+-IF(UNIX)
 +IF(WITHOUT_SERVER)
 +  ADD_SUBDIRECTORY(libmysql)
-   ADD_SUBDIRECTORY(client)
++  ADD_SUBDIRECTORY(client)
 +  ADD_SUBDIRECTORY(scripts)
-+  ADD_SUBDIRECTORY(man)
-+  ADD_SUBDIRECTORY(tests)
+   ADD_SUBDIRECTORY(man)
+-ENDIF()
+-
+-IF(NOT WITHOUT_SERVER)
+   ADD_SUBDIRECTORY(tests)
 +ELSE()
    ADD_SUBDIRECTORY(sql)
-   ADD_SUBDIRECTORY(sql/share)
-   ADD_SUBDIRECTORY(libservices)
-@@ -473,11 +476,7 @@ IF(NOT WITHOUT_SERVER)
+   OPTION (WITH_EMBEDDED_SERVER "Compile MySQL with embedded server" OFF)
+   IF(WITH_EMBEDDED_SERVER) 
+@@ -511,7 +511,6 @@ ENDIF()
+ 
+ # scripts/mysql_config depends on client and server targets loaded above.
+ # It is referenced by some of the directories below, so we insert it here.
+-ADD_SUBDIRECTORY(scripts)
+ 
+ IF(NOT WITHOUT_SERVER)
    ADD_SUBDIRECTORY(mysql-test)
-   ADD_SUBDIRECTORY(mysql-test/lib/My/SafeProcess)
-   ADD_SUBDIRECTORY(support-files)
--  ADD_SUBDIRECTORY(scripts)
-   ADD_SUBDIRECTORY(sql-bench)
--  IF(UNIX)
--    ADD_SUBDIRECTORY(man)
--  ENDIF()
-   IF(EXISTS ${CMAKE_SOURCE_DIR}/internal/CMakeLists.txt)
-     ADD_SUBDIRECTORY(internal)
-   ENDIF()

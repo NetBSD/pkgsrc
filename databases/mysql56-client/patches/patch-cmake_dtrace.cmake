@@ -1,8 +1,8 @@
-$NetBSD: patch-cmake_dtrace.cmake,v 1.1 2014/02/13 14:38:08 jperkin Exp $
+$NetBSD: patch-cmake_dtrace.cmake,v 1.2 2014/08/10 15:11:57 adam Exp $
 
 Build with newer DTrace.
 
---- cmake/dtrace.cmake.orig	2013-11-17 18:02:53.000000000 +0000
+--- cmake/dtrace.cmake.orig	2014-07-18 15:48:39.000000000 +0000
 +++ cmake/dtrace.cmake
 @@ -35,10 +35,11 @@ MACRO(CHECK_DTRACE)
   MARK_AS_ADVANCED(DTRACE)
@@ -17,5 +17,5 @@ Build with newer DTrace.
   ENDIF()
 +
   SET(HAVE_DTRACE ${ENABLE_DTRACE})
-  IF(CMAKE_SYSTEM_NAME MATCHES "SunOS")
-    IF(CMAKE_SIZEOF_VOID_P EQUAL 4)
+  EXECUTE_PROCESS(
+    COMMAND ${DTRACE} -V
