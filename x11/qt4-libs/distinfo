@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.90 2014/07/22 17:01:51 wiz Exp $
+$NetBSD: distinfo,v 1.91 2014/08/10 17:36:09 wiz Exp $
 
 SHA1 (qt-everywhere-opensource-src-4.8.6.tar.gz) = ddf9c20ca8309a116e0466c42984238009525da6
 RMD160 (qt-everywhere-opensource-src-4.8.6.tar.gz) = 0220d4e76ac761c9ecfb8ddab6f2c1dc6ad70c33
@@ -44,6 +44,7 @@ SHA1 (patch-src_3rdparty_javascriptcore_JavaScriptCore_runtime_Collector.cpp) = 
 SHA1 (patch-src_3rdparty_javascriptcore_JavaScriptCore_runtime_Structure.cpp) = 156e99fa8594470be4e89e212408258824044e41
 SHA1 (patch-src_3rdparty_javascriptcore_JavaScriptCore_runtime_Structure.h) = b822a84aae7e125cb56b01bffdcfec07060d88f6
 SHA1 (patch-src_3rdparty_javascriptcore_JavaScriptCore_wtf_RefCountedLeakCounter.h) = 3b70ecb3a95944a3dd4a26c7b5c53e44aa89de1a
+SHA1 (patch-src_3rdparty_javascriptcore_JavaScriptCore_wtf_Threading.h) = 375e5ed9af891b3511a4d5fe940e4080d5ff95c2
 SHA1 (patch-src_3rdparty_javascriptcore_JavaScriptCore_wtf_TypeTraits.h) = f23437f6e4b47f999d4fc2c576c5e7a63446b9da
 SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_heap_MachineStackMarker.cpp) = cbce2e10307d26163a76266c0ceee315a609d63d
 SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_heap_MarkedSpace.cpp) = c7c9c39b11007e7ec3884874a38d000e3238bf64
