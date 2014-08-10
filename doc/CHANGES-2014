@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3010 2014/08/10 18:26:53 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.3011 2014/08/10 20:51:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3929,3 +3929,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/mysql56-server to 5.6.20 [adam 2014-08-10]
 	Updated multimedia/x264-devel to 20140809 [adam 2014-08-10]
 	Added databases/py-python-rrdtool version 1.4.7 [fhajny 2014-08-10]
+	Updated textproc/mdocml to 1.13.1 [wiz 2014-08-10]
