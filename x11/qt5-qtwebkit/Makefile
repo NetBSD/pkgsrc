@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/08/10 13:24:54 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2014/08/10 13:25:40 wiz Exp $
 
 PKGNAME=	qt5-qtwebkit-${QTVERSION}
 PKGREVISION=	1
@@ -48,7 +48,7 @@ post-install:
 .endfor
 
 .include "../../databases/sqlite3/buildlink3.mk"
-.if ${OPSYS} = "Darwin" || ${OPSYS} = "Linux" || ${OPSYS} = "NetBSD"
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .endif
 .include "../../fonts/fontconfig/buildlink3.mk"
