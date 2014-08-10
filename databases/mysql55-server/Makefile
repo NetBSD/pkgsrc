@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/06/14 10:21:52 wiedi Exp $
+# $NetBSD: Makefile,v 1.23 2014/08/10 14:27:40 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 SVR4_PKGNAME=	mysqs
@@ -66,6 +66,9 @@ REPLACE_PERL+=		mysql-test/suite/funcs_1/lib/DataGen_modify.pl
 REPLACE_PERL+=		mysql-test/suite/funcs_2/lib/gen_charset_utf8.pl
 REPLACE_PERL+=		mysql-test/mtr
 REPLACE_PERL+=		sql-bench/*.sh
+
+REPLACE_SH+=		mysql-test/t/long_tmpdir-master.sh
+REPLACE_SH+=		mysql-test/t/lowercase_mixed_tmpdir-master.sh
 
 INSTALLATION_DIRS+=	bin
 
