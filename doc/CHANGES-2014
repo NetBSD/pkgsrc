@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2999 2014/08/10 09:19:49 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3000 2014/08/10 12:21:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3913,3 +3913,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/mikutter to 3.0.4 [obache 2014-08-10]
 	Updated x11/xf86-video-vmware to 13.0.2nb2 [wiz 2014-08-10]
 	Updated sysutils/nautilus to 2.32.2.1nb21 [wiz 2014-08-10]
+	Added textproc/igor version 0.0.20140517 [wiz 2014-08-10]
