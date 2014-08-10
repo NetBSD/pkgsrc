@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.792 2014/08/09 21:53:53 wiz Exp $
+# $NetBSD: Makefile,v 1.793 2014/08/10 12:21:36 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -259,6 +259,7 @@ SUBDIR+=	hunspell-sv_SE
 SUBDIR+=	hyperestraier
 SUBDIR+=	hyphen
 SUBDIR+=	icu
+SUBDIR+=	igor
 SUBDIR+=	iksemel
 SUBDIR+=	intltool
 SUBDIR+=	ipadic
