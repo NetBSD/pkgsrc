@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/08/10 02:15:25 obache Exp $
+# $NetBSD: Makefile,v 1.3 2014/08/10 02:30:00 obache Exp $
 
-DISTNAME=	ibus-kkc-1.5.20
+DISTNAME=	ibus-kkc-1.5.21
 CATEGORIES=	inputmethod japanese
 MASTER_SITES=	https://bitbucket.org/libkkc/ibus-kkc/downloads/
 
