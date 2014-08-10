@@ -1,12 +1,12 @@
-$NetBSD: patch-Source_kwsys_SystemTools.cxx,v 1.1 2014/07/17 13:44:28 ryoon Exp $
+$NetBSD: patch-Source_kwsys_SystemTools.cxx,v 1.2 2014/08/10 10:02:51 adam Exp $
 
 * SCO OpenServer 5.0.7/3.2's command has 711 permission.
 
---- Source/kwsys/SystemTools.cxx.orig	2014-01-16 17:15:08.000000000 +0000
+--- Source/kwsys/SystemTools.cxx.orig	2014-07-31 15:03:57.000000000 +0000
 +++ Source/kwsys/SystemTools.cxx
-@@ -1071,7 +1071,12 @@ bool SystemTools::FileExists(const char*
- #elif defined(_WIN32)
-   return WindowsFileExists(filename);
+@@ -1081,7 +1081,12 @@ bool SystemTools::FileExists(const char*
+   return (GetFileAttributesW(Encoding::ToWide(filename).c_str())
+           != INVALID_FILE_ATTRIBUTES);
  #else
 +// SCO OpenServer 5.0.7/3.2's command has 711 permission.
 +#  if defined(_SCO_DS)
