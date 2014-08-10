@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13551 2014/08/10 14:55:26 wiz Exp $
+$NetBSD: TODO,v 1.13552 2014/08/10 15:42:31 adam Exp $
 
 Suggested new packages
 ======================
@@ -442,7 +442,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cln-1.33
 	o clutter-1.18.2
 	o clutter-gst-2.0.10
-	o cmake-3.0.1
 	o cmus-2.5.1 [pkg/48819]
 	o coccigrep-2.13
 	o cogl-1.18.2
@@ -1170,7 +1169,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wwwoffle-2.9i
 	o wxRemind-101
 	o wyrd-1.4.6
-	o x264-devel-20140809
 	o xanalyser-1.30
 	o xbindkeys-1.8.6
 	o xbindkeys-tk-1.8.0
