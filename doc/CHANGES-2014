@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.2997 2014/08/10 03:46:25 obache Exp $
+$NetBSD: CHANGES-2014,v 1.2998 2014/08/10 09:08:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3911,3 +3911,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated converters/libkkc to 0.3.4 [obache 2014-08-10]
 	Updated inputmethod/ibus-kkc to 1.5.21 [obache 2014-08-10]
 	Updated net/mikutter to 3.0.4 [obache 2014-08-10]
+	Updated x11/xf86-video-vmware to 13.0.2nb2 [wiz 2014-08-10]
