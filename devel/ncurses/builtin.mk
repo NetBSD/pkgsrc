@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.35 2014/08/11 11:50:06 tron Exp $
+# $NetBSD: builtin.mk,v 1.36 2014/08/11 12:06:00 tron Exp $
 
 BUILTIN_PKG:=	ncurses
 
@@ -182,20 +182,15 @@ buildlink-ncurses-extra-includes:
 buildlink-curses-ncurses-h:
 	${RUN}								\
 	src=${H_NCURSES:Q};						\
-	dest=${BUILDLINK_DIR}"/include/ncurses.h";			\
-	if ${TEST} ! -f "$$dest" -a -f "$$src"; then			\
-		fname=`${BASENAME} $$src`;				\
-		${ECHO_BUILDLINK_MSG} "Linking $$fname -> ncurses.h.";	\
-		${MKDIR} `${DIRNAME} "$$dest"`;				\
-		${LN} -s "$$src" "$$dest";				\
-	fi;								\
-	dest=${BUILDLINK_DIR}"/include/ncurses/ncurses.h";		\
-	if ${TEST} ! -f "$$dest" -a -f "$$src"; then			\
-		fname=`${BASENAME} $$src`;				\
-		${ECHO_BUILDLINK_MSG} "Linking $$fname -> ncurses/ncurses.h.";	\
-		${MKDIR} `${DIRNAME} "$$dest"`;				\
-		${LN} -s "$$src" "$$dest";				\
-	fi
+	for file in ncurses.h ncurses/ncurses.h; do			\
+		dest=${BUILDLINK_DIR}"/include/$$file";			\
+		if ${TEST} ! -f "$$dest" -a -f "$$src"; then		\
+			fname=`${BASENAME} $$src`;			\
+			${ECHO_BUILDLINK_MSG} "Linking $$fname -> $$file."; \
+			${MKDIR} `${DIRNAME} "$$dest"`;			\
+			${LN} -s "$$src" "$$dest";			\
+		fi;							\
+	done
 .  endif
 
 .endif	# CHECK_BUILTIN.ncurses
