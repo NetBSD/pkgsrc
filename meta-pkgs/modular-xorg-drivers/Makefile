@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2013/09/30 17:02:37 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2014/08/11 14:20:27 richard Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-drivers-1.14.2
@@ -26,7 +26,7 @@ DEPENDS+=	xf86-input-void-[0-9]*:../../x11/xf86-input-void
 DEPENDS+=	xf86-video-apm-[0-9]*:../../x11/xf86-video-apm
 DEPENDS+=	xf86-video-ark-[0-9]*:../../x11/xf86-video-ark
 DEPENDS+=	xf86-video-ast-[0-9]*:../../x11/xf86-video-ast
-.if ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
 DEPENDS+=	xf86-video-ati6-[0-9]*:../../x11/xf86-video-ati6
 .else
 DEPENDS+=	xf86-video-ati-[0-9]*:../../x11/xf86-video-ati
