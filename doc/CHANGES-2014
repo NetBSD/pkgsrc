@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3017 2014/08/11 02:27:01 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3018 2014/08/11 02:31:36 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3936,3 +3936,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/p5-Text-Unidecode to 1.01 [wen 2014-08-11]
 	Updated textproc/p5-Unicode-LineBreak to 2014.06 [wen 2014-08-11]
 	Updated textproc/p5-YAML-LibYAML to 0.47 [wen 2014-08-11]
+	Updated textproc/p5-YAML-Tiny to 1.63 [wen 2014-08-11]
