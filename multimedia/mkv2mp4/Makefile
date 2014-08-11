@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2014/05/17 16:10:47 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.20 2014/08/11 23:09:45 wiz Exp $
 
 DISTNAME=	mkv2mp4-20121208
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-/-0.0./}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
@@ -27,7 +26,7 @@ do-install:
 	    ${DESTDIR}${PREFIX}/share/doc/mkv2mp4
 
 .include "../../lang/python/application.mk"
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg1/buildlink3.mk"
 .include "../../multimedia/gpac/buildlink3.mk"
 DEPENDS+=	mkvtoolnix>=1.7.0:../../multimedia/mkvtoolnix
 .include "../../mk/bsd.pkg.mk"
