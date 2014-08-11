@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2014/05/29 23:37:28 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2014/08/11 23:09:46 wiz Exp $
 
 DISTNAME=		k3b-2.0.2
-PKGREVISION=		28
+PKGREVISION=		29
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=k3b/}
 EXTRACT_SUFX=		.tar.bz2
@@ -47,7 +47,7 @@ BUILDLINK_TRANSFORM+=   opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg1/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../multimedia/libkcddb/buildlink3.mk"
 .include "../../security/polkit-qt/buildlink3.mk"
