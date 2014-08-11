@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.34 2013/11/23 11:29:35 obache Exp $
+# $NetBSD: builtin.mk,v 1.35 2014/08/11 11:50:06 tron Exp $
 
 BUILTIN_PKG:=	ncurses
 
@@ -186,6 +186,13 @@ buildlink-curses-ncurses-h:
 	if ${TEST} ! -f "$$dest" -a -f "$$src"; then			\
 		fname=`${BASENAME} $$src`;				\
 		${ECHO_BUILDLINK_MSG} "Linking $$fname -> ncurses.h.";	\
+		${MKDIR} `${DIRNAME} "$$dest"`;				\
+		${LN} -s "$$src" "$$dest";				\
+	fi;								\
+	dest=${BUILDLINK_DIR}"/include/ncurses/ncurses.h";		\
+	if ${TEST} ! -f "$$dest" -a -f "$$src"; then			\
+		fname=`${BASENAME} $$src`;				\
+		${ECHO_BUILDLINK_MSG} "Linking $$fname -> ncurses/ncurses.h.";	\
 		${MKDIR} `${DIRNAME} "$$dest"`;				\
 		${LN} -s "$$src" "$$dest";				\
 	fi
