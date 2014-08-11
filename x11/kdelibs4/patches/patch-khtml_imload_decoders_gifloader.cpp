@@ -1,4 +1,4 @@
-$NetBSD: patch-khtml_imload_decoders_gifloader.cpp,v 1.1 2014/05/18 12:27:51 markd Exp $
+$NetBSD: patch-khtml_imload_decoders_gifloader.cpp,v 1.2 2014/08/11 21:17:20 markd Exp $
 
 Fix build with giflib 5.1.
 
@@ -31,7 +31,23 @@ Fix build with giflib 5.1.
                  return Error;
              }
          }
-@@ -574,7 +574,7 @@ public:
+@@ -502,6 +502,7 @@ public:
+             else
+                 buf = new uchar[w];
+                 
++#if GIFLIB_MAJOR < 5
+             if (curFrame->ImageDesc.Interlace)
+             {
+                 // Interlaced. Considering we don't do progressive loading of gif's, 
+@@ -551,6 +552,7 @@ public:
+                 } // for pass..
+             } // if interlaced
+             else
++#endif
+             {
+                 for (int line = 0; line < h; ++line)
+                 {
+@@ -574,7 +576,7 @@ public:
              frame0->animProvider = new GIFAnimProvider(frame0, image, frameProps, bgColor);
          }
          
