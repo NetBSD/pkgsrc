@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2014/06/07 12:11:24 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.50 2014/08/11 23:09:45 wiz Exp $
 
 DISTNAME=	fuppes-0.660
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fuppes/}
 
@@ -38,5 +37,5 @@ CONFIGURE_ARGS+=	--enable-lame
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../graphics/simage/buildlink3.mk"
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg1/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
