@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2014/06/07 12:11:24 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2014/08/11 23:09:45 wiz Exp $
 
 DISTNAME=	nepomuk-core-${_KDE_VERSION}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	misc
 COMMENT=	library for dealing with Nepomuk components
 
@@ -21,7 +21,7 @@ USE_TOOLS+=	gmake
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg1/buildlink3.mk"
 .include "../../print/poppler-qt4/buildlink3.mk"
 .include "../../textproc/ebook-tools/buildlink3.mk"
 .include "../../textproc/shared-desktop-ontologies/buildlink3.mk"
