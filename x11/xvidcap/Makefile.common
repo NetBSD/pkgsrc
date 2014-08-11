@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2011/01/12 11:22:33 wiz Exp $
+# $NetBSD: Makefile.common,v 1.10 2014/08/11 23:09:46 wiz Exp $
 #
 # used by x11/xvidcap/Makefile
 # used by x11/xvidcap-gtk2/Makefile
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--without-forced-embedded-ffmpeg
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg1/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
