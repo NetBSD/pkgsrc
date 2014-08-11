@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2014/07/09 12:48:59 he Exp $
+# $NetBSD: Makefile,v 1.19 2014/08/11 23:09:45 wiz Exp $
 
 PKGNAME=	ffmpeg010-20140629.${DISTVERSION}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ffmpeg.mplayerhq.hu/
-COMMENT=	Decoding, encoding and streaming software
+COMMENT=	Decoding, encoding and streaming software (v0.10)
 LICENSE=	gnu-lgpl-v2.1
 
 USE_GCC_RUNTIME=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.19 2013/01/19 21:41:04 riastradh Exp $
+# $NetBSD: options.mk,v 1.20 2014/08/11 23:09:45 wiz Exp $
 #
 
 #
@@ -103,7 +103,7 @@ GNASH_MEDIA+=	ffmpeg
 .include "../../audio/libdca/buildlink3.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg1/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mgstreamer)
@@ -119,7 +119,7 @@ DEPENDS+= gst-plugins0.10-vorbis-[0-9]*:../../audio/gst-plugins0.10-vorbis
 CONFIGURE_ARGS+=	--enable-media=${GNASH_MEDIA:Unone:tW:S/ /,/}
 
 .if !empty(PKG_OPTIONS:Mffmpeg)
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg1/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-device=VAAPI
 .else
 CONFIGURE_ARGS+=	--enable-device=x11

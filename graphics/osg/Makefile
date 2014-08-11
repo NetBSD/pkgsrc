@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2014/05/31 15:56:27 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2014/08/11 23:09:44 wiz Exp $
 
 DISTNAME=	OpenSceneGraph-3.0.1
 PKGNAME=	osg-3.0.1
-PKGREVISION=	29
+PKGREVISION=	30
 CATEGORIES=	graphics devel
 MASTER_SITES=	http://www.openscenegraph.org/downloads/stable_releases/OpenSceneGraph-${PKGVERSION_NOREV}/source/
 EXTRACT_SUFX=	.zip
@@ -19,6 +19,7 @@ PKGCONFIG_OVERRIDE=	packaging/pkgconfig/openscenegraph.pc.in
 PKGCONFIG_OVERRIDE+=	packaging/pkgconfig/openthreads.pc.in
 
 CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
+CMAKE_ARGS+=		-DFFMPEG_ROOT:PATH=${BUILDLINK_PREFIX.ffmpeg1}
 
 PLIST_VARS+=	quartz x11
 
@@ -45,7 +46,7 @@ PLIST.x11=	yes
 .include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg1/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

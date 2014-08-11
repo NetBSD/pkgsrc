@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2014/05/05 00:48:10 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.61 2014/08/11 23:09:45 wiz Exp $
 
 DISTNAME=	DVDStyler-2.7.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dvdstyler/}
 EXTRACT_SUFX=	.tar.bz2
@@ -26,6 +25,7 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config msgfmt zip
 GNU_CONFIGURE=		yes
 LDFLAGS+=		-ljpeg
+CONFIGURE_ARGS+=	FFMPEG_PATH=${BUILDLINK_PREFIX.ffmpeg1}/bin/ffmpeg1
 
 post-install:
 	cd ${WRKSRC}/templates && ${SETENV} ${INSTALL_ENV} ${GMAKE} install
@@ -34,7 +34,7 @@ post-install:
 .include "../../graphics/netpbm/buildlink3.mk"
 BUILDLINK_API_DEPENDS.wxsvg+= wxsvg>=1.1.14
 .include "../../graphics/wxsvg/buildlink3.mk"
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg1/buildlink3.mk"
 # needs mediactrl
 BUILDLINK_API_DEPENDS.wxGTK28+= wxGTK28>=2.8.10nb14
 .include "../../x11/wxGTK28/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2014/05/29 23:36:41 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2014/08/11 23:09:44 wiz Exp $
 
 DISTNAME=	unicap-0.9.3
-PKGREVISION=	27
+PKGREVISION=	28
 CATEGORIES=	graphics
 MASTER_SITES=	http://unicap-imaging.org/downloads/
 
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	--disable-v4l2
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-#.include "../../multimedia/ffmpeg/buildlink3.mk"
+#.include "../../multimedia/ffmpeg1/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
