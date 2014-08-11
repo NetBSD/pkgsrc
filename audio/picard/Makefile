@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2014/05/09 07:36:53 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2014/08/11 23:09:44 wiz Exp $
 
 DISTNAME=	picard-1.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/
 
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	config
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../audio/libofa/buildlink3.mk"
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg1/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

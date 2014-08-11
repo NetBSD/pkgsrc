@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2014/04/10 05:39:16 obache Exp $
-#
+# $NetBSD: Makefile,v 1.8 2014/08/11 23:09:45 wiz Exp $
 
 DISTNAME=	minidlna_1.0.25_src
 PKGNAME=	minidlna-1.0.25
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=minidlna/1.0.25/}
 
@@ -38,7 +37,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/minidlna ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_DATA} ${WRKSRC}/minidlna.conf ${DESTDIR}${EGDIR}
 
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg1/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"

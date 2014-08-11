@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2014/06/09 14:18:07 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.39 2014/08/11 23:09:45 wiz Exp $
 
 DISTNAME=	gpac-0.5.0
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gpac/}
 
@@ -14,7 +13,7 @@ LICENSE=	gnu-lgpl-v2.1
 MAKE_JOBS_SAFE=		no
 
 WRKSRC=		${WRKDIR}/gpac
-USE_TOOLS+=	gmake grep gsed
+USE_TOOLS+=	gmake grep gsed pkg-config
 USE_LANGUAGES=	c c++
 # not really GNU configure, but close enough
 GNU_CONFIGURE=	yes
@@ -37,7 +36,7 @@ CONFIGURE_ARGS+=	--enable-pic
 .include "../../graphics/png/buildlink3.mk"
 # doesn't work yet
 #.include "../../lang/spidermonkey/buildlink3.mk"
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg1/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/xvidcore/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

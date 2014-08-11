@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2013/01/27 00:15:03 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2014/08/11 23:09:44 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vic
 PKG_SUPPORTED_OPTIONS=		inet6 # vic-gpl
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--disable-ffmpeg-co
 CONFIGURE_ARGS+=	--disable-x264-co
 CONFIGURE_ARGS+=	--with-ffmpeginc=${BUILDLINK_PREFIX.ffmpeg}/include
 CONFIGURE_ARGS+=	--with-ffmpeglib=${BUILDLINK_PREFIX.ffmpeg}/lib
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg1/buildlink3.mk"
 
 CONFIGURE_ARGS+=	--with-x264inc=${BUILDLINK_PREFIX.x264-devel}/include
 CONFIGURE_ARGS+=	--with-x264lib=${BUILDLINK_PREFIX.x264-devel}/lib

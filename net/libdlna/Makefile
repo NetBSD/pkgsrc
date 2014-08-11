@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2014/04/10 05:39:14 obache Exp $
-#
+# $NetBSD: Makefile,v 1.9 2014/08/11 23:09:46 wiz Exp $
 
 DISTNAME=	libdlna-0.2.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	http://libdlna.geexbox.org/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -29,5 +28,5 @@ SUBST_STAGE.config=	pre-configure
 SUBST_FILES.config=	configure
 SUBST_SED.config=	-e 's,/usr/bin/install,${INSTALL},'
 
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg1/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
