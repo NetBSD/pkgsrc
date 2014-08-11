@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13552 2014/08/10 15:42:31 adam Exp $
+$NetBSD: TODO,v 1.13553 2014/08/11 19:44:33 adam Exp $
 
 Suggested new packages
 ======================
@@ -691,7 +691,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o icdprog-0.5
 	o idutils-4.6
 	o ike-2.0.1 [pkg/37032]
-	o ilmbase-2.2.0
 	o imp-6.1.7
 	o ingo-3.1.4
 	o inspircd-1.2.1
@@ -866,7 +865,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o opal-3.8.0 [pkg/42942]
 	o opal-3.8.3
 	o open-vm-tools-2010.09.19.301124
-	o openexr-2.2.0
 	o opengrok-0.12
 	o openmortal-0.7.1
 	o openmpi-1.8.1
