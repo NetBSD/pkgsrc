@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3015 2014/08/11 02:12:33 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3016 2014/08/11 02:22:04 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3934,3 +3934,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Mojolicious to 5.26 [wen 2014-08-11]
 	Updated devel/p5-Future to 0.29 [wen 2014-08-11]
 	Updated textproc/p5-Text-Unidecode to 1.01 [wen 2014-08-11]
+	Updated textproc/p5-Unicode-LineBreak to 2014.06 [wen 2014-08-11]
