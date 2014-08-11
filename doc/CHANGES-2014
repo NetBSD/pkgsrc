@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3011 2014/08/10 20:51:28 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3012 2014/08/11 01:54:09 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3930,3 +3930,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/x264-devel to 20140809 [adam 2014-08-10]
 	Added databases/py-python-rrdtool version 1.4.7 [fhajny 2014-08-10]
 	Updated textproc/mdocml to 1.13.1 [wiz 2014-08-10]
+	Updated devel/p5-Inline to 0.68 [wen 2014-08-11]
