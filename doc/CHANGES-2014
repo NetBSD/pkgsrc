@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3020 2014/08/11 19:44:33 adam Exp $
+$NetBSD: CHANGES-2014,v 1.3021 2014/08/11 21:04:33 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3940,3 +3940,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Test-Base to 0.79 [wen 2014-08-11]
 	Updated graphics/ilmbase to 2.2.0 [adam 2014-08-11]
 	Updated graphics/openexr to 2.2.0 [adam 2014-08-11]
+	Updated devel/hs-transformers-base to 0.4.3 [szptvlfn 2014-08-11]
