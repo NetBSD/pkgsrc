@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/20 10:12:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/08/11 11:20:24 wiz Exp $
 include/qjson/parser.h
 include/qjson/parserrunnable.h
 include/qjson/qjson_export.h
@@ -11,4 +11,4 @@ lib/libqjson.so
 lib/libqjson.so.0
 lib/libqjson.so.${PKGVERSION}
 lib/pkgconfig/QJson.pc
-share/cmake-2.8/Modules/FindQJSON.cmake
+share/cmake-3.0/Modules/FindQJSON.cmake
