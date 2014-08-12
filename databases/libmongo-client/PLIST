@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2014/08/12 15:53:36 fhajny Exp $
+include/mongo-client/bson.h
+include/mongo-client/mongo-client.h
+include/mongo-client/mongo-sync-cursor.h
+include/mongo-client/mongo-sync-pool.h
+include/mongo-client/mongo-sync.h
+include/mongo-client/mongo-utils.h
+include/mongo-client/mongo-wire.h
+include/mongo-client/mongo.h
+include/mongo-client/sync-gridfs-chunk.h
+include/mongo-client/sync-gridfs-stream.h
+include/mongo-client/sync-gridfs.h
+lib/libmongo-client.la
+lib/pkgconfig/libmongo-client.pc

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/08/12 15:53:36 fhajny Exp $
+
+SHA1 (libmongo-client-0.1.8.tar.gz) = 1c5c4d45065e082fa438911b89edd4cf756f4392
+RMD160 (libmongo-client-0.1.8.tar.gz) = c0e755e400b80d92377ef19366a3cd7ee89de269
+Size (libmongo-client-0.1.8.tar.gz) = 127648 bytes
