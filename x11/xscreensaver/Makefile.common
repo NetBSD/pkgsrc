@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.113 2013/07/22 14:24:17 drochner Exp $
+# $NetBSD: Makefile.common,v 1.114 2014/08/12 15:57:13 hauke Exp $
 #
 # used by x11/xscreensaver/Makefile
 # used by x11/xscreensaver-demo/Makefile
@@ -6,7 +6,7 @@
 # When updating the package,
 # please check kdeartwork3 -- it installs some extra
 # files depending on which screensavers it finds.
-DISTNAME=		xscreensaver-5.22
+DISTNAME=		xscreensaver-5.29
 CATEGORIES=		x11
 MASTER_SITES=		${HOMEPAGE}
 
@@ -22,9 +22,10 @@ USE_TOOLS+=		msgfmt perl
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-hackdir=${PREFIX}/libexec/xscreensaver
 CONFIGURE_ARGS+=	--with-jpeg=${JPEGBASE}
-CONFIGURE_ARGS+=	--with-zippy=/usr/games/fortune
+#CONFIGURE_ARGS+=	--with-zippy=/usr/games/fortune
 
 CONFIGURE_ARGS+=	--without-motif
+CONFIGURE_ARGS+=	--with-pthread
 
 CONFIGURE_ENV+=		ac_cv_x_app_defaults="${PREFIX}/lib/X11/app-defaults"
 CONFIGURE_ENV+=		ac_cv_perl_version="${PERL_VERSION_cmd:sh}"
@@ -70,5 +71,6 @@ INSTALL_MAKE_FLAGS=	install_prefix=${DESTDIR}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"

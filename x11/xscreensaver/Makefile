@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2014/05/29 23:38:20 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2014/08/12 15:57:13 hauke Exp $
 
 COMMENT=	Screen saver and locker for the X window system
 
@@ -8,10 +8,10 @@ CONFLICTS+=	xscreensaver-gnome<4.14
 .include "options.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 
-PKGREVISION=	1
+#PKGREVISION=	1
 
 CONFIGURE_ARGS+=	--without-gtk
-CONFIGURE_ARGS+=	--with-xml=${BUILDLINK_PREFIX.libxml2}
+#CONFIGURE_ARGS+=	--with-xml=${BUILDLINK_PREFIX.libxml2}
 CONFIGURE_ARGS+=	--with-configdir=${PREFIX}/libexec/xscreensaver/config
 
 EGDIR=			${PREFIX}/share/examples/xscreensaver
