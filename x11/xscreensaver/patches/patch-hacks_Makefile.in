@@ -1,0 +1,13 @@
+$NetBSD: patch-hacks_Makefile.in,v 1.1 2014/08/12 15:57:14 hauke Exp $
+
+--- hacks/Makefile.in.orig	2014-06-08 21:43:53.000000000 +0000
++++ hacks/Makefile.in
+@@ -671,7 +671,7 @@ truchet:	 truchet.o	$(HACK_OBJS) $(COL)
+ 	$(CC_HACK) -o $@ $@.o	$(HACK_OBJS) $(COL) $(HACK_LIBS)
+ 
+ bsod:	 	bsod.o		$(HACK_OBJS) $(GRAB) $(APPLE2) $(XPM)
+-	$(CC_HACK) -o $@ $@.o	$(HACK_OBJS) $(GRAB) $(APPLE2) $(XPM) $(XPM_LIBS)
++	$(CC_HACK) -o $@ $@.o	$(HACK_OBJS) $(GRAB) $(APPLE2) $(XPM) $(XPM_LIBS) $(THRL)
+ 
+ apple2:	 	apple2.o apple2-main.o	$(HACK_OBJS) $(ATV) $(GRAB) $(TEXT)
+ 	$(CC_HACK) -o $@ $@.o	apple2-main.o $(HACK_OBJS) $(ATV) $(GRAB) $(TEXT) $(XPM_LIBS) $(TEXT_LIBS) $(THRL)
