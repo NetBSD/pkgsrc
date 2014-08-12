@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.520 2014/08/02 14:12:56 khorben Exp $
+# $NetBSD: Makefile,v 1.521 2014/08/12 05:01:14 schmonz Exp $
 #
 
 COMMENT=	Security tools
@@ -177,6 +177,7 @@ SUBDIR+=	msu
 SUBDIR+=	msudir
 SUBDIR+=	multigest
 SUBDIR+=	munge
+SUBDIR+=	nacl
 SUBDIR+=	netpgp
 SUBDIR+=	netpgpverify
 SUBDIR+=	netramet
