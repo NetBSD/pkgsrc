@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13554 2014/08/12 09:47:17 markd Exp $
+$NetBSD: TODO,v 1.13555 2014/08/12 15:55:02 hauke Exp $
 
 Suggested new packages
 ======================
@@ -1210,7 +1210,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xpuyopuyo-0.9.8
 	o xrmap-base-2.33.1
 	o xrn-9.02
-	o xscreensaver-5.24
 	o xsd-3.3.0
 	o xsoldier-1.4
 	o xtraceroute-0.9.1
