@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3026 2014/08/12 15:53:51 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.3027 2014/08/12 15:55:02 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3949,3 +3949,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/phonon-backend-vlc to 0.7.2 [markd 2014-08-12]
 	Updated devel/nss to 3.16.4 [markd 2014-08-12]
 	Added databases/libmongo-client version 0.1.8 [fhajny 2014-08-12]
+	Updated x11/xscreensaver to 5.29 [hauke 2014-08-12]
