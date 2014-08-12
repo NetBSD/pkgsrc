@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.22 2010/11/29 18:04:35 drochner Exp $
+$NetBSD: patch-ad,v 1.23 2014/08/12 15:57:14 hauke Exp $
 
---- driver/Makefile.in.orig	2010-09-15 10:10:53.000000000 +0000
+--- driver/Makefile.in.orig	2014-06-08 21:43:53.000000000 +0000
 +++ driver/Makefile.in
-@@ -207,7 +207,7 @@ PDF2JPEG_LIBS	= -framework Cocoa
+@@ -205,7 +205,7 @@ PDF2JPEG_LIBS	= -framework Cocoa
  SAVER_LIBS	= $(LIBS) $(X_LIBS) $(XMU_LIBS) @SAVER_LIBS@ \
  		  $(XDPMS_LIBS) $(XINERAMA_LIBS) $(GL_LIBS) $(X_PRE_LIBS) \
  		  -lXt -lX11 -lXext $(X_EXTRA_LIBS) \
@@ -11,16 +11,16 @@ $NetBSD: patch-ad,v 1.22 2010/11/29 18:04:35 drochner Exp $
  
  CMD_LIBS	= $(LIBS) $(X_LIBS) \
  		  $(X_PRE_LIBS) -lX11 -lXext $(X_EXTRA_LIBS)
-@@ -229,7 +229,7 @@ HDRS		= XScreenSaver_ad.h XScreenSaver_X
+@@ -226,7 +226,7 @@ SCRIPTS		= $(SCRIPTS_1) @SCRIPTS_OSX@
+ HDRS		= XScreenSaver_ad.h XScreenSaver_Xm_ad.h \
  		  xscreensaver.h prefs.h remote.h exec.h \
- 		  demo-Gtk-widgets.h demo-Gtk-stubs.h demo-Gtk-support.h \
  		  demo-Gtk-conf.h auth.h mlstring.h types.h
 -MEN_1		= xscreensaver.man xscreensaver-demo.man \
 +MEN_1		= xscreensaver.man \
  		  xscreensaver-command.man \
  		  xscreensaver-text.man \
  		  xscreensaver-getimage.man \
-@@ -260,7 +260,7 @@ all: $(EXES) $(EXES2)
+@@ -257,7 +257,7 @@ all: $(EXES) $(EXES2)
  tests: $(TEST_EXES)
  
  install:   install-program   install-ad    install-scripts \
@@ -29,7 +29,7 @@ $NetBSD: patch-ad,v 1.22 2010/11/29 18:04:35 drochner Exp $
  uninstall: uninstall-program uninstall-ad  \
  	   uninstall-gnome   uninstall-man uninstall-xml  
  
-@@ -295,7 +295,7 @@ install-program: $(EXES)
+@@ -292,7 +292,7 @@ install-program: $(EXES)
  	fi ;								      \
  	echo $$inst xscreensaver $(install_prefix)$(bindir)/xscreensaver ;    \
  	$$inst xscreensaver $(install_prefix)$(bindir)/xscreensaver
@@ -38,7 +38,7 @@ $NetBSD: patch-ad,v 1.22 2010/11/29 18:04:35 drochner Exp $
  		    xscreensaver-getimage @EXES_OSX@ ; do	           \
  	  echo $(INSTALL_PROGRAM) $$exe $(install_prefix)$(bindir)/$$exe ; \
  	       $(INSTALL_PROGRAM) $$exe $(install_prefix)$(bindir)/$$exe ; \
-@@ -494,7 +494,7 @@ install-pam:
+@@ -491,7 +491,7 @@ install-pam: xscreensaver.pam
  
  # screensaver-properties.desktop
  # into /usr/share/applications/
