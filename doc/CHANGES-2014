@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3024 2014/08/12 05:09:36 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.3025 2014/08/12 09:47:17 markd Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3944,3 +3944,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Renamed multimedia/ffmpeg to multimedia/ffmpeg1 [wiz 2014-08-12]
 	Renamed multimedia/ffplay to multimedia/ffplay1 [wiz 2014-08-12]
 	Added security/nacl version 20110221 [schmonz 2014-08-12]
+	Updated multimedia/phonon to 4.7.2 [markd 2014-08-12]
+	Updated multimedia/phonon-backend-gstreamer to 4.7.2 [markd 2014-08-12]
+	Updated multimedia/phonon-backend-vlc to 0.7.2 [markd 2014-08-12]
+	Updated devel/nss to 3.16.4 [markd 2014-08-12]
