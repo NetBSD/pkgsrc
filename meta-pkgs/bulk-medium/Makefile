@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2014/05/29 23:36:56 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2014/08/12 18:22:38 wiz Exp $
 
-DISTNAME=	bulk-medium-20140505
-PKGREVISION=	1
+DISTNAME=	bulk-medium-20140812
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -186,8 +185,7 @@ BUILD_DEPENDS+=	librsvg-[0-9]*:../../graphics/librsvg
 BUILD_DEPENDS+=	blas-[0-9]*:../../math/blas
 BUILD_DEPENDS+=	lapack-[0-9]*:../../math/lapack
 BUILD_DEPENDS+=	boost-[0-9]*:../../meta-pkgs/boost
-BUILD_DEPENDS+=	ffmpeg-[0-9]*:../../multimedia/ffmpeg
-BUILD_DEPENDS+=	ffmpeg010-[0-9]*:../../multimedia/ffmpeg010
+BUILD_DEPENDS+=	ffmpeg2-[0-9]*:../../multimedia/ffmpeg2
 BUILD_DEPENDS+=	libogg-[0-9]*:../../multimedia/libogg
 BUILD_DEPENDS+=	libpcap-[0-9]*:../../net/libpcap
 BUILD_DEPENDS+=	libsoup24-[0-9]*:../../net/libsoup24
