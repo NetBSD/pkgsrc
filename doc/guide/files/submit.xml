@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.29 2014/05/31 21:08:50 asau Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.30 2014/08/12 05:12:41 schmonz Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -115,8 +115,7 @@ you can check by running <quote>cvs status</quote>. An example:</para>
 &uprompt; vi Makefile # add SUBDIRS+=pkgname line
 &uprompt; cvs commit Makefile
 &uprompt; cd pkgname
-&uprompt; make CTYPE=Added changes-entry
-&uprompt; make commit-changes-entry
+&uprompt; make CTYPE=Added commit-changes-entry
 </programlisting>
 
 <para>The commit message of the initial import should include part of the
