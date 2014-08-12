@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2014/05/29 23:36:42 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2014/08/12 08:33:31 prlw1 Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc44-${GCC_VERSION}
@@ -96,6 +96,12 @@ CFLAGS+=		-I${BUILDLINK_DIR}/include
 #CONFIGURE_ARGS+=	--host=${GCC_PLATFORM:Q}
 #MAKE_ENV+=		AR=/usr/bin/ar
 #.endif # NetBSD
+
+.if ${OPSYS} == "NetBSD"
+.if !empty(OS_VERSION:M5.*)
+MAKE_ENV+=		ac_cv_func_gethostbyname_r=no
+.endif
+.endif
 
 LIBS.SunOS+=		-lgmp
 
