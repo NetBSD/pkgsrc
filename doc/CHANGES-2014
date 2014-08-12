@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3028 2014/08/12 20:29:35 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3029 2014/08/12 21:22:44 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3951,3 +3951,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added databases/libmongo-client version 0.1.8 [fhajny 2014-08-12]
 	Updated x11/xscreensaver to 5.29 [hauke 2014-08-12]
 	Updated x11/xf86-input-mouse to 1.9.1 [wiz 2014-08-12]
+	Added archivers/hs-zlib version 0.5.4.1 [szptvlfn 2014-08-12]
