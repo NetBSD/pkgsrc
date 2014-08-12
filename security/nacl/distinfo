@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/08/12 05:00:34 schmonz Exp $
+
+SHA1 (nacl-20110221.tar.bz2) = 6007a6aee249f5a534ec53fddfc364601fba9629
+RMD160 (nacl-20110221.tar.bz2) = 2b1d6046ff633cb4d98fa548060de1a96930ed3c
+Size (nacl-20110221.tar.bz2) = 163415 bytes
