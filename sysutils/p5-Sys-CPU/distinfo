@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2014/08/13 20:20:23 wiz Exp $
+
+SHA1 (Sys-CPU-0.61.tar.gz) = 3bca409742fd47a06768b9ba9d8f14d73171c8c1
+RMD160 (Sys-CPU-0.61.tar.gz) = 147d6f4d87d76fd15c35cbd6ebc902f416f0bec6
+Size (Sys-CPU-0.61.tar.gz) = 6497 bytes
+SHA1 (patch-CPU.xs) = b1f1a59ff6eb02b7d9691423b2084fccd21f74cf
