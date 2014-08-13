@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2013/10/14 06:51:02 adam Exp $
+# $NetBSD: Makefile,v 1.11 2014/08/13 18:30:03 cheusov Exp $
 
 DISTNAME=	cvs-1.12.13
+PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	http://ftp.gnu.org/non-gnu/cvs/source/feature/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,7 +17,7 @@ USE_TOOLS+=		makeinfo
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-external-zlib
 CONFIGURE_ARGS+=	--with-rsh=ssh
-CONFIGURE_ENV+=		PERL=${TOOLS_PERL5}
+CONFIGURE_ENV+=		PERL=${TOOLS_PERL5} gl_cv_func_getcwd_null=yes
 
 CHECK_INTERPRETER_SKIP=	share/cvs/contrib/*
 INFO_FILES=		yes
