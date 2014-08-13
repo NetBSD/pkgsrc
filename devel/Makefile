@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1948 2014/08/09 23:50:16 wiz Exp $
+# $NetBSD: Makefile,v 1.1949 2014/08/13 20:43:42 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -906,6 +906,7 @@ SUBDIR+=	p5-Getopt-Long
 SUBDIR+=	p5-Getopt-Long-Descriptive
 SUBDIR+=	p5-Getopt-Mixed
 SUBDIR+=	p5-Getopt-Simple
+SUBDIR+=	p5-Getopt-Tabular
 SUBDIR+=	p5-Git-CPAN-Patch
 SUBDIR+=	p5-Git-Repository
 SUBDIR+=	p5-Git-Wrapper
