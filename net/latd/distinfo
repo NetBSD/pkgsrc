@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2013/10/10 00:08:19 joerg Exp $
+$NetBSD: distinfo,v 1.10 2014/08/13 22:35:29 joerg Exp $
 
 SHA1 (latd-1.21.tar.gz) = 172e3f844cd7d1301426111f0f71dd70a3d149f7
 RMD160 (latd-1.21.tar.gz) = 9d19461578d206dfbd6aaa3d26a25de20ed76438
@@ -14,6 +14,7 @@ SHA1 (patch-circuit.cc) = 4f20d6247bcc450d6462554c01e09a2ffa989719
 SHA1 (patch-connection.h) = 2762cebe59c9e3af1fa1bd9d96cf923ad563c22d
 SHA1 (patch-llogin.cc) = 37e81f5df945c956169c70ce4f35b77734bce8a0
 SHA1 (patch-server.cc) = b87ec43ad8ab2e340e23c6addfd1dd2c2eab77f3
+SHA1 (patch-server.h) = 10ee3eedeaf9a02e305c0e479c0c46e71349279e
 SHA1 (patch-serversession.cc) = 0ee915108d8cc19f78bbd719d4e25d96d5f6376a
 SHA1 (patch-services.cc) = cf85027f600ccc428dd5fee8c178ae0854904800
 SHA1 (patch-session.cc) = 6c8d148d6b3146ad9b5729c1e8aeb3fc131c0bfb
