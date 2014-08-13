@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2013/12/08 22:35:11 joerg Exp $
+# $NetBSD: Makefile,v 1.43 2014/08/13 10:57:38 adam Exp $
 
 DISTNAME=	source-highlight-3.1.7
+PKGREVISION=	1
 SVR4_PKGNAME=	srchl
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=src-highlite/}
