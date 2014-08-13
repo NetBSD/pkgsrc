@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.158 2014/07/25 14:21:18 tron Exp $
+$NetBSD: distinfo,v 1.159 2014/08/13 22:33:44 joerg Exp $
 
 SHA1 (firefox-31.0.source.tar.bz2) = a6c3e25ee3aeb7da42db2aaeb50a385d63532beb
 RMD160 (firefox-31.0.source.tar.bz2) = 8512ed164920c9fdad492ba2b47b46aae4894564
@@ -33,7 +33,7 @@ SHA1 (patch-config_system-headers) = c586c07d96ba3bd6ac35247ed50eab0978ccc949
 SHA1 (patch-config_system__wrappers_unwind.h) = b3bdac0710179b9c8f8eabd824216d0114504491
 SHA1 (patch-content_base_src_moz.build) = fc2660dcc82f11c89d6d5a5772f27c9827f58f44
 SHA1 (patch-content_media_AudioStream.cpp) = 70021dfd1cc86e8999f144b49a23bfb27dd24157
-SHA1 (patch-content_media_AudioStream.h) = 5cda5329db7bef4c45f3a05a33a5ee7043ec3c2e
+SHA1 (patch-content_media_AudioStream.h) = 11cd8649f35c001fa0bf9e0f6119e49bd41ab9b4
 SHA1 (patch-content_media_Makefile.in) = 54c8c5e41eb36bae0ce544360ded9f75ba3acc13
 SHA1 (patch-content_media_fmp4_demuxer_bit_reader.cc) = 6d87cd7231e61a12396d15dd2fa3d1a51051e8ee
 SHA1 (patch-content_media_gstreamer_GStreamerAllocator.cpp) = 524a669e411189926e142912b6d94d3d8dbdb0eb
