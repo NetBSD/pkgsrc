@@ -1,0 +1,6 @@
+Jin is an open source, cross platform, graphical client for chess
+servers, written in Java. Jin can run either as a standalone
+application or as an applet, directly from your browser.
+
+Currently supported servers are the Internet Chess Club and the
+Free Internet Chess Server.
