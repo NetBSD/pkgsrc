@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3040 2014/08/13 19:05:08 adam Exp $
+$NetBSD: CHANGES-2014,v 1.3041 2014/08/13 19:45:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3975,3 +3975,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/the_silver_searcher to 0.24.1 [schmonz 2014-08-13]
 	Added games/jin version 2.14.1 [wiz 2014-08-13]
 	Updated multimedia/ffmpeg2 to 2.3.2 [adam 2014-08-13]
+	Updated devel/p5-Exporter-Lite to 0.06 [wiz 2014-08-13]
