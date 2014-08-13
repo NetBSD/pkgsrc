@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2014/05/17 16:10:42 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2014/08/13 10:56:35 adam Exp $
 
 BOOST_PACKAGE=		python
 BOOST_COMMENT=		(Boost.Python binary library)
@@ -7,8 +7,6 @@ BOOST_CONFIG=		installed
 INSTALLATION_DIRS+=	lib
 
 .include "../../meta-pkgs/boost/Makefile.common"
-
-PKGREVISION=		1
 
 BJAM_ARGS+=		--user-config=${WRKSRC}/user-config.jam
 BJAM_ARGS+=		--with-python

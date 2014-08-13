@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.44 2014/05/13 18:48:49 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.45 2014/08/13 10:56:35 adam Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -9,7 +9,7 @@
 
 BOOST_PACKAGE?=		undefined
 BOOST_COMMENT?=		undefined
-BOOST_VERSION=		1.55.0
+BOOST_VERSION=		1.56.0
 BOOST_SHORT_VERSION=	${BOOST_VERSION:S/./_/:C/\..*$//}
 
 DISTNAME=		boost_${BOOST_VERSION:S/./_/g}
@@ -19,7 +19,6 @@ CATEGORIES=		devel
 PKGNAME=	boost-${BOOST_VERSION}
 .else # ${BOOST_PACKAGE} != "meta-pkg"
 PKGNAME=	boost-${BOOST_PACKAGE}-${BOOST_VERSION}
-PKGREVISION=	1
 
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=boost/}
 EXTRACT_SUFX=	.tar.bz2
@@ -56,7 +55,7 @@ SUBST_VARS.prefix=	PREFIX
 SUBST_CLASSES+=		darwin
 SUBST_STAGE.darwin=	pre-configure
 SUBST_MESSAGE.darwin=	Fixing install_name for Darwin.
-SUBST_FILES.darwin=	tools/build/v2/tools/*darwin.jam
+SUBST_FILES.darwin=	tools/build/src/tools/*darwin.jam
 SUBST_SED.darwin=	-e 's,-install_name ",-install_name "${PREFIX}/lib/,g'
 
 # On SunOS, extract using pkgsrc nbtar to avoid warnings from native gtar.
