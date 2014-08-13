@@ -1,9 +1,9 @@
-$NetBSD: patch-ag,v 1.7 2012/07/02 07:02:26 adam Exp $
+$NetBSD: patch-ag,v 1.8 2014/08/13 10:56:36 adam Exp $
 
 Pass CFLAGS to the compiler.
 
---- tools/build/v2/engine/build.jam.orig	2011-02-24 08:50:34.000000000 +0000
-+++ tools/build/v2/engine/build.jam
+--- tools/build/src/engine/build.jam.orig	2011-02-24 08:50:34.000000000 +0000
++++ tools/build/src/engine/build.jam
 @@ -192,7 +192,7 @@ toolset como como : "-o " : -D
      : -L$(--python-lib[1]) -l$(--python-lib[2]) ;
  ## Clang Linux 2.8+
