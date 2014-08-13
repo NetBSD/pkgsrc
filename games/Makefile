@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.372 2014/08/10 13:12:45 wiz Exp $
+# $NetBSD: Makefile,v 1.373 2014/08/13 18:57:40 wiz Exp $
 #
 
 COMMENT=	Games
@@ -148,6 +148,7 @@ SUBDIR+=	ioquake3
 SUBDIR+=	ioquake3-pk3
 SUBDIR+=	ivan
 SUBDIR+=	jetpack
+SUBDIR+=	jin
 SUBDIR+=	jools
 SUBDIR+=	kajaani-kombat
 SUBDIR+=	kajongg
