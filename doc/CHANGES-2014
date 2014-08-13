@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3032 2014/08/13 08:24:02 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3033 2014/08/13 09:11:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3955,3 +3955,10 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated pkgtools/pkg_summary-utils to 0.65.1 [cheusov 2014-08-12]
 	Removed fonts/Symbola-ttf successor fonts/symbola-ttf [wiz 2014-08-13]
 	Updated multimedia/xine-lib to 1.2.5nb5 [wiz 2014-08-13]
+	Updated devel/subversion to 1.8.10 [adam 2014-08-13]
+	Updated devel/subversion-base to 1.8.10 [adam 2014-08-13]
+	Updated devel/java-subversion to 1.8.10 [adam 2014-08-13]
+	Updated devel/p5-subversion to 1.8.10 [adam 2014-08-13]
+	Updated devel/py-subversion to 1.8.10 [adam 2014-08-13]
+	Updated devel/ruby-subversion to 1.8.10 [adam 2014-08-13]
+	Updated www/ap2-subversion to 1.8.10 [adam 2014-08-13]
