@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3045 2014/08/13 20:35:43 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3046 2014/08/13 20:40:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3980,3 +3980,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-gunicorn to 19.1.0 [gls 2014-08-13]
 	Added math/p5-Statistics-Distributions version 1.02 [wiz 2014-08-13]
 	Added math/p5-Statistics-TTest version 1.1.0 [wiz 2014-08-13]
+	Added benchmarks/p5-Benchmark-Timer version 0.7102 [wiz 2014-08-13]
