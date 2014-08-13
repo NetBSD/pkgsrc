@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.99 2014/07/22 17:01:51 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2014/08/13 09:17:35 wiz Exp $
 
 PKGNAME=	qt4-libs-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	C++ X GUI toolkit
 
 .include "../../x11/qt4-libs/Makefile.common"
@@ -93,7 +94,7 @@ do-install:
 		${DESTDIR}${QTPREFIX}/lib/
 	sed	-e "s:${WRKSRC}:${QTPREFIX}:g" \
 		-e "s:${QTPREFIX}/lib/lib\\([A-Za-z3]*\\)\\.la:-l\\1:g" \
-		${WRKSRC}/lib/pkgconfig/${f}.pc > ${WRKDIR}/${f}.pc
+		${WRKSRC}/lib/pkgconfig/${f}.pc | ${AWK} '!x[$$0]++' > ${WRKDIR}/${f}.pc
 	${INSTALL_DATA} ${WRKDIR}/${f}.pc ${DESTDIR}${PREFIX}/lib/pkgconfig/
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/tools/porting/src/q3porting.xml ${DESTDIR}${QTPREFIX}
