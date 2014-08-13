@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3039 2014/08/13 18:57:52 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3040 2014/08/13 19:05:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3974,3 +3974,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated games/MyGoGrinder to 2.0.0.J6nb1 [wiz 2014-08-13]
 	Updated textproc/the_silver_searcher to 0.24.1 [schmonz 2014-08-13]
 	Added games/jin version 2.14.1 [wiz 2014-08-13]
+	Updated multimedia/ffmpeg2 to 2.3.2 [adam 2014-08-13]
