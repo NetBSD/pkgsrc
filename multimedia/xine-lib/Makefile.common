@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.82 2014/08/11 23:09:46 wiz Exp $
+# $NetBSD: Makefile.common,v 1.83 2014/08/13 08:23:50 wiz Exp $
 #
 # used by audio/xine-alsa/Makefile
 # used by audio/xine-esound/Makefile
@@ -76,6 +76,6 @@ pre-configure:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../multimedia/ffmpeg1/buildlink3.mk"
+.include "../../multimedia/ffmpeg2/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
