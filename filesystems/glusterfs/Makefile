@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2014/05/18 21:21:32 joerg Exp $
+# $NetBSD: Makefile,v 1.43 2014/08/13 22:37:37 joerg Exp $
 
 DISTNAME=	glusterfs-3.5.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	filesystems
 MASTER_SITES=	http://bits.gluster.org/pub/gluster/glusterfs/src/
 
@@ -54,7 +54,7 @@ CONF_FILES+=		${EGDIR}/glusterd.vol.sample ${EGDIR}/glusterd.vol
 OWN_DIRS+=		${VARBASE}/log/glusterfs
 BUILD_DEFS+=		VARBASE
 
-RCD_SCRIPTS=		glusterfsd glusterd
+RCD_SCRIPTS=		glusterfsd
 
 PLIST_SRC=		${PLIST_SRC_DFLT}
 PLIST_SUBST+=		VARBASE=${VARBASE}
@@ -84,6 +84,7 @@ LIBS+=-lgc
 .include "options.mk"
 
 .include "../../mk/bsd.prefs.mk"
+.include "../../devel/argp/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 
