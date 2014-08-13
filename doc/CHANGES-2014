@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3044 2014/08/13 20:31:50 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3045 2014/08/13 20:35:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3979,3 +3979,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/fabric to 1.9.1 [gls 2014-08-13]
 	Updated www/py-gunicorn to 19.1.0 [gls 2014-08-13]
 	Added math/p5-Statistics-Distributions version 1.02 [wiz 2014-08-13]
+	Added math/p5-Statistics-TTest version 1.1.0 [wiz 2014-08-13]
