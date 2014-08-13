@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.107 2014/04/10 06:21:19 obache Exp $
+# $NetBSD: Makefile,v 1.108 2014/08/13 08:24:51 wiz Exp $
 
 DISTNAME=	kdemultimedia-${_KDE_VERSION}
-PKGREVISION=	37
+PKGREVISION=	38
 CATEGORIES=	multimedia
 COMMENT=	Multimedia tools for the KDE integrated X11 desktop
 
