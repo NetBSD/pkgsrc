@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2014/04/18 08:31:20 manu Exp $
+@comment $NetBSD: PLIST,v 1.19 2014/08/13 22:37:37 joerg Exp $
 etc/glusterfs/gluster-rsyslog-5.8.conf
 etc/glusterfs/gluster-rsyslog-7.2.conf
 etc/glusterfs/glusterd.vol.sample
@@ -105,7 +105,6 @@ share/doc/glusterfs/benchmarking/local-script.sh
 share/doc/glusterfs/benchmarking/rdd.c
 share/doc/glusterfs/glusterfs-mode.el
 share/doc/glusterfs/glusterfs.vim
-share/examples/rc.d/glusterd
 share/examples/rc.d/glusterfsd
 share/glusterfs/scripts/generate-gfid-file.sh
 share/glusterfs/scripts/get-gfid.sh
