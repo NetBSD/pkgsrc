@@ -1,0 +1,24 @@
+$NetBSD: patch-bb,v 1.1 2014/08/13 18:30:03 cheusov Exp $
+
+Do use non-standard getcwd(NULL, 0); This unbreaks cvs on Interix.
+--- lib/xgetcwd.c.orig	Mon Sep 19 21:12:25 2005
++++ lib/xgetcwd.c	Wed Aug 13 17:58:42 2014
+@@ -25,6 +25,7 @@
+ #include "xgetcwd.h"
+ 
+ #include <errno.h>
++#include <limits.h>
+ 
+ #include "getcwd.h"
+ #include "xalloc.h"
+@@ -36,8 +37,8 @@
+ char *
+ xgetcwd (void)
+ {
+-  char *cwd = getcwd (NULL, 0);
++  char *cwd = xmalloc (PATH_MAX);
+   if (! cwd && errno == ENOMEM)
+     xalloc_die ();
+-  return cwd;
++  return getcwd (cwd, PATH_MAX);
+ }
