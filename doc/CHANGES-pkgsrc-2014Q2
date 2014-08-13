@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.21 2014/08/09 20:44:23 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.22 2014/08/13 21:09:39 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q2 branch:
@@ -78,3 +78,5 @@ Pullup ticket #4470 - requested by tron
 net/wireshark: security update
 Pullup ticket #4471 - requested by obache
 security/openssl: security update
+Pullup ticket #4472 - requested by prlw1
+lang/gcc44: build fix
