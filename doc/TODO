@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13557 2014/08/13 10:59:11 adam Exp $
+$NetBSD: TODO,v 1.13558 2014/08/13 20:56:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -385,7 +385,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o asapm-3.1
 	o asc-2.6.0
 	o aspell-nb-2.0.10
-	o astyle-2.04 [pkg/48822]
 	o asymptote-2.32
 	o aterm-1.0.1
 	o aubio-0.4.0

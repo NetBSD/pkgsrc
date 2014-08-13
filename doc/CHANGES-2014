@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3047 2014/08/13 20:43:51 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3048 2014/08/13 20:56:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3982,3 +3982,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added math/p5-Statistics-TTest version 1.1.0 [wiz 2014-08-13]
 	Added benchmarks/p5-Benchmark-Timer version 0.7102 [wiz 2014-08-13]
 	Added devel/p5-Getopt-Tabular version 0.3 [wiz 2014-08-13]
+	Updated devel/astyle to 2.04 [wiz 2014-08-13]
