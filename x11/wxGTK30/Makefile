@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2014/07/30 06:53:21 dbj Exp $
+# $NetBSD: Makefile,v 1.3 2014/08/13 22:32:43 joerg Exp $
 #
 
 VERSION=	3.0.1
-PKGREVISION=	1
+PKGREVISION=	2
 DISTNAME=	wxWidgets-${VERSION}
 PKGNAME=	wxGTK30-${VERSION}
 CATEGORIES=	x11
@@ -69,22 +69,22 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/changes.txt ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/readme.txt ${DESTDIR}${PREFIX}/${DOCDIR}
 
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
-#.include "../../devel/GConf/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../graphics/glu/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../x11/libXxf86vm/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/tiff/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
-.include "../../graphics/cairo/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libXxf86vm/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
