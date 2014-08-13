@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/08/13 18:57:27 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/08/13 19:16:41 wiz Exp $
 
 DISTNAME=	jin-2.14.1-unix
 PKGNAME=	${DISTNAME:S/-unix//}
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_LANGUAGES=		# none
 USE_TOOLS+=		pax
+USE_JAVA=		run
+USE_JAVA2=		yes
 INSTALLATION_DIRS=	bin
 
 do-build:
