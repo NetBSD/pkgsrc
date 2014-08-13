@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3033 2014/08/13 09:11:11 adam Exp $
+$NetBSD: CHANGES-2014,v 1.3034 2014/08/13 09:17:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3962,3 +3962,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-subversion to 1.8.10 [adam 2014-08-13]
 	Updated devel/ruby-subversion to 1.8.10 [adam 2014-08-13]
 	Updated www/ap2-subversion to 1.8.10 [adam 2014-08-13]
+	Updated x11/qt4-libs to 4.8.6nb1 [wiz 2014-08-13]
