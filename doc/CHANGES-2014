@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3030 2014/08/12 23:15:43 cheusov Exp $
+$NetBSD: CHANGES-2014,v 1.3031 2014/08/13 08:00:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3953,3 +3953,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/xf86-input-mouse to 1.9.1 [wiz 2014-08-12]
 	Added archivers/hs-zlib version 0.5.4.1 [szptvlfn 2014-08-12]
 	Updated pkgtools/pkg_summary-utils to 0.65.1 [cheusov 2014-08-12]
+	Removed fonts/Symbola-ttf successor fonts/symbola-ttf [wiz 2014-08-13]
