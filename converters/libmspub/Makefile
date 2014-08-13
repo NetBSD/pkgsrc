@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2014/07/22 11:17:44 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/08/13 10:57:33 adam Exp $
 
 DISTNAME=	libmspub-0.1.1
+PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	http://dev-www.libreoffice.org/src/libmspub/
 EXTRACT_SUFX=	.tar.xz

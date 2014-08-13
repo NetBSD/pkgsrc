@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2014/05/09 07:37:08 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2014/08/13 10:57:32 adam Exp $
 
 PKGNAME=	usrp-${VERSION}
-PKGREVISION=	10
+PKGREVISION=	11
 COMMENT=	Non GNU Radio specific part of the USRP code base
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 3.3.0
