@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2014/05/15 14:41:50 adam Exp $
+# $NetBSD: Makefile,v 1.46 2014/08/13 08:24:51 wiz Exp $
 
 DISTNAME=	simgear-2.8.0
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	games devel
 MASTER_SITES=	ftp://mirrors.ibiblio.org/pub/mirrors/simgear/ftp/Source/ \
 		ftp://ftp.goflyflightgear.com/simgear/
