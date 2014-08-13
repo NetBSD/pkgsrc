@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2014/05/08 09:05:51 imil Exp $
+# $NetBSD: Makefile,v 1.2 2014/08/13 20:27:09 gls Exp $
 
-DISTNAME=	gunicorn-18.0
+DISTNAME=	gunicorn-19.1.0
 CATEGORIES=	www
 MASTER_SITES=	https://pypi.python.org/packages/source/g/gunicorn/
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 
-USE_TOOLS+=	pax
 MAINTAINER=	gls@NetBSD.org
 HOMEPAGE=	http://gunicorn.org/
 COMMENT=	Python WSGI HTTP server
@@ -15,6 +14,7 @@ USE_TOOLS+=	pax
 
 DOCDIR=		${PREFIX}/share/doc/py-gunicorn
 EXAMPLESDIR=	${PREFIX}/share/examples/py-gunicorn
+AUTO_MKDIRS=	yes
 
 post-install:
 	cd ${WRKSRC}/docs/source && pax -wr -pma *.rst	\
