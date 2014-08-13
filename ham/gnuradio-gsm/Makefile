@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2014/01/25 10:45:19 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2014/08/13 10:57:36 adam Exp $
 
 PKGNAME=	gnuradio-gsm-${VERSION}
-PKGREVISION=	8
+PKGREVISION=	9
 COMMENT=	GNU Radio GSM 06.10 13kbit/sec voice encoder/decoder
 
 .include "../../meta-pkgs/gnuradio/Makefile.common"
