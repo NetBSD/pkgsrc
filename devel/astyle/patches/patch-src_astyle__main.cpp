@@ -1,6 +1,7 @@
-$NetBSD: patch-src_astyle__main.cpp,v 1.1 2014/08/13 20:56:25 wiz Exp $
+$NetBSD: patch-src_astyle__main.cpp,v 1.2 2014/08/13 21:11:07 wiz Exp $
 
 Fix build on NetBSD.
+https://sourceforge.net/p/astyle/bugs/299/
 
 --- src/astyle_main.cpp.orig	2013-11-01 20:31:48.000000000 +0000
 +++ src/astyle_main.cpp
