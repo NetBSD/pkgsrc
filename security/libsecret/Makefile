@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/03/12 10:17:57 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2014/08/13 13:19:14 wiz Exp $
 
 DISTNAME=	libsecret-0.18
 CATEGORIES=	security gnome
@@ -16,7 +16,7 @@ BUILD_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake intltool pkg-config msgfmt
+USE_TOOLS+=	gmake intltool pkg-config msgfmt gsed
 
 PKGCONFIG_OVERRIDE+=	libsecret/libsecret-unstable.pc.in
 PKGCONFIG_OVERRIDE+=	libsecret/libsecret.pc.in
