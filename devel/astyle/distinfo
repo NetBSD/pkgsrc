@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2014/08/13 20:56:25 wiz Exp $
+$NetBSD: distinfo,v 1.13 2014/08/13 21:11:07 wiz Exp $
 
 SHA1 (astyle_2.04_linux.tar.gz) = 8d7701afa3ecb7fb24d3647d8b278dcf17f3ae3e
 RMD160 (astyle_2.04_linux.tar.gz) = 94d237759e5d2e4d45db5614ee091996f1a995f2
 Size (astyle_2.04_linux.tar.gz) = 156974 bytes
-SHA1 (patch-src_astyle__main.cpp) = 6ebe3d3266dff6d27748c03ac24dda6a1f187d39
+SHA1 (patch-src_astyle__main.cpp) = be94921cda22bd0c2037625e0b127b93bbd8a598
