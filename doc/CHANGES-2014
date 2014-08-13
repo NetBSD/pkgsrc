@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3036 2014/08/13 10:59:11 adam Exp $
+$NetBSD: CHANGES-2014,v 1.3037 2014/08/13 13:04:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3971,3 +3971,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/boost-build to 1.56.0 [adam 2014-08-13]
 	Updated devel/boost-python to 1.56.0 [adam 2014-08-13]
 	Updated meta-pkgs/boost to 1.56.0 [adam 2014-08-13]
+	Updated games/MyGoGrinder to 2.0.0.J6nb1 [wiz 2014-08-13]
