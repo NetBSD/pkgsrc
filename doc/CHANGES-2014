@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3042 2014/08/13 20:05:40 gls Exp $
+$NetBSD: CHANGES-2014,v 1.3043 2014/08/13 20:27:26 gls Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3977,3 +3977,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/ffmpeg2 to 2.3.2 [adam 2014-08-13]
 	Updated devel/p5-Exporter-Lite to 0.06 [wiz 2014-08-13]
 	Updated sysutils/fabric to 1.9.1 [gls 2014-08-13]
+	Updated www/py-gunicorn to 19.1.0 [gls 2014-08-13]
