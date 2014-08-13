@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.612 2014/08/09 22:59:47 wiz Exp $
+# $NetBSD: Makefile,v 1.613 2014/08/13 20:20:39 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -359,6 +359,7 @@ SUBDIR+=	p5-Parse-Syslog
 SUBDIR+=	p5-Quota
 SUBDIR+=	p5-SSH-Batch
 SUBDIR+=	p5-Server-Starter
+SUBDIR+=	p5-Sys-CPU
 SUBDIR+=	p5-Sys-CpuLoad
 SUBDIR+=	p5-Sys-Filesystem
 SUBDIR+=	p5-Sys-Hostname-Long
