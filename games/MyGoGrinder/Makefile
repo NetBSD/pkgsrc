@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/08/10 13:12:31 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/08/13 13:04:28 wiz Exp $
 
 DISTNAME=	MyGoGrinder-2-0-0-J6
 PKGNAME=	${DISTNAME:S/2-0-0-/2.0.0./}
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mygogrinder/}
 EXTRACT_SUFX=	.zip
@@ -26,7 +27,7 @@ INSTALLATION_DIRS+=	share/pixmaps
 
 do-build:
 	${ECHO} '#!/bin/sh' > ${WRKDIR}/MyGoGrinder.sh
-	${ECHO} "exec ${JAVA_BINPREFIX}-java -jar "'"'"${PREFIX}/share/${PKGBASE}/MyGoGrinder.jar"'" "$$@"' >> ${WRKDIR}/MyGoGrinder.sh
+	${ECHO} "cd ${PREFIX}/share/doc/${PKGBASE} && exec ${JAVA_BINPREFIX}-java -jar "'"'"${PREFIX}/share/${PKGBASE}/MyGoGrinder.jar"'" "$$@"' >> ${WRKDIR}/MyGoGrinder.sh
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/MyGoGrinder.sh ${DESTDIR}${PREFIX}/bin
@@ -38,9 +39,11 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/readme.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/DEMO.WGF ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}/demo.wgf
 	${INSTALL_DATA} ${WRKDIR}/"Xuan-Xuan-Qi-Jing-(problems).zip" ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}
-	cd ${WRKSRC}/docs && pax -pp -rw * ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	cd ${WRKSRC}/docs && pax -pp -rw * ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/docs
+	${RM} -f ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/docs/Notizen*
 	${CHMOD} a-wx ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/*.*
 	${CHMOD} a-wx ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/*/*.*
+	${CHMOD} a-wx ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/*/*/*.*
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
