@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.177 2014/06/18 09:28:18 wiz Exp $
+# $NetBSD: Makefile,v 1.178 2014/08/13 22:31:49 joerg Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 PKGREVISION=	34
@@ -90,6 +90,9 @@ post-install:
 .if ${MACHINE_ARCH} == "alpha"
 GCC_REQD+=		2.95
 .endif
+
+LUA_VERSIONS_ACCEPTED=	51
+.include "../../lang/lua/buildlink3.mk"
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 
