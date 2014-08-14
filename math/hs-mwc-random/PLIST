@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2014/08/14 21:57:25 szptvlfn Exp $
+lib/mwc-random-${PKGVERSION}/${HASKELL_VERSION}/HSmwc-random-${PKGVERSION}.o
+lib/mwc-random-${PKGVERSION}/${HASKELL_VERSION}/System/Random/MWC.hi
+lib/mwc-random-${PKGVERSION}/${HASKELL_VERSION}/System/Random/MWC/CondensedTable.hi
+lib/mwc-random-${PKGVERSION}/${HASKELL_VERSION}/System/Random/MWC/Distributions.hi
+lib/mwc-random-${PKGVERSION}/${HASKELL_VERSION}/libHSmwc-random-${PKGVERSION}.a
+lib/mwc-random-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/mwc-random-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/mwc-random-${PKGVERSION}/html/System-Random-MWC-CondensedTable.html
+${PLIST.doc}share/doc/mwc-random-${PKGVERSION}/html/System-Random-MWC-Distributions.html
+${PLIST.doc}share/doc/mwc-random-${PKGVERSION}/html/System-Random-MWC.html
+${PLIST.doc}share/doc/mwc-random-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/mwc-random-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/mwc-random-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/mwc-random-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/mwc-random-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/mwc-random-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/mwc-random-${PKGVERSION}/html/mini_System-Random-MWC-CondensedTable.html
+${PLIST.doc}share/doc/mwc-random-${PKGVERSION}/html/mini_System-Random-MWC-Distributions.html
+${PLIST.doc}share/doc/mwc-random-${PKGVERSION}/html/mini_System-Random-MWC.html
+${PLIST.doc}share/doc/mwc-random-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/mwc-random-${PKGVERSION}/html/mwc-random.haddock
+${PLIST.doc}share/doc/mwc-random-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/mwc-random-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/mwc-random-${PKGVERSION}/html/synopsis.png
