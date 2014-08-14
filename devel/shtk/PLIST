@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/07/28 23:30:44 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/08/14 13:48:21 jmmv Exp $
 bin/shtk
 lib/pkgconfig/shtk.pc
 man/man1/shtk.1
@@ -8,7 +8,9 @@ share/doc/shtk/COPYING
 share/doc/shtk/NEWS
 share/doc/shtk/README
 share/shtk/base.subr
+share/shtk/bool.subr
 share/shtk/bootstrap.subr
+share/shtk/cleanup.subr
 share/shtk/cli.subr
 share/shtk/config.subr
 share/shtk/cvs.subr
@@ -16,6 +18,8 @@ share/shtk/list.subr
 share/shtk/process.subr
 ${TESTS}tests/shtk/Kyuafile
 ${TESTS}tests/shtk/base_test
+${TESTS}tests/shtk/bool_test
+${TESTS}tests/shtk/cleanup_test
 ${TESTS}tests/shtk/cli_test
 ${TESTS}tests/shtk/config_test
 ${TESTS}tests/shtk/cvs_test
