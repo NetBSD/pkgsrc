@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3063 2014/08/14 14:46:17 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3064 2014/08/14 14:50:57 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4001,3 +4001,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-URI-Fetch to 0.10 [wen 2014-08-14]
 	Updated www/p5-URI-db to 0.13 [wen 2014-08-14]
 	Updated www/p5-Net-HTTP to 6.07 [wen 2014-08-14]
+	Updated www/p5-libwww to 6.08 [wen 2014-08-14]
