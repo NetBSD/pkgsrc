@@ -1,11 +1,10 @@
-$NetBSD: patch-av,v 1.4 2014/08/13 20:22:09 cheusov Exp $
-
+$NetBSD: patch-av,v 1.5 2014/08/14 10:33:29 richard Exp $
 Chunk #1:
 include both stdint.h and inttypes.h if they are available.
-This fixes build failure on Interix-6.1 (sizeof (intmax_t) == 0).
---- /tmp/obj-pkgsrc/devel/scmcvs/work/cvs-1.12.13/configure.in.orig	Mon Oct  3 13:34:45 2005
-+++ /tmp/obj-pkgsrc/devel/scmcvs/work/cvs-1.12.13/configure.in	Wed Aug 13 20:01:29 2014
-@@ -394,11 +394,10 @@
+This fixes build failure on Interix-6.1 (sizeof (intmax_t) ==
+--- configure.in.orig	2005-10-03 13:34:45.000000000 +0000
++++ configure.in
+@@ -394,11 +394,10 @@ else
  		AC_CHECK_SIZEOF(intmax_t, [], [[#include <stdio.h>
  #ifdef HAVE_INTTYPES_H
  #include <inttypes.h>
@@ -18,7 +17,7 @@ This fixes build failure on Interix-6.1 (sizeof (intmax_t) == 0).
  ]])
  		AC_CACHE_CHECK(for uniquely sized intmax_t,
  			ccvs_cv_unique_int_type_intmax_t,
-@@ -587,7 +586,7 @@
+@@ -587,7 +586,7 @@ if test -n "$krb_h"; then
             [LDFLAGS=$hold_ldflags
              # Using open here instead of printf so we don't
              # get confused by the cached value for printf from above.
