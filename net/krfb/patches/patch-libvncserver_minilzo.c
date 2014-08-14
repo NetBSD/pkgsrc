@@ -1,4 +1,4 @@
-$NetBSD: patch-libvncserver_minilzo.c,v 1.1 2014/08/11 21:22:15 markd Exp $
+$NetBSD: patch-libvncserver_minilzo.c,v 1.2 2014/08/14 09:11:20 wiz Exp $
 
 Update LZO to version 2.07 in libvncserver. 
 
@@ -3840,7 +3840,7 @@ Temporary fix for CVE-2014-4607 for 4.14.
  #else
      lzo_uintptr_t p, n;
      p = __lzo_ptr_linear(ptr);
-@@ -2296,7 +3912,7 @@
+@@ -2296,6 +3912,6 @@
  #else
      "\r\n\n"
      "LZO data compression library.\n"
@@ -3848,7 +3848,6 @@ Temporary fix for CVE-2014-4607 for 4.14.
 +    "$Copyright: LZO Copyright (C) 1996-2014 Markus Franz Xaver Johannes Oberhumer\n"
      "<markus@oberhumer.com>\n"
      "http://www.oberhumer.com $\n\n"
-     "$Id: patch-libvncserver_minilzo.c,v 1.1 2014/08/11 21:22:15 markd Exp $\n"
 @@ -2306,11 +3922,7 @@
  LZO_PUBLIC(const lzo_bytep)
  lzo_copyright(void)
