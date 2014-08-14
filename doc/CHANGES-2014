@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3052 2014/08/14 09:54:54 obache Exp $
+$NetBSD: CHANGES-2014,v 1.3053 2014/08/14 10:00:52 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3988,3 +3988,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated benchmarks/p5-Benchmark-Timer to 0.7102nb1 [wiz 2014-08-14]
 	Removed devel/subversion16 successor devel/subversion [obache 2014-08-14]
 	Removed devel/subversion16-base successor devel/subversion-base [obache 2014-08-14]
+	Removed www/serf0 successor www/serf [obache 2014-08-14]
