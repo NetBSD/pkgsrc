@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3072 2014/08/14 20:07:36 shattered Exp $
+$NetBSD: CHANGES-2014,v 1.3073 2014/08/14 21:57:53 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4010,3 +4010,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated pkgtools/distbb to 0.47.0 [cheusov 2014-08-14]
 	Updated graphics/pstoedit to 3.62 [shattered 2014-08-14]
 	Updated net/tcpslice to 1.2a3 [shattered 2014-08-14]
+	Added math/hs-mwc-random version 0.13.2.0 [szptvlfn 2014-08-14]
