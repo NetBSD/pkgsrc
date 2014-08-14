@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2014/02/08 15:59:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2014/08/14 13:48:21 jmmv Exp $
 
-DISTNAME=	shtk-1.3
-PKGREVISION=	1
+DISTNAME=	shtk-1.4
 CATEGORIES=	devel
-MASTER_SITES=	https://github.com/jmmv/shtk/releases/download/shtk-1.3/
+MASTER_SITES=	https://github.com/jmmv/shtk/releases/download/${DISTNAME}/
 
 MAINTAINER=	jmmv@NetBSD.org
 COMMENT=	Application toolkit for POSIX-compliant shell scripts
