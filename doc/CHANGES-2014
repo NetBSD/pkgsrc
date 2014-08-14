@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3053 2014/08/14 10:00:52 obache Exp $
+$NetBSD: CHANGES-2014,v 1.3054 2014/08/14 10:28:41 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3989,3 +3989,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Removed devel/subversion16 successor devel/subversion [obache 2014-08-14]
 	Removed devel/subversion16-base successor devel/subversion-base [obache 2014-08-14]
 	Removed www/serf0 successor www/serf [obache 2014-08-14]
+	Updated graphics/GraphicsMagick to 1.3.19nb3 [jperkin 2014-08-14]
