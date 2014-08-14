@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2013/02/06 19:31:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.12 2014/08/14 19:44:53 shattered Exp $
 
-DISTNAME=	tcpslice-1.2a1
-PKGNAME=	tcpslice-1.2.0.1
-PKGREVISION=	1
+DISTNAME=	tcpslice-1.2a3
+PKGNAME=	tcpslice-1.2.0.3
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.ee.lbl.gov/
 
