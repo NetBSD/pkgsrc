@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2011/11/30 21:07:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/08/14 19:36:04 shattered Exp $
 bin/pstoedit
 include/pstoedit/base64writer.h
 include/pstoedit/cppcomp.h
@@ -18,6 +18,7 @@ lib/pstoedit/libpstoedit.la
 lib/pstoedit/pkgconfig/pstoedit.pc
 lib/pstoedit/pstoedit/libp2edrvlplot.la
 lib/pstoedit/pstoedit/libp2edrvmagick++.la
+lib/pstoedit/pstoedit/libp2edrvpptx.la
 lib/pstoedit/pstoedit/libp2edrvstd.la
 lib/pstoedit/pstoedit/libp2edrvswf.la
 man/man1/pstoedit.1
@@ -33,4 +34,6 @@ share/pstoedit/mpost.fmp
 share/pstoedit/safer.ps
 share/pstoedit/svg.fmp
 share/pstoedit/swffonts/default.fdb
+share/pstoedit/unix.fmp
 share/pstoedit/wemf.fmp
+share/pstoedit/windows.fmp
