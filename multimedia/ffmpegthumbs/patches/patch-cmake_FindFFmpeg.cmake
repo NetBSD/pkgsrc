@@ -1,6 +1,7 @@
-$NetBSD: patch-cmake_FindFFmpeg.cmake,v 1.1 2014/08/14 19:18:51 wiz Exp $
+$NetBSD: patch-cmake_FindFFmpeg.cmake,v 1.2 2014/08/14 19:26:16 wiz Exp $
 
 Fix ffmpeg detection.
+https://bugs.kde.org/show_bug.cgi?id=338280
 
 --- cmake/FindFFmpeg.cmake.orig	2014-01-02 19:34:11.000000000 +0000
 +++ cmake/FindFFmpeg.cmake
