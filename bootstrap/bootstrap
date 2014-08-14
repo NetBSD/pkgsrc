@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.211 2014/08/01 15:01:16 schmonz Exp $
+# $NetBSD: bootstrap,v 1.212 2014/08/14 00:21:24 cheusov Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -616,8 +616,8 @@ Interix)
 		mkdir -p "$@" # allows umask to take effect
 	}
 	default_install_mode=0775
-	root_user=`id -u`
-	root_group=131616
+	root_user=`id -un`
+	root_group=+Administrators
 	case `uname -r` in
 	3.* | 5.*)
 		need_bsd_install=yes
