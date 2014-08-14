@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1950 2014/08/14 09:53:18 obache Exp $
+# $NetBSD: Makefile,v 1.1951 2014/08/14 14:14:52 jmmv Exp $
 #
 
 COMMENT=	Development utilities
@@ -370,9 +370,7 @@ SUBDIR+=	kdiff3-kde3
 SUBDIR+=	ko-po-check
 SUBDIR+=	kompare
 SUBDIR+=	kscope
-SUBDIR+=	kyua-atf-compat
-SUBDIR+=	kyua-cli
-SUBDIR+=	kyua-testers
+SUBDIR+=	kyua
 SUBDIR+=	lcc
 SUBDIR+=	lcov
 SUBDIR+=	ldapsdk
