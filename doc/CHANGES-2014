@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3050 2014/08/14 06:16:17 cheusov Exp $
+$NetBSD: CHANGES-2014,v 1.3051 2014/08/14 08:21:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3985,3 +3985,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/astyle to 2.04 [wiz 2014-08-13]
 	Updated devel/ruby-shoulda-matchers to 2.6.2 [rodent 2014-08-14]
 	Updated parallel/paexec to 1.0.1 [cheusov 2014-08-14]
+	Updated benchmarks/p5-Benchmark-Timer to 0.7102nb1 [wiz 2014-08-14]
