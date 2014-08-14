@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2013/02/22 15:47:08 taca Exp $
-
-SHA1 (serf-0.7.2.tar.bz2) = 132fbb13d50c4f849231eee79dcada8cde3ecad2
-RMD160 (serf-0.7.2.tar.bz2) = 6b586ced49b7195e80595d3d1eb29af08d1afc32
-Size (serf-0.7.2.tar.bz2) = 161904 bytes

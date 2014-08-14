@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2013/02/22 15:47:08 taca Exp $
-include/serf-0/serf.h
-include/serf-0/serf_bucket_types.h
-include/serf-0/serf_bucket_util.h
-include/serf-0/serf_private.h
-lib/libserf-0.la
