@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.72 2014/08/13 18:48:09 cheusov Exp $
+# $NetBSD: Interix.mk,v 1.73 2014/08/14 00:21:24 cheusov Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -98,7 +98,7 @@ PKGDIRMODE?=		775
 # ROOT_USER might be numeric in the special case of Administrator; canonify it:
 ROOT_CMD?=		${SU} - "$$(id -un ${ROOT_USER})" -c
 ROOT_USER?=		${BINOWN}
-ROOT_GROUP?=		131616 # +Administrators or native language equivalent
+ROOT_GROUP?=		+Administrators # or native language equivalent
 TOUCH_FLAGS?=
 ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
