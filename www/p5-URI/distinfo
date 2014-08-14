@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2012/04/22 10:41:20 wiz Exp $
+$NetBSD: distinfo,v 1.26 2014/08/14 13:36:01 wen Exp $
 
-SHA1 (URI-1.60.tar.gz) = 940315985af24b9f4bb5a9761b1e2bbe6c1d0df3
-RMD160 (URI-1.60.tar.gz) = 24afb2202cae821cfe1499056b289b81a5d62f24
-Size (URI-1.60.tar.gz) = 81196 bytes
+SHA1 (URI-1.64.tar.gz) = 80b43be09119f65f87ac3ab947c1e1cf0e0d0a8a
+RMD160 (URI-1.64.tar.gz) = 82b7a6c11befb555afd48e75cc9342261f4a742e
+Size (URI-1.64.tar.gz) = 82778 bytes
