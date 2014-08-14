@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3064 2014/08/14 14:50:57 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3065 2014/08/14 15:24:09 imil Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4002,3 +4002,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-URI-db to 0.13 [wen 2014-08-14]
 	Updated www/p5-Net-HTTP to 6.07 [wen 2014-08-14]
 	Updated www/p5-libwww to 6.08 [wen 2014-08-14]
+	Updated sysutils/salt to 2014.1.10 [imil 2014-08-14]
