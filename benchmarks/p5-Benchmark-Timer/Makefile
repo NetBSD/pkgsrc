@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/08/13 20:39:16 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/08/14 08:21:12 wiz Exp $
 
 DISTNAME=	Benchmark-Timer-0.7102
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Benchmark/}
 
@@ -13,6 +14,7 @@ COMMENT=	Benchmarking with statistical confidence
 DEPENDS+=	p5-Statistics-TTest-[0-9]*:../../math/p5-Statistics-TTest
 
 PERL5_PACKLIST=		auto/Benchmark/Timer/.packlist
+REPLACE_PERL=		delta.pl
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
