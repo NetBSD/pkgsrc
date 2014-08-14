@@ -1,21 +1,25 @@
-# $NetBSD: Makefile,v 1.22 2014/08/08 14:30:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.1 2014/08/14 14:14:52 jmmv Exp $
 #
 
-DISTNAME=	kyua-cli-0.9
+DISTNAME=	kyua-0.10
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/jmmv/kyua/releases/download/${DISTNAME}/
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	https://github.com/jmmv/kyua/
-COMMENT=	Kyua (automated testing framework) - Command line interface
+COMMENT=	Testing framework for infrastructure software
 LICENSE=	modified-bsd
+
+CONFLICTS=	kyua-atf-compat-[0-9]* kyua-cli-[0-9]* kyua-testers-[0-9]*
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 MAKE_JOBS_SAFE=		yes
-USE_LANGUAGES=		c++
+USE_LANGUAGES=		c c++
 USE_TOOLS=		pkg-config
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.kyua-cli
+PKG_OPTIONS_VAR=	PKG_OPTIONS.kyua
 PKG_SUPPORTED_OPTIONS=	tests
 PKG_SUGGESTED_OPTIONS=	tests
 
@@ -35,6 +39,7 @@ PLIST_SUBST+=		TESTS=
 CONFIGURE_ARGS+=	--without-atf
 PLIST_SUBST+=		TESTS=@comment
 .endif
+PRINT_PLIST_AWK+=	{ sub("^tests/", "$${TESTS}tests/"); }
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/tests
@@ -42,7 +47,6 @@ post-install:
 	    ${DESTDIR}${PREFIX}/tests/Kyuafile
 
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../devel/kyua-testers/buildlink3.mk"
 .include "../../devel/lutok/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
