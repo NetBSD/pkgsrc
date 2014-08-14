@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3049 2014/08/14 02:18:57 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.3050 2014/08/14 06:16:17 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3984,3 +3984,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/p5-Getopt-Tabular version 0.3 [wiz 2014-08-13]
 	Updated devel/astyle to 2.04 [wiz 2014-08-13]
 	Updated devel/ruby-shoulda-matchers to 2.6.2 [rodent 2014-08-14]
+	Updated parallel/paexec to 1.0.1 [cheusov 2014-08-14]
