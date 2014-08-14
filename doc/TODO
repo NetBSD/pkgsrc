@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13560 2014/08/14 19:36:04 shattered Exp $
+$NetBSD: TODO,v 1.13561 2014/08/14 20:07:36 shattered Exp $
 
 Suggested new packages
 ======================
@@ -1085,7 +1085,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tcpdstat-0.9
 	o tcpillust-1.00b
 	o tcpreplay-4.0.4
-	o tcpslice-1.2a3
 	o tct-1.16
 	o tds-1.6.2
 	o tea-37.2.1
