@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.347 2014/05/06 14:48:06 jperkin Exp $
+# $NetBSD: bsd.prefs.mk,v 1.348 2014/08/14 11:08:37 jperkin Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -762,9 +762,6 @@ PREPEND_PATH+=		${LOCALBASE}/bin
 # Support alternative init systems.
 #
 INIT_SYSTEM?=		rc.d
-.if ${INIT_SYSTEM} == "smf"
-.  include "smf.mk"
-.endif
 _BUILD_DEFS+=		INIT_SYSTEM
 
 # Wrapper framework definitions
