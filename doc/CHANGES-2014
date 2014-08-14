@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3059 2014/08/14 14:06:24 jmmv Exp $
+$NetBSD: CHANGES-2014,v 1.3060 2014/08/14 14:14:52 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -3995,3 +3995,6 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-URI to 1.64 [wen 2014-08-14]
 	Updated www/p5-URI-Find to 20140709 [wen 2014-08-14]
 	Updated devel/shtk to 1.4 [jmmv 2014-08-14]
+	Removed devel/kyua-atf-compat successor devel/kyua [jmmv 2014-08-14]
+	Removed devel/kyua-cli successor devel/kyua [jmmv 2014-08-14]
+	Removed devel/kyua-testers successor devel/kyua [jmmv 2014-08-14]
