@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2014/08/14 10:28:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.68 2014/08/14 15:23:59 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -31,13 +31,6 @@ TEST_TARGET=	check
 
 FIND_PREFIX:=	URW_FONTS_DIR=urw-fonts
 .include "../../mk/find-prefix.mk"
-
-# Gain 2-3X speedup by working around GCC optimisation bug
-# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=53967
-.include "../../mk/compiler.mk"
-.if !empty(CC_VERSION:Mgcc-4.*) && ${MACHINE_ARCH} == "x86_64"
-CFLAGS+=	-frename-registers
-.endif
 
 .include "options.mk"
 
