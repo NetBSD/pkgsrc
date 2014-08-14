@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.89 2014/05/29 23:38:17 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2014/08/14 14:50:04 wen Exp $
 
-DISTNAME=	libwww-perl-6.06
+DISTNAME=	libwww-perl-6.08
 PKGNAME=	p5-${DISTNAME:S/-perl-/-/}
-PKGREVISION=	1
 SVR4_PKGNAME=	p5lww
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MS/MSCHILLI/}
@@ -31,7 +30,7 @@ DEPENDS+=	p5-HTTP-Message>=6:../../www/p5-HTTP-Message
 DEPENDS+=	p5-LWP-MediaTypes>=6:../../www/p5-LWP-MediaTypes
 DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64>=2.1}:../../converters/p5-MIME-Base64
 DEPENDS+=	{perl>=5.10,p5-Net>=1.09}:../../net/p5-Net # for Net::FTP>=2.58
-DEPENDS+=	p5-Net-HTTP>=6:../../www/p5-Net-HTTP
+DEPENDS+=	p5-Net-HTTP>=6.07:../../www/p5-Net-HTTP
 DEPENDS+=	p5-URI>=1.10:../../www/p5-URI
 #		URI::Escape in URI
 DEPENDS+=	p5-WWW-RobotRules>=6.01:../../www/p5-WWW-RobotRules
