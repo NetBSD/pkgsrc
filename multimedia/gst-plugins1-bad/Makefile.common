@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2014/08/08 21:28:48 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2014/08/14 22:00:01 prlw1 Exp $
 #
 # used by audio/gst-plugins1-dts/Makefile
 # used by audio/gst-plugins1-faac/Makefile
@@ -23,6 +23,7 @@ GST_PLUGINS1_VER=	1.4.0
 		faad \
 		fbdev \
 		gsm \
+		hls \
 		libmms \
 		musepack \
 		musicbrainz \
