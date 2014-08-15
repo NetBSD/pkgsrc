@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3074 2014/08/15 16:09:59 taca Exp $
+$NetBSD: CHANGES-2014,v 1.3075 2014/08/15 18:10:11 richard Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4012,3 +4012,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/tcpslice to 1.2a3 [shattered 2014-08-14]
 	Added math/hs-mwc-random version 0.13.2.0 [szptvlfn 2014-08-14]
 	Updated lang/php53 to 5.3.29 [taca 2014-08-15]
+	Updated graphics/openexr to 2.2.0nb2 [richard 2014-08-15]
