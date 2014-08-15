@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/07/13 10:25:54 wen Exp $
+# $NetBSD: Makefile,v 1.10 2014/08/15 00:48:55 wen Exp $
 #
 
 DISTNAME=	MooseX-MultiInitArg-0.02
@@ -16,7 +16,7 @@ DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/MooseX/MultiInitArg/.packlist
 
-PERL5_MODULE_TYPE=	Module::Build
+PERL5_MODULE_TYPE=	Module::Build::Tiny
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
