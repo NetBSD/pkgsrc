@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.7 2014/08/09 17:15:59 schmonz Exp $
+# $NetBSD: Makefile,v 1.8 2014/08/15 06:49:45 schmonz Exp $
 
 DISTNAME=		highlight-3.18
 CATEGORIES=		textproc
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.andre-simon.de/
 COMMENT=		Converts source code to formatted text with syntax highlighting
 LICENSE=		gnu-gpl-v3
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LANGUAGES=		c c++
 MANCOMPRESSED=		yes
 
@@ -33,4 +33,5 @@ SUBST_SED.paths+=	-e 's,/usr/share,${PREFIX}/share,g'
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
