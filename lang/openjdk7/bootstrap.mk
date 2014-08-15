@@ -1,6 +1,6 @@
-# $NetBSD: bootstrap.mk,v 1.12 2014/07/25 23:24:13 ryoon Exp $
+# $NetBSD: bootstrap.mk,v 1.13 2014/08/15 19:39:36 wiz Exp $
 
-ONLY_FOR_PLATFORM=	NetBSD-[56].*-i386 NetBSD-[56].*-x86_64
+ONLY_FOR_PLATFORM=	NetBSD-[567].*-i386 NetBSD-[567].*-x86_64
 ONLY_FOR_PLATFORM+=	DragonFly-[23].*-* SunOS-*-*
 
 BOOT.nb5-i386=		bootstrap-jdk7u60-bin-netbsd-5-i386-20140719.tar.bz2
@@ -32,12 +32,12 @@ DISTFILES+=		${BOOT.nb6-amd64}
 EXTRACT_ONLY+=		${BOOT.nb6-amd64}
 .endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-6.99*-i386) || make(distinfo)
+.if !empty(MACHINE_PLATFORM:MNetBSD-6.99*-i386) || !empty(MACHINE_PLATFORM:MNetBSD-7*-i386) || make(distinfo)
 DISTFILES+=		${BOOT.nb7-i386}
 EXTRACT_ONLY+=		${BOOT.nb7-i386}
 .endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-6.99*-x86_64) || make(distinfo)
+.if !empty(MACHINE_PLATFORM:MNetBSD-6.99*-x86_64) || !empty(MACHINE_PLATFORM:MNetBSD-7*-x86_64) || make(distinfo)
 DISTFILES+=		${BOOT.nb7-amd64}
 EXTRACT_ONLY+=		${BOOT.nb7-amd64}
 .endif
