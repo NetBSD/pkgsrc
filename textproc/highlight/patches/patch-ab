@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2014/08/09 16:55:03 schmonz Exp $
+$NetBSD: patch-ab,v 1.5 2014/08/15 06:49:45 schmonz Exp $
 
 Use pkgsrc-specified compiler and flags.
 
@@ -19,3 +19,12 @@ Use pkgsrc-specified compiler and flags.
  #CFLAGS:=-ggdb ${CFLAGS}
  
  CFLAGS_DILU=-fno-strict-aliasing
+@@ -61,7 +61,7 @@ ifdef PIC
+ 	CFLAGS+=-fPIC
+ endif
+ 
+-LDFLAGS = -ldl
++#LDFLAGS = -ldl
+ # Do not strip by default (Mac OS X lazy pointer issues)
+ # Add -static to avoid linking with shared libs (can cause trouble when highlight
+ # is run as service)
