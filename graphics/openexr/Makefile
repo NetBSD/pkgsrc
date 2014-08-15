@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2014/08/13 19:23:08 tron Exp $
+# $NetBSD: Makefile,v 1.34 2014/08/15 18:07:41 richard Exp $
 
 DISTNAME=	openexr-2.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.savannah.nongnu.org/releases/openexr/
 
@@ -16,6 +16,8 @@ USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	OpenEXR.pc.in
 TEST_TARGET=		check
+
+GCC_REQD+=	4.3
 
 PTHREAD_OPTS+=		require
 LIBS.IRIX+=		-lmx
