@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2014/08/05 15:55:05 wiz Exp $
+$NetBSD: distinfo,v 1.22 2014/08/16 12:05:45 wiz Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -9,6 +9,9 @@ Size (libreoffice/0279a21fab6f245e85a6f85fea54f511-source-code-font-1.009.tar.gz
 SHA1 (libreoffice/05f84c95b610c21c5fd510d10debcabf-mariadb-native-client-1.0.0.tar.bz2) = 4e90cefad975ef2f1f92e43ba899629ed3b829f8
 RMD160 (libreoffice/05f84c95b610c21c5fd510d10debcabf-mariadb-native-client-1.0.0.tar.bz2) = 8e6c7ac95a134218eea626aabf12d5db258347b2
 Size (libreoffice/05f84c95b610c21c5fd510d10debcabf-mariadb-native-client-1.0.0.tar.bz2) = 443589 bytes
+SHA1 (libreoffice/15cb8c0803064faef0c4ddf5bc5ca279-boost_1_54_0.tar.bz2) = 230782c7219882d0fab5f1effbe86edb85238bf4
+RMD160 (libreoffice/15cb8c0803064faef0c4ddf5bc5ca279-boost_1_54_0.tar.bz2) = 350ac8a7ab0a5b3b09f6057f9bbecc877c16fe70
+Size (libreoffice/15cb8c0803064faef0c4ddf5bc5ca279-boost_1_54_0.tar.bz2) = 57873778 bytes
 SHA1 (libreoffice/1756c4fa6c616ae15973c104cd8cb256-Adobe-Core35_AFMs-314.tar.gz) = 28d4ec24dfda4eb41b6ceaa0cfcfca41b578f3b3
 RMD160 (libreoffice/1756c4fa6c616ae15973c104cd8cb256-Adobe-Core35_AFMs-314.tar.gz) = e99bb5017c29657c3303d8810e21bf02d737c345
 Size (libreoffice/1756c4fa6c616ae15973c104cd8cb256-Adobe-Core35_AFMs-314.tar.gz) = 315122 bytes
@@ -81,6 +84,9 @@ Size (libreoffice/a3dcac551fae5ebbec16e844810828c4-libwpd-0.9.9.tar.bz2) = 68491
 SHA1 (libreoffice/a7983f859eafb2677d7ff386a023bc40-xsltml_2.1.2.zip) = 2d49e11b0b711970f494294dc3698f05eb294853
 RMD160 (libreoffice/a7983f859eafb2677d7ff386a023bc40-xsltml_2.1.2.zip) = 923870cf88023713a492e0a5c5d5707ec21d8739
 Size (libreoffice/a7983f859eafb2677d7ff386a023bc40-xsltml_2.1.2.zip) = 23150 bytes
+SHA1 (libreoffice/aa5ca9d1ed1082890835afab26400a39-mdds_0.10.3.tar.bz2) = 0c4fa77918b8cc8ad32460c8d8a679e065976dbe
+RMD160 (libreoffice/aa5ca9d1ed1082890835afab26400a39-mdds_0.10.3.tar.bz2) = b272b02ae6e4442accc2f6bd79e8d58cb6ba7ea7
+Size (libreoffice/aa5ca9d1ed1082890835afab26400a39-mdds_0.10.3.tar.bz2) = 151389 bytes
 SHA1 (libreoffice/ace6ab49184e329db254e454a010f56d-libxml-1.1.7.zip) = b19ad429273abb116432eae3af955ecaf1ab5b17
 RMD160 (libreoffice/ace6ab49184e329db254e454a010f56d-libxml-1.1.7.zip) = a2d9dfc67448b7ae43ff23873c3191494a3d73bc
 Size (libreoffice/ace6ab49184e329db254e454a010f56d-libxml-1.1.7.zip) = 2929311 bytes
