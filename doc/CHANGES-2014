@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3077 2014/08/16 12:05:58 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3078 2014/08/16 12:12:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4015,3 +4015,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/openexr to 2.2.0nb2 [richard 2014-08-15]
 	Updated x11/mlterm to 3.3.8 [tsutsui 2014-08-16]
 	Updated misc/libreoffice4 to 4.2.5.2nb4 [wiz 2014-08-16]
+	Updated www/serf to 1.3.7 [wiz 2014-08-16]
