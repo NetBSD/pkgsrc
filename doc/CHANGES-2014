@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3082 2014/08/16 21:31:07 gls Exp $
+$NetBSD: CHANGES-2014,v 1.3083 2014/08/16 21:55:34 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4020,3 +4020,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/libidn to 1.29 [wiz 2014-08-16]
 	Updated databases/p5-Fsdb to 2.50 [bad 2014-08-16]
 	Updated audio/opusfile to 0.6 [gls 2014-08-16]
+	Updated math/hs-scientific to 0.3.3.0 [szptvlfn 2014-08-16]
