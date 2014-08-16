@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3076 2014/08/16 04:11:41 tsutsui Exp $
+$NetBSD: CHANGES-2014,v 1.3077 2014/08/16 12:05:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4014,3 +4014,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/php53 to 5.3.29 [taca 2014-08-15]
 	Updated graphics/openexr to 2.2.0nb2 [richard 2014-08-15]
 	Updated x11/mlterm to 3.3.8 [tsutsui 2014-08-16]
+	Updated misc/libreoffice4 to 4.2.5.2nb4 [wiz 2014-08-16]
