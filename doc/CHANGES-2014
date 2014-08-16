@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3083 2014/08/16 21:55:34 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.3084 2014/08/16 21:56:57 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4021,3 +4021,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/p5-Fsdb to 2.50 [bad 2014-08-16]
 	Updated audio/opusfile to 0.6 [gls 2014-08-16]
 	Updated math/hs-scientific to 0.3.3.0 [szptvlfn 2014-08-16]
+	Added devel/hs-deepseq-generics version 0.1.1.1 [szptvlfn 2014-08-16]
