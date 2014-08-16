@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3084 2014/08/16 21:56:57 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.3085 2014/08/16 22:24:16 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4022,3 +4022,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/opusfile to 0.6 [gls 2014-08-16]
 	Updated math/hs-scientific to 0.3.3.0 [szptvlfn 2014-08-16]
 	Added devel/hs-deepseq-generics version 0.1.1.1 [szptvlfn 2014-08-16]
+	Added devel/hs-vector-algorithms version 0.6.0.3 [szptvlfn 2014-08-16]
