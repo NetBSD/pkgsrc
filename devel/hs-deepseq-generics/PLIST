@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2014/08/16 21:56:30 szptvlfn Exp $
+lib/deepseq-generics-${PKGVERSION}/${HASKELL_VERSION}/Control/DeepSeq/Generics.hi
+lib/deepseq-generics-${PKGVERSION}/${HASKELL_VERSION}/HSdeepseq-generics-${PKGVERSION}.o
+lib/deepseq-generics-${PKGVERSION}/${HASKELL_VERSION}/libHSdeepseq-generics-${PKGVERSION}.a
+lib/deepseq-generics-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/deepseq-generics-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/deepseq-generics-${PKGVERSION}/html/Control-DeepSeq-Generics.html
+${PLIST.doc}share/doc/deepseq-generics-${PKGVERSION}/html/deepseq-generics.haddock
+${PLIST.doc}share/doc/deepseq-generics-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/deepseq-generics-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/deepseq-generics-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/deepseq-generics-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/deepseq-generics-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/deepseq-generics-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/deepseq-generics-${PKGVERSION}/html/mini_Control-DeepSeq-Generics.html
+${PLIST.doc}share/doc/deepseq-generics-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/deepseq-generics-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/deepseq-generics-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/deepseq-generics-${PKGVERSION}/html/synopsis.png
