@@ -1,9 +1,8 @@
-A Scientific number is an arbitrary-precision floating-point number
-represented using scientific notation.
+Data.Scientific provides a space efficient and arbitrary precision
+scientific number type.
 
-A scientific number with coefficient c and base10Exponent e corresponds to
-the Fractional number: fromInteger c * 10 ^^ e
-
-Its primary use-case is to serve as the target of parsing floating point
-numbers. Since the textual representation of floating point numbers use
-scientific notation they can be efficiently parsed to a Scientific number.
+Scientific numbers are represented using scientific notation. It uses a
+coefficient c :: Integer and a base-10 exponent e :: Int (do note that
+since we're using an Int to represent the exponent these numbers aren't
+truly arbitrary precision). A scientific number corresponds to the
+Fractional number: fromInteger c * 10 ^^ e.
