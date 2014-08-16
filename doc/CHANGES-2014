@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3080 2014/08/16 12:17:02 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3081 2014/08/16 19:13:36 bad Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4018,3 +4018,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/serf to 1.3.7 [wiz 2014-08-16]
 	Updated security/gnupg2 to 2.0.26 [wiz 2014-08-16]
 	Updated devel/libidn to 1.29 [wiz 2014-08-16]
+	Updated databases/p5-Fsdb to 2.50 [bad 2014-08-16]
