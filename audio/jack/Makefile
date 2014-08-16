@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2014/02/23 10:22:13 richard Exp $
+# $NetBSD: Makefile,v 1.28 2014/08/16 21:01:38 gls Exp $
 #
 
 DISTNAME=	jack-audio-connection-kit-${JACK_VERSION}
@@ -8,11 +8,12 @@ CATEGORIES=	audio
 #MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITES=	http://jackaudio.org/downloads/
 
-JACK_VERSION=	0.121.3
-
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.jackaudio.org/
 COMMENT=	JACK audio connection kit
+LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
+
+JACK_VERSION=	0.121.3
 
 BUILD_DEFS+=		JACKD_DEFAULT_TMPDIR
 BUILD_DEFS+=		JACKD_PROCFS_PATH
