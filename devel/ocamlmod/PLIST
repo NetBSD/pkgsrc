@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2014/08/17 13:41:42 jaapb Exp $
+bin/ocamlmod
