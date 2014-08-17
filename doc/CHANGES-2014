@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3098 2014/08/17 13:39:17 jaapb Exp $
+$NetBSD: CHANGES-2014,v 1.3099 2014/08/17 13:42:37 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4042,3 +4042,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/ocaml-type_conv version 111.13.00 [jaapb 2014-08-17]
 	Added devel/ocaml-odn version 0.0.11 [jaapb 2014-08-17]
 	Added devel/ocamlify version 0.0.2 [jaapb 2014-08-17]
+	Added devel/ocamlmod version 0.0.7 [jaapb 2014-08-17]
