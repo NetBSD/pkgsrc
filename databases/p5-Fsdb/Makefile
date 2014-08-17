@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/08/16 19:12:35 bad Exp $
+# $NetBSD: Makefile,v 1.6 2014/08/17 19:07:41 joerg Exp $
 
 DISTNAME=	Fsdb-2.50
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,7 @@ USE_TOOLS+=	perl
 
 DEPENDS+=	p5-HTML-Parser>=3.69:../../www/p5-HTML-Parser
 DEPENDS+=	p5-Text-CSV_XS>=0.91:../../textproc/p5-Text-CSV_XS
-DEPENDS+=	p5-XML-Simple:../../textproc/p5-XML-Simple
+DEPENDS+=	p5-XML-Simple-[0-9]*:../../textproc/p5-XML-Simple
 
 PERL5_PACKLIST=		auto/Fsdb/.packlist
 
