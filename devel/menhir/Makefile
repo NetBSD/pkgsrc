@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2013/11/01 11:30:21 jaapb Exp $
+# $NetBSD: Makefile,v 1.10 2014/08/17 14:37:23 jaapb Exp $
 #
 
-DISTNAME=	menhir-20120123
-PKGREVISION=	2
+DISTNAME=	menhir-20140422
 CATEGORIES=	devel
 MASTER_SITES=	http://cristal.inria.fr/~fpottier/menhir/
 
@@ -11,28 +10,20 @@ HOMEPAGE=	http://cristal.inria.fr/~fpottier/menhir/
 COMMENT=	LR(1) parser generator in OCaml
 LICENSE=	qpl-v1.0
 
-MAKE_JOBS_SAFE=		no
-
 USE_TOOLS+=		gmake
+MAKE_JOBS_SAFE=	no
 
-BUILD_DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
+.include "../../mk/ocaml.mk"
 
-EGDIR=			${PREFIX}/share/examples/${PKGBASE}
-MAKE_ENV=		EGDIR=${EGDIR:Q}
-
-PLIST_VARS=	opt
-.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
-    (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "x86_64") || \
-    (${MACHINE_ARCH} == "arm")
-PLIST.opt=	yes
+OCAML_USE_FINDLIB=	yes
+.if ${OCAML_USE_OPT_COMPILER} == "yes"
+MAKE_ENV+=	TARGET=native
 .else
 MAKE_ENV+=	TARGET=byte
 .endif
 
-INSTALLATION_DIRS=	lib/ocaml/site-lib/menhirLib
+EGDIR=				${PREFIX}/share/examples/${PKGBASE}
+MAKE_ENV+=		EGDIR=${EGDIR:Q} USE_OCAMLFIND=true \
+	OCAML_SITELIBDIR=${OCAML_SITELIBDIR}
 
-post-extract:
-	${RM} ${WRKSRC}/demos/calc/.omakedb*
-
-.include "../../lang/ocaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
