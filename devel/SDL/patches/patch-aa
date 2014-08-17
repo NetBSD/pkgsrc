@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.15 2012/09/14 13:20:20 wiz Exp $
+$NetBSD: patch-aa,v 1.16 2014/08/17 09:24:47 wiz Exp $
 
 Try to dlopen the libraries straight from the directories they are in.
 
---- src/loadso/dlopen/SDL_sysloadso.c.orig	2006-05-01 01:02:37.000000000 -0700
+--- src/loadso/dlopen/SDL_sysloadso.c.orig	2012-01-19 06:30:06.000000000 +0000
 +++ src/loadso/dlopen/SDL_sysloadso.c
-@@ -31,9 +31,32 @@
+@@ -31,9 +31,38 @@
  
  #include "SDL_loadso.h"
  
@@ -17,6 +17,12 @@ Try to dlopen the libraries straight from the directories they are in.
 +	unsigned i;
 +	void *handle;
 +
++	/* first, try file name directly */
++	handle = dlopen(sofile, RTLD_NOW);
++	if (handle)
++		return handle;
++
++	/* if that didn't work, prefix known locations and try again */
 +	for (i = 0; i < sizeof libdirs / sizeof libdirs[0]; i++) {
 +		char buf[1024];
 +
