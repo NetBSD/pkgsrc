@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2014/08/17 13:34:06 jaapb Exp $
+@unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/odn
+lib/ocaml/site-lib/odn/META
+lib/ocaml/site-lib/odn/ODN.cmi
+${PLIST.ocaml-opt}lib/ocaml/site-lib/odn/ODN.cmx
+lib/ocaml/site-lib/odn/ODN.ml
+${PLIST.ocaml-opt}lib/ocaml/site-lib/odn/odn.a
+lib/ocaml/site-lib/odn/odn.cma
+${PLIST.ocaml-opt}lib/ocaml/site-lib/odn/odn.cmxa
+${PLIST.ocaml-opt}lib/ocaml/site-lib/odn/odn.cmxs
+lib/ocaml/site-lib/odn/pa_noodn.cma
+lib/ocaml/site-lib/odn/pa_noodn.cmi
+lib/ocaml/site-lib/odn/pa_noodn.ml
+lib/ocaml/site-lib/odn/pa_odn.cma
+lib/ocaml/site-lib/odn/pa_odn.cmi
+lib/ocaml/site-lib/odn/pa_odn.ml
+@exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/odn
