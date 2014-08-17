@@ -1,0 +1,7 @@
+OASIS is a tool to integrate a configure, build and install system in your
+OCaml project. It helps to create standard entry points in your build system
+and allows external tools to analyse your project easily.
+
+Note that this package contains the development tools, i.e. what is needed
+to add OASIS support to a project. It is not usually needed to build or package
+projects that use OASIS.
