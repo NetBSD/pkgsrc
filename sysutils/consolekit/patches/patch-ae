@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.6 2014/05/05 21:19:40 ryoon Exp $
+$NetBSD: patch-ae,v 1.7 2014/08/17 15:59:07 wiz Exp $
+
+Fix UNIX backend for NetBSD, DragonFly, and OpenBSD.
 
 --- src/ck-sysdeps-unix.c.orig	2008-01-23 14:30:44.000000000 +0000
 +++ src/ck-sysdeps-unix.c
