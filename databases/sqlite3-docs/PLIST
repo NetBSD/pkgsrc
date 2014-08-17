@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2014/06/05 15:10:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2014/08/17 08:16:06 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -245,6 +245,7 @@ share/doc/sqlite3/images/apple-touch-icon.png
 share/doc/sqlite3/images/arch.gif
 share/doc/sqlite3/images/arch.png
 share/doc/sqlite3/images/arch2.gif
+share/doc/sqlite3/images/books/das.jpg
 share/doc/sqlite3/images/books/droessler.jpg
 share/doc/sqlite3/images/books/haldar.gif
 share/doc/sqlite3/images/books/kreibich.gif
@@ -620,8 +621,10 @@ share/doc/sqlite3/releaselog/3_8_4_1.html
 share/doc/sqlite3/releaselog/3_8_4_2.html
 share/doc/sqlite3/releaselog/3_8_4_3.html
 share/doc/sqlite3/releaselog/3_8_5.html
+share/doc/sqlite3/releaselog/3_8_6.html
 share/doc/sqlite3/releaselog/current.html
 share/doc/sqlite3/requirements.html
+share/doc/sqlite3/rescode.html
 share/doc/sqlite3/robots.txt
 share/doc/sqlite3/rtree.html
 share/doc/sqlite3/selfcontained.html
