@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3104 2014/08/17 15:17:53 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3105 2014/08/17 15:59:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4048,3 +4048,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/menhir to 20140422 [jaapb 2014-08-17]
 	Updated devel/menhir to 20140422nb1 [jaapb 2014-08-17]
 	Updated lang/go to 1.3.1 [wiz 2014-08-17]
+	Updated sysutils/consolekit to 0.4.5 [wiz 2014-08-17]
