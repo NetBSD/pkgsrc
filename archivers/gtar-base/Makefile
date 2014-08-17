@@ -1,24 +1,16 @@
-# $NetBSD: Makefile,v 1.84 2014/08/04 10:27:29 joerg Exp $
+# $NetBSD: Makefile,v 1.85 2014/08/17 16:28:18 wiz Exp $
 #
 # Please run 'make files/gtar.1' when updating version of this package
 # to regenerate the man page. converters/help2man is needed.
 
-DISTNAME=	tar-1.27.1
-PKGNAME=	${DISTNAME:S/tar/gtar-base/}
-PKGREVISION=	1
-SVR4_PKGNAME=	gtarb
-CATEGORIES=	archivers
-MASTER_SITES=	${MASTER_SITE_GNU:=tar/}
-EXTRACT_SUFX=	.tar.bz2
+.include "../../archivers/gtar/Makefile.common"
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/tar/tar.html
+PKGNAME=	${DISTNAME:S/tar/gtar-base/}
+SVR4_PKGNAME=	gtarb
 COMMENT=	The GNU tape archiver with remote magnetic tape support
 LICENSE=	gnu-gpl-v3
 
 CONFLICTS=	gcpio-[0-9]*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_FEATURES=		snprintf
 USE_PKGLOCALEDIR=	yes
@@ -70,24 +62,8 @@ SYMLINKS=		bin/gtar ${PKGGNUDIR}bin/tar \
 SYMLINKS+=		libexec/grmt ${PKGGNUDIR}libexec/rmt
 .endif
 
-.if ${OS_VARIANT} == "SCOOSR5"
-# SCO OpenServer 5.0.7/3.2 has strtoimax() declaration in inttypes.h,
-# but libc.so has no implementation. And gnulib in GNU tar 1.27 has broken
-# strtoimax() support. We have to use BSDL implementation instead.
-pre-configure:
-	cd ${WRKSRC} && ${CC} -c -o strtoimax.o strtoimax.c
-.endif
-
-files/gtar.1: build
-	${ECHO} .\\\" > ${FILESDIR}/gtar.1
-	${ECHO} .\\\" \$$""NetBSD\$$ >> ${FILESDIR}/gtar.1
-	help2man --name "The GNU version of the tar archiving utility" \
-		--info-page tar ${WRKSRC}/src/tar | \
-		${SED} '/help2man/d' >> ${FILESDIR}/gtar.1
-
 post-install:
-	${INSTALL_MAN} ${FILESDIR}/gtar.1 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/gtar.1
+	${INSTALL_DATA} ${WRKSRC}/doc/tar.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/gtar.1
 .for o n in ${SYMLINKS}
 	${LN} -sf ${PREFIX}/${o} ${DESTDIR}${PREFIX}/${n}
 .endfor

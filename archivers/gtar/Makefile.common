@@ -1,0 +1,18 @@
+# $NetBSD: Makefile.common,v 1.1 2014/08/17 16:28:18 wiz Exp $
+#
+# used by archivers/gtar-base/Makefile
+# used by archivers/gtar-info/Makefile
+# used by archivers/gtar/Makefile
+
+DISTNAME=	tar-1.28
+CATEGORIES=	archivers
+MASTER_SITES=	${MASTER_SITE_GNU:=tar/}
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.gnu.org/software/tar/tar.html
+COMMENT=	The GNU tape archiver with remote magnetic tape support
+LICENSE=	gnu-gpl-v3
+
+PATCHDIR=	${.CURDIR}/../../archivers/gtar-base/patches
+DISTINFO_FILE=	${.CURDIR}/../../archivers/gtar-base/distinfo
