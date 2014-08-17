@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1957 2014/08/17 13:34:34 jaapb Exp $
+# $NetBSD: Makefile,v 1.1958 2014/08/17 13:38:57 jaapb Exp $
 #
 
 COMMENT=	Development utilities
@@ -576,6 +576,7 @@ SUBDIR+=	nsis
 SUBDIR+=	nspr
 SUBDIR+=	nspr-reference
 SUBDIR+=	nss
+SUBDIR+=	ocamlify
 SUBDIR+=	ocaml-batteries
 SUBDIR+=	ocaml-deriving-ocsigen
 SUBDIR+=	ocaml-findlib
