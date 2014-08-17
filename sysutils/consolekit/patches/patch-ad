@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.1.1.1 2008/11/22 03:32:22 jmcneill Exp $
+$NetBSD: patch-ad,v 1.2 2014/08/17 15:59:07 wiz Exp $
+
+Install config files into pkgsrc example path.
 
 --- data/Makefile.am.orig	2008-02-29 15:23:02.000000000 -0500
 +++ data/Makefile.am

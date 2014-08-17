@@ -1,31 +1,10 @@
-$NetBSD: patch-aa,v 1.4 2014/05/05 21:19:40 ryoon Exp $
+$NetBSD: patch-aa,v 1.5 2014/08/17 15:59:07 wiz Exp $
 
---- configure.ac.orig	2008-07-31 00:35:53.000000000 +0000
+Add backends for NetBSD, Dragonfly, and OpenBSD.
+
+--- configure.ac.orig	2011-02-17 00:37:16.000000000 +0000
 +++ configure.ac
-@@ -68,10 +68,21 @@ AC_SUBST(HAVE_POLKIT)
- PKG_CHECK_MODULES(LIBDBUS,
-   dbus-1 >= $DBUS_REQUIRED_VERSION
- )
-+PKG_CHECK_MODULES(X11, x11 >= $X11_REQUIRED_VERSION, [HAVE_X11=yes], [HAVE_X11=no])
-+if test x$HAVE_X11 = xno; then
-+  AC_PATH_XTRA
-+  if test "x$no_x" = xyes; then
-+    AC_MSG_ERROR(X11 and Xrandr development libraries not found);
-+  else
-+    XLIB_LIBS="$X_PRE_LIBS $X_LIBS -lX11 $X_EXTRA_LIBS"
-+    XLIB_CFLAGS=$X_CFLAGS
-+  fi
-+fi
- PKG_CHECK_MODULES(TOOLS,
--  x11 >= $X11_REQUIRED_VERSION
-   glib-2.0 >= $GLIB_REQUIRED_VERSION
- )
-+TOOLS_CFLAGS="$TOOLS_CFLAGS $X11_CFLAGS $XLIB_CFLAGS"
-+TOOLS_LIBS="$TOOLS_LIBS $X11_LIBS $XLIB_LIBS"
- 
- PKG_CHECK_MODULES(HISTORY,
-   glib-2.0 >= $GLIB_REQUIRED_VERSION
-@@ -190,13 +201,30 @@ case "$host" in
+@@ -190,6 +201,21 @@ case "$host" in
          *-*-solaris*)
          CK_BACKEND="solaris"
          ;;
@@ -44,9 +23,10 @@ $NetBSD: patch-aa,v 1.4 2014/05/05 21:19:40 ryoon Exp $
 +		KVM_LIBS="-lkvm"
 +	fi
 +	;;
- esac
- 
- AC_SUBST(KVM_LIBS)
+ 	*)
+ 	AC_MSG_ERROR([No sysdeps back-end implemented for host $host])
+ 	;;
+@@ -199,7 +225,9 @@ AC_SUBST(KVM_LIBS)
  
  AM_CONDITIONAL(CK_COMPILE_LINUX, test x$CK_BACKEND = xlinux, [Compiling for Linux])
  AM_CONDITIONAL(CK_COMPILE_FREEBSD, test x$CK_BACKEND = xfreebsd, [Compiling for FreeBSD])
@@ -56,10 +36,3 @@ $NetBSD: patch-aa,v 1.4 2014/05/05 21:19:40 ryoon Exp $
  AC_SUBST(CK_BACKEND)
  
  dnl ---------------------------------------------------------------------------
-@@ -441,4 +469,4 @@ if test x${have_polkit} = xno -a x${msg_
-    echo "         a huge SECURITY HOLE. I repeat: YOU NEED TO EDIT THE FILE"
-    echo "         ConsoleKit.conf to match your distro/site to avoid NASTY SECURITY HOLES."
-    echo ""
--fi
-\ No newline at end of file
-+fi

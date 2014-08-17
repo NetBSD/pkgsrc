@@ -1,7 +1,9 @@
-$NetBSD: patch-af,v 1.2 2008/12/26 20:05:56 hasso Exp $
+$NetBSD: patch-af,v 1.3 2014/08/17 15:59:07 wiz Exp $
 
---- src/ck-sysdeps-freebsd.c.orig	2008-11-27 05:12:41 +0200
-+++ src/ck-sysdeps-freebsd.c	2008-11-27 05:08:28 +0200
+Adapt FreeBSD backend for DragonFly.
+
+--- src/ck-sysdeps-freebsd.c.orig	2010-09-03 13:54:31.000000000 +0000
++++ src/ck-sysdeps-freebsd.c
 @@ -27,6 +27,7 @@
  #include <unistd.h>
  #include <string.h>
@@ -169,8 +171,8 @@ $NetBSD: patch-af,v 1.2 2008/12/26 20:05:56 hasso Exp $
 +        return TRUE;
  }
  
- char *
-@@ -369,7 +412,12 @@ ck_get_console_device_for_num (guint num
+ gboolean
+@@ -375,7 +418,12 @@ ck_get_console_device_for_num (guint num
          /* The device number is always one less than the VT number. */
          num--;
  
@@ -184,7 +186,7 @@ $NetBSD: patch-af,v 1.2 2008/12/26 20:05:56 hasso Exp $
  
          return device;
  }
-@@ -379,6 +427,7 @@ ck_get_console_num_from_device (const ch
+@@ -385,6 +433,7 @@ ck_get_console_num_from_device (const ch
                                  guint      *num)
  {
          guint    n;
@@ -192,7 +194,7 @@ $NetBSD: patch-af,v 1.2 2008/12/26 20:05:56 hasso Exp $
          gboolean ret;
  
          n = 0;
-@@ -388,7 +437,11 @@ ck_get_console_num_from_device (const ch
+@@ -394,7 +443,11 @@ ck_get_console_num_from_device (const ch
                  return FALSE;
          }
  
@@ -205,7 +207,7 @@ $NetBSD: patch-af,v 1.2 2008/12/26 20:05:56 hasso Exp $
                  /* The VT number is always one more than the device number. */
                  n++;
                  ret = TRUE;
-@@ -408,6 +461,7 @@ ck_get_active_console_num (int    consol
+@@ -414,6 +467,7 @@ ck_get_active_console_num (int    consol
          gboolean ret;
          int      res;
          int      active;
@@ -213,7 +215,7 @@ $NetBSD: patch-af,v 1.2 2008/12/26 20:05:56 hasso Exp $
  
          g_assert (console_fd != -1);
  
-@@ -420,7 +474,12 @@ ck_get_active_console_num (int    consol
+@@ -426,7 +480,12 @@ ck_get_active_console_num (int    consol
                  goto out;
          }
  
