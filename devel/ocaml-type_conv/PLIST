@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2014/08/17 13:22:17 jaapb Exp $
+@unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/type_conv
+lib/ocaml/site-lib/type_conv/META
+${PLIST.ocaml-opt}lib/ocaml/site-lib/type_conv/pa_type_conv.a
+lib/ocaml/site-lib/type_conv/pa_type_conv.cma
+lib/ocaml/site-lib/type_conv/pa_type_conv.cmi
+${PLIST.ocaml-opt}lib/ocaml/site-lib/type_conv/pa_type_conv.cmx
+${PLIST.ocaml-opt}lib/ocaml/site-lib/type_conv/pa_type_conv.cmxa
+${PLIST.ocaml-opt}lib/ocaml/site-lib/type_conv/pa_type_conv.cmxs
+lib/ocaml/site-lib/type_conv/pa_type_conv.mli
+@exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/type_conv
