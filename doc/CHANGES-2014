@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3095 2014/08/17 10:45:16 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3096 2014/08/17 13:22:54 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4038,3 +4038,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/tuxpaint to 0.9.21 [wiz 2014-08-17]
 	Added devel/p5-Moos version 0.29 [wen 2014-08-17]
 	Updated mail/notmuch to 0.18.1nb1 [wiz 2014-08-17]
+	Updated devel/ocaml-optcomp to 1.4 [jaapb 2014-08-17]
+	Added devel/ocaml-type_conv version 111.13.00 [jaapb 2014-08-17]
