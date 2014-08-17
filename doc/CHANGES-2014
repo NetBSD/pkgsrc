@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3096 2014/08/17 13:22:54 jaapb Exp $
+$NetBSD: CHANGES-2014,v 1.3097 2014/08/17 13:35:02 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4040,3 +4040,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/notmuch to 0.18.1nb1 [wiz 2014-08-17]
 	Updated devel/ocaml-optcomp to 1.4 [jaapb 2014-08-17]
 	Added devel/ocaml-type_conv version 111.13.00 [jaapb 2014-08-17]
+	Added devel/ocaml-odn version 0.0.11 [jaapb 2014-08-17]
