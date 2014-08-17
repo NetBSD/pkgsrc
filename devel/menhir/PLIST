@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2012/10/08 15:18:21 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/08/17 14:37:23 jaapb Exp $
 bin/menhir
 lib/ocaml/site-lib/menhirLib/META
 lib/ocaml/site-lib/menhirLib/menhirLib.cmi
 lib/ocaml/site-lib/menhirLib/menhirLib.cmo
-${PLIST.opt}lib/ocaml/site-lib/menhirLib/menhirLib.cmx
+${PLIST.ocaml-opt}lib/ocaml/site-lib/menhirLib/menhirLib.cmx
 lib/ocaml/site-lib/menhirLib/menhirLib.o
 share/doc/menhir/demos/Makefile
 share/doc/menhir/demos/Makefile.auto
@@ -29,9 +29,7 @@ share/doc/menhir/demos/calc-two/reverse.mly
 share/doc/menhir/demos/calc-two/tokens.mly
 share/doc/menhir/demos/calc/Makefile
 share/doc/menhir/demos/calc/OMakefile
-share/doc/menhir/demos/calc/OMakefile.omc
 share/doc/menhir/demos/calc/OMakeroot
-share/doc/menhir/demos/calc/OMakeroot.omc
 share/doc/menhir/demos/calc/README
 share/doc/menhir/demos/calc/calc.ml
 share/doc/menhir/demos/calc/lexer.mll
