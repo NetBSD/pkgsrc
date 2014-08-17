@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/08/17 13:38:10 jaapb Exp $
+
+SHA1 (ocamlify-0.0.2.tar.gz) = 9c52cd2ce6ee9a48b5f0e5ee8cc8576b733f7e46
+RMD160 (ocamlify-0.0.2.tar.gz) = 3462a5682975198096ca1f2b2ca88671db0172d0
+Size (ocamlify-0.0.2.tar.gz) = 53184 bytes
