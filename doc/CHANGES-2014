@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3089 2014/08/17 08:49:18 morr Exp $
+$NetBSD: CHANGES-2014,v 1.3090 2014/08/17 08:59:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4027,3 +4027,9 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Moose to 2.1211 [wen 2014-08-17]
 	Updated devel/p5-Inline to 0.74 [wen 2014-08-17]
 	Updated www/wordpress to 3.9.2 [morr 2014-08-17]
+	Updated databases/sqlite3 to 3.8.6 [adam 2014-08-17]
+	Updated databases/sqlite3-docs to 3.8.6 [adam 2014-08-17]
+	Updated databases/sqlite3-tcl to 3.8.6 [adam 2014-08-17]
+	Updated mail/exim to 4.84 [adam 2014-08-17]
+	Updated mail/exim-html to 4.84 [adam 2014-08-17]
+	Updated emulators/qemu to 2.1.0 [adam 2014-08-17]
