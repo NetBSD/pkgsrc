@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/02/01 02:20:45 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/08/17 07:46:01 markd Exp $
 bin/kate
 bin/kwrite
 include/kate/application.h
@@ -104,6 +104,19 @@ share/kde/apps/kate/icons/hicolor/16x16/actions/sql-table.png
 share/kde/apps/kate/icons/hicolor/16x16/actions/sql-view.png
 share/kde/apps/kate/kateui.rc
 share/kde/apps/kate/pate/block.py
+${PLIST.py3x}share/kde/apps/kate/pate/cmake_utils/__init__.py
+${PLIST.py3x}share/kde/apps/kate/pate/cmake_utils/cmake_help_parser.py
+${PLIST.py3x}share/kde/apps/kate/pate/cmake_utils/cmake_utils.py
+${PLIST.py3x}share/kde/apps/kate/pate/cmake_utils/cmake_utils_settings.py
+${PLIST.py3x}share/kde/apps/kate/pate/cmake_utils/cmake_utils_settings.ui
+${PLIST.py3x}share/kde/apps/kate/pate/cmake_utils/cmake_utils_toolview_cacheview_page.ui
+${PLIST.py3x}share/kde/apps/kate/pate/cmake_utils/cmake_utils_toolview_help_page.ui
+${PLIST.py3x}share/kde/apps/kate/pate/cmake_utils/cmake_utils_toolview_settings_page.ui
+${PLIST.py3x}share/kde/apps/kate/pate/cmake_utils/command_completers/__init__.py
+${PLIST.py3x}share/kde/apps/kate/pate/cmake_utils/command_completers/cmake_policy_cc.py
+${PLIST.py3x}share/kde/apps/kate/pate/cmake_utils/command_completers/cond_cc.py
+${PLIST.py3x}share/kde/apps/kate/pate/cmake_utils/command_completers/param_types.py
+${PLIST.py3x}share/kde/apps/kate/pate/cmake_utils/command_completers/syntax_cc.py
 share/kde/apps/kate/pate/color_tools.py
 share/kde/apps/kate/pate/color_tools_toolview.ui
 share/kde/apps/kate/pate/commentar.py
@@ -113,11 +126,28 @@ share/kde/apps/kate/pate/django_utils/django_snippets.py
 share/kde/apps/kate/pate/django_utils/django_template.py
 share/kde/apps/kate/pate/django_utils/django_utils.py
 share/kde/apps/kate/pate/django_utils/django_utils.ui
+${PLIST.py3x}share/kde/apps/kate/pate/expand.py
+${PLIST.py3x}share/kde/apps/kate/pate/expand/all.expand
+${PLIST.py3x}share/kde/apps/kate/pate/expand/text_css.expand
+${PLIST.py3x}share/kde/apps/kate/pate/expand/text_html.expand
+${PLIST.py3x}share/kde/apps/kate/pate/expand/text_x-c++hdr.expand
+${PLIST.py3x}share/kde/apps/kate/pate/expand/text_x-c++src.expand
+${PLIST.py3x}share/kde/apps/kate/pate/expand/text_x-chdr.expand
+${PLIST.py3x}share/kde/apps/kate/pate/expand/text_x-python.expand
 share/kde/apps/kate/pate/format.py
 share/kde/apps/kate/pate/gid/config.ui
 share/kde/apps/kate/pate/gid/gid.py
 share/kde/apps/kate/pate/gid/idutils.py
 share/kde/apps/kate/pate/gid/tool.ui
+${PLIST.py3x}share/kde/apps/kate/pate/js_utils/jquery_autocomplete.json
+${PLIST.py3x}share/kde/apps/kate/pate/js_utils/js_autocomplete.json
+${PLIST.py3x}share/kde/apps/kate/pate/js_utils/js_autocomplete.py
+${PLIST.py3x}share/kde/apps/kate/pate/js_utils/js_settings.py
+${PLIST.py3x}share/kde/apps/kate/pate/js_utils/js_snippets.py
+${PLIST.py3x}share/kde/apps/kate/pate/js_utils/js_utils.py
+${PLIST.py3x}share/kde/apps/kate/pate/js_utils/js_utils.ui
+${PLIST.py3x}share/kde/apps/kate/pate/js_utils/jslint.py
+${PLIST.py3x}share/kde/apps/kate/pate/js_utils/json_pretty.py
 share/kde/apps/kate/pate/libkatepate/__init__.py
 share/kde/apps/kate/pate/libkatepate/autocomplete.py
 share/kde/apps/kate/pate/libkatepate/common.py
@@ -131,8 +161,8 @@ share/kde/apps/kate/pate/libkatepate/project_utils.py
 share/kde/apps/kate/pate/libkatepate/selection.py
 share/kde/apps/kate/pate/libkatepate/text.py
 share/kde/apps/kate/pate/libkatepate/ui.py
-share/kde/apps/kate/pate/python_autocomplete/python_autocomplete.py
-share/kde/apps/kate/pate/python_autocomplete/python_autocomplete_parse.py
+${PLIST.py2x}share/kde/apps/kate/pate/python_autocomplete/python_autocomplete.py
+${PLIST.py2x}share/kde/apps/kate/pate/python_autocomplete/python_autocomplete_parse.py
 share/kde/apps/kate/pate/python_console_classic/config.ui
 share/kde/apps/kate/pate/python_console_classic/python_console_classic.py
 share/kde/apps/kate/pate/python_console_ipython/python_console_ipython.css
