@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2014/08/17 14:37:23 jaapb Exp $
+# $NetBSD: Makefile,v 1.11 2014/08/17 14:42:41 jaapb Exp $
 #
 
+PKGNAME=	${DISTNAME} # defined to avoid prefixing with ocaml-
 DISTNAME=	menhir-20140422
+PKGREVISION= 1
 CATEGORIES=	devel
 MASTER_SITES=	http://cristal.inria.fr/~fpottier/menhir/
 
@@ -12,6 +14,8 @@ LICENSE=	qpl-v1.0
 
 USE_TOOLS+=		gmake
 MAKE_JOBS_SAFE=	no
+
+SUPERSEDES=	ocaml-${PKGNAME}
 
 .include "../../mk/ocaml.mk"
 
