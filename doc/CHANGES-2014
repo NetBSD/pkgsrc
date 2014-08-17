@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3086 2014/08/17 07:19:03 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3087 2014/08/17 07:28:59 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4024,3 +4024,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/hs-deepseq-generics version 0.1.1.1 [szptvlfn 2014-08-16]
 	Added devel/hs-vector-algorithms version 0.6.0.3 [szptvlfn 2014-08-16]
 	Added devel/p5-Test-CleanNamespaces version 0.15 [wen 2014-08-17]
+	Updated devel/p5-Moose to 2.1211 [wen 2014-08-17]
