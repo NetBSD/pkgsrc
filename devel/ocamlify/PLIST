@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2014/08/17 13:38:10 jaapb Exp $
+bin/ocamlify
