@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2014/05/16 19:55:07 morr Exp $
+@comment $NetBSD: PLIST,v 1.21 2014/08/17 08:48:33 morr Exp $
 share/doc/wordpress/license.txt
 share/doc/wordpress/readme.html
 share/examples/wordpress/wordpress.conf
@@ -423,6 +423,7 @@ share/wordpress/wp-admin/widgets.php
 share/wordpress/wp-blog-header.php
 share/wordpress/wp-comments-post.php
 share/wordpress/wp-content/index.php
+share/wordpress/wp-content/plugins/akismet/.htaccess
 share/wordpress/wp-content/plugins/akismet/_inc/akismet.css
 share/wordpress/wp-content/plugins/akismet/_inc/akismet.js
 share/wordpress/wp-content/plugins/akismet/_inc/form.js
