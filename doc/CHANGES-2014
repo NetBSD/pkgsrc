@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3108 2014/08/17 16:31:46 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3109 2014/08/17 16:32:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4053,3 +4053,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated archivers/gtar-base to 1.28 [wiz 2014-08-17]
 	Updated archivers/gtar-info to 1.28 [wiz 2014-08-17]
 	Updated devel/global to 6.3.1 [wiz 2014-08-17]
+	Updated devel/py-setuptools to 5.7 [wiz 2014-08-17]
