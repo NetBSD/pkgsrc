@@ -1,15 +1,11 @@
-$NetBSD: distinfo,v 1.9 2014/05/05 21:19:40 ryoon Exp $
+$NetBSD: distinfo,v 1.10 2014/08/17 15:59:07 wiz Exp $
 
-SHA1 (ConsoleKit-0.3.0.tar.bz2) = e3b6156622cc14ebca7382a55b8ed15f2f2bad98
-RMD160 (ConsoleKit-0.3.0.tar.bz2) = 7a1ebd2f4bfb65690e70138c9923c3fd2fcaf671
-Size (ConsoleKit-0.3.0.tar.bz2) = 393694 bytes
-SHA1 (patch-aa) = f6b56bcb12d89ad794feaf345bef04e8a2edbfb0
-SHA1 (patch-ab) = 9ba984009ee9424b35fcb2c3454df4063dbbd953
-SHA1 (patch-ac) = 42a098a1210ad17f992713b03b834ea355c9b06d
-SHA1 (patch-ad) = a1c1a1d0452945550065da3eac2390318c1eb7be
-SHA1 (patch-ae) = 775a3b460db0f2cd305882fcb782d666b8670d8a
-SHA1 (patch-af) = e86c63147798d61f7560cfe7547b0d06d18d5583
-SHA1 (patch-ag) = 724e2eb95f7ca78c5659fde1eec2f2c5c6bc5002
-SHA1 (patch-ah) = f62d8c661732a4ea47e29b99f883b539fb5c7468
-SHA1 (patch-ai) = 1cdec78f885adc26ab21deff165ffdf366eaf883
-SHA1 (patch-aj) = 61538936f3c31f24d8169f4f55d0822d99ed2fbd
+SHA1 (ConsoleKit-0.4.5.tar.bz2) = 6f090c1ce0d459dd6904854532554323755bdeca
+RMD160 (ConsoleKit-0.4.5.tar.bz2) = 2eba158e321778a4c17bf765d0106d214b93fe53
+Size (ConsoleKit-0.4.5.tar.bz2) = 425423 bytes
+SHA1 (patch-aa) = baafe5aa4c99279d85edb0e4bc76491e80314950
+SHA1 (patch-ab) = 24036207cc59ccd97f8ed9a53cc588ff94b8c2fe
+SHA1 (patch-ac) = 3ef09f16ee039da7cea0c020c2aeccfe5d88c57c
+SHA1 (patch-ad) = c0cf170a85e04e2dadfd490f303a40e8d62cc626
+SHA1 (patch-ae) = dcb689861f8ee425b94a8acf1cb344a782b4328b
+SHA1 (patch-af) = 9c7febd3a1e995060e5755b205c5d4a7217bc1b8
