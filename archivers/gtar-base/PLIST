@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2014/02/24 08:16:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2014/08/17 16:28:18 wiz Exp $
 bin/gtar
 gnu/bin/tar
 gnu/man/man1/tar.1
@@ -36,6 +36,7 @@ share/locale/ro/LC_MESSAGES/tar.mo
 share/locale/ru/LC_MESSAGES/tar.mo
 share/locale/sk/LC_MESSAGES/tar.mo
 share/locale/sl/LC_MESSAGES/tar.mo
+share/locale/sr/LC_MESSAGES/tar.mo
 share/locale/sv/LC_MESSAGES/tar.mo
 share/locale/tr/LC_MESSAGES/tar.mo
 share/locale/uk/LC_MESSAGES/tar.mo
