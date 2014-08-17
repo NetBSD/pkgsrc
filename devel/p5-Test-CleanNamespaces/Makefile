@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/08/17 07:14:41 wen Exp $
+# $NetBSD: Makefile,v 1.2 2014/08/17 07:47:49 wen Exp $
 
 DISTNAME=		Test-CleanNamespaces-0.15
 PKGNAME=		p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Test/}
 
 MAINTAINER=		wen@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/Test-Roo/
+HOMEPAGE=		http://search.cpan.org/dist/Test-CleanNamespaces/
 COMMENT=		Check for uncleaned imports
 LICENSE=		${PERL5_LICENSE}
 
