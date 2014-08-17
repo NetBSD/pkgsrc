@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2014/08/10 14:52:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/08/17 17:38:54 wiz Exp $
 bin/do_train
 bin/rftg
 libexec/rftg
 share/doc/rftg/README
+share/rftg/campaign.txt
 share/rftg/cards.txt
 share/rftg/images.data
 share/rftg/network/rftg.eval.0.2.net
