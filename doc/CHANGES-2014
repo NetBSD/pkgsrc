@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3100 2014/08/17 13:52:21 jaapb Exp $
+$NetBSD: CHANGES-2014,v 1.3101 2014/08/17 13:55:20 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4044,3 +4044,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/ocamlify version 0.0.2 [jaapb 2014-08-17]
 	Added devel/ocamlmod version 0.0.7 [jaapb 2014-08-17]
 	Added devel/ocaml-oasis version 0.4.4 [jaapb 2014-08-17]
+	Updated devel/ocaml-deriving-ocsigen to 0.6.2 [jaapb 2014-08-17]
