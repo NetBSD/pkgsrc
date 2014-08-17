@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/11/01 11:42:40 jaapb Exp $
+$NetBSD: distinfo,v 1.3 2014/08/17 13:54:54 jaapb Exp $
 
-SHA1 (deriving-ocsigen-0.5.tar.gz) = 6173a1720a46ab4e68a1659aab8a1077de0e40bb
-RMD160 (deriving-ocsigen-0.5.tar.gz) = 039ab9296398ae44c026ca16a45fe1907c8871fd
-Size (deriving-ocsigen-0.5.tar.gz) = 63391 bytes
-SHA1 (patch-Makefile) = 61a018226dce4a898c8ffc6600ae0fc2a887c941
+SHA1 (ocaml-deriving-ocsigen/0.6.2.tar.gz) = fb121f0eb34854243acb001759849bd368849dd4
+RMD160 (ocaml-deriving-ocsigen/0.6.2.tar.gz) = ac5a135739091e1eca41f4699b8b2bf227c93aee
+Size (ocaml-deriving-ocsigen/0.6.2.tar.gz) = 62722 bytes
