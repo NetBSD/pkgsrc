@@ -1,31 +1,10 @@
-$NetBSD: patch-ab,v 1.6 2011/08/05 00:34:41 wiz Exp $
+$NetBSD: patch-ab,v 1.7 2014/08/17 09:42:27 wiz Exp $
 
-Third chunk: fix build with png-1.5.
-https://sourceforge.net/tracker/?func=detail&aid=3386433&group_id=66938&atid=516295
+Fix build with png-1.5.
 
---- src/tuxpaint.c.orig	2007-07-01 01:38:03.000000000 +0000
+--- src/tuxpaint.c.orig	2009-06-18 20:51:58.000000000 +0000
 +++ src/tuxpaint.c
-@@ -170,7 +170,7 @@ static scaleparams scaletable[] = {
-    likely available; if not using GNU, you can set HAVE_STRCASESTR to
-    avoid trying to redefine it -bjk 2006.06.02 */
- 
--#if !defined(__USE_GNU) && !defined(HAVE_STRCASESTR)
-+#if !defined(__USE_GNU) && !defined(HAVE_STRCASESTR) && !defined(__NetBSD__)
- #warning "Attempting to define strcasestr(); if errors, build with -DHAVE_STRCASESTR"
- 
- char *strcasestr(const char *haystack, const char *needle)
-@@ -363,8 +363,8 @@ extern WrapperData macosx;
- 
- #else
- 
--#include "rsvg.h"
--#include "rsvg-cairo.h"
-+#include <librsvg/rsvg.h>
-+#include <librsvg/rsvg-cairo.h>
- #if !defined(RSVG_H) || !defined(RSVG_CAIRO_H)
- #error "---------------------------------------------------"
- #error "If you installed libRSVG from packages, be sure"
-@@ -12528,12 +12528,7 @@ static int do_png_save(FILE * fi, const 
+@@ -12898,12 +12898,7 @@ static int do_png_save(FILE * fi, const 
        {
  	png_init_io(png_ptr, fi);
  
@@ -34,7 +13,7 @@ https://sourceforge.net/tracker/?func=detail&aid=3386433&group_id=66938&atid=516
 -	info_ptr->bit_depth = 8;
 -	info_ptr->color_type = PNG_COLOR_TYPE_RGB;
 -	info_ptr->interlace_type = 1;
--	info_ptr->valid = 0;	// will be updated by various png_set_FOO() functions
+-	info_ptr->valid = 0;	/* will be updated by various png_set_FOO() functions */
 +	png_set_IHDR(png_ptr, info_ptr, surf->w, surf->h, 8, PNG_COLOR_TYPE_RGB, 1, PNG_COMPRESSION_TYPE_BASE, PNG_FILTER_TYPE_BASE);
  
  	png_set_sRGB_gAMA_and_cHRM(png_ptr, info_ptr,
