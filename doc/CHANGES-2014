@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3088 2014/08/17 07:35:55 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3089 2014/08/17 08:49:18 morr Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4026,3 +4026,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/p5-Test-CleanNamespaces version 0.15 [wen 2014-08-17]
 	Updated devel/p5-Moose to 2.1211 [wen 2014-08-17]
 	Updated devel/p5-Inline to 0.74 [wen 2014-08-17]
+	Updated www/wordpress to 3.9.2 [morr 2014-08-17]
