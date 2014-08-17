@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3093 2014/08/17 09:42:37 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3094 2014/08/17 10:07:13 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4036,3 +4036,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/pngcrush to 1.7.76 [adam 2014-08-17]
 	Updated devel/SDL to 1.2.15nb12 [wiz 2014-08-17]
 	Updated graphics/tuxpaint to 0.9.21 [wiz 2014-08-17]
+	Added devel/p5-Moos version 0.29 [wen 2014-08-17]
