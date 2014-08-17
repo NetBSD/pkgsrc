@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2014/06/12 09:06:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2014/08/17 16:31:32 wiz Exp $
 bin/global
 bin/globash
 bin/gozilla
@@ -37,6 +37,7 @@ share/gtags/completion.cgi.tmpl
 share/gtags/ctags-5.8.patch
 share/gtags/elvis-2.2_0.patch
 share/gtags/elvis.rc
+share/gtags/geco.rc
 share/gtags/ghtml.cgi.tmpl
 share/gtags/global.cgi.tmpl
 share/gtags/globash.rc
