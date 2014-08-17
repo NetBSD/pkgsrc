@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/08/17 19:03:32 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2014/08/17 19:05:50 joerg Exp $
 
 VERSION=	5.3.3p1
 DISTNAME=	opensmtpd-${VERSION}
@@ -18,7 +18,7 @@ BUILD_DEFS+=	VARBASE
 
 USE_LANGUAGES=	c
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config yacc
 USE_TOOLS+=	automake aclocal autoheader autoconf
 
 SMTPD_HOME=	${VARBASE}/chroot/smtpd
@@ -62,4 +62,5 @@ post-install:
 		${DESTDIR}${EXAMPLEDIR}/mailer.conf
 
 .include "../../devel/libevent/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
