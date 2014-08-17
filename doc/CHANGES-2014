@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3102 2014/08/17 14:37:39 jaapb Exp $
+$NetBSD: CHANGES-2014,v 1.3103 2014/08/17 14:42:56 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4046,3 +4046,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/ocaml-oasis version 0.4.4 [jaapb 2014-08-17]
 	Updated devel/ocaml-deriving-ocsigen to 0.6.2 [jaapb 2014-08-17]
 	Updated devel/menhir to 20140422 [jaapb 2014-08-17]
+	Updated devel/menhir to 20140422nb1 [jaapb 2014-08-17]
