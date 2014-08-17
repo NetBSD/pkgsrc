@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/08/17 13:41:42 jaapb Exp $
+
+SHA1 (ocamlmod-0.0.7.tar.gz) = a5e98c55b2e49fa275703a225a661c1fd933904b
+RMD160 (ocamlmod-0.0.7.tar.gz) = e90ad510bede108dced576ef4ffaf9eed49f5d58
+Size (ocamlmod-0.0.7.tar.gz) = 46221 bytes
