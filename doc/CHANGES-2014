@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3090 2014/08/17 08:59:35 adam Exp $
+$NetBSD: CHANGES-2014,v 1.3091 2014/08/17 09:15:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4033,3 +4033,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/exim to 4.84 [adam 2014-08-17]
 	Updated mail/exim-html to 4.84 [adam 2014-08-17]
 	Updated emulators/qemu to 2.1.0 [adam 2014-08-17]
+	Updated graphics/pngcrush to 1.7.76 [adam 2014-08-17]
