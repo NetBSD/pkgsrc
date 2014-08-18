@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.14 2013/05/10 20:07:34 riastradh Exp $
+# $NetBSD: options.mk,v 1.15 2014/08/18 01:37:35 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ikiwiki
-PKG_SUPPORTED_OPTIONS=		cvs ikiwiki-amazon-s3 ikiwiki-search
+PKG_SUPPORTED_OPTIONS=		cvs ikiwiki-amazon-s3
+PKG_SUPPORTED_OPTIONS+=		ikiwiki-highlight ikiwiki-search
 PKG_SUPPORTED_OPTIONS+=		imagemagick python svn w3m
 
 .include "../../mk/bsd.options.mk"
@@ -16,14 +17,18 @@ DEPENDS+=	p5-File-chdir-[0-9]*:../../devel/p5-File-chdir
 DEPENDS+=	p5-File-ReadBackwards-[0-9]*:../../textproc/p5-File-ReadBackwards
 .endif
 
-.if !empty(PKG_OPTIONS:Mikiwiki-search)
-DEPENDS+=	p5-Search-Xapian-[0-9]*:../../textproc/p5-Search-Xapian
-DEPENDS+=	xapian-omega-[0-9]*:../../textproc/xapian-omega
-.endif
-
 .if !empty(PKG_OPTIONS:Mikiwiki-amazon-s3)
 DEPENDS+=	p5-Net-Amazon-S3-[0-9]*:../../net/p5-Net-Amazon-S3
 DEPENDS+=	p5-File-MimeInfo-[0-9]*:../../devel/p5-File-MimeInfo
+.endif
+
+.if !empty(PKG_OPTIONS:Mikiwiki-highlight)
+DEPENDS+=	p5-highlight-[0-9]*:../../textproc/p5-highlight
+.endif
+
+.if !empty(PKG_OPTIONS:Mikiwiki-search)
+DEPENDS+=	p5-Search-Xapian-[0-9]*:../../textproc/p5-Search-Xapian
+DEPENDS+=	xapian-omega-[0-9]*:../../textproc/xapian-omega
 .endif
 
 .if !empty(PKG_OPTIONS:Mimagemagick)
