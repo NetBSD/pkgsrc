@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2013/03/11 17:45:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2014/08/18 11:13:45 adam Exp $
 bin/GraphicsMagick++-config
 bin/GraphicsMagick-config
 bin/GraphicsMagickWand-config
@@ -215,6 +215,7 @@ share/doc/GraphicsMagick/ChangeLog.2009
 share/doc/GraphicsMagick/ChangeLog.2010
 share/doc/GraphicsMagick/ChangeLog.2011
 share/doc/GraphicsMagick/ChangeLog.2012
+share/doc/GraphicsMagick/ChangeLog.2013
 share/doc/GraphicsMagick/Copyright.txt
 share/doc/GraphicsMagick/NEWS.txt
 share/doc/GraphicsMagick/www/ChangeLog-2001.html
@@ -229,6 +230,7 @@ share/doc/GraphicsMagick/www/ChangeLog-2009.html
 share/doc/GraphicsMagick/www/ChangeLog-2010.html
 share/doc/GraphicsMagick/www/ChangeLog-2011.html
 share/doc/GraphicsMagick/www/ChangeLog-2012.html
+share/doc/GraphicsMagick/www/ChangeLog-2013.html
 share/doc/GraphicsMagick/www/Changelog.html
 share/doc/GraphicsMagick/www/Changes.html
 share/doc/GraphicsMagick/www/Copyright.html
@@ -328,6 +330,7 @@ share/doc/GraphicsMagick/www/bugs.html
 share/doc/GraphicsMagick/www/color.html
 share/doc/GraphicsMagick/www/compare.html
 share/doc/GraphicsMagick/www/composite.html
+share/doc/GraphicsMagick/www/configure-target-setup.png
 share/doc/GraphicsMagick/www/conjure.html
 share/doc/GraphicsMagick/www/contribute.html
 share/doc/GraphicsMagick/www/convert.html
