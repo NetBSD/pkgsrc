@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2014/08/18 21:18:48 szptvlfn Exp $
+lib/digest-${PKGVERSION}/${HASKELL_VERSION}/Data/Digest/Adler32.hi
+lib/digest-${PKGVERSION}/${HASKELL_VERSION}/Data/Digest/CRC32.hi
+lib/digest-${PKGVERSION}/${HASKELL_VERSION}/HSdigest-${PKGVERSION}.o
+lib/digest-${PKGVERSION}/${HASKELL_VERSION}/libHSdigest-${PKGVERSION}.a
+lib/digest-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/digest-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/digest-${PKGVERSION}/html/Data-Digest-Adler32.html
+${PLIST.doc}share/doc/digest-${PKGVERSION}/html/Data-Digest-CRC32.html
+${PLIST.doc}share/doc/digest-${PKGVERSION}/html/digest.haddock
+${PLIST.doc}share/doc/digest-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/digest-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/digest-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/digest-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/digest-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/digest-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/digest-${PKGVERSION}/html/mini_Data-Digest-Adler32.html
+${PLIST.doc}share/doc/digest-${PKGVERSION}/html/mini_Data-Digest-CRC32.html
+${PLIST.doc}share/doc/digest-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/digest-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/digest-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/digest-${PKGVERSION}/html/synopsis.png
