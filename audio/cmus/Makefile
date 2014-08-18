@@ -1,17 +1,14 @@
-# $NetBSD: Makefile,v 1.52 2014/08/18 09:34:49 gls Exp $
+# $NetBSD: Makefile,v 1.53 2014/08/18 10:34:18 gls Exp $
 
-DISTNAME=		v2.6.0
-PKGNAME=		${DISTNAME:S/v/cmus-/}
+DISTNAME=		cmus-2.6.0
 CATEGORIES=		audio
-MASTER_SITES=		https://github.com/cmus/cmus/archive/
-#EXTRACT_SUFX=		.tar.bz2
+MASTER_SITES=		-https://github.com/cmus/cmus/archive/v${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
 MAINTAINER=		ahoka@NetBSD.org
 HOMEPAGE=		http://cmus.github.io/
 COMMENT=		Cmus is a small, fast and powerful text mode music player
 LICENSE=		gnu-gpl-v2
 
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config
 
