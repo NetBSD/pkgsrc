@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3118 2014/08/18 03:42:02 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.3119 2014/08/18 09:35:03 gls Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4063,3 +4063,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added textproc/p5-highlight version 3.18 [schmonz 2014-08-18]
 	Updated www/ikiwiki to 3.20140815 [schmonz 2014-08-18]
 	Added www/ruby-selenium-webdriver version 2.42.0 [rodent 2014-08-18]
+	Updated audio/cmus to 2.6.0 [gls 2014-08-18]
