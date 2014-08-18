@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.793 2014/08/10 12:21:36 wiz Exp $
+# $NetBSD: Makefile,v 1.794 2014/08/18 01:27:41 schmonz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -584,6 +584,7 @@ SUBDIR+=	p5-YAML-Syck
 SUBDIR+=	p5-YAML-Tiny
 SUBDIR+=	p5-ack
 SUBDIR+=	p5-cabocha
+SUBDIR+=	p5-highlight
 SUBDIR+=	p5-iCal-Parser
 SUBDIR+=	p5-libxml
 SUBDIR+=	p5-marisa
