@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/08/18 01:26:58 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2014/08/18 02:16:13 schmonz Exp $
 
 .include "../../textproc/highlight/Makefile.common"
 
@@ -6,6 +6,7 @@ PKGNAME=		p5-highlight-${VERSION}
 COMMENT+=		 (Perl bindings)
 
 BUILD_DEPENDS+=		swig-[0-9]*:../../devel/swig
+DEPENDS+=		highlight-[0-9]*:../../textproc/highlight
 
 BUILD_DIRS=		examples/swig
 BUILD_TARGET=		perl
