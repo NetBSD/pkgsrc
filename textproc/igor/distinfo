@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.1 2014/08/10 12:21:22 wiz Exp $
+$NetBSD: distinfo,v 1.2 2014/08/18 08:31:58 wiz Exp $
 
-SHA1 (igor-20140517/igor) = a4aacf6446c1442680e7a41c703f98099b757237
-RMD160 (igor-20140517/igor) = 863486a9d198c83f1d68c3e1a85ff22b02e44c1d
-Size (igor-20140517/igor) = 59454 bytes
-SHA1 (igor-20140517/igor.pdf) = 60f4cf911351f89bcc93af72c1943cf913e68eb2
-RMD160 (igor-20140517/igor.pdf) = 97bfbc41570ce7513ef6e63e6a633fce7b4ec09a
-Size (igor-20140517/igor.pdf) = 319381 bytes
-SHA1 (igor-20140517/readme.txt) = 04dfc4fca773bb0d700de04c8ab8009104dbacf8
-RMD160 (igor-20140517/readme.txt) = dda23e5bf173d7406456d973ea43c191f99d3c84
-Size (igor-20140517/readme.txt) = 3691 bytes
+SHA1 (igor-0.0.20140517/igor) = a4aacf6446c1442680e7a41c703f98099b757237
+RMD160 (igor-0.0.20140517/igor) = 863486a9d198c83f1d68c3e1a85ff22b02e44c1d
+Size (igor-0.0.20140517/igor) = 59454 bytes
+SHA1 (igor-0.0.20140517/igor.pdf) = 60f4cf911351f89bcc93af72c1943cf913e68eb2
+RMD160 (igor-0.0.20140517/igor.pdf) = 97bfbc41570ce7513ef6e63e6a633fce7b4ec09a
+Size (igor-0.0.20140517/igor.pdf) = 319381 bytes
+SHA1 (igor-0.0.20140517/readme.txt) = 04dfc4fca773bb0d700de04c8ab8009104dbacf8
+RMD160 (igor-0.0.20140517/readme.txt) = dda23e5bf173d7406456d973ea43c191f99d3c84
+Size (igor-0.0.20140517/readme.txt) = 3691 bytes
