@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2014/07/24 21:21:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2014/08/18 22:19:15 wiedi Exp $
 
 DISTNAME=	spiped-1.3.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net security
 MASTER_SITES=	http://www.tarsnap.com/spiped/
 EXTRACT_SUFX=	.tgz
@@ -18,6 +18,8 @@ LDADD_EXTRA=	${COMPILER_RPATH_FLAG:Q}${BUILDLINK_PREFIX.openssl}/lib
 
 CFLAGS.SunOS+=	-D__EXTENSIONS__
 
+SMF_METHODS=	spiped
+
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "SunOS"
 LDADD_EXTRA+=	-lsocket -lnsl
@@ -27,7 +29,6 @@ MAKE_ENV+=	LDADD_EXTRA="${LDADD_EXTRA}"
 
 INSTALLATION_DIRS+=	share/doc/spiped ${PKGMANDIR}/man1
 
-SMF_METHODS=	spiped
 .if ${INIT_SYSTEM} == "smf"
 MESSAGE_SRC+=	MESSAGE.smf
 MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
