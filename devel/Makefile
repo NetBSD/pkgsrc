@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1960 2014/08/17 13:51:58 jaapb Exp $
+# $NetBSD: Makefile,v 1.1961 2014/08/18 10:00:34 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -576,8 +576,6 @@ SUBDIR+=	nsis
 SUBDIR+=	nspr
 SUBDIR+=	nspr-reference
 SUBDIR+=	nss
-SUBDIR+=	ocamlify
-SUBDIR+=	ocamlmod
 SUBDIR+=	ocaml-batteries
 SUBDIR+=	ocaml-deriving-ocsigen
 SUBDIR+=	ocaml-findlib
@@ -587,6 +585,8 @@ SUBDIR+=	ocaml-odn
 SUBDIR+=	ocaml-optcomp
 SUBDIR+=	ocaml-react
 SUBDIR+=	ocaml-type_conv
+SUBDIR+=	ocamlify
+SUBDIR+=	ocamlmod
 SUBDIR+=	ode
 SUBDIR+=	ogre
 SUBDIR+=	okteta
@@ -1583,6 +1583,7 @@ SUBDIR+=	py-pyutil
 SUBDIR+=	py-quixote
 SUBDIR+=	py-readline
 SUBDIR+=	py-requests
+SUBDIR+=	py-requests-toolbelt
 SUBDIR+=	py-rope
 SUBDIR+=	py-rply
 SUBDIR+=	py-serpent
