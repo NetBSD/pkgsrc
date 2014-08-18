@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3124 2014/08/18 11:15:11 adam Exp $
+$NetBSD: CHANGES-2014,v 1.3125 2014/08/18 15:19:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4070,3 +4070,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/py-vdirsyncer to 0.2.4 [wiz 2014-08-18]
 	Updated graphics/GraphicsMagick to 1.3.20 [adam 2014-08-18]
 	Updated graphics/p5-GraphicsMagick to 1.3.20 [adam 2014-08-18]
+	Updated lang/pear to 1.9.5nb1 [taca 2014-08-18]
