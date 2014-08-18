@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.4 2008/11/02 20:51:40 schmonz Exp $
+$NetBSD: patch-ag,v 1.5 2014/08/18 18:19:29 schmonz Exp $
 
---- src/Makefile.orig	2008-11-01 10:25:38.000000000 -0400
+--- src/Makefile.orig	2008-12-08 09:15:14.000000000 +0000
 +++ src/Makefile
-@@ -172,7 +172,7 @@ ifeq "$(OS)" "BeOS"
+@@ -173,7 +173,7 @@ ifeq "$(OS)" "BeOS"
  else
  ifeq "$(SSL)" "openssl"
  	LDFLAGS+=-L ../modules/lib $(addprefix -l,$(LIBSTOLINK))\
