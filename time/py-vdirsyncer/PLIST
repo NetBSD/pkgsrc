@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/08/18 09:48:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/08/18 11:04:21 wiz Exp $
 bin/vdirsyncer
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -51,3 +51,4 @@ ${PYSITELIB}/vdirsyncer/utils/compat.pyo
 ${PYSITELIB}/vdirsyncer/utils/vobject.py
 ${PYSITELIB}/vdirsyncer/utils/vobject.pyc
 ${PYSITELIB}/vdirsyncer/utils/vobject.pyo
+share/example/${PKGBASE}/example.cfg
