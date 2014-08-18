@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/05/29 23:35:16 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2014/08/18 06:05:14 mrg Exp $
 
 # To the poor soul who wants to update this package:
 #
@@ -43,7 +43,7 @@
 
 DISTNAME=	${PRODUCT:tl:S/_v/-/}-noCPAN
 PKGNAME=	${DISTNAME:S/-noCPAN//}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.slimdevices.com/${PRODUCT}/
 
@@ -65,7 +65,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 LICENSE=	squeezeboxserver-license
 
 # Database server
-MYSQL_VERSIONS_ACCEPTED=	51
+MYSQL_VERSIONS_ACCEPTED=	55
 .include "../../mk/mysql.buildlink3.mk"
 .include "${MYSQL_PKGSRCDIR:S/-client$/-server/}/buildlink3.mk"
 
