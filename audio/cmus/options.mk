@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.13 2014/08/11 23:09:44 wiz Exp $
+# $NetBSD: options.mk,v 1.14 2014/08/18 09:34:49 gls Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.cmus
 PKG_SUPPORTED_OPTIONS=		flac mad vorbis arts libao musepack faad wavpack pulseaudio
-PKG_SUPPORTED_OPTIONS+=		wide-curses ffmpeg
+PKG_SUPPORTED_OPTIONS+=		wide-curses ffmpeg opus jack
 PKG_OPTIONS_OPTIONAL_GROUPS=	mod
 PKG_OPTIONS_GROUP.mod=		modplug mikmod
 PKG_SUGGESTED_OPTIONS=		flac libao mad modplug vorbis
@@ -53,6 +53,16 @@ CONFIGURE_ARGS+=	CONFIG_PULSE=y
 PLIST.pulseaudio=		yes
 .else
 CONFIGURE_ARGS+=	CONFIG_PULSE=n
+.endif
+
+# JACK support
+#
+.if !empty(PKG_OPTIONS:Mjack)
+.include "../../audio/jack/buildlink3.mk"
+CONFIGURE_ARGS+=	CONFIG_JACK=y
+PLIST.jack=		yes
+.else
+CONFIGURE_ARGS+=	CONFIG_JACK=n
 .endif
 
 ###
@@ -146,6 +156,16 @@ PLIST.faad=		yes
 .else
 CONFIGURE_ARGS+=	CONFIG_AAC=n
 CONFIGURE_ARGS+=	CONFIG_MP4=n
+.endif
+
+# Opus support
+#
+.if !empty(PKG_OPTIONS:Mopus)
+.include "../../audio/opusfile/buildlink3.mk"
+CONFIGURE_ARGS+=	CONFIG_OPUS=y
+PLIST.opus=		yes
+.else
+CONFIGURE_ARGS+=	CONFIG_OPUS=n
 .endif
 
 ###
