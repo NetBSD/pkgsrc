@@ -1,0 +1,35 @@
+# $NetBSD: Makefile.common,v 1.1 2014/08/18 01:21:49 schmonz Exp $
+# used by textproc/highlight/Makefile
+# used by textproc/p5-highlight/Makefile
+
+DISTNAME=		highlight-${VERSION}
+VERSION=		3.18
+CATEGORIES=		textproc
+MASTER_SITES=		http://www.andre-simon.de/zip/
+EXTRACT_SUFX=		.tar.bz2
+
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		http://www.andre-simon.de/
+COMMENT=		Converts source code to formatted text with syntax highlighting
+LICENSE=		gnu-gpl-v3
+
+USE_TOOLS+=		gmake pkg-config
+USE_LANGUAGES=		c c++
+MAKE_FILE=		makefile
+
+PATCHDIR=		${.CURDIR}/../../textproc/highlight/patches
+DISTINFO_FILE=		${.CURDIR}/../../textproc/highlight/distinfo
+DESCR_SRC=		${.CURDIR}/../../textproc/highlight/DESCR
+
+PKG_SYSCONFSUBDIR=	highlight
+
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	Fixing hardcoded paths.
+SUBST_STAGE.paths=	do-configure
+SUBST_FILES.paths=	src/core/datadir.cpp src/makefile
+SUBST_SED.paths=	-e 's,/etc/highlight,${PKG_SYSCONFDIR},g'
+SUBST_SED.paths+=	-e 's,/usr/share,${PREFIX}/share,g'
+
+.include "../../devel/boost-headers/buildlink3.mk"
+.include "../../lang/lua/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
