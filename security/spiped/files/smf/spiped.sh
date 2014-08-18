@@ -1,6 +1,6 @@
 #!@SMF_METHOD_SHELL@
 #
-# $NetBSD: spiped.sh,v 1.1 2014/05/14 13:53:53 wiedi Exp $
+# $NetBSD: spiped.sh,v 1.2 2014/08/18 22:19:16 wiedi Exp $
 #
 # Init script for spiped.
 #
@@ -28,6 +28,6 @@ case "$MODE" in
 		exit $SMF_EXIT_ERR_CONFIG
 esac
 
-@LOCALBASE@/bin/spiped $MODEFLAG -s "$SOURCE" -t "$TARGET" -k "$KEY"
+@LOCALBASE@/bin/spiped -F $MODEFLAG -s "$SOURCE" -t "$TARGET" -k "$KEY"
 
 exit $SMF_EXIT_OK
