@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2014/08/15 06:49:45 schmonz Exp $
+$NetBSD: distinfo,v 1.6 2014/08/18 01:21:49 schmonz Exp $
 
 SHA1 (highlight-3.18.tar.bz2) = 985d0a3c707e3251fe50ffff66e11a8563777202
 RMD160 (highlight-3.18.tar.bz2) = 960b2a9ed6071b0f48ef45da2d006f5f00d9b578
 Size (highlight-3.18.tar.bz2) = 619669 bytes
 SHA1 (patch-aa) = 1cf4c6225b36e822a40ec10917384367914ecb0f
 SHA1 (patch-ab) = 592b8a2934d7e4c7f3c5a241737f4d09215932a4
+SHA1 (patch-examples_swig_makefile) = a252ca1f5a53d2edc590f2ccda8abfd42e32b965
