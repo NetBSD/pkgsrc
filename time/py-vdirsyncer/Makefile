@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/08/18 11:04:21 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/08/18 12:10:32 wiz Exp $
 
 DISTNAME=	vdirsyncer-0.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,6 +9,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/vdirsyncer/
 COMMENT=	Synchronization tool for vdir
 LICENSE=	mit
+
+DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
+DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt-[0-9]*:../../devel/py-requests-toolbelt
 
 USE_LANGUAGES=	# none
 INSTALLATION_DIRS=	share/example/${PKGBASE}
