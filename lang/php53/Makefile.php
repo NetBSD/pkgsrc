@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.40 2014/06/13 14:13:20 fhajny Exp $
+# $NetBSD: Makefile.php,v 1.40.2.1 2014/08/18 12:48:05 tron Exp $
 # used by lang/php53/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
@@ -53,8 +53,8 @@ PKG_SUGGESTED_OPTIONS+=	inet6 ssl
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Msuhosin)
-SUHOSIN_PHPVER=		5.3.25
-.  if ${SUHOSIN_PHPVER} != ${PHP_BASE_VERS} && ${PHP_BASE_VERS} != "5.3.28"
+SUHOSIN_PHPVER=		5.3.29
+.  if ${SUHOSIN_PHPVER} != ${PHP_BASE_VERS}
 PKG_FAIL_REASON+=	"The suhosin patch is currently not available for"
 PKG_FAIL_REASON+=	"this version of PHP.  You may have to wait until"
 PKG_FAIL_REASON+=	"an updated patch is released or temporarily"
