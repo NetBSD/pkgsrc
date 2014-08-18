@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/06/02 12:02:47 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2014/08/18 09:18:23 joerg Exp $
 
 DISTNAME=	sqtop-2013-12-17
 PKGNAME=	${DISTNAME:C/([0-9])-/\1/g}
@@ -15,6 +15,12 @@ DEPENDS+=	squid-[0-9]*:../../www/squid3
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	--with-resolver=netdb_getnameinfo
+.endif
 
 .include "../../mk/resolv.buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
