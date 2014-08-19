@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2013/08/31 14:55:13 joerg Exp $
+$NetBSD: distinfo,v 1.17 2014/08/19 15:06:00 joerg Exp $
 
 SHA1 (wml-2.0.9.tar.gz) = ce95ad9c55fd52e2028099d391858d88cffd5d9f
 RMD160 (wml-2.0.9.tar.gz) = bf14a4c09bdd850c5bad5f48f712717a13b13412
@@ -21,6 +21,7 @@ SHA1 (patch-wml__backend_p2__mp4h_doc_mp4h.mp4h) = 3ab650e57012ad85f89156fdd639d
 SHA1 (patch-wml__backend_p3__eperl_eperl__perl5.c) = e80878ccdd6d58efa42b987b3951897c1c8df32b
 SHA1 (patch-wml__backend_p3__eperl_eperl__perl5.h) = 0e4534ce4171472b5c26eb9def7dfa4067bc6fe8
 SHA1 (patch-wml__backend_p6__asubst_asubst.src) = df3400f52f37ba4630e692d4ddce1477bb35547b
+SHA1 (patch-wml__common_gd_GD.xs) = e792f0097a2c403906baab5b7811dce6d1ddd48d
 SHA1 (patch-wml__common_gd_makefile_pl_in) = 92481ea127e795bd92cc7d59c48a9224db8aaea1
 SHA1 (patch-wml__common_htmlclean_makefile_pl) = d9aea5c05b4b943adc9a74ae2f51858ee3213b74
 SHA1 (patch-wml__docs_wml__intro.pod) = 307c06a6b216338fb8853554fa4a09a664e273dc
