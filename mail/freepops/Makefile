@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2014/02/12 23:18:07 tron Exp $
+# $NetBSD: Makefile,v 1.26 2014/08/19 13:36:15 joerg Exp $
 #
 
 DISTNAME=	freepops-0.2.9
@@ -12,6 +12,7 @@ COMMENT=	POP3 gateway to AOL, Gmail, Hotmail, Juno, Yahoo, etc
 LICENSE=	gnu-gpl-v2
 
 MAKE_JOBS_SAFE=	no
+LUA_VERSIONS_ACCEPTED=	51
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -60,6 +61,7 @@ PKG_GROUPS_VARS+=		FREEPOPSD_GROUP
 PKG_USERS_VARS+=		FREEPOPSD_USER
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../lang/lua/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
