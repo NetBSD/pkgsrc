@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/05/29 23:35:31 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/08/19 13:04:15 fhajny Exp $
 
 PKGNAME=		p5-${DISTNAME}
 PKGREVISION=		1
@@ -14,9 +14,7 @@ CONFIGURE_ARGS+=	--with-perl-site-arch=${PERL5_INSTALLVENDORARCH}
 CONFIGURE_ARGS+=	--with-perl-site-lib=${PERL5_INSTALLVENDORLIB}
 CONFIGURE_ARGS+=	--with-perl-install-man3-dir=${PERL5_INSTALLVENDORMAN3DIR}
 
-BUILD_DIRS=		src/api/perl/Connection
-BUILD_DIRS+=		src/api/perl/Cursor
-BUILD_DIRS+=		src/api/perl/DBD
+BUILD_DIRS=		src/api/perl
 
 PERL5_PACKLIST=		auto/DBD/SQLRelay/.packlist
 PERL5_PACKLIST+=	auto/SQLRelay/Cursor/.packlist
