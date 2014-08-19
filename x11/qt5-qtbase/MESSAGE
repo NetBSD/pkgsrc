@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2013/12/13 14:38:35 ryoon Exp $
+$NetBSD: MESSAGE,v 1.2 2014/08/19 10:37:53 wiz Exp $
 
 To allow this package to coexist with other versions of Qt
 it has been installed in ${PREFIX}/qt5/{bin,include,lib,doc} etc.
@@ -11,6 +11,8 @@ programs which use it by ensuring that
 
 2) Use the "configure" argument "--with-qt-dir=${PREFIX}/qt5"
 
-3) you may also have to put ${PREFIX}/qt5/bin in your PATH
+3) Use the "cmake" argument "-DCMAKE_PREFIX_PATH:PATH=${PREFIX}/qt5"
+
+4) you may also have to put ${PREFIX}/qt5/bin in your PATH
 
 ===========================================================================
