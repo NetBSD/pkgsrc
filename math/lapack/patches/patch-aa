@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2014/02/28 09:39:56 adam Exp $
+$NetBSD: patch-aa,v 1.9 2014/08/19 13:37:15 joerg Exp $
 
 Fix portability issues.
 Use LIBTOOL.
@@ -89,7 +89,7 @@ Use LIBTOOL.
  ../$(LAPACKLIB): $(ALLOBJ) $(ALLXOBJ)
 -	$(ARCH) $(ARCHFLAGS) $@ $(ALLOBJ) $(ALLXOBJ)
 -	$(RANLIB) $@
-+	${LIBTOOL} --mode=link --tag=F77 ${FC} ${LDFLAGS} -o ../$(LAPACKLIB) \
++	${LIBTOOL} --mode=link --tag=FC ${FC} ${LDFLAGS} -o ../$(LAPACKLIB) \
 +	$(ALLOBJ:.o=.lo) -rpath ${PREFIX}/lib -version-info 4:0
  
  single: $(SLASRC) $(DSLASRC) $(SXLASRC) $(SCLAUX) $(ALLAUX)
@@ -114,15 +114,15 @@ Use LIBTOOL.
  
  .f.o: 
 -	$(FORTRAN) $(OPTS) -c $< -o $@
-+	${LIBTOOL} --mode=compile --tag=CC ${FC} ${FFLAGS} -c $<
++	${LIBTOOL} --mode=compile --tag=FC ${FC} ${FFLAGS} -c $<
 +
 +
-+slaruv.o: slaruv.f ; ${LIBTOOL} --mode=compile --tag=CC $(FC) $(NOOPT) -c $< -o $@
-+dlaruv.o: dlaruv.f ; ${LIBTOOL} --mode=compile --tag=CC $(FC) $(NOOPT) -c $< -o $@
-+sla_wwaddw.o: sla_wwaddw.f ; ${LIBTOOL} --mode=compile --tag=CC $(FC) $(NOOPT) -c $< -o $@
-+dla_wwaddw.o: dla_wwaddw.f ; ${LIBTOOL} --mode=compile --tag=CC $(FC) $(NOOPT) -c $< -o $@
-+cla_wwaddw.o: cla_wwaddw.f ; ${LIBTOOL} --mode=compile --tag=CC $(FC) $(NOOPT) -c $< -o $@
-+zla_wwaddw.o: zla_wwaddw.f ; ${LIBTOOL} --mode=compile --tag=CC $(FC) $(NOOPT) -c $< -o $@
++slaruv.o: slaruv.f ; ${LIBTOOL} --mode=compile --tag=FC $(FC) $(NOOPT) -c $< -o $@
++dlaruv.o: dlaruv.f ; ${LIBTOOL} --mode=compile --tag=FC $(FC) $(NOOPT) -c $< -o $@
++sla_wwaddw.o: sla_wwaddw.f ; ${LIBTOOL} --mode=compile --tag=FC $(FC) $(NOOPT) -c $< -o $@
++dla_wwaddw.o: dla_wwaddw.f ; ${LIBTOOL} --mode=compile --tag=FC $(FC) $(NOOPT) -c $< -o $@
++cla_wwaddw.o: cla_wwaddw.f ; ${LIBTOOL} --mode=compile --tag=FC $(FC) $(NOOPT) -c $< -o $@
++zla_wwaddw.o: zla_wwaddw.f ; ${LIBTOOL} --mode=compile --tag=FC $(FC) $(NOOPT) -c $< -o $@
  
 -slaruv.o: slaruv.f ; $(FORTRAN) $(NOOPT) -c $< -o $@
 -dlaruv.o: dlaruv.f ; $(FORTRAN) $(NOOPT) -c $< -o $@
