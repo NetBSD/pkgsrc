@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/07/21 07:34:17 dbj Exp $
+# $NetBSD: Makefile,v 1.2 2014/08/19 13:35:44 joerg Exp $
 #
 
 VERSION=	0.97.0.1696
@@ -16,6 +16,7 @@ COMMENT=	FreeDV: HF Digital Voice for Radio Amateurs
 
 LICENSE=	gnu-lgpl-v2.1
 
+USE_TOOLS+=	pkg-config
 USE_LANGUAGES=c c++
 
 CHECK_PORTABILITY_SKIP+= configure
@@ -26,7 +27,7 @@ BUILD_DIRS=${CONFIGURE_DIRS}
 CMAKE_ARG_PATH=..
 
 pre-configure:
-	cd ${WRKSRC} && mkdir build
+	${MKDIR} ${WRKSRC}/build
 
 .include "../../ham/codec2/buildlink3.mk"
 .include "../../ham/hamlib/buildlink3.mk"
