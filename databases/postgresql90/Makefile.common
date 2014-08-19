@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2014/07/25 22:14:55 adam Exp $
+# $NetBSD: Makefile.common,v 1.32 2014/08/19 13:31:24 joerg Exp $
 #
 # used by databases/postgresql90-adminpack/Makefile
 # used by databases/postgresql90-client/Makefile
@@ -103,6 +103,9 @@ USE_LIBLTDL?=		no
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 LIBS.SunOS+=		-lintl
+
+.include "../../mk/pthread.buildlink3.mk"
+CONFIGURE_FLAGS+=	acx_pthread_flags="${PTHREAD_LIBS} ${PTHREAD_LDFLAGS}"
 
 .if !defined(META_PACKAGE)
 post-extract:
