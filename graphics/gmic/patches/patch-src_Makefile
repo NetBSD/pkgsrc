@@ -1,4 +1,4 @@
-$NetBSD: patch-src_Makefile,v 1.1 2014/08/09 06:26:09 wiz Exp $
+$NetBSD: patch-src_Makefile,v 1.2 2014/08/19 13:34:00 joerg Exp $
 
 Add NetBSD.
 Adapt installation paths.
@@ -34,6 +34,15 @@ Add compiler rpath flag.
  ifeq ($(CC),g++)
  MANDATORY_CFLAGS += -Wall -W
  MANDATORY_LDFLAGS += -lm
+@@ -95,7 +98,7 @@ DEBUG_CFLAGS = -Dcimg_verbosity=3 -g
+ 
+ # Flags to enable optimizations.
+ ifeq ($(CC),g++)
+-OPT_CFLAGS = -O2 -fno-ipa-sra -mtune=generic # -fno-tree-pre # -ffast-math
++OPT_CFLAGS = -O2
+ endif
+ ifeq ($(CC),clang++)
+ OPT_CFLAGS = -O2
 @@ -422,11 +425,11 @@ ifneq ($(OS),Darwin)
  	ln -s libgmic.so.1.5.9 $(DESTDIR)$(USR)/lib/libgmic.so.1
  	ln -s libgmic.so.1 $(DESTDIR)$(USR)/lib/libgmic.so
