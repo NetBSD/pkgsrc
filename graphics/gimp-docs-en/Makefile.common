@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2014/05/09 07:37:07 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2014/08/19 10:42:55 wiz Exp $
 #
 # used by graphics/gimp-docs-de/Makefile
 # used by graphics/gimp-docs-en/Makefile
@@ -15,7 +15,7 @@
 
 DISTNAME=	gimp-help-${GIMPDOCVER}
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/help/
+MASTER_SITES=	http://download.gimp.org/pub/gimp/help/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

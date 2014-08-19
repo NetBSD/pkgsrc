@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2012/10/08 09:21:09 asau Exp $
-#
+# $NetBSD: Makefile,v 1.11 2014/08/19 10:42:55 wiz Exp $
 
 DISTNAME=	mpeg_lib-1.3.1
 PKGNAME=	mpeg-1.3.1
 PKGREVISION=	1
 CATEGORIES=	multimedia
-MASTER_SITES=	ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/libs/ \
-		ftp://ftp.gimp.org/pub/gimp/libs/
+MASTER_SITES=	ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/libs/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gerg.ca/software/mpeglib/
