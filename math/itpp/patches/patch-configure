@@ -1,6 +1,6 @@
-$NetBSD: patch-configure,v 1.1 2013/10/28 23:46:55 joerg Exp $
+$NetBSD: patch-configure,v 1.2 2014/08/19 13:37:53 joerg Exp $
 
---- configure.orig	2013-10-28 21:42:15.000000000 +0000
+--- configure.orig	2009-12-27 00:56:31.000000000 +0000
 +++ configure
 @@ -23433,7 +23433,12 @@ fi
  
@@ -12,7 +12,16 @@ $NetBSD: patch-configure,v 1.1 2013/10/28 23:46:55 joerg Exp $
 +          shift
 +          set X $ac_arg "$@"
 +          ;;
-+        -[lLR]*|-Wl*)
++        -[lL]*|-Wl*)
              ac_exists=false
    for ac_i in $ac_cv_f77_libs; do
      if test x"$ac_arg" = x"$ac_i"; then
+@@ -23489,8 +23494,6 @@ ac_compile='$CXX -c $CXXFLAGS $CPPFLAGS 
+ ac_link='$CXX -o conftest$ac_exeext $CXXFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS >&5'
+ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
+ 
+-  # Clean up -L/../.. paths from FLIBS
+-  MY_FLIBS="`echo \"$FLIBS\" | sed 's/-L[^ ]* //g'`"
+   # Check for a Fortran name mangling scheme
+   ac_ext=f
+ ac_compile='$F77 -c $FFLAGS conftest.$ac_ext >&5'
