@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2014/05/29 23:37:29 wiz Exp $
+# $NetBSD: Makefile,v 1.117 2014/08/19 13:30:53 hauke Exp $
 
 DISTNAME=		lsof_4.87
 PKGNAME=		${DISTNAME:S/_/-/}
@@ -61,7 +61,9 @@ CPPFLAGS+=		-D_KMEMUSER
 .elif ${OPSYS} == "FreeBSD"
 BUILDLINK_PASSTHRU_DIRS+=	/usr/src/sys
 .elif ${OPSYS} == "SunOS"
+REAL_GROUP=		sys
 MAKE_ENV+=		CPPFLAGS=
+CONFIGURE_ENV+=		LSOF_RANLIB="/bin/true"
 .endif
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 
