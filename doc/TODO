@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13575 2014/08/18 09:35:03 gls Exp $
+$NetBSD: TODO,v 1.13576 2014/08/19 11:20:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -584,6 +584,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gforth-0.7.3
 	o gfract-0.33
 	o ghc-7.8.1
+	o gimp-docs-2.8.2
 	o git-2.1
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
@@ -975,7 +976,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o qt4-qscintilla-4.8.3
 	o qt5-qtbase-5.3.1
 	o radiance-3.7.2
-	o rails-4.1.0
+	o rails-4.1.5
 	o rainbowcrack-1.5
 	o raine-0.63.10
 	o rat-4.2.25
