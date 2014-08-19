@@ -1,0 +1,3 @@
+PatchELF is a small utility to modify the dynamic linker and RPATH
+of ELF executables. It is used by the Nix Packages collection
+(nixpkgs).
