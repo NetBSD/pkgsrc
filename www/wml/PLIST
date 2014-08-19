@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/04/07 13:14:25 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/08/19 13:45:04 joerg Exp $
 bin/wmb
 bin/wmd
 bin/wmk
@@ -111,7 +111,6 @@ lib/wml/perl/lib/auto/HTML/Clean/autosplit.ix
 lib/wml/perl/lib/${PERL_ARCHNAME}/WML/GD.pm
 lib/wml/perl/lib/${PERL_ARCHNAME}/auto/HTML/Clean/.packlist
 lib/wml/perl/lib/${PERL_ARCHNAME}/auto/WML/GD/.packlist
-lib/wml/perl/lib/${PERL_ARCHNAME}/auto/WML/GD/GD.bs
 lib/wml/perl/lib/${PERL_ARCHNAME}/auto/WML/GD/GD.so
 lib/wml/perl/lib/${PERL_ARCHNAME}/auto/WML/GD/autosplit.ix
 man/man1/wmb.1
