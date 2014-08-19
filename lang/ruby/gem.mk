@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.31 2014/05/01 12:45:09 taca Exp $
+# $NetBSD: gem.mk,v 1.32 2014/08/19 15:26:44 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -358,8 +358,14 @@ _RUBYGEM_OPTIONS+=	--no-ri
 .if !empty(RUBY_BUILD_RDOC:M[nN][oO])
 _RUBYGEM_OPTIONS+=	--no-rdoc
 .endif
+.if !empty(CONFIGURE_ARGS) || !empty(RUBY_EXTCONF_ARGS)
+_RUBYGEM_OPTIONS+=	--
+.if !empty(RUBY_EXTCONF_ARGS)
+_RUBYGEM_OPTIONS+=	${RUBY_EXTCONF_ARGS}
+.endif
 .if !empty(CONFIGURE_ARGS)
-_RUBYGEM_OPTIONS+=	-- --build-args ${CONFIGURE_ARGS}
+_RUBYGEM_OPTIONS+=	--build-args ${CONFIGURE_ARGS}
+.endif
 .endif
 
 RUBYGEM_INSTALL_ROOT_OPTION=	--install-root ${RUBYGEM_INSTALL_ROOT}
