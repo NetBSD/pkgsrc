@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.244 2014/05/29 23:36:38 wiz Exp $
+# $NetBSD: Makefile,v 1.245 2014/08/19 10:42:55 wiz Exp $
 
 DISTNAME=	gimp-2.8.10
 PKGREVISION=	3
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v${PKGVERSION_NOREV:R}/ \
+MASTER_SITES=	http://download.gimp.org/pub/gimp/v${PKGVERSION_NOREV:R}/ \
 		${MASTER_SITE_GNU:=gimp/v${PKGVERSION_NOREV:R}/} \
 		ftp://ftp.gwdg.de/pub/misc/grafik/gimp/gimp/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.bz2
