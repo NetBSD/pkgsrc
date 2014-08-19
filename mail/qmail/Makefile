@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2014/05/30 21:35:04 schmonz Exp $
+# $NetBSD: Makefile,v 1.70 2014/08/19 22:06:49 schmonz Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}
@@ -121,7 +121,18 @@ PKG_HOME.${user}=	${QMAILDIR}
 .endfor
 PKG_HOME.alias=		${QMAILDIR}/alias
 
+QMAIL_ROOT_ONLY_READABLE=	qmail-clean qmail-getpw qmail-local qmail-popup
+QMAIL_ROOT_ONLY_READABLE+=	qmail-pw2u qmail-remote qmail-rspawn qmail-send
+QMAIL_ROOT_ONLY_READABLE+=	splogger
+QMAIL_ROOT_ONLY_EVERYTHING=	qmail-lspawn qmail-newmrh qmail-newu qmail-start
+
 SPECIAL_PERMS+=		${PREFIX}/bin/qmail-queue qmailq qmail 4555
+.for f in ${QMAIL_ROOT_ONLY_READABLE}
+SPECIAL_PERMS+=		${PREFIX}/bin/${f} root qmail 0711
+.endfor
+.for f in ${QMAIL_ROOT_ONLY_EVERYTHING}
+SPECIAL_PERMS+=		${PREFIX}/bin/${f} root qmail 0700
+.endfor
 
 .if ${OPSYS} == "Darwin"
 DARWINSUFX=		.doc
@@ -153,6 +164,11 @@ pre-install:
 .	endif
 
 post-install: post-install-viruscan
+	# allow packaging as non-root, fix at install time with SPECIAL_PERMS
+	${CHMOD} 0755 ${DESTDIR}${PREFIX}/bin/qmail-queue
+.	for f in ${QMAIL_ROOT_ONLY_READABLE} ${QMAIL_ROOT_ONLY_EVERYTHING}
+	  ${CHMOD} 0755 ${DESTDIR}${PREFIX}/bin/${f}
+.	endfor
 	# qmail's installer sets strange permissions, set them back
 .	if (${PKG_INSTALLATION_TYPE} == "overwrite")
 .	  for i in bin boot
