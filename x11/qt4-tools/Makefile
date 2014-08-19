@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.63 2014/02/12 23:18:55 tron Exp $
+# $NetBSD: Makefile,v 1.64 2014/08/19 10:31:14 wiz Exp $
 
 .include "../../x11/qt4-libs/Makefile.common"
 
 PKGNAME=	qt4-tools-${QTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	QT GUI (WYSIWYG) builder and other tools
 
 DEPENDS+=	libtool-base-[0-9]*:../../devel/libtool-base
@@ -27,13 +27,6 @@ INSTALLATION_DIRS+=	${QTPREFIX}/plugins/designer
 INSTALLATION_DIRS+=	${QTPREFIX}/mkspecs
 INSTALLATION_DIRS+=	${QTPREFIX}/tools/qdoc3
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
-
-PLIST_VARS+=	notSunOS SunOS
-.if ${OPSYS} == "SunOS"
-PLIST.SunOS=	yes
-.else
-PLIST.notSunOS=	yes
-.endif
 
 post-configure:
 	ln -sf ${QTPREFIX}/bin/moc ${WRKSRC}/bin/moc
@@ -79,7 +72,7 @@ do-install:
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/tools/linguist/phrasebooks/*.qph \
 		${DESTDIR}${QTPREFIX}/phrasebooks/
-	cp -R ${WRKSRC}/mkspecs ${DESTDIR}${QTPREFIX}
+	cp -LR ${WRKSRC}/mkspecs ${DESTDIR}${QTPREFIX}
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
