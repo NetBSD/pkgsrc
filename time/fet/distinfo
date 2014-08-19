@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/08/07 21:59:02 wiz Exp $
+$NetBSD: distinfo,v 1.2 2014/08/19 13:43:37 joerg Exp $
 
 SHA1 (fet-5.23.1.tar.bz2) = 2dca265ffd286936dfcde52fa8a028c3a180af8c
 RMD160 (fet-5.23.1.tar.bz2) = e365d206ea2d44d99b45297e50edc5c3fde7fcbb
 Size (fet-5.23.1.tar.bz2) = 8463474 bytes
+SHA1 (patch-src_engine_generate.cpp) = 9e47375c0d90b28efa8a9a8e2a04ff5a3750440e
