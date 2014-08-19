@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2014/02/28 09:39:56 adam Exp $
+# $NetBSD: Makefile,v 1.37 2014/08/19 13:37:14 joerg Exp $
 
 .include "Makefile.common"
 
+PKGREVISION=	1
 COMMENT=	Linear Algebra PACKage
 
 BUILD_TARGET=	lapacklib
