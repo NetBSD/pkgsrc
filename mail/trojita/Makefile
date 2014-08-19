@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/08/09 21:24:08 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/08/19 10:32:42 wiz Exp $
 
 DISTNAME=	trojita-0.4.1
 CATEGORIES=	mail
@@ -15,10 +15,10 @@ DEPENDS+=	qt4-sqlite3-[0-9]*:../../x11/qt4-sqlite3
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
-CFLAGS+=	-I${BUILDLINK_DIR}/qt4/mkspecs/netbsd-g++/
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
+BUILDLINK_ABI_DEPENDS.qt4-tools+=	qt4-tools>=4.8.6nb2
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
