@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2012/10/06 14:10:41 asau Exp $
+# $NetBSD: Makefile,v 1.13 2014/08/19 10:42:55 wiz Exp $
 
 DISTNAME=	babl-0.1.10
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.gimp.org/pub/babl/${PKGVERSION_NOREV:R}/ \
-		http://ftp.gwdg.de/pub/misc/grafik/gimp/babl/${PKGVERSION_NOREV:R}/
+MASTER_SITES=	http://ftp.gwdg.de/pub/misc/grafik/gimp/babl/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
