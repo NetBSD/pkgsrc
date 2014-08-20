@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3130 2014/08/19 18:19:26 adam Exp $
+$NetBSD: CHANGES-2014,v 1.3131 2014/08/20 13:25:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4076,3 +4076,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/qt4-tools to 4.8.6nb2 [wiz 2014-08-19]
 	Updated x11/qt5-qtbase to 5.2.1nb4 [wiz 2014-08-19]
 	Updated multimedia/ffmpeg2 to 2.3.3 [adam 2014-08-19]
+	Added www/py-WebOb version 1.4 [wiz 2014-08-20]
