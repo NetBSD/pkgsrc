@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3131 2014/08/20 13:25:06 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3132 2014/08/20 13:45:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4077,3 +4077,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/qt5-qtbase to 5.2.1nb4 [wiz 2014-08-19]
 	Updated multimedia/ffmpeg2 to 2.3.3 [adam 2014-08-19]
 	Added www/py-WebOb version 1.4 [wiz 2014-08-20]
+	Added www/py-static version 1.0.2 [wiz 2014-08-20]
