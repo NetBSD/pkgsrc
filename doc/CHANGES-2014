@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3135 2014/08/20 21:09:52 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3136 2014/08/20 21:12:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4080,4 +4080,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Added www/py-static version 1.0.2 [wiz 2014-08-20]
 	Updated misc/mnemosyne to 2.3.1 [wiz 2014-08-20]
 	Updated databases/luma to 3.0.7 [wiz 2014-08-20]
+	Updated time/fet to 5.23.2 [wiz 2014-08-20]
 	Updated time/fet to 5.23.2 [wiz 2014-08-20]
