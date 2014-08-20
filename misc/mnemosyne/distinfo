@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2010/02/03 10:51:59 wiz Exp $
+$NetBSD: distinfo,v 1.5 2014/08/20 13:53:55 wiz Exp $
 
-SHA1 (mnemosyne-1.2.2.tgz) = e215b99adc9ddb4dbfdff91cce11cc3394af5218
-RMD160 (mnemosyne-1.2.2.tgz) = dcb2055c20fa0e988241833836aaa402c75147c6
-Size (mnemosyne-1.2.2.tgz) = 1040914 bytes
+SHA1 (Mnemosyne-2.3.1.tar.gz) = 46aa318f3df0d402e26d082bb1e053ac375f2f98
+RMD160 (Mnemosyne-2.3.1.tar.gz) = 3f4bb7686d1e1106a976efe06ab1cfd468f749a6
+Size (Mnemosyne-2.3.1.tar.gz) = 1331123 bytes
