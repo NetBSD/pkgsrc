@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/08/07 21:59:02 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/08/20 21:09:43 wiz Exp $
 
-DISTNAME=	fet-5.23.1
+DISTNAME=	fet-5.23.2
 CATEGORIES=	time
 MASTER_SITES=	http://lalescu.ro/liviu/fet/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,10 +17,8 @@ EXTRACT_USING=	bsdtar
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/fet
 
 # conflicts with import.h in package itself
-post-extract:
-	rm -f ${WORK}/.buildlink/include/python*/import.h
-
 pre-build:
+	rm -f ${WRKDIR}/.buildlink/include/python*/import.h
 	cd ${WRKSRC} && ${QTDIR}/bin/qmake
 
 do-install:
