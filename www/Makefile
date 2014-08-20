@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1061 2014/08/14 09:59:48 obache Exp $
+# $NetBSD: Makefile,v 1.1062 2014/08/20 13:24:48 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -536,6 +536,7 @@ SUBDIR+=	privoxy
 SUBDIR+=	py-ClientForm
 SUBDIR+=	py-HTMLgen
 SUBDIR+=	py-PasteDeploy
+SUBDIR+=	py-WebOb
 SUBDIR+=	py-beautifulsoup
 SUBDIR+=	py-beautifulsoup4
 SUBDIR+=	py-bleach
@@ -692,6 +693,7 @@ SUBDIR+=	ruby-raindrops
 SUBDIR+=	ruby-rest-client
 SUBDIR+=	ruby-sass
 SUBDIR+=	ruby-sass-rails32
+SUBDIR+=	ruby-selenium-webdriver
 SUBDIR+=	ruby-sinatra
 SUBDIR+=	ruby-sinatra-contrib
 SUBDIR+=	ruby-staticmatic
