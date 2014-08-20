@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/08/13 22:32:43 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/08/20 07:07:32 dbj Exp $
 bin/wx-config
 bin/wxrc
 bin/wxrc-3.0
@@ -580,7 +580,7 @@ include/wx-3.0/wx/unix/evtloop.h
 include/wx-3.0/wx/unix/evtloopsrc.h
 include/wx-3.0/wx/unix/execute.h
 include/wx-3.0/wx/unix/fontutil.h
-include/wx-3.0/wx/unix/fswatcher_inotify.h
+${PLIST.notdarwin}include/wx-3.0/wx/unix/fswatcher_inotify.h
 include/wx-3.0/wx/unix/fswatcher_kqueue.h
 include/wx-3.0/wx/unix/glx11.h
 include/wx-3.0/wx/unix/joystick.h
