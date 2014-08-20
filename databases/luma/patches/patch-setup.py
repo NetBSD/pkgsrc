@@ -1,9 +1,10 @@
-$NetBSD: patch-setup.py,v 1.1 2014/08/20 19:24:28 wiz Exp $
+$NetBSD: patch-setup.py,v 1.2 2014/08/20 19:39:02 wiz Exp $
 
 Handle all non-Windows the same for pkgsrc,
 in particular do not handle OS X differently.
 
 Fix script name in install rule.
+https://sourceforge.net/p/luma/bugs/47/
 
 --- setup.py.orig	2011-05-25 12:32:02.000000000 +0000
 +++ setup.py
