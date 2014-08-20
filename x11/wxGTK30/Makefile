@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/08/13 22:32:43 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2014/08/20 07:07:32 dbj Exp $
 #
 
 VERSION=	3.0.1
@@ -51,6 +51,13 @@ SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths=		configure
 SUBST_SED.fix-paths=		-e 's,/usr/pkg/include,${PREFIX}/include,g'
 SUBST_SED.fix-paths+=		-e 's,@PREFIX@,${PREFIX},g'
+
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=		notdarwin
+.if ${OPSYS} != "Darwin"
+PLIST.notdarwin=	yes
+.endif
 
 post-build:
 	set -e; cd ${WRKSRC}/locale; \
