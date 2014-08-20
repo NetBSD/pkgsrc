@@ -1,0 +1,2 @@
+Serve static or templated content via WSGI or stand-alone from a
+python module.
