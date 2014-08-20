@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2014/08/20 19:24:28 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2014/08/20 19:39:02 wiz Exp $
 
 DISTNAME=	luma-3.0.7
 CATEGORIES=	databases
@@ -21,6 +21,8 @@ SUBST_FILES.luma=	luma/luma.py
 SUBST_SED.luma=		-e "s|@PATH@|${PREFIX}/${PYSITELIB}/luma|"
 SUBST_MESSAGE.luma=	Adding library path to luma.
 
+# some templates are not installed, do it manually
+# https://sourceforge.net/p/luma/bugs/48/
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/luma.1.gz ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${CP} -R ${WRKSRC}/luma/plugins/browser/templates ${DESTDIR}${PREFIX}/${PYSITELIB}/luma/plugins/browser/templates
