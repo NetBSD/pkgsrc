@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13577 2014/08/20 09:49:47 obache Exp $
+$NetBSD: TODO,v 1.13578 2014/08/20 13:54:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -811,7 +811,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mknmz-wwwoffle-0.7.2
 	o mksh-49
 	o mkvtoolnix-6.8.0
-	o mnemosyne-2.3
 	o modular-xorg-server-1.16.0
 	o molden-4.8 [after which PR 40252 can be closed]
 	o mono-3.6.0
