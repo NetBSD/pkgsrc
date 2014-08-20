@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2014/08/20 13:23:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/08/20 13:48:42 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/webob/__init__.py
@@ -16,6 +17,9 @@ ${PYSITELIB}/webob/byterange.pyo
 ${PYSITELIB}/webob/cachecontrol.py
 ${PYSITELIB}/webob/cachecontrol.pyc
 ${PYSITELIB}/webob/cachecontrol.pyo
+${PYSITELIB}/webob/client.py
+${PYSITELIB}/webob/client.pyc
+${PYSITELIB}/webob/client.pyo
 ${PYSITELIB}/webob/compat.py
 ${PYSITELIB}/webob/compat.pyc
 ${PYSITELIB}/webob/compat.pyo
@@ -49,6 +53,9 @@ ${PYSITELIB}/webob/request.pyo
 ${PYSITELIB}/webob/response.py
 ${PYSITELIB}/webob/response.pyc
 ${PYSITELIB}/webob/response.pyo
+${PYSITELIB}/webob/static.py
+${PYSITELIB}/webob/static.pyc
+${PYSITELIB}/webob/static.pyo
 ${PYSITELIB}/webob/util.py
 ${PYSITELIB}/webob/util.pyc
 ${PYSITELIB}/webob/util.pyo
