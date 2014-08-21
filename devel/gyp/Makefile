@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2014/08/13 22:39:30 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2014/08/21 14:49:43 he Exp $
 
 SVN_REVISION=	1949
 DIST_VERSION=	0.1
+PKGREVISION=	1
 DISTNAME=	gyp-${DIST_VERSION}pre${SVN_REVISION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
@@ -15,6 +16,24 @@ LICENSE=	modified-bsd
 PYTHON_VERSIONS_INCOMPATIBLE=  26 33 34 # not yet ported as of 0.1pre1718
 EGG_NAME=	gyp-${DIST_VERSION}
 
+# REPLACE_PYTHON settings farmed out due to size...
+.include "Makefile.replace-python"
+
+SUBST_CLASSES+=	python
+SUBST_STAGE.python=	post-patch
+SUBST_MESSAGE.python=	Fix python invocation
+SUBST_FILES.python+=	gyp
+SUBST_FILES.python+=	test/compiler-override/gyptest-compiler-global-settings.py
+SUBST_SED.python+=	-e 's,/usr/bin/python,${PYTHONBIN},g'
+SUBST_SED.python+=	-e 's,\([^/]\)python,\1${PYTHONBIN},g'
+
+REPLACE_INTERPRETER+=	bash
+REPLACE.bash.old=	.*bash[^ ]*
+REPLACE.bash.new=	${PREFIX}/bin/bash
+REPLACE_FILES.bash=	gyp
+
+USE_TOOLS+=	bash:run
+
 # for test
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
@@ -23,4 +42,6 @@ do-test:
 	${RUN}cd ${WRKSRC}; LANG=C ${SETENV} ${TEST_ENV} ${PYTHONBIN} gyptest.py -a -f make --passed
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
