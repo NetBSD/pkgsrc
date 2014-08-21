@@ -1,1 +1,7 @@
-GYP can Generate Your Projects.
+GYP is a tool for the Chromium project that generates native Visual
+Studio, Xcode and SCons and/or make build files from a platform-independent
+input format.  The input format is as reasonably general as possible
+without spending extra time trying to "get everything right," except
+where not doing so would likely lead Chromium to an eventual dead
+end. When in doubt, do what Chromium needs and don't worry about
+generalizing the solution.
