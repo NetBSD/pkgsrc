@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3156 2014/08/21 21:35:15 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3157 2014/08/21 21:35:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4105,3 +4105,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/py-sip to 4.16.2 [wiz 2014-08-21]
 	Updated x11/py-qt4 to 4.11.1 [wiz 2014-08-21]
 	Updated x11/qt4-qscintilla to 2.8.3 [wiz 2014-08-21]
+	Updated x11/py-qt4-qscintilla to 2.8.3 [wiz 2014-08-21]
