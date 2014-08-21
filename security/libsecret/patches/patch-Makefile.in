@@ -1,0 +1,19 @@
+$NetBSD: patch-Makefile.in,v 1.1 2014/08/21 04:47:29 dbj Exp $
+
+--- Makefile.in.orig	2014-03-06 11:47:47.000000000 +0000
++++ Makefile.in
+@@ -2776,11 +2776,11 @@ temp-dbus-generated.c: $(DBUS_XML_DEFINI
+ 	$(AM_V_GEN) gdbus-codegen --interface-prefix org.freedesktop.Secret. \
+ 		--generate-c-code temp-dbus-generated --c-namespace SecretGen $<
+ secret-dbus-generated.c: temp-dbus-generated.c Makefile.am
+-	$(AM_V_GEN) sed -e '1i\
+-	#define GLIB_DISABLE_DEPRECATION_WARNINGS' \
++	$(AM_V_GEN) (printf '#define GLIB_DISABLE_DEPRECATION_WARNINGS\n' && \
++		cat temp-dbus-generated.c ) | sed \
+ 		-e 's/secret_gen_/_secret_gen_/g' -e 's/type-/type/g' \
+ 		-e 's/temp-dbus-generated.h/secret-dbus-generated.h/g' \
+-		temp-dbus-generated.c > secret-dbus-generated.c
++		> secret-dbus-generated.c
+ secret-dbus-generated.h: temp-dbus-generated.c Makefile.am
+ 	$(AM_V_GEN) sed -e 's/secret_gen_/_secret_gen_/g' -e 's/type-/type/g' \
+ 		temp-dbus-generated.h > secret-dbus-generated.h
