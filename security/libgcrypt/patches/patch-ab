@@ -1,4 +1,13 @@
-$NetBSD: patch-ab,v 1.4 2011/11/29 01:33:37 cheusov Exp $
+$NetBSD: patch-ab,v 1.5 2014/08/21 19:55:26 wiz Exp $
+
+When exec'ing child processes (netstat and vmstat), make sure the standard
+file descriptors (0, 1, 2) are open.  This avoids multiple warnings issued
+under NetBSD about running set[ug]id programs with those descriptors closed.
+
+Fixes PR pkg/26079; although it talks about gaim, the problem is here, in
+libgcrypt.
+
+https://bugs.g10code.com/gnupg/issue1702
 
 --- random/rndunix.c.orig	2011-02-04 19:16:03.000000000 +0000
 +++ random/rndunix.c
