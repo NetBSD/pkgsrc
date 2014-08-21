@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/06/06 12:55:08 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2014/08/21 16:10:10 jperkin Exp $
 #
 
 DISTNAME=	xonclock-0.0.9.4
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 
 LDFLAGS.DragonFly=	-lm -lXrender
-LDFLAGS.SunOS+=		-lm -lrt
+LDFLAGS.SunOS+=		-lm -lXrender -lrt
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
