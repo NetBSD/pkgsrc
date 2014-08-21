@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.88 2014/08/21 20:58:23 wiz Exp $
+$NetBSD: distinfo,v 1.89 2014/08/21 21:01:58 wiz Exp $
 
-SHA1 (netpbm-10.35.92.tgz) = b0c480d066cea7560429c156c4f7bfa5f18e0f9b
-RMD160 (netpbm-10.35.92.tgz) = c102b79d8aa235b8e3c2e7529d316485869fb098
-Size (netpbm-10.35.92.tgz) = 2557334 bytes
+SHA1 (netpbm-10.35.93.tgz) = fe80f0e1ccf182a614cfaab617cf486892c5f9fb
+RMD160 (netpbm-10.35.93.tgz) = 9e4bf4c66584e928e399a4b44b11a06a7daae77a
+Size (netpbm-10.35.93.tgz) = 2557610 bytes
 SHA1 (patch-aa) = fd533685c5b0058f19d1b4525a4b2b9f2b239627
 SHA1 (patch-ab) = 4d6508ad837d455ea3f8ebaa704f33f9e089f6e0
 SHA1 (patch-ac) = 11c029673a53e9344a477db6cfcb46f32e9f6a93
