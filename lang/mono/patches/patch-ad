@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.25 2013/08/18 09:42:31 jmcneill Exp $
+$NetBSD: patch-ad,v 1.26 2014/08/21 07:49:56 wiz Exp $
 
---- mono/utils/mono-sigcontext.h.orig	2013-04-25 09:01:42.000000000 +0000
+--- mono/utils/mono-sigcontext.h.orig	2014-08-12 16:50:38.000000000 +0000
 +++ mono/utils/mono-sigcontext.h
 @@ -204,6 +204,10 @@ typedef struct ucontext {
  	#define UCONTEXT_REG_RSI(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_RSI])
@@ -48,5 +48,5 @@ $NetBSD: patch-ad,v 1.25 2013/08/18 09:42:31 jmcneill Exp $
 +	#define UCONTEXT_REG_CPSR(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs[_REG_CPSR])
 +	#define UCONTEXT_REG_VFPREGS(ctx) (double*)(&((ucontext_t*)(ctx))->uc_mcontext.__fpu)
  #endif
- #elif defined(__mips__)
  
+ #elif defined(TARGET_ARM64)

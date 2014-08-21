@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.149 2014/05/29 23:36:43 wiz Exp $
+# $NetBSD: Makefile,v 1.150 2014/08/21 07:49:56 wiz Exp $
 
-DISTNAME=	mono-3.0.10
-PKGREVISION=	7
+DISTNAME=	mono-3.6.0
 CATEGORIES=	lang
 MASTER_SITES=	http://download.mono-project.com/sources/mono/
 EXTRACT_SUFX=	.tar.bz2
@@ -33,7 +32,7 @@ UNLIMIT_RESOURCES=	datasize stacksize memorysize
 
 PKGCONFIG_OVERRIDE+=	mono-uninstalled.pc.in data/cecil.pc.in
 PKGCONFIG_OVERRIDE+=	data/dotnet.pc.in data/dotnet35.pc.in data/mint.pc.in
-PKGCONFIG_OVERRIDE+=	data/mono.web.pc.in data/monodoc.pc.in
+PKGCONFIG_OVERRIDE+=	data/monodoc.pc.in
 PKGCONFIG_OVERRIDE+=	data/mono-cairo.pc.in data/mono-lineeditor.pc.in
 PKGCONFIG_OVERRIDE+=	data/mono-nunit.pc.in data/mono-options.pc.in
 PKGCONFIG_OVERRIDE+=	data/mono.pc.in
