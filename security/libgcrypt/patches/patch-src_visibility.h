@@ -1,4 +1,8 @@
-$NetBSD: patch-src_visibility.h,v 1.1 2014/07/18 10:36:28 ryoon Exp $
+$NetBSD: patch-src_visibility.h,v 1.2 2014/08/21 19:55:26 wiz Exp $
+
+GCC on SCO OpenServer 5.0.7/3.2 does not support visibility.
+
+https://bugs.g10code.com/gnupg/issue1704
 
 --- src/visibility.h.orig	2014-01-29 09:48:38.000000000 +0000
 +++ src/visibility.h
