@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2001/03/12 21:19:10 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2014/08/21 14:48:09 jperkin Exp $
 
---- src/SystemInfo.c.orig	Wed Jun 16 11:53:35 1999
+--- src/SystemInfo.c.orig	1999-06-16 09:53:35.000000000 +0000
 +++ src/SystemInfo.c
 @@ -32,8 +32,8 @@
  #include <sys/types.h>
@@ -13,3 +13,12 @@ $NetBSD: patch-ad,v 1.1 2001/03/12 21:19:10 wiz Exp $
  
  #include "WSoundPrefs.h"
  #include "SystemInfo.h"
+@@ -117,7 +117,7 @@ destroySystemInfo(SystemInfo *sysinfo)
+ 		free(sysinfo);
+ 	}
+ 	else {
+-		wsyserror(_("Trying to free non-existent SystemInfo struct"));
++		werror(_("Trying to free non-existent SystemInfo struct"));
+ 	}
+ }
+ 

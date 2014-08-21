@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.10 2012/07/12 20:28:20 marino Exp $
+$NetBSD: patch-ab,v 1.11 2014/08/21 14:48:09 jperkin Exp $
+
+Add explicit -lWUtil.
 
 --- src/Imakefile.orig	1999-10-18 08:35:58.000000000 +0000
 +++ src/Imakefile
@@ -11,7 +13,13 @@ $NetBSD: patch-ab,v 1.10 2012/07/12 20:28:20 marino Exp $
  
  XCOMM EFENCELIB = -lefence
  EFENCELIB =
-@@ -23,14 +23,14 @@ WINGSLIBS = -lWINGs -lPropList
+@@ -18,19 +18,19 @@ WSOUNDLIBS = `get-wsound-flags --libs`
+ WRASTERCFLAGS = `get-wraster-flags --cflags`
+ WRASTERLFLAGS = `get-wraster-flags --lflags`
+ WRASTERLIBS = `get-wraster-flags --libs`
+-WINGSLIBS = -lWINGs -lPropList
++WINGSLIBS = -lWINGs -lPropList -lWUtil
+ 
  STD_INCLUDES = $(WRASTERCFLAGS) $(WSOUNDCFLAGS)
  DEPLIBS = $(DEPXLIB) 
  
