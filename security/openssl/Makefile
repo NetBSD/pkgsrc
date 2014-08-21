@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.195 2014/08/07 01:29:45 obache Exp $
+# $NetBSD: Makefile,v 1.196 2014/08/21 08:02:56 wiz Exp $
 
 DISTNAME=	openssl-1.0.1i
 MASTER_SITES=	http://ftp.openssl.org/source/
@@ -89,6 +89,21 @@ SUBST_FILES.dl=		Makefile apps/Makefile crypto/Makefile \
 			crypto/pkcs7/Makefile test/Makefile
 SUBST_SED.dl=		-e 's,^EX_LIBS=,EX_LIBS=${DL_LDFLAGS:Q} ,g'
 
+.elif ${OPSYS} == "AIX"
+CONFIGURE_SCRIPT=      ./Configure
+.if defined(ABI) && ${ABI} == "64"
+.if !empty(CC_VERSION:Mgcc*)
+CONFIGURE_ARGS+=       aix64-gcc
+.elif
+CONFIGURE_ARGS+=       aix64-cc
+.endif
+.else
+.if !empty(CC_VERSION:Mgcc*)
+CONFIGURE_ARGS+=       aix-gcc
+.elif
+CONFIGURE_ARGS+=       aix-cc
+.endif
+.endif
 .elif ${OPSYS} == "Interix"
 
 SUBST_CLASSES+=		soname
