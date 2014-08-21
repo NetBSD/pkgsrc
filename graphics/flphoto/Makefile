@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/06/18 09:28:16 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2014/08/21 08:55:01 jperkin Exp $
 #
 
 DISTNAME=		flphoto-1.2-source
@@ -17,6 +17,7 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
 LIBS.DragonFly= 	-lstdc++
+LIBS.SunOS+= 		-lstdc++
 
 .include "../../x11/fltk13/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
