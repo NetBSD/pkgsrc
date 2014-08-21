@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/04/10 05:39:15 obache Exp $
+# $NetBSD: Makefile,v 1.8 2014/08/21 08:49:56 jperkin Exp $
 
 DISTNAME=	ffmpeg2theora-0.29
 PKGREVISION=	2
@@ -15,6 +15,8 @@ USE_TOOLS+=		pkg-config
 BUILD_DEPENDS+=		scons>=1.3.1:../../devel/scons
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
+
+LDFLAGS.SunOS+=	-lm
 
 SCONS=		${PREFIX}/bin/scons
 SCONS_ARGS=	-C ${WRKSRC} destdir=${DESTDIR:Q} prefix=${PREFIX:Q}
