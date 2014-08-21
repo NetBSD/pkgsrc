@@ -1,0 +1,20 @@
+# $NetBSD: Makefile.common,v 1.1 2014/08/21 21:35:06 wiz Exp $
+#
+# used by x11/qt4-qscintilla/Makefile
+# used by x11/py-qt4-qscintilla/Makefile
+
+DISTNAME=	QScintilla-gpl-2.8.3
+CATEGORIES=	x11
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyqt/}
+
+MAINTAINER=	helgoman@users.sourceforge.net
+HOMEPAGE=	http://www.riverbankcomputing.co.uk/software/qscintilla/intro
+LICENSE=	gnu-gpl-v3
+
+USE_LIBTOOL=	yes
+USE_LANGUAGES=	c++
+
+DISTINFO_FILE=	${.CURDIR}/../../x11/qt4-qscintilla/distinfo
+#PATCHDIR=	${.CURDIR}/../../x11/qt4-qscintilla/patches
+
+.include "../../x11/qt4-libs/buildlink3.mk"
