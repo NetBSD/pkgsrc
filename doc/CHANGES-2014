@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3153 2014/08/21 21:30:36 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3154 2014/08/21 21:32:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4102,3 +4102,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Removed devel/eric3 successor devel/eric4 [wiz 2014-08-21]
 	Removed misc/kodos [wiz 2014-08-21]
 	Removed wm/icecc [wiz 2014-08-21]
+	Updated x11/py-sip to 4.16.2 [wiz 2014-08-21]
