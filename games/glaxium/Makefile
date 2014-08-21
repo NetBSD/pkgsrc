@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2013/02/16 11:21:19 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2014/08/21 08:44:09 jperkin Exp $
 #
 
 DISTNAME=	glaxium_0.5
@@ -30,7 +30,7 @@ INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
 			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
 .include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "DragonFly"
+.if ${OPSYS} == "DragonFly" || ${OPSYS} == "SunOS"
 X_LDFLAGS=	${X11_LDFLAGS} -lm -lstdc++
 .else
 X_LDFLAGS=	${X11_LDFLAGS}
