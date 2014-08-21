@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1962 2014/08/18 11:01:11 wiz Exp $
+# $NetBSD: Makefile,v 1.1963 2014/08/21 21:30:19 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -199,7 +199,6 @@ SUBDIR+=	elib
 SUBDIR+=	emacs-ilisp
 SUBDIR+=	emacs20-elib
 SUBDIR+=	epydoc
-SUBDIR+=	eric3
 SUBDIR+=	eric4
 SUBDIR+=	error
 SUBDIR+=	ethos
