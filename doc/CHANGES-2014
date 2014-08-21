@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3147 2014/08/21 19:39:04 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3148 2014/08/21 19:41:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4091,3 +4091,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/musicpd to 0.18.12nb2 [wiz 2014-08-21]
 	Updated devel/gyp to 0.1pre1949nb1 [he 2014-08-21]
 	Updated databases/iodbc to 3.52.9 [wiz 2014-08-21]
+	Updated security/libgcrypt to 1.6.2 [wiz 2014-08-21]
