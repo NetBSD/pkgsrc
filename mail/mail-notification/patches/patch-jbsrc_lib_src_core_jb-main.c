@@ -1,6 +1,8 @@
-$NetBSD: patch-jbsrc_lib_src_core_jb-main.c,v 1.1 2013/05/25 23:43:58 joerg Exp $
+$NetBSD: patch-jbsrc_lib_src_core_jb-main.c,v 1.2 2014/08/21 13:21:33 jperkin Exp $
 
---- jbsrc/lib/src/core/jb-main.c.orig	2013-05-25 17:48:27.000000000 +0000
+Support localedir.
+
+--- jbsrc/lib/src/core/jb-main.c.orig	2008-04-27 14:47:28.000000000 +0000
 +++ jbsrc/lib/src/core/jb-main.c
 @@ -161,8 +161,6 @@ jb_main (int argc,
  
@@ -11,3 +13,15 @@ $NetBSD: patch-jbsrc_lib_src_core_jb-main.c,v 1.1 2013/05/25 23:43:58 joerg Exp 
    jb_topsrcdir = g_get_current_dir();
  
    jb_set_log_file("build/jb.log");
+@@ -237,6 +235,11 @@ jb_main (int argc,
+ 			 jb_variable_group_installation_options,
+ 			 0,
+ 			 "$prefix/libexec");
++  jb_variable_add_string("localedir",
++			 "locale directory",
++			 jb_variable_group_installation_options,
++			 0,
++			 "$prefix/share/locale");
+   jb_variable_add_string("datadir",
+ 			 "read-only architecture-independent data directory",
+ 			 jb_variable_group_installation_options,
