@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2014/08/13 10:57:38 adam Exp $
+# $NetBSD: Makefile,v 1.42 2014/08/21 21:34:33 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-kde4-${_KDE_VERSION}
 DISTNAME=	pykde4-${_KDE_VERSION}
@@ -43,8 +43,8 @@ SUBST_SED.pid32+=	-e '/typedef.*int.*pid_t/s/int/long/'
 #	${CP} ${FILESDIR}/FindPolkitQt.cmake ${WRKSRC}/cmake/modules
 
 # remove when file not patched any longer
-#post-install:
-#	${RM} -f ${DESTDIR}${PREFIX}/share/sip${PYVERSSUFFIX}/PyKDE4/kdecore/typedefs.sip.orig
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/share/sip${PYVERSSUFFIX}/PyKDE4/*/*.sip.orig
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 
