@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2012/03/10 21:53:47 markd Exp $
-
-SHA1 (kodos-2.4.9.tar.gz) = aae715fec4974a506305d0cff16035ea3c619c85
-RMD160 (kodos-2.4.9.tar.gz) = 0f1f83a8ec5165056affc11f05b34a4c832f3372
-Size (kodos-2.4.9.tar.gz) = 450343 bytes
-SHA1 (patch-aa) = 2b77ce699c1b2f334f5e76c65363e35172d29c97
