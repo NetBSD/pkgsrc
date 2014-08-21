@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3144 2014/08/21 14:05:19 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3145 2014/08/21 14:29:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4088,3 +4088,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/png to 1.6.13 [wiz 2014-08-21]
 	Updated meta-pkgs/gnome to 2.26.2nb5 [wiz 2014-08-21]
 	Updated devel/colordiff to 1.0.13 [wiz 2014-08-21]
+	Updated audio/musicpd to 0.18.12nb2 [wiz 2014-08-21]
