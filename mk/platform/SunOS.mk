@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.58 2014/03/11 14:07:04 jperkin Exp $
+# $NetBSD: SunOS.mk,v 1.59 2014/08/21 15:31:24 jperkin Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -80,6 +80,7 @@ _OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-z defaultextract
 
 # Remove flags specific to GNU ld.
 BUILDLINK_TRANSFORM+=	rm:-Wl,--export-dynamic
+BUILDLINK_TRANSFORM+=	rm:-Wl,-export-dynamic
 BUILDLINK_TRANSFORM+=	rm:-export-dynamic
 
 # Solaris has /usr/include/iconv.h, but it's not GNU iconv, so mark it
