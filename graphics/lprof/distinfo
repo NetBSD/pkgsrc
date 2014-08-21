@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2012/12/24 21:11:17 joerg Exp $
+$NetBSD: distinfo,v 1.6 2014/08/21 16:37:51 jperkin Exp $
 
 SHA1 (lprof-1.10.1.tar.gz) = ad7cc5fff5d6dfff9d0993d201232d7bb71a46aa
 RMD160 (lprof-1.10.1.tar.gz) = d4a20cffe42a2ca12a1321a2e6013756e447300f
@@ -12,3 +12,5 @@ SHA1 (patch-af) = 1e8c4dbe4650bfffb892d831ed94b2317e83ae1d
 SHA1 (patch-ag) = b6fcbffc42a5d2621c48b3f42c7b9da99294ce41
 SHA1 (patch-src_liblprof_lcmsprf.h) = c87f25db911674f5939844dc0f56fe70bd1cd12a
 SHA1 (patch-src_libqtlcmswidgets_Makefile) = 48631cf675443692845f23c60e614d87186905ca
+SHA1 (patch-src_qtMonitorProfiler_qtmonitorprofilerdialog.cpp) = 28314b038e294936606635e15f27962339fab1c8
+SHA1 (patch-src_qtScannerProfiler_qtscannerprofilerdialog.cpp) = 3d01c38a008db08c2976b5534aee6fbe2a8a946c
