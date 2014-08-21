@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/08/19 13:36:15 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2014/08/21 09:36:29 jperkin Exp $
 #
 
 DISTNAME=	freepops-0.2.9
@@ -27,7 +27,7 @@ HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	configure.sh
 CONFIGURE_ARGS=		pkgsrc
 LDFLAGS+=		-lintl		# directly link, req. by ld 2.22
-LIBS.SunOS+=		-lsocket -lnsl
+LDFLAGS.SunOS+=		-lsocket -lnsl -lresolv
 
 PKG_SYSCONFSUBDIR=	freepops
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
