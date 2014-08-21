@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/08/13 13:04:28 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/08/21 07:54:08 wiz Exp $
 
-DISTNAME=	MyGoGrinder-2-0-0-J6
-PKGNAME=	${DISTNAME:S/2-0-0-/2.0.0./}
-PKGREVISION=	1
+DISTNAME=	MyGoGrinder-2.0.1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mygogrinder/}
 EXTRACT_SUFX=	.zip
@@ -35,7 +33,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.png ${DESTDIR}${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKSRC}/Tag*.txt ${DESTDIR}${PREFIX}/share/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/*.jar ${DESTDIR}${PREFIX}/share/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/License.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/"GNU LICENSE v.2 (1991).txt" ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/readme.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/DEMO.WGF ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}/demo.wgf
 	${INSTALL_DATA} ${WRKDIR}/"Xuan-Xuan-Qi-Jing-(problems).zip" ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}
