@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2014/05/05 00:48:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.28 2014/08/21 08:47:00 jperkin Exp $
 
 DISTNAME=		ebview-0.3.6
 PKGREVISION=		20
@@ -14,6 +14,7 @@ USE_TOOLS+=		gmake pkg-config msgfmt
 GNU_CONFIGURE=		YES
 
 LDFLAGS.DragonFly=	-lX11
+LDFLAGS.SunOS+=		-lX11
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/pangox-compat/buildlink3.mk"
