@@ -1,0 +1,16 @@
+$NetBSD: patch-Makefile.in,v 1.1 2014/08/21 20:44:16 wiz Exp $
+
+Don't install documentation with this package, it is in gtar-info
+(to reduce dependencies when gtar is used for bootstrapping).
+
+--- Makefile.in.orig	2014-07-27 20:33:48.000000000 +0000
++++ Makefile.in
+@@ -1278,7 +1278,7 @@ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ ACLOCAL_AMFLAGS = -I m4
+ EXTRA_DIST = ChangeLog.1 Make.rules
+-SUBDIRS = doc gnu lib rmt src scripts po tests
++SUBDIRS = gnu lib rmt src scripts po tests
+ gen_start_date = 2009-03-06
+ prev_change_log = ChangeLog.CVS
+ changelog_dir = .

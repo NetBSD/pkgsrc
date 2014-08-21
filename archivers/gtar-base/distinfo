@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.35 2014/08/17 16:28:18 wiz Exp $
+$NetBSD: distinfo,v 1.36 2014/08/21 20:44:16 wiz Exp $
 
 SHA1 (tar-1.28.tar.bz2) = 668ea52014ef7e70afc4ff7324410ee32f2970ef
 RMD160 (tar-1.28.tar.bz2) = a2edf2a854fa9a7bc7383638038a7465ae8bba51
 Size (tar-1.28.tar.bz2) = 2693989 bytes
-SHA1 (patch-ad) = f3a988a6b675a389d8d307fe1a90dde81ba98df5
+SHA1 (patch-Makefile.in) = 78cc142b9370317c52215c106ea1e7217e71f9b5
+SHA1 (patch-configure) = 9d3b26ab03c8a0a30c3dbfbdeadae4d14b7fd8dc
 SHA1 (patch-gnu_readlinkat.c) = b1ddbf5159db92df9186354f27db5c9cb93b9afa
+SHA1 (patch-lib_xattr-at.c) = c69631c118558c0c056feb5b55188b2b4c92cc19
+SHA1 (patch-src_Makefile.in) = 2e6c93b00f4c291a68884663968625e784103c3b
