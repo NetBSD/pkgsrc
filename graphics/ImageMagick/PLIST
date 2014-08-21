@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.80 2014/02/13 19:53:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.81 2014/08/21 21:41:52 wiz Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/MagickCore-config
@@ -17,6 +17,7 @@ bin/montage
 bin/stream
 include/ImageMagick-${IM_MAJOR_LIB_VER}/Magick++.h
 include/ImageMagick-${IM_MAJOR_LIB_VER}/Magick++/Blob.h
+include/ImageMagick-${IM_MAJOR_LIB_VER}/Magick++/ChannelMoments.h
 include/ImageMagick-${IM_MAJOR_LIB_VER}/Magick++/CoderInfo.h
 include/ImageMagick-${IM_MAJOR_LIB_VER}/Magick++/Color.h
 include/ImageMagick-${IM_MAJOR_LIB_VER}/Magick++/Drawable.h
@@ -1179,9 +1180,9 @@ share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/source/type-windows.xml
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/source/type.xml
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/source/wand.c
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/sponsors.html
-share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/support.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/stream.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/subversion.html
+share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/support.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/t-shirt.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/wand.png
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/webp.html
