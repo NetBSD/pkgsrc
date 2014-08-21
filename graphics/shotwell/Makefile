@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2014/08/03 22:13:19 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2014/08/21 15:35:08 jperkin Exp $
 
 DISTNAME=		shotwell-0.11.6
 PKGREVISION=		25
@@ -25,7 +25,6 @@ REPLACE_SH+=		configure
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+=	rm:-export-dynamic
 BUILDLINK_TRANSFORM+=	rm:-Wl,--no-as-needed
 .endif
 
