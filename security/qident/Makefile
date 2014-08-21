@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/23 18:16:56 asau Exp $
+# $NetBSD: Makefile,v 1.12 2014/08/21 16:26:20 jperkin Exp $
 
 DISTNAME=	qident-1.2
 CATEGORIES=	security net
@@ -10,6 +10,8 @@ COMMENT=	Small program to query an ident protocol server (rfc1413)
 
 USE_BSD_MAKEFILE=	YES
 USE_TOOLS+=		groff nroff
+
+LDFLAGS.SunOS+=	-lnsl -lresolv
 
 MANCOMPRESSED_IF_MANZ=	YES
 
