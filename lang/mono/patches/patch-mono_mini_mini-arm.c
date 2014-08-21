@@ -1,10 +1,10 @@
-$NetBSD: patch-mono_mini_mini-arm.c,v 1.1 2013/08/18 09:42:31 jmcneill Exp $
+$NetBSD: patch-mono_mini_mini-arm.c,v 1.2 2014/08/21 07:49:56 wiz Exp $
 
---- mono/mini/mini-arm.c.orig	2013-04-25 09:01:55.000000000 +0000
+--- mono/mini/mini-arm.c.orig	2014-08-12 16:50:38.000000000 +0000
 +++ mono/mini/mini-arm.c
-@@ -25,6 +25,11 @@
- #include "mono/arch/arm/arm-fpa-codegen.h"
- #include "mono/arch/arm/arm-vfp-codegen.h"
+@@ -53,6 +53,11 @@
+ #define IS_VFP (TRUE)
+ #endif
  
 +#ifdef __NetBSD__
 +#include <machine/sysarch.h>
@@ -14,9 +14,9 @@ $NetBSD: patch-mono_mini_mini-arm.c,v 1.1 2013/08/18 09:42:31 jmcneill Exp $
  #if defined(__ARM_EABI__) && defined(__linux__) && !defined(PLATFORM_ANDROID) && !defined(__native_client__)
  #define HAVE_AEABI_READ_TP 1
  #endif
-@@ -845,6 +850,34 @@ mono_arch_cpu_optimizations (guint32 *ex
- 	v5_supported = TRUE;
- 	darwin = TRUE;
+@@ -942,6 +947,34 @@ mono_arch_init (void)
+ 	   have a way to properly detect CPU features on it. */
+ 	thumb_supported = TRUE;
  	iphone_abi = TRUE;
 +#elif defined(__NetBSD__)
 +	char *s = NULL;
@@ -47,9 +47,9 @@ $NetBSD: patch-mono_mini_mini-arm.c,v 1.1 2013/08/18 09:42:31 jmcneill Exp $
 +	free(s);
 +	
  #else
- 	char buf [512];
- 	char *line;
-@@ -1022,6 +1055,11 @@ mono_arch_flush_icache (guint8 *code, gi
+ 	thumb_supported = mono_hwcap_arm_has_thumb;
+ 	thumb2_supported = mono_hwcap_arm_has_thumb2;
+@@ -1154,6 +1187,11 @@ mono_arch_flush_icache (guint8 *code, gi
  #ifdef MONO_CROSS_COMPILE
  #elif __APPLE__
  	sys_icache_invalidate (code, size);
