@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.17 2014/02/14 17:26:15 drochner Exp $
+@comment $NetBSD: PLIST,v 1.18 2014/08/21 20:38:47 wiz Exp $
 bin/veusz
 bin/veusz_listen
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/veusz/VERSION
 ${PYSITELIB}/veusz/__init__.py
 ${PYSITELIB}/veusz/__init__.pyc
@@ -137,6 +138,9 @@ ${PYSITELIB}/veusz/document/emf_export.pyo
 ${PYSITELIB}/veusz/document/export.py
 ${PYSITELIB}/veusz/document/export.pyc
 ${PYSITELIB}/veusz/document/export.pyo
+${PYSITELIB}/veusz/document/loader.py
+${PYSITELIB}/veusz/document/loader.pyc
+${PYSITELIB}/veusz/document/loader.pyo
 ${PYSITELIB}/veusz/document/mime.py
 ${PYSITELIB}/veusz/document/mime.pyc
 ${PYSITELIB}/veusz/document/mime.pyo
@@ -174,6 +178,7 @@ ${PYSITELIB}/veusz/examples/boxplot.vsz
 ${PYSITELIB}/veusz/examples/broken_axis.vsz
 ${PYSITELIB}/veusz/examples/coloredpoints.vsz
 ${PYSITELIB}/veusz/examples/contour.vsz
+${PYSITELIB}/veusz/examples/contour_labels.vsz
 ${PYSITELIB}/veusz/examples/dataset_operations.vsz
 ${PYSITELIB}/veusz/examples/datebar.dat
 ${PYSITELIB}/veusz/examples/datebar.vsz
@@ -255,6 +260,7 @@ ${PYSITELIB}/veusz/icons/error_barends.svg
 ${PYSITELIB}/veusz/icons/error_box.svg
 ${PYSITELIB}/veusz/icons/error_boxfill.svg
 ${PYSITELIB}/veusz/icons/error_curve.svg
+${PYSITELIB}/veusz/icons/error_curvefill.svg
 ${PYSITELIB}/veusz/icons/error_diamond.svg
 ${PYSITELIB}/veusz/icons/error_diamondfill.svg
 ${PYSITELIB}/veusz/icons/error_fillhorz.svg
