@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3142 2014/08/21 12:03:08 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3143 2014/08/21 14:01:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4086,3 +4086,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/nodejs to 0.10.31 [fhajny 2014-08-21]
 	Updated graphics/py-Pillow to 2.5.3 [obache 2014-08-21]
 	Updated graphics/png to 1.6.13 [wiz 2014-08-21]
+	Updated meta-pkgs/gnome to 2.26.2nb5 [wiz 2014-08-21]
