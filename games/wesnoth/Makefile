@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2014/08/13 10:57:35 adam Exp $
+# $NetBSD: Makefile,v 1.107 2014/08/21 17:50:35 jperkin Exp $
 
 DISTNAME=	wesnoth-1.10.6
 PKGREVISION=	10
@@ -65,6 +65,8 @@ PLIST_VARS+=		icons
 .if ${OPSYS} != "Darwin" && ${OPSYS} != "Cygwin"
 PLIST.icons=		yes
 .endif
+
+LDFLAGS.SunOS+=		-lintl -lsocket
 
 BUILDLINK_API_DEPENDS.SDL_mixer+=	SDL_mixer>=1.2.5nb3
 .include "../../audio/SDL_mixer/buildlink3.mk"
