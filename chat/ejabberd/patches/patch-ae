@@ -1,9 +1,11 @@
-$NetBSD: patch-ae,v 1.8 2014/07/30 09:45:38 fhajny Exp $
+$NetBSD: patch-ae,v 1.9 2014/08/21 19:32:27 tron Exp $
 
-Default locations.
---- ejabberdctl.template.orig	2014-07-22 15:42:49.000000000 +0000
-+++ ejabberdctl.template
-@@ -22,7 +22,7 @@ if [ "$INSTALLUSER" != "" ] ; then
+- Default locations.
+- Make it work with NetBSD's flock(1).
+
+--- ejabberdctl.template.orig	2014-07-22 16:42:49.000000000 +0100
++++ ejabberdctl.template	2014-08-21 20:17:35.000000000 +0100
+@@ -22,7 +22,7 @@
      EXEC_CMD="false"
      for GID in `id -G`; do
          if [ $GID -eq 0 ] ; then
@@ -12,7 +14,7 @@ Default locations.
          fi
      done
      if [ `id -g` -eq `id -g $INSTALLUSER` ] ; then
-@@ -67,10 +67,10 @@ if [ "$EJABBERD_CONFIG_PATH" = "" ] ; th
+@@ -67,10 +67,10 @@
      EJABBERD_CONFIG_PATH=$ETC_DIR/ejabberd.yml
  fi
  if [ "$LOGS_DIR" = "" ] ; then
@@ -25,7 +27,7 @@ Default locations.
  fi
  if [ "$EJABBERD_DOC_PATH" = "" ] ; then
      EJABBERD_DOC_PATH={{docdir}}
-@@ -81,7 +81,7 @@ if [ "$ERLANG_NODE_ARG" != "" ] ; then
+@@ -81,7 +81,7 @@
  fi
  if [ "{{release}}" != "true" ] ; then
      if [ "$EJABBERDDIR" = "" ] ; then
@@ -34,7 +36,7 @@ Default locations.
      fi
      if [ "$EJABBERD_EBIN_PATH" = "" ] ; then
          EJABBERD_EBIN_PATH=$EJABBERDDIR/ebin
-@@ -281,7 +281,7 @@ ctl()
+@@ -281,7 +281,7 @@
      # using flock if available. Expects a linux-style
      # flock that can lock a file descriptor.
      MAXCONNID=100
@@ -43,3 +45,12 @@ Default locations.
      FLOCK='/usr/bin/flock'
      if [ ! -x "$FLOCK" ] || [ ! -d "$CONNLOCKDIR" ] ; then
          JOT='/usr/bin/jot'
+@@ -308,7 +308,7 @@
+             CTL_LOCKFILE="$CONNLOCKDIR/$CTL_CONN"
+             (
+                 exec 8>"$CTL_LOCKFILE"
+-                if flock --nb 8; then
++                if flock -x -n 8; then
+                     ctlexec $CTL_CONN $COMMAND
+                     ssresult=$?
+                     # segregate from possible flock exit(1)
