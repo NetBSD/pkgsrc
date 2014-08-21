@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2014/08/21 19:41:38 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2014/08/21 19:55:08 wiz Exp $
 
 DISTNAME=	libgcrypt-1.6.2
 CATEGORIES=	security
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libgcrypt/ \
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://directory.fsf.org/project/libgcrypt/
+HOMEPAGE=	https://www.gnu.org/software/libgcrypt/
 COMMENT=	GNU cryptographic library
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
