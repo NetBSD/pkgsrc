@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.10 2013/09/05 15:29:05 drochner Exp $
+$NetBSD: patch-aa,v 1.11 2014/08/21 21:33:07 wiz Exp $
 
---- configure.py.orig	2013-04-21 12:01:57.000000000 +0000
+--- configure.py.orig	2014-07-03 14:00:02.000000000 +0000
 +++ configure.py
-@@ -345,7 +345,7 @@ class ConfigurePyQt4:
+@@ -346,7 +346,7 @@ class ConfigurePyQt4:
          pyqt_modules.append("QtCore")
  
          check_module("QtGui", "qwidget.h", "new QWidget()")
@@ -11,9 +11,9 @@ $NetBSD: patch-aa,v 1.10 2013/09/05 15:29:05 drochner Exp $
          check_module("QtMultimedia", "QAudioDeviceInfo",
                  "new QAudioDeviceInfo()")
          check_module("QtNetwork", "qhostaddress.h", "new QHostAddress()")
-@@ -369,8 +369,8 @@ class ConfigurePyQt4:
+@@ -372,8 +372,8 @@ class ConfigurePyQt4:
+         check_module("QtTest", "QtTest", "QTest::qSleep(0)")
          check_module("QtWebKit", "qwebpage.h", "new QWebPage()")
-         check_module("QtXml", "qdom.h", "new QDomDocument()")
          check_module("QtXmlPatterns", "qxmlname.h", "new QXmlName()")
 -        check_module("phonon", "phonon/videowidget.h",
 -                "new Phonon::VideoWidget()")
@@ -22,14 +22,14 @@ $NetBSD: patch-aa,v 1.10 2013/09/05 15:29:05 drochner Exp $
          check_module("QtAssistant", "qassistantclient.h",
                  "new QAssistantClient(\"foo\")", extra_lib_dirs=ass_lib_dirs,
                  extra_libs=ass_libs)
-@@ -2093,11 +2093,7 @@ int main(int argc, char **argv)
+@@ -2027,11 +2027,7 @@ int main(int argc, char **argv)
  
      out << QLibraryInfo::licensee() << '\\n';
  
 -#if defined(QT_SHARED) || defined(QT_DLL)
      out << "shared\\n";
 -#else
--    out << "\\n";
+-    out << "static\\n";
 -#endif
  
      // Determine which features should be disabled.
