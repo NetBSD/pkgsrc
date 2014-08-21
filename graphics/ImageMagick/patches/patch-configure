@@ -1,10 +1,19 @@
-$NetBSD: patch-configure,v 1.1 2013/11/05 17:27:10 adam Exp $
+$NetBSD: patch-configure,v 1.2 2014/08/21 21:41:52 wiz Exp $
 
-Portability fix.
+First chunk: ./configure: 28988: Syntax error: Bad substitution
+Others: test(1) portability fix.
 
---- configure.orig	2013-11-05 17:24:55.000000000 +0000
+--- configure.orig	2014-08-16 16:06:45.000000000 +0000
 +++ configure
-@@ -34656,7 +34656,7 @@ $as_echo "no" >&6; }
+@@ -28985,7 +28985,6 @@ fi
+ have_fpx='no'
+ FPX_LIBS=''
+ SAVED_LIBS=${LIBS}
+-LIBS=${LIBS/-ldjvulibre/}
+ if test "$with_fpx" != 'no'; then
+     { $as_echo "$as_me:${as_lineno-$LINENO}: result: -------------------------------------------------------------" >&5
+ $as_echo "-------------------------------------------------------------" >&6; }
+@@ -33879,7 +33878,7 @@ $as_echo "no" >&6; }
  fi
  
  
@@ -13,7 +22,7 @@ Portability fix.
    MPEGDecodeDelegateDefault='ffmpeg'
    # Extract the first word of ""$MPEGDecodeDelegateDefault"", so it can be a program name with args.
  set dummy "$MPEGDecodeDelegateDefault"; ac_word=$2
-@@ -34741,7 +34741,7 @@ $as_echo "no" >&6; }
+@@ -33964,7 +33963,7 @@ $as_echo "no" >&6; }
  fi
  
  
