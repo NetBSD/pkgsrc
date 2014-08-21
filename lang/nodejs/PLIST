@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2014/08/01 19:44:09 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.18 2014/08/21 09:28:44 fhajny Exp $
 bin/node
 bin/npm
 include/node/ares.h
@@ -30,9 +30,9 @@ include/node/v8stdint.h
 include/node/zconf.h
 include/node/zlib.h
 ${PLIST.dtrace}lib/dtrace/node.d
-lib/node_modules/npm/.eslintrc
 lib/node_modules/npm/.npmignore
 lib/node_modules/npm/.npmrc
+lib/node_modules/npm/.tern-project
 lib/node_modules/npm/.travis.yml
 lib/node_modules/npm/AUTHORS
 lib/node_modules/npm/CONTRIBUTING.md
@@ -522,7 +522,7 @@ lib/node_modules/npm/node_modules/editor/example/edit.js
 lib/node_modules/npm/node_modules/editor/index.js
 lib/node_modules/npm/node_modules/editor/package.json
 lib/node_modules/npm/node_modules/fstream-npm/.npmignore
-lib/node_modules/npm/node_modules/fstream-npm/LICENCE
+lib/node_modules/npm/node_modules/fstream-npm/LICENSE
 lib/node_modules/npm/node_modules/fstream-npm/README.md
 lib/node_modules/npm/node_modules/fstream-npm/example/bundle.js
 lib/node_modules/npm/node_modules/fstream-npm/example/dir-tar.js
@@ -563,7 +563,7 @@ lib/node_modules/npm/node_modules/fstream/lib/socket-reader.js
 lib/node_modules/npm/node_modules/fstream/lib/writer.js
 lib/node_modules/npm/node_modules/fstream/package.json
 lib/node_modules/npm/node_modules/github-url-from-git/.npmignore
-lib/node_modules/npm/node_modules/github-url-from-git/History.md
+lib/node_modules/npm/node_modules/github-url-from-git/LICENSE
 lib/node_modules/npm/node_modules/github-url-from-git/Makefile
 lib/node_modules/npm/node_modules/github-url-from-git/Readme.md
 lib/node_modules/npm/node_modules/github-url-from-git/index.js
@@ -637,6 +637,7 @@ lib/node_modules/npm/node_modules/lru-cache/README.md
 lib/node_modules/npm/node_modules/lru-cache/lib/lru-cache.js
 lib/node_modules/npm/node_modules/lru-cache/package.json
 lib/node_modules/npm/node_modules/minimatch/.npmignore
+lib/node_modules/npm/node_modules/minimatch/.travis.yml
 lib/node_modules/npm/node_modules/minimatch/LICENSE
 lib/node_modules/npm/node_modules/minimatch/README.md
 lib/node_modules/npm/node_modules/minimatch/minimatch.js
@@ -650,8 +651,16 @@ lib/node_modules/npm/node_modules/mkdirp/.npmignore
 lib/node_modules/npm/node_modules/mkdirp/.travis.yml
 lib/node_modules/npm/node_modules/mkdirp/LICENSE
 lib/node_modules/npm/node_modules/mkdirp/README.markdown
+lib/node_modules/npm/node_modules/mkdirp/bin/cmd.js
+lib/node_modules/npm/node_modules/mkdirp/bin/usage.txt
 lib/node_modules/npm/node_modules/mkdirp/examples/pow.js
 lib/node_modules/npm/node_modules/mkdirp/index.js
+lib/node_modules/npm/node_modules/mkdirp/node_modules/minimist/.travis.yml
+lib/node_modules/npm/node_modules/mkdirp/node_modules/minimist/LICENSE
+lib/node_modules/npm/node_modules/mkdirp/node_modules/minimist/example/parse.js
+lib/node_modules/npm/node_modules/mkdirp/node_modules/minimist/index.js
+lib/node_modules/npm/node_modules/mkdirp/node_modules/minimist/package.json
+lib/node_modules/npm/node_modules/mkdirp/node_modules/minimist/readme.markdown
 lib/node_modules/npm/node_modules/mkdirp/package.json
 lib/node_modules/npm/node_modules/node-gyp/.jshintrc
 lib/node_modules/npm/node_modules/node-gyp/.npmignore
