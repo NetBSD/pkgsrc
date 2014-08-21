@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/02/06 17:28:24 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/08/21 21:35:39 wiz Exp $
 ${PYSITELIB}/PyQt4/Qsci.la
 qt4/api/python/QScintilla2.api
 share/sip${PYVERSSUFFIX}/Qsci/qsciabstractapis.sip
@@ -7,9 +7,11 @@ share/sip${PYVERSSUFFIX}/Qsci/qscicommand.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscicommandset.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscidocument.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscilexer.sip
+share/sip${PYVERSSUFFIX}/Qsci/qscilexeravs.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscilexerbash.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscilexerbatch.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscilexercmake.sip
+share/sip${PYVERSSUFFIX}/Qsci/qscilexercoffeescript.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscilexercpp.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscilexercsharp.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscilexercss.sip
@@ -28,6 +30,7 @@ share/sip${PYVERSSUFFIX}/Qsci/qscilexermatlab.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscilexeroctave.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscilexerpascal.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscilexerperl.sip
+share/sip${PYVERSSUFFIX}/Qsci/qscilexerpo.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscilexerpostscript.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscilexerpov.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscilexerproperties.sip
