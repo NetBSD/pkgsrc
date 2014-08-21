@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2013/06/04 22:16:10 tron Exp $
+# $NetBSD: Makefile,v 1.30 2014/08/21 14:08:04 jperkin Exp $
 
 DISTNAME=	neverball-1.5.4
 PKGREVISION=	7
@@ -22,6 +22,7 @@ SHAREDIR=	${PREFIX}/share/${PKGBASE}
 INSTALLATION_DIRS=	bin share/doc/${PKGBASE} share/${PKGBASE}
 
 LDFLAGS.DragonFly=	-lX11 -lm
+LDFLAGS.SunOS+=		-lX11 -lm
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/MANUAL ${WRKSRC}/README \
