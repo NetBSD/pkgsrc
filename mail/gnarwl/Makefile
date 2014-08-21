@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/07/29 15:24:37 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/08/21 09:37:21 jperkin Exp $
 
 DISTNAME=	gnarwl-3.6
 PKGREVISION=	1
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake groff
 
 GNARWL_LIBS=	-L${BUILDLINK_PREFIX.openldap}/lib	\
 		-W,-lR${BUILDLINK_PREFIX.openldap}/lib	\
@@ -23,10 +23,13 @@ GNARWL_LIBS=	-L${BUILDLINK_PREFIX.openldap}/lib	\
 CONFIGURE_ENV+=	LDFLAGS=${GNARWL_LIBS:Q}
 CONFIGURE_ARGS+=--with-homedir=${GNARWL_HOME}
 
+LDFLAGS.SunOS+=	-liconv
+
 GNARWL_USER?=	gnarwl
 GNARWL_GROUP?=	gnarwl
 GNARWL_HOME?=	${VARBASE}/gnarwl
 BUILD_DEFS+=	GNARWL_USER GNARWL_GROUP 
+PKG_GROUPS+=	${GNARWL_GROUP}
 PKG_USERS+=	${GNARWL_USER}:${GNARWL_GROUP}
 PKG_HOME.gnarwl=${GNARWL_HOME}
 
