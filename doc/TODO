@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13581 2014/08/21 19:39:04 wiz Exp $
+$NetBSD: TODO,v 1.13582 2014/08/21 20:38:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1126,7 +1126,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vbetool-1.1
 	o vera-1.17
 	o verilog-current-20130827 [wip]
-	o veusz-1.21
 	o vfu-4.09
 	o vicq-0.4.2
 	o viewvc-1.1.22
