@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2011/07/13 21:21:52 adam Exp $
+$NetBSD: patch-aa,v 1.8 2014/08/21 19:41:38 wiz Exp $
+
+Add rpath to configure script.
 
 --- src/libgcrypt-config.in.orig	2008-08-19 17:20:04.000000000 +0200
 +++ src/libgcrypt-config.in
