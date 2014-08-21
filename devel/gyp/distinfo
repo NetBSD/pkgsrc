@@ -1,8 +1,15 @@
-$NetBSD: distinfo,v 1.4 2014/07/19 09:08:36 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2014/08/21 14:49:43 he Exp $
 
 SHA1 (gyp-0.1pre1949.tar.gz) = 6da4918ba1dd6bf47fd5fe09c09264c7b1e9d9ce
 RMD160 (gyp-0.1pre1949.tar.gz) = ce5de00cc1e2f5df5d65ce0ac3e73870ffcad125
 Size (gyp-0.1pre1949.tar.gz) = 585639 bytes
-SHA1 (patch-gyptest.py) = 6127676275b17c7f4a488c69af64e29cbb8fe1cc
-SHA1 (patch-pylib_gyp_common.py) = 03d52e3a27e064479e6438d88c8c8081bb20f754
-SHA1 (patch-pylib_gyp_generator_make.py) = b02737fa8e54a84600aa03e5785f8e0986ffcdb8
+SHA1 (patch-gyptest.py) = e33b65b31390fc5d4989e75f72f35b13055e3b41
+SHA1 (patch-pylib_gyp_common.py) = b074a71ca0f2a131ace33f35e3975239d9aa4b4d
+SHA1 (patch-pylib_gyp_generator_make.py) = 6b459102c8751233ab7c36357a1d439e07ed5fe7
+SHA1 (patch-test_lib_TestGyp.py) = 738f02641265a3c0ba7877d973ebe74490c6a862
+SHA1 (patch-test_library__dirs_subdir_test.gyp) = 9eb3b39f0bdbf54df6b45a3c613d83e9dfb68d8f
+SHA1 (patch-test_module_src_module.gyp) = 8016db83cce1244f17295d3dfd725f75ff78cb28
+SHA1 (patch-test_module_src_program.c) = ab55d357d9855f79f6fdfb151767f0521a217871
+SHA1 (patch-test_variables_commands_commands-repeated.gyp.stdout) = e42490b86b4adf4aca7df1dae9be9d6aa1583bd2
+SHA1 (patch-test_variables_commands_commands.gyp.ignore-env.stdout) = 3eb017f6fac704cb7e7ed179b8b30fb8353ec64e
+SHA1 (patch-test_variables_commands_commands.gyp.stdout) = 6d5f73d70e723de278ba0f2563f7c05ae788a4dd
