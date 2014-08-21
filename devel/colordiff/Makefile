@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2014/05/29 23:35:34 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.6 2014/08/21 14:05:11 wiz Exp $
 
-DISTNAME=	colordiff-1.0.9
-PKGREVISION=	3
+DISTNAME=	colordiff-1.0.13
 CATEGORIES=	devel
-MASTER_SITES=	http://colordiff.sourceforge.net/
+MASTER_SITES=	http://www.colordiff.org/
 
 MAINTAINER=	rhansen@bbn.com
-HOMEPAGE=	http://colordiff.sourceforge.net/
+HOMEPAGE=	http://www.colordiff.org/
 COMMENT=	Colour-highlighted 'diff' output
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
