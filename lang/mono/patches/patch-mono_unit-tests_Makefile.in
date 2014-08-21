@@ -1,0 +1,19 @@
+$NetBSD: patch-mono_unit-tests_Makefile.in,v 1.1 2014/08/21 07:49:56 wiz Exp $
+
+--- mono/unit-tests/Makefile.in.orig	2014-08-12 16:51:02.000000000 +0000
++++ mono/unit-tests/Makefile.in
+@@ -79,12 +79,8 @@ POST_UNINSTALL = :
+ build_triplet = @build@
+ host_triplet = @host@
+ target_triplet = @target@
+-@CROSS_COMPILE_FALSE@@HOST_WIN32_FALSE@@SUPPORT_BOEHM_TRUE@noinst_PROGRAMS = test-sgen-qsort$(EXEEXT) \
+-@CROSS_COMPILE_FALSE@@HOST_WIN32_FALSE@@SUPPORT_BOEHM_TRUE@	test-gc-memfuncs$(EXEEXT) \
+-@CROSS_COMPILE_FALSE@@HOST_WIN32_FALSE@@SUPPORT_BOEHM_TRUE@	test-mono-linked-list-set$(EXEEXT)
+-@CROSS_COMPILE_FALSE@@HOST_WIN32_FALSE@@SUPPORT_BOEHM_TRUE@TESTS = test-sgen-qsort$(EXEEXT) \
+-@CROSS_COMPILE_FALSE@@HOST_WIN32_FALSE@@SUPPORT_BOEHM_TRUE@	test-gc-memfuncs$(EXEEXT) \
+-@CROSS_COMPILE_FALSE@@HOST_WIN32_FALSE@@SUPPORT_BOEHM_TRUE@	test-mono-linked-list-set$(EXEEXT)
++@CROSS_COMPILE_FALSE@@HOST_WIN32_FALSE@@SUPPORT_BOEHM_TRUE@noinst_PROGRAMS = 
++@CROSS_COMPILE_FALSE@@HOST_WIN32_FALSE@@SUPPORT_BOEHM_TRUE@TESTS = 
+ subdir = mono/unit-tests
+ DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
+ 	$(top_srcdir)/mkinstalldirs $(top_srcdir)/depcomp \
