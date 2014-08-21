@@ -1,6 +1,6 @@
-$NetBSD: patch-configure,v 1.6 2014/08/03 22:30:05 wiz Exp $
+$NetBSD: patch-configure,v 1.7 2014/08/21 04:51:08 dbj Exp $
 
---- configure.orig	2014-05-12 06:05:21.000000000 +0000
+--- configure.orig	2014-07-08 09:44:12.000000000 +0000
 +++ configure
 @@ -4703,7 +4703,7 @@ else
      We can't simply define LARGE_OFF_T to be 9223372036854775807,
@@ -47,6 +47,24 @@ $NetBSD: patch-configure,v 1.6 2014/08/03 22:30:05 wiz Exp $
    int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
  		       && LARGE_OFF_T % 2147483647 == 1)
  		      ? 1 : -1];
+@@ -4909,7 +4909,7 @@ rm -f core conftest.err conftest.$ac_obj
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+-#if !(defined(__clang__) && __clang_major__ >= 3 && __clang_minor__ >= 3)
++#if !(defined(__clang__) && __clang_major__ >= 3 && (__clang_major__ > 3 || __clang_minor__ >= 3))
+ #error Not a supported Clang compiler
+ #endif
+ 
+@@ -4967,7 +4967,7 @@ rm -f core conftest.err conftest.$ac_obj
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+-#if !(defined(__clang__) && __clang_major__ >= 3 && __clang_minor__ >= 3)
++#if !(defined(__clang__) && __clang_major__ >= 3 && (__clang_major__ > 3 || __clang_minor__ >= 3))
+ #error Not a supported Clang++ compiler
+ #endif
+ 
 @@ -17312,10 +17312,13 @@ int
  main ()
  {
