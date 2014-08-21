@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.23 2013/09/05 15:29:05 drochner Exp $
+@comment $NetBSD: PLIST.common,v 1.24 2014/08/21 21:33:07 wiz Exp $
 bin/pylupdate4
 bin/pyrcc4
 bin/pyuic4
@@ -205,6 +205,7 @@ share/sip${PYVERSSUFFIX}/QtDesigner/qpydesignerpropertysheetextension.sip
 share/sip${PYVERSSUFFIX}/QtDesigner/qpydesignertaskmenuextension.sip
 share/sip${PYVERSSUFFIX}/QtDesigner/taskmenu.sip
 share/sip${PYVERSSUFFIX}/QtGui/QtGuimod.sip
+share/sip${PYVERSSUFFIX}/QtGui/opengl_types.sip
 share/sip${PYVERSSUFFIX}/QtGui/qabstractbutton.sip
 share/sip${PYVERSSUFFIX}/QtGui/qabstractitemdelegate.sip
 share/sip${PYVERSSUFFIX}/QtGui/qabstractitemview.sip
@@ -460,7 +461,6 @@ share/sip${PYVERSSUFFIX}/QtNetwork/qtcpsocket.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qudpsocket.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qurlinfo.sip
 share/sip${PYVERSSUFFIX}/QtOpenGL/QtOpenGLmod.sip
-share/sip${PYVERSSUFFIX}/QtOpenGL/opengl_types.sip
 share/sip${PYVERSSUFFIX}/QtOpenGL/qgl.sip
 share/sip${PYVERSSUFFIX}/QtOpenGL/qglbuffer.sip
 share/sip${PYVERSSUFFIX}/QtOpenGL/qglcolormap.sip
