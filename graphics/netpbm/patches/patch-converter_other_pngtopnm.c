@@ -1,9 +1,9 @@
-$NetBSD: patch-af,v 1.16 2011/04/04 09:17:24 adam Exp $
+$NetBSD: patch-converter_other_pngtopnm.c,v 1.1 2014/08/21 20:58:23 wiz Exp $
 
-Fix build with png-1.5.
+Fix build with png-1.5 and newer.
 
---- converter/other/pngtopnm.c.orig	2009-09-03 16:34:36.000000000 +0100
-+++ converter/other/pngtopnm.c	2011-01-15 18:19:09.000000000 +0000
+--- converter/other/pngtopnm.c.orig	2011-11-25 00:15:46.000000000 +0000
++++ converter/other/pngtopnm.c
 @@ -44,12 +44,6 @@
  #include "nstring.h"
  #include "shhopt.h"
@@ -17,7 +17,7 @@ Fix build with png-1.5.
  typedef struct _jmpbuf_wrapper {
    jmp_buf jmpbuf;
  } jmpbuf_wrapper;
-@@ -187,7 +181,7 @@
+@@ -187,7 +181,7 @@ parseCommandLine(int                 arg
  
  
  
@@ -26,7 +26,7 @@ Fix build with png-1.5.
  
  static png_uint_16
  _get_png_val (png_byte ** const pp,
-@@ -266,33 +260,39 @@
+@@ -266,33 +260,39 @@ png_color c;
  }
  
  #ifdef __STDC__
@@ -78,7 +78,7 @@ Fix build with png-1.5.
          for (k = 0 ; k < 16 ; k++)
            putc ((int)' ', tfp);
      }
-@@ -301,9 +301,10 @@
+@@ -301,9 +301,10 @@ FILE *tfp;
  }
  
  #ifdef __STDC__
@@ -91,25 +91,35 @@ Fix build with png-1.5.
  png_info *info_ptr;
  #endif
  {
-@@ -311,12 +312,13 @@
+@@ -311,19 +312,20 @@ png_info *info_ptr;
          "", "January", "February", "March", "April", "May", "June",
          "July", "August", "September", "October", "November", "December"
      };
 +  png_timep mod_time;
  
 -  if (info_ptr->valid & PNG_INFO_tIME) {
+-    if (info_ptr->mod_time.month < 1 ||
+-      info_ptr->mod_time.month >= ARRAY_SIZE(month)) {
 +  if (png_get_tIME(png_ptr, info_ptr, &mod_time) & PNG_INFO_tIME) {
++    if (mod_time->month < 1 ||
++      mod_time->month >= ARRAY_SIZE(month)) {
+       pm_message("tIME chunk in PNG input is invalid; "
+                  "modification time of image is unknown.  "
+                  "The month value, which should be in the range "
+-                 "1-12, is %u", info_ptr->mod_time.month);
++                 "1-12, is %u", mod_time->month);
+     } else
      pm_message ("modification time: %02d %s %d %02d:%02d:%02d",
 -                info_ptr->mod_time.day, month[info_ptr->mod_time.month],
 -                info_ptr->mod_time.year, info_ptr->mod_time.hour,
 -                info_ptr->mod_time.minute, info_ptr->mod_time.second);
-+                mod_time->day, month[mod_time->month],
-+                mod_time->year, mod_time->hour,
-+                mod_time->minute, mod_time->second);
++		mod_time->day, month[mod_time->month],
++		mod_time->year, mod_time->hour,
++		mod_time->minute, mod_time->second);
    }
  }
  
-@@ -353,12 +355,28 @@
+@@ -360,12 +362,28 @@ png_const_charp msg;
  
  
  static void
@@ -140,7 +150,7 @@ Fix build with png-1.5.
        case PNG_COLOR_TYPE_GRAY:
          type_string = "gray";
          break;
-@@ -380,90 +398,101 @@
+@@ -387,90 +405,101 @@ dump_png_info(png_info *info_ptr) {
          break;
      }
  
@@ -270,7 +280,7 @@ Fix build with png-1.5.
          pm_message("sRGB chunk: present");
      else
          pm_message("sRGB chunk: not present");
-@@ -472,19 +501,19 @@
+@@ -479,19 +508,19 @@ dump_png_info(png_info *info_ptr) {
  
  
  static bool
@@ -297,7 +307,7 @@ Fix build with png-1.5.
          /* There seems to be a problem here: you can't compare real
             numbers for equality.  Also, I'm not sure the gamma
             corrected/uncorrected color spaces are right here.  
-@@ -530,9 +559,11 @@
+@@ -537,9 +566,11 @@ setupGammaCorrection(png_struct * const 
      if (displaygamma == -1.0)
          *totalgammaP = -1.0;
      else {
@@ -311,7 +321,7 @@ Fix build with png-1.5.
          else {
              if (verbose)
                  pm_message("PNG doesn't specify image gamma.  Assuming 1.0");
-@@ -548,10 +579,14 @@
+@@ -555,10 +586,14 @@ setupGammaCorrection(png_struct * const 
          } else {
              png_set_gamma(png_ptr, displaygamma, imageGamma);
              *totalgammaP = imageGamma * displaygamma;
@@ -326,7 +336,7 @@ Fix build with png-1.5.
              if (verbose)
                  pm_message("image gamma is %4.2f, "
                             "converted for display gamma of %4.2f",
-@@ -563,20 +598,24 @@
+@@ -570,20 +605,24 @@ setupGammaCorrection(png_struct * const 
  
  
  static bool
@@ -357,7 +367,7 @@ Fix build with png-1.5.
                      foundGray = TRUE;
                  }
              }
-@@ -604,14 +643,16 @@
+@@ -611,14 +650,16 @@ setupSignificantBits(png_struct *       
  
    Return the result as *maxvalP.
  -----------------------------------------------------------------------------*/
@@ -378,7 +388,7 @@ Fix build with png-1.5.
                  /* Use same maxval as PNG transparency palette for simplicity*/
                  *maxvalP = 255;
              else
-@@ -621,7 +662,7 @@
+@@ -628,7 +669,7 @@ setupSignificantBits(png_struct *       
              /* Use same maxval as PNG palette for simplicity */
              *maxvalP = 255;
      } else {
@@ -387,7 +397,7 @@ Fix build with png-1.5.
      }
  
      /* sBIT handling is very tricky. If we are extracting only the
-@@ -634,20 +675,26 @@
+@@ -641,20 +682,26 @@ setupSignificantBits(png_struct *       
         is used 
      */
      
@@ -421,7 +431,7 @@ Fix build with png-1.5.
                          trans_mix = FALSE;
                          break;
                      }
-@@ -658,70 +705,76 @@
+@@ -665,70 +712,76 @@ setupSignificantBits(png_struct *       
              /* else fall though to normal case */
  
          case ALPHA_NONE:
@@ -533,7 +543,7 @@ Fix build with png-1.5.
              }
              break;
  
-@@ -732,22 +785,28 @@
+@@ -739,22 +792,28 @@ setupSignificantBits(png_struct *       
  
  
  static bool
@@ -569,7 +579,7 @@ Fix build with png-1.5.
                  foundColor = TRUE;
          }
          retval = foundColor;
-@@ -760,14 +819,15 @@
+@@ -767,14 +826,15 @@ imageHasColor(png_info * const info_ptr)
  
  
  static void
@@ -587,7 +597,7 @@ Fix build with png-1.5.
          *pnmTypeP = PPM_TYPE;
      else {
          if (maxval > 1)
-@@ -780,7 +840,8 @@
+@@ -787,7 +847,8 @@ determineOutputType(png_info *          
  
  
  static void
@@ -597,7 +607,7 @@ Fix build with png-1.5.
                     const char *      const requestedColor,
                     float             const totalgamma,
                     xelval            const maxval,
-@@ -791,6 +852,8 @@
+@@ -798,6 +859,8 @@ getBackgroundColor(png_info *        con
     Otherwise, if the PNG specifies a background color, that's the one.
     And otherwise, it's white.
  -----------------------------------------------------------------------------*/
@@ -606,7 +616,7 @@ Fix build with png-1.5.
      if (requestedColor) {
          /* Background was specified from the command-line; we always
             use that.  I chose to do no gamma-correction in this case;
-@@ -802,27 +865,32 @@
+@@ -809,27 +872,32 @@ getBackgroundColor(png_info *        con
          bgColorP->g = PPM_GETG(backcolor);
          bgColorP->b = PPM_GETB(backcolor);
  
@@ -648,7 +658,7 @@ Fix build with png-1.5.
              
              bgColorP->r = gamma_correct(rawBgcolor.red,   totalgamma);
              bgColorP->g = gamma_correct(rawBgcolor.green, totalgamma);
-@@ -841,6 +909,7 @@
+@@ -848,6 +916,7 @@ static void
  writePnm(FILE *              const ofP,
           xelval              const maxval,
           int                 const pnm_type,
@@ -656,7 +666,7 @@ Fix build with png-1.5.
           png_info *          const info_ptr,
           png_byte **         const png_image,
           pngcolor            const bgColor,
-@@ -858,6 +927,7 @@
+@@ -865,6 +934,7 @@ writePnm(FILE *              const ofP,
  -----------------------------------------------------------------------------*/
      xel * xelrow;
      unsigned int row;
@@ -664,7 +674,7 @@ Fix build with png-1.5.
  
      if (verbose)
          pm_message ("writing a %s file (maxval=%u)",
-@@ -867,27 +937,35 @@
+@@ -874,27 +944,35 @@ writePnm(FILE *              const ofP,
                      "UNKNOWN!", 
                      maxval);
      
@@ -712,7 +722,7 @@ Fix build with png-1.5.
              }
              break;
  
-@@ -902,19 +980,31 @@
+@@ -909,19 +987,31 @@ writePnm(FILE *              const ofP,
              break;
  
              case PNG_COLOR_TYPE_PALETTE: {
@@ -757,7 +767,7 @@ Fix build with png-1.5.
              }
              break;
                  
-@@ -925,8 +1015,8 @@
+@@ -932,8 +1022,8 @@ writePnm(FILE *              const ofP,
                  fgColor.g = get_png_val(png_pixelP);
                  fgColor.b = get_png_val(png_pixelP);
                  setXel(&xelrow[col], fgColor, bgColor, alpha_handling,
@@ -768,7 +778,7 @@ Fix build with png-1.5.
              }
              break;
  
-@@ -943,10 +1033,10 @@
+@@ -950,10 +1040,10 @@ writePnm(FILE *              const ofP,
              break;
  
              default:
@@ -781,7 +791,7 @@ Fix build with png-1.5.
      }
      pnm_freerow (xelrow);
  }
-@@ -967,6 +1057,7 @@
+@@ -974,6 +1064,7 @@ convertpng(FILE *             const ifp,
      int pnm_type;
      pngcolor bgColor;
      float totalgamma;
@@ -789,7 +799,7 @@ Fix build with png-1.5.
  
      *errorlevelP = 0;
  
-@@ -989,28 +1080,28 @@
+@@ -996,28 +1087,28 @@ convertpng(FILE *             const ifp,
      png_set_sig_bytes (png_ptr, SIG_CHECK_SIZE);
      png_read_info (png_ptr, info_ptr);
  
@@ -826,7 +836,7 @@ Fix build with png-1.5.
          png_image[y] = malloc (linesize);
          if (png_image[y] == NULL) {
              for (x = 0 ; x < y ; x++)
-@@ -1022,7 +1113,7 @@
+@@ -1029,7 +1120,7 @@ convertpng(FILE *             const ifp,
          }
      }
  
@@ -835,7 +845,7 @@ Fix build with png-1.5.
          png_set_packing (png_ptr);
  
      setupGammaCorrection(png_ptr, info_ptr, cmdline.gamma, &totalgamma);
-@@ -1030,8 +1121,8 @@
+@@ -1037,8 +1128,8 @@ convertpng(FILE *             const ifp,
      setupSignificantBits(png_ptr, info_ptr, cmdline.alpha,
                           &maxval, errorlevelP);
  
@@ -846,7 +856,7 @@ Fix build with png-1.5.
  
      png_read_image (png_ptr, png_image);
      png_read_end (png_ptr, info_ptr);
-@@ -1041,16 +1132,17 @@
+@@ -1048,16 +1139,17 @@ convertpng(FILE *             const ifp,
         completes.  That's because it comes from chunks that are at the
         end of the stream.
      */
@@ -869,7 +879,7 @@ Fix build with png-1.5.
          if (r != 1.0) {
              pm_message ("warning - non-square pixels; "
                          "to fix do a 'pamscale -%cscale %g'",
-@@ -1060,13 +1152,13 @@
+@@ -1067,13 +1159,13 @@ convertpng(FILE *             const ifp,
          }
      }
  
