@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2014/05/05 00:47:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2014/08/21 15:54:53 jperkin Exp $
 #
 
 DISTNAME=	quarry-0.2.0
@@ -13,6 +13,8 @@ COMMENT=	Multi-purpose GUI for several board games
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
+
+LDFLAGS.SunOS+=	-liconv
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
