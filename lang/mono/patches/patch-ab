@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.32 2013/09/13 20:47:55 jperkin Exp $
+$NetBSD: patch-ab,v 1.33 2014/08/21 07:49:56 wiz Exp $
 
---- configure.orig	2013-04-25 09:08:54.000000000 +0000
+--- configure.orig	2014-08-12 16:51:03.000000000 +0000
 +++ configure
-@@ -3843,7 +3843,7 @@ $as_echo "#define PLATFORM_NO_SYMLINKS 1
+@@ -4018,7 +4018,7 @@ $as_echo "#define PLATFORM_NO_SYMLINKS 1
  		mono_cv_clang=no
  		if test "x$cross_compiling" = "xno"; then
  			target_win32=yes
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.32 2013/09/13 20:47:55 jperkin Exp $
  
  $as_echo "#define TARGET_WIN32 1" >>confdefs.h
  
-@@ -3895,12 +3895,15 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
+@@ -4054,12 +4054,15 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
  		CPPFLAGS="$CPPFLAGS -DPLATFORM_BSD"
  		libmono_ldflags="-pthread"
  		need_link_unlink=yes
@@ -29,7 +29,7 @@ $NetBSD: patch-ab,v 1.32 2013/09/13 20:47:55 jperkin Exp $
  		host_win32=no
  		if test "x$PTHREAD_CFLAGS" = "x"; then
  			CPPFLAGS="$CPPFLAGS -DGC_FREEBSD_THREADS"
-@@ -3916,7 +3919,8 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
+@@ -4075,7 +4078,8 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
  			LDFLAGS="$LDFLAGS $PTHREAD_LIBS -L/usr/local/lib"
  			libmono_ldflags="$PTHREAD_LIBS"
  		fi
@@ -39,7 +39,7 @@ $NetBSD: patch-ab,v 1.32 2013/09/13 20:47:55 jperkin Exp $
  		need_link_unlink=yes
  
  $as_echo "#define PTHREAD_POINTER_ID 1" >>confdefs.h
-@@ -21395,6 +21399,7 @@ $as_echo_n "checking for Solaris XPG4 su
+@@ -21735,6 +21739,7 @@ $as_echo_n "checking for Solaris XPG4 su
  			if test -f /usr/lib/libxnet.so; then
  				CPPFLAGS="$CPPFLAGS -D_XOPEN_SOURCE=500"
  	    			CPPFLAGS="$CPPFLAGS -D__EXTENSIONS__"
@@ -47,16 +47,25 @@ $NetBSD: patch-ab,v 1.32 2013/09/13 20:47:55 jperkin Exp $
  				CPPFLAGS="$CPPFLAGS -D_XOPEN_SOURCE_EXTENDED=1"
             			LIBS="$LIBS -lxnet"
    	    			{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
-@@ -24527,7 +24532,7 @@ LIBC="libc.so.6"
+@@ -24934,7 +24939,7 @@ $as_echo_n "checking LLVM version... " >
+    { $as_echo "$as_me:${as_lineno-$LINENO}: result: $llvm_version" >&5
+ $as_echo "$llvm_version" >&6; }
+    if echo $llvm_version | grep -q 'mono'; then
+-	  if test "x$enable_llvm_version_check" == "xyes"; then
++	  if test "x$enable_llvm_version_check" = "xyes"; then
+ 	  	 if test "$llvm_version" != "$expected_llvm_version"; then
+ 	  	 	as_fn_error $? "Expected llvm version $expected_llvm_version, but llvm-config --version returned $llvm_version\"" "$LINENO" 5
+ 	  	 fi
+@@ -25010,7 +25015,7 @@ LIBC="libc.so.6"
  INTL="libc.so.6"
  SQLITE="libsqlite.so.0"
  SQLITE3="libsqlite3.so.0"
 -X11="libX11.so"
 +X11="@X11BASE@/lib/libX11.so"
+ XINERAMA="libXinerama.so"
  
  sizeof_register="SIZEOF_VOID_P"
- 
-@@ -24635,6 +24640,11 @@ $as_echo "#define __mono_ilp32__ 1" >>co
+@@ -25116,6 +25121,11 @@ $as_echo "#define __mono_ilp32__ 1" >>co
  			sizeof_register=8
  		fi
  		case $host_os in
@@ -68,8 +77,8 @@ $NetBSD: patch-ab,v 1.32 2013/09/13 20:47:55 jperkin Exp $
  		  linux*)
  			sgen_supported=true
  			AOT_SUPPORTED="yes"
-@@ -24765,13 +24775,17 @@ fi
- 	    NESTED_LIBGC_FLAGS="$NESTED_LIBGC_FLAGS -DHAVE_ARMV6"
+@@ -25246,13 +25256,17 @@ fi
+ 	    CPPFLAGS_FOR_LIBGC="$CPPFLAGS_FOR_LIBGC"
  		sgen_supported=true
  		;;
 -	arm*-linux*)
@@ -86,10 +95,10 @@ $NetBSD: patch-ab,v 1.32 2013/09/13 20:47:55 jperkin Exp $
 +			AOT_SUPPORTED="yes"
 +			;;
 +		esac
- 		if test "x$cross_compiling" != "xno"; then
- 		   # Provide sane defaults when cross-compiling
- 		   CPPFLAGS="$CPPFLAGS -DARM_FPU_VFP=1 -D__ARM_EABI__ -DHAVE_ARMV6=1"
-@@ -25132,10 +25146,12 @@ case "$host" in
+ 		CPPFLAGS="$CPPFLAGS -D__ARM_EABI__"
+ 		;;
+ # TODO: make proper support for NaCl host.
+@@ -25641,10 +25655,12 @@ case "$host" in
  	X11="libX11.dylib"
  	;;
       *-*-*netbsd*)
@@ -105,7 +114,7 @@ $NetBSD: patch-ab,v 1.32 2013/09/13 20:47:55 jperkin Exp $
      	LIBC="libc.so"
  	INTL="libintl.so"
  	SQLITE="libsqlite.so"
-@@ -26162,7 +26178,6 @@ else
+@@ -26684,7 +26700,6 @@ else
  fi
  
  

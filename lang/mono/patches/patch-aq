@@ -1,10 +1,10 @@
-$NetBSD: patch-aq,v 1.5 2013/05/29 11:11:12 wiz Exp $
---- data/net_4_0/Makefile.in.orig	2012-12-05 17:50:24.000000000 +0000
+$NetBSD: patch-aq,v 1.6 2014/08/21 07:49:56 wiz Exp $
+--- data/net_4_0/Makefile.in.orig	2014-08-12 16:51:00.000000000 +0000
 +++ data/net_4_0/Makefile.in
-@@ -322,7 +322,7 @@ top_build_prefix = @top_build_prefix@
+@@ -408,7 +408,7 @@ top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
- SUBDIRS = 
+ SUBDIRS = Browsers
 -monodir = $(sysconfdir)/mono/4.0
 +monodir = $(datadir)/examples/mono/4.0
  EXTRA_DIST = machine.config \

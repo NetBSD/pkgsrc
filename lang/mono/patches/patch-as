@@ -1,12 +1,12 @@
-$NetBSD: patch-as,v 1.2 2013/05/29 11:11:12 wiz Exp $
+$NetBSD: patch-as,v 1.3 2014/08/21 07:49:56 wiz Exp $
 
 From FreeBSD: https://bugzilla.novell.com/show_bug.cgi?id=528830
 
---- mono/metadata/appdomain.c.orig	2012-12-05 17:44:33.000000000 +0000
+--- mono/metadata/appdomain.c.orig	2014-08-12 16:50:38.000000000 +0000
 +++ mono/metadata/appdomain.c
-@@ -2452,6 +2452,11 @@ mono_domain_try_unload (MonoDomain *doma
- 			/* The icall wrapper will execute the abort */
+@@ -2457,6 +2457,11 @@ mono_domain_try_unload (MonoDomain *doma
  			CloseHandle (thread_handle);
+ 			unload_data_unref (thread_data);
  			return;
 +		} else if (!mono_thread_has_appdomain_ref (mono_thread_current (), domain) && !(mono_thread_interruption_requested ())) {
 +			if (!domain->friendly_name) {
