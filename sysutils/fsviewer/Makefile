@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2014/05/15 14:41:58 adam Exp $
+# $NetBSD: Makefile,v 1.45 2014/08/21 08:37:52 jperkin Exp $
 
 DISTNAME=	FSViewer.app-0.2.5
 PKGNAME=	FSViewer-0.2.5
@@ -18,7 +18,7 @@ USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
-LDFLAGS.SunOS+=		-lintl
+LDFLAGS.SunOS+=		-lintl -lWUtil
 LDFLAGS.DragonFly=	-lintl -lfontconfig
 
 .include "../../mk/bsd.prefs.mk"
