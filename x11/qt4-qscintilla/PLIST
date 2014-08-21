@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/07/22 17:52:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/08/21 21:35:06 wiz Exp $
 qt4/include/Qsci/qsciabstractapis.h
 qt4/include/Qsci/qsciapis.h
 qt4/include/Qsci/qscicommand.h
@@ -6,9 +6,11 @@ qt4/include/Qsci/qscicommandset.h
 qt4/include/Qsci/qscidocument.h
 qt4/include/Qsci/qsciglobal.h
 qt4/include/Qsci/qscilexer.h
+qt4/include/Qsci/qscilexeravs.h
 qt4/include/Qsci/qscilexerbash.h
 qt4/include/Qsci/qscilexerbatch.h
 qt4/include/Qsci/qscilexercmake.h
+qt4/include/Qsci/qscilexercoffeescript.h
 qt4/include/Qsci/qscilexercpp.h
 qt4/include/Qsci/qscilexercsharp.h
 qt4/include/Qsci/qscilexercss.h
@@ -27,6 +29,7 @@ qt4/include/Qsci/qscilexermatlab.h
 qt4/include/Qsci/qscilexeroctave.h
 qt4/include/Qsci/qscilexerpascal.h
 qt4/include/Qsci/qscilexerperl.h
+qt4/include/Qsci/qscilexerpo.h
 qt4/include/Qsci/qscilexerpostscript.h
 qt4/include/Qsci/qscilexerpov.h
 qt4/include/Qsci/qscilexerproperties.h
