@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2014/06/18 09:28:18 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2014/08/21 15:36:07 jperkin Exp $
 
 DISTNAME=		scribus-1.3.3.14
 PKGREVISION=		22
@@ -20,6 +20,7 @@ SHLIBTOOL_OVERRIDE=	# empty
 USE_CMAKE=	yes
 
 LDFLAGS.DragonFly=	-lX11
+LDFLAGS.SunOS+=		-lX11
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.3.3.14
 
