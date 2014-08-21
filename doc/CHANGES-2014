@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3139 2014/08/21 07:54:17 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3140 2014/08/21 09:28:57 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4083,3 +4083,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/fet to 5.23.2 [wiz 2014-08-20]
 	Updated lang/mono to 3.6.0 [wiz 2014-08-21]
 	Updated games/MyGoGrinder to 2.0.1 [wiz 2014-08-21]
+	Updated lang/nodejs to 0.10.31 [fhajny 2014-08-21]
