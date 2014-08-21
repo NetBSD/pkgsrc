@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 12:55:17 asau Exp $
+# $NetBSD: Makefile,v 1.13 2014/08/21 16:20:43 jperkin Exp $
 #
 
 DISTNAME=		sms_sdl-0.9.4a-r7.1-src
@@ -18,6 +18,7 @@ BUILD_DIRS=		sdl
 INSTALLATION_DIRS=	bin
 
 LDFLAGS.DragonFly=	-lm
+LDFLAGS.SunOS+=		-lm
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sdl/sms_sdl ${DESTDIR}${PREFIX}/bin
