@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2012/04/13 04:43:23 dholland Exp $
+$NetBSD: distinfo,v 1.10 2014/08/21 11:47:17 jperkin Exp $
 
 SHA1 (Maelstrom-1.4.3-L2.0.6-src.tar.gz) = 66c81365104bfab9985919f0cba5a6d955727d79
 RMD160 (Maelstrom-1.4.3-L2.0.6-src.tar.gz) = 071b36ecd31830f3b62e4b6e2f64b7f7d87b1386
@@ -12,7 +12,7 @@ Size (Star_Wars.tar.gz) = 723225 bytes
 SHA1 (Maelstrom-Sounds-L2.0.0.tar.gz) = 26f1fb329576fd95d7cd99d5a8b75a85654225b6
 RMD160 (Maelstrom-Sounds-L2.0.0.tar.gz) = ee11301b5acd54497b14642969d6abacbdc6ffd0
 Size (Maelstrom-Sounds-L2.0.0.tar.gz) = 1706928 bytes
-SHA1 (patch-aa) = bf6a9c5394b5ac491a1b92d62d7dc716013ece23
+SHA1 (patch-aa) = 6841bfb443b550d311c222f98d1c4cdb9e4f4081
 SHA1 (patch-ab) = d767d9646f98f1d8b7ce5f471a8a789ed29d0e75
 SHA1 (patch-ac) = 81ae36f64ea8db22ba81be8911e05f6c66459edc
 SHA1 (patch-ad) = d5405b696f839c4965fb8e299108aff1b689399a

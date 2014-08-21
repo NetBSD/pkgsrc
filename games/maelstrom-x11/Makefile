@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/23 10:24:04 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2014/08/21 11:47:17 jperkin Exp $
 
 DISTNAME=		Maelstrom-1.4.3-L2.0.6-src.tar.gz
 PKGNAME=		maelstrom-x11-2.0.6
@@ -25,7 +25,8 @@ WRKSRC=			${WRKDIR}/Maelstrom
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pax
 USE_X11BASE=		YES
-LIBS.SunOS+=		-lsocket
+LDFLAGS.SunOS+=		-lsocket -lnsl
+LIBS.SunOS+=		-lsocket -lnsl
 MAKE_FLAGS+=		EXTRALIBS=${LIBS:Q}
 MAKE_ENV+=		BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q} XPMDIR=${BUILDLINK_PREFIX.libXpm}
 MAKE_ENV+=		GAMEOWN=${GAMEOWN} GAMEGRP=${GAMEGRP}
