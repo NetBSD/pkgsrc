@@ -1,6 +1,8 @@
-$NetBSD: patch-aj,v 1.2 2013/10/01 16:03:30 drochner Exp $
+$NetBSD: patch-aj,v 1.3 2014/08/21 12:17:17 wiz Exp $
 
 Vala is not required to build from released tarball.
+
+http://bugs.musicpd.org/view.php?id=4061
 
 --- configure.ac.orig	2011-08-17 03:09:58.000000000 +0000
 +++ configure.ac

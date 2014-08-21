@@ -1,6 +1,8 @@
-$NetBSD: patch-ai,v 1.4 2013/10/01 16:03:30 drochner Exp $
+$NetBSD: patch-ai,v 1.5 2014/08/21 12:17:17 wiz Exp $
 
 Vala is not required to build from released tarball.
+
+http://bugs.musicpd.org/view.php?id=4061
 
 --- configure.orig	2012-05-27 10:45:03.000000000 +0000
 +++ configure
