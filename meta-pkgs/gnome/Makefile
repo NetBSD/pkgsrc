@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.130 2014/05/09 07:37:11 wiz Exp $
+# $NetBSD: Makefile,v 1.131 2014/08/21 14:01:41 wiz Exp $
 
 DISTNAME=	gnome-2.26.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -31,7 +31,7 @@ DEPENDS+=	deskbar-applet>=2.26.2:../../misc/deskbar-applet
 # needs opal->ffmpeg->lame, which has a special license
 #DEPENDS+=	ekiga>=3.2.1:../../net/ekiga
 DEPENDS+=	empathy>=2.26.2:../../chat/empathy
-DEPENDS+=	eog>=2.26.2:../../graphics/eog
+DEPENDS+=	eog>=2.26.2<3:../../graphics/eog
 DEPENDS+=	epiphany>=2.26.2:../../www/epiphany
 DEPENDS+=	evince>=2.26.2<3:../../print/evince
 DEPENDS+=	evolution>=2.26.2:../../mail/evolution
