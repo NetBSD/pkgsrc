@@ -1,6 +1,8 @@
-$NetBSD: patch-src_system_ByteOrder.hxx,v 1.1 2014/05/16 00:33:47 pho Exp $
+$NetBSD: patch-src_system_ByteOrder.hxx,v 1.2 2014/08/21 12:14:16 wiz Exp $
 
 <endian.h> is a non-standard header that only Linux provides.
+
+http://bugs.musicpd.org/view.php?id=4060
 
 --- src/system/ByteOrder.hxx.orig	2014-05-15 23:46:49.000000000 +0000
 +++ src/system/ByteOrder.hxx
