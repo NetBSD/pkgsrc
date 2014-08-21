@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/06/18 09:28:16 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2014/08/21 08:41:20 jperkin Exp $
 #
 
 DISTNAME=	5440DL_lin64bit_1_2_1
@@ -25,6 +25,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 
 LDFLAGS.DragonFly=	-lm
+LDFLAGS.SunOS+=		-lm
 
 post-extract:
 	cd ${WRKDIR}/5440DL_64_v1.2.1/; \
