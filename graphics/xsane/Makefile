@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2014/05/05 00:48:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.111 2014/08/21 16:06:44 jperkin Exp $
 
 DISTNAME=	xsane-0.998
 PKGNAME=	xsane-0.99.8
@@ -17,6 +17,8 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=		gmake msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
