@@ -1,12 +1,12 @@
-$NetBSD: patch-aj,v 1.8 2013/05/29 11:11:12 wiz Exp $
---- data/net_2_0/Browsers/Makefile.in.orig	2012-12-05 17:50:24.000000000 +0000
+$NetBSD: patch-aj,v 1.9 2014/08/21 07:49:56 wiz Exp $
+--- data/net_2_0/Browsers/Makefile.in.orig	2014-08-12 16:51:00.000000000 +0000
 +++ data/net_2_0/Browsers/Makefile.in
-@@ -281,7 +281,7 @@ target_vendor = @target_vendor@
+@@ -347,7 +347,7 @@ target_vendor = @target_vendor@
  top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
 -monodir = $(sysconfdir)/mono/2.0/Browsers
 +monodir = $(datadir)/examples/mono/2.0/Browsers
- EXTRA_DIST = Compat.browser
- mono_DATA = Compat.browser
+ EXTRA_DIST = ../../Browsers/Compat.browser
+ mono_DATA = ../../Browsers/Compat.browser
  all: all-am
