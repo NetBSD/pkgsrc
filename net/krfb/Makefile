@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2014/08/11 21:22:15 markd Exp $
+# $NetBSD: Makefile,v 1.8 2014/08/21 10:56:50 jperkin Exp $
 
 DISTNAME=	krfb-${_KDE_VERSION}
 PKGREVISION=	4
 CATEGORIES=	net
 COMMENT=	KDE desktop sharing
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
