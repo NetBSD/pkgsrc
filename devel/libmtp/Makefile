@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/04/08 09:52:01 markd Exp $
+# $NetBSD: Makefile,v 1.9 2014/08/21 14:03:45 jperkin Exp $
 #
 
 DISTNAME=		libmtp-1.1.6
@@ -20,10 +20,15 @@ PKGCONFIG_OVERRIDE+=	libmtp.pc.in
 REPLACE_SH=		hotplug.sh.in
 REPLACE_SH+=		libmtp.sh.in
 
-# XXX ?
 LDFLAGS.FreeBSD+=	-liconv
 LDFLAGS.SunOS=		-liconv
 
+.include "../../mk/bsd.prefs.mk"
+
 .include "../../converters/libiconv/buildlink3.mk"
+.if ${OPSYS} == "SunOS"
+.include "../../devel/libusb/buildlink3.mk"
+.else
 .include "../../devel/libusb1/buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
