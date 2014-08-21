@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3140 2014/08/21 09:28:57 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.3141 2014/08/21 10:00:43 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4084,3 +4084,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/mono to 3.6.0 [wiz 2014-08-21]
 	Updated games/MyGoGrinder to 2.0.1 [wiz 2014-08-21]
 	Updated lang/nodejs to 0.10.31 [fhajny 2014-08-21]
+	Updated graphics/py-Pillow to 2.5.3 [obache 2014-08-21]
