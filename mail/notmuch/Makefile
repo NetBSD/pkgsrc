@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/08/17 10:45:05 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/08/21 08:25:42 jperkin Exp $
 
 DISTNAME=	notmuch-0.18.1
 PKGREVISION=	1
@@ -21,6 +21,15 @@ MAKE_FLAGS+=	PYTHONBIN=${PYTHONBIN}
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
+
+.if ${OPSYS} == "SunOS"
+SUBST_CLASSES+=		gnuld
+SUBST_STAGE.gnuld=	pre-configure
+SUBST_FILES.gnuld=	lib/Makefile.local
+SUBST_SED.gnuld=	-e 's/-Wl,--[^ ]*//g'
+.endif
+
+LDFLAGS.SunOS+=	-lnsl
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # as of 0.18
 .include "../../lang/python/application.mk"
