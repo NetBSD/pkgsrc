@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2014/08/05 12:25:13 he Exp $
+# $NetBSD: Makefile,v 1.106 2014/08/22 16:27:18 adam Exp $
 
 .include "Makefile.common"
 PKGREVISION=	1
@@ -111,6 +111,9 @@ INSTALLATION_DIRS+=	share/examples/net-snmp
 post-extract:
 .if ${OPSYS} == "DragonFly"
 	cp ${FILESDIR}/cpu_dragonfly.c ${WRKSRC}/agent/mibgroup/hardware/cpu/cpu_nlist.c
+# XXX make it build on OS X 10.9 Mavericks; remove on the next update
+.elif ${OPSYS} == "Darwin"
+	ln -s ${WRKSRC}/include/net-snmp/system/darwin12.h ${WRKSRC}/include/net-snmp/system/darwin13.h
 .endif
 
 post-wrapper:
