@@ -1,4 +1,4 @@
-# $NetBSD: linux.mk,v 1.25 2014/04/17 00:08:34 wiz Exp $
+# $NetBSD: linux.mk,v 1.26 2014/08/22 17:24:28 tron Exp $
 #
 # Linux binary emulation framework
 #
@@ -11,9 +11,13 @@ EMUL_TYPE.linux?=	none
 .  endif
 .else
 
-# NetBSD 6 or later default to 12.1, otherwise 10.0
+# Pick appropriate SuSE Linux version for NetBSD amd64 and i386.
 .if ${OPSYS} == "NetBSD" && ${EMUL_ARCH} != "powerpc"
-.  if empty(OS_VERSION:M[0-5].*) 
+# Use 13.1 under NetBSD 7.* and newer,
+.  if empty(OS_VERSION:M[0-6].*) 
+SUSE_PREFER?=	13.1
+# 12.1 under NetBSD 6.*, and 10.0 otherwise.
+.  elif empty(OS_VERSION:M[0-5].*) 
 SUSE_PREFER?=	12.1
 .  endif
 .endif
