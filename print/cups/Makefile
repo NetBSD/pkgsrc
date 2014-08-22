@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.210 2014/07/29 11:38:40 wiz Exp $
+# $NetBSD: Makefile,v 1.211 2014/08/22 21:54:38 wiz Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -6,6 +6,7 @@
 
 DISTNAME=	cups-${DIST_VERS}-source
 PKGNAME=	cups-${DIST_VERS:S/-/./g}
+PKGREVISION=	1
 BASE_VERS=	1.7.4
 DIST_VERS=	${BASE_VERS}
 CATEGORIES=	print
