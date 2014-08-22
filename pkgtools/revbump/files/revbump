@@ -1,7 +1,7 @@
 #!@PERL@ -w
 # -*- perl -*-
 #
-# $NetBSD: revbump,v 1.3 2006/03/09 17:24:48 wiz Exp $
+# $NetBSD: revbump,v 1.4 2014/08/22 11:26:25 wiz Exp $
 #
 # Copyright (c) 2003, 2004 The NetBSD Foundation, Inc.
 #
@@ -128,7 +128,7 @@ sub revbump {
 
     unlink "$backupmk";
 
-    print("Updated $pkgdir from $oldpkgver to $pkgver\n");
+    # print("Updated $pkgdir from $oldpkgver to $pkgver\n");
 
     return 1;
 }
