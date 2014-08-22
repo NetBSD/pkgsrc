@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2014/05/29 23:37:28 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2014/08/22 11:24:42 wiz Exp $
 
 DISTNAME=	k4dirstat-2.7.4
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	sysutils
 MASTER_SITES=	http://bitbucket.org/jeromerobert/k4dirstat/get/
 EXTRACT_SUFX=	.tar.bz2

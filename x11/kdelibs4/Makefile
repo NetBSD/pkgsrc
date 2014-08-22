@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.73 2014/08/14 13:03:23 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2014/08/22 11:24:27 wiz Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 PKGNAME=	${DISTNAME:S/-4/4-4/}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
