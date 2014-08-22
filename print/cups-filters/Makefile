@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2014/08/22 09:58:36 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2014/08/22 21:58:21 wiz Exp $
 
 DISTNAME=	cups-filters-1.0.54
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	http://openprinting.org/download/cups-filters/
 EXTRACT_SUFX=	.tar.xz
@@ -42,7 +42,7 @@ post-install:
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../net/avahi/buildlink3.mk"
-BUILDLINK_ABI_DEPENDS.cups+=	cups>=1.6
+BUILDLINK_ABI_DEPENDS.cups+=	cups>=1.7.4nb1
 .include "../../print/cups/buildlink3.mk"
 .include "../../print/ghostscript/buildlink3.mk"
 .include "../../print/ijs/buildlink3.mk"
