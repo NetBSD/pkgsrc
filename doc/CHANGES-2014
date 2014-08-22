@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3159 2014/08/21 21:43:09 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3160 2014/08/22 08:43:26 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4108,3 +4108,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/py-qt4-qscintilla to 2.8.3 [wiz 2014-08-21]
 	Updated graphics/ImageMagick to 6.8.9.7 [wiz 2014-08-21]
 	Updated graphics/p5-PerlMagick to 6.8.9.7 [wiz 2014-08-21]
+	Updated emulators/suse131_openssl to 13.1nb9 [obache 2014-08-22]
