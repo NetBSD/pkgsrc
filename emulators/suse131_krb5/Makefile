@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/12/05 11:42:15 obache Exp $
+# $NetBSD: Makefile,v 1.1.6.1 2014/08/22 17:29:35 tron Exp $
 
 DISTNAME=	suse_krb5-${SUSE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	emulators
-RPMPKGS+=	krb5-1.11.3-3.1.3.${SUSE_ARCH}
+RPMUPDPKGS+=	krb5-1.11.3-3.8.1.${SUSE_ARCH}
 RPMPKGS+=	libcom_err2-1.42.8-2.1.2.${SUSE_ARCH}
 RPMPKGS+=	libkeyutils1-1.5.5-6.1.3.${SUSE_ARCH}
 
