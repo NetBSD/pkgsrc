@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3163 2014/08/22 09:02:09 obache Exp $
+$NetBSD: CHANGES-2014,v 1.3164 2014/08/22 09:08:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4112,3 +4112,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.400 [obache 2014-08-22]
 	Updated emulators/suse131_libtiff to 13.1nb1 [obache 2014-08-22]
 	Updated emulators/suse131_krb5 to 13.1nb1 [obache 2014-08-22]
+	Updated x11/py-qt4-qscintilla to 2.8.3nb1 [wiz 2014-08-22]
