@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/01/15 16:26:25 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/08/22 09:11:59 wiz Exp $
 bin/eric4
 bin/eric4_api
 bin/eric4_compare
@@ -806,6 +806,7 @@ ${PYSITELIB}/eric4/Documentation/Source/eric4.Utilities.ModuleParser.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.Utilities.SingleApplication.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.Utilities.Startup.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.Utilities.__init__.html
+${PYSITELIB}/eric4/Documentation/Source/eric4.Utilities.mimetypesExtension.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.Utilities.uic.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.VCS.CommandOptionsDialog.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.VCS.ProjectBrowserHelper.html
@@ -2557,6 +2558,8 @@ ${PYSITELIB}/eric4/Utilities/Startup.py
 ${PYSITELIB}/eric4/Utilities/Startup.pyc
 ${PYSITELIB}/eric4/Utilities/__init__.py
 ${PYSITELIB}/eric4/Utilities/__init__.pyc
+${PYSITELIB}/eric4/Utilities/mimetypesExtension.py
+${PYSITELIB}/eric4/Utilities/mimetypesExtension.pyc
 ${PYSITELIB}/eric4/Utilities/uic.py
 ${PYSITELIB}/eric4/Utilities/uic.pyc
 ${PYSITELIB}/eric4/VCS/CommandOptionsDialog.py
@@ -3028,4 +3031,3 @@ qt4/qsci/api/python/zope-2.11.2.api
 qt4/qsci/api/python/zope-3.3.1.api
 qt4/qsci/api/ruby/Ruby-1.8.7.api
 qt4/qsci/api/ruby/eric4.api
-@pkgdir lib/python${PYVERSSUFFIX}/site-packages/eric4/i18n
