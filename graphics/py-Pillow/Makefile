@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2014/04/18 13:00:49 obache Exp $
+# $NetBSD: Makefile,v 1.9.2.1 2014/08/22 17:10:56 tron Exp $
 
-DISTNAME=	Pillow-2.4.0
+DISTNAME=	Pillow-2.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	https://pypi.python.org/packages/source/P/Pillow/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	obache@NetBSD.org
-HOMEPAGE=	http://python-imaging.github.io/
+HOMEPAGE=	http://python-pillow.github.io/
 COMMENT=	Python Imaging Library (Fork)
 
 CONFLICTS+=	${PYPKGPREFIX}-imaging-[0-9]*
