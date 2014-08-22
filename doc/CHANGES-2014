@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3165 2014/08/22 09:12:08 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3166 2014/08/22 09:58:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4114,3 +4114,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/suse131_krb5 to 13.1nb1 [obache 2014-08-22]
 	Updated x11/py-qt4-qscintilla to 2.8.3nb1 [wiz 2014-08-22]
 	Updated devel/eric4 to 4.5.24 [wiz 2014-08-22]
+	Updated print/cups-filters to 1.0.54nb2 [wiz 2014-08-22]
