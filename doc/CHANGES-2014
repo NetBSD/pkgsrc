@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3162 2014/08/22 08:54:21 obache Exp $
+$NetBSD: CHANGES-2014,v 1.3163 2014/08/22 09:02:09 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4111,3 +4111,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/suse131_openssl to 13.1nb9 [obache 2014-08-22]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.400 [obache 2014-08-22]
 	Updated emulators/suse131_libtiff to 13.1nb1 [obache 2014-08-22]
+	Updated emulators/suse131_krb5 to 13.1nb1 [obache 2014-08-22]
