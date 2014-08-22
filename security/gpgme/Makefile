@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2013/05/06 18:18:31 drochner Exp $
+# $NetBSD: Makefile,v 1.72.10.1 2014/08/22 16:43:05 tron Exp $
 
-DISTNAME=	gpgme-1.4.1
+DISTNAME=	gpgme-1.4.4
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gpgme/
 EXTRACT_SUFX=	.tar.bz2
@@ -30,10 +30,6 @@ CONFIGURE_ENV+=		ac_cv_func_getenv_r=yes
 TEST_TARGET=		check
 
 .include "../../mk/pthread.buildlink3.mk"
-
-.if ${PTHREAD_TYPE} == "native"
-CONFIGURE_ARGS+=	--without-pth --without-pth-test
-.endif
 
 .include "options.mk"
 
