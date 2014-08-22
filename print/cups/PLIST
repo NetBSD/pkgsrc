@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2014/06/07 11:54:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.43 2014/08/22 21:54:38 wiz Exp $
 bin/cancel
 bin/cups-config
 bin/cupstestdsc
@@ -136,13 +136,6 @@ sbin/lpc
 sbin/lpinfo
 sbin/lpmove
 sbin/reject
-share/cups/banners/classified
-share/cups/banners/confidential
-share/cups/banners/secret
-share/cups/banners/standard
-share/cups/banners/topsecret
-share/cups/banners/unclassified
-share/cups/data/testprint
 share/cups/drv/sample.drv
 share/cups/examples/color.drv
 share/cups/examples/constraint.drv
