@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3167 2014/08/22 10:25:18 obache Exp $
+$NetBSD: CHANGES-2014,v 1.3168 2014/08/22 11:26:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4116,3 +4116,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/eric4 to 4.5.24 [wiz 2014-08-22]
 	Updated print/cups-filters to 1.0.54nb2 [wiz 2014-08-22]
 	Updated graphics/libsixel to 1.0.0 [obache 2014-08-22]
+	Updated pkgtools/revbump to 2.9 [wiz 2014-08-22]
