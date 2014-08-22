@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3160 2014/08/22 08:43:26 obache Exp $
+$NetBSD: CHANGES-2014,v 1.3161 2014/08/22 08:46:20 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4109,3 +4109,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/ImageMagick to 6.8.9.7 [wiz 2014-08-21]
 	Updated graphics/p5-PerlMagick to 6.8.9.7 [wiz 2014-08-21]
 	Updated emulators/suse131_openssl to 13.1nb9 [obache 2014-08-22]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.400 [obache 2014-08-22]
