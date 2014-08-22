@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2014/08/21 10:51:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2014/08/22 11:24:41 wiz Exp $
 
 DISTNAME=	kppp-${_KDE_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 COMMENT=	Dialer and front end for pppd
 

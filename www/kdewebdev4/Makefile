@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2014/08/13 10:57:38 adam Exp $
+# $NetBSD: Makefile,v 1.54 2014/08/22 11:24:43 wiz Exp $
 
 DISTNAME=	kdewebdev-${_KDE_VERSION}
 PKGNAME=	${DISTNAME:S/-4/4-4/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 COMMENT=	HTML editor and tools suitable for experienced web developers
 

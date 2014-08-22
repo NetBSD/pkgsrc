@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2014/08/13 10:57:34 adam Exp $
+# $NetBSD: Makefile,v 1.26 2014/08/22 11:24:30 wiz Exp $
 
 DISTNAME=	umbrello-${_KDE_VERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 COMMENT=	UML Modeller
 
