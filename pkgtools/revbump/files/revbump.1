@@ -1,4 +1,4 @@
-.\"	$NetBSD: revbump.1,v 1.20 2014/07/22 10:51:17 wiz Exp $
+.\"	$NetBSD: revbump.1,v 1.21 2014/08/22 11:26:25 wiz Exp $
 .\"
 .\" Copyright (c) 2003, 2004, 2005, 2006, 2010, 2012, 2013, 2014 The NetBSD Foundation, Inc.
 .\"
@@ -31,7 +31,7 @@
 .\" OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 .\" IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd June 24, 2014
+.Dd August 22, 2014
 .Dt REVBUMP 1
 .Os
 .Sh NAME
@@ -92,8 +92,7 @@ grep -e Makefile.common -e mk$ allbump | grep -v -e buildlink3.mk -e options.mk 
  corresponding Makefile.common or *.mk file]
 cat allbump commonbump | sed 's,/[^/]*$,,' | sort -u \*[Gt] makebump
 revbump \*[Lt] makebump \*[Gt] makebump.manual
-[if a package is listed in makebump.manual outside a line
-"Updated ... from ... to ...", handle the PKGREVISION bump manually]
+[if a package is listed in makebump.manual, handle the PKGREVISION bump manually]
 blbump \*[Lt] bl3bump \*[Gt] bl3bump.manual
 [handle the *ABI_DEPENDS* bumps in bl3bump.manual manually, usually none]
 cvs diff `cat makebump` | less
