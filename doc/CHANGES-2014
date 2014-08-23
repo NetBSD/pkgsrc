@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3178 2014/08/23 10:06:10 obache Exp $
+$NetBSD: CHANGES-2014,v 1.3179 2014/08/23 12:17:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4127,3 +4127,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/flex to 2.5.39nb2 [obache 2014-08-23]
 	Updated news/slrn to 1.0.1 [obache 2014-08-23]
 	Updated news/tin to 2.2.1 [obache 2014-08-23]
+	Updated www/py-django to 1.6.6 [adam 2014-08-23]
+	Updated www/py-django14 to 1.4.14 [adam 2014-08-23]
