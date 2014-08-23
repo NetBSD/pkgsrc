@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/07/12 14:34:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/08/23 05:24:25 wiz Exp $
 bin/meld
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/meld/__init__.py
@@ -302,6 +302,7 @@ share/meld/icons/vc-update-24.png
 share/meld/meld.css
 share/meld/ui/EditableList.ui
 share/meld/ui/application.ui
+share/meld/ui/appmenu-fallback.xml
 share/meld/ui/dirdiff-ui.xml
 share/meld/ui/dirdiff.ui
 share/meld/ui/filediff-ui.xml
