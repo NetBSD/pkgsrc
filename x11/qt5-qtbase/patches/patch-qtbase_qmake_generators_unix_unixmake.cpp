@@ -1,8 +1,9 @@
-$NetBSD: patch-qtbase_qmake_generators_unix_unixmake.cpp,v 1.1 2013/12/13 14:38:35 ryoon Exp $
+$NetBSD: patch-qtbase_qmake_generators_unix_unixmake.cpp,v 1.2 2014/08/23 20:25:11 wiz Exp $
 
 * First chunk, add a whitespace after -rpath.
+* fix install target so that destdir is added when installing QMAKE_TARGET
 
---- qtbase/qmake/generators/unix/unixmake.cpp.orig	2013-11-27 01:01:10.000000000 +0000
+--- qtbase/qmake/generators/unix/unixmake.cpp.orig	2014-02-01 20:37:29.000000000 +0000
 +++ qtbase/qmake/generators/unix/unixmake.cpp
 @@ -156,7 +156,7 @@ UnixMakefileGenerator::init()
          const ProStringList &rpathdirs = project->values("QMAKE_RPATHDIR");
@@ -61,7 +62,7 @@ $NetBSD: patch-qtbase_qmake_generators_unix_unixmake.cpp,v 1.1 2013/12/13 14:38:
      if(targetdir.right(1) != Option::dir_sep)
          targetdir += Option::dir_sep;
  
-@@ -760,10 +761,14 @@ UnixMakefileGenerator::defaultInstall(co
+@@ -760,10 +761,18 @@ UnixMakefileGenerator::defaultInstall(co
          QString src_targ = target;
          if(src_targ == "$(TARGET)")
              src_targ = "$(TARGETL)";
@@ -73,7 +74,11 @@ $NetBSD: patch-qtbase_qmake_generators_unix_unixmake.cpp,v 1.1 2013/12/13 14:38:
 +            dst_dir = Option::fixPathToTargetOS(dst_dir);
 +        if(!ret.isEmpty())
 +            ret += "\n\t";
-+        ret += "-$(LIBTOOL) --mode=install cp \"" + src_targ + "\" \"" + filePrefixRoot(root, dst_dir) + "\"";
++        if(project->first("TEMPLATE") == "app") {
++	    ret += "-$(LIBTOOL) --mode=install cp \"" + Option::fixPathToTargetOS(destdir + src_targ, false) + "\" \"" + filePrefixRoot(root, dst_dir) + "\"";
++	} else {
++	    ret += "-$(LIBTOOL) --mode=install cp \"" + src_targ + "\" \"" + filePrefixRoot(root, dst_dir) + "\"";
++	}
 +        if(!uninst.isEmpty())
 +            uninst.append("\n\t");
          uninst.append("-$(LIBTOOL) --mode=uninstall \"" + src_targ + "\"");
