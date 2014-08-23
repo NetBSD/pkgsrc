@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2014/07/15 03:48:48 taca Exp $
+# $NetBSD: Makefile,v 1.32 2014/08/23 16:12:05 taca Exp $
 
-DISTNAME=	tzinfo-0.3.40
+DISTNAME=	tzinfo-0.3.41
 CATEGORIES=	time
 
 MAINTAINER=	minskim@NetBSD.org
