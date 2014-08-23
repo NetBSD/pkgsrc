@@ -1,4 +1,4 @@
-# $NetBSD: cmake.mk,v 1.10 2013/10/08 12:03:53 obache Exp $
+# $NetBSD: cmake.mk,v 1.11 2014/08/23 19:26:07 wiz Exp $
 #
 # This file handles packages that use CMake as their primary build
 # system. For more information about CMake, see http://www.cmake.org/.
@@ -14,6 +14,14 @@
 #	A list of files relative to WRKSRC in which the CMAKE_MODULE_PATH
 #	variable is adjusted to include the path from the pkgsrc wrappers.
 #	The file ${WRKSRC}/CMakeLists.txt is always appended to this list.
+#
+# CMAKE_PREFIX_PATH
+#	A list of directories to add the CMAKE_PREFIX_PATH cmake variable.
+#	If a package installs it's contents in ${PREFIX}/package instead of
+#	${PREFIX} and it installs cmake modules there 
+#	"CMAKE_PREFIX_PATH += ${PREFIX}/package" should be in it's 
+#	buildlink3.mk so that packages that depend on it can find it's 
+#	cmake modules if they use cmake to build.
 #
 
 _CMAKE_DIR=	${BUILDLINK_DIR}/cmake-Modules
@@ -35,6 +43,10 @@ CMAKE_ARGS+=	-DCMAKE_INSTALL_INFODIR:PATH=${PKGINFODIR}
 .endif
 .if defined(USE_PKGLOCALEDIR) && empty(USE_PKGLOCALEDIR:M[nN][oO])
 CMAKE_ARGS+=	-DCMAKE_INSTALL_LOCALEDIR:PATH=${PKGLOCALEDIR}/locale
+.endif
+
+.if defined(CMAKE_PREFIX_PATH)
+CMAKE_ARGS+=-DCMAKE_PREFIX_PATH:PATH=${CMAKE_PREFIX_PATH:ts;:Q}
 .endif
 
 CMAKE_MODULE_PATH_OVERRIDE+=	CMakeLists.txt
