@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.23 2014/05/05 00:48:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2014/08/23 12:50:25 adam Exp $
 
-DISTNAME=		cacti-0.8.8b
-PKGREVISION=		2
-CATEGORIES=		net
-MASTER_SITES=		http://www.cacti.net/downloads/
+DISTNAME=	cacti-0.8.8b
+PKGREVISION=	3
+CATEGORIES=	net
+MASTER_SITES=	http://www.cacti.net/downloads/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.cacti.net/
-COMMENT=		Frontend to rrdtool for monitoring systems and services
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.cacti.net/
+COMMENT=	Frontend to rrdtool for monitoring systems and services
+LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		# none
 USE_TOOLS+=		pax
@@ -39,18 +39,18 @@ CACTIDIR=		${PREFIX}/share/cacti
 CACTI_LOGDIR?=		${CACTIDIR}/log
 CACTI_RRADIR?=		${CACTIDIR}/rra
 
-REPLACE_INTERPRETER+=   php
-REPLACE.php.old=        .*php[^ ]*
-REPLACE.php.new=        ${PREFIX}/bin/php
-REPLACE_FILES.php=      cli/*.php
+REPLACE_INTERPRETER+=	php
+REPLACE.php.old=	.*php[^ ]*
+REPLACE.php.new=	${PREFIX}/bin/php
+REPLACE_FILES.php=	cli/*.php
 
-REPLACE_PERL+=         scripts/*.pl
+REPLACE_PERL+=		scripts/*.pl
 
-MESSAGE_SUBST+=         CACTIDIR=${CACTIDIR}
-MESSAGE_SUBST+=         CACTI_USER=${CACTI_USER}
-MESSAGE_SUBST+=         EGDIR=${EGDIR}
-MESSAGE_SUBST+=         PREFIX=${PREFIX}
-MESSAGE_SUBST+=         PKG_SYSCONFBASE=${PKG_SYSCONFBASE}
+MESSAGE_SUBST+=		CACTIDIR=${CACTIDIR}
+MESSAGE_SUBST+=		CACTI_USER=${CACTI_USER}
+MESSAGE_SUBST+=		EGDIR=${EGDIR}
+MESSAGE_SUBST+=		PREFIX=${PREFIX}
+MESSAGE_SUBST+=		PKG_SYSCONFBASE=${PKG_SYSCONFBASE}
 FILES_SUBST+=		CACTIDIR=${CACTIDIR}
 FILES_SUBST+=		CACTI_GROUP=${CACTI_GROUP}
 FILES_SUBST+=		CACTI_USER=${CACTI_USER}
