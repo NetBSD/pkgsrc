@@ -1,11 +1,16 @@
-# $NetBSD: Makefile,v 1.58 2014/05/29 23:37:13 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2014/08/23 10:05:58 obache Exp $
 #
 
-DISTNAME=	tin-2.0.1
-PKGREVISION=	9
+DISTNAME=	tin-2.2.1
 CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.tin.org/pub/news/clients/tin/stable/ \
-		ftp://ftp.cs.tu-berlin.de/pub/net/news/tin/stable/
+		ftp://ftp.funet.fi/pub/unix/news/tin-unoff/ \
+		ftp://ftp.lip6.fr/pub/unix/news/readers/tin-unoff/ \
+		ftp://ftp.akk.uni-karlsruhe.de/pub/news/clients/tin/stable/ \
+		ftp://ftp.cs.tu-berlin.de/pub/net/news/tin/stable/ \
+		ftp://ftp.cuhk.edu.hk/pub/packages/news/tin/stable/ \
+		ftp://sunsite.icm.edu.pl/pub/unix/news/tin/stable/ \
+		ftp://ftp.sunet.se/pub/news/readers/tin/stable/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,7 +19,7 @@ COMMENT=	TIN newsreader (termcap based)
 # See src/nntplib.c, vms/vms.c
 LICENSE=	tin-license
 
-RESTRICTED=	Profit from use, sale, trade, or reproduction disallowed
+RESTRICTED=		Profit from use, sale, trade, or reproduction disallowed
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
@@ -32,14 +37,13 @@ BUILD_TARGET=	build
 
 CONFIGURE_ARGS+=	--with-nntp-default-server=news
 CONFIGURE_ARGS+=	--with-mime-default-charset=ISO-8859-1
-CONFIGURE_ARGS+=	--enable-forgery
 CONFIGURE_ARGS+=	--enable-break-long-lines
 CONFIGURE_ARGS+=	--with-gpg=${PREFIX}/bin/gpg
 CONFIGURE_ARGS+=	--with-ispell=${PREFIX}/bin/ispell
 CONFIGURE_ARGS+=	--with-metamail=${PREFIX}/bin/metamail
 CONFIGURE_ARGS+=	--with-pcre=${BUILDLINK_PREFIX.pcre}
 CONFIGURE_ARGS+=	--disable-mime-strict-charset
-CONFIGURE_ARGS+=	--with-defaults-dir=${PREFIX}/etc
+CONFIGURE_ARGS+=	--with-defaults-dir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--enable-mh-mail-handling
 CONFIGURE_ARGS+=	--with-coffee
 
@@ -47,11 +51,11 @@ SUBST_CLASSES+=		tin
 SUBST_STAGE.tin=	pre-configure
 SUBST_MESSAGE.tin=	Adjusting path to the configuration directory.
 SUBST_FILES.tin=	doc/tin.1
-SUBST_SED.tin=		-e 's:/etc/nntpserver:${PREFIX}/etc/nntp/server:'
+SUBST_SED.tin=		-e 's:/etc/nntpserver:${PKG_SYSCONFDIR}/nntp/server:'
 
 post-configure:
-	${ECHO} '#define NNTP_SERVER_FILE "${PREFIX}/etc/nntp/server"' >>${WRKSRC}/include/autoconf.h
-	${ECHO} '#define SMTP_SERVER_FILE "${PREFIX}/etc/smtpserver"' >>${WRKSRC}/include/autoconf.h
+	${ECHO} '#define NNTP_SERVER_FILE "${PKG_SYSCONFDIR}/nntp/server"' >>${WRKSRC}/include/autoconf.h
+	${ECHO} '#define SMTP_SERVER_FILE "${PKG_SYSCONFDIR}/smtpserver"' >>${WRKSRC}/include/autoconf.h
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/WHATSNEW ${DESTDIR}${PREFIX}/share/doc/tin
