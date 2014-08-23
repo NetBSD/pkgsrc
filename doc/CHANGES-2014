@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3186 2014/08/23 20:25:20 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3187 2014/08/23 20:41:02 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4136,3 +4136,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/qt4-libs to 4.8.6nb2 [wiz 2014-08-23]
 	Updated sysutils/watchman to 2.9.8nb1 [wiz 2014-08-23]
 	Updated x11/qt5-qtbase to 5.2.1nb5 [wiz 2014-08-23]
+	Updated devel/libgsf to 1.14.30 [prlw1 2014-08-23]
