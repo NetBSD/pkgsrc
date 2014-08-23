@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2014/08/17 09:42:27 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2014/08/23 21:12:02 wiz Exp $
 
-DISTNAME=	tuxpaint-0.9.21
+DISTNAME=	tuxpaint-0.9.22
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tuxpaint/}
 
@@ -10,17 +10,16 @@ COMMENT=	Drawing program for small children
 # program itself is gnu-gpl-v2, other licenses are packaged fonts
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND public-domain AND modified-bsd
 
-USE_TOOLS+=		gmake msgfmt pkg-config
+BUILD_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
+
+USE_TOOLS+=		bash:run gmake msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES
 MANCOMPRESSED=		YES
-
-BUILDLINK_API_DEPENDS.SDL_mixer+=	SDL_mixer>=1.2.6
-BUILDLINK_API_DEPENDS.SDL_ttf+=	SDL_ttf>=2.0.7
-BUILDLINK_API_DEPENDS.SDL_image+=	SDL_image>=1.2.4
 
 CONFLICTS+=		tuxpaint-stamps<2003.12.23
 
 BROKEN_GETTEXT_DETECTION=	yes
+REPLACE_BASH=		src/tuxpaint-import.sh
 
 PKG_SYSCONFSUBDIR=	tuxpaint
 MAKE_FLAGS+=		CONFDIR=${PKG_SYSCONFDIR:Q}
@@ -31,10 +30,12 @@ MAKE_FLAGS+=		LDFLAGS=${LDFLAGS:Q}
 MAKE_FLAGS+=		CHMOD=${CHMOD:Q}
 MAKE_FLAGS+=		PREFIX=${PREFIX}
 MAKE_FLAGS+=		MAN_PREFIX=$(DESTDIR)$(PREFIX)/${PKGMANDIR}/
+MAKE_FLAGS+=		GPERF=${PREFIX}/bin/gperf
 EGDIR=			${PREFIX}/share/examples/tuxpaint
 CONF_FILES=		${EGDIR}/tuxpaint.conf ${PKG_SYSCONFDIR}/tuxpaint.conf
 
 INSTALL_MAKE_FLAGS+=	PKG_ROOT=${DESTDIR}
+INSTALL_MAKE_FLAGS+=	CONFDIR=${DESTDIR}${PREFIX}/share/examples/tuxpaint
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -53,12 +54,16 @@ post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/share/tuxpaint/fonts/locale/zh_tw_docs/maketuxfont.py
 	${RM} -f ${DESTDIR}${PREFIX}/share/tuxpaint/fonts/locale/zh_tw_docs/tuxpaintsubset.pe
 
+BUILDLINK_API_DEPENDS.SDL_mixer+=	SDL_mixer>=1.2.6
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/SDL_Pango/buildlink3.mk"
+BUILDLINK_API_DEPENDS.SDL_ttf+=	SDL_ttf>=2.0.7
 .include "../../devel/SDL_ttf/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.SDL_image+=	SDL_image>=1.2.4
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
