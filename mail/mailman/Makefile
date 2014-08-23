@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.71 2014/06/14 09:20:49 fhajny Exp $
+# $NetBSD: Makefile,v 1.72 2014/08/23 14:12:07 wiz Exp $
 
 DISTNAME=	mailman-2.1.18-1
 PKGNAME=	mailman-2.1.18.1
+PKGREVISION=	1
 CATEGORIES=	mail www
 MASTER_SITES=	http://launchpad.net/mailman/2.1/2.1.18-1/+download/
 EXTRACT_SUFX=	.tgz
@@ -109,6 +110,7 @@ REPLACE_PYTHON+=	cron/senddigests tests/fblast.py tests/onebounce.py
 
 post-extract:
 	${CP} ${FILESDIR}/mailman.conf.dist ${WRKDIR}/mailman.conf.dist
+	cd ${WRKSRC} && mv messages/sr/readme.sr messages/sr/README.sr
 
 post-patch:
 	${RM} -f ${WRKSRC}/[A-Z]*.orig

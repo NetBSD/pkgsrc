@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2014/06/14 09:20:49 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.24 2014/08/23 14:12:07 wiz Exp $
 lib/mailman/Mailman/Archiver/Archiver.py
 lib/mailman/Mailman/Archiver/Archiver.pyc
 lib/mailman/Mailman/Archiver/HyperArch.py
@@ -445,6 +445,7 @@ lib/mailman/messages/sl/LC_MESSAGES/mailman.mo
 lib/mailman/messages/sl/LC_MESSAGES/mailman.po
 lib/mailman/messages/sr/LC_MESSAGES/mailman.mo
 lib/mailman/messages/sr/LC_MESSAGES/mailman.po
+lib/mailman/messages/sr/README.sr
 lib/mailman/messages/sv/LC_MESSAGES/mailman.mo
 lib/mailman/messages/sv/LC_MESSAGES/mailman.po
 lib/mailman/messages/sv/README.sv
