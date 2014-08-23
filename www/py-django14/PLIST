@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/11/14 21:27:01 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/08/23 12:16:45 adam Exp $
 bin/django-admin.py
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/django/__init__.py
@@ -598,6 +598,9 @@ ${PYSITELIB}/django/contrib/admin/__init__.pyo
 ${PYSITELIB}/django/contrib/admin/actions.py
 ${PYSITELIB}/django/contrib/admin/actions.pyc
 ${PYSITELIB}/django/contrib/admin/actions.pyo
+${PYSITELIB}/django/contrib/admin/exceptions.py
+${PYSITELIB}/django/contrib/admin/exceptions.pyc
+${PYSITELIB}/django/contrib/admin/exceptions.pyo
 ${PYSITELIB}/django/contrib/admin/filters.py
 ${PYSITELIB}/django/contrib/admin/filters.pyc
 ${PYSITELIB}/django/contrib/admin/filters.pyo
