@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.11 2012/01/12 22:59:58 adam Exp $
+$NetBSD: patch-ae,v 1.12 2014/08/23 20:09:31 wiz Exp $
 
---- qmake/generators/unix/unixmake.cpp.orig	2011-02-22 12:02:48.000000000 +0000
+--- qmake/generators/unix/unixmake.cpp.orig	2013-06-07 05:17:01.000000000 +0000
 +++ qmake/generators/unix/unixmake.cpp
 @@ -356,27 +356,29 @@ UnixMakefileGenerator::init()
                  if(libtoolify[i].startsWith("QMAKE_LINK") || libtoolify[i] == "QMAKE_AR_CMD") {
@@ -50,7 +50,7 @@ $NetBSD: patch-ae,v 1.11 2012/01/12 22:59:58 adam Exp $
      if(targetdir.right(1) != Option::dir_sep)
          targetdir += Option::dir_sep;
  
-@@ -779,10 +780,14 @@ UnixMakefileGenerator::defaultInstall(co
+@@ -779,11 +780,19 @@ UnixMakefileGenerator::defaultInstall(co
          QString src_targ = target;
          if(src_targ == "$(TARGET)")
              src_targ = "$(TARGETL)";
@@ -59,12 +59,18 @@ $NetBSD: patch-ae,v 1.11 2012/01/12 22:59:58 adam Exp $
          if(QDir::isRelativePath(dst_dir))
 -            dst_dir = Option::fixPathToTargetOS(Option::output_dir + Option::dir_sep + dst_dir);
 -        ret = "-$(LIBTOOL) --mode=install cp \"" + src_targ + "\" \"" + filePrefixRoot(root, dst_dir) + "\"";
+-        uninst.append("-$(LIBTOOL) --mode=uninstall \"" + src_targ + "\"");
 +            dst_dir = Option::fixPathToTargetOS(dst_dir);
 +        if(!ret.isEmpty())
 +            ret += "\n\t";
-+        ret += "-$(LIBTOOL) --mode=install cp \"" + src_targ + "\" \"" + filePrefixRoot(root, dst_dir) + "\"";
++	if(project->first("TEMPLATE") == "app") {
++	    ret += "-$(LIBTOOL) --mode=install cp \"" + Option::fixPathToTargetOS(destdir + src_targ, false) + "\" \"" + filePrefixRoot(root, dst_dir) + "\"";
++	} else {
++	    ret += "-$(LIBTOOL) --mode=install cp \"" + src_targ + "\" \"" + filePrefixRoot(root, dst_dir) + "\"";
++	}
 +        if(!uninst.isEmpty())
 +            uninst.append("\n\t");
-         uninst.append("-$(LIBTOOL) --mode=uninstall \"" + src_targ + "\"");
++	uninst.append("-$(LIBTOOL) --mode=uninstall \"" + src_targ + "\"");
      } else {
          QString src_targ = target;
+         if(!destdir.isEmpty())
