@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3176 2014/08/23 07:46:47 obache Exp $
+$NetBSD: CHANGES-2014,v 1.3177 2014/08/23 09:35:01 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4125,3 +4125,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated games/lgogdownloader to 2.16 [wiz 2014-08-23]
 	Updated emulators/sys161 to 1.99.08 [dholland 2014-08-23]
 	Updated devel/flex to 2.5.39nb2 [obache 2014-08-23]
+	Updated news/slrn to 1.0.1 [obache 2014-08-23]
