@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:10:07 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/08/23 09:34:48 obache Exp $
 bin/slrn
 bin/slrnpull
 man/man1/slrn.1
@@ -46,6 +46,8 @@ share/slrn/slang/color.sl
 share/slrn/slang/gsort.sl
 share/slrn/slang/ispell.sl
 share/slrn/slang/latin2.sl
+share/slrn/slang/mailcap.sl
+share/slrn/slang/mime.sl
 share/slrn/slang/multipart.sl
 share/slrn/slang/nn.sl
 share/slrn/slang/posthook.sl
