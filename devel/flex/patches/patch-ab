@@ -1,6 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2014/04/17 16:44:30 adam Exp $
+$NetBSD: patch-ab,v 1.7 2014/08/23 07:46:38 obache Exp $
 
-Avoid -no-undefined flags, or missing symbols might occur.
+* XXX:
+* Prevent libfi to be linked with libintl.
+* Avoid -no-undefined flags, or missing symbols might occur.
 
 --- Makefile.in.orig	2014-03-26 18:58:57.000000000 +0000
 +++ Makefile.in
@@ -13,7 +15,22 @@ Avoid -no-undefined flags, or missing symbols might occur.
  flex_LDADD = $(LDADD)
  flex_DEPENDENCIES = lib/libcompat.la
  DEFAULT_INCLUDES = -I.@am__isrc@
-@@ -435,12 +435,12 @@ libfl_la_SOURCES = \
+@@ -304,7 +304,7 @@ LEX_OUTPUT_ROOT = @LEX_OUTPUT_ROOT@
+ LIBICONV = @LIBICONV@
+ LIBINTL = @LIBINTL@
+ LIBOBJS = @LIBOBJS@
+-LIBS = @LIBINTL@ @LIBS@
++LIBS = @LIBS@
+ LIBTOOL = @LIBTOOL@
+ LIPO = @LIPO@
+ LN_S = @LN_S@
+@@ -430,17 +430,17 @@ flex_SOURCES = \
+ 	filter.c \
+ 	regex.c
+ 
+-LDADD = lib/libcompat.la
++LDADD = lib/libcompat.la @LIBINTL@
+ libfl_la_SOURCES = \
  	libmain.c \
  	libyywrap.c
  
