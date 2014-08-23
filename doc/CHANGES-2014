@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3182 2014/08/23 16:10:10 taca Exp $
+$NetBSD: CHANGES-2014,v 1.3183 2014/08/23 16:12:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4132,3 +4132,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/mailman to 2.1.18.1nb1 [wiz 2014-08-23]
 	Updated lang/php54 to 5.4.32 [taca 2014-08-23]
 	Updated lang/php55 to 5.5.16 [taca 2014-08-23]
+	Updated time/ruby-tzinfo to 0.3.41 [taca 2014-08-23]
