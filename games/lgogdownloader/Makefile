@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2014/08/13 10:57:35 adam Exp $
+# $NetBSD: Makefile,v 1.6 2014/08/23 06:13:33 wiz Exp $
 
-DISTNAME=	lgogdownloader-2.15
-PKGREVISION=	1
+DISTNAME=	lgogdownloader-2.16
 CATEGORIES=	games
 MASTER_SITES=	http://sites.google.com/site/gogdownloader/
 
@@ -21,7 +20,7 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 SUBST_CLASSES+=		json
 SUBST_SED.json+=	-e 's,jsoncpp/json/json.h,json/json.h,'
-SUBST_FILES.json+=	src/api.cpp src/downloader.cpp
+SUBST_FILES.json+=	src/api.cpp src/downloader.cpp src/util.cpp
 SUBST_STAGE.json=	post-configure
 SUBST_MESSAGE.json=	Fixing path to jsoncpp headers.
 
