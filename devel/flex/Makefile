@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2014/07/17 12:53:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.42 2014/08/23 03:14:36 obache Exp $
 
 DISTNAME=	flex-2.5.39
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=flex/}
 EXTRACT_SUFX=	.tar.xz
@@ -10,15 +11,9 @@ HOMEPAGE=	http://flex.sourceforge.net/
 COMMENT=	Fast clone of lex(1), the lexical scanner generator
 LICENSE=	2-clause-bsd
 
-# needed for building flex.pdf, make it an option?
-#BUILD_DEPENDS+=	gtexinfo-[0-9]*:../../devel/gtexinfo
-#BUILD_DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
-#BUILD_DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
-#BUILD_DEPENDS+=	tex-latex-fonts-[0-9]*:../../fonts/tex-latex-fonts
-
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gm4:run makeinfo
+USE_TOOLS+=		gm4:run
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
 
