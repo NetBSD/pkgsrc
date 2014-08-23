@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3180 2014/08/23 14:12:17 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3181 2014/08/23 16:08:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4130,3 +4130,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-django to 1.6.6 [adam 2014-08-23]
 	Updated www/py-django14 to 1.4.14 [adam 2014-08-23]
 	Updated mail/mailman to 2.1.18.1nb1 [wiz 2014-08-23]
+	Updated lang/php54 to 5.4.32 [taca 2014-08-23]
