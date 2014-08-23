@@ -1,11 +1,8 @@
-# $NetBSD: options.mk,v 1.17 2014/06/07 11:54:54 wiz Exp $
+# $NetBSD: options.mk,v 1.18 2014/08/23 20:02:11 schnoebe Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cups
-PKG_OPTIONS_REQUIRED_GROUPS=	pdftops
-PKG_OPTIONS_GROUP.pdftops=	ghostscript poppler
-PKG_SUPPORTED_OPTIONS=	acl dbus dnssd kerberos pam slp tcpwrappers
-PKG_SUGGESTED_OPTIONS=	dbus dnssd kerberos poppler slp
-PKG_OPTIONS_LEGACY_OPTS+=	xpdf:poppler gs:ghostscript
+PKG_SUPPORTED_OPTIONS=	acl dbus dnssd kerberos pam tcpwrappers
+PKG_SUGGESTED_OPTIONS=	dbus dnssd kerberos
 
 # Neither DragonFly nor SunOS can build libusb1
 .if ${OPSYS} != "DragonFly" && ${OPSYS} != "SunOS"
@@ -42,12 +39,6 @@ PLIST.dnssd=		yes
 CONFIGURE_ARGS+=	--disable-dnssd
 .endif
 
-.if !empty(PKG_OPTIONS:Mghostscript)
-USE_TOOLS+=	gs:run
-CONFIGURE_ARGS+=	--with-pdftops=gs
-CONFIGURE_ENV+=		ac_cv_path_CUPS_GHOSTSCRIPT=${TOOLS_PATH.gs}
-.endif
-
 .if !empty(PKG_OPTIONS:Mkerberos)
 .include "../../mk/krb5.buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-gssapi
@@ -75,21 +66,6 @@ PLIST.pam=		yes
 .else
 CONFIGURE_ARGS+=	--disable-pam
 MESSAGE_SRC=		${.CURDIR}/MESSAGE
-.endif
-
-.if !empty(PKG_OPTIONS:Mpoppler)
-FIND_PREFIX:=	POPPLERDIR=poppler-utils
-.include "../../mk/find-prefix.mk"
-DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
-CONFIGURE_ARGS+=	--with-pdftops=pdftops
-CONFIGURE_ENV+=		ac_cv_path_CUPS_PDFTOPS=${POPPLERDIR}/bin/pdftops
-.endif
-
-.if !empty(PKG_OPTIONS:Mslp)
-.include "../../net/openslp/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-slp
-.else
-CONFIGURE_ARGS+=	--disable-slp
 .endif
 
 .if !empty(PKG_OPTIONS:Mtcpwrappers)
