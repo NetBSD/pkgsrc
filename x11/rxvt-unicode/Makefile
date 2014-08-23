@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2014/05/29 23:38:20 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2014/08/23 15:31:55 richard Exp $
 
 DISTNAME=	rxvt-unicode-9.20
 PKGREVISION=	1
@@ -22,6 +22,8 @@ CONFIGURE_ENV+=		ac_cv_path_TIC=no
 CONFIGURE_ARGS+=	--enable-256-color
 
 INSTALLATION_DIRS+=	share/doc/rxvt-unicode share/examples/rxvt-unicode
+
+LIBS.SunOS+=	-lnsl -lsocket
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.FAQ \
