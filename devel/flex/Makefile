@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2014/08/23 03:14:36 obache Exp $
+# $NetBSD: Makefile,v 1.43 2014/08/23 07:46:38 obache Exp $
 
 DISTNAME=	flex-2.5.39
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=flex/}
 EXTRACT_SUFX=	.tar.xz
