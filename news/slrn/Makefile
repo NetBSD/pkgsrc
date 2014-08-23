@@ -1,37 +1,24 @@
-# $NetBSD: Makefile,v 1.58 2014/02/12 23:18:28 tron Exp $
+# $NetBSD: Makefile,v 1.59 2014/08/23 09:34:48 obache Exp $
 
-DISTNAME=	slrn-0.9.9p1
-PKGREVISION=	10
+DISTNAME=	slrn-1.0.1
 CATEGORIES=	news
-MASTER_SITES=	ftp://space.mit.edu/pub/davis/slrn/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=slrn/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://slrn.sourceforge.net/
 COMMENT=	Highly customizable threaded newsreader
 LICENSE=	gnu-gpl-v2
 
-MAKE_JOBS_SAFE=		no
-
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-inews --with-slrnpull --enable-spool \
 			--enable-grouplens --with-libdir=${PREFIX}/lib/slrn \
 			--enable-mid-cache \
-			--with-slang=${PREFIX} \
-			--with-slanglib=-lslang2 \
-			--with-slanginc=slang2/slang.h \
+			--with-slang=${BUILDLINK_PREFIX.libslang2} \
 			--with-localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 
 .include "options.mk"
-.include "../../mk/bsd.prefs.mk"
 
-# the next is a workaround, as 1.3.2 install doesn't like -c and -d
-# together
-.if ${OPSYS} == "NetBSD" && ${OS_VERSION} == "1.3.2"
-CONFIGURE_ENV+=		INSTALL=/usr/bin/install
-.endif
-
-LDFLAGS.Linux+=	-ldl
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../devel/libslang2/buildlink3.mk"
