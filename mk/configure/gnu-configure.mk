@@ -1,4 +1,4 @@
-# $NetBSD: gnu-configure.mk,v 1.16 2014/01/28 11:32:30 obache Exp $
+# $NetBSD: gnu-configure.mk,v 1.17 2014/08/23 03:00:18 obache Exp $
 
 _VARGROUPS+=			gnu-configure
 _USER_VARS.gnu-configure=	# none
@@ -104,6 +104,7 @@ _SCRIPT.configure-scripts-override=					\
 		}							\
 		{ print }' $$file > $$file.override;			\
 	${CHMOD} +x $$file.override;					\
+	${TOUCH} -r $$file $$file.override;				\
 	${MV} -f $$file.override $$file
 
 OVERRIDE_DIRDEPTH.configure?=	${OVERRIDE_DIRDEPTH}
@@ -154,6 +155,7 @@ _SCRIPT.configure-scripts-osdep=					\
 		}							\
 		{ print $0 }' $$file >$$file.override;			\
 	${CHMOD} +x $$file.override;					\
+	${TOUCH} -r $$file $$file.override;				\
 	${MV} -f $$file.override $$file
 .endif
 
