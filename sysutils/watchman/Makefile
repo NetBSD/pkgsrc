@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2014/08/09 23:08:41 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/08/23 20:13:59 wiz Exp $
 
 DISTNAME=	watchman-${VERSION}
+PKGREVISION=	1
 VERSION=	2.9.8
 CATEGORIES=	sysutils
 MASTER_SITES=	-https://github.com/facebook/watchman/archive/v${VERSION}.tar.gz
