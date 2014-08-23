@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.211 2014/08/22 21:54:38 wiz Exp $
+# $NetBSD: Makefile,v 1.212 2014/08/23 20:02:11 schnoebe Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -6,8 +6,9 @@
 
 DISTNAME=	cups-${DIST_VERS}-source
 PKGNAME=	cups-${DIST_VERS:S/-/./g}
-PKGREVISION=	1
+PKGREVISION=	2
 BASE_VERS=	1.7.4
+#BASE_VERS=	1.7.5
 DIST_VERS=	${BASE_VERS}
 CATEGORIES=	print
 MASTER_SITES=	http://www.cups.org/software/${BASE_VERS}/
@@ -43,13 +44,8 @@ CONFIGURE_ARGS+=	--with-cups-group=${CUPS_GROUP}
 CONFIGURE_ARGS+=	--with-system-groups=${CUPS_SYSTEM_GROUPS:Q}
 CONFIGURE_ARGS+=	--enable-libpaper
 CONFIGURE_ARGS+=	--enable-libtool
-CONFIGURE_ARGS+=	--enable-jpeg
-CONFIGURE_ARGS+=	--enable-png
-CONFIGURE_ARGS+=	--enable-tiff
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-openssl
-CONFIGURE_ARGS+=	--enable-bannertops
-CONFIGURE_ARGS+=	--enable-texttops
 CONFIGURE_ARGS+=	--with-manext=bsd
 CONFIGURE_ARGS+=	--without-icondir
 CONFIGURE_ARGS+=	--without-menudir
@@ -59,7 +55,6 @@ CONFIGURE_ARGS+=	--without-python
 CONFIGURE_ARGS+=	--without-java
 CONFIGURE_ARGS+=	--disable-gssapi
 CONFIGURE_ARGS+=	--disable-gnutls
-CONFIGURE_ARGS+=	--disable-ldap
 
 CONFIGURE_ENV+=		DSOFLAGS=${LDFLAGS:M*:Q}
 
@@ -115,7 +110,8 @@ PKG_USERS=		${CUPS_USER}:${CUPS_GROUP}
 PKG_GECOS.${CUPS_USER}=	Common UNIX Printing System user
 PKG_SHELL.${CUPS_USER}=	${SH}
 
-CONF_FILES=		${EGDIR}/cupsd.conf ${CUPS_CONFDIR}/cupsd.conf
+CONF_FILES+=		${EGDIR}/cupsd.conf ${CUPS_CONFDIR}/cupsd.conf
+CONF_FILES+=		${EGDIR}/cups-files.conf ${CUPS_CONFDIR}/cups-files.conf
 CONF_FILES+=		${EGDIR}/snmp.conf ${CUPS_CONFDIR}/snmp.conf
 RCD_SCRIPTS=		cupsd
 
@@ -169,7 +165,7 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/$${file}			\
 		     ${DESTDIR}${DOCDIR}/$${file}; \
 	done
-	${RUN} for file in cupsd.conf snmp.conf ; do			\
+	${RUN} for file in cupsd.conf cups-files.conf snmp.conf ; do	\
 		${INSTALL_DATA} ${WRKSRC}/conf/$${file}			\
 			${DESTDIR}${EGDIR}/$${file};			\
 	done
