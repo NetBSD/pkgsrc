@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3174 2014/08/23 06:13:43 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3175 2014/08/23 06:56:32 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4123,3 +4123,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/meld-devel to 3.11.3 [wiz 2014-08-23]
 	Updated sysutils/cdrtools to 3.01alpha24nb1 [wiz 2014-08-23]
 	Updated games/lgogdownloader to 2.16 [wiz 2014-08-23]
+	Updated emulators/sys161 to 1.99.08 [dholland 2014-08-23]
