@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3199 2014/08/24 07:39:54 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3200 2014/08/24 09:38:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4149,3 +4149,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/rrdtool to 1.4.8 [adam 2014-08-24]
 	Updated x11/qt5-qtdeclarative to 5.2.1nb1 [wiz 2014-08-24]
 	Updated graphics/tuxpaint-stamps to 2014.08.23 [wiz 2014-08-24]
+	Updated x11/qt5-qtwebkit to 5.2.1nb2 [wiz 2014-08-24]
