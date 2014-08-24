@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2012/12/22 08:58:14 obache Exp $
+# $NetBSD: Makefile,v 1.10 2014/08/24 06:46:24 obache Exp $
 #
 
-DISTNAME=	ibus-table-chinese-1.4.6-Source
-PKGNAME=	${DISTNAME:S/-Source//}
+DISTNAME=	ibus-table-chinese-1.8.2
 CATEGORIES=	inputmethod chinese
-MASTER_SITES=	http://ibus.googlecode.com/files/
+MASTER_SITES=	-https://github.com/definite/ibus-table-chinese/archive/${PKGVERSION_NOREV}.tar.gz
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/ibus/
@@ -15,10 +14,12 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
+BUILD_DEPENDS+=	cmake-fedora>=2.0:../../devel/cmake-fedora
+
 .include "../../mk/bsd.prefs.mk"
 
 # Illegal byte sequence in array30_ExtB.txt
-. if !empty(MACHINE_PLATFORM:MNetBSD-[0-5].*-*)
+.if !empty(MACHINE_PLATFORM:MNetBSD-[0-5].*-*)
 BUILD_DEPENDS+=		libiconv-[0-9]*:../../converters/libiconv
 FIND_PREFIX:= ICONV_PREFIX=libiconv
 .include "../../mk/find-prefix.mk"
