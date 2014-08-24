@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/12/15 09:42:45 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/08/24 09:38:23 wiz Exp $
 lib/pkgconfig/Qt5WebKit.pc
 lib/pkgconfig/Qt5WebKitWidgets.pc
 qt5/include/QtWebKit/${PKGVERSION}/QtWebKit/private/bytearraytestdata.h
@@ -105,6 +105,8 @@ qt5/lib/libWebKit2.la
 qt5/lib/libWebKit2.prl
 qt5/lib/pkgconfig/Qt5WebKit.pc
 qt5/lib/pkgconfig/Qt5WebKitWidgets.pc
+qt5/libexec/QtWebPluginProcess
+qt5/libexec/QtWebProcess
 qt5/mkspecs/modules/qt_lib_webkit.pri
 qt5/mkspecs/modules/qt_lib_webkit_private.pri
 qt5/mkspecs/modules/qt_lib_webkitwidgets.pri
@@ -114,4 +116,3 @@ qt5/qml/QtWebKit/experimental/libqmlwebkitexperimentalplugin.la
 qt5/qml/QtWebKit/experimental/qmldir
 qt5/qml/QtWebKit/libqmlwebkitplugin.la
 qt5/qml/QtWebKit/qmldir
-@pkgdir qt5/libexec
