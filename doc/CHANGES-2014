@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3200 2014/08/24 09:38:32 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3201 2014/08/24 12:46:18 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4150,3 +4150,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/qt5-qtdeclarative to 5.2.1nb1 [wiz 2014-08-24]
 	Updated graphics/tuxpaint-stamps to 2014.08.23 [wiz 2014-08-24]
 	Updated x11/qt5-qtwebkit to 5.2.1nb2 [wiz 2014-08-24]
+	Updated chat/weechat to 1.0 [tonio 2014-08-24]
