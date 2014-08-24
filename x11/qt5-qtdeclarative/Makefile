@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2014/04/23 07:05:31 adam Exp $
+# $NetBSD: Makefile,v 1.7 2014/08/24 07:30:50 wiz Exp $
 
 PKGNAME=	qt5-qtdeclarative-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	Qt5 module for declarative framework
 
 .include "../../x11/qt5-qtbase/Makefile.common"
