@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3192 2014/08/24 01:04:37 obache Exp $
+$NetBSD: CHANGES-2014,v 1.3193 2014/08/24 06:15:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4142,3 +4142,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/libsixel to 1.0.1 [obache 2014-08-24]
 	Updated math/ruby-spreadsheet to 0.9.8 [obache 2014-08-24]
 	Updated net/mikutter to 3.0.5 [obache 2014-08-24]
+	Updated devel/cmake-fedora to 2.1.3 [obache 2014-08-24]
