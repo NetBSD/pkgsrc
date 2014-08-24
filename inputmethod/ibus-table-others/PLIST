@@ -1,13 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/07 02:20:15 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/08/24 06:59:54 obache Exp $
 share/ibus-table/icons/cns11643.png
 share/ibus-table/icons/compose.svg
 share/ibus-table/icons/ibus-emoji.svg
-share/ibus-table/icons/ipa-x-sampa.png
+share/ibus-table/icons/ipa-x-sampa.svg
 share/ibus-table/icons/latex.svg
+share/ibus-table/icons/mathwriter.png
+share/ibus-table/icons/rusle.png
 share/ibus-table/icons/rustrad.png
 share/ibus-table/icons/thai.png
-share/ibus-table/icons/translit-ua.png
-share/ibus-table/icons/translit.png
+share/ibus-table/icons/translit-ua.svg
+share/ibus-table/icons/translit.svg
 share/ibus-table/icons/viqr.png
 share/ibus-table/icons/yawerty.png
 share/ibus-table/tables/cns11643.db
@@ -15,6 +17,8 @@ share/ibus-table/tables/compose.db
 share/ibus-table/tables/emoji-table.db
 share/ibus-table/tables/ipa-x-sampa.db
 share/ibus-table/tables/latex.db
+share/ibus-table/tables/mathwriter-ibus.db
+share/ibus-table/tables/rusle.db
 share/ibus-table/tables/rustrad.db
 share/ibus-table/tables/thai.db
 share/ibus-table/tables/translit-ua.db
