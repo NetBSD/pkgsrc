@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/06/09 10:15:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/08/24 07:28:18 adam Exp $
 ${PYSITELIB}/reversion/__init__.py
 ${PYSITELIB}/reversion/__init__.pyc
 ${PYSITELIB}/reversion/__init__.pyo
@@ -10,6 +10,8 @@ ${PYSITELIB}/reversion/helpers.pyc
 ${PYSITELIB}/reversion/helpers.pyo
 ${PYSITELIB}/reversion/locale/cs/LC_MESSAGES/django.mo
 ${PYSITELIB}/reversion/locale/cs/LC_MESSAGES/django.po
+${PYSITELIB}/reversion/locale/da/LC_MESSAGES/django.mo
+${PYSITELIB}/reversion/locale/da/LC_MESSAGES/django.po
 ${PYSITELIB}/reversion/locale/de/LC_MESSAGES/django.mo
 ${PYSITELIB}/reversion/locale/de/LC_MESSAGES/django.po
 ${PYSITELIB}/reversion/locale/es/LC_MESSAGES/django.mo
@@ -28,12 +30,14 @@ ${PYSITELIB}/reversion/locale/pl/LC_MESSAGES/django.mo
 ${PYSITELIB}/reversion/locale/pl/LC_MESSAGES/django.po
 ${PYSITELIB}/reversion/locale/pt_BR/LC_MESSAGES/django.mo
 ${PYSITELIB}/reversion/locale/pt_BR/LC_MESSAGES/django.po
-${PYSITELIB}/reversion/locale/sk/LC_MESSAGES/django.mo
-${PYSITELIB}/reversion/locale/sk/LC_MESSAGES/django.po
 ${PYSITELIB}/reversion/locale/ru/LC_MESSAGES/django.mo
 ${PYSITELIB}/reversion/locale/ru/LC_MESSAGES/django.po
+${PYSITELIB}/reversion/locale/sk/LC_MESSAGES/django.mo
+${PYSITELIB}/reversion/locale/sk/LC_MESSAGES/django.po
 ${PYSITELIB}/reversion/locale/sv/LC_MESSAGES/django.mo
 ${PYSITELIB}/reversion/locale/sv/LC_MESSAGES/django.po
+${PYSITELIB}/reversion/locale/zh_CN/LC_MESSAGES/django.mo
+${PYSITELIB}/reversion/locale/zh_CN/LC_MESSAGES/django.po
 ${PYSITELIB}/reversion/management/__init__.py
 ${PYSITELIB}/reversion/management/__init__.pyc
 ${PYSITELIB}/reversion/management/__init__.pyo
