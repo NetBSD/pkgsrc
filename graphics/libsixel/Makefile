@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/08/22 10:25:09 obache Exp $
+# $NetBSD: Makefile,v 1.4 2014/08/24 00:59:17 obache Exp $
 
-DISTNAME=		libsixel-1.0.0
+DISTNAME=		libsixel-1.0.1
 CATEGORIES=		graphics
 MASTER_SITES=		-${HOMEPAGE:Q}/archive/v${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
