@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2014/04/23 07:05:31 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2014/08/24 15:21:22 wiz Exp $
 
 BUILDLINK_TREE+=	qt5-qtbase
 
@@ -14,6 +14,7 @@ BUILDLINK_LIBDIRS.qt5-qtbase+=	qt5/lib
 BUILDLINK_LIBDIRS.qt5-qtbase+=	qt5/plugins
 
 QTDIR=		${BUILDLINK_PREFIX.qt5-qtbase}/qt5
+CMAKE_PREFIX_PATH+=	${QTDIR}
 
 PTHREAD_OPTS+=	require
 
