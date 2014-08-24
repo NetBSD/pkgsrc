@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2014/05/09 07:37:09 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2014/08/24 06:41:32 obache Exp $
 
-DISTNAME=	ibus-table-1.5.0
-PKGREVISION=	1
+DISTNAME=	ibus-table-1.8.8
 CATEGORIES=	inputmethod
-MASTER_SITES=	http://ibus.googlecode.com/files/
+MASTER_SITES=	https://github.com/kaio/ibus-table/releases/download/${PKGVERSION_NOREV}/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/ibus/
@@ -24,8 +23,9 @@ SUBST_FILES.prefix=	engine/tabcreatedb.py
 SUBST_SED.prefix=	-e 's|/usr/share|${PREFIX}/share|g'
 
 REPLACE_PYTHON+=	engine/tabcreatedb.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.5.0
+PYTHON_VERSIONS_INCOMPATIBLE=	26 27
 
 .include "../../lang/python/application.mk"
+.include "../../lang/python/extension.mk"
 .include "../../inputmethod/ibus/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
