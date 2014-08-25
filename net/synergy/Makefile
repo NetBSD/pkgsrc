@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2013/07/05 21:34:12 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2014/08/25 09:58:18 obache Exp $
 #
 
-DISTNAME=		synergy-1.3.8-Source
+DISTNAME=		synergy-1.4.12-Source
 PKGNAME=		${DISTNAME:S/-Source//}
-PKGREVISION=		1
 CATEGORIES=		net x11
 MASTER_SITES=		http://synergy.googlecode.com/files/
 
@@ -12,26 +11,26 @@ HOMEPAGE=		http://synergy-foss.org/
 COMMENT=		Let a user share a mouse and keyboard among computers
 LICENSE=		gnu-gpl-v2
 
+EXTRACT_USING=		bsdtar
 USE_LANGUAGES=		c c++
+USE_TOOLS+=		unzip
+USE_CMAKE=		yes
 
 EXAMPLES=	MacReadme.txt org.synergy-foss.org.synergyc.plist \
 		org.synergy-foss.org.synergys.plist synergy.conf.example \
 		synergy.conf.example-advanced synergy.conf.example-basic
 
-# Below rpath fix is copypasted from graphics/vtk.
-CMAKE_OPTS+=	-DCMAKE_INSTALL_RPATH:STRING=${PREFIX}/lib:${X11BASE}/lib${LIBABISUFFIX:Q}	\
-CMAKE_OPTS+=	-DCMAKE_SKIP_BUILD_RPATH:BOOL=ON		\
-CMAKE_OPTS+=	-DCMAKE_BUILD_WITH_INSTALL_RPATH:BOOL=ON	\
-CMAKE_OPTS+=	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH:BOOL=ON
-
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
-SUBST_FILES.fix-paths=		lib/arch/CArchFileUnix.cpp
+SUBST_FILES.fix-paths=		src/lib/arch/CArchFileUnix.cpp
 SUBST_SED.fix-paths=		-e 's,"/etc","${PKG_SYSCONFDIR}",g'
 
-do-configure:
-	cd ${WRKSRC} && ${PREFIX}/bin/cmake ${CMAKE_OPTS} .
+BUILDLINK_TRANSFORM+=		rm:-march=native
+
+post-extract:
+	${MKDIR} ${WRKSRC}/tools/cryptopp562
+	cd ${WRKSRC}/tools/cryptopp562 && unzip -aqo ../cryptopp562.zip
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/${PKGBASE}
 
@@ -40,10 +39,10 @@ post-build:
 	${CP} ${WRKSRC}/doc/synergys.man ${WRKSRC}/doc/synergys.1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/synergyc ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/synergys ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/doc/synergyc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/synergys.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+.for p in synergyc synergys
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/${p} ${DESTDIR}${PREFIX}/bin/${p}
+	${INSTALL_MAN} ${WRKSRC}/doc/${p}.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${p}.1
+.endfor
 .for f in ${EXAMPLES}
 	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}
 .endfor
@@ -53,10 +52,16 @@ do-install:
 _WRAP_EXTRA_ARGS.CXX+=	-std=c++11
 .endif
 
-.include "../../devel/cmake/buildlink3.mk"
+# tools/cryptopp562/GNUmakefile
+.include "../../mk/bsd.prefs.mk"
+.if !empty(MACHINE_PLATFORM:MNetBSD-[0-6].*-i386)
+CXXFLAGS+=	-DCRYPTOPP_DISABLE_ASM
+.endif
+
 .if !exists(/System/Library/Frameworks/Carbon.framework)
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .endif
