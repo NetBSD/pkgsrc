@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.26 2014/08/22 17:30:27 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.27 2014/08/25 16:52:00 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q2 branch:
@@ -102,3 +102,11 @@ Pullup ticket #4483 - requested by obache
 emulators/suse131_libtiff: security update
 Pullup ticket #4484 - requested by obache
 emulators/suse131_krb5: security update
+Pullup ticket #4486 - requested by taca
+lang/php54: security update
+Pullup ticket #4487 - requested by tron
+lang/php55: security update
+Pullup ticket #4488 - requested by tron
+lang/ruby200-base: security patch
+Pullup ticket #4489 - requested by tron
+lang/ruby21-base: security patch
