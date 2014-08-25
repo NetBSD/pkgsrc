@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3204 2014/08/25 06:23:03 mrg Exp $
+$NetBSD: CHANGES-2014,v 1.3205 2014/08/25 07:52:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4155,3 +4155,8 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/ruby200-base to 2.0.0p481nb1 [taca 2014-08-25]
 	Updated lang/ruby21-base to 2.1.2nb1 [taca 2014-08-25]
 	Updated chat/ircII to 20140824 [mrg 2014-08-25]
+	Updated devel/git to 2.1.0 [adam 2014-08-25]
+	Updated devel/git-base to 2.1.0 [adam 2014-08-25]
+	Updated devel/git-docs to 2.1.0 [adam 2014-08-25]
+	Updated devel/git-svn to 2.1.0 [adam 2014-08-25]
+	Updated www/gitweb to 2.1.0 [adam 2014-08-25]
