@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3212 2014/08/25 18:26:00 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3213 2014/08/25 18:26:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4167,3 +4167,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/ruby-rrdtool to 1.4.8 [adam 2014-08-25]
 	Updated multimedia/ffmpeg1 to 1.2.8 [wiz 2014-08-25]
 	Updated x11/libxkbcommon to 0.4.3 [wiz 2014-08-25]
+	Updated converters/py-simplejson to 3.6.3 [wiz 2014-08-25]
