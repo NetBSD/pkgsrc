@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3214 2014/08/25 18:32:09 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3215 2014/08/25 18:33:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4169,3 +4169,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/libxkbcommon to 0.4.3 [wiz 2014-08-25]
 	Updated converters/py-simplejson to 3.6.3 [wiz 2014-08-25]
 	Updated games/rftg to 0.9.4 [wiz 2014-08-25]
+	Updated devel/py-requests to 2.3.0 [wiz 2014-08-25]
