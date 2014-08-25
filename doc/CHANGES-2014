@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3202 2014/08/25 03:26:35 taca Exp $
+$NetBSD: CHANGES-2014,v 1.3203 2014/08/25 03:29:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4152,3 +4152,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/qt5-qtwebkit to 5.2.1nb2 [wiz 2014-08-24]
 	Updated chat/weechat to 1.0 [tonio 2014-08-24]
 	Updated lang/ruby193-base to 1.9.3p547 [taca 2014-08-25]
+	Updated lang/ruby200-base to 2.0.0p481nb1 [taca 2014-08-25]
+	Updated lang/ruby21-base to 2.1.2nb1 [taca 2014-08-25]
