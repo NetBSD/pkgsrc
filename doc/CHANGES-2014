@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3209 2014/08/25 13:58:52 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.3210 2014/08/25 14:30:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4164,3 +4164,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/synergy to 1.4.12 [obache 2014-08-25]
 	Updated graphics/netpbm to 10.35.93nb1 [wiz 2014-08-25]
 	Added wm/xmonad-contrib version 0.11.3 [szptvlfn 2014-08-25]
+	Updated databases/ruby-rrdtool to 1.4.8 [adam 2014-08-25]
