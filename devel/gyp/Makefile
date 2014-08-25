@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2014/08/21 14:49:43 he Exp $
+# $NetBSD: Makefile,v 1.10 2014/08/25 13:20:12 fhajny Exp $
 
 SVN_REVISION=	1949
 DIST_VERSION=	0.1
-PKGREVISION=	1
+PKGREVISION=	2
 DISTNAME=	gyp-${DIST_VERSION}pre${SVN_REVISION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
@@ -20,7 +20,7 @@ EGG_NAME=	gyp-${DIST_VERSION}
 .include "Makefile.replace-python"
 
 SUBST_CLASSES+=	python
-SUBST_STAGE.python=	post-patch
+SUBST_STAGE.python=	pre-build
 SUBST_MESSAGE.python=	Fix python invocation
 SUBST_FILES.python+=	gyp
 SUBST_FILES.python+=	test/compiler-override/gyptest-compiler-global-settings.py
