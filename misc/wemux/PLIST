@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2014/08/25 22:07:28 schmonz Exp $
+bin/wemux
+man/man1/wemux.1
+share/examples/wemux/wemux.conf
