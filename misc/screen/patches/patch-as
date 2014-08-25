@@ -1,13 +1,14 @@
-$NetBSD: patch-as,v 1.1 2010/01/01 19:38:44 spz Exp $
+$NetBSD: patch-as,v 1.2 2014/08/25 20:02:32 kim Exp $
 
---- tty.sh.orig	2003-09-08 14:24:25.000000000 +0000
-+++ tty.sh
-@@ -76,7 +76,7 @@ exit 0
- #endif
- 
- #include "config.h"
--#ifdef SVR4
-+#ifdef HAVE_SYS_STROPTS_H
- #include <sys/stropts.h>	/* for I_POP */
- #endif
+--- tty.sh.orig	2014-04-26 16:29:40.000000000 +0000
++++ tty.sh	2014-08-25 19:44:59.000000000 +0000
+@@ -812,7 +812,8 @@
+   /*
+    * Under BSD we have to set the controlling terminal again explicitly.
+    */
+-# if (defined(__FreeBSD_kernel__) || defined(__GNU__)) && defined(TIOCSCTTY)
++# if (defined(__FreeBSD_kernel__) || defined(__GNU__) || (BSD >= 199103)) \
++  && defined(TIOCSCTTY)
+   ioctl(fd, TIOCSCTTY, (char *)0);
+ # endif
  
