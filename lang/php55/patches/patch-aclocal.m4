@@ -1,17 +1,8 @@
-$NetBSD: patch-aclocal.m4,v 1.1 2014/03/19 21:56:31 asau Exp $
+$NetBSD: patch-aclocal.m4,v 1.1.4.1 2014/08/25 16:14:59 tron Exp $
 
---- aclocal.m4.orig	2014-03-05 10:52:28.000000000 +0000
+--- aclocal.m4.orig	2014-07-23 09:08:13.000000000 +0000
 +++ aclocal.m4
-@@ -4546,7 +4546,7 @@ dgux*)
-   shlibpath_var=LD_LIBRARY_PATH
-   ;;
- 
--freebsd1*)
-+freebsd1|freebsd1.*)
-   dynamic_linker=no
-   ;;
- 
-@@ -4557,7 +4557,7 @@ freebsd* | dragonfly*)
+@@ -4553,7 +4553,7 @@ freebsd* | dragonfly*)
      objformat=`/usr/bin/objformat`
    else
      case $host_os in
@@ -20,7 +11,7 @@ $NetBSD: patch-aclocal.m4,v 1.1 2014/03/19 21:56:31 asau Exp $
      *) objformat=elf ;;
      esac
    fi
-@@ -6174,7 +6174,7 @@ case $host_os in
+@@ -6170,7 +6170,7 @@ case $host_os in
  	;;
      esac
      ;;
@@ -29,12 +20,3 @@ $NetBSD: patch-aclocal.m4,v 1.1 2014/03/19 21:56:31 asau Exp $
      # C++ shared libraries reported to be fairly broken before switch to ELF
      _LT_AC_TAGVAR(ld_shlibs, $1)=no
      ;;
-@@ -8857,7 +8857,7 @@ _LT_EOF
-       _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
-       ;;
- 
--    freebsd1*)
-+    freebsd1|freebsd1.*)
-       _LT_AC_TAGVAR(ld_shlibs, $1)=no
-       ;;
- 

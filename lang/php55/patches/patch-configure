@@ -1,6 +1,6 @@
-$NetBSD: patch-configure,v 1.7 2014/06/13 14:31:19 fhajny Exp $
+$NetBSD: patch-configure,v 1.7.2.1 2014/08/25 16:14:59 tron Exp $
 
---- configure.orig	2014-05-28 09:23:59.000000000 +0000
+--- configure.orig	2014-07-23 09:08:17.000000000 +0000
 +++ configure
 @@ -8321,27 +8321,6 @@ EOF
      ;;
@@ -117,25 +117,7 @@ $NetBSD: patch-configure,v 1.7 2014/06/13 14:31:19 fhajny Exp $
  fi
  
  if test "$PHP_THREAD_SAFETY" = "yes" && test "$PHP_MYSQL" = "yes"; then
-@@ -107701,7 +107654,7 @@ if test -z "$aix_libpath"; then aix_libp
-       hardcode_shlibpath_var=no
-       ;;
- 
--    freebsd1*)
-+    freebsd1|freebsd1.*)
-       ld_shlibs=no
-       ;;
- 
-@@ -108350,7 +108303,7 @@ dgux*)
-   shlibpath_var=LD_LIBRARY_PATH
-   ;;
- 
--freebsd1*)
-+freebsd1|freebsd1.*)
-   dynamic_linker=no
-   ;;
- 
-@@ -108361,7 +108314,7 @@ freebsd* | dragonfly*)
+@@ -108353,7 +108306,7 @@ freebsd* | dragonfly*)
      objformat=`/usr/bin/objformat`
    else
      case $host_os in
@@ -144,7 +126,7 @@ $NetBSD: patch-configure,v 1.7 2014/06/13 14:31:19 fhajny Exp $
      *) objformat=elf ;;
      esac
    fi
-@@ -110441,7 +110394,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -110433,7 +110386,7 @@ if test -z "$aix_libpath"; then aix_libp
  	;;
      esac
      ;;
@@ -153,16 +135,7 @@ $NetBSD: patch-configure,v 1.7 2014/06/13 14:31:19 fhajny Exp $
      # C++ shared libraries reported to be fairly broken before switch to ELF
      ld_shlibs_CXX=no
      ;;
-@@ -111987,7 +111940,7 @@ dgux*)
-   shlibpath_var=LD_LIBRARY_PATH
-   ;;
- 
--freebsd1*)
-+freebsd1|freebsd1.*)
-   dynamic_linker=no
-   ;;
- 
-@@ -111998,7 +111951,7 @@ freebsd* | dragonfly*)
+@@ -111986,7 +111939,7 @@ freebsd* | dragonfly*)
      objformat=`/usr/bin/objformat`
    else
      case $host_os in
