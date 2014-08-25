@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/08/25 13:58:21 szptvlfn Exp $
+
+SHA1 (xmonad-contrib-0.11.3.tar.gz) = f8c688981f79a2cb8c64ba72a00c47fbfbae5d47
+RMD160 (xmonad-contrib-0.11.3.tar.gz) = 25b12e1572f77aafdb366f9fb8fda9909f6d5a84
+Size (xmonad-contrib-0.11.3.tar.gz) = 401707 bytes
