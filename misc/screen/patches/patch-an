@@ -1,23 +1,41 @@
-$NetBSD: patch-an,v 1.3 2009/03/05 09:59:12 jmmv Exp $
+$NetBSD: patch-an,v 1.4 2014/08/25 20:02:32 kim Exp $
 
---- Makefile.in.orig	2006-10-23 15:06:32.000000000 +0200
-+++ Makefile.in	2009-03-05 11:40:26.000000000 +0100
-@@ -55,12 +55,12 @@ CFILES=	screen.c ansi.c fileio.c mark.c 
- 	search.c tty.c term.c window.c utmp.c loadav.c putenv.c help.c \
+Remove GNU Make conditional.  @ETCSCREENRC@ appears to get
+replaced always. If it doesn't in some cases, please fix
+configure.in instead (and regen patch for configure as well).
+
+Add utmp-netbsd.c (created in patch-am) and utmp-netbsd.o.
+Setting the setuid bit is handled by the package Makefile.
+Don't try to leave "screen.old" behind on install.
+
+--- Makefile.in.orig	2014-04-26 10:58:35.000000000 +0000
++++ Makefile.in	2014-08-25 19:05:49.000000000 +0000
+@@ -26,9 +26,6 @@
+ DEFS = @DEFS@ -DGIT_REV=\"$(GIT_REV)\"
+ 
+ ETCSCREENRC = @ETCSCREENRC@
+-ifeq (${ETCSCREENRC}, )
+-ETCSCREENRC=$(prefix)/etc/screenrc
+-endif
+ SCREENENCODINGS = $(datadir)/screen/utf8encodings
+ 
+ CC = @CC@
+@@ -65,12 +62,12 @@
  	termcap.c input.c attacher.c pty.c process.c display.c comm.c \
  	kmapdef.c acls.c braille.c braille_tsi.c logfile.c layer.c \
--	sched.c teln.c nethack.c encoding.c
-+	sched.c teln.c nethack.c encoding.c utmp-netbsd.c
+ 	sched.c teln.c nethack.c encoding.c canvas.c layout.c viewport.c \
+-	list_display.c list_generic.c list_window.c
++	list_display.c list_generic.c list_window.c utmp-netbsd.c
  OFILES=	screen.o ansi.o fileio.o mark.o misc.o resize.o socket.o \
  	search.o tty.o term.o window.o utmp.o loadav.o putenv.o help.o \
  	termcap.o input.o attacher.o pty.o process.o display.o comm.o \
  	kmapdef.o acls.o braille.o braille_tsi.o logfile.o layer.o \
--	sched.o teln.o nethack.o encoding.o
-+	sched.o teln.o nethack.o encoding.o utmp-netbsd.o
+-	list_generic.o list_display.o list_window.o \
++	list_generic.o list_display.o list_window.o utmp-netbsd.o \
+ 	sched.o teln.o nethack.o encoding.o canvas.o layout.o viewport.o
  
  all:	screen
- 
-@@ -74,11 +74,8 @@ install_bin: .version screen
+@@ -86,9 +83,6 @@
  	-if [ -f $(DESTDIR)$(bindir)/$(SCREEN) ] && [ ! -f $(DESTDIR)$(bindir)/$(SCREEN).old ]; \
  		then mv $(DESTDIR)$(bindir)/$(SCREEN) $(DESTDIR)$(bindir)/$(SCREEN).old; fi
  	$(INSTALL_PROGRAM) screen $(DESTDIR)$(bindir)/$(SCREEN)
@@ -25,8 +43,5 @@ $NetBSD: patch-an,v 1.3 2009/03/05 09:59:12 jmmv Exp $
 -# This doesn't work if $(bindir)/screen is a symlink
 -	-if [ -f $(DESTDIR)$(bindir)/screen ] && [ ! -f $(DESTDIR)$(bindir)/screen.old ]; then mv $(DESTDIR)$(bindir)/screen $(DESTDIR)$(bindir)/screen.old; fi
  	rm -f $(DESTDIR)$(bindir)/screen
--	(cd $(DESTDIR)$(bindir) && ln -sf $(SCREEN) screen)
-+	(cd $(DESTDIR)$(bindir) && ln -s -f $(SCREEN) screen)
+ 	(cd $(DESTDIR)$(bindir) && ln -f -s $(SCREEN) screen)
  	cp $(srcdir)/utf8encodings/?? $(DESTDIR)$(SCREENENCODINGS)
- 
- ###############################################################################
