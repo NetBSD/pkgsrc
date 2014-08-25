@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/01/16 02:52:19 rodent Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/08/25 18:33:21 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -206,9 +206,27 @@ ${PYSITELIB}/requests/packages/urllib3/request.pyo
 ${PYSITELIB}/requests/packages/urllib3/response.py
 ${PYSITELIB}/requests/packages/urllib3/response.pyc
 ${PYSITELIB}/requests/packages/urllib3/response.pyo
-${PYSITELIB}/requests/packages/urllib3/util.py
-${PYSITELIB}/requests/packages/urllib3/util.pyc
-${PYSITELIB}/requests/packages/urllib3/util.pyo
+${PYSITELIB}/requests/packages/urllib3/util/__init__.py
+${PYSITELIB}/requests/packages/urllib3/util/__init__.pyc
+${PYSITELIB}/requests/packages/urllib3/util/__init__.pyo
+${PYSITELIB}/requests/packages/urllib3/util/connection.py
+${PYSITELIB}/requests/packages/urllib3/util/connection.pyc
+${PYSITELIB}/requests/packages/urllib3/util/connection.pyo
+${PYSITELIB}/requests/packages/urllib3/util/request.py
+${PYSITELIB}/requests/packages/urllib3/util/request.pyc
+${PYSITELIB}/requests/packages/urllib3/util/request.pyo
+${PYSITELIB}/requests/packages/urllib3/util/response.py
+${PYSITELIB}/requests/packages/urllib3/util/response.pyc
+${PYSITELIB}/requests/packages/urllib3/util/response.pyo
+${PYSITELIB}/requests/packages/urllib3/util/ssl_.py
+${PYSITELIB}/requests/packages/urllib3/util/ssl_.pyc
+${PYSITELIB}/requests/packages/urllib3/util/ssl_.pyo
+${PYSITELIB}/requests/packages/urllib3/util/timeout.py
+${PYSITELIB}/requests/packages/urllib3/util/timeout.pyc
+${PYSITELIB}/requests/packages/urllib3/util/timeout.pyo
+${PYSITELIB}/requests/packages/urllib3/util/url.py
+${PYSITELIB}/requests/packages/urllib3/util/url.pyc
+${PYSITELIB}/requests/packages/urllib3/util/url.pyo
 ${PYSITELIB}/requests/sessions.py
 ${PYSITELIB}/requests/sessions.pyc
 ${PYSITELIB}/requests/sessions.pyo
