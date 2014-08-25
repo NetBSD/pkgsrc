@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13600 2014/08/25 18:26:00 wiz Exp $
+$NetBSD: TODO,v 1.13601 2014/08/25 18:26:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -967,7 +967,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-requests-2.3.0
 	o py-rope-0.9.4
 	o py-scgi-1.14
-	o py-simplejson-3.6.3
 	o py-simpletal-5.1
 	o py-smb-1.1.8
 	o py-sphinx-theme-cloud-1.6
