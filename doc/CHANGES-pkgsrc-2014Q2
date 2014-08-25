@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.27 2014/08/25 16:52:00 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.28 2014/08/25 18:04:35 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q2 branch:
@@ -110,3 +110,7 @@ Pullup ticket #4488 - requested by tron
 lang/ruby200-base: security patch
 Pullup ticket #4489 - requested by tron
 lang/ruby21-base: security patch
+Pullup ticket #4474 - requested by tron
+mk/platform/Darwin.mk: build fix
+Pullup ticket #4485 - requested by tron
+lang/perl5: build fix
