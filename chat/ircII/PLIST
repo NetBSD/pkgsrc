@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2014/01/02 07:57:49 mrg Exp $
+@comment $NetBSD: PLIST,v 1.26 2014/08/25 06:22:18 mrg Exp $
 bin/irc
 bin/irc-${VERS}
 bin/ircbug
@@ -315,7 +315,6 @@ share/irc/help/rbind${GZSUFFIX}
 share/irc/help/redirect${GZSUFFIX}
 share/irc/help/rehash${GZSUFFIX}
 share/irc/help/restart${GZSUFFIX}
-share/irc/help/rules${GZSUFFIX}
 share/irc/help/save${GZSUFFIX}
 share/irc/help/say${GZSUFFIX}
 share/irc/help/send${GZSUFFIX}
@@ -351,6 +350,10 @@ share/irc/help/set/debug${GZSUFFIX}
 share/irc/help/set/decrypt_program${GZSUFFIX}
 share/irc/help/set/display${GZSUFFIX}
 share/irc/help/set/display_encoding${GZSUFFIX}
+share/irc/help/set/ssl_ca_path${GZSUFFIX}
+share/irc/help/set/ssl_ca_file${GZSUFFIX}
+share/irc/help/set/ssl_ca_chain_file${GZSUFFIX}
+share/irc/help/set/ssl_ca_private_key_file${GZSUFFIX}
 share/irc/help/set/eight_bit_characters${GZSUFFIX}
 share/irc/help/set/encrypt_program${GZSUFFIX}
 share/irc/help/set/exec_protection${GZSUFFIX}
