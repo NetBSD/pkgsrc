@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.64 2014/08/25 06:22:18 mrg Exp $
+# $NetBSD: Makefile,v 1.65 2014/08/25 15:09:41 tron Exp $
 
 DISTNAME=		ircii-${VERS}
 PKGNAME=		ircII-${VERS}
+PKGREVISION=		1
 CATEGORIES=		chat
 MASTER_SITES=		http://ircii.warped.com/
 EXTRACT_SUFX=		.tar.bz2
@@ -44,6 +45,7 @@ BUILD_DEFS+=		IPV6_READY
 CONFIGURE_ARGS+=	${IRCII_CONFIGURE_ARGS}
 CONFIGURE_ENV+=		${IRCII_CONFIGURE_ENV}
 
+LIBS+=		-l$(BUILDLINK_LIBNAME.iconv)
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .if ${OPSYS} == "Interix"
@@ -68,5 +70,7 @@ post-install:
 	${SETENV} PATH=${PATH:Q} PKG_VERBOSE=${PKG_VERBOSE:Q}		\
 	${SH} ${PKGSRCDIR}/mk/plist/doc-compress ${DOC_COMPRESS_ARGS}
 
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
