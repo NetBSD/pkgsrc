@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3216 2014/08/25 18:37:27 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3217 2014/08/25 18:39:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4171,3 +4171,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated games/rftg to 0.9.4 [wiz 2014-08-25]
 	Updated devel/py-requests to 2.3.0 [wiz 2014-08-25]
 	Updated security/py-cryptography to 0.5.4 [wiz 2014-08-25]
+	Updated print/poppler-data to 0.4.7 [wiz 2014-08-25]
