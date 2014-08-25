@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/05/28 12:08:53 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/08/25 07:49:08 adam Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -159,6 +159,7 @@ libexec/git-core/git-update-server-info
 libexec/git-core/git-upload-archive
 libexec/git-core/git-upload-pack
 libexec/git-core/git-var
+libexec/git-core/git-verify-commit
 libexec/git-core/git-verify-pack
 libexec/git-core/git-verify-tag
 libexec/git-core/git-web--browse
@@ -174,6 +175,7 @@ libexec/git-core/mergetools/ecmerge
 libexec/git-core/mergetools/emerge
 libexec/git-core/mergetools/gvimdiff
 libexec/git-core/mergetools/gvimdiff2
+libexec/git-core/mergetools/gvimdiff3
 libexec/git-core/mergetools/kdiff3
 libexec/git-core/mergetools/kompare
 libexec/git-core/mergetools/meld
@@ -183,6 +185,7 @@ libexec/git-core/mergetools/tkdiff
 libexec/git-core/mergetools/tortoisemerge
 libexec/git-core/mergetools/vimdiff
 libexec/git-core/mergetools/vimdiff2
+libexec/git-core/mergetools/vimdiff3
 libexec/git-core/mergetools/xxdiff
 share/examples/git/git-completion.bash
 share/examples/git/git-prompt.sh
