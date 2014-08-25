@@ -1,22 +1,19 @@
-$NetBSD: distinfo,v 1.43.2.1 2014/07/17 18:46:37 tron Exp $
+$NetBSD: distinfo,v 1.43.2.2 2014/08/25 15:59:27 tron Exp $
 
-SHA1 (php-5.4.30.tar.bz2) = 1dbc68dfb696d0c776a1bcf9566a96b6bae5e1c7
-RMD160 (php-5.4.30.tar.bz2) = 9c85983d7f170070ed162d85aef828f5c3c0a577
-Size (php-5.4.30.tar.bz2) = 12315772 bytes
+SHA1 (php-5.4.32.tar.bz2) = cc43f47f522d59c200ce542485d2a1652802f459
+RMD160 (php-5.4.32.tar.bz2) = d7b3d882101f440404b59978abd2e9893692bc14
+Size (php-5.4.32.tar.bz2) = 12277458 bytes
 SHA1 (patch-acinclude.m4) = 71635e5381abf99a9fc9f2537b1c2f18e8096f00
-SHA1 (patch-aclocal.m4) = eae2ed8ea2985933c4fe88ba52577c14ac88eb92
-SHA1 (patch-build_libtool.m4) = 6dfef7c07a42dc54611c104265ef43c50a4e88ca
-SHA1 (patch-configure) = a7b2e15625d6005ed3ce16280b0e26a378e0b5f2
+SHA1 (patch-aclocal.m4) = 699086785fcd3d3834cc6016479dbdae6518e522
+SHA1 (patch-build_libtool.m4) = d81527abea3bd97e220f00a5d5296d8b1bfe2659
+SHA1 (patch-configure) = df6209127b1e23d17bc7128da3a44f3e44bbfd48
 SHA1 (patch-ext_gd_config.m4) = 2353efe6f25e1081b41d61033c3185cc643c7891
-SHA1 (patch-ext_gd_libgd_gdxpm.c) = 9a175417fad9ac23037a24122f8d1258b9eebbcb
 SHA1 (patch-ext_imap_config.m4) = 01681e8b54ee586ec4db72a5da2d0aec3fa89fcc
 SHA1 (patch-ext_mssql_php__mssql.c) = 732e48b05086180585a3087c2e9737db557dbc3b
 SHA1 (patch-ext_pdo__mysql_config.m4) = 3526e737da25129710218e7141d5a05ae0a51390
 SHA1 (patch-ext_pdo_config.m4) = 26a4ad02e5c6b7a54c3c54a6d026a3ccfed62c59
 SHA1 (patch-ext_phar_Makefile.frag) = 1af23d9135557bc7ba2f3627b317d4cbef37aaba
 SHA1 (patch-ext_phar_phar_phar.php) = 011f2d68048dbc63f5efcab4e23062daa9e8e08c
-SHA1 (patch-ext_spl_spl__array.c) = 9d14bcc39cfcc2eca70eff4a558709bcb5a867ea
-SHA1 (patch-ext_spl_spl__dllist.c) = 5c22fd58c04d9580a97e924554611aa9fb795f24
 SHA1 (patch-ext_standard_basic__functions.c) = 563fe67eb78b786cd46195026381ef22128e0841
 SHA1 (patch-php.ini-development) = 056a74646cbeb0b2bcfc18463348343d817b54bc
 SHA1 (patch-php.ini-production) = ac61016e18077a0870b8c8c42e89e3848c26d1f2
