@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3206 2014/08/25 08:59:49 obache Exp $
+$NetBSD: CHANGES-2014,v 1.3207 2014/08/25 09:58:28 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4161,3 +4161,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/git-svn to 2.1.0 [adam 2014-08-25]
 	Updated www/gitweb to 2.1.0 [adam 2014-08-25]
 	Updated x11/xdm to 1.1.11nb5 [obache 2014-08-25]
+	Updated net/synergy to 1.4.12 [obache 2014-08-25]
