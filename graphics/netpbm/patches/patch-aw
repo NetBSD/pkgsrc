@@ -1,4 +1,7 @@
-$NetBSD: patch-aw,v 1.3 2006/10/03 22:56:51 schwarz Exp $
+$NetBSD: patch-aw,v 1.4 2014/08/25 08:23:22 wiz Exp $
+
+Use CPPFLAGS from environment.
+Already included in current Advanced release.
 
 --- lib/Makefile.orig	2006-10-03 20:55:25.000000000 +0200
 +++ lib/Makefile	2006-10-03 20:55:56.000000000 +0200

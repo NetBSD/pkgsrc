@@ -1,6 +1,7 @@
-$NetBSD: patch-converter_other_pngtopnm.c,v 1.1 2014/08/21 20:58:23 wiz Exp $
+$NetBSD: patch-converter_other_pngtopnm.c,v 1.2 2014/08/25 08:23:22 wiz Exp $
 
 Fix build with png-1.5 and newer.
+Already included in Advanced release.
 
 --- converter/other/pngtopnm.c.orig	2011-11-25 00:15:46.000000000 +0000
 +++ converter/other/pngtopnm.c

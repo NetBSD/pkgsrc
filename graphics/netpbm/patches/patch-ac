@@ -1,6 +1,7 @@
-$NetBSD: patch-ac,v 1.22 2011/01/15 18:37:46 tron Exp $
+$NetBSD: patch-ac,v 1.23 2014/08/25 08:23:22 wiz Exp $
 
 Fix build with png-1.5.
+Already included in Advanced release.
 
 --- converter/other/pnmtopng.c.orig	2010-12-10 18:19:40.000000000 +0000
 +++ converter/other/pnmtopng.c	2011-01-15 11:15:25.000000000 +0000
