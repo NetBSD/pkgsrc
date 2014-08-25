@@ -1,4 +1,6 @@
-$NetBSD: patch-ao,v 1.1 2002/12/23 13:13:04 grant Exp $
+$NetBSD: patch-ao,v 1.2 2014/08/25 20:02:32 kim Exp $
+
+Replace configurable paths with tags.
 
 --- etc/etcscreenrc.orig	Sun Apr 29 01:25:34 2001
 +++ etc/etcscreenrc
