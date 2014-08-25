@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13596 2014/08/25 07:52:21 adam Exp $
+$NetBSD: TODO,v 1.13597 2014/08/25 09:58:28 obache Exp $
 
 Suggested new packages
 ======================
@@ -1075,7 +1075,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o swath-0.5.2
 	o swfdec-gnome-2.30.1
 	o sympa-6.1.19
-	o synergy-1.4.12 [pkg/48141]
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1 [needs polkit>=1.0?|GNOME 2.30]
 	o systrace-1.6e
