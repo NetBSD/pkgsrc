@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/08/25 09:58:18 obache Exp $
+# $NetBSD: Makefile,v 1.20 2014/08/25 10:06:41 obache Exp $
 #
 
 DISTNAME=		synergy-1.4.12-Source
@@ -7,7 +7,7 @@ CATEGORIES=		net x11
 MASTER_SITES=		http://synergy.googlecode.com/files/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://synergy-foss.org/
+HOMEPAGE=		http://synergy-project.org/
 COMMENT=		Let a user share a mouse and keyboard among computers
 LICENSE=		gnu-gpl-v2
 
