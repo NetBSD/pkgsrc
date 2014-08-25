@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/08/25 22:07:28 schmonz Exp $
+
+SHA1 (wemux-3.2.0.tar.gz) = 69dc228c8d35250d81c08d48ef48806817d0fc69
+RMD160 (wemux-3.2.0.tar.gz) = 1605853e4d493522d558a7b59a23f56b0b9ebe33
+Size (wemux-3.2.0.tar.gz) = 13359 bytes
