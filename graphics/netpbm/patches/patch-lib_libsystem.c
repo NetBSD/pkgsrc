@@ -1,7 +1,8 @@
-$NetBSD: patch-lib_libsystem.c,v 1.2 2014/07/17 15:52:26 ryoon Exp $
+$NetBSD: patch-lib_libsystem.c,v 1.3 2014/08/25 08:23:22 wiz Exp $
 
 * For SIGWINCH and SIGIO, _XOPEN_SOURCE should not be defined under OpenBSD 5.5
 * SCO OpenServer 5.0.7/3.2 has no SIGURG and SIGIO.
+  This chunk will be included in next Super Stable release.
 
 --- lib/libsystem.c.orig	2010-07-10 01:38:01.000000000 +0000
 +++ lib/libsystem.c
