@@ -1,6 +1,7 @@
-$NetBSD: patch-lib_libpbm3.c,v 1.1 2011/04/04 09:17:24 adam Exp $
+$NetBSD: patch-lib_libpbm3.c,v 1.2 2014/08/25 08:23:22 wiz Exp $
 
 Clang does not support SSE extensions at the moment.
+Different patch having same effect already in current Advanced release.
 
 --- lib/libpbm3.c.orig	2011-03-29 09:31:31.000000000 +0000
 +++ lib/libpbm3.c

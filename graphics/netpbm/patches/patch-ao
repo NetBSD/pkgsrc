@@ -1,4 +1,7 @@
-$NetBSD: patch-ao,v 1.4 2010/02/19 18:25:44 drochner Exp $
+$NetBSD: patch-ao,v 1.5 2014/08/25 08:23:22 wiz Exp $
+
+Add missing header.
+Already included in current Advanced release.
 
 --- converter/ppm/ppmtompeg/headers/frames.h.orig	2006-10-18 18:29:13.000000000 +0000
 +++ converter/ppm/ppmtompeg/headers/frames.h
