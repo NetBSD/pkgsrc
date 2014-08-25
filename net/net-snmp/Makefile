@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2014/08/22 16:27:18 adam Exp $
+# $NetBSD: Makefile,v 1.107 2014/08/25 14:31:47 adam Exp $
 
 .include "Makefile.common"
 PKGREVISION=	1
@@ -92,6 +92,14 @@ CONFIGURE_ARGS+=	--with-dummy-values
 # older software to use net-snmp.
 #
 CONFIGURE_ARGS+=	--enable-ucd-snmp-compatibility
+
+.if ${OPSYS} == "Darwin"
+CFLAGS+=		-framework ApplicationServices
+CFLAGS+=		-framework CoreFoundation
+CFLAGS+=		-framework CoreServices
+CFLAGS+=		-framework DiskArbitration
+CFLAGS+=		-framework IOKit
+.endif
 
 # Handle ${PREFIX}/share/snmp in the DEINSTALL script since it may contain
 # leftover config files or pidfiles after deinstallation.
