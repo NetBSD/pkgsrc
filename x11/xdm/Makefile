@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2013/06/16 13:34:30 obache Exp $
+# $NetBSD: Makefile,v 1.26 2014/08/25 08:30:46 obache Exp $
 
 DISTNAME=	xdm-1.1.11
 PKGREVISION=	4
@@ -76,7 +76,6 @@ CONFIGURE_ARGS+=	--with-default-vt=vt05
 .include "options.mk"
 
 .include "../../x11/libXaw/buildlink3.mk"
-.include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../mk/pam.buildlink3.mk"
