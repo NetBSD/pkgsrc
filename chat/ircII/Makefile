@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2014/08/25 15:09:41 tron Exp $
+# $NetBSD: Makefile,v 1.66 2014/08/25 15:27:22 tron Exp $
 
 DISTNAME=		ircii-${VERS}
 PKGNAME=		ircII-${VERS}
@@ -45,7 +45,7 @@ BUILD_DEFS+=		IPV6_READY
 CONFIGURE_ARGS+=	${IRCII_CONFIGURE_ARGS}
 CONFIGURE_ENV+=		${IRCII_CONFIGURE_ENV}
 
-LIBS+=		-l$(BUILDLINK_LIBNAME.iconv)
+LDFLAGS.Darwin+=-l$(BUILDLINK_LIBNAME.iconv)
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .if ${OPSYS} == "Interix"
