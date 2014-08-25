@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3217 2014/08/25 18:39:59 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3218 2014/08/25 20:02:50 kim Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4172,3 +4172,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-requests to 2.3.0 [wiz 2014-08-25]
 	Updated security/py-cryptography to 0.5.4 [wiz 2014-08-25]
 	Updated print/poppler-data to 0.4.7 [wiz 2014-08-25]
+	Updated misc/screen to 4.2.1 [kim 2014-08-25]
