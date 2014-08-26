@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.275 2014/08/26 04:33:59 brook Exp $
+# $NetBSD: Makefile,v 1.276 2014/08/26 15:46:20 brook Exp $
 
 COMMENT=	Mathematics
 
@@ -37,6 +37,7 @@ SUBDIR+=	R-gtools
 SUBDIR+=	R-httpRequest
 SUBDIR+=	R-hwde
 SUBDIR+=	R-intervals
+SUBDIR+=	R-latticeExtra
 SUBDIR+=	R-lmm
 SUBDIR+=	R-mapproj
 SUBDIR+=	R-maps
