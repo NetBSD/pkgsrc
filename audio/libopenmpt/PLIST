@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2014/08/26 10:44:15 wiz Exp $
+bin/openmpt123
+include/libopenmpt/libopenmpt.h
+include/libopenmpt/libopenmpt.hpp
+include/libopenmpt/libopenmpt_config.h
+include/libopenmpt/libopenmpt_stream_callbacks_fd.h
+include/libopenmpt/libopenmpt_stream_callbacks_file.h
+include/libopenmpt/libopenmpt_version.h
+lib/libopenmpt.so
+lib/libopenmpt.so.0
+lib/libopenmpt_modplug.so
+lib/openmpt.a
+lib/pkgconfig/libopenmpt.pc
+man/man1/openmpt123.1
+share/doc/libopenmpt/LICENSE
+share/doc/libopenmpt/README.md
+share/doc/libopenmpt/TODO
+share/doc/libopenmpt/examples/libopenmpt_example_c.c
+share/doc/libopenmpt/examples/libopenmpt_example_c_mem.c
+share/doc/libopenmpt/examples/libopenmpt_example_c_stdout.c
+share/doc/libopenmpt/examples/libopenmpt_example_cxx.cpp
