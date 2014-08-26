@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3223 2014/08/26 11:36:00 obache Exp $
+$NetBSD: CHANGES-2014,v 1.3224 2014/08/26 11:44:59 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4178,3 +4178,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added math/R-countrycode version 0.17 [brook 2014-08-26]
 	Added audio/libopenmpt version 0.2.4115beta5 [wiz 2014-08-26]
 	Updated devel/libthai to 0.1.21 [obache 2014-08-26]
+	Updated graphics/py-blockdiag to 1.4.3 [obache 2014-08-26]
