@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2012/04/15 13:33:06 brook Exp $
+$NetBSD: distinfo,v 1.6 2014/08/26 15:48:39 brook Exp $
 
-SHA1 (R/DAAG_1.12.tar.gz) = 6621bb76a65e51b59779d876c163ea77b4034309
-RMD160 (R/DAAG_1.12.tar.gz) = 024e9e0a34305cfa36a26432483a0943849374b4
-Size (R/DAAG_1.12.tar.gz) = 973803 bytes
+SHA1 (R/DAAG_1.20.tar.gz) = 146818a5fc61a5fa42358bc7056343bbf3b0f470
+RMD160 (R/DAAG_1.20.tar.gz) = eb2952a7996940eba58ea4ba0e247b3d4ce5d94d
+Size (R/DAAG_1.20.tar.gz) = 1416985 bytes
