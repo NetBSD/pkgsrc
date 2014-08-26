@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3221 2014/08/26 04:34:48 brook Exp $
+$NetBSD: CHANGES-2014,v 1.3222 2014/08/26 10:44:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4176,3 +4176,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated print/poppler to 0.26.4 [wiz 2014-08-25]
 	Added misc/wemux version 3.2.0 [schmonz 2014-08-25]
 	Added math/R-countrycode version 0.17 [brook 2014-08-26]
+	Added audio/libopenmpt version 0.2.4115beta5 [wiz 2014-08-26]
