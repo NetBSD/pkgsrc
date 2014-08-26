@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/08/15 09:22:21 wen Exp $
+# $NetBSD: Makefile,v 1.2 2014/08/26 16:40:40 brook Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -9,7 +9,10 @@ COMMENT=	Tools for splitting, applying and combining data
 LICENSE=	mit
 
 R_PKGNAME=	plyr
-R_PKGVER=	1.8
+R_PKGVER=	1.8.1
+
+USE_LANGUAGES+=	c++
 
 .include "../../math/R/Makefile.extension"
+.include "../../math/R-Rcpp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
