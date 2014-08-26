@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3222 2014/08/26 10:44:54 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3223 2014/08/26 11:36:00 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4177,3 +4177,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added misc/wemux version 3.2.0 [schmonz 2014-08-25]
 	Added math/R-countrycode version 0.17 [brook 2014-08-26]
 	Added audio/libopenmpt version 0.2.4115beta5 [wiz 2014-08-26]
+	Updated devel/libthai to 0.1.21 [obache 2014-08-26]
