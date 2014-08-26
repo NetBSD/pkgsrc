@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2014/07/06 12:22:49 obache Exp $
+@comment $NetBSD: PLIST,v 1.14 2014/08/26 11:44:50 obache Exp $
 bin/blockdiag
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -54,6 +54,9 @@ ${PYSITELIB}/blockdiag/imagedraw/utils/__init__.pyo
 ${PYSITELIB}/blockdiag/imagedraw/utils/ellipse.py
 ${PYSITELIB}/blockdiag/imagedraw/utils/ellipse.pyc
 ${PYSITELIB}/blockdiag/imagedraw/utils/ellipse.pyo
+${PYSITELIB}/blockdiag/imagedraw/utils/pillow.py
+${PYSITELIB}/blockdiag/imagedraw/utils/pillow.pyc
+${PYSITELIB}/blockdiag/imagedraw/utils/pillow.pyo
 ${PYSITELIB}/blockdiag/metrics.py
 ${PYSITELIB}/blockdiag/metrics.pyc
 ${PYSITELIB}/blockdiag/metrics.pyo
@@ -144,6 +147,7 @@ ${PYSITELIB}/blockdiag/plugins/autoclass.pyo
 ${PYSITELIB}/blockdiag/tests/__init__.py
 ${PYSITELIB}/blockdiag/tests/__init__.pyc
 ${PYSITELIB}/blockdiag/tests/__init__.pyo
+${PYSITELIB}/blockdiag/tests/diagrams/README
 ${PYSITELIB}/blockdiag/tests/diagrams/auto_jumping_edge.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/background_url_image.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/beginpoint_color.diag
@@ -153,6 +157,7 @@ ${PYSITELIB}/blockdiag/tests/diagrams/circular_ref2.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/circular_ref_and_parent_node.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/circular_ref_to_root.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/circular_skipped_edge.diag
+${PYSITELIB}/blockdiag/tests/diagrams/debian-logo-256color-palettealpha.png
 ${PYSITELIB}/blockdiag/tests/diagrams/define_class.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/diagram_attributes.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/diagram_attributes_order.diag
