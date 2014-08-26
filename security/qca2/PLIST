@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:13:37 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/08/26 20:59:40 joerg Exp $
 lib/pkgconfig/qca2.pc
+qt4/bin/qcatool2
 qt4/include/QtCrypto/QtCrypto
 qt4/include/QtCrypto/qca.h
 qt4/include/QtCrypto/qca_basic.h
