@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2014/08/16 12:05:45 wiz Exp $
+$NetBSD: distinfo,v 1.23 2014/08/26 20:58:43 joerg Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -179,9 +179,20 @@ SHA1 (patch-bridges_source_cpp__uno_gcc3__linux__intel_share.hxx) = 5e02fb3bf5b4
 SHA1 (patch-bridges_source_cpp__uno_gcc3__linux__intel_uno2cpp.cxx) = b01d697451973a873247a370ebec2cd5c3a8029d
 SHA1 (patch-bridges_source_cpp__uno_gcc3__linux__x86-64_share.hxx) = de4e7978cd364d3aff5d1495199f60759c53380e
 SHA1 (patch-bridges_source_cpp__uno_gcc3__linux__x86-64_uno2cpp.cxx) = 5022ad96533aa1681e6fab323cadf803281a6c17
+SHA1 (patch-canvas_source_cairo_cairo__spritecanvashelper.cxx) = dd31184f13b01588bf53c9a06df22fd2948e72e9
+SHA1 (patch-canvas_source_vcl_spritecanvashelper.cxx) = d46efb0df78b310eed9672176c562450a01a59f8
 SHA1 (patch-configure.ac) = 181d1b37eebe892cb0999d55c0d0de0ce286a332
 SHA1 (patch-connectivity_source_parse_sqlbison.y) = 2dd006e2a039a4dddaca4357466bb45f3a1e0cd1
+SHA1 (patch-dbaccess_source_ui_tabledesign_TableController.cxx) = dd759160380f7ada9fa09e186ff2390aa194b377
 SHA1 (patch-odk_CustomTarget__classes.mk) = 991896c402d1d2505e5aacec5df78439c8e9a767
+SHA1 (patch-oox_source_drawingml_table_tablecell.cxx) = b235d90cbc19e3ba87fa52e675f82931c510a611
+SHA1 (patch-reportdesign_source_core_api_ReportDefinition.cxx) = 50402661d55cb7bb4e35e7a850d5957107121de2
+SHA1 (patch-slideshow_source_engine_activities_activitybase.hxx) = 7a729ad62893af07cbabb64056f074b169f6b654
+SHA1 (patch-slideshow_source_engine_rehearsetimingsactivity.cxx) = 254a7ae558543a636bf4bf18339442979f2c9e52
+SHA1 (patch-slideshow_source_engine_shapes_appletshape.cxx) = 082a00d69b9280fc22707c0827270acb7692c67d
+SHA1 (patch-slideshow_source_engine_shapes_drawshape.cxx) = 51e210a3abc2c4ae88fe12d10472ad550aea599d
+SHA1 (patch-slideshow_source_engine_shapes_mediashape.cxx) = bd0dc47c05c52c9cb54eaea41ffdd5b71304be67
+SHA1 (patch-slideshow_source_engine_unoviewcontainer.cxx) = 5f177e4f2457f46a9e3da532e8ddc711cf48ea3e
 SHA1 (patch-solenv_gbuild_AllLangResTarget.mk) = c6fa51c74e3be0e9d4f18e1481039d44d6c3db98
 SHA1 (patch-solenv_gbuild_Deliver.mk) = 07ffb548a24edfe64fcf370423a2124c7a32cafb
 SHA1 (patch-solenv_gbuild_Module.mk) = 78d57071ac2c884bb6406356f45db3c55b61c678
