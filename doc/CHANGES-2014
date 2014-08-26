@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3224 2014/08/26 11:44:59 obache Exp $
+$NetBSD: CHANGES-2014,v 1.3225 2014/08/26 11:52:07 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4179,3 +4179,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added audio/libopenmpt version 0.2.4115beta5 [wiz 2014-08-26]
 	Updated devel/libthai to 0.1.21 [obache 2014-08-26]
 	Updated graphics/py-blockdiag to 1.4.3 [obache 2014-08-26]
+	Updated textproc/py-markdown2 to 2.2.2 [obache 2014-08-26]
