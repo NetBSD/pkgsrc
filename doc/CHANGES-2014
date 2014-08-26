@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3230 2014/08/26 15:47:14 brook Exp $
+$NetBSD: CHANGES-2014,v 1.3231 2014/08/26 15:48:53 brook Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4184,3 +4184,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated print/podofo to 0.9.2nb4 [martin 2014-08-26]
 	Updated math/R-chron to 2.3.45 [brook 2014-08-26]
 	Added math/R-latticeExtra version 0.6.26 [brook 2014-08-26]
+	Updated math/R-DAAG to 1.20 [brook 2014-08-26]
