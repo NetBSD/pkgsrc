@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/07/01 12:05:49 pettai Exp $
+# $NetBSD: Makefile,v 1.3 2014/08/26 20:55:08 joerg Exp $
 #
 
 DISTNAME=	psyBNC-2.4BETA2
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/psybnc
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 
 PSYBNC_USER?=		psybnc
 PSYBNC_GROUP?=		psybnc
