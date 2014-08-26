@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2014/08/22 11:24:39 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2014/08/26 20:58:43 joerg Exp $
 
 VERREL=		4.2.5
 VERRC=		2
@@ -165,10 +165,7 @@ CONFIGURE_ARGS+=	--with-lang="ALL"
 CONFIGURE_ARGS+=	--with-myspell-dicts
 CONFIGURE_ARGS+=	--with-parallelism=${MAKE_JOBS:Q}
 # needs fixes for boost-1.56.0
-#CONFIGURE_ARGS+=	--with-boost-libdir=${BUILDLINK_PREFIX.boost-libs}/lib
-CONFIGURE_ARGS+=	--without-system-boost
-# also pulls in boost
-CONFIGURE_ARGS+=        --without-system-mdds
+CONFIGURE_ARGS+=	--with-boost-libdir=${BUILDLINK_PREFIX.boost-libs}/lib
 CONFIGURE_ARGS+=	--with-system-libs
 CONFIGURE_ARGS+=	--with-system-dicts
 # internal vigra should be used because only header files are used.
@@ -261,12 +258,12 @@ post-install:
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../databases/unixodbc/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
-#.include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cppunit/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/liblangtag/buildlink3.mk"
-#.include "../../devel/mdds/buildlink3.mk"
+.include "../../devel/mdds/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
