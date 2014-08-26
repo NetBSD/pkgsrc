@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.276 2014/08/26 15:46:20 brook Exp $
+# $NetBSD: Makefile,v 1.277 2014/08/26 16:30:01 brook Exp $
 
 COMMENT=	Mathematics
 
@@ -15,6 +15,7 @@ SUBDIR+=	R-RColorBrewer
 SUBDIR+=	R-RPostgreSQL
 SUBDIR+=	R-RandomFields
 SUBDIR+=	R-Rcmdr
+SUBDIR+=	R-Rcpp
 SUBDIR+=	R-XML
 SUBDIR+=	R-abind
 SUBDIR+=	R-akima
