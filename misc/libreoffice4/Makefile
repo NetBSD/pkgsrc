@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2014/08/27 17:19:22 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2014/08/27 17:19:41 wiz Exp $
 
 VERREL=		4.2.5
 VERRC=		2
@@ -21,7 +21,7 @@ LICENSE=	gnu-lgpl-v3
 BUILDLINK_TRANSFORM+=	rename:-O2:-O
 .endif
 
-# LibreOfice's Makefile has its own pararell build mechanism. Avoid conflict.
+# LibreOfice's Makefile has its own parallel build mechanism. Avoid conflict.
 MAKE_JOBS_SAFE=	no
 
 CHECK_SHLIBS_SUPPORTED=	no
