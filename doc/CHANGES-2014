@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3233 2014/08/26 16:46:08 brook Exp $
+$NetBSD: CHANGES-2014,v 1.3234 2014/08/27 00:04:50 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4187,3 +4187,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated math/R-DAAG to 1.20 [brook 2014-08-26]
 	Added math/R-Rcpp version 0.11.2 [brook 2014-08-26]
 	Updated math/R-plyr to 1.8.1 [brook 2014-08-26]
+	Updated devel/ruby-thor to 0.19.1 [schmonz 2014-08-27]
