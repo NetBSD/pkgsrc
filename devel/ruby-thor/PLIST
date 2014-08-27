@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/09/15 10:24:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/08/27 00:04:19 schmonz Exp $
 bin/thor
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
@@ -23,6 +23,9 @@ ${GEM_LIBDIR}/lib/thor/core_ext/ordered_hash.rb
 ${GEM_LIBDIR}/lib/thor/error.rb
 ${GEM_LIBDIR}/lib/thor/group.rb
 ${GEM_LIBDIR}/lib/thor/invocation.rb
+${GEM_LIBDIR}/lib/thor/line_editor.rb
+${GEM_LIBDIR}/lib/thor/line_editor/basic.rb
+${GEM_LIBDIR}/lib/thor/line_editor/readline.rb
 ${GEM_LIBDIR}/lib/thor/parser.rb
 ${GEM_LIBDIR}/lib/thor/parser/argument.rb
 ${GEM_LIBDIR}/lib/thor/parser/arguments.rb
@@ -70,13 +73,36 @@ ${GEM_LIBDIR}/spec/fixtures/subcommand.thor
 ${GEM_LIBDIR}/spec/group_spec.rb
 ${GEM_LIBDIR}/spec/helper.rb
 ${GEM_LIBDIR}/spec/invocation_spec.rb
+${GEM_LIBDIR}/spec/line_editor/basic_spec.rb
+${GEM_LIBDIR}/spec/line_editor/readline_spec.rb
+${GEM_LIBDIR}/spec/line_editor_spec.rb
 ${GEM_LIBDIR}/spec/parser/argument_spec.rb
 ${GEM_LIBDIR}/spec/parser/arguments_spec.rb
 ${GEM_LIBDIR}/spec/parser/option_spec.rb
 ${GEM_LIBDIR}/spec/parser/options_spec.rb
+${GEM_LIBDIR}/spec/quality_spec.rb
 ${GEM_LIBDIR}/spec/rake_compat_spec.rb
 ${GEM_LIBDIR}/spec/register_spec.rb
 ${GEM_LIBDIR}/spec/runner_spec.rb
+${GEM_LIBDIR}/spec/sandbox/application.rb
+${GEM_LIBDIR}/spec/sandbox/app{1}/README
+${GEM_LIBDIR}/spec/sandbox/bundle/execute.rb
+${GEM_LIBDIR}/spec/sandbox/bundle/main.thor
+${GEM_LIBDIR}/spec/sandbox/command.thor
+${GEM_LIBDIR}/spec/sandbox/doc/%file_name%.rb.tt
+${GEM_LIBDIR}/spec/sandbox/doc/COMMENTER
+${GEM_LIBDIR}/spec/sandbox/doc/README
+${GEM_LIBDIR}/spec/sandbox/doc/block_helper.rb
+${GEM_LIBDIR}/spec/sandbox/doc/config.rb
+${GEM_LIBDIR}/spec/sandbox/doc/config.yaml.tt
+${GEM_LIBDIR}/spec/sandbox/doc/excluding/%file_name%.rb.tt
+${GEM_LIBDIR}/spec/sandbox/enum.thor
+${GEM_LIBDIR}/spec/sandbox/group.thor
+${GEM_LIBDIR}/spec/sandbox/invoke.thor
+${GEM_LIBDIR}/spec/sandbox/path with spaces
+${GEM_LIBDIR}/spec/sandbox/preserve/script.sh
+${GEM_LIBDIR}/spec/sandbox/script.thor
+${GEM_LIBDIR}/spec/sandbox/subcommand.thor
 ${GEM_LIBDIR}/spec/shell/basic_spec.rb
 ${GEM_LIBDIR}/spec/shell/color_spec.rb
 ${GEM_LIBDIR}/spec/shell/html_spec.rb
