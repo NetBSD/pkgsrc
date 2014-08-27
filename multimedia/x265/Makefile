@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/07/15 16:48:55 adam Exp $
+# $NetBSD: Makefile,v 1.3 2014/08/27 05:51:39 adam Exp $
 
-DISTNAME=	1.2
+DISTNAME=	1.3
 PKGNAME=	x265-${DISTNAME}
 CATEGORIES=	multimedia
 MASTER_SITES=	https://bitbucket.org/multicoreware/x265/get/
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DIST_SUBDIR=	x265
-WRKSRC=		${WRKDIR}/multicoreware-x265-d6257335c537/source
+WRKSRC=		${WRKDIR}/multicoreware-x265-c1e4fc0162c1/source
 BUILD_DEPENDS+=	yasm>=1.0.0:../../devel/yasm
 
 USE_CMAKE=		yes
