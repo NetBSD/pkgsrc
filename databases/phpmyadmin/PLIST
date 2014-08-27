@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36.2.1 2014/07/27 06:37:19 spz Exp $
+@comment $NetBSD: PLIST,v 1.36.2.2 2014/08/27 22:57:04 spz Exp $
 share/doc/phpmyadmin/ChangeLog
 share/doc/phpmyadmin/LICENSE
 share/doc/phpmyadmin/README
@@ -1156,6 +1156,7 @@ share/phpmyadmin/themes/original/img/pause.png
 share/phpmyadmin/themes/original/img/play.png
 share/phpmyadmin/themes/original/img/s_asc.png
 share/phpmyadmin/themes/original/img/s_asci.png
+share/phpmyadmin/themes/original/img/s_attention.png
 share/phpmyadmin/themes/original/img/s_cancel.png
 share/phpmyadmin/themes/original/img/s_cog.png
 share/phpmyadmin/themes/original/img/s_db.png
