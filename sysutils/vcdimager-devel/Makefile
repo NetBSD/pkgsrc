@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2013/12/21 11:15:08 jperkin Exp $
+# $NetBSD: Makefile,v 1.44 2014/08/28 10:58:19 jperkin Exp $
 #
 
 DISTNAME=	vcdimager-0.7.24
@@ -20,7 +20,7 @@ PKGCONFIG_OVERRIDE+= libvcdinfo.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin"
+.if ${OPSYS} == "Darwin"
 BUILDLINK_TRANSFORM+= rm:-Wl,--version-script=libvcdinfo.la.ver
 .endif
 

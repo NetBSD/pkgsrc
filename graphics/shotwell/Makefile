@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2014/08/21 15:35:08 jperkin Exp $
+# $NetBSD: Makefile,v 1.59 2014/08/28 10:58:18 jperkin Exp $
 
 DISTNAME=		shotwell-0.11.6
 PKGREVISION=		25
@@ -21,12 +21,6 @@ CONFIGURE_ENV+=		--define=NO_CAMERA
 MAKE_ENV+=		VALAC=${VALAC}
 
 REPLACE_SH+=		configure
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+=	rm:-Wl,--no-as-needed
-.endif
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"

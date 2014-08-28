@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2014/04/23 07:05:31 adam Exp $
+# $NetBSD: Makefile.common,v 1.11 2014/08/28 10:58:19 jperkin Exp $
 # used by x11/qt5-dbus/Makefile
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
@@ -123,7 +123,6 @@ CONFIGURE_ARGS+=	-platform solaris-cc
 .    endif
 .  endif
 SYS_LIBS=		-lresolv -lsocket -lnsl -lrt
-BUILDLINK_TRANSFORM+=	rm:-Wl,--gc-sections
 .elif ${OPSYS} == "Interix"
 CONFIGURE_ARGS+=	-platform interix-g++
 CFLAGS+=		-I/usr/local/include/bind
