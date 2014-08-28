@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2014/07/21 08:14:47 enami Exp $
+# $NetBSD: Makefile,v 1.65 2014/08/28 17:45:53 jperkin Exp $
 #
 
 DISTNAME=	Gauche-0.9.4
@@ -35,6 +35,7 @@ ALL_ENV+=		\
 	ICONV_LDFLAGS="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.iconv}/lib"
 .endif
 
+USE_LANGUAGES=	c c99
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gzip makeinfo
 TEST_TARGET=	check
@@ -53,4 +54,5 @@ post-install:
 	gzip -d ${DESTDIR}${PREFIX}/${PKGINFODIR}/gauche-ref*gz
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
