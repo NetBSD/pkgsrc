@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3244 2014/08/28 09:37:47 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3245 2014/08/28 09:41:22 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4198,3 +4198,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/kpcli to 2.7nb2 [wiz 2014-08-28]
 	Updated www/p5-Mojolicious to 5.33 [wen 2014-08-28]
 	Updated devel/p5-Moo to 1.006000 [wen 2014-08-28]
+	Updated devel/p5-Moos to 0.30 [wen 2014-08-28]
