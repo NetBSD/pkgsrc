@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.437 2014/08/21 21:30:19 wiz Exp $
+# $NetBSD: Makefile,v 1.438 2014/08/28 04:03:03 jnemeth Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -321,6 +321,7 @@ SUBDIR+=	vttest
 SUBDIR+=	vym
 SUBDIR+=	watch
 SUBDIR+=	wdic
+SUBDIR+=	wemux
 SUBDIR+=	whohas
 SUBDIR+=	window
 SUBDIR+=	xchm
