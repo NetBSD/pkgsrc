@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2001 2014/08/14 11:08:37 jperkin Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2002 2014/08/28 22:29:37 riz Exp $
 #
 # This file is in the public domain.
 #
@@ -624,6 +624,7 @@ _ROOT_CMD=	cd ${.CURDIR} &&					\
 			PATH=${_PATH_ORIG:Q}:${SU_CMD_PATH_APPEND:Q}	\
 		${MAKE} ${MAKEFLAGS} _PKGSRC_BARRIER=yes		\
 			PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL:Q}		\
+			${USE_CROSS_COMPILE:DUSE_CROSS_COMPILE=${USE_CROSS_COMPILE:Q}}	\
 			su-${.TARGET} ${MAKEFLAGS.su-${.TARGET}}
 
 .PHONY: su-target
