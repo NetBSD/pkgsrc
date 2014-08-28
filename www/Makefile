@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1063 2014/08/20 13:45:09 wiz Exp $
+# $NetBSD: Makefile,v 1.1064 2014/08/28 04:07:40 jnemeth Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -32,6 +32,7 @@ SUBDIR+=	ap2-bw
 SUBDIR+=	ap2-cband
 SUBDIR+=	ap2-fcgid
 SUBDIR+=	ap2-jk
+SUBDIR+=	ap2-limitipconn
 SUBDIR+=	ap2-perl
 SUBDIR+=	ap2-python
 SUBDIR+=	ap2-subversion
