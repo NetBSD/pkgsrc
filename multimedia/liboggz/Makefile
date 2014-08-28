@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/06/14 11:09:09 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2014/08/28 10:58:18 jperkin Exp $
 #
 
 DISTNAME=	liboggz-1.1.1
@@ -17,10 +17,6 @@ USE_TOOLS+=	pkg-config
 PKGCONFIG_OVERRIDE+=	oggz.pc.in
 
 .include "options.mk"
-
-.if ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+=	rm:-Wl,--version-script=Version_script
-.endif
 
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
