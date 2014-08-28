@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3238 2014/08/27 21:25:58 tron Exp $
+$NetBSD: CHANGES-2014,v 1.3239 2014/08/28 01:19:27 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4192,3 +4192,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/py-vdirsyncer to 0.2.5 [wiz 2014-08-27]
 	Updated misc/libreoffice4 to 4.2.5.2nb6 [wiz 2014-08-27]
 	Updated databases/phpmyadmin to 4.2.7.1 [tron 2014-08-27]
+	Updated comms/asterisk to 11.12.0 [jnemeth 2014-08-28]
