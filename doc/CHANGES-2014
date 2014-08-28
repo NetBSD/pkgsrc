@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3247 2014/08/28 10:07:52 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3248 2014/08/28 10:27:42 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4201,3 +4201,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Moos to 0.30 [wen 2014-08-28]
 	Updated inputmethod/ibus-table to 1.8.9 [obache 2014-08-28]
 	Updated devel/p5-MooseX-Declare to 0.39 [wen 2014-08-28]
+	Updated inputmethod/ibus-handwrite to 3.0.0 [obache 2014-08-28]
