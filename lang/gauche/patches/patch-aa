@@ -1,8 +1,21 @@
-$NetBSD: patch-aa,v 1.12 2014/07/21 07:40:07 enami Exp $
+$NetBSD: patch-aa,v 1.13 2014/08/28 17:45:53 jperkin Exp $
 
---- configure.orig	2010-12-13 03:45:32.000000000 +0300
-+++ configure	2010-12-16 06:00:33.000000000 +0300
-@@ -5017,6 +5017,9 @@
+Use correct CFLAGS on SunOS.
+
+--- configure.orig	2014-07-20 06:15:05.000000000 +0000
++++ configure
+@@ -3038,8 +3038,8 @@ GAUCHE_CONFIGURE_ARGS="`echo ""$ac_confi
+ 
+ 
+ case $host in
+-  *-pc-solaris2.*)
+-    CFLAGS="$CFLAGS -D_XOPEN_SOURCE -D_XOPEN_SOURCE_EXTENDED=1 -D__EXTENSIONS__" ;;
++  *-solaris2.*)
++    CFLAGS="$CFLAGS -D_XOPEN_SOURCE=600 -D__EXTENSIONS__" ;;
+ esac
+ 
+ ac_ext=c
+@@ -5170,6 +5170,9 @@ $as_echo "#define SCM_TARGET_X86_64 1" >
   ;;
    alpha*)
      CFLAGS="$CFLAGS -mieee" ;;
