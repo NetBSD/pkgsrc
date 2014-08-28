@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3249 2014/08/28 16:53:08 adam Exp $
+$NetBSD: CHANGES-2014,v 1.3250 2014/08/28 21:55:45 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4203,3 +4203,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-MooseX-Declare to 0.39 [wen 2014-08-28]
 	Updated inputmethod/ibus-handwrite to 3.0.0 [obache 2014-08-28]
 	Updated www/squid3 to 3.4.7 [adam 2014-08-28]
+	Updated devel/hs-random to 1.0.1.3 [szptvlfn 2014-08-28]
