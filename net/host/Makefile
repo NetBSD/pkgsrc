@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2013/07/21 12:28:32 shattered Exp $
+# $NetBSD: Makefile,v 1.29 2014/08/28 10:58:18 jperkin Exp $
 
 DISTNAME=	host-20070128
 CATEGORIES=	net
@@ -27,7 +27,6 @@ BUILDLINK_TRANSFORM+=	rm:-static
 .endif
 .if ${OPSYS} == "SunOS"
 LDFLAGS+=	-lresolv -lsocket -lnsl
-BUILDLINK_TRANSFORM+=	rm:-Wl,--warn-common
 BUILDLINK_TRANSFORM+=	rm:-static
 .endif
 .if ${OPSYS} == "Linux"

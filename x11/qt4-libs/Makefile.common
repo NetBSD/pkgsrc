@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.37 2013/09/02 19:51:32 adam Exp $
+# $NetBSD: Makefile.common,v 1.38 2014/08/28 10:58:19 jperkin Exp $
 # used by x11/qt4-docs/Makefile
 # used by x11/qt4-libs/Makefile
 # used by x11/qt4-mng/Makefile
@@ -80,7 +80,6 @@ CONFIGURE_ARGS+=	-platform solaris-cc
 .    endif
 .  endif
 SYS_LIBS=		-lresolv -lsocket -lnsl -lrt
-BUILDLINK_TRANSFORM+=	rm:-Wl,--gc-sections
 .elif ${OPSYS} == "Interix"
 CONFIGURE_ARGS+=	-platform interix-g++
 CFLAGS+=		-I/usr/local/include/bind
