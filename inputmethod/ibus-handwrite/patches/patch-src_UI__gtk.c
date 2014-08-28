@@ -1,12 +1,12 @@
-$NetBSD: patch-src_UI__gtk.c,v 1.2 2014/05/01 07:48:51 obache Exp $
+$NetBSD: patch-src_UI__gtk.c,v 1.3 2014/08/28 10:27:28 obache Exp $
 
 * Nested functions are supported as an extension in GNU C.
   http://code.google.com/p/ibus-handwrite/issues/detail?id=20
 
---- src/UI_gtk.c.orig	2012-11-19 16:23:52.000000000 +0000
+--- src/UI_gtk.c.orig	2014-08-04 08:24:46.000000000 +0000
 +++ src/UI_gtk.c
-@@ -173,6 +173,11 @@ static void glwidget_realize(GtkWidget *
- 	}
+@@ -74,6 +74,11 @@ static gboolean paint_lines(GtkWidget *w
+ 	return TRUE;
  }
  
 +static void clicked(GtkButton *button, IBusHandwriteEngine *engine)
@@ -17,7 +17,7 @@ $NetBSD: patch-src_UI__gtk.c,v 1.2 2014/05/01 07:48:51 obache Exp $
  static void regen_loopuptable(GtkWidget * widget, IBusHandwriteEngine * engine)
  {
  	int i;
-@@ -195,11 +200,6 @@ static void regen_loopuptable(GtkWidget 
+@@ -98,11 +103,6 @@ static void regen_loopuptable(GtkWidget 
  
  		gtk_widget_show(bt);
  
