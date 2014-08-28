@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2014/08/24 06:41:32 obache Exp $
+$NetBSD: distinfo,v 1.5 2014/08/28 09:43:06 obache Exp $
 
-SHA1 (ibus-table-1.8.8.tar.gz) = 02d8ff3428b6fccec7311160319be12a15385ade
-RMD160 (ibus-table-1.8.8.tar.gz) = d9bed26a8e14824d614b94f6ed863cc7b3c384bd
-Size (ibus-table-1.8.8.tar.gz) = 529204 bytes
+SHA1 (ibus-table-1.8.9.tar.gz) = b965e410b864e82e7d2360acd81fbebeaf4b2853
+RMD160 (ibus-table-1.8.9.tar.gz) = b3e898c571044d9fae594aa423afcde4a23eddc7
+Size (ibus-table-1.8.9.tar.gz) = 530995 bytes
