@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3240 2014/08/28 01:26:50 jnemeth Exp $
+$NetBSD: CHANGES-2014,v 1.3241 2014/08/28 03:15:34 brook Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4194,3 +4194,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/phpmyadmin to 4.2.7.1 [tron 2014-08-27]
 	Updated comms/asterisk to 11.12.0 [jnemeth 2014-08-28]
 	Updated comms/asterisk18 to 1.8.30.0 [jnemeth 2014-08-28]
+	Updated math/R-date to 1.2.34 [brook 2014-08-28]
