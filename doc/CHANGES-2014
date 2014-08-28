@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3242 2014/08/28 08:48:01 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3243 2014/08/28 09:23:15 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4196,3 +4196,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated comms/asterisk18 to 1.8.30.0 [jnemeth 2014-08-28]
 	Updated math/R-date to 1.2.34 [brook 2014-08-28]
 	Updated security/kpcli to 2.7nb2 [wiz 2014-08-28]
+	Updated www/p5-Mojolicious to 5.33 [wen 2014-08-28]
