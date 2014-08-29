@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/09/12 06:20:35 mef Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/08/29 04:40:06 mef Exp $
 bin/simulavr
 include/simulavr/adcpin.h
 include/simulavr/application.h
