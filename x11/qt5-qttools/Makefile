@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2014/04/23 07:05:32 adam Exp $
+# $NetBSD: Makefile,v 1.10 2014/08/29 20:33:47 wiz Exp $
 
 PKGNAME=	qt5-qttools-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	Qt5 tools
 
 .include "../../x11/qt5-qtbase/Makefile.common"

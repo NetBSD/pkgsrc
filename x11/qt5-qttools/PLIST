@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/12/15 09:42:45 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/08/29 20:33:47 wiz Exp $
 lib/pkgconfig/Qt5CLucene.pc
 lib/pkgconfig/Qt5Designer.pc
 lib/pkgconfig/Qt5DesignerComponents.pc
@@ -10,9 +10,13 @@ qt5/bin/lconvert
 qt5/bin/linguist
 qt5/bin/lrelease
 qt5/bin/lupdate
+qt5/bin/pixeltool
 qt5/bin/qcollectiongenerator
+qt5/bin/qdbus
+qt5/bin/qdbusviewer
 qt5/bin/qhelpconverter
 qt5/bin/qhelpgenerator
+qt5/bin/qtpaths
 qt5/include/QtCLucene/${PKGVERSION}/QtCLucene/private/qanalyzer_p.h
 qt5/include/QtCLucene/${PKGVERSION}/QtCLucene/private/qclucene-config_p.h
 qt5/include/QtCLucene/${PKGVERSION}/QtCLucene/private/qclucene_global_p.h
