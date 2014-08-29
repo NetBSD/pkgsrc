@@ -1,4 +1,4 @@
-$NetBSD: patch-doc_Makefile.in,v 1.1 2013/08/07 03:18:03 mef Exp $
+$NetBSD: patch-doc_Makefile.in,v 1.2 2014/08/29 04:31:12 mef Exp $
 
 Adding PATH at installation time for OBJCOPY = avr-objcopy etc.
 See comment on SUBST part in Makefile.
