@@ -1,0 +1,223 @@
+$NetBSD: patch-src_systemclock_cpp,v 1.1 2014/08/29 04:40:06 mef Exp $
+
+clang flags as resize unresolved reference,
+backport from git repository (as of 2013-09-15).
+
+--- simulavr-1.0.0/src/systemclock.cpp	2012-02-13 00:26:38.000000000 +0900
++++ src/systemclock.cpp	2013-09-13 09:41:15.000000000 +0900
+@@ -2,7 +2,7 @@
+  ****************************************************************************
+  *
+  * simulavr - A simulator for the Atmel AVR family of microcontrollers.
+- * Copyright (C) 2001, 2002, 2003   Klaus Rudolph       
++ * Copyright (C) 2001, 2002, 2003 Klaus Rudolph
+  * 
+  * This program is free software; you can redistribute it and/or modify
+  * it under the terms of the GNU General Public License as published by
+@@ -28,6 +28,7 @@
+ #include "simulationmember.h"
+ #include "helper.h"
+ #include "application.h"
++#include "avrdevice.h"
+ #include "avrerror.h"
+ 
+ #include "signal.h"
+@@ -35,83 +36,78 @@
+ 
+ using namespace std;
+ 
+-
+ template<typename Key, typename Value>
+ MinHeap<Key, Value>::MinHeap()
+ {
+-	this->reserve(10);  // vector would free&malloc when we keep inserting and removing only 1 element.
++    this->reserve(10);  // vector would free&malloc when we keep inserting and removing only 1 element.
+ }
+ 
+ template<typename Key, typename Value>
+ void MinHeap<Key, Value>::RemoveMinimum()
+ {
+-	assert(!this->empty());
+-	Key k = this->back().first;
+-	Value v = this->back().second;
+-	RemoveMinimumAndInsert(k, v);
+-	this->pop_back();
++    assert(!this->empty());
++    Key k = this->back().first;
++    Value v = this->back().second;
++    RemoveMinimumAndInsert(k, v);
++    this->pop_back();
+ }
+ 
+ template<typename Key, typename Value>
+ bool MinHeap<Key, Value>::ContainsValue(Value v) const
+ {
+-	for(unsigned i = 0; i < this->size(); i++)
+-	{
+-		std::pair<Key,Value> item = (*this)[i];
+-		if(item.second == v)
+-			return true;
+-	}
+-	return false;
++    for(unsigned i = 0; i < this->size(); i++)
++    {
++        std::pair<Key,Value> item = (*this)[i];
++        if(item.second == v)
++            return true;
++    }
++    return false;
+ }
+ 
+ template<typename Key, typename Value>
+-void MinHeap<Key, Value>::Insert(Key k, Value v)
++void MinHeap<Key, Value>::InsertInternal(Key k, Value v, unsigned pos)
+ {
+-	resize(this->size()+1);
+-	for(unsigned i = this->size();;) {
+-		unsigned parent = i/2;
+-		if(parent == 0 || (*this)[parent-1].first < k) {
+-			(*this)[i-1].first = k;
+-			(*this)[i-1].second = v;
+-			return;
+-		}
+-		Key k_temp = (*this)[parent-1].first;
+-		Value v_temp = (*this)[parent-1].second;
+-		(*this)[i-1].first = k_temp;
+-		(*this)[i-1].second = v_temp;
+-		i = parent;
+-	}
++    for(unsigned i = pos;;) {
++        unsigned parent = i/2;
++        if(parent == 0 || (*this)[parent-1].first <= k) {
++            (*this)[i-1].first = k;
++            (*this)[i-1].second = v;
++            return;
++        }
++        Key k_temp = (*this)[parent-1].first;
++        Value v_temp = (*this)[parent-1].second;
++        (*this)[i-1].first = k_temp;
++        (*this)[i-1].second = v_temp;
++        i = parent;
++    }
+ }
+ 
+ template<typename Key, typename Value>
+-void MinHeap<Key, Value>::RemoveMinimumAndInsert(Key k, Value v)
++void MinHeap<Key, Value>::RemoveAtPositionAndInsertInternal(Key k, Value v, unsigned pos)
+ {
+-	assert(!this->empty());
+-	unsigned i = 1;
+-	for(;;) {
+-		unsigned left = 2*i;
+-		unsigned right = 2*i + 1;
+-		unsigned smallest = i;
+-		if(left-1 < this->size() && (*this)[left-1].first < k)
+-			smallest = left;
+-		if(right-1 < this->size() && (*this)[right-1].first < k)
+-			smallest = right;
+-		if(smallest == i) {
+-			(*this)[smallest-1].first = k;
+-			(*this)[smallest-1].second = v;
+-			return;
+-		}
+-		Key k_temp = (*this)[smallest-1].first;
+-		Value v_temp = (*this)[smallest-1].second;
+-		(*this)[smallest-1].first = k;
+-		(*this)[smallest-1].second = v;
+-		k = k_temp;
+-		v = v_temp;
+-		i = smallest;
+-	}
++    assert(pos < this->size());
++    unsigned i = pos + 1;
++    for(;;) {
++        unsigned left = 2*i;
++        unsigned right = 2*i + 1;
++        unsigned smallest = i;
++        if(left-1 < this->size() && (*this)[left-1].first < k)
++            smallest = left;
++        if(right-1 < this->size() && (*this)[right-1].first < k && (*this)[right-1].first < (*this)[left-1].first)
++            smallest = right;
++        if(smallest == i) {
++            (*this)[smallest-1].first = k;
++            (*this)[smallest-1].second = v;
++            return;
++        }
++        Key k_temp = (*this)[smallest-1].first;
++        Value v_temp = (*this)[smallest-1].second;
++        (*this)[i-1].first = k_temp;
++        (*this)[i-1].second = v_temp;
++        i = smallest;
++    }
+ }
+ 
+-
+ SystemClock::SystemClock() { 
+     static int no = 0;
+     currentTime = 0; 
+@@ -130,7 +126,6 @@
+     }
+ } 
+ 
+-
+ void SystemClock::Add(SimulationMember *dev) {
+     syncMembers.Insert(currentTime, dev);
+ }
+@@ -153,6 +148,8 @@
+         currentTime = syncMembers.begin()->first;
+         SystemClockOffset nextStepIn_ns = -1;
+         
++        syncMembers.RemoveMinimum();
++
+         // do a step on simulation member
+         res = core->Step(untilCoreStepFinished, &nextStepIn_ns);
+         
+@@ -164,9 +161,7 @@
+         // be called anymore!
+         
+         if(nextStepIn_ns > 0)
+-            syncMembers.RemoveMinimumAndInsert(nextStepIn_ns, core);
+-        else
+-            syncMembers.RemoveMinimum();
++            syncMembers.Insert(nextStepIn_ns, core);
+ 
+         // handle async simulation members
+         amiEnd = asyncMembers.end();
+@@ -180,12 +175,11 @@
+ }
+ 
+ void SystemClock::Rescedule(SimulationMember *sm, SystemClockOffset newTime) {
+-    MinHeap<SystemClockOffset, SimulationMember *>::iterator ii;
+ 
+-    for(ii=syncMembers.begin(); ii != syncMembers.end(); ii++) {
+-        if(ii->second == sm) {
+-            syncMembers.erase(ii); 
+-            break;
++    for(unsigned i = 0; i < syncMembers.size(); i++) {
++        if(syncMembers[i].second == sm) {
++            syncMembers.RemoveAtPositionAndInsert(newTime+currentTime+1, sm, i);
++            return;
+         }
+     }
+ 
+@@ -211,6 +205,7 @@
+ }
+ 
+ void SystemClock::Endless() {
++    breakMessage = false;        // if we run a second loop, clear break before entering loop
+     int steps = 0;
+     
+     signal(SIGINT, OnBreak);
+@@ -227,7 +222,6 @@
+     Application::GetInstance()->PrintResults();
+ }
+ 
+-
+ void SystemClock::Run(SystemClockOffset maxRunTime) {
+     int steps = 0;
+     
+@@ -269,4 +263,3 @@
+     static SystemClock obj;
+     return obj;
+ }
+-

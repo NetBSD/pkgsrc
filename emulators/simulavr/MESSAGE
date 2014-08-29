@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2014/08/29 04:40:06 mef Exp $
+Various README files are installed at following locations:
+ ${PREFIX}/share/doc/simulvar/README
+ ${PREFIX}/share/doc/simulvar/README.gdb
+ ${PREFIX}/share/doc/simulvar/examples/{topics}/README
+Also, please read the 'info' at the node of SimulAVR.
+
+The introduction of simulAVR with avr-gdb, see following URL:
+  http://www.nongnu.org/simulavr/intro.html
+===========================================================================

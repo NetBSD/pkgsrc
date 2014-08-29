@@ -1,0 +1,40 @@
+$NetBSD: patch-examples_atmel_key_StdDefs_c,v 1.1 2014/08/29 04:40:06 mef Exp $
+
+StdDefs.c: In function 'putstr':
+StdDefs.c:120:4: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    for (j = 0; j <= strlen(s); j++)
+    ^
+In file included from StdDefs.c:10:0:
+/usr/pkg/avr/include/string.h:133:15: note: expected 'const char *' but argument is of type 'CHARU *'
+ extern size_t strlen(const char *) __ATTR_PURE__;
+
+--- /export/WRKOBJDIR/wip/simulavr/work/simulavr-1.0.0/examples/atmel_key/StdDefs.c	2014-06-20 23:24:10.000000000 +0900
++++ ./examples/atmel_key/StdDefs.c	2014-06-20 12:31:14.000000000 +0900
+@@ -55,13 +55,11 @@
+    }
+ 
+ // Delay in 1/10's of a millisecond
+-void msleep(INT16U ms)
+-    { /* This loop does not work with optimization != 0. Therefore we use
+-         avr-libc _delay routines K. Schwichtenberg
+-	INT16S i,j;
+-	for (i = 1; i < ms; i++)
+-		for (j = 1; j < ONETENTH_MS; j++); / * to give 1/10 ms*/
+-        _delay_ms(ms); // Changed K. Schwichtenberg
++// Does not work with -O0, use -O1, even for debugging.
++void msleep(INT16U ms10)
++    {
++        for( ; ms10; --ms10)
++            _delay_ms(0.1);
+     }
+ 
+ //------------------------------------------------------------
+@@ -117,7 +115,7 @@
+ void putstr(CHARU *s)
+    {
+    int j;
+-   for (j = 0; j <= strlen(s); j++)
++   for (j = 0; j <= strlen((char*)s); j++)
+        putchar(*(s + j));
+    CRLF();
+    }
