@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3264 2014/08/29 14:36:10 taca Exp $
+$NetBSD: CHANGES-2014,v 1.3265 2014/08/29 15:52:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4218,3 +4218,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/libgcrypt to 1.6.2nb2 [wiz 2014-08-29]
 	Updated www/contao32 to 3.2.14 [taca 2014-08-29]
 	Updated www/contao33 to 3.3.5 [taca 2014-08-29]
+	Updated x11/qt5-qtwebkit to 5.2.1nb3 [wiz 2014-08-29]
