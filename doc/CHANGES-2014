@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3265 2014/08/29 15:52:39 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3266 2014/08/29 20:33:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4219,3 +4219,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/contao32 to 3.2.14 [taca 2014-08-29]
 	Updated www/contao33 to 3.3.5 [taca 2014-08-29]
 	Updated x11/qt5-qtwebkit to 5.2.1nb3 [wiz 2014-08-29]
+	Updated x11/qt5-qttools to 5.2.1nb1 [wiz 2014-08-29]
