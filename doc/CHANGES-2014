@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3259 2014/08/29 10:10:50 obache Exp $
+$NetBSD: CHANGES-2014,v 1.3260 2014/08/29 10:32:33 richard Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4213,3 +4213,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated cross/avr-gdb to 7.6.1 [mef 2014-08-29]
 	Updated textproc/groonga to 4.0.5 [obache 2014-08-29]
 	Updated math/ruby-spreadsheet to 0.9.9 [obache 2014-08-29]
+	Updated security/libgcrypt to 1.6.2nb1 [richard 2014-08-29]
