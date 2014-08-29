@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3256 2014/08/29 04:43:05 mef Exp $
+$NetBSD: CHANGES-2014,v 1.3257 2014/08/29 06:44:06 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4210,3 +4210,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated cross/avr-gcc to 4.8.3 [mef 2014-08-29]
 	Updated cross/avr-libc to 1.8.0nb5 [mef 2014-08-29]
 	Updated emulators/simulavr to 1.0.0nb2 [mef 2014-08-29]
+	Updated cross/avr-gdb to 7.6.1 [mef 2014-08-29]
