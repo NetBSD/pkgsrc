@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3263 2014/08/29 14:33:56 taca Exp $
+$NetBSD: CHANGES-2014,v 1.3264 2014/08/29 14:36:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4217,3 +4217,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/libsixel to 1.0.2 [obache 2014-08-29]
 	Updated security/libgcrypt to 1.6.2nb2 [wiz 2014-08-29]
 	Updated www/contao32 to 3.2.14 [taca 2014-08-29]
+	Updated www/contao33 to 3.3.5 [taca 2014-08-29]
