@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3252 2014/08/29 02:12:48 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.3253 2014/08/29 02:40:35 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4206,3 +4206,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/hs-random to 1.0.1.3 [szptvlfn 2014-08-28]
 	Updated security/mit-krb5 to 1.10.7nb3 [tez 2014-08-28]
 	Updated games/solarus to 1.3.1 [rodent 2014-08-29]
+	Updated converters/py-cairosvg to 1.0.9 [rodent 2014-08-29]
