@@ -1,4 +1,4 @@
-$NetBSD: patch-regress_timertest_timer_16bit.c,v 1.1 2013/09/12 06:20:35 mef Exp $
+$NetBSD: patch-regress_timertest_timer_16bit.c,v 1.2 2014/08/29 04:40:06 mef Exp $
 
 error: attempt to use poisoned "VARNAME"
 
