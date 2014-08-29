@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3261 2014/08/29 12:00:58 obache Exp $
+$NetBSD: CHANGES-2014,v 1.3262 2014/08/29 14:23:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4215,3 +4215,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated math/ruby-spreadsheet to 0.9.9 [obache 2014-08-29]
 	Updated security/libgcrypt to 1.6.2nb1 [richard 2014-08-29]
 	Updated graphics/libsixel to 1.0.2 [obache 2014-08-29]
+	Updated security/libgcrypt to 1.6.2nb2 [wiz 2014-08-29]
