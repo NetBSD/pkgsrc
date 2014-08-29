@@ -1,0 +1,78 @@
+$NetBSD: patch-src_systemclock_h,v 1.1 2014/08/29 04:40:06 mef Exp $
+
+clang flags as resize unresolved reference,
+backport from git repository (as of 2013-09-15).
+
+--- simulavr-1.0.0/src/systemclock.h	2012-02-13 00:26:38.000000000 +0900
++++ src/systemclock.h	2013-09-13 09:41:15.000000000 +0900
+@@ -2,7 +2,7 @@
+  ****************************************************************************
+  *
+  * simulavr - A simulator for the Atmel AVR family of microcontrollers.
+- * Copyright (C) 2001, 2002, 2003   Klaus Rudolph       
++ * Copyright (C) 2001, 2002, 2003 Klaus Rudolph
+  * 
+  * This program is free software; you can redistribute it and/or modify
+  * it under the terms of the GNU General Public License as published by
+@@ -29,26 +29,41 @@
+ #include <map>
+ #include <vector>
+ 
+-#include "avrdevice.h"
+ #include "systemclocktypes.h"
+ 
++class SimulationMember;
++
+ /** A heap data structure optimized for obtaining Value of the smallest Key.
+-	Example MinHeap<SystemClockOffset, SimulationMember*>. */
++    Example MinHeap<SystemClockOffset, SimulationMember*>. */
+ template<typename Key, typename Value>
+ class MinHeap : public std::vector<std::pair<Key,Value> >
+ {
+ public:
+-	MinHeap();
+-	bool IsEmpty() const { return this->empty(); }
+-	Value GetMinimumKey() const { return this->front().first; }
+-	Value GetMinimumValue() const { return this->front().second; };
+-	void RemoveMinimum();
+-	bool ContainsValue(Value v) const;
+-	void Insert(Key k, Value v);
+-	void RemoveMinimumAndInsert(Key k, Value v);
++    MinHeap();
++    bool IsEmpty() const { return this->empty(); }
++    Key GetMinimumKey() const { return this->front().first; }
++    Value GetMinimumValue() const { return this->front().second; };
++    void RemoveMinimum();
++    bool ContainsValue(Value v) const;
++    void Insert(Key k, Value v) {
++        this->resize(this->size()+1);
++        InsertInternal(k, v, this->size());
++    }
++    void RemoveMinimumAndInsert(Key k, Value v) {
++        RemoveAtPositionAndInsertInternal(k, v, 0);
++    }
++    void RemoveAtPositionAndInsert(Key k, Value v, unsigned pos) {
++        if(k < (*this)[pos-1].first)
++            InsertInternal(k, v, pos);
++        else
++            RemoveAtPositionAndInsertInternal(k, v, pos);
++    }
++protected:
++    // These are internal because a bad value of `pos' could violate the binary heap invariant.
++    void InsertInternal(Key k, Value v, unsigned pos);
++    void RemoveAtPositionAndInsertInternal(Key k, Value v, unsigned pos);
+ };
+ 
+-
+ //! Class to store and manage the central simulation time
+ /*! This acts as a time table, a simulation member gets a place on this ordered
+     table, where it should be called next time, the placement depends on the
+@@ -72,7 +87,7 @@
+ 
+     protected:
+         SystemClockOffset currentTime;  //!< time in [ns] since start of simulation
+-		MinHeap<SystemClockOffset, SimulationMember *> syncMembers;  //!< earliest first
++        MinHeap<SystemClockOffset, SimulationMember *> syncMembers;  //!< earliest first
+         std::vector<SimulationMember*> asyncMembers; //!< List of asynchron working simulation members, will be called every step!
+         
+     public:
