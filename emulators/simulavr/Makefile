@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2014/06/13 03:41:46 dsainty Exp $
+# $NetBSD: Makefile,v 1.24 2014/08/29 04:40:06 mef Exp $
 #
 DISTNAME=		simulavr-1.0.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		emulators
 MASTER_SITES=		http://download.savannah.gnu.org/releases/simulavr/
 
@@ -16,6 +16,7 @@ BUILD_DEPENDS+=		avr-libc-[0-9]*:../../cross/avr-libc
 CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--enable-python=python${PYVERSSUFFIX}
 CONFIGURE_ARGS+=	--with-bfd=${PREFIX}/avr
+CONFIGURE_ARGS+=	--with-libiberty=${PREFIX}/lib/gcc/avr
 CONFIGURE_ENV+=		TEX=no
 
 # Following line does not work yet (examples/python directory)
@@ -86,11 +87,9 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../cross/avr-binutils/buildlink3.mk"
 .include "../../cross/avr-gcc/buildlink3.mk"
-#.include "../../cross/avr-libc/buildlink3.mk"
 .include "../../devel/swig/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../lang/${PYPACKAGE}/buildlink3.mk"
-#include "../../lang/tcl-itcl/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
