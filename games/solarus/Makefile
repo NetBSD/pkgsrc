@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2014/08/07 02:18:57 rodent Exp $
+# $NetBSD: Makefile,v 1.14 2014/08/29 02:12:31 rodent Exp $
 
-VERSION=	1.2.1
+VERSION=	1.3.1
 DISTNAME=	solarus-${VERSION}-src
 PKGNAME=	${DISTNAME:S/-src//1}
 CATEGORIES=	games
