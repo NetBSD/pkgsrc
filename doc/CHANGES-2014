@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3258 2014/08/29 10:05:04 obache Exp $
+$NetBSD: CHANGES-2014,v 1.3259 2014/08/29 10:10:50 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4212,3 +4212,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/simulavr to 1.0.0nb2 [mef 2014-08-29]
 	Updated cross/avr-gdb to 7.6.1 [mef 2014-08-29]
 	Updated textproc/groonga to 4.0.5 [obache 2014-08-29]
+	Updated math/ruby-spreadsheet to 0.9.9 [obache 2014-08-29]
