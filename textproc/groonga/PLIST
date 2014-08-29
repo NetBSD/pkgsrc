@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2014/07/29 10:00:22 obache Exp $
+@comment $NetBSD: PLIST,v 1.24 2014/08/29 10:04:45 obache Exp $
 bin/groonga
 bin/groonga-benchmark
 bin/groonga-suggest-create-dataset
@@ -137,6 +137,8 @@ share/doc/groonga/en/html/_sources/reference/functions/edit_distance.txt
 share/doc/groonga/en/html/_sources/reference/functions/geo_distance.txt
 share/doc/groonga/en/html/_sources/reference/functions/geo_in_circle.txt
 share/doc/groonga/en/html/_sources/reference/functions/geo_in_rectangle.txt
+share/doc/groonga/en/html/_sources/reference/functions/highlight_full.txt
+share/doc/groonga/en/html/_sources/reference/functions/highlight_html.txt
 share/doc/groonga/en/html/_sources/reference/functions/html_untag.txt
 share/doc/groonga/en/html/_sources/reference/functions/now.txt
 share/doc/groonga/en/html/_sources/reference/functions/query.txt
@@ -330,6 +332,8 @@ share/doc/groonga/en/html/reference/functions/edit_distance.html
 share/doc/groonga/en/html/reference/functions/geo_distance.html
 share/doc/groonga/en/html/reference/functions/geo_in_circle.html
 share/doc/groonga/en/html/reference/functions/geo_in_rectangle.html
+share/doc/groonga/en/html/reference/functions/highlight_full.html
+share/doc/groonga/en/html/reference/functions/highlight_html.html
 share/doc/groonga/en/html/reference/functions/html_untag.html
 share/doc/groonga/en/html/reference/functions/now.html
 share/doc/groonga/en/html/reference/functions/query.html
@@ -500,6 +504,8 @@ share/doc/groonga/ja/html/_sources/reference/functions/edit_distance.txt
 share/doc/groonga/ja/html/_sources/reference/functions/geo_distance.txt
 share/doc/groonga/ja/html/_sources/reference/functions/geo_in_circle.txt
 share/doc/groonga/ja/html/_sources/reference/functions/geo_in_rectangle.txt
+share/doc/groonga/ja/html/_sources/reference/functions/highlight_full.txt
+share/doc/groonga/ja/html/_sources/reference/functions/highlight_html.txt
 share/doc/groonga/ja/html/_sources/reference/functions/html_untag.txt
 share/doc/groonga/ja/html/_sources/reference/functions/now.txt
 share/doc/groonga/ja/html/_sources/reference/functions/query.txt
@@ -693,6 +699,8 @@ share/doc/groonga/ja/html/reference/functions/edit_distance.html
 share/doc/groonga/ja/html/reference/functions/geo_distance.html
 share/doc/groonga/ja/html/reference/functions/geo_in_circle.html
 share/doc/groonga/ja/html/reference/functions/geo_in_rectangle.html
+share/doc/groonga/ja/html/reference/functions/highlight_full.html
+share/doc/groonga/ja/html/reference/functions/highlight_html.html
 share/doc/groonga/ja/html/reference/functions/html_untag.html
 share/doc/groonga/ja/html/reference/functions/now.html
 share/doc/groonga/ja/html/reference/functions/query.html
