@@ -1,0 +1,88 @@
+$NetBSD: patch-src_traceval_h,v 1.1 2014/08/29 04:40:06 mef Exp $
+
+clang flags as resize unresolved reference,
+backport from git repository (as of 2013-09-15).
+
+--- simulavr-1.0.0/src/traceval.h	2012-02-13 00:26:38.000000000 +0900
++++ src/traceval.h	2013-09-13 09:41:15.000000000 +0900
+@@ -106,8 +106,9 @@
+         TraceValue(size_t bits,
+                    const std::string &_name,
+                    const int __index=-1,
+-                   void* shadow=0);
+-    
++                   const void* shadow=0);
++        virtual ~TraceValue() {}
++
+         //! Give number of bits for this value. Max 32.
+         size_t bits() const;
+     
+@@ -177,6 +178,9 @@
+           flags. */
+         virtual void dump(Dumper &d);
+         
++        /*! Give back VCD coding of a bit */
++        virtual char VcdBit(int bitNo) const;
++
+     protected:
+         //! Clear all access flags
+         void clear_flags();
+@@ -191,7 +195,7 @@
+         const unsigned b;
+     
+         //! shadow reg, if used
+-        void *shadow;
++        const void *shadow;
+     
+         //! The value itself
+         unsigned v;
+@@ -207,6 +211,17 @@
+         bool _enabled;
+ };
+ 
++class TraceValueOutput: public TraceValue {
++
++    public:
++        /*! Generate a new uninitialized trace value of pin output driver */
++        TraceValueOutput(const std::string &_name): TraceValue(1, _name) {}
++
++        /*! Give back VCD coding of pin output driver  */
++        virtual char VcdBit(int bitNo) const;
++
++};
++
+ class AvrDevice;
+ class TraceValueRegister;
+ 
+@@ -453,7 +468,7 @@
+             if(_tvr_scopename.length() > 0)
+                 _tvr_scopeprefix += _tvr_scopename + ".";
+         }
+-        ~TraceValueRegister();
++        virtual ~TraceValueRegister();
+         
+         //! Returns the scope prefix
+         const std::string GetTraceValuePrefix(void) { return _tvr_scopeprefix; }
+@@ -511,18 +526,18 @@
+ 
+ //! Register a directly traced bool value
+ /*! \return pointer to the new registered TraceValue */
+-TraceValue *trace_direct(TraceValueRegister *t, const std::string &name, bool *val);
++TraceValue *trace_direct(TraceValueRegister *t, const std::string &name, const bool *val);
+ 
+ //! Register a directly traced byte value
+ /*! \return pointer to the new registered TraceValue */
+-TraceValue* trace_direct(TraceValueRegister *t, const std::string &name, uint8_t *val);
++TraceValue* trace_direct(TraceValueRegister *t, const std::string &name, const uint8_t *val);
+ 
+ //! Register a directly traced 16bit word value
+ /*! \return pointer to the new registered TraceValue */
+-TraceValue* trace_direct(TraceValueRegister *t, const std::string &name, uint16_t *val);
++TraceValue* trace_direct(TraceValueRegister *t, const std::string &name, const uint16_t *val);
+ 
+ //! Register a directly traced 32bit word value
+ /*! \return pointer to the new registered TraceValue */
+-TraceValue* trace_direct(TraceValueRegister *t, const std::string &name, uint32_t *val);
++TraceValue* trace_direct(TraceValueRegister *t, const std::string &name, const uint32_t *val);
+ 
+ #endif

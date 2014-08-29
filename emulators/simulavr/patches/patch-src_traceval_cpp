@@ -1,0 +1,126 @@
+$NetBSD: patch-src_traceval_cpp,v 1.1 2014/08/29 04:40:06 mef Exp $
+
+clang flags as resize unresolved reference,
+backport from git repository (as of 2013-09-15).
+
+--- simulavr-1.0.0/src/traceval.cpp	2012-02-13 00:26:38.000000000 +0900
++++ src/traceval.cpp	2013-09-13 09:41:15.000000000 +0900
+@@ -28,6 +28,7 @@
+ #include <stdlib.h>
+ #include "helper.h"
+ #include "traceval.h"
++#include "avrdevice.h"
+ #include "avrerror.h"
+ #include "systemclock.h"
+ 
+@@ -36,7 +37,7 @@
+ TraceValue::TraceValue(size_t bits,
+                        const std::string &__name,
+                        const int __index,
+-                       void *_shadow) :
++                       const void *_shadow) :
+     b(bits),
+     _name(__name),
+     _index(__index),
+@@ -111,15 +112,16 @@
+         unsigned nv;
+         switch (b) {
+         case 1:
+-            nv=*(bool*)shadow; break;
++            nv = *(const bool*) shadow; break;
+         case 8:
+-            nv=*(uint8_t*)shadow; break;
++            nv = *(const uint8_t*) shadow; break;
+         case 16:
+-            nv=*(uint16_t*)shadow; break;
++            nv = *(const uint16_t*) shadow; break;
+         case 32:
+-            nv=*(uint32_t*)shadow; break;
++            nv = *(const uint32_t*) shadow; break;
+         default:
+             avr_error("Internal error: Unsupported number of bits in TraceValue::cycle().");
++            break;
+         }
+         if (v!=nv) {
+             f|=CHANGE;
+@@ -144,6 +146,26 @@
+     f=0;
+ }
+ 
++char TraceValue::VcdBit(int bitNo) const {
++    if (_written)
++        return (v & (1 << bitNo)) ? '1' : '0';
++    else
++        return 'x';
++}
++
++char TraceValueOutput::VcdBit(int bitNo) const {
++    unsigned val = value();
++    if(written()) {
++        if(val == Pin::TRISTATE)
++            return 'z';
++        if((val == Pin::HIGH) || (val == Pin::PULLUP))
++            return '1';
++        if(val == Pin::LOW)
++            return '0';
++    }
++    return 'x';
++}
++
+ TraceValueRegister::~TraceValueRegister() {
+     for (valmap_t::iterator i = _tvr_values.begin(); i != _tvr_values.end(); i++)
+         delete i->first;
+@@ -360,14 +382,9 @@
+ 
+ void DumpVCD::valout(const TraceValue *v) {
+     osbuffer << 'b';
+-    if (v->written()) {
+-        unsigned val=v->value();
+-        for (int i=v->bits()-1; i>=0; i--) 
+-            osbuffer << ((val&(1<<i)) ? '1' : '0');
+-    } else {
+-        for (int i=0; i < v->bits(); i++)
+-            osbuffer << 'x';
+-    }
++    for (int i = v->bits()-1; i >= 0; i--)
++        osbuffer << v->VcdBit(i);
++
+ }
+ 
+ void DumpVCD::flushbuffer(void) {
+@@ -726,31 +743,28 @@
+     return load(is);
+ }
+ 
+-TraceValue* trace_direct(TraceValueRegister *t, const std::string &name, bool *val) {
++TraceValue* trace_direct(TraceValueRegister *t, const std::string &name, const bool *val) {
+     TraceValue *tv=new TraceValue(1, t->GetTraceValuePrefix() + name,
+                                   -1, val);
+     t->RegisterTraceValue(tv);
+     return tv;
+ }
+ 
+-TraceValue* trace_direct(TraceValueRegister *t, const std::string &name, uint8_t
+-*val) {
++TraceValue* trace_direct(TraceValueRegister *t, const std::string &name, const uint8_t*val) {
+     TraceValue* tv=new TraceValue(8, t->GetTraceValuePrefix() + name,
+                                   -1, val);
+     t->RegisterTraceValue(tv);
+     return tv;
+ }
+ 
+-TraceValue* trace_direct(TraceValueRegister *t, const std::string &name, uint16_t
+-*val) {
++TraceValue* trace_direct(TraceValueRegister *t, const std::string &name, const uint16_t*val) {
+     TraceValue* tv=new TraceValue(16, t->GetTraceValuePrefix() + name,
+                                   -1, val);
+     t->RegisterTraceValue(tv);
+     return tv;
+ }
+ 
+-TraceValue* trace_direct(TraceValueRegister *t, const std::string &name, uint32_t
+-*val) {
++TraceValue* trace_direct(TraceValueRegister *t, const std::string &name, const uint32_t*val) {
+     TraceValue* tv=new TraceValue(32, t->GetTraceValuePrefix() + name,
+                                   -1, val);
+     t->RegisterTraceValue(tv);

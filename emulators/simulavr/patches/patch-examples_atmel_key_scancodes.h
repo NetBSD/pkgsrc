@@ -1,4 +1,4 @@
-$NetBSD: patch-examples_atmel_key_scancodes.h,v 1.1 2013/09/12 06:20:35 mef Exp $
+$NetBSD: patch-examples_atmel_key_scancodes.h,v 1.2 2014/08/29 04:40:06 mef Exp $
 
 In file included from kb.c:14:0:
 scancodes.h:19:1: warning: missing braces around initializer
