@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1963 2014/08/21 21:30:19 wiz Exp $
+# $NetBSD: Makefile,v 1.1964 2014/08/29 21:41:30 abs Exp $
 #
 
 COMMENT=	Development utilities
@@ -34,6 +34,7 @@ SUBDIR+=	aegis
 SUBDIR+=	ald
 SUBDIR+=	allegro
 SUBDIR+=	anjuta
+SUBDIR+=	ant-contrib
 SUBDIR+=	apache-ant
 SUBDIR+=	apache-ant15
 SUBDIR+=	apache-ivy
