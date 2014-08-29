@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2014/07/29 10:00:22 obache Exp $
+# $NetBSD: options.mk,v 1.12 2014/08/29 10:04:45 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.groonga
@@ -100,7 +100,7 @@ CONF_FILES+=	share/examples/${PKGBASE}/httpd/win-utf \
 
 SUBST_CLASSES+=		confpath
 SUBST_STAGE.confpath=	post-configure
-SUBST_FILES.confpath=	vendor/nginx-1.7.3/objs/Makefile
+SUBST_FILES.confpath=	vendor/nginx-1.7.4/objs/Makefile
 SUBST_SED.confpath=	-e 's,\$$(DESTDIR)${PKG_SYSCONFDIR}/httpd,\$$(DESTDIR)${PREFIX}/share/examples/${PKGBASE}/httpd,g'
 .else
 CONFIGURE_ARGS+=	--disable-groonga-httpd
