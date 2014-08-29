@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2014/08/28 13:38:29 jperkin Exp $
+# $NetBSD: Makefile,v 1.66 2014/08/29 10:29:14 richard Exp $
 
 DISTNAME=	libgcrypt-1.6.2
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libgcrypt/ \
 		http://gd.tuwien.ac.at/privacy/gnupg/libgcrypt/
@@ -31,9 +32,6 @@ CONFIGURE_ARGS+=	--disable-asm
 .endif
 CONFIGURE_ARGS+=	--disable-aesni-support
 
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ENV+=		gcry_cv_gcc_inline_asm_ssse3=no
-.endif
 
 # SCO OpenServer 5.0.7/3.2 has no socklen_t, but it is defined in pthread.h
 # from builtin GNU pth.
