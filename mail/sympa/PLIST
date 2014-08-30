@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.11 2014/03/11 14:05:05 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.12 2014/08/30 20:26:45 bouyer Exp $
+man/man1/sympa_newaliases.1
 man/man8/alias_manager.8
 man/man8/archived.8
 man/man8/bounced.8
@@ -22,14 +23,15 @@ share/locale/bg/LC_MESSAGES/web_help.mo
 share/locale/br/LC_MESSAGES/sympa.mo
 share/locale/br/LC_MESSAGES/web_help.mo
 share/locale/ca/LC_MESSAGES/sympa.mo
+share/locale/ca/LC_MESSAGES/web_help.mo
 share/locale/cs/LC_MESSAGES/sympa.mo
 share/locale/cs/LC_MESSAGES/web_help.mo
 share/locale/de/LC_MESSAGES/sympa.mo
 share/locale/de/LC_MESSAGES/web_help.mo
 share/locale/el/LC_MESSAGES/sympa.mo
 share/locale/el/LC_MESSAGES/web_help.mo
-share/locale/en_US/LC_MESSAGES/sympa.mo
-share/locale/en_US/LC_MESSAGES/web_help.mo
+share/locale/en/LC_MESSAGES/sympa.mo
+share/locale/en/LC_MESSAGES/web_help.mo
 share/locale/es/LC_MESSAGES/sympa.mo
 share/locale/es/LC_MESSAGES/web_help.mo
 share/locale/et/LC_MESSAGES/sympa.mo
@@ -111,7 +113,6 @@ sympa/bin/Upgrade.pm
 sympa/bin/WebAgent.pm
 sympa/bin/admin.pm
 sympa/bin/alias_manager.pl
-sympa/bin/aliaswrapper
 sympa/bin/arc2webarc.pl
 sympa/bin/archived.pl
 sympa/bin/bounced.pl
@@ -135,6 +136,8 @@ sympa/bin/p12topem.pl
 sympa/bin/queue
 sympa/bin/report.pm
 sympa/bin/sympa.pl
+sympa/bin/sympa_newaliases-wrapper
+sympa/bin/sympa_newaliases.pl
 sympa/bin/sympa_soap_client.pl
 sympa/bin/sympa_wizard.pl
 sympa/bin/sympasoap.pm
@@ -145,13 +148,14 @@ sympa/bin/time_utils.pm
 sympa/bin/tools.pm
 sympa/bin/tpl2tt2.pl
 sympa/bin/tt2.pm
-sympa/bin/virtualwrapper
 sympa/bin/wwslib.pm
 sympa/default/auth.conf
 sympa/default/ca-bundle.crt
 sympa/default/charset.conf
 sympa/default/crawlers_detection.conf
 sympa/default/create_list.conf
+sympa/default/create_list_templates/confidential/comment.tt2
+sympa/default/create_list_templates/confidential/config.tt2
 sympa/default/create_list_templates/discussion_list/comment.tt2
 sympa/default/create_list_templates/discussion_list/config.tt2
 sympa/default/create_list_templates/hotline/comment.tt2
@@ -245,6 +249,7 @@ sympa/default/scenari/add.closed
 sympa/default/scenari/add.default
 sympa/default/scenari/add.owner
 sympa/default/scenari/add.owner_notify
+sympa/default/scenari/automatic_list_creation.family_owner
 sympa/default/scenari/automatic_list_creation.listmaster
 sympa/default/scenari/automatic_list_creation.public
 sympa/default/scenari/create_list.intranet
@@ -267,6 +272,7 @@ sympa/default/scenari/del.default
 sympa/default/scenari/del.owner
 sympa/default/scenari/del.owner_notify
 sympa/default/scenari/global_remind.listmaster
+sympa/default/scenari/info.conceal
 sympa/default/scenari/info.default
 sympa/default/scenari/info.open
 sympa/default/scenari/info.private
@@ -286,6 +292,7 @@ sympa/default/scenari/review.owner
 sympa/default/scenari/review.private
 sympa/default/scenari/review.public
 sympa/default/scenari/send.closed
+sympa/default/scenari/send.confidential
 sympa/default/scenari/send.default
 sympa/default/scenari/send.editorkey
 sympa/default/scenari/send.editorkeyonly
@@ -350,6 +357,9 @@ sympa/default/web_tt2/arcsearch.tt2
 sympa/default/web_tt2/arcsearch_form.tt2
 sympa/default/web_tt2/authorization_reject.tt2
 sympa/default/web_tt2/auto_signoff.tt2
+sympa/default/web_tt2/automatic_lists.tt2
+sympa/default/web_tt2/automatic_lists_management_request.tt2
+sympa/default/web_tt2/automatic_lists_request.tt2
 sympa/default/web_tt2/blacklist.tt2
 sympa/default/web_tt2/button_footer.tt2
 sympa/default/web_tt2/button_header.tt2
@@ -379,6 +389,9 @@ sympa/default/web_tt2/edit_template.tt2
 sympa/default/web_tt2/editfile.tt2
 sympa/default/web_tt2/editsubscriber.tt2
 sympa/default/web_tt2/error.tt2
+sympa/default/web_tt2/exclusion_table.tt2
+sympa/default/web_tt2/family_signoff.tt2
+sympa/default/web_tt2/family_signoff_request.tt2
 sympa/default/web_tt2/footer.tt2
 sympa/default/web_tt2/get_closed_lists.tt2
 sympa/default/web_tt2/get_inactive_lists.tt2
@@ -396,12 +409,15 @@ sympa/default/web_tt2/help_listconfig.tt2
 sympa/default/web_tt2/help_mail_commands.tt2
 sympa/default/web_tt2/help_sendmsg.tt2
 sympa/default/web_tt2/help_shared.tt2
+sympa/default/web_tt2/help_suspend.tt2
 sympa/default/web_tt2/help_user.tt2
 sympa/default/web_tt2/help_user_options.tt2
 sympa/default/web_tt2/home.tt2
 sympa/default/web_tt2/info.tt2
 sympa/default/web_tt2/install_pending_list.tt2
+sympa/default/web_tt2/ja_JP/css.tt2
 sympa/default/web_tt2/javascript.tt2
+sympa/default/web_tt2/ko_KR/css.tt2
 sympa/default/web_tt2/latest_arc.tt2
 sympa/default/web_tt2/latest_d_read.tt2
 sympa/default/web_tt2/latest_lists.tt2
@@ -464,6 +480,8 @@ sympa/default/web_tt2/viewlogs.tt2
 sympa/default/web_tt2/viewmod.tt2
 sympa/default/web_tt2/which.tt2
 sympa/default/web_tt2/your_lists.tt2
+sympa/default/web_tt2/zh_CN/css.tt2
+sympa/default/web_tt2/zh_TW/css.tt2
 sympa/libexec/cgi-bin/sympa_soap_server-wrapper.fcgi
 sympa/libexec/cgi-bin/sympa_soap_server.fcgi
 sympa/libexec/cgi-bin/wwsympa-wrapper.fcgi
