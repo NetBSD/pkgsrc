@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3274 2014/08/30 12:47:14 adam Exp $
+$NetBSD: CHANGES-2014,v 1.3275 2014/08/30 20:27:26 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4231,3 +4231,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/pango to 1.36.6 [adam 2014-08-30]
 	Updated math/glpk to 4.55 [adam 2014-08-30]
 	Updated security/gnutls to 3.2.17 [adam 2014-08-30]
+	Updated mail/sympa to 6.1.22 [bouyer 2014-08-30]
