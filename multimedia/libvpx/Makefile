@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2014/05/29 23:37:01 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2014/08/30 11:14:52 richard Exp $
 
 DISTNAME=	libvpx_1.3.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/libv/libvpx/}
 EXTRACT_SUFX=	.tar.bz2
@@ -77,6 +77,12 @@ CONFIGURE_ARGS+=	--target=ppc32-darwin9-gcc
 .    else
 CONFIGURE_ARGS+=	--target=ppc32-darwin8-gcc
 .    endif
+.  endif
+.elif ${OPSYS} == "SunOS" && !empty(PKGSRC_COMPILER:Mgcc*)
+.  if ${MACHINE_ARCH} == "x86_64"
+CONFIGURE_ARGS+=	--target=x86_64-solaris-gcc
+.  elif ${MACHINE_ARCH} == "i386"
+CONFIGURE_ARGS+=	--target=x86-solaris-gcc
 .  endif
 .endif
 
