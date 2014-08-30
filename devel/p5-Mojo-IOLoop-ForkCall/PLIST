@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2014/08/30 10:53:51 wiedi Exp $
+${PERL5_SUB_INSTALLVENDORLIB}/Mojo/IOLoop/ForkCall.pm
+${PERL5_SUB_INSTALLVENDORARCH}/auto/Mojo/IOLoop/ForkCall/.packlist
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Mojo::IOLoop::ForkCall.3
