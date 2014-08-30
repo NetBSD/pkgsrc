@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3269 2014/08/30 06:38:44 adam Exp $
+$NetBSD: CHANGES-2014,v 1.3270 2014/08/30 10:57:02 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4223,3 +4223,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/ant-contrib version 0.6 [abs 2014-08-29]
 	Updated math/ruby-spreadsheet to 1.0.0 [obache 2014-08-30]
 	Updated graphics/gimp to 2.8.14 [adam 2014-08-30]
+	Added devel/p5-Mojo-IOLoop-ForkCall version 0.14 [wiedi 2014-08-30]
