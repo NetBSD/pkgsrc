@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.613 2014/08/13 20:20:39 wiz Exp $
+# $NetBSD: Makefile,v 1.614 2014/08/30 11:04:54 wiedi Exp $
 #
 
 COMMENT=	System utilities
@@ -589,5 +589,6 @@ SUBDIR+=	xosview
 SUBDIR+=	xps
 SUBDIR+=	xuvmstat
 SUBDIR+=	zidrav
+SUBDIR+=	znapzend
 
 .include "../mk/misc/category.mk"
