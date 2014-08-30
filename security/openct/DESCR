@@ -2,3 +2,5 @@ Drivers for several smart card readers. OpenCT comes as driver in ifdhandler
 format for PC/SC-Lite, as CT-API driver, or as a small and lean middleware,
 so applications can use it with minimal overhead. OpenCT also has a primitive
 mechanism to export smart card readers to remote machines via TCP/IP.
+
+This package is obsolete.  See pcsc-lite for an alternative.
