@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2014/08/30 11:03:11 wiedi Exp $
+bin/znapzend
+bin/znapzendzetup
+bin/znapzendztatz
+lib/ZnapZend.pm
+lib/ZnapZend/Config.pm
+lib/ZnapZend/Time.pm
+lib/ZnapZend/ZFS.pm
+man/man1/znapzend.1
+man/man1/znapzendzetup.1
+man/man1/znapzendztatz.1
