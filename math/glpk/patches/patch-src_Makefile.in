@@ -1,4 +1,4 @@
-$NetBSD: patch-src_Makefile.in,v 1.1 2014/04/01 08:38:35 adam Exp $
+$NetBSD: patch-src_Makefile.in,v 1.2 2014/08/30 11:19:52 adam Exp $
 
 Use external zlib.
 
@@ -37,7 +37,7 @@ Use external zlib.
 +-I$(srcdir)/proxy
  
  libglpk_la_LDFLAGS = \
- -version-info 37:1:1 \
+ -version-info 37:2:1 \
 @@ -447,22 +440,7 @@ misc/triang.c \
  misc/wclique.c \
  misc/wclique1.c \
