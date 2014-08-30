@@ -1,13 +1,14 @@
-$NetBSD: patch-ab,v 1.5 2012/05/16 16:16:46 bouyer Exp $
+$NetBSD: patch-ab,v 1.6 2014/08/30 20:26:45 bouyer Exp $
 
---- src/sympa_wizard.pl.in.orig	2012-02-08 18:02:11.000000000 +0100
-+++ src/sympa_wizard.pl.in	2012-02-08 18:02:42.000000000 +0100
-@@ -662,72 +662,5 @@
+--- src/sympa_wizard.pl.in.orig	2014-06-06 17:44:05.000000000 +0200
++++ src/sympa_wizard.pl.in	2014-08-30 20:08:37.000000000 +0200
+@@ -655,73 +655,6 @@
  # Install a CPAN module
  ##----------------------
  sub install_module {
--#    my ($module, $options, $opt_features) = @_;
--  my ($module, $options, $cpan_modules) = @_;
+-    return unless $with_CPAN;
+-
+-    my ($module, $options, $cpan_modules) = @_;
 -
 -    my $default = $options->{'default'};
 -
@@ -73,6 +74,6 @@ $NetBSD: patch-ab,v 1.5 2012/05/16 16:16:46 bouyer Exp $
 -
 -    ## Restore lang
 -    $ENV{'LANG'} = $lang if (defined $lang);
--
-+	1;
++    1;
+ 
  }

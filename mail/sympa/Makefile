@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2014/05/31 12:22:42 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2014/08/30 20:26:45 bouyer Exp $
 
-DISTNAME=	sympa-6.1.11
-PKGREVISION=	8
+DISTNAME=	sympa-6.1.22
+#PKGREVISION=	8
 CATEGORIES=	mail
 MASTER_SITES=	http://www.sympa.org/distribution/ \
 		http://www.sympa.org/distribution/old/
@@ -136,11 +136,10 @@ OWN_DIRS_PERMS+=	${SYMPA_SPOOL}/outgoing ${SYMPA_USER} ${SYMPA_GROUP} 770
 OWN_DIRS_PERMS+=	${SYMPA_SPOOL}/task ${SYMPA_USER} ${SYMPA_GROUP} 770
 OWN_DIRS_PERMS+=	${SYMPA_SPOOL}/tmp ${SYMPA_USER} ${SYMPA_GROUP} 770
 
-SPECIAL_PERMS+=	 ${SYMPA_BIN}/aliaswrapper ${ROOT_USER} ${SYMPA_GROUP} 4550
+SPECIAL_PERMS+=  ${SYMPA_BIN}/sympa_newaliases-wrapper ${ROOT_USER} ${SYMPA_GROUP} 4550
 SPECIAL_PERMS+=	 ${SYMPA_BIN}/bouncequeue ${SYMPA_USER} ${SYMPA_GROUP} 4555
 SPECIAL_PERMS+=	 ${SYMPA_BIN}/familyqueue ${SYMPA_USER} ${SYMPA_GROUP} 4555
 SPECIAL_PERMS+=	 ${SYMPA_BIN}/queue ${SYMPA_USER} ${SYMPA_GROUP} 4555
-SPECIAL_PERMS+=	 ${SYMPA_BIN}/virtualwrapper ${ROOT_USER} ${SYMPA_GROUP} 4550
 SPECIAL_PERMS+=	 ${SYMPA_PREFIX}/libexec/cgi-bin/wwsympa-wrapper.fcgi \
 			 ${SYMPA_USER} ${SYMPA_GROUP} 6555
 SPECIAL_PERMS+=	 ${SYMPA_PREFIX}/libexec/cgi-bin/sympa_soap_server-wrapper.fcgi \
@@ -180,11 +179,9 @@ post-install:
 	${CHMOD} a-w \
 	    ${DESTDIR}${SYMPA_PREFIX}/libexec/cgi-bin/wwsympa-wrapper.fcgi \
 	    ${DESTDIR}${SYMPA_PREFIX}/libexec/cgi-bin/sympa_soap_server-wrapper.fcgi \
-	    ${DESTDIR}${SYMPA_BIN}/aliaswrapper \
 	    ${DESTDIR}${SYMPA_BIN}/bouncequeue \
 	    ${DESTDIR}${SYMPA_BIN}/familyqueue \
-	    ${DESTDIR}${SYMPA_BIN}/queue \
-	    ${DESTDIR}${SYMPA_BIN}/virtualwrapper
+	    ${DESTDIR}${SYMPA_BIN}/queue
 
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
