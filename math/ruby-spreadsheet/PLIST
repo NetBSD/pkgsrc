@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2014/03/17 14:17:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2014/08/30 01:31:02 obache Exp $
 bin/xlsopcodes${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
@@ -23,6 +23,7 @@ ${GEM_LIBDIR}/lib/spreadsheet/column.rb
 ${GEM_LIBDIR}/lib/spreadsheet/compatibility.rb
 ${GEM_LIBDIR}/lib/spreadsheet/datatypes.rb
 ${GEM_LIBDIR}/lib/spreadsheet/encodings.rb
+${GEM_LIBDIR}/lib/spreadsheet/errors.rb
 ${GEM_LIBDIR}/lib/spreadsheet/excel.rb
 ${GEM_LIBDIR}/lib/spreadsheet/excel/error.rb
 ${GEM_LIBDIR}/lib/spreadsheet/excel/internals.rb
