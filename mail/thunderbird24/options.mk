@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.1 2014/07/27 05:36:07 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2014/08/30 16:54:16 richard Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.thunderbird
+PKG_OPTIONS_VAR=	PKG_OPTIONS.thunderbird24
 PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome official-mozilla-branding mozilla-lightning mozilla-enigmail
 PKG_SUGGESTED_OPTIONS=	mozilla-lightning
 
