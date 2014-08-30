@@ -1,0 +1,10 @@
+Asynchronous programming can be benefitial for performance, however
+not all functions are written for nonblocking interaction and
+external processes almost never are.
+
+By forking the blocking call into a new process, the main thread may
+continue to run non-blocking, while the blocking call evaluates.
+Mojo::IOLoop::ForkCall manages the forking and will emit an
+event (or execute a callback) when the forked process completes.
+Return values are serialized and sent from the child to the parent
+via an appropriate pipe for your platform.
