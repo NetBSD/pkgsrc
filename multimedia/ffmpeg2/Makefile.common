@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2014/08/19 18:18:44 adam Exp $
+# $NetBSD: Makefile.common,v 1.21 2014/08/30 11:21:19 richard Exp $
 # used by multimedia/ffmpeg2/Makefile
 # used by multimedia/ffplay2/Makefile
 
@@ -41,14 +41,11 @@ PLIST.opencl=		yes
 .endif
 
 .if ${OPSYS} == "SunOS"
-CONFIGURE_ARGS+=	--disable-amd3dnow
-CONFIGURE_ARGS+=	--disable-amd3dnowext
-CONFIGURE_ARGS+=	--disable-mmx
-CONFIGURE_ARGS+=	--disable-sse
-CONFIGURE_ARGS+=	--disable-ssse3
-.else
-CONFIGURE_ARGS+=	--enable-runtime-cpudetect
+USE_TOOLS+= bash:build
+CONFIG_SHELL=   ${TOOLS_PATH.bash}
 .endif
+
+CONFIGURE_ARGS+=	--enable-runtime-cpudetect
 
 # No posix_memalign() in NetBSD 4.0 and earlier
 .if !empty(MACHINE_PLATFORM:MNetBSD-[1-4].*-*)
