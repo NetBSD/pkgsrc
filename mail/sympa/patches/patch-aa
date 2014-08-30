@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2012/05/16 16:16:46 bouyer Exp $
+$NetBSD: patch-aa,v 1.7 2014/08/30 20:26:45 bouyer Exp $
 
---- Makefile.in.orig	2011-08-25 16:48:08.000000000 +0200
-+++ Makefile.in	2012-02-24 20:06:42.000000000 +0100
-@@ -635,35 +635,30 @@
+--- Makefile.in.orig	2014-06-06 18:09:50.000000000 +0200
++++ Makefile.in	2014-08-30 20:13:04.000000000 +0200
+@@ -643,60 +643,28 @@
  			echo "Creating $(DESTDIR)$$dir"; \
  			install -d -m 755 $(DESTDIR)$$dir; \
  		fi; \
@@ -13,21 +13,28 @@ $NetBSD: patch-aa,v 1.6 2012/05/16 16:16:46 bouyer Exp $
  	done
  
  installconfig: installdir
- 	@echo "Installing basic configuration ..."
- 	export PERL5LIB=$(DESTDIR)$(modulesdir); \
+-	@echo "Installing basic configuration ..."
+-	export PERL5LIB=$(DESTDIR)$(modulesdir); \
 -	if [ ! -f  $(DESTDIR)$(confdir)/sympa.conf ]; then \
 -		echo "This looks like your first Sympa installation. The following wizard will assist you to create your first Sympa configuration.";\
 -		if [ ! -d $(DESTDIR)$(confdir) ]; then \
 -			$(INSTALL) -d -m 755 $(DESTDIR)$(confdir); \
 -		fi; \
--		$(DESTDIR)$(sbindir)/sympa_wizard.pl \
+-		$(SED) \
+-			-e 's|--PERL--|$(PERL)|' \
+-			-e 's|--modulesdir--|$(top_srcdir)/src/lib|' \
+-			< $(top_srcdir)/src/sympa_wizard.pl.in > \
+-			$(top_srcdir)/src/sympa_wizard.pl.install; \
+-		chmod +x $(top_srcdir)/src/sympa_wizard.pl.install; \
+-		$(top_srcdir)/src/sympa_wizard.pl.install \
 -			--create sympa.conf \
 -			--target $(DESTDIR)$(confdir)/sympa.conf \
 -			|| /bin/true; \
--		$(DESTDIR)$(sbindir)/sympa_wizard.pl \
+-		$(top_srcdir)/src/sympa_wizard.pl.install \
 -			--create wwsympa.conf \
 -			--target $(DESTDIR)$(confdir)/wwsympa.conf \
 -			|| /bin/true; \
+-		rm -f $(top_srcdir)/src/sympa_wizard.pl.install; \
 +	if [ ! -d $(DESTDIR)$(prefix)/share/examples/sympa ]; then \
 +		$(INSTALL) -d -m 755 $(DESTDIR)$(prefix)/share/examples/sympa; \
  	fi; \
@@ -39,11 +46,29 @@ $NetBSD: patch-aa,v 1.6 2012/05/16 16:16:46 bouyer Exp $
 -		chown $(USER) data_structure.version || /bin/true; \
 -		chgrp $(GROUP) data_structure.version || /bin/true; \
 -	fi
-+	$(DESTDIR)$(sbindir)/sympa_wizard.pl \
+-	@for dir in create_list_templates families \
+-		global_task_models list_task_models scenari search_filters \
+-		mail_tt2 web_tt2; do \
+-		if [ ! -d $(DESTDIR)$(sysconfdir)/$$dir ] ; then \
+-			echo "Creating $(DESTDIR)$(sysconfdir)/$$dir"; \
+-			install -d -m 755 $(DESTDIR)$(sysconfdir)/$$dir; \
+-		fi; \
+-		chown $(USER) $(DESTDIR)$(sysconfdir)/$$dir || /bin/true; \
+-		chgrp $(GROUP) $(DESTDIR)$(sysconfdir)/$$dir || /bin/true; \
+-	done
+-	@if [ ! -e $(DESTDIR)$(sysconfdir)/README ]; then \
+-		echo "Creating $(DESTDIR)$(sysconfdir)/README"; \
+-		$(SED) \
+-			-e 's|--sysconfdir--|$(sysconfdir)|' \
+-			-e 's|--defaultdir--|$(defaultdir)|' \
+-			etc_README > $(DESTDIR)$(sysconfdir)/README; \
+-		chmod 444 $(DESTDIR)$(sysconfdir)/README; \
+-	fi
++	env PERL5LIB=$(DESTDIR)$(prefix)/sympa/bin $(DESTDIR)$(sbindir)/sympa_wizard.pl \
 +		--create sympa.conf \
 +		--target $(DESTDIR)$(prefix)/share/examples/sympa/sympa.conf \
 +		|| true; \
-+	$(DESTDIR)$(sbindir)/sympa_wizard.pl \
++	env PERL5LIB=$(DESTDIR)$(prefix)/sympa/bin $(DESTDIR)$(sbindir)/sympa_wizard.pl \
 +		--create wwsympa.conf \
 +		--target $(DESTDIR)$(prefix)/share/examples/sympa/wwsympa.conf \
 +		|| true; \
