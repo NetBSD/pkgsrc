@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1031 2014/08/07 14:01:07 he Exp $
+# $NetBSD: Makefile,v 1.1032 2014/08/31 22:25:56 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -180,6 +180,7 @@ SUBDIR+=	gst-plugins1-libnice
 SUBDIR+=	gst-plugins1-mms
 SUBDIR+=	gst-plugins1-rtmp
 SUBDIR+=	gst-plugins1-soup
+SUBDIR+=	gst-rtsp-server
 SUBDIR+=	gt-itm
 SUBDIR+=	gtk-gnutella
 SUBDIR+=	gtk-vnc
