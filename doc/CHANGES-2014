@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3278 2014/08/31 06:58:42 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3279 2014/08/31 07:16:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4235,3 +4235,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/mediawiki to 1.23.3 [wen 2014-08-31]
 	Updated devel/p5-PathTools to 3.47 [wen 2014-08-31]
 	Updated devel/p5-Test-Base to 0.88 [wen 2014-08-31]
+	Updated games/lgogdownloader to 2.17 [wiz 2014-08-31]
