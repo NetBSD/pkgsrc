@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13611 2014/08/31 10:25:06 wiz Exp $
+$NetBSD: TODO,v 1.13612 2014/08/31 18:00:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -393,7 +393,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o audacity-2.0.5 [wip (audacity-devel)]
 	o autoconf-archive-20140228
 	o autoconvert-0.3.16
-	o autogen-5.18.3
+	o autogen-5.18.4
 	o avidemux-2.6
 	o avl-2.0.3 [2.x is not source and binary compatible with 1.x]
 	o baci-20040415
@@ -416,8 +416,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o byacc-20140409
 	o bzr-2.6.0
 	o c4-1.10 [schmonz]
+	o caff-1.1.9
 	o cal3d-0.11.0
-	o calibre-2.1 [needs py-qt5]
+	o calibre-2.1.0 [wip]
 	o calligra-2.4.3 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -430,6 +431,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cheese-3.12.2
 	o cherokee-1.2.103 [pkg/48268]
 	o chktex-1.7.2
+	o chromaprint-1.2
 	o chromium-0.9.15
 	o chromium-bsu-0.9.15.1
 	o chrony-1.29.1
@@ -641,12 +643,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gpsdrive-2.11
 	o gramofile-1.6P
 	o gramps-4.1.0
+	o grap-1.45
 	o grep-2.20
 	o grilo-0.2.11
 	o grilo-plugins-0.2.13
 	o groff-1.22.2
 	o gsharutils-4.14
 	o gss-1.0.2
+	o gstreamer1-1.4.1
 	o gthumb-3.2.8
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
@@ -841,6 +845,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nginx-devel-1.7.0
 	o nikto-2.0.1
 	o nmap-6.47
+	o nmh-1.6 [pkg/49166]
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
 	o nspluginwrapper-1.4.4 [pkg/47208]
@@ -935,19 +940,24 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-biggles-1.6.6
 	o py-bottle-0.11.6
 	o py-cassa-1.11.0
+	o py-click-3.2
 	o py-creole-1.1.1
 	o py-datapkg-0.9
 	o py-django-photologue-2.7
 	o py-django-registration-1.0
 	o py-djangorestframework-2.3.12
+	o py-docopt-0.6.2
 	o py-gammu-1.33.0
 	o py-gmpy-1.17
 	o py-gnome-menus-3.8.0
 	o py-greenlet-0.4.2
 	o py-hgtools-4.0
+	o py-hgview-1.8.2
+	o py-icalendar-3.8.3
 	o py-lasso-2.4.0
 	o py-logilab-astng-0.24.3
 	o py-logilab-common-0.60.1
+	o py-lxml-3.3.6
 	o py-markdown-2.3.1
 	o py-mezzanine-3.0.5
 	o py-musicbrainz-0.7.4
@@ -957,6 +967,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-paramiko-1.12.1
 	o py-pendrell-0.3.7
 	o py-pexpect-3.0
+	o py-psycopg2-2.5.4
 	o py-ptt-1.10.2
 	o py-qt5-5.3.1
 	o py-reportlab-3.0
@@ -1155,7 +1166,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wwwoffle-2.9i
 	o wxRemind-101
 	o wyrd-1.4.6
-	o x264-devel-20140823
+	o x264-devel-20140830
 	o xanalyser-1.30
 	o xbindkeys-1.8.6
 	o xbindkeys-tk-1.8.0
