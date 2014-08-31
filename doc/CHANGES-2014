@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3287 2014/08/31 21:38:03 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3288 2014/08/31 21:38:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4248,3 +4248,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/py-psycopg2 to 2.5.4 [wiz 2014-08-31]
 	Updated time/py-icalendar to 3.8.3 [wiz 2014-08-31]
 	Updated devel/py-hgview to 1.8.2 [wiz 2014-08-31]
+	Updated devel/py-click to 3.2 [wiz 2014-08-31]
