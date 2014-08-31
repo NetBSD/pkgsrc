@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3275 2014/08/30 20:27:26 bouyer Exp $
+$NetBSD: CHANGES-2014,v 1.3276 2014/08/31 05:11:46 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4232,3 +4232,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated math/glpk to 4.55 [adam 2014-08-30]
 	Updated security/gnutls to 3.2.17 [adam 2014-08-30]
 	Updated mail/sympa to 6.1.22 [bouyer 2014-08-30]
+	Updated www/mediawiki to 1.23.3 [wen 2014-08-31]
