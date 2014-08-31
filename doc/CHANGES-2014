@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3280 2014/08/31 08:10:00 obache Exp $
+$NetBSD: CHANGES-2014,v 1.3281 2014/08/31 10:25:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4237,3 +4237,8 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Test-Base to 0.88 [wen 2014-08-31]
 	Updated games/lgogdownloader to 2.17 [wiz 2014-08-31]
 	Updated devel/ruby-gettext to 3.1.4 [obache 2014-08-31]
+	Updated devel/gettext to 0.19.2 [wiz 2014-08-31]
+	Updated devel/gettext-asprintf to 0.19.2 [wiz 2014-08-31]
+	Updated devel/gettext-lib to 0.19.2 [wiz 2014-08-31]
+	Updated devel/gettext-m4 to 0.19.2 [wiz 2014-08-31]
+	Updated devel/gettext-tools to 0.19.2 [wiz 2014-08-31]
