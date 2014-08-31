@@ -6,8 +6,8 @@ index 4546c3e..2e0998d 100644
  OBJ_SUFF = obj
  endif
  
-+ifeq ($(OS_ARCH),SunOS)
-+LDFLAGS += -shared -Wl,-Bsymbolic
++ifeq ($(OS_TARGET),SunOS)
++LDFLAGS += -shared -Wl,-Bsymbolic -mimpure-text
 +CFLAGS += -fPIC
 +endif
 +
