@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3295 2014/08/31 22:23:47 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3296 2014/08/31 22:24:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4256,3 +4256,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/gst-plugins1-base to 1.4.1 [wiz 2014-08-31]
 	Updated multimedia/gst-plugins1-good to 1.4.1 [wiz 2014-08-31]
 	Updated multimedia/gst-plugins1-bad to 1.4.1 [wiz 2014-08-31]
+	Updated multimedia/gst-plugins1-ugly to 1.4.1 [wiz 2014-08-31]
