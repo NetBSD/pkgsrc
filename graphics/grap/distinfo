@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.12 2014/07/22 11:33:47 wiz Exp $
+$NetBSD: distinfo,v 1.13 2014/08/31 21:41:58 wiz Exp $
 
-SHA1 (grap-1.44.tar.gz) = b15e4e04525301cfbd2900b1f1a028e81a12ba92
-RMD160 (grap-1.44.tar.gz) = b595468dc91a5c2fdca49edc7a31d635ec5b9350
-Size (grap-1.44.tar.gz) = 184876 bytes
+SHA1 (grap-1.45.tar.gz) = c7a22dcbc1a745a8fba74a888c3e857cd39832b6
+RMD160 (grap-1.45.tar.gz) = c5401837a7f984e1ea4a1eac379044523a1c4fa2
+Size (grap-1.45.tar.gz) = 189829 bytes
 SHA1 (patch-ab) = 20fca93edd15d4c1220b642671fb66fa2c40c2fe
 SHA1 (patch-ac) = abd8fef7dd04e58c5a408cc8dc73f43debe84f37
 SHA1 (patch-ad) = 60e58decb12681b34c826a3d0b86006e8015cb9f
