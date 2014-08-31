@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2014/05/27 18:27:10 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/08/31 21:37:55 wiz Exp $
 
-DISTNAME=	hgview-1.8.1
+DISTNAME=	hgview-1.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	http://download.logilab.org/pub/hgview/
