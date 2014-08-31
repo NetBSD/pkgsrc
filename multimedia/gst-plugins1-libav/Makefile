@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2014/08/08 21:52:58 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2014/08/31 22:24:27 wiz Exp $
 
-DISTNAME=	gst-libav-1.4.0
+DISTNAME=	gst-libav-1.4.1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gst-libav/
 EXTRACT_SUFX=	.tar.xz
