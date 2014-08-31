@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3281 2014/08/31 10:25:06 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3282 2014/08/31 19:27:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4242,3 +4242,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/gettext-lib to 0.19.2 [wiz 2014-08-31]
 	Updated devel/gettext-m4 to 0.19.2 [wiz 2014-08-31]
 	Updated devel/gettext-tools to 0.19.2 [wiz 2014-08-31]
+	Updated databases/py-mysql-connector to 1.2.3 [adam 2014-08-31]
