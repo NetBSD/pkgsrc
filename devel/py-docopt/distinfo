@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/04/17 20:55:16 imil Exp $
+$NetBSD: distinfo,v 1.2 2014/08/31 21:30:58 wiz Exp $
 
-SHA1 (docopt-0.6.1.tar.gz) = 3d0ad1cf495d2c801327042e02d67b4ee4b85cd4
-RMD160 (docopt-0.6.1.tar.gz) = 452526a02437706139bb02acc10f6499f4bbf470
-Size (docopt-0.6.1.tar.gz) = 25815 bytes
+SHA1 (docopt-0.6.2.tar.gz) = 224a3ec08b56445a1bd1583aad06b00692671e04
+RMD160 (docopt-0.6.2.tar.gz) = c2e76c031e12096906b9c6b1f7dc62a9b30336f1
+Size (docopt-0.6.2.tar.gz) = 25901 bytes
