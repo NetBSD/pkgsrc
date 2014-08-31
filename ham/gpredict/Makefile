@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2014/05/05 00:48:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.41 2014/08/31 11:27:03 mef Exp $
 
 DISTNAME=	gpredict-1.3
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	ham
 MASTER_SITES=	http://sourceforge.net/projects/gpredict/files/Gpredict/1.3/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://groundstation.sourceforge.net/
+HOMEPAGE=	http://sourceforge.net/projects/gpredict/
 COMMENT=	Gnome satellite tracking program
 LICENSE=	gnu-gpl-v2
 
