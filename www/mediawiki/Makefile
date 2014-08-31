@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2014/08/01 23:46:03 wen Exp $
+# $NetBSD: Makefile,v 1.44 2014/08/31 05:10:05 wen Exp $
 
 DISTNAME=	mediawiki-${VER}.${PVER}
 CATEGORIES=	www
@@ -22,8 +22,8 @@ INSTALLATION_DIRS=	${EGDIR} share/mediawiki
 .include "options.mk"
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-VER=			1.22
-PVER=			9
+VER=			1.23
+PVER=			3
 
 APACHE_USER?=		www
 APACHE_GROUP?=		www
@@ -56,7 +56,8 @@ SUBST_SED.sh=		-e "s|/bin/bash|${SH}|"
 SUBST_CLASSES+=		sh2
 SUBST_STAGE.sh2=	post-patch
 SUBST_MESSAGE.sh2=	Fixing path to sh
-SUBST_FILES.sh2+=	maintenance/mwjsduck-gen
+SUBST_FILES.sh2+=	maintenance/mwjsduck-gen docs/kss/scripts/nodecheck.sh
+SUBST_FILES.sh2+=	maintenance/resources/update-oojs.sh resources/lib/oojs-ui/update-oojs-ui.sh
 SUBST_SED.sh2=		-e "s|/usr/bin/env bash|${SH}|"
 
 SUBST_CLASSES+=		perl
