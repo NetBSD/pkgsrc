@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2013/07/21 20:24:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/08/31 10:24:02 wiz Exp $
 bin/autopoint
 bin/envsubst
 bin/gettext
@@ -149,6 +149,7 @@ share/locale/ga/LC_MESSAGES/gettext-runtime.mo
 share/locale/gl/LC_MESSAGES/gettext-runtime.mo
 share/locale/gl/LC_MESSAGES/gettext-tools.mo
 share/locale/hr/LC_MESSAGES/gettext-runtime.mo
+share/locale/hu/LC_MESSAGES/gettext-runtime.mo
 share/locale/id/LC_MESSAGES/gettext-runtime.mo
 share/locale/id/LC_MESSAGES/gettext-tools.mo
 share/locale/it/LC_MESSAGES/gettext-runtime.mo
