@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3290 2014/08/31 21:42:07 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3291 2014/08/31 21:44:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4251,3 +4251,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-click to 3.2 [wiz 2014-08-31]
 	Updated security/caff to 1.1.9 [wiz 2014-08-31]
 	Updated graphics/grap to 1.45 [wiz 2014-08-31]
+	Updated audio/chromaprint to 1.2 [wiz 2014-08-31]
