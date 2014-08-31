@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2014/08/11 02:56:22 wen Exp $
+$NetBSD: distinfo,v 1.7 2014/08/31 06:57:35 wen Exp $
 
-SHA1 (Test-Base-0.79.tar.gz) = 847712ba0e8f54e0d904032d9c62785f1cfdd0df
-RMD160 (Test-Base-0.79.tar.gz) = 804ae95fb406e1bf67b3ef3ab07e5d868f5f2464
-Size (Test-Base-0.79.tar.gz) = 52170 bytes
+SHA1 (Test-Base-0.88.tar.gz) = 64fbb0bfa84e541cab3c79950f44db160886e5cf
+RMD160 (Test-Base-0.88.tar.gz) = 42100035531969e0c6e0ac7cb72711f3ec4a8699
+Size (Test-Base-0.88.tar.gz) = 52032 bytes
