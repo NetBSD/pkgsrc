@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.67 2014/08/21 04:51:08 dbj Exp $
+$NetBSD: distinfo,v 1.68 2014/09/01 21:06:45 wiz Exp $
 
-SHA1 (webkitgtk-2.4.4.tar.xz) = 0f7690bbaef69946c64793c8aa23cd2f00eac9ae
-RMD160 (webkitgtk-2.4.4.tar.xz) = ce454ad56b9a62217beaf33c0815e3ec09c10539
-Size (webkitgtk-2.4.4.tar.xz) = 9844048 bytes
+SHA1 (webkitgtk-2.4.5.tar.xz) = a0084746de2cf18246d7b5216086db8133c9df4b
+RMD160 (webkitgtk-2.4.5.tar.xz) = 7cc5bf1a8ac9101b4b8a2c1cce96cd1dd7403bc2
+Size (webkitgtk-2.4.5.tar.xz) = 9842948 bytes
 SHA1 (patch-Source_JavaScriptCore_ForwardingHeaders_JavaScriptCore_JSCallbackFunction.h) = 79122450435eb12a57086d18e5410eec131c33b2
 SHA1 (patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp) = 69221390dd5fdac55abf341c5ae3a03267e38ae6
 SHA1 (patch-Source_JavaScriptCore_dfg_DFGNode.h) = fdd31fcf6c745394499570397c82fe3dfce02e1d
