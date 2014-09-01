@@ -1,4 +1,4 @@
-$NetBSD: manual-libtool.m4,v 1.41 2014/06/15 14:42:05 joerg Exp $
+$NetBSD: manual-libtool.m4,v 1.42 2014/09/01 12:39:15 jperkin Exp $
 
 --- libltdl/m4/libtool.m4.orig	2011-10-17 10:17:05.000000000 +0000
 +++ libltdl/m4/libtool.m4
@@ -376,7 +376,7 @@ $NetBSD: manual-libtool.m4,v 1.41 2014/06/15 14:42:05 joerg Exp $
    AC_PROG_CXXCPP
  else
    _lt_caught_CXX_error=yes
-@@ -6538,6 +6635,22 @@ if test "$_lt_caught_CXX_error" != yes; 
+@@ -6538,6 +6635,22 @@ if test "$_lt_caught_CXX_error" != yes;
          _LT_TAGVAR(ld_shlibs, $1)=no
  	;;
  
@@ -399,7 +399,7 @@ $NetBSD: manual-libtool.m4,v 1.41 2014/06/15 14:42:05 joerg Exp $
        mvs*)
          case $cc_basename in
            cxx*)
-@@ -6552,15 +6665,13 @@ if test "$_lt_caught_CXX_error" != yes; 
+@@ -6552,15 +6665,13 @@ if test "$_lt_caught_CXX_error" != yes;
  	;;
  
        netbsd*)
@@ -422,7 +422,7 @@ $NetBSD: manual-libtool.m4,v 1.41 2014/06/15 14:42:05 joerg Exp $
  	;;
  
        *nto* | *qnx*)
-@@ -6739,27 +6850,14 @@ if test "$_lt_caught_CXX_error" != yes; 
+@@ -6739,27 +6850,14 @@ if test "$_lt_caught_CXX_error" != yes;
  	    # GNU C++ compiler with Solaris linker
  	    if test "$GXX" = yes && test "$with_gnu_ld" = no; then
  	      _LT_TAGVAR(no_undefined_flag, $1)=' ${wl}-z ${wl}defs'
@@ -458,3 +458,22 @@ $NetBSD: manual-libtool.m4,v 1.41 2014/06/15 14:42:05 joerg Exp $
  
  	      _LT_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-R $wl$libdir'
  	      case $host_os in
+@@ -6995,13 +7093,11 @@ if AC_TRY_EVAL(ac_compile); then
+     case ${prev}${p} in
+ 
+     -L* | -R* | -l*)
+-       # Some compilers place space between "-{L,R}" and the path.
+-       # Remove the space.
+-       if test $p = "-L" ||
+-          test $p = "-R"; then
+-	 prev=$p
+-	 continue
+-       fi
++       # Some compilers place space between "-{L,R,l}" and the path or
++       # library.  Remove the space.
++       case $p in
++       -L|-R|-l) prev=$p; continue ;;
++       esac
+ 
+        # Expand the sysroot to ease extracting the directories later.
+        if test -z "$prev"; then
