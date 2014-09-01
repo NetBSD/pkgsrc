@@ -1,4 +1,6 @@
-$NetBSD: patch-doc_prerst2man.py,v 1.1 2014/07/03 15:01:46 wiz Exp $
+$NetBSD: patch-doc_prerst2man.py,v 1.2 2014/09/01 08:14:07 wiz Exp $
+
+Fix rst2man executable name.
 
 --- doc/prerst2man.py.orig	2014-05-06 07:27:29.000000000 +0000
 +++ doc/prerst2man.py
