@@ -1,0 +1,14 @@
+LibDsk is a library intended to give transparent access to floppy
+drives and to the "disc image files" used by emulators to represent
+floppy drives. It currently supports the following disc image
+formats:
+
+- Raw "dd if=foo of=bar" images;
+- Raw images in logical filesystem order;
+- CPCEMU-format .DSK images (normal and extended);
+- CFI-format disc images, as produced by FDCOPY.COM;
+- ApriDisk-format disc images;
+- NanoWasp-format disc images, used by the eponymous emulator;
+- Yaze 'ydsk' disc images, created by the 'yaze' emulators;
+- Disc images created by Teledisk and CopyQM (read only);
+- The floppy drive under Linux.

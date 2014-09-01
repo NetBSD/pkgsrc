@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2014/09/01 20:52:28 shattered Exp $
+bin/apriboot
+bin/dskdump
+bin/dskform
+bin/dskid
+bin/dskscan
+bin/dsktrans
+bin/dskutil
+bin/md3serial
+include/libdsk.h
+lib/libdsk.la
+man/man1/apriboot.1
+man/man1/dskdump.1
+man/man1/dskform.1
+man/man1/dskid.1
+man/man1/dskscan.1
+man/man1/dsktrans.1
+man/man1/dskutil.1
+man/man1/md3serial.1
+man/man5/libdskrc.5
