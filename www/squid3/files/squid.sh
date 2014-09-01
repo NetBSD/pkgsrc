@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: squid.sh,v 1.1 2013/12/10 14:48:26 adam Exp $
+# $NetBSD: squid.sh,v 1.1.6.1 2014/09/01 22:18:03 tron Exp $
 #
 # PROVIDE: squid
 # REQUIRE: DAEMON
@@ -16,12 +16,12 @@ name="squid"
 rcvar=$name
 command="@PREFIX@/sbin/${name}"
 pidfile="@VARBASE@/run/${name}.pid"
+procname="squid-1"
 required_files="${squid_conf} @PKG_SYSCONFDIR@/mime.conf"
 command_args="-Y -f ${squid_conf}"
 
 start_precmd='ulimit -n 4096'
 # Note: 'shutdown' waits 30 seconds, while 'interrupt' stops immediately
-stop_cmd="${command} ${squid_flags} ${command_args} -k interrupt"
 reload_cmd="${command} ${squid_flags} ${command_args} -k reconfigure"
 rotate_cmd="${command} ${squid_flags} ${command_args} -k rotate"
 createdirs_cmd="${command} ${squid_flags} ${command_args} -z"
