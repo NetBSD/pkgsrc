@@ -1,4 +1,3 @@
-notmuch-emacs		Install emacs support files for notmuch.
 aalib			Enable aalib support.
 abook			Enable abook support.
 acl			Enable POSIX ACL support.
@@ -503,6 +502,7 @@ nfdump-sflow		Build sflow collector sfcpad.
 nls			Use native language support.
 nntp			Enable Network News Transport Protocol (NNTP) support.
 nntpcache-pgp		Enable pgp signed nocem support.
+notmuch-emacs		Install emacs support files for notmuch.
 nspluginwrapper		Enable running non native netscape compatible plugins.
 nss			Enable Network Security Services (NSS) support.
 octave			Enable Octave support.
