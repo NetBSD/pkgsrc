@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3301 2014/09/01 12:39:38 jperkin Exp $
+$NetBSD: CHANGES-2014,v 1.3302 2014/09/01 12:41:03 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4262,3 +4262,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/notmuch to 0.18.1nb2 [wiz 2014-09-01]
 	Updated devel/talloc to 2.1.1nb1 [wiz 2014-09-01]
 	Updated devel/libtool-fortran to 2.4.2nb5 [jperkin 2014-09-01]
+	Updated devel/libtool-base to 2.4.2nb8 [jperkin 2014-09-01]
