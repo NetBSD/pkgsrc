@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/06/10 19:25:58 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2014/09/01 19:18:21 jperkin Exp $
 
 DISTNAME=	mono-2.10.9
 PKGREVISION=	9
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	kefren@NetBSD.org
 HOMEPAGE=	http://www.mono-project.com/
 COMMENT=	Open source implementation of the .NET Development Framework (v2)
-
-MAKE_JOBS_SAFE=		no
 
 LICENSE=	mit AND gnu-gpl-v2 AND gnu-lgpl-v2 AND x11
 
