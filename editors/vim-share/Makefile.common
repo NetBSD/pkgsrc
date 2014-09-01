@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.149 2013/10/07 19:26:28 morr Exp $
+# $NetBSD: Makefile.common,v 1.150 2014/09/01 20:28:48 jperkin Exp $
 
 # used by editors/vim/Makefile
 # used by editors/vim-gtk/Makefile
@@ -24,7 +24,6 @@ CONFLICTS+=		vim-kde-[0-9]*
 
 WRKSRC=			${WRKDIR}/${VIM_SUBDIR}/src
 GNU_CONFIGURE=		yes
-MAKE_JOBS_SAFE=		no	# At least on Solaris
 
 # http://www.netbsd.org/cgi-bin/query-pr-single.pl?number=38710
 CHECK_INTERPRETER_SKIP=	share/vim/vim74/tools/vim132
