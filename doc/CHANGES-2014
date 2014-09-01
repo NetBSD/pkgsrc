@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3303 2014/09/01 20:54:54 shattered Exp $
+$NetBSD: CHANGES-2014,v 1.3304 2014/09/01 21:06:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4264,3 +4264,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/libtool-fortran to 2.4.2nb5 [jperkin 2014-09-01]
 	Updated devel/libtool-base to 2.4.2nb8 [jperkin 2014-09-01]
 	Added emulators/libdsk version 1.3.5 [shattered 2014-09-01]
+	Updated www/webkit-gtk to 2.4.5 [wiz 2014-09-01]
