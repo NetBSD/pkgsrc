@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.34 2014/09/01 21:06:45 wiz Exp $
+# $NetBSD: Makefile.common,v 1.35 2014/09/01 21:11:17 wiz Exp $
 # used by www/webkit-gtk/Makefile
 
 DISTNAME=	webkitgtk-2.4.5
@@ -41,9 +41,7 @@ REPLACE_PERL+=	Source/JavaScriptCore/create_hash_table \
 
 REPLACE_PYTHON+=	Tools/gtk/*.py \
 			Tools/gtk/generate-feature-defines-files \
-			Tools/gtk/generate-gtkdoc \
-			Tools/gtk/generate-webkitdom-doc-files
-
+			Tools/gtk/generate-gtkdoc
 
 .include "../../lang/ruby/rubyversion.mk"
 BUILD_DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
