@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/03/19 16:17:38 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/09/01 09:29:54 wiz Exp $
 
 DISTNAME=       mutt-kz-1.5.22.1-rc1
 PKGNAME=        ${DISTNAME:S/-rc/rc/}
@@ -12,6 +12,12 @@ COMMENT=		Text-based MIME mail client with notmuch, PGP & S/MIME support
 LICENSE=		gnu-gpl-v2 OR gnu-gpl-v3 # or newer
 
 CONFIGURE_ARGS+=	--enable-notmuch
+
+# On case-insensitive file systems like on OS X, version.sh is used
+# to re-create VERSION, and fails. Make sure VERSION is newer than
+# version.sh to avoid this.
+pre-build:
+	${TOUCH} ${WRKSRC}/VERSION
 
 .include "../../mail/mutt-devel/Makefile.common"
 
