@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.82 2013/08/22 14:39:00 adam Exp $
+# $NetBSD: Makefile,v 1.83 2014/09/01 17:59:12 tron Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
 COMMENT=	Tools for providing messages in different languages
-LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	gettext-m4-${PKGVERSION_NOREV}{,nb[0-9]*}:../../devel/gettext-m4
 DEPENDS+=	gettext-tools-${PKGVERSION_NOREV}{,nb[0-9]*}:../../devel/gettext-tools
