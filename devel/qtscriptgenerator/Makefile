@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/02/12 23:17:50 tron Exp $
+# $NetBSD: Makefile,v 1.30 2014/09/01 16:44:02 jperkin Exp $
 #
 
 DISTNAME=	qtscriptgenerator-src-0.2.0
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c++
 USE_LIBTOOL=	yes
-MAKE_JOBS_SAFE=	no
+
 INSTALLATION_DIRS=	${QTDIR}/bin ${QTDIR}/plugins/script
 INSTALLATION_DIRS+=	share/doc/qtscriptgenerator
 INSTALLATION_DIRS+=	share/doc/qtscriptgenerator/examples
@@ -26,10 +26,10 @@ post-extract:
 
 do-build:
 	cd ${WRKSRC}/generator && ${QTDIR}/bin/qmake
-	cd ${WRKSRC}/generator && ${SETENV} ${MAKE_ENV} ${MAKE}
+	cd ${WRKSRC}/generator && ${SETENV} ${MAKE_ENV} ${MAKE} ${_MAKE_JOBS}
 	cd ${WRKSRC}/generator && ${SETENV} ${MAKE_ENV} ./generator
 	cd ${WRKSRC}/qtbindings && ${QTDIR}/bin/qmake
-	cd ${WRKSRC}/qtbindings && ${SETENV} ${MAKE_ENV} ${MAKE}
+	cd ${WRKSRC}/qtbindings && ${SETENV} ${MAKE_ENV} ${MAKE} ${_MAKE_JOBS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/generator/generator ${DESTDIR}${QTDIR}/bin
