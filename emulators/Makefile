@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.214 2014/04/19 01:22:27 jnemeth Exp $
+# $NetBSD: Makefile,v 1.215 2014/09/01 20:53:24 shattered Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -79,6 +79,7 @@ SUBDIR+=	ia64sim
 SUBDIR+=	kegs
 SUBDIR+=	kenigma
 SUBDIR+=	klh10
+SUBDIR+=	libdsk
 SUBDIR+=	libspectrum
 SUBDIR+=	lrmi
 SUBDIR+=	m1
