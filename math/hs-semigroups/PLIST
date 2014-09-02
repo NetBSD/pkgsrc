@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2014/09/02 20:58:16 szptvlfn Exp $
+lib/semigroups-${PKGVERSION}/${HASKELL_VERSION}/Data/List/NonEmpty.hi
+lib/semigroups-${PKGVERSION}/${HASKELL_VERSION}/Data/Semigroup.hi
+lib/semigroups-${PKGVERSION}/${HASKELL_VERSION}/HSsemigroups-${PKGVERSION}.o
+lib/semigroups-${PKGVERSION}/${HASKELL_VERSION}/libHSsemigroups-${PKGVERSION}.a
+lib/semigroups-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/semigroups-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/semigroups-${PKGVERSION}/html/Data-List-NonEmpty.html
+${PLIST.doc}share/doc/semigroups-${PKGVERSION}/html/Data-Semigroup.html
+${PLIST.doc}share/doc/semigroups-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/semigroups-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/semigroups-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/semigroups-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/semigroups-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/semigroups-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/semigroups-${PKGVERSION}/html/mini_Data-List-NonEmpty.html
+${PLIST.doc}share/doc/semigroups-${PKGVERSION}/html/mini_Data-Semigroup.html
+${PLIST.doc}share/doc/semigroups-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/semigroups-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/semigroups-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/semigroups-${PKGVERSION}/html/semigroups.haddock
+${PLIST.doc}share/doc/semigroups-${PKGVERSION}/html/synopsis.png
