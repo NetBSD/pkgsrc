@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2014/08/13 10:57:34 adam Exp $
+# $NetBSD: Makefile,v 1.41 2014/09/02 09:45:54 jperkin Exp $
 
 DISTNAME=	thrift-${THRIFT_VERSION}
 PKGNAME=	libthrift-${THRIFT_VERSION}
@@ -11,6 +11,7 @@ HOMEPAGE=	http://incubator.apache.org/thrift/
 COMMENT=	Cross-language data serialization library
 LICENSE=	apache-2.0
 
+# No rule to make target 'gen-cpp/Service.cpp', needed by 'Service.lo'.  Stop.
 MAKE_JOBS_SAFE=		no
 
 USE_LANGUAGES=		c c++
