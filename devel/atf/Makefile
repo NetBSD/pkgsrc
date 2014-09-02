@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2014/02/08 15:54:58 jmmv Exp $
+# $NetBSD: Makefile,v 1.24 2014/09/02 08:32:36 jperkin Exp $
 #
 
 DISTNAME=	atf-0.20
@@ -11,8 +11,6 @@ COMMENT=	Automated testing framework
 LICENSE=	2-clause-bsd
 
 CONFLICTS+=		atf-libs<0.20
-
-MAKE_JOBS_SAFE=		yes
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/08/14 14:14:52 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2014/09/02 08:32:36 jperkin Exp $
 #
 
 DISTNAME=	kyua-0.10
@@ -15,7 +15,6 @@ CONFLICTS=	kyua-atf-compat-[0-9]* kyua-cli-[0-9]* kyua-testers-[0-9]*
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-MAKE_JOBS_SAFE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS=		pkg-config
 
