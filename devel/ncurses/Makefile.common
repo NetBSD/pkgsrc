@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2014/08/10 09:10:10 richard Exp $
+# $NetBSD: Makefile.common,v 1.23 2014/09/02 09:49:50 jperkin Exp $
 #
 # used by devel/ncursesw/Makefile
 
@@ -17,7 +17,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		tbl
+USE_TOOLS+=		gmake tbl
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libtool
 CONFIGURE_ARGS+=	--enable-bsdpad
@@ -30,7 +30,6 @@ CONFIGURE_ARGS+=	--with-manpage-tbl
 CONFIGURE_ARGS+=	--with-default-terminfo-dir=${PREFIX}/${TERMINFODIR}
 CONFIGURE_ARGS+=	--with-terminfo-dirs=${PREFIX}/${TERMINFODIR}
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/ncurses
-MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
 
