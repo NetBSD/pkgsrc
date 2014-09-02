@@ -1,4 +1,4 @@
-$NetBSD: patch-gcc_common.opt,v 1.1 2014/01/25 13:38:48 ryoon Exp $
+$NetBSD: patch-gcc_common.opt,v 1.2 2014/09/02 09:57:39 pho Exp $
 
 --- gcc/common.opt.orig	2013-01-14 16:35:23.000000000 +0000
 +++ gcc/common.opt
@@ -60,12 +60,3 @@ $NetBSD: patch-gcc_common.opt,v 1.1 2014/01/25 13:38:48 ryoon Exp $
  Generate position-independent code for executables if possible (large mode)
  
  fpic
-@@ -1782,7 +1790,7 @@ Common RejectNegative Joined Var(common_
- -fstack-limit-symbol=<name>	Trap if the stack goes past symbol <name>
- 
- fstack-protector
--Common Report Var(flag_stack_protect, 1)
-+Common Report Var(flag_stack_protect, 1) Init(-1)
- Use propolice as a stack protection method
- 
- fstack-protector-all
