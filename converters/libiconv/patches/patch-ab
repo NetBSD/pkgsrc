@@ -1,8 +1,10 @@
-$NetBSD: patch-ab,v 1.11 2011/09/08 16:29:49 bsiegert Exp $
+$NetBSD: patch-ab,v 1.12 2014/09/02 10:07:23 jperkin Exp $
 
---- Makefile.in.orig	Sun Jun 21 11:17:09 2009
+Support MAKE_JOBS.
+
+--- Makefile.in.orig	2009-06-21 11:17:33.000000000 +0000
 +++ Makefile.in
-@@ -25,6 +25,9 @@ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+@@ -25,21 +25,26 @@ INSTALL_PROGRAM = @INSTALL_PROGRAM@
  INSTALL_DATA = @INSTALL_DATA@
  mkinstalldirs = $(SHELL) @top_srcdir@/build-aux/mkinstalldirs
  
@@ -12,8 +14,22 @@ $NetBSD: patch-ab,v 1.11 2011/09/08 16:29:49 bsiegert Exp $
  #### End of system configuration section. ####
  
  SHELL = /bin/sh
-@@ -39,7 +42,9 @@ all : lib/localcharset.h force
- 	if test -d tests; then cd tests && $(MAKE) all; fi
+ 
+ all : lib/localcharset.h force
+-	cd lib && $(MAKE) all
+-	cd preload && $(MAKE) all
+-	cd srclib && $(MAKE) all
+-	cd src && $(MAKE) all
+-	cd po && $(MAKE) all
+-	cd man && $(MAKE) all
+-	if test -d tests; then cd tests && $(MAKE) all; fi
++	(cd lib && $(MAKE) all)
++	(cd preload && $(MAKE) all)
++	(cd srclib && $(MAKE) all)
++	(cd src && $(MAKE) all)
++	(cd po && $(MAKE) all)
++	(cd man && $(MAKE) all)
++	(if test -d tests; then cd tests && $(MAKE) all; fi)
  
  lib/localcharset.h :
 -	builddir="`pwd`"; cd libcharset && $(MAKE) all && $(MAKE) install-lib libdir="$$builddir/lib" includedir="$$builddir/lib"
