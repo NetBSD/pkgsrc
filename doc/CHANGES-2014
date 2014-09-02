@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3306 2014/09/02 04:11:47 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.3307 2014/09/02 06:57:48 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4267,3 +4267,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/webkit-gtk to 2.4.5 [wiz 2014-09-01]
 	Updated mail/rss2email to 3.9 [schmonz 2014-09-02]
 	Updated devel/p5-Test-BDD-Cucumber to 0.30 [schmonz 2014-09-02]
+	Updated chat/ircII to 20140831 [mrg 2014-09-02]
