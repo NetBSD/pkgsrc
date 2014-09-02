@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/08/13 10:57:34 adam Exp $
+# $NetBSD: Makefile,v 1.9 2014/09/02 09:02:07 jperkin Exp $
 
 DISTNAME=	sdcc-src-3.3.0
 PKGNAME=	${DISTNAME:S/-src//}
@@ -27,7 +27,7 @@ BUILD_TARGET=	dep all
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/src-//}
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake lex perl:run
+USE_TOOLS+=		gmake lex:run perl:run
 
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/sdcc
 CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/sdcc
