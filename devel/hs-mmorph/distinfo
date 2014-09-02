@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/05/29 22:06:00 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2014/09/02 20:57:11 szptvlfn Exp $
 
-SHA1 (mmorph-1.0.3.tar.gz) = a272bf8b6b9dc21fdfd740ba26e42ed984a10d6e
-RMD160 (mmorph-1.0.3.tar.gz) = 285ab3c5671c8ad1397160d7a85ff6607fe2482f
-Size (mmorph-1.0.3.tar.gz) = 6023 bytes
+SHA1 (mmorph-1.0.4.tar.gz) = dd91c57594069f0b5bffa681be498e6421c8db65
+RMD160 (mmorph-1.0.4.tar.gz) = 95e1bf22e9d12e2abb682ded8a4f5c3490147193
+Size (mmorph-1.0.4.tar.gz) = 6100 bytes
