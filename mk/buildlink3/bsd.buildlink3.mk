@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.226 2014/05/18 11:23:26 obache Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.227 2014/09/02 14:31:27 jperkin Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -706,15 +706,16 @@ ${_BLNK_COOKIE.${_pkg_}}:
 				msg="$$src -> $$dest";			\
 			fi;						\
 			dir=`${DIRNAME} "$$dest"`;			\
-			if [ ! -d "$$dir" ]; then				\
-				${MKDIR} "$$dir";				\
+			if [ ! -d "$$dir" ]; then			\
+				${MKDIR} "$$dir";			\
 			fi;						\
-			${RM} -f "$$dest";				\
+			if [ -e "$$dest" ]; then			\
+				${RM} -f "$$dest";			\
+			fi;						\
 			case "$$src" in					\
 			*.la)						\
-				${CAT} "$$src" |			\
 				${_BLNK_LT_ARCHIVE_FILTER.${_pkg_}}	\
-					> "$$dest";			\
+					"$$src" > "$$dest";		\
 				msg="$$msg (created)";			\
 				;;					\
 			*)						\
