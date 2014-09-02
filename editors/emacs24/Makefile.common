@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2013/11/04 11:08:03 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.8 2014/09/02 09:19:46 jperkin Exp $
 #
 # used by editors/emacs24/Makefile
 # used by editors/emacs24-nox11/Makefile
@@ -14,7 +14,6 @@ COMMENT=	GNU editing macros (editor)
 LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/b$//}
-MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=	yes
 INFO_FILES=	yes
