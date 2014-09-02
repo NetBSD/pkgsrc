@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.277 2014/08/26 16:30:01 brook Exp $
+# $NetBSD: Makefile,v 1.278 2014/09/02 20:59:55 szptvlfn Exp $
 
 COMMENT=	Mathematics
 
@@ -124,6 +124,7 @@ SUBDIR+=	hs-distributive
 SUBDIR+=	hs-mwc-random
 SUBDIR+=	hs-nats
 SUBDIR+=	hs-scientific
+SUBDIR+=	hs-semigroups
 SUBDIR+=	ipopt
 SUBDIR+=	isl
 SUBDIR+=	itpp
