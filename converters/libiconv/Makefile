@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2013/12/23 11:57:02 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2014/09/02 10:07:23 jperkin Exp $
 
 DISTNAME=	libiconv-1.14
 PKGREVISION=	2
@@ -33,7 +33,6 @@ EGDIR=			${PREFIX}/share/examples/libiconv
 REQD_FILES=		${EGDIR}/charset.alias ${PREFIX}/lib/charset.alias
 
 MAKE_ENV+=		PAX=${PAX:Q}
-MAKE_JOBS_SAFE=		no		# ENOENT(srclib)
 
 .include "../../mk/compiler.mk"
 
