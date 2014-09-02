@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3308 2014/09/02 11:26:30 he Exp $
+$NetBSD: CHANGES-2014,v 1.3309 2014/09/02 13:49:27 he Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4269,3 +4269,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Test-BDD-Cucumber to 0.30 [schmonz 2014-09-02]
 	Updated chat/ircII to 20140831 [mrg 2014-09-02]
 	Added net/py-ncclient version 0.4.1 [he 2014-09-02]
+	Added net/py-netaddr version 0.7.12 [he 2014-09-02]
