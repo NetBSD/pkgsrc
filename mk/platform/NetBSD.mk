@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.39 2013/04/28 12:53:56 obache Exp $
+# $NetBSD: NetBSD.mk,v 1.40 2014/09/02 16:13:27 gdt Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -42,7 +42,9 @@ ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 
 # Native X11 is only supported on NetBSD-5 and later.
-.if empty(MACHINE_PLATFORM:MNetBSD-[0-4].*)
+# On NetBSD-5, native X11 has enough issues that we default
+# to modular.
+.if empty(MACHINE_PLATFORM:MNetBSD-[0-5].*)
 X11_TYPE?=		native
 .endif
 
