@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/09/02 09:02:07 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2014/09/02 09:47:22 jperkin Exp $
 
 DISTNAME=	sdcc-src-3.3.0
 PKGNAME=	${DISTNAME:S/-src//}
@@ -13,8 +13,6 @@ COMMENT=	Cross compile 8051 code
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	gputils-[0-9]*:../../devel/gputils
-
-MAKE_JOBS_SAFE=		no
 
 USE_LANGUAGES=	c c++
 
