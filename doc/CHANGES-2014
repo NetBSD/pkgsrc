@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3305 2014/09/02 00:33:52 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.3306 2014/09/02 04:11:47 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4266,3 +4266,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added emulators/libdsk version 1.3.5 [shattered 2014-09-01]
 	Updated www/webkit-gtk to 2.4.5 [wiz 2014-09-01]
 	Updated mail/rss2email to 3.9 [schmonz 2014-09-02]
+	Updated devel/p5-Test-BDD-Cucumber to 0.30 [schmonz 2014-09-02]
