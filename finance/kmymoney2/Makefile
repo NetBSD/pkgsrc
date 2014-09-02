@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2014/08/22 11:24:30 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2014/09/02 10:50:02 jperkin Exp $
 
 DISTNAME=	kmymoney2-1.0.5
 PKGREVISION=	30
@@ -15,7 +15,6 @@ USE_TOOLS+=		gmake msgfmt perl pkg-config bash gsed
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
-MAKE_JOBS_SAFE=		NO
 CONFIG_SHELL=		${BASH}
 SHLIBTOOL_OVERRIDE=	# empty
 
