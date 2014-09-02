@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2014/06/15 09:35:28 asau Exp $
+# $NetBSD: Makefile,v 1.38 2014/09/02 22:34:29 jperkin Exp $
 
 PKGNAME=	racket-6.0.1
 DISTNAME=	$(PKGNAME_NOREV)-src
@@ -55,6 +55,7 @@ post-install:
 	$(RM) -f $(DESTDIR)$(PREFIX)/lib/racket/collects/racket/draw/unsafe/png.rkt.orig
 	$(RM) -f $(DESTDIR)$(PREFIX)/lib/racket/collects/racket/draw/unsafe/jpeg.rkt.orig
 
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
