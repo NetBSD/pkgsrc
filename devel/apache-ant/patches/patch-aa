@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2014/05/07 18:23:31 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2014/09/03 19:36:52 tonio Exp $
 
 Initialize paths to appropriate defaults for pkgsrc.
 
@@ -14,7 +14,7 @@ Initialize paths to appropriate defaults for pkgsrc.
 +fi
 +
 +if [ "$JAVA_HOME" = "" ] ; then
-+  JAVA_HOME=@JAVA_HOME@
++  JAVA_HOME='@JAVA_HOME@'
 +fi
 +
  if [ -z "$ANT_HOME" -o ! -d "$ANT_HOME" ] ; then
