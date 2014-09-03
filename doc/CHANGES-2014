@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3315 2014/09/03 09:56:47 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3316 2014/09/03 10:27:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4276,3 +4276,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/racket to 6.0.1nb1 [jperkin 2014-09-03]
 	Added net/py-junos-eznc version 1.0.1 [he 2014-09-03]
 	Updated devel/py-mercurial to 3.1.1 [wiz 2014-09-03]
+	Updated games/MyGoGrinder to 2.0.3 [wiz 2014-09-03]
