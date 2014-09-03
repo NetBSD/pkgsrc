@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.283 2014/09/03 18:29:56 brook Exp $
+# $NetBSD: Makefile,v 1.284 2014/09/03 18:33:58 brook Exp $
 
 COMMENT=	Mathematics
 
@@ -45,6 +45,7 @@ SUBDIR+=	R-latticeExtra
 SUBDIR+=	R-lmm
 SUBDIR+=	R-mapproj
 SUBDIR+=	R-maps
+SUBDIR+=	R-markdown
 SUBDIR+=	R-mime
 SUBDIR+=	R-mvtnorm
 SUBDIR+=	R-ncdf
