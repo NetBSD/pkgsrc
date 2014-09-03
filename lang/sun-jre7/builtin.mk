@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2013/10/16 16:47:29 richard Exp $
+# $NetBSD: builtin.mk,v 1.3 2014/09/03 12:47:37 tron Exp $
 
 BUILTIN_PKG:=	sun-jre7
 
@@ -8,6 +8,24 @@ BUILTIN_FIND_FILES.JAVAVM7=	\
 	/usr/jdk/instances/jdk1.7.0
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
+
+###
+### On Darwin, if a suitable JRE has not already been found, try to find
+### it in the standard JRE location.  Normally, we would just add the
+### standard JRE location path to BUILTIN_FIND_FILES.JAVAVM7 above, but
+### unfortunately, the path contains a space, and the BUILTIN_FIND_FILES
+### "subroutine" can't handle paths containing whitespace (because it
+### iterates over the paths in a for-loop).  So, we perform the check by
+### hand.
+###
+.if ${OPSYS} == "Darwin" && \
+    !empty(JAVAVM7:M__nonexistent__)
+_JRE_HOME=	\
+	/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home
+.  if exists(${_JRE_HOME})
+JAVAVM7=	${_JRE_HOME}
+.  endif
+.endif
 
 ###
 ### Determine if there is a built-in implementation of the package and
@@ -30,7 +48,7 @@ MAKEVARS+=	IS_BUILTIN.sun-jre7
     !empty(IS_BUILTIN.sun-jre7:M[yY][eE][sS]) && \
     empty(JAVAVM7:M__nonexistent__)
 
-BUILTIN_VERSION.sun-jre7!= ${JAVAVM7}/bin/java -version 2>&1 | \
+BUILTIN_VERSION.sun-jre7!= ${JAVAVM7:Q}/bin/java -version 2>&1 | \
 	${AWK} -F \" '{print $$2; exit}' | \
 	${AWK} '{sub(/^1\./,"");sub(/_/,".");print $$1}'
 

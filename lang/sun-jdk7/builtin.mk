@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2013/10/16 16:48:55 richard Exp $
+# $NetBSD: builtin.mk,v 1.3 2014/09/03 12:47:37 tron Exp $
 
 BUILTIN_PKG:=	sun-jdk7
 
@@ -6,6 +6,24 @@ BUILTIN_FIND_FILES_VAR:=	JDK7
 BUILTIN_FIND_FILES.JDK7=	\
 	/System/Library/Frameworks/JavaVM.framework/Versions/1.7/Commands/javac\
 	/usr/jdk/instances/jdk1.7.0/bin/javac
+
+###
+### On Darwin, there are no 1.7 symlinks that would enable us to find a
+### 1.7 JDK.  Instead, the best method is to use the java_home system
+### program to find the default 1.7 JDK if it exists.
+###
+.if ${OPSYS} == "Darwin"
+_JAVA_HOME_ANSWER!=	\
+	if [ -x /usr/libexec/java_home ]; then \
+		result=`/usr/libexec/java_home -v 1.7 2> /dev/null`; \
+		if [ $$? -eq 0 ]; then \
+			echo "$$result"; \
+		else \
+			echo; \
+		fi; \
+	fi
+BUILTIN_FIND_FILES.JDK7+=	${_JAVA_HOME_ANSWER}/bin/javac
+.endif
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
