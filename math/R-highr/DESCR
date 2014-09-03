@@ -1,0 +1,3 @@
+This package provides syntax highlighting for R source code. Currently
+it supports LaTeX and HTML output. Source code of other languages can
+be supported via Andre Simon's Highlight package.
