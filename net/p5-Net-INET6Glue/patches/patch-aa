@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1 2014/09/03 06:19:44 kim Exp $
+
+Avoid warning when used with perl-5.20.0 from pkgsrc.
+Maybe this should be a check against an array instead.
+
+--- lib/Net/INET6Glue/FTP.pm.orig	2014-01-14 10:00:27.000000000 +0000
++++ lib/Net/INET6Glue/FTP.pm	2014-09-03 06:12:30.000000000 +0000
+@@ -8,9 +8,9 @@
+ ############################################################################
+ 
+ use Net::INET6Glue::INET_is_INET6;
+-use Net::FTP; # tested with version 2.77
++use Net::FTP; # tested with version 2.79
+ BEGIN {
+-    $Net::FTP::VERSION eq '2.77' 
++    $Net::FTP::VERSION eq '2.79' 
+ 	or warn "Not tested with Net::FTP version $Net::FTP::VERSION";
+ }   
+ 
