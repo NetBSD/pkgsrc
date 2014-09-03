@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1965 2014/08/30 10:55:52 wiedi Exp $
+# $NetBSD: Makefile,v 1.1966 2014/09/03 21:18:34 szptvlfn Exp $
 #
 
 COMMENT=	Development utilities
@@ -334,6 +334,7 @@ SUBDIR+=	hs-utf8-string
 SUBDIR+=	hs-vault
 SUBDIR+=	hs-vector
 SUBDIR+=	hs-vector-algorithms
+SUBDIR+=	hs-void
 SUBDIR+=	ht
 SUBDIR+=	hugs-HUnit
 SUBDIR+=	hugs-unix
