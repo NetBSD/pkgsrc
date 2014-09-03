@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/08/21 07:54:08 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/09/03 10:27:21 wiz Exp $
 
-DISTNAME=	MyGoGrinder-2.0.1
+DISTNAME=	MyGoGrinder-2.0.3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mygogrinder/}
 EXTRACT_SUFX=	.zip
