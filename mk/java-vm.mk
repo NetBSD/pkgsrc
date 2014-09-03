@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.94 2013/12/27 00:11:38 tron Exp $
+# $NetBSD: java-vm.mk,v 1.95 2014/09/03 12:47:37 tron Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -149,8 +149,7 @@ _ONLY_FOR_PLATFORMS.openjdk7-bin= \
 	NetBSD-[5-9]*-x86_64
 _ONLY_FOR_PLATFORMS.sun-jdk7= \
 	Darwin-9.*-i386 Darwin-9.*-x86_64 \
-	Darwin-10.*-i386 Darwin-10.*-x86_64 \
-	Darwin-11.*-i386 Darwin-11.*-x86_64 \
+	Darwin-[1-9][0-9].*-i386 Darwin-[1-9][0-9].*-x86_64 \
 	DragonFly-*-i386 \
 	FreeBSD-6.*-i386 \
 	Linux-*-i[3-6]86 \
