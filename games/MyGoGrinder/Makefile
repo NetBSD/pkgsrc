@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/09/03 10:27:21 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/09/03 12:56:06 tron Exp $
 
 DISTNAME=	MyGoGrinder-2.0.3
 CATEGORIES=	games
@@ -19,7 +19,7 @@ USE_TOOLS+=	pax
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/${PKGBASE}
-INSTALLATION_DIRS+=	share/doc/${PKGBASE}
+INSTALLATION_DIRS+=	share/doc/${PKGBASE}/docs
 INSTALLATION_DIRS+=	share/examples/${PKGBASE}
 INSTALLATION_DIRS+=	share/pixmaps
 
