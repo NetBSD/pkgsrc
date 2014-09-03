@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3312 2014/09/03 06:20:52 kim Exp $
+$NetBSD: CHANGES-2014,v 1.3313 2014/09/03 07:00:20 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4273,3 +4273,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/hs-mmorph to 1.0.4 [szptvlfn 2014-09-02]
 	Added math/hs-semigroups version 0.15.2 [szptvlfn 2014-09-02]
 	Updated net/p5-Net-INET6Glue to 0.6.2 [kim 2014-09-03]
+	Updated lang/racket to 6.0.1nb1 [jperkin 2014-09-03]
