@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.284 2014/09/03 18:33:58 brook Exp $
+# $NetBSD: Makefile,v 1.285 2014/09/03 18:52:42 brook Exp $
 
 COMMENT=	Mathematics
 
@@ -28,6 +28,7 @@ SUBDIR+=	R-clim.pact
 SUBDIR+=	R-combinat
 SUBDIR+=	R-countrycode
 SUBDIR+=	R-date
+SUBDIR+=	R-digest
 SUBDIR+=	R-e1071
 SUBDIR+=	R-evaluate
 SUBDIR+=	R-formatR
