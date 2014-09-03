@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2014/09/03 21:16:55 szptvlfn Exp $
+lib/void-${PKGVERSION}/${HASKELL_VERSION}/Data/Void.hi
+lib/void-${PKGVERSION}/${HASKELL_VERSION}/Data/Void/Unsafe.hi
+lib/void-${PKGVERSION}/${HASKELL_VERSION}/HSvoid-${PKGVERSION}.o
+lib/void-${PKGVERSION}/${HASKELL_VERSION}/libHSvoid-${PKGVERSION}.a
+lib/void-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/void-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/void-${PKGVERSION}/html/Data-Void-Unsafe.html
+${PLIST.doc}share/doc/void-${PKGVERSION}/html/Data-Void.html
+${PLIST.doc}share/doc/void-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/void-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/void-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/void-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/void-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/void-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/void-${PKGVERSION}/html/mini_Data-Void-Unsafe.html
+${PLIST.doc}share/doc/void-${PKGVERSION}/html/mini_Data-Void.html
+${PLIST.doc}share/doc/void-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/void-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/void-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/void-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/void-${PKGVERSION}/html/void.haddock
