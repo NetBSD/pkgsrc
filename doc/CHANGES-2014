@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3314 2014/09/03 07:12:06 he Exp $
+$NetBSD: CHANGES-2014,v 1.3315 2014/09/03 09:56:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4275,3 +4275,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/p5-Net-INET6Glue to 0.6.2 [kim 2014-09-03]
 	Updated lang/racket to 6.0.1nb1 [jperkin 2014-09-03]
 	Added net/py-junos-eznc version 1.0.1 [he 2014-09-03]
+	Updated devel/py-mercurial to 3.1.1 [wiz 2014-09-03]
