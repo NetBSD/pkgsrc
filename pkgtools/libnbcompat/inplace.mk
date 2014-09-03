@@ -1,4 +1,4 @@
-# $NetBSD: inplace.mk,v 1.10 2011/08/20 16:13:05 cheusov Exp $
+# $NetBSD: inplace.mk,v 1.11 2014/09/03 10:03:31 jperkin Exp $
 #
 # This file should not be included directly. Use USE_FEATURES instead.
 #
@@ -47,7 +47,7 @@ libnbcompat-build:
 		CPPFLAGS=${CPPFLAGS:M*:Q}				\
 		${CONFIGURE_ENV:NLIBS=*} ${CONFIG_SHELL}		\
 		${CONFIGURE_SCRIPT} ${NBCOMPAT_CONFIGURE_ARGS} &&	\
-		${SETENV} ${MAKE_ENV} ${MAKE}
+		${SETENV} ${MAKE_ENV} ${MAKE} -j${MAKE_JOBS:U1:Q}
 .if !empty(LIBNBCOMPAT_USE_PIC:M[Yy][Ee][Ss])
 	@${STEP_MSG} "Configuring and building libnbcompat (PIC version)"
 	${RUN} ${_ULIMIT_CMD}						\
@@ -55,5 +55,5 @@ libnbcompat-build:
 		${CONFIGURE_ENV:NLIBS=*} CFLAGS=${CFLAGS:Q}" -fPIC"	\
 		${CONFIG_SHELL}						\
 		${CONFIGURE_SCRIPT} ${NBCOMPAT_CONFIGURE_ARGS} &&	\
-		${SETENV} ${MAKE_ENV} ${MAKE}
+		${SETENV} ${MAKE_ENV} ${MAKE} -j${MAKE_JOBS:U1:Q}
 .endif
