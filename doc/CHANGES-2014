@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3321 2014/09/03 18:30:20 brook Exp $
+$NetBSD: CHANGES-2014,v 1.3322 2014/09/03 18:34:25 brook Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4282,3 +4282,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added math/R-formatR version 1.0 [brook 2014-09-03]
 	Added math/R-highr version 0.3 [brook 2014-09-03]
 	Added math/R-mime version 0.1.2 [brook 2014-09-03]
+	Added math/R-markdown version 0.7.4 [brook 2014-09-03]
