@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1034 2014/09/02 13:48:45 he Exp $
+# $NetBSD: Makefile,v 1.1035 2014/09/03 07:11:05 he Exp $
 #
 
 COMMENT=	Networking tools
@@ -564,6 +564,7 @@ SUBDIR+=	py-gevent
 SUBDIR+=	py-google
 SUBDIR+=	py-hatop
 SUBDIR+=	py-irclib
+SUBDIR+=	py-junos-eznc
 SUBDIR+=	py-kenosis
 SUBDIR+=	py-kombu
 SUBDIR+=	py-libdnet
