@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3323 2014/09/03 18:53:06 brook Exp $
+$NetBSD: CHANGES-2014,v 1.3324 2014/09/03 19:37:54 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4284,3 +4284,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added math/R-mime version 0.1.2 [brook 2014-09-03]
 	Added math/R-markdown version 0.7.4 [brook 2014-09-03]
 	Added math/R-digest version 0.6.4 [brook 2014-09-03]
+	Updated devel/apache-ant to 1.9.4nb1 [tonio 2014-09-03]
