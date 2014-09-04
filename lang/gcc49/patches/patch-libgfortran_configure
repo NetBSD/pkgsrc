@@ -1,0 +1,15 @@
+$NetBSD: patch-libgfortran_configure,v 1.1 2014/09/04 18:43:11 jperkin Exp $
+
+"#pragma weak" shouldn't be used on NetBSD.
+
+--- libgfortran/configure.orig	2014-07-16 10:06:03.000000000 +0000
++++ libgfortran/configure
+@@ -26340,7 +26340,7 @@ $as_echo "#define SUPPORTS_WEAK 1" >>con
+ 
+   fi
+   case "$host" in
+-    *-*-darwin* | *-*-hpux* | *-*-cygwin* | *-*-mingw* )
++    *-*-darwin* | *-*-hpux* | *-*-cygwin* | *-*-mingw* | *-*-netbsd* )
+ 
+ $as_echo "#define GTHREAD_USE_WEAK 0" >>confdefs.h
+ 
