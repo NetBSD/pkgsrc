@@ -1,4 +1,4 @@
-# $NetBSD: check-wrkref.mk,v 1.21 2010/08/24 19:08:29 bad Exp $
+# $NetBSD: check-wrkref.mk,v 1.22 2014/09/04 16:09:33 jperkin Exp $
 #
 # This file checks that the installed files don't contain any strings
 # that point to the directory where the package had been built, to make
@@ -11,6 +11,7 @@
 #	The list of directory names that must not appear in installed files.
 #
 #	* "tools" for the tool wrapper directory
+#	* "wrappers" for the wrappers directory
 #	* "home" for FAKEHOMEDIR
 #	* "wrksrc" for WRKSRC
 #	* "work" for WRKDIR
@@ -51,6 +52,7 @@ _CHECK_WRKREF_FILELIST_CMD?=	${PKG_FILELIST_CMD}
 _CHECK_WRKREF_DIR.no=		# none
 _CHECK_WRKREF_DIR.work=		${WRKDIR}
 _CHECK_WRKREF_DIR.tools=	${TOOLS_DIR}
+_CHECK_WRKREF_DIR.wrappers=	${WRAPPER_DIR}
 _CHECK_WRKREF_DIR.home=		${FAKEHOMEDIR}
 _CHECK_WRKREF_DIR.wrkobjdir=	${WRKOBJDIR}
 _CHECK_WRKREF_DIR.wrksrc=	${WRKSRC}
@@ -64,8 +66,11 @@ _CHECK_WRKREF_DIR.extra=	${CHECK_WRKREF_EXTRA_DIRS}
 _CHECK_WRKREF_DIRS=	# none
 .for d in ${CHECK_WRKREF}
 .  if !defined(_CHECK_WRKREF_DIR.${d})
-PKG_FAIL_REASON+=	"[check-wrkref.mk] Invalid value "${d:Q}" for CHECK_WRKREF."
-PKG_FAIL_REASON+=	"[check-wrkref.mk] Try one of { tools home wrksrc work objwrkdir } instead."
+PKG_FAIL_REASON+=	"[check-wrkref.mk] Invalid value \"${d:Q}\" for CHECK_WRKREF."
+PKG_FAIL_REASON+=	"[check-wrkref.mk] Valid options are:"
+.    for refvar in work tools wrappers home wrkobjdir wrksrc pkgsrc buildlink extra
+PKG_FAIL_REASON+=	"[check-wrkref.mk]	${refvar}"
+.    endfor
 .  else
 _CHECK_WRKREF_DIRS+=	${_CHECK_WRKREF_DIR.${d}}
 .  endif
