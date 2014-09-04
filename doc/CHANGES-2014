@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3339 2014/09/04 19:53:55 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.3340 2014/09/04 21:54:01 markd Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4300,3 +4300,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/libestr version 0.1.9 [fhajny 2014-09-04]
 	Added sysutils/liblogging version 1.0.4 [fhajny 2014-09-04]
 	Added sysutils/liblognorm version 1.0.1 [fhajny 2014-09-04]
+	Updated security/p5-Bytes-Random-Secure to 0.28 [markd 2014-09-04]
