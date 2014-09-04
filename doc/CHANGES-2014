@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3336 2014/09/04 18:49:22 jperkin Exp $
+$NetBSD: CHANGES-2014,v 1.3337 2014/09/04 19:41:54 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4297,3 +4297,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated fonts/koruri-ttf to 20140904 [nonaka 2014-09-04]
 	Added lang/gcc49 version 4.9.1 [jperkin 2014-09-04]
 	Added lang/gcc49-libs version 4.9.1nb1 [jperkin 2014-09-04]
+	Added devel/libestr version 0.1.9 [fhajny 2014-09-04]
