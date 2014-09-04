@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13624 2014/09/03 10:38:32 wiz Exp $
+$NetBSD: TODO,v 1.13625 2014/09/04 08:26:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -637,7 +637,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o goocanvas-2.0.2
 	o gossip-0.31
 	o gourmet-0.13.3
-	o gpgme-1.5.1
 	o gpsdrive-2.11
 	o gramofile-1.6P
 	o gramps-4.1.0
