@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3330 2014/09/04 07:37:59 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3331 2014/09/04 07:56:23 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4291,3 +4291,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated math/p5-Math-Prime-Util to 0.43 [wen 2014-09-04]
 	Updated mail/p5-Email-Sender to 1.300014 [wen 2014-09-04]
 	Updated mail/procmail to 3.22nb4 [wiz 2014-09-04]
+	Updated devel/p5-Test-Manifest to 2.02 [wen 2014-09-04]
