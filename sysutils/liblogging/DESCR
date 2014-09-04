@@ -1,0 +1,3 @@
+Liblogging is an easy to use library for logging. It offers
+an enhanced replacement for the syslog() call, but retains
+its ease of use.
