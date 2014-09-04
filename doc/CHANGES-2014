@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3333 2014/09/04 09:12:26 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3334 2014/09/04 12:48:17 nonaka Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4294,3 +4294,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Test-Manifest to 2.02 [wen 2014-09-04]
 	Updated security/gpgme to 1.5.1 [wiz 2014-09-04]
 	Updated devel/re2c to 0.13.7.5 [wiz 2014-09-04]
+	Updated fonts/koruri-ttf to 20140904 [nonaka 2014-09-04]
