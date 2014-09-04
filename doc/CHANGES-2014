@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3334 2014/09/04 12:48:17 nonaka Exp $
+$NetBSD: CHANGES-2014,v 1.3335 2014/09/04 18:43:43 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4295,3 +4295,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/gpgme to 1.5.1 [wiz 2014-09-04]
 	Updated devel/re2c to 0.13.7.5 [wiz 2014-09-04]
 	Updated fonts/koruri-ttf to 20140904 [nonaka 2014-09-04]
+	Added lang/gcc49 version 4.9.1 [jperkin 2014-09-04]
