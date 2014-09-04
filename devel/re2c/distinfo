@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2013/11/21 11:21:07 obache Exp $
+$NetBSD: distinfo,v 1.11 2014/09/04 09:12:17 wiz Exp $
 
-SHA1 (re2c-0.13.6.tar.gz) = b272048550db56aea2ec1a0a1bce759b90b778fa
-RMD160 (re2c-0.13.6.tar.gz) = ef2bd8329f02e97af7f7e4748ee6a852e81669cd
-Size (re2c-0.13.6.tar.gz) = 844623 bytes
+SHA1 (re2c-0.13.7.5.tar.gz) = 4786a13be61f8249f4f388e60d94bb81db340d5c
+RMD160 (re2c-0.13.7.5.tar.gz) = 4b993640232ebd4f20a35c707f9305557b2f1362
+Size (re2c-0.13.7.5.tar.gz) = 2347921 bytes
