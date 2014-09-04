@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2012/03/12 13:22:17 fhajny Exp $
+$NetBSD: distinfo,v 1.15 2014/09/04 07:37:44 wiz Exp $
 
 SHA1 (procmail-3.22.tar.gz) = cd4e44c15559816453fd60349e5a32289f6f2965
 RMD160 (procmail-3.22.tar.gz) = e609ec94ea9ab3b93629c62b3e29add497806483
@@ -9,8 +9,8 @@ SHA1 (patch-ac) = fe2350e704546c2262d546bb615175dd0591ba8b
 SHA1 (patch-ad) = b35d6d508a15b8e70734ac7ccd58c19db31717ab
 SHA1 (patch-ae) = b5ac027b337c8d9cf9c6096a48ef534315e18250
 SHA1 (patch-af) = 889f937f50561308c644d5a4bd836eccabbb2938
-SHA1 (patch-ag) = 66ae907f1b7ccfa10b5278443a9d9b0277923e61
-SHA1 (patch-ba) = dfe9a74ed4fece98850780bebedd162fd0e5b275
-SHA1 (patch-bb) = 0ba6c7a62ea49e8afc2e443fa84b4de692897af4
-SHA1 (patch-bc) = 3f37d5d4ba427407230aae58e4a08a7c87ccad4e
-SHA1 (patch-bd) = 7fe12e0b626c9c7a045cb4a6ccbed20614d5c8d6
+SHA1 (patch-ag) = 8f2ae1f2e7bdc3c2295148c33183176423802fee
+SHA1 (patch-ba) = 2ebbd43d2773b147ee6410e37ab3696aeda3c07c
+SHA1 (patch-bb) = 5b273bd60d24168794189bb844e39e94bd688ea8
+SHA1 (patch-bc) = 7344d3c2fce1bcd3276d8e5014bf9537c6dece5c
+SHA1 (patch-bd) = fb6f2fb4b5fe1ea01682a319b6655b023e5c5fd0
