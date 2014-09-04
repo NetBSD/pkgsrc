@@ -1,0 +1,7 @@
+The GNU Compiler Collection (GCC) includes front ends for C, C++, Objective-C,
+Fortran, and Go, as well as libraries for these languages (libstdc++,
+libgfortran, ...).
+
+This packages provides GCC support libraries in a specific location and allows
+packages to depend on just the libraries rather than having to pull in the full
+GCC package.
