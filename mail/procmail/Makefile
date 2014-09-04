@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2012/03/12 13:22:16 fhajny Exp $
-#
+# $NetBSD: Makefile,v 1.48 2014/09/04 07:37:44 wiz Exp $
 
 DISTNAME=	procmail-3.22
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.procmail.org/pub/procmail/
 
@@ -11,8 +10,6 @@ HOMEPAGE=	http://www.procmail.org/
 COMMENT=	Local mail delivery agent
 LICENSE=	artistic OR gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	destdir
-
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 MAKE_JOBS_SAFE=	no
@@ -20,6 +17,8 @@ MAKE_JOBS_SAFE=	no
 MAKE_ENV+=	SHELL=${SH:Q} CHMOD=${CHMOD:Q}
 INSTALL_TARGET=	install-suid install.man
 UNLIMIT_RESOURCES=	datasize
+
+SPECIAL_PERMS+=	bin/procmail ${SETUID_ROOT_PERMS}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -61,7 +60,6 @@ do-install:
 	for f in procmailex.5 procmailrc.5 procmailsc.5; do		\
 		${INSTALL_MAN} $$f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/$$f; \
 	done
-	DESTDIR=${DESTDIR:Q} ${SH} ${WRKSRC}/suid.sh
 .endif
 
 .include "../../mk/bsd.pkg.mk"
