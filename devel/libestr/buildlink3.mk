@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2014/09/04 19:41:34 fhajny Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2014/09/04 19:43:10 fhajny Exp $
 
 BUILDLINK_TREE+=	libestr
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libestr
 LIBESTR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libestr+=	libestr>=0.1.0
-BUILDLINK_PKGSRCDIR.libestr?=	../../sysutils/libestr
+BUILDLINK_PKGSRCDIR.libestr?=	../../devel/libestr
 
 .endif # LIBESTR_BUILDLINK3_MK
 
