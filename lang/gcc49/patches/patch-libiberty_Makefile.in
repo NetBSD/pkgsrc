@@ -1,0 +1,16 @@
+$NetBSD: patch-libiberty_Makefile.in,v 1.1 2014/09/04 18:43:11 jperkin Exp $
+
+Ensure we look for includes in our include directory first, otherwise
+we may pick up an incompatible ansidecl.h, e.g. from binutils.
+
+--- libiberty/Makefile.in.orig	2013-06-01 00:20:49.000000000 +0000
++++ libiberty/Makefile.in
+@@ -112,7 +112,7 @@ installcheck: installcheck-subdir
+ 
+ INCDIR=$(srcdir)/$(MULTISRCTOP)../include
+ 
+-COMPILE.c = $(CC) -c @DEFS@ $(CFLAGS) $(CPPFLAGS) -I. -I$(INCDIR) $(HDEFINES) @ac_libiberty_warn_cflags@
++COMPILE.c = $(CC) -c @DEFS@ -I. -I$(INCDIR) $(CFLAGS) $(CPPFLAGS) $(HDEFINES) @ac_libiberty_warn_cflags@
+ 
+ # Just to make sure we don't use a built-in rule with VPATH
+ .c.$(objext):
