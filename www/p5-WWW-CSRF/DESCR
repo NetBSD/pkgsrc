@@ -1,0 +1,14 @@
+This module generates tokens to help protect against a website attack
+known as Cross-Site Request Forgery (CSRF, also known as XSRF). CSRF
+is an attack where an attacker fools a browser into make a request to
+a web server for which that browser will automatically include some
+form of credentials (cookies, cached HTTP Basic authentication, etc.),
+thus abusing the web server's trust in the user for malicious use.
+
+The most common CSRF mitigation is sending a special, hard-to-guess
+token with every request, and then require that any request that is
+not idempotent (i.e., has side effects) must be accompanied with such
+a token. This mitigation depends critically on the fact that while an
+attacker can easily make the victim's browser make a request, the
+browser security model (same-origin policy, or SOP for short) prevents
+third-party sites from reading the results of that request.
