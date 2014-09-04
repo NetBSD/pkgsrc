@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3340 2014/09/04 21:54:01 markd Exp $
+$NetBSD: CHANGES-2014,v 1.3341 2014/09/04 22:01:44 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4301,3 +4301,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added sysutils/liblogging version 1.0.4 [fhajny 2014-09-04]
 	Added sysutils/liblognorm version 1.0.1 [fhajny 2014-09-04]
 	Updated security/p5-Bytes-Random-Secure to 0.28 [markd 2014-09-04]
+	Updated textproc/p5-ack to 2.14 [schmonz 2014-09-04]
