@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.35 2014/09/01 21:11:17 wiz Exp $
+# $NetBSD: Makefile.common,v 1.36 2014/09/04 09:55:29 jperkin Exp $
 # used by www/webkit-gtk/Makefile
 
 DISTNAME=	webkitgtk-2.4.5
@@ -15,8 +15,9 @@ PATCHDIR=		${.CURDIR}/../../www/webkit-gtk/patches
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	automake bison gmake perl:build pkg-config msgfmt
-# GCC >= 4.7 or Clang >= 3.3
-GCC_REQD=4.8
+
+# GCC >= 4.8 (for std::this_thread::yield() at least) or Clang >= 3.3
+GCC_REQD+=	4.8
 
 PKGCONFIG_OVERRIDE=	Source/WebKit/gtk/webkit.pc.in
 
