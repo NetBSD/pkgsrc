@@ -1,0 +1,85 @@
+$NetBSD: patch-gcc_config.gcc,v 1.1 2014/09/04 18:43:11 jperkin Exp $
+
+* Add t-crtstuff to tmake_file on NetBSD.
+* Add netbsd-stdint.h to tm_file on NetBSD.
+* wrap the system stdint.h on NetBSD.
+* Add DragonFly support.
+
+--- gcc/config.gcc.orig	2014-06-16 08:15:35.000000000 +0000
++++ gcc/config.gcc
+@@ -687,6 +687,26 @@ case ${target} in
+   # need_64bit_hwint=yes # system compiler has this for all arch!
+   use_gcc_stdint=wrap
+   ;;
++*-*-dragonfly*)
++  gas=yes
++  gnu_ld=yes
++  tmake_file="t-slibgcc"
++  case ${enable_threads} in
++    "" | yes | posix)
++      thread_file='posix'
++      ;;
++    no | gnat | single)
++      # Let these non-posix thread selections fall through if requested
++      ;;
++    *)
++      echo 'Unknown thread configuration for DragonFly BSD'
++      exit 1
++      ;;
++  esac
++  extra_options="$extra_options rpath.opt dragonfly.opt"
++  default_use_cxa_atexit=yes
++  use_gcc_stdint=wrap
++  ;;
+ *-*-linux* | frv-*-*linux* | *-*-kfreebsd*-gnu | *-*-knetbsd*-gnu | *-*-gnu* | *-*-kopensolaris*-gnu)
+   extra_options="$extra_options gnu-user.opt"
+   gas=yes
+@@ -743,6 +763,7 @@ case ${target} in
+   target_has_targetcm=yes
+   ;;
+ *-*-netbsd*)
++  use_gcc_stdint=wrap
+   tmake_file="t-slibgcc"
+   gas=yes
+   gnu_ld=yes
+@@ -1352,6 +1373,14 @@ x86_64-*-rdos*)
+     tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h newlib-stdint.h i386/i386elf.h i386/x86-64.h i386/rdos.h i386/rdos64.h"
+     tmake_file="i386/t-i386elf t-svr4"
+     ;;
++i[34567]86-*-dragonfly*)
++	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h dragonfly.h dragonfly-stdint.h i386/dragonfly.h"
++	tmake_file="${tmake_file} i386/t-crtstuff"
++	;;
++x86_64-*-dragonfly*)
++	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h dragonfly.h dragonfly-stdint.h i386/x86-64.h i386/dragonfly.h"
++	tmake_file="${tmake_file} i386/t-crtstuff"
++	;;
+ i[34567]86-*-freebsd*)
+ 	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h ${fbsd_tm_file} i386/freebsd.h"
+ 	;;
+@@ -1359,12 +1388,14 @@ x86_64-*-freebsd*)
+ 	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h ${fbsd_tm_file} i386/x86-64.h i386/freebsd.h i386/freebsd64.h"
+ 	;;
+ i[34567]86-*-netbsdelf*)
+-	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h netbsd.h netbsd-elf.h i386/netbsd-elf.h"
++	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h netbsd.h netbsd-elf.h i386/netbsd-elf.h netbsd-stdint.h"
+ 	extra_options="${extra_options} netbsd.opt netbsd-elf.opt"
++	tmake_file="${tmake_file} i386/t-crtstuff"
+ 	;;
+ x86_64-*-netbsd*)
+-	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h netbsd.h netbsd-elf.h i386/x86-64.h i386/netbsd64.h"
++	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h netbsd.h netbsd-elf.h i386/x86-64.h i386/netbsd64.h netbsd-stdint.h"
+ 	extra_options="${extra_options} netbsd.opt netbsd-elf.opt"
++	tmake_file="${tmake_file} i386/t-crtstuff"
+ 	;;
+ i[34567]86-*-openbsd2.*|i[34567]86-*openbsd3.[0123])
+ 	tm_file="i386/i386.h i386/unix.h i386/bsd.h i386/gas.h i386/gstabs.h openbsd-oldgas.h openbsd.h i386/openbsd.h"
+@@ -4108,6 +4139,8 @@ case ${target} in
+ 		;;
+ 	i[34567]86-*-mingw* | x86_64-*-mingw*)
+ 		;;
++	i[34567]86-*-dragonfly* | x86_64-*-dragonfly*)
++		;;
+ 	i[34567]86-*-freebsd* | x86_64-*-freebsd*)
+ 		;;
+ 	ia64*-*-linux*)
