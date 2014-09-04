@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3327 2014/09/04 06:55:47 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3328 2014/09/04 07:10:48 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4288,3 +4288,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/hs-void version 0.6.1 [szptvlfn 2014-09-03]
 	Added math/R-knitr version 1.6 [brook 2014-09-03]
 	Updated www/p5-Mojolicious to 5.37 [wen 2014-09-04]
+	Updated math/p5-Math-Prime-Util to 0.43 [wen 2014-09-04]
