@@ -1,4 +1,4 @@
-$NetBSD: patch-src_misc_newinstall.cxx,v 1.3 2013/09/13 06:35:55 mef Exp $
+$NetBSD: patch-src_misc_newinstall.cxx,v 1.4 2014/09/05 07:29:28 mef Exp $
 
 Brag command shows OS:, but it is fixed, see SUBST in Makefile
 

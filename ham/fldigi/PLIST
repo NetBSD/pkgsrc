@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/03/14 14:39:22 mef Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/09/05 07:29:28 mef Exp $
 bin/flarq
 bin/fldigi
 bin/fldigi-shell
