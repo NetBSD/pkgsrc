@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3357 2014/09/05 11:52:42 adam Exp $
+$NetBSD: CHANGES-2014,v 1.3358 2014/09/05 12:10:53 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4321,3 +4321,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated inputmethod/ibus-table to 1.8.10 [obache 2014-09-05]
 	Updated graphics/libsixel to 1.0.3 [obache 2014-09-05]
 	Updated net/nmap to 6.47 [adam 2014-09-05]
+	Updated devel/ruby-gettext to 3.1.4nb1 [obache 2014-09-05]
