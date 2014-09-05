@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2012/07/29 21:44:13 gsutre Exp $
+# $NetBSD: options.mk,v 1.2 2014/09/05 12:14:24 gsutre Exp $
 #
 
 #
@@ -31,7 +31,7 @@ CONFIGURE_ARGS+=	--disable-mm-debug
 CONFIGURE_ARGS+=	--enable-grub-mkfont
 PLIST.freetype=		yes
 DISTFILES+=		${UNIFONT}.gz
-BUILD_DEPENDS+=		dejavu-ttf>=2.30:../../fonts/dejavu-ttf
+BUILD_DEPENDS+=		dejavu-ttf>=2.34nb1:../../fonts/dejavu-ttf
 do-move-unifont:
 	${MV} ${WRKDIR}/${UNIFONT} ${WRKSRC}/unifont.pcf
 .include "../../graphics/freetype2/buildlink3.mk"
