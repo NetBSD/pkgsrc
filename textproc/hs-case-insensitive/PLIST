@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2014/09/05 21:36:49 szptvlfn Exp $
+lib/case-insensitive-${PKGVERSION}/${HASKELL_VERSION}/Data/CaseInsensitive.hi
+lib/case-insensitive-${PKGVERSION}/${HASKELL_VERSION}/Data/CaseInsensitive/Internal.hi
+lib/case-insensitive-${PKGVERSION}/${HASKELL_VERSION}/Data/CaseInsensitive/Unsafe.hi
+lib/case-insensitive-${PKGVERSION}/${HASKELL_VERSION}/HScase-insensitive-${PKGVERSION}.o
+lib/case-insensitive-${PKGVERSION}/${HASKELL_VERSION}/libHScase-insensitive-${PKGVERSION}.a
+lib/case-insensitive-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/case-insensitive-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/case-insensitive-${PKGVERSION}/html/Data-CaseInsensitive-Unsafe.html
+${PLIST.doc}share/doc/case-insensitive-${PKGVERSION}/html/Data-CaseInsensitive.html
+${PLIST.doc}share/doc/case-insensitive-${PKGVERSION}/html/case-insensitive.haddock
+${PLIST.doc}share/doc/case-insensitive-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/case-insensitive-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/case-insensitive-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/case-insensitive-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/case-insensitive-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/case-insensitive-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/case-insensitive-${PKGVERSION}/html/mini_Data-CaseInsensitive-Unsafe.html
+${PLIST.doc}share/doc/case-insensitive-${PKGVERSION}/html/mini_Data-CaseInsensitive.html
+${PLIST.doc}share/doc/case-insensitive-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/case-insensitive-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/case-insensitive-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/case-insensitive-${PKGVERSION}/html/synopsis.png
