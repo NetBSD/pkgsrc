@@ -1,4 +1,4 @@
-$NetBSD: patch-platform__helper.py,v 1.1 2014/07/19 09:01:23 ryoon Exp $
+$NetBSD: patch-platform__helper.py,v 1.1 2014/09/05 14:51:39 joerg Exp $
 
 * Add NetBSD support
 
