@@ -1,0 +1,2 @@
+rsyslog module with support to receive syslog messages from the
+network protected via Kerberos 5 encryption and authentication.
