@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.510 2014/08/26 10:44:45 wiz Exp $
+# $NetBSD: Makefile,v 1.511 2014/09/05 10:17:04 fhajny Exp $
 #
 
 COMMENT=	Audio tools
@@ -362,6 +362,7 @@ SUBDIR+=	pavumeter
 SUBDIR+=	pd
 SUBDIR+=	picard
 SUBDIR+=	playitslowly
+SUBDIR+=	pocketsphinx
 SUBDIR+=	portaudio
 SUBDIR+=	portaudio-devel
 SUBDIR+=	pulseaudio
@@ -418,6 +419,9 @@ SUBDIR+=	soundtouch
 SUBDIR+=	sox
 SUBDIR+=	spectro-edit
 SUBDIR+=	speex
+SUBDIR+=	sphinx3
+SUBDIR+=	sphinxbase
+SUBDIR+=	sphinxtrain
 SUBDIR+=	spiralloops
 SUBDIR+=	spiralsynth
 SUBDIR+=	splay
