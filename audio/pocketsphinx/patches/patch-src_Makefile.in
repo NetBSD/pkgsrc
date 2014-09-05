@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2014/09/05 10:13:20 fhajny Exp $
+
+Ignore gstreamer plugin.
+--- src/Makefile.in.orig	2012-12-12 18:38:31.000000000 +0000
++++ src/Makefile.in
+@@ -217,8 +217,7 @@ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ SUBDIRS = libpocketsphinx \
+-	programs \
+-	gst-plugin
++	programs
+ 
+ all: all-recursive
+ 
