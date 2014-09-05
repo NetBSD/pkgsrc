@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3345 2014/09/05 07:17:29 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.3346 2014/09/05 07:17:40 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4306,3 +4306,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added sysutils/rsyslog version 8.4.0 [fhajny 2014-09-05]
 	Added sysutils/rsyslog-dbi version 8.4.0 [fhajny 2014-09-05]
 	Added sysutils/rsyslog-gnutls version 8.4.0 [fhajny 2014-09-05]
+	Added sysutils/rsyslog-gssapi version 8.4.0 [fhajny 2014-09-05]
