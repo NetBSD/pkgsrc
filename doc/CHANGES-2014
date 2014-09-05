@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3343 2014/09/05 07:17:07 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.3344 2014/09/05 07:17:18 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4304,3 +4304,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/p5-ack to 2.14 [schmonz 2014-09-04]
 	Added www/p5-WWW-CSRF version 1.00 [markd 2014-09-04]
 	Added sysutils/rsyslog version 8.4.0 [fhajny 2014-09-05]
+	Added sysutils/rsyslog-dbi version 8.4.0 [fhajny 2014-09-05]
