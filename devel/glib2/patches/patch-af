@@ -1,9 +1,9 @@
-$NetBSD: patch-af,v 1.15 2013/12/08 13:08:59 prlw1 Exp $
+$NetBSD: patch-af,v 1.16 2014/09/05 20:49:55 prlw1 Exp $
 
---- glib/libcharset/Makefile.in.orig	2013-10-15 19:14:52.000000000 +0000
+--- glib/libcharset/Makefile.in.orig	2014-03-24 18:54:29.000000000 +0000
 +++ glib/libcharset/Makefile.in
-@@ -1549,18 +1549,6 @@ check-local: test-nonrecursive
- @ENABLE_INSTALLED_TESTS_TRUE@	echo 'Exec=$(installed_testdir)/$<' >> $@.tmp; \
+@@ -1496,18 +1496,6 @@ check-local: test-nonrecursive
+ @ENABLE_INSTALLED_TESTS_TRUE@	echo 'Exec=$(installed_testdir)/$(notdir $<)' >> $@.tmp; \
  @ENABLE_INSTALLED_TESTS_TRUE@	mv $@.tmp $@)
  install-exec-local: all-local
 -	$(mkinstalldirs) $(DESTDIR)$(libdir)

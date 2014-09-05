@@ -1,20 +1,19 @@
-$NetBSD: patch-ba,v 1.13 2013/12/08 13:08:59 prlw1 Exp $
+$NetBSD: patch-ba,v 1.14 2014/09/05 20:49:55 prlw1 Exp $
 
-http://bugzilla.gnome.org/show_bug.cgi?id=583330
+https://bugzilla.gnome.org/show_bug.cgi?id=583330
 
---- gio/gunixmounts.c.orig	2013-08-07 14:34:32.000000000 +0000
+--- gio/gunixmounts.c.orig	2014-02-12 20:08:36.000000000 +0000
 +++ gio/gunixmounts.c
-@@ -155,6 +155,9 @@ struct _GUnixMountMonitor {
+@@ -150,6 +150,8 @@ struct _GUnixMountMonitor {
    GFileMonitor *fstab_monitor;
    GFileMonitor *mtab_monitor;
  
-+  guint mount_poller_source;
 +  GList *mount_poller_mounts;
 +
    GSource *proc_mounts_watch_source;
  };
  
-@@ -167,6 +170,8 @@ static GUnixMountMonitor *the_mount_moni
+@@ -162,6 +164,8 @@ static GUnixMountMonitor *the_mount_moni
  static GList *_g_get_unix_mounts (void);
  static GList *_g_get_unix_mount_points (void);
  
@@ -23,7 +22,7 @@ http://bugzilla.gnome.org/show_bug.cgi?id=583330
  G_DEFINE_TYPE (GUnixMountMonitor, g_unix_mount_monitor, G_TYPE_OBJECT);
  
  #define MOUNT_POLL_INTERVAL 4000
-@@ -193,6 +198,7 @@ G_DEFINE_TYPE (GUnixMountMonitor, g_unix
+@@ -188,6 +192,7 @@ G_DEFINE_TYPE (GUnixMountMonitor, g_unix
  #endif
  
  #if (defined(HAVE_GETVFSSTAT) || defined(HAVE_GETFSSTAT)) && defined(HAVE_FSTAB_H) && defined(HAVE_SYS_MOUNT_H)
@@ -31,38 +30,25 @@ http://bugzilla.gnome.org/show_bug.cgi?id=583330
  #include <sys/ucred.h>
  #include <sys/mount.h>
  #include <fstab.h>
-@@ -243,22 +249,30 @@ g_unix_is_mount_path_system_internal (co
-     "/",              /* we already have "Filesystem root" in Nautilus */ 
-     "/bin",
-     "/boot",
-+    "/compat/linux/proc",
-+    "/compat/linux/sys",
-     "/dev",
-     "/etc",
-     "/home",
-     "/lib",
-     "/lib64",
-+    "/libexec",
-     "/live/cow",
-     "/live/image",
-     "/media",
-     "/mnt",
-     "/opt",
-+    "/rescue",
-     "/root",
-     "/sbin",
-     "/srv",
-     "/tmp",
-     "/usr",
-+    "/usr/X11R6",
-     "/usr/local",
-+    "/usr/obj",
-+    "/usr/ports",
-+    "/usr/src",
-     "/var",
-     "/var/crash",
-     "/var/local",
-@@ -602,9 +616,9 @@ get_mtab_monitor_file (void)
+@@ -353,7 +358,7 @@ get_mtab_read_file (void)
+ # else
+   return _PATH_MOUNTED;
+ # endif
+-#else	
++#else
+   return "/etc/mtab";
+ #endif
+ }
+@@ -367,7 +372,7 @@ get_mtab_monitor_file (void)
+ # else
+   return _PATH_MOUNTED;
+ # endif
+-#else	
++#else
+   return "/etc/mtab";
+ #endif
+ }
+@@ -608,9 +613,9 @@ get_mtab_monitor_file (void)
  static GList *
  _g_get_unix_mounts (void)
  {
@@ -74,7 +60,7 @@ http://bugzilla.gnome.org/show_bug.cgi?id=583330
    struct statfs *mntent = NULL;
  #else
    #error statfs juggling failed
-@@ -615,9 +629,9 @@ _g_get_unix_mounts (void)
+@@ -621,9 +626,9 @@ _g_get_unix_mounts (void)
    GList *return_list;
    
    /* Pass NOWAIT to avoid blocking trying to update NFS mounts. */
@@ -86,7 +72,7 @@ http://bugzilla.gnome.org/show_bug.cgi?id=583330
    num_mounts = getfsstat (NULL, 0, MNT_NOWAIT);
  #endif
    if (num_mounts == -1)
-@@ -625,9 +639,9 @@ _g_get_unix_mounts (void)
+@@ -631,9 +636,9 @@ _g_get_unix_mounts (void)
  
    bufsize = num_mounts * sizeof (*mntent);
    mntent = g_malloc (bufsize);
@@ -98,7 +84,7 @@ http://bugzilla.gnome.org/show_bug.cgi?id=583330
    num_mounts = getfsstat (mntent, bufsize, MNT_NOWAIT);
  #endif
    if (num_mounts == -1)
-@@ -642,10 +656,13 @@ _g_get_unix_mounts (void)
+@@ -648,10 +653,13 @@ _g_get_unix_mounts (void)
        mount_entry->mount_path = g_strdup (mntent[i].f_mntonname);
        mount_entry->device_path = g_strdup (mntent[i].f_mntfromname);
        mount_entry->filesystem_type = g_strdup (mntent[i].f_fstypename);
@@ -114,32 +100,50 @@ http://bugzilla.gnome.org/show_bug.cgi?id=583330
  #endif
          mount_entry->is_read_only = TRUE;
  
-@@ -1126,6 +1145,10 @@ get_mounts_timestamp (void)
+@@ -1132,7 +1140,11 @@ get_mounts_timestamp (void)
+   if (monitor_file)
+     {
        if (stat (monitor_file, &buf) == 0)
- 	return (guint64)buf.st_mtime;
-     }
+-	return (guint64)buf.st_mtime;
++        return (guint64)buf.st_mtime;
++    }
 +  else
 +    {
 +      return mount_poller_time;
-+    }
+     }
    return 0;
  }
+@@ -1147,7 +1159,7 @@ get_mount_points_timestamp (void)
+   if (monitor_file)
+     {
+       if (stat (monitor_file, &buf) == 0)
+-	return (guint64)buf.st_mtime;
++        return (guint64)buf.st_mtime;
+     }
+   return 0;
+ }
+@@ -1199,9 +1211,9 @@ g_unix_mount_at (const char *mount_path,
+       mount_entry = l->data;
  
-@@ -1271,6 +1294,13 @@ g_unix_mount_monitor_finalize (GObject *
+       if (!found && strcmp (mount_path, mount_entry->mount_path) == 0)
+-	found = mount_entry;
++        found = mount_entry;
+       else
+-	g_unix_mount_free (mount_entry);
++        g_unix_mount_free (mount_entry);
+     }
+   g_list_free (mounts);
+ 
+@@ -1279,6 +1291,8 @@ g_unix_mount_monitor_finalize (GObject *
        g_object_unref (monitor->mtab_monitor);
      }
  
-+  if (monitor->mount_poller_source > 0)
-+    {
-+      g_source_remove (monitor->mount_poller_source);
-+      g_list_foreach (monitor->mount_poller_mounts, (GFunc)g_unix_mount_free, NULL);
-+      g_list_free (monitor->mount_poller_mounts);
-+    }
++  g_list_free_full (monitor->mount_poller_mounts, (GDestroyNotify)g_unix_mount_free);
 +
    the_mount_monitor = NULL;
  
    G_OBJECT_CLASS (g_unix_mount_monitor_parent_class)->finalize (object);
-@@ -1362,6 +1392,51 @@ proc_mounts_changed (GIOChannel   *chann
+@@ -1370,6 +1384,43 @@ proc_mounts_changed (GIOChannel   *chann
    return TRUE;
  }
  
@@ -147,41 +151,33 @@ http://bugzilla.gnome.org/show_bug.cgi?id=583330
 +mount_change_poller (gpointer user_data)
 +{
 +  GUnixMountMonitor *mount_monitor;
-+  GList *current_mounts;
++  GList *current_mounts, *new_it, *old_it;
 +  gboolean has_changed = FALSE;
 +
 +  mount_monitor = user_data;
 +  current_mounts = _g_get_unix_mounts ();
 +
-+  if (g_list_length (current_mounts) != g_list_length (mount_monitor->mount_poller_mounts))
++  for ( new_it = current_mounts, old_it = mount_monitor->mount_poller_mounts;
++        new_it != NULL && old_it != NULL;
++        new_it = g_list_next (new_it), old_it = g_list_next (old_it) )
 +    {
-+      g_list_foreach (mount_monitor->mount_poller_mounts, (GFunc)g_unix_mount_free, NULL);
-+      has_changed = TRUE;
-+    }
-+  else
-+    {
-+      int i;
-+
-+      for (i = 0; i < g_list_length (current_mounts); i++)
++      if (g_unix_mount_compare (new_it->data, old_it->data) != 0)
 +        {
-+          GUnixMountEntry *m1;
-+         GUnixMountEntry *m2;
-+
-+         m1 = (GUnixMountEntry *)g_list_nth_data (current_mounts, i);
-+         m2 = (GUnixMountEntry *)g_list_nth_data (mount_monitor->mount_poller_mounts, i);
-+          if (! has_changed && g_unix_mount_compare (m1, m2) != 0)
-+            has_changed = TRUE;
-+
-+         g_unix_mount_free (m2);
-+       }
++          has_changed = TRUE;
++          break;
++        }
 +    }
++  if (!(new_it == NULL && old_it == NULL))
++    has_changed = TRUE;
 +
-+  g_list_free (mount_monitor->mount_poller_mounts);
++  g_list_free_full (mount_monitor->mount_poller_mounts,
++                    (GDestroyNotify)g_unix_mount_free);
++
 +  mount_monitor->mount_poller_mounts = current_mounts;
 +
 +  if (has_changed)
 +    {
-+      mount_poller_time = (guint64)time (NULL);
++      mount_poller_time = (guint64)g_get_monotonic_time ();
 +      g_signal_emit (mount_monitor, signals[MOUNTS_CHANGED], 0);
 +    }
 +
@@ -191,15 +187,21 @@ http://bugzilla.gnome.org/show_bug.cgi?id=583330
  static void
  g_unix_mount_monitor_init (GUnixMountMonitor *monitor)
  {
-@@ -1416,6 +1491,12 @@ g_unix_mount_monitor_init (GUnixMountMon
+@@ -1424,6 +1475,18 @@ g_unix_mount_monitor_init (GUnixMountMon
            g_signal_connect (monitor->mtab_monitor, "changed", (GCallback)mtab_file_changed, monitor);
          }
      }
 +  else
 +    {
++      monitor->proc_mounts_watch_source = g_timeout_source_new_seconds (3);
 +      monitor->mount_poller_mounts = _g_get_unix_mounts ();
-+      mount_poller_time = (guint64)time (NULL);
-+      monitor->mount_poller_source = g_timeout_add_seconds (3, (GSourceFunc)mount_change_poller, monitor);
++      mount_poller_time = (guint64)g_get_monotonic_time ();
++      g_source_set_callback (monitor->proc_mounts_watch_source,
++                             (GSourceFunc)mount_change_poller,
++                             monitor, NULL);
++      g_source_attach (monitor->proc_mounts_watch_source,
++                       g_main_context_get_thread_default ());
++      g_source_unref (monitor->proc_mounts_watch_source);
 +    }
  }
  

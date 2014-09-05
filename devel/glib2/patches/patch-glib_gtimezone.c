@@ -1,6 +1,6 @@
-$NetBSD: patch-glib_gtimezone.c,v 1.1 2014/05/26 22:29:23 wiz Exp $
+$NetBSD: patch-glib_gtimezone.c,v 1.2 2014/09/05 20:49:55 prlw1 Exp $
 
-Bug 730332 - glib uses wrong timezone transition with zoneinfo 2014c and up
+Bug 730332 - glib uses wrong timezone transition with zoneinfo 2014c
 
 Patch from John Ralls.
 
