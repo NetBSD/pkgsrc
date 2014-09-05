@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2014/09/05 07:15:41 fhajny Exp $
+bin/rscryutil
+lib/rsyslog/lmcry_gcry.la
+man/man1/rscryutil.1

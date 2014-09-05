@@ -1,0 +1,1 @@
+rsyslog module for sending syslog messages into RabbitMQ server.
