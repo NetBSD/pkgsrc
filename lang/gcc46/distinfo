@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2014/05/15 12:04:41 pho Exp $
+$NetBSD: distinfo,v 1.17 2014/09/05 09:32:31 pho Exp $
 
 SHA1 (gcc-4.6.4.tar.bz2) = 63933a8a5cf725626585dbba993c8b0f6db1335d
 RMD160 (gcc-4.6.4.tar.bz2) = 6a58b053812cf75622bc4579e020cd9471f46916
@@ -23,7 +23,7 @@ SHA1 (patch-boehm-gc_os__dep.c) = d50619167d76eec4ec6b8fb8e9a9ec65d1e8b69c
 SHA1 (patch-boehm-gc_pthread__support.c) = 1028b0e8604e0477dd80ec20c04ffc00278237a9
 SHA1 (patch-boehm-gc_tests_test.c) = f4f2c7a701ef166004746e5f819f7e04c4176b24
 SHA1 (patch-boehm-gc_threadlibs.c) = 62cabc51234e1ce5c60e70bef9fc4d8f92b9739d
-SHA1 (patch-gcc_common.opt) = 52cbab619bbf7df69a902b066a1d0626193f49b0
+SHA1 (patch-gcc_common.opt) = 561965695238afd4c41b75f20d84114adb4dd194
 SHA1 (patch-gcc_config.host) = 5be619aad33ee0ac05d8fb64879be5e530914122
 SHA1 (patch-gcc_config_arm_elf.h) = 28c67bb698ebe9a3aa45c4cff29f028c82cc7606
 SHA1 (patch-gcc_config_arm_t-netbsd) = a1682f4f8dc7e393446f19f615737ddfc98fcb7f
