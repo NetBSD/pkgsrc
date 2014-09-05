@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.614 2014/08/30 11:04:54 wiedi Exp $
+# $NetBSD: Makefile,v 1.615 2014/09/05 07:16:12 fhajny Exp $
 #
 
 COMMENT=	System utilities
@@ -280,6 +280,8 @@ SUBDIR+=	libgtop
 SUBDIR+=	libirman
 SUBDIR+=	libisoburn
 SUBDIR+=	libisofs
+SUBDIR+=	liblogging
+SUBDIR+=	liblognorm
 SUBDIR+=	libnotify
 SUBDIR+=	libol
 SUBDIR+=	liboobs
@@ -408,6 +410,15 @@ SUBDIR+=	rfstool
 SUBDIR+=	roller
 SUBDIR+=	rox
 SUBDIR+=	rsnapshot
+SUBDIR+=	rsyslog
+SUBDIR+=	rsyslog-dbi
+SUBDIR+=	rsyslog-gnutls
+SUBDIR+=	rsyslog-gssapi
+SUBDIR+=	rsyslog-libgcrypt
+SUBDIR+=	rsyslog-mysql
+SUBDIR+=	rsyslog-pgsql
+SUBDIR+=	rsyslog-rabbitmq
+SUBDIR+=	rsyslog-snmp
 SUBDIR+=	rtty
 SUBDIR+=	ruby-activesambaldap
 SUBDIR+=	ruby-chef
