@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/07/19 09:01:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.1 2014/09/05 14:51:39 joerg Exp $
 
 NINJAVER=	1.5.1
-DISTNAME=	ninja-${NINJAVER}
+DISTNAME=	ninja-build-${NINJAVER}
 CATEGORIES=	devel
 MASTER_SITES=	-https://github.com/martine/ninja/archive/v${NINJAVER}.tar.gz
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/07/19 09:01:23 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.1 2014/09/05 14:51:39 joerg Exp $
 bin/ninja
 share/doc/ninja/manual.asciidoc
 share/ninja/bash-completion

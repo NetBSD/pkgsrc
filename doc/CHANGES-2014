@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3358 2014/09/05 12:10:53 obache Exp $
+$NetBSD: CHANGES-2014,v 1.3359 2014/09/05 14:51:39 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4322,3 +4322,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/libsixel to 1.0.3 [obache 2014-09-05]
 	Updated net/nmap to 6.47 [adam 2014-09-05]
 	Updated devel/ruby-gettext to 3.1.4nb1 [obache 2014-09-05]
+	Removed devel/ninja [joerg 2014-09-05]
+	Added devel/ninja-build [joerg 2014-09-05]
