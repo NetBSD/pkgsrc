@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2014/05/09 07:36:59 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2014/09/05 22:19:30 prlw1 Exp $
 
-DISTNAME=	gobject-introspection-1.38.0
-PKGREVISION=	2
+DISTNAME=	gobject-introspection-1.40.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gobject-introspection/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -13,7 +12,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.38.0
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.40.0 (Bug #728079)
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
