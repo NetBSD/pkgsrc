@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2014/09/05 10:13:20 fhajny Exp $
+
+SHA1 (sphinx3-0.8.tar.gz) = 631220266c7619c411659d1a1a571c3f868b6994
+RMD160 (sphinx3-0.8.tar.gz) = 63696e35838f07a6b6e2490d48ad59bd24037b83
+Size (sphinx3-0.8.tar.gz) = 25226326 bytes
+SHA1 (patch-src_libs3decoder_libcfg_s3__cfg__convert.c) = de4a35285d4c8ab40838f71c77a290f47e7635a8
+SHA1 (patch-src_libs3decoder_libsearch_fsg__history.c) = 51afaaff40c2970fc0dc649569baaafde1cc72de
+SHA1 (patch-src_libs3decoder_libsearch_vithist.c) = 6fecd5870464796b8c114eafe4121b15cb9a3c77

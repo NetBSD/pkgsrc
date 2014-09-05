@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2014/09/05 10:13:20 fhajny Exp $
+
+SHA1 (pocketsphinx-0.8.tar.gz) = d9efdd0baddd2e47c2ba559caaca62ffa0c0eede
+RMD160 (pocketsphinx-0.8.tar.gz) = 825544ec117eda6118ceadc5c04f3a41485aa008
+Size (pocketsphinx-0.8.tar.gz) = 23781837 bytes
+SHA1 (patch-src_Makefile.in) = 43b75bb5cf8f59e2bd60fb9ab945ec196e475ecf
