@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2014/08/31 08:09:50 obache Exp $
+# $NetBSD: Makefile,v 1.25 2014/09/05 12:10:43 obache Exp $
 
 DISTNAME=	gettext-3.1.4
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
