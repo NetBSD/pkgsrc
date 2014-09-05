@@ -1,0 +1,2 @@
+rsyslog module for log file encryption using libgcrypt and
+a rsgtutil utility to manage the files.
