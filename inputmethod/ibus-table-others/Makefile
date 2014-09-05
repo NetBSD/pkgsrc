@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2014/08/24 06:59:54 obache Exp $
+# $NetBSD: Makefile,v 1.6 2014/09/05 11:38:58 obache Exp $
 #
 
-DISTNAME=	ibus-table-others-1.3.2
+DISTNAME=	ibus-table-others-1.3.3
 CATEGORIES=	inputmethod
 MASTER_SITES=	https://github.com/moebiuscurve/ibus-table-others/releases/download/${PKGVERSION_NOREV}/
 
