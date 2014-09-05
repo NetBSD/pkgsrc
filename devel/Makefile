@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1967 2014/09/05 07:16:33 fhajny Exp $
+# $NetBSD: Makefile,v 1.1968 2014/09/05 14:51:39 joerg Exp $
 #
 
 COMMENT=	Development utilities
@@ -570,7 +570,7 @@ SUBDIR+=	netbsd-iscsi-lib
 SUBDIR+=	netcdf
 SUBDIR+=	netcdf-fortran
 SUBDIR+=	newfile
-SUBDIR+=	ninja
+SUBDIR+=	ninja-build
 SUBDIR+=	noweb
 SUBDIR+=	npapi-sdk
 SUBDIR+=	nqc
