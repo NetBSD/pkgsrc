@@ -1,0 +1,6 @@
+Rsyslog is an enhanced syslogd supporting, among others, MySQL,
+PostgreSQL, failover log destinations, syslog/tcp, fine grain
+output format control, high precision timestamps, queued operations
+and the ability to filter on any message part. It is quite
+compatible to stock sysklogd and can be used as a drop-in
+replacement.

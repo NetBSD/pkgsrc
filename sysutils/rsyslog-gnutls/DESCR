@@ -1,0 +1,2 @@
+rsyslog module for TLS encrypted TCP logging (based on current
+syslog-transport-tls internet drafts).

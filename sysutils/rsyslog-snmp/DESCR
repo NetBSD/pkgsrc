@@ -1,0 +1,1 @@
+rsyslog module for sending syslog messages as SNMPv1 & v2c traps.
