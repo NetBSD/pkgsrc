@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3351 2014/09/05 07:18:35 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.3352 2014/09/05 07:30:14 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4312,3 +4312,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added sysutils/rsyslog-pgsql version 8.4.0 [fhajny 2014-09-05]
 	Added sysutils/rsyslog-rabbitmq version 8.4.0 [fhajny 2014-09-05]
 	Added sysutils/rsyslog-snmp version 8.4.0 [fhajny 2014-09-05]
+	Updated ham/fldigi to 3.21.83 [mef 2014-09-05]
