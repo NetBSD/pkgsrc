@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3352 2014/09/05 07:30:14 mef Exp $
+$NetBSD: CHANGES-2014,v 1.3353 2014/09/05 10:17:59 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4313,3 +4313,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Added sysutils/rsyslog-rabbitmq version 8.4.0 [fhajny 2014-09-05]
 	Added sysutils/rsyslog-snmp version 8.4.0 [fhajny 2014-09-05]
 	Updated ham/fldigi to 3.21.83 [mef 2014-09-05]
+	Added audio/sphinxbase version 0.8 [fhajny 2014-09-05]
+	Added audio/sphinx3 version 0.8 [fhajny 2014-09-05]
+	Added audio/sphinxtrain version 1.0.8 [fhajny 2014-09-05]
+	Added audio/pocketsphinx version 0.8 [fhajny 2014-09-05]
