@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.62 2014/06/07 23:12:16 rodent Exp $
+$NetBSD: distinfo,v 1.63 2014/09/05 11:51:41 adam Exp $
 
-SHA1 (nmap-6.40.tar.bz2) = ee1bec1bb62045c7c1fc69ff183b2ae9b97bd0eb
-RMD160 (nmap-6.40.tar.bz2) = 6da4bd1a71386e52d4c76d3c3c1773c989e72c55
-Size (nmap-6.40.tar.bz2) = 7871636 bytes
+SHA1 (nmap-6.47.tar.bz2) = 0c917453a91a5e85c2a217d27c3853b0f3e0e6ac
+RMD160 (nmap-6.47.tar.bz2) = 20c4023935e53fbceb2ef33205cb301fb29bd0b2
+Size (nmap-6.47.tar.bz2) = 7878122 bytes
 SHA1 (patch-ab) = 442683349642a665e7d0a90bc581b971919ead8b
-SHA1 (patch-ac) = a5904d0f6c47198c5022b75b612f01e5708db593
-SHA1 (patch-ad) = 278be81387bc47566ee498a4f6ef4e2d4c1d522f
+SHA1 (patch-ac) = 807ace5f25bb9fd07ca4947a9debbb390fa80403
 SHA1 (patch-libnetutil_netutil.cc) = 7bd1059d6cbcf4f6d129730d6c6f6bc3ab54c0a0
