@@ -1,4 +1,4 @@
-$NetBSD: patch-src_misc_configuration.cxx,v 1.1 2013/09/13 06:35:55 mef Exp $
+$NetBSD: patch-src_misc_configuration.cxx,v 1.2 2014/09/05 07:29:28 mef Exp $
 
 For DragonFly build to fix following problem:
 misc/configuration.cxx: In member function 'void configuration::testCommPorts()':

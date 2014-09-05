@@ -1,4 +1,4 @@
-$NetBSD: patch-src_include_qrunner.h,v 1.2 2013/09/13 06:35:55 mef Exp $
+$NetBSD: patch-src_include_qrunner.h,v 1.3 2014/09/05 07:29:28 mef Exp $
 
 Avoid implicit conversions to bool for streams.
 Require C++11 for Clang and prefer std version over tr1 when in C++11
