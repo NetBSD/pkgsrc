@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.149 2014/09/04 18:52:53 jperkin Exp $
+# $NetBSD: gcc.mk,v 1.150 2014/09/05 22:11:10 jperkin Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -488,10 +488,17 @@ _GCC_PKGBASE=		gcc49
 _IGNORE_GCC=		yes
 MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
-.  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc:Mc++)
+.  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
 _GCC_PKGSRCDIR=		../../lang/gcc49
 _GCC_DEPENDENCY=	gcc49>=${_GCC_REQD}:../../lang/gcc49
+.    if !empty(_LANGUAGES.gcc:Mc++) || \
+        !empty(_LANGUAGES.gcc:Mfortran) || \
+        !empty(_LANGUAGES.gcc:Mfortran77) || \
+        !empty(_LANGUAGES.gcc:Mgo) || \
+        !empty(_LANGUAGES.gcc:Mobjc) || \
+        !empty(_LANGUAGES.gcc:Mobj-c++)
 _USE_GCC_SHLIB?=	yes
+.    endif
 .  endif
 .elif !empty(_NEED_GCC_AUX:M[yY][eE][sS])
 #
