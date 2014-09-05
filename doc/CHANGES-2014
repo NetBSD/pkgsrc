@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3361 2014/09/05 20:50:19 prlw1 Exp $
+$NetBSD: CHANGES-2014,v 1.3362 2014/09/05 20:52:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4323,4 +4323,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/nmap to 6.47 [adam 2014-09-05]
 	Updated devel/ruby-gettext to 3.1.4nb1 [obache 2014-09-05]
 	Renamed devel/ninja to devel/ninja-build [joerg 2014-09-05]
-	Updated devel/glib2 to 2.40.0nb2 [prlw1 2014-09-05]
+	Updated devel/glib2 to 2.40.0 [prlw1 2014-09-05]
