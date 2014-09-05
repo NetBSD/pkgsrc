@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2014/08/28 09:43:06 obache Exp $
+# $NetBSD: Makefile,v 1.14 2014/09/05 11:43:01 obache Exp $
 
-DISTNAME=	ibus-table-1.8.9
+DISTNAME=	ibus-table-1.8.10
 CATEGORIES=	inputmethod
 MASTER_SITES=	https://github.com/kaio/ibus-table/releases/download/${PKGVERSION_NOREV}/
 
