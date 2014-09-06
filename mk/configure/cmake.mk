@@ -1,4 +1,4 @@
-# $NetBSD: cmake.mk,v 1.11 2014/08/23 19:26:07 wiz Exp $
+# $NetBSD: cmake.mk,v 1.12 2014/09/06 01:50:38 obache Exp $
 #
 # This file handles packages that use CMake as their primary build
 # system. For more information about CMake, see http://www.cmake.org/.
@@ -23,12 +23,17 @@
 #	buildlink3.mk so that packages that depend on it can find it's 
 #	cmake modules if they use cmake to build.
 #
+# CMAKE_USE_GNU_INSTALL_DIRS
+#	If set to yes, set GNU standard installation directories with pkgsrc
+#	configured settings.  The default is yes.
+#
 
 _CMAKE_DIR=	${BUILDLINK_DIR}/cmake-Modules
 
+CMAKE_USE_GNU_INSTALL_DIRS?=	yes
+
 CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX:PATH=${PREFIX}
 CMAKE_ARGS+=	-DCMAKE_MODULE_PATH:PATH=${_CMAKE_DIR}
-CMAKE_ARGS+=	-DCMAKE_INSTALL_LIBDIR:PATH=lib
 .if ${OPSYS} != "Darwin"
 CMAKE_ARGS+=	-DCMAKE_SKIP_RPATH:BOOL=TRUE
 .else
@@ -37,12 +42,15 @@ CMAKE_ARGS+=	-DCMAKE_INSTALL_NAME_DIR:PATH=${PREFIX}/lib
 CMAKE_ARGS+=	-DOPENAL_INCLUDE_DIR:PATH=/System/Library/Frameworks/OpenAL.framework/Headers
 CMAKE_ARGS+=	-DOPENGL_INCLUDE_DIR:PATH=/System/Library/Frameworks/OpenGL.framework/Headers
 .endif
+.if defined(CMAKE_USE_GNU_INSTALL_DIRS) && empty(CMAKE_USE_GNU_INSTALL_DIRS:M[nN][oO])
+CMAKE_ARGS+=	-DCMAKE_INSTALL_LIBDIR:PATH=lib
 CMAKE_ARGS+=	-DCMAKE_INSTALL_MANDIR:PATH=${PKGMANDIR}
-.if defined(INFO_FILES)
+.  if defined(INFO_FILES)
 CMAKE_ARGS+=	-DCMAKE_INSTALL_INFODIR:PATH=${PKGINFODIR}
-.endif
-.if defined(USE_PKGLOCALEDIR) && empty(USE_PKGLOCALEDIR:M[nN][oO])
+.  endif
+.  if defined(USE_PKGLOCALEDIR) && empty(USE_PKGLOCALEDIR:M[nN][oO])
 CMAKE_ARGS+=	-DCMAKE_INSTALL_LOCALEDIR:PATH=${PKGLOCALEDIR}/locale
+.  endif
 .endif
 
 .if defined(CMAKE_PREFIX_PATH)
