@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3404 2014/09/06 13:42:46 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3405 2014/09/06 13:44:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4366,3 +4366,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/p5-DateTime to 1.1200 [wiz 2014-09-06]
 	Updated devel/p5-Getopt-Long-Descriptive to 0.097 [wen 2014-09-06]
 	Updated textproc/p5-Net-IDN-Encode to 2.201 [wiz 2014-09-06]
+	Updated mail/p5-MIME-tools to 5.505 [wiz 2014-09-06]
