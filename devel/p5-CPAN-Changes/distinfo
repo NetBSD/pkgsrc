@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/02/23 15:35:56 sno Exp $
+$NetBSD: distinfo,v 1.2 2014/09/06 08:30:06 wen Exp $
 
-SHA1 (CPAN-Changes-0.27.tar.gz) = 0b0241d86df2ee698d185c2a4a55da83af56d841
-RMD160 (CPAN-Changes-0.27.tar.gz) = b3645b8fbbf1b2a14a60a694e685e91c26ace032
-Size (CPAN-Changes-0.27.tar.gz) = 35558 bytes
+SHA1 (CPAN-Changes-0.30.tar.gz) = 2f353968b33cd5cea5d8a46c6e287a16c9fca5f9
+RMD160 (CPAN-Changes-0.30.tar.gz) = d799a2b8b51c17b6e8f99deda87a7f2972697461
+Size (CPAN-Changes-0.30.tar.gz) = 37095 bytes
