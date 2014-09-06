@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3390 2014/09/06 12:59:29 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3391 2014/09/06 13:02:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4352,3 +4352,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Test-Output to 1.03 [wiz 2014-09-06]
 	Updated devel/p5-Module-Implementation to 0.09 [wiz 2014-09-06]
 	Updated devel/p5-Dist-CheckConflicts to 0.11 [wiz 2014-09-06]
+	Updated devel/p5-Class-Load to 0.22 [wiz 2014-09-06]
