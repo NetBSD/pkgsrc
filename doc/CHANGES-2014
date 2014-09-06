@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3428 2014/09/06 14:56:20 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3429 2014/09/06 14:57:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4390,3 +4390,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Term-ReadLine to 1.24 [wiz 2014-09-06]
 	Updated devel/p5-Test-Requires to 0.08 [wiz 2014-09-06]
 	Updated time/p5-DateTime-Format-Mail to 0.4010 [wiz 2014-09-06]
+	Updated net/p5-Net-OAuth to 0.28 [wiz 2014-09-06]
