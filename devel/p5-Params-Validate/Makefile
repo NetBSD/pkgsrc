@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2014/06/09 18:50:38 schmonz Exp $
+# $NetBSD: Makefile,v 1.48 2014/09/06 13:05:32 wiz Exp $
 
-DISTNAME=	Params-Validate-1.10
+DISTNAME=	Params-Validate-1.13
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5pva
 CATEGORIES=	devel perl5
@@ -17,6 +17,7 @@ DEPENDS+=	{p5-Scalar-List-Utils>=1.0,perl>=5.10.0}:../../devel/p5-Scalar-List-Ut
 DEPENDS+=	p5-Module-Implementation-[0-9]*:../../devel/p5-Module-Implementation
 
 BUILD_DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
+BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 
 USE_LANGUAGES=		c
