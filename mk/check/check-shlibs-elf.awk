@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs-elf.awk,v 1.6 2013/10/25 14:11:13 joerg Exp $
+# $NetBSD: check-shlibs-elf.awk,v 1.7 2014/09/06 16:57:51 jperkin Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -96,16 +96,16 @@ function check_pkg(DSO, pkg, found) {
 	close(depends_file)
 }
 
-function checkshlib(DSO, needed, rpath, found, dso_rath, got_rpath) {
+function checkshlib(DSO, needed, rpath, found, dso_rath, got_rpath, nrpath) {
 	cmd = readelf " -Wd " shquote(DSO) " 2> /dev/null"
 	while ((cmd | getline) > 0) {
 		if ($2 == "(RPATH)" || $2 == "(RUNPATH)") {
 			sub("^[[:space:]]*0[xX][[:xdigit:]]+[[:space:]]+\\(RU?N?PATH\\)[[:space:]]+Library ru?n?path: \\[", "")
 			dso_rpath = substr($0, 1, length($0) - 1)
 			if (length(system_rpath) > 0)
-				split(dso_rpath ":" system_rpath, rpath, ":")
+				nrpath = split(dso_rpath ":" system_rpath, rpath, ":")
 			else
-				split(dso_rpath, rpath, ":")
+				nrpath = split(dso_rpath, rpath, ":")
 			got_rpath = 1
 		}
 		if ($2 == "(NEEDED)") {
@@ -123,7 +123,7 @@ function checkshlib(DSO, needed, rpath, found, dso_rath, got_rpath) {
 		}
 	}
 	for (lib in needed) {
-		for (p in rpath) {
+		for (p = 1; p <= nrpath; p++) {
 			if (!system("test -f " shquote(cross_destdir rpath[p] "/" lib))) {
 				check_pkg(rpath[p] "/" lib)
 				found = 1
