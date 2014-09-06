@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3421 2014/09/06 14:46:12 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3422 2014/09/06 14:48:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4383,3 +4383,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/p5-NetAddr-IP to 4.075 [wiz 2014-09-06]
 	Updated archivers/p5-Archive-Tar to 2.00 [wiz 2014-09-06]
 	Added textproc/p5-Test-YAML version 1.05 [wiz 2014-09-06]
+	Updated textproc/p5-YAML to 1.11 [wiz 2014-09-06]
