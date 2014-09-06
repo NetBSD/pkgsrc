@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3411 2014/09/06 14:20:05 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3412 2014/09/06 14:23:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4373,3 +4373,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/p5-MooX-late version 0.015 [wiz 2014-09-06]
 	Updated textproc/p5-XML-Encoding to 2.09 [wen 2014-09-06]
 	Added devel/p5-Data-Perl version 0.002009 [wiz 2014-09-06]
+	Added devel/p5-MooX-HandlesVia version 0.001005 [wiz 2014-09-06]
