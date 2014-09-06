@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3367 2014/09/06 07:38:01 adam Exp $
+$NetBSD: CHANGES-2014,v 1.3368 2014/09/06 08:03:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4329,3 +4329,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/gobject-introspection to 1.40.0 [prlw1 2014-09-05]
 	Updated converters/skf to 1.99.9 [obache 2014-09-06]
 	Updated lang/clang to 3.5.0 [adam 2014-09-06]
+	Updated security/mozilla-rootcerts to 1.0.20140820nb1 [wiz 2014-09-06]
