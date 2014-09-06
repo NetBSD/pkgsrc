@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3378 2014/09/06 12:36:30 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3379 2014/09/06 12:38:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4340,3 +4340,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/p5-Net-DNS to 0.79 [wiz 2014-09-06]
 	Updated security/p5-IO-Socket-SSL to 1.997 [wiz 2014-09-06]
 	Updated devel/p5-Path-Class to 0.34 [wiz 2014-09-06]
+	Updated mail/p5-MailTools to 2.13 [wiz 2014-09-06]
