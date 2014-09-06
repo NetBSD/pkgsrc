@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/09/05 18:57:18 wiz Exp $
+$NetBSD: distinfo,v 1.3 2014/09/06 12:13:12 wiz Exp $
 
-SHA1 (IO-HTML-1.00.tar.gz) = 408784f567d52f26ee4ed7c10026e2c8b8e86178
-RMD160 (IO-HTML-1.00.tar.gz) = bd61d35ae0e998b15d038e149e9573b328b7b285
-Size (IO-HTML-1.00.tar.gz) = 18759 bytes
+SHA1 (IO-HTML-1.001.tar.gz) = 210b60f438502744c9c31a82329b19a6f9aecf63
+RMD160 (IO-HTML-1.001.tar.gz) = 5578d0c7fb28f889586e1c91290b12c43e4a68ce
+Size (IO-HTML-1.001.tar.gz) = 19375 bytes
