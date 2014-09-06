@@ -1,0 +1,14 @@
+Moo is a light-weight object oriented programming framework which
+aims to be compatible with Moose. It does this by detecting when
+Moose has been loaded, and automatically "inflating" its classes
+and roles to full Moose classes and roles. This way, Moo classes
+can consume Moose roles, Moose classes can extend Moo classes, and
+so forth.
+
+However, the surface syntax of Moo differs somewhat from Moose.
+For example the isa option when defining attributes in Moose must
+be either a string or a blessed Moose::Meta::TypeConstraint object;
+but in Moo must be a coderef. These differences in surface syntax
+make porting code from Moose to Moo potentially tricky. MooX::late
+provides some assistance by enabling a slightly more Moosey surface
+syntax.
