@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.796 2014/09/05 21:38:18 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.797 2014/09/06 14:46:00 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -457,6 +457,7 @@ SUBDIR+=	p5-Template-Plugin-Latex
 SUBDIR+=	p5-Template-Plugin-Number-Format
 SUBDIR+=	p5-Template-Plugin-YAML
 SUBDIR+=	p5-Template-Tiny
+SUBDIR+=	p5-Test-YAML
 SUBDIR+=	p5-Text-Affixes
 SUBDIR+=	p5-Text-Aspell
 SUBDIR+=	p5-Text-Autoformat
