@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2012/05/07 01:53:40 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2014/09/06 08:20:29 jperkin Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -12,7 +12,7 @@ GCC3_F77_BUILDLINK3_MK:=
 GCC3_PKGMODIF=	_${GCC3_INSTALLTO_SUBPREFIX}
 .    endif
 .  endif
-BUILDLINK_API_DEPENDS.gcc3-f77+=	gcc3${GCC3_PKGMODIF}-f77>=${_GCC_REQD}
+BUILDLINK_API_DEPENDS.gcc3-f77+=	gcc3${GCC3_PKGMODIF}-f77>=3.0
 BUILDLINK_ABI_DEPENDS.gcc3-f77+=	gcc3-f77>=3.3.5nb2
 BUILDLINK_PKGSRCDIR.gcc3-f77?=	../../lang/gcc3-f77
 BUILDLINK_LIBDIRS.gcc3-f77?=	\

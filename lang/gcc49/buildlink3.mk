@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.1 2014/09/04 18:43:11 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2014/09/06 08:20:29 jperkin Exp $
 
 BUILDLINK_TREE+=	gcc49
 
 .if !defined(GCC49_BUILDLINK3_MK)
 GCC49_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gcc49+=	gcc49>=${_GCC_REQD}
+BUILDLINK_API_DEPENDS.gcc49+=	gcc49>=4.9
 BUILDLINK_ABI_DEPENDS.gcc49+=	gcc49>=4.9.1
 BUILDLINK_PKGSRCDIR.gcc49=	../../lang/gcc49
 BUILDLINK_DEPMETHOD.gcc49?=	build
@@ -19,7 +19,7 @@ BUILDLINK_AUTO_VARS.gcc49=	no
 
 # Packages that link against shared libraries need a full dependency.
 .if defined(_USE_GCC_SHLIB)
-DEPENDS+=	{gcc49,gcc49-libs}>=${_GCC_REQD}:../../lang/gcc49-libs
+DEPENDS+=	{gcc49,gcc49-libs}>=4.9:../../lang/gcc49-libs
 .endif
 
 pkgbase := gcc49
