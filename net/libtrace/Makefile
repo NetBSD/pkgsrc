@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/02/06 19:30:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2014/09/06 07:40:00 jperkin Exp $
 #
 
 DISTNAME=	libtrace-3.0.10
@@ -12,7 +12,7 @@ HOMEPAGE=	http://research.wand.net.nz/software/libtrace.php
 COMMENT=	Library for trace processing
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	gmake lex
+USE_TOOLS+=	gmake lex yacc
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
