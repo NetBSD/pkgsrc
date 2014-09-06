@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/09/06 13:58:41 wiz Exp $
+
+SHA1 (Exporter-Tiny-0.038.tar.gz) = e2dddc4c4d5599aad7f19d9b5960d544f8319ee3
+RMD160 (Exporter-Tiny-0.038.tar.gz) = 79a2ecae62a58b6f9e9f49e05d51a84b4d42837d
+Size (Exporter-Tiny-0.038.tar.gz) = 28750 bytes
