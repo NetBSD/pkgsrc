@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2013/09/05 19:34:45 wiz Exp $
+$NetBSD: distinfo,v 1.10 2014/09/06 12:11:14 wiz Exp $
 
-SHA1 (IO-Socket-INET6-2.71.tar.gz) = 03336f5648143f71f3fdeef8dea2805b497da587
-RMD160 (IO-Socket-INET6-2.71.tar.gz) = 744ac16e290ca599e9dc76b035fc901b39f77215
-Size (IO-Socket-INET6-2.71.tar.gz) = 18946 bytes
+SHA1 (IO-Socket-INET6-2.72.tar.gz) = 37917b558b71cad29aaf2b4791a99684341a1793
+RMD160 (IO-Socket-INET6-2.72.tar.gz) = 6623f70c3fbcc5c798bd3270fb1bf0d0ab385aaf
+Size (IO-Socket-INET6-2.72.tar.gz) = 27615 bytes
