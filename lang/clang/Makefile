@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.29 2014/07/18 13:54:05 adam Exp $
+# $NetBSD: Makefile,v 1.30 2014/09/06 07:37:14 adam Exp $
 
-DISTNAME=	clang-3.4.2
+DISTNAME=	clang-3.5.0
 CATEGORIES=	lang
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
-DISTFILES=	llvm-${PKGVERSION_NOREV}.src.tar.gz \
-		libcxx-${PKGVERSION_NOREV}.src.tar.gz \
-		cfe-${PKGVERSION_NOREV}.src.tar.gz \
-		compiler-rt-3.4.src.tar.gz
+DISTFILES=	llvm-${PKGVERSION_NOREV}.src.tar.xz \
+		libcxx-${PKGVERSION_NOREV}.src.tar.xz \
+		cfe-${PKGVERSION_NOREV}.src.tar.xz \
+		compiler-rt-${PKGVERSION_NOREV}.src.tar.xz
 SITES.compiler-rt-3.4.src.tar.gz=http://llvm.org/releases/3.4/
 
 MAINTAINER=	adam.hoka@gmail.com
@@ -86,7 +86,7 @@ SUBST_SED.fix-paths+=		-e 's,^.*cxa_finalize.*$$,		; //cxa_finalize.o,g'
 
 post-extract:
 	mv ${WRKDIR}/libcxx-${PKGVERSION_NOREV}.src ${WRKSRC}/projects/libcxx
-	mv ${WRKDIR}/compiler-rt-3.4 ${WRKSRC}/projects/compiler-rt
+	mv ${WRKDIR}/compiler-rt-${PKGVERSION_NOREV}.src ${WRKSRC}/projects/compiler-rt
 	mv ${WRKDIR}/cfe-${PKGVERSION_NOREV}.src ${WRKSRC}/tools/clang
 .if ${OPSYS} == "SunOS"
 	${ECHO} "int sun_ld_needs_a_symbol=0;" >> ${WRKSRC}/lib/Target/NVPTX/InstPrinter/NVPTXInstPrinter.cpp
