@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3395 2014/09/06 13:17:54 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3396 2014/09/06 13:30:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4357,3 +4357,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Params-Validate to 1.13 [wiz 2014-09-06]
 	Updated time/p5-DateTime-TimeZone to 1.74 [wiz 2014-09-06]
 	Updated devel/p5-MooseX-Types to 0.44nb2 [wiz 2014-09-06]
+	Updated devel/p5-Any-Moose to 0.24 [wiz 2014-09-06]
