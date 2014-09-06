@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2014/05/29 23:37:27 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2014/09/06 21:29:45 wiz Exp $
 
-DISTNAME=	bup-0.25
-PKGREVISION=	4
+DISTNAME=	bup-0.26
 CATEGORIES=	sysutils
-MASTER_SITES=	# manually packaged since master site is git repository
-# and only available via https
-# https://github.com/bup/bup/releases/
+MASTER_SITES=	# https://github.com/bup/bup/releases/
 # doc tarball: switch to "man" branch before downloading
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME:S/bup/bup-man/}.zip
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME:S/bup/bup-man/}${EXTRACT_SUFX}
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://github.com/bup/bup
@@ -16,11 +13,12 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	par2-[0-9]*:../../archivers/par2
 DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
+DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-fuse-bindings
 
-DOCDIR=		${WRKDIR}/bup-man
+DOCDIR=		${WRKDIR}/bup-0.26
 
 TEST_TARGET=	test
 
@@ -62,37 +60,23 @@ REPLACE_PYTHON+=	cmd/tick-cmd.py
 REPLACE_PYTHON+=	cmd/version-cmd.py
 REPLACE_PYTHON+=	cmd/web-cmd.py
 REPLACE_PYTHON+=	cmd/xstat-cmd.py
-REPLACE_PYTHON+=	lib/tornado/__init__.py
-REPLACE_PYTHON+=	lib/tornado/auth.py
-REPLACE_PYTHON+=	lib/tornado/autoreload.py
-REPLACE_PYTHON+=	lib/tornado/database.py
-REPLACE_PYTHON+=	lib/tornado/escape.py
-REPLACE_PYTHON+=	lib/tornado/httpclient.py
-REPLACE_PYTHON+=	lib/tornado/httpserver.py
-REPLACE_PYTHON+=	lib/tornado/httputil.py
-REPLACE_PYTHON+=	lib/tornado/ioloop.py
-REPLACE_PYTHON+=	lib/tornado/iostream.py
-REPLACE_PYTHON+=	lib/tornado/locale.py
-REPLACE_PYTHON+=	lib/tornado/options.py
-REPLACE_PYTHON+=	lib/tornado/s3server.py
-REPLACE_PYTHON+=	lib/tornado/template.py
-REPLACE_PYTHON+=	lib/tornado/test/test_ioloop.py
-REPLACE_PYTHON+=	lib/tornado/web.py
-REPLACE_PYTHON+=	lib/tornado/websocket.py
-REPLACE_PYTHON+=	lib/tornado/wsgi.py
 REPLACE_PYTHON+=	main.py
 REPLACE_PYTHON+=	wvtest.py
 
+REPLACE_PYTHON+=	t/cleanup-mounts-under
 REPLACE_PYTHON+=	t/hardlink-sets
 REPLACE_PYTHON+=	t/id-other-than
 REPLACE_PYTHON+=	t/mksock
+REPLACE_PYTHON+=	t/ns-timestamp-resolutions
 REPLACE_PYTHON+=	t/root-status
+REPLACE_PYTHON+=	t/test-ls.sh
 REPLACE_PYTHON+=	t/unknown-owner
 
 SUBST_CLASSES+=		python-c
 SUBST_SED.python-c+=	-e 's,python -c,${PYTHONBIN} -c,'
 SUBST_STAGE.python-c=	pre-configure
 SUBST_FILES.python-c+=	t/lib.sh
+SUBST_FILES.python-c+=	t/test-ls.sh
 SUBST_FILES.python-c+=	t/test-meta.sh
 SUBST_MESSAGE.python-c=	Fixing python executable in tests.
 

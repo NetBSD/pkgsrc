@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/12/31 11:03:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/09/06 21:29:45 wiz Exp $
 bin/bup
 lib/bup/bup/__init__.py
 lib/bup/bup/_helpers.so
@@ -56,24 +56,6 @@ lib/bup/cmd/bup-tick
 lib/bup/cmd/bup-version
 lib/bup/cmd/bup-web
 lib/bup/cmd/bup-xstat
-lib/bup/tornado/__init__.py
-lib/bup/tornado/auth.py
-lib/bup/tornado/autoreload.py
-lib/bup/tornado/database.py
-lib/bup/tornado/escape.py
-lib/bup/tornado/httpclient.py
-lib/bup/tornado/httpserver.py
-lib/bup/tornado/httputil.py
-lib/bup/tornado/ioloop.py
-lib/bup/tornado/iostream.py
-lib/bup/tornado/locale.py
-lib/bup/tornado/options.py
-lib/bup/tornado/s3server.py
-lib/bup/tornado/template.py
-lib/bup/tornado/web.py
-lib/bup/tornado/websocket.py
-lib/bup/tornado/win32_support.py
-lib/bup/tornado/wsgi.py
 lib/bup/web/list-directory.html
 lib/bup/web/static/styles.css
 man/man1/bup-bloom.1
