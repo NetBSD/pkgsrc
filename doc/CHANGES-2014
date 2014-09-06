@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3387 2014/09/06 12:54:23 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3388 2014/09/06 12:55:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4349,3 +4349,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Sub-Install to 0.928 [wiz 2014-09-06]
 	Updated devel/p5-Data-OptList to 0.109 [wiz 2014-09-06]
 	Updated devel/p5-Capture-Tiny to 0.25 [wiz 2014-09-06]
+	Updated devel/p5-Test-Output to 1.03 [wiz 2014-09-06]
