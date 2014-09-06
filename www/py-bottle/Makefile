@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/10/28 06:30:59 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/09/06 14:47:27 wen Exp $
 #
 
-DISTNAME=	bottle-0.11.2
+DISTNAME=	bottle-0.12.7
 CATEGORIES=	www
 MASTER_SITES=	http://pypi.python.org/packages/source/b/bottle/
 
