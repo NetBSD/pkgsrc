@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3434 2014/09/06 21:29:54 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3435 2014/09/06 22:42:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4396,3 +4396,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated archivers/par2 to 0.6.8 [wiz 2014-09-06]
 	Added textproc/hs-attoparsec version 0.12.1.2 [szptvlfn 2014-09-06]
 	Updated sysutils/bup to 0.26 [wiz 2014-09-06]
+	Updated devel/p5-ExtUtils-LibBuilder to 0.06 [wiz 2014-09-06]
