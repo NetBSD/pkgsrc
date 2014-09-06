@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3432 2014/09/06 20:02:09 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3433 2014/09/06 21:20:34 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4394,3 +4394,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/glibmm to 2.40.0 [wiz 2014-09-06]
 	Updated mail/nmh to 1.6 [schnoebe 2014-09-06]
 	Updated archivers/par2 to 0.6.8 [wiz 2014-09-06]
+	Added textproc/hs-attoparsec version 0.12.1.2 [szptvlfn 2014-09-06]
