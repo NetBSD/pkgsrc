@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3419 2014/09/06 14:39:40 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3420 2014/09/06 14:40:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4381,3 +4381,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/p5-Filter to 1.49 [wiz 2014-09-06]
 	Updated mail/p5-MIME-Types to 2.06 [wiz 2014-09-06]
 	Updated net/p5-NetAddr-IP to 4.075 [wiz 2014-09-06]
+	Updated archivers/p5-Archive-Tar to 2.00 [wiz 2014-09-06]
