@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2014/05/29 23:37:27 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2014/09/06 06:24:07 jperkin Exp $
 
 DISTNAME=	cfengine-2.2.10
 PKGREVISION=	5
@@ -16,7 +16,7 @@ BUILD_DEFS+=		IPV6_READY
 
 BDB_ACCEPTED=		db4
 USE_LIBTOOL=		yes
-USE_TOOLS+=		flex perl:run
+USE_TOOLS+=		flex perl:run yacc
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-berkeleydb=${BUILDLINK_PREFIX.db4}
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
