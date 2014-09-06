@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3409 2014/09/06 14:07:54 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3410 2014/09/06 14:12:23 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4371,3 +4371,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Getopt-Mixed to 1.12 [wen 2014-09-06]
 	Added devel/p5-Type-Tiny version 1.000004 [wiz 2014-09-06]
 	Added devel/p5-MooX-late version 0.015 [wiz 2014-09-06]
+	Updated textproc/p5-XML-Encoding to 2.09 [wen 2014-09-06]
