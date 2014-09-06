@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3366 2014/09/06 04:55:54 obache Exp $
+$NetBSD: CHANGES-2014,v 1.3367 2014/09/06 07:38:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4328,3 +4328,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added textproc/hs-case-insensitive version 1.2.0.0 [szptvlfn 2014-09-05]
 	Updated devel/gobject-introspection to 1.40.0 [prlw1 2014-09-05]
 	Updated converters/skf to 1.99.9 [obache 2014-09-06]
+	Updated lang/clang to 3.5.0 [adam 2014-09-06]
