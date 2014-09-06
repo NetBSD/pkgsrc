@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3399 2014/09/06 13:34:25 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3400 2014/09/06 13:35:25 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4361,3 +4361,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Clone-PP to 1.06 [wiz 2014-09-06]
 	Updated devel/p5-boolean to 0.42 [wiz 2014-09-06]
 	Updated devel/p5-Sub-Name to 0.09 [wiz 2014-09-06]
+	Updated databases/p5-DBD-CSV to 0.44 [wen 2014-09-06]
