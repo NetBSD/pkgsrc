@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3424 2014/09/06 14:50:45 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3425 2014/09/06 14:51:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4384,9 +4384,6 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated archivers/p5-Archive-Tar to 2.00 [wiz 2014-09-06]
 	Added textproc/p5-Test-YAML version 1.05 [wiz 2014-09-06]
 	Updated textproc/p5-YAML to 1.11 [wiz 2014-09-06]
-<<<<<<< CHANGES-2014
 	Updated www/p5-FCGI to 0.77 [wiz 2014-09-06]
-=======
 	Updated www/py-bottle to 0.12.7 [wen 2014-09-06]
->>>>>>> 1.3423
 	Updated www/p5-CGI-Lite to 2.04 [wiz 2014-09-06]
