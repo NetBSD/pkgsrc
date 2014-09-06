@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.150 2014/09/05 22:11:10 jperkin Exp $
+# $NetBSD: gcc.mk,v 1.151 2014/09/06 08:32:55 jperkin Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -13,10 +13,8 @@
 #	compiler version a package requires.
 #
 # USE_PKGSRC_GCC
-#	Force using the appropriate version of GCC from pkgsrc based on
-#	GCC_REQD instead of the native compiler.
-#
-#	This should be disabled only for debugging.
+#	When set to "yes", use an appropriate version of GCC from
+#	pkgsrc based on GCC_REQD instead of the native compiler.
 #
 # USE_PKGSRC_GCC_RUNTIME
 #	When set to "yes", the runtime gcc libraries (libgcc, libstdc++
@@ -31,10 +29,9 @@
 #	ONLY_FOR_COMPILER for that purpose. This is a list of version
 #	numbers, of which the maximum version is the definitive one.
 #
-#	NOTE: Be conservative when setting GCC_REQD, as lang/gcc3 is
-#	known not to build on some platforms, e.g. Darwin.  If gcc3 is
-#	required, set GCC_REQD=3.0 so that we do not try to pull in
-#	lang/gcc3 unnecessarily and have it fail.
+#	This variable can also be set by the user when USE_PKGSRC_GCC
+#	is in effect to ensure that a specific compiler is used for
+#	packages which do not specify a higher version.
 #
 # USE_GCC_RUNTIME
 #	Packages which build shared libraries but do not use libtool to
