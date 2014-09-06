@@ -1,11 +1,11 @@
-$NetBSD: patch-cd,v 1.6 2012/07/27 19:29:02 drochner Exp $
+$NetBSD: patch-cd,v 1.7 2014/09/06 16:07:43 schnoebe Exp $
 
 make sure a time_t fits in
 
---- sbr/fmt_scan.c.orig	2012-06-11 04:06:19.000000000 +0000
+--- sbr/fmt_scan.c.orig	2014-06-15 20:30:40.000000000 +0000
 +++ sbr/fmt_scan.c
-@@ -298,7 +298,7 @@ fmt_scan (struct format *format, char *s
-     unsigned char *str = NULL;
+@@ -371,7 +371,7 @@ fmt_scan (struct format *format, char *s
+     char *savestr = NULL, *str = NULL;
      char buffer[BUFSIZ], buffer2[BUFSIZ];
      int i, c, ljust, n;
 -    int value = 0;

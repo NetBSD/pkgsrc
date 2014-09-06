@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.83 2014/02/12 23:18:08 tron Exp $
+# $NetBSD: Makefile,v 1.84 2014/09/06 16:07:43 schnoebe Exp $
 
-DISTNAME=		nmh-1.5
-PKGREVISION=		4
+DISTNAME=		nmh-1.6
 CATEGORIES=		mail
 MASTER_SITES=		http://savannah.nongnu.org/download/nmh/
 
@@ -37,27 +36,8 @@ NMH_MTA?=		smtp
 GNU_CONFIGURE=		yes
 
 GNU_CONFIGURE_LIBDIR=	${PREFIX}/libexec/nmh
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--enable-nmh-pop
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-mts=${NMH_MTA:Q}
-
-.if defined(NMH_EDITOR)
-CONFIGURE_ARGS+=	--with-editor=${NMH_EDITOR:Q}
-.endif
-
-.if defined(NMH_PAGER)
-CONFIGURE_ARGS+=	--with-pager=${NMH_PAGER:Q}
-.endif
-
-.if defined(KERBEROS)
-PKG_USE_KERBEROS=	yes
-.if ${OPSYS} == "NetBSD"
-LIBS+=			-lroken -lcrypt -lcom_err
-.endif
-CONFIGURE_ARGS+=	--with-krb4
-.else
-CONFIGURE_ARGS+=	--without-krb4
-.endif
 
 DOCDIR=			share/doc/nmh
 EGDIR=			${PREFIX}/share/examples/nmh

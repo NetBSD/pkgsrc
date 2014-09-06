@@ -1,46 +1,62 @@
-$NetBSD: patch-ca,v 1.7 2012/07/27 19:29:02 drochner Exp $
+$NetBSD: patch-ca,v 1.8 2014/09/06 16:07:43 schnoebe Exp $
 
 install config files into share/examples
 
---- Makefile.in.orig	2012-06-11 04:14:07.000000000 +0000
+--- Makefile.in.orig	2014-06-15 20:34:16.000000000 +0000
 +++ Makefile.in
-@@ -644,6 +644,7 @@ sharedstatedir = @sharedstatedir@
- smtpservers = @smtpservers@
+@@ -819,6 +819,7 @@ smtpservers = @smtpservers@
  srcdir = @srcdir@
+ supported_locks = @supported_locks@
  sysconfdir = @sysconfdir@
 +egdir = @prefix@/share/examples/nmh
  target_alias = @target_alias@
+ top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
- top_srcdir = @top_srcdir@
-@@ -3569,12 +3570,12 @@ uninstall-dist_docDATA:
- 	done
+@@ -4030,18 +4031,18 @@ uninstall-dist_docDATA:
+ 	dir='$(DESTDIR)$(docdir)'; $(am__uninstall_files_from_dir)
  install-dist_sysconfDATA: $(dist_sysconf_DATA)
  	@$(NORMAL_INSTALL)
--	test -z "$(sysconfdir)" || $(MKDIR_P) "$(DESTDIR)$(sysconfdir)"
-+	test -z "$(egdir)" || $(MKDIR_P) "$(DESTDIR)$(egdir)"
- 	@list='$(dist_sysconf_DATA)'; for p in $$list; do \
+-	@list='$(dist_sysconf_DATA)'; test -n "$(sysconfdir)" || list=; \
++	@list='$(dist_sysconf_DATA)'; test -n "$(egdir)" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(sysconfdir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(sysconfdir)" || exit 1; \
++	  echo " $(MKDIR_P) '$(DESTDIR)$(egdir)'"; \
++	  $(MKDIR_P) "$(DESTDIR)$(egdir)" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
  	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
- 	  f=$(am__strip_dir) \
--	  echo " $(dist_sysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(sysconfdir)/$$f'"; \
--	  $(dist_sysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(sysconfdir)/$$f"; \
-+	  echo " $(dist_sysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(egdir)/$$f'"; \
-+	  $(dist_sysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(egdir)/$$f"; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(sysconfdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(sysconfdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(egdir)'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(egdir)" || exit $$?; \
  	done
  
  uninstall-dist_sysconfDATA:
-@@ -3586,12 +3587,12 @@ uninstall-dist_sysconfDATA:
- 	done
+@@ -4051,18 +4052,18 @@ uninstall-dist_sysconfDATA:
+ 	dir='$(DESTDIR)$(sysconfdir)'; $(am__uninstall_files_from_dir)
  install-sysconfDATA: $(sysconf_DATA)
  	@$(NORMAL_INSTALL)
--	test -z "$(sysconfdir)" || $(MKDIR_P) "$(DESTDIR)$(sysconfdir)"
-+	test -z "$(egdir)" || $(MKDIR_P) "$(DESTDIR)$(egdir)"
- 	@list='$(sysconf_DATA)'; for p in $$list; do \
+-	@list='$(sysconf_DATA)'; test -n "$(sysconfdir)" || list=; \
++	@list='$(sysconf_DATA)'; test -n "$(egdir)" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(sysconfdir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(sysconfdir)" || exit 1; \
++	  echo " $(MKDIR_P) '$(DESTDIR)$(egdir)'"; \
++	  $(MKDIR_P) "$(DESTDIR)$(egdir)" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
  	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
- 	  f=$(am__strip_dir) \
--	  echo " $(sysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(sysconfdir)/$$f'"; \
--	  $(sysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(sysconfdir)/$$f"; \
-+	  echo " $(sysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(egdir)/$$f'"; \
-+	  $(sysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(egdir)/$$f"; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(sysconfdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(sysconfdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(egdir)'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(egdir)" || exit $$?; \
  	done
  
  uninstall-sysconfDATA:
