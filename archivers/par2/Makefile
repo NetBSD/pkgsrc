@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2014/04/25 09:22:13 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2014/09/06 20:01:58 wiz Exp $
 
-DISTNAME=		v0.6.5
+DISTNAME=		v0.6.8
 PKGNAME=		par2-${DISTNAME:S/v//}
 CATEGORIES=		misc
 MASTER_SITES=		https://github.com/BlackIkeEagle/par2cmdline/archive/
