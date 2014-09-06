@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3426 2014/09/06 14:52:31 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3427 2014/09/06 14:53:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4388,3 +4388,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-bottle to 0.12.7 [wen 2014-09-06]
 	Updated www/p5-CGI-Lite to 2.04 [wiz 2014-09-06]
 	Updated devel/p5-Term-ReadLine to 1.24 [wiz 2014-09-06]
+	Updated devel/p5-Test-Requires to 0.08 [wiz 2014-09-06]
