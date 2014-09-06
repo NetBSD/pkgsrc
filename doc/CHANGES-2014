@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3397 2014/09/06 13:32:18 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3398 2014/09/06 13:33:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4359,3 +4359,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-MooseX-Types to 0.44nb2 [wiz 2014-09-06]
 	Updated devel/p5-Any-Moose to 0.24 [wiz 2014-09-06]
 	Updated devel/p5-Clone-PP to 1.06 [wiz 2014-09-06]
+	Updated devel/p5-boolean to 0.42 [wiz 2014-09-06]
