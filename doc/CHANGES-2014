@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3414 2014/09/06 14:26:52 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3415 2014/09/06 14:29:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4376,3 +4376,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/p5-MooX-HandlesVia version 0.001005 [wiz 2014-09-06]
 	Updated security/p5-GnuPG-Interface to 0.50 [wiz 2014-09-06]
 	Updated devel/p5-Term-ReadKey to 2.32 [wiz 2014-09-06]
+	Updated archivers/p5-Archive-Zip to 1.38 [wiz 2014-09-06]
