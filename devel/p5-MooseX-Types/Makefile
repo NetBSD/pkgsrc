@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2014/05/29 23:36:08 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.30 2014/09/06 13:17:45 wiz Exp $
 
 DISTNAME=	MooseX-Types-0.44
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 
@@ -13,6 +12,7 @@ COMMENT=	Organise your Moose types in libraries
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Carp-Clan>=6.00:../../devel/p5-Carp-Clan
+DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 DEPENDS+=	p5-Moose>=1.06:../../devel/p5-Moose
 DEPENDS+=	p5-Sub-Install>=0.924:../../devel/p5-Sub-Install
 DEPENDS+=	p5-Sub-Name-[0-9]*:../../devel/p5-Sub-Name
