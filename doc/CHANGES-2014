@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3375 2014/09/06 12:13:22 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3376 2014/09/06 12:14:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4337,3 +4337,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/p5-IO-Socket-INET6 to 2.72 [wiz 2014-09-06]
 	Updated devel/p5-Devel-Symdump to 2.1200 [wiz 2014-09-06]
 	Updated devel/p5-IO-HTML to 1.001 [wiz 2014-09-06]
+	Updated net/p5-Net-DNS to 0.79 [wiz 2014-09-06]
