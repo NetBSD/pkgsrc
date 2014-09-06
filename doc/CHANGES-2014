@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3416 2014/09/06 14:30:36 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3417 2014/09/06 14:36:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4378,3 +4378,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Term-ReadKey to 2.32 [wiz 2014-09-06]
 	Updated archivers/p5-Archive-Zip to 1.38 [wiz 2014-09-06]
 	Updated devel/p5-Clone to 0.37 [wiz 2014-09-06]
+	Updated textproc/p5-Filter to 1.49 [wiz 2014-09-06]
