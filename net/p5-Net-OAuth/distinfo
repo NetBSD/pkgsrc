@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2010/09/09 06:16:11 sno Exp $
+$NetBSD: distinfo,v 1.5 2014/09/06 14:57:15 wiz Exp $
 
-SHA1 (Net-OAuth-0.27.tar.gz) = b425e4888140327de43b941442d1a2edf4c319b1
-RMD160 (Net-OAuth-0.27.tar.gz) = 6a864891bd877a399af8c0868478393c9d1bbe5d
-Size (Net-OAuth-0.27.tar.gz) = 39113 bytes
+SHA1 (Net-OAuth-0.28.tar.gz) = 8222036a9faf68baed2ea0549a738bcbc8db1269
+RMD160 (Net-OAuth-0.28.tar.gz) = 223a7bc41fc12c69cbd30305c2e48bbef4162c86
+Size (Net-OAuth-0.28.tar.gz) = 29063 bytes
