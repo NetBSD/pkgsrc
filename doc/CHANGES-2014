@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3382 2014/09/06 12:45:23 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3383 2014/09/06 12:49:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4344,3 +4344,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/p5-Email-Valid to 1.195 [wiz 2014-09-06]
 	Updated devel/p5-Test-Pod-Coverage to 1.10 [wiz 2014-09-06]
 	Updated finance/p5-Finance-Quote to 1.35 [wiz 2014-09-06]
+	Updated devel/p5-Date-Manip to 6.47 [wiz 2014-09-06]
