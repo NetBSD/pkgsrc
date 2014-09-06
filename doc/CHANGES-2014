@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3383 2014/09/06 12:49:00 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3384 2014/09/06 12:50:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4345,3 +4345,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Test-Pod-Coverage to 1.10 [wiz 2014-09-06]
 	Updated finance/p5-Finance-Quote to 1.35 [wiz 2014-09-06]
 	Updated devel/p5-Date-Manip to 6.47 [wiz 2014-09-06]
+	Updated devel/p5-enum to 1.100 [wiz 2014-09-06]
