@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2014/09/01 20:37:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.65 2014/09/06 08:55:43 jperkin Exp $
 
 DISTNAME=	binutils-2.24
 PKGREVISION=	3
@@ -75,6 +75,11 @@ CFLAGS.OpenBSD+=	-Wno-bounded
 CFLAGS+=	-Wno-unused-value -Wno-format-security \
 		-Wno-uninitialized -Wno-format -Wno-string-plus-int \
 		-Wno-empty-body -Wno-self-assign -Wno-unused-function
+.endif
+
+# Issue is fixed in upstream binutils, remove this when upgraded past 2.24
+.if !empty(CC_VERSION:Mgcc-4.9.*)
+CONFIGURE_ARGS+=	--disable-werror
 .endif
 
 # Prevent the need to run texi2pod.pl and pod2man which would
