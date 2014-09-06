@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3385 2014/09/06 12:51:11 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3386 2014/09/06 12:52:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4347,3 +4347,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Date-Manip to 6.47 [wiz 2014-09-06]
 	Updated devel/p5-enum to 1.100 [wiz 2014-09-06]
 	Updated devel/p5-Sub-Install to 0.928 [wiz 2014-09-06]
+	Updated devel/p5-Data-OptList to 0.109 [wiz 2014-09-06]
