@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3371 2014/09/06 12:07:29 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3372 2014/09/06 12:09:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4333,3 +4333,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Algorithm-C3 to 0.10 [wen 2014-09-06]
 	Updated devel/p5-CPAN-Changes to 0.30 [wen 2014-09-06]
 	Updated security/p5-Net-SSLeay to 1.66 [wiz 2014-09-06]
+	Updated net/p5-Socket6 to 0.25 [wiz 2014-09-06]
