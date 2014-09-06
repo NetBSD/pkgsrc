@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3393 2014/09/06 13:05:40 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3394 2014/09/06 13:08:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4355,3 +4355,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Class-Load to 0.22 [wiz 2014-09-06]
 	Updated devel/p5-common-sense to 3.73 [wiz 2014-09-06]
 	Updated devel/p5-Params-Validate to 1.13 [wiz 2014-09-06]
+	Updated time/p5-DateTime-TimeZone to 1.74 [wiz 2014-09-06]
