@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3407 2014/09/06 14:01:16 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3408 2014/09/06 14:05:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4369,3 +4369,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/p5-MIME-tools to 5.505 [wiz 2014-09-06]
 	Added devel/p5-Exporter-Tiny version 0.038 [wiz 2014-09-06]
 	Updated devel/p5-Getopt-Mixed to 1.12 [wen 2014-09-06]
+	Added devel/p5-Type-Tiny version 1.000004 [wiz 2014-09-06]
