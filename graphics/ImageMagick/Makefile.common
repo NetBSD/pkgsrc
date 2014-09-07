@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.107 2014/08/21 21:41:52 wiz Exp $
+# $NetBSD: Makefile.common,v 1.108 2014/09/07 07:50:19 wiz Exp $
 #
 # used by graphics/p5-PerlMagick/Makefile
 
@@ -19,7 +19,6 @@ CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.imagemagick.org/pub/ImageMagick/ \
 		ftp://ftp.nluug.nl/pub/ImageMagick/ \
 		ftp://ftp.sunet.se/pub/multimedia/graphics/ImageMagick/ \
-		http://mirror.is.co.za/pub/imagemagick/ \
 		ftp://ftp.kddlabs.co.jp/graphics/ImageMagick/ \
 		http://www.imagemagick.org/download/
 EXTRACT_SUFX=	.tar.xz
