@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2014/08/17 16:31:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2014/09/07 20:17:29 wiz Exp $
 bin/global
 bin/globash
 bin/gozilla
@@ -8,6 +8,7 @@ bin/htags
 bin/htags-server
 info/global.info
 lib/gtags/exuberant-ctags.la
+lib/gtags/pygments-parser.la
 lib/gtags/user-custom.la
 man/man1/global.1
 man/man1/globash.1
@@ -29,6 +30,7 @@ share/gtags/INSTALL
 share/gtags/LICENSE
 share/gtags/NEWS
 share/gtags/PLUGIN_HOWTO
+share/gtags/PLUGIN_HOWTO.pygments
 share/gtags/README
 share/gtags/SERVERSIDE_HOWTO
 share/gtags/THANKS
@@ -92,5 +94,6 @@ share/gtags/script/global-client
 share/gtags/script/gtags-client
 share/gtags/script/htags-client
 share/gtags/script/less-global
+share/gtags/script/pygments_parser.py
 share/gtags/style.css.tmpl
 @pkgdir var/gtags/sitekeys
