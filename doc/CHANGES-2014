@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3452 2014/09/07 20:17:39 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3453 2014/09/07 20:19:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4414,3 +4414,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated shells/mksh to 50b [bsiegert 2014-09-07]
 	Updated misc/dialog to 1.2.20140901 [wiz 2014-09-07]
 	Updated devel/global to 6.3.2 [wiz 2014-09-07]
+	Updated converters/help2man to 1.46.2 [wiz 2014-09-07]
