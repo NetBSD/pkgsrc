@@ -1,6 +1,8 @@
-$NetBSD: patch-mytypes.h,v 1.1 2011/12/06 19:51:47 joerg Exp $
+$NetBSD: patch-mytypes.h,v 1.2 2014/09/07 23:24:56 rodent Exp $
 
---- mytypes.h.orig	2011-12-06 16:32:43.000000000 +0000
+Use stdbool.
+
+--- mytypes.h.orig	2010-10-06 07:25:30.000000000 +0000
 +++ mytypes.h
 @@ -7,7 +7,7 @@
  
