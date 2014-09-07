@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2007/07/29 05:18:53 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2014/09/07 12:26:39 obache Exp $
 
-DISTNAME=	suse_libxml2-${SUSE_VERSION}
+PKGNAME=	suse_libxml2-${SUSE_VERSION}
 PKGREVISION=	2
 CATEGORIES=	emulators
 DISTFILES=	libxml2-2.6.20-4.${SUSE_ARCH}.rpm

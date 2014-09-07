@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/21 13:41:02 obache Exp $
+# $NetBSD: Makefile,v 1.2 2014/09/07 12:26:42 obache Exp $
 
-DISTNAME=	suse_slang-${SUSE_VERSION}
+PKGNAME=	suse_slang-${SUSE_VERSION}
 CATEGORIES=	emulators
 RPMPKGS+=	libslang2-2.2.2-6.1.2.${SUSE_ARCH}
 

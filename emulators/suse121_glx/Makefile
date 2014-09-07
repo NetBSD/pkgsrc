@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2012/03/22 11:51:48 obache Exp $
+# $NetBSD: Makefile,v 1.3 2014/09/07 12:26:41 obache Exp $
 
-DISTNAME=	suse_glx-${SUSE_VERSION}
+PKGNAME=	suse_glx-${SUSE_VERSION}
 PKGREVISION=	1
 CATEGORIES=	emulators
 RPMPKGS+=	Mesa-7.11-11.1.2.${SUSE_ARCH}

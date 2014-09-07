@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/12/05 11:42:15 obache Exp $
+# $NetBSD: Makefile,v 1.2 2014/09/07 12:26:42 obache Exp $
 
-DISTNAME=	suse_freetype2-${SUSE_VERSION}
+PKGNAME=	suse_freetype2-${SUSE_VERSION}
 CATEGORIES=	emulators
 RPMPKGS+=	libfreetype6-2.5.0.1-2.1.2.${SUSE_ARCH}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2014/05/05 02:08:20 obache Exp $
+# $NetBSD: Makefile.common,v 1.25 2014/09/07 12:26:40 obache Exp $
 
 SUSE_PKG=		yes
 SUSE_VERSION=		10.0
@@ -57,7 +57,7 @@ PATCHDIR=		${SUSE_PKGSRCDIR}/patches
 PKGDIR=			${SUSE_PKGSRCDIR}
 
 .if defined(SUSE_COMPAT32)
-PKGNAME:=		${DISTNAME:S/^suse_/suse32_/}
+PKGNAME:=		${PKGNAME:S/^suse_/suse32_/}
 COMMENT:=		${COMMENT:S/Linux/Linux 32-bit/}
 LINUX_BASE=		linux32
 .else
