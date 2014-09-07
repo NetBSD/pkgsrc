@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2014/09/06 20:01:58 wiz Exp $
+$NetBSD: distinfo,v 1.9 2014/09/07 12:15:01 wiz Exp $
 
-SHA1 (par2/v0.6.8.tar.gz) = 4768cc3e2b437c518754ad0370f6c8ccd99eb0fa
-RMD160 (par2/v0.6.8.tar.gz) = 5c9f9b78fc4d494f363ebb8bd4beab73df9ca680
-Size (par2/v0.6.8.tar.gz) = 2694594 bytes
+SHA1 (par2/v0.6.10.tar.gz) = 561184836834c14d30ad6205f85492a762d03902
+RMD160 (par2/v0.6.10.tar.gz) = 0919ab51a6e0717015f38248754afc9e592880e5
+Size (par2/v0.6.10.tar.gz) = 2703897 bytes
 SHA1 (patch-diskfile.cpp) = c2319215a6438322edeb28c4413a0a26dcade2d5
