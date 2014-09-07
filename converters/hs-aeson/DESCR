@@ -1,0 +1,4 @@
+A JSON parsing and encoding library optimized for ease of use and high
+performance.
+To get started, see the documentation for the Data.Aeson module.
+(A note on naming: in Greek mythology, Aeson was the father of Jason.)
