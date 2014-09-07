@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3440 2014/09/07 12:20:19 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3441 2014/09/07 12:21:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4402,3 +4402,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-B-Hooks-EndOfScope to 0.13 [wiz 2014-09-07]
 	Updated devel/p5-namespace-clean to 0.25 [wiz 2014-09-07]
 	Updated devel/p5-IO-CaptureOutput to 1.11.03 [wiz 2014-09-07]
+	Updated devel/p5-strictures to 1.005005 [wiz 2014-09-07]
