@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2014/08/22 21:58:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/09/07 20:43:49 wiz Exp $
 bin/ttfread
 include/cupsfilters/colord.h
+include/cupsfilters/colormanager.h
 include/cupsfilters/driver.h
 include/cupsfilters/image.h
 include/cupsfilters/raster.h
@@ -52,13 +53,19 @@ share/cups/banners/unclassified
 share/cups/charsets/pdf.utf-8
 share/cups/charsets/pdf.utf-8.heavy
 share/cups/charsets/pdf.utf-8.simple
+share/cups/data/classified.pdf
+share/cups/data/confidential.pdf
 share/cups/data/default-testpage.pdf
 share/cups/data/default.pdf
 share/cups/data/form_english.pdf
 share/cups/data/form_english_in.odt
 share/cups/data/form_russian.pdf
 share/cups/data/form_russian_in.odt
+share/cups/data/secret.pdf
+share/cups/data/standard.pdf
 share/cups/data/testprint
+share/cups/data/topsecret.pdf
+share/cups/data/unclassified.pdf
 share/cups/drv/cupsfilters.drv
 share/cups/mime/cupsfilters.convs
 share/cups/mime/cupsfilters.types
