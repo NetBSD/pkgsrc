@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/04/08 10:07:45 obache Exp $
+# $NetBSD: Makefile,v 1.5 2014/09/07 12:26:43 obache Exp $
 
-DISTNAME=	suse_gtk2-${SUSE_VERSION}
+PKGNAME=	suse_gtk2-${SUSE_VERSION}
 PKGREVISION=	3
 CATEGORIES=	emulators
 RPMPKGS+=	libcairo2-1.12.16-3.1.3.${SUSE_ARCH}
