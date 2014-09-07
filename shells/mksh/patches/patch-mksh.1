@@ -1,13 +1,12 @@
-$NetBSD: patch-mksh.1,v 1.5 2014/01/26 08:57:32 bsiegert Exp $
+$NetBSD: patch-mksh.1,v 1.6 2014/09/07 12:46:31 bsiegert Exp $
 
 Kill the .Dt override and restore installation a normal man page.
---- mksh.1.orig	2014-01-11 18:10:06.000000000 +0000
+--- mksh.1.orig	2014-07-29 17:26:49.000000000 +0000
 +++ mksh.1
-@@ -59,22 +59,7 @@
- .	ds ha ^
+@@ -60,21 +60,11 @@
  .	ds en \(em
  .\}
--.\"
+ .\"
 -.\" Implement .Dd with the Mdocdate RCS keyword
 -.\"
 -.rn Dd xD
@@ -18,12 +17,12 @@ Kill the .Dt override and restore installation a normal man page.
 -.el .xD \\$1 \\$2 \\$3 \\$4 \\$5 \\$6 \\$7 \\$8
 -..
 -.\"
--.\" .Dd must come before definition of .Mx, because when called
--.\" with -mandoc, it might implement .Mx itself, but we want to
--.\" use our own definition. And .Dd must come *first*, always.
--.\"
--.Dd $Mdocdate: January 11 2014 $
-+.Dd January 11 2014
+ .\" .Dd must come before definition of .Mx, because when called
+ .\" with -mandoc, it might implement .Mx itself, but we want to
+ .\" use our own definition. And .Dd must come *first*, always.
+ .\"
+-.Dd $Mdocdate: July 29 2014 $
++.Dd July 29, 2014
  .\"
  .\" Check which macro package we use, and do other -mdoc setup.
  .\"
