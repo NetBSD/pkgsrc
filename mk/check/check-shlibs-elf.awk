@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs-elf.awk,v 1.7 2014/09/06 16:57:51 jperkin Exp $
+# $NetBSD: check-shlibs-elf.awk,v 1.8 2014/09/07 21:53:41 jperkin Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -114,7 +114,7 @@ function checkshlib(DSO, needed, rpath, found, dso_rath, got_rpath, nrpath) {
 		}
 	}
 	if (!got_rpath)
-		split(system_rpath, rpath, ":")
+		nrpath = split(system_rpath, rpath, ":")
 	close(cmd)
 	for (p in rpath) {
 		if (rpath[p] == wrkdir ||
