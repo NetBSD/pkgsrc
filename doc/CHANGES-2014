@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3457 2014/09/07 20:27:24 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3458 2014/09/07 20:28:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4419,3 +4419,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/py-html2text to 2014.9.7 [wiz 2014-09-07]
 	Updated devel/py-py to 1.4.24 [wiz 2014-09-07]
 	Updated time/py-pytz to 2014.7 [wiz 2014-09-07]
+	Updated devel/py-test to 2.6.2 [wiz 2014-09-07]
