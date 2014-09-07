@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3463 2014/09/07 21:08:22 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.3464 2014/09/07 21:39:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4425,3 +4425,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated print/cups-filters to 1.0.58 [wiz 2014-09-07]
 	Updated print/cups to 1.7.5 [wiz 2014-09-07]
 	Added converters/hs-aeson version 0.7.0.6 [szptvlfn 2014-09-07]
+	Updated audio/libopenmpt to 0.2.4259beta7 [wiz 2014-09-07]
