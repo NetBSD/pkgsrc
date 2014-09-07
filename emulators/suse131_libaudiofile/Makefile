@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/04/17 00:08:34 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/09/07 12:26:43 obache Exp $
 
-DISTNAME=	suse_libaudiofile-${SUSE_VERSION}
+PKGNAME=	suse_libaudiofile-${SUSE_VERSION}
 CATEGORIES=	emulators
 RPMPKGS+=	libaudiofile1-0.3.6-2.1.2.${SUSE_ARCH}
 
