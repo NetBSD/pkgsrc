@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2007/07/29 05:18:48 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2014/09/07 12:26:39 obache Exp $
 
-DISTNAME=	suse_gtk2-${SUSE_VERSION}
+PKGNAME=	suse_gtk2-${SUSE_VERSION}
 PKGREVISION=	4
 CATEGORIES=	emulators
 DISTFILES=	atk-1.10.3-2.${SUSE_ARCH}.rpm				\
