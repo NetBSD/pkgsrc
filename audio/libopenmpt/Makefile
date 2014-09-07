@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/08/26 10:44:15 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/09/07 21:38:59 wiz Exp $
 
-DISTNAME=	libopenmpt-0.2.4115-beta5
+DISTNAME=	libopenmpt-0.2.4259-beta7
 PKGNAME=	${DISTNAME:S/-beta/beta/}
 CATEGORIES=	audio
 MASTER_SITES=	http://lib.openmpt.org/files/libopenmpt/src/
@@ -16,12 +16,10 @@ WRKSRC=		${WRKDIR}/${DISTNAME:C/-beta.*//}
 USE_LANGUAGES=	c c++
 USE_TOOLS=	gmake pkg-config
 
-# installation uses non-portable 'install -D'
-# http://bugs.openmpt.org/view.php?id=581
-MAKE_FLAGS+=	INSTALL_PROGRAM=${INSTALL_PROGRAM:Q}
-MAKE_FLAGS+=	INSTALL_DATA=${INSTALL_DATA:Q}
-MAKE_FLAGS+=	PKGMANDIR=${PKGMANDIR:Q}
-INSTALLATION_DIRS=	bin include/libopenmpt lib/pkgconfig ${PKGMANDIR}/man1 share/doc/libopenmpt/examples
+MAKE_FLAGS+=			MANDIR=${PREFIX}/${PKGMANDIR}
+MAKE_FLAGS+=			INSTALL_LIB=${INSTALL_LIB:Q}
+PKGCONFIG_OVERRIDE=		bin/libopenmpt.pc
+PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 .include "options.mk"
 
