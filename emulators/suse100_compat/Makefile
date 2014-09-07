@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2007/07/29 05:18:41 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2014/09/07 12:26:39 obache Exp $
 
-DISTNAME=	suse_compat-${SUSE_VERSION}
+PKGNAME=	suse_compat-${SUSE_VERSION}
 PKGREVISION=	3
 CATEGORIES=	emulators
 DISTFILES+=	compat-2004.11.13-4.${SUSE_ARCH}.rpm			\

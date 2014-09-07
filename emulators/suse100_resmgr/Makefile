@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2008/09/03 09:35:43 obache Exp $
+# $NetBSD: Makefile,v 1.3 2014/09/07 12:26:40 obache Exp $
 
-DISTNAME=	suse_resmgr-${SUSE_VERSION}
+PKGNAME=	suse_resmgr-${SUSE_VERSION}
 PKGREVISION=	1
 CATEGORIES=	emulators
 DISTFILES=	resmgr-0.9.8_SVNr57-2.3.${SUSE_ARCH}.rpm

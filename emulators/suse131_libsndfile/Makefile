@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/12/05 11:42:16 obache Exp $
+# $NetBSD: Makefile,v 1.2 2014/09/07 12:26:43 obache Exp $
 
-DISTNAME=	suse_libsndfile-${SUSE_VERSION}
+PKGNAME=	suse_libsndfile-${SUSE_VERSION}
 CATEGORIES=	emulators
 RPMPKGS+=	libsndfile1-1.0.25-17.1.2.${SUSE_ARCH}
 RPMPKGS+=	libFLAC8-1.3.0-2.1.2.${SUSE_ARCH}

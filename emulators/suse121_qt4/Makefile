@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2013/03/12 11:25:17 obache Exp $
+# $NetBSD: Makefile,v 1.5 2014/09/07 12:26:42 obache Exp $
 
-DISTNAME=	suse_qt4-${SUSE_VERSION}
+PKGNAME=	suse_qt4-${SUSE_VERSION}
 PKGREVISION=	3
 CATEGORIES=	emulators
 RPMUPDPKGS+=	libqt4-4.7.4-19.21.1.${SUSE_ARCH}

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/12/05 11:42:16 obache Exp $
+# $NetBSD: Makefile,v 1.2 2014/09/07 12:26:44 obache Exp $
 
-DISTNAME=	suse_locale-${SUSE_VERSION}
+PKGNAME=	suse_locale-${SUSE_VERSION}
 CATEGORIES=	emulators
 RPMPKGS+=	glibc-locale-2.18-4.4.1.${SUSE_ARCH}
 
