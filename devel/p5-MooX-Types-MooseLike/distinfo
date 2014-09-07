@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/08/21 09:00:01 wen Exp $
+$NetBSD: distinfo,v 1.4 2014/09/07 12:24:06 wiz Exp $
 
-SHA1 (MooX-Types-MooseLike-0.25.tar.gz) = 54ee1cf2e772232cfdd2d2fb8c49b1cafeed1e7b
-RMD160 (MooX-Types-MooseLike-0.25.tar.gz) = 0db806d73239297884b8cd24a5ca732cef244dcf
-Size (MooX-Types-MooseLike-0.25.tar.gz) = 15254 bytes
+SHA1 (MooX-Types-MooseLike-0.27.tar.gz) = db67ce3ee4ae14ce531820234626567b288aa408
+RMD160 (MooX-Types-MooseLike-0.27.tar.gz) = a3b12c71b6ec30dacc2180477089f3e9daffafe3
+Size (MooX-Types-MooseLike-0.27.tar.gz) = 15307 bytes
