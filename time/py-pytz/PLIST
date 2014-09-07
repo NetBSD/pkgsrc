@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2014/03/31 08:32:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2014/09/07 20:27:15 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -269,6 +269,7 @@ ${PYSITELIB}/pytz/zoneinfo/Asia/Beirut
 ${PYSITELIB}/pytz/zoneinfo/Asia/Bishkek
 ${PYSITELIB}/pytz/zoneinfo/Asia/Brunei
 ${PYSITELIB}/pytz/zoneinfo/Asia/Calcutta
+${PYSITELIB}/pytz/zoneinfo/Asia/Chita
 ${PYSITELIB}/pytz/zoneinfo/Asia/Choibalsan
 ${PYSITELIB}/pytz/zoneinfo/Asia/Chongqing
 ${PYSITELIB}/pytz/zoneinfo/Asia/Chungking
@@ -326,6 +327,7 @@ ${PYSITELIB}/pytz/zoneinfo/Asia/Samarkand
 ${PYSITELIB}/pytz/zoneinfo/Asia/Seoul
 ${PYSITELIB}/pytz/zoneinfo/Asia/Shanghai
 ${PYSITELIB}/pytz/zoneinfo/Asia/Singapore
+${PYSITELIB}/pytz/zoneinfo/Asia/Srednekolymsk
 ${PYSITELIB}/pytz/zoneinfo/Asia/Taipei
 ${PYSITELIB}/pytz/zoneinfo/Asia/Tashkent
 ${PYSITELIB}/pytz/zoneinfo/Asia/Tbilisi
@@ -606,3 +608,4 @@ ${PYSITELIB}/pytz/zoneinfo/iso3166.tab
 ${PYSITELIB}/pytz/zoneinfo/localtime
 ${PYSITELIB}/pytz/zoneinfo/posixrules
 ${PYSITELIB}/pytz/zoneinfo/zone.tab
+${PYSITELIB}/pytz/zoneinfo/zone1970.tab
