@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3461 2014/09/07 20:43:58 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3462 2014/09/07 20:49:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4423,3 +4423,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-tortoisehg to 3.1.1 [wiz 2014-09-07]
 	Updated games/py-trueskill to 0.4.3 [wiz 2014-09-07]
 	Updated print/cups-filters to 1.0.58 [wiz 2014-09-07]
+	Updated print/cups to 1.7.5 [wiz 2014-09-07]
