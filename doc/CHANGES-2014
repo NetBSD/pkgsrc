@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3455 2014/09/07 20:25:12 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3456 2014/09/07 20:26:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4417,3 +4417,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated converters/help2man to 1.46.2 [wiz 2014-09-07]
 	Updated audio/musicpd to 0.18.13 [wiz 2014-09-07]
 	Updated textproc/py-html2text to 2014.9.7 [wiz 2014-09-07]
+	Updated devel/py-py to 1.4.24 [wiz 2014-09-07]
