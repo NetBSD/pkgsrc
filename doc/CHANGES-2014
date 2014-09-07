@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3447 2014/09/07 12:29:38 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3448 2014/09/07 12:31:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4409,3 +4409,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/p5-Devel-CheckBin version 0.02 [wiz 2014-09-07]
 	Updated devel/p5-Sub-Name to 0.12 [wiz 2014-09-07]
 	Updated devel/p5-Devel-CheckLib to 1.02 [wiz 2014-09-07]
+	Updated graphics/p5-Image-ExifTool to 9.70 [wiz 2014-09-07]
