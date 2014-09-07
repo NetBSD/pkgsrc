@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3442 2014/09/07 12:21:47 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3443 2014/09/07 12:22:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4404,3 +4404,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-IO-CaptureOutput to 1.11.03 [wiz 2014-09-07]
 	Updated devel/p5-strictures to 1.005005 [wiz 2014-09-07]
 	Updated devel/p5-Devel-GlobalDestruction to 0.13 [wiz 2014-09-07]
+	Updated devel/p5-Class-Method-Modifiers to 2.11 [wiz 2014-09-07]
