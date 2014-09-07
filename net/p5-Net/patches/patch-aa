@@ -1,40 +1,16 @@
-$NetBSD: patch-aa,v 1.9 2005/12/01 20:25:44 wiz Exp $
+$NetBSD: patch-aa,v 1.10 2014/09/07 12:34:19 wiz Exp $
 
---- Configure.orig	Thu Mar 22 06:15:29 2001
-+++ Configure	Sat Nov 17 02:40:26 2001
-@@ -258,18 +258,19 @@
+--- Configure.orig	2014-05-30 22:05:23.000000000 +0000
++++ Configure
+@@ -258,6 +258,7 @@ $oldcfg{'test_hosts'} = 1 unless exists 
  
  #---------------------------------------------------------------------------
  
--if($have_old && !$opt_d)
-- {
--  $msg = <<EDQ;
--
--Ah, I see you already have installed libnet before.
--
--Do you want to modify/update your configuration (y|n) ?
--EDQ
--
-- $opt_d = 1
--	unless get_bool($msg,0);
-- }
-+#if($have_old && !$opt_d)
-+# {
-+#  $msg = <<EDQ;
-+#
-+#Ah, I see you already have installed libnet before.
-+#
-+#Do you want to modify/update your configuration (y|n) ?
-+#EDQ
-+#
-+# $opt_d = 1
-+#	unless get_bool($msg,0);
-+# }
-+$opt_d = 0;
- 
- #---------------------------------------------------------------------------
- 
-@@ -286,7 +287,7 @@
++$have_old = 0;
+ if($have_old && !$opt_d)
+  {
+   $msg = <<EDQ;
+@@ -286,7 +287,7 @@ it will require you to be on-line.
  Do you want me to perform hostname lookups (y|n) ?
  EDQ
  
@@ -43,47 +19,25 @@ $NetBSD: patch-aa,v 1.9 2005/12/01 20:25:44 wiz Exp $
  
  print <<EDQ unless $cfg{'test_exist'};
  
-@@ -301,21 +302,21 @@
- 
- #---------------------------------------------------------------------------
- 
--print <<EDQ;
--
--The following questions all require a list of host names, separated
--with spaces. If you do not have a host available for any of the
--services, then enter a single space, followed by <CR>. To accept the
--default, hit <CR>
--
--EDQ
-+# print <<EDQ;
-+# 
-+# The following questions all require a list of host names, separated
-+# with spaces. If you do not have a host available for any of the
-+# services, then enter a single space, followed by <CR>. To accept the
-+# default, hit <CR>
-+# 
-+# EDQ
- 
- $msg = 'Enter a list of available NNTP hosts :';
- 
+@@ -315,7 +316,7 @@ $msg = 'Enter a list of available NNTP h
  $def = $oldcfg{'nntp_hosts'} ||
- 	[ default_hostname($ENV{NNTPSERVER},$ENV{NEWSHOST},'news') ];
+         [ default_hostname($ENV{NNTPSERVER},$ENV{NEWSHOST},'news') ];
  
 -$cfg{'nntp_hosts'} = get_host_list($msg,$def);
 +$cfg{'nntp_hosts'} = $def;
  
  #---------------------------------------------------------------------------
  
-@@ -324,7 +325,7 @@
+@@ -324,7 +325,7 @@ $msg = 'Enter a list of available SMTP h
  $def = $oldcfg{'smtp_hosts'} ||
- 	[ default_hostname(split(/:/,$ENV{SMTPHOSTS} || ""), 'mailhost') ];
+         [ default_hostname(split(/:/,$ENV{SMTPHOSTS} || ""), 'mailhost') ];
  
 -$cfg{'smtp_hosts'} = get_host_list($msg,$def);
 +$cfg{'smtp_hosts'} = $def;
  
  #---------------------------------------------------------------------------
  
-@@ -332,7 +333,7 @@
+@@ -332,7 +333,7 @@ $msg = 'Enter a list of available POP3 h
  
  $def = $oldcfg{'pop3_hosts'} || [];
  
@@ -92,7 +46,7 @@ $NetBSD: patch-aa,v 1.9 2005/12/01 20:25:44 wiz Exp $
  
  #---------------------------------------------------------------------------
  
-@@ -340,7 +341,7 @@
+@@ -340,7 +341,7 @@ $msg = 'Enter a list of available SNPP h
  
  $def = $oldcfg{'snpp_hosts'} || [];
  
@@ -101,16 +55,16 @@ $NetBSD: patch-aa,v 1.9 2005/12/01 20:25:44 wiz Exp $
  
  #---------------------------------------------------------------------------
  
-@@ -349,7 +350,7 @@
+@@ -349,7 +350,7 @@ $msg = 'Enter a list of available PH Hos
  $def = $oldcfg{'ph_hosts'} ||
- 	[ default_hostname('dirserv') ];
+         [ default_hostname('dirserv') ];
  
 -$cfg{'ph_hosts'}   =  get_host_list($msg,$def);
 +$cfg{'ph_hosts'}   =  $def;
  
  #---------------------------------------------------------------------------
  
-@@ -357,7 +358,7 @@
+@@ -357,7 +358,7 @@ $msg = 'Enter a list of available TIME H
  
  $def = $oldcfg{'time_hosts'} || [];
  
@@ -119,7 +73,7 @@ $NetBSD: patch-aa,v 1.9 2005/12/01 20:25:44 wiz Exp $
  
  #---------------------------------------------------------------------------
  
-@@ -365,7 +366,7 @@
+@@ -365,7 +366,7 @@ $msg = 'Enter a list of available DAYTIM
  
  $def = $oldcfg{'daytime_hosts'} || $oldcfg{'time_hosts'};
  
@@ -128,7 +82,7 @@ $NetBSD: patch-aa,v 1.9 2005/12/01 20:25:44 wiz Exp $
  
  #---------------------------------------------------------------------------
  
-@@ -378,7 +379,8 @@
+@@ -378,7 +379,8 @@ If you use a SOCKS firewall answer no
  (y|n) ?
  EDQ
  
@@ -138,7 +92,7 @@ $NetBSD: patch-aa,v 1.9 2005/12/01 20:25:44 wiz Exp $
  
    $msg = <<'EDQ';
  What series of FTP commands do you need to send to your
-@@ -489,15 +491,15 @@
+@@ -489,15 +491,15 @@ current list and an empty line to contin
  
  #---------------------------------------------------------------------------
  
@@ -163,7 +117,7 @@ $NetBSD: patch-aa,v 1.9 2005/12/01 20:25:44 wiz Exp $
  
  if (defined $cfg{'ftp_firewall'}) {
    $msg = "\nShould all FTP connections via a firewall/proxy be passive (y|n) ?";
-@@ -515,16 +517,16 @@
+@@ -515,16 +517,16 @@ else {
  
  $def = $oldcfg{'ftp_int_passive'} || 0;
  
@@ -184,7 +138,7 @@ $NetBSD: patch-aa,v 1.9 2005/12/01 20:25:44 wiz Exp $
  
  #---------------------------------------------------------------------------
  
-@@ -540,7 +542,7 @@
+@@ -540,7 +542,7 @@ unless the hosts are local.
  Do you want me to run these tests (y|n) ?
  EDQ
  
