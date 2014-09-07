@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3450 2014/09/07 17:56:44 bsiegert Exp $
+$NetBSD: CHANGES-2014,v 1.3451 2014/09/07 20:14:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4412,3 +4412,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/p5-Image-ExifTool to 9.70 [wiz 2014-09-07]
 	Updated net/p5-Net to 1.27 [wiz 2014-09-07]
 	Updated shells/mksh to 50b [bsiegert 2014-09-07]
+	Updated misc/dialog to 1.2.20140901 [wiz 2014-09-07]
