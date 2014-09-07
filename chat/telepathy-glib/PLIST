@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2013/05/04 22:38:14 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.15 2014/09/07 23:00:55 prlw1 Exp $
 include/telepathy-1.0/telepathy-glib/_gen/error-str.h
 include/telepathy-1.0/telepathy-glib/_gen/genums.h
 include/telepathy-1.0/telepathy-glib/_gen/gtypes.h
@@ -271,7 +271,9 @@ share/gtk-doc/html/telepathy-glib/telepathy-glib-connection-mail.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-connection-manager.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-connection-powersaving.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-connection-presence.html
+share/gtk-doc/html/telepathy-glib/telepathy-glib-connection-renaming.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-connection-requests.html
+share/gtk-doc/html/telepathy-glib/telepathy-glib-connection-sidecars.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-connection-simple-presence.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-connection.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-contact-search-result.html
