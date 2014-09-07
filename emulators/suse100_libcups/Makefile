@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2008/09/03 09:26:13 obache Exp $
+# $NetBSD: Makefile,v 1.7 2014/09/07 12:26:39 obache Exp $
 
-DISTNAME=	suse_libcups-${SUSE_VERSION}
+PKGNAME=	suse_libcups-${SUSE_VERSION}
 PKGREVISION=	4
 CATEGORIES=	emulators
 DISTFILES=	cups-libs-1.1.23-21.16.${SUSE_ARCH}.rpm
