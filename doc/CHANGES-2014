@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3437 2014/09/07 12:16:12 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3438 2014/09/07 12:18:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4399,3 +4399,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-ExtUtils-LibBuilder to 0.06 [wiz 2014-09-06]
 	Updated archivers/par2 to 0.6.10 [wiz 2014-09-07]
 	Updated mail/p5-MIME-Types to 2.08 [wiz 2014-09-07]
+	Updated devel/p5-B-Hooks-EndOfScope to 0.13 [wiz 2014-09-07]
