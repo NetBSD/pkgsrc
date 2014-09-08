@@ -1,4 +1,6 @@
-$NetBSD: patch-configure.ac,v 1.1 2013/05/11 19:49:15 riastradh Exp $
+$NetBSD: patch-configure.ac,v 1.2 2014/09/08 12:06:48 wiz Exp $
+
+Make gtk3-atk-bridge an option to avoid unwanted dbus dependency.
 
 --- configure.ac.orig	2013-01-07 10:50:02.000000000 +0000
 +++ configure.ac
