@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/09/08 11:38:17 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/09/08 12:12:22 wiz Exp $
 
 DISTNAME=	mpv-0.5.1
 CATEGORIES=	multimedia
@@ -13,19 +13,10 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 # ${WRKSRC}/bootstrap.py mentions needed version
 BUILD_DEPENDS+=	waf>=1.7.16:../../devel/waf
 
-WAF_ENV=	PATH=${PATH:Q} CC=${CC:Q} CXX=${CXX:Q} PREFIX=${PREFIX} \
-		CFLAGS=${CFLAGS:Q} \
-		CXXFLAGS=${CXXFLAGS:Q} LINKFLAGS=${LDFLAGS:Q} DESTDIR=${DESTDIR}
-WAF_ARGS=	--mandir=${PREFIX}/${PKGMANDIR}
-
 PYTHON_FOR_BUILD_ONLY=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-docutils
 
 USE_TOOLS+=	perl pkg-config
-
-.if defined(MAKE_JOBS)
-WAF_ENV+=	JOBS=${MAKE_JOBS:Q}
-.endif
 
 MAKE_DIRS=		${PKG_SYSCONFDIR}/mpv
 INSTALLATION_DIRS=	share/examples/mpv
@@ -37,20 +28,11 @@ SUBST_FILES.audio+=	stream/audio_in.c waftools/checks/custom.py wscript
 SUBST_STAGE.audio=	pre-configure
 SUBST_MESSAGE.audio=	Fixing path to audio device.
 
-post-extract:
-	cp ${PREFIX}/bin/waf ${WRKSRC}
-
-do-configure:
-	cd ${WRKSRC} && env ${WAF_ENV} ./waf ${WAF_ARGS} ${WAF_CONFIGURE_ARGS} configure
-
-do-build:
-	cd ${WRKSRC} && env ${WAF_ENV} ./waf ${WAF_ARGS}
-
-do-install:
-	cd ${WRKSRC} && env ${WAF_ENV} ./waf ${WAF_ARGS} install
+post-install:
 	cd ${DESTDIR}${PREFIX} && ${MV} etc/mpv/encoding-profiles.conf share/examples/mpv
 
 .include "options.mk"
+.include "../../devel/waf/waf.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../lang/python/application.mk"
