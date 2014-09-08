@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.869 2014/09/08 12:03:32 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.870 2014/09/08 12:05:10 wiz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3897,7 +3897,7 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 				# Only works on IRIX, but is usually enclosed with
 				# the proper preprocessor conditional.
 
-			} elsif ($value =~ m"^-[OWfgm]") {
+			} elsif ($value =~ m"^-[OWfgm]|^-std=.*") {
 				$opt_debug_unchecked and $line->log_debug("Unchecked compiler flag ${value} in ${varname}.");
 
 			} elsif ($value =~ m"^-.*") {
