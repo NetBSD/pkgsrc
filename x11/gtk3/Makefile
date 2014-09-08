@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2014/07/19 20:32:15 richard Exp $
+# $NetBSD: Makefile,v 1.53 2014/09/08 11:19:47 prlw1 Exp $
 
-DISTNAME=	gtk+-3.10.7
+DISTNAME=	gtk+-3.12.2
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
-PKGREVISION=	4
 CATEGORIES=	x11 gnome
 MASTER_SITES=	ftp://ftp.gtk.org/pub/gtk/${PKGVERSION_NOREV:R}/ \
 		${MASTER_SITE_GNOME:=sources/gtk+/${PKGVERSION_NOREV:R}/}
@@ -98,5 +97,9 @@ BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.12.0
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+# gtk-update-icon-cache --source  is called during build
+NOOP_GTK_UPDATE_ICON_CACHE=
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 
 .include "../../mk/bsd.pkg.mk"
