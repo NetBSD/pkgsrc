@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3475 2014/09/08 21:51:39 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3476 2014/09/08 21:55:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4437,3 +4437,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/goaccess to 0.8.4 [wiedi 2014-09-08]
 	Updated graphics/netpbm to 10.67.03 [wiz 2014-09-08]
 	Updated graphics/netpbm to 10.67.04 [wiz 2014-09-08]
+	Updated graphics/netpbm to 10.67.05 [wiz 2014-09-08]
