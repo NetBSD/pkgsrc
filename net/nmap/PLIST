@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2013/09/14 14:11:25 drochner Exp $
+@comment $NetBSD: PLIST,v 1.19 2014/09/08 12:38:44 wiz Exp $
 bin/ncat
 ${PLIST.ndiff}bin/ndiff
 bin/nmap
@@ -829,7 +829,8 @@ ${PLIST.lua}share/nmap/scripts/vnc-info.nse
 ${PLIST.lua}share/nmap/scripts/voldemort-info.nse
 ${PLIST.lua}share/nmap/scripts/vuze-dht-info.nse
 ${PLIST.lua}share/nmap/scripts/wdb-version.nse
-${PLIST.lua}share/nmap/scripts/whois.nse
+${PLIST.lua}share/nmap/scripts/whois-domain.nse
+${PLIST.lua}share/nmap/scripts/whois-ip.nse
 ${PLIST.lua}share/nmap/scripts/wsdd-discover.nse
 ${PLIST.lua}share/nmap/scripts/x11-access.nse
 ${PLIST.lua}share/nmap/scripts/xdmcp-discover.nse
