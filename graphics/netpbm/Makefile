@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.190 2014/09/08 21:51:25 wiz Exp $
+# $NetBSD: Makefile,v 1.191 2014/09/08 21:55:04 wiz Exp $
 
-DISTNAME=	netpbm-10.67.04
+DISTNAME=	netpbm-10.67.05
 CATEGORIES=	graphics
 MASTER_SITES=	#
 # manually created from svn checkout of
