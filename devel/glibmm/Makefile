@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2014/09/06 15:31:23 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2014/09/08 11:42:08 prlw1 Exp $
 
 DISTNAME=	glibmm-2.40.0
-CATEGORIES=	devel
+CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glibmm/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
@@ -20,7 +20,7 @@ EXTRACT_USING=		bsdtar # added for pkg/42258
 PKGCONFIG_OVERRIDE+=	gio/giomm.pc.in
 PKGCONFIG_OVERRIDE+=	glib/glibmm.pc.in
 
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.30.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.40.0
 BUILDLINK_API_DEPENDS.libsigcpp+=	libsigc++>=2.2.10
 
 # x11/gtkmm needs these tools
