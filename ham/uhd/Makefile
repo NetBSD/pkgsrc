@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2014/09/08 08:49:39 mef Exp $
+# $NetBSD: Makefile,v 1.3 2014/09/08 10:02:02 obache Exp $
 
-DISTNAME=		release_003_007_002
+DISTNAME=		uhd-release_003_007_002
 PKGNAME=		uhd-3.7.2
 CATEGORIES=		ham
-MASTER_SITE=		https://github.com/EttusResearch/uhd/archive
+MASTER_SITES=		-https://github.com/EttusResearch/uhd/archive/${DISTNAME:S/uhd-//}${EXTRACT_SUFX}
 EXTRACT_SUFX=		.zip
-DIST_SUBDIR=		uhd
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://code.ettus.com/redmine/ettus/projects/uhd/wiki
@@ -14,11 +13,11 @@ LICENSE=		gnu-gpl-v2
 
 BUILD_DEPENDS+=		${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
 USE_LANGUAGES=		c c++
-USE_TOOLS=		cmake wget pkg-config
+USE_TOOLS=		cmake pkg-config
 
 # Please note distribution has many stuff under uhd/, but build itself
 # needs under host/ only.  Those uhd/ stuff will be handled post-{patch,install}:
-WRKSRC=			${WRKDIR}/uhd-${DISTNAME}/host
+WRKSRC=			${WRKDIR}/${DISTNAME}/host
 
 # The files with their name uhd-xxxx, are moved down from uhd/xxxx for this process.
 REPLACE_PYTHON=	\
@@ -75,13 +74,6 @@ SUBST_SED.man=		-e '/UHD_INSTALL/s,$${PKG_MAN_DIR},${PREFIX}/${PKGMANDIR}/man1,'
 # is it default ? and redundent ?
 PLIST_SRC=	${PKGDIR}/PLIST
 .include "options.mk"
-# FETCH_USING at /etc/mk.conf doesn't good, (sorry), put work around for the target
-do-fetch:
-	if [   ! -f ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX} ] ; then \
-	  if [ ! -d ${DISTDIR}/${DIST_SUBDIR} ] ; then \
-	   ${MKDIR} ${DISTDIR}/${DIST_SUBDIR}; fi; \
-	  cd      ${DISTDIR}/${DIST_SUBDIR}; \
-	  wget --no-check-certificate --quiet ${MASTER_SITE}/${DISTNAME}${EXTRACT_SUFX} ;fi
 
 # Copy (beyond) upper directory files (which should be handled at post-install)
 # to receive REPLACE_PYTHON conversion ( otherwise above the range )
@@ -89,7 +81,7 @@ post-patch:
 	(cd ${WRKDIR}; \
 	for i in firmware fpga images ; do \
 	  ${MKDIR} ${WRKSRC}/uhd-$$i ;\
-	${CP} -r ${WRKDIR}/uhd-${DISTNAME}/$$i/* ${WRKSRC}/uhd-$$i ;\
+	${CP} -r ${WRKDIR}/${DISTNAME}/$$i/* ${WRKSRC}/uhd-$$i ;\
 	done)
 
 do-configure:
