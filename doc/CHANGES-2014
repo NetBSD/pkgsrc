@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3467 2014/09/08 07:16:28 mef Exp $
+$NetBSD: CHANGES-2014,v 1.3468 2014/09/08 09:14:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4429,3 +4429,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated chat/telepathy-glib to 0.24.1 [prlw1 2014-09-07]
 	Updated net/socat to 1.7.2.4 [rodent 2014-09-07]
 	Added ham/uhd version 3.7.2rc1 [mef 2014-09-08]
+	Added sysutils/direvent version 5.0 [wiz 2014-09-08]
