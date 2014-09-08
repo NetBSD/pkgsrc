@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3466 2014/09/07 23:25:15 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.3467 2014/09/08 07:16:28 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4428,3 +4428,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/libopenmpt to 0.2.4259beta7 [wiz 2014-09-07]
 	Updated chat/telepathy-glib to 0.24.1 [prlw1 2014-09-07]
 	Updated net/socat to 1.7.2.4 [rodent 2014-09-07]
+	Added ham/uhd version 3.7.2rc1 [mef 2014-09-08]
