@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2013/02/16 11:24:40 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2014/09/08 21:24:45 wiz Exp $
 #
 
 DISTNAME=	subtitleripper-0.3-4
 PKGNAME=	subtitleripper-0.3.4
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	textproc graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=subtitleripper/}
 EXTRACT_SUFX=	.tgz
@@ -16,6 +16,7 @@ DEPENDS+=	gocr-[0-9]*:../../graphics/gocr
 
 USE_TOOLS+=		gmake
 WRKSRC=			${WRKDIR}/subtitleripper
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.netpbm}/include/netpbm
 INSTALLATION_DIRS=	bin libdata/subtitleripper share/doc/subtitleripper
 
 CONFLICTS+=	subtitleripper-0.3-[0-9]*
