@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2014/09/08 11:51:30 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2014/09/08 13:10:35 wiz Exp $
 
 BUILDLINK_TREE+=	gtk3
 
@@ -28,6 +28,7 @@ pkgbase := gtk3
 .  include "../../devel/at-spi2-atk/buildlink3.mk"
 .  endif
 .include "../../x11/libXcursor/buildlink3.mk"
+BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2nb2
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
