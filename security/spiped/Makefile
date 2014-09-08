@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2014/08/18 22:19:15 wiedi Exp $
+# $NetBSD: Makefile,v 1.10 2014/09/08 22:43:08 wiedi Exp $
 
-DISTNAME=	spiped-1.3.1
-PKGREVISION=	3
+DISTNAME=	spiped-1.4.1
 CATEGORIES=	net security
 MASTER_SITES=	http://www.tarsnap.com/spiped/
 EXTRACT_SUFX=	.tgz
