@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.868 2014/06/01 13:12:38 obache Exp $
+# $NetBSD: pkglint.pl,v 1.869 2014/09/08 12:03:32 wiz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -291,9 +291,9 @@ our $program		= $0;
 # Commonly used regular expressions.
 #
 
-use constant regex_dependency_lge => qr"^((?:\$\{[\w_]+\}|[\w_\.]|-[^\d])+)[<>]=?(\d[^-*?\[\]]*)$";
+use constant regex_dependency_lge => qr"^((?:\$\{[\w_]+\}|[\w_\.+]|-[^\d])+)[<>]=?(\d[^-*?\[\]]*)$";
 use constant regex_dependency_wildcard
-				=> qr"^((?:\$\{[\w_]+\}|[\w_\.]|-[^\d\[])+)-(?:\[0-9\]\*|\d[^-]*)$";
+				=> qr"^((?:\$\{[\w_]+\}|[\w_\.+]|-[^\d\[])+)-(?:\[0-9\]\*|\d[^-]*)$";
 use constant regex_gnu_configure_volatile_vars
 				=> qr"^(?:.*_)?(?:CFLAGS||CPPFLAGS|CXXFLAGS|FFLAGS|LDFLAGS|LIBS)$";
 use constant regex_mk_comment	=> qr"^ *\s*#(.*)$";
