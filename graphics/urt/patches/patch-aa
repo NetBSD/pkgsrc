@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2004/04/24 22:06:27 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2014/09/08 21:24:45 wiz Exp $
 
 --- config/urt.orig	1992-07-15 21:47:15.000000000 +0200
 +++ config/urt	2003-09-25 13:55:06.000000000 +0200
@@ -142,7 +142,7 @@ $NetBSD: patch-aa,v 1.6 2004/04/24 22:06:27 wiz Exp $
 -INCPBMPLUS = -I$(PBMDIR) -I$(PBMDIR)/ppm -I$(PBMDIR)/pgm -I$(PBMDIR)/pbm
 -LIBPBMPLUS = $(PBMDIR)/ppm/libppm.a $(PBMDIR)/pgm/libpgm.a \
 -		$(PBMDIR)/pbm/libpbm.a 
-+INCPBMPLUS = -I$(PBMDIR)/include
++INCPBMPLUS = -I$(PBMDIR)/include/netpbm
 +LIBPBMPLUS = -L$(PBMDIR)/lib -Wl,-R$(PBMDIR)/lib -lnetpbm
  #endif
  
