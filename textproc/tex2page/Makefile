@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2014/09/08 20:40:30 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2014/09/08 21:24:45 wiz Exp $
 
 DISTNAME=		tex2page
 DIST_SUBDIR=		tex2page-20060131
 PKGNAME=		tex2page-20060131
-PKGREVISION=		17
+PKGREVISION=		18
 CATEGORIES=		textproc
 MASTER_SITES=		http://www.ccs.neu.edu/home/dorai/tex2page/
 
@@ -24,7 +24,7 @@ DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
 
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
-USE_TOOLS+=		gs:run
+USE_TOOLS+=		gs:run perl
 
 CONFIGURE_ARGS+=	--dialect=guile
 
