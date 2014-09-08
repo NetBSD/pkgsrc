@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2014/07/20 17:43:29 adam Exp $
+# $NetBSD: Makefile,v 1.54 2014/09/08 16:57:01 wiedi Exp $
 
 DISTNAME=	${OPENVPN_DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${OPENVPN_MASTER_SITES}
 EXTRACT_SUFX=	.tar.xz
@@ -31,6 +32,8 @@ RCD_SCRIPTS=		openvpn
 INSTALLATION_DIRS+=	${EGDIR}/config
 INSTALLATION_DIRS+=	${EGDIR}/keys
 INSTALLATION_DIRS+=	${EGDIR}/scripts
+
+SMF_METHODS+=	openvpn
 
 .include "../../mk/bsd.prefs.mk"
 
