@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/09/08 07:12:05 mef Exp $
+# $NetBSD: Makefile,v 1.2 2014/09/08 08:49:39 mef Exp $
 
-DISTNAME=		003_007_002_rc1
-#DISTNAME=		uhd-images_003.007.002-rc1
-PKGNAME=		uhd-3.7.2rc1
+DISTNAME=		release_003_007_002
+PKGNAME=		uhd-3.7.2
 CATEGORIES=		ham
 MASTER_SITE=		https://github.com/EttusResearch/uhd/archive
-#MASTER_SITE+=		http://files.ettus.com/binaries/maint_images/archive
 EXTRACT_SUFX=		.zip
 DIST_SUBDIR=		uhd
 
