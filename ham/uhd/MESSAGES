@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGES,v 1.1 2014/09/08 07:12:05 mef Exp $
+Following directories are installed under ${PREFIX}/share/uhd
+  firmware      Source code for all microprocessors in USRP hardware
+  fpga          Source code for the UHD FPGA images
+  images        Package builder for FPGA and firmware images
+===========================================================================
