@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.37 2014/09/05 20:49:55 prlw1 Exp $
+# $NetBSD: Makefile.common,v 1.38 2014/09/08 08:33:59 jperkin Exp $
 #
 # used by devel/glib2/Makefile
 # used by devel/gdbus-codegen/Makefile
@@ -39,6 +39,8 @@ CONFIGURE_ARGS+=	--disable-man  # Requires xsltproc and Docbook.
 CONFIGURE_ARGS+=	--disable-modular-tests
 # Avoid unnecessary autotools invocation.
 CONFIGURE_ARGS+=	--disable-maintainer-mode
+
+CONFIGURE_ARGS.gnu-iconv=	--with-libiconv=gnu
 
 CONFIGURE_ENV+=		PERL_PATH=${PERL5:Q}
 
