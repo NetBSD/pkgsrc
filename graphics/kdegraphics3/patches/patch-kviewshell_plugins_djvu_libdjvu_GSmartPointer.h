@@ -1,17 +1,11 @@
-$NetBSD: patch-kviewshell_plugins_djvu_libdjvu_GSmartPointer.h,v 1.1 2014/01/09 20:11:27 jperkin Exp $
+$NetBSD: patch-kviewshell_plugins_djvu_libdjvu_GSmartPointer.h,v 1.2 2014/09/08 15:08:14 wiz Exp $
 
-Include sys/types.h for size_t on SunOS
+Include cstddef for size_t.
 
 --- kviewshell/plugins/djvu/libdjvu/GSmartPointer.h.orig	2005-09-10 08:19:20.000000000 +0000
 +++ kviewshell/plugins/djvu/libdjvu/GSmartPointer.h
-@@ -99,6 +99,10 @@
+@@ -56,2 +56,4 @@
  
- #include "DjVuGlobal.h"
- 
-+#ifdef __sun
-+#include <sys/types.h>
-+#endif
++#include <cstddef>
 +
- #ifdef HAVE_NAMESPACES
- namespace DJVU {
- # ifdef NOT_DEFINED // Just to fool emacs c++ mode
+ #ifndef _GSMARTPOINTER_H_
