@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.38 2014/09/08 08:33:59 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.39 2014/09/08 08:44:54 jperkin Exp $
 #
 # used by devel/glib2/Makefile
 # used by devel/gdbus-codegen/Makefile
@@ -40,6 +40,9 @@ CONFIGURE_ARGS+=	--disable-modular-tests
 # Avoid unnecessary autotools invocation.
 CONFIGURE_ARGS+=	--disable-maintainer-mode
 
+# When ICONV_TYPE=gnu ensure we explicitly use the GNU version, to avoid
+# conflicts between iconv.h from converters/libiconv and builtin libiconv
+# which may be non-GNU.
 CONFIGURE_ARGS.gnu-iconv=	--with-libiconv=gnu
 
 CONFIGURE_ENV+=		PERL_PATH=${PERL5:Q}
