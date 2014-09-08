@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.227 2014/08/11 23:10:51 wiz Exp $
+# $NetBSD: Makefile,v 1.228 2014/09/08 11:39:02 wiz Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -150,6 +150,7 @@ SUBDIR+=	mplayer
 SUBDIR+=	mplayer-plugin
 SUBDIR+=	mplayer-share
 SUBDIR+=	mplayerthumbs
+SUBDIR+=	mpv
 SUBDIR+=	ogle
 SUBDIR+=	ogle_gui
 SUBDIR+=	ogmtools
