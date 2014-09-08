@@ -245,6 +245,7 @@ gstreamer-gstcheck	Enable gstcheck support in gstreamer.
 gtk			Enable support for GTK.
 gtk2			Enable support for GTK2.
 gtk3			Enable support for GTK3.
+gtk3-atk-bridge		Enable ATK support.
 gtksourceview		Enable gtksourceview support.
 gtksourceview2		Enable gtksourceview2 support.
 gtkspell		Enable gtkspell support.
