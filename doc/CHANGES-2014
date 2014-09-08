@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3469 2014/09/08 11:32:23 prlw1 Exp $
+$NetBSD: CHANGES-2014,v 1.3470 2014/09/08 11:39:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4431,3 +4431,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added ham/uhd version 3.7.2rc1 [mef 2014-09-08]
 	Added sysutils/direvent version 5.0 [wiz 2014-09-08]
 	Updated x11/gtk3 to 3.12.2 [prlw1 2014-09-08]
+	Added multimedia/mpv version 0.5.1 [wiz 2014-09-08]
