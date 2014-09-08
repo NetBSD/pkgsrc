@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2013/02/16 11:21:39 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.31 2014/09/08 20:40:29 wiz Exp $
 
 DISTNAME=	aview-1.3.0rc1
 PKGNAME=	aview-1.3.0.1
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	graphics converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aa-project/}
 
@@ -11,6 +10,8 @@ MAINTAINER=	salo@Xtrmntr.org
 HOMEPAGE=	http://aa-project.sourceforge.net/aview/
 COMMENT=	ASCII Art image viewer
 LICENSE=	gnu-gpl-v2
+
+DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 
 CONFLICTS+=	aview-x11-[0-9]*
 
@@ -54,6 +55,5 @@ post-install:
 .endif
 
 .include "../../graphics/aalib/buildlink3.mk"
-.include "../../graphics/netpbm/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

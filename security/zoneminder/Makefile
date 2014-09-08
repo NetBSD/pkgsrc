@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2014/05/29 23:37:26 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.12 2014/09/08 20:40:30 wiz Exp $
 
 DISTNAME=	ZoneMinder-1.25.0
 PKGNAME=	${DISTNAME:S/ZoneMinder-/zoneminder-/}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	security
 MASTER_SITES=	http://www2.zoneminder.com/downloads/
 
@@ -12,7 +11,7 @@ HOMEPAGE=	http://www.zoneminder.com/
 COMMENT=	Video camera security and surveillance solution
 LICENSE=	gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.zoneminder
 PKG_SUPPORTED_OPTIONS=	apache
@@ -198,6 +197,5 @@ post-install:
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/netpbm/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
