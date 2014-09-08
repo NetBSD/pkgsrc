@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3476 2014/09/08 21:55:14 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3477 2014/09/08 21:56:11 morr Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4438,3 +4438,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/netpbm to 10.67.03 [wiz 2014-09-08]
 	Updated graphics/netpbm to 10.67.04 [wiz 2014-09-08]
 	Updated graphics/netpbm to 10.67.05 [wiz 2014-09-08]
+	Updated editors/vim-share to 7.4.430 [morr 2014-09-08]
