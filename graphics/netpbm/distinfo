@@ -1,28 +1,7 @@
-$NetBSD: distinfo,v 1.90 2014/08/25 08:23:22 wiz Exp $
+$NetBSD: distinfo,v 1.91 2014/09/08 21:22:28 wiz Exp $
 
-SHA1 (netpbm-10.35.93.tgz) = fe80f0e1ccf182a614cfaab617cf486892c5f9fb
-RMD160 (netpbm-10.35.93.tgz) = 9e4bf4c66584e928e399a4b44b11a06a7daae77a
-Size (netpbm-10.35.93.tgz) = 2557610 bytes
-SHA1 (patch-aa) = fd533685c5b0058f19d1b4525a4b2b9f2b239627
-SHA1 (patch-ac) = 9ca2e6ba91dc1552aed51835c952c4f35251c88b
-SHA1 (patch-ad) = 29d58c6c9eb05deaf40a31c5439dacb30f9d34d1
-SHA1 (patch-ae) = 33a5be2843dd85b530f5e6ba496cd0380cd5edd1
-SHA1 (patch-ag) = 4c59c79164d8718dbd329765f99f327a78e7f59f
-SHA1 (patch-ai) = 083ddf8b36a74ca39508b6a3b0c35956ac19fbb7
-SHA1 (patch-aj) = 130910b88e22c57314fd2cecbb07b0a03ea560e7
-SHA1 (patch-ak) = 6c358f811cd5f5632efdf2c7a2512e51b155a04b
-SHA1 (patch-al) = 00c29f69faa24d6bb0c9021291f73dea60020e6b
-SHA1 (patch-ao) = 20bd6ac29b9e2ee25f22a24f3758dca2a01f7bd5
-SHA1 (patch-aw) = 7c1fde7b578f93e5a075bd941c46b34a43d5d3c3
-SHA1 (patch-ax) = 91deefdd6c7eb263b43c9313725268a4d627d525
-SHA1 (patch-ay) = 8d75488d897853b7ecbf9b836bb92f720f8f75ae
-SHA1 (patch-cb) = 25b53b56f9fa4de70f863a7ef8b5fcc4e0a8941a
-SHA1 (patch-converter_other_pngtopnm.c) = 43db1eeee8d077bc4b3c8b6e12e5ccec031ede48
-SHA1 (patch-converter_ppm_ppmtompeg_psocket.c) = ebb11ea1867ed401a0299eeb907aad70276ce843
-SHA1 (patch-da) = 8ae329469bf0bd55b671dffeb4253b8d14621f5c
-SHA1 (patch-db) = 23a05e54043ee84a0b7ec507a383d5cd8adfcca5
-SHA1 (patch-dc) = affd0ca1b437a6c5b10f1ffacff5d0ed9185cda7
-SHA1 (patch-dd) = 9f9c53959f5afd444ce427b782f9ba2c73068f27
-SHA1 (patch-lib_libpbm3.c) = bdca78193847cf28cde1255d05a3a01ae3bfef22
-SHA1 (patch-lib_libsystem.c) = 2f634cc295f696d270054fcc4badf4e37025691b
-SHA1 (patch-ppmdraw) = d901a690f8f21a1af940129d1edef509b369ea1a
+SHA1 (netpbm-10.67.03.tgz) = b22dfa9f18e336e9e3999058c3458c49cc0e1ef4
+RMD160 (netpbm-10.67.03.tgz) = bca7cd6ed349ec455c16ab8c3884e464cfcf709d
+Size (netpbm-10.67.03.tgz) = 2698057 bytes
+SHA1 (patch-buildtools_installosf) = 03f6bf84e9f8294c0b33d2f8789d74d6fd58b768
+SHA1 (patch-converter_other_pstopnm.c) = fde8c6da48a419867e5aed4cb1210d4ec1157b26
