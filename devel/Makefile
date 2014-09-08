@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1974 2014/09/07 12:27:50 wiz Exp $
+# $NetBSD: Makefile,v 1.1975 2014/09/08 11:30:16 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1875,6 +1875,7 @@ SUBDIR+=	vanessa_logger
 SUBDIR+=	vanessa_socket
 SUBDIR+=	vera++
 SUBDIR+=	vtcl
+SUBDIR+=	waf
 SUBDIR+=	wide
 SUBDIR+=	xa65
 SUBDIR+=	xdelta
