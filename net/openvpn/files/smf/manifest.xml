@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<!DOCTYPE service_bundle SYSTEM "/usr/share/lib/xml/dtd/service_bundle.dtd.1">
+<service_bundle type="manifest" name="export">
+	<service name='@SMF_PREFIX@/@SMF_NAME@' type="service" version="0">
+		<create_default_instance enabled="true"/>
+		<dependency name="fs" grouping="require_all" restart_on="none" type="service">
+			<service_fmri value="svc:/system/filesystem/local"/>
+		</dependency>
+		<dependency name="net" grouping="require_all" restart_on="none" type="service">
+			<service_fmri value="svc:/network/loopback"/>
+		</dependency>
+		<exec_method name="start"   type="method" exec="@PREFIX@/@SMF_METHOD_FILE.openvpn@ start %{config}" timeout_seconds="60" >
+		<method_context working_directory='@PKG_SYSCONFDIR@' />
+		</exec_method>
+		<exec_method name="stop"    type="method" exec="@PREFIX@/@SMF_METHOD_FILE.openvpn@ stop"      timeout_seconds="60" />
+		<property_group name="startd" type="framework">
+		<propval name="duration" type="astring" value="child"/>
+		</property_group>
+		<property_group name="application" type="application">
+			<propval name="config" type="astring" value="@PKG_SYSCONFDIR@/openvpn.conf"/>
+		</property_group>
+		<stability value="External"/>
+		<template>
+			<common_name>
+				<loctext xml:lang="C">openvpn</loctext>
+			</common_name>
+			<documentation>
+				<manpage title="openvpn" section="8" manpath="man"/>
+				<doc_link name="openvpn.net" uri="http://openvpn.net/index.php/manuals"/>
+			</documentation>
+		</template>
+	</service>
+</service_bundle>
