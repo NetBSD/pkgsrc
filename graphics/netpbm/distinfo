@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.91 2014/09/08 21:22:28 wiz Exp $
+$NetBSD: distinfo,v 1.92 2014/09/08 21:51:25 wiz Exp $
 
-SHA1 (netpbm-10.67.03.tgz) = b22dfa9f18e336e9e3999058c3458c49cc0e1ef4
-RMD160 (netpbm-10.67.03.tgz) = bca7cd6ed349ec455c16ab8c3884e464cfcf709d
-Size (netpbm-10.67.03.tgz) = 2698057 bytes
-SHA1 (patch-buildtools_installosf) = 03f6bf84e9f8294c0b33d2f8789d74d6fd58b768
-SHA1 (patch-converter_other_pstopnm.c) = fde8c6da48a419867e5aed4cb1210d4ec1157b26
+SHA1 (netpbm-10.67.04.tar.gz) = dae87919b39dec434fd1df721d3ad41ad8dd7459
+RMD160 (netpbm-10.67.04.tar.gz) = 05e5bafae424df0baa50b8dda968c508efc30b27
+Size (netpbm-10.67.04.tar.gz) = 2698831 bytes
+SHA1 (netpbm-docs-r2273.tar.gz) = 2931c87bbb2b3db9ac729f317b46972afeba7fb0
+RMD160 (netpbm-docs-r2273.tar.gz) = 31a0937cc3c650a0cea7b86771faabc86dbdeafb
+Size (netpbm-docs-r2273.tar.gz) = 447100 bytes

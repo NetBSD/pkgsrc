@@ -1,13 +1,17 @@
-# $NetBSD: Makefile,v 1.189 2014/09/08 21:22:28 wiz Exp $
+# $NetBSD: Makefile,v 1.190 2014/09/08 21:51:25 wiz Exp $
 
-DISTNAME=	netpbm-10.67.03
+DISTNAME=	netpbm-10.67.04
 CATEGORIES=	graphics
 MASTER_SITES=	#
 # manually created from svn checkout of
 # svn checkout http://svn.code.sf.net/p/netpbm/code/advanced netpbm
 # tar --exclude netpbm/.svn/\* -cvzf /archive/distfiles/netpbm-$VERSION.tar.gz netpbm
 # where VERSION comes from reading netpbm/doc/HISTORY
-EXTRACT_SUFX=	.tgz
+# for the documentation:
+# svn checkout http://svn.code.sf.net/p/netpbm/code/userguide netpbm-userguide
+# cd netpbm-userguide && for i in *.html; do python2.7 ../netpbm/buildtools/makeman $i; done && cd ..
+# tar -cvzf /archive/distfiles/netpbm-docs-r${SVN_REVISION}.tar.gz netpbm-userguide/*.[0-9]
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} netpbm-docs-r2273${EXTRACT_SUFX}
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://netpbm.sourceforge.net/
@@ -52,7 +56,7 @@ SUBST_CLASSES+=		rgb_txt
 SUBST_STAGE.rgb_txt=	post-patch
 SUBST_MESSAGE.rgb_txt=	Configure RGB_TXT
 SUBST_FILES.rgb_txt=	pm_config.in.h
-SUBST_SED.rgb_txt+=	-e 's,@@PREFIX@@,${PREFIX},'
+SUBST_SED.rgb_txt+=	-e 's,/usr/share/netpbm/rgb.txt,${PREFIX}/share/netpbm/rgb.txt,'
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -93,6 +97,9 @@ post-install:
 	${CHOWN} -R ${BINOWN}:${BINGRP} . &&			\
 	pax -rwpppm . ${DESTDIR}${PREFIX}
 	${RM} -fr ${STAGEDIR}
+	${INSTALL_DATA} ${WRKDIR}/netpbm-userguide/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKDIR}/netpbm-userguide/*.3 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
+	${INSTALL_DATA} ${WRKDIR}/netpbm-userguide/*.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 
 .include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
