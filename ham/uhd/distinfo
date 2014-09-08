@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2014/09/08 07:12:05 mef Exp $
+
+SHA1 (uhd/003_007_002_rc1.zip) = 4c390d31a891dc3675a70810d6418c74e5fa2381
+RMD160 (uhd/003_007_002_rc1.zip) = 40cb7fa33a89fd274a566b1bffdd19285db2c6bc
+Size (uhd/003_007_002_rc1.zip) = 90309088 bytes
+SHA1 (patch-host_include_uhd_transport_nirio_nirio__driver__iface_h) = 2ba6c50f467515bfac9fe330572bb0154154a0ad
