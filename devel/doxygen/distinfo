@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.53 2014/04/25 08:32:22 wiz Exp $
+$NetBSD: distinfo,v 1.54 2014/09/09 00:44:56 mef Exp $
 
-SHA1 (doxygen-1.8.7.src.tar.gz) = 3728f183f390f96b4ec39d02782a7c2d91f7bfca
-RMD160 (doxygen-1.8.7.src.tar.gz) = bef0f6dcd4fac3e0bc6126cae23374e960ab9163
-Size (doxygen-1.8.7.src.tar.gz) = 4796875 bytes
+SHA1 (doxygen-1.8.8.src.tar.gz) = cd511c73e7669dde5ac3e14a5d1abae093aaf1d9
+RMD160 (doxygen-1.8.8.src.tar.gz) = d701eb47631aa5e47d8a0fa245b58238276105f3
+Size (doxygen-1.8.8.src.tar.gz) = 4955485 bytes
 SHA1 (patch-aa) = 74aa6e068c150d2e40c5a73723afd24d510f4538
 SHA1 (patch-ab) = d66d077fe05f26ecdb3c292d2e563e54ef7ab81a
 SHA1 (patch-ac) = 87c68a2ce598c10d90d775764f4c05739eb51435
 SHA1 (patch-af) = 2af16b257b49c7917aff5f919da43e20bedec376
 SHA1 (patch-ah) = db6f117bf1faa3a1ed0b2ca9af81fc4f8d0913f9
-SHA1 (patch-aj) = d771e76cfc659442b2d41d5e3364b3c3189b42c8
+SHA1 (patch-aj) = 504dfce5474e017e7872208b15a436be669c293c
