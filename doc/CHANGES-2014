@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3480 2014/09/09 08:20:30 adam Exp $
+$NetBSD: CHANGES-2014,v 1.3481 2014/09/09 19:09:43 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4442,3 +4442,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/spiped to 1.4.1 [wiedi 2014-09-08]
 	Updated devel/doxygen to 1.8.8 [mef 2014-09-09]
 	Updated www/apache22 to 2.2.29 [adam 2014-09-09]
+	Added textproc/hs-pandoc-types version 1.12.4.1 [szptvlfn 2014-09-09]
