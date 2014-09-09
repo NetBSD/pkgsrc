@@ -1,0 +1,18 @@
+Text.Pandoc.Definition defines the Pandoc data structure, which is used by
+pandoc to represent structured documents. This module used to live in the
+pandoc package, but starting with pandoc 1.7, it has been split off, so
+that other packages can use it without drawing in all of pandoc's
+dependencies, and pandoc itself can depend on packages (like citeproc-hs)
+that use them.
+
+Text.Pandoc.Builder provides functions for building up Pandoc structures
+programmatically.
+
+Text.Pandoc.Generic provides generic functions for manipulating Pandoc
+documents.
+
+Text.Pandoc.Walk provides faster, nongeneric functions for manipulating
+Pandoc documents.
+
+Text.Pandoc.JSON provides functions for serializing and deserializing a
+Pandoc structure to and from JSON.
