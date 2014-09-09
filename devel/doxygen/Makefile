@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.115 2014/05/29 23:35:35 wiz Exp $
+# $NetBSD: Makefile,v 1.116 2014/09/09 00:44:56 mef Exp $
 
-DISTNAME=	doxygen-1.8.7.src
+DISTNAME=	doxygen-1.8.8.src
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.stack.nl/pub/users/dimitri/ \
 		http://ftp.stack.nl/pub/users/dimitri/
@@ -42,7 +41,7 @@ PLIST_VARS+=		pangocairo nopangocairo
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
 SUBST_FILES.path=	doc/Makefile.in
-SUBST_SED.path=		-e "s|@EPSTOPDF@|${LOCALBASE}/bin/epstopdf|g"
+SUBST_SED.path=		-e "s|@EPSTOPDF@|${PREFIX}/bin/epstopdf|g"
 
 SUBST_CLASSES+=		perlbin
 SUBST_STAGE.perlbin=	pre-configure
@@ -55,7 +54,7 @@ SUBST_STAGE.epstopdf=	pre-configure
 SUBST_MESSAGE.epstopdf=	Fixing path to epstopdf
 SUBST_FILES.epstopdf=	src/diagram.cpp src/docparser.cpp src/dot.cpp \
 			src/msc.cpp
-SUBST_SED.epstopdf=	-e 's,"epstopdf","${LOCALBASE}/bin/epstopdf",g'
+SUBST_SED.epstopdf=	-e 's,"epstopdf","${PREFIX}/bin/epstopdf",g'
 
 # Just install the binary and the man page.  (If the latex option
 # is enabled, this target will be augmented.)
