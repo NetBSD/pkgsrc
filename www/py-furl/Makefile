@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/08/13 22:41:45 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2014/09/10 19:00:04 joerg Exp $
 
 DISTNAME=	furl-0.3.95
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/gruns/furl
 COMMENT=	URL manipulation made simple
 LICENSE=	unlicense
 
-PYTHON_VERSIONS_INCOMPATIBLE=	26
+PYTHON_VERSIONS_INCOMPATIBLE=	26 33 34
 
 DEPENDS+=	${PYPKGPREFIX}-orderedmultidict>=0.7.1:../../databases/py-orderedmultidict
 
