@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2014/09/08 21:24:44 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2014/09/10 19:32:42 wiz Exp $
 #
 
 DISTNAME=	pfstools-1.7.0
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--enable-tiff
 CONFIGURE_ARGS+=	--disable-jpeghdr
 CONFIGURE_ARGS+=	--disable-matlab
 # patch-aa
-CONFIGURE_ENV+=		NETPBM_CFLAGS=-I${BUILDLINK_PREFIX.netpbm}/include
+CONFIGURE_ENV+=		NETPBM_CFLAGS=-I${BUILDLINK_PREFIX.netpbm}/include/netpbm
 
 PKGCONFIG_OVERRIDE+=	src/pfs/pfs.pc.in
 
