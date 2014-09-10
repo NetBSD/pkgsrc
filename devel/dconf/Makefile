@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2014/05/25 05:30:43 obache Exp $
+# $NetBSD: Makefile,v 1.22 2014/09/10 10:54:46 prlw1 Exp $
 
 .include "Makefile.common"
-
-PKGREVISION=	1
 
 CONFIGURE_ARGS+= --disable-editor
 
@@ -26,7 +24,7 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 BUILDLINK_DEPMETHOD.vala= build
 .include "../../lang/vala018/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.35.2
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.39.1
 .include "../../devel/glib2/modules.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
