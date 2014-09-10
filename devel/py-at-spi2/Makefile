@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2014/01/24 08:36:57 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2014/09/10 11:08:19 prlw1 Exp $
 
-DISTNAME=	pyatspi-2.10.0
+DISTNAME=	pyatspi-2.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyatspi/at-spi2/}
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pyatspi/${PKGVERSION_NOREV:R}/}
@@ -20,7 +20,6 @@ USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 PY_PATCHPLIST=	yes
-PY_PEP3147=	no
 
 PYTHON_VERSIONS_INCOMPATIBLE=	26
 
