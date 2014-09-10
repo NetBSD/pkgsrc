@@ -1,4 +1,4 @@
-$NetBSD: manual-libtool.m4,v 1.42 2014/09/01 12:39:15 jperkin Exp $
+$NetBSD: manual-libtool.m4,v 1.43 2014/09/10 10:14:07 richard Exp $
 
 --- libltdl/m4/libtool.m4.orig	2011-10-17 10:17:05.000000000 +0000
 +++ libltdl/m4/libtool.m4
@@ -447,9 +447,9 @@ $NetBSD: manual-libtool.m4,v 1.42 2014/09/01 12:39:15 jperkin Exp $
 -	        # linking a shared library.
 -	        output_verbose_link_cmd='$CC -G $CFLAGS -v conftest.$objext 2>&1 | $GREP -v "^Configured with:" | $GREP "\-L"'
 -	      fi
-+	      _LT_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-h $wl$soname -o $lib'
++	      _LT_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-h $wl$soname -o $lib'
 +	      _LT_TAGVAR(archive_expsym_cmds, $1)='echo "{ global:" > $lib.exp~cat $export_symbols | $SED -e "s/\(.*\)/\1;/" >> $lib.exp~echo "local: *; };" >> $lib.exp~
-+		$CC -shared $pic_flag ${wl}-M $wl$lib.exp $wl-h $wl$soname -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags~$RM $lib.exp'
++		$CC -shared $pic_flag ${wl}-M $wl$lib.exp $wl-h $wl$soname -o $lib $libobjs $deplibs $compiler_flags~$RM $lib.exp'
 +
 +	      # Commands to make compiler produce verbose output that lists
 +	      # what "hidden" libraries, object files and flags are used when
