@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2014/09/10 10:14:08 richard Exp $
+# $NetBSD: Makefile,v 1.50 2014/09/10 10:46:07 richard Exp $
 
 DISTNAME=	zlib-1.2.8
-PKGREVISION=	2
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpng/} \
 		http://zlib.net/
@@ -20,7 +20,6 @@ PKGCONFIG_OVERRIDE+=	zlib.pc.in
 
 CFLAGS+=		${CPPFLAGS}
 LDFLAGS.Cygwin=		-no-undefined
-LDFLAGS.SunOS+=		-Wl,-zignore	# avoid unused reference to libgcc_s.so
 
 SUBST_CLASSES+= pc
 SUBST_MESSAGE.pc= pkg-config file substitutions
