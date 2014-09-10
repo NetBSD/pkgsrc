@@ -549,6 +549,7 @@ portals			Enable BSD Portals support
 portaudio		Enable PortAudio audio library support.
 postfix-milter		Build the milter with support for the Postfix MTA.
 postfix-stress		Enable Postfix stress-adaptive behaviour.
+postgrey-targrey	Enable the Postgrey taRgrey tarpitting patch.
 prime			Use Prime for Kana-to-Kanji conversion.
 proftpd-readme		Enable mod_readme.
 psiconv			Enable psiconv support (for PSION 5 file formats).
