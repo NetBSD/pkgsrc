@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/01/24 13:22:22 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/09/10 09:01:49 obache Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -17,6 +17,9 @@ ${PYSITELIB}/testtools/_compat3x.pyo
 ${PYSITELIB}/testtools/_spinner.py
 ${PYSITELIB}/testtools/_spinner.pyc
 ${PYSITELIB}/testtools/_spinner.pyo
+${PYSITELIB}/testtools/assertions.py
+${PYSITELIB}/testtools/assertions.pyc
+${PYSITELIB}/testtools/assertions.pyo
 ${PYSITELIB}/testtools/compat.py
 ${PYSITELIB}/testtools/compat.pyc
 ${PYSITELIB}/testtools/compat.pyo
@@ -122,6 +125,9 @@ ${PYSITELIB}/testtools/tests/matchers/test_higherorder.pyo
 ${PYSITELIB}/testtools/tests/matchers/test_impl.py
 ${PYSITELIB}/testtools/tests/matchers/test_impl.pyc
 ${PYSITELIB}/testtools/tests/matchers/test_impl.pyo
+${PYSITELIB}/testtools/tests/test_assert_that.py
+${PYSITELIB}/testtools/tests/test_assert_that.pyc
+${PYSITELIB}/testtools/tests/test_assert_that.pyo
 ${PYSITELIB}/testtools/tests/test_compat.py
 ${PYSITELIB}/testtools/tests/test_compat.pyc
 ${PYSITELIB}/testtools/tests/test_compat.pyo
