@@ -1,2 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2014/07/21 07:34:17 dbj Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/09/10 12:16:15 joerg Exp $
 bin/freedv
+share/applications/freedv.desktop
+share/icons/hicolor/128x128/apps/freedv.png
+share/icons/hicolor/256x256/apps/freedv.png
+share/icons/hicolor/48x48/apps/freedv.png
+share/icons/hicolor/64x64/apps/freedv.png
