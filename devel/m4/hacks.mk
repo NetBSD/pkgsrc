@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2007/09/25 01:23:24 dmcmahill Exp $
+# $NetBSD: hacks.mk,v 1.2 2014/09/10 10:14:07 richard Exp $
 
 .if !defined(M4_HACKS_MK)
 M4_HACKS_MK=	defined
@@ -18,7 +18,8 @@ M4_HACKS_MK=	defined
 ###     (nil))
 ### frexp.c:167: internal compiler error: in reload_cse_simplify_operands, at reload1.c:8378
 ###
-.if !empty(PKGSRC_COMPILER:Mgcc) && ${OPSYS} == "SunOS"
+.if !empty(PKGSRC_COMPILER:Mgcc) && ${OPSYS} == "SunOS" \
+		&& !empty(MACHINE_ARCH:Msparc*)
 PKG_HACKS+=		optimisation
 BUILDLINK_TRANSFORM+=	rm:-O[0-9]*
 .endif
