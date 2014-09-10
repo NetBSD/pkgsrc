@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/03/12 11:36:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/09/10 06:30:33 wiz Exp $
 include/gdkmm-3.0/gdkmm.h
 include/gdkmm-3.0/gdkmm/applaunchcontext.h
 include/gdkmm-3.0/gdkmm/color.h
@@ -52,6 +52,7 @@ include/gtkmm-3.0/gtkmm/accellabel.h
 include/gtkmm-3.0/gtkmm/accelmap.h
 include/gtkmm-3.0/gtkmm/action.h
 include/gtkmm-3.0/gtkmm/actionable.h
+include/gtkmm-3.0/gtkmm/actionbar.h
 include/gtkmm-3.0/gtkmm/actiongroup.h
 include/gtkmm-3.0/gtkmm/activatable.h
 include/gtkmm-3.0/gtkmm/adjustment.h
@@ -116,6 +117,8 @@ include/gtkmm-3.0/gtkmm/filechooserdialog.h
 include/gtkmm-3.0/gtkmm/filechooserwidget.h
 include/gtkmm-3.0/gtkmm/filefilter.h
 include/gtkmm-3.0/gtkmm/fixed.h
+include/gtkmm-3.0/gtkmm/flowbox.h
+include/gtkmm-3.0/gtkmm/flowboxchild.h
 include/gtkmm-3.0/gtkmm/fontbutton.h
 include/gtkmm-3.0/gtkmm/fontchooser.h
 include/gtkmm-3.0/gtkmm/fontchooserdialog.h
@@ -169,6 +172,7 @@ include/gtkmm-3.0/gtkmm/paned.h
 include/gtkmm-3.0/gtkmm/papersize.h
 include/gtkmm-3.0/gtkmm/placessidebar.h
 include/gtkmm-3.0/gtkmm/plug.h
+include/gtkmm-3.0/gtkmm/popover.h
 include/gtkmm-3.0/gtkmm/printcontext.h
 include/gtkmm-3.0/gtkmm/printer.h
 include/gtkmm-3.0/gtkmm/printjob.h
@@ -181,6 +185,7 @@ include/gtkmm-3.0/gtkmm/private/accelgroup_p.h
 include/gtkmm-3.0/gtkmm/private/accellabel_p.h
 include/gtkmm-3.0/gtkmm/private/action_p.h
 include/gtkmm-3.0/gtkmm/private/actionable_p.h
+include/gtkmm-3.0/gtkmm/private/actionbar_p.h
 include/gtkmm-3.0/gtkmm/private/actiongroup_p.h
 include/gtkmm-3.0/gtkmm/private/activatable_p.h
 include/gtkmm-3.0/gtkmm/private/adjustment_p.h
@@ -243,6 +248,8 @@ include/gtkmm-3.0/gtkmm/private/filechooserdialog_p.h
 include/gtkmm-3.0/gtkmm/private/filechooserwidget_p.h
 include/gtkmm-3.0/gtkmm/private/filefilter_p.h
 include/gtkmm-3.0/gtkmm/private/fixed_p.h
+include/gtkmm-3.0/gtkmm/private/flowbox_p.h
+include/gtkmm-3.0/gtkmm/private/flowboxchild_p.h
 include/gtkmm-3.0/gtkmm/private/fontbutton_p.h
 include/gtkmm-3.0/gtkmm/private/fontchooser_p.h
 include/gtkmm-3.0/gtkmm/private/fontchooserdialog_p.h
@@ -295,6 +302,7 @@ include/gtkmm-3.0/gtkmm/private/paned_p.h
 include/gtkmm-3.0/gtkmm/private/papersize_p.h
 include/gtkmm-3.0/gtkmm/private/placessidebar_p.h
 include/gtkmm-3.0/gtkmm/private/plug_p.h
+include/gtkmm-3.0/gtkmm/private/popover_p.h
 include/gtkmm-3.0/gtkmm/private/printcontext_p.h
 include/gtkmm-3.0/gtkmm/private/printer_p.h
 include/gtkmm-3.0/gtkmm/private/printjob_p.h
@@ -487,6 +495,8 @@ share/doc/gtkmm-3.0/images/top.gif
 share/doc/gtkmm-3.0/reference/gtkmm-3.0.tag
 share/doc/gtkmm-3.0/reference/html/aboutdialog1.png
 share/doc/gtkmm-3.0/reference/html/annotated.html
+share/doc/gtkmm-3.0/reference/html/appchooserbutton1.png
+share/doc/gtkmm-3.0/reference/html/appchooserdialog1.png
 share/doc/gtkmm-3.0/reference/html/arrow1.png
 share/doc/gtkmm-3.0/reference/html/bc_s.png
 share/doc/gtkmm-3.0/reference/html/bdwn.png
@@ -568,6 +578,9 @@ share/doc/gtkmm-3.0/reference/html/classGtk_1_1AccelLabel.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1AccelLabel__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Action-members.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Action.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1ActionBar-members.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1ActionBar.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1ActionBar__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1ActionGroup-members.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1ActionGroup.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1ActionGroup__inherit__graph.png
@@ -765,6 +778,12 @@ share/doc/gtkmm-3.0/reference/html/classGtk_1_1FileFilter__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Fixed-members.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Fixed.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Fixed__inherit__graph.png
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1FlowBox-members.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1FlowBox.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1FlowBoxChild-members.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1FlowBoxChild.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1FlowBoxChild__inherit__graph.png
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1FlowBox__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1FontButton-members.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1FontButton.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1FontButton__inherit__graph.png
@@ -874,7 +893,6 @@ share/doc/gtkmm-3.0/reference/html/classGtk_1_1ListViewText_1_1TextModelColumns_
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1ListViewText__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Main-members.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Main.html
-share/doc/gtkmm-3.0/reference/html/classGtk_1_1Main__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Menu-members.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Menu.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1MenuBar-members.html
@@ -931,6 +949,9 @@ share/doc/gtkmm-3.0/reference/html/classGtk_1_1PlacesSidebar__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Plug-members.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Plug.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Plug__inherit__graph.png
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1Popover-members.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1Popover.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1Popover__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1PrintContext-members.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1PrintContext.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1PrintContext__inherit__graph.png
@@ -1247,6 +1268,7 @@ share/doc/gtkmm-3.0/reference/html/classGtk_1_1Window__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classes.html
 share/doc/gtkmm-3.0/reference/html/closed.png
 share/doc/gtkmm-3.0/reference/html/colorbutton1.png
+share/doc/gtkmm-3.0/reference/html/colorchooserdialog1.png
 share/doc/gtkmm-3.0/reference/html/colorselectiondialog1.png
 share/doc/gtkmm-3.0/reference/html/combobox1.png
 share/doc/gtkmm-3.0/reference/html/deprecated.html
@@ -1372,17 +1394,23 @@ share/doc/gtkmm-3.0/reference/html/gtk-find-and-replace.png
 share/doc/gtkmm-3.0/reference/html/gtk-find.png
 share/doc/gtkmm-3.0/reference/html/gtk-floppy.png
 share/doc/gtkmm-3.0/reference/html/gtk-fullscreen.png
+share/doc/gtkmm-3.0/reference/html/gtk-go-back-ltr.png
 share/doc/gtkmm-3.0/reference/html/gtk-go-down.png
+share/doc/gtkmm-3.0/reference/html/gtk-go-forward-ltr.png
 share/doc/gtkmm-3.0/reference/html/gtk-go-up.png
 share/doc/gtkmm-3.0/reference/html/gtk-goto-bottom.png
+share/doc/gtkmm-3.0/reference/html/gtk-goto-first-ltr.png
+share/doc/gtkmm-3.0/reference/html/gtk-goto-last-ltr.png
 share/doc/gtkmm-3.0/reference/html/gtk-goto-top.png
 share/doc/gtkmm-3.0/reference/html/gtk-harddisk.png
 share/doc/gtkmm-3.0/reference/html/gtk-help.png
 share/doc/gtkmm-3.0/reference/html/gtk-home.png
+share/doc/gtkmm-3.0/reference/html/gtk-indent-ltr.png
 share/doc/gtkmm-3.0/reference/html/gtk-indent-rtl.png
 share/doc/gtkmm-3.0/reference/html/gtk-index.png
 share/doc/gtkmm-3.0/reference/html/gtk-info.png
 share/doc/gtkmm-3.0/reference/html/gtk-italic.png
+share/doc/gtkmm-3.0/reference/html/gtk-jump-to-ltr.png
 share/doc/gtkmm-3.0/reference/html/gtk-jump-to-rtl.png
 share/doc/gtkmm-3.0/reference/html/gtk-justify-center.png
 share/doc/gtkmm-3.0/reference/html/gtk-justify-fill.png
@@ -1390,7 +1418,9 @@ share/doc/gtkmm-3.0/reference/html/gtk-justify-left.png
 share/doc/gtkmm-3.0/reference/html/gtk-justify-right.png
 share/doc/gtkmm-3.0/reference/html/gtk-leave-fullscreen.png
 share/doc/gtkmm-3.0/reference/html/gtk-media-forward-ltr.png
+share/doc/gtkmm-3.0/reference/html/gtk-media-next-ltr.png
 share/doc/gtkmm-3.0/reference/html/gtk-media-pause.png
+share/doc/gtkmm-3.0/reference/html/gtk-media-play-ltr.png
 share/doc/gtkmm-3.0/reference/html/gtk-media-play-rtl.png
 share/doc/gtkmm-3.0/reference/html/gtk-media-previous-ltr.png
 share/doc/gtkmm-3.0/reference/html/gtk-media-record.png
@@ -1416,6 +1446,7 @@ share/doc/gtkmm-3.0/reference/html/gtk-print-warning.png
 share/doc/gtkmm-3.0/reference/html/gtk-print.png
 share/doc/gtkmm-3.0/reference/html/gtk-properties.png
 share/doc/gtkmm-3.0/reference/html/gtk-quit.png
+share/doc/gtkmm-3.0/reference/html/gtk-redo-ltr.png
 share/doc/gtkmm-3.0/reference/html/gtk-redo-rtl.png
 share/doc/gtkmm-3.0/reference/html/gtk-refresh.png
 share/doc/gtkmm-3.0/reference/html/gtk-remove.png
@@ -1430,9 +1461,12 @@ share/doc/gtkmm-3.0/reference/html/gtk-sort-descending.png
 share/doc/gtkmm-3.0/reference/html/gtk-spell-check.png
 share/doc/gtkmm-3.0/reference/html/gtk-stop.png
 share/doc/gtkmm-3.0/reference/html/gtk-strikethrough.png
+share/doc/gtkmm-3.0/reference/html/gtk-undelete-ltr.png
 share/doc/gtkmm-3.0/reference/html/gtk-undelete-rtl.png
 share/doc/gtkmm-3.0/reference/html/gtk-underline.png
+share/doc/gtkmm-3.0/reference/html/gtk-undo-ltr.png
 share/doc/gtkmm-3.0/reference/html/gtk-undo-rtl.png
+share/doc/gtkmm-3.0/reference/html/gtk-unindent-ltr.png
 share/doc/gtkmm-3.0/reference/html/gtk-unindent-rtl.png
 share/doc/gtkmm-3.0/reference/html/gtk-yes.png
 share/doc/gtkmm-3.0/reference/html/gtk-zoom-100.png
@@ -1446,6 +1480,7 @@ share/doc/gtkmm-3.0/reference/html/hscrollbar1.png
 share/doc/gtkmm-3.0/reference/html/hseparator1.png
 share/doc/gtkmm-3.0/reference/html/image1.png
 share/doc/gtkmm-3.0/reference/html/index.html
+share/doc/gtkmm-3.0/reference/html/infobar1.png
 share/doc/gtkmm-3.0/reference/html/inherit_graph_0.png
 share/doc/gtkmm-3.0/reference/html/inherit_graph_1.png
 share/doc/gtkmm-3.0/reference/html/inherit_graph_10.png
@@ -1479,6 +1514,7 @@ share/doc/gtkmm-3.0/reference/html/inherit_graph_35.png
 share/doc/gtkmm-3.0/reference/html/inherit_graph_36.png
 share/doc/gtkmm-3.0/reference/html/inherit_graph_37.png
 share/doc/gtkmm-3.0/reference/html/inherit_graph_38.png
+share/doc/gtkmm-3.0/reference/html/inherit_graph_39.png
 share/doc/gtkmm-3.0/reference/html/inherit_graph_4.png
 share/doc/gtkmm-3.0/reference/html/inherit_graph_5.png
 share/doc/gtkmm-3.0/reference/html/inherit_graph_6.png
@@ -1486,7 +1522,6 @@ share/doc/gtkmm-3.0/reference/html/inherit_graph_7.png
 share/doc/gtkmm-3.0/reference/html/inherit_graph_8.png
 share/doc/gtkmm-3.0/reference/html/inherit_graph_9.png
 share/doc/gtkmm-3.0/reference/html/inherits.html
-share/doc/gtkmm-3.0/reference/html/jquery.js
 share/doc/gtkmm-3.0/reference/html/label1.png
 share/doc/gtkmm-3.0/reference/html/linkbutton1.png
 share/doc/gtkmm-3.0/reference/html/listbox1.png
@@ -1581,12 +1616,14 @@ share/doc/gtkmm-3.0/reference/html/since_2_2.html
 share/doc/gtkmm-3.0/reference/html/since_2_20.html
 share/doc/gtkmm-3.0/reference/html/since_2_22.html
 share/doc/gtkmm-3.0/reference/html/since_2_24.html
+share/doc/gtkmm-3.0/reference/html/since_2_26.html
 share/doc/gtkmm-3.0/reference/html/since_2_30.html
 share/doc/gtkmm-3.0/reference/html/since_2_4.html
 share/doc/gtkmm-3.0/reference/html/since_2_6.html
 share/doc/gtkmm-3.0/reference/html/since_2_8.html
 share/doc/gtkmm-3.0/reference/html/since_3_0.html
 share/doc/gtkmm-3.0/reference/html/since_3_10.html
+share/doc/gtkmm-3.0/reference/html/since_3_12.html
 share/doc/gtkmm-3.0/reference/html/since_3_2.html
 share/doc/gtkmm-3.0/reference/html/since_3_4.html
 share/doc/gtkmm-3.0/reference/html/since_3_6.html
