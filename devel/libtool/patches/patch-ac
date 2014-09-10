@@ -1,6 +1,12 @@
-$NetBSD: patch-ac,v 1.31 2014/05/10 15:32:08 joerg Exp $
+$NetBSD: patch-ac,v 1.32 2014/09/10 10:14:07 richard Exp $
 
---- libltdl/config/ltmain.sh.orig	Mon Oct 17 10:19:11 2011
+Add passthrough support for -fstack-protector*
+http://permalink.gmane.org/gmane.comp.gnu.libtool.bugs/7341
+
+Disable the opt_duplicate_compiler_generated_deps optimisation
+for solaris2 http://gcc.gnu.org/bugzilla/show_bug.cgi?id=59788
+
+--- libltdl/config/ltmain.sh.orig	2011-10-17 10:19:35.000000000 +0000
 +++ libltdl/config/ltmain.sh
 @@ -133,8 +133,9 @@ $lt_unset CDPATH
  # function.
@@ -14,7 +20,34 @@ $NetBSD: patch-ac,v 1.31 2014/05/10 15:32:08 joerg Exp $
  : ${CP="cp -f"}
  test "${ECHO+set}" = set || ECHO=${as_echo-'printf %s\n'}
  : ${MAKE="make"}
-@@ -7391,6 +7392,7 @@ func_mode_link ()
+@@ -1180,7 +1181,9 @@ func_enable_tag "$optarg"
+   test "$opt_debug" = : || func_append preserve_args " --debug"
+ 
+   case $host in
+-    *cygwin* | *mingw* | *pw32* | *cegcc*)
++    # Solaris2 added to fix http://debbugs.gnu.org/cgi/bugreport.cgi?bug=1645
++    # see also: http://gcc.gnu.org/bugzilla/show_bug.cgi?id=59788
++    *cygwin* | *mingw* | *pw32* | *cegcc* | *solaris2*)
+       # don't eliminate duplications in $postdeps and $predeps
+       opt_duplicate_compiler_generated_deps=:
+       ;;
+@@ -5847,13 +5850,14 @@ func_mode_link ()
+       # -m*, -t[45]*, -txscale* architecture-specific flags for GCC
+       # -F/path              path to uninstalled frameworks, gcc on darwin
+       # -p, -pg, --coverage, -fprofile-*  profiling flags for GCC
++      # -fstack-protector*   stack protector flags for GCC
+       # @file                GCC response files
+       # -tp=*                Portland pgcc target processor selection
+       # --sysroot=*          for sysroot support
+       # -O*, -flto*, -fwhopr*, -fuse-linker-plugin GCC link-time optimization
+       -64|-mips[0-9]|-r[0-9][0-9]*|-xarch=*|-xtarget=*|+DA*|+DD*|-q*|-m*| \
+       -t[45]*|-txscale*|-p|-pg|--coverage|-fprofile-*|-F*|@*|-tp=*|--sysroot=*| \
+-      -O*|-flto*|-fwhopr*|-fuse-linker-plugin)
++      -O*|-flto*|-fwhopr*|-fuse-linker-plugin|-fstack-protector*)
+         func_quote_for_eval "$arg"
+ 	arg="$func_quote_for_eval_result"
+         func_append compile_command " $arg"
+@@ -7391,6 +7395,7 @@ func_mode_link ()
  	# Calculate the version variables.
  	major=
  	versuffix=
@@ -22,7 +55,7 @@ $NetBSD: patch-ac,v 1.31 2014/05/10 15:32:08 joerg Exp $
  	verstring=
  	case $version_type in
  	none) ;;
-@@ -7451,6 +7453,7 @@ func_mode_link ()
+@@ -7451,6 +7456,7 @@ func_mode_link ()
  	  func_arith $current - $age
  	  major=.$func_arith_result
  	  versuffix="$major.$age.$revision"
@@ -30,7 +63,7 @@ $NetBSD: patch-ac,v 1.31 2014/05/10 15:32:08 joerg Exp $
  	  ;;
  
  	osf)
-@@ -7511,8 +7514,10 @@ func_mode_link ()
+@@ -7511,8 +7517,10 @@ func_mode_link ()
  	  esac
  	  if test "$need_version" = no; then
  	    versuffix=
@@ -41,7 +74,7 @@ $NetBSD: patch-ac,v 1.31 2014/05/10 15:32:08 joerg Exp $
  	  fi
  	fi
  
-@@ -7520,6 +7525,7 @@ func_mode_link ()
+@@ -7520,6 +7528,7 @@ func_mode_link ()
  	if test "$avoid_version" = yes && test "$need_version" = no; then
  	  major=
  	  versuffix=
@@ -49,7 +82,7 @@ $NetBSD: patch-ac,v 1.31 2014/05/10 15:32:08 joerg Exp $
  	  verstring=""
  	fi
  
-@@ -7630,7 +7636,7 @@ func_mode_link ()
+@@ -7630,7 +7639,7 @@ func_mode_link ()
  	  *-*-netbsd*)
  	    # Don't link with libc until the a.out ld.so is fixed.
  	    ;;
@@ -58,7 +91,7 @@ $NetBSD: patch-ac,v 1.31 2014/05/10 15:32:08 joerg Exp $
  	    # Do not include libc due to us having libc/libc_r.
  	    ;;
  	  *-*-sco3.2v5* | *-*-sco5v6*)
-@@ -7653,6 +7659,7 @@ func_mode_link ()
+@@ -7653,12 +7662,14 @@ func_mode_link ()
  	libname_save=$libname
  	release_save=$release
  	versuffix_save=$versuffix
@@ -66,7 +99,6 @@ $NetBSD: patch-ac,v 1.31 2014/05/10 15:32:08 joerg Exp $
  	major_save=$major
  	# I'm not sure if I'm treating the release correctly.  I think
  	# release should show up in the -l (ie -lgmp5) so we don't want to
-@@ -7659,6 +7666,7 @@ func_mode_link ()
  	# add it in twice.  Is that correct?
  	release=""
  	versuffix=""
@@ -74,7 +106,7 @@ $NetBSD: patch-ac,v 1.31 2014/05/10 15:32:08 joerg Exp $
  	major=""
  	newdeplibs=
  	droppeddeps=no
-@@ -7935,6 +7943,7 @@ EOF
+@@ -7935,6 +7946,7 @@ EOF
  	  ;;
  	esac
  	versuffix=$versuffix_save
