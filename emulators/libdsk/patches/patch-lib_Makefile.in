@@ -1,0 +1,13 @@
+$NetBSD: patch-lib_Makefile.in,v 1.1 2014/09/10 12:14:57 joerg Exp $
+
+--- lib/Makefile.in.orig	2014-09-09 13:56:48.000000000 +0000
++++ lib/Makefile.in
+@@ -718,7 +718,7 @@ $(HEADERPRE)_%.h:         $(CLASSDPRE)/%
+ $(srcdir)/dskjni.c:	$(JARHEADERS)
+ 
+ install-exec-local:
+-	$(mkinstalldirs) $(libdir)
++	$(mkinstalldirs) $(DESTDIR)$(libdir)
+ 	if test x@LIBDSKJAR@ = x; then true; else $(INSTALL_DATA) @LIBDSKJAR@ $(DESTDIR)/$(libdir); fi
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
