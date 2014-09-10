@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.11 2012/01/28 11:59:06 marino Exp $
+$NetBSD: distinfo,v 1.12 2014/09/10 12:24:43 joerg Exp $
 
 SHA1 (efltk-2.0.5.tar.bz2) = 26f7124b384d0bfe3d28a73cbdf0111432b08d99
 RMD160 (efltk-2.0.5.tar.bz2) = 7efa711d0df8a01ee402e1866286265d294778e8
 Size (efltk-2.0.5.tar.bz2) = 1241294 bytes
 SHA1 (patch-aa) = d87f595661c465fc315b643241b22ef65926906e
-SHA1 (patch-ab) = 27a6870c068c8ea44089955a7d3c0492191f23ba
+SHA1 (patch-ab) = f6b1fae6962b830ba16ddb5adbb5aec9193ebf59
 SHA1 (patch-ac) = cf4474ff83f9630f6b310bc3df0fc16adaff7138
 SHA1 (patch-ad) = 41911884bc0eaa6a4de869b90d62c9ee27d1908b
 SHA1 (patch-ae) = 45f32b9d098736443a3d9b405b6fe17da624d9fc
