@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2006/10/14 01:21:48 rillig Exp $
+$NetBSD: distinfo,v 1.7 2014/09/10 12:22:44 joerg Exp $
 
 SHA1 (ed2k-gtk-gui-0.6.3.tar.gz) = b5474717b1b9cdeddae8cc707fe9809608138dc1
 RMD160 (ed2k-gtk-gui-0.6.3.tar.gz) = 98f69190e76b58b79aa3dd9a6d20b7abcb080208
@@ -6,3 +6,8 @@ Size (ed2k-gtk-gui-0.6.3.tar.gz) = 1993079 bytes
 SHA1 (patch-aa) = d47d9302cd13a8ca3d9488f7e2563e0c33265e1d
 SHA1 (patch-ab) = 89dfaa0f27af6b8920e286b70e31ea97b9f68599
 SHA1 (patch-ac) = 2a16726d954f4ceb82e40f2e6993864aed79d0f2
+SHA1 (patch-ed2k__gui_blacklist.c) = 1dba6d0a177778b627aeafca8d6cecfebe1b409c
+SHA1 (patch-ed2k__gui_http__get.c) = 8a8f03d800c983415c79f4e60bcfd291b9d17165
+SHA1 (patch-ed2k__gui_misc.c) = 78aaee83863356557bdf83e6e79303b0596b3b87
+SHA1 (patch-ed2k__gui_misc__strings.c) = e304379a02ce3719f4496a80d7d1d7ccd108f915
+SHA1 (patch-gnet_inetaddr.c) = 8ffe0a7a8e05d673ff30f254cf4d1f16bd059176
