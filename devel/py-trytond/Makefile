@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.8 2014/06/25 06:00:39 richard Exp $
-
+# $NetBSD: Makefile,v 1.9 2014/09/10 14:35:05 richard Exp $
+TRYTOND_MODULE_REVISION=	2
 .include "../../devel/py-trytond/Makefile.common"
 DISTNAME=	trytond-${TRYTOND_VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
