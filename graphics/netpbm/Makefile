@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.191 2014/09/08 21:55:04 wiz Exp $
+# $NetBSD: Makefile,v 1.192 2014/09/10 10:54:49 jperkin Exp $
 
 DISTNAME=	netpbm-10.67.05
 CATEGORIES=	graphics
@@ -59,6 +59,18 @@ SUBST_FILES.rgb_txt=	pm_config.in.h
 SUBST_SED.rgb_txt+=	-e 's,/usr/share/netpbm/rgb.txt,${PREFIX}/share/netpbm/rgb.txt,'
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+SUBST_CLASSES+=		xopen
+SUBST_STAGE.xopen=	pre-configure
+SUBST_FILES.xopen=	converter/other/jpeg2000/jpeg2ktopam.c
+SUBST_FILES.xopen+=	converter/other/jpeg2000/pamtojpeg2k.c
+SUBST_FILES.xopen+=	buildtools/libopt.c
+SUBST_FILES.xopen+=	lib/libppmcolor.c lib/libpamcolor.c lib/libpm.c
+SUBST_FILES.xopen+=	lib/pmfileio.c lib/libpam.c lib/colorname.c
+SUBST_SED.xopen=	-e '/define.*_XOPEN_SOURCE/s/600/500/g'
+.endif
+
 
 # only used if NEED_RUNTIME_PATH is set, so set it unconditionally
 MAKE_FLAGS+=	NETPBMLIB_RUNTIME_PATH=${PREFIX}
