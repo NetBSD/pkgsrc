@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.12 2014/06/12 13:31:44 fhajny Exp $
+$NetBSD: distinfo,v 1.13 2014/09/10 13:20:16 fhajny Exp $
 
 SHA1 (postgrey-1.35.tar.gz) = 8dde06a3016f2362af0ca0ba16686b45cf1e397b
 RMD160 (postgrey-1.35.tar.gz) = 7dc67fb3df37094da3039297d3885ccde5f08c06
 Size (postgrey-1.35.tar.gz) = 36610 bytes
+SHA1 (targrey-0.31-postgrey-1.34.patch) = 67f9a0dd22e79a9c1c2f428b5ea12f5a9e7271af
+RMD160 (targrey-0.31-postgrey-1.34.patch) = 19d4b54da630445c3c26a4dcfdc65643780cae45
+Size (targrey-0.31-postgrey-1.34.patch) = 8555 bytes
