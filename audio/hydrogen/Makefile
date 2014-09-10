@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2014/08/05 04:59:35 mrg Exp $
+# $NetBSD: Makefile,v 1.45 2014/09/10 12:10:59 joerg Exp $
 
 DISTNAME=	0.9.6
 PKGNAME=	hydrogen-0.9.6
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/hydrogen-music/hydrogen/archive/
 
