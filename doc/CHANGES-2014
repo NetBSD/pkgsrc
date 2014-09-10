@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3491 2014/09/10 12:06:44 richard Exp $
+$NetBSD: CHANGES-2014,v 1.3492 2014/09/10 14:36:02 richard Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4453,3 +4453,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-hgnested to 0.6 [richard 2014-09-10]
 	Updated devel/py-at-spi2 to 2.12.0 [prlw1 2014-09-10]
 	Updated devel/py-tryton to 3.2.3 [richard 2014-09-10]
+	Updated devel/py-trytond to 3.2.2 [richard 2014-09-10]
