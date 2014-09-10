@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2014/08/19 13:35:44 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2014/09/10 12:16:15 joerg Exp $
 #
 
 VERSION=	0.97.0.1696
 PKGNAME=	freedv-${VERSION}
 DISTNAME=	fdmdv2-${VERSION}
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/fdmdv2
 CATEGORIES=	ham
 #  svn://svn.code.sf.net/p/freetel/code/fdmdv2
