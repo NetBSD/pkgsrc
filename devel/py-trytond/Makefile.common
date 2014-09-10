@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2014/06/25 06:00:39 richard Exp $
+# $NetBSD: Makefile.common,v 1.2 2014/09/10 16:03:48 richard Exp $
 
 # used by devel/py-tryton/Makefile
 # used by devel/py-trytond/Makefile
@@ -10,6 +10,7 @@
 # used by finance/py-trytond-account-product/Makefile
 # used by finance/py-trytond-account-statement/Makefile
 # used by finance/py-trytond-account/Makefile
+# used by finance/py-trytond-analytic-account/Makefile
 # used by finance/py-trytond-bank/Makefile
 # used by finance/py-trytond-currency/Makefile
 # used by geography/py-trytond-country/Makefile
