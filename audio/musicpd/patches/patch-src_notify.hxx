@@ -1,4 +1,6 @@
-$NetBSD: patch-src_notify.hxx,v 1.1 2014/09/10 12:10:23 joerg Exp $
+$NetBSD: patch-src_notify.hxx,v 1.2 2014/09/10 12:16:55 wiz Exp $
+
+http://bugs.musicpd.org/view.php?id=4110
 
 --- src/notify.hxx.orig	2014-09-09 20:11:34.000000000 +0000
 +++ src/notify.hxx
