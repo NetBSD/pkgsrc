@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/03/06 10:16:15 mrg Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/09/10 12:10:59 joerg Exp $
 bin/h2cli
 bin/h2player
 bin/h2synth
@@ -62,6 +62,7 @@ share/hydrogen/data/demo_songs/tutorial_georgyporgy.h2song
 share/hydrogen/data/doc/Makefile
 share/hydrogen/data/doc/MidiInstrumentMapping.ods
 share/hydrogen/data/doc/README.DOCUMENTATION.txt
+share/hydrogen/data/doc/TODO
 share/hydrogen/data/doc/img/AudioEngineInfoDialog.png
 share/hydrogen/data/doc/img/CreateNewPattern.png
 share/hydrogen/data/doc/img/Director.png
@@ -126,6 +127,7 @@ share/hydrogen/data/doc/img/PreferencesAppearance.png
 share/hydrogen/data/doc/img/PreferencesAppearance_V2.png
 share/hydrogen/data/doc/img/PreferencesAudioSystem.png
 share/hydrogen/data/doc/img/PreferencesAudioSystem_V2.png
+share/hydrogen/data/doc/img/PreferencesAudioSystem_V3.png
 share/hydrogen/data/doc/img/PreferencesGeneral.png
 share/hydrogen/data/doc/img/PreferencesGeneral_V2.png
 share/hydrogen/data/doc/img/PreferencesGeneral_V3.png
@@ -319,6 +321,8 @@ share/hydrogen/data/i18n/hydrogen.es.qm
 share/hydrogen/data/i18n/hydrogen.es.ts
 share/hydrogen/data/i18n/hydrogen.fr.qm
 share/hydrogen/data/i18n/hydrogen.fr.ts
+share/hydrogen/data/i18n/hydrogen.gl.qm
+share/hydrogen/data/i18n/hydrogen.gl.ts
 share/hydrogen/data/i18n/hydrogen.hr.qm
 share/hydrogen/data/i18n/hydrogen.hr.ts
 share/hydrogen/data/i18n/hydrogen.hu_HU.qm
@@ -335,6 +339,8 @@ share/hydrogen/data/i18n/hydrogen.pt_BR.qm
 share/hydrogen/data/i18n/hydrogen.pt_BR.ts
 share/hydrogen/data/i18n/hydrogen.ru.qm
 share/hydrogen/data/i18n/hydrogen.ru.ts
+share/hydrogen/data/i18n/hydrogen.sr.qm
+share/hydrogen/data/i18n/hydrogen.sr.ts
 share/hydrogen/data/i18n/hydrogen.sv.qm
 share/hydrogen/data/i18n/hydrogen.sv.ts
 share/hydrogen/data/i18n/stats.py
