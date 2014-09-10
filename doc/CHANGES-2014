@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3496 2014/09/10 20:09:52 mrg Exp $
+$NetBSD: CHANGES-2014,v 1.3497 2014/09/10 21:38:40 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4458,3 +4458,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-uwsgi to 2.0.7 [wiedi 2014-09-10]
 	Added finance/py-trytond-analytic-account version 3.2.1 [richard 2014-09-10]
 	Updated audio/hydrogen to 0.9.6.1 [mrg 2014-09-10]
+	Added textproc/hs-texmath version 0.8 [szptvlfn 2014-09-10]
