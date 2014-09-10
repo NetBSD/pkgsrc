@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/09/02 14:41:37 xtraeme Exp $
+$NetBSD: patch-ab,v 1.2 2014/09/10 12:24:44 joerg Exp $
 
 --- Makefile.orig	2005-09-02 02:05:03.000000000 +0200
 +++ Makefile	2005-09-02 02:05:13.000000000 +0200
@@ -10,4 +10,15 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/09/02 14:41:37 xtraeme Exp $
 +DIRS = src themes efltk locale
  
  GENERATED = makeinclude efltk-config
+ 
+@@ -118,8 +118,8 @@ else
+ $(GENERATED): configure makeinclude.in configh.in efltk-config.in
+ 	./configure
+ 
+-configure: configure.in
+-	autoconf
++#configure: configure.in
++#	autoconf
+ 	
+ endif
  
