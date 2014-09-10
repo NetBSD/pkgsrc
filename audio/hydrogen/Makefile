@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.45 2014/09/10 12:10:59 joerg Exp $
+# $NetBSD: Makefile,v 1.46 2014/09/10 20:08:42 mrg Exp $
 
-DISTNAME=	0.9.6
-PKGNAME=	hydrogen-0.9.6
-PKGREVISION=	1
+DISTNAME=	0.9.6.1
+PKGNAME=	hydrogen-0.9.6.1
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/hydrogen-music/hydrogen/archive/
 
-# Hydrogen publishes files like "hydrogen-0.9.6/0.9.6.tar.gz"
+# Hydrogen publishes files like ".../archive/0.9.6.1.tar.gz"
 DIST_SUBDIR=	${PKGNAME_NOREV}
 WRKSRC=		${WRKDIR}/${PKGNAME}
 
