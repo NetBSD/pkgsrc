@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/08/10 15:11:57 adam Exp $
+# $NetBSD: Makefile,v 1.18 2014/09/10 12:13:37 joerg Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 SVR4_PKGNAME=	mysqs
@@ -75,7 +75,8 @@ REPLACE_SH+=		mysql-test/t/long_tmpdir-master.sh
 REPLACE_SH+=		mysql-test/t/lowercase_mixed_tmpdir-master.sh
 REPLACE_SH+=		mysql-test/t/lowercase_mixed_tmpdir_innodb-master.sh
 
-CHECK_INTERPRETER_SKIP+=share/mysql/test/std_data/dtrace.d
+CHECK_INTERPRETER_SKIP+=share/mysql/test/std_data/dtrace.d \
+			share/mysql/test/suite/opt_trace/validate_json.py
 
 # Replace interpreter without pulling in Python dependecy
 # Update when PYTHON_VERSION_DEFAULT changes!
