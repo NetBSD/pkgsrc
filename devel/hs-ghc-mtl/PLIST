@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2014/09/10 21:40:07 szptvlfn Exp $
+lib/ghc-mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Ghc.hi
+lib/ghc-mtl-${PKGVERSION}/${HASKELL_VERSION}/HSghc-mtl-${PKGVERSION}.o
+lib/ghc-mtl-${PKGVERSION}/${HASKELL_VERSION}/libHSghc-mtl-${PKGVERSION}.a
+lib/ghc-mtl-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/ghc-mtl-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/ghc-mtl-${PKGVERSION}/html/Control-Monad-Ghc.html
+${PLIST.doc}share/doc/ghc-mtl-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/ghc-mtl-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/ghc-mtl-${PKGVERSION}/html/ghc-mtl.haddock
+${PLIST.doc}share/doc/ghc-mtl-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/ghc-mtl-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/ghc-mtl-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/ghc-mtl-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/ghc-mtl-${PKGVERSION}/html/mini_Control-Monad-Ghc.html
+${PLIST.doc}share/doc/ghc-mtl-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/ghc-mtl-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/ghc-mtl-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/ghc-mtl-${PKGVERSION}/html/synopsis.png
