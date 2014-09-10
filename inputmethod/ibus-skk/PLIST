@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2012/04/22 14:04:51 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/09/10 09:46:00 obache Exp $
 libexec/ibus-engine-skk
 libexec/ibus-setup-skk
+share/applications/ibus-setup-skk.desktop
 share/ibus-skk/icons/ibus-skk.svg
 share/ibus-skk/setup/ibus-skk-preferences.ui
 share/ibus/component/skk.xml
