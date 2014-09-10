@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13647 2014/09/07 23:25:15 rodent Exp $
+$NetBSD: TODO,v 1.13648 2014/09/10 09:39:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -416,8 +416,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bzr-2.6.0
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
-	o calibre-2.1.0 [wip]
-	o calibre-2.2.0
+	o calibre-2.2.0 [wip]
 	o calligra-2.4.3 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -577,6 +576,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gdsreader-0.3.2
 	o geany-1.24.1
 	o gedit-plugins-2.32.0 [GNOME 2.32]
+	o genius-1.0.18
 	o gentoo-0.20.4
 	o gforth-0.7.3
 	o gfract-0.33
@@ -594,6 +594,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.12.2
+	o gnome-applets-3.8.0
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-chess-3.12.3
 	o gnome-color-manager-2.32.0 [GNOME 2.32]
@@ -644,9 +645,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gthumb-3.2.8
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
-	o gtk3-3.12.0
 	o gtkglarea-2.1.0
-	o gtkmm-3.12
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtl-3.6
 	o gtodo-0.16.0rc2
