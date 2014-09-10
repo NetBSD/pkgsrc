@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1976 2014/09/10 10:14:07 richard Exp $
+# $NetBSD: Makefile,v 1.1977 2014/09/10 21:41:39 szptvlfn Exp $
 #
 
 COMMENT=	Development utilities
@@ -310,6 +310,7 @@ SUBDIR+=	hs-deepseq-generics
 SUBDIR+=	hs-dlist
 SUBDIR+=	hs-exceptions
 SUBDIR+=	hs-extensible-exceptions
+SUBDIR+=	hs-ghc-mtl
 SUBDIR+=	hs-ghc-paths
 SUBDIR+=	hs-hashable
 SUBDIR+=	hs-lifted-base
