@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3493 2014/09/10 15:10:17 richard Exp $
+$NetBSD: CHANGES-2014,v 1.3494 2014/09/10 16:03:38 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4455,3 +4455,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-tryton to 3.2.3 [richard 2014-09-10]
 	Updated devel/py-trytond to 3.2.2 [richard 2014-09-10]
 	Updated finance/py-trytond-account-payment-sepa to 3.2.2 [richard 2014-09-10]
+	Updated www/py-uwsgi to 2.0.7 [wiedi 2014-09-10]
