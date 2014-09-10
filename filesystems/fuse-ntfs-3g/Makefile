@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/05/19 12:22:06 adam Exp $
+# $NetBSD: Makefile,v 1.18 2014/09/10 12:15:15 joerg Exp $
 
 .include "../../filesystems/libntfs/Makefile.common"
 
@@ -11,6 +11,8 @@ CONFIGURE_ARGS+=	--disable-ntfsprogs
 CONFIGURE_ARGS+=	--enable-mount-helper
 
 BUILD_DIRS=		src
+
+USE_TOOLS+=	pkg-config
 
 .include "../../filesystems/libntfs/buildlink3.mk"
 .include "../../mk/fuse.buildlink3.mk"
