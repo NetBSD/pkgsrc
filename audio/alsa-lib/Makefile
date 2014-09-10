@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/08/28 10:58:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.15 2014/09/10 15:59:34 jperkin Exp $
 #
 
 DISTNAME=	alsa-lib-1.0.27.2
@@ -33,6 +33,7 @@ CPPFLAGS.FreeBSD+=	-D__u32=uint32_t -D__u64=uint64_t
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ARGS+=	--without-versioned
+BUILDLINK_TRANSFORM+=	rm:-Wl,--version-script=Versions
 .endif
 
 .include "../../mk/dlopen.buildlink3.mk"
