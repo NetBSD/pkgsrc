@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/09/10 12:10:59 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/09/10 20:08:42 mrg Exp $
 bin/h2cli
 bin/h2player
 bin/h2synth
@@ -48,7 +48,7 @@ include/hydrogen/smf/SMFEvent.h
 include/hydrogen/synth/Synth.h
 include/hydrogen/timehelper.h
 include/hydrogen/version.h
-lib/libhydrogen-core-0.9.6.so
+lib/libhydrogen-core-0.9.6.1.so
 share/applications/hydrogen.desktop
 share/hydrogen/data/DefaultSong.h2song
 share/hydrogen/data/click.wav
