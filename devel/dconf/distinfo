@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2013/09/30 11:42:13 obache Exp $
+$NetBSD: distinfo,v 1.8 2014/09/10 10:54:46 prlw1 Exp $
 
-SHA1 (dconf-0.18.0.tar.xz) = 9b37e8d22714c32931fe8ab44cb0304c5c91b7ea
-RMD160 (dconf-0.18.0.tar.xz) = 2d010c1998f093878f4be4ce8b46ee6066c9f9af
-Size (dconf-0.18.0.tar.xz) = 378072 bytes
+SHA1 (dconf-0.20.0.tar.xz) = 638a92d176b3efa01c7b3f5dfd89029acc8d799b
+RMD160 (dconf-0.20.0.tar.xz) = eae9e6cbe6c41e76225933239672dd794c168b80
+Size (dconf-0.20.0.tar.xz) = 389388 bytes
 SHA1 (patch-aa) = c786bb85c3971f918294293df7c03fabf1ff201e
 SHA1 (patch-editor_Makefile.in) = 5caa945a7b792daa36fb090741b05e38f0f3945a
