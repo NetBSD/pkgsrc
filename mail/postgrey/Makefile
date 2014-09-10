@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2014/06/12 13:31:44 fhajny Exp $
+# $NetBSD: Makefile,v 1.43 2014/09/10 13:20:16 fhajny Exp $
 
 DISTNAME=	postgrey-1.35
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://postgrey.schweikert.ch/pub/
 
@@ -18,6 +19,7 @@ NO_CONFIGURE=		yes
 USE_TOOLS+=		perl:run
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 POSTGREY_USER?=		postgrey
 POSTGREY_GROUP?=	postgrey
