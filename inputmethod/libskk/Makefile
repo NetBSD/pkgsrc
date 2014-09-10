@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2013/06/16 00:30:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2014/09/10 09:34:45 obache Exp $
 #
 
-DISTNAME=	libskk-1.0.1
+DISTNAME=	libskk-1.0.2
 CATEGORIES=	inputmethod
-MASTER_SITES=	http://cdn.bitbucket.org/libskk/libskk/downloads/
+MASTER_SITES=	https://github.com/ueno/libskk/releases/download/${PKGVERSION_NOREV}/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://github.com/ueno/libskk/
@@ -19,9 +19,11 @@ PKGCONFIG_OVERRIDE+=	libskk/libskk.pc.in
 
 CONFIGURE_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 
+.include "options.mk"
+
 TEST_TARGET=		check
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libgee/buildlink3.mk"
+.include "../../devel/libgee0.8/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
