@@ -1,13 +1,10 @@
-# $NetBSD: builtin.mk,v 1.7 2014/09/10 10:14:07 richard Exp $
+# $NetBSD: builtin.mk,v 1.8 2014/09/10 10:39:35 richard Exp $
 
 BINUTILS_PREFIX?=	/usr
 
 BUILTIN_PKG:=	binutils
-
 BUILTIN_FIND_FILES_VAR := BINUTILS_FILES
-BUILTIN_FIND_FILES.BINUTILS_FILES := ${BINUTILS_PREFIX}/include/bfd.h \
-	${BINUTILS_PREFIX}/gnu/include/bfd.h
-
+BUILTIN_FIND_FILES.BINUTILS_FILES := ${BINUTILS_PREFIX}/include/bfd.h
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
 ###
@@ -19,22 +16,6 @@ IS_BUILTIN.binutils?=	yes
 .else
 IS_BUILTIN.binutils?=	no
 .endif
-MAKEVARS+=	IS_BUILTIN.binutils
-
-###
-### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
-### a package name to represent the built-in package.
-###
-.if !defined(BUILTIN_PKG.binutils) && !empty(IS_BUILTIN.binutils:M[yY][eE][sS])
-.  if !empty(TOOLS_PLATFORM.readelf)
-BUILTIN_VERSION.binutils!=		\
-	${TOOLS_PLATFORM.readelf} --version |	\
-		${SED} -ne 's,^.*Binutils.*)[ ]*\([0-9\.]*\),\1,p'
-.  endif
-BUILTIN_VERSION.binutils?=	_unknownversion_
-BUILTIN_PKG.binutils=	binutils-${BUILTIN_VERSION.binutils}
-.endif
-MAKEVARS+=	BUILTIN_PKG.binutils
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -71,6 +52,7 @@ USE_BUILTIN.binutils=	no
 .    endfor
 .  endif  # PREFER.binutils
 .endif
+MAKEVARS+=	USE_BUILTIN.binutils
 
 # if USE_BINUTILS is defined, then force the use of a true binutils
 # implementation.
@@ -81,8 +63,6 @@ USE_BUILTIN.binutils=	no
 .  endif
 .endif
 
-MAKEVARS+=	USE_BUILTIN.binutils
-
 ###
 ### The section below only applies if we are not including this file
 ### solely to determine whether a built-in implementation exists.
@@ -90,6 +70,12 @@ MAKEVARS+=	USE_BUILTIN.binutils
 CHECK_BUILTIN.binutils?=	no
 .if !empty(CHECK_BUILTIN.binutils:M[nN][oO])
 
-USE_TOOLS+=	ar as ld nm ranlib
+.  if !empty(USE_BUILTIN.binutils:M[nN][oO])
+AR=	${BUILDLINK_PREFIX.binutils}/bin/ar
+AS=	${BUILDLINK_PREFIX.binutils}/bin/as
+LD=	${BUILDLINK_PREFIX.binutils}/bin/ld
+NM=	${BUILDLINK_PREFIX.binutils}/bin/nm
+RANLIB=	${BUILDLINK_PREFIX.binutils}/bin/ranlib
+.  endif
 
 .endif	# CHECK_BUILTIN.binutils
