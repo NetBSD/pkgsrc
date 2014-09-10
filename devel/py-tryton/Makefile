@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2014/09/10 10:48:17 richard Exp $
+# $NetBSD: Makefile,v 1.12 2014/09/10 12:05:38 richard Exp $
 
-TRYTON_CLIENT_REVISION=1
+TRYTON_CLIENT_REVISION=3
 .include "../../devel/py-trytond/Makefile.common"
 DISTNAME=	tryton-${TRYTON_VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
