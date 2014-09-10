@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2014/04/17 13:08:24 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2014/09/10 10:14:07 richard Exp $
 
 DISTNAME=	gmp-6.0.0a
+PKGREVISION=	1
 CATEGORIES=	devel math
 MASTER_SITES=	https://gmplib.org/download/gmp/ \
 		${MASTER_SITE_GNU:=gmp/}
@@ -27,6 +28,8 @@ TEST_TARGET=		check
 PLIST_VARS+=		cxx
 
 .include "../../mk/bsd.prefs.mk"
+
+LDFLAGS.SunOS+=	-Wl,-zignore	# avoid unused references to libgcc_s
 
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 CONFIGURE_ENV+=		CC_FOR_BUILD=${NATIVE_CC:Q}
