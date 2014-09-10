@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3487 2014/09/10 09:51:35 obache Exp $
+$NetBSD: CHANGES-2014,v 1.3488 2014/09/10 10:55:15 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4449,3 +4449,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated inputmethod/libskk to 1.0.2 [obache 2014-09-10]
 	Updated inputmethod/ibus-skk to 1.4.2 [obache 2014-09-10]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.406 [obache 2014-09-10]
+	Updated devel/dconf to 0.20.0 [prlw1 2014-09-10]
