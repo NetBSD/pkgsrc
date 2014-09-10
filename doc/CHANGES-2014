@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3489 2014/09/10 11:00:19 richard Exp $
+$NetBSD: CHANGES-2014,v 1.3490 2014/09/10 11:08:40 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4451,3 +4451,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.406 [obache 2014-09-10]
 	Updated devel/dconf to 0.20.0 [prlw1 2014-09-10]
 	Updated devel/py-hgnested to 0.6 [richard 2014-09-10]
+	Updated devel/py-at-spi2 to 2.12.0 [prlw1 2014-09-10]
