@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2014/04/23 07:05:32 adam Exp $
+# $NetBSD: Makefile,v 1.10 2014/09/10 12:24:13 joerg Exp $
 
 PKGNAME=	qt5-qtquick1-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	Qt5 module for Quick1
 
 .include "../../x11/qt5-qtbase/Makefile.common"
