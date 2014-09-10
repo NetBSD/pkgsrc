@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/05/18 23:05:34 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/09/10 11:08:19 prlw1 Exp $
 ${PYSITELIB}/pyatspi/Accessibility.py
 ${PYSITELIB}/pyatspi/Accessibility.pyc
 ${PYSITELIB}/pyatspi/Accessibility.pyo
@@ -59,6 +59,9 @@ ${PYSITELIB}/pyatspi/state.pyo
 ${PYSITELIB}/pyatspi/table.py
 ${PYSITELIB}/pyatspi/table.pyc
 ${PYSITELIB}/pyatspi/table.pyo
+${PYSITELIB}/pyatspi/tablecell.py
+${PYSITELIB}/pyatspi/tablecell.pyc
+${PYSITELIB}/pyatspi/tablecell.pyo
 ${PYSITELIB}/pyatspi/text.py
 ${PYSITELIB}/pyatspi/text.pyc
 ${PYSITELIB}/pyatspi/text.pyo
