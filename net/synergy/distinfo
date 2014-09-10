@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2014/08/25 09:58:18 obache Exp $
+$NetBSD: distinfo,v 1.13 2014/09/10 12:23:40 joerg Exp $
 
 SHA1 (synergy-1.4.12-Source.tar.gz) = d0f590835f30d8727987d4968d0f560bba90927f
 RMD160 (synergy-1.4.12-Source.tar.gz) = 7af82a1edd9db6effc8f9adb08fd8c7616b19f03
@@ -8,6 +8,7 @@ SHA1 (patch-src_lib_ipc_CIpcServerProxy.cpp) = b3669add3fec67f2fbc30457fcd36ae73
 SHA1 (patch-src_lib_server_CClientProxy1__4.cpp) = dbaf92152e431048b229d7cecf80d0776e7653b1
 SHA1 (patch-src_lib_server_CConfig.cpp) = 14b5434c3fe33efde44f26fd14da6897229aacc9
 SHA1 (patch-src_lib_server_CConfig.h) = 6aa99efc189a3d8e067a30f4fee4d94874e4f3c6
+SHA1 (patch-tools_cryptopp562_wake.cpp) = 7e9284e49a3bdfdb7a9cec2cd6081babf78db38a
 SHA1 (patch-tools_gmock-1.6.0_configure) = 45cfbcdc8b55c1e745265ed4e2bbbfe41ef000a2
 SHA1 (patch-tools_gmock-1.6.0_include_gmock_internal_gmock-port.h) = dc526bcfab414dcd35d3d67c36998d92020bd398
 SHA1 (patch-tools_gtest-1.6.0_configure) = 35d77cab8e651bff031294f7d12570cb582aba1a
