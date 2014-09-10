@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3484 2014/09/10 09:02:00 obache Exp $
+$NetBSD: CHANGES-2014,v 1.3485 2014/09/10 09:34:56 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4446,3 +4446,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated games/puzzles to 10223 [wiz 2014-09-10]
 	Updated x11/gtkmm3 to 3.12.0 [wiz 2014-09-10]
 	Updated devel/py-testtools to 1.0.0 [obache 2014-09-10]
+	Updated inputmethod/libskk to 1.0.2 [obache 2014-09-10]
