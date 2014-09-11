@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3505 2014/09/11 17:01:23 jperkin Exp $
+$NetBSD: CHANGES-2014,v 1.3506 2014/09/11 17:03:32 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4467,3 +4467,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/suse131_base to 13.1nb5 [obache 2014-09-11]
 	Updated games/exchess to 7.31beta [jperkin 2014-09-11]
 	Updated games/exchess-book-medium to 20140911 [jperkin 2014-09-11]
+	Updated games/exchess-book-small to 20140911 [jperkin 2014-09-11]
