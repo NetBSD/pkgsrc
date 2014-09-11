@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3500 2014/09/11 02:01:06 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3501 2014/09/11 07:23:34 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4462,3 +4462,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/hs-ghc-mtl version 1.2.1.0 [szptvlfn 2014-09-10]
 	Updated www/p5-Dancer to 1.3129 [wen 2014-09-11]
 	Updated www/p5-Mojolicious to 5.39 [wen 2014-09-11]
+	Updated databases/edb to 1.0.5nb2 [dholland 2014-09-11]
