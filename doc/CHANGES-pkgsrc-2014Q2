@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.30 2014/09/01 22:18:16 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.31 2014/09/11 19:32:49 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q2 branch:
@@ -118,3 +118,14 @@ Pullup ticket #4490 - requested by tron
 databases/phpmyadmin: security update
 Pullup ticket #4491 - requested by taca
 www/squid3: security update
+Pullup ticket #4496 - requested by he
+devel/java-subversion: security update
+devel/p5-subversion: security update
+devel/py-subversion: security update
+devel/ruby-subversion: security update
+devel/subversion-base: security update
+www/ap2-subversion: security update
+Pullup ticket #4497 - requested by obache
+emulators/suse131_base: security update
+Pullup ticket #4498 - requested by he
+devel/p5-subversion: security update
