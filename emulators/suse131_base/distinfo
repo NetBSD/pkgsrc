@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2014/04/23 12:48:04 obache Exp $
+$NetBSD: distinfo,v 1.6.2.1 2014/09/11 19:16:33 tron Exp $
 
 SHA1 (suse131/aaa_base-13.1-16.17.1.i586.rpm) = de632d236e08da14f0591a94e7080fd22757db38
 RMD160 (suse131/aaa_base-13.1-16.17.1.i586.rpm) = d5ccd2229715daf2637a558cf49e29216bb06000
@@ -24,12 +24,12 @@ Size (suse131/findutils-4.5.12-1.1.i586.rpm) = 284736 bytes
 SHA1 (suse131/findutils-4.5.12-1.1.x86_64.rpm) = b2b179c789e2b782532483cbbc7641cf3533836e
 RMD160 (suse131/findutils-4.5.12-1.1.x86_64.rpm) = 4956722a0c9bdeff3647d63d9c1382a0b9f21d40
 Size (suse131/findutils-4.5.12-1.1.x86_64.rpm) = 286084 bytes
-SHA1 (suse131/glibc-2.18-4.11.1.i586.rpm) = db00db15fd6d28931a8e1b54c791f457ef26dc79
-RMD160 (suse131/glibc-2.18-4.11.1.i586.rpm) = 1c8da698474376e1885d19208f60ffcd1c071869
-Size (suse131/glibc-2.18-4.11.1.i586.rpm) = 1521840 bytes
-SHA1 (suse131/glibc-2.18-4.11.1.x86_64.rpm) = 8cc69b04c3e33659e3c5ea46a1312d2b3d0fa790
-RMD160 (suse131/glibc-2.18-4.11.1.x86_64.rpm) = 78e005405224e9349b82ccc778b24a6881ef53d7
-Size (suse131/glibc-2.18-4.11.1.x86_64.rpm) = 1729789 bytes
+SHA1 (suse131/glibc-2.18-4.21.1.i586.rpm) = 76f331dd78ed682a2d415df91c71424c2c9e36e0
+RMD160 (suse131/glibc-2.18-4.21.1.i586.rpm) = 585766e2c2fb10d99561146386e8d3142f347a83
+Size (suse131/glibc-2.18-4.21.1.i586.rpm) = 1521123 bytes
+SHA1 (suse131/glibc-2.18-4.21.1.x86_64.rpm) = ccd3464199e5fd910a02b8917d92510424e48fbe
+RMD160 (suse131/glibc-2.18-4.21.1.x86_64.rpm) = 36baf8f264a5b564490c5e7ff864bc60a6140251
+Size (suse131/glibc-2.18-4.21.1.x86_64.rpm) = 1729472 bytes
 SHA1 (suse131/keyutils-1.5.5-6.1.3.i586.rpm) = 913db0152c69ce422bbc9d12ccc6582da655d70a
 RMD160 (suse131/keyutils-1.5.5-6.1.3.i586.rpm) = b09f26c235dbcdf6ed7f58f62160b44a46be6e59
 Size (suse131/keyutils-1.5.5-6.1.3.i586.rpm) = 66726 bytes
