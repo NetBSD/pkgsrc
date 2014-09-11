@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3501 2014/09/11 07:23:34 dholland Exp $
+$NetBSD: CHANGES-2014,v 1.3502 2014/09/11 07:28:42 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4463,3 +4463,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Dancer to 1.3129 [wen 2014-09-11]
 	Updated www/p5-Mojolicious to 5.39 [wen 2014-09-11]
 	Updated databases/edb to 1.0.5nb2 [dholland 2014-09-11]
+	Updated net/p5-Net-GitHub to 0.68 [wen 2014-09-11]
