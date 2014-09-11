@@ -1,22 +1,16 @@
-$NetBSD: distinfo,v 1.10 2014/02/09 16:50:45 wiedi Exp $
+$NetBSD: distinfo,v 1.11 2014/09/11 16:59:16 jperkin Exp $
 
-SHA1 (EXCH314S.zip) = 7d8ffbd94dc86a97512826e611048a691c8c646d
-RMD160 (EXCH314S.zip) = 0503200c210aaf7ddc69e1372392e8ea690505ea
-Size (EXCH314S.zip) = 110676 bytes
-SHA1 (patch-aa) = 6aa16f2ca4ecc52b77739b5d28ab650f8102e54c
-SHA1 (patch-ab) = a38d6455675083e9ca291c844c85746a0ed897e5
-SHA1 (patch-ac) = cfc1beff8ae3b2e4c9620e8d49852ce80d848ad6
-SHA1 (patch-ad) = f2d2de59f56a0a24e6408ace9ba15139f986de95
-SHA1 (patch-ae) = 9d374b888a6f431604f41c4421baa23d8ca775a1
-SHA1 (patch-af) = f2379b8929775ff660f9af9fc96969eab1b25870
-SHA1 (patch-ag) = 7072e6b7ac08fcb901630c2705fe38065bc89bab
-SHA1 (patch-ah) = 872b0b7c62f95075f0ce7360464fa51215619ee3
-SHA1 (patch-ai) = 7244cfeb214e08a5e10198de2488957a63e8fda9
-SHA1 (patch-aj) = 064dd97be969d403f09cb9cab70705891b1355de
-SHA1 (patch-ak) = 659f1cf07efefe524be4d025446fea55eb5f3e9a
-SHA1 (patch-funct.h) = 8ff861d1cfaac5aac8722334b2142e9c63a231c6
-SHA1 (patch-main.h) = f49c0c889469002281fd15c6ceac359f8c4e6f51
-SHA1 (patch-parse.cpp) = f000ea0d4e2adb893ec6ec09a5e0c3dc5c77970d
-SHA1 (patch-pmoves.cpp) = 66973c0baee54fa623a9f0b77c29d41e4c6924b8
-SHA1 (patch-search.h) = 85b16b102087dd218d64c14cc294c5c6df6849bb
-SHA1 (patch-setup.cpp) = 16914d19bb6bc48341409dfa15d9f451e4f46733
+SHA1 (EXchess_v7.31beta.zip) = 09fa6d133172e34c1908df148f56489c47ee8cc2
+RMD160 (EXchess_v7.31beta.zip) = 38a3a6b3a3a53ff62321642954ff4d29ebfe9705
+Size (EXchess_v7.31beta.zip) = 3421179 bytes
+SHA1 (patch-search.par.in) = 664781d6f9a204f9a071825dc3ebee19da4e3f8b
+SHA1 (patch-src_book.cpp) = ab12445c7ebd769a2a90166fba4ef256f293709d
+SHA1 (patch-src_chess.h) = 569c3f79a51a6be9cec83e98ef6c38f7e8d30660
+SHA1 (patch-src_exmove.cpp) = e4cff58e89501f5b73d78984ab8bf76a50d12677
+SHA1 (patch-src_funct.h) = d3ecab4fad483ac41f76993ecfb6af38c243115a
+SHA1 (patch-src_hash.cpp) = 3556b37f386d867d092075edcd1cc279bb4c0223
+SHA1 (patch-src_hash.h) = 5af2f9bad4484cc07ff8cb452b7b7759c3ab9d4e
+SHA1 (patch-src_main.cpp) = e68ef0a3a9ef4aaaeab59c8da0e3badd198e49f1
+SHA1 (patch-src_score.cpp) = f74c09b8bed649bbf6d00d0e3401de4dc16dd353
+SHA1 (patch-src_search.cpp) = eae69d8e31ca42b27db64df19e58b02b030b0a6a
+SHA1 (patch-src_support.cpp) = 4329f3863e2f4ebb18f2c427043cfbdff6879c4c

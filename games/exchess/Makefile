@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2014/02/09 16:50:45 wiedi Exp $
+# $NetBSD: Makefile,v 1.17 2014/09/11 16:59:16 jperkin Exp $
 
-DISTNAME=		EXCH314S
-# 5.01beta available
-PKGNAME=		exchess-3.14
-PKGREVISION=		1
+DISTNAME=		EXchess_v7.31beta
+PKGNAME=		exchess-7.31beta
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=		.zip
@@ -11,19 +9,25 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://personal.denison.edu/~homand/EXchess.htm
 COMMENT=		Experimental chess engine
+LICENSE=		gnu-gpl-v3
 
 USE_LANGUAGES=		c++
 NO_CONFIGURE=		yes
 
-WRKSRC=			${WRKDIR}
+WRKSRC=			${WRKDIR}/${DISTNAME:C/beta//}
 LIBDIR=			${PREFIX}/lib/exchess
 DOCDIR=			${PREFIX}/share/doc/exchess
 
-CFLAGS.SunOS+=		-Du_int64_t=uint64_t
+CFLAGS+=		-DEXCHESS_DIR=${LIBDIR:Q}
+LDFLAGS+=		${PTHREAD_LDFLAGS}
+LIBS+=			${PTHREAD_LIBS}
 
 post-extract:
 	cd ${WRKSRC} && ${MV} search.par search.par.in
-	${CP} ${FILESDIR}/Makefile ${WRKSRC}
+
+do-build:
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} \
+		${CXX} ${CFLAGS} src/EXchess.cc -o exchess ${LDFLAGS} ${LIBS}
 
 post-build:
 	${SED}	-e "s,@PREFIX@,${PREFIX},g" \
@@ -36,4 +40,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/search.par ${DESTDIR}${PREFIX}/lib/exchess
 	${INSTALL_DATA} ${WRKSRC}/readme.txt ${DESTDIR}${DOCDIR}
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
