@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3498 2014/09/10 21:40:32 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.3499 2014/09/11 01:53:31 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4460,3 +4460,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/hydrogen to 0.9.6.1 [mrg 2014-09-10]
 	Added textproc/hs-texmath version 0.8 [szptvlfn 2014-09-10]
 	Added devel/hs-ghc-mtl version 1.2.1.0 [szptvlfn 2014-09-10]
+	Updated www/p5-Dancer to 1.3129 [wen 2014-09-11]
