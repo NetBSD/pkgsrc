@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2013/10/10 00:08:40 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2014/09/11 21:27:09 dholland Exp $
 #
 
 DISTNAME=	icsi-finger-1.0.29
@@ -23,9 +23,14 @@ INSTALLATION_DIRS+=	share/examples/icsi-finger/targets
 TOOL_DEPENDS+=	tradcpp-[0-9]*:../../devel/tradcpp
 
 .include "../../mk/compiler.mk"
+.include "../../mk/bsd.prefs.mk"
 
 .if !empty(PKGSRC_COMPILER:Mclang)
 CPPFLAGS+=	-Wno-error=return-type
+.endif
+
+.if ${OPSYS} == "SunOS"
+MAKE_ENV+=	CPP_ARGS=-DSVR4
 .endif
 
 pre-configure:
