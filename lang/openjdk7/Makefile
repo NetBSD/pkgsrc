@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2014/08/03 19:28:41 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2014/09/11 13:50:24 joerg Exp $
 
 DISTNAME=	openjdk-1.7.65-20140719
 PKGNAME=	openjdk7-1.7.65
@@ -122,7 +122,7 @@ SUBST_SED.mapfix2=	-e '/environ/d'
 _WRAP_EXTRA_ARGS.CXX+=	-Wno-parentheses -Wno-sign-conversion \
 			-Wno-shorten-64-to-32 -Wno-conversion \
 			-Wno-unused-value -Wno-switch-enum -Wno-switch \
-			-Wno-tautological-compare \
+			-Wno-tautological-compare -Wno-new-returns-null \
 			-Wno-delete-non-virtual-dtor \
 			-Wno-return-type -Wno-unused-parameter \
 			-Wno-parentheses-equality -Wno-empty-body
