@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2014/07/27 20:04:59 ryoon Exp $
+# $NetBSD: options.mk,v 1.15 2014/09/11 13:47:46 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.thunderbird
 PKG_SUPPORTED_OPTIONS=	alsa debug mozilla-jemalloc gnome \
@@ -42,11 +42,12 @@ CONFIGURE_ARGS+=	--disable-jemalloc
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug --enable-debug-symbols --disable-optimize
 CONFIGURE_ARGS+=	--disable-install-strip
-PLIST.debug=            yes
+PLIST.debug=		yes
 .else
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--enable-optimize=-O2
 CONFIGURE_ARGS+=	--enable-install-strip
+BUILDLINK_TRANSFORM+=	rm:-g
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
