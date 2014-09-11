@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2014/06/10 14:40:50 joerg Exp $
+# $NetBSD: options.mk,v 1.13.2.1 2014/09/11 19:12:57 tron Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.subversion
 PKG_SUPPORTED_OPTIONS=	serf sasl
@@ -15,7 +15,7 @@ PLIST_VARS+=	serf
 .if !empty(PKG_OPTIONS:Mserf)
 DAV_RA=		serf
 PLIST.serf=	yes
-BUILDLINK_ABI_DEPENDS.serf+=    serf>=1.2.1
+BUILDLINK_ABI_DEPENDS.serf+=	serf>=1.2.1
 .  include "../../www/serf/buildlink3.mk"
 .endif
 
