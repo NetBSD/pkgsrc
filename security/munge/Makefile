@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2014/05/29 23:37:20 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2014/09/11 16:11:46 asau Exp $
 
 DISTNAME=	munge-0.5.11
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	http://munge.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,6 +17,8 @@ CONFIGURE_ARGS+=	--localstatedir=$(VARBASE)
 INSTALLATION_DIRS+=	lib/pkgconfig
 
 OWN_DIRS=	$(VARBASE)/lib/munge $(VARBASE)/log/munge $(VARBASE)/run/munge
+
+RCD_SCRIPTS+=	munge
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
