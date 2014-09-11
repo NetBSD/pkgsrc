@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3503 2014/09/11 09:29:05 obache Exp $
+$NetBSD: CHANGES-2014,v 1.3504 2014/09/11 16:59:43 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4465,3 +4465,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/edb to 1.0.5nb2 [dholland 2014-09-11]
 	Updated net/p5-Net-GitHub to 0.68 [wen 2014-09-11]
 	Updated emulators/suse131_base to 13.1nb5 [obache 2014-09-11]
+	Updated games/exchess to 7.31beta [jperkin 2014-09-11]
