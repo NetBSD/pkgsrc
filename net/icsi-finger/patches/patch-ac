@@ -1,6 +1,12 @@
-$NetBSD: patch-ac,v 1.3 2013/07/01 10:43:50 joerg Exp $
+$NetBSD: patch-ac,v 1.4 2014/09/11 21:27:09 dholland Exp $
 
---- Makefile.orig	1998-04-04 19:27:42.000000000 +0000
+- configure for pkgsrc
+- always use tradcpp
+- quote $(CC) bmake-style when passing to cpp
+- allow putting stuff in CPP_ARGS from the pkgsrc makefile
+- improve post-cpp seddery (?)
+
+--- Makefile.orig	1999-03-29 06:09:39.000000000 +0000
 +++ Makefile
 @@ -44,22 +44,8 @@ DEFINES = -DSVR4
  DEFINES = 
@@ -31,7 +37,7 @@ $NetBSD: patch-ac,v 1.3 2013/07/01 10:43:50 joerg Exp $
  
  CPPFLAGS = $(SYSTEM) $(CPP_DEFINES)
 -CPP_ARGS = -DCPP_CC="$(CC)" -DIncludes=$(INCLUDES)
-+CPP_ARGS = -DCPP_CC=${CC:Q} -DIncludes=$(INCLUDES)
++CPP_ARGS += -DCPP_CC=${CC:Q} -DIncludes=$(INCLUDES)
  
  all:	$(SRC)$(MKFILE)
  #	(cd $(SRC); $(MAKE) -f $(MKFILE) depend)
