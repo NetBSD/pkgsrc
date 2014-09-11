@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/09/05 10:13:20 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2014/09/11 06:03:03 fhajny Exp $
 
 DISTNAME=	sphinx3-0.8
 CATEGORIES=	audio
@@ -16,4 +16,5 @@ USE_TOOLS+=	pkg-config
 PKGCONFIG_OVERRIDE+=	sphinx3.pc.in
 
 .include "../../audio/sphinxbase/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
