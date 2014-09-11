@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2014/09/11 21:59:29 szptvlfn Exp $
+lib/temporary-${PKGVERSION}/${HASKELL_VERSION}/Distribution/Compat/Exception.hi
+lib/temporary-${PKGVERSION}/${HASKELL_VERSION}/Distribution/Compat/TempFile.hi
+lib/temporary-${PKGVERSION}/${HASKELL_VERSION}/HStemporary-${PKGVERSION}.o
+lib/temporary-${PKGVERSION}/${HASKELL_VERSION}/System/IO/Temp.hi
+lib/temporary-${PKGVERSION}/${HASKELL_VERSION}/libHStemporary-${PKGVERSION}.a
+lib/temporary-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/temporary-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/temporary-${PKGVERSION}/html/System-IO-Temp.html
+${PLIST.doc}share/doc/temporary-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/temporary-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/temporary-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/temporary-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/temporary-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/temporary-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/temporary-${PKGVERSION}/html/mini_System-IO-Temp.html
+${PLIST.doc}share/doc/temporary-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/temporary-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/temporary-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/temporary-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/temporary-${PKGVERSION}/html/temporary.haddock
