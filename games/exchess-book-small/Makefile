@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2012/10/06 11:54:36 asau Exp $
+# $NetBSD: Makefile,v 1.17 2014/09/11 17:03:11 jperkin Exp $
 
 DISTNAME=		small
-PKGNAME=		${CHESS_ENGINE}-book-${DISTNAME}-20000511
-PKGREVISION=		2
+PKGNAME=		${CHESS_ENGINE}-book-${DISTNAME}-20140911
 CATEGORIES=		games
 MASTER_SITES=		ftp://ftp.cis.uab.edu/pub/hyatt/common/${DISTNAME}/
 EXTRACT_SUFX=		.zip
@@ -32,6 +31,7 @@ do-build:
 	${RM} -f ${CMDFILE}
 	${ECHO} "build" > ${CMDFILE}
 	${ECHO} "${PGN_FILE}" >> ${CMDFILE}
+	${ECHO} "n" >> ${CMDFILE}
 	${ECHO} "60" >> ${CMDFILE}
 	${ECHO} "3" >> ${CMDFILE}
 	${ECHO} "${BOOK_FILE}" >> ${CMDFILE}
