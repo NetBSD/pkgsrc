@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/09/11 13:46:30 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2014/09/11 13:49:06 joerg Exp $
 
 DISTNAME=	hgnested-0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/hgnested/
 COMMENT=	Mercurial extension to work with nested repositories
 LICENSE=	gnu-gpl-v3
-
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34
 
 USE_LANGUAGES=	# none
 
