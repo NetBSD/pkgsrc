@@ -1,0 +1,17 @@
+$NetBSD: patch-configure.ac,v 1.1 2014/09/11 14:00:18 prlw1 Exp $
+
+Fix build on systems which don't provide openat()
+https://bugzilla.gnome.org/show_bug.cgi?id=735974
+
+--- configure.ac.orig	2013-11-21 11:14:58.000000000 +0000
++++ configure.ac
+@@ -127,6 +127,9 @@ AC_SUBST(XEXT_REQUIRED)
+ AC_CHECK_LIBM
+ AC_SUBST(LIBM)
+ 
++AC_CHECK_FUNCS([openat])
++AM_CONDITIONAL([USE_LIBGSYSTEM], [test $ac_cv_func_openat = yes])
++
+ dnl we need x11 for GnomeBG
+ 
+ PKG_CHECK_MODULES(XLIB, x11,

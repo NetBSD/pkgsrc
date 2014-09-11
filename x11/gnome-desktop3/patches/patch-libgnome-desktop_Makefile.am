@@ -1,0 +1,59 @@
+$NetBSD: patch-libgnome-desktop_Makefile.am,v 1.1 2014/09/11 14:00:18 prlw1 Exp $
+
+Fix build on systems which don't provide openat()
+https://bugzilla.gnome.org/show_bug.cgi?id=735974
+
+--- libgnome-desktop/Makefile.am.orig	2013-10-04 22:18:41.000000000 +0000
++++ libgnome-desktop/Makefile.am
+@@ -6,7 +6,6 @@ lib_LTLIBRARIES = libgnome-desktop-3.la
+ 
+ AM_CPPFLAGS =							\
+ 	-I$(top_srcdir)						\
+-	-I$(srcdir)/libgsystem					\
+ 	$(GNOME_DESKTOP_CFLAGS)					\
+ 	$(XLIB_CFLAGS)						\
+ 	-DG_LOG_DOMAIN=\"GnomeDesktop\"				\
+@@ -17,14 +16,20 @@ AM_CPPFLAGS =							\
+ 	-DXKB_BASE=\""$(XKB_BASE)"\"				\
+ 	$(DISABLE_DEPRECATED_CFLAGS)
+ 
++if USE_LIBGSYSTEM
++AM_CPPFLAGS += -I$(srcdir)/libgsystem
++endif
++
+ AM_CFLAGS = $(WARN_CFLAGS)
+ 
++if USE_LIBGSYSTEM
+ libgsystem_srcpath := libgsystem
+ libgsystem_cflags = $(GNOME_DESKTOP_CFLAGS)
+ libgsystem_libs = $(GNOME_DESKTOP_LIBS)
+ include libgsystem/Makefile-libgsystem.am
+ 
+ noinst_LTLIBRARIES += libgsystem.la
++endif
+ 
+ introspection_sources = 		\
+ 	gnome-desktop-thumbnail.c 	\
+@@ -79,9 +84,12 @@ libgnome_desktop_3_la_LIBADD =	\
+ 	$(XLIB_LIBS)		\
+ 	$(LIBM)			\
+ 	$(GNOME_DESKTOP_LIBS)	\
+-	libgsystem.la           \
+ 	-lrt
+ 
++if USE_LIBGSYSTEM
++libgnome_desktop_3_la_LIBADD += libgsystem.la
++endif
++
+ libgnome_desktop_3_la_LDFLAGS = \
+ 	-version-info $(LT_VERSION) \
+ 	-export-symbols-regex "^gnome_.*" \
+@@ -143,7 +151,7 @@ typelib_DATA = $(INTROSPECTION_GIRS:.gir
+ CLEANFILES += $(gir_DATA) $(typelib_DATA)
+ endif
+ 
+-EXTRA_DIST = \
++EXTRA_DIST += \
+ 	idle-monitor.xml			\
+ 	xrandr.xml				\
+ 	gnome-desktop-3.0.pc.in			\
