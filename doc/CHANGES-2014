@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3514 2014/09/12 08:12:45 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3515 2014/09/12 08:50:56 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4476,3 +4476,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/py-html2text to 2014.9.8 [wiz 2014-09-12]
 	Updated misc/p5-Vroom to 0.37 [wen 2014-09-12]
 	Added devel/p5-Test-utf8 version 1.01 [wen 2014-09-12]
+	Updated devel/p5-Test-File to 1.39 [wen 2014-09-12]
