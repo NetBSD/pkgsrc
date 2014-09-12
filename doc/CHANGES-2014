@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3518 2014/09/12 12:55:41 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3519 2014/09/12 17:09:24 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4480,3 +4480,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/p5-Pod-Markdown to 2.002 [wen 2014-09-12]
 	Updated www/squidanalyzer to 6.0 [adam 2014-09-12]
 	Added devel/p5-Path-IsDev version 1.001002 [wen 2014-09-12]
+	Updated mail/qmail-run to 20140912 [schmonz 2014-09-12]
