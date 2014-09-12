@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2013/07/02 19:33:59 asau Exp $
+# $NetBSD: Makefile,v 1.6 2014/09/12 20:29:30 asau Exp $
 
-DISTNAME=	abcl-src-1.2.1
+DISTNAME=	abcl-src-1.3.1
 PKGNAME=	$(DISTNAME:C/-src//)
 CATEGORIES=	lang
 MASTER_SITES=	http://abcl.org/releases/$(PKGVERSION_NOREV)/
@@ -22,6 +22,12 @@ do-install:
 	$(INSTALL_SCRIPT) $(WRKSRC)/abcl $(DESTDIR)$(PREFIX)/bin
 	$(INSTALL_DATA) $(WRKSRC)/dist/abcl.jar $(DESTDIR)$(PREFIX)/lib/abcl
 	$(INSTALL_DATA) $(WRKSRC)/dist/abcl-contrib.jar $(DESTDIR)$(PREFIX)/lib/abcl
+
+# TODO: requires network connectivity to fetch dependencies (e.g. JUnit)
+do-test:
+	$(RUN)$(_ULIMIT_CMD) cd $(WRKSRC) && \
+	  $(PKGSRC_SETENV) $(MAKE_ENV) \
+	    ant -nouserlib -Dabcl.runtime.jar.path=$(PREFIX)/lib/abcl/abcl.jar abcl.test
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
