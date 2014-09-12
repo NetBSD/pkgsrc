@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3519 2014/09/12 17:09:24 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.3520 2014/09/12 21:10:36 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4481,3 +4481,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/squidanalyzer to 6.0 [adam 2014-09-12]
 	Added devel/p5-Path-IsDev version 1.001002 [wen 2014-09-12]
 	Updated mail/qmail-run to 20140912 [schmonz 2014-09-12]
+	Added devel/hs-resourcet version 1.1.2.3 [szptvlfn 2014-09-12]
