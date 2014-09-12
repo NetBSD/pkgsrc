@@ -1,31 +1,37 @@
-$NetBSD: patch-aa,v 1.7 2009/04/29 10:54:11 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2014/09/12 21:58:45 shattered Exp $
 
---- Makefile.in.orig	2009-04-20 17:37:40.000000000 +0300
+--- Makefile.in.orig	2013-06-11 21:32:46.000000000 +0000
 +++ Makefile.in
-@@ -846,14 +846,14 @@ uninstall-man8:
- 	  rm -f "$(DESTDIR)$(man8dir)/$$inst"; \
- 	done
+@@ -912,17 +912,17 @@ uninstall-man8:
+ 	      -e 's,\.[0-9a-z]*$$,,;$(transform);G;s,\n,.,'`; \
+ 	dir='$(DESTDIR)$(man8dir)'; $(am__uninstall_files_from_dir)
  install-sysconfDATA: $(sysconf_DATA)
 -	@$(NORMAL_INSTALL)
 -	test -z "$(sysconfdir)" || $(MKDIR_P) "$(DESTDIR)$(sysconfdir)"
--	@list='$(sysconf_DATA)'; for p in $$list; do \
+-	@list='$(sysconf_DATA)'; test -n "$(sysconfdir)" || list=; \
+-	for p in $$list; do \
 -	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
--	  f=$(am__strip_dir) \
--	  echo " $(sysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(sysconfdir)/$$f'"; \
--	  $(sysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(sysconfdir)/$$f"; \
+-	  echo "$$d$$p"; \
+-	done | $(am__base_list) | \
+-	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(sysconfdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(sysconfdir)" || exit $$?; \
 -	done
 +#	@$(NORMAL_INSTALL)
 +#	test -z "$(sysconfdir)" || $(MKDIR_P) "$(DESTDIR)$(sysconfdir)"
-+#	@list='$(sysconf_DATA)'; for p in $$list; do \
++#	@list='$(sysconf_DATA)'; test -n "$(sysconfdir)" || list=; \
++#	for p in $$list; do \
 +#	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
-+#	  f=$(am__strip_dir) \
-+#	  echo " $(sysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(sysconfdir)/$$f'"; \
-+#	  $(sysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(sysconfdir)/$$f"; \
++#	  echo "$$d$$p"; \
++#	done | $(am__base_list) | \
++#	while read files; do \
++#	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(sysconfdir)'"; \
++#	  $(INSTALL_DATA) $$files "$(DESTDIR)$(sysconfdir)" || exit $$?; \
 +#	done
  
  uninstall-sysconfDATA:
  	@$(NORMAL_UNINSTALL)
-@@ -1417,17 +1417,17 @@ rpm:	leafnode.spec
+@@ -1579,17 +1579,17 @@ rpm:	leafnode.spec
  	rpmbuild -ba leafnode.spec || rpm -ba leafnode.spec
  
  install-data-hook: amiroot
@@ -52,5 +58,5 @@ $NetBSD: patch-aa,v 1.7 2009/04/29 10:54:11 wiz Exp $
 +#          chown @NEWS_USER@:@NEWS_GROUP@ "$${d}" ; \
 +#	  chmod 2775 "$${d}" ; fi
  
- uninstall-local:
- 	rm -rf $(DESTDIR)$(SPOOLDIR) $(DESTDIR)@LOCKFILE@
+ uninstall-hook:
+ 	rm -f $(DESTDIR)@LOCKFILE@
