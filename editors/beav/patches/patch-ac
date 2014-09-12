@@ -1,6 +1,9 @@
-$NetBSD: patch-ac,v 1.2 2007/11/25 12:15:53 wiz Exp $
+$NetBSD: patch-ac,v 1.3 2014/09/12 03:54:13 dholland Exp $
 
---- tcap.c.orig	2007-11-25 12:10:44.000000000 +0000
+- Avoid <term.h>, which only exists where terminfo is in use.
+- Fix use of struct winsize/ttysize.
+
+--- tcap.c.orig	2014-09-12 02:45:55.000000000 +0000
 +++ tcap.c
 @@ -2,7 +2,6 @@
  		for beav
@@ -10,12 +13,57 @@ $NetBSD: patch-ac,v 1.2 2007/11/25 12:15:53 wiz Exp $
  #include <stdlib.h>
  #include "def.h"
  #include "prototyp.h"
-@@ -41,7 +40,7 @@ char *UP, PC, *CM, *CE, *CL, *SO, *SE, *
+@@ -41,11 +40,7 @@ char *UP, PC, *CM, *CE, *CL, *SO, *SE, *
  
  #ifdef BSD
  #include <sys/ioctl.h>
 -struct winsize ttysize;
-+struct ttysize ttysize;
  #endif /* BSD */
- #ifdef ULTRIX
- struct winsize ttysize;
+-#ifdef ULTRIX
+-struct winsize ttysize;
+-#endif
+ 
+ void
+ putpad (str)
+@@ -62,8 +57,10 @@ tcapopen ()
+     char tcbuf[1024];
+     char *tv_stype;
+     char err_str[NCOL];
+-#ifdef ULTRIX
++#if defined(TIOCGWINSZ)
+     struct winsize ttysize;
++#elif defined(TIOCGSIZE)
++    struct ttysize ttysize;
+ #endif
+ 
+     nrow = NROW;
+@@ -88,25 +85,22 @@ tcapopen ()
+     }
+ 
+ 
+-#ifdef BSD
+-#ifdef ULTRIX
++#ifndef OS2
++#if defined(TIOCGWINSZ)
+     if (ioctl (0, TIOCGWINSZ, &ttysize) == 0
+ 	&& ttysize.ws_row > 0)
+     {
+ 	nrow = ttysize.ws_row;
+     }
+     else
+-#else
++#elif defined(TIOCGSIZE)
+     if (ioctl (0, TIOCGSIZE, &ttysize) == 0
+ 	&& ttysize.ts_lines > 0)
+     {
+ 	nrow = ttysize.ts_lines;
+     }
+     else
+-#endif /* ULTRIX */
+-#endif /* BSD */
+-
+-#ifndef OS2
++#endif /* TIOCGWINSZ */
+     if ((nrow = (short) tgetnum ("li") - 1) == -1)
+     {
+ 	puts ("termcap entry incomplete (lines)\r");
