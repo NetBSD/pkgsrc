@@ -1,15 +1,229 @@
-$NetBSD: patch-ab,v 1.5 2013/07/18 12:07:24 joerg Exp $
+$NetBSD: patch-ab,v 1.6 2014/09/12 03:54:13 dholland Exp $
 
---- termio.c.orig	2013-07-17 14:36:18.000000000 +0000
+Rip out struct sgttyb and termio and other prehistoric stuff. Use only
+termios, except leave the OS2 and MINIX cases alone. The latter
+probably should be removed too, but let's wait to hear from some Minix
+users.
+
+Also, make the termios code that was already here actually work.
+
+--- termio.c.orig	2014-09-12 03:38:15.000000000 +0000
 +++ termio.c
-@@ -14,6 +14,10 @@
+@@ -12,9 +12,6 @@
+ #include    <errno.h>
+ #include    <stdio.h>
  #include    <signal.h>
- #ifdef BSD
- #include    <sys/ioctl.h>
-+#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__APPLE__)
-+#include <sys/ioctl_compat.h>
-+#include <termios.h>
-+#endif
- #else
+-#ifdef BSD
+-#include    <sys/ioctl.h>
+-#else
  #ifdef OS2
  #ifndef __EMX__
+ #define INCL_NOPM
+@@ -28,15 +25,10 @@
+ #include    <sgtty.h>
+ #define O_NDELAY O_NONBLOCK
+ #else
+-#ifdef __GLIBC__
++#include <sys/ioctl.h>
+ #include <termios.h>
+-#else 
+-#include <termio.h>
+-#endif /* __GLIBC__ */
+ #endif /* MINIX */
+ #endif /* OS2 */
+-#endif /* BSD */
+-#include    <errno.h>
+ #include    <fcntl.h>
+ #include    "def.h"
+ int kbdflgs;			/* saved keyboard fd flags  */
+@@ -44,10 +36,6 @@ int kbdpoll;			/* in O_NDELAY mode      
+ int kbdqp;			/* there is a char in kbdq  */
+ char kbdq;			/* char we've already read  */
+ 
+-#ifdef BSD
+-struct sgttyb otermb;
+-struct sgttyb ntermb;
+-#else
+ #ifdef OS2
+ #ifndef __EMX__
+ KBDINFO kbst, kbst_std;
+@@ -58,21 +46,12 @@ struct sgttyb otermio;		/* original term
+ struct sgttyb ntermio;		/* charactoristics to use inside */
+ struct tchars tchars, tcharsorig;
+ #else
+-#ifdef __GLIBC__
+-#include <sys/ioctl.h>
++#include <termios.h>
+ struct termios otermio;
+ struct termios ntermio;
+-#else
+-struct termio otermio;		/* original terminal characteristics */
+-struct termio ntermio;		/* charactoristics to use inside */
+-#endif /* __GLIBC__ */
+ #endif /* MINIX */
+ #endif /* OS2 */
+-#endif /* BSD */
+ 
+-#ifndef OS2
+-//extern errno;			/* System error number -- Necessary when compiling in BSD 1.13 */
+-#endif
+ 
+ int nrow;			/* Terminal size, rows.         */
+ int ncol;			/* Terminal size, columns.      */
+@@ -86,42 +65,37 @@ int ncol;			/* Terminal size, columns.  
+ void
+ ttopen ()
+ {
+-#ifdef BSD
+-#ifdef ULTRIX
++#if !defined(OS2) && !defined(MINIX)
++
++#if defined(TIOCGWINSZ)
+     struct winsize ttysize;
+-#else
++#elif defined(TIOCGSIZE)
+     struct ttysize ttysize;
+ #endif
+ 
+-    ioctl (0, TIOCGETP, &otermb);	/* save settings	*/
+-    ntermb = otermb;		/* setup new settings	*/
+-    ntermb.sg_flags &= ~ECHO;
+-    ntermb.sg_flags |= RAW;
+-    ioctl (0, TIOCSETP, &ntermb);	/* and activate them	*/
+-    kbdpoll = FALSE;
+-
+     /* on all screens we are not sure of the initial position
+    of the cursor                    */
+     ttrow = 999;
+     ttcol = 999;
+-#ifdef ULTRIX
++#if defined(TIOCGWINSZ)
+     if (ioctl (0, TIOCGWINSZ, &ttysize) == 0)
+     {
+ 	nrow = ttysize.ws_row;
+ 	ncol = ttysize.ws_col;
+-#else
++    } else
++#elif defined(TIOCGSIZE)
+     if (ioctl (0, TIOCGSIZE, &ttysize) == 0)
+     {
+ 	nrow = ttysize.ts_lines;
+ 	ncol = ttysize.ts_cols;
++    } else
+ #endif /* ULTRIX */
+-    }
+-    else
+     {
+ 	nrow = NROW;
+ 	ncol = NCOL;
+     }
+-#else
++#endif /* not OS2 or MINIX */
++
+ #ifdef OS2
+     setmode (1, O_BINARY);
+ #else
+@@ -137,33 +111,23 @@ ttopen ()
+ 	tchars.t_stopc = tchars.t_eofc = tchars.t_brkc = -1;
+     ioctl (0, TIOCSETC, &tchars);
+ #else
+-#ifdef __GLIBC__
+     tcgetattr(0,&otermio);
+-#else
+-    ioctl (0, TCGETA, &otermio);/* save old settings */
+-    ntermio.c_line = otermio.c_line;
+-#endif
++#if 0 /* horribly wrong -- never do this! */
+     ntermio.c_iflag = 0;	/* setup new settings */
+     ntermio.c_oflag = 0;
+     ntermio.c_cflag = otermio.c_cflag;
+     ntermio.c_lflag = 0;
++#else
++    ntermio = otermio;
++    ntermio.c_lflag &= ~(ECHO|ECHONL|ECHOCTL|ISIG|ICANON);
++#endif
+     ntermio.c_cc[VMIN] = 1;
+     ntermio.c_cc[VTIME] = 0;
+-#ifdef __GLIBC__
+     tcsetattr(0,TCSANOW,&ntermio);
+-#else
+-    ioctl (0, TCSETAW, &ntermio);	/* and activate them */
+-#endif
+ #endif /* MINIX */
+     kbdflgs = fcntl (0, F_GETFL, 0);
+     kbdpoll = FALSE;
+ #endif /* OS2 */
+-    /* on all screens we are not sure of the initial position of the cursor */
+-    ttrow = 999;
+-    ttcol = 999;
+-    nrow = NROW;
+-    ncol = NCOL;
+-#endif /* BSD */
+ }
+ 
+  /*
+@@ -174,10 +138,6 @@ ttopen ()
+ void
+ ttclose ()
+ {
+-#ifdef BSD
+-    if (ioctl (0, TIOCSETP, &otermb) == -1)	/* restore terminal settings */
+-	printf ("closing ioctl on dev 0 failure, error = %d\n", errno);
+-#else
+ #ifdef OS2
+     setmode (1, O_TEXT);
+ #else
+@@ -186,17 +146,12 @@ ttclose ()
+ 	ioctl (0, TIOCSETC, &tcharsorig) == -1)
+ 	printf ("closing ioctl on dev 0 failure, error = %d\n", errno);
+ #else
+-#ifdef __GLIBC__
+     if( tcsetattr(0,TCSANOW,&otermio) == -1)
+-#else
+-    if (ioctl (0, TCSETAW, &otermio) == -1)	/* restore terminal settings */
+-#endif
+ 	printf ("closing ioctl on dev 0 failure, error = %d\n", errno);
+ #endif /* MINIX */
+     if (fcntl (0, F_SETFL, kbdflgs) == -1)
+ 	printf ("closing fcntl on dev 0 failure, error = %d\n", errno);
+ #endif /* OS2 */
+-#endif /* BSD */
+ }
+ 
+ #ifdef OS2
+@@ -235,7 +190,7 @@ ttcooked (void)
+ #endif
+ }
+ 
+-#endif
++#endif /* OS2 */
+ 
+  /*
+ * Write a character to the display. On VMS, terminal output is buffered, and
+@@ -336,7 +291,7 @@ int ttgetc ()
+ 	kbdqp = FALSE;
+     else
+     {
+-#ifdef BSD
++#if defined(FIONREAD)
+ 	int count;
+ 
+ 	if (kbdpoll && (ioctl (0, FIONREAD, &count), count == 0))
+@@ -372,7 +327,7 @@ int ttkeyready ()
+ #else
+     if (!kbdqp)
+     {
+-#ifdef BSD
++#if defined(FIONREAD)
+ 	int count;
+ 
+ 	if (!kbdpoll && (ioctl (0, FIONREAD, &count), count == 0))
+@@ -389,7 +344,7 @@ int ttkeyready ()
+ 	kbdpoll = TRUE;		/*  fix in 1.13 */
+ 	kbdqp = (1 == read (0, &kbdq, 1));
+ #endif /* MINIX */
+-#endif /* BSD */
++#endif /* FIONREAD */
+ 
+     }
+     return (kbdqp);

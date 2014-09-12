@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2012/10/03 11:43:30 asau Exp $
+# $NetBSD: Makefile,v 1.15 2014/09/12 03:54:13 dholland Exp $
 
 DISTNAME=	beav_1.40.orig
 PKGNAME=	beav-1.40.18
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/b/beav/}
 
