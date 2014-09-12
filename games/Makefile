@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.373 2014/08/13 18:57:40 wiz Exp $
+# $NetBSD: Makefile,v 1.374 2014/09/12 23:20:01 wiz Exp $
 #
 
 COMMENT=	Games
@@ -23,6 +23,7 @@ SUBDIR+=	aop
 SUBDIR+=	asc
 SUBDIR+=	asciiquarium
 SUBDIR+=	atomix
+SUBDIR+=	atque
 SUBDIR+=	bastet
 SUBDIR+=	battalion
 SUBDIR+=	battleball
