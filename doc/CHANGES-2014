@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3515 2014/09/12 08:50:56 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3516 2014/09/12 09:03:35 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4477,3 +4477,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/p5-Vroom to 0.37 [wen 2014-09-12]
 	Added devel/p5-Test-utf8 version 1.01 [wen 2014-09-12]
 	Updated devel/p5-Test-File to 1.39 [wen 2014-09-12]
+	Updated textproc/p5-Pod-Markdown to 2.002 [wen 2014-09-12]
