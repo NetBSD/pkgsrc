@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2004/03/16 09:48:37 cube Exp $
+$NetBSD: patch-ab,v 1.2 2014/09/12 07:58:12 spz Exp $
 
---- configure.ac.orig	2003-05-18 12:57:24.000000000 +0200
+--- configure.ac.orig	2003-05-18 10:57:24.000000000 +0000
 +++ configure.ac
 @@ -278,6 +278,8 @@ AC_ARG_WITH(history, \
  	    if test x$with_history != xno; then
@@ -11,7 +11,18 @@ $NetBSD: patch-ab,v 1.1 2004/03/16 09:48:37 cube Exp $
  AC_ARG_WITH(errlog, \
    [--with-errlog=LOG_XX    do syslog in category LOG_XX],[
  	    if test x$with_errlog = xno; then
-@@ -433,6 +435,21 @@ else
+@@ -375,7 +377,10 @@ else
+ 	    # it has been reported that some INN 2.1 had its own VERSION
+ 	    VERSION_save="$VERSION"
+ 	    VERSION=
++	    # innshellvars sets TMPDIR$
++	    TMPDIR_save="$TMPDIR"$
+ 	    . $NEWSCONFIG
++	    TMPDIR="$TMPDIR_save"$
+ 	    INN_VERSION="$VERSION"
+ 	    VERSION="$VERSION_save"
+ 	    INN_NEWSUMASK=`umask`
+@@ -433,6 +438,21 @@ else
  		    HISTORY="$with_history"
  		fi
  	    fi
@@ -33,7 +44,7 @@ $NetBSD: patch-ab,v 1.1 2004/03/16 09:48:37 cube Exp $
  	    if test -f $HISTORY; then
  		if test -f $HISTORY.index; then
  		    AC_MSG_RESULT($HISTORY, indexed hash)
-@@ -453,6 +470,7 @@ else
+@@ -453,6 +473,7 @@ else
  		AC_MSG_RESULT(ERROR: cannot find database $HISTORY)
  		exit 1
  	    fi
