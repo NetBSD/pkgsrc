@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2014/09/12 23:19:48 wiz Exp $
+bin/atque
+bin/atquem
+bin/atques
