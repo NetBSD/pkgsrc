@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailsmtpd.sh,v 1.7 2005/07/19 21:06:39 schmonz Exp $
+# $NetBSD: qmailsmtpd.sh,v 1.8 2014/09/12 17:07:10 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-smtpd (SMTP service).
 #
@@ -15,7 +15,7 @@ name="qmailsmtpd"
 : ${qmailsmtpd_tcpflags:="-vRl0"}
 : ${qmailsmtpd_tcphost:="0"}
 : ${qmailsmtpd_tcpport:="25"}
-: ${qmailsmtpd_datalimit:="2000000"}
+: ${qmailsmtpd_datalimit:="146800640"}
 : ${qmailsmtpd_pretcpserver:=""}
 : ${qmailsmtpd_presmtpd:=""}
 : ${qmailsmtpd_postsmtpd:=""}

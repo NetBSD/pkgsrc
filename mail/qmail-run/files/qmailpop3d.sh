@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailpop3d.sh,v 1.7 2005/07/19 21:06:39 schmonz Exp $
+# $NetBSD: qmailpop3d.sh,v 1.8 2014/09/12 17:07:10 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-pop3d (POP3 server for Maildirs).
 #
@@ -14,7 +14,7 @@ name="qmailpop3d"
 : ${qmailpop3d_tcpflags:="-vRHl0"}
 : ${qmailpop3d_tcphost:="0"}
 : ${qmailpop3d_tcpport:="110"}
-: ${qmailpop3d_datalimit:="2000000"}
+: ${qmailpop3d_datalimit:="146800640"}
 : ${qmailpop3d_pretcpserver:=""}
 : ${qmailpop3d_prepop3d:=""}
 : ${qmailpop3d_checkpassword:="@LOCALBASE@/bin/checkpassword"}
