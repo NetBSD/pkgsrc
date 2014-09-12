@@ -1,13 +1,19 @@
-$NetBSD: patch-ac,v 1.1 2006/01/02 23:33:41 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2014/09/12 04:17:38 dholland Exp $
 
---- error_hnds.h.orig	2006-01-02 23:27:55.000000000 +0000
+Use strerror, not sys_errlist.
+
+--- error_hnds.h.orig	1997-12-18 13:04:04.000000000 +0000
 +++ error_hnds.h
-@@ -54,7 +54,7 @@ extern void ehInstallErrorHandlers _ARGU
+@@ -54,11 +54,6 @@ extern void ehInstallErrorHandlers _ARGU
  /* install the signal handlers */
  extern void ehInstallSignalHandlers _ARGUMENTS((void));
  
 -#if !defined(__GNU_LIBRARY__) && !defined(__NetBSD__) && !defined(__FreeBSD__)
-+#if !defined(__GNU_LIBRARY__) && !defined(__NetBSD__) && !defined(__FreeBSD__) && !defined(__DragonFly__)
- extern int errno, sys_nerr;
- extern char *sys_errlist[];
- #endif
+-extern int errno, sys_nerr;
+-extern char *sys_errlist[];
+-#endif
+-
+-#define errmsg(a) ((a < sys_nerr) ? sys_errlist[a] : "unknown error")
++#define errmsg(a) strerror(a)
+      
+ #endif /* ERROR_HANDLERS_H */
