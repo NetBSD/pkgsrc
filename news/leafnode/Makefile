@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2013/07/12 10:45:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.48 2014/09/12 21:58:44 shattered Exp $
 
-DISTNAME=		leafnode-1.11.7
-PKGREVISION=		2
+DISTNAME=		leafnode-1.11.10
 CATEGORIES=		news
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=leafnode/}
 EXTRACT_SUFX=		.tar.bz2
@@ -72,7 +71,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/README-FQDN 		\
 			${WRKSRC}/README-MAINTAINER			\
 			${WRKSRC}/README-daemontools			\
-			${WRKSRC}/README.FIRST				\
 				${DESTDIR}${PREFIX}/share/doc/leafnode
 
 .include "../../devel/pcre/buildlink3.mk"
