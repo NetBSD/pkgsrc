@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3510 2014/09/11 21:59:56 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.3511 2014/09/12 03:57:32 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4472,3 +4472,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/libgetopt to 1.4.6 [jperkin 2014-09-11]
 	Added devel/hs-hint version 0.4.2.0 [szptvlfn 2014-09-11]
 	Added sysutils/hs-temporary version 1.2.0.3 [szptvlfn 2014-09-11]
+	Updated editors/beav to 1.40.18nb1 [dholland 2014-09-12]
