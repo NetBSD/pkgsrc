@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3512 2014/09/12 06:04:45 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3513 2014/09/12 07:03:08 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4474,3 +4474,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added sysutils/hs-temporary version 1.2.0.3 [szptvlfn 2014-09-11]
 	Updated editors/beav to 1.40.18nb1 [dholland 2014-09-12]
 	Updated textproc/py-html2text to 2014.9.8 [wiz 2014-09-12]
+	Updated misc/p5-Vroom to 0.37 [wen 2014-09-12]
