@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2014/05/05 09:58:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/09/12 10:21:42 adam Exp $
 bin/squid-analyzer
-man/man3/squidanalyzer.3
 share/examples/squidanalyzer/excluded
 share/examples/squidanalyzer/included
 share/examples/squidanalyzer/lang/cs_CZ.txt
@@ -8,6 +7,7 @@ share/examples/squidanalyzer/lang/de_DE.txt
 share/examples/squidanalyzer/lang/en_US.txt
 share/examples/squidanalyzer/lang/es_ES.txt
 share/examples/squidanalyzer/lang/fr_FR.txt
+share/examples/squidanalyzer/lang/pl_PL.txt
 share/examples/squidanalyzer/lang/pt_BR.txt
 share/examples/squidanalyzer/lang/ru_RU.txt
 share/examples/squidanalyzer/lang/uk_UA.txt
