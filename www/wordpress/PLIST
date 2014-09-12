@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2014/08/17 08:48:33 morr Exp $
+@comment $NetBSD: PLIST,v 1.22 2014/09/12 22:18:08 morr Exp $
 share/doc/wordpress/license.txt
 share/doc/wordpress/readme.html
 share/examples/wordpress/wordpress.conf
@@ -249,6 +249,7 @@ share/wordpress/wp-admin/includes/taxonomy.php
 share/wordpress/wp-admin/includes/template.php
 share/wordpress/wp-admin/includes/theme-install.php
 share/wordpress/wp-admin/includes/theme.php
+share/wordpress/wp-admin/includes/translation-install.php
 share/wordpress/wp-admin/includes/update-core.php
 share/wordpress/wp-admin/includes/update.php
 share/wordpress/wp-admin/includes/upgrade.php
@@ -276,6 +277,8 @@ share/wordpress/wp-admin/js/dashboard.js
 share/wordpress/wp-admin/js/dashboard.min.js
 share/wordpress/wp-admin/js/edit-comments.js
 share/wordpress/wp-admin/js/edit-comments.min.js
+share/wordpress/wp-admin/js/editor-expand.js
+share/wordpress/wp-admin/js/editor-expand.min.js
 share/wordpress/wp-admin/js/editor.js
 share/wordpress/wp-admin/js/editor.min.js
 share/wordpress/wp-admin/js/farbtastic.js
@@ -288,6 +291,8 @@ share/wordpress/wp-admin/js/inline-edit-post.min.js
 share/wordpress/wp-admin/js/inline-edit-tax.js
 share/wordpress/wp-admin/js/inline-edit-tax.min.js
 share/wordpress/wp-admin/js/iris.min.js
+share/wordpress/wp-admin/js/language-chooser.js
+share/wordpress/wp-admin/js/language-chooser.min.js
 share/wordpress/wp-admin/js/link.js
 share/wordpress/wp-admin/js/link.min.js
 share/wordpress/wp-admin/js/media-gallery.js
@@ -526,15 +531,18 @@ share/wordpress/wp-content/themes/twentythirteen/content-video.php
 share/wordpress/wp-content/themes/twentythirteen/content.php
 share/wordpress/wp-content/themes/twentythirteen/css/editor-style.css
 share/wordpress/wp-content/themes/twentythirteen/css/ie.css
-share/wordpress/wp-content/themes/twentythirteen/fonts/COPYING.txt
-share/wordpress/wp-content/themes/twentythirteen/fonts/LICENSE.txt
-share/wordpress/wp-content/themes/twentythirteen/fonts/genericons-regular-webfont.eot
-share/wordpress/wp-content/themes/twentythirteen/fonts/genericons-regular-webfont.svg
-share/wordpress/wp-content/themes/twentythirteen/fonts/genericons-regular-webfont.ttf
-share/wordpress/wp-content/themes/twentythirteen/fonts/genericons-regular-webfont.woff
-share/wordpress/wp-content/themes/twentythirteen/fonts/genericons.css
 share/wordpress/wp-content/themes/twentythirteen/footer.php
 share/wordpress/wp-content/themes/twentythirteen/functions.php
+share/wordpress/wp-content/themes/twentythirteen/genericons/COPYING.txt
+share/wordpress/wp-content/themes/twentythirteen/genericons/Genericons-Regular.otf
+share/wordpress/wp-content/themes/twentythirteen/genericons/LICENSE.txt
+share/wordpress/wp-content/themes/twentythirteen/genericons/README.txt
+share/wordpress/wp-content/themes/twentythirteen/genericons/example.html
+share/wordpress/wp-content/themes/twentythirteen/genericons/font/genericons-regular-webfont.eot
+share/wordpress/wp-content/themes/twentythirteen/genericons/font/genericons-regular-webfont.svg
+share/wordpress/wp-content/themes/twentythirteen/genericons/font/genericons-regular-webfont.ttf
+share/wordpress/wp-content/themes/twentythirteen/genericons/font/genericons-regular-webfont.woff
+share/wordpress/wp-content/themes/twentythirteen/genericons/genericons.css
 share/wordpress/wp-content/themes/twentythirteen/header.php
 share/wordpress/wp-content/themes/twentythirteen/image.php
 share/wordpress/wp-content/themes/twentythirteen/images/dotted-line-2x.png
@@ -688,6 +696,7 @@ share/wordpress/wp-includes/class-wp-admin-bar.php
 share/wordpress/wp-includes/class-wp-ajax-response.php
 share/wordpress/wp-includes/class-wp-customize-control.php
 share/wordpress/wp-includes/class-wp-customize-manager.php
+share/wordpress/wp-includes/class-wp-customize-panel.php
 share/wordpress/wp-includes/class-wp-customize-section.php
 share/wordpress/wp-includes/class-wp-customize-setting.php
 share/wordpress/wp-includes/class-wp-customize-widgets.php
@@ -925,6 +934,8 @@ share/wordpress/wp-includes/js/media-audiovideo.js
 share/wordpress/wp-includes/js/media-audiovideo.min.js
 share/wordpress/wp-includes/js/media-editor.js
 share/wordpress/wp-includes/js/media-editor.min.js
+share/wordpress/wp-includes/js/media-grid.js
+share/wordpress/wp-includes/js/media-grid.min.js
 share/wordpress/wp-includes/js/media-models.js
 share/wordpress/wp-includes/js/media-models.min.js
 share/wordpress/wp-includes/js/media-views.js
@@ -972,6 +983,8 @@ share/wordpress/wp-includes/js/tinymce/langs/wp-langs-en.js
 share/wordpress/wp-includes/js/tinymce/license.txt
 share/wordpress/wp-includes/js/tinymce/plugins/charmap/plugin.js
 share/wordpress/wp-includes/js/tinymce/plugins/charmap/plugin.min.js
+share/wordpress/wp-includes/js/tinymce/plugins/colorpicker/plugin.js
+share/wordpress/wp-includes/js/tinymce/plugins/colorpicker/plugin.min.js
 share/wordpress/wp-includes/js/tinymce/plugins/compat3x/css/dialog.css
 share/wordpress/wp-includes/js/tinymce/plugins/compat3x/plugin.js
 share/wordpress/wp-includes/js/tinymce/plugins/compat3x/plugin.min.js
@@ -983,6 +996,8 @@ share/wordpress/wp-includes/js/tinymce/plugins/hr/plugin.js
 share/wordpress/wp-includes/js/tinymce/plugins/hr/plugin.min.js
 share/wordpress/wp-includes/js/tinymce/plugins/image/plugin.js
 share/wordpress/wp-includes/js/tinymce/plugins/image/plugin.min.js
+share/wordpress/wp-includes/js/tinymce/plugins/lists/plugin.js
+share/wordpress/wp-includes/js/tinymce/plugins/lists/plugin.min.js
 share/wordpress/wp-includes/js/tinymce/plugins/media/moxieplayer.swf
 share/wordpress/wp-includes/js/tinymce/plugins/media/plugin.js
 share/wordpress/wp-includes/js/tinymce/plugins/media/plugin.min.js
@@ -994,6 +1009,8 @@ share/wordpress/wp-includes/js/tinymce/plugins/textcolor/plugin.js
 share/wordpress/wp-includes/js/tinymce/plugins/textcolor/plugin.min.js
 share/wordpress/wp-includes/js/tinymce/plugins/wordpress/plugin.js
 share/wordpress/wp-includes/js/tinymce/plugins/wordpress/plugin.min.js
+share/wordpress/wp-includes/js/tinymce/plugins/wpautoresize/plugin.js
+share/wordpress/wp-includes/js/tinymce/plugins/wpautoresize/plugin.min.js
 share/wordpress/wp-includes/js/tinymce/plugins/wpdialogs/plugin.js
 share/wordpress/wp-includes/js/tinymce/plugins/wpdialogs/plugin.min.js
 share/wordpress/wp-includes/js/tinymce/plugins/wpeditimage/plugin.js
@@ -1113,6 +1130,7 @@ share/wordpress/wp-includes/rewrite.php
 share/wordpress/wp-includes/rss-functions.php
 share/wordpress/wp-includes/rss.php
 share/wordpress/wp-includes/script-loader.php
+share/wordpress/wp-includes/session.php
 share/wordpress/wp-includes/shortcodes.php
 share/wordpress/wp-includes/taxonomy.php
 share/wordpress/wp-includes/template-loader.php
