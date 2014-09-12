@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2013/07/12 10:44:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.54 2014/09/12 21:50:49 shattered Exp $
 #
 
-DISTNAME=	popa3d-1.0.2
-PKGREVISION=	2
+DISTNAME=	popa3d-1.0.3
 CATEGORIES=	mail
 MASTER_SITES=	http://www.openwall.com/popa3d/ \
 		ftp://ftp.openwall.com/pub/projects/popa3d/
