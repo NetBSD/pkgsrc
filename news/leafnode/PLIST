@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:10:06 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/09/12 21:58:44 shattered Exp $
 bin/leafnode-version
 bin/newsq
 man/man1/leafnode-version.1
@@ -17,5 +17,4 @@ share/doc/leafnode/README
 share/doc/leafnode/README-FQDN
 share/doc/leafnode/README-MAINTAINER
 share/doc/leafnode/README-daemontools
-share/doc/leafnode/README.FIRST
 share/examples/leafnode/config.example
