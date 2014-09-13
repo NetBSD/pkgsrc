@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3528 2014/09/13 02:46:21 obache Exp $
+$NetBSD: CHANGES-2014,v 1.3529 2014/09/13 07:36:37 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4473,6 +4473,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/hs-hint version 0.4.2.0 [szptvlfn 2014-09-11]
 	Added sysutils/hs-temporary version 1.2.0.3 [szptvlfn 2014-09-11]
 	Updated editors/beav to 1.40.18nb1 [dholland 2014-09-12]
+	Updated x11/xmx to 2.1a7nb7 [dholland 2014-09-12]
 	Updated textproc/py-html2text to 2014.9.8 [wiz 2014-09-12]
 	Updated misc/p5-Vroom to 0.37 [wen 2014-09-12]
 	Added devel/p5-Test-utf8 version 1.01 [wen 2014-09-12]
@@ -4490,3 +4491,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/gmtk to 1.0.9 [obache 2014-09-13]
 	Updated multimedia/gnome-mplayer to 1.0.9 [obache 2014-09-13]
 	Updated multimedia/gecko-mediaplayer to 1.0.9 [obache 2014-09-13]
+	Updated games/craft to 3.5nb4 [dholland 2014-09-13]
