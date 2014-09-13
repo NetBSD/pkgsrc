@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13649 2014/09/13 10:42:18 shattered Exp $
+$NetBSD: TODO,v 1.13650 2014/09/13 15:17:42 shattered Exp $
 
 Suggested new packages
 ======================
@@ -335,7 +335,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o DatLib-2.35
 	o DatUtil-2.45
 	o GMT-5.1.1
-	o GUIlib-1.1.2
 	o MAMEDiff-2.30
 	o Mesa-10.2.6 [do not update since it removes support for DRI features needed by NetBSD]
 	o MesaLib-10.2.6 [do not update since it removes support for DRI features needed by NetBSD]
@@ -837,7 +836,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nspr-4.10.7
 	o nss-3.17
 	o ntop-5.0
-	o nulib2-220
 	o nut-19.2
 	o nxtvepg-2.8.1
 	o ocaml-4.02.0
@@ -906,7 +904,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o powermanga-0.91
 	o powwow-1.2.16
 	o ppp-2.4.6
-	o prboom-2.5.0.8
 	o profit-2.5.3
 	o projclock-0.9
 	o psmisc-22.20
@@ -1109,7 +1106,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o utilisp-1.14
 	o varnish-4.0.1
 	o vbetool-1.1
-	o vera-1.17
 	o verilog-current-20130827 [wip]
 	o vfu-4.09
 	o vicq-0.4.2

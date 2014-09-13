@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3530 2014/09/13 10:42:18 shattered Exp $
+$NetBSD: CHANGES-2014,v 1.3531 2014/09/13 15:17:42 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4497,3 +4497,8 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/gnome-mplayer to 1.0.9 [obache 2014-09-13]
 	Updated multimedia/gecko-mediaplayer to 1.0.9 [obache 2014-09-13]
 	Updated games/craft to 3.5nb4 [dholland 2014-09-13]
+	Updated archivers/gsharutils to 4.13.5 [shattered 2014-09-13]
+	Updated archivers/nulib2 to 2.2.0 [shattered 2014-09-13]
+	Updated graphics/GUIlib to 1.2.1 [shattered 2014-09-13]
+	Updated misc/vera to 1.21a [shattered 2014-09-13]
+	Added games/prboom-plus version 2.5.1.3 [shattered 2014-09-13]
