@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2014/09/13 12:55:06 shattered Exp $
+bin/prboom-plus
+bin/prboom-plus-game-server
+man/man5/prboom-plus.cfg.5
+man/man6/prboom-plus-game-server.6
+man/man6/prboom-plus.6
+share/doc/${PKGNAME}/AUTHORS
+share/doc/${PKGNAME}/COPYING
+share/doc/${PKGNAME}/MBF.txt
+share/doc/${PKGNAME}/MBFFAQ.txt
+share/doc/${PKGNAME}/NEWS
+share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/README.compat
+share/doc/${PKGNAME}/README.demos
+share/doc/${PKGNAME}/boom.txt
+share/doc/${PKGNAME}/prboom-plus-history.html
+share/doc/${PKGNAME}/prboom-plus-history.txt
+share/doc/${PKGNAME}/prboom-plus-usage.txt
+share/doom/prboom-plus.wad
