@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.6 2014/03/05 22:14:17 asau Exp $
+$NetBSD: distinfo,v 1.7 2014/09/13 18:23:38 asau Exp $
 
-SHA1 (polyml.5.5.1.tar.gz) = f5a0d289eb0a891af5ac6e897ccc7718ccf32d89
-RMD160 (polyml.5.5.1.tar.gz) = 504a9e8c064355bcee638a3735f7e97b3f92d03e
-Size (polyml.5.5.1.tar.gz) = 5465794 bytes
-SHA1 (patch-buildpolyc) = 43abf4c7a3545ec3b4de62a216009cc7728da848
-SHA1 (patch-libpolyml_elfexport.cpp) = 7291a7a1410651bee00662feb5f8d74337c14f3a
+SHA1 (polyml.5.5.2.tar.gz) = 8926046162c073d01c1b3bcfc744c63adfafc0d2
+RMD160 (polyml.5.5.2.tar.gz) = 3f345e665fb880d02a086179f31944c04f5df79b
+Size (polyml.5.5.2.tar.gz) = 5599140 bytes
+SHA1 (patch-libpolyml_elfexport.cpp) = ea2ac256feab994cca53cc5400a8a61e3563811c
