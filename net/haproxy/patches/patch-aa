@@ -1,20 +1,20 @@
-$NetBSD: patch-aa,v 1.4 2014/04/24 16:23:59 jperkin Exp $
+$NetBSD: patch-aa,v 1.4.2.1 2014/09/13 18:13:24 tron Exp $
 
 Add support for NetBSD.
 Remove -fomit-frame-pointer on SunOS.
 
---- Makefile.orig	2013-06-17 13:28:14.000000000 +0000
+--- Makefile.orig	2014-07-12 14:40:52.000000000 +0000
 +++ Makefile
-@@ -73,7 +73,7 @@ DOCDIR = $(PREFIX)/doc/haproxy
+@@ -89,7 +89,7 @@ DOCDIR = $(PREFIX)/doc/haproxy
  # Use TARGET=<target_name> to optimize for a specifc target OS among the
  # following list (use the default "generic" if uncertain) :
  #    generic, linux22, linux24, linux24e, linux26, solaris,
--#    freebsd, openbsd, cygwin, custom, aix52
-+#    freebsd, netbsd, openbsd, cygwin, custom, aix52
+-#    freebsd, openbsd, cygwin, custom, aix51, aix52
++#    freebsd, netbsd, openbsd, cygwin, custom, aix51, aix52
  TARGET =
  
  #### TARGET CPU
-@@ -91,7 +91,6 @@ ARCH =
+@@ -107,7 +107,6 @@ ARCH =
  
  #### Toolchain options.
  # GCC is normally used both for compiling and linking.
@@ -22,16 +22,16 @@ Remove -fomit-frame-pointer on SunOS.
  LD = $(CC)
  
  #### Debug flags (typically "-g").
-@@ -232,7 +231,7 @@ else
- ifeq ($(TARGET),solaris)
+@@ -267,7 +266,7 @@ ifeq ($(TARGET),solaris)
    # This is for Solaris 8
+   # We also enable getaddrinfo() which works since solaris 8.
    USE_POLL       = implicit
 -  TARGET_CFLAGS  = -fomit-frame-pointer -DFD_SETSIZE=65536 -D_REENTRANT
 +  TARGET_CFLAGS  = -DFD_SETSIZE=65536 -D_REENTRANT
    TARGET_LDFLAGS = -lnsl -lsocket
    USE_TPROXY     = implicit
    USE_LIBCRYPT    = implicit
-@@ -252,6 +251,12 @@ ifeq ($(TARGET),osx)
+@@ -288,6 +287,12 @@ ifeq ($(TARGET),osx)
    USE_TPROXY     = implicit
    USE_LIBCRYPT   = implicit
  else
@@ -44,15 +44,15 @@ Remove -fomit-frame-pointer on SunOS.
  ifeq ($(TARGET),openbsd)
    # This is for OpenBSD >= 3.0
    USE_POLL       = implicit
-@@ -274,6 +279,7 @@ ifeq ($(TARGET),cygwin)
- endif # cygwin
+@@ -318,6 +323,7 @@ endif # cygwin
  endif # aix52
+ endif # aix51
  endif # openbsd
 +endif # netbsd
  endif # osx
  endif # freebsd
  endif # solaris
-@@ -510,7 +516,7 @@ all:
+@@ -634,7 +640,7 @@ all:
  	@echo "Please choose the target among the following supported list :"
  	@echo
  	@echo "   linux2628, linux26, linux24, linux24e, linux22, solaris"
