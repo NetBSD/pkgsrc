@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.7 2011/09/03 21:45:03 dholland Exp $
+$NetBSD: patch-ab,v 1.8 2014/09/13 11:10:58 shattered Exp $
 
---- nulib2-203/Makefile.in.orig	2004-10-12 00:25:19.000000000 +0200
-+++ nulib2-203/Makefile.in
+--- nulib2-220/Makefile.in.orig	2004-10-12 00:25:19.000000000 +0200
++++ nulib2-220/Makefile.in
 @@ -69,14 +69,18 @@ LIB_PRODUCT	= libnufx.a
  # Build stuff
  #
  
 -all: $(PRODUCT)
 +# XXX - until pkgsrc has a sane way to invoke multiple "build" targets
-+../nufxlib-203/libnufx.a:
-+	cd ../nufxlib-203 && $(MAKE)
++../nufxlib-220/libnufx.a:
++	cd ../nufxlib-220 && $(MAKE)
 +
-+all: ../nufxlib-203/libnufx.a $(PRODUCT)
++all: ../nufxlib-220/libnufx.a $(PRODUCT)
  	@true
  
  install: $(PRODUCT)
