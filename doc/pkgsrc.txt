@@ -7037,8 +7037,8 @@ variables:
 If your package contains interpreted perl scripts, add "perl" to the USE_TOOLS
 variable and set REPLACE_PERL to ensure that the proper interpreter path is
 set. REPLACE_PERL should contain a list of scripts, relative to WRKSRC, that
-you want adjusted. Every occurrence of */bin/perl will be replaced with the
-full path to the perl executable.
+you want adjusted. Every occurrence of */bin/perl in a she-bang line will be
+replaced with the full path to the perl executable.
 
 If a particular version of perl is needed, set the PERL5_REQD variable to the
 version number. The default is "5.0".
@@ -7050,8 +7050,10 @@ handling perl modules.
 
 REPLACE_SH, REPLACE_BASH, REPLACE_CSH, and REPLACE_KSH can be used to replace
 shell hash bangs in files. Please use the appropriate one, prefering REPLACE_SH
-in case this shell is sufficient. When using REPLACE_BASH, don't forget to add
-bash to USE_TOOLS.
+in case this shell is sufficient. Each should contain a list of scripts,
+relative to WRKSRC, that you want adjusted. Every occurrence of the matching
+shell in a she-bang line will be replaced with the full path to the shell
+executable. When using REPLACE_BASH, don't forget to add bash to USE_TOOLS.
 
 19.4.5. Other programming languages
 
