@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2014/09/11 13:50:24 joerg Exp $
+# $NetBSD: Makefile,v 1.77 2014/09/13 14:35:25 joerg Exp $
 
 DISTNAME=	openjdk-1.7.65-20140719
 PKGNAME=	openjdk7-1.7.65
@@ -175,25 +175,21 @@ post-extract:
 	${MKDIR} ${ALT_BOOTDIR}/bin
 	${LN} -s ${JDK_BOOTDIR}/include ${ALT_BOOTDIR}/include
 	${LN} -s ${JDK_BOOTDIR}/lib ${ALT_BOOTDIR}/lib
-	printf '#!/bin/sh\nexec %s/bin/java -mx256m "$$@"\n' \
-	    ${JDK_BOOTDIR} > ${ALT_BOOTDIR}/bin/java
-.else
-	mv ${ALT_BOOTDIR}/bin/java ${ALT_BOOTDIR}/bin/java-real
-	printf '#!/bin/sh\nexec %s/bin/java-real -mx256m "$$@"\n' \
-	    ${ALT_BOOTDIR} > ${ALT_BOOTDIR}/bin/java
+	${LN} -s ${JDK_BOOTDIR}/bin/java ${ALT_BOOTDIR}/bin
+	${LN} -s ${JDK_BOOTDIR}/bin/javac ${ALT_BOOTDIR}/bin
+	${LN} -s ${JDK_BOOTDIR}/bin/javah ${ALT_BOOTDIR}/bin
+	${LN} -s ${JDK_BOOTDIR}/bin/javap ${ALT_BOOTDIR}/bin
+	${LN} -s ${JDK_BOOTDIR}/bin/idlj ${ALT_BOOTDIR}/bin
+	${LN} -s ${JDK_BOOTDIR}/bin/jar ${ALT_BOOTDIR}/bin
+	${LN} -s ${JDK_BOOTDIR}/bin/native2ascii ${ALT_BOOTDIR}/bin
+	${LN} -s ${JDK_BOOTDIR}/bin/rmic ${ALT_BOOTDIR}/bin
+.elif ${OPSYS} == "NetBSD" && exists(${.CURDIR}/libs)
+	cp ${.CURDIR}/libs/lib* ${ALT_BOOTDIR}/jre/lib/${MACHINE_ARCH:S/x86_64/amd64/}
 .endif
-	chmod a+x ${ALT_BOOTDIR}/bin/java
-.for t in idlj jar javac javah javap native2ascii rmic
-.if ${OPSYS} == "SunOS"
-	printf '#!/bin/sh\n\nexec %s/bin/${t} -J-mx256m "$$@"\n' \
-	    ${JDK_BOOTDIR} > ${ALT_BOOTDIR}/bin/${t}
-.else
-	mv ${ALT_BOOTDIR}/bin/${t} ${ALT_BOOTDIR}/bin/${t}-real
-	printf '#!/bin/sh\n\nexec %s/bin/${t}-real -J-mx256m "$$@"\n' \
-	    ${ALT_BOOTDIR} > ${ALT_BOOTDIR}/bin/${t}
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-5.*)
+ALL_ENV+=	LDFLAGS_LIBGCC=-lgcc_s
 .endif
-	chmod a+x ${ALT_BOOTDIR}/bin/${t}
-.endfor
 
 do-build: ${WRKDIR}/stage3-done
 

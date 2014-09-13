@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.5 2013/06/15 09:31:05 jperkin Exp $
+$NetBSD: patch-ae,v 1.6 2014/09/13 14:35:25 joerg Exp $
 
 Additional BSD support.
 
@@ -11,7 +11,7 @@ Additional BSD support.
 +
 +ifeq ($(OS_VENDOR), NetBSD)
 +# XXX tnn fixme: -lgcc_s seems to be needed on NetBSD.
-+LFLAGS += -lgcc_s
++LFLAGS += ${LDFLAGS_LIBGCC}
 +endif
 +
 +# XXX tnn fixme: this probably should go someplace else.
