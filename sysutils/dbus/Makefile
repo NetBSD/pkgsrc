@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2014/07/06 14:54:32 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2014/09/13 09:47:11 richard Exp $
 
 DISTNAME=	dbus-1.8.6
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
@@ -23,6 +24,9 @@ BUILD_DEFS+=		VARBASE
 
 OWN_DIRS_PERMS+=	${VARBASE}/db/dbus ${DBUS_USER} ${DBUS_GROUP} 0755
 SPECIAL_PERMS+=		libexec/dbus-daemon-launch-helper ${REAL_ROOT_USER} ${DBUS_GROUP} 4511
+
+SMF_METHODS=	dbus
+SMF_NAME=	dbus
 
 .include "../../mk/bsd.prefs.mk"
 
