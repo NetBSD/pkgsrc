@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3539 2014/09/13 22:05:51 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.3540 2014/09/13 22:06:35 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4510,3 +4510,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/hs-blaze-builder to 0.3.3.3 [szptvlfn 2014-09-13]
 	Updated textproc/hs-blaze-markup to 0.6.1.1 [szptvlfn 2014-09-13]
 	Updated textproc/hs-blaze-html to 0.7.0.3 [szptvlfn 2014-09-13]
+	Updated textproc/hs-case-insensitive to 1.2.0.1 [szptvlfn 2014-09-13]
