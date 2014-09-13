@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.123 2013/08/24 16:55:21 bsiegert Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.124 2014/09/13 07:32:54 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1094,9 +1094,9 @@ pre-configure:
     and set <varname>REPLACE_PERL</varname> to ensure that the proper
     interpreter path is set. <varname>REPLACE_PERL</varname> should
     contain a list of scripts, relative to <varname>WRKSRC</varname>,
-    that you want adjusted.  Every occurrence of
-    <filename>*/bin/perl</filename> will be replaced with the full
-    path to the perl executable.</para>
+    that you want adjusted. Every occurrence of
+    <filename>*/bin/perl</filename> in a she-bang line will be
+    replaced with the full path to the perl executable.</para>
 
     <para>If a particular version of perl is needed, set the
     <varname>PERL5_REQD</varname> variable to the version number.  The
@@ -1114,6 +1114,10 @@ pre-configure:
     and <varname>REPLACE_KSH</varname> can be used to replace shell
     hash bangs in files. Please use the appropriate one, prefering
     <varname>REPLACE_SH</varname> in case this shell is sufficient.
+    Each should contain a list of scripts, relative to
+    <varname>WRKSRC</varname>, that you want adjusted. Every
+    occurrence of the matching shell in a she-bang line will be
+    replaced with the full path to the shell executable.
     When using <varname>REPLACE_BASH</varname>, don't forget to add
     <filename>bash</filename> to <varname>USE_TOOLS</varname>.</para>
   </sect2>
