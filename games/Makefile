@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.374 2014/09/12 23:20:01 wiz Exp $
+# $NetBSD: Makefile,v 1.375 2014/09/13 15:18:44 shattered Exp $
 #
 
 COMMENT=	Games
@@ -256,6 +256,7 @@ SUBDIR+=	powder
 SUBDIR+=	powermanga
 SUBDIR+=	powwow
 SUBDIR+=	prboom
+SUBDIR+=	prboom-plus
 SUBDIR+=	pushover
 SUBDIR+=	puzzles
 SUBDIR+=	py-easyAI
