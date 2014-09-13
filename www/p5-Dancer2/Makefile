@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2014/07/13 04:37:30 wen Exp $
+# $NetBSD: Makefile,v 1.11 2014/09/13 16:47:02 wen Exp $
 
-DISTNAME=	Dancer2-0.143000
+DISTNAME=	Dancer2-0.150000
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/X/XS/XSAWYERX/}
@@ -28,6 +28,7 @@ DEPENDS+=	p5-HTTP-Date>=0:../../www/p5-HTTP-Date
 DEPENDS+=	p5-HTTP-Message>=0:../../www/p5-HTTP-Message
 DEPENDS+=	p5-HTTP-Server-Simple-PSGI>=0:../../www/p5-HTTP-Server-Simple-PSGI
 DEPENDS+=	p5-JSON>=0:../../converters/p5-JSON
+DEPENDS+=	p5-LWP-Protocol-PSGI>=0.06:../../www/p5-LWP-Protocol-PSGI
 DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64>=0}:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-MIME-Types>=0:../../mail/p5-MIME-Types
 DEPENDS+=	p5-Module-Pluggable>=0:../../devel/p5-Module-Pluggable
@@ -37,6 +38,7 @@ DEPENDS+=	p5-MooX-Types-MooseLike-Numeric>=0:../../devel/p5-MooX-Types-MooseLike
 DEPENDS+=	p5-Path-Class>=0:../../devel/p5-Path-Class
 DEPENDS+=	p5-Plack>=0:../../www/p5-Plack
 DEPENDS+=	p5-Return-MultiLevel>=0:../../devel/p5-Return-MultiLevel
+DEPENDS+=	p5-Safe-Isa>=0:../../devel/p5-Safe-Isa
 DEPENDS+=	p5-Template-Tiny>=0:../../textproc/p5-Template-Tiny
 DEPENDS+=	p5-Template-Toolkit>=0:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-URI-Escape-XS>=0:../../www/p5-URI-Escape-XS
