@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2014/03/11 14:05:08 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.4.4.1 2014/09/13 18:13:24 tron Exp $
 man/man1/haproxy.1
 sbin/haproxy
+sbin/haproxy-systemd-wrapper
 share/doc/haproxy/architecture.txt
 share/doc/haproxy/configuration.txt
 share/doc/haproxy/haproxy-en.txt
