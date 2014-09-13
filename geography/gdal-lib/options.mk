@@ -1,8 +1,15 @@
-# $NetBSD: options.mk,v 1.2 2010/08/27 11:14:23 adam Exp $
+# $NetBSD: options.mk,v 1.3 2014/09/13 00:57:00 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gdal-lib
+
+# Note that these are not a mutually-exclusive group.
 PKG_SUPPORTED_OPTIONS=	pgsql mysql sqlite
-PKG_SUGGESTED_OPTIONS=	pgsql
+# By default, omit database support, because there isn't an
+# articulated use case and dependency management becomes very painful.
+# For example, depending on pgsql fixes a version, but doesn't put it
+# in the name, and then building postgis fails for all but that one
+# chosen version.
+PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 
