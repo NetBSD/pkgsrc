@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3535 2014/09/13 18:50:21 asau Exp $
+$NetBSD: CHANGES-2014,v 1.3536 2014/09/13 22:03:38 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4506,3 +4506,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added www/p5-LWP-Protocol-PSGI version 0.07 [wen 2014-09-13]
 	Updated www/p5-Dancer2 to 0.150000 [wen 2014-09-13]
 	Updated lang/polyml to 5.5.2 [asau 2014-09-13]
+	Updated devel/hs-text to 1.2.0.0 [szptvlfn 2014-09-13]
