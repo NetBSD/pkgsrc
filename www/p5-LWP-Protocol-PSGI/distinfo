@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/09/13 16:38:45 wen Exp $
+
+SHA1 (LWP-Protocol-PSGI-0.07.tar.gz) = d92a84861fd8e912cd900acf5588bcce0eebde17
+RMD160 (LWP-Protocol-PSGI-0.07.tar.gz) = b46741b72d544d755d9b59547a79c6d6f25f6337
+Size (LWP-Protocol-PSGI-0.07.tar.gz) = 12834 bytes
