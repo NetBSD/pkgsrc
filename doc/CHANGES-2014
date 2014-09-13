@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3536 2014/09/13 22:03:38 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.3537 2014/09/13 22:04:28 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4507,3 +4507,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Dancer2 to 0.150000 [wen 2014-09-13]
 	Updated lang/polyml to 5.5.2 [asau 2014-09-13]
 	Updated devel/hs-text to 1.2.0.0 [szptvlfn 2014-09-13]
+	Updated devel/hs-blaze-builder to 0.3.3.3 [szptvlfn 2014-09-13]
