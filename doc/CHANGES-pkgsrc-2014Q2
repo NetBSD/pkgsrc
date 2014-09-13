@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.32 2014/09/11 20:29:07 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.33 2014/09/13 18:13:08 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q2 branch:
@@ -131,3 +131,5 @@ Pullup ticket #4498 - requested by he
 devel/p5-subversion: security update
 Pullup ticket #4495 - requested by obache
 multimedia/adobe-flash-plugin11: security update
+Pullup ticket #4499 - requested by morr
+net/haproxy: security update
