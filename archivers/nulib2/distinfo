@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.12 2011/09/03 21:45:03 dholland Exp $
+$NetBSD: distinfo,v 1.13 2014/09/13 11:10:58 shattered Exp $
 
-SHA1 (nulibdist-203.tar.gz) = c7a9bde218e0a115424dfc2e3d7234ee7faa9b8e
-RMD160 (nulibdist-203.tar.gz) = 84c6eadd64749cfdc11fda74a552072bce1b04db
-Size (nulibdist-203.tar.gz) = 394129 bytes
-SHA1 (patch-aa) = 19b3f9c99d4567d537992ccfc3798e8594e7ab87
-SHA1 (patch-ab) = 822f41e50035b98832a543634f5ab11c4a301d30
-SHA1 (patch-ac) = f18040d7a469aedec2351f514bfd63073a345463
-SHA1 (patch-ad) = e9fa5edf63d97d485a0425ad4bf019aaf217eb37
-SHA1 (patch-ae) = 08132fa91060bc45090b392d13c14e4fe73ab336
-SHA1 (patch-af) = b5da775e73b32678e13a9b77a806d6777a31395a
+SHA1 (nulibdist-220.tar.gz) = 8b8ca835d4e3e3d8a5e1ae9830fdfd0ed0bb07e3
+RMD160 (nulibdist-220.tar.gz) = a6b0d5bd0d0d413741fd1d46da80ef699f084321
+Size (nulibdist-220.tar.gz) = 390564 bytes
+SHA1 (patch-aa) = b7fe0d23e1c22c67e48e0db5b7fc905756322717
+SHA1 (patch-ab) = 645a9c68d0b712ebc4d64284681a6168d66e4522
+SHA1 (patch-ac) = 17499d8a0c60e98282fc441723e10a01e2a644ec
+SHA1 (patch-ad) = 3793ac2fb1eb67472091c5a902c56d1483e0dd04
+SHA1 (patch-ae) = fb51aefedecd63dcb8c298111652a1782a70d511
+SHA1 (patch-af) = 7caa9a570f5bec136f555e01ca86a6c4c591a7a3

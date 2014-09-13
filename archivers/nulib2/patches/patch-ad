@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.2 2011/09/03 21:45:03 dholland Exp $
+$NetBSD: patch-ad,v 1.3 2014/09/13 11:10:58 shattered Exp $
 
---- nufxlib-203/configure.orig	2004-11-28 23:37:10.000000000 -0500
-+++ nufxlib-203/configure
+--- nufxlib-220/configure.orig	2004-11-28 23:37:10.000000000 -0500
++++ nufxlib-220/configure
 @@ -4059,10 +4059,6 @@ elif test "$host_os" = "beos"; then
          SHARE_FLAGS='-nostartfiles -Xlinker -soname="$@"'
  fi
