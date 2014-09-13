@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3525 2014/09/13 00:09:18 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.3526 2014/09/13 02:40:49 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4487,3 +4487,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/wordpress to 4.0 [morr 2014-09-12]
 	Added games/atque version 1.1.2 [wiz 2014-09-12]
 	Updated www/ikiwiki to 3.20140815nb2 [schmonz 2014-09-13]
+	Updated devel/gmtk to 1.0.9 [obache 2014-09-13]
