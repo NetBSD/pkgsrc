@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3526 2014/09/13 02:40:49 obache Exp $
+$NetBSD: CHANGES-2014,v 1.3527 2014/09/13 02:43:46 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4488,3 +4488,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added games/atque version 1.1.2 [wiz 2014-09-12]
 	Updated www/ikiwiki to 3.20140815nb2 [schmonz 2014-09-13]
 	Updated devel/gmtk to 1.0.9 [obache 2014-09-13]
+	Updated multimedia/gnome-mplayer to 1.0.9 [obache 2014-09-13]
