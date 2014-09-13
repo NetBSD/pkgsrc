@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3534 2014/09/13 16:47:56 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3535 2014/09/13 18:50:21 asau Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4505,3 +4505,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Safe-Isa to 1.000005 [wen 2014-09-13]
 	Added www/p5-LWP-Protocol-PSGI version 0.07 [wen 2014-09-13]
 	Updated www/p5-Dancer2 to 0.150000 [wen 2014-09-13]
+	Updated lang/polyml to 5.5.2 [asau 2014-09-13]
