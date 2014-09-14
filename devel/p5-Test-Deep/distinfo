@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2014/06/09 19:00:16 schmonz Exp $
+$NetBSD: distinfo,v 1.11 2014/09/14 13:40:19 wiz Exp $
 
-SHA1 (Test-Deep-0.112.tar.gz) = 8f68bd1337e3d7a7d2853d7c84f6574798357281
-RMD160 (Test-Deep-0.112.tar.gz) = c19239a1eb06dc8e01282dc9d08c78cd281be3b2
-Size (Test-Deep-0.112.tar.gz) = 36584 bytes
+SHA1 (Test-Deep-0.113.tar.gz) = 3738d0b6fd242c3ceeaf9094b7fee0acc231fd4f
+RMD160 (Test-Deep-0.113.tar.gz) = 815113b60f62993083c3a740b6bbd1b72079a74d
+Size (Test-Deep-0.113.tar.gz) = 36713 bytes
