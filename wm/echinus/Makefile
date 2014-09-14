@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2013/06/06 12:55:08 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/09/14 13:24:52 shattered Exp $
 #
 
-DISTNAME=	echinus-0.4.3
-PKGREVISION=	4
+DISTNAME=	echinus-0.4.9
 CATEGORIES=	wm
-MASTER_SITES=	http://www.plhk.ru/static/echinus/
+MASTER_SITES=	http://plhk.ru/static/echinus/
 
 MAINTAINER=	polachok@gmail.com
-HOMEPAGE=	http://www.plhk.ru/echinus
+HOMEPAGE=	http://plhk.ru/echinus
 COMMENT=	Simple and lightweight tiling window manager
 LICENSE=	mit
 
