@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.13 2014/07/22 11:42:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2014/09/14 17:44:49 wiz Exp $
 bin/cygdb${PYVERSSUFFIX}
 bin/cython${PYVERSSUFFIX}
+bin/cythonize${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -19,9 +20,15 @@ ${PYSITELIB}/Cython/Build/Dependencies.pyo
 ${PYSITELIB}/Cython/Build/Inline.py
 ${PYSITELIB}/Cython/Build/Inline.pyc
 ${PYSITELIB}/Cython/Build/Inline.pyo
+${PYSITELIB}/Cython/Build/IpythonMagic.py
+${PYSITELIB}/Cython/Build/IpythonMagic.pyc
+${PYSITELIB}/Cython/Build/IpythonMagic.pyo
 ${PYSITELIB}/Cython/Build/Tests/TestInline.py
 ${PYSITELIB}/Cython/Build/Tests/TestInline.pyc
 ${PYSITELIB}/Cython/Build/Tests/TestInline.pyo
+${PYSITELIB}/Cython/Build/Tests/TestIpythonMagic.py
+${PYSITELIB}/Cython/Build/Tests/TestIpythonMagic.pyc
+${PYSITELIB}/Cython/Build/Tests/TestIpythonMagic.pyo
 ${PYSITELIB}/Cython/Build/Tests/TestStripLiterals.py
 ${PYSITELIB}/Cython/Build/Tests/TestStripLiterals.pyc
 ${PYSITELIB}/Cython/Build/Tests/TestStripLiterals.pyo
@@ -322,6 +329,9 @@ ${PYSITELIB}/Cython/Includes/libc/stdio.pxd
 ${PYSITELIB}/Cython/Includes/libc/stdlib.pxd
 ${PYSITELIB}/Cython/Includes/libc/string.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/__init__.pxd
+${PYSITELIB}/Cython/Includes/libcpp/algorithm.pxd
+${PYSITELIB}/Cython/Includes/libcpp/cast.pxd
+${PYSITELIB}/Cython/Includes/libcpp/complex.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/deque.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/list.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/map.pxd
@@ -340,6 +350,12 @@ ${PYSITELIB}/Cython/Includes/openmp.pxd
 ${PYSITELIB}/Cython/Includes/posix/__init__.pxd
 ${PYSITELIB}/Cython/Includes/posix/fcntl.pxd
 ${PYSITELIB}/Cython/Includes/posix/ioctl.pxd
+${PYSITELIB}/Cython/Includes/posix/resource.pxd
+${PYSITELIB}/Cython/Includes/posix/signal.pxd
+${PYSITELIB}/Cython/Includes/posix/stat.pxd
+${PYSITELIB}/Cython/Includes/posix/stdlib.pxd
+${PYSITELIB}/Cython/Includes/posix/time.pxd
+${PYSITELIB}/Cython/Includes/posix/types.pxd
 ${PYSITELIB}/Cython/Includes/posix/unistd.pxd
 ${PYSITELIB}/Cython/Plex/Actions.pxd
 ${PYSITELIB}/Cython/Plex/Actions.py
@@ -408,6 +424,9 @@ ${PYSITELIB}/Cython/TestUtils.pyo
 ${PYSITELIB}/Cython/Tests/TestCodeWriter.py
 ${PYSITELIB}/Cython/Tests/TestCodeWriter.pyc
 ${PYSITELIB}/Cython/Tests/TestCodeWriter.pyo
+${PYSITELIB}/Cython/Tests/TestJediTyper.py
+${PYSITELIB}/Cython/Tests/TestJediTyper.pyc
+${PYSITELIB}/Cython/Tests/TestJediTyper.pyo
 ${PYSITELIB}/Cython/Tests/TestStringIOTree.py
 ${PYSITELIB}/Cython/Tests/TestStringIOTree.pyc
 ${PYSITELIB}/Cython/Tests/TestStringIOTree.pyo
