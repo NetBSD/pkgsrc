@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2012/10/23 18:16:31 asau Exp $
+# $NetBSD: Makefile,v 1.22 2014/09/14 13:20:08 shattered Exp $
 #
 
-DISTNAME=	john-1.7.6
-PKGREVISION=	1
+DISTNAME=	john-1.8.0
 CATEGORIES=	security textproc
-MASTER_SITES=	http://www.openwall.com/john/g/
+MASTER_SITES=	http://www.openwall.com/john/j/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openwall.com/john/
@@ -90,7 +90,7 @@ do-install:
 	${LN} -sf john ${DESTDIR}${PREFIX}/bin/${i}
 .endfor
 	# data files
-.for i in all.chr alnum.chr alpha.chr digits.chr lanman.chr password.lst
+.for i in ascii.chr digits.chr lm_ascii.chr password.lst
 	${INSTALL_DATA} ${WRKSRC}/run/${i} ${DESTDIR}${PREFIX}/share/john
 .endfor
 
