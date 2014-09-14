@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.27 2014/07/22 11:38:26 wiz Exp $
+$NetBSD: patch-aa,v 1.28 2014/09/14 16:43:44 wiz Exp $
 
 builtin krb5-config in platforms such as solaris do not support
 the gssapi option, and need an explicit -lgss
 
---- configure.orig	2014-07-14 18:50:03.000000000 +0000
+--- configure.orig	2014-09-04 20:42:23.000000000 +0000
 +++ configure
-@@ -3641,6 +3641,7 @@ $as_echo "$as_me: $xc_bad_var_msg librar
+@@ -3640,6 +3640,7 @@ $as_echo "$as_me: $xc_bad_var_msg librar
          ;;
      esac
    done
@@ -13,7 +13,7 @@ the gssapi option, and need an explicit -lgss
    if test $xc_bad_var_cflags = yes; then
      { $as_echo "$as_me:${as_lineno-$LINENO}: using CFLAGS: $CFLAGS" >&5
  $as_echo "$as_me: using CFLAGS: $CFLAGS" >&6;}
-@@ -16620,7 +16621,7 @@ squeeze() {
+@@ -16618,7 +16619,7 @@ squeeze() {
  
  
        #
@@ -22,7 +22,7 @@ the gssapi option, and need an explicit -lgss
      #
      if test "$compiler_id" = "GNU_C" ||
        test "$compiler_id" = "CLANG"; then
-@@ -21081,7 +21082,12 @@ $as_echo "yes" >&6; }
+@@ -21039,7 +21040,12 @@ $as_echo "yes" >&6; }
       if test -n "$host_alias" -a -f "$GSSAPI_ROOT/bin/$host_alias-krb5-config"; then
          GSSAPI_INCS=`$GSSAPI_ROOT/bin/$host_alias-krb5-config --cflags gssapi`
       elif test -f "$GSSAPI_ROOT/bin/krb5-config"; then
@@ -36,29 +36,7 @@ the gssapi option, and need an explicit -lgss
       elif test "$GSSAPI_ROOT" != "yes"; then
          GSSAPI_INCS="-I$GSSAPI_ROOT/include"
       fi
-@@ -21232,13 +21238,18 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
-                                  gss_libs=`$GSSAPI_ROOT/bin/$host_alias-krb5-config --libs gssapi`
-            LIBS="$gss_libs $LIBS"
-         elif test -f "$GSSAPI_ROOT/bin/krb5-config"; then
--                                 gss_libs=`$GSSAPI_ROOT/bin/krb5-config --libs gssapi`
-+		if $GSSAPI_ROOT/bin/krb5-config --libs gssapi 2>&1 | \
-+			grep "Unknown option" > /dev/null ; then
-+			gss_libs="`$GSSAPI_ROOT/bin/krb5-config --libs` -lgss"
-+		else
-+			gss_libs=`$GSSAPI_ROOT/bin/krb5-config --libs gssapi`
-+		fi
-            LIBS="$gss_libs $LIBS"
-         elif test "$GSSAPI_ROOT" != "yes"; then
-            LDFLAGS="$LDFLAGS -L$GSSAPI_ROOT/lib$libsuff"
--           LIBS="-lgssapi $LIBS"
-+           LIBS="-lgssapi -lkrb5 $LIBS"
-         else
--           LIBS="-lgssapi $LIBS"
-+           LIBS="-lgssapi -lkrb5 $LIBS"
-         fi
-         ;;
-      esac
-@@ -21249,7 +21260,7 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
+@@ -21212,7 +21218,7 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
          LIBS="-lgss $LIBS"
          ;;
       *)
