@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3545 2014/09/14 13:40:30 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3546 2014/09/14 13:42:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4516,3 +4516,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-CPAN-Meta to 2.142060 [wiz 2014-09-14]
 	Updated devel/p5-Module-Build to 0.42100 [wiz 2014-09-14]
 	Updated devel/p5-Test-Deep to 0.113 [wiz 2014-09-14]
+	Updated security/p5-IO-Socket-SSL to 1.998 [wiz 2014-09-14]
