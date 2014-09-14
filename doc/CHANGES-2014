@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3557 2014/09/14 17:51:24 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3558 2014/09/14 17:52:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4530,3 +4530,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-cython to 0.21 [wiz 2014-09-14]
 	Updated databases/py-ldap to 2.4.16 [wiz 2014-09-14]
 	Updated textproc/py-lxml to 3.4.0 [wiz 2014-09-14]
+	Updated lang/py-six to 1.8.0 [wiz 2014-09-14]
