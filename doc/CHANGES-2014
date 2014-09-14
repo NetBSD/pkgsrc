@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3546 2014/09/14 13:42:42 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3547 2014/09/14 13:59:35 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4517,3 +4517,6 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Module-Build to 0.42100 [wiz 2014-09-14]
 	Updated devel/p5-Test-Deep to 0.113 [wiz 2014-09-14]
 	Updated security/p5-IO-Socket-SSL to 1.998 [wiz 2014-09-14]
+	Updated audio/xanalyser to 1.32 [shattered 2014-09-14]
+	Updated security/john to 1.8.0 [shattered 2014-09-14]
+	Updated wm/echinus to 0.4.9 [shattered 2014-09-14]
