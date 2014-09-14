@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2014/05/29 23:36:03 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.40 2014/09/14 13:39:28 wiz Exp $
 
-DISTNAME=	Module-Build-0.4205
+DISTNAME=	Module-Build-0.4210
 PKGNAME=	p5-${DISTNAME}0
-PKGREVISION=	1
 SVR4_PKGNAME=	p5mob
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/L/LE/LEONT/}
@@ -15,6 +13,8 @@ LICENSE=	${PERL5_LICENSE}
 
 #DEPENDS+=	p5-ExtUtils-CBuilder>=0.27:../../devel/p5-ExtUtils-CBuilder
 #DEPENDS+=	p5-ExtUtils-ParseXS>=2.21:../../devel/p5-ExtUtils-ParseXS
+# needed for tests
+#DEPENDS+=	p5-CPAN-Meta>=2.141170:../../devel/p5-CPAN-Meta
 
 .include "options.mk"
 
