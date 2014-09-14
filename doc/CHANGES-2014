@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3555 2014/09/14 17:45:02 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3556 2014/09/14 17:48:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4528,3 +4528,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-cherrypy to 3.6.0 [wiz 2014-09-14]
 	Updated devel/py-click to 3.3 [wiz 2014-09-14]
 	Updated devel/py-cython to 0.21 [wiz 2014-09-14]
+	Updated databases/py-ldap to 2.4.16 [wiz 2014-09-14]
