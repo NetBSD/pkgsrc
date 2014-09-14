@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2010/04/07 08:11:36 obache Exp $
+$NetBSD: distinfo,v 1.5 2014/09/14 13:24:52 shattered Exp $
 
-SHA1 (echinus-0.4.3.tar.gz) = 5858c7a9845d8f8288186d1e8a6585b6f1c105cb
-RMD160 (echinus-0.4.3.tar.gz) = cb624fb5222799ac03b828f20d77f1cbdb23fa70
-Size (echinus-0.4.3.tar.gz) = 30409 bytes
+SHA1 (echinus-0.4.9.tar.gz) = 3a5b27f467e4216b87604f6b96cbb143bc2e1715
+RMD160 (echinus-0.4.9.tar.gz) = 19810f2de7aed3e75e87f67168cf2445579959c5
+Size (echinus-0.4.9.tar.gz) = 32934 bytes
