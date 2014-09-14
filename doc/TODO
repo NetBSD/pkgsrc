@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13651 2014/09/14 09:40:57 wiz Exp $
+$NetBSD: TODO,v 1.13652 2014/09/14 13:59:35 shattered Exp $
 
 Suggested new packages
 ======================
@@ -489,7 +489,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o easymenu-0.7.2p1
 	o easytag-2.2.3
 	o eboard-1.1.1
-	o echinus-0.4.9
 	o eclipse-3.2.0
 	o ed-1.10
 	o ede-2.0
@@ -694,7 +693,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o java-db3-3.87
 	o jcabc2ps-20070110
 	o jed-0.99-18
-	o john-1.8.0
 	o jpilot-syncmal-0.81
 	o kadu-0.11.1
 	o kaffe-1.1.9
@@ -1143,7 +1141,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wxRemind-101
 	o wyrd-1.4.6
 	o x264-devel-20140906
-	o xanalyser-1.30
 	o xbindkeys-1.8.6
 	o xbindkeys-tk-1.8.0
 	o xboard-4.7.0
