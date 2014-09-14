@@ -1,4 +1,6 @@
-$NetBSD: patch-glib_gthread-posix.c,v 1.1 2014/09/14 21:36:19 jklos Exp $
+$NetBSD: patch-glib_gthread-posix.c,v 1.2 2014/09/14 23:35:23 prlw1 Exp $
+
+https://bugzilla.gnome.org/show_bug.cgi?id=736651
 
 --- glib/gthread-posix.c.orig	2014-02-22 15:29:07.000000000 +0000
 +++ glib/gthread-posix.c
