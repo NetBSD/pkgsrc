@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.469 2014/08/12 15:56:35 fhajny Exp $
+# $NetBSD: Makefile,v 1.470 2014/09/14 14:40:57 gdt Exp $
 
 COMMENT=	Databases
 
@@ -248,6 +248,7 @@ SUBDIR+=	poco-data-odbc
 SUBDIR+=	poco-data-sqlite
 SUBDIR+=	postgresql-pgbench
 SUBDIR+=	postgresql-postgis
+SUBDIR+=	postgresql-postgis2
 #SUBDIR+=	postgresql-uuid	# just contains files for postgresql*-uuid
 SUBDIR+=	postgresql84
 SUBDIR+=	postgresql84-adminpack
