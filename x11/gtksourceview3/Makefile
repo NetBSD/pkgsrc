@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2014/05/05 00:48:30 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.20 2014/09/14 20:44:11 prlw1 Exp $
 
-DISTNAME=	gtksourceview-3.10.2
+DISTNAME=	gtksourceview-3.10.3
 PKGNAME=	${DISTNAME:S/gtksourceview/gtksourceview3/}
-PKGREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtksourceview/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,7 +9,8 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	prlw1@cam.ac.uk
 HOMEPAGE=	http://projects.gnome.org/gtksourceview/
 COMMENT=	Text widget that extends GTK3's GtkTextView widget
-LICENSE=	gnu-gpl-v2
+# LGPL, but some files used in tests are still GPL
+LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
@@ -22,8 +21,10 @@ CONFIGURE_ARGS+=	--disable-maintainer-mode
 
 PKGCONFIG_OVERRIDE+=	gtksourceview-3.0.pc.in
 
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.37.3
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.9.9
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
