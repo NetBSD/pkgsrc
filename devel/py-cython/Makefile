@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2014/07/22 11:42:51 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2014/09/14 17:44:49 wiz Exp $
 
-DISTNAME=	Cython-0.20.2
+DISTNAME=	Cython-0.21
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Cy/cy/}
 CATEGORIES=	lang python
 MASTER_SITES=	http://cython.org/release/
@@ -21,13 +21,14 @@ REPLACE_PYTHON+=	Cython/Debugger/libpython.py
 REPLACE_PYTHON+=	cython.py
 
 # for test only
-#USE_LANGUAGES+= c++
+USE_LANGUAGES+= c++
 do-test:
 	(cd ${WRKSRC} && ${PYTHONBIN} runtests.py)
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 		${MV} cython cython${PYVERSSUFFIX} && \
+		${MV} cythonize cythonize${PYVERSSUFFIX} && \
 		${MV} cygdb cygdb${PYVERSSUFFIX}
 
 .include "../../lang/python/application.mk"
