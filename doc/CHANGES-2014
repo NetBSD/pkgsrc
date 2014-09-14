@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3549 2014/09/14 16:43:53 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3550 2014/09/14 16:44:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4522,3 +4522,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated wm/echinus to 0.4.9 [shattered 2014-09-14]
 	Added databases/postgresql-postgis2 version 2.1.3 [gdt 2014-09-14]
 	Updated www/curl to 7.38.0 [wiz 2014-09-14]
+	Updated misc/dialog to 1.2.20140911 [wiz 2014-09-14]
