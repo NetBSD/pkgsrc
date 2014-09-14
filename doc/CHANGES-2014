@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3547 2014/09/14 13:59:35 shattered Exp $
+$NetBSD: CHANGES-2014,v 1.3548 2014/09/14 14:42:01 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4520,3 +4520,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/xanalyser to 1.32 [shattered 2014-09-14]
 	Updated security/john to 1.8.0 [shattered 2014-09-14]
 	Updated wm/echinus to 0.4.9 [shattered 2014-09-14]
+	Added databases/postgresql-postgis2 version 2.1.3 [gdt 2014-09-14]
