@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13650 2014/09/13 15:17:42 shattered Exp $
+$NetBSD: TODO,v 1.13651 2014/09/14 09:40:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -416,6 +416,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
 	o calibre-2.2.0 [wip]
+	o calibre-2.3.0
 	o calligra-2.4.3 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -703,6 +704,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kde4-4.14
 	o kde4-4.13.2
 	o kdenlive-0.9.8
+	o kdevelop-4.7.0
 	o kismet-2011.03r2 [pkg/45692]
 	o klavaro-3.0
 	o kmess-1.5.1
@@ -729,7 +731,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libextractor-1.2 [requires shm_open()]
 	o libffi-3.1 [wip]
 	o libflash-0.4.13
-	o libfolks-0.8.0
+	o libfolks-0.10.0
 	o libgdata-0.14.1
 	o libgdiplus-3.0
 	o libgee-0.14.0
@@ -785,6 +787,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mc-4.8.12
 	o mcabber-0.10.3
 	o mcsim-5.5.0
+	o mednafen-0.9.36.4
 	o mergeant-0.67
 	o mesure-0.7.2
 	o metacity-3.12.0
@@ -962,7 +965,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o radiance-3.7.2
 	o rails-4.1.5
 	o rainbowcrack-1.5
-	o raine-0.63.10
+	o raine-0.63.11
 	o rat-4.2.25
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rdesktop-1.8.2
