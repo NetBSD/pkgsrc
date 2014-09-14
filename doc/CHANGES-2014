@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3562 2014/09/14 18:26:36 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.3563 2014/09/14 20:44:28 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4535,3 +4535,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-tornado to 4.0.2 [wiz 2014-09-14]
 	Updated math/hs-scientific to 0.3.3.1 [szptvlfn 2014-09-14]
 	Updated math/hs-semigroups to 0.15.3 [szptvlfn 2014-09-14]
+	Updated x11/gtksourceview3 to 3.10.3 [prlw1 2014-09-14]
