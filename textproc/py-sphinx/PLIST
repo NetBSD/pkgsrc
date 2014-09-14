@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/01/27 19:14:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2014/09/14 17:55:38 wiz Exp $
 bin/sphinx-apidoc
 bin/sphinx-autogen
 bin/sphinx-build
@@ -257,6 +257,9 @@ ${PYSITELIB}/sphinx/locale/pl/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/pt_BR/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/pt_BR/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/pt_BR/LC_MESSAGES/sphinx.po
+${PYSITELIB}/sphinx/locale/pt_PT/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/pt_PT/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/pt_PT/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/ru/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/ru/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/ru/LC_MESSAGES/sphinx.po
@@ -279,6 +282,9 @@ ${PYSITELIB}/sphinx/locale/tr/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/uk_UA/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/uk_UA/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/uk_UA/LC_MESSAGES/sphinx.po
+${PYSITELIB}/sphinx/locale/vi/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/vi/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/vi/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/zh_CN/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/zh_CN/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/zh_CN/LC_MESSAGES/sphinx.po
