@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/09/14 17:44:49 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2014/09/14 17:45:20 wiz Exp $
 
 DISTNAME=	Cython-0.21
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Cy/cy/}
@@ -21,7 +21,7 @@ REPLACE_PYTHON+=	Cython/Debugger/libpython.py
 REPLACE_PYTHON+=	cython.py
 
 # for test only
-USE_LANGUAGES+= c++
+#USE_LANGUAGES+= c++
 do-test:
 	(cd ${WRKSRC} && ${PYTHONBIN} runtests.py)
 
