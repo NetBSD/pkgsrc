@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.5 2014/09/14 12:48:35 shattered Exp $
+
+--- src/pcm-cdr.cc.orig	2007-03-15 18:22:14.000000000 +0000
++++ src/pcm-cdr.cc
+@@ -20,6 +20,12 @@ using std::cerr;
+ #include "pcm-cdr.h"
+ 
+ 
++#if defined(__NetBSD__)
++#  define __BYTE_ORDER _BYTE_ORDER
++#  define __BIG_ENDIAN _BIG_ENDIAN
++#  define __LITTLE_ENDIAN _LITTLE_ENDIAN
++#endif
++
+ #ifndef __BYTE_ORDER
+ #  error "undefined endianness"
+ #elif __BYTE_ORDER != __BIG_ENDIAN && __BYTE_ORDER != __LITTLE_ENDIAN
