@@ -1,4 +1,10 @@
-$NetBSD: CHANGES-2014,v 1.3563 2014/09/14 20:44:28 prlw1 Exp $
+$NetBSD: CHANGES-2014,v 1.3564 2014/09/14 22:09:43 agc Exp $
+
+# PLEASE NOTE THAT THE PKGSRC REPOSITORY IS IN A FREEZE FOR NEW
+# FUNCTIONALITY IN PREPARATION FOR PKGSRC-2014Q3 BRANCH.  NO NEW
+# PACKAGES, PLEASE; NO INFRASTRUCTURE CHANGES, PLEASE; AND PLEASE ASK
+# PKGSRC-PMC FOR PERMISSION BEFORE COMMITTING CHANGES WHICH MIGHT HAVE
+# IMPACT ON OTHERS WORK.
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4536,3 +4542,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated math/hs-scientific to 0.3.3.1 [szptvlfn 2014-09-14]
 	Updated math/hs-semigroups to 0.15.3 [szptvlfn 2014-09-14]
 	Updated x11/gtksourceview3 to 3.10.3 [prlw1 2014-09-14]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2014Q3 branch [agc 2014-09-14]
