@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.11 2012/03/01 17:38:56 hans Exp $
+$NetBSD: distinfo,v 1.12 2014/09/14 12:48:35 shattered Exp $
 
-SHA1 (xanalyser-1.24.tar.bz2) = 0b261568b8573d81b7e99980c2ffede6be683bdb
-RMD160 (xanalyser-1.24.tar.bz2) = 9fa7c1ae489be127ca8e519168eb7b48bbabab24
-Size (xanalyser-1.24.tar.bz2) = 73451 bytes
-SHA1 (patch-aa) = 3b8fe1686be9709f34651ee396c1b155df53728e
-SHA1 (patch-ab) = 1aa906424853aeb0d3af6ef19c8c6fb220e40a0b
-SHA1 (patch-ac) = 71cad35978414fc2ce1a339b97d22bdb1e5f2c69
-SHA1 (patch-ad) = 46d15c6ff4ddc236de7d424dee667088dd693062
+SHA1 (xanalyser-1.32.tar.bz2) = 16304422cc71b7a67f45a0930649ac46cc2fcb20
+RMD160 (xanalyser-1.32.tar.bz2) = 964d02d6a388f3430706fa2ed277478f0c65146b
+Size (xanalyser-1.32.tar.bz2) = 86086 bytes
+SHA1 (patch-aa) = e0b0d581ebf9191e284f397898ab88f479bf8ab3
+SHA1 (patch-ac) = ab2438165458ed3d1be2be92d5f27599082e2be4
+SHA1 (patch-ad) = 390ac98d352453ba7069917f0d93250ab6115a0e
+SHA1 (patch-ae) = ac21e8be1969fb4e284d9b6aa4c73339f4175a4e
+SHA1 (patch-af) = 04a73d26ebdcc87f9bbae5a47988a484c72ef29a

@@ -1,13 +1,16 @@
-$NetBSD: patch-aa,v 1.4 2012/03/01 17:38:56 hans Exp $
+$NetBSD: patch-aa,v 1.5 2014/09/14 12:48:35 shattered Exp $
 
---- src/pcm.cc.orig	2005-12-11 20:35:40.000000000 +0000
+--- src/pcm.cc.orig	2007-03-15 18:22:14.000000000 +0000
 +++ src/pcm.cc
-@@ -9,6 +9,12 @@
+@@ -7,10 +7,12 @@
+ 
+ #include <string.h>
  #include <stdlib.h>
- #ifdef __NetBSD__
- #  include <machine/byte_swap.h>
-+#elif defined(__DragonFly__)
-+#  include <sys/endian.h>
+-#ifdef __NetBSD__
+-#  include <machine/byte_swap.h>
+-#elif __FreeBSD__
++#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
+ #  include <sys/endian.h>
 +#elif defined(__sun)
 +#  include <sys/byteorder.h>
 +#  define bswap_16 BSWAP_16
@@ -15,21 +18,60 @@ $NetBSD: patch-aa,v 1.4 2012/03/01 17:38:56 hans Exp $
  #else
  #  include <byteswap.h>
  #endif
-@@ -122,7 +128,7 @@ PCM::swap_buffer (void* buffer, int fram
+@@ -26,6 +28,11 @@ using std::cerr;
+ #  include "pcm-alsa.h"
+ #endif
+ 
++#if defined(__NetBSD__)
++#  define __BYTE_ORDER _BYTE_ORDER
++#  define __BIG_ENDIAN _BIG_ENDIAN
++#  define __LITTLE_ENDIAN _LITTLE_ENDIAN
++#endif
+ 
+ #ifndef __BYTE_ORDER
+ #  error "undefined endianness"
+@@ -48,7 +55,7 @@ PCM::create (const char* name, pcm_type_
+ 	    if (strcmp (tmp, "default") == 0)
+ 		tmp = "plughw:0,0";
+ #else
+-#  if defined(__NetBSD__) || defined(__FreeBSD__)
++#  if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
+ 	    if (strcmp (tmp, "default") == 0)
+ 		tmp = "/dev/dsp";
+ #  else
+@@ -172,7 +179,7 @@ PCM::swap_buffer (void* buffer, size_t f
  	case S16: {
  	    int16_t* tmp_buffer = (int16_t*) buffer;
- 	    for (int i = n; i != 0; i--) {
--#ifdef __NetBSD__
-+#if defined(__NetBSD__) || defined(__DragonFly__)
+ 	    for (size_t i = n; i != 0; i--) {
+-#if defined(__NetBSD__) || defined(__FreeBSD__)
++#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
  		*tmp_buffer = bswap16 (*tmp_buffer);
  #else
  		*tmp_buffer = bswap_16 (*tmp_buffer);
-@@ -134,7 +140,7 @@ PCM::swap_buffer (void* buffer, int fram
+@@ -184,7 +191,7 @@ PCM::swap_buffer (void* buffer, size_t f
  	case S32: {
  	    int32_t* tmp_buffer = (int32_t*) buffer;
- 	    for (int i = n; i != 0; i--) {
--#ifdef __NetBSD__
-+#if defined(__NetBSD__) || defined(__DragonFly__)
+ 	    for (size_t i = n; i != 0; i--) {
+-#if defined(__NetBSD__) || defined(__FreeBSD__)
++#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
  		*tmp_buffer = bswap32 (*tmp_buffer);
  #else
  		*tmp_buffer = bswap_32 (*tmp_buffer);
+@@ -200,7 +207,7 @@ uint16_t
+ PCM::uint16_to_le (uint16_t i) const
+ {
+ #if __BYTE_ORDER == __BIG_ENDIAN
+-#  if defined(__NetBSD__) || defined(__FreeBSD__)
++#  if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
+     return bswap16 (i);
+ #  else
+     return bswap_16 (i);
+@@ -215,7 +222,7 @@ uint32_t
+ PCM::uint32_to_le (uint32_t i) const
+ {
+ #if __BYTE_ORDER == __BIG_ENDIAN
+-#  if defined(__NetBSD__) || defined(__FreeBSD__)
++#  if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
+     return bswap32 (i);
+ #  else
+     return bswap_32 (i);
