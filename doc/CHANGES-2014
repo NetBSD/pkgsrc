@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3554 2014/09/14 16:59:45 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3555 2014/09/14 17:45:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4527,3 +4527,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/musicpd to 0.18.14 [wiz 2014-09-14]
 	Updated www/py-cherrypy to 3.6.0 [wiz 2014-09-14]
 	Updated devel/py-click to 3.3 [wiz 2014-09-14]
+	Updated devel/py-cython to 0.21 [wiz 2014-09-14]
