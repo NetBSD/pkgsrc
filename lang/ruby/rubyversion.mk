@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.123 2014/08/25 03:25:57 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.124 2014/09/15 06:26:33 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -48,7 +48,7 @@
 #	If "Yes", the package dosen't depend on any version of Ruby, such
 #	as editing mode for emacs.  In this case, package's name would begin
 #	with "ruby-".  Otherwise, the package's name is begin with
-#	${RUBY_PKGPREFIX}; "ruby18", "ruby193" , "ruby200" or "ruby21".
+#	${RUBY_PKGPREFIX}.
 #
 #		Possible values: Yes No
 #		Default: No
@@ -77,6 +77,10 @@
 #	Prefix part for ruby based packages.  It is recommended that to
 #	use RUBY_PKGPREFIX with ruby related packages since you can supply
 #	different binary packages as each version of Ruby.
+#	The value of RUBY_PKGPREFIX is "ruby-" and concatination of Ruby's
+#	major, minor and teeny version unless RUBY_VER is "18".
+#
+#		Example values: ruby18 ruby193 ruby200 ruby212
 #
 # RUBY_ABI_VERSION
 #	Ruby's ABI version.
@@ -104,6 +108,10 @@
 #
 # RUBY_SUFFIX
 #	Extra string for each ruby commands; ruby, irb and so on.
+#	The value of RUBY_SUFFIX is concatination of Ruby's major, minor
+#	and teeny version unless RUBY_VER is "18".
+#
+#		Possible values: 18 193 200 212
 #
 # RUBY_VERSION
 #	Version of real Ruby's version excluding patchlevel.
