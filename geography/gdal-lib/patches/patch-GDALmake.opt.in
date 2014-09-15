@@ -1,0 +1,19 @@
+$NetBSD: patch-GDALmake.opt.in,v 1.1 2014/09/15 16:48:21 jperkin Exp $
+
+Fix occasional paralle build failure:
+
+  ogr/ogr_core.h:34:26: fatal error: gdal_version.h: No such file or directory
+
+by ensuring we have the correct includes.
+
+--- GDALmake.opt.in.orig	2012-10-09 00:58:28.000000000 +0000
++++ GDALmake.opt.in
+@@ -67,7 +67,7 @@ INST_DOCS	=	@exec_prefix@/doc
+ INST_MAN	=	@mandir@
+ INST_HTML	=	$(HOME)/www/gdal
+ 
+-CPPFLAGS	= @CPPFLAGS@ -I$(GDAL_ROOT)/port @EXTRA_INCLUDES@
++CPPFLAGS	= @CPPFLAGS@ -I$(GDAL_ROOT)/port -I$(GDAL_ROOT)/gcore @EXTRA_INCLUDES@
+ CFLAGS		= @CFLAGS@ @C_WFLAGS@ $(USER_DEFS)
+ CXXFLAGS	= @CXXFLAGS@ @CXX_WFLAGS@ $(USER_DEFS)
+ LDFLAGS     = @LDFLAGS@
