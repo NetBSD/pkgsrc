@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1 2014/09/08 11:38:17 wiz Exp $
+$NetBSD: distinfo,v 1.2 2014/09/15 17:31:18 wiz Exp $
 
 SHA1 (mpv-0.5.1.tar.gz) = a72be602156497545eeb78ee6adfe98720650f27
 RMD160 (mpv-0.5.1.tar.gz) = f341e4647257cc35b902c3fe1787840f82a4052e
 Size (mpv-0.5.1.tar.gz) = 2578630 bytes
+SHA1 (patch-audio_out_ao__oss.c) = ee387e66cafe3122dadabbd8246a2dbce90ed18d
+SHA1 (patch-audio_out_push.c) = bde00289d2490fcfe839e6d7c80d65e4f72dd482
