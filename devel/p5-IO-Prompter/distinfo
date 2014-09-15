@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/03/11 13:11:09 obache Exp $
+$NetBSD: distinfo,v 1.2 2014/09/15 21:11:00 schmonz Exp $
 
-SHA1 (IO-Prompter-0.004003.tar.gz) = 40fd90b71b178188e38698a2d274bb1ea26546d1
-RMD160 (IO-Prompter-0.004003.tar.gz) = d5243f510d9a8d2fe2020010c819186c58677612
-Size (IO-Prompter-0.004003.tar.gz) = 41566 bytes
+SHA1 (IO-Prompter-0.004011.tar.gz) = 8935971b15a3f2ad753afecb287495c2f55eede1
+RMD160 (IO-Prompter-0.004011.tar.gz) = f0b0e273f31d0174cc9f523dbb460b7d64772fd2
+Size (IO-Prompter-0.004011.tar.gz) = 42434 bytes
