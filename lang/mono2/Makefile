@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/09/01 19:18:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2014/09/15 15:34:49 jperkin Exp $
 
 DISTNAME=	mono-2.10.9
 PKGREVISION=	9
@@ -17,6 +17,9 @@ BUILD_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 CONFLICTS=	pnet-[0-9]* mcsim-[0-9]* lc-[0-9]*
 
 ALL_ENV+=		MONO_SHARED_DIR=${WRKDIR:Q} PLATFORM=
+
+# Occasional errors with net_2_0 dlls not being built before later dependents
+MAKE_JOBS_SAFE=	no
 
 USE_TOOLS+=		bison gmake perl:run pkg-config bash:run msgfmt
 USE_LIBTOOL=		yes
