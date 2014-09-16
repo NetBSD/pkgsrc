@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2014/03/21 13:57:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2014/09/16 19:25:51 khorben Exp $
 #
 
-DISTNAME=	libSystem-0.1.7
-PKGNAME=	deforaos-libsystem-0.1.7
-PKGREVISION=	2
+DISTNAME=	libSystem-0.2.0
+PKGNAME=	deforaos-libsystem-0.2.0
 CATEGORIES=	devel
-MASTER_SITES=	http://www.defora.org/os/download/download/4321/
+MASTER_SITES=	http://www.defora.org/os/download/download/4330/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
