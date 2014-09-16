@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2014/09/12 21:29:22 wiz Exp $
+$NetBSD: distinfo,v 1.32 2014/09/16 09:52:05 wiz Exp $
 
 SHA1 (lynx2.8.8rel.2.tar.bz2) = 65bbf95627c88723bbb5880155e5fe01c2753d0c
 RMD160 (lynx2.8.8rel.2.tar.bz2) = a683f9c163a6c343bde53ffde99dbecce4e41b02
@@ -6,4 +6,3 @@ Size (lynx2.8.8rel.2.tar.bz2) = 2587120 bytes
 SHA1 (patch-aa) = 85e76c4b2708e01dd1abdc1af764a067bd83bcb9
 SHA1 (patch-ab) = 26fab3bd426a76df530e6780eefe36464059bc6a
 SHA1 (patch-af) = 31399c0c3394b90c0680708fff06f6f9e19674b3
-SHA1 (patch-src_LYStrings.c) = ce12d4e116d550f6cb4df6d045d318752c83f14d
