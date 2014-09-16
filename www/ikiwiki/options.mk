@@ -1,11 +1,19 @@
-# $NetBSD: options.mk,v 1.15 2014/08/18 01:37:35 schmonz Exp $
+# $NetBSD: options.mk,v 1.16 2014/09/16 17:53:01 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ikiwiki
-PKG_SUPPORTED_OPTIONS=		cvs ikiwiki-amazon-s3
-PKG_SUPPORTED_OPTIONS+=		ikiwiki-highlight ikiwiki-search
-PKG_SUPPORTED_OPTIONS+=		imagemagick python svn w3m
+PKG_SUPPORTED_OPTIONS=		cgi imagemagick python w3m
+PKG_SUPPORTED_OPTIONS+=		cvs git svn	# not mutually exclusive
+PKG_SUPPORTED_OPTIONS+=		ikiwiki-amazon-s3 ikiwiki-highlight ikiwiki-search
+PKG_SUGGESTED_OPTIONS=		cgi
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mcgi)
+DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
+DEPENDS+=	p5-CGI-FormBuilder>=3.05:../../www/p5-CGI-FormBuilder
+DEPENDS+=	p5-CGI-Session-[0-9]*:../../www/p5-CGI-Session
+DEPENDS+=	p5-DB_File-[0-9]*:../../databases/p5-DB_File
+.endif
 
 .if !empty(PKG_OPTIONS:Mcvs)
 . if !exists(/usr/bin/cvs)
@@ -15,6 +23,10 @@ DEPENDS+=	cvsps-[0-9]*:../../devel/cvsps
 DEPENDS+=	cvsweb-[0-9]*:../../www/cvsweb
 DEPENDS+=	p5-File-chdir-[0-9]*:../../devel/p5-File-chdir
 DEPENDS+=	p5-File-ReadBackwards-[0-9]*:../../textproc/p5-File-ReadBackwards
+.endif
+
+.if !empty(PKG_OPTIONS:Mgit)
+DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 .endif
 
 .if !empty(PKG_OPTIONS:Mikiwiki-amazon-s3)
@@ -33,6 +45,8 @@ DEPENDS+=	xapian-omega-[0-9]*:../../textproc/xapian-omega
 
 .if !empty(PKG_OPTIONS:Mimagemagick)
 DEPENDS+=	p5-PerlMagick-[0-9]*:../../graphics/p5-PerlMagick
+# suggest ghostscript (required for PDF-to-PNG thumbnailing)
+# and libmagickcore-extra (required for SVG-to-PNG thumbnailing)
 .endif
 
 .if !empty(PKG_OPTIONS:Mpython)

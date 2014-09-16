@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.123 2014/09/13 00:08:21 schmonz Exp $
+# $NetBSD: Makefile,v 1.124 2014/09/16 17:53:01 schmonz Exp $
 #
 
-DISTNAME=		ikiwiki_3.20140815
+DISTNAME=		ikiwiki_3.20140916
 PKGNAME=		${DISTNAME:S/_/-/}
-PKGREVISION=		2
 CATEGORIES=		www textproc
 MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/i/ikiwiki/}
 
@@ -17,8 +16,6 @@ DEPENDS+=		p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=		p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
 DEPENDS+=		p5-HTML-Template-[0-9]*:../../www/p5-HTML-Template
 DEPENDS+=		p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree
-DEPENDS+=		p5-CGI-Session-[0-9]*:../../www/p5-CGI-Session
-DEPENDS+=		p5-CGI-FormBuilder>=3.05:../../www/p5-CGI-FormBuilder
 DEPENDS+=		p5-Mail-Sendmail-[0-9]*:../../mail/p5-Mail-Sendmail
 DEPENDS+=		p5-Time-Duration-[0-9]*:../../time/p5-Time-Duration
 DEPENDS+=		p5-TimeDate-[0-9]*:../../time/p5-TimeDate
@@ -66,7 +63,6 @@ TEST_TARGET=		test
 .include "options.mk"
 
 pre-configure:
-	rm -f ${WRKSRC}/doc/examples/blog/posts/Test.html
 	find ${WRKSRC} -type f -name '*.orig' -print | xargs rm -f
 
 .include "../../mk/bsd.prefs.mk"
