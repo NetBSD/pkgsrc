@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3570 2014/09/16 09:49:07 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3571 2014/09/16 09:49:17 wiz Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS IN A FREEZE FOR NEW
 # FUNCTIONALITY IN PREPARATION FOR PKGSRC-2014Q3 BRANCH.  NO NEW
@@ -4549,3 +4549,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-IO-Tty to 1.12 [schmonz 2014-09-15]
 	Updated devel/p5-FindBin-libs to 2.11 [schmonz 2014-09-15]
 	Updated devel/ncurses to 5.9nb4 [wiz 2014-09-16]
+	Updated devel/ncursesw to 5.9nb1 [wiz 2014-09-16]
