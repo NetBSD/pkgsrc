@@ -1,16 +1,19 @@
-# $NetBSD: Makefile,v 1.9 2011/02/28 11:02:46 adam Exp $
+# $NetBSD: Makefile,v 1.10 2014/09/16 09:48:41 wiz Exp $
 
 .include "../../devel/ncurses/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/ncurses/ncursesw/}
+PKGREVISION=	1
 COMMENT=	Wide character CRT screen handling and optimization package
 
 PATCHDIR=	${.CURDIR}/../../devel/ncurses/patches
 DISTINFO_FILE=	${.CURDIR}/../../devel/ncurses/distinfo
 
 CONFIGURE_ARGS+=	--enable-widec
+CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/ncursesw
 
 INSTALLATION_DIRS+=	include/ncursesw
+INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	lib
 
 BUILD_TARGET=	libs
@@ -27,7 +30,9 @@ SUBST_SED.includes=	-e 's,<ncurses_dll\.h>,<ncurses/ncurses_dll\.h>,'
 SUBST_SED.includes+=	-e 's,<unctrl\.h>,<ncurses/unctrl\.h>,'
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/include/curses.h ${DESTDIR}${PREFIX}/include/ncursesw/ncurses.h
+	cd ${WRKSRC}/include &&	\
+	${MAKE_ENV} ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} install
+	${INSTALL_SCRIPT} ${WRKSRC}/misc/ncurses-config ${DESTDIR}${PREFIX}/bin/ncursesw${NC_VERS:R}-config
 	for LIB in form menu ncurses++ ncurses panel; do	\
 		${LIBTOOL} --mode=install ${INSTALL_PROGRAM}	\
 		    ${WRKSRC}/lib/lib$${LIB}w.la ${DESTDIR}${PREFIX}/lib;	\
