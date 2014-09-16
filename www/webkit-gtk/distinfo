@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.68 2014/09/01 21:06:45 wiz Exp $
+$NetBSD: distinfo,v 1.69 2014/09/16 11:56:13 jperkin Exp $
 
 SHA1 (webkitgtk-2.4.5.tar.xz) = a0084746de2cf18246d7b5216086db8133c9df4b
 RMD160 (webkitgtk-2.4.5.tar.xz) = 7cc5bf1a8ac9101b4b8a2c1cce96cd1dd7403bc2
@@ -8,6 +8,7 @@ SHA1 (patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp) = 69221390dd5
 SHA1 (patch-Source_JavaScriptCore_dfg_DFGNode.h) = fdd31fcf6c745394499570397c82fe3dfce02e1d
 SHA1 (patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp) = 67f66ca254f958c0650249485a64982b40f92621
 SHA1 (patch-Source_ThirdParty_gtest_include_gtest_internal_gtest-port.h) = f1eee7f9d3012edee1915234c837cff820f97092
+SHA1 (patch-Source_WTF_wtf_MathExtras.h) = bce39efce126793c2a33ab99224ca44860273a5b
 SHA1 (patch-Source_WTF_wtf_Platform.h) = 5ff82e77d1d5dea5514adbeede14fd4a8923dc9c
 SHA1 (patch-Source_WebCore_bindings_js_JSInspectorFrontendHostCustom.cpp) = 2835657e04cdbc0cc7be8a6793061f0b98f84224
 SHA1 (patch-Tools_DumpRenderTree_gtk_DumpRenderTree.cpp) = 994d1671ff2d8e3a961b9b7ed34f69215ed46f91
