@@ -1,11 +1,15 @@
-$NetBSD: patch-data_pkgconfig.sh,v 1.1 2014/03/21 13:57:42 jperkin Exp $
+$NetBSD: patch-data_pkgconfig.sh,v 1.2 2014/09/16 19:25:51 khorben Exp $
 
 Use correct rpath flag on SunOS.
 
---- data/pkgconfig.sh.orig	2013-02-04 17:28:18.000000000 +0000
+--- data/pkgconfig.sh.orig	2014-04-23 15:37:45.000000000 +0000
 +++ data/pkgconfig.sh
-@@ -114,6 +114,9 @@ while [ $# -gt 0 ]; do
- 			Darwin)
+@@ -129,9 +129,12 @@ while [ $# -gt 0 ]; do
+ 	if [ "$PREFIX" != "/usr" ]; then
+ 		RPATH="-Wl,-rpath-link,\${libdir} -Wl,-rpath,\${libdir}"
+ 		case $(uname -s) in
+-			Darwin|SunOS)
++			Darwin)
  				RPATH="-Wl,-rpath,\${libdir}"
  				;;
 +			SunOS)
