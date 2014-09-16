@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3577 2014/09/16 17:53:14 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.3578 2014/09/16 18:45:57 khorben Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS IN A FREEZE FOR NEW
 # FUNCTIONALITY IN PREPARATION FOR PKGSRC-2014Q3 BRANCH.  NO NEW
@@ -4556,3 +4556,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/p5-Text-Unidecode to 1.22 [wen 2014-09-16]
 	Added devel/p5-Module-CPANfile version 1.1000 [wen 2014-09-16]
 	Updated www/ikiwiki to 3.20140916 [schmonz 2014-09-16]
+	Updated security/ssdeep to 2.11 [khorben 2014-09-16]
