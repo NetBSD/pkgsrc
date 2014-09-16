@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.23 2014/09/02 09:49:50 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.24 2014/09/16 09:45:58 wiz Exp $
 #
+# used by devel/ncurses/Makefile
 # used by devel/ncursesw/Makefile
 
 DISTNAME=	ncurses-${NC_VERS}
@@ -30,6 +31,13 @@ CONFIGURE_ARGS+=	--with-manpage-tbl
 CONFIGURE_ARGS+=	--with-default-terminfo-dir=${PREFIX}/${TERMINFODIR}
 CONFIGURE_ARGS+=	--with-terminfo-dirs=${PREFIX}/${TERMINFODIR}
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/ncurses
+
+
+SUBST_CLASSES+=		rpath
+SUBST_FILES.rpath+=	misc/ncurses-config
+SUBST_STAGE.rpath=	post-configure
+SUBST_SED.rpath+=	-e "s|-L\\(.libdir\\)|${COMPILER_RPATH_FLAG}\\1 -L\\1|"
+SUBST_MESSAGE.rpath=	Fixing rpath in ncurses-config.
 
 .include "../../mk/bsd.prefs.mk"
 
