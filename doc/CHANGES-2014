@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3572 2014/09/16 12:00:57 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3573 2014/09/16 12:13:54 wen Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS IN A FREEZE FOR NEW
 # FUNCTIONALITY IN PREPARATION FOR PKGSRC-2014Q3 BRANCH.  NO NEW
@@ -4551,3 +4551,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/ncurses to 5.9nb4 [wiz 2014-09-16]
 	Updated devel/ncursesw to 5.9nb1 [wiz 2014-09-16]
 	Updated www/p5-Dancer to 1.3130 [wen 2014-09-16]
+	Updated textproc/p5-Text-BibTeX to 0.70 [wen 2014-09-16]
