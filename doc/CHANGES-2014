@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3575 2014/09/16 12:28:43 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3576 2014/09/16 14:05:45 wen Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS IN A FREEZE FOR NEW
 # FUNCTIONALITY IN PREPARATION FOR PKGSRC-2014Q3 BRANCH.  NO NEW
@@ -4554,3 +4554,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/p5-Text-BibTeX to 0.70 [wen 2014-09-16]
 	Updated textproc/p5-Text-CSV_XS to 1.11 [wen 2014-09-16]
 	Updated textproc/p5-Text-Unidecode to 1.22 [wen 2014-09-16]
+	Added devel/p5-Module-CPANfile version 1.1000 [wen 2014-09-16]
