@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3580 2014/09/16 21:30:27 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3581 2014/09/16 21:45:03 wiz Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS IN A FREEZE FOR NEW
 # FUNCTIONALITY IN PREPARATION FOR PKGSRC-2014Q3 BRANCH.  NO NEW
@@ -4559,3 +4559,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/ssdeep to 2.11 [khorben 2014-09-16]
 	Updated devel/deforaos-libsystem to 0.2.0 [khorben 2014-09-16]
 	Updated sysutils/dbus to 1.8.8 [wiz 2014-09-16]
+	Updated multimedia/mpv to 0.5.1nb2 [wiz 2014-09-16]
