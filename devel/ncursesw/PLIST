@@ -1,5 +1,14 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:49:00 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/09/16 09:48:41 wiz Exp $
+bin/ncursesw5-config
+include/ncursesw/curses.h
+include/ncursesw/nc_tparm.h
 include/ncursesw/ncurses.h
+include/ncursesw/ncurses_dll.h
+include/ncursesw/term.h
+include/ncursesw/term_entry.h
+include/ncursesw/termcap.h
+include/ncursesw/tic.h
+include/ncursesw/unctrl.h
 lib/libformw.la
 lib/libmenuw.la
 lib/libncurses++w.la
