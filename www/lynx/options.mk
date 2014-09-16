@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2014/09/12 21:29:22 wiz Exp $
+# $NetBSD: options.mk,v 1.15 2014/09/16 09:52:05 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lynx
 PKG_SUPPORTED_OPTIONS=	inet6
@@ -43,6 +43,7 @@ CONFIGURE_ARGS+=	--enable-color-style
 .if !empty(PKG_OPTIONS:Mncursesw)
 SCREENTYPE=		ncursesw
 LIBS+=			-lncursesw
+BUILDLINK_ABI_DEPENDS.ncursesw+=	ncursesw>=5.9nb1
 .  include "../../devel/ncursesw/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-color-style
 .endif
