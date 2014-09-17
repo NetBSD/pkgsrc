@@ -1,0 +1,13 @@
+$NetBSD: reorder.txt,v 1.1 2014/09/17 12:40:56 joerg Exp $
+
+The fourth phase of the wrapper processing can reorder libraries
+according to platform specific dependencies.  Each rule has the
+form "l:lib1:lib2".  It ensures that all -llib1 options before -llib2
+are moved directly after the latter.
+
+The rules are processed in order to all arguments at once.  Cycle
+reorder rules effectively result in the last rule winning.
+
+The reorder rules may interact badly with -Wl,-Bdynamic and
+-Wl,-Bstatic.  If this options are in use, the correct ordering
+should be used without depending on the wrapper.
