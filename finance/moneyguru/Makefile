@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2014/05/17 16:10:44 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/09/17 22:37:04 wiz Exp $
 #
 # any of ~* is fine, they are the same and just there for Ubuntu
 # so moneyguru's built for all releases
-DISTNAME=	2.7.1
+DISTNAME=	2.7.2
 PKGNAME=	moneyguru-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	finance
 MASTER_SITES=	https://github.com/hsoft/moneyguru/archive/
 
@@ -49,6 +48,8 @@ do-install:
 	cd ${WRKSRC} && pax -pp -rw ambuttonbar build cocoa cocoalib core data help hscommon images locale plugin_examples psmtabbarcontrol qt qtlib run.py ${DESTDIR}${PREFIX}/share/moneyguru
 	${INSTALL_DATA} ${WRKSRC}/debian/moneyguru.desktop ${DESTDIR}${PREFIX}/share/applications
 	${LN} -s ${DESTDIR}${PREFIX}/share/moneyguru/run.py ${DESTDIR}${PREFIX}/bin/moneyguru
+# remove after patches/patch-hscommon_sphinxgen.py is gone
+	${RM} ${DESTDIR}${PREFIX}/share/moneyguru/hscommon/sphinxgen.py.orig
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
