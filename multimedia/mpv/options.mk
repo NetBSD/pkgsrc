@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2014/09/08 11:38:17 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2014/09/17 12:07:18 nat Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
-PKG_SUPPORTED_OPTIONS=	caca lua sdl v4l2
+PKG_SUPPORTED_OPTIONS=	caca lua pulseaudio sdl v4l2
 PKG_SUGGESTED_OPTIONS=	lua
 
 .include "../../mk/bsd.options.mk"
@@ -24,6 +24,16 @@ WAF_CONFIGURE_ARGS+=	--enable-lua
 .include "../../lang/lua/buildlink3.mk"
 .else
 WAF_CONFIGURE_ARGS+=	--disable-lua
+.endif
+
+###
+### Pulseaudio support (audio output)
+###
+.if !empty(PKG_OPTIONS:Mpulseaudio)
+WAF_CONFIGURE_ARGS+=	--enable-pulse
+.include "../../audio/pulseaudio/buildlink3.mk"
+.else
+WAF_CONFIGURE_ARGS+=	--disable-pulse
 .endif
 
 ###
