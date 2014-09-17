@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.4 2014/06/09 20:08:15 schmonz Exp $
+$NetBSD: distinfo,v 1.5 2014/09/17 22:46:17 schmonz Exp $
 
 SHA1 (LWPx-ParanoidAgent-1.10.tar.gz) = c8090a2aae57c4044f0e829d13f9ddde81c7495f
 RMD160 (LWPx-ParanoidAgent-1.10.tar.gz) = 0c708d534edb171bf8dc22d8e5f8c800780a42b6
 Size (LWPx-ParanoidAgent-1.10.tar.gz) = 17665 bytes
+SHA1 (patch-Makefile.PL) = 6e032f115ad044d912b290b482c0643baf35cef1
+SHA1 (patch-lib_LWPx_ParanoidAgent.pm) = d0ca05cce2c3bc208b49179442cb8107a16df2d4
+SHA1 (patch-lib_LWPx_Protocol_http__paranoid.pm) = e22c9066565f84133134133f69c1ebb94b986b2e
