@@ -1,0 +1,32 @@
+$NetBSD: normalise.txt,v 1.1 2014/09/17 12:40:56 joerg Exp $
+
+The first phase of wrapper processing for cc-ish wrappers is argument
+normalisation.  This simplifies processing in latter steps.
+
+Transformations done in this phase:
+
+1. Empty arguments are suppressed.
+
+2. Arguments of the form "-Xlinker -Wl,foo" are converted to "-Wl,foo".
+All other arguments of the form "-Xlinker foo" are converted to "-Wl,foo".
+
+3. Arguments of the form "-Wl,*,*" are split into separate -Wl options.
+
+4. Arguments of the form "-I foo", "-D foo", "-L foo" or
+"-Wl,-L -Wl,foo" are converted to the single argument form "-Ifoo",
+"-Dfoo", "-Lfoo" and "-Wl,-Lfoo" respectively.
+
+5. Arguments of the form "-Wl,-L,foo" are converted to "-Lfoo".
+
+6. Arguments of the form "-Wl,-rpath-link -Wl,foo" are converted to
+the single argument form "-Wl,-rpath-link,foo".
+
+7. Arguments of the form "-Rfoo", "-R foo", "-Wl,-Rfoo", "-Wl,-R -Wl,foo",
+"-Wl,-rpath -Wl,foo" or "--Wl,-rpath -Wl,foo" are converted to the single
+canonical argument form "-Wl,-rpath,foo".  All -Wl,-rpath options with relative
+path (e.g. not starting with /) are dropped.
+
+8. Full path names that end up in
+"/lib([a-zA-Z0-9_-])*\.s[ol](\.[0-9][^/]*)$ are replaced by "-Ldir -l\1"
+with "dir" being the base name of the argument.  This is not done for
+arguments to -o, --dynamic-linker or -Wl,--dynamic-linker.

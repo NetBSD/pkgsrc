@@ -1,0 +1,21 @@
+$NetBSD: normalise-ld.txt,v 1.1 2014/09/17 12:40:56 joerg Exp $
+
+The first phase of wrapper processing for ld-ish wrappers is argument
+normalisation.  This simplifies processing in latter steps.
+
+Transformations done in this phase:
+
+1. Empty arguments are suppressed.
+
+2. Arguments of the "-Wl,foo" are converted to "foo".
+
+3. Arguments of the form "-L foo" are converted to the single argument
+form "-Lfoo".
+
+7. Arguments of the form "-Rfoo", "-R foo" or "--rpath foo" are converted
+to the form "-rpath foo".
+
+8. Full path names that end up in
+"/lib([a-zA-Z0-9_-])*\.s[ol](\.[0-9][^/]*)$ are replaced by "-Ldir -l\1"
+with "dir" being the base name of the argument.  This is not done for
+arguments to -o, --dynamic-linker or -Wl,--dynamic-linker.

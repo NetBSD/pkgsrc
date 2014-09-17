@@ -1,0 +1,172 @@
+# $NetBSD: transform-gcc-rules,v 1.1 2014/09/17 12:40:56 joerg Exp $
+#
+# Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+#
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in
+#    the documentation and/or other materials provided with the
+#    distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+# FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE
+# COPYRIGHT HOLDERS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+# INCIDENTAL, SPECIAL, EXEMPLARY OR CONSEQUENTIAL DAMAGES (INCLUDING,
+# BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+# LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+# OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
+# OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+# SUCH DAMAGE.
+#
+# Lines starting with # are comments.
+# Single word options are options to pass.
+# "foo ==|" means that option "foo" should be discarded.
+# "foo ==!" means that option "foo" should be passed, but give a warning.
+# "foo ==> bar" means that "foo" should be translated into "bar".
+#
+# Common compiler options
+-D*
+-E
+-I*
+-L*
+-O
+-O0
+-O1
+-U*
+-c
+-g
+-o
+-s
+# Used by GNU configure scripts
+-V
+-v
+--version
+# GCC extensions
+-
+-dynamic
+-export-dynamic
+-falign-functions=*
+-falign-loops=*
+-falign-jumps=*
+-fexpensive-options
+-ffast-math
+-ffloat-store
+-finline-functions
+-fno-builtin
+-fno-builtin-*
+-fno-common
+-fno-implicit-templates
+-fno-inline-functions
+-fno-strict-aliasing
+-fomit-frame-pointer
+-fPIC
+-fpic
+-fpcc-struct-return
+-freg-struct-return
+-fsigned-char
+-funroll-loops
+-funsigned-char
+-ggdb
+-M
+-MD
+-MF
+-MM
+-MMD
+-MP
+-MT
+-m32
+-m64
+-mabi=*
+-march=*
+-mcpu=*
+-mieee-fp
+-O2
+-O3
+-Os
+-pedantic
+-pedantic-errors
+-pipe
+-pthread
+-print-prog-name=*
+-print-search-dirs
+-S
+-shared
+-static
+-std=c99
+-std=gnu89
+-std=gnu99
+-W
+-WL,*
+-WS,*
+-Wall
+-Wc,*
+-Wcast-align
+-Wcast-qual
+-Wchar-subscripts
+-Wconversion
+-Wextra
+-Werror
+-Werror-implicit-function-declaration
+-Wformat=0
+-Wformat=1
+-Wformat=2
+-Wl,*
+-Wmissing-declarations
+-Wmissing-format-attribute
+-Wmissing-prototypes
+-Wnested-externs
+-Wno-error
+-Wno-format-y2k
+-Wno-format-zero-length
+-Wno-implicit-int
+-Wno-import
+-Wno-inline
+-Wno-long-long
+-Wno-sign-compare
+-Wno-traditional
+-Wno-undef
+-Wno-uninitialized
+-Wno-unused
+-Wno-unused-parameter
+-Wno-write-strings
+-Wparentheses
+-Wpointer-arith
+-Wreturn-type
+-Wshadow
+-Wsign-compare
+-Wstrict-aliasing
+-Wstrict-prototypes
+-Wswitch
+-Wunused
+-Wundef
+-Wwrite-strings
+# Do not suppress warnings
+-w ==|
+# Options specific to g++
+-fexceptions
+-fmessage-length=*
+-fno-check-new
+-fno-exceptions
+-fno-rtti
+-ftemplate-depth=*
+-Wno-non-virtual-dtor
+# Options specific to Objective C
+-fconstant-string-class=*
+-fgnu-runtime
+# Compatibility with other compilers
+-Kpic ==> -fPIC
+-kpic ==> -fPIC
+-KPIC ==> -fPIC
+-kPIC ==> -fPIC
+-mt ==> -threads
+-64 ==> -m64
+-* ==!

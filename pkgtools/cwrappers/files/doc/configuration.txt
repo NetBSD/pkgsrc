@@ -1,0 +1,28 @@
+$NetBSD: configuration.txt,v 1.1 2014/09/17 12:40:56 joerg Exp $
+
+The configuration of the wrapper framework depends on two variables.
+The environment variable WRAPPER_CONFIG_DIR points to a directory
+with one configuration file per wrapper.
+
+The configuration file consists of simple key=value pairs.  It is
+case-sensitive and all spaces are considered part of the value.
+
+Lists of keys:
+
+worklog: Name of logfile to append to.
+
+exec: Name of the target command to exec(2).
+
+path: Override current value of the environmental variable PATH before
+calling the wrappee.
+
+reorder: Specify a reorder rule.  See reorder.txt for the details.
+
+transform: Specify a transformation rule.  See generic-transform.txt for
+the details.
+
+prepend: Prepend an option directly after logging the original command.
+The options are inserted in the order of the config file.
+
+append: Append an option directly after logging the original command.
+The options are inserted in the order of the config file.

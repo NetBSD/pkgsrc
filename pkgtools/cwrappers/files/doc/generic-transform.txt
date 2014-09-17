@@ -1,0 +1,38 @@
+$NetBSD: generic-transform.txt,v 1.1 2014/09/17 12:40:56 joerg Exp $
+
+The third phase of the wrapper processing is the general transformation
+phase.  This phase is the core of the wrapper framework and implements
+the visibility transformations.
+
+Transformations done in this phase:
+
+1. All opt:src:dst and rm:src rules are matched against the argument. If
+there is a match and it was a rm:src rule or a opt:src: rule without
+dst, it is removed.  Otherwise it is replaced with dst.  The order in which
+rules are matched is unspecified.
+
+2. -I, -Wl,-rpath and -L options with a relative path are skipped.
+
+3. For the remaining -I, -Wl,-rpath and -L options a corresponding
+transform rule (transform=I:src:dst, transform=R:src:dst,
+transform=L:src:dst) rule is searched for, so that the path is equal to
+or below src.  If this is a -Wl,-rpath option and the path ends in /.libs,
+it is assume be to handled by libtool internally and implicitly allowed.
+If no such rule is found or dst is empty, the argument is dropped.  
+Otherwise the src part of the path name is replaced with dst. 
+No further transformation is done for this argument in this phase.
+
+4. libtool/shlibtool wrapper only:
+For -l options search for the matching libtool archive, e.g. for -ldst
+look for libdst.la in the include search path.
+
+5. For -l options a corresponding transform rule
+(transform=l:src:dst[:dst2...]) is searched for.  If such a rule exists
+(e.g. the option is -lsrc), it will be replaced with -ldst [-ldst2...].
+No further transformation is done for this argument in this phase.
+
+6. libtool/shlibtool wrapper only:
+For absolute path names as options search for a corresponding
+transform rule (transform=P:src:dst) to translate libfoo.a and libfoo.la
+below the directory src into a path with src replaced by dst.
+No further transformation is done for this argument in this phase.
