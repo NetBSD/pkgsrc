@@ -1,8 +1,8 @@
-$NetBSD: patch-qemu-xen-traditional_configure,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
+$NetBSD: patch-qemu-xen-traditional_configure,v 1.2 2014/09/17 20:32:36 bouyer Exp $
 
---- qemu-xen-traditional/configure.orig	2011-02-11 17:54:51.000000000 +0000
-+++ qemu-xen-traditional/configure
-@@ -1089,7 +1089,7 @@ fi
+--- qemu-xen-traditional/configure.orig	2014-01-09 12:44:42.000000000 +0000
++++ qemu-xen-traditional/configure	2014-09-17 13:10:43.000000000 +0000
+@@ -1089,7 +1089,7 @@
  # Check if tools are available to build documentation.
  if [ -x "`which texi2html 2>/dev/null`" ] && \
     [ -x "`which pod2man 2>/dev/null`" ]; then
@@ -11,7 +11,7 @@ $NetBSD: patch-qemu-xen-traditional_configure,v 1.1 2013/05/15 06:58:50 jnemeth 
  fi
  
  ##########################################
-@@ -1124,7 +1124,7 @@ else
+@@ -1124,7 +1124,7 @@
    if test -z "$prefix" ; then
        prefix="/usr/local"
    fi
@@ -20,7 +20,7 @@ $NetBSD: patch-qemu-xen-traditional_configure,v 1.1 2013/05/15 06:58:50 jnemeth 
    datasuffix="/share/qemu"
    docsuffix="/share/doc/qemu"
    binsuffix="/bin"
-@@ -1215,6 +1215,9 @@ echo "docdir=\${prefix}$docsuffix" >> $c
+@@ -1215,6 +1215,9 @@
  echo "#define CONFIG_QEMU_SHAREDIR \"$prefix$datasuffix\"" >> $config_h
  echo "MAKE=$make" >> $config_mak
  echo "INSTALL=$install" >> $config_mak
@@ -30,3 +30,13 @@ $NetBSD: patch-qemu-xen-traditional_configure,v 1.1 2013/05/15 06:58:50 jnemeth 
  echo "CC=$cc" >> $config_mak
  echo "HOST_CC=$host_cc" >> $config_mak
  echo "AR=$ar" >> $config_mak
+@@ -1492,7 +1495,9 @@
+ # XXX: suppress that
+ if [ "$bsd" = "yes" ] ; then
+   echo "#define O_LARGEFILE 0" >> $config_h
++  echo "#ifndef MAP_ANONYMOUS" >> $config_h
+   echo "#define MAP_ANONYMOUS MAP_ANON" >> $config_h
++  echo "#endif" >> $config_h
+   echo "#define _BSD 1" >> $config_h
+ fi
+ 
