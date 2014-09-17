@@ -1,4 +1,4 @@
 The cwrappers package implements the compiler wrappers for pkgsrc.
-They are the fundation of the buildlink framework. They also allow
+They are the foundation of the buildlink framework. They also allow
 various transformations of arguments to simplify
 cross-platform portability.
