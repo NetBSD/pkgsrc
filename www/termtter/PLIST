@@ -1,15 +1,14 @@
-@comment $NetBSD: PLIST,v 1.5 2012/03/20 14:06:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/09/17 10:41:22 obache Exp $
 bin/termtter
+bin/termtter_frame
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/VERSION
 ${GEM_LIBDIR}/bin/termtter
 ${GEM_LIBDIR}/bin/termtter_frame
-${GEM_LIBDIR}/doc/Termtter-1.0-Release-Note-English.txt
-${GEM_LIBDIR}/doc/Termtter-1.0-Release-Note.txt
 ${GEM_LIBDIR}/lib/plugins/aa.rb
 ${GEM_LIBDIR}/lib/plugins/addspace.rb
 ${GEM_LIBDIR}/lib/plugins/another_prompt.rb
@@ -32,6 +31,7 @@ ${GEM_LIBDIR}/lib/plugins/copy.rb
 ${GEM_LIBDIR}/lib/plugins/countter.rb
 ${GEM_LIBDIR}/lib/plugins/crypt.rb
 ${GEM_LIBDIR}/lib/plugins/curry.rb
+${GEM_LIBDIR}/lib/plugins/custom_prompt.rb
 ${GEM_LIBDIR}/lib/plugins/db.rb
 ${GEM_LIBDIR}/lib/plugins/defaults.rb
 ${GEM_LIBDIR}/lib/plugins/defaults/alias.rb
@@ -67,7 +67,7 @@ ${GEM_LIBDIR}/lib/plugins/erb.rb
 ${GEM_LIBDIR}/lib/plugins/error_log.rb
 ${GEM_LIBDIR}/lib/plugins/event_invoked_at.rb
 ${GEM_LIBDIR}/lib/plugins/exec_and_update.rb
-${GEM_LIBDIR}/lib/plugins/expand-tinyurl.rb
+${GEM_LIBDIR}/lib/plugins/expand_url.rb
 ${GEM_LIBDIR}/lib/plugins/favotter.rb
 ${GEM_LIBDIR}/lib/plugins/fib_filter.rb
 ${GEM_LIBDIR}/lib/plugins/fibyou.rb
@@ -121,6 +121,7 @@ ${GEM_LIBDIR}/lib/plugins/list_switch.rb
 ${GEM_LIBDIR}/lib/plugins/list_with_opts.rb
 ${GEM_LIBDIR}/lib/plugins/log.rb
 ${GEM_LIBDIR}/lib/plugins/mark.rb
+${GEM_LIBDIR}/lib/plugins/mashimaro.rb
 ${GEM_LIBDIR}/lib/plugins/md5pass.rb
 ${GEM_LIBDIR}/lib/plugins/me.rb
 ${GEM_LIBDIR}/lib/plugins/mecab.rb
@@ -185,7 +186,6 @@ ${GEM_LIBDIR}/lib/plugins/switch_user.rb
 ${GEM_LIBDIR}/lib/plugins/system_status.rb
 ${GEM_LIBDIR}/lib/plugins/time_signal.rb
 ${GEM_LIBDIR}/lib/plugins/timer.rb
-${GEM_LIBDIR}/lib/plugins/tinyurl.rb
 ${GEM_LIBDIR}/lib/plugins/toppo.rb
 ${GEM_LIBDIR}/lib/plugins/train.rb
 ${GEM_LIBDIR}/lib/plugins/translate_tweet.rb
@@ -197,6 +197,7 @@ ${GEM_LIBDIR}/lib/plugins/typable_id.rb
 ${GEM_LIBDIR}/lib/plugins/update_editor.rb
 ${GEM_LIBDIR}/lib/plugins/uri-open.rb
 ${GEM_LIBDIR}/lib/plugins/url.rb
+${GEM_LIBDIR}/lib/plugins/url_shortener.rb
 ${GEM_LIBDIR}/lib/plugins/user_stream.rb
 ${GEM_LIBDIR}/lib/plugins/w3mimg.rb
 ${GEM_LIBDIR}/lib/plugins/wassr.rb
@@ -235,13 +236,14 @@ ${GEM_LIBDIR}/spec/plugins/capital_update_spec.rb
 ${GEM_LIBDIR}/spec/plugins/cool_spec.rb
 ${GEM_LIBDIR}/spec/plugins/curry_spec.rb
 ${GEM_LIBDIR}/spec/plugins/db_spec.rb
+${GEM_LIBDIR}/spec/plugins/defaults/expand_tco_url_spec.rb
 ${GEM_LIBDIR}/spec/plugins/defaults/hashtag_spec.rb
 ${GEM_LIBDIR}/spec/plugins/defaults/list_spec.rb
 ${GEM_LIBDIR}/spec/plugins/defaults/plugin_spec.rb
 ${GEM_LIBDIR}/spec/plugins/defaults/retweet_spec.rb
 ${GEM_LIBDIR}/spec/plugins/draft_spec.rb
 ${GEM_LIBDIR}/spec/plugins/english_spec_.rb
-${GEM_LIBDIR}/spec/plugins/expand-tinyurl_spec.rb
+${GEM_LIBDIR}/spec/plugins/expand_url_spec.rb
 ${GEM_LIBDIR}/spec/plugins/fib_spec.rb
 ${GEM_LIBDIR}/spec/plugins/filter_spec_.rb
 ${GEM_LIBDIR}/spec/plugins/footer_spec.rb
@@ -249,7 +251,6 @@ ${GEM_LIBDIR}/spec/plugins/gsub_spec.rb
 ${GEM_LIBDIR}/spec/plugins/haml_spec.rb
 ${GEM_LIBDIR}/spec/plugins/hi_spec.rb
 ${GEM_LIBDIR}/spec/plugins/md5pass_spec.rb
-${GEM_LIBDIR}/spec/plugins/pause_spec.rb
 ${GEM_LIBDIR}/spec/plugins/primes_spec_.rb
 ${GEM_LIBDIR}/spec/plugins/shell_spec.rb
 ${GEM_LIBDIR}/spec/plugins/sl_spec_.rb
@@ -257,8 +258,8 @@ ${GEM_LIBDIR}/spec/plugins/spam_spec.rb
 ${GEM_LIBDIR}/spec/plugins/standard_commands_spec.rb
 ${GEM_LIBDIR}/spec/plugins/storage/sqlite3_spec.rb
 ${GEM_LIBDIR}/spec/plugins/storage/status_spec_.rb
-${GEM_LIBDIR}/spec/plugins/tinyurl_spec.rb
 ${GEM_LIBDIR}/spec/plugins/truncate_spec.rb
+${GEM_LIBDIR}/spec/plugins/url_shortener_spec.rb
 ${GEM_LIBDIR}/spec/plugins/whois_spec_.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/termtter/active_rubytter_spec.rb

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2012/08/19 09:09:26 obache Exp $
+# $NetBSD: Makefile,v 1.12 2014/09/17 10:41:22 obache Exp $
 
-DISTNAME=	termtter-1.11.0
+DISTNAME=	termtter-2.2.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,13 +11,19 @@ LICENSE=	mit
 DEPENDS+=	${RUBY_PKGPREFIX}-highline>=1.5.0:../../devel/ruby-highline
 DEPENDS+=	${RUBY_PKGPREFIX}-readline-[0-9]*:../../devel/ruby-readline
 DEPENDS+=	${RUBY_PKGPREFIX}-termcolor>=1.0.0:../../devel/ruby-termcolor
-DEPENDS+=	${RUBY_PKGPREFIX}-rubytter>=0.11.0:../../net/ruby-rubytter
-DEPENDS+=	${RUBY_PKGPREFIX}-notify>=0.2.1:../../sysutils/ruby-notify
-DEPENDS+=	${RUBY_PKGPREFIX}-json-pure>=1.1.3:../../textproc/ruby-json-pure
+DEPENDS+=	${RUBY_PKGPREFIX}-rubytter>=1.5.1:../../net/ruby-rubytter
+DEPENDS+=	${RUBY_PKGPREFIX}-notify>=0.5.1:../../sysutils/ruby-notify
+
+OVERRIDE_GEMSPEC+=	highline>=1.5.0
+OVERRIDE_GEMSPEC+=	termcolor>=1.0.0
 
 CONFLICTS+=	ruby[1-9][0-9]-termtter-[0-9]* termtter-[0-9]*
 RUBY_JSON_REQD=	1.1.3
 RUBY_JSON_TYPE=	pure
 
+.include "../../lang/ruby/json.mk"
 .include "../../lang/ruby/gem.mk"
+.if ${RUBY_VER} != "18"
+DEPENDS+=	${RUBY_PKGPREFIX}-fiddle-[0-9]*:../../devel/ruby-fiddle
+.endif
 .include "../../mk/bsd.pkg.mk"
