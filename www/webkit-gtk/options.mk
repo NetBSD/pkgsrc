@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2014/09/16 11:56:13 jperkin Exp $
+# $NetBSD: options.mk,v 1.7 2014/09/17 17:35:23 macallan Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.webkit-gtk
@@ -8,8 +8,12 @@ PKG_SUGGESTED_OPTIONS=	enchant opengl
 .include "../../mk/bsd.prefs.mk"
 
 # XXX JIT produces invalid code
+# it's also entirely unsupported on powerpc and sparc
 .if empty(MACHINE_PLATFORM:MNetBSD-*-i386) \
  && empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) \
+ && empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) \
+ && empty(MACHINE_PLATFORM:MNetBSD-*-sparc64) \
+ && empty(MACHINE_PLATFORM:MNetBSD-*-sparc) \
  && empty(MACHINE_PLATFORM:MSunOS-*)
 PKG_SUGGESTED_OPTIONS+= webkit-jit
 .endif
