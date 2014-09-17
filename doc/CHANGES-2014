@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3587 2014/09/17 22:41:15 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3588 2014/09/17 22:46:28 schmonz Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS IN A FREEZE FOR NEW
 # FUNCTIONALITY IN PREPARATION FOR PKGSRC-2014Q3 BRANCH.  NO NEW
@@ -4566,3 +4566,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/wireshark to 1.10.10 [tron 2014-09-17]
 	Updated finance/moneyguru to 2.7.2 [wiz 2014-09-17]
 	Updated net/py-twisted to 14.0.1 [wiz 2014-09-17]
+	Updated www/p5-LWPx-ParanoidAgent to 1.10nb1 [schmonz 2014-09-17]
