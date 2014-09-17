@@ -1,0 +1,13 @@
+$NetBSD: transform.txt,v 1.1 2014/09/17 12:40:56 joerg Exp $
+
+The fifth phase of the wrapper processing is the platform
+transformation support.  The aim here is to translate GCC
+options (and some other compiler frontends) into the options
+of the target compiler.
+
+Translations for GCC are:
+- Drop "-w"
+- Translate "-mt" to "-threads", "-64" to "-m64" and
+  "-Kpic", "-kpic", "-KPIC" and "-kPIC" to "-fPIC".
+
+It can warn about options during translation as well.
