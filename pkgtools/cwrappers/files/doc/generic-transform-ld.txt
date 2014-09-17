@@ -1,0 +1,6 @@
+Like generic-transform.txt with the following changes:
+
+1. No processing of -I.
+
+2. Instead of "-Wl,-rpath,foo" and "-Wl,-rpath-link,foo", "-rpath foo"
+and "-rpath-link foo" are used.
