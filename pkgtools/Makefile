@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2014/04/27 00:11:38 agc Exp $
+# $NetBSD: Makefile,v 1.107 2014/09/17 12:41:50 joerg Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
@@ -10,6 +10,7 @@ SUBDIR+=	bootstrap-mk-files
 SUBDIR+=	cdpack
 SUBDIR+=	compat_headers
 SUBDIR+=	createbuildlink
+SUBDIR+=	cwrappers
 SUBDIR+=	dfdisk
 SUBDIR+=	digest
 SUBDIR+=	distbb
