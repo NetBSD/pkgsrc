@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3584 2014/09/17 12:41:41 joerg Exp $
+$NetBSD: CHANGES-2014,v 1.3585 2014/09/17 22:32:50 tron Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS IN A FREEZE FOR NEW
 # FUNCTIONALITY IN PREPARATION FOR PKGSRC-2014Q3 BRANCH.  NO NEW
@@ -4563,3 +4563,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/termtter to 2.2.1 [obache 2014-09-17]
 	Updated databases/phppgadmin to 5.1nb1 [wiz 2014-09-17]
 	Updated pkgtools/cwrappers to 20100308 [joerg 2014-09-17]
+	Updated net/wireshark to 1.10.10 [tron 2014-09-17]
