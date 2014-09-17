@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3582 2014/09/17 10:41:32 obache Exp $
+$NetBSD: CHANGES-2014,v 1.3583 2014/09/17 10:50:24 wiz Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS IN A FREEZE FOR NEW
 # FUNCTIONALITY IN PREPARATION FOR PKGSRC-2014Q3 BRANCH.  NO NEW
@@ -4561,3 +4561,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/dbus to 1.8.8 [wiz 2014-09-16]
 	Updated multimedia/mpv to 0.5.1nb2 [wiz 2014-09-16]
 	Updated www/termtter to 2.2.1 [obache 2014-09-17]
+	Updated databases/phppgadmin to 5.1nb1 [wiz 2014-09-17]
