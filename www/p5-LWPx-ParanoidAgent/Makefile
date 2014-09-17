@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2014/06/09 20:08:15 schmonz Exp $
+# $NetBSD: Makefile,v 1.13 2014/09/17 22:46:17 schmonz Exp $
 #
 
 DISTNAME=	LWPx-ParanoidAgent-1.10
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=LWPx/}
 
@@ -16,6 +17,9 @@ DEPENDS+=		p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
 
 PERL5_PACKLIST=		auto/LWPx/ParanoidAgent/.packlist
 USE_LANGUAGES=		# none
+
+pre-configure:
+	find ${WRKSRC} -type f -name '*.orig' -print | xargs rm -f
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
