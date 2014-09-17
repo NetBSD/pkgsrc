@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2014/09/17 12:40:56 joerg Exp $
+libexec/cwrappers/as-wrapper
+libexec/cwrappers/c++-wrapper
+libexec/cwrappers/cc-wrapper
+libexec/cwrappers/cpp-wrapper
+libexec/cwrappers/f77-wrapper
+libexec/cwrappers/imake-wrapper
+libexec/cwrappers/ld-wrapper
+libexec/cwrappers/libtool-wrapper
+libexec/cwrappers/shlibtool-wrapper

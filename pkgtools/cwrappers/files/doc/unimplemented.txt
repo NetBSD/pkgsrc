@@ -1,0 +1,44 @@
+Mode detection:
+
+-E	preprocess-only
+-S	assembly-only
+-c	compile-only
+
+--> Consider to drop the various linker options
+
+Cleanup:
+
+- Remove redundant -D options. Should keep -U in mind.
+
+Library path resorting:
+
+- Reorder -l to be after all -L options, duplicate -Wl,-dynamic / -Wl,-static
+  options in the library list. Should this also take -Wl,-rpath-link into
+  account?
+
+Scan:
+
+- Append extra_args only if -v is not used
+
+Scan for ld:
+
+- Strip -Wl,
+- Silently drop -pthread
+
+Platform specific processing:
+
+- All platforms but Darwin have _USE_RPATH=yes.  Shouldn't Darwin just
+  filter out the rpath rules in a platform specific transformation phase?
+
+Transform:
+
+- opt:foo:bar: Replace all options matching foo with bar. foo might be
+  fnmatch expression. Earlier than other transformations. If bar is empty,
+  option is dropped.
+
+Libtool:
+
+- Drop -L, -l, -Wl,* if not in link mode
+  -> see first point
+
+- pkgviews support
