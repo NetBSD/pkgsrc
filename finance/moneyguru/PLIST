@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/05/10 06:52:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/09/17 22:37:04 wiz Exp $
 bin/moneyguru
 share/applications/moneyguru.desktop
 share/moneyguru/ambuttonbar/AMButtonBar.h
@@ -707,10 +707,11 @@ share/moneyguru/data/stylesheet_win.css
 share/moneyguru/help/__init__.py
 share/moneyguru/help/changelog
 share/moneyguru/help/conf.tmpl
+share/moneyguru/help/credits.rst
 share/moneyguru/help/cs/basics.rst
 share/moneyguru/help/cs/cash.rst
 share/moneyguru/help/cs/changelog.tmpl
-share/moneyguru/help/cs/credits.rst
+share/moneyguru/help/cs/credits.tmpl
 share/moneyguru/help/cs/currencies.rst
 share/moneyguru/help/cs/editing.rst
 share/moneyguru/help/cs/faq.rst
@@ -722,7 +723,7 @@ share/moneyguru/help/cs/reconciliation.rst
 share/moneyguru/help/de/basics.rst
 share/moneyguru/help/de/cash.rst
 share/moneyguru/help/de/changelog.tmpl
-share/moneyguru/help/de/credits.rst
+share/moneyguru/help/de/credits.tmpl
 share/moneyguru/help/de/currencies.rst
 share/moneyguru/help/de/editing.rst
 share/moneyguru/help/de/faq.rst
@@ -737,6 +738,7 @@ share/moneyguru/help/en/changelog.rst
 share/moneyguru/help/en/changelog.tmpl
 share/moneyguru/help/en/conf.py
 share/moneyguru/help/en/credits.rst
+share/moneyguru/help/en/credits.tmpl
 share/moneyguru/help/en/currencies.rst
 share/moneyguru/help/en/developer/api/document.rst
 share/moneyguru/help/en/developer/api/index.rst
@@ -757,7 +759,7 @@ share/moneyguru/help/en/reconciliation.rst
 share/moneyguru/help/fr/basics.rst
 share/moneyguru/help/fr/cash.rst
 share/moneyguru/help/fr/changelog.tmpl
-share/moneyguru/help/fr/credits.rst
+share/moneyguru/help/fr/credits.tmpl
 share/moneyguru/help/fr/currencies.rst
 share/moneyguru/help/fr/editing.rst
 share/moneyguru/help/fr/faq.rst
@@ -811,7 +813,7 @@ share/moneyguru/help/image_win/reconciliation_checkmark.png
 share/moneyguru/help/it/basics.rst
 share/moneyguru/help/it/cash.rst
 share/moneyguru/help/it/changelog.tmpl
-share/moneyguru/help/it/credits.rst
+share/moneyguru/help/it/credits.tmpl
 share/moneyguru/help/it/currencies.rst
 share/moneyguru/help/it/editing.rst
 share/moneyguru/help/it/faq.rst
