@@ -1,0 +1,16 @@
+$NetBSD: cleanup.txt,v 1.1 2014/09/17 12:40:56 joerg Exp $
+
+The second phase of wrapper processing for cc-ish wrappers is removal of
+broken or redundant arguments.  This helps platforms with small argv
+limit.  The cleanup phase is repeated after all other transformations
+are done.
+
+Transformations done in this phase:
+
+1. Remove rpath options with relative path.  This is just a bug and they
+should never end up in the final binary.  -Wl,-rpath-link is not dropped
+as it only affects the linker.
+
+2. Unify consecutive identical -l options.
+
+3. Drop duplicate -I, -L, -Wl,-rpath and -Wl,-rpath-link.
