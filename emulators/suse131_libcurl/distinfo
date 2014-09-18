@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2014/05/03 02:13:44 obache Exp $
+$NetBSD: distinfo,v 1.5 2014/09/18 11:10:51 obache Exp $
 
-SHA1 (suse131/libcurl4-7.32.0-2.23.1.i586.rpm) = f0d61483f73097c7234df3bc24f2bb76e8136531
-RMD160 (suse131/libcurl4-7.32.0-2.23.1.i586.rpm) = c29d7d6b3fd903ac4bde2f41c171a3e2b6918e9f
-Size (suse131/libcurl4-7.32.0-2.23.1.i586.rpm) = 192368 bytes
-SHA1 (suse131/libcurl4-7.32.0-2.23.1.x86_64.rpm) = 84cdd8e9200d0e4ab921cc089beea59840cd58fd
-RMD160 (suse131/libcurl4-7.32.0-2.23.1.x86_64.rpm) = d9956e2f34d3b90832b95ba1de339cefb88ed6cf
-Size (suse131/libcurl4-7.32.0-2.23.1.x86_64.rpm) = 190060 bytes
+SHA1 (suse131/libcurl4-7.32.0-2.27.1.i586.rpm) = 17b22d36e3353ac3a9d1995c94f0faaa0fe457ab
+RMD160 (suse131/libcurl4-7.32.0-2.27.1.i586.rpm) = d45e1ce0221d6f65241f3e1cf635198a0eb20a0d
+Size (suse131/libcurl4-7.32.0-2.27.1.i586.rpm) = 192612 bytes
+SHA1 (suse131/libcurl4-7.32.0-2.27.1.x86_64.rpm) = 3cad319184fe384457ea0c4d0f0470f03f8126a0
+RMD160 (suse131/libcurl4-7.32.0-2.27.1.x86_64.rpm) = b30fd0d97e60ed0fb861b4911949808927f2b97c
+Size (suse131/libcurl4-7.32.0-2.27.1.x86_64.rpm) = 190526 bytes
