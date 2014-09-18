@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2014/05/29 23:38:17 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2014/09/18 14:54:55 wiz Exp $
 
 DISTNAME=	snownews-1.5.12
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	www
 MASTER_SITES=	http://kiza.kcore.de/software/snownews/download/
 
@@ -15,6 +15,8 @@ DEPENDS+=		p5-XML-LibXML>=1.58:../../textproc/p5-XML-LibXML
 HAS_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt perl
+
+.include "options.mk"
 
 REPLACE_PERL+=		configure opml2snow
 
@@ -30,7 +32,6 @@ post-configure:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
