@@ -1,5 +1,9 @@
+# $NetBSD: Makefile,v 1.2 2014/09/18 19:31:47 joerg Exp $
+#
 PROGS=	as-wrapper cc-wrapper c++-wrapper cpp-wrapper f77-wrapper \
 	imake-wrapper ld-wrapper libtool-wrapper shlibtool-wrapper
+
+BINDIR=		${PREFIX}/libexec/cwrappers
 
 LIB_SRCS=	alloc.c cleanup-cc.c common.c reorder-cc.c
 
