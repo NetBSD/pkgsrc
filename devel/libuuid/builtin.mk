@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.6 2014/05/05 20:14:55 adam Exp $
+# $NetBSD: builtin.mk,v 1.7 2014/09/19 12:50:43 jperkin Exp $
 
 BUILTIN_PKG:=	libuuid
 
@@ -90,7 +90,7 @@ libuuid-fake-pc:
 		{	${ECHO} "Name: uuid";				\
 			${ECHO} "Description: Universally unique id library"; \
 			${ECHO} "Version: ${BUILTIN_VERSION.libuuid}";	\
-			${ECHO} "Libs: -L/usr/lib -luuid ${LIBUUID_LDADD}"	\
+			${ECHO} "Libs: -L/usr/lib -luuid ${LIBUUID_LDADD}"; \
 			${ECHO} "Cflags: -I/usr/include";		\
 		} >$${dst} ;\
 	fi
