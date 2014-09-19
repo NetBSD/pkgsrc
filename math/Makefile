@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.292 2014/09/19 22:34:44 brook Exp $
+# $NetBSD: Makefile,v 1.293 2014/09/19 22:47:06 brook Exp $
 
 COMMENT=	Mathematics
 
@@ -43,7 +43,6 @@ SUBDIR+=	R-knitr
 SUBDIR+=	R-lmm
 SUBDIR+=	R-mapproj
 SUBDIR+=	R-maps
-SUBDIR+=	R-markdown
 SUBDIR+=	R-mvtnorm
 SUBDIR+=	R-ncdf
 SUBDIR+=	R-pixmap
