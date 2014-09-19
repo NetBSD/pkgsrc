@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.192 2014/09/10 10:54:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.193 2014/09/19 08:42:47 wiz Exp $
 
 DISTNAME=	netpbm-10.67.05
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	#
 # manually created from svn checkout of
@@ -71,7 +72,6 @@ SUBST_FILES.xopen+=	lib/pmfileio.c lib/libpam.c lib/colorname.c
 SUBST_SED.xopen=	-e '/define.*_XOPEN_SOURCE/s/600/500/g'
 .endif
 
-
 # only used if NEED_RUNTIME_PATH is set, so set it unconditionally
 MAKE_FLAGS+=	NETPBMLIB_RUNTIME_PATH=${PREFIX}
 
@@ -93,6 +93,8 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/netpbm
 post-extract:
 	cd ${WRKSRC} && ${CP} config.mk.in config.mk
 	${ECHO} "CFLAGS_SHLIB = -fPIC" >> ${WRKSRC}/config.mk
+	${ECHO} "JPEGLIB = ${BUILDLINK_PREFIX.jpeg}/lib/libjpeg.so" >> ${WRKSRC}/config.mk
+	${ECHO} "JPEGHDR_DIR = ${BUILDLINK_PREFIX.jpeg}/include" >> ${WRKSRC}/config.mk
 .if ${OPSYS} == "Darwin"
 	${ECHO} 'LDSHLIB=-dynamiclib -install_name $$(PREFIX)/lib/libnetpbm.$$(MAJ).dylib -compatibility_version $$(MAJ) -current_version $$(MAJ).$$(MIN)' >> ${WRKSRC}/config.mk
 .endif
@@ -117,4 +119,5 @@ post-install:
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
