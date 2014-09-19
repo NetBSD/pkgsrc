@@ -1,10 +1,10 @@
-$NetBSD: patch-configure,v 1.1 2013/09/13 09:41:32 jperkin Exp $
+$NetBSD: patch-configure,v 1.1.8.1 2014/09/19 11:30:10 tron Exp $
 
 Include net/if.h for netinet/if_ether.h
 
---- configure.orig	2013-09-13 09:27:50.539358670 +0000
+--- configure.orig	2014-03-09 19:57:51.000000000 +0000
 +++ configure
-@@ -4625,7 +4625,11 @@ fi
+@@ -4671,7 +4671,11 @@ fi
  
  fi
  if test "$WITH_INTERFACE"; then
@@ -14,6 +14,6 @@ Include net/if.h for netinet/if_ether.h
 +	#include <net/if.h>
 +	#endif
 +"
- if test "x$ac_cv_header_netinet_if_ether_h" = x""yes; then :
+ if test "x$ac_cv_header_netinet_if_ether_h" = xyes; then :
    $as_echo "#define HAVE_NETINET_IF_ETHER_H 1" >>confdefs.h
  
