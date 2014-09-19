@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3594 2014/09/19 16:54:42 brook Exp $
+$NetBSD: CHANGES-2014,v 1.3595 2014/09/19 21:24:15 jnemeth Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS IN A FREEZE FOR NEW
 # FUNCTIONALITY IN PREPARATION FOR PKGSRC-2014Q3 BRANCH.  NO NEW
@@ -4573,3 +4573,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/wxGTK30 to 3.0.1nb3 [wiz 2014-09-19]
 	Updated graphics/netpbm to 10.67.05nb1 [wiz 2014-09-19]
 	Added graphics/R-latticeExtra version 0.6.26 [brook 2014-09-19]
+	Updated mail/sendmail to 8.14.9nb4 [jnemeth 2014-09-19]
