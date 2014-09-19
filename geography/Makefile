@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.42 2014/05/28 20:07:18 kleink Exp $
+# $NetBSD: Makefile,v 1.43 2014/09/19 20:55:08 brook Exp $
 #
 
 COMMENT=	Software for geographical-related uses
 
+SUBDIR+=	R-countrycode
 SUBDIR+=	cm2gpx
 SUBDIR+=	cmconvert
 SUBDIR+=	emerillon
