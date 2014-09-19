@@ -1,2 +1,0 @@
-This package guesses the MIME type from a filename extension using the
-data derived from /etc/mime.types in UNIX-type systems.
