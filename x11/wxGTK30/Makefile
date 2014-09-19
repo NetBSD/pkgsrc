@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2014/08/20 07:07:32 dbj Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/09/19 08:35:41 wiz Exp $
 
 VERSION=	3.0.1
-PKGREVISION=	2
+PKGREVISION=	3
 DISTNAME=	wxWidgets-${VERSION}
 PKGNAME=	wxGTK30-${VERSION}
 CATEGORIES=	x11
@@ -12,7 +11,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	dbj@NetBSD.org
 HOMEPAGE=	http://www.wxwidgets.org/
 COMMENT=	GTK-based implementation of the wxWidgets GUI library
-
 # LGPLv2 with additional permission; http://opensource.org/licenses/wxwindows
 LICENSE=        gnu-lgpl-v2
 
@@ -35,6 +33,9 @@ CONFIGURE_ARGS+=	--with-expat=sys
 CONFIGURE_ARGS+=	--with-zlib=sys
 CONFIGURE_ARGS+=	--with-regex=builtin
 CONFIGURE_ARGS+=	--enable-mediactrl
+# wxregexu symbols are not exported properly as of 3.0.1
+# http://trac.wxwidgets.org/ticket/16571
+CONFIGURE_ARGS+=	--disable-visibility
 
 DOCDIR=			share/doc/wxGTK
 PKGLOCALEDIR=		share
