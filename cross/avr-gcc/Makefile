@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2014/08/29 04:26:46 mef Exp $
+# $NetBSD: Makefile,v 1.36 2014/09/19 08:30:52 joerg Exp $
 
 DISTNAME=		gcc-4.8.3
 PKGNAME=		${DISTNAME:C/^/avr-/}
@@ -31,12 +31,9 @@ CONFIGURE_ARGS+=	--disable-threads
 
 MAKE_ENV+=		MACHINE_ARCH=avr
 MAKE_ENV+=		SHELL=${CONFIG_SHELL}
-CFLAGS_FOR_BUILD:=	${CFLAGS}
 MAKE_ENV+=		CFLAGS_FOR_BUILD=${CFLAGS_FOR_BUILD:Q}
-CXXFLAGS_FOR_BUILD:=	${CXXFLAGS}
 MAKE_ENV+=		CXXFLAGS_FOR_BUILD=${CXXFLAGS_FOR_BUILD:Q}
-CFLAGS=			# empty
-CXXFLAGS=		# empty
+MAKE_ENV+=		CPPFLAGS_FOR_BUILD=${CPPFLAGS_FOR_BUILD:Q}
 
 SUBST_CLASSES+=		sed
 SUBST_FILES.sed=	fixincludes/fixincl.x
@@ -63,3 +60,10 @@ INSTALLATION_DIRS+=	avr/bin
 # mpc is required since gcc-4.5.x
 .include "../../math/mpcomplex/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+
+CFLAGS_FOR_BUILD:=	${CFLAGS}
+CXXFLAGS_FOR_BUILD:=	${CXXFLAGS}
+CPPFLAGS_FOR_BUILD:=	${CPPFLAGS}
+CFLAGS:=		# empty
+CPPFLAGS:=		# empty
+CXXFLAGS:=		# empty
