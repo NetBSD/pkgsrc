@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/06/14 20:52:13 joerg Exp $
+@comment $NetBSD: PLIST,v 1.14 2014/09/19 13:17:22 jperkin Exp $
 bin/screen
 bin/${DISTNAME}
 info/screen.info
@@ -6,6 +6,7 @@ man/man1/screen.1
 share/examples/screen/etcscreenrc
 share/examples/screen/screenrc
 ${PLIST.terminfo}share/lib/terminfo/s/screen
+${PLIST.terminfo}share/lib/terminfo/s/screen-256color
 ${PLIST.terminfo}share/lib/terminfo/s/screen-bce
 ${PLIST.terminfo}share/lib/terminfo/s/screen-s
 share/screen/utf8encodings/01
