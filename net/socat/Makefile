@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2014/02/12 23:18:26 tron Exp $
+# $NetBSD: Makefile,v 1.31.4.1 2014/09/19 11:30:10 tron Exp $
 
-DISTNAME=	socat-1.7.2.2
-PKGREVISION=	1
+DISTNAME=	socat-1.7.2.4
 CATEGORIES=	net
 MASTER_SITES=	http://www.dest-unreach.org/socat/download/
 
@@ -16,7 +15,6 @@ ONLY_FOR_COMPILER=	gcc	# uses -Werror in the configure script
 .include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ARGS+=	--disable-libwrap
-CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS]) && ${OPSYS} == "NetBSD"
 # XXX Kludge -- the right fix is to make socat not depend on these constants.
@@ -31,12 +29,6 @@ SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	doc/socat.1
 SUBST_SED.paths=	-e 's,/usr/,${PREFIX}/,g'
-
-SUBST_CLASSES+=		makefile
-SUBST_MESSAGE.makefile=	Fixing Makefile CCOPTS.
-SUBST_STAGE.makefile=	post-patch
-SUBST_FILES.makefile=	Makefile.in
-SUBST_SED.makefile=	-e '/CCOPTS/ s/-Wall -Wno-parentheses//'
 
 .include "options.mk"
 
