@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/09/19 20:36:54 brook Exp $
+# $NetBSD: Makefile,v 1.3 2014/09/19 22:34:44 brook Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -13,10 +13,10 @@ R_PKGVER=	1.6
 
 DEPENDS+=	R-evaluate>=0.5.3:../../math/R-evaluate
 DEPENDS+=	R-digest>=0.6.4:../../math/R-digest
-DEPENDS+=	R-highr>=0.3:../../math/R-highr
 DEPENDS+=	R-markdown>=0.6.5:../../math/R-markdown
 DEPENDS+=	R-stringr>=0.6:../../math/R-stringr
 DEPENDS+=	R-formatR>=0.10:../../textproc/R-formatR
+DEPENDS+=	R-highr>=0.3:../../textproc/R-highr
 
 REPLACE_RSCRIPT+=	inst/bin/knit
 REPLACE_RSCRIPT+=	inst/examples/knit-all.R
