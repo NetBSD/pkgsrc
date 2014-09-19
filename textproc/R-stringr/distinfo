@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/09/19 21:03:26 brook Exp $
+
+SHA1 (R/stringr_0.6.2.tar.gz) = 6b41bcf589412a9b48ee6357508e35ccbbd77d01
+RMD160 (R/stringr_0.6.2.tar.gz) = 055a34d2a938c2af55374a98f20c700d4b7c5843
+Size (R/stringr_0.6.2.tar.gz) = 20636 bytes
