@@ -1,0 +1,24 @@
+$NetBSD: patch-bg,v 1.1 2014/09/19 21:24:05 jnemeth Exp $
+
+--- include/sm/config.h.orig	2014-03-06 17:31:29.000000000 +0000
++++ include/sm/config.h
+@@ -24,16 +24,14 @@
+ 
+ /*
+ **  SM_CONF_STDBOOL_H is 1 if <stdbool.h> exists
+-**
+-**  Note, unlike gcc, clang doesn't apply full prototypes to K&R definitions.
+ */
+ 
+ # ifndef SM_CONF_STDBOOL_H
+-#  if !defined(__clang__) && defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L
++#  if defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L
+ #   define SM_CONF_STDBOOL_H		1
+-#  else /* !defined(__clang__) && defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L */
++#  else /* defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L */
+ #   define SM_CONF_STDBOOL_H		0
+-#  endif /* !defined(__clang__) && defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L */
++#  endif /* defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L */
+ # endif /* ! SM_CONF_STDBOOL_H */
+ 
+ /*
