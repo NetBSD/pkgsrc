@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.290 2014/09/19 20:55:07 brook Exp $
+# $NetBSD: Makefile,v 1.291 2014/09/19 21:21:16 brook Exp $
 
 COMMENT=	Mathematics
 
@@ -56,7 +56,6 @@ SUBDIR+=	R-sp
 SUBDIR+=	R-spacetime
 SUBDIR+=	R-splancs
 SUBDIR+=	R-statmod
-SUBDIR+=	R-stringr
 SUBDIR+=	R-wle
 SUBDIR+=	R-xts
 SUBDIR+=	R-zoo
