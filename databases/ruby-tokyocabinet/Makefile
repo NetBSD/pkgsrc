@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2013/10/27 12:49:13 obache Exp $
+# $NetBSD: Makefile,v 1.27 2014/09/20 01:20:46 obache Exp $
 #
 
 DISTNAME=	tokyocabinet-ruby-1.31
@@ -23,7 +23,7 @@ do-test:
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}/${PREFIX}/${DOCDIR}
-	cd ${WRKSRC}/doc && pax -rwpe . ${DESTDIR}${PREFIX}/${DOCDIR}
+	cd ${WRKSRC}/doc && pax -rwpp . ${DESTDIR}${PREFIX}/${DOCDIR}
 	${RUBY_GENERATE_PLIST}
 
 BUILDLINK_API_DEPENDS.tokyocabinet+=	tokyocabinet>=1.4.29
