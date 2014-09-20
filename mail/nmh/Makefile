@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.84 2014/09/06 16:07:43 schnoebe Exp $
+# $NetBSD: Makefile,v 1.85 2014/09/20 23:15:03 dholland Exp $
 
 DISTNAME=		nmh-1.6
 CATEGORIES=		mail
 MASTER_SITES=		http://savannah.nongnu.org/download/nmh/
+PKGREVISION=		1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.nongnu.org/nmh/
@@ -88,5 +89,5 @@ CONFIGURE_ARGS+=	--with-ndbm='gdbm_compat -lgdbm'
 CONFIGURE_ARGS+=	--with-ndbmheader=ndbm.h
 .endif
 
-.include "../../mk/termcap.buildlink3.mk"
+.include "../../mk/terminfo.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
