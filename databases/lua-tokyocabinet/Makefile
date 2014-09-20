@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2014/05/03 13:01:24 alnsn Exp $
+# $NetBSD: Makefile,v 1.22 2014/09/20 01:20:46 obache Exp $
 #
 
 DISTNAME=	tokyocabinet-lua-1.10
@@ -29,7 +29,7 @@ post-extract:
 	${CHMOD} -R go-w ${WRKSRC}
 
 post-install:
-	cd ${WRKSRC}/doc && pax -rwpe . \
+	cd ${WRKSRC}/doc && pax -rwpp . \
 		${DESTDIR}${PREFIX}/${LUA_DOCDIR}
 	mv ${DESTDIR}${PREFIX}/bin/*.lua \
 		${DESTDIR}${PREFIX}/${LUA_EXAMPLESDIR}
