@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/09/20 03:34:56 brook Exp $
+# $NetBSD: Makefile,v 1.6 2014/09/20 03:53:55 brook Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -11,7 +11,7 @@ COMMENT=	A general-purpose package for dynamic report generation in R
 R_PKGNAME=	knitr
 R_PKGVER=	1.6
 
-DEPENDS+=	R-evaluate>=0.5.3:../../math/R-evaluate
+DEPENDS+=	R-evaluate>=0.5.3:../../devel/R-evaluate
 DEPENDS+=	R-digest>=0.6.4:../../security/R-digest
 DEPENDS+=	R-formatR>=0.10:../../textproc/R-formatR
 DEPENDS+=	R-highr>=0.3:../../textproc/R-highr
