@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/02 21:25:52 asau Exp $
+# $NetBSD: Makefile,v 1.18 2014/09/20 01:22:27 obache Exp $
 #
 
 DISTNAME=	tokyotyrant-ruby-1.13
@@ -26,7 +26,7 @@ do-test:
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}/${PREFIX}/${DOCDIR}
-	cd ${WRKSRC}/doc && pax -rwpe . ${DESTDIR}${PREFIX}/${DOCDIR}
+	cd ${WRKSRC}/doc && pax -rwpp . ${DESTDIR}${PREFIX}/${DOCDIR}
 	${RUBY_GENERATE_PLIST}
 
 .include "../../lang/ruby/modules.mk"
