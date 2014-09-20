@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3597 2014/09/20 17:56:49 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3598 2014/09/20 19:12:26 jnemeth Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS IN A FREEZE FOR NEW
 # FUNCTIONALITY IN PREPARATION FOR PKGSRC-2014Q3 BRANCH.  NO NEW
@@ -4576,3 +4576,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/sendmail to 8.14.9nb4 [jnemeth 2014-09-19]
 	Updated misc/vimpager to 1.8.9 [obache 2014-09-20]
 	Updated math/py-pytables to 3.1.1 [wiz 2014-09-20]
+	Updated comms/asterisk to 11.12.1 [jnemeth 2014-09-20]
