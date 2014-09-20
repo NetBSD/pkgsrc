@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/09/20 03:28:30 brook Exp $
+
+SHA1 (R/digest_0.6.4.tar.gz) = 1a4a9efd9ae339d1778076b77b428203b6aadf78
+RMD160 (R/digest_0.6.4.tar.gz) = 164cce0561584733b7f17ef1a63032f82d560c5e
+Size (R/digest_0.6.4.tar.gz) = 79309 bytes
