@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.522 2014/08/18 21:20:08 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.523 2014/09/20 03:34:56 brook Exp $
 #
 
 COMMENT=	Security tools
@@ -12,6 +12,7 @@ SUBDIR+=	KeePass
 SUBDIR+=	MyPasswordSafe
 SUBDIR+=	PACK
 SUBDIR+=	PortableSigner
+SUBDIR+=	R-digest
 SUBDIR+=	TweetNaCl
 SUBDIR+=	aide
 SUBDIR+=	aide06
