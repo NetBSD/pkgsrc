@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2014/01/21 16:32:42 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2014/09/20 17:56:36 wiz Exp $
 
-DISTNAME=		tables-3.0.0
+DISTNAME=		tables-3.1.1
 PKGNAME=		${PYPKGPREFIX}-py${DISTNAME}
 CATEGORIES=		math python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pytables/}
@@ -13,6 +13,8 @@ LICENSE=		modified-bsd
 PYSETUPBUILDARGS+=	--hdf5=${BUILDLINK_PREFIX.hdf5}
 PYSETUPINSTALLARGS=	${PYSETUPBUILDARGS}
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
+
+USE_LANGUAGES=		c c++
 
 .include "options.mk"
 
