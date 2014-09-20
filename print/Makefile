@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.591 2014/08/07 21:25:22 wiz Exp $
+# $NetBSD: Makefile,v 1.592 2014/09/20 04:11:43 brook Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -6,6 +6,7 @@ COMMENT=	Desktop publishing
 SUBDIR+=	LPRng
 SUBDIR+=	LPRng-core
 SUBDIR+=	LPRng-doc
+SUBDIR+=	R-knitr
 SUBDIR+=	a2ps
 SUBDIR+=	abc2ps
 SUBDIR+=	abcm2ps
