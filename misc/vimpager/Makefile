@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/05/03 12:22:08 nonaka Exp $
+# $NetBSD: Makefile,v 1.5 2014/09/20 12:00:42 obache Exp $
 
-DISTNAME=	vimpager-1.8.8
+DISTNAME=	vimpager-1.8.9
 CATEGORIES=	misc
 MASTER_SITES=	-https://github.com/rkitover/vimpager/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
@@ -20,17 +20,16 @@ SUBST_STAGE.vimpager=	post-patch
 SUBST_FILES.vimpager=	vimpager
 SUBST_SED.vimpager=	-e 's,/usr/local/etc/,${PKG_SYSCONFDIR}/,g'
 
+SUBST_CLASSES+=		manpath
+SUBST_STAGE.manpath=	pre-install
+SUBST_FILES.manpath=	Makefile
+SUBST_SED.manpath=	-e 's,/share/man/,/${PKGMANDIR}/,g'
+
 CONF_FILES+=		share/examples/vimpager/vimpagerrc ${PKG_SYSCONFDIR}/vimpagerrc
 
 REPLACE_BASH+=		vimcat
 REPLACE_SH+=		vimpager
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/vimpager
-
-do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/vimcat ${DESTDIR}${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/vimpager ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/vimpager.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA} ${WRKSRC}/vimpagerrc ${DESTDIR}${PREFIX}/share/examples/vimpager
+INSTALL_MAKE_FLAGS+=	SYSCONFDIR=${PREFIX}/share/examples/vimpager
 
 .include "../../mk/bsd.pkg.mk"
