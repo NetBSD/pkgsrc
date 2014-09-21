@@ -1,4 +1,4 @@
-$NetBSD: patch-xymond_client_netbsd.c,v 1.1 2014/02/27 20:23:56 spz Exp $
+$NetBSD: patch-xymond_client_netbsd.c,v 1.2 2014/09/21 14:49:45 spz Exp $
 
 --- xymond/client/netbsd.c.orig	2012-07-14 16:32:11.000000000 +0000
 +++ xymond/client/netbsd.c
@@ -22,7 +22,7 @@ $NetBSD: patch-xymond_client_netbsd.c,v 1.1 2014/02/27 20:23:56 spz Exp $
  	unix_cpu_report(hostname, clienttype, os, hinfo, fromline, timestr, uptimestr, clockstr, msgcachestr, 
  			whostr, 0, psstr, 0, topstr);
  	unix_disk_report(hostname, clienttype, os, hinfo, fromline, timestr, "Avail", "Capacity", "Mounted", dfstr);
-+	unix_inode_report(hostname, clienttype, os, hinfo, fromline, timestr, "ifree", "%iused", "Mounted", inodestr);
++	unix_inode_report(hostname, clienttype, os, hinfo, fromline, timestr, "iAvail", "%iCap", "Mounted", inodestr);
  	unix_procs_report(hostname, clienttype, os, hinfo, fromline, timestr, "COMMAND", NULL, psstr);
  	unix_ports_report(hostname, clienttype, os, hinfo, fromline, timestr, 3, 4, 5, portsstr);
  
