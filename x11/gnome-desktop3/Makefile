@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2014/09/11 14:00:18 prlw1 Exp $
+# $NetBSD: Makefile,v 1.19 2014/09/21 04:43:51 prlw1 Exp $
 
 DISTNAME=	gnome-desktop-3.10.2
 PKGNAME=	${DISTNAME:S/desktop/desktop3/}
@@ -16,14 +16,6 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
-
-# For https://bugzilla.gnome.org/show_bug.cgi?id=735974
-# to fix build on systems which lack openat()
-USE_TOOLS+=	autoconf automake
-
-pre-configure:
-	cd ${WRKSRC} && autoreconf -i
-#
 
 PKGCONFIG_OVERRIDE+=	libgnome-desktop/gnome-desktop-3.0.pc.in
 
