@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2014/06/28 06:45:25 obache Exp $
+@comment $NetBSD: PLIST,v 1.28 2014/09/21 11:20:08 obache Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -132,6 +132,7 @@ share/mikutter/core/plugin/achievement/po/de/achievement.po
 share/mikutter/core/plugin/achievement/po/el/achievement.po
 share/mikutter/core/plugin/achievement/po/en/achievement.po
 share/mikutter/core/plugin/achievement/po/es/achievement.po
+share/mikutter/core/plugin/achievement/po/pt_PT/achievement.po
 share/mikutter/core/plugin/achievement/po/ro_RO/achievement.po
 share/mikutter/core/plugin/achievement/po/ru/achievement.po
 share/mikutter/core/plugin/achievement/po/vi/achievement.po
@@ -145,6 +146,7 @@ share/mikutter/core/plugin/activity/po/de/activity.po
 share/mikutter/core/plugin/activity/po/el/activity.po
 share/mikutter/core/plugin/activity/po/en/activity.po
 share/mikutter/core/plugin/activity/po/es/activity.po
+share/mikutter/core/plugin/activity/po/pt_PT/activity.po
 share/mikutter/core/plugin/activity/po/ro_RO/activity.po
 share/mikutter/core/plugin/activity/po/ru/activity.po
 share/mikutter/core/plugin/activity/po/vi/activity.po
@@ -166,6 +168,7 @@ share/mikutter/core/plugin/bugreport/po/de/bugreport.po
 share/mikutter/core/plugin/bugreport/po/el/bugreport.po
 share/mikutter/core/plugin/bugreport/po/en/bugreport.po
 share/mikutter/core/plugin/bugreport/po/es/bugreport.po
+share/mikutter/core/plugin/bugreport/po/pt_PT/bugreport.po
 share/mikutter/core/plugin/bugreport/po/ro_RO/bugreport.po
 share/mikutter/core/plugin/bugreport/po/ru/bugreport.po
 share/mikutter/core/plugin/bugreport/po/vi/bugreport.po
@@ -181,6 +184,7 @@ share/mikutter/core/plugin/change_account/po/de/change_account.po
 share/mikutter/core/plugin/change_account/po/el/change_account.po
 share/mikutter/core/plugin/change_account/po/en/change_account.po
 share/mikutter/core/plugin/change_account/po/es/change_account.po
+share/mikutter/core/plugin/change_account/po/pt_PT/change_account.po
 share/mikutter/core/plugin/change_account/po/ro_RO/change_account.po
 share/mikutter/core/plugin/change_account/po/ru/change_account.po
 share/mikutter/core/plugin/change_account/po/vi/change_account.po
@@ -195,6 +199,7 @@ share/mikutter/core/plugin/command/po/de/command.po
 share/mikutter/core/plugin/command/po/el/command.po
 share/mikutter/core/plugin/command/po/en/command.po
 share/mikutter/core/plugin/command/po/es/command.po
+share/mikutter/core/plugin/command/po/pt_PT/command.po
 share/mikutter/core/plugin/command/po/ro_RO/command.po
 share/mikutter/core/plugin/command/po/ru/command.po
 share/mikutter/core/plugin/command/po/vi/command.po
@@ -209,6 +214,7 @@ share/mikutter/core/plugin/console/po/de/console.po
 share/mikutter/core/plugin/console/po/el/console.po
 share/mikutter/core/plugin/console/po/en/console.po
 share/mikutter/core/plugin/console/po/es/console.po
+share/mikutter/core/plugin/console/po/pt_PT/console.po
 share/mikutter/core/plugin/console/po/ro_RO/console.po
 share/mikutter/core/plugin/console/po/ru/console.po
 share/mikutter/core/plugin/console/po/vi/console.po
@@ -224,6 +230,7 @@ share/mikutter/core/plugin/direct_message/po/de/direct_message.po
 share/mikutter/core/plugin/direct_message/po/el/direct_message.po
 share/mikutter/core/plugin/direct_message/po/en/direct_message.po
 share/mikutter/core/plugin/direct_message/po/es/direct_message.po
+share/mikutter/core/plugin/direct_message/po/pt_PT/direct_message.po
 share/mikutter/core/plugin/direct_message/po/ro_RO/direct_message.po
 share/mikutter/core/plugin/direct_message/po/ru/direct_message.po
 share/mikutter/core/plugin/direct_message/po/vi/direct_message.po
@@ -239,6 +246,7 @@ share/mikutter/core/plugin/display_requirements/po/de/display_requirements.po
 share/mikutter/core/plugin/display_requirements/po/el/display_requirements.po
 share/mikutter/core/plugin/display_requirements/po/en/display_requirements.po
 share/mikutter/core/plugin/display_requirements/po/es/display_requirements.po
+share/mikutter/core/plugin/display_requirements/po/pt_PT/display_requirements.po
 share/mikutter/core/plugin/display_requirements/po/ro_RO/display_requirements.po
 share/mikutter/core/plugin/display_requirements/po/ru/display_requirements.po
 share/mikutter/core/plugin/display_requirements/po/vi/display_requirements.po
@@ -254,6 +262,7 @@ share/mikutter/core/plugin/extract/po/de/extract.po
 share/mikutter/core/plugin/extract/po/el/extract.po
 share/mikutter/core/plugin/extract/po/en/extract.po
 share/mikutter/core/plugin/extract/po/es/extract.po
+share/mikutter/core/plugin/extract/po/pt_PT/extract.po
 share/mikutter/core/plugin/extract/po/ro_RO/extract.po
 share/mikutter/core/plugin/extract/po/ru/extract.po
 share/mikutter/core/plugin/extract/po/vi/extract.po
@@ -276,6 +285,7 @@ share/mikutter/core/plugin/gtk/po/el/gtk.po
 share/mikutter/core/plugin/gtk/po/en/gtk.po
 share/mikutter/core/plugin/gtk/po/es/gtk.po
 share/mikutter/core/plugin/gtk/po/ja/gtk.po
+share/mikutter/core/plugin/gtk/po/pt_PT/gtk.po
 share/mikutter/core/plugin/gtk/po/ro_RO/gtk.po
 share/mikutter/core/plugin/gtk/po/ru/gtk.po
 share/mikutter/core/plugin/gtk/po/vi/gtk.po
@@ -299,6 +309,7 @@ share/mikutter/core/plugin/gui/po/de/gui.po
 share/mikutter/core/plugin/gui/po/el/gui.po
 share/mikutter/core/plugin/gui/po/en/gui.po
 share/mikutter/core/plugin/gui/po/es/gui.po
+share/mikutter/core/plugin/gui/po/pt_PT/gui.po
 share/mikutter/core/plugin/gui/po/ro_RO/gui.po
 share/mikutter/core/plugin/gui/po/ru/gui.po
 share/mikutter/core/plugin/gui/po/vi/gui.po
@@ -326,6 +337,7 @@ share/mikutter/core/plugin/home_timeline/po/de/home_timeline.po
 share/mikutter/core/plugin/home_timeline/po/el/home_timeline.po
 share/mikutter/core/plugin/home_timeline/po/en/home_timeline.po
 share/mikutter/core/plugin/home_timeline/po/es/home_timeline.po
+share/mikutter/core/plugin/home_timeline/po/pt_PT/home_timeline.po
 share/mikutter/core/plugin/home_timeline/po/ro_RO/home_timeline.po
 share/mikutter/core/plugin/home_timeline/po/ru/home_timeline.po
 share/mikutter/core/plugin/home_timeline/po/vi/home_timeline.po
@@ -347,6 +359,7 @@ share/mikutter/core/plugin/mentions/po/de/mentions.po
 share/mikutter/core/plugin/mentions/po/el/mentions.po
 share/mikutter/core/plugin/mentions/po/en/mentions.po
 share/mikutter/core/plugin/mentions/po/es/mentions.po
+share/mikutter/core/plugin/mentions/po/pt_PT/mentions.po
 share/mikutter/core/plugin/mentions/po/ro_RO/mentions.po
 share/mikutter/core/plugin/mentions/po/ru/mentions.po
 share/mikutter/core/plugin/mentions/po/vi/mentions.po
@@ -360,6 +373,7 @@ share/mikutter/core/plugin/notify/po/de/notify.po
 share/mikutter/core/plugin/notify/po/el/notify.po
 share/mikutter/core/plugin/notify/po/en/notify.po
 share/mikutter/core/plugin/notify/po/es/notify.po
+share/mikutter/core/plugin/notify/po/pt_PT/notify.po
 share/mikutter/core/plugin/notify/po/ro_RO/notify.po
 share/mikutter/core/plugin/notify/po/ru/notify.po
 share/mikutter/core/plugin/notify/po/vi/notify.po
@@ -374,6 +388,7 @@ share/mikutter/core/plugin/openimg/po/de/openimg.po
 share/mikutter/core/plugin/openimg/po/el/openimg.po
 share/mikutter/core/plugin/openimg/po/en/openimg.po
 share/mikutter/core/plugin/openimg/po/es/openimg.po
+share/mikutter/core/plugin/openimg/po/pt_PT/openimg.po
 share/mikutter/core/plugin/openimg/po/ro_RO/openimg.po
 share/mikutter/core/plugin/openimg/po/ru/openimg.po
 share/mikutter/core/plugin/openimg/po/vi/openimg.po
@@ -386,6 +401,7 @@ share/mikutter/core/plugin/profile/po/de/profile.po
 share/mikutter/core/plugin/profile/po/el/profile.po
 share/mikutter/core/plugin/profile/po/en/profile.po
 share/mikutter/core/plugin/profile/po/es/profile.po
+share/mikutter/core/plugin/profile/po/pt_PT/profile.po
 share/mikutter/core/plugin/profile/po/ro_RO/profile.po
 share/mikutter/core/plugin/profile/po/ru/profile.po
 share/mikutter/core/plugin/profile/po/vi/profile.po
@@ -399,6 +415,7 @@ share/mikutter/core/plugin/proxy/po/de/proxy.po
 share/mikutter/core/plugin/proxy/po/el/proxy.po
 share/mikutter/core/plugin/proxy/po/en/proxy.po
 share/mikutter/core/plugin/proxy/po/es/proxy.po
+share/mikutter/core/plugin/proxy/po/pt_PT/proxy.po
 share/mikutter/core/plugin/proxy/po/ro_RO/proxy.po
 share/mikutter/core/plugin/proxy/po/ru/proxy.po
 share/mikutter/core/plugin/proxy/po/vi/proxy.po
@@ -412,6 +429,7 @@ share/mikutter/core/plugin/ratelimit/po/de/ratelimit.po
 share/mikutter/core/plugin/ratelimit/po/el/ratelimit.po
 share/mikutter/core/plugin/ratelimit/po/en/ratelimit.po
 share/mikutter/core/plugin/ratelimit/po/es/ratelimit.po
+share/mikutter/core/plugin/ratelimit/po/pt_PT/ratelimit.po
 share/mikutter/core/plugin/ratelimit/po/ro_RO/ratelimit.po
 share/mikutter/core/plugin/ratelimit/po/ru/ratelimit.po
 share/mikutter/core/plugin/ratelimit/po/vi/ratelimit.po
@@ -427,6 +445,7 @@ share/mikutter/core/plugin/saved_search/po/de/saved_search.po
 share/mikutter/core/plugin/saved_search/po/el/saved_search.po
 share/mikutter/core/plugin/saved_search/po/en/saved_search.po
 share/mikutter/core/plugin/saved_search/po/es/saved_search.po
+share/mikutter/core/plugin/saved_search/po/pt_PT/saved_search.po
 share/mikutter/core/plugin/saved_search/po/ro_RO/saved_search.po
 share/mikutter/core/plugin/saved_search/po/ru/saved_search.po
 share/mikutter/core/plugin/saved_search/po/vi/saved_search.po
@@ -440,6 +459,7 @@ share/mikutter/core/plugin/search/po/de/search.po
 share/mikutter/core/plugin/search/po/el/search.po
 share/mikutter/core/plugin/search/po/en/search.po
 share/mikutter/core/plugin/search/po/es/search.po
+share/mikutter/core/plugin/search/po/pt_PT/search.po
 share/mikutter/core/plugin/search/po/ro_RO/search.po
 share/mikutter/core/plugin/search/po/ru/search.po
 share/mikutter/core/plugin/search/po/vi/search.po
@@ -453,6 +473,7 @@ share/mikutter/core/plugin/set_input/po/de/set_input.po
 share/mikutter/core/plugin/set_input/po/el/set_input.po
 share/mikutter/core/plugin/set_input/po/en/set_input.po
 share/mikutter/core/plugin/set_input/po/es/set_input.po
+share/mikutter/core/plugin/set_input/po/pt_PT/set_input.po
 share/mikutter/core/plugin/set_input/po/ro_RO/set_input.po
 share/mikutter/core/plugin/set_input/po/ru/set_input.po
 share/mikutter/core/plugin/set_input/po/vi/set_input.po
@@ -466,6 +487,7 @@ share/mikutter/core/plugin/set_view/po/de/set_view.po
 share/mikutter/core/plugin/set_view/po/el/set_view.po
 share/mikutter/core/plugin/set_view/po/en/set_view.po
 share/mikutter/core/plugin/set_view/po/es/set_view.po
+share/mikutter/core/plugin/set_view/po/pt_PT/set_view.po
 share/mikutter/core/plugin/set_view/po/ro_RO/set_view.po
 share/mikutter/core/plugin/set_view/po/ru/set_view.po
 share/mikutter/core/plugin/set_view/po/vi/set_view.po
@@ -483,6 +505,7 @@ share/mikutter/core/plugin/settings/po/de/settings.po
 share/mikutter/core/plugin/settings/po/el/settings.po
 share/mikutter/core/plugin/settings/po/en/settings.po
 share/mikutter/core/plugin/settings/po/es/settings.po
+share/mikutter/core/plugin/settings/po/pt_PT/settings.po
 share/mikutter/core/plugin/settings/po/ro_RO/settings.po
 share/mikutter/core/plugin/settings/po/ru/settings.po
 share/mikutter/core/plugin/settings/po/vi/settings.po
@@ -498,6 +521,7 @@ share/mikutter/core/plugin/shortcutkey/po/de/shortcutkey.po
 share/mikutter/core/plugin/shortcutkey/po/el/shortcutkey.po
 share/mikutter/core/plugin/shortcutkey/po/en/shortcutkey.po
 share/mikutter/core/plugin/shortcutkey/po/es/shortcutkey.po
+share/mikutter/core/plugin/shortcutkey/po/pt_PT/shortcutkey.po
 share/mikutter/core/plugin/shortcutkey/po/ro_RO/shortcutkey.po
 share/mikutter/core/plugin/shortcutkey/po/ru/shortcutkey.po
 share/mikutter/core/plugin/shortcutkey/po/vi/shortcutkey.po
@@ -512,6 +536,7 @@ share/mikutter/core/plugin/smartthread/po/de/smartthread.po
 share/mikutter/core/plugin/smartthread/po/el/smartthread.po
 share/mikutter/core/plugin/smartthread/po/en/smartthread.po
 share/mikutter/core/plugin/smartthread/po/es/smartthread.po
+share/mikutter/core/plugin/smartthread/po/pt_PT/smartthread.po
 share/mikutter/core/plugin/smartthread/po/ro_RO/smartthread.po
 share/mikutter/core/plugin/smartthread/po/ru/smartthread.po
 share/mikutter/core/plugin/smartthread/po/vi/smartthread.po
@@ -525,6 +550,7 @@ share/mikutter/core/plugin/sound/po/de/sound.po
 share/mikutter/core/plugin/sound/po/el/sound.po
 share/mikutter/core/plugin/sound/po/en/sound.po
 share/mikutter/core/plugin/sound/po/es/sound.po
+share/mikutter/core/plugin/sound/po/pt_PT/sound.po
 share/mikutter/core/plugin/sound/po/ro_RO/sound.po
 share/mikutter/core/plugin/sound/po/ru/sound.po
 share/mikutter/core/plugin/sound/po/vi/sound.po
@@ -540,6 +566,7 @@ share/mikutter/core/plugin/streaming/po/de/streaming.po
 share/mikutter/core/plugin/streaming/po/el/streaming.po
 share/mikutter/core/plugin/streaming/po/en/streaming.po
 share/mikutter/core/plugin/streaming/po/es/streaming.po
+share/mikutter/core/plugin/streaming/po/pt_PT/streaming.po
 share/mikutter/core/plugin/streaming/po/ro_RO/streaming.po
 share/mikutter/core/plugin/streaming/po/ru/streaming.po
 share/mikutter/core/plugin/streaming/po/vi/streaming.po
