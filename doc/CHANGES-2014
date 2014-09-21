@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3599 2014/09/20 23:15:57 dholland Exp $
+$NetBSD: CHANGES-2014,v 1.3600 2014/09/21 11:20:19 obache Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS IN A FREEZE FOR NEW
 # FUNCTIONALITY IN PREPARATION FOR PKGSRC-2014Q3 BRANCH.  NO NEW
@@ -4578,3 +4578,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated math/py-pytables to 3.1.1 [wiz 2014-09-20]
 	Updated comms/asterisk to 11.12.1 [jnemeth 2014-09-20]
 	Updated mail/nmh to 1.6nb1 [dholland 2014-09-20]
+	Updated net/mikutter to 3.0.6 [obache 2014-09-21]
