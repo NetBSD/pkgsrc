@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.34 2014/09/19 11:36:45 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.35 2014/09/21 21:39:54 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q2 branch:
@@ -137,3 +137,5 @@ Pullup ticket #4494 - requested by rodent
 net/socat: security update
 Pullup ticket #4501 - requested by he
 www/apache22: security update
+Pullup ticket #4500 - requested by tron
+net/wireshark: security update
