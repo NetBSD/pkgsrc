@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.3 2014/09/11 14:00:18 prlw1 Exp $
+$NetBSD: patch-aa,v 1.4 2014/09/21 04:43:51 prlw1 Exp $
 
 Fix build on systems which don't provide openat()
 https://bugzilla.gnome.org/show_bug.cgi?id=735974
 
 allow 64-bit time_t on 32-bit system
 
---- libgnome-desktop/gnome-desktop-thumbnail.c.orig	2012-08-23 17:49:46.000000000 +0000
+--- libgnome-desktop/gnome-desktop-thumbnail.c.orig	2013-11-21 11:14:44.000000000 +0000
 +++ libgnome-desktop/gnome-desktop-thumbnail.c
 @@ -43,7 +43,9 @@
  #define GNOME_DESKTOP_USE_UNSTABLE_API
@@ -35,7 +35,7 @@ allow 64-bit time_t on 32-bit system
              return NULL;
          }
      }
-@@ -1613,7 +1613,7 @@ gnome_desktop_thumbnail_is_valid (GdkPix
+@@ -1666,7 +1670,7 @@ gnome_desktop_thumbnail_is_valid (GdkPix
    thumb_mtime_str = gdk_pixbuf_get_option (pixbuf, "tEXt::Thumb::MTime");
    if (!thumb_mtime_str)
      return FALSE;
