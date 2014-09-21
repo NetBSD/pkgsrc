@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2014/09/20 23:15:03 dholland Exp $
+# $NetBSD: Makefile,v 1.86 2014/09/21 00:09:24 dholland Exp $
 
 DISTNAME=		nmh-1.6
 CATEGORIES=		mail
@@ -76,6 +76,14 @@ CONF_FILES=		# empty
 			scan.unseen
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
+
+# The configure script checks for arc4random(), but the program uses
+# arc4random_buf(); netbsd-5 (and presumably earlier) has the one but
+# not the other. Just disable it, because all it's using the
+# randomness for is message-ids.
+.if !empty(MACHINE_PLATFORM:MNetBSD-[1-5].*-*)
+CONFIGURE_ENV+=		ac_cv_func_arc4random=no
+.endif
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/mhn.defaults.dist \
