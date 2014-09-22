@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2014/08/29 04:31:12 mef Exp $
+# $NetBSD: Makefile,v 1.35 2014/09/22 11:50:30 joerg Exp $
 
 DISTNAME=		avr-libc-1.8.0
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		cross
 MASTER_SITES=		http://savannah.nongnu.org/download/avr-libc/
 EXTRACT_SUFX=		.tar.bz2
@@ -52,14 +52,11 @@ post-install:
 		${DESTDIR}${PREFIX}/share/doc/avr-libc
 	## delete following or similar files, which includes PATH at build time.
 	##_usr_pkgsrc_cross_avr-libc_work_avr-libc-1.8.0_libc_string_.3
-	(cd ${DESTDIR}${PREFIX}/share/doc/avr-libc/man/man3; ${RM} -f *${PKGVERSION_NOREV}*)
-	set -e;	\
-	for f in Makefile demo.c demo.bin demo.hex demo.pdf \
-		demo.srec;\
-	do \
-		${INSTALL_DATA} ${WRKSRC}/doc/examples/demo/$$f \
-			${DESTDIR}${PREFIX}/share/doc/avr-libc/examples/demo; \
-	done
+	${RM} ${DESTDIR}${PREFIX}/share/doc/avr-libc/man/man3/*${PKGVERSION_NOREV}*
+.for f in Makefile demo.c demo.bin demo.hex demo.pdf demo.srec
+	${INSTALL_DATA} ${WRKSRC}/doc/examples/demo/${f} \
+		${DESTDIR}${PREFIX}/share/doc/avr-libc/examples/demo
+.endfor
 
 .include "../../cross/avr-binutils/buildlink3.mk"
 .include "../../cross/avr-gcc/buildlink3.mk"
