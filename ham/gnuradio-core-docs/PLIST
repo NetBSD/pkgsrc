@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2014/05/18 21:22:49 joerg Exp $
+@comment $NetBSD: PLIST,v 1.19 2014/09/22 11:54:15 joerg Exp $
 share/doc/gnuradio-${PKGVERSION}/README
 share/doc/gnuradio-${PKGVERSION}/README.hacking
 share/doc/gnuradio-${PKGVERSION}/html/ad9862_8h.html
@@ -3933,8 +3933,6 @@ share/doc/gnuradio-${PKGVERSION}/html/classrx__32fc__handler__inherit__graph.map
 share/doc/gnuradio-${PKGVERSION}/html/classrx__32fc__handler__inherit__graph.md5
 share/doc/gnuradio-${PKGVERSION}/html/classrx__32fc__handler__inherit__graph.png
 share/doc/gnuradio-${PKGVERSION}/html/classs__both-members.html
-share/doc/gnuradio-${PKGVERSION}/html/classs__both.html
-share/doc/gnuradio-${PKGVERSION}/html/classs__both.js
 share/doc/gnuradio-${PKGVERSION}/html/classs__buffer-members.html
 share/doc/gnuradio-${PKGVERSION}/html/classs__buffer.html
 share/doc/gnuradio-${PKGVERSION}/html/classs__buffer.js
@@ -9069,6 +9067,7 @@ share/doc/gnuradio-${PKGVERSION}/html/navtreeindex34.js
 share/doc/gnuradio-${PKGVERSION}/html/navtreeindex35.js
 share/doc/gnuradio-${PKGVERSION}/html/navtreeindex36.js
 share/doc/gnuradio-${PKGVERSION}/html/navtreeindex37.js
+share/doc/gnuradio-${PKGVERSION}/html/navtreeindex38.js
 share/doc/gnuradio-${PKGVERSION}/html/navtreeindex4.js
 share/doc/gnuradio-${PKGVERSION}/html/navtreeindex5.js
 share/doc/gnuradio-${PKGVERSION}/html/navtreeindex6.js
@@ -9292,6 +9291,8 @@ share/doc/gnuradio-${PKGVERSION}/html/simpson_8h.js
 share/doc/gnuradio-${PKGVERSION}/html/simpson_8h_source.html
 share/doc/gnuradio-${PKGVERSION}/html/sine__table_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/sine__table_8h_source.html
+share/doc/gnuradio-${PKGVERSION}/html/singletons__both.html
+share/doc/gnuradio-${PKGVERSION}/html/singletons__both.js
 share/doc/gnuradio-${PKGVERSION}/html/spu_2gc__jd__queue_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/spu_2gc__jd__queue_8h.js
 share/doc/gnuradio-${PKGVERSION}/html/spu_2gc__jd__queue_8h__incl.map
@@ -10646,7 +10647,6 @@ share/doc/gnuradio-${PKGVERSION}/xml/classppio.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classppio__ppdev.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classrx__16sc__handler.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classrx__32fc__handler.xml
-share/doc/gnuradio-${PKGVERSION}/xml/classs__both.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classs__buffer.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classs__node.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classsdr__1000__base.xml
@@ -11412,6 +11412,7 @@ share/doc/gnuradio-${PKGVERSION}/xml/short__dotprod__generic_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/short__dotprod__x86_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/simpson_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/sine__table_8h.xml
+share/doc/gnuradio-${PKGVERSION}/xml/singletons__both.xml
 share/doc/gnuradio-${PKGVERSION}/xml/spu_2gc__jd__queue_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/spu__buffers_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/std__paths_8h.xml
