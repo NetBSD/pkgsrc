@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.53 2014/09/13 14:35:25 joerg Exp $
+$NetBSD: distinfo,v 1.54 2014/09/22 11:54:45 joerg Exp $
 
 SHA1 (openjdk7/UnlimitedJCEPolicyJDK7.zip) = 7d3c9ee89536b82cd21c680088b1bced16017253
 RMD160 (openjdk7/UnlimitedJCEPolicyJDK7.zip) = a4a6a284579f43d2df3532d279e143d2f03c2c3f
@@ -69,7 +69,7 @@ SHA1 (patch-bg) = 90328bd927c52e62d97c72fade2ceb70d42fe273
 SHA1 (patch-bh) = 33b56c77da352e710350a9e210660a78b11930a6
 SHA1 (patch-bi) = 9323d54054e5b3112e96ba311014c8228009de1a
 SHA1 (patch-bn) = 880785559645be0fc2a93dbb14695d83631f3620
-SHA1 (patch-corba_make_common_shared_Defs-java.gmk) = 14c5beeb30789360a989d4233dbcddba21b98021
+SHA1 (patch-corba_make_common_shared_Defs-java.gmk) = ca95d6cb163c863a8716a3ae8889c0d08d128925
 SHA1 (patch-corba_make_common_shared_Defs-utils.gmk) = e3b6d4683f1128bc1b2e5d8453608228da54e3d2
 SHA1 (patch-corba_make_common_shared_Platform.gmk) = 057af9ea52ca257750267289e4f1a950df0ed756
 SHA1 (patch-hotspot_agent_src_share_classes_sun_jvm_hotspot_utilities_PlatformInfo.java) = e2cca3e2d6a81ca077d23c49a55b228a65f20b58
