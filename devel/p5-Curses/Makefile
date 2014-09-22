@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2014/05/29 23:35:47 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2014/09/22 10:49:57 jperkin Exp $
 
 DISTNAME=	Curses-1.29
 PKGNAME=	p5-${DISTNAME}
@@ -43,7 +43,11 @@ pre-configure:
 
 # Pass appropriate CURSES_LIBTYPE so Curses will link to the matching panel/menu/form library
 .if ${CURSES_TYPE} == "curses"
+.  if ${OPSYS} == "Linux"
+CURSES_LIBTYPE=		ncurses
+.  else
 CURSES_LIBTYPE=		bsd
+.  endif
 .elif ${CURSES_TYPE} == "ncurses"
 CURSES_LIBTYPE=		ncurses
 .elif ${CURSES_TYPE} == "ncursesw"
