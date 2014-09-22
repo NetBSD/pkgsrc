@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/05/05 00:48:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2014/09/22 11:55:07 joerg Exp $
 #
 
 DISTNAME=	hwdecode-demos-0.9.4
@@ -15,13 +15,18 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake
 USE_LIBTOOL=	yes
 
-PLIST_VARS+=	vdpau
+PLIST_VARS+=	vdpau vaapi
 
 .include "../../multimedia/libvdpau/buildlink3.mk"
 .if ${VDPAU_AVAILABLE} == yes
 PLIST.vdpau=	yes
 .else
 CONFIGURE_ARGS+=	--disable-vdpau
+.endif
+.if ${VAAPI_AVAILABLE} == yes
+PLIST.vaapi=	yes
+.else
+CONFIGURE_ARGS+=	--disable-vaapi
 .endif
 
 .include "../../graphics/glu/buildlink3.mk"
