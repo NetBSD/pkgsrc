@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.4 2013/11/24 05:53:52 dholland Exp $
+$NetBSD: patch-ae,v 1.5 2014/09/22 11:56:39 joerg Exp $
 
 - avoid union wait
 - force termios on all modern systems
@@ -12,7 +12,23 @@ $NetBSD: patch-ae,v 1.4 2013/11/24 05:53:52 dholland Exp $
 
 --- main.c.orig	2002-01-09 00:41:11.000000000 +0000
 +++ main.c
-@@ -239,8 +239,18 @@ static Bool IsPts = False;
+@@ -63,15 +63,7 @@ SOFTWARE.
+ #include <X11/Xaw/SimpleMenu.h>
+ #include <pwd.h>
+ #include <ctype.h>
+-#ifdef linux
+-#ifdef	__GLIBC__
+-#if	__GLIBC_MINOR__<1
+-#include <termbits.h>
+-#else
+ #include <termios.h>
+-#endif	/* __GLIBC_MINOR__ */
+-#endif	/* __GLIBC__ */
+-#endif
+ 
+ #ifdef DGUX /* dkim@surecom.com */
+ /* DGUX is SVR4 but its SYSV side of TTY has bugs in it */
+@@ -239,8 +231,18 @@ static Bool IsPts = False;
  #ifdef SVR4
  #define USE_POSIX_WAIT
  #endif
@@ -31,7 +47,17 @@ $NetBSD: patch-ae,v 1.4 2013/11/24 05:53:52 dholland Exp $
  #include <errno.h>
  #include <setjmp.h>
  
-@@ -583,6 +593,8 @@ static int tslot;
+@@ -391,6 +393,9 @@ extern char *ptsname();
+ extern char *strindex ();
+ extern void HandlePopupMenu();
+ 
++static void get_terminal (void);
++static void resize(TScreen *screen, char *TermName, char *oldtc, char *newtc);
++
+ int switchfb[] = {0, 2, 1, 3};
+ 
+ static SIGNAL_T reapchild ();
+@@ -583,6 +588,8 @@ static int tslot;
  #endif	/* USE_SYSV_UTMP */
  static jmp_buf env;
  
@@ -40,7 +66,7 @@ $NetBSD: patch-ae,v 1.4 2013/11/24 05:53:52 dholland Exp $
  char *ProgramName;
  Boolean sunFunctionKeys;
  
-@@ -805,9 +817,9 @@ static char *message[] = {
+@@ -805,9 +812,9 @@ static char *message[] = {
  "will be started.  Options that start with a plus sign (+) restore the default.",
  NULL};
  
@@ -53,7 +79,7 @@ $NetBSD: patch-ae,v 1.4 2013/11/24 05:53:52 dholland Exp $
  
  static int abbrev (tst, cmp)
    char *tst, *cmp;
-@@ -816,7 +828,7 @@ static int abbrev (tst, cmp)
+@@ -816,7 +823,7 @@ static int abbrev (tst, cmp)
      return ((len >= 2) && (!strncmp(tst, cmp, len)));
  }
  
@@ -62,7 +88,7 @@ $NetBSD: patch-ae,v 1.4 2013/11/24 05:53:52 dholland Exp $
      char *badOption;
  {
      struct _options *opt;
-@@ -842,13 +854,13 @@ static Syntax (badOption)
+@@ -842,13 +849,13 @@ static Syntax (badOption)
      exit (1);
  }
  
@@ -78,7 +104,7 @@ $NetBSD: patch-ae,v 1.4 2013/11/24 05:53:52 dholland Exp $
  {
      struct _options *opt;
      char **cpp;
-@@ -960,6 +972,7 @@ XtActionsRec actionProcs[] = {
+@@ -960,6 +967,7 @@ XtActionsRec actionProcs[] = {
  
  Atom wm_delete_window;
  
@@ -86,7 +112,7 @@ $NetBSD: patch-ae,v 1.4 2013/11/24 05:53:52 dholland Exp $
  main (argc, argv)
  int argc;
  char **argv;
-@@ -1527,7 +1540,8 @@ char **argv;
+@@ -1527,7 +1535,8 @@ char **argv;
  	if (ioctl (pty, FIONBIO, (char *)&mode) == -1) SysError (ERROR_FIONBIO);
  #endif	/* USE_SYSV_TERMIO */
  	
@@ -96,7 +122,7 @@ $NetBSD: patch-ae,v 1.4 2013/11/24 05:53:52 dholland Exp $
  	pty_mask = pty;
  	X_mask = Xsocket;
  	FD_ZERO(&Select_mask);
-@@ -1566,6 +1580,7 @@ char *name;
+@@ -1566,6 +1575,7 @@ char *name;
   * has problems, we can re-enter this function and get another one.
   */
  
@@ -104,15 +130,15 @@ $NetBSD: patch-ae,v 1.4 2013/11/24 05:53:52 dholland Exp $
  get_pty (pty)
      int *pty;
  {
-@@ -1730,6 +1745,7 @@ int pty_search(pty)
+@@ -1730,6 +1740,7 @@ int pty_search(pty)
      return 1;
  }
  
-+void
++static void
  get_terminal ()
  /* 
   * sets up X and initializes the terminal structure except for term.buf.fildes.
-@@ -1854,7 +1870,7 @@ void first_map_occurred ()
+@@ -1854,7 +1865,7 @@ void first_map_occurred ()
  #endif /* USE_HANDSHAKE else !USE_HANDSHAKE */
  
  
@@ -121,7 +147,7 @@ $NetBSD: patch-ae,v 1.4 2013/11/24 05:53:52 dholland Exp $
  /* 
   *  Inits pty and tty and forks a login process.
   *  Does not close fd Xsocket.
-@@ -2983,10 +2999,10 @@ spawn ()
+@@ -2983,10 +2994,10 @@ spawn ()
  
  #ifdef USE_LOGIN_DASH_P
  		if (term->misc.login_shell && pw && added_utmp_entry)
@@ -134,15 +160,20 @@ $NetBSD: patch-ae,v 1.4 2013/11/24 05:53:52 dholland Exp $
  
  		/* Exec failed. */
  		fprintf (stderr, "%s: Could not exec %s!\n", xterm_name, ptr);
-@@ -3235,6 +3251,7 @@ Exit(n)
+@@ -3235,10 +3246,8 @@ Exit(n)
  }
  
  /* ARGSUSED */
-+void
- resize(screen, TermName, oldtc, newtc)
- TScreen *screen;
- char *TermName;
-@@ -3329,18 +3346,20 @@ static SIGNAL_T reapchild (n)
+-resize(screen, TermName, oldtc, newtc)
+-TScreen *screen;
+-char *TermName;
+-register char *oldtc, *newtc;
++static void
++resize(TScreen *screen, char *TermName, char *oldtc, char *newtc)
+ {
+ #ifndef USE_SYSV_ENVVARS
+ 	register char *ptr1, *ptr2;
+@@ -3329,18 +3338,20 @@ static SIGNAL_T reapchild (n)
  }
  
  /* VARARGS1 */
@@ -167,7 +198,7 @@ $NetBSD: patch-ae,v 1.4 2013/11/24 05:53:52 dholland Exp $
   	strcat(buf, ": ");
   	strcat(buf, SysErrorMsg (oerrno));
   	strcat(buf, "\n");	
-@@ -3356,10 +3375,8 @@ char *fmt;
+@@ -3356,10 +3367,8 @@ char *fmt;
  }
  
  
@@ -180,7 +211,7 @@ $NetBSD: patch-ae,v 1.4 2013/11/24 05:53:52 dholland Exp $
  {
      register char *strinbuf;
  
-@@ -3377,7 +3394,7 @@ static remove_termcap_entry (buf, str)
+@@ -3377,7 +3386,7 @@ static remove_termcap_entry (buf, str)
      }
      return;
  }
@@ -189,7 +220,7 @@ $NetBSD: patch-ae,v 1.4 2013/11/24 05:53:52 dholland Exp $
  
  /*
   * parse_tty_modes accepts lines of the following form:
-@@ -3396,7 +3413,8 @@ static int parse_tty_modes (s, modelist)
+@@ -3396,7 +3405,8 @@ static int parse_tty_modes (s, modelist)
      int count = 0;
  
      while (1) {

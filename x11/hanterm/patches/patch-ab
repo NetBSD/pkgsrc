@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2013/11/24 05:53:52 dholland Exp $
+$NetBSD: patch-ab,v 1.3 2014/09/22 11:56:39 joerg Exp $
 
 - use standard headers
 - don't provide own malloc/realloc declarations
@@ -32,7 +32,19 @@ $NetBSD: patch-ab,v 1.2 2013/11/24 05:53:52 dholland Exp $
  
  extern void FlushScroll();
  extern void InsertLine();
-@@ -1764,7 +1765,7 @@ static void VTparse()
+@@ -126,6 +127,11 @@ extern int convert_3_to_utf8();
+ void set_vt_graphics (/*TScreen *screen*/);
+ #endif
+ 
++static void ansi_modes(XtermWidget, int (*)());
++static void dpmodes(XtermWidget, void (*)());
++static void restoremodes(XtermWidget);
++static void savemodes(XtermWidget);
++static void unparseputn(unsigned int, int);
+ static void VTallocbuf();
+ static int finput();
+ static void dotext();
+@@ -1764,7 +1770,7 @@ static void VTparse()
  	}
  }
  
@@ -41,7 +53,7 @@ $NetBSD: patch-ab,v 1.2 2013/11/24 05:53:52 dholland Exp $
  {
  	return(doinput());
  }
-@@ -1774,13 +1775,14 @@ static char *v_buffer;		/* pointer to ph
+@@ -1774,13 +1780,14 @@ static char *v_buffer;		/* pointer to ph
  static char *v_bufstr = NULL;	/* beginning of area to write */
  static char *v_bufptr;		/* end of area to write */
  static char *v_bufend;		/* end of physical buffer */
@@ -57,7 +69,7 @@ $NetBSD: patch-ab,v 1.2 2013/11/24 05:53:52 dholland Exp $
  v_write(f, d, len)
      int f;
      char *d;
-@@ -1802,7 +1804,7 @@ v_write(f, d, len)
+@@ -1802,7 +1809,7 @@ v_write(f, d, len)
  	fprintf(stderr, "\n");
  #endif
  
@@ -66,7 +78,7 @@ $NetBSD: patch-ab,v 1.2 2013/11/24 05:53:52 dholland Exp $
  	if (f != pty_mask)
  #else
  	if ((1 << f) != pty_mask)
-@@ -1927,7 +1929,7 @@ v_write(f, d, len)
+@@ -1927,7 +1934,7 @@ v_write(f, d, len)
  	return(c);
  }
  
@@ -75,7 +87,7 @@ $NetBSD: patch-ab,v 1.2 2013/11/24 05:53:52 dholland Exp $
  static fd_set select_mask;
  static fd_set write_mask;
  #else
-@@ -1936,6 +1938,7 @@ static int write_mask;
+@@ -1936,6 +1943,7 @@ static int write_mask;
  #endif
  static int pty_read_bytes;
  
@@ -83,7 +95,7 @@ $NetBSD: patch-ab,v 1.2 2013/11/24 05:53:52 dholland Exp $
  in_put()
  {
      register TScreen *screen = &term->screen;
-@@ -1943,7 +1946,7 @@ in_put()
+@@ -1943,7 +1951,7 @@ in_put()
      static struct timeval select_timeout;
  
      for( ; ; ) {
@@ -92,7 +104,7 @@ $NetBSD: patch-ab,v 1.2 2013/11/24 05:53:52 dholland Exp $
  	if (FD_ISSET(pty_mask, &select_mask) && eventMode == NORMAL) {
  #else
  	if (select_mask & pty_mask && eventMode == NORMAL) {
-@@ -2003,7 +2006,7 @@ in_put()
+@@ -2003,7 +2011,7 @@ in_put()
  		/* stop speed reading at some point to look for X stuff */
  		/* (4096 is just a random large number.) */
  		if (pty_read_bytes > 4096) {
@@ -101,7 +113,7 @@ $NetBSD: patch-ab,v 1.2 2013/11/24 05:53:52 dholland Exp $
  		    FD_CLR(pty_mask, &select_mask);
  #else
  		    select_mask &= ~pty_mask;
-@@ -2033,7 +2036,7 @@ in_put()
+@@ -2033,7 +2041,7 @@ in_put()
  	/* Update the masks and, unless X events are already in the queue,
  	   wait for I/O to be possible. */
  	select_mask = Select_mask;
@@ -110,7 +122,7 @@ $NetBSD: patch-ab,v 1.2 2013/11/24 05:53:52 dholland Exp $
  	if (v_bufptr > v_bufstr)
  	  FD_SET(pty_mask, &write_mask);
         else
-@@ -2047,7 +2050,7 @@ in_put()
+@@ -2047,7 +2055,7 @@ in_put()
  /* by sangil's report */
  /* #if defined(linux)||defined(SVR4)
      ||(defined(hpux) && OSMAJORVERSION >= 10) */
@@ -119,7 +131,7 @@ $NetBSD: patch-ab,v 1.2 2013/11/24 05:53:52 dholland Exp $
  	if (QLength (screen->display))
  	{
  	    i = select(max_plus1, (fd_set*) &select_mask, (fd_set*) &write_mask, (fd_set *)NULL, (struct timeval *) &select_timeout);
-@@ -2073,7 +2076,7 @@ in_put()
+@@ -2073,7 +2081,7 @@ in_put()
  	} 
  
  	/* if there is room to write more data to the pty, go write more */
@@ -128,7 +140,7 @@ $NetBSD: patch-ab,v 1.2 2013/11/24 05:53:52 dholland Exp $
  	if ((v_bufptr > v_bufstr) && FD_ISSET(pty_mask, &write_mask)) {
  #else
  	if (write_mask & ptymask()) {
-@@ -2083,7 +2086,7 @@ in_put()
+@@ -2083,7 +2091,7 @@ in_put()
  
  	/* if there are X events already in our queue, it
  	   counts as being readable */
@@ -137,55 +149,77 @@ $NetBSD: patch-ab,v 1.2 2013/11/24 05:53:52 dholland Exp $
  	if (QLength(screen->display) || (FD_ISSET(X_mask, &select_mask))) {
  #else
  	if (QLength(screen->display) || (select_mask & X_mask)) {
-@@ -2322,6 +2325,7 @@ WriteText(screen, str, len, flags, fg, b
+@@ -2322,9 +2330,8 @@ WriteText(screen, str, len, flags, fg, b
  /*
   * process ANSI modes set, reset
   */
-+void
- ansi_modes(termw, func)
-     XtermWidget	termw;
-     int		(*func)();
-@@ -2345,6 +2349,7 @@ ansi_modes(termw, func)
+-ansi_modes(termw, func)
+-    XtermWidget	termw;
+-    int		(*func)();
++static void
++ansi_modes(XtermWidget termw, int (*func)())
+ {
+ 	register int	i;
+ 
+@@ -2345,9 +2352,8 @@ ansi_modes(termw, func)
  /*
   * process DEC private modes set, reset
   */
-+void
- dpmodes(termw, func)
-     XtermWidget	termw;
-     void (*func)();
-@@ -2498,6 +2503,7 @@ dpmodes(termw, func)
+-dpmodes(termw, func)
+-    XtermWidget	termw;
+-    void (*func)();
++static void
++dpmodes(XtermWidget termw, void (*func)())
+ {
+ 	register TScreen	*screen	= &termw->screen;
+ 	register int	i, j;
+@@ -2498,8 +2504,8 @@ dpmodes(termw, func)
  /*
   * process xterm private modes save
   */
-+void
- savemodes(termw)
-     XtermWidget termw;
+-savemodes(termw)
+-    XtermWidget termw;
++static void
++savemodes(XtermWidget termw)
  {
-@@ -2564,6 +2570,7 @@ savemodes(termw)
+ 	register TScreen	*screen	= &termw->screen;
+ 	register int i;
+@@ -2564,8 +2570,8 @@ savemodes(termw)
  /*
   * process xterm private modes restore
   */
-+void
- restoremodes(termw)
-     XtermWidget termw;
+-restoremodes(termw)
+-    XtermWidget termw;
++static void
++restoremodes(XtermWidget termw)
  {
-@@ -2711,6 +2718,7 @@ static void bitclr(p, mask)
+ 	register TScreen	*screen	= &termw->screen;
+ 	register int i, j;
+@@ -2711,9 +2717,8 @@ static void bitclr(p, mask)
  	*p &= ~mask;
  }
  
+-unparseseq(ap, fd)
+-    register ANSI *ap;
+-    int fd;
 +void
- unparseseq(ap, fd)
-     register ANSI *ap;
-     int fd;
-@@ -2744,6 +2752,7 @@ unparseseq(ap, fd)
++unparseseq(ANSI *ap, int fd)
+ {
+ 	register int	c;
+ 	register int	i;
+@@ -2744,9 +2749,8 @@ unparseseq(ap, fd)
  	}
  }
  
-+void
- unparseputn(n, fd)
- unsigned int	n;
- int fd;
-@@ -2756,6 +2765,7 @@ int fd;
+-unparseputn(n, fd)
+-unsigned int	n;
+-int fd;
++static void
++unparseputn(unsigned int n, int fd)
+ {
+ 	unsigned int	q;
+ 
+@@ -2756,6 +2760,7 @@ int fd;
  	unparseputc((char) ('0' + (n%10)), fd);
  }
  
@@ -193,7 +227,7 @@ $NetBSD: patch-ab,v 1.2 2013/11/24 05:53:52 dholland Exp $
  unparseputc(c, fd)
  int c;
  int fd;
-@@ -2774,6 +2784,7 @@ int fd;
+@@ -2774,6 +2779,7 @@ int fd;
  	}
  }
  
@@ -201,7 +235,7 @@ $NetBSD: patch-ab,v 1.2 2013/11/24 05:53:52 dholland Exp $
  unparsefputs (s, fd)
      register char *s;
      int fd;
-@@ -4062,7 +4073,7 @@ int LoadNewFont (screen, nfontname, bfon
+@@ -4062,7 +4068,7 @@ int LoadNewFont (screen, nfontname, bfon
  
      if (fontnum == fontMenu_fontescape &&
  	nfontname != screen->menu_font_names[fontnum]) {
@@ -210,7 +244,7 @@ $NetBSD: patch-ab,v 1.2 2013/11/24 05:53:52 dholland Exp $
  	if (!tmpname) return 0;
  	strcpy (tmpname, nfontname);
      }
-@@ -4377,7 +4388,7 @@ set_vt_graphics (screen)
+@@ -4377,7 +4383,7 @@ set_vt_graphics (screen)
  	static char gr_valid_code[] = " `ajklmnopqrstuvwx~";
  
  	if (!gr_mapping) {
