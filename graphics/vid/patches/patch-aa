@@ -1,13 +1,14 @@
-$NetBSD: patch-aa,v 1.3 2005/03/15 16:17:44 rillig Exp $
+$NetBSD: patch-aa,v 1.4 2014/09/22 11:53:43 joerg Exp $
 
 --- Makefile.orig	Mon May  8 06:59:03 2000
 +++ Makefile
-@@ -5,13 +5,12 @@
+@@ -5,13 +5,13 @@
  VERSION	= 1.0.1
  
  CFLAGS	= -O
 -CPPFLAGS = -I/usr/local/include
 -LIBS	= -L/usr/local/lib -lpnm
++CPPFLAGS = -I${PREFIX}/include/netpbm
 +LIBS	= -lnetpbm -lm
  
  default:	vid
