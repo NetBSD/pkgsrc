@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/04/24 16:15:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2014/09/22 11:53:18 joerg Exp $
 
 SNAPPYVER=	1.0.5
 PKGNAME=	snappy-java10-${SNAPPYVER}
@@ -29,7 +29,7 @@ INSTALLATION_DIRS+=	lib/java/snappy-java
 .PHONY: do-create-jar pre-create-tar
 pre-create-jar: do-extract do-patch
 	${MKDIR} ${WRKSRC}/target
-	${CP} -f ${DISTDIR}/snappy-${SNAPPYVER}.tar.gz ${WRKSRC}/target
+	${CP} -f ${DISTDIR}/${DIST_SUBDIR}/snappy-${SNAPPYVER}.tar.gz ${WRKSRC}/target
 
 do-create-jar: pre-create-jar
 	cd ${WRKSRC} && \
