@@ -1,4 +1,4 @@
-$NetBSD: patch-corba_make_common_shared_Defs-java.gmk,v 1.2 2014/09/13 14:35:25 joerg Exp $
+$NetBSD: patch-corba_make_common_shared_Defs-java.gmk,v 1.3 2014/09/22 11:54:45 joerg Exp $
 
 --- corba/make/common/shared/Defs-java.gmk.orig	2014-01-05 23:11:01.000000000 +0000
 +++ corba/make/common/shared/Defs-java.gmk
@@ -11,3 +11,14 @@ $NetBSD: patch-corba_make_common_shared_Defs-java.gmk,v 1.2 2014/09/13 14:35:25 
  
  # JVM options
  JAVA_JVM_FLAGS = $(JAVA_HOTSPOT_DISABLE_PRINT_VMOPTIONS)
+@@ -196,8 +196,8 @@ BOOT_JAR_JFLAGS += $(JAR_JFLAGS)
+ 
+ BOOT_JAVA_CMD      = $(BOOTDIR)/bin/java $(JAVA_TOOLS_FLAGS)
+ BOOT_JAVAC_CMD     = $(BOOTDIR)/bin/javac $(JAVAC_JVM_FLAGS) $(BOOT_JAVACFLAGS)
+-BOOT_JAR_CMD       = $(BOOTDIR)/bin/jar
+-BOOT_JARSIGNER_CMD = $(BOOTDIR)/bin/jarsigner
++BOOT_JAR_CMD       = $(BOOTDIR)/bin/jar -J-XX:+UseSerialGC -J-mx1024m
++BOOT_JARSIGNER_CMD = $(BOOTDIR)/bin/jarsigner -J-XX:+UseSerialGC -J-mx1024m
+ 
+ # Various tools we need to run (FIXUP: Are these the right ones?)
+ NATIVE2ASCII    = $(BOOTDIR)/bin/native2ascii $(JAVA_TOOLS_FLAGS:%=-J%)
