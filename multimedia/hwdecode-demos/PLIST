@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2012/12/02 15:50:35 cheusov Exp $
-bin/vaapi_h264
-bin/vaapi_mpeg2
-bin/vaapi_mpeg4
-bin/vaapi_vc1
+@comment $NetBSD: PLIST,v 1.3 2014/09/22 11:55:07 joerg Exp $
+${PLIST.vaapi}bin/vaapi_h264
+${PLIST.vaapi}bin/vaapi_mpeg2
+${PLIST.vaapi}bin/vaapi_mpeg4
+${PLIST.vaapi}bin/vaapi_vc1
 ${PLIST.vdpau}bin/vdpau_h264
 ${PLIST.vdpau}bin/vdpau_mpeg2
 ${PLIST.vdpau}bin/vdpau_mpeg4
