@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/05/05 00:47:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2014/09/22 11:49:42 joerg Exp $
 
 PKGNAME=	bossa-20140109
 DISTNAME=	b-o-s-s-a-code-05bfcc39bc0453c3028b1161175b95a81af7a901
@@ -25,7 +25,7 @@ USE_TOOLS=	gmake
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
-CXXFLAGS+=	-Wno-error=tautological-compare
+CXXFLAGS+=	-Wno-error=tautological-compare -Wno-error=unused-local-typedef
 .endif
 
 .include "../../devel/readline/buildlink3.mk"
