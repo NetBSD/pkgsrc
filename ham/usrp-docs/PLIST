@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2014/04/28 12:14:26 joerg Exp $
+@comment $NetBSD: PLIST,v 1.15 2014/09/22 11:54:15 joerg Exp $
 share/doc/usrp-${PKGVERSION}/html/ad9862_8h.html
 share/doc/usrp-${PKGVERSION}/html/ad9862_8h__dep__incl.map
 share/doc/usrp-${PKGVERSION}/html/ad9862_8h__dep__incl.md5
@@ -629,7 +629,6 @@ share/doc/usrp-${PKGVERSION}/html/classfusb__ephandle__win32__inherit__graph.png
 share/doc/usrp-${PKGVERSION}/html/classfusb__sysconfig-members.html
 share/doc/usrp-${PKGVERSION}/html/classfusb__sysconfig.html
 share/doc/usrp-${PKGVERSION}/html/classs__both-members.html
-share/doc/usrp-${PKGVERSION}/html/classs__both.html
 share/doc/usrp-${PKGVERSION}/html/classs__buffer-members.html
 share/doc/usrp-${PKGVERSION}/html/classs__buffer.html
 share/doc/usrp-${PKGVERSION}/html/classs__node-members.html
@@ -1278,6 +1277,7 @@ share/doc/usrp-${PKGVERSION}/html/nav_h.png
 share/doc/usrp-${PKGVERSION}/html/open.png
 share/doc/usrp-${PKGVERSION}/html/rate__to__regval_8h.html
 share/doc/usrp-${PKGVERSION}/html/rate__to__regval_8h_source.html
+share/doc/usrp-${PKGVERSION}/html/singletons__both.html
 share/doc/usrp-${PKGVERSION}/html/std__paths_8h.html
 share/doc/usrp-${PKGVERSION}/html/std__paths_8h__dep__incl.map
 share/doc/usrp-${PKGVERSION}/html/std__paths_8h__dep__incl.md5
