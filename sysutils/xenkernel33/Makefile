@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2014/05/09 07:37:20 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2014/09/22 11:55:59 joerg Exp $
 
 VERSION=	3.3.2
 DISTNAME=	xen-${VERSION}
@@ -50,7 +50,8 @@ MESSAGE_SUBST+=		XENKERNELDIR=${XENKERNELDIR:Q}
 .if !empty(PKGSRC_COMPILER:Mclang)
 EXTRA_CFLAGS+=	-Qunused-arguments -no-integrated-as -Wno-error=format \
 		-Wno-error=parentheses-equality -Wno-error=enum-conversion \
-		-Wno-error=tautological-compare -Wno-error=unused-function
+		-Wno-error=tautological-compare -Wno-error=unused-function \
+		-Wno-error=unused-local-typedef
 BUILDLINK_TRANSFORM+=	rm:-fno-reorder-blocks
 .endif
 
