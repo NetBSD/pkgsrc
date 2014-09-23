@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/03/24 19:43:28 asau Exp $
+# $NetBSD: Makefile,v 1.16 2014/09/23 17:57:04 jperkin Exp $
 #
 
 DISTNAME=	dhisd-5.1
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://ftp.dhis.org/pub/dhis/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.dhis.org/
 COMMENT=	DynDNS server
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 INSTALLATION_DIRS=	bin share/examples/dhisd share/doc/dhisd
 PKG_DESTDIR_SUPPORT=	destdir
