@@ -1,13 +1,15 @@
-$NetBSD: patch-term.c,v 1.1 2013/07/18 12:07:24 joerg Exp $
+$NetBSD: patch-term.c,v 1.2 2014/09/23 22:24:38 jperkin Exp $
 
---- term.c.orig	2013-07-18 10:12:24.000000000 +0000
+--- term.c.orig	1997-01-24 16:36:57.000000000 +0000
 +++ term.c
-@@ -9,6 +9,9 @@
+@@ -9,6 +9,11 @@
  
  #include "bbs.h"
  #include <sys/ioctl.h>
 +#include <stdlib.h>
++#ifndef __sun
 +#include <termcap.h>
++#endif
 +#include <termios.h>
  
  #ifdef HP_UX
