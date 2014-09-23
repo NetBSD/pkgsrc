@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3605 2014/09/23 13:50:01 jperkin Exp $
+$NetBSD: CHANGES-2014,v 1.3606 2014/09/23 15:52:13 taca Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS IN A FREEZE FOR NEW
 # FUNCTIONALITY IN PREPARATION FOR PKGSRC-2014Q3 BRANCH.  NO NEW
@@ -4584,3 +4584,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added net/p5-Net-SSH-Expect version 1.09 [he 2014-09-23]
 	Updated databases/phpmyadmin to 4.2.9 [tron 2014-09-23]
 	Updated audio/libxmp to 4.2.7nb1 [jperkin 2014-09-23]
+	Updated www/fengoffice to 2.7.1.1 [taca 2014-09-23]
