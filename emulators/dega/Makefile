@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/03 12:55:11 asau Exp $
+# $NetBSD: Makefile,v 1.20 2014/09/23 21:47:52 jperkin Exp $
 #
 
 DISTNAME=	dega-1.07
@@ -21,6 +21,7 @@ ONLY_FOR_PLATFORM=	*-*-i386
 INSTALLATION_DIRS=	bin
 
 LDFLAGS.DragonFly=	-lm
+LDFLAGS.SunOS+=		-lm
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dega ${DESTDIR}${PREFIX}/bin
