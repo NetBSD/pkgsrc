@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/09/23 10:53:09 he Exp $
+
+SHA1 (Net-SSH-Expect-1.09.tar.gz) = 50c1362df16434ead415e0e5119a639df6fb2a9d
+RMD160 (Net-SSH-Expect-1.09.tar.gz) = 837d0133f0d0de91955b130ad23dd3d5cc4255f5
+Size (Net-SSH-Expect-1.09.tar.gz) = 15074 bytes
