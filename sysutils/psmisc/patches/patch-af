@@ -1,18 +1,20 @@
-$NetBSD: patch-af,v 1.5 2013/12/13 09:58:58 jperkin Exp $
+$NetBSD: patch-af,v 1.6 2014/09/23 22:18:21 jperkin Exp $
 
 Need limits.h for PATH_MAX
 
 --- src/pstree.c.orig	2000-12-18 05:59:23.000000000 +0000
 +++ src/pstree.c
-@@ -15,6 +15,7 @@
+@@ -15,19 +15,22 @@
  #include <getopt.h>
  #include <pwd.h>
  #include <dirent.h>
 +#include <limits.h>
  #include <termios.h>
++#ifdef HAVE_TERMCAP_H
  #include <termcap.h>
++#endif
  #include <sys/types.h>
-@@ -22,12 +23,12 @@
+ #include <sys/stat.h>
  #include <sys/ioctl.h>
  
  #include "comm.h"
@@ -26,7 +28,7 @@ Need limits.h for PATH_MAX
  
  /* UTF-8 defines by Johan Myreen */
  #define UTF_V	"\342\224\202\277"	/* Vertical line drawing char */
-@@ -303,6 +304,7 @@ dump_tree (PROC * current, int level, in
+@@ -303,6 +306,7 @@ dump_tree (PROC * current, int level, in
    const struct passwd *pw;
    int lvl, i, add, offset, len, swapped, info, count, comm_len, first;
    const char *tmp, *here;
@@ -34,7 +36,7 @@ Need limits.h for PATH_MAX
    char comm_tmp[5];
  
    if (!current)
-@@ -327,7 +329,8 @@ dump_tree (PROC * current, int level, in
+@@ -327,7 +331,8 @@ dump_tree (PROC * current, int level, in
        add = out_int (rep) + 2;
        out_string ("*[");
      }
@@ -44,7 +46,7 @@ Need limits.h for PATH_MAX
      tputs (tmp, 1, putchar);
    if ((swapped = print_args) && current->argc < 0)
      out_char ('(');
-@@ -366,7 +369,8 @@ dump_tree (PROC * current, int level, in
+@@ -366,7 +371,8 @@ dump_tree (PROC * current, int level, in
      }
    if (info || swapped)
      out_char (')');
@@ -54,7 +56,7 @@ Need limits.h for PATH_MAX
      tputs (tmp, 1, putchar);
    if (print_args)
      {
-@@ -504,7 +508,7 @@ read_proc (void)
+@@ -504,7 +510,7 @@ read_proc (void)
    while ((de = readdir (dir)) != NULL)
      if ((pid = atoi (de->d_name)) != 0)
        {
@@ -63,7 +65,7 @@ Need limits.h for PATH_MAX
  	if ((file = fopen (path, "r")) != NULL)
  	  {
  	    empty = 0;
-@@ -513,6 +517,10 @@ read_proc (void)
+@@ -513,6 +519,10 @@ read_proc (void)
  		perror (path);
  		exit (1);
  	      }
@@ -74,7 +76,7 @@ Need limits.h for PATH_MAX
              fread(readbuf, BUFSIZ, 1, file) ;
              if (ferror(file) == 0) 
              {
-@@ -532,11 +540,12 @@ read_proc (void)
+@@ -532,11 +542,12 @@ read_proc (void)
  		(file, "%d (%s) %c %d", &dummy, comm, (char *) &dummy,
  		 &ppid) == 4)
  	      */
@@ -88,7 +90,7 @@ Need limits.h for PATH_MAX
  		    if ((fd = open (path, O_RDONLY)) < 0)
  		      {
  			perror (path);
-@@ -641,7 +650,11 @@ main (int argc, char **argv)
+@@ -641,7 +652,11 @@ main (int argc, char **argv)
      switch (c)
        {
        case 'a':
