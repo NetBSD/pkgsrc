@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/23 17:18:12 asau Exp $
+# $NetBSD: Makefile,v 1.13 2014/09/23 14:50:03 jperkin Exp $
 #
 
 DISTNAME=		bounce-0.0
@@ -15,6 +15,8 @@ HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 
 BUILD_TARGET=		bounce
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
