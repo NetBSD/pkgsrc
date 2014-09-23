@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/09/16 19:25:51 khorben Exp $
+# $NetBSD: Makefile,v 1.8 2014/09/23 12:06:49 jperkin Exp $
 #
 
 DISTNAME=	libSystem-0.2.0
@@ -15,6 +15,8 @@ LICENSE=	gnu-lgpl-v3
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	INSTALL=${INSTALL}
+
+REPLACE_SH=	tests/tests.sh
 
 BUILDLINK_API_DEPENDS.gtk-doc+=	gtk-doc>=1.20
 .include "../../textproc/gtk-doc/buildlink3.mk"
