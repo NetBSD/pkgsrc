@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2014/02/12 23:18:37 tron Exp $
+# $NetBSD: Makefile,v 1.3 2014/09/23 14:26:35 fhajny Exp $
 #
 
 PKGNAME=	stud-0.3p53
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MAINTAINER=	jym@NetBSD.org
 HOMEPAGE=	http://github.com/bumptech/stud
@@ -13,9 +13,11 @@ MASTER_SITES=	http://rohara.fedorapeople.org/stud/
 DISTNAME=	bumptech-stud-0.3-51-g0b88039
 WRKSRC=		${WRKDIR}/bumptech-stud-0b88039
 
-USE_TOOLS+=		gmake pax:run
+USE_TOOLS+=		gmake nroff pax:run
 
 BUILD_DEFS+=		STUD_USER STUD_GROUP VARBASE
+
+.include "../../mk/bsd.prefs.mk"
 
 STUD_USER?=		stud
 STUD_GROUP?=		stud
@@ -32,7 +34,7 @@ RCD_SCRIPTS=		stud
 
 EGDIR=			${PREFIX}/share/examples/stud
 OWN_DIRS=		${STUD_HOME}
-INSTALLATION_DIRS+=	bin ${EGDIR}
+INSTALLATION_DIRS+=	bin ${EGDIR} ${PKGMANDIR}/cat8
 
 FILES_SUBST+=		STUD_HOME=${STUD_HOME:Q}
 
@@ -55,8 +57,20 @@ CONF_FILES+=		${EGDIR}/stud.conf ${PKG_SYSCONFDIR}/stud.conf
 post-extract:
 	${CP} ${FILESDIR}/stud.conf ${WRKSRC}/stud.conf
 
+post-build:
+.if !empty(MANINSTALL:Mcatinstall)
+	cd ${WRKSRC} && nroff -mdoc stud.8 > stud.cat8
+.endif
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/stud.conf ${DESTDIR}${EGDIR}/stud.conf
+.if !empty(MANINSTALL:Mcatinstall)
+.  if defined(CATMAN_SECTION_SUFFIX) && !empty(CATMAN_SECTION_SUFFIX:M[Yy][Ee][Ss])
+	${INSTALL_MAN} ${WRKSRC}/stud.cat8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8/stud.8
+.  else
+	${INSTALL_MAN} ${WRKSRC}/stud.cat8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8/stud.0
+.  endif
+.endif
 
 .include "../../devel/libev/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
