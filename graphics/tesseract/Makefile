@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/01/26 21:38:01 adam Exp $
+# $NetBSD: Makefile,v 1.13 2014/09/23 19:07:06 jperkin Exp $
 #
 
 DISTNAME=	tesseract-2.04
@@ -14,6 +14,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/tesseract-ocr/
 COMMENT=	Commercial quality open source OCR engine
 LICENSE=	apache-2.0
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 INSTALLATION_DIRS=	libexec share/doc/tesseract share/tesseract
 
