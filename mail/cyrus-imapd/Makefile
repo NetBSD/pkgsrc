@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2014/05/29 23:36:45 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2014/09/23 14:40:28 jperkin Exp $
 
 DISTNAME=	cyrus-imapd-2.2.13p1
 PKGREVISION=	12
@@ -49,6 +49,8 @@ CONFIGURE_ARGS+=	--without-zephyr
 CONFIGURE_ARGS+=	--without-ucdsnmp
 
 CONFIGURE_ARGS+=	andrew_runpath_switch=${COMPILER_RPATH_FLAG}
+
+LDFLAGS.SunOS+=		-lsocket
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cyrus-imapd
 PKG_SUPPORTED_OPTIONS=	gssapi kerberos kerberos4 ldap
