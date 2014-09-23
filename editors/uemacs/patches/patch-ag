@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.5 2012/05/14 07:07:41 dholland Exp $
+$NetBSD: patch-ag,v 1.6 2014/09/23 22:40:27 jperkin Exp $
 
 - needs term.h for termcap
 - get terminal size from termcap only if LINES and COLUMNS aren't set
@@ -11,17 +11,19 @@ $NetBSD: patch-ag,v 1.5 2012/05/14 07:07:41 dholland Exp $
 - use correct type signature for signal handler
 - use time_t for calling time()
 
---- src/unix.c.orig	1995-11-18 21:36:58.000000000 +0000
+--- src/unix.c.orig	1995-11-18 16:36:58.000000000 +0000
 +++ src/unix.c
-@@ -123,6 +123,7 @@ int scnothing()
+@@ -123,6 +123,9 @@ int scnothing()
  #include <curses.h>			/* Curses screen output		*/
  #undef WINDOW				/* Oh no!			*/
  #endif /* CURSES */
++#ifndef __sun
 +#include <termcap.h>
++#endif
  
  /** Completion include files **/
  /** Directory accessing: Try and figure this out... if you can! **/
-@@ -816,9 +817,19 @@ int scopen()
+@@ -816,9 +819,19 @@ int scopen()
  		exit(1);
  	}
  
@@ -44,7 +46,7 @@ $NetBSD: patch-ag,v 1.5 2012/05/14 07:07:41 dholland Exp $
  	if (term.t_nrow < 3 || term.t_ncol < 3) {
  		puts("Screen size is too small!");
  		exit(1);
-@@ -956,6 +967,7 @@ int sckopen()
+@@ -956,6 +969,7 @@ int sckopen()
  	dis_ufk();
  #endif
  #endif
@@ -52,7 +54,7 @@ $NetBSD: patch-ag,v 1.5 2012/05/14 07:07:41 dholland Exp $
  }
  
  /* close keyboard -hm */
-@@ -968,6 +980,7 @@ int sckclose()
+@@ -968,6 +982,7 @@ int sckclose()
  	dis_sfk();
  #endif
  #endif
@@ -60,7 +62,7 @@ $NetBSD: patch-ag,v 1.5 2012/05/14 07:07:41 dholland Exp $
  }
  
  /** Move cursor **/
-@@ -1063,7 +1076,7 @@ int state;				/* New state			*/
+@@ -1063,7 +1078,7 @@ int state;				/* New state			*/
  }
  
  /** Beep **/
@@ -69,7 +71,7 @@ $NetBSD: patch-ag,v 1.5 2012/05/14 07:07:41 dholland Exp $
  {
  #if TERMCAP || TERMIOS
  #if !NOISY
-@@ -1085,7 +1098,9 @@ scbeep()
+@@ -1085,7 +1100,9 @@ scbeep()
  }
  
  #if COLOR
@@ -79,7 +81,7 @@ $NetBSD: patch-ag,v 1.5 2012/05/14 07:07:41 dholland Exp $
  
  /** Set foreground color **/
  int scfcol(color)
-@@ -1230,11 +1245,9 @@ int bktoshell(f, n)
+@@ -1230,11 +1247,9 @@ int bktoshell(f, n)
  /** Get time of day **/
  char * timeset()
  {
@@ -92,7 +94,7 @@ $NetBSD: patch-ag,v 1.5 2012/05/14 07:07:41 dholland Exp $
  	/* Get system time */
  	time(&buf);
  
-@@ -1553,7 +1566,6 @@ char *fspec;				/* Filename specificatio
+@@ -1553,7 +1568,6 @@ char *fspec;				/* Filename specificatio
  /** Get next filename from pattern **/
  char *getnfile()
  {
@@ -100,7 +102,7 @@ $NetBSD: patch-ag,v 1.5 2012/05/14 07:07:41 dholland Exp $
  	struct DIRENTRY * dp;
  	struct stat fstat;
  
-@@ -1706,15 +1718,15 @@ char *name;	/* name of directory to dele
+@@ -1706,15 +1720,15 @@ char *name;	/* name of directory to dele
  /*
   * Window size changes handled via signals.
   */
