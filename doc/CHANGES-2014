@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3603 2014/09/23 10:54:09 he Exp $
+$NetBSD: CHANGES-2014,v 1.3604 2014/09/23 13:47:47 tron Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS IN A FREEZE FOR NEW
 # FUNCTIONALITY IN PREPARATION FOR PKGSRC-2014Q3 BRANCH.  NO NEW
@@ -4582,3 +4582,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/moodle to 2.7.2 [wen 2014-09-23]
 	Updated lang/nodejs to 0.10.32 [fhajny 2014-09-23]
 	Added net/p5-Net-SSH-Expect version 1.09 [he 2014-09-23]
+	Updated databases/phpmyadmin to 4.2.9 [tron 2014-09-23]
