@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/08 09:21:09 asau Exp $
+# $NetBSD: Makefile,v 1.18 2014/09/23 14:29:50 jperkin Exp $
 #
 
 DISTNAME=	mpeg_encode-1.5b-src
@@ -14,6 +14,8 @@ COMMENT=	The Parallel Berkeley MPEG Encoder
 WRKSRC=			${WRKDIR}/mpeg_encode
 USE_TOOLS+=		gmake
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 post-build:
 	@cd ${WRKSRC}/convert && \
