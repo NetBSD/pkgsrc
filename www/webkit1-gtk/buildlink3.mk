@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.1 2014/08/03 22:07:39 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2014/09/23 18:19:22 joerg Exp $
 
 BUILDLINK_TREE+=	webkit-gtk
 
 .if !defined(WEBKIT_GTK_BUILDLINK3_MK)
 WEBKIT_GTK_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.webkit-gtk+=	webkit-gtk>=1.1.3
+BUILDLINK_API_DEPENDS.webkit-gtk+=	webkit-gtk>=1.1.3<2
 BUILDLINK_ABI_DEPENDS.webkit-gtk+=	webkit-gtk>=1.10.2nb14<2
 BUILDLINK_PKGSRCDIR.webkit-gtk?=	../../www/webkit1-gtk
 
