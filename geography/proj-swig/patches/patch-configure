@@ -1,0 +1,21 @@
+$NetBSD: patch-configure,v 1.1 2014/09/23 19:39:17 joerg Exp $
+
+--- configure.orig	2014-09-23 19:10:20.000000000 +0000
++++ configure
+@@ -19545,14 +19545,14 @@ EOD`
+ 		then
+ 			# use the official shared library
+ 			ac_python_library=`echo "$ac_python_library" | sed "s/^lib//"`
+-			PYTHON_LDFLAGS="-L$ac_python_libdir -l$ac_python_library"
++			PYTHON_LDFLAGS="-Wl,-rpath,$ac_python_libdir -L$ac_python_libdir -l$ac_python_library"
+ 		else
+ 			# old way: use libpython from python_configdir
+ 			ac_python_libdir=`$PYTHON -c \
+ 			  "from distutils.sysconfig import get_python_lib as f; \
+ 			  import os; \
+ 			  print (os.path.join(f(plat_specific=1, standard_lib=1), 'config'));"`
+-			PYTHON_LDFLAGS="-L$ac_python_libdir -lpython$ac_python_version"
++			PYTHON_LDFLAGS="-Wl,-rpath,$ac_python_libdir -L$ac_python_libdir -lpython$ac_python_version"
+ 		fi
+ 
+ 		if test -z "PYTHON_LDFLAGS"; then
