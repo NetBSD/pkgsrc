@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/08/04 09:26:24 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2014/09/23 21:41:07 jperkin Exp $
 
 DISTNAME=	Surfer-0.2.6
 PKGNAME=	deforaos-surfer-0.2.6
@@ -20,6 +20,9 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 AUTO_MKDIRS=	yes
+
+OPSYSVARS+=		MAKE_ENV
+MAKE_ENV.SunOS+=	LDFLAGSF="-lnsl -lresolv"
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/download.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/download.1
