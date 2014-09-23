@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/23 17:18:17 asau Exp $
+# $NetBSD: Makefile,v 1.23 2014/09/23 14:59:24 jperkin Exp $
 #
 
 DISTNAME=	dhid-5.2
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.dhis.org/
 COMMENT=	Dynamic Host Information System client daemon
 
 RCD_SCRIPTS=	dhid
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 INSTALLATION_DIRS=	sbin share/doc/dhid
 
