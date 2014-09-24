@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2014/06/09 12:34:26 ryoon Exp $
+$NetBSD: patch-ab,v 1.5 2014/09/24 11:10:38 jperkin Exp $
 
 --- aplay/aplay.c.orig	2013-07-09 15:28:37.000000000 +0000
 +++ aplay/aplay.c
@@ -8,7 +8,7 @@ $NetBSD: patch-ab,v 1.4 2014/06/09 12:34:26 ryoon Exp $
  #include <sys/types.h>
 +#if defined(__linux__)
  #include <endian.h>
-+#else
++#elif !defined(__sun)
 +#include <sys/endian.h>
 +#endif
  #include "aconfig.h"

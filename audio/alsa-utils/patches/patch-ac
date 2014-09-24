@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.3 2012/02/15 19:46:31 hans Exp $
+$NetBSD: patch-ac,v 1.4 2014/09/24 11:10:38 jperkin Exp $
 
---- aplay/formats.h.orig	2008-12-18 22:21:49.000000000 -0500
+--- aplay/formats.h.orig	2013-07-09 15:28:37.000000000 +0000
 +++ aplay/formats.h
 @@ -1,8 +1,20 @@
  #ifndef FORMATS_H
