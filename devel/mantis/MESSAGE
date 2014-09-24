@@ -1,8 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2006/05/28 15:17:47 adrianp Exp $
+$NetBSD: MESSAGE,v 1.6 2014/09/24 01:06:26 rodent Exp $
 
 To complete the setup you will need to read the INSTALL guide in order
-to setup mySQL properly.  In particular secion 3 of the document deals
+to setup MySQL properly.  In particular secion 3 of the document deals
 with database setup.
 
 The following URL can be used to complete the installation and database
