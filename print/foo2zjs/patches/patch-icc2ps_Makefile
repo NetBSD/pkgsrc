@@ -1,4 +1,4 @@
-$NetBSD: patch-icc2ps_Makefile,v 1.1 2012/07/25 17:15:45 imil Exp $
+$NetBSD: patch-icc2ps_Makefile,v 1.2 2014/09/24 13:44:21 jperkin Exp $
 
 Fix PREFIX path
 
@@ -16,3 +16,12 @@ Fix PREFIX path
  
  SRC=	icc2ps.c xgetopt.c
  LIB=	cmscam97.c cmscnvrt.c cmserr.c cmsgamma.c cmsgmt.c cmsintrp.c cmsio1.c \
+@@ -12,7 +11,7 @@ LIB=	cmscam97.c cmscnvrt.c cmserr.c cmsg
+ CFLAGS=	-O3
+ INSTALL=install
+ ifeq ($(UNAME),SunOS)
+-    INSTALL=/usr/ucb/install
++    #INSTALL=/usr/ucb/install
+     CC=gcc
+ endif
+ 

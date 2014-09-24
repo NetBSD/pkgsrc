@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/08 13:45:38 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/09/24 13:44:21 jperkin Exp $
 #
 
 DISTNAME=	foo2zjs
@@ -11,7 +11,7 @@ HOMEPAGE=	http://foo2zjs.rkkda.com/
 COMMENT=	Printer driver for Zenographics ZjStream wire protocol
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake groff
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	share/foo2zjs share/foomatic/ppd/foo2zjs
