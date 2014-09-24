@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2014/08/20 19:39:02 wiz Exp $
+$NetBSD: distinfo,v 1.8 2014/09/24 12:49:38 jperkin Exp $
 
 SHA1 (luma-3.0.7.zip) = 6b82ddc1ac5948b02a2843c3a4dd76cf6c797494
 RMD160 (luma-3.0.7.zip) = 30577b1afae57734c4e1b7fdff0dfc4fd7543001
 Size (luma-3.0.7.zip) = 815984 bytes
-SHA1 (patch-luma_luma.py) = fc8e0a171303cc85a5ef7c51d802480ffac8ee6e
-SHA1 (patch-setup.py) = 3e6864a9f1d4a9a88ed47b431717ed37093b9024
+SHA1 (patch-luma_luma.py) = fc0639d17d1b6fcdd97f1c8193b363ee748a6672
+SHA1 (patch-setup.py) = 55809b4ccc654d6a8c75cc3c12f490718caf265f
