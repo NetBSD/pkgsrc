@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2014/08/23 21:12:02 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2014/09/24 11:27:51 jperkin Exp $
 
 DISTNAME=	tuxpaint-0.9.22
 CATEGORIES=	graphics
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND public-domain AND modified-bsd
 
 BUILD_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 
-USE_TOOLS+=		bash:run gmake msgfmt pkg-config
+USE_TOOLS+=		bash:run gmake gsed msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES
 MANCOMPRESSED=		YES
 
@@ -29,6 +29,7 @@ MAKE_FLAGS+=		CPPFLAGS=${CPPFLAGS:Q}
 MAKE_FLAGS+=		LDFLAGS=${LDFLAGS:Q}
 MAKE_FLAGS+=		CHMOD=${CHMOD:Q}
 MAKE_FLAGS+=		PREFIX=${PREFIX}
+MAKE_FLAGS+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
 MAKE_FLAGS+=		MAN_PREFIX=$(DESTDIR)$(PREFIX)/${PKGMANDIR}/
 MAKE_FLAGS+=		GPERF=${PREFIX}/bin/gperf
 EGDIR=			${PREFIX}/share/examples/tuxpaint
@@ -49,6 +50,7 @@ MAKE_FLAGS+=		LIBS=${LIBS:M*:Q}
 LIBS+=			-liconv
 LIBS+=			-lpng
 LIBS.SunOS+=		-lsocket -lnsl
+LDFLAGS.SunOS+=		-lsocket
 
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/share/tuxpaint/fonts/locale/zh_tw_docs/maketuxfont.py
