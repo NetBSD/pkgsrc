@@ -1,4 +1,4 @@
-$NetBSD: patch-luma_luma.py,v 1.1 2014/08/20 19:24:28 wiz Exp $
+$NetBSD: patch-luma_luma.py,v 1.2 2014/09/24 12:49:38 jperkin Exp $
 
 Adding luma library path to search path.
 Remove some variables that should be set by __init__.py, but aren't;
