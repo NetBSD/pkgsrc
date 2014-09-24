@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/05/29 23:35:34 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2014/09/24 13:50:54 jperkin Exp $
 
 DISTNAME=	cook-2.26
 PKGREVISION=	5
@@ -9,7 +9,7 @@ MAINTAINER=	groo@NetBSD.org
 HOMEPAGE=	http://miller.emu.id.au/pmiller/software/cook/
 COMMENT=	More powerful replacement for the traditional make(1) tool
 
-USE_TOOLS+=	msgfmt yacc perl:run
+USE_TOOLS+=	groff msgfmt yacc perl:run
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	no
 
