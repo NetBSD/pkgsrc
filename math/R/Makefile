@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.151 2014/07/24 21:33:03 markd Exp $
+# $NetBSD: Makefile,v 1.152 2014/09/24 10:53:22 jperkin Exp $
 
 DISTNAME=		R-3.1.1
 CATEGORIES=		math
@@ -129,6 +129,10 @@ INSTALL_SCRIPT=		${INSTALL} ${COPY} -m ${BINMODE}
 #BUILD_DEPENDS+=		tex-mptopdf-[0-9]*:../../graphics/tex-mptopdf
 #BUILD_DEPENDS+=		tex-pdftex-def-[0-9]*:../../print/tex-pdftex
 
+SUBST_CLASSES+=		fixwrap
+SUBST_STAGE.fixwrap=	post-build
+SUBST_FILES.fixwrap=	libtool
+SUBST_SED.fixwrap=	-e "s,${WRAPPER_BINDIR}/libtool-fortran,${PKG_LIBTOOL},g"
 
 BUILDLINK_API_DEPENDS.zlib+= zlib>=1.2.3
 BUILDLINK_API_DEPENDS.bzip2+= bzip2>=1.0.5
