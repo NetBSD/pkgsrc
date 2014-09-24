@@ -1,6 +1,8 @@
-$NetBSD: patch-ae,v 1.5 2010/06/02 12:26:13 adam Exp $
+$NetBSD: patch-ae,v 1.6 2014/09/24 14:33:28 jperkin Exp $
 
---- kbabel/kbabeldict/modules/dbsearchengine/database.cpp.orig	2010-06-01 14:22:58.000000000 +0000
+Avoid "error: call of overloaded <func> is ambiguous".
+
+--- kbabel/kbabeldict/modules/dbsearchengine/database.cpp.orig	2005-09-10 08:20:53.000000000 +0000
 +++ kbabel/kbabeldict/modules/dbsearchengine/database.cpp
 @@ -341,9 +341,7 @@ DataBaseManager::openDataBase ()
      db_create (&indexDb, 0, 0);
@@ -117,4 +119,13 @@ $NetBSD: patch-ae,v 1.5 2010/06/02 12:26:13 adam Exp $
 -#endif
      nrec = stat->bt_nkeys;
      free (stat);
+ 
+@@ -1169,7 +1142,7 @@ DataBaseManager::addLocation (QString wo
+ 		else
+ 		  {
+ 		      step =
+-			  (abs (d[loc] - location) * num) / totalrecord + 1;
++			  (abs ((int)d[loc] - (int)location) * num) / totalrecord + 1;
+ 
+ 		  }
  
