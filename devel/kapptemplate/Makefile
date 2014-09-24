@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/08/22 11:24:28 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/09/24 14:35:33 jperkin Exp $
 
 DISTNAME=	kapptemplate-${_KDE_VERSION}
 PKGREVISION=	4
@@ -7,7 +7,7 @@ COMMENT=	KDE Template Generator
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake tar
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 
