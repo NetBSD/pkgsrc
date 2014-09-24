@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/04/09 07:27:09 obache Exp $
+# $NetBSD: Makefile,v 1.6 2014/09/24 12:24:40 jperkin Exp $
 
 .include "../../x11/qt5/Makefile.common"
 
@@ -18,7 +18,7 @@ LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake gsed intltool pkg-config
+USE_TOOLS+=	gmake gsed intltool pkg-config xgettext
 BUILDLINK_DEPMETHOD.gtk2=	build
 
 USE_LANGUAGES=	c c++
@@ -26,6 +26,9 @@ USE_LANGUAGES=	c c++
 PKGCONFIG_OVERRIDE+=	uim.pc.in
 
 CONFIGURE_ENV+=		QMAKE5=${QTPREFIX}/bin/qmake
+
+OPSYSVARS+=		CONFIGURE_ENV
+CONFIGURE_ENV.SunOS+=	ac_cv_func_strcasecmp=yes
 
 CONFIGURE_ARGS+=	--with-qt5-immodule
 CONFIGURE_ARGS+=	--disable-emacs
