@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/08/17 19:07:41 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2014/09/24 13:36:53 jperkin Exp $
 
 DISTNAME=	Fsdb-2.50
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 CONFLICTS=	jdb-[0-9]*
 
-USE_TOOLS+=	perl
+USE_TOOLS+=	groff perl
 
 DEPENDS+=	p5-HTML-Parser>=3.69:../../www/p5-HTML-Parser
 DEPENDS+=	p5-Text-CSV_XS>=0.91:../../textproc/p5-Text-CSV_XS
