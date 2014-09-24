@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/04/09 07:27:14 obache Exp $
+# $NetBSD: Makefile,v 1.13 2014/09/24 12:04:14 jperkin Exp $
 #
 
 DISTNAME=	grilo-plugins-0.2.9
@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool
+USE_TOOLS+=	pkg-config intltool xgettext
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../net/grilo/buildlink3.mk"
