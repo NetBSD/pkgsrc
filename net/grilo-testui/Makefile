@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/05/05 00:48:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2014/09/24 11:48:20 jperkin Exp $
 #
 
 DISTNAME=	grilo-0.2.7
@@ -18,7 +18,7 @@ PATCHDIR=	${.CURDIR}/../../net/grilo/patches
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool
+USE_TOOLS+=	pkg-config intltool xgettext
 USE_LANGUAGES=	c99
 
 BUILD_DIRS=	tools/grilo-test-ui
