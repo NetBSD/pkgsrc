@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/05/17 16:10:42 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/09/24 11:56:04 jperkin Exp $
 
 DISTNAME=	appdata_tools_0_1_7
 PKGNAME=	${DISTNAME:S/appdata_tools_/appdata-tools-/:S/_/./g}
@@ -14,8 +14,9 @@ LICENSE=	gnu-gpl-v2
 BUILD_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 
-WRKSRC=	${WRKDIR}/appdata-tools-${DISTNAME}
-USE_TOOLS+=	autoconf automake autoreconf gmake intltool intltoolize pkg-config
+WRKSRC=		${WRKDIR}/appdata-tools-${DISTNAME}
+USE_TOOLS+=	autoconf automake autoreconf gmake intltool intltoolize
+USE_TOOLS+=	pkg-config xgettext
 GNU_CONFIGURE=	yes
 
 pre-configure:
