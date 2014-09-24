@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2014/08/22 11:24:29 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2014/09/24 14:57:29 jperkin Exp $
 #
 
 DISTNAME=	kdevplatform-1.6.0
@@ -18,6 +18,7 @@ USE_TOOLS+=	pkg-config perl msgfmt bash:run
 USE_LANGUAGES=	c c++
 
 CXXFLAGS.Linux+=	-fpermissive
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 REPLACE_BASH+= \
 	util/kdevplatform_shell_environment.sh \
