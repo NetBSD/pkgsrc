@@ -1,0 +1,24 @@
+$NetBSD: patch-doc_opencm.texi,v 1.1 2014/09/24 21:25:54 jperkin Exp $
+
+--- doc/opencm.texi.orig	2003-02-15 04:53:00.000000000 +0000
++++ doc/opencm.texi
+@@ -176,7 +176,7 @@ coming.}
+ * Holding Buffer::       Text I don't know what to do with.
+ @end menu
+ 
+-@section Why Another CM System?
++@chapter Why Another CM System?
+ 
+ In the open source world, the current ``gold standard'' for
+ configuration management is @uref{http://www.cvshome.org,CVS}. CVS has
+@@ -218,8 +218,8 @@ of disconnected development.
+ 
+ Effective disconnected development needs to preserve history as well as
+ patches. Patch integration just isn't effective or scalable, as the
+-Linux (@fix{what is an appropriate link for Linux?}) project has
+-demonstrated.
++Linux project has demonstrated.
++@fix{what is an appropriate link for Linux?}
+ @end itemize
+ 
+ There are several existing alternatives to CVS, each with strengths and
