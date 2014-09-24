@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2013/06/30 11:47:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.43 2014/09/24 01:06:26 rodent Exp $
 
-DISTNAME=	mantisbt-1.2.15
+DISTNAME=	mantisbt-1.2.17
 PKGNAME=	${DISTNAME:S/mantisbt/mantis/}
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mantisbt/}
@@ -15,18 +15,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.0.6:../../databases/php-mysql
 
 NO_BUILD=	YES
 
-USE_TOOLS+=	pax
-
-.include "../../mk/bsd.prefs.mk"
-
-PKG_OPTIONS_VAR=	PKG_OPTIONS.mantis
-PKG_SUPPORTED_OPTIONS=	charts
-
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mcharts)
-DEPENDS+=	${PHP_PKG_PREFIX}-jpgraph-[0-9]*:../../graphics/php-jpgraph
-.endif
+USE_TOOLS+=	bash:run pax
 
 APACHE_USER?=		www
 BUILD_DEFS+=		APACHE_USER
@@ -47,14 +36,21 @@ SUBST_FILES.conf=	mantis.conf
 SUBST_SED.conf=		-e "s|@MANTIS_HOME@|${MANTIS_HOME}|g"
 SUBST_MESSAGE.conf=	Fixing configuration files.
 
+REPLACE_BASH+=		scripts/travis_before_script.sh
+
+REPLACE_INTERPRETER+=	php
+REPLACE.php.old=	/usr/bin/php
+REPLACE.php.new=	${PREFIX}/bin/php
+REPLACE_FILES.php=	scripts/*.php
+
+INSTALLATION_DIRS+=	share/doc/mantis ${EGDIR} ${MANTIS_HOME}
+
+.include "options.mk"
+
 post-extract:
 	${CP} ${FILESDIR}/mantis.conf ${WRKSRC}
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/mantis
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
-	${INSTALL_DATA_DIR} ${DESTDIR}${MANTIS_HOME}
-
 	${INSTALL_DATA} ${WRKSRC}/doc/CUSTOMIZATION ${DESTDIR}${PREFIX}/share/doc/mantis
 	${INSTALL_DATA} ${WRKSRC}/doc/INSTALL ${DESTDIR}${PREFIX}/share/doc/mantis
 	${MV} ${WRKSRC}/config_inc.php.sample ${WRKSRC}/config_inc.php
