@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2014/06/26 20:10:38 asau Exp $
+# $NetBSD: Makefile,v 1.31 2014/09/24 11:23:57 jperkin Exp $
 #
 
 DISTNAME=	star-1.4.3
@@ -14,6 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=	gmake
 MAKE_FLAGS+=	INS_BASE=${DESTDIR}${PREFIX}
+MAKE_FLAGS+=	RUNPATH=
 MAKE_FLAGS+=	MANDIR=${PKGMANDIR}
 
 .include "../../mk/bsd.prefs.mk"
