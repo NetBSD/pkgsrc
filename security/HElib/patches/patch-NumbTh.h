@@ -1,6 +1,6 @@
-$NetBSD: patch-NumbTh.h,v 1.1 2013/05/21 16:37:46 joerg Exp $
+$NetBSD: patch-NumbTh.h,v 1.2 2014/09/24 12:39:28 jperkin Exp $
 
---- NumbTh.h.orig	2013-05-21 14:43:10.000000000 +0000
+--- NumbTh.h.orig	2013-04-30 21:31:26.000000000 +0000
 +++ NumbTh.h
 @@ -32,13 +32,18 @@
  #include <NTL/mat_GF2E.h>
