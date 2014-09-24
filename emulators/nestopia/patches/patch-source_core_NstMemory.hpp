@@ -1,6 +1,6 @@
-$NetBSD: patch-source_core_NstMemory.hpp,v 1.1 2012/12/25 21:10:29 joerg Exp $
+$NetBSD: patch-source_core_NstMemory.hpp,v 1.2 2014/09/24 12:32:26 jperkin Exp $
 
---- source/core/NstMemory.hpp.orig	2012-12-25 16:47:49.000000000 +0000
+--- source/core/NstMemory.hpp.orig	2008-03-26 23:31:44.000000000 +0000
 +++ source/core/NstMemory.hpp
 @@ -763,7 +763,7 @@ namespace Nes
  				for (uint i=0; i < MEM_NUM_PAGES; ++i)
