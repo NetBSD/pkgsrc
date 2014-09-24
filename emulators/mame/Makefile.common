@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2014/07/25 15:28:56 wiz Exp $
+# $NetBSD: Makefile.common,v 1.17 2014/09/24 20:33:31 wiz Exp $
 #
 # used by emulators/mame/Makefile
 # used by emulators/mess/Makefile
@@ -14,6 +14,7 @@ RESTRICTED=		selling is not allowed
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
+BUILD_DEPENDS+=		dos2unix-[0-9]*:../../converters/dos2unix
 DEPENDS+=		liberation-ttf-[0-9]*:../../fonts/liberation-ttf
 
 WRKSRC=			${WRKDIR}
@@ -64,6 +65,11 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.151
 post-extract:
 	cd ${WRKDIR} && ${.CURDIR}/../../mk/extract/extract mame.zip
 	rm ${WRKDIR}/mame.zip
+	# This needs to be done for every file that is patched.
+	${RUN} for f in src/lib/web/mongoose.c src/osd/osdcore.h; do    \
+		${CP} ${WRKSRC}/$${f} ${WRKSRC}/$${f}.bak;              \
+		${CAT} ${WRKSRC}/$${f}.bak | dos2unix >${WRKSRC}/$${f}; \
+	done
 
 .include "../../lang/python/application.mk"
 .include "../../devel/GConf/buildlink3.mk"
