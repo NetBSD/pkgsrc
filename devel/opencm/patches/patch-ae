@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.7 2006/04/19 20:50:47 joerg Exp $
+$NetBSD: patch-ae,v 1.8 2014/09/24 21:25:54 jperkin Exp $
 
 --- configure.orig	2004-10-25 01:09:36.000000000 +0000
 +++ configure
@@ -16,7 +16,7 @@ $NetBSD: patch-ae,v 1.7 2006/04/19 20:50:47 joerg Exp $
          continue;
        fi
 -      if test -f "$dir/include/krb5.h"; then
-+      if test -f "$dir/include/krb5/krb5.h"; then
++      if test -f "$dir/include/krb5/krb5.h" -o -f "$dir/include/kerberosv5/krb5.h" ; then
          vl_cv_lib_kerberos="$dir"
          break;
        fi
