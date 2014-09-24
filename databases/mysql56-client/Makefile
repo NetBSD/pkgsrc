@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/06/02 07:30:38 adam Exp $
+# $NetBSD: Makefile,v 1.14 2014/09/24 10:02:39 jperkin Exp $
 
 PKGNAME=	${DISTNAME:S/-/-client-/}
 SVR4_PKGNAME=	mysqc
@@ -24,6 +24,11 @@ REPLACE_PERL+=	scripts/mysqlaccess.sh
 REPLACE_PERL+=	scripts/mysqld_multi.sh
 REPLACE_PERL+=	scripts/mysqldumpslow.sh
 REPLACE_PERL+=	scripts/mysqlhotcopy.sh
+
+SUBST_CLASSES+=		fixwrap
+SUBST_STAGE.fixwrap=	post-build
+SUBST_FILES.fixwrap=	scripts/mysqlbug
+SUBST_SED.fixwrap=	-e "s,${WRAPPER_BINDIR}/,,g"
 
 # Replace manual pages which only include other ones with a symbolic link
 # It is for manual compression is activated or mandoc(1) is used.
