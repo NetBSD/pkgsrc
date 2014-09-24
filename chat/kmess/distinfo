@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2012/02/16 15:07:48 hans Exp $
+$NetBSD: distinfo,v 1.12 2014/09/24 16:28:40 jperkin Exp $
 
 SHA1 (kmess-1.4.3.tar.gz) = 1613c65c7b9ffaa6a1f55396297d25ab7ee3103d
 RMD160 (kmess-1.4.3.tar.gz) = 280bab4275903389d2f7d5b3884df937a83addf7
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = 90a3f7af4e2ded731b233b87e075e1df10709828
 SHA1 (patch-af) = 1fb15e95b763089386adcdd500636f3e2fc16e09
 SHA1 (patch-config.h.in) = 333f6c3213afd544e0f4606d5710dd8866f56c21
 SHA1 (patch-kmess_prefix.cpp) = a0a1bba175df79f5d370d9ddc7c6b5fe0a7c4a47
+SHA1 (patch-kmess_xautolock.cpp) = fcd4dc42dba040cf522da2ab1c99cfb9089beb8b
