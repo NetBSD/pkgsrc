@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/07/22 17:36:49 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/09/24 13:30:59 jperkin Exp $
 
 DISTNAME=	libpgf-src-6.14.12
 PKGNAME=	${DISTNAME:S/-src//}
@@ -20,7 +20,8 @@ USE_LIBTOOL=	yes
 BUILD_DEPENDS+=	dos2unix-[0-9]*:../../converters/dos2unix
 
 pre-patch:
-	${RUN} dos2unix ${WRKSRC}/configure.ac
+	${CP} ${WRKSRC}/configure.ac ${WRKSRC}/configure.ac.orig
+	${CAT} ${WRKSRC}/configure.ac.orig | dos2unix >${WRKSRC}/configure.ac 
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && ./autogen.sh
