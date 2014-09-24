@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/12/12 16:26:51 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/09/24 22:24:50 jperkin Exp $
 
 DISTNAME=	marathon-evil-199704
 CATEGORIES=	games
@@ -25,7 +25,7 @@ MESSAGE_SUBST+=	SCENARIO_BASE="${SCENARIO_BASE}"
 
 post-extract:
 	#clean up irregular author packaging
-	find -d ${WRKDIR} -name CVS -exec rm -rf {} \;
+	find ${WRKDIR} -depth -name CVS -exec rm -rf {} \;
 	find ${WRKDIR} -name .#* -exec rm -rf {} \;
 	${CHMOD} 644 ${WRKDIR}/Marathon\ EVIL/Cursed*
 	${CHMOD} 644 ${WRKDIR}/Marathon\ EVIL/Scripts/*
