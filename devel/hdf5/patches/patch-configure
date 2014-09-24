@@ -1,10 +1,20 @@
-$NetBSD: patch-configure,v 1.1 2012/12/09 00:07:38 adam Exp $
+$NetBSD: patch-configure,v 1.2 2014/09/24 10:40:57 jperkin Exp $
 
 Unreverse order of CPPFLAGS.
+Avoid reference to WRAPPER_BINDIR in final binaries.
 
---- configure.orig	2012-10-27 00:14:59.000000000 +0000
+--- configure.orig	2013-11-21 15:14:04.000000000 +0000
 +++ configure
-@@ -30787,9 +30787,9 @@ if test -n "$AM_CPPFLAGS"; then
+@@ -30801,7 +30801,7 @@ else
+   CC_VERSION="$CC";
+   for x in `echo $PATH | sed -e 's/:/ /g'`; do
+     if test -x $x/$CC_NOFLAGS; then
+-      CC_VERSION="$x/$CC"
++      #CC_VERSION="$x/$CC"
+       break
+     fi
+   done
+@@ -30902,9 +30902,9 @@ if test -n "$AM_CPPFLAGS"; then
          d="-I${ROOT}/${d}"
          ;;
      esac
