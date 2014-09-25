@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2013/06/04 22:16:50 tron Exp $
+# $NetBSD: Makefile,v 1.15 2014/09/25 15:08:29 jperkin Exp $
 
 DISTNAME=	tvtime-1.0.2
 PKGREVISION=	9
@@ -22,6 +22,7 @@ CONF_FILES=	share/examples/tvtime/tvtime.xml ${PKG_SYSCONFDIR}/tvtime.xml
 pre-configure:
 	(cd ${WRKSRC} && autoreconf -vif)
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
