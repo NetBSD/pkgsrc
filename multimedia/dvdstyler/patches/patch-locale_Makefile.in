@@ -1,0 +1,15 @@
+$NetBSD: patch-locale_Makefile.in,v 1.1 2014/09/25 15:06:23 jperkin Exp $
+
+Fix pkglocaledir.
+
+--- locale/Makefile.in.orig	2013-10-27 19:24:57.000000000 +0000
++++ locale/Makefile.in
+@@ -8,7 +8,7 @@ LINGUAS=ar ca cs da de el es es_ar eu fi
+ 
+ prefix=@prefix@
+ datarootdir=@datarootdir@
+-DATADIR=@datadir@
++DATADIR=@localedir@
+ INSTALL=@INSTALL@
+ 
+ # the programs we use (TODO: use configure to detect them)
