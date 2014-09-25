@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/07/15 02:02:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2014/09/25 19:34:46 jperkin Exp $
 
 DISTNAME=	xfsprogs-2.7.3.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -11,10 +11,14 @@ HOMEPAGE=	http://oss.sgi.com/projects/xfs/
 COMMENT=	XFS filesystem manipulation utilities
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake autoconf msgfmt
+USE_TOOLS+=	gmake autoconf msgmerge
 USE_LIBTOOL=	yes
-CONFIGURE_ARGS+=--enable-readline
-CONFIGURE_ENV+=	INSTALL_USER=${ROOT_USER} INSTALL_GROUP=${ROOT_GROUP}
+
+CONFIGURE_ARGS+=	--enable-readline
+CONFIGURE_ENV+=		INSTALL_USER=${ROOT_USER} INSTALL_GROUP=${ROOT_GROUP}
+CONFIGURE_ENV+=		MSGFMT=${TOOLS_PATH.msgfmt:Q}
+CONFIGURE_ENV+=		MSGMERGE=${TOOLS_PATH.msgmerge:Q}
+
 INSTALL_SH_OVERRIDE=	no
 
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
