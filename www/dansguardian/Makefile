@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2014/05/29 23:37:57 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2014/09/25 19:41:21 jperkin Exp $
 
 DISTNAME=	dansguardian-2.12.0.3
 PKGREVISION=	1
@@ -65,4 +65,5 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
