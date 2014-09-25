@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/02/12 23:18:32 tron Exp $
+# $NetBSD: Makefile,v 1.18 2014/09/25 19:09:26 jperkin Exp $
 
 DISTNAME=	ike-scan-1.9
 PKGREVISION=	4
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.nta-monitor.com/tools/ike-scan/
 COMMENT=	Fingerprinting IKE implementation
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-openssl
+CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	post-patch
