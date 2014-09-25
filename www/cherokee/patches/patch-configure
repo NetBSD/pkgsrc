@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2014/09/25 10:21:57 fhajny Exp $
+
+SunOS needs definitions from pam_appl.h.
+--- configure.orig	2011-10-18 19:38:22.000000000 +0000
++++ configure
+@@ -19887,6 +19887,9 @@ fi
+ # include <security/pam_modules.h>
+ #endif
+ 
++#ifdef __sun
++# include <security/pam_appl.h>
++#endif
+ "
+ if test "x$ac_cv_header_security_pam_modules_h" = xyes; then :
+   have_pam_include=yes
