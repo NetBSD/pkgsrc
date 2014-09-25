@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/03/18 11:10:52 adam Exp $
+# $NetBSD: Makefile,v 1.12 2014/09/25 20:13:09 jperkin Exp $
 
 PKGNAME=	${PHP_PKG_PREFIX}-fpm-${PHP_BASE_VERS}
 CATEGORIES=	www
@@ -7,6 +7,8 @@ HOMEPAGE=	http://php-fpm.org/
 MAINTAINER=	filip@joyent.com
 COMMENT=	FPM interface for ${PKG_PHP}
 LICENSE=	2-clause-bsd
+
+USE_TOOLS+=	pkg-config
 
 USE_PHP_EXT_PATCHES=	yes
 LIBTOOL_OVERRIDE=	# empty
