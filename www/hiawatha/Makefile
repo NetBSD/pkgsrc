@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/10/28 06:30:17 asau Exp $
+# $NetBSD: Makefile,v 1.30 2014/09/25 19:46:26 jperkin Exp $
 #
 
 DISTNAME=	hiawatha
@@ -37,7 +37,7 @@ post-extract:
 	${SED}  -e "s,@PREFIX@,${PREFIX},g" \
 		-e "s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g" \
 		< ${FILESDIR}/hiawatha.cfg > ${WRKDIR}/hiawatha.cfg
-	${CHMOD} -R go-w ${WRKSRC}
+	${CHMOD} -R go-w ${WRKSRC}/[A-Za-z0-9]*
 
 INSTALLATION_DIRS=	lib/java/hiawatha ${EGDIR}/WEBROOT/images
 
