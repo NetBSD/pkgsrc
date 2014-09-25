@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2014/04/30 14:19:41 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2014/09/25 09:32:38 jperkin Exp $
 
 DISTNAME=		stalin-0.9
 PKGREVISION=		7
@@ -13,7 +13,6 @@ COMMENT=		Aggressively optimizing Scheme compiler
 
 # Only ported to these 4 archs
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-sparc *-*-alpha *-*-mips
-NOT_FOR_BULK_PLATFORM=	SunOS-*-*
 
 UNLIMIT_RESOURCES=	stacksize datasize
 
