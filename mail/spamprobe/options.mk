@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.10 2014/05/31 15:56:27 wiz Exp $
+# $NetBSD: options.mk,v 1.11 2014/09/25 14:24:07 jperkin Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.spamprobe
 PKG_SUPPORTED_OPTIONS=		bdb gif png jpeg
-PKG_SUGGESTED_OPTIONS=		gif png jpeg
+PKG_SUGGESTED_OPTIONS=		bdb gif png jpeg
 
 .include "../../mk/bsd.options.mk"
 
