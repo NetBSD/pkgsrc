@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.39 2014/06/10 15:51:37 gdt Exp $
+# $NetBSD: Makefile.common,v 1.40 2014/09/25 21:47:06 jperkin Exp $
 
 # used by sysutils/amanda-common/Makefile
 # used by sysutils/amanda-client/Makefile
@@ -79,6 +79,8 @@ CONFIGURE_ARGS+=	--with-bsdtcp-security
 CONFIGURE_ARGS+=	--with-bsdudp-security
 CONFIGURE_ARGS+=	--with-dump-honor-nodump
 CONFIGURE_ARGS+=	--disable-installperms
+
+LDFLAGS.SunOS+=		-lsocket
 
 INSTALL_MAKE_FLAGS+=	SETUID_GROUP=${ROOT_GROUP}
 
