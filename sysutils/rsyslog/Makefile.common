@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2014/09/05 07:15:41 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.2 2014/09/25 08:49:50 fhajny Exp $
 # used by sysutils/rsyslog/Makefile
 # used by sysutils/rsyslog-dbi/Makefile
 # used by sysutils/rsyslog-gnutls/Makefile
@@ -42,6 +42,7 @@ BUILDLINK_DEPMETHOD.libuuid+=		build
 
 .include "../../devel/libestr/buildlink3.mk"
 .include "../../devel/libuuid/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../sysutils/liblogging/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
