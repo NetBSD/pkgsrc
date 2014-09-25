@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.9 2013/03/02 18:06:22 joerg Exp $
+$NetBSD: distinfo,v 1.10 2014/09/25 12:29:35 jperkin Exp $
 
 SHA1 (linpsk-0.8.1.tar.gz) = d55d8c793ecd3a4395603ebdd8e795f1dc4d20f9
 RMD160 (linpsk-0.8.1.tar.gz) = 975bbdfc0b63e516f1d5fdfe6baf10fa12899219
 Size (linpsk-0.8.1.tar.gz) = 435463 bytes
-SHA1 (patch-aa) = 7b0f37ecca00fc87badb99036ea66ce47c6b0bd5
+SHA1 (patch-aa) = ac3c504022d495c619056ad0e5fd7b8e9ff6f71c
 SHA1 (patch-ab) = 0cc21222e30d9122657e5c373b19af15c39eb883
 SHA1 (patch-ac) = 5be307963474f6879490185b47bed6e50dd51ffe
 SHA1 (patch-ad) = d9a62afada11b17730e4457e73fef7e21b8bee62
@@ -11,5 +11,7 @@ SHA1 (patch-af) = 785bf818f14b1e733321a8e6cc0f998883cffe4a
 SHA1 (patch-ag) = 490d53c18ec1cb3961e7d49ec8f551c386bcec6a
 SHA1 (patch-ai) = 192112a67a4ad8d70d4f71fbb1390a1fb26d7496
 SHA1 (patch-src_csound.cpp) = 38897d8b3b07bb3e05215a2b5d49f7aa1d02c451
+SHA1 (patch-src_csound.h) = 7d7d367ee152afc8bbf7cd3e8bf3179f1d911dcc
+SHA1 (patch-src_portaudio_pa__unix__oss.c) = eb3303ed554921d98c869c457172f7f346a7b850
 SHA1 (patch-src_textinput.cpp) = e9a3881bad34d56da61881d23a7ee2b6cc52f6bb
 SHA1 (patch-src_waveinput.cpp) = 0cd36c07772448dd203108796a0c605df2b251a5
