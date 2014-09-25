@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/08/18 09:18:23 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2014/09/25 20:02:51 jperkin Exp $
 
 DISTNAME=	sqtop-2013-12-17
 PKGNAME=	${DISTNAME:C/([0-9])-/\1/g}
@@ -15,6 +15,8 @@ DEPENDS+=	squid-[0-9]*:../../www/squid3
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../mk/bsd.prefs.mk"
 
