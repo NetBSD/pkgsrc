@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.4 2011/12/14 18:28:59 marino Exp $
+$NetBSD: patch-aa,v 1.5 2014/09/25 12:29:35 jperkin Exp $
 
 --- configure.orig	2005-03-17 20:00:57.000000000 +0000
 +++ configure
+@@ -4015,7 +4015,7 @@ echo "${ECHO_T}$QTDIR" >&6
+ # Figure out which version of Qt we are using
+ echo "$as_me:$LINENO: checking Qt version" >&5
+ echo $ECHO_N "checking Qt version... $ECHO_C" >&6
+-QT_VER=`grep 'define.*QT_VERSION_STR\W' $QTDIR/include/qglobal.h | perl -p -e 's/\D//g'`
++QT_VER=`egrep 'define.*QT_VERSION_STR[ 	]' $QTDIR/include/qglobal.h | perl -p -e 's/\D//g'`
+ case "${QT_VER}" in
+     2*)
+         QT_MAJOR="2"
 @@ -4270,7 +4270,7 @@ fi
  QT_LDADD="-L$QTDIR/lib $QT_LIB"
  if test x"$QT_IS_MT" = "xyes" ; then
