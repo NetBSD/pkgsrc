@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36.2.2 2014/08/27 22:57:04 spz Exp $
+@comment $NetBSD: PLIST,v 1.36.2.3 2014/09/25 10:11:59 spz Exp $
 share/doc/phpmyadmin/ChangeLog
 share/doc/phpmyadmin/LICENSE
 share/doc/phpmyadmin/README
@@ -581,6 +581,7 @@ share/phpmyadmin/js/tbl_select.js
 share/phpmyadmin/js/tbl_structure.js
 share/phpmyadmin/js/tbl_zoom_plot_jqplot.js
 share/phpmyadmin/js/tracekit/tracekit.js
+share/phpmyadmin/js/whitelist.php
 share/phpmyadmin/libraries/Advisor.class.php
 share/phpmyadmin/libraries/Config.class.php
 share/phpmyadmin/libraries/DBQbe.class.php
