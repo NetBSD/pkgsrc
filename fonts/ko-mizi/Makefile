@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/06/01 16:35:35 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2014/09/25 10:56:08 jperkin Exp $
 #
 
 DISTNAME=	xfntmizi-1.1-2.noarch
@@ -32,7 +32,7 @@ do-extract:
 	${MKDIR} ${WRKSRC}
 	${CP} ${.CURDIR}/../../fonts/ko-x11fonts/files/Makefile ${WRKSRC}
 	(cd ${WRKSRC}; rpm2cpio ${_DISTDIR}/${DISTFILES} | \
-	    cpio -i --make-directories *.pcf.Z)
+	    cpio -id *.pcf.Z)
 	(cd ${WRKSRC}; for i in ${MIZI_PCF}; do \
 		${GUNZIP_CMD} -c usr/lib/X11/fonts/misc/$$i.Z > $$i; \
 	done)
