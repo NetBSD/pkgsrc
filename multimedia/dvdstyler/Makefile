@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2014/09/08 21:24:45 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2014/09/25 14:53:05 jperkin Exp $
 
 DISTNAME=	DVDStyler-2.7.1
 PKGREVISION=	5
@@ -24,7 +24,7 @@ BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config msgfmt zip
+USE_TOOLS+=		gmake lex pkg-config msgfmt zip
 GNU_CONFIGURE=		yes
 LDFLAGS+=		-ljpeg
 CONFIGURE_ARGS+=	FFMPEG_PATH=${BUILDLINK_PREFIX.ffmpeg1}/bin/ffmpeg1
