@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2011/05/25 06:11:46 obache Exp $
+$NetBSD: patch-aa,v 1.6 2014/09/25 12:25:07 jperkin Exp $
 
 --- Makefile.orig	1998-07-14 13:41:40.000000000 +0000
 +++ Makefile
@@ -13,6 +13,19 @@ $NetBSD: patch-aa,v 1.5 2011/05/25 06:11:46 obache Exp $
  
  #AllDepths=16
  AllDepths=8 16 24
+@@ -18,9 +18,9 @@ ifndef TYPEOS
+ TYPEOS=$(shell uname)
+ endif
+ 
+-ifeq ($(TYPEOS),Solaris)
+-ARCH=Solaris
+-EXTRALIBS=-lsocket -lnsl -lm -lstdc++ -lucb -lposix4
++ifeq ($(TYPEOS),SunOS)
++ARCH=SunOS
++EXTRALIBS=-lsocket -lnsl -lm
+ else
+ ifeq ($(TYPEOS),IRIX)
+ ARCH=Irix
 @@ -29,13 +29,23 @@ else
  ifeq ($(TYPEOS),Linux)
  ARCH=Linux
