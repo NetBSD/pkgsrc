@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/05/29 23:36:47 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2014/09/25 13:58:23 jperkin Exp $
 
 DISTNAME=	opendmarc-1.2.0
 PKGREVISION=	1
@@ -22,7 +22,7 @@ USE_TOOLS+=	perl
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-milter=${PREFIX}
+CONFIGURE_ARGS+=	--with-milter=${BUILDLINK_PREFIX.libmilter}
 
 REPLACE_PERL=	reports/opendmarc-expire.in
 REPLACE_PERL+=	reports/opendmarc-import.in
