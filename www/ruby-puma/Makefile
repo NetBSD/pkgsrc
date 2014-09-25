@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/03/14 19:21:27 taca Exp $
+# $NetBSD: Makefile,v 1.5 2014/09/25 10:50:58 fhajny Exp $
 
 DISTNAME=	puma-2.8.1
 CATEGORIES=	www
@@ -15,4 +15,5 @@ CONFLICTS+=	ruby[1-9][0-9][0-9]-puma-[0-9]*
 USE_GCC_RUNTIME=	yes
 
 .include "../../lang/ruby/gem.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
