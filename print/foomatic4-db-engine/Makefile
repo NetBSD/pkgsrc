@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/05/29 23:37:15 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2014/09/25 17:26:56 jperkin Exp $
 #
 
 DISTNAME=	foomatic-db-engine-4.0.8
@@ -18,11 +18,17 @@ CONFIGURE_ENV+=	FOOMATIC_RIP=${LOCALBASE}/bin/foomatic-rip
 CONFIGURE_ENV+=	LOCALBASE=${LOCALBASE}
 CONFIGURE_ENV+=	CUPS_ETC=${PKG_SYSCONFBASE}/cups
 CONFIGURE_ENV+=	PERL_INSTALLDIRS=vendor
-USE_TOOLS+=	perl gmake
+USE_TOOLS+=	file perl gmake
 PERL5_PACKLIST=	auto/Foomatic/.packlist
 
 PERL5_CONFIGURE=	no
 PERL5_CONFIGURE_DIRS=	lib
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+TOOLS_PLATFORM.file=	# doesn't support -
+.endif
 
 # XXX generated but needs to be present before perl5-configure
 post-extract:
