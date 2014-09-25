@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/02/17 07:42:25 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2014/09/25 18:46:06 jperkin Exp $
 
 DISTNAME=	credns-0.2.10
 CATEGORIES=	security
@@ -11,4 +11,7 @@ LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes
 
+CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
+
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
