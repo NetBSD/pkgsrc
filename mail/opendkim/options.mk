@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2013/01/05 17:05:07 pettai Exp $
+# $NetBSD: options.mk,v 1.5 2014/09/25 13:56:50 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.opendkim
 PKG_SUPPORTED_OPTIONS=	opendkim-filter debug dkim-stats vbr
@@ -23,7 +23,7 @@ EGDIR=		${PREFIX}/share/examples/opendkim
 RCD_SCRIPTS=	opendkim
 
 CONFIGURE_ARGS+=	--enable-filter
-CONFIGURE_ARGS+=	--with-milter=${PREFIX}
+CONFIGURE_ARGS+=	--with-milter=${BUILDLINK_PREFIX.libmilter}
 
 CONF_FILES=		${EGDIR}/opendkim.conf.sample \
 			${PKG_SYSCONFDIR}/opendkim.conf
