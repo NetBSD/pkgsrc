@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2014/05/09 07:37:10 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2014/09/25 12:59:30 fhajny Exp $
 
 DISTNAME=	ScientificPython-2.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Python//}
@@ -14,6 +14,7 @@ CONFLICTS+=	py-Scientific-[0-9]*
 MAKE_ENV+=	NETCDF_PREFIX=${BUILDLINK_PREFIX.netcdf}
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
+PLIST_SUBST+=	OSNAME=${LOWER_OPSYS:S/solaris/sunos/}
 PLIST_SUBST+=	OSVER=${OS_VERSION:C/^(.).*/\1/}
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2.8.1
 
