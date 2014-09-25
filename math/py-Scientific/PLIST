@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/04/16 14:51:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2014/09/25 12:59:30 fhajny Exp $
 bin/bsp_virtual
 bin/mpipython${PYVERSSUFFIX}
 bin/task_manager
@@ -223,8 +223,8 @@ ${PYSITELIB}/Scientific/__pkginfo__.pyo
 ${PYSITELIB}/Scientific/indexing.py
 ${PYSITELIB}/Scientific/indexing.pyc
 ${PYSITELIB}/Scientific/indexing.pyo
-${PYSITELIB}/Scientific/${LOWER_OPSYS}${OSVER}/Scientific_affinitypropagation.so
-${PYSITELIB}/Scientific/${LOWER_OPSYS}${OSVER}/Scientific_interpolation.so
-${PYSITELIB}/Scientific/${LOWER_OPSYS}${OSVER}/Scientific_netcdf.so
-${PYSITELIB}/Scientific/${LOWER_OPSYS}${OSVER}/Scientific_numerics_package_id.so
-${PYSITELIB}/Scientific/${LOWER_OPSYS}${OSVER}/Scientific_vector.so
+${PYSITELIB}/Scientific/${OSNAME}${OSVER}/Scientific_affinitypropagation.so
+${PYSITELIB}/Scientific/${OSNAME}${OSVER}/Scientific_interpolation.so
+${PYSITELIB}/Scientific/${OSNAME}${OSVER}/Scientific_netcdf.so
+${PYSITELIB}/Scientific/${OSNAME}${OSVER}/Scientific_numerics_package_id.so
+${PYSITELIB}/Scientific/${OSNAME}${OSVER}/Scientific_vector.so
