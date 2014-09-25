@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2012/10/23 17:19:20 asau Exp $
+# $NetBSD: Makefile,v 1.36 2014/09/25 16:32:03 jperkin Exp $
 #
 
 DISTNAME=	xipdump-1.5.4
@@ -17,6 +17,7 @@ USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
 CFLAGS+=	-I${PREFIX}/include
 LIBS+=		-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib -lnet
+LIBS.SunOS+=	-lsocket
 
 INSTALLATION_DIRS=	bin lib/X11/app-defaults ${PKGMANDIR}/man8
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
@@ -36,5 +37,6 @@ post-install:
 	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/lib/X11/app-defaults/Xipdump
 
 .include "../../devel/libnet10/buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
