@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/01/11 14:42:05 adam Exp $
+# $NetBSD: Makefile,v 1.11 2014/09/25 19:21:03 jperkin Exp $
 
 DISTNAME=	eltclsh-1.9
 PKGREVISION=	5
@@ -20,5 +20,6 @@ USE_TOOLS+=		gmake
 
 INSTALL_ENV+=		ELTCL_LIBRARY=${DESTDIR}${PREFIX}/share/eltcl
 
+.include "../../devel/editline/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
