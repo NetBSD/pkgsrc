@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/09/25 17:26:56 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2014/09/25 17:37:54 jperkin Exp $
 #
 
 DISTNAME=	foomatic-db-engine-4.0.8
@@ -35,6 +35,11 @@ post-extract:
 	${TOUCH} ${WRKSRC}/lib/Foomatic/Defaults.pm
 
 post-configure: perl5-configure
+
+SUBST_CLASSES+=		fixpath
+SUBST_STAGE.fixpath=	post-build
+SUBST_FILES.fixpath=	lib/Foomatic/Defaults.pm
+SUBST_SED.fixpath=	-e "s,${TOOLS_DIR}/bin/curl,${BUILDLINK_PREFIX.curl}/bin/curl,g"
 
 .include "../../lang/perl5/module.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
