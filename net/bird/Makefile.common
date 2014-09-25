@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2014/03/28 23:27:16 pettai Exp $
+# $NetBSD: Makefile.common,v 1.5 2014/09/25 15:18:09 jperkin Exp $
 # used by net/bird/Makefile
 # used by net/bird6/Makefile
 
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bird.network.cz/
 COMMENT=	The BIRD Internet Routing Daemon
 LICENSE=	gnu-gpl-v2
+
+NOT_FOR_PLATFORM=	SunOS-*-*
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
