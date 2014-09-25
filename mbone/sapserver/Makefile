@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/08 09:25:50 asau Exp $
+# $NetBSD: Makefile,v 1.9 2014/09/25 14:32:35 jperkin Exp $
 #
 
 DISTNAME=	miniSAPserver-0.2.4
@@ -12,6 +12,8 @@ COMMENT=	Mini SAP server from the VideoLan project
 GNU_CONFIGURE=	YES
 
 USE_LANGUAGES=	c c++
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/sapserver
 
