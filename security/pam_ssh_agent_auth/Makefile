@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/23 18:16:49 asau Exp $
+# $NetBSD: Makefile,v 1.5 2014/09/25 19:18:01 jperkin Exp $
 
 DISTNAME=	pam_ssh_agent_auth-0.9.2
 CATEGORIES=	security
@@ -13,4 +13,5 @@ LICENSE=	modified-bsd
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pod2man
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
