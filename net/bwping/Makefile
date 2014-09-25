@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/01/13 04:29:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2014/09/25 15:21:46 jperkin Exp $
 #
 
 DISTNAME=	bwping-1.7
@@ -11,5 +11,7 @@ COMMENT=	Tool to measure bandwidth and RTT between two hosts using ICMP
 LICENSE=	2-clause-bsd
 
 GNU_CONFIGURE=	yes
+
+LDFLAGS.SunOS+=	-lnsl -lresolv
 
 .include "../../mk/bsd.pkg.mk"
