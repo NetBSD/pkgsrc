@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2006/04/30 17:10:18 joerg Exp $
+$NetBSD: patch-aa,v 1.7 2014/09/25 12:55:52 jperkin Exp $
+
+Don't define _XOPEN_SOURCE on SunOS.
 
 --- configure.orig	2005-12-07 17:56:07.000000000 +0000
 +++ configure
@@ -11,7 +13,17 @@ $NetBSD: patch-aa,v 1.6 2006/04/30 17:10:18 joerg Exp $
  ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM mkdir_p AWK SET_MAKE am__leading_dot AMTAR am__tar am__untar LIBRELEASE RELEASE build build_cpu build_vendor build_os host host_cpu host_vendor host_os inlinability_testing JIKES FASTJAR CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT DEPDIR am__include am__quote AMDEP_TRUE AMDEP_FALSE AMDEPBACKSLASH CCDEPMODE am__fastdepCC_TRUE am__fastdepCC_FALSE CPP LN_S EGREP ECHO AR ac_ct_AR RANLIB ac_ct_RANLIB CXX CXXFLAGS ac_ct_CXX CXXDEPMODE am__fastdepCXX_TRUE am__fastdepCXX_FALSE CXXCPP F77 FFLAGS ac_ct_F77 LIBTOOL subdirs CONV_LIBFFI_TRUE CONV_LIBFFI_FALSE CONV_LIBPOPT_TRUE CONV_LIBPOPT_FALSE LIBSVMADD LIBSVMINCLUDE SVMADD SVMINCLUDE NO_UNDEFINED M4 LIBOBJS LTLIBOBJS'
  ac_subst_files=''
  
-@@ -19967,13 +19965,13 @@ case $host in
+@@ -2028,7 +2026,9 @@ _ACEOF
+ 
+ 
+ cat >>confdefs.h <<\_ACEOF
++#ifndef __sun
+ #define _XOPEN_SOURCE 500
++#endif
+ _ACEOF
+ 
+ 
+@@ -19967,13 +19967,13 @@ case $host in
  	*-freebsd*)
  	    	    ;;
  	*)
@@ -28,7 +40,7 @@ $NetBSD: patch-aa,v 1.6 2006/04/30 17:10:18 joerg Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -20036,7 +20034,7 @@ else
+@@ -20036,7 +20036,7 @@ else
    echo ***ERROR: libpthread is missing; exit 1
  fi
  
@@ -37,7 +49,7 @@ $NetBSD: patch-aa,v 1.6 2006/04/30 17:10:18 joerg Exp $
  	    ;;
  esac
  
-@@ -20360,11 +20358,9 @@ esac
+@@ -20360,11 +20360,9 @@ esac
  
  
  
