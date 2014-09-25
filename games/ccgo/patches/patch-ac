@@ -1,9 +1,14 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/03/16 03:56:27 rh Exp $
+$NetBSD: patch-ac,v 1.2 2014/09/25 13:47:59 jperkin Exp $
 
---- igs/sock.cc.orig	2002-11-27 07:35:46.000000000 +1000
+--- igs/sock.cc.orig	2004-09-24 02:12:22.000000000 +0000
 +++ igs/sock.cc
-@@ -16,6 +16,7 @@ extern "C" {
+@@ -14,8 +14,12 @@ extern "C" {
+ #include <sys/fcntl.h>
+ #include <sys/wait.h>
  #include <sys/socket.h>
++#ifdef __sun
++#include <fcntl.h>
++#endif
  #include <unistd.h>
  #include <netdb.h>
 +#include <netinet/in.h>
