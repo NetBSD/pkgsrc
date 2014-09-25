@@ -1,0 +1,14 @@
+$NetBSD: patch-ruby_Makefile,v 1.1 2014/09/25 12:25:02 fhajny Exp $
+
+Make diff call portable.
+--- ruby/Makefile.orig	2005-12-02 10:35:52.000000000 +0000
++++ ruby/Makefile
+@@ -26,7 +26,7 @@ testrb: ext/hdf/hdf.so
+ 	@failed=0; \
+ 	rm -f hdftest.out; \
+ 	$(RUBY) -Ilib -Iext/hdf test/hdftest.rb > hdftest.out; \
+-	diff --brief hdftest.out hdftest.gold > /dev/null 2>&1; \
++	diff hdftest.out hdftest.gold > /dev/null 2>&1; \
+ 	return_code=$$?; \
+ 	if [ $$return_code -ne 0 ]; then \
+ 	  diff hdftest.out hdftest.gold > hdftest.err; \
