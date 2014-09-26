@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.10 2014/05/21 16:07:59 jperkin Exp $
+# $NetBSD: bootstrap.mk,v 1.11 2014/09/26 07:00:50 obache Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler based on a per-platform
 # basis.
@@ -38,6 +38,11 @@ BOOT_ARCHIVE:=  ${PKGNAME}-boot-x86_64-unknown-solaris2.tar.xz
 
 .else
 PKG_FAIL_REASON+=	"internal error: unsupported platform"
+.endif
+
+# current bootstrap binary kit for SmartOS is built with ncurses5
+.if !empty(MACHINE_PLATFORM:MSunOS-5.11-*) && !empty(OS_VARIANT:U:MSmartOS)
+BUILD_DEPENDS+=	ncurses>=5.0:../../devel/ncurses
 .endif
 
 BOOT_TARBALL=	${BOOT_ARCHIVE:C/\.xz$//}
