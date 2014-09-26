@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2014/08/13 10:57:37 adam Exp $
+# $NetBSD: Makefile,v 1.54 2014/09/26 13:39:34 joerg Exp $
 
 VER=			3.5.6.2
 DISTNAME=		libreoffice-${VER}
@@ -8,6 +8,8 @@ CATEGORIES=		misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/3.5.6/ \
 		http://dev-www.libreoffice.org/src/ \
 		http://www.numbertext.org/linux/
+
+BROKEN=			Compatible version of libwpg and friends missing
 
 MAINTAINER=		ftigeot@wolfpond.org
 HOMEPAGE=		http://www.libreoffice.org/
