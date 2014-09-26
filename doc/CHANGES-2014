@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3609 2014/09/24 15:24:44 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3610 2014/09/26 10:42:10 bouyer Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS IN A FREEZE FOR NEW
 # FUNCTIONALITY IN PREPARATION FOR PKGSRC-2014Q3 BRANCH.  NO NEW
@@ -4588,3 +4588,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/mantis to 1.2.17 [rodent 2014-09-24]
 	Updated www/nginx to 1.6.2 [kim 2014-09-24]
 	Updated shells/bash to 4.3.025 [wiz 2014-09-24]
+	Updated sysutils/xenkernel42 to 4.2.5 [bouyer 2014-09-26]
+	Updated sysutils/xentools42 to 4.2.5 [bouyer 2014-09-26]
