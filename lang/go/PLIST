@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2014/08/17 15:17:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2014/09/26 13:54:28 wiz Exp $
 bin/go
 bin/gofmt
 go/AUTHORS
@@ -286,6 +286,7 @@ go/misc/cgo/test/issue7560.go
 go/misc/cgo/test/issue7665.go
 go/misc/cgo/test/issue7695_test.go
 go/misc/cgo/test/issue7786.go
+go/misc/cgo/test/issue7978.go
 go/misc/cgo/test/issue8148.go
 go/misc/cgo/test/issue8331.h
 go/misc/cgo/test/issue8331a.go
@@ -1350,11 +1351,13 @@ go/src/pkg/crypto/tls/testdata/Server-TLSv12-ClientAuthRequestedAndGiven
 go/src/pkg/crypto/tls/testdata/Server-TLSv12-ClientAuthRequestedNotGiven
 go/src/pkg/crypto/tls/testdata/Server-TLSv12-ECDHE-ECDSA-AES
 go/src/pkg/crypto/tls/testdata/Server-TLSv12-IssueTicket
+go/src/pkg/crypto/tls/testdata/Server-TLSv12-IssueTicketPreDisable
 go/src/pkg/crypto/tls/testdata/Server-TLSv12-RSA-3DES
 go/src/pkg/crypto/tls/testdata/Server-TLSv12-RSA-AES
 go/src/pkg/crypto/tls/testdata/Server-TLSv12-RSA-AES-GCM
 go/src/pkg/crypto/tls/testdata/Server-TLSv12-RSA-RC4
 go/src/pkg/crypto/tls/testdata/Server-TLSv12-Resume
+go/src/pkg/crypto/tls/testdata/Server-TLSv12-ResumeDisabled
 go/src/pkg/crypto/tls/testdata/Server-TLSv12-SNI
 go/src/pkg/crypto/tls/ticket.go
 go/src/pkg/crypto/tls/tls.go
