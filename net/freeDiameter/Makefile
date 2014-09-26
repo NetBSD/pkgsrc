@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/01/01 11:52:28 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2014/09/26 10:55:32 jperkin Exp $
 
 DISTNAME=	1.2.0
 PKGNAME=	freeDiameter-${DISTNAME}
@@ -19,6 +19,8 @@ CMAKE_ARGS+=	-DDISABLE_SCTP:BOOL=ON
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bison flex pkg-config
 FLEX_REQD=	2.5.35
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 # needs libraries installed
 #TEST_TARGET=	test
