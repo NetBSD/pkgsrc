@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/03/13 23:50:08 pettai Exp $
+# $NetBSD: Makefile,v 1.4 2014/09/27 20:22:01 pettai Exp $
 
-DISTNAME=	pyhsm-1.0.4h
+DISTNAME=	pyhsm-1.0.4k
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	security
 MASTER_SITES=	http://opensource.yubico.com/python-pyhsm/releases/
