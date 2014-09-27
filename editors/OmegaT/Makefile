@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/01/01 12:40:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2014/09/27 09:50:17 jperkin Exp $
 #
 
 DISTNAME=	OmegaT_3.0.8_01_Beta_Source
@@ -42,6 +42,10 @@ INSTALLATION_DIRS=	bin \
 
 pre-patch:
 	${INSTALL_DATA} ${FILESDIR}/OmegaT.in ${WRKSRC}/OmegaT
+	for f in ${WRKSRC}/build.xml; do		\
+		${TR} -d '\r' < $${f} > $${f}.new;	\
+		${MV} $${f}.new $${f};			\
+	done
 
 do-build:
 	cd ${WRKSRC} \

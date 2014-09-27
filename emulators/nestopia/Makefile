@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2014/05/05 00:47:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2014/09/27 09:54:06 jperkin Exp $
 #
 
 DISTNAME=	Nestopia140src
@@ -26,6 +26,12 @@ SUBST_MESSAGE.oss=	Fixing path to OSS device.
 SUBST_STAGE.oss=	pre-build
 
 INSTALLATION_DIRS=	bin share/doc/nestopia share/examples/nestopia
+
+pre-patch:
+	for f in ${WRKSRC}/source/core/NstMemory.hpp; do	\
+		${TR} -d '\r' < $${f} > $${f}.new;		\
+		${MV} $${f}.new $${f};				\
+	done
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nst ${DESTDIR}${PREFIX}/bin

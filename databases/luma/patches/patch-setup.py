@@ -1,4 +1,4 @@
-$NetBSD: patch-setup.py,v 1.3 2014/09/24 12:49:38 jperkin Exp $
+$NetBSD: patch-setup.py,v 1.4 2014/09/27 09:46:24 jperkin Exp $
 
 Handle all non-Windows the same for pkgsrc,
 in particular do not handle OS X differently.
