@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.25 2014/06/09 10:18:12 pettai Exp $
+$NetBSD: distinfo,v 1.26 2014/09/27 19:41:06 pettai Exp $
 
-SHA1 (opendnssec-1.4.5.tar.gz) = da2d97669a7688321ea563e0a512531d932f19d6
-RMD160 (opendnssec-1.4.5.tar.gz) = 59982e781baa71f3a61be4c64c588668512e4da0
-Size (opendnssec-1.4.5.tar.gz) = 1009953 bytes
+SHA1 (opendnssec-1.4.6.tar.gz) = 2318b31546d0d4118cd03b9591ba76d259e1b0b0
+RMD160 (opendnssec-1.4.6.tar.gz) = a7c3bbfa42edd64fffbb0680db6f9c372ded2c85
+Size (opendnssec-1.4.6.tar.gz) = 1014314 bytes
 SHA1 (patch-aa) = 104e077af6c368cbb5fc3034d58b2f2249fcf991
 SHA1 (patch-enforcer_utils_Makefile.am) = bee7cb4f3cfe5aae96c5726a115eb8b6587288dd
 SHA1 (patch-enforcer_utils_Makefile.in) = da9fce97e631bb81607851f9758b206ea975b052
