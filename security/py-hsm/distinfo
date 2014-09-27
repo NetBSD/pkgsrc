@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2014/03/13 23:50:08 pettai Exp $
+$NetBSD: distinfo,v 1.3 2014/09/27 20:22:01 pettai Exp $
 
-SHA1 (pyhsm-1.0.4h.tar.gz) = eb6963aee6ce85fd53021d7648723614c3db8c79
-RMD160 (pyhsm-1.0.4h.tar.gz) = cc3353c8dd5cfdf509320bde79276bec60486621
-Size (pyhsm-1.0.4h.tar.gz) = 160680 bytes
+SHA1 (pyhsm-1.0.4k.tar.gz) = ccfee42a4b952390f7fe9ccd6c40f8d4d2749241
+RMD160 (pyhsm-1.0.4k.tar.gz) = 4c7229de4b7dd2e048eb98e485195b4eed5089c7
+Size (pyhsm-1.0.4k.tar.gz) = 158900 bytes
