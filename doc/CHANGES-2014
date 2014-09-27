@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3618 2014/09/27 19:41:37 pettai Exp $
+$NetBSD: CHANGES-2014,v 1.3619 2014/09/27 19:47:21 pettai Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS IN A FREEZE FOR NEW
 # FUNCTIONALITY IN PREPARATION FOR PKGSRC-2014Q3 BRANCH.  NO NEW
@@ -4598,3 +4598,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/mikutter to 3.0.6nb1 [obache 2014-09-27]
 	Updated mail/opendmarc to 1.3.0 [pettai 2014-09-27]
 	Updated security/opendnssec to 1.4.6 [pettai 2014-09-27]
+	Updated security/ykpers to 1.15.3 [pettai 2014-09-27]
