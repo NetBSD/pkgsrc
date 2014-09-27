@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.88 2014/09/21 11:20:08 obache Exp $
+# $NetBSD: Makefile,v 1.89 2014/09/27 12:21:17 obache Exp $
 #
 
 DISTNAME=	mikutter.3.0.6
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/./-/}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://mikutter.hachune.net/bin/
 
@@ -15,7 +16,6 @@ RUBY_VERSION_SUPPORTED=	193 200 21
 
 .include "../../lang/ruby/rubyversion.mk"
 
-DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtk>=2.2.0:../../x11/ruby-gnome2-gtk
 DEPENDS+=	${RUBY_PKGPREFIX}-gettext>=3.0.1:../../devel/ruby-gettext
 DEPENDS+=	${RUBY_PKGPREFIX}-oauth>=0.4:../../security/ruby-oauth
