@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2014/09/25 10:34:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.62 2014/09/27 10:05:42 jperkin Exp $
 #
 
 DISTNAME=	xart19980415
@@ -19,7 +19,9 @@ WRKSRC=		${WRKDIR}/19980415
 USE_IMAKE=	YES
 
 post-extract:
-	${CHMOD} 755 ${WRKSRC} ${WRKSRC}/{Doc,bitmaps,rw}
+	for d in ${WRKSRC} ${WRKSRC}/{Doc,bitmaps,rw}; do	\
+		${CHMOD} 755 $${d};				\
+	done
 	${FIND} ${WRKSRC} -type f -exec ${CHMOD} 644 {} \;
 
 .include "../../mk/jpeg.buildlink3.mk"
