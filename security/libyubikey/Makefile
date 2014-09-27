@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2014/03/13 22:13:44 pettai Exp $
+# $NetBSD: Makefile,v 1.7 2014/09/27 20:17:17 pettai Exp $
 
-DISTNAME=	libyubikey-1.11
+DISTNAME=	libyubikey-1.12
 CATEGORIES=	security
 MASTER_SITES=	http://opensource.yubico.com/yubico-c/releases/
 
