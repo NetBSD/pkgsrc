@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3623 2014/09/27 20:22:20 pettai Exp $
+$NetBSD: CHANGES-2014,v 1.3624 2014/09/27 21:27:27 pettai Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS IN A FREEZE FOR NEW
 # FUNCTIONALITY IN PREPARATION FOR PKGSRC-2014Q3 BRANCH.  NO NEW
@@ -4603,3 +4603,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/nsd to 4.1.0 [pettai 2014-09-27]
 	Updated security/libyubikey to 1.12 [pettai 2014-09-27]
 	Updated security/py-hsm to 1.0.4k [pettai 2014-09-27]
+	Updated net/knot to 1.4.7 [pettai 2014-09-27]
