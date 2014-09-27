@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/04/02 21:33:41 pettai Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/09/27 19:30:12 pettai Exp $
 include/opendmarc/dmarc.h
 lib/libopendmarc.la
 man/man5/opendmarc.conf.5
@@ -23,7 +23,7 @@ share/doc/opendmarc/README.rddmarc
 share/doc/opendmarc/README.schema
 share/doc/opendmarc/dmarc_policy_t.html
 share/doc/opendmarc/dmarcfail.py
-share/doc/opendmarc/draft-dmarc-base-02.txt
+share/doc/opendmarc/draft-dmarc-base-03.txt
 share/doc/opendmarc/index.html
 share/doc/opendmarc/mkdb.mysql
 share/doc/opendmarc/mkdmarc
@@ -59,6 +59,7 @@ share/doc/opendmarc/opendmarc_policy_store_dmarc.html
 share/doc/opendmarc/opendmarc_policy_store_from_domain.html
 share/doc/opendmarc/opendmarc_policy_store_spf.html
 share/doc/opendmarc/opendmarc_policy_to_buf.html
+share/doc/opendmarc/opendmarc_spf_test.html
 share/doc/opendmarc/opendmarc_status_t.html
 share/doc/opendmarc/opendmarc_tld_read_file.html
 share/doc/opendmarc/opendmarc_tld_shutdown.html
