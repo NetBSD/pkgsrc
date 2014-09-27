@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2014/09/24 12:49:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.37 2014/09/27 09:46:24 jperkin Exp $
 
 DISTNAME=	luma-3.0.7
 CATEGORIES=	databases
@@ -20,6 +20,12 @@ SUBST_STAGE.luma=	pre-configure
 SUBST_FILES.luma=	luma/luma.py
 SUBST_SED.luma=		-e "s|@PATH@|${PREFIX}/${PYSITELIB}/luma|"
 SUBST_MESSAGE.luma=	Adding library path to luma.
+
+post-extract:
+	for f in ${WRKSRC}/luma/luma.py ${WRKSRC}/setup.py; do	\
+		${TR} -d '\r' < $${f} > $${f}.new;		\
+		${MV} $${f}.new $${f};				\
+	done
 
 # world-writeable files
 pre-build:
