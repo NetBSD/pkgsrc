@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2013/08/22 11:05:45 he Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/09/27 19:41:06 pettai Exp $
+bin/ods-getconf
 bin/ods-hsmspeed
 bin/ods-hsmutil
 bin/ods-kasp2html
@@ -12,6 +13,7 @@ man/man5/ods-timing.5
 man/man7/opendnssec.7
 man/man8/ods-control.8
 man/man8/ods-enforcerd.8
+man/man8/ods-getconf.8
 man/man8/ods-signer.8
 man/man8/ods-signerd.8
 sbin/ods-control
@@ -52,4 +54,5 @@ share/opendnssec/signconf.rng
 share/opendnssec/zonelist.rnc
 share/opendnssec/zonelist.rng
 @pkgdir lib/opendnssec/signer
+@pkgdir lib/opendnssec/kasp_auditor
 @pkgdir etc/opendnssec
