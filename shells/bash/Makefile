@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.67 2014/09/25 21:32:33 jmcneill Exp $
+# $NetBSD: Makefile,v 1.68 2014/09/27 02:50:26 christos Exp $
 
 BASH_VERSION=		4.3
-BASH_PATCHLEVEL=	025
+BASH_PATCHLEVEL=	026
 
 DISTNAME=	bash-${BASH_VERSION}
 PKGNAME=	bash-${BASH_VERSION}.${BASH_PATCHLEVEL}
-PKGREVISION=	2
+PKGREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GNU:=bash/} \
 		ftp://ftp.cwru.edu/pub/bash/
@@ -16,6 +16,7 @@ PATCHFILES+=	bash43-006 bash43-007 bash43-008 bash43-009 bash43-010
 PATCHFILES+=	bash43-011 bash43-012 bash43-013 bash43-014 bash43-015
 PATCHFILES+=	bash43-016 bash43-017 bash43-018 bash43-019 bash43-020
 PATCHFILES+=	bash43-021 bash43-022 bash43-023 bash43-024 bash43-025
+PATCHFILES+=	bash43-026
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/bash/bash.html
