@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2014/09/21 10:47:36 obache Exp $
+# $NetBSD: Makefile,v 1.8 2014/09/27 12:05:43 obache Exp $
 
 DISTNAME=		libsixel-1.0.3
 CATEGORIES=		graphics
-MASTER_SITES=		-${HOMEPAGE:Q}/archive/v${PKGVERSION_NOREV}${EXTRACT_SUFX}
+MASTER_SITES=		-https://github.com/saitoha/libsixel/archive/v${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
 MAINTAINER=		obache@NetBSD.org
 HOMEPAGE=		http://saitoha.github.io/libsixel/
