@@ -1,15 +1,32 @@
-$NetBSD: patch-locale_Makefile.in,v 1.1 2014/09/25 15:06:23 jperkin Exp $
+$NetBSD: patch-locale_Makefile.in,v 1.2 2014/09/27 10:35:49 jperkin Exp $
 
 Fix pkglocaledir.
 
 --- locale/Makefile.in.orig	2013-10-27 19:24:57.000000000 +0000
 +++ locale/Makefile.in
-@@ -8,7 +8,7 @@ LINGUAS=ar ca cs da de el es es_ar eu fi
+@@ -8,6 +8,7 @@ LINGUAS=ar ca cs da de el es es_ar eu fi
  
  prefix=@prefix@
  datarootdir=@datarootdir@
--DATADIR=@datadir@
-+DATADIR=@localedir@
++localedir= @localedir@
+ DATADIR=@datadir@
  INSTALL=@INSTALL@
  
- # the programs we use (TODO: use configure to detect them)
+@@ -44,14 +45,14 @@ pot:
+ 
+ install: allmo
+ 	linguas='$(LINGUAS)'; for lang in $$linguas ; do \
+-	   $(INSTALL) -d $(DESTDIR)$(DATADIR)/locale/$$lang/LC_MESSAGES ; \
++	   $(INSTALL) -d $(DESTDIR)$(localedir)/$$lang/LC_MESSAGES ; \
+ 	   $(INSTALL) -m 644 $$lang/$(PROGNAME).mo \
+-		$(DESTDIR)$(DATADIR)/locale/$$lang/LC_MESSAGES/$(PROGNAME).mo ; \
++		$(DESTDIR)$(localedir)/$$lang/LC_MESSAGES/$(PROGNAME).mo ; \
+ 	done
+ 
+ uninstall:
+ 	linguas='$(LINGUAS)'; for lang in $$linguas ; do \
+-	   rm -f $(DESTDIR)$(DATADIR)/locale/$$lang/LC_MESSAGES/$(PROGNAME).mo ; \
++	   rm -f $(DESTDIR)$(localedir)/$$lang/LC_MESSAGES/$(PROGNAME).mo ; \
+ 	done
+ 
+ clean:
