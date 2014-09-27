@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2014/04/02 21:33:41 pettai Exp $
+$NetBSD: distinfo,v 1.3 2014/09/27 19:30:12 pettai Exp $
 
-SHA1 (opendmarc-1.2.0.tar.gz) = 82c696d2a86b5f2e4b91ac6c6ae7f205ccfa7329
-RMD160 (opendmarc-1.2.0.tar.gz) = 105b4a3d8dfeb6515b91e2436e890e293cca0d25
-Size (opendmarc-1.2.0.tar.gz) = 616670 bytes
+SHA1 (opendmarc-1.3.0.tar.gz) = 7d50e8319934b96ba67ae038f6dfc78eacbc0072
+RMD160 (opendmarc-1.3.0.tar.gz) = f33cd5de045e800fcdb44cd9ab6199bef5d34baf
+Size (opendmarc-1.3.0.tar.gz) = 640017 bytes
