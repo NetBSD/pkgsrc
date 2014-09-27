@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3615 2014/09/27 10:53:09 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.3616 2014/09/27 12:21:37 obache Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS IN A FREEZE FOR NEW
 # FUNCTIONALITY IN PREPARATION FOR PKGSRC-2014Q3 BRANCH.  NO NEW
@@ -4595,3 +4595,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/pinepgp to 0.18.0nb4 [mspo 2014-09-27]
 	Updated net/dhcpcd to 6.4.7 [roy 2014-09-27]
 	Updated graphics/feh to 2.12 [szptvlfn 2014-09-27]
+	Updated net/mikutter to 3.0.6nb1 [obache 2014-09-27]
