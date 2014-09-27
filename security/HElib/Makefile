@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2013/05/18 18:36:25 agc Exp $
+# $NetBSD: Makefile,v 1.2 2014/09/27 10:11:20 jperkin Exp $
 
 DISTNAME=	HElib-20130501
 CATEGORIES=	security
@@ -18,6 +18,12 @@ USE_TOOLS+=	gmake
 TEST_TARGET=	check
 
 AUTO_MKDIRS=	yes
+
+pre-patch:
+	for f in ${WRKSRC}/Makefile ${WRKSRC}/NumbTh.h; do	\
+		${TR} -d '\r' < $${f} > $${f}.new;		\
+		${MV} $${f}.new $${f};				\
+	done
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../math/ntl/buildlink3.mk"
