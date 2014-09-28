@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2012/10/31 11:17:14 asau Exp $
+# $NetBSD: Makefile,v 1.6 2014/09/28 03:16:17 obache Exp $
 #
 
 DISTNAME=	libgcroots-0.2.3
 CATEGORIES=	devel
 MASTER_SITES=	http://sigscheme.googlecode.com/files/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/sigscheme/wiki/libgcroots
 COMMENT=	Garbage collector supporting library
 #LICENSE=	# See ${WRKSRC}/COPYING
