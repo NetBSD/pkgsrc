@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3625 2014/09/28 04:31:00 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3626 2014/09/28 14:14:19 taca Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS IN A FREEZE FOR NEW
 # FUNCTIONALITY IN PREPARATION FOR PKGSRC-2014Q3 BRANCH.  NO NEW
@@ -4605,3 +4605,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/py-hsm to 1.0.4k [pettai 2014-09-27]
 	Updated net/knot to 1.4.7 [pettai 2014-09-27]
 	Updated www/mediawiki to 1.23.4 [wen 2014-09-28]
+	Updated www/php-concrete5 to 5.6.3.2 [taca 2014-09-28]
