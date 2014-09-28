@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.37 2014/09/25 18:09:49 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q2,v 1.1.2.38 2014/09/28 13:29:18 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q2 branch:
@@ -145,3 +145,7 @@ Pullup ticket #4503 - requested by tron
 shells/bash: security update
 Pullup ticket #4504 - requested by tron
 shells/bash: security patch
+Pullup ticket #4505 - requested by bouyer
+sysutils/xenkernel41: security patch
+Pullup ticket #4506 - requested by bouyer
+sysutils/xenkernel42: security patch
