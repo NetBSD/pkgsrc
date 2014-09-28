@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2014/04/10 12:04:16 obache Exp $
+# $NetBSD: Makefile,v 1.7 2014/09/28 02:54:48 obache Exp $
 
 DISTNAME=	jbigkit-2.1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.cl.cam.ac.uk/~mgk25/jbigkit/download/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cl.cam.ac.uk/~mgk25/jbigkit/
 COMMENT=	JBIG-KIT lossless image compression library
 LICENSE=	gnu-gpl-v2
