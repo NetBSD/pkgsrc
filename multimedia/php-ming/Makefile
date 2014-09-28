@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2014/05/15 14:41:57 adam Exp $
+# $NetBSD: Makefile,v 1.26 2014/09/28 03:00:45 obache Exp $
 
 .include "../../multimedia/ming/Makefile.common"
 PECL_VERSION=		${MING_VERSION}
@@ -8,7 +8,7 @@ CATEGORIES+=		multimedia
 DIST_SUBDIR?=		#empty
 EXTRACT_SUFX=		.tar.gz
 
-MAINTAINER=		obache@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.libming.org/
 COMMENT=		PHP extension for Ming library
 LICENSE=		php
