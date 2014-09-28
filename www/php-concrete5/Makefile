@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2014/05/17 16:10:49 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2014/09/28 14:13:47 taca Exp $
 #
 
-DISTNAME=	concrete5.6.1.2
+DISTNAME=	concrete5.6.3.2
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/concrete5/concrete5-5/}
-PKGREVISION=	2
 CATEGORIES=	www
-MASTER_SITES=	http://www.concrete5.org/download_file/-/view/51635/8497/
+MASTER_SITES=	http://www.concrete5.org/download_file/-/view/66159/8497/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -26,6 +25,7 @@ BUILD_DEFS+=	APACHE_GROUP APACHE_USER
 
 C5DIR=			share/concrete5
 INSTALLATION_DIRS=	${C5DIR}
+WRKSRC=		${WRKDIR}/concrete5.6.3.1
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -40,7 +40,8 @@ PKG_GROUPS_VARS=	APACHE_GROUP
 FILES_SUBST+=	WWWGRP=${APACHE_GROUP} WWWOWN=${APACHE_USER} \
 		C5DIR=${C5DIR}
 
-REPLACE_PYTHON+=	concrete/libraries/3rdparty/htmldiff.py
+pre-install:
+	cd ${WRKSRC} && ${FIND} . languages -type f -exec ${CHMOD} -x {} \;
 
 do-install:
 	cd ${WRKSRC} && ${FIND} . -type f \! -name '*.orig' -print | \
