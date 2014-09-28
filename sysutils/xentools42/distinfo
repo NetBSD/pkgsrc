@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.10 2014/02/22 01:28:23 prlw1 Exp $
+$NetBSD: distinfo,v 1.10.4.1 2014/09/28 13:28:58 tron Exp $
 
 SHA1 (ipxe-git-v1.0.0.tar.gz) = da052c8de5f3485fe0253c19cf52ed6d72528485
 RMD160 (ipxe-git-v1.0.0.tar.gz) = dcd9b6eaafa1ce05c1ebf2a15f2f73ad7a8c5547
 Size (ipxe-git-v1.0.0.tar.gz) = 1996881 bytes
-SHA1 (xen-4.2.4.tar.gz) = ab661bf0f64a18155f971343a9c07b7e7d1410f1
-RMD160 (xen-4.2.4.tar.gz) = b2210d3ff6a9fdf9cae1a5a38b829667dfd6fd2f
-Size (xen-4.2.4.tar.gz) = 15663999 bytes
+SHA1 (xen-4.2.5.tar.gz) = f42741e4ec174495ace70c4b17a6b9b0e60e798a
+RMD160 (xen-4.2.5.tar.gz) = 7d4f7f1b32ee541d341a756b1f8da02816438d19
+Size (xen-4.2.5.tar.gz) = 15671925 bytes
 SHA1 (patch-.._.._ipxe_src_Makefile.housekeeping) = 5ec8020a9705b2f64096c2942473a8de4db578bb
 SHA1 (patch-.._.._ipxe_src_arch_i386_include_librm.h) = 4549ac641b112321b4731a918d85219c3fce6808
 SHA1 (patch-.._.._ipxe_src_arch_i386_scripts_i386.lds) = 4c0cbb7f535be43e1b6f53c284340a8bafc37c0b
