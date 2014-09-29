@@ -1,4 +1,4 @@
-$NetBSD: patch-polyc.in,v 1.1 2014/09/24 09:47:41 asau Exp $
+$NetBSD: patch-polyc.in,v 1.2 2014/09/29 00:55:00 asau Exp $
 
 --- polyc.in.orig	2014-05-11 11:16:37.000000000 +0000
 +++ polyc.in
@@ -11,3 +11,15 @@ $NetBSD: patch-polyc.in,v 1.1 2014/09/24 09:47:41 asau Exp $
  LIBDIR=@libdir@
  LIBS="@LIBS@ @FFI_LIBS@"
  CFLAGS="@CFLAGS@"
+@@ -34,9 +34,9 @@ link()
+ {
+     if [ X"$2" = "X" ]
+     then
+-        ${LINK} ${EXTRALDFLAGS} ${CFLAGS} $1 -L${LIBDIR} -lpolymain -lpolyml ${LIBS}
++        ${LINK} ${EXTRALDFLAGS} ${CFLAGS} $1 -L${LIBDIR} @COMPILER_RPATH_FLAG@${LIBDIR} -lpolymain -lpolyml ${LIBS}
+     else
+-        ${LINK} ${EXTRALDFLAGS} ${CFLAGS} $1 -o $2 -L${LIBDIR} -lpolymain -lpolyml ${LIBS}
++        ${LINK} ${EXTRALDFLAGS} ${CFLAGS} $1 -o $2 -L${LIBDIR} @COMPILER_RPATH_FLAG@${LIBDIR} -lpolymain -lpolyml ${LIBS}
+     fi
+ }
+ 
