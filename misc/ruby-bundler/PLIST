@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2014/03/14 17:23:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2014/09/29 23:35:14 taca Exp $
 bin/bundle
 bin/bundler
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -20,6 +20,25 @@ ${GEM_LIBDIR}/bundler.gemspec
 ${GEM_LIBDIR}/lib/bundler.rb
 ${GEM_LIBDIR}/lib/bundler/capistrano.rb
 ${GEM_LIBDIR}/lib/bundler/cli.rb
+${GEM_LIBDIR}/lib/bundler/cli/binstubs.rb
+${GEM_LIBDIR}/lib/bundler/cli/cache.rb
+${GEM_LIBDIR}/lib/bundler/cli/check.rb
+${GEM_LIBDIR}/lib/bundler/cli/clean.rb
+${GEM_LIBDIR}/lib/bundler/cli/common.rb
+${GEM_LIBDIR}/lib/bundler/cli/config.rb
+${GEM_LIBDIR}/lib/bundler/cli/console.rb
+${GEM_LIBDIR}/lib/bundler/cli/exec.rb
+${GEM_LIBDIR}/lib/bundler/cli/gem.rb
+${GEM_LIBDIR}/lib/bundler/cli/init.rb
+${GEM_LIBDIR}/lib/bundler/cli/inject.rb
+${GEM_LIBDIR}/lib/bundler/cli/install.rb
+${GEM_LIBDIR}/lib/bundler/cli/open.rb
+${GEM_LIBDIR}/lib/bundler/cli/outdated.rb
+${GEM_LIBDIR}/lib/bundler/cli/package.rb
+${GEM_LIBDIR}/lib/bundler/cli/platform.rb
+${GEM_LIBDIR}/lib/bundler/cli/show.rb
+${GEM_LIBDIR}/lib/bundler/cli/update.rb
+${GEM_LIBDIR}/lib/bundler/cli/viz.rb
 ${GEM_LIBDIR}/lib/bundler/constants.rb
 ${GEM_LIBDIR}/lib/bundler/current_ruby.rb
 ${GEM_LIBDIR}/lib/bundler/definition.rb
@@ -74,7 +93,6 @@ ${GEM_LIBDIR}/lib/bundler/ruby_version.rb
 ${GEM_LIBDIR}/lib/bundler/rubygems_ext.rb
 ${GEM_LIBDIR}/lib/bundler/rubygems_integration.rb
 ${GEM_LIBDIR}/lib/bundler/runtime.rb
-${GEM_LIBDIR}/lib/bundler/safe_catch.rb
 ${GEM_LIBDIR}/lib/bundler/settings.rb
 ${GEM_LIBDIR}/lib/bundler/setup.rb
 ${GEM_LIBDIR}/lib/bundler/shared_helpers.rb
@@ -85,12 +103,14 @@ ${GEM_LIBDIR}/lib/bundler/source/git/git_proxy.rb
 ${GEM_LIBDIR}/lib/bundler/source/path.rb
 ${GEM_LIBDIR}/lib/bundler/source/path/installer.rb
 ${GEM_LIBDIR}/lib/bundler/source/rubygems.rb
+${GEM_LIBDIR}/lib/bundler/source_list.rb
 ${GEM_LIBDIR}/lib/bundler/spec_set.rb
 ${GEM_LIBDIR}/lib/bundler/ssl_certs/.document
 ${GEM_LIBDIR}/lib/bundler/ssl_certs/Class3PublicPrimaryCertificationAuthority.pem
 ${GEM_LIBDIR}/lib/bundler/ssl_certs/DigiCertHighAssuranceEVRootCA.pem
 ${GEM_LIBDIR}/lib/bundler/ssl_certs/EntrustnetSecureServerCertificationAuthority.pem
 ${GEM_LIBDIR}/lib/bundler/ssl_certs/GeoTrustGlobalCA.pem
+${GEM_LIBDIR}/lib/bundler/ssl_certs/certificate_manager.rb
 ${GEM_LIBDIR}/lib/bundler/templates/Executable
 ${GEM_LIBDIR}/lib/bundler/templates/Executable.standalone
 ${GEM_LIBDIR}/lib/bundler/templates/Gemfile
@@ -100,6 +120,9 @@ ${GEM_LIBDIR}/lib/bundler/templates/newgem/LICENSE.txt.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/README.md.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/Rakefile.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/bin/newgem.tt
+${GEM_LIBDIR}/lib/bundler/templates/newgem/ext/newgem/extconf.rb.tt
+${GEM_LIBDIR}/lib/bundler/templates/newgem/ext/newgem/newgem.c.tt
+${GEM_LIBDIR}/lib/bundler/templates/newgem/ext/newgem/newgem.h.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/gitignore.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/lib/newgem.rb.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/lib/newgem/version.rb.tt
@@ -110,6 +133,9 @@ ${GEM_LIBDIR}/lib/bundler/templates/newgem/spec/spec_helper.rb.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/test/minitest_helper.rb.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/test/test_newgem.rb.tt
 ${GEM_LIBDIR}/lib/bundler/ui.rb
+${GEM_LIBDIR}/lib/bundler/ui/rg_proxy.rb
+${GEM_LIBDIR}/lib/bundler/ui/shell.rb
+${GEM_LIBDIR}/lib/bundler/ui/silent.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/.document
 ${GEM_LIBDIR}/lib/bundler/vendor/net/http/faster.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/net/http/persistent.rb
@@ -160,15 +186,16 @@ ${GEM_LIBDIR}/man/bundle.ronn
 ${GEM_LIBDIR}/man/gemfile.5.ronn
 ${GEM_LIBDIR}/man/index.txt
 ${GEM_LIBDIR}/spec/bundler/bundler_spec.rb
-${GEM_LIBDIR}/spec/bundler/cli_rspec.rb
+${GEM_LIBDIR}/spec/bundler/cli_spec.rb
 ${GEM_LIBDIR}/spec/bundler/definition_spec.rb
 ${GEM_LIBDIR}/spec/bundler/dsl_spec.rb
 ${GEM_LIBDIR}/spec/bundler/friendly_errors_spec.rb
 ${GEM_LIBDIR}/spec/bundler/gem_helper_spec.rb
 ${GEM_LIBDIR}/spec/bundler/psyched_yaml_spec.rb
 ${GEM_LIBDIR}/spec/bundler/retry_spec.rb
-${GEM_LIBDIR}/spec/bundler/safe_catch_spec.rb
-${GEM_LIBDIR}/spec/bundler/source_spec.rb
+${GEM_LIBDIR}/spec/bundler/settings_spec.rb
+${GEM_LIBDIR}/spec/bundler/source/rubygems_spec.rb
+${GEM_LIBDIR}/spec/bundler/source_list_spec.rb
 ${GEM_LIBDIR}/spec/cache/gems_spec.rb
 ${GEM_LIBDIR}/spec/cache/git_spec.rb
 ${GEM_LIBDIR}/spec/cache/path_spec.rb
@@ -186,6 +213,7 @@ ${GEM_LIBDIR}/spec/commands/licenses_spec.rb
 ${GEM_LIBDIR}/spec/commands/newgem_spec.rb
 ${GEM_LIBDIR}/spec/commands/open_spec.rb
 ${GEM_LIBDIR}/spec/commands/outdated_spec.rb
+${GEM_LIBDIR}/spec/commands/package_spec.rb
 ${GEM_LIBDIR}/spec/commands/show_spec.rb
 ${GEM_LIBDIR}/spec/install/binstubs_spec.rb
 ${GEM_LIBDIR}/spec/install/bundler_spec.rb
@@ -200,11 +228,11 @@ ${GEM_LIBDIR}/spec/install/gems/env_spec.rb
 ${GEM_LIBDIR}/spec/install/gems/flex_spec.rb
 ${GEM_LIBDIR}/spec/install/gems/groups_spec.rb
 ${GEM_LIBDIR}/spec/install/gems/mirror_spec.rb
-${GEM_LIBDIR}/spec/install/gems/packed_spec.rb
 ${GEM_LIBDIR}/spec/install/gems/platform_spec.rb
 ${GEM_LIBDIR}/spec/install/gems/post_install_spec.rb
 ${GEM_LIBDIR}/spec/install/gems/resolving_spec.rb
 ${GEM_LIBDIR}/spec/install/gems/simple_case_spec.rb
+${GEM_LIBDIR}/spec/install/gems/sources_spec.rb
 ${GEM_LIBDIR}/spec/install/gems/standalone_spec.rb
 ${GEM_LIBDIR}/spec/install/gems/sudo_spec.rb
 ${GEM_LIBDIR}/spec/install/gems/win32_spec.rb
@@ -220,6 +248,7 @@ ${GEM_LIBDIR}/spec/other/bundle_ruby_spec.rb
 ${GEM_LIBDIR}/spec/other/cli_dispatch_spec.rb
 ${GEM_LIBDIR}/spec/other/ext_spec.rb
 ${GEM_LIBDIR}/spec/other/platform_spec.rb
+${GEM_LIBDIR}/spec/other/ssl_cert_spec.rb
 ${GEM_LIBDIR}/spec/quality_spec.rb
 ${GEM_LIBDIR}/spec/realworld/dependency_api_spec.rb
 ${GEM_LIBDIR}/spec/realworld/edgecases_spec.rb
@@ -245,6 +274,7 @@ ${GEM_LIBDIR}/spec/support/artifice/endpoint_fallback.rb
 ${GEM_LIBDIR}/spec/support/artifice/endpoint_host_redirect.rb
 ${GEM_LIBDIR}/spec/support/artifice/endpoint_marshal_fail.rb
 ${GEM_LIBDIR}/spec/support/artifice/endpoint_redirect.rb
+${GEM_LIBDIR}/spec/support/artifice/endpoint_strict_basic_authentication.rb
 ${GEM_LIBDIR}/spec/support/artifice/endpoint_timeout.rb
 ${GEM_LIBDIR}/spec/support/builders.rb
 ${GEM_LIBDIR}/spec/support/fakeweb/rack-1.0.0.marshal
@@ -262,5 +292,5 @@ ${GEM_LIBDIR}/spec/support/streams.rb
 ${GEM_LIBDIR}/spec/support/sudo.rb
 ${GEM_LIBDIR}/spec/update/gems_spec.rb
 ${GEM_LIBDIR}/spec/update/git_spec.rb
-${GEM_LIBDIR}/spec/update/source_spec.rb
+${GEM_LIBDIR}/spec/update/path_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
