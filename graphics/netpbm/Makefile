@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.193 2014/09/19 08:42:47 wiz Exp $
+# $NetBSD: Makefile,v 1.194 2014/09/29 18:16:41 gson Exp $
 
 DISTNAME=	netpbm-10.67.05
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	#
 # manually created from svn checkout of
@@ -19,7 +19,7 @@ HOMEPAGE=	http://netpbm.sourceforge.net/
 COMMENT=	Toolkit for conversion of images between different formats
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	bash:run gmake lex pax perl
+USE_TOOLS+=	gmake lex pax perl
 USE_FEATURES=	snprintf
 
 INSTALL_TARGET=	install-dev install-run
@@ -38,20 +38,6 @@ STAGEDIR=	${WRKDIR}/staging
 WRKSRC=		${WRKDIR}/netpbm
 
 WRAPPER_REORDER_CMDS+=	reorder:l:rle:netpbm
-
-# Several of the netpbm shell scripts use bashisms, so force using
-# bash for all of the shell scripts.
-REPLACE_INTERPRETER+=	bash
-REPLACE.bash.old=	.*/bin/sh
-REPLACE.bash.new=	${TOOLS_PATH.bash}
-REPLACE_FILES.bash=	converter/other/anytopnm
-REPLACE_FILES.bash+=	converter/other/pnmtoplainpnm
-REPLACE_FILES.bash+=	converter/ppm/hpcdtoppm/hpcdtoppm
-REPLACE_FILES.bash+=	converter/ppm/hpcdtoppm/pcdovtoppm
-REPLACE_FILES.bash+=	editor/pamstretch-gen
-REPLACE_FILES.bash+=	editor/pnmindex.sh
-REPLACE_FILES.bash+=	editor/pnmmargin
-REPLACE_FILES.bash+=	other/ppmtomap
 
 SUBST_CLASSES+=		rgb_txt
 SUBST_STAGE.rgb_txt=	post-patch
