@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2014/09/27 10:05:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.63 2014/09/29 12:30:48 jperkin Exp $
 #
 
 DISTNAME=	xart19980415
@@ -19,8 +19,9 @@ WRKSRC=		${WRKDIR}/19980415
 USE_IMAKE=	YES
 
 post-extract:
-	for d in ${WRKSRC} ${WRKSRC}/{Doc,bitmaps,rw}; do	\
-		${CHMOD} 755 $${d};				\
+	${CHMOD} 755 ${WRKSRC}
+	for d in Doc bitmaps rw; do			\
+		${CHMOD} 755 ${WRKSRC}/$${d};		\
 	done
 	${FIND} ${WRKSRC} -type f -exec ${CHMOD} 644 {} \;
 
