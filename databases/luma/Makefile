@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2014/09/27 09:46:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.38 2014/09/29 12:27:16 jperkin Exp $
 
 DISTNAME=	luma-3.0.7
 CATEGORIES=	databases
@@ -29,7 +29,8 @@ post-extract:
 
 # world-writeable files
 pre-build:
-	${CHMOD} 0644 ${WRKSRC}/data/icons/*/*.{png,svg}
+	${CHMOD} 0644 ${WRKSRC}/data/icons/*/*.png
+	${CHMOD} 0644 ${WRKSRC}/data/icons/*/*.svg
 	${CHMOD} 0644 ${WRKSRC}/data/*.desktop
 
 # some templates are not installed, do it manually
