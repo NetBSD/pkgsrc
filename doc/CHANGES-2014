@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3629 2014/09/29 18:19:24 gson Exp $
+$NetBSD: CHANGES-2014,v 1.3630 2014/09/29 23:35:54 taca Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS IN A FREEZE FOR NEW
 # FUNCTIONALITY IN PREPARATION FOR PKGSRC-2014Q3 BRANCH.  NO NEW
@@ -4609,3 +4609,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/php-ja-wordpress to 3.9.2 [taca 2014-09-28]
 	Updated shells/bash to 4.3.027 [wiz 2014-09-29]
 	Updated graphics/netpbm to 10.67.05nb2 [gson 2014-09-29]
+	Updated misc/ruby-bundler to 1.7.3 [taca 2014-09-29]
