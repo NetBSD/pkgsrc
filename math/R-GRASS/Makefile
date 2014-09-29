@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/12/07 19:32:48 dholland Exp $
+# $NetBSD: Makefile,v 1.8 2014/09/29 15:11:43 jperkin Exp $
 
 CATEGORIES=	databases math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -13,5 +13,6 @@ R_PKGVER=	0.3-8
 post-extract:
 	echo 'exportPattern("^[^\\.]")' > ${WRKSRC}/NAMESPACE
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
