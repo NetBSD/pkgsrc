@@ -1,21 +1,12 @@
-$NetBSD: distinfo,v 1.19 2014/06/07 23:49:47 ryoon Exp $
+$NetBSD: distinfo,v 1.20 2014/09/30 08:59:58 jperkin Exp $
 
 SHA1 (irssi-0.8.16.tar.bz2) = 631dd70b6d3872c5f81c1a46a6872fef5bd65ffb
 RMD160 (irssi-0.8.16.tar.bz2) = 2d4caefc9d713b0ff4b26ceaa63430f1bb346caa
 Size (irssi-0.8.16.tar.bz2) = 986129 bytes
-SHA1 (irssi-icb-0.14.tar.gz) = 31d7a5d04a896e0e19db44b4d76b7ac85af1a5d4
-RMD160 (irssi-icb-0.14.tar.gz) = dd104925ece6eabd0112b86b9eb6898846ba8f52
-Size (irssi-icb-0.14.tar.gz) = 172647 bytes
-SHA1 (patch-aa) = b94bae58a59f4d96a107ad123a6abe7ac0ca375a
-SHA1 (patch-ab) = 6ca4512785b91e7a05cccd8806dbcab969e91cca
-SHA1 (patch-ac) = 68409b392f3212a8da9a79c2dfcc4dc265504d98
-SHA1 (patch-ad) = f5cf3b9294a1a8a450f8c380ff41bbaafd425337
-SHA1 (patch-ae) = ee3ed714e2f1d136562b87cfd82bc4b58b7d80df
-SHA1 (patch-af) = 169f32783892241133df73b25817c562531c69c9
-SHA1 (patch-ag) = 2823b763c76c37e4f382cc09456cccb56f1007fc
-SHA1 (patch-ah) = 097bab1ebd959372a0266fa5d9a99c78c3a2c1fe
-SHA1 (patch-ai) = 42ce6c309957c3e46c638e2599b932b6ea4065ee
-SHA1 (patch-aj) = 3a46a61b0bd5763f78e85d6a0bff1d1223e8da39
-SHA1 (patch-al) = 2a190b803f00beb83c123bc3416e23ec7c7edc69
-SHA1 (patch-am) = 832aa40a84afbfff303e6080bf420ca2ceec289f
-SHA1 (patch-an) = 0a936cbdb49f9a1bf65d5e92da5d37de65238d27
+SHA1 (irssi-icb-0.15.tar.gz) = c5a739960eb98e6686a94f6d4662cfab5a95d447
+RMD160 (irssi-icb-0.15.tar.gz) = b947a341e1fc2f6d42bee3cb7b738bfdbb0a031d
+Size (irssi-icb-0.15.tar.gz) = 306973 bytes
+SHA1 (patch-am) = 3bd9e38d0fde6d99d9b6a6ad67268bd63a8a92e2
+SHA1 (patch-an) = bca7fff754b60b49a6322bd5595a4a7f4003a828
+SHA1 (patch-src_core_Makefile.in) = d052d78b4f084da51498f1df934ca16412b8e5a0
+SHA1 (patch-src_fe-common_module-formats.c) = 5af701e6919051c834c52e6932e0028324362b9f
