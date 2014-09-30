@@ -1,4 +1,6 @@
-$NetBSD: patch-am,v 1.1 2010/08/10 20:26:36 sketch Exp $
+$NetBSD: patch-am,v 1.2 2014/09/30 08:59:58 jperkin Exp $
+
+Support nicklists.
 
 --- /dev/null	2009-11-03 03:54:19.098165668 +0100
 +++ src/core/icb-nicklist.c	2010-05-21 13:03:14.227283420 +0200
