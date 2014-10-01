@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.65 2014/05/31 22:22:12 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2014/10/01 11:05:27 wiz Exp $
 
-VERS=		4.01
-DISTNAME=	CGI.pm-${VERS}
-PKGNAME=	p5-CGI-${VERS}
-PKGREVISION=	1
+DISTNAME=	CGI-4.04
+PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5cgi
 CATEGORIES=	www perl5
-MASTER_SITES+=	${MASTER_SITE_PERL_CPAN:=CGI/}
+MASTER_SITES+=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/L/LE/LEEJO/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/CGI.pm/
 COMMENT=	Perl5 module for writing forms-based CGI programs
 LICENSE=	gnu-gpl-v2 OR artistic-2.0
+
+BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 
 USE_LANGUAGES=		# empty
 USE_TOOLS+=		perl
