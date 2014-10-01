@@ -1,0 +1,9 @@
+The package deals with the behaviour of the LaTeX internal command
+\@ifnextchar, which skips blank spaces. This has the potential to
+surprise users, since it can produce really unwanted effects. A common
+example occurs with brackets starting a line following \\: the command
+looks for an optional argument, whereas the user wants the brackets to
+be printed.
+
+The package offers commands and options for modifying this behaviour,
+maybe limited to certain parts of the document source.
