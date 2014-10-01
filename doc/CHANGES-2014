@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3702 2014/10/01 21:24:01 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3703 2014/10/01 22:45:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4692,3 +4692,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added print/tex-varwidth version 0.92 [joerg 2014-10-01]
 	Added print/tex-verbatimbox version 3.13 [joerg 2014-10-01]
 	Updated shells/bash to 4.3.028 [wiz 2014-10-01]
+	Updated x11/xcb-util-keysyms to 0.4.0 [wiz 2014-10-01]
