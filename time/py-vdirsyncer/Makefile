@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2014/09/25 19:39:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2014/10/01 12:46:17 wiz Exp $
 
-DISTNAME=	vdirsyncer-0.2.5
+DISTNAME=	vdirsyncer-0.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time
 MASTER_SITES=	https://pypi.python.org/packages/source/v/vdirsyncer/
