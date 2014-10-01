@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/08/23 06:55:03 dholland Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/01 08:11:29 dholland Exp $
 
-DISTNAME=	sys161-1.99.08
+DISTNAME=	sys161-1.99.09
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.eecs.harvard.edu/~dholland/os161/download/
 

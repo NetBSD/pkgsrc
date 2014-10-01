@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2014/03/14 04:09:31 dholland Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/10/01 08:11:29 dholland Exp $
+bin/disk161
+bin/disk161-${PKGVERSION}
 bin/hub161
 bin/hub161-${PKGVERSION}
 bin/stat161
