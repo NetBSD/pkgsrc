@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.271 2014/10/01 19:04:56 joerg Exp $
+# $NetBSD: replace.mk,v 1.272 2014/10/01 19:14:21 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1330,40 +1330,24 @@ TOOLS_PATH.xmessage=		${TOOLS_PREFIX.xmessage}/bin/xmessage
 _TOOLS.x11-imake=	imake mkdirhier xmkmf
 
 .for _t_ in ${_TOOLS.x11-imake}
-.  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
-.    if !empty(PKGPATH:Mdevel/nbitools)
-MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
-.    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
+.  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_}) && \
+      !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_CREATE+=		${_t_}
-.      if !empty(_USE_TOOLS:Mitools)
-TOOLS_DEPENDS.${_t_}?=	nbitools>=6.3nb4:../../devel/nbitools
-TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=nbitools
-TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/libexec/itools/${_t_}
-.      else
 TOOLS_DEPENDS.${_t_}?=	imake-[0-9]*:../../devel/imake
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=imake
 TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}
-.      endif
-.    endif
 .  endif
 .endfor
 
-.if !defined(TOOLS_IGNORE.makedepend) && !empty(_USE_TOOLS:Mmakedepend)
-.  if !empty(PKGPATH:Mdevel/nbitools)
-MAKEFLAGS+=		TOOLS_IGNORE.makedepend=
-.  elif !empty(_TOOLS_USE_PKGSRC.makedepend:M[yY][eE][sS])
+.if !defined(TOOLS_IGNORE.makedepend) && !empty(_USE_TOOLS:Mmakedepend) && \
+    !empty(_TOOLS_USE_PKGSRC.makedepend:M[yY][eE][sS])
 TOOLS_CREATE+=		makedepend
-.    if !empty(_USE_TOOLS:Mitools)
-TOOLS_DEPENDS.makedepend?=	nbitools>=6.3nb4:../../devel/nbitools
-TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.makedepend=nbitools
-TOOLS_PATH.makedepend=	${TOOLS_PREFIX.makedepend}/libexec/itools/makedepend
-.    elif defined(X11_TYPE) && !empty(X11_TYPE:Mmodular)
+.  if defined(X11_TYPE) && !empty(X11_TYPE:Mmodular)
 TOOLS_DEPENDS.makedepend?=	makedepend-[0-9]*:../../devel/makedepend
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.makedepend=makedepend
 TOOLS_PATH.makedepend=	${TOOLS_PREFIX.makedepend}/bin/makedepend
-.    else # !empty(X11_TYPE:Mnative)
+.  else # !empty(X11_TYPE:Mnative)
 TOOLS_PATH.makedepend=	${X11BASE}/bin/makedepend
-.    endif
 .  endif
 .endif
 
