@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3701 2014/10/01 20:00:39 joerg Exp $
+$NetBSD: CHANGES-2014,v 1.3702 2014/10/01 21:24:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4691,3 +4691,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added print/tex-tabu version 2.8 [joerg 2014-10-01]
 	Added print/tex-varwidth version 0.92 [joerg 2014-10-01]
 	Added print/tex-verbatimbox version 3.13 [joerg 2014-10-01]
+	Updated shells/bash to 4.3.028 [wiz 2014-10-01]
