@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3672 2014/10/01 12:13:37 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.3673 2014/10/01 12:18:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4648,3 +4648,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/libgpg-error to 1.16 [wiz 2014-10-01]
 	Updated converters/help2man to 1.46.3 [wiz 2014-10-01]
 	Added security/php-ssh2 version 0.12 [fhajny 2014-10-01]
+	Updated multimedia/libdvdread to 5.0.0 [wiz 2014-10-01]
