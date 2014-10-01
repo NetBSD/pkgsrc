@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.20 2014/04/17 12:16:43 wiz Exp $
+$NetBSD: distinfo,v 1.21 2014/10/01 09:39:11 wiz Exp $
 
-SHA1 (FileZilla_3.8.0_src.tar.bz2) = 069a3171b12051179605c1daaa1da10d51da6531
-RMD160 (FileZilla_3.8.0_src.tar.bz2) = f161795774b03bbce8720e40ddff6a5ca6d4fe9a
-Size (FileZilla_3.8.0_src.tar.bz2) = 3749995 bytes
-SHA1 (patch-data_makezip.sh.in) = 80acc96fce08e2e0831a4da0613f7b2eaebad465
+SHA1 (FileZilla_3.9.0.3_src.tar.bz2) = 23e1df520b2bf73e7b75084fd418c5c382ef1137
+RMD160 (FileZilla_3.9.0.3_src.tar.bz2) = 49b1a4053c11c985e140fea42ffe6b715faa94a4
+Size (FileZilla_3.9.0.3_src.tar.bz2) = 4179207 bytes
