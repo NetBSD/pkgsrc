@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2013/07/04 23:30:47 adam Exp $
+$NetBSD: distinfo,v 1.11 2014/10/01 07:13:08 adam Exp $
 
-SHA1 (xz-5.0.5.tar.bz2) = 166b228efae6bfadbbf831e9982510209d74240e
-RMD160 (xz-5.0.5.tar.bz2) = 16c0a0b4a72023342b1ece8151c8d0bdf8b40968
-Size (xz-5.0.5.tar.bz2) = 1060649 bytes
+SHA1 (xz-5.0.7.tar.bz2) = 7458b6492889a218a4a29e2a5b1e2ff7ca65a947
+RMD160 (xz-5.0.7.tar.bz2) = db820c362fabb1ea49cb5071e27946aa92d2f1d9
+Size (xz-5.0.7.tar.bz2) = 1074352 bytes
