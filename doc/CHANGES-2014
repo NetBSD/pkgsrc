@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3642 2014/10/01 09:45:01 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3643 2014/10/01 10:23:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4617,3 +4617,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated games/puzzles to 20140925.r10264 [wiz 2014-10-01]
 	Updated devel/meld to 3.12.0 [wiz 2014-10-01]
 	Removed devel/meld-devel successor devel/meld [wiz 2014-10-01]
+	Updated finance/gnucash to 2.6.3nb10 [wiz 2014-10-01]
