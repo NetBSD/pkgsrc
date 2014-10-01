@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2012/01/20 18:13:58 drochner Exp $
+$NetBSD: distinfo,v 1.8 2014/10/01 12:23:31 wiz Exp $
 
-SHA1 (libdvdnav-4.2.0.tar.bz2) = ded45d985576169ae3630d8be7179a2323bc0f6f
-RMD160 (libdvdnav-4.2.0.tar.bz2) = 1e957554173feae3bdf1fdd6a83c2a64a2550683
-Size (libdvdnav-4.2.0.tar.bz2) = 111575 bytes
+SHA1 (libdvdnav-5.0.1.tar.bz2) = 9c234fc1a11f760c90cc278b702b1e41fc418b7e
+RMD160 (libdvdnav-5.0.1.tar.bz2) = f957c3cb739d9f2c0c747ad8f55876d1e440a650
+Size (libdvdnav-5.0.1.tar.bz2) = 354568 bytes
