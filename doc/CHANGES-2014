@@ -1,10 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3634 2014/10/01 00:20:47 roy Exp $
-
-# PLEASE NOTE THAT THE PKGSRC REPOSITORY IS IN A FREEZE FOR NEW
-# FUNCTIONALITY IN PREPARATION FOR PKGSRC-2014Q3 BRANCH.  NO NEW
-# PACKAGES, PLEASE; NO INFRASTRUCTURE CHANGES, PLEASE; AND PLEASE ASK
-# PKGSRC-PMC FOR PERMISSION BEFORE COMMITTING CHANGES WHICH MIGHT HAVE
-# IMPACT ON OTHERS WORK.
+$NetBSD: CHANGES-2014,v 1.3635 2014/10/01 01:04:56 agc Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4615,3 +4609,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated chat/irssi-icb to 0.15 [jperkin 2014-09-30]
 	Updated lang/ruby193-base to 1.9.3p547nb1 [taca 2014-09-30]
 	Updated net/dhcpcd to 6.4.3nb1 [roy 2014-10-01]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2014Q3 branch [agc 2014-10-01]
