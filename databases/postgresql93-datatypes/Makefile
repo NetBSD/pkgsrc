@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2014/02/23 11:25:54 adam Exp $
+# $NetBSD: Makefile,v 1.6 2014/10/01 19:25:35 joerg Exp $
 
 PKGNAME=	${DISTNAME:C/-/93-datatypes-/}
+PKGREVISION=	1
 COMMENT=	PostgreSQL data types support modules
 
 DEPENDS+=	postgresql93-server>=${PKGVERSION_NOREV}:../../databases/postgresql93-server
@@ -18,6 +19,7 @@ BUILD_DIRS+=		contrib/uuid-ossp
 .  include "../../devel/ossp-uuid/buildlink3.mk"
 .endif
 
+BUILD_DIRS+=		contrib/btree_gist
 BUILD_DIRS+=		contrib/citext
 BUILD_DIRS+=		contrib/hstore
 BUILD_DIRS+=		contrib/intarray

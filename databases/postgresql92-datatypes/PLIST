@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2013/12/10 22:32:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/10/01 19:25:35 joerg Exp $
 lib/postgresql/_int.so
+lib/postgresql/btree_gist.so
 lib/postgresql/citext.so
 lib/postgresql/hstore.so
 lib/postgresql/isn.so
@@ -7,6 +8,9 @@ lib/postgresql/lo.so
 lib/postgresql/ltree.so
 lib/postgresql/unaccent.so
 ${PLIST.uuid}lib/postgresql/uuid-ossp.so
+share/postgresql/extension/btree_gist--1.0.sql
+share/postgresql/extension/btree_gist--unpackaged--1.0.sql
+share/postgresql/extension/btree_gist.control
 share/postgresql/extension/citext--1.0.sql
 share/postgresql/extension/citext--unpackaged--1.0.sql
 share/postgresql/extension/citext.control
