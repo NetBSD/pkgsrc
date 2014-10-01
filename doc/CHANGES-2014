@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3681 2014/10/01 13:04:48 adam Exp $
+$NetBSD: CHANGES-2014,v 1.3682 2014/10/01 13:12:46 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4671,3 +4671,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/git-docs to 2.1.2 [adam 2014-10-01]
 	Updated devel/git-svn to 2.1.2 [adam 2014-10-01]
 	Updated www/gitweb to 2.1.2 [adam 2014-10-01]
+	Added devel/libgit2 version 0.21.1 [fhajny 2014-10-01]
