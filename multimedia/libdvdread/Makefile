@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2014/10/01 12:18:19 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2014/10/01 12:21:20 wiz Exp $
 
 DISTNAME=	libdvdread-5.0.0
 CATEGORIES=	multimedia
@@ -13,14 +13,9 @@ LICENSE=	gnu-gpl-v2
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
-#USE_TOOLS+=		aclocal autoconf automake autoreconf gmake
 GNU_CONFIGURE=		yes
 
 MESSAGE_SUBST+=		PKGBASE=${PKGBASE}
 
-#pre-configure:
-#	cd ${WRKSRC} && autoreconf -vi
-
 .include "options.mk"
-
 .include "../../mk/bsd.pkg.mk"
