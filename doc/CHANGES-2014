@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3695 2014/10/01 19:26:24 joerg Exp $
+$NetBSD: CHANGES-2014,v 1.3696 2014/10/01 19:27:04 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4685,3 +4685,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/postgresql90-datatypes to 9.0.18nb1 [joerg 2014-10-01]
 	Updated databases/postgresql91-datatypes to 9.1.14nb1 [joerg 2014-10-01]
 	Updated databases/postgresql92-datatypes to 9.2.9nb1 [joerg 2014-10-01]
+	Updated databases/postgresql93-datatypes to 9.3.5nb1 [joerg 2014-10-01]
