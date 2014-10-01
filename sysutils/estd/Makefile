@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2012/12/12 10:44:11 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2014/10/01 01:17:33 jmcneill Exp $
 
 DISTNAME=	estd-r7
 PKGNAME=	estd-0.7
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.ecademix.com/JohannesHofmann/
 
@@ -15,7 +16,8 @@ INSTALLATION_DIRS=	share/examples/rc.d
 ONLY_FOR_PLATFORM=	NetBSD-2.99.*-i386 NetBSD-[3-9]*-i386 \
 			NetBSD-[4-9]*-x86_64 DragonFly-*-i386 \
 			NetBSD-5.99.*-powerpc \
-			NetBSD-5.99.*-mips64el
+			NetBSD-5.99.*-mips64el \
+			NetBSD-[7-9]*-earm* NetBSD-[7-9]*-arm*
 
 RCD_SCRIPTS=		estd
 RCD_SCRIPT_SRC.estd=	${WRKSRC}/estd.sh
