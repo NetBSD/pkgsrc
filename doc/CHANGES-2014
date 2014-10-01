@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3658 2014/10/01 11:00:58 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3659 2014/10/01 11:02:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4633,3 +4633,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Variable-Magic to 0.54 [wiz 2014-10-01]
 	Updated devel/p5-Exporter-Tiny to 0.040 [wiz 2014-10-01]
 	Updated devel/p5-Path-Class to 0.35 [wiz 2014-10-01]
+	Updated www/p5-Template-Toolkit to 2.26 [wiz 2014-10-01]
