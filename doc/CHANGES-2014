@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3640 2014/10/01 09:42:01 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3641 2014/10/01 09:43:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4615,3 +4615,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/libdrm to 2.4.58 [wiz 2014-10-01]
 	Updated x11/xtrans to 1.3.5 [wiz 2014-10-01]
 	Updated games/puzzles to 20140925.r10264 [wiz 2014-10-01]
+	Updated devel/meld to 3.12.0 [wiz 2014-10-01]
