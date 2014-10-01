@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2014/09/14 17:48:37 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2014/10/01 11:46:41 wiz Exp $
 
-DISTNAME=	python-ldap-2.4.16
+DISTNAME=	python-ldap-2.4.17
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
 CATEGORIES=	databases python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/python-ldap/
@@ -8,6 +8,7 @@ MASTER_SITES=	http://pypi.python.org/packages/source/p/python-ldap/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.python-ldap.org/
 COMMENT=	LDAP client API for Python
+LICENSE=	python-software-foundation
 
 EGG_NAME=	${DISTNAME:S/python-ldap/python_ldap/}
 
