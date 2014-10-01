@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:08:07 joerg Exp $
-bin/dvdnav-config
+@comment $NetBSD: PLIST,v 1.6 2014/10/01 12:23:31 wiz Exp $
 include/dvdnav/dvd_types.h
 include/dvdnav/dvdnav.h
 include/dvdnav/dvdnav_events.h
 lib/libdvdnav.la
-lib/libdvdnavmini.la
 lib/pkgconfig/dvdnav.pc
-lib/pkgconfig/dvdnavmini.pc
-share/aclocal/dvdnav.m4
+share/doc/libdvdnav/AUTHORS
+share/doc/libdvdnav/COPYING
+share/doc/libdvdnav/ChangeLog
+share/doc/libdvdnav/README
+share/doc/libdvdnav/TODO
