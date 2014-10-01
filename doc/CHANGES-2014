@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3635 2014/10/01 01:04:56 agc Exp $
+$NetBSD: CHANGES-2014,v 1.3636 2014/10/01 08:13:18 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4610,3 +4610,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/ruby193-base to 1.9.3p547nb1 [taca 2014-09-30]
 	Updated net/dhcpcd to 6.4.3nb1 [roy 2014-10-01]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2014Q3 branch [agc 2014-10-01]
+	Updated emulators/sys161 to 1.99.09 [dholland 2014-10-01]
