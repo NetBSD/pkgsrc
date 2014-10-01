@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2014/01/28 20:18:09 adam Exp $
+$NetBSD: distinfo,v 1.11 2014/10/01 08:32:32 adam Exp $
 
-SHA1 (openldap-2.4.39.tgz) = 2b8e8401214867c361f7212e7058f95118b5bd6c
-RMD160 (openldap-2.4.39.tgz) = da68043bd38e9d58811599d43bfdbc8f6c9b6f58
-Size (openldap-2.4.39.tgz) = 5509060 bytes
+SHA1 (openldap-2.4.40.tgz) = 0cfac3b024b99de2e2456cc7254481b6644e0b96
+RMD160 (openldap-2.4.40.tgz) = 38a914d785040730e9e595fe007ea4a0d0635344
+Size (openldap-2.4.40.tgz) = 5641865 bytes
