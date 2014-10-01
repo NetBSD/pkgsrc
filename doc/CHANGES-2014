@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3661 2014/10/01 11:12:17 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3662 2014/10/01 11:13:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4637,3 +4637,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-CGI to 4.04 [wiz 2014-10-01]
 	Added math/wxmaxima version 14.09.0 [wiz 2014-10-01]
 	Removed math/wxMaxima successor math/wxmaxima [wiz 2014-10-01]
+	Updated x11/xterm to 311 [wiz 2014-10-01]
