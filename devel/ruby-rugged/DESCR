@@ -1,0 +1,2 @@
+Rugged is a library for accessing libgit2 in Ruby. It gives you the speed
+and portability of libgit2 with the beauty of the Ruby language.
