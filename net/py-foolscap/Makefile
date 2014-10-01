@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2014/08/17 17:40:04 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2014/10/01 11:43:27 wiz Exp $
 
-DISTNAME=	foolscap-0.6.5
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/.tar//}
+DISTNAME=	foolscap-0.7.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	http://pypi.python.org/packages/source/f/foolscap/
 
@@ -26,11 +26,7 @@ INSTALLATION_DIRS+=	share/doc/py-foolscap
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/*.txt \
 		${DESTDIR}${PREFIX}/share/doc/py-foolscap
-	${INSTALL_DATA} ${WRKSRC}/doc/*.xhtml \
-		${DESTDIR}${PREFIX}/share/doc/py-foolscap
-	${INSTALL_DATA} ${WRKSRC}/doc/*.css \
-		${DESTDIR}${PREFIX}/share/doc/py-foolscap
-	${INSTALL_DATA} ${WRKSRC}/doc/*.tpl \
+	${INSTALL_DATA} ${WRKSRC}/doc/*.rst \
 		${DESTDIR}${PREFIX}/share/doc/py-foolscap
 
 .include "../../lang/python/egg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/05/25 11:22:58 gdt Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/10/01 11:43:27 wiz Exp $
 bin/flappclient
 bin/flappserver
 bin/flogtool
@@ -268,16 +268,13 @@ ${PYSITELIB}/foolscap/util.pyo
 ${PYSITELIB}/foolscap/vocab.py
 ${PYSITELIB}/foolscap/vocab.pyc
 ${PYSITELIB}/foolscap/vocab.pyo
-share/doc/py-foolscap/copyable.xhtml
-share/doc/py-foolscap/failures.xhtml
-share/doc/py-foolscap/flappserver.xhtml
+share/doc/py-foolscap/copyable.rst
+share/doc/py-foolscap/failures.rst
+share/doc/py-foolscap/flappserver.rst
 share/doc/py-foolscap/jobs.txt
-share/doc/py-foolscap/logging.xhtml
-share/doc/py-foolscap/schema.xhtml
-share/doc/py-foolscap/serializing.xhtml
-share/doc/py-foolscap/stylesheet-unprocessed.css
-share/doc/py-foolscap/stylesheet.css
-share/doc/py-foolscap/template.tpl
+share/doc/py-foolscap/logging.rst
+share/doc/py-foolscap/schema.rst
+share/doc/py-foolscap/serializing.rst
 share/doc/py-foolscap/todo.txt
 share/doc/py-foolscap/use-cases.txt
-share/doc/py-foolscap/using-foolscap.xhtml
+share/doc/py-foolscap/using-foolscap.rst
