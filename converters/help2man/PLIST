@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/09/07 20:18:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/10/01 12:12:28 wiz Exp $
 bin/help2man
 info/help2man-de.info
 info/help2man-fr.info
@@ -9,6 +9,7 @@ ${PLIST.nls}lib/bindtextdomain.so
 ${PLIST.nls}man/de/man1/help2man.1
 ${PLIST.nls}man/el/man1/help2man.1
 ${PLIST.nls}man/eo/man1/help2man.1
+${PLIST.nls}man/es/man1/help2man.1
 ${PLIST.nls}man/fi/man1/help2man.1
 ${PLIST.nls}man/fr/man1/help2man.1
 ${PLIST.nls}man/hr/man1/help2man.1
@@ -27,6 +28,7 @@ ${PLIST.nls}man/vi/man1/help2man.1
 ${PLIST.nls}share/locale/de/LC_MESSAGES/help2man.mo
 ${PLIST.nls}share/locale/el/LC_MESSAGES/help2man.mo
 ${PLIST.nls}share/locale/eo/LC_MESSAGES/help2man.mo
+${PLIST.nls}share/locale/es/LC_MESSAGES/help2man.mo
 ${PLIST.nls}share/locale/fi/LC_MESSAGES/help2man.mo
 ${PLIST.nls}share/locale/fr/LC_MESSAGES/help2man.mo
 ${PLIST.nls}share/locale/hr/LC_MESSAGES/help2man.mo
