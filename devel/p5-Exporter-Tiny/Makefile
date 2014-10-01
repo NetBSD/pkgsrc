@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/09/06 13:58:41 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/10/01 11:00:00 wiz Exp $
 
-DISTNAME=	Exporter-Tiny-0.038
+DISTNAME=	Exporter-Tiny-0.040
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TO/TOBYINK/}
