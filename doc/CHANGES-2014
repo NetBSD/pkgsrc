@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3674 2014/10/01 12:23:41 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3675 2014/10/01 12:25:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4650,3 +4650,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added security/php-ssh2 version 0.12 [fhajny 2014-10-01]
 	Updated multimedia/libdvdread to 5.0.0 [wiz 2014-10-01]
 	Updated multimedia/libdvdnav to 5.0.1 [wiz 2014-10-01]
+	Updated devel/py-setuptools to 6.0.2 [wiz 2014-10-01]
