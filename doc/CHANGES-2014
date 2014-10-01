@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3647 2014/10/01 10:47:44 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3648 2014/10/01 10:49:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4622,3 +4622,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/p5-Net-DNS to 0.80 [wiz 2014-10-01]
 	Updated misc/p5-Business-ISBN-Data to 20140910.002 [wiz 2014-10-01]
 	Updated misc/p5-Business-ISBN to 2.09 [wiz 2014-10-01]
+	Updated devel/p5-Compress-Raw-Zlib to 2.066 [wiz 2014-10-01]
