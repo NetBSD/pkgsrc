@@ -1,0 +1,4 @@
+The package provides an environment, tabu, which will make any sort of
+tabular (that doesn't need to split across pages), and an environment
+longtabu which provides the facilities of tabu in a modified longtable
+environment. (Note that this latter offers an enhancement of ltxtable.)
