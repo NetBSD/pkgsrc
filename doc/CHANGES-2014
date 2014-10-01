@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3678 2014/10/01 12:44:43 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3679 2014/10/01 12:46:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4654,3 +4654,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/py-sqlparse to 0.1.12 [wiz 2014-10-01]
 	Updated devel/py-test to 2.6.3 [wiz 2014-10-01]
 	Updated net/py-twisted to 14.0.2 [wiz 2014-10-01]
+	Updated time/py-vdirsyncer to 0.3.0 [wiz 2014-10-01]
