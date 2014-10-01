@@ -4,4 +4,4 @@ compare two or three folders and launch file comparisons. You can
 browse and view a working copy from popular version control systems
 such such as CVS, Subversion, Bazaar-ng and Mercurial.
 
-This is the stable version based on GTK 2.
+This is the version based on GTK 3.
