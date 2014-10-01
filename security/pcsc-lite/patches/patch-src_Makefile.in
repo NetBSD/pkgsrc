@@ -1,10 +1,10 @@
-$NetBSD: patch-src_Makefile.in,v 1.5 2014/02/25 17:47:19 gdt Exp $
+$NetBSD: patch-src_Makefile.in,v 1.6 2014/10/01 16:27:03 gdt Exp $
 
 Make sure libpscslite.so is not linked against -lpthread on NetBSD, as
 loading libpthread.so through dlopen() is now forbidden.
 Disable installation of pcsc-spy
 
---- src/Makefile.in.orig	2014-02-14 16:17:03.000000000 +0000
+--- src/Makefile.in.orig	2014-09-24 13:04:47.000000000 +0000
 +++ src/Makefile.in
 @@ -396,6 +396,8 @@ POLKIT_LIBS = @POLKIT_LIBS@
  PTHREAD_CC = @PTHREAD_CC@

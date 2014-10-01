@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.15 2014/02/25 17:47:19 gdt Exp $
+$NetBSD: distinfo,v 1.16 2014/10/01 16:27:03 gdt Exp $
 
-SHA1 (pcsc-lite-1.8.11.tar.bz2) = b72e506978121cde284f8b0b01986df74728dc7a
-RMD160 (pcsc-lite-1.8.11.tar.bz2) = c8433f0f20516ad03fbea7b3330cfaee2844616a
-Size (pcsc-lite-1.8.11.tar.bz2) = 571837 bytes
-SHA1 (patch-configure) = fdaf3d598c2f03718c585c8201f9ed33970107a0
-SHA1 (patch-src_Makefile.in) = bd5449c8bceb21cf9a22503e6f9254e25e582689
-SHA1 (patch-src_PCSC_reader.h) = 34fa97e93ea770da79a604df17ef62a8bceb3717
-SHA1 (patch-src_libpscslite.pc.in) = db7dff9cf062dd72f75960a6e62242d0da793e67
-SHA1 (patch-src_spy_Makefile.in) = 5af1360728d37296c5c6c2c85982403c844ec670
-SHA1 (patch-src_utils.c) = 558e2d67a2d3efa6e5363323ce942fa383620a8a
+SHA1 (pcsc-lite-1.8.12.tar.bz2) = dc06f6971c2111a82597a337de560b065dd317a8
+RMD160 (pcsc-lite-1.8.12.tar.bz2) = f0f5be03cf4800c69ef4c7383ef6942c654812c4
+Size (pcsc-lite-1.8.12.tar.bz2) = 580449 bytes
+SHA1 (patch-configure) = 2b0e0065c14d7625469c85e29ce3a47806a1cf55
+SHA1 (patch-src_Makefile.in) = 5ada9cc404927ac9f44824bce1c4a815832a2ac1
+SHA1 (patch-src_PCSC_reader.h) = 8ea2b7be9b3bae56cdae64b950373c8eeda2813a
+SHA1 (patch-src_libpscslite.pc.in) = ba1c8ed98ce81f1fc40ecc8af1b44d0cff8537df
+SHA1 (patch-src_spy_Makefile.in) = b50d3d0365409a2f718ac61f698a97e6e2e834db
+SHA1 (patch-src_utils.c) = 39c9126fb4f4b67a96328ba5abd448bf007cbbea
