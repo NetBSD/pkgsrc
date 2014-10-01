@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3691 2014/10/01 17:38:47 bouyer Exp $
+$NetBSD: CHANGES-2014,v 1.3692 2014/10/01 19:05:52 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4681,3 +4681,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/ccid to 1.4.18 [gdt 2014-10-01]
 	Updated security/pcsc-lite to 1.8.12 [gdt 2014-10-01]
 	Updated sysutils/xentools42 to 4.2.5nb1 [bouyer 2014-10-01]
+	Removed devel/nbitools [joerg 2014-10-01]
