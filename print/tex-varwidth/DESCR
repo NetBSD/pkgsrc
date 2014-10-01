@@ -1,0 +1,3 @@
+The varwidth environment is superficially similar to minipage, but the
+specified width is just a maximum value -- the box may get a narrower
+"natural" width.
