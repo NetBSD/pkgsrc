@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/08/25 07:49:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/10/01 12:08:24 adam Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -201,6 +201,7 @@ share/examples/git/templates/hooks/prepare-commit-msg.sample
 share/examples/git/templates/hooks/update.sample
 share/examples/git/templates/info/exclude
 share/locale/bg/LC_MESSAGES/git.mo
+share/locale/ca/LC_MESSAGES/git.mo
 share/locale/de/LC_MESSAGES/git.mo
 share/locale/fr/LC_MESSAGES/git.mo
 share/locale/is/LC_MESSAGES/git.mo
