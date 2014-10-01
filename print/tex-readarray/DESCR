@@ -1,0 +1,9 @@
+The package allows the user to input formatted data into elements of a
+2-D or 3-D array and to recall that data at will by individual cell
+number. The data can be but need not be numerical in nature. It can be,
+for example, formatted text.
+
+While the package can be used for any application where indexed data is
+called for, the package proves particularly useful when elements of
+multiple arrays must be recallable and dynamically combined at time of
+compilation, rather than in advance.
