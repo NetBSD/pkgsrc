@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3668 2014/10/01 11:52:35 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3669 2014/10/01 11:53:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4644,3 +4644,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/pcre to 8.36 [wiz 2014-10-01]
 	Updated databases/py-ldap to 2.4.17 [wiz 2014-10-01]
 	Updated audio/musicpd to 0.18.16 [wiz 2014-10-01]
+	Updated sysutils/py-psutil to 2.1.2 [wiz 2014-10-01]
