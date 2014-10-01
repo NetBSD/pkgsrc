@@ -1,33 +1,37 @@
-# $NetBSD: Makefile,v 1.52 2014/07/19 06:13:37 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2014/10/01 09:43:43 wiz Exp $
 
-DISTNAME=		meld-1.8.6
+DISTNAME=		meld-3.12.0
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/meld/1.8/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/meld/3.12/}
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://meldmerge.org/
-COMMENT=		Visual diff and merge tool (GTK2 version)
+COMMENT=		Visual diff and merge tool (GTK3 version)
 LICENSE=		gnu-gpl-v2
 
-DEPENDS+=		${PYPKGPREFIX}-gtk2>=2.14.0:../../x11/py-gtk2
+BUILD_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
+DEPENDS+=		${PYPKGPREFIX}-gobject3>=3.8:../../devel/py-gobject3
+DEPENDS+=		gsettings-desktop-schemas-[0-9]*:../../sysutils/gsettings-desktop-schemas
 
-USE_PKGLOCALEDIR=		YES
-USE_TOOLS+=			gmake msgfmt intltool
-MAKE_FLAGS+=			prefix=${PREFIX}
-MAKE_FLAGS+=			localedir=${PREFIX}/${PKGLOCALEDIR}/locale
-MAKE_FLAGS+=			PYTHON=${PYTHONBIN}
-REPLACE_PYTHON=		bin/meld
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2
+USE_TOOLS+=		intltool msgfmt
 
-# remove unnecessarily created empty dirs
-post-install:
-	${RMDIR} ${DESTDIR}${PREFIX}/share/doc/meld
-	${RMDIR} ${DESTDIR}${PREFIX}/share/pixmaps
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 3.11; 3.12 will probably require 33+
+
+SUBST_CLASSES+=		man
+SUBST_FILES.man=	setup.py
+SUBST_SED.man+=		-e "s,share/man/man1,${PKGMANDIR}/man1,"
+SUBST_STAGE.man=	pre-build
+SUBST_MESSAGE.man=	Fixing man page installation path.
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../lang/python/application.mk"
-.include "../../databases/shared-mime-info/mimedb.mk"
-.include "../../mk/omf-scrollkeeper.mk"
+.include "../../lang/python/distutils.mk"
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.34.0
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/glib2/schemas.mk"
+BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.6
+.include "../../x11/gtk3/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtksourceview3+=	gtksourceview3>=3.6
+.include "../../x11/gtksourceview3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
