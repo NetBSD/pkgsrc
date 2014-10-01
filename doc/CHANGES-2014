@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3663 2014/10/01 11:37:49 tron Exp $
+$NetBSD: CHANGES-2014,v 1.3664 2014/10/01 11:41:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4639,3 +4639,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Removed math/wxMaxima successor math/wxmaxima [wiz 2014-10-01]
 	Updated x11/xterm to 311 [wiz 2014-10-01]
 	Updated mail/spamassassin to 3.4.0nb2 [tron 2014-10-01]
+	Updated misc/py-anki2 to 2.0.29 [wiz 2014-10-01]
