@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3676 2014/10/01 12:26:35 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3677 2014/10/01 12:31:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4652,3 +4652,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/libdvdnav to 5.0.1 [wiz 2014-10-01]
 	Updated devel/py-setuptools to 6.0.2 [wiz 2014-10-01]
 	Updated databases/py-sqlparse to 0.1.12 [wiz 2014-10-01]
+	Updated devel/py-test to 2.6.3 [wiz 2014-10-01]
