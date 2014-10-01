@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs-elf.awk,v 1.8 2014/09/07 21:53:41 jperkin Exp $
+# $NetBSD: check-shlibs-elf.awk,v 1.9 2014/10/01 08:59:33 jperkin Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -145,7 +145,7 @@ BEGIN {
 	system_rpath = ENVIRON["PLATFORM_RPATH"]
 	cross_destdir = ENVIRON["CROSS_DESTDIR"]
 	destdir = ENVIRON["DESTDIR"]
-	readelf = ENVIRON["PLATFORM_READELF"]
+	readelf = ENVIRON["READELF"]
 	wrkdir = ENVIRON["WRKDIR"]
 	pkg_info_cmd = ENVIRON["PKG_INFO_CMD"]
 	depends_file = ENVIRON["DEPENDS_FILE"]
