@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.270 2014/04/28 13:15:29 obache Exp $
+# $NetBSD: replace.mk,v 1.271 2014/10/01 19:04:56 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1331,8 +1331,7 @@ _TOOLS.x11-imake=	imake mkdirhier xmkmf
 
 .for _t_ in ${_TOOLS.x11-imake}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
-.    if !empty(PKGPATH:Mdevel/nbitools) || \
-	!empty(PKGPATH:Mx11/xorg-imake)
+.    if !empty(PKGPATH:Mdevel/nbitools)
 MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_CREATE+=		${_t_}
@@ -1350,8 +1349,7 @@ TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}
 .endfor
 
 .if !defined(TOOLS_IGNORE.makedepend) && !empty(_USE_TOOLS:Mmakedepend)
-.  if !empty(PKGPATH:Mdevel/nbitools) || \
-	!empty(PKGPATH:Mx11/xorg-imake)
+.  if !empty(PKGPATH:Mdevel/nbitools)
 MAKEFLAGS+=		TOOLS_IGNORE.makedepend=
 .  elif !empty(_TOOLS_USE_PKGSRC.makedepend:M[yY][eE][sS])
 TOOLS_CREATE+=		makedepend
