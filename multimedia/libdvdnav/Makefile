@@ -1,21 +1,18 @@
-# $NetBSD: Makefile,v 1.10 2012/10/08 09:21:06 asau Exp $
-#
+# $NetBSD: Makefile,v 1.11 2014/10/01 12:23:31 wiz Exp $
 
-DISTNAME=	libdvdnav-4.2.0
+DISTNAME=	libdvdnav-5.0.1
 CATEGORIES=	multimedia
-MASTER_SITES=	http://dvdnav.mplayerhq.hu/releases/
+MASTER_SITES=	http://www.videolan.org/pub/videolan/libdvdnav/5.0.1/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dvdnav.mplayerhq.hu/
 COMMENT=	Library to navigate DVDs
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_TOOLS+=		automake autoconf aclocal autoreconf
-
-pre-configure:
-	cd ${WRKSRC} && autoreconf -vi
+USE_TOOLS+=		pkg-config
 
 .include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
