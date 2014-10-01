@@ -1,0 +1,9 @@
+The package provides a verbbox environment (which uses techniques similar
+to those of the boxedverbatim environment of the moreverb package)
+to place its contents into a globally available box, or into a box
+specified by the user.
+
+The global box may then be used in a variety of situations (for example,
+providing a replica of the boxedverbatim environment itself). A valuable
+use is in places where the standard verbatim environment (which is based
+on a trivlist) may not appear.
