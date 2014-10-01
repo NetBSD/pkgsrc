@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/08/31 22:25:30 wiz Exp $
+$NetBSD: distinfo,v 1.2 2014/10/01 14:26:15 wiz Exp $
 
-SHA1 (gst-rtsp-server-1.4.1.tar.xz) = 8282c326722e7f97e81abb6e217434f451b49e2a
-RMD160 (gst-rtsp-server-1.4.1.tar.xz) = 6578a1d5fa34faab858561d7dab21dc88a43b968
-Size (gst-rtsp-server-1.4.1.tar.xz) = 529996 bytes
+SHA1 (gst-rtsp-server-1.4.3.tar.xz) = e026914a2b2a9814be8063367f2436a0e861858a
+RMD160 (gst-rtsp-server-1.4.3.tar.xz) = c933df063d8cba0d8b3e23351f18bee88506851c
+Size (gst-rtsp-server-1.4.3.tar.xz) = 530492 bytes
