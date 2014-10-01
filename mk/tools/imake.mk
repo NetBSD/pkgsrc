@@ -1,4 +1,4 @@
-# $NetBSD: imake.mk,v 1.19 2007/09/10 06:36:25 rillig Exp $
+# $NetBSD: imake.mk,v 1.20 2014/10/01 19:14:21 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -75,11 +75,6 @@ _PSU_VARS.imake=	IMAKE_MAN_SOURCE_PATH IMAKE_MAN_DIR IMAKE_LIBMAN_DIR \
 USE_TOOLS+=	imake xmkmf
 .endif
 
-# itools implies all of the imake tools
-.if !empty(USE_TOOLS:Mitools)
-USE_TOOLS+=	imake makedepend mkdirhier xmkmf
-.endif
-
 # imake and xmkmf imply each other
 .if !empty(USE_TOOLS:Mimake) || !empty(USE_TOOLS:Mxmkmf)
 USE_TOOLS+=	imake xmkmf
@@ -88,14 +83,6 @@ USE_TOOLS+=	imake xmkmf
 # Add any extra tools that may be required when using imake, e.g. gmake.
 .if !empty(USE_TOOLS:Mimake)
 USE_TOOLS+=	${IMAKE_TOOLS:Nimake}
-.endif
-
-# Ensure that the correct commands are used when using nbitools.
-.if !empty(USE_TOOLS:Mitools)
-CONFIGURE_ENV+=		IMAKE_CMD=imake
-MAKE_ENV+=		IMAKE_CMD=imake
-SCRIPTS_ENV+=		IMAKE_CMD=imake
-TOOLS_ARGS.imake+=	-DImakeCmd=imake
 .endif
 
 TOOLS_ARGS.imake+=	${IMAKEOPTS}
