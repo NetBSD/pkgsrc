@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2013/09/05 18:46:02 wiz Exp $
+$NetBSD: distinfo,v 1.9 2014/10/01 10:57:12 wiz Exp $
 
-SHA1 (Package-Stash-0.36.tar.gz) = e3711ebda2203b321b3eca8385e5c00fd8560694
-RMD160 (Package-Stash-0.36.tar.gz) = da4cc6a8f9d7483ca49644bc7c72ce7eab0c0567
-Size (Package-Stash-0.36.tar.gz) = 37499 bytes
+SHA1 (Package-Stash-0.37.tar.gz) = 43fc4e362ac1a45eb27fe779806cbd96c891e2dc
+RMD160 (Package-Stash-0.37.tar.gz) = b8fff25fb3c0cfd90e0c76ec7d718a1cd0554e32
+Size (Package-Stash-0.37.tar.gz) = 40309 bytes
