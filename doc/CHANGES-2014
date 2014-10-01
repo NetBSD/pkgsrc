@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3693 2014/10/01 19:25:54 joerg Exp $
+$NetBSD: CHANGES-2014,v 1.3694 2014/10/01 19:26:06 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4683,3 +4683,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/xentools42 to 4.2.5nb1 [bouyer 2014-10-01]
 	Removed devel/nbitools [joerg 2014-10-01]
 	Updated databases/postgresql90-datatypes to 9.0.18nb1 [joerg 2014-10-01]
+	Updated databases/postgresql91-datatypes to 9.1.14nb1 [joerg 2014-10-01]
