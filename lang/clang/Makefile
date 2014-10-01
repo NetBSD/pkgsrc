@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2014/09/06 07:37:14 adam Exp $
+# $NetBSD: Makefile,v 1.31 2014/10/01 09:41:02 wiz Exp $
 
 DISTNAME=	clang-3.5.0
 CATEGORIES=	lang
@@ -83,6 +83,8 @@ SUBST_SED.fix-paths+=		-e 's,getToolChain().GetProgramPath("ld"),"/usr/ccs/bin/l
 SUBST_SED.fix-paths+=		-e 's,^.*cxa_finalize.*$$,		; //cxa_finalize.o,g'
 .  endif
 .endif
+
+.include "options.mk"
 
 post-extract:
 	mv ${WRKDIR}/libcxx-${PKGVERSION_NOREV}.src ${WRKSRC}/projects/libcxx
