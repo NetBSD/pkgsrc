@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1984 2014/10/01 09:44:26 wiz Exp $
+# $NetBSD: Makefile,v 1.1985 2014/10/01 13:23:51 fhajny Exp $
 #
 
 COMMENT=	Development utilities
@@ -426,6 +426,7 @@ SUBDIR+=	libgcroots
 SUBDIR+=	libgee
 SUBDIR+=	libgee0.8
 SUBDIR+=	libgetopt
+SUBDIR+=	libgit2
 SUBDIR+=	libglade
 SUBDIR+=	libglademm
 SUBDIR+=	libgnome
@@ -1761,6 +1762,7 @@ SUBDIR+=	ruby-rspec-core
 SUBDIR+=	ruby-rspec-expectations
 SUBDIR+=	ruby-rspec-mocks
 SUBDIR+=	ruby-rspec-rails
+SUBDIR+=	ruby-rugged
 SUBDIR+=	ruby-setup
 SUBDIR+=	ruby-sexp-processor
 SUBDIR+=	ruby-shoulda-context
