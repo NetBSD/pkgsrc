@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3666 2014/10/01 11:45:09 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3667 2014/10/01 11:46:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4642,3 +4642,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/py-anki2 to 2.0.29 [wiz 2014-10-01]
 	Updated net/py-foolscap to 0.7.0 [wiz 2014-10-01]
 	Updated devel/pcre to 8.36 [wiz 2014-10-01]
+	Updated databases/py-ldap to 2.4.17 [wiz 2014-10-01]
