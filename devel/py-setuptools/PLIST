@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2014/07/22 10:00:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2014/10/01 12:25:44 wiz Exp $
 bin/easy_install-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -103,6 +103,9 @@ ${PYSITELIB}/setuptools/extension.pyo
 ${PYSITELIB}/setuptools/lib2to3_ex.py
 ${PYSITELIB}/setuptools/lib2to3_ex.pyc
 ${PYSITELIB}/setuptools/lib2to3_ex.pyo
+${PYSITELIB}/setuptools/msvc9_support.py
+${PYSITELIB}/setuptools/msvc9_support.pyc
+${PYSITELIB}/setuptools/msvc9_support.pyo
 ${PYSITELIB}/setuptools/package_index.py
 ${PYSITELIB}/setuptools/package_index.pyc
 ${PYSITELIB}/setuptools/package_index.pyo
@@ -171,6 +174,9 @@ ${PYSITELIB}/setuptools/tests/test_integration.pyo
 ${PYSITELIB}/setuptools/tests/test_markerlib.py
 ${PYSITELIB}/setuptools/tests/test_markerlib.pyc
 ${PYSITELIB}/setuptools/tests/test_markerlib.pyo
+${PYSITELIB}/setuptools/tests/test_msvc9compiler.py
+${PYSITELIB}/setuptools/tests/test_msvc9compiler.pyc
+${PYSITELIB}/setuptools/tests/test_msvc9compiler.pyo
 ${PYSITELIB}/setuptools/tests/test_packageindex.py
 ${PYSITELIB}/setuptools/tests/test_packageindex.pyc
 ${PYSITELIB}/setuptools/tests/test_packageindex.pyo
@@ -195,6 +201,9 @@ ${PYSITELIB}/setuptools/tests/test_upload_docs.pyo
 ${PYSITELIB}/setuptools/unicode_utils.py
 ${PYSITELIB}/setuptools/unicode_utils.pyc
 ${PYSITELIB}/setuptools/unicode_utils.pyo
+${PYSITELIB}/setuptools/utils.py
+${PYSITELIB}/setuptools/utils.pyc
+${PYSITELIB}/setuptools/utils.pyo
 ${PYSITELIB}/setuptools/version.py
 ${PYSITELIB}/setuptools/version.pyc
 ${PYSITELIB}/setuptools/version.pyo
