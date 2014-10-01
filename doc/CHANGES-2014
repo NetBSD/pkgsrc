@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3685 2014/10/01 14:26:32 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3686 2014/10/01 15:57:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4675,3 +4675,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/ruby-rugged version 0.21.0 [fhajny 2014-10-01]
 	Updated databases/redis to 2.8.17 [fhajny 2014-10-01]
 	Updated multimedia/gstreamer1 to 1.4.3 [wiz 2014-10-01]
+	Updated print/poppler to 0.26.5 [wiz 2014-10-01]
