@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2014/07/08 14:59:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.55 2014/10/01 09:39:11 wiz Exp $
 
-VERSION=	3.8.0
+VERSION=	3.9.0.3
 DISTNAME=	FileZilla_${VERSION}_src
 PKGNAME=	filezilla-${VERSION}
-PKGREVISION=	2
 CATEGORIES=	net x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=filezilla/}
 EXTRACT_SUFX=	.tar.bz2
@@ -31,5 +30,5 @@ CONFIGURE_ENV+=		ac_cv_path_xdgopen=firefox
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 BUILDLINK_API_DEPENDS.tinyxml+=	tinyxml>=2.6.2nb1
 .include "../../textproc/tinyxml/buildlink3.mk"
-.include "../../x11/wxGTK28/buildlink3.mk"
+.include "../../x11/wxGTK30/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
