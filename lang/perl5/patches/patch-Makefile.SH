@@ -1,5 +1,6 @@
-$NetBSD: patch-Makefile.SH,v 1.2 2014/06/04 14:24:37 richard Exp $
-due to bloody backward incompatible changes in recent dtrace on SunOS
+$NetBSD: patch-Makefile.SH,v 1.3 2014/10/01 07:17:02 adam Exp $
+
+Due to bloody backward incompatible changes in recent dtrace on SunOS
 postpone invocation of dtrace to later with the actual probe objects.
 
 Ensure perldtrace.h is generated during makedepends in order to avoid
