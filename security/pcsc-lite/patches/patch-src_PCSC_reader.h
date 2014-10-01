@@ -1,11 +1,11 @@
-$NetBSD: patch-src_PCSC_reader.h,v 1.1 2012/12/14 23:50:36 pettai Exp $
+$NetBSD: patch-src_PCSC_reader.h,v 1.2 2014/10/01 16:27:03 gdt Exp $
 
 Add NetBSD to apple/sun conditional.
 This should be sent upstream.
 
---- src/PCSC/reader.h.orig	2011-06-22 06:38:16.000000000 +0000
+--- src/PCSC/reader.h.orig	2014-02-14 16:15:44.000000000 +0000
 +++ src/PCSC/reader.h
-@@ -128,7 +128,7 @@
+@@ -155,7 +155,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE PO
  
  /* Set structure elements aligment on bytes
   * http://gcc.gnu.org/onlinedocs/gcc/Structure_002dPacking-Pragmas.html */
@@ -14,7 +14,7 @@ This should be sent upstream.
  #pragma pack(1)
  #else
  #pragma pack(push, 1)
-@@ -213,7 +213,7 @@ typedef struct {
+@@ -252,7 +252,7 @@ typedef struct {
  } PIN_PROPERTIES_STRUCTURE;
  
  /* restore default structure elements alignment */
