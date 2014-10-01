@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3679 2014/10/01 12:46:26 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3680 2014/10/01 12:49:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4655,3 +4655,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-test to 2.6.3 [wiz 2014-10-01]
 	Updated net/py-twisted to 14.0.2 [wiz 2014-10-01]
 	Updated time/py-vdirsyncer to 0.3.0 [wiz 2014-10-01]
+	Updated print/cups-filters to 1.0.59 [wiz 2014-10-01]
