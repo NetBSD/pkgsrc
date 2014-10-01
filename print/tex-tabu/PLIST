@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2014/10/01 19:58:54 joerg Exp $
+share/texmf-dist/doc/latex/tabu/tabu.pdf
+share/texmf-dist/tex/latex/tabu/tabu.sty
