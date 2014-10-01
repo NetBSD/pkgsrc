@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3680 2014/10/01 12:49:22 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3681 2014/10/01 13:04:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4656,3 +4656,18 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/py-twisted to 14.0.2 [wiz 2014-10-01]
 	Updated time/py-vdirsyncer to 0.3.0 [wiz 2014-10-01]
 	Updated print/cups-filters to 1.0.59 [wiz 2014-10-01]
+	Updated archivers/xz to 5.0.7 [adam 2014-10-01]
+	Updated lang/perl5 to 5.20.1 [adam 2014-10-01]
+	Updated devel/cmake to 3.0.2 [adam 2014-10-01]
+	Updated devel/apr-util to 1.5.4 [adam 2014-10-01]
+	Updated databases/openldap to 2.4.40 [adam 2014-10-01]
+	Updated databases/mysql56-client to 5.6.21 [adam 2014-10-01]
+	Updated databases/mysql56-server to 5.6.21 [adam 2014-10-01]
+	Updated databases/mysql55-client to 5.5.40 [adam 2014-10-01]
+	Updated databases/mysql55-server to 5.5.40 [adam 2014-10-01]
+	Updated print/ghostscript-apgl to 9.15 [adam 2014-10-01]
+	Updated devel/git to 2.1.2 [adam 2014-10-01]
+	Updated devel/git-base to 2.1.2 [adam 2014-10-01]
+	Updated devel/git-docs to 2.1.2 [adam 2014-10-01]
+	Updated devel/git-svn to 2.1.2 [adam 2014-10-01]
+	Updated www/gitweb to 2.1.2 [adam 2014-10-01]
