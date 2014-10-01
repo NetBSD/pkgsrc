@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3644 2014/10/01 10:42:10 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3645 2014/10/01 10:43:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4619,3 +4619,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Removed devel/meld-devel successor devel/meld [wiz 2014-10-01]
 	Updated finance/gnucash to 2.6.3nb10 [wiz 2014-10-01]
 	Updated databases/p5-DBD-postgresql to 3.4.2 [wiz 2014-10-01]
+	Updated net/p5-Net-DNS to 0.80 [wiz 2014-10-01]
