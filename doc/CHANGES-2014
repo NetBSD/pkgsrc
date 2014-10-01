@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3686 2014/10/01 15:57:11 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3687 2014/10/01 16:09:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4676,3 +4676,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/redis to 2.8.17 [fhajny 2014-10-01]
 	Updated multimedia/gstreamer1 to 1.4.3 [wiz 2014-10-01]
 	Updated print/poppler to 0.26.5 [wiz 2014-10-01]
+	Updated multimedia/ffmpeg2 to 2.4.1 [wiz 2014-10-01]
