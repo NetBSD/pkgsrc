@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3645 2014/10/01 10:43:23 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3646 2014/10/01 10:46:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4620,3 +4620,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated finance/gnucash to 2.6.3nb10 [wiz 2014-10-01]
 	Updated databases/p5-DBD-postgresql to 3.4.2 [wiz 2014-10-01]
 	Updated net/p5-Net-DNS to 0.80 [wiz 2014-10-01]
+	Updated misc/p5-Business-ISBN-Data to 20140910.002 [wiz 2014-10-01]
