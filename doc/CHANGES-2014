@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3704 2014/10/01 23:36:44 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3705 2014/10/02 00:36:51 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4694,3 +4694,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated shells/bash to 4.3.028 [wiz 2014-10-01]
 	Updated x11/xcb-util-keysyms to 0.4.0 [wiz 2014-10-01]
 	Updated games/puzzles to 20140928.r10274 [wiz 2014-10-01]
+	Updated devel/p5-Devel-StackTrace to 1.34 [wen 2014-10-02]
