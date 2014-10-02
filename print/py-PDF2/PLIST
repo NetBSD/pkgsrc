@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/10/09 08:53:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/10/02 13:16:20 wen Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/PyPDF2/__init__.py
 ${PYSITELIB}/PyPDF2/__init__.pyc
@@ -15,6 +15,9 @@ ${PYSITELIB}/PyPDF2/generic.pyo
 ${PYSITELIB}/PyPDF2/merger.py
 ${PYSITELIB}/PyPDF2/merger.pyc
 ${PYSITELIB}/PyPDF2/merger.pyo
+${PYSITELIB}/PyPDF2/pagerange.py
+${PYSITELIB}/PyPDF2/pagerange.pyc
+${PYSITELIB}/PyPDF2/pagerange.pyo
 ${PYSITELIB}/PyPDF2/pdf.py
 ${PYSITELIB}/PyPDF2/pdf.pyc
 ${PYSITELIB}/PyPDF2/pdf.pyo
