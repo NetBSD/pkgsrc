@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2014/06/08 17:18:03 rodent Exp $
+# $NetBSD: Makefile,v 1.6 2014/10/02 10:45:36 fhajny Exp $
 
-DISTNAME=	rabbitmq-c-0.5.0
+DISTNAME=	rabbitmq-c-0.5.2
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/alanxz/rabbitmq-c/releases/download/v${PKGVERSION_NOREV}/
 
