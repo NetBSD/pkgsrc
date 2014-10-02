@@ -1,6 +1,13 @@
-$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.1 2014/10/01 00:59:22 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.2 2014/10/02 09:59:41 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q3 branch:
 
 Created pkgsrc-2014Q3 branch [agc 2014-10-01 00:38 UTC]
+
+Pullup ticket #4510 - requested by joerg
+print/tex-wallpaper: dependency fix
+Pullup ticket #4511 - requested by wiz
+shells/bash: security update
+Pullup ticket #4512 - requested by taca
+www/squid3: security update
