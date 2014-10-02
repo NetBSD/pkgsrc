@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3713 2014/10/02 08:52:54 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.3714 2014/10/02 09:27:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4703,3 +4703,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/squid3 to 3.4.8 [taca 2014-10-02]
 	Updated databases/couchdb to 1.6.1 [fhajny 2014-10-02]
 	Updated archivers/lz4 to 123 [fhajny 2014-10-02]
+	Updated games/lgogdownloader to 2.18 [wiz 2014-10-02]
