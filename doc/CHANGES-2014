@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3719 2014/10/02 10:45:48 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.3720 2014/10/02 11:05:06 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4710,3 +4710,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/mongo-c-driver to 1.0.0 [fhajny 2014-10-02]
 	Updated devel/p5-App-Cmd to 0.323 [wen 2014-10-02]
 	Updated net/rabbitmq-c to 0.5.2 [fhajny 2014-10-02]
+	Updated www/mediawiki to 1.23.5 [wen 2014-10-02]
