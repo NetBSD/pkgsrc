@@ -1,6 +1,6 @@
-$NetBSD: patch-pack.c,v 1.1 2014/08/25 03:27:37 taca Exp $
+$NetBSD: patch-pack.c,v 1.2 2014/10/02 08:59:26 taca Exp $
 
-Fix for CVS-2014-4975 from revision #46806 in ruby_2_1 branch.
+Fix for CVE-2014-4975 from revision #46806 in ruby_2_1 branch.
 
 --- pack.c.orig	2012-10-19 13:13:32.000000000 +0000
 +++ pack.c
