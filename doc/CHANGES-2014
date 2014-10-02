@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3709 2014/10/02 03:50:45 mef Exp $
+$NetBSD: CHANGES-2014,v 1.3710 2014/10/02 04:53:52 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4699,3 +4699,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-MooseX-Traits to 0.12 [wen 2014-10-02]
 	Updated www/p5-Mojolicious to 5.47 [wen 2014-10-02]
 	Added x11/py-qwt-qt4 version 5.2.0 [mef 2014-10-02]
+	Updated x11/py-wxWidgets to 2.8.12.0 [mef 2014-10-02]
