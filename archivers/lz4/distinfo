@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2014/08/06 10:41:33 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2014/10/02 08:52:41 fhajny Exp $
 
-SHA1 (lz4-r120.tar.gz) = 6c657297eb9bd47f2f4de76fbc89204b652377c9
-RMD160 (lz4-r120.tar.gz) = fa76b7dff8a5bda1de370a28ca7d7719031ef7a6
-Size (lz4-r120.tar.gz) = 161950 bytes
-SHA1 (patch-Makefile) = 30b138d69267c9d3b110165e2b709e8e1b01f552
-SHA1 (patch-programs_Makefile) = 8d633547c1bac2710d49c859be41463a32693408
-SHA1 (patch-programs_fuzzer.c) = fc7560d0257e8e90bcccf7ae8082061ff0d9ebf4
+SHA1 (lz4-r123.tar.gz) = 588d51ea02a0bc325229601412b1e829a4806413
+RMD160 (lz4-r123.tar.gz) = 2a6c899dee8f84b619f7cdb8ec0cea3ebb273910
+Size (lz4-r123.tar.gz) = 137315 bytes
+SHA1 (patch-Makefile) = 223bf2c60dfd050ef4eb2e03feda988011686cdb
+SHA1 (patch-programs_Makefile) = b248d8967966c482f9d2ee6d51faf245aca3aab1
+SHA1 (patch-programs_fuzzer.c) = 711c0e37128d983000bde1b42afec6f9ee9f0e85

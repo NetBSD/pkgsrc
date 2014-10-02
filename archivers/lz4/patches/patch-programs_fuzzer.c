@@ -1,19 +1,19 @@
-$NetBSD: patch-programs_fuzzer.c,v 1.1 2014/08/06 10:41:34 fhajny Exp $
+$NetBSD: patch-programs_fuzzer.c,v 1.2 2014/10/02 08:52:41 fhajny Exp $
 
 Add portable code for ftime for NetBSD.
 
 Based on https://code.google.com/p/lz4/source/detail?r=81.
---- programs/fuzzer.c.orig	2014-07-24 11:54:05.000000000 +0000
+--- programs/fuzzer.c.orig	2014-09-25 12:03:36.000000000 +0000
 +++ programs/fuzzer.c
-@@ -29,6 +29,7 @@
- #ifdef _MSC_VER    /* Visual Studio */
+@@ -30,6 +30,7 @@
  #  pragma warning(disable : 4127)        /* disable: C4127: conditional expression is constant */
  #  pragma warning(disable : 4146)        /* disable: C4146: minus unsigned expression */
+ #  pragma warning(disable : 4310)        /* disable: C4310: constant char value > 127 */
 +#  define BMK_LEGACY_TIMER 1
  #endif
  
  
-@@ -37,12 +38,17 @@
+@@ -38,12 +39,17 @@
  **************************************/
  #include <stdlib.h>
  #include <stdio.h>      // fgets, sscanf
@@ -32,7 +32,7 @@ Based on https://code.google.com/p/lz4/source/detail?r=81.
  
  /**************************************
     Basic Types
-@@ -103,8 +109,11 @@ static int displayLevel = 2;
+@@ -104,8 +110,11 @@ static int displayLevel = 2;
  /*********************************************************
    Fuzzer functions
  *********************************************************/
@@ -44,7 +44,7 @@ Based on https://code.google.com/p/lz4/source/detail?r=81.
     struct timeb tb;
     int nCount;
     ftime( &tb );
-@@ -112,6 +121,20 @@ static int FUZ_GetMilliStart(void)
+@@ -113,6 +122,20 @@ static int FUZ_GetMilliStart(void)
     return nCount;
  }
  

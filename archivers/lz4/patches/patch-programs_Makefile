@@ -1,18 +1,10 @@
-$NetBSD: patch-programs_Makefile,v 1.1 2014/08/06 10:41:34 fhajny Exp $
+$NetBSD: patch-programs_Makefile,v 1.2 2014/10/02 08:52:41 fhajny Exp $
 
 Make portable, use pkgsrc install scripts.
---- programs/Makefile.orig	2014-07-24 11:54:05.000000000 +0000
+--- programs/Makefile.orig	2014-09-25 12:03:36.000000000 +0000
 +++ programs/Makefile
-@@ -32,14 +32,14 @@
- 
- RELEASE=r120
- DESTDIR=
--PREFIX=/usr
-+PREFIX?=/usr
- CC:=$(CC)
- CFLAGS?= -O3
- CFLAGS+= -std=c99 -Wall -Wextra -Wundef -Wshadow -Wstrict-prototypes -DLZ4_VERSION=\"$(RELEASE)\"
- FLAGS= -I.. $(CPPFLAGS) $(CFLAGS) $(LDFLAGS)
+@@ -40,7 +40,7 @@ CFLAGS += -std=c99 -Wall -Wextra -Wundef
+ FLAGS   = -I.. $(CPPFLAGS) $(CFLAGS) $(LDFLAGS)
  
  BINDIR=$(PREFIX)/bin
 -MANDIR=$(PREFIX)/share/man/man1
@@ -20,11 +12,13 @@ Make portable, use pkgsrc install scripts.
  LZ4DIR=..
  
  TEST_FILES = COPYING
-@@ -103,18 +103,16 @@ clean:
+@@ -107,20 +107,16 @@ clean:
  	@echo Cleaning completed
  
  
--ifneq (,$(filter $(shell uname),Linux Darwin))
+-#------------------------------------------------------------------------
+-#make install is validated only for Linux, OSX, kFreeBSD and Hurd targets
+-ifneq (,$(filter $(shell uname),Linux Darwin GNU/kFreeBSD GNU))
 -
  install: lz4 lz4c
  	@echo Installing binaries
@@ -45,7 +39,7 @@ Make portable, use pkgsrc install scripts.
  	@echo lz4 installation completed
  
  uninstall:
-@@ -170,4 +168,3 @@ test-mem: lz4 datagen
+@@ -185,4 +181,3 @@ test-mem: lz4 datagen frametest
  test-mem32: lz4c32 datagen
  # unfortunately, valgrind doesn't seem to work with non-native binary. If someone knows how to do a valgrind-test on a 32-bits exe with a 64-bits system...
  
