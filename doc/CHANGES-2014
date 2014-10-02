@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3712 2014/10/02 07:42:24 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.3713 2014/10/02 08:52:54 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4702,3 +4702,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/py-wxWidgets to 2.8.12.0 [mef 2014-10-02]
 	Updated www/squid3 to 3.4.8 [taca 2014-10-02]
 	Updated databases/couchdb to 1.6.1 [fhajny 2014-10-02]
+	Updated archivers/lz4 to 123 [fhajny 2014-10-02]
