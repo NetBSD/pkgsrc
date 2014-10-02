@@ -1,0 +1,7 @@
+This package contains well-tested C code for some basic image processing
+operations, along with a description of the functions and some design methods.
+A full set of affine transformations (translation, shear, rotation, scaling)
+on images of all depths is included, with the exception that some of the
+scaling methods do not work at all depths. There are also implementations of
+binary morphology, grayscale morphology, convolution and rank order filters,
+and applications such as jbig2 image processing and color quantization.
