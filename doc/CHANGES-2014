@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3726 2014/10/02 13:17:30 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3727 2014/10/02 13:21:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4717,3 +4717,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Log-Report to 1.05 [wen 2014-10-02]
 	Updated devel/p5-Module-Metadata to 1.000024 [wen 2014-10-02]
 	Updated print/py-PDF2 to 1.23 [wen 2014-10-02]
+	Added graphics/leptonica version 1.71 [adam 2014-10-02]
