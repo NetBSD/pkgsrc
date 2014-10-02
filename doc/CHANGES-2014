@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3714 2014/10/02 09:27:32 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3715 2014/10/02 09:30:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4704,3 +4704,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/couchdb to 1.6.1 [fhajny 2014-10-02]
 	Updated archivers/lz4 to 123 [fhajny 2014-10-02]
 	Updated games/lgogdownloader to 2.18 [wiz 2014-10-02]
+	Removed misc/libreoffice successor misc/libreoffice4 [wiz 2014-10-02]
+	Removed misc/libreoffice3-bin successor misc/libreoffice4-bin [wiz 2014-10-02]
