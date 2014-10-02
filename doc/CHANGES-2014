@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3716 2014/10/02 10:21:38 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.3717 2014/10/02 10:23:35 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4707,3 +4707,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Removed misc/libreoffice successor misc/libreoffice4 [wiz 2014-10-02]
 	Removed misc/libreoffice3-bin successor misc/libreoffice4-bin [wiz 2014-10-02]
 	Updated devel/libbson to 1.0.0 [fhajny 2014-10-02]
+	Updated databases/mongo-c-driver to 1.0.0 [fhajny 2014-10-02]
