@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/10/02 04:46:25 mef Exp $
+@comment $NetBSD: PLIST,v 1.10 2014/10/02 22:53:26 mef Exp $
 bin/editra
 bin/helpviewer
 bin/img2png
@@ -2271,7 +2271,7 @@ ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/wizard.pyo
 ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/xrc.py
 ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/xrc.pyc
 ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/xrc.pyo
-${PYSITELIB}/wx-2.8-gtk2-unicode/wxPython-${PKGVERSION}-py2.7.egg-info
+${PYSITELIB}/wx-2.8-gtk2-unicode/${EGG_FILE2}
 ${PYSITELIB}/wx-2.8-gtk2-unicode/wxPython/__init__.py
 ${PYSITELIB}/wx-2.8-gtk2-unicode/wxPython/__init__.pyc
 ${PYSITELIB}/wx-2.8-gtk2-unicode/wxPython/__init__.pyo
