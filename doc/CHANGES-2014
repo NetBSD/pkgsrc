@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3720 2014/10/02 11:05:06 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3721 2014/10/02 11:17:13 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4711,3 +4711,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-App-Cmd to 0.323 [wen 2014-10-02]
 	Updated net/rabbitmq-c to 0.5.2 [fhajny 2014-10-02]
 	Updated www/mediawiki to 1.23.5 [wen 2014-10-02]
+	Updated net/rabbitmq to 3.3.5 [fhajny 2014-10-02]
