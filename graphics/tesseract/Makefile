@@ -1,42 +1,35 @@
-# $NetBSD: Makefile,v 1.13 2014/09/23 19:07:06 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.14 2014/10/02 16:06:02 adam Exp $
 
-DISTNAME=	tesseract-2.04
-PKGREVISION=	4
+DISTNAME=	tesseract-ocr-3.02.02
+PKGNAME=	${DISTNAME:S/-ocr//}
 CATEGORIES=	graphics
-MASTER_SITES=	http://tesseract-ocr.googlecode.com/files/
+MASTER_SITES=	https://tesseract-ocr.googlecode.com/files/
 DISTFILES+=	${DISTNAME}.tar.gz
-.for l in deu eng fra ita nld spa
-DISTFILES+=	tesseract-2.00.${l}.tar.gz
-.endfor
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/tesseract-ocr/
 COMMENT=	Commercial quality open source OCR engine
 LICENSE=	apache-2.0
 
-LDFLAGS.SunOS+=	-lsocket -lnsl
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake pax
+GNU_CONFIGURE=		yes
+CONFIGURE_ENV+=		LIBLEPT_HEADERSDIR=${BUILDLINK_PREFIX.leptonica}/include
+MAKE_ENV+=		LANGS=${TESSERACT_LANGS:Q}
+
+WRKSRC=			${WRKDIR}/tesseract-ocr
 
 INSTALLATION_DIRS=	libexec share/doc/tesseract share/tesseract
 
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake pax
+TESSERACT_LANGS=	afr ara aze bel ben bul cat ces chi_sim chi_tra chr \
+			dan deu ell eng enm epo equ est eus fin fra frk frm \
+			glg grc heb hin hrv hun ind isl ita jpn kan kor lav \
+			lit mal mkd mlt msa nld nor pol por rus slk slv spa \
+			sqi srp swa swe tam tel tgl tha tur ukr vie
+.for l in ${TESSERACT_LANGS}
+DISTFILES+=	tesseract-ocr-3.02.${l}.tar.gz
+.endfor
 
-post-extract:
-	${RM} ${WRKSRC}/java/makefile
-
-post-build:
-	${SED} -e "s,@PREFIX@,${PREFIX}," ${FILESDIR}/tesseract.sh \
-		> ${WRKSRC}/tesseract.sh
-
-post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/tesseract ${DESTDIR}${PREFIX}/libexec
-	${INSTALL_SCRIPT} ${WRKSRC}/tesseract.sh ${DESTDIR}${PREFIX}/bin/tesseract
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/tesseract
-	${INSTALL_DATA} ${WRKSRC}/phototest.tif ${DESTDIR}${PREFIX}/share/tesseract
-	cd ${WRKDIR}/tessdata && ${PAX} -rw * ${DESTDIR}${PREFIX}/share/tessdata
-	chmod a-x ${DESTDIR}${PREFIX}/share/tessdata/*.*
-
-.include "../../graphics/tiff/buildlink3.mk"
+.include "../../graphics/leptonica/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
