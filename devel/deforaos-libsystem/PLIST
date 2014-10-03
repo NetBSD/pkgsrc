@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/09/16 19:25:51 khorben Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/10/03 16:51:00 khorben Exp $
 bin/configctl
 include/System.h
 include/System/array.h
@@ -21,6 +21,8 @@ lib/libSystem.so
 lib/libSystem.so.0
 lib/libSystem.so.0.0
 lib/pkgconfig/libSystem.pc
+man/html1/configctl.html
+man/man1/configctl.1
 share/doc/libSystem/README.md
 share/gtk-doc/html/libSystem/api-index-full.html
 share/gtk-doc/html/libSystem/ch01.html
@@ -48,5 +50,3 @@ share/gtk-doc/html/libSystem/right.png
 share/gtk-doc/html/libSystem/style.css
 share/gtk-doc/html/libSystem/up-insensitive.png
 share/gtk-doc/html/libSystem/up.png
-share/man/html1/configctl.html
-share/man/man1/configctl.1
