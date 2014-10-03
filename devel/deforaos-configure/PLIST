@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2014/10/03 16:14:30 khorben Exp $
+bin/configure
+man/html1/configure.html
+man/html5/project.conf.html
+man/man1/configure.1
+man/man5/project.conf.5
+share/doc/configure/AUTHORS
+share/doc/configure/BUGS
+share/doc/configure/CHANGES
+share/doc/configure/INSTALL
+share/doc/configure/README
+share/doc/configure/scripts/appbroker.sh
+share/doc/configure/scripts/docbook.sh
+share/doc/configure/scripts/gettext.sh
+share/doc/configure/scripts/gtkdoc.sh
+share/doc/configure/scripts/manual.css.xml
+share/doc/configure/scripts/phplint.sh
+share/doc/configure/scripts/pkgconfig.sh
+share/doc/configure/scripts/shlint.sh
+share/doc/configure/scripts/subst.sh
+share/doc/configure/scripts/xmllint.sh
