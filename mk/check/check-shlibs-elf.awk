@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs-elf.awk,v 1.9 2014/10/01 08:59:33 jperkin Exp $
+# $NetBSD: check-shlibs-elf.awk,v 1.10 2014/10/03 19:12:16 jperkin Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -71,12 +71,17 @@ function shquote(IN, out) {
 function check_pkg(DSO, pkg, found) {
 	if (destdir == "")
 		return 0
-	cmd = pkg_info_cmd " -Fe " shquote(DSO) " 2> /dev/null"
-	if ((cmd | getline pkg) < 0) {
+	if (DSO in pkgcache) {
+		pkg = pkgcache[DSO]
+	} else {
+		cmd = pkg_info_cmd " -Fe " shquote(DSO) " 2> /dev/null"
+		if ((cmd | getline pkg) < 0) {
+			close(cmd)
+			return 0
+		}
 		close(cmd)
-		return 0
+		pkgcache[DSO] = pkg
 	}
-	close(cmd)
 	if (pkg == "")
 		return 0
 	found=0
@@ -124,12 +129,20 @@ function checkshlib(DSO, needed, rpath, found, dso_rath, got_rpath, nrpath) {
 	}
 	for (lib in needed) {
 		for (p = 1; p <= nrpath; p++) {
-			if (!system("test -f " shquote(cross_destdir rpath[p] "/" lib))) {
+			libfile = cross_destdir rpath[p] "/" lib
+			if (!(libfile in libcache)) {
+				libcache[libfile] = system("test -f " shquote(libfile))
+			}
+			if (!libcache[libfile]) {
 				check_pkg(rpath[p] "/" lib)
 				found = 1
 				break
 			}
-			if (!system("test -f " shquote(destdir rpath[p] "/" lib))) {
+			libfile = destdir rpath[p] "/" lib
+			if (!(libfile in libcache)) {
+				libcache[libfile] = system("test -f " shquote(libfile))
+			}
+			if (!libcache[libfile]) {
 				found = 1
 				break
 			}
