@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3732 2014/10/03 15:14:12 darcy Exp $
+$NetBSD: CHANGES-2014,v 1.3733 2014/10/03 16:16:06 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4722,3 +4722,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-mercurial to 3.1.2 [wiz 2014-10-03]
 	Updated shells/bash to 4.3.029 [wiz 2014-10-03]
 	Updated x11/xf86-video-ati to 7.5.0 [wiz 2014-10-03]
+	Added devel/deforaos-configure version 0.1.0 [khorben 2014-10-03]
