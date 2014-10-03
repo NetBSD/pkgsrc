@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3728 2014/10/02 16:07:11 adam Exp $
+$NetBSD: CHANGES-2014,v 1.3729 2014/10/03 09:38:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4719,3 +4719,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated print/py-PDF2 to 1.23 [wen 2014-10-02]
 	Added graphics/leptonica version 1.71 [adam 2014-10-02]
 	Updated graphics/tesseract to 3.02.02 [adam 2014-10-02]
+	Updated devel/py-mercurial to 3.1.2 [wiz 2014-10-03]
