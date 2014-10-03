@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/09/12 21:37:38 morr Exp $
+# $NetBSD: Makefile,v 1.16 2014/10/03 09:30:45 rodent Exp $
 
 DISTNAME=	haproxy-1.5.4
 CATEGORIES=	net www
@@ -41,6 +41,8 @@ TARGET=linux24e
 .    else
 TARGET=linux24
 .    endif
+.  else
+TARGET=generic
 .  endif
 .else
 TARGET=generic
