@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3730 2014/10/03 09:46:31 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3731 2014/10/03 14:25:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4721,3 +4721,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/tesseract to 3.02.02 [adam 2014-10-02]
 	Updated devel/py-mercurial to 3.1.2 [wiz 2014-10-03]
 	Updated shells/bash to 4.3.029 [wiz 2014-10-03]
+	Updated x11/xf86-video-ati to 7.5.0 [wiz 2014-10-03]
