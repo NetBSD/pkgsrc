@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2014/10/01 12:21:20 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2014/10/04 12:43:39 wiz Exp $
 
 DISTNAME=	libdvdread-5.0.0
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.videolan.org/pub/videolan/libdvdread/5.0.0/
 EXTRACT_SUFX=	.tar.bz2
@@ -14,6 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+PKGCONFIG_OVERRIDE=	misc/dvdread.pc.in
 
 MESSAGE_SUBST+=		PKGBASE=${PKGBASE}
 
