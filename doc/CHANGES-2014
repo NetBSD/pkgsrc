@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3738 2014/10/04 12:44:54 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3739 2014/10/04 12:59:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4728,3 +4728,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/libftdi1 to 1.1 [mef 2014-10-04]
 	Updated multimedia/libdvdread to 5.0.0nb1 [wiz 2014-10-04]
 	Updated multimedia/libdvdnav to 5.0.1nb1 [wiz 2014-10-04]
+	Updated security/libsodium to 1.0.0 [wiz 2014-10-04]
