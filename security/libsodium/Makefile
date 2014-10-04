@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2013/10/23 17:08:03 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2014/10/04 12:59:02 wiz Exp $
 
-DISTNAME=	libsodium-0.4.5
+DISTNAME=	libsodium-1.0.0
 CATEGORIES=	security
-MASTER_SITES=	http://download.dnscrypt.org/libsodium/releases/
+MASTER_SITES=	http://download.libsodium.org/libsodium/releases/
 
 MAINTAINER=	csosstudy@gmail.com
 HOMEPAGE=	https://github.com/jedisct1/libsodium
@@ -13,6 +13,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
 TEST_TARGET=	check
-AUTO_MKDIRS=	yes
+
+PKGCONFIG_OVERRIDE=	libsodium.pc.in
 
 .include "../../mk/bsd.pkg.mk"
