@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3746 2014/10/04 13:54:38 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3747 2014/10/04 14:05:25 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4736,3 +4736,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-CPAN-Meta to 2.142690 [wen 2014-10-04]
 	Updated devel/p5-CPAN-Mini to 1.111016 [wen 2014-10-04]
 	Updated devel/p5-CPAN-Perl-Releases to 1.94 [wen 2014-10-04]
+	Updated devel/p5-CPAN-Reporter to 1.2011 [wen 2014-10-04]
