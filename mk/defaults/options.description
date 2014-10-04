@@ -208,6 +208,7 @@ gcc-java		Build the gcc Java frontend, tools and libraries.
 gcc-multilib		Build libraries for multiple ABI's.
 gcc-objc		Build the gcc Objective-C frontend and libraries.
 gcc-objc++		Build the gcc Objective-C++ frontend and libraries.
+gconf			Use GConf to store preferences.
 gd			Use GD to render graphical output.
 gdal			Use the GDAL library.
 gdb6-tui		Build the tui application.
@@ -251,6 +252,7 @@ gtk3-atk-bridge		Enable ATK support.
 gtksourceview		Enable gtksourceview support.
 gtksourceview2		Enable gtksourceview2 support.
 gtkspell		Enable gtkspell support.
+gtkwave-tcl		Enable tcl for gtkwave.
 guile			Enable support for GUILE.
 gzip			Enable compression using gzip.
 hal			Support for the freedesktop.org Hardware Abstraction Layer.
