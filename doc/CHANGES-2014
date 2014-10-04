@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3743 2014/10/04 13:36:07 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3744 2014/10/04 13:40:12 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4733,3 +4733,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-CPAN-Inject to 1.14 [wen 2014-10-04]
 	Updated devel/p5-CPAN-Meta-Check to 0.009 [wen 2014-10-04]
 	Updated devel/p5-CPAN-Meta-Requirements to 2.128 [wen 2014-10-04]
+	Updated devel/p5-CPAN-Meta to 2.142690 [wen 2014-10-04]
