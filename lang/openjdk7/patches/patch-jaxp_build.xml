@@ -1,0 +1,13 @@
+$NetBSD: patch-jaxp_build.xml,v 1.1 2014/10/04 22:47:32 joerg Exp $
+
+--- jaxp/build.xml.orig	2014-09-29 08:29:49.000000000 +0000
++++ jaxp/build.xml
+@@ -125,6 +125,8 @@
+ 	     debug="${javac.debug}"
+              target="${javac.target}">
+             <compilerarg value="-J-Xbootclasspath/p:${javac.jar}"/>
++            <compilerarg value="-J-XX:+UseSerialGC"/>
++            <compilerarg value="-J-mx1024m"/>
+             <compilerarg line="${javac.version.opt} ${javac.lint.opts} ${javac.no.jdk.warnings}"/>
+         </javac>
+     </target>
