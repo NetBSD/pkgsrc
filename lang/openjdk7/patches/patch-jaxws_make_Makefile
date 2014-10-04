@@ -1,0 +1,12 @@
+$NetBSD: patch-jaxws_make_Makefile,v 1.1 2014/10/04 22:47:32 joerg Exp $
+
+--- jaxws/make/Makefile.orig	2014-10-04 13:30:47.000000000 +0000
++++ jaxws/make/Makefile
+@@ -33,6 +33,7 @@
+ #
+ SUN_MAKE_TEST:sh = @echo "ERROR: PLEASE USE GNU VERSION OF MAKE"; exit 33
+ 
++ANT_OPTS += -XX:+UseSerialGC -mx1024m
+ ifdef QUIET
+   ANT_OPTIONS += -quiet
+ endif
