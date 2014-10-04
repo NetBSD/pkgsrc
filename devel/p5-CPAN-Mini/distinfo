@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/04/26 16:02:15 wen Exp $
+$NetBSD: distinfo,v 1.2 2014/10/04 13:46:56 wen Exp $
 
-SHA1 (CPAN-Mini-1.111015.tar.gz) = 2d9536213a17a98272ac814a98cb3e591e65f58b
-RMD160 (CPAN-Mini-1.111015.tar.gz) = ae851f8c9227750638aa2dbd50885817d0bc7dc7
-Size (CPAN-Mini-1.111015.tar.gz) = 27491 bytes
+SHA1 (CPAN-Mini-1.111016.tar.gz) = 200f6893d75bbfe84b80fee347c292cfe646cb9e
+RMD160 (CPAN-Mini-1.111016.tar.gz) = 16428c41d2f479b7c1a18e64c9cbeaf8319a7428
+Size (CPAN-Mini-1.111016.tar.gz) = 29748 bytes
