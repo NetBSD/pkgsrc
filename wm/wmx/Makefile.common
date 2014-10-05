@@ -1,4 +1,7 @@
-# $NetBSD: Makefile.common,v 1.22 2012/10/23 10:24:16 wiz Exp $
+# $NetBSD: Makefile.common,v 1.23 2014/10/05 16:41:09 wiz Exp $
+#
+# used by wm/wmx/Makefile
+# used by wm/wmx-gnome/Makefile
 
 DISTNAME=	wmx-6
 WMX_VERS=	6.0

@@ -1,5 +1,10 @@
-# $NetBSD: Makefile.common,v 1.7 2013/04/06 14:58:18 rodent Exp $
+# $NetBSD: Makefile.common,v 1.8 2014/10/05 16:41:06 wiz Exp $
 #
+# used by fonts/acroread7-korfont/Makefile
+# used by fonts/acroread7-jpnfont/Makefile
+# used by fonts/acroread7-font-share/Makefile
+# used by fonts/acroread7-chtfont/Makefile
+# used by fonts/acroread7-chsfont/Makefile
 
 PKGNAME=	acroread7-${DISTNAME}-7.0
 MASTER_SITES=	ftp://ftp.adobe.com/pub/adobe/reader/unix/7x/7.0/misc/

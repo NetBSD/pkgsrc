@@ -1,24 +1,31 @@
-# $NetBSD: Makefile.common,v 1.4 2012/10/25 06:55:54 asau Exp $
+# $NetBSD: Makefile.common,v 1.5 2014/10/05 16:41:09 wiz Exp $
+#
 # used by textproc/hunspell-af_ZA/Makefile
 # used by textproc/hunspell-bg_BG/Makefile
 # used by textproc/hunspell-ca_ES/Makefile
 # used by textproc/hunspell-cs_CZ/Makefile
+# used by textproc/hunspell-cy_GB/Makefile
 # used by textproc/hunspell-da_DK/Makefile
+# used by textproc/hunspell-el_GR/Makefile
+# used by textproc/hunspell-en_CA/Makefile
+# used by textproc/hunspell-en_NZ/Makefile
+# used by textproc/hunspell-en_ZA/Makefile
 # used by textproc/hunspell-es_ES/Makefile
 # used by textproc/hunspell-es_MX/Makefile
 # used by textproc/hunspell-fo_FO/Makefile
+# used by textproc/hunspell-fy_NL/Makefile
 # used by textproc/hunspell-ga_IE/Makefile
 # used by textproc/hunspell-he_IL/Makefile
 # used by textproc/hunspell-hr_HR/Makefile
 # used by textproc/hunspell-id_ID/Makefile
 # used by textproc/hunspell-lt_LT/Makefile
+# used by textproc/hunspell-lv_LV/Makefile
 # used by textproc/hunspell-mg_MG/Makefile
 # used by textproc/hunspell-ms_MY/Makefile
 # used by textproc/hunspell-nl_NL/Makefile
 # used by textproc/hunspell-ny_MW/Makefile
+# used by textproc/hunspell-pl_PL/Makefile
 # used by textproc/hunspell-ru_RU/Makefile
-#
-# Hunspell dictionary template for fetching from OpenOffice.org
 
 PKGNAME=	hunspell-${DISTNAME}-${VERSION}
 CATEGORIES=	textproc

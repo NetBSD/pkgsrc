@@ -1,7 +1,9 @@
-# $NetBSD: Makefile.common,v 1.17 2013/10/25 21:47:51 joerg Exp $
+# $NetBSD: Makefile.common,v 1.18 2014/10/05 16:41:07 wiz Exp $
 # used by lang/php54/Makefile.php
 # used by lang/php/ext.mk
 # used by meta-pkgs/php54-extensions/Makefile
+# used by devel/libthrift/options.mk
+# used by databases/php-sqlrelay/Makefile
 
 PHP_VERSION_REQD=	54
 PHP_BASE_VERS=		${PHP54_VERSION}
