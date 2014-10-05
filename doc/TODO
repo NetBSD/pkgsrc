@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13719 2014/10/05 15:19:27 wiz Exp $
+$NetBSD: TODO,v 1.13720 2014/10/05 18:19:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -590,6 +590,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glade3-3.18.3
 	o glade3-3.8.5 [GNOME 2.34]
 	o gle-4.2.4
+	o glib2-2.42.0
 	o glibmm-2.42.0
 	o glom-1.14.2 [GNOME 2.26]
 	o glu-10.3
@@ -1045,6 +1046,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sqwebmail-5.7.2
 	o srp_client-1.7.5
 	o ssh-askpass-1.2.4.1
+	o sslh-1.16 [pkg/49257]
 	o stalin-0.11
 	o star-1.5.3
 	o statist-1.3.0
