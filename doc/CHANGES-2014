@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3760 2014/10/05 14:54:47 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3761 2014/10/05 14:55:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4750,3 +4750,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/py-cryptography to 0.6 [wiz 2014-10-05]
 	Updated converters/py-simplejson to 3.6.4 [wiz 2014-10-05]
 	Updated sysutils/py-psutil to 2.1.3 [wiz 2014-10-05]
+	Updated devel/waf to 1.8.0 [wiz 2014-10-05]
