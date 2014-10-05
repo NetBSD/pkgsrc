@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3771 2014/10/05 20:34:37 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.3772 2014/10/05 20:43:27 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4761,3 +4761,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated finance/py-python-bitcoinlib to 0.2.1 [rodent 2014-10-05]
 	Updated graphics/py-cairocffi to 0.6 [rodent 2014-10-05]
 	Updated graphics/py-pygal to 1.5.1 [rodent 2014-10-05]
+	Updated textproc/py-biplist to 0.8 [rodent 2014-10-05]
