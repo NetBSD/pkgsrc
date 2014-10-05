@@ -1,17 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2014/08/19 13:31:24 joerg Exp $
-#
-# used by databases/postgresql90-adminpack/Makefile
-# used by databases/postgresql90-client/Makefile
-# used by databases/postgresql90-datatypes/Makefile
-# used by databases/postgresql90-dblink/Makefile
-# used by databases/postgresql90-docs/Makefile
-# used by databases/postgresql90-fuzzystrmatch/Makefile
-# used by databases/postgresql90-pgcrypto/Makefile
-# used by databases/postgresql90-plperl/Makefile
-# used by databases/postgresql90-plpython/Makefile
-# used by databases/postgresql90-pltcl/Makefile
-# used by databases/postgresql90-server/Makefile
-# used by databases/postgresql90-upgrade/Makefile
+# $NetBSD: Makefile.common,v 1.33 2014/10/05 16:41:05 wiz Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -20,6 +7,21 @@
 # packages, is as follows:
 #	<lang>-postgresql	client-side interface to PostgreSQL
 #	postgresql-<lang>	server-side module for PostgreSQL backend
+#
+# used by databases/postgresql90-adminpack/Makefile
+# used by databases/postgresql90-client/Makefile
+# used by databases/postgresql90-datatypes/Makefile
+# used by databases/postgresql90-dblink/Makefile
+# used by databases/postgresql90-docs/Makefile
+# used by databases/postgresql90-fuzzystrmatch/Makefile
+# used by databases/postgresql90-monitoring/Makefile
+# used by databases/postgresql90-pgcrypto/Makefile
+# used by databases/postgresql90-plperl/Makefile
+# used by databases/postgresql90-plpython/Makefile
+# used by databases/postgresql90-pltcl/Makefile
+# used by databases/postgresql90-replicationtools/Makefile
+# used by databases/postgresql90-server/Makefile
+# used by databases/postgresql90-upgrade/Makefile
 
 DISTNAME=	postgresql-9.0.18
 CATEGORIES=	databases

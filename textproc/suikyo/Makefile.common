@@ -1,8 +1,9 @@
-# $NetBSD: Makefile.common,v 1.3 2010/05/15 23:57:42 obache Exp $
+# $NetBSD: Makefile.common,v 1.4 2014/10/05 16:41:09 wiz Exp $
 #
 # used by textproc/ruby-suikyo/Makefile
 # used by textproc/suikyo-docs/Makefile
 # used by textproc/suikyo-elisp/Makefile
+# used by textproc/suikyo-conv-table/Makefile
 
 SUIKYO_VER=	2.1.0
 DISTNAME=	suikyo-${SUIKYO_VER}

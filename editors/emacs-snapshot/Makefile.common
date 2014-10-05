@@ -1,4 +1,6 @@
-# $NetBSD: Makefile.common,v 1.65 2014/04/16 21:01:51 joerg Exp $
+# $NetBSD: Makefile.common,v 1.66 2014/10/05 16:41:06 wiz Exp $
+#
+# used by editors/emacs-snapshot/Makefile
 
 DISTNAME=	emacs-snapshot_20140101.orig
 SNAPDATE=	${DISTNAME:S/emacs-snapshot_//:S/.orig//}

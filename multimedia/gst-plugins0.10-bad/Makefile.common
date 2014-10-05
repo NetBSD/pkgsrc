@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.34 2014/08/07 20:29:29 wiz Exp $
+# $NetBSD: Makefile.common,v 1.35 2014/10/05 16:41:07 wiz Exp $
 #
 # used by audio/gst-plugins0.10-dts/Makefile
 # used by audio/gst-plugins0.10-faac/Makefile
@@ -10,6 +10,7 @@
 # used by multimedia/gst-plugins0.10-vp8/Makefile
 # used by multimedia/gst-plugins0.10-xvid/Makefile
 # used by net/gst-plugins0.10-mms/Makefile
+# used by net/gst-plugins0.10-rtmp/Makefile
 
 GST_PLUGINS0.10_TYPE=	bad
 GST_PLUGINS0.10_VER=	0.10.23

@@ -1,5 +1,7 @@
-# $NetBSD: Makefile.common,v 1.13 2009/08/02 19:18:40 tonnerre Exp $
+# $NetBSD: Makefile.common,v 1.14 2014/10/05 16:41:05 wiz Exp $
 #
+# used by chat/silc-client/Makefile
+# used by chat/silc-client-icb/Makefile
 
 # Distribution specific information.
 #

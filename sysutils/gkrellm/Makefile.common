@@ -1,4 +1,7 @@
-# $NetBSD: Makefile.common,v 1.17 2010/11/01 00:08:16 wiz Exp $
+# $NetBSD: Makefile.common,v 1.18 2014/10/05 16:41:08 wiz Exp $
+#
+# used by sysutils/gkrellm-share/Makefile
+# used by sysutils/gkrellm-server/Makefile
 
 DISTNAME=	${GKRELLM_DISTBASE}
 PKGNAME=	${GKRELLM_PKGBASE}-${GKRELLM_VERSION}

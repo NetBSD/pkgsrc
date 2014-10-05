@@ -1,6 +1,7 @@
-# $NetBSD: Makefile.common,v 1.1 2013/12/31 23:19:46 ryoon Exp $
-# used by multimedia/libzen
-# used by multimedia/libmediainfo
+# $NetBSD: Makefile.common,v 1.2 2014/10/05 16:41:08 wiz Exp $
+#
+# used by multimedia/mediainfo/Makefile
+# used by multimedia/libmediainfo/Makefile
 
 MIVER=			0.7.65
 

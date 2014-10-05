@@ -1,7 +1,9 @@
-# $NetBSD: Makefile.common,v 1.76 2014/06/18 09:26:12 wiz Exp $
+# $NetBSD: Makefile.common,v 1.77 2014/10/05 16:41:09 wiz Exp $
 # used by x11/qt3-docs/Makefile
 # used by x11/qt3-libs/Makefile
 # used by x11/qt3-tools/Makefile
+# used by x11/qt3-pgsql/Makefile
+# used by x11/qt3-mysql/Makefile
 
 DISTNAME=	qt-x11-free-${QTVERSION}
 CATEGORIES=	x11

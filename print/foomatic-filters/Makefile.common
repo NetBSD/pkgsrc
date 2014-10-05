@@ -1,10 +1,7 @@
-# $NetBSD: Makefile.common,v 1.1 2005/12/17 18:26:07 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2014/10/05 16:41:08 wiz Exp $
 #
-# This Makefile.common file is included by the following Makefiles:
-#
-#	print/foomatic-filters/Makefile
-#	print/foomatic-filters-cups/Makefile
-#
+# used by print/foomatic-filters/Makefile
+# used by print/foomatic-filters-cups/Makefile
 
 FOOMATIC_FILTERS_VERSION=	3.0.2
 CATEGORIES=			print

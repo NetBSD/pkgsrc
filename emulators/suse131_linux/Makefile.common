@@ -1,4 +1,5 @@
-# $NetBSD: Makefile.common,v 1.5 2014/09/07 12:26:44 obache Exp $
+# $NetBSD: Makefile.common,v 1.6 2014/10/05 16:41:06 wiz Exp $
+#
 # used by emulators/suse131_alsa/Makefile
 # used by emulators/suse131_aspell/Makefile
 # used by emulators/suse131_base/Makefile
@@ -40,6 +41,7 @@
 # used by emulators/suse131_qt4/Makefile
 # used by emulators/suse131_slang/Makefile
 # used by emulators/suse131_x11/Makefile
+# used by meta-pkgs/suse131/Makefile
 
 SUSE_PKG=		yes
 SUSE_VERSION=		13.1

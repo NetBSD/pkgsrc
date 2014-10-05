@@ -1,4 +1,7 @@
-# $NetBSD: Makefile.common,v 1.9 2009/12/15 06:35:29 asau Exp $
+# $NetBSD: Makefile.common,v 1.10 2014/10/05 16:41:07 wiz Exp $
+#
+# used by lang/smlnj/Makefile
+# used by lang/twelf/Makefile
 
 # smlnj also supports hppa, sparc, ppc, mlrisc & alpha
 # pkg support for those platforms, and say, solaris-x86

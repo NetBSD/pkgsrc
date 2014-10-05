@@ -1,10 +1,7 @@
-# $NetBSD: Makefile.common,v 1.2 2007/03/14 12:12:57 markd Exp $
+# $NetBSD: Makefile.common,v 1.3 2014/10/05 16:41:08 wiz Exp $
 #
-# This Makefile.common file is included by the following Makefiles:
-#
-#	print/foomatic-ppds/Makefile
-#	print/foomatic-ppds-cups/Makefile
-#
+# used by print/foomatic-ppds/Makefile
+# used by print/foomatic-ppds-cups/Makefile
 
 FOOMATIC_PPDS_VERSION=	20070207
 CATEGORIES=		print

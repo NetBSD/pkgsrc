@@ -1,5 +1,14 @@
-# $NetBSD: Makefile.common,v 1.8 2007/02/22 19:26:10 wiz Exp $
+# $NetBSD: Makefile.common,v 1.9 2014/10/05 16:41:05 wiz Exp $
 #
+# used by cad/wcalc/Makefile
+# used by cad/wcalc-docs/Makefile
+# used by cad/stdio-wcalc/Makefile
+# used by cad/sci-wcalc/Makefile
+# used by cad/mex-wcalc/Makefile
+# used by cad/libwcalc/Makefile
+# used by cad/gtk2-wcalc/Makefile
+# used by cad/gtk1-wcalc/Makefile
+# used by cad/cgi-wcalc/Makefile
 
 DISTNAME=	wcalc-1.0
 CATEGORIES=	cad

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.common,v 1.75 2013/07/06 21:56:13 wiz Exp $
+# $NetBSD: Makefile.common,v 1.76 2014/10/05 16:41:07 wiz Exp $
 #
 # This Makefile fragment is included either directly or indirectly (through
 # Makefile.lib) by all packages that are built from the Mesa sources.
 #
 # used by graphics/Mesa/Makefile.lib
+# used by graphics/glx-utils/Makefile
 
 .include "../../graphics/Mesa/Makefile.version"
 
