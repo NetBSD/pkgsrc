@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3774 2014/10/05 22:08:50 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.3775 2014/10/05 22:14:07 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4764,3 +4764,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/py-biplist to 0.8 [rodent 2014-10-05]
 	Updated textproc/py-color to 0.3.0 [rodent 2014-10-05]
 	Updated textproc/py-phonenumbers to 6.3.0 [rodent 2014-10-05]
+	Updated textproc/py-pyquery to 1.2.9 [rodent 2014-10-05]
