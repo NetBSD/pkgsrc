@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3763 2014/10/05 14:59:34 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3764 2014/10/05 15:02:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4753,3 +4753,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/waf to 1.8.0 [wiz 2014-10-05]
 	Updated x11/xkeyboard-config to 2.13 [wiz 2014-10-05]
 	Updated devel/atk to 2.14.0 [wiz 2014-10-05]
+	Updated devel/libsigc++ to 2.4.0 [wiz 2014-10-05]
