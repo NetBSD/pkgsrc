@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2014/08/19 10:42:55 wiz Exp $
+# $NetBSD: Makefile.common,v 1.9 2014/10/05 16:41:07 wiz Exp $
 #
 # used by graphics/gimp-docs-de/Makefile
 # used by graphics/gimp-docs-en/Makefile
@@ -12,6 +12,7 @@
 # used by graphics/gimp-docs-ru/Makefile
 # used by graphics/gimp-docs-sv/Makefile
 # used by graphics/gimp-docs-zh_CN/Makefile
+# used by graphics/gimp-docs-ja/Makefile
 
 DISTNAME=	gimp-help-${GIMPDOCVER}
 CATEGORIES=	graphics
