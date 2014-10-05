@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.13 2008/04/25 20:39:10 joerg Exp $
+# $NetBSD: Makefile.common,v 1.14 2014/10/05 16:41:08 wiz Exp $
 #
+# used by net/bittornado-gui/Makefile
 
 DISTNAME=		BitTornado-0.3.18
 CATEGORIES=		net

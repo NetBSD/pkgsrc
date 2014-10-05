@@ -1,4 +1,10 @@
-# $NetBSD: Makefile.common,v 1.5 2007/07/29 05:19:26 jlam Exp $
+# $NetBSD: Makefile.common,v 1.6 2014/10/05 16:41:06 wiz Exp $
+#
+# used by games/quake3server/Makefile
+# used by games/quake3server-ut/Makefile
+# used by games/quake3server-ra3/Makefile
+# used by games/quake3server-osp/Makefile
+# used by games/quake3server-excessive/Makefile
 
 Q3ROOTDIR=		${PREFIX}/lib/lokigames/quake3server
 
