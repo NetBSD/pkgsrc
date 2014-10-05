@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/05/24 02:13:34 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/05 20:24:57 rodent Exp $
 
-DISTNAME=	cairocffi-0.5.4
+DISTNAME=	cairocffi-0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	https://pypi.python.org/packages/source/c/cairocffi/

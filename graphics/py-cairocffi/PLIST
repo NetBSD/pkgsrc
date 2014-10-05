@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/05/17 13:43:41 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/10/05 20:24:57 rodent Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -22,9 +22,6 @@ ${PYSITELIB}/cairocffi/fonts.pyo
 ${PYSITELIB}/cairocffi/matrix.py
 ${PYSITELIB}/cairocffi/matrix.pyc
 ${PYSITELIB}/cairocffi/matrix.pyo
-${PYSITELIB}/cairocffi/mkconstants.py
-${PYSITELIB}/cairocffi/mkconstants.pyc
-${PYSITELIB}/cairocffi/mkconstants.pyo
 ${PYSITELIB}/cairocffi/patterns.py
 ${PYSITELIB}/cairocffi/patterns.pyc
 ${PYSITELIB}/cairocffi/patterns.pyo
@@ -40,3 +37,9 @@ ${PYSITELIB}/cairocffi/test_cairo.pyo
 ${PYSITELIB}/cairocffi/test_pixbuf.py
 ${PYSITELIB}/cairocffi/test_pixbuf.pyc
 ${PYSITELIB}/cairocffi/test_pixbuf.pyo
+${PYSITELIB}/cairocffi/test_xcb.py
+${PYSITELIB}/cairocffi/test_xcb.pyc
+${PYSITELIB}/cairocffi/test_xcb.pyo
+${PYSITELIB}/cairocffi/xcb.py
+${PYSITELIB}/cairocffi/xcb.pyc
+${PYSITELIB}/cairocffi/xcb.pyo
