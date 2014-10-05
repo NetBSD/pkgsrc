@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2014/07/29 11:51:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/10/05 14:53:10 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
@@ -77,6 +78,7 @@ ${PYSITELIB}/cryptography/hazmat/backends/openssl/rsa.pyo
 ${PYSITELIB}/cryptography/hazmat/bindings/__init__.py
 ${PYSITELIB}/cryptography/hazmat/bindings/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/bindings/__init__.pyo
+${PYSITELIB}/cryptography/hazmat/bindings/__pycache__/cryptography.hazmat.bindings.openssl.x509_vfy.c
 ${PYSITELIB}/cryptography/hazmat/bindings/commoncrypto/__init__.py
 ${PYSITELIB}/cryptography/hazmat/bindings/commoncrypto/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/bindings/commoncrypto/__init__.pyo
@@ -218,6 +220,8 @@ ${PYSITELIB}/cryptography/hazmat/bindings/utils.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/__init__.py
 ${PYSITELIB}/cryptography/hazmat/primitives/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/__init__.pyo
+${PYSITELIB}/cryptography/hazmat/primitives/__pycache__/checkpkcs7padding.c
+${PYSITELIB}/cryptography/hazmat/primitives/__pycache__/constanttime.c
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/__init__.py
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/__init__.pyo
@@ -275,6 +279,8 @@ ${PYSITELIB}/cryptography/hazmat/primitives/padding.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/serialization.py
 ${PYSITELIB}/cryptography/hazmat/primitives/serialization.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/serialization.pyo
+${PYSITELIB}/cryptography/hazmat/primitives/src/constant_time.c
+${PYSITELIB}/cryptography/hazmat/primitives/src/constant_time.h
 ${PYSITELIB}/cryptography/hazmat/primitives/twofactor/__init__.py
 ${PYSITELIB}/cryptography/hazmat/primitives/twofactor/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/twofactor/__init__.pyo
