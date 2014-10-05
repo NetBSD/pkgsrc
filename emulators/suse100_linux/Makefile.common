@@ -1,4 +1,52 @@
-# $NetBSD: Makefile.common,v 1.25 2014/09/07 12:26:40 obache Exp $
+# $NetBSD: Makefile.common,v 1.26 2014/10/05 16:41:06 wiz Exp $
+#
+# used by emulators/suse100_alsa/Makefile
+# used by emulators/suse100_alsa/Makefile
+# used by emulators/suse100_aspell/Makefile
+# used by emulators/suse100_aspell/Makefile
+# used by emulators/suse100_base/Makefile
+# used by emulators/suse100_base/Makefile
+# used by emulators/suse100_compat/Makefile
+# used by emulators/suse100_compat/Makefile
+# used by emulators/suse100_expat/Makefile
+# used by emulators/suse100_expat/Makefile
+# used by emulators/suse100_fontconfig/Makefile
+# used by emulators/suse100_fontconfig/Makefile
+# used by emulators/suse100_freetype2/Makefile
+# used by emulators/suse100_freetype2/Makefile
+# used by emulators/suse100_glx/Makefile
+# used by emulators/suse100_glx/Makefile
+# used by emulators/suse100_gtk2/Makefile
+# used by emulators/suse100_gtk2/Makefile
+# used by emulators/suse100_krb5/Makefile
+# used by emulators/suse100_krb5/Makefile
+# used by emulators/suse100_libcups/Makefile
+# used by emulators/suse100_libcups/Makefile
+# used by emulators/suse100_libidn/Makefile
+# used by emulators/suse100_libidn/Makefile
+# used by emulators/suse100_libjpeg/Makefile
+# used by emulators/suse100_libjpeg/Makefile
+# used by emulators/suse100_libpng/Makefile
+# used by emulators/suse100_libpng/Makefile
+# used by emulators/suse100_libsigc++2/Makefile
+# used by emulators/suse100_libsigc++2/Makefile
+# used by emulators/suse100_libtiff/Makefile
+# used by emulators/suse100_libtiff/Makefile
+# used by emulators/suse100_libxml2/Makefile
+# used by emulators/suse100_libxml2/Makefile
+# used by emulators/suse100_locale/Makefile
+# used by emulators/suse100_locale/Makefile
+# used by emulators/suse100_openmotif/Makefile
+# used by emulators/suse100_openmotif/Makefile
+# used by emulators/suse100_openssl/Makefile
+# used by emulators/suse100_openssl/Makefile
+# used by emulators/suse100_resmgr/Makefile
+# used by emulators/suse100_resmgr/Makefile
+# used by emulators/suse100_slang/Makefile
+# used by emulators/suse100_slang/Makefile
+# used by emulators/suse100_x11/Makefile
+# used by emulators/suse100_x11/Makefile
+# used by meta-pkgs/suse100/Makefile
 
 SUSE_PKG=		yes
 SUSE_VERSION=		10.0

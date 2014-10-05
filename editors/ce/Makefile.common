@@ -1,4 +1,7 @@
-# $NetBSD: Makefile.common,v 1.15 2014/01/28 12:08:07 obache Exp $
+# $NetBSD: Makefile.common,v 1.16 2014/10/05 16:41:06 wiz Exp $
+#
+# used by editors/ce-x11/Makefile
+# used by editors/ce-doc/Makefile
 
 DISTNAME=		ce-${VERSION}
 VERSION=		4.6

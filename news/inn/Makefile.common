@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.6 2009/12/16 22:10:25 spz Exp $
+# $NetBSD: Makefile.common,v 1.7 2014/10/05 16:41:08 wiz Exp $
 #
+# used by news/newsx/Makefile
 
 INN_PREFIX?=	${PREFIX}
 INN_PATHBIN?=	libexec/inn

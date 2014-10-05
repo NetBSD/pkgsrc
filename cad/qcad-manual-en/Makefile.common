@@ -1,5 +1,9 @@
-# $NetBSD: Makefile.common,v 1.3 2010/01/26 21:13:27 joerg Exp $
+# $NetBSD: Makefile.common,v 1.4 2014/10/05 16:41:05 wiz Exp $
 #
+# used by cad/qcad-manual-hu/Makefile
+# used by cad/qcad-manual-en/Makefile
+# used by cad/qcad-manual-de/Makefile
+# used by cad/qcad-manual-cs/Makefile
 
 EXTRACT_SUFX=		.zip
 

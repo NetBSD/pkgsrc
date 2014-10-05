@@ -1,4 +1,6 @@
-# $NetBSD: Makefile.common,v 1.8 2013/04/13 07:55:06 ghen Exp $
+# $NetBSD: Makefile.common,v 1.9 2014/10/05 16:41:08 wiz Exp $
+#
+# used by net/powerdns/Makefile.backend
 
 PDNS_VERSION=		2.9.22.5
 DISTNAME=		pdns-${PDNS_VERSION}

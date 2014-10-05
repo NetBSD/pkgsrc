@@ -1,5 +1,54 @@
-# $NetBSD: Makefile.common,v 1.4 2014/09/07 12:26:41 obache Exp $
-# used by emulators/suse113_base/Makefile
+# $NetBSD: Makefile.common,v 1.5 2014/10/05 16:41:06 wiz Exp $
+#
+# used by emulators/suse121_alsa/Makefile
+# used by emulators/suse121_alsa/Makefile
+# used by emulators/suse121_aspell/Makefile
+# used by emulators/suse121_aspell/Makefile
+# used by emulators/suse121_base/Makefile
+# used by emulators/suse121_base/Makefile
+# used by emulators/suse121_compat/Makefile
+# used by emulators/suse121_compat/Makefile
+# used by emulators/suse121_expat/Makefile
+# used by emulators/suse121_expat/Makefile
+# used by emulators/suse121_fontconfig/Makefile
+# used by emulators/suse121_fontconfig/Makefile
+# used by emulators/suse121_freetype2/Makefile
+# used by emulators/suse121_freetype2/Makefile
+# used by emulators/suse121_glx/Makefile
+# used by emulators/suse121_glx/Makefile
+# used by emulators/suse121_gtk2/Makefile
+# used by emulators/suse121_gtk2/Makefile
+# used by emulators/suse121_krb5/Makefile
+# used by emulators/suse121_krb5/Makefile
+# used by emulators/suse121_libcups/Makefile
+# used by emulators/suse121_libcups/Makefile
+# used by emulators/suse121_libcurl/Makefile
+# used by emulators/suse121_libcurl/Makefile
+# used by emulators/suse121_libdrm/Makefile
+# used by emulators/suse121_libdrm/Makefile
+# used by emulators/suse121_libjpeg/Makefile
+# used by emulators/suse121_libjpeg/Makefile
+# used by emulators/suse121_libpng/Makefile
+# used by emulators/suse121_libpng/Makefile
+# used by emulators/suse121_libsigc++2/Makefile
+# used by emulators/suse121_libsigc++2/Makefile
+# used by emulators/suse121_libtiff/Makefile
+# used by emulators/suse121_libtiff/Makefile
+# used by emulators/suse121_libxml2/Makefile
+# used by emulators/suse121_libxml2/Makefile
+# used by emulators/suse121_locale/Makefile
+# used by emulators/suse121_locale/Makefile
+# used by emulators/suse121_openmotif/Makefile
+# used by emulators/suse121_openmotif/Makefile
+# used by emulators/suse121_openssl/Makefile
+# used by emulators/suse121_openssl/Makefile
+# used by emulators/suse121_qt4/Makefile
+# used by emulators/suse121_qt4/Makefile
+# used by emulators/suse121_slang/Makefile
+# used by emulators/suse121_slang/Makefile
+# used by emulators/suse121_x11/Makefile
+# used by emulators/suse121_x11/Makefile
+# used by meta-pkgs/suse121/Makefile
 
 SUSE_PKG=		yes
 SUSE_VERSION=		12.1

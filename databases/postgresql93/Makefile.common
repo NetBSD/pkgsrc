@@ -1,17 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2014/07/26 23:58:33 wiz Exp $
-#
-# used by databases/postgresql93-adminpack/Makefile
-# used by databases/postgresql93-client/Makefile
-# used by databases/postgresql93-datatypes/Makefile
-# used by databases/postgresql93-dblink/Makefile
-# used by databases/postgresql93-docs/Makefile
-# used by databases/postgresql93-fuzzystrmatch/Makefile
-# used by databases/postgresql93-pgcrypto/Makefile
-# used by databases/postgresql93-plperl/Makefile
-# used by databases/postgresql93-plpython/Makefile
-# used by databases/postgresql93-pltcl/Makefile
-# used by databases/postgresql93-server/Makefile
-# used by databases/postgresql93-upgrade/Makefile
+# $NetBSD: Makefile.common,v 1.9 2014/10/05 16:41:06 wiz Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -20,6 +7,21 @@
 # packages, is as follows:
 #	<lang>-postgresql	client-side interface to PostgreSQL
 #	postgresql-<lang>	server-side module for PostgreSQL backend
+#
+# used by databases/postgresql93-adminpack/Makefile
+# used by databases/postgresql93-client/Makefile
+# used by databases/postgresql93-datatypes/Makefile
+# used by databases/postgresql93-dblink/Makefile
+# used by databases/postgresql93-docs/Makefile
+# used by databases/postgresql93-fuzzystrmatch/Makefile
+# used by databases/postgresql93-monitoring/Makefile
+# used by databases/postgresql93-pgcrypto/Makefile
+# used by databases/postgresql93-plperl/Makefile
+# used by databases/postgresql93-plpython/Makefile
+# used by databases/postgresql93-pltcl/Makefile
+# used by databases/postgresql93-replicationtools/Makefile
+# used by databases/postgresql93-server/Makefile
+# used by databases/postgresql93-upgrade/Makefile
 
 DISTNAME=	postgresql-9.3.5
 CATEGORIES=	databases

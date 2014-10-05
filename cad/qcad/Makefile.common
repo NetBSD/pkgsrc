@@ -1,5 +1,10 @@
-# $NetBSD: Makefile.common,v 1.1 2006/06/15 08:26:58 chap Exp $
+# $NetBSD: Makefile.common,v 1.2 2014/10/05 16:41:05 wiz Exp $
 #
+# used by cad/qcad/Makefile
+# used by cad/qcad-manual-hu/Makefile
+# used by cad/qcad-manual-en/Makefile
+# used by cad/qcad-manual-de/Makefile
+# used by cad/qcad-manual-cs/Makefile
 
 CATEGORIES=		cad
 MASTER_SITES=		http://www.ribbonsoft.com/archives/qcad/

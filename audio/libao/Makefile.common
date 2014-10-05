@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2014/02/18 20:48:46 wiz Exp $
+# $NetBSD: Makefile.common,v 1.37 2014/10/05 16:41:05 wiz Exp $
 #
 # used by audio/libao-alsa/Makefile
 # used by audio/libao-arts/Makefile
@@ -7,6 +7,7 @@
 # used by audio/libao-nas/Makefile
 # used by audio/libao-oss/Makefile
 # used by audio/libao-sun/Makefile
+# used by audio/libao-pulse/Makefile
 
 DISTNAME=	libao-1.2.0
 CATEGORIES=	audio devel

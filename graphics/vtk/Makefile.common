@@ -1,4 +1,8 @@
-# $NetBSD: Makefile.common,v 1.5 2006/05/15 22:05:24 joerg Exp $
+# $NetBSD: Makefile.common,v 1.6 2014/10/05 16:41:07 wiz Exp $
+#
+# used by graphics/vtk/Makefile.vtkdist
+# used by graphics/vtk-docs/Makefile
+# used by graphics/vtk-data/Makefile
 
 VTK_VERSION=		4.2
 

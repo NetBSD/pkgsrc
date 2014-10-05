@@ -1,4 +1,6 @@
-# $NetBSD: Makefile.common,v 1.25 2013/01/11 00:15:40 joerg Exp $
+# $NetBSD: Makefile.common,v 1.26 2014/10/05 16:41:07 wiz Exp $
+#
+# used by lang/kaffe-esound/Makefile
 # used by lang/kaffe-x11/Makefile
 
 DISTNAME=		kaffe-1.1.7

@@ -1,5 +1,7 @@
-# $NetBSD: Makefile.common,v 1.26 2014/06/01 16:35:32 wiz Exp $
+# $NetBSD: Makefile.common,v 1.27 2014/10/05 16:41:06 wiz Exp $
 #
+# used by fonts/cyberbit-ttf/Makefile
+# used by fonts/cyberbase-ttf/Makefile
 
 DISTNAME=	# empty
 CATEGORIES=	fonts

@@ -1,10 +1,38 @@
-# $NetBSD: Makefile.common,v 1.11 2008/05/26 02:13:18 joerg Exp $
+# $NetBSD: Makefile.common,v 1.12 2014/10/05 16:41:06 wiz Exp $
 #
 # Common infrastructure for NetBSD compat* packages.
 #
 # This file should be included after EMUL_PLATFORMS and NETBSD_VERSION are
 # defined and before EMUL_PLATFORM is used.
 #
+# used by emulators/compat12/Makefile
+# used by emulators/compat13/Makefile
+# used by emulators/compat14/Makefile
+# used by emulators/compat15-extras/Makefile
+# used by emulators/compat15-extras/Makefile
+# used by emulators/compat15/Makefile
+# used by emulators/compat15/Makefile
+# used by emulators/compat16-extras/Makefile
+# used by emulators/compat16-extras/Makefile
+# used by emulators/compat16/Makefile
+# used by emulators/compat16/Makefile
+# used by emulators/compat20-extras/Makefile
+# used by emulators/compat20-extras/Makefile
+# used by emulators/compat20/Makefile
+# used by emulators/compat20/Makefile
+# used by emulators/compat30-extras/Makefile
+# used by emulators/compat30-extras/Makefile
+# used by emulators/compat30/Makefile
+# used by emulators/compat30/Makefile
+# used by emulators/compat40-extras/Makefile
+# used by emulators/compat40-extras/Makefile
+# used by emulators/compat40/Makefile
+# used by emulators/compat40/Makefile
+# used by emulators/compat50-x11/Makefile
+# used by emulators/compat50/Makefile
+# used by emulators/compat51-x11/Makefile
+# used by emulators/compat51/Makefile
+# used by emulators/compat60/Makefile
 
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_LOCAL:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}

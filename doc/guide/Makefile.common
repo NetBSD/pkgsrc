@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2013/04/08 11:29:46 obache Exp $
+# $NetBSD: Makefile.common,v 1.5 2014/10/05 16:41:06 wiz Exp $
 #
 # This is included by doc/guide and meta-pkgs/pkgsrc-guide-tools.
 #
@@ -7,6 +7,7 @@
 # and a runtime dependency in meta-pkgs/pkgsrc-guide-tools (depending
 # on all possible output tools).
 #
+# used by meta-pkgs/pkgsrc-guide-tools/Makefile
 
 _GUIDE_DEPTYPE?=	build
 _GUIDE_OUTPUTS?=	lint html html-split ascii pdf

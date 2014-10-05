@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.10 2009/04/08 22:43:24 joerg Exp $
+# $NetBSD: Makefile.common,v 1.11 2014/10/05 16:41:07 wiz Exp $
 #
+# used by lang/sablevm-classpath-gui/Makefile
 
 DISTNAME=	sablevm-classpath-1.13
 CATEGORIES=	lang
