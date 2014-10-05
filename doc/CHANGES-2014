@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3759 2014/10/05 14:54:04 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3760 2014/10/05 14:54:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4749,3 +4749,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/ffmpeg2 to 2.4.2 [wiz 2014-10-05]
 	Updated security/py-cryptography to 0.6 [wiz 2014-10-05]
 	Updated converters/py-simplejson to 3.6.4 [wiz 2014-10-05]
+	Updated sysutils/py-psutil to 2.1.3 [wiz 2014-10-05]
