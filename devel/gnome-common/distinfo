@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2014/03/31 08:19:33 wiz Exp $
+$NetBSD: distinfo,v 1.15 2014/10/05 15:03:33 wiz Exp $
 
-SHA1 (gnome-common-3.12.0.tar.xz) = c3f729009b3337ada19564687bb99a27a31ae406
-RMD160 (gnome-common-3.12.0.tar.xz) = f23cb20600b9dd15da3149f9f585d2ceb69a531c
-Size (gnome-common-3.12.0.tar.xz) = 153060 bytes
+SHA1 (gnome-common-3.14.0.tar.xz) = 555ac7de25821f243f1838faa4d602da50237303
+RMD160 (gnome-common-3.14.0.tar.xz) = 4ce69a5bb5c428b4aadc155e0bae51a04e897cad
+Size (gnome-common-3.14.0.tar.xz) = 156320 bytes
