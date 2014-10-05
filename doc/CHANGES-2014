@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3756 2014/10/05 14:42:36 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3757 2014/10/05 14:47:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4746,3 +4746,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-py to 1.4.25 [wiz 2014-10-05]
 	Updated x11/xterm to 312 [wiz 2014-10-05]
 	Updated textproc/py-html2text to 2014.9.25 [wiz 2014-10-05]
+	Updated multimedia/ffmpeg2 to 2.4.2 [wiz 2014-10-05]
