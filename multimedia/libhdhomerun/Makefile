@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/05/10 22:37:51 jakllsch Exp $
-#
+# $NetBSD: Makefile,v 1.3 2014/10/05 16:27:25 wiz Exp $
 
 DISTNAME=	libhdhomerun_20140121
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -8,13 +7,14 @@ MASTER_SITES=	http://download.silicondust.com/hdhomerun/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	jmcneill@NetBSD.org
-HOMEPAGE=	http://www.silicondust.com
+HOMEPAGE=	http://www.silicondust.com/
 COMMENT=	Client and library for Silicon Dust HD Homerun
 LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	gmake
 
 WRKSRC=	${WRKDIR}/libhdhomerun
+INSTALLATION_DIRS=	bin lib include/hdhomerun
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -42,11 +42,8 @@ INSTALL_HEADERS=hdhomerun.h \
 		hdhomerun_video.h
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/hdhomerun_config ${DESTDIR}${PREFIX}/bin/hdhomerun_config
-	${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/lib
 	${INSTALL_LIB} ${WRKSRC}/libhdhomerun.${SHLIBEXT} ${DESTDIR}${PREFIX}/lib/libhdhomerun.${SHLIBEXT}
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/hdhomerun
 .for h in ${INSTALL_HEADERS}
 	${INSTALL_DATA} ${WRKSRC}/${h} ${DESTDIR}${PREFIX}/include/hdhomerun/${h}
 .endfor
