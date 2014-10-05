@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2012/10/28 08:23:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/10/05 15:03:33 wiz Exp $
 bin/gnome-autogen.sh
 bin/gnome-doc-common
+share/aclocal/ax_check_enable_debug.m4
+share/aclocal/ax_code_coverage.m4
 share/aclocal/gnome-code-coverage.m4
 share/aclocal/gnome-common.m4
 share/aclocal/gnome-compiler-flags.m4
