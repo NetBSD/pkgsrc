@@ -409,6 +409,7 @@ libssh2			Use libssh2 for SSHv2 protocol support.
 libthai			Use libthai for Thai word segmentation.
 libusb			Enable USB access.
 libvisual		Enable libvisual (audio visualisation) support.
+libvpx			Enable libvpx support.
 libwildmidi		Enable MIDI support using libwildmidi.
 libwww-aliases		Install aliases for p5-libwww (e.g. HEAD, GET etc.).
 libxml2			Use the libxml2 library for XML support.
@@ -753,6 +754,8 @@ winbind			Enable name-service switch daemon support using Windows Servers.
 wmf			Enable WMF support.
 wnn4			Use wnn for Kana-to-Kanji conversion.
 x11			Enable X11 support.
+x264			Enable x264 support.
+x265			Enable x265 support.
 xapian-flint-backend	Enable "Flint" format Xapian database support.
 xapian-quartz-backend	Enable "Quartz" format Xapian database support.
 xaw			Enable Xaw support.
