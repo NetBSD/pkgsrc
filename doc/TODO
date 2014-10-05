@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13715 2014/10/05 14:58:04 wiz Exp $
+$NetBSD: TODO,v 1.13716 2014/10/05 14:59:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -387,7 +387,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o aspell-nb-2.0.10
 	o asymptote-2.32
 	o aterm-1.0.1
-	o atk-2.14.0
 	o aubio-0.4.0
 	o audacious-3.5
 	o audacious-plugins-2.4.4
