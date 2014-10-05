@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3765 2014/10/05 15:03:42 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3766 2014/10/05 15:19:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4755,3 +4755,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/atk to 2.14.0 [wiz 2014-10-05]
 	Updated devel/libsigc++ to 2.4.0 [wiz 2014-10-05]
 	Updated devel/gnome-common to 3.14.0 [wiz 2014-10-05]
+	Updated print/mupdf to 1.6 [wiz 2014-10-05]
