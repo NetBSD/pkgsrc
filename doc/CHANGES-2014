@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3754 2014/10/05 14:39:34 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3755 2014/10/05 14:41:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4744,3 +4744,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/firefox-l10n to 32.0.3 [ryoon 2014-10-05]
 	Updated devel/p5-Exporter-Tiny to 0.042 [wiz 2014-10-05]
 	Updated devel/py-py to 1.4.25 [wiz 2014-10-05]
+	Updated x11/xterm to 312 [wiz 2014-10-05]
