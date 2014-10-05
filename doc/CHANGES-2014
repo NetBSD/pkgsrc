@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3752 2014/10/05 02:22:38 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.3753 2014/10/05 14:34:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4742,3 +4742,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/firefox to 32.0.3 [ryo_on 2014-10-05]
 	Updated www/firefox-l10n to 32.0.3 [ryoon 2014-10-05]
 	Updated www/firefox-l10n to 32.0.3 [ryoon 2014-10-05]
+	Updated devel/p5-Exporter-Tiny to 0.042 [wiz 2014-10-05]
