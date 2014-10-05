@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3762 2014/10/05 14:58:04 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3763 2014/10/05 14:59:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4752,3 +4752,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/py-psutil to 2.1.3 [wiz 2014-10-05]
 	Updated devel/waf to 1.8.0 [wiz 2014-10-05]
 	Updated x11/xkeyboard-config to 2.13 [wiz 2014-10-05]
+	Updated devel/atk to 2.14.0 [wiz 2014-10-05]
