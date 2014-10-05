@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13714 2014/10/05 14:55:49 wiz Exp $
+$NetBSD: TODO,v 1.13715 2014/10/05 14:58:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1182,7 +1182,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xine-1.2.3
 	o xinput-1.6.1
 	o xjman-0.7
-	o xkeyboard-config-2.13
 	o xli-2006.11.10
 	o xmbdfed-4.6
 	o xmcd-3.3.2
