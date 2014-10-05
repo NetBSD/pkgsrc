@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/09/12 06:04:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/10/05 14:42:24 wiz Exp $
 bin/html2text
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -29,6 +29,10 @@ ${PYSITELIB}/test/bodywidth_newline.html
 ${PYSITELIB}/test/bodywidth_newline.md
 ${PYSITELIB}/test/css_import_no_semicolon.html
 ${PYSITELIB}/test/css_import_no_semicolon.md
+${PYSITELIB}/test/doc_with_table.html
+${PYSITELIB}/test/doc_with_table.md
+${PYSITELIB}/test/doc_with_table_bypass.html
+${PYSITELIB}/test/doc_with_table_bypass.md
 ${PYSITELIB}/test/emdash-para.html
 ${PYSITELIB}/test/emdash-para.md
 ${PYSITELIB}/test/invalid_start.html
