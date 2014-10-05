@@ -1,5 +1,7 @@
-# $NetBSD: Makefile.common,v 1.9 2008/08/03 15:23:31 taca Exp $
+# $NetBSD: Makefile.common,v 1.10 2014/10/05 16:41:09 wiz Exp $
 #
+# used by textproc/ipadic/Makefile
+# used by textproc/chasen-base/Makefile
 
 CHASEN_VERSION=		2.4.4
 
