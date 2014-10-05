@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2014/05/18 21:22:13 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2014/10/05 20:21:30 rodent Exp $
 #
 
-DISTNAME=	python-bitcoinlib-0.1.1
+DISTNAME=	python-bitcoinlib-0.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	finance net python
 MASTER_SITES=	https://pypi.python.org/packages/source/p/python-bitcoinlib/

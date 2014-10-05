@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/05/08 10:14:10 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/10/05 20:21:30 rodent Exp $
 ${PYSITELIB}/bitcoin/__init__.py
 ${PYSITELIB}/bitcoin/__init__.pyc
 ${PYSITELIB}/bitcoin/__init__.pyo
@@ -53,6 +53,15 @@ ${PYSITELIB}/bitcoin/tests/test_core.pyo
 ${PYSITELIB}/bitcoin/tests/test_key.py
 ${PYSITELIB}/bitcoin/tests/test_key.pyc
 ${PYSITELIB}/bitcoin/tests/test_key.pyo
+${PYSITELIB}/bitcoin/tests/test_messages.py
+${PYSITELIB}/bitcoin/tests/test_messages.pyc
+${PYSITELIB}/bitcoin/tests/test_messages.pyo
+${PYSITELIB}/bitcoin/tests/test_net.py
+${PYSITELIB}/bitcoin/tests/test_net.pyc
+${PYSITELIB}/bitcoin/tests/test_net.pyo
+${PYSITELIB}/bitcoin/tests/test_rpc.py
+${PYSITELIB}/bitcoin/tests/test_rpc.pyc
+${PYSITELIB}/bitcoin/tests/test_rpc.pyo
 ${PYSITELIB}/bitcoin/tests/test_script.py
 ${PYSITELIB}/bitcoin/tests/test_script.pyc
 ${PYSITELIB}/bitcoin/tests/test_script.pyo
