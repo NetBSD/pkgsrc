@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3769 2014/10/05 20:21:49 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.3770 2014/10/05 20:25:11 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4759,3 +4759,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/py-redis-py to 2.10.3 [rodent 2014-10-05]
 	Updated databases/py-sqlalchemy-utils to 0.26.16 [rodent 2014-10-05]
 	Updated finance/py-python-bitcoinlib to 0.2.1 [rodent 2014-10-05]
+	Updated graphics/py-cairocffi to 0.6 [rodent 2014-10-05]
