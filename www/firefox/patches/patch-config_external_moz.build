@@ -1,6 +1,6 @@
-$NetBSD: patch-config_external_moz.build,v 1.3 2014/06/11 00:40:59 ryoon Exp $
+$NetBSD: patch-config_external_moz.build,v 1.4 2014/10/05 01:59:08 ryoon Exp $
 
---- config/external/moz.build.orig	2014-05-29 23:30:30.000000000 +0000
+--- config/external/moz.build.orig	2014-09-24 01:05:10.000000000 +0000
 +++ config/external/moz.build
 @@ -15,13 +15,19 @@ if CONFIG['MOZ_UPDATER']:
      if not CONFIG['MOZ_NATIVE_BZ2']:
@@ -25,7 +25,7 @@ $NetBSD: patch-config_external_moz.build,v 1.3 2014/06/11 00:40:59 ryoon Exp $
      external_dirs += ['media/libopus']
  
  if CONFIG['MOZ_WEBM']:
-@@ -36,13 +42,15 @@ if CONFIG['MOZ_VPX'] and not CONFIG['MOZ
+@@ -36,14 +42,16 @@ if CONFIG['MOZ_VPX'] and not CONFIG['MOZ
  if not CONFIG['MOZ_NATIVE_PNG']:
      external_dirs += ['media/libpng']
  
@@ -41,6 +41,7 @@ $NetBSD: patch-config_external_moz.build,v 1.3 2014/06/11 00:40:59 ryoon Exp $
 -    'media/libogg',
 -    'media/libtheora',
 -    'media/libspeex_resampler',
+     'media/libstagefright',
 -    'media/libsoundtouch',
  ]
  
