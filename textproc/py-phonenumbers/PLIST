@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/07/16 23:25:00 rodent Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/10/05 22:08:30 rodent Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -87,6 +87,9 @@ ${PYSITELIB}/phonenumbers/data/alt_format_505.pyo
 ${PYSITELIB}/phonenumbers/data/alt_format_506.py
 ${PYSITELIB}/phonenumbers/data/alt_format_506.pyc
 ${PYSITELIB}/phonenumbers/data/alt_format_506.pyo
+${PYSITELIB}/phonenumbers/data/alt_format_54.py
+${PYSITELIB}/phonenumbers/data/alt_format_54.pyc
+${PYSITELIB}/phonenumbers/data/alt_format_54.pyo
 ${PYSITELIB}/phonenumbers/data/alt_format_55.py
 ${PYSITELIB}/phonenumbers/data/alt_format_55.pyc
 ${PYSITELIB}/phonenumbers/data/alt_format_55.pyo
@@ -129,6 +132,9 @@ ${PYSITELIB}/phonenumbers/data/alt_format_855.pyo
 ${PYSITELIB}/phonenumbers/data/alt_format_90.py
 ${PYSITELIB}/phonenumbers/data/alt_format_90.pyc
 ${PYSITELIB}/phonenumbers/data/alt_format_90.pyo
+${PYSITELIB}/phonenumbers/data/alt_format_91.py
+${PYSITELIB}/phonenumbers/data/alt_format_91.pyc
+${PYSITELIB}/phonenumbers/data/alt_format_91.pyo
 ${PYSITELIB}/phonenumbers/data/alt_format_94.py
 ${PYSITELIB}/phonenumbers/data/alt_format_94.pyc
 ${PYSITELIB}/phonenumbers/data/alt_format_94.pyo
