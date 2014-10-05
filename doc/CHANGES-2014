@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3750 2014/10/05 02:00:43 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.3751 2014/10/05 02:21:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4740,3 +4740,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-CPAN-Uploader to 0.103007 [wen 2014-10-04]
 	Updated databases/phpmyadmin to 4.2.9.1 [tron 2014-10-04]
 	Updated www/firefox to 32.0.3 [ryo_on 2014-10-05]
+	Updated www/firefox-l10n to 32.0.3 [ryoon 2014-10-05]
