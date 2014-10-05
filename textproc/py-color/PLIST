@@ -1,9 +1,20 @@
-@comment $NetBSD: PLIST,v 1.1 2014/06/14 13:41:23 rodent Exp $
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+@comment $NetBSD: PLIST,v 1.2 2014/10/05 21:17:58 rodent Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/color/__init__.py
 ${PYSITELIB}/color/__init__.pyc
 ${PYSITELIB}/color/__init__.pyo
+${PYSITELIB}/color/cformat.pyc
+${PYSITELIB}/color/cformat.pyo
+${PYSITELIB}/color/cprint.pyc
+${PYSITELIB}/color/cprint.pyo
+${PYSITELIB}/color/formatter.pyc
+${PYSITELIB}/color/formatter.pyo
+${PYSITELIB}/color/version.pyc
+${PYSITELIB}/color/version.pyo
+${PYSITELIB}/color/cformat.py
+${PYSITELIB}/color/cprint.py
+${PYSITELIB}/color/formatter.py
+${PYSITELIB}/color/version.py
