@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2014/03/16 08:50:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/10/06 14:29:45 adam Exp $
 bin/db5_archive
 bin/db5_checkpoint
 bin/db5_deadlock
@@ -213,6 +213,7 @@ share/doc/db5/api_reference/C/envget_cache_max.html
 share/doc/db5/api_reference/C/envget_cachesize.html
 share/doc/db5/api_reference/C/envget_create_dir.html
 share/doc/db5/api_reference/C/envget_data_dirs.html
+share/doc/db5/api_reference/C/envget_data_len.html
 share/doc/db5/api_reference/C/envget_encrypt_flags.html
 share/doc/db5/api_reference/C/envget_errfile.html
 share/doc/db5/api_reference/C/envget_errpfx.html
@@ -262,6 +263,7 @@ share/doc/db5/api_reference/C/envset_cache_max.html
 share/doc/db5/api_reference/C/envset_cachesize.html
 share/doc/db5/api_reference/C/envset_create_dir.html
 share/doc/db5/api_reference/C/envset_data_dir.html
+share/doc/db5/api_reference/C/envset_data_len.html
 share/doc/db5/api_reference/C/envset_encrypt.html
 share/doc/db5/api_reference/C/envset_errcall.html
 share/doc/db5/api_reference/C/envset_errfile.html
@@ -451,6 +453,7 @@ share/doc/db5/api_reference/C/seqstat_print.html
 share/doc/db5/api_reference/C/set_cache_max_parameter.html
 share/doc/db5/api_reference/C/set_cachesize_parameter.html
 share/doc/db5/api_reference/C/set_create_dir_parameter.html
+share/doc/db5/api_reference/C/set_data_len_parameter.html
 share/doc/db5/api_reference/C/set_flags_parameter.html
 share/doc/db5/api_reference/C/set_intermediate_dir_mode_parameter.html
 share/doc/db5/api_reference/C/set_lg_bsize_parameter.html
@@ -902,6 +905,7 @@ share/doc/db5/api_reference/CXX/seqstat_print.html
 share/doc/db5/api_reference/CXX/set_cache_max_parameter.html
 share/doc/db5/api_reference/CXX/set_cachesize_parameter.html
 share/doc/db5/api_reference/CXX/set_create_dir_parameter.html
+share/doc/db5/api_reference/CXX/set_data_len_parameter.html
 share/doc/db5/api_reference/CXX/set_flags_parameter.html
 share/doc/db5/api_reference/CXX/set_intermediate_dir_mode_parameter.html
 share/doc/db5/api_reference/CXX/set_lg_bsize_parameter.html
