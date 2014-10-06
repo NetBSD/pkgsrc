@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/10/06 14:57:53 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/06 15:38:57 joerg Exp $
 
 PKGNAME=		cwrappers-20100308
 CATEGORIES=		pkgtools sysutils
@@ -22,6 +22,7 @@ MAKE_ENV+=	NEED_MI_VECTOR_HASH=1
 MAKE_ENV+=	NEED_GETLINE=1
 .endif
 
+CFLAGS.FreeBSD+=	-D_WITH_GETLINE
 CFLAGS.Linux+=	-D_GNU_SOURCE=1
 
 do-extract:
