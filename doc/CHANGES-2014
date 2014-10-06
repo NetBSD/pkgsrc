@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3781 2014/10/06 18:28:59 roy Exp $
+$NetBSD: CHANGES-2014,v 1.3782 2014/10/06 19:47:15 roy Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4771,3 +4771,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/opengrok to 0.12.1 [ryoon 2014-10-06]
 	Updated databases/db5 to 5.3.28 [adam 2014-10-06]
 	Updated net/dhcpcd to 6.5.0 [roy 2014-10-06]
+	Updated net/dhcpcd-icons to 0.7.3 [roy 2014-10-06]
