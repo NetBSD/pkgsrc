@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2014/10/06 19:46:59 roy Exp $
+bin/dhcpcd-qt
+man/man8/dhcpcd-qt.8
+share/applications/dhcpcd-qt.desktop
