@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2013/05/04 18:16:37 adam Exp $
+# $NetBSD: options.mk,v 1.18 2014/10/06 14:31:33 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openldap-server
 PKG_SUPPORTED_OPTIONS=	bdb dso inet6 sasl slapi slp smbk5pwd
@@ -20,14 +20,6 @@ PLIST_VARS+=	slapi
 BDB_ACCEPTED=		db4 db5
 CONFIGURE_ARGS+=	--enable-bdb --enable-hdb
 TEST_TARGET=		test
-# Fix hard-coded support for db4.
-# Remove if fixed in future versions of OpenLDAP.
-SUBST_CLASSES=		bdb
-SUBST_MESSAGE.bdb=	Fixing bdb library.
-SUBST_STAGE.bdb=	pre-configure
-SUBST_FILES.bdb=	${WRKSRC}/configure
-SUBST_SED.bdb=		-e 's,-ldb4,-l${BDB_TYPE},g'
-SUBST_SED.bdb+=		-e 's,ol_cv_bdb_major = 4,ol_cv_bdb_major > 3,g'
 .  include "../../mk/bdb.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-bdb --disable-hdb
