@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2008/08/26 17:18:14 seb Exp $
+$NetBSD: patch-dbeacon.cpp,v 1.1 2014/10/06 10:04:17 he Exp $
+
+Fix pidfile option handling (in configuration file case).
 
 --- dbeacon.cpp.orig	2007-07-13 13:52:14.000000000 +0000
 +++ dbeacon.cpp
