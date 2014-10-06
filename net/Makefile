@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1037 2014/10/02 09:03:56 jnemeth Exp $
+# $NetBSD: Makefile,v 1.1038 2014/10/06 19:47:57 roy Exp $
 #
 
 COMMENT=	Networking tools
@@ -94,7 +94,9 @@ SUBDIR+=	delegate
 SUBDIR+=	dgd
 SUBDIR+=	dhcpcd
 SUBDIR+=	dhcpcd-dbus
+SUBDIR+=	dhcpcd-icons
 SUBDIR+=	dhcpcd-gtk
+SUBDIR+=	dhcpcd-qt
 SUBDIR+=	dhcpd-pools
 SUBDIR+=	dhid
 SUBDIR+=	dhisd
