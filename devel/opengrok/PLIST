@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.7 2013/12/31 22:56:12 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/10/06 13:36:43 ryoon Exp $
 share/examples/opengrok/paths.tsv
 share/opengrok/README.txt
 share/opengrok/bin/OpenGrok
 share/opengrok/lib/lib/ant.jar
 share/opengrok/lib/lib/bcel-5.2.jar
 share/opengrok/lib/lib/jrcs.jar
-share/opengrok/lib/lib/lucene-analyzers-common-4.6.0.jar
-share/opengrok/lib/lib/lucene-core-4.6.0.jar
-share/opengrok/lib/lib/lucene-queryparser-4.6.0.jar
-share/opengrok/lib/lib/lucene-suggest-4.6.0.jar
+share/opengrok/lib/lib/lucene-analyzers-common-4.7.1.jar
+share/opengrok/lib/lib/lucene-core-4.7.1.jar
+share/opengrok/lib/lib/lucene-queryparser-4.7.1.jar
+share/opengrok/lib/lib/lucene-suggest-4.7.1.jar
 share/opengrok/lib/lib/servlet-api.jar
 share/opengrok/lib/lib/swing-layout-0.9.jar
 share/opengrok/lib/opengrok.jar
