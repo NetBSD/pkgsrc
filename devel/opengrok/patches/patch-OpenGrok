@@ -1,8 +1,8 @@
-$NetBSD: patch-OpenGrok,v 1.1 2013/12/31 22:56:12 ryoon Exp $
+$NetBSD: patch-OpenGrok,v 1.2 2014/10/06 13:36:43 ryoon Exp $
 
---- OpenGrok.orig	2012-03-30 13:36:59.000000000 +0000
+--- OpenGrok.orig	2014-04-29 11:05:25.000000000 +0000
 +++ OpenGrok
-@@ -121,7 +121,7 @@ DefaultInstanceConfiguration()
+@@ -145,7 +145,7 @@ DefaultInstanceConfiguration()
      # operating systems, if you have any reasonably generic
      # improvements please feel free to submit a patch.
  
@@ -11,7 +11,7 @@ $NetBSD: patch-OpenGrok,v 1.1 2013/12/31 22:56:12 ryoon Exp $
  
      LOGGER_CONFIG_FILE="logging.properties"
  
-@@ -247,7 +247,7 @@ DefaultInstanceConfiguration()
+@@ -274,7 +274,7 @@ DefaultInstanceConfiguration()
      WEBAPP_CONFIG=""
      if [ -n "${OPENGROK_WEBAPP_CFGADDR}" ]; then
          WEBAPP_CONFIG_ADDRESS=${OPENGROK_WEBAPP_CFGADDR}
@@ -20,9 +20,9 @@ $NetBSD: patch-OpenGrok,v 1.1 2013/12/31 22:56:12 ryoon Exp $
  	    WEBAPP_CONFIG_ADDRESS=""
  	fi
      else
-@@ -262,15 +262,15 @@ DefaultInstanceConfiguration()
+@@ -296,15 +296,15 @@ DefaultInstanceConfiguration()
      JAVA_OPTS="${JAVA_OPTS:--Xmx2048m}"
- 
+     
      # OPTIONAL: Full Path to History Utilities
 -    HG="`Which hg`"
 -    CVS="`Which cvs`"
