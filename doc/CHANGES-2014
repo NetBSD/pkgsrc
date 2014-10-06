@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3780 2014/10/06 14:30:52 adam Exp $
+$NetBSD: CHANGES-2014,v 1.3781 2014/10/06 18:28:59 roy Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4770,3 +4770,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/jflex to 1.6.0 [ryoon 2014-10-06]
 	Updated devel/opengrok to 0.12.1 [ryoon 2014-10-06]
 	Updated databases/db5 to 5.3.28 [adam 2014-10-06]
+	Updated net/dhcpcd to 6.5.0 [roy 2014-10-06]
