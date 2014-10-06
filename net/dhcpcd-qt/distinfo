@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2014/10/06 19:46:59 roy Exp $
+$NetBSD: distinfo,v 1.1 2014/10/06 19:46:59 roy Exp $
 
 SHA1 (dhcpcd-ui-0.7.3.tar.bz2) = 52082b49748cb9e744037274178eb400f965a329
 RMD160 (dhcpcd-ui-0.7.3.tar.bz2) = a67177b8af83f8e56d966667cc65648b7b15b3ce
