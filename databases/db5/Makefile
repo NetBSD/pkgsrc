@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/03/16 08:50:58 adam Exp $
+# $NetBSD: Makefile,v 1.15 2014/10/06 14:29:45 adam Exp $
 #
 # NOTE:
 # When updating this package, a change in the minor (5.n -> 5.(n+1))
@@ -6,7 +6,7 @@
 # ABI depends in buildlink3.mk and bump PKGREVISIONs for all dependencies.
 # In particular, take care to include BDB_ACCEPTED=db5 packages.
 
-DISTNAME=	db-5.3.21
+DISTNAME=	db-5.3.28
 PKGNAME=	${DISTNAME:S/db/db5/}
 CATEGORIES=	databases
 MASTER_SITES=	http://download.oracle.com/berkeley-db/ \
@@ -15,9 +15,8 @@ MASTER_SITES=	http://download.oracle.com/berkeley-db/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.oracle.com/database/berkeley-db/db/index.html
 COMMENT=	Berkeley DB version 5 from Oracle
-LICENSE=	sleepycat-public
 # NOTE: it is NOT a modified BSD in a common sense:
-#LICENSE=
+LICENSE=	sleepycat-public
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
