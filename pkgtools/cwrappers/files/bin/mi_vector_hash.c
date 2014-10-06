@@ -1,4 +1,4 @@
-/*	$NetBSD: mi_vector_hash.c,v 1.1 2014/09/17 12:40:56 joerg Exp $	*/
+/*	$NetBSD: mi_vector_hash.c,v 1.2 2014/10/06 14:57:53 joerg Exp $	*/
 /*-
  * Copyright (c) 2009 The NetBSD Foundation, Inc.
  * All rights reserved.
@@ -40,7 +40,7 @@
 
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
-__RCSID("$NetBSD: mi_vector_hash.c,v 1.1 2014/09/17 12:40:56 joerg Exp $");
+__RCSID("$NetBSD: mi_vector_hash.c,v 1.2 2014/10/06 14:57:53 joerg Exp $");
 
 #include <nbcompat/endian.h>
 #include <stdint.h>
@@ -62,6 +62,14 @@ my_le32dec(const void *buf)
 	const uint8_t *p = (const uint8_t *)buf;
 
 	return (my_le16dec(p) | ((uint32_t)my_le16dec(p + 2) << 16));
+}
+
+static uint32_t
+my_le32toh(uint32_t val)
+{
+	uint8_t buf[4];
+	memcpy(buf, &val, sizeof(buf));
+	return my_le32dec(buf);
 }
 
 #define mix(a, b, c) do {		\
@@ -153,9 +161,9 @@ mi_vector_hash(const void *key, size_t len, uint32_t seed, uint32_t hashes[3])
 	} else {
 		const uint32_t *key32 = key;
 		while (len >= 12) {
-			a += le32toh(key32[0]);
-			b += le32toh(key32[1]);
-			c += le32toh(key32[2]);
+			a += my_le32toh(key32[0]);
+			b += my_le32toh(key32[1]);
+			c += my_le32toh(key32[2]);
 			mix(a, b, c);
 			key32 += 3;
 			len -= 12;
@@ -163,14 +171,14 @@ mi_vector_hash(const void *key, size_t len, uint32_t seed, uint32_t hashes[3])
 		c += orig_len;
 
 		if (len > 8) {
-			c += (le32toh(key32[2]) & mask[len - 9]) << 8;
-			b += le32toh(key32[1]);
-			a += le32toh(key32[0]);
+			c += (my_le32toh(key32[2]) & mask[len - 9]) << 8;
+			b += my_le32toh(key32[1]);
+			a += my_le32toh(key32[0]);
 		} else if (len > 4) {
-			b += le32toh(key32[1]) & mask[len - 5];
-			a += le32toh(key32[0]);
+			b += my_le32toh(key32[1]) & mask[len - 5];
+			a += my_le32toh(key32[0]);
 		} else if (len)
-			a += le32toh(key32[0]) & mask[len - 1];
+			a += my_le32toh(key32[0]) & mask[len - 1];
 	}
 	mix(a, b, c);
 	hashes[0] = a;
