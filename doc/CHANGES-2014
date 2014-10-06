@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3776 2014/10/05 22:23:08 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.3777 2014/10/06 10:04:55 he Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4766,3 +4766,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/py-phonenumbers to 6.3.0 [rodent 2014-10-05]
 	Updated textproc/py-pyquery to 1.2.9 [rodent 2014-10-05]
 	Updated textproc/py-validators to 0.7 [rodent 2014-10-05]
+	Updated mbone/dbeacon to 0.3.9.1nb2 [he 2014-10-06]
