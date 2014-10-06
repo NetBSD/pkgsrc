@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/09/17 12:40:56 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2014/10/06 14:57:53 joerg Exp $
 
 PKGNAME=		cwrappers-20100308
 CATEGORIES=		pkgtools sysutils
@@ -18,7 +18,7 @@ INSTALLATION_DIRS=	libexec/cwrappers
 .if ${OPSYS} != "NetBSD" || !empty(MACHINE_PLATFORM:MNetBSD-[0-5].*)
 MAKE_ENV+=	NEED_MI_VECTOR_HASH=1
 .endif
-.if !empty(MACHINE_PLATFORM:MDarwin-10.*)
+.if !empty(MACHINE_PLATFORM:MDarwin-9.*) || !empty(MACHINE_PLATFORM:MDarwin-10.*)
 MAKE_ENV+=	NEED_GETLINE=1
 .endif
 
