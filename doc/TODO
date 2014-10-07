@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13723 2014/10/07 20:51:07 shattered Exp $
+$NetBSD: TODO,v 1.13724 2014/10/07 23:19:05 prlw1 Exp $
 
 Suggested new packages
 ======================
@@ -587,7 +587,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glade3-3.18.3
 	o glade3-3.8.5 [GNOME 2.34]
 	o gle-4.2.4
-	o glib2-2.42.0
 	o glibmm-2.42.0
 	o glom-1.14.2 [GNOME 2.26]
 	o glu-10.3
