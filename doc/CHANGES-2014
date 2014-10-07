@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3798 2014/10/07 18:08:30 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.3799 2014/10/07 18:52:19 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4792,3 +4792,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated cross/avrdude to 6.1 [mef 2014-10-07]
 	Updated lang/sun-jre7 to 7.0.67 [ryoon 2014-10-07]
 	Updated lang/sun-jdk7 to 7.0.67 [ryoon 2014-10-07]
+	Updated shells/mksh to 50d [bsiegert 2014-10-07]
