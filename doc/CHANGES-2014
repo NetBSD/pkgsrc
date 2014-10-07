@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3787 2014/10/07 06:54:15 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3788 2014/10/07 07:01:53 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4777,3 +4777,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated shells/bash to 4.3.030 [wiz 2014-10-07]
 	Updated devel/glib2 to 2.40.2 [adam 2014-10-07]
 	Updated www/p5-Plack to 1.0032 [wen 2014-10-07]
+	Updated www/p5-Plack-Middleware-Debug to 0.16 [wen 2014-10-07]
