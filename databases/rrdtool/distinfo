@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.45 2014/08/24 07:06:02 adam Exp $
+$NetBSD: distinfo,v 1.46 2014/10/07 10:23:41 adam Exp $
 
-SHA1 (rrdtool-1.4.8.tar.gz) = 56d68857f39e70bfa32360947614d8220702ed02
-RMD160 (rrdtool-1.4.8.tar.gz) = c02412211e6e51f3c77182c08f5cdfa3426765d1
-Size (rrdtool-1.4.8.tar.gz) = 1379482 bytes
+SHA1 (rrdtool-1.4.9.tar.gz) = c83b158b4aaadbf28b15823fa863db1672700d3b
+RMD160 (rrdtool-1.4.9.tar.gz) = 8c067f0207bdfeb067be3c9b31c8e35009485200
+Size (rrdtool-1.4.9.tar.gz) = 1385640 bytes
 SHA1 (patch-aa) = 317fc6e46e15333574d0e977d8ab34e916920f4a
 SHA1 (patch-ab) = 81131a74c8e9b81edfaa4b6746d4ab8508e82ac2
 SHA1 (patch-al) = abc25497a10d59b1ad2e3a263f818eef89985538
