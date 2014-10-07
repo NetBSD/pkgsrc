@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/09/01 09:53:50 adam Exp $
+$NetBSD: distinfo,v 1.5 2014/10/07 16:08:02 adam Exp $
 
-SHA1 (libwebp-0.3.1.tar.gz) = 52e3d2b6c0b80319baa33b8ebed89618769d9dd8
-RMD160 (libwebp-0.3.1.tar.gz) = 4c7d71e09ed8c54e33c9533725167139e75070b4
-Size (libwebp-0.3.1.tar.gz) = 844799 bytes
+SHA1 (libwebp-0.4.1.tar.gz) = 6d3a8a0c25ec4e2eb7a04d9e7f52d780a9d6c0ed
+RMD160 (libwebp-0.4.1.tar.gz) = d45c8442b4dde1e7f4f18b77ca602ef31c65156a
+Size (libwebp-0.4.1.tar.gz) = 966358 bytes
