@@ -1,18 +1,17 @@
-$NetBSD: distinfo,v 1.37 2014/05/16 09:29:39 tron Exp $
+$NetBSD: distinfo,v 1.38 2014/10/07 16:11:11 adam Exp $
 
-SHA1 (WindowMaker-0.95.5.tar.gz) = b04aef6a9076dd31a4e819275a78ece1784db28e
-RMD160 (WindowMaker-0.95.5.tar.gz) = 40b7782e1c86c0f850a48daad23cdcdb13f74785
-Size (WindowMaker-0.95.5.tar.gz) = 2927995 bytes
+SHA1 (WindowMaker-0.95.6.tar.gz) = e39c9d1bb012a087de5791c9474ff8776b2d230b
+RMD160 (WindowMaker-0.95.6.tar.gz) = 6faba86fb79190fe1e9de0192e1003603dbcf4ac
+Size (WindowMaker-0.95.6.tar.gz) = 3004856 bytes
 SHA1 (patch-aa) = e926a78bc5b800a1e5fbc8792099fc4a97ae916f
 SHA1 (patch-ab) = f954dadf7863a0ffc5eb4fb31bfadc218570324d
 SHA1 (patch-ac) = 0a2843e3f8e8456080082d1f3e57f58a5d440d18
 SHA1 (patch-ad) = ec668c0e40289e87e92ec85d26810ef358d2407a
 SHA1 (patch-ae) = af4cf08ef774080efeaa5baa2662748418b442a3
 SHA1 (patch-af) = 87c1ddd22f4afae10ae60f012d12a41de44b0f12
-SHA1 (patch-ag) = 4447310218e73ab0b78e563dabc9ce9614d68cfd
-SHA1 (patch-ai) = 44a6a63bad867e6bc614b58688d59aa610b8553b
-SHA1 (patch-aj) = 248d7088ee2ce861898a7474cde8a08f4b879ee9
+SHA1 (patch-ai) = e13349dcdf08a332d8979a21b45c2a8be4951ce2
+SHA1 (patch-aj) = 14636a50f9cb1a2353f813cd7873de0e6c31ddb4
 SHA1 (patch-ak) = 40221313ce3456f4357082caec17991390607159
 SHA1 (patch-doc_cs_Makefile.in) = ab0b42a60863fec8fba0de0e8a2ae74fa3cf8103
 SHA1 (patch-doc_ru_Makefile.in) = 7c0b861c6bbe457e8e55e0265335195b95bbe031
-SHA1 (patch-wrlib_gif.c) = 90fc1019391846983cb5e021c4bbea1d8afb0f99
+SHA1 (patch-wrlib_load__gif.c) = 039c342b99d8cc4edf4ce6ee93c9d1a1a2ac1f5d
