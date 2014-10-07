@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3802 2014/10/07 23:19:05 prlw1 Exp $
+$NetBSD: CHANGES-2014,v 1.3803 2014/10/07 23:30:11 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4800,3 +4800,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/ZIPIdent to 2.11 [shattered 2014-10-07]
 	Updated devel/pango to 1.36.8 [prlw1 2014-10-07]
 	Updated devel/glib2 to 2.42.0 [prlw1 2014-10-07]
+	Updated devel/gobject-introspection to 1.42.0 [prlw1 2014-10-07]
