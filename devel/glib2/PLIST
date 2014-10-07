@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.80 2014/10/07 06:29:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.81 2014/10/07 23:18:36 prlw1 Exp $
 bin/gapplication
 bin/gdbus
 bin/gio-querymodules
@@ -280,8 +280,8 @@ lib/pkgconfig/gthread-2.0.pc
 share/aclocal/glib-2.0.m4
 share/aclocal/glib-gettext.m4
 share/aclocal/gsettings.m4
-share/gdb/auto-load/libglib-2.0.so.0.4002.0-gdb.py
-share/gdb/auto-load/libgobject-2.0.so.0.4002.0-gdb.py
+share/gdb/auto-load/libglib-2.0.so.0.4200.0-gdb.py
+share/gdb/auto-load/libgobject-2.0.so.0.4200.0-gdb.py
 share/glib-2.0/gdb/glib.py
 share/glib-2.0/gdb/gobject.py
 share/glib-2.0/gettext/po/Makefile.in.in
@@ -422,6 +422,7 @@ share/gtk-doc/html/gio/api-index-2-34.html
 share/gtk-doc/html/gio/api-index-2-36.html
 share/gtk-doc/html/gio/api-index-2-38.html
 share/gtk-doc/html/gio/api-index-2-40.html
+share/gtk-doc/html/gio/api-index-2-42.html
 share/gtk-doc/html/gio/api-index-deprecated.html
 share/gtk-doc/html/gio/api-index-full.html
 share/gtk-doc/html/gio/application.html
@@ -549,6 +550,7 @@ share/gtk-doc/html/glib/api-index-2-36.html
 share/gtk-doc/html/glib/api-index-2-38.html
 share/gtk-doc/html/glib/api-index-2-4.html
 share/gtk-doc/html/glib/api-index-2-40.html
+share/gtk-doc/html/glib/api-index-2-42.html
 share/gtk-doc/html/glib/api-index-2-6.html
 share/gtk-doc/html/glib/api-index-2-8.html
 share/gtk-doc/html/glib/api-index-deprecated.html
@@ -675,6 +677,8 @@ share/gtk-doc/html/gobject/api-index-2-34.html
 share/gtk-doc/html/gobject/api-index-2-36.html
 share/gtk-doc/html/gobject/api-index-2-38.html
 share/gtk-doc/html/gobject/api-index-2-4.html
+share/gtk-doc/html/gobject/api-index-2-40.html
+share/gtk-doc/html/gobject/api-index-2-42.html
 share/gtk-doc/html/gobject/api-index-2-6.html
 share/gtk-doc/html/gobject/api-index-2-8.html
 share/gtk-doc/html/gobject/api-index-deprecated.html
