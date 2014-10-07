@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2014/09/07 12:46:31 bsiegert Exp $
+# $NetBSD: Makefile,v 1.28 2014/10/07 18:51:02 bsiegert Exp $
 
-DISTNAME=			mksh-R50b
+DISTNAME=			mksh-R50d
 PKGNAME=			${DISTNAME:S/-R/-/}
 CATEGORIES=			shells
 MASTER_SITES=			http://www.mirbsd.org/MirOS/dist/mir/mksh/ \
