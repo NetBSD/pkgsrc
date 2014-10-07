@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2014/04/09 07:27:14 obache Exp $
+# $NetBSD: Makefile,v 1.8 2014/10/07 16:47:33 adam Exp $
 
 DISTNAME=	mirall-1.4.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	http://download.owncloud.com/desktop/stable/
 EXTRACT_SUFX=	.tar.bz2
