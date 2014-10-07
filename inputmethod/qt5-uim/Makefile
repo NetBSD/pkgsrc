@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2014/09/24 12:24:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2014/10/07 16:47:28 adam Exp $
 
 .include "../../x11/qt5/Makefile.common"
 
 DISTNAME=	uim-1.8.6
 PKGNAME=	qt5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11
 MASTER_SITES=	http://uim.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2

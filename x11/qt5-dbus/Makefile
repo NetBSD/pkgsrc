@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2014/05/01 12:50:39 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2014/10/07 16:47:16 adam Exp $
 
 PKGNAME=	qt5-dbus-${QTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Qt5 DBus support plugin
 
 .include "../../x11/qt5-qtbase/Makefile.common"

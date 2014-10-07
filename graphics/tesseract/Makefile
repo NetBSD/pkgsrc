@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2014/10/02 16:06:02 adam Exp $
+# $NetBSD: Makefile,v 1.15 2014/10/07 16:47:27 adam Exp $
 
 DISTNAME=	tesseract-ocr-3.02.02
 PKGNAME=	${DISTNAME:S/-ocr//}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://tesseract-ocr.googlecode.com/files/
 DISTFILES+=	${DISTNAME}.tar.gz
