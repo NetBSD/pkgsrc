@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2014/01/17 08:48:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2014/10/07 16:11:11 adam Exp $
 bin/convertfonts
 bin/get-wings-flags
 bin/get-wraster-flags
@@ -15,6 +15,7 @@ bin/wmagnify
 bin/wmaker
 bin/wmaker.inst
 bin/wmgenmenu
+bin/wmiv
 bin/wmmenugen
 bin/wmsetbg
 bin/wxcopy
@@ -29,6 +30,7 @@ lib/libWMaker.la
 lib/libWUtil.la
 lib/libwraster.la
 lib/pkgconfig/WINGs.pc
+lib/pkgconfig/WUtil.pc
 lib/pkgconfig/wrlib.pc
 man/cs/man1/geticonset.1
 man/cs/man1/getstyle.1
@@ -158,7 +160,8 @@ share/WindowMaker/Backgrounds/BlueImage.jpeg
 share/WindowMaker/IconSets/Default.iconset
 share/WindowMaker/Icons/BitchX.tiff
 share/WindowMaker/Icons/BitchX.xpm
-share/WindowMaker/Icons/Drawer.png
+share/WindowMaker/Icons/Drawer.tiff
+share/WindowMaker/Icons/Drawer.xpm
 share/WindowMaker/Icons/Ear.png
 share/WindowMaker/Icons/Ftp.png
 share/WindowMaker/Icons/GNUstep.tiff
@@ -317,6 +320,7 @@ share/WindowMaker/plmenu.hr
 share/WindowMaker/plmenu.it
 share/WindowMaker/plmenu.ja
 share/WindowMaker/plmenu.ko
+share/WindowMaker/plmenu.nl
 share/WindowMaker/plmenu.pl
 share/WindowMaker/plmenu.ro
 share/WindowMaker/plmenu.sk
@@ -361,6 +365,7 @@ share/locale/fr/LC_MESSAGES/wmgenmenu.mo
 share/locale/gl/LC_MESSAGES/WindowMaker.mo
 share/locale/hr/LC_MESSAGES/WPrefs.mo
 share/locale/hr/LC_MESSAGES/WindowMaker.mo
+share/locale/hu/LC_MESSAGES/WINGs.mo
 share/locale/hu/LC_MESSAGES/WPrefs.mo
 share/locale/hu/LC_MESSAGES/WindowMaker.mo
 share/locale/it/LC_MESSAGES/WPrefs.mo
@@ -370,7 +375,10 @@ share/locale/ja/LC_MESSAGES/WindowMaker.mo
 share/locale/ko/LC_MESSAGES/WPrefs.mo
 share/locale/ko/LC_MESSAGES/WindowMaker.mo
 share/locale/ms/LC_MESSAGES/WindowMaker.mo
+share/locale/nl/LC_MESSAGES/WINGs.mo
+share/locale/nl/LC_MESSAGES/WPrefs.mo
 share/locale/nl/LC_MESSAGES/WindowMaker.mo
+share/locale/nl/LC_MESSAGES/wmgenmenu.mo
 share/locale/no/LC_MESSAGES/WindowMaker.mo
 share/locale/pl/LC_MESSAGES/WindowMaker.mo
 share/locale/pt/LC_MESSAGES/WPrefs.mo

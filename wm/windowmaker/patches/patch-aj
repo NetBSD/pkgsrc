@@ -1,13 +1,13 @@
-$NetBSD: patch-aj,v 1.3 2013/05/21 14:38:40 hans Exp $
+$NetBSD: patch-aj,v 1.4 2014/10/07 16:11:11 adam Exp $
 
---- src/switchpanel.c.orig	2013-01-09 21:42:49.000000000 +0000
+--- src/switchpanel.c.orig	2014-08-30 12:29:09.000000000 +0000
 +++ src/switchpanel.c
 @@ -37,6 +37,8 @@
- extern Atom _XA_WM_IGNORE_FOCUS_EVENTS;
  
- #ifdef SHAPE
+ 
+ #ifdef USE_XSHAPE
 +#include <X11/Xlib.h>
 +#include <X11/Xutil.h>
  #include <X11/extensions/shape.h>
+ #endif
  
- extern Bool wShapeSupported;
