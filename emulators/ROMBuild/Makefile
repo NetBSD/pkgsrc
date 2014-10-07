@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2012/10/03 12:55:09 asau Exp $
+# $NetBSD: Makefile,v 1.20 2014/10/07 20:49:47 shattered Exp $
 #
 
-DISTNAME=		rbuild29
-PKGNAME=		ROMBuild-2.9
+DISTNAME=		rbuild214
+PKGNAME=		ROMBuild-2.14
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.logiqx.com/Tools/ROMBuild/
 EXTRACT_SUFX=		.zip
