@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2014/04/09 07:27:12 obache Exp $
+# $NetBSD: Makefile,v 1.34 2014/10/07 16:47:30 adam Exp $
 
 DISTNAME=	gnustep-2.6.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	meta-pkgs x11 gnustep
 MASTER_SITES=	# empty
 

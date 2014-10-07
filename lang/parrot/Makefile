@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.78 2014/05/29 23:36:43 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2014/10/07 16:47:12 adam Exp $
 #
 
 DISTNAME=		parrot-${PARROT_VERSION}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.parrot.org/pub/parrot/releases/${PARROT_RTYPE}/${PARROT_VERSION}/
 

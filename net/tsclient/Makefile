@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.88 2014/05/29 23:37:13 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2014/10/07 16:47:33 adam Exp $
 #
 
 DISTNAME=		tsclient-0.132
-PKGREVISION=		65
+PKGREVISION=		66
 CATEGORIES=		net
 MASTER_SITES=		http://www.gnomepro.com/tsclient/
 

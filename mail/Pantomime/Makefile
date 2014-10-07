@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2014/04/09 07:27:01 obache Exp $
+# $NetBSD: Makefile,v 1.32 2014/10/07 16:47:12 adam Exp $
 
 DISTNAME=	Pantomime-1.2.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	mail gnustep
 MASTER_SITES=	http://debian.uni-essen.de/misc/GNUstep/Apps/GNUMail/
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2014/04/09 07:26:57 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2014/10/07 16:47:10 adam Exp $
 
 BUILDLINK_TREE+=	idzebra
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	idzebra
 IDZEBRA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.idzebra+=	idzebra>=2.0.47
-BUILDLINK_ABI_DEPENDS.idzebra+=	idzebra>=2.0.47nb12
+BUILDLINK_ABI_DEPENDS.idzebra+=	idzebra>=2.0.47nb13
 BUILDLINK_PKGSRCDIR.idzebra?=	../../databases/idzebra
 
 .include "../../archivers/bzip2/buildlink3.mk"
