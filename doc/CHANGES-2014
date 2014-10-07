@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3799 2014/10/07 18:52:19 bsiegert Exp $
+$NetBSD: CHANGES-2014,v 1.3800 2014/10/07 20:51:08 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4793,3 +4793,8 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/sun-jre7 to 7.0.67 [ryoon 2014-10-07]
 	Updated lang/sun-jdk7 to 7.0.67 [ryoon 2014-10-07]
 	Updated shells/mksh to 50d [bsiegert 2014-10-07]
+	Updated emulators/DatLib to 2.36 [shattered 2014-10-07]
+	Updated emulators/DatUtil to 2.46 [shattered 2014-10-07]
+	Updated emulators/MAMEDiff to 2.31 [shattered 2014-10-07]
+	Updated emulators/ROMBuild to 2.14 [shattered 2014-10-07]
+	Updated emulators/ZIPIdent to 2.11 [shattered 2014-10-07]
