@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13721 2014/10/06 13:37:37 ryoon Exp $
+$NetBSD: TODO,v 1.13722 2014/10/07 07:35:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -351,6 +351,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o abcm2ps-7.8.3
 	o abcmidi-20140120
 	o abiword-3.0
+	o accerciser-3.14
 	o acpica-utils-20110623
 	o adocman-0.13
 	o adtool-1.3
@@ -438,8 +439,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cjk-lyx-1.4.4
 	o classpath-0.98
 	o cln-1.33
-	o clutter-1.18.4
+	o clutter-1.20.0
 	o clutter-gst-2.0.10
+	o clutter-gtk-1.6.0
 	o coccigrep-2.13
 	o cogl-1.18.2
 	o colorize-0.3.4
@@ -577,7 +579,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gdsreader-0.3.2
 	o geany-1.24.1
 	o gedit-plugins-2.32.0 [GNOME 2.32]
-	o genius-1.0.18
+	o genius-1.0.19
 	o gentoo-0.20.4
 	o gforth-0.7.3
 	o gfract-0.33
@@ -607,7 +609,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnome-disk-utility-2.32.0 [GNOME 2.32]
 	o gnome-games-3.6.1
 	o gnome-games-extra-data-2.30.0 [GNOME 2.30]
-	o gnome-keyring-3.12.0
+	o gnome-keyring-3.14
 	o gnome-media-2.32.0 [GNOME 2.32]
 	o gnome-menus-3.8.0
 	o gnome-netstatus-2.28.2 [GNOME 2.32]
@@ -653,13 +655,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gtkglarea-2.1.0
 	o gtkmm-3.14.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
+	o gtksourceview-3.14
 	o gtl-3.6
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o guile-2.0.11
 	o guile-gtk-2.0
 	o gutenprint-lib-5.2.10
-	o gvfs-1.20.3
+	o gvfs-1.22.0
 	o gwaei-3.6.2
 	o gworkspace-0.9.2
 	o gxine-0.5.908
@@ -741,7 +744,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libfolks-0.10.0
 	o libgdata-0.16.0
 	o libgdiplus-3.0
-	o libgee-0.14.0
+	o libgee-0.16.0
 	o libgiigic-1.1.2
 	o libgnome-keyring-3.12.0
 	o libgnomedb-3.1.2
@@ -777,6 +780,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lmbench-2.5 [http://lmbench.sourceforge.net/]
 	o lottanzb-0.5.3
 	o lq-sp-1.3.4.13
+	o lsdvd-0.17
 	o lsh-2.1
 	o lwm-1.2.3
 	o lyx-2.1.0
@@ -982,6 +986,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rep-gtk-0.90.8.1
 	o reposurgeon-3.10
 	o resize_image-0.7
+	o rhythmbox-3.1
 	o rio500-0.8.1
 	o robodoc-4.99.6
 	o root-5.34.01
@@ -1012,7 +1017,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o scripts-1.0.1
 	o scrollz-1.9.99
 	o scsh-1.3.0
-	o seahorse-3.12.0
+	o seahorse-3.14
 	o seahorse-nautilus-3.10.1
 	o secpanel-0.6.1
 	o sendfile-20010424
@@ -1132,16 +1137,18 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vte-0.36.0
 	o vttest-20140116
 	o wMosaic-3.8.22
+	o waf-1.8.0 [wait for fix for https://code.google.com/p/waf/issues/detail?id=1495]
 	o wap-utils-1.4.1
 	o warzone2100-2.3.8
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
 	o webalizer-2.23.05
+	o webkit-gtk-2.4.6
 	o webkit-gtk-2.6.0
 	o webmin-1.690
 	o websvn-2.3.2
 	o windowlab-1.40
-	o wine-devel-1.7.27
+	o wine-devel-1.7.28
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wml-2.0.11
