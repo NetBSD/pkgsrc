@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3790 2014/10/07 07:12:06 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3791 2014/10/07 07:22:57 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4780,3 +4780,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Plack-Middleware-Debug to 0.16 [wen 2014-10-07]
 	Updated www/p5-Plack-Middleware-Deflater to 0.12 [wen 2014-10-07]
 	Updated devel/p5-Module-Build-Tiny to 0.038 [wen 2014-10-07]
+	Updated textproc/p5-podlators to 2.5.3 [wen 2014-10-07]
