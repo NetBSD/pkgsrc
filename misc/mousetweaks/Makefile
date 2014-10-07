@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2014/05/05 00:48:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.51 2014/10/07 16:47:30 adam Exp $
 #
 
 DISTNAME=	mousetweaks-2.28.1
-PKGREVISION=	38
+PKGREVISION=	39
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/mousetweaks/2.28/}
 
