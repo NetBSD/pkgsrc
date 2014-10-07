@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3795 2014/10/07 14:35:32 mef Exp $
+$NetBSD: CHANGES-2014,v 1.3796 2014/10/07 14:51:09 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4788,3 +4788,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/roundcube to 1.0.3 [adam 2014-10-07]
 	Updated databases/rrdtool to 1.4.9 [adam 2014-10-07]
 	Updated net/lldpd to 0.7.10 [mef 2014-10-07]
+	Updated shells/posh to 0.12.3 [mef 2014-10-07]
