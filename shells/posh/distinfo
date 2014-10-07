@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2013/09/13 06:41:33 mef Exp $
+$NetBSD: distinfo,v 1.11 2014/10/07 14:50:58 mef Exp $
 
-SHA1 (posh_0.12.2.tar.gz) = 047c9f3fcd20915ce9e4dd74ad7c6775dc1599be
-RMD160 (posh_0.12.2.tar.gz) = 4f00d3ba49202a2ede479a983fd55b2a6a73451d
-Size (posh_0.12.2.tar.gz) = 475068 bytes
+SHA1 (posh_0.12.3.tar.xz) = b6d9865fbbadf482facee5618ed43b64f6dbeed9
+RMD160 (posh_0.12.3.tar.xz) = 69ae05ff3159d018e524c3f7353155c7404c9c62
+Size (posh_0.12.3.tar.xz) = 278436 bytes
 SHA1 (patch-aa) = d70d108e73884f3c91a6bb22504853f6270290ec
 SHA1 (patch-ab) = 148632d17bc7ecb047169912eedea145d8b7698f
