@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/08/31 19:26:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/10/07 10:09:36 adam Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/mysql/__init__.py
 ${PYSITELIB}/mysql/__init__.pyc
@@ -9,6 +9,9 @@ ${PYSITELIB}/mysql/connector/__init__.pyo
 ${PYSITELIB}/mysql/connector/authentication.py
 ${PYSITELIB}/mysql/connector/authentication.pyc
 ${PYSITELIB}/mysql/connector/authentication.pyo
+${PYSITELIB}/mysql/connector/catch23.py
+${PYSITELIB}/mysql/connector/catch23.pyc
+${PYSITELIB}/mysql/connector/catch23.pyo
 ${PYSITELIB}/mysql/connector/charsets.py
 ${PYSITELIB}/mysql/connector/charsets.pyc
 ${PYSITELIB}/mysql/connector/charsets.pyo
@@ -24,6 +27,9 @@ ${PYSITELIB}/mysql/connector/conversion.pyo
 ${PYSITELIB}/mysql/connector/cursor.py
 ${PYSITELIB}/mysql/connector/cursor.pyc
 ${PYSITELIB}/mysql/connector/cursor.pyo
+${PYSITELIB}/mysql/connector/custom_types.py
+${PYSITELIB}/mysql/connector/custom_types.pyc
+${PYSITELIB}/mysql/connector/custom_types.pyo
 ${PYSITELIB}/mysql/connector/dbapi.py
 ${PYSITELIB}/mysql/connector/dbapi.pyc
 ${PYSITELIB}/mysql/connector/dbapi.pyo
@@ -81,6 +87,9 @@ ${PYSITELIB}/mysql/connector/locales/eng/client_error.pyo
 ${PYSITELIB}/mysql/connector/network.py
 ${PYSITELIB}/mysql/connector/network.pyc
 ${PYSITELIB}/mysql/connector/network.pyo
+${PYSITELIB}/mysql/connector/optionfiles.py
+${PYSITELIB}/mysql/connector/optionfiles.pyc
+${PYSITELIB}/mysql/connector/optionfiles.pyo
 ${PYSITELIB}/mysql/connector/pooling.py
 ${PYSITELIB}/mysql/connector/pooling.pyc
 ${PYSITELIB}/mysql/connector/pooling.pyo
