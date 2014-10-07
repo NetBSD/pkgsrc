@@ -1,4 +1,11 @@
-$NetBSD: patch-ak,v 1.17 2013/12/08 13:08:59 prlw1 Exp $
+$NetBSD: patch-ak,v 1.18 2014/10/07 23:18:36 prlw1 Exp $
+
+- solaris sun studio check and fix
+- use pkgsrc libtool
+- broken dlopen(NULL,0) detection and workaround
+  http://bugzilla.gnome.org/show_bug.cgi?id=140329
+- remove unnecessary executions of libtool from configure
+  https://bugzilla.gnome.org/show_bug.cgi?id=736710
 
 --- configure.ac.orig	2013-06-09 22:53:13.000000000 +0000
 +++ configure.ac
@@ -43,7 +50,7 @@ $NetBSD: patch-ak,v 1.17 2013/12/08 13:08:59 prlw1 Exp $
  else
    export SED
 -  G_MODULE_LDFLAGS=`(./libtool --config; echo eval echo \\$export_dynamic_flag_spec) | sh`
-+  G_MODULE_LDFLAGS=`(libtool --config; echo eval echo \\$export_dynamic_flag_spec) | sh`
++  eval G_MODULE_LDFLAGS=$export_dynamic_flag_spec
  fi
  dnl G_MODULE_IMPL= don't reset, so cmd-line can override
  G_MODULE_NEED_USCORE=0
@@ -52,7 +59,7 @@ $NetBSD: patch-ak,v 1.17 2013/12/08 13:08:59 prlw1 Exp $
  G_MODULE_HAVE_DLERROR=0
  dnl *** force native WIN32 shared lib loader 
  if test -z "$G_MODULE_IMPL"; then
-@@ -1556,13 +1569,13 @@ AS_IF([ test "$G_MODULE_IMPL" = "G_MODUL
+@@ -1556,13 +1569,12 @@ AS_IF([ test "$G_MODULE_IMPL" = "G_MODUL
  	LDFLAGS="$LDFLAGS $G_MODULE_LDFLAGS"
  dnl *** check for OSF1/5.0 RTLD_GLOBAL brokenness
  	echo "void glib_plugin_test(void) { }" > plugin.c
@@ -65,7 +72,6 @@ $NetBSD: patch-ak,v 1.17 2013/12/08 13:08:59 prlw1 Exp $
  		-shrext ".o" -avoid-version plugin.lo \
  		-rpath /dont/care >/dev/null 2>&1
 -	eval `./libtool --config | grep ^objdir`
-+	eval `libtool --config | grep ^objdir`
  	AC_CACHE_CHECK([for RTLD_GLOBAL brokenness],
  		glib_cv_rtldglobal_broken,[
  		AC_TRY_RUN([
@@ -108,13 +114,12 @@ $NetBSD: patch-ak,v 1.17 2013/12/08 13:08:59 prlw1 Exp $
  dnl *** done, have we got an implementation?
  if test -z "$G_MODULE_IMPL"; then
  	G_MODULE_IMPL=0
-@@ -1635,7 +1680,7 @@ fi
+@@ -1635,7 +1680,5 @@ fi
  
  AC_MSG_CHECKING(for the suffix of module shared libraries)
  export SED
 -shrext_cmds=`./libtool --config | grep '^shrext_cmds='`
-+shrext_cmds=`libtool --config | grep '^shrext_cmds='`
- eval $shrext_cmds
+-eval $shrext_cmds
  module=yes eval std_shrext=$shrext_cmds
  # chop the initial dot
 @@ -1654,6 +1699,7 @@ AC_SUBST(G_MODULE_PLUGIN_LIBS)
@@ -150,11 +155,3 @@ $NetBSD: patch-ak,v 1.17 2013/12/08 13:08:59 prlw1 Exp $
         ;;
    esac
  ])
-@@ -2336,6 +2368,7 @@ case $host in
-     ;;
-   *-*-openbsd*)
-     LDFLAGS="$LDFLAGS -pthread"
-+    G_THREAD_LIBS_FOR_GTHREAD="$G_THREAD_LIBS"
-     ;;
-   *)
-     G_THREAD_LIBS_FOR_GTHREAD="$G_THREAD_LIBS"
