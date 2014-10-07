@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3792 2014/10/07 07:31:51 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3793 2014/10/07 07:35:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4782,3 +4782,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Module-Build-Tiny to 0.038 [wen 2014-10-07]
 	Updated textproc/p5-podlators to 2.5.3 [wen 2014-10-07]
 	Updated multimedia/mpv to 0.6.0 [wiz 2014-10-07]
+	Downgraded devel/waf to 1.7.16 [wiz 2014-10-07]
