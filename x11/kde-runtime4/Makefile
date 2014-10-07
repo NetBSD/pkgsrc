@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2014/10/01 16:09:36 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2014/10/07 16:47:38 adam Exp $
 
 DISTNAME=	kde-runtime-${_KDE_VERSION}
 PKGNAME=	${DISTNAME:S/-4/4-4/}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	x11
 COMMENT=	Runtime requirements for the KDE integrated X11 desktop
 

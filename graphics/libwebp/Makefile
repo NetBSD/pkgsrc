@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2014/10/07 16:08:02 adam Exp $
+# $NetBSD: Makefile,v 1.14 2014/10/07 16:47:11 adam Exp $
 
 DISTNAME=	libwebp-0.4.1
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://downloads.webmproject.org/releases/webp/
 
