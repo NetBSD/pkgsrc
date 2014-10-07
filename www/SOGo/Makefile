@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2014/06/08 13:21:37 taca Exp $
+# $NetBSD: Makefile,v 1.19 2014/10/07 16:47:36 adam Exp $
 #
 
 DISTNAME=	SOGo-2.2.5
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.sogo.nu/files/downloads/SOGo/Sources/
 
