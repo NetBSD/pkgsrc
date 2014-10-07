@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2012/10/03 12:55:09 asau Exp $
+# $NetBSD: Makefile,v 1.22 2014/10/07 20:49:18 shattered Exp $
 #
 
-DISTNAME=		mdiff226
-PKGNAME=		MAMEDiff-2.26
+DISTNAME=		mdiff231
+PKGNAME=		MAMEDiff-2.31
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.logiqx.com/Tools/MAMEDiff/
 EXTRACT_SUFX=		.zip
