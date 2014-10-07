@@ -1,12 +1,12 @@
-$NetBSD: patch-ag,v 1.6 2013/12/06 07:27:15 mef Exp $
+$NetBSD: patch-ag,v 1.7 2014/10/07 15:10:29 mef Exp $
 
 Work around AVRISP mkII initial sync stalls on NetBSD.
 
---- usb_libusb.c.orig	2010-01-19 10:39:11.000000000 +0000
-+++ usb_libusb.c
-@@ -237,6 +237,17 @@ static void usbdev_close(union filedescr
- {
-   usb_dev_handle *udev = (usb_dev_handle *)fd->usb.handle;
+--- usb_libusb.c.orig	2014-03-13 08:03:19.000000000 +0900
++++ usb_libusb.c	2014-10-08 00:01:40.000000000 +0900
+@@ -324,6 +324,17 @@ static void usbdev_close(union filedescr
+   if (udev == NULL)
+     return;
  
 +#if defined(__NetBSD__)
 +#define USB_FEAT_ENDPOINT_HALT 0
@@ -21,4 +21,4 @@ Work around AVRISP mkII initial sync stalls on NetBSD.
 +
    (void)usb_release_interface(udev, usb_interface);
  
- #if !( defined(__FreeBSD__) ) // || ( defined(__APPLE__) && defined(__MACH__) ) )
+ #if defined(__linux__)

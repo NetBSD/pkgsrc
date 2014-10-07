@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.9 2011/03/28 21:42:40 zafer Exp $
+@comment $NetBSD: PLIST,v 1.10 2014/10/07 15:10:29 mef Exp $
 bin/avrdude
 info/avrdude.info
 man/man1/avrdude.1
-share/examples/avrdude/avrdude.conf
 share/doc/${DISTNAME}/avrdude-html/avrdude.html
 share/doc/${DISTNAME}/avrdude-html/avrdude_1.html
 share/doc/${DISTNAME}/avrdude-html/avrdude_10.html
@@ -16,6 +15,7 @@ share/doc/${DISTNAME}/avrdude-html/avrdude_17.html
 share/doc/${DISTNAME}/avrdude-html/avrdude_18.html
 share/doc/${DISTNAME}/avrdude-html/avrdude_19.html
 share/doc/${DISTNAME}/avrdude-html/avrdude_2.html
+share/doc/${DISTNAME}/avrdude-html/avrdude_20.html
 share/doc/${DISTNAME}/avrdude-html/avrdude_3.html
 share/doc/${DISTNAME}/avrdude-html/avrdude_4.html
 share/doc/${DISTNAME}/avrdude-html/avrdude_5.html
@@ -27,3 +27,4 @@ share/doc/${DISTNAME}/avrdude-html/avrdude_abt.html
 share/doc/${DISTNAME}/avrdude-html/avrdude_toc.html
 share/doc/${DISTNAME}/avrdude.pdf
 share/doc/${DISTNAME}/avrdude.ps
+share/examples/avrdude/avrdude.conf
