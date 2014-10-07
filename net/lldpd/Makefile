@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2014/06/13 03:06:09 mef Exp $
+# $NetBSD: Makefile,v 1.9 2014/10/07 14:35:16 mef Exp $
 
-DISTNAME=		lldpd-0.7.9
+DISTNAME=		lldpd-0.7.10
 CATEGORIES=		net
 MASTER_SITES=		http://media.luffy.cx/files/lldpd/
 
