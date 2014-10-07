@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3793 2014/10/07 07:35:01 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3794 2014/10/07 10:37:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4783,3 +4783,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/p5-podlators to 2.5.3 [wen 2014-10-07]
 	Updated multimedia/mpv to 0.6.0 [wiz 2014-10-07]
 	Downgraded devel/waf to 1.7.16 [wiz 2014-10-07]
+	Updated databases/py-mysql-connector to 2.0.1 [adam 2014-10-07]
+	Updated devel/scons to 2.3.4 [adam 2014-10-07]
+	Updated mail/roundcube to 1.0.3 [adam 2014-10-07]
+	Updated databases/rrdtool to 1.4.9 [adam 2014-10-07]
