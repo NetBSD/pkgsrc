@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2013/09/13 06:41:33 mef Exp $
+# $NetBSD: Makefile,v 1.17 2014/10/07 14:50:58 mef Exp $
 #
 
-DISTNAME=	posh_0.12.2
+DISTNAME=	posh_0.12.3
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/p/posh/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://packages.debian.org/posh
