@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3807 2014/10/08 04:27:50 taca Exp $
+$NetBSD: CHANGES-2014,v 1.3808 2014/10/08 06:07:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4790,6 +4790,9 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/lldpd to 0.7.10 [mef 2014-10-07]
 	Updated shells/posh to 0.12.3 [mef 2014-10-07]
 	Updated cross/avrdude to 6.1 [mef 2014-10-07]
+	Updated textproc/icu to 54.1 [adam 2014-10-07]
+	Updated graphics/libwebp to 0.4.1 [adam 2014-10-07]
+	Updated wm/windowmaker to 0.95.6 [adam 2014-10-07]
 	Updated lang/sun-jre7 to 7.0.67 [ryoon 2014-10-07]
 	Updated lang/sun-jdk7 to 7.0.67 [ryoon 2014-10-07]
 	Updated shells/mksh to 50d [bsiegert 2014-10-07]
