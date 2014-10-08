@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1038 2014/10/06 19:47:57 roy Exp $
+# $NetBSD: Makefile,v 1.1039 2014/10/08 09:52:48 obache Exp $
 #
 
 COMMENT=	Networking tools
@@ -512,6 +512,7 @@ SUBDIR+=	pear-Net_SMTP
 SUBDIR+=	pear-Net_Sieve
 SUBDIR+=	pear-Net_Socket
 SUBDIR+=	pear-Net_URL
+SUBDIR+=	pear-Net_URL2
 SUBDIR+=	pear-SOAP
 SUBDIR+=	pen
 SUBDIR+=	perlbal
