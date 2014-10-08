@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.870 2014/09/08 12:05:10 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.871 2014/10/08 19:15:16 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4314,6 +4314,20 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 				my ($mansubdir) = ($1);
 
 				$line->log_warning("Please use \"\${PKGMANDIR}/${mansubdir}\" instead of \"${value}\".");
+			}
+		},
+
+		PythonDependency => sub {
+			if ($value ne $value_novar) {
+				$line->log_warning("Python dependencies should not contain variables.");
+			}
+			if ($value_novar !~ m"^[+\-.0-9A-Z_a-z]+(?:|:link|:build)$") {
+				$line->log_warning("Invalid Python dependency \"${value}\".");
+				$line->explain_warning(
+"Python dependencies must be an identifier for a package, as specified",
+"in lang/python/versioned_dependencies.mk. This identifier may be",
+"followed by :build for a build-time only dependency, or by :link for",
+"a run-time only dependency.");
 			}
 		},
 
