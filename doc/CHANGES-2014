@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3812 2014/10/08 09:54:40 obache Exp $
+$NetBSD: CHANGES-2014,v 1.3813 2014/10/08 10:33:11 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4812,3 +4812,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Mojolicious to 5.48 [wen 2014-10-08]
 	Added net/pear-Net_URL2 version 2.0.8 [obache 2014-10-08]
 	Added www/pear-HTTP_Request2 version 2.2.1 [obache 2014-10-08]
+	Updated misc/yelp3 to 3.14.0 [prlw1 2014-10-08]
