@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.5 2010/05/24 19:49:45 christos Exp $
+$NetBSD: patch-af,v 1.6 2014/10/08 22:52:04 christos Exp $
 
 *** old/commands.c	Fri Sep  4 11:22:06 1998
 --- commands.c	Fri Sep  4 11:21:28 1998
@@ -241,100 +241,92 @@ $NetBSD: patch-af,v 1.5 2010/05/24 19:49:45 christos Exp $
   # endif
   #endif
       return NULL;
-*** old/mail.c	Fri Sep  4 11:22:09 1998
---- mail.c	Fri Sep  4 11:21:28 1998
-***************
-*** 34,40 ****
-      char firstchar = (argv)? **argv: 'm';
-      char *to = NULL, *cc = NULL, *addcc = NULL, *bcc = NULL, *subj = NULL;
-      char *route = NULL;
-!     char inc_list[MAXMSGS_BITS], buf[HDRSIZ];
-      u_long flgs = 0;
-  
-      if (ison(glob_flags, IS_GETTING)) {
---- 34,45 ----
-      char firstchar = (argv)? **argv: 'm';
-      char *to = NULL, *cc = NULL, *addcc = NULL, *bcc = NULL, *subj = NULL;
-      char *route = NULL;
-!     char buf[HDRSIZ];
-! #ifndef MSGS_DYNAMIC
-!     char inc_list[MAXMSGS_BITS];
-! #else
-!     char *inc_list = (char *) alloca(MSGS_BITS(msg_cnt));
-! #endif
-      u_long flgs = 0;
-  
-      if (ison(glob_flags, IS_GETTING)) {
-***************
-*** 350,356 ****
---- 355,365 ----
-  
-      /* If forwarding w/o editing, start a new file for each. */
-      if (ison(flags, FORWARD) && ison(flags, SEND_NOW)) {
-+ #ifndef MSGS_DYNAMIC
-  	char fwd[MAXMSGS_BITS];
-+ #else
-+ 	char *fwd = (char *) alloca(MSGS_BITS(msg_cnt));
-+ #endif
-  	register int i;
-  	clear_msg_list(fwd);
-  	for (i = 0; i < msg_cnt; i++)
-***************
-*** 694,700 ****
---- 703,713 ----
-  		putstring(p2, ed_fp);
-  	}
-  	when ':': {
-+ #ifndef MSGS_DYNAMIC
-  	    char new[MAXMSGS_BITS];
-+ #else
-+ 	    char *new = (char *) alloca(MSGS_BITS(msg_cnt));
-+ #endif
-  	    u_long save_flags = glob_flags;
-  
-  	    turnon(glob_flags, IGN_SIGS);
-***************
-*** 706,712 ****
---- 719,729 ----
-  	when 'i': case 'f': case 'I': case 'm': {
-  	    int  n;
-  	    u_long copy_flgs = 0;
-+ #ifndef MSGS_DYNAMIC
-  	    char list[MAXMSGS_BITS];
-+ #else
-+ 	    char *list = (char *) alloca(MSGS_BITS(msg_cnt));
-+ #endif
-  
-  	    if (!msg_cnt) {
-  		wprint("No messages.\n");
-***************
-*** 962,967 ****
---- 979,985 ----
-      register char *p;
-      int c;
-      char buf[MAXPATHLEN];
-+     static char gpat[] = "{,{,*[ \\,]}mail{,[ \\,]*}}";
-  
-      /* forwarded mail has no additional personalized text */
-      if (ison(flags, FORWARD)) {
-***************
-*** 985,992 ****
-  	p = NULL;
-  	if (!strncmp(Cc, "~v", 2) ||
-  		/* Flashy test for $verify either empty or set to "mail" */
-! 		glob(p = do_set(set_options, "verify"),
-! 					    "{,{,*[ \\,]}mail{,[ \\,]*}}")) {
-  	    if (!p) /* so we don't Cc to ~v! */
-  		*Cc = 0;
-  	    for (;;) {
---- 1003,1009 ----
-  	p = NULL;
-  	if (!strncmp(Cc, "~v", 2) ||
-  		/* Flashy test for $verify either empty or set to "mail" */
-! 		glob(p = do_set(set_options, "verify"), gpat)) {
-  	    if (!p) /* so we don't Cc to ~v! */
-  		*Cc = 0;
-  	    for (;;) {
+--- old/mail.c	2014-10-08 18:47:38.000000000 -0400
++++ mail.c	2014-10-08 18:48:42.000000000 -0400
+@@ -34,7 +34,12 @@
+     char firstchar = (argv)? **argv: 'm';
+     char *to = NULL, *cc = NULL, *addcc = NULL, *bcc = NULL, *subj = NULL;
+     char *route = NULL;
+-    char inc_list[MAXMSGS_BITS], buf[HDRSIZ];
++    char buf[HDRSIZ];
++#ifndef MSGS_DYNAMIC
++    char inc_list[MAXMSGS_BITS];
++#else
++    char *inc_list = (char *) alloca(MSGS_BITS(msg_cnt));
++#endif
+     u_long flgs = 0;
+ 
+     if (ison(glob_flags, IS_GETTING)) {
+@@ -350,7 +355,11 @@
+ 
+     /* If forwarding w/o editing, start a new file for each. */
+     if (ison(flags, FORWARD) && ison(flags, SEND_NOW)) {
++#ifndef MSGS_DYNAMIC
+ 	char fwd[MAXMSGS_BITS];
++#else
++	char *fwd = (char *) alloca(MSGS_BITS(msg_cnt));
++#endif
+ 	register int i;
+ 	clear_msg_list(fwd);
+ 	for (i = 0; i < msg_cnt; i++)
+@@ -694,7 +703,11 @@
+ 		putstring(p2, ed_fp);
+ 	}
+ 	when ':': {
++#ifndef MSGS_DYNAMIC
+ 	    char new[MAXMSGS_BITS];
++#else
++	    char *new = (char *) alloca(MSGS_BITS(msg_cnt));
++#endif
+ 	    u_long save_flags = glob_flags;
+ 
+ 	    turnon(glob_flags, IGN_SIGS);
+@@ -706,7 +719,11 @@
+ 	when 'i': case 'f': case 'I': case 'm': {
+ 	    int  n;
+ 	    u_long copy_flgs = 0;
++#ifndef MSGS_DYNAMIC
+ 	    char list[MAXMSGS_BITS];
++#else
++	    char *list = (char *) alloca(MSGS_BITS(msg_cnt));
++#endif
+ 
+ 	    if (!msg_cnt) {
+ 		wprint("No messages.\n");
+@@ -962,6 +979,7 @@
+     register char *p;
+     int c;
+     char buf[MAXPATHLEN];
++    static char gpat[] = "{,{,*[ \\,]}mail{,[ \\,]*}}";
+ 
+     /* forwarded mail has no additional personalized text */
+     if (ison(flags, FORWARD)) {
+@@ -985,8 +1003,7 @@
+ 	p = NULL;
+ 	if (!strncmp(Cc, "~v", 2) ||
+ 		/* Flashy test for $verify either empty or set to "mail" */
+-		glob(p = do_set(set_options, "verify"),
+-					    "{,{,*[ \\,]}mail{,[ \\,]*}}")) {
++		glob(p = do_set(set_options, "verify"), gpat)) {
+ 	    if (!p) /* so we don't Cc to ~v! */
+ 		*Cc = 0;
+ 	    for (;;) {
+@@ -1679,6 +1696,7 @@
+ 		else if (!lcase_strncmp(p, "subject:", 8))
+ 		    (print_hdr = FALSE), strdup(subj, p);
+ 		else if (!lcase_strncmp(p, "from:", 5)) {
++#if 0
+ 		    char not_me[BUFSIZ];
+ 		    (void) strcpy(not_me, buf + 5);
+ 		    take_me_off(not_me);
+@@ -1692,6 +1710,7 @@
+ 			    (void) no_newln(buf);
+ 			}
+ 		    }
++#endif
+ 		    got_from = TRUE;
+ #ifdef PICKY_MAILER
+ 		    /* don't send From: to mta -- fool "for loop" below
 *** old/main.c	Fri Sep  4 11:22:09 1998
 --- main.c	Fri Sep  4 11:21:28 1998
 ***************
