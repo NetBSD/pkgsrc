@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2014/05/09 07:37:21 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2014/10/08 14:11:09 wen Exp $
 #
 
-DISTNAME=	Whoosh-0.1.13
+DISTNAME=	Whoosh-2.5.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc devel
 MASTER_SITES=	http://pypi.python.org/packages/source/W/Whoosh/
