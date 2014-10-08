@@ -1,0 +1,14 @@
+Spek helps to analyse your audio files by showing their spectrogram.
+
+Features
+
+* Supports all popular lossy and lossless audio file formats thanks
+  to the FFmpeg libraries.
+* Ultra-fast signal processing, uses multiple threads to further
+  speed up the analysis.
+* Shows the codec name and the audio signal parameters.
+* Allows to save the spectrogram as an image file.
+* Drag-and-drop support; associates with common audio file formats.
+* Auto-fitting time, frequency and spectral density rulers.
+* Adjustable spectral density range.
+* Translated into 19 languages.
