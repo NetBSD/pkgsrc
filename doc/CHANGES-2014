@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3808 2014/10/08 06:07:46 adam Exp $
+$NetBSD: CHANGES-2014,v 1.3809 2014/10/08 06:25:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4808,3 +4808,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/libwnck3 to 3.4.9 [prlw1 2014-10-08]
 	Updated devel/accerciser3 to 3.14.0 [prlw1 2014-10-08]
 	Updated www/apache24 to 2.4.10nb1 [taca 2014-10-08]
+	Added audio/spek version 0.8.2 [wiz 2014-10-08]
