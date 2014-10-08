@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.511 2014/09/05 10:17:04 fhajny Exp $
+# $NetBSD: Makefile,v 1.512 2014/10/08 06:24:42 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -419,6 +419,7 @@ SUBDIR+=	soundtouch
 SUBDIR+=	sox
 SUBDIR+=	spectro-edit
 SUBDIR+=	speex
+SUBDIR+=	spek
 SUBDIR+=	sphinx3
 SUBDIR+=	sphinxbase
 SUBDIR+=	sphinxtrain
