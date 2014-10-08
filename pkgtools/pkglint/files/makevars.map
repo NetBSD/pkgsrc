@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.254 2014/08/07 20:35:34 wiz Exp $
+# $NetBSD: makevars.map,v 1.255 2014/10/08 19:15:16 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -10,9 +10,12 @@
 # The type Yes is used for variables that are checked using
 #     .if defined(VAR)
 #
-# Type type List is used for lists of things. There are two types of lists,
+# The type List is used for lists of things. There are two types of lists,
 # InternalList and List, which are described in the pkgsrc guide, chapter
 # "Makefiles".
+#
+# The other types are described in pkglint.pl, checkline_mk_vartype_basic.
+#
 
 #
 # Some commonly used ACLs. For further documentation, see the chapter
@@ -656,7 +659,7 @@ PYTHON_VERSIONS_ACCEPTED List of Version [$package]
 PYTHON_VERSIONS_INCOMPATIBLE List of Version [$package]
 PYTHON_VERSION_DEFAULT	Version [$user]
 PYTHON_VERSION_REQD	Version [$user]
-PYTHON_VERSIONED_DEPENDENCIES	List of Identifier [$package_list]
+PYTHON_VERSIONED_DEPENDENCIES	List of PythonDependency [$package_list]
 RANLIB			ShellCommand [$system]
 RCD_SCRIPTS		List of Filename [$package_list]
 RCD_SCRIPT_SRC.*	List of Pathname [m:s]
