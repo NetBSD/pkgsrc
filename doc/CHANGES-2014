@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3818 2014/10/08 22:04:37 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3819 2014/10/08 22:13:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4818,3 +4818,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/openssh to 6.6.1nb3 [taca 2014-10-08]
 	Updated devel/hs-cmdargs to 0.10.10 [szptvlfn 2014-10-08]
 	Updated games/puzzles to 20141008.r10282 [wiz 2014-10-08]
+	Updated devel/glibmm to 2.42.0 [wiz 2014-10-08]
