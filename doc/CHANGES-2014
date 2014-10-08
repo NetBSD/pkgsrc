@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3816 2014/10/08 15:51:31 taca Exp $
+$NetBSD: CHANGES-2014,v 1.3817 2014/10/08 21:56:42 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4816,3 +4816,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/py-Whoosh to 2.5.7 [wen 2014-10-08]
 	Updated net/tcl-scotty to 2.1.11nb11 [he 2014-10-08]
 	Updated security/openssh to 6.6.1nb3 [taca 2014-10-08]
+	Updated devel/hs-cmdargs to 0.10.10 [szptvlfn 2014-10-08]
