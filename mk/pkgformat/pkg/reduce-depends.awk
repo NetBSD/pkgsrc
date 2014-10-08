@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 #
-# $NetBSD: reduce-depends.awk,v 1.2 2013/05/12 05:24:28 obache Exp $
+# $NetBSD: reduce-depends.awk,v 1.3 2014/10/08 10:04:45 jperkin Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -84,13 +84,14 @@ BEGIN {
 		cmd = TEST " -d " dir
 		if (system(cmd) == 0) {
 			cmd = "cd " dir " && " PWD_CMD
-			while (cmd | getline pkgpath)
+			while ((cmd | getline pkgpath) > 0) {
 				if (!(pkgpath in pkgsrcdirs)) {
 					pkgpaths[P++] = pkgpath
 					pkgsrcdirs[pkgpath] = dir
 				}
 				depends[pkgpath, 0]++;
 				depends[pkgpath, depends[pkgpath, 0]] = pattern
+			}
 			close(cmd)
 		} else {
 			print "ERROR: [" PROGNAME "] " dir " does not exist." | ERRCAT
