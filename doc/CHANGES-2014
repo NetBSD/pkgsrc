@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3819 2014/10/08 22:13:05 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3820 2014/10/08 22:20:34 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4819,3 +4819,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/hs-cmdargs to 0.10.10 [szptvlfn 2014-10-08]
 	Updated games/puzzles to 20141008.r10282 [wiz 2014-10-08]
 	Updated devel/glibmm to 2.42.0 [wiz 2014-10-08]
+	Updated textproc/yelp-xsl to 3.14.0 [prlw1 2014-10-08]
