@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3813 2014/10/08 10:33:11 prlw1 Exp $
+$NetBSD: CHANGES-2014,v 1.3814 2014/10/08 14:12:11 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4813,3 +4813,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added net/pear-Net_URL2 version 2.0.8 [obache 2014-10-08]
 	Added www/pear-HTTP_Request2 version 2.2.1 [obache 2014-10-08]
 	Updated misc/yelp3 to 3.14.0 [prlw1 2014-10-08]
+	Updated textproc/py-Whoosh to 2.5.7 [wen 2014-10-08]
