@@ -1,32 +1,30 @@
-# $NetBSD: Makefile,v 1.6 2013/11/01 11:30:21 jaapb Exp $
+# $NetBSD: Makefile,v 1.7 2014/10/09 21:18:05 jaapb Exp $
 #
 
-DISTNAME=	js_of_ocaml-1.3.2
-PKGREVISION=	1
+DISTNAME=	2.5
+PKGNAME=	js_of_ocaml-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	http://ocsigen.org/download/
+MASTER_SITES=	https://github.com/ocsigen/js_of_ocaml/archive/
+DIST_SUBDIR=	js_of_ocaml
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	http://ocsigen.org/js_of_ocaml/
 COMMENT=	Compiler of OCaml bytecode to Javascript
 LICENSE=	gnu-lgpl-v2
 
-DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
-DEPENDS+=	ocaml-deriving-ocsigen>=0.3:../../devel/ocaml-deriving-ocsigen
+DEPENDS+=	ocaml-deriving-ocsigen>=0.6:../../devel/ocaml-deriving-ocsigen
+DEPENDS+=	menhir-[0-9]*:../../devel/menhir
 
-USE_LANGUAGES=	c
 USE_TOOLS=	gmake
 
-MAKE_ENV=	BINDIR=${DESTDIR}${PREFIX}/bin DESTDIR=${DESTDIR} OCAML_SITELIBDIR=${PREFIX}/lib/ocaml/site-lib
+WRKSRC=	${WRKDIR}/${PKGNAME_NOREV}
+MAKE_ENV=	BINDIR=${DESTDIR}/${PREFIX}/bin DESTDIR=${DESTDIR} OCAML_SITELIBDIR=${OCAML_SITELIBDIR}
+MAKE_JOBS_SAFE=	no
 
-INSTALLATION_DIRS=	lib/ocaml/site-lib
-
-PLIST_VARS=	opt
-.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
-    (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "x86_64")
-PLIST.opt=	yes
-.endif
-
+.include "../../devel/ocaml-cmdliner/buildlink3.mk"
 .include "../../devel/ocaml-lwt/buildlink3.mk"
-.include "../../lang/ocaml/buildlink3.mk"
+.include "../../devel/ocaml-optcomp/buildlink3.mk"
+BUILDLINK_API_DEPENDS.ocaml-optcomp+=   ocaml-optcomp>=1.6
+.include "../../lang/camlp4/buildlink3.mk"
+.include "../../mk/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
