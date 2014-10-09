@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.91 2014/10/07 16:47:15 adam Exp $
+# $NetBSD: Makefile,v 1.92 2014/10/09 22:24:15 jaapb Exp $
 #
 
-DISTNAME=	lablgtk-2.18.0
-PKGREVISION=	5
+DISTNAME=	lablgtk-2.18.2
 CATEGORIES=	x11
-MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/1261/
+MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/1456/
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	http://lablgtk.forge.ocamlcore.org/
@@ -14,6 +13,7 @@ LICENSE=	gnu-lgpl-v2
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config
+OCAML_USE_FINDLIB=	yes
 
 MAKE_JOBS_SAFE=		no
 BUILD_TARGET=		world
@@ -21,6 +21,7 @@ BUILD_TARGET=		world
 BUILDLINK_DEPMETHOD.ocaml=	full
 
 CONFLICTS=	lablgtk2-2.*{,nb*}
+SUPERSEDES=	lablgtk-2.*{,nb*}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -33,16 +34,14 @@ PLIST_VARS+=	stubs opt
 PLIST.stubs=	yes
 .endif
 
-.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
-    (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "x86_64")
+.include "../../mk/ocaml.mk"
+
+.if ${OCAML_USE_OPT_COMPILER} == "yes"
 PLIST.opt=      yes
 .endif
 
 .include "options.mk"
 
-INSTALLATION_DIRS+=	lib/ocaml/site-lib
-
-.include "../../lang/ocaml/buildlink3.mk"
-.include "../../devel/ocaml-findlib/buildlink3.mk"
+.include "../../lang/camlp4/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
