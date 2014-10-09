@@ -1,7 +1,7 @@
-# $NetBSD: Makefile-example,v 1.21 2012/09/30 09:10:36 asau Exp $
+# $NetBSD: Makefile-example,v 1.22 2014/10/09 13:44:46 wiz Exp $
 
 # First paragraph - distfile and binary package data
-# DISTNAME PKGNAME PKGREVISION SVR4_PKGNAME CATEGORIES MASTER_SITES
+# DISTNAME PKGNAME PKGREVISION CATEGORIES MASTER_SITES
 # MASTER_SITE_SUBDIR EXTRACT_SUFX DISTFILES
 DISTNAME=		make-3.80
 PKGNAME=		gmake-3.80	# only to be added if the package name is different from DISTNAME
