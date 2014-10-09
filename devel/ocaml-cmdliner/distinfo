@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2014/10/09 20:07:36 jaapb Exp $
+
+SHA1 (cmdliner-0.9.4.tbz) = afa604e527fc3e0753c643a96c354d4a6421321c
+RMD160 (cmdliner-0.9.4.tbz) = 6963db6f83956106d58d3ee6288d99eb8a376812
+Size (cmdliner-0.9.4.tbz) = 43984 bytes
+SHA1 (patch-pkg_pkg-builder) = 23d53d50fc6b86731c3abb3215290b4e56fe4580
