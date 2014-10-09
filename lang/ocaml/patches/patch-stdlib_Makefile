@@ -1,23 +1,23 @@
-$NetBSD: patch-stdlib_Makefile,v 1.1 2012/10/08 15:05:33 jaapb Exp $
+$NetBSD: patch-stdlib_Makefile,v 1.2 2014/10/09 19:08:28 jaapb Exp $
 
 Use BSD_INSTALL_* instead of mkdir and cp
---- stdlib/Makefile.orig	2011-07-27 14:17:02.000000000 +0000
+--- stdlib/Makefile.orig	2014-04-12 10:17:02.000000000 +0000
 +++ stdlib/Makefile
 @@ -25,7 +25,7 @@ allopt-prof: stdlib.p.cmxa std_exit.p.cm
  installopt: installopt-default installopt-$(PROFILING)
  
  installopt-default:
--	cp stdlib.cmxa stdlib.a std_exit.o *.cmx $(LIBDIR)
-+	$(BSD_INSTALL_DATA) stdlib.cmxa stdlib.a std_exit.o *.cmx $(LIBDIR)
- 	cd $(LIBDIR); $(RANLIB) stdlib.a
+-	cp stdlib.cmxa stdlib.a std_exit.o *.cmx $(INSTALL_LIBDIR)
++	$(BSD_INSTALL_DATA) stdlib.cmxa stdlib.a std_exit.o *.cmx $(INSTALL_LIBDIR)
+ 	cd $(INSTALL_LIBDIR); $(RANLIB) stdlib.a
  
  installopt-noprof:
-@@ -36,7 +36,7 @@ installopt-noprof:
- 	rm -f $(LIBDIR)/std_exit.p.o; ln -s std_exit.o $(LIBDIR)/std_exit.p.o
+@@ -39,7 +39,7 @@ installopt-noprof:
+ 	  ln -s std_exit.o $(INSTALL_LIBDIR)/std_exit.p.o
  
  installopt-prof:
--	cp stdlib.p.cmxa stdlib.p.a std_exit.p.cmx std_exit.p.o $(LIBDIR)
-+	$(BSD_INSTALL_DATA) stdlib.p.cmxa stdlib.p.a std_exit.p.cmx std_exit.p.o $(LIBDIR)
- 	cd $(LIBDIR); $(RANLIB) stdlib.p.a
+-	cp stdlib.p.cmxa stdlib.p.a std_exit.p.cmx std_exit.p.o $(INSTALL_LIBDIR)
++	$(BSD_INSTALL_DATA) stdlib.p.cmxa stdlib.p.a std_exit.p.cmx std_exit.p.o $(INSTALL_LIBDIR)
+ 	cd $(INSTALL_LIBDIR); $(RANLIB) stdlib.p.a
  
  stdlib.p.cmxa: $(OBJS:.cmo=.p.cmx)

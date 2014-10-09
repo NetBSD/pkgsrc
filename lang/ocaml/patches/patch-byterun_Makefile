@@ -1,9 +1,9 @@
-$NetBSD: patch-byterun_Makefile,v 1.1 2012/10/08 15:05:33 jaapb Exp $
+$NetBSD: patch-byterun_Makefile,v 1.2 2014/10/09 19:08:28 jaapb Exp $
 
 Use BSD_INSTALL_* instead of mkdir and cp
---- byterun/Makefile.orig	2012-06-04 16:33:59.000000000 +0000
+--- byterun/Makefile.orig	2014-04-07 07:06:17.000000000 +0000
 +++ byterun/Makefile
-@@ -15,7 +15,7 @@
+@@ -13,7 +13,7 @@
  
  include Makefile.common
  
@@ -11,13 +11,13 @@ Use BSD_INSTALL_* instead of mkdir and cp
 +CFLAGS+=-DCAML_NAME_SPACE -O $(BYTECCCOMPOPTS) $(IFLEXDIR)
  DFLAGS=-DCAML_NAME_SPACE -g -DDEBUG $(BYTECCCOMPOPTS) $(IFLEXDIR)
  
- OBJS=$(COMMONOBJS) unix.o main.o
-@@ -48,7 +48,7 @@ libcamlrun_shared.so: $(PICOBJS)
+ OBJS=$(COMMONOBJS) $(UNIX_OR_WIN32).o main.o
+@@ -46,7 +46,7 @@ libcamlrun_shared.so: $(PICOBJS)
  
  install::
  	if test -f libcamlrun_shared.so; then \
--	  cp libcamlrun_shared.so $(LIBDIR)/libcamlrun_shared.so; fi
-+	  $(BSD_INSTALL_PROGRAM) libcamlrun_shared.so $(LIBDIR)/libcamlrun_shared.so; fi
+-	  cp libcamlrun_shared.so $(INSTALL_LIBDIR)/libcamlrun_shared.so; fi
++	  $(BSD_INSTALL_PROGRAM) libcamlrun_shared.so $(INSTALL_LIBDIR)/libcamlrun_shared.so; fi
  
  clean::
  	rm -f libcamlrun_shared.so
