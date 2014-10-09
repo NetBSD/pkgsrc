@@ -1,7 +1,7 @@
 #!@PERL@ -w
 # -*- perl -*-
 #
-# $NetBSD: revbump,v 1.5 2014/10/09 13:44:53 wiz Exp $
+# $NetBSD: revbump,v 1.6 2014/10/09 13:51:42 wiz Exp $
 #
 # Copyright (c) 2003, 2004 The NetBSD Foundation, Inc.
 #
@@ -76,9 +76,6 @@ sub revbump {
         if ($done == 0 && /^PKGREVISION=([ \t]+)([0-9]+)$/) {
             $done = $2 + 1;
             print NEWMK "PKGREVISION=${1}${done}\n";
-            print NEWMK "PKGREVISION=${1}1\n";
-            print NEWMK $_;
-            $done = 1;
         } elsif ($done == 0 && /^CATEGORIES=([ \t]+)/) {
             print NEWMK "PKGREVISION=${1}1\n";
             print NEWMK $_;
