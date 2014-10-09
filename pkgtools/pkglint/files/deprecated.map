@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.65 2014/10/09 13:54:47 wiz Exp $
+# $NetBSD: deprecated.map,v 1.66 2014/10/09 14:10:41 wiz Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -163,3 +163,4 @@ USE_GNU_READLINE	Include "../../devel/readline/buildlink3.mk" instead.
 
 # October 2014
 SVR4_PKGNAME		Just remove it.
+PKG_INSTALLATION_TYPES	Just remove it.
