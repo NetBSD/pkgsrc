@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2014/10/09 13:45:01 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2014/10/09 14:07:06 wiz Exp $
 #
 
 DISTNAME=	XML-Simple-2.20
@@ -18,8 +18,6 @@ DEPENDS+=	p5-XML-SAX-[0-9]*:../../textproc/p5-XML-SAX
 DEPENDS+=	p5-XML-SAX-Expat-[0-9]*:../../textproc/p5-XML-SAX-Expat
 DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-XML-NamespaceSupport>=1.04:../../textproc/p5-XML-NamespaceSupport
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/XML/Simple/.packlist
 

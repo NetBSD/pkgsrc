@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2014/05/29 23:36:28 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2014/10/09 14:06:30 wiz Exp $
 #
 
 DISTNAME=	prefork-1.04
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/prefork/
 COMMENT=	Optimize module loading across forking and non-forking scenarios
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/prefork/.packlist
 

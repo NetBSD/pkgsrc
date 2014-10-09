@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2013/07/21 10:31:26 shattered Exp $
+# $NetBSD: Makefile,v 1.49 2014/10/09 14:05:51 wiz Exp $
 #
 
 DISTNAME=	cpio-2.11
@@ -13,8 +13,6 @@ COMMENT=	GNU copy-in/out (cpio) with remote magnetic tape (rmt) support
 LICENSE=	gnu-gpl-v3
 
 CONFLICTS+=	gtar-base-[0-9]*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	makeinfo

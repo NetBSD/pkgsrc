@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2013/12/23 11:57:05 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2014/10/09 14:06:45 wiz Exp $
 
 DISTNAME=	libIDL-0.8.14
 PKGREVISION=	4
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	CORBA Interface Definition Language parser
 LICENSE=	gnu-lgpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bison flex pkg-config

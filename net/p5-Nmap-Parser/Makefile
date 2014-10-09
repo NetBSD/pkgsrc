@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/05/29 23:37:10 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2014/10/09 14:06:48 wiz Exp $
 #
 
 DISTNAME=	Nmap-Parser-1.31
@@ -13,8 +13,6 @@ COMMENT=	Parse nmap scan data with perl
 LICENSE=	mit
 
 DEPENDS+=	p5-XML-Twig>=3.16:../../textproc/p5-XML-Twig
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Nmap/Parser/.packlist
 

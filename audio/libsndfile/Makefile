@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2013/09/01 12:14:06 obache Exp $
+# $NetBSD: Makefile,v 1.65 2014/10/09 14:05:56 wiz Exp $
 
 DISTNAME=	libsndfile-1.0.25
 PKGREVISION=	1
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mega-nerd.com/libsndfile/
 COMMENT=	Library for reading and writing audio files
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

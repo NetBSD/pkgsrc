@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/07/15 20:46:32 schmonz Exp $
+# $NetBSD: Makefile,v 1.11 2014/10/09 14:06:21 wiz Exp $
 
 DISTNAME=	IPC-SysV-2.04
 PKGNAME=	p5-${DISTNAME:S/_/beta/}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/IPC-SysV/
 COMMENT=	Perl module which defines+exports SysV IPC constants and system calls
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/IPC/SysV/.packlist

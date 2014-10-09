@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2014/10/09 13:44:36 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2014/10/09 14:06:10 wiz Exp $
 #
 
 DISTNAME=	slang-1.4.9
@@ -12,8 +12,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.s-lang.org/
 COMMENT=	Routines for rapid alpha-numeric terminal applications development
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 MAKE_JOBS_SAFE=		no
 

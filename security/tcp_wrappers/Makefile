@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2014/10/01 22:58:17 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2014/10/09 14:06:56 wiz Exp $
 
 DISTNAME=	tcp_wrappers_7.6-ipv6.4
 PKGNAME=	${DISTNAME:S/_7.6-ipv6/-7.6/}
@@ -8,8 +8,6 @@ MASTER_SITES=	ftp://ftp.porcupine.org/pub/security/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	ftp://ftp.porcupine.org/pub/security/index.html
 COMMENT=	Monitor and filter incoming requests for network services
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 

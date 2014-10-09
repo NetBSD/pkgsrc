@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2014/02/22 18:15:33 wiedi Exp $
+# $NetBSD: Makefile,v 1.43 2014/10/09 14:06:56 wiz Exp $
 #
 
 DISTNAME=		rsaref
@@ -18,8 +18,6 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=			${WRKDIR}/install
 CRYPTO=			yes
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_FEATURES+=		cdefs
 USE_LIBTOOL=		yes

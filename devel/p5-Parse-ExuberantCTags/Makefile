@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/05/29 23:36:12 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2014/10/09 14:06:24 wiz Exp $
 #
 
 DISTNAME=	Parse-ExuberantCTags-1.02
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Parse-ExuberantCTags/
 COMMENT=	Efficiently parse exuberant ctags files
 LICENSE=	(${PERL5_LICENSE}) AND public-domain
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Parse/ExuberantCTags/.packlist
 USE_LANGUAGES=		c

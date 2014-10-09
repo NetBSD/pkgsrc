@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2013/06/04 22:16:04 tron Exp $
+# $NetBSD: Makefile,v 1.33 2014/10/09 14:06:33 wiz Exp $
 
 DISTNAME=	enigma-1.01-r1914
 PKGNAME=	${DISTNAME:S/-r/./}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/enigma/
 COMMENT=	Puzzle game similar to Oxyd/Rock'n'Roll/Marble Madness
 LICENSE=	gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
 

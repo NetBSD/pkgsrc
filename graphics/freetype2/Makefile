@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2014/07/07 07:14:27 dsainty Exp $
+# $NetBSD: Makefile,v 1.97 2014/10/09 14:06:35 wiz Exp $
 
 DISTNAME=	freetype-2.5.3
 PKGNAME=	${DISTNAME:S/-/2-/}
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freetype.org/
 COMMENT=	Font rendering engine and library API
 LICENSE=	gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		grep gmake pkg-config

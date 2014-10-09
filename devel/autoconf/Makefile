@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2014/05/29 23:35:33 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2014/10/09 14:06:07 wiz Exp $
 #
 # When updating this package, please update mk/gnu-config/config.guess,
 # mk/gnu-config/config.sub, and mk/gnu-config/missing as well.
@@ -25,8 +25,6 @@ CONFLICTS=		autoconf-devel-[0-9]*
 CONFLICTS+=		gdb<5.3
 CONFLICTS+=		gdb>6<6.2.1nb5
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
 USE_LANGUAGES=		# empty
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-lispdir
@@ -45,6 +43,5 @@ CHECK_WRKREF_SKIP+=	${PREFIX}/share/autoconf/autoconf/autoconf.m4f
 CHECK_WRKREF_SKIP+=	${PREFIX}/share/autoconf/autotest/autotest.m4f
 CHECK_WRKREF_SKIP+=	${PREFIX}/share/autoconf/m4sugar/m4sugar.m4f
 CHECK_WRKREF_SKIP+=	${PREFIX}/share/autoconf/m4sugar/m4sh.m4f
-
 
 .include "../../mk/bsd.pkg.mk"

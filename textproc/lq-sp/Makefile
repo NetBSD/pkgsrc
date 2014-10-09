@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/25 06:56:06 asau Exp $
+# $NetBSD: Makefile,v 1.14 2014/10/09 14:07:02 wiz Exp $
 #
 
 DISTNAME=	lq-sp-1.3.4.12
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.htmlhelp.com/tools/validator/offline/
 MAINTAINER=	norm@sandbox.org.uk
 HOMEPAGE=	http://www.htmlhelp.com/tools/validator/offline/
 COMMENT=	Modified SP package
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=	c c++
 

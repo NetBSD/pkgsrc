@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/29 05:07:00 asau Exp $
+# $NetBSD: Makefile,v 1.25 2014/10/09 14:07:16 wiz Exp $
 #
 
 DISTNAME=		libXcursor-1.1.2
@@ -11,8 +11,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.freedesktop.org/Software/xlibs
 COMMENT=		Client-side cursor loading library for X
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CONFLICTS+=		libXcursor-[0-9]*
 

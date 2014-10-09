@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/07/15 20:39:42 schmonz Exp $
+# $NetBSD: Makefile,v 1.17 2014/10/09 14:06:23 wiz Exp $
 
 DISTNAME=	Parse-CPAN-Meta-1.4414
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Parse-CPAN-Meta/
 COMMENT=	Perl5 module to parse META.yml and other similar CPAN metadata files
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	{perl>=5.6.0,p5-PathTools>=0.80}:../../devel/p5-PathTools
 

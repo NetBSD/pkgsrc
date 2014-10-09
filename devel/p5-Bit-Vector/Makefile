@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2014/10/09 13:44:37 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2014/10/09 14:06:11 wiz Exp $
 
 DISTNAME=	Bit-Vector-7.3
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Bit-Vector/
 COMMENT=	Efficient base class implementing bit vectors
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-Carp-Clan>=5.3:../../devel/p5-Carp-Clan
 #DEPENDS+=	{perl>=5.12.0,p5-Storable>=2.21}:../../devel/p5-Storable

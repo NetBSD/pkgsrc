@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/10/16 23:59:36 roy Exp $
+# $NetBSD: Makefile,v 1.9 2014/10/09 14:06:32 wiz Exp $
 #
 
 DISTNAME=		aliados-0.2.0
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		ivaniclixx@gmail.com
 HOMEPAGE=		http://www.arrakis.es/~ninsesabe/aliados/
 COMMENT=		CP/M 80 emulator
-
-PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++

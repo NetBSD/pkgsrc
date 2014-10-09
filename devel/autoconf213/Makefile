@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2014/05/29 23:35:33 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2014/10/09 14:06:07 wiz Exp $
 
 DISTNAME=	autoconf-2.13
 PKGNAME=	autoconf213-2.13
@@ -15,8 +15,6 @@ USE_TOOLS+=		gm4:run makeinfo perl:run
 
 CONFLICTS=		autoconf-devel-[0-9]*
 CONFLICTS=		autoconf<2.50
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--program-transform-name='s/$$/-2.13/'

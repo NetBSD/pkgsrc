@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/05/29 23:37:38 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2014/10/09 14:07:03 wiz Exp $
 
 DISTNAME=	Pod-Coverage-0.23
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,6 @@ COMMENT=	Checks if the documentation of a module is comprehensive
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Devel-Symdump>=2.01:../../devel/p5-Devel-Symdump
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Pod/Coverage/.packlist
 

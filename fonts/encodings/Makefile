@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/11/07 14:47:37 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/10/09 14:06:33 wiz Exp $
 
 DISTNAME=		encodings-1.0.4
 PKGREVISION=		1
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X11 Font Index Generator
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 

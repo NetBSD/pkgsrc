@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2013/11/24 03:06:15 dholland Exp $
+# $NetBSD: Makefile,v 1.28 2014/10/09 14:07:08 wiz Exp $
 #
 
 DISTNAME=	windowlab-1.33
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tar
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://nickgravgaard.com/windowlab/
 COMMENT=	Small and simple window manager
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=	gmake pkg-config
 

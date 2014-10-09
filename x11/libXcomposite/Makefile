@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/01/21 13:26:46 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/10/09 14:07:14 wiz Exp $
 #
 
 DISTNAME=		libXcomposite-0.4.4
@@ -10,8 +10,6 @@ MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X Composite Library
 LICENSE=		mit
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

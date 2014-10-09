@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2014/10/01 11:54:52 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2014/10/09 14:06:52 wiz Exp $
 
 DISTNAME=	libgpg-error-1.16
 CATEGORIES=	security
@@ -13,8 +13,6 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.gnupg.org/
 COMMENT=	Definitions of common error values for all GnuPG components
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
