@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.86 2014/03/29 09:38:11 taca Exp $
+$NetBSD: distinfo,v 1.86.6.1 2014/10/09 13:53:43 tron Exp $
 
 SHA1 (openssh-6.6p1-hpnssh14v4.diff.gz) = 1cb86c7151ea4c805cfb1197eac13844cd8f2f2c
 RMD160 (openssh-6.6p1-hpnssh14v4.diff.gz) = 292cea7880ff66040d915f2d5957dd27d0835984
@@ -26,6 +26,7 @@ SHA1 (patch-scp.c) = 97e33843cc1b93babb6c45225c07ac74555e6d54
 SHA1 (patch-session.c) = 55e84175c7294816107c970f002401d1766f7095
 SHA1 (patch-sftp-common.c) = 5b36300c6a83ceef2340c2cee3be211eaf39ecdd
 SHA1 (patch-ssh.c) = 8965e0458aabc137fa3b5e53c6573c0f0fba8280
+SHA1 (patch-sshconnect.c) = 7bee56ee50ec26913999296eefa93c0be63a9e75
 SHA1 (patch-sshd.c) = 43b3e4383142303a5d1158f08baee4a27f2f7b13
 SHA1 (patch-sshpty.c) = 9f08f899919d05567998087a060b90800c2c7b11
 SHA1 (patch-uidswap.c) = 0b76322d47b9e14bb2828bc143645d38028bdafd
