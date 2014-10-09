@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.readme.mk,v 1.27 2014/10/09 13:44:51 wiz Exp $
+# $NetBSD: bsd.pkg.readme.mk,v 1.28 2014/10/09 13:50:08 wiz Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and encapsulates the
 # code to produce README.html files in each package directory.
@@ -31,8 +31,7 @@
 #	to "/usr/pkgsrc/packages".
 #
 
-# Set to "html" by the README.html target to generate HTML code,
-# or to "svr4" to print SVR4 (Solaris, ...) short package names, from
+# Set to "html" by the README.html target to generate HTML code.
 # This variable is passed down via build-depends-list and run-depends-list
 PACKAGE_NAME_TYPE?=	name
 
@@ -43,7 +42,6 @@ _HTML_PKGLINK=		<a href="../../${PKGPATH}/README.html">${PKGNAME}</a>
 package-name:
 .  if (${PACKAGE_NAME_TYPE} == "html")
 	@${ECHO} ${_HTML_PKGLINK:Q}
-.  elif (${PACKAGE_NAME_TYPE} == "svr4")
 .  else
 	@${ECHO} ${PKGNAME}
 .  endif # PACKAGE_NAME_TYPE

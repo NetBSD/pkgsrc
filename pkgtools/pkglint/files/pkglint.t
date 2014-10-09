@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.t,v 1.9 2013/03/26 15:11:36 schmonz Exp $
+# $NetBSD: pkglint.t,v 1.10 2014/10/09 13:54:47 wiz Exp $
 #
 
 require 'pkglint.pl';			# so we can test its internals
@@ -83,7 +83,7 @@ sub test_get_vartypes_basictypes {
 		PkgName PkgOptionsVar PkgPath PkgRevision
 		PlatformTriple PrefixPathname
 		RelativePkgDir RelativePkgPath
-		Restricted SVR4PkgName
+		Restricted
 		SedCommand SedCommands
 		ShellCommand ShellWord
 		Stage String Tool URL Unchecked UserGroupName Varname Version

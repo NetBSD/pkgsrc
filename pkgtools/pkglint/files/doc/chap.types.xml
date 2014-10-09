@@ -1,4 +1,4 @@
-<!-- $NetBSD: chap.types.xml,v 1.17 2009/06/13 06:33:35 rillig Exp $ -->
+<!-- $NetBSD: chap.types.xml,v 1.18 2014/10/09 13:54:47 wiz Exp $ -->
 
 <chapter id="types">
 <title>The &pkglint; type system</title>
@@ -402,12 +402,6 @@
 	directory. It may point to either a regular file or a directory.
 	See also <literal><type>RelativePkgDir</type></literal>.</para>
 	</listitem></varlistentry>
-
-	<varlistentry><term><literal><type>SVR4PkgName</type></literal></term>
-	<listitem><para>When converting pkgsrc packages to Solaris
-	packages, the package name is restricted to 9 characters, of
-	which five remain for the package
-	itself.</para></listitem></varlistentry>
 
 	<varlistentry><term><literal><type>ShellCommand</type></literal></term>
 	<listitem><para>A shell command is similar to a
