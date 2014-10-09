@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3829 2014/10/09 14:49:19 martin Exp $
+$NetBSD: CHANGES-2014,v 1.3830 2014/10/09 15:07:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4833,3 +4833,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/etcmanage to 0.9.1 [gdt 2014-10-09]
 	Updated pkgtools/pkglint to 4.147 [wiz 2014-10-09]
 	Updated multimedia/gmplayer to 1.1.1nb20 [martin 2014-10-09]
+	Updated audio/audacious to 3.5.1 [adam 2014-10-09]
+	Updated audio/audacious-plugins to 3.5.1 [adam 2014-10-09]
