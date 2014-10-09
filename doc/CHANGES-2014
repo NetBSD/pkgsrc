@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3831 2014/10/09 18:59:59 gson Exp $
+$NetBSD: CHANGES-2014,v 1.3832 2014/10/09 19:41:21 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4836,3 +4836,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/audacious to 3.5.1 [adam 2014-10-09]
 	Updated audio/audacious-plugins to 3.5.1 [adam 2014-10-09]
 	Updated graphics/netpbm to 10.67.05nb3 [gson 2014-10-09]
+	Updated lang/ocaml to 4.02.0 [jaapb 2014-10-09]
+	Updated devel/pcre-ocaml to 7.1.1 [jaapb 2014-10-09]
