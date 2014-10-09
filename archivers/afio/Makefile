@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/04/06 03:45:05 rodent Exp $
+# $NetBSD: Makefile,v 1.14 2014/10/09 14:05:50 wiz Exp $
 
 DISTNAME=	afio-2.5
 PKGREVISION=	2
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://freshmeat.net/projects/afio/
 COMMENT=	Data corruption handling cpio-format archive creator
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BUILD_TARGET=	afio
 

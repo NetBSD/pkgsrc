@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/12/17 15:05:23 tron Exp $
+# $NetBSD: Makefile,v 1.22 2014/10/09 14:06:00 wiz Exp $
 
 DISTNAME=	ttcp
 PKGNAME=	${DISTNAME}-1.12
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ccci.com/tools/ttcp/
 COMMENT=	TCP testing and performance measuring tool
 LICENSE=	public-domain
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BSD_MAKEFILE=	yes
 USE_TOOLS+=		nroff

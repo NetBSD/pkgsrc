@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.275 2014/10/07 16:47:29 adam Exp $
+# $NetBSD: Makefile,v 1.276 2014/10/09 14:06:40 wiz Exp $
 
 DISTNAME=	postfix-2.11.1
 PKGREVISION=	2
@@ -17,8 +17,6 @@ LICENSE=	cpl-1.0
 
 CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 sendmail-[0-9]*
 CONFLICTS+=	esmtp>=1.2 nullmailer-[0-9]*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=	perl
 CHECK_HEADERS_SKIP+=	src/global/mail_params.h

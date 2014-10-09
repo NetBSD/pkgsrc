@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/08 12:19:10 asau Exp $
+# $NetBSD: Makefile,v 1.25 2014/10/09 14:06:39 wiz Exp $
 #
 
 .include "../../mail/ezmlm/Makefile.common"
@@ -12,8 +12,6 @@ COMMENT=		Easy-to-use, high-speed mailing list manager for qmail
 LICENSE=		public-domain
 
 CONFLICTS=		ezmlm-idx-[0-9]*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DJB_RESTRICTED=		no
 DJB_CONFIG_CMDS=	${ECHO} ${DESTDIR:Q} > conf-destdir

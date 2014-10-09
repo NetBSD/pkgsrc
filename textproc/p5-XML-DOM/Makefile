@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2014/10/09 13:44:59 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2014/10/09 14:07:05 wiz Exp $
 #
 
 DISTNAME=	XML-DOM-1.44
@@ -16,8 +16,6 @@ DEPENDS+=	p5-libxml-[0-9]*:../../textproc/p5-libxml
 DEPENDS+=	p5-XML-RegExp-[0-9]*:../../textproc/p5-XML-RegExp
 
 CONFLICTS+=	p5-libxml-enno-[0-9]*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/XML-DOM/.packlist
 

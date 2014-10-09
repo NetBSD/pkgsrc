@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2012/09/11 19:46:56 asau Exp $
+# $NetBSD: Makefile,v 1.39 2014/10/09 14:05:52 wiz Exp $
 
 DISTNAME=	lha-114i
 PKGNAME=	lha-114.9
@@ -16,8 +16,6 @@ RESTRICTED=	Other than for-free distribution of the unmodified source \
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2014/05/29 23:35:53 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2014/10/09 14:06:17 wiz Exp $
 
 DISTNAME=		File-BaseDir-0.03
 PKGNAME=		p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/File-BaseDir/
 COMMENT=		Perl module for the XDG Base Directory Specification
 LICENSE=		${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 SHAREDIR=		${PREFIX}/share
 SHAREDIR_SPLIT=		${SHAREDIR:S/\// /g}

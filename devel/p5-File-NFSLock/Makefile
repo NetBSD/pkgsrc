@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/05/29 23:35:55 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/10/09 14:06:18 wiz Exp $
 
 DISTNAME=	File-NFSLock-1.21
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/File-NFSLock/
 COMMENT=	NFS (or not) locking
 LICENSE=	gnu-gpl-v2 OR artistic
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/File/NFSLock/.packlist
 

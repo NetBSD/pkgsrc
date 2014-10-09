@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/06/23 05:39:56 obache Exp $
+# $NetBSD: Makefile,v 1.22 2014/10/09 14:07:14 wiz Exp $
 
 DISTNAME=		libXt-1.1.4
 CATEGORIES=		x11 devel
@@ -9,8 +9,6 @@ MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X Toolkit Intrinsics library
 LICENSE=		mit
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

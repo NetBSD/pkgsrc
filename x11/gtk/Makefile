@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2014/05/29 23:38:19 wiz Exp $
+# $NetBSD: Makefile,v 1.133 2014/10/09 14:07:13 wiz Exp $
 
 DISTNAME=		gtk+-1.2.10
 PKGREVISION=		13
@@ -9,8 +9,6 @@ MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v1.2/ \
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gtk.org/
 COMMENT=		GIMP Toolkit v1 - libraries for building X11 user interfaces
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../mk/bsd.prefs.mk"
 

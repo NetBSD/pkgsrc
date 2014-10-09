@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/05/29 23:37:08 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2014/10/09 14:06:47 wiz Exp $
 
 DISTNAME=	Net-IPv6Addr-0.2
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,6 @@ DEPENDS+=	p5-Net-IPv4Addr-[0-9]*:../../net/p5-Net-IPv4Addr
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Check the validity of IPv6 addresses
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Net/IPv6Addr/.packlist
 

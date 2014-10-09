@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/31 11:19:47 asau Exp $
+# $NetBSD: Makefile,v 1.14 2014/10/09 14:06:31 wiz Exp $
 
 DISTNAME=	stooop-4.1.1
 CATEGORIES=	x11 tcl
@@ -9,8 +9,6 @@ HOMEPAGE=	http://jfontain.free.fr/
 COMMENT=	Simple Tcl Only Object Oriented Programming scheme
 
 DEPENDS+=	tcl>=8.3.2:../../lang/tcl
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

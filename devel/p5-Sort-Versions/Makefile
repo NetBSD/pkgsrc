@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/10/09 13:44:44 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2014/10/09 14:06:26 wiz Exp $
 #
 
 DISTNAME=		Sort-Versions-1.5
@@ -10,8 +10,6 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Sort/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Sort-Versions/
 COMMENT=		Perl5 module for sorting of revision-like numbers
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Sort/Versions/.packlist

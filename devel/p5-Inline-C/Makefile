@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/07/18 02:00:47 wen Exp $
+# $NetBSD: Makefile,v 1.2 2014/10/09 14:06:21 wiz Exp $
 #
 
 DISTNAME=	Inline-C-0.61
@@ -15,8 +15,6 @@ DEPENDS+=	p5-Inline>=0.58:../../devel/p5-Inline
 DEPENDS+=	p5-Parse-RecDescent>=1.80:../../devel/p5-Parse-RecDescent
 
 MAKE_ENV+=	PERL_MM_USE_DEFAULT=1
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Inline/C/.packlist
 

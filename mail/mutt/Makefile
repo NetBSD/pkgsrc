@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.167 2014/02/12 23:18:08 tron Exp $
+# $NetBSD: Makefile,v 1.168 2014/10/09 14:06:39 wiz Exp $
 
 DISTNAME=		mutt-1.4.2.3
 PKGREVISION=		7
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.mutt.org/
 COMMENT=		Text-based MIME mail client with PGP support
 LICENSE=		gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../mk/bsd.prefs.mk"
 

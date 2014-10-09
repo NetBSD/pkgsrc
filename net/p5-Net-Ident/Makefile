@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/10/09 13:44:52 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2014/10/09 14:06:47 wiz Exp $
 #
 
 DISTNAME=		Net-Ident-1.23
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Net-Ident/
 COMMENT=		Perl module implementing the client side of the ident protocol
 LICENSE=		${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		#empty
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/02 23:48:12 asau Exp $
+# $NetBSD: Makefile,v 1.14 2014/10/09 14:05:58 wiz Exp $
 #
 
 DISTNAME=	trm-0.2.1
@@ -11,8 +11,6 @@ HOMEPAGE=	http://www.musicbrainz.org/products/trmgen/download.html
 COMMENT=	Acoustic signature generator
 
 CONFLICTS=	tunepimp-[0-9]*
-
-PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/05/29 23:37:39 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2014/10/09 14:07:03 wiz Exp $
 
 DISTNAME=	Pod-Readme-0.11
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Pod-Readme/
 COMMENT=	Convert POD to README file
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-Regexp-Common>=0:../../textproc/p5-Regexp-Common
 

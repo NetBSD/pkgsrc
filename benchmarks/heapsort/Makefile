@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/09/11 22:37:12 asau Exp $
+# $NetBSD: Makefile,v 1.19 2014/10/09 14:05:59 wiz Exp $
 
 DISTNAME=		heapsort.c
 PKGNAME=		heapsort-1.0
@@ -8,8 +8,6 @@ EXTRACT_SUFX=	#empty
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Benchmark program for variable sized arrays
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}
 

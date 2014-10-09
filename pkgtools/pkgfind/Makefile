@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/03/03 05:07:42 obache Exp $
+# $NetBSD: Makefile,v 1.27 2014/10/09 14:06:50 wiz Exp $
 
 PKGNAME=	pkgfind-20111022
 CATEGORIES=	pkgtools
@@ -6,8 +6,6 @@ CATEGORIES=	pkgtools
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Find packages by package name in pkgsrc
 LICENSE=	2-clause-bsd
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_FEATURES=	err getprogname setprogname snprintf warn
 

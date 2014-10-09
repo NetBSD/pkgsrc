@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.lib,v 1.18 2014/05/09 07:37:07 wiz Exp $
+# $NetBSD: Makefile.lib,v 1.19 2014/10/09 14:06:34 wiz Exp $
 #
 # This Makefile fragment is included by all packages that build libraries
 # from the Mesa sources.
@@ -13,8 +13,6 @@
 DISTFILES+=	MesaLib-${MESA_VERSION}${EXTRACT_SUFX}
 DISTFILES+=	MesaGLUT-${MESA_VERSION}${EXTRACT_SUFX}
 #DISTFILES+=	MesaDemos-${MESA_VERSION}${EXTRACT_SUFX}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c99 c++

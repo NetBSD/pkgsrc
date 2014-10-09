@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/10/04 14:04:05 wen Exp $
+# $NetBSD: Makefile,v 1.20 2014/10/09 14:06:11 wiz Exp $
 
 DISTNAME=	CPAN-Reporter-1.2011
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/CPAN-Reporter/
 COMMENT=	Adds CPAN Testers reporting to p5-CPAN
 LICENSE=	apache-2.0
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/CPAN/Reporter/.packlist

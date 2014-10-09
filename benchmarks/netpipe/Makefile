@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/09/11 22:37:13 asau Exp $
+# $NetBSD: Makefile,v 1.13 2014/10/09 14:05:59 wiz Exp $
 
 DISTNAME=	NetPIPE-3.7.1
 PKGNAME=	netpipe-3.7.1
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.scl.ameslab.gov/netpipe/
 COMMENT=	TCP/PVM/MPI testing and performance measuring tool
 LICENSE=	gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 MAKE_FILE=	makefile
 CFLAGS+=	-DHAVE_GETRUSAGE

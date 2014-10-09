@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2013/06/04 22:16:23 tron Exp $
+# $NetBSD: Makefile,v 1.76 2014/10/09 14:06:36 wiz Exp $
 
 DISTNAME=	libwmf-0.2.8.4
 PKGREVISION=	15
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wvware.sourceforge.net/libwmf.html
 COMMENT=	Library for reading and converting WMF (Windows Meta Files)
 LICENSE=	gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config

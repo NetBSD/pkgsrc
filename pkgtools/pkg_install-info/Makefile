@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/03/03 04:45:56 obache Exp $
+# $NetBSD: Makefile,v 1.23 2014/10/09 14:06:49 wiz Exp $
 #
 
 PKGNAME=		pkg_install-info-${VERSION}
@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/texinfo/texinfo.html
 COMMENT=		Standalone GNU info file installation utility
 LICENSE=		gnu-gpl-v2 # or later
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 

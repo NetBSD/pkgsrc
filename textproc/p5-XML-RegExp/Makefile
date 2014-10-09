@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2014/10/09 13:45:01 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2014/10/09 14:07:06 wiz Exp $
 #
 
 DISTNAME=	XML-RegExp-0.04
@@ -12,8 +12,6 @@ COMMENT=	Provide regular expressions for some XML tokens
 LICENSE=	${PERL5_LICENSE}
 
 CONFLICTS+=	p5-libxml-enno-[0-9]*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/XML/RegExp/.packlist
 

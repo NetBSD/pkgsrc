@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/10/24 09:43:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2014/10/09 14:06:00 wiz Exp $
 #
 
 DISTNAME=		wipe-2.2.0
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://wipe.sourceforge.net/
 COMMENT=		Secure data destruction
 LICENSE=		gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 

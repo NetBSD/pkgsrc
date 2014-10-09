@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/06 11:54:43 asau Exp $
+# $NetBSD: Makefile,v 1.18 2014/10/09 14:06:33 wiz Exp $
 #
 
 DISTNAME=		ivan-0.50
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ivan.sourceforge.net/
 COMMENT=		Graphical roguelike featuring deep gameplay
 LICENSE=		gnu-gpl-v2 # or later
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/05/29 23:36:28 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2014/10/09 14:06:30 wiz Exp $
 
 DISTNAME=	pip-1.19
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/pip/
 COMMENT=	Perl Installation Program
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-Archive-Zip>=1.29:../../archivers/p5-Archive-Zip
 DEPENDS+=	p5-CPAN-Inject>=0.07:../../devel/p5-CPAN-Inject

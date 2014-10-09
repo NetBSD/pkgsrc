@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2014/07/02 11:38:28 adam Exp $
+# $NetBSD: Makefile,v 1.19 2014/10/09 14:06:51 wiz Exp $
 
 DISTNAME=	clamav-0.98.4
 CATEGORIES=	security
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.clamav.net/
 COMMENT=	Anti-virus toolkit
 LICENSE=	gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2014/10/09 13:44:32 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2014/10/09 14:05:51 wiz Exp $
 
 DISTNAME=	gzip-1.6
 CATEGORIES=	archivers
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gzip/gzip.html
 COMMENT=	Compress or expand files
 LICENSE=	gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CONFLICTS+=		gzip-base-[0-9]* gzip-info-[0-9]*
 

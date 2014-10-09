@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2014/05/29 23:35:59 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2014/10/09 14:06:20 wiz Exp $
 #
 
 DISTNAME=	IO-String-1.08
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/IO-String/
 COMMENT=	Perl module for I/O on in-core objects like strings and arrays
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
 

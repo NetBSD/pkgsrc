@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2014/02/12 23:18:24 tron Exp $
+# $NetBSD: Makefile,v 1.44 2014/10/09 14:06:46 wiz Exp $
 
 DISTNAME=	openslp-1.2.1
 PKGREVISION=	7
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.openslp.org/
 COMMENT=	Open-source implementation of the Service Location Protocol
 
 # Needs pkgviews-enabled automake
-# PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		automake bison lex pax
 USE_LIBTOOL=		yes

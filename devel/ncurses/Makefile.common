@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2014/09/16 09:45:58 wiz Exp $
+# $NetBSD: Makefile.common,v 1.25 2014/10/09 14:06:10 wiz Exp $
 #
 # used by devel/ncurses/Makefile
 # used by devel/ncursesw/Makefile
@@ -13,8 +13,6 @@ MASTER_SITES=	${MASTER_SITE_GNU:=ncurses/} \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://invisible-island.net/ncurses/ncurses.html
 LICENSE=	mit
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
@@ -31,7 +29,6 @@ CONFIGURE_ARGS+=	--with-manpage-tbl
 CONFIGURE_ARGS+=	--with-default-terminfo-dir=${PREFIX}/${TERMINFODIR}
 CONFIGURE_ARGS+=	--with-terminfo-dirs=${PREFIX}/${TERMINFODIR}
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/ncurses
-
 
 SUBST_CLASSES+=		rpath
 SUBST_FILES.rpath+=	misc/ncurses-config

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/05/29 23:37:18 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2014/10/09 14:06:51 wiz Exp $
 #
 
 DISTNAME=		yup-r1-rel
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Print multiple PostScript/ASCII pages per sheet
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		perl:run
 

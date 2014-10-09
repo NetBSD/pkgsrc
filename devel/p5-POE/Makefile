@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/05/29 23:36:10 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2014/10/09 14:06:23 wiz Exp $
 
 DISTNAME=	POE-1.358
 PKGNAME=	p5-${DISTNAME}
@@ -24,8 +24,6 @@ DEPENDS+=	{perl>=5.8.4,p5-Time-HiRes>=1.59}:../../time/p5-Time-HiRes
 DEPENDS+=	p5-URI>=1.30:../../www/p5-URI
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-IO-Pipely>=0.005:../../devel/p5-IO-Pipely
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 MAKE_PARAMS+=	--default
 PERL5_PACKLIST=	auto/POE/.packlist

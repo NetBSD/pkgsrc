@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2014/08/16 12:14:28 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2014/10/09 14:06:52 wiz Exp $
 
 DISTNAME=	gnupg-2.0.26
 PKGNAME=	${DISTNAME:S/gnupg/gnupg2/}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnupg.org/
 COMMENT=	GNUpg with OpenPGP and S/MIME capabilities
 LICENSE=	gnu-gpl-v3
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 INFO_FILES=		yes
 USE_LIBTOOL=		yes

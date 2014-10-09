@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/09/08 08:21:11 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2014/10/09 14:07:15 wiz Exp $
 
 DISTNAME=		libXv-1.0.10
 CATEGORIES=		x11
@@ -8,8 +8,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Xv Extension library
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	xv.pc.in

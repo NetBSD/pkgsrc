@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/31 11:19:49 asau Exp $
+# $NetBSD: Makefile,v 1.8 2014/10/09 14:06:31 wiz Exp $
 #
 
 DISTNAME=	sysexits-1.1
@@ -8,8 +8,6 @@ DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Substitute <sysexits.h> for OS's lacking it
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 NO_BUILD=	YES
 

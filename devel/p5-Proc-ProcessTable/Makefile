@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/05/29 23:36:14 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2014/10/09 14:06:25 wiz Exp $
 
 DISTNAME=		Proc-ProcessTable-0.50
 PKGNAME=		p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Proc-ProcessTable/
 COMMENT=		Perl extension to access the UNIX process table
 LICENSE=		${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 REPLACE_PERL=		example.pl
 

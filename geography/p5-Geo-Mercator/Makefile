@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/10/09 13:44:46 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2014/10/09 14:06:34 wiz Exp $
 #
 
 DISTNAME=		Geo-Mercator-1.01
@@ -10,8 +10,6 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Geo/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Geo-Mercator/
 COMMENT=		Perl5 module computing Mercator Projection into meters
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Geo/Mercator/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/09/11 22:37:13 asau Exp $
+# $NetBSD: Makefile,v 1.20 2014/10/09 14:05:59 wiz Exp $
 
 DISTNAME=	netio126
 PKGNAME=	netio-1.26
@@ -10,8 +10,6 @@ HOMEPAGE=	http://www.ars.de/ars/ars.nsf/docs/netio
 MAINTAINER=	tron@NetBSD.org
 COMMENT=	Network benchmark for OS/2 2.x, Windows NT/2000 and Unix
 LICENSE=	no-commercial-use
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}
 MAKE_FLAGS+=	CC=${CC:Q} CFLAGS="-DUNIX ${PTHREAD_CFLAGS} ${CFLAGS}" \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/10/09 13:44:41 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2014/10/09 14:06:19 wiz Exp $
 #
 
 DISTNAME=	Hash-Case-1.01
@@ -14,8 +14,6 @@ COMMENT=	Perl module that implements case-insensitive hashes
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Log-Report>=0.26:../../devel/p5-Log-Report
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Hash/Case/.packlist
 

@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2014/03/03 03:30:54 obache Exp $
+# $NetBSD: Makefile,v 1.13 2014/10/09 14:06:50 wiz Exp $
 
 PKGNAME=	pkg_regress-0.2
 CATEGORIES=	pkgtools
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Run pkgsrc infrastructure regression test suite
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# empty

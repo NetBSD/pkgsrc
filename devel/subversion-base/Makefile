@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.95 2014/06/10 14:40:50 joerg Exp $
+# $NetBSD: Makefile,v 1.96 2014/10/09 14:06:31 wiz Exp $
 
 PKGNAME=	subversion-base-${SVNVER}
 COMMENT=	Version control system, base programs and libraries
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 # on at least solaris, configure fails to figure out
 # that you need -lintl

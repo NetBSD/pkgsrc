@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/10/09 13:44:40 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2014/10/09 14:06:18 wiz Exp $
 
 DISTNAME=	File-Slurp-9999.19
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	hiramatu@boreas.dti.ne.jp
 HOMEPAGE=	http://search.cpan.org/dist/File-Slurp/
 COMMENT=	Read/write/append files quickly
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/File/Slurp/.packlist
 

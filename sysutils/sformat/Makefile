@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/04/06 03:45:25 rodent Exp $
+# $NetBSD: Makefile,v 1.17 2014/10/09 14:07:00 wiz Exp $
 #
 
 DISTNAME=	sformat-3.5
@@ -9,8 +9,6 @@ MASTER_SITES=	ftp://ftp.berlios.de/pub/sformat/
 MAINTAINER=	Andreas.Hallmann@tiscali.de
 HOMEPAGE=	http://freshmeat.net/projects/sformat
 COMMENT=	SCSI disk maintainance, formating, and ultimative repair tool
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../mk/bsd.prefs.mk"
 

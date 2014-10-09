@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/05/29 23:37:36 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2014/10/09 14:07:03 wiz Exp $
 #
 
 DISTNAME=		Encode-Detect-1.01
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Encode-Detect/
 COMMENT=		Perl module that detects the encoding of data
 LICENSE=		mpl-1.1
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BUILD_DEPENDS+=		{perl>=5.9.3,p5-ExtUtils-CBuilder-[0-9]*}:../../devel/p5-ExtUtils-CBuilder
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/07/12 11:24:52 obache Exp $
+# $NetBSD: Makefile,v 1.10 2014/10/09 14:07:14 wiz Exp $
 
 DISTNAME=		libXfixes-5.0.1
 CATEGORIES=		x11 devel
@@ -11,8 +11,6 @@ COMMENT=		Xfixes library and extension of X RandR from modular X.org
 LICENSE=		mit
 
 CONFLICTS+=		Xfixes-[0-9]*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

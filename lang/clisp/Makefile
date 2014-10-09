@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2014/05/05 00:48:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.104 2014/10/09 14:06:37 wiz Exp $
 #
 
 DISTNAME=		clisp-2.49
@@ -19,8 +19,6 @@ NOT_FOR_PLATFORM+=	*-*-arm
 
 # makes the bulk build hang under MirBSD
 NOT_FOR_PLATFORM+=	MirBSD-*-*
-
-PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 MAKE_JOBS_SAFE=		no
 

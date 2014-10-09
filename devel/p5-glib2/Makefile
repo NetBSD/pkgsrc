@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2014/05/29 23:36:27 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2014/10/09 14:06:29 wiz Exp $
 
 DISTNAME=	Glib-1.304
 PKGNAME=	p5-${DISTNAME:S/Glib/glib2/}
@@ -11,8 +11,6 @@ HOMEPAGE=	http://gtk2-perl.sourceforge.net/
 #HOMEPAGE=	http://search.cpan.org/dist/Glib/
 COMMENT=	Perl bindings for Glib 2
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-ExtUtils-Depends>=0.300:../../devel/p5-ExtUtils-Depends
 DEPENDS+=	p5-ExtUtils-PkgConfig>=1.00:../../devel/p5-ExtUtils-PkgConfig

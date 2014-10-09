@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2013/07/21 15:58:51 wen Exp $
+# $NetBSD: Makefile,v 1.15 2014/10/09 14:06:00 wiz Exp $
 #
 
 DISTNAME=		hmmer-3.0
@@ -11,8 +11,6 @@ MAINTAINER=		hdp@cs.nmsu.edu
 HOMEPAGE=		http://hmmer.janelia.org/
 COMMENT=		Implementation of profile HMM software for protein sequence analysis
 LICENSE=		gnu-gpl-v3
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 

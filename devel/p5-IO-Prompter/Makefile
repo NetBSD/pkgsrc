@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/09/15 21:16:29 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2014/10/09 14:06:20 wiz Exp $
 #
 
 DISTNAME=	IO-Prompter-0.004011
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/IO-Prompter/
 COMMENT=	Prompt for, read, vet, chomp, and encapsulate input
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_REQD+=	5.10
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/05/29 23:36:10 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2014/10/09 14:06:23 wiz Exp $
 
 DISTNAME=	Object-Realize-Later-0.18
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,6 @@ COMMENT=	Delayed creation of objects
 
 DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils-[0-9]*}:../../devel/p5-Scalar-List-Utils
 BUILD_DEPENDS+=	p5-Test-Pod>=1.00:../../devel/p5-Test-Pod
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=	auto/Object/Realize/Later/.packlist
 

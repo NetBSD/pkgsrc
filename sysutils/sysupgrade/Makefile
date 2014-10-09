@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/02/08 15:59:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2014/10/09 14:07:00 wiz Exp $
 
 DISTNAME=	sysupgrade-1.5
 PKGREVISION=	1
@@ -8,8 +8,6 @@ MASTER_SITES=	https://github.com/jmmv/sysupgrade/releases/download/sysupgrade-1.
 MAINTAINER=	jmmv@NetBSD.org
 COMMENT=	Automate upgrades of NetBSD
 LICENSE=	modified-bsd
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 TEST_TARGET=		check

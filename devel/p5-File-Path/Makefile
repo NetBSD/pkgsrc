@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/10/09 13:44:40 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2014/10/09 14:06:18 wiz Exp $
 
 DISTNAME=	File-Path-2.09
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/File-Path/
 COMMENT=	Perl5 module to create or remove directory trees
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/File/Path/.packlist
 

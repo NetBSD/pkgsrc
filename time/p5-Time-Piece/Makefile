@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/10/09 13:45:02 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2014/10/09 14:07:08 wiz Exp $
 
 DISTNAME=	Time-Piece-1.27
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Time-Piece/
 COMMENT=	Time::Piece - Object Oriented time objects
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=	c
 

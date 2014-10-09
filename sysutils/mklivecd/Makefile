@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2012/10/23 19:51:13 asau Exp $
+# $NetBSD: Makefile,v 1.52 2014/10/09 14:06:58 wiz Exp $
 
 DISTNAME=	mklivecd-0.17
 CATEGORIES=	sysutils
@@ -15,8 +15,6 @@ DEPENDS+=	cdrtools-[0-9]*:../../sysutils/cdrtools
 .if ${MACHINE_ARCH} == "i386"
 DEPENDS+=	grub>=0.97:../../sysutils/grub
 .endif
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64
 

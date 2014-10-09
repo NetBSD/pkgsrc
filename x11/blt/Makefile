@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2014/06/29 06:07:30 dholland Exp $
+# $NetBSD: Makefile,v 1.31 2014/10/09 14:07:13 wiz Exp $
 
 DISTNAME=	BLT2.4z
 PKGNAME=	blt-2.4z
@@ -13,8 +13,6 @@ PATCH_DIST_STRIP=-p1
 MAINTAINER=	brook@nmsu.edu
 HOMEPAGE=	http://blt.sourceforge.net/
 COMMENT=	Extension to Tcl/Tk
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 MAKE_JOBS_SAFE=	no
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2014/09/24 10:58:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.51 2014/10/09 14:05:51 wiz Exp $
 
 DISTNAME=	dar-2.4.13
 CATEGORIES=	archivers sysutils
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dar.linux.free.fr/
 COMMENT=	Disk archiver
 LICENSE=	gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

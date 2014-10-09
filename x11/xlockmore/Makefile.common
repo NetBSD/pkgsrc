@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.71 2014/10/05 16:41:09 wiz Exp $
+# $NetBSD: Makefile.common,v 1.72 2014/10/09 14:07:16 wiz Exp $
 #
 # used by x11/xlockmore/Makefile
 # used by x11/xlockmore-lite/Makefile
@@ -19,8 +19,6 @@ PATCHDIR?=		${.CURDIR}/../xlockmore/patches
 PLIST_SRC?=		${.CURDIR}/../xlockmore/PLIST
 FILESDIR?=		${.CURDIR}/../xlockmore/files
 MESSAGE_SRC?=		${.CURDIR}/../xlockmore/MESSAGE
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../mk/bsd.prefs.mk"
 

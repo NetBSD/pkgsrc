@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2013/03/14 15:11:11 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2014/10/09 14:07:01 wiz Exp $
 
 DISTNAME=	xosview-1.8.3
 PKGREVISION=	2
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xosview/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pogo.org.uk/~mark/xosview/
 COMMENT=	X11 graphical display of OS statistics
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_X11BASE=		YES
 USE_LANGUAGES=		c c++

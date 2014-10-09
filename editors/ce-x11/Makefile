@@ -1,7 +1,5 @@
-# $NetBSD: Makefile,v 1.22 2013/10/10 11:07:34 roy Exp $
+# $NetBSD: Makefile,v 1.23 2014/10/09 14:06:32 wiz Exp $
 #
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../editors/ce/Makefile.common"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2012/10/06 14:11:03 asau Exp $
+# $NetBSD: Makefile,v 1.43 2014/10/09 14:06:36 wiz Exp $
 
 DISTNAME=	libexif-0.6.21
 CATEGORIES=	graphics
@@ -9,8 +9,6 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://libexif.sourceforge.net/
 COMMENT=	EXIF file library
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes

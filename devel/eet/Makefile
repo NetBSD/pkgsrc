@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/02/12 23:17:46 tron Exp $
+# $NetBSD: Makefile,v 1.27 2014/10/09 14:06:08 wiz Exp $
 #
 
 DISTNAME=	eet-1.7.7
@@ -11,8 +11,6 @@ MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.enlightenment.org/
 COMMENT=	Library for speedy storage, retrieval, and compression
 LICENSE=	2-clause-bsd
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	YES

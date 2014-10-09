@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-example,v 1.22 2014/10/09 13:44:46 wiz Exp $
+# $NetBSD: Makefile-example,v 1.23 2014/10/09 14:06:32 wiz Exp $
 
 # First paragraph - distfile and binary package data
 # DISTNAME PKGNAME PKGREVISION CATEGORIES MASTER_SITES
@@ -28,8 +28,6 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-# Fifth paragraph - PKG_INSTALLATION_TYPES
-PKG_INSTALLATION_TYPES=	overwrite pkgviews	# needed for package views-ready packages
 # if the package has to be created with root privileges
 #PKG_DESTDIR_SUPPORT=	destdir
 # if the package has to be installed directly

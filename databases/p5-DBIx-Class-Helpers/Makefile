@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/07/28 00:32:58 wen Exp $
+# $NetBSD: Makefile,v 1.9 2014/10/09 14:06:06 wiz Exp $
 
 DISTNAME=	DBIx-Class-Helpers-2.023003
 PKGNAME=	p5-${DISTNAME}
@@ -24,8 +24,6 @@ BUILD_DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
 BUILD_DEPENDS+=	p5-DateTime-Format-SQLite>=0:../../time/p5-DateTime-Format-SQLite
 BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/DBIx/Class/Helpers/.packlist
 

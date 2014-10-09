@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2012/10/31 11:19:50 asau Exp $
+# $NetBSD: Makefile,v 1.41 2014/10/09 14:06:31 wiz Exp $
 #
 
 DISTNAME=	tla-1.3.5
@@ -13,8 +13,6 @@ COMMENT=	Revision control system ideal for widely distributed development
 DEPENDS+=	patch-[0-9]*:../../devel/patch
 DEPENDS+=	diffutils-[0-9]*:../../devel/diffutils
 DEPENDS+=	gtar-base-[0-9]*:../../archivers/gtar-base
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CHECK_PORTABILITY_SKIP+=	\
 	src/tla/tests/changeset-tests/chmod_random \

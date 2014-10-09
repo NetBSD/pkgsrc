@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/05/29 23:35:18 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/10/09 14:06:02 wiz Exp $
 #
 
 DISTNAME=	App-KGB-1.31
@@ -12,7 +12,6 @@ MAINTAINER=	tonnerre@NetBSD.org
 HOMEPAGE=	https://alioth.debian.org/projects/kgb/
 COMMENT=	Notify about VCS commits on IRC
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_TOOLS+=	perl:run
 
 DEPENDS+=		p5-Class-Accessor-[0-9]*:../../devel/p5-Class-Accessor

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2014/08/19 13:30:53 hauke Exp $
+# $NetBSD: Makefile,v 1.118 2014/10/09 14:06:58 wiz Exp $
 
 DISTNAME=		lsof_4.87
 PKGNAME=		${DISTNAME:S/_/-/}
@@ -43,8 +43,6 @@ REPLACE_PERL+=	scripts/sort_res.perl5 scripts/count_pf.perl5 \
 		scripts/idrlogin.perl scripts/list_fields.perl \
 		scripts/watch_a_file.perl
 USE_TOOLS+=	gtar pax perl:run
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 TEST_DIRS=		tests
 TEST_TARGET=		test

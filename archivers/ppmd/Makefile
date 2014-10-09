@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/09/11 19:47:00 asau Exp $
+# $NetBSD: Makefile,v 1.12 2014/10/09 14:05:54 wiz Exp $
 #
 
 DISTNAME=	ppmdi1
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.rar
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://compression.ru/ds/
 COMMENT=	PPM file compressor
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 MAKE_FILE=	makefile.gmk
 BUILD_TARGET=	ppmd

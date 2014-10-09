@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/10/09 13:44:38 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2014/10/09 14:06:12 wiz Exp $
 
 DISTNAME=	Class-Accessor-Chained-0.01
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Class-Accessor-Chained/
 COMMENT=	Make chained accessors
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 DEPENDS+=	p5-Class-Accessor-[0-9]*:../../devel/p5-Class-Accessor
 

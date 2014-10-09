@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2013/12/23 11:57:03 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2014/10/09 14:06:10 wiz Exp $
 
 DISTNAME=		libstroke-0.5.1
 PKGREVISION=		4
@@ -8,8 +8,6 @@ MASTER_SITES=		http://etla.net/libstroke/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://etla.net/libstroke/
 COMMENT=		Stroke translation library
-
-PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

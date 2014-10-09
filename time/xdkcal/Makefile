@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/23 10:24:12 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2014/10/09 14:07:08 wiz Exp $
 #
 
 DISTNAME=	xdkcal-0.9d
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.shiratori.riec.tohoku.ac.jp/~jir/linux/products/xdkcal/
 MAINTAINER=	mishka@NetBSD.org
 HOMEPAGE=	http://www.shiratori.riec.tohoku.ac.jp/~jir/linux/products/xdkcal/index-e.html
 COMMENT=	X Desktop Calendar
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 

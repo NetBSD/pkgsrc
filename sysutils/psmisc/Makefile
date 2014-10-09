@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2013/05/29 14:57:43 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2014/10/09 14:06:59 wiz Exp $
 
 DISTNAME=		psmisc-20.1
 CATEGORIES=		sysutils
@@ -11,8 +11,6 @@ COMMENT=		Miscellaneous procfs tools: killall, pidof, and pstree
 LICENSE=		gnu-gpl-v2
 
 CONFLICTS+=		pstree<=2.16
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 LIBS+=			${BUILDLINK_LDADD.getopt}

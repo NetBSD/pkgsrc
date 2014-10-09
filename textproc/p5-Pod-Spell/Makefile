@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/05/29 23:37:39 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/10/09 14:07:04 wiz Exp $
 
 DISTNAME=	Pod-Spell-1.04
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Pod-Spell/
 COMMENT=	Formatter for spellchecking Pod
 LICENSE=	artistic-2.0
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	{perl>=5.9.3,p5-Pod-Escapes>=1.01}:../../textproc/p5-Pod-Escapes
 

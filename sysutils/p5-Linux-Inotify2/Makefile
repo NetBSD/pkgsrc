@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/05/29 23:37:30 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2014/10/09 14:06:59 wiz Exp $
 
 DISTNAME=	Linux-Inotify2-1.22
 PKGNAME=	p5-${DISTNAME:S/22/2.2/}
@@ -14,8 +14,6 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-common-sense-[0-9]*:../../devel/p5-common-sense
 
 ONLY_FOR_PLATFORM=	Linux-*-*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Linux/Inotify2/.packlist
 

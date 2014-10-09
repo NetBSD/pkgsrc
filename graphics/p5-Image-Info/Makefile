@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2014/10/09 13:44:47 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2014/10/09 14:06:36 wiz Exp $
 
 DISTNAME=	Image-Info-1.36
 PKGNAME=	p5-${DISTNAME}
@@ -14,8 +14,6 @@ LICENSE=	${PERL5_LICENSE}
 # missing recommends: Image::Xpm, Image::Xbm
 DEPENDS+=	p5-XML-LibXML-[0-9]*:../../textproc/p5-XML-LibXML
 #DEPENDS+=	p5-XML-Simple-[0-9]*:../../textproc/p5-XML-Simple
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Image/Info/.packlist
 

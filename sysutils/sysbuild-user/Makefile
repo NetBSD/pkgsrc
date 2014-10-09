@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/07/12 10:45:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2014/10/09 14:07:00 wiz Exp $
 
 DISTNAME=	sysbuild-user-1.1
 PKGREVISION=	1
@@ -9,8 +9,6 @@ DISTFILES=	# empty
 MAINTAINER=	jmmv@NetBSD.org
 COMMENT=	Runs sysbuild periodically under a dedicated user
 LICENSE=	modified-bsd
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS=		sysbuild>=2.5:../../sysutils/sysbuild
 

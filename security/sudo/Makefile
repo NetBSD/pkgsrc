@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.143 2014/07/28 20:07:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.144 2014/10/09 14:06:56 wiz Exp $
 #
 
 DISTNAME=		sudo-1.7.10p8
@@ -14,8 +14,6 @@ MAINTAINER=		kim@tac.nyc.ny.us
 HOMEPAGE=		http://www.sudo.ws/
 COMMENT=		Allow others to run commands as root
 LICENSE=		isc AND modified-bsd
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 OWN_DIRS+=		${VARBASE}/run

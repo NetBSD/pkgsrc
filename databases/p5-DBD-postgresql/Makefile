@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2014/10/09 13:44:35 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2014/10/09 14:06:05 wiz Exp $
 
 DISTNAME=	DBD-Pg-3.4.2
 PKGNAME=	p5-${DISTNAME:C/-Pg-/-postgresql-/}
@@ -12,8 +12,6 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	{p5-version-[0-9]*,perl>=5.10.0}:../../devel/p5-version
 DEPENDS+=	p5-DBI>=1.614:../../databases/p5-DBI
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=	auto/DBD/Pg/.packlist
 

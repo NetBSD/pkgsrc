@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2014/01/03 14:55:47 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2014/10/09 14:06:30 wiz Exp $
 
 DISTNAME=	patch-2.7.1
 CATEGORIES=	devel
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/patch/patch.html
 COMMENT=	Patch files using diff output
 LICENSE=	gnu-gpl-v3
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		awk

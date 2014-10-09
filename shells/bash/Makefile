@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2014/10/07 00:16:52 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2014/10/09 14:06:56 wiz Exp $
 
 BASH_VERSION=		4.3
 BASH_PATCHLEVEL=	030
@@ -23,8 +23,6 @@ COMMENT=	The GNU Bourne Again Shell
 LICENSE=	gnu-gpl-v3
 
 CONFLICTS=	static-bash-[0-9]*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		makeinfo bison
 USE_PKGLOCALEDIR=	yes

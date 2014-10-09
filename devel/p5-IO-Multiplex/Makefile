@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/10/09 13:44:41 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2014/10/09 14:06:20 wiz Exp $
 #
 
 DISTNAME=		IO-Multiplex-1.13
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/IO-Multiplex/
 COMMENT=		Perl module to manage IO on many file handles
 LICENSE=		${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/IO/Multiplex/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/29 05:06:33 asau Exp $
+# $NetBSD: Makefile,v 1.10 2014/10/09 14:07:14 wiz Exp $
 #
 
 DISTNAME=		libXScrnSaver-1.2.2
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X11 Screen Saver Library
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CONFLICTS+=		scrnsaverproto<1.2.0
 

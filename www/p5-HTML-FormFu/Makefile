@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/05/31 12:56:55 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2014/10/09 14:07:10 wiz Exp $
 
 DISTNAME=		HTML-FormFu-1.00
 PKGNAME=		p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/HTML-FormFu/
 COMMENT=		HTML Form Creation, Rendering and Validation Framework
 LICENSE=		${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-Captcha-reCAPTCHA>=0.93:../../www/p5-Captcha-reCAPTCHA
 DEPENDS+=	p5-Class-Accessor-Chained-[0-9]*:../../devel/p5-Class-Accessor-Chained

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/05/29 23:37:14 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2014/10/09 14:06:49 wiz Exp $
 
 PKGNAME=	lintpkgsrc-4.86
 PKGREVISION=	2
@@ -10,8 +10,6 @@ COMMENT=	Sanity checks on the complete pkgsrc tree
 
 DEPENDS+=	digest>=20010101:../../pkgtools/digest
 CONFLICTS+=	pkglint<4.82
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=	perl:run
 

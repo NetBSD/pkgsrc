@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2012/10/31 11:19:25 asau Exp $
+# $NetBSD: Makefile,v 1.46 2014/10/09 14:06:30 wiz Exp $
 #
 
 DISTNAME=	popt-1.16
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Command line option parsing library
 # mit license with advertising clause
 LICENSE=	mit
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CONFLICTS=		ORBit<=0.5.3
 

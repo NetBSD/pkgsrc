@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2012/09/13 09:13:09 asau Exp $
+# $NetBSD: Makefile,v 1.102 2014/10/09 14:06:41 wiz Exp $
 #
 
 DISTNAME=		mathomatic-16.0.4
@@ -10,8 +10,6 @@ MAINTAINER=		minskim@NetBSD.org
 HOMEPAGE=		http://www.mathomatic.org/
 COMMENT=		Small portable symbolic math program
 LICENSE=		gnu-lgpl-v2.1
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 NO_CONFIGURE=		yes
 MAKE_FILE=		makefile

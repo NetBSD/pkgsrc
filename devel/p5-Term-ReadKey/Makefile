@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/10/09 13:44:44 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2014/10/09 14:06:27 wiz Exp $
 
 VERS=		2.32
 DISTNAME=	TermReadKey-${VERS}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/TermReadKey/
 COMMENT=	Change terminal modes and perform non-blocking reads
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/Term/ReadKey/.packlist

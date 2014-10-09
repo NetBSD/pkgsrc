@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/09/11 19:46:57 asau Exp $
+# $NetBSD: Makefile,v 1.15 2014/10/09 14:05:53 wiz Exp $
 
 DISTNAME=	makeself-2.1.4
 CATEGORIES=	archivers
@@ -8,8 +8,6 @@ EXTRACT_SUFX=	.run
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.megastep.org/makeself/
 COMMENT=	Neat script to make self-extracting archives
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 REPLACE_SH=	makeself.sh
 

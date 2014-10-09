@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/06/29 13:38:53 schwarz Exp $
+# $NetBSD: Makefile,v 1.16 2014/10/09 14:05:52 wiz Exp $
 
 DISTNAME=	lzo-2.08
 CATEGORIES=	archivers
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.oberhumer.com/opensource/lzo/
 COMMENT=	Portable lossless data compression library
 LICENSE=	gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/05/29 23:36:13 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2014/10/09 14:06:25 wiz Exp $
 
 DISTNAME=		Probe-Perl-0.02
 PKGNAME=		p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Probe-Perl/
 COMMENT=		Information about the currently running perl
 LICENSE=		${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Probe/Perl/.packlist
 

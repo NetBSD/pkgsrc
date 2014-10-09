@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2014/10/01 11:45:00 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2014/10/09 14:06:30 wiz Exp $
 
 DISTNAME=	pcre-8.36
 CATEGORIES=	devel
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pcre.org/
 COMMENT=	Perl Compatible Regular Expressions library
 LICENSE=	modified-bsd
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

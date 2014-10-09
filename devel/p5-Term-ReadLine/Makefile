@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2014/10/09 13:44:45 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2014/10/09 14:06:27 wiz Exp $
 
 DISTNAME=	Term-ReadLine-Gnu-1.24
 PKGNAME=	p5-${DISTNAME:S/-Gnu//}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Term-ReadLine-Gnu/
 COMMENT=	Interface to the GNU Readline Library
 LICENSE=	${PERL5_LICENSE} # see README
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Term/ReadLine/Gnu/.packlist
 

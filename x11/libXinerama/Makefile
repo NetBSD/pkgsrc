@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/04/22 11:27:35 obache Exp $
+# $NetBSD: Makefile,v 1.13 2014/10/09 14:07:14 wiz Exp $
 
 DISTNAME=	libXinerama-1.1.3
 CATEGORIES=	x11
@@ -8,8 +8,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	X PanoramiX extension library
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes

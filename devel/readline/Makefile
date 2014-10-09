@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2014/08/13 09:28:37 markd Exp $
+# $NetBSD: Makefile,v 1.60 2014/10/09 14:06:31 wiz Exp $
 
 READLINE_VERSION=	6.3
 
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html
 COMMENT=	GNU library that can recall and edit previous input
 LICENSE=	gnu-gpl-v3
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

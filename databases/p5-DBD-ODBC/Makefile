@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/05/29 23:35:26 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2014/10/09 14:06:05 wiz Exp $
 
 DISTNAME=	DBD-ODBC-1.31
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/DBD-ODBC/
 COMMENT=	Perl DBI/DBD driver for ODBC
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "options.mk"
 

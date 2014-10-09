@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/09/11 19:46:58 asau Exp $
+# $NetBSD: Makefile,v 1.14 2014/10/09 14:05:53 wiz Exp $
 #
 
 DISTNAME=		mscompress-0.3
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		ftp://ftp.penguin.cz/pub/users/mhi/mscompress/
 COMMENT=		Microsoft "compress.exe/expand.exe" compatible (de)compressor
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 

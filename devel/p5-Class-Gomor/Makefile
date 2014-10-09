@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/05/29 23:35:43 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2014/10/09 14:06:13 wiz Exp $
 
 DISTNAME=	Class-Gomor-1.02
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Class-Gomor/
 COMMENT=	Another class and object builder
 LICENSE=	artistic
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Class/Gomor/.packlist
 

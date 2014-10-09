@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.60 2013/02/01 08:02:38 wiz Exp $
+# $NetBSD: Makefile.common,v 1.61 2014/10/09 14:07:12 wiz Exp $
 #
 # used by www/w3m/Makefile
 # used by www/w3m-img/Makefile
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=w3m/}
 
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://w3m.sourceforge.net/
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 MAKE_JOBS_SAFE=		no
 

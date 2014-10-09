@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2014/10/09 13:45:02 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2014/10/09 14:07:08 wiz Exp $
 
 DISTNAME=		Time-HiRes-1.9726
 PKGNAME=		p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=		bad@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Time-HiRes/
 COMMENT=		Perl5 module for high resolution time, sleep, and alarm
 LICENSE=		${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/Time/HiRes/.packlist

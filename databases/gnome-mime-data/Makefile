@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2014/05/29 23:35:24 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2014/10/09 14:06:05 wiz Exp $
 #
 
 DISTNAME=		gnome-mime-data-2.18.0
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		MIME and Application database for GNOME2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CONFLICTS=		gnome-vfs<=1.0.3
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/31 11:19:49 asau Exp $
+# $NetBSD: Makefile,v 1.10 2014/10/09 14:06:31 wiz Exp $
 #
 
 DISTNAME=		syncdir-1.0
@@ -9,8 +9,6 @@ MASTER_SITES=		${HOMEPAGE}
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://untroubled.org/syncdir/
 COMMENT=		Implementation of open, link, rename, and unlink
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 

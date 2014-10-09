@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/23 17:18:30 asau Exp $
+# $NetBSD: Makefile,v 1.10 2014/10/09 14:06:45 wiz Exp $
 #
 
 DISTNAME=	ish-v${VERSION}
@@ -13,8 +13,6 @@ HOMEPAGE=	http://icmpshell.sourceforge.net/
 COMMENT=	Allow remote shell using ICMP
 
 VERSION=	0.2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=	gmake
 NO_CONFIGURE=	yes

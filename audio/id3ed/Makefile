@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2013/07/15 02:02:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.34 2014/10/09 14:05:56 wiz Exp $
 #
 
 DISTNAME=	id3ed-1.10.4
@@ -9,8 +9,6 @@ MASTER_SITES=	http://users.dakotacom.net/~donut/programs/id3ed/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://users.dakotacom.net/~donut/programs/id3ed.html
 COMMENT=	Edit id3 description tags in mpeg3 files
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

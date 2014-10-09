@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/10/09 13:44:40 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2014/10/09 14:06:17 wiz Exp $
 
 DISTNAME=	File-Find-Rule-0.33
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	hiramatu@boreas.dti.ne.jp
 HOMEPAGE=	http://search.cpan.org/dist/File-Find-Rule/
 COMMENT=	Alternative interface to File::Find
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-Number-Compare>=0.01:../../math/p5-Number-Compare
 DEPENDS+=	p5-Text-Glob>=0.07:../../textproc/p5-Text-Glob

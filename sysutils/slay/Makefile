@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/23 19:51:23 asau Exp $
+# $NetBSD: Makefile,v 1.5 2014/10/09 14:07:00 wiz Exp $
 #
 
 DISTNAME=	Slay.1.2
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE:=system/admin/idle/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	Unknown
 COMMENT=	Kills a login shell and process(es) of a user
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 NO_BUILD=		yes
 INSTALLATION_DIRS=	bin

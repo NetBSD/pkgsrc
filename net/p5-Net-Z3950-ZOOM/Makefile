@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/10/07 16:47:33 adam Exp $
+# $NetBSD: Makefile,v 1.30 2014/10/09 14:06:47 wiz Exp $
 
 DISTNAME=		Net-Z3950-ZOOM-1.28
 PKGNAME=		p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Net-Z3950-ZOOM/
 COMMENT=		Perl extension for talking to Z39.50 servers
 LICENSE=		${PERL5_LICENSE}
-
-#PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=     p5-Event>=1.06:../../devel/p5-Event
 DEPENDS+=     p5-MARC-Record>=2.0.0:../../databases/p5-MARC-Record

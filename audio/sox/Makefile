@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2013/10/02 14:21:27 drochner Exp $
+# $NetBSD: Makefile,v 1.60 2014/10/09 14:05:58 wiz Exp $
 
 DISTNAME=	sox-14.4.1
 CATEGORIES=	audio
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sox.sourceforge.net/
 COMMENT=	SOund eXchange - universal sound sample translator
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 #USE_CMAKE=		yes
 USE_LANGUAGES=		c c++

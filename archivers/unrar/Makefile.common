@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2013/09/01 08:28:08 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2014/10/09 14:05:54 wiz Exp $
 #
 # used by archivers/libunrar/Makefile
 # used by archivers/unrar/Makefile
@@ -17,8 +17,6 @@ LICENSE=	unrar-license
 # Date: Wed, 10 Sep 2008 18:27:35 +0600
 # From: Eugene Roshal <roshal@rarlab.com>
 # You can redistribute either original or modified binaries or sources.
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 NO_CONFIGURE=	YES
 USE_LANGUAGES=	c++

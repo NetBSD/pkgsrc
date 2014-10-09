@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/23 19:51:10 asau Exp $
+# $NetBSD: Makefile,v 1.17 2014/10/09 14:06:58 wiz Exp $
 #
 
 DISTNAME=	libirman-0.4.1c
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tbz
 MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/libirman/
 COMMENT=	Programming library for Irman - infrared control
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}

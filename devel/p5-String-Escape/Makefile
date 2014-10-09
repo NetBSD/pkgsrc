@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/05/29 23:36:17 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2014/10/09 14:06:27 wiz Exp $
 
 DISTNAME=	String-Escape-2010.002
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ HOMEPAGE=	http://search.cpan.org/dist/String-Escape/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Registry of string functions, including backslash escapes
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/String/Escape/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2014/10/09 13:44:41 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2014/10/09 14:06:18 wiz Exp $
 
 DISTNAME=	File-Temp-0.2304
 PKGNAME=	p5-${DISTNAME:S/04/.04/}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/File-Temp/
 COMMENT=	Provides functions for generating temporary files
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/File/Temp/.packlist
 

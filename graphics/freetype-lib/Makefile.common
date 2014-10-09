@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2011/04/20 12:17:02 obache Exp $
+# $NetBSD: Makefile.common,v 1.37 2014/10/09 14:06:35 wiz Exp $
 #
 # used by graphics/freetype-lib/Makefile
 # used by graphics/freetype-utils/Makefile
@@ -12,8 +12,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://freetype.sourceforge.net/
 
 CONFLICTS=		freetype-1.[12]*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/.orig//:S/_/-/}
 USE_TOOLS+=		msgfmt

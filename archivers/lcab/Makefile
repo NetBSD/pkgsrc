@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/09/11 19:46:56 asau Exp $
+# $NetBSD: Makefile,v 1.14 2014/10/09 14:05:52 wiz Exp $
 #
 
 DISTNAME=		lcab-1.0b12
@@ -8,8 +8,6 @@ MASTER_SITES=		${MASTER_SITE_FREEBSD}
 MAINTAINER=		plunky@rya-online.net
 HOMEPAGE=		http://ohnopub.net/~ohnobinki/lcab
 COMMENT=		Microsoft cabinet (.CAB) file creator
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 

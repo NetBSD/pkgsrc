@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/10/09 13:44:38 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2014/10/09 14:06:12 wiz Exp $
 
 DISTNAME=	Class-ErrorHandler-0.03
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Class-ErrorHandler/
 COMMENT=	Perl base class for error handling
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Class/ErrorHandler/.packlist

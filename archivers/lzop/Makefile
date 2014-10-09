@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/09/11 19:46:57 asau Exp $
+# $NetBSD: Makefile,v 1.20 2014/10/09 14:05:53 wiz Exp $
 
 DISTNAME=	lzop-1.03
 CATEGORIES=	archivers
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.lzop.org/
 COMMENT=	Fast file compressor similar to gzip, using the LZO library
 LICENSE=	gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 

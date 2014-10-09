@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/10/09 13:44:52 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/09 14:06:47 wiz Exp $
 
 DISTNAME=	Net-SSH-Expect-1.09
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/libnet/
 COMMENT=	Perl5 module implementing expect-like functions over SSH
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Net/SSH/Expect/.packlist
 

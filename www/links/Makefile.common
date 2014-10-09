@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.59 2013/10/06 16:49:51 wiz Exp $
+# $NetBSD: Makefile.common,v 1.60 2014/10/09 14:07:09 wiz Exp $
 #
 # used by www/links/Makefile
 # used by www/links-gui/Makefile
@@ -11,8 +11,6 @@ EXTRACT_SUFX=  .tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://links.twibright.com/
 LICENSE=	gnu-gpl-v2 # including special OpenSSL paragraph
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
 

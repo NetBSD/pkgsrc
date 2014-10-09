@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2014/10/09 13:45:02 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2014/10/09 14:07:08 wiz Exp $
 #
 
 DISTNAME=	TimeDate-2.30
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Perl5 TimeDate distribution
 HOMEPAGE=	http://search.cpan.org/dist/TimeDate/
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Date/Parse/.packlist

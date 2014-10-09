@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/05/31 02:16:18 obache Exp $
+# $NetBSD: Makefile,v 1.4 2014/10/09 14:06:29 wiz Exp $
 
 DISTNAME=	experimental-0.007
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/experimental/
 COMMENT=	Replace functions with ones that succeed or die with lexical scope
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/experimental/.packlist
 PERL5_MODULE_TYPE=	Module::Build::Tiny

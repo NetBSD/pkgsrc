@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2014/10/09 13:44:56 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2014/10/09 14:06:55 wiz Exp $
 
 DISTNAME=	Net-SSLeay-1.66
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Net-SSLeay/
 COMMENT=	Perl5 module for using OpenSSL
 LICENSE=	openssl
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn

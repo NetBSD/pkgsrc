@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/01/21 13:52:36 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2014/10/09 14:06:08 wiz Exp $
 
 DISTNAME=	ccache-3.1.9
 CATEGORIES=	devel
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ccache.samba.org/
 COMMENT=	Cache for C/C++ compilers
 LICENSE=	gnu-gpl-v3 AND modified-bsd AND public-domain AND zlib
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 

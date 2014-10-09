@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/05/29 23:36:13 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/09 14:06:25 wiz Exp $
 
 DISTNAME=	PerlIO-utf8_strict-0.004
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,6 @@ HOMEPAGE=	http://search.cpan.org/dist/PerlIO-utf8_strict/
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES+=	c
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/PerlIO/utf8_strict/.packlist

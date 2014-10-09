@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/08 09:21:12 asau Exp $
+# $NetBSD: Makefile,v 1.7 2014/10/09 14:06:43 wiz Exp $
 #
 
 DISTNAME=		regionset-0.1
@@ -7,8 +7,6 @@ MASTER_SITES=		http://linvdr.org/download/regionset/
 
 HOMEPAGE=		http://linvdr.org/download/regionset/
 COMMENT=		Read and modify DVD drive region code
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 ONLY_FOR_PLATFORM+=	NetBSD-*-* OpenBSD-*-* Linux-*-* DragonFly-*-*
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2014/05/29 23:36:37 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2014/10/09 14:06:35 wiz Exp $
 
 DISTNAME=	libgd-2.1.0
 PKGNAME=	${DISTNAME:S/libgd/gd/}
@@ -12,8 +12,6 @@ HOMEPAGE=	http://libgd.bitbucket.org/
 COMMENT=	Graphics library for the dynamic creation of images
 
 .include "options.mk"
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		perl:run

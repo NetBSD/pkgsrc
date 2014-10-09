@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/10/09 13:44:32 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2014/10/09 14:05:53 wiz Exp $
 
 DISTNAME=	Archive-Any-0.0941
 PKGNAME=	p5-${DISTNAME}
@@ -19,8 +19,6 @@ DEPENDS+=	p5-MIME-Types>=0:../../mail/p5-MIME-Types
 DEPENDS+=	p5-Module-Find>=0:../../devel/p5-Module-Find
 
 BUILD_DEPENDS+=	p5-Test-Warn>0:../../devel/p5-Test-Warn
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Archive/Any/.packlist
 PERL5_MODULE_TYPE=	Module::Build

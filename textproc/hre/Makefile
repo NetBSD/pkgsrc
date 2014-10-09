@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/25 06:55:54 asau Exp $
+# $NetBSD: Makefile,v 1.8 2014/10/09 14:07:02 wiz Exp $
 #
 
 DISTNAME=	hre-0.9.8a
@@ -9,8 +9,6 @@ MASTER_SITES=	http://kldp.net/download.php/1489/
 MAINTAINER=	pyrasis@chol.com
 HOMEPAGE=	http://hre.kldp.net/
 COMMENT=	Hangeul Regular Expression Library
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

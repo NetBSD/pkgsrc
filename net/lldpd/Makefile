@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/10/07 14:35:16 mef Exp $
+# $NetBSD: Makefile,v 1.10 2014/10/09 14:06:45 wiz Exp $
 
 DISTNAME=		lldpd-0.7.10
 CATEGORIES=		net
@@ -11,8 +11,6 @@ LICENSE=		isc
 # `lldpcli` will be linked to GNU Readline (which is GPL licensed)
 # if available. To avoid this, use `--without-readline` as a configure
 # option.
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 # interfaces-bsd.c:45:34: error: net/agr/if_agrioctl.h: No such file or directory
 NOT_FOR_PLATFORM=	NetBSD-5*-*

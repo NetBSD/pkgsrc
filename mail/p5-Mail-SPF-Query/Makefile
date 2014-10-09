@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/10/09 13:44:48 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2014/10/09 14:06:39 wiz Exp $
 
 DISTNAME=		Mail-SPF-Query-1.999
 PKGNAME=		p5-${DISTNAME}
@@ -15,8 +15,6 @@ DEPENDS+=		p5-Net-CIDR-Lite>=0.15:../../net/p5-Net-CIDR-Lite
 DEPENDS+=		p5-Sys-Hostname-Long-[0-9]*:../../sysutils/p5-Sys-Hostname-Long
 # needed URI::Escape >= 3.20 until 1.991. We keep the requirement.
 DEPENDS+=		p5-URI>=1.18:../../www/p5-URI
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Mail/SPF/Query/.packlist
 USE_LANGUAGES=		# empty

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/09/11 19:46:59 asau Exp $
+# $NetBSD: Makefile,v 1.5 2014/10/09 14:05:53 wiz Exp $
 
 DISTNAME=	prc
 PKGNAME=	pdbar-0.5.1
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.djw.org/product/palm/par/
 COMMENT=	Palm database archiver
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 NO_CONFIGURE=	yes
 

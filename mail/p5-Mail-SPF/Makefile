@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/05/29 23:36:50 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2014/10/09 14:06:40 wiz Exp $
 #
 
 DISTNAME=	Mail-SPF-v2.007
@@ -11,8 +11,6 @@ MAINTAINER=	aniou@smutek.pl
 HOMEPAGE=	http://search.cpan.org/dist/Mail-SPF/
 COMMENT=	Perl implementation of the Sender Policy Framework
 LICENSE=	modified-bsd
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 # sbin/spfd
 CONFLICTS+=	libspf2-[0-9]*

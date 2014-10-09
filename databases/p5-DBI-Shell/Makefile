@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/10/09 13:44:35 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2014/10/09 14:06:06 wiz Exp $
 
 DISTNAME=	DBI-Shell-11.95
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,6 @@ COMMENT=	Interactive command Shell for the Perl DBI
 
 DEPENDS+=	p5-IO-Tee>=0.64:../../devel/p5-IO-Tee
 DEPENDS+=	p5-Text-Reform>=1.11:../../textproc/p5-Text-Reform
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/DBI/Shell/.packlist
 

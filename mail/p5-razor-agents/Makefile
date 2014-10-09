@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2014/10/09 13:44:49 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2014/10/09 14:06:40 wiz Exp $
 
 DISTNAME=	razor-agents-2.85
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://razor.sourceforge.net/
 COMMENT=	Distributed and collaborative spam detection network
 LICENSE=	artistic-2.0
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 # MIME::QuotedPrint, Getopt::Long, File::Copy needed from the perl package
 DEPENDS+=	{perl>=5.7.3,p5-Time-HiRes-[0-9]*}:../../time/p5-Time-HiRes

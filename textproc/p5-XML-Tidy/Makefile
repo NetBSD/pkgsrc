@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/07/16 08:41:33 wen Exp $
+# $NetBSD: Makefile,v 1.10 2014/10/09 14:07:06 wiz Exp $
 #
 
 DISTNAME=	XML-Tidy-1.12.B55J2qn
@@ -14,8 +14,6 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=    	p5-XML-XPath-[0-9]*:../../textproc/p5-XML-XPath
 DEPENDS+=    	p5-Math-BaseCnv-[0-9]*:../../math/p5-Math-BaseCnv
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/XML/Tidy/.packlist
 

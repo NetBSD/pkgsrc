@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2014/08/17 09:24:47 wiz Exp $
+# $NetBSD: Makefile,v 1.117 2014/10/09 14:06:07 wiz Exp $
 
 DISTNAME=	SDL-1.2.15
 PKGREVISION=	12
@@ -15,7 +15,6 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
 CPPFLAGS+=		-DX11BASE="\"${X11BASE}\""

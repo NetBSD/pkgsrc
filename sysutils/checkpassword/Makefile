@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/23 19:50:55 asau Exp $
+# $NetBSD: Makefile,v 1.16 2014/10/09 14:06:57 wiz Exp $
 #
 
 DISTNAME=		checkpassword-0.90
@@ -10,8 +10,6 @@ HOMEPAGE=		http://cr.yp.to/checkpwd.html
 COMMENT=		Simple, uniform password-checking interface to all root applications
 
 DJB_RESTRICTED=		YES
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 INSTALLATION_DIRS=	bin
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2014/10/05 16:41:09 wiz Exp $
+# $NetBSD: Makefile.common,v 1.24 2014/10/09 14:07:09 wiz Exp $
 #
 # used by wm/wmx/Makefile
 # used by wm/wmx-gnome/Makefile
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.all-day-breakfast.com/wmx/
 
 CONFLICTS+=	wmx-[0-9]* wmx-gnome-[0-9]*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
 USE_X11BASE=		yes

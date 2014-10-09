@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/05/29 23:36:01 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2014/10/09 14:06:22 wiz Exp $
 #
 
 DISTNAME=	Log-Any-Adapter-Dispatch-0.06
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Log-Any-Adapter/
 COMMENT=	Log::Any adapter uses Log::Dispatch for logging
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-Log-Any-Adapter-[0-9]*:../../devel/p5-Log-Any-Adapter
 DEPENDS+=	p5-Log-Dispatch>=2.26:../../devel/p5-Log-Dispatch

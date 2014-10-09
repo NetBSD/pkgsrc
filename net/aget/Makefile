@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/04/06 21:07:34 rodent Exp $
+# $NetBSD: Makefile,v 1.14 2014/10/09 14:06:44 wiz Exp $
 #
 
 DISTNAME=	aget-0.4
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.enderunix.org/aget/
 MAINTAINER=	eeg@e3labs.ath.cx
 HOMEPAGE=	http://www.enderunix.org/aget/
 COMMENT=	Multithreaded HTTP download accelerator
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 NO_CONFIGURE=	yes
 

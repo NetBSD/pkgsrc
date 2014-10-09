@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/04/17 20:17:52 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2014/10/09 14:06:08 wiz Exp $
 
 DISTNAME=	elftoolchain-0.5.1
 PKGREVISION=	1
@@ -12,8 +12,6 @@ COMMENT=	Compilation tools (nm, ar, as, ld, etc.) for the ELF object format
 LICENSE=	modified-bsd
 
 CONFLICTS=	libelf-[0-9]*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 MAKE_JOBS_SAFE=	no
 

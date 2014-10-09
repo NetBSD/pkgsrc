@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/12/13 13:27:13 wen Exp $
+# $NetBSD: Makefile,v 1.14 2014/10/09 14:06:00 wiz Exp $
 
 DISTNAME=	clustalw-2.1
 CATEGORIES=	biology
@@ -9,8 +9,6 @@ MAINTAINER=	babafou@babafou.eu.org
 HOMEPAGE=	http://bips.u-strasbg.fr/fr/Documentation/ClustalW/
 COMMENT=	General purpose multiple alignment program for DNA or proteins
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/10/07 16:47:26 adam Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/09 14:06:34 wiz Exp $
 
 DISTNAME=	SDL2_image-2.0.0
 PKGREVISION=	1
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.libsdl.org/projects/SDL_image/
 COMMENT=	Load images as SDL surfaces
 LICENSE=	zlib
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes

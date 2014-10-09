@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/08 09:57:20 asau Exp $
+# $NetBSD: Makefile,v 1.9 2014/10/09 14:06:42 wiz Exp $
 #
 
 DISTNAME=	dvorakng-0.6.0rc1
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	US English Dvorak keyboard tutor
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_NCURSES=		# strange keyboard handling
 

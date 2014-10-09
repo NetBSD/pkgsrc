@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/05/29 23:36:14 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2014/10/09 14:06:25 wiz Exp $
 #
 
 DISTNAME=		Proc-PID-File-1.27
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Proc-PID-File/
 COMMENT=		Perl module to manage process-ID files
 LICENSE=		gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Proc/PID/File/.packlist
 

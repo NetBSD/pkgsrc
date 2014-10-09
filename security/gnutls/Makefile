@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.147 2014/08/30 12:45:11 adam Exp $
+# $NetBSD: Makefile,v 1.148 2014/10/09 14:06:52 wiz Exp $
 
 DISTNAME=	gnutls-3.2.17
 CATEGORIES=	security devel
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnutls.org/
 COMMENT=	GNU Transport Layer Security library
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2.1
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

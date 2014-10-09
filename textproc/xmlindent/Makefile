@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/25 06:57:08 asau Exp $
+# $NetBSD: Makefile,v 1.11 2014/10/09 14:07:07 wiz Exp $
 #
 
 DISTNAME=	xmlindent-0.2.16
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.cs.helsinki.fi/u/penberg/xmlindent/src/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cs.helsinki.fi/u/penberg/xmlindent/src/
 COMMENT=	XML stream reformatter written in ANSI C
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=	lex
 

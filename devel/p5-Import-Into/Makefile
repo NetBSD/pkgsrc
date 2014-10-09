@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/07/17 05:28:40 wen Exp $
+# $NetBSD: Makefile,v 1.7 2014/10/09 14:06:21 wiz Exp $
 #
 
 DISTNAME=	Import-Into-1.002004
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Import-Into/
 COMMENT=	Perl5 module to import packages into other packages
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=	auto/Import/Into/.packlist
 

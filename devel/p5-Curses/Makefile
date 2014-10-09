@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2014/10/09 13:44:39 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2014/10/09 14:06:14 wiz Exp $
 
 DISTNAME=	Curses-1.29
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,6 @@ HOMEPAGE=	http://search.cpan.org/dist/Curses/
 COMMENT=	Perl5 module for terminal screen handling and optimization
 # really it's gnu-gpl-v1+ OR artistic-1.0, but currently we don't have gplv1
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Curses/.packlist
 

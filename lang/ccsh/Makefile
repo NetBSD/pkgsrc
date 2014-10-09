@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/02 20:11:36 asau Exp $
+# $NetBSD: Makefile,v 1.9 2014/10/09 14:06:37 wiz Exp $
 #
 
 DISTNAME=		ccsh-0.0.4
@@ -9,8 +9,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ccsh/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ccsh.sourceforge.net/
 COMMENT=		C-like syntax scripting
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		gmake
 

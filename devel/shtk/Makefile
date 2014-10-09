@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/08/14 13:48:21 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2014/10/09 14:06:31 wiz Exp $
 
 DISTNAME=	shtk-1.4
 CATEGORIES=	devel
@@ -7,8 +7,6 @@ MASTER_SITES=	https://github.com/jmmv/shtk/releases/download/${DISTNAME}/
 MAINTAINER=	jmmv@NetBSD.org
 COMMENT=	Application toolkit for POSIX-compliant shell scripts
 LICENSE=	modified-bsd
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 TEST_TARGET=		check

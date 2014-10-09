@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/02/12 23:18:35 tron Exp $
+# $NetBSD: Makefile,v 1.14 2014/10/09 14:06:55 wiz Exp $
 #
 
 DISTNAME=		pwsafe-0.2.0
@@ -14,8 +14,6 @@ COMMENT=		CLI based PasswordSafe compatible password manager
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "options.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2014/07/18 10:29:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.131 2014/10/09 14:07:02 wiz Exp $
 
 DISTNAME=	libxml2-2.9.1
 PKGREVISION=	2
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xmlsoft.org/
 COMMENT=	XML parser library from the GNOME project
 LICENSE=	modified-bsd
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_FEATURES=		glob
 USE_LIBTOOL=		yes

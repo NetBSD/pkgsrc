@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2014/10/09 13:44:35 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2014/10/09 14:06:06 wiz Exp $
 
 DISTNAME=	DBIx-SearchBuilder-1.65
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/DBIx-SearchBuilder/
 COMMENT=	Extension for easy SQL SELECT Statement generation
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BUILD_DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
 

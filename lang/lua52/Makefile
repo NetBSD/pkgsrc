@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/06/09 00:46:57 obache Exp $
+# $NetBSD: Makefile,v 1.6 2014/10/09 14:06:38 wiz Exp $
 
 DISTNAME=	lua-${LUA_VERSION}
 PKGNAME=	lua52-${LUA_VERSION}
@@ -14,7 +14,6 @@ LICENSE=	mit
 
 .include "../../lang/lua52/version.mk"
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 CONFLICTS+=	lua-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"

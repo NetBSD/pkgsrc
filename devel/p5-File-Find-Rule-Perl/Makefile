@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/05/29 23:35:54 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2014/10/09 14:06:17 wiz Exp $
 
 DISTNAME=	File-Find-Rule-Perl-1.13
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/File-Find-Rule-Perl/
 COMMENT=	Common File::Find::Rule rules for searching for Perl things
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-File-Find-Rule>=0.20:../../devel/p5-File-Find-Rule
 DEPENDS+=	p5-Params-Util>=0.38:../../devel/p5-Params-Util

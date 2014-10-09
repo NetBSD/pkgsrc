@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/10/09 13:45:04 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/10/09 14:07:11 wiz Exp $
 #
 
 DISTNAME=	HTTP-Response-Encoding-0.06
@@ -13,8 +13,6 @@ COMMENT=	Perl5 module to add encoding() to HTTP::Response
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-libwww>=0:../../www/p5-libwww
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/HTTP/Response/Encoding/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2014/07/18 19:50:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2014/10/09 14:06:30 wiz Exp $
 
 DISTNAME=	pkg-config-0.28
 CATEGORIES=	devel
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pkgconfig.freedesktop.org/
 COMMENT=	System for managing library compile/link flags
 LICENSE=	gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

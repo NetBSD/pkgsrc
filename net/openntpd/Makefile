@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2014/02/12 23:18:24 tron Exp $
+# $NetBSD: Makefile,v 1.34 2014/10/09 14:06:45 wiz Exp $
 
 DISTNAME=		openntpd-3.9p1
 PKGREVISION=		5
@@ -11,8 +11,6 @@ MASTER_SITES=		ftp://ftp.openbsd.org/pub/OpenBSD/OpenNTPD/ \
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.openntpd.org/
 COMMENT=		Free implementation of the Network Time Protocol
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CONFLICTS+=		ntp-[0-9]*
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/05/29 23:35:58 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2014/10/09 14:06:20 wiz Exp $
 
 DISTNAME=	IO-Digest-0.11
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/IO-Digest/
 COMMENT=	Perl module to calculate digests while reading or writing
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-PerlIO-via-dynamic-[0-9]*:../../devel/p5-PerlIO-via-dynamic
 

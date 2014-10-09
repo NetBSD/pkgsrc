@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2014/05/29 23:38:18 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2014/10/09 14:07:13 wiz Exp $
 #
 
 DISTNAME=	validate-1.2.2
@@ -11,8 +11,6 @@ DISTFILES=	${DISTNAME} wdg-sgml-lib-1.1.4.tar.gz README
 MAINTAINER=	norm@sandbox.org.uk
 HOMEPAGE=	http://www.htmlhelp.com/tools/validator/offline/
 COMMENT=	HTML validator from the Web Design Group
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	lq-sp>=1.3.4.5:../../textproc/lq-sp
 
