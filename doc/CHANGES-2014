@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3820 2014/10/08 22:20:34 prlw1 Exp $
+$NetBSD: CHANGES-2014,v 1.3821 2014/10/09 00:57:29 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4820,3 +4820,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated games/puzzles to 20141008.r10282 [wiz 2014-10-08]
 	Updated devel/glibmm to 2.42.0 [wiz 2014-10-08]
 	Updated textproc/yelp-xsl to 3.14.0 [prlw1 2014-10-08]
+	Updated devel/guile-www to 2.38 [gdt 2014-10-09]
