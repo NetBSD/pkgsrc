@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/05/29 23:35:53 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/10/09 14:06:16 wiz Exp $
 
 DISTNAME=	ExtUtils-ModuleMaker-TT-0.93
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/ExtUtils-ModuleMaker-TT/
 COMMENT=	Makes skeleton modules with Template Toolkit templates
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-Config-Find>=0.22:../../devel/p5-Config-Find
 DEPENDS+=	p5-Config-General>=2.29:../../devel/p5-Config-General

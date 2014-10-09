@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/08/17 07:47:49 wen Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/09 14:06:28 wiz Exp $
 
 DISTNAME=		Test-CleanNamespaces-0.15
 PKGNAME=		p5-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=		wen@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Test-CleanNamespaces/
 COMMENT=		Check for uncleaned imports
 LICENSE=		${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-File-Find-Rule-Perl>=0:../../devel/p5-File-Find-Rule-Perl
 DEPENDS+=	p5-namespace-clean>=0:../../devel/p5-namespace-clean

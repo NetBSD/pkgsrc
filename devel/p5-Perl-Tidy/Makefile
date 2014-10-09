@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2014/10/09 13:44:44 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2014/10/09 14:06:24 wiz Exp $
 #
 
 DISTNAME=	Perl-Tidy-20140711
@@ -11,8 +11,6 @@ HOMEPAGE=	http://perltidy.sourceforge.net/
 #HOMEPAGE=	http://search.cpan.org/dist/Perl-Tidy/
 COMMENT=	Parses and beautifies perl source
 LICENSE=	gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=	auto/Perl/Tidy/.packlist
 

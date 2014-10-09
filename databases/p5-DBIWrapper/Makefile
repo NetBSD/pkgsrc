@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2014/10/09 13:44:35 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2014/10/09 14:06:06 wiz Exp $
 #
 
 DISTNAME=	libdbiwrapper-perl-${VERSION}
@@ -14,8 +14,6 @@ COMMENT=	Perl extension for generic DBI database access
 DEPENDS+=	p5-XML-LibXML>=1.57:../../textproc/p5-XML-LibXML
 
 VERSION=	0.20
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/DBIWrapper/.packlist
 

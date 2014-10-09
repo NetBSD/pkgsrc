@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/10/09 13:44:44 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2014/10/09 14:06:25 wiz Exp $
 #
 
 DISTNAME=	Proc-Daemon-0.14
@@ -13,8 +13,6 @@ COMMENT=	Provide capability for a Perl program to run as a daemon
 LICENSE=	${PERL5_LICENSE}
 
 BUILD_DEPENDS=	p5-Proc-ProcessTable>=0:../../devel/p5-Proc-ProcessTable
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Proc/Daemon/.packlist
 

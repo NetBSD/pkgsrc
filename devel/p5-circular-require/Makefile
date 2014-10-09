@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/05/29 23:36:27 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/09 14:06:29 wiz Exp $
 
 DISTNAME=	circular-require-0.10
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,6 @@ COMMENT=	Perl5 module to detect circularity in use/require statements
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Package-Stash-[0-9]*:../../devel/p5-Package-Stash
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/circular/require/.packlist
 

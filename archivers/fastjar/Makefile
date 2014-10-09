@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/09/11 19:46:53 asau Exp $
+# $NetBSD: Makefile,v 1.19 2014/10/09 14:05:51 wiz Exp $
 #
 
 DISTNAME=	fastjar-0.93
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fastjar.sourceforge.net/
 COMMENT=	C language version of the 'jar' archiver normally used by Java
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	YES
 

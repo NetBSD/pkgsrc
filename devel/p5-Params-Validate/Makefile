@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2014/10/09 13:44:44 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2014/10/09 14:06:23 wiz Exp $
 
 DISTNAME=	Params-Validate-1.13
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Params-Validate/
 COMMENT=	Validate method/function parameters
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	{p5-Scalar-List-Utils>=1.0,perl>=5.10.0}:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-Module-Implementation-[0-9]*:../../devel/p5-Module-Implementation

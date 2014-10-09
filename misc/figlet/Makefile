@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/08 09:57:21 asau Exp $
+# $NetBSD: Makefile,v 1.25 2014/10/09 14:06:42 wiz Exp $
 
 DISTNAME=	figlet-2.2.5
 CATEGORIES=	misc
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.figlet.org/
 COMMENT=	Print text banners in fancy ASCII art characters
 LICENSE=	modified-bsd
-
-PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}/man6
 

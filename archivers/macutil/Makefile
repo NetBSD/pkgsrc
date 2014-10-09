@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/09/11 19:46:57 asau Exp $
+# $NetBSD: Makefile,v 1.26 2014/10/09 14:05:53 wiz Exp $
 
 DISTNAME=		macutil2.0b3
 PKGNAME=		macutil-2.0b3
@@ -8,8 +8,6 @@ EXTRACT_SUFX=		.shar.Z
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Create & extract Mac archive files
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 MAKE_FILE=		makefile
 MAKE_ENV+=		CF=${CFLAGS:M*:Q}

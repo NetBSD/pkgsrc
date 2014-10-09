@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2014/10/09 13:44:39 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2014/10/09 14:06:15 wiz Exp $
 
 DISTNAME=	Date-Manip-6.47
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Date-Manip/
 COMMENT=	Perl5 module for date calculations
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
 DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage

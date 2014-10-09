@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2013/05/05 21:56:22 rodent Exp $
+# $NetBSD: Makefile,v 1.26 2014/10/09 14:06:08 wiz Exp $
 #
 
 DISTNAME=	ctags-5.8
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctags.sourceforge.net/
 COMMENT=	Exuberant (feature-filled) tagfile generator for vi, emacs and clones
 LICENSE=	gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-macro-patterns

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2014/10/09 13:44:56 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2014/10/09 14:06:55 wiz Exp $
 
 DISTNAME=	IO-Socket-SSL-1.998
 PKGNAME=	p5-${DISTNAME}
@@ -13,8 +13,6 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-IO-Socket-INET6-[0-9]*:../../net/p5-IO-Socket-INET6
 DEPENDS+=	p5-Net-LibIDN-[0-9]*:../../net/p5-Net-LibIDN
 DEPENDS+=	p5-Net-SSLeay>=1.59:../../security/p5-Net-SSLeay
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/IO/Socket/SSL/.packlist

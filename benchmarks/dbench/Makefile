@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/09/11 22:37:11 asau Exp $
+# $NetBSD: Makefile,v 1.16 2014/10/09 14:05:58 wiz Exp $
 
 DISTNAME=	dbench-3.04
 PKGREVISION=	1
@@ -8,8 +8,6 @@ MASTER_SITES=	http://samba.org/ftp/tridge/dbench/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://samba.org/ftp/tridge/dbench/README
 COMMENT=	Simulation of the Ziff-Davis netbench benchmark
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 

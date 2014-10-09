@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/10/09 13:44:43 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2014/10/09 14:06:22 wiz Exp $
 #
 
 DISTNAME=	Memoize-1.03
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://perl.plover.com/Memoize/
 COMMENT=	Transparently speed up functions by caching return values
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Memoize/.packlist
 

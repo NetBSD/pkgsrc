@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2012/10/29 05:06:51 asau Exp $
+# $NetBSD: Makefile,v 1.56 2014/10/09 14:07:15 wiz Exp $
 
 DISTNAME=		rxvt-2.7.10
 PKGREVISION=		6
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		gcw@rxvt.org
 HOMEPAGE=		http://sourceforge.net/projects/rxvt
 COMMENT=		Low memory usage xterm replacement that supports color
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES

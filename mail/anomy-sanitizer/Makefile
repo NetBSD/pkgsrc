@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/05/29 23:36:44 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2014/10/09 14:06:38 wiz Exp $
 #
 
 DISTNAME=	anomy-sanitizer-1.76
@@ -12,8 +12,6 @@ COMMENT=	Mail message filter and sanitizer
 
 DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
 DEPENDS+=	{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../mk/bsd.prefs.mk"
 

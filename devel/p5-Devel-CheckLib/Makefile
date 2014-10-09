@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/09/07 12:29:30 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/10/09 14:06:16 wiz Exp $
 
 DISTNAME=	Devel-CheckLib-1.02
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,6 @@ COMMENT=	Perl extension to check that a library is available
 LICENSE=	${PERL5_LICENSE}
 
 PREV_PKGPATH=	devel/p5-Devel-Checklib
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-IO-CaptureOutput>=1.08.01:../../devel/p5-IO-CaptureOutput
 

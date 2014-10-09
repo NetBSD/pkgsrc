@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/09/11 22:37:12 asau Exp $
+# $NetBSD: Makefile,v 1.26 2014/10/09 14:05:59 wiz Exp $
 
 DISTNAME=	hint_unix_serial
 PKGNAME=	hint.serial-98.06.12
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hint.byu.edu/
 COMMENT=	Scalable benchmark for testing CPU and memory performance
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BUILD_TARGET=	DOUBLE INT
 

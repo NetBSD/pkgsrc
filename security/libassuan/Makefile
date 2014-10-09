@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/02/01 22:21:10 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2014/10/09 14:06:52 wiz Exp $
 #
 
 DISTNAME=		libassuan-1.0.5
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		ftp://ftp.gnupg.org/gcrypt/libassuan/
 COMMENT=		The IPC library used by some GnuPG related software
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes

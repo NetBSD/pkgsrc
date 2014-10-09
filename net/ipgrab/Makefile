@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/02/08 23:54:35 wiedi Exp $
+# $NetBSD: Makefile,v 1.11 2014/10/09 14:06:45 wiz Exp $
 
 DISTNAME=	ipgrab-0.9.9
 PKGREVISION=	1
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ipgrab/}
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ipgrab.sourceforge.net/
 COMMENT=	Verbose packet sniffer for UNIX hosts
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	makeinfo

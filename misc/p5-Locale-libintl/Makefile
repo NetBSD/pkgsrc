@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/05/29 23:36:59 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2014/10/09 14:06:43 wiz Exp $
 
 DISTNAME=	libintl-perl-1.23
 PKGNAME=	p5-${DISTNAME:S/libintl-perl/Locale-libintl/}
@@ -10,8 +10,6 @@ MAINTAINER=	peter.schuller@infidyne.com
 HOMEPAGE=	http://search.cpan.org/dist/libintl-perl/
 COMMENT=	Perl internationalization library
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/libintl-perl/.packlist
 # Interpreter /bin/false

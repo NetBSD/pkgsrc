@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2014/10/09 13:44:55 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2014/10/09 14:06:54 wiz Exp $
 #
 
 DISTNAME=		Crypt-Random-1.25
@@ -13,8 +13,6 @@ COMMENT=		Perl5 interface to /dev/random
 
 DEPENDS+=		p5-Class-Loader>=2.00:../../devel/p5-Class-Loader
 DEPENDS+=		p5-Math-Pari>=2.001804:../../math/p5-Math-Pari
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Crypt/Random/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2014/02/12 23:18:12 tron Exp $
+# $NetBSD: Makefile,v 1.26 2014/10/09 14:06:42 wiz Exp $
 #
 
 DISTNAME=		esniper-2-23-0
@@ -12,8 +12,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://esniper.sourceforge.net/
 COMMENT=		Simple, lightweight tool for sniping ebay auctions
 LICENSE=		2-clause-bsd
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/05/29 23:36:40 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2014/10/09 14:06:37 wiz Exp $
 #
 
 DISTNAME=	SWF-File-0.42
@@ -13,8 +13,6 @@ COMMENT=	Manipulating Flash movie (SWF) files
 
 DEPENDS+=	p5-Data-TemporaryBag-[0-9]*:../../devel/p5-Data-TemporaryBag
 DEPENDS+=	{perl>=5.9.3,p5-IO-Compress>=2.017}:../../devel/p5-IO-Compress	# Compress::Zlib
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/SWF/File/.packlist
 

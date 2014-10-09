@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/05/25 06:36:15 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2014/10/09 14:07:14 wiz Exp $
 
 DISTNAME=		libXau-1.0.8
 CATEGORIES=		x11 devel
@@ -9,8 +9,6 @@ MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Authorization Protocol for X from X.org
 LICENSE=		mit
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
