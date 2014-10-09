@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/06/06 12:55:13 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2014/10/09 14:07:13 wiz Exp $
 #
 
 DISTNAME=	fspanel-0.8beta1
@@ -10,8 +10,6 @@ MASTER_SITES=	http://www.chatjunkies.org/fspanel/
 MAINTAINER=	ptiJo@noos.fr
 HOMEPAGE=	http://www.chatjunkies.org/fspanel/
 COMMENT=	F***ing Small Panel for listing X11 windows
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 HAS_CONFIGURE=	YES
 

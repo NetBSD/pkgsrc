@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2014/01/01 11:52:02 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2014/10/09 14:06:52 wiz Exp $
 
 DISTNAME=	opencdk-0.6.6
 PKGREVISION=	2
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnutls.org/
 COMMENT=	Open Crypto Development Kit
 LICENSE=	gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

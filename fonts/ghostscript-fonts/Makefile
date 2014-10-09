@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/03 18:28:23 asau Exp $
+# $NetBSD: Makefile,v 1.21 2014/10/09 14:06:33 wiz Exp $
 
 DISTNAME=		ghostscript-fonts-8.11
 PKGREVISION=		3
@@ -14,8 +14,6 @@ COMMENT=		Postscript fonts for Aladdin Ghostscript
 GS_FONTS_OTHER=		ghostscript-fonts-other-6.0.tar.gz
 
 CONFLICTS=		ghostscript-[0-5]* ghostscript-x11-[0-5]*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DIST_SUBDIR=		ghostscript
 NO_CONFIGURE=		YES

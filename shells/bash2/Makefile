@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2014/09/30 18:27:40 christos Exp $
+# $NetBSD: Makefile,v 1.87 2014/10/09 14:06:56 wiz Exp $
 #
 
 DISTNAME=	bash-2.05b
@@ -18,8 +18,6 @@ HOMEPAGE=	http://www.gnu.org/software/bash/bash.html
 COMMENT=	The GNU Bourne Again Shell (version 2)
 
 CONFLICTS=	static-bash-[0-9]*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-installed-readline

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/05/29 23:36:00 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2014/10/09 14:06:21 wiz Exp $
 #
 
 DISTNAME=	IPC-SharedCache-1.3
@@ -13,8 +13,6 @@ COMMENT=	Cache data in shared memory
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	p5-IPC-ShareLite>=0.06:../../devel/p5-IPC-ShareLite
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=	auto/IPC/SharedCache/.packlist
 

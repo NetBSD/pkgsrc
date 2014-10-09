@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/05/29 23:35:49 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2014/10/09 14:06:16 wiz Exp $
 
 DISTNAME=	Devel-CheckOS-1.71
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Devel-CheckOS/
 COMMENT=	Perl extension to check what OS we are running on
 LICENSE=	gnu-gpl-v2 OR artistic
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-Data-Compare>=1.21:../../devel/p5-Data-Compare
 DEPENDS+=	p5-File-Find-Rule>=0.28:../../devel/p5-File-Find-Rule

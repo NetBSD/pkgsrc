@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/09/12 00:24:36 asau Exp $
+# $NetBSD: Makefile,v 1.17 2014/10/09 14:05:56 wiz Exp $
 #
 
 DISTNAME=	gramofile-1.6
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.opensourcepartners.nl/~costar/gramofile/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.opensourcepartners.nl/~costar/gramofile/
 COMMENT=	Tool for ripping audio from vinyl
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BUILD_TARGET=	gramofile makebplay
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/09/13 11:10:58 shattered Exp $
+# $NetBSD: Makefile,v 1.23 2014/10/09 14:05:53 wiz Exp $
 #
 
 DISTNAME=	nulibdist-220
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nulib.com/
 COMMENT=	Handles Apple II ShrinkIt (NuFX) file/disk archives
 LICENSE=	modified-bsd
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 MAKE_JOBS_SAFE=		no
 

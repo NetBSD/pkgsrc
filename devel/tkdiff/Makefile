@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2013/04/13 06:04:12 shattered Exp $
+# $NetBSD: Makefile,v 1.26 2014/10/09 14:06:31 wiz Exp $
 #
 
 DISTNAME=	tkdiff-4.2
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tkdiff/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/tkdiff/
 COMMENT=	Graphical 2-way diff/merge tool
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 NO_BUILD=	yes
 NO_CONFIGURE=	yes

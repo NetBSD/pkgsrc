@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2014/08/12 23:15:28 cheusov Exp $
+# $NetBSD: Makefile,v 1.34 2014/10/09 14:06:50 wiz Exp $
 
 DISTNAME=	pkg_summary-utils-0.65.1
 CATEGORIES=	pkgtools
@@ -35,8 +35,6 @@ INSTALL_TARGET=		install install-doc
 
 USE_LANGUAGES=		c
 USE_TOOLS+=		gzip:run
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 EGDIR=		${PREFIX}/share/examples/pkg_summary-utils
 

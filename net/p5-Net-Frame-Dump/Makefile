@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/05/29 23:37:07 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2014/10/09 14:06:46 wiz Exp $
 
 DISTNAME=	Net-Frame-Dump-1.09
 PKGNAME=	p5-${DISTNAME}
@@ -14,8 +14,6 @@ LICENSE=	artistic
 DEPENDS+=	p5-Class-Gomor>=1.0:../../devel/p5-Class-Gomor
 DEPENDS+=	p5-Net-Pcap>=0.12:../../net/p5-Net-Pcap
 DEPENDS+=	p5-Net-Frame-[0-9]*:../../net/p5-Net-Frame
-
-PKG_INSTALLATION_TYPES=		overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Net/Frame/Dump/.packlist
 

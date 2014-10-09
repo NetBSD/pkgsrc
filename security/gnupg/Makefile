@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2014/07/22 11:24:29 wiz Exp $
+# $NetBSD: Makefile,v 1.127 2014/10/09 14:06:52 wiz Exp $
 
 DISTNAME=	gnupg-1.4.18
 CATEGORIES=	security
@@ -12,8 +12,6 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.gnupg.org/
 COMMENT=	GNU Privacy Guard, public-Key encryption and digital signatures
 LICENSE=	gnu-gpl-v3
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CRYPTO=			yes
 GNU_CONFIGURE=		yes

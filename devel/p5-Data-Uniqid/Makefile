@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/05/29 23:35:48 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/10/09 14:06:15 wiz Exp $
 
 DISTNAME=	Data-Uniqid-0.12
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Data-Uniqid/
 COMMENT=	Perl extension for simple generaion of unique ids
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=  {perl>=5.7.3,p5-Time-HiRes-[0-9]*}:../../time/p5-Time-HiRes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/09/07 12:20:10 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2014/10/09 14:06:19 wiz Exp $
 
 DISTNAME=	IO-CaptureOutput-1.1103
 PKGNAME=	p5-${DISTNAME:S/1103/11.03/}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/IO-CaptureOutput/
 COMMENT=	Capture STDOUT and STDERR from Perl code, subprocesses, or XS
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/IO/CaptureOutput/.packlist
 

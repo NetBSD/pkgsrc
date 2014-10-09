@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.173 2014/10/07 16:47:29 adam Exp $
+# $NetBSD: Makefile,v 1.174 2014/10/09 14:06:38 wiz Exp $
 
 DOVECOT_VERSION=	1.2
 DOVECOT_SUBVERSION=	.17
@@ -18,8 +18,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.dovecot.org/
 COMMENT=		Secure IMAP and POP3 server
 LICENSE=		mit AND gnu-lgpl-v2.1 AND modified-bsd
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config rpcgen

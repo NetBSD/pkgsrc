@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/10/09 12:32:54 adam Exp $
+# $NetBSD: Makefile,v 1.2 2014/10/09 14:06:42 wiz Exp $
 
 DISTNAME=	libcdio-paranoia-10.2+0.93+1
 PKGNAME=	libcdio-paranoia-0.93
@@ -10,8 +10,6 @@ MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/libcdio/
 COMMENT=	CD-ROM access library: CDDA support
 LICENSE=	gnu-gpl-v3
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

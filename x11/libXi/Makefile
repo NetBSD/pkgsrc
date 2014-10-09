@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/07/19 06:12:44 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2014/10/09 14:07:14 wiz Exp $
 
 DISTNAME=		libXi-1.7.4
 CATEGORIES=		x11 devel
@@ -9,8 +9,6 @@ MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X Input extension library
 LICENSE=		mit
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

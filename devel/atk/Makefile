@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2014/10/05 14:59:26 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2014/10/09 14:06:07 wiz Exp $
 
 DISTNAME=		atk-2.14.0
 CATEGORIES=		devel gnome
@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://developer.gnome.org/atk/
 COMMENT=		Set of interfaces for accessibility
 LICENSE=		gnu-lgpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		gmake pkg-config msgfmt
 GNU_CONFIGURE=		yes

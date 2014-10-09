@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/10/09 13:44:38 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2014/10/09 14:06:13 wiz Exp $
 
 DISTNAME=	Class-Factory-1.06
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	hiramatu@boreas.dti.ne.jp
 HOMEPAGE=	http://search.cpan.org/dist/Class-Factory/
 COMMENT=	Base class for dynamic factory classes
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Class/Factory/.packlist
 

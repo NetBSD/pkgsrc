@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2014/10/09 13:44:47 wiz Exp $
+# $NetBSD: Makefile,v 1.108 2014/10/09 14:06:37 wiz Exp $
 
 .include "../../graphics/ImageMagick/Makefile.common"
 
@@ -11,8 +11,6 @@ COMMENT=	Object-oriented Perl interface to ImageMagick
 
 DISTINFO_FILE=	${.CURDIR}/../../graphics/ImageMagick/distinfo
 PATCHDIR=	${.CURDIR}/../../graphics/ImageMagick/patches
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 # Some configure_args come from Makefile.common
 CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}

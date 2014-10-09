@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/04/06 20:27:28 rodent Exp $
+# $NetBSD: Makefile,v 1.22 2014/10/09 14:06:52 wiz Exp $
 #
 
 DISTNAME=		gss-0.0.15
@@ -12,8 +12,6 @@ HOMEPAGE=		http://www.gnu.org/software/gss/
 COMMENT=		GNU Generic Security Service Library
 
 CONFLICTS+=		heimdal-[0-9]*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		pkg-config msgfmt
 GNU_CONFIGURE=		yes

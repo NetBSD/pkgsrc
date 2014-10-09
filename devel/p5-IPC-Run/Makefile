@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2014/05/29 23:36:00 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2014/10/09 14:06:21 wiz Exp $
 
 DISTNAME=	IPC-Run-0.92
 PKGNAME=	p5-${DISTNAME}
@@ -14,8 +14,6 @@ LICENSE=	gnu-gpl-v2 OR artistic
 # XXX Win32 will need Win32::Process while all others IO::Pty
 #     How about Interix?
 DEPENDS+=	p5-IO-tty>=1.08:../../devel/p5-IO-Tty
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/IPC/Run/.packlist

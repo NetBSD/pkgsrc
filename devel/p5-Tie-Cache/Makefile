@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/10/09 13:44:46 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2014/10/09 14:06:28 wiz Exp $
 
 DISTNAME=	Tie-Cache-0.17
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Tie-Cache/
 COMMENT=	LRU Cache in Memory
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=	auto/Tie/Cache/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2014/06/02 16:30:44 adam Exp $
+# $NetBSD: Makefile,v 1.61 2014/10/09 14:06:52 wiz Exp $
 
 DISTNAME=	libtasn1-3.6
 CATEGORIES=	security devel
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/libtasn1/
 COMMENT=	ASN.1 structure parser library
 LICENSE=	gnu-fdl-v1.3 AND gnu-lgpl-v2.1 AND gnu-gpl-v3
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		makeinfo
 USE_LIBTOOL=		yes

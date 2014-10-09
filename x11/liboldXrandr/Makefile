@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/29 05:06:37 asau Exp $
+# $NetBSD: Makefile,v 1.4 2014/10/09 14:07:15 wiz Exp $
 #
 
 DISTNAME=		libXrandr-1.0.2
@@ -13,8 +13,6 @@ HOMEPAGE=		http://xlibs.freedesktop.org/
 COMMENT=		X RandR extension (Library)
 
 CONFLICTS+=		libXrandr-[0-9]*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes

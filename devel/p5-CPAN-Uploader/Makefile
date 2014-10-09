@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/10/04 14:14:26 wen Exp $
+# $NetBSD: Makefile,v 1.9 2014/10/09 14:06:11 wiz Exp $
 
 DISTNAME=	CPAN-Uploader-0.103007
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/CPAN-Uploader/
 COMMENT=	Perl 5 module to upload things to the CPAN
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-Getopt-Long-Descriptive>=0.084:../../devel/p5-Getopt-Long-Descriptive
 DEPENDS+=	p5-HTTP-Message-[0-9]*:../../www/p5-HTTP-Message

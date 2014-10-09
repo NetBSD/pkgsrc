@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/08/13 20:22:09 cheusov Exp $
+# $NetBSD: Makefile,v 1.13 2014/10/09 14:06:31 wiz Exp $
 
 DISTNAME=	cvs-1.12.13
 PKGREVISION=	2
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cvs.nongnu.org/
 COMMENT=	Concurrent Versions System
 LICENSE=	gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		makeinfo autoconf
 GNU_CONFIGURE=		yes

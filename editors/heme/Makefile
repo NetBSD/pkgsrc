@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 11:43:35 asau Exp $
+# $NetBSD: Makefile,v 1.9 2014/10/09 14:06:32 wiz Exp $
 #
 
 DISTNAME=		heme-0.4
@@ -9,8 +9,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=heme/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sourceforge.net/projects/heme/
 COMMENT=		Fast and portable console hex editor
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BUILD_TARGET=		heme
 USE_NCURSES=		chgat

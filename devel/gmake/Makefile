@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2014/07/17 13:09:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.89 2014/10/09 14:06:09 wiz Exp $
 
 DISTNAME=	make-4.0
 PKGNAME=	g${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/make/make.html
 COMMENT=	GNU version of 'make' utility
 LICENSE=	gnu-gpl-v3
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_FEATURES=		snprintf
 

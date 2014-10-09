@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2013/05/17 14:48:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.37 2014/10/09 14:06:57 wiz Exp $
 
 DISTNAME=		daemontools-0.76
 PKGREVISION=		1
@@ -15,8 +15,6 @@ MANPAGES=		${DISTNAME}-man-20020131.tar.gz
 SITES.${MANPAGES}=	http://smarden.org/pape/djb/manpages/
 
 DJB_RESTRICTED=		no
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/admin/${DISTNAME}
 DJB_SLASHPACKAGE=	YES

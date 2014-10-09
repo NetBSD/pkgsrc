@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/05/29 23:38:12 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/10/09 14:07:11 wiz Exp $
 #
 
 DISTNAME=	ParallelUserAgent-2.57
@@ -13,8 +13,6 @@ HOMEPAGE=	http://search.cpan.org/dist/ParallelUserAgent/
 COMMENT=	CPAN Bundle for the LWP Parallel User Agent extension
 
 DEPENDS+=     p5-libwww>=5.64:../../www/p5-libwww
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/LWP/Parallel/.packlist

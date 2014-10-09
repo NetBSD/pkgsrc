@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2013/10/09 17:39:05 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2014/10/09 14:05:58 wiz Exp $
 
 DISTNAME=	qsynth-0.2.4
 PKGREVISION=	20
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qsynth/}
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://qsynth.sourceforge.net/
 COMMENT=	Qt GUI Interface to FluidSynth
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

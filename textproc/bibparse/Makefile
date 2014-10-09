@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/25 06:55:43 asau Exp $
+# $NetBSD: Makefile,v 1.13 2014/10/09 14:07:01 wiz Exp $
 #
 
 DISTNAME=	bibparse-1.06
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.math.utah.edu/pub/bibparse/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.math.utah.edu/pub/bibparse/
 COMMENT=	Syntax checking tools for BibTeX bibliography databases
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 

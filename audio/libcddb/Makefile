@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/01/09 13:05:20 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2014/10/09 14:05:56 wiz Exp $
 
 DISTNAME=	libcddb-1.3.2
 PKGREVISION=	1
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://libcddb.sourceforge.net/
 COMMENT=	Library to access data on a CDDB server
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

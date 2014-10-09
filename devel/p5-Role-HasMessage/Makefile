@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/05/29 23:36:15 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2014/10/09 14:06:26 wiz Exp $
 
 DISTNAME=	Role-HasMessage-0.005
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Role-HasMessage/
 COMMENT=	Perl 5 role with a message method
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-Role-Parameterized-[0-9]*:../../devel/p5-MooseX-Role-Parameterized

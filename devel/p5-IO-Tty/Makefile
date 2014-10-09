@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2014/10/09 13:44:41 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2014/10/09 14:06:20 wiz Exp $
 #
 
 DISTNAME=	IO-Tty-1.12
@@ -10,8 +10,6 @@ MAINTAINER=	rhaen@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/IO-Tty/
 COMMENT=	Another Perl class for I/O on tty and pseudo-tty devices
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/IO/Tty/.packlist
 

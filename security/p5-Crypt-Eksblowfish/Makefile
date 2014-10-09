@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/05/29 23:37:22 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2014/10/09 14:06:53 wiz Exp $
 #
 
 DISTNAME=		Crypt-Eksblowfish-0.009
@@ -16,8 +16,6 @@ DEPENDS+=		p5-Class-Mix>=0.001:../../devel/p5-Class-Mix
 DEPENDS+=		{perl>=5.10.1,p5-parent-[0-9]*}:../../devel/p5-parent
 DEPENDS+=		{perl>=5.8.2,p5-MIME-Base64>=2.21}:../../converters/p5-MIME-Base64
 BUILD_DEPENDS+=		{perl>=5.10.0,p5-ExtUtils-CBuilder>=0.15}:../../devel/p5-ExtUtils-CBuilder
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CRYPTO=			YES
 USE_LANGUAGES=		c

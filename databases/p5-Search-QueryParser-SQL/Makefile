@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/05/29 23:35:31 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2014/10/09 14:06:07 wiz Exp $
 
 DISTNAME=	Search-QueryParser-SQL-0.008
 PKGNAME=	p5-${DISTNAME}
@@ -17,8 +17,6 @@ DEPENDS+=	p5-Search-QueryParser>=0.93:../../databases/p5-Search-QueryParser/
 
 PERL5_PACKLIST=	auto/Search/QueryParser/SQL/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

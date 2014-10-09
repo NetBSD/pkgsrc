@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2012/10/23 17:19:15 asau Exp $
+# $NetBSD: Makefile,v 1.40 2014/10/09 14:06:48 wiz Exp $
 
 DISTNAME=		ucspi-tcp-0.88
 PKGREVISION=		3
@@ -15,8 +15,6 @@ MANPAGES=		${DISTNAME}-man-20020317.tar.gz
 SITES.${MANPAGES}=	http://smarden.org/pape/djb/manpages/
 
 DJB_RESTRICTED=		no
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

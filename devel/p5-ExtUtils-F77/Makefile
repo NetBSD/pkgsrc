@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2014/10/09 13:44:40 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2014/10/09 14:06:16 wiz Exp $
 
 DISTNAME=	ExtUtils-F77-1.17
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/ExtUtils-F77/
 COMMENT=	Perl module for determining how to link Fortran and C
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		fortran77
 PERL5_PACKLIST=		auto/ExtUtils/F77/.packlist

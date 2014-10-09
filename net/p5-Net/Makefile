@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2014/10/09 13:44:52 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2014/10/09 14:06:47 wiz Exp $
 
 DISTNAME=	libnet-1.27
 PKGNAME=	p5-${DISTNAME:S/libnet/Net/}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/libnet/
 COMMENT=	Perl5 modules to access and use network protocols
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Net/.packlist
 

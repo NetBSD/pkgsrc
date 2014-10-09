@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2014/05/29 23:35:21 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2014/10/09 14:06:04 wiz Exp $
 
 .include "${.CURDIR}/Makefile.common"
 
@@ -9,8 +9,6 @@ CATEGORIES=	japanese converters
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Convert between various Japanese character encodings
 #LICENSE=	zlib-license
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

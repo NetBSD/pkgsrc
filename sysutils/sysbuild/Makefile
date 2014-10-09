@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2014/02/08 15:59:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.28 2014/10/09 14:07:00 wiz Exp $
 
 DISTNAME=	sysbuild-2.7
 PKGREVISION=	1
@@ -8,8 +8,6 @@ MASTER_SITES=	https://github.com/jmmv/sysbuild/releases/download/sysbuild-2.7/
 MAINTAINER=	jmmv@NetBSD.org
 COMMENT=	Automates builds of NetBSD and manages source trees
 LICENSE=	modified-bsd
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 TEST_TARGET=		check

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/05/29 23:37:14 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2014/10/09 14:06:49 wiz Exp $
 
 PKGNAME=	pkg_notify-0.4.4
 PKGREVISION=	1
@@ -10,8 +10,6 @@ COMMENT=	Notifies package maintainer when a new version is available
 LICENSE=	modified-bsd
 
 DEPENDS+=	p5-libwww>=5.76:../../www/p5-libwww
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 NO_BUILD=		yes
 NO_CONFIGURE=		yes

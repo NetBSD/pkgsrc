@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/02/12 23:18:39 tron Exp $
+# $NetBSD: Makefile,v 1.15 2014/10/09 14:06:57 wiz Exp $
 #
 
 DISTNAME=		ipmitool-1.8.11
@@ -9,8 +9,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ipmitool/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ipmitool.sourceforge.net/
 COMMENT=		Command-line utility for managing IPMI devices
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 INSTALLATION_DIRS+=	share/examples/ipmitool share/doc/ipmitool

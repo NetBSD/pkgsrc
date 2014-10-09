@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/05/29 23:37:50 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2014/10/09 14:07:07 wiz Exp $
 
 DISTNAME=		Data-ICal-0.21
 PKGNAME=		p5-${DISTNAME}
@@ -20,8 +20,6 @@ BUILD_DEPENDS+=		{perl>=5.6.2,p5-Test-Simple-[0-9]*}:../../devel/p5-Test-Simple
 BUILD_DEPENDS+=		p5-Test-LongString-[0-9]*:../../devel/p5-Test-LongString
 BUILD_DEPENDS+=		p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
 BUILD_DEPENDS+=		p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Data/ICal/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2014/05/30 12:51:29 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2014/10/09 14:07:14 wiz Exp $
 
 DISTNAME=		libX11-1.6.2
 PKGREVISION=		1
@@ -10,8 +10,6 @@ MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Base X libraries from modular Xorg X11
 LICENSE=		mit
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

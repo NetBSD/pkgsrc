@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/09/08 08:23:58 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2014/10/09 14:07:14 wiz Exp $
 
 DISTNAME=		libSM-1.2.2
 CATEGORIES=		x11 devel
@@ -8,8 +8,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X Session Management Library
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

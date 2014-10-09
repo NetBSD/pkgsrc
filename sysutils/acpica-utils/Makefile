@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/23 19:50:50 asau Exp $
+# $NetBSD: Makefile,v 1.8 2014/10/09 14:06:56 wiz Exp $
 #
 
 DISTNAME=	acpica-unix-${ACPICA_UTILS_VERSION}
@@ -12,8 +12,6 @@ HOMEPAGE=	http://www.acpica.org/
 COMMENT=	Intel ACPI CA Unix utilities
 
 ACPICA_UTILS_VERSION=	20090625
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 INSTALLATION_DIRS=	bin share/doc/acpica-utils
 

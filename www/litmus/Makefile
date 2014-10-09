@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/02/12 23:18:45 tron Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/09 14:07:09 wiz Exp $
 
 DISTNAME=	litmus-0.13
 PKGREVISION=	1
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.webdav.org/neon/litmus/
 COMMENT=	WebDAV server protocol compliance test suite
 LICENSE=	gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/05/29 23:35:38 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2014/10/09 14:06:11 wiz Exp $
 
 DISTNAME=	Algorithm-HowSimilar-0.01
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Algorithm-HowSimilar/
 COMMENT=	Perl module for computation of similarity amongst values
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-Algorithm-Diff>=1.0:../../devel/p5-Algorithm-Diff
 

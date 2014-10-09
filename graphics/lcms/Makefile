@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2013/08/07 16:46:23 drochner Exp $
+# $NetBSD: Makefile,v 1.41 2014/10/09 14:06:36 wiz Exp $
 
 DISTNAME=	lcms-1.19
 PKGREVISION=	3
@@ -10,8 +10,6 @@ HOMEPAGE=	http://www.littlecms.com/
 COMMENT=	Little Color Management System -- a color management library
 # This is very MIT-like, but perhaps not the exact text.
 #LICENSE=	lcms-license
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

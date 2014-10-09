@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/10/09 13:44:45 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2014/10/09 14:06:28 wiz Exp $
 #
 
 DISTNAME=	Tie-Array-AsHash-0.200
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Tie-Array-AsHash/
 COMMENT=	Perl module to access array(s) like hashes
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-Params-Util>=0.35:../../devel/p5-Params-Util
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/05/29 23:35:48 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2014/10/09 14:06:15 wiz Exp $
 
 DISTNAME=	Data-Peek-0.39
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Data-Peek/
 COMMENT=	Perl 5 collection of low-level debug functions
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/Data/Peek/.packlist

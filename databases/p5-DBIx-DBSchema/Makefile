@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/07/28 13:26:00 wen Exp $
+# $NetBSD: Makefile,v 1.17 2014/10/09 14:06:06 wiz Exp $
 
 DISTNAME=	DBIx-DBSchema-0.44
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/DBIx-DBSchema/
 COMMENT=	Database-independent schema objects
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-FreezeThaw-[0-9]*:../../devel/p5-FreezeThaw
 

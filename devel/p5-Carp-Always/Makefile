@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/05/29 23:35:42 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/09 14:06:12 wiz Exp $
 
 DISTNAME=	Carp-Always-0.12
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,6 @@ COMMENT=	Perl5 module which warns and dies noisily with stack backtraces
 LICENSE=	${PERL5_LICENSE}
 
 BUILD_DEPENDS+=	p5-Test-Base-[0-9]*:../../devel/p5-Test-Base
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Carp/Always/.packlist
 

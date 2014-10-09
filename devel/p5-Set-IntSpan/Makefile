@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2014/10/09 13:44:44 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2014/10/09 14:06:26 wiz Exp $
 #
 
 DISTNAME=	Set-IntSpan-1.19
@@ -11,8 +11,6 @@ MAINTAINER=	gson@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Set-IntSpan/
 COMMENT=	Perl5 module for managing sets of integers
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Set/IntSpan/.packlist
 

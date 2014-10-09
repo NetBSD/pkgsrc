@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2014/05/29 23:37:02 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2014/10/09 14:06:44 wiz Exp $
 
 DISTNAME=	ddclient-3.6.6
 PKGREVISION=	5
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ddclient.sourceforge.net/
 COMMENT=	Client to update dynamic DNS entries
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		perl:run
 USE_LANGUAGES=		# empty

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2014/10/09 13:44:44 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2014/10/09 14:06:26 wiz Exp $
 #
 
 DISTNAME=	Safe-Hole-0.13
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Safe-Hole/
 COMMENT=	Exec subs in the original package from within a Safe object
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Safe/Hole/.packlist
 PERL5_MODULE_TYPE=	Module::Build

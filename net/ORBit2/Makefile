@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2013/12/23 11:57:04 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2014/10/09 14:06:44 wiz Exp $
 
 DISTNAME=		ORBit2-2.14.19
 PKGREVISION=		4
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://orbit-resource.sourceforge.net/
 COMMENT=		High-performance CORBA ORB with C language support
 LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
-
-PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 CONFLICTS=		linc>=1.1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/05/29 23:36:17 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2014/10/09 14:06:27 wiz Exp $
 
 DISTNAME=	String-Format-1.16
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ HOMEPAGE=	http://search.cpan.org/dist/String-Format/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Perl module for sprintf-like string formatting capabilities
 LICENSE=	gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/String/Format/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/12/06 11:16:56 asau Exp $
+# $NetBSD: Makefile,v 1.11 2014/10/09 14:07:15 wiz Exp $
 
 PKGVER=		2.3.4
 PKGREVISION=	7
@@ -12,8 +12,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://motif.ics.com/
 COMMENT=		LGPLed Motif toolkit for the X Window System
 LICENSE=		gnu-lgpl-v2.1
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/motif-${PKGVER}
 

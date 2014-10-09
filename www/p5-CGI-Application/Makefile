@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2014/10/09 13:45:03 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2014/10/09 14:07:10 wiz Exp $
 
 DISTNAME=		CGI-Application-4.50
 PKGNAME=		p5-${DISTNAME}
@@ -14,8 +14,6 @@ LICENSE=		${PERL5_LICENSE}
 DEPENDS+=		{p5-CGI>=2.66,perl>=5.6.1nb2}:../../www/p5-CGI
 DEPENDS+=		p5-Class-ISA-[0-9]*:../../devel/p5-Class-ISA
 DEPENDS+=		p5-HTML-Template-[0-9]*:../../www/p5-HTML-Template
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/CGI/Application/.packlist
 

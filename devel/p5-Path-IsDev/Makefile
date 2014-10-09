@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/09/12 12:52:12 wen Exp $
+# $NetBSD: Makefile,v 1.2 2014/10/09 14:06:24 wiz Exp $
 
 DISTNAME=	Path-IsDev-1.001002
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Path-IsDev/
 COMMENT=	Perl extension to determine if path resembles dev source tree
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Path/IsDev/.packlist
 

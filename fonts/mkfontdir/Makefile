@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 18:28:27 asau Exp $
+# $NetBSD: Makefile,v 1.10 2014/10/09 14:06:33 wiz Exp $
 #
 
 DISTNAME=		mkfontdir-1.0.7
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X11 Font Index Generator
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=		mkfontscale>=1.0.1:../../fonts/mkfontscale
 

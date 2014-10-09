@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2014/01/27 18:41:15 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2014/10/09 14:07:07 wiz Exp $
 
 VER=		3.0.2
 DISTNAME=	ical-${VER}
@@ -10,8 +10,6 @@ EXTRACT_SUFFIX=	.tar.gz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://launchpad.net/ical-tcl/
 COMMENT=	Calendar application
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/09/11 20:32:14 asau Exp $
+# $NetBSD: Makefile,v 1.10 2014/10/09 14:06:01 wiz Exp $
 
 DISTNAME=		sewer
 PKGNAME=		sewer-2.6
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		hdp@cs.nmsu.edu
 HOMEPAGE=		http://iubio.bio.indiana.edu/webapps/SeWeR/
 COMMENT=		SEquence Analysis using WEb Resources
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=	pax
 

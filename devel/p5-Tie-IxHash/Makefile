@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2014/10/09 13:44:46 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2014/10/09 14:06:28 wiz Exp $
 #
 
 DISTNAME=	Tie-IxHash-1.22
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Tie-IxHash/
 COMMENT=	Perl module that implements ordered in-memory associative arrays
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Tie/IxHash/.packlist
 PERL5_MODULE_TYPE=	Module::Build

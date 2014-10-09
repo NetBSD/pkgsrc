@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2013/05/30 16:31:33 richard Exp $
+# $NetBSD: Makefile,v 1.34 2014/10/09 14:06:08 wiz Exp $
 #
 
 DISTNAME=		diffutils-3.3
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/diffutils/diffutils.html
 COMMENT=		GNU diff utilities - find the differences between files
 LICENSE=		gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
 INFO_FILES=		YES # PLIST

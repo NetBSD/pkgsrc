@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/02/16 01:08:00 wiedi Exp $
+# $NetBSD: Makefile,v 1.13 2014/10/09 14:06:57 wiz Exp $
 
 DISTNAME=	ccze-0.2.1
 PKGREVISION=	2
@@ -10,8 +10,6 @@ HOMEPAGE=	http://bonehunter.rulez.org/software/ccze/
 COMMENT=	Log coloriser, fast and light on resources
 
 INCOMPAT_CURSES=	NetBSD-1.5*-* NetBSD-1.6*-*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake

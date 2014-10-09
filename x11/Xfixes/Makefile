@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/10/29 05:06:06 asau Exp $
+# $NetBSD: Makefile,v 1.29 2014/10/09 14:07:13 wiz Exp $
 
 DISTNAME=		libXfixes-2.0.1
 PKGNAME=		${DISTNAME:S/libX/X/}
@@ -12,8 +12,6 @@ HOMEPAGE=		http://freedesktop.org/
 COMMENT=		X Fixes extension of X RandR
 
 CONFLICTS+=		libXfixes-[0-9]*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes

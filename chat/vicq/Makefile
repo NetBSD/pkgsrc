@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2014/05/29 23:35:19 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2014/10/09 14:06:03 wiz Exp $
 
 DISTNAME=	vicq-0.4.1
 PKGREVISION=	10
@@ -12,8 +12,6 @@ COMMENT=	Simple icq client written in perl
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	{perl>=5.17.7,p5-Term-ReadLine>=1.11}:../../devel/p5-Term-ReadLine
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/vicq
 CONFIGURE_DIRS=		Net/vICQ

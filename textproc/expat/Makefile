@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/10/25 06:55:49 asau Exp $
+# $NetBSD: Makefile,v 1.28 2014/10/09 14:07:01 wiz Exp $
 #
 
 DISTNAME=	expat-2.1.0
@@ -9,8 +9,6 @@ MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://expat.sourceforge.net/
 COMMENT=	XML parser library written in C
 LICENSE=	mit
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

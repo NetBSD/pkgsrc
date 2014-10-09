@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2014/06/09 10:30:20 fhajny Exp $
+# $NetBSD: Makefile,v 1.31 2014/10/09 14:06:52 wiz Exp $
 
 DISTNAME=	keychain-2.7.1
 PKGREVISION=	1
@@ -14,8 +14,6 @@ LICENSE=	gnu-gpl-v2
 .if !exists(/usr/bin/ssh-agent)
 DEPENDS+=	openssh-[0-9]*:../../security/openssh
 .endif
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		bash:run
 NO_BUILD=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/09/11 19:46:56 asau Exp $
+# $NetBSD: Makefile,v 1.15 2014/10/09 14:05:52 wiz Exp $
 
 DISTNAME=	lbrate-1.1
 PKGREVISION=	1
@@ -8,8 +8,6 @@ MASTER_SITES=	ftp://ftp.ibiblio.org/pub/Linux/utils/compress/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rus.members.beeb.net/lbrate.html
 COMMENT=	Extract/decompress CP/M LBR archives
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 MAKE_FLAGS+=	PREFIX=${PREFIX:Q}
 

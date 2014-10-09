@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/05/29 23:37:22 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/10/09 14:06:53 wiz Exp $
 #
 
 DISTNAME=		Crypt-GPG-1.63
@@ -15,8 +15,6 @@ DEPENDS+=		gnupg-[0-9]*:../../security/gnupg
 DEPENDS+=		p5-IPC-Run-[0-9]*:../../devel/p5-IPC-Run
 DEPENDS+=		{perl>=5.6.1,p5-File-Temp-[0-9]*}:../../devel/p5-File-Temp
 DEPENDS+=		p5-TimeDate-[0-9]*:../../time/p5-TimeDate
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 # It defaults to a gpg path in /usr/local, which is not helpful
 SUBST_CLASSES+=		local

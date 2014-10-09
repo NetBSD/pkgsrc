@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2013/01/11 23:29:05 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2014/10/09 14:06:44 wiz Exp $
 
 DISTNAME=	dgd-1.2p4
 PKGNAME=	dgd-1.2.0.4
@@ -10,8 +10,6 @@ MAINTAINER=	sco@openface.ca
 HOMEPAGE=	http://www.dworkin.nl/dgd/
 COMMENT=	Object-oriented programmable server
 LICENSE=	fee-based-commercial-use
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 MAKE_JOBS_SAFE=		no
 

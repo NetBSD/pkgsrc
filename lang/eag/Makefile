@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/04/03 13:26:44 jaapb Exp $
+# $NetBSD: Makefile,v 1.14 2014/10/09 14:06:37 wiz Exp $
 
 DISTNAME=		eag-2.6
 CATEGORIES=		lang
@@ -9,8 +9,6 @@ MAINTAINER=		jaapb@NetBSD.org
 HOMEPAGE=		http://www.cs.ru.nl/~kees/eag/
 COMMENT=		Transducer generator using affix grammars
 LICENSE=		eag-license
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

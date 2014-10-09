@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2014/05/29 23:36:59 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2014/10/09 14:06:42 wiz Exp $
 #
 
 DISTNAME=		Locale-Maketext-Fuzzy-0.11
@@ -13,8 +13,6 @@ COMMENT=		Maketext from already interpolated strings
 LICENSE=		cc0-1.0-universal
 
 DEPENDS+=		{perl>=5.8.0,p5-Locale-Maketext-[0-9]*}:../../misc/p5-Locale-Maketext
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Locale/Maketext/Fuzzy/.packlist

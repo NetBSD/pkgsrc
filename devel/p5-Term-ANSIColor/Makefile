@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/05/29 23:36:19 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2014/10/09 14:06:27 wiz Exp $
 
 DISTNAME=	Term-ANSIColor-4.02
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Term-ANSIColor/
 COMMENT=	Perl termcap interface
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 PERL5_PACKLIST=	auto/Term/ANSIColor/.packlist
 

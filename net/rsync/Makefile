@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2014/07/23 08:58:03 tron Exp $
+# $NetBSD: Makefile,v 1.97 2014/10/09 14:06:48 wiz Exp $
 
 DISTNAME=	rsync-3.1.1
 CATEGORIES=	net
@@ -11,8 +11,6 @@ MAINTAINER=	tron@NetBSD.org
 HOMEPAGE=	http://rsync.samba.org/
 COMMENT=	Network file distribution/synchronisation utility
 LICENSE=	gnu-gpl-v3
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 share/doc/rsync
 

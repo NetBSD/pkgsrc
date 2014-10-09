@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2014/07/08 14:17:15 mrg Exp $
+# $NetBSD: Makefile,v 1.83 2014/10/09 14:07:09 wiz Exp $
 #
 
 DISTNAME=	bozohttpd-20140708
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	mrg@eterna.com.au
 HOMEPAGE=	http://www.eterna.com.au/bozohttpd/
 COMMENT=	Bozotic HTTP server; small and secure
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "options.mk"
 

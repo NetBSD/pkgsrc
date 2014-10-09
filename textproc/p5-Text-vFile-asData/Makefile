@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/10/09 13:44:59 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2014/10/09 14:07:05 wiz Exp $
 
 DISTNAME=	Text-vFile-asData-0.08
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Text-vFile-asData/
 COMMENT=	Parse vFile formatted files into data structures
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-Class-Accessor-Chained-[0-9]*:../../devel/p5-Class-Accessor-Chained
 

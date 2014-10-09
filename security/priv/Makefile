@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/23 18:16:52 asau Exp $
+# $NetBSD: Makefile,v 1.20 2014/10/09 14:06:55 wiz Exp $
 #
 
 DISTNAME=	priv-1.0-beta2
@@ -9,8 +9,6 @@ MASTER_SITES=	ftp://ftp.thistledown.com.au/pub/simonb/
 
 MAINTAINER=	simonb@NetBSD.org
 COMMENT=	Execute commands as a different user
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	YES
 

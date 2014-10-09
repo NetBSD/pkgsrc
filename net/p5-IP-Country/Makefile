@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/10/09 13:44:51 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2014/10/09 14:06:46 wiz Exp $
 #
 
 DISTNAME=		IP-Country-2.27
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/IP-Country/
 COMMENT=		Fast lookup of country codes from IP addresses
 #LICENSE=		${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=		p5-Geography-Countries-[0-9]*:../../geography/p5-Geography-Countries
 

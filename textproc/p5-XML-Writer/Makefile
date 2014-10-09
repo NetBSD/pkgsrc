@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/10/09 13:45:01 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2014/10/09 14:07:06 wiz Exp $
 #
 
 DISTNAME=	XML-Writer-0.623
@@ -13,8 +13,6 @@ COMMENT=	Perl module for writing XML documents
 #LICENSE=	?
 # Redistribution and use in source and compiled forms, with or without
 # modification, are permitted under any circumstances.  No warranty.
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/XML/Writer/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/10/02 11:46:41 wen Exp $
+# $NetBSD: Makefile,v 1.13 2014/10/09 14:06:22 wiz Exp $
 #
 
 DISTNAME=	Log-Report-1.05
@@ -14,8 +14,6 @@ LICENSE=	${PERL5_LICENSE}
 BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.86}:../../devel/p5-Test-Simple
 BUILD_DEPENDS+=	p5-Test-Pod>=1.00:../../devel/p5-Test-Pod
 BUILD_DEPENDS+=	p5-Log-Report-Optional>=0:../../devel/p5-Log-Report-Optional
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Log/Report/.packlist
 

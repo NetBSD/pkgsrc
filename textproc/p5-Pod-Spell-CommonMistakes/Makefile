@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/05/29 23:37:39 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/10/09 14:07:04 wiz Exp $
 
 DISTNAME=	Pod-Spell-CommonMistakes-1.000
 PKGNAME=	p5-${DISTNAME}
@@ -13,8 +13,6 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-IO-stringy>=2.110:../../devel/p5-IO-stringy
 DEPENDS+=	p5-Pod-Spell>=1.01:../../textproc/p5-Pod-Spell
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Pod/Spell/CommonMistakes/.packlist
 

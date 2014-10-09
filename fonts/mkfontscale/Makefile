@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2013/07/17 21:46:49 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2014/10/09 14:06:33 wiz Exp $
 
 DISTNAME=		mkfontscale-1.1.1
 CATEGORIES=		fonts x11
@@ -8,8 +8,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X11 Scalable Font Index Generator
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config

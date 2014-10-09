@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/23 19:51:13 asau Exp $
+# $NetBSD: Makefile,v 1.5 2014/10/09 14:06:58 wiz Exp $
 #
 
 DISTNAME=	mkmemstick-20111206
@@ -12,8 +12,6 @@ COMMENT=	Create a memory stick image from NetBSD Installation CDs
 
 DEPENDS+=	cdrtools-[0-9]*:../../sysutils/cdrtools
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
 AUTO_MKDIRS=	yes
@@ -25,6 +23,5 @@ do-build:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/mkmemstick ${DESTDIR}${PREFIX}/sbin/mkmemstick
-
 
 .include "../../mk/bsd.pkg.mk"

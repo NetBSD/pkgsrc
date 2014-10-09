@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.152 2014/09/24 10:53:22 jperkin Exp $
+# $NetBSD: Makefile,v 1.153 2014/10/09 14:06:41 wiz Exp $
 
 DISTNAME=		R-3.1.1
 CATEGORIES=		math
@@ -12,8 +12,6 @@ LICENSE=		gnu-gpl-v2
 #needs FPC code not found in older versions of NetBSD
 NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-alpha NetBSD-1.5-alpha \
 			NetBSD-1.5.*-alpha NetBSD-1.5[A-U]-alpha
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_GCC_RUNTIME=	yes
 

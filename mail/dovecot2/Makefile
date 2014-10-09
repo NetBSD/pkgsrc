@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2014/10/07 16:47:29 adam Exp $
+# $NetBSD: Makefile,v 1.65 2014/10/09 14:06:38 wiz Exp $
 
 DISTNAME=	dovecot-2.2.13
 PKGREVISION=	1
@@ -9,8 +9,6 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.dovecot.org/
 COMMENT=	Secure IMAP and POP3 server
 LICENSE=	mit AND gnu-lgpl-v2.1 AND modified-bsd
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config rpcgen

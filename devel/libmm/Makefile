@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/31 11:17:18 asau Exp $
+# $NetBSD: Makefile,v 1.20 2014/10/09 14:06:09 wiz Exp $
 
 DISTNAME=	mm-1.4.2
 PKGNAME=	lib${DISTNAME}
@@ -9,8 +9,6 @@ MASTER_SITES=	ftp://ftp.ossp.org/pkg/lib/mm/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ossp.org/pkg/lib/mm/
 COMMENT=	Portable abstraction layer for shared memory
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

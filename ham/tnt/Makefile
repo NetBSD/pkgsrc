@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/10/03 13:01:45 asau Exp $
+# $NetBSD: Makefile,v 1.31 2014/10/09 14:06:37 wiz Exp $
 #
 
 DISTNAME=	tnt-1.9.2
@@ -11,8 +11,6 @@ HOMEPAGE=	http://wspse.de/WSPse/Packet.php3
 COMMENT=	Amateur packet radio terminal program for TNC2, AEA PK232 and PK88
 
 DEPENDS+=	dialog>=0.6z:../../misc/dialog
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes

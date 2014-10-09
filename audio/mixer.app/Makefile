@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/23 10:24:02 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2014/10/09 14:05:57 wiz Exp $
 #
 
 DISTNAME=	Mixer.app-1.8.0
@@ -13,8 +13,6 @@ HOMEPAGE=	http://www.fukt.bth.se/~per/mixer/
 COMMENT=	Another mixer intended for the windowmaker dockapp
 
 NOT_FOR_PLATFORM=	Interix-*-*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=	c++
 

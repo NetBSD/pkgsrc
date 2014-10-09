@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2014/10/09 13:44:54 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2014/10/09 14:06:54 wiz Exp $
 #
 
 DISTNAME=		Crypt-RIPEMD160-0.05
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Crypt-RIPEMD160/
 COMMENT=		Perl5 module of the RIPEMD160 hash function
 LICENSE=		${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Crypt/RIPEMD160/.packlist
 

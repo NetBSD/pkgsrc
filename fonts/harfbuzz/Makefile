@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2014/10/07 16:47:25 adam Exp $
+# $NetBSD: Makefile,v 1.42 2014/10/09 14:06:33 wiz Exp $
 
 DISTNAME=	harfbuzz-0.9.35
 PKGREVISION=	1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://harfbuzz.org/
 COMMENT=	OpenType text shaping engine
 LICENSE=	mit
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

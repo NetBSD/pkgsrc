@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2014/05/29 23:37:50 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2014/10/09 14:07:07 wiz Exp $
 
 DISTNAME=	texi2html-5.0
 PKGREVISION=	4
@@ -14,8 +14,6 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	p5-Locale-libintl-[0-9]*:../../misc/p5-Locale-libintl
 
 CONFLICTS=	teTeX-bin-1.*{,nb*}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		yes

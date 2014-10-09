@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2014/07/13 09:17:04 mbalmer Exp $
+# $NetBSD: Makefile,v 1.37 2014/10/09 14:07:13 wiz Exp $
 #
 
 DISTNAME=		xaos-3.6
@@ -10,7 +10,6 @@ HOMEPAGE=		http://matek.hu/xaos/
 COMMENT=		Zoomable fractal rendering doodad
 LICENSE=		gnu-gpl-v2
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_TOOLS+=		gmake msgfmt
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES

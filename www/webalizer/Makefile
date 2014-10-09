@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2013/09/04 12:31:26 obache Exp $
+# $NetBSD: Makefile,v 1.61 2014/10/09 14:07:13 wiz Exp $
 
 DISTNAME=	webalizer-2.21-02-src
 PKGNAME=	webalizer-2.21.2
@@ -12,8 +12,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.webalizer.org/
 COMMENT=	Web server log file analysis program
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-src//}
 BDB_ACCEPTED=		db4 db5

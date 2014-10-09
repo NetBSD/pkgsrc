@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2014/05/29 23:35:16 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2014/10/09 14:05:59 wiz Exp $
 
 DISTNAME=		lmbench-2alpha11
 PKGNAME=		lmbench-2.11a
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://lmbench.sourceforge.net/
 COMMENT=		Complete benchmark that gives a large amount of information
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		gmake perl:run
 BUILD_TARGET=		build

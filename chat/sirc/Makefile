@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2014/05/29 23:35:19 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2014/10/09 14:06:02 wiz Exp $
 
 DISTNAME=	sirc-2.211
 PKGREVISION=	7
@@ -12,8 +12,6 @@ HOMEPAGE=	http://www.iagora.com/~espel/sirc/sirc.html
 COMMENT=	IRC client written and programmable in perl
 
 DEPENDS+=	p5-Socket6>=0.07:../../net/p5-Socket6
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=	c
 

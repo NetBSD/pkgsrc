@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2014/05/29 23:37:04 wiz Exp $
+# $NetBSD: Makefile,v 1.108 2014/10/09 14:06:45 wiz Exp $
 
 DISTNAME=	lftp-4.4.6
 PKGREVISION=	3
@@ -14,8 +14,6 @@ MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://lftp.yar.ru/
 COMMENT=	Powerful command line file transfer client
 LICENSE=	gnu-gpl-v3
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

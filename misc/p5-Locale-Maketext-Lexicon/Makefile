@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2014/05/29 23:36:59 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2014/10/09 14:06:43 wiz Exp $
 #
 
 DISTNAME=		Locale-Maketext-Lexicon-0.91
@@ -13,8 +13,6 @@ COMMENT=		Use other catalog formats in Maketext
 LICENSE=		mit
 
 DEPENDS+=		{perl>=5.8.0,p5-Locale-Maketext-[0-8]*}:../../misc/p5-Locale-Maketext
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Locale/Maketext/Lexicon/.packlist

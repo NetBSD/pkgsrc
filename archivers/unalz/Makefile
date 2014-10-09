@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/09/11 19:47:02 asau Exp $
+# $NetBSD: Makefile,v 1.15 2014/10/09 14:05:54 wiz Exp $
 #
 
 DISTNAME=		unalz-0.61
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.kipple.pe.kr/win/unalz/
 COMMENT=		Alzip archive (.alz) extractor
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BUILD_TARGET=		posix-utf8
 USE_LANGUAGES=		c c++

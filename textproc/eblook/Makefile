@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2013/04/06 20:27:29 rodent Exp $
+# $NetBSD: Makefile,v 1.23 2014/10/09 14:07:01 wiz Exp $
 #
 
 DISTNAME=	eblook-1.6.1
@@ -9,8 +9,6 @@ MASTER_SITES=	http://openlab.ring.gr.jp/edict/eblook/dist/
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://openlab.ring.gr.jp/edict/eblook/
 COMMENT=	Interactive command-line interface for EPWING electric dictionaries
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	YES
 INFO_FILES=	yes

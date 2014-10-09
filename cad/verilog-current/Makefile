@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2013/11/29 12:53:45 joerg Exp $
+# $NetBSD: Makefile,v 1.61 2014/10/09 14:06:01 wiz Exp $
 #
 
 DISTNAME=	verilog-${SNAPDATE}
@@ -16,8 +16,6 @@ LICENSE=	gnu-gpl-v2
 # mkdir: dep: Not a directory
 # Makefile:76: recipe for target 'dep' failed
 MAKE_JOBS_SAFE=	no
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CONFLICTS+=	verilog-[0-9]*
 

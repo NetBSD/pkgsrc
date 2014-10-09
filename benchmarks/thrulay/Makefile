@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/02 23:48:16 asau Exp $
+# $NetBSD: Makefile,v 1.11 2014/10/09 14:06:00 wiz Exp $
 
 DISTNAME=	thrulay-0.9
 CATEGORIES=	benchmarks net
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://thrulay.sourceforge.net/
 COMMENT=	TCP and UDP network capacity tester
 LICENSE=	modified-bsd
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 MAKE_JOBS_SAFE=		no
 

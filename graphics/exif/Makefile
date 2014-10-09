@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/10/06 14:10:48 asau Exp $
+# $NetBSD: Makefile,v 1.26 2014/10/09 14:06:34 wiz Exp $
 
 DISTNAME=	exif-0.6.21
 CATEGORIES=	graphics
@@ -9,8 +9,6 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://libexif.sourceforge.net/
 COMMENT=	Grab Exif information from digital camera images
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes

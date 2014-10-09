@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2014/06/28 21:05:11 dholland Exp $
+# $NetBSD: Makefile,v 1.40 2014/10/09 14:06:02 wiz Exp $
 #
 
 DISTNAME=	verilog-0.9.7
@@ -9,8 +9,6 @@ MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://iverilog.icarus.com/
 COMMENT=	Verilog simulation and synthesis tool (stable release version)
 LICENSE=	gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CONFLICTS+=	verilog-current-[0-9]*
 

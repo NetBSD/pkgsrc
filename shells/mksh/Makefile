@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2014/10/07 18:51:02 bsiegert Exp $
+# $NetBSD: Makefile,v 1.29 2014/10/09 14:06:56 wiz Exp $
 
 DISTNAME=			mksh-R50d
 PKGNAME=			${DISTNAME:S/-R/-/}
@@ -16,8 +16,6 @@ LICENSE=			miros
 
 WRKSRC=				${WRKDIR}/mksh
 WRKBUILD?=			${WRKSRC}
-
-PKG_INSTALLATION_TYPES=		pkgviews overwrite
 
 PKG_SHELL=			bin/mksh
 

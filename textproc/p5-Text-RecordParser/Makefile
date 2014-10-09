@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/05/29 23:37:43 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2014/10/09 14:07:04 wiz Exp $
 #
 
 DISTNAME=	Text-RecordParser-v1.6.3
@@ -26,8 +26,6 @@ BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 DEPENDS+=	p5-GraphViz-[0-9]*:../../graphics/p5-GraphViz
 DEPENDS+=	p5-Readonly-XS-[0-9]*:../../devel/p5-Readonly-XS
 DEPENDS+=	p5-Text-TabularDisplay>=1.22:../../textproc/p5-Text-TabularDisplay
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Text/RecordParser/.packlist

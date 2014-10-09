@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2014/10/09 13:44:53 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2014/10/09 14:06:53 wiz Exp $
 
 DISTNAME=		Crypt-CBC-2.33
 PKGNAME=		p5-${DISTNAME}
@@ -9,8 +9,6 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Crypt-CBC/
 COMMENT=		Perl5 cipher block chaining mode for various crypto algorithms
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BUILD_DEPENDS+=		p5-Crypt-Rijndael-[0-9]*:../../security/p5-Crypt-Rijndael
 DEPENDS+=		{perl>=5.7.3,p5-Digest-MD5>=2.0}:../../security/p5-Digest-MD5

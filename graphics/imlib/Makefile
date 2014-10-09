@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2014/09/08 21:24:44 wiz Exp $
+# $NetBSD: Makefile,v 1.122 2014/10/09 14:06:35 wiz Exp $
 
 DISTNAME=	imlib-1.9.15
 PKGREVISION=	20
@@ -11,8 +11,6 @@ HOMEPAGE=	http://www.nl.rasterman.com/imlib.html
 COMMENT=	Image manipulation library for X11
 
 DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes

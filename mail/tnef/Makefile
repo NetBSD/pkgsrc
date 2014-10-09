@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2013/03/02 10:44:37 tron Exp $
+# $NetBSD: Makefile,v 1.28 2014/10/09 14:06:41 wiz Exp $
 #
 
 DISTNAME=	tnef-1.4.3
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tnef/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tnef.sourceforge.net/
 COMMENT=	Decode MS-TNEF MIME attachments
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
 TEST_TARGET=		check

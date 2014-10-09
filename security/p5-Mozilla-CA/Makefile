@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/05/29 23:37:24 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2014/10/09 14:06:55 wiz Exp $
 #
 
 DISTNAME=		Mozilla-CA-20130114
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Mozilla-CA/
 COMMENT=		Mozilla's CA cert bundle for Perl
 LICENSE=		mpl-1.1 OR gnu-gpl-v2 OR gnu-lgpl-v2.1
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Mozilla/CA/.packlist

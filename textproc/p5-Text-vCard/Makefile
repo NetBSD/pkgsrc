@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2014/10/09 13:44:59 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2014/10/09 14:07:05 wiz Exp $
 
 DISTNAME=	Text-vCard-3.06
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Text-vCard/
 COMMENT=	Parse, edit and create vCards (RFC 2426)
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 # for MIME::QuotedPrint
 DEPENDS+=	{perl>=5.8.8,p5-MIME-Base64>=3.07}:../../converters/p5-MIME-Base64

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/09/08 08:17:19 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2014/10/09 14:07:14 wiz Exp $
 
 DISTNAME=		libXmu-1.1.2
 CATEGORIES=		x11 devel
@@ -8,8 +8,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X Miscellaneous Utilities library
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	xmu.pc.in

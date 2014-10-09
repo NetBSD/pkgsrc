@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2013/04/13 20:22:25 dholland Exp $
+# $NetBSD: Makefile,v 1.30 2014/10/09 14:06:35 wiz Exp $
 #
 
 DISTNAME=	gle-3.1.0
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gle/}		\
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.linas.org/gle/
 COMMENT=	GL subroutines for drawing tubing and extrusions
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

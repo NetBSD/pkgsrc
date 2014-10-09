@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2014/09/24 11:23:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.32 2014/10/09 14:05:54 wiz Exp $
 #
 
 DISTNAME=	star-1.4.3
@@ -9,8 +9,6 @@ MASTER_SITES=	ftp://ftp.berlios.de/pub/star/
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://cdrecord.berlios.de/old/private/star.html
 COMMENT=	The fastest tar like archiver for UNIX
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=	gmake
 MAKE_FLAGS+=	INS_BASE=${DESTDIR}${PREFIX}

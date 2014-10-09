@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2014/05/29 23:37:10 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2014/10/09 14:06:48 wiz Exp $
 
 DISTNAME=	NetPacket-1.3.1
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,6 @@ HOMEPAGE=	http://search.cpan.org/dist/NetPacket/
 LICENSE=	${PERL5_LICENSE} # source doc wins over changelog
 
 USE_LANGUAGES=	c
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/NetPacket/.packlist
 PERL5_MODULE_TYPE=	Module::Build

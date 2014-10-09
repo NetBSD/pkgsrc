@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/03/03 04:52:49 obache Exp $
+# $NetBSD: Makefile,v 1.20 2014/10/09 14:06:50 wiz Exp $
 #
 
 DISTNAME=	pkg_select-20090308
@@ -9,8 +9,6 @@ MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/imil/
 MAINTAINER=	imil@gcu.info
 COMMENT=	Curses based pkgsrc system browser / manager
 LICENSE=	original-bsd
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_FEATURES+=		cdefs
 

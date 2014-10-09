@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2014/10/09 13:45:04 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2014/10/09 14:07:11 wiz Exp $
 
 DISTNAME=		HTML-Tree-5.03
 PKGNAME=		p5-${DISTNAME}
@@ -21,8 +21,6 @@ DEPENDS+=		p5-URI-[0-9]*:../../www/p5-URI
 # Build dependencies Encode, Test::More and base are in Perl5 core ...
 BUILD_DEPENDS+=		p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 BUILD_DEPENDS+=		p5-Test-LeakTrace-[0-9]*:../../devel/p5-Test-LeakTrace
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_MODULE_TYPE=	Module::Build
 USE_LANGUAGES=		# empty

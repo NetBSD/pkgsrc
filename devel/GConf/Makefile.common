@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2012/10/31 11:16:31 asau Exp $
+# $NetBSD: Makefile.common,v 1.20 2014/10/09 14:06:07 wiz Exp $
 #
 # used by devel/GConf/Makefile
 # used by devel/GConf-ui/Makefile
@@ -16,7 +16,6 @@ COMMENT=		Configuration database system used by GNOME
 LICENSE=		gnu-lgpl-v2
 
 # not ready yet.  .schemas are installed in the depot.
-#PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 DISTINFO_FILE=		${.CURDIR}/../GConf/distinfo
 FILESDIR=		${.CURDIR}/../GConf/files

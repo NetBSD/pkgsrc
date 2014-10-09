@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/31 11:17:11 asau Exp $
+# $NetBSD: Makefile,v 1.10 2014/10/09 14:06:09 wiz Exp $
 
 DISTNAME=		libcfg+-0.6.2
 PKGREVISION=		3
@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://opensource.platon.sk/projects/main_page.php?project_id=3
 COMMENT=		Command line and configuration file parsing library
 LICENSE=		gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake

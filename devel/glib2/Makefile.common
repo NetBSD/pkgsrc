@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2014/10/07 23:18:36 prlw1 Exp $
+# $NetBSD: Makefile.common,v 1.42 2014/10/09 14:06:09 wiz Exp $
 #
 # used by devel/glib2/Makefile
 # used by devel/gdbus-codegen/Makefile
@@ -16,8 +16,6 @@ MAINTAINER=	prlw1@cam.ac.uk
 HOMEPAGE=	http://developer.gnome.org/glib/
 COMMENT=	# empty; redefined in Makefile
 LICENSE=	gnu-lgpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
@@ -48,7 +46,6 @@ CONFIGURE_ARGS.gnu-iconv=	--with-libiconv=gnu
 CONFIGURE_ENV+=		PERL_PATH=${PERL5:Q}
 
 .include "../../mk/bsd.prefs.mk"
-
 
 CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
 CPPFLAGS+=		-DPKGLOCALEDIR="\"${PKGLOCALEDIR}\""

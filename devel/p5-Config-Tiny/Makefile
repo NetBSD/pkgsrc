@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/05/29 23:35:46 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2014/10/09 14:06:14 wiz Exp $
 
 DISTNAME=	Config-Tiny-2.20
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,6 @@ MAINTAINER=	rhaen@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Config-Tiny/
 COMMENT=	Read/Write .ini style files with as little code as possible
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Config/Tiny/.packlist
 

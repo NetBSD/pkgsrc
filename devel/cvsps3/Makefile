@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/12/10 12:04:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2014/10/09 14:06:08 wiz Exp $
 #
 
 DISTNAME=	cvsps-3.10
@@ -10,8 +10,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.catb.org/~esr/cvsps/
 COMMENT=	Generates 'patchset' information from a CVS repository
 LICENSE=	gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BUILD_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
 

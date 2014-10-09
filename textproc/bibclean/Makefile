@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/25 06:55:42 asau Exp $
+# $NetBSD: Makefile,v 1.15 2014/10/09 14:07:01 wiz Exp $
 #
 
 DISTNAME=	bibclean-2.11.4
@@ -9,8 +9,6 @@ MASTER_SITES=	ftp://ftp.math.utah.edu/pub/tex/bib/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.math.utah.edu/pub/bibclean/
 COMMENT=	Prettyprinter and syntax checker for BibTeX bibliography databases
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES

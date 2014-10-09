@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2014/02/01 08:00:06 markd Exp $
+# $NetBSD: Makefile,v 1.28 2014/10/09 14:06:31 wiz Exp $
 
 DISTNAME=	tclcl-src-1.20
 PKGNAME=	tcl-${DISTNAME:S/-src//}
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=otcl-tclcl/}
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://otcl-tclcl.sourceforge.net/tclcl/
 COMMENT=	Tcl/C++ interface used by ns and nam
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 USE_LANGUAGES=	c c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2014/06/09 17:29:09 schmonz Exp $
+# $NetBSD: Makefile,v 1.36 2014/10/09 14:06:39 wiz Exp $
 
 DISTNAME=	isync-1.1.1
 CATEGORIES=	mail net
@@ -8,8 +8,6 @@ MAINTAINER=	tonio@NetBSD.org
 HOMEPAGE=	http://isync.sourceforge.net/
 COMMENT=	Synchronize a maildir with an imap server
 LICENSE=	gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BDB_ACCEPTED=		db4 db5
 GNU_CONFIGURE=		yes

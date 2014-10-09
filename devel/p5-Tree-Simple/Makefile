@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/05/29 23:36:25 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2014/10/09 14:06:29 wiz Exp $
 #
 
 DISTNAME=	Tree-Simple-1.23
@@ -16,8 +16,6 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils>=1.18}:../../devel/p5-Scalar-List-Utils
 BUILD_DEPENDS+=	p5-Test-Exception>=0.20:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	p5-Test-Version>=1.002003:../../devel/p5-Test-Version
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Tree/Simple/.packlist
 

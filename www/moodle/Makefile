@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2014/09/23 07:06:10 wen Exp $
+# $NetBSD: Makefile,v 1.32 2014/10/09 14:07:09 wiz Exp $
 
 DISTNAME=	moodle-2.7.2
 CATEGORIES=	www
@@ -31,8 +31,6 @@ INSTALLATION_DIRS=	${EGDIR} share/moodle
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PKG_GROUPS_VARS=	APACHE_GROUP
 PKG_USERS_VARS=		APACHE_USER

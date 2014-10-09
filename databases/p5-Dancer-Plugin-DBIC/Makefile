@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/05/29 23:35:29 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2014/10/09 14:06:06 wiz Exp $
 
 DISTNAME=	Dancer-Plugin-DBIC-0.1802
 PKGNAME=	p5-${DISTNAME}
@@ -16,8 +16,6 @@ DEPENDS+=	p5-Dancer>=1.3098:../../www/p5-Dancer
 
 # recommended ...
 DEPENDS+=	p5-DBIx-Class-Schema-Loader>=0.07002:../../databases/p5-DBIx-Class-Schema-Loader
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Dancer/Plugin/DBIC/.packlist
 

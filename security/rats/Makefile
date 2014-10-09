@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/10/23 18:16:56 asau Exp $
+# $NetBSD: Makefile,v 1.26 2014/10/09 14:06:56 wiz Exp $
 #
 
 DISTNAME=		rats-2.1
@@ -10,8 +10,6 @@ MAINTAINER=		tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=		http://www.fortifysoftware.com/security-resources/rats.jsp
 COMMENT=		Rough Auditing Tool for Security
 LICENSE=		gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/rats

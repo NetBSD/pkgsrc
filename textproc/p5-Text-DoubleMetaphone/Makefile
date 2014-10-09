@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/05/29 23:37:42 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/10/09 14:07:04 wiz Exp $
 #
 
 DISTNAME=	Text-DoubleMetaphone-0.07
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 MAINTAINER=	dsainty@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Text-DoubleMetaphone/
 COMMENT=	Double Metaphone "sounds like" algorithm
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=	c
 PERL5_PACKLIST=	auto/Text/DoubleMetaphone/.packlist

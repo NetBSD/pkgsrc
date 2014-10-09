@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2014/05/29 23:37:33 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2014/10/09 14:07:01 wiz Exp $
 
 DISTNAME=	eb-4.3
 PKGREVISION=	5
@@ -47,8 +47,6 @@ EB_APPENDICES=	\
 		superdic98-1.0.tar.gz
 EXTRACT_ONLY=	${EB_DISTFILES}
 DIST_SUBDIR=	${PKGNAME_NOREV}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake perl

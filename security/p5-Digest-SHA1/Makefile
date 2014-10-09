@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2014/10/09 13:44:55 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2014/10/09 14:06:55 wiz Exp $
 
 DISTNAME=	Digest-SHA1-2.13
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Digest-SHA1/
 COMMENT=	Perl5 module for SHA1
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=		{perl>=5.7.1,p5-Digest>=1.00}:../../security/p5-Digest
 

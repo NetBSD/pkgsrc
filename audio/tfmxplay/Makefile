@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/02 23:48:11 asau Exp $
+# $NetBSD: Makefile,v 1.16 2014/10/09 14:05:58 wiz Exp $
 #
 
 DISTNAME=	tfmxplay-0.6
@@ -11,8 +11,6 @@ HOMEPAGE=	http://darkstar.tabu.uni-bonn.de/~neo/audio.html
 COMMENT=	Console TFMX (amiga games sound file format) player
 
 NOT_FOR_PLATFORM=	Interix-*-*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 INSTALLATION_DIRS=	bin
 

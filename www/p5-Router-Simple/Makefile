@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/07/19 14:26:07 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/10/09 14:07:12 wiz Exp $
 
 DISTNAME=	Router-Simple-0.15
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,6 @@ HOMEPAGE=	https://github.com/tokuhirom/p5-router-simple
 COMMENT=	Simple HTTP router for web applications
 LICENSE=	${PERL5_LICENSE}
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_TOOLS+=	perl:run
 
 DEPENDS+=	p5-Class-Accessor-Lite-[0-9]*:../../devel/p5-Class-Accessor-Lite

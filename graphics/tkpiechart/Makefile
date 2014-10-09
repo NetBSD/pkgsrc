@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2013/04/06 21:07:32 rodent Exp $
+# $NetBSD: Makefile,v 1.20 2014/10/09 14:06:37 wiz Exp $
 
 DISTNAME=	tkpiechart-5.4
 PKGREVISION=	1
@@ -11,8 +11,6 @@ COMMENT=	Tcl/Tk pie-chart utility; in Tcl, not as an extension
 
 DEPENDS+=	tk>=8.3.2:../../x11/tk
 DEPENDS+=	stooop>=3.7:../../devel/stooop
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

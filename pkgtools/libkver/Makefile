@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2014/03/03 03:30:53 obache Exp $
+# $NetBSD: Makefile,v 1.36 2014/10/09 14:06:49 wiz Exp $
 
 PKGNAME=		libkver-${VERSION}
 CATEGORIES=		pkgtools
@@ -6,8 +6,6 @@ CATEGORIES=		pkgtools
 MAINTAINER=	seb@NetBSD.org
 #HOMEPAGE=
 COMMENT=	Shared library and sysctl(1) replacement to override system version
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../mk/bsd.prefs.mk"
 

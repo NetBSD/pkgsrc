@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2014/05/29 23:36:15 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2014/10/09 14:06:26 wiz Exp $
 
 DISTNAME=	SVN-Simple-0.28
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/SVN-Simple/
 COMMENT=	Simple interface to the Subversion delta editor interface
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-subversion>=1.0.4:../../devel/p5-subversion
 

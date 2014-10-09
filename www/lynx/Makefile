@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2014/03/12 10:13:15 wiz Exp $
+# $NetBSD: Makefile,v 1.118 2014/10/09 14:07:09 wiz Exp $
 
 DISTNAME=	lynx2.8.8rel.2
 PKGNAME=	${DISTNAME:S/lynx/lynx-/:S/rel//}
@@ -14,8 +14,6 @@ LICENSE=	gnu-gpl-v2
 
 # problem with WWW/Library/Implementation
 MAKE_JOBS_SAFE=		no
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 SUBDIR=			current
 WRKSRC=			${WRKDIR}/lynx2-8-8

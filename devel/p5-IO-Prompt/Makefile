@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/05/29 23:35:59 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2014/10/09 14:06:20 wiz Exp $
 #
 
 DISTNAME=	IO-Prompt-0.997001
@@ -11,8 +11,6 @@ MAINTAINER=	abs@absd.org
 HOMEPAGE=	http://search.cpan.org/~dconway/IO-Prompt/
 COMMENT=	Interactively prompt for user input
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	{perl>=5.10,p5-version-[0-9]*}:../../devel/p5-version
 DEPENDS+=	p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey

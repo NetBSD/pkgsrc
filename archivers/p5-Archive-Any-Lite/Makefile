@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/05/29 23:35:13 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/10/09 14:05:53 wiz Exp $
 
 DISTNAME=	Archive-Any-Lite-0.07
 PKGNAME=	p5-${DISTNAME}
@@ -18,8 +18,6 @@ DEPENDS+=		{perl>=5.9.3,p5-IO-Zlib>=0}:../../devel/p5-IO-Zlib
 DEPENDS+=		{perl>=5.10.1,p5-IO-Compress>=0}:../../devel/p5-IO-Compress	# IO::Uncompress::Bunzip2>=0
 
 BUILD_DEPENDS+=		p5-Test-UseAllModules>=0:../../devel/p5-Test-UseAllModules
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Archive/Any/Lite/.packlist
 

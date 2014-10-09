@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2012/10/08 23:09:06 adam Exp $
+# $NetBSD: Makefile,v 1.49 2014/10/09 14:05:55 wiz Exp $
 
 DISTNAME=	SDL_mixer-1.2.12
 PKGREVISION=	5
@@ -11,8 +11,6 @@ COMMENT=	Multi-channel audio mixer library
 LICENSE=	zlib
 
 CONFLICTS=		SDL-mixer-[0-9]*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake

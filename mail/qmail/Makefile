@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2014/08/19 22:06:49 schmonz Exp $
+# $NetBSD: Makefile,v 1.71 2014/10/09 14:06:40 wiz Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}
@@ -28,7 +28,6 @@ NOT_FOR_UNPRIVILEGED=	yes
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
 PKG_DESTDIR_SUPPORT=	destdir
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_TOOLS+=		nroff
 
 DJB_CONFIG_CMDS=	${ECHO} ${DESTDIR:Q}${QMAILDIR:Q} > conf-destdir

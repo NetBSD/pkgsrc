@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.48 2011/04/20 12:12:48 obache Exp $
+# $NetBSD: Makefile.common,v 1.49 2014/10/09 14:06:35 wiz Exp $
 #
 # used by graphics/gdk-pixbuf/Makefile
 
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 
 VER=			0.22
-
-PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/05/29 23:35:57 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/10/09 14:06:19 wiz Exp $
 
 DISTNAME=	Glib-Object-Introspection-0.019
 PKGNAME=	p5-${DISTNAME}
@@ -14,8 +14,6 @@ LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	p5-ExtUtils-Depends>=0.300:../../devel/p5-ExtUtils-Depends
 DEPENDS+=	p5-ExtUtils-PkgConfig>=1.000:../../devel/p5-ExtUtils-PkgConfig
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c
 USE_TOOLS+=		pkg-config

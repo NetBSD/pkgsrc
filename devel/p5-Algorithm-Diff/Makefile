@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2014/05/29 23:35:38 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2014/10/09 14:06:10 wiz Exp $
 
 DISTNAME=	Algorithm-Diff-1.1902
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Algorithm/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Algorithm-Diff/
 COMMENT=	Perl module for diffing similar to diff(1)
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
 

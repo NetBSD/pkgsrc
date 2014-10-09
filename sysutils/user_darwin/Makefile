@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/07/12 10:41:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2014/10/09 14:07:00 wiz Exp $
 #
 
 DISTNAME=		user-darwin-20130712
@@ -10,8 +10,6 @@ MAINTAINER=		schmonz@NetBSD.org
 COMMENT=		Limited NetBSD-compatible useradd/groupadd commands
 
 ONLY_FOR_PLATFORM=	Darwin-*-*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 NO_CONFIGURE=		yes
 NO_BUILD=		yes

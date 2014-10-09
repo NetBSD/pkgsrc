@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/05/29 23:36:27 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2014/10/09 14:06:29 wiz Exp $
 
 DISTNAME=	autodie-2.25
 PKGNAME=	p5-${DISTNAME}
@@ -13,8 +13,6 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-IPC-System-Simple>=0.12:../../devel/p5-IPC-System-Simple
 DEPENDS+=	p5-Sub-Identify-[0-9]*:../../devel/p5-Sub-Identify
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/autodie/.packlist
 

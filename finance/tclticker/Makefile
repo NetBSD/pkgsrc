@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/03 16:10:13 asau Exp $
+# $NetBSD: Makefile,v 1.18 2014/10/09 14:06:32 wiz Exp $
 #
 
 DISTNAME=	tclticker-1.1
@@ -12,8 +12,6 @@ COMMENT=	Stock-quote ticker tape application
 DEPENDS+=	tk>=8.3.2:../../x11/tk
 
 USE_TOOLS+=	pax
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2014/04/26 01:16:54 dsainty Exp $
+# $NetBSD: Makefile,v 1.56 2014/10/09 14:05:53 wiz Exp $
 
 DISTNAME=	p7zip_9.20.1_src_all
 PKGNAME=	p7zip-9.20.1
@@ -11,8 +11,6 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://p7zip.sourceforge.net/
 COMMENT=	File archiver with high compression
 LICENSE=	gnu-lgpl-v2.1 AND unrar-license
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake

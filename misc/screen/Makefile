@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2014/08/27 16:14:27 richard Exp $
+# $NetBSD: Makefile,v 1.90 2014/10/09 14:06:43 wiz Exp $
 
 DISTNAME=	screen-4.2.1
 #PKGREVISION=
@@ -9,8 +9,6 @@ MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.gnu.org/software/screen/screen.html
 COMMENT=	Multi-screen window manager
 LICENSE=	gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "options.mk"
 

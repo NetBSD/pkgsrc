@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2014/06/07 08:06:01 obache Exp $
+# $NetBSD: Makefile,v 1.68 2014/10/09 14:06:05 wiz Exp $
 #
 # NOTE:
 # When updating this package, a change in the minor (4.n -> 4.(n+1))
@@ -19,8 +19,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.oracle.com/database/berkeley-db/db/index.html
 COMMENT=	Berkeley DB version 4 from Oracle
 LICENSE=	sleepycat-public
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

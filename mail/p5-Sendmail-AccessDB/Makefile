@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/05/29 23:36:51 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2014/10/09 14:06:40 wiz Exp $
 
 DISTNAME=	Sendmail-AccessDB-0.09
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,6 @@ HOMEPAGE=	http://search.cpan.org/dist/Sendmail-AccessDB/
 COMMENT=	Perl5 module for manipulating the sendmail accessdb
 
 DEPENDS+=	p5-BerkeleyDB-[0-9]*:../../databases/p5-BerkeleyDB
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Sendmail/AccessDB/.packlist
 

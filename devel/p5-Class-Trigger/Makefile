@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/10/09 13:44:38 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2014/10/09 14:06:13 wiz Exp $
 
 DISTNAME=	Class-Trigger-0.14
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Class-Trigger/
 COMMENT=	Mixin to add/call inheritable triggers
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-IO-stringy>=0.02:../../devel/p5-IO-stringy
 

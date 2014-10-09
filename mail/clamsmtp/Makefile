@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2013/10/09 14:37:50 taca Exp $
+# $NetBSD: Makefile,v 1.45 2014/10/09 14:06:38 wiz Exp $
 
 DISTNAME=		clamsmtp-1.10
 #PKGREVISION=		1
@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://thewalter.net/stef/software/clamsmtp/
 COMMENT=		SMTP filter that allows you to check for viruses
 LICENSE=		modified-bsd
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 RCD_SCRIPTS=		clamsmtpd

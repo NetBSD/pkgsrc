@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/05/29 23:36:02 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/09 14:06:22 wiz Exp $
 #
 
 DISTNAME=	Log-Report-Optional-1.00
@@ -13,8 +13,6 @@ COMMENT=	Log::Report or ::Minimal
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-String-Print>=0.13:../../devel/p5-String-Print
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Log/Report/Optional/.packlist
 #PERL5_MODULE_TYPE=	Module::Install::Bundled

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/09/11 19:46:58 asau Exp $
+# $NetBSD: Makefile,v 1.15 2014/10/09 14:05:53 wiz Exp $
 #
 
 DISTNAME=	nomarch-1.4
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE:=utils/compress/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rus.members.beeb.net/nomarch.html
 COMMENT=	Free replacement for the arc program
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 MAKE_FLAGS+=	PREFIX=${PREFIX:Q}
 MAKE_FLAGS+=	CC=${CC:Q}
