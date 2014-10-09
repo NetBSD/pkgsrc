@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.19 2013/11/01 11:30:22 jaapb Exp $
+# $NetBSD: Makefile,v 1.20 2014/10/09 21:42:03 jaapb Exp $
 #
 
-DISTNAME=	camlp5-6.11
-PKGREVISION=	1
+DISTNAME=	camlp5-6.12
+PKGNAME=	${DISTNAME} # to avoid being called ocaml-camlp5
 CATEGORIES=	lang
-MASTER_SITES=	http://pauillac.inria.fr/~ddr/camlp5/distrib/src/
+MASTER_SITES=	http://camlp5.gforge.inria.fr/distrib/src/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tonio@NetBSD.org
-HOMEPAGE=	http://pauillac.inria.fr/~ddr/camlp5/
+HOMEPAGE=	http://camlp5.gforge.inria.fr/
 COMMENT=	Camlp5 is a preprocessor-pretty-printer of ocaml
 LICENSE=	modified-bsd
 
@@ -22,22 +22,19 @@ CONFIGURE_ARGS+=	--libdir ${PREFIX}/lib/ocaml
 
 REPLACE_SH=	tools/*.sh meta/*.sh ocaml_src/tools/*.sh compile/*.sh
 
-INSTALLATION_DIRS=	lib/ocaml/site-lib/camlp5
+INSTALLATION_DIRS+=	${OCAML_SITELIBDIR}/camlp5
 
 .include "../../mk/bsd.prefs.mk"
+.include "../../mk/ocaml.mk"
 
-.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
-    (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "x86_64")
+.if (${OCAML_USE_OPT_COMPILER} == "yes")
 BUILD_TARGET=	world.opt
-PLIST_SRC+=	${PKGDIR}/PLIST.opt
 .else
 BUILD_TARGET=	world
 .endif
-PLIST_SRC+=	${PKGDIR}/PLIST
 
 post-install:
 	cd ${WRKSRC}/etc && \
-	${INSTALL_DATA} META ${DESTDIR}${PREFIX}/lib/ocaml/site-lib/camlp5
+	${INSTALL_DATA} META ${DESTDIR}${PREFIX}/${OCAML_SITELIBDIR}/camlp5
 
-.include "../../lang/ocaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
