@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.872 2014/10/09 13:44:53 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.873 2014/10/09 13:54:47 wiz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4346,12 +4346,6 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 "These variables are used to control which files may be mirrored on FTP",
 "servers or CD-ROM collections. They are not intended to mark packages",
 "whose only MASTER_SITES are on ftp.NetBSD.org.");
-			}
-		},
-
-		SVR4PkgName => sub {
-			if ($value =~ regex_unresolved) {
-			} elsif (length($value) > 5) {
 			}
 		},
 
