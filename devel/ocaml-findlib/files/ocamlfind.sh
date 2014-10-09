@@ -1,10 +1,10 @@
 #!@SH@
 
-# $NetBSD: ocamlfind.sh,v 1.2 2014/04/13 10:39:01 hiramatsu Exp $
+# $NetBSD: ocamlfind.sh,v 1.3 2014/10/09 20:53:15 jaapb Exp $
 
-args="$@"
-case "$args" in
+case "$@" in
 *install*)
+	args="$@"
 	install_args=
 	case "$args" in
 	*-destdir*) ;;
@@ -19,8 +19,10 @@ case "$args" in
 		;;
 	esac
 	args="${args%%install*}install ${install_args}${args##*install}"
+	exec "@OCAML_FINDLIB_PREFIX@/bin/`basename $0`" ${args}
 	;;
-*) ;;
+*)
+	exec "@OCAML_FINDLIB_PREFIX@/bin/`basename $0`" "$@"
+	;;
 esac
 
-exec "@OCAML_FINDLIB_PREFIX@/bin/`basename $0`" ${args}
