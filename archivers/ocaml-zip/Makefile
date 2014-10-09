@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.9 2014/01/09 14:27:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2014/10/09 19:14:03 jaapb Exp $
 #
 
 PKGNAME=	ocaml-zip-${VERSION}
 DISTNAME=	camlzip-${VERSION}
 VERSION=	1.05
+PKGREVISION=	2
 CATEGORIES=	archivers
 MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/1037/
 LICENSE=	gnu-lgpl-v2.1
 
-MAINTAINER=	jaapb@kerguelen.org
+MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	http://forge.ocamlcore.org/projects/camlzip/
 COMMENT=	OCaml library to manipulate ZIP/GZIP/JAR archives
 
