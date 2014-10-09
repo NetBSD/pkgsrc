@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2014/10/09 13:44:55 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2014/10/09 14:06:55 wiz Exp $
 
 DISTNAME=	Digest-MD5-2.53
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Digest-MD5/
 COMMENT=	Perl5 extension interface for MD5 algorithm
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	{perl>=5.7.3,p5-Digest>=1.00}:../../security/p5-Digest
 

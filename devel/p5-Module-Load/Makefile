@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/10/09 13:44:43 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2014/10/09 14:06:22 wiz Exp $
 
 DISTNAME=	Module-Load-0.32
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Module-Load/
 COMMENT=	Perl5 module to runtime require of both modules and files
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Module/Load/.packlist
 

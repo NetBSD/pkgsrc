@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/10/09 13:44:55 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2014/10/09 14:06:54 wiz Exp $
 #
 
 DISTNAME=		Crypt-Twofish-2.17
@@ -12,7 +12,6 @@ HOMEPAGE=		http://search.cpan.org/dist/Crypt-Twofish/
 COMMENT=		Perl5 module for the Twofish symmetric key algorithm
 LICENSE=		${PERL5_LICENSE}
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_TOOLS+=		perl
 
 PERL5_PACKLIST=		auto/Crypt/Twofish/.packlist

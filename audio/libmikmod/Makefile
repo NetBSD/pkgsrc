@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2014/03/31 08:34:12 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2014/10/09 14:05:56 wiz Exp $
 
 DISTNAME=	libmikmod-3.3.6
 CATEGORIES=	audio
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mikmod.sourceforge.net/
 COMMENT=	MikMod Sound Library
 LICENSE=	gnu-lgpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		autoconf gmake makeinfo
 USE_LANGUAGES=		c99

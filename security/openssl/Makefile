@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.198 2014/10/09 13:44:53 wiz Exp $
+# $NetBSD: Makefile,v 1.199 2014/10/09 14:06:52 wiz Exp $
 
 DISTNAME=	openssl-1.0.1i
 MASTER_SITES=	http://ftp.openssl.org/source/
@@ -12,8 +12,6 @@ LICENSE=	openssl
 CONFLICTS=	SSLeay-[0-9]* ssleay-[0-9]*
 
 CRYPTO=		yes
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BUILD_DEPENDS+=	{p5-Perl4-CoreLibs-[0-9]*,perl<5.16}:../../devel/p5-Perl4-CoreLibs
 

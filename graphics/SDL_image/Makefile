@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2014/10/07 16:47:26 adam Exp $
+# $NetBSD: Makefile,v 1.48 2014/10/09 14:06:34 wiz Exp $
 
 DISTNAME=	SDL_image-1.2.12
 PKGREVISION=	5
@@ -11,8 +11,6 @@ COMMENT=	Load images as SDL surfaces
 LICENSE=	zlib
 
 CONFLICTS=		SDL-image-[0-9]*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES

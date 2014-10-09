@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2010/05/19 18:17:27 drochner Exp $
-
-PKG_INSTALLATION_TYPES=	overwrite
+# $NetBSD: Makefile,v 1.34 2014/10/09 14:05:56 wiz Exp $
 
 .include "Makefile.common"
 

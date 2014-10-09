@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/05/29 23:36:58 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2014/10/09 14:06:42 wiz Exp $
 #
 
 DISTNAME=		mirmon-2.8
@@ -9,8 +9,6 @@ MASTER_SITES=		http://www.staff.science.uu.nl/~penni101/mirmon/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.staff.science.uu.nl/~penni101/mirmon/
 COMMENT=		Monitor the state of mirror servers
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 REPLACE_PERL+=		mirmon
 USE_TOOLS+=		perl:run pod2man

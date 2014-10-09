@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2013/10/10 08:56:34 apb Exp $
+# $NetBSD: Makefile,v 1.26 2014/10/09 14:06:32 wiz Exp $
 #
 
 DISTNAME=	bvi-1.3.2.src
@@ -15,8 +15,6 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=	YES
 LIBS+=		${BUILDLINK_LDADD.termcap}
 MAKE_ENV+=	SHELL=${SH:Q}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"

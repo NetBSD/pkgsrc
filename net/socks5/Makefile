@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2012/10/23 17:19:09 asau Exp $
+# $NetBSD: Makefile,v 1.50 2014/10/09 14:06:48 wiz Exp $
 
 DISTNAME=	socks5-v1_0r2
 PKGNAME=	socks5-1.0.2
@@ -31,8 +31,6 @@ CONFLICTS=	socks4-[0-9]*
 #			--with-default-server=socks.mydomain.com \
 #			--with-syslog-facility=LOG_AUTH \
 #			--with-passwd
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/socks5-v1.0r2
 GNU_CONFIGURE=		yes

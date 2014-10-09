@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2014/10/09 13:44:48 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2014/10/09 14:06:39 wiz Exp $
 
 DISTNAME=	MIME-tools-5.505
 PKGNAME=	p5-${DISTNAME}
@@ -19,8 +19,6 @@ DEPENDS+=	p5-MailTools-[0-9]*:../../mail/p5-MailTools
 DEPENDS+=	p5-Convert-BinHex-[0-9]*:../../converters/p5-Convert-BinHex
 # actually, test dependency
 BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/MIME/Tools/.packlist

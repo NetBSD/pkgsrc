@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/10/08 12:42:23 asau Exp $
+# $NetBSD: Makefile,v 1.33 2014/10/09 14:07:08 wiz Exp $
 #
 
 DISTNAME=	pwm-20060517
@@ -10,8 +10,6 @@ MASTER_SITES=	http://modeemi.fi/~tuomov/pwm/dl/
 MAINTAINER=	salo@NetBSD.org
 HOMEPAGE=	http://modeemi.fi/~tuomov/ion/pwm.html
 COMMENT=	Window manager that frames multiple client windows in a single frame
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CONFLICTS+=	ion<=20040729nb2
 

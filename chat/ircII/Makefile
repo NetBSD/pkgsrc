@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2014/09/08 09:28:37 jperkin Exp $
+# $NetBSD: Makefile,v 1.69 2014/10/09 14:06:02 wiz Exp $
 
 DISTNAME=		ircii-${VERS}
 PKGNAME=		ircII-${VERS}
@@ -12,8 +12,6 @@ COMMENT=		'Internet Relay Chat' and 'Internet Citizens Band' Client
 LICENSE=		modified-bsd
 
 CONFLICTS=		blackened-[0-9]*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 VERS=			20140831
 PLIST_SUBST+=	VERS=${VERS:Q}

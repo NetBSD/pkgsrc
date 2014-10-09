@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/09/11 22:37:14 asau Exp $
+# $NetBSD: Makefile,v 1.14 2014/10/09 14:06:00 wiz Exp $
 #
 
 DISTNAME=	randread-0.2
@@ -11,8 +11,6 @@ COMMENT=	Program to help benchmark random disk read performance
 LICENSE=	public-domain
 
 ONLY_FOR_PLATFORM=	DragonFly-*-* FreeBSD-*-* NetBSD-*-* OpenBSD-*-*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BUILD_TARGET=	randread
 WRKSRC=		${WRKDIR}/${DISTNAME}

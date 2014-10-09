@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/05/29 23:36:12 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2014/10/09 14:06:24 wiz Exp $
 #
 
 DISTNAME=	Perl-PrereqScanner-1.016
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Perl-PrereqScanner/
 COMMENT=	Tool to scan your Perl code for its prerequisites
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	{perl>=5.16.0,p5-CPAN-Meta-Requirements>=2.120.630}:../../devel/p5-CPAN-Meta-Requirements
 DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils

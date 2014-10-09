@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2014/08/31 10:24:02 wiz Exp $
+# $NetBSD: Makefile.common,v 1.9 2014/10/09 14:06:08 wiz Exp $
 #
 # used by devel/gettext/Makefile
 # used by devel/gettext-asprintf/Makefile
@@ -15,8 +15,6 @@ HOMEPAGE=	http://www.gnu.org/software/gettext/gettext.html
 LICENSE=	gnu-gpl-v3
 
 CONFLICTS=	gettext<=0.10.35
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

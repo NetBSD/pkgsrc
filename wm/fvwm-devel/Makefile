@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2014/05/29 23:37:55 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2014/10/09 14:07:08 wiz Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
 PKGREVISION=	9
@@ -13,8 +13,6 @@ LICENSE=	gnu-gpl-v2
 
 CONFLICTS=	fvwm1-[0-9]* fvwm2-[0-9]*
 FVWM_VER=	2.5.31
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES

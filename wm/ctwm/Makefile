@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2014/07/18 10:40:48 obache Exp $
+# $NetBSD: Makefile,v 1.34 2014/10/09 14:07:08 wiz Exp $
 #
 
 DISTNAME=	ctwm-3.8.2
@@ -10,8 +10,6 @@ MAINTAINER=	rhialto@falu.nl
 HOMEPAGE=	http://ctwm.org/
 COMMENT=	Window manager with support for multiple virtual screens and Gnome 1.x
 LICENSE=	mit
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_IMAKE=	YES
 

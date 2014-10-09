@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/29 05:06:34 asau Exp $
+# $NetBSD: Makefile,v 1.8 2014/10/09 14:07:14 wiz Exp $
 #
 
 DISTNAME=		libXevie-1.0.3
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X Event Interceptor Library
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

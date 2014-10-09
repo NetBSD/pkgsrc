@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/10/09 13:44:57 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2014/10/09 14:07:02 wiz Exp $
 #
 
 DISTNAME=		Convert-ASCII-Armour-1.4
@@ -10,8 +10,6 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Convert/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Convert-ASCII-Armour/
 COMMENT=		Perl5 module to convert binary octets into ASCII armour
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=		{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
 DEPENDS+=		{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2014/05/29 23:37:05 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2014/10/09 14:06:45 wiz Exp $
 #
 
 DISTNAME=	ntp-dev-4.2.7p410
@@ -10,8 +10,6 @@ MASTER_SITES=	http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-dev/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ntp.org/
 COMMENT=	Network Time Protocol Version 4
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CONFLICTS+=	openntpd-[0-9]*
 

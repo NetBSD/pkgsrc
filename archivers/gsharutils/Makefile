@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2014/09/13 10:53:04 shattered Exp $
+# $NetBSD: Makefile,v 1.52 2014/10/09 14:05:51 wiz Exp $
 
 DISTNAME=	sharutils-4.13.5
 PKGNAME=	g${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/sharutils/sharutils.html
 COMMENT=	Allow packing and unpacking of shell archives
 LICENSE=	gnu-gpl-v3
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 AUTO_MKDIRS=		yes
 

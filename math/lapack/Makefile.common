@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2014/02/28 09:41:22 adam Exp $
+# $NetBSD: Makefile.common,v 1.2 2014/10/09 14:06:41 wiz Exp $
 # used by math/blas/Makefile
 # used by math/lapack/Makefile
 
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.netlib.org/lapack/
 LICENSE=	modified-bsd
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c fortran
 USE_LIBTOOL=		yes

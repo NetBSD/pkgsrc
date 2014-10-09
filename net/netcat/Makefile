@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2013/04/10 08:00:10 obache Exp $
+# $NetBSD: Makefile,v 1.38 2014/10/09 14:06:45 wiz Exp $
 
 DISTNAME=	nc110
 PKGNAME=	netcat-1.10
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://nc110.sourceforge.net/
 COMMENT=	Read and write data across network connections
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}
 MAKE_ENV+=	DFLAGS="-DGAPING_SECURITY_HOLE -DTELNET"
