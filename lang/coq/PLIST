@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.14 2013/10/30 00:21:49 minskim Exp $
+@comment $NetBSD: PLIST,v 1.15 2014/10/09 22:19:01 jaapb Exp $
 bin/coq-tex
 bin/coq_makefile
 bin/coqc
 bin/coqchk
-${PLIST.opt}bin/coqchk.opt
+${PLIST.ocaml-opt}bin/coqchk.opt
 bin/coqdep
 bin/coqdoc
 ${PLIST.coqide}bin/coqide
@@ -11,7 +11,7 @@ ${PLIST.coqide}bin/coqide.${COQIDE_TYPE}
 bin/coqmktop
 bin/coqtop
 bin/coqtop.byte
-${PLIST.opt}bin/coqtop.opt
+${PLIST.ocaml-opt}bin/coqtop.opt
 bin/coqwc
 bin/gallina
 lib/coq/config/coq_config.cmi
@@ -184,7 +184,7 @@ lib/coq/parsing/tactic_printer.cmi
 lib/coq/parsing/tok.cmi
 lib/coq/plugins/cc/cc_plugin.a
 lib/coq/plugins/cc/cc_plugin.cma
-${PLIST.opt}lib/coq/plugins/cc/cc_plugin.cmxa
+${PLIST.ocaml-opt}lib/coq/plugins/cc/cc_plugin.cmxa
 ${PLIST.natdynlink}lib/coq/plugins/cc/cc_plugin.cmxs
 lib/coq/plugins/cc/cc_plugin_mod.cmi
 lib/coq/plugins/cc/ccalgo.cmi
@@ -196,7 +196,7 @@ lib/coq/plugins/decl_mode/decl_interp.cmi
 lib/coq/plugins/decl_mode/decl_mode.cmi
 lib/coq/plugins/decl_mode/decl_mode_plugin.a
 lib/coq/plugins/decl_mode/decl_mode_plugin.cma
-${PLIST.opt}lib/coq/plugins/decl_mode/decl_mode_plugin.cmxa
+${PLIST.ocaml-opt}lib/coq/plugins/decl_mode/decl_mode_plugin.cmxa
 ${PLIST.natdynlink}lib/coq/plugins/decl_mode/decl_mode_plugin.cmxs
 lib/coq/plugins/decl_mode/decl_mode_plugin_mod.cmi
 lib/coq/plugins/decl_mode/decl_proof_instr.cmi
