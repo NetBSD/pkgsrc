@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2012/09/16 11:34:45 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/10/09 19:48:40 jaapb Exp $
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/sqlite3
 lib/ocaml/site-lib/sqlite3/META
 lib/ocaml/site-lib/sqlite3/dllsqlite3_stubs.so
 lib/ocaml/site-lib/sqlite3/libsqlite3_stubs.a
-${PLIST.opt}lib/ocaml/site-lib/sqlite3/sqlite3.a
+${PLIST.ocaml-opt}lib/ocaml/site-lib/sqlite3/sqlite3.a
 lib/ocaml/site-lib/sqlite3/sqlite3.cma
 lib/ocaml/site-lib/sqlite3/sqlite3.cmi
-${PLIST.opt}lib/ocaml/site-lib/sqlite3/sqlite3.cmx
-${PLIST.opt}lib/ocaml/site-lib/sqlite3/sqlite3.cmxa
-${PLIST.opt}lib/ocaml/site-lib/sqlite3/sqlite3.cmxs
+${PLIST.ocaml-opt}lib/ocaml/site-lib/sqlite3/sqlite3.cmx
+${PLIST.ocaml-opt}lib/ocaml/site-lib/sqlite3/sqlite3.cmxa
+${PLIST.ocaml-opt}lib/ocaml/site-lib/sqlite3/sqlite3.cmxs
 lib/ocaml/site-lib/sqlite3/sqlite3.mli
 @exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/sqlite3
