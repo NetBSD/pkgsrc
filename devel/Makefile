@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1989 2014/10/03 16:15:07 khorben Exp $
+# $NetBSD: Makefile,v 1.1990 2014/10/09 09:11:08 khorben Exp $
 #
 
 COMMENT=	Development utilities
@@ -1592,6 +1592,7 @@ SUBDIR+=	py-pip
 SUBDIR+=	py-polib
 SUBDIR+=	py-pqueue
 SUBDIR+=	py-pretend
+SUBDIR+=	py-protobuf
 SUBDIR+=	py-py
 SUBDIR+=	py-py2app
 SUBDIR+=	py-pyev
