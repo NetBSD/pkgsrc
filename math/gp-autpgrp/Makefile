@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2012/09/11 23:04:21 asau Exp $
+# $NetBSD: Makefile,v 1.14 2014/10/09 13:44:49 wiz Exp $
 #
 
 DISTNAME=	autpgrp-1.1
 PKGNAME=	gp-autpgrp-1.1
 PKGREVISION=	1
-SVR4_PKGNAME=	gpapg
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/share/
 EXTRACT_SUFX=	.zoo

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.69 2012/10/31 11:17:21 asau Exp $
+# $NetBSD: Makefile,v 1.70 2014/10/09 13:44:36 wiz Exp $
 #
 
 DISTNAME=	slang-1.4.9
 PKGNAME=	lib${DISTNAME}
-SVR4_PKGNAME=	lslan
 PKGREVISION=	7
 CATEGORIES=	devel
 MASTER_SITES=	ftp://space.mit.edu/pub/davis/slang/v1.4/ \
