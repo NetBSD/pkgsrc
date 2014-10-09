@@ -1,22 +1,22 @@
-# $NetBSD: buildlink3.mk,v 1.38 2014/10/07 16:47:15 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.39 2014/10/09 22:24:15 jaapb Exp $
 
-BUILDLINK_TREE+=	lablgtk
+BUILDLINK_TREE+=	ocaml-lablgtk
 
-.if !defined(LABLGTK_BUILDLINK3_MK)
-LABLGTK_BUILDLINK3_MK:=
+.if !defined(OCAML_LABLGTK_BUILDLINK3_MK)
+OCAML_LABLGTK_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.lablgtk+=	lablgtk>=2.6.0nb3
-BUILDLINK_ABI_DEPENDS.lablgtk+=	lablgtk>=2.18.0nb5
-BUILDLINK_PKGSRCDIR.lablgtk?=	../../x11/lablgtk
+BUILDLINK_API_DEPENDS.ocaml-lablgtk+=	ocaml-lablgtk>=2.6.0nb3
+BUILDLINK_ABI_DEPENDS.ocaml-lablgtk+=	ocaml-lablgtk>=2.18.2
+BUILDLINK_PKGSRCDIR.ocaml-lablgtk?=	../../x11/lablgtk
 
 # gnome-panel must be exposed if and only if we built with it
-pkgbase := lablgtk
+pkgbase := ocaml-lablgtk
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.lablgtk:Mgnomecanvas)
+.if !empty(PKG_BUILD_OPTIONS.ocaml-lablgtk:Mgnomecanvas)
 .  include "../../x11/gnome-panel/buildlink3.mk"
 .endif
 
-.endif # LABLGTK_BUILDLINK3_MK
+.endif # OCAML_LABLGTK_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-lablgtk
+BUILDLINK_TREE+=	-ocaml-lablgtk
