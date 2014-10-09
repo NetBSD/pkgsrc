@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3836 2014/10/09 20:25:40 jaapb Exp $
+$NetBSD: CHANGES-2014,v 1.3837 2014/10/09 20:40:07 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4842,3 +4842,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/ocaml-mysql to 1.1.2 [jaapb 2014-10-09]
 	Added devel/ocaml-cmdliner version 0.9.4 [jaapb 2014-10-09]
 	Updated devel/ocaml-deriving-ocsigen to 0.7 [jaapb 2014-10-09]
+	Added lang/camlp4 version 4.02.0+1 [jaapb 2014-10-09]
