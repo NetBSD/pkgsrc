@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3828 2014/10/09 13:55:10 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3829 2014/10/09 14:49:19 martin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4832,3 +4832,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-List-AllUtils to 0.09 [wiz 2014-10-09]
 	Updated sysutils/etcmanage to 0.9.1 [gdt 2014-10-09]
 	Updated pkgtools/pkglint to 4.147 [wiz 2014-10-09]
+	Updated multimedia/gmplayer to 1.1.1nb20 [martin 2014-10-09]
