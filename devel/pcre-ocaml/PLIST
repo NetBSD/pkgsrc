@@ -1,27 +1,21 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:49:02 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/10/09 19:39:24 jaapb Exp $
 lib/ocaml/site-lib/pcre/META
 lib/ocaml/site-lib/pcre/dllpcre_stubs.so
 lib/ocaml/site-lib/pcre/libpcre_stubs.a
+${PLIST.ocaml-opt}lib/ocaml/site-lib/pcre/pcre.a
 lib/ocaml/site-lib/pcre/pcre.cma
+${PLIST.ocaml-opt}lib/ocaml/site-lib/pcre/pcre.cmx
+${PLIST.ocaml-opt}lib/ocaml/site-lib/pcre/pcre.cmxa
+${PLIST.ocaml-opt}lib/ocaml/site-lib/pcre/pcre.cmxs
 lib/ocaml/site-lib/pcre/pcre.cmi
 lib/ocaml/site-lib/pcre/pcre.mli
-share/examples/pcre-ocaml/OMakefile
-share/examples/pcre-ocaml/cloc/Makefile
-share/examples/pcre-ocaml/cloc/OMakefile
-share/examples/pcre-ocaml/cloc/README
+share/examples/pcre-ocaml/cloc/README.md
 share/examples/pcre-ocaml/cloc/cloc.ml
-share/examples/pcre-ocaml/cloc/make_win32_cloc.bat
-share/examples/pcre-ocaml/count_hash/Makefile
-share/examples/pcre-ocaml/count_hash/OMakefile
-share/examples/pcre-ocaml/count_hash/README
+share/examples/pcre-ocaml/count_hash/README.md
 share/examples/pcre-ocaml/count_hash/count_hash.ml
-share/examples/pcre-ocaml/pcregrep/Makefile
-share/examples/pcre-ocaml/pcregrep/OMakefile
-share/examples/pcre-ocaml/pcregrep/README
+share/examples/pcre-ocaml/pcregrep/README.md
 share/examples/pcre-ocaml/pcregrep/pcregrep.ml
-share/examples/pcre-ocaml/subst/Makefile
-share/examples/pcre-ocaml/subst/OMakefile
-share/examples/pcre-ocaml/subst/README
+share/examples/pcre-ocaml/subst/README.md
 share/examples/pcre-ocaml/subst/subst.ml
 @exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/pcre
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/pcre
