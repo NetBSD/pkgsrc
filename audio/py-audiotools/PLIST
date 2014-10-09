@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/01/20 11:54:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/10/09 12:44:36 adam Exp $
 bin/audiotools-config
 bin/cd2track
 bin/cdinfo
@@ -24,6 +24,8 @@ ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/audiotools/__init__.py
 ${PYSITELIB}/audiotools/__init__.pyc
 ${PYSITELIB}/audiotools/__init__.pyo
+${PYSITELIB}/audiotools/_accuraterip.so
+${PYSITELIB}/audiotools/_ogg.so
 ${PYSITELIB}/audiotools/accuraterip.py
 ${PYSITELIB}/audiotools/accuraterip.pyc
 ${PYSITELIB}/audiotools/accuraterip.pyo
@@ -38,9 +40,15 @@ ${PYSITELIB}/audiotools/au.pyc
 ${PYSITELIB}/audiotools/au.pyo
 ${PYSITELIB}/audiotools/bitstream.so
 ${PYSITELIB}/audiotools/cdio.so
-${PYSITELIB}/audiotools/cue.py
-${PYSITELIB}/audiotools/cue.pyc
-${PYSITELIB}/audiotools/cue.pyo
+${PYSITELIB}/audiotools/cue/__init__.py
+${PYSITELIB}/audiotools/cue/__init__.pyc
+${PYSITELIB}/audiotools/cue/__init__.pyo
+${PYSITELIB}/audiotools/cue/tokrules.py
+${PYSITELIB}/audiotools/cue/tokrules.pyc
+${PYSITELIB}/audiotools/cue/tokrules.pyo
+${PYSITELIB}/audiotools/cue/yaccrules.py
+${PYSITELIB}/audiotools/cue/yaccrules.pyc
+${PYSITELIB}/audiotools/cue/yaccrules.pyo
 ${PYSITELIB}/audiotools/decoders.so
 ${PYSITELIB}/audiotools/delta.py
 ${PYSITELIB}/audiotools/delta.pyc
@@ -88,6 +96,15 @@ ${PYSITELIB}/audiotools/pcmconverter.so
 ${PYSITELIB}/audiotools/player.py
 ${PYSITELIB}/audiotools/player.pyc
 ${PYSITELIB}/audiotools/player.pyo
+${PYSITELIB}/audiotools/ply/__init__.py
+${PYSITELIB}/audiotools/ply/__init__.pyc
+${PYSITELIB}/audiotools/ply/__init__.pyo
+${PYSITELIB}/audiotools/ply/lex.py
+${PYSITELIB}/audiotools/ply/lex.pyc
+${PYSITELIB}/audiotools/ply/lex.pyo
+${PYSITELIB}/audiotools/ply/yacc.py
+${PYSITELIB}/audiotools/ply/yacc.pyc
+${PYSITELIB}/audiotools/ply/yacc.pyo
 ${PYSITELIB}/audiotools/py_decoders/__init__.py
 ${PYSITELIB}/audiotools/py_decoders/__init__.pyc
 ${PYSITELIB}/audiotools/py_decoders/__init__.pyo
@@ -131,16 +148,21 @@ ${PYSITELIB}/audiotools/shn.pyo
 ${PYSITELIB}/audiotools/text.py
 ${PYSITELIB}/audiotools/text.pyc
 ${PYSITELIB}/audiotools/text.pyo
-${PYSITELIB}/audiotools/toc.py
-${PYSITELIB}/audiotools/toc.pyc
-${PYSITELIB}/audiotools/toc.pyo
+${PYSITELIB}/audiotools/toc/__init__.py
+${PYSITELIB}/audiotools/toc/__init__.pyc
+${PYSITELIB}/audiotools/toc/__init__.pyo
+${PYSITELIB}/audiotools/toc/tokrules.py
+${PYSITELIB}/audiotools/toc/tokrules.pyc
+${PYSITELIB}/audiotools/toc/tokrules.pyo
+${PYSITELIB}/audiotools/toc/yaccrules.py
+${PYSITELIB}/audiotools/toc/yaccrules.pyc
+${PYSITELIB}/audiotools/toc/yaccrules.pyo
 ${PYSITELIB}/audiotools/tta.py
 ${PYSITELIB}/audiotools/tta.pyc
 ${PYSITELIB}/audiotools/tta.pyo
 ${PYSITELIB}/audiotools/ui.py
 ${PYSITELIB}/audiotools/ui.pyc
 ${PYSITELIB}/audiotools/ui.pyo
-${PYSITELIB}/audiotools/verify.so
 ${PYSITELIB}/audiotools/vorbis.py
 ${PYSITELIB}/audiotools/vorbis.pyc
 ${PYSITELIB}/audiotools/vorbis.pyo
