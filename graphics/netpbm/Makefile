@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.194 2014/09/29 18:16:41 gson Exp $
+# $NetBSD: Makefile,v 1.195 2014/10/09 18:58:18 gson Exp $
 
 DISTNAME=	netpbm-10.67.05
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	#
 # manually created from svn checkout of
@@ -81,6 +81,10 @@ post-extract:
 	${ECHO} "CFLAGS_SHLIB = -fPIC" >> ${WRKSRC}/config.mk
 	${ECHO} "JPEGLIB = ${BUILDLINK_PREFIX.jpeg}/lib/libjpeg.so" >> ${WRKSRC}/config.mk
 	${ECHO} "JPEGHDR_DIR = ${BUILDLINK_PREFIX.jpeg}/include" >> ${WRKSRC}/config.mk
+	${ECHO} "TIFFLIB = ${BUILDLINK_PREFIX.tiff}/lib/libtiff.so" >> ${WRKSRC}/config.mk
+	${ECHO} "TIFFHDR_DIR = ${BUILDLINK_PREFIX.tiff}/include" >> ${WRKSRC}/config.mk
+	${ECHO} "ZLIB = ${BUILDLINK_PREFIX.zlib}/lib/libz.so" >> ${WRKSRC}/config.mk
+	${ECHO} "ZHDR_DIR = ${BUILDLINK_PREFIX.zlib}/include" >> ${WRKSRC}/config.mk
 .if ${OPSYS} == "Darwin"
 	${ECHO} 'LDSHLIB=-dynamiclib -install_name $$(PREFIX)/lib/libnetpbm.$$(MAJ).dylib -compatibility_version $$(MAJ) -current_version $$(MAJ).$$(MIN)' >> ${WRKSRC}/config.mk
 .endif
@@ -101,6 +105,7 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/netpbm-userguide/*.3 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
 	${INSTALL_DATA} ${WRKDIR}/netpbm-userguide/*.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
