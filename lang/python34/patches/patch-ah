@@ -1,6 +1,8 @@
-$NetBSD: patch-ah,v 1.2 2014/05/09 09:19:06 wiz Exp $
+$NetBSD: patch-ah,v 1.3 2014/10/09 09:15:38 adam Exp $
+
 Ncurses will be used by devel/py-curses and devel/py-cursespanel.
 http://bugs.python.org/issue21457
+
 --- Modules/_cursesmodule.c.orig	2014-05-04 20:59:51.000000000 +0000
 +++ Modules/_cursesmodule.c
 @@ -484,17 +484,9 @@ Window_NoArg2TupleReturnFunction(getpary
