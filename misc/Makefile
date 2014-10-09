@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.439 2014/10/02 09:30:13 wiz Exp $
+# $NetBSD: Makefile,v 1.440 2014/10/09 15:24:08 adam Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -160,6 +160,7 @@ SUBDIR+=	latin-words-bin
 SUBDIR+=	less
 SUBDIR+=	libcarddav
 SUBDIR+=	libcdio
+SUBDIR+=	libcdio-paranoia
 SUBDIR+=	libkdeedu
 SUBDIR+=	libkgeomap
 SUBDIR+=	libkkc-data
