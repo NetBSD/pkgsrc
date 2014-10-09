@@ -3483,9 +3483,6 @@ mostly historical and has no further meaning.
     is, it starts with a letter or digit, and contains only letters, digits,
     dashes, underscores, dots and plus signs.
 
-    unique on a SVR4 system. The default is PKGNAME, which may be shortened
-    is limited to 5 characters.
-
   * CATEGORIES is a list of categories which the package fits in. You can
     choose any of the top-level directories of pkgsrc for it.
 
