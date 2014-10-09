@@ -1,9 +1,9 @@
-$NetBSD: patch-configure,v 1.1 2013/07/06 10:55:38 jaapb Exp $
+$NetBSD: patch-configure,v 1.2 2014/10/09 20:53:15 jaapb Exp $
 
 Do not install dbm META file even if dbm is present
---- configure.orig	2013-06-11 07:27:39.000000000 +0000
+--- configure.orig	2014-09-16 11:21:45.000000000 +0000
 +++ configure
-@@ -469,13 +469,13 @@ fi
+@@ -479,13 +479,13 @@ fi
  
  # dbm?
  
@@ -12,14 +12,14 @@ Do not install dbm META file even if dbm is present
 -    ldbm="dbm"
 -else
 -    echo "dbm: not present (normal since OCaml-4.00)"
-+# if [ -f "${ocaml_core_stdlib}/dbm.cmi" ]; then
-+#     echo "dbm: found"
-+#     ldbm="dbm"
-+# else
-+#     echo "dbm: not present (normal since OCaml-4.00)"
++#if [ -f "${ocaml_core_stdlib}/dbm.cmi" ]; then
++#    echo "dbm: found"
++#    ldbm="dbm"
++#else
++#    echo "dbm: not present (normal since OCaml-4.00)"
      ldbm=""
 -fi
-+# fi
++#fi
  
+ # bytes?
  
- # Generate the META files now.
