@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.13 2013/07/28 20:46:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2014/10/09 00:57:11 gdt Exp $
 info/guile-www.info
+share/guile/site/www/binary-ports
 share/guile/site/www/cgi
 share/guile/site/www/crlf
 share/guile/site/www/data/http-status
 share/guile/site/www/data/mime-types
 share/guile/site/www/http
+share/guile/site/www/mime-headers
+share/guile/site/www/mime-multipart
 share/guile/site/www/post
 share/guile/site/www/server-utils/answer
 share/guile/site/www/server-utils/big-dishing-loop
