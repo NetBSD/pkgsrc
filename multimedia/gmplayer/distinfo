@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.87 2014/07/29 15:25:19 wiz Exp $
+$NetBSD: distinfo,v 1.88 2014/10/09 14:48:51 martin Exp $
 
 SHA1 (mplayer/AlienMind-1.2.tar.bz2) = 34370da1e003e4accceae194a63483aa6eebc4dc
 RMD160 (mplayer/AlienMind-1.2.tar.bz2) = f3fda7d44a59f98097162f76d0a0d58840974998
@@ -68,6 +68,7 @@ SHA1 (patch-aa) = da461823d0731624de964323ab630f6e295be7b7
 SHA1 (patch-ae) = 286f5ac075ea4123a1a6276f97e02a4dda9b3e67
 SHA1 (patch-an) = a1d16ce7a4ff5a2071a7bac1b6836dc197b849e4
 SHA1 (patch-ffmpeg_libavutil_x86__cpu.h) = ea2c6e179840c7746930848b751b6fd1dcd67e90
+SHA1 (patch-gui_interface.c) = 25ada9d9af1e76ffa7b4b97ee07fa1f5250ac000
 SHA1 (patch-libao2_ao_sun.c) = ce7042b394b9b8c051597c734b70290c8bf0a8d5
 SHA1 (patch-libmpdemux_demux__gif.c) = 4efec4ea1fe395e24760530e532d3251c64a8fb8
 SHA1 (patch-libvo_vo__corevideo.h) = 2d0b1702363227363343a29060a7b027ce96b5bb
