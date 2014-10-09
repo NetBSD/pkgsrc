@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3848 2014/10/09 22:24:33 jaapb Exp $
+$NetBSD: CHANGES-2014,v 1.3849 2014/10/09 22:28:30 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4854,3 +4854,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/ocamlnet to 3.7.6 [jaapb 2014-10-09]
 	Updated lang/coq to 8.4pl4nb2 [jaapb 2014-10-09]
 	Updated x11/lablgtk to 2.18.2 [jaapb 2014-10-09]
+	Updated security/ocaml-cryptokit to 1.9 [jaapb 2014-10-09]
