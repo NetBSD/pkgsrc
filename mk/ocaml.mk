@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.1 2014/08/17 09:25:23 jaapb Exp $
+# $NetBSD: ocaml.mk,v 1.2 2014/10/09 19:37:21 jaapb Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 #
@@ -14,8 +14,10 @@
 # Package-settable variables:
 # OCAML_USE_FINDLIB
 # package uses findlib infrastructure
-# OCAML_USE_OASIS
+# OCAML_USE_OASIS [implies OCAML_USE_FINDLIB]
 # package uses oasis infrastructure
+# OASIS_BUILD_ARGS
+# arguments for oasis build
 # Set by this file:
 # OCAML_SITELIBDIR
 
@@ -29,7 +31,8 @@ BUILD_DEFS+=	OCAML_USE_OPT_COMPILER
 _VARGROUPS+=	ocaml
 _PKG_VARS.ocaml=	\
 	OCAML_USE_FINDLIB \
-	OCAML_USE_OASIS
+	OCAML_USE_OASIS \
+	OCAML_BUILD_ARGS
 _DEF_VARS.ocaml=	\
 	OCAML_USE_OPT_COMPILER
 _SYS_VARS.ocaml=	\
@@ -38,10 +41,13 @@ _SYS_VARS.ocaml=	\
 PKGNAME?=	ocaml-${DISTNAME}
 
 # Default value of OCAML_USE_FINDLIB
-OCAML_USE_FINDLIB?=	yes
+OCAML_USE_FINDLIB?=	no
 
 # Default value of OCAML_USE_OASIS
 OCAML_USE_OASIS?=	no
+
+# Default value of OASIS_BUILD_ARGS
+OASIS_BUILD_ARGS?=	# empty
 
 # Default value of OCAML_ENABLE_BINARY_COMPILER
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "x86_64") || \
@@ -52,21 +58,29 @@ OCAML_USE_OPT_COMPILER?=	yes
 OCAML_USE_OPT_COMPILER?=	no
 .endif
 
-# Value for OCAML_SITELIBDIR
-OCAML_SITELIBDIR=	lib/ocaml/site-lib
-
-.if ${OCAML_USE_FINDLIB} == "yes"
-.include "../../devel/ocaml-findlib/buildlink3.mk"
-INSTALLATION_DIRS+=	${OCAML_SITELIBDIR}
-.endif
-
 #
 # Configure stuff for OASIS
 #
 .if ${OCAML_USE_OASIS} == "yes"
+OCAML_USE_FINDLIB=	yes
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--destdir "${DESTDIR}"
 CONFIGURE_ARGS+=	--prefix "${PREFIX}"
+# Force use of native code compiler according to setting
+.if ${OCAML_USE_OPT_COMPILER} == "yes"
+CONFIGURE_ARGS+=	--override is_native true
+.else
+CONFIGURE_ARGS+=	--override is_native false
+.endif
+.endif
+
+# Value for OCAML_SITELIBDIR
+OCAML_SITELIBDIR=	lib/ocaml/site-lib
+PLIST_SUBST+=	OCAML_SITELIB=${OCAML_SITELIBDIR}
+
+.if ${OCAML_USE_FINDLIB} == "yes"
+.include "../../devel/ocaml-findlib/buildlink3.mk"
+INSTALLATION_DIRS+=	${OCAML_SITELIBDIR}
 .endif
 
 #
@@ -94,7 +108,7 @@ do-configure:
 # Redefine build target
 do-build:
 	${RUN} cd ${WRKSRC} && \
-		${SETENV} ${MAKE_ENV} ocaml setup.ml -build
+		${SETENV} ${MAKE_ENV} ocaml setup.ml -build ${OASIS_BUILD_ARGS}
 
 # Redefine install target
 do-install:
