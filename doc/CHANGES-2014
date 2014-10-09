@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3838 2014/10/09 20:53:33 jaapb Exp $
+$NetBSD: CHANGES-2014,v 1.3839 2014/10/09 21:07:14 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4844,3 +4844,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/ocaml-deriving-ocsigen to 0.7 [jaapb 2014-10-09]
 	Added lang/camlp4 version 4.02.0+1 [jaapb 2014-10-09]
 	Updated devel/ocaml-findlib to 1.5.3 [jaapb 2014-10-09]
+	Updated security/ocaml-ssl to 0.4.7 [jaapb 2014-10-09]
