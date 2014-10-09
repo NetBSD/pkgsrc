@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/05/29 23:36:20 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2014/10/09 14:06:28 wiz Exp $
 
 DISTNAME=	Term-Size-0.207
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Term-Size/
 COMMENT=	Perl extension for retrieving terminal size
 LICENSE=	gnu-gpl-v2 OR artistic
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Term/Size/.packlist
 

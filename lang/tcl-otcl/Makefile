@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/01/20 19:20:08 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2014/10/09 14:06:38 wiz Exp $
 
 DISTNAME=	otcl-src-1.14
 PKGNAME=	tcl-${DISTNAME:S/-src//}
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=otcl-tclcl/}
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://otcl-tclcl.sourceforge.net/otcl/
 COMMENT=	MIT Object Tcl
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

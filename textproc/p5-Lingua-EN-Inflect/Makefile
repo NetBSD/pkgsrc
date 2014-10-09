@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2014/10/09 13:44:57 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2014/10/09 14:07:03 wiz Exp $
 
 DISTNAME=	Lingua-EN-Inflect-1.895
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Lingua-EN-Inflect/
 COMMENT=	Perl module for inflection of english words and a/an selection
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 REPLACE_PERL+=	demo/demo*.pl
 

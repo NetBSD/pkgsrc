@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/08/09 18:15:18 riastradh Exp $
+# $NetBSD: Makefile,v 1.13 2014/10/09 14:06:44 wiz Exp $
 #
 
 DISTNAME=	bmon-2.0.1
@@ -9,8 +9,6 @@ MASTER_SITES=	http://people.suug.ch/~tgr/bmon/files/
 MAINTAINER=	hsaliak@gmail.com
 HOMEPAGE=	http://people.suug.ch/~tgr/bmon/
 COMMENT=	Bmon is an interface bandwidth monitor
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
 MAKE_FILE=	GNUmakefile

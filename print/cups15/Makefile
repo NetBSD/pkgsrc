@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/06/17 13:17:12 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/10/09 14:06:51 wiz Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -22,8 +22,6 @@ COMMENT=	Common UNIX Printing System (1.5 branch)
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 CONFLICTS+=	LPRng-[0-9]* LPRng-core-[0-9]*
-
-#PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/cups-${BASE_VERS}
 UNLIMIT_RESOURCES=	datasize memorysize

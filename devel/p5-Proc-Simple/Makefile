@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/05/29 23:36:14 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2014/10/09 14:06:26 wiz Exp $
 #
 
 DISTNAME=	Proc-Simple-1.31
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Proc-Simple/
 COMMENT=	Launch and control background processes
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Proc/Simple/.packlist
 

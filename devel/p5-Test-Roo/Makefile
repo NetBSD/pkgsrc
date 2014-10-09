@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/07/28 00:08:01 wen Exp $
+# $NetBSD: Makefile,v 1.2 2014/10/09 14:06:28 wiz Exp $
 
 DISTNAME=		Test-Roo-1.003
 PKGNAME=		p5-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=		wen@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Test-Roo/
 COMMENT=		Composable, reusable tests with roles and Moo
 LICENSE=		${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-Moo>=1.000008:../../devel/p5-Moo
 DEPENDS+=	p5-MooX-Types-MooseLike>=0:../../devel/p5-MooX-Types-MooseLike

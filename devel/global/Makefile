@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2014/09/07 20:17:29 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2014/10/09 14:06:09 wiz Exp $
 
 DISTNAME=	global-6.3.2
 CATEGORIES=	devel
@@ -8,8 +8,6 @@ MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/global/
 COMMENT=	Source code tag system including web browser output
 LICENSE=	gnu-gpl-v3
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}

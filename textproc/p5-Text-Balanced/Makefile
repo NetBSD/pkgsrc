@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2014/10/09 13:44:58 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2014/10/09 14:07:04 wiz Exp $
 #
 
 DISTNAME=	Text-Balanced-2.02
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Text-Balanced/
 COMMENT=	Extract delimited text sequences from strings
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Text/Balanced/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/09/11 19:46:53 asau Exp $
+# $NetBSD: Makefile,v 1.32 2014/10/09 14:05:51 wiz Exp $
 #
 
 DISTNAME=		bicom101
@@ -18,8 +18,6 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}
 USE_LANGUAGES=		c++

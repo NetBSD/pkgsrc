@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/10/09 13:44:39 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2014/10/09 14:06:15 wiz Exp $
 
 DISTNAME=	Date-Business-1.2
 PKGNAME=	${DISTNAME:S/Date-Business/p5-Date-Business/}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cpan.org/
 COMMENT=	Perl5 module for fast calendar and business date calculations
 LICENSE=	morganstanley-license
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Date/Business/.packlist
 

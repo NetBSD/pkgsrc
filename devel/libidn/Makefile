@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2014/08/16 12:16:53 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2014/10/09 14:06:09 wiz Exp $
 
 DISTNAME=	libidn-1.29
 CATEGORIES=	devel
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/libidn/
 COMMENT=	Internationalized Domain Names command line tool
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2.1
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes

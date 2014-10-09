@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2014/07/24 13:20:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.52 2014/10/09 14:06:37 wiz Exp $
 
 DISTNAME=	plotutils-2.6
 PKGREVISION=	4
@@ -11,8 +11,6 @@ COMMENT=	Programs and library for plotting scientific data
 LICENSE=	gnu-gpl-v3
 
 CONFLICTS+=	plotutils-nox11-[0-9]*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

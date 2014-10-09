@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2014/05/29 23:36:30 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2014/10/09 14:06:31 wiz Exp $
 
 DISTNAME=	SVK-v2.2.3
 PKGNAME=	svk-2.2.3
@@ -10,8 +10,6 @@ MAINTAINER=	bad@NetBSD.org
 HOMEPAGE=	http://svk.bestpractical.com/
 COMMENT=	Decentralized version control system built on Subversion
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-subversion>=1.4.0:../../devel/p5-subversion
 DEPENDS+=	p5-Algorithm-Annotate>=0.10:../../devel/p5-Algorithm-Annotate

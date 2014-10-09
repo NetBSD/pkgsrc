@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/08 09:57:19 asau Exp $
+# $NetBSD: Makefile,v 1.15 2014/10/09 14:06:42 wiz Exp $
 #
 
 DISTNAME=	cuetools-1.3.1
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cuetools.berlios.de/
 COMMENT=	Set of utilities to manipulate cue and toc files
 LICENSE=	gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=	c
 GNU_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/10/07 14:50:58 mef Exp $
+# $NetBSD: Makefile,v 1.18 2014/10/09 14:06:56 wiz Exp $
 #
 
 DISTNAME=	posh_0.12.3
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://packages.debian.org/posh
 COMMENT=	Debian Policy-compliant Ordinary SHell
 LICENSE=	gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
 PKG_SHELL=		bin/posh

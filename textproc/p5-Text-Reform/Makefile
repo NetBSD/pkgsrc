@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/10/09 13:44:59 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2014/10/09 14:07:05 wiz Exp $
 #
 
 DISTNAME=	Text-Reform-1.20
@@ -11,8 +11,6 @@ MAINTAINER=	eric@cirr.com
 HOMEPAGE=	http://search.cpan.org/search?module=Text::Reform
 COMMENT=	Manual text wrapping and reformatting
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Text/Reform/.packlist

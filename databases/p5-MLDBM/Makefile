@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2014/10/09 13:44:35 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2014/10/09 14:06:06 wiz Exp $
 #
 
 DISTNAME=		MLDBM-2.05
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/MLDBM/
 COMMENT=		Store multi-level Perl hash structure in single level tied hash
 LICENSE=		${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/MLDBM/.packlist

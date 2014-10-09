@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/10/09 13:44:57 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2014/10/09 14:06:59 wiz Exp $
 #
 
 DISTNAME=		Parse-Syslog-1.10
@@ -10,8 +10,6 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Parse/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Parse-Syslog/
 COMMENT=		Perl5 module for parsing Unix syslog files
-
-PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Parse/Syslog/.packlist

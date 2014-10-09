@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/10/09 13:45:05 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2014/10/09 14:07:11 wiz Exp $
 #
 
 DISTNAME=	LWP-UserAgent-Determined-1.06
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/LWP-UserAgent-Determined/
 COMMENT=	Perl5 virtual browser that retries errors
 LICENSE=	gnu-gpl-v2 # OR artistic
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
