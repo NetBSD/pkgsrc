@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/10/01 11:00:50 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2014/10/09 14:06:24 wiz Exp $
 
 DISTNAME=	Path-Class-0.35
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	bad@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Path-Class/
 COMMENT=	Cross-platform path specification manipulation
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/Path/Class/.packlist

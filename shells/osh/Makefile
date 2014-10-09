@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/09/11 23:25:08 asau Exp $
+# $NetBSD: Makefile,v 1.31 2014/10/09 14:06:56 wiz Exp $
 
 DISTNAME=	osh-20100430
 PKGREVISION=	1
@@ -9,8 +9,6 @@ MAINTAINER=	jan+nbsd@v6shell.org
 HOMEPAGE=	http://v6shell.org/
 COMMENT=	Port of the Sixth Edition UNIX shell
 LICENSE=	original-bsd
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PKG_SHELL=		bin/osh
 

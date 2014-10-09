@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2014/03/03 03:30:53 obache Exp $
+# $NetBSD: Makefile,v 1.61 2014/10/09 14:06:49 wiz Exp $
 #
 # When adding new digest algorithms, please use rmd160 as the template,
 # and bump the VERSION definition.
@@ -10,8 +10,6 @@ MAINTAINER?=	agc@NetBSD.org
 HOMEPAGE?=	http://www.NetBSD.org/docs/software/packages.html
 COMMENT?=	Message digest wrapper utility
 LICENSE=	original-bsd
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CHECK_PERMS=		no
 

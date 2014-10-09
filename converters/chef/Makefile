@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/03 00:20:10 asau Exp $
+# $NetBSD: Makefile,v 1.17 2014/10/09 14:06:03 wiz Exp $
 #
 
 DISTNAME=	chef-19920415
@@ -9,8 +9,6 @@ DISTFILES=	chef.l.txt
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	none
 COMMENT=	Convert from English to (mock) Swedish - Bork Bork Bork!
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 NO_CONFIGURE=	yes
 USE_TOOLS+=	lex

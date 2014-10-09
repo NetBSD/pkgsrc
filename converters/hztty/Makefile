@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 00:20:11 asau Exp $
+# $NetBSD: Makefile,v 1.12 2014/10/09 14:06:03 wiz Exp $
 
 DISTNAME=	hztty-2.0
 CATEGORIES=	converters
@@ -7,8 +7,6 @@ MASTER_SITES=	ftp://ftp.cuhk.hk/pub/chinese/ifcss/software/unix/convert/
 MAINTAINER=	rxg@NetBSD.org
 #HOMEPAGE=
 COMMENT=	Turns a tty session between Big5/GB/HZ/Unicode
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../mk/bsd.prefs.mk"
 

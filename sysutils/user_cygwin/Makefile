@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/07/12 10:41:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2014/10/09 14:07:00 wiz Exp $
 #
 
 DISTNAME=		user-cygwin-20130712
@@ -10,8 +10,6 @@ MAINTAINER=		obache@NetBSD.org
 COMMENT=		Limited NetBSD-compatible useradd/groupadd commands
 
 ONLY_FOR_PLATFORM=	Cygwin-*-*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 NO_CONFIGURE=		yes
 NO_BUILD=		yes

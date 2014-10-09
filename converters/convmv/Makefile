@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2014/05/29 23:35:21 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2014/10/09 14:06:03 wiz Exp $
 
 DISTNAME=		convmv-1.15
 PKGREVISION=		3
@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://j3e.de/linux/convmv/
 COMMENT=		Converts filenames from one encoding to another
 LICENSE=		gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
 USE_TOOLS+=		pax perl:run

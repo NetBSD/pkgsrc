@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/05/29 23:35:53 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2014/10/09 14:06:17 wiz Exp $
 
 DISTNAME=	File-ChangeNotify-0.23
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/File-ChangeNotify/
 COMMENT=	Watch for changes to files, cross-platform style
 LICENSE=	artistic-2.0
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 DEPENDS+=	p5-Moose>=2:../../devel/p5-Moose

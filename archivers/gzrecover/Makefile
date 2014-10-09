@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/09/11 19:46:55 asau Exp $
+# $NetBSD: Makefile,v 1.9 2014/10/09 14:05:51 wiz Exp $
 #
 
 DISTNAME=		gzrt-0.5
@@ -9,8 +9,6 @@ MASTER_SITES=		http://www.urbanophile.com/arenn/hacking/gzrt/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.urbanophile.com/arenn/hacking/gzrt/
 COMMENT=		GZip Recovery Toolkit
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BUILD_TARGET=		gzrecover
 

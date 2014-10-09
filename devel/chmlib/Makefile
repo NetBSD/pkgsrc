@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/31 11:16:46 asau Exp $
+# $NetBSD: Makefile,v 1.21 2014/10/09 14:06:08 wiz Exp $
 #
 
 DISTNAME=	chmlib-0.40
@@ -12,8 +12,6 @@ COMMENT=	Library for dealing with Microsoft ITSS/CHM format files
 LICENSE=	gnu-lgpl-v2.1
 
 CONFLICTS=	kchm-[0-9]*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

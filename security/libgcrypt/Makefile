@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2014/08/29 14:22:59 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2014/10/09 14:06:52 wiz Exp $
 
 DISTNAME=	libgcrypt-1.6.2
 PKGREVISION=	2
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/libgcrypt/
 COMMENT=	GNU cryptographic library
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -31,7 +29,6 @@ INFO_FILES=		yes # PLIST
 CONFIGURE_ARGS+=	--disable-asm
 .endif
 CONFIGURE_ARGS+=	--disable-aesni-support
-
 
 # SCO OpenServer 5.0.7/3.2 has no socklen_t, but it is defined in pthread.h
 # from builtin GNU pth.

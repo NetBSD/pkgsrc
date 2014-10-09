@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/02 23:48:02 asau Exp $
+# $NetBSD: Makefile,v 1.19 2014/10/09 14:05:57 wiz Exp $
 #
 
 DISTNAME=	nspmod-0.1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	MOD/S3M/MTM tracker that does its own DSP, uses VoxWare v2.90+
 
 NOT_FOR_PLATFORM=	Interix-*-*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2013/10/04 21:02:11 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2014/10/09 14:06:10 wiz Exp $
 
 DISTNAME=	m4-1.4.17
 CATEGORIES=	devel
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/m4/
 COMMENT=	GNU version of UNIX m4 macro language processor
 LICENSE=	gnu-gpl-v3
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes

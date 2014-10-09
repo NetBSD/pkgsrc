@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/10/09 13:45:04 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2014/10/09 14:07:11 wiz Exp $
 
 DISTNAME=		HTTP-Lite-2.4
 PKGNAME=		p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/HTTP-Lite/
 COMMENT=		Lightweight HTTP client implementation
 LICENSE=		${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/HTTP/Lite/.packlist
 

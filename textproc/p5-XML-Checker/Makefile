@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2014/05/29 23:37:45 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2014/10/09 14:07:05 wiz Exp $
 
 DISTNAME=	XML-Checker-0.13
 PKGNAME=	p5-${DISTNAME}
@@ -14,8 +14,6 @@ LICENSE=	${PERL5_LICENSE}
 CONFLICTS+=	p5-libxml-enno-[0-9]*
 
 DEPENDS+=	p5-XML-DOM-[0-9]*:../../textproc/p5-XML-DOM
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/XML/Checker/.packlist
 

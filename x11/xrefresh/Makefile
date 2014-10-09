@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/05/18 13:35:05 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/10/09 14:07:16 wiz Exp $
 
 DISTNAME=		xrefresh-1.0.5
 CATEGORIES=		x11
@@ -8,8 +8,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X Refresher
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2014/09/19 09:07:27 richard Exp $
+# $NetBSD: Makefile,v 1.52 2014/10/09 14:06:32 wiz Exp $
 
 DISTNAME=	zlib-1.2.8
 PKGREVISION=	2
@@ -11,8 +11,6 @@ MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.zlib.net/
 COMMENT=	General purpose data compression library
 LICENSE=	zlib
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 

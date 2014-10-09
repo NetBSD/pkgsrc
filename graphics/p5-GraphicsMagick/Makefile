@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/08/18 11:13:45 adam Exp $
+# $NetBSD: Makefile,v 1.23 2014/10/09 14:06:36 wiz Exp $
 
 .include "../../graphics/GraphicsMagick/Makefile.common"
 
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.graphicsmagick.org/perl.html
 COMMENT=	Object-oriented Perl interface to GraphicMagick
 LICENSE=	mit
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

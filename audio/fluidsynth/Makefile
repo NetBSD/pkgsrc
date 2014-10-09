@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2013/07/15 02:02:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2014/10/09 14:05:55 wiz Exp $
 
 DISTNAME=	fluidsynth-1.1.6
 PKGREVISION=	2
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fluidsynth.org/
 COMMENT=	Software synthesizer based on SoundFont2
 LICENSE=	gnu-lgpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2014/05/29 23:36:53 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2014/10/09 14:06:41 wiz Exp $
 
 DISTNAME=	fftw-3.3.4
 PKGREVISION=	1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fftw.org/
 COMMENT=	Collection of fast C routines to compute DFTs
 LICENSE=	gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes

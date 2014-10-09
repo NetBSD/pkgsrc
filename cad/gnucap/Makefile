@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2013/07/15 02:02:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.28 2014/10/09 14:06:01 wiz Exp $
 #
 
 DISTNAME=	gnucap-2006-07-08
@@ -14,8 +14,6 @@ COMMENT=	General purpose circuit simulator
 
 BUILD_DEPENDS+=	dvipdfmx>=20100328:../../print/dvipdfmx
 BUILD_DEPENDS+=	tex-hyperref>=6.81pnb2:../../print/tex-hyperref
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CONFLICTS+=	gnucap-2006-07-[0-9]*
 

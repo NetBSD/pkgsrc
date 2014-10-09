@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/05/29 23:35:30 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/10/09 14:06:06 wiz Exp $
 #
 
 DISTNAME=		Net-Cassandra-0.35
@@ -14,8 +14,6 @@ COMMENT=		Perl5 module for accessing the Cassandra database
 DEPENDS+=		p5-Bit-Vector>=0:../../devel/p5-Bit-Vector
 DEPENDS+=		p5-Moose>=0.56:../../devel/p5-Moose
 DEPENDS+=		p5-MooseX-StrictConstructor>=0:../../devel/p5-MooseX-StrictConstructor
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Net/Cassandra/.packlist
