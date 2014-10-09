@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/02/20 09:34:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2014/10/09 11:57:36 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -131,21 +131,3 @@ ${PYSITELIB}/urwid/widget.pyo
 ${PYSITELIB}/urwid/wimp.py
 ${PYSITELIB}/urwid/wimp.pyc
 ${PYSITELIB}/urwid/wimp.pyo
-share/examples/py-urwid/bigtext.py
-share/examples/py-urwid/browse.py
-share/examples/py-urwid/calc.py
-share/examples/py-urwid/dialog.py
-share/examples/py-urwid/edit.py
-share/examples/py-urwid/fib.py
-share/examples/py-urwid/graph.py
-share/examples/py-urwid/input_test.py
-share/examples/py-urwid/lcd_cf635.py
-share/examples/py-urwid/palette_test.py
-share/examples/py-urwid/pop_up.py
-share/examples/py-urwid/subproc.py
-share/examples/py-urwid/subproc2.py
-share/examples/py-urwid/terminal.py
-share/examples/py-urwid/tour.py
-share/examples/py-urwid/treesample.py
-share/examples/py-urwid/twisted_serve_ssh.py
-share/examples/py-urwid/twisted_serve_ssh.tac
