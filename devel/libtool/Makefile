@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.47 2013/05/31 12:40:01 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2014/10/09 13:44:37 wiz Exp $
 
 META_PACKAGE=	# empty
 
 .include "Makefile.common"
 PKGREVISION=	2
 
-SVR4_PKGNAME=	ltool
 
 DEPENDS+=	${DISTNAME:S/-/-base-/}{,nb[0-9]*}:../../devel/libtool-base
 DEPENDS+=	${DISTNAME:S/-/-fortran-/}{,nb[0-9]*}:../../devel/libtool-fortran
