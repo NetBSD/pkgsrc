@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2014/05/29 23:38:15 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/10/09 13:45:05 wiz Exp $
 
 DISTNAME=	Template-Timer-1.00
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	5
-SVR4_PKGNAME=	p5ttm
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Template/}
 

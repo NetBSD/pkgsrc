@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.871 2014/10/08 19:15:16 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.872 2014/10/09 13:44:53 wiz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4351,9 +4351,7 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 
 		SVR4PkgName => sub {
 			if ($value =~ regex_unresolved) {
-				$line->log_error("SVR4_PKGNAME must not contain references to other variables.");
 			} elsif (length($value) > 5) {
-				$line->log_error("SVR4_PKGNAME must not be longer than 5 characters.");
 			}
 		},
 
@@ -4954,7 +4952,6 @@ sub checklines_package_Makefile_varorder($) {
 				[ "DISTNAME", optional ],
 				[ "PKGNAME",  optional ],
 				[ "PKGREVISION", optional ],
-				[ "SVR4_PKGNAME", optional ],
 				[ "CATEGORIES", once ],
 				[ "MASTER_SITES", optional ],
 				[ "DIST_SUBDIR", optional ],

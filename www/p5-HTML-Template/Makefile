@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2014/05/29 23:38:07 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2014/10/09 13:45:04 wiz Exp $
 
 DISTNAME=		HTML-Template-2.95
 PKGNAME=		p5-${DISTNAME}
 PKGREVISION=		1
-SVR4_PKGNAME=		p5htm
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=HTML/} \
 			${MASTER_SITE_SOURCEFORGE:=html-template/}

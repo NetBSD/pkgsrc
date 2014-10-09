@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2014/02/14 05:54:51 obache Exp $
+# $NetBSD: Makefile,v 1.35 2014/10/09 13:44:53 wiz Exp $
 
 DISTNAME=		tnftp-20070806
-SVR4_PKGNAME=		tnftp
 CATEGORIES=		net
 MASTER_SITES=		# empty
 DISTFILES=		# empty
