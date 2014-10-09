@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3830 2014/10/09 15:07:20 adam Exp $
+$NetBSD: CHANGES-2014,v 1.3831 2014/10/09 18:59:59 gson Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4835,3 +4835,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/gmplayer to 1.1.1nb20 [martin 2014-10-09]
 	Updated audio/audacious to 3.5.1 [adam 2014-10-09]
 	Updated audio/audacious-plugins to 3.5.1 [adam 2014-10-09]
+	Updated graphics/netpbm to 10.67.05nb3 [gson 2014-10-09]
