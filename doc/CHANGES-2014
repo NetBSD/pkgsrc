@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3825 2014/10/09 12:46:03 adam Exp $
+$NetBSD: CHANGES-2014,v 1.3826 2014/10/09 13:12:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4829,3 +4829,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added misc/libcdio-paranoia version 0.93 [adam 2014-10-09]
 	Updated devel/py-urwid to 1.2.2 [adam 2014-10-09]
 	Updated audio/py-audiotools to 2.22 [adam 2014-10-09]
+	Updated devel/p5-List-AllUtils to 0.09 [wiz 2014-10-09]
