@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.29 2013/11/01 10:47:50 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.30 2014/10/09 19:08:28 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml
 
@@ -6,9 +6,11 @@ BUILDLINK_TREE+=	ocaml
 OCAML_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.08.2
-BUILDLINK_ABI_DEPENDS.ocaml+=	ocaml>=4.01.0
+BUILDLINK_ABI_DEPENDS.ocaml+=	ocaml>=4.02.0
 BUILDLINK_PKGSRCDIR.ocaml?=	../../lang/ocaml
 #BUILDLINK_DEPMETHOD.ocaml?=	build
+
+BUILDLINK_PASSTHRU_DIRS+=     ${BUILDLINK_PREFIX.ocaml}/lib/ocaml
 
 .include "../../mk/bsd.fast.prefs.mk"
 .if ${OPSYS} == "Darwin"
