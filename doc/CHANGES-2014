@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3822 2014/10/09 05:34:36 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3823 2014/10/09 09:12:00 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4822,3 +4822,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/yelp-xsl to 3.14.0 [prlw1 2014-10-08]
 	Updated devel/guile-www to 2.38 [gdt 2014-10-09]
 	Updated www/webkit-gtk to 2.4.6 [wiz 2014-10-09]
+	Added devel/py-protobuf version 2.5.0 [khorben 2014-10-09]
