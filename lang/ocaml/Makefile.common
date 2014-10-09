@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.38 2013/11/01 10:47:50 jaapb Exp $
+# $NetBSD: Makefile.common,v 1.39 2014/10/09 19:08:28 jaapb Exp $
 
 # used by x11/labltk/Makefile
 # used by x11/ocaml-graphics/Makefile
-DISTNAME=	ocaml-4.01.0
+DISTNAME=	ocaml-4.02.0
 CATEGORIES=	lang
-MASTER_SITES=	http://caml.inria.fr/pub/distrib/ocaml-4.01/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	http://caml.inria.fr/pub/distrib/ocaml-4.02/
+#EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	http://caml.inria.fr/ocaml/
@@ -23,8 +23,8 @@ CONFIGURE_ARGS+=	-host ${MACHINE_GNU_PLATFORM:Q}
 CONFIGURE_ARGS+=	-mandir ${PREFIX}/${PKGMANDIR}
 CPPFLAGS+=		-DDB_DBM_HSEARCH
 
-INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX} \
-			MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
+INSTALL_MAKE_FLAGS+=	PREFIX=${PREFIX} \
+			MANDIR=${PREFIX}/${PKGMANDIR}
 DISTINFO_FILE= ${.CURDIR}/../../lang/ocaml/distinfo
 PATCHDIR= ${.CURDIR}/../../lang/ocaml/patches
 

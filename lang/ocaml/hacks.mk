@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.3 2014/01/17 10:03:23 pho Exp $
+# $NetBSD: hacks.mk,v 1.4 2014/10/09 19:08:28 jaapb Exp $
 
 .if !defined(OCAML_HACKS_MK)
 OCAML_HACKS_MK=	defined
@@ -28,11 +28,11 @@ SUBST_STAGE.no_compact_unwind=	pre-configure
 ### produces a binary which segfaults.  The binary is used during part of the
 ### build process.
 ###
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
-.  if !empty(CC_VERSION:Mgcc-4.4.*)
-PKG_HACKS+=		optimisation
-BUILDLINK_TRANSFORM+=	rename:-O[0-9]*:-O
-.  endif
-.endif
+#.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
+#.  if !empty(CC_VERSION:Mgcc-4.4.*)
+#PKG_HACKS+=		optimisation
+#BUILDLINK_TRANSFORM+=	rename:-O[0-9]*:-O
+#.  endif
+#.endif
 
 .endif  # OCAML_HACKS_MK
