@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.16 2012/08/13 17:23:37 drochner Exp $
+@comment $NetBSD: PLIST,v 1.17 2014/10/09 11:55:22 adam Exp $
 bin/cd-drive
 bin/cd-info
-bin/cd-paranoia
 bin/cd-read
 bin/cdda-player
 bin/iso-info
@@ -21,10 +20,8 @@ include/cdio/audio.h
 include/cdio/bytesex.h
 include/cdio/bytesex_asm.h
 include/cdio/cd_types.h
-include/cdio/cdda.h
 include/cdio/cdio.h
 include/cdio/cdio_config.h
-include/cdio/cdio_unconfig.h
 include/cdio/cdtext.h
 include/cdio/device.h
 include/cdio/disc.h
@@ -33,12 +30,12 @@ include/cdio/dvd.h
 include/cdio/ecma_167.h
 include/cdio/iso9660.h
 include/cdio/logging.h
+include/cdio/memory.h
 include/cdio/mmc.h
 include/cdio/mmc_cmds.h
 include/cdio/mmc_hl_cmds.h
 include/cdio/mmc_ll_cmds.h
 include/cdio/mmc_util.h
-include/cdio/paranoia.h
 include/cdio/posix.h
 include/cdio/read.h
 include/cdio/rock.h
@@ -55,22 +52,16 @@ include/cdio/xa.h
 info/libcdio.info
 lib/libcdio++.la
 lib/libcdio.la
-lib/libcdio_cdda.la
-lib/libcdio_paranoia.la
 lib/libiso9660++.la
 lib/libiso9660.la
 lib/libudf.la
 lib/pkgconfig/libcdio++.pc
 lib/pkgconfig/libcdio.pc
-lib/pkgconfig/libcdio_cdda.pc
-lib/pkgconfig/libcdio_paranoia.pc
 lib/pkgconfig/libiso9660++.pc
 lib/pkgconfig/libiso9660.pc
 lib/pkgconfig/libudf.pc
-man/jp/man1/cd-paranoia.1
 man/man1/cd-drive.1
 man/man1/cd-info.1
-man/man1/cd-paranoia.1
 man/man1/cd-read.1
 man/man1/iso-info.1
 man/man1/iso-read.1
