@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2014/10/09 12:32:54 adam Exp $
+bin/cd-paranoia
+include/cdio/paranoia/cdda.h
+include/cdio/paranoia/paranoia.h
+lib/libcdio_cdda.la
+lib/libcdio_paranoia.la
+lib/pkgconfig/libcdio_cdda.pc
+lib/pkgconfig/libcdio_paranoia.pc
+man/jp/man1/cd-paranoia.1
+man/man1/cd-paranoia.1
