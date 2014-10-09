@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2013/06/15 19:18:00 jaapb Exp $
+$NetBSD: distinfo,v 1.5 2014/10/09 19:48:40 jaapb Exp $
 
-SHA1 (sqlite3-ocaml-2.0.4.tar.gz) = 5f78ce9f228f38bd306b8cd30e5e10346edc0c4f
-RMD160 (sqlite3-ocaml-2.0.4.tar.gz) = fdcab2e88ac91e19fee2c23f38132bef372a4860
-Size (sqlite3-ocaml-2.0.4.tar.gz) = 60665 bytes
+SHA1 (v2.0.6.tar.gz) = 0835856fe5e255c4c5d90a78c84add065c9b1264
+RMD160 (v2.0.6.tar.gz) = 57ba126bbafb66a86b391ff82a7d92c50c66fc22
+Size (v2.0.6.tar.gz) = 64424 bytes
 SHA1 (patch-lib_sqlite3_stubs.c) = bd5970939a4ad748067337425992346de2b571a5
