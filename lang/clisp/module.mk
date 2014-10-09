@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.3 2012/10/02 20:11:37 asau Exp $
+# $NetBSD: module.mk,v 1.4 2014/10/09 14:09:23 wiz Exp $
 
 # Used variables:
 # CLISP_MODULE - name of module and subdirectory in "modules"
@@ -10,9 +10,6 @@ DISTNAME=		clisp-$(CLISP_VERSION)
 # http://sourceforge.net/tracker/index.php?func=detail&aid=952681&group_id=1355&atid=101355
 NOT_FOR_PLATFORM=	*-*-sparc64
 NOT_FOR_PLATFORM+=	*-*-arm
-
-PKG_INSTALLATION_TYPES= overwrite pkgviews
-
 
 CONFIGURE_DIRS=		modules/$(CLISP_MODULE)
 GNU_CONFIGURE=		YES
