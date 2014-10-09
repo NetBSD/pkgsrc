@@ -3994,12 +3994,6 @@ sections.</p>
     <code class="varname">^[A-Za-z0-9][A-Za-z0-9-_.+]*$</code>, that is, it
     starts with a letter or digit, and contains only letters, digits,
     dashes, underscores, dots and plus signs.</p></li>
-    the package file to create if the <code class="varname">PKGNAME</code>
-    isn't unique on a SVR4 system. The default is
-    <code class="varname">PKGNAME</code>, which may be shortened when you use
-    <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/gensolpkg/README.html" target="_top"><code class="filename">pkgtools/gensolpkg</code></a>. Only add
-    does not produce an unique package name on a SVR4 system.
-    characters.</p></li>
 <li class="listitem">
 <p><code class="varname">CATEGORIES</code> is a list of categories
     which the package fits in. You can choose any of the top-level
@@ -7349,7 +7343,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="tools.questions"></a>18.4. Questions regarding the tools</h2></div></div></div>
 <div class="qandaset">
-<a name="idm75779472"></a><dl>
+<a name="idm73247248"></a><dl>
 <dt>18.4.1. <a href="#tools.new">How do I add a new tool?</a>
 </dt>
 <dt>18.4.2. <a href="#tools.listall">How do I get a list of all available
@@ -7368,7 +7362,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="idm75779088"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="idm73246864"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7378,7 +7372,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="idm75778064"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="idm73245840"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7389,7 +7383,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="idm75776912"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="idm73244816"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -9471,7 +9465,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm77314064"></a><dl>
+<a name="idm72688784"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9516,7 +9510,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm77313680"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm72688400"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9532,7 +9526,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm77309584"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idm72684304"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9550,7 +9544,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm77305104"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm72679952"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9568,7 +9562,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm77301008"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm72675728"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9581,7 +9575,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm77298832"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm72673552"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9597,7 +9591,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm77283344"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm72670480"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9621,7 +9615,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm77275280"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm72650128"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9646,7 +9640,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm77271568"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm72646288"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9694,7 +9688,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm77265040"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm72639760"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
