@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3840 2014/10/09 21:09:07 jaapb Exp $
+$NetBSD: CHANGES-2014,v 1.3841 2014/10/09 21:13:53 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4846,3 +4846,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/ocaml-findlib to 1.5.3 [jaapb 2014-10-09]
 	Updated security/ocaml-ssl to 0.4.7 [jaapb 2014-10-09]
 	Updated devel/ocaml-optcomp to 1.6 [jaapb 2014-10-09]
+	Updated devel/ocaml-lwt to 2.4.5 [jaapb 2014-10-09]
