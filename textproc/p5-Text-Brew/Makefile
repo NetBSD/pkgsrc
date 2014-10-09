@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/05/29 23:37:41 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2014/10/09 14:07:04 wiz Exp $
 #
 
 DISTNAME=	Text-Brew-0.02
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Text-Brew
 COMMENT=	Perl module for configurable and analyzable edit distances
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Text/Brew/.packlist
 

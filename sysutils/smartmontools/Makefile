@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/12/02 22:26:22 asau Exp $
+# $NetBSD: Makefile,v 1.24 2014/10/09 14:07:00 wiz Exp $
 
 DISTNAME=		smartmontools-6.2
 PKGREVISION=		1
@@ -12,8 +12,6 @@ LICENSE=		gnu-gpl-v2
 
 ONLY_FOR_PLATFORM=	Darwin-*-* DragonFly-*-* FreeBSD-*-* Linux-*-*
 ONLY_FOR_PLATFORM+=	NetBSD-*-* OpenBSD-*-* SunOS-*-*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake

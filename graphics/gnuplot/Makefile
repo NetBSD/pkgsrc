@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2014/06/01 16:58:21 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2014/10/09 14:06:35 wiz Exp $
 
 DISTNAME=	gnuplot-4.6.5
 PKGREVISION=	4
@@ -13,8 +13,6 @@ CONFLICTS+=		gnuplot-nox11-[0-9]*
 
 PATCHDIR=		${.CURDIR}/../../graphics/gnuplot/patches
 DISTINFO_FILE=		${.CURDIR}/../../graphics/gnuplot/distinfo
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c
 USE_TOOLS+=		makeinfo pkg-config gmake

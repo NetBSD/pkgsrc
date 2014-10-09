@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/10/09 13:45:00 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2014/10/09 14:07:05 wiz Exp $
 #
 
 DISTNAME=	XML-Handler-YAWriter-0.23
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/XML-Handler-YAWriter/
 COMMENT=	Another Perl module for writing XML documents
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 # really: XML::Parser::PerlSAX' => 0.06
 DEPENDS+=		p5-libxml>=0.07:../../textproc/p5-libxml

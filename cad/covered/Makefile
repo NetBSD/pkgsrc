@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2014/01/20 19:20:07 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2014/10/09 14:06:01 wiz Exp $
 #
 
 DISTNAME=	covered-0.4.7
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=covered/}
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://covered.sourceforge.net/
 COMMENT=	Verilog code coverage analyzer (stable release version)
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	verilog{,-current}-[0-9]*:../../cad/verilog
 

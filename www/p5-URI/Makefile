@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2014/10/09 13:45:06 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2014/10/09 14:07:12 wiz Exp $
 
 DISTNAME=	URI-1.64
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/URI/
 COMMENT=	Perl5 Uniform Resource Identifiers class (URI, RFC 2396)
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	{perl>=5.7,p5-MIME-Base64>=2.12}:../../converters/p5-MIME-Base64
 # recommended

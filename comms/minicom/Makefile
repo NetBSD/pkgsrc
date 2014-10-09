@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2013/10/09 10:53:24 adam Exp $
+# $NetBSD: Makefile,v 1.65 2014/10/09 14:06:03 wiz Exp $
 
 DISTNAME=	minicom-2.6.2
 CATEGORIES=	comms
@@ -12,7 +12,6 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	gkermit-[0-9]*:../../comms/gkermit
 DEPENDS+=	lrzsz-[0-9]*:../../comms/lrzsz
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 INSTALLATION_DIRS=	share/examples/minicom
 
 USE_PKGLOCALEDIR=	yes

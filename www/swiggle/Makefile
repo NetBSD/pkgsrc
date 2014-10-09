@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/04/06 21:07:36 rodent Exp $
+# $NetBSD: Makefile,v 1.18 2014/10/09 14:07:12 wiz Exp $
 
 DISTNAME=	swiggle-0.4
 PKGREVISION=	3
@@ -8,8 +8,6 @@ MASTER_SITES=	http://homepage.univie.ac.at/l.ertl/swiggle/files/
 MAINTAINER=	snj@NetBSD.org
 HOMEPAGE=	http://homepage.univie.ac.at/l.ertl/swiggle/
 COMMENT=	Lightweight image gallery generator
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 SUBST_CLASSES+=		mf
 SUBST_STAGE.mf=		post-patch

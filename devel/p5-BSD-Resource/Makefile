@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2014/10/09 13:44:37 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2014/10/09 14:06:11 wiz Exp $
 
 DISTNAME=	BSD-Resource-1.2907
 PKGNAME=	p5-${DISTNAME:S/2907/29.07/}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/BSD-Resource/
 COMMENT=	Perl interface to BSD process resources library
 LICENSE=	artistic-2.0 OR gnu-lgpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 UNLIMIT_RESOURCES+=	stacksize
 

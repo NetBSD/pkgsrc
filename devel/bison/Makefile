@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2014/05/29 23:35:34 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2014/10/09 14:06:08 wiz Exp $
 
 DISTNAME=	bison-3.0.2
 PKGREVISION=	1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/bison/bison.html
 COMMENT=	GNU yacc(1) replacement
 LICENSE=	gnu-gpl-v3
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes

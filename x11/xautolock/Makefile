@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/29 05:06:57 asau Exp $
+# $NetBSD: Makefile,v 1.24 2014/10/09 14:07:16 wiz Exp $
 
 DISTNAME=	xautolock-pl15
 PKGNAME=	xautolock-1.15
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Activate xlock after a user defined time of inactivity
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_IMAKE=	YES
 

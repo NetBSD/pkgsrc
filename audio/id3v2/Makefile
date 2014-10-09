@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/09/12 00:24:40 asau Exp $
+# $NetBSD: Makefile,v 1.26 2014/10/09 14:05:56 wiz Exp $
 
 DISTNAME=	id3v2-0.1.12
 CATEGORIES=	audio
@@ -9,8 +9,6 @@ HOMEPAGE=	http://id3v2.sourceforge.net/
 COMMENT=	Command line editor for id3v2 tags
 
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake

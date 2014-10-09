@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 00:20:16 asau Exp $
+# $NetBSD: Makefile,v 1.11 2014/10/09 14:06:04 wiz Exp $
 
 DISTNAME=	qkcc100
 PKGNAME=	qkc-1.0
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	hiramatu@boreas.dti.ne.jp
 HOMEPAGE=	http://hp.vector.co.jp/authors/VA000501/
 COMMENT=	Quick Kanji code Converter
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/ja_JP.EUC/man1
 

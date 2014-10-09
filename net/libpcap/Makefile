@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2014/10/09 13:44:51 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2014/10/09 14:06:45 wiz Exp $
 
 DISTNAME=	libpcap-1.4.0
 PKGREVISION=	1
@@ -11,8 +11,6 @@ COMMENT=	System-independent interface for user-level packet capture
 LICENSE=	modified-bsd
 
 NOT_FOR_PLATFORM+=	Interix-*-* # no raw interface access
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bison flex gm4

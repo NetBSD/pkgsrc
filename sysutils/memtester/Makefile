@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/23 19:51:12 asau Exp $
+# $NetBSD: Makefile,v 1.24 2014/10/09 14:06:58 wiz Exp $
 #
 
 DISTNAME=		memtester-4.3.0
@@ -11,8 +11,6 @@ COMMENT=		Utility for testing the memory subsystem for faults
 LICENSE=		gnu-gpl-v2
 
 NOT_FOR_PLATFORM=	Interix-*-* # no m[un]lock(2), so not useful anyway
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DJB_RESTRICTED=		NO
 DJB_MAKE_TARGETS=	NO

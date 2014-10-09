@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2013/09/21 18:47:05 dholland Exp $
+# $NetBSD: Makefile,v 1.117 2014/10/09 14:06:37 wiz Exp $
 
 DISTNAME=	tiff-4.0.3
 PKGREVISION=	6
@@ -12,8 +12,6 @@ COMMENT=	Library and tools for reading and writing TIFF data files
 LICENSE=	mit
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/05/29 23:36:10 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2014/10/09 14:06:23 wiz Exp $
 
 DISTNAME=	POE-Component-Pluggable-1.26
 PKGNAME=	p5-${DISTNAME}
@@ -14,8 +14,6 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-POE>=1.004:../../devel/p5-POE
 DEPENDS+=	p5-Task-Weaken-[0-9]*:../../devel/p5-Task-Weaken
 DEPENDS+=	{perl>=5.10.1,p5-constant>=1.17}:../../devel/p5-constant
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=	auto/POE/Component/Pluggable/.packlist
 
