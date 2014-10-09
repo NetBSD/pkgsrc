@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.48 2014/10/09 13:44:46 wiz Exp $ -->
+<!-- $NetBSD: components.xml,v 1.49 2014/10/09 13:46:57 wiz Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -39,13 +39,6 @@ sections.</para>
     <varname>^[A-Za-z0-9][A-Za-z0-9-_.+]*$</varname>, that is, it
     starts with a letter or digit, and contains only letters, digits,
     dashes, underscores, dots and plus signs.</para></listitem>
-
-    the package file to create if the <varname>PKGNAME</varname>
-    isn't unique on a SVR4 system. The default is
-    <varname>PKGNAME</varname>, which may be shortened when you use
-    <filename role="pkg">pkgtools/gensolpkg</filename>. Only add
-    does not produce an unique package name on a SVR4 system.
-    characters.</para></listitem>
 
     <listitem><para><varname>CATEGORIES</varname> is a list of categories
     which the package fits in. You can choose any of the top-level
