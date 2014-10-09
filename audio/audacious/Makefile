@@ -1,53 +1,36 @@
-# $NetBSD: Makefile,v 1.37 2014/05/05 00:47:35 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.38 2014/10/09 15:02:42 adam Exp $
 
-DISTNAME=		audacious-1.5.1
-PKGREVISION=		23
-CATEGORIES=		audio
-MASTER_SITES=		http://distfiles.atheme.org/
-EXTRACT_SUFX=		.tbz2
+DISTNAME=	audacious-3.5.1
+CATEGORIES=	audio
+MASTER_SITES=	http://distfiles.audacious-media-player.org/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		jfranz@bsdprojects.net
-HOMEPAGE=		http://audacious-media-player.org/
-COMMENT=		Media player based on BMP and XMMS
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://audacious-media-player.org/
+COMMENT=	Media player based on BMP and XMMS
+LICENSE=	2-clause-bsd
 
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
-USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
-
-CONFIGURE_ARGS+=	--enable-chardet --enable-nls
-
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
+GNU_CONFIGURE=		yes
+# requires libguess which is not available any more
+CONFIGURE_ARGS+=	--disable-chardet
 PKGCONFIG_OVERRIDE+=	audacious.pc.in
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.audacious
-PKG_SUPPORTED_OPTIONS=	inet6
-PKG_SUGGESTED_OPTIONS=	inet6
-
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ARGS+=	--enable-ipv6
+.include "../../mk/bsd.prefs.mk"
+# XXX does not solve linking problem completely
+.if ${OPSYS} == "Darwin"
+LDFLAGS+=	-flat_namespace -undefined suppress
 .endif
-
-# for backtrace
-.if ${OPSYS} == "NetBSD" && exists(/usr/include/execinfo.h)
-LIBS+=  -lexecinfo
-.endif
-
-LIBS.SunOS+=		-lm -lX11 -lICE -lgmodule-2.0
-LDFLAGS.DragonFly=	-lm -lX11 -lICE -lgmodule-2.0
 
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libmcs/buildlink3.mk"
-.include "../../devel/libmowgli/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
