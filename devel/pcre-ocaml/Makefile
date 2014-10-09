@@ -1,32 +1,29 @@
-# $NetBSD: Makefile,v 1.14 2013/11/01 11:30:22 jaapb Exp $
+# $NetBSD: Makefile,v 1.15 2014/10/09 19:39:24 jaapb Exp $
 
-DISTNAME=		pcre-ocaml-6.2.5
-PKGREVISION=		2
+DISTNAME=		pcre-ocaml-${VERSION}
+PKGNAME=	${DISTNAME} # avoid prefixing with ocaml
+VERSION=	7.1.1
 CATEGORIES=		devel
-MASTER_SITES=		http://www.ocaml.info/ocaml_sources/
+MASTER_SITES=		http://github.com/mmottl/pcre-ocaml/releases/download/v${VERSION}/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.ocaml.info/ocaml_sources/
+HOMEPAGE=		http://github.com/mmottl/pcre-ocaml
 COMMENT=		Perl compatible regular expressions for OCaml
 
-DEPENDS+=		ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
+OCAML_USE_OASIS=	yes
 
 .include "../../mk/bsd.prefs.mk"
+.include "../../mk/ocaml.mk"
 
-USE_TOOLS+=		gmake pax
-.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
-    (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "x86_64")
-PLIST_SRC=		PLIST.opt PLIST
-.else
+.if ${OCAML_USE_OPT_COMPILER} != "yes"
 BUILD_TARGET=		byte
 .endif
 
 EGDIR=			${PREFIX}/share/examples/pcre-ocaml
-INSTALLATION_DIRS=	${EGDIR} lib/ocaml/site-lib/pcre
+INSTALLATION_DIRS+=	${EGDIR}
 
 post-install:
 	cd ${WRKSRC}/examples && pax -rw -pm . ${DESTDIR}${EGDIR}
 
 .include "../../devel/pcre/buildlink3.mk"
-.include "../../lang/ocaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
