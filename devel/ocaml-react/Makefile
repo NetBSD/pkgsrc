@@ -1,52 +1,47 @@
-# $NetBSD: Makefile,v 1.5 2013/11/01 11:30:22 jaapb Exp $
+# $NetBSD: Makefile,v 1.6 2014/10/09 21:38:49 jaapb Exp $
 
-PKGNAME=	ocaml-${DISTNAME}
-DISTNAME=	react-0.9.4
-PKGREVISION=	2
+DISTNAME=	react-1.2.0
 CATEGORIES=	devel
 MASTER_SITES=	http://erratique.ch/software/react/releases/
 EXTRACT_SUFX=	.tbz
 
-MAINTAINER=	jaapb@kerguelen.org
+MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	http://erratique.ch/software/react
 COMMENT=	OCaml module for functional reactive programming
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=	c
-HAS_CONFIGURE=	yes
-CONFIGURE_ARGS=	--prefix "${PREFIX}" --destdir "${DESTDIR}"
+CONFIGURE_ARGS+=	--prefix "${PREFIX}" --destdir "${DESTDIR}"
+INSTALLATION_DIRS+=	${OCAML_SITELIBDIR}/react
 
-SUBST_CLASSES+=   destdir
-SUBST_STAGE.destdir=  post-configure
-SUBST_MESSAGE.destdir=  Changing install location to DESTDIR
-SUBST_FILES.destdir=  setup.ml
-SUBST_SED.destdir=      -e 's,"install" :: findlib_name,"install" :: "-destdir ${DESTDIR}${PREFIX}/lib/ocaml/site-lib" :: "-ldconf /dev/null" :: findlib_name,'
+#SUBST_CLASSES+=   destdir
+#SUBST_STAGE.destdir=  post-configure
+#SUBST_MESSAGE.destdir=  Changing install location to DESTDIR
+#SUBST_FILES.destdir=  setup.ml
+#SUBST_SED.destdir=      -e 's,"install" :: findlib_name,"install" :: "-destdir ${DESTDIR}${PREFIX}/lib/ocaml/site-lib" :: "-ldconf /dev/null" :: findlib_name,'
 
-DEPENDS+=       ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
-
-PLIST_VARS+=	opt
-.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
-    (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "x86_64")
-PLIST.opt=	yes
-
-post-build:
-	cd ${WRKSRC} && ocamlbuild src/react.cmxs
-
-post-install:
-	cd ${WRKSRC} && ${INSTALL_LIB} _build/src/react.cmxs ${DESTDIR}${PREFIX}/lib/ocaml/site-lib/react
-.endif
-
-do-configure:
-	cd ${WRKSRC} && ocaml setup.ml -configure ${CONFIGURE_ARGS}
+.include "../../mk/ocaml.mk"
 
 do-build:
-	cd ${WRKSRC} && ocaml setup.ml -build
-
-pre-install:
-	${MKDIR} ${DESTDIR}/${PREFIX}/lib/ocaml/site-lib
+.if ${OCAML_USE_OPT_COMPILER} == yes
+	cd ${WRKSRC} && ocaml pkg/build.ml native=true native-dynlink=true
+.else
+	cd ${WRKSRC} && ocaml pkg/build.ml
+.endif
 
 do-install:
-	cd ${WRKSRC} && ocaml setup.ml -install
+	for i in react.cma react.cmi react.mli react_top.cma; do \
+		${INSTALL_DATA} ${WRKSRC}/_build/src/$$i \
+			${DESTDIR}${PREFIX}/${OCAML_SITELIBDIR}/react; \
+	done
+.if ${OCAML_USE_OPT_COMPILER} == yes
+	for i in react.a react.cmx react.cmxa react.cmxs react_top.a react_top.cmxa \
+	react_top.cmxs; do \
+		${INSTALL_DATA} ${WRKSRC}/_build/src/$$i \
+			${DESTDIR}${PREFIX}/${OCAML_SITELIBDIR}/react; \
+	done
+.endif
+	${INSTALL_DATA} ${WRKSRC}/_build/pkg/META \
+		${DESTDIR}${PREFIX}/${OCAML_SITELIBDIR}/react
 
-.include "../../lang/ocaml/buildlink3.mk"
+.include "../../devel/ocaml-findlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
