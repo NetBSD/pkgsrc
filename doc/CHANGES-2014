@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3846 2014/10/09 21:48:04 jaapb Exp $
+$NetBSD: CHANGES-2014,v 1.3847 2014/10/09 22:22:25 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4852,3 +4852,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/ocaml-react to 1.2.0 [jaapb 2014-10-09]
 	Updated lang/camlp5 to 6.12 [jaapb 2014-10-09]
 	Updated net/ocamlnet to 3.7.6 [jaapb 2014-10-09]
+	Updated lang/coq to 8.4pl4nb2 [jaapb 2014-10-09]
