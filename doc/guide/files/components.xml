@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.47 2014/05/09 09:58:52 wiz Exp $ -->
+<!-- $NetBSD: components.xml,v 1.48 2014/10/09 13:44:46 wiz Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -40,14 +40,11 @@ sections.</para>
     starts with a letter or digit, and contains only letters, digits,
     dashes, underscores, dots and plus signs.</para></listitem>
 
-    <listitem><para><varname>SVR4_PKGNAME</varname> is the name of
     the package file to create if the <varname>PKGNAME</varname>
     isn't unique on a SVR4 system. The default is
     <varname>PKGNAME</varname>, which may be shortened when you use
     <filename role="pkg">pkgtools/gensolpkg</filename>. Only add
-    <varname>SVR4_PKGNAME</varname> if <varname>PKGNAME</varname>
     does not produce an unique package name on a SVR4 system.
-    The length of <varname>SVR4_PKGNAME</varname> is limited to 5
     characters.</para></listitem>
 
     <listitem><para><varname>CATEGORIES</varname> is a list of categories

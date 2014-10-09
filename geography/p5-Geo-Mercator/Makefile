@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2014/05/29 23:36:36 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/10/09 13:44:46 wiz Exp $
 #
 
 DISTNAME=		Geo-Mercator-1.01
 PKGNAME=		p5-${DISTNAME}
 PKGREVISION=		6
-SVR4_PKGNAME=		p5gme
 CATEGORIES=		geography perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Geo/}
 

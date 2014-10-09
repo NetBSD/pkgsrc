@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2012/09/11 23:04:21 asau Exp $
+# $NetBSD: Makefile,v 1.15 2014/10/09 13:44:49 wiz Exp $
 #
 
 DISTNAME=	grape4r1
 PKGNAME=	gp-grape-4.1
 PKGREVISION=	2
-SVR4_PKGNAME=	gpgra
 CATEGORIES=	math
 MASTER_SITES=	http://www.maths.qmul.ac.uk/~leonard/grape4r1/
 EXTRACT_SUFX=	.zoo

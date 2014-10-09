@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/05/31 12:39:47 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/09 13:44:33 wiz Exp $
 
 # XXX This is kludgerific copypasta of devel/libtool-base/Makefile for
 # cross-compilation.  Please make it go away!
@@ -32,7 +32,6 @@
 #PKGNAME=	${DISTNAME:S/-/-base-/}
 PKGNAME=	${DISTNAME:S/^libtool-/cross-libtool-base-${MACHINE_ARCH}-/}
 PKGREVISION=	2
-SVR4_PKGNAME=	ltoob
 
 COMMENT=	Generic shared library support script (the script itself)
 

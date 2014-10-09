@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2013/04/06 11:39:25 rodent Exp $
+# $NetBSD: Makefile,v 1.22 2014/10/09 13:44:36 wiz Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-m4-/}
-SVR4_PKGNAME=	gttm4
 COMMENT=	Autoconf/automake m4 files for GNU NLS library
 LICENSE=	gnu-gpl-v2
 

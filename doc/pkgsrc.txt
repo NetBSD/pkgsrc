@@ -3483,10 +3483,7 @@ mostly historical and has no further meaning.
     is, it starts with a letter or digit, and contains only letters, digits,
     dashes, underscores, dots and plus signs.
 
-  * SVR4_PKGNAME is the name of the package file to create if the PKGNAME isn't
     unique on a SVR4 system. The default is PKGNAME, which may be shortened
-    when you use pkgtools/gensolpkg. Only add SVR4_PKGNAME if PKGNAME does not
-    produce an unique package name on a SVR4 system. The length of SVR4_PKGNAME
     is limited to 5 characters.
 
   * CATEGORIES is a list of categories which the package fits in. You can

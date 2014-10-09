@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2014/08/17 16:28:18 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2014/10/09 13:44:32 wiz Exp $
 
 .include "../../archivers/gtar/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/tar/gtar-info/}
-SVR4_PKGNAME=	gtari
 COMMENT=	Info format documentation for the GNU tape archiver
 LICENSE=	gnu-fdl-v1.1
 

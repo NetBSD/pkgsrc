@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.46 2013/09/12 11:01:47 jperkin Exp $
+# $NetBSD: plist.mk,v 1.47 2014/10/09 13:44:51 wiz Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -166,7 +166,6 @@ PLIST_SUBST+=	OPSYS=${OPSYS:Q}					\
 		VIEWBASE=${VIEWBASE:Q}					\
 		X11BASE=${X11BASE:Q}					\
 		X11PREFIX=${X11PREFIX:Q}				\
-		SVR4_PKGNAME=${SVR4_PKGNAME:Q}				\
 		CHGRP=${CHGRP:Q}					\
 		CHMOD=${CHMOD:Q}					\
 		CHOWN=${CHOWN:Q}					\
