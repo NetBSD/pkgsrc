@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3833 2014/10/09 19:48:58 jaapb Exp $
+$NetBSD: CHANGES-2014,v 1.3834 2014/10/09 19:49:19 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4839,3 +4839,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/ocaml to 4.02.0 [jaapb 2014-10-09]
 	Updated devel/pcre-ocaml to 7.1.1 [jaapb 2014-10-09]
 	Updated databases/ocaml-sqlite3 to 2.0.6 [jaapb 2014-10-09]
+	Updated databases/ocaml-mysql to 1.1.2 [jaapb 2014-10-09]
