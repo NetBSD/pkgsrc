@@ -1,9 +1,10 @@
-$NetBSD: patch-mkdep.c,v 1.5 2014/01/13 00:01:12 cheusov Exp $
+$NetBSD: patch-mkdep.c,v 1.6 2014/10/10 10:01:33 jperkin Exp $
 
 Always use portable snprintf
+
 --- mkdep.c.orig	2013-12-15 19:47:07.000000000 +0000
 +++ mkdep.c
-@@ -52,7 +52,6 @@ __RCSID("$NetBSD: mkdep.c,v 1.43 2013/03
+@@ -52,7 +52,6 @@
  
  #ifndef __sun
  #include <paths.h>
@@ -11,7 +12,7 @@ Always use portable snprintf
  #endif
  
  #include <stdio.h>
-@@ -343,14 +342,9 @@ main(int argc, char **argv)
+@@ -343,14 +342,9 @@
  			} else
  				fname = *argv++;
  			if (iflag) {
