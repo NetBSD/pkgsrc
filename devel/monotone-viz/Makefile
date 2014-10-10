@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.65 2014/10/07 16:47:23 adam Exp $
+# $NetBSD: Makefile,v 1.66 2014/10/10 08:39:08 jaapb Exp $
 #
 
 DISTNAME=		monotone-viz-1.0.1-nolablgtk
 PKGNAME=		${DISTNAME:S/-nolablgtk//}
-PKGREVISION=		43
+PKGREVISION=		44
 CATEGORIES=		devel scm
 MASTER_SITES=		http://oandrieu.nerim.net/monotone-viz/
 
@@ -29,5 +29,5 @@ do-install:
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/lablgtk/buildlink3.mk"
+.include "../../x11/ocaml-lablgtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
