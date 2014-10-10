@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.5 2014/10/09 13:54:36 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.6 2014/10/10 12:44:30 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q3 branch:
@@ -23,3 +23,8 @@ Pullup ticket #4519 - requested by taca
 www/apache24: security patch
 Pullup ticket #4520 - requested by taca
 security/openssh: security patch
+Pullup ticket #4509 - requested by tron
+mail/spamassassin: bug fix
+Pullup ticket #4515 - requested by tron
+databases/phpmyadmin: security update
+
