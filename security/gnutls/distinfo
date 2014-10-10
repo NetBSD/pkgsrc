@@ -1,13 +1,12 @@
-$NetBSD: distinfo,v 1.107 2014/08/30 12:45:11 adam Exp $
+$NetBSD: distinfo,v 1.108 2014/10/10 11:40:15 adam Exp $
 
-SHA1 (gnutls-3.2.17.tar.xz) = c48b02912c5dc77b627f1f17dcc05c2be1d59b0f
-RMD160 (gnutls-3.2.17.tar.xz) = d783071d9a1c23d76dce854e8e732c04b144483f
-Size (gnutls-3.2.17.tar.xz) = 5151932 bytes
+SHA1 (gnutls-3.2.18.tar.xz) = 3351c72658c974ad5e61ffde98caef0ae7e184e3
+RMD160 (gnutls-3.2.18.tar.xz) = 6d005a71443261b39cd862f3cf0e54afb80ce6ed
+Size (gnutls-3.2.18.tar.xz) = 5154476 bytes
 SHA1 (patch-ae) = b6402cc4a03f1b32792191518ed0c5596eb91c07
 SHA1 (patch-gl_stdio.in.h) = b5802da2cccddd6fab73bd39c49f7d62bef58464
 SHA1 (patch-lib_Makefile.in) = d395121b1b640aed76aff8033106c978e7ec4ce7
 SHA1 (patch-lib_nettle_rnd.c) = e3a35d2b492cbb719c178c90fa87861dfa828ce7
-SHA1 (patch-src_libopts_autoopts.h) = bddca27fd49c8ea0c62f339bd2754ec7a278fb5b
 SHA1 (patch-src_libopts_autoopts_options.h) = 60be5b43f23ba5978759c1e245781da7f9125071
 SHA1 (patch-src_libopts_compat_compat.h) = 2e0a1be460917b2d7a8f6bdac698dad405143013
 SHA1 (patch-src_libopts_makeshell.c) = c94e717027d078a081acd10eaec51a44dc4d42e1
