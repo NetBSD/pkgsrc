@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3853 2014/10/10 11:41:38 adam Exp $
+$NetBSD: CHANGES-2014,v 1.3854 2014/10/10 12:38:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4860,3 +4860,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Renamed x11/lablgtk to x11/ocaml-lablgtk [jaapb 2014-10-10]
 	Updated security/libtasn1 to 4.2 [adam 2014-10-10]
 	Updated security/gnutls to 3.2.18 [adam 2014-10-10]
+	Updated multimedia/ffmpeg1 to 1.2.9 [adam 2014-10-10]
