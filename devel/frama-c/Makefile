@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.49 2014/10/07 16:47:22 adam Exp $
+# $NetBSD: Makefile,v 1.50 2014/10/10 08:39:08 jaapb Exp $
 #
 
 DISTNAME=	frama-c-Oxygen-20120901
 PKGNAME=	${DISTNAME:S/-Oxygen//}
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	devel
 MASTER_SITES=	http://frama-c.com/download/
 
@@ -17,6 +17,6 @@ GNU_CONFIGURE=	yes
 
 .include "options.mk"
 
-.include "../../x11/lablgtk/buildlink3.mk"
+.include "../../x11/ocaml-lablgtk/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
