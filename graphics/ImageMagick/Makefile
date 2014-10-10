@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.210 2014/10/09 14:06:34 wiz Exp $
+# $NetBSD: Makefile,v 1.211 2014/10/10 15:05:28 prlw1 Exp $
 
 .include "Makefile.common"
 
@@ -78,7 +78,6 @@ SUBST_SED.fix-etc=	-e 's,^configlibdir =.*,configlibdir = $$(DATA_DIR)/examples/
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
-.include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
