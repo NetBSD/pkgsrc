@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2014/10/09 14:07:00 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2014/10/10 13:22:58 prlw1 Exp $
 
 DISTNAME=		smartmontools-6.2
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=smartmontools/}
 
@@ -23,7 +23,7 @@ EGDIR=			${PREFIX}/share/examples/smartmontools
 CONF_FILES=		${EGDIR}/smartd.conf ${PKG_SYSCONFDIR}/smartd.conf
 CONF_FILES_PERMS=	${EGDIR}/smartd_warning.sh \
 			${PKG_SYSCONFDIR}/smartd_warning.sh \
-			${ROOT_USER} ${ROOT_GROUP} 0755
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0755
 RCD_SCRIPTS=		smartd
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
