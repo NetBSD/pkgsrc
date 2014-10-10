@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST.gnomecanvas,v 1.1 2014/10/10 08:37:49 jaapb Exp $
+lib/ocaml/site-lib/lablgtk2/gnoCanvas.cmi
+${PLIST.opt}lib/ocaml/site-lib/lablgtk2/gnoCanvas.cmx
+lib/ocaml/site-lib/lablgtk2/gnoCanvas.ml
+lib/ocaml/site-lib/lablgtk2/gnomeCanvas.cmi
+${PLIST.opt}lib/ocaml/site-lib/lablgtk2/gnomeCanvas.cmx
+lib/ocaml/site-lib/lablgtk2/gnomeCanvas.ml
+${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablgnomecanvas.a
+lib/ocaml/site-lib/lablgtk2/lablgnomecanvas.cma
+${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablgnomecanvas.cmxa
+${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablgnomecanvas.cmxs
+${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablpanel.a
+lib/ocaml/site-lib/lablgtk2/lablpanel.cma
+${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablpanel.cmxa
+${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablpanel.cmxs
+lib/ocaml/site-lib/lablgtk2/liblablgnomecanvas.a
+lib/ocaml/site-lib/lablgtk2/liblablpanel.a
+lib/ocaml/site-lib/lablgtk2/panel.cmi
+${PLIST.opt}lib/ocaml/site-lib/lablgtk2/panel.cmx
+lib/ocaml/site-lib/lablgtk2/panel.ml
+lib/ocaml/site-lib/lablgtk2/panel_tags.h
+${PLIST.stubs}lib/ocaml/site-lib/lablgtk2/dlllablgnomecanvas.so
+${PLIST.stubs}lib/ocaml/site-lib/lablgtk2/dlllablpanel.so
