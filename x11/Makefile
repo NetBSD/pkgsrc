@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.738 2014/10/02 03:49:03 mef Exp $
+# $NetBSD: Makefile,v 1.739 2014/10/10 08:38:19 jaapb Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -265,7 +265,6 @@ SUBDIR+=	kkbswitch
 SUBDIR+=	kmessage
 SUBDIR+=	konsole
 SUBDIR+=	kterm
-SUBDIR+=	lablgtk
 SUBDIR+=	lablgtk1
 SUBDIR+=	labltk
 SUBDIR+=	lesstif
@@ -338,6 +337,7 @@ SUBDIR+=	mxterm
 SUBDIR+=	neXtaw
 SUBDIR+=	numlockx
 SUBDIR+=	ocaml-graphics
+SUBDIR+=	ocaml-lablgtk
 SUBDIR+=	oneko
 SUBDIR+=	openbsd-input-ws
 SUBDIR+=	openmotif
