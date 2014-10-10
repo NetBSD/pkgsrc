@@ -1,7 +1,9 @@
-$NetBSD: patch-aa,v 1.8 2012/12/12 12:56:26 wiz Exp $
+$NetBSD: patch-aa,v 1.9 2014/10/10 20:57:32 snj Exp $
 
---- Makefile.orig	2011-05-13 13:11:24.000000000 +0000
-+++ Makefile
+Override hardcoded paths/flags.
+
+--- Makefile.orig	2013-12-19 16:50:37.000000000 -0800
++++ Makefile	2014-10-10 12:42:15.000000000 -0700
 @@ -4,7 +4,7 @@
  #######################################################################
  
@@ -10,13 +12,13 @@ $NetBSD: patch-aa,v 1.8 2012/12/12 12:56:26 wiz Exp $
 +#PREFIX = /usr/local
  
  # Font to use for statusbar in fullscreen mode
- STATUSBAR_FONT = "fixed"
-@@ -45,15 +45,6 @@ MAGIC = -DHAVE_MAGIC
+ STATUSBAR_FONT = "Monospace 9"
+@@ -49,15 +49,6 @@ EXIF = -DHAVE_EXIF
  # Do not edit below here!
  ######################################################################
  
 -CC        = gcc
--#CFLAGS    = -O -g -Wall
+-#CFLAGS    = -O0 -g -Wall
 -CFLAGS    = -O2 -Wall \
 -	    -fcaller-saves -ffast-math -fno-strength-reduce \
 -	    -fthread-jumps #-march=pentium #-DSTAT_MACROS_BROKEN
@@ -25,18 +27,9 @@ $NetBSD: patch-aa,v 1.8 2012/12/12 12:56:26 wiz Exp $
 -#	    -fthread-jumps #-march=pentium #-DSTAT_MACROS_BROKEN
 -
  INCLUDES  := $(shell pkg-config --cflags gdk-2.0 imlib2)
- LIBS      := $(shell pkg-config --libs gdk-2.0 imlib2) -lX11
+ LIBS      := $(shell pkg-config --libs gdk-2.0 imlib2) -lX11 -lXext
  
-@@ -83,7 +74,7 @@ OBJS_G   += lib/getopt.g lib/getopt1.g
- endif
- 
- ifdef GTD_XINERAMA
--LIBS     += -L/usr/X11R6/lib -lXinerama
-+LIBS     += -L$(X11BASE)/lib -lXinerama
- endif
- 
- ifdef MAGIC
-@@ -99,10 +90,10 @@ DEFINES_G = $(DEFINES) -DDEBUG
+@@ -110,10 +101,10 @@ DEFINES_G = $(DEFINES) -DDEBUG
  all: $(PROGRAM)
  
  $(PROGRAM): $(OBJS)
@@ -49,7 +42,7 @@ $NetBSD: patch-aa,v 1.8 2012/12/12 12:56:26 wiz Exp $
  
  main.o: main.h
  
-@@ -126,22 +117,9 @@ distclean : clean
+@@ -137,32 +128,11 @@ distclean : clean
  	rm -f $(PROGRAM) $(PROGRAM_G)
  
  install: $(PROGRAM)
@@ -65,14 +58,26 @@ $NetBSD: patch-aa,v 1.8 2012/12/12 12:56:26 wiz Exp $
 -	fi
 -	install -m 0644 $(PROGRAM).1 $(PREFIX)/man/man1
 -	$(COMPRESS_PROG) $(PREFIX)/man/man1/$(PROGRAM).1
+-	@if [ ! -e $(PREFIX)/share/pixmaps ]; then \
+-	  echo install -d -m 0755 $(PREFIX)/share/pixmaps; \
+-	  install -d -m 0755 $(PREFIX)/share/pixmaps; \
+-	fi
+-	install -m 0644 qiv.png $(PREFIX)/share/pixmaps/qiv.png
+-	@if [ ! -e $(PREFIX)/share/applications ]; then \
+-	  echo install -d -m 0755 $(PREFIX)/share/applications; \
+-	  install -d -m 0755 $(PREFIX)/share/applications; \
+-	fi
+-	install -m 0644 qiv.desktop $(PREFIX)/share/applications/qiv.desktop
 -	@if ./qiv -f ./intro.jpg ; \
 -	then echo "-- Test Passed --" ; \
 -	else echo "-- Test Failed --" ; \
 -	fi
--	@echo "\nDont forget to look into the \"qiv-command\" file and install it!\n-> cp qiv-command.example /usr/local/bin/qiv-command\n\n"
+-	@echo "\nDont forget to look into the \"qiv-command\" file and install it!\n-> cp qiv-command.example $(PREFIX)/bin/qiv-command\n\n"
 +	$(BSD_INSTALL_PROGRAM) $(PROGRAM) $(DESTDIR)$(PREFIX)/bin
 +	$(BSD_INSTALL_DATA) $(PROGRAM).1 $(DESTDIR)$(PREFIX)/man/man1
-+	$(BSD_INSTALL_SCRIPT) qiv-command.example \
++	$(BSD_INSTALL_DATA) qiv.png $(DESTDIR)$(PREFIX)/share/pixmaps
++	$(BSD_INSTALL_DATA) qiv.desktop $(DESTDIR)$(PREFIX)/share/applications
++	$(BSD_INSTALL_SCRIPT) contrib/qiv-command.example \
 +		$(DESTDIR)$(PREFIX)/share/examples/qiv
  
  # the end... ;-)
