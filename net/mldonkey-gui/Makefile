@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.80 2014/10/09 19:14:04 jaapb Exp $
+# $NetBSD: Makefile,v 1.81 2014/10/10 08:39:08 jaapb Exp $
 #
 
 .include "../../net/mldonkey/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/mldonkey/mldonkey-gui/}
-PKGREVISION=		23
+PKGREVISION=		24
 
 COMMENT+=		(GTK interface)
 
@@ -29,6 +29,6 @@ do-install:
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 # 2.16.0 is the first version that installs in the right location
-BUILDLINK_API_DEPENDS.lablgtk+=	lablgtk>=2.16.0
-.include "../../x11/lablgtk/buildlink3.mk"
+BUILDLINK_API_DEPENDS.ocaml-lablgtk+=	ocaml-lablgtk>=2.16.0
+.include "../../x11/ocaml-lablgtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
