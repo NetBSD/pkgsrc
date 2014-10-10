@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2014/10/10 08:39:08 jaapb Exp $
+# $NetBSD: Makefile,v 1.76 2014/10/10 14:04:19 wiz Exp $
 
 VERSION=		4.0.1
 PKGNAME=		camlimages-${VERSION}
@@ -50,6 +50,6 @@ BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.11.0
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../print/ghostscript/buildlink3.mk"
-.include "../../x11/lablgtk/buildlink3.mk"
+.include "../../x11/ocaml-lablgtk/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
