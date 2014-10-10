@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST.gtksourceview2,v 1.1 2014/10/10 08:37:49 jaapb Exp $
+lib/ocaml/site-lib/lablgtk2/gSourceView2.cmi
+${PLIST.opt}lib/ocaml/site-lib/lablgtk2/gSourceView2.cmx
+lib/ocaml/site-lib/lablgtk2/gSourceView2.ml
+lib/ocaml/site-lib/lablgtk2/gtkSourceView2.cmi
+${PLIST.opt}lib/ocaml/site-lib/lablgtk2/gtkSourceView2.cmx
+lib/ocaml/site-lib/lablgtk2/gtkSourceView2.ml
+${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablgtksourceview2.a
+${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablgtksourceview2.cma
+lib/ocaml/site-lib/lablgtk2/lablgtksourceview2.cmxa
+${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablgtksourceview2.cmxs
+lib/ocaml/site-lib/lablgtk2/liblablgtksourceview2.a
+lib/ocaml/site-lib/lablgtk2/sourceView2Enums.cmi
+${PLIST.opt}lib/ocaml/site-lib/lablgtk2/sourceView2Enums.cmx
+lib/ocaml/site-lib/lablgtk2/sourceView2Enums.ml
+lib/ocaml/site-lib/lablgtk2/sourceView2_tags.h
+lib/ocaml/site-lib/lablgtk2/dlllablgtksourceview2.so
