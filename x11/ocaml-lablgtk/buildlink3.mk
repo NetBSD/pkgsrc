@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2014/10/10 08:37:49 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2014/10/10 14:04:19 wiz Exp $
 
 BUILDLINK_TREE+=	ocaml-lablgtk
 
@@ -7,7 +7,7 @@ OCAML_LABLGTK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-lablgtk+=	ocaml-lablgtk>=2.6.0nb3
 BUILDLINK_ABI_DEPENDS.ocaml-lablgtk+=	ocaml-lablgtk>=2.18.2
-BUILDLINK_PKGSRCDIR.ocaml-lablgtk?=	../../x11/lablgtk
+BUILDLINK_PKGSRCDIR.ocaml-lablgtk?=	../../x11/ocaml-lablgtk
 
 # gnome-panel must be exposed if and only if we built with it
 pkgbase := ocaml-lablgtk
