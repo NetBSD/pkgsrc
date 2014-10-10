@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3851 2014/10/10 01:47:11 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3852 2014/10/10 08:41:38 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4857,3 +4857,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/ocaml-cryptokit to 1.9 [jaapb 2014-10-09]
 	Updated geography/gdal-lib to 1.11.1 [wen 2014-10-10]
 	Updated devel/p5-Inline to 0.77 [wen 2014-10-10]
+	Renamed x11/lablgtk to x11/ocaml-lablgtk [jaapb 2014-10-10]
