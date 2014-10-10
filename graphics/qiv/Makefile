@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2014/10/09 14:06:37 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2014/10/10 20:57:32 snj Exp $
 
-DISTNAME=	qiv-2.2.4
-PKGREVISION=	9
+DISTNAME=	qiv-2.3.1
 CATEGORIES=	graphics x11
 MASTER_SITES=	http://spiegl.de/qiv/download/
 EXTRACT_SUFX=	.tgz
@@ -13,9 +12,16 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake pkg-config
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/qiv
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/qiv share/pixmaps
+INSTALLATION_DIRS+=	share/applications
 
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
+.include "../../graphics/lcms2/buildlink3.mk"
+.include "../../graphics/libexif/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
