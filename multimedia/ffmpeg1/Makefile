@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/08/11 23:01:50 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/10/10 12:30:34 adam Exp $
 
-PKGNAME=	ffmpeg1-${DISTVERSION}
+PKGNAME=	${DISTNAME:S/ffmpeg/ffmpeg1/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ffmpeg.mplayerhq.hu/
 COMMENT=	Decoding, encoding and streaming software (v1.x)
@@ -51,10 +51,6 @@ CONFIGURE_ARGS+=	--disable-asm
 .  elif !empty(CC_VERSION:Mgcc-4.[2345]*)
 CFLAGS+=		-mstackrealign -mpreferred-stack-boundary=4
 .  endif
-.endif
-
-.if !empty(PKGSRC_COMPILER:Mclang)
-CFLAGS+=	-no-integrated-as
 .endif
 
 .include "../../multimedia/ffmpeg1/Makefile.common"
