@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.15 2014/10/10 15:05:28 prlw1 Exp $
+# $NetBSD: options.mk,v 1.16 2014/10/10 15:17:22 prlw1 Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ImageMagick
 PKG_SUPPORTED_OPTIONS=	x11 jasper djvu ghostscript openexr wmf
-PKG_SUGGESTED_OPTIONS=	x11 jasper openexr
+PKG_SUGGESTED_OPTIONS=	x11 jasper
 
 .include "../../mk/bsd.options.mk"
 
