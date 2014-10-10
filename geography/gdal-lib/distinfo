@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.23 2014/09/15 16:48:21 jperkin Exp $
+$NetBSD: distinfo,v 1.24 2014/10/10 01:13:57 wen Exp $
 
-SHA1 (gdal-1.9.2.tar.gz) = 7eda6a4d735b8d6903740e0acdd702b43515e351
-RMD160 (gdal-1.9.2.tar.gz) = 1ab34a85946bae4313cbd925cdbbf728d23d7b57
-Size (gdal-1.9.2.tar.gz) = 9495381 bytes
+SHA1 (gdal-1.11.1.tar.gz) = e2c67481932ec9fb6ec3c0faadc004f715c4eef4
+RMD160 (gdal-1.11.1.tar.gz) = 9ebfbebeaff99a533bb4f4cf33b3f747e1ced9b4
+Size (gdal-1.11.1.tar.gz) = 10731242 bytes
 SHA1 (patch-GDALmake.opt.in) = 6bae7f2bfea619d6b96bb0709f31e84a2eb764a5
-SHA1 (patch-frmts_gif_biggifdataset.cpp) = ec591ad57fdc96e04713ef769f93df6b8e101e0d
-SHA1 (patch-frmts_gif_gifabstractdataset.cpp) = a36bfacd0c1c329d221af8554fa8d236033b970d
-SHA1 (patch-frmts_gif_gifdataset.cpp) = 7d307e0530bad5f5364e08c157e45c39b20b5026
+SHA1 (patch-configure) = 8cb8b26365933780cded7069722fa3e35d0c4b33
