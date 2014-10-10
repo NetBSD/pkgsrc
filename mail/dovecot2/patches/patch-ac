@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1.32.2 2014/10/10 07:42:55 tron Exp $
+
+--- doc/example-config/conf.d/10-ssl.conf.orig	2010-05-24 14:35:40.000000000 +0000
++++ doc/example-config/conf.d/10-ssl.conf
+@@ -3,14 +3,14 @@
+ ##
+ 
+ # SSL/TLS support: yes, no, required. <doc/wiki/SSL.txt>
+-#ssl = yes
++#ssl = no
+ 
+ # PEM encoded X.509 SSL/TLS certificate and private key. They're opened before
+ # dropping root privileges, so keep the key file unreadable by anyone but
+ # root. Included doc/mkcert.sh can be used to easily generate self-signed
+ # certificate, just make sure to update the domains in dovecot-openssl.cnf
+-ssl_cert = </etc/ssl/certs/dovecot.pem
+-ssl_key = </etc/ssl/private/dovecot.pem
++#ssl_cert = /etc/ssl/certs/dovecot.pem
++#ssl_key = /etc/ssl/private/dovecot.pem
+ 
+ # If key file is password protected, give the password here. Alternatively
+ # give it when starting dovecot with -p parameter. Since this file is often
