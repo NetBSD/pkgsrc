@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2012/03/07 16:17:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/10/10 01:13:57 wen Exp $
 bin/gdal-config
 bin/gdal_contour
 bin/gdal_grid
@@ -11,6 +11,7 @@ bin/gdalenhance
 bin/gdalinfo
 bin/gdallocationinfo
 bin/gdalmanage
+bin/gdalserver
 bin/gdalsrsinfo
 bin/gdaltindex
 bin/gdaltransform
@@ -18,6 +19,7 @@ bin/gdalwarp
 bin/nearblack
 bin/ogr2ogr
 bin/ogrinfo
+bin/ogrlineref
 bin/ogrtindex
 bin/testepsg
 include/cpl_atomic_ops.h
@@ -36,11 +38,15 @@ include/cpl_minizip_zip.h
 include/cpl_multiproc.h
 include/cpl_odbc.h
 include/cpl_port.h
+include/cpl_progress.h
 include/cpl_quad_tree.h
+include/cpl_spawn.h
 include/cpl_string.h
 include/cpl_time.h
+include/cpl_virtualmem.h
 include/cpl_vsi.h
 include/cpl_vsi_virtual.h
+include/cpl_vsil_curl_priv.h
 include/cpl_win32ce_api.h
 include/cpl_wince.h
 include/cplkeywordparser.h
@@ -53,9 +59,14 @@ include/gdal_pam.h
 include/gdal_priv.h
 include/gdal_proxy.h
 include/gdal_rat.h
+include/gdal_simplesurf.h
 include/gdal_version.h
 include/gdal_vrt.h
+include/gdalexif.h
+include/gdalgeorefpamdataset.h
 include/gdalgrid.h
+include/gdalgrid_priv.h
+include/gdaljp2abstractdataset.h
 include/gdaljp2metadata.h
 include/gdalwarper.h
 include/gdalwarpkernel_opencl.h
@@ -65,6 +76,7 @@ include/ogr_api.h
 include/ogr_core.h
 include/ogr_feature.h
 include/ogr_featurestyle.h
+include/ogr_geocoding.h
 include/ogr_geometry.h
 include/ogr_p.h
 include/ogr_spatialref.h
@@ -74,6 +86,7 @@ include/rawdataset.h
 include/thinplatespline.h
 include/vrtdataset.h
 lib/libgdal.la
+lib/pkgconfig/gdal.pc
 share/gdal/GDALLogoBW.svg
 share/gdal/GDALLogoColor.svg
 share/gdal/GDALLogoGS.svg
@@ -93,17 +106,29 @@ share/gdal/gcs.override.csv
 share/gdal/gdal_datum.csv
 share/gdal/gdalicon.png
 share/gdal/geoccs.csv
+share/gdal/gml_registry.xml
 share/gdal/gt_datum.csv
 share/gdal/gt_ellips.csv
 share/gdal/header.dxf
+share/gdal/inspire_cp_BasicPropertyUnit.gfs
+share/gdal/inspire_cp_CadastralBoundary.gfs
+share/gdal/inspire_cp_CadastralParcel.gfs
+share/gdal/inspire_cp_CadastralZoning.gfs
 share/gdal/nitf_spec.xml
 share/gdal/nitf_spec.xsd
+share/gdal/ogrvrt.xsd
+share/gdal/osmconf.ini
+share/gdal/ozi_datum.csv
+share/gdal/ozi_ellips.csv
 share/gdal/pci_datum.txt
 share/gdal/pci_ellips.txt
 share/gdal/pcs.csv
 share/gdal/pcs.override.csv
 share/gdal/prime_meridian.csv
 share/gdal/projop_wparm.csv
+share/gdal/ruian_vf_ob_v1.gfs
+share/gdal/ruian_vf_st_v1.gfs
+share/gdal/ruian_vf_v1.gfs
 share/gdal/s57agencies.csv
 share/gdal/s57attributes.csv
 share/gdal/s57attributes_aml.csv
@@ -119,3 +144,4 @@ share/gdal/trailer.dxf
 share/gdal/unit_of_measure.csv
 share/gdal/vertcs.csv
 share/gdal/vertcs.override.csv
+@pkgdir lib/gdalplugins
