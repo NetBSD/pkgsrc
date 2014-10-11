@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/02/12 01:35:43 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/10/11 09:54:30 prlw1 Exp $
 bin/peas-demo
 include/libpeas-1.0/libpeas-gtk/peas-gtk-configurable.h
 include/libpeas-1.0/libpeas-gtk/peas-gtk-plugin-manager-view.h
@@ -46,13 +46,16 @@ share/gtk-doc/html/libpeas/ch03.html
 share/gtk-doc/html/libpeas/home.png
 share/gtk-doc/html/libpeas/index.html
 share/gtk-doc/html/libpeas/index.sgml
+share/gtk-doc/html/libpeas/left-insensitive.png
 share/gtk-doc/html/libpeas/left.png
 share/gtk-doc/html/libpeas/libpeas-PeasExtension.html
 share/gtk-doc/html/libpeas/libpeas.devhelp2
 share/gtk-doc/html/libpeas/peas-gtk-plugin-manager.png
 share/gtk-doc/html/libpeas/pt01.html
+share/gtk-doc/html/libpeas/right-insensitive.png
 share/gtk-doc/html/libpeas/right.png
 share/gtk-doc/html/libpeas/style.css
+share/gtk-doc/html/libpeas/up-insensitive.png
 share/gtk-doc/html/libpeas/up.png
 share/icons/hicolor/16x16/actions/libpeas-plugin.png
 share/icons/hicolor/22x22/actions/libpeas-plugin.png
