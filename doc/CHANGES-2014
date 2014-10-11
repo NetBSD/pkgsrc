@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3856 2014/10/10 21:21:25 snj Exp $
+$NetBSD: CHANGES-2014,v 1.3857 2014/10/11 09:54:59 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4863,3 +4863,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/ffmpeg1 to 1.2.9 [adam 2014-10-10]
 	Updated graphics/qiv to 2.3.1 [snj 2014-10-10]
 	Updated audio/flac123 to 0.0.12 [snj 2014-10-10]
+	Updated devel/libpeas to 1.12.1 [prlw1 2014-10-11]
