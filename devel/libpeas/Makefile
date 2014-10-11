@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2014/05/17 16:10:43 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.22 2014/10/11 09:54:30 prlw1 Exp $
 
-DISTNAME=	libpeas-1.8.1
-PKGREVISION=	2
+DISTNAME=	libpeas-1.12.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libpeas/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -28,8 +26,10 @@ PKGCONFIG_OVERRIDE+=	data/libpeas-gtk-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	data/libpeas-1.0.pc.in
 
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=1.39.0
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/py-gobject3/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../lang/python/extension.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
