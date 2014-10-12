@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/10/07 07:31:38 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/10/12 16:00:30 wiz Exp $
 
 DISTNAME=	mpv-0.6.0
 CATEGORIES=	multimedia
@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 # ${WRKSRC}/bootstrap.py mentions needed version
-BUILD_DEPENDS+=	waf>=1.7.16:../../devel/waf
+BUILD_DEPENDS+=	waf>=1.8:../../devel/waf
 
 PYTHON_FOR_BUILD_ONLY=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-docutils
