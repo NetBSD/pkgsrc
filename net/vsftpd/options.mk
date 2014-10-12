@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.7 2011/04/15 08:34:01 obache Exp $
+# $NetBSD: options.mk,v 1.8 2014/10/12 10:25:05 abs Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.vsftpd
 PKG_SUPPORTED_OPTIONS=	pam ssl tcpwrappers
-PKG_SUGGESTED_OPTIONS=	pam tcpwrappers
+PKG_SUGGESTED_OPTIONS=	pam ssl tcpwrappers
 
 .include "../../mk/bsd.options.mk"
 
