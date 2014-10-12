@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.59 2014/10/12 23:39:17 joerg Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.60 2014/10/12 23:44:32 joerg Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -7,20 +7,18 @@
 #
 # User-settable variables:
 #
-# PKGINSTALL_VERBOSE
-#	A list of scriptlets that will be verbose and output a message
-#	noting the actions taken.
+# FONTS_VERBOSE indicates whether the +FONTS scriptlet will output a message
+#	noting the actions taken if PKG_UPDATE_FONTS_DB is YES.  It is either
+#	YES or NO and defaults to YES for PKG_DEVELOPERs, otherwise NO.
 #
-#	* "all" is a special value that implies all of the other items
-#	* "fonts" for +FONTS
-#	* "info-files" for +INFO_FILES
+# INFO_FILES_VERBOSE indicates whether the +INFO_FILES scriptlet will output
+#	a message noting the actions taken.  It is either YES or NO and
+#	defaults to  YES for PKG_DEVELOPERs, otherwise NO.
 #
-#	Default value: "all" for PKG_DEVELOPERs, empty otherwise.
-#
-
 _VARGROUPS+=		pkginstall
 _USER_VARS.pkginstall= \
-	PKGINSTALL_VERBOSE \
+	FONTS_VERBOSE \
+	INFO_FILES_VERBOSE \
 	PKG_CREATE_USERGROUP \
 	PKG_CONFIG PKG_CONFIG_PERMS \
 	PKG_RCD_SCRIPTS \
@@ -992,6 +990,13 @@ ${_INSTALL_FONTS_FILE}: ../../mk/pkginstall/fonts
 # These values merely set the defaults for INSTALL/DEINSTALL scripts, but
 # they may be overridden by resetting them in the environment.
 #
+.if ${PKG_DEVELOPER:Uno} != "no"
+FONTS_VERBOSE?=		YES
+INFO_FILES_VERBOSE?=	YES
+.else
+FONTS_VERBOSE?=		NO
+INFO_FILES_VERBOSE?=	NO
+.endif
 PKG_CREATE_USERGROUP?=	YES
 PKG_CONFIG?=		YES
 PKG_CONFIG_PERMS?=	NO
@@ -1004,22 +1009,8 @@ FILES_SUBST+=		PKG_CONFIG_PERMS=${PKG_CONFIG_PERMS:Q}
 FILES_SUBST+=		PKG_RCD_SCRIPTS=${PKG_RCD_SCRIPTS:Q}
 FILES_SUBST+=		PKG_REGISTER_SHELLS=${PKG_REGISTER_SHELLS:Q}
 FILES_SUBST+=		PKG_UPDATE_FONTS_DB=${PKG_UPDATE_FONTS_DB:Q}
-
-.if ${PKG_DEVELOPER:Uno} != "no"
-PKGINSTALL_VERBOSE?=	all
-.else
-PKGINSTALL_VERBOSE?=	# empty
-.endif
-.if !empty(PKGINSTALL_VERBOSE:Mall) || !empty(PKGINSTALL_VERBOSE:Mfonts)
-FILES_SUBST+=		FONTS_VERBOSE=yes
-.else
-FILES_SUBST+=		FONTS_VERBOSE=no
-.endif
-.if !empty(PKGINSTALL_VERBOSE:Mall) || !empty(PKGINSTALL_VERBOSE:Minfo-files)
-FILES_SUBST+=		INFO_FILES_VERBOSE=yes
-.else
-FILES_SUBST+=		INFO_FILES_VERBOSE=no
-.endif
+FILES_SUBST+=		FONTS_VERBOSE=${FONTS_VERBOSE:Q}
+FILES_SUBST+=		INFO_FILES_VERBOSE=${INFO_FILES_VERBOSE:Q}
 
 # Substitute for various programs used in the DEINSTALL/INSTALL scripts and
 # in the rc.d scripts.
