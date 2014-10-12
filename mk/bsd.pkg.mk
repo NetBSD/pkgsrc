@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2003 2014/10/09 13:44:51 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2004 2014/10/12 23:39:17 joerg Exp $
 #
 # This file is in the public domain.
 #
@@ -802,7 +802,7 @@ ${_MAKEVARS_MK.${_phase_}}: ${WRKDIR}
 .  endif
 .endif
 
-.if defined(PKG_DEVELOPER) && ${PKG_DEVELOPER} != "no"
+.if ${PKG_DEVELOPER:Uno} != "no"
 .  include "misc/developer.mk"
 .endif
 .include "misc/show.mk"
