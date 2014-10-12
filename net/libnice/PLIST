@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/05/06 08:31:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/10/12 14:46:41 wiz Exp $
 bin/sdp-example
 bin/simple-example
 bin/stunbdc
@@ -23,6 +23,7 @@ include/stun/win32_common.h
 lib/libnice.la
 lib/pkgconfig/nice.pc
 share/gtk-doc/html/libnice/NiceAgent.html
+share/gtk-doc/html/libnice/NiceCandidate.html
 share/gtk-doc/html/libnice/annotation-glossary.html
 share/gtk-doc/html/libnice/api-index-deprecated.html
 share/gtk-doc/html/libnice/api-index-full.html
@@ -43,13 +44,13 @@ share/gtk-doc/html/libnice/ix08.html
 share/gtk-doc/html/libnice/ix09.html
 share/gtk-doc/html/libnice/ix10.html
 share/gtk-doc/html/libnice/ix11.html
+share/gtk-doc/html/libnice/left-insensitive.png
 share/gtk-doc/html/libnice/left.png
 share/gtk-doc/html/libnice/libnice-Bind.html
 share/gtk-doc/html/libnice/libnice-Debug-messages.html
 share/gtk-doc/html/libnice/libnice-ICE.html
 share/gtk-doc/html/libnice/libnice-Network-interfaces-discovery.html
 share/gtk-doc/html/libnice/libnice-NiceAddress.html
-share/gtk-doc/html/libnice/libnice-NiceCandidate.html
 share/gtk-doc/html/libnice/libnice-Pseudo-TCP-Socket.html
 share/gtk-doc/html/libnice/libnice-STUN-Constants.html
 share/gtk-doc/html/libnice/libnice-StunAgent.html
@@ -61,6 +62,8 @@ share/gtk-doc/html/libnice/pt01.html
 share/gtk-doc/html/libnice/pt02.html
 share/gtk-doc/html/libnice/pt03.html
 share/gtk-doc/html/libnice/pt04.html
+share/gtk-doc/html/libnice/right-insensitive.png
 share/gtk-doc/html/libnice/right.png
 share/gtk-doc/html/libnice/style.css
+share/gtk-doc/html/libnice/up-insensitive.png
 share/gtk-doc/html/libnice/up.png
