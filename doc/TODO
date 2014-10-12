@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13738 2014/10/12 14:53:47 wiz Exp $
+$NetBSD: TODO,v 1.13739 2014/10/12 14:55:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -456,7 +456,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cssc-1.4.0
 	o cuisine-0.6.5
 	o cups-2.0.0
-	o cups-filters-1.0.61
 	o cvs-fast-export-1.11
 	o cvs2p4-2.5.5 [schmonz]
 	o cwm-5.1
