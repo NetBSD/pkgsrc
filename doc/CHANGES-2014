@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3859 2014/10/12 14:38:26 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3860 2014/10/12 14:39:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4866,3 +4866,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/libpeas to 1.12.1 [prlw1 2014-10-11]
 	Updated security/p5-IO-Socket-SSL to 1.999 [wiz 2014-10-12]
 	Updated textproc/p5-YAML to 1.13 [wiz 2014-10-12]
+	Updated www/p5-CGI to 4.06 [wiz 2014-10-12]
