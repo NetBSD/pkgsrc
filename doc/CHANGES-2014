@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3857 2014/10/11 09:54:59 prlw1 Exp $
+$NetBSD: CHANGES-2014,v 1.3858 2014/10/12 14:37:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4864,3 +4864,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/qiv to 2.3.1 [snj 2014-10-10]
 	Updated audio/flac123 to 0.0.12 [snj 2014-10-10]
 	Updated devel/libpeas to 1.12.1 [prlw1 2014-10-11]
+	Updated security/p5-IO-Socket-SSL to 1.999 [wiz 2014-10-12]
