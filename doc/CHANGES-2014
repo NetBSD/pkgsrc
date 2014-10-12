@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3862 2014/10/12 14:48:29 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3863 2014/10/12 14:49:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4869,3 +4869,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-CGI to 4.06 [wiz 2014-10-12]
 	Updated net/libnice to 0.1.8 [wiz 2014-10-12]
 	Updated security/caff to 1.1.10 [wiz 2014-10-12]
+	Updated net/gst-plugins1-libnice to 0.1.8 [wiz 2014-10-12]
