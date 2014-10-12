@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13743 2014/10/12 15:21:37 wiz Exp $
+$NetBSD: TODO,v 1.13744 2014/10/12 15:59:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1125,8 +1125,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vte-0.36.0
 	o vttest-20140116
 	o wMosaic-3.8.22
-	o waf-1.8.0 [wait for fix for https://code.google.com/p/waf/issues/detail?id=1495]
-	o waf-1.8.2
 	o wap-utils-1.4.1
 	o warzone2100-2.3.8
 	o wbm-cyrus-imapd-1.6.2
