@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3872 2014/10/12 15:21:37 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3873 2014/10/12 15:59:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4879,3 +4879,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-setuptools to 6.1 [wiz 2014-10-12]
 	Updated mail/spamassassin to 3.4.0nb3 [tron 2014-10-12]
 	Updated converters/help2man to 1.46.4 [wiz 2014-10-12]
+	Updated devel/waf to 1.8.2 [wiz 2014-10-12]
