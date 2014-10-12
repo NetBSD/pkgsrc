@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.117 2014/10/09 14:06:40 wiz Exp $
+# $NetBSD: Makefile,v 1.118 2014/10/12 15:18:21 tron Exp $
 
 DISTNAME=	Mail-SpamAssassin-3.4.0
 PKGNAME=	spamassassin-3.4.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_APACHE:=spamassassin/source/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -32,9 +32,10 @@ DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
 DEPENDS+=	p5-HTML-Parser>=3.43:../../www/p5-HTML-Parser
 DEPENDS+=	{perl>=5.9.3,p5-IO-Compress-[0-9]*}:../../devel/p5-IO-Compress # Compress::Zlib>=0
 DEPENDS+=	{perl>=5.9.3,p5-IO-Zlib>=1.04}:../../devel/p5-IO-Zlib
+DEPENDS+=	p5-Mail-SPF-[0-9]*:../../mail/p5-Mail-SPF
+DEPENDS+=	{p5-MIME-Base64>=2.11,perl>=5.8.0}:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-NetAddr-IP>=4.007:../../net/p5-NetAddr-IP
 DEPENDS+=	p5-Net-DNS>=0.58:../../net/p5-Net-DNS
-DEPENDS+=	{p5-MIME-Base64>=2.11,perl>=5.8.0}:../../converters/p5-MIME-Base64
 DEPENDS+=	{perl>=5.7.3,p5-Time-HiRes-[0-9]*}:../../time/p5-Time-HiRes
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	re2c>=0.13.6:../../devel/re2c
