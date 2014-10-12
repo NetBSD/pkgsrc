@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.63 2014/05/15 09:59:09 wiz Exp $
+# $NetBSD: license.mk,v 1.64 2014/10/12 23:39:17 joerg Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -152,7 +152,7 @@ ACCEPTABLE_LICENSES=	${ACCEPTABLE_LICENCES}
 .endif
 
 .if !defined(LICENSE)
-.  if defined(PKG_DEVELOPER) && ${PKG_DEVELOPER} != "no"
+.  if ${PKG_DEVELOPER:Uno} != "no"
 WARNINGS+=		"[license.mk] Every package should define a LICENSE."
 .  endif
 
