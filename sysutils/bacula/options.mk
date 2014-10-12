@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.20 2013/05/19 11:00:03 shattered Exp $
+# $NetBSD: options.mk,v 1.21 2014/10/12 00:08:26 gdt Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.bacula
 PKG_SUPPORTED_OPTIONS=		ssl
 PKG_OPTIONS_REQUIRED_GROUPS=	database
 PKG_OPTIONS_GROUP.database=	catalog-sqlite3 catalog-pgsql catalog-mysql
-PKG_SUGGESTED_OPTIONS=		catalog-sqlite3
+PKG_SUGGESTED_OPTIONS=		ssl catalog-sqlite3
 
 .include "../../mk/bsd.options.mk"
 
