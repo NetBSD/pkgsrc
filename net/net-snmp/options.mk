@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.15 2013/03/12 03:00:38 garbled Exp $
+# $NetBSD: options.mk,v 1.16 2014/10/12 00:14:45 gdt Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.net-snmp
 PKG_SUPPORTED_OPTIONS=		ssl snmp-unprived snmp-nokmem perl
-PKG_SUGGESTED_OPTIONS=		perl
+PKG_SUGGESTED_OPTIONS=		ssl perl
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.107 2014/08/25 14:31:47 adam Exp $
+# $NetBSD: Makefile,v 1.108 2014/10/12 00:14:45 gdt Exp $
 
 .include "Makefile.common"
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 
 MAINTAINER=	adam@NetBSD.org
