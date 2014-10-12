@@ -1,4 +1,4 @@
-# $NetBSD: check-wrkref.mk,v 1.22 2014/09/04 16:09:33 jperkin Exp $
+# $NetBSD: check-wrkref.mk,v 1.23 2014/10/12 23:39:17 joerg Exp $
 #
 # This file checks that the installed files don't contain any strings
 # that point to the directory where the package had been built, to make
@@ -41,10 +41,11 @@ _VARGROUPS+=			check-wrkref
 _USER_VARS.check-wrkref=	CHECK_WRKREF
 _PKG_VARS.check-wrkref=		CHECK_WRKREF_SKIP
 
-.if defined(PKG_DEVELOPER) && ${PKG_DEVELOPER} != "no"
+.if ${PKG_DEVELOPER:Uno} != "no"
 CHECK_WRKREF?=		tools home
-.endif
+.else
 CHECK_WRKREF?=		no
+.endif
 CHECK_WRKREF_SKIP?=	# none
 
 _CHECK_WRKREF_FILELIST_CMD?=	${PKG_FILELIST_CMD}

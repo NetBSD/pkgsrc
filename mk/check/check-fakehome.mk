@@ -1,4 +1,4 @@
-# $NetBSD: check-fakehome.mk,v 1.3 2010/08/24 19:08:29 bad Exp $
+# $NetBSD: check-fakehome.mk,v 1.4 2014/10/12 23:39:17 joerg Exp $
 #
 # This file checks that the package does not install files to $HOME.
 #
@@ -19,7 +19,7 @@ _USER_VARS.check-fakehome=	CHECK_FAKEHOME
 _PKG_VARS.check-fakehome=	# None for now. One might be added to override
 #				  the test if the fakehome test is made fatal.
 
-.if defined(PKG_DEVELOPER) && ${PKG_DEVELOPER} != "no"
+.if ${PKG_DEVELOPER:Uno} != "no"
 CHECK_FAKEHOME?=		yes
 .else
 CHECK_FAKEHOME?=		no

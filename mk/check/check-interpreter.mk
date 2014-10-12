@@ -1,4 +1,4 @@
-# $NetBSD: check-interpreter.mk,v 1.27 2011/04/19 15:31:45 roy Exp $
+# $NetBSD: check-interpreter.mk,v 1.28 2014/10/12 23:39:17 joerg Exp $
 #
 # This file checks that after installation, all files of the package
 # that start with a "#!" line will find their interpreter. Files that
@@ -27,7 +27,7 @@
 #	Example: share/package1/* share/package2/somefile
 #
 
-.if defined(PKG_DEVELOPER) && ${PKG_DEVELOPER} != "no"
+.if ${PKG_DEVELOPER:Uno} != "no"
 CHECK_INTERPRETER?=		yes
 .else
 CHECK_INTERPRETER?=		no
