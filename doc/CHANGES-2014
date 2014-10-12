@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3867 2014/10/12 14:55:58 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3868 2014/10/12 14:58:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4874,3 +4874,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated converters/py-chardet to 2.3.0 [wiz 2014-10-12]
 	Updated databases/py-ldap to 2.4.18 [wiz 2014-10-12]
 	Updated print/cups-filters to 1.0.61 [wiz 2014-10-12]
+	Updated devel/gmake to 4.1 [wiz 2014-10-12]
