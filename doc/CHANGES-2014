@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3869 2014/10/12 14:59:20 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3870 2014/10/12 15:00:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4876,3 +4876,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated print/cups-filters to 1.0.61 [wiz 2014-10-12]
 	Updated devel/gmake to 4.1 [wiz 2014-10-12]
 	Updated databases/py-sqlparse to 0.1.13 [wiz 2014-10-12]
+	Updated devel/py-setuptools to 6.1 [wiz 2014-10-12]
