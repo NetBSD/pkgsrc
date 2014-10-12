@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2014/01/25 10:29:58 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2014/10/12 14:52:36 wiz Exp $
 
-DISTNAME=	chardet-2.2.1
+DISTNAME=	chardet-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	converters python
 MASTER_SITES=	http://pypi.python.org/packages/source/c/chardet/
