@@ -1,11 +1,11 @@
-$NetBSD: patch-af,v 1.4 2013/10/23 08:54:59 wiz Exp $
+$NetBSD: patch-af,v 1.5 2014/10/12 14:58:27 wiz Exp $
 
 Make it clear that this is GNU make and not BSD make.
 
---- doc/make.info.orig	2010-07-28 05:42:13.000000000 +0000
+--- doc/make.info.orig	2014-10-05 16:25:47.000000000 +0000
 +++ doc/make.info
-@@ -25,8 +25,9 @@ Manual', for GNU `make' version 3.82.
- 
+@@ -24,8 +24,9 @@ Manual', for GNU 'make' version 4.1.
+      developing GNU and promoting software freedom."
  INFO-DIR-SECTION Software development
  START-INFO-DIR-ENTRY
 -* Make: (make).            Remake files automatically.
