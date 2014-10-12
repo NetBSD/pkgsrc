@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3861 2014/10/12 14:46:50 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3862 2014/10/12 14:48:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4868,3 +4868,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/p5-YAML to 1.13 [wiz 2014-10-12]
 	Updated www/p5-CGI to 4.06 [wiz 2014-10-12]
 	Updated net/libnice to 0.1.8 [wiz 2014-10-12]
+	Updated security/caff to 1.1.10 [wiz 2014-10-12]
