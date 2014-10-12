@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.23 2013/10/23 08:54:59 wiz Exp $
+$NetBSD: distinfo,v 1.24 2014/10/12 14:58:27 wiz Exp $
 
-SHA1 (make-4.0.tar.bz2) = c819622dc84e2290c351646b8a0ec4df0df12bb6
-RMD160 (make-4.0.tar.bz2) = 9a6198954e3c122adbe72f7358d897def498e565
-Size (make-4.0.tar.bz2) = 1341927 bytes
-SHA1 (patch-af) = b29956015c04d2a4b2b6855efbba884b93923c8b
+SHA1 (make-4.1.tar.bz2) = 0d701882fd6fd61a9652cb8d866ad7fc7de54d58
+RMD160 (make-4.1.tar.bz2) = 0f322d6c28867ea817f7d02c57e635c8ef556909
+Size (make-4.1.tar.bz2) = 1327342 bytes
+SHA1 (patch-af) = 8ff060ecba9d664044eabd98741253881d8c9bbe
 SHA1 (patch-pa) = 2c0168db7afec3da98b30392290e5b9464ea7b5e
