@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.81 2014/08/21 21:41:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.82 2014/10/13 09:08:31 wiz Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/MagickCore-config
@@ -209,6 +209,7 @@ share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/gaussian-blur.png
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/granite.png
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/imade_art2.jpg
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/label.gif
+share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/litecoin.png
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/logo-sm-flop.png
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/logo-sm-fx.png
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/logo-sm.png
