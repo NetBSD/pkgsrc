@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2014/10/13 13:14:03 mef Exp $
+# $NetBSD: Makefile,v 1.34 2014/10/13 13:35:53 mef Exp $
 #
 
 COMMENT=	Wireless communication tools and applications
@@ -19,7 +19,6 @@ SUBDIR+=	gnuradio-ctrlport
 SUBDIR+=	gnuradio-digital
 SUBDIR+=	gnuradio-doxygen
 SUBDIR+=	gnuradio-dtv
-SUBDIR+=	gnuradio-examples
 SUBDIR+=	gnuradio-fcd
 SUBDIR+=	gnuradio-fec
 SUBDIR+=	gnuradio-noaa
