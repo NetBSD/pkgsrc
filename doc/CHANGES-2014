@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3888 2014/10/13 18:30:20 snj Exp $
+$NetBSD: CHANGES-2014,v 1.3889 2014/10/13 21:44:25 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4928,3 +4928,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Removed ham/usrp-docs [mef 2014-10-13]
 	Added ham/hackrf version 2014.08.1 [mef 2014-10-13]
 	Updated multimedia/lsdvd to 0.17 [snj 2014-10-13]
+	Updated converters/orcus to 0.7.0 [ryoon 2014-10-13]
