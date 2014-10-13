@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13744 2014/10/12 15:59:13 wiz Exp $
+$NetBSD: TODO,v 1.13745 2014/10/13 09:08:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -333,7 +333,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o Chinput-3.0.1
 	o DarwinStreamingServer-6.0.3
 	o GMT-5.1.1
-	o ImageMagick-6.8.9.8
 	o Mesa-10.3 [do not update since it removes support for DRI features needed by NetBSD]
 	o MesaLib-10.3 [do not update since it removes support for DRI features needed by NetBSD]
 	o PAM-0.99.7.1
