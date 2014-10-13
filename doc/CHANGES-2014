@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3879 2014/10/13 06:13:22 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3880 2014/10/13 06:18:32 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4886,3 +4886,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Mo to 0.39 [wen 2014-10-13]
 	Updated devel/p5-MooX-Options to 4.012 [wen 2014-10-13]
 	Updated devel/p5-MooX-Log-Any to 0.003 [wen 2014-10-13]
+	Updated devel/p5-MooX-ConfigFromFile to 0.003 [wen 2014-10-13]
