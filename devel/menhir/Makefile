@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/10/09 21:19:31 jaapb Exp $
+# $NetBSD: Makefile,v 1.13 2014/10/13 12:03:15 jaapb Exp $
 #
 
 PKGNAME=	${DISTNAME} # defined to avoid prefixing with ocaml-
@@ -16,10 +16,10 @@ USE_TOOLS+=		gmake
 MAKE_JOBS_SAFE=	no
 
 SUPERSEDES=	ocaml-menhir-[0-9]*
+OCAML_USE_FINDLIB=	yes
 
 .include "../../mk/ocaml.mk"
 
-OCAML_USE_FINDLIB=	yes
 .if ${OCAML_USE_OPT_COMPILER} == "yes"
 MAKE_ENV+=	TARGET=native
 .else
