@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2014/10/13 12:51:08 mef Exp $
+include/gnuradio/blocks/ctrlport_probe2_b.h
+include/gnuradio/blocks/ctrlport_probe2_c.h
+include/gnuradio/blocks/ctrlport_probe2_f.h
+include/gnuradio/blocks/ctrlport_probe2_i.h
+include/gnuradio/blocks/ctrlport_probe2_s.h
+include/gnuradio/blocks/ctrlport_probe_c.h
+include/gnuradio/fft/ctrlport_probe_psd.h
+${PYSITELIB}/gnuradio/ctrlport/GrDataPlotter.py
+${PYSITELIB}/gnuradio/ctrlport/GrDataPlotter.pyc
+${PYSITELIB}/gnuradio/ctrlport/GrDataPlotter.pyo
+${PYSITELIB}/gnuradio/ctrlport/icon.png
+${PYSITELIB}/gnuradio/ctrlport/monitor.py
+${PYSITELIB}/gnuradio/ctrlport/monitor.pyc
+${PYSITELIB}/gnuradio/ctrlport/monitor.pyo

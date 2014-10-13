@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.8 2010/09/15 09:38:44 markd Exp $
-
-SHA1 (gr-howto-write-a-block-3.3.0.tar.gz) = dbf5b2538066c019f09850368e7583453cb093a5
-RMD160 (gr-howto-write-a-block-3.3.0.tar.gz) = 9e0bab8346a0828dcdbc9b7c6b51a756fd4a0c69
-Size (gr-howto-write-a-block-3.3.0.tar.gz) = 415280 bytes
-SHA1 (patch-aa) = b3dea570d91c59178622dabdc61b8620c42fd8bd
