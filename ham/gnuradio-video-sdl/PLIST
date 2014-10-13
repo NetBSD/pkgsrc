@@ -1,10 +1,16 @@
-@comment $NetBSD: PLIST,v 1.3 2010/09/15 09:38:45 markd Exp $
-include/gnuradio/swig/video_sdl.i
-include/gnuradio/video_sdl_sink_s.h
-include/gnuradio/video_sdl_sink_uc.h
-lib/libgnuradio-video-sdl.la
+@comment $NetBSD: PLIST,v 1.4 2014/10/13 12:51:10 mef Exp $
+include/gnuradio/swig/video_sdl_swig.i
+include/gnuradio/swig/video_sdl_swig_doc.i
+include/gnuradio/video_sdl/api.h
+include/gnuradio/video_sdl/sink_s.h
+include/gnuradio/video_sdl/sink_uc.h
+lib/libgnuradio-video-sdl.so
+lib/libgnuradio-video-sdl.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-video-sdl.pc
-${PYSITELIB}/gnuradio/_video_sdl.la
-${PYSITELIB}/gnuradio/video_sdl.py
-${PYSITELIB}/gnuradio/video_sdl.pyc
-${PYSITELIB}/gnuradio/video_sdl.pyo
+${PYSITELIB}/gnuradio/video_sdl/__init__.py
+${PYSITELIB}/gnuradio/video_sdl/__init__.pyc
+${PYSITELIB}/gnuradio/video_sdl/__init__.pyo
+${PYSITELIB}/gnuradio/video_sdl/_video_sdl_swig.so
+${PYSITELIB}/gnuradio/video_sdl/video_sdl_swig.py
+${PYSITELIB}/gnuradio/video_sdl/video_sdl_swig.pyc
+${PYSITELIB}/gnuradio/video_sdl/video_sdl_swig.pyo
