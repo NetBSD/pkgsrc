@@ -1,0 +1,6 @@
+gr-fcdproplus is an linux and OSX addon for gnuradio to implement a
+funcube dongle pro+ source.
+On linux autodetects the correct soundcard from /proc/asound/cards.
+This idea was taken from the osmosdr drivers.
+
+To control the device the hidraw code of the hidapi is used.
