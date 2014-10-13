@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3876 2014/10/13 05:35:53 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3877 2014/10/13 05:51:17 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4883,3 +4883,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/ImageMagick to 6.8.9.7nb4 [dholland 2014-10-12]
 	Updated devel/p5-Mouse to 2.4.1 [wen 2014-10-13]
 	Updated devel/p5-MooX-Types-MooseLike-Numeric to 1.02 [wen 2014-10-13]
+	Updated devel/p5-Mo to 0.39 [wen 2014-10-13]
