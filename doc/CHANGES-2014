@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3883 2014/10/13 09:14:40 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3884 2014/10/13 13:26:36 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4890,3 +4890,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/ImageMagick to 6.8.9.8 [wiz 2014-10-13]
 	Updated graphics/p5-PerlMagick to 6.8.9.8 [wiz 2014-10-13]
 	Updated devel/nspr to 4.10.7 [wiz 2014-10-13]
+	Updated net/ocamlnet to 3.7.6nb1 [jaapb 2014-10-13]
