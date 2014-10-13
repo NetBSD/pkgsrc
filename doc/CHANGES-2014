@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3881 2014/10/13 09:08:46 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3882 2014/10/13 09:08:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4888,3 +4888,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-MooX-Log-Any to 0.003 [wen 2014-10-13]
 	Updated devel/p5-MooX-ConfigFromFile to 0.003 [wen 2014-10-13]
 	Updated graphics/ImageMagick to 6.8.9.8 [wiz 2014-10-13]
+	Updated graphics/p5-PerlMagick to 6.8.9.8 [wiz 2014-10-13]
