@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2014/10/13 12:51:08 mef Exp $
+# $NetBSD: Makefile,v 1.33 2014/10/13 13:14:03 mef Exp $
 #
 
 COMMENT=	Wireless communication tools and applications
@@ -34,11 +34,16 @@ SUBDIR+=	gnuradio-wavelet
 SUBDIR+=	gnuradio-wxgui
 SUBDIR+=	gnuradio-zeromq
 SUBDIR+=	gpredict
+SUBDIR+=	gr-fcdproplus
+SUBDIR+=	gr-osmosdr
 SUBDIR+=	grig
 SUBDIR+=	hamlib
+SUBDIR+=	libmirisdr
 SUBDIR+=	linpsk
 SUBDIR+=	locator
 SUBDIR+=	nec2c
+SUBDIR+=	osmo-sdr
+SUBDIR+=	rtl-sdr
 SUBDIR+=	tfkiss
 SUBDIR+=	tlf
 SUBDIR+=	tnt
