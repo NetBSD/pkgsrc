@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2014/10/13 13:07:13 mef Exp $
+include/fcdproplus/api.h
+include/fcdproplus/fcdproplus.h
+include/fcdproplus/fcdproplus/swig/fcdproplus_swig.i
+include/fcdproplus/fcdproplus/swig/fcdproplus_swig_doc.i
+lib/libgnuradio-fcdproplus.so
+lib/pkgconfig/gnuradio-fcdproplus.pc
+${PYSITELIB}/fcdproplus/__init__.py
+${PYSITELIB}/fcdproplus/__init__.pyc
+${PYSITELIB}/fcdproplus/__init__.pyo
+${PYSITELIB}/fcdproplus/_fcdproplus_swig.so
+${PYSITELIB}/fcdproplus/fcdproplus_swig.py
+${PYSITELIB}/fcdproplus/fcdproplus_swig.pyc
+${PYSITELIB}/fcdproplus/fcdproplus_swig.pyo
+share/gnuradio/grc/blocks/fcdproplus_fcdproplus.xml
