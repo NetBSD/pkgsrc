@@ -1,0 +1,27 @@
+# $NetBSD: Makefile,v 1.1 2014/10/13 21:50:10 ryoon Exp $
+
+DISTNAME=	libgltf-0.0.2
+CATEGORIES=	graphics
+MASTER_SITES=	http://dev-www.libreoffice.org/src/libgltf/
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	ryoon@NetBSD.org
+HOMEPAGE=	https://gerrit.libreoffice.org/#/admin/projects/libgltf
+COMMENT=	Rendering library for glTF
+LICENSE=	mpl-2.0
+
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config
+USE_LANGUAGES=	c c++
+
+PKGCONFIG_OVERRIDE+=	libgltf.pc.in
+
+# Fix build with GCC 4.8.3 under NetBSD/amd64 7.99.1
+CONFIGURE_ARGS+=	--disable-werror
+
+.include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
+.include "../../graphics/glew/buildlink3.mk"
+.include "../../graphics/glm/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
