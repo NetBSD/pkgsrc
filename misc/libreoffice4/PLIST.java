@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST.java,v 1.4 2014/06/03 03:21:39 ryoon Exp $
+@comment $NetBSD: PLIST.java,v 1.5 2014/10/13 21:52:50 ryoon Exp $
 ${PKGNAME}/program/classes/ScriptFramework.jar
 ${PKGNAME}/program/classes/ScriptProviderForBeanShell.jar
 ${PKGNAME}/program/classes/ScriptProviderForJava.jar
 ${PKGNAME}/program/classes/XMergeBridge.jar
 ${PKGNAME}/program/classes/bsh.jar
-${PKGNAME}/program/classes/commons-logging-1.1.1.jar
+${PKGNAME}/program/classes/commons-logging-1.1.3.jar
 ${PKGNAME}/program/classes/commonwizards.jar
 ${PKGNAME}/program/classes/flow-engine.jar
 ${PKGNAME}/program/classes/flute-1.1.6.jar
@@ -1506,10 +1506,10 @@ ${PKGNAME}/share/extensions/wiki-publisher/WikiEditor/dialog.xlb
 ${PKGNAME}/share/extensions/wiki-publisher/WikiEditor/script.xlb
 ${PKGNAME}/share/extensions/wiki-publisher/WikiExtension.xcs
 ${PKGNAME}/share/extensions/wiki-publisher/WikiExtension.xcu
-${PKGNAME}/share/extensions/wiki-publisher/commons-codec-1.6.jar
+${PKGNAME}/share/extensions/wiki-publisher/commons-codec-1.9.jar
 ${PKGNAME}/share/extensions/wiki-publisher/commons-httpclient-3.1.jar
-${PKGNAME}/share/extensions/wiki-publisher/commons-lang-2.4.jar
-${PKGNAME}/share/extensions/wiki-publisher/commons-logging-1.1.1.jar
+${PKGNAME}/share/extensions/wiki-publisher/commons-lang3-3.3.1.jar
+${PKGNAME}/share/extensions/wiki-publisher/commons-logging-1.1.3.jar
 ${PKGNAME}/share/extensions/wiki-publisher/components.rdb
 ${PKGNAME}/share/extensions/wiki-publisher/description-af.txt
 ${PKGNAME}/share/extensions/wiki-publisher/description-am.txt
