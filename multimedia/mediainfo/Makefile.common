@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2014/10/05 16:41:08 wiz Exp $
+# $NetBSD: Makefile.common,v 1.3 2014/10/13 09:34:49 wiz Exp $
 #
 # used by multimedia/mediainfo/Makefile
 # used by multimedia/libmediainfo/Makefile
@@ -15,7 +15,6 @@ HOMEPAGE=		http://mediaarea.net/en/MediaInfo
 COMMENT=		Utility to supply technical info about audio and video
 
 DISTINFO_FILE=          ${.CURDIR}/../../multimedia/mediainfo/distinfo
-FILESDIR=               ${.CURDIR}/../../multimedia/mediainfo/files
 PATCHDIR=               ${.CURDIR}/../../multimedia/mediainfo/patches
 
 WRKSRC=			${WRKDIR}
