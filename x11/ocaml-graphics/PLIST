@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2010/11/07 18:36:08 tonio Exp $
-${PLIST.opt}lib/ocaml/graphics.a
+@comment $NetBSD: PLIST,v 1.8 2014/10/13 13:25:44 jaapb Exp $
+${PLIST.ocaml-opt}lib/ocaml/graphics.a
 lib/ocaml/graphics.cma
 lib/ocaml/graphics.cmi
 lib/ocaml/graphics.cmx
-${PLIST.opt}lib/ocaml/graphics.cmxa
+${PLIST.ocaml-opt}lib/ocaml/graphics.cmxa
 ${PLIST.natdynlib}lib/ocaml/graphics.cmxs
 lib/ocaml/graphics.mli
 lib/ocaml/graphicsX11.cmi
