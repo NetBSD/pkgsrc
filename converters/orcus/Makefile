@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2014/08/13 10:57:33 adam Exp $
+# $NetBSD: Makefile,v 1.8 2014/10/13 21:43:20 ryoon Exp $
 
-DISTNAME=	liborcus-0.5.1
+DISTNAME=	liborcus-0.7.0
 PKGNAME=	${DISTNAME:S/lib//}
-PKGREVISION=	4
 CATEGORIES=	converters
 MASTER_SITES=	http://kohei.us/files/orcus/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	https://gitorious.org/orcus/
 COMMENT=	Import filter library for spreadsheet documents
-LICENSE=	mit
+LICENSE=	mpl-2.0
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
