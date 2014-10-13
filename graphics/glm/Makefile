@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/10/06 14:10:55 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/13 21:47:59 ryoon Exp $
 #
 
-DISTNAME=	glm-0.9.3.2
+DISTNAME=	glm-0.9.5.4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ogl-math/}
 EXTRACT_SUFX=	.zip
@@ -10,6 +10,8 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://glm.g-truc.net/
 COMMENT=	C++ mathematics library for graphics programming
 LICENSE=	mit
+
+WRKSRC=		${WRKDIR}/glm
 
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
@@ -21,9 +23,9 @@ INSTALLATION_DIRS=	${GLM_DIR}
 
 do-install:
 	${RUN}cd ${WRKSRC}/glm && \
-		${CHMOD} 644 *hpp core/* gtc/* gtx/* virtrev/*
+		${CHMOD} 644 *hpp detail/* gtc/* gtx/*
 	${RUN}cd ${WRKSRC}/glm && \
-		pax -rw *hpp core gtc gtx virtrev \
+		pax -rw *hpp detail gtc gtx \
 			${DESTDIR}${PREFIX}/${GLM_DIR}
 
 # for test target
