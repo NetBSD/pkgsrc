@@ -1,0 +1,124 @@
+#!/usr/pkg/bin/perl
+# Check the duplication on gnuradio-*/PLIST  (except gnuradio-default)
+# Check if whole meta-pkgs/gnuradio PLIST convers the one of gnuradio-default (use -m)
+# use -h for usage.
+
+use strict;
+use Getopt::Std;
+
+# option related
+our(%opts);
+our(@ARGV);
+my ($verbose) = 0;
+
+my ($PKGSRC)	='/usr/pkgsrc';
+my ($CATEGORY)	='ham';
+my ($DEFAULT) = 'gnuradio-default';
+
+my (@LIST);	# list of gnuradio-*/PLIST files
+
+my (%WORDS);	# list of files in the PLIST (other than -default)
+my (%count);	# number of appearance of files in the PLIST (other than -default)
+
+my (%CHECKED);	# list of files found (in the -default) in the PLIST
+my (%FULL); 	# full list from gnuradio-default
+
+sub usage() {
+    print <<HELP;
+$0
+Synopsys:
+    check-PLIST-overwrap [-h] [-c CATEGORY] [-m] [-p PATH] [-v]
+Where:
+    -h	show this help
+    -c	CATEGORY (ham)
+    -m	print missing file instead of dupes
+    -p	pkgsrc directory (/usr/pkgsrc)
+    -v	verbose
+    (parenthesis) shows default value
+HELP
+}
+
+getopts("hc:mp:v", \%opts);
+if ($opts{'h'}) { usage(); exit;}
+if ($opts{'c'}) { $CATEGORY = $opts{'c'};}
+if ($opts{'p'}) { $PKGSRC   = $opts{'p'};}
+if ($opts{'v'}) { $verbose = 1;          }
+my ($WORK)	= $PKGSRC.'/'.$CATEGORY;
+
+print "(Category) $CATEGORY, (pkgsrc) $PKGSRC \n";
+    
+chdir $WORK;
+print 'Changing to directory: ', $WORK,"\n";
+opendir(DIR, $WORK) || die " *** Problem opening directory ($WORK), use [-p DIR] to change.\n";
+
+my ($dir) = 1;
+while ($dir) {
+    $dir = readdir (DIR);
+    chomp($dir);
+    if ( $dir =~ /^$DEFAULT/ ) { next; } # skip -default at this time
+    if ( $dir =~ /^gnuradio/ ) {
+	my($PLIST) = $dir.'/PLIST';
+	if ( -f $PLIST ) {
+	    push(@LIST, $PLIST);
+	}
+    }
+}
+foreach my $d (0..$#LIST) {
+    my $file = $LIST[$d];
+    print "      Reading $file \n" if $verbose;
+    open (FILE, $file) || print " *** Problem opening $file: $!\n";
+    while(<FILE>) {
+	chomp();
+	if (/\@comment/) { next;}
+	if (/\@pkgdir/)	{ next;}
+	my ($word) = $_;
+	my ($module) = $file;
+	$file =~ s/gnuradio-//;
+	$file =~ s,/PLIST,,;
+	$WORDS{$word} .= ' '.$file;
+	$count{$word}++;
+    }
+    close(FILE);
+}
+sub show_missing() {
+    my ($file) = $DEFAULT.'/PLIST';
+    print " (-m) Reading $file \n" if $verbose;
+    open (FILE, $file) || print "problem opening $file: $!\n";
+    while (<FILE>) {
+	chomp();
+	if (/\@comment/) { next;}
+	if (/\@pkgdir/)	{ next;}
+	my ($word) = $_;
+	my ($module) = $file;
+	$file =~ s/gnuradio-//;
+	$file =~ s,/PLIST,,;
+	$FULL{$word}++;
+    }
+    close(FILE);
+    foreach my $key (sort keys %FULL){
+	if ($WORDS{$key} ) {
+	    $CHECKED{$key}++;
+	    next;}
+	else {
+	    printf ("missing: %30s\t\n", $key);
+	}	    
+    }
+    foreach my $file (keys %WORDS) {
+	if ( $CHECKED{$file} ) { next;}
+	else {
+	    printf ("extra: %30s\n", $file);
+	}
+    }
+}
+
+sub show_dupe() {
+    foreach my $key (sort keys %WORDS){
+	if ($count{$key} > 1 ) {
+	    printf ("%30s\t->%s\n", $key, $WORDS{$key});
+	}
+    }    
+}
+
+if ($opts{'m'}) { show_missing();}
+else	        { show_dupe();}
+exit;

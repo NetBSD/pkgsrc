@@ -1,0 +1,122 @@
+# $NetBSD: Makefile.common,v 1.1 2014/10/13 12:46:33 mef Exp $
+# This Makefile fragment is included in the package Makefiles for
+# GNU Radio distributed packages (they all share common configure and build
+# settings).
+# used by ham/gnuradio-atsc/Makefile
+# used by ham/gnuradio-channels/Makefile
+# used by ham/gnuradio-companion/Makefile
+# used by ham/gnuradio-core/Makefile
+# used by ham/gnuradio-ctrlport/Makefile
+
+# used by ham/gnuradio-digital/Makefile
+# used by ham/gnuradio-doxygen/Makefile
+# used by ham/gnuradio-dtv/Makefile
+# used by ham/gnuradio-fcd/Makefile
+# used by ham/gnuradio-fec/Makefile
+
+# used by ham/gnuradio-fcd/Makefile
+# used by ham/gnuradio-noaa/Makefile
+# used by ham/gnuradio-pager/Makefile
+# used by ham/gnuradio-qtgui/Makefile
+# used by ham/gnuradio-trellis/Makefile
+
+# used by ham/gnuradio-uhd/Makefile
+# used by ham/gnuradio-utils/Makefile
+# used by ham/gnuradio-video-sdl/Makefile
+# used by ham/gnuradio-vocoder/Makefile
+# used by ham/gnuradio-wavelet/Makefile
+
+# used by ham/gnuradio-wxgui/Makefile
+# used by ham/gnuradio-zeromq/Makefile
+
+.include	"../../ham/gnuradio-core/Makefile.version"
+
+DISTNAME?=	gnuradio-${VERSION}
+CATEGORIES+=	ham
+MASTER_SITES?=	http://gnuradio.org/releases/gnuradio/
+
+MAINTAINER?=	pkgsrc-users@NetBSD.org
+HOMEPAGE?=	http://www.gnu.org/software/gnuradio/
+LICENSE=	gnu-gpl-v3
+
+USE_LANGUAGES=	c c++
+USE_TOOLS=	perl gmake cmake pkg-config
+USE_CMAKE=	yes
+
+DEPENDS+=	${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
+# gr_filter_design in gnuradio-core ask for:
+DEPENDS+=	${PYPKGPREFIX}-qwt-qt4-[0-9]*:../../x11/py-qwt-qt4
+
+DISTINFO_FILE=		${.CURDIR}/../../ham/gnuradio-core/distinfo
+PATCHDIR=		${.CURDIR}/../../ham/gnuradio-core/patches
+
+PYTHON_VERSIONS_INCOMPATIBLE=   33 34 # not yet ported as of 3.3.0
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
+PY_PATCHPLIST=	yes
+
+CONFIGURE_DIRS=	build
+
+EGDIR=			share/examples/gnuradio/conf.d
+PKG_SYSCONFSUBDIR=	gnuradio/conf.d
+
+LDFLAGS.DragonFly+=	-lboost_system
+LDFLAGS.SunOS+=		-lboost_system
+
+INSTALLATION_DIRS+=	${EGDIR}
+
+# --------       R E S E T  CMAKE_ARGS  H E R E  -------------
+CMAKE_ARGS=
+
+# set default as minimum
+# See  http://gnuradio.org/redmine/projects/gnuradio/wiki/BuildGuide
+#      http://gnuradio.org/redmine/projects/gnuradio/wiki/CygwinInstallMain
+
+CMAKE_ARGS+=	-DENABLE_GNURADIO_RUNTIME=ON
+CMAKE_ARGS+=	-DENABLE_GR_ANALOG=ON
+CMAKE_ARGS+=	-DENABLE_GR_AUDIO=ON
+CMAKE_ARGS+=	-DENABLE_GR_BLOCKS=ON
+CMAKE_ARGS+=	-DENABLE_GR_FFT=ON
+CMAKE_ARGS+=	-DENABLE_GR_FILTER=ON
+CMAKE_ARGS+=	-DENABLE_PYTHON=ON
+CMAKE_ARGS+=	-DENABLE_VOLK=ON
+
+# Default setting (for pkgsrc)
+CMAKE_ARGS+=	-Wno-dev
+CMAKE_ARGS+=	-DCMAKE_BUILD_WITH_INSTALL_RPATH=TRUE
+CMAKE_ARGS+=	-DCMAKE_INCLUDE_PATH=${PREFIX}/include/portaudio2
+CMAKE_ARGS+=	-DCMAKE_LIBRARY_PATH=${PREFIX}/lib/portaudio2
+CMAKE_ARGS+=	-DCMAKE_INSTALL_RPATH=${PREFIX}/lib:${PREFIX}/lib/portaudio2
+CMAKE_ARGS+=	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=TRUE
+CMAKE_ARGS+=	-DLIBUSB_INCLUDE_DIR=${PREFIX}/include/libusb-1.0
+
+CMAKE_ARGS+=	-DGR_LIBRARY_DIR=${DESTDIR}${PREFIX}/lib
+CMAKE_ARGS+=	-DGR_PREFSDIR=${DESTDIR}${PREFIX}/share/
+
+CMAKE_ARGS+=	-DZEROMQ_INCLUDE_DIRS=${PREFIX}/include
+CMAKE_ARG_PATH=	../
+
+.include "options.mk"
+
+# REPLACE_PYTHON is some 600 files
+.include	"../../ham/gnuradio-core/files/REPLACE_PYTHON"
+
+pre-configure:
+	(${MKDIR} ${WRKSRC}/build;)
+
+do-install:
+	(cd ${WRKSRC}/build; ${GMAKE} DESTDIR=${DESTDIR} install)
+
+.include	"../../audio/alsa-lib/buildlink3.mk"
+.include	"../../audio/gsm/buildlink3.mk"
+.include	"../../audio/jack/buildlink3.mk"
+.include	"../../audio/portaudio-devel/buildlink3.mk"
+
+.include	"../../devel/boost-headers/buildlink3.mk"
+.include	"../../devel/boost-libs/buildlink3.mk"
+# VOLK needs orc.h, so in the common
+.include	"../../devel/orc/buildlink3.mk"
+.include	"../../devel/swig2/buildlink3.mk"
+
+.include	"../../lang/python/application.mk"
+.include	"../../math/fftwf/buildlink3.mk"

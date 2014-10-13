@@ -1,0 +1,19 @@
+$NetBSD: patch-gr-audio_lib_alsa_alsa__impl_h,v 1.1 2014/10/13 12:46:33 mef Exp $
+
+gnuradio-3.7.2.1/gr-audio/lib/alsa/alsa_source.cc:477:23: error: 'ESTRPIPE' was not declared in this scope
+See also
+https://mail-index.netbsd.org/pkgsrc-wip-discuss/2013/10/27/msg002529.html
+
+--- gr-audio/lib/alsa/alsa_impl.h.orig	2014-09-06 18:07:27.000000000 +0900
++++ gr-audio/lib/alsa/alsa_impl.h	2014-09-06 18:07:55.000000000 +0900
+@@ -26,6 +26,10 @@
+ #include <stdio.h>
+ #include <alsa/asoundlib.h>
+ 
++#ifndef ESTRPIPE
++#define ESTRPIPE EPIPE
++#endif
++
+ void
+ gri_alsa_dump_hw_params (snd_pcm_t *pcm,
+ 			 snd_pcm_hw_params_t *hwparams,
