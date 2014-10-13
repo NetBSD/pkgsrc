@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/02/23 15:51:56 sno Exp $
+$NetBSD: distinfo,v 1.2 2014/10/13 06:12:09 wen Exp $
 
-SHA1 (MooX-Log-Any-0.001.tar.gz) = 19757495dc06126a1123ff79c8991851c347292a
-RMD160 (MooX-Log-Any-0.001.tar.gz) = f12518257511f6421eb34de302911e103e446ba3
-Size (MooX-Log-Any-0.001.tar.gz) = 9643 bytes
+SHA1 (MooX-Log-Any-0.003.tar.gz) = 94342be2c82046bce1d32f575ac0d4d46c1ab312
+RMD160 (MooX-Log-Any-0.003.tar.gz) = a914342ecc217c65e8a2de6d6c8c33b46e132ec9
+Size (MooX-Log-Any-0.003.tar.gz) = 10493 bytes
