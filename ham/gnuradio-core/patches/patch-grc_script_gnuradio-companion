@@ -1,0 +1,22 @@
+$NetBSD: patch-grc_script_gnuradio-companion,v 1.1 2014/10/13 12:46:33 mef Exp $
+
+Add message for NetBSD when failed to import gnuradio.
+Or missing gnuradio-core package.
+
+--- grc/scripts/gnuradio-companion.orig	2014-07-31 05:39:51.000000000 +0900
++++ grc/scripts/gnuradio-companion	2014-09-21 21:32:33.000000000 +0900
+@@ -26,12 +26,14 @@
+ except ImportError, e:
+     d = gtk.MessageDialog(type=gtk.MESSAGE_ERROR, buttons=gtk.BUTTONS_CLOSE, message_format="""
+ Cannot import gnuradio.
++You may be missing gnuradio-core package or
+ 
+ Is the python path environment variable set correctly?
+     All OS: PYTHONPATH
+ 
+ Is the library path environment variable set correctly?
+     Linux: LD_LIBRARY_PATH
++    NetBSD: LD_LIBRARY_PATH
+     Windows: PATH
+     MacOSX: DYLD_LIBRARY_PATH
+ """)
