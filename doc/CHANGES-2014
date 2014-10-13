@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3885 2014/10/13 13:34:24 mef Exp $
+$NetBSD: CHANGES-2014,v 1.3886 2014/10/13 13:41:22 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4924,3 +4924,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Added ham/libmirisdr version 0.1 [mef 2014-10-13]
 	Added ham/osmo-sdr version 0.1 [mef 2014-10-13]
 	Added ham/rtl-sdr version 0.5.3 [mef 2014-10-13]
+	Removed ham/usrp [mef 2014-10-13]
+	Removed ham/usrp-docs [mef 2014-10-13]
