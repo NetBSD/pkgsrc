@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3874 2014/10/12 18:56:28 dholland Exp $
+$NetBSD: CHANGES-2014,v 1.3875 2014/10/13 05:29:33 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4881,3 +4881,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated converters/help2man to 1.46.4 [wiz 2014-10-12]
 	Updated devel/waf to 1.8.2 [wiz 2014-10-12]
 	Updated graphics/ImageMagick to 6.8.9.7nb4 [dholland 2014-10-12]
+	Updated devel/p5-Mouse to 2.4.1 [wen 2014-10-13]
