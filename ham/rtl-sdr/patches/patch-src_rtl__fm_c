@@ -1,0 +1,26 @@
+$NetBSD: patch-src_rtl__fm_c,v 1.1 2014/10/13 13:05:36 mef Exp $
+
+rtl_fm picks frequency with some offset. It is supposed to be activated
+by (no documented option) -Eoffset. Disable it for default behavior
+  -- should be discussed with upstream --
+
+--- ./src/rtl_fm.c
++++ ./src/rtl_fm.c
+@@ -792,7 +792,7 @@ static void rtlsdr_callback(unsigned char *buf, uint32_t len, void *ctx)
+ 			buf[i] = 127;}
+ 		s->mute = 0;
+ 	}
+-	if (!s->offset_tuning) {
++	if (s->offset_tuning) {
+ 		rotate_90(buf, len);}
+ 	for (i=0; i<(int)len; i++) {
+ 		s->buf16[i] = (int16_t)buf[i] - 127;}
+@@ -864,7 +864,7 @@ static void optimal_settings(int freq, int rate)
+ 	}
+ 	capture_freq = freq;
+ 	capture_rate = dm->downsample * dm->rate_in;
+-	if (!d->offset_tuning) {
++	if (d->offset_tuning) {
+ 		capture_freq = freq + capture_rate/4;}
+ 	capture_freq += cs->edge * dm->rate_in / 2;
+ 	dm->output_scale = (1<<15) / (128 * dm->downsample);
