@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2014/10/13 13:05:36 mef Exp $
+bin/rtl_adsb
+bin/rtl_eeprom
+bin/rtl_fm
+bin/rtl_power
+bin/rtl_sdr
+bin/rtl_tcp
+bin/rtl_test
+include/rtl-sdr.h
+include/rtl-sdr_export.h
+lib/librtlsdr.a
+lib/librtlsdr.so
+lib/librtlsdr.so.0
+lib/librtlsdr.so.${PKGVERSION}
