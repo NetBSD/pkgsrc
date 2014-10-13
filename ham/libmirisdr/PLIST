@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2014/10/13 13:02:26 mef Exp $
+bin/miri_sdr
+include/mirisdr.h
+include/mirisdr_export.h
+lib/libmirisdr.a
+lib/libmirisdr.so
+lib/libmirisdr.so.0
+lib/libmirisdr.so.0.0git
+lib/pkgconfig/libmirisdr.pc
