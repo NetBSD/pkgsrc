@@ -1,7 +1,0 @@
-GNU Radio Package.
-
-This package is for full options (as of upstream) by itself, and
-provided for reference to build meta-pkgs/gnuradio.  Naturally
-conflicts with it. Please take one of these: -default OR gnuradio
-meta-pkgs. Please note gr-osmosdr hardcodes dependency to modules
-in meta-pkgs.
