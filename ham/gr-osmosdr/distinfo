@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/10/13 13:00:27 mef Exp $
+
+SHA1 (gr-osmosdr-0.1.3.tar.gz) = 15cccc2959800e446288ab65eaf38552e668f5df
+RMD160 (gr-osmosdr-0.1.3.tar.gz) = 10c692db1c43baabea730a3ccc24c4fb1b6c3e52
+Size (gr-osmosdr-0.1.3.tar.gz) = 222638 bytes
