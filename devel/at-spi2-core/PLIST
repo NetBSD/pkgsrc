@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/08/06 10:52:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/10/14 22:30:47 prlw1 Exp $
 include/at-spi-2.0/atspi/atspi-accessible.h
 include/at-spi-2.0/atspi/atspi-action.h
 include/at-spi-2.0/atspi/atspi-application.h
@@ -55,7 +55,6 @@ share/gtk-doc/html/libatspi/ch01.html
 share/gtk-doc/html/libatspi/home.png
 share/gtk-doc/html/libatspi/index.html
 share/gtk-doc/html/libatspi/index.sgml
-share/gtk-doc/html/libatspi/left-insensitive.png
 share/gtk-doc/html/libatspi/left.png
 share/gtk-doc/html/libatspi/libatspi-AtspiApplication.html
 share/gtk-doc/html/libatspi/libatspi-atspi-action.html
@@ -77,10 +76,8 @@ share/gtk-doc/html/libatspi/libatspi-atspi-types.html
 share/gtk-doc/html/libatspi/libatspi-atspi-value.html
 share/gtk-doc/html/libatspi/libatspi.devhelp2
 share/gtk-doc/html/libatspi/object-tree.html
-share/gtk-doc/html/libatspi/right-insensitive.png
 share/gtk-doc/html/libatspi/right.png
 share/gtk-doc/html/libatspi/style.css
-share/gtk-doc/html/libatspi/up-insensitive.png
 share/gtk-doc/html/libatspi/up.png
 share/locale/an/LC_MESSAGES/at-spi2-core.mo
 share/locale/as/LC_MESSAGES/at-spi2-core.mo
