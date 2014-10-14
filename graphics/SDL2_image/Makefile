@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/10/09 14:06:34 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/10/14 19:20:05 adam Exp $
 
 DISTNAME=	SDL2_image-2.0.0
 PKGREVISION=	1
@@ -13,6 +13,7 @@ LICENSE=	zlib
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	ac_cv_prog_ac_ct_OBJC=${CC:Q}
 
 INSTALLATION_DIRS=	bin
 PKGCONFIG_OVERRIDE=	SDL_image.pc.in
