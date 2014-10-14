@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/09/25 19:41:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2014/10/14 14:41:17 prlw1 Exp $
 
 DISTNAME=	dansguardian-2.12.0.3
 PKGREVISION=	1
@@ -45,6 +45,8 @@ CONFIGURE_ARGS+=	--with-proxyuser=${DANSGUARDIAN_USER}
 CONFIGURE_ARGS+=	--with-proxygroup=${DANSGUARDIAN_GROUP}
 CONFIGURE_ARGS+=	--with-piddir=${VARBASE}/run
 CONFIGURE_ARGS+=	--with-logdir=${VARBASE}/log/dansguardian
+
+.include "options.mk"
 
 CHECK_WRKREF_SKIP+=	sbin/dansguardian
 
