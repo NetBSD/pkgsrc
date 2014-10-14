@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3897 2014/10/14 06:40:06 dholland Exp $
+$NetBSD: CHANGES-2014,v 1.3898 2014/10/14 10:00:51 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4937,3 +4937,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated comms/asterisk18 to 1.8.31.0 [jnemeth 2014-10-14]
 	Updated comms/asterisk to 11.13.0 [jnemeth 2014-10-14]
 	Updated www/privoxy to 3.0.19nb6 [dholland 2014-10-14]
+	Updated devel/p5-Test-BDD-Cucumber to 0.31 [schmonz 2014-10-14]
