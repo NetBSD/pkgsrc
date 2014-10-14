@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3903 2014/10/14 16:21:30 taca Exp $
+$NetBSD: CHANGES-2014,v 1.3904 2014/10/14 16:23:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4946,3 +4946,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/isc-dhcrelay4 to 4.3.1 [taca 2014-10-14]
 	Updated www/p5-CGI-FormBuilder to 3.0501nb8 [schmonz 2014-10-14]
 	Updated net/bind99 to 9.9.6 [taca 2014-10-14]
+	Updated net/bind910 to 9.10.1 [taca 2014-10-14]
