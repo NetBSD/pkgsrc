@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2014/09/02 04:11:41 schmonz Exp $
+# $NetBSD: Makefile,v 1.14 2014/10/14 10:00:30 schmonz Exp $
 
-DISTNAME=		Test-BDD-Cucumber-0.30
+DISTNAME=		Test-BDD-Cucumber-0.31
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Test/}
@@ -12,7 +12,7 @@ LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-Clone-[0-9]*:../../devel/p5-Clone
 DEPENDS+=		p5-File-Find-Rule-[0-9]*:../../devel/p5-File-Find-Rule
-DEPENDS+=		p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
+DEPENDS+=		p5-File-Slurp>=9999.16:../../devel/p5-File-Slurp
 DEPENDS+=		p5-FindBin-libs-[0-9]*:../../devel/p5-FindBin-libs
 DEPENDS+=		p5-JSON-MaybeXS-[0-9]*:../../converters/p5-JSON-MaybeXS
 DEPENDS+=		p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
