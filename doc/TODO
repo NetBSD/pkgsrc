@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13750 2014/10/14 02:25:54 mef Exp $
+$NetBSD: TODO,v 1.13751 2014/10/14 13:46:27 taca Exp $
 
 Suggested new packages
 ======================
@@ -1047,7 +1047,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o stratagus-2.2.5.5
 	o streamripper-1.63.0
 	o subtitleeditor-0.33.0
-	o sudo-1.8.10p3
+	o sudo-1.8.11p1
 	o sun-jre8-8.0
 	o swapd-1.0.5
 	o swatch-3.2.3
