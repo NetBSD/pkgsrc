@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3892 2014/10/13 21:53:49 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.3893 2014/10/14 00:42:39 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4932,3 +4932,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/glm to 0.9.5.4 [ryoon 2014-10-13]
 	Added graphics/libgltf version 0.0.2 [ryoon 2014-10-13]
 	Updated misc/libreoffice4 to 4.3.2.2 [ryoon 2014-10-13]
+	Updated ham/xnec2c to 3.0 [mef 2014-10-14]
