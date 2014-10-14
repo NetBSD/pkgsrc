@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3899 2014/10/14 11:16:04 sborrill Exp $
+$NetBSD: CHANGES-2014,v 1.3900 2014/10/14 13:46:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4939,3 +4939,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/privoxy to 3.0.19nb6 [dholland 2014-10-14]
 	Updated devel/p5-Test-BDD-Cucumber to 0.31 [schmonz 2014-10-14]
 	Added devel/php-xdebug version 2.2.5 [sborrill 2014-10-14]
+	Updated mail/postfix to 2.11.2 [taca 2014-10-14]
