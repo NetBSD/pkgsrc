@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3906 2014/10/14 21:00:50 snj Exp $
+$NetBSD: CHANGES-2014,v 1.3907 2014/10/14 22:31:11 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4949,3 +4949,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/bind910 to 9.10.1 [taca 2014-10-14]
 	Updated lang/pear to 1.9.5nb2 [taca 2014-10-14]
 	Updated emulators/qemu to 2.1.2 [snj 2014-10-14]
+	Updated devel/at-spi2-core to 2.14.0 [prlw1 2014-10-14]
