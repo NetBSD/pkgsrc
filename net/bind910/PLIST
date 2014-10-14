@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2014/07/02 02:42:58 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/10/14 16:23:19 taca Exp $
 bin/bind9-config
 bin/delv
 bin/dig
@@ -240,6 +240,7 @@ include/lwres/netdb.h
 include/lwres/platform.h
 include/lwres/result.h
 include/lwres/stdlib.h
+include/lwres/string.h
 include/lwres/version.h
 include/pk11/constants.h
 include/pk11/internal.h
