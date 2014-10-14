@@ -1,0 +1,13 @@
+$NetBSD: patch-packages_base_configure,v 1.1 2014/10/14 14:04:19 joerg Exp $
+
+--- packages/base/configure.orig	2014-10-14 12:09:59.000000000 +0000
++++ packages/base/configure
+@@ -5539,7 +5539,7 @@ done
+ 
+ 
+ 
+-for ac_func in _chsize ftruncate
++for ac_func in _chsize ftruncate execvpe
+ do
+ as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
+ { echo "$as_me:$LINENO: checking for $ac_func" >&5
