@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/07/20 16:56:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/10/14 00:42:13 mef Exp $
 bin/xnec2c
 share/doc/xnec2c/NEC2-bug.txt
 share/doc/xnec2c/NearFieldCalcs.txt
@@ -10,4 +10,5 @@ share/doc/xnec2c/images/nec2_edit.png
 share/doc/xnec2c/images/radiation.png
 share/doc/xnec2c/images/wire.png
 share/doc/xnec2c/nec2c.txt
+share/doc/xnec2c/xnec2c.1.gz
 share/doc/xnec2c/xnec2c.html
