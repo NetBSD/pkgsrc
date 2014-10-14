@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/01/27 09:05:10 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/14 13:27:45 manu Exp $
 #
 
 PKGNAME=	nagios-plugin-raidctl-${DISTNAME:C/.*-//}
@@ -15,7 +15,7 @@ LICENSE=	modified-bsd
 INSTALLATION_DIRS+= libexec/nagios
 
 SPECIAL_PERMS+= ${PREFIX}/libexec/nagios/check_raidctl \
-		${REAL_ROOT_USER} ${NAGIOS_GROUP} 4551
+		${REAL_ROOT_USER} ${NAGIOS_GROUP} 4554
 BUILD_DEFS+=	${NAGIOS_GROUP}
 
 do-install:
