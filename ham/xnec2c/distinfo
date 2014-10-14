@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/07/20 16:56:07 wiz Exp $
+$NetBSD: distinfo,v 1.2 2014/10/14 00:42:13 mef Exp $
 
-SHA1 (xnec2c-2.3-beta.tar.bz2) = d427fd55d43dd664a532094b7166a6acbd567386
-RMD160 (xnec2c-2.3-beta.tar.bz2) = c2e274e28d8577f81830cc239b0de32da724ea22
-Size (xnec2c-2.3-beta.tar.bz2) = 898661 bytes
+SHA1 (xnec2c-3.0.tar.bz2) = 65599e7dd52b7a7b02824561c1df80920d17ed68
+RMD160 (xnec2c-3.0.tar.bz2) = 196b3796f1bf1fe7655c22e305431671aa51b346
+Size (xnec2c-3.0.tar.bz2) = 919854 bytes
