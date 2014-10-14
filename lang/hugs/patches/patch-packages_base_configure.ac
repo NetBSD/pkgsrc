@@ -1,0 +1,13 @@
+$NetBSD: patch-packages_base_configure.ac,v 1.1 2014/10/14 14:04:19 joerg Exp $
+
+--- packages/base/configure.ac.orig	2014-10-14 12:09:57.000000000 +0000
++++ packages/base/configure.ac
+@@ -31,7 +31,7 @@ AC_CHECK_HEADERS([wctype.h], [AC_CHECK_F
+ 
+ AC_CHECK_FUNCS([ftime gmtime_r localtime_r lstat readdir_r])
+ AC_CHECK_FUNCS([getclock getrusage gettimeofday setitimer times])
+-AC_CHECK_FUNCS([_chsize ftruncate])
++AC_CHECK_FUNCS([_chsize ftruncate execvpe])
+ 
+ dnl ** check if it is safe to include both <time.h> and <sys/time.h>
+ AC_HEADER_TIME
