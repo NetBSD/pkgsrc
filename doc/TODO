@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13752 2014/10/14 17:08:15 wiz Exp $
+$NetBSD: TODO,v 1.13753 2014/10/14 21:00:50 snj Exp $
 
 Suggested new packages
 ======================
@@ -959,7 +959,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-tlslite-0.4.6
 	o py-wxWidgets-3.0.0
 	o py-zconfig-3.0.3
-	o qemu-2.1.2
 	o qnetwalk-1.4
 	o qt5-qtbase-5.3.2
 	o radiance-3.7.2
