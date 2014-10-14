@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13751 2014/10/14 13:46:27 taca Exp $
+$NetBSD: TODO,v 1.13752 2014/10/14 17:08:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -333,12 +333,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o Chinput-3.0.1
 	o DarwinStreamingServer-6.0.3
 	o GMT-5.1.1
+	o Mesa-10.3.1 [do not update since it removes support for DRI features needed by NetBSD]
+	o MesaLib-10.3.1 [do not update since it removes support for DRI features needed by NetBSD]
 	o Mesa-10.3 [do not update since it removes support for DRI features needed by NetBSD]
 	o MesaLib-10.3 [do not update since it removes support for DRI features needed by NetBSD]
 	o PAM-0.99.7.1
 	o RBTools-0.5.5
 	o REminiscence-0.1.9
-	o Sigil-0.8.0
+	o Sigil-0.8.1
 	o TeXmacs-1.0.7.21
 	o TiffIO-130e
 	o XaoS-3.6 [pkg/48836]
@@ -396,6 +398,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bbsload-0.2.8
 	o bbweather-0.6.3
 	o benchfft-3.1
+	o blender-2.72
 	o bluefish-2.2.6
 	o blur6ex-0.3.462
 	o bmon-2.1.0
@@ -420,7 +423,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cgicc-3.2.15
 	o chasen-2.4.5
 	o cheese-2.32.0 [GNOME 2.32]
-	o cheese-3.12.2
+	o cheese-3.14.1
 	o cherokee-1.2.103 [pkg/48268]
 	o chktex-1.7.2
 	o chromium-0.9.15
@@ -479,6 +482,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o digikam-4.0
 	o doclifter-2.15
 	o dolphin-4.0.2
+	o dovecot-2.2.14
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
 	o dvtm-0.11
@@ -527,6 +531,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.2
+	o firefox-33.0
 	o fish-2.1.1
 	o flashplayer-0.4.13
 	o flightgear-2.12
@@ -584,7 +589,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glade3-3.8.5 [GNOME 2.34]
 	o gle-4.2.4
 	o glom-1.14.2 [GNOME 2.26]
-	o glu-10.3
+	o glu-10.3.1
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.14
@@ -1105,7 +1110,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o unrealircd-3.2.10.2
 	o userppp-030706
 	o utilisp-1.14
-	o vala-0.26.0
+	o vala-0.26.1
 	o varnish-4.0.1
 	o vbetool-1.1
 	o verilog-current-20130827 [wip]
@@ -1113,7 +1118,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vicq-0.4.2
 	o viewvc-1.1.22
 	o vifm-0.7.7
-	o vinagre-3.12.2
+	o vinagre-3.14.1
 	o vino-3.12.0
 	o visual-regexp-3.1
 	o vlc-2.1.5 [wip]
