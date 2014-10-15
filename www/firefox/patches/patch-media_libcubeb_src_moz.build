@@ -1,10 +1,23 @@
-$NetBSD: patch-media_libcubeb_src_moz.build,v 1.1 2014/05/30 03:03:36 pho Exp $
+$NetBSD: patch-media_libcubeb_src_moz.build,v 1.2 2014/10/15 13:07:07 ryoon Exp $
 
 Don't assume cocoa toolkit just because OS_TARGET is Darwin.
 
---- media/libcubeb/src/moz.build.orig	2014-05-06 22:56:07.000000000 +0000
+--- media/libcubeb/src/moz.build.orig	2014-10-11 09:06:39.000000000 +0000
 +++ media/libcubeb/src/moz.build
-@@ -28,7 +28,7 @@ if CONFIG['OS_ARCH'] == 'OpenBSD':
+@@ -16,6 +16,12 @@ if CONFIG['MOZ_ALSA']:
+     ]
+     DEFINES['USE_ALSA'] = True
+ 
++if CONFIG['MOZ_OSS']:
++    SOURCES += [
++        'cubeb_oss.c',
++    ]
++    DEFINES['USE_OSS'] = True
++
+ if CONFIG['MOZ_PULSEAUDIO']:
+     SOURCES += [
+         'cubeb_pulse.c',
+@@ -30,7 +36,7 @@ if CONFIG['OS_ARCH'] == 'OpenBSD':
      ]
      DEFINES['USE_SNDIO'] = True
  
@@ -13,3 +26,9 @@ Don't assume cocoa toolkit just because OS_TARGET is Darwin.
      SOURCES += [
          'cubeb_audiounit.c',
      ]
+@@ -71,4 +77,5 @@ if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'gonk
+         ]
+     ]
+ 
++CFLAGS += CONFIG['MOZ_OSS_CFLAGS']
+ FAIL_ON_WARNINGS = True
