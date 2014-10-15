@@ -1,8 +1,16 @@
-$NetBSD: patch-mfbt_Attributes.h,v 1.1 2014/07/24 14:57:12 ryoon Exp $
+$NetBSD: patch-mfbt_Attributes.h,v 1.2 2014/10/15 13:07:07 ryoon Exp $
 
---- mfbt/Attributes.h.orig	2014-07-17 01:45:32.000000000 +0000
+--- mfbt/Attributes.h.orig	2014-10-11 09:06:41.000000000 +0000
 +++ mfbt/Attributes.h
-@@ -54,6 +54,9 @@
+@@ -51,6 +51,7 @@
+  * http://stackoverflow.com/questions/20498142/visual-studio-2013-explicit-keyword-bug
+  */
+ #  if _MSC_VER >= 1800
++#    define MOZ_HAVE_CXX11_ALIGNAS
+ #    define MOZ_HAVE_CXX11_DELETE
+ #  endif
+ #  if _MSC_VER >= 1700
+@@ -74,6 +75,9 @@
  #  ifndef __has_extension
  #    define __has_extension __has_feature /* compatibility, for older versions of clang */
  #  endif
@@ -12,7 +20,7 @@ $NetBSD: patch-mfbt_Attributes.h,v 1.1 2014/07/24 14:57:12 ryoon Exp $
  #  if __has_extension(cxx_constexpr)
  #    define MOZ_HAVE_CXX11_CONSTEXPR
  #  endif
-@@ -75,6 +78,9 @@
+@@ -95,6 +99,9 @@
  #  endif
  #elif defined(__GNUC__)
  #  if defined(__GXX_EXPERIMENTAL_CXX0X__) || __cplusplus >= 201103L
@@ -22,11 +30,3 @@ $NetBSD: patch-mfbt_Attributes.h,v 1.1 2014/07/24 14:57:12 ryoon Exp $
  #    if MOZ_GCC_VERSION_AT_LEAST(4, 7, 0)
  #      define MOZ_HAVE_CXX11_OVERRIDE
  #      define MOZ_HAVE_CXX11_FINAL       final
-@@ -96,6 +102,7 @@
- #  define MOZ_HAVE_NORETURN              __attribute__((noreturn))
- #elif defined(_MSC_VER)
- #  if _MSC_VER >= 1800
-+#    define MOZ_HAVE_CXX11_ALIGNAS
- #    define MOZ_HAVE_CXX11_DELETE
- #  endif
- #  if _MSC_VER >= 1700
