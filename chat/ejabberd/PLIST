@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2014/07/30 09:45:38 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.27 2014/10/15 22:05:40 joerg Exp $
 lib/erlang/lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/erlang/lib/${PKGNAME}/ebin/XmppAddr.beam
 lib/erlang/lib/${PKGNAME}/ebin/acl.beam
@@ -213,6 +213,7 @@ lib/erlang/lib/${PKGNAME}/ebin/p1_tls_app.beam
 lib/erlang/lib/${PKGNAME}/ebin/p1_tls_sup.beam
 lib/erlang/lib/${PKGNAME}/ebin/p1_utils.app
 lib/erlang/lib/${PKGNAME}/ebin/p1_xml.app
+lib/erlang/lib/${PKGNAME}/ebin/p1_xmlrpc.beam
 lib/erlang/lib/${PKGNAME}/ebin/p1_yaml.app
 lib/erlang/lib/${PKGNAME}/ebin/p1_yaml.beam
 lib/erlang/lib/${PKGNAME}/ebin/p1_yaml_app.beam
@@ -252,6 +253,7 @@ lib/erlang/lib/${PKGNAME}/ebin/xml_stream.beam
 lib/erlang/lib/${PKGNAME}/ebin/xml_sup.beam
 lib/erlang/lib/${PKGNAME}/ebin/xmlrpc.app
 lib/erlang/lib/${PKGNAME}/ebin/xmlrpc.beam
+lib/erlang/lib/${PKGNAME}/ebin/xmlrpc_codec.beam
 lib/erlang/lib/${PKGNAME}/ebin/xmlrpc_decode.beam
 lib/erlang/lib/${PKGNAME}/ebin/xmlrpc_encode.beam
 lib/erlang/lib/${PKGNAME}/ebin/xmlrpc_http.beam
