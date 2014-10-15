@@ -1,19 +1,13 @@
-$NetBSD: patch-include_util.h,v 1.1 2012/07/29 10:11:17 adam Exp $
+$NetBSD: patch-include_util.h,v 1.2 2014/10/15 22:10:21 joerg Exp $
 
-On Mac OS X, strnstr declaration is different
-
---- include/util.h.orig	2012-05-27 20:30:13.000000000 +0000
+--- include/util.h.orig	2014-10-15 13:40:56.000000000 +0000
 +++ include/util.h
-@@ -42,8 +42,12 @@ CI_DECLARE_FUNC(struct tm*) gmtime_r(con
+@@ -41,7 +41,7 @@ CI_DECLARE_FUNC(struct tm*) localtime_r(
+ CI_DECLARE_FUNC(struct tm*) gmtime_r(const time_t *t, struct tm *tm);
  #endif
  
- #ifndef HAVE_STRNSTR
-+#ifdef __APPLE__
-+CI_DECLARE_FUNC(char *) strnstr(const char *s, const char *find, size_t slen);
-+#else
+-#ifndef HAVE_STRNSTR
++#if !CI_HAVE_STRNSTR
  CI_DECLARE_FUNC(const char *) strnstr(const char *s, const char *find, size_t slen);
  #endif
-+#endif
  
- #ifndef HAVE_STRNCASESTR
- CI_DECLARE_FUNC(const char *) strncasestr(const char *s, const char *find, size_t slen);
