@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3910 2014/10/15 13:29:07 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.3911 2014/10/15 19:04:51 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4953,3 +4953,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/nss to 3.17.2 [ryoon 2014-10-15]
 	Updated www/firefox to 33.0 [ryoon 2014-10-15]
 	Updated www/firefox-l10n to 33.0 [ryoon 2014-10-15]
+	Updated security/openssl to 1.0.1j [jperkin 2014-10-15]
