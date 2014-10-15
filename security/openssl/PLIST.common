@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.19 2014/08/07 01:29:45 obache Exp $
+@comment $NetBSD: PLIST.common,v 1.20 2014/10/15 19:04:40 jperkin Exp $
 bin/c_rehash
 bin/openssl
 include/openssl/aes.h
@@ -98,6 +98,7 @@ lib/pkgconfig/openssl.pc
 man/man1/CA.pl.1
 man/man1/openssl.1
 man/man1/openssl_asn1parse.1
+man/man1/openssl_c_rehash.1
 man/man1/openssl_ca.1
 man/man1/openssl_ciphers.1
 man/man1/openssl_cms.1
@@ -107,6 +108,7 @@ man/man1/openssl_dgst.1
 man/man1/openssl_dhparam.1
 man/man1/openssl_dsa.1
 man/man1/openssl_dsaparam.1
+man/man1/openssl_dss1.1
 man/man1/openssl_ec.1
 man/man1/openssl_ecparam.1
 man/man1/openssl_enc.1
@@ -138,6 +140,10 @@ man/man1/openssl_s_time.1
 man/man1/openssl_sess_id.1
 man/man1/openssl_sha.1
 man/man1/openssl_sha1.1
+man/man1/openssl_sha224.1
+man/man1/openssl_sha256.1
+man/man1/openssl_sha384.1
+man/man1/openssl_sha512.1
 man/man1/openssl_smime.1
 man/man1/openssl_speed.1
 man/man1/openssl_spkac.1
@@ -370,7 +376,6 @@ man/man3/BN_num_bits.3
 man/man3/BN_num_bits_word.3
 man/man3/BN_num_bytes.3
 man/man3/BN_one.3
-man/man3/BN_print.3
 man/man3/BN_print_fp.3
 man/man3/BN_pseudo_rand.3
 man/man3/BN_rand.3
@@ -409,6 +414,7 @@ man/man3/CMS_add0_recipient_key.3
 man/man3/CMS_add1_ReceiptRequest.3
 man/man3/CMS_add1_cert.3
 man/man3/CMS_add1_recipient_cert.3
+man/man3/CMS_add1_signer.3
 man/man3/CMS_compress.3
 man/man3/CMS_decrypt.3
 man/man3/CMS_encrypt.3
@@ -423,7 +429,6 @@ man/man3/CMS_get1_crls.3
 man/man3/CMS_set1_eContentType.3
 man/man3/CMS_set1_signer_certs.3
 man/man3/CMS_sign.3
-man/man3/CMS_sign_add1_signer.3
 man/man3/CMS_sign_receipt.3
 man/man3/CMS_uncompress.3
 man/man3/CMS_verify.3
