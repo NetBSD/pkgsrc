@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/10/13 13:03:35 mef Exp $
+# $NetBSD: Makefile,v 1.2 2014/10/15 15:14:36 mef Exp $
 
 DISTNAME=		osmo-sdr-0.1
 CATEGORIES=		ham
-MASTER_SITES+=		http://git.osmocom.org/osmo-sdr/snapshot/
+MASTER_SITES+=		http://cgit.osmocom.org/osmo-sdr/snapshot/
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sdr.osmocom.org/trac/
