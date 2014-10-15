@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.20 2014/10/15 19:04:40 jperkin Exp $
+@comment $NetBSD: PLIST.common,v 1.21 2014/10/15 19:55:53 jperkin Exp $
 bin/c_rehash
 bin/openssl
 include/openssl/aes.h
@@ -376,6 +376,7 @@ man/man3/BN_num_bits.3
 man/man3/BN_num_bits_word.3
 man/man3/BN_num_bytes.3
 man/man3/BN_one.3
+man/man3/BN_print.3
 man/man3/BN_print_fp.3
 man/man3/BN_pseudo_rand.3
 man/man3/BN_rand.3
