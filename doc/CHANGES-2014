@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3907 2014/10/14 22:31:11 prlw1 Exp $
+$NetBSD: CHANGES-2014,v 1.3908 2014/10/15 13:06:10 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4950,3 +4950,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/pear to 1.9.5nb2 [taca 2014-10-14]
 	Updated emulators/qemu to 2.1.2 [snj 2014-10-14]
 	Updated devel/at-spi2-core to 2.14.0 [prlw1 2014-10-14]
+	Updated devel/nss to 3.17.2 [ryoon 2014-10-15]
