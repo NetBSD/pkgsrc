@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.30 2014/10/05 01:59:08 ryoon Exp $
+$NetBSD: patch-aa,v 1.31 2014/10/15 13:07:07 ryoon Exp $
 
 * The profiler does not support Darwin/PPC so don't try to enable it
   on that platform.
@@ -13,9 +13,9 @@ $NetBSD: patch-aa,v 1.30 2014/10/05 01:59:08 ryoon Exp $
   heavy patching. Ideally they should be fixed individually but that
   will be an extremely hard work, so don't define XP_MACOSX for now.
 
---- configure.in.orig	2014-09-24 01:05:10.000000000 +0000
+--- configure.in.orig	2014-10-11 09:06:18.000000000 +0000
 +++ configure.in
-@@ -958,7 +958,7 @@ MOZ_BZ2_LIBS='$(call EXPAND_LIBNAME_PATH
+@@ -966,7 +966,7 @@ MOZ_BZ2_LIBS='$(call EXPAND_LIBNAME_PATH
  MOZ_PNG_CFLAGS="-I$_objdir/dist/include" # needed for freetype compilation
  MOZ_PNG_LIBS='$(call EXPAND_LIBNAME_PATH,mozpng,$(DEPTH)/media/libpng)'
  
@@ -24,7 +24,7 @@ $NetBSD: patch-aa,v 1.30 2014/10/05 01:59:08 ryoon Exp $
  MOZ_JS_SHARED_LIBS='$(call EXPAND_LIBNAME_PATH,mozjs,$(LIBXUL_DIST)/lib)'
  MOZ_FIX_LINK_PATHS='-Wl,-rpath-link,$(LIBXUL_DIST)/bin -Wl,-rpath-link,$(prefix)/lib'
  XPCOM_FROZEN_LDOPTS='$(call EXPAND_LIBNAME_PATH,xul mozalloc,$(LIBXUL_DIST)/bin)'
-@@ -1672,7 +1672,13 @@ Linux)
+@@ -1680,7 +1680,13 @@ Linux)
          MOZ_ENABLE_PROFILER_SPS=
      esac
      ;;
@@ -39,7 +39,7 @@ $NetBSD: patch-aa,v 1.30 2014/10/05 01:59:08 ryoon Exp $
  *)
      MOZ_ENABLE_PROFILER_SPS=
      ;;
-@@ -1776,7 +1782,7 @@ case "$host" in
+@@ -1784,7 +1790,7 @@ case "$host" in
      ;;
  
  *-darwin*)
@@ -48,7 +48,7 @@ $NetBSD: patch-aa,v 1.30 2014/10/05 01:59:08 ryoon Exp $
      HOST_NSPR_MDCPUCFG='\"md/_darwin.cfg\"'
      HOST_OPTIMIZE_FLAGS="${HOST_OPTIMIZE_FLAGS=-O3}"
      ;;
-@@ -1908,7 +1914,6 @@ case "$target" in
+@@ -1916,7 +1922,6 @@ case "$target" in
          AC_DEFINE(XP_DARWIN)
          _PLATFORM_DEFAULT_TOOLKIT='cairo-uikit'
      else
@@ -56,7 +56,7 @@ $NetBSD: patch-aa,v 1.30 2014/10/05 01:59:08 ryoon Exp $
          AC_DEFINE(XP_DARWIN)
          _PLATFORM_DEFAULT_TOOLKIT='cairo-cocoa'
          # The ExceptionHandling framework is needed for Objective-C exception
-@@ -2527,8 +2532,7 @@ MOZ_CXX11
+@@ -2539,8 +2544,7 @@ MOZ_CXX11
  
  AC_LANG_C
  
@@ -66,7 +66,7 @@ $NetBSD: patch-aa,v 1.30 2014/10/05 01:59:08 ryoon Exp $
  dnl ===============================================================
  if test "$GNU_CC" -a "$OS_TARGET" != WINNT; then
    AC_DEFINE(HAVE_VISIBILITY_HIDDEN_ATTRIBUTE)
-@@ -2667,7 +2671,7 @@ if test "$ac_cv_sockaddr_sa_len" = true 
+@@ -2679,7 +2683,7 @@ if test "$ac_cv_sockaddr_sa_len" = true 
    AC_DEFINE(HAVE_SA_LEN)
  fi
  
@@ -75,16 +75,7 @@ $NetBSD: patch-aa,v 1.30 2014/10/05 01:59:08 ryoon Exp $
                [  --enable-dtrace         build with dtrace support if available (default=no)],
                [enable_dtrace="yes"],)
  if test "x$enable_dtrace" = "xyes"; then
-@@ -2928,7 +2932,7 @@ dnl Checks for library functions.
- dnl ========================================================
- AC_PROG_GCC_TRADITIONAL
- AC_FUNC_MEMCMP
--AC_CHECK_FUNCS(stat64 lstat64 truncate64 statvfs64 statvfs statfs64 statfs getpagesize localtime_r)
-+AC_CHECK_FUNCS(stat64 lstat64 truncate64 statvfs64 statvfs statfs64 statfs getpagesize localtime_r arc4random arc4random_buf)
- 
- dnl check for clock_gettime(), the CLOCK_MONOTONIC clock
- AC_CACHE_CHECK(for clock_gettime(CLOCK_MONOTONIC),
-@@ -3625,6 +3629,14 @@ if test -n "$YASM"; then
+@@ -3576,6 +3580,14 @@ if test -n "$YASM"; then
    _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
  fi
  
@@ -99,7 +90,7 @@ $NetBSD: patch-aa,v 1.30 2014/10/05 01:59:08 ryoon Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -3652,11 +3664,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
+@@ -3603,11 +3615,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
                       #include <jpeglib.h> ],
                     [ #if JPEG_LIB_VERSION < $MOZJPEG
                       #error "Insufficient JPEG library version ($MOZJPEG required)."
@@ -112,7 +103,7 @@ $NetBSD: patch-aa,v 1.30 2014/10/05 01:59:08 ryoon Exp $
                     MOZ_NATIVE_JPEG=1,
                     AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
  fi
-@@ -4342,6 +4350,10 @@ cairo-gonk)
+@@ -4293,6 +4301,10 @@ cairo-gonk)
  
  esac
  
@@ -123,7 +114,7 @@ $NetBSD: patch-aa,v 1.30 2014/10/05 01:59:08 ryoon Exp $
  AC_SUBST(MOZ_PDF_PRINTING)
  if test "$MOZ_PDF_PRINTING"; then
     PDF_SURFACE_FEATURE="#define CAIRO_HAS_PDF_SURFACE 1"
-@@ -5068,6 +5080,9 @@ if test -n "$MOZ_WEBRTC"; then
+@@ -5012,6 +5024,9 @@ if test -n "$MOZ_WEBRTC"; then
      MOZ_VPX=1
      MOZ_VPX_ERROR_CONCEALMENT=1
  
@@ -133,7 +124,7 @@ $NetBSD: patch-aa,v 1.30 2014/10/05 01:59:08 ryoon Exp $
  dnl enable once Signaling lands
      MOZ_WEBRTC_SIGNALING=1
      AC_DEFINE(MOZ_WEBRTC_SIGNALING)
-@@ -5154,6 +5169,63 @@ if test "${ac_cv_c_attribute_aligned}" !
+@@ -5102,6 +5117,63 @@ if test "${ac_cv_c_attribute_aligned}" !
  fi
  
  dnl ========================================================
@@ -197,7 +188,7 @@ $NetBSD: patch-aa,v 1.30 2014/10/05 01:59:08 ryoon Exp $
  dnl = Disable Opus audio codec support
  dnl ========================================================
  MOZ_ARG_DISABLE_BOOL(opus,
-@@ -5162,6 +5234,97 @@ MOZ_ARG_DISABLE_BOOL(opus,
+@@ -5110,6 +5182,97 @@ MOZ_ARG_DISABLE_BOOL(opus,
      MOZ_OPUS=1)
  
  dnl ========================================================
@@ -295,7 +286,92 @@ $NetBSD: patch-aa,v 1.30 2014/10/05 01:59:08 ryoon Exp $
  dnl = Disable VP8 decoder support
  dnl ========================================================
  MOZ_ARG_DISABLE_BOOL(webm,
-@@ -5944,7 +6107,9 @@ MOZ_ARG_DISABLE_BOOL(gamepad,
+@@ -5462,6 +5625,60 @@ fi
+ AC_SUBST(MOZ_WEBM_ENCODER)
+ 
+ dnl ==================================
++dnl = Check OSS availability
++dnl ==================================
++
++dnl If using Linux, Solaris or BSDs, ensure that OSS is available
++case "$OS_TARGET" in
++Linux|SunOS|DragonFly|FreeBSD|NetBSD|GNU/kFreeBSD)
++    MOZ_OSS=1
++    ;;
++esac
++
++MOZ_ARG_DISABLE_BOOL(oss,
++[  --disable-oss           Disable OpenSoundSystem support],
++   MOZ_OSS=,
++   MOZ_OSS=1)
++
++_SAVE_CFLAGS=$CFLAGS
++_SAVE_LIBS=$LIBS
++if test -n "$MOZ_OSS"; then
++    dnl Prefer 4Front implementation
++    AC_MSG_CHECKING([MOZ_OSS_CFLAGS])
++    if test -z "$MOZ_OSS_CFLAGS"; then
++        for oss_conf in /etc/oss.conf /usr/local/etc/oss.conf; do
++            if test -e "$oss_conf"; then
++                . "$oss_conf"
++            fi
++        done
++        if test -d "$OSSLIBDIR"; then
++            MOZ_OSS_CFLAGS="-I$OSSLIBDIR/include"
++        fi
++    fi
++    AC_MSG_RESULT([$MOZ_OSS_CFLAGS])
++
++    CFLAGS="$CFLAGS $MOZ_OSS_CFLAGS"
++    MOZ_CHECK_HEADERS(sys/soundcard.h linux/soundcard.h soundcard.h)
++
++    if test "$ac_cv_header_sys_soundcard_h" != "yes" -a \
++            "$ac_cv_header_linux_soundcard_h" != "yes" -a \
++            "$ac_cv_header_soundcard_h" != "yes"; then
++        AC_MSG_ERROR([Need OSS for Ogg, Wave or WebM decoding on $OS_TARGET.  Disable with --disable-ogg --disable-wave --disable-webm.])
++    fi
++
++    dnl Assume NetBSD implementation over SunAudio
++    AC_CHECK_LIB(ossaudio, _oss_ioctl,
++        [AC_DEFINE_UNQUOTED(CUBEB_OSS_DEFAULT_OUTPUT, "/dev/sound")
++         MOZ_OSS_LIBS="-lossaudio"])
++fi
++CFLAGS=$_SAVE_CFLAGS
++LIBS=$_SAVE_LIBS
++
++AC_SUBST(MOZ_OSS)
++AC_SUBST_LIST(MOZ_OSS_CFLAGS)
++AC_SUBST_LIST(MOZ_OSS_LIBS)
++
++dnl ==================================
+ dnl = Check alsa availability on Linux
+ dnl ==================================
+ 
+@@ -5475,12 +5692,23 @@ MOZ_ARG_ENABLE_BOOL(alsa,
+    MOZ_ALSA=1,
+    MOZ_ALSA=)
+ 
++MOZ_ARG_DISABLE_BOOL(alsa-dlopen,
++[  --disable-alsa-dlopen   Disable runtime linking of libasound.so],
++   DISABLE_LIBASOUND_DLOPEN=1,
++   DISABLE_LIBASOUND_DLOPEN=)
++
+ if test -n "$MOZ_ALSA"; then
+     PKG_CHECK_MODULES(MOZ_ALSA, alsa, ,
+          [echo "$MOZ_ALSA_PKG_ERRORS"
+           AC_MSG_ERROR([Need alsa for Ogg, Wave or WebM decoding on Linux.  Disable with --disable-ogg --disable-wave --disable-webm.  (On Ubuntu, you might try installing the package libasound2-dev.)])])
+ fi
+ 
++if test -n "$DISABLE_LIBASOUND_DLOPEN"; then
++    AC_DEFINE(DISABLE_LIBASOUND_DLOPEN)
++else
++    MOZ_ALSA_LIBS=
++fi
++
+ AC_SUBST(MOZ_ALSA)
+ AC_SUBST(MOZ_ALSA_CFLAGS)
+ AC_SUBST(MOZ_ALSA_LIBS)
+@@ -5904,7 +6132,9 @@ MOZ_ARG_DISABLE_BOOL(gamepad,
  if test "$MOZ_GAMEPAD"; then
      case "$OS_TARGET" in
      Darwin)
@@ -306,7 +382,7 @@ $NetBSD: patch-aa,v 1.30 2014/10/05 01:59:08 ryoon Exp $
          ;;
      WINNT)
          case "$MOZ_WINSDK_MAXVER" in
-@@ -8074,6 +8239,52 @@ if test "$USE_FC_FREETYPE"; then
+@@ -8014,6 +8244,52 @@ if test "$USE_FC_FREETYPE"; then
  fi
  
  dnl ========================================================
