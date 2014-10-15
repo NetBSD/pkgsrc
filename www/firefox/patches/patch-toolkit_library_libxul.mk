@@ -1,6 +1,6 @@
-$NetBSD: patch-toolkit_library_libxul.mk,v 1.1 2014/07/24 14:57:12 ryoon Exp $
+$NetBSD: patch-toolkit_library_libxul.mk,v 1.2 2014/10/15 13:07:07 ryoon Exp $
 
---- toolkit/library/libxul.mk.orig	2014-07-17 01:45:41.000000000 +0000
+--- toolkit/library/libxul.mk.orig	2014-10-11 09:06:48.000000000 +0000
 +++ toolkit/library/libxul.mk
 @@ -77,6 +77,34 @@ ifdef MOZ_NATIVE_HUNSPELL
  EXTRA_DSO_LDOPTS += $(MOZ_HUNSPELL_LIBS)
@@ -37,7 +37,7 @@ $NetBSD: patch-toolkit_library_libxul.mk,v 1.1 2014/07/24 14:57:12 ryoon Exp $
  ifdef MOZ_NATIVE_LIBEVENT
  EXTRA_DSO_LDOPTS += $(MOZ_LIBEVENT_LIBS)
  endif
-@@ -89,12 +117,24 @@ ifndef MOZ_TREE_PIXMAN
+@@ -89,12 +117,28 @@ ifndef MOZ_TREE_PIXMAN
  EXTRA_DSO_LDOPTS += $(MOZ_PIXMAN_LIBS)
  endif
  
@@ -53,8 +53,12 @@ $NetBSD: patch-toolkit_library_libxul.mk,v 1.1 2014/07/24 14:57:12 ryoon Exp $
  EXTRA_DSO_LDOPTS += $(call EXPAND_LIBNAME_PATH,dmd,$(DIST)/lib)
  endif
  
- EXTRA_DSO_LDOPTS += $(call EXPAND_LIBNAME_PATH,gkmedias,$(DIST)/lib)
+ EXTRA_DSO_LDOPTS += $(call EXPAND_LIBNAME_PATH,gkmedias,$(DEPTH)/layout/media)
  
++ifdef MOZ_LIBV4L2_LIBS
++EXTRA_DSO_LDOPTS += $(MOZ_LIBV4L2_LIBS)
++endif
++
 +ifdef MOZ_LIBV4L2_LIBS
 +EXTRA_DSO_LDOPTS += $(MOZ_LIBV4L2_LIBS)
 +endif
@@ -62,7 +66,18 @@ $NetBSD: patch-toolkit_library_libxul.mk,v 1.1 2014/07/24 14:57:12 ryoon Exp $
  ifdef MOZ_WEBRTC
  ifeq (WINNT,$(OS_TARGET))
  ifndef MOZ_HAS_WINSDK_WITH_D3D
-@@ -231,7 +271,7 @@ ifdef MOZ_ENABLE_QT
+@@ -106,6 +150,10 @@ OS_LIBS += $(call EXPAND_LIBNAME,secur32
+ endif
+ endif
+ 
++ifdef MOZ_OSS
++EXTRA_DSO_LDOPTS += $(MOZ_OSS_LIBS)
++endif
++
+ ifdef MOZ_ALSA
+ EXTRA_DSO_LDOPTS += $(MOZ_ALSA_LIBS)
+ endif
+@@ -223,7 +271,7 @@ ifdef MOZ_ENABLE_QT
  EXTRA_DSO_LDOPTS += $(MOZ_QT_LDFLAGS) $(XEXT_LIBS)
  endif
  
