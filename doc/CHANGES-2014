@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3908 2014/10/15 13:06:10 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.3909 2014/10/15 13:08:02 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4951,3 +4951,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/qemu to 2.1.2 [snj 2014-10-14]
 	Updated devel/at-spi2-core to 2.14.0 [prlw1 2014-10-14]
 	Updated devel/nss to 3.17.2 [ryoon 2014-10-15]
+	Updated www/firefox to 33.0 [ryoon 2014-10-15]
