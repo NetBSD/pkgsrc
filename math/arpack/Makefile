@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/11 23:04:16 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/15 22:06:23 joerg Exp $
 
 DISTNAME=	arpack96
 PKGNAME=	arpack-96
@@ -10,6 +10,9 @@ MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	http://www.caam.rice.edu/software/ARPACK/SRC/
 COMMENT=	Library of subroutines to solve eigenvalue problems
 LICENSE=	original-bsd
+
+# unsafe library creation
+MAKE_JOBS_SAFE=	no
 
 WRKSRC=		${WRKDIR}/ARPACK
 USE_LANGUAGES=	fortran77
