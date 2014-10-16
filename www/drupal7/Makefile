@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2014/08/08 15:53:33 taca Exp $
+# $NetBSD: Makefile,v 1.29 2014/10/16 03:08:11 taca Exp $
 
-DISTNAME=	drupal-7.31
+DISTNAME=	drupal-7.32
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.drupal.org/files/projects/
 
