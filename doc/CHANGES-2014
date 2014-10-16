@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3915 2014/10/16 08:19:02 roy Exp $
+$NetBSD: CHANGES-2014,v 1.3916 2014/10/16 08:19:16 roy Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4960,3 +4960,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/drupal7 to 7.32 [taca 2014-10-16]
 	Updated ham/chirp to 0.4.1 [mef 2014-10-16]
 	Updated net/dhcpcd-icons to 0.7.4 [roy 2014-10-16]
+	Updated net/dhcpcd-gtk to 0.7.4 [roy 2014-10-16]
