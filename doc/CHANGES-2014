@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3911 2014/10/15 19:04:51 jperkin Exp $
+$NetBSD: CHANGES-2014,v 1.3912 2014/10/16 03:08:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4954,3 +4954,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/firefox to 33.0 [ryoon 2014-10-15]
 	Updated www/firefox-l10n to 33.0 [ryoon 2014-10-15]
 	Updated security/openssl to 1.0.1j [jperkin 2014-10-15]
+	Updated www/drupal7 to 7.32 [taca 2014-10-16]
