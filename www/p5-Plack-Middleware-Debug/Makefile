@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/10/07 07:01:07 wen Exp $
+# $NetBSD: Makefile,v 1.11 2014/10/16 12:02:16 wen Exp $
 
 DISTNAME=	Plack-Middleware-Debug-0.16
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Plack/Middleware/Debug/.packlist
-PERL5_MODULE_TYPE=	Module::Build
+PERL5_MODULE_TYPE=	Module::Build::Tiny
 
 DEPENDS+=	p5-Class-Method-Modifiers>=1.05:../../devel/p5-Class-Method-Modifiers
 DEPENDS+=	p5-Data-Dump-[0-9]*:../../devel/p5-Data-Dump
