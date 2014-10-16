@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3917 2014/10/16 08:19:34 roy Exp $
+$NetBSD: CHANGES-2014,v 1.3918 2014/10/16 12:12:41 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4962,3 +4962,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/dhcpcd-icons to 0.7.4 [roy 2014-10-16]
 	Updated net/dhcpcd-gtk to 0.7.4 [roy 2014-10-16]
 	Updated net/dhcpcd-qt to 0.7.4 [roy 2014-10-16]
+	Updated devel/p5-File-ShareDir-Install to 0.09 [wen 2014-10-16]
