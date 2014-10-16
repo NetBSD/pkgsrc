@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2014/09/13 16:47:02 wen Exp $
+# $NetBSD: Makefile,v 1.12 2014/10/16 12:19:13 wen Exp $
 
-DISTNAME=	Dancer2-0.150000
+DISTNAME=	Dancer2-0.152000
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/X/XS/XSAWYERX/}
@@ -16,6 +16,7 @@ PERL5_PACKLIST= auto/Dancer2/.packlist
 BUILD_DEPENDS+=	p5-Test-MockTime>=0:../../time/p5-Test-MockTime
 BUILD_DEPENDS+=	p5-Test-TCP>=0:../../net/p5-Test-TCP
 BUILD_DEPENDS+=	p5-Test-Fatal>=0:../../devel/p5-Test-Fatal
+BUILD_DEPENDS+=	p5-File-ShareDir-Install>=0.06:../../devel/p5-File-ShareDir-Install
 
 DEPENDS+=	p5-App-Cmd>=0:../../devel/p5-App-Cmd
 DEPENDS+=	p5-Capture-Tiny>=0.12:../../devel/p5-Capture-Tiny
