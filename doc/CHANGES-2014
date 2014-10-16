@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3919 2014/10/16 12:20:05 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3920 2014/10/16 12:56:10 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4964,3 +4964,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/dhcpcd-qt to 0.7.4 [roy 2014-10-16]
 	Updated devel/p5-File-ShareDir-Install to 0.09 [wen 2014-10-16]
 	Updated www/p5-Dancer2 to 0.152000 [wen 2014-10-16]
+	Updated www/p5-Mojolicious to 5.50 [wen 2014-10-16]
