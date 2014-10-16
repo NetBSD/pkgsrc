@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dirmngr.sh,v 1.4 2012/04/12 08:21:54 wiz Exp $
+# $NetBSD: dirmngr.sh,v 1.5 2014/10/16 04:51:08 dholland Exp $
 #
 # PROVIDE: dirmngr
 # REQUIRE: DAEMON
@@ -37,22 +37,6 @@ dirmngr_precmd()
 
 dirmngr_start()
 {
-       for _f in $required_dirs; do
-		if [ ! -d "${_f}/." ]; then
-			warn "${_f} is not a directory."
-			if [ -z $rc_force ]; then
-				return 1
-			fi
-		fi
-	done
-	for _f in $required_files; do
-		if [ ! -r "${_f}" ]; then
-			warn "${_f} is not readable."
-			if [ -z $rc_force ]; then
-				return 1
-			fi
-		fi
-	done
 	eval `${dirmngr_command} ${rc_flags}`
 }
 
