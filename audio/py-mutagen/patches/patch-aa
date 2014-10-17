@@ -1,15 +1,29 @@
-$NetBSD: patch-aa,v 1.4 2013/12/04 16:47:32 drochner Exp $
+$NetBSD: patch-aa,v 1.5 2014/10/17 15:58:57 drochner Exp $
 
---- setup.py.orig	2013-09-06 09:11:46.000000000 +0000
+--- setup.py.orig	2014-10-04 21:18:16.000000000 +0000
 +++ setup.py
-@@ -203,8 +203,8 @@ if __name__ == "__main__":
+@@ -253,15 +253,15 @@ if __name__ == "__main__":
              'Topic :: Multimedia :: Sound/Audio',
            ],
-           packages=["mutagen"],
+           packages=["mutagen", "mutagen.id3"],
 -          data_files=data_files,
--          scripts=glob.glob("tools/m*[!~]"),
+-          scripts=[os.path.join("tools", name) for name in [
+-            "mid3cp",
+-            "mid3iconv",
+-            "mid3v2",
+-            "moggsplit",
+-            "mutagen-inspect",
+-            "mutagen-pony",
+-          ]],
 +#          data_files=data_files,
-+#          scripts=glob.glob("tools/m*[!~]"),
++#          scripts=[os.path.join("tools", name) for name in [
++#            "mid3cp",
++#            "mid3iconv",
++#            "mid3v2",
++#            "moggsplit",
++#            "mutagen-inspect",
++#            "mutagen-pony",
++#          ]],
            long_description="""\
  Mutagen is a Python module to handle audio metadata. It supports ASF,
  FLAC, M4A, Monkey's Audio, MP3, Musepack, Ogg FLAC, Ogg Speex, Ogg
