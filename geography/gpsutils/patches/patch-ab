@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/10/04 20:57:49 jschauma Exp $
+$NetBSD: patch-ab,v 1.2 2014/10/17 16:46:26 joerg Exp $
 
 --- Makefile.orig	2003-10-04 16:12:55.000000000 -0400
 +++ Makefile	2003-10-04 16:14:11.000000000 -0400
@@ -11,19 +11,22 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/10/04 20:57:49 jschauma Exp $
  
  all: libgps.o garmin.o garminbin capture switchmode gbindiff
  
-@@ -18,19 +18,19 @@
+@@ -17,20 +17,20 @@ switchmode.o: switchmode.c garmin.h
+ 
  testlibgps.o: testlibgps.c libgps.c libgps.h
  
- garminbin: garminbin.o libgps.o
+-garminbin: garminbin.o libgps.o
 -	gcc -o garminbin garminbin.o libgps.o garmin.o -lm
++garminbin: garminbin.o libgps.o garmin.o
 +	${CC} -o garminbin garminbin.o libgps.o garmin.o ${LDFLAGS} -lm
  	
  gbindiff: gbindiff.o garmin.o libgps.o
 -	gcc -o gbindiff gbindiff.o garmin.o libgps.o -lm
 +	${CC} -o gbindiff gbindiff.o garmin.o libgps.o ${LDFLAGS} -lm
  	
- oldgarminbin: oldgarminbin.o libgps.o
+-oldgarminbin: oldgarminbin.o libgps.o
 -	gcc -o oldgarminbin oldgarminbin.o libgps.o garmin.o -lm
++oldgarminbin: oldgarminbin.o libgps.o garmin.o
 +	${CC} -o oldgarminbin oldgarminbin.o libgps.o garmin.o ${LDFLAGS} -lm
  	
  capture: capture.o siolib.o 
