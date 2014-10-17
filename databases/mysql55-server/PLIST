@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2014/10/01 09:17:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.32 2014/10/17 17:07:44 fhajny Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -25,6 +25,7 @@ lib/mysql/plugin/ha_archive.so
 lib/mysql/plugin/ha_blackhole.so
 lib/mysql/plugin/ha_example.so
 lib/mysql/plugin/ha_federated.so
+${PLIST.sphinx}lib/mysql/plugin/ha_sphinx.so
 lib/mysql/plugin/libdaemon_example.so
 lib/mysql/plugin/mypluglib.so
 lib/mysql/plugin/qa_auth_client.so
