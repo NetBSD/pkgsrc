@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/10/03 16:14:30 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2014/10/17 21:59:29 joerg Exp $
 
 DISTNAME=	configure-0.1.0
 PKGNAME=	deforaos-configure-0.1.0
@@ -10,6 +10,8 @@ HOMEPAGE=	http://www.defora.org/
 COMMENT=	DeforaOS automated Makefile generation tool
 
 LICENSE=	2-clause-bsd
+
+USE_TOOLS+=	pkg-config
 
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
