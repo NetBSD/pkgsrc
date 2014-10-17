@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2014/10/17 11:50:42 schmonz Exp $
+# $NetBSD: Makefile,v 1.128 2014/10/17 13:14:01 schmonz Exp $
 #
 
 DISTNAME=		ikiwiki_3.20141016
@@ -35,9 +35,12 @@ PERL5_PACKLIST=		auto/IkiWiki/.packlist
 USE_LANGUAGES=		c
 USE_TOOLS+=		gmake msgfmt perl:run xgettext
 
+REPLACE_PERL+=		IkiWiki/Plugin/calendar.pm
 # find . -type f -print | \
 # perl -ne 'open(F, "<$_"); $l=<F>; print if $l =~ m|^#!/usr/bin/perl|'
 REPLACE_PYTHON+=	plugins/proxy.py plugins/pythondemo plugins/rst
+
+BUILD_TARGET=		extra_build all
 
 MAKE_FLAGS+=		W3M_CGI_BIN=${PREFIX:Q}/libexec/w3m/cgi-bin
 MAKE_FLAGS+=		SYSCONFDIR=${PKG_SYSCONFDIR:Q}
