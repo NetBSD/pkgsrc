@@ -1,4 +1,4 @@
-$NetBSD: patch-gr-audio_lib_alsa_alsa__impl_h,v 1.1 2014/10/13 12:46:33 mef Exp $
+$NetBSD: patch-gr-audio_lib_alsa_alsa__impl_h,v 1.2 2014/10/17 09:51:56 mef Exp $
 
 gnuradio-3.7.2.1/gr-audio/lib/alsa/alsa_source.cc:477:23: error: 'ESTRPIPE' was not declared in this scope
 See also
