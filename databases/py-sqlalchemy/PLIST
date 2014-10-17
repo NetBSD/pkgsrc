@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2014/06/14 16:20:45 rodent Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/10/17 11:10:21 fhajny Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -441,6 +441,9 @@ ${PYSITELIB}/sqlalchemy/testing/assertsql.pyo
 ${PYSITELIB}/sqlalchemy/testing/config.py
 ${PYSITELIB}/sqlalchemy/testing/config.pyc
 ${PYSITELIB}/sqlalchemy/testing/config.pyo
+${PYSITELIB}/sqlalchemy/testing/distutils_run.py
+${PYSITELIB}/sqlalchemy/testing/distutils_run.pyc
+${PYSITELIB}/sqlalchemy/testing/distutils_run.pyo
 ${PYSITELIB}/sqlalchemy/testing/engines.py
 ${PYSITELIB}/sqlalchemy/testing/engines.pyc
 ${PYSITELIB}/sqlalchemy/testing/engines.pyo
