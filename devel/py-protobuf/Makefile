@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/10/09 09:10:47 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2014/10/17 22:00:40 joerg Exp $
 
-PROTOBUF_VERSION=2.5.0
-DISTNAME=	protobuf-${PROTOBUF_VERSION}
-PKGNAME=	${PYPKGPREFIX}-protobuf-${PROTOBUF_VERSION}
+.include "../../devel/protobuf/Makefile.common"
+
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	http://protobuf.googlecode.com/files/
 
