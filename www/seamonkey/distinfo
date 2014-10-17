@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.113 2014/06/28 22:51:38 joerg Exp $
+$NetBSD: distinfo,v 1.114 2014/10/17 16:50:11 joerg Exp $
 
 SHA1 (enigmail-1.6.1_pre20140112.tar.xz) = abb4ce7a5512095c18af7e68f4cbeb52b1e95179
 RMD160 (enigmail-1.6.1_pre20140112.tar.xz) = 617cf51d64458b9e1df332e3759cddd2b2bb34df
@@ -95,6 +95,7 @@ SHA1 (patch-mozilla_ipc_glue_GeckoChildProcessHost.cpp) = 0a58209ce22b7678c003c2
 SHA1 (patch-mozilla_ipc_glue_ScopedXREEmbed.cpp) = b6c4bbe2df7149b7d562a85e6bab6149b4a4a661
 SHA1 (patch-mozilla_ipc_glue_StringUtil.cpp) = ff0b3914baef8505b40f68c625ee62650f026f06
 SHA1 (patch-mozilla_js_src_Makefile.in) = 7898c6d201be5bf02bf09b4f6e8018ad8920b505
+SHA1 (patch-mozilla_js_src_builtin_TypedObject.cpp) = 523713078befb87f8342e08b543adb9337d308ea
 SHA1 (patch-mozilla_js_src_ctypes_CTypes.h) = 37ef9e49c21199d8506e7c0c048a7651800a249a
 SHA1 (patch-mozilla_js_src_frontend_ParseMaps.cpp) = af9c153c78a3d50e926f7820db3c98b7fe1db063
 SHA1 (patch-mozilla_js_src_gc_Memory.cpp) = edf428e3537e98572a3023f4d5c2cf324a4a4de7
