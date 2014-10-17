@@ -617,4 +617,7 @@ REPLACE_PYTHON = \
 	gr-atsc/python/atsc/qa_atsc.py \
 	gr-atsc/lib/gen_encoder.py \
         gr-filter/freq_xlating_fft_filter.py \
-	gnuradio-runtime/python/digital/packet_utils.py
+	gnuradio-runtime/python/digital/packet_utils.py \
+	gnuradio-runtime/python/gnuradio/gr/packet_utils.py \
+	gr-digital/python/digital/packet_utils.py \
+	gr-filter/python/filter/freq_xlating_fft_filter.py \

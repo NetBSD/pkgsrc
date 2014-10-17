@@ -1,4 +1,4 @@
-$NetBSD: patch-gnuradio_runtime_lib_thread_thread_cc,v 1.1 2014/10/13 12:46:33 mef Exp $
+$NetBSD: patch-gnuradio_runtime_lib_thread_thread_cc,v 1.2 2014/10/17 09:51:56 mef Exp $
 
 Extending for BSD
 

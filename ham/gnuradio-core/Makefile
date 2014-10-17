@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.42 2014/10/13 12:46:33 mef Exp $
+# $NetBSD: Makefile,v 1.43 2014/10/17 09:51:56 mef Exp $
 
 PKGNAME=	gnuradio-core-${VERSION}
+PKGREVISION=	1
 COMMENT=	Core part of GNU Radio, all others need this
 
 PLIST_MINUS=	# empty
 .include	"Makefile.common"
 
 CONF_FILES+=	${EGDIR}/gnuradio-runtime.conf	${PKG_SYSCONFDIR}/gnuradio-runtime.conf
-CONF_FILES+=	${EGDIR}/gr-audio-alsa.conf	${PKG_SYSCONFDIR}/gr-audio-alsa.conf
 CONF_FILES+=	${EGDIR}/gr-audio-jack.conf	${PKG_SYSCONFDIR}/gr-audio-jack.conf
 CONF_FILES+=	${EGDIR}/gr-audio-oss.conf	${PKG_SYSCONFDIR}/gr-audio-oss.conf
 CONF_FILES+=	${EGDIR}/gr-audio-portaudio.conf ${PKG_SYSCONFDIR}/gr-audio-portaudio.conf
@@ -21,5 +21,4 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/etc/gnuradio/conf.d/* \
 	      ${DESTDIR}${PREFIX}/${EGDIR}/
 
-#.include	"../../devel/orc/buildlink3.mk"
 .include	"../../mk/bsd.pkg.mk"

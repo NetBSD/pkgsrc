@@ -1,4 +1,4 @@
-$NetBSD: patch-grc_script_gnuradio-companion,v 1.1 2014/10/13 12:46:33 mef Exp $
+$NetBSD: patch-grc_script_gnuradio-companion,v 1.2 2014/10/17 09:51:56 mef Exp $
 
 Add message for NetBSD when failed to import gnuradio.
 Or missing gnuradio-core package.

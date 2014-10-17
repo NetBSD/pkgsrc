@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2014/10/13 12:46:33 mef Exp $
+@comment $NetBSD: PLIST,v 1.15 2014/10/17 09:51:56 mef Exp $
 bin/gnuradio-config-info
 bin/gr_filter_design
 bin/volk-config-info
@@ -879,7 +879,6 @@ share/doc/gnuradio-${PKGVERSION}/README.fft
 share/doc/gnuradio-${PKGVERSION}/README.filter
 share/doc/gnuradio-${PKGVERSION}/README.hacking
 share/examples/gnuradio/conf.d/gnuradio-runtime.conf
-share/examples/gnuradio/conf.d/gr-audio-alsa.conf
 share/examples/gnuradio/conf.d/gr-audio-jack.conf
 share/examples/gnuradio/conf.d/gr-audio-oss.conf
 share/examples/gnuradio/conf.d/gr-audio-portaudio.conf

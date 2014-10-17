@@ -1,4 +1,4 @@
-# $NetBSD: Nocore.mk,v 1.1 2014/10/13 12:46:33 mef Exp $
+# $NetBSD: Nocore.mk,v 1.2 2014/10/17 09:51:56 mef Exp $
 # Default list for reducing PLIST
 PLIST_MINUS=	core
 DEPENDS+=	gnuradio-core-[0-9]*:../../ham/gnuradio-core
