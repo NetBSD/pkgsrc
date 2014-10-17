@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.6 2014/10/10 12:44:30 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.7 2014/10/17 09:43:27 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q3 branch:
@@ -27,4 +27,5 @@ Pullup ticket #4509 - requested by tron
 mail/spamassassin: bug fix
 Pullup ticket #4515 - requested by tron
 databases/phpmyadmin: security update
-
+Pullup ticket #4522 - requested by taca
+www/drupal7: security update
