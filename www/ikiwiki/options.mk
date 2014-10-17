@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2014/09/16 17:53:01 schmonz Exp $
+# $NetBSD: options.mk,v 1.17 2014/10/17 11:50:42 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ikiwiki
 PKG_SUPPORTED_OPTIONS=		cgi imagemagick python w3m
@@ -51,6 +51,7 @@ DEPENDS+=	p5-PerlMagick-[0-9]*:../../graphics/p5-PerlMagick
 
 .if !empty(PKG_OPTIONS:Mpython)
 DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
+DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 .else
 PYTHON_FOR_BUILD_ONLY=	yes
 .endif
