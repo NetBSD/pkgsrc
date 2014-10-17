@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2014/10/13 12:46:33 mef Exp $
+# $NetBSD: Makefile.common,v 1.2 2014/10/17 09:51:56 mef Exp $
 # This Makefile fragment is included in the package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -98,6 +98,14 @@ CMAKE_ARG_PATH=	../
 
 .include "options.mk"
 
+# disable/enable ALSA, see also patches/patch-gr-audio_lib_CMakeLists.txt
+SUBST_CLASSES+=		alsa
+SUBST_MESSAGE.alsa=	Arrange the patched line depepending on alsa is in PKG_OPTIONS or not
+SUBST_FILES.alsa+=	gr-audio/lib/CMakeLists.txt
+## The value of ${ALSA_ENABLED} is either '#' or '' by options.mk.
+SUBST_SED.alsa=		-e 's,@@ALSA@@,${ALSA_ENABLED},'
+SUBST_STAGE.alsa=	post-patch
+
 # REPLACE_PYTHON is some 600 files
 .include	"../../ham/gnuradio-core/files/REPLACE_PYTHON"
 
@@ -107,7 +115,6 @@ pre-configure:
 do-install:
 	(cd ${WRKSRC}/build; ${GMAKE} DESTDIR=${DESTDIR} install)
 
-.include	"../../audio/alsa-lib/buildlink3.mk"
 .include	"../../audio/gsm/buildlink3.mk"
 .include	"../../audio/jack/buildlink3.mk"
 .include	"../../audio/portaudio-devel/buildlink3.mk"
