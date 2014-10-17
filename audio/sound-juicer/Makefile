@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2014/10/07 16:47:18 adam Exp $
+# $NetBSD: Makefile,v 1.76 2014/10/17 16:45:12 joerg Exp $
 #
 
 DISTNAME=		sound-juicer-2.28.2
@@ -35,8 +35,7 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.14.0
 .include "../../devel/libglade/buildlink3.mk"
 #.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libcdio+=		libcdio>=0.70
-.include "../../misc/libcdio/buildlink3.mk"
+.include "../../misc/libcdio-paranoia/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gstreamer0.10+=	gstreamer0.10>=0.10.15
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
