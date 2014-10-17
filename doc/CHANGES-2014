@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3920 2014/10/16 12:56:10 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3921 2014/10/17 09:53:05 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4965,3 +4965,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-File-ShareDir-Install to 0.09 [wen 2014-10-16]
 	Updated www/p5-Dancer2 to 0.152000 [wen 2014-10-16]
 	Updated www/p5-Mojolicious to 5.50 [wen 2014-10-16]
+	Updated ham/gnuradio-core to 3.7.5nb1 [mef 2014-10-17]
