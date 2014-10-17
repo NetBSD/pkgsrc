@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3923 2014/10/17 11:10:34 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.3924 2014/10/17 11:50:55 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4968,3 +4968,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated ham/gnuradio-core to 3.7.5nb1 [mef 2014-10-17]
 	Added databases/py-peewee version 2.3.3 [fhajny 2014-10-17]
 	Updated databases/py-sqlalchemy to 0.9.8 [fhajny 2014-10-17]
+	Updated www/ikiwiki to 3.20141016 [schmonz 2014-10-17]
