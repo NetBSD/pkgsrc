@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2014/10/09 15:02:42 adam Exp $
+# $NetBSD: Makefile,v 1.39 2014/10/17 16:44:02 joerg Exp $
 
 DISTNAME=	audacious-3.5.1
 CATEGORIES=	audio
@@ -16,6 +16,8 @@ GNU_CONFIGURE=		yes
 # requires libguess which is not available any more
 CONFIGURE_ARGS+=	--disable-chardet
 PKGCONFIG_OVERRIDE+=	audacious.pc.in
+
+BUILD_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 .include "../../mk/bsd.prefs.mk"
 # XXX does not solve linking problem completely
