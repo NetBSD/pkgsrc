@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/04/17 12:29:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/10/17 16:04:24 drochner Exp $
 bin/beet
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -31,6 +31,9 @@ ${PYSITELIB}/beets/dbcore/db.pyo
 ${PYSITELIB}/beets/dbcore/query.py
 ${PYSITELIB}/beets/dbcore/query.pyc
 ${PYSITELIB}/beets/dbcore/query.pyo
+${PYSITELIB}/beets/dbcore/queryparse.py
+${PYSITELIB}/beets/dbcore/queryparse.pyc
+${PYSITELIB}/beets/dbcore/queryparse.pyo
 ${PYSITELIB}/beets/dbcore/types.py
 ${PYSITELIB}/beets/dbcore/types.pyc
 ${PYSITELIB}/beets/dbcore/types.pyo
@@ -95,6 +98,12 @@ ${PYSITELIB}/beetsplug/bpd/__init__.pyo
 ${PYSITELIB}/beetsplug/bpd/gstplayer.py
 ${PYSITELIB}/beetsplug/bpd/gstplayer.pyc
 ${PYSITELIB}/beetsplug/bpd/gstplayer.pyo
+${PYSITELIB}/beetsplug/bpm.py
+${PYSITELIB}/beetsplug/bpm.pyc
+${PYSITELIB}/beetsplug/bpm.pyo
+${PYSITELIB}/beetsplug/bucket.py
+${PYSITELIB}/beetsplug/bucket.pyc
+${PYSITELIB}/beetsplug/bucket.pyo
 ${PYSITELIB}/beetsplug/chroma.py
 ${PYSITELIB}/beetsplug/chroma.pyc
 ${PYSITELIB}/beetsplug/chroma.pyo
@@ -131,6 +140,9 @@ ${PYSITELIB}/beetsplug/fuzzy.pyo
 ${PYSITELIB}/beetsplug/ihate.py
 ${PYSITELIB}/beetsplug/ihate.pyc
 ${PYSITELIB}/beetsplug/ihate.pyo
+${PYSITELIB}/beetsplug/importadded.py
+${PYSITELIB}/beetsplug/importadded.pyc
+${PYSITELIB}/beetsplug/importadded.pyo
 ${PYSITELIB}/beetsplug/importfeeds.py
 ${PYSITELIB}/beetsplug/importfeeds.pyc
 ${PYSITELIB}/beetsplug/importfeeds.pyo
@@ -166,6 +178,9 @@ ${PYSITELIB}/beetsplug/mpdstats.pyo
 ${PYSITELIB}/beetsplug/mpdupdate.py
 ${PYSITELIB}/beetsplug/mpdupdate.pyc
 ${PYSITELIB}/beetsplug/mpdupdate.pyo
+${PYSITELIB}/beetsplug/play.py
+${PYSITELIB}/beetsplug/play.pyc
+${PYSITELIB}/beetsplug/play.pyo
 ${PYSITELIB}/beetsplug/random.py
 ${PYSITELIB}/beetsplug/random.pyc
 ${PYSITELIB}/beetsplug/random.pyo
@@ -181,9 +196,15 @@ ${PYSITELIB}/beetsplug/scrub.pyo
 ${PYSITELIB}/beetsplug/smartplaylist.py
 ${PYSITELIB}/beetsplug/smartplaylist.pyc
 ${PYSITELIB}/beetsplug/smartplaylist.pyo
+${PYSITELIB}/beetsplug/spotify.py
+${PYSITELIB}/beetsplug/spotify.pyc
+${PYSITELIB}/beetsplug/spotify.pyo
 ${PYSITELIB}/beetsplug/the.py
 ${PYSITELIB}/beetsplug/the.pyc
 ${PYSITELIB}/beetsplug/the.pyo
+${PYSITELIB}/beetsplug/types.py
+${PYSITELIB}/beetsplug/types.pyc
+${PYSITELIB}/beetsplug/types.pyo
 ${PYSITELIB}/beetsplug/web/__init__.py
 ${PYSITELIB}/beetsplug/web/__init__.pyc
 ${PYSITELIB}/beetsplug/web/__init__.pyo
