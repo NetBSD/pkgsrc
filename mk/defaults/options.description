@@ -222,6 +222,7 @@ ghostscript		Enable GhostScript support.
 gif			Enable GIF support.
 gimp			Enable GIMP support.
 gimp1-helpbrowser	Link against gnome1 to get a help browser.
+git			Enable Git support.
 git-gui			Build the GUI in Tcl/Tk.
 glade			Enable Glade support
 gmp			Enable gmp (GNU Multiple Precision Arithmetic Library) support.
