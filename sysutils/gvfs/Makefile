@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2014/10/07 16:47:35 adam Exp $
+# $NetBSD: Makefile,v 1.68 2014/10/17 16:48:17 joerg Exp $
 #
 
 DISTNAME=	gvfs-1.6.7
@@ -50,7 +50,7 @@ CONFIGURE_ARGS+=	--disable-samba
 .endif
 
 .if !empty(PKG_OPTIONS:Mhal)
-.include "../../misc/libcdio/buildlink3.mk"
+.include "../../misc/libcdio-paranoia/buildlink3.mk"
 .include "../../sysutils/hal/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-hal
 CONFIGURE_ARGS+=	--enable-cdda
