@@ -1,8 +1,8 @@
-$NetBSD: patch-src_sphinxstd.h,v 1.1 2014/03/05 13:44:23 fhajny Exp $
+$NetBSD: patch-src_sphinxstd.h,v 1.2 2014/10/17 17:28:15 fhajny Exp $
 
 Portability fixes.
 
---- src/sphinxstd.h.orig	2014-01-22 15:16:21.000000000 +0000
+--- src/sphinxstd.h.orig	2014-09-26 17:21:01.000000000 +0000
 +++ src/sphinxstd.h
 @@ -75,6 +75,13 @@ typedef int __declspec("SAL_nokernel") _
  #endif
