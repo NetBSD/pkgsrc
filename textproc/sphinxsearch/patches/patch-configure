@@ -1,0 +1,52 @@
+$NetBSD: patch-configure,v 1.1 2014/10/17 17:28:15 fhajny Exp $
+
+Portability.
+--- configure.orig	2014-09-02 11:26:02.000000000 +0000
++++ configure
+@@ -6412,8 +6412,8 @@ if test "${enable_dl+set}" = set; then :
+ fi
+ 
+ 
+-if test x$ac_cv_use_dl_libs == xyes ; then
+-	if test x$ac_cv_func_dlopen == xyes ; then
++if test x$ac_cv_use_dl_libs = xyes ; then
++	if test x$ac_cv_func_dlopen = xyes ; then
+ 	    { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
+ 		sph_usedl=yes
+@@ -6895,7 +6895,7 @@ fi
+ 
+ 		MYSQL_LIBS=`echo $MYSQL_LIBS | sed -e "sX-lmysqlclientX\$MYSQL_PKGLIBDIR/libmysqlclient.aXg"`
+ 	else
+-		if test x$sph_usedl == xyes ; then
++		if test x$sph_usedl = xyes ; then
+ 			{ $as_echo "$as_me:${as_lineno-$LINENO}: result: runtime dynamic" >&5
+ $as_echo "runtime dynamic" >&6; }
+ 
+@@ -7603,7 +7603,7 @@ fi
+ 
+ 		PGSQL_LIBS=`echo $PGSQL_LIBS | sed -e "sX-lpqX$PGSQL_PKGLIBDIR/libpq.aXg"`
+ 	else
+-		if test x$sph_usedl == xyes ; then
++		if test x$sph_usedl = xyes ; then
+ 			{ $as_echo "$as_me:${as_lineno-$LINENO}: result: runtime dynamic" >&5
+ $as_echo "runtime dynamic" >&6; }
+ 
+@@ -8329,7 +8329,7 @@ if test "$ac_res" != no; then :
+ fi
+ 
+ 	if test $got_expat -eq 1; then
+-		if test x$sph_usedl == xyes ; then
++		if test x$sph_usedl = xyes ; then
+ 			{ $as_echo "$as_me:${as_lineno-$LINENO}: result: runtime dynamic" >&5
+ $as_echo "runtime dynamic" >&6; }
+ 			LIBS="$FOOLIBS"
+@@ -8588,7 +8588,7 @@ fi
+ 	fi
+ 
+ 	if test x$have_libodbc = xyes; then
+-		if test x$sph_usedl == xyes ; then
++		if test x$sph_usedl = xyes ; then
+ 			{ $as_echo "$as_me:${as_lineno-$LINENO}: result: runtime dynamic" >&5
+ $as_echo "runtime dynamic" >&6; }
+ 			LIBS="$FOOLIBS"
