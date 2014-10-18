@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3927 2014/10/17 21:03:03 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.3928 2014/10/18 00:01:08 roy Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4974,3 +4974,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/py-beets to 1.3.8 [drochner 2014-10-17]
 	Updated textproc/sphinxsearch to 2.2.5 [fhajny 2014-10-17]
 	Updated devel/hs-cpphs to 1.18.6 [szptvlfn 2014-10-17]
+	Updated net/dhcpcd to 6.5.1 [roy 2014-10-18]
