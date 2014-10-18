@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3928 2014/10/18 00:01:08 roy Exp $
+$NetBSD: CHANGES-2014,v 1.3929 2014/10/18 12:59:29 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4919,7 +4919,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Added ham/gnuradio-wavelet version 3.7.5 [mef 2014-10-13]
 	Added ham/gnuradio-zeromq version 3.7.5 [mef 2014-10-13]
 	Updated ham/gnuradio-video-sdl to 3.7.5 [mef 2014-10-13]
-	Updated ham/gnuradio-trellis to 3.7.5 [mef 2014-10-13]m
+	Updated ham/gnuradio-trellis to 3.7.5 [mef 2014-10-13]
 	Updated ham/gnuradio-wxgui to 3.7.5 [mef 2014-10-13]
 	Updated meta-pkgs/gnuradio to 3.7.5 [mef 2014-10-13]
 	Added ham/gr-osmosdr version 0.1.3 [mef 2014-10-13]
