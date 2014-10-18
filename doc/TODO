@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13755 2014/10/15 13:08:02 ryoon Exp $
+$NetBSD: TODO,v 1.13756 2014/10/18 05:56:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -702,7 +702,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kapooka-0.3
 	o kbiff-4.0
 	o kdbg-2.5.4
-	o kde4-4.14.1
+	o kde4-4.14.2
 	o kde4-4.13.2
 	o kdenlive-0.9.8
 	o kdevelop-4.7.0
@@ -1122,6 +1122,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vm-8.0.7.522 [pkg/37707]
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vte-0.36.0
+	o vtk-5.10.1
 	o vttest-20140116
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
@@ -1148,6 +1149,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xbindkeys-1.8.6
 	o xbindkeys-tk-1.8.0
 	o xboard-4.7.0
+	o xcb-util-0.4.0
+	o xcb-util-image-0.4.0
 	o xcmsdb-1.0.4 [unpackaged]
 	o xemacs-current-21.5.31
 	o xentools44-4.4.0
