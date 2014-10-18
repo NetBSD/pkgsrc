@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.44 2014/10/15 13:07:07 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.45 2014/10/18 17:56:35 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -16,17 +16,11 @@ UNLIMIT_RESOURCES+=	datasize
 TOOLS_PLATFORM.tar=	${TOOLS_PREFIX.bsdtar}/bin/bsdtar
 USE_TOOLS+=		bsdtar
 .endif
-# gcc45-4.5.3 of lang/gcc45 does not generate proper binary,
-# but gcc 4.5.4 of NetBSD 6.99 generates working binary.
-# gcc45 has no OpenBSD support, and gcc46 has it.
-.if !empty(MACHINE_PLATFORM:MNetBSD-5.*) || !empty(MACHINE_PLATFORM:MOpenBSD*)
+# GCC 4.6 is required to support nullptr.
 GCC_REQD+=		4.6
-.  if ${MACHINE_ARCH} == "i386"
+.if ${MACHINE_ARCH} == "i386"
 # Fix for PR pkg/48152.
 CPPFLAGS+=		-march=i486
-.  endif
-.else
-GCC_REQD+=		4.5
 .endif
 
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
