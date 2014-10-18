@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.163 2014/10/17 16:49:09 joerg Exp $
+$NetBSD: distinfo,v 1.164 2014/10/18 17:56:35 ryoon Exp $
 
 SHA1 (firefox-33.0.source.tar.bz2) = ad10e8fefcd9687d2b67bacafa4ecb5f5ca4af66
 RMD160 (firefox-33.0.source.tar.bz2) = f1f961927e12563db73cda811fe9557d5bc27f17
@@ -88,6 +88,7 @@ SHA1 (patch-media_libcubeb_src_cubeb__oss.c) = d662f0f4c4a326071f59f7fff14018c62
 SHA1 (patch-media_libcubeb_src_moz.build) = a56289d1387e93bc62d7852520a488443bec233c
 SHA1 (patch-media_libpng_pngpriv.h) = c9cefd1b5dd85fbd0c875c3f9bc108975398fe3a
 SHA1 (patch-media_libsoundtouch_src_cpu__detect__x86.cpp) = db61737afa7773e8cbd82976de3a02c917174696
+SHA1 (patch-media_libstagefright_frameworks_av_include_media_stagefright_foundation_AString.h) = 1325f23c87d2bb3fc0071b4cf0054e854dfea689
 SHA1 (patch-media_libstagefright_frameworks_av_media_libstagefright_foundation_AString.cpp) = fdadd8b7e28290aabae4bab78597b4968f63eaf1
 SHA1 (patch-media_libtheora_Makefile.in) = 80ac9cb20760fe4d94047f7cb1c6a16bbdd6b505
 SHA1 (patch-media_libtremor_Makefile.in) = 497d03646caa721bdd129de365aadea8466043af
