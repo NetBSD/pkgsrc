@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3929 2014/10/18 12:59:29 cheusov Exp $
+$NetBSD: CHANGES-2014,v 1.3930 2014/10/18 14:30:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4975,3 +4975,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/sphinxsearch to 2.2.5 [fhajny 2014-10-17]
 	Updated devel/hs-cpphs to 1.18.6 [szptvlfn 2014-10-17]
 	Updated net/dhcpcd to 6.5.1 [roy 2014-10-18]
+	Updated lang/php55 to 5.5.18 [taca 2014-10-18]
+	Updated lang/php54 to 5.4.34 [taca 2014-10-18]
