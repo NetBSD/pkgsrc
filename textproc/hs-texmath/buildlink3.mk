@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2014/09/13 22:23:28 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2014/10/18 21:28:59 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-texmath
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-texmath
 HS_TEXMATH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-texmath+=	hs-texmath>=0.8
-BUILDLINK_ABI_DEPENDS.hs-texmath+=	hs-texmath>=0.8nb1
+BUILDLINK_ABI_DEPENDS.hs-texmath+=	hs-texmath>=0.8nb2
 BUILDLINK_PKGSRCDIR.hs-texmath?=	../../textproc/hs-texmath
 
 .include "../../devel/hs-mtl/buildlink3.mk"
