@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3933 2014/10/19 09:57:34 cheusov Exp $
+$NetBSD: CHANGES-2014,v 1.3934 2014/10/19 10:43:55 tron Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4980,3 +4980,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/hs-vector to 0.10.12.1 [szptvlfn 2014-10-18]
 	Updated sysutils/libvirt to 1.2.9 [agc 2014-10-19]
 	Added math/liblinear version 1.94 [cheusov 2014-10-19]
+	Updated databases/phpmyadmin to 4.2.10 [tron 2014-10-19]
