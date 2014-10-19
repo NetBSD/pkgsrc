@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2014/05/29 23:38:17 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2014/10/19 22:27:48 alnsn Exp $
 #
 
 DISTNAME=	screws-0.56
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.nopcode.org/prj/screws/
 
