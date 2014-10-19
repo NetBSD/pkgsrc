@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2013/12/27 16:46:12 ryoon Exp $
+$NetBSD: MESSAGE,v 1.3 2014/10/19 14:14:47 ryoon Exp $
 
 To use Japanese localized WordPress with Apache httpd 2.4, you will need
 to perform the following steps.
@@ -27,10 +27,20 @@ to perform the following steps.
 	define('DB_PASSWORD', 'wppassword');
 	define('DB_HOST', 'localhost');
 
-5. Edit ${PREFIX}/etc/httpd/httpd.conf, and Add the following line at
+5. Edit ${PREFIX}/etc/httpd/httpd.conf, and add the following line at
    the its bottom.
 
-	Include etc/ja-wordpress.conf
+	LoadModule proxy_module lib/httpd/mod_proxy.so
+	LoadModule proxy_fcgi_module lib/httpd/mod_proxy_fcgi.so
+	ProxyPassMatch ^/wordpress/(.*\.php(/.*)?)$ fcgi://127.0.0.1:9000/${PREFIX}/share/ja-wordpress/$1
+	Alias /wordpress ${PREFIX}/share/ja-wordpress
+	<Directory "${PREFIX}/share/ja-wordpress">
+		Order allow,deny
+		Allow from all
+		AllowOverride FileInfo All
+		Require all granted
+		DirectoryIndex index.php
+	</Directory>
 
 6. Add the following line to ${PREFIX}/etc/php.ini.
 
@@ -38,8 +48,8 @@ to perform the following steps.
 
 7. Adjust ${PREFIX}/etc/ja-wordpress.conf for your environment.
 
-8. Start Apache httpd 2.4, and access http://localhost/wordpress/ ,
-   and enter website name etc.
+8. Start Apache httpd 2.4 and php-fpm, and access
+   http://localhost/wordpress/ , and enter website name etc.
 
 For further post-installation customisation you may need to make
 changes to file permissions etc. based on the functionality that
