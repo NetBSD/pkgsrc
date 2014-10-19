@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2014/09/20 01:20:46 obache Exp $
+# $NetBSD: Makefile,v 1.23 2014/10/19 22:27:44 alnsn Exp $
 #
 
 DISTNAME=	tokyocabinet-lua-1.10
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/-lua-/-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	${HOMEPAGE:S/luadoc/luapkg/}
 

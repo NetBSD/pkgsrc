@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2014/06/01 15:50:21 tsutsui Exp $
+# $NetBSD: Makefile,v 1.35 2014/10/19 22:27:45 alnsn Exp $
 #
 
 DISTNAME=		onscripter-20140504
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		http://onscripter.sourceforge.jp/
 

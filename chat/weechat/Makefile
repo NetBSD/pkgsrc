@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2014/08/24 12:45:35 tonio Exp $
+# $NetBSD: Makefile,v 1.50 2014/10/19 22:27:43 alnsn Exp $
 
 DISTNAME=	weechat-1.0
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://www.weechat.org/files/src/
 
