@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2014/10/19 09:57:21 cheusov Exp $
+bin/liblinear-predict
+bin/liblinear-train
+include/linear.h
+lib/liblinear.so
+lib/liblinear.so.1
+share/doc/liblinear/README
+share/examples/liblinear/heart_scale

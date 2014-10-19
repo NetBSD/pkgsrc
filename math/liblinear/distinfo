@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2014/10/19 09:57:21 cheusov Exp $
+
+SHA1 (liblinear-1.94.tar.gz) = 19678355e6c933b7ec133e07fef77796e50df0d5
+RMD160 (liblinear-1.94.tar.gz) = 56cc112d3e4397804d67eea4e266b363c822307b
+Size (liblinear-1.94.tar.gz) = 335400 bytes
