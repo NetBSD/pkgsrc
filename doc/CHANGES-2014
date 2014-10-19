@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3934 2014/10/19 10:43:55 tron Exp $
+$NetBSD: CHANGES-2014,v 1.3935 2014/10/19 14:15:47 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4981,3 +4981,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/libvirt to 1.2.9 [agc 2014-10-19]
 	Added math/liblinear version 1.94 [cheusov 2014-10-19]
 	Updated databases/phpmyadmin to 4.2.10 [tron 2014-10-19]
+	Updated www/php-ja-wordpress to 4.0 [ryoon 2014-10-19]
