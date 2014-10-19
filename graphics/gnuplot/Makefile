@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.92 2014/10/09 14:06:35 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2014/10/19 22:27:45 alnsn Exp $
 
 DISTNAME=	gnuplot-4.6.5
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES+=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnuplot/}
 
