@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3931 2014/10/18 21:28:19 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.3932 2014/10/19 08:49:09 agc Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4978,3 +4978,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/php55 to 5.5.18 [taca 2014-10-18]
 	Updated lang/php54 to 5.4.34 [taca 2014-10-18]
 	Updated devel/hs-vector to 0.10.12.1 [szptvlfn 2014-10-18]
+	Updated sysutils/libvirt to 1.2.9 [agc 2014-10-19]
