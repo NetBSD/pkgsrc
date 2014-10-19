@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.298 2014/10/01 11:10:30 wiz Exp $
+# $NetBSD: Makefile,v 1.299 2014/10/19 16:48:44 cheusov Exp $
 
 COMMENT=	Mathematics
 
@@ -131,6 +131,7 @@ SUBDIR+=	kseg
 SUBDIR+=	lapack
 SUBDIR+=	libffm
 SUBDIR+=	libint
+SUBDIR+=	liblinear
 SUBDIR+=	libmatheval
 SUBDIR+=	libsvm
 SUBDIR+=	linpack
