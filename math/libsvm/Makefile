@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2014/10/19 08:59:31 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/19 22:11:22 cheusov Exp $
 #
 
 DISTNAME=	libsvm-3.18
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	http://www.csie.ntu.edu.tw/~cjlin/libsvm/
 
@@ -17,6 +17,16 @@ BUILD_TARGET=	all lib
 AUTO_MKDIRS=	yes
 
 REPLACE_PYTHON=		tools/*.py
+
+SUBST_CLASSES+=         paths
+SUBST_SED.paths=	-e 's,[.][.]/svm-train,${PREFIX}/bin/svm-train,' \
+			-e 's,[.][.]/svm-scale,${PREFIX}/bin/svm-scale,' \
+			-e 's,[.][.]/svm-predict,${PREFIX}/bin/svm-predict,' \
+			-e 's,"[.]/grid[.]py,"${PREFIX}/bin/svm-grid,' \
+			-e 's,/usr/bin/gnuplot,${PREFIX}/bin/gnuplot,'
+SUBST_FILES.paths=     tools/grid.py tools/easy.py
+SUBST_STAGE.paths=     pre-build
+SUBST_MESSAGE.paths=   Fixing hardcoded paths.
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/svm-predict ${DESTDIR}${PREFIX}/bin
