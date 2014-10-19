@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.1 2013/11/10 11:13:08 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2014/10/19 14:14:47 ryoon Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.wordpress
 
 PKG_OPTIONS_REQUIRED_GROUPS=	wordpress
-PKG_OPTIONS_GROUP.wordpress=	php-cgi ap-php
+PKG_OPTIONS_GROUP.wordpress=	php-cgi ap-php php-fpm
 
-PKG_SUGGESTED_OPTIONS=		ap-php
+PKG_SUGGESTED_OPTIONS=		php-fpm
 
 .include "../../mk/bsd.options.mk"
 
@@ -16,4 +16,8 @@ DEPENDS+=	php>=5.2.4:${PHPPKGSRCDIR}
 .if !empty(PKG_OPTIONS:Map-php)
 .  include "../../mk/apache.mk"
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.3.0:../../www/ap-php
+.endif
+
+.if !empty(PKG_OPTIONS:Mphp-fpm)
+DEPENDS+=	${PHP_PKG_PREFIX}-fpm>=5.2.4:../../www/php-fpm
 .endif
