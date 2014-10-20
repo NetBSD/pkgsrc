@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3951 2014/10/20 12:14:30 mef Exp $
+$NetBSD: CHANGES-2014,v 1.3952 2014/10/20 13:14:23 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5001,3 +5001,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/xcb-util-image to 0.4.0 [wiz 2014-10-20]
 	Updated security/py-cryptography to 0.6.1 [wiz 2014-10-20]
 	Updated audio/asunder to 2.5 [mef 2014-10-20]
+	Updated audio/audacious to 3.5.2 [mef 2014-10-20]
