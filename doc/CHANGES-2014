@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3937 2014/10/19 21:26:13 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.3938 2014/10/20 08:58:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4987,3 +4987,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/sqlite3-docs to 3.8.7 [adam 2014-10-19]
 	Updated databases/sqlite3-tcl to 3.8.7 [adam 2014-10-19]
 	Updated textproc/hs-parsec to 3.1.7 [szptvlfn 2014-10-19]
+	Updated security/p5-IO-Socket-SSL to 2.000 [wiz 2014-10-20]
