@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/10/05 14:53:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/10/20 11:21:06 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -75,6 +75,9 @@ ${PYSITELIB}/cryptography/hazmat/backends/openssl/hmac.pyo
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/rsa.py
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/rsa.pyc
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/rsa.pyo
+${PYSITELIB}/cryptography/hazmat/backends/openssl/utils.py
+${PYSITELIB}/cryptography/hazmat/backends/openssl/utils.pyc
+${PYSITELIB}/cryptography/hazmat/backends/openssl/utils.pyo
 ${PYSITELIB}/cryptography/hazmat/bindings/__init__.py
 ${PYSITELIB}/cryptography/hazmat/bindings/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/bindings/__init__.pyo
