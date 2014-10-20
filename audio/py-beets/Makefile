@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/10/17 16:04:24 drochner Exp $
+# $NetBSD: Makefile,v 1.13 2014/10/20 13:07:30 wiz Exp $
 
 DISTNAME=	v1.3.8
 PKGNAME=	beets-${DISTNAME:S/v//}
@@ -21,10 +21,10 @@ DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-Unidecode-[0-9]*:../../textproc/py-Unidecode
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-mutagen
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.3.8
 
 .include "../../lang/python/pyversion.mk"
-.if empty(PYPKGPREFIX:Mpy27)
+.if !empty(PYPKGPREFIX:Mpy26)
 DEPENDS+=	${PYPKGPREFIX}-ordereddict-[0-9]*:../../devel/py-ordereddict
 .endif
 
