@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/10/09 19:14:05 jaapb Exp $
+# $NetBSD: Makefile,v 1.11 2014/10/20 10:35:20 jaapb Exp $
 #
 
 DISTNAME=		pxp-1.2.3
@@ -42,6 +42,7 @@ BUILD_TARGET+=	opt
 .endif
 
 .include "../../lang/ocaml/buildlink3.mk"
+.include "../../lang/camlp4/buildlink3.mk"
 .include "../../devel/ocaml-findlib/buildlink3.mk"
 .include "../../net/ocamlnet/buildlink3.mk"
 .include "../../devel/pcre-ocaml/buildlink3.mk"
