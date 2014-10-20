@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2014/08/30 11:14:52 richard Exp $
+# $NetBSD: Makefile,v 1.50 2014/10/20 13:44:00 adam Exp $
 
 DISTNAME=	libvpx_1.3.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -50,7 +50,7 @@ REPLACE_PERL=		build/make/ads2gas.pl
 .if ${OPSYS} == "Darwin"
 BUILDLINK_TRANSFORM+=	rm:-Wl,-Bsymbolic
 .  if ${MACHINE_ARCH} == "i386"
-.    if !empty(OS_VERSION:M12.*) || !empty(OS_VERSION:M13.*)
+.    if !empty(OS_VERSION:M1[2-9].*)
 CONFIGURE_ARGS+=	--target=x86-darwin12-gcc
 .    elif !empty(OS_VERSION:M11.*)
 CONFIGURE_ARGS+=	--target=x86-darwin11-gcc
@@ -62,7 +62,7 @@ CONFIGURE_ARGS+=	--target=x86-darwin9-gcc
 CONFIGURE_ARGS+=	--target=x86-darwin8-gcc
 .    endif
 .  elif ${MACHINE_ARCH} == "x86_64"
-.    if !empty(OS_VERSION:M12.*) || !empty(OS_VERSION:M13.*)
+.    if !empty(OS_VERSION:M1[2-9].*)
 CONFIGURE_ARGS+=	--target=x86_64-darwin12-gcc
 .    elif !empty(OS_VERSION:M11.*)
 CONFIGURE_ARGS+=	--target=x86_64-darwin11-gcc
