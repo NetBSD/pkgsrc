@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3945 2014/10/20 10:44:03 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3946 2014/10/20 10:50:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4995,3 +4995,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/libgpg-error to 1.17 [wiz 2014-10-20]
 	Updated misc/py-anki2 to 2.0.31 [wiz 2014-10-20]
 	Updated textproc/libunistring to 0.9.4 [wiz 2014-10-20]
+	Updated x11/libxkbcommon to 0.5.0 [wiz 2014-10-20]
