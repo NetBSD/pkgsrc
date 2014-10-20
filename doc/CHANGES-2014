@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3950 2014/10/20 11:21:16 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3951 2014/10/20 12:14:30 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5000,3 +5000,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/xcb-util to 0.4.0 [wiz 2014-10-20]
 	Updated x11/xcb-util-image to 0.4.0 [wiz 2014-10-20]
 	Updated security/py-cryptography to 0.6.1 [wiz 2014-10-20]
+	Updated audio/asunder to 2.5 [mef 2014-10-20]
