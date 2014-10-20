@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2014/03/10 11:05:54 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.4 2014/10/20 11:10:31 wiz Exp $
 
 BUILTIN_PKG:=	xcb-util
 PKGCONFIG_FILE.xcb-util=	${X11BASE}/lib/pkgconfig/xcb-atom.pc
@@ -13,4 +13,3 @@ BUILDLINK_FILES.xcb-util+=  lib/pkgconfig/xcb-aux.pc
 BUILDLINK_FILES.xcb-util+=  lib/pkgconfig/xcb-event.pc
 BUILDLINK_FILES.xcb-util+=  lib/pkgconfig/xcb-util.pc
 .endif
-
