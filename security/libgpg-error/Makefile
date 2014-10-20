@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2014/10/09 14:06:52 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2014/10/20 10:13:16 wiz Exp $
 
-DISTNAME=	libgpg-error-1.16
+DISTNAME=	libgpg-error-1.17
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libgpg-error/ \
 		ftp://ftp.ring.gr.jp/pub/net/gnupg/libgpg-error/ \
@@ -20,6 +20,7 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 MAKE_ENV+=		LC_ALL="C"
 MAKE_JOBS_SAFE=		no
+INFO_FILES=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
