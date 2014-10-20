@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3943 2014/10/20 10:13:32 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3944 2014/10/20 10:22:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4993,3 +4993,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/p5-Email-Date-Format to 1.005 [wiz 2014-10-20]
 	Updated mail/dovecot2 to 2.2.14 [adam 2014-10-20]
 	Updated security/libgpg-error to 1.17 [wiz 2014-10-20]
+	Updated misc/py-anki2 to 2.0.31 [wiz 2014-10-20]
