@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/09/10 20:16:44 wiz Exp $
+$NetBSD: distinfo,v 1.2 2014/10/20 08:57:51 mef Exp $
 
-SHA1 (bml-0.5.0.tar.gz) = 3a0e4381904a56c2ce60035344c5387cda15f9a0
-RMD160 (bml-0.5.0.tar.gz) = edfe5cdd3a20a6e705dc846537fdf69d96f0aa2a
-Size (bml-0.5.0.tar.gz) = 767631 bytes
+SHA1 (bml-0.7.0.tar.gz) = 0d42f7e5a3abe2d1aec40fafca29ae576d0283cf
+RMD160 (bml-0.7.0.tar.gz) = 27a6e55390fc0d09d9f3207427092bc6e2254469
+Size (bml-0.7.0.tar.gz) = 803845 bytes
