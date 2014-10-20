@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2013/10/17 07:56:40 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2014/10/20 11:02:53 mef Exp $
 #
 
-DISTNAME=		ezstream-0.5.4
-PKGREVISION=		2
+DISTNAME=		ezstream-0.5.6
 CATEGORIES=		audio
 MASTER_SITES=		http://downloads.us.xiph.org/releases/ezstream/
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.icecast.org/ezstream.php
