@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.49 2013/12/28 11:03:26 jaapb Exp $
+# $NetBSD: Makefile.common,v 1.50 2014/10/20 10:12:51 jaapb Exp $
 #
 # used by net/mldonkey/Makefile
 # used by net/mldonkey-gui/Makefile
@@ -35,7 +35,7 @@ BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.10.1
 
 pre-configure:
 	cd ${WRKSRC}/config && autoconf
-	
+
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
