@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13756 2014/10/18 05:56:34 wiz Exp $
+$NetBSD: TODO,v 1.13757 2014/10/20 09:31:54 adam Exp $
 
 Suggested new packages
 ======================
@@ -482,7 +482,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o digikam-4.0
 	o doclifter-2.15
 	o dolphin-4.0.2
-	o dovecot-2.2.14
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
 	o dvtm-0.11
