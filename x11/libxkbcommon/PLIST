@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2014/02/03 16:11:31 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/10/20 10:50:20 wiz Exp $
 include/xkbcommon/xkbcommon-compat.h
+include/xkbcommon/xkbcommon-compose.h
 include/xkbcommon/xkbcommon-keysyms.h
 include/xkbcommon/xkbcommon-names.h
 include/xkbcommon/xkbcommon-x11.h
