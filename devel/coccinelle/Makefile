@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/10/09 19:14:03 jaapb Exp $
+# $NetBSD: Makefile,v 1.23 2014/10/20 10:43:06 jaapb Exp $
 
 DISTNAME=	coccinelle-1.0.0-rc17
 PKGNAME=	${DISTNAME:S/-rc/rc/}
@@ -38,5 +38,6 @@ BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 
 BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.11
 .include "../../lang/ocaml/buildlink3.mk"
+.include "../../lang/camlp4/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
