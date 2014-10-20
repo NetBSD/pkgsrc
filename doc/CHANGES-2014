@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3939 2014/10/20 08:59:48 mef Exp $
+$NetBSD: CHANGES-2014,v 1.3940 2014/10/20 09:01:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4989,3 +4989,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/hs-parsec to 3.1.7 [szptvlfn 2014-10-19]
 	Updated security/p5-IO-Socket-SSL to 2.000 [wiz 2014-10-20]
 	Updated audio/bml to 0.7.0 [mef 2014-10-20]
+	Updated devel/p5-Proc-ProcessTable to 0.51 [wiz 2014-10-20]
