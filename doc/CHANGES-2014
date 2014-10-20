@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3948 2014/10/20 11:10:46 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3949 2014/10/20 11:15:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -4998,3 +4998,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/libxkbcommon to 0.5.0 [wiz 2014-10-20]
 	Updated audio/ezstream to 0.5.6 [mef 2014-10-20]
 	Updated x11/xcb-util to 0.4.0 [wiz 2014-10-20]
+	Updated x11/xcb-util-image to 0.4.0 [wiz 2014-10-20]
