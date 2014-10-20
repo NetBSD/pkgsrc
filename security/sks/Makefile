@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/10/09 19:14:04 jaapb Exp $
+# $NetBSD: Makefile,v 1.12 2014/10/20 11:10:56 jaapb Exp $
 #
 
 DISTNAME=	sks-1.1.5
@@ -33,6 +33,7 @@ MAKE_ENV+=	LIBDB=-ldb4 \
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 bin ${EGDIR}
 
 .include "../../lang/ocaml/buildlink3.mk"
+.include "../../lang/camlp4/buildlink3.mk"
 .include "../../databases/db4/buildlink3.mk"
 
 pre-build:

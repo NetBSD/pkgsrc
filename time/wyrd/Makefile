@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/10/09 19:14:05 jaapb Exp $
+# $NetBSD: Makefile,v 1.11 2014/10/20 11:12:49 jaapb Exp $
 #
 
 DISTNAME=		wyrd-1.4.5
@@ -25,4 +25,5 @@ CONF_FILES+=		${PREFIX}/share/examples/wyrd/wyrdrc \
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
+.include "../../lang/camlp4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
