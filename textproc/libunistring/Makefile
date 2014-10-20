@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2013/07/21 10:31:26 shattered Exp $
-#
+# $NetBSD: Makefile,v 1.6 2014/10/20 10:43:53 wiz Exp $
 
-DISTNAME=	libunistring-0.9.3
-PKGREVISION=	2
+DISTNAME=	libunistring-0.9.4
 CATEGORIES=	textproc
 MASTER_SITES=	http://ftp.gnu.org/gnu/libunistring/
 
@@ -15,8 +13,5 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 INFO_FILES=	yes
 
-CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
-
 .include "../../converters/libiconv/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
