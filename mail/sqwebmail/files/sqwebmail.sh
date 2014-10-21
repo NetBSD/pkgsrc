@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: sqwebmail.sh,v 1.11 2008/02/19 18:45:32 jlam Exp $
+# $NetBSD: sqwebmail.sh,v 1.12 2014/10/21 12:19:11 gdt Exp $
 #
 # Courier SqWebMail services daemon
 #
@@ -13,7 +13,7 @@
 name="sqwebmail"
 rcvar=${name}
 command="@PREFIX@/sbin/courierlogger"
-ctl_command="@PREFIX@/sbin/webmaild"
+ctl_command="@PREFIX@/sbin/webmaild.rc"
 pidfile="@COURIER_STATEDIR@/tmp/sqwebmaild.pid"
 required_files="@PKG_SYSCONFDIR@/calendarmode @PKG_SYSCONFDIR@/sqwebmaild"
 
