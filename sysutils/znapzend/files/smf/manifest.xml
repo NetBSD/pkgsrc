@@ -11,8 +11,8 @@
 
 		<method_context><method_credential user='root'/></method_context>
 
-		<exec_method type="method" name="start" exec="@PREFIX@/bin/znapzend --daemonize --pidfile=@VARBASE@/run/znapzend.pid" timeout_seconds="170" />
-		<exec_method type="method" name="stop" exec="/usr/bin/kill `cat @VARBASE@/run/znapzend.pid`" timeout_seconds="60" />
+		<exec_method type="method" name="start" exec="@PREFIX@/bin/znapzend --daemonize --pidfile=/dev/null" timeout_seconds="170" />
+		<exec_method type="method" name="stop" exec=":kill" timeout_seconds="60" />
 
 		<stability value="Unstable" />
 
