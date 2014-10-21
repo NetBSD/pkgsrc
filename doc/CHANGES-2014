@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3953 2014/10/21 10:17:33 wiedi Exp $
+$NetBSD: CHANGES-2014,v 1.3954 2014/10/21 11:46:48 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5003,3 +5003,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/asunder to 2.5 [mef 2014-10-20]
 	Updated audio/audacious to 3.5.2 [mef 2014-10-20]
 	Updated www/goaccess to 0.8.5 [wiedi 2014-10-21]
+	Updated chat/libotr to 4.1.0 [gdt 2014-10-21]
