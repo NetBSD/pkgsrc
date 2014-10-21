@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3954 2014/10/21 11:46:48 gdt Exp $
+$NetBSD: CHANGES-2014,v 1.3955 2014/10/21 12:04:20 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5004,3 +5004,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/audacious to 3.5.2 [mef 2014-10-20]
 	Updated www/goaccess to 0.8.5 [wiedi 2014-10-21]
 	Updated chat/libotr to 4.1.0 [gdt 2014-10-21]
+	Updated chat/pidgin-otr to 4.0.1 [gdt 2014-10-21]
