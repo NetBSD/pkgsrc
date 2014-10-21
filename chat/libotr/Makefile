@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2014/01/01 11:52:02 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2014/10/21 11:46:31 gdt Exp $
 
-VERSION=	4.0.0
+VERSION=	4.1.0
 DISTNAME=	libotr-${VERSION}
-PKGREVISION=	1
+PKGNAME=	libotr-${VERSION}
 CATEGORIES=	chat security
 MASTER_SITES=	http://www.cypherpunks.ca/otr/
 
@@ -11,6 +11,9 @@ MAINTAINER=	nathanw@NetBSD.org
 HOMEPAGE=	http://www.cypherpunks.ca/otr/
 COMMENT=	Library for Off-The-Record encrypted messaging
 LICENSE=	gnu-gpl-v2
+
+# Work around rc tarballs that unpack to bare version.
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-pic
