@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3955 2014/10/21 12:04:20 gdt Exp $
+$NetBSD: CHANGES-2014,v 1.3956 2014/10/21 12:05:43 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5005,3 +5005,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/goaccess to 0.8.5 [wiedi 2014-10-21]
 	Updated chat/libotr to 4.1.0 [gdt 2014-10-21]
 	Updated chat/pidgin-otr to 4.0.1 [gdt 2014-10-21]
+	Updated net/sniproxy to 0.3.6 [wiedi 2014-10-21]
