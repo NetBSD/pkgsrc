@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3957 2014/10/21 12:33:43 wiedi Exp $
+$NetBSD: CHANGES-2014,v 1.3958 2014/10/21 12:47:52 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5007,3 +5007,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated chat/pidgin-otr to 4.0.1 [gdt 2014-10-21]
 	Updated net/sniproxy to 0.3.6 [wiedi 2014-10-21]
 	Updated devel/p5-Mojo-IOLoop-ForkCall to 0.15 [wiedi 2014-10-21]
+	Updated sysutils/znapzend to 0.13.0 [wiedi 2014-10-21]
