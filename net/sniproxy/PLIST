@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/06/13 00:13:13 wiedi Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/10/21 12:04:44 wiedi Exp $
+man/man8/sniproxy.8
 sbin/sniproxy
 share/examples/sniproxy/sniproxy.conf
