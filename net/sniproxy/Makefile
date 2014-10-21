@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/07/10 00:12:57 wiedi Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/21 12:04:44 wiedi Exp $
 
-DISTNAME=	0.3.4
+DISTNAME=	0.3.6
 PKGNAME=	sniproxy-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/dlundquist/sniproxy/archive/
@@ -26,7 +26,7 @@ CPPFLAGS.SunOS+=	-D__EXTENSIONS__ -D_XOPEN_SOURCE=600
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
 pre-configure:
-	cd ${WRKSRC} && ./autogen.sh
+	cd ${WRKSRC} && autoreconf --install && automake --add-missing --copy
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
