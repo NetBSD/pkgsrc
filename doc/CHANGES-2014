@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3961 2014/10/21 21:28:19 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.3962 2014/10/21 22:39:13 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5011,3 +5011,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/postfix to 2.11.3 [taca 2014-10-21]
 	Updated security/spiped to 1.4.2 [wiedi 2014-10-21]
 	Updated devel/hs-random to 1.1 [szptvlfn 2014-10-21]
+	Updated cad/gdsreader to 0.3.2 [mef 2014-10-21]
