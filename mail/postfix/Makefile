@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.277 2014/10/14 13:45:22 taca Exp $
+# $NetBSD: Makefile,v 1.278 2014/10/21 13:06:12 taca Exp $
 
-DISTNAME=	postfix-2.11.2
+DISTNAME=	postfix-2.11.3
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/official/
 MASTER_SITES+=	http://postfix.it-austria.net/releases/official/
