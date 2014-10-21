@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3960 2014/10/21 17:07:19 wiedi Exp $
+$NetBSD: CHANGES-2014,v 1.3961 2014/10/21 21:28:19 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5010,3 +5010,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/znapzend to 0.13.0 [wiedi 2014-10-21]
 	Updated mail/postfix to 2.11.3 [taca 2014-10-21]
 	Updated security/spiped to 1.4.2 [wiedi 2014-10-21]
+	Updated devel/hs-random to 1.1 [szptvlfn 2014-10-21]
