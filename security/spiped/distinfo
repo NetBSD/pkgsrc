@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2014/09/08 22:43:08 wiedi Exp $
+$NetBSD: distinfo,v 1.3 2014/10/21 17:05:54 wiedi Exp $
 
-SHA1 (spiped-1.4.1.tgz) = 9513dda52f143d46f5dbe930a2830f9f46da38c0
-RMD160 (spiped-1.4.1.tgz) = dea697a257fb13f4e5c359d9056869e703731389
-Size (spiped-1.4.1.tgz) = 68125 bytes
+SHA1 (spiped-1.4.2.tgz) = 90ca731378cdf74bf19576c8682398b81bd10a60
+RMD160 (spiped-1.4.2.tgz) = dcba3ac1ad15d91aeb245e639b457193e69efc61
+Size (spiped-1.4.2.tgz) = 67744 bytes
