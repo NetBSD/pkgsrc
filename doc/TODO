@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13765 2014/10/20 11:21:16 wiz Exp $
+$NetBSD: TODO,v 1.13766 2014/10/21 13:22:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -913,6 +913,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o projclock-0.9
 	o psmisc-22.20
 	o pspp-0.8.4
+	o puzzles-20141020.10286
 	o pv-1.2.0
 	o pvs-5.0
 	o pwlib-1.11.1
