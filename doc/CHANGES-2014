@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3952 2014/10/20 13:14:23 mef Exp $
+$NetBSD: CHANGES-2014,v 1.3953 2014/10/21 10:17:33 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5002,3 +5002,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/py-cryptography to 0.6.1 [wiz 2014-10-20]
 	Updated audio/asunder to 2.5 [mef 2014-10-20]
 	Updated audio/audacious to 3.5.2 [mef 2014-10-20]
+	Updated www/goaccess to 0.8.5 [wiedi 2014-10-21]
