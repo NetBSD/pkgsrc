@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3971 2014/10/22 19:43:30 gls Exp $
+$NetBSD: CHANGES-2014,v 1.3972 2014/10/22 20:33:46 gls Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5022,3 +5022,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/typo3_47 to 4.7.20 [taca 2014-10-22]
 	Updated www/typo3_61 to 6.1.12 [taca 2014-10-22]
 	Updated multimedia/mpv to 0.6.1 [gls 2014-10-22]
+	Updated audio/mpdas to 0.3.2 [gls 2014-10-22]
