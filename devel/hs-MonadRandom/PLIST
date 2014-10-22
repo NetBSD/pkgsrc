@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2014/10/22 21:30:34 szptvlfn Exp $
+lib/MonadRandom-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Random.hi
+lib/MonadRandom-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Random/Class.hi
+lib/MonadRandom-${PKGVERSION}/${HASKELL_VERSION}/HSMonadRandom-${PKGVERSION}.o
+lib/MonadRandom-${PKGVERSION}/${HASKELL_VERSION}/libHSMonadRandom-${PKGVERSION}.a
+lib/MonadRandom-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/MonadRandom-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/MonadRandom-${PKGVERSION}/html/Control-Monad-Random-Class.html
+${PLIST.doc}share/doc/MonadRandom-${PKGVERSION}/html/Control-Monad-Random.html
+${PLIST.doc}share/doc/MonadRandom-${PKGVERSION}/html/MonadRandom.haddock
+${PLIST.doc}share/doc/MonadRandom-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/MonadRandom-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/MonadRandom-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/MonadRandom-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/MonadRandom-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/MonadRandom-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/MonadRandom-${PKGVERSION}/html/mini_Control-Monad-Random-Class.html
+${PLIST.doc}share/doc/MonadRandom-${PKGVERSION}/html/mini_Control-Monad-Random.html
+${PLIST.doc}share/doc/MonadRandom-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/MonadRandom-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/MonadRandom-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/MonadRandom-${PKGVERSION}/html/synopsis.png
