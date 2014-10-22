@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2014/05/31 10:16:40 pho Exp $
+@comment $NetBSD: PLIST,v 1.37 2014/10/22 09:55:36 wiz Exp $
 bin/cairo-trace
 include/cairo/cairo-deprecated.h
 include/cairo/cairo-features.h
@@ -62,6 +62,7 @@ share/gtk-doc/html/cairo/cairo-Script-Surfaces.html
 share/gtk-doc/html/cairo/cairo-Transformations.html
 share/gtk-doc/html/cairo/cairo-Types.html
 share/gtk-doc/html/cairo/cairo-User-Fonts.html
+share/gtk-doc/html/cairo/cairo-Version-Information.html
 share/gtk-doc/html/cairo/cairo-Win32-Fonts.html
 share/gtk-doc/html/cairo/cairo-Win32-Surfaces.html
 share/gtk-doc/html/cairo/cairo-XCB-Surfaces.html
