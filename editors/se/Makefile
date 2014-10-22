@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2013/03/25 10:15:08 tcort Exp $
-#
+# $NetBSD: Makefile,v 1.3 2014/10/22 08:01:48 wiz Exp $
 
 DISTNAME=	se-3.0.1
 CATEGORIES=	editors
 MASTER_SITES=	http://se-editor.org/dist/
 
-MAINTAINER=	tcort@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://se-editor.org/
 COMMENT=	Screen oriented version of ed
 LICENSE=	public-domain
