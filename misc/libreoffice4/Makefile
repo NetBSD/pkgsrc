@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2014/10/14 18:26:01 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2014/10/22 21:37:12 ryoon Exp $
 
 VERREL=		4.3.2
 VERRC=		2
@@ -54,7 +54,6 @@ MORE_DISTFILES= \
 	3bdf40c0d199af31923e900d082ca2dd-libfonts-1.1.6.zip \
 	e8e197d628436490886d17cffa108fe3-commons-logging-1.1.3-src.tar.gz \
 	46e92b68e31e858512b680b3b61dc4c1-mythes-1.2.3.tar.gz \
-	15cb8c0803064faef0c4ddf5bc5ca279-boost_1_54_0.tar.bz2 \
 	aa5ca9d1ed1082890835afab26400a39-mdds_0.10.3.tar.bz2 \
 	36271d3fa0d9dec1632029b6d7aac925-liblangtag-0.5.1.tar.bz2 \
 	7a15edea7d415ac5150ea403e27401fd-open-sans-font-ttf-1.10.tar.gz \
