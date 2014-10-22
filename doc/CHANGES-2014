@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3962 2014/10/21 22:39:13 mef Exp $
+$NetBSD: CHANGES-2014,v 1.3963 2014/10/22 09:20:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5012,3 +5012,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/spiped to 1.4.2 [wiedi 2014-10-21]
 	Updated devel/hs-random to 1.1 [szptvlfn 2014-10-21]
 	Updated cad/gdsreader to 0.3.2 [mef 2014-10-21]
+	Updated devel/gettext-lib to 0.19.3 [wiz 2014-10-22]
