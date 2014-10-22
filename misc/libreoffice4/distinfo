@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2014/10/15 22:07:46 joerg Exp $
+$NetBSD: distinfo,v 1.26 2014/10/22 21:37:12 ryoon Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -15,9 +15,6 @@ Size (libreoffice/05f84c95b610c21c5fd510d10debcabf-mariadb-native-client-1.0.0.t
 SHA1 (libreoffice/134d8262145fc793c6af494dcace3e71-liberation-fonts-ttf-1.07.4.tar.gz) = c36bccbf6a0e562fa5a7b4b832af7185fa7f8a4b
 RMD160 (libreoffice/134d8262145fc793c6af494dcace3e71-liberation-fonts-ttf-1.07.4.tar.gz) = ff53f6a5027654477d307baa3bcceba7b109220f
 Size (libreoffice/134d8262145fc793c6af494dcace3e71-liberation-fonts-ttf-1.07.4.tar.gz) = 1333593 bytes
-SHA1 (libreoffice/15cb8c0803064faef0c4ddf5bc5ca279-boost_1_54_0.tar.bz2) = 230782c7219882d0fab5f1effbe86edb85238bf4
-RMD160 (libreoffice/15cb8c0803064faef0c4ddf5bc5ca279-boost_1_54_0.tar.bz2) = 350ac8a7ab0a5b3b09f6057f9bbecc877c16fe70
-Size (libreoffice/15cb8c0803064faef0c4ddf5bc5ca279-boost_1_54_0.tar.bz2) = 57873778 bytes
 SHA1 (libreoffice/1756c4fa6c616ae15973c104cd8cb256-Adobe-Core35_AFMs-314.tar.gz) = 28d4ec24dfda4eb41b6ceaa0cfcfca41b578f3b3
 RMD160 (libreoffice/1756c4fa6c616ae15973c104cd8cb256-Adobe-Core35_AFMs-314.tar.gz) = e99bb5017c29657c3303d8810e21bf02d737c345
 Size (libreoffice/1756c4fa6c616ae15973c104cd8cb256-Adobe-Core35_AFMs-314.tar.gz) = 315122 bytes
