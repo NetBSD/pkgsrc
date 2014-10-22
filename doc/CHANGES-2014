@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3967 2014/10/22 09:56:02 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3968 2014/10/22 15:03:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5018,3 +5018,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/unison to 2.40.102nb22 [wiz 2014-10-22]
 	Updated graphics/cairo-gobject to 1.14.0 [wiz 2014-10-22]
 	Updated graphics/cairo to 1.14.0 [wiz 2014-10-22]
+	Updated www/typo3_45 to 4.5.37 [taca 2014-10-22]
