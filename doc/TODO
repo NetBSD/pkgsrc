@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13771 2014/10/22 09:30:46 wiz Exp $
+$NetBSD: TODO,v 1.13772 2014/10/22 09:56:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -411,8 +411,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o byacc-20140409
 	o bzr-2.6.0
 	o c4-1.10 [schmonz]
-	o cairo-1.14.0
-	o cairo-gobject-1.14.0
 	o cal3d-0.11.0
 	o calibre-2.2.0 [wip]
 	o calibre-2.5.0
