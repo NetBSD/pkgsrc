@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2014/07/26 20:25:03 schnoebe Exp $
+# $NetBSD: Makefile,v 1.25.2.1 2014/10/22 09:26:33 tron Exp $
 
-DISTNAME=		libvirt-1.2.6
+DISTNAME=		libvirt-1.2.9
 CATEGORIES=		sysutils
 MASTER_SITES=		http://libvirt.org/sources/
 
