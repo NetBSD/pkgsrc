@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/07/26 20:25:03 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.9.2.1 2014/10/22 09:26:33 tron Exp $
 bin/virsh
 bin/virt-host-validate
 bin/virt-pki-validate
@@ -18,9 +18,9 @@ lib/libvirt/connection-driver/libvirt_driver_storage.la
 ${PLIST.hal}lib/libvirt/connection-driver/libvirt_driver_nodedev.la
 ${PLIST.xen}lib/libvirt/connection-driver/libvirt_driver_libxl.la
 lib/libvirt/lock-driver/lockd.la
-lib/pkgconfig/libvirt.pc
 lib/pkgconfig/libvirt-lxc.pc
 lib/pkgconfig/libvirt-qemu.pc
+lib/pkgconfig/libvirt.pc
 libexec/libvirt-guests.sh
 libexec/libvirt_iohelper
 libexec/libvirt_leaseshelper
@@ -88,6 +88,7 @@ share/doc/${PKGNAME}/html/footer_pattern.png
 share/doc/${PKGNAME}/html/format.html
 share/doc/${PKGNAME}/html/formatcaps.html
 share/doc/${PKGNAME}/html/formatdomain.html
+share/doc/${PKGNAME}/html/formatdomaincaps.html
 share/doc/${PKGNAME}/html/formatnetwork.html
 share/doc/${PKGNAME}/html/formatnode.html
 share/doc/${PKGNAME}/html/formatnwfilter.html
@@ -183,6 +184,7 @@ share/libvirt/libvirtLogo.png
 share/libvirt/schemas/basictypes.rng
 share/libvirt/schemas/capability.rng
 share/libvirt/schemas/domain.rng
+share/libvirt/schemas/domaincaps.rng
 share/libvirt/schemas/domaincommon.rng
 share/libvirt/schemas/domainsnapshot.rng
 share/libvirt/schemas/interface.rng
