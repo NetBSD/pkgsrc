@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.135 2014/05/31 10:16:40 pho Exp $
+# $NetBSD: Makefile,v 1.136 2014/10/22 09:55:36 wiz Exp $
 
 .include "../../graphics/cairo/Makefile.common"
-
-PKGREVISION=			4
 
 TEST_TARGET=			check
 
@@ -17,7 +15,7 @@ BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.1.9
 .include "../../graphics/png/buildlink3.mk"
 # include?
 #.include "../../print/libspectre/buildlink3.mk"
-BUILDLINK_API_DEPENDS.pixman+=	pixman>=0.22.0
+BUILDLINK_API_DEPENDS.pixman+=	pixman>=0.30.0
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
