@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.195 2014/10/09 18:58:18 gson Exp $
+# $NetBSD: Makefile,v 1.196 2014/10/23 23:41:32 fhajny Exp $
 
 DISTNAME=	netpbm-10.67.05
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	#
 # manually created from svn checkout of
@@ -94,8 +94,7 @@ pre-install:
 
 post-install:
 	cd ${STAGEDIR} && 					\
-	${MV} link/* lib && 					\
-	${RM} -rf link man/web && 				\
+	${RM} -rf man/web && 					\
 	${MKDIR} share &&					\
 	${MV} misc share/netpbm && 				\
 	${CHOWN} -R ${BINOWN}:${BINGRP} . &&			\
