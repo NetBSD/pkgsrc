@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3981 2014/10/23 14:22:35 kleink Exp $
+$NetBSD: CHANGES-2014,v 1.3982 2014/10/23 14:31:59 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5032,3 +5032,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated games/puzzles to 20141021.r10286 [wiz 2014-10-23]
 	Updated devel/py-gobject to 2.28.6nb12 [wiz 2014-10-23]
 	Updated geography/py-geojson to 1.0.9 [kleink 2014-10-23]
+	Updated www/py-flask-mail to 0.9.1 [kleink 2014-10-23]
