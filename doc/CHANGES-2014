@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3978 2014/10/23 11:24:41 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3979 2014/10/23 11:42:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5029,3 +5029,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/p5-IO-Socket-SSL to 2.002 [wiz 2014-10-23]
 	Updated devel/py-cython to 0.21.1 [wiz 2014-10-23]
 	Updated devel/memcached to 1.4.21 [wiz 2014-10-23]
+	Updated games/puzzles to 20141021.r10286 [wiz 2014-10-23]
