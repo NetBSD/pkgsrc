@@ -697,6 +697,7 @@ terminfo		Use terminfo.
 tests			Build and install tests.
 theora			Use the theora codecs.
 threads			Enable threads support.
+timidity		Enable MIDI support using timidity.
 tin-use-inn-spool	Use the INN spool directories.
 tls			Enable TLS support.
 tokyocabinet		Enable Tokyo Cabinet support.
