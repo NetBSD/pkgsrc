@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3984 2014/10/23 14:42:40 kleink Exp $
+$NetBSD: CHANGES-2014,v 1.3985 2014/10/23 16:22:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5035,3 +5035,6 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-flask-mail to 0.9.1 [kleink 2014-10-23]
 	Updated www/py-flask-security to 1.7.4 [kleink 2014-10-23]
 	Updated www/py-flask-sqlalchemy to 2.0 [kleink 2014-10-23]
+	Updated lang/php53 to 5.3.29nb1 [taca 2014-10-23]
+	Updated graphics/php-exif to 5.5.18nb1 [taca 2014-10-23]
+	Updated net/php-xmlrpc to 5.5.18nb1 [taca 2014-10-23]
