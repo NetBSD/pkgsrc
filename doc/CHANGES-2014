@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3975 2014/10/23 07:20:19 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.3976 2014/10/23 07:24:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5026,3 +5026,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/hs-MonadRandom version 0.3 [szptvlfn 2014-10-22]
 	Updated graphics/png to 1.6.14 [wiz 2014-10-23]
 	Updated devel/p5-Variable-Magic to 0.55 [wiz 2014-10-23]
+	Updated security/p5-IO-Socket-SSL to 2.002 [wiz 2014-10-23]
