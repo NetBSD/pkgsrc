@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3973 2014/10/22 21:31:02 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.3974 2014/10/23 07:18:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5024,3 +5024,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/mpv to 0.6.1 [gls 2014-10-22]
 	Updated audio/mpdas to 0.3.2 [gls 2014-10-22]
 	Added devel/hs-MonadRandom version 0.3 [szptvlfn 2014-10-22]
+	Updated graphics/png to 1.6.14 [wiz 2014-10-23]
