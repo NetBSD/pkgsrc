@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3983 2014/10/23 14:35:19 kleink Exp $
+$NetBSD: CHANGES-2014,v 1.3984 2014/10/23 14:42:40 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5034,3 +5034,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated geography/py-geojson to 1.0.9 [kleink 2014-10-23]
 	Updated www/py-flask-mail to 0.9.1 [kleink 2014-10-23]
 	Updated www/py-flask-security to 1.7.4 [kleink 2014-10-23]
+	Updated www/py-flask-sqlalchemy to 2.0 [kleink 2014-10-23]
