@@ -1,0 +1,34 @@
+$NetBSD: patch-gio_gio-types.defs,v 1.1 2014/10/23 13:53:56 wiz Exp $
+
+Fix three types. From
+https://bugzilla.gnome.org/show_bug.cgi?id=668522
+
+--- gio/gio-types.defs.orig	2011-06-13 16:33:49.000000000 +0000
++++ gio/gio-types.defs
+@@ -526,7 +526,7 @@
+   )
+ )
+ 
+-(define-enum MountMountFlags
++(define-flags MountMountFlags
+   (in-module "gio")
+   (c-name "GMountMountFlags")
+   (gtype-id "G_TYPE_MOUNT_MOUNT_FLAGS")
+@@ -545,7 +545,7 @@
+   )
+ )
+ 
+-(define-enum DriveStartFlags
++(define-flags DriveStartFlags
+   (in-module "gio")
+   (c-name "GDriveStartFlags")
+   (gtype-id "G_TYPE_DRIVE_START_FLAGS")
+@@ -770,7 +770,7 @@
+   )
+ )
+ 
+-(define-enum SocketMsgFlags
++(define-flags SocketMsgFlags
+   (in-module "gio")
+   (c-name "GSocketMsgFlags")
+   (gtype-id "G_TYPE_SOCKET_MSG_FLAGS")
