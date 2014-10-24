@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3991 2014/10/24 12:59:24 wen Exp $
+$NetBSD: CHANGES-2014,v 1.3992 2014/10/24 18:29:50 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5044,3 +5044,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/x264-devel to 20141023 [adam 2014-10-24]
 	Updated www/p5-Plack to 1.0033 [wen 2014-10-24]
 	Updated www/p5-Dancer2 to 0.153000 [wen 2014-10-24]
+	Updated x11/deforaos-panel to 0.3.1 [khorben 2014-10-24]
