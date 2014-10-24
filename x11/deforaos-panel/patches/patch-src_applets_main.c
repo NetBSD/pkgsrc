@@ -1,4 +1,4 @@
-$NetBSD: patch-src_applets_main.c,v 1.2 2014/10/24 18:21:06 khorben Exp $
+$NetBSD: patch-src_applets_main.c,v 1.3 2014/10/24 23:43:17 khorben Exp $
 
 Need fcntl.h for open() on SunOS.
 
@@ -8,7 +8,7 @@ Need fcntl.h for open() on SunOS.
  
  
  #include <sys/stat.h>
-+#if defined(__sun__)
++#if defined(__sun)
 +# include <fcntl.h>
 +#endif
  #include <dirent.h>
