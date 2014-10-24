@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.4 2014/03/21 14:38:01 jperkin Exp $
+$NetBSD: distinfo,v 1.5 2014/10/24 18:21:06 khorben Exp $
 
-SHA1 (Panel-0.2.18.tar.gz) = 2920631f99b3c9f4d91de1765b2588dfbf0f6645
-RMD160 (Panel-0.2.18.tar.gz) = c8dae6a9cb028814a24b01a5fcf04b6b34f4c6c6
-Size (Panel-0.2.18.tar.gz) = 111036 bytes
-SHA1 (patch-data_pkgconfig.sh) = a4fae097b46becc6d98fb6b42707188d8ed3e048
-SHA1 (patch-src_applets_main.c) = 239eebc72b7d113a72e42633e838c3294003e931
-SHA1 (patch-src_applets_memory.c) = bcc44e38c03fc60e6720e71d815178f7129fa798
+SHA1 (Panel-0.3.1.tar.gz) = 0a2d9d424b8b316d8a6db087c8cb2dddaaa47347
+RMD160 (Panel-0.3.1.tar.gz) = 3e2fe1e8f1cf2a4c27cdf355bf5c00685d5ada9a
+Size (Panel-0.3.1.tar.gz) = 133677 bytes
+SHA1 (patch-data_pkgconfig.sh) = 7c40652087c604cff593a320e97259c453633c74
+SHA1 (patch-src_applets_main.c) = cadf28200335c4642b54c504a51e4a91a02de635
+SHA1 (patch-src_applets_memory.c) = 858dc9f03fa32e01d3d02d49d13742cda7b0193e
 SHA1 (patch-src_applets_swap.c) = 75599dd9b7aed08895c542376d2a6b7883a91f7f
 SHA1 (patch-src_applets_volume.c) = 10a4dfe01b6576a7f39a344ddd669725666d72a7
+SHA1 (patch-tools_Makefile) = 642887110b585cd6b78d0cf43acc4f826b1abcae
