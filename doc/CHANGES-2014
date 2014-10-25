@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3992 2014/10/24 18:29:50 khorben Exp $
+$NetBSD: CHANGES-2014,v 1.3993 2014/10/25 03:36:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5045,3 +5045,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Plack to 1.0033 [wen 2014-10-24]
 	Updated www/p5-Dancer2 to 0.153000 [wen 2014-10-24]
 	Updated x11/deforaos-panel to 0.3.1 [khorben 2014-10-24]
+	Updated time/ruby-tzinfo to 0.3.42 [taca 2014-10-25]
