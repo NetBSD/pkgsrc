@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2014/05/27 13:47:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.14.4.1 2014/10/25 16:08:16 tron Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -3979,6 +3979,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/lib/php-openid/Auth/OpenID/Nonce.ph
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/lib/php-openid/Auth/OpenID/PAPE.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/lib/php-openid/Auth/OpenID/Parse.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/lib/php-openid/Auth/OpenID/PostgreSQLStore.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/lib/php-openid/Auth/OpenID/PredisStore.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/lib/php-openid/Auth/OpenID/SQLStore.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/lib/php-openid/Auth/OpenID/SQLiteStore.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/lib/php-openid/Auth/OpenID/SReg.php
