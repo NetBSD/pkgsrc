@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.76 2014/08/15 16:09:16 taca Exp $
+$NetBSD: distinfo,v 1.76.2.1 2014/10/25 15:55:51 tron Exp $
 
 SHA1 (php-5.3.29.tar.bz2) = 6e9e492c6d5853d063ddb9a4dbef60b8e5d87444
 RMD160 (php-5.3.29.tar.bz2) = e57beb4fdda41bca81b5856161bc97f3c5e3e9da
@@ -19,8 +19,12 @@ SHA1 (patch-ai) = 9659f73eef1b4fcca9b844bdaa785ac6d5e582a1
 SHA1 (patch-aj) = 181658ae523bd60f67750566711fc078b49191b7
 SHA1 (patch-al) = fe534d7d50a529e3c7d0ffed76afdb70bb55a521
 SHA1 (patch-build_libtool.m4) = 6835b90ebd34739440c8eb94ed19ebacdf2ba6a5
+SHA1 (patch-ext_exif_exif.c) = c78249a8ffae00bbdece2af9058e4ecf11cb0fa6
 SHA1 (patch-ext_gd_libgd_gdxpm.c) = 9a175417fad9ac23037a24122f8d1258b9eebbcb
 SHA1 (patch-ext_standard_basic__functions.c) = 017fd25e646af4d7eb2a0bd13b3c8da34eaee8c5
+SHA1 (patch-ext_standard_var__unserializer.c) = eb590c1d5349320e45bbdaf97c875b11eb275cfb
+SHA1 (patch-ext_standard_var__unserializer.re) = 23478a8a26c2c106efc4f0727743e2fffdebaf54
+SHA1 (patch-ext_xmlrpc_libxmlrpc_xmlrpc.c) = 9fd4004b4d94fcbf8d4104027018b46794bee127
 SHA1 (patch-main_streams_cast.c) = d68b69c9418a8780b1610b8755487771f7c46a5a
 SHA1 (patch-php__mssql.c) = 524c4e5d7ede0e503049bf1febec58e0c4a29aa4
 SHA1 (patch-sapi_fpm_fpm_events_port.c) = ad45bcebadf923ee8cb3f2ad4d78d21dd178a8e3
