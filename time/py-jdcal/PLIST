@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2014/10/25 22:31:15 cheusov Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/jdcal.py
+${PYSITELIB}/jdcal.pyc
+${PYSITELIB}/jdcal.pyo
