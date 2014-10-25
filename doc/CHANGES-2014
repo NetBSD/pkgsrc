@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3996 2014/10/25 11:20:01 prlw1 Exp $
+$NetBSD: CHANGES-2014,v 1.3997 2014/10/25 11:27:32 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5048,3 +5048,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/ruby-tzinfo to 0.3.42 [taca 2014-10-25]
 	Updated graphics/libwebp to 0.4.2 [adam 2014-10-25]
 	Updated devel/at-spi2-atk to 2.14.1 [prlw1 2014-10-25]
+	Updated devel/py-gobject3 to 3.14.0 [prlw1 2014-10-25]
