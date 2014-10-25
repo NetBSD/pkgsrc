@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3993 2014/10/25 03:36:55 taca Exp $
+$NetBSD: CHANGES-2014,v 1.3994 2014/10/25 08:56:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5046,3 +5046,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Dancer2 to 0.153000 [wen 2014-10-24]
 	Updated x11/deforaos-panel to 0.3.1 [khorben 2014-10-24]
 	Updated time/ruby-tzinfo to 0.3.42 [taca 2014-10-25]
+	Updated graphics/libwebp to 0.4.2 [adam 2014-10-2525]
