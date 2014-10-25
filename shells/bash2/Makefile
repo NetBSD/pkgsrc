@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.87 2014/10/09 14:06:56 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2014/10/25 14:09:19 ryoon Exp $
 #
 
 DISTNAME=	bash-2.05b
-PKGNAME=	bash-2.05.2.9
-PKGREVISION=	1
+PKGNAME=	bash-2.05.2.13
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GNU:=bash/} \
 		ftp://ftp.cwru.edu/pub/bash/
@@ -11,7 +10,8 @@ MASTER_SITES=	${MASTER_SITE_GNU:=bash/} \
 PATCH_SITES=	${MASTER_SITES:=bash-2.05b-patches/}
 PATCHFILES=	bash205b-001 bash205b-002 bash205b-003 bash205b-004 \
 		bash205b-005 bash205b-006 bash205b-007 bash205b-008 \
-		bash205b-009 bash205b-010
+		bash205b-009 bash205b-010 bash205b-011 bash205b-012 \
+		bash205b-013
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/bash/bash.html
