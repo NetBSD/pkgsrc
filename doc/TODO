@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13776 2014/10/24 10:35:19 adam Exp $
+$NetBSD: TODO,v 1.13777 2014/10/25 11:27:32 prlw1 Exp $
 
 Suggested new packages
 ======================
@@ -928,7 +928,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-gammu-1.33.0
 	o py-gmpy-1.17
 	o py-gnome-menus-3.8.0
-	o py-gobject3-3.14.0
 	o py-greenlet-0.4.2
 	o py-hgtools-4.0
 	o py-lasso-2.4.0
