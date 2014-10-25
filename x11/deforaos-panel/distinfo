@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2014/10/24 23:43:17 khorben Exp $
+$NetBSD: distinfo,v 1.7 2014/10/25 10:36:24 khorben Exp $
 
 SHA1 (Panel-0.3.1.tar.gz) = 0a2d9d424b8b316d8a6db087c8cb2dddaaa47347
 RMD160 (Panel-0.3.1.tar.gz) = 3e2fe1e8f1cf2a4c27cdf355bf5c00685d5ada9a
@@ -8,4 +8,5 @@ SHA1 (patch-src_applets_main.c) = 2dcc2b6394116406a1c2a23b22ba0feb56c85ecd
 SHA1 (patch-src_applets_memory.c) = 858dc9f03fa32e01d3d02d49d13742cda7b0193e
 SHA1 (patch-src_applets_swap.c) = 75599dd9b7aed08895c542376d2a6b7883a91f7f
 SHA1 (patch-src_applets_volume.c) = 10a4dfe01b6576a7f39a344ddd669725666d72a7
+SHA1 (patch-src_panel.c) = 9423e1a6c3535be8d90a40c9b2f70a5cbff2ac78
 SHA1 (patch-tools_Makefile) = 642887110b585cd6b78d0cf43acc4f826b1abcae
