@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/01/24 18:42:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2014/10/25 15:04:06 ryoon Exp $
 #
 
 DISTNAME=	jenkins
@@ -12,7 +12,7 @@ HOMEPAGE=	http://jenkins-ci.org/
 COMMENT=	Open source continuous integration server (LTS release)
 LICENSE=	mit
 
-J_VERSION=	1.532.1
+J_VERSION=	1.565.3
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
