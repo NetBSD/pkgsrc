@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1993 2014/10/22 21:32:21 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.1994 2014/10/25 19:00:14 prlw1 Exp $
 #
 
 COMMENT=	Development utilities
@@ -426,6 +426,7 @@ SUBDIR+=	libftdi1
 SUBDIR+=	libgail-gnome
 SUBDIR+=	libgcroots
 SUBDIR+=	libgee
+SUBDIR+=	libgee0.6
 SUBDIR+=	libgee0.8
 SUBDIR+=	libgetopt
 SUBDIR+=	libgit2
