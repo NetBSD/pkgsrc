@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.90 2014/10/25 00:02:57 khorben Exp $
+# $NetBSD: Makefile,v 1.91 2014/10/25 00:07:20 khorben Exp $
 #
 
 DISTNAME=		tsclient-0.132
-PKGREVISION=		66
+PKGREVISION=		67
 CATEGORIES=		net
 MASTER_SITES=		http://www.gnomepro.com/tsclient/
 
@@ -18,6 +18,16 @@ DEPENDS+=	vncviewer-[0-9]*:../../net/vncviewer
 USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+AUTO_MKDIRS=		yes
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${PKGMANDIR} != "share/man"
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/share/man/man1/tsclient.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/tsclient.1
+	${RMDIR} ${DESTDIR}${PREFIX}/share/man/man1
+	${RMDIR} ${DESTDIR}${PREFIX}/share/man
+.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

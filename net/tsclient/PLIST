@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:09:46 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/10/25 00:07:20 khorben Exp $
 bin/tsclient
 lib/bonobo/servers/GNOME_TSClientApplet.server
 libexec/tsclient-applet
+man/man1/tsclient.1
 share/application-registry/tsclient.applications
 share/applications/tsclient.desktop
 share/locale/ar/LC_MESSAGES/tsclient.mo
@@ -23,7 +24,6 @@ share/locale/ru/LC_MESSAGES/tsclient.mo
 share/locale/se/LC_MESSAGES/tsclient.mo
 share/locale/zh_CN/LC_MESSAGES/tsclient.mo
 share/locale/zh_TW/LC_MESSAGES/tsclient.mo
-share/man/man1/tsclient.1
 share/mime-info/tsclient.keys
 share/mime-info/tsclient.mime
 share/pixmaps/tsclient.png
