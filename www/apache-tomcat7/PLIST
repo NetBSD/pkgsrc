@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2014/04/08 20:14:55 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/10/25 15:19:45 ryoon Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -30,7 +30,7 @@ share/tomcat/lib/catalina-ant.jar
 share/tomcat/lib/catalina-ha.jar
 share/tomcat/lib/catalina-tribes.jar
 share/tomcat/lib/catalina.jar
-share/tomcat/lib/ecj-P20140317-1600.jar
+share/tomcat/lib/ecj-4.4.jar
 share/tomcat/lib/el-api.jar
 share/tomcat/lib/jasper-el.jar
 share/tomcat/lib/jasper.jar
@@ -298,6 +298,8 @@ share/tomcat/webapps/examples/WEB-INF/classes/num/NumberGuessBean.class
 share/tomcat/webapps/examples/WEB-INF/classes/num/NumberGuessBean.java
 share/tomcat/webapps/examples/WEB-INF/classes/sessions/DummyCart.class
 share/tomcat/webapps/examples/WEB-INF/classes/sessions/DummyCart.java
+share/tomcat/webapps/examples/WEB-INF/classes/util/CookieFilter.class
+share/tomcat/webapps/examples/WEB-INF/classes/util/CookieFilter.java
 share/tomcat/webapps/examples/WEB-INF/classes/util/HTMLFilter.class
 share/tomcat/webapps/examples/WEB-INF/classes/util/HTMLFilter.java
 share/tomcat/webapps/examples/WEB-INF/classes/validators/DebugValidator.class
