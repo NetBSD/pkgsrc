@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 00:02:39 asau Exp $
+# $NetBSD: Makefile,v 1.10 2014/10/25 19:00:14 prlw1 Exp $
 #
 
 DISTNAME=	folks-0.4.2
 PKGNAME=	lib${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/folks/0.4/}
 EXTRACT_SUFX=	.tar.bz2
@@ -28,6 +28,6 @@ CPPFLAGS.SunOS+=	-std=c99 -D_XOPEN_SOURCE=600
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../devel/libgee/buildlink3.mk"
+.include "../../devel/libgee0.6/buildlink3.mk"
 .include "../../chat/telepathy-glib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
