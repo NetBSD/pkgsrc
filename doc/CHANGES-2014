@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4009 2014/10/25 22:30:40 cheusov Exp $
+$NetBSD: CHANGES-2014,v 1.4010 2014/10/25 22:31:27 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5066,3 +5066,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/py-dateutil2 to 2.2 [cheusov 2014-10-25]
 	Added textproc/py-openpyxl version 2.1.2 [cheusov 2014-10-25]
 	Updated time/py-jdcal to 1.0 [cheusov 2014-10-25]
+	Added time/py-jdcal version 1.0 [cheusov 2014-10-25]
