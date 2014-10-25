@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4002 2014/10/25 15:20:35 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.4003 2014/10/25 15:23:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5054,3 +5054,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated shells/bash2 to 2.05.2.13 [ryoon 2014-10-25]
 	Updated devel/jenkins to 1.565.3 [ryoon 2014-10-25]
 	Updated www/apache-tomcat7 to 7.0.56 [ryoon 2014-10-25]
+	Updated net/pear-Net_Sieve to 1.3.3 [taca 2014-10-25]
