@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2014/08/23 16:12:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.23 2014/10/25 03:34:49 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGES
@@ -528,6 +528,7 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/PRC.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/PST8PDT.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Pacific/Apia.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Pacific/Auckland.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/Pacific/Bougainville.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Pacific/Chatham.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Pacific/Chuuk.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Pacific/Easter.rb
