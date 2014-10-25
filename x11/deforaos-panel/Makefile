@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/10/24 18:21:06 khorben Exp $
+# $NetBSD: Makefile,v 1.12 2014/10/25 10:33:35 khorben Exp $
 #
 
 DISTNAME=	Panel-0.3.1
@@ -48,6 +48,5 @@ post-install:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/deforaos-libdesktop/buildlink3.mk"
 .include "../../sysutils/deforaos-browser/buildlink3.mk"
-.include "../../x11/deforaos-keyboard/buildlink3.mk"
 .include "../../multimedia/deforaos-player/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
