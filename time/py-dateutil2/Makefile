@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.2 2014/01/25 10:30:26 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/25 22:10:35 cheusov Exp $
 
-DISTNAME=	python-dateutil-2.0
+DISTNAME=	python-dateutil-2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 CATEGORIES=	time python
-MASTER_SITES=	http://labix.org/download/python-dateutil/
+MASTER_SITES=	https://pypi.python.org/packages/source/p/python-dateutil
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://labix.org/python-dateutil
-COMMENT=	Extensions to the standard datetime module (Python-3.x version)
+COMMENT=	Extensions to the standard datetime module
 LICENSE=	modified-bsd
 
 EGG_NAME=	${DISTNAME:S/-/_/}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	26 27
+pre-build:
+	chmod 644 ${WRKSRC}/python_dateutil.egg-info/*
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
