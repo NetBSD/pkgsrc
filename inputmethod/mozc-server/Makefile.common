@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2014/09/05 14:52:13 joerg Exp $
+# $NetBSD: Makefile.common,v 1.14 2014/10/25 21:03:30 ryoon Exp $
 # used by inputmethod/ibus-mozc/Makefile
 # used by inputmethod/mozc-elisp/Makefile
 # used by inputmethod/mozc-server/Makefile
@@ -7,7 +7,7 @@
 # used by inputmethod/uim-mozc/Makefile
 #
 
-DISTNAME=	mozc-1.15.1834.102
+DISTNAME=	mozc-1.15.1895.102
 CATEGORIES=	inputmethod
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pnsft-aur/}
 EXTRACT_SUFX=	.tar.xz
