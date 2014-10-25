@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.3998 2014/10/25 11:30:39 prlw1 Exp $
+$NetBSD: CHANGES-2014,v 1.3999 2014/10/25 11:58:24 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5050,3 +5050,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/at-spi2-atk to 2.14.1 [prlw1 2014-10-25]
 	Updated devel/py-gobject3 to 3.14.0 [prlw1 2014-10-25]
 	Updated devel/py-at-spi2 to 2.14.0 [prlw1 2014-10-25]
+	Updated graphics/eog3 to 3.14.1 [prlw1 2014-10-25]
