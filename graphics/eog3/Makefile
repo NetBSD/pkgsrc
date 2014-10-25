@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2014/05/05 00:47:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2014/10/25 11:58:00 prlw1 Exp $
 
-DISTNAME=	eog-3.10.2
-PKGREVISION=	1
+DISTNAME=	eog-3.14.1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/eog/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -22,17 +21,16 @@ PKGCONFIG_OVERRIDE+=	data/eog.pc.in
 BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.31.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.38.0
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/libpeas/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-.include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gnome-desktop3/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.7.8
+BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.14.0
 .include "../../x11/gtk3/buildlink3.mk"
 
 # "semi-optional":
