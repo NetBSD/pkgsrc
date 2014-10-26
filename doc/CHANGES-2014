@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4017 2014/10/26 09:36:29 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4018 2014/10/26 09:57:47 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5075,3 +5075,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/meld to 3.12.1 [wiz 2014-10-26]
 	Updated emulators/mame to 0.155 [wiz 2014-10-26]
 	Updated emulators/mess to 0.155 [wiz 2014-10-26]
+	Updated fonts/umefont-ttf to 0.465 [ryoon 2014-10-26]
