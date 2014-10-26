@@ -1,7 +1,7 @@
 #!@PERL5@
 #
 # $OpenBSD: mdoclint,v 1.42 2014/03/18 22:36:30 miod Exp $
-# $NetBSD: mdoclint,v 1.49 2014/06/23 18:10:21 wiz Exp $
+# $NetBSD: mdoclint,v 1.50 2014/10/26 22:20:14 wiz Exp $
 #
 # Copyright (c) 2001-2013 Thomas Klausner
 # All rights reserved.
@@ -282,6 +282,7 @@ sub verify_xref
 		}
 	}
 	return 1 if -f "./$page.$section";
+	return 1 if -f "./$page.mdoc";
 
 	$self->warning($pre."trailing Xref to $page($section)$post") if $opt_x;
 	return 0;
