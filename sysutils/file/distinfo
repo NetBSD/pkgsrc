@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.18 2014/07/13 03:38:42 ryoon Exp $
+$NetBSD: distinfo,v 1.19 2014/10/26 06:04:34 ryoon Exp $
 
-SHA1 (file-5.19.tar.gz) = 0dff09eb44fde1998be79e8d312e9be4456d31ee
-RMD160 (file-5.19.tar.gz) = a39305c4b47e5f2f3c51151b8faea3ef17aaec46
-Size (file-5.19.tar.gz) = 719158 bytes
+SHA1 (file-5.20.tar.gz) = 4e93e9ae915f1812b05cc6012ae968fdb6416f8f
+RMD160 (file-5.20.tar.gz) = a584dc0d254585c0f7a2cebab10b4115d88a3293
+Size (file-5.20.tar.gz) = 725937 bytes
 SHA1 (patch-aa) = d3aa3667e3d28ac1268b83de2de372ba083705fc
 SHA1 (patch-src_getline.c) = 23365ae99c8c5a4c4ff4e0d94b83798d12335112
