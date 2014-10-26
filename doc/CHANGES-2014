@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4024 2014/10/26 11:52:50 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4025 2014/10/26 11:54:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5082,3 +5082,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/ocaml-re version 1.2.2 [jaapb 2014-10-26]
 	Updated devel/p5-Role-Tiny to 1.003004 [wiz 2014-10-26]
 	Updated devel/p5-Type-Tiny to 1.000005 [wiz 2014-10-26]
+	Updated devel/p5-Moo to 1.006001 [wiz 2014-10-26]
