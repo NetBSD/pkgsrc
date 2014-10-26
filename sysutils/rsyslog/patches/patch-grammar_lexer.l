@@ -1,14 +1,14 @@
-$NetBSD: patch-grammar_lexer.l,v 1.1 2014/09/05 07:15:41 fhajny Exp $
+$NetBSD: patch-grammar_lexer.l,v 1.2 2014/10/26 21:11:09 fhajny Exp $
 
 Fix build on BSD.
---- grammar/lexer.l.orig	2014-08-18 09:14:06.000000000 +0000
+--- grammar/lexer.l.orig	2014-10-02 10:27:30.000000000 +0000
 +++ grammar/lexer.l
 @@ -31,7 +31,7 @@
  %{
  #include "config.h"
  #include "parserif.h"
--extern char *strdup(char*); /* somehow we do not get this from string.h... */
-+// extern char *strdup(char*); /* somehow we do not get this from string.h... */
+-extern char *strdup(__const char*); /* somehow we may not get this from string.h... */
++// extern char *strdup(__const char*); /* somehow we may not get this from string.h... */
  %}
  
  %option noyywrap nodefault case-insensitive yylineno
