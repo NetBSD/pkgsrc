@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4021 2014/10/26 10:55:17 jaapb Exp $
+$NetBSD: CHANGES-2014,v 1.4022 2014/10/26 11:43:29 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5079,3 +5079,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/libdrm to 2.4.58nb1 [wiz 2014-10-26]
 	Updated x11/xf86-video-ati6 to 6.14.6nb3 [wiz 2014-10-26]
 	Added devel/ocaml-extlib version 1.6.1 [jaapb 2014-10-26]
+	Added devel/ocaml-re version 1.2.2 [jaapb 2014-10-26]
