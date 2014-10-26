@@ -1,8 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2014/10/19 14:14:47 ryoon Exp $
+$NetBSD: MESSAGE,v 1.4 2014/10/26 07:11:51 ryoon Exp $
 
-To use Japanese localized WordPress with Apache httpd 2.4, you will need
-to perform the following steps.
+To use Japanese localized WordPress with Apache httpd 2.4 and php-fpm,
+you will need to perform the following steps.
 
 1. Install databases/mysql55-server, and enable it, and set root password.
 
