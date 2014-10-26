@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4010 2014/10/25 22:31:27 cheusov Exp $
+$NetBSD: CHANGES-2014,v 1.4011 2014/10/26 03:18:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5067,3 +5067,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added textproc/py-openpyxl version 2.1.2 [cheusov 2014-10-25]
 	Updated time/py-jdcal to 1.0 [cheusov 2014-10-25]
 	Added time/py-jdcal version 1.0 [cheusov 2014-10-25]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.411 [ryoon 2014-10-26]
