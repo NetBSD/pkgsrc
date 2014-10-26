@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4016 2014/10/26 08:46:47 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4017 2014/10/26 09:36:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5073,3 +5073,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/phpmyadmin to 4.2.10.1 [tron 2014-10-26]
 	Updated games/lgogdownloader to 2.19 [wiz 2014-10-26]
 	Updated devel/meld to 3.12.1 [wiz 2014-10-26]
+	Updated emulators/mame to 0.155 [wiz 2014-10-26]
+	Updated emulators/mess to 0.155 [wiz 2014-10-26]
