@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.23 2014/09/24 20:20:49 wiz Exp $
+$NetBSD: distinfo,v 1.24 2014/10/26 09:36:08 wiz Exp $
 
-SHA1 (mame0154s.zip) = b5273ef2bfaf9bdf747af34eb3b1346b30f99047
-RMD160 (mame0154s.zip) = 9d26953fcae65f3f95c1999ce7c96fa440de2f64
-Size (mame0154s.zip) = 39697095 bytes
-SHA1 (patch-src_lib_web_mongoose.c) = 32b807a6a38d7b3314a820278eaadbbe1bb3ca4c
+SHA1 (mame0155s.zip) = 61da5d2977100eda89a8d5946f93edb1521810ac
+RMD160 (mame0155s.zip) = 65aa9827bf1ff8266839b9d7794e35e082415f31
+Size (mame0155s.zip) = 40065055 bytes
+SHA1 (patch-src_lib_web_mongoose.c) = 58ecfa92b254e915988781360d7d79a73d80e44b
 SHA1 (patch-src_osd_osdcore.h) = 4dbc233a613d1743f97d3cb9c6526fb56ca7b6d6
