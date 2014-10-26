@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4032 2014/10/26 23:46:55 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.4033 2014/10/26 23:57:16 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5090,3 +5090,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/rsyslog to 8.4.2 [fhajny 2014-10-26]
 	Updated textproc/mdoclint to 1.31 [wiz 2014-10-26]
 	Updated finance/py-stripe to 1.19.1 [rodent 2014-10-26]
+	Updated databases/py-sqlalchemy-utils to 0.27.5 [rodent 2014-10-26]
