@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4027 2014/10/26 11:56:14 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4028 2014/10/26 11:57:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5085,3 +5085,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Moo to 1.006001 [wiz 2014-10-26]
 	Updated databases/p5-DBD-SQLite to 1.44 [wiz 2014-10-26]
 	Updated www/p5-CGI to 4.09 [wiz 2014-10-26]
+	Updated www/p5-CGI-Lite to 2.05 [wiz 2014-10-26]
