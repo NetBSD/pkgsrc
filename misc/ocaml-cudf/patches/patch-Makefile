@@ -1,0 +1,23 @@
+$NetBSD: patch-Makefile,v 1.1 2014/10/26 14:14:09 jaapb Exp $
+
+--- Makefile.orig	2014-04-29 18:52:44.000000000 +0000
++++ Makefile
+@@ -18,13 +18,13 @@ OCAMLBUILD = ocamlbuild
+ OBFLAGS =
+ OCAMLFIND = ocamlfind
+ 
+-ifeq ($(DESTDIR),)
++# ifeq ($(DESTDIR),)
+ INSTALL = $(OCAMLFIND) install
+ UNINSTALL = $(OCAMLFIND) remove
+-else
+-INSTALL = $(OCAMLFIND) install -destdir $(DESTDIR)/$(OCAMLLIBDIR)
+-UNINSTALL = $(OCAMLFIND) remove -destdir $(DESTDIR)/$(OCAMLLIBDIR)
+-endif
++# else
++# INSTALL = $(OCAMLFIND) install -destdir $(DESTDIR)/$(OCAMLLIBDIR)
++# UNINSTALL = $(OCAMLFIND) remove -destdir $(DESTDIR)/$(OCAMLLIBDIR)
++# endif
+ 
+ DIST_DIR = $(NAME)-$(VERSION)
+ DIST_TARBALL = $(DIST_DIR).tar.gz
