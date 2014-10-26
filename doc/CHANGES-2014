@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4028 2014/10/26 11:57:42 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4029 2014/10/26 14:14:33 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5086,3 +5086,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/p5-DBD-SQLite to 1.44 [wiz 2014-10-26]
 	Updated www/p5-CGI to 4.09 [wiz 2014-10-26]
 	Updated www/p5-CGI-Lite to 2.05 [wiz 2014-10-26]
+	Added misc/ocaml-cudf version 0.7 [jaapb 2014-10-26]
