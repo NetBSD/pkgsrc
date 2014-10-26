@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2014/10/25 22:10:35 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2014/10/26 11:49:53 wiz Exp $
 
 DISTNAME=	python-dateutil-2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 CATEGORIES=	time python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/python-dateutil
+MASTER_SITES=	https://pypi.python.org/packages/source/p/python-dateutil/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://labix.org/python-dateutil
