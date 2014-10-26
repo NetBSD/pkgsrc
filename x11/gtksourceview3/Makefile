@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/09/14 20:44:11 prlw1 Exp $
+# $NetBSD: Makefile,v 1.21 2014/10/26 07:55:49 adam Exp $
 
 DISTNAME=	gtksourceview-3.10.3
 PKGNAME=	${DISTNAME:S/gtksourceview/gtksourceview3/}
@@ -27,4 +27,7 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.37.3
 .include "../../textproc/libxml2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.9.9
 .include "../../x11/gtk3/buildlink3.mk"
+.if !empty(PKG_BUILD_OPTIONS.gtk3:Mquartz)
+.include "../../x11/gtk-mac-integration/buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
