@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.440 2014/10/09 15:24:08 adam Exp $
+# $NetBSD: Makefile,v 1.441 2014/10/26 14:15:06 jaapb Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -192,6 +192,7 @@ SUBDIR+=	multitail
 SUBDIR+=	nepomuk-core
 SUBDIR+=	nepomuk-widgets
 SUBDIR+=	nxtvepg
+SUBDIR+=	ocaml-cudf
 SUBDIR+=	open2300
 SUBDIR+=	open2300-mysql
 SUBDIR+=	openoffice3
