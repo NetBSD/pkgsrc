@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2014/10/26 13:43:48 jaapb Exp $
+
+SHA1 (ocamlgraph-1.8.5.tar.gz) = e53a92d50685ab38f2b856eb64d93aa36dc7bcdf
+RMD160 (ocamlgraph-1.8.5.tar.gz) = c3b67023bae65f9c8a2d32722d0e90a6a947d4fa
+Size (ocamlgraph-1.8.5.tar.gz) = 269438 bytes
+SHA1 (patch-Makefile.in) = ce8d401563d37fea0780787dbd81a7e03455c01f
