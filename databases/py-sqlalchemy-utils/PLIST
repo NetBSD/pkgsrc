@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/08/07 01:27:48 rodent Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/10/26 23:56:38 rodent Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -11,6 +11,9 @@ ${PYSITELIB}/sqlalchemy_utils/__init__.pyo
 ${PYSITELIB}/sqlalchemy_utils/aggregates.py
 ${PYSITELIB}/sqlalchemy_utils/aggregates.pyc
 ${PYSITELIB}/sqlalchemy_utils/aggregates.pyo
+${PYSITELIB}/sqlalchemy_utils/asserts.py
+${PYSITELIB}/sqlalchemy_utils/asserts.pyc
+${PYSITELIB}/sqlalchemy_utils/asserts.pyo
 ${PYSITELIB}/sqlalchemy_utils/batch.py
 ${PYSITELIB}/sqlalchemy_utils/batch.pyc
 ${PYSITELIB}/sqlalchemy_utils/batch.pyo
@@ -104,6 +107,9 @@ ${PYSITELIB}/sqlalchemy_utils/types/country.pyo
 ${PYSITELIB}/sqlalchemy_utils/types/email.py
 ${PYSITELIB}/sqlalchemy_utils/types/email.pyc
 ${PYSITELIB}/sqlalchemy_utils/types/email.pyo
+${PYSITELIB}/sqlalchemy_utils/types/encrypted.py
+${PYSITELIB}/sqlalchemy_utils/types/encrypted.pyc
+${PYSITELIB}/sqlalchemy_utils/types/encrypted.pyo
 ${PYSITELIB}/sqlalchemy_utils/types/ip_address.py
 ${PYSITELIB}/sqlalchemy_utils/types/ip_address.pyc
 ${PYSITELIB}/sqlalchemy_utils/types/ip_address.pyo
