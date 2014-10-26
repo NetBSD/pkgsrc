@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/10/05 20:17:58 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2014/10/26 23:56:38 rodent Exp $
 
-DISTNAME=	SQLAlchemy-Utils-0.26.16
+DISTNAME=	SQLAlchemy-Utils-0.27.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	databases python
 MASTER_SITES=	https://pypi.python.org/packages/source/S/SQLAlchemy-Utils/
