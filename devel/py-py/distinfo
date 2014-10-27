@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2014/10/05 14:39:20 wiz Exp $
+$NetBSD: distinfo,v 1.7 2014/10/27 08:39:20 wiz Exp $
 
-SHA1 (py-1.4.25.tar.gz) = b91cbf0ac958d00a5738c70f1d1243c35f1b69c6
-RMD160 (py-1.4.25.tar.gz) = f15d5eeed84455248280a919ad24800a62a0eb06
-Size (py-1.4.25.tar.gz) = 190298 bytes
+SHA1 (py-1.4.26.tar.gz) = 5d9aaa67c1da2ded5f978aa13e03dfe780771fea
+RMD160 (py-1.4.26.tar.gz) = c77cbdc1d0107d755e219150f51d282fb0f9174c
+Size (py-1.4.26.tar.gz) = 190617 bytes
