@@ -1,0 +1,29 @@
+$NetBSD: patch-Makefile.config.in,v 1.1 2014/10/27 12:01:36 jaapb Exp $
+
+Use OCaml site-lib directory for installation
+--- Makefile.config.in.orig	2014-10-21 11:45:17.000000000 +0000
++++ Makefile.config.in
+@@ -9,21 +9,12 @@ OCAMLFIND=@OCAMLFIND@
+ 
+ DOSELIBS = _build/doselibs
+ 
+-DESTDIR =
+-ifeq ($(DESTDIR),)
+ exec_prefix=@prefix@
+-BINDIR=@bindir@
+-LIBDIR=$(shell ocamlfind printconf destdir)
++BINDIR=${DESTDIR}@bindir@
++LIBDIR=${DESTDIR}${PREFIX}/${OCAML_SITELIBDIR}
+ 
+ INSTALL=$(OCAMLFIND) install -destdir $(LIBDIR)
+ UNINSTALL=$(OCAMLFIND) remove -destdir $(LIBDIR)
+-else
+-LIBDIR = $(DESTDIR)/$(shell ocamlc -where)
+-BINDIR = $(DESTDIR)/usr/bin
+-
+-INSTALL = $(OCAMLFIND) install -destdir $(LIBDIR)
+-UNINSTALL = $(OCAMLFIND) remove -destdir $(LIBDIR)
+-endif
+ 
+ ifeq ("@OCAML_OS_TYPE@","freebsd")
+   LDFLAGS += -fstack-protector

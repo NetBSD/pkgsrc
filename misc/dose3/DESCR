@@ -1,0 +1,3 @@
+Dose is a library and a collection of tools to perform a large spectrum of
+analyses on package repositories. Dose manipulates package repositories from
+different sources such as Debian, RPM, Eclipse/OSGi and OpenCSW/Solaris.
