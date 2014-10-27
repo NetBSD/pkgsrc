@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.441 2014/10/26 14:15:06 jaapb Exp $
+# $NetBSD: Makefile,v 1.442 2014/10/27 12:02:35 jaapb Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -42,6 +42,7 @@ SUBDIR+=	deskbar-applet
 SUBDIR+=	dgpsip
 SUBDIR+=	dialog
 SUBDIR+=	dirdiff
+SUBDIR+=	dose3
 SUBDIR+=	dotfile
 SUBDIR+=	dpkg
 SUBDIR+=	dt
