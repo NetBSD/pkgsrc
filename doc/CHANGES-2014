@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4042 2014/10/27 13:21:08 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4043 2014/10/27 13:29:51 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5100,3 +5100,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated converters/dos2unix to 7.1 [wiz 2014-10-27]
 	Added misc/dose3 version 3.3beta2 [jaapb 2014-10-27]
 	Updated devel/p5-CPAN-Perl-Releases to 1.96 [wen 2014-10-27]
+	Updated security/p5-Digest-SHA to 5.93 [wen 2014-10-27]
