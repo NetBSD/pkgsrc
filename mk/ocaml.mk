@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.2 2014/10/09 19:37:21 jaapb Exp $
+# $NetBSD: ocaml.mk,v 1.3 2014/10/27 11:58:36 jaapb Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 #
@@ -16,6 +16,8 @@
 # package uses findlib infrastructure
 # OCAML_USE_OASIS [implies OCAML_USE_FINDLIB]
 # package uses oasis infrastructure
+# OCAML_USE_OPAM
+# package uses OPAM
 # OASIS_BUILD_ARGS
 # arguments for oasis build
 # Set by this file:
@@ -32,6 +34,7 @@ _VARGROUPS+=	ocaml
 _PKG_VARS.ocaml=	\
 	OCAML_USE_FINDLIB \
 	OCAML_USE_OASIS \
+	OCAML_USE_OPAM \
 	OCAML_BUILD_ARGS
 _DEF_VARS.ocaml=	\
 	OCAML_USE_OPT_COMPILER
@@ -45,6 +48,9 @@ OCAML_USE_FINDLIB?=	no
 
 # Default value of OCAML_USE_OASIS
 OCAML_USE_OASIS?=	no
+
+# Default value of OCAML_USE_OPAM
+OCAML_USE_OPAM?= no
 
 # Default value of OASIS_BUILD_ARGS
 OASIS_BUILD_ARGS?=	# empty
@@ -76,7 +82,8 @@ CONFIGURE_ARGS+=	--override is_native false
 
 # Value for OCAML_SITELIBDIR
 OCAML_SITELIBDIR=	lib/ocaml/site-lib
-PLIST_SUBST+=	OCAML_SITELIB=${OCAML_SITELIBDIR}
+MAKE_ENV+=	OCAML_SITELIBDIR="${OCAML_SITELIBDIR}"
+PLIST_SUBST+=	OCAML_SITELIB="${OCAML_SITELIBDIR}"
 
 .if ${OCAML_USE_FINDLIB} == "yes"
 .include "../../devel/ocaml-findlib/buildlink3.mk"
