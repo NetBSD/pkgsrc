@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4044 2014/10/27 13:41:30 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.4045 2014/10/27 13:47:07 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5102,3 +5102,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-CPAN-Perl-Releases to 1.96 [wen 2014-10-27]
 	Updated security/p5-Digest-SHA to 5.93 [wen 2014-10-27]
 	Updated devel/gyp to 0.1pre1994 [ryoon 2014-10-27]
+	Updated www/p5-HTTP-Tiny to 0.050 [wen 2014-10-27]
