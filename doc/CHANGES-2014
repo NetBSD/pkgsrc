@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4046 2014/10/27 13:58:02 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4047 2014/10/27 16:14:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5104,3 +5104,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/gyp to 0.1pre1994 [ryoon 2014-10-27]
 	Updated www/p5-HTTP-Tiny to 0.050 [wen 2014-10-27]
 	Updated www/p5-Dancer to 1.3132 [wen 2014-10-27]
+	Updated lang/ruby193-base to 1.9.3p550 [taca 2014-10-27]
+	Updated lang/ruby193 to 1.9.3p550 [taca 2014-10-27]
