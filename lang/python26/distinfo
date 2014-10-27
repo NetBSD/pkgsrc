@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.59 2014/05/21 00:35:50 obache Exp $
+$NetBSD: distinfo,v 1.60 2014/10/27 20:11:34 drochner Exp $
 
 SHA1 (Python-2.6.9.tar.xz) = 2fc159946dfcceffbe4a8638de32d0cd8059c2f8
 RMD160 (Python-2.6.9.tar.xz) = 42edf7c9f2f64b77ab173de30ea453257c2c06b3
 Size (Python-2.6.9.tar.xz) = 9333664 bytes
+SHA1 (patch-CVE-2014-7185) = 768199954b166474ab471e34afc9238fd7125ce8
 SHA1 (patch-Lib_distutils_unixccompiler.py) = 1ce01fbe2d36cf0c7ce347c878cfe2d290ec8490
 SHA1 (patch-Mac_Modules_fm___Fmmodule.c) = b9314bccb51b4fe672b81559068f7a79d2965f94
 SHA1 (patch-Mac_Modules_qd___Qdmodule.c) = 45c748b15b9436d45ba137460389638aa7108c8d
