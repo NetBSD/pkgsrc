@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4047 2014/10/27 16:14:15 taca Exp $
+$NetBSD: CHANGES-2014,v 1.4048 2014/10/27 16:23:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5106,3 +5106,10 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Dancer to 1.3132 [wen 2014-10-27]
 	Updated lang/ruby193-base to 1.9.3p550 [taca 2014-10-27]
 	Updated lang/ruby193 to 1.9.3p550 [taca 2014-10-27]
+	Updated lang/ruby200-base to 2.0.0p594 [taca 2014-10-27]
+	Updated databases/ruby-gdbm to 2.0.0p594 [taca 2014-10-27]
+	Updated devel/ruby-curses to 2.0.0p594nb1 [taca 2014-10-27]
+	Updated devel/ruby-fiddle to 2.0.0p594 [taca 2014-10-27]
+	Updated devel/ruby-readline to 2.0.0p594nb1 [taca 2014-10-27]
+	Updated x11/ruby-tk to 2.0.0p594nb3 [taca 2014-10-27]
+	Updated lang/ruby200 to 2.0.0p594 [taca 2014-10-27]
