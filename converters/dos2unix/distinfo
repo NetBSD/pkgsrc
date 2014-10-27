@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2014/06/17 12:54:28 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2014/10/27 08:48:59 wiz Exp $
 
-SHA1 (dos2unix-6.0.5.tar.gz) = b43d138e1713791ea5067c32afbcd7a32655d2fa
-RMD160 (dos2unix-6.0.5.tar.gz) = 63af2b26e363cba0dbd2294dd79399066ba11bd2
-Size (dos2unix-6.0.5.tar.gz) = 326460 bytes
+SHA1 (dos2unix-7.1.tar.gz) = f8247eda06aab93fbbe84b78fe6d14bd319f0fcd
+RMD160 (dos2unix-7.1.tar.gz) = aee6b1bb72b19c8f3721ee0b15b00db704c62386
+Size (dos2unix-7.1.tar.gz) = 382427 bytes
 SHA1 (patch-Makefile) = 50150be7ac3090d33ad38e654433bd09837132ab
