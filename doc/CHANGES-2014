@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4041 2014/10/27 12:02:00 jaapb Exp $
+$NetBSD: CHANGES-2014,v 1.4042 2014/10/27 13:21:08 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5099,3 +5099,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated converters/py-simplejson to 3.6.5 [wiz 2014-10-27]
 	Updated converters/dos2unix to 7.1 [wiz 2014-10-27]
 	Added misc/dose3 version 3.3beta2 [jaapb 2014-10-27]
+	Updated devel/p5-CPAN-Perl-Releases to 1.96 [wen 2014-10-27]
