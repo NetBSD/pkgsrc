@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2014/01/21 22:29:33 gdt Exp $
+@comment $NetBSD: PLIST,v 1.23 2014/10/27 17:13:33 gdt Exp $
 bin/trac-admin
 bin/tracd
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -25,14 +25,10 @@ ${PYSITELIB}/trac/admin/console.pyc
 ${PYSITELIB}/trac/admin/console.pyo
 ${PYSITELIB}/trac/admin/templates/admin.html
 ${PYSITELIB}/trac/admin/templates/admin_basics.html
-${PYSITELIB}/trac/admin/templates/admin_components.html
-${PYSITELIB}/trac/admin/templates/admin_enums.html
 ${PYSITELIB}/trac/admin/templates/admin_legacy.html
 ${PYSITELIB}/trac/admin/templates/admin_logging.html
-${PYSITELIB}/trac/admin/templates/admin_milestones.html
 ${PYSITELIB}/trac/admin/templates/admin_perms.html
 ${PYSITELIB}/trac/admin/templates/admin_plugins.html
-${PYSITELIB}/trac/admin/templates/admin_versions.html
 ${PYSITELIB}/trac/admin/templates/deploy_trac.cgi
 ${PYSITELIB}/trac/admin/templates/deploy_trac.fcgi
 ${PYSITELIB}/trac/admin/templates/deploy_trac.wsgi
@@ -413,6 +409,10 @@ ${PYSITELIB}/trac/ticket/report.pyo
 ${PYSITELIB}/trac/ticket/roadmap.py
 ${PYSITELIB}/trac/ticket/roadmap.pyc
 ${PYSITELIB}/trac/ticket/roadmap.pyo
+${PYSITELIB}/trac/ticket/templates/admin_components.html
+${PYSITELIB}/trac/ticket/templates/admin_enums.html
+${PYSITELIB}/trac/ticket/templates/admin_milestones.html
+${PYSITELIB}/trac/ticket/templates/admin_versions.html
 ${PYSITELIB}/trac/ticket/templates/batch_modify.html
 ${PYSITELIB}/trac/ticket/templates/batch_ticket_notify_email.txt
 ${PYSITELIB}/trac/ticket/templates/milestone_delete.html
