@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4055 2014/10/28 11:03:05 drochner Exp $
+$NetBSD: CHANGES-2014,v 1.4056 2014/10/28 12:43:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5121,3 +5121,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/audacious-plugins to 3.5.2 [mef 2014-10-28]
 	Updated ham/gnuradio-companion to 3.7.5nb1 [mef 2014-10-28]
 	Updated net/wget to 1.16 [drochner 2014-10-28]
+	Updated editors/emacs24 to 24.4 [wiz 2014-10-28]
