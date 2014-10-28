@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/10/13 12:51:09 mef Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/10/28 09:07:34 mef Exp $
 bin/usrp_flex
 bin/usrp_flex_all
 bin/usrp_flex_band
@@ -11,7 +11,7 @@ include/gnuradio/pager/slicer_fb.h
 include/gnuradio/swig/pager_swig.i
 include/gnuradio/swig/pager_swig_doc.i
 lib/libgnuradio-pager.so
-lib/libgnuradio-pager.so.${PKGVERSION}
+lib/libgnuradio-pager.so.${PKGVERSION_NOREV}
 lib/pkgconfig/gnuradio-pager.pc
 ${PYSITELIB}/gnuradio/pager/__init__.py
 ${PYSITELIB}/gnuradio/pager/__init__.pyc

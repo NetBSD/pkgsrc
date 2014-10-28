@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/10/13 12:51:09 mef Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/10/28 09:07:34 mef Exp $
 include/gnuradio/noaa/api.h
 include/gnuradio/noaa/hrpt.h
 include/gnuradio/noaa/hrpt_decoder.h
@@ -7,7 +7,7 @@ include/gnuradio/noaa/hrpt_pll_cf.h
 include/gnuradio/swig/noaa_swig.i
 include/gnuradio/swig/noaa_swig_doc.i
 lib/libgnuradio-noaa.so
-lib/libgnuradio-noaa.so.${PKGVERSION}
+lib/libgnuradio-noaa.so.${PKGVERSION_NOREV}
 lib/pkgconfig/gnuradio-noaa.pc
 ${PYSITELIB}/gnuradio/noaa/__init__.py
 ${PYSITELIB}/gnuradio/noaa/__init__.pyc
