@@ -1,12 +1,9 @@
-$NetBSD: patch-aa,v 1.20 2014/06/01 03:53:03 ryoon Exp $
+$NetBSD: patch-aa,v 1.21 2014/10/28 12:51:03 adam Exp $
 
-* unwind: from https://github.com/atgreen/libffi/commit/76d19d004e36e99d261ee78261e2f52cea5e4ab1#diff-e2d5a00791bce9a01f99bc6fd613a39d
-  Fix build under OpenBSD 5.5
-
---- configure.orig	2013-03-17 22:36:19.000000000 +0000
+--- configure.orig	2014-05-19 13:44:03.000000000 +0000
 +++ configure
-@@ -651,6 +651,8 @@ XTENSA_FALSE
- XTENSA_TRUE
+@@ -654,6 +654,8 @@ VAX_FALSE
+ VAX_TRUE
  TILE_FALSE
  TILE_TRUE
 +VAX_FALSE
@@ -14,7 +11,7 @@ $NetBSD: patch-aa,v 1.20 2014/06/01 03:53:03 ryoon Exp $
  PA64_HPUX_FALSE
  PA64_HPUX_TRUE
  PA_HPUX_FALSE
-@@ -13331,7 +13333,7 @@ case "$host" in
+@@ -17199,7 +17201,7 @@ case "$host" in
  	TARGET=FRV; TARGETDIR=frv
  	;;
  
@@ -23,7 +20,7 @@ $NetBSD: patch-aa,v 1.20 2014/06/01 03:53:03 ryoon Exp $
  	TARGET=PA_LINUX; TARGETDIR=pa
  	;;
    hppa*64-*-hpux*)
-@@ -13425,10 +13427,10 @@ case "$host" in
+@@ -17297,10 +17299,10 @@ case "$host" in
  	TARGET=METAG; TARGETDIR=metag
  	;;
  
@@ -31,21 +28,21 @@ $NetBSD: patch-aa,v 1.20 2014/06/01 03:53:03 ryoon Exp $
 +  mips*-sgi-irix5.* | mips*-sgi-irix6.* | mips*-*-rtems*)
  	TARGET=MIPS; TARGETDIR=mips
  	;;
--  mips*-*-linux* | mips*-*-openbsd*)
-+  mips*-*-linux* | mips*-*-netbsd* | mips*-*-openbsd*)
+-  mips*-*linux* | mips*-*-openbsd*)
++  mips*-*linux* | mips*-*-netbsd* | mips*-*-openbsd*)
  	# Support 128-bit long double for NewABI.
  	HAVE_LONG_DOUBLE='defined(__mips64)'
  	TARGET=MIPS; TARGETDIR=mips
-@@ -13449,7 +13451,7 @@ case "$host" in
+@@ -17326,7 +17328,7 @@ case "$host" in
    powerpc-*-aix* | rs6000-*-aix*)
  	TARGET=POWERPC_AIX; TARGETDIR=powerpc
  	;;
 -  powerpc-*-freebsd* | powerpc-*-openbsd*)
 +  powerpc-*-freebsd* | powerpc-*-netbsd* | powerpc-*-openbsd*)
  	TARGET=POWERPC_FREEBSD; TARGETDIR=powerpc
+ 	HAVE_LONG_DOUBLE_VARIANT=1
  	;;
-   powerpc64-*-freebsd*)
-@@ -13463,7 +13465,7 @@ case "$host" in
+@@ -17341,7 +17343,7 @@ case "$host" in
  	TARGET=S390; TARGETDIR=s390
  	;;
  
@@ -54,9 +51,9 @@ $NetBSD: patch-aa,v 1.20 2014/06/01 03:53:03 ryoon Exp $
  	TARGET=SH; TARGETDIR=sh
  	;;
    sh64-*-* | sh5*-*-*)
-@@ -13478,6 +13480,10 @@ case "$host" in
-         TARGET=TILE; TARGETDIR=tile
-         ;;
+@@ -17360,6 +17362,10 @@ case "$host" in
+ 	TARGET=VAX; TARGETDIR=vax
+ 	;;
  
 +  vax-*-*)
 +	TARGET=VAX; TARGETDIR=vax
@@ -65,8 +62,8 @@ $NetBSD: patch-aa,v 1.20 2014/06/01 03:53:03 ryoon Exp $
    xtensa*-*)
  	TARGET=XTENSA; TARGETDIR=xtensa
  	;;
-@@ -13747,6 +13753,14 @@ else
-   TILE_FALSE=
+@@ -17677,6 +17683,14 @@ else
+   VAX_FALSE=
  fi
  
 + if test x$TARGET = xVAX; then
@@ -80,7 +77,7 @@ $NetBSD: patch-aa,v 1.20 2014/06/01 03:53:03 ryoon Exp $
   if test x$TARGET = xXTENSA; then
    XTENSA_TRUE=
    XTENSA_FALSE='#'
-@@ -14661,7 +14675,7 @@ case "$target" in
+@@ -18597,7 +18611,7 @@ case "$target" in
  $as_echo "#define FFI_EXEC_TRAMPOLINE_TABLE 1" >>confdefs.h
  
       ;;
@@ -89,50 +86,11 @@ $NetBSD: patch-aa,v 1.20 2014/06/01 03:53:03 ryoon Exp $
  
  $as_echo "#define FFI_MMAP_EXEC_WRIT 1" >>confdefs.h
  
-@@ -14678,16 +14692,32 @@ fi
- 
- 
- if test x$TARGET = xX86_64; then
--    { $as_echo "$as_me:${as_lineno-$LINENO}: checking assembler supports unwind section type" >&5
--$as_echo_n "checking assembler supports unwind section type... " >&6; }
-+    { $as_echo "$as_me:${as_lineno-$LINENO}: checking toolchain supports unwind section type" >&5
-+$as_echo_n "checking toolchain supports unwind section type... " >&6; }
- if ${libffi_cv_as_x86_64_unwind_section_type+:} false; then :
-   $as_echo_n "(cached) " >&6
- else
- 
--	libffi_cv_as_x86_64_unwind_section_type=yes
--	echo '.section .eh_frame,"a",@unwind' > conftest.s
--	if $CC $CFLAGS -c conftest.s 2>&1 | grep -i warning > /dev/null; then
--	    libffi_cv_as_x86_64_unwind_section_type=no
-+        cat  > conftest1.s << EOF
-+.text
-+.globl foo
-+foo:
-+jmp bar
-+.section .eh_frame,"a",@unwind
-+bar:
-+EOF
-+
-+        cat > conftest2.c  << EOF
-+extern void foo();
-+int main(){foo();}
-+EOF
-+
-+	libffi_cv_as_x86_64_unwind_section_type=no
-+	# we ensure that we can compile _and_ link an assembly file containing an @unwind section
-+	# since the compiler can support it and not the linker (ie old binutils)
-+	if $CC -Wa,--fatal-warnings $CFLAGS -c conftest1.s > /dev/null 2>&1 && \
-+           $CC conftest2.c conftest1.o > /dev/null 2>&1 ; then
-+	    libffi_cv_as_x86_64_unwind_section_type=yes
- 	fi
- 
- fi
-@@ -14840,11 +14870,6 @@ if test "x$GCC" = "xyes"; then
+@@ -18792,11 +18806,6 @@ if test "x$GCC" = "xyes"; then
      toolexecdir='$(libdir)/gcc-lib/$(target_alias)'
      toolexeclibdir='$(libdir)'
    fi
--  multi_os_directory=`$CC -print-multi-os-directory`
+-  multi_os_directory=`$CC $CFLAGS -print-multi-os-directory`
 -  case $multi_os_directory in
 -    .) ;; # Avoid trailing /.
 -    ../*) toolexeclibdir=$toolexeclibdir/$multi_os_directory ;;
@@ -140,8 +98,8 @@ $NetBSD: patch-aa,v 1.20 2014/06/01 03:53:03 ryoon Exp $
  
  else
    toolexeclibdir='$(libdir)'
-@@ -15135,6 +15160,10 @@ if test -z "${TILE_TRUE}" && test -z "${
-   as_fn_error $? "conditional \"TILE\" was never defined.
+@@ -19115,6 +19124,10 @@ if test -z "${VAX_TRUE}" && test -z "${V
+   as_fn_error $? "conditional \"VAX\" was never defined.
  Usually this means the macro was only invoked conditionally." "$LINENO" 5
  fi
 +if test -z "${VAX_TRUE}" && test -z "${VAX_FALSE}"; then
@@ -151,7 +109,7 @@ $NetBSD: patch-aa,v 1.20 2014/06/01 03:53:03 ryoon Exp $
  if test -z "${XTENSA_TRUE}" && test -z "${XTENSA_FALSE}"; then
    as_fn_error $? "conditional \"XTENSA\" was never defined.
  Usually this means the macro was only invoked conditionally." "$LINENO" 5
-@@ -16734,13 +16763,13 @@ s/ [a-zA-Z0-9-]*-all [a-zA-Z0-9-]*-all-a
+@@ -20813,13 +20826,13 @@ s/ [a-zA-Z0-9-]*-all [a-zA-Z0-9-]*-all-a
  /-all-all/d
  a\\
  	@ HOST="\$(HOST)\" \\\\\\
