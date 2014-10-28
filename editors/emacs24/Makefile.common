@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2014/10/28 12:43:21 wiz Exp $
+# $NetBSD: Makefile.common,v 1.10 2014/10/28 12:44:58 wiz Exp $
 #
 # used by editors/emacs24/Makefile
 # used by editors/emacs24-nox11/Makefile
@@ -64,6 +64,7 @@ INSTALL_UNSTRIPPED=	yes
 # NetBSD with native Clang doesn't provide libgcc, everything is in libc.
 pre-configure: fake-libgcc
 
+.PHONY: fake-libgcc
 fake-libgcc:
 	${AR} q ${BUILDLINK_DIR}/lib/libgcc.a
 .endif
