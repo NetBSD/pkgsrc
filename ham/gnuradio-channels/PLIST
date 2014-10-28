@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/10/28 09:07:33 mef Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/10/28 16:59:33 mef Exp $
 include/gnuradio/channels/api.h
 include/gnuradio/channels/channel_model.h
 include/gnuradio/channels/channel_model2.h
@@ -7,7 +7,7 @@ include/gnuradio/channels/selective_fading_model.h
 include/gnuradio/swig/channels_swig.i
 include/gnuradio/swig/channels_swig_doc.i
 lib/libgnuradio-channels.so
-lib/libgnuradio-channels.so.${PKGVERSION_NOREV}
+lib/libgnuradio-channels.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-channels.pc
 ${PYSITELIB}/gnuradio/channels/__init__.py
 ${PYSITELIB}/gnuradio/channels/__init__.pyc
@@ -43,7 +43,7 @@ ${PYSITELIB}/gnuradio/channels/phase_noise_gen.pyo
 ${PYSITELIB}/gnuradio/channels/quantizer.py
 ${PYSITELIB}/gnuradio/channels/quantizer.pyc
 ${PYSITELIB}/gnuradio/channels/quantizer.pyo
-share/doc/gnuradio-${PKGVERSION_NOREV}/README.channels
+share/doc/gnuradio-${PKGVERSION}/README.channels
 share/gnuradio/examples/channels/channel_tone_response.grc
 share/gnuradio/examples/channels/demo_gmsk.grc
 share/gnuradio/examples/channels/demo_ofdm.grc

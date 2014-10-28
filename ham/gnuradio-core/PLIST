@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2014/10/28 06:41:20 mef Exp $
+@comment $NetBSD: PLIST,v 1.17 2014/10/28 16:59:33 mef Exp $
 bin/gnuradio-config-info
 bin/gr_filter_design
 bin/volk-config-info
@@ -609,19 +609,19 @@ lib/cmake/gnuradio/LibFindMacros.cmake
 lib/cmake/gnuradio/UseSWIG.cmake
 lib/cmake/volk/VolkConfig.cmake
 lib/libgnuradio-analog.so
-lib/libgnuradio-analog.so.${PKGVERSION_NOREV}
+lib/libgnuradio-analog.so.${PKGVERSION}
 lib/libgnuradio-audio.so
-lib/libgnuradio-audio.so.${PKGVERSION_NOREV}
+lib/libgnuradio-audio.so.${PKGVERSION}
 lib/libgnuradio-blocks.so
-lib/libgnuradio-blocks.so.${PKGVERSION_NOREV}
+lib/libgnuradio-blocks.so.${PKGVERSION}
 lib/libgnuradio-fft.so
-lib/libgnuradio-fft.so.${PKGVERSION_NOREV}
+lib/libgnuradio-fft.so.${PKGVERSION}
 lib/libgnuradio-filter.so
-lib/libgnuradio-filter.so.${PKGVERSION_NOREV}
+lib/libgnuradio-filter.so.${PKGVERSION}
 lib/libgnuradio-pmt.so
-lib/libgnuradio-pmt.so.${PKGVERSION_NOREV}
+lib/libgnuradio-pmt.so.${PKGVERSION}
 lib/libgnuradio-runtime.so
-lib/libgnuradio-runtime.so.${PKGVERSION_NOREV}
+lib/libgnuradio-runtime.so.${PKGVERSION}
 lib/libvolk.so
 lib/libvolk.so.0.0.0
 lib/pkgconfig/gnuradio-analog.pc
@@ -871,13 +871,13 @@ ${PYSITELIB}/volk_modtool/cfg.pyo
 ${PYSITELIB}/volk_modtool/volk_modtool_generate.py
 ${PYSITELIB}/volk_modtool/volk_modtool_generate.pyc
 ${PYSITELIB}/volk_modtool/volk_modtool_generate.pyo
-share/doc/gnuradio-${PKGVERSION_NOREV}/README
-share/doc/gnuradio-${PKGVERSION_NOREV}/README.analog
-share/doc/gnuradio-${PKGVERSION_NOREV}/README.audio
-share/doc/gnuradio-${PKGVERSION_NOREV}/README.blocks
-share/doc/gnuradio-${PKGVERSION_NOREV}/README.fft
-share/doc/gnuradio-${PKGVERSION_NOREV}/README.filter
-share/doc/gnuradio-${PKGVERSION_NOREV}/README.hacking
+share/doc/gnuradio-${PKGVERSION}/README
+share/doc/gnuradio-${PKGVERSION}/README.analog
+share/doc/gnuradio-${PKGVERSION}/README.audio
+share/doc/gnuradio-${PKGVERSION}/README.blocks
+share/doc/gnuradio-${PKGVERSION}/README.fft
+share/doc/gnuradio-${PKGVERSION}/README.filter
+share/doc/gnuradio-${PKGVERSION}/README.hacking
 share/examples/gnuradio/conf.d/gnuradio-runtime.conf
 share/examples/gnuradio/conf.d/gr-audio-jack.conf
 share/examples/gnuradio/conf.d/gr-audio-oss.conf

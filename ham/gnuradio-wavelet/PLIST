@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/10/28 09:07:35 mef Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/10/28 16:59:34 mef Exp $
 include/gnuradio/swig/wavelet_swig.i
 include/gnuradio/swig/wavelet_swig_doc.i
 include/gnuradio/wavelet/api.h
@@ -6,7 +6,7 @@ include/gnuradio/wavelet/squash_ff.h
 include/gnuradio/wavelet/wavelet_ff.h
 include/gnuradio/wavelet/wvps_ff.h
 lib/libgnuradio-wavelet.so
-lib/libgnuradio-wavelet.so.${PKGVERSION_NOREV}
+lib/libgnuradio-wavelet.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-wavelet.pc
 ${PYSITELIB}/gnuradio/wavelet/__init__.py
 ${PYSITELIB}/gnuradio/wavelet/__init__.pyc
