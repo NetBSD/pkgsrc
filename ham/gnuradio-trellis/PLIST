@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/10/13 12:51:10 mef Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/10/28 09:07:35 mef Exp $
 include/gnuradio/swig/trellis_swig.i
 include/gnuradio/swig/trellis_swig_doc.i
 include/gnuradio/trellis/api.h
@@ -69,7 +69,7 @@ include/gnuradio/trellis/viterbi_combined_ss.h
 include/gnuradio/trellis/viterbi_i.h
 include/gnuradio/trellis/viterbi_s.h
 lib/libgnuradio-trellis.so
-lib/libgnuradio-trellis.so.${PKGVERSION}
+lib/libgnuradio-trellis.so.${PKGVERSION_NOREV}
 lib/pkgconfig/gnuradio-trellis.pc
 ${PYSITELIB}/gnuradio/trellis/__init__.py
 ${PYSITELIB}/gnuradio/trellis/__init__.pyc
@@ -78,8 +78,8 @@ ${PYSITELIB}/gnuradio/trellis/_trellis_swig.so
 ${PYSITELIB}/gnuradio/trellis/trellis_swig.py
 ${PYSITELIB}/gnuradio/trellis/trellis_swig.pyc
 ${PYSITELIB}/gnuradio/trellis/trellis_swig.pyo
-share/doc/gnuradio-${PKGVERSION}/xml/test_tcm.py.xml
-share/doc/gnuradio-${PKGVERSION}/xml/test_viterbi_equalization1.py.xml
+share/doc/gnuradio-${PKGVERSION_NOREV}/xml/test_tcm.py.xml
+share/doc/gnuradio-${PKGVERSION_NOREV}/xml/test_viterbi_equalization1.py.xml
 share/gnuradio/examples/trellis/README
 share/gnuradio/examples/trellis/fsm_files/awgn1o2_128.fsm
 share/gnuradio/examples/trellis/fsm_files/awgn1o2_16.fsm

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/10/13 12:51:08 mef Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/10/28 09:07:33 mef Exp $
 include/gnuradio/atsc/CMakeLists.txt
 include/gnuradio/atsc/GrAtscBitTimingLoop.h
 include/gnuradio/atsc/GrAtscBitTimingLoop2.h
@@ -78,7 +78,7 @@ include/gnuradio/atsc/vsbtx_lp_impl.h
 include/gnuradio/swig/atsc_swig.i
 include/gnuradio/swig/atsc_swig_doc.i
 lib/libgnuradio-atsc.so
-lib/libgnuradio-atsc.so.${PKGVERSION}
+lib/libgnuradio-atsc.so.${PKGVERSION_NOREV}
 lib/pkgconfig/gnuradio-atsc.pc
 ${PYSITELIB}/gnuradio/atsc/__init__.py
 ${PYSITELIB}/gnuradio/atsc/__init__.pyc
