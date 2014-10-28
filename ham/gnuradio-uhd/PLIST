@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/10/13 12:51:10 mef Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/10/28 09:07:35 mef Exp $
 bin/uhd_fft
 bin/uhd_rx_cfile
 bin/uhd_rx_nogui
@@ -11,7 +11,7 @@ include/gnuradio/uhd/api.h
 include/gnuradio/uhd/usrp_sink.h
 include/gnuradio/uhd/usrp_source.h
 lib/libgnuradio-uhd.so
-lib/libgnuradio-uhd.so.${PKGVERSION}
+lib/libgnuradio-uhd.so.${PKGVERSION_NOREV}
 lib/pkgconfig/gnuradio-uhd.pc
 ${PYSITELIB}/gnuradio/uhd/__init__.py
 ${PYSITELIB}/gnuradio/uhd/__init__.pyc
@@ -23,7 +23,7 @@ ${PYSITELIB}/gnuradio/uhd/uhd_siggen_base.pyo
 ${PYSITELIB}/gnuradio/uhd/uhd_swig.py
 ${PYSITELIB}/gnuradio/uhd/uhd_swig.pyc
 ${PYSITELIB}/gnuradio/uhd/uhd_swig.pyo
-share/doc/gnuradio-${PKGVERSION}/README.uhd
+share/doc/gnuradio-${PKGVERSION_NOREV}/README.uhd
 share/gnuradio/examples/hf_explorer/README
 share/gnuradio/examples/hf_explorer/hfx.py
 share/gnuradio/examples/hf_explorer/hfx_help
