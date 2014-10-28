@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2014/10/27 16:11:18 taca Exp $
+# $NetBSD: Makefile,v 1.47 2014/10/28 07:48:19 wiz Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -20,6 +20,7 @@ GNU_CONFIGURE=		yes
 TEST_TARGET=		test
 CONFIGURE_ARGS+=	--enable-shared
 WRKSRC=			${RUBY_WRKSRC}
+MAKE_JOBS_SAFE=		no
 
 MAKE_DIRS=		${RUBY_SITEARCHLIB} ${RUBY_VENDORARCHLIB}
 
