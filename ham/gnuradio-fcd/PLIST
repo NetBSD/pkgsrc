@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/10/28 09:07:34 mef Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/10/28 16:59:33 mef Exp $
 ${PYSITELIB}/gnuradio/fcd/__init__.py
 ${PYSITELIB}/gnuradio/fcd/__init__.pyc
 ${PYSITELIB}/gnuradio/fcd/__init__.pyo
@@ -11,9 +11,9 @@ include/gnuradio/fcd/source_c.h
 include/gnuradio/swig/fcd_swig.i
 include/gnuradio/swig/fcd_swig_doc.i
 lib/libgnuradio-fcd.so
-lib/libgnuradio-fcd.so.${PKGVERSION_NOREV}
+lib/libgnuradio-fcd.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-fcd.pc
-share/doc/gnuradio-${PKGVERSION_NOREV}/README.fcd
+share/doc/gnuradio-${PKGVERSION}/README.fcd
 share/gnuradio/examples/fcd/fcd_apt_rx.grc
 share/gnuradio/examples/fcd/fcd_fft.grc
 share/gnuradio/examples/fcd/fcd_nfm_rx
