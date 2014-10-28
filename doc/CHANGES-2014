@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4059 2014/10/28 13:27:31 he Exp $
+$NetBSD: CHANGES-2014,v 1.4060 2014/10/28 17:28:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5125,3 +5125,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/libffi to 3.1 [adam 2014-10-28]
 	Updated games/wesnoth to 1.10.7 [wiz 2014-10-28]
 	Updated security/opendnssec to 1.4.6nb2 [he 2014-10-28]
+	Updated www/firefox to 33.0.1 [ryoon 2014-10-28]
