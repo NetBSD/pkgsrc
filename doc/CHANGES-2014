@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4051 2014/10/27 17:13:55 gdt Exp $
+$NetBSD: CHANGES-2014,v 1.4052 2014/10/28 00:27:28 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5117,3 +5117,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/ruby21 to 2.1.4 [taca 2014-10-27]
 	Updated devel/ruby-mode to 2.1.4 [taca 2014-10-27]
 	Updated www/trac to 1.0.2 [gdt 2014-10-27]
+	Updated cross/avr-libc to 1.8.1 [mef 2014-10-28]
