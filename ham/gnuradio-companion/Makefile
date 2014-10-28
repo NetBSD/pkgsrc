@@ -1,11 +1,14 @@
-# $NetBSD: Makefile,v 1.1 2014/10/13 12:51:08 mef Exp $
+# $NetBSD: Makefile,v 1.2 2014/10/28 06:41:20 mef Exp $
 
 PKGNAME=	gnuradio-companion-${VERSION}
+PKGREVISION=	1
 COMMENT=	User interface entry of GNU Radio
 
 CONF_FILES+=	${EGDIR}/grc.conf	${PKG_SYSCONFDIR}/grc.conf
 
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml/
+DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
+REPLACE_BASH=	grc/freedesktop/grc_setup_freedesktop.in
 
 .include	"../../ham/gnuradio-core/Makefile.common"
 .include	"../../ham/gnuradio-core/Nocore.mk"
