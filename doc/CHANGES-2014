@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4056 2014/10/28 12:43:32 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4057 2014/10/28 13:08:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5122,3 +5122,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated ham/gnuradio-companion to 3.7.5nb1 [mef 2014-10-28]
 	Updated net/wget to 1.16 [drochner 2014-10-28]
 	Updated editors/emacs24 to 24.4 [wiz 2014-10-28]
+	Updated devel/libffi to 3.1 [adam 2014-10-28]
