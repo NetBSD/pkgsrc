@@ -14,6 +14,7 @@ REPLACE_PYTHON = \
 	grc/python/Port.py \
 	grc/python/Constants.py \
 	grc/python/expr_utils.py \
+	grc/python/flow_graph.tmpl \
 	grc/python/convert_hier.py \
 	grc/python/Param.py \
 	grc/python/Connection.py \
