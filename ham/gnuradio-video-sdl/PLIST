@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2014/10/28 09:07:35 mef Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/10/28 16:59:33 mef Exp $
 include/gnuradio/swig/video_sdl_swig.i
 include/gnuradio/swig/video_sdl_swig_doc.i
 include/gnuradio/video_sdl/api.h
 include/gnuradio/video_sdl/sink_s.h
 include/gnuradio/video_sdl/sink_uc.h
 lib/libgnuradio-video-sdl.so
-lib/libgnuradio-video-sdl.so.${PKGVERSION_NOREV}
+lib/libgnuradio-video-sdl.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-video-sdl.pc
 ${PYSITELIB}/gnuradio/video_sdl/__init__.py
 ${PYSITELIB}/gnuradio/video_sdl/__init__.pyc

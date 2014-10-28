@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2014/10/28 06:41:20 mef Exp $
+# $NetBSD: Makefile.common,v 1.5 2014/10/28 16:59:33 mef Exp $
 # This Makefile fragment is included in the package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -53,7 +53,6 @@ PATCHDIR=		${.CURDIR}/../../ham/gnuradio-core/patches
 PYTHON_VERSIONS_INCOMPATIBLE=   33 34 # not yet ported as of 3.3.0
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
-PLIST_SUBST+=	PKGVERSION_NOREV=${PKGVERSION_NOREV}
 PY_PATCHPLIST=	yes
 
 CONFIGURE_DIRS=	build

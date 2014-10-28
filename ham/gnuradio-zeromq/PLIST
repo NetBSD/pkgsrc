@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/10/28 09:07:35 mef Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/10/28 16:59:34 mef Exp $
 include/gnuradio/swig/zeromq_swig.i
 include/gnuradio/swig/zeromq_swig_doc.i
 include/gnuradio/zeromq/api.h
@@ -9,7 +9,7 @@ include/gnuradio/zeromq/rep_sink.h
 include/gnuradio/zeromq/req_source.h
 include/gnuradio/zeromq/sub_source.h
 lib/libgnuradio-zeromq.so
-lib/libgnuradio-zeromq.so.${PKGVERSION_NOREV}
+lib/libgnuradio-zeromq.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-zeromq.pc
 ${PYSITELIB}/gnuradio/zeromq/__init__.py
 ${PYSITELIB}/gnuradio/zeromq/__init__.pyc

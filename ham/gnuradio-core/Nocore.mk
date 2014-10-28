@@ -1,4 +1,4 @@
-# $NetBSD: Nocore.mk,v 1.3 2014/10/28 06:41:20 mef Exp $
+# $NetBSD: Nocore.mk,v 1.4 2014/10/28 16:59:33 mef Exp $
 # Default list for reducing PLIST
 PLIST_MINUS=	core
 DEPENDS+=	gnuradio-core-[0-9]*:../../ham/gnuradio-core
@@ -14,7 +14,7 @@ post-install:
 	${RM} -f ${WRKDIR}/.PLIST.minus;
 	for i in ${PLIST_MINUS} ; do			\
 	  sed  -e 's,$${PYSITELIB},${PYSITELIB},'	\
-	       -e 's,$${PKGVERSION_NOREV},${PKGVERSION_NOREV},'	\
+	       -e 's,$${PKGVERSION},${PKGVERSION_NOREV},'	\
 	       -e '/^@comment/d'			\
 	       -e '/^@pkgdir/d'				\
 	       ${PKGDIR}/../../ham/gnuradio-$$i/PLIST	\
