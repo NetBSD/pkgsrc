@@ -1,8 +1,14 @@
-# $NetBSD: INSTALL,v 1.3 2013/02/23 05:47:59 obache Exp $
+# $NetBSD: INSTALL,v 1.4 2014/10/28 02:08:38 cheusov Exp $
 
 UNAME="@UNAME@"
+PKG_ADMIN="@PKG_ADMIN@"
+
 case ${STAGE} in
 PRE-INSTALL)
+	if ${TEST} no = "$($PKG_ADMIN config-var CHECK_OSABI)"; then
+		exit 0
+	fi
+
 	OS_VERSION=`${UNAME} -r`
 	PKG_VERSION="${PKGNAME##*-}"
 	case `${UNAME} -s` in
