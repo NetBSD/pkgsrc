@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2014/10/28 12:44:58 wiz Exp $
+# $NetBSD: Makefile.common,v 1.11 2014/10/28 12:45:57 wiz Exp $
 #
 # used by editors/emacs24/Makefile
 # used by editors/emacs24-nox11/Makefile
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--srcdir=${WRKSRC}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ENV+=		GAMEOWN=${GAMES_USER}
 
-SETGIDGAME=		yes
+USE_GAMESGROUP=		yes
 
 BUILD_DEFS+=		VARBASE
 BUILD_DEFS+=		GAMEDATAMODE
