@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.6 2012/06/12 15:45:54 wiz Exp $
+# $NetBSD: options.mk,v 1.7 2014/10/28 02:20:26 mef Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.audacious-plugins
 PKG_SUPPORTED_OPTIONS=	arts esound inet6 jack midi pulseaudio sid
-PKG_SUGGESTED_OPTIONS+=	inet6 pulseaudio
+PKG_SUGGESTED_OPTIONS+=	inet6 pulseaudio jack arts
 
 .include "../../mk/bsd.options.mk"
 
