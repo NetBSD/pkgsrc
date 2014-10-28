@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/03/03 03:30:53 obache Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/28 02:08:38 cheusov Exp $
 #
 
 PKGNAME=	osabi-${OPSYS}-${OS_VERSION}
@@ -9,6 +9,6 @@ HOMEPAGE=	http://www.pkgsrc.org/
 COMMENT=	Operating System version dummy-package
 
 META_PACKAGE=	yes
-FILES_SUBST+=	UNAME=${UNAME:Q}
+FILES_SUBST+=	UNAME=${UNAME:Q} PKG_ADMIN=${PKG_ADMIN:Q}
 
 .include "../../mk/bsd.pkg.mk"
