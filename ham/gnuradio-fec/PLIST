@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/10/28 09:07:34 mef Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/10/28 16:59:33 mef Exp $
 include/gnuradio/fec/api.h
 include/gnuradio/fec/async_decoder.h
 include/gnuradio/fec/async_encoder.h
@@ -27,7 +27,7 @@ include/gnuradio/fec/viterbi.h
 include/gnuradio/swig/fec_swig.i
 include/gnuradio/swig/fec_swig_doc.i
 lib/libgnuradio-fec.so
-lib/libgnuradio-fec.so.${PKGVERSION_NOREV}
+lib/libgnuradio-fec.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-fec.pc
 ${PYSITELIB}/gnuradio/fec/__init__.py
 ${PYSITELIB}/gnuradio/fec/__init__.pyc
@@ -72,7 +72,7 @@ ${PYSITELIB}/gnuradio/fec/threaded_decoder.pyo
 ${PYSITELIB}/gnuradio/fec/threaded_encoder.py
 ${PYSITELIB}/gnuradio/fec/threaded_encoder.pyc
 ${PYSITELIB}/gnuradio/fec/threaded_encoder.pyo
-share/doc/gnuradio-${PKGVERSION_NOREV}/README.fec
+share/doc/gnuradio-${PKGVERSION}/README.fec
 share/gnuradio/examples/fec/ber_curve_gen.grc
 share/gnuradio/examples/fec/ber_test.grc
 share/gnuradio/examples/fec/fecapi_async_decoders.grc
