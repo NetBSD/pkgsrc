@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2014/10/13 12:51:10 mef Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/10/28 09:07:35 mef Exp $
 include/gnuradio/swig/wxgui_swig.i
 include/gnuradio/swig/wxgui_swig_doc.i
 include/gnuradio/wxgui/api.h
@@ -8,7 +8,7 @@ include/gnuradio/wxgui/oscope_sink_f.h
 include/gnuradio/wxgui/oscope_sink_x.h
 include/gnuradio/wxgui/trigger_mode.h
 lib/libgnuradio-wxgui.so
-lib/libgnuradio-wxgui.so.${PKGVERSION}
+lib/libgnuradio-wxgui.so.${PKGVERSION_NOREV}
 lib/pkgconfig/gr-wxgui.pc
 ${PYSITELIB}/gnuradio/wxgui/__init__.py
 ${PYSITELIB}/gnuradio/wxgui/__init__.pyc
