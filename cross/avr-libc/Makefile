@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2014/09/22 11:50:30 joerg Exp $
+# $NetBSD: Makefile,v 1.36 2014/10/28 00:26:56 mef Exp $
 
-DISTNAME=		avr-libc-1.8.0
-PKGREVISION=		6
+DISTNAME=		avr-libc-1.8.1
 CATEGORIES=		cross
 MASTER_SITES=		http://savannah.nongnu.org/download/avr-libc/
 EXTRACT_SUFX=		.tar.bz2
@@ -23,6 +22,8 @@ CONFIGURE_ARGS+=	--build=${MACHINE_GNU_PLATFORM:Q}
 CONFIGURE_ARGS+=	--host=avr
 CONFIGURE_ARGS+=	--enable-doc
 CONFIGURE_ARGS+=	--disable-versioned-doc
+CONFIGURE_ARGS+=	CC=${PREFIX}/bin/avr-gcc
+CONFIGURE_ARGS+=	CPPFLAGS="-I${PREFIX}/include -I${PREFIX}/avr/include"
 
 #   In doc/examples/demo directory, we have sample Makefile both for
 #   generating *.hex file at pkg installation time, and for installing
@@ -62,9 +63,5 @@ post-install:
 .include "../../cross/avr-gcc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
-# XXX: very evil hack to override CC, doing it via CONFIGURE_ENV doesn't work.
-#MAKE_ENV+=		CC=${PREFIX}/bin/avr-gcc
-#MAKE_ENV is overwritten by CC=gcc in ALL_ENV
-ALL_ENV+= CC=${PREFIX}/bin/avr-gcc
 # Not to be overridden as --mandir=${PREFIX}, put the line here.
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/share/doc/avr-libc/man
