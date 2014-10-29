@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4071 2014/10/29 17:22:48 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4072 2014/10/29 17:24:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5137,3 +5137,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/boehm-gc to 7.4.2nb1 [wiz 2014-10-29]
 	Added math/libshorttext version 1.1 [cheusov 2014-10-29]
 	Updated textproc/p5-XML-LibXML to 2.0117 [wiz 2014-10-29]
+	Updated time/p5-DateTime-TimeZone to 1.76 [wiz 2014-10-29]
