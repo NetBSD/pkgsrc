@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2014/10/29 17:06:40 cheusov Exp $
+
+SHA1 (libshorttext-1.1.tar.gz) = 2d9705195682fa1f25de30bd66711685f974a8c0
+RMD160 (libshorttext-1.1.tar.gz) = 569d2f2a64f8fc311766b08cbef7086e1340ce55
+Size (libshorttext-1.1.tar.gz) = 817775 bytes
+SHA1 (patch-text-train.py) = 6b99bdfcfd69a9d7e83cafc852202dc23485dfeb
