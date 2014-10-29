@@ -1,0 +1,11 @@
+$NetBSD: patch-lib_crf_Makefile.am,v 1.1.1.1 2014/10/29 23:13:21 cheusov Exp $
+
+# Adapted for recent autoconf and automake
+--- lib/crf/Makefile.am.orig	2011-08-11 03:02:41.000000000 +0000
++++ lib/crf/Makefile.am
+@@ -43,4 +43,4 @@ libcrfsuite_la_LIBADD = \
+ 	$(top_builddir)/lib/cqdb/libcqdb.la
+ 
+ AM_CFLAGS = @CFLAGS@
+-INCLUDES = @INCLUDES@
++AM_CPPFLAGS = @INCLUDES@
