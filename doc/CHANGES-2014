@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4063 2014/10/29 09:20:40 prlw1 Exp $
+$NetBSD: CHANGES-2014,v 1.4064 2014/10/29 09:32:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5129,3 +5129,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/nasm to 2.11.06 [wen 2014-10-29]
 	Updated devel/p5-Module-CoreList to 5.20141020 [wen 2014-10-29]
 	Renamed lang/vala to lang/vala012 [prlw1 2014-10-29]
+	Updated www/squidanalyzer to 6.1 [adam 2014-10-29]
