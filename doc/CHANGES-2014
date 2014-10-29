@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4073 2014/10/29 22:13:56 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.4074 2014/10/29 23:10:41 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5139,3 +5139,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/p5-XML-LibXML to 2.0117 [wiz 2014-10-29]
 	Updated time/p5-DateTime-TimeZone to 1.76 [wiz 2014-10-29]
 	Updated www/firefox to 33.0.1nb1 [ryoon 2014-10-29]
+	Added math/liblbfgs version 1.10 [cheusov 2014-10-29]
