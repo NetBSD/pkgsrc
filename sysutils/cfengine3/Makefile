@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2014/02/12 23:18:38 tron Exp $
+# $NetBSD: Makefile,v 1.12 2014/10/29 11:03:31 pettai Exp $
 #
 
-DISTNAME=	cfengine-3.4.2
-PKGREVISION=	2
+DISTNAME=	cfengine-3.4.5
 CATEGORIES=	sysutils
-MASTER_SITES=	http://cfengine.com/source-code/download?file=
+MASTER_SITES=	http://cfengine.package-repos.s3.amazonaws.com/tarballs/
 
 MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://cfengine.com/pages/community
