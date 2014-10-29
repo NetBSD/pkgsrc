@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2014/09/14 16:45:54 wiz Exp $
+# $NetBSD: Makefile,v 1.40.2.1 2014/10/29 20:11:31 tron Exp $
 
 DISTNAME=	libgpg-error-1.15
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libgpg-error/ \
 		ftp://ftp.ring.gr.jp/pub/net/gnupg/libgpg-error/ \
@@ -33,7 +34,7 @@ CONFIGURE_ENV+=		CC_FOR_BUILD=${CC:Q}\ ${CFLAGS:M*:Q}
 
 # XXX See HACKS
 .if ${OPSYS} == "IRIX" || !empty(MACHINE_PLATFORM:MNetBSD-[3-9]*)
-USE_TOOLS+=		nawk
+USE_TOOLS+=		awk
 .else
 USE_TOOLS+=		gawk
 .endif
