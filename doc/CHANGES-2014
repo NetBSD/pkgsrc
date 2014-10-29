@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4069 2014/10/29 17:01:18 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4070 2014/10/29 17:06:52 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5135,3 +5135,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/py-peewee to 2.4.1 [fhajny 2014-10-29]
 	Updated sysutils/cfengine3 to 3.4.5 [pettai 2014-10-29]
 	Updated devel/boehm-gc to 7.4.2nb1 [wiz 2014-10-29]
+	Added math/libshorttext version 1.1 [cheusov 2014-10-29]
