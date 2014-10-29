@@ -1,4 +1,4 @@
-$NetBSD: patch-src_searchd.cpp,v 1.2 2014/10/17 17:28:15 fhajny Exp $
+$NetBSD: patch-src_searchd.cpp,v 1.3 2014/10/29 13:49:02 fhajny Exp $
 
 Avoid hard-coded paths.
 
@@ -9,7 +9,7 @@ Avoid hard-coded paths.
  		"\n"
  		"Examples:\n"
 -		"searchd --config /usr/local/sphinx/etc/sphinx.conf\n"
-+		"searchd --config /opt/local/etc/sphinx.conf\n"
++		"searchd --config @PKG_SYSCONFDIR@/sphinx.conf\n"
  #if USE_WINDOWS
  		"searchd --install --config c:\\sphinx\\sphinx.conf\n"
  #endif
