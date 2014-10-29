@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.299 2014/10/19 16:48:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.300 2014/10/29 17:09:39 cheusov Exp $
 
 COMMENT=	Mathematics
 
@@ -133,6 +133,7 @@ SUBDIR+=	libffm
 SUBDIR+=	libint
 SUBDIR+=	liblinear
 SUBDIR+=	libmatheval
+SUBDIR+=	libshorttext
 SUBDIR+=	libsvm
 SUBDIR+=	linpack
 SUBDIR+=	lp_solve
