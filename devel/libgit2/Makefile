@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/10/01 13:12:31 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2014/10/29 14:13:27 fhajny Exp $
 
 DISTNAME=	v0.21.1
 PKGNAME=	libgit2-${DISTNAME:S/v//1}
@@ -15,6 +15,8 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 EXTRACT_USING=	bsdtar
 USE_TOOLS+=	pkg-config
 USE_CMAKE=	yes
+
+CMAKE_ARGS+=	-DUSE_SSH=OFF
 
 PKGCONFIG_OVERRIDE+=	libgit2.pc.in
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.21.1
