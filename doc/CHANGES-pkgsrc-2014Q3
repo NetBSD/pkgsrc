@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.9 2014/10/25 16:16:28 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.10 2014/10/29 20:11:48 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q3 branch:
@@ -45,3 +45,5 @@ Pullup ticket #4528 - requested by taca
 www/typo3_47: security update
 Pullup ticket #4529 - requested by take
 www/typo3_61: security update
+Pullup ticket #4531 - requested by he
+security/libgpg-error: bug fix patch
