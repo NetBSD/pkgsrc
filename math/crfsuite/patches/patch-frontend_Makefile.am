@@ -1,0 +1,14 @@
+$NetBSD: patch-frontend_Makefile.am,v 1.1.1.1 2014/10/29 23:13:21 cheusov Exp $
+
+# Adapted for recent autoconf and automake
+--- frontend/Makefile.am.orig	2011-08-11 03:02:41.000000000 +0000
++++ frontend/Makefile.am
+@@ -22,7 +22,7 @@ crfsuite_SOURCES = \
+ #crfsuite_CPPFLAGS =
+ 
+ AM_CFLAGS = @CFLAGS@
+-INCLUDES = @INCLUDES@
++AM_CPPFLAGS = @INCLUDES@
+ AM_LDFLAGS = @LDFLAGS@
+ 
+ crfsuite_CFLAGS = -I$(top_builddir)/include

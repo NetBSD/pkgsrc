@@ -1,0 +1,9 @@
+CRFSuite is an implementation of Conditional Random Fields (CRFs) for
+labeling sequential data. The first priority of this software is to
+train and use CRF models as fast as possible even at the expense of
+its memory space and code generality. CRFsuite runs 5.4 - 61.8 times
+faster than C++ implementations for training. CRFsuite supports
+parameter estimation with L1 regularization (Laplacian prior) using
+Orthant-Wise Limited-memory Quasi-Newton (OW-LQN) method and L2
+regularization (Gaussian prior) using Limited-memory BFGS (L-BFGS)
+method.
