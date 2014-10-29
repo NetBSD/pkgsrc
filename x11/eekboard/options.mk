@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2013/10/23 12:27:26 obache Exp $
+# $NetBSD: options.mk,v 1.5 2014/10/29 09:18:50 prlw1 Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.eekboard
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--enable-introspection=no
 
 .if !empty(PKG_OPTIONS:Mvala)
 PLIST.vala=	yes
-.include "../../lang/vala/buildlink3.mk"
+.include "../../lang/vala012/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-vala=yes
 .else
 CONFIGURE_ARGS+=	--enable-vala=no
