@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/10/17 10:24:04 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/10/29 13:13:38 fhajny Exp $
 bin/pwiz.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -20,6 +20,15 @@ ${PYSITELIB}/playhouse/berkeleydb.pyo
 ${PYSITELIB}/playhouse/csv_loader.py
 ${PYSITELIB}/playhouse/csv_loader.pyc
 ${PYSITELIB}/playhouse/csv_loader.pyo
+${PYSITELIB}/playhouse/csv_utils.py
+${PYSITELIB}/playhouse/csv_utils.pyc
+${PYSITELIB}/playhouse/csv_utils.pyo
+${PYSITELIB}/playhouse/dataset.py
+${PYSITELIB}/playhouse/dataset.pyc
+${PYSITELIB}/playhouse/dataset.pyo
+${PYSITELIB}/playhouse/db_url.py
+${PYSITELIB}/playhouse/db_url.pyc
+${PYSITELIB}/playhouse/db_url.pyo
 ${PYSITELIB}/playhouse/djpeewee.py
 ${PYSITELIB}/playhouse/djpeewee.pyc
 ${PYSITELIB}/playhouse/djpeewee.pyo
@@ -44,6 +53,9 @@ ${PYSITELIB}/playhouse/proxy.pyo
 ${PYSITELIB}/playhouse/read_slave.py
 ${PYSITELIB}/playhouse/read_slave.pyc
 ${PYSITELIB}/playhouse/read_slave.pyo
+${PYSITELIB}/playhouse/reflection.py
+${PYSITELIB}/playhouse/reflection.pyc
+${PYSITELIB}/playhouse/reflection.pyo
 ${PYSITELIB}/playhouse/shortcuts.py
 ${PYSITELIB}/playhouse/shortcuts.pyc
 ${PYSITELIB}/playhouse/shortcuts.pyo
@@ -65,9 +77,15 @@ ${PYSITELIB}/playhouse/tests_apsw.pyo
 ${PYSITELIB}/playhouse/tests_berkeleydb.py
 ${PYSITELIB}/playhouse/tests_berkeleydb.pyc
 ${PYSITELIB}/playhouse/tests_berkeleydb.pyo
-${PYSITELIB}/playhouse/tests_csv_loader.py
-${PYSITELIB}/playhouse/tests_csv_loader.pyc
-${PYSITELIB}/playhouse/tests_csv_loader.pyo
+${PYSITELIB}/playhouse/tests_csv_utils.py
+${PYSITELIB}/playhouse/tests_csv_utils.pyc
+${PYSITELIB}/playhouse/tests_csv_utils.pyo
+${PYSITELIB}/playhouse/tests_dataset.py
+${PYSITELIB}/playhouse/tests_dataset.pyc
+${PYSITELIB}/playhouse/tests_dataset.pyo
+${PYSITELIB}/playhouse/tests_db_url.py
+${PYSITELIB}/playhouse/tests_db_url.pyc
+${PYSITELIB}/playhouse/tests_db_url.pyo
 ${PYSITELIB}/playhouse/tests_djpeewee.py
 ${PYSITELIB}/playhouse/tests_djpeewee.pyc
 ${PYSITELIB}/playhouse/tests_djpeewee.pyo
@@ -92,6 +110,9 @@ ${PYSITELIB}/playhouse/tests_pwiz.pyo
 ${PYSITELIB}/playhouse/tests_read_slave.py
 ${PYSITELIB}/playhouse/tests_read_slave.pyc
 ${PYSITELIB}/playhouse/tests_read_slave.pyo
+${PYSITELIB}/playhouse/tests_reflection.py
+${PYSITELIB}/playhouse/tests_reflection.pyc
+${PYSITELIB}/playhouse/tests_reflection.pyo
 ${PYSITELIB}/playhouse/tests_shortcuts.py
 ${PYSITELIB}/playhouse/tests_shortcuts.pyc
 ${PYSITELIB}/playhouse/tests_shortcuts.pyo
