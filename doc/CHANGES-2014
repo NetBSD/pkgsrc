@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4061 2014/10/29 08:11:39 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4062 2014/10/29 08:34:32 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5127,3 +5127,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/opendnssec to 1.4.6nb2 [he 2014-10-28]
 	Updated www/firefox to 33.0.1 [ryoon 2014-10-28]
 	Updated devel/nasm to 2.11.06 [wen 2014-10-29]
+	Updated devel/p5-Module-CoreList to 5.20141020 [wen 2014-10-29]
