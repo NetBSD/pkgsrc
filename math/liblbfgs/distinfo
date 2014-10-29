@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2014/10/29 23:10:29 cheusov Exp $
+
+SHA1 (liblbfgs-1.10.tar.gz) = fde08e7b842cd125364cb9db9d66fd61dcf37d21
+RMD160 (liblbfgs-1.10.tar.gz) = bd1bbbd1fb3c708f33e89b600b65bd0ff052a7b0
+Size (liblbfgs-1.10.tar.gz) = 318739 bytes
