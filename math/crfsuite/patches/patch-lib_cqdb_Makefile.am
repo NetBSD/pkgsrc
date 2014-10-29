@@ -1,0 +1,11 @@
+$NetBSD: patch-lib_cqdb_Makefile.am,v 1.1.1.1 2014/10/29 23:13:21 cheusov Exp $
+
+# Adapted for recent autoconf and automake
+--- lib/cqdb/Makefile.am.orig	2011-08-11 03:02:41.000000000 +0000
++++ lib/cqdb/Makefile.am
+@@ -18,4 +18,4 @@ libcqdb_la_LDFLAGS = \
+ libcqdb_la_CFLAGS = -I./include
+ 
+ AM_CFLAGS = @CFLAGS@
+-INCLUDES = @INCLUDES@
++AM_CPPFLAGS = @INCLUDES@

@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2014/10/29 23:13:21 cheusov Exp $
+
+SHA1 (crfsuite/0.12.tar.gz) = f121cee029613c64c32056f68710c69f28347238
+RMD160 (crfsuite/0.12.tar.gz) = 10e6abffbca2b05229b292e324533eab59742f22
+Size (crfsuite/0.12.tar.gz) = 256160 bytes
+SHA1 (patch-configure.in) = 7c7bc744d32509a354e699e6120db76083db3529
+SHA1 (patch-frontend_Makefile.am) = 9ab46935cf7ff0147d138bd5425769dbc3aa9246
+SHA1 (patch-lib_cqdb_Makefile.am) = eb7d78cea673193e2b9910c77f9f7602f7ec61ae
+SHA1 (patch-lib_crf_Makefile.am) = 1ed872381c404a7ab15f67360a76954d2d58a18d
