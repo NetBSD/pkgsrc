@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13795 2014/10/28 13:17:44 wiz Exp $
+$NetBSD: TODO,v 1.13796 2014/10/29 23:19:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -343,8 +343,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o TiffIO-130e
 	o XaoS-3.6 [pkg/48836]
 	o YoSucker-81
-	o abcm2ps-7.8.3
-	o abcmidi-20140120
+	o abcm2ps-7.8.9
+	o abcmidi-20141016
 	o abiword-3.0
 	o acpica-utils-20110623
 	o adocman-0.13
@@ -381,6 +381,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o asc-2.6.0
 	o aspell-nb-2.0.10
 	o asymptote-2.32
+	o at-spi2-atk-3.14.1
 	o aterm-1.0.1
 	o aubio-0.4.0
 	o audacity-2.0.5 [wip (audacity-devel)]
@@ -588,8 +589,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glu-10.3.2
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-3.14
-	o gnome-applets-3.8.0
+	o gnome-3.14.1
+	o gnome-applets-3.14.0
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-chess-3.12.3
 	o gnome-color-manager-2.32.0 [GNOME 2.32]
@@ -607,7 +608,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnome-nettool-3.8.1
 	o gnome-packagekit-2.32.0 [GNOME 2.32]
 	o gnome-packagekit-3.2.1
-	o gnome-panel-3.8.1
+	o gnome-panel-3.14.0
 	o gnome-pilot-2.32.1 [GNOME 2.32]
 	o gnome-pilot-conduits-2.32.1 [GNOME 2.32]
 	o gnome-power-manager-2.32.0 [GNOME 2.32, wants DeviceKit-power]
@@ -734,7 +735,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libfolks-0.10.0
 	o libgdata-0.16.0
 	o libgdiplus-3.0
-	o libgee-0.16.0
+	o libgee-0.16.1
 	o libgiigic-1.1.2
 	o libgnome-keyring-3.12.0
 	o libgnomedb-3.1.2
@@ -790,7 +791,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mednafen-0.9.36.4
 	o mergeant-0.67
 	o mesure-0.7.2
-	o metacity-3.12.0
+	o metacity-3.14.2
 	o metis-5.1.0
 	o mgetty+sendfax-1.1.35
 	o midori-0.5.8
@@ -832,6 +833,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o netramet-50
 	o nettle-3.0 [breaks gnutls-3.2.15, wait for newer version]
 	o newmail-1.0.2
+	o nfdump-1.6.12 [pkg/49332]
 	o nginx-devel-1.7.0
 	o nikto-2.0.1
 	o ns-3.14.1
@@ -886,6 +888,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o php-tiki6-6.10
 	o php-tt-rss-1.14
 	o picp-0.6.8
+	o pidgin-2.10.10
 	o pim6dd-20040819a
 	o pim6sd-20040824a
 	o pinfo-0.6.10
@@ -1132,6 +1135,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
 	o webalizer-2.23.05
+	o webkit-gtk-2.4.7
 	o webkit-gtk-2.6.2
 	o webmin-1.690
 	o websvn-2.3.2
