@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2014/05/09 07:37:04 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2014/10/29 09:18:50 prlw1 Exp $
 
 DISTNAME=	valide-0.4.0
-PKGREVISION=	24
+PKGREVISION=	25
 CATEGORIES=	devel
 MASTER_SITES=	http://valide.googlecode.com/files/
 
@@ -35,7 +35,7 @@ do-install:
 	cd ${WRKSRC} && env ${WAF_ENV} ./waf install
 
 .include "../../lang/python/application.mk"
-.include "../../lang/vala/buildlink3.mk"
+.include "../../lang/vala012/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtksourceview2/buildlink3.mk"
