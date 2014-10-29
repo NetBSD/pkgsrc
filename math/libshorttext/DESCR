@@ -1,0 +1,12 @@
+LibShortText is an open source tool for short-text classification and
+analysis. It can handle the classification of, for example, titles,
+questions, sentences, and short messages. Main features of
+LibShortText include
+  * It is more efficient than general text-mining packages. On a
+    typical computer, processing and training 10 million short texts
+    takes only around half an hour.
+  * The fast training and testing is built upon the linear classifier LIBLINEAR
+  * Default options often work well without tedious tuning.
+  * An interactive tool for error analysis is included. Based on the
+    property that each short text contains few words, LibShortText
+    provides details in predicting each text.
