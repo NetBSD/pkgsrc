@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2014/10/30 13:50:41 fhajny Exp $
+bin/activate-global-python-argcomplete
+bin/python-argcomplete-check-easy-install-script
+bin/register-python-argcomplete
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/argcomplete/__init__.py
+${PYSITELIB}/argcomplete/__init__.pyc
+${PYSITELIB}/argcomplete/__init__.pyo
+${PYSITELIB}/argcomplete/bash_completion.d/python-argcomplete.sh
+${PYSITELIB}/argcomplete/completers.py
+${PYSITELIB}/argcomplete/completers.pyc
+${PYSITELIB}/argcomplete/completers.pyo
+${PYSITELIB}/argcomplete/my_argparse.py
+${PYSITELIB}/argcomplete/my_argparse.pyc
+${PYSITELIB}/argcomplete/my_argparse.pyo
+${PYSITELIB}/argcomplete/my_shlex.py
+${PYSITELIB}/argcomplete/my_shlex.pyc
+${PYSITELIB}/argcomplete/my_shlex.pyo

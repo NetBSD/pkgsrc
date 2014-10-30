@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/10/30 13:50:41 fhajny Exp $
+
+SHA1 (argcomplete-0.8.1.tar.gz) = cb137d87c2060c55a550e52e0c2511c462b9fdc0
+RMD160 (argcomplete-0.8.1.tar.gz) = e459effaf7c4053dac716c20c1993a00da2f2e29
+Size (argcomplete-0.8.1.tar.gz) = 30272 bytes
