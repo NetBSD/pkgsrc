@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4077 2014/10/30 11:51:49 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.4078 2014/10/30 13:18:16 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5143,3 +5143,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added math/crfsuite version 0.12 [cheusov 2014-10-29]
 	Updated devel/rudiments to 0.48 [fhajny 2014-10-30]
 	Updated databases/sqlrelay to 0.57 [fhajny 2014-10-30]
+	Updated net/nagios-nrpe to 2.15 [gdt 2014-10-30]
