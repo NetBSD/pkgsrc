@@ -1,7 +1,7 @@
-$NetBSD: patch-bridges_source_cpp__uno_gcc3__linux__x86-64_share.hxx,v 1.9 2014/10/28 17:25:07 ryoon Exp $
+$NetBSD: patch-bridges_source_cpp__uno_gcc3__linux__x86-64_share.hxx,v 1.10 2014/10/30 16:45:39 ryoon Exp $
 
---- /usr/tmp/pkgsrc/misc/libreoffice4/work/libreoffice-4.3.2.2/bridges/source/cpp_uno/gcc3_linux_x86-64/share.hxx.orig	2014-09-16 20:10:41.000000000 +0000
-+++ /usr/tmp/pkgsrc/misc/libreoffice4/work/libreoffice-4.3.2.2/bridges/source/cpp_uno/gcc3_linux_x86-64/share.hxx
+--- bridges/source/cpp_uno/gcc3_linux_x86-64/share.hxx.orig	2014-09-16 20:10:41.000000000 +0000
++++ bridges/source/cpp_uno/gcc3_linux_x86-64/share.hxx
 @@ -31,6 +31,25 @@
  #include "config_gcc.h"
  #include "uno/mapping.h"
