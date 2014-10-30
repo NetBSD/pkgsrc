@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/19 07:23:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/30 21:54:03 mef Exp $
 
 DISTNAME=	binutils-2.24
 PKGNAME=	cross-freemint-${DISTNAME}
@@ -29,6 +29,15 @@ CONFIGURE_ARGS+=	--disable-werror --target=m68k-atari-mint
 INFO_FILES=		yes
 
 INSTALLATION_DIRS+=	bin ${FREEMINT_PREFIX}
+
+# follows to devel/binutils
+# PR pkg/48504, ksh is sufficient for NetBSD 5.2 and NetBSD 6.1
+.include "../../mk/bsd.prefs.mk"
+.if !empty(MACHINE_PLATFORM:MNetBSD-[5-6].*-*) && \
+	empty(MACHINE_PLATFORM:MNetBSD-6.99.*-*)
+USE_TOOLS+=		ksh
+CONFIG_SHELL=		ksh
+.endif
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
