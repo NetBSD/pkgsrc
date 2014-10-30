@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2014/10/23 10:25:11 mef Exp $
+# $NetBSD: Makefile,v 1.26 2014/10/30 21:41:57 mef Exp $
 
 DISTNAME=		binutils-2.24
 PKGNAME=		${DISTNAME:S/^/avr-/}
@@ -16,9 +16,15 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GNU_CONFIGURE_HOST=	no
-# ./configure.lineno: 3239: Syntax error: Missing '}'
-# Makefile:2991: recipe for target 'configure-opcodes' failed
+
+# follows to devel/binutils
+# PR pkg/48504, ksh is sufficient for NetBSD 5.2 and NetBSD 6.1
+.include "../../mk/bsd.prefs.mk"
+.if !empty(MACHINE_PLATFORM:MNetBSD-[5-6].*-*) && \
+	empty(MACHINE_PLATFORM:MNetBSD-6.99.*-*)
+USE_TOOLS+=		ksh
 CONFIG_SHELL=		ksh
+.endif
 
 CONFIGURE_ARGS+=	--disable-werror --target=avr --disable-nls
 

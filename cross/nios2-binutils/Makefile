@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/10/23 10:30:10 mef Exp $
+# $NetBSD: Makefile,v 1.12 2014/10/30 21:48:47 mef Exp $
 
 DISTNAME=		binutils-2.24
 PKGNAME=		${DISTNAME:S/^/nios2-/}
@@ -20,9 +20,15 @@ GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GNU_CONFIGURE_HOST=	no
 INFO_FILES=		# empty
-# ./configure.lineno: 3239: Syntax error: Missing '}'
-# Makefile:2991: recipe for target 'configure-opcodes' failed
-CONFIG_SHELL=		ksh
+
+# follows to devel/binutils
+# PR pkg/48504, ksh is sufficient for NetBSD 5.2 and NetBSD 6.1
+.include "../../mk/bsd.prefs.mk"
+.if !empty(MACHINE_PLATFORM:MNetBSD-[5-6].*-*) && \
+       empty(MACHINE_PLATFORM:MNetBSD-6.99.*-*)
+USE_TOOLS+=	       ksh
+CONFIG_SHELL=	       ksh
+.endif
 
 NIOS2_TARGET=		nios2-elf
 CONFIGURE_ARGS+=	--disable-werror --target=${NIOS2_TARGET} --disable-nls
