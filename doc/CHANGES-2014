@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4079 2014/10/30 13:41:58 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.4080 2014/10/30 17:13:33 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5145,3 +5145,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/sqlrelay to 0.57 [fhajny 2014-10-30]
 	Updated net/nagios-nrpe to 2.15 [gdt 2014-10-30]
 	Added devel/py-argh version 0.26.0 [fhajny 2014-10-30]
+	Updated www/firefox to 33.0.2 [ryoon 2014-10-30]
