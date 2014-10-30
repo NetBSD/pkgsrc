@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2012/12/06 00:10:26 gdt Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2014/10/30 23:34:52 wiz Exp $
 
 BUILDLINK_TREE+=	libunistring
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libunistring
 LIBUNISTRING_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libunistring+=	libunistring>=0.9.3
+BUILDLINK_ABI_DEPENDS.libunistring?=	libunistring>=0.9.4
 BUILDLINK_PKGSRCDIR.libunistring?=	../../textproc/libunistring
 
 .endif	# LIBUNISTRING_BUILDLINK3_MK
