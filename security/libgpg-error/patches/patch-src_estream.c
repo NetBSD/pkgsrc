@@ -1,9 +1,11 @@
-$NetBSD: patch-src_estream.c,v 1.1 2014/10/29 12:28:50 he Exp $
+$NetBSD: patch-src_estream.c,v 1.2 2014/10/30 14:30:35 wiz Exp $
 
 Don't use atexit(), since this library mey be dlopen()ed
 and dlclose()d before exit() is called.
 
 Instead mark the do_deinit() function as a destructor.
+
+https://bugs.g10code.com/gnupg/issue1749
 
 --- src/estream.c.orig	2014-09-11 09:38:21.000000000 +0000
 +++ src/estream.c
