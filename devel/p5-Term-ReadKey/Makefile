@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2014/10/09 14:06:27 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2014/10/30 13:48:50 wiz Exp $
 
 VERS=		2.32
 DISTNAME=	TermReadKey-${VERS}
@@ -13,6 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/Term/ReadKey/.packlist
+MAKE_JOBS_SAFE=		no
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
