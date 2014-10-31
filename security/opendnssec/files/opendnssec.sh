@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: opendnssec.sh,v 1.1 2014/10/28 13:26:37 he Exp $
+# $NetBSD: opendnssec.sh,v 1.2 2014/10/31 16:32:39 he Exp $
 #
 
 # PROVIDE: opendnssec
@@ -85,9 +85,8 @@ ods_stop () {
 		echo 1>&2 "$signer not running (no $signerd_pidfile file)"
 		rv=$(($rv + 1))
 	fi
-	if [ $rv != 0 ]; then
-		exit $rv
-	fi
+
+# Ignore warnings, so that we can stop or restart if one component has crashed
 
 	$ods_control stop
 
