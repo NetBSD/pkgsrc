@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4085 2014/10/31 16:33:21 he Exp $
+$NetBSD: CHANGES-2014,v 1.4086 2014/10/31 21:15:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5155,3 +5155,8 @@ Changes to the packages collection and infrastructure in 2014:
 	Removed lang/gcc48-fortran [ryoon 2014-10-31]
 	Removed lang/gcc48-objc [ryoon 2014-10-31]
 	Updated security/opendnssec to 1.4.6nb3 [he 2014-10-31]
+	Updated lang/tcl to 8.6.2 [adam 2014-10-13]
+	Updated x11/tk to 8.6.2 [adam 2014-10-13]
+	Updated databases/sqlite3 to 3.8.7.1 [adam 2014-10-31]
+	Updated databases/sqlite3-docs to 3.8.7.1 [adam 2014-10-31]
+	Updated databases/sqlite3-tcl to 3.8.7.1 [adam 2014-10-31]
