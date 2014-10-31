@@ -1,11 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.8 2014/05/31 13:06:25 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2014/10/31 14:22:20 ryoon Exp $
 
 BUILDLINK_TREE+=	gcc48-libs
 
 .if !defined(GCC48_LIBS_BUILDLINK3_MK)
 GCC48_LIBS_BUILDLINK3_MK:=
 
+.if !empty(USE_PKGSRC_GCC_RUNTIME:M[Yy][Ee][Ss])
 BUILDLINK_API_DEPENDS.gcc48-libs+=	gcc48-libs>=4.8.0
+.else
+BUILDLINK_API_DEPENDS.gcc48-libs+=	{gcc48,gcc48-libs}>=4.8.0
+.endif
 BUILDLINK_PKGSRCDIR.gcc48-libs=		../../lang/gcc48-libs
 BUILDLINK_DEPMETHOD.gcc48-libs?=	full
 
