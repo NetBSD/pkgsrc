@@ -1,8 +1,8 @@
-/*	$NetBSD: complete.c,v 1.1.1.4 2007/08/06 04:33:23 lukem Exp $	*/
-/*	from	NetBSD: complete.c,v 1.42 2007/04/17 05:52:03 lukem Exp	*/
+/*	$NetBSD: complete.c,v 1.1.1.5 2014/10/31 18:47:19 spz Exp $	*/
+/*	from	NetBSD: complete.c,v 1.46 2009/04/12 10:18:52 lukem Exp	*/
 
 /*-
- * Copyright (c) 1997-2000,2005 The NetBSD Foundation, Inc.
+ * Copyright (c) 1997-2009 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -16,13 +16,6 @@
  * 2. Redistributions in binary form must reproduce the above copyright
  *    notice, this list of conditions and the following disclaimer in the
  *    documentation and/or other materials provided with the distribution.
- * 3. All advertising materials mentioning features or use of this software
- *    must display the following acknowledgement:
- *	This product includes software developed by the NetBSD
- *	Foundation, Inc. and its contributors.
- * 4. Neither the name of The NetBSD Foundation nor the names of its
- *    contributors may be used to endorse or promote products derived
- *    from this software without specific prior written permission.
  *
  * THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
  * ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
@@ -43,7 +36,7 @@
 
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID(" NetBSD: complete.c,v 1.42 2007/04/17 05:52:03 lukem Exp  ");
+__RCSID(" NetBSD: complete.c,v 1.46 2009/04/12 10:18:52 lukem Exp  ");
 #endif /* not lint */
 
 /*
@@ -94,7 +87,7 @@ complete_ambiguous(char *word, int list, StringList *words)
 {
 	char insertstr[MAXPATHLEN];
 	char *lastmatch, *p;
-	int i, j;
+	size_t i, j;
 	size_t matchlen, wordlen;
 
 	wordlen = strlen(word);
@@ -157,7 +150,7 @@ complete_command(char *word, int list)
 		if (wordlen > strlen(c->c_name))
 			continue;
 		if (strncmp(word, c->c_name, wordlen) == 0)
-			ftp_sl_add(words, c->c_name);
+			ftp_sl_add(words, ftp_strdup(c->c_name));
 	}
 
 	rv = complete_ambiguous(word, list, words);
@@ -165,7 +158,7 @@ complete_command(char *word, int list)
 		if (el_insertstr(el, " ") == -1)
 			rv = CC_ERROR;
 	}
-	sl_free(words, 0);
+	sl_free(words, 1);
 	return (rv);
 }
 
@@ -269,7 +262,7 @@ complete_option(char *word, int list)
 		if (wordlen > strlen(o->name))
 			continue;
 		if (strncmp(word, o->name, wordlen) == 0)
-			ftp_sl_add(words, o->name);
+			ftp_sl_add(words, ftp_strdup(o->name));
 	}
 
 	rv = complete_ambiguous(word, list, words);
@@ -277,7 +270,7 @@ complete_option(char *word, int list)
 		if (el_insertstr(el, " ") == -1)
 			rv = CC_ERROR;
 	}
-	sl_free(words, 0);
+	sl_free(words, 1);
 	return (rv);
 }
 
@@ -292,10 +285,13 @@ complete_remote(char *word, int list)
 	StringList	*words;
 	char		 dir[MAXPATHLEN];
 	char		*file, *cp;
-	int		 i;
+	size_t		 i;
 	unsigned char	 rv;
+	char		 cmdbuf[MAX_C_NAME];
+	char		*dummyargv[3] = { NULL, NULL, NULL };
 
-	char *dummyargv[] = { "complete", NULL, NULL };
+	(void)strlcpy(cmdbuf, "complete", sizeof(cmdbuf));
+	dummyargv[0] = cmdbuf;
 	dummyargv[1] = dir;
 
 	if ((file = strrchr(word, '/')) == NULL) {
@@ -361,17 +357,17 @@ complete_remote(char *word, int list)
  * Generic complete routine
  */
 unsigned char
-complete(EditLine *el, int ch)
+complete(EditLine *cel, int ch)
 {
 	static char word[FTPBUFLEN];
-	static int lastc_argc, lastc_argo;
+	static size_t lastc_argc, lastc_argo;
 
 	struct cmd *c;
 	const LineInfo *lf;
-	int celems, dolist, cmpltype;
-	size_t len;
+	int dolist, cmpltype;
+	size_t celems, len;
 
-	lf = el_line(el);
+	lf = el_line(cel);
 	len = lf->lastchar - lf->buffer;
 	if (len >= sizeof(line))
 		return (CC_ERROR);
@@ -390,7 +386,7 @@ complete(EditLine *el, int ch)
 	    && strncmp(word, margv[cursor_argc] ? margv[cursor_argc] : "",
 			cursor_argo) == 0)
 		dolist = 1;
-	else if (cursor_argc < margc)
+	else if (cursor_argc < (size_t)margc)
 		(void)strlcpy(word, margv[cursor_argc], cursor_argo + 1);
 	word[cursor_argo] = '\0';
 
