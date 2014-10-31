@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4084 2014/10/31 14:26:19 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.4085 2014/10/31 16:33:21 he Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5154,3 +5154,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Removed lang/gcc48-cc++ [ryoon 2014-10-31]
 	Removed lang/gcc48-fortran [ryoon 2014-10-31]
 	Removed lang/gcc48-objc [ryoon 2014-10-31]
+	Updated security/opendnssec to 1.4.6nb3 [he 2014-10-31]
