@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4083 2014/10/31 09:51:34 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4084 2014/10/31 14:26:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5149,3 +5149,8 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/mediawiki to 1.23.6 [wen 2014-10-31]
 	Updated www/p5-Dancer2 to 0.153002 [wen 2014-10-31]
 	Updated finance/p5-Finance-Quote to 1.35nb1 [wiz 2014-10-31]
+	Updated lang/gcc48 to 4.8.3nb1 [ryoon 2014-10-31]
+	Updated lang/gcc48-libs to 4.8.3nb1 [ryoon 2014-10-31]
+	Removed lang/gcc48-cc++ [ryoon 2014-10-31]
+	Removed lang/gcc48-fortran [ryoon 2014-10-31]
+	Removed lang/gcc48-objc [ryoon 2014-10-31]
