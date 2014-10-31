@@ -1,4 +1,4 @@
-/*	$NetBSD: strtoll.c,v 1.4 2007/08/07 02:07:01 lukem Exp $	*/
+/*	$NetBSD: strtoll.c,v 1.5 2014/10/31 18:59:32 spz Exp $	*/
 /*	from	NetBSD: strtoll.c,v 1.6 2003/10/27 00:12:42 lukem Exp	*/
 
 /*-

@@ -1,4 +1,4 @@
-/*	$NetBSD: tokenizer.c,v 1.4 2007/08/07 02:06:58 lukem Exp $	*/
+/*	$NetBSD: tokenizer.c,v 1.5 2014/10/31 18:59:32 spz Exp $	*/
 /*	from	NetBSD: tokenizer.c,v 1.14 2003/12/05 13:37:48 lukem Exp	*/
 
 /*-
