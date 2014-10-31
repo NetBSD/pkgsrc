@@ -1,7 +1,8 @@
-/*	$NetBSD: version.h,v 1.1.1.6 2007/08/06 03:42:17 lukem Exp $	*/
-/*	from	NetBSD: version.h,v 1.69 2007/08/06 03:41:14 lukem Exp	*/
+/*	$NetBSD: version.h,v 1.1.1.7 2014/10/31 18:47:17 spz Exp $	*/
+/*	from	NetBSD: version.h,v 1.85 2014/10/31 03:27:18 lukem Exp	*/
+
 /*-
- * Copyright (c) 1999-2007 The NetBSD Foundation, Inc.
+ * Copyright (c) 1999-2009 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -15,13 +16,6 @@
  * 2. Redistributions in binary form must reproduce the above copyright
  *    notice, this list of conditions and the following disclaimer in the
  *    documentation and/or other materials provided with the distribution.
- * 3. All advertising materials mentioning features or use of this software
- *    must display the following acknowledgement:
- *	This product includes software developed by the NetBSD
- *	Foundation, Inc. and its contributors.
- * 4. Neither the name of The NetBSD Foundation nor the names of its
- *    contributors may be used to endorse or promote products derived
- *    from this software without specific prior written permission.
  *
  * THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
  * ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
@@ -41,5 +35,5 @@
 #endif
 
 #ifndef FTP_VERSION
-#define	FTP_VERSION	"20070722"
+#define	FTP_VERSION	"20141026"
 #endif
