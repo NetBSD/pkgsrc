@@ -1,4 +1,4 @@
-/*	$NetBSD: readline.c,v 1.2 2008/04/29 05:46:08 martin Exp $	*/
+/*	$NetBSD: readline.c,v 1.3 2014/10/31 18:59:32 spz Exp $	*/
 /*	from	NetBSD: readline.c,v 1.55 2005/05/27 14:01:46 agc Exp	*/
 
 /*-
