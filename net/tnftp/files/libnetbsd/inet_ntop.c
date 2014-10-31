@@ -1,4 +1,4 @@
-/* $NetBSD: inet_ntop.c,v 1.4 2007/08/07 02:06:59 lukem Exp $ */
+/* $NetBSD: inet_ntop.c,v 1.5 2014/10/31 18:59:32 spz Exp $ */
 /* from	NetBSD: inet_ntop.c,v 1.3 2006/05/10 21:53:15 mrg Exp */
 
 /*

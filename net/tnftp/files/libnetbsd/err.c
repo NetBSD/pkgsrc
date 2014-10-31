@@ -1,4 +1,4 @@
-/*	$NetBSD: err.c,v 1.3 2007/08/07 02:06:58 lukem Exp $	*/
+/*	$NetBSD: err.c,v 1.4 2014/10/31 18:59:32 spz Exp $	*/
 
 /*
  * Copyright 1997-2000 Luke Mewburn <lukem@NetBSD.org>.

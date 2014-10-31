@@ -1,4 +1,4 @@
-/*	$NetBSD: histedit.h,v 1.4 2007/08/07 02:06:56 lukem Exp $	*/
+/*	$NetBSD: histedit.h,v 1.5 2014/10/31 18:59:32 spz Exp $	*/
 /*	from	NetBSD: histedit.h,v 1.26 2005/05/07 16:01:25 dsl Exp	*/
 
 /*-
