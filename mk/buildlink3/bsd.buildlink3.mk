@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.227 2014/09/02 14:31:27 jperkin Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.228 2014/10/31 16:14:07 wiz Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1001,7 +1001,7 @@ _BLNK_TRANSFORM+=	mangle:${_dir_}:${_BLNK_MANGLE_DIR.${_dir_}}
 .endfor
 #
 # Transform /usr/lib/../lib* to /usr/lib* so the following transformation
-# work.  (added by libtool on multlib Linux systems).
+# work.  (added by libtool on multilib Linux systems).
 #
 .if !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
 _BLNK_TRANSFORM+=	mangle:/usr/lib/../lib64:/usr/lib64
