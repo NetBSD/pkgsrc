@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4082 2014/10/31 03:56:57 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4083 2014/10/31 09:51:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5148,3 +5148,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/firefox to 33.0.2 [ryoon 2014-10-30]
 	Updated www/mediawiki to 1.23.6 [wen 2014-10-31]
 	Updated www/p5-Dancer2 to 0.153002 [wen 2014-10-31]
+	Updated finance/p5-Finance-Quote to 1.35nb1 [wiz 2014-10-31]
