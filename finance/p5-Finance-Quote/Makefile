@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2014/09/06 12:45:14 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2014/10/31 09:51:25 wiz Exp $
 
 DISTNAME=	Finance-Quote-1.35
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	finance perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Finance/}
 
@@ -13,6 +14,8 @@ LICENSE=	gnu-gpl-v2 # or later
 DEPENDS+=	p5-HTML-TableExtract>=1.0:../../www/p5-HTML-TableExtract
 DEPENDS+=	p5-Crypt-SSLeay-[0-9]*:../../security/p5-Crypt-SSLeay
 DEPENDS+=	p5-libwww>=5.48:../../www/p5-libwww
+DEPENDS+=	p5-JSON-[0-9]*:../../converters/p5-JSON
+DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
 
 REPLACE_PERL=	lib/Finance/Quote.pm
 REPLACE_PERL+=	lib/Finance/Quote/*.pm
