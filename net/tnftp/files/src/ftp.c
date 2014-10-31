@@ -1,8 +1,8 @@
-/*	$NetBSD: ftp.c,v 1.1.1.6 2007/08/06 04:33:23 lukem Exp $	*/
-/*	from	NetBSD: ftp.c,v 1.152 2007/07/22 05:02:50 lukem Exp	*/
+/*	$NetBSD: ftp.c,v 1.1.1.7 2014/10/31 18:47:17 spz Exp $	*/
+/*	from	NetBSD: ftp.c,v 1.164 2012/07/04 06:09:37 is Exp	*/
 
 /*-
- * Copyright (c) 1996-2007 The NetBSD Foundation, Inc.
+ * Copyright (c) 1996-2009 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -16,13 +16,6 @@
  * 2. Redistributions in binary form must reproduce the above copyright
  *    notice, this list of conditions and the following disclaimer in the
  *    documentation and/or other materials provided with the distribution.
- * 3. All advertising materials mentioning features or use of this software
- *    must display the following acknowledgement:
- *	This product includes software developed by the NetBSD
- *	Foundation, Inc. and its contributors.
- * 4. Neither the name of The NetBSD Foundation nor the names of its
- *    contributors may be used to endorse or promote products derived
- *    from this software without specific prior written permission.
  *
  * THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
  * ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
@@ -105,7 +98,7 @@
 #if 0
 static char sccsid[] = "@(#)ftp.c	8.6 (Berkeley) 10/27/94";
 #else
-__RCSID(" NetBSD: ftp.c,v 1.152 2007/07/22 05:02:50 lukem Exp  ");
+__RCSID(" NetBSD: ftp.c,v 1.164 2012/07/04 06:09:37 is Exp  ");
 #endif
 #endif /* not lint */
 
@@ -121,6 +114,7 @@ __RCSID(" NetBSD: ftp.c,v 1.152 2007/07/22 05:02:50 lukem Exp  ");
 #include <arpa/ftp.h>
 #include <arpa/telnet.h>
 
+#include <assert.h>
 #include <ctype.h>
 #include <err.h>
 #include <errno.h>
@@ -146,6 +140,7 @@ int	ptflag = 0;
 char	pasv[BUFSIZ];	/* passive port for proxy data connection */
 
 static int empty(FILE *, FILE *, int);
+__dead static void abort_squared(int);
 
 struct sockinet {
 	union sockunion {
@@ -154,12 +149,12 @@ struct sockinet {
 		struct sockaddr_in6 su_sin6;
 #endif
 	} si_su;
-#if !defined(HAVE_STRUCT_SOCKADDR_SA_LEN)
+#if !defined(HAVE_STRUCT_SOCKADDR_IN_SIN_LEN)
 	int	si_len;
 #endif
 };
 
-#if !defined(HAVE_STRUCT_SOCKADDR_SA_LEN)
+#if !defined(HAVE_STRUCT_SOCKADDR_IN_SIN_LEN)
 # define su_len		si_len
 #else
 # define su_len		si_su.su_sin.sin_len
@@ -170,11 +165,10 @@ struct sockinet {
 struct sockinet myctladdr, hisctladdr, data_addr;
 
 char *
-hookup(char *host, char *port)
+hookup(const char *host, const char *port)
 {
-	int s = -1, error, portnum;
+	int s = -1, error;
 	struct addrinfo hints, *res, *res0;
-	char hbuf[MAXHOSTNAMELEN];
 	static char hostnamebuf[MAXHOSTNAMELEN];
 	socklen_t len;
 	int on = 1;
@@ -182,14 +176,13 @@ hookup(char *host, char *port)
 	memset((char *)&hisctladdr, 0, sizeof (hisctladdr));
 	memset((char *)&myctladdr, 0, sizeof (myctladdr));
 	memset(&hints, 0, sizeof(hints));
-	portnum = parseport(port, FTP_PORT);
 	hints.ai_flags = AI_CANONNAME;
 	hints.ai_family = family;
 	hints.ai_socktype = SOCK_STREAM;
 	hints.ai_protocol = 0;
-	error = getaddrinfo(host, NULL, &hints, &res0);
+	error = getaddrinfo(host, port, &hints, &res0);
 	if (error) {
-		warnx("Can't lookup `%s': %s", host,
+		warnx("Can't lookup `%s:%s': %s", host, port,
 		    (error == EAI_SYSTEM) ? strerror(errno)
 					  : gai_strerror(error));
 		code = -1;
@@ -204,22 +197,27 @@ hookup(char *host, char *port)
 	hostname = hostnamebuf;
 
 	for (res = res0; res; res = res->ai_next) {
+		char hname[NI_MAXHOST], sname[NI_MAXSERV];
+
 		ai_unmapped(res);
 		if (getnameinfo(res->ai_addr, res->ai_addrlen,
-		    hbuf, sizeof(hbuf), NULL, 0, NI_NUMERICHOST))
-			strlcpy(hbuf, "?", sizeof(hbuf));
+		    hname, sizeof(hname), sname, sizeof(sname),
+		    NI_NUMERICHOST | NI_NUMERICSERV) != 0) {
+			strlcpy(hname, "?", sizeof(hname));
+			strlcpy(sname, "?", sizeof(sname));
+		}
 		if (verbose && res0->ai_next) {
 				/* if we have multiple possibilities */
-			fprintf(ttyout, "Trying %s...\n", hbuf);
+			fprintf(ttyout, "Trying %s:%s ...\n", hname, sname);
 		}
-		((struct sockaddr_in *)res->ai_addr)->sin_port = htons(portnum);
 		s = socket(res->ai_family, SOCK_STREAM, res->ai_protocol);
 		if (s < 0) {
-			warn("Can't create socket for connection to `%s'",
-			    hbuf);
+			warn("Can't create socket for connection to `%s:%s'",
+			    hname, sname);
 			continue;
 		}
-		if (ftp_connect(s, res->ai_addr, res->ai_addrlen) < 0) {
+		if (ftp_connect(s, res->ai_addr, res->ai_addrlen,
+		    verbose || !res->ai_next) < 0) {
 			close(s);
 			s = -1;
 			continue;
@@ -229,7 +227,7 @@ hookup(char *host, char *port)
 		break;
 	}
 	if (s < 0) {
-		warnx("Can't connect to `%s'", host);
+		warnx("Can't connect to `%s:%s'", host, port);
 		code = -1;
 		freeaddrinfo(res0);
 		return 0;
@@ -241,7 +239,8 @@ hookup(char *host, char *port)
 
 	len = hisctladdr.su_len;
 	if (getsockname(s, (struct sockaddr *)&myctladdr.si_su, &len) == -1) {
-		warn("Can't determine my address of connection to `%s'", host);
+		warn("Can't determine my address of connection to `%s:%s'",
+		    host, port);
 		code = -1;
 		goto bad;
 	}
@@ -374,7 +373,7 @@ int
 getreply(int expecteof)
 {
 	char current_line[BUFSIZ];	/* last line of previous reply */
-	int c, n, line;
+	int c, n, lineno;
 	int dig;
 	int originalcode = 0, continuation = 0;
 	sigfunc oldsigint, oldsigalrm;
@@ -387,7 +386,7 @@ getreply(int expecteof)
 	oldsigint = xsignal(SIGINT, cmdabort);
 	oldsigalrm = xsignal(SIGALRM, cmdtimeout);
 
-	for (line = 0 ;; line++) {
+	for (lineno = 0 ;; lineno++) {
 		dig = n = code = 0;
 		cp = current_line;
 		while (alarmtimer(quit_time ? quit_time : 60),
@@ -492,10 +491,10 @@ getreply(int expecteof)
 		if (cp[-1] == '\r')
 			cp[-1] = '\0';
 		*cp = '\0';
-		if (line == 0)
+		if (lineno == 0)
 			(void)strlcpy(reply_string, current_line,
 			    sizeof(reply_string));
-		if (line > 0 && code == 0 && reply_callback != NULL)
+		if (lineno > 0 && code == 0 && reply_callback != NULL)
 			(*reply_callback)(current_line);
 		if (continuation && code != originalcode) {
 			if (originalcode == 0)
@@ -519,14 +518,14 @@ getreply(int expecteof)
 }
 
 static int
-empty(FILE *cin, FILE *din, int sec)
+empty(FILE *ecin, FILE *din, int sec)
 {
 	int		nr, nfd;
 	struct pollfd	pfd[2];
 
 	nfd = 0;
-	if (cin) {
-		pfd[nfd].fd = fileno(cin);
+	if (ecin) {
+		pfd[nfd].fd = fileno(ecin);
 		pfd[nfd++].events = POLLIN;
 	}
 
@@ -540,7 +539,7 @@ empty(FILE *cin, FILE *din, int sec)
 
 	nr = 0;
 	nfd = 0;
-	if (cin)
+	if (ecin)
 		nr |= (pfd[nfd++].revents & POLLIN) ? 1 : 0;
 	if (din)
 		nr |= (pfd[nfd++].revents & POLLIN) ? 2 : 0;
@@ -549,7 +548,7 @@ empty(FILE *cin, FILE *din, int sec)
 
 sigjmp_buf	xferabort;
 
-void
+__dead static void
 abortxfer(int notused)
 {
 	char msgbuf[100];
@@ -610,7 +609,7 @@ copy_bytes(int infd, int outfd, char *buf, size_t bufsize,
 					/* copy bufchunk at a time */
 		bufrem = bufchunk;
 		while (bufrem > 0) {
-			inc = read(infd, buf, MIN(bufsize, bufrem));
+			inc = read(infd, buf, MIN((off_t)bufsize, bufrem));
 			if (inc <= 0)
 				goto copy_done;
 			bytes += inc;
@@ -672,7 +671,7 @@ sendrequest(const char *cmd, const char *local, const char *remote,
 	sigfunc volatile oldintp;
 	off_t volatile hashbytes;
 	int hash_interval;
-	char *volatile lmode;
+	const char *lmode;
 	static size_t bufsize;
 	static char *buf;
 	int oprogress;
@@ -776,7 +775,8 @@ sendrequest(const char *cmd, const char *local, const char *remote,
 	if (dout == NULL)
 		goto abort;
 
-	if (sndbuf_size > bufsize) {
+	assert(sndbuf_size > 0);
+	if ((size_t)sndbuf_size > bufsize) {
 		if (buf)
 			(void)free(buf);
 		bufsize = sndbuf_size;
@@ -817,7 +817,7 @@ sendrequest(const char *cmd, const char *local, const char *remote,
 			}
 			(void)putc(c, dout);
 			bytes++;
-#if 0	/* this violates RFC0959 */
+#if 0	/* this violates RFC 959 */
 			if (c == '\r') {
 				(void)putc('\0', dout);
 				bytes++;
@@ -1037,7 +1037,8 @@ recvrequest(const char *cmd, const char *volatile local, const char *remote,
 		progress = 0;
 		preserve = 0;
 	}
-	if (rcvbuf_size > bufsize) {
+	assert(rcvbuf_size > 0);
+	if ((size_t)rcvbuf_size > bufsize) {
 		if (buf)
 			(void)free(buf);
 		bufsize = rcvbuf_size;
@@ -1164,7 +1165,7 @@ recvrequest(const char *cmd, const char *volatile local, const char *remote,
 
  abort:
 			/*
-			 * abort using RFC0959 recommended IP,SYNC sequence
+			 * abort using RFC 959 recommended IP,SYNC sequence
 			 */
 	if (! sigsetjmp(xferabort, 1)) {
 			/* this is the first call */
@@ -1211,7 +1212,7 @@ initconn(void)
 	unsigned int addr[16], port[2];
 	unsigned int af, hal, pal;
 	socklen_t len;
-	char *pasvcmd = NULL;
+	const char *pasvcmd = NULL;
 	int overbose;
 
 #ifdef INET6
@@ -1277,23 +1278,33 @@ initconn(void)
 			break;
 #ifdef INET6
 		case AF_INET6:
-			pasvcmd = "EPSV";
-			overbose = verbose;
-			if (ftp_debug == 0)
-				verbose = -1;
-			result = command("EPSV");
-			verbose = overbose;
-			if (verbose > 0 &&
-			    (result == COMPLETE || !connected))
-				fprintf(ttyout, "%s\n", reply_string);
-			if (!connected)
-				return (1);
-			/* this code is to be friendly with broken BSDI ftpd */
-			if (code / 10 == 22 && code != 229) {
-				fputs(
-"wrong server: return code must be 229\n",
-					ttyout);
-				result = COMPLETE + 1;
+			if (epsv6 && !epsv6bad) {
+				pasvcmd = "EPSV";
+				overbose = verbose;
+				if (ftp_debug == 0)
+					verbose = -1;
+				result = command("EPSV");
+				verbose = overbose;
+				if (verbose > 0 &&
+				    (result == COMPLETE || !connected))
+					fprintf(ttyout, "%s\n", reply_string);
+				if (!connected)
+					return (1);
+				/*
+				 * this code is to be friendly with
+				 * broken BSDI ftpd
+				 */
+				if (code / 10 == 22 && code != 229) {
+					fputs(
+						"wrong server: return code must be 229\n",
+						ttyout);
+					result = COMPLETE + 1;
+				}
+				if (result != COMPLETE) {
+					epsv6bad = 1;
+					DPRINTF("disabling epsv6 for this "
+					    "connection\n");
+				}
 			}
 			if (result != COMPLETE) {
 				pasvcmd = "LPSV";
@@ -1425,7 +1436,7 @@ initconn(void)
 				data_addr.su_family = AF_INET6;
 				data_addr.su_len = sizeof(struct sockaddr_in6);
 			    {
-				int i;
+				size_t i;
 				for (i = 0; i < sizeof(struct in6_addr); i++) {
 					data_addr.si_su.su_sin6.sin6_addr.s6_addr[i] =
 					    UC(addr[i]);
@@ -1466,7 +1477,7 @@ initconn(void)
 			goto bad;
 
 		if (ftp_connect(data, (struct sockaddr *)&data_addr.si_su,
-		    data_addr.su_len) < 0) {
+		    data_addr.su_len, 1) < 0) {
 			if (activefallback) {
 				(void)close(data);
 				data = -1;
@@ -1532,7 +1543,6 @@ initconn(void)
 
 	if (sendport) {
 		char hname[NI_MAXHOST], sname[NI_MAXSERV];
-		int af;
 		struct sockinet tmp;
 
 		switch (data_addr.su_family) {
@@ -1544,6 +1554,10 @@ initconn(void)
 			/* FALLTHROUGH */
 #ifdef INET6
 		case AF_INET6:
+			if (!epsv6 || epsv6bad) {
+				result = COMPLETE + 1;
+				break;
+			}
 #endif
 			af = (data_addr.su_family == AF_INET) ? 1 : 2;
 			tmp = data_addr;
@@ -1559,7 +1573,7 @@ initconn(void)
 				overbose = verbose;
 				if (ftp_debug == 0)
 					verbose = -1;
-				result = command("EPRT |%d|%s|%s|", af, hname,
+				result = command("EPRT |%u|%s|%s|", af, hname,
 				    sname);
 				verbose = overbose;
 				if (verbose > 0 &&
@@ -1590,18 +1604,25 @@ initconn(void)
 				 UC(p[0]), UC(p[1]));
 			break;
 #ifdef INET6
-		case AF_INET6:
-			a = (char *)&data_addr.si_su.su_sin6.sin6_addr;
-			p = (char *)&data_addr.su_port;
+		case AF_INET6: {
+			uint8_t ua[sizeof(data_addr.si_su.su_sin6.sin6_addr)];
+			uint8_t up[sizeof(data_addr.su_port)];
+
+			memcpy(ua, &data_addr.si_su.su_sin6.sin6_addr,
+			    sizeof(ua));
+			memcpy(up, &data_addr.su_port, sizeof(up));
+			
 			result = command(
 	"LPRT %d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d",
 				 6, 16,
-				 UC(a[0]),UC(a[1]),UC(a[2]),UC(a[3]),
-				 UC(a[4]),UC(a[5]),UC(a[6]),UC(a[7]),
-				 UC(a[8]),UC(a[9]),UC(a[10]),UC(a[11]),
-				 UC(a[12]),UC(a[13]),UC(a[14]),UC(a[15]),
-				 2, UC(p[0]), UC(p[1]));
+				  ua[0],  ua[1],  ua[2],  ua[3],
+				  ua[4],  ua[5],  ua[6],  ua[7],
+				  ua[8],  ua[9], ua[10], ua[11],
+				 ua[12], ua[13], ua[14], ua[15],
+				 2,
+				 up[0], up[1]);
 			break;
+		}
 #endif
 		default:
 			result = COMPLETE + 1; /* xxx */
@@ -1623,8 +1644,9 @@ initconn(void)
 	if (data_addr.su_family == AF_INET) {
 		on = IPTOS_THROUGHPUT;
 		if (setsockopt(data, IPPROTO_IP, IP_TOS,
-				(void *)&on, sizeof(on)) == -1)
+				(void *)&on, sizeof(on)) == -1) {
 			DWARN("setsockopt %s (ignored)", "IPTOS_THROUGHPUT");
+		}
 	}
 #endif
 	return (0);
@@ -1810,7 +1832,7 @@ pswitch(int flag)
 	}
 }
 
-void
+__dead static void
 abortpt(int notused)
 {
 
@@ -1830,7 +1852,7 @@ proxtrans(const char *cmd, const char *local, const char *remote)
 	sigfunc volatile oldintr;
 	int prox_type, nfnd;
 	int volatile secndflag;
-	char *volatile cmd2;
+	const char *volatile cmd2;
 
 	oldintr = NULL;
 	secndflag = 0;
@@ -2022,7 +2044,7 @@ gunique(const char *local)
  *	too impatient to wait or there's another problem then ftp really
  *	needs to get back to a known state.
  */
-void
+static void
 abort_squared(int dummy)
 {
 	char msgbuf[100];
@@ -2122,7 +2144,7 @@ ai_unmapped(struct addrinfo *ai)
 	sin.sin_port = sin6->sin6_port;
 
 	ai->ai_family = AF_INET;
-#if defined(HAVE_STRUCT_SOCKADDR_SA_LEN)
+#if defined(HAVE_STRUCT_SOCKADDR_IN_SIN_LEN)
 	sin.sin_len = len;
 #endif
 	memcpy(ai->ai_addr, &sin, len);
