@@ -1,6 +1,6 @@
-$NetBSD: patch-unix_tclConfig.sh.in,v 1.1 2012/08/21 21:31:47 marino Exp $
+$NetBSD: patch-unix_tclConfig.sh.in,v 1.2 2014/10/31 21:11:18 adam Exp $
 
---- unix/tclConfig.sh.in.orig	2012-07-25 16:45:05.000000000 +0000
+--- unix/tclConfig.sh.in.orig	2014-08-26 15:23:08.000000000 +0000
 +++ unix/tclConfig.sh.in
 @@ -9,6 +9,8 @@
  #
@@ -13,7 +13,7 @@ $NetBSD: patch-unix_tclConfig.sh.in,v 1.1 2012/08/21 21:31:47 marino Exp $
  TCL_MAJOR_VERSION='@TCL_MAJOR_VERSION@'
 @@ -167,3 +169,9 @@ TCL_STUB_LIB_PATH='@TCL_STUB_LIB_PATH@'
  
- # Flag, 1: we built Tcl with threads enables, 0 we didn't
+ # Flag, 1: we built Tcl with threads enabled, 0 we didn't
  TCL_THREADS=@TCL_THREADS@
 +
 +else

@@ -1,6 +1,15 @@
-@comment $NetBSD: PLIST,v 1.13 2014/01/11 14:41:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2014/10/31 21:11:18 adam Exp $
 bin/wish
 bin/wish${BASEVER}
+${PLIST.aqua}include/X11/X.h
+${PLIST.aqua}include/X11/Xatom.h
+${PLIST.aqua}include/X11/Xfuncproto.h
+${PLIST.aqua}include/X11/Xlib.h
+${PLIST.aqua}include/X11/Xutil.h
+${PLIST.aqua}include/X11/cursorfont.h
+${PLIST.aqua}include/X11/keysym.h
+${PLIST.aqua}include/X11/keysymdef.h
+${PLIST.aqua}include/X11/xbytes.h
 include/tk.h
 include/tk/generic/default.h
 include/tk/generic/ks_names.h
@@ -37,6 +46,8 @@ include/tkIntDecls.h
 include/tkIntPlatDecls.h
 include/tkIntXlibDecls.h
 include/tkPlatDecls.h
+${PLIST.aqua}lib/Tk.icns
+${PLIST.aqua}lib/Tk.tiff
 lib/libtk${SONUM}.a
 lib/libtk${SONUM}.so
 lib/libtk${SONUM}.so.1.0

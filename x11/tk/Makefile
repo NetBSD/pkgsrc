@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.81 2014/10/09 14:07:15 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2014/10/31 21:11:18 adam Exp $
 
 DISTNAME=	tk${TK_VERSION}-src
 PKGNAME=	tk-${TK_VERSION}
-PKGREVISION=	2
 CATEGORIES=	x11 lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
@@ -46,7 +45,5 @@ PLIST_SUBST+=		SONUM=${TK_SONUM}
 PLIST_SUBST+=		BASEVER=${TK_BASEVER}
 
 .include "../../lang/tcl/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
