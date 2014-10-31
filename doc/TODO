@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13796 2014/10/29 23:19:58 wiz Exp $
+$NetBSD: TODO,v 1.13797 2014/10/31 16:26:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -384,6 +384,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o at-spi2-atk-3.14.1
 	o aterm-1.0.1
 	o aubio-0.4.0
+	o auctex-11.88
 	o audacity-2.0.5 [wip (audacity-devel)]
 	o autoconf-archive-20141015
 	o autoconvert-0.3.16
@@ -412,7 +413,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
 	o calibre-2.2.0 [wip]
-	o calibre-2.7.0
+	o calibre-2.8.0
 	o calligra-2.4.3 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -466,6 +467,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dap-3.10
 	o dar-2.4.14
 	o darcs-2.4
+	o darkstat-3.0.718 [pkg/49345]
 	o darktable-1.4
 	o dasher-4.11
 	o dateutils-0.3.0
@@ -561,11 +563,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gaupol-0.25
 	o gbrainy-2.23
 	o gcc47-4.7.4
+	o gcc49-4.9.2
 	o gcin-1.5.5
 	o gcombust-0.1.55
 	o gcompris-14.05
 	o gdb-7.6 [wip]
-	o gdb-7.8
+	o gdb-7.8.1
 	o gdeskcal-1.01
 	o gdl-3.14.0
 	o gdm-2.32.2 [GNOME 2.32]
@@ -1140,7 +1143,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o webmin-1.690
 	o websvn-2.3.2
 	o windowlab-1.40
-	o wine-1.7.29
+	o wine-1.7.30
 	o wine-devel-1.7.28
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
