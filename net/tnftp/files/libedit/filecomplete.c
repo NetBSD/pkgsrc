@@ -1,4 +1,4 @@
-/*	$NetBSD: filecomplete.c,v 1.2 2008/04/29 05:46:08 martin Exp $	*/
+/*	$NetBSD: filecomplete.c,v 1.3 2014/10/31 18:59:32 spz Exp $	*/
 /*	from	NetBSD: filecomplete.c,v 1.5 2005/05/18 22:34:41 christos Exp	*/
 
 /*-
