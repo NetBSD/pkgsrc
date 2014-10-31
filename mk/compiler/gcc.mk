@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.151 2014/09/06 08:32:55 jperkin Exp $
+# $NetBSD: gcc.mk,v 1.152 2014/10/31 14:22:20 ryoon Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -464,19 +464,26 @@ _USE_GCC_SHLIB?=	yes
 .  endif
 .elif !empty(_NEED_GCC48:M[yY][eE][sS])
 #
-# We require gcc-4.8.x in the lang/gcc48-* directory.
+# We require gcc-4.8.x in the lang/gcc48 directory.
 #
-_GCC_PKGBASE=		gcc48-cc++
-.  if !empty(PKGPATH:Mlang/gcc48-cc++)
+_GCC_PKGBASE=		gcc48
+.  if !empty(PKGPATH:Mlang/gcc48)
 _IGNORE_GCC=		yes
 MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
-.  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc:Mc++)
-_GCC_PKGSRCDIR=		../../lang/gcc48-cc++
-_GCC_DEPENDENCY=	gcc48-cc++>=${_GCC_REQD}:../../lang/gcc48-cc++
+.  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
+_GCC_PKGSRCDIR=		../../lang/gcc48
+_GCC_DEPENDENCY=	gcc48>=${_GCC_REQD}:../../lang/gcc48
+.    if !empty(_LANGUAGES.gcc:Mc++) || \
+        !empty(_LANGUAGES.gcc:Mfortran) || \
+        !empty(_LANGUAGES.gcc:Mfortran77) || \
+        !empty(_LANGUAGES.gcc:Mgo) || \
+        !empty(_LANGUAGES.gcc:Mobjc) || \
+        !empty(_LANGUAGES.gcc:Mobj-c++)
 _USE_GCC_SHLIB?=	yes
+.    endif
 .  endif
-.elif !empty(_NEED_GCC49:M[yY][eE][sS])
+.elif !empty(_NEED_GCC48:M[yY][eE][sS])
 #
 # We require gcc-4.9.x in the lang/gcc49-* directory.
 #
@@ -546,28 +553,6 @@ MAKEFLAGS+=		_IGNORE_GCC3OBJC=yes
 .  if !defined(_IGNORE_GCC3OBJC) && !empty(_LANGUAGES.gcc:Mobjc)
 _GCC_PKGSRCDIR+=	../../lang/gcc3-objc
 _GCC_DEPENDENCY+=	gcc3-objc>=${_GCC_REQD}:../../lang/gcc3-objc
-_USE_GCC_SHLIB?=	yes
-.  endif
-.endif
-
-.if !empty(_NEED_GCC48:M[yY][eE][sS])
-.  if !empty(PKGPATH:Mlang/gcc48-fortran)
-_IGNORE_GCC48FORTRAN=	yes
-MAKEFLAGS+=		_IGNORE_GCC48FORTRAN=yes
-.  endif
-.  if !defined(_IGNORE_GCC48FORTRAN) && \
-	(!empty(_LANGUAGES.gcc:Mfortran77) || !empty(_LANGUAGES.gcc:Mfortran))
-_GCC_PKGSRCDIR+=	../../lang/gcc48-fortran
-_GCC_DEPENDENCY+=	gcc48-fortran>=${_GCC_REQD}:../../lang/gcc48-fortran
-_USE_GCC_SHLIB?=	yes
-.  endif
-.  if !empty(PKGPATH:Mlang/gcc48-objc)
-_IGNORE_GCC3OBJC=	yes
-MAKEFLAGS+=		_IGNORE_GCC48OBJC=yes
-.  endif
-.  if !defined(_IGNORE_GCC48OBJC) && !empty(_LANGUAGES.gcc:Mobjc)
-_GCC_PKGSRCDIR+=	../../lang/gcc48-objc
-_GCC_DEPENDENCY+=	gcc48-objc>=${_GCC_REQD}:../../lang/gcc48-objc
 _USE_GCC_SHLIB?=	yes
 .  endif
 .endif
@@ -839,7 +824,7 @@ PREPEND_PATH+=	${_GCC_DIR}/bin
 # Add dependency on GCC libraries if requested.
 .if (defined(_USE_GCC_SHLIB) && !empty(_USE_GCC_SHLIB:M[Yy][Ee][Ss])) && !empty(USE_PKGSRC_GCC_RUNTIME:M[Yy][Ee][Ss])
 #  Special case packages which are themselves a dependency of gcc runtime.
-.  if empty(PKGPATH:Mdevel/libtool-base) && empty(PKGPATH:Mdevel/binutils) && empty(PKGPATH:Mlang/gcc??) && empty(PKGPATH:Mlang/gcc48-*)
+.  if empty(PKGPATH:Mdevel/libtool-base) && empty(PKGPATH:Mdevel/binutils) && empty(PKGPATH:Mlang/gcc??)
 .    if !empty(CC_VERSION:Mgcc-4.7*)
 .      include "../../lang/gcc47-libs/buildlink3.mk"
 .    elif !empty(CC_VERSION:Mgcc-4.8*)
