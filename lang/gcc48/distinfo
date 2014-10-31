@@ -1,14 +1,8 @@
-$NetBSD: distinfo,v 1.17 2014/05/31 13:06:25 ryoon Exp $
+$NetBSD: distinfo,v 1.18 2014/10/31 14:22:20 ryoon Exp $
 
-SHA1 (cloog-0.18.1.tar.gz) = 2dc70313e8e2c6610b856d627bce9c9c3f848077
-RMD160 (cloog-0.18.1.tar.gz) = 5c4a182efc0d42e7d5c30e6fcca5832776a2e69a
-Size (cloog-0.18.1.tar.gz) = 3857324 bytes
 SHA1 (gcc-4.8.3.tar.bz2) = da0a2b9ec074f2bf624a34f3507f812ebb6e4dce
 RMD160 (gcc-4.8.3.tar.bz2) = 2c7214ff607cbe822282c04d1d6f9fea765c82c5
 Size (gcc-4.8.3.tar.bz2) = 86126808 bytes
-SHA1 (isl-0.12.2.tar.bz2) = ca98a91e35fb3ded10d080342065919764d6f928
-RMD160 (isl-0.12.2.tar.bz2) = e8fb6bad4b579865a6a31c160fc21a0c9ad1e7b8
-Size (isl-0.12.2.tar.bz2) = 1319434 bytes
 SHA1 (patch-boehm-gc_configure) = 4ab0772cede9d4bef0c7eab412359f0700195135
 SHA1 (patch-boehm-gc_dyn__load.c) = 48fa440a1b5c05835550c12039739feb35b8927b
 SHA1 (patch-boehm-gc_include_gc__config.h.in) = cbd88100e8fb371d3d42c531658ce467c823498e
