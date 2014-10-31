@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2014/10/09 13:44:53 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2014/10/31 18:59:32 spz Exp $
 
-DISTNAME=		tnftp-20070806
+DISTNAME=		tnftp-20141031
 CATEGORIES=		net
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -54,5 +54,10 @@ CONFIGURE_ARGS+=	--disable-editcomplete
 .else
 .include "../../mk/termcap.buildlink3.mk"
 .endif
+
+post-install:
+	${MV} -f ${DESTDIR}${PREFIX}/bin/tnftp ${DESTDIR}${PREFIX}/bin/ftp
+	${MV} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/tnftp.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/ftp.1
+
 
 .include "../../mk/bsd.pkg.mk"
