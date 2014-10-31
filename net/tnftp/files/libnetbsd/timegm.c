@@ -1,4 +1,4 @@
-/*	$NetBSD: timegm.c,v 1.3 2007/08/07 02:07:01 lukem Exp $	*/
+/*	$NetBSD: timegm.c,v 1.4 2014/10/31 18:59:32 spz Exp $	*/
 /*	from	?	*/
 
 #include "tnftp.h"
