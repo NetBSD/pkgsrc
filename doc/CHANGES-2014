@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4099 2014/11/01 14:35:29 taca Exp $
+$NetBSD: CHANGES-2014,v 1.4100 2014/11/01 14:44:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5177,3 +5177,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated math/R-lmm to 0.9 [wen 2014-11-01]
 	Updated chat/ircII to 20141028 [mrg 2014-11-02]
 	Updated misc/ruby-sprockets22 to 2.2.3 [taca 2014-11-01]
+	Updated misc/ruby-sprockets to 2.8.3 [taca 2014-11-01]
