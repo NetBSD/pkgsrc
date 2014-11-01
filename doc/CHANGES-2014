@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4093 2014/11/01 11:21:22 prlw1 Exp $
+$NetBSD: CHANGES-2014,v 1.4094 2014/11/01 11:35:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5167,3 +5167,8 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/firefox-l10n to 33.0.2 [ryoon 2014-11-01]
 	Updated lang/vala to 0.26.1 [prlw1 2014-11-01]
 	Updated devel/libgee to 0.16.1 [prlw1 2014-11-01]
+	Updated devel/git to 2.1.3 [adam 2014-11-01]
+	Updated devel/git-base to 2.1.3 [adam 2014-11-01]
+	Updated devel/git-docs to 2.1.3 [adam 2014-11-01]
+	Updated devel/git-svn to 2.1.3 [adam 2014-11-01]
+	Updated www/gitweb to 2.1.3 [adam 2014-11-01]
