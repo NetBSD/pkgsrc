@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13797 2014/10/31 16:26:56 wiz Exp $
+$NetBSD: TODO,v 1.13798 2014/11/01 10:25:45 prlw1 Exp $
 
 Suggested new packages
 ======================
@@ -1114,7 +1114,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o unrealircd-3.2.10.2
 	o userppp-030706
 	o utilisp-1.14
-	o vala-0.26.1
 	o varnish-4.0.2
 	o vbetool-1.1
 	o verilog-current-20130827 [wip]

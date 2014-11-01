@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4091 2014/11/01 10:12:03 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.4092 2014/11/01 10:25:45 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5165,3 +5165,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-MooseX-Types to 0.45 [wen 2014-11-01]
 	Updated devel/p5-MooseX-Types-URI to 0.07 [wen 2014-11-01]
 	Updated www/firefox-l10n to 33.0.2 [ryoon 2014-11-01]
+	Updated lang/vala to 0.26.1 [prlw1 2014-11-01]
