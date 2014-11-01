@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.210 2014/10/07 16:47:25 adam Exp $
+# $NetBSD: Makefile,v 1.211 2014/11/01 13:25:23 wiz Exp $
 
-DISTNAME=		gnucash-2.6.3
-PKGREVISION=		11
+DISTNAME=		gnucash-2.6.4
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 EXTRACT_SUFX=		.tar.bz2
@@ -11,7 +10,7 @@ HOMEPAGE=		http://www.gnucash.org/
 COMMENT=		Personal or business finance management program
 LICENSE=		gnu-gpl-v3
 
-DEPENDS+=		guile-slib>=3.2.1:../../devel/guile-slib
+#DEPENDS+=		guile-slib>=3.2.1:../../devel/guile-slib
 DEPENDS+=		p5-Finance-Quote-[0-9]*:../../finance/p5-Finance-Quote
 DEPENDS+=		p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
 DEPENDS+=		${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
@@ -29,9 +28,9 @@ CONFIGURE_ARGS+=	--with-html-engine=webkit
 CONFIGURE_ARGS+=	--disable-dbi
 CONFIGURE_ARGS+=	--enable-python
 CONFIGURE_ARGS+=	--with-xdg-data-dirs=${PREFIX}/share
+#CONFIGURE_ARGS+=	GUILE=${PREFIX}/${GUILE20_SUBDIR}/bin/guile
 
 REPLACE_PERL+=		src/quotes/gnc-fq-dump
-REPLACE_PERL+=		packaging/win32/exetype.pl
 REPLACE_PERL+=		src/backend/xml/test/grab-types.pl
 REPLACE_PERL+=		src/quotes/Quote_example.pl
 
@@ -51,7 +50,7 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.28.0
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
-.include "../../lang/guile/buildlink3.mk"
+.include "../../lang/guile20/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../misc/goffice0.8/buildlink3.mk"
