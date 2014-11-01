@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4100 2014/11/01 14:44:21 taca Exp $
+$NetBSD: CHANGES-2014,v 1.4101 2014/11/01 15:04:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5178,3 +5178,11 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated chat/ircII to 20141028 [mrg 2014-11-02]
 	Updated misc/ruby-sprockets22 to 2.2.3 [taca 2014-11-01]
 	Updated misc/ruby-sprockets to 2.8.3 [taca 2014-11-01]
+	Updated devel/ruby-activesupport32 to 3.2.20 [taca 2014-11-01]
+	Updated devel/ruby-activemodel32 to 3.2.20 [taca 2014-11-01]
+	Updated databases/ruby-activerecord32 to 3.2.20 [taca 2014-11-01]
+	Updated www/ruby-activeresource32 to 3.2.20 [taca 2014-11-01]
+	Updated www/ruby-actionpack32 to 3.2.20 [taca 2014-11-01]
+	Updated mail/ruby-actionmailer32 to 3.2.20 [taca 2014-11-01]
+	Updated devel/ruby-railties32 to 3.2.20 [taca 2014-11-01]
+	Updated www/ruby-rails32 to 3.2.20 [taca 2014-11-01]
