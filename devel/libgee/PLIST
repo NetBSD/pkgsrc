@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2012/08/09 18:54:12 drochner Exp $
-include/gee-1.0/gee.h
-lib/girepository-1.0/Gee-1.0.typelib
-lib/libgee.la
-lib/pkgconfig/gee-1.0.pc
-share/gir-1.0/Gee-1.0.gir
-share/vala/vapi/gee-1.0.vapi
+@comment $NetBSD: PLIST,v 1.5 2014/11/01 11:20:53 prlw1 Exp $
+include/gee-0.8/gee.h
+lib/girepository-1.0/Gee-0.8.typelib
+lib/libgee-0.8.la
+lib/pkgconfig/gee-0.8.pc
+share/gir-1.0/Gee-0.8.gir
+share/vala/vapi/gee-0.8.vapi
