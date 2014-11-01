@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4102 2014/11/01 16:28:28 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4103 2014/11/01 17:27:33 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5187,3 +5187,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/ruby-railties32 to 3.2.20 [taca 2014-11-01]
 	Updated www/ruby-rails32 to 3.2.20 [taca 2014-11-01]
 	Updated textproc/the_silver_searcher to 0.26.0 [wiz 2014-11-01]
+	Updated graphics/gnome-icon-theme to 3.12.0 [prlw1 2014-11-01]
