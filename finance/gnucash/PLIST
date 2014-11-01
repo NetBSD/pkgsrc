@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2014/03/12 09:36:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.51 2014/11/01 13:25:23 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -18,6 +18,7 @@ include/gnucash/SchedXaction.h
 include/gnucash/Scrub.h
 include/gnucash/Scrub2.h
 include/gnucash/Scrub3.h
+include/gnucash/ScrubBusiness.h
 include/gnucash/Split.h
 include/gnucash/TransLog.h
 include/gnucash/Transaction.h
@@ -667,6 +668,7 @@ share/gnucash/accounts/sk/acctchrt_renter.gnucash-xea
 share/gnucash/accounts/sk/acctchrt_retiremt.gnucash-xea
 share/gnucash/accounts/sk/acctchrt_spouseinc.gnucash-xea
 share/gnucash/accounts/sk/acctchrt_spouseretire.gnucash-xea
+share/gnucash/accounts/sv_SE/acctchrt_common.gnucash-xea
 share/gnucash/accounts/sv_SE/bas_2012.gnucash-xea
 share/gnucash/accounts/tr_TR/acctchrt_TEKDUZ.gnucash-xea
 share/gnucash/accounts/tr_TR/acctchrt_brokerage.gnucash-xea
@@ -836,10 +838,6 @@ share/gnucash/guile-modules/gnucash/report/welcome-to-gnucash.scm
 share/gnucash/guile-modules/gnucash/tax/de_DE.scm
 share/gnucash/guile-modules/gnucash/tax/us.scm
 share/gnucash/guile-modules/gnucash/unittest-support.scm
-share/gnucash/guile-modules/www/cgi.scm
-share/gnucash/guile-modules/www/http.scm
-share/gnucash/guile-modules/www/main.scm
-share/gnucash/guile-modules/www/url.scm
 share/gnucash/jqplot/jqplot.BezierCurveRenderer.js
 share/gnucash/jqplot/jqplot.barRenderer.js
 share/gnucash/jqplot/jqplot.blockRenderer.js
@@ -1024,10 +1022,12 @@ share/icons/hicolor/96x96/apps/gnucash-icon.png
 share/icons/hicolor/scalable/apps/gnucash-icon.svg
 share/locale/ar/LC_MESSAGES/gnucash.mo
 share/locale/bg/LC_MESSAGES/gnucash.mo
+share/locale/brx/LC_MESSAGES/gnucash.mo
 share/locale/ca/LC_MESSAGES/gnucash.mo
 share/locale/cs/LC_MESSAGES/gnucash.mo
 share/locale/da/LC_MESSAGES/gnucash.mo
 share/locale/de/LC_MESSAGES/gnucash.mo
+share/locale/doi/LC_MESSAGES/gnucash.mo
 share/locale/el/LC_MESSAGES/gnucash.mo
 share/locale/en_GB/LC_MESSAGES/gnucash.mo
 share/locale/es/LC_MESSAGES/gnucash.mo
@@ -1037,12 +1037,16 @@ share/locale/fa/LC_MESSAGES/gnucash.mo
 share/locale/fi/LC_MESSAGES/gnucash.mo
 share/locale/fr/LC_MESSAGES/gnucash.mo
 share/locale/he/LC_MESSAGES/gnucash.mo
+share/locale/hi/LC_MESSAGES/gnucash.mo
 share/locale/hu/LC_MESSAGES/gnucash.mo
 share/locale/it/LC_MESSAGES/gnucash.mo
 share/locale/ja/LC_MESSAGES/gnucash.mo
 share/locale/ko/LC_MESSAGES/gnucash.mo
+share/locale/kok/LC_MESSAGES/gnucash.mo
+share/locale/ks/LC_MESSAGES/gnucash.mo
 share/locale/lt/LC_MESSAGES/gnucash.mo
 share/locale/lv/LC_MESSAGES/gnucash.mo
+share/locale/mr/LC_MESSAGES/gnucash.mo
 share/locale/nb/LC_MESSAGES/gnucash.mo
 share/locale/ne/LC_MESSAGES/gnucash.mo
 share/locale/nl/LC_MESSAGES/gnucash.mo
@@ -1055,8 +1059,10 @@ share/locale/rw/LC_MESSAGES/gnucash.mo
 share/locale/sk/LC_MESSAGES/gnucash.mo
 share/locale/sv/LC_MESSAGES/gnucash.mo
 share/locale/ta/LC_MESSAGES/gnucash.mo
+share/locale/te/LC_MESSAGES/gnucash.mo
 share/locale/tr/LC_MESSAGES/gnucash.mo
 share/locale/uk/LC_MESSAGES/gnucash.mo
+share/locale/ur/LC_MESSAGES/gnucash.mo
 share/locale/vi/LC_MESSAGES/gnucash.mo
 share/locale/zh_CN/LC_MESSAGES/gnucash.mo
 share/locale/zh_TW/LC_MESSAGES/gnucash.mo
