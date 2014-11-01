@@ -1,29 +1,28 @@
-# $NetBSD: Makefile,v 1.22 2013/03/14 19:20:20 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.23 2014/11/01 11:20:53 prlw1 Exp $
 
-DISTNAME=	libgee-0.6.8
-CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgee/0.6/}
+DISTNAME=	libgee-0.16.1
+CATEGORIES=	devel gnome
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgee/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://live.gnome.org/Libgee
-COMMENT=	Library providing GObject-based interfaces and classes (v0.6)
+HOMEPAGE=	https://wiki.gnome.org/Projects/Libgee
+COMMENT=	Library providing GObject-based interfaces and classes
 LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=		pkg-config gmake
 
-# to regenerate after patches
-#BUILDLINK_DEPMETHOD.vala:= build
-#.include "../../lang/vala018/buildlink3.mk"
-
-PKGCONFIG_OVERRIDE+=	gee-1.0.pc.in
+PKGCONFIG_OVERRIDE+=	gee-0.8.pc.in
 
 TEST_TARGET=	check
 
 BUILDLINK_DEPMETHOD.gobject-introspection:= build
 .include "../../devel/gobject-introspection/buildlink3.mk"
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.36
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_DEPMETHOD.vala:= build
+BUILDLINK_API_DEPENDS.vala+=	vala>=0.25.1
+.include "../../lang/vala/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
