@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2014/08/13 15:45:35 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2014/11/01 16:28:18 wiz Exp $
 
-DISTNAME=	0.24.1
+DISTNAME=	0.26.0
 PKGNAME=	the_silver_searcher-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	https://github.com/ggreer/the_silver_searcher/archive/
