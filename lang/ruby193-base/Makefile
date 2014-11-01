@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2014/10/28 07:48:19 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2014/11/01 01:25:06 wiz Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -20,6 +20,9 @@ GNU_CONFIGURE=		yes
 TEST_TARGET=		test
 CONFIGURE_ARGS+=	--enable-shared
 WRKSRC=			${RUBY_WRKSRC}
+# --- ext/date/all ---
+# make[2]: make[2]: don't know how to make ../../.ext/common/date. Stop
+# make[2]: stopped in .../lang/ruby193-base/work/ruby-1.9.3-p550/ext/date
 MAKE_JOBS_SAFE=		no
 
 MAKE_DIRS=		${RUBY_SITEARCHLIB} ${RUBY_VENDORARCHLIB}
