@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/10/09 19:14:05 jaapb Exp $
+# $NetBSD: Makefile,v 1.5 2014/11/01 04:36:54 hiramatsu Exp $
 #
 
 DISTNAME=	ocaml-http-0.1.5
@@ -26,6 +26,7 @@ PLIST.opt=      yes
 BUILD_TARGET+=	opt
 .endif
 
+.include "../../lang/camlp4/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../devel/ocaml-findlib/buildlink3.mk"
 .include "../../devel/pcre-ocaml/buildlink3.mk"
