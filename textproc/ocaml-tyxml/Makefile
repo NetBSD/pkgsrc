@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/11/01 11:30:23 jaapb Exp $
+# $NetBSD: Makefile,v 1.6 2014/11/01 04:36:17 hiramatsu Exp $
 #
 
 DISTNAME=	tyxml-2.2.0
@@ -27,6 +27,7 @@ PLIST_VARS=	opt
 PLIST.opt=	yes
 .endif
 
+.include "../../lang/camlp4/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../net/ocamlnet/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
