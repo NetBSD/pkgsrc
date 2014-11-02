@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4110 2014/11/02 08:12:00 adam Exp $
+$NetBSD: CHANGES-2014,v 1.4111 2014/11/02 14:18:18 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5195,3 +5195,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/dovecot2 to 2.2.15 [taca 2014-11-02]
 	Updated mail/dovecot2-pigeonhole to 0.4.5 [taca 2014-11-02]
 	Updated multimedia/ffmpeg2 to 2.4.3 [adam 2014-11-02]
+	Updated devel/deforaos-configure to 0.1.1 [khorben 2014-11-02]
