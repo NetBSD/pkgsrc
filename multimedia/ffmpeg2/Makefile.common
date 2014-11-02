@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.23 2014/10/05 14:47:10 wiz Exp $
+# $NetBSD: Makefile.common,v 1.24 2014/11/02 08:10:29 adam Exp $
 # used by multimedia/ffmpeg2/Makefile
 # used by multimedia/ffplay2/Makefile
 
-DISTNAME=	ffmpeg-2.4.2
+DISTNAME=	ffmpeg-2.4.3
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.ffmpeg.org/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -35,7 +35,7 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/ffmpeg2
 
 PLIST_VARS+=		opencl
 
-.if !empty(MACHINE_PLATFORM:MDarwin-1[23456789].*-*)
+.if !empty(MACHINE_PLATFORM:MDarwin-1[2-9].*-*)
 CONFIGURE_ARGS+=	--enable-opencl
 PLIST.opencl=		yes
 .endif
