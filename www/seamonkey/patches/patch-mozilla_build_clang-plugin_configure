@@ -1,0 +1,13 @@
+$NetBSD: patch-mozilla_build_clang-plugin_configure,v 1.1 2014/11/02 05:40:31 ryoon Exp $
+
+--- mozilla/build/clang-plugin/configure.orig	2014-10-14 06:36:04.000000000 +0000
++++ mozilla/build/clang-plugin/configure
+@@ -42,7 +42,7 @@ LLVMCXXFLAGS=`$LLVMCONFIG --cxxflags`
+ LLVMLDFLAGS=`$LLVMCONFIG --ldflags`
+ LLVMLDFLAGS="$LLVMLDFLAGS `$LLVMCONFIG --libs $LLVMLIBS`"
+ 
+-if [ $PLATFORM == Darwin ]; then
++if [ $PLATFORM = Darwin ]; then
+   DSO_LDOPTS="-dynamiclib -shared"
+   CLANGLDFLAGS="-lclangFrontend -lclangDriver -lclangSerialization \
+                  -lclangParse -lclangSema -lclangAnalysis -lclangEdit -lclangAST \
