@@ -1,8 +1,17 @@
-$NetBSD: patch-mozilla_js_src_Makefile.in,v 1.5 2014/03/30 04:13:17 ryoon Exp $
+$NetBSD: patch-mozilla_js_src_Makefile.in,v 1.6 2014/11/02 05:40:31 ryoon Exp $
 
---- mozilla/js/src/Makefile.in.orig	2014-03-19 01:41:57.000000000 +0000
+--- mozilla/js/src/Makefile.in.orig	2014-10-14 06:36:15.000000000 +0000
 +++ mozilla/js/src/Makefile.in
-@@ -379,7 +379,7 @@ endif
+@@ -18,8 +18,6 @@ run_for_side_effects := $(shell echo 'MA
+ STATIC_LIBRARY_NAME = js_static
+ LIBS		= $(NSPR_LIBS)
+ 
+-DIST_INSTALL = 1
+-
+ ifdef JS_STANDALONE
+ SHARED_LIBRARY_LIBS += $(call EXPAND_LIBNAME_PATH,mfbt,$(DEPTH)/mfbt)
+ ifndef MOZ_NATIVE_ZLIB
+@@ -226,7 +224,7 @@ EXTRA_LIBS += $(MOZ_ZLIB_LIBS)
  ifdef MOZ_SHARED_ICU
  EXTRA_DSO_LDOPTS += $(MOZ_ICU_LIBS)
  else
@@ -10,4 +19,13 @@ $NetBSD: patch-mozilla_js_src_Makefile.in,v 1.5 2014/03/30 04:13:17 ryoon Exp $
 +SHARED_LIBRARY_LIBS += $(filter-out -L% -l% -Wl%,$(MOZ_ICU_LIBS))
  endif
  
- # Prevent floating point errors caused by VC++ optimizations
+ ifeq ($(OS_ARCH),FreeBSD)
+@@ -344,7 +342,7 @@ endif
+ 
+ ifdef HAVE_DTRACE
+ $(CURDIR)/javascript-trace.h: $(srcdir)/devtools/javascript-trace.d
+-	dtrace -h -s $(srcdir)/devtools/javascript-trace.d -o javascript-trace.h.in
++	dtrace -x nolibs -h -s $(srcdir)/devtools/javascript-trace.d -o javascript-trace.h.in
+ 	sed -e 's/if _DTRACE_VERSION/ifdef INCLUDE_MOZILLA_DTRACE/' \
+ 	    -e '/const/!s/char \*/const char */g' \
+ 	    javascript-trace.h.in > javascript-trace.h
