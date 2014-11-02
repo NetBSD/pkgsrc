@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.110 2014/08/16 04:10:44 tsutsui Exp $
+# $NetBSD: Makefile,v 1.111 2014/11/02 19:38:12 tsutsui Exp $
 
-DISTNAME=	mlterm-3.3.8
+DISTNAME=	mlterm-3.4.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mlterm/}
 
-MAINTAINER=	uebayasi@NetBSD.org
+MAINTAINER=	tsutsui@NetBSD.org
 HOMEPAGE=	http://mlterm.sourceforge.net/
 COMMENT=	Multilingual terminal emulator
 LICENSE=	modified-bsd
@@ -24,7 +24,6 @@ EGDIR=			${PREFIX}/share/examples/mlterm
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
-CONFIGURE_ARGS+=	--with-imagelib=gdk-pixbuf
 CONFIGURE_ARGS+=	--without-libiconv-prefix
 CONFIGURE_ARGS+=	--without-libintl-prefix
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
@@ -76,7 +75,6 @@ post-install:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"

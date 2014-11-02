@@ -1,10 +1,10 @@
-$NetBSD: patch-configure,v 1.9 2014/08/16 04:10:44 tsutsui Exp $
+$NetBSD: patch-configure,v 1.10 2014/11/02 19:38:12 tsutsui Exp $
 
 - setuid root is handled by SPECIAL_PERMS in pkgsrc
 
---- configure.orig	2014-08-16 01:06:01.000000000 +0000
+--- configure.orig	2014-10-27 22:26:49.000000000 +0000
 +++ configure
-@@ -21390,7 +21390,7 @@ else
+@@ -21404,7 +21404,7 @@ else
  fi
  
  if test "$gui" = "fb" ; then
