@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2011/03/23 14:55:02 minskim Exp $
+$NetBSD: distinfo,v 1.8 2014/11/02 16:08:33 ryoon Exp $
 
 SHA1 (apel-10.8.tar.gz) = 089c18ae006df093aa2edaeb486bfaead6ac4918
 RMD160 (apel-10.8.tar.gz) = 71dfe162ef8d68d2257cc314d994dfd3217e1d3d
 Size (apel-10.8.tar.gz) = 126326 bytes
+SHA1 (patch-poe.el) = a97bf1c9524940f21a4c3f8641ee14ff93bd6a2b
