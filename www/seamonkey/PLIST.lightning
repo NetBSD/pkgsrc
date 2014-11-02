@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.lightning,v 1.17 2014/06/22 08:54:39 ryoon Exp $
+@comment $NetBSD: PLIST.lightning,v 1.18 2014/11/02 05:40:31 ryoon Exp $
 lib/seamonkey/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/chrome.manifest
 lib/seamonkey/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/chrome/gdata-provider-en-US/locale/en-US/gdata.dtd
 lib/seamonkey/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/chrome/gdata-provider-en-US/locale/en-US/gdata.properties
@@ -71,7 +71,6 @@ lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calW
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calWeekPrinter.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome.manifest
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar-en-US.jar
-lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/content/calendar/Windows98ToZoneInfoTZId.properties
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/content/calendar/WindowsNTToZoneInfoTZId.properties
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/content/calendar/agenda-listbox.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/content/calendar/agenda-listbox.xml
@@ -436,7 +435,6 @@ lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/light
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/wcap.xpt
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/defaults/preferences/lightning.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/install.rdf
-lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/OAuth2.jsm
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calAlarmUtils.jsm
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calAuthUtils.jsm
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calExtract.jsm
@@ -453,3 +451,6 @@ lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calUtils
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calXMLUtils.jsm
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/ical.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/timezones.sqlite
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/lightning-common/lightning.css
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calSleepMonitor.js
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calSleepMonitor.manifest

@@ -1,10 +1,10 @@
-$NetBSD: patch-mozilla_js_src_gc_Memory.cpp,v 1.3 2014/06/22 08:54:39 ryoon Exp $
+$NetBSD: patch-mozilla_js_src_gc_Memory.cpp,v 1.4 2014/11/02 05:40:31 ryoon Exp $
 
---- mozilla/js/src/gc/Memory.cpp.orig	2014-06-13 00:46:08.000000000 +0000
+--- mozilla/js/src/gc/Memory.cpp.orig	2014-10-14 06:36:16.000000000 +0000
 +++ mozilla/js/src/gc/Memory.cpp
-@@ -312,7 +312,7 @@ gc::InitMemorySubsystem(JSRuntime *rt)
- static inline void *
- MapMemory(size_t length, int prot, int flags, int fd, off_t offset)
+@@ -406,7 +406,7 @@ static inline void *
+ MapMemory(size_t length, int prot = PROT_READ | PROT_WRITE,
+           int flags = MAP_PRIVATE | MAP_ANON, int fd = -1, off_t offset = 0)
  {
 -#if defined(__ia64__)
 +#if defined(__ia64__) || (defined(__sparc64__) && defined(__NetBSD__))
