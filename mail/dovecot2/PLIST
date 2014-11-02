@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2014/10/20 09:29:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.37 2014/11/02 07:34:51 taca Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -760,7 +760,6 @@ share/doc/dovecot/wiki/SSL.txt
 share/doc/dovecot/wiki/Sasl.txt
 share/doc/dovecot/wiki/SecurityTuning.txt
 share/doc/dovecot/wiki/Services.txt
-share/doc/dovecot/wiki/SharedMailboxes.ClusterSetup.txt
 share/doc/dovecot/wiki/SharedMailboxes.Permissions.txt
 share/doc/dovecot/wiki/SharedMailboxes.Public.txt
 share/doc/dovecot/wiki/SharedMailboxes.Shared.txt
