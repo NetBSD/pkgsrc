@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2014/10/14 11:14:50 sborrill Exp $
-
-To enable this module, add the following to ${PKG_SYSCONFDIR}/php.ini:
-
-    zend_extension=${PREFIX}/${PHP_EXTENSION_DIR}/${MODNAME}.so
-
-Then restart your ${PKG_PHP}-enabled HTTP server to load this module.
-===========================================================================
