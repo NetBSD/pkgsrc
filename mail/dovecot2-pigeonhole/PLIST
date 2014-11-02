@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2014/05/14 06:10:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/11/02 07:36:39 taca Exp $
 bin/sieve-dump
 bin/sieve-filter
 bin/sieve-test
 bin/sievec
 include/dovecot/sieve/edit-mail.h
 include/dovecot/sieve/pigeonhole-config.h
+include/dovecot/sieve/pigeonhole-version.h
 include/dovecot/sieve/program-client-private.h
 include/dovecot/sieve/program-client.h
 include/dovecot/sieve/rfc2822.h
@@ -27,6 +28,7 @@ include/dovecot/sieve/sieve-error.h
 include/dovecot/sieve/sieve-ext-copy.h
 include/dovecot/sieve/sieve-ext-enotify.h
 include/dovecot/sieve/sieve-ext-environment.h
+include/dovecot/sieve/sieve-ext-mailbox.h
 include/dovecot/sieve/sieve-ext-variables.h
 include/dovecot/sieve/sieve-extensions.h
 include/dovecot/sieve/sieve-generator.h
@@ -42,11 +44,12 @@ include/dovecot/sieve/sieve-plugins.h
 include/dovecot/sieve/sieve-result.h
 include/dovecot/sieve/sieve-runtime-trace.h
 include/dovecot/sieve/sieve-runtime.h
-include/dovecot/sieve/sieve-script-file.h
 include/dovecot/sieve/sieve-script-private.h
 include/dovecot/sieve/sieve-script.h
 include/dovecot/sieve/sieve-settings.h
 include/dovecot/sieve/sieve-smtp.h
+include/dovecot/sieve/sieve-storage-private.h
+include/dovecot/sieve/sieve-storage.h
 include/dovecot/sieve/sieve-stringlist.h
 include/dovecot/sieve/sieve-types.h
 include/dovecot/sieve/sieve-validator.h
@@ -56,6 +59,7 @@ lib/dovecot/lib90_sieve_plugin.la
 lib/dovecot/libdovecot-sieve.la
 lib/dovecot/settings/libmanagesieve_login_settings.la
 lib/dovecot/settings/libmanagesieve_settings.la
+lib/dovecot/settings/libpigeonhole_settings.la
 lib/dovecot/sieve/lib90_sieve_extprograms_plugin.la
 libexec/dovecot/managesieve
 libexec/dovecot/managesieve-login
