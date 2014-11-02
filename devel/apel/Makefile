@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2013/03/10 05:10:59 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.32 2014/11/02 16:08:33 ryoon Exp $
 
 DISTNAME=	apel-10.8
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://kanji.zinbun.kyoto-u.ac.jp/~tomo/lemi/dist/apel/
 
