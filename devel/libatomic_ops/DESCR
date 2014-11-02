@@ -8,6 +8,3 @@ atomic memory operations.  These might allow you to write code:
   is also not always faster than lock-based code.  But it may occasionally
   be a large performance win.
 - To experiment with new and much better thread programming paradigms, etc.
-
-As the latest code for this library is only available via CVS, this package
-provides a snapshot.
