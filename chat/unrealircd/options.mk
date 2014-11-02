@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2014/11/02 05:35:39 obache Exp $
+# $NetBSD: options.mk,v 1.14 2014/11/02 05:36:25 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.unrealircd
 
@@ -6,7 +6,7 @@ PKG_SUPPORTED_OPTIONS=	inet6 unrealircd-nospoof unrealircd-ziplinks
 PKG_SUPPORTED_OPTIONS+= unrealircd-remoteinc ssl unrealircd-chroot
 PKG_SUPPORTED_OPTIONS+=	unrealircd-prefixaq unrealircd-showlistmodes
 PKG_SUPPORTED_OPTIONS+= unrealircd-topicisnuhost unrealircd-shunnotices
-PKG_SUPPORTED_OPTIONS+= unrealircd-operoverride-verify inet6
+PKG_SUPPORTED_OPTIONS+= unrealircd-operoverride-verify
 PKG_SUPPORTED_OPTIONS+=	unrealircd-no-operoverride unrealircd-disableusermod
 PKG_SUGGESTED_OPTIONS=	unrealircd-showlistmodes unrealircd-prefixaq
 
