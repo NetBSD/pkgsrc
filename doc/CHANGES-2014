@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4115 2014/11/02 17:35:30 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4116 2014/11/02 17:38:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5200,3 +5200,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/p5-Net-DNS to 0.81 [wiz 2014-11-02]
 	Updated devel/p5-Tree-DAG_Node to 1.23 [wiz 2014-11-02]
 	Updated devel/p5-Test-Warn to 0.30 [wiz 2014-11-02]
+	Updated devel/py-mercurial to 3.2 [wiz 2014-11-02]
