@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4114 2014/11/02 17:33:56 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4115 2014/11/02 17:35:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5199,3 +5199,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/apel to 10.8nb2 [ryoon 2014-11-02]
 	Updated net/p5-Net-DNS to 0.81 [wiz 2014-11-02]
 	Updated devel/p5-Tree-DAG_Node to 1.23 [wiz 2014-11-02]
+	Updated devel/p5-Test-Warn to 0.30 [wiz 2014-11-02]
