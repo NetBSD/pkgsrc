@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4119 2014/11/02 18:13:34 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4120 2014/11/02 18:23:26 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5204,3 +5204,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/raptor2 to 2.0.15 [wiz 2014-11-02]
 	Added fonts/awesome-ttf version 4.2.0 [khorben 2014-11-02]
 	Updated devel/waf to 1.8.4 [wiz 2014-11-02]
+	Added graphics/deforaos-icon-theme version 0.0.0 [khorben 2014-11-02]
