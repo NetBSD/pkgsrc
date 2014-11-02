@@ -1,0 +1,8 @@
+In simple terms, this package provides a library for implementing the
+sharing of secrets and two tools for simple use-cases of the
+algorithm.  The library implements what is known as Shamir's method
+for secret sharing in the Galois Field 2^8.  In slightly simpler words,
+this is N-of-M secret-sharing byte-by-byte.  Essentially this allows
+us to split a secret S into any M shares S1..SM such that any N of
+those shares can be used to reconstruct S but any less than N shares
+yields no information whatsoever.
