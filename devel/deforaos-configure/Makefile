@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2014/10/17 21:59:29 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2014/11/02 14:12:25 khorben Exp $
 
-DISTNAME=	configure-0.1.0
-PKGNAME=	deforaos-configure-0.1.0
+DISTNAME=	configure-0.1.1
+PKGNAME=	deforaos-configure-0.1.1
 CATEGORIES=	devel
-MASTER_SITES=	http://www.defora.org/os/download/download/4331/
+MASTER_SITES=	http://www.defora.org/os/download/download/4343/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
