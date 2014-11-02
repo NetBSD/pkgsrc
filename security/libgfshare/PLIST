@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2014/11/02 20:38:16 agc Exp $
+bin/gfcombine
+bin/gfsplit
+include/libgfshare.h
+lib/libgfshare.la
+lib/pkgconfig/libgfshare.pc
+man/man1/gfcombine.1
+man/man1/gfsplit.1
+man/man5/libgfshare.5
+man/man7/gfshare.7
