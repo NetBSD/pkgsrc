@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/05/21 03:19:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.2.4.1 2014/11/02 17:33:39 tron Exp $
 bin/erb${RUBY_SUFFIX}
 bin/gem${RUBY_SUFFIX}
 bin/irb${RUBY_SUFFIX}
@@ -921,7 +921,7 @@ ${RUBY_ARCHLIB}/zlib.${RUBY_DLEXT}
 ${GEM_HOME}/gems/rake-10.1.0/bin/rake
 ${GEM_HOME}/gems/rdoc-4.1.0/bin/rdoc
 ${GEM_HOME}/gems/rdoc-4.1.0/bin/ri
-${GEM_HOME}/gems/test-unit-2.1.2.0/bin/testrb
+${GEM_HOME}/gems/test-unit-2.1.4.0/bin/testrb
 ${GEM_HOME}/specifications/default/bigdecimal-1.2.4.gemspec
 ${GEM_HOME}/specifications/default/io-console-0.4.2.gemspec
 ${GEM_HOME}/specifications/default/json-1.8.1.gemspec
@@ -929,7 +929,7 @@ ${GEM_HOME}/specifications/default/minitest-4.7.5.gemspec
 ${GEM_HOME}/specifications/default/psych-2.0.5.gemspec
 ${GEM_HOME}/specifications/default/rake-10.1.0.gemspec
 ${GEM_HOME}/specifications/default/rdoc-4.1.0.gemspec
-${GEM_HOME}/specifications/default/test-unit-2.1.2.0.gemspec
+${GEM_HOME}/specifications/default/test-unit-2.1.4.0.gemspec
 man/man1/erb${RUBY_SUFFIX}.1
 man/man1/irb${RUBY_SUFFIX}.1
 man/man1/rake${RUBY_SUFFIX}.1
