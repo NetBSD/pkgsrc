@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.524 2014/10/01 12:14:02 fhajny Exp $
+# $NetBSD: Makefile,v 1.525 2014/11/02 20:39:03 agc Exp $
 #
 
 COMMENT=	Security tools
@@ -128,6 +128,7 @@ SUBDIR+=	libdes
 SUBDIR+=	libfprint
 SUBDIR+=	libfwbuilder
 SUBDIR+=	libgcrypt
+SUBDIR+=	libgfshare
 SUBDIR+=	libglobalplatform
 SUBDIR+=	libgnome-keyring
 SUBDIR+=	libgpg-error
