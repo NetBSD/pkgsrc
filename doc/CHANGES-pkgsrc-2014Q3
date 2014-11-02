@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.11 2014/11/01 19:35:35 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.12 2014/11/02 17:34:07 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q3 branch:
@@ -51,3 +51,7 @@ Pullup ticket #4532 - requested by taca
 x11/ruby-tk: bug fix patch
 Pullup ticket #4534 - requested by taca
 lang/ruby200-base: bug fix update
+Pullup ticket #4533 - requested by taca
+lang/ruby193-base: security update
+Pullup ticket #4535 - requested by taca
+lang/ruby21-base: security update
