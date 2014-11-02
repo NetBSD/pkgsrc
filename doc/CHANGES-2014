@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4123 2014/11/02 19:57:17 tsutsui Exp $
+$NetBSD: CHANGES-2014,v 1.4124 2014/11/02 20:40:12 agc Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5208,3 +5208,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated meta-pkgs/deforaos-desktop to 0.0.4 [khorben 2014-11-02]
 	Updated x11/mlterm to 3.4.0 [tsutsui 2014-11-02]
 	Updated games/onscripter to 20140817 [tsutsui 2014-11-02]
+	Added security/libgfshare version 1.0.5 [agc 2014-11-02]
