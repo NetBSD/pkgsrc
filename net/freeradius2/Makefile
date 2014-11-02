@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2014/05/29 23:37:03 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2014/11/02 05:55:43 obache Exp $
 
 DISTNAME=	freeradius-server-${RADVER}
 PKGNAME=	${DISTNAME:S/-server//}
@@ -25,7 +25,7 @@ BUILD_DEFS+=		VARBASE
 FILES_SUBST+=		RADIUS_USER=${RADIUS_USER}
 FILES_SUBST+=		RADIUS_GROUP=${RADIUS_GROUP}
 PLIST_SUBST+=		RADVER=${RADVER}
-MESSAGE_SRC+=		${WRKDIR}/.MESSAGE_SRC
+MESSAGE_SRC+=		${PKGDIR}/MESSAGE
 MESSAGE_SUBST+=		CHOWN=${CHOWN:Q} CHMOD=${CHMOD:Q} VARBASE=${VARBASE}
 MESSAGE_SUBST+=		RADIUS_USER=${RADIUS_USER} XARGS=${XARGS:Q}
 MESSAGE_SUBST+=		RADIUS_GROUP=${RADIUS_GROUP} FIND=${FIND:Q}
@@ -155,12 +155,6 @@ SUBST_SED.make+=	-e 's|@ldap_ldflags@|@ldap_ldflags@ \
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "native"
 SUBST_SED.make+=	-e 's|@ldap_ldflags@|@ldap_ldflags@ \
 			${PTHREAD_LDFLAGS:M*:Q} ${PTHREAD_LIBS:M*:Q}|g'
-.endif
-
-post-build:
-	${CP} ${PKGDIR}/MESSAGE ${WRKDIR}/.MESSAGE_SRC
-.if !empty(PKG_OPTIONS:Mpam)
-	${CP} ${PKGDIR}/MESSAGE.pam ${WRKDIR}/.MESSAGE_SRC.pam
 .endif
 
 post-install:
