@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2013/07/14 15:42:34 rodent Exp $
+# $NetBSD: options.mk,v 1.13 2014/11/02 05:35:39 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.unrealircd
 
@@ -17,7 +17,7 @@ PKG_SUGGESTED_OPTIONS=	unrealircd-showlistmodes unrealircd-prefixaq
 ###
 .if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-inet6
-MESSAGE_SRC+=		${WRKDIR}/.MESSAGE_SRC.inet6
+MESSAGE_SRC+=		MESSAGE_SRC.inet6
 .else
 CONFIGURE_ARGS+=	--disable-inet6
 CONFIGURE_ENV+=		ac_cv_ip6=no
