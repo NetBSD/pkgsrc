@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4117 2014/11/02 17:40:48 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4118 2014/11/02 18:00:03 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5202,3 +5202,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Test-Warn to 0.30 [wiz 2014-11-02]
 	Updated devel/py-mercurial to 3.2 [wiz 2014-11-02]
 	Updated textproc/raptor2 to 2.0.15 [wiz 2014-11-02]
+	Added fonts/awesome-ttf version 4.2.0 [khorben 2014-11-02]
