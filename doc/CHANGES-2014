@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4107 2014/11/02 05:48:09 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.4108 2014/11/02 07:35:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5192,3 +5192,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/contao33 to 3.3.6 [taca 2014-11-02]
 	Updated www/seamonkey to 2.30 [ryoon 2014-11-02]
 	Updated www/seamonkey-l10n to 2.30 [ryoon 2014-11-02]
+	Updated mail/dovecot2 to 2.2.15 [taca 2014-11-02]
