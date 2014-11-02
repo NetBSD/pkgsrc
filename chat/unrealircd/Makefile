@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2014/02/12 23:17:37 tron Exp $
+# $NetBSD: Makefile,v 1.40 2014/11/02 05:35:39 obache Exp $
 
 DISTNAME=	Unreal3.2.10.1
 PKGNAME=	${DISTNAME:tl:S/l/lircd-/1}
@@ -72,7 +72,7 @@ PKG_HOME.${UIRCD_USER}=		${UIRCD_HOME}
 
 RCD_SCRIPTS=	unrealircd
 
-MESSAGE_SRC+=	${WRKDIR}/.MESSAGE_SRC
+MESSAGE_SRC+=	MESSAGE
 MESSAGE_SUBST+=	UIRCD_HOME=${UIRCD_HOME:Q}
 FILES_SUBST+=	UIRCD_HOME=${UIRCD_HOME:Q}
 FILES_SUBST+=	UIRCD_USER=${UIRCD_USER:Q}
@@ -109,12 +109,6 @@ CFLAGS.SunOS+=	-DUSE_LOCALE
 .include "../../net/libcares/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/tre/buildlink3.mk"
-
-post-build:
-	${CP} ${PKGDIR:Q}/MESSAGE ${WRKDIR:Q}/.MESSAGE_SRC
-.if !empty(PKG_OPTIONS:Minet6)
-	${CP} ${PKGDIR:Q}/MESSAGE.inet6 ${WRKDIR:Q}/.MESSAGE_SRC.inet6
-.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC:Q}/src/ircd ${DESTDIR}${PREFIX}/sbin
