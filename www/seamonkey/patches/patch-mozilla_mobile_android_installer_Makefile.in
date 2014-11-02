@@ -1,0 +1,15 @@
+$NetBSD: patch-mozilla_mobile_android_installer_Makefile.in,v 1.1 2014/11/02 05:40:31 ryoon Exp $
+
+--- mozilla/mobile/android/installer/Makefile.in.orig	2014-10-14 06:36:32.000000000 +0000
++++ mozilla/mobile/android/installer/Makefile.in
+@@ -41,6 +41,10 @@ BINPATH = bin
+ endif
+ DEFINES += -DBINPATH=$(BINPATH)
+ 
++ifdef MOZ_DEBUG
++DEFINES += -DMOZ_DEBUG=1
++endif
++
+ ifdef ENABLE_MARIONETTE
+ DEFINES += -DENABLE_MARIONETTE=1
+ endif

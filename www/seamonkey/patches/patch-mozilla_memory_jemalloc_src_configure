@@ -1,0 +1,31 @@
+$NetBSD: patch-mozilla_memory_jemalloc_src_configure,v 1.1 2014/11/02 05:40:31 ryoon Exp $
+
+--- mozilla/memory/jemalloc/src/configure.orig	2014-10-14 06:36:32.000000000 +0000
++++ mozilla/memory/jemalloc/src/configure
+@@ -6344,7 +6344,7 @@ else
+ fi
+ 
+ if test "x$have_sbrk" = "x1" ; then
+-  if test "x$sbrk_deprecated" == "x1" ; then
++  if test "x$sbrk_deprecated" = "x1" ; then
+     { $as_echo "$as_me:${as_lineno-$LINENO}: result: Disabling dss allocation because sbrk is deprecated" >&5
+ $as_echo "Disabling dss allocation because sbrk is deprecated" >&6; }
+     enable_dss="0"
+@@ -6945,7 +6945,7 @@ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $je_cv_gcc_builtin_ffsl" >&5
+ $as_echo "$je_cv_gcc_builtin_ffsl" >&6; }
+ 
+-if test "x${je_cv_gcc_builtin_ffsl}" == "xyes" ; then
++if test "x${je_cv_gcc_builtin_ffsl}" = "xyes" ; then
+   $as_echo "#define JEMALLOC_INTERNAL_FFSL __builtin_ffsl" >>confdefs.h
+ 
+   $as_echo "#define JEMALLOC_INTERNAL_FFS __builtin_ffs" >>confdefs.h
+@@ -6988,7 +6988,7 @@ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $je_cv_function_ffsl" >&5
+ $as_echo "$je_cv_function_ffsl" >&6; }
+ 
+-  if test "x${je_cv_function_ffsl}" == "xyes" ; then
++  if test "x${je_cv_function_ffsl}" = "xyes" ; then
+     $as_echo "#define JEMALLOC_INTERNAL_FFSL ffsl" >>confdefs.h
+ 
+     $as_echo "#define JEMALLOC_INTERNAL_FFS ffs" >>confdefs.h

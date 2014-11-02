@@ -1,11 +1,11 @@
-$NetBSD: patch-as,v 1.17 2014/06/22 08:54:39 ryoon Exp $
+$NetBSD: patch-as,v 1.18 2014/11/02 05:40:31 ryoon Exp $
 
 * Fix _res is not supported for multi-threaded programs. error.
 * Treat DragonFly like FreeBSD.
 
---- mozilla/js/src/configure.in.orig	2014-06-13 00:46:08.000000000 +0000
+--- mozilla/js/src/configure.in.orig	2014-10-14 06:36:15.000000000 +0000
 +++ mozilla/js/src/configure.in
-@@ -2165,116 +2165,13 @@ AC_LANG_CPLUSPLUS
+@@ -2088,8 +2088,7 @@ AC_LANG_CPLUSPLUS
  
  MOZ_CXX11
  
@@ -13,121 +13,18 @@ $NetBSD: patch-as,v 1.17 2014/06/22 08:54:39 ryoon Exp $
 -dnl Borrowed from glibc configure.in
 +dnl Setup default hidden visibility and wrapped system headers.
  dnl ===============================================================
- if test "$GNU_CC"; then
--  AC_CACHE_CHECK(for visibility(hidden) attribute,
--                 ac_cv_visibility_hidden,
--                 [cat > conftest.c <<EOF
--                  int foo __attribute__ ((visibility ("hidden"))) = 1;
--EOF
--                  ac_cv_visibility_hidden=no
--                  if ${CC-cc} -Werror -S conftest.c -o conftest.s >/dev/null 2>&1; then
--                    if egrep '\.(hidden|private_extern).*foo' conftest.s >/dev/null; then
--                      ac_cv_visibility_hidden=yes
--                    fi
--                  fi
--                  rm -f conftest.[cs]
--                 ])
--  if test "$ac_cv_visibility_hidden" = "yes"; then
--    AC_DEFINE(HAVE_VISIBILITY_HIDDEN_ATTRIBUTE)
--
--    AC_CACHE_CHECK(for visibility(default) attribute,
--                   ac_cv_visibility_default,
--                   [cat > conftest.c <<EOF
--                    int foo __attribute__ ((visibility ("default"))) = 1;
--EOF
--                    ac_cv_visibility_default=no
--                    if ${CC-cc} -fvisibility=hidden -Werror -S conftest.c -o conftest.s >/dev/null 2>&1; then
--                      if ! egrep '\.(hidden|private_extern).*foo' conftest.s >/dev/null; then
--                        ac_cv_visibility_default=yes
--                      fi
--                    fi
--                    rm -f conftest.[cs]
--                   ])
--    if test "$ac_cv_visibility_default" = "yes"; then
--      AC_DEFINE(HAVE_VISIBILITY_ATTRIBUTE)
--
--      AC_CACHE_CHECK(for visibility pragma support,
--                     ac_cv_visibility_pragma,
--                     [cat > conftest.c <<EOF
--#pragma GCC visibility push(hidden)
--                      int foo_hidden = 1;
--#pragma GCC visibility push(default)
--                      int foo_default = 1;
--EOF
--                      ac_cv_visibility_pragma=no
--                      if ${CC-cc} -Werror -S conftest.c -o conftest.s >/dev/null 2>&1; then
--                        if egrep '\.(hidden|private_extern).*foo_hidden' conftest.s >/dev/null; then
--                          if ! egrep '\.(hidden|private_extern).*foo_default' conftest.s > /dev/null; then
--                            ac_cv_visibility_pragma=yes
--                          fi
--                        fi
--                      fi
--                      rm -f conftest.[cs]
--                    ])
--      if test "$ac_cv_visibility_pragma" = "yes"; then
--        AC_CACHE_CHECK(For gcc visibility bug with class-level attributes (GCC bug 26905),
--                       ac_cv_have_visibility_class_bug,
--                       [cat > conftest.c <<EOF
--#pragma GCC visibility push(hidden)
--struct __attribute__ ((visibility ("default"))) TestStruct {
--  static void Init();
--};
--__attribute__ ((visibility ("default"))) void TestFunc() {
--  TestStruct::Init();
--}
--EOF
--                       ac_cv_have_visibility_class_bug=no
--                       if ! ${CXX-g++} ${CXXFLAGS} ${DSO_PIC_CFLAGS} ${DSO_LDOPTS} -S -o conftest.S conftest.c > /dev/null 2>&1 ; then
--                         ac_cv_have_visibility_class_bug=yes
--                       else
--                         if test `egrep -c '@PLT|\\$stub' conftest.S` = 0; then
--                           ac_cv_have_visibility_class_bug=yes
--                         fi
--                       fi
--                       rm -rf conftest.{c,S}
--                       ])
--
--        AC_CACHE_CHECK(For x86_64 gcc visibility bug with builtins (GCC bug 20297),
--                       ac_cv_have_visibility_builtin_bug,
--                       [cat > conftest.c <<EOF
--#pragma GCC visibility push(hidden)
--#pragma GCC visibility push(default)
--#include <string.h>
--#pragma GCC visibility pop
--
--__attribute__ ((visibility ("default"))) void Func() {
--  char c[[100]];
--  memset(c, 0, sizeof(c));
--}
--EOF
--                       ac_cv_have_visibility_builtin_bug=no
--                       if ! ${CC-cc} ${CFLAGS} ${DSO_PIC_CFLAGS} ${DSO_LDOPTS} -O2 -S -o conftest.S conftest.c > /dev/null 2>&1 ; then
--                         ac_cv_have_visibility_builtin_bug=yes
--                       else
--                         if test `grep -c "@PLT" conftest.S` = 0; then
--                           ac_cv_visibility_builtin_bug=yes
--                         fi
--                       fi
--                       rm -f conftest.{c,S}
--                       ])
--        if test "$ac_cv_have_visibility_builtin_bug" = "no" -a \
--                "$ac_cv_have_visibility_class_bug" = "no"; then
--          VISIBILITY_FLAGS='-I$(DIST)/system_wrappers -include $(topsrcdir)/config/gcc_hidden.h'
--          WRAP_SYSTEM_INCLUDES=1
--        else
--          VISIBILITY_FLAGS='-fvisibility=hidden'
--        fi # have visibility pragma bug
--      fi   # have visibility pragma
--    fi     # have visibility(default) attribute
--  fi       # have visibility(hidden) attribute
-+  AC_DEFINE(HAVE_VISIBILITY_HIDDEN_ATTRIBUTE)
-+  AC_DEFINE(HAVE_VISIBILITY_ATTRIBUTE)
-+  VISIBILITY_FLAGS='-I$(DIST)/system_wrappers -include $(topsrcdir)/config/gcc_hidden.h'
-+  WRAP_SYSTEM_INCLUDES=1
- fi         # GNU_CC
+ if test "$GNU_CC" -a "$OS_TARGET" != WINNT; then
+   AC_DEFINE(HAVE_VISIBILITY_HIDDEN_ATTRIBUTE)
+@@ -2155,7 +2154,7 @@ dnl Quota support
+ MOZ_CHECK_HEADERS(sys/quota.h)
+ MOZ_CHECK_HEADERS(linux/quota.h)
  
- # visibility hidden flag for Sun Studio on Solaris
-@@ -3280,7 +3177,7 @@ if test "$MOZ_MEMORY"; then
+-AC_ARG_ENABLE(dtrace,
++MOZ_ARG_ENABLE_BOOL(dtrace,
+               [  --enable-dtrace         build with dtrace support if available (default=no)],
+               [enable_dtrace="yes"],)
+ if test "x$enable_dtrace" = "xyes"; then
+@@ -3011,7 +3010,7 @@ if test "$MOZ_MEMORY"; then
    *-darwin*)
      AC_DEFINE(MOZ_MEMORY_DARWIN)
      ;;
@@ -136,28 +33,7 @@ $NetBSD: patch-as,v 1.17 2014/06/22 08:54:39 ryoon Exp $
      AC_DEFINE(MOZ_MEMORY_BSD)
      ;;
    *-android*|*-linuxandroid*)
-@@ -4144,6 +4041,20 @@ AC_SUBST(CXX_VERSION)
- AC_SUBST(MSMANIFEST_TOOL)
- AC_SUBST(MOZ_LINKER)
- 
-+AC_MSG_CHECKING([for posix_fadvise])
-+AC_TRY_LINK([#define _XOPEN_SOURCE 600
-+  #include <fcntl.h>],
-+                 [posix_fadvise(0, 0, 0, 0);],
-+                 [ac_cv___posix_fadvise=true],
-+                 [ac_cv___posix_fadvise=false])
-+
-+if test "$ac_cv___posix_fadvise" = true ; then
-+  AC_DEFINE(HAVE_POSIX_FADVISE)
-+  AC_MSG_RESULT(yes)
-+else
-+  AC_MSG_RESULT(no)
-+fi
-+
- AC_MSG_CHECKING([for posix_fallocate])
- AC_TRY_LINK([#define _XOPEN_SOURCE 600
-   #include <fcntl.h>],
-@@ -4512,6 +4423,16 @@ fi
+@@ -3925,6 +3924,16 @@ MOZ_SUBCONFIGURE_ICU()
  dnl ========================================================
  dnl JavaScript shell
  dnl ========================================================

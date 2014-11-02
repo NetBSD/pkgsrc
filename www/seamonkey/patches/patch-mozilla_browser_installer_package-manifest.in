@@ -1,8 +1,17 @@
-$NetBSD: patch-mozilla_browser_installer_package-manifest.in,v 1.2 2014/03/30 04:13:17 ryoon Exp $
+$NetBSD: patch-mozilla_browser_installer_package-manifest.in,v 1.3 2014/11/02 05:40:31 ryoon Exp $
 
---- mozilla/browser/installer/package-manifest.in.orig	2014-03-19 01:41:45.000000000 +0000
+--- mozilla/browser/installer/package-manifest.in.orig	2014-10-14 06:36:04.000000000 +0000
 +++ mozilla/browser/installer/package-manifest.in
-@@ -732,7 +732,7 @@
+@@ -578,7 +578,7 @@
+ @BINPATH@/components/MozKeyboard.js
+ @BINPATH@/components/InputMethod.manifest
+ 
+-#ifdef MOZ_DEBUG
++#if defined(ENABLE_TESTS) && defined(MOZ_DEBUG)
+ @BINPATH@/components/TestInterfaceJS.js
+ @BINPATH@/components/TestInterfaceJS.manifest
+ #endif
+@@ -752,7 +752,7 @@
  #endif
  
  ; for Solaris SPARC
