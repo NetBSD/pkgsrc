@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.252 2014/08/13 08:00:00 wiz Exp $
+# $NetBSD: Makefile,v 1.253 2014/11/02 17:59:01 khorben Exp $
 #
 
 COMMENT=	Fonts
@@ -31,6 +31,7 @@ SUBDIR+=	anatolian-ttf
 SUBDIR+=	arphic-ttf
 SUBDIR+=	artwiz-fonts
 SUBDIR+=	asea-ttf
+SUBDIR+=	awesome-ttf
 SUBDIR+=	baekmuk-ttf
 SUBDIR+=	bakoma-fonts
 SUBDIR+=	bdftopcf
