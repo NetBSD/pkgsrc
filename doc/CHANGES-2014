@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4121 2014/11/02 18:32:14 khorben Exp $
+$NetBSD: CHANGES-2014,v 1.4122 2014/11/02 19:39:37 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5206,3 +5206,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/waf to 1.8.4 [wiz 2014-11-02]
 	Added graphics/deforaos-icon-theme version 0.0.0 [khorben 2014-11-02]
 	Updated meta-pkgs/deforaos-desktop to 0.0.4 [khorben 2014-11-02]
+	Updated x11/mlterm to 3.4.0 [tsutsui 2014-11-02]
