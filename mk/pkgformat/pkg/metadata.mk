@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.8 2014/03/02 07:18:36 obache Exp $
+# $NetBSD: metadata.mk,v 1.9 2014/11/02 06:17:39 obache Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -207,26 +207,25 @@ ${_DESCR_FILE}: ${DESCR_SRC}
 ### This file contains important messages which apply to this package,
 ### and are shown during installation.
 ###
-.if !defined(MESSAGE_SRC)
-.  if exists(${PKGDIR}/MESSAGE)
-MESSAGE_SRC=	${PKGDIR}/MESSAGE
-.  else
-.    if exists(${PKGDIR}/MESSAGE.common)
-MESSAGE_SRC=	${PKGDIR}/MESSAGE.common
-.    endif
-.    if exists(${PKGDIR}/MESSAGE.${OPSYS})
-MESSAGE_SRC+=	${PKGDIR}/MESSAGE.${OPSYS}
-.    endif
-.    if exists(${PKGDIR}/MESSAGE.${MACHINE_ARCH:C/i[3-6]86/i386/g})
-MESSAGE_SRC+=	${PKGDIR}/MESSAGE.${MACHINE_ARCH:C/i[3-6]86/i386/g}
-.    endif
-.    if exists(${PKGDIR}/MESSAGE.${OPSYS}-${MACHINE_ARCH:C/i[3-6]86/i386/g})
-MESSAGE_SRC+=	${PKGDIR}/MESSAGE.${OPSYS}-${MACHINE_ARCH:C/i[3-6]86/i386/g}
-.    endif
+.if exists(${PKGDIR}/MESSAGE)
+MESSAGE_SRC_DFLT=	${PKGDIR}/MESSAGE
+.else
+.  if exists(${PKGDIR}/MESSAGE.common)
+MESSAGE_SRC_DFLT=	${PKGDIR}/MESSAGE.common
+.  endif
+.  if exists(${PKGDIR}/MESSAGE.${OPSYS})
+MESSAGE_SRC_DFLT+=	${PKGDIR}/MESSAGE.${OPSYS}
+.  endif
+.  if exists(${PKGDIR}/MESSAGE.${MACHINE_ARCH:C/i[3-6]86/i386/g})
+MESSAGE_SRC_DFLT+=	${PKGDIR}/MESSAGE.${MACHINE_ARCH:C/i[3-6]86/i386/g}
+.  endif
+.  if exists(${PKGDIR}/MESSAGE.${OPSYS}-${MACHINE_ARCH:C/i[3-6]86/i386/g})
+MESSAGE_SRC_DFLT+=	${PKGDIR}/MESSAGE.${OPSYS}-${MACHINE_ARCH:C/i[3-6]86/i386/g}
 .  endif
 .endif
+MESSAGE_SRC?=	${MESSAGE_SRC_DFLT}
 
-.if defined(MESSAGE_SRC)
+.if !empty(MESSAGE_SRC)
 _MESSAGE_FILE=		${PKG_DB_TMPDIR}/+DISPLAY
 _METADATA_TARGETS+=	${_MESSAGE_FILE}
 
