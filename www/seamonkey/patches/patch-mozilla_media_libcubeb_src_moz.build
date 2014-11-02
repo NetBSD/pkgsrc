@@ -1,8 +1,21 @@
-$NetBSD: patch-mozilla_media_libcubeb_src_moz.build,v 1.1 2014/06/22 08:54:39 ryoon Exp $
+$NetBSD: patch-mozilla_media_libcubeb_src_moz.build,v 1.2 2014/11/02 05:40:31 ryoon Exp $
 
---- mozilla/media/libcubeb/src/moz.build.orig	2014-06-13 00:46:10.000000000 +0000
+--- mozilla/media/libcubeb/src/moz.build.orig	2014-10-14 06:36:30.000000000 +0000
 +++ mozilla/media/libcubeb/src/moz.build
-@@ -28,7 +28,7 @@ if CONFIG['OS_ARCH'] == 'OpenBSD':
+@@ -16,6 +16,12 @@ if CONFIG['MOZ_ALSA']:
+     ]
+     DEFINES['USE_ALSA'] = True
+ 
++if CONFIG['MOZ_OSS']:
++    SOURCES += [
++        'cubeb_oss.c',
++    ]
++    DEFINES['USE_OSS'] = True
++
+ if CONFIG['MOZ_PULSEAUDIO']:
+     SOURCES += [
+         'cubeb_pulse.c',
+@@ -30,7 +36,7 @@ if CONFIG['OS_ARCH'] == 'OpenBSD':
      ]
      DEFINES['USE_SNDIO'] = True
  
@@ -11,3 +24,9 @@ $NetBSD: patch-mozilla_media_libcubeb_src_moz.build,v 1.1 2014/06/22 08:54:39 ry
      SOURCES += [
          'cubeb_audiounit.c',
      ]
+@@ -71,4 +77,5 @@ if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'gonk
+         ]
+     ]
+ 
++CFLAGS += CONFIG['MOZ_OSS_CFLAGS']
+ FAIL_ON_WARNINGS = True
