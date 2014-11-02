@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.691 2014/10/13 21:52:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.692 2014/11/02 18:22:47 khorben Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -64,6 +64,7 @@ SUBDIR+=	cqcam
 SUBDIR+=	darktable
 SUBDIR+=	dcraw
 SUBDIR+=	deforaos-camera
+SUBDIR+=	deforaos-icon-theme
 SUBDIR+=	denemo
 SUBDIR+=	dia
 SUBDIR+=	dia-python
