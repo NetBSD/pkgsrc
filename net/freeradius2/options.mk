@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2010/05/23 17:28:44 tron Exp $
+# $NetBSD: options.mk,v 1.5 2014/11/02 05:55:43 obache Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.freeradius
 PKG_SUPPORTED_OPTIONS=		freeradius-simul-use kerberos ldap mysql
@@ -140,7 +140,7 @@ CONFIGURE_ENV+=		ac_cv_path_SNMPWALK=""
 ###
 .if !empty(PKG_OPTIONS:Mpam)
 CONFIGURE_ARGS+=	--with-rlm_pam
-MESSAGE_SRC+=		${WRKDIR}/.MESSAGE_SRC.pam
+MESSAGE_SRC+=		${PKGDIR}/MESSAGE.pam
 PLIST.pam=		yes
 .else
 CONFIGURE_ARGS+=	--without-rlm_pam
