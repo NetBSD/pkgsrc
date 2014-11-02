@@ -1,0 +1,15 @@
+$NetBSD: patch-mozilla_b2g_installer_Makefile.in,v 1.1 2014/11/02 05:40:31 ryoon Exp $
+
+--- mozilla/b2g/installer/Makefile.in.orig	2014-10-14 06:36:02.000000000 +0000
++++ mozilla/b2g/installer/Makefile.in
+@@ -65,6 +65,10 @@ ifneq (,$(filter rtsp,$(NECKO_PROTOCOLS)
+ DEFINES += -DMOZ_RTSP
+ endif
+ 
++ifdef MOZ_DEBUG
++DEFINES += -DMOZ_DEBUG=1
++endif
++
+ ifdef GKMEDIAS_SHARED_LIBRARY
+ DEFINES += -DGKMEDIAS_SHARED_LIBRARY
+ endif

@@ -1,8 +1,11 @@
-$NetBSD: patch-config_baseconfig.mk,v 1.3 2013/12/26 13:17:37 ryoon Exp $
+$NetBSD: patch-config_baseconfig.mk,v 1.4 2014/11/02 05:40:31 ryoon Exp $
 
---- config/baseconfig.mk.orig	2013-12-11 04:19:54.000000000 +0000
+--- config/baseconfig.mk.orig	2014-10-14 06:26:59.000000000 +0000
 +++ config/baseconfig.mk
-@@ -1,7 +1,7 @@
+@@ -2,10 +2,10 @@
+ # directly in python/mozbuild/mozbuild/base.py for gmake validation.
+ # We thus use INCLUDED_AUTOCONF_MK to enable/disable some parts depending
+ # whether a normal build is happening or whether the check is running.
 -includedir := $(includedir)/$(MOZ_APP_NAME)-$(MOZ_APP_VERSION)
 -idldir = $(datadir)/idl/$(MOZ_APP_NAME)-$(MOZ_APP_VERSION)
 -installdir = $(libdir)/$(MOZ_APP_NAME)-$(MOZ_APP_VERSION)

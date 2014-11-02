@@ -1,0 +1,14 @@
+$NetBSD: patch-mozilla_content_base_src_moz.build,v 1.1 2014/11/02 05:40:31 ryoon Exp $
+
+--- mozilla/content/base/src/moz.build.orig	2014-10-14 06:36:05.000000000 +0000
++++ mozilla/content/base/src/moz.build
+@@ -195,6 +195,9 @@ SOURCES += [
+     'nsObjectLoadingContent.cpp',
+ ]
+ 
++if CONFIG['MOZ_NATIVE_HARFBUZZ']:
++    SOURCES['nsContentUtils.cpp'].flags += [CONFIG['MOZ_HARFBUZZ_CFLAGS']]
++
+ EXTRA_COMPONENTS += [
+     'contentAreaDropListener.js',
+     'contentAreaDropListener.manifest',

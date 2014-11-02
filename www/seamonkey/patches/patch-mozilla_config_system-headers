@@ -1,17 +1,17 @@
-$NetBSD: patch-mozilla_config_system-headers,v 1.11 2014/06/22 08:54:39 ryoon Exp $
+$NetBSD: patch-mozilla_config_system-headers,v 1.12 2014/11/02 05:40:31 ryoon Exp $
 
---- mozilla/config/system-headers.orig	2014-06-13 00:46:03.000000000 +0000
+--- mozilla/config/system-headers.orig	2014-10-14 06:36:05.000000000 +0000
 +++ mozilla/config/system-headers
-@@ -1051,8 +1051,6 @@ X11/Xutil.h
- xpt_struct.h
- xpt_xdr.h
+@@ -1263,8 +1263,6 @@ X11/Xlocale.h
+ X11/Xos.h
+ X11/Xutil.h
  zmouse.h
 -speex/speex_resampler.h
 -soundtouch/SoundTouch.h
  #if MOZ_NATIVE_PNG==1
  png.h
  #endif
-@@ -1118,6 +1116,8 @@ ogg/ogg.h
+@@ -1329,6 +1327,8 @@ ogg/ogg.h
  ogg/os_types.h
  nestegg/nestegg.h
  cubeb/cubeb.h
@@ -20,13 +20,11 @@ $NetBSD: patch-mozilla_config_system-headers,v 1.11 2014/06/22 08:54:39 ryoon Ex
  #endif
  gst/gst.h
  gst/app/gstappsink.h
-@@ -1146,3 +1146,39 @@ unicode/utypes.h
+@@ -1357,3 +1357,37 @@ unicode/utypes.h
  #endif
  libutil.h
  unwind.h
-+cairo-qt.h
 +#if MOZ_NATIVE_GRAPHITE2==1
-+unwind.h
 +graphite2/Font.h
 +graphite2/Segment.h
 +#endif
