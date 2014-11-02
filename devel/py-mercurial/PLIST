@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/08/02 07:04:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/11/02 17:38:25 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -252,9 +252,6 @@ ${PYSITELIB}/mercurial/dagutil.pyo
 ${PYSITELIB}/mercurial/demandimport.py
 ${PYSITELIB}/mercurial/demandimport.pyc
 ${PYSITELIB}/mercurial/demandimport.pyo
-${PYSITELIB}/mercurial/dicthelpers.py
-${PYSITELIB}/mercurial/dicthelpers.pyc
-${PYSITELIB}/mercurial/dicthelpers.pyo
 ${PYSITELIB}/mercurial/diffhelpers.so
 ${PYSITELIB}/mercurial/dirstate.py
 ${PYSITELIB}/mercurial/dirstate.pyc
@@ -265,6 +262,7 @@ ${PYSITELIB}/mercurial/discovery.pyo
 ${PYSITELIB}/mercurial/dispatch.py
 ${PYSITELIB}/mercurial/dispatch.pyc
 ${PYSITELIB}/mercurial/dispatch.pyo
+${PYSITELIB}/mercurial/dummycert.pem
 ${PYSITELIB}/mercurial/encoding.py
 ${PYSITELIB}/mercurial/encoding.pyc
 ${PYSITELIB}/mercurial/encoding.pyo
