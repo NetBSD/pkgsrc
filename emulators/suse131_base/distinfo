@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.8 2014/10/26 05:32:14 ryoon Exp $
+$NetBSD: distinfo,v 1.9 2014/11/03 07:51:51 obache Exp $
 
-SHA1 (suse131/aaa_base-13.1-16.17.1.i586.rpm) = de632d236e08da14f0591a94e7080fd22757db38
-RMD160 (suse131/aaa_base-13.1-16.17.1.i586.rpm) = d5ccd2229715daf2637a558cf49e29216bb06000
-Size (suse131/aaa_base-13.1-16.17.1.i586.rpm) = 125154 bytes
-SHA1 (suse131/aaa_base-13.1-16.17.1.x86_64.rpm) = b6c0fd53dbc22e45da0a4e46272f20de6f0a3b45
-RMD160 (suse131/aaa_base-13.1-16.17.1.x86_64.rpm) = cfaa3aaa165c4ec27cc39e48e1e464128beb7e39
-Size (suse131/aaa_base-13.1-16.17.1.x86_64.rpm) = 125272 bytes
+SHA1 (suse131/aaa_base-13.1-16.46.1.i586.rpm) = 52de484fef32fec98ba8613267c8ce17ea675843
+RMD160 (suse131/aaa_base-13.1-16.46.1.i586.rpm) = 28d9c8d3fef0ef60cbcc189bc66502ae6a991a34
+Size (suse131/aaa_base-13.1-16.46.1.i586.rpm) = 128507 bytes
+SHA1 (suse131/aaa_base-13.1-16.46.1.x86_64.rpm) = 366bd476bce3027dd931ab17ead55eb1bc4d0753
+RMD160 (suse131/aaa_base-13.1-16.46.1.x86_64.rpm) = 761f580fa794fa92876188d910e771fad174546c
+Size (suse131/aaa_base-13.1-16.46.1.x86_64.rpm) = 128593 bytes
 SHA1 (suse131/bash-4.2-68.12.1.i586.rpm) = 04272f8209afbdea06e2151da5e6fc0683955c12
 RMD160 (suse131/bash-4.2-68.12.1.i586.rpm) = 5155183c5984853d3705b08ab3aa420dbdca2290
 Size (suse131/bash-4.2-68.12.1.i586.rpm) = 333297 bytes
