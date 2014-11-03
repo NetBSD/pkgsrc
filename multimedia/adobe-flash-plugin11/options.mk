@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2011/11/03 18:14:15 abs Exp $
+# $NetBSD: options.mk,v 1.2 2014/11/03 09:21:16 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.adobe-flash-plugin
@@ -23,7 +23,7 @@ PKG_SUGGESTED_OPTIONS=	nspluginwrapper
 .if !empty(PKG_OPTIONS:Mnspluginwrapper)
 DEPENDS+= nspluginwrapper>0:../../www/nspluginwrapper
 .  if !empty(PKG_OPTIONS:Mpulseaudio)
-# usr/lib/libpulse.so.0 provided by suse32_gtk2
+EMUL_MODULES.linux+=	pulseaudio
 MESSAGE_SRC+=		${PKGDIR}/MESSAGE.pulseaudio
 .  else
 DEPENDS+= libflashsupport>0:../../multimedia/libflashsupport
