@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2014/09/07 12:26:42 obache Exp $
+# $NetBSD: Makefile,v 1.4 2014/11/03 09:04:20 obache Exp $
 
 PKGNAME=	suse_alsa-${SUSE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 RPMUPDPKGS+=	alsa-1.0.27.2-3.5.1.${SUSE_ARCH}
 RPMUPDPKGS+=	alsa-oss-1.0.25-8.4.1.${SUSE_ARCH}
 RPMPKGS+=	alsa-plugins-1.0.27-3.1.1.${SUSE_ARCH}
 RPMPKGS+=	alsa-plugins-pulse-1.0.27-3.1.1.${SUSE_ARCH}
-RPMPKGS+=	alsa-utils-1.0.27.2-4.2.1.${SUSE_ARCH}
+RPMUPDPKGS+=	alsa-utils-1.0.27.2-4.5.1.${SUSE_ARCH}
 RPMUPDPKGS+=	libasound2-1.0.27.2-3.5.1.${SUSE_ARCH}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
