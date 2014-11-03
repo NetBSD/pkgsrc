@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.77 2014/09/13 14:35:25 joerg Exp $
+# $NetBSD: Makefile,v 1.78 2014/11/03 12:25:36 ryoon Exp $
 
-DISTNAME=	openjdk-1.7.65-20140719
-PKGNAME=	openjdk7-1.7.65
+DISTNAME=	openjdk-1.7.71-20141102
+PKGNAME=	openjdk7-1.7.71
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
 EXTRACT_SUFX=	.tar.bz2
