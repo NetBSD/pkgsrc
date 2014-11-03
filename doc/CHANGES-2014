@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4162 2014/11/03 09:28:51 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4163 2014/11/03 12:24:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5247,3 +5247,6 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/suse131_qt4 to 13.1nb2 [obache 2014-11-03]
 	Updated emulators/suse131_libcurl to 13.1nb5 [obache 2014-11-03]
 	Updated emulators/suse131_openssl to 13.1nb10 [obache 2014-11-03]
+	Added www/firefox31 version 31.2.0 [ryoon 2014-11-03]
+	Added www/firefox31-l10n version 31.2.0 [ryoon 2014-11-03]
+	Added devel/xulrunner31 version 31.2.0 [ryoon 2014-11-03]
