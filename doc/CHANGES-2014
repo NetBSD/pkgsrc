@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4127 2014/11/03 01:19:53 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.4128 2014/11/03 01:42:32 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5212,3 +5212,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/webkit-gtk to 2.4.7 [wiz 2014-11-02]
 	Updated mail/dovecot2-pigeonhole to 0.4.6 [taca 2014-11-03]
 	Updated misc/libreoffice4 to 4.3.3.2 [ryoon 2014-11-03]
+	Updated www/p5-Mojolicious to 5.57 [wen 2014-11-03]
