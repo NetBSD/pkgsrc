@@ -1,10 +1,10 @@
-$NetBSD: patch-Modules_getpath.c,v 1.1 2013/04/17 13:21:05 obache Exp $
+$NetBSD: patch-Modules_getpath.c,v 1.1.12.1 2014/11/03 14:12:52 tron Exp $
 
 * from cygport 2.7.3-getpath-exe-extension.patch
 
---- Modules/getpath.c.orig	2013-04-06 14:02:37.000000000 +0000
+--- Modules/getpath.c.orig	2014-06-30 02:05:43.000000000 +0000
 +++ Modules/getpath.c
-@@ -436,6 +436,28 @@ calculate_path(void)
+@@ -451,6 +451,28 @@ calculate_path(void)
                          if (isxfile(progpath))
                                  break;
  

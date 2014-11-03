@@ -1,10 +1,10 @@
-$NetBSD: patch-ax,v 1.4 2013/04/12 09:03:41 adam Exp $
+$NetBSD: patch-ax,v 1.4.12.1 2014/11/03 14:12:52 tron Exp $
 
 chop "-RELEASE" or "-DEVELOPMENT" from release for DragonFly.
 
---- Lib/sysconfig.py.orig	2013-04-06 14:02:29.000000000 +0000
+--- Lib/sysconfig.py.orig	2014-06-30 02:05:31.000000000 +0000
 +++ Lib/sysconfig.py
-@@ -559,6 +559,8 @@ def get_platform():
+@@ -603,6 +603,8 @@ def get_platform():
          osname, release, machine = _osx_support.get_platform_osx(
                                              get_config_vars(),
                                              osname, release, machine)

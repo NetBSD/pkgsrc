@@ -1,8 +1,8 @@
-$NetBSD: patch-xa,v 1.1 2012/08/14 18:19:02 drochner Exp $
+$NetBSD: patch-xa,v 1.1.18.1 2014/11/03 14:12:52 tron Exp $
 
---- Python/thread_pthread.h.orig	2012-03-30 13:06:51.000000000 +0000
+--- Python/thread_pthread.h.orig	2014-06-30 02:05:47.000000000 +0000
 +++ Python/thread_pthread.h
-@@ -34,6 +34,9 @@
+@@ -46,6 +46,9 @@
     we need to add 0 to make it work there as well. */
  #if (_POSIX_SEMAPHORES+0) == -1
  #define HAVE_BROKEN_POSIX_SEMAPHORES
