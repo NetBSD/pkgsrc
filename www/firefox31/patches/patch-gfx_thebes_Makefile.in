@@ -1,0 +1,19 @@
+$NetBSD: patch-gfx_thebes_Makefile.in,v 1.1 2014/11/03 12:18:32 ryoon Exp $
+
+--- gfx/thebes/Makefile.in.orig	2014-04-18 02:02:58.000000000 +0000
++++ gfx/thebes/Makefile.in
+@@ -13,6 +13,14 @@ DEFINES := $(filter-out -DUNICODE,$(DEFI
+ CXXFLAGS += $(MOZ_CAIRO_CFLAGS) $(TK_CFLAGS)
+ CFLAGS += $(MOZ_CAIRO_CFLAGS) $(TK_CFLAGS)
+ 
++ifdef MOZ_NATIVE_GRAPHITE2
++CXXFLAGS += $(MOZ_GRAPHITE2_CFLAGS)
++endif
++
++ifdef MOZ_NATIVE_HARFBUZZ
++CXXFLAGS += $(MOZ_HARFBUZZ_CFLAGS)
++endif
++
+ ifeq ($(MOZ_WIDGET_TOOLKIT),android)
+ CXXFLAGS += $(CAIRO_FT_CFLAGS)
+ endif
