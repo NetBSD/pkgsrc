@@ -1,21 +1,24 @@
-$NetBSD: patch-Makefile.am,v 1.2 2013/12/31 17:09:02 abs Exp $
+$NetBSD: patch-Makefile.am,v 1.3 2014/11/03 12:31:01 ryoon Exp $
 
 * cp -a is not portable, DragonFly 3.2.2 has not -a option of cp at least.
+* fix statement with "continue", should be '||' not '|' (pipe).
 
---- Makefile.am.orig	2013-12-27 14:49:23.000000000 +0000
+--- Makefile.am.orig	2014-08-14 10:15:46.945832128 +0000
 +++ Makefile.am
-@@ -247,8 +247,8 @@ if ENABLE_PLUGIN
+@@ -250,9 +250,9 @@ if ENABLE_PLUGIN
  endif
  	${INSTALL_DATA} $(NETX_DIR)/lib/classes.jar $(DESTDIR)$(datadir)/$(PACKAGE_NAME)/netx.jar
  	${INSTALL_DATA} $(NETX_SRCDIR)/javaws_splash.png $(DESTDIR)$(datadir)/$(PACKAGE_NAME)/javaws_splash.png
 -	${INSTALL_PROGRAM} launcher.build/$(javaws) $(DESTDIR)$(bindir)
 -	${INSTALL_PROGRAM} launcher.build/$(itweb_settings) $(DESTDIR)$(bindir)
+-	${INSTALL_PROGRAM} launcher.build/$(policyeditor) $(DESTDIR)$(bindir)
 +	${INSTALL_SCRIPT} launcher.build/$(javaws) $(DESTDIR)$(bindir)
 +	${INSTALL_SCRIPT} launcher.build/$(itweb_settings) $(DESTDIR)$(bindir)
++	${INSTALL_SCRIPT} launcher.build/$(policyeditor) $(DESTDIR)$(bindir)
  
  install-data-local:
  	${mkinstalldirs} -d $(DESTDIR)$(mandir)/man1
-@@ -256,15 +256,15 @@ install-data-local:
+@@ -262,15 +262,15 @@ install-data-local:
  if ENABLE_DOCS
  	${mkinstalldirs} $(DESTDIR)$(htmldir)
  	(cd ${abs_top_builddir}/docs/netx; \
@@ -35,7 +38,7 @@ $NetBSD: patch-Makefile.am,v 1.2 2013/12/31 17:09:02 abs Exp $
  	 done)
  endif
  endif
-@@ -474,7 +474,7 @@ stamps/netx-html-gen.stamp:
+@@ -483,7 +483,7 @@ stamps/netx-html-gen.stamp:
  	touch $@
  
  stamps/netx.stamp: netx-source-files.txt stamps/bootstrap-directory.stamp stamps/netx-html-gen.stamp
@@ -44,7 +47,7 @@ $NetBSD: patch-Makefile.am,v 1.2 2013/12/31 17:09:02 abs Exp $
  	$(BOOT_DIR)/bin/javac $(IT_JAVACFLAGS) \
  	    -d $(NETX_DIR) \
  	    -sourcepath $(NETX_SRCDIR) \
-@@ -482,14 +482,14 @@ stamps/netx.stamp: netx-source-files.txt
+@@ -491,14 +491,14 @@ stamps/netx.stamp: netx-source-files.txt
  	    $(NETX_CLASSPATH_ARG) \
  	    @netx-source-files.txt
  	(cd $(NETX_RESOURCE_DIR); \
@@ -64,3 +67,12 @@ $NetBSD: patch-Makefile.am,v 1.2 2013/12/31 17:09:02 abs Exp $
  	mkdir -p stamps
  	touch $@
  
+@@ -1655,7 +1655,7 @@ stamps/bootstrap-directory.stamp: stamps
+ 	fi;
+ 	mkdir -p $(BOOT_DIR)/include && \
+ 	for i in $(SYSTEM_JDK_DIR)/include/*; do \
+-	  test -r $$i | continue; \
++	  test -r $$i || continue; \
+ 	  i=`basename $$i`; \
+ 	  rm -f $(BOOT_DIR)/include/$$i; \
+ 	  ln -s $(SYSTEM_JDK_DIR)/include/$$i $(BOOT_DIR)/include/$$i; \
