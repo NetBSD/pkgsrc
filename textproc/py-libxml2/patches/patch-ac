@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2013/05/28 22:26:13 drochner Exp $
+$NetBSD: patch-ac,v 1.1.12.1 2014/11/03 19:39:08 tron Exp $
 
 fix for Python-2.6
 
---- libxml_wrap.h.orig	2013-04-02 02:25:28.000000000 +0000
+--- libxml_wrap.h.orig	2014-10-03 09:00:54.000000000 +0000
 +++ libxml_wrap.h
 @@ -28,7 +28,6 @@
   * and don't use Capsule but CObjects
@@ -13,8 +13,8 @@ fix for Python-2.6
  #define PyBytes_Size PyString_Size
  #define PyBytes_AsString PyString_AsString
 @@ -40,7 +39,6 @@
+ #define PyCapsule_CheckExact PyCObject_Check
  #define PyCapsule_GetPointer(o, n) PyCObject_GetDesc((o))
- 
  #endif
 -#endif
  
