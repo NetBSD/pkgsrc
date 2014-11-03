@@ -1,12 +1,12 @@
-$NetBSD: patch-au,v 1.6 2013/04/12 09:03:41 adam Exp $
+$NetBSD: patch-au,v 1.6.12.1 2014/11/03 14:12:52 tron Exp $
 
 Fix for unpriviliged build.
 
 http://hg.python.org/cpython/rev/a0f43f4481e0
 
---- Makefile.pre.in.orig	2013-04-06 14:02:34.000000000 +0000
+--- Makefile.pre.in.orig	2014-06-30 02:05:39.000000000 +0000
 +++ Makefile.pre.in
-@@ -489,7 +489,7 @@ gdbhooks: $(BUILDPYTHON)-gdb.py
+@@ -499,7 +499,7 @@ gdbhooks: $(BUILDPYTHON)-gdb.py
  
  SRC_GDB_HOOKS=$(srcdir)/Tools/gdb/libpython.py
  $(BUILDPYTHON)-gdb.py: $(SRC_GDB_HOOKS)
@@ -15,7 +15,7 @@ http://hg.python.org/cpython/rev/a0f43f4481e0
  
  # This rule is here for OPENSTEP/Rhapsody/MacOSX. It builds a temporary
  # minimal framework (not including the Lib directory and such) in the current
-@@ -879,7 +879,8 @@ altbininstall:	$(BUILDPYTHON)
+@@ -890,7 +890,8 @@ altbininstall:	$(BUILDPYTHON)
  				(cd $(DESTDIR)$(LIBDIR); $(LN) -sf $(INSTSONAME) $(LDLIBRARY)) \
  			fi \
  		fi; \

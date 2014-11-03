@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2011/02/22 08:52:01 obache Exp $
+$NetBSD: patch-ad,v 1.1.1.1.30.1 2014/11/03 14:12:52 tron Exp $
 
 Add ability to parse unsigned integers as externalized by NetBSD proplib(3).
 
---- Lib/plistlib.py.orig	2010-04-20 20:59:37.000000000 +0000
+--- Lib/plistlib.py.orig	2014-06-30 02:05:30.000000000 +0000
 +++ Lib/plistlib.py
 @@ -463,7 +463,7 @@ class PlistParser:
      def end_false(self):
