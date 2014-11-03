@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.55 2014/10/04 22:47:32 joerg Exp $
+$NetBSD: distinfo,v 1.56 2014/11/03 12:25:36 ryoon Exp $
 
 SHA1 (openjdk7/UnlimitedJCEPolicyJDK7.zip) = 7d3c9ee89536b82cd21c680088b1bced16017253
 RMD160 (openjdk7/UnlimitedJCEPolicyJDK7.zip) = a4a6a284579f43d2df3532d279e143d2f03c2c3f
@@ -33,15 +33,15 @@ Size (openjdk7/bootstrap-jdk7u60-bin-netbsd-7-i386-20140719.tar.bz2) = 40161195 
 SHA1 (openjdk7/cacerts-20091013.tar.bz2) = 905e88e6e2ccdbfe1f36c1dace7cc687fba78890
 RMD160 (openjdk7/cacerts-20091013.tar.bz2) = 0f4e14197016201ff65272a944eafecc6f2d5770
 Size (openjdk7/cacerts-20091013.tar.bz2) = 55894 bytes
-SHA1 (openjdk7/icedtea-2.5.1.tar.xz) = a41e4b722f782024d6d9dee0d639e77cf64d5ff7
-RMD160 (openjdk7/icedtea-2.5.1.tar.xz) = 3ed48953131dc0a0a71d83e0262c9cba62a76341
-Size (openjdk7/icedtea-2.5.1.tar.xz) = 2012584 bytes
-SHA1 (openjdk7/icedtea-web-81dfc0552a1c.tar.bz2) = e3a00a6a4a18b7c1044e8116f1b86e737c6504de
-RMD160 (openjdk7/icedtea-web-81dfc0552a1c.tar.bz2) = 0c3af827f9c63ba3a7c3f98bb708afd7da8b4b68
-Size (openjdk7/icedtea-web-81dfc0552a1c.tar.bz2) = 1051891 bytes
-SHA1 (openjdk7/openjdk-1.7.65-20140719.tar.bz2) = 0bdfb8ec8d4d8cdfb784bb02686b119f7d605d95
-RMD160 (openjdk7/openjdk-1.7.65-20140719.tar.bz2) = e620156acf5c656248c045981a49ab64f5eaa6df
-Size (openjdk7/openjdk-1.7.65-20140719.tar.bz2) = 51970677 bytes
+SHA1 (openjdk7/icedtea-2.5.3.tar.xz) = c509018b108ec6d8e5c8380c9b42d5fba426c632
+RMD160 (openjdk7/icedtea-2.5.3.tar.xz) = c386237bc07fa535b1cfd0cf95fc0bc50ab067c3
+Size (openjdk7/icedtea-2.5.3.tar.xz) = 2021560 bytes
+SHA1 (openjdk7/icedtea-web-1.5.1.tar.gz) = 5daedcc1e962eb952e5ea4b5c9698bb9d6ef700e
+RMD160 (openjdk7/icedtea-web-1.5.1.tar.gz) = a2d0ad55919a8ff5d786b56ed26c8a34ed4b259e
+Size (openjdk7/icedtea-web-1.5.1.tar.gz) = 1616344 bytes
+SHA1 (openjdk7/openjdk-1.7.71-20141102.tar.bz2) = 11ebaf7cc59ea92ba03d6fba491e136a7aab5f28
+RMD160 (openjdk7/openjdk-1.7.71-20141102.tar.bz2) = 04df0741dc19f6536287b8f6657394620b5c37b2
+Size (openjdk7/openjdk-1.7.71-20141102.tar.bz2) = 52222297 bytes
 SHA1 (openjdk7/rhino1_7R4.zip) = 483e097cb575c724c745edd80c9512f073bd510a
 RMD160 (openjdk7/rhino1_7R4.zip) = fba5ce71edd396a241991fb7b3ce43628b891035
 Size (openjdk7/rhino1_7R4.zip) = 6481918 bytes
@@ -115,6 +115,7 @@ SHA1 (patch-jdk_make_common_Defs-solaris-gcc.gmk) = 32c0bbd91ec0c85eb725cd721ed7
 SHA1 (patch-jdk_make_common_Defs-solaris.gmk) = ea0bef0fd67a1ff809a17005458dadaed202ba70
 SHA1 (patch-jdk_make_common_Mapfile-vers.gmk) = 7115ec8e0fc25f952a6c72ee78df33901040a7b6
 SHA1 (patch-jdk_make_common_Program.gmk) = 66edaf69cb12c1e024ba1145c98b667d54ea9239
+SHA1 (patch-jdk_make_common_Rules.gmk) = 371fcc33fd44d62d2490bb454abf21815ce2e1ce
 SHA1 (patch-jdk_make_common_shared_Compiler-gcc.gmk) = e180383490d6c0a8bec4626ed96ad1741c8fb3a2
 SHA1 (patch-jdk_make_common_shared_Defs-java.gmk) = f7c11d33da19e9f255fde7cab387c91e0287509c
 SHA1 (patch-jdk_make_common_shared_Defs-utils.gmk) = d0ae37a032be6bf60da4be11bd38185e89d4ee91

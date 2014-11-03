@@ -1,0 +1,17 @@
+$NetBSD: patch-jdk_make_common_Rules.gmk,v 1.1 2014/11/03 12:25:36 ryoon Exp $
+
+* add '-encoding UTF-8' to JAVAC_CMD to support the " ˇ" character string in
+* classes/net/sourceforge/jnlp/security/policyeditor/PolicyEditorPermissions.java
+* avoiding "unmappable character for encoding ascii" error
+
+--- jdk/make/common/Rules.gmk.orig	2014-01-01 05:53:33.000000000 +0000
++++ jdk/make/common/Rules.gmk
+@@ -256,7 +256,7 @@ classes : $(CLASSES_INIT) .delete.classl
+ 	  $(CAT) $<.filtered; \
+ 	  $(ECHO) "# Running javac:"; \
+ 	  $(ECHO) $(JAVAC_CMD) -sourcepath "$(SOURCEPATH)" -d $(CLASSDESTDIR) @$<.filtered; \
+-	  $(JAVAC_CMD) -sourcepath "$(SOURCEPATH)" -d $(CLASSDESTDIR) @$<.filtered; \
++	  $(JAVAC_CMD) -sourcepath "$(SOURCEPATH)" -encoding UTF-8 -d $(CLASSDESTDIR) @$<.filtered; \
+ 	fi
+ 	@$(java-vm-cleanup)
+ 
