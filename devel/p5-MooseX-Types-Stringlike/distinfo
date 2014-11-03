@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2014/01/09 07:46:00 wen Exp $
+$NetBSD: distinfo,v 1.3 2014/11/03 08:07:19 wen Exp $
 
-SHA1 (MooseX-Types-Stringlike-0.002.tar.gz) = f0918ef62920b197aa74265e24a379ddfd4a5b5d
-RMD160 (MooseX-Types-Stringlike-0.002.tar.gz) = 14df444aa3b5190d2488d4c9cd148c6887aa2590
-Size (MooseX-Types-Stringlike-0.002.tar.gz) = 12013 bytes
+SHA1 (MooseX-Types-Stringlike-0.003.tar.gz) = a76fbd214d059039032d00618c2a71f58dc85f67
+RMD160 (MooseX-Types-Stringlike-0.003.tar.gz) = a3cd41f1d1e050f92a20ddf94c078434ebd28f5f
+Size (MooseX-Types-Stringlike-0.003.tar.gz) = 13510 bytes
