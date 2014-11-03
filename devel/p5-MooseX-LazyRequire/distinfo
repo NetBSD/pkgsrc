@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2013/07/27 08:39:10 wen Exp $
+$NetBSD: distinfo,v 1.7 2014/11/03 06:49:52 wen Exp $
 
-SHA1 (MooseX-LazyRequire-0.10.tar.gz) = 87a2b04976ed93271f00d3077f100693a504edde
-RMD160 (MooseX-LazyRequire-0.10.tar.gz) = 1e9e132ab24267d46ce89c13fd77396739610ba0
-Size (MooseX-LazyRequire-0.10.tar.gz) = 15557 bytes
+SHA1 (MooseX-LazyRequire-0.11.tar.gz) = 95f267699a6945b631466265c65be4dfaf34665d
+RMD160 (MooseX-LazyRequire-0.11.tar.gz) = 301b18e2b388077172f7cce4fe4d8aa31ad3b732
+Size (MooseX-LazyRequire-0.11.tar.gz) = 26404 bytes
