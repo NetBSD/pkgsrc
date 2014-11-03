@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4138 2014/11/03 07:27:04 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4139 2014/11/03 07:33:02 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5223,3 +5223,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-MooseX-Role-Parameterized to 1.08 [wen 2014-11-03]
 	Updated devel/p5-MooseX-Role-WithOverloading to 0.15 [wen 2014-11-03]
 	Updated devel/p5-MooseX-SemiAffordanceAccessor to 0.10 [wen 2014-11-03]
+	Updated devel/p5-MooseX-SetOnce to 0.200002 [wen 2014-11-03]
