@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2014/10/30 16:45:39 ryoon Exp $
+$NetBSD: distinfo,v 1.30 2014/11/03 01:17:27 ryoon Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -135,24 +135,21 @@ Size (libreoffice/eeb2c7ddf0d302fba4bfc6e97eac9624-libbase-1.1.6.zip) = 427800 b
 SHA1 (libreoffice/f94d9870737518e3b597f9265f4e9803-libserializer-1.1.6.zip) = 5ecb895ffc1eff2c381fa78d2197d0c57422b3df
 RMD160 (libreoffice/f94d9870737518e3b597f9265f4e9803-libserializer-1.1.6.zip) = 575a7daf02efbab9ea972e03a6870f7f13112806
 Size (libreoffice/f94d9870737518e3b597f9265f4e9803-libserializer-1.1.6.zip) = 211919 bytes
-SHA1 (libreoffice/libgltf-0.0.1.tar.bz2) = a35ceb34f9a48053d7855bd446582a3060ee6bdb
-RMD160 (libreoffice/libgltf-0.0.1.tar.bz2) = 1ca9451c793fbd2218f327129105c8f7bd0a4596
-Size (libreoffice/libgltf-0.0.1.tar.bz2) = 348202 bytes
 SHA1 (libreoffice/libreoffice-4.3.2.2-boost_1_56_0-1.patch) = 65aa53c4c1b18533305cd3d8c1a08726f6240fdc
 RMD160 (libreoffice/libreoffice-4.3.2.2-boost_1_56_0-1.patch) = 3c2ee59b32ca9696b6dca7499265fb6d8cc55932
 Size (libreoffice/libreoffice-4.3.2.2-boost_1_56_0-1.patch) = 11714 bytes
-SHA1 (libreoffice/libreoffice-4.3.2.2.tar.xz) = 6c10284daf39f02497d3f62fc9a02772b835b4fa
-RMD160 (libreoffice/libreoffice-4.3.2.2.tar.xz) = 0507aebbe88b2d35631850d1f408e32975a77cfe
-Size (libreoffice/libreoffice-4.3.2.2.tar.xz) = 152355836 bytes
-SHA1 (libreoffice/libreoffice-dictionaries-4.3.2.2.tar.xz) = 3cdda49dd2e04304fd1a66389fd2524575ce0c4e
-RMD160 (libreoffice/libreoffice-dictionaries-4.3.2.2.tar.xz) = a768715156190e989731dca0601b0c3de672e3f9
-Size (libreoffice/libreoffice-dictionaries-4.3.2.2.tar.xz) = 37369968 bytes
-SHA1 (libreoffice/libreoffice-help-4.3.2.2.tar.xz) = 5bdc2679e838ed2752b391953c9303722cb0fe9c
-RMD160 (libreoffice/libreoffice-help-4.3.2.2.tar.xz) = a9ae4afae71be7821cfbdec58b71b34085115edd
-Size (libreoffice/libreoffice-help-4.3.2.2.tar.xz) = 1851688 bytes
-SHA1 (libreoffice/libreoffice-translations-4.3.2.2.tar.xz) = 3ad09b28613781f7a563c2546ba605bee1b69392
-RMD160 (libreoffice/libreoffice-translations-4.3.2.2.tar.xz) = d2ecead38db96b0a39aba728e307a0b971e009d3
-Size (libreoffice/libreoffice-translations-4.3.2.2.tar.xz) = 126301100 bytes
+SHA1 (libreoffice/libreoffice-4.3.3.2.tar.xz) = 10446fd4c40e4e1343b215ea9526094d509e3d63
+RMD160 (libreoffice/libreoffice-4.3.3.2.tar.xz) = 519c963502f1e0e1dc61f698133df88fb41e0d5c
+Size (libreoffice/libreoffice-4.3.3.2.tar.xz) = 152744424 bytes
+SHA1 (libreoffice/libreoffice-dictionaries-4.3.3.2.tar.xz) = df20a954230ffcdb4b5dfd400222c7b18d63bb57
+RMD160 (libreoffice/libreoffice-dictionaries-4.3.3.2.tar.xz) = a2d4f8c4d82f4183559653482881d11ae9e90522
+Size (libreoffice/libreoffice-dictionaries-4.3.3.2.tar.xz) = 37060880 bytes
+SHA1 (libreoffice/libreoffice-help-4.3.3.2.tar.xz) = f10b60a1324f77058096d3bbf90d2233f9a4cb09
+RMD160 (libreoffice/libreoffice-help-4.3.3.2.tar.xz) = c82e977bcaaedccfad53ca031c8ccc5d0c17df72
+Size (libreoffice/libreoffice-help-4.3.3.2.tar.xz) = 1855116 bytes
+SHA1 (libreoffice/libreoffice-translations-4.3.3.2.tar.xz) = e41754bf4fc9c4081f46cbf7b25bfa9cd712d663
+RMD160 (libreoffice/libreoffice-translations-4.3.3.2.tar.xz) = 3421a432c5a5ef51e98587071a5aa827fccb55b1
+Size (libreoffice/libreoffice-translations-4.3.3.2.tar.xz) = 127002208 bytes
 SHA1 (patch-bridges_source_cpp__uno_gcc3__linux__x86-64_share.hxx) = 87fad181a9d188b34598bfc279fd3d1cae9a1149
 SHA1 (patch-bridges_source_cpp__uno_gcc3__linux__x86-64_uno2cpp.cxx) = 5022ad96533aa1681e6fab323cadf803281a6c17
 SHA1 (patch-configure.ac) = 2eb5f6d45dab049362ff2638f7e5d413e19be0a8

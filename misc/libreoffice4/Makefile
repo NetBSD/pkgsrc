@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2014/10/22 21:37:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.48 2014/11/03 01:17:27 ryoon Exp $
 
-VERREL=		4.3.2
+VERREL=		4.3.3
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
@@ -93,9 +93,6 @@ SITES.e7a384790b13c29113e22e596ade9687-LinLibertineG-20120116.zip=http://www.num
 DISTFILES+=185d60944ea767075d27247c3162b3bc-unowinreg.dll
 SITES.185d60944ea767075d27247c3162b3bc-unowinreg.dll=http://download.go-oo.org/extern/
 
-DISTFILES+=libgltf-0.0.1.tar.bz2
-SITES.libgltf-0.0.1.tar.bz2=http://dev-www.libreoffice.org/src/libgltf/
-
 PATCH_SITES=		http://www.linuxfromscratch.org/patches/blfs/svn/
 PATCHFILES=		libreoffice-4.3.2.2-boost_1_56_0-1.patch
 PATCH_DIST_STRIP=	-p1
@@ -181,6 +178,7 @@ CONFIGURE_ARGS+=	--without-krb5
 CONFIGURE_ARGS+=	--without-gssapi
 CONFIGURE_ARGS+=	--without-system-apache-commons
 CONFIGURE_ARGS+=	--with-system-cppunit
+CONFIGURE_ARGS+=	--with-system-libgltf
 CONFIGURE_ARGS+=	--without-system-jfreereport
 CONFIGURE_ARGS+=	--without-system-npapi-headers
 # internal sane should be used because only header files are used.
