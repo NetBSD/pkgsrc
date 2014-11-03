@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.17 2014/05/21 00:31:07 obache Exp $
+$NetBSD: patch-am,v 1.17.4.1 2014/11/03 14:12:52 tron Exp $
 
 Disabled modules for normal build:
 bsddb
@@ -23,7 +23,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
 
 cygwin 2.7.3-no-libm.patch
 
---- setup.py.orig	2013-11-10 07:36:41.000000000 +0000
+--- setup.py.orig	2014-06-30 02:05:48.000000000 +0000
 +++ setup.py
 @@ -33,7 +33,7 @@ host_platform = get_platform()
  COMPILED_WITH_PYDEBUG = ('--with-pydebug' in sysconfig.get_config_var("CONFIG_ARGS"))
@@ -63,7 +63,7 @@ cygwin 2.7.3-no-libm.patch
              math_libs = []
  
          # XXX Omitted modules: gl, pure, dl, SGI-specific modules
-@@ -785,11 +790,10 @@ class PyBuildExt(build_ext):
+@@ -787,11 +792,10 @@ class PyBuildExt(build_ext):
                                 libraries=math_libs) )
          # Detect SSL support for the socket module (via _ssl)
          search_for_ssl_incs_in = [
@@ -78,7 +78,7 @@ cygwin 2.7.3-no-libm.patch
                               )
          if ssl_incs is not None:
              krb5_h = find_file('krb5.h', inc_dirs,
-@@ -797,9 +801,7 @@ class PyBuildExt(build_ext):
+@@ -799,9 +803,7 @@ class PyBuildExt(build_ext):
              if krb5_h:
                  ssl_incs += krb5_h
          ssl_libs = find_library_file(self.compiler, 'ssl',lib_dirs,
@@ -89,7 +89,7 @@ cygwin 2.7.3-no-libm.patch
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -818,7 +820,7 @@ class PyBuildExt(build_ext):
+@@ -820,7 +822,7 @@ class PyBuildExt(build_ext):
  
          # look for the openssl version header on the compiler search path.
          opensslv_h = find_file('openssl/opensslv.h', [],
@@ -98,7 +98,7 @@ cygwin 2.7.3-no-libm.patch
          if opensslv_h:
              name = os.path.join(opensslv_h[0], 'openssl/opensslv.h')
              if host_platform == 'darwin' and is_macosx_sdk_path(name):
-@@ -918,175 +920,6 @@ class PyBuildExt(build_ext):
+@@ -920,175 +922,6 @@ class PyBuildExt(build_ext):
              else:
                  raise ValueError("unknown major BerkeleyDB version", major)
  
@@ -274,7 +274,7 @@ cygwin 2.7.3-no-libm.patch
          # The sqlite interface
          sqlite_setup_debug = False   # verbose debug prints from this script?
  
-@@ -1204,35 +1037,39 @@ class PyBuildExt(build_ext):
+@@ -1205,35 +1038,39 @@ class PyBuildExt(build_ext):
          # we do not build this one.  Otherwise this build will pick up
          # the more recent berkeleydb's db.h file first in the include path
          # when attempting to compile and it will fail.
@@ -338,7 +338,7 @@ cygwin 2.7.3-no-libm.patch
              config_args = [arg.strip("'")
                             for arg in sysconfig.get_config_var("CONFIG_ARGS").split()]
              dbm_args = [arg for arg in config_args
-@@ -1244,7 +1081,7 @@ class PyBuildExt(build_ext):
+@@ -1245,7 +1082,7 @@ class PyBuildExt(build_ext):
              dbmext = None
              for cand in dbm_order:
                  if cand == "ndbm":
@@ -347,7 +347,7 @@ cygwin 2.7.3-no-libm.patch
                          # Some systems have -lndbm, others have -lgdbm_compat,
                          # others don't have either
                          if self.compiler.find_library_file(lib_dirs,
-@@ -1288,18 +1125,14 @@ class PyBuildExt(build_ext):
+@@ -1289,18 +1126,14 @@ class PyBuildExt(build_ext):
                                  libraries = gdbm_libs)
                              break
                  elif cand == "bdb":
@@ -374,7 +374,7 @@ cygwin 2.7.3-no-libm.patch
              if dbmext is not None:
                  exts.append(dbmext)
              else:
-@@ -2222,9 +2055,9 @@ def main():
+@@ -2228,9 +2061,9 @@ def main():
            ext_modules=[Extension('_struct', ['_struct.c'])],
  
            # Scripts to install

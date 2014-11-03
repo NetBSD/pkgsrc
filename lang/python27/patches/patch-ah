@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.2 2013/04/12 09:03:41 adam Exp $
+$NetBSD: patch-ah,v 1.2.12.1 2014/11/03 14:12:52 tron Exp $
 
---- Modules/_cursesmodule.c.orig	2013-04-06 14:02:36.000000000 +0000
+--- Modules/_cursesmodule.c.orig	2014-06-30 02:05:41.000000000 +0000
 +++ Modules/_cursesmodule.c
 @@ -322,17 +322,9 @@ Window_NoArg2TupleReturnFunction(getpary
  

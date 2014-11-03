@@ -1,10 +1,22 @@
-$NetBSD: patch-Misc_NEWS,v 1.4 2014/07/02 08:22:02 he Exp $
+$NetBSD: patch-Misc_NEWS,v 1.4.2.1 2014/11/03 14:12:52 tron Exp $
 
 Note added fixes.
 
---- Misc/NEWS.orig	2014-05-31 18:58:39.000000000 +0000
+--- Misc/NEWS.orig	2014-06-30 02:05:39.000000000 +0000
 +++ Misc/NEWS
-@@ -63,6 +63,9 @@ Core and Builtins
+@@ -10,6 +10,11 @@ What's New in Python 2.7.8?
+ Core and Builtins
+ -----------------
+ 
++- Issue #22518: Fix integer overflow issues in latin-1 encoding.
++
++- Issue #22470: Fixed integer overflow issues in "backslashreplace" and
++   "xmlcharrefreplace" error handlers.
++
+ - Issue #4346: In PyObject_CallMethod and PyObject_CallMethodObjArgs, don't
+   overwrite the error set in PyObject_GetAttr.
+ 
+@@ -207,6 +212,9 @@ Core and Builtins
  Library
  -------
  
@@ -14,7 +26,7 @@ Note added fixes.
  - Issue #10744: Fix PEP 3118 format strings on ctypes objects with a nontrivial
    shape.
  
-@@ -585,6 +588,13 @@ Library
+@@ -729,6 +737,13 @@ Library
    prevent readline() calls from consuming too much memory.  Patch by Jyrki
    Pulliainen.
  
