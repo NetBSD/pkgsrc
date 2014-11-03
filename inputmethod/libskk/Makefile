@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2014/09/10 09:34:45 obache Exp $
+# $NetBSD: Makefile,v 1.9 2014/11/03 18:45:43 prlw1 Exp $
 #
 
 DISTNAME=	libskk-1.0.2
+PKGREVISION=	1
 CATEGORIES=	inputmethod
 MASTER_SITES=	https://github.com/ueno/libskk/releases/download/${PKGVERSION_NOREV}/
 
@@ -24,6 +25,6 @@ CONFIGURE_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 TEST_TARGET=		check
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libgee0.8/buildlink3.mk"
+.include "../../devel/libgee/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
