@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2013/05/26 09:22:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.44.12.1 2014/11/03 19:39:07 tron Exp $
 bin/xml2-config
 bin/xmlcatalog
 bin/xmllint
@@ -49,6 +49,7 @@ include/libxml2/libxml/xmlwriter.h
 include/libxml2/libxml/xpath.h
 include/libxml2/libxml/xpathInternals.h
 include/libxml2/libxml/xpointer.h
+lib/cmake/libxml2/libxml2-config.cmake
 lib/libxml2.la
 lib/pkgconfig/libxml-2.0.pc
 lib/xml2Conf.sh
