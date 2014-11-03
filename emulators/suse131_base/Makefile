@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2014/10/26 05:32:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2014/11/03 07:51:51 obache Exp $
 
 PKGNAME=	suse_base-${SUSE_VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	emulators
-RPMPKGS+=	aaa_base-${SUSE_VERSION}-16.17.1.${SUSE_ARCH}
+RPMUPDPKGS+=	aaa_base-${SUSE_VERSION}-16.46.1.${SUSE_ARCH}
 RPMUPDPKGS+=	bash-4.2-68.12.1.${SUSE_ARCH}
 RPMUPDPKGS+=	coreutils-8.21-7.16.1.${SUSE_ARCH}
 RPMPKGS+=	findutils-4.5.12-1.1.${SUSE_ARCH}
