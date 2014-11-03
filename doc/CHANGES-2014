@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4142 2014/11/03 07:51:50 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4143 2014/11/03 07:52:05 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5227,3 +5227,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-MooseX-SimpleConfig to 0.10 [wen 2014-11-03]
 	Updated devel/p5-MooseX-Singleton to 0.29 [wen 2014-11-03]
 	Updated devel/p5-MooseX-Traits-Pluggable to 0.12 [wen 2014-11-03]
+	Updated emulators/suse131_base to 13.1nb7 [obache 2014-11-03]
