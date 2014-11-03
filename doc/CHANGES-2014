@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4152 2014/11/03 08:36:19 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4153 2014/11/03 08:40:36 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5237,3 +5237,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/suse131_mozilla-nss to 13.1nb4 [obache 2014-11-03]
 	Updated emulators/suse131_mozilla-nspr to 13.1nb3 [obache 2014-11-03]
 	Updated devel/p5-Moose to 2.1400 [wen 2014-11-03]
+	Updated inputmethod/ibus-table to 1.8.11 [obache 2014-11-03]
