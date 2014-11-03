@@ -1,0 +1,12 @@
+$NetBSD: patch-intl_unicharutil_util_Makefile.in,v 1.1 2014/11/03 12:18:32 ryoon Exp $
+
+--- intl/unicharutil/util/Makefile.in.orig	2014-04-18 02:03:03.000000000 +0000
++++ intl/unicharutil/util/Makefile.in
+@@ -23,3 +23,7 @@ ifdef _MSC_VER
+ OS_COMPILE_CXXFLAGS += -Zl
+ OS_COMPILE_CFLAGS += -Zl
+ endif
++
++ifdef MOZ_NATIVE_HARFBUZZ
++CXXFLAGS += $(MOZ_HARFBUZZ_CFLAGS)
++endif
