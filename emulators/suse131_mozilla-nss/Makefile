@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2014/09/07 12:26:44 obache Exp $
+# $NetBSD: Makefile,v 1.6 2014/11/03 08:28:08 obache Exp $
 
 PKGNAME=	suse_mozilla-nss-${SUSE_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	emulators
-RPMUPDPKGS+=	mozilla-nss-3.16.3-27.1.${SUSE_ARCH}
+RPMUPDPKGS+=	mozilla-nss-3.17.1-43.1.${SUSE_ARCH}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Linux compatibility package for Mozilla NSS
