@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4133 2014/11/03 06:50:39 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4134 2014/11/03 07:02:48 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5218,3 +5218,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Plack-Middleware-Session to 0.25 [wen 2014-11-03]
 	Updated devel/p5-MooseX-Getopt to 0.65 [wen 2014-11-03]
 	Updated devel/p5-MooseX-LazyRequire to 0.11 [wen 2014-11-03]
+	Updated devel/p5-MooseX-Method-Signatures to 0.48 [wen 2014-11-03]
