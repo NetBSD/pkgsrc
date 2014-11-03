@@ -1,0 +1,13 @@
+$NetBSD: patch-mobile_android_installer_package-manifest.in,v 1.1 2014/11/03 12:18:32 ryoon Exp $
+
+--- mobile/android/installer/package-manifest.in.orig	2014-07-17 01:45:33.000000000 +0000
++++ mobile/android/installer/package-manifest.in
+@@ -424,7 +424,7 @@
+ @BINPATH@/components/dom_webspeechsynth.xpt
+ #endif
+ 
+-#ifdef MOZ_DEBUG
++#if defined(ENABLE_TESTS) && defined(MOZ_DEBUG)
+ @BINPATH@/components/TestInterfaceJS.js
+ @BINPATH@/components/TestInterfaceJS.manifest
+ #endif
