@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.13 2014/11/02 20:48:47 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.14 2014/11/03 14:10:56 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q3 branch:
@@ -57,3 +57,5 @@ Pullup ticket #4535 - requested by taca
 lang/ruby21-base: security update
 Pullup ticket #4530 - requested by tron
 databases/phpmyadmin: security update
+Pullup ticket #4536 - requested by spz
+lang/python27: security patch
