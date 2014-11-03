@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4160 2014/11/03 09:16:41 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4161 2014/11/03 09:26:08 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5245,3 +5245,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/suse131_alsa to 13.1nb2 [obache 2014-11-03]
 	Updated emulators/suse131_libdbus to 13.1nb3 [obache 2014-11-03]
 	Updated emulators/suse131_qt4 to 13.1nb2 [obache 2014-11-03]
+	Updated emulators/suse131_libcurl to 13.1nb5 [obache 2014-11-03]
