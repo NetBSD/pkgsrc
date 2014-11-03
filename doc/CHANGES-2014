@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4135 2014/11/03 07:13:10 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4136 2014/11/03 07:18:55 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5220,3 +5220,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-MooseX-LazyRequire to 0.11 [wen 2014-11-03]
 	Updated devel/p5-MooseX-Method-Signatures to 0.48 [wen 2014-11-03]
 	Updated devel/p5-Devel-StackTrace to 2.00 [wen 2014-11-03]
+	Updated devel/p5-MooseX-Role-Parameterized to 1.08 [wen 2014-11-03]
