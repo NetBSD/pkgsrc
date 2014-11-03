@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1067 2014/10/08 09:55:20 obache Exp $
+# $NetBSD: Makefile,v 1.1068 2014/11/03 02:27:00 wen Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -298,6 +298,7 @@ SUBDIR+=	p5-CatalystX-CRUD-YUI
 SUBDIR+=	p5-CatalystX-Component-Traits
 SUBDIR+=	p5-CatalystX-LeakChecker
 SUBDIR+=	p5-Continuity
+SUBDIR+=	p5-Cookie-Baker
 SUBDIR+=	p5-Cookie-XS
 SUBDIR+=	p5-Corona
 SUBDIR+=	p5-Dancer
