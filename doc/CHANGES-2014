@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4147 2014/11/03 08:09:17 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4148 2014/11/03 08:13:57 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5232,3 +5232,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-MooseX-Types-Perl to 0.101343 [wen 2014-11-03]
 	Updated emulators/suse131_libxml2 to 13.1nb3 [obache 2014-11-03]
 	Updated devel/p5-MooseX-Types-Stringlike to 0.003 [wen 2014-11-03]
+	Updated emulators/suse131_pulseaudio to 13.1nb3 [obache 2014-11-03]
