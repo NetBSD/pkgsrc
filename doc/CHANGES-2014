@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4130 2014/11/03 02:28:21 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4131 2014/11/03 03:20:31 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5215,3 +5215,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Mojolicious to 5.57 [wen 2014-11-03]
 	Added time/p5-Test-Time version 0.04 [wen 2014-11-03]
 	Added www/p5-Cookie-Baker version 0.03 [wen 2014-11-03]
+	Updated www/p5-Plack-Middleware-Session to 0.25 [wen 2014-11-03]
