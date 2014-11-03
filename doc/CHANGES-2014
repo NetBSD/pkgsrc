@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4159 2014/11/03 09:11:33 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4160 2014/11/03 09:16:41 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5244,3 +5244,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated inputmethod/ibus-table to 1.9.0 [obache 2014-11-03]
 	Updated emulators/suse131_alsa to 13.1nb2 [obache 2014-11-03]
 	Updated emulators/suse131_libdbus to 13.1nb3 [obache 2014-11-03]
+	Updated emulators/suse131_qt4 to 13.1nb2 [obache 2014-11-03]
