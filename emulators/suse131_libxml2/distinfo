@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2014/05/27 13:27:25 obache Exp $
+$NetBSD: distinfo,v 1.4 2014/11/03 08:05:03 obache Exp $
 
-SHA1 (suse131/libxml2-2-2.9.1-2.8.1.i586.rpm) = 93d0cf181602442ac989114992a51f09d51c1c7e
-RMD160 (suse131/libxml2-2-2.9.1-2.8.1.i586.rpm) = cb9b86b23c13eeb5c41cc3a618733e05c065d6d0
-Size (suse131/libxml2-2-2.9.1-2.8.1.i586.rpm) = 552432 bytes
-SHA1 (suse131/libxml2-2-2.9.1-2.8.1.x86_64.rpm) = c92839d27570c5bcf329a8264ab615f414502b8e
-RMD160 (suse131/libxml2-2-2.9.1-2.8.1.x86_64.rpm) = 87633510ed6b8eb2578e6cefc52e32b7b93a80bf
-Size (suse131/libxml2-2-2.9.1-2.8.1.x86_64.rpm) = 568626 bytes
+SHA1 (suse131/libxml2-2-2.9.1-2.16.1.i586.rpm) = 1e20a12c20ccc4e6699e9128ee7cad7c1d946442
+RMD160 (suse131/libxml2-2-2.9.1-2.16.1.i586.rpm) = 091b70da9c36d6ce267e3951142cf0bc66a4ea04
+Size (suse131/libxml2-2-2.9.1-2.16.1.i586.rpm) = 552957 bytes
+SHA1 (suse131/libxml2-2-2.9.1-2.16.1.x86_64.rpm) = df4bde69693d9fc3954e8b9615532b0f53faa494
+RMD160 (suse131/libxml2-2-2.9.1-2.16.1.x86_64.rpm) = e227fdea01020f887355c6cee91bdf2e17fa0f3e
+Size (suse131/libxml2-2-2.9.1-2.16.1.x86_64.rpm) = 568807 bytes
