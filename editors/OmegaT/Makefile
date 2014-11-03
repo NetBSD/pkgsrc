@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2014/09/27 09:50:17 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2014/11/03 12:42:45 ryoon Exp $
 #
 
-DISTNAME=	OmegaT_3.0.8_01_Beta_Source
+DISTNAME=	OmegaT_3.1.7_Beta_Source
 PKGNAME=	${DISTNAME:S/OmegaT_/OmegaT-/:S/_Source//:S/_Beta//:S/_/./g}
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=omegat/}
