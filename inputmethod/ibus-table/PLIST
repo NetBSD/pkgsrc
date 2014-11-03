@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/08/24 06:41:32 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/11/03 09:00:32 obache Exp $
 bin/ibus-table-createdb
 lib/pkgconfig/ibus-table.pc
 libexec/ibus-engine-table
@@ -6,24 +6,24 @@ libexec/ibus-setup-table
 man/man1/ibus-table-createdb.1
 share/applications/ibus-setup-table.desktop
 share/ibus-table/data/pinyin_table.txt.bz2
-share/ibus-table/engine/chinese_variants.py
 share/ibus-table/engine/chinese_variants.pyc
 share/ibus-table/engine/chinese_variants.pyo
-share/ibus-table/engine/factory.py
 share/ibus-table/engine/factory.pyc
 share/ibus-table/engine/factory.pyo
-share/ibus-table/engine/main.py
 share/ibus-table/engine/main.pyc
 share/ibus-table/engine/main.pyo
-share/ibus-table/engine/tabcreatedb.py
 share/ibus-table/engine/tabcreatedb.pyc
 share/ibus-table/engine/tabcreatedb.pyo
-share/ibus-table/engine/table.py
 share/ibus-table/engine/table.pyc
 share/ibus-table/engine/table.pyo
-share/ibus-table/engine/tabsqlitedb.py
 share/ibus-table/engine/tabsqlitedb.pyc
 share/ibus-table/engine/tabsqlitedb.pyo
+share/ibus-table/engine/chinese_variants.py
+share/ibus-table/engine/factory.py
+share/ibus-table/engine/main.py
+share/ibus-table/engine/tabcreatedb.py
+share/ibus-table/engine/table.py
+share/ibus-table/engine/tabsqlitedb.py
 share/ibus-table/icons/acommit.svg
 share/ibus-table/icons/cb-mode.svg
 share/ibus-table/icons/chinese.svg
@@ -42,16 +42,17 @@ share/ibus-table/icons/scb-mode.svg
 share/ibus-table/icons/tab-mode.svg
 share/ibus-table/icons/tc-mode.svg
 share/ibus-table/icons/tcb-mode.svg
-share/ibus-table/setup/main.py
 share/ibus-table/setup/main.pyc
 share/ibus-table/setup/main.pyo
-share/ibus-table/setup/version.py
 share/ibus-table/setup/version.pyc
 share/ibus-table/setup/version.pyo
 share/ibus-table/setup/ibus-table-preferences.ui
+share/ibus-table/setup/main.py
+share/ibus-table/setup/version.py
 share/ibus-table/tables/template.txt
 share/ibus/component/table.xml
 share/locale/de/LC_MESSAGES/ibus-table.mo
+share/locale/ja/LC_MESSAGES/ibus-table.mo
 share/locale/zh_CN/LC_MESSAGES/ibus-table.mo
 share/locale/zh_HK/LC_MESSAGES/ibus-table.mo
 share/locale/zh_TW/LC_MESSAGES/ibus-table.mo
