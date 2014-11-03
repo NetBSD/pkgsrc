@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4164 2014/11/03 12:31:32 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.4165 2014/11/03 12:43:14 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5252,3 +5252,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/xulrunner31 version 31.2.0 [ryoon 2014-11-03]
 	Updated lang/openjdk7 to 1.7.71 [ryoon 2014-11-03]
 	Updated www/icedtea-web to 1.5.1 [ryoon 2014-11-03]
+	Updated editors/OmegaT to 3.1.7 [ryoon 2014-11-03]
