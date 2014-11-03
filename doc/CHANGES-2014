@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4141 2014/11/03 07:49:03 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4142 2014/11/03 07:51:50 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5226,3 +5226,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-MooseX-SetOnce to 0.200002 [wen 2014-11-03]
 	Updated devel/p5-MooseX-SimpleConfig to 0.10 [wen 2014-11-03]
 	Updated devel/p5-MooseX-Singleton to 0.29 [wen 2014-11-03]
+	Updated devel/p5-MooseX-Traits-Pluggable to 0.12 [wen 2014-11-03]
