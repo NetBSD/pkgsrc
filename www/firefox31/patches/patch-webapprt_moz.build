@@ -1,0 +1,22 @@
+$NetBSD: patch-webapprt_moz.build,v 1.1 2014/11/03 12:18:32 ryoon Exp $
+
+Don't assume cocoa toolkit just because OS_ARCH is Darwin.
+
+--- webapprt/moz.build.orig	2014-05-06 22:56:37.000000000 +0000
++++ webapprt/moz.build
+@@ -6,7 +6,7 @@
+ 
+ if CONFIG['OS_ARCH'] == 'WINNT':
+     DIRS += ['win']
+-elif CONFIG['OS_ARCH'] == 'Darwin':
++elif CONFIG['MOZ_WIDGET_TOOLKIT'] == 'cocoa':
+     DIRS += ['mac']
+ elif CONFIG['MOZ_WIDGET_TOOLKIT'] == 'gtk2':
+     DIRS += ['gtk2']
+@@ -45,4 +45,4 @@ if CONFIG['MOZILLA_OFFICIAL']:
+ DEFINES['GRE_MILESTONE'] = CONFIG['GRE_MILESTONE']
+ DEFINES['MOZ_APP_BASENAME'] = CONFIG['MOZ_APP_BASENAME']
+ 
+-JAR_MANIFESTS += ['jar.mn']
+\ No newline at end of file
++JAR_MANIFESTS += ['jar.mn']
