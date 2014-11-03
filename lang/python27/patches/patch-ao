@@ -1,6 +1,6 @@
-$NetBSD: patch-ao,v 1.4 2013/04/12 09:03:41 adam Exp $
+$NetBSD: patch-ao,v 1.4.12.1 2014/11/03 14:12:52 tron Exp $
 
---- Lib/distutils/util.py.orig	2013-04-06 14:02:26.000000000 +0000
+--- Lib/distutils/util.py.orig	2014-06-30 02:05:26.000000000 +0000
 +++ Lib/distutils/util.py
 @@ -101,6 +101,8 @@ def get_platform ():
          osname, release, machine = _osx_support.get_platform_osx(

@@ -1,9 +1,9 @@
-$NetBSD: patch-av,v 1.1.1.1 2011/02/22 08:52:01 obache Exp $
+$NetBSD: patch-av,v 1.1.1.1.30.1 2014/11/03 14:12:52 tron Exp $
 
 Add a knob (enviroment variable) for disabling installation of egg metadata
 in extensions until we have infrastructure in place for dealing w/ it.
 
---- Lib/distutils/command/install.py.orig	2010-05-05 19:09:31.000000000 +0000
+--- Lib/distutils/command/install.py.orig	2014-06-30 02:05:25.000000000 +0000
 +++ Lib/distutils/command/install.py
 @@ -666,7 +666,8 @@ class install (Command):
                      ('install_headers', has_headers),
