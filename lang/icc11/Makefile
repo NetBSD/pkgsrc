@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/06/15 17:37:22 alnsn Exp $
+# $NetBSD: Makefile,v 1.7 2014/11/03 10:35:33 wiz Exp $
 
 ICC_MAJOR_VERSION=	11.1
 ICC_MINOR_VERSION=	080
@@ -35,7 +35,7 @@ USE_LANGUAGES+=	c
 
 BUILD_DEPENDS+=		rpm2pkg>=2.1:../../pkgtools/rpm2pkg
 
-DEPENDS+=		gcc48-cc++>=4.8:../../lang/gcc48-cc++
+DEPENDS+=		gcc48>=4.8:../../lang/gcc48
 DEPENDS+=		binutils>=2.17:../../devel/binutils
 
 GCC_PREFIX=		${BUILDLINK_PREFIX.gcc48}
@@ -107,7 +107,7 @@ do-install:
 	cd ${WRKSRC} && make install-${LOWER_OPSYS}-${ICC_ARCH} \
 		PREFIX=${DESTDIR}${PREFIX} PKGMANDIR=${PKGMANDIR}
 
-.include "../../lang/gcc48-cc++/buildlink3.mk"
+.include "../../lang/gcc48/buildlink3.mk"
 .include "../../devel/binutils/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
