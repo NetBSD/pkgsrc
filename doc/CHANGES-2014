@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4128 2014/11/03 01:42:32 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4129 2014/11/03 02:14:56 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5213,3 +5213,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/dovecot2-pigeonhole to 0.4.6 [taca 2014-11-03]
 	Updated misc/libreoffice4 to 4.3.3.2 [ryoon 2014-11-03]
 	Updated www/p5-Mojolicious to 5.57 [wen 2014-11-03]
+	Added time/p5-Test-Time version 0.04 [wen 2014-11-03]
