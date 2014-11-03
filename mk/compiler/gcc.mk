@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.152 2014/10/31 14:22:20 ryoon Exp $
+# $NetBSD: gcc.mk,v 1.153 2014/11/03 13:06:39 ryoon Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -483,7 +483,7 @@ _GCC_DEPENDENCY=	gcc48>=${_GCC_REQD}:../../lang/gcc48
 _USE_GCC_SHLIB?=	yes
 .    endif
 .  endif
-.elif !empty(_NEED_GCC48:M[yY][eE][sS])
+.elif !empty(_NEED_GCC49:M[yY][eE][sS])
 #
 # We require gcc-4.9.x in the lang/gcc49-* directory.
 #
