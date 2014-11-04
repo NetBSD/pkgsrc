@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/10/30 13:41:44 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2014/11/04 12:01:18 fhajny Exp $
 
-DISTNAME=	argh-0.26.0
+DISTNAME=	argh-0.26.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	https://pypi.python.org/packages/source/a/argh/
