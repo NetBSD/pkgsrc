@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2014/10/28 12:51:03 adam Exp $
+# $NetBSD: Makefile,v 1.25 2014/11/04 21:40:05 joerg Exp $
 
 DISTNAME=	libffi-3.1
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://sourceware.org/pub/libffi/
 
