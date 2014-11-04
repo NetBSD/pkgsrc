@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/10/13 13:07:13 mef Exp $
+$NetBSD: distinfo,v 1.2 2014/11/04 21:40:48 joerg Exp $
 
 SHA1 (gr-fcdproplus_3.7.11.orig.tar.xz) = f9997af287116c821e49209d65e7cb5525b21544
 RMD160 (gr-fcdproplus_3.7.11.orig.tar.xz) = 571c4e698bd68d3f162cabb9dea03c7d4683ab10
 Size (gr-fcdproplus_3.7.11.orig.tar.xz) = 102896 bytes
-SHA1 (patch-CMakeLists.txt) = 63f8e5ba6fef409d64f66638dc94df3ef9d1f63a
