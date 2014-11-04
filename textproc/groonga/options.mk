@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.12 2014/08/29 10:04:45 obache Exp $
+# $NetBSD: options.mk,v 1.13 2014/11/04 11:40:20 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.groonga
-PKG_SUPPORTED_OPTIONS=	mecab tests zlib lzo
+PKG_SUPPORTED_OPTIONS=	mecab tests zlib lz4
 PKG_SUPPORTED_OPTIONS+=	groonga-suggest-learner groonga-httpd
 PKG_SUGGESTED_OPTIONS=	mecab groonga-suggest-learner groonga-httpd
 
@@ -45,11 +45,11 @@ CONFIGURE_ARGS+=	--with-zlib
 CONFIGURE_ARGS+=	--without-zlib
 .endif
 
-.if !empty(PKG_OPTIONS:Mlzo)
-CONFIGURE_ARGS+=	--with-lzo
-.include "../../archivers/lzo/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mlz4)
+CONFIGURE_ARGS+=	--with-lz4
+.include "../../archivers/lz4/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--without-lzo
+CONFIGURE_ARGS+=	--without-lz4
 .endif
 
 .if !empty(PKG_OPTIONS:Mgroonga-suggest-learner)
@@ -100,7 +100,7 @@ CONF_FILES+=	share/examples/${PKGBASE}/httpd/win-utf \
 
 SUBST_CLASSES+=		confpath
 SUBST_STAGE.confpath=	post-configure
-SUBST_FILES.confpath=	vendor/nginx-1.7.4/objs/Makefile
+SUBST_FILES.confpath=	vendor/nginx-1.7.6/objs/Makefile
 SUBST_SED.confpath=	-e 's,\$$(DESTDIR)${PKG_SYSCONFDIR}/httpd,\$$(DESTDIR)${PREFIX}/share/examples/${PKGBASE}/httpd,g'
 .else
 CONFIGURE_ARGS+=	--disable-groonga-httpd

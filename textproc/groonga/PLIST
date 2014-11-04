@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2014/08/29 10:04:45 obache Exp $
+@comment $NetBSD: PLIST,v 1.25 2014/11/04 11:40:20 obache Exp $
 bin/groonga
 bin/groonga-benchmark
 bin/groonga-suggest-create-dataset
@@ -8,10 +8,12 @@ include/groonga/groonga.h
 include/groonga/groonga/nfkc.h
 include/groonga/groonga/normalizer.h
 include/groonga/groonga/plugin.h
+include/groonga/groonga/token_filter.h
 include/groonga/groonga/tokenizer.h
 lib/groonga/plugins/query_expanders/tsv.la
 lib/groonga/plugins/suggest/suggest.la
 lib/groonga/plugins/table/table.la
+lib/groonga/plugins/token_filters/stop_word.la
 ${PLIST.mecab}lib/groonga/plugins/tokenizers/mecab.la
 lib/libgroonga.la
 lib/pkgconfig/groonga.pc
@@ -22,6 +24,7 @@ sbin/groonga-httpd-restart
 share/doc/groonga/en/html/.buildinfo
 share/doc/groonga/en/html/_images/geo-points.png
 share/doc/groonga/en/html/_sources/characteristic.txt
+share/doc/groonga/en/html/_sources/client.txt
 share/doc/groonga/en/html/_sources/community.txt
 share/doc/groonga/en/html/_sources/contribution.txt
 share/doc/groonga/en/html/_sources/contribution/development.txt
@@ -38,7 +41,6 @@ share/doc/groonga/en/html/_sources/contribution/documentation/introduction.txt
 share/doc/groonga/en/html/_sources/contribution/report.txt
 share/doc/groonga/en/html/_sources/development.txt
 share/doc/groonga/en/html/_sources/development/travis-ci.txt
-share/doc/groonga/en/html/_sources/geolocation_search.txt
 share/doc/groonga/en/html/_sources/index.txt
 share/doc/groonga/en/html/_sources/install.txt
 share/doc/groonga/en/html/_sources/install/centos.txt
@@ -151,9 +153,16 @@ share/doc/groonga/en/html/_sources/reference/grn_expr/script_syntax.txt
 share/doc/groonga/en/html/_sources/reference/indexing.txt
 share/doc/groonga/en/html/_sources/reference/log.txt
 share/doc/groonga/en/html/_sources/reference/normalizers.txt
+share/doc/groonga/en/html/_sources/reference/operations.txt
+share/doc/groonga/en/html/_sources/reference/operations/geolocation_search.txt
 share/doc/groonga/en/html/_sources/reference/output.txt
 share/doc/groonga/en/html/_sources/reference/query_expanders.txt
 share/doc/groonga/en/html/_sources/reference/query_expanders/tsv.txt
+share/doc/groonga/en/html/_sources/reference/suggest.txt
+share/doc/groonga/en/html/_sources/reference/suggest/completion.txt
+share/doc/groonga/en/html/_sources/reference/suggest/correction.txt
+share/doc/groonga/en/html/_sources/reference/suggest/introduction.txt
+share/doc/groonga/en/html/_sources/reference/suggest/suggestion.txt
 share/doc/groonga/en/html/_sources/reference/tables.txt
 share/doc/groonga/en/html/_sources/reference/tokenizers.txt
 share/doc/groonga/en/html/_sources/reference/tuning.txt
@@ -168,12 +177,6 @@ share/doc/groonga/en/html/_sources/server/package.txt
 share/doc/groonga/en/html/_sources/spec.txt
 share/doc/groonga/en/html/_sources/spec/gqtp.txt
 share/doc/groonga/en/html/_sources/spec/search.txt
-share/doc/groonga/en/html/_sources/suggest.txt
-share/doc/groonga/en/html/_sources/suggest/completion.txt
-share/doc/groonga/en/html/_sources/suggest/correction.txt
-share/doc/groonga/en/html/_sources/suggest/introduction.txt
-share/doc/groonga/en/html/_sources/suggest/suggestion.txt
-share/doc/groonga/en/html/_sources/suggest/tutorial.txt
 share/doc/groonga/en/html/_sources/troubleshooting.txt
 share/doc/groonga/en/html/_sources/troubleshooting/different_results_with_the_same_keyword.txt
 share/doc/groonga/en/html/_sources/troubleshooting/mmap_cannot_allocate_memory.txt
@@ -215,6 +218,7 @@ share/doc/groonga/en/html/_static/up.png
 share/doc/groonga/en/html/_static/us.png
 share/doc/groonga/en/html/_static/websupport.js
 share/doc/groonga/en/html/characteristic.html
+share/doc/groonga/en/html/client.html
 share/doc/groonga/en/html/community.html
 share/doc/groonga/en/html/contribution.html
 share/doc/groonga/en/html/contribution/development.html
@@ -232,7 +236,6 @@ share/doc/groonga/en/html/contribution/report.html
 share/doc/groonga/en/html/development.html
 share/doc/groonga/en/html/development/travis-ci.html
 share/doc/groonga/en/html/genindex.html
-share/doc/groonga/en/html/geolocation_search.html
 share/doc/groonga/en/html/index.html
 share/doc/groonga/en/html/install.html
 share/doc/groonga/en/html/install/centos.html
@@ -346,9 +349,16 @@ share/doc/groonga/en/html/reference/grn_expr/script_syntax.html
 share/doc/groonga/en/html/reference/indexing.html
 share/doc/groonga/en/html/reference/log.html
 share/doc/groonga/en/html/reference/normalizers.html
+share/doc/groonga/en/html/reference/operations.html
+share/doc/groonga/en/html/reference/operations/geolocation_search.html
 share/doc/groonga/en/html/reference/output.html
 share/doc/groonga/en/html/reference/query_expanders.html
 share/doc/groonga/en/html/reference/query_expanders/tsv.html
+share/doc/groonga/en/html/reference/suggest.html
+share/doc/groonga/en/html/reference/suggest/completion.html
+share/doc/groonga/en/html/reference/suggest/correction.html
+share/doc/groonga/en/html/reference/suggest/introduction.html
+share/doc/groonga/en/html/reference/suggest/suggestion.html
 share/doc/groonga/en/html/reference/tables.html
 share/doc/groonga/en/html/reference/tokenizers.html
 share/doc/groonga/en/html/reference/tuning.html
@@ -365,12 +375,6 @@ share/doc/groonga/en/html/server/package.html
 share/doc/groonga/en/html/spec.html
 share/doc/groonga/en/html/spec/gqtp.html
 share/doc/groonga/en/html/spec/search.html
-share/doc/groonga/en/html/suggest.html
-share/doc/groonga/en/html/suggest/completion.html
-share/doc/groonga/en/html/suggest/correction.html
-share/doc/groonga/en/html/suggest/introduction.html
-share/doc/groonga/en/html/suggest/suggestion.html
-share/doc/groonga/en/html/suggest/tutorial.html
 share/doc/groonga/en/html/troubleshooting.html
 share/doc/groonga/en/html/troubleshooting/different_results_with_the_same_keyword.html
 share/doc/groonga/en/html/troubleshooting/mmap_cannot_allocate_memory.html
@@ -389,6 +393,7 @@ share/doc/groonga/en/html/tutorial/search.html
 share/doc/groonga/ja/html/.buildinfo
 share/doc/groonga/ja/html/_images/geo-points.png
 share/doc/groonga/ja/html/_sources/characteristic.txt
+share/doc/groonga/ja/html/_sources/client.txt
 share/doc/groonga/ja/html/_sources/community.txt
 share/doc/groonga/ja/html/_sources/contribution.txt
 share/doc/groonga/ja/html/_sources/contribution/development.txt
@@ -405,7 +410,6 @@ share/doc/groonga/ja/html/_sources/contribution/documentation/introduction.txt
 share/doc/groonga/ja/html/_sources/contribution/report.txt
 share/doc/groonga/ja/html/_sources/development.txt
 share/doc/groonga/ja/html/_sources/development/travis-ci.txt
-share/doc/groonga/ja/html/_sources/geolocation_search.txt
 share/doc/groonga/ja/html/_sources/index.txt
 share/doc/groonga/ja/html/_sources/install.txt
 share/doc/groonga/ja/html/_sources/install/centos.txt
@@ -518,9 +522,16 @@ share/doc/groonga/ja/html/_sources/reference/grn_expr/script_syntax.txt
 share/doc/groonga/ja/html/_sources/reference/indexing.txt
 share/doc/groonga/ja/html/_sources/reference/log.txt
 share/doc/groonga/ja/html/_sources/reference/normalizers.txt
+share/doc/groonga/ja/html/_sources/reference/operations.txt
+share/doc/groonga/ja/html/_sources/reference/operations/geolocation_search.txt
 share/doc/groonga/ja/html/_sources/reference/output.txt
 share/doc/groonga/ja/html/_sources/reference/query_expanders.txt
 share/doc/groonga/ja/html/_sources/reference/query_expanders/tsv.txt
+share/doc/groonga/ja/html/_sources/reference/suggest.txt
+share/doc/groonga/ja/html/_sources/reference/suggest/completion.txt
+share/doc/groonga/ja/html/_sources/reference/suggest/correction.txt
+share/doc/groonga/ja/html/_sources/reference/suggest/introduction.txt
+share/doc/groonga/ja/html/_sources/reference/suggest/suggestion.txt
 share/doc/groonga/ja/html/_sources/reference/tables.txt
 share/doc/groonga/ja/html/_sources/reference/tokenizers.txt
 share/doc/groonga/ja/html/_sources/reference/tuning.txt
@@ -535,12 +546,6 @@ share/doc/groonga/ja/html/_sources/server/package.txt
 share/doc/groonga/ja/html/_sources/spec.txt
 share/doc/groonga/ja/html/_sources/spec/gqtp.txt
 share/doc/groonga/ja/html/_sources/spec/search.txt
-share/doc/groonga/ja/html/_sources/suggest.txt
-share/doc/groonga/ja/html/_sources/suggest/completion.txt
-share/doc/groonga/ja/html/_sources/suggest/correction.txt
-share/doc/groonga/ja/html/_sources/suggest/introduction.txt
-share/doc/groonga/ja/html/_sources/suggest/suggestion.txt
-share/doc/groonga/ja/html/_sources/suggest/tutorial.txt
 share/doc/groonga/ja/html/_sources/troubleshooting.txt
 share/doc/groonga/ja/html/_sources/troubleshooting/different_results_with_the_same_keyword.txt
 share/doc/groonga/ja/html/_sources/troubleshooting/mmap_cannot_allocate_memory.txt
@@ -582,6 +587,7 @@ share/doc/groonga/ja/html/_static/up.png
 share/doc/groonga/ja/html/_static/us.png
 share/doc/groonga/ja/html/_static/websupport.js
 share/doc/groonga/ja/html/characteristic.html
+share/doc/groonga/ja/html/client.html
 share/doc/groonga/ja/html/community.html
 share/doc/groonga/ja/html/contribution.html
 share/doc/groonga/ja/html/contribution/development.html
@@ -599,7 +605,6 @@ share/doc/groonga/ja/html/contribution/report.html
 share/doc/groonga/ja/html/development.html
 share/doc/groonga/ja/html/development/travis-ci.html
 share/doc/groonga/ja/html/genindex.html
-share/doc/groonga/ja/html/geolocation_search.html
 share/doc/groonga/ja/html/index.html
 share/doc/groonga/ja/html/install.html
 share/doc/groonga/ja/html/install/centos.html
@@ -713,9 +718,16 @@ share/doc/groonga/ja/html/reference/grn_expr/script_syntax.html
 share/doc/groonga/ja/html/reference/indexing.html
 share/doc/groonga/ja/html/reference/log.html
 share/doc/groonga/ja/html/reference/normalizers.html
+share/doc/groonga/ja/html/reference/operations.html
+share/doc/groonga/ja/html/reference/operations/geolocation_search.html
 share/doc/groonga/ja/html/reference/output.html
 share/doc/groonga/ja/html/reference/query_expanders.html
 share/doc/groonga/ja/html/reference/query_expanders/tsv.html
+share/doc/groonga/ja/html/reference/suggest.html
+share/doc/groonga/ja/html/reference/suggest/completion.html
+share/doc/groonga/ja/html/reference/suggest/correction.html
+share/doc/groonga/ja/html/reference/suggest/introduction.html
+share/doc/groonga/ja/html/reference/suggest/suggestion.html
 share/doc/groonga/ja/html/reference/tables.html
 share/doc/groonga/ja/html/reference/tokenizers.html
 share/doc/groonga/ja/html/reference/tuning.html
@@ -732,12 +744,6 @@ share/doc/groonga/ja/html/server/package.html
 share/doc/groonga/ja/html/spec.html
 share/doc/groonga/ja/html/spec/gqtp.html
 share/doc/groonga/ja/html/spec/search.html
-share/doc/groonga/ja/html/suggest.html
-share/doc/groonga/ja/html/suggest/completion.html
-share/doc/groonga/ja/html/suggest/correction.html
-share/doc/groonga/ja/html/suggest/introduction.html
-share/doc/groonga/ja/html/suggest/suggestion.html
-share/doc/groonga/ja/html/suggest/tutorial.html
 share/doc/groonga/ja/html/troubleshooting.html
 share/doc/groonga/ja/html/troubleshooting/different_results_with_the_same_keyword.html
 share/doc/groonga/ja/html/troubleshooting/mmap_cannot_allocate_memory.html
