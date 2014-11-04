@@ -1,15 +1,15 @@
-#       $NetBSD: configure.ac,v 1.3 2014/10/31 18:59:32 spz Exp $
+#       $NetBSD: configure.ac,v 1.4 2014/11/04 22:38:26 agc Exp $
 #
 # Process this file with autoconf to produce a configure script.
 
-AC_INIT([tnftp], [20141031], [lukem@NetBSD.org])
+AC_INIT([tnftp], [20141104], [lukem@NetBSD.org])
 AC_PREREQ([2.69])
 
 AC_COPYRIGHT([
 Copyright (c) 1999-2014 The NetBSD Foundation, Inc.
 All rights reserved.
 ])
-AC_REVISION([$Revision: 1.3 $])
+AC_REVISION([$Revision: 1.4 $])
 
 AS_SHELL_SANITIZE()
 
@@ -140,7 +140,7 @@ AX_CHECK_OPENSSL([have_ssl=yes])
 
 AS_IF([test "$with_ssl" != no],
       [AC_MSG_NOTICE([--with-ssl=$with_ssl; checking for required OpenSSL features])
-       AS_IF([test "$have_ssl" == yes],
+       AS_IF([test "$have_ssl" = yes],
              [AC_DEFINE([WITH_SSL], [1])
               AC_MSG_NOTICE([enabling SSL support])
               with_ssl=yes],
@@ -229,7 +229,8 @@ accheck_includes='
 ' # accheck_includes
 
 AC_CHECK_HEADERS([sys/types.h sys/ioctl.h sys/param.h sys/stat.h \
-                  sys/socket.h sys/syslimits.h sys/time.h sys/wait.h],
+                  sys/socket.h sys/syslimits.h sys/time.h sys/uio.h \
+                  sys/wait.h],
                  [], [], [$accheck_includes])
 AC_HEADER_DIRENT()
 AC_HEADER_RESOLV()
