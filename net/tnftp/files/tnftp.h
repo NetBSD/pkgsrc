@@ -1,4 +1,4 @@
-/*	$NetBSD: tnftp.h,v 1.13 2014/10/31 18:59:32 spz Exp $	*/
+/*	$NetBSD: tnftp.h,v 1.14 2014/11/04 22:38:26 agc Exp $	*/
 
 #define	FTP_PRODUCT	PACKAGE_NAME
 #define	FTP_VERSION	PACKAGE_VERSION
@@ -69,6 +69,9 @@
 # if defined(HAVE_NDIR_H)
 #  include <ndir.h>
 # endif
+#endif
+#if defined(HAVE_SYS_UIO_H)
+# include <sys/uio.h>
 #endif
 
 #if defined(HAVE_SYS_IOCTL_H)

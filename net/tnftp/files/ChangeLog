@@ -1,5 +1,15 @@
-$NetBSD: ChangeLog,v 1.8 2014/10/31 18:59:32 spz Exp $
+$NetBSD: ChangeLog,v 1.9 2014/11/04 22:38:26 agc Exp $
 
+
+Mon Nov  3 21:43:20 UTC 2014	lukem
+
+	* Release as "tnftp 20141104".
+
+Fri Oct 31 08:32:28 UTC 2014	lukem
+
+	* Use '=' not '==' with test in configure.
+
+	* Check for <sys/uio.h> for writev() declaration.
 
 Fri Oct 31 04:07:38 UTC 2014	lukem
 

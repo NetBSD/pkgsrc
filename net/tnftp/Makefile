@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2014/10/31 18:59:32 spz Exp $
+# $NetBSD: Makefile,v 1.37 2014/11/04 22:38:26 agc Exp $
 
-DISTNAME=		tnftp-20141031
+DISTNAME=		tnftp-20141104
 CATEGORIES=		net
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -14,7 +14,7 @@ MAINTAINER=		lukem@NetBSD.org
 COMMENT=		The enhanced FTP client in NetBSD
 LICENSE=		original-bsd
 
-BOOTSTRAP_PKG=	yes
+BOOTSTRAP_PKG=		yes
 
 GNU_CONFIGURE=		yes
 CHECK_PERMS=		no
