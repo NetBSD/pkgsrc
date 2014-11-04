@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.21 2014/10/28 12:51:03 adam Exp $
+$NetBSD: patch-aa,v 1.22 2014/11/04 21:40:05 joerg Exp $
 
 --- configure.orig	2014-05-19 13:44:03.000000000 +0000
 +++ configure
@@ -86,9 +86,16 @@ $NetBSD: patch-aa,v 1.21 2014/10/28 12:51:03 adam Exp $
  
  $as_echo "#define FFI_MMAP_EXEC_WRIT 1" >>confdefs.h
  
-@@ -18792,11 +18806,6 @@ if test "x$GCC" = "xyes"; then
+@@ -18787,19 +18801,14 @@ if test "x$GCC" = "xyes"; then
+   if test -n "$with_cross_host" &&
+      test x"$with_cross_host" != x"no"; then
+     toolexecdir='$(exec_prefix)/$(target_alias)'
+-    toolexeclibdir='$(toolexecdir)/lib'
++    toolexeclibdir='${toolexecdir}/lib'
+   else
      toolexecdir='$(libdir)/gcc-lib/$(target_alias)'
-     toolexeclibdir='$(libdir)'
+-    toolexeclibdir='$(libdir)'
++    toolexeclibdir='${libdir}'
    fi
 -  multi_os_directory=`$CC $CFLAGS -print-multi-os-directory`
 -  case $multi_os_directory in
@@ -97,7 +104,11 @@ $NetBSD: patch-aa,v 1.21 2014/10/28 12:51:03 adam Exp $
 -  esac
  
  else
-   toolexeclibdir='$(libdir)'
+-  toolexeclibdir='$(libdir)'
++  toolexeclibdir='${libdir}'
+ fi
+ 
+ 
 @@ -19115,6 +19124,10 @@ if test -z "${VAX_TRUE}" && test -z "${V
    as_fn_error $? "conditional \"VAX\" was never defined.
  Usually this means the macro was only invoked conditionally." "$LINENO" 5
