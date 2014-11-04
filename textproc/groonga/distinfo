@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.31 2014/08/29 10:04:45 obache Exp $
+$NetBSD: distinfo,v 1.32 2014/11/04 11:40:20 obache Exp $
 
-SHA1 (groonga-4.0.5.tar.gz) = 2e6fd8743a71532f5ee29f3508b678f5505802d2
-RMD160 (groonga-4.0.5.tar.gz) = ff6dbebc7cb62dc9079246bd2b4a5e7a2d022557
-Size (groonga-4.0.5.tar.gz) = 10828892 bytes
+SHA1 (groonga-4.0.7.tar.gz) = b00c56c6d7318fe1a87f6f55366182ace4014a2a
+RMD160 (groonga-4.0.7.tar.gz) = 9254e7651161b196f5ed57987cb5cdb8195d8e1b
+Size (groonga-4.0.7.tar.gz) = 10990151 bytes
