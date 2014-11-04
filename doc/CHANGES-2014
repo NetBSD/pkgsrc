@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4170 2014/11/04 12:01:30 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.4171 2014/11/04 12:56:31 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5258,3 +5258,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/opendnssec to 1.4.6nb4 [he 2014-11-04]
 	Updated textproc/groonga to 4.0.7 [obache 2014-11-04]
 	Updated devel/py-argh to 0.26.1 [fhajny 2014-11-04]
+	Added databases/py-barman version 1.3.3 [fhajny 2014-11-04]
