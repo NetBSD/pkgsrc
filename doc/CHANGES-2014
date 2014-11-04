@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4169 2014/11/04 11:40:33 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4170 2014/11/04 12:01:30 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5257,3 +5257,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Moose to 2.1401 [wen 2014-11-04]
 	Updated security/opendnssec to 1.4.6nb4 [he 2014-11-04]
 	Updated textproc/groonga to 4.0.7 [obache 2014-11-04]
+	Updated devel/py-argh to 0.26.1 [fhajny 2014-11-04]
