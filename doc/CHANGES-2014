@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4167 2014/11/04 06:58:14 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4168 2014/11/04 09:41:39 he Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5255,3 +5255,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated editors/OmegaT to 3.1.7 [ryoon 2014-11-03]
 	Removed devel/libgee0.8 [prlw1 2014-11-03]
 	Updated devel/p5-Moose to 2.1401 [wen 2014-11-04]
+	Updated security/opendnssec to 1.4.6nb4 [he 2014-11-04]
