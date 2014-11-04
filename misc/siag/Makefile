@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.60 2012/10/21 11:39:12 cheusov Exp $
+# $NetBSD: Makefile,v 1.61 2014/11/04 13:18:28 gdt Exp $
 #
 
 DISTNAME=	siag-3.6.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	misc editors math textproc
 MASTER_SITES=	http://siag.nu/pub/siag/
 
@@ -18,7 +18,6 @@ CONFLICTS=	siod-[0-9]*
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-x
-CONFIGURE_ARGS+=--with-guile
 CONFIGURE_ARGS+=--with-docdir=${PREFIX}/share/doc/siag
 USE_TOOLS+=	gmake
 
@@ -37,7 +36,6 @@ CONFIGURE_ARGS+=--with-xawm=Xaw
 .endif
 
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../lang/guile16/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/mowitz/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
