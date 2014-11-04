@@ -1,6 +1,6 @@
-$NetBSD: patch-signer_src_wire_xfrd.c,v 1.1 2014/10/31 16:32:39 he Exp $
+$NetBSD: patch-signer_src_wire_xfrd.c,v 1.2 2014/11/04 09:41:02 he Exp $
 
-There's no need for htonl() on values restored from a local file.
+Hm, there's no need for htonl() on values restored from a file.
 This causes IXFRs to fail, because the wrong SOA version number
 is being stuffed into the IXFR requests(!)
 
@@ -25,3 +25,12 @@ is being stuffed into the IXFR requests(!)
                  xfrd->soa.mname[0] = xfrd_recover_dname(xfrd->soa.mname+1,
                      soa_mname);
                  xfrd->soa.rname[0] = xfrd_recover_dname(xfrd->soa.rname+1,
+@@ -2097,7 +2097,7 @@ xfrd_backup(xfrd_type* xfrd)
+                 fprintf(fd, "%s\n", ODS_SE_FILE_MAGIC_V3);
+                 fprintf(fd, ";;Zone: name %s ttl %u mname ",
+                     zone->name,
+-                    (unsigned) ntohl(xfrd->soa.ttl));
++                    (unsigned) xfrd->soa.ttl);
+                 xfrd_backup_dname(fd, xfrd->soa.mname),
+                 fprintf(fd, " rname ");
+                 xfrd_backup_dname(fd, xfrd->soa.rname),
