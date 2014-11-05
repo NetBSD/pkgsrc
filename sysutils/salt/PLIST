@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2014/04/17 11:24:11 imil Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/11/05 16:52:00 imil Exp $
 bin/salt
 bin/salt-call
 bin/salt-cloud
@@ -1415,6 +1415,7 @@ ${PYSITELIB}/salt/templates/rh_ip/conf.jinja
 ${PYSITELIB}/salt/templates/rh_ip/network.jinja
 ${PYSITELIB}/salt/templates/rh_ip/rh5_eth.jinja
 ${PYSITELIB}/salt/templates/rh_ip/rh6_eth.jinja
+${PYSITELIB}/salt/templates/rh_ip/rh7_eth.jinja
 ${PYSITELIB}/salt/templates/rh_ip/route_eth.jinja
 ${PYSITELIB}/salt/templates/virt/libvirt_domain.jinja
 ${PYSITELIB}/salt/templates/virt/libvirt_volume.jinja
