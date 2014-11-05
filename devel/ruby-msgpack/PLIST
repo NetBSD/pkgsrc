@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2014/03/17 14:04:42 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/11/05 10:44:15 obache Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_EXTSDIR}/msgpack/msgpack.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/README.rdoc
@@ -38,12 +38,15 @@ ${GEM_LIBDIR}/lib/msgpack.rb
 ${GEM_LIBDIR}/lib/msgpack/msgpack.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/msgpack/version.rb
 ${GEM_LIBDIR}/msgpack.gemspec
-${GEM_LIBDIR}/spec/buffer_io_spec.rb
-${GEM_LIBDIR}/spec/buffer_spec.rb
+${GEM_LIBDIR}/msgpack.org.md
 ${GEM_LIBDIR}/spec/cases.json
 ${GEM_LIBDIR}/spec/cases.msg
 ${GEM_LIBDIR}/spec/cases_compact.msg
 ${GEM_LIBDIR}/spec/cases_spec.rb
+${GEM_LIBDIR}/spec/cruby/buffer_io_spec.rb
+${GEM_LIBDIR}/spec/cruby/buffer_packer.rb
+${GEM_LIBDIR}/spec/cruby/buffer_spec.rb
+${GEM_LIBDIR}/spec/cruby/buffer_unpacker.rb
 ${GEM_LIBDIR}/spec/format_spec.rb
 ${GEM_LIBDIR}/spec/packer_spec.rb
 ${GEM_LIBDIR}/spec/random_compat.rb
