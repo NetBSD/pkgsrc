@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4174 2014/11/05 10:40:48 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4175 2014/11/05 10:44:25 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5262,3 +5262,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/tnftp to 20141104 [agc 2014-11-04]
 	Updated inputmethod/ibus-table to 1.9.1 [obache 2014-11-05]
 	Updated inputmethod/ibus-table-others to 1.3.5 [obache 2014-11-05]
+	Updated devel/ruby-msgpack to 0.5.9 [obache 2014-11-05]
