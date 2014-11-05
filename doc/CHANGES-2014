@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4178 2014/11/05 17:36:52 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4179 2014/11/05 23:12:59 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5266,3 +5266,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/salt to 2014.1.13 [imil 2014-11-05]
 	Updated time/p5-DateTime-TimeZone to 1.77 [wiz 2014-11-05]
 	Updated devel/p5-Capture-Tiny to 0.27 [wiz 2014-11-05]
+	Updated graphics/gnome-icon-theme-symbolic to 3.12.0 [prlw1 2014-11-05]
