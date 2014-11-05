@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2011/01/17 12:52:15 he Exp $
+$NetBSD: patch-sumtitra,v 1.1 2014/11/05 22:41:38 he Exp $
 
 Fix a "year 2000" bug, and fix this to work without warning
 with newer perl.
