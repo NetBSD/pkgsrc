@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4175 2014/11/05 10:44:25 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4176 2014/11/05 16:52:34 imil Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5263,3 +5263,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated inputmethod/ibus-table to 1.9.1 [obache 2014-11-05]
 	Updated inputmethod/ibus-table-others to 1.3.5 [obache 2014-11-05]
 	Updated devel/ruby-msgpack to 0.5.9 [obache 2014-11-05]
+	Updated sysutils/salt to 2014.1.13 [imil 2014-11-05]
