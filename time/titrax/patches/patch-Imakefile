@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2014/06/29 19:12:51 dholland Exp $
+$NetBSD: patch-Imakefile,v 1.1 2014/11/05 22:41:38 he Exp $
 
 - configure for pkgsrc
 - do ratty interpreter fixes (XXX: change to REPLACE_PERL)
