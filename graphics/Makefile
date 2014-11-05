@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.692 2014/11/02 18:22:47 khorben Exp $
+# $NetBSD: Makefile,v 1.693 2014/11/05 23:29:48 prlw1 Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -23,6 +23,7 @@ SUBDIR+=	SDL2_image
 SUBDIR+=	SDL_image
 SUBDIR+=	TiffIO
 SUBDIR+=	aalib
+SUBDIR+=	adwaita-icon-theme
 SUBDIR+=	agg
 SUBDIR+=	aqsis
 SUBDIR+=	artist
