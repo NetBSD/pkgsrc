@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/08/01 12:07:44 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2014/11/06 13:00:44 szptvlfn Exp $
 
-SHA1 (ansi-terminal-0.6.1.1.tar.gz) = faf8404efe511e744c1c907727083df883faf680
-RMD160 (ansi-terminal-0.6.1.1.tar.gz) = f50faf38788902400e4a21849cc6415e4f4657e4
-Size (ansi-terminal-0.6.1.1.tar.gz) = 14169 bytes
+SHA1 (ansi-terminal-0.6.2.1.tar.gz) = 5573927244e1e64b1603cb9fd11b8841faf70b13
+RMD160 (ansi-terminal-0.6.2.1.tar.gz) = 75cd726e5be26679316cd81df45be22e37ddf0bf
+Size (ansi-terminal-0.6.2.1.tar.gz) = 14652 bytes
