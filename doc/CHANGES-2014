@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4190 2014/11/06 11:29:52 jaapb Exp $
+$NetBSD: CHANGES-2014,v 1.4191 2014/11/06 11:37:57 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5278,3 +5278,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Catalyst-Controller-HTML-FormFu to 1.00 [wen 2014-11-06]
 	Updated net/p5-Test-TCP to 2.06 [wen 2014-11-06]
 	Added textproc/ocaml-uutf version 0.9.3 [jaapb 2014-11-06]
+	Added textproc/ocaml-jsonm version 0.9.1 [jaapb 2014-11-06]
