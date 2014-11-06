@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/10/27 12:01:36 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/11/06 11:59:17 jaapb Exp $
 bin/apt-cudf
 bin/ceve
 bin/challenged
@@ -6,9 +6,12 @@ bin/deb-buildcheck
 bin/deb-coinstall
 bin/debcheck
 bin/distcheck
+${PLIST.ocamlgraph}bin/dominators-graph
 bin/eclipsecheck
 bin/outdated
 bin/rpmcheck
+${PLIST.ocamlgraph}bin/smallworld
+${PLIST.ocamlgraph}bin/strong-deps
 ${OCAML_SITELIB}/dose3/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/dose3/algo.a
 ${OCAML_SITELIB}/dose3/algo.cma
@@ -60,6 +63,7 @@ ${OCAML_SITELIB}/dose3/format822_parser.mli
 ${OCAML_SITELIB}/dose3/input.mli
 ${OCAML_SITELIB}/dose3/packages_parser.mli
 ${OCAML_SITELIB}/dose3/release.mli
+${PLIST.ocamlgraph}${OCAML_SITELIB}/dose3/strongdeps.mli
 ${OCAML_SITELIB}/dose3/url.mli
 ${OCAML_SITELIB}/dose3/util.mli
 ${OCAML_SITELIB}/dose3/version.mli
