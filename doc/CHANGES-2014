@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4182 2014/11/06 01:51:56 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4183 2014/11/06 02:06:29 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5270,3 +5270,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added graphics/adwaita-icon-theme version 3.14.1 [prlw1 2014-11-05]
 	Updated devel/p5-Moose to 2.1402 [wen 2014-11-06]
 	Updated devel/p5-local-lib to 2.000014 [wen 2014-2014-11-06]
+	Updated devel/p5-Test-Harness to 3.34 [wen 2014-11-06]
