@@ -1,4 +1,4 @@
-/*	$NetBSD: strsep.c,v 1.4 2007/08/07 02:07:01 lukem Exp $	*/
+/*	$NetBSD: strsep.c,v 1.4.62.1 2014/11/06 10:15:58 tron Exp $	*/
 /*	from	NetBSD: strsep.c,v 1.14 2003/08/07 16:43:52 agc Exp	*/
 
 /*-

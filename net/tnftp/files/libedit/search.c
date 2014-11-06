@@ -1,4 +1,4 @@
-/*	$NetBSD: search.c,v 1.4 2007/08/07 02:06:57 lukem Exp $	*/
+/*	$NetBSD: search.c,v 1.4.62.1 2014/11/06 10:15:58 tron Exp $	*/
 /*	from	NetBSD: search.c,v 1.20 2004/11/04 01:16:03 christos Exp	*/
 
 /*-

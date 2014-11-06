@@ -1,4 +1,160 @@
-$NetBSD: ChangeLog,v 1.7 2007/08/07 02:06:54 lukem Exp $
+$NetBSD: ChangeLog,v 1.7.62.1 2014/11/06 10:15:58 tron Exp $
+
+
+Mon Nov  3 21:43:20 UTC 2014	lukem
+
+	* Release as "tnftp 20141104".
+
+Fri Oct 31 08:32:28 UTC 2014	lukem
+
+	* Use '=' not '==' with test in configure.
+
+	* Check for <sys/uio.h> for writev() declaration.
+
+Fri Oct 31 04:07:38 UTC 2014	lukem
+
+	* Release as "tnftp 20141031".
+
+	* Merge NetBSD usr.bin/ftp from 20130220 to 20141026:
+		- Don't pay attention to special characters if they don't
+		  come from the command line (from jmcneill).
+		  Fixes CVE-2014-8517.
+		- PR/34796: Hauke Fath: ftp does not timeout on http fetches.
+
+Sun May  5 13:51:47 UTC 2013	lukem
+
+	* Release as "tnftp 20130505"
+	
+	* Implement --enable-ssl (and --with-openssl) to enable
+	  https:// fetch support.
+
+	* Merge NetBSD ftp from 20090520 to 20130220.  Changes:
+		- https:// support.
+		  NetBSD problem report 47276 from NONAKA Kimihiro.
+		- Allow -R to restart non-existent ftp:// URIs.
+		- Don't assume AF_INET support is available.
+		  FreeBSD problem report 162661.
+		- Parse HTTP 'Date' entries in the `C' locale rather than the
+		  user's.
+		  NetBSD problem report 42917 from KAMADA Ken'ichi.
+		- Improve error handling when parsing of URI scheme.
+		- Silence connection warnings to multi-homed hosts in
+		  non-verbose mode.
+		- Fix compile warnings.
+		- In ftpvis(), prevent incomplete escape sequences at end of
+		  dst, and ensure NUL-termination of dst.
+		  Fix from Uwe Stuehler and Stefan Sperling, via Marc Balmer.
+		- When using the response to SYST to decide whether to
+		  default to 'binary' be a lot less specific.
+
+	* Replace glob with newer copy from NetBSD that does not suffer
+	  from DoS exhaustion attacks.
+	  Fix in NetBSD from Maksymilian Arciemowicz.  See CVE-2011-0418
+
+Tue Jan 12 06:58:15 UTC 2010	lukem
+
+	* Release as "tnftp 20100108"
+
+	* Rename onoff() argument "bool" to "val".
+
+Tue Jan  5 09:12:01 UTC 2010	lukem
+
+	* If ARG_MAX isn't defined, use the result from sysconf(_SC_ARG_MAX).
+	  Fixes build when using newer glibc.
+
+	* Add libnetbsd.la to the LIBADD for libedit.
+	  Fix provided by Adam Sampson.
+
+Mon Jan  4 06:28:07 UTC 2010	lukem
+
+	* Distribute various files not shipped by default automake rules,
+	  to use 'make dist' instead of 'cvs export'.
+
+Wed Dec 30 00:12:47 UTC 2009	lukem
+
+	* Release as "tnftp 20091122"
+
+Sun Nov 15 10:14:44 UTC 2009	lukem
+
+	* Merge NetBSD ftp from 20090520 to 20090915.  Change:
+		- Rename internal getline() to get_line() to avoid
+		  conflict with libc with former.
+		- Avoid a NULL dereference in an error message.
+
+Sat Nov 14 09:21:19 UTC 2009	lukem
+
+	* Convert to automake & libtool.
+
+Sat Jun  6 07:17:38 UTC 2009	lukem
+
+	* Release as "tnftp 20090606"
+
+Fri May 22 01:11:15 UTC 2009	lukem
+
+	* configure fixes:
+	  - Add the time.h headers to accheck_includes, for the strptime check.
+	  - Remove the check for el_init in libedit; we're always replacing
+	    the library and the presence of strvis() in some versions
+	    confuses other checks.
+
+Wed May 20 13:47:43 UTC 2009	lukem
+
+	* Release as "tnftp 20090520"
+
+	* Merge NetBSD ftp from 20070722 to 20090520.  Changes:
+	    - Only attempt to el_parse() a command unknown by the default
+	      parser if editing is enabled.
+	      Fixes PR 38589.
+	    - Turn off the alarmtimer before resetting the SIGALRM handler
+	      back to SIG_DFL.
+	      Fixes PR 35630.
+	    - Add epsv6 and epsv to disable extended passive mode for ipv6 or
+	      both ipv4 and ipv6 respectively.  This hack is due to our
+	      friends a Juniper Networks who break epsv in ipv6.
+	      Should be fixed in ScreenOS 6.2.X.
+	    - Improve parsing of chunked transfer chunks per RFC2616:
+	      - more stringent chunk-size parsing
+	      - ignore optional trailing ';chunk-ext' stuff, instead of barfing
+	      - detect EOF before final \r\n.
+	    - Use the service name to getaddrinfo() (along with the host
+	      name), so that features such as DNS Service Discovery have a
+	      better chance of working.
+	      Display the service name in various status & error messages.
+	    - Don't getservbyname() the :port component of a URL; RFC 3986
+	      says it's just an unsigned number, not a service name.
+	    - Fix numerous WARNS=4 issues (-Wcast-qual -Wsign-compare).
+	    - Fix -Wshadow issues
+	    - Update copyrights
+	    - Remove clause 3 and 4 from TNF licenses
+	    - Rename HAVE_STRUCT_SOCKADDR_SA_LEN to
+	      HAVE_STRUCT_SOCKADDR_IN_SIN_LEN to accurately reflect the
+	      structure member being used.
+	    - Use AF_INET instead of AF_UNSPEC as the default family if
+	      !defined(INET6).
+
+	* configure improvements:
+	  - Style tweaks.
+	  - Use AC_LANG_PROGRAM() instead of AC_LANG_SOURCE()
+	  - Add a check for strptime() requiring separators between
+	    conversions, and use our replacement one if it does.
+
+Sat Dec 20 15:28:24 UTC 2008	lukem
+
+	* configure improvements:
+	  - Move IPv6 check from tnftp.h to configure.ac (as per tnftpd).
+	  - Rework option descriptions.
+	  - Highlight when tests are for a specific option.
+	  - Move configuration results to the end of the file.
+	  - Display $prefix in configure results.
+
+Fri Aug 15 03:03:36 UTC 2008	lukem
+
+	* Add a "Configuration results" display at the end of configure.
+	  Cosmetic tweaks.
+
+Fri Feb 29 09:45:56 UTC 2008	lukem
+
+	* Support @EXEEXT@ for Cygwin (etc).
 
 Mon Aug  6 04:55:19 UTC 2007	lukem
 
@@ -61,7 +217,7 @@ Sun Jul 22 12:00:17 UTC 2007	lukem
 	* Remove pretence of supporting SOCKS for now;
 	  no test system is available, and the old
 	  autoconf 2.13 support wasn't upgraded to 2.61.
-	  
+
 	* configure.ac style consistency tweaks.
 	  Move autoconf aux files from ./ to build-aux/
 
@@ -292,7 +448,7 @@ Tue May 31 02:23:08 UTC 2005	lukem
 		  extra const that gives pain to the irix compiler.
 		- Make sure we flush after we prepare when we are unbuffered
 		  otherwise the prompt will not appear immediately.
-		- Terminate the arglist with a NULL instead of 0. 
+		- Terminate the arglist with a NULL instead of 0.
 		  (Shuts up gcc4.x)
 
 Sat May 28 13:19:38 UTC 2005	lukem

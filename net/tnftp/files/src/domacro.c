@@ -1,5 +1,5 @@
-/*	$NetBSD: domacro.c,v 1.5 2007/08/07 02:07:02 lukem Exp $	*/
-/*	from	NetBSD: domacro.c,v 1.21 2005/06/29 02:31:19 christos Exp	*/
+/*	$NetBSD: domacro.c,v 1.5.62.1 2014/11/06 10:15:58 tron Exp $	*/
+/*	from	NetBSD: domacro.c,v 1.22 2009/04/12 10:18:52 lukem Exp	*/
 
 /*
  * Copyright (c) 1985, 1993, 1994
@@ -39,7 +39,7 @@
 #if 0
 static char sccsid[] = "@(#)domacro.c	8.3 (Berkeley) 4/2/94";
 #else
-__RCSID(" NetBSD: domacro.c,v 1.21 2005/06/29 02:31:19 christos Exp  ");
+__RCSID(" NetBSD: domacro.c,v 1.22 2009/04/12 10:18:52 lukem Exp  ");
 #endif
 #endif /* not lint */
 
@@ -57,6 +57,7 @@ domacro(int argc, char *argv[])
 	int i, j, count = 2, loopflg = 0;
 	char *cp1, *cp2, line2[FTPBUFLEN];
 	struct cmd *c;
+	char cmdbuf[MAX_C_NAME];
 
 	if ((argc == 0 && argv != NULL) ||
 	    (argc < 2 && !another(&argc, &argv, "macro name"))) {
@@ -133,7 +134,8 @@ domacro(int argc, char *argv[])
 				fputs(line, ttyout);
 				putc('\n', ttyout);
 			}
-			margv[0] = c->c_name;
+			(void)strlcpy(cmdbuf, c->c_name, sizeof(cmdbuf));
+			margv[0] = cmdbuf;
 			(*c->c_handler)(margc, margv);
 			if (bell && c->c_bell)
 				(void)putc('\007', ttyout);

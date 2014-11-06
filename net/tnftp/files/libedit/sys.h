@@ -1,4 +1,4 @@
-/*	$NetBSD: sys.h,v 1.4 2007/08/07 02:06:58 lukem Exp $	*/
+/*	$NetBSD: sys.h,v 1.4.62.1 2014/11/06 10:15:58 tron Exp $	*/
 /*	from	NetBSD: sys.h,v 1.9 2004/01/17 17:57:40 christos Exp	*/
 
 /*-

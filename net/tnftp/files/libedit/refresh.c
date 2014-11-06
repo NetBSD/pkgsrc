@@ -1,4 +1,4 @@
-/*	$NetBSD: refresh.c,v 1.4 2007/08/07 02:06:57 lukem Exp $	*/
+/*	$NetBSD: refresh.c,v 1.4.62.1 2014/11/06 10:15:58 tron Exp $	*/
 /*	from	NetBSD: refresh.c,v 1.26 2003/08/07 16:44:33 agc Exp	*/
 
 /*-

@@ -1,8 +1,8 @@
-/*	$NetBSD: main.c,v 1.9 2009/09/22 20:39:18 tnn Exp $	*/
-/*	from	NetBSD: main.c,v 1.105 2007/05/22 05:16:48 lukem Exp	*/
+/*	$NetBSD: main.c,v 1.9.42.1 2014/11/06 10:15:58 tron Exp $	*/
+/*	from	NetBSD: main.c,v 1.122 2012/12/22 16:57:10 christos Exp	*/
 
 /*-
- * Copyright (c) 1996-2005 The NetBSD Foundation, Inc.
+ * Copyright (c) 1996-2009 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -94,15 +94,16 @@
 
 #include <sys/cdefs.h>
 #ifndef lint
-__COPYRIGHT("@(#) Copyright (c) 1985, 1989, 1993, 1994\n\
-	The Regents of the University of California.  All rights reserved.\n");
+__COPYRIGHT("@(#) Copyright (c) 1985, 1989, 1993, 1994\
+ The Regents of the University of California.  All rights reserved.\
+  Copyright 1996-2008 The NetBSD Foundation, Inc.  All rights reserved");
 #endif /* not lint */
 
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)main.c	8.6 (Berkeley) 10/9/94";
 #else
-__RCSID(" NetBSD: main.c,v 1.105 2007/05/22 05:16:48 lukem Exp  ");
+__RCSID(" NetBSD: main.c,v 1.122 2012/12/22 16:57:10 christos Exp  ");
 #endif
 #endif /* not lint */
 
@@ -132,32 +133,36 @@ __RCSID(" NetBSD: main.c,v 1.105 2007/05/22 05:16:48 lukem Exp  ");
 
 #define	FTP_PROXY	"ftp_proxy"	/* env var with FTP proxy location */
 #define	HTTP_PROXY	"http_proxy"	/* env var with HTTP proxy location */
+#define	HTTPS_PROXY	"https_proxy"	/* env var with HTTPS proxy location */
 #define	NO_PROXY	"no_proxy"	/* env var with list of non-proxied
 					 * hosts, comma or space separated */
 
-static void	setupoption(char *, char *, char *);
-int		main(int, char *[]);
+__dead static void	usage(void);
+static void	setupoption(const char *, const char *, const char *);
 
 int
 main(int volatile argc, char **volatile argv)
 {
 	int ch, rval;
 	struct passwd *pw;
-	char *cp, *ep, *anonuser, *anonpass, *upload_path, *src_addr;
-	int dumbterm, s, isupload;
+	char *cp, *ep, *anonpass, *upload_path, *src_addr;
+	const char *anonuser;
+	int dumbterm, isupload;
 	size_t len;
-	socklen_t slen;
 
 	tzset();
-#if 0	/* tnftp */	/* XXX */
+#if defined(HAVE_SETLOCALE)
 	setlocale(LC_ALL, "");
-#endif	/* tnftp */
+#endif
 	setprogname(argv[0]);
 
 	sigint_raised = 0;
 
 	ftpport = "ftp";
 	httpport = "http";
+#ifdef WITH_SSL
+	httpsport = "https";
+#endif
 	gateport = NULL;
 	cp = getenv("FTPSERVERPORT");
 	if (cp != NULL)
@@ -189,49 +194,27 @@ main(int volatile argc, char **volatile argv)
 	rate_put_incr = DEFAULTINCR;
 #ifdef INET6
 	epsv4 = 1;
+	epsv6 = 1;	
 #else
 	epsv4 = 0;
+	epsv6 = 0;	
 #endif
 	epsv4bad = 0;
+	epsv6bad = 0;
 	src_addr = NULL;
 	upload_path = NULL;
 	isupload = 0;
 	reply_callback = NULL;
+#ifdef INET6
 	family = AF_UNSPEC;
+#else
+	family = AF_INET;	/* force AF_INET if no INET6 support */
+#endif
 
 	netrc[0] = '\0';
 	cp = getenv("NETRC");
 	if (cp != NULL && strlcpy(netrc, cp, sizeof(netrc)) >= sizeof(netrc))
 		errx(1, "$NETRC `%s': %s", cp, strerror(ENAMETOOLONG));
-
-	/*
-	 * Get the default socket buffer sizes if we don't already have them.
-	 * It doesn't matter which socket we do this to, because on the first
-	 * call no socket buffer sizes will have been modified, so we are
-	 * guaranteed to get the system defaults.
-	 */
-	s = socket(AF_INET, SOCK_STREAM, 0);
-	if (s == -1)
-		err(1, "Can't create socket to determine default socket sizes");
-	slen = sizeof(rcvbuf_size);
-	if (getsockopt(s, SOL_SOCKET, SO_RCVBUF,
-	    (void *)&rcvbuf_size, &slen) == -1)
-		err(1, "Unable to get default rcvbuf size");
-	slen = sizeof(sndbuf_size);
-	if (getsockopt(s, SOL_SOCKET, SO_SNDBUF,
-	    (void *)&sndbuf_size, &slen) == -1)
-		err(1, "Unable to get default sndbuf size");
-	(void)close(s);
-					/* sanity check returned buffer sizes */
-	if (rcvbuf_size <= 0)
-		rcvbuf_size = 8 * 1024;
-	if (sndbuf_size <= 0)
-		sndbuf_size = 8 * 1024;
-
-	if (sndbuf_size > 8 * 1024 * 1024)
-		sndbuf_size = 8 * 1024 * 1024;
-	if (rcvbuf_size > 8 * 1024 * 1024)
-		rcvbuf_size = 8 * 1024 * 1024;
 
 	marg_sl = ftp_sl_init();
 	if ((tmpdir = getenv("TMPDIR")) == NULL)
@@ -392,10 +375,12 @@ main(int volatile argc, char **volatile argv)
 		{
 			int targc;
 			char *targv[6], *oac;
+			char cmdbuf[MAX_C_NAME];
 
 				/* look for `dir,max[,incr]' */
 			targc = 0;
-			targv[targc++] = "-T";
+			(void)strlcpy(cmdbuf, "-T", sizeof(cmdbuf));
+			targv[targc++] = cmdbuf;
 			oac = ftp_strdup(optarg);
 
 			while ((cp = strsep(&oac, ",")) != NULL) {
@@ -513,6 +498,7 @@ main(int volatile argc, char **volatile argv)
 	setupoption("anonpass",		getenv("FTPANONPASS"),	anonpass);
 	setupoption("ftp_proxy",	getenv(FTP_PROXY),	"");
 	setupoption("http_proxy",	getenv(HTTP_PROXY),	"");
+	setupoption("https_proxy",	getenv(HTTPS_PROXY),	"");
 	setupoption("no_proxy",		getenv(NO_PROXY),	"");
 	setupoption("pager",		getenv("PAGER"),	DEFAULTPAGER);
 	setupoption("prompt",		getenv("FTPPROMPT"),	DEFAULTPROMPT);
@@ -544,22 +530,23 @@ main(int volatile argc, char **volatile argv)
 			if (rval >= 0)		/* -1 == connected and cd-ed */
 				goto sigint_or_rval_exit;
 		} else {
-			char *xargv[4], *user, *host;
+			char *xargv[4], *uuser, *host;
+			char cmdbuf[MAXPATHLEN];
 
 			if ((rval = sigsetjmp(toplevel, 1)))
 				goto sigint_or_rval_exit;
 			(void)xsignal(SIGINT, intr);
 			(void)xsignal(SIGPIPE, lostpeer);
-			user = NULL;
+			uuser = NULL;
 			host = argv[0];
 			cp = strchr(host, '@');
 			if (cp) {
 				*cp = '\0';
-				user = host;
+				uuser = host;
 				host = cp + 1;
 			}
-			/* XXX discards const */
-			xargv[0] = (char *)getprogname();
+			(void)strlcpy(cmdbuf, getprogname(), sizeof(cmdbuf));
+			xargv[0] = cmdbuf;
 			xargv[1] = host;
 			xargv[2] = argv[1];
 			xargv[3] = NULL;
@@ -567,14 +554,14 @@ main(int volatile argc, char **volatile argv)
 				int oautologin;
 
 				oautologin = autologin;
-				if (user != NULL) {
+				if (uuser != NULL) {
 					anonftp = 0;
 					autologin = 0;
 				}
 				setpeer(argc+1, xargv);
 				autologin = oautologin;
-				if (connected == 1 && user != NULL)
-					(void)ftp_login(host, user, NULL);
+				if (connected == 1 && uuser != NULL)
+					(void)ftp_login(host, uuser, NULL);
 				if (!retry_connect)
 					break;
 				if (!connected) {
@@ -608,18 +595,18 @@ main(int volatile argc, char **volatile argv)
 char *
 prompt(void)
 {
-	static char	**prompt;
+	static char	**promptopt;
 	static char	  buf[MAXPATHLEN];
 
-	if (prompt == NULL) {
+	if (promptopt == NULL) {
 		struct option *o;
 
 		o = getoption("prompt");
 		if (o == NULL)
 			errx(1, "prompt: no such option `prompt'");
-		prompt = &(o->value);
+		promptopt = &(o->value);
 	}
-	formatbuf(buf, sizeof(buf), *prompt ? *prompt : DEFAULTPROMPT);
+	formatbuf(buf, sizeof(buf), *promptopt ? *promptopt : DEFAULTPROMPT);
 	return (buf);
 }
 
@@ -629,18 +616,18 @@ prompt(void)
 char *
 rprompt(void)
 {
-	static char	**rprompt;
+	static char	**rpromptopt;
 	static char	  buf[MAXPATHLEN];
 
-	if (rprompt == NULL) {
+	if (rpromptopt == NULL) {
 		struct option *o;
 
 		o = getoption("rprompt");
 		if (o == NULL)
 			errx(1, "rprompt: no such option `rprompt'");
-		rprompt = &(o->value);
+		rpromptopt = &(o->value);
 	}
-	formatbuf(buf, sizeof(buf), *rprompt ? *rprompt : DEFAULTRPROMPT);
+	formatbuf(buf, sizeof(buf), *rpromptopt ? *rpromptopt : DEFAULTRPROMPT);
 	return (buf);
 }
 
@@ -654,8 +641,10 @@ cmdscanner(void)
 	char		*p;
 #ifndef NO_EDITCOMPLETE
 	int		 ch;
-#endif
 	size_t		 num;
+#endif
+	int		 len;
+	char		 cmdbuf[MAX_C_NAME];
 
 	for (;;) {
 #ifndef NO_EDITCOMPLETE
@@ -668,8 +657,8 @@ cmdscanner(void)
 					fprintf(ttyout, "%s ", p);
 			}
 			(void)fflush(ttyout);
-			num = get_line(stdin, line, sizeof(line), NULL);
-			switch (num) {
+			len = get_line(stdin, line, sizeof(line), NULL);
+			switch (len) {
 			case -1:	/* EOF */
 			case -2:	/* error */
 				if (fromatty)
@@ -731,7 +720,8 @@ cmdscanner(void)
 			 * such commands as invalid.
 			 */
 			if (strchr(margv[0], ':') != NULL ||
-			    el_parse(el, margc, (const char **)margv) != 0)
+			    !editing ||
+			    el_parse(el, margc, (void *)margv) != 0)
 #endif /* !NO_EDITCOMPLETE */
 				fputs("?Invalid command.\n", ttyout);
 			continue;
@@ -741,7 +731,8 @@ cmdscanner(void)
 			continue;
 		}
 		confirmrest = 0;
-		margv[0] = c->c_name;
+		(void)strlcpy(cmdbuf, c->c_name, sizeof(cmdbuf));
+		margv[0] = cmdbuf;
 		(*c->c_handler)(margc, margv);
 		if (bell && c->c_bell)
 			(void)putc('\007', ttyout);
@@ -835,6 +826,8 @@ makeargv(void)
 char *
 slurpstring(void)
 {
+	static char bangstr[2] = { '!', '\0' };
+	static char dollarstr[2] = { '$', '\0' };
 	int got_one = 0;
 	char *sb = stringbase;
 	char *ap = argbase;
@@ -845,7 +838,7 @@ slurpstring(void)
 			case 0:
 				slrflag++;
 				INC_CHKCURSOR(stringbase);
-				return ((*sb == '!') ? "!" : "$");
+				return ((*sb == '!') ? bangstr : dollarstr);
 				/* NOTREACHED */
 			case 1:
 				slrflag++;
@@ -968,7 +961,8 @@ void
 help(int argc, char *argv[])
 {
 	struct cmd *c;
-	char *nargv[1], *p, *cmd;
+	char *nargv[1], *cmd;
+	const char *p;
 	int isusage;
 
 	cmd = argv[0];
@@ -986,9 +980,9 @@ help(int argc, char *argv[])
 		    proxy ? "Proxy c" : "C");
 		for (c = cmdtab; (p = c->c_name) != NULL; c++)
 			if (!proxy || c->c_proxy)
-				ftp_sl_add(buf, p);
+				ftp_sl_add(buf, ftp_strdup(p));
 		list_vertical(buf);
-		sl_free(buf, 0);
+		sl_free(buf, 1);
 		return;
 	}
 
@@ -996,6 +990,7 @@ help(int argc, char *argv[])
 
 	while (--argc > 0) {
 		char *arg;
+		char cmdbuf[MAX_C_NAME];
 
 		arg = *++argv;
 		c = getcmd(arg);
@@ -1007,7 +1002,8 @@ help(int argc, char *argv[])
 			    cmd, arg);
 		else {
 			if (isusage) {
-				nargv[0] = c->c_name;
+				(void)strlcpy(cmdbuf, c->c_name, sizeof(cmdbuf));
+				nargv[0] = cmdbuf;
 				(*c->c_handler)(0, nargv);
 			} else
 				fprintf(ttyout, "%-*s\t%s\n", HELPINDENT,
@@ -1046,18 +1042,9 @@ getoptionvalue(const char *name)
 }
 
 static void
-setupoption(char *name, char *value, char *defaultvalue)
+setupoption(const char *name, const char *value, const char *defaultvalue)
 {
-	char *nargv[3];
-	int overbose;
-
-	nargv[0] = "setupoption()";
-	nargv[1] = name;
-	nargv[2] = (value ? value : defaultvalue);
-	overbose = verbose;
-	verbose = 0;
-	setoption(3, nargv);
-	verbose = overbose;
+	set_option(name, value ? value : defaultvalue, 0);
 }
 
 void
@@ -1066,11 +1053,14 @@ usage(void)
 	const char *progname = getprogname();
 
 	(void)fprintf(stderr,
-"usage: %s [-46AadefginpRtvV] [-N netrc] [-o outfile] [-P port] [-q quittime]\n"
+"usage: %s [-46AadefginpRtVv] [-N netrc] [-o outfile] [-P port] [-q quittime]\n"
 "           [-r retry] [-s srcaddr] [-T dir,max[,inc]]\n"
 "           [[user@]host [port]] [host:path[/]] [file:///file]\n"
 "           [ftp://[user[:pass]@]host[:port]/path[/]]\n"
 "           [http://[user[:pass]@]host[:port]/path] [...]\n"
+#ifdef WITH_SSL
+"           [https://[user[:pass]@]host[:port]/path] [...]\n"
+#endif
 "       %s -u URL file [...]\n", progname, progname);
 	exit(1);
 }

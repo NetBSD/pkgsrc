@@ -1,4 +1,4 @@
-/*	$NetBSD: key.c,v 1.4 2007/08/07 02:06:57 lukem Exp $	*/
+/*	$NetBSD: key.c,v 1.4.62.1 2014/11/06 10:15:58 tron Exp $	*/
 /*	from	NetBSD: key.c,v 1.15 2003/10/18 23:48:42 christos Exp	*/
 
 /*-

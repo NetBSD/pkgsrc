@@ -1,4 +1,4 @@
-/*	$NetBSD: usleep.c,v 1.6 2008/04/29 05:46:09 martin Exp $	*/
+/*	$NetBSD: usleep.c,v 1.6.56.1 2014/11/06 10:15:58 tron Exp $	*/
 
 /*-
  * Copyright (c) 1999,2000,2005 The NetBSD Foundation, Inc.
