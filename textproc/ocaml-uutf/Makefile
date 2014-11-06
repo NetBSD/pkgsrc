@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/11/06 11:29:15 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2014/11/06 14:47:56 jaapb Exp $
 
 DISTNAME=	uutf-0.9.3
 CATEGORIES=	textproc
@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tbz
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	http://erratique.ch/software/uutf/releases/
-COMMENT=	TODO: Short description of the package
+COMMENT=	Unicode library for OCaml
 LICENSE=	modified-bsd
 
 INSTALLATION_DIRS+=	${OCAML_SITELIBDIR}/uutf
