@@ -1,5 +1,5 @@
-/* $NetBSD: ftpglob.h,v 1.4 2007/08/07 02:06:59 lukem Exp $ */
-/* from NetBSD: glob.h,v 1.21 2006/03/26 18:11:22 christos Exp */
+/*	$NetBSD: ftpglob.h,v 1.4.62.1 2014/11/06 10:15:58 tron Exp $	*/
+/* from: NetBSD: glob.h,v 1.26 2010/09/06 14:38:56 christos Exp	*/
 
 /*
  * Copyright (c) 1989, 1993
@@ -83,9 +83,13 @@ typedef struct {
 #define	GLOB_BRACE	0x0080	/* Expand braces ala csh. */
 #define	GLOB_MAGCHAR	0x0100	/* Pattern had globbing characters. */
 #define	GLOB_NOMAGIC	0x0200	/* GLOB_NOCHECK without magic chars (csh). */
-#define GLOB_LIMIT	0x0400	/* Limit memory used by matches to ARG_MAX */
+#define	GLOB_LIMIT	0x0400	/* Limit memory used by matches to ARG_MAX */
 #define	GLOB_TILDE	0x0800	/* Expand tilde names from the passwd file. */
-#define	GLOB_QUOTE	0		/* source compatibility */
+/*	GLOB_NOESCAPE	0x1000	above */
+#define	GLOB_PERIOD	0x2000	/* Allow metachars to match leading periods. */
+#define	GLOB_NO_DOTDIRS	0x4000	/* Make . and .. vanish from wildcards. */
+#define	GLOB_STAR	0x8000	/* Use glob ** to recurse directories */
+#define	GLOB_QUOTE	0	/* source compatibility */
 
 #define	GLOB_ABEND	GLOB_ABORTED	/* source compatibility */
 

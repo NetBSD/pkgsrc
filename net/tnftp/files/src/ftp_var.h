@@ -1,8 +1,8 @@
-/*	$NetBSD: ftp_var.h,v 1.8 2014/03/14 22:11:45 ryoon Exp $	*/
-/*	from	NetBSD: ftp_var.h,v 1.75 2007/07/22 05:02:50 lukem Exp	*/
+/*	$NetBSD: ftp_var.h,v 1.8.6.1 2014/11/06 10:15:58 tron Exp $	*/
+/*	from	NetBSD: ftp_var.h,v 1.82 2012/12/21 18:07:36 christos Exp	*/
 
 /*-
- * Copyright (c) 1996-2007 The NetBSD Foundation, Inc.
+ * Copyright (c) 1996-2009 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -126,7 +126,7 @@
  * Format of command table.
  */
 struct cmd {
-	char		*c_name;	/* name of command */
+	const char	*c_name;	/* name of command */
 	const char	*c_help;	/* help string */
 	char		c_bell;		/* give bell when command completes */
 	char		c_conn;		/* must be connected to use command */
@@ -136,6 +136,8 @@ struct cmd {
 #endif /* !NO_EDITCOMPLETE */
 	void		(*c_handler)(int, char **); /* function to call */
 };
+
+#define MAX_C_NAME	12		/* maximum length of cmd.c_name */
 
 /*
  * Format of macro table
@@ -150,8 +152,8 @@ struct macel {
  * Format of option table
  */
 struct option {
-	char	*name;
-	char	*value;
+	const char	*name;
+	char		*value;
 };
 
 /*
@@ -180,6 +182,7 @@ enum {
 
 #define	FTP_PORT	21	/* default if ! getservbyname("ftp/tcp") */
 #define	HTTP_PORT	80	/* default if ! getservbyname("http/tcp") */
+#define	HTTPS_PORT	443	/* default if ! getservbyname("https/tcp") */
 #ifndef	GATE_PORT
 #define	GATE_PORT	21	/* default if ! getservbyname("ftpgate/tcp") */
 #endif
@@ -193,15 +196,6 @@ enum {
 
 #define	TMPFILE		"ftpXXXXXXXXXX"
 
-/*
- * SCO OpenServer 5.0.7/3.2 has PATH_MAX (256) in limits.h.
- * But it is not usable ordinal condition.
- */
-#if !defined(PATH_MAX)
-#if defined(_SCO_DS)
-#define PATH_MAX	1024
-#endif
-#endif
 
 #ifndef	GLOBAL
 #define	GLOBAL	extern
@@ -224,7 +218,7 @@ GLOBAL	int	autologin;	/* establish user account on connection */
 GLOBAL	int	proxy;		/* proxy server connection active */
 GLOBAL	int	proxflag;	/* proxy connection exists */
 GLOBAL	int	gatemode;	/* use gate-ftp */
-GLOBAL	char   *gateserver;	/* server to use for gate-ftp */
+GLOBAL	const char *gateserver;	/* server to use for gate-ftp */
 GLOBAL	int	sunique;	/* store files on server with unique name */
 GLOBAL	int	runique;	/* store local files with unique name */
 GLOBAL	int	mcase;		/* map upper to lower case for mget names */
@@ -259,9 +253,11 @@ GLOBAL	int	rate_get_incr;	/* increment for get xfer rate */
 GLOBAL	int	rate_put;	/* maximum put xfer rate */
 GLOBAL	int	rate_put_incr;	/* increment for put xfer rate */
 GLOBAL	int	retry_connect;	/* seconds between retrying connection */
-GLOBAL	char   *tmpdir;		/* temporary directory */
+GLOBAL	const char *tmpdir;	/* temporary directory */
 GLOBAL	int	epsv4;		/* use EPSV/EPRT on IPv4 connections */
 GLOBAL	int	epsv4bad;	/* EPSV doesn't work on the current server */
+GLOBAL	int	epsv6;		/* use EPSV/EPRT on IPv6 connections */
+GLOBAL	int	epsv6bad;	/* EPSV doesn't work on the current server */
 GLOBAL	int	editing;	/* command line editing enabled */
 GLOBAL	int	features[FEAT_max];	/* remote FEATures supported */
 
@@ -273,8 +269,6 @@ GLOBAL	size_t	  cursor_argc;	/* location of cursor in margv */
 GLOBAL	size_t	  cursor_argo;	/* offset of cursor in margv[cursor_argc] */
 #endif /* !NO_EDITCOMPLETE */
 
-GLOBAL	char   *direction;	/* direction transfer is occurring */
-
 GLOBAL	char   *hostname;	/* name of host connected to */
 GLOBAL	int	unix_server;	/* server is unix, can use binary for ascii */
 GLOBAL	int	unix_proxy;	/* proxy is unix, can use binary for ascii */
@@ -283,9 +277,12 @@ GLOBAL	char	remotecwd[MAXPATHLEN];	/* remote dir */
 GLOBAL	char   *username;	/* name of user logged in as. (dynamic) */
 
 GLOBAL	sa_family_t family;	/* address family to use for connections */
-GLOBAL	char	*ftpport;	/* port number to use for FTP connections */
-GLOBAL	char	*httpport;	/* port number to use for HTTP connections */
-GLOBAL	char	*gateport;	/* port number to use for gateftp connections */
+GLOBAL	const char *ftpport;	/* port number to use for FTP connections */
+GLOBAL	const char *httpport;	/* port number to use for HTTP connections */
+#ifdef WITH_SSL
+GLOBAL	const char *httpsport;	/* port number to use for HTTPS connections */
+#endif
+GLOBAL	const char *gateport;	/* port number to use for gateftp connections */
 GLOBAL	struct addrinfo *bindai; /* local address to bind as */
 
 GLOBAL	char   *outfile;	/* filename to output URLs to */
@@ -335,7 +332,7 @@ extern	struct option	optiontab[];
 #define	FREEPTR(x)	if ((x) != NULL) { free(x); (x) = NULL; }
 
 #ifdef BSD4_4
-# define HAVE_STRUCT_SOCKADDR_SA_LEN	1
+# define HAVE_STRUCT_SOCKADDR_IN_SIN_LEN	1
 #endif
 
 #ifdef NO_LONG_LONG
@@ -349,8 +346,10 @@ extern	struct option	optiontab[];
 #define DWARN(...)
 #else
 #define DPRINTF(...)	if (ftp_debug) (void)fprintf(ttyout, __VA_ARGS__)
-#define DWARN(...) if (ftp_debug) warn(__VA_ARGS__)
+#define DWARN(...)	if (ftp_debug) warn(__VA_ARGS__)
 #endif
+
+#define STRorNULL(s)	((s) ? (s) : "<null>")
 
 #ifdef NO_USAGE
 void xusage(void);

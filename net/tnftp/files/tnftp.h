@@ -1,10 +1,11 @@
-/*	$NetBSD: tnftp.h,v 1.12 2007/08/07 03:37:53 lukem Exp $	*/
+/*	$NetBSD: tnftp.h,v 1.12.62.1 2014/11/06 10:15:58 tron Exp $	*/
 
 #define	FTP_PRODUCT	PACKAGE_NAME
 #define	FTP_VERSION	PACKAGE_VERSION
 
-#include "config.h"
+#include "tnftp_config.h"
 
+#include <assert.h>
 #include <stdio.h>
 #include <ctype.h>
 #include <errno.h>
@@ -40,6 +41,9 @@
 #if defined(HAVE_NETINET_IP_H)
 # include <netinet/ip.h>
 #endif
+#if defined(HAVE_NETINET_TCP_H)
+# include <netinet/tcp.h>
+#endif
 #if defined(HAVE_NETDB_H)
 # if HAVE_DECL_AI_NUMERICHOST
 #  include <netdb.h>
@@ -65,6 +69,9 @@
 # if defined(HAVE_NDIR_H)
 #  include <ndir.h>
 # endif
+#endif
+#if defined(HAVE_SYS_UIO_H)
+# include <sys/uio.h>
 #endif
 
 #if defined(HAVE_SYS_IOCTL_H)
@@ -92,6 +99,9 @@
 #endif
 #if defined(HAVE_LIMITS_H)
 # include <limits.h>
+#endif
+#if defined(HAVE_LOCALE_H)
+# include <locale.h>
 #endif
 #if defined(HAVE_PWD_H)
 # include <pwd.h>
@@ -210,16 +220,10 @@ typedef unsigned short sa_family_t;
 #endif
 
 #if !defined(HAVE_SOCKLEN_T)
-#ifdef __sgi
-typedef int socklen_t;
-#else
 typedef unsigned int socklen_t;
 #endif
-#endif
 
-#if HAVE_DECL_AF_INET6 \
-    && defined(HAVE_STRUCT_SOCKADDR_IN6) \
-    && HAVE_DECL_NS_IN6ADDRSZ
+#if defined(USE_INET6)
 # define INET6
 #endif
 
@@ -499,3 +503,15 @@ int utimes(const char *, const struct timeval *);
 #define getaddrinfo	Rgetaddrinfo
 #define getipnodebyname	Rgetipnodebyname
 #endif /* defined(USE_SOCKS) */
+
+
+/*
+ * Compatibility for stuff in NetBSD <sys/cdefs.h>
+ */
+#undef __dead
+#define __dead
+
+#ifdef __UNCONST
+#undef __UNCONST
+#endif
+#define __UNCONST(a)   ((void *)(unsigned long)(const void *)(a))

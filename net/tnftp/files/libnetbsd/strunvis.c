@@ -1,4 +1,4 @@
-/*	$NetBSD: strunvis.c,v 1.4 2007/08/07 02:07:01 lukem Exp $	*/
+/*	$NetBSD: strunvis.c,v 1.4.62.1 2014/11/06 10:15:58 tron Exp $	*/
 /*	from	NetBSD: unvis.c,v 1.27 2005/05/16 11:42:04 lukem Exp	*/
 
 /*-
