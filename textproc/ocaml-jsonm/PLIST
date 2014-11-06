@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2014/11/06 11:37:33 jaapb Exp $
+bin/jsontrip
+bin/ocamltweets
+${OCAML_SITELIB}/jsonm/META
+${PLIST.ocaml-opt}${OCAML_SITELIB}/jsonm/jsonm.a
+${OCAML_SITELIB}/jsonm/jsonm.cma
+${OCAML_SITELIB}/jsonm/jsonm.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/jsonm/jsonm.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/jsonm/jsonm.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/jsonm/jsonm.cmxs
+${OCAML_SITELIB}/jsonm/jsonm.mli
