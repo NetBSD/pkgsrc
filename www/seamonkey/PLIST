@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2014/11/02 05:40:31 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.47 2014/11/06 13:56:32 ryoon Exp $
 bin/seamonkey
 lib/seamonkey/application.ini
 lib/seamonkey/blocklist.xml
@@ -3089,6 +3089,7 @@ lib/seamonkey/isp/rss.rdf
 lib/seamonkey/libldap60.so
 lib/seamonkey/libldif60.so
 lib/seamonkey/libmozalloc.so
+lib/seamonkey/libmozjs.so
 lib/seamonkey/libprldap60.so
 lib/seamonkey/libxul.so
 lib/seamonkey/license.txt
