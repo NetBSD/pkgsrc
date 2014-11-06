@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.13 2014/01/09 12:24:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2014/11/06 12:25:36 joerg Exp $
 #
 
 .include "../../shells/ast-ksh/Makefile.common"
 
+PKGREVISION=	1
 CONFLICTS=	ast-ksh-[0-9]*	# Override.
 
 DISTINFO_FILE=	${.CURDIR}/../../shells/ast-ksh/distinfo
 PATCHDIR=	${.CURDIR}/../../shells/ast-ksh/patches
-PKGDIR=		${.CURDIR}/../../shells/ast-ksh
+PLIST_SRC=	${.CURDIR}/../../shells/ast-ksh/PLIST
+DESCR_SRC?=	${.CURDIR}/../../shells/ast-ksh/DESCR
 
 PKGNAME:=	static-${PKGNAME}
 COMMENT:=	Statically-linked version of the ${COMMENT}
