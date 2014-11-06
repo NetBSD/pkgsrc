@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4184 2014/11/06 02:23:52 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4185 2014/11/06 02:29:07 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5272,3 +5272,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-local-lib to 2.000014 [wen 2014-2014-11-06]
 	Updated devel/p5-Test-Harness to 3.34 [wen 2014-11-06]
 	Updated devel/p5-UNIVERSAL-isa to 1.20140927 [wen 2014-11-06]
+	Updated filesystems/p5-Path-Tiny to 0.60 [wen 2014-11-06]
