@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2014/05/29 23:37:11 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2014/11/06 07:31:00 wen Exp $
 #
 
-DISTNAME=	Test-TCP-2.00
+DISTNAME=	Test-TCP-2.06
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
@@ -11,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Test-TCP/
 COMMENT=	Perl 5 module to test TCP program
 LICENSE=	${PERL5_LICENSE}
-
-PERL5_MODULE_TYPE=	Module::Build
 
 DEPENDS+=		p5-Test-SharedFork>=0.19:../../devel/p5-Test-SharedFork
 
