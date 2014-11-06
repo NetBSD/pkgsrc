@@ -1,4 +1,4 @@
-/*	$NetBSD: fseeko.c,v 1.3 2007/08/07 02:06:59 lukem Exp $	*/
+/*	$NetBSD: fseeko.c,v 1.3.62.1 2014/11/06 10:15:58 tron Exp $	*/
 
 /*
  * Copyright 2002 Luke Mewburn <lukem@NetBSD.org>.
