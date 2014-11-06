@@ -1,0 +1,3 @@
+Jsonm is a non-blocking streaming codec to decode and encode the JSON data
+format. It can process JSON text without blocking on IO and without a complete
+in-memory representation of the data.
