@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.15 2014/11/03 19:44:54 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.16 2014/11/06 10:22:37 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q3 branch:
@@ -64,3 +64,5 @@ textproc/libxml2: security update
 textproc/py-libxml2: security update
 Pullup ticket #4539 - requested by drochner
 net/wget: security update
+Pullup ticket #4537 - requested by spz
+net/tnftp: security update
