@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2012/10/31 11:17:13 asau Exp $
+# $NetBSD: Makefile,v 1.5 2014/11/06 20:46:01 asau Exp $
 #
 
-DISTNAME=	libfirm-1.17.0
+DISTNAME=	libfirm-1.21.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libfirm/}
 EXTRACT_SUFX=	.tar.bz2
