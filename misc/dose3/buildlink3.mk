@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.1 2014/10/27 12:01:36 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2014/11/06 11:59:17 jaapb Exp $
 
 BUILDLINK_TREE+=	dose3
 
 .if !defined(DOSE3_BUILDLINK3_MK)
 DOSE3_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.dose3+=	dose3>=3.3beta2
+BUILDLINK_API_DEPENDS.dose3+=	dose3>=3.3beta2nb1
 BUILDLINK_PKGSRCDIR.dose3?=	../../misc/dose3
 
 .include "../../devel/ocaml-extlib/buildlink3.mk"
