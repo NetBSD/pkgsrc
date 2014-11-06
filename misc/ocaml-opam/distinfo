@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/11/06 15:30:24 jaapb Exp $
+
+SHA1 (ocaml-opam/1.2.0.tar.gz) = b7923516a853afe86e8439afd23c0dae5fa8ad57
+RMD160 (ocaml-opam/1.2.0.tar.gz) = 34533715c2ab096c62bddab0e95d3a9ce2d8ca4c
+Size (ocaml-opam/1.2.0.tar.gz) = 596525 bytes
