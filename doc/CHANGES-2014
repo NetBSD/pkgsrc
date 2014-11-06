@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4186 2014/11/06 03:03:37 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4187 2014/11/06 06:59:21 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5274,3 +5274,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-UNIVERSAL-isa to 1.20140927 [wen 2014-11-06]
 	Updated filesystems/p5-Path-Tiny to 0.60 [wen 2014-11-06]
 	Updated www/p5-Catalyst-Action-REST to 1.17 [wen 2014-11-06]
+	Updated www/p5-HTML-FormFu to 2.01 [wen 2014-11-06]
