@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4180 2014/11/05 23:30:17 prlw1 Exp $
+$NetBSD: CHANGES-2014,v 1.4181 2014/11/06 01:35:04 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5268,3 +5268,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Capture-Tiny to 0.27 [wiz 2014-11-05]
 	Updated graphics/gnome-icon-theme-symbolic to 3.12.0 [prlw1 2014-11-05]
 	Added graphics/adwaita-icon-theme version 3.14.1 [prlw1 2014-11-05]
+	Updated devel/p5-Moose to 2.1402 [wen 2014-11-06]
