@@ -1,0 +1,2 @@
+Uutf is an non-blocking streaming Unicode codec for OCaml to decode and encode
+the UTF-8, UTF-16, UTF-16LE and UTF-16BE encoding schemes.
