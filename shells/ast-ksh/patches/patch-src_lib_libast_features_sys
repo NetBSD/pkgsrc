@@ -1,0 +1,12 @@
+$NetBSD: patch-src_lib_libast_features_sys,v 1.1 2014/11/06 12:25:36 joerg Exp $
+
+--- src/lib/libast/features/sys.orig	2012-06-15 02:11:26.000000000 +0000
++++ src/lib/libast/features/sys
+@@ -224,6 +224,7 @@ extern	memset		void*		(void*, int, size_
+ extern	pathconf	long		(const char*, int)
+ extern	pause		int		(void)
+ extern	pipe		int		(int[])
++extern	posix_memalign	int 		(void**,size_t, size_t)
+ extern	pvalloc		void*		(size_t)
+ extern	qsort		void		(void*, size_t, size_t, int(*)(const void*, const void*))
+ extern	rand		int		(void)
