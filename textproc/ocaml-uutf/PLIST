@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2014/11/06 11:29:15 jaapb Exp $
+${OCAML_SITELIB}/uutf/META
+${PLIST.ocaml-opt}${OCAML_SITELIB}/uutf/uutf.a
+${OCAML_SITELIB}/uutf/uutf.cma
+${OCAML_SITELIB}/uutf/uutf.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/uutf/uutf.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/uutf/uutf.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/uutf/uutf.cmxs
+${OCAML_SITELIB}/uutf/uutf.mli
