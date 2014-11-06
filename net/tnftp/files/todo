@@ -1,4 +1,4 @@
-$NetBSD: todo,v 1.4 2007/08/07 02:06:56 lukem Exp $
+$NetBSD: todo,v 1.4.62.1 2014/11/06 10:15:58 tron Exp $
 
 Current Items
 -------------
@@ -11,10 +11,6 @@ Interix may need hack to fix detection of getpgrp() void args.
 
 Old Items
 ---------
-
-at end of configure, show summary of options used and features found
-
-add locale autoconf checks
 
 in configure, check for ansi c compiler and barf if it fails
 

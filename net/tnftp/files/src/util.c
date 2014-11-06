@@ -1,8 +1,8 @@
-/*	$NetBSD: util.c,v 1.9 2009/09/22 20:39:18 tnn Exp $	*/
-/*	from	NetBSD: util.c,v 1.143 2007/05/24 05:05:19 lukem Exp	*/
+/*	$NetBSD: util.c,v 1.9.42.1 2014/11/06 10:15:58 tron Exp $	*/
+/*	from	NetBSD: util.c,v 1.158 2013/02/19 23:29:15 dsl Exp	*/
 
 /*-
- * Copyright (c) 1997-2007 The NetBSD Foundation, Inc.
+ * Copyright (c) 1997-2009 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -69,7 +69,7 @@
 
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID(" NetBSD: util.c,v 1.143 2007/05/24 05:05:19 lukem Exp  ");
+__RCSID(" NetBSD: util.c,v 1.158 2013/02/19 23:29:15 dsl Exp  ");
 #endif /* not lint */
 
 /*
@@ -90,6 +90,7 @@ __RCSID(" NetBSD: util.c,v 1.143 2007/05/24 05:05:19 lukem Exp  ");
 #include <signal.h>
 #include <libgen.h>
 #include <limits.h>
+#include <locale.h>
 #include <netdb.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -110,7 +111,7 @@ void
 setpeer(int argc, char *argv[])
 {
 	char *host;
-	char *port;
+	const char *port;
 
 	if (argc == 0)
 		goto usage;
@@ -170,25 +171,25 @@ setpeer(int argc, char *argv[])
 }
 
 static void
-parse_feat(const char *line)
+parse_feat(const char *fline)
 {
 
 			/*
 			 * work-around broken ProFTPd servers that can't
-			 * even obey RFC2389.
+			 * even obey RFC 2389.
 			 */
-	while (*line && isspace((int)*line))
-		line++;
+	while (*fline && isspace((int)*fline))
+		fline++;
 
-	if (strcasecmp(line, "MDTM") == 0)
+	if (strcasecmp(fline, "MDTM") == 0)
 		features[FEAT_MDTM] = 1;
-	else if (strncasecmp(line, "MLST", sizeof("MLST") - 1) == 0) {
+	else if (strncasecmp(fline, "MLST", sizeof("MLST") - 1) == 0) {
 		features[FEAT_MLST] = 1;
-	} else if (strcasecmp(line, "REST STREAM") == 0)
+	} else if (strcasecmp(fline, "REST STREAM") == 0)
 		features[FEAT_REST_STREAM] = 1;
-	else if (strcasecmp(line, "SIZE") == 0)
+	else if (strcasecmp(fline, "SIZE") == 0)
 		features[FEAT_SIZE] = 1;
-	else if (strcasecmp(line, "TVFS") == 0)
+	else if (strcasecmp(fline, "TVFS") == 0)
 		features[FEAT_TVFS] = 1;
 }
 
@@ -208,25 +209,20 @@ getremoteinfo(void)
 			/* determine remote system type */
 	if (command("SYST") == COMPLETE) {
 		if (overbose) {
-			char *cp, c;
-
-			c = 0;
-			cp = strchr(reply_string + 4, ' ');
-			if (cp == NULL)
-				cp = strchr(reply_string + 4, '\r');
-			if (cp) {
-				if (cp[-1] == '.')
-					cp--;
-				c = *cp;
-				*cp = '\0';
-			}
-
-			fprintf(ttyout, "Remote system type is %s.\n",
-			    reply_string + 4);
-			if (cp)
-				*cp = c;
+			int os_len = strcspn(reply_string + 4, " \r\n\t");
+			if (os_len > 1 && reply_string[4 + os_len - 1] == '.')
+				os_len--;
+			fprintf(ttyout, "Remote system type is %.*s.\n",
+			    os_len, reply_string + 4);
 		}
-		if (!strncmp(reply_string, "215 UNIX Type: L8", 17)) {
+		/*
+		 * Decide whether we should default to bninary.
+		 * Traditionally checked for "215 UNIX Type: L8", but
+		 * some printers report "Linux" ! so be more forgiving.
+		 * In reality we probably almost never want text any more.
+		 */
+		if (!strncasecmp(reply_string + 4, "unix", 4) ||
+		    !strncasecmp(reply_string + 4, "linux", 5)) {
 			if (proxy)
 				unix_proxy = 1;
 			else
@@ -310,6 +306,7 @@ cleanuppeer(void)
 		anonftp = 0;
 	data = -1;
 	epsv4bad = 0;
+	epsv6bad = 0;
 	if (username)
 		free(username);
 	username = NULL;
@@ -378,38 +375,37 @@ int
 ftp_login(const char *host, const char *luser, const char *lpass)
 {
 	char tmp[80];
-	char *user, *pass, *acct, *p;
+	char *fuser, *pass, *facct, *p;
 	char emptypass[] = "";
 	const char *errormsg;
 	int n, aflag, rval, nlen;
 
 	aflag = rval = 0;
-	user = pass = acct = NULL;
+	fuser = pass = facct = NULL;
 	if (luser)
-		user = ftp_strdup(luser);
+		fuser = ftp_strdup(luser);
 	if (lpass)
 		pass = ftp_strdup(lpass);
 
 	DPRINTF("ftp_login: user `%s' pass `%s' host `%s'\n",
-	    user ? user : "<null>", pass ? pass : "<null>",
-	    host ? host : "<null>");
+	    STRorNULL(fuser), STRorNULL(pass), STRorNULL(host));
 
 	/*
 	 * Set up arguments for an anonymous FTP session, if necessary.
 	 */
 	if (anonftp) {
-		FREEPTR(user);
-		user = ftp_strdup("anonymous");	/* as per RFC1635 */
+		FREEPTR(fuser);
+		fuser = ftp_strdup("anonymous");	/* as per RFC 1635 */
 		FREEPTR(pass);
 		pass = ftp_strdup(getoptionvalue("anonpass"));
 	}
 
-	if (ruserpass(host, &user, &pass, &acct) < 0) {
+	if (ruserpass(host, &fuser, &pass, &facct) < 0) {
 		code = -1;
 		goto cleanup_ftp_login;
 	}
 
-	while (user == NULL) {
+	while (fuser == NULL) {
 		if (localname)
 			fprintf(ttyout, "Name (%s:%s): ", host, localname);
 		else
@@ -421,9 +417,9 @@ ftp_login(const char *host, const char *luser, const char *lpass)
 			code = -1;
 			goto cleanup_ftp_login;
 		} else if (nlen == 0) {
-			user = ftp_strdup(localname);
+			fuser = ftp_strdup(localname);
 		} else {
-			user = ftp_strdup(tmp);
+			fuser = ftp_strdup(tmp);
 		}
 	}
 
@@ -431,16 +427,16 @@ ftp_login(const char *host, const char *luser, const char *lpass)
 		char *nuser;
 		size_t len;
 
-		len = strlen(user) + 1 + strlen(host) + 1;
+		len = strlen(fuser) + 1 + strlen(host) + 1;
 		nuser = ftp_malloc(len);
-		(void)strlcpy(nuser, user, len);
+		(void)strlcpy(nuser, fuser, len);
 		(void)strlcat(nuser, "@",  len);
 		(void)strlcat(nuser, host, len);
-		FREEPTR(user);
-		user = nuser;
+		FREEPTR(fuser);
+		fuser = nuser;
 	}
 
-	n = command("USER %s", user);
+	n = command("USER %s", fuser);
 	if (n == CONTINUE) {
 		if (pass == NULL) {
 			p = getpass("Password: ");
@@ -454,27 +450,27 @@ ftp_login(const char *host, const char *luser, const char *lpass)
 	}
 	if (n == CONTINUE) {
 		aflag++;
-		if (acct == NULL) {
+		if (facct == NULL) {
 			p = getpass("Account: ");
 			if (p == NULL)
 				p = emptypass;
-			acct = ftp_strdup(p);
+			facct = ftp_strdup(p);
 			memset(p, 0, strlen(p));
 		}
-		if (acct[0] == '\0') {
+		if (facct[0] == '\0') {
 			warnx("Login failed");
 			goto cleanup_ftp_login;
 		}
-		n = command("ACCT %s", acct);
-		memset(acct, 0, strlen(acct));
+		n = command("ACCT %s", facct);
+		memset(facct, 0, strlen(facct));
 	}
 	if ((n != COMPLETE) ||
-	    (!aflag && acct != NULL && command("ACCT %s", acct) != COMPLETE)) {
+	    (!aflag && facct != NULL && command("ACCT %s", facct) != COMPLETE)) {
 		warnx("Login failed");
 		goto cleanup_ftp_login;
 	}
 	rval = 1;
-	username = ftp_strdup(user);
+	username = ftp_strdup(fuser);
 	if (proxy)
 		goto cleanup_ftp_login;
 
@@ -492,13 +488,13 @@ ftp_login(const char *host, const char *luser, const char *lpass)
 	updateremotecwd();
 
  cleanup_ftp_login:
-	FREEPTR(user);
+	FREEPTR(fuser);
 	if (pass != NULL)
 		memset(pass, 0, strlen(pass));
 	FREEPTR(pass);
-	if (acct != NULL)
-		memset(acct, 0, strlen(acct));
-	FREEPTR(acct);
+	if (facct != NULL)
+		memset(facct, 0, strlen(facct));
+	FREEPTR(facct);
 	return (rval);
 }
 
@@ -509,7 +505,7 @@ ftp_login(const char *host, const char *luser, const char *lpass)
  * Returns false if no new arguments have been added.
  */
 int
-another(int *pargc, char ***pargv, const char *prompt)
+another(int *pargc, char ***pargv, const char *aprompt)
 {
 	const char	*errormsg;
 	int		ret, nlen;
@@ -520,7 +516,7 @@ another(int *pargc, char ***pargv, const char *prompt)
 		fputs("Sorry, arguments too long.\n", ttyout);
 		intr(0);
 	}
-	fprintf(ttyout, "(%s) ", prompt);
+	fprintf(ttyout, "(%s) ", aprompt);
 	line[len++] = ' ';
 	errormsg = NULL;
 	nlen = get_line(stdin, line + len, sizeof(line)-len, &errormsg);
@@ -550,7 +546,7 @@ remglob(char *argv[], int doswitch, const char **errbuf)
 	char temp[MAXPATHLEN];
 	int oldverbose, oldhash, oldprogress, fd;
 	char *cp;
-	const char *mode;
+	const char *rmode;
 	size_t len;
 
 	if (!mflag || !connected) {
@@ -589,8 +585,8 @@ remglob(char *argv[], int doswitch, const char **errbuf)
 		progress = 0;
 		if (doswitch)
 			pswitch(!proxy);
-		for (mode = "w"; *++argv != NULL; mode = "a")
-			recvrequest("NLST", temp, *argv, mode, 0, 0);
+		for (rmode = "w"; *++argv != NULL; rmode = "a")
+			recvrequest("NLST", temp, *argv, rmode, 0, 0);
 		if ((code / 100) != COMPLETE) {
 			if (errbuf != NULL)
 				*errbuf = reply_string;
@@ -762,10 +758,12 @@ remotemodtime(const char *file, int noisy)
 				goto bad_parse_time;
 			else
 				goto cleanup_parse_time;
-		} else
-			DPRINTF("parsed date `%s' as " LLF ", %s",
+		} else {
+			DPRINTF("remotemodtime: parsed time `%s' as " LLF
+			    ", %s",
 			    timestr, (LLT)rtime,
 			    rfc2822time(localtime(&rtime)));
+		}
 	} else {
 		if (r == ERROR && code == 500 && features[FEAT_MDTM] == -1)
 			features[FEAT_MDTM] = 0;
@@ -782,7 +780,7 @@ remotemodtime(const char *file, int noisy)
 }
 
 /*
- * Format tm in an RFC2822 compatible manner, with a trailing \n.
+ * Format tm in an RFC 2822 compatible manner, with a trailing \n.
  * Returns a pointer to a static string containing the result.
  */
 const char *
@@ -792,8 +790,38 @@ rfc2822time(const struct tm *tm)
 
 	if (strftime(result, sizeof(result),
 	    "%a, %d %b %Y %H:%M:%S %z\n", tm) == 0)
-		errx(1, "Can't convert RFC2822 time: buffer too small");
+		errx(1, "Can't convert RFC 2822 time: buffer too small");
 	return result;
+}
+
+/*
+ * Parse HTTP-date as per RFC 2616.
+ * Return a pointer to the next character of the consumed date string,
+ * or NULL if failed.
+ */
+const char *
+parse_rfc2616time(struct tm *parsed, const char *httpdate)
+{
+	const char *t;
+#if defined(HAVE_SETLOCALE)
+	const char *curlocale;
+
+	/* The representation of %a depends on the current locale. */
+	curlocale = setlocale(LC_TIME, NULL);
+	(void)setlocale(LC_TIME, "C");
+#endif
+								/* RFC 1123 */
+	if ((t = strptime(httpdate, "%a, %d %b %Y %H:%M:%S GMT", parsed)) ||
+								/* RFC 850 */
+	    (t = strptime(httpdate, "%a, %d-%b-%y %H:%M:%S GMT", parsed)) ||
+								/* asctime */
+	    (t = strptime(httpdate, "%a, %b %d %H:%M:%S %Y", parsed))) {
+		;			/* do nothing */
+	}
+#if defined(HAVE_SETLOCALE)
+	(void)setlocale(LC_TIME, curlocale);
+#endif
+	return t;
 }
 
 /*
@@ -805,7 +833,7 @@ updatelocalcwd(void)
 
 	if (getcwd(localcwd, sizeof(localcwd)) == NULL)
 		localcwd[0] = '\0';
-	DPRINTF("got localcwd as `%s'\n", localcwd);
+	DPRINTF("updatelocalcwd: got `%s'\n", localcwd);
 }
 
 /*
@@ -814,7 +842,8 @@ updatelocalcwd(void)
 void
 updateremotecwd(void)
 {
-	int	 overbose, ocode, i;
+	int	 overbose, ocode;
+	size_t	 i;
 	char	*cp;
 
 	overbose = verbose;
@@ -837,7 +866,7 @@ updateremotecwd(void)
 		remotecwd[i] = *cp;
 	}
 	remotecwd[i] = '\0';
-	DPRINTF("got remotecwd as `%s'\n", remotecwd);
+	DPRINTF("updateremotecwd: got `%s'\n", remotecwd);
 	goto cleanupremotecwd;
  badremotecwd:
 	remotecwd[0]='\0';
@@ -871,10 +900,6 @@ fileindir(const char *file, const char *dir)
 	if (realdir[0] != '/')		/* relative result is ok */
 		return 1;
 	dirlen = strlen(dir);
-#if 0
-printf("file %s parent %s realdir %s dir %s [%d]\n",
-    file, parentdir, realdir, dir, dirlen);
-#endif
 	if (strncmp(realdir, dir, dirlen) == 0 &&
 	    (realdir[dirlen] == '/' || realdir[dirlen] == '\0'))
 		return 1;
@@ -887,8 +912,8 @@ printf("file %s parent %s realdir %s dir %s [%d]\n",
 void
 list_vertical(StringList *sl)
 {
-	int i, j;
-	int columns, lines;
+	size_t i, j;
+	size_t columns, lines;
 	char *p;
 	size_t w, width;
 
@@ -1061,6 +1086,32 @@ strsuftoi(const char *arg)
 void
 setupsockbufsize(int sock)
 {
+	socklen_t slen;
+
+	if (0 == rcvbuf_size) {
+		slen = sizeof(rcvbuf_size);
+		if (getsockopt(sock, SOL_SOCKET, SO_RCVBUF,
+		    (void *)&rcvbuf_size, &slen) == -1)
+			err(1, "Unable to determine rcvbuf size");
+		if (rcvbuf_size <= 0)
+			rcvbuf_size = 8 * 1024;
+		if (rcvbuf_size > 8 * 1024 * 1024)
+			rcvbuf_size = 8 * 1024 * 1024;
+		DPRINTF("setupsockbufsize: rcvbuf_size determined as %d\n",
+		    rcvbuf_size);
+	}
+	if (0 == sndbuf_size) {
+		slen = sizeof(sndbuf_size);
+		if (getsockopt(sock, SOL_SOCKET, SO_SNDBUF,
+		    (void *)&sndbuf_size, &slen) == -1)
+			err(1, "Unable to determine sndbuf size");
+		if (sndbuf_size <= 0)
+			sndbuf_size = 8 * 1024;
+		if (sndbuf_size > 8 * 1024 * 1024)
+			sndbuf_size = 8 * 1024 * 1024;
+		DPRINTF("setupsockbufsize: sndbuf_size determined as %d\n",
+		    sndbuf_size);
+	}
 
 	if (setsockopt(sock, SOL_SOCKET, SO_SNDBUF,
 	    (void *)&sndbuf_size, sizeof(sndbuf_size)) == -1)
@@ -1077,11 +1128,10 @@ setupsockbufsize(int sock)
 void
 ftpvis(char *dst, size_t dstlen, const char *src, size_t srclen)
 {
-	int	di, si;
+	size_t	di, si;
 
-	for (di = si = 0;
-	    src[si] != '\0' && di < dstlen && si < srclen;
-	    di++, si++) {
+	di = si = 0;
+	while (src[si] != '\0' && di < dstlen && si < srclen) {
 		switch (src[si]) {
 		case '\\':
 		case ' ':
@@ -1089,12 +1139,18 @@ ftpvis(char *dst, size_t dstlen, const char *src, size_t srclen)
 		case '\r':
 		case '\n':
 		case '"':
-			dst[di++] = '\\';
-			if (di >= dstlen)
+			/*
+			 * Need room for two characters and NUL, avoiding
+			 * incomplete escape sequences at end of dst.
+			 */
+			if (di >= dstlen - 3)
 				break;
+			dst[di++] = '\\';
 			/* FALLTHROUGH */
 		default:
-			dst[di] = src[si];
+			dst[di] = src[si++];
+			if (di < dstlen)
+				di++;
 		}
 	}
 	dst[di] = '\0';
@@ -1107,7 +1163,8 @@ void
 formatbuf(char *buf, size_t len, const char *src)
 {
 	const char	*p, *p2, *q;
-	int		 i, op, updirs, pdirs;
+	size_t		 i;
+	int		 op, updirs, pdirs;
 
 #define ADDBUF(x) do { \
 		if (i >= len - 1) \
@@ -1214,39 +1271,6 @@ formatbuf(char *buf, size_t len, const char *src)
 }
 
 /*
- * Parse `port' into a TCP port number, defaulting to `defport' if `port' is
- * an unknown service name. If defport != -1, print a warning upon bad parse.
- */
-int
-parseport(const char *port, int defport)
-{
-	int	 rv;
-	long	 nport;
-	char	*p, *ep;
-
-	p = ftp_strdup(port);
-	nport = strtol(p, &ep, 10);
-	if (*ep != '\0' && ep == p) {
-		struct servent	*svp;
-
-		svp = getservbyname(port, "tcp");
-		if (svp == NULL) {
- badparseport:
-			if (defport != -1)
-				warnx("Unknown port `%s', using port %d",
-				    port, defport);
-			rv = defport;
-		} else
-			rv = ntohs(svp->s_port);
-	} else if (nport < 1 || nport > MAX_IN_PORT_T || *ep != '\0')
-		goto badparseport;
-	else
-		rv = nport;
-	free(p);
-	return (rv);
-}
-
-/*
  * Determine if given string is an IPv6 address or not.
  * Return 1 for yes, 0 for no
  */
@@ -1258,7 +1282,7 @@ isipv6addr(const char *addr)
 	struct addrinfo hints, *res;
 
 	memset(&hints, 0, sizeof(hints));
-	hints.ai_family = PF_INET6;
+	hints.ai_family = AF_INET6;
 	hints.ai_socktype = SOCK_DGRAM;	/*dummy*/
 	hints.ai_flags = AI_NUMERICHOST;
 	if (getaddrinfo(addr, "0", &hints, &res) != 0)
@@ -1333,18 +1357,22 @@ get_line(FILE *stream, char *buf, size_t buflen, const char **errormsg)
  * error message displayed.)
  */
 int
-ftp_connect(int sock, const struct sockaddr *name, socklen_t namelen)
+ftp_connect(int sock, const struct sockaddr *name, socklen_t namelen, int pe)
 {
 	int		flags, rv, timeout, error;
 	socklen_t	slen;
 	struct timeval	endtime, now, td;
 	struct pollfd	pfd[1];
 	char		hname[NI_MAXHOST];
+	char		sname[NI_MAXSERV];
 
 	setupsockbufsize(sock);
 	if (getnameinfo(name, namelen,
-	    hname, sizeof(hname), NULL, 0, NI_NUMERICHOST) != 0)
+	    hname, sizeof(hname), sname, sizeof(sname),
+	    NI_NUMERICHOST | NI_NUMERICSERV) != 0) {
 		strlcpy(hname, "?", sizeof(hname));
+		strlcpy(sname, "?", sizeof(sname));
+	}
 
 	if (bindai != NULL) {			/* bind to specific addr */
 		struct addrinfo *ai;
@@ -1371,14 +1399,14 @@ ftp_connect(int sock, const struct sockaddr *name, socklen_t namelen)
 
 						/* save current socket flags */
 	if ((flags = fcntl(sock, F_GETFL, 0)) == -1) {
-		warn("Can't %s socket flags for connect to `%s'",
-		    "save", hname);
+		warn("Can't %s socket flags for connect to `%s:%s'",
+		    "save", hname, sname);
 		return -1;
 	}
 						/* set non-blocking connect */
 	if (fcntl(sock, F_SETFL, flags | O_NONBLOCK) == -1) {
-		warn("Can't set socket non-blocking for connect to `%s'",
-		    hname);
+		warn("Can't set socket non-blocking for connect to `%s:%s'",
+		    hname, sname);
 		return -1;
 	}
 
@@ -1395,8 +1423,9 @@ ftp_connect(int sock, const struct sockaddr *name, socklen_t namelen)
 	rv = connect(sock, name, namelen);	/* inititate the connection */
 	if (rv == -1) {				/* connection error */
 		if (errno != EINPROGRESS) {	/* error isn't "please wait" */
+			if (pe || (errno != EHOSTUNREACH))
  connecterror:
-			warn("Can't connect to `%s'", hname);
+				warn("Can't connect to `%s:%s'", hname, sname);
 			return -1;
 		}
 
@@ -1441,8 +1470,8 @@ ftp_connect(int sock, const struct sockaddr *name, socklen_t namelen)
 
 	if (fcntl(sock, F_SETFL, flags) == -1) {
 						/* restore socket flags */
-		warn("Can't %s socket flags for connect to `%s'",
-		    "restore", hname);
+		warn("Can't %s socket flags for connect to `%s:%s'",
+		    "restore", hname, sname);
 		return -1;
 	}
 	return 0;
