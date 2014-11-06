@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/10/27 12:01:36 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2014/11/06 11:59:17 jaapb Exp $
 
 DISTNAME=	dose3-3.3-beta2
 PKGNAME= dose3-3.3beta2
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	https://gforge.inria.fr/frs/download.php/file/34180/
 
@@ -16,6 +17,7 @@ MAKE_JOBS_SAFE=	no
 OCAML_USE_FINDLIB=	yes
 
 .include "../../mk/ocaml.mk"
+.include "options.mk"
 
 .if ${OCAML_USE_OPT_COMPILER} != "yes"
 CONFIGURE_ARGS+=	--with-bytecodeonly
