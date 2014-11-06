@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2011/12/09 02:09:38 hiramatsu Exp $
+$NetBSD: distinfo,v 1.4 2014/11/06 07:24:12 wen Exp $
 
-SHA1 (Catalyst-Controller-HTML-FormFu-0.09003.tar.gz) = 4729e34f19668e514753035d213cbaa90dd6a8b4
-RMD160 (Catalyst-Controller-HTML-FormFu-0.09003.tar.gz) = 55be852d4e04ba93e53b1ec5084f424b1b363470
-Size (Catalyst-Controller-HTML-FormFu-0.09003.tar.gz) = 41491 bytes
+SHA1 (Catalyst-Controller-HTML-FormFu-1.00.tar.gz) = 0b8ba79067805248a98c069d1988c128ca0cfed0
+RMD160 (Catalyst-Controller-HTML-FormFu-1.00.tar.gz) = 52dc9e6a9810e391ac79eef1d729e65ab82076eb
+Size (Catalyst-Controller-HTML-FormFu-1.00.tar.gz) = 30694 bytes
