@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2014/02/23 11:32:16 wen Exp $
+$NetBSD: distinfo,v 1.7 2014/11/06 06:57:47 wen Exp $
 
-SHA1 (HTML-FormFu-1.00.tar.gz) = 690dc7740d4a6fb820ea0f0c6313ac2ce505f669
-RMD160 (HTML-FormFu-1.00.tar.gz) = 08f54c64903a7b4179b12a3cae108671cd0445c4
-Size (HTML-FormFu-1.00.tar.gz) = 331152 bytes
+SHA1 (HTML-FormFu-2.01.tar.gz) = 0d74763570d4a849d914d8d207921c35d95c0179
+RMD160 (HTML-FormFu-2.01.tar.gz) = 30ccae5dffa2eab703ce70c18b6e6ab10946b085
+Size (HTML-FormFu-2.01.tar.gz) = 337865 bytes
