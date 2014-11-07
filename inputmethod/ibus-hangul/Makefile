@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2014/05/17 16:10:45 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2014/11/07 11:56:04 obache Exp $
 #
 
-DISTNAME=	ibus-hangul-1.4.2
-PKGREVISION=	2
+DISTNAME=	ibus-hangul-1.5.0
 CATEGORIES=	inputmethod korean
-MASTER_SITES=	http://ibus.googlecode.com/files/
+MASTER_SITES=	https://github.com/choehwanjin/ibus-hangul/releases/download/${PKGVERSION_NOREV}/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/ibus/
@@ -15,11 +14,6 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config gmake msgfmt intltool
-
-SUBST_CLASSES+=		epython
-SUBST_STAGE.epython=	pre-configure
-SUBST_FILES.epython=	setup/ibus-setup-hangul.in
-SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
