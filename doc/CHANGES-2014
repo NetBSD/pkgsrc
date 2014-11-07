@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4202 2014/11/07 13:08:25 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.4203 2014/11/07 14:12:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5290,3 +5290,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated inputmethod/ibus-hangul to 1.5.0 [obache 2014-11-07]
 	Updated net/mikutter to 3.0.8 [obache 2014-11-07]
 	Added devel/hs-reflection version 1.5.1 [szptvlfn 2014-11-07]
+	Updated www/curl to 7.39.0 [adam 2014-11-07]
