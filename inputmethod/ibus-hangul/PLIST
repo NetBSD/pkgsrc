@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2012/04/22 14:00:44 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/11/07 11:56:04 obache Exp $
 bin/ibus-setup-hangul
-lib/ibus-hangul/setup/hangul_keyboard_list
 libexec/ibus-engine-hangul
 libexec/ibus-setup-hangul
 share/applications/ibus-setup-hangul.desktop
