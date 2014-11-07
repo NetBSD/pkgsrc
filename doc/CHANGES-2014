@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4196 2014/11/06 15:30:46 jaapb Exp $
+$NetBSD: CHANGES-2014,v 1.4197 2014/11/07 08:20:21 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5284,3 +5284,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/firefox to 33.0.2nb1 [ryoon 2014-11-06]
 	Updated www/seamonkey to 2.30nb1 [ryoon 2014-11-06]
 	Added misc/ocaml-opam version 1.2.0 [jaapb 2014-11-06]
+	Updated devel/valgrind to 3.10.0 [alnsn 2014-11-07]
