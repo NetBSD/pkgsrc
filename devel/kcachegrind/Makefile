@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2014/08/22 11:24:28 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2014/11/07 19:39:28 adam Exp $
 
 DISTNAME=	kcachegrind-${_KDE_VERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 COMMENT=	Visualization of Performance Profiling Data
 

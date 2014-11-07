@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2014/08/22 11:24:34 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2014/11/07 19:39:34 adam Exp $
 
 DISTNAME=	kde-base-artwork-${_KDE_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 COMMENT=	KDE KSplash theme
 
