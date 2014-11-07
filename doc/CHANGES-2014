@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4201 2014/11/07 12:24:13 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4202 2014/11/07 13:08:25 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5289,3 +5289,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/stunnel to 5.07 [schmonz 2014-11-07]
 	Updated inputmethod/ibus-hangul to 1.5.0 [obache 2014-11-07]
 	Updated net/mikutter to 3.0.8 [obache 2014-11-07]
+	Added devel/hs-reflection version 1.5.1 [szptvlfn 2014-11-07]
