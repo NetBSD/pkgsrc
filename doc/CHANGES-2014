@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4197 2014/11/07 08:20:21 alnsn Exp $
+$NetBSD: CHANGES-2014,v 1.4198 2014/11/07 11:08:26 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5285,3 +5285,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/seamonkey to 2.30nb1 [ryoon 2014-11-06]
 	Added misc/ocaml-opam version 1.2.0 [jaapb 2014-11-06]
 	Updated devel/valgrind to 3.10.0 [alnsn 2014-11-07]
+	Updated devel/ruby-test-unit-notify to 1.0.4 [obache 2014-11-07]
