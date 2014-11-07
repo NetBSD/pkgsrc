@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4200 2014/11/07 11:56:18 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4201 2014/11/07 12:24:13 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5288,3 +5288,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/ruby-test-unit-notify to 1.0.4 [obache 2014-11-07]
 	Updated security/stunnel to 5.07 [schmonz 2014-11-07]
 	Updated inputmethod/ibus-hangul to 1.5.0 [obache 2014-11-07]
+	Updated net/mikutter to 3.0.8 [obache 2014-11-07]
