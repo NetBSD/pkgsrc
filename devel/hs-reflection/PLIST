@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2014/11/07 13:07:56 szptvlfn Exp $
+lib/reflection-${PKGVERSION}/${HASKELL_VERSION}/Data/Reflection.hi
+lib/reflection-${PKGVERSION}/${HASKELL_VERSION}/HSreflection-${PKGVERSION}.o
+lib/reflection-${PKGVERSION}/${HASKELL_VERSION}/libHSreflection-${PKGVERSION}.a
+lib/reflection-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/reflection-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/reflection-${PKGVERSION}/html/Data-Reflection.html
+${PLIST.doc}share/doc/reflection-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/reflection-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/reflection-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/reflection-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/reflection-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/reflection-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/reflection-${PKGVERSION}/html/mini_Data-Reflection.html
+${PLIST.doc}share/doc/reflection-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/reflection-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/reflection-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/reflection-${PKGVERSION}/html/reflection.haddock
+${PLIST.doc}share/doc/reflection-${PKGVERSION}/html/synopsis.png
