@@ -1,6 +1,6 @@
-$NetBSD: patch-base_base.gyp,v 1.4 2014/07/19 09:03:04 ryoon Exp $
+$NetBSD: patch-base_base.gyp,v 1.5 2014/11/07 23:28:36 ryoon Exp $
 
---- base/base.gyp.orig	2014-07-06 07:03:03.000000000 +0000
+--- base/base.gyp.orig	2014-11-03 05:13:02.000000000 +0000
 +++ base/base.gyp
 @@ -78,7 +78,7 @@
          # shared among *host* binaries and *target* binaries. This means that

@@ -1,6 +1,6 @@
-$NetBSD: patch-base_run__level.cc,v 1.2 2014/07/19 09:03:04 ryoon Exp $
+$NetBSD: patch-base_run__level.cc,v 1.3 2014/11/07 23:28:36 ryoon Exp $
 
---- base/run_level.cc.orig	2014-07-06 07:03:03.000000000 +0000
+--- base/run_level.cc.orig	2014-11-03 05:13:02.000000000 +0000
 +++ base/run_level.cc
 @@ -38,10 +38,10 @@
  #include <unistd.h>

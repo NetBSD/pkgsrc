@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.10 2014/10/25 21:03:30 ryoon Exp $
+$NetBSD: distinfo,v 1.11 2014/11/07 23:28:36 ryoon Exp $
 
-SHA1 (mozc-1.15.1895.102.tar.xz) = 28ecf5bfec1706cbffbb73ae6c831158b30af9bd
-RMD160 (mozc-1.15.1895.102.tar.xz) = 029fa3fdd0f410056fcfcfa897dfc6f229425bef
-Size (mozc-1.15.1895.102.tar.xz) = 32468784 bytes
+SHA1 (mozc-1.15.1917.102.tar.xz) = be7f09f424d519c6b856049f587e86072c7aed21
+RMD160 (mozc-1.15.1917.102.tar.xz) = 97b7293339e0791642d791764aae841179b1b2c8
+Size (mozc-1.15.1917.102.tar.xz) = 32524892 bytes
 SHA1 (uim-mozc-334.tar.xz) = af86ce7a04b291629bd5dc56d5c1115332954a91
 RMD160 (uim-mozc-334.tar.xz) = b988667237f65e61fabf3935f83f5d21a8059f4e
 Size (uim-mozc-334.tar.xz) = 30544 bytes
-SHA1 (patch-base_base.gyp) = d1b0c6133bcef09a58bb02da0154fe54a5e71564
+SHA1 (patch-base_base.gyp) = 437fa7ef6c84448a2a8fb049af773ab9df64dc81
 SHA1 (patch-base_cpu__stats.cc) = cda8bbcbc963d8ed635435375cc80ee5e7ca2191
 SHA1 (patch-base_iconv.cc) = 1bf65dfc6152bf152cbe2714835a61436df2a48b
 SHA1 (patch-base_logging.cc) = 96ee9d1426ef1cf946a00fb15c9754603ab15bb8
@@ -14,11 +14,11 @@ SHA1 (patch-base_mutex.cc) = aed8588d4ff7b057fed072097ef09ddbc2696d31
 SHA1 (patch-base_mutex.h) = 6c3c8f0845f0fdad815c4877026894000d5eac2c
 SHA1 (patch-base_password__manager.cc) = f16982447f54e397d1aa103260d8f4d10aa76f96
 SHA1 (patch-base_process.cc) = abdd6a955e87506972e7f71fd4bc3a300f49b304
-SHA1 (patch-base_run__level.cc) = bf9897527494fda5e5f97366e2fd26a283225450
+SHA1 (patch-base_run__level.cc) = ead96536246093bd3d44f59a80085da2f39904e8
 SHA1 (patch-base_system__util.cc) = f3ef575a15cd518fe7d29264b39f775ccf502802
 SHA1 (patch-base_thread.h) = 8aaacbb1421cf0e886f3b58dfd2c653f3d82ef70
 SHA1 (patch-base_util.cc) = c473cb595535075b53c9c235fc28f5e7da26d087
-SHA1 (patch-build__mozc.py) = b6e94a43564cd4a7032cc9c6d5bd297453010d36
+SHA1 (patch-build__mozc.py) = 693e5d67ddf4dc1bc12fd9fa62bd72654c2ce5bc
 SHA1 (patch-build__tools_mozc__version.py) = a6ff8a82b1328086b7d758f73a7d3c31e87bccc9
 SHA1 (patch-build__tools_util.py) = 6416884ba288d60eb8e558e8c5de7ef6e538b82e
 SHA1 (patch-client_client.cc) = 7ca43dde3f207331005599653c6520667e3ca93c
@@ -26,7 +26,6 @@ SHA1 (patch-config_stats__config__util__test.cc) = db51e6619c5c04ac8fa5089082520
 SHA1 (patch-gui_base_locale__util.cc) = 7d1e9cf3c2c36590298496471a97b8c32010a30b
 SHA1 (patch-gui_config__dialog_config__dialog.cc) = aae18b7ea36fd5ff5758625875a04634ffdfd68a
 SHA1 (patch-gui_config__dialog_keybinding__editor.cc) = 00a6e4bb2c07e3340e188f108f0285a3aa2aceb9
-SHA1 (patch-gui_config__dialog_keymap__editor.cc) = a78a4fb5c484e672b0cfecf38c6713cf74007cb5
 SHA1 (patch-gui_dictionary__tool_dictionary__tool.cc) = 3652713857d03f847108952f2994ee44bfe62608
 SHA1 (patch-gui_gui.gyp) = 70b6d78ca5a482b9e8fa697dbb191cccbdde1c6a
 SHA1 (patch-gui_qt__libraries.gypi) = e92be78947dcf66211c80169b864b7c9d057b3db
