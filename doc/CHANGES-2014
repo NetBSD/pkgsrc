@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4199 2014/11/07 11:30:51 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.4200 2014/11/07 11:56:18 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5287,3 +5287,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/valgrind to 3.10.0 [alnsn 2014-11-07]
 	Updated devel/ruby-test-unit-notify to 1.0.4 [obache 2014-11-07]
 	Updated security/stunnel to 5.07 [schmonz 2014-11-07]
+	Updated inputmethod/ibus-hangul to 1.5.0 [obache 2014-11-07]
