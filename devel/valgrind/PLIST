@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/11/05 17:49:52 alnsn Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/11/07 08:16:45 alnsn Exp $
 bin/callgrind_annotate
 bin/callgrind_control
 bin/cg_annotate
@@ -6,6 +6,7 @@ bin/cg_diff
 bin/cg_merge
 bin/ms_print
 bin/valgrind
+bin/valgrind-di-server
 bin/valgrind-listener
 bin/vgdb
 include/valgrind/callgrind.h
@@ -15,8 +16,10 @@ include/valgrind/helgrind.h
 include/valgrind/libvex_basictypes.h
 include/valgrind/libvex_emnote.h
 include/valgrind/libvex_guest_amd64.h
+include/valgrind/libvex_guest_arm64.h
 include/valgrind/libvex_guest_arm.h
 include/valgrind/libvex_guest_mips32.h
+include/valgrind/libvex_guest_mips64.h
 include/valgrind/libvex_guest_offsets.h
 include/valgrind/libvex_guest_ppc32.h
 include/valgrind/libvex_guest_ppc64.h
@@ -27,6 +30,7 @@ include/valgrind/libvex_ir.h
 include/valgrind/libvex_s390x_common.h
 include/valgrind/libvex_trc_values.h
 include/valgrind/memcheck.h
+include/valgrind/pub_tool_addrinfo.h
 include/valgrind/pub_tool_aspacehl.h
 include/valgrind/pub_tool_aspacemgr.h
 include/valgrind/pub_tool_basics_asm.h
@@ -34,6 +38,7 @@ include/valgrind/pub_tool_basics.h
 include/valgrind/pub_tool_clientstate.h
 include/valgrind/pub_tool_clreq.h
 include/valgrind/pub_tool_debuginfo.h
+include/valgrind/pub_tool_deduppoolalloc.h
 include/valgrind/pub_tool_errormgr.h
 include/valgrind/pub_tool_execontext.h
 include/valgrind/pub_tool_gdbserver.h
@@ -50,6 +55,7 @@ include/valgrind/pub_tool_mallocfree.h
 include/valgrind/pub_tool_options.h
 include/valgrind/pub_tool_oset.h
 include/valgrind/pub_tool_poolalloc.h
+include/valgrind/pub_tool_rangemap.h
 include/valgrind/pub_tool_redir.h
 include/valgrind/pub_tool_replacemalloc.h
 include/valgrind/pub_tool_seqmatch.h
@@ -65,13 +71,18 @@ include/valgrind/pub_tool_wordfm.h
 include/valgrind/pub_tool_xarray.h
 include/valgrind/valgrind.h
 include/valgrind/vki/vki-amd64-linux.h
+include/valgrind/vki/vki-arm64-linux.h
 include/valgrind/vki/vki-arm-linux.h
 include/valgrind/vki/vki-darwin.h
+include/valgrind/vki/vki-linux-drm.h
 include/valgrind/vki/vki-linux.h
 include/valgrind/vki/vki-mips32-linux.h
+include/valgrind/vki/vki-mips64-linux.h
 include/valgrind/vki/vki-posixtypes-amd64-linux.h
+include/valgrind/vki/vki-posixtypes-arm64-linux.h
 include/valgrind/vki/vki-posixtypes-arm-linux.h
 include/valgrind/vki/vki-posixtypes-mips32-linux.h
+include/valgrind/vki/vki-posixtypes-mips64-linux.h
 include/valgrind/vki/vki-posixtypes-ppc32-linux.h
 include/valgrind/vki/vki-posixtypes-ppc64-linux.h
 include/valgrind/vki/vki-posixtypes-s390x-linux.h
@@ -80,14 +91,27 @@ include/valgrind/vki/vki-ppc32-linux.h
 include/valgrind/vki/vki-ppc64-linux.h
 include/valgrind/vki/vki-s390x-linux.h
 include/valgrind/vki/vki-scnums-amd64-linux.h
+include/valgrind/vki/vki-scnums-arm64-linux.h
 include/valgrind/vki/vki-scnums-arm-linux.h
 include/valgrind/vki/vki-scnums-darwin.h
 include/valgrind/vki/vki-scnums-mips32-linux.h
+include/valgrind/vki/vki-scnums-mips64-linux.h
 include/valgrind/vki/vki-scnums-ppc32-linux.h
 include/valgrind/vki/vki-scnums-ppc64-linux.h
 include/valgrind/vki/vki-scnums-s390x-linux.h
 include/valgrind/vki/vki-scnums-x86-linux.h
 include/valgrind/vki/vki-x86-linux.h
+include/valgrind/vki/vki-xen-domctl.h
+include/valgrind/vki/vki-xen-evtchn.h
+include/valgrind/vki/vki-xen-gnttab.h
+include/valgrind/vki/vki-xen.h
+include/valgrind/vki/vki-xen-hvm.h
+include/valgrind/vki/vki-xen-memory.h
+include/valgrind/vki/vki-xen-mmuext.h
+include/valgrind/vki/vki-xen-sysctl.h
+include/valgrind/vki/vki-xen-tmem.h
+include/valgrind/vki/vki-xen-version.h
+include/valgrind/vki/vki-xen-x86.h
 lib/pkgconfig/valgrind.pc
 lib/valgrind/32bit-core-valgrind-s1.xml
 lib/valgrind/32bit-core-valgrind-s2.xml
@@ -131,6 +155,7 @@ lib/valgrind/drd-${VGCONF_ARCH_PRI}-${LOWER_OPSYS}
 lib/valgrind/exp-bbv-${VGCONF_ARCH_PRI}-${LOWER_OPSYS}
 lib/valgrind/exp-dhat-${VGCONF_ARCH_PRI}-${LOWER_OPSYS}
 lib/valgrind/exp-sgcheck-${VGCONF_ARCH_PRI}-${LOWER_OPSYS}
+lib/valgrind/getoff-${VGCONF_ARCH_PRI}-${LOWER_OPSYS}
 lib/valgrind/helgrind-${VGCONF_ARCH_PRI}-${LOWER_OPSYS}
 lib/valgrind/i386-coresse-valgrind.xml
 lib/valgrind/i386-linux-valgrind.xml
@@ -140,6 +165,17 @@ lib/valgrind/libreplacemalloc_toolpreload-${VGCONF_ARCH_PRI}-${LOWER_OPSYS}.a
 lib/valgrind/libvex-${VGCONF_ARCH_PRI}-${LOWER_OPSYS}.a
 lib/valgrind/massif-${VGCONF_ARCH_PRI}-${LOWER_OPSYS}
 lib/valgrind/memcheck-${VGCONF_ARCH_PRI}-${LOWER_OPSYS}
+lib/valgrind/mips64-cp0-valgrind-s1.xml
+lib/valgrind/mips64-cp0-valgrind-s2.xml
+lib/valgrind/mips64-cp0.xml
+lib/valgrind/mips64-cpu-valgrind-s1.xml
+lib/valgrind/mips64-cpu-valgrind-s2.xml
+lib/valgrind/mips64-cpu.xml
+lib/valgrind/mips64-fpu-valgrind-s1.xml
+lib/valgrind/mips64-fpu-valgrind-s2.xml
+lib/valgrind/mips64-fpu.xml
+lib/valgrind/mips64-linux-valgrind.xml
+lib/valgrind/mips64-linux.xml
 lib/valgrind/mips-cp0-valgrind-s1.xml
 lib/valgrind/mips-cp0-valgrind-s2.xml
 lib/valgrind/mips-cp0.xml
@@ -198,8 +234,12 @@ lib/valgrind/vgpreload_memcheck-${VGCONF_ARCH_PRI}-${LOWER_OPSYS}.so
 man/man1/callgrind_annotate.1
 man/man1/callgrind_control.1
 man/man1/cg_annotate.1
+man/man1/cg_diff.1
+man/man1/cg_merge.1
 man/man1/ms_print.1
 man/man1/valgrind.1
+man/man1/valgrind-listener.1
+man/man1/vgdb.1
 share/doc/valgrind/html/bbv-manual.html
 share/doc/valgrind/html/cg-manual.html
 share/doc/valgrind/html/cl-format.html
