@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2014/10/28 06:41:20 mef Exp $
+# $NetBSD: Makefile,v 1.3 2014/11/07 19:39:35 adam Exp $
 
 PKGNAME=	gnuradio-companion-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	User interface entry of GNU Radio
 
 CONF_FILES+=	${EGDIR}/grc.conf	${PKG_SYSCONFDIR}/grc.conf
