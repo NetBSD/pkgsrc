@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.46 2014/08/18 10:35:13 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.47 2014/11/07 19:28:38 adam Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -9,7 +9,7 @@
 
 BOOST_PACKAGE?=		undefined
 BOOST_COMMENT?=		undefined
-BOOST_VERSION=		1.56.0
+BOOST_VERSION=		1.57.0
 BOOST_SHORT_VERSION=	${BOOST_VERSION:S/./_/:C/\..*$//}
 
 DISTNAME=		boost_${BOOST_VERSION:S/./_/g}
@@ -38,11 +38,11 @@ PATCHDIR=		${.CURDIR}/../../meta-pkgs/boost/patches
 USE_TOOLS+=		pax
 USE_LANGUAGES=		c c++
 # GCC 4.5 or later is required to build, and GCC 4.5 is not provided for OpenBSD
-.if ${OPSYS} == "OpenBSD"
+.  if ${OPSYS} == "OpenBSD"
 GCC_REQD+=		4.6
-.else
+.  else
 GCC_REQD+=		4.5
-.endif
+.  endif
 
 PLIST_SUBST+=		BOOST_VERSION="${BOOST_VERSION}"
 
@@ -59,24 +59,24 @@ SUBST_FILES.darwin=	tools/build/src/tools/*darwin.jam
 SUBST_SED.darwin=	-e 's,-install_name ",-install_name "${PREFIX}/lib/,g'
 
 # On SunOS, extract using pkgsrc nbtar to avoid warnings from native gtar.
-.if ${OPSYS} == "SunOS"
+.  if ${OPSYS} == "SunOS"
 TOOLS_PLATFORM.tar=	#empty
-. include "../../mk/compiler.mk"
-. if !empty(CC_VERSION:Mgcc-4.[6-9]*)
+.    include "../../mk/compiler.mk"
+.    if !empty(CC_VERSION:Mgcc-4.[6-9]*)
 BUILDLINK_TRANSFORM+=	rename:-D_XOPEN_SOURCE=500:-D_XOPEN_SOURCE=600
-. endif
-.endif
+.    endif
+.  endif
 
-.if ${OPSYS} == "Darwin"
+.  if ${OPSYS} == "Darwin"
 # Prevent using a pkgsrc libtool in OS X because the darwin toolset needs
 # the native libtool from /Developer/usr/bin or /usr/bin.
 post-wrapper:
-.  if exists(/Developer/usr/bin/libtool)
+.    if exists(/Developer/usr/bin/libtool)
 	ln -s /Developer/usr/bin/libtool ${WRAPPER_BINDIR}/libtool
-.  else
+.    else
 	ln -s /usr/bin/libtool ${WRAPPER_BINDIR}/libtool
+.    endif
 .  endif
-.endif
 
 # We can't do this at post-extract because the extract cookie will get a future
 # timestamp than the sources.  If this happens, print-PLIST does not work.
@@ -85,18 +85,18 @@ pre-configure:
 
 # Generate a new user.hpp or use the installed one, depending on the package
 # we are building.
-.if ${BOOST_CONFIG} == "installed"
-.  include "../../devel/boost-headers/buildlink3.mk"
+.  if ${BOOST_CONFIG} == "installed"
+.    include "../../devel/boost-headers/buildlink3.mk"
 do-configure:
 	${CP} -f \
 	    ${BUILDLINK_PREFIX.boost-headers}/include/boost/config/user.hpp \
 	    ${WRKSRC}/boost/config/user.hpp
-.elif ${BOOST_CONFIG} == "generate"
+.  elif ${BOOST_CONFIG} == "generate"
 do-configure:
 	cd ${WRKSRC}/libs/config && \
 	    ${SETENV} ${CONFIGURE_ENV} ${SH} ./configure
 	${CP} -f ${WRKSRC}/libs/config/user.hpp ${WRKSRC}/boost/config/user.hpp
-.endif
+.  endif
 
 boost-install-libs:
 	${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/lib

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2013/12/10 16:41:00 jperkin Exp $
+# $NetBSD: options.mk,v 1.3 2014/11/07 19:28:38 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.boost
 PKG_SUPPORTED_OPTIONS=	debug expat icu
@@ -11,15 +11,15 @@ PKG_SUGGESTED_OPTIONS=	icu
 
 .if ${BOOST_PACKAGE} == "libs"
 
-.if !empty(PKG_OPTIONS:Mexpat)
+.  if !empty(PKG_OPTIONS:Mexpat)
 MAKE_ENV+=		EXPAT_INCLUDE=${PREFIX}/include
 MAKE_ENV+=		EXPAT_LIBPATH=${PREFIX}/lib
-.  include "../../textproc/expat/buildlink3.mk"
-.endif
+.    include "../../textproc/expat/buildlink3.mk"
+.  endif
 
-.if !empty(PKG_OPTIONS:Micu)
+.  if !empty(PKG_OPTIONS:Micu)
 MAKE_ENV+=		ICU_PATH=${PREFIX}
-.  include "../../textproc/icu/buildlink3.mk"
-.endif
+.    include "../../textproc/icu/buildlink3.mk"
+.  endif
 
 .endif # ${BOOST_PACKAGE} == "libs"
