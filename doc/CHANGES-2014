@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4204 2014/11/07 17:38:10 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.4205 2014/11/07 20:18:20 roy Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5293,3 +5293,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/curl to 7.39.0 [adam 2014-11-07]
 	Updated www/firefox to 33.0.3 [ryoon 2014-11-07]
 	Updated www/firefox-l10n to 33.0.3 [ryoon 2014-11-07]
+	Updated net/dhcpcd to 6.6.1 [roy 2014-11-07]
