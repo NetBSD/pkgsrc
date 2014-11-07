@@ -1,6 +1,8 @@
-$NetBSD: patch-ac,v 1.16 2014/03/12 00:24:35 jym Exp $
+$NetBSD: patch-ac,v 1.17 2014/11/07 11:30:47 schmonz Exp $
 
---- src/Makefile.in.orig	2014-01-07 20:19:44.000000000 +0000
+We'll take care of PKG_SYSCONFSUBDIR ourselves, thanks.
+
+--- src/Makefile.in.orig	2014-10-23 15:09:25.000000000 +0000
 +++ src/Makefile.in
 @@ -310,7 +310,7 @@ libstunnel_la_LDFLAGS = -avoid-version
  
