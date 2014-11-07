@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4205 2014/11/07 20:18:20 roy Exp $
+$NetBSD: CHANGES-2014,v 1.4206 2014/11/07 23:35:31 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5294,3 +5294,9 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/firefox to 33.0.3 [ryoon 2014-11-07]
 	Updated www/firefox-l10n to 33.0.3 [ryoon 2014-11-07]
 	Updated net/dhcpcd to 6.6.1 [roy 2014-11-07]
+	Updated inputmethod/mozc-server to 1.15.1917.102 [ryoon 2014-11-07]
+	Updated inputmethod/mozc-renderer to 1.15.1917.102 [ryoon 2014-11-07]
+	Updated inputmethod/mozc-tool to 1.15.1917.102 [ryoon 2014-11-07]
+	Updated inputmethod/mozc-elisp to 1.15.1917.102 [ryoon 2014-11-07]
+	Updated inputmethod/uim-mozc to 1.15.1917.102 [ryoon 2014-11-07]
+	Updated inputmethod/ibus-mozc to 1.15.1917.102 [ryoon 2014-11-07]
