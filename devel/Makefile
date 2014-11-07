@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2001 2014/11/07 03:51:42 jnemeth Exp $
+# $NetBSD: Makefile,v 1.2002 2014/11/07 13:09:24 szptvlfn Exp $
 #
 
 COMMENT=	Development utilities
@@ -324,6 +324,7 @@ SUBDIR+=	hs-monad-control
 SUBDIR+=	hs-mtl
 SUBDIR+=	hs-primitive
 SUBDIR+=	hs-random
+SUBDIR+=	hs-reflection
 SUBDIR+=	hs-resourcet
 SUBDIR+=	hs-safe
 SUBDIR+=	hs-split
