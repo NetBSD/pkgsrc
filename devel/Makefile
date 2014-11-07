@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2000 2014/11/03 18:45:42 prlw1 Exp $
+# $NetBSD: Makefile,v 1.2001 2014/11/07 03:51:42 jnemeth Exp $
 #
 
 COMMENT=	Development utilities
@@ -1516,6 +1516,8 @@ SUBDIR+=	py-InlineEgg
 SUBDIR+=	py-Optik
 SUBDIR+=	py-Pyro
 SUBDIR+=	py-ZopeInterface
+SUBDIR+=	py-argcomplete
+SUBDIR+=	py-argh
 SUBDIR+=	py-argparse
 SUBDIR+=	py-astor
 SUBDIR+=	py-astroid
