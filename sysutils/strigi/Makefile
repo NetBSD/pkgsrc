@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2014/06/07 12:11:24 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2014/11/07 19:39:26 adam Exp $
 
 DISTNAME=	strigi-0.7.8
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.vandenoever.info/software/strigi/
 EXTRACT_SUFX=	.tar.bz2

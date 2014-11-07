@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2014/08/13 10:57:37 adam Exp $
+# $NetBSD: Makefile,v 1.4 2014/11/07 19:39:41 adam Exp $
 
 DISTNAME=	libcmis-0.4.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libcmis/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2014/08/22 11:24:41 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2014/11/07 19:39:40 adam Exp $
 #
 
 DISTNAME=	choqok-1.4
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=choqok/}Choqok/
 EXTRACT_SUFX=	.tar.xz
