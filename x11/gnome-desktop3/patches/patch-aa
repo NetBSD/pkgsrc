@@ -1,40 +1,9 @@
-$NetBSD: patch-aa,v 1.4 2014/09/21 04:43:51 prlw1 Exp $
-
-Fix build on systems which don't provide openat()
-https://bugzilla.gnome.org/show_bug.cgi?id=735974
+$NetBSD: patch-aa,v 1.5 2014/11/08 23:15:06 prlw1 Exp $
 
 allow 64-bit time_t on 32-bit system
 
 --- libgnome-desktop/gnome-desktop-thumbnail.c.orig	2013-11-21 11:14:44.000000000 +0000
 +++ libgnome-desktop/gnome-desktop-thumbnail.c
-@@ -43,7 +43,9 @@
- #define GNOME_DESKTOP_USE_UNSTABLE_API
- #include "gnome-desktop-thumbnail.h"
- #include <glib/gstdio.h>
-+#ifdef HAVE_OPENAT
- #include <libgsystem.h>
-+#endif
- 
- #define SECONDS_BETWEEN_STATS 10
- 
-@@ -376,14 +378,16 @@ _gdk_pixbuf_new_from_uri_at_scale (const
-     }
- 
-     if (input_stream == NULL) {
-+#ifdef HAVE_OPENAT
-         if (g_file_is_native (file))
-             input_stream = gs_file_read_noatime (file, NULL, &error);
-         else
-+#endif
-             input_stream = G_INPUT_STREAM (g_file_read (file, NULL, &error));
-         if (input_stream == NULL) {
-             g_warning ("Unable to create an input stream for %s: %s", uri, error->message);
-             g_clear_error (&error);
--	    g_object_unref (file);
-+            g_object_unref (file);
-             return NULL;
-         }
-     }
 @@ -1666,7 +1670,7 @@ gnome_desktop_thumbnail_is_valid (GdkPix
    thumb_mtime_str = gdk_pixbuf_get_option (pixbuf, "tEXt::Thumb::MTime");
    if (!thumb_mtime_str)

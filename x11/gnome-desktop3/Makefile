@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2014/09/21 04:43:51 prlw1 Exp $
+# $NetBSD: Makefile,v 1.20 2014/11/08 23:15:06 prlw1 Exp $
 
-DISTNAME=	gnome-desktop-3.10.2
+DISTNAME=	gnome-desktop-3.14.1
 PKGNAME=	${DISTNAME:S/desktop/desktop3/}
-PKGREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-desktop/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -22,12 +21,11 @@ PKGCONFIG_OVERRIDE+=	libgnome-desktop/gnome-desktop-3.0.pc.in
 CONFIGURE_ARGS+=	--with-gnome-distributor="The NetBSD Foundation"
 CONFIGURE_ARGS+=	--disable-date-in-gnome-version
 CONFIGURE_ARGS+=	--disable-desktop-docs
-CONFIGURE_ARGS+=	--disable-scrollkeeper
 CONFIGURE_ARGS+=	--disable-gtk-doc
 
 BUILD_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
 
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.35.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.38.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gsettings-desktop-schemas+=	gsettings-desktop-schemas>=3.5.91
