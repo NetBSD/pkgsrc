@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2014/11/04 11:40:20 obache Exp $
+# $NetBSD: options.mk,v 1.14 2014/11/08 11:24:28 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.groonga
@@ -74,6 +74,7 @@ OWN_DIRS+=	${PKG_SYSCONFDIR}/httpd/html
 OWN_DIRS+=	${PKG_SYSCONFDIR}/httpd
 OWN_DIRS+=	${VARBASE}/run/${PKGBASE}
 OWN_DIRS+=	${VARBASE}/log/${PKGBASE}/httpd
+BUILD_DEFS+=	VARBASE
 
 CONF_FILES+=	share/examples/${PKGBASE}/httpd/fastcgi.conf \
 		${PKG_SYSCONFDIR}/httpd/fastcgi.conf
