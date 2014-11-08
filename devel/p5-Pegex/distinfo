@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/11/08 16:18:53 schmonz Exp $
+
+SHA1 (Pegex-0.57.tar.gz) = 2568799b9c4b26382f229d73047376d591d7eea1
+RMD160 (Pegex-0.57.tar.gz) = cb1e863ff8a3e67761e95f0cc06476608cf1fc29
+Size (Pegex-0.57.tar.gz) = 147148 bytes
