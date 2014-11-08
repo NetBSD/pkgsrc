@@ -1,0 +1,3 @@
+This module escapes HTML's special chars. It's same as PHP's
+htmlspecialchars. This module uses XS for better performance. And
+also provides pure perl version.
