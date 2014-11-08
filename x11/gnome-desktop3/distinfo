@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.9 2014/09/25 15:10:21 prlw1 Exp $
+$NetBSD: distinfo,v 1.10 2014/11/08 23:15:06 prlw1 Exp $
 
-SHA1 (gnome-desktop-3.10.2.tar.xz) = fd13640ad7f096f29267366bcdf4cf8dc95af07a
-RMD160 (gnome-desktop-3.10.2.tar.xz) = 9d59c58c497eafa75a5ae7a38edaa740c8c77726
-Size (gnome-desktop-3.10.2.tar.xz) = 1062876 bytes
-SHA1 (patch-aa) = 26bd3513ac6757ab1a406a8c40be37aa25c98ad4
-SHA1 (patch-configure) = febb8117f7d3b658d813679f0a95d46661e02147
-SHA1 (patch-libgnome-desktop_Makefile.in) = c8ff8fe775102aed193652f5569779a561bc3897
-SHA1 (patch-libgnome-desktop_libgsystem_gsystem-file-utils.c) = a67d29c3a5693cdc305e7826159fe29a21d12c0b
-SHA1 (patch-libgnome-desktop_libgsystem_gsystem-shutil.c) = ae279d6a60909284226853589470dc2e2c8363a9
+SHA1 (gnome-desktop-3.14.1.tar.xz) = a5544c4dbebf7acf84ba295be1a0f360b1937c2b
+RMD160 (gnome-desktop-3.14.1.tar.xz) = 013e5fe4961d3c83c2ae90b7039cf16237f2770e
+Size (gnome-desktop-3.14.1.tar.xz) = 1122552 bytes
+SHA1 (patch-aa) = 1d22c87b74aa554e4d9561cb5dcf0a8eae6b9e54
+SHA1 (patch-libgnome-desktop_libgsystem_gsystem-file-utils.c) = 0a4ab3e08c777e17e8809afeb8950b3a900e0c1a
+SHA1 (patch-libgnome-desktop_libgsystem_gsystem-shutil.c) = 4d8f05dee8e32f6621a0063b2bee2b0fc2335e08
