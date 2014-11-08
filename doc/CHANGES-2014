@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4209 2014/11/08 11:30:03 prlw1 Exp $
+$NetBSD: CHANGES-2014,v 1.4210 2014/11/08 11:41:03 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5309,3 +5309,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated meta-pkgs/boost to 1.57.0 [adam 2014-11-07]
 	Updated www/squid3 to 3.4.9 [adam 2014-11-08]
 	Updated print/evince3 to 3.14.1 [prlw1 2014-11-08]
+	Updated inputmethod/scim-tables to 0.5.14.1 [obache 2014-11-08]
