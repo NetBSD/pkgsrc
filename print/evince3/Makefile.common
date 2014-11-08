@@ -1,15 +1,15 @@
-# $NetBSD: Makefile.common,v 1.7 2014/04/04 22:20:59 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.8 2014/11/08 11:28:43 prlw1 Exp $
 #
 # used by print/evince3/Makefile
 # would probably be used by print/evince3-nautilus/Makefile if that existed
 
-DISTNAME=		evince-3.12.0
+DISTNAME=		evince-3.14.1
 CATEGORIES=		print gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evince/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnome.org/projects/evince/
+HOMEPAGE=		https://wiki.gnome.org/Apps/Evince
 LICENSE=		gnu-gpl-v2
 
 PATCHDIR=		${.CURDIR}/../evince3/patches
@@ -21,6 +21,10 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LANGUAGES=		c c++
 
+CONFIGURE_ARGS+=	--disable-browser-plugin
+# Disable thumbnail cache
+CONFIGURE_ARGS+=	--disable-libgnome-desktop
+
 BUILD_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
@@ -31,13 +35,11 @@ pre-configure:
 	${ECHO} "echo 8.51" >${BUILDLINK_DIR}/bin/gs
 	${CHMOD} +x ${BUILDLINK_DIR}/bin/gs
 
-DEPENDS+=	gnome-icon-theme-symbolic-[0-9]*:../../graphics/gnome-icon-theme-symbolic
-
 .include "../../databases/shared-mime-info/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=   glib2>=2.36.0
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.17.1
-.include "../../graphics/gnome-icon-theme/buildlink3.mk"
+BUILDLINK_API_DEPENDS.adwaita-icon-theme+=	adwaita-icon-theme>=2.17.1
+.include "../../graphics/adwaita-icon-theme/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../print/libspectre/buildlink3.mk"
 BUILDLINK_API_DEPENDS.poppler-glib+=	poppler-glib>=0.24.0
@@ -45,5 +47,5 @@ BUILDLINK_API_DEPENDS.poppler-glib+=	poppler-glib>=0.24.0
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.8.0
+BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.14.0
 .include "../../x11/gtk3/buildlink3.mk"
