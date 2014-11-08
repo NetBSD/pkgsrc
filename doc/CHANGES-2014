@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4213 2014/11/08 16:21:28 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.4214 2014/11/08 21:59:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5313,3 +5313,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added www/p5-HTML-Escape version 1.09 [schmonz 2014-11-08]
 	Added devel/p5-Pegex version 0.57 [schmonz 2014-11-08]
 	Added textproc/p5-Swim version 0.1.31 [schmonz 2014-11-08]
+	Updated x11/rgb to 1.0.6 [wiz 2014-11-08]
