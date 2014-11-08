@@ -430,6 +430,7 @@ lsof-more-secure	Only allow root to view all open files with lsof.
 lua			Enable Lua support.
 luit			Enable luit support.
 lynx			Use and enable support for the lynx browser.
+lz4			Enable LZ4 (de)compression support.
 lzma			Enable LZMA (de)compression support.
 lzo			Enable LZO (de)compression support.
 lzw			Enable LZW (De)compression support.
