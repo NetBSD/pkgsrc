@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4206 2014/11/07 23:35:31 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.4207 2014/11/08 07:38:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5300,3 +5300,10 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated inputmethod/mozc-elisp to 1.15.1917.102 [ryoon 2014-11-07]
 	Updated inputmethod/uim-mozc to 1.15.1917.102 [ryoon 2014-11-07]
 	Updated inputmethod/ibus-mozc to 1.15.1917.102 [ryoon 2014-11-07]
+	Updated devel/boost-jam to 1.57.0 [adam 2014-11-07]
+	Updated devel/boost-headers to 1.57.0 [adam 2014-11-07]
+	Updated devel/boost-libs to 1.57.0 [adam 2014-11-07]
+	Updated devel/boost-docs to 1.57.0 [adam 2014-11-07]
+	Updated devel/boost-build to 1.57.0 [adam 2014-11-07]
+	Updated devel/boost-python to 1.57.0 [adam 2014-11-07]
+	Updated meta-pkgs/boost to 1.57.0 [adam 2014-11-07]
