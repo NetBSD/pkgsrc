@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4211 2014/11/08 16:17:20 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.4212 2014/11/08 16:19:27 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5311,3 +5311,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated print/evince3 to 3.14.1 [prlw1 2014-11-08]
 	Updated inputmethod/scim-tables to 0.5.14.1 [obache 2014-11-08]
 	Added www/p5-HTML-Escape version 1.09 [schmonz 2014-11-08]
+	Added devel/p5-Pegex version 0.57 [schmonz 2014-11-08]
