@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2002 2014/11/07 13:09:24 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2003 2014/11/08 16:19:56 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1195,6 +1195,7 @@ SUBDIR+=	p5-Path-Dispatcher
 SUBDIR+=	p5-Path-Dispatcher-Declarative
 SUBDIR+=	p5-Path-IsDev
 SUBDIR+=	p5-PathTools
+SUBDIR+=	p5-Pegex
 SUBDIR+=	p5-Perl-APIReference
 SUBDIR+=	p5-Perl-Critic
 SUBDIR+=	p5-Perl-MinimumVersion
