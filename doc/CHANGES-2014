@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4210 2014/11/08 11:41:03 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4211 2014/11/08 16:17:20 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5310,3 +5310,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/squid3 to 3.4.9 [adam 2014-11-08]
 	Updated print/evince3 to 3.14.1 [prlw1 2014-11-08]
 	Updated inputmethod/scim-tables to 0.5.14.1 [obache 2014-11-08]
+	Added www/p5-HTML-Escape version 1.09 [schmonz 2014-11-08]
