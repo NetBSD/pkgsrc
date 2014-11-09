@@ -1,0 +1,111 @@
+The pkgsrc-2007Q2 Branch
+========================
+ 
+The pkgsrc developers are very proud to announce the new pkgsrc-2007Q2
+branch, which has support for more packages than previous branches. 
+As well as updated versions of many packages, the infrastructure of
+pkgsrc itself has been improved for better platform and compiler
+support.
+ 
+At the same time, the pkgsrc-2007Q1 branch has been deprecated, and
+continuing engineering starts on the pkgsrc-2007Q2 branch.
+ 
+Some highlights of the new pkgsrc-2007Q2 branch are:
+ 
++ many, many packages have been updated to newer versions, to take
+advantage of fixes and improved functionality.  The following versions
+of packages are included in the pkgsrc-2007Q2 branch:
+ 
+	+ apache-2.2.4
+	+ firefox-2.0.0.4
+	+ gnome-2.18.1
+	+ kde-3.5.7
+	+ mysql-5.0.41
+	+ openoffice-2.2.1
+	+ opera-9.21
+	+ postgresql-8.2.4
+	+ ruby-1.8.6
+	+ samba-3.0.24
+	+ seamonkey-1.1.2
+	+ thunderbird-2.0.0.4
+	+ wireshark-0.99.5
+	+ zope-3.3.1
+ 
+In addition, the default versions of firefox and thunderbird have been
+set to the 2.0.0.x versions, replacing the previous 1.5.0.x versions
+(which have been kept in www/firefox15, mail/thunderbird15, but are no
+longer the default).
+ 
++ other changes include
+	+ more modular X11 packages have been added, including the modular
+	  X server modules, and many X clients. With the pkgsrc-2007Q2
+	  branch, the "xorg" X11_TYPE will become obsolete.
+	+ we have continued to develop our "filesystems" category
+	+ the adoption of a new bulk building system, pbulk, by Joerg
+	  Sonnenberger
+	+ the addition of some pertinent bright, shiny packages such
+	  as opengrok, roundcube, more modular x11 clients, coda, tea,
+	  t-prot, u9fs, teamspeak-server, fuse-gphotofs, alpine, goffice,
+	  mecab, qtplay, fuse-obexfs, fuse-wdfs, tesseract, sparse, htop,
+	  ragel, xhtmldiff, mimetex, antiright, psvn, planner, ipbt,
+	  dvdisaster, deskmenu and freepops
+ 
+To the list of platforms supported by pkgsrc - AIX, BSD/OS, Darwin
+(Mac OS X), DragonFly BSD, FreeBSD, IRIX, Interix, Linux, NetBSD,
+OSF1, OpenBSD, and SunOS (Solaris) - we are proud to welcome HP/UX,
+thanks to Tobias Nygren, and we will extend the list of supported
+platforms still further in the next few months.
+ 
++ the pkgsrc-2007Q2 branch introduces support for case-insensitive
+filesystems, which makes bootstrapping pkgsrc much simpler on the
+average Mac. We encourage our Darwin and OS X users to try it out and
+report any problems.
+ 
+Our plans are for this to become the recommended Darwin configuration
+for the pkgsrc-2007Q3 branch, and to get rid of darwindiskimage and
+the related information in the documents.
+ 
++ continuing engineering on the "stable" branches of pkgsrc continues,
+and our thanks to the pkgsrc releng team for all the hard work they do
+in sanity checking pullup requests, and managing the stable branches
+in pkgsrc.
+ 
++ constant bulk building on a number of platforms has improved our
+ability to identify potential areas of concern, and to correct them
+sooner.  It has also improved our ability to make binary packages
+available, and we are working on ways to improve this further.  For
+more information, please refer to the pkgsrc-bulk mailing list,
+archives available at
+ 
+	http://mail-index.netbsd.org/pkgsrc-bulk/
+ 
++ the number of packages has been increased to 7181; the number of
+supported platforms has risen to 13.  NetBSD, on all its supported
+architectures, is considered to be one pkgsrc platform.
+ 
+As always, we'd like to encourage users of the packages collection to
+install and run pkgsrc/security/audit-packages at least every day -
+this will provide notification of any packages which are vulnerable to
+exploit.  The pkgsrc-security team do a marvellous job in tracking
+notifications of vulnerabilities in packages, and disseminating this
+information, and our sincere thanks go to them for this essential work.
+ 
+We'd also really appreciate it if people would install the
+pkgsrc/pkgtools/pkgsurvey package, and then run the pkgsurvey script
+for us.  This will forward us a list of the packages installed on that
+machine, and the operating system and release level of the operating
+system.  The results will be kept confidential, but the output will
+help us analyse the packages that are most used.
+ 
+The source tar files for the new branch can be found at:
+ 
+	ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2007Q2/pkgsrc-2007Q2.tar.gz
+		or
+	ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2007Q2/pkgsrc-2007Q2.tar.bz2
+ 
+You can also use the "pkgsrc-2007Q2" tag to check it out yourself from
+anoncvs.NetBSD.org or any of the mirrors.
+ 
+Alistair Crooks
+On behalf of the Packages Team
+The NetBSD Foundation
