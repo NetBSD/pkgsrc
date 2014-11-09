@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/08/08 08:49:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/11/09 16:08:52 wiz Exp $
 bin/thg
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/tortoisehg/__init__.py
@@ -112,12 +112,12 @@ ${PYSITELIB}/tortoisehg/hgqt/htmldelegate.pyo
 ${PYSITELIB}/tortoisehg/hgqt/htmlui.py
 ${PYSITELIB}/tortoisehg/hgqt/htmlui.pyc
 ${PYSITELIB}/tortoisehg/hgqt/htmlui.pyo
-${PYSITELIB}/tortoisehg/hgqt/i18n.py
-${PYSITELIB}/tortoisehg/hgqt/i18n.pyc
-${PYSITELIB}/tortoisehg/hgqt/i18n.pyo
 ${PYSITELIB}/tortoisehg/hgqt/icons_rc.py
 ${PYSITELIB}/tortoisehg/hgqt/icons_rc.pyc
 ${PYSITELIB}/tortoisehg/hgqt/icons_rc.pyo
+${PYSITELIB}/tortoisehg/hgqt/infobar.py
+${PYSITELIB}/tortoisehg/hgqt/infobar.pyc
+${PYSITELIB}/tortoisehg/hgqt/infobar.pyo
 ${PYSITELIB}/tortoisehg/hgqt/lexers.py
 ${PYSITELIB}/tortoisehg/hgqt/lexers.pyc
 ${PYSITELIB}/tortoisehg/hgqt/lexers.pyo
@@ -154,6 +154,9 @@ ${PYSITELIB}/tortoisehg/hgqt/postreview.pyo
 ${PYSITELIB}/tortoisehg/hgqt/postreview_ui.py
 ${PYSITELIB}/tortoisehg/hgqt/postreview_ui.pyc
 ${PYSITELIB}/tortoisehg/hgqt/postreview_ui.pyo
+${PYSITELIB}/tortoisehg/hgqt/prune.py
+${PYSITELIB}/tortoisehg/hgqt/prune.pyc
+${PYSITELIB}/tortoisehg/hgqt/prune.pyo
 ${PYSITELIB}/tortoisehg/hgqt/purge.py
 ${PYSITELIB}/tortoisehg/hgqt/purge.pyc
 ${PYSITELIB}/tortoisehg/hgqt/purge.pyo
@@ -265,9 +268,6 @@ ${PYSITELIB}/tortoisehg/hgqt/thgrepo.pyo
 ${PYSITELIB}/tortoisehg/hgqt/thgstrip.py
 ${PYSITELIB}/tortoisehg/hgqt/thgstrip.pyc
 ${PYSITELIB}/tortoisehg/hgqt/thgstrip.pyo
-${PYSITELIB}/tortoisehg/hgqt/thread.py
-${PYSITELIB}/tortoisehg/hgqt/thread.pyc
-${PYSITELIB}/tortoisehg/hgqt/thread.pyo
 ${PYSITELIB}/tortoisehg/hgqt/update.py
 ${PYSITELIB}/tortoisehg/hgqt/update.pyc
 ${PYSITELIB}/tortoisehg/hgqt/update.pyo
@@ -313,6 +313,9 @@ ${PYSITELIB}/tortoisehg/util/editor.pyo
 ${PYSITELIB}/tortoisehg/util/gpg.py
 ${PYSITELIB}/tortoisehg/util/gpg.pyc
 ${PYSITELIB}/tortoisehg/util/gpg.pyo
+${PYSITELIB}/tortoisehg/util/hgcommands.py
+${PYSITELIB}/tortoisehg/util/hgcommands.pyc
+${PYSITELIB}/tortoisehg/util/hgcommands.pyo
 ${PYSITELIB}/tortoisehg/util/hgdispatch.py
 ${PYSITELIB}/tortoisehg/util/hgdispatch.pyc
 ${PYSITELIB}/tortoisehg/util/hgdispatch.pyo
