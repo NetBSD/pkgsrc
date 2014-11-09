@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/05/18 03:32:16 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2014/11/09 19:31:56 rodent Exp $
 
-DISTNAME=	hy-0.10.0
+DISTNAME=	hy-0.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	https://pypi.python.org/packages/source/h/hy/
@@ -21,6 +21,8 @@ PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/hy \
 		${DESTDIR}${PREFIX}/bin/hy${PYVERSSUFFIX}
+	${MV} ${DESTDIR}${PREFIX}/bin/hy2py \
+		${DESTDIR}${PREFIX}/bin/hy2py${PYVERSSUFFIX}
 	${MV} ${DESTDIR}${PREFIX}/bin/hyc \
 		${DESTDIR}${PREFIX}/bin/hyc${PYVERSSUFFIX}
 
