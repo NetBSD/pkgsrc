@@ -1,0 +1,111 @@
+The pkgsrc-2008Q1 Branch
+========================
+ 
+The pkgsrc developers are very proud to announce the new pkgsrc-2008Q1
+branch, which has support for more packages than previous branches. 
+As well as updated versions of many packages, the infrastructure of
+pkgsrc itself has been improved for better platform and compiler
+support.
+ 
+At the same time, the pkgsrc-2007Q4 branch has been deprecated, and
+continuing engineering starts on the pkgsrc-2008Q1 branch.
+ 
+With more than ten years of pkgsrc development behind us, we would
+like to take this opportunity to thank all of the people who have made
+pkgsrc the most portable packaging system in the world - to all of the
+users, developers and supporters a very large "Thank you" from all of
+us.
+ 
+Some highlights of the new pkgsrc-2008Q1 branch are:
+ 
++ many, many packages have been updated to newer versions, to take
+advantage of fixes and improved functionality.  The following versions
+of packages are included in the pkgsrc-2008Q1 branch:
+ 
+	+ apache-2.2.8
+	+ firefox-2.0.0.13
+	+ gnome-2.20.2
+	+ kde-3.5.9
+	+ mysql-5.0.51
+	+ openoffice-2.3.1nb5
+	+ opera-9.26
+	+ postgresql-8.3.0
+	+ ruby-1.8.6.114
+	+ samba-3.0.28a
+	+ seamonkey-1.1.9
+	+ wireshark-1.0.0
+	+ zope-3.3.1
+ 
++ other changes include
+	+ we have revamped our mono package, and added a number of
+	  other useful mono-based packages
+	+ the addition of some interesting, pertinent, and shiny
+	  packages such as 3proxy, bash-completion, bsdav, ccid,
+	  chrpath, clawsker, clive, cmconvert, CoolKey, cut, cvsclone,
+	  dansguardian, dmsdos, dvtm, dynamips, ejabberd, ewipe,
+	  gnome-platform, gnome-sharp, gtksourceview2, highlight, im,
+	  isc-dhcp4, libarena, libdatrie, libdmenu, libfetch, libixp,
+	  libmp3splt, libotf, libspf2, libssh2, libthai, metauml,
+	  migemo, mono-addins, monodevelop, monodoc, mopac, msynctool,
+	  ossp-js, pcc-current, pdcurses, portmap, postgresql-8.3,
+	  puppet, rtf2latex2e, ruby-activeresource, SDL_Pango,
+	  sigscheme, slock, smirk, unfs3, wbxml2, xbacklight, xinput,
+	  xmltoman, and yabause
+ 
+The list of platforms supported by pkgsrc is AIX, BSD/OS, Darwin (Mac
+OS X), DragonFly BSD, FreeBSD, HP/UX, IRIX, Interix, Linux, NetBSD,
+OSF1, OpenBSD, QNX and SunOS (Solaris).  We are aware that support for
+some platforms is at a more mature stage than others, and would like
+to encourage feedback from users and developers on our more esoteric
+platforms. To illustrate this point, a number of developers have
+worked hard to improve support for Mac OS X Leopard - Matthias Scheler
+and a number of others have improved support to the point where a
+number of key packages like perl and apache are now supported.
+ 
++ continuing engineering on the "stable" branches of pkgsrc has been
+revitalised, and we have recruited 3 times the number of engineers to
+work on this than we previously had.  Our thanks go to the pkgsrc
+releng team for all the hard work they do in sanity checking pullup
+requests, and managing the stable branches in pkgsrc.
+ 
++ constant bulk building on a number of platforms has improved our
+ability to identify potential areas of concern, and to correct them
+sooner.  It has also improved our ability to make binary packages
+available, and we are working on ways to improve this further.  For
+more information, please refer to the pkgsrc-bulk mailing list,
+archives available at
+ 
+	http://mail-index.netbsd.org/pkgsrc-bulk/
+ 
++ the number of packages has been increased to 7578; the number of
+supported platforms is currently 14.  NetBSD, on all its supported
+architectures, is considered to be one pkgsrc platform.
+ 
+As always, we'd like to encourage users of the packages collection to
+audit-packages at least every day - this will provide notification of
+any packages which are vulnerable to exploit.  As mentioned earlier,
+this is part of the new pkg_install tools, and is now much quicker. 
+We shall be removing the old package in the next pkgsrc release.
+The pkgsrc-security team do a marvellous job in tracking notifications
+of vulnerabilities in packages, and disseminating this information,
+and our sincere thanks go to them for this essential work.
+ 
+We'd also really appreciate it if people would install the
+pkgsrc/pkgtools/pkgsurvey package, and then run the pkgsurvey script
+for us.  This will forward us a list of the packages installed on that
+machine, and the operating system and release level of the operating
+system.  The results will be kept confidential, but the output will
+help us analyse the packages that are most used.
+ 
+The source tar files for the new branch can be found at:
+ 
+	ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2008Q1/pkgsrc-2008Q1.tar.gz
+		or
+	ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2008Q1/pkgsrc-2008Q1.tar.bz2
+ 
+You can also use the "pkgsrc-2008Q1" tag to check it out yourself from
+anoncvs.NetBSD.org or any of the mirrors.
+ 
+Alistair Crooks
+On behalf of the Packages Team
+The NetBSD Foundation
