@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/06/02 05:12:35 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/11/09 21:57:00 rodent Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -71,9 +71,6 @@ ${PYSITELIB}/tastypie/management/commands/backfill_api_keys.pyo
 ${PYSITELIB}/tastypie/migrations/0001_initial.py
 ${PYSITELIB}/tastypie/migrations/0001_initial.pyc
 ${PYSITELIB}/tastypie/migrations/0001_initial.pyo
-${PYSITELIB}/tastypie/migrations/0002_add_apikey_index.py
-${PYSITELIB}/tastypie/migrations/0002_add_apikey_index.pyc
-${PYSITELIB}/tastypie/migrations/0002_add_apikey_index.pyo
 ${PYSITELIB}/tastypie/migrations/__init__.py
 ${PYSITELIB}/tastypie/migrations/__init__.pyc
 ${PYSITELIB}/tastypie/migrations/__init__.pyo
@@ -89,6 +86,15 @@ ${PYSITELIB}/tastypie/resources.pyo
 ${PYSITELIB}/tastypie/serializers.py
 ${PYSITELIB}/tastypie/serializers.pyc
 ${PYSITELIB}/tastypie/serializers.pyo
+${PYSITELIB}/tastypie/south_migrations/0001_initial.py
+${PYSITELIB}/tastypie/south_migrations/0001_initial.pyc
+${PYSITELIB}/tastypie/south_migrations/0001_initial.pyo
+${PYSITELIB}/tastypie/south_migrations/0002_add_apikey_index.py
+${PYSITELIB}/tastypie/south_migrations/0002_add_apikey_index.pyc
+${PYSITELIB}/tastypie/south_migrations/0002_add_apikey_index.pyo
+${PYSITELIB}/tastypie/south_migrations/__init__.py
+${PYSITELIB}/tastypie/south_migrations/__init__.pyc
+${PYSITELIB}/tastypie/south_migrations/__init__.pyo
 ${PYSITELIB}/tastypie/templates/tastypie/basic.html
 ${PYSITELIB}/tastypie/templates/tastypie/detail.html
 ${PYSITELIB}/tastypie/templates/tastypie/list.html
