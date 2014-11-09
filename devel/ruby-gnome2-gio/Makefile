@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/03/11 12:11:45 obache Exp $
+# $NetBSD: Makefile,v 1.16 2014/11/09 06:27:02 obache Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gio-${VERSION}
@@ -10,11 +10,6 @@ CONFLICTS+=		ruby[0-9][0-9]-gnome2-gio-[0-9]*
 RUBY_EXTCONF_SUBDIRS=	gio2
 
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-glib>=${VERSION}:../../devel/ruby-gnome2-glib
-
-INSTALLATION_DIRS+=	lib/pkgconfig
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/gio2/ext/gio2/ruby-gio2.pc ${DESTDIR}${PREFIX}/lib/pkgconfig/
 
 do-test:
 	${RUN} cd ${WRKSRC}/gio2/test && ${SETENV} ${TEST_ENV} ${RUBY} load-test.rb
