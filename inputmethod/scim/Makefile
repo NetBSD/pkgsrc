@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2014/05/29 23:36:42 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2014/11/09 02:46:30 obache Exp $
 #
 
-DISTNAME=		scim-1.4.14
-PKGREVISION=		19
+DISTNAME=		scim-1.4.15
 CATEGORIES=		inputmethod
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scim/}
 
@@ -21,6 +20,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		msgfmt pkg-config
 USE_TOOLS+=		gmake	# make scim-setup.desktop
 USE_TOOLS+=		perl intltool
+USE_TOOLS+=		autopoint autoconf automake
 
 PKGCONFIG_OVERRIDE=	scim-gtkutils.pc.in
 PKGCONFIG_OVERRIDE+=	scim-x11utils.pc.in
@@ -48,6 +48,12 @@ LDFLAGS.SunOS+=		-lsocket -lnsl
 .elif ${OPSYS} == "NetBSD"
 CONFIGURE_ENV+=		ac_cv_func_gethostbyname_r=no
 .endif
+
+# unused test script
+CHECK_PORTABILITY_SKIP+=	extras/immodules/tests/test-exec.sh.in
+
+pre-configure:
+	${RUN}cd ${WRKSRC}; ${SETENV} ${CONFIGURE_ENV} ${SH} bootstrap
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
