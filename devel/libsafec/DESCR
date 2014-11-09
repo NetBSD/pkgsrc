@@ -1,0 +1,7 @@
+The Safe C Library provides bound checking memory and string functions
+per ISO/IEC TR24731.  These functions are alternative functions to the
+existing standard C library that promote safer, more secure
+programming.
+
+The ISO/IEC Programming languages -- C spec, C11, now includes the
+bounded APIs in Appendix K, "Bounds-checking interfaces".
