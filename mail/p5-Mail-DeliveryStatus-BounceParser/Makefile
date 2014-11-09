@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2014/05/29 23:36:49 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/11/09 19:40:49 rodent Exp $
 #
 
-DISTNAME=	Mail-DeliveryStatus-BounceParser-1.534
+DISTNAME=	Mail-DeliveryStatus-BounceParser-1.536
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 
