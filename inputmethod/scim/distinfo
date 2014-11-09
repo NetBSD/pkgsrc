@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.8 2012/09/26 08:17:00 jperkin Exp $
+$NetBSD: distinfo,v 1.9 2014/11/09 02:46:30 obache Exp $
 
-SHA1 (scim-1.4.14.tar.gz) = 73391be371dd7ef9f9af8b3a211e2bedec0cf71b
-RMD160 (scim-1.4.14.tar.gz) = 50643a8a8084c32612d415bfb0fe8b7f91c22459
-Size (scim-1.4.14.tar.gz) = 1519287 bytes
-SHA1 (patch-ab) = c5220c83ec8125f75b1e5d7b41f4438ec73becbf
+SHA1 (scim-1.4.15.tar.gz) = 771d81b5c81164840f7d45c39165c2990cc809bd
+RMD160 (scim-1.4.15.tar.gz) = 07d4337ee0c33ba88ee94fd2dc76e71d1529c2df
+Size (scim-1.4.15.tar.gz) = 1374463 bytes
+SHA1 (patch-ab) = 1e10dfb2405849daceda2b3e15835f6a84d8990a
 SHA1 (patch-ac) = c8c4a54b1b6ffd82211616c3b99de1239b29c652
 SHA1 (patch-ad) = 2812ded533f29bd69bad180c33c81fd49e6213e6
 SHA1 (patch-ae) = 61909935f6226d2126392d0990f81243dc2bb933
@@ -11,14 +11,5 @@ SHA1 (patch-af) = 010d4f31d684b8163672d2521ebff74230591d66
 SHA1 (patch-ag) = 2f97e1d9c9a96096524903c43ba4f7626956450d
 SHA1 (patch-ah) = abb315ac44a36e99d8c456b1cb3af9290a29be12
 SHA1 (patch-bb) = 69e001995a8caa65b885e438123a7efb0ad9995b
-SHA1 (patch-bc) = 2b802e83a8aab3e3165418d540f91238c8941c2b
-SHA1 (patch-bd) = 15982bf8a9aee6f6ccd94f186bff20b70b1a93cf
-SHA1 (patch-be) = 85a98134d77038d20544241410ec8130df2ea94c
-SHA1 (patch-extras_immodules_agent_scim-bridge-agent-application.cpp) = b8dc14330f29e706439e9ca91217892355f86ee4
-SHA1 (patch-extras_immodules_agent_scim-bridge-agent.cpp) = f1a9bd1b185a02ba2e84d6040565662b95a25397
-SHA1 (patch-extras_immodules_client-common_scim-bridge-client-output.c) = 51c8635a3084112fd4362862690c4cc5bfffbe01
-SHA1 (patch-extras_immodules_client-common_scim-bridge-client.c) = ee441af01f39d65f8ed3f305407add2ac9fc0a32
-SHA1 (patch-extras_immodules_client-gtk_scim-bridge-client-imcontext-gtk.c) = 19c8f4ec70bb1c21c7318819367729579641866e
-SHA1 (patch-extras_immodules_common_scim-bridge-messenger.h) = 1a9defe26a124317c410bef12b2a7f023ea284b4
+SHA1 (patch-extras_immodules_agent_scim-bridge-agent-application.cpp) = 183b9d036a791d2004eac9655406f7501de2fb0d
 SHA1 (patch-extras_immodules_common_scim-bridge-output.h) = 65d32eb28ef92d8580352e333fa2e95243f5d987
-SHA1 (patch-src_scim__helper__manager__server.cpp) = 3a1130f37c7c93389e2ae7db65af7438bac5de51
