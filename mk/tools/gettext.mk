@@ -1,4 +1,4 @@
-# $NetBSD: gettext.mk,v 1.17 2013/05/02 13:12:03 obache Exp $
+# $NetBSD: gettext.mk,v 1.18 2014/11/09 02:26:27 obache Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -136,7 +136,7 @@ TOOLS_SCRIPT.msgfmt=	AWK=${TOOLS_AWK:Q} CAT=${TOOLS_CAT:Q}		\
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(USE_TOOLS:C/:.*//:M${_t_})
 .    if !empty(_TOOLS_USE_PKGSRC.msgfmt:M[yY][eE][sS])
 _TOOLS_USE_PKGSRC.${_t_}=	yes
-.    elif defined(TOOLS_PLATFORM.msgfmt) && !empty(TOOLS_PLATFORM.msgfmt)
+.    elif defined(TOOLS_PLATFORM.${_t_}) && !empty(TOOLS_PLATFORM.${_t_})
 _TOOLS_USE_PKGSRC.${_t_}?=	no
 .    else
 _TOOLS_USE_PKGSRC.${_t_}?=	yes
