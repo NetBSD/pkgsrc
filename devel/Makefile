@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2003 2014/11/08 16:19:56 schmonz Exp $
+# $NetBSD: Makefile,v 1.2004 2014/11/09 01:53:20 agc Exp $
 #
 
 COMMENT=	Development utilities
@@ -475,6 +475,7 @@ SUBDIR+=	librfuncs
 SUBDIR+=	librlog
 SUBDIR+=	librsync
 SUBDIR+=	librxspencer
+SUBDIR+=	libsafec
 SUBDIR+=	libsexy
 SUBDIR+=	libsexymm
 SUBDIR+=	libsigc++
