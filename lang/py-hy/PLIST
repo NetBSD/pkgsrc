@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2014/05/18 03:32:16 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/11/09 19:31:56 rodent Exp $
 bin/hy${PYVERSSUFFIX}
+bin/hy2py${PYVERSSUFFIX}
 bin/hyc${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -44,6 +45,7 @@ ${PYSITELIB}/hy/core/__init__.pyo
 ${PYSITELIB}/hy/core/bootstrap.hy
 ${PYSITELIB}/hy/core/language.hy
 ${PYSITELIB}/hy/core/macros.hy
+${PYSITELIB}/hy/core/shadow.hy
 ${PYSITELIB}/hy/errors.py
 ${PYSITELIB}/hy/errors.pyc
 ${PYSITELIB}/hy/errors.pyo
@@ -89,9 +91,6 @@ ${PYSITELIB}/hy/models/integer.pyo
 ${PYSITELIB}/hy/models/keyword.py
 ${PYSITELIB}/hy/models/keyword.pyc
 ${PYSITELIB}/hy/models/keyword.pyo
-${PYSITELIB}/hy/models/lambdalist.py
-${PYSITELIB}/hy/models/lambdalist.pyc
-${PYSITELIB}/hy/models/lambdalist.pyo
 ${PYSITELIB}/hy/models/list.py
 ${PYSITELIB}/hy/models/list.pyc
 ${PYSITELIB}/hy/models/list.pyo
