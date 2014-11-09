@@ -1,8 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2013/02/07 13:41:55 obache Exp $
-lib/pkgconfig/ruby-gdk3.pc
+@comment $NetBSD: PLIST,v 1.2 2014/11/09 06:27:03 obache Exp $
 ${RUBY_VENDORLIB}/gdk3.rb
-${RUBY_VENDORLIB}/gdk3/base.rb
+${RUBY_VENDORLIB}/gdk3/atom.rb
+${RUBY_VENDORLIB}/gdk3/cairo.rb
+${RUBY_VENDORLIB}/gdk3/color.rb
 ${RUBY_VENDORLIB}/gdk3/deprecated.rb
-${RUBY_VENDORARCHLIB}/gdk3.${RUBY_DLEXT}
-${RUBY_VENDORARCHLIB}/rbgdk3.h
-${RUBY_VENDORARCHLIB}/rbgdk3conversions.h
+${RUBY_VENDORLIB}/gdk3/event.rb
+${RUBY_VENDORLIB}/gdk3/loader.rb
+${RUBY_VENDORLIB}/gdk3/rectangle.rb
+${RUBY_VENDORLIB}/gdk3/rgba.rb
+${RUBY_VENDORLIB}/gdk3/window-attr.rb
+${RUBY_VENDORLIB}/gdk3/window.rb

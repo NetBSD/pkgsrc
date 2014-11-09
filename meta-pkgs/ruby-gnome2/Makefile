@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/01/14 12:01:51 obache Exp $
+# $NetBSD: Makefile,v 1.23 2014/11/09 06:27:02 obache Exp $
 #
 
 PKGNAME=	${RUBY_PKGPREFIX}-gnome2-${VERSION}
@@ -15,7 +15,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-clutter>=${VERSION}:../../graphics/ruby-gnome
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-clutter-gtk>=${VERSION}:../../graphics/ruby-gnome2-clutter-gtk
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gdk3>=${VERSION}:../../graphics/ruby-gnome2-gdk3
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gdkpixbuf>=${VERSION}:../../graphics/ruby-gnome2-gdkpixbuf
-DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-goocanvas>=${VERSION}:../../graphics/ruby-gnome2-goocanvas
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-rsvg>=${VERSION}:../../graphics/ruby-gnome2-rsvg
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-clutter-gstreamer>=${VERSION}:../../multimedia/ruby-gnome2-clutter-gstreamer
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gstreamer>=${VERSION}:../../multimedia/ruby-gnome2-gstreamer
