@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4230 2014/11/09 16:12:15 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4231 2014/11/09 16:13:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5352,3 +5352,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/p5-DateTime-TimeZone to 1.78 [wiz 2014-11-09]
 	Updated devel/py-tortoisehg to 3.2 [wiz 2014-11-09]
 	Updated audio/musicpd to 0.18.17 [wiz 2014-11-09]
+	Updated time/py-pytz to 2014.9 [wiz 2014-11-09]
