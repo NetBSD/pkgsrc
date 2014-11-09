@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4233 2014/11/09 16:56:46 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.4234 2014/11/09 19:33:42 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5355,3 +5355,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/py-pytz to 2014.9 [wiz 2014-11-09]
 	Updated multimedia/gstreamer1 to 1.4.4 [wiz 2014-11-09]
 	Updated graphics/py-qrcode to 5.1 [rodent 2014-11-09]
+	Updated lang/py-hy to 0.10.1 [rodent 2014-11-09]
