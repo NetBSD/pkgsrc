@@ -1,25 +1,25 @@
-$NetBSD: patch-ad,v 1.6 2014/02/16 18:57:17 sno Exp $
+$NetBSD: patch-ad,v 1.7 2014/11/09 12:35:56 wiz Exp $
 
 Perl in pkgsrc doesn't install or tweak perllocal.pod, so comment
 out that test.
 
---- t/INSTALL_BASE.t.orig	2013-09-12 20:16:09.000000000 +0000
+--- t/INSTALL_BASE.t.orig	2014-11-06 21:39:33.000000000 +0000
 +++ t/INSTALL_BASE.t
-@@ -13,7 +13,7 @@ use Config;
- use Test::More
-     $ENV{PERL_CORE} && $Config{'usecrosscompile'}
-     ? (skip_all => "no toolchain installed when cross-compiling")
--    : (tests => 20);
-+    : (tests => 18);
- use MakeMaker::Test::Utils;
- use MakeMaker::Test::Setup::BFD;
+@@ -20,7 +20,7 @@ use Config;
+ use ExtUtils::MM;
+ plan !MM->can_run(make()) && $ENV{PERL_CORE} && $Config{'usecrosscompile'}
+     ? (skip_all => "cross-compiling and make not available")
+-    : (tests => 3 + $CLEANUP + @INSTDIRS * (15 + $CLEANUP));
++    : (tests => 3 + $CLEANUP + @INSTDIRS * (15 + $CLEANUP) - 4);
  
-@@ -58,7 +58,7 @@ my @installed_files =
-   ('../dummy-install/lib/perl5/Big/Dummy.pm',
-    '../dummy-install/lib/perl5/Big/Liar.pm',
-    '../dummy-install/bin/program',
--   "../dummy-install/lib/perl5/$Config{archname}/perllocal.pod",
-+#  "../dummy-install/lib/perl5/$Config{archname}/perllocal.pod",
-    "../dummy-install/lib/perl5/$Config{archname}/auto/Big/Dummy/.packlist"
-   );
+ my $Is_VMS = $^O eq 'VMS';
+ 
+@@ -64,7 +64,7 @@ for my $instdir (@INSTDIRS) {
+     ("$instdir/lib/perl5/Big/Dummy.pm",
+      "$instdir/lib/perl5/Big/Liar.pm",
+      "$instdir/bin/program",
+-     "$instdir/lib/perl5/$Config{archname}/perllocal.pod",
++     #"$instdir/lib/perl5/$Config{archname}/perllocal.pod",
+      "$instdir/lib/perl5/$Config{archname}/auto/Big/Dummy/.packlist"
+     );
  
