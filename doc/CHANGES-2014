@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4217 2014/11/09 02:46:44 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4218 2014/11/09 03:23:14 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5317,3 +5317,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/gnome-desktop3 to 3.14.1 [prlw1 2014-11-08]
 	Added devel/libsafec version 10052013 [agc 2014-11-08]
 	Updated inputmethod/scim to 1.4.15 [obache 2014-11-09]
+	Updated devel/gmake to 4.1nb1 [obache 2014-11-09]
