@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13807 2014/11/07 10:37:12 wiz Exp $
+$NetBSD: TODO,v 1.13808 2014/11/09 13:14:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -980,6 +980,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o reposurgeon-3.10
 	o resize_image-0.7
 	o rhythmbox-3.1
+	o ricty-ttf-3.2.3 [pkg/49038]
 	o rio500-0.8.1
 	o robodoc-4.99.6
 	o root-5.34.01
@@ -1127,6 +1128,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vino-3.12.0
 	o visual-regexp-3.1
 	o vlc-2.1.5 [wip]
+	o vlgothic-ttf-20140801 [pkg/49374]
 	o vm-8.0.7.522 [pkg/37707]
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vte-0.36.0
