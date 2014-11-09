@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4235 2014/11/09 19:46:01 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.4236 2014/11/09 20:19:57 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5357,3 +5357,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/py-qrcode to 5.1 [rodent 2014-11-09]
 	Updated lang/py-hy to 0.10.1 [rodent 2014-11-09]
 	Updated mail/p5-Mail-DeliveryStatus-BounceParser to 1.536 [rodent 2014-11-09]
+	Updated net/py-amqp to 1.4.6 [rodent 2014-11-09]
