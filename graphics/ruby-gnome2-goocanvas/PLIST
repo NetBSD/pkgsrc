@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2013/06/15 09:39:34 obache Exp $
-lib/pkgconfig/ruby-goocanvas.pc
-${RUBY_VENDORLIB}/goo/canvas-item.rb
-${RUBY_VENDORLIB}/goocanvas.rb
-${RUBY_VENDORARCHLIB}/goocanvas.${RUBY_DLEXT}
