@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4225 2014/11/09 12:33:56 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4226 2014/11/09 12:36:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5347,3 +5347,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Class-Singleton to 1.5 [wiz 2014-11-09]
 	Updated databases/p5-DBI to 1.632 [wiz 2014-11-09]
 	Updated devel/p5-ExtUtils-Manifest to 1.68 [wiz 2014-11-09]
+	Updated devel/p5-ExtUtils-MakeMaker to 7.02 [wiz 2014-11-09]
