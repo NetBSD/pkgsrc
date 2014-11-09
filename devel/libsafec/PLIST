@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2014/11/09 01:52:24 agc Exp $
+include/libsafec/safe_lib.h
+include/libsafec/safe_lib_errno.h
+include/libsafec/safe_mem_lib.h
+include/libsafec/safe_str_lib.h
+include/libsafec/safe_types.h
+lib/libsafec-1.0.la
+lib/pkgconfig/safec-1.0.pc
