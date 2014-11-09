@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/11/05 10:35:00 obache Exp $
+# $NetBSD: Makefile,v 1.18 2014/11/09 05:15:07 obache Exp $
 
 DISTNAME=	ibus-table-1.9.1
 CATEGORIES=	inputmethod
@@ -9,6 +9,7 @@ HOMEPAGE=	http://code.google.com/p/ibus/
 COMMENT=	Table engine for IBus platform
 LICENSE=	gnu-lgpl-v2.1
 
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 GNU_CONFIGURE=		yes
