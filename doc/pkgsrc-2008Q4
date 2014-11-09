@@ -1,0 +1,128 @@
+The pkgsrc-2008Q4 Branch
+========================
+ 
+The pkgsrc developers are very proud to announce the new pkgsrc-2008Q4
+branch, which has support for even more packages than previous branches. 
+As well as updated versions of many packages, the infrastructure of
+pkgsrc itself has been improved for better platform and compiler
+support.
+ 
+At the same time, the pkgsrc-2008Q3 branch has been deprecated, and
+continuing engineering starts on the pkgsrc-2008Q4 branch.
+ 
+The pkgsrc-2008Q4 branch celebrates 5 years of quarterly branching
+within pkgsrc, and we would like to thank all of our users and
+developers for using the world's most portable packaging system - to
+all of the users, developers and supporters a very large "Thank you"
+from all of us.
+ 
+Some highlights of the new pkgsrc-2008Q4 branch are:
+ 
++ Jared McNeill has introduced pulseaudio to pkgsrc, which is a huge
+boost, giving pkgsrc the benefits of one of the best audio systems
++ our GNOME packages have been updated by Thomas Klausner, and much
+work has been done on the HAL layer within GNOME by Jared McNeill.  We
+also now have improved zeroconf support through the avahi package -
+our thanks to Adam Hoka for that.
++ more packages have been moved to install into a staging directory,
+thanks to Joerg Sonnenberger
++ improved support for AIX, again, from Joerg Sonnenberger
++ many, many packages have been updated to newer versions, to take
+advantage of fixes and improved functionality.  The following versions
+of packages are included in the pkgsrc-2008Q4 branch:
+ 
+	+ apache-2.2.11
+	+ firefox-2.0.0.19 and firefox-3.0.5nb2
+	+ gnome-2.24.2
+	+ kde-3.5.10
+	+ mysql-5.0.67
+	+ openoffice-2.4.2nb3 and openoffice-3.0.0nb7
+	+ perl-5.10.0
+	+ postgresql-8.2.11 and postgresql-8.3.5
+	+ python-2.5.2nb4
+	+ ruby-1.8.7.22
+	+ samba-3.0.32nb2
+	+ seamonkey-1.1.13
+	+ wireshark-1.0.4nb1
+	+ zope-3.3.1
+ 
++ other notable changes include
+	+ Kouichirou Hiratsuka has added Openoffice 3 to pkgsrc
+	+ Stoned Elipot and Havard Eidnes have made it their personal
+	  goal to incorporate all the CPAN packages into pkgsrc. They
+	  have recently been joined in their quest by Ulrich Habel.
+	+ the vlc package continues to be updated, again by Jared
+	  McNeill - it is now at version 0.9.8a 
+	+ we bid a fond thanks, and farewell, to some old favourites,
+	  such as python 1.5, nail, bidwatcher, jssi, jsdk20, grail,
+	  and zope-2.5
+	+ the perl package has been upgraded to version 5.10 - a
+	  side effect of this is that binary packages of perl modules
+	  made with perl-5.8 and earlier versions are incompatible
+	  with perl-5.10
+	+ the addition of some interesting, pertinent, and shiny
+	  packages such as parpd, openoffice3, twitux, consolekit,
+	  policykit, hal, sslproxy, diffuse, gstfs, openresolv,
+	  and pulseaudio and related packages. 
+ 
+The list of platforms supported by pkgsrc is AIX, BSD/OS, Darwin (Mac
+OS X), DragonFly BSD, FreeBSD, HP/UX, IRIX, Interix, Linux, NetBSD,
+OSF1, OpenBSD, QNX and SunOS (Solaris).  We are aware that support for
+some platforms is at a more mature stage than others, and would like
+to encourage feedback from users and developers on our more esoteric
+platforms.
+ 
++ continuing engineering on the "stable" branches of pkgsrc continues
+to work well, and our release engineering team has done a marvellous
+job in pulling up changes to the stable branch.  Our thanks go to
+Geert Hendrickx, Matthias Scheler, and Tyler Retzlaff for all the hard
+work they do in sanity checking pullup requests, and managing the
+stable branches in pkgsrc.
+ 
++ constant bulk building on a number of platforms has improved our
+ability to identify potential areas of concern, and to correct them
+sooner.  It has also improved our ability to make binary packages
+available, and we are working on ways to improve this further.  For
+more information, please refer to the pkgsrc-bulk mailing list,
+archives available at
+ 
+	http://mail-index.netbsd.org/pkgsrc-bulk/
+ 
++ the number of packages has been increased to 8121; the number of
+supported platforms is currently 14, with another one on the horizon. 
+NetBSD, on all its supported architectures, is considered to be one
+pkgsrc platform.
+ 
+As always, we'd like to encourage users of the packages collection to
+audit-packages at least every day - this will provide notification of
+any packages which are vulnerable to exploit.  Audit-packages is now
+part of the new pkg_install tools, and is now much quicker.  We have
+removed the old audit-packages package in this pkgsrc release. 
+ 
+OBATA Akio has been a member of the pkgsrc-security team for some time
+now, adding to Adrian Portelli and Tonnerre Lombard, and has made a
+lot of additions to the list of vulnerable packages - a very useful
+and thorough job - we are grateful to them all.  The pkgsrc-security team
+do a marvellous job in tracking notifications of vulnerabilities in
+packages, and disseminating this information, and our sincere thanks
+go to them for this essential work.
+ 
+We'd also really appreciate it if people would install the
+pkgsrc/pkgtools/pkgsurvey package, and then run the pkgsurvey script
+for us.  This will forward us a list of the packages installed on that
+machine, and the operating system and release level of the operating
+system.  The results will be kept confidential, but the output will
+help us analyse the packages that are most used.
+ 
+The source tar files for the new branch can be found at:
+ 
+	ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2008Q4/pkgsrc-2008Q4.tar.gz
+		or
+	ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2008Q4/pkgsrc-2008Q4.tar.bz2
+ 
+You can also use the "pkgsrc-2008Q4" tag to check it out yourself from
+anoncvs.NetBSD.org or any of the mirrors.
+ 
+Alistair Crooks
+On behalf of the Packages Team
+The NetBSD Foundation
