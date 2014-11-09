@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4227 2014/11/09 12:44:51 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4228 2014/11/09 12:45:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5349,3 +5349,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-ExtUtils-Manifest to 1.68 [wiz 2014-11-09]
 	Updated devel/p5-ExtUtils-MakeMaker to 7.02 [wiz 2014-11-09]
 	Updated devel/p5-Inline-C to 0.65 [wiz 2014-11-09]
+	Updated time/p5-DateTime-TimeZone to 1.78 [wiz 2014-11-09]
