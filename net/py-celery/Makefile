@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2014/08/07 02:36:59 rodent Exp $
+# $NetBSD: Makefile,v 1.5 2014/11/09 20:47:58 rodent Exp $
 #
 
-DISTNAME=	celery-3.1.13
+DISTNAME=	celery-3.1.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	https://pypi.python.org/packages/source/c/celery/
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd AND cc-by-nc-sa-v3.0-license
 
 DEPENDS+=	${PYPKGPREFIX}-anyjson-[0-9]*:../../textproc/py-anyjson
 DEPENDS+=	${PYPKGPREFIX}-billiard>=3.3.0.18:../../parallel/py-billiard
-DEPENDS+=	${PYPKGPREFIX}-kombu>=3.0.21:../../net/py-kombu
+DEPENDS+=	${PYPKGPREFIX}-kombu>=3.0.22:../../net/py-kombu
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 
 USE_LANGUAGES=	c
