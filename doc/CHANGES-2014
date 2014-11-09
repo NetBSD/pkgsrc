@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4221 2014/11/09 11:19:16 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4222 2014/11/09 11:59:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5343,3 +5343,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/ruby-gnome2-gtksourceview3 to 2.2.3 [obache 2014-11-09]
 	Updated graphics/libsixel to 1.3.3 [obache 2014-11-09]
 	Updated net/mikutter to 3.0.9 [obache 2014-11-09]
+	Updated www/p5-URI to 1.65 [wiz 2014-11-09]
