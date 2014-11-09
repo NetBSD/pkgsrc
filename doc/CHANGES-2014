@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4215 2014/11/08 23:15:29 prlw1 Exp $
+$NetBSD: CHANGES-2014,v 1.4216 2014/11/09 01:54:19 agc Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5315,3 +5315,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added textproc/p5-Swim version 0.1.31 [schmonz 2014-11-08]
 	Updated x11/rgb to 1.0.6 [wiz 2014-11-08]
 	Updated x11/gnome-desktop3 to 3.14.1 [prlw1 2014-11-08]
+	Added devel/libsafec version 10052013 [agc 2014-11-08]
