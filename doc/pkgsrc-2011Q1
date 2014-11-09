@@ -1,0 +1,101 @@
+The pkgsrc-2011Q1 Branch
+========================
+ 
+The pkgsrc developers are happy to announce the new pkgsrc-2011Q1
+branch, which has support for even more packages than previous
+branches. Some major packages have also been updated in this release.
+ 
+At the same time, the pkgsrc-2010Q4 branch has been deprecated, and
+continuing engineering starts on the pkgsrc-2011Q1 branch.
+ 
+Some highlights of the new pkgsrc-2011Q1 branch are:
+ 
++ MirBSD support was added to pkgsrc; see
+  http://www.mirbsd.org/pkgsrc.htm for details
++ We're aiming to make this the last branch to support non-DESTDIR packages.
+  We have almost finished the transition to DESTDIR installation, where
+  a staging directory is used to make a binary package, which is then
+  managed by the pkg_install tools.
++ GNOME has been mostly updated to version 2.32.0, KDE4 to 4.5.5.
++ The conversion from the last teTeX distribution to texlive
+  (currently 2010) is still in progress.
++ png was updated to the newest stable 1.5 branch.
++ Some packages still using GTK 1 were removed; we're in the process
+  of fading out support for it.
++ Modern ada packages were added, like gnat-aux
++ Other notable changes include
+	+ We bid a fond thanks, and farewell, to some old favourites,
+	  mostly gtk1 users.
+	+ The addition of some interesting, pertinent, and shiny
+	  packages such as window (:-) - brought over from NetBSD's
+	  src archive), many tex packages, most gmpc plugins.
+	+ Notable updates to packages such as roundcube, tmux,
+	  shotwell, jpeg, png, gbrainy, ikiwiki, scmgit, opera, xchm,
+	  nmap, sqlite3, finch/pidgin, dovecot2, mercurial, unrar,
+	  clamav, ntop, xz, many many ruby packages, lots of Linux
+	  emulation support packages, quvi, kid3, jabberd2, gnucash,
+	  pkgin, exiv2, vlc, mkvtoolnix, kdbg, monotone, libzip,
+	  boost, wesnoth, gnumeric, unison, postfix, mldonkey, gcc44,
+	  wordpress, ncurses, samba, firefox, seamonkey, thunderbird,
+	  curl, bluefish, vala, bash, p7zip, php53, exim, sudo, atf,
+	  and filezilla.
+ 
++ The "Package of the Quarter" award is hereby awarded to dovecot2,
+nominated by Matthias Scheler.
+ 
+The list of platforms supported by pkgsrc is AIX, BSD/OS, Darwin (Mac
+OS X), DragonFly BSD, FreeBSD, Haiku, HP/UX, IRIX, Interix, Linux,
+MirBSD, NetBSD, OpenIndiana, OSF1, OpenBSD, QNX, and SunOS (Solaris). We
+are aware that support for some platforms is at a more mature stage
+than others, and would like to encourage feedback from users and
+developers on our more esoteric platforms.
+ 
++ Continuing engineering on the "stable" branches of pkgsrc continues
+to work well, and our release engineering team has done a marvelous
+job in pulling up changes to the stable branch.  Our thanks go to
+Matthias Scheler, Steven Drake, S.P.Zeidler, and Eric Schnoebelen
+for all the hard work they do in sanity checking pullup requests, and
+managing the stable branches in pkgsrc.
+ 
++ Constant bulk building on a number of platforms has improved our
+ability to identify potential areas of concern, and to correct them
+sooner.  It has also improved our ability to make binary packages
+available, and we are working on ways to improve this further.  For
+more information, please refer to the pkgsrc-bulk mailing list,
+archives available at
+ 
+	http://mail-index.netbsd.org/pkgsrc-bulk/
+ 
++ The number of packages has grown to 10973; the number of
+supported platforms is currently 17.  NetBSD, on all its supported
+architectures, is considered to be one pkgsrc platform.
+ 
+As always, we'd like to encourage users of the packages collection to
+audit for security problems at least every day using "pkg_admin audit"
+- this will provide notification of any packages which are vulnerable
+to exploit.  pkg_admin is part of the pkg_install tools.
+ 
+The pkgsrc-security team do a marvelous job in tracking notifications
+of vulnerabilities in packages, and disseminating this information,
+and our sincere thanks go to them for this essential work.
+ 
+We'd also really appreciate it if people would install the
+pkgsrc/pkgtools/pkgsurvey package, and then run the pkgsurvey script
+for us. This will forward us a list of the packages installed on that
+machine, and the operating system and release level of the operating
+system. The results will be kept confidential, but the output will
+help us analyse the packages that are most used.
+ 
+The source tar files for the new branch can be found at:
+ 
+    	http://downloads.pkgsrc.org/
+		or
+	http://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2011Q1/pkgsrc.tar.gz
+		or
+	http://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2011Q1/pkgsrc.tar.bz2
+ 
+You can also use the "pkgsrc-2011Q1" tag to check it out yourself from
+anoncvs.NetBSD.org or any of the mirrors.
+ 
+Thomas Klausner
+On behalf of the pkgsrc developers
