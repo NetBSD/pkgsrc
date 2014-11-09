@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/01/14 12:01:51 obache Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/11/09 06:27:03 obache Exp $
 lib/pkgconfig/ruby-gstreamer.pc
 ${RUBY_VENDORLIB}/gst.rb
 ${RUBY_VENDORLIB}/gst/base-loader.rb
@@ -11,4 +11,5 @@ ${RUBY_VENDORLIB}/gst/element.rb
 ${RUBY_VENDORLIB}/gst/plugin-feature.rb
 ${RUBY_VENDORLIB}/gst/registry.rb
 ${RUBY_VENDORLIB}/gst/structure.rb
+${RUBY_VENDORLIB}/gstreamer.rb
 ${RUBY_VENDORARCHLIB}/gstreamer.${RUBY_DLEXT}
