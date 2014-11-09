@@ -1,0 +1,123 @@
+The pkgsrc-2009Q4 Branch
+========================
+
+The pkgsrc developers are happy to announce the new pkgsrc-2009Q4
+branch, which has support for even more packages than previous
+branches. Some major packages have also been updated in this release.
+
+At the same time, the pkgsrc-2009Q3 branch has been deprecated, and
+continuing engineering starts on the pkgsrc-2009Q4 branch.
+
+Some highlights of the new pkgsrc-2009Q4 branch are:
+
++ a new version of libtool (2.2.6b) is being used
++ many more packages have been modified to handle DESTDIR installation
++ gnome has been updated to version 2.28.1, kde to 4.3.4
++ many, many packages have been updated to newer versions, to take
+  advantage of fixes and improved functionality.  The following
+  versions of packages are included in the pkgsrc-2009Q4 branch:
+
+        + apache-2.2.14
+        + bzr-2.0.1
+        + firefox-3.5.6
+        + git-1.6.6 (the package is known as scmgit in pkgsrc)
+        + gnome-2.28.1
+        + kde-3.5.10nb4 and 4.3.4
+        + mercurial-1.4.1
+        + mysql-5.0.88
+        + openoffice-3.1.1
+        + perl-5.10.1
+        + postgresql-8.3.9 and postgresql-8.4.2
+        + python-2.5.4nb5 and python-2.6.4nb4
+        + ruby-1.8.7.174nb2
+        + samba-3.0.37
+        + seamonkey-2.0.1
+        + subversion-1.6.5
+        + wireshark-1.2.6
+        + zope-3.3.1
+
++ other notable changes include
+        + we bid a fond thanks, and farewell, to some old favourites,
+          such as firefox3-bin, lyx-qt and lyx-xforms (replaced by lyx),
+          zip1 (replaced by zip), ghostscript6, xfce3 (replaced by xfce4)
+          and dovecot-sieve (replaced by the sieve option to dovecot)
+        + the addition of some interesting, pertinent, and shiny
+          packages such as fossil, bzr-explorer, openjdk7, echinus,
+          pfe, kegs, rcfunge, clang, libmicro, ktorrent3, datadraw,
+          topless, typolight28, neb-wipe, openmpi, and tint2
+        + notable updates to packages such as autoconf, boehm-gc,
+          boost, bzr, clamav, compiz, curl, ecl, exim, fontforge,
+          freeradius2, getmail, glib2, gnuplot, gnutls, gpsd, ikiwiki,
+          kde, libtorrent and rtorrent, memtestplus, nagios, netpgp,
+          nsd, ntp4, nullmailer, octave, openldap, openresolv,
+          openvpn, parrot, pcre, pear, perl5, pngcrush, puppet,
+          py-anita, qbzr, qemu, qt4, roundcube, rox, rump, sigil,
+          squid, thunderbird, tmux, tor, vte, wget, wireshark,
+          xentools33, xlockmore, and xulrunner
+
++ the "Package of the Quarter" award is hereby awarded jointly to
+clang, the compiler and lowlevel virtual machine infrastructure
+nominated by Matthias Drochner, and to compiz, the compositing window
+manager, nominated by iMil.  An honorable mention, too, to openmpi,
+nominated by Aleksej Saushev, and with thanks to Kevin Buckley for his
+work on it.
+
+The list of platforms supported by pkgsrc is AIX, BSD/OS, Darwin (Mac
+OS X), DragonFly BSD, FreeBSD, HP/UX, IRIX, Interix, Linux, NetBSD,
+OSF1, OpenBSD, QNX and SunOS (Solaris).  We are aware that support for
+some platforms is at a more mature stage than others, and would like
+to encourage feedback from users and developers on our more esoteric
+platforms.
+
++ continuing engineering on the "stable" branches of pkgsrc continues
+to work well, and our release engineering team has done a marvelous
+job in pulling up changes to the stable branch.  Our thanks go to
+Geert Hendrickx, Matthias Scheler, Lubomir Sedlacik, Tyler Retzlaff,
+and S.P.Zeidler for all the hard work they do in sanity checking
+pullup requests, and managing the stable branches in pkgsrc.
+
++ constant bulk building on a number of platforms has improved our
+ability to identify potential areas of concern, and to correct them
+sooner.  It has also improved our ability to make binary packages
+available, and we are working on ways to improve this further.  For
+more information, please refer to the pkgsrc-bulk mailing list,
+archives available at
+
+        http://mail-index.netbsd.org/pkgsrc-bulk/
+
++ the number of packages has grown from 8969 to 9100; the number of
+supported platforms is currently 14, with another one on the horizon. 
+NetBSD, on all its supported architectures, is considered to be one
+pkgsrc platform.
+
++ Julio M. Merino Vidal has added some new auto-update functionality
+for NetBSD-current's periodic checks.
+
+As always, we'd like to encourage users of the packages collection to
+audit-packages at least every day - this will provide notification of
+any packages which are vulnerable to exploit.  Audit-packages is part
+of the pkg_install tools.
+
+The pkgsrc-security team do a marvelous job in tracking notifications
+of vulnerabilities in packages, and disseminating this information,
+and our sincere thanks go to them for this essential work.
+
+We'd also really appreciate it if people would install the
+pkgsrc/pkgtools/pkgsurvey package, and then run the pkgsurvey script
+for us.  This will forward us a list of the packages installed on that
+machine, and the operating system and release level of the operating
+system.  The results will be kept confidential, but the output will
+help us analyse the packages that are most used.
+
+The source tar files for the new branch can be found at:
+
+        ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2009Q4/pkgsrc.tar.gz
+                or
+        ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2009Q4/pkgsrc.tar.bz2
+
+You can also use the "pkgsrc-2009Q4" tag to check it out yourself from
+anoncvs.NetBSD.org or any of the mirrors.
+
+Alistair Crooks
+On behalf of the Packages Team
+The NetBSD Foundation

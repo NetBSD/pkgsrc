@@ -1,0 +1,162 @@
+pkgsrc-2014Q2
+=============
+The pkgsrc team is proud to announce the availability of the
+pkgsrc-2014Q2 branch.  We welcome python-3.4, as well as many new and
+updated packages, a new default postgreSQL version, 9.3, and Lua
+multi-version support.
+ 
+Number of Packages
+==================
+In pkgsrc, there are:
+ 
+14895 possible pkgsrc packages in pkgsrc-2014Q2
+12116 pkgsrc entries as reported by lintpkgsrc (unique package Makefiles)
+14254 binary packages built with gcc for NetBSD-current/x86_64
+14895 binary packages built with clang for NetBSD-current/x86_64
+12037 binary packages built with gcc for Joyent's SmartOS/i386
+12635 binary packages built with gcc for Joyent's SmartOS/x86_64
+13118 binary packages built with gcc for Linux-2.6.32/x86_64
+10868 binary packages built with gcc for Darwin 10.8.0/i386
+12316 binary packages built with clang for FreeBSD 10.0/x86_64
+ 
+In addition, this quarter:
+244 packages have been added
+2 packages have been renamed
+18 packages removed, 1 with a successor
+1085 packages updated
+ 
+Pkgsrc Release Schedule
+=======================
+The pkgsrc developers make a new release every three months.  We
+believe that this is a sweet spot between too many updates, and
+keeping abreast of issues like security vulnerabilities.  Pkgsrc is
+not tied to any one operating system or architecture, which gives us
+the ability to decouple the releases from any operating system
+releases, and to concentrate on the packages themselves.
+ 
+This is the 43rd quarterly release of pkgsrc.
+ 
+Changes to pkgsrc
+=================
+Ryosuke Moro has greatly improved on our haskell package support. 
+Many pkgsrc developers and contributors have all all helped with PR
+submissions, fixes and bug reports.
+ 
+By default, pkgsrc now installs fonts into share/fonts/X11 (instead of
+lib/X11/fonts, which was for historical reasons). There should be no
+visible change to most users, except if the fontpath has been changed.
+ 
+In addition, PostgreSQL 9.3 has now been made the default version, and
+Lua multi-version support has been added.
+ 
+Package Additions
+=================
+python-3.4 and elasticsearch were added to pkgsrc, as well as python,
+perl and ruby wrappers for many libraries.
+ 
+Package Removals
+================
+We actively manage the packages in pkgsrc, and delete ones that are
+not necessary.  We said goodbye to Berkeley db-4.6, Xen 2.0 and Apache
+versions 1.3 and 2.0.
+ 
+Pkgsrc-security
+===============
+One neat feature of pkgsrc is its ability to sort package versions
+based on the version numbers.  It's used in audit-packages, to report
+on any installed packages which may have security vulnerabilities in
+them.  pkgsrc-security@pkgsrc.org maintains lists of vulnerable
+packages, along with reference URLs relating to the exposure.  We
+thank the whole pkgsrc-security team for their hard work.  Sample
+output from audit-packages is shown below:
+ 
+% audit-packages
+Package python27-2.7.7nb1 has a directory-traversal vulnerability, see http://bugs.python.org/issue21766
+%
+ 
+Getting pkgsrc
+==============
+More information can be found in
+        http://www.netbsd.org/docs/pkgsrc/getting.html
+ 
+tar files for pkgsrc, along with checksums, can be found at
+        http://ftp.netbsd.org/pub/pkgsrc/pkgsrc-2014Q2/
+ 
+and anonymous cvs can be used:
+        cvs -z3 -q -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -r 
+pkgsrc-2014Q2 -P pkgsrc
+ 
+or by pulling from the git mirrors at:
+        https://github.com/jsonn/pkgsrc
+        https://github.com/joyent/pkgsrc
+ 
+About pkgsrc
+============
+pkgsrc is a cross-platform packaging system.  It allows people to
+download sources and to build and install binary packages on one or
+more platforms.
+ 
+Building packages from source is useful for a number of reasons:
+ 
++ not only is the provenance of source code checked (by using multiple
+checksums), with pkgsrc, the version of source code you are working
+with is the same that other developers and users have.
+ 
++ package builders can choose to customise their own installations by
+means of the option framework.  pre-built packages from other builders
+may not have specified the same options.
+ 
++ patches are maintained in a central repository, and, again, are
+checked at patch application time by using digests. The patches
+which are applied to the sources being built are the same ones which
+are known to be used and proved by other pkgsrc users (not necessarily
+on the same platform).
+ 
++ by building from source, all doubts about compilers, build practices,
+source code cleanliness, and packaging differences are removed. 
+Digital signatures of binary packages, while useful in themselves,
+only prove certain aspects of binary package provenance. (pkgsrc has
+had signed packages since 2001.)
+ 
++ it may be difficult or impossible to find a pre-built package for
+the operating system or architecture.
+ 
++ a pre-built package may have further or conflicting pre-requisites,
+which are themselves difficult to find or build. By building everything,
+including pre-requisites, a from-source packaging system can ensure
+that pre-requisites are present and integrated.
+ 
+At the present time, pkgsrc supports 22 platforms:
+ 
+        AIX
+        BSDOS
+        Cygwin
+        Darwin/Mac OS X
+        DragonFly
+        FreeBSD
+        FreeMiNT
+        GNU/kFreeBSD
+        HPUX
+        Haiku
+        IRIX
+        Interix/SFU/SUA
+        Linux
+        Minix3
+        MirBSD
+        NetBSD
+        OSF1
+        OpenBSD
+        QNX
+        SCO OpenServer
+        Solaris/illumos
+        UnixWare
+ 
+Complete dependency and pre-requisite package information is held and
+used by the package management software - if packages rely on other
+packages to function properly, that pre-requisite will be built,
+installed and managed as part of the package installation process. 
+Binary packages can be managed using pkgin.
+ 
+Alistair Crooks
+On behalf of the pkgsrc developers
+Tue Jul  1 08:29:47 PDT 2014

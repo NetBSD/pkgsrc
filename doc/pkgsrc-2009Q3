@@ -1,0 +1,111 @@
+The pkgsrc-2009Q3 Branch
+========================
+ 
+The pkgsrc developers are happy to announce the new pkgsrc-2009Q3
+branch, which has support for even more packages than previous
+branches.  As well as updated versions of many packages, the
+infrastructure of pkgsrc itself has been improved for better platform
+and compiler support.
+ 
+At the same time, the pkgsrc-2009Q2 branch has been deprecated, and
+continuing engineering starts on the pkgsrc-2009Q3 branch.
+ 
+Some highlights of the new pkgsrc-2009Q3 branch are:
+ 
++ the pkg_install infrastructure has been updated again
++ kde4 is available in pkgsrc for the very first time
++ Matthias Scheler has provided initial support for Mac OS X Snow Leopard 
++ many, many packages have been updated to newer versions, to take
+  advantage of fixes and improved functionality.  The following
+  versions of packages are included in the pkgsrc-2009Q3 branch:
+ 
+	+ apache-2.2.13nb3
+	+ firefox-3.5.3
+	+ git-1.6.4
+	+ gnome-2.26.2nb1
+	+ kde-3.5.10nb4 and 4.3.1
+	+ mercurial-1.3.1
+	+ mysql-5.0.67nb3
+	+ openoffice-3.1.1
+	+ perl-5.10.0nb6
+	+ postgresql-8.3.8 and postgresql-8.4.1
+	+ python-2.5.4nb3 and python-2.6.2nb1
+	+ ruby-1.8.7.174nb2
+	+ samba-3.0.37
+	+ seamonkey-1.1.18
+	+ subversion-1.6.5
+	+ wireshark-1.2.2
+	+ zope-3.3.1
+ 
++ other notable changes include
+	+ we bid a fond thanks, and farewell, to some old favourites,
+	  such as postgresql-8.1, sendmail-8.1.3, python-2.3, and openpbs
+	+ the addition of some interesting, pertinent, and shiny
+	  packages such as wbd, libmtag, picard, pigz, lzip, mono-nat,
+	  fuse-mp3fs, bubblemon, py-openid, luajit, dash, ario, mkcue,
+	  flactag, unac, postgres-8.4, filezilla, udns, xulrunner, sigil,
+	  libev, ssss, ical2rem, ocp, gupnp-igd, farsight2, hugin, 
+	  asymptote, libasyncns, milkytracker, pkgsrc-todo, gbemol,
+	  re-alpine, devkitd, gcc44, and kde4
+ 
++ the "Package of the Month" award has been resurrected, thanks to
+  Antti Kantee, and is awarded to pkgsrc/misc/py-anita - anita uses
+  qemu to download a NetBSD/i386 distribution and install it, and
+  boots the installed system to a "login:" prompt.
+ 
+The list of platforms supported by pkgsrc is AIX, BSD/OS, Darwin (Mac
+OS X), DragonFly BSD, FreeBSD, HP/UX, IRIX, Interix, Linux, NetBSD,
+OSF1, OpenBSD, QNX and SunOS (Solaris).  We are aware that support for
+some platforms is at a more mature stage than others, and would like
+to encourage feedback from users and developers on our more esoteric
+platforms.
+ 
++ continuing engineering on the "stable" branches of pkgsrc continues
+to work well, and our release engineering team has done a marvellous
+job in pulling up changes to the stable branch.  Our thanks go to
+Geert Hendrickx, Matthias Scheler, Lubomir Sedlacik, Tyler Retzlaff,
+and S.P.Zeidler for all the hard work they do in sanity checking
+pullup requests, and managing the stable branches in pkgsrc.
+ 
++ constant bulk building on a number of platforms has improved our
+ability to identify potential areas of concern, and to correct them
+sooner.  It has also improved our ability to make binary packages
+available, and we are working on ways to improve this further.  For
+more information, please refer to the pkgsrc-bulk mailing list,
+archives available at
+ 
+	http://mail-index.netbsd.org/pkgsrc-bulk/
+ 
++ the number of packages has been increased to 8969 from 8852; the
+number of supported platforms is currently 14, with another one on the
+horizon.  NetBSD, on all its supported architectures, is considered to
+be one pkgsrc platform.
+ 
+As always, we'd like to encourage users of the packages collection to
+audit-packages at least every day - this will provide notification of
+any packages which are vulnerable to exploit.  Audit-packages is part
+of the pkg_install tools.
+ 
+The pkgsrc-security team do a marvellous job in tracking notifications
+of vulnerabilities in packages, and disseminating this information,
+and our sincere thanks go to them for this essential work.
+ 
+We'd also really appreciate it if people would install the
+pkgsrc/pkgtools/pkgsurvey package, and then run the pkgsurvey script
+for us.  This will forward us a list of the packages installed on that
+machine, and the operating system and release level of the operating
+system.  The results will be kept confidential, but the output will
+help us analyse the packages that are most used.
+ 
+The source tar files for the new branch can be found at:
+ 
+	ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2009Q3/pkgsrc-2009Q3.tar.gz
+		or
+	ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2009Q3/pkgsrc-2009Q3.tar.bz2
+ 
+You can also use the "pkgsrc-2009Q3" tag to check it out yourself from
+anoncvs.NetBSD.org or any of the mirrors.
+ 
+Alistair Crooks
+On behalf of the Packages Team
+The NetBSD Foundation

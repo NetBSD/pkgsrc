@@ -1,0 +1,180 @@
+pkgsrc-2012Q3
+=============
+ 
+The pkgsrc team is proud to announce the availability of the
+pkgsrc-2012Q3 branch.  There are many new packages, and some bug
+fixes.  More work has gone into making packages build with clang (as
+well as different versions of gcc), and pkgsrc actively maintains
+packages, removing unused or abandoned packages, while still adding
+new ones.
+ 
+www.pkgsrc.org was converted to a wiki. We hope the contents will be a
+bit less static now and keep you better informed about changes in
+pkgsrc.
+ 
+Lots of works was done this quarter on DragonFly and SmartOS (Illumos).
+DragonFly at last count now boasts 11538 binary packages, while the
+latest public bulk build by Joyent reported 9584 binary packages.
+Impressive numbers -- congratulations!
+ 
+Numbers of Packages
+===================
+ 
+In pkgsrc, there are:
+ 
+12014 total packages
+11618 binary packages built with gcc for NetBSD-current/amd64
+11374 binary packages built with clang for NetBSD-current/amd64
+10875 pkgsrc entries
+ 
+135 packages have been added this quarter
+95 packages have been removed this quarter
+Around 1280 packages have been updated this quarter
+ 
+These numbers may not compare exactly to other (binary) packaging
+systems; some packaging systems split large packages like boost up
+into multiple packages, while others keep unused and unbuildable
+packages.
+ 
+Compiler Support
+================
+ 
+As well as using gcc to compile packages, Joerg Sonnenberger has put
+much effort into building packages with clang. At the present time,
+11374 packages can be built using clang.
+ 
+Package Additions
+=================
+ 
+Symbola-ttf, TextFonts-ttf, abcl, apollo, atf-libs, choqok, coilmq,
+dc-tools, delta, dhbitty, eliom, eog3, fdm, filebench, foo2zjs,
+freeDiameter, gcc-aux, gcc47-libs, gedit3, gedit3-spell,
+gnome-desktop3, grub2, gsettings-desktop-schemas, gtksourceview3,
+holtz, iana-etc, irssi-xmpp, js_of_ocaml, konoha, kyua-atf-compat,
+libktorrent, libopus, libpeas, mcollective, mksandbox,
+modular-xorg-protos, mosh, ocaml-bz2, ocaml-curl,
+ocaml-deriving-ocsigen, openafs, openxenmanager, opus-tools, about 45
+perl modules, plink, 11 python modules, qoauth, 6 ruby modules, shtk,
+since, sourcesans-fonts, sysbuild, sysbuild-user, sysupgrade,
+tcl-tDOM, 9 texlive modular packages, virt-manager, virtinst, vte029,
+wargames, wgetpaste, xcb-util-image, xcb-util-keysyms,
+xcb-util-renderutil, xcb-util-wm, xcb-util036, xdvipdfmx, zsync
+ 
+Package Removals
+================
+ 
+ArX, asterisk-sounds-extra, asterisk16, centericq, gcc3-java,
+jitterbug, the merb package, obconf, ruby-psych, ruby19, scim-bridge,
+simian, simian-docs, sope, the suse113 emulation packages, tcl-tclX,
+thy, tk-expect, tk-tclX
+ 
+For the next branch, we plan removing samba30; samba33 is scheduled
+for removal for 2013Q2.
+ 
+This is also the last branch to contain python25 (it was EOL'd about a
+year ago).
+ 
+Other packages scheduled for removal are:
+databases/sqlsharpgtk
+devel/stlport
+textproc/p5-PDF-API2-Simple
+misc/p5-Locale-Maketext
+lang/pnet*
+lang/gcc3-ada
+lang/gcc34-ada
+ 
+Pkgsrc-security
+===============
+One neat feature of pkgsrc is its ability to sort package versions
+based on the version numbers.  It's used in audit-packages, to report
+on any installed packages which may have security vulnerabilities in
+them.  pkgsrc-security@pkgsrc.org maintains lists of vulnerable
+packages, along with reference URLs relating to the exposure.  We
+thank OBATA Akio, Daniel Horecki, Guillaume Lasmayous, and Tim
+Zingelman for their hard work.  Sample output from audit-packages is
+shown below:
+ 
+% audit-packages
+Package openjpeg-1.5.0nb1 has a arbitrary-code-execution vulnerability, see
+http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-3535
+%
+ 
+Package of the Quarter
+======================
+Jorg Sonnenberger suggested clang, for making development fun again.
+Alistair Crooks suggested ikiwiki, in honor of the new pkgsrc.org website.
+ 
+Getting pkgsrc
+==============
+While more information can be found in
+        http://www.netbsd.org/docs/pkgsrc/getting.html
+ 
+tar files for pkgsrc, along with checksums, can be found at
+        http://ftp.netbsd.org/pub/pkgsrc/pkgsrc-2012Q3/
+ 
+and anonymous cvs can be used:
+        cvs -z3 -q -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -r pkgsrc-2012Q3 -P pkgsrc
+ 
+About pkgsrc
+============
+pkgsrc is a cross-platform packaging system.  It allows people to
+download source, and to build and install binary packages on one or
+more platforms.
+ 
+Building packages from source is useful for a number of reasons:
+ 
++ not only is the provenance of source code checked (by using multiple
+checksums), with pkgsrc, the version of source code you are working
+with is the same that other developers and users have.
+ 
++ patches are maintained in a central repository, and, again, are
+checked at patch application time by using digests. The patches
+which are applied to the sources being built are the same ones which
+are known to be used and proved by other pkgsrc users (not necessarily
+on the same platform)
+ 
++ by building from source, all doubts about compilers, build practices
+source code cleanliness, and packaging differences are removed. 
+Digital signatures of binary packages, while useful in themselves,
+only prove certain aspects of binary package provenance.  (pkgsrc has
+had signed packages since 2001).
+ 
++ it may be difficult or impossible to find a pre-built package for
+the operating system or architecture
+ 
++ a pre-built package may have further or conflicting pre-requisites,
+which are themselves difficult to find or build. By building everything,
+including pre-requisites, a from-source packaging system can ensure
+that pre-requisites are present and integrated
+ 
+At the present time, pkgsrc supports 19 platforms
+ 
+        AIX
+        BSDOS
+        Darwin/Mac OS X
+        DragonFly
+        FreeBSD
+        FreeMiNT
+        HPUX
+        Haiku
+        IRIX
+        Interix/SFU/SUA
+        Linux
+        Minix3
+        MirBSD
+        NetBSD
+        OSF1
+        OpenBSD
+        QNX
+	Solaris/Illumos
+        UnixWare
+ 
+Complete dependency and pre-requisite package information is held and
+used by the package management software - if packages rely on other
+packages to function properly, that pre-requisite will be built,
+installed and managed as part of the package installation process. 
+Binary packages can be managed using pkgin.
+ 
+Thomas Klausner
+On behalf of the pkgsrc developers
+Mon Oct  1 09:58:15 CEST 2012

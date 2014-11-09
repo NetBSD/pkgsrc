@@ -1,0 +1,61 @@
+The pkgsrc-2010Q4 branch was created in pkgsrc at 2011-01-11 04:20 UTC.
+
+There are 10483 packages in this branch.
+
+Headline versions of packages:
+apache-2.2.17			www/apache-22
+bzr-2.1.1			devel/bzr
+firefox-3.6.13			www/firefox
+git-1.7.3.4			devel/scmgit
+gnome-2.32.1 (mostly)		meta-pkgs/gnome-platform
+kde-4.5.4			meta-pkgs/kde4
+mercurial-1.7.2			devel/mercurial
+mysql-client-5.1.1		databases/mysql51-client
+mysql-server-5.1.1		databases/mysql51-server
+openoffice-3.1.1nb9		misc/openoffice3
+openoffice-bin-3.2.1nb1		misc/openoffice3-bin
+perl-5.12.2nb1			lang/perl5
+php-5.3.5			lang/php53
+postgresql83-8.3.13		databases/postgresql83
+postgresql84-8.4.6		databases/postgresql84
+postgresql90-9.0.2		databases/postgresql90
+python-2.5.5nb1			lang/python25
+python-2.6.6nb5			lang/python26
+ruby18-1.8.7.330		lang/ruby
+ruby19-1.9.2pl136		lang/ruby19
+samba-3.3.14nb1			net/samba33
+samba-3.5.6			net/samba35
+seamonkey-2.0.11		www/seamonkey
+subversion-1.6.15		devel/subversion
+wireshark-1.4.3			net/wireshark
+zope3-3.3.1nb1			www/zope3
+
+Removed packages:
+gqview-gtk1, ibus-table-array30, ibus-table-extraphrase, hcidump,
+postgresql82 (EOL), tex-apilike, and tex-apilike-doc
+
+New packages (selection):
+libAppleWM, monodevelop-database, kdenlive, opendkim, flashrom, dcc,
+cyrus-imapd24, dovecot2, cfengine3, libpbc, some TeX packages, libraw,
+shotwell, dconf, libtomcrypt, ldpc, knock, xournal, ficl, samba35,
+libjpeg-turbo, quvi, asterisk18, renderproto9, supertuxkart,
+boomerang, netbt-hcidump, cutter, mypaint, fml, and gajim.
+
+Infrastructure changes:
+None
+
+Pkgsrc platforms:
+AIX, BSD/OS, Darwin (Mac OS X), DragonFly, FreeBSD, FreeMiNT, HP/UX,
+Haiku, IRIX, Interix, Linux, NetBSD, OSF/1, OpenBSD, SunOS (Solaris),
+and UnixWare
+
+releng-pkgsrc team:
+tron sbd spz salo rtr pettai schnoebe
+
+pkgsrc-security team:
+joerg kefren obache gls tez tnn tonnerre wiz pettai
+
+Over 1000 Secunia advisories evaluated and 269 entries added or
+updated in vulnerability audit database.
+
+

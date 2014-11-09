@@ -1,0 +1,96 @@
+The pkgsrc-2006Q2 Branch
+========================
+ 
+The pkgsrc developers are very proud to announce the new pkgsrc-2006Q2
+branch, which has support for more packages than previous branches. 
+As well as updated versions of many packages, the infrastructure of
+pkgsrc itself has been improved for better platform and compiler
+support, and also for enhanced security.
+ 
+At the same time, the pkgsrc-2006Q1 branch has been deprecated, and
+continuing engineering starts on the pkgsrc-2006Q2 branch.
+ 
+Some highlights of the new pkgsrc-2006Q2 branch are:
+ 
++ many, many packages have been updated to newer versions, to take
+advantage of fixes and improved functionality.  This includes
+ 
+	+ gnome-2.14
+	+ kde-3.5.3
+	+ opera-9.0
+	+ perl-5.8.8
+	+ postgresql-8.1.4
+	+ thunderbird-1.5.0.4
+	+ split the openldap package into constituent parts
+	+ reorganised the webmin packages and plugins
+	+ revamped most of the pkgsrc infrastructure to make it much
+	  more efficient and maintainable
+	+ the addition of some pertinent bright, shiny packages such
+	  as seamonkey, pgadmin3, ggrab, jack, mpeg4ip, jamvm, uucp,
+	  cherokee, sgb, javacc, spl, slony1, dtach
+	+ a considerable number of fixes for much better DragonFly BSD
+	  operation, which will also benefit a lot of pkgsrc platforms,
+	  with thanks to Joerg Sonnenberger
+ 
+The full list of platforms supported by pkgsrc is:  AIX, BSD/OS,
+Darwin (Mac OS X), DragonFly BSD, FreeBSD, IRIX, Interix, Linux,
+NetBSD, OSF1, OpenBSD, and SunOS (Solaris).  NetBSD-1.6 has been
+declared end-of-life, and pkgsrc will now be de-emphasising support
+for it, too.  We would also like to add support for more platforms -
+please get in touch if you, too, are interested.
+ 
++ following DragonFly BSD's adoption of pkgsrc as their packaging
+system, Joerg Sonnenberger has continued to make a lot of changes,
+which include a number of modifications for packages which use POSIX
+threading libraries, and also enhanced support for gcc 3.4 and above
+ 
++ as mentioned before, the infrastructure for pkgsrc has been
+rewritten, to make it much more modular and efficient.  In addition, a
+number of new features have been introduced which will benefit pkgsrc
+users on platforms other than NetBSD, and stricter checking of the
+packing list files.
+ 
++ continuing engineering on the "stable" branches of pkgsrc has been
+much improved, and our thanks to the pkgsrc releng team for all the
+hard work they do in sanity checking pullup requests, and managing
+the stable branches in pkgsrc.
+ 
++ constant bulk building on a number of platforms has improved our
+ability to identify potential areas of concern, and to correct them
+sooner.  It has also improved our ability to make binary packages
+available, and we are working on ways to improve this further.  For
+more information, please refer to the pkgsrc-bulk mailing list,
+archives available at
+ 
+	http://mail-index.netbsd.org/pkgsrc-bulk/
+ 
++ the number of packages has been increased to 6110; the number of
+supported platforms continues to be 12.  NetBSD, on all its supported
+architectures, is considered to be one pkgsrc platform.
+ 
+As always, we'd like to encourage users of the packages collection to
+install and run pkgsrc/security/audit-packages at least every day -
+this will provide notification of any packages which are vulnerable to
+exploit.  The pkgsrc-security team do a marvellous job in tracking
+notifications of vulnerabilities in packages, and disseminating this
+information, and our sincere thanks go to them for this essential work.
+ 
+We'd also really appreciate it if people would install the
+pkgsrc/pkgtools/pkgsurvey package, and then run the pkgsurvey script
+for us.  This will forward us a list of the packages installed on that
+machine, and the operating system and release level of the operating
+system.  The results will be kept confidential, but the output will
+help us analyse the packages that are most used.
+ 
+The source tar files for the new branch can be found at:
+ 
+	ftp://ftp.NetBSD.org/pub/pkgsrc/2006Q2/pkgsrc-2006Q2.tar.gz
+		or
+	ftp://ftp.NetBSD.org/pub/pkgsrc/2006Q2/pkgsrc-2006Q2.tar.bz2
+ 
+You can also use the "pkgsrc-2006Q2" tag to check it out yourself from
+anoncvs.NetBSD.org or any of the mirrors.
+ 
+Alistair Crooks
+On behalf of the Packages Team
+The NetBSD Foundation

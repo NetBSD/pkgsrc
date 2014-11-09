@@ -1,0 +1,117 @@
+The pkgsrc-2007Q4 Branch
+========================
+ 
+The pkgsrc developers are very proud to announce the new pkgsrc-2007Q4
+branch, which has support for more packages than previous branches. 
+As well as updated versions of many packages, the infrastructure of
+pkgsrc itself has been improved for better platform and compiler
+support.
+ 
+At the same time, the pkgsrc-2007Q3 branch has been deprecated, and
+continuing engineering starts on the pkgsrc-2007Q4 branch.
+ 
+This branch celebrates the tenth anniversary of pkgsrc, and we would
+like to take this opportunity to thank all of the people who have made
+pkgsrc the most portable packaging system in the world - to all of the
+users, developers and supporters a very large "Thank you" from all of
+us.
+ 
+Some highlights of the new pkgsrc-2007Q4 branch are:
+ 
++ many, many packages have been updated to newer versions, to take
+advantage of fixes and improved functionality.  The following versions
+of packages are included in the pkgsrc-2007Q4 branch:
+ 
+	+ apache-2.2.6
+	+ firefox-2.0.0.11
+	+ gnome-2.20.2
+	+ kde-3.5.8
+	+ mysql-5.0.51
+	+ openoffice-2.3.1
+	+ opera-9.25
+	+ postgresql-8.2.5
+	+ ruby-1.8.6.111
+	+ samba-3.0.26a
+	+ seamonkey-1.1.7
+	+ thunderbird-2.0.0.9
+	+ wireshark-0.99.7
+	+ zope 2.9.8, 2.10.5 and 3.3.1
+ 
++ other changes include
+	+ a number of packages have been updated to include "DESTDIR"
+	  installation, whereby staging areas are used to install the
+	  package, and a binary package suitable for onward installation
+	  can be made. The DESTDIR installation  method is completely
+	  optional. Standard installation is still fully supported,
+	  and is still the default. Work continues in this area.
+	  For more information on DESTDIR installation, please refer
+	  to the pkgsrc guide
+	+ the addition of a framework for managing binary-only
+	  packages that require and support binary emulation, by
+	  Johnny Lam
+	+ we have continued to develop our "filesystems" category
+	+ the addition of some pertinent bright, shiny packages such
+	  as ldapvi, mcast-tools, ssmping, aria2, open-vm-tools,
+	  jdom, xf86-video-radeonhd, ap2-wsgi, gsnmp, snow, openwbem,
+	  alephone, oak, thaixfonts, netbiff, awesome, herrie, pixman,
+	  cstore, sqlgrey, cone, netbsd-iscsi-initiator, whois3,
+	  psftools, qt4-tiff, rtunes, djview4, fuse-chironfs, climm,
+	  ilmbase, camlp5, qt4-qdbus, nginx, isc-dhcp, fuse-svnfs, 
+	  and plone3.
+ 
+The list of platforms supported by pkgsrc is AIX, BSD/OS, Darwin (Mac
+OS X), DragonFly BSD, FreeBSD, HP/UX, IRIX, Interix, Linux, NetBSD,
+OSF1, OpenBSD, QNX and SunOS (Solaris).  We are aware that support for
+some platforms is at a more mature stage than others, and would like
+to encourage feedback from users and developers on our more esoteric
+platforms. To illustrate this point, a number of developers have
+worked hard to improve support for Mac OS X Leopard - Matthias Scheler
+and a number of others have improved support to the point where a
+number of key packages like perl and apache are now supported.
+ 
++ continuing engineering on the "stable" branch of pkgsrc continues,
+and our thanks to the pkgsrc releng team for all the hard work they do
+in sanity checking pullup requests, and managing the stable branch
+in pkgsrc.
+ 
++ constant bulk building on a number of platforms has improved our
+ability to identify potential areas of concern, and to correct them
+sooner.  It has also improved our ability to make binary packages
+available, and we are working on ways to improve this further.  For
+more information, please refer to the pkgsrc-bulk mailing list,
+archives available at
+ 
+	http://mail-index.netbsd.org/pkgsrc-bulk/
+ 
++ the number of packages has been increased to 7472; the number of
+supported platforms is currently 14.  NetBSD, on all its supported
+architectures, is considered to be one pkgsrc platform.
+ 
+As always, we'd like to encourage users of the packages collection to
+audit-packages at least every day - this will provide notification of
+any packages which are vulnerable to exploit.  As mentioned earlier,
+this is part of the new pkg_install tools, and is now much quicker. 
+We shall be removing the old package in the next pkgsrc release.  The
+pkgsrc-security team do an outstanding job in tracking notifications
+of vulnerabilities in packages, and disseminating this information,
+and our sincere thanks go to them for this essential work.
+ 
+We'd also really appreciate it if people would install the
+pkgsrc/pkgtools/pkgsurvey package, and then run the pkgsurvey script
+for us.  This will forward us a list of the packages installed on that
+machine, and the operating system and release level of the operating
+system.  The results will be kept confidential, but the output will
+help us analyse the packages that are most used.
+ 
+The source tar files for the new branch can be found at:
+ 
+	ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2007Q4/pkgsrc-2007Q4.tar.gz
+		or
+	ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2007Q4/pkgsrc-2007Q4.tar.bz2
+ 
+You can also use the "pkgsrc-2007Q4" tag to check it out yourself from
+anoncvs.NetBSD.org or any of the mirrors.
+ 
+Alistair Crooks
+On behalf of the Packages Team
+The NetBSD Foundation

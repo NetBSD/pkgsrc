@@ -1,0 +1,171 @@
+pkgsrc-2014Q3
+=============
+The pkgsrc team is proud to announce the availability of the
+pkgsrc-2014Q3 branch.  We welcome gcc-4.9 packages, say hello to
+snobol again, note that some R packages have moved within pkgsrc to
+better reflect their functionality, and X11 on netbsd-5 now defaults
+to modular.
+ 
+Number of Packages
+==================
+In pkgsrc, there are:
+ 
+15186 possible pkgsrc packages in pkgsrc-2014Q3
+12335 pkgsrc entries as reported by lintpkgsrc (unique package Makefiles)
+14741 binary packages built with clang for NetBSD-current/x86_64
+13120 binary packages built with gcc for Joyent's SmartOS/i386
+13026 binary packages built with gcc for Joyent's SmartOS/x86_64
+13484 binary packages built with gcc for Linux-2.6.32/x86_64
+11478 binary packages built with gcc for Darwin 10.8.0/i386
+12363 binary packages built with clang for FreeBSD 10.0/x86_64
+(also 13016 binary packages built with dash as shell and gcc for Joyent's SmartOS/i386)
+ 
+In addition, this quarter:
+210 packages have been added
+3 packages have been renamed
+15 packages removed, 12 with a successor
+1123 packages updated
+ 
+Pkgsrc Release Schedule
+=======================
+The pkgsrc developers make a new release every three months.  We
+believe that this is a sweet spot between too many updates, and
+keeping abreast of issues like security vulnerabilities.  Pkgsrc is
+not tied to any one operating system or architecture, which gives us
+the ability to decouple the releases from any operating system
+releases, and to concentrate on the packages themselves.
+ 
+This is the 44th quarterly release of pkgsrc.
+ 
+Changes to pkgsrc
+=================
+Ryosuke Moro continues to improve our haskell package support. 
+Many pkgsrc developers and contributors have all all helped with PR
+submissions, fixes and bug reports.
+ 
+Package Additions
+=================
+gcc-4.9 and tinyxml2 were added to pkgsrc, as well as python, perl and
+ruby wrappers for many libraries.  It's also worth noting that the
+bash patch from pkgsrc to disable function definitions in the
+environment, made by Christos Zoulas, has been adopted by many in
+mitigating the shellshock bug.
+ 
+Package Removals
+================
+We actively manage the packages in pkgsrc, and delete ones that are
+not necessary.  We said goodbye to subversion-1.6 and eric3 for this
+branch.
+ 
+Other Changes
+=============
+Greg Troxel made the default X11 version for NetBSD-5 to be the
+modular X11 as found in pkgsrc.  The march of the haskell pkgsrc
+entries continues, thanks to Ryosuke Moro.  We welcome reports for
+building pkgtools/cwrapper on exotic platforms.  It will soon become a
+central part of the pkgsrc infrastructure.  All feedback to Joerg
+Sonnenberger (joerg@pkgsrc.org) or tech-pkg@pkgsrc.org, please.
+ 
+Pkgsrc-security
+===============
+One neat feature of pkgsrc is its ability to sort package versions
+based on the version numbers.  It's used in audit-packages, to report
+on any installed packages which may have security vulnerabilities in
+them.  pkgsrc-security@pkgsrc.org maintains lists of vulnerable
+packages, along with reference URLs relating to the exposure.  We
+thank the whole pkgsrc-security team for their hard work.  Sample
+output from audit-packages is shown below:
+ 
+% audit-packages
+Package bash-4.3 has a arbitrary-code-execution vulnerability, see http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6271
+Package bash-4.3 has a arbitrary-code-execution vulnerability, see http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-7169
+%
+ 
+Getting pkgsrc
+==============
+More information can be found in
+        http://www.netbsd.org/docs/pkgsrc/getting.html
+ 
+tar files for pkgsrc, along with checksums, can be found at
+        http://ftp.netbsd.org/pub/pkgsrc/pkgsrc-2014Q3/
+ 
+and anonymous cvs can be used:
+        cvs -z3 -q -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -r 
+pkgsrc-2014Q3 -P pkgsrc
+ 
+or by pulling from the git mirrors at:
+        https://github.com/jsonn/pkgsrc
+        https://github.com/joyent/pkgsrc
+or the mercurial mirror at:
+	https://bitbucket.org/agc/pkgsrc.hg
+ 
+About pkgsrc
+============
+pkgsrc is a cross-platform packaging system.  It allows people to
+download sources and to build and install binary packages on one or
+more platforms.
+ 
+Building packages from source is useful for a number of reasons:
+ 
++ not only is the provenance of source code checked (by using multiple
+checksums), with pkgsrc, the version of source code you are working
+with is the same that other developers and users have.
+ 
++ package builders can choose to customise their own installations by
+means of the option framework.  pre-built packages from other builders
+may not have specified the same options.
+ 
++ patches are maintained in a central repository, and, again, are
+checked at patch application time by using digests. The patches
+which are applied to the sources being built are the same ones which
+are known to be used and proved by other pkgsrc users (not necessarily
+on the same platform).
+ 
++ by building from source, all doubts about compilers, build practices,
+source code cleanliness, and packaging differences are removed. 
+Digital signatures of binary packages, while useful in themselves,
+only prove certain aspects of binary package provenance. (pkgsrc has
+had signed packages since 2001.)
+ 
++ it may be difficult or impossible to find a pre-built package for
+the operating system or architecture.
+ 
++ a pre-built package may have further or conflicting pre-requisites,
+which are themselves difficult to find or build. By building everything,
+including pre-requisites, a from-source packaging system can ensure
+that pre-requisites are present and integrated.
+ 
+At the present time, pkgsrc supports 22 platforms:
+ 
+        AIX
+        BSDOS
+        Cygwin
+        Darwin/Mac OS X
+        DragonFly
+        FreeBSD
+        FreeMiNT
+        GNU/kFreeBSD
+        HPUX
+        Haiku
+        IRIX
+        Interix/SFU/SUA
+        Linux
+        Minix3
+        MirBSD
+        NetBSD
+        OSF1
+        OpenBSD
+        QNX
+        SCO OpenServer
+        Solaris/illumos
+        UnixWare
+ 
+Complete dependency and pre-requisite package information is held and
+used by the package management software - if packages rely on other
+packages to function properly, that pre-requisite will be built,
+installed and managed as part of the package installation process. 
+Binary packages can be managed using pkgin.
+ 
+Alistair Crooks
+On behalf of the pkgsrc developers
+Wed Oct  1 01:20:50 UTC 2014

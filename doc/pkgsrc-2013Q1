@@ -1,0 +1,179 @@
+pkgsrc-2013Q1
+=============
+ 
+The pkgsrc team is proud to announce that pkgsrc-2013Q1 is available.
+As usual, this release includes many new packages and updates.
+ 
+pkgsrc releases take place at the end of every quarter. The
+pkgsrc-2013Q1 release is the 50th release of pkgsrc.
+ 
+To honor this release, we've finally decided on a logo for pkgsrc.
+It follows the design by Chris Wareham and Lubomir Sedlacik,
+implemented by Dieter Baron. Thank you!
+ 
+Take a look at it on the pkgsrc wiki: http://www.pkgsrc.org
+ 
+This version adds support for Cygwin. More work to be done, but you
+should be able to build some packages already.
+ 
+This will be the last release supporting ruby-1.8. Please migrate to
+ruby-1.9.
+ 
+About pkgsrc
+============
+ 
+pkgsrc is a framework allowing third-party software to be built,
+installed, and managed in a consistent, logical and easy manner. The
+framework is portable across operating systems, making it easy to
+support diverse systems from Windows to BSD, and including Linux and
+Mac OS X - see below for a complete list of platforms.
+ 
+pkgsrc allows end users or system administrators to build their own
+binary packages from source, or to use pre-built binary packages that
+were themselves built from source using the pkgsrc framework. The
+resulting binary packages can be downloaded if necessary, installed,
+and manipulated using simple tools provided with pkgsrc, or using more
+sophisticated binary package managers such as pkgin and nih.
+ 
+The pkgsrc project distributes the framework that can be used to build
+packages on all the supported platforms. The project also distributes
+binary packages for a few of the supported platforms. Third parties
+may distribute binary packages for some platforms.
+ 
+At the present time, pkgsrc supports 20 platforms:
+ 
+        AIX
+        BSDOS
+        Cygwin
+        Darwin/Mac OS X
+        DragonFly
+        FreeBSD
+        FreeMiNT
+        Haiku
+        HPUX
+        Interix/SFU/SUA
+        IRIX
+        Linux
+        Minix3
+        MirBSD
+        NetBSD
+        OpenBSD
+        OSF1
+        QNX
+        SunOS/Solaris/SmartOS
+        UnixWare
+ 
+Numbers of Packages
+===================
+ 
+The total number of packages provided by pkgsrc-2013Q1 is:
+ 
+12111 total pkgsrc entries
+181 packages have been added this quarter
+60 packages have been removed this quarter
+1270 packages have been updated this quarter
+1 package has been renamed this quarter
+1 package has been moved this quarter
+ 
+The latest figures we have for available binary packages are:
+ 
+11141 binary packages built with gcc for NetBSD-5.1/i386
+11660 binary packages built with clang for NetBSD-current/amd64
+11105 binary packages for Dragonfly-3.3/i386
+10595 binary packages for Linux-3.2.7/x86_64
+ 9888 binary packages for SunOS-5.11/i386
+ 9840 binary packages for SunOS-5.11/x86_64
+ 
+These numbers may not compare exactly to other (binary) packaging
+systems; some packaging systems split large packages like boost up
+into multiple packages, while others keep unused and unbuildable
+packages.
+ 
+Changes this quarter
+====================
+ 
+A large amount of work has been done this quarter to building packages
+on different platforms with newer compilers.
+ 
+The default version of the PHP language was raised to 5.4.
+ 
+The default version for MySQL was also raised, to 5.5.
+ 
+ghostscript was split into two packages: ghostscript-gpl (the older
+version, available under the GPL) and ghostscript-agpl (the current
+version, available under the AGPL) since the AGPL is not in the
+default-allowed licenses for pkgsrc.
+ 
+transmission-gui was split in two packages, transmission-gtk and
+transmission-qt.
+ 
+New packages include R-intervals, ansible, autoconf-archive, bwping,
+cantarell-fonts, compat packages for NetBSD 5.0, 5.1, and 6.0
+consolamono-ttf, courier-prime, cvsps3, a few deforaos packages, dhex,
+di, docx2txt, eigen3, electrix, euca2ools, firefox17,
+gimp-high-pass-filter, google-glog, gxmessage, gyp, i3, ibniz,
+ibus-mozc, icinga-base, ipv6-toolkit, isl, java-rxtx, jsMath-fonts,
+kyua-testers, labelnation, libexecinfo, libint, libnetpgpverify,
+libsodium, libuv, log2timeline, lua-lpeg, lxsession, menu-cache, mimp,
+minimalist, mozc-elisp, mozc-server, mozc-tool, mpqc, mysql-5.6
+packages, nagios-plugin-dumpdates, nagios-plugin-raidctl,
+netpgpverify, nginx-devel, nss-pgsql, open-vcdiff, openvpn-nagios,
+around 17 perl packages, pam-pgsql, pear-Math_BigInteger, perltidy,
+php-pdo_odbc, php-piwigo, php-sugarcrm, php-tt-rss,
+php-zendoptimizerplus, py-beets, py-flask, py-tornado, about 26 more
+Python packages, qcomicbook, qpdf, qpdfview, rabbiter, reposurgeon,
+around 34 ruby packages, se, squid3, stud, subversion16, tex-textcase,
+tex-textcase-doc, tktable, toppler, transmission-gtk, transmission-qt,
+tweak, uncrustify, uqm, user_cygwin, xdot, zoneminder.
+ 
+Package of the Quarter
+======================
+ 
+Aleksej Saushev recommends MPI-3 support via MPICH 3 and MPQC for
+those interested in quantum chemistry.
+ 
+OBATA Akio nominates Mozc, a modern Japanese Input Method Editor.
+ 
+Advantages of pkgsrc
+====================
+ 
+Advantages of using pkgsrc rather than either building from source
+without using pkgsrc, or installing pre-built binary software without
+using pkgsrc, include:
+ 
++ not only is the provenance of source code checked (by using multiple
+checksums), with pkgsrc, the version of source code you are working
+with is the same that other developers and users have.
+ 
++ patches are maintained in a central repository, and, again, are
+checked at patch application time by using digests. The patches which
+are applied to the sources being built are the same ones which are
+known to be used and proved by other pkgsrc users (not necessarily on
+the same platform)
+ 
++ by building from source, all doubts about compilers, build practices
+source code cleanliness, and packaging differences are removed.
+Digital signatures of binary packages, while useful in themselves,
+only prove certain aspects of binary package provenance. (pkgsrc has
+had support for signed packages since 2001.)
+ 
++ pkgsrc provides a mechanism to install a package for the relevant
+operating system or architecture if such a package hasn't been created
+by the software vendor or third party or is difficult to find.
+ 
++ With pkgsrc, complete dependency and pre-requisite package
+information is held and used by the package management software - if
+packages rely on other packages to function properly, that
+pre-requisite will be built or downloaded if necessary, installed, and
+managed as part of the package installation process.
+ 
++ local or site options which span packages can be set in a standard
+way
+ 
++ pkgsrc includes a framework for linking only with pre-requisite
+packages which are explicitly named; no "build system package" leakage
+can take place
+ 
+Thomas Klausner
+On behalf of the pkgsrc developers
+Mon Apr  1 16:45:00 CEST 2013

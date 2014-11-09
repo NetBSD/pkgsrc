@@ -1,0 +1,164 @@
+pkgsrc-2012Q4
+=============
+The pkgsrc team is proud to announce that pkgsrc-2012Q4 is available. 
+This release marks the 15th birthday of pkgsrc (the first entries were
+added in October 1997), and this release includes many new packages
+and updates.
+ 
+pkgsrc is a framework allowing third-party software to be built,
+installed, and managed in a consistent, logical and easy manner.  The
+resulting binary packages can be manipulated using binary package
+managers like pkgin and nih.  The framework is portable across
+operating systems, making it easy to support diverse systems from
+Windows to BSD, and including Linux and Mac OS X - see below for a
+complete list of platforms.
+ 
+pkgsrc releases take place at the end of every quarter.  The
+pkgsrc-2012Q4 release is the 49th release of pkgsrc.
+ 
+Numbers of Packages
+===================
+The latest figures we have for different platforms, include:
+ 
+11942 total packages for NetBSD-current/amd64
+11229 binary packages built with gcc for NetBSD-current/amd64
+11336 binary packages built with clang for NetBSD-current/amd64
+10265 binary packages for Linux-3.2.7/x86_64
+9519 binary packages for SunOS-5.11/x86_64
+11105 binary packages for Dragonfly-3.3/i386
+10985 pkgsrc entries
+ 
+178 packages have been added this quarter
+30 packages have been removed this quarter
+1259 packages have been updated this quarter
+2 packages have been renamed this quarter
+ 
+It is interesting to note that, according to pkgsrc-bulk figures on
+NetBSD-current/amd64 bulk builds, more packages now build with clang
+than with gcc - thanks to Joerg Sonnenberger.
+ 
+These numbers may not compare exactly to other (binary) packaging
+systems; some packaging systems split large packages like boost up
+into multiple packages, while others keep unused and unbuildable
+packages.  A large amount of work has been done this quarter to
+building packages on different platforms with newer compilers.  The
+total number of packages has actually gone down since the summer,
+mainly due to the removal of support for two older versions of python.
+ 
+New packages include contao30, deforaos, ffmpeg-1.0.1, freeswitch
+sounds, json-c, KeePass, moneyguru, motif-2.3.4, otptool, podcastdl,
+polysh, postgres92, python-3.3, sun-jdk7, sun-jre7, swig2
+ 
+Notable updates include asterisk, automake, bacula, bind, boost,
+cairo, cdrtools, cflow, coccinelle, cscope, curl, django, dovecot,
+drupal7, fetchmail, firefox, gcc47, git (as scmgit), glusterfs,
+gnome3, gnuplot, gnustep, gv, heimdal, hydrogen, ikiwiki, jenkins,
+kde, knot, libevent, libreoffice, mercurial, modular-xorg-server,
+mono, ng, openjpeg, openldap, openmpi, opensc, pidgin, pkgin, png,
+postfix, postgres91, postgresql92, qrencode, R, roundcube, samba,
+seamonkey, sqlite3, thunderbird, Transmission, typo3, valgrind, viewvc
+webmin, wireshark, xlockmore, xterm, xulrunner
+ 
+Pkgsrc-security
+===============
+One neat feature of pkgsrc is its ability to sort package versions
+based on the version numbers.  It's used in audit-packages, to report
+on any installed packages which may have security vulnerabilities in
+them.  pkgsrc-security@pkgsrc.org maintains lists of vulnerable
+packages, along with reference URLs relating to the exposure.  We
+thank OBATA Akio, Daniel Horecki, Guillaume Lasmayous, and Tim
+Zingelman for their hard work.  Sample output from audit-packages is
+shown below:
+ 
+% audit-packages
+Package libtasn1-2.11 has a local-system-compromise vulnerability, see 
+http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-1569
+Package gnutls-2.12.14nb1 has a local-system-compromise vulnerability, see 
+http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-1573
+%
+ 
+Getting pkgsrc
+==============
+While more information can be found in
+        http://www.netbsd.org/docs/pkgsrc/getting.html
+ 
+tar files for pkgsrc, along with checksums, can be found at
+        http://ftp.netbsd.org/pub/pkgsrc/pkgsrc-2012Q4/
+ 
+and anonymous cvs can be used:
+        cvs -z3 -q -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -r 
+pkgsrc-2012Q4 -P pkgsrc
+ 
+ 
+Package of the Quarter
+======================
+Thomas Klausner nominated pkgsrc/print/lilypond, a music typesetter,
+Jared Mcneill nominated samba (used with pam-mkhomedir to integrate
+with Active Directory), and Jeff Rizzo nominated pkgin, rsync and zsh
+as being ubiquitous on machines he used.
+ 
+About pkgsrc
+============
+The strengths of building packages from source are that:
+ 
++ not only is the provenance of source code checked (by using multiple
+checksums), with pkgsrc, the version of source code you are working
+with is the same that other developers and users have.
+ 
++ patches are maintained in a central repository, and, again, are
+checked at patch application time by using digests. The patches
+which are applied to the sources being built are the same ones which
+are known to be used and proved by other pkgsrc users (not necessarily
+on the same platform)
+ 
++ by building from source, all doubts about compilers, build practices,
+source code cleanliness, and packaging differences are removed. 
+Digital signatures of binary packages, while useful in themselves,
+only prove certain aspects of binary package provenance.  (pkgsrc has
+had signed packages since 2001.)
+ 
++ it may be difficult or impossible to find a pre-built package for
+the operating system or architecture
+ 
++ a pre-built package may have further or conflicting pre-requisites,
+which are themselves difficult to find or build. By building everything,
+including pre-requisites, a from-source packaging system can ensure
+that pre-requisites are present and integrated
+ 
++ local or site options which span packages can be set in a standard way
+ 
++ pkgsrc includes a framework for linking only with pre-requisite
+packages which are explicitly named; no "build system package"
+leakage can take place
+ 
+At the present time, pkgsrc supports 19 platforms:
+ 
+        AIX
+        BSDOS
+        Darwin/Mac OS X
+        DragonFly
+        FreeBSD
+        FreeMiNT
+        HPUX
+        Haiku
+        IRIX
+        Interix/SFU/SUA
+        Linux
+        Minix3
+        MirBSD
+        NetBSD
+        OSF1
+        OpenBSD
+        QNX
+        SunOS/Solaris/SmartOS
+        UnixWare
+ 
+Complete dependency and pre-requisite package information is held and
+used by the package management software - if packages rely on other
+packages to function properly, that pre-requisite will be built,
+installed and managed as part of the package installation process. 
+Binary packages can be managed using pkgin.
+ 
+Alistair Crooks
+On behalf of the pkgsrc developers
+Thu Jan  3 09:51:17 UTC 2013

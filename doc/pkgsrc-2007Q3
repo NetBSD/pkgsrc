@@ -1,0 +1,109 @@
+The pkgsrc-2007Q3 Branch
+========================
+ 
+The pkgsrc developers are very proud to announce the new pkgsrc-2007Q3
+branch, which has support for more packages than previous branches. 
+As well as updated versions of many packages, the infrastructure of
+pkgsrc itself has been improved for better platform and compiler
+support.
+ 
+At the same time, the pkgsrc-2007Q2 branch has been deprecated, and
+continuing engineering starts on the pkgsrc-2007Q3 branch.
+ 
+This branch celebrates the tenth anniversary of pkgsrc, and we would
+like to take this opportunity to thank all of the people who have made
+pkgsrc the most portable packaging system in the world - to all of the
+users, developers and supporters a very large "Thank you" from all of
+us.
+ 
+Some highlights of the new pkgsrc-2007Q3 branch are:
+ 
++ many, many packages have been updated to newer versions, to take
+advantage of fixes and improved functionality.  The following versions
+of packages are included in the pkgsrc-2007Q3 branch:
+ 
+	+ apache-2.2.6
+	+ firefox-2.0.0.7
+	+ gnome-2.18.1
+	+ kde-3.5.7
+	+ mysql-5.0.45
+	+ openoffice-2.3.0
+	+ opera-9.23
+	+ postgresql-8.2.5
+	+ ruby-1.8.6.111
+	+ samba-3.0.24
+	+ seamonkey-1.1.4
+	+ thunderbird-2.0.0.6
+	+ wireshark-0.99.6
+	+ zope-3.3.1
+ 
++ other changes include
+	+ audit-packages has been rewritten in C to make it perform
+	  better; it has also been merged with pkg_install-20070714
+	  and later versions. pkgsrc now comes with package
+	  auditing built in
+	+ pkg_install has been modified by Joerg Sonnenberger to
+	  bring in some of the pkg_install work he did for the
+	  Google Summer of Code last year
+	+ the addition of a framework for managing binary-only
+	  packages that require and support binary emulation, by
+	  Johnny Lam
+	+ we have continued to develop our "filesystems" category
+	+ the addition of some pertinent bright, shiny packages such
+	  as vym, fuse-afpfs-ng, wpi-firmware2, quilt, freealut,
+	  flightgear, simgear, espeak, glade3, orca, inspircd, 
+	  pidgin, finch, nfdump, claws-mail, xdm, policyd, vbetool,
+	  fuse-wikipediafs, courier, atf, bugzilla3, nipper, youtube-dl,
+	  pound, fpdns, adplug, pcc, and qhull 
+ 
+To the list of platforms supported by pkgsrc - AIX, BSD/OS, Darwin
+(Mac OS X), DragonFly BSD, FreeBSD, HP/UX, IRIX, Interix, Linux,
+NetBSD, OSF1, OpenBSD, and SunOS (Solaris) - we are proud to welcome
+QNX, thanks to Sean Boudreaux.
+ 
++ continuing engineering on the "stable" branches of pkgsrc continues,
+and our thanks to the pkgsrc releng team for all the hard work they do
+in sanity checking pullup requests, and managing the stable branches
+in pkgsrc.
+ 
++ constant bulk building on a number of platforms has improved our
+ability to identify potential areas of concern, and to correct them
+sooner.  It has also improved our ability to make binary packages
+available, and we are working on ways to improve this further.  For
+more information, please refer to the pkgsrc-bulk mailing list,
+archives available at
+ 
+	http://mail-index.netbsd.org/pkgsrc-bulk/
+ 
++ the number of packages has been increased to 7330; the number of
+supported platforms has risen to 14.  NetBSD, on all its supported
+architectures, is considered to be one pkgsrc platform.
+ 
+As always, we'd like to encourage users of the packages collection to
+audit-packages at least every day - this will provide notification of
+any packages which are vulnerable to exploit.  As mentioned earlier,
+this is part of the new pkg_install tools, and is now much quicker. 
+We shall be removing the old package in the next pkgsrc release.
+The pkgsrc-security team do a marvellous job in tracking notifications
+of vulnerabilities in packages, and disseminating this information,
+and our sincere thanks go to them for this essential work.
+ 
+We'd also really appreciate it if people would install the
+pkgsrc/pkgtools/pkgsurvey package, and then run the pkgsurvey script
+for us.  This will forward us a list of the packages installed on that
+machine, and the operating system and release level of the operating
+system.  The results will be kept confidential, but the output will
+help us analyse the packages that are most used.
+ 
+The source tar files for the new branch can be found at:
+ 
+	ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2007Q3/pkgsrc-2007Q3.tar.gz
+		or
+	ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2007Q3/pkgsrc-2007Q3.tar.bz2
+ 
+You can also use the "pkgsrc-2007Q3" tag to check it out yourself from
+anoncvs.NetBSD.org or any of the mirrors.
+ 
+Alistair Crooks
+On behalf of the Packages Team
+The NetBSD Foundation
