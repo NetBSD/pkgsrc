@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2014/07/16 23:18:37 rodent Exp $
+$NetBSD: distinfo,v 1.11 2014/11/09 20:40:01 rodent Exp $
 
-SHA1 (kombu-3.0.21.tar.gz) = df4d46bc4dbdadd121eb7045a576380253cd7081
-RMD160 (kombu-3.0.21.tar.gz) = 5a9df41f36c579b08f025b70b56578d33da4e127
-Size (kombu-3.0.21.tar.gz) = 343363 bytes
+SHA1 (kombu-3.0.23.tar.gz) = c884e4a88f56b9079d81ca82c0459f0973794928
+RMD160 (kombu-3.0.23.tar.gz) = 64f994c6aa72712a4ba0802b30818f3522f9f6b7
+Size (kombu-3.0.23.tar.gz) = 343923 bytes
