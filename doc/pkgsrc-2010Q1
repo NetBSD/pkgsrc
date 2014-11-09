@@ -1,0 +1,126 @@
+The pkgsrc-2010Q1 Branch
+========================
+ 
+The pkgsrc developers are happy to announce the new pkgsrc-2010Q1
+branch, which has support for even more packages than previous
+branches. Some major packages have also been updated in this release.
+ 
+At the same time, the pkgsrc-2009Q4 branch has been deprecated, and
+continuing engineering starts on the pkgsrc-2010Q1 branch.
+ 
+Some highlights of the new pkgsrc-2010Q1 branch are:
+ 
++ we have almost finished the transition to DESTDIR installation, where
+  a staging directory is used to make a binary package, which is then
+  managed by the pkg_install tools
++ gnome has been updated to version 2.28.1, kde to 4.3.5
++ we have started changing packages to default to KDE4 instead of KDE3.
+  For now, the old packages are still available as *-kde3 e.g. amarok
+  is the KDE4 package, and amarok-kde3 is the KDE3 one
++ the default python package is now python26
++ squid 3.1.1 is now in pkgsrc, with some support for IPv6
++ php 5.3.x has been added
++ The conversion from the last teTeX distribution to texlive
+  (currently 2009) is still in progress.
++ many, many packages have been updated to newer versions, to take
+  advantage of fixes and improved functionality.  The following
+  versions of packages are included in the pkgsrc-2010Q1 branch:
+ 
+	+ apache-2.2.15
+	+ bzr-2.0.3
+	+ firefox-3.6.3
+	+ git-1.6.6.2 (the package is known as scmgit in pkgsrc)
+	+ gnome-2.28.1
+	+ kde-4.3.5
+	+ mercurial-1.5.1
+	+ mysql-5.1.44nb2
+	+ openoffice-3.1.1 and openoffice-bin-3.2.0
+	+ perl-5.10.1
+	+ postgresql-8.3.9nb2 and postgresql-8.4.2
+	+ python-2.5.4nb5 and python-2.6.4nb4
+	+ ruby-1.8.7.174nb4
+	+ samba-3.3.12
+	+ seamonkey-2.0.4
+	+ subversion-1.6.9nb1
+	+ wireshark-1.2.7
+	+ zope-3.3.1
+ 
++ other notable changes include
+	+ we bid a fond thanks, and farewell, to some old favourites,
+	  such as php4 and related packages, the old vmware modules
+	  packages, sun's jdk and jre versions 1.4 and 1.5, the ISC
+	  dhcp 3.x packages, galeon, swing, typolight-2.6 and tcl-8.3
+	+ the addition of some interesting, pertinent, and shiny
+	  packages such as tn3270 (:-) - brought over from NetBSD's
+	  src archive), mingw, colordiff, easygit, monotone-el, swt,
+	  fuse-bindfs, php-5.3, samba-3.3, xymon, musca, and qt4-mng
+	+ notable updates to packages such as bsd and gnu tar, amarok,
+	  lame, mpg123, mysql, openldap, postgresql, sqlite, boehm-gc, 
+	  boost, doxygen, fossil, glib, libev, libffi, memcached, nspr,
+	  nss, pango, pcre, rt3, readline, swig, xulrunner, vim, qemu,
+	  chicken, mono, parrot, openjdk7, python, php5, squeak, clamav,
+	  dovecot, fetchmail, getmail, gmime, linmilter, mew, sendmail,
+	  spamassassin, squirrelmail, thunderbird, octave, pari,
+	  calibre, dhcpcd, gupnp, nmap, rdist6, rsync, rtorrent, tnftpd,
+	  tor, transmission, unbound, aide, netpgp, openssl, bash, osh,
+	  tcsh, bacula, cdrtools, memtester, grub, pstree, rasqal, 
+	  openbox, firefox, ikiwiki, lighttpd, mediawiki, nginx, squid,
+	  seamonkey, typolight, gtk2, xsnow
+ 
++ the "Package of the Quarter" award is hereby awarded to qemu,
+nominated by Joerg Sonnenberger, and samba33, nominated by Matthias Scheler.
+ 
+The list of platforms supported by pkgsrc is AIX, BSD/OS, Darwin (Mac
+OS X), DragonFly BSD, FreeBSD, HP/UX, IRIX, Interix, Linux, NetBSD,
+OSF1, OpenBSD, QNX and SunOS (Solaris).  Haiku support is almost ready
+to be added to pkgsrc.  We are aware that support for some platforms
+is at a more mature stage than others, and would like to encourage
+feedback from users and developers on our more esoteric platforms.
+ 
++ continuing engineering on the "stable" branches of pkgsrc continues
+to work well, and our release engineering team has done a marvelous
+job in pulling up changes to the stable branch.  Our thanks go to
+Matthias Scheler, Lubomir Sedlacik, Tyler Retzlaff, and S.P.Zeidler
+for all the hard work they do in sanity checking pullup requests, and
+managing the stable branches in pkgsrc.
+ 
++ constant bulk building on a number of platforms has improved our
+ability to identify potential areas of concern, and to correct them
+sooner.  It has also improved our ability to make binary packages
+available, and we are working on ways to improve this further.  For
+more information, please refer to the pkgsrc-bulk mailing list,
+archives available at
+ 
+	http://mail-index.netbsd.org/pkgsrc-bulk/
+ 
++ the number of packages has grown from 9100 to 9315; the number of
+supported platforms is currently 14.  NetBSD, on all its supported
+architectures, is considered to be one pkgsrc platform.
+ 
+As always, we'd like to encourage users of the packages collection to
+audit for security problems at least every day using "pkg_admin audit"
+- this will provide notification of any packages which are vulnerable
+to exploit.  pkg_admin is part of the pkg_install tools.
+ 
+The pkgsrc-security team do a marvelous job in tracking notifications
+of vulnerabilities in packages, and disseminating this information,
+and our sincere thanks go to them for this essential work.
+ 
+We'd also really appreciate it if people would install the
+pkgsrc/pkgtools/pkgsurvey package, and then run the pkgsurvey script
+for us.  This will forward us a list of the packages installed on that
+machine, and the operating system and release level of the operating
+system.  The results will be kept confidential, but the output will
+help us analyse the packages that are most used.
+ 
+The source tar files for the new branch can be found at:
+ 
+	ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2010Q1/pkgsrc.tar.gz
+		or
+	ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2010Q1/pkgsrc.tar.bz2
+ 
+You can also use the "pkgsrc-2010Q1" tag to check it out yourself from
+anoncvs.NetBSD.org or any of the mirrors.
+ 
+Alistair Crooks
+On behalf of the pkgsrc developers
