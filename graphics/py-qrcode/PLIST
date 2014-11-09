@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2014/07/16 23:36:23 rodent Exp $
-bin/qr
+@comment $NetBSD: PLIST,v 1.3 2014/11/09 16:52:14 rodent Exp $
+bin/qr${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/qrcode/__init__.py
@@ -11,6 +12,9 @@ ${PYSITELIB}/qrcode/__init__.pyo
 ${PYSITELIB}/qrcode/base.py
 ${PYSITELIB}/qrcode/base.pyc
 ${PYSITELIB}/qrcode/base.pyo
+${PYSITELIB}/qrcode/console_scripts.py
+${PYSITELIB}/qrcode/console_scripts.pyc
+${PYSITELIB}/qrcode/console_scripts.pyo
 ${PYSITELIB}/qrcode/constants.py
 ${PYSITELIB}/qrcode/constants.pyc
 ${PYSITELIB}/qrcode/constants.pyo
@@ -35,16 +39,22 @@ ${PYSITELIB}/qrcode/image/svg.pyo
 ${PYSITELIB}/qrcode/main.py
 ${PYSITELIB}/qrcode/main.pyc
 ${PYSITELIB}/qrcode/main.pyo
-${PYSITELIB}/qrcode/mecard.py
-${PYSITELIB}/qrcode/mecard.pyc
-${PYSITELIB}/qrcode/mecard.pyo
-${PYSITELIB}/qrcode/speedy.py
-${PYSITELIB}/qrcode/speedy.pyc
-${PYSITELIB}/qrcode/speedy.pyo
-${PYSITELIB}/qrcode/tests.py
-${PYSITELIB}/qrcode/tests.pyc
-${PYSITELIB}/qrcode/tests.pyo
+${PYSITELIB}/qrcode/tests/__init__.py
+${PYSITELIB}/qrcode/tests/__init__.pyc
+${PYSITELIB}/qrcode/tests/__init__.pyo
+${PYSITELIB}/qrcode/tests/svg.py
+${PYSITELIB}/qrcode/tests/svg.pyc
+${PYSITELIB}/qrcode/tests/svg.pyo
+${PYSITELIB}/qrcode/tests/test_example.py
+${PYSITELIB}/qrcode/tests/test_example.pyc
+${PYSITELIB}/qrcode/tests/test_example.pyo
+${PYSITELIB}/qrcode/tests/test_qrcode.py
+${PYSITELIB}/qrcode/tests/test_qrcode.pyc
+${PYSITELIB}/qrcode/tests/test_qrcode.pyo
+${PYSITELIB}/qrcode/tests/test_script.py
+${PYSITELIB}/qrcode/tests/test_script.pyc
+${PYSITELIB}/qrcode/tests/test_script.pyo
 ${PYSITELIB}/qrcode/util.py
 ${PYSITELIB}/qrcode/util.pyc
 ${PYSITELIB}/qrcode/util.pyo
-share/man/man1/qr.1
+${PKGMANDIR}/man1/qr${PYVERSSUFFIX}.1
