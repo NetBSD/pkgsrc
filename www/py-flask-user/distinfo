@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2014/07/16 23:27:00 rodent Exp $
+$NetBSD: distinfo,v 1.5 2014/11/10 03:48:25 rodent Exp $
 
-SHA1 (Flask-User-0.5.2.tar.gz) = 21d57cb18abbd62878e312c5fc95e847fcb601b9
-RMD160 (Flask-User-0.5.2.tar.gz) = afe6eb8e384e8c63b4d130f8e1a3acda822918a0
-Size (Flask-User-0.5.2.tar.gz) = 34872 bytes
+SHA1 (Flask-User-0.6.1.tar.gz) = 4d2c1dc4e4da6e93308d7085d7c4c7c89811d3ff
+RMD160 (Flask-User-0.6.1.tar.gz) = 7d37eb094d4cdc65eb91a22c9a67b784a1f1018e
+Size (Flask-User-0.6.1.tar.gz) = 42288 bytes
