@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/06/15 15:56:14 rodent Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/11/10 03:48:25 rodent Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -51,6 +51,7 @@ ${PYSITELIB}/flask_user/templates/flask_user/emails/registered_subject.txt
 ${PYSITELIB}/flask_user/templates/flask_user/emails/username_changed_message.html
 ${PYSITELIB}/flask_user/templates/flask_user/emails/username_changed_message.txt
 ${PYSITELIB}/flask_user/templates/flask_user/emails/username_changed_subject.txt
+${PYSITELIB}/flask_user/templates/flask_user/flask_user_base.html
 ${PYSITELIB}/flask_user/templates/flask_user/forgot_password.html
 ${PYSITELIB}/flask_user/templates/flask_user/login.html
 ${PYSITELIB}/flask_user/templates/flask_user/login_or_register.html
@@ -60,6 +61,7 @@ ${PYSITELIB}/flask_user/templates/flask_user/public_base.html
 ${PYSITELIB}/flask_user/templates/flask_user/register.html
 ${PYSITELIB}/flask_user/templates/flask_user/resend_confirm_email.html
 ${PYSITELIB}/flask_user/templates/flask_user/reset_password.html
+${PYSITELIB}/flask_user/templates/flask_user/user_profile.html
 ${PYSITELIB}/flask_user/tests/__init__.py
 ${PYSITELIB}/flask_user/tests/__init__.pyc
 ${PYSITELIB}/flask_user/tests/__init__.pyo
@@ -91,8 +93,12 @@ ${PYSITELIB}/flask_user/translations/babel.cfg
 ${PYSITELIB}/flask_user/translations/en/LC_MESSAGES/flask_user.mo
 ${PYSITELIB}/flask_user/translations/en/LC_MESSAGES/flask_user.po
 ${PYSITELIB}/flask_user/translations/flask_user.pot
+${PYSITELIB}/flask_user/translations/fr/LC_MESSAGES/flask_user.mo
+${PYSITELIB}/flask_user/translations/fr/LC_MESSAGES/flask_user.po
 ${PYSITELIB}/flask_user/translations/nl/LC_MESSAGES/flask_user.mo
 ${PYSITELIB}/flask_user/translations/nl/LC_MESSAGES/flask_user.po
+${PYSITELIB}/flask_user/translations/zh_CN/LC_MESSAGES/flask_user.mo
+${PYSITELIB}/flask_user/translations/zh_CN/LC_MESSAGES/flask_user.po
 ${PYSITELIB}/flask_user/views.py
 ${PYSITELIB}/flask_user/views.pyc
 ${PYSITELIB}/flask_user/views.pyo
