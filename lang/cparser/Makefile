@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/10/02 20:11:37 asau Exp $
+# $NetBSD: Makefile,v 1.6 2014/11/10 16:54:12 asau Exp $
 #
 
-DISTNAME=	cparser-0.9.9
+DISTNAME=	cparser-0.9.14
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cparser/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,12 +16,9 @@ USE_LANGUAGES=	c99
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 
-COPTS?=		-O2
-
-#DBG?=		-g3	# XXX debugging option (install without strip)
-
 MAKE_ENV+=	LIBTOOL_CFLAGS=-prefer-pic
 MAKE_ENV+=	COPTS=${COPTS:Q}
+MAKE_ENV+=	builddir=build variant=optimize
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 

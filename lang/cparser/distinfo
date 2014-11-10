@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2014/06/29 04:53:26 dholland Exp $
+$NetBSD: distinfo,v 1.5 2014/11/10 16:54:12 asau Exp $
 
-SHA1 (cparser-0.9.9.tar.bz2) = a74c5a49f6ebdd32d695ef525006329dcd1c790c
-RMD160 (cparser-0.9.9.tar.bz2) = 68bb0eeb58cc50ccc6ad16bae21d935598a23eb0
-Size (cparser-0.9.9.tar.bz2) = 202354 bytes
-SHA1 (patch-aa) = a6651f8d339d2fda7ccf7a6fc205e21402789b06
-SHA1 (patch-ac) = 8565aae449d78bb8e2f1fbc7f265c462d4fc2138
-SHA1 (patch-driver_firm__cmdline.h) = e5f5632cb2b7b7a689488e40260a608d38af2cf1
+SHA1 (cparser-0.9.14.tar.bz2) = 29c05edc6bac6cbf463af00f68ea8057a246dd04
+RMD160 (cparser-0.9.14.tar.bz2) = 93b8ebd3c069dd7f9d9ed1af39b2f54a222099b8
+Size (cparser-0.9.14.tar.bz2) = 193745 bytes
+SHA1 (patch-aa) = 0b2b34073c98acefa88e04f86cd6bb6e8c0ef10d
+SHA1 (patch-ac) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-driver_firm__cmdline.h) = da39a3ee5e6b4b0d3255bfef95601890afd80709
