@@ -1,14 +1,14 @@
-# $NetBSD: Makefile.common,v 1.6 2014/10/28 07:36:21 prlw1 Exp $
+# $NetBSD: Makefile.common,v 1.7 2014/11/10 23:23:17 prlw1 Exp $
 #
 # used by devel/dconf-editor/Makefile
 
-DISTNAME=	dconf-0.20.0
+DISTNAME=	dconf-0.22.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dconf/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://live.gnome.org/dconf
+HOMEPAGE=	https://wiki.gnome.org/Projects/dconf
 COMMENT=	Backend for gsettings
 LICENSE=	gnu-lgpl-v2.1
 
