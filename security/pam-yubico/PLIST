@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2014/03/13 22:27:33 pettai Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/11/10 21:55:31 pettai Exp $
 bin/ykpamcfg
 lib/security/pam_yubico.la
 man/man1/ykpamcfg.1
+man/man8/pam_yubico.8
