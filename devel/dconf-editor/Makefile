@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2014/09/10 10:54:46 prlw1 Exp $
+# $NetBSD: Makefile,v 1.29 2014/11/10 23:23:18 prlw1 Exp $
 
 .include "../../devel/dconf/Makefile.common"
 
@@ -24,10 +24,12 @@ pre-build:
 
 .include "../../devel/glib2/schemas.mk"
 BUILDLINK_DEPMETHOD.vala= build
-.include "../../lang/vala018/buildlink3.mk"
+BUILDLINK_API_DEPENDS.vala+=	vala>=0.18.0
+.include "../../lang/vala/buildlink3.mk"
 BUILDLINK_API_DEPENDS.dconf+=	dconf>=${PKGVERSION_NOREV}
 .include "../../devel/dconf/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
