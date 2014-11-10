@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2014/03/09 19:16:37 pettai Exp $
+$NetBSD: distinfo,v 1.8 2014/11/10 20:59:39 pettai Exp $
 
-SHA1 (userspace-rcu-0.8.4.tar.bz2) = 4b3bf1b76e6ea50d9a56d9e5e00df2cc7c4d610f
-RMD160 (userspace-rcu-0.8.4.tar.bz2) = 3d2aba984641cee507129f8209c14d34e45233b7
-Size (userspace-rcu-0.8.4.tar.bz2) = 418911 bytes
+SHA1 (userspace-rcu-0.8.6.tar.bz2) = f10e9bf812557cd0c2a35a277e04010ec278d25d
+RMD160 (userspace-rcu-0.8.6.tar.bz2) = 4d40678ed27a78768cea1947e54a2b510b52fa33
+Size (userspace-rcu-0.8.6.tar.bz2) = 424037 bytes
