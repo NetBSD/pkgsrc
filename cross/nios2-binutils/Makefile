@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2014/10/30 21:48:47 mef Exp $
+# $NetBSD: Makefile,v 1.13 2014/11/10 03:34:53 mef Exp $
 
 DISTNAME=		binutils-2.24
 PKGNAME=		${DISTNAME:S/^/nios2-/}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=binutils/}
 EXTRACT_SUFX=		.tar.bz2
@@ -29,6 +29,8 @@ INFO_FILES=		# empty
 USE_TOOLS+=	       ksh
 CONFIG_SHELL=	       ksh
 .endif
+
+.include		"options.mk"
 
 NIOS2_TARGET=		nios2-elf
 CONFIGURE_ARGS+=	--disable-werror --target=${NIOS2_TARGET} --disable-nls
