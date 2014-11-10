@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4242 2014/11/10 18:37:35 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.4243 2014/11/10 18:47:22 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5364,3 +5364,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-flask-user to 0.6.1 [rodent 2014-11-10]
 	Updated multimedia/ffmpeg1 to 1.2.10 [adam 2014-11-10]
 	Updated www/py-wtforms-alchemy to 0.13.0 [rodent 2014-11-10]
+	Updated www/py-wtforms-components to 0.9.6 [rodent 2014-11-10]
