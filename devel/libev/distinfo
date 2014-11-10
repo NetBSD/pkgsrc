@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2013/08/28 12:34:59 fhajny Exp $
+$NetBSD: distinfo,v 1.7 2014/11/10 18:09:10 joerg Exp $
 
 SHA1 (libev-4.15.tar.gz) = 88655b1e2c0b328c9f90a6df7e72361a97fa8dc3
 RMD160 (libev-4.15.tar.gz) = 100812a3d24b9968a670c9cd4f16c9de172a0994
 Size (libev-4.15.tar.gz) = 513919 bytes
+SHA1 (patch-ev.c) = abfc6630d0989e6d0d6d6474b19adff0e465ffb5
