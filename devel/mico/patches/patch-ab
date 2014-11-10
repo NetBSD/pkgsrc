@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2013/08/30 16:58:14 joerg Exp $
+$NetBSD: patch-ab,v 1.3 2014/11/10 18:01:01 joerg Exp $
 
 --- configure.orig	2006-01-21 15:12:08.000000000 +0000
 +++ configure
@@ -569,3 +569,20 @@ $NetBSD: patch-ab,v 1.2 2013/08/30 16:58:14 joerg Exp $
    /* Are we little or big endian?  From Harbison&Steele.  */
    union
    {
+@@ -11634,13 +11634,13 @@ else
+ #include <stdlib.h>
+ #endif
+ 
+-int
+-main()
+-{
+ #define OPENSSL_THREAD_DEFINES
+ #undef THREADS
+ #undef OPENSSL_THREADS
+ #include <openssl/opensslconf.h>
++int
++main()
++{
+ #if !defined(THREADS) && !defined(OPENSSL_THREADS)
+ //error You are trying to build multi-threaded MICO with single-threaded OpenSSL!
+ return 1;
