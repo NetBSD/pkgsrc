@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2014/11/07 17:37:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.54 2014/11/10 21:38:33 ryoon Exp $
 #
 
-FIREFOX_VER=	33.0.3
+FIREFOX_VER=	33.1
 PKGNAME=	firefox-l10n-${FIREFOX_VER:S/esr//}
 DISTNAME=	# empty
 CATEGORIES=	www
@@ -17,13 +17,14 @@ DISTFILES=	${XPI_FILES}
 
 NO_BUILD=	yes
 
-FIREFOX_LOCALES=af ar as ast be bg bn-BD bn-IN br bs ca cs csb cy da	\
+FIREFOX_LOCALES=af ar as ast be bn-BD bn-IN br bs ca cs cy da	\
 		de el en-GB en-US en-ZA eo es-AR es-CL es-ES es-MX et	\
 		eu fa fi fr fy-NL ga-IE gd gl gu-IN he hi-IN hr hu	\
 		hy-AM id is it ja kk kn ko ku lt lv mai mk ml mr	\
 		nb-NO nl nn-NO or pa-IN pl pt-BR pt-PT rm ro ru	\
 		si sk sl son sq sr sv-SE ta te th tr uk vi	\
 		zh-CN zh-TW zu
+FIREFOX_LOCALES+=	bg csb
 
 EXTENSIONS_DIR=		${PREFIX}/lib/firefox/browser/extensions
 XPI_FILES=		${FIREFOX_LOCALES:=.xpi}
