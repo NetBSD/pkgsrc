@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.3 2013/08/30 16:58:14 joerg Exp $
+$NetBSD: distinfo,v 1.4 2014/11/10 18:01:01 joerg Exp $
 
 SHA1 (mico-2.3.12.tar.gz) = e1885362d559ea97c62a2437a1d3a94114ef5b05
 RMD160 (mico-2.3.12.tar.gz) = 2f45ace5044233f171ac8e4fd389d523befaca51
 Size (mico-2.3.12.tar.gz) = 2837502 bytes
 SHA1 (patch-aa) = 1a69df4063234d956ab10bf2cbbcaa34508923ad
-SHA1 (patch-ab) = 81c2dbb24d69e8e34b12de303171e6dd7ccaf62b
+SHA1 (patch-ab) = 31c9bf32df643d5071016724799ee4ecf980788e
 SHA1 (patch-ac) = a9f063059daec082ff9813b3d15020272770c14c
 SHA1 (patch-include_mico_throw.h) = 9b58977a59104312902ec11faf02515ccfb1f2d5
 SHA1 (patch-orb_fast__array.cc) = 750c8d8836c3b8cc9e02e20eea837d594ba76958
