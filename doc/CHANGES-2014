@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4239 2014/11/09 21:57:59 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.4240 2014/11/10 03:49:13 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5361,3 +5361,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/py-kombu to 3.0.23 [rodent 2014-11-09]
 	Updated net/py-celery to 3.1.16 [rodent 2014-11-09]
 	Updated www/py-django-tastypie to 0.12.0 [rodent 2014-11-09]
+	Updated www/py-flask-user to 0.6.1 [rodent 2014-11-10]
