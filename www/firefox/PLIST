@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.87 2014/11/06 13:56:32 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.88 2014/11/10 20:55:56 ryoon Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -669,6 +669,9 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/notification-pluginNorma
 lib/firefox/browser/chrome/browser/skin/classic/browser/page-livemarks.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/pageInfo.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/pageInfo.png
+lib/firefox/browser/chrome/browser/skin/classic/browser/panic-panel/header-small.png
+lib/firefox/browser/chrome/browser/skin/classic/browser/panic-panel/header.png
+lib/firefox/browser/chrome/browser/skin/classic/browser/panic-panel/icons.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/places/bookmarks-menu-arrow.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/places/bookmarks-notification-finish.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/places/bookmarksMenu.png
@@ -1437,6 +1440,7 @@ lib/firefox/browser/modules/translation/cld-worker.js.mem
 lib/firefox/browser/modules/webrtcUI.jsm
 lib/firefox/browser/searchplugins/amazondotcom.xml
 lib/firefox/browser/searchplugins/bing.xml
+lib/firefox/browser/searchplugins/ddg.xml
 lib/firefox/browser/searchplugins/duckduckgo.xml
 lib/firefox/browser/searchplugins/eBay.xml
 lib/firefox/browser/searchplugins/google.xml
