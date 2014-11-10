@@ -1,18 +1,18 @@
-$NetBSD: patch-samples_Makefile.in,v 1.2 2013/09/13 18:14:11 pettai Exp $
+$NetBSD: patch-samples_Makefile.in,v 1.3 2014/11/10 21:20:32 pettai Exp $
 
 Fix sysconfdir + sample conf snippet
 
---- samples/Makefile.in.orig	2013-08-27 11:35:02.000000000 +0000
+--- samples/Makefile.in.orig	2014-09-15 14:32:42.000000000 +0000
 +++ samples/Makefile.in
-@@ -242,6 +242,7 @@ sharedstatedir = @sharedstatedir@
+@@ -252,6 +252,7 @@ sharedstatedir = @sharedstatedir@
  srcdir = @srcdir@
  storage_dir = @storage_dir@
  sysconfdir = @sysconfdir@
 +EGDIR = @EGDIR@
+ systemd_CFLAGS = @systemd_CFLAGS@
+ systemd_LIBS = @systemd_LIBS@
  target_alias = @target_alias@
- top_build_prefix = @top_build_prefix@
- top_builddir = @top_builddir@
-@@ -457,10 +458,10 @@ knot.sample.conf: knot.sample.conf.in
+@@ -469,10 +470,10 @@ knot.sample.conf: knot.sample.conf.in
  	mv $@.tmp $@
  
  install-data-local: knot.sample.conf
