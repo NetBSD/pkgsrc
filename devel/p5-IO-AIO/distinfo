@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2013/09/02 13:03:17 obache Exp $
+$NetBSD: distinfo,v 1.5 2014/11/10 18:09:10 joerg Exp $
 
 SHA1 (IO-AIO-4.18.tar.gz) = 158c76d718a4474607532fdd943ce199ee65213c
 RMD160 (IO-AIO-4.18.tar.gz) = 6017fd9ec5b2a292a1f8bb743a7c0193e0523201
 Size (IO-AIO-4.18.tar.gz) = 146624 bytes
+SHA1 (patch-libeio_ecb.h) = 928d08c52fdce6dfbf346fbaa78b53411a92289c
