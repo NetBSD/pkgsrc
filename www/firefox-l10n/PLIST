@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2014/10/15 13:27:56 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.31 2014/11/10 21:38:33 ryoon Exp $
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome.manifest
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/.mkdir.done
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af.manifest
@@ -138,6 +138,7 @@ lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/searchplugins/amazondotcom.xml
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/searchplugins/eBay.xml
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/searchplugins/wikipedia-af.xml
@@ -439,6 +440,7 @@ lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/browser/searchplugins/amazondotcom.xml
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/browser/searchplugins/eBay.xml
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/browser/searchplugins/wikipedia-ar.xml
@@ -740,6 +742,7 @@ lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/browser/searchplugins/amazondotcom.xml
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/browser/searchplugins/creativecommons.xml
+lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/browser/searchplugins/eBay-in.xml
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/browser/searchplugins/wikipedia-as.xml
@@ -1040,6 +1043,7 @@ lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/browser/defaults
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/browser/searchplugins/diccionariu-alla.xml
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/browser/searchplugins/eBay-es.xml
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/browser/searchplugins/google.xml
@@ -1342,6 +1346,7 @@ lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/browser/searchplugins/be-x-old.wikipedia.org.xml
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/browser/searchplugins/be.wikipedia.org.xml
+lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/browser/searchplugins/ru.wikipedia.org-be.xml
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/browser/searchplugins/tut.by.xml
@@ -1644,6 +1649,7 @@ lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/browser/searchplugins/911bg.xml
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/browser/searchplugins/amazondotcom.xml
+lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/browser/searchplugins/diribg.xml
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/browser/searchplugins/pe-bg.xml
@@ -1945,6 +1951,7 @@ lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/defaul
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/searchplugins/wikipedia-bn.xml
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/searchplugins/yahoo.xml
@@ -2245,6 +2252,7 @@ lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/defaul
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/searchplugins/amazondotcom.xml
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/searchplugins/eBay-in.xml
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/searchplugins/rediff.xml
@@ -2547,6 +2555,7 @@ lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/browser/searchplugins/amazon-france.xml
+lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/browser/searchplugins/freelang.xml
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/browser/searchplugins/klask.xml
@@ -2847,6 +2856,7 @@ lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/browser/defaults/profile/chrome/userContent-example.css
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
+lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/browser/searchplugins/eBay.xml
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/browser/searchplugins/pik.xml
@@ -3150,6 +3160,7 @@ lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/searchplugins/diec2.xml
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/searchplugins/twitter.xml
@@ -3449,6 +3460,7 @@ lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/browser/defaults/profile/chrome/userContent-example.css
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
+lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/browser/searchplugins/heureka-cz.xml
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/browser/searchplugins/mapy-cz.xml
@@ -3751,6 +3763,7 @@ lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/browser/defaults
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/browser/searchplugins/allegro-pl.xml
+lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/browser/searchplugins/fbc-pl.xml
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/browser/searchplugins/merlin-pl.xml
@@ -4054,6 +4067,7 @@ lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/browser/searchplugins/amazon-en-GB.xml
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/browser/searchplugins/creativecommons.xml
+lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/browser/searchplugins/eBay-en-GB.xml
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/browser/searchplugins/palasprint.xml
@@ -4357,6 +4371,7 @@ lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/browser/searchplugins/amazon-co-uk.xml
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/browser/searchplugins/eBay.xml
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/browser/searchplugins/wikipedia-da.xml
@@ -4657,6 +4672,7 @@ lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/browser/searchplugins/amazondotcom-de.xml
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/browser/searchplugins/eBay-de.xml
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/browser/searchplugins/leo_ende_de.xml
@@ -4959,6 +4975,7 @@ lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/browser/searchplugins/amazon-en-GB.xml
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/browser/searchplugins/eBay-en-GB.xml
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/browser/searchplugins/wikipedia-el.xml
@@ -5261,6 +5278,7 @@ lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/defaul
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/searchplugins/amazon-en-GB.xml
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/searchplugins/bing.xml
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/searchplugins/chambers-en-GB.xml
+lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/searchplugins/eBay-en-GB.xml
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/searchplugins/twitter.xml
@@ -5563,6 +5581,7 @@ lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/browser/defaul
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/browser/searchplugins/amazondotcom.xml
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/browser/searchplugins/eBay.xml
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/browser/searchplugins/twitter.xml
@@ -5865,6 +5884,7 @@ lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/defaul
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/searchplugins/amazondotcom.xml
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/searchplugins/twitter.xml
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/searchplugins/wikipedia.xml
@@ -6166,6 +6186,7 @@ lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/browser/searchplugins/amazondotcom.xml
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/browser/searchplugins/bing.xml
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/browser/searchplugins/creativecommons.xml
+lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/browser/searchplugins/eBay.xml
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/browser/searchplugins/reta-vortaro.xml
@@ -6468,6 +6489,7 @@ lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/defaul
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/searchplugins/amazondotcom.xml
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/searchplugins/creativecommons.xml
+lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/searchplugins/drae.xml
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/searchplugins/mercadolibre-ar.xml
@@ -6769,6 +6791,7 @@ lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/defaul
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/searchplugins/drae.xml
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/searchplugins/mercadolibre-cl.xml
@@ -7070,6 +7093,7 @@ lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/defaul
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/searchplugins/drae.xml
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/searchplugins/eBay-es.xml
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/searchplugins/google.xml
@@ -7372,6 +7396,7 @@ lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/defaul
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/searchplugins/mercadolibre-mx.xml
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/searchplugins/wikipedia-es.xml
@@ -7671,6 +7696,7 @@ lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/browser/defaults/profile/chrome/userContent-example.css
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
+lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/browser/searchplugins/eBay.xml
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/browser/searchplugins/eki-ee.xml
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/browser/searchplugins/google.xml
@@ -7975,6 +8001,7 @@ lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/browser/searchplugins/amazon-en-GB.xml
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/browser/searchplugins/bing.xml
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/browser/searchplugins/creativecommons.xml
+lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/browser/searchplugins/eBay-es.xml
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/browser/searchplugins/elebila.xml
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/browser/searchplugins/google.xml
@@ -8278,6 +8305,7 @@ lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/browser/searchplugins/amazondotcom.xml
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/browser/searchplugins/answers.xml
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/browser/searchplugins/wikipedia-fa.xml
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/browser/searchplugins/yahoo.xml
@@ -8578,6 +8606,7 @@ lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/browser/searchplugins/bing.xml
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/browser/searchplugins/bookplus-fi.xml
+lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/browser/searchplugins/eBay-fi.xml
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/browser/searchplugins/wikipedia-fi.xml
@@ -8880,6 +8909,7 @@ lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/browser/searchplugins/amazon-france.xml
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/browser/searchplugins/bing.xml
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/browser/searchplugins/cnrtl-tlfi-fr.xml
+lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/browser/searchplugins/eBay-france.xml
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/browser/searchplugins/wikipedia-fr.xml
@@ -9181,6 +9211,7 @@ lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/defaul
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/searchplugins/bing.xml
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/searchplugins/bolcom-fy-NL.xml
+lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/searchplugins/marktplaats-fy-NL.xml
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/searchplugins/wikipedia-fy-NL.xml
@@ -9483,6 +9514,7 @@ lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/defaul
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/searchplugins/amazon-en-GB.xml
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/searchplugins/answers.xml
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/searchplugins/creativecommons.xml
+lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/searchplugins/eBay-en-GB.xml
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/searchplugins/focal.xml
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/searchplugins/google.xml
@@ -9786,6 +9818,7 @@ lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/searchplugins/amazon-en-GB.xml
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/searchplugins/bbc-alba.xml
+lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/searchplugins/duckduckgo.xml
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/searchplugins/faclair-beag.xml
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/searchplugins/google.xml
@@ -10088,6 +10121,7 @@ lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/browser/searchplugins/amazon-en-GB.xml
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/browser/searchplugins/creativecommons.xml
+lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/browser/searchplugins/eBay-es.xml
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/browser/searchplugins/wikipedia-gl.xml
@@ -10388,6 +10422,7 @@ lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/defaul
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/searchplugins/eBay-in.xml
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/searchplugins/gujaratilexicon.xml
@@ -10688,6 +10723,7 @@ lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/browser/defaults/profile/chrome/userContent-example.css
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
+lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/browser/searchplugins/morfix-dic.xml
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/browser/searchplugins/wikipedia-he.xml
@@ -10988,6 +11024,7 @@ lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/defaul
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/searchplugins/eBay-in.xml
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/searchplugins/wikipedia-hi.xml
@@ -11289,6 +11326,7 @@ lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/browser/searchplugins/amazon-en-GB.xml
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/browser/searchplugins/eBay-en-GB.xml
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/browser/searchplugins/eudict.xml
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/browser/searchplugins/google.xml
@@ -11590,6 +11628,7 @@ lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/browser/defaults/profile/chrome/userContent-example.css
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
+lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/browser/searchplugins/eBay-hu.xml
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/browser/searchplugins/sztaki-en-hu.xml
@@ -11891,6 +11930,7 @@ lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/defaul
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/searchplugins/amazondotcom.xml
+lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/searchplugins/eBay.xml
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/searchplugins/list-am.xml
@@ -12191,6 +12231,7 @@ lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/browser/defaults/profile/chrome/userContent-example.css
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
+lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/browser/searchplugins/wikipedia-id.xml
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/browser/searchplugins/yahoo-id.xml
@@ -12491,6 +12532,7 @@ lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/browser/searchplugins/amazondotcom.xml
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/browser/searchplugins/eBay.xml
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/browser/searchplugins/leit-is.xml
@@ -12793,6 +12835,7 @@ lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/browser/searchplugins/amazon-it.xml
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/browser/searchplugins/eBay-it.xml
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/browser/searchplugins/hoepli.xml
@@ -13095,6 +13138,7 @@ lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/searchplugins/amazon-jp.xml
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/searchplugins/google-jp.xml
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/searchplugins/oshiete-goo.xml
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/searchplugins/rakuten.xml
@@ -13397,6 +13441,7 @@ lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/browser/defaults/profile/chrome/userContent-example.css
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
+lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/browser/searchplugins/flip.xml
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/browser/searchplugins/kaz-kk.xml
@@ -13699,6 +13744,7 @@ lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/browser/searchplugins/amazondotcom.xml
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/browser/searchplugins/kannadastore.xml
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/browser/searchplugins/wikipedia-kn.xml
@@ -14000,6 +14046,7 @@ lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/browser/searchplugins/danawa-kr.xml
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/browser/searchplugins/daum-kr.xml
+lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/browser/searchplugins/naver-kr.xml
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/browser/searchplugins/wikipedia-kr.xml
@@ -14301,6 +14348,7 @@ lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/browser/searchplugins/amazondotcom.xml
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/browser/searchplugins/answers.xml
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/browser/searchplugins/creativecommons.xml
+lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/browser/searchplugins/eBay.xml
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/browser/searchplugins/google-ku.xml
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/browser/searchplugins/wikipedia-ku.xml
@@ -14602,6 +14650,7 @@ lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/browser/searchplugins/amazondotcom.xml
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/browser/searchplugins/eBay.xml
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/browser/searchplugins/twitter.xml
@@ -14901,6 +14950,7 @@ lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/browser/defaults/profile/chrome/userContent-example.css
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
+lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/browser/searchplugins/dict-enlv.xml
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/browser/searchplugins/salidzinilv.xml
@@ -15203,6 +15253,7 @@ lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/browser/defaults
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/browser/searchplugins/eBay-in.xml
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/browser/searchplugins/twitter.xml
@@ -15507,6 +15558,7 @@ lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/browser/searchplu
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/browser/searchplugins/answers.xml
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/browser/searchplugins/bing.xml
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/browser/searchplugins/creativecommons.xml
+lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/browser/searchplugins/eBay.xml
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/browser/searchplugins/wikipedia-mk.xml
@@ -15807,6 +15859,7 @@ lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/browser/searchplugins/eBay-in.xml
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/browser/searchplugins/rediff.xml
@@ -16110,6 +16163,7 @@ lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/browser/searchplugins/amazondotcom.xml
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/browser/searchplugins/creativecommons.xml
+lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/browser/searchplugins/eBay-in.xml
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/browser/searchplugins/rediff.xml
@@ -16413,6 +16467,7 @@ lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/defaul
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/searchplugins/amazon-en-GB.xml
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/searchplugins/bing.xml
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/searchplugins/bok-NO.xml
+lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/searchplugins/gulesider-NO.xml
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/searchplugins/qxl-NO.xml
@@ -16715,6 +16770,7 @@ lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/browser/searchplugins/bing.xml
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/browser/searchplugins/bolcom-nl.xml
+lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/browser/searchplugins/marktplaats-nl.xml
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/browser/searchplugins/wikipedia-nl.xml
@@ -17016,6 +17072,7 @@ lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/defaul
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/searchplugins/amazon-en-GB.xml
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/searchplugins/bing.xml
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/searchplugins/bok-NO.xml
+lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/searchplugins/gulesider-NO.xml
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/searchplugins/qxl-NO.xml
@@ -17317,6 +17374,7 @@ lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/browser/searchplugins/amazondotcom.xml
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/browser/searchplugins/eBay-in.xml
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/browser/searchplugins/wikipedia-or.xml
@@ -17617,6 +17675,7 @@ lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/defaul
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/searchplugins/eBay-in.xml
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/searchplugins/wikipedia-pa.xml
@@ -17917,6 +17976,7 @@ lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/searchplugins/allegro-pl.xml
+lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/searchplugins/merlin-pl.xml
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/searchplugins/pwn-pl.xml
@@ -18220,6 +18280,7 @@ lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/defaul
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/searchplugins/bing.xml
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/searchplugins/buscape.xml
+lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/searchplugins/mercadolivre.xml
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/searchplugins/twitter.xml
@@ -18521,6 +18582,7 @@ lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/browser/defaul
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/browser/searchplugins/amazon-en-GB.xml
+lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/browser/searchplugins/priberam.xml
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/browser/searchplugins/sapo.xml
@@ -18821,6 +18883,7 @@ lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/browser/searchplugins/leo_ende_de.xml
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/browser/searchplugins/pledarigrond.xml
@@ -19123,6 +19186,7 @@ lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/browser/searchplugins/amazondotcom.xml
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/browser/searchplugins/eBay.xml
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/browser/searchplugins/wikipediaro.xml
@@ -19422,6 +19486,7 @@ lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/browser/defaults/profile/chrome/userContent-example.css
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
+lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/browser/searchplugins/mailru.xml
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/browser/searchplugins/ozonru.xml
@@ -19727,6 +19792,7 @@ lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/browser/searchplugins/amazondotcom.xml
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/browser/searchplugins/answers.xml
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/browser/searchplugins/creativecommons.xml
+lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/browser/searchplugins/eBay.xml
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/browser/searchplugins/wikipedia-si.xml
@@ -20028,6 +20094,7 @@ lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/browser/searchplugins/atlas-sk.xml
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/browser/searchplugins/azet-sk.xml
+lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/browser/searchplugins/dunaj-sk.xml
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/browser/searchplugins/eBay.xml
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/browser/searchplugins/google.xml
@@ -20330,6 +20397,7 @@ lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/browser/searchplugins/ceneji.xml
+lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/browser/searchplugins/najdi-si.xml
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/browser/searchplugins/odpiralni.xml
@@ -20633,6 +20701,7 @@ lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/browser/defaults
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/browser/searchplugins/amazon-france.xml
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/browser/searchplugins/bing.xml
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/browser/searchplugins/cnrtl-tlfi-fr.xml
+lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/browser/searchplugins/eBay-france.xml
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/browser/searchplugins/wikipedia-fr.xml
@@ -20934,6 +21003,7 @@ lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/browser/searchplugins/amazon-en-GB.xml
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/browser/searchplugins/eBay.xml
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/browser/searchplugins/wikipedia-sq.xml
@@ -21235,6 +21305,7 @@ lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/browser/searchplugins/amazon-en-GB.xml
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/browser/searchplugins/eBay-en-GB.xml
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/browser/searchplugins/pogodakyu.xml
@@ -21537,6 +21608,7 @@ lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/defaul
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/searchplugins/allaannonser-sv-SE.xml
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/searchplugins/bing.xml
+lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/searchplugins/prisjakt-sv-SE.xml
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/searchplugins/tyda-sv-SE.xml
@@ -21838,6 +21910,7 @@ lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/browser/searchplugins/creativecommons.xml
+lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/browser/searchplugins/eBay-in.xml
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/browser/searchplugins/wikipedia-ta.xml
@@ -22139,6 +22212,7 @@ lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/browser/searchplugins/amazondotcom.xml
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/browser/searchplugins/creativecommons.xml
+lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/browser/searchplugins/eBay-in.xml
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/browser/searchplugins/wikipedia-te.xml
@@ -22442,6 +22516,7 @@ lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/browser/searchplugins/amazondotcom.xml
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/browser/searchplugins/bing.xml
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/browser/searchplugins/creativecommons.xml
+lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/browser/searchplugins/eBay.xml
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/browser/searchplugins/longdo.xml
@@ -22743,6 +22818,7 @@ lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/browser/searchplugins/amazondotcom.xml
+lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/browser/searchplugins/eBay.xml
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/browser/searchplugins/twitter.xml
@@ -23043,6 +23119,7 @@ lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/browser/defaults/profile/chrome/userContent-example.css
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
+lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/browser/searchplugins/meta-ua.xml
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/browser/searchplugins/metamarket.xml
@@ -23346,6 +23423,7 @@ lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/browser/searchplugins/5giay.xml
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/browser/searchplugins/baambootratuav.xml
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/browser/searchplugins/creativecommons.xml
+lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/browser/searchplugins/muare.xml
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/browser/searchplugins/wikipedia-vi.xml
@@ -23650,6 +23728,7 @@ lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/browser/search
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/browser/searchplugins/baiduzhidao.xml
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/browser/searchplugins/bing.xml
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/browser/searchplugins/creativecommons.xml
+lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/browser/searchplugins/eachnet.xml
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/browser/searchplugins/paipai.xml
@@ -23950,6 +24029,7 @@ lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/defaul
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/searchplugins/creativecommons.xml
+lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/searchplugins/findbook-zh-TW.xml
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/searchplugins/wikipedia-zh-TW.xml
@@ -24254,6 +24334,7 @@ lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/browser/searchplugins/amazondotcom.xml
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/browser/searchplugins/answers.xml
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/browser/searchplugins/creativecommons.xml
+lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/browser/searchplugins/ddg.xml
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/browser/searchplugins/eBay.xml
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/browser/searchplugins/yahoo.xml
