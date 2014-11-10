@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.14 2013/11/29 18:23:45 wiz Exp $
+$NetBSD: distinfo,v 1.15 2014/11/10 18:05:45 joerg Exp $
 
 SHA1 (rcs-5.9.2.tar.xz) = cb053f6ba87ab6ea03306d6241e1cde67182100b
 RMD160 (rcs-5.9.2.tar.xz) = 7f78faebd941581a8b5f2d8daef1cb3d6b20d999
 Size (rcs-5.9.2.tar.xz) = 795096 bytes
+SHA1 (patch-src_b-complain.h) = 5e0f688e59692b115f5a4ce1d9d571c4081325f3
+SHA1 (patch-src_b-fb.h) = ede2d0ef5af0b16eada75a95e09451d9efa41077
+SHA1 (patch-src_base.h) = 721a2cede835ca897f040e14e63548f110cbc50a
