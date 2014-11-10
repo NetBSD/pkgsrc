@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4252 2014/11/10 22:25:56 pettai Exp $
+$NetBSD: CHANGES-2014,v 1.4253 2014/11/10 22:38:21 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5374,3 +5374,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/firefox-l10n to 33.1 [ryoon 2014-11-10]
 	Updated security/pam-yubico to 2.17 [pettai 2014-11-10]
 	Updated security/ykclient to 2.13 [pettai 2014-11-10]
+	Updated security/ykpers to 1.16.0 [pettai 2014-11-10]
