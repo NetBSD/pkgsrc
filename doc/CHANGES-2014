@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4245 2014/11/10 20:26:59 asau Exp $
+$NetBSD: CHANGES-2014,v 1.4246 2014/11/10 20:29:11 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5367,3 +5367,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-wtforms-components to 0.9.6 [rodent 2014-11-10]
 	Updated devel/libfirm to 1.21.0 [asau 2014-11-10]
 	Updated lang/cparser to 0.9.14 [asau 2014-11-10]
+	Updated databases/php-redis to 2.2.5 [rodent 2014-11-10]
