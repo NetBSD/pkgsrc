@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2014/03/11 14:05:09 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/11/10 21:20:32 pettai Exp $
 bin/kdig
 bin/khost
 bin/knsec3hash
 bin/knsupdate
+lib/libknot.la
+lib/libzscanner.la
 man/man1/kdig.1
 man/man1/khost.1
 man/man1/knsec3hash.1
