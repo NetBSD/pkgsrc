@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4249 2014/11/10 21:21:21 pettai Exp $
+$NetBSD: CHANGES-2014,v 1.4250 2014/11/10 21:41:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5371,3 +5371,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/firefox to 33.1 [ryoon 2014-11-10]
 	Updated devel/userspace-rcu to 0.8.6 [pettai 2014-11-10]
 	Updated net/knot to 1.5.3 [pettai 2014-11-10]
+	Updated www/firefox-l10n to 33.1 [ryoon 2014-11-10]
