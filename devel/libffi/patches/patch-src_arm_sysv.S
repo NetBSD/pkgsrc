@@ -1,4 +1,4 @@
-$NetBSD: patch-src_arm_sysv.S,v 1.5 2014/10/28 12:51:03 adam Exp $
+$NetBSD: patch-src_arm_sysv.S,v 1.6 2014/11/10 21:29:40 joerg Exp $
 
 --- src/arm/sysv.S.orig	2014-04-25 17:45:13.000000000 +0000
 +++ src/arm/sysv.S
@@ -20,7 +20,23 @@ $NetBSD: patch-src_arm_sysv.S,v 1.5 2014/10/28 12:51:03 adam Exp $
  #define UNWIND
  #else
  #define UNWIND @
-@@ -160,6 +162,7 @@ ARM_FUNC_START(ffi_call_SYSV)
+@@ -121,6 +123,7 @@
+ 	bx pc; \
+ 	nop; \
+ 	.arm; \
++	.cfi_startproc; \
+ 	UNWIND .fnstart; \
+ _L__##name:
+ #else
+@@ -129,6 +132,7 @@ _L__##name:
+ 	.align 2; \
+ 	.arm; \
+ 	ENTRY(name); \
++	.cfi_startproc; \
+ 	UNWIND .fnstart
+ #endif
+ 
+@@ -160,6 +164,7 @@ ARM_FUNC_START(ffi_call_SYSV)
  	@ Save registers
          stmfd	sp!, {r0-r3, fp, lr}
  	UNWIND .save	{r0-r3, fp, lr}
@@ -28,7 +44,7 @@ $NetBSD: patch-src_arm_sysv.S,v 1.5 2014/10/28 12:51:03 adam Exp $
  	mov	fp, sp
  
  	UNWIND .setfp	fp, sp
-@@ -238,6 +241,7 @@ LSYM(Lepilogue):
+@@ -238,6 +243,7 @@ LSYM(Lepilogue):
  
  .ffi_call_SYSV_end:
  	UNWIND .fnend
@@ -36,7 +52,7 @@ $NetBSD: patch-src_arm_sysv.S,v 1.5 2014/10/28 12:51:03 adam Exp $
  #ifdef __ELF__
          .size    CNAME(ffi_call_SYSV),.ffi_call_SYSV_end-CNAME(ffi_call_SYSV)
  #endif
-@@ -313,6 +317,7 @@ ARM_FUNC_START(ffi_closure_SYSV)
+@@ -313,6 +319,7 @@ ARM_FUNC_START(ffi_closure_SYSV)
  
  .ffi_closure_SYSV_end:
  	UNWIND .fnend
@@ -44,7 +60,7 @@ $NetBSD: patch-src_arm_sysv.S,v 1.5 2014/10/28 12:51:03 adam Exp $
  #ifdef __ELF__
          .size    CNAME(ffi_closure_SYSV),.ffi_closure_SYSV_end-CNAME(ffi_closure_SYSV)
  #endif
-@@ -396,7 +401,7 @@ LSYM(Lbase_args):
+@@ -396,7 +403,7 @@ LSYM(Lbase_args):
  	beq	LSYM(Lepilogue_vfp)
  
  	cmp	r3, #FFI_TYPE_SINT64
@@ -53,7 +69,7 @@ $NetBSD: patch-src_arm_sysv.S,v 1.5 2014/10/28 12:51:03 adam Exp $
  	beq	LSYM(Lepilogue_vfp)
  
  	cmp	r3, #FFI_TYPE_FLOAT
-@@ -416,6 +421,7 @@ LSYM(Lepilogue_vfp):
+@@ -416,6 +423,7 @@ LSYM(Lepilogue_vfp):
  
  .ffi_call_VFP_end:
  	UNWIND .fnend
@@ -61,7 +77,7 @@ $NetBSD: patch-src_arm_sysv.S,v 1.5 2014/10/28 12:51:03 adam Exp $
          .size    CNAME(ffi_call_VFP),.ffi_call_VFP_end-CNAME(ffi_call_VFP)
  
  
-@@ -478,6 +484,7 @@ ARM_FUNC_START(ffi_closure_VFP)
+@@ -478,6 +486,7 @@ ARM_FUNC_START(ffi_closure_VFP)
  
  .ffi_closure_VFP_end:
  	UNWIND .fnend
