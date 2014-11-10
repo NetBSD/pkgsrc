@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4247 2014/11/10 20:58:09 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.4248 2014/11/10 21:15:28 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5369,3 +5369,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/cparser to 0.9.14 [asau 2014-11-10]
 	Updated databases/php-redis to 2.2.5 [rodent 2014-11-10]
 	Updated www/firefox to 33.1 [ryoon 2014-11-10]
+	Updated devel/userspace-rcu to 0.8.6 [pettai 2014-11-10]
