@@ -1,4 +1,17 @@
-$NetBSD: patch-src_lib_libast_features_lib,v 1.1 2014/11/06 12:25:36 joerg Exp $
+$NetBSD: patch-src_lib_libast_features_lib,v 1.2 2014/11/10 18:02:53 joerg Exp $
+
+--- src/lib/libast/features/lib.orig	2014-11-06 01:38:59.000000000 +0000
++++ src/lib/libast/features/lib
+@@ -28,7 +28,7 @@ lib	getopt,getsubopt,getopt_long,getopt_
+ lib	glob,index,iswblank,iswctype,killpg,link,localeconv,madvise
+ lib	mbtowc,mbrtowc,memalign,memchr,memcpy,memdup,memmove,memset
+ lib	mkdir,mkfifo,mktemp,mktime
+-lib	mount,on_exit,onexit,opendir,pathconf
++lib	mount,on_exit,onexit,opendir,pathconf,posix_memalign
+ lib	readlink,remove,rename,rewinddir,rindex,rmdir,setlocale
+ lib	setpgid,setpgrp,setpgrp2,setreuid,setsid,setuid,sigaction
+ lib	sigprocmask,sigsetmask,sigunblock,sigvec,socketpair
+$NetBSD: patch-src_lib_libast_features_lib,v 1.2 2014/11/10 18:02:53 joerg Exp $
 
 --- src/lib/libast/features/lib.orig	2014-11-06 01:38:59.000000000 +0000
 +++ src/lib/libast/features/lib
