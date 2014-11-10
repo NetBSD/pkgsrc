@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4253 2014/11/10 22:38:21 pettai Exp $
+$NetBSD: CHANGES-2014,v 1.4254 2014/11/10 22:53:11 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5375,3 +5375,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/pam-yubico to 2.17 [pettai 2014-11-10]
 	Updated security/ykclient to 2.13 [pettai 2014-11-10]
 	Updated security/ykpers to 1.16.0 [pettai 2014-11-10]
+	Updated sysutils/dbus to 1.8.10 [prlw1 2014-11-10]
