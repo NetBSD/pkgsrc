@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2014/11/11 21:49:01 shattered Exp $
+bin/get_iplayer
+man/man1/get_iplayer.1
+share/examples/get_iplayer/options
