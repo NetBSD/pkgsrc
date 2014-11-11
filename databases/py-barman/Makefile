@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/11/04 12:56:14 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2014/11/11 15:38:51 joerg Exp $
 
 DISTNAME=	barman-1.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-psycopg2-[0-9]*:../../databases/py-psycopg2
 DEPENDS+=	rsync-[0-9]*:../../net/rsync
 
 PYTHON_VERSIONED_DEPENDENCIES=	dateutil
+
+PYTHON_VERSIONS_INCOMPATIBLE=	26
 
 USE_LANGUAGES=	# none
 
