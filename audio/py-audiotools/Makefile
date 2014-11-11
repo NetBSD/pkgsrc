@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/10/28 13:05:28 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2014/11/11 15:38:24 joerg Exp $
 
 DISTNAME=	audiotools-2.22
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-urwid-[0-9]*:../../devel/py-urwid
 
+USE_TOOLS+=	pkg-config
 USE_LANGUAGES=		c
 REPLACE_PYTHON+=	audiotools/*.py
 REPLACE_PYTHON+=	audiotools/py_decoders/*.py
