@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1 2014/11/11 21:49:01 shattered Exp $
+
+- Sort out directories
+
+--- get_iplayer.orig	2014-10-18 11:39:56.000000000 +0000
++++ get_iplayer
+@@ -407,10 +407,10 @@ if ( defined $ENV{GETIPLAYERSYSPREFS} ) 
+ 	$optfile_system = $ENV{ALLUSERSPROFILE}.'/get_iplayer/options';
+ # System options on unix-like systems
+ } else {
+-	$optfile_system = '/etc/get_iplayer/options';
++	$optfile_system = '@PREFIX@/etc/get_iplayer/options';
+ 	# Show warning if this deprecated location exists and is not a symlink
+ 	if ( -f '/var/lib/get_iplayer/options' && ! -l '/var/lib/get_iplayer/options' ) {
+-		logger "WARNING: System-wide options file /var/lib/get_iplayer/options will be deprecated in future, please use /etc/get_iplayer/options instead\n";
++		logger "WARNING: System-wide options file /var/lib/get_iplayer/options will be deprecated in future, please use @PREFIX@/etc/get_iplayer/options instead\n";
+ 	}
+ }
+ # Make profile dir if it doesnt exist
+@@ -422,7 +422,7 @@ my $plugin_dir_system;
+ if ( defined $ENV{ALLUSERSPROFILE} ) {
+     $plugin_dir_system = $ENV{ALLUSERSPROFILE}.'/get_iplayer/plugins';
+ } else {
+-    $plugin_dir_system = '/usr/share/get_iplayer/plugins';
++    $plugin_dir_system = '@PREFIX@/share/get_iplayer/plugins';
+ }
+ my $plugin_dir_user = "$profile_dir/plugins";
+ for my $plugin_dir ( ( $plugin_dir_user, $plugin_dir_system ) ) {
