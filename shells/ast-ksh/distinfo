@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2014/11/11 15:39:37 joerg Exp $
+$NetBSD: distinfo,v 1.18 2014/11/11 15:40:37 joerg Exp $
 
 SHA1 (INIT.2012-08-01.tgz) = 0b472a615db384fe707042baaa3347dc1aa1c81e
 RMD160 (INIT.2012-08-01.tgz) = 48f1830bc85a26125dd986256d38be435668d445
@@ -8,9 +8,9 @@ RMD160 (ast-ksh.2012-08-01.tgz) = 74bf4735182a6b527e3eb5c5ae6d7854ea72d78b
 Size (ast-ksh.2012-08-01.tgz) = 2053532 bytes
 SHA1 (patch-ab) = 98ec5d5e90f3f9bf45bdbd7199f85e932e07eada
 SHA1 (patch-ad) = a85c7ac72c3443e4c140ee36bbc35b2a4eb42062
-SHA1 (patch-src_lib_libast_features_lib) = e29cb947625acc30409e37dca0e476a0b35e815f
-SHA1 (patch-src_lib_libast_features_map.c) = 22338c168c2611cc477b12ff7e11e4e3d92f4d98
-SHA1 (patch-src_lib_libast_features_sys) = 17346fa3c436f7c0c17445605b620353783cb530
-SHA1 (patch-src_lib_libast_features_vmalloc) = b8923f254b8f45d49f3d622685251c104559bf4b
-SHA1 (patch-src_lib_libast_include_vmalloc.h) = ac38a74cc64f73ae2b5a73d73bc5cf5e3aa8912d
-SHA1 (patch-src_lib_libast_vmalloc_malloc.c) = 8f8339b1c4ae2a688f76620010f4244042cde59d
+SHA1 (patch-src_lib_libast_features_lib) = 28bee8d00364a415c46bef63899329bc3326fe34
+SHA1 (patch-src_lib_libast_features_map.c) = efc25164d5e153ee3fc3b519d4d2abbc7c3f2f6b
+SHA1 (patch-src_lib_libast_features_sys) = 32a3f793395bb06e23c58e31ef534415da0d626b
+SHA1 (patch-src_lib_libast_features_vmalloc) = 714b1437cac8f49618581c6284a362163b37feba
+SHA1 (patch-src_lib_libast_include_vmalloc.h) = 165a39666a4f9c155e8c1af6220e351ac3b8189a
+SHA1 (patch-src_lib_libast_vmalloc_malloc.c) = 1256ade4a1bee59dccde6c549736a84bf14f0ae4
