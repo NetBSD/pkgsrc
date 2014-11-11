@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4256 2014/11/11 00:58:33 prlw1 Exp $
+$NetBSD: CHANGES-2014,v 1.4257 2014/11/11 12:06:14 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5378,3 +5378,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/dbus to 1.8.10 [prlw1 2014-11-10]
 	Updated devel/dconf to 0.22.0 [prlw1 2014-11-10]
 	Updated x11/gtk3 to 3.14.5 [prlw1 2014-11-11]
+	Updated www/moodle to 2.8 [wen 2014-11-11]
