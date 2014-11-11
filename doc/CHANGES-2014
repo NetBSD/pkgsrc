@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4257 2014/11/11 12:06:14 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4258 2014/11/11 21:41:55 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5379,3 +5379,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/dconf to 0.22.0 [prlw1 2014-11-10]
 	Updated x11/gtk3 to 3.14.5 [prlw1 2014-11-11]
 	Updated www/moodle to 2.8 [wen 2014-11-11]
+	Updated misc/vttest to 20140305 [shattered 2014-11-11]
+	Updated sysutils/ddrescue to 1.19 [shattered 2014-11-11]
+	Updated emulators/realboy to 0.2.2 [shattered 2014-11-11]
+	Updated www/cgicc to 3.2.15 [shattered 2014-11-11]
