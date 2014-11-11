@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2014/11/11 21:49:01 shattered Exp $
+
+This tool can use an external player (mplayer, vlc or xine) and transcoder
+(ffmpeg).  These are optional and thus not included in dependencies.
+
+===========================================================================
