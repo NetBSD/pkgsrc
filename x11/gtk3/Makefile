@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2014/10/08 00:39:19 prlw1 Exp $
+# $NetBSD: Makefile,v 1.56 2014/11/11 00:58:05 prlw1 Exp $
 
-DISTNAME=	gtk+-3.14.1
+DISTNAME=	gtk+-3.14.5
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
 CATEGORIES=	x11 gnome
 MASTER_SITES=	ftp://ftp.gtk.org/pub/gtk/${PKGVERSION_NOREV:R}/ \
