@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2013/11/15 19:31:35 shattered Exp $
+# $NetBSD: Makefile,v 1.13 2014/11/11 21:25:30 shattered Exp $
 #
 
-DISTNAME=	vttest-20130818
+DISTNAME=	vttest-20140305
 CATEGORIES=	misc benchmarks
 MASTER_SITES=	ftp://dickey.his.com/vttest/
 EXTRACT_SUFX=	.tgz
