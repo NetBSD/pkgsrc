@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/11/11 21:49:01 shattered Exp $
+# $NetBSD: Makefile,v 1.2 2014/11/12 09:26:10 wiz Exp $
 
 DISTNAME=	get_iplayer-2.90
 CATEGORIES=	net multimedia
@@ -9,12 +9,14 @@ HOMEPAGE=	http://www.infradead.org/get_iplayer/html/get_iplayer.html
 COMMENT=	Search, index, record or stream BBC iPlayer broadcasts
 LICENSE=	gnu-gpl-v3
 
+BROKEN=		missing wip dependency
+
 DEPENDS+=	p5-HTML-Parser>=3.0:../../www/p5-HTML-Parser
 DEPENDS+=	p5-HTTP-Cookies>=6.0:../../www/p5-HTTP-Cookies
 DEPENDS+=	p5-HTTP-Date>=6.0:../../www/p5-HTTP-Date
 DEPENDS+=	p5-libwww>=6.0:../../www/p5-libwww
 DEPENDS+=	rtmpdump>=1.8:../../net/rtmpdump
-DEPENDS+=	flvstreamer>=1.8:../../wip/flvstreamer
+#DEPENDS+=	flvstreamer>=1.8:../../wip/flvstreamer
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
