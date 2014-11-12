@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2014/02/12 23:18:06 tron Exp $
+# $NetBSD: Makefile,v 1.35 2014/11/12 20:30:55 bsiegert Exp $
 #
 
 DISTNAME=	alpine-2.11
@@ -31,6 +31,16 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .if ${OPSYS} == "NetBSD" && empty(OS_VERSION:M4.99.*) && empty(OS_VERSION:M[5-9]*)
 CONFIGURE_ARGS+= --without-pthread
+.endif
+
+.if ${OPSYS} == "Darwin"
+# mach/mach.h defines panic, differently.
+SUBST_CLASSES+=	panic
+SUBST_STAGE.panic=	pre-configure
+SUBST_MESSAGE.panic=	Renaming the panic function
+SUBST_FILES.panic=	*/*.c
+SUBST_FILES.panic+=	pith/util.h
+SUBST_SED.panic+=	-e 's,panic(,Panic(,g'
 .endif
 
 do-install:
