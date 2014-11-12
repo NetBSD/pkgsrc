@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4264 2014/11/12 18:12:23 snj Exp $
+$NetBSD: CHANGES-2014,v 1.4265 2014/11/12 18:39:39 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5389,3 +5389,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/p5-DateTime-TimeZone to 1.79 [wiz 2014-11-12]
 	Updated x11/xfstt to 1.9.1 [wiz 2014-11-12]
 	Updated graphics/gpicview to 0.2.4 [snj 2014-11-12]
+	Added multimedia/flvstreamer version 2.1c1 [khorben 2014-11-12]
