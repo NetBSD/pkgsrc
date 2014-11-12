@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2014/11/12 15:19:03 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2014/11/12 15:24:16 wiz Exp $
 
 DISTNAME=		xfstt-1.9.1
 CATEGORIES=		x11 net fonts
@@ -30,8 +30,8 @@ INSTALLATION_DIRS=	bin			\
 			share/examples/xfstt
 
 SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	doc/FAQ doc/xfstt.1x
-SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_FILES.paths=	doc/FAQ
+SUBST_SED.paths=	-e 's,/usr,${PREFIX},g'
 SUBST_STAGE.paths=	post-patch
 
 do-install:
@@ -47,5 +47,4 @@ do-install:
 
 .include "../../x11/fontsproto/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
