@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13814 2014/11/11 21:41:55 shattered Exp $
+$NetBSD: TODO,v 1.13815 2014/11/12 13:03:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -414,7 +414,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
 	o calibre-2.2.0 [wip]
-	o calibre-2.8.0
+	o calibre-2.9.0
 	o calligra-2.4.3 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -423,7 +423,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cfitsio-3.350
 	o chasen-2.4.5
 	o cheese-2.32.0 [GNOME 2.32]
-	o cheese-3.14.1
+	o cheese-3.14.2
 	o cherokee-1.2.103 [pkg/48268]
 	o chktex-1.7.2
 	o chromium-0.9.15
@@ -596,7 +596,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-chess-3.12.3
 	o gnome-color-manager-2.32.0 [GNOME 2.32]
-	o gnome-commander-1.4.3
+	o gnome-commander-1.4.4
 	o gnome-control-center-3.8.3
 	o gnome-devel-docs-2.30.0 [GNOME 2.30]
 	o gnome-disk-utility-2.32.0 [GNOME 2.32]
@@ -685,6 +685,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ingo-3.1.4
 	o inspircd-1.2.1
 	o instiki-0.13
+	o iperf-3.0.9 [https://github.com/esnet/iperf/releases]
 	o ircservices-5.1.21
 	o irssi-0.8.17 [pkg/49324]
 	o ispell-ga-4.6
@@ -703,7 +704,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kbiff-4.0
 	o kchmviewer-7.1
 	o kdbg-2.5.4
-	o kde4-4.14.2
+	o kde4-4.14.3
 	o kde4-4.13.2
 	o kdenlive-0.9.8
 	o kdevelop-4.7.0
@@ -734,7 +735,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libextractor-1.2 [requires shm_open()]
 	o libflash-0.4.13
 	o libfolks-0.10.0
-	o libgdata-0.16.0
+	o libgdata-0.16.1
 	o libgdiplus-3.0
 	o libgiigic-1.1.2
 	o libgnome-keyring-3.12.0
@@ -803,7 +804,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mknmz-wwwoffle-0.7.2
 	o mksh-49
 	o mkvtoolnix-6.8.0
-	o modular-xorg-server-1.16.1
+	o modular-xorg-server-1.16.2
 	o molden-4.8 [after which PR 40252 can be closed]
 	o mono-3.10.0
 	o moserial-2.30.0 [GNOME 2.30]
@@ -876,6 +877,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pari-2.7.1
 	o parrot-6.7.0
 	o pcal-4.8
+	o pcb-20140316 [pkg/49383]
 	o pcmanfm-0.5.2 [pkg/42451]
 	o pdfgrep-1.3.1
 	o pdmenu-1.2.87
@@ -1122,8 +1124,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vicq-0.4.2
 	o viewvc-1.1.22
 	o vifm-0.7.7
-	o vinagre-3.14.1
-	o vino-3.12.0
+	o vinagre-3.14.2
+	o vino-3.14.1
 	o visual-regexp-3.1
 	o vlc-2.1.5 [wip]
 	o vlgothic-ttf-20140801 [pkg/49374]
