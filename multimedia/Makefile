@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.228 2014/09/08 11:39:02 wiz Exp $
+# $NetBSD: Makefile,v 1.229 2014/11/12 18:38:54 khorben Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -36,6 +36,7 @@ SUBDIR+=	ffmpegthumbs
 SUBDIR+=	ffplay1
 SUBDIR+=	ffplay2
 SUBDIR+=	flashplayer
+SUBDIR+=	flvstreamer
 SUBDIR+=	fuppes
 SUBDIR+=	fxtv
 SUBDIR+=	gecko-mediaplayer
