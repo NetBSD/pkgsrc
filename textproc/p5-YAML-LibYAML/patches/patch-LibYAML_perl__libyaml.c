@@ -1,9 +1,9 @@
-$NetBSD: patch-LibYAML_perl__libyaml.c,v 1.1 2012/05/24 20:21:18 spz Exp $
+$NetBSD: patch-LibYAML_perl__libyaml.c,v 1.2 2014/11/12 11:49:41 wiz Exp $
 
 fix for CVS-2012-1152 taken from
 https://rt.cpan.org/Ticket/Attachment/920541/477607/YAML-LibYAML-0.35-format-error.patch
 
---- LibYAML/perl_libyaml.c.orig	2011-04-03 16:28:08.000000000 +0000
+--- LibYAML/perl_libyaml.c.orig	2014-08-23 04:03:32.000000000 +0000
 +++ LibYAML/perl_libyaml.c
 @@ -188,7 +188,7 @@ Load(SV *yaml_sv)
      return;
@@ -31,7 +31,7 @@ https://rt.cpan.org/Ticket/Attachment/920541/477607/YAML-LibYAML-0.35-format-err
 +            "%s", loader_error_msg(loader, form("bad tag found for hash: '%s'", tag))
          );
          class = tag + strlen(prefix);
-         sv_bless(hash_ref, gv_stashpv(class, TRUE)); 
+         sv_bless(hash_ref, gv_stashpv(class, TRUE));
 @@ -347,7 +347,7 @@ load_sequence(perl_yaml_loader_t *loader
          else if (strlen(tag) <= strlen(prefix) ||
              ! strnEQ(tag, prefix, strlen(prefix))
@@ -40,4 +40,4 @@ https://rt.cpan.org/Ticket/Attachment/920541/477607/YAML-LibYAML-0.35-format-err
 +            "%s", loader_error_msg(loader, form("bad tag found for array: '%s'", tag))
          );
          class = tag + strlen(prefix);
-         sv_bless(array_ref, gv_stashpv(class, TRUE)); 
+         sv_bless(array_ref, gv_stashpv(class, TRUE));
