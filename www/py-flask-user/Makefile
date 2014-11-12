@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2014/11/10 03:48:25 rodent Exp $
+# $NetBSD: Makefile,v 1.6 2014/11/12 00:14:14 rodent Exp $
 
 DISTNAME=	Flask-User-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	python www
 MASTER_SITES=	https://pypi.python.org/packages/source/F/Flask-User/
+DIST_SUBDIR=	${PKGBASE:S/${PYPKGPREFIX}/py/1}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://github.com/lingthio/Flask-User
@@ -26,7 +28,7 @@ USE_LANGUAGES=		# none
 EGG_NAME=	${DISTNAME:S/-/_/1}
 
 post-install:
-	${CHMOD} -x ${DESTDIR}${PREFIX}/${PYSITELIB}/flask_user/translations/zh_CN/LC_MESSAGES/flask_user.mo
+	${CHMOD} -x ${DESTDIR}${PREFIX}/${PYSITELIB}/flask_user/translations/zh/LC_MESSAGES/flask_user.mo
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
