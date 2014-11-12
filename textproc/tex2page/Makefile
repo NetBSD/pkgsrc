@@ -1,11 +1,15 @@
-# $NetBSD: Makefile,v 1.26 2014/09/08 21:24:45 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2014/11/12 12:53:20 gdt Exp $
 
 DISTNAME=		tex2page
 DIST_SUBDIR=		tex2page-20060131
 PKGNAME=		tex2page-20060131
 PKGREVISION=		18
 CATEGORIES=		textproc
-MASTER_SITES=		http://www.ccs.neu.edu/home/dorai/tex2page/
+MASTER_SITES=		# tarball is no longer available from upstream
+
+# As of 201411, upstream web page claims 20130325, but points to
+# github without even a tag.  Upstream emailed 20141101 with usual
+# "lack of distfile considered harmful" message.
 
 MAINTAINER=		gdt@NetBSD.org
 HOMEPAGE=		http://www.ccs.neu.edu/home/dorai/tex2page/
