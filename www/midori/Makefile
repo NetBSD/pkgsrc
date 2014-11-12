@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2014/10/07 16:47:37 adam Exp $
+# $NetBSD: Makefile,v 1.74 2014/11/12 21:59:20 snj Exp $
 
 DISTNAME=	midori-0.4.9
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	www
 MASTER_SITES=	http://archive.xfce.org/src/apps/midori/0.4/
 
@@ -66,6 +66,7 @@ pre-configure:
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/libsexy/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
 BUILDLINK_API_DEPENDS.libsoup24+=libsoup24>=2.26.0
 .include "../../net/libsoup24/buildlink3.mk"
