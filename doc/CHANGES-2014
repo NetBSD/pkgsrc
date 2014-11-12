@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4259 2014/11/11 21:52:16 shattered Exp $
+$NetBSD: CHANGES-2014,v 1.4260 2014/11/12 00:16:48 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5384,3 +5384,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/realboy to 0.2.2 [shattered 2014-11-11]
 	Updated www/cgicc to 3.2.15 [shattered 2014-11-11]
 	Added net/get_iplayer version 2.90 [shattered 2014-11-11]
+	Updated www/py-flask-user to 0.6.1nb1 [rodent 2014-11-12]
