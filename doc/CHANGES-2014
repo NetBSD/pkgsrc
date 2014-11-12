@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4261 2014/11/12 11:49:50 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4262 2014/11/12 11:51:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5386,3 +5386,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added net/get_iplayer version 2.90 [shattered 2014-11-11]
 	Updated www/py-flask-user to 0.6.1nb1 [rodent 2014-11-12]
 	Updated textproc/p5-YAML-LibYAML to 0.52 [wiz 2014-11-12]
+	Updated time/p5-DateTime-TimeZone to 1.79 [wiz 2014-11-12]
