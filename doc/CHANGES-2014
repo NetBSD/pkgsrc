@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4260 2014/11/12 00:16:48 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.4261 2014/11/12 11:49:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5385,3 +5385,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/cgicc to 3.2.15 [shattered 2014-11-11]
 	Added net/get_iplayer version 2.90 [shattered 2014-11-11]
 	Updated www/py-flask-user to 0.6.1nb1 [rodent 2014-11-12]
+	Updated textproc/p5-YAML-LibYAML to 0.52 [wiz 2014-11-12]
