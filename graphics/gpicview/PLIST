@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/01 16:43:44 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/11/12 18:11:57 snj Exp $
 bin/gpicview
 share/applications/gpicview.desktop
 share/gpicview/pixmaps/object-flip-horizontal.png
@@ -6,6 +6,7 @@ share/gpicview/pixmaps/object-flip-vertical.png
 share/gpicview/pixmaps/object-rotate-left.png
 share/gpicview/pixmaps/object-rotate-right.png
 share/gpicview/ui/pref-dlg.ui
+share/icons/hicolor/48x48/apps/gpicview.png
 share/locale/af/LC_MESSAGES/gpicview.mo
 share/locale/ar/LC_MESSAGES/gpicview.mo
 share/locale/bg/LC_MESSAGES/gpicview.mo
@@ -55,4 +56,3 @@ share/locale/ur_PK/LC_MESSAGES/gpicview.mo
 share/locale/vi/LC_MESSAGES/gpicview.mo
 share/locale/zh_CN/LC_MESSAGES/gpicview.mo
 share/locale/zh_TW/LC_MESSAGES/gpicview.mo
-share/pixmaps/gpicview.png
