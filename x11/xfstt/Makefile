@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.36 2014/06/01 18:49:41 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2014/11/12 15:16:08 wiz Exp $
 
 DISTNAME=		xfstt-1.9
 CATEGORIES=		x11 net fonts
-MASTER_SITES=		http://download.berlios.de/xfstt/
+MASTER_SITES=		http://archive.hadrons.org/software/xfstt/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://developer.berlios.de/projects/xfstt/
+HOMEPAGE=		http://www.hadrons.org/software/xfstt/
 COMMENT=		TrueType font server for X11
 LICENSE=		gnu-gpl-v2
 
