@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4269 2014/11/13 10:02:19 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.4270 2014/11/13 10:50:44 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5398,3 +5398,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/phonon to 4.8.2 [markd 2014-11-13]
 	Updated mail/akonadi to 1.13.0 [markd 2014-11-13]
 	Updated databases/elasticsearch to 1.4.0 [fhajny 2014-11-13]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.418 [obache 2014-11-13]
