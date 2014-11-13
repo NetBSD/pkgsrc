@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2014/11/07 19:39:26 adam Exp $
+# $NetBSD: Makefile,v 1.52 2014/11/13 10:53:49 markd Exp $
 
 DISTNAME=	kde-runtime-${_KDE_VERSION}
 PKGNAME=	${DISTNAME:S/-4/4-4/}
-PKGREVISION=	14
 CATEGORIES=	x11
 COMMENT=	Runtime requirements for the KDE integrated X11 desktop
 
@@ -65,7 +64,6 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 #.include "../../security/libssh/buildlink3.mk"
 .include "../../security/qca2/buildlink3.mk"
 .include "../../misc/kdepimlibs4/buildlink3.mk"
-.include "../../misc/nepomuk-core/buildlink3.mk"
 .include "../../multimedia/phonon/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
@@ -76,8 +74,6 @@ BUILDLINK_ABI_DEPENDS.attica?=	attica>=0.1.4
 .include "../../multimedia/xine-lib/buildlink3.mk"
 .include "../../net/openslp/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-BUILDLINK_ABI_DEPENDS.soprano?=	soprano>=2.6.50
-.include "../../textproc/soprano/buildlink3.mk"
 .include "../../x11/kactivities/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 
