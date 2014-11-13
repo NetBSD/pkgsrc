@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2013/04/03 10:52:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/11/13 19:19:07 markd Exp $
 bin/kwordquiz
+share/appdata/kwordquiz.appdata.xml
 share/applications/kde4/kwordquiz.desktop
 share/doc/kde/HTML/en/kwordquiz/common
 share/doc/kde/HTML/en/kwordquiz/index.cache.bz2

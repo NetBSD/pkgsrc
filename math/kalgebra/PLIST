@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2013/11/07 11:59:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/11/13 19:24:23 markd Exp $
 bin/kalgebra
 bin/kalgebramobile
 lib/kde4/imports/org/kde/analitza/Graph2D.qml
 lib/kde4/imports/org/kde/analitza/libanalitzadeclarativeplugin.so
 lib/kde4/imports/org/kde/analitza/qmldir
 lib/kde4/plasma_applet_kalgebra.so
+share/appdata/kalgebra.appdata.xml
 share/applications/kde4/kalgebra.desktop
 share/applications/kde4/kalgebramobile.desktop
 share/doc/kde/HTML/en/kalgebra/commands.docbook
