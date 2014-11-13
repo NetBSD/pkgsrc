@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2013/11/07 11:53:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.20 2014/11/13 10:15:15 markd Exp $
 share/icons/oxygen/128x128/actions/address-book-new.png
 share/icons/oxygen/128x128/actions/application-exit.png
 share/icons/oxygen/128x128/actions/appointment-new.png
@@ -1317,6 +1317,7 @@ share/icons/oxygen/16x16/apps/kjournal.png
 share/icons/oxygen/16x16/apps/klipper.png
 share/icons/oxygen/16x16/apps/kmag.png
 share/icons/oxygen/16x16/apps/kmplayer.png
+share/icons/oxygen/16x16/apps/knetattach.png
 share/icons/oxygen/16x16/apps/knewsticker.png
 share/icons/oxygen/16x16/apps/knotes.png
 share/icons/oxygen/16x16/apps/kolf.png
@@ -2589,6 +2590,7 @@ share/icons/oxygen/22x22/apps/kjournal.png
 share/icons/oxygen/22x22/apps/klipper.png
 share/icons/oxygen/22x22/apps/kmag.png
 share/icons/oxygen/22x22/apps/kmplayer.png
+share/icons/oxygen/22x22/apps/knetattach.png
 share/icons/oxygen/22x22/apps/knotes.png
 share/icons/oxygen/22x22/apps/kolf.png
 share/icons/oxygen/22x22/apps/konqueror.png
@@ -3274,6 +3276,7 @@ share/icons/oxygen/256x256/apps/kig.png
 share/icons/oxygen/256x256/apps/kivio.png
 share/icons/oxygen/256x256/apps/kmag.png
 share/icons/oxygen/256x256/apps/kmail2.png
+share/icons/oxygen/256x256/apps/knetattach.png
 share/icons/oxygen/256x256/apps/konqueror.png
 share/icons/oxygen/256x256/apps/kontact-import-wizard.png
 share/icons/oxygen/256x256/apps/korgac.png
@@ -4311,6 +4314,7 @@ share/icons/oxygen/32x32/apps/kjournal.png
 share/icons/oxygen/32x32/apps/klipper.png
 share/icons/oxygen/32x32/apps/kmag.png
 share/icons/oxygen/32x32/apps/kmplayer.png
+share/icons/oxygen/32x32/apps/knetattach.png
 share/icons/oxygen/32x32/apps/knewsticker.png
 share/icons/oxygen/32x32/apps/knotes.png
 share/icons/oxygen/32x32/apps/kolf.png
@@ -5550,6 +5554,7 @@ share/icons/oxygen/48x48/apps/kjournal.png
 share/icons/oxygen/48x48/apps/klipper.png
 share/icons/oxygen/48x48/apps/kmag.png
 share/icons/oxygen/48x48/apps/kmplayer.png
+share/icons/oxygen/48x48/apps/knetattach.png
 share/icons/oxygen/48x48/apps/knewsticker.png
 share/icons/oxygen/48x48/apps/knotes.png
 share/icons/oxygen/48x48/apps/kolf.png
