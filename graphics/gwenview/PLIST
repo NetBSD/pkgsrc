@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2013/11/07 11:53:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.19 2014/11/13 20:06:29 markd Exp $
 bin/gwenview
 bin/gwenview_importer
 lib/kde4/gvpart.so
@@ -14,6 +14,7 @@ share/doc/kde/HTML/en/gwenview/importer-picking-root-folder.png
 share/doc/kde/HTML/en/gwenview/importer.png
 share/doc/kde/HTML/en/gwenview/index.cache.bz2
 share/doc/kde/HTML/en/gwenview/index.docbook
+share/doc/kde/HTML/en/gwenview/modified-bar.png
 share/doc/kde/HTML/en/gwenview/start-page.png
 share/doc/kde/HTML/en/gwenview/view_mode.png
 share/icons/hicolor/128x128/actions/document-share.png
