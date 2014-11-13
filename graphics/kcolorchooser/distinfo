@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2014/02/01 02:20:47 markd Exp $
+$NetBSD: distinfo,v 1.9 2014/11/13 20:06:28 markd Exp $
 
-SHA1 (kcolorchooser-4.11.5.tar.xz) = c9e8b21806f0e6ba6dc875c1702272c34090b83e
-RMD160 (kcolorchooser-4.11.5.tar.xz) = 2b48ab897878737d7aa19cd3051b81aa71a6747e
-Size (kcolorchooser-4.11.5.tar.xz) = 4324 bytes
+SHA1 (kcolorchooser-4.14.3.tar.xz) = eed0c13369278b868e994dac0bed44b5db7f2be5
+RMD160 (kcolorchooser-4.14.3.tar.xz) = 25c27651971dc97615fff5f0f30b3cdd422cd727
+Size (kcolorchooser-4.14.3.tar.xz) = 4376 bytes

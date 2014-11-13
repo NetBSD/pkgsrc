@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2013/11/07 11:54:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2014/11/13 20:06:29 markd Exp $
 include/libkdcraw/dcrawinfocontainer.h
 include/libkdcraw/dcrawsettingswidget.h
 include/libkdcraw/kdcraw.h
@@ -12,16 +12,14 @@ include/libkdcraw/rnuminput.h
 include/libkdcraw/squeezedcombobox.h
 include/libkdcraw/version.h
 lib/libkdcraw.so
-lib/libkdcraw.so.22
-lib/libkdcraw.so.22.1.1
+lib/libkdcraw.so.23
+lib/libkdcraw.so.23.0.0
 lib/pkgconfig/libkdcraw.pc
 share/icons/hicolor/128x128/apps/kdcraw.png
 share/icons/hicolor/32x32/apps/kdcraw.png
 share/icons/hicolor/48x48/apps/kdcraw.png
 share/icons/hicolor/64x64/apps/kdcraw.png
-share/kde/apps/libkdcraw/profiles/adobergb.icm
-share/kde/apps/libkdcraw/profiles/applergb.icm
+share/kde/apps/libkdcraw/profiles/compatibleWithAdobeRGB1998.icc
 share/kde/apps/libkdcraw/profiles/prophoto.icm
 share/kde/apps/libkdcraw/profiles/srgb-d65.icm
-share/kde/apps/libkdcraw/profiles/srgb.icm
 share/kde/apps/libkdcraw/profiles/widegamut.icm
