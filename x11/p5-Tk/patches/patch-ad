@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.5 2013/05/31 20:13:24 adam Exp $
+$NetBSD: patch-ad,v 1.6 2014/11/13 08:30:16 markd Exp $
 
---- PNG/Makefile.PL.orig	2013-05-21 13:25:13.000000000 +0000
+--- PNG/Makefile.PL.orig	2013-11-18 09:04:04.000000000 +0000
 +++ PNG/Makefile.PL
 @@ -2,7 +2,6 @@
  use strict;
@@ -10,28 +10,22 @@ $NetBSD: patch-ad,v 1.5 2013/05/31 20:13:24 adam Exp $
  use File::Copy;
  
  my $l = $Config::Config{'lib_ext'};
-@@ -27,8 +26,6 @@ if ($? == 0) {
-     $libpng_libs   = '-lpng -lz -lm';
+@@ -53,8 +52,6 @@ my $all_libs;
+  $all_libs   = "$libpng_libs $zlib_libs";
  }
  
 -if ($Tk::MMtry::VERSION ge '4.007' &&
--    try_run("config/has_png.c",[$libpng_cflags],[$libpng_libs]))
+-    try_run("config/has_png.c",[$all_cflags],[$all_libs]))
   {
+   warn "Using system's -lpng\n";
    Tk::MMutil::TkExtMakefile(
-        NAME         => 'Tk::PNG',
-@@ -40,55 +37,6 @@ if ($Tk::MMtry::VERSION ge '4.007' &&
-        LIBS         => [$libpng_libs],
+@@ -67,49 +64,6 @@ if ($Tk::MMtry::VERSION ge '4.007' &&
+        LIBS         => [$all_libs],
       );
   }
 -else
 - {
 -  my $ok = 1;
--  foreach my $file ("libpng/Makefile.PL","zlib/Makefile.PL")
--   {
--    next unless -f $file;
--    chmod(0666,$file);
--    unlink($file);
--   }
 -  unless (copy("Makefile.libpng.maybe","libpng/Makefile.PL"))
 -   {
 -    warn "Cannot copy Makefile.libpng.maybe => libpng/Makefile.PL ($!)";
