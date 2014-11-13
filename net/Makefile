@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1041 2014/11/11 21:52:16 shattered Exp $
+# $NetBSD: Makefile,v 1.1042 2014/11/13 11:52:08 markd Exp $
 #
 
 COMMENT=	Networking tools
@@ -233,7 +233,6 @@ SUBDIR+=	jwhois
 SUBDIR+=	kdenetwork-filesharing
 SUBDIR+=	kdenetwork-strigi-analyzers
 SUBDIR+=	kdenetwork3
-SUBDIR+=	kdnssd
 SUBDIR+=	kftpgrabber
 SUBDIR+=	kget
 SUBDIR+=	kiax
@@ -795,6 +794,7 @@ SUBDIR+=	yaz
 SUBDIR+=	youtube-dl
 SUBDIR+=	ytalk
 SUBDIR+=	ywho
+SUBDIR+=	zeroconf-ioslave
 SUBDIR+=	zeromq
 SUBDIR+=	zsync
 
