@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2014/11/13 11:05:43 markd Exp $
+
+SHA1 (baloo-4.14.3.tar.xz) = bf90846545c5b5a0b0badab25dc3e839dc0c6574
+RMD160 (baloo-4.14.3.tar.xz) = 50743535e905339ac48481dd9b8b40ad3217422d
+Size (baloo-4.14.3.tar.xz) = 145604 bytes
+SHA1 (patch-src__file__lib__baloo_xattr_p.h) = 2c361f9422e0d45b5500a4a0fa82bdc5c187fd01
