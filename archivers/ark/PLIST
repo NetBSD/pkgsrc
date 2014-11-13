@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/04/03 10:52:13 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/11/13 20:13:00 markd Exp $
 bin/ark
 lib/kde4/arkpart.so
 lib/kde4/kerfuffle_cli7z.so
@@ -14,6 +14,7 @@ lib/libkerfuffle.so
 lib/libkerfuffle.so.4
 lib/libkerfuffle.so.${PKGVERSION}
 man/man1/ark.1
+share/appdata/ark.appdata.xml
 share/applications/kde4/ark.desktop
 share/doc/kde/HTML/en/ark/ark-mainwindow.png
 share/doc/kde/HTML/en/ark/common

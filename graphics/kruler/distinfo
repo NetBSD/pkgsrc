@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2014/02/01 02:20:48 markd Exp $
+$NetBSD: distinfo,v 1.9 2014/11/13 20:06:29 markd Exp $
 
-SHA1 (kruler-4.11.5.tar.xz) = b7edfb4d0678b512835d3ee6ea7405e81e2b81af
-RMD160 (kruler-4.11.5.tar.xz) = d6f0e2b1ee844874a7f11a98c4f9f4a8a624cd55
-Size (kruler-4.11.5.tar.xz) = 128696 bytes
+SHA1 (kruler-4.14.3.tar.xz) = 4a88886588a300b274277d4d628d73783616e73f
+RMD160 (kruler-4.14.3.tar.xz) = 49ec0c5edbe3b859f0f3146732ab9500abe84f69
+Size (kruler-4.14.3.tar.xz) = 128596 bytes
