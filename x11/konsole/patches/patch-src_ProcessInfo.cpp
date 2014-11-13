@@ -1,11 +1,12 @@
-$NetBSD: patch-src_ProcessInfo.cpp,v 1.2 2013/04/03 10:51:51 markd Exp $
+$NetBSD: patch-src_ProcessInfo.cpp,v 1.3 2014/11/13 10:53:49 markd Exp $
 
---- src/ProcessInfo.cpp.orig	2013-03-01 06:37:14.000000000 +0000
+--- src/ProcessInfo.cpp.orig	2014-11-01 04:17:02.000000000 +0000
 +++ src/ProcessInfo.cpp
-@@ -1030,6 +1030,171 @@ private:
+@@ -1012,6 +1012,171 @@ private:
+         }
      }
  };
- 
++#elif defined(Q_OS_NETBSD)
 +class NetBSDProcessInfo : public UnixProcessInfo
 +{
 +public:
@@ -170,11 +171,10 @@ $NetBSD: patch-src_ProcessInfo.cpp,v 1.2 2013/04/03 10:51:51 markd Exp $
 +        return true;
 +    }
 +} ;
-+
+ #endif
+ 
  SSHProcessInfo::SSHProcessInfo(const ProcessInfo& process)
-     : _process(process)
- {
-@@ -1184,6 +1349,8 @@ ProcessInfo* ProcessInfo::newInstance(in
+@@ -1168,6 +1333,8 @@ ProcessInfo* ProcessInfo::newInstance(in
      return new LinuxProcessInfo(aPid, enableEnvironmentRead);
  #elif defined(Q_OS_SOLARIS)
      return new SolarisProcessInfo(aPid, enableEnvironmentRead);

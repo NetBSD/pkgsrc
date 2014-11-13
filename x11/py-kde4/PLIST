@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/01/20 15:11:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/11/13 10:53:49 markd Exp $
 bin/pykdeuic4
 bin/pykdeuic4-${PYVERSSUFFIX}
 ${PLIST.py2x}lib/kde4/kpythonpluginfactory.so
@@ -15,14 +15,12 @@ ${PYSITELIB}/PyKDE4/kparts.so
 ${PYSITELIB}/PyKDE4/kterminal.so
 ${PYSITELIB}/PyKDE4/ktexteditor.so
 ${PYSITELIB}/PyKDE4/kutils.so
-${PYSITELIB}/PyKDE4/nepomuk.so
 ${PYSITELIB}/PyKDE4/phonon.so
 ${PYSITELIB}/PyKDE4/plasma.so
 ${PYSITELIB}/PyKDE4/polkitqt.so
 ${PYSITELIB}/PyKDE4/pykdeconfig.py
 ${PYSITELIB}/PyKDE4/pykdeconfig.pyc
 ${PYSITELIB}/PyKDE4/solid.so
-${PYSITELIB}/PyKDE4/soprano.so
 ${PYSITELIB}/PyQt4/uic/pykdeuic4.py
 ${PYSITELIB}/PyQt4/uic/pykdeuic4.pyc
 ${PYSITELIB}/PyQt4/uic/widget-plugins/kde4.py
@@ -901,6 +899,7 @@ share/sip${PYVERSSUFFIX}/PyKDE4/polkitqt/actionbuttons.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/polkitqt/auth.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/polkitqt/context.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/polkitqt/polkitqtmod.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/pykde_config.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/solid/acadapter.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/solid/audiointerface.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/solid/battery.sip

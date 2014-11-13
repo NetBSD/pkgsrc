@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2014/11/07 19:39:26 adam Exp $
+# $NetBSD: Makefile,v 1.42 2014/11/13 10:53:49 markd Exp $
 
-DISTNAME=	kde-workspace-${_KDE_VERSION}
+DISTNAME=	kde-workspace-4.11.14
 PKGNAME=	${DISTNAME:S/-4/4-4/}
-PKGREVISION=	6
 CATEGORIES=	x11
 COMMENT=	Base workspace for the KDE 4 integrated X11 desktop
 
@@ -56,6 +55,8 @@ REPLACE_PERL+= \
 REPLACE_SH+=		libs/plasmagenericshell/widgetsexplorer/package/Messages.sh
 
 PY_PATCHPLIST=	yes
+
+PLIST_SUBST+=		KDE_VERSION=${_KDE_VERSION}
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -143,8 +144,9 @@ BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../sysutils/pciutils/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
+.include "../../math/qalculate/buildlink3.mk"
 .include "../../misc/kdepimlibs4/buildlink3.mk"
-.include "../../misc/nepomuk-core/buildlink3.mk"
+#.include "../../misc/nepomuk-core/buildlink3.mk"
 .include "../../multimedia/phonon/buildlink3.mk"
 .include "../../x11/py-kde4/buildlink3.mk"
 .include "../../x11/kactivities/buildlink3.mk"

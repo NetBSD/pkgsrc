@@ -1,10 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.3 2014/08/21 21:34:33 wiz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.4 2014/11/13 10:53:49 markd Exp $
 
 Retain the python version number in sip install directory
 
---- CMakeLists.txt.orig	2014-01-02 19:29:04.000000000 +0000
+--- CMakeLists.txt.orig	2014-08-14 20:17:11.000000000 +0000
 +++ CMakeLists.txt
-@@ -20,6 +20,8 @@ option(PYKDEUIC4_ALTINSTALL "Enable para
+@@ -18,6 +18,8 @@ option(PYKDEUIC4_ALTINSTALL "Enable para
  
  set(CMAKE_MODULE_PATH ${pykde4_SOURCE_DIR}/cmake/modules ${CMAKE_MODULE_PATH})
  
@@ -13,43 +13,12 @@ Retain the python version number in sip install directory
  find_package(PythonLibrary)
  
  set_package_properties(KDE4 PROPERTIES DESCRIPTION "The KDE libraries"
-@@ -113,15 +115,27 @@ set(SIP_DISABLE_FEATURES VendorID PyQt_N
+@@ -108,7 +110,7 @@ else ()
+ endif ()
+ set(SIP_DISABLE_FEATURES VendorID PyQt_NoPrintRangeBug)
+ 
+-set(SIP_FILES_INSTALL_DIR ${SHARE_INSTALL_PREFIX}/sip)
++set(SIP_FILES_INSTALL_DIR ${SIP_DEFAULT_SIP_DIR})
+ 
  # Use an extra option when compiling on Python 3.
  if (PYTHON_VERSION_MAJOR GREATER 2)
-     if(PYQT4_VERSION STRGREATER "040904")
--	    # Disable for newer PyQt
--	    set(SIP_EXTRA_OPTIONS -P -g -x PyKDE_QVector)
-+	    # Disable for features in newer Qt
-+        if (PYQT4_VERSION STRGREATER "040a04")
-+            # GLuint + QVector (PyQt > 4.11)
-+            set(SIP_EXTRA_OPTIONS -P -g -x PyKDE_QVector -x PyKDE_GLuint)
-+        else ()
-+            # QVector (PyQt < 4.11)
-+            set(SIP_EXTRA_OPTIONS -P -g -x PyKDE_QVector)
-+        endif ()
-     else ()
- 	    set(SIP_EXTRA_OPTIONS -g)
-     endif()
- else (PYTHON_VERSION_MAJOR GREATER 2)
-     if(PYQT4_VERSION STRGREATER "040904")
- 	# Disable for newer PyQt
--    	set(SIP_EXTRA_OPTIONS -P -g -x PyKDE_QVector -x Py_v3)
-+        if (PYQT4_VERSION STRGREATER "040a04")
-+            # GLuint + QVector (PyQt > 4.11)
-+            set(SIP_EXTRA_OPTIONS -P -g -x PyKDE_QVector -x Py_v3 -x PyKDE_GLuint)
-+        else ()
-+            # QVector (PyQt < 4.11)
-+            set(SIP_EXTRA_OPTIONS -P -g -x PyKDE_QVector -x Py_v3)
-+        endif ()
-     else ()
- 	    set(SIP_EXTRA_OPTIONS -g -x Py_v3)
-     endif()
-@@ -241,7 +255,7 @@ endforeach (_X ${SIP_DISABLE_FEATURES})
- 
- get_filename_component(LIB_DIR ${KDE4_LIB_DIR} NAME)
- 
--set (SIP_FILES_INSTALL_DIR ${SHARE_INSTALL_PREFIX}/sip)
-+set (SIP_FILES_INSTALL_DIR ${SIP_DEFAULT_SIP_DIR})
- 
- set(SIP_CONFIGURATION "
- kde_version_parts = '${KDE_VERSION}'.split('.')

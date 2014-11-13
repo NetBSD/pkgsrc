@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2014/11/07 19:39:42 adam Exp $
+# $NetBSD: Makefile,v 1.29 2014/11/13 10:53:49 markd Exp $
 
 DISTNAME=	kde-baseapps-${_KDE_VERSION}
 PKGNAME=	${DISTNAME:S/-4/4-4/}
-PKGREVISION=	5
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 4 integrated X11 desktop
 
@@ -28,9 +27,10 @@ CHECK_INTERPRETER_SKIP=	share/kde/templates/.source/Program.desktop
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/qimageblitz/buildlink3.mk"
-.include "../../misc/nepomuk-core/buildlink3.mk"
-.include "../../misc/nepomuk-widgets/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../sysutils/baloo/buildlink3.mk"
+.include "../../sysutils/baloo-widgets/buildlink3.mk"
+.include "../../sysutils/kfilemetadata/buildlink3.mk"
 .include "../../x11/kactivities/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../x11/kde-runtime4/buildlink3.mk"
