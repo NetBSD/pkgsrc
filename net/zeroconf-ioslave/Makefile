@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2014/11/07 19:39:40 adam Exp $
+# $NetBSD: Makefile,v 1.1 2014/11/13 11:50:27 markd Exp $
 
-DISTNAME=	kdnssd-${_KDE_VERSION}
-PKGREVISION=	5
+DISTNAME=	zeroconf-ioslave-${_KDE_VERSION}
 CATEGORIES=	net
-COMMENT=	Monitors the network for DNS-SD services
+COMMENT=	Monitors the network for DNS-SD services (Zeroconf)
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
