@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/04/03 10:51:57 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/11/13 19:24:23 markd Exp $
 bin/cantor
 include/cantor/animationresult.h
 include/cantor/backend.h
@@ -23,6 +23,7 @@ lib/kde4/cantor_differentiateassistant.so
 lib/kde4/cantor_eigenvaluesassistant.so
 lib/kde4/cantor_eigenvectorsassistant.so
 lib/kde4/cantor_helppanelplugin.so
+lib/kde4/cantor_importpackageassistant.so
 lib/kde4/cantor_integrateassistant.so
 lib/kde4/cantor_invertmatrixassistant.so
 lib/kde4/cantor_kalgebrabackend.so
@@ -31,6 +32,9 @@ lib/kde4/cantor_nullbackend.so
 lib/kde4/cantor_octavebackend.so
 lib/kde4/cantor_plot2dassistant.so
 lib/kde4/cantor_plot3dassistant.so
+lib/kde4/cantor_python2backend.so
+lib/kde4/cantor_qalculatebackend.so
+lib/kde4/cantor_qalculateplotassistant.so
 lib/kde4/cantor_runscriptassistant.so
 lib/kde4/cantor_sagebackend.so
 lib/kde4/cantor_scilabbackend.so
@@ -41,6 +45,7 @@ lib/libcantor_config.so
 lib/libcantorlibs.so
 lib/libcantorlibs.so.0.0.4
 lib/libcantorlibs.so.1
+share/appdata/cantor.appdata.xml
 share/applications/kde4/cantor.desktop
 share/doc/kde/HTML/en/cantor/common
 share/doc/kde/HTML/en/cantor/index.cache.bz2
@@ -50,8 +55,10 @@ share/doc/kde/HTML/en/cantor/screenshot.png
 share/icons/hicolor/16x16/apps/cantor.png
 share/icons/hicolor/32x32/apps/cantor.png
 share/icons/hicolor/48x48/apps/cantor.png
+share/icons/hicolor/48x48/apps/luabackend.png
 share/icons/hicolor/48x48/apps/maximabackend.png
 share/icons/hicolor/48x48/apps/octavebackend.png
+share/icons/hicolor/48x48/apps/pythonbackend.png
 share/icons/hicolor/48x48/apps/qalculatebackend.png
 share/icons/hicolor/48x48/apps/rbackend.png
 share/icons/hicolor/48x48/apps/sagebackend.png
@@ -61,11 +68,13 @@ share/kde/apps/cantor/cantor_create_matrix_assistant.rc
 share/kde/apps/cantor/cantor_differentiate_assistant.rc
 share/kde/apps/cantor/cantor_eigenvalues_assistant.rc
 share/kde/apps/cantor/cantor_eigenvectors_assistant.rc
+share/kde/apps/cantor/cantor_import_package_assistant.rc
 share/kde/apps/cantor/cantor_integrate_assistant.rc
 share/kde/apps/cantor/cantor_invert_matrix_assistant.rc
 share/kde/apps/cantor/cantor_part.rc
 share/kde/apps/cantor/cantor_plot2d_assistant.rc
 share/kde/apps/cantor/cantor_plot3d_assistant.rc
+share/kde/apps/cantor/cantor_qalculateplotassistant.rc
 share/kde/apps/cantor/cantor_runscript_assistant.rc
 share/kde/apps/cantor/cantor_scripteditor.rc
 share/kde/apps/cantor/cantor_shell.rc
@@ -76,19 +85,27 @@ share/kde/apps/cantor/octavebackend/cantor_eigenvectors.m
 share/kde/apps/cantor/octavebackend/cantor_plot2d.m
 share/kde/apps/cantor/octavebackend/cantor_plot3d.m
 share/kde/apps/cantor/octavebackend/cantor_print.m
+share/kde/apps/cantor/python2backend/keywords.xml
 share/kde/apps/cantor/sagebackend/keywords.xml
-share/kde/apps/cantor/scilabbackend/keywords.xml
 share/kde/apps/cantor/xslt/latex.xsl
 share/kde/config.kcfg/cantor.kcfg
 share/kde/config.kcfg/cantor_libs.kcfg
+share/kde/config.kcfg/kalgebrabackend.kcfg
 share/kde/config.kcfg/maximabackend.kcfg
 share/kde/config.kcfg/octavebackend.kcfg
+share/kde/config.kcfg/python2backend.kcfg
+share/kde/config.kcfg/qalculatebackend.kcfg
 share/kde/config.kcfg/sagebackend.kcfg
 share/kde/config.kcfg/scilabbackend.kcfg
 share/kde/config/cantor.knsrc
 share/kde/config/cantor_kalgebra.knsrc
+share/kde/config/cantor_lua.knsrc
 share/kde/config/cantor_maxima.knsrc
+share/kde/config/cantor_octave.knsrc
+share/kde/config/cantor_python2.knsrc
+share/kde/config/cantor_qalculate.knsrc
 share/kde/config/cantor_sage.knsrc
+share/kde/config/cantor_scilab.knsrc
 share/kde4/services/cantor/advancedplotassistant.desktop
 share/kde4/services/cantor/cantor_part.desktop
 share/kde4/services/cantor/creatematrixassistant.desktop
@@ -96,6 +113,7 @@ share/kde4/services/cantor/differentiateassistant.desktop
 share/kde4/services/cantor/eigenvaluesassistant.desktop
 share/kde4/services/cantor/eigenvectorsassistant.desktop
 share/kde4/services/cantor/helppanelplugin.desktop
+share/kde4/services/cantor/importpackageassistant.desktop
 share/kde4/services/cantor/integrateassistant.desktop
 share/kde4/services/cantor/invertmatrixassistant.desktop
 share/kde4/services/cantor/kalgebrabackend.desktop
@@ -104,6 +122,9 @@ share/kde4/services/cantor/nullbackend.desktop
 share/kde4/services/cantor/octavebackend.desktop
 share/kde4/services/cantor/plot2dassistant.desktop
 share/kde4/services/cantor/plot3dassistant.desktop
+share/kde4/services/cantor/python2backend.desktop
+share/kde4/services/cantor/qalculatebackend.desktop
+share/kde4/services/cantor/qalculateplotassistant.desktop
 share/kde4/services/cantor/runscriptassistant.desktop
 share/kde4/services/cantor/sagebackend.desktop
 share/kde4/services/cantor/scilabbackend.desktop
