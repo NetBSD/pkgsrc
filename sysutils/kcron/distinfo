@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2014/02/01 02:20:52 markd Exp $
+$NetBSD: distinfo,v 1.3 2014/11/13 11:05:43 markd Exp $
 
-SHA1 (kcron-4.11.5.tar.xz) = 1cb2698d4a1f9a92715a7e5dca0d41371fd9825a
-RMD160 (kcron-4.11.5.tar.xz) = 2f55633230f08c2005ecf13092909750fa4988e8
-Size (kcron-4.11.5.tar.xz) = 174880 bytes
+SHA1 (kcron-4.14.3.tar.xz) = b39ad9bb9528a04cead1fff522f70c1d770fb9eb
+RMD160 (kcron-4.14.3.tar.xz) = 531caf8687803dd806dea4aed7e44683f3515a42
+Size (kcron-4.14.3.tar.xz) = 174656 bytes
