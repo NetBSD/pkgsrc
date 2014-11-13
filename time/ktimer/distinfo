@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2014/02/01 02:20:53 markd Exp $
+$NetBSD: distinfo,v 1.8 2014/11/13 11:21:01 markd Exp $
 
-SHA1 (ktimer-4.11.5.tar.xz) = 4979748c29c451b886c8a13889d6e46bae3e42c7
-RMD160 (ktimer-4.11.5.tar.xz) = c3b496a142fe8e20a6e0b1bdebc3fe0097eaddbb
-Size (ktimer-4.11.5.tar.xz) = 146764 bytes
+SHA1 (ktimer-4.14.3.tar.xz) = 3f709eb2c8d8c3013c574a9aa1728c84ea32f03d
+RMD160 (ktimer-4.14.3.tar.xz) = 66119a621ed008da4363be2a5df7e8e7138d5037
+Size (ktimer-4.14.3.tar.xz) = 146864 bytes
