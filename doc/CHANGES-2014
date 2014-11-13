@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4266 2014/11/12 21:59:55 snj Exp $
+$NetBSD: CHANGES-2014,v 1.4267 2014/11/13 08:45:12 markd Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5391,3 +5391,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/gpicview to 0.2.4 [snj 2014-11-12]
 	Added multimedia/flvstreamer version 2.1c1 [khorben 2014-11-12]
 	Updated www/midori to 0.4.9nb16 [snj 2014-11-12]
+	Updated x11/p5-Tk to 804.032 [markd 2014-11-13]
+	Added devel/p5-Module-Runtime-Conflicts version 0.001 [markd 2014-11-13]
