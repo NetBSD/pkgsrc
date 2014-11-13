@@ -1,14 +1,20 @@
-@comment $NetBSD: PLIST,v 1.3 2013/11/07 11:59:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/11/13 19:24:23 markd Exp $
 bin/calgebra
+include/analitza/abstractexpressionvisitor.h
 include/analitza/abstractlexer.h
 include/analitza/analitzaexport.h
 include/analitza/analitzautils.h
 include/analitza/analyzer.h
+include/analitza/apply.h
 include/analitza/builtinmethods.h
+include/analitza/container.h
+include/analitza/customobject.h
 include/analitza/expression.h
 include/analitza/expressionstream.h
 include/analitza/expressiontype.h
 include/analitza/importqobjectmetatype.h
+include/analitza/list.h
+include/analitza/matrix.h
 include/analitza/object.h
 include/analitza/operations.h
 include/analitza/operator.h
@@ -47,4 +53,7 @@ lib/libanalitzagui.so.5.0.0
 lib/libanalitzaplot.so
 lib/libanalitzaplot.so.5
 lib/libanalitzaplot.so.5.0.0
+share/kde/apps/libanalitza/plots/3Ds.plots
 share/kde/apps/libanalitza/plots/basic_curves.plots
+share/kde/apps/libanalitza/plots/conics.plots
+share/kde/apps/libanalitza/plots/polar.plots
