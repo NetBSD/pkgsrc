@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/11/07 13:03:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/11/13 11:50:26 markd Exp $
 bin/kget
 lib/kde4/kcm_kget_checksumsearchfactory.so
 lib/kde4/kcm_kget_metalinkfactory.so
@@ -90,5 +90,3 @@ share/kde4/services/kgetpiechartapplet-default.desktop
 share/kde4/services/plasma-engine-kget.desktop
 share/kde4/services/plasma-runner-kget.desktop
 share/kde4/servicetypes/kget_plugin.desktop
-share/ontology/kde/kget_history.ontology
-share/ontology/kde/kget_history.trig

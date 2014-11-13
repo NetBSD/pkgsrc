@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/11/07 13:03:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/11/13 11:50:26 markd Exp $
 bin/kppp
 bin/kppplogview
 share/applications/kde4/Kppp.desktop
@@ -76,9 +76,9 @@ share/kde/apps/kppp/Provider/Germany/CityWeb
 share/kde/apps/kppp/Provider/Germany/FH%032Rhein%032Sieg%032%040Informatik%041
 share/kde/apps/kppp/Provider/Germany/MUC%046DE
 share/kde/apps/kppp/Provider/Germany/Netsurf
-share/kde/apps/kppp/Provider/Irland/.directory
-share/kde/apps/kppp/Provider/Irland/Eircom
-share/kde/apps/kppp/Provider/Irland/IOL
+share/kde/apps/kppp/Provider/Ireland/.directory
+share/kde/apps/kppp/Provider/Ireland/Eircom
+share/kde/apps/kppp/Provider/Ireland/IOL
 share/kde/apps/kppp/Provider/Netherlands/.directory
 share/kde/apps/kppp/Provider/Netherlands/12Move
 share/kde/apps/kppp/Provider/Netherlands/Bart
@@ -141,12 +141,12 @@ share/kde/apps/kppp/Provider/Netherlands/Zeelandnet
 share/kde/apps/kppp/Provider/Netherlands/Zon%0322
 share/kde/apps/kppp/Provider/Netherlands/Zon%032Gratis
 share/kde/apps/kppp/Provider/Netherlands/Zon%032Inclusief
-share/kde/apps/kppp/Provider/NewZealand/.directory
-share/kde/apps/kppp/Provider/NewZealand/OrconInternet
-share/kde/apps/kppp/Provider/NewZealand/Paradise
-share/kde/apps/kppp/Provider/NewZealand/Voyager
-share/kde/apps/kppp/Provider/NewZealand/XTRA
-share/kde/apps/kppp/Provider/NewZealand/ihug
+share/kde/apps/kppp/Provider/New_Zealand/.directory
+share/kde/apps/kppp/Provider/New_Zealand/OrconInternet
+share/kde/apps/kppp/Provider/New_Zealand/Paradise
+share/kde/apps/kppp/Provider/New_Zealand/Voyager
+share/kde/apps/kppp/Provider/New_Zealand/XTRA
+share/kde/apps/kppp/Provider/New_Zealand/ihug
 share/kde/apps/kppp/Provider/Norway/.directory
 share/kde/apps/kppp/Provider/Norway/BGNett
 share/kde/apps/kppp/Provider/Norway/Institutt%032for%032informatikk
