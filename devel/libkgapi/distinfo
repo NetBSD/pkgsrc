@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/11/13 11:13:45 markd Exp $
+
+SHA1 (libkgapi-2.2.0.tar.bz2) = 35ee123691e331fba6138ec9d84fdef3f7a32a12
+RMD160 (libkgapi-2.2.0.tar.bz2) = 4232126e186c2c535b69d7dbbfa107c717db988a
+Size (libkgapi-2.2.0.tar.bz2) = 127026 bytes
