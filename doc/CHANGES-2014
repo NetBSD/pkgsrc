@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4267 2014/11/13 08:45:12 markd Exp $
+$NetBSD: CHANGES-2014,v 1.4268 2014/11/13 09:53:40 markd Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5393,3 +5393,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/midori to 0.4.9nb16 [snj 2014-11-12]
 	Updated x11/p5-Tk to 804.032 [markd 2014-11-13]
 	Added devel/p5-Module-Runtime-Conflicts version 0.001 [markd 2014-11-13]
+	Updated devel/grantlee to 0.5.1 [markd 2014-11-13]
+	Updated devel/qjson to 0.8.1 [markd 2014-11-13]
+	Updated multimedia/phonon to 4.8.2 [markd 2014-11-13]
+	Updated mail/akonadi to 1.13.0 [markd 2014-11-13]
