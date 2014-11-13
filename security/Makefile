@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.525 2014/11/02 20:39:03 agc Exp $
+# $NetBSD: Makefile,v 1.526 2014/11/13 11:30:39 markd Exp $
 #
 
 COMMENT=	Security tools
@@ -117,7 +117,7 @@ SUBDIR+=	kpcli
 SUBDIR+=	kssh
 SUBDIR+=	kstart
 SUBDIR+=	kth-krb4
-SUBDIR+=	kwallet
+SUBDIR+=	kwalletmanager
 SUBDIR+=	lasso
 SUBDIR+=	libassuan
 SUBDIR+=	libassuan2
