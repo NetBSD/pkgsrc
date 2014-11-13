@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.3 2014/05/19 11:07:25 markd Exp $
+$NetBSD: distinfo,v 1.4 2014/11/13 11:50:26 markd Exp $
 
-SHA1 (kopete-4.11.5.tar.xz) = 763eed262a10a9d89cb0c0b3c0f7a94da4d4b0d5
-RMD160 (kopete-4.11.5.tar.xz) = 810fe55d8316f805265565d019c71de61af0bf14
-Size (kopete-4.11.5.tar.xz) = 6474000 bytes
+SHA1 (kopete-4.14.3.tar.xz) = 298937c6fe06b409881592a4b50dceff9dcf9c87
+RMD160 (kopete-4.14.3.tar.xz) = acbba218e24ba051aedab0296a0b2bad25815f8f
+Size (kopete-4.14.3.tar.xz) = 6317288 bytes
 SHA1 (patch-libkopete_avdevice_videodevice.h) = 9864dd808cf375bcc48ec9ed0c6d939da382ea67
-SHA1 (patch-protocols_jabber_libiris_src_jdns_jdns_sys.c) = 55b688b2fd3b003109bfb2ca2c9bdf9dbe2e2352
+SHA1 (patch-protocols_jabber_libiris_src_jdns_jdns_sys.c) = 3bb68fd63bbd98ac106402a1c647f23556e6cea8
 SHA1 (patch-protocols_winpopup_winpopup-install) = 538f1f079439d3c86454583f2863dbbcb3a63b95
-SHA1 (patch-protocols_wlm_CMakeLists.txt) = 09adb9dfd59b360f35c6e5ef1ed06cce00bd20f3
-SHA1 (patch-protocols_wlm_wlmchatsession.cpp) = 6ed9cc71f7f53bad69686a2fe47330ceac48eb59
+SHA1 (patch-protocols_wlm_CMakeLists.txt) = 4f0c6ebdf51f15c0759a8489ddbb43fe4052281c
