@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2014/02/12 23:17:46 tron Exp $
+# $NetBSD: Makefile,v 1.3 2014/11/13 08:58:04 markd Exp $
 #
 
-DISTNAME=	grantlee-0.3.0
-PKGREVISION=	1
+DISTNAME=	grantlee-0.5.1
 CATEGORIES=	devel
 MASTER_SITES=	http://downloads.grantlee.org/
 
