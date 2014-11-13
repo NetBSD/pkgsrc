@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2014/02/01 02:20:47 markd Exp $
+$NetBSD: distinfo,v 1.9 2014/11/13 20:06:28 markd Exp $
 
-SHA1 (kamera-4.11.5.tar.xz) = 8bf537251af37c6df235180882376eb0771e32e2
-RMD160 (kamera-4.11.5.tar.xz) = 6e5857adf6a2d724e0a3ee2c96dbfd73042d2779
-Size (kamera-4.11.5.tar.xz) = 35360 bytes
+SHA1 (kamera-4.14.3.tar.xz) = 2027ad70cfd999d6d81641e6b53c7bcc12ed3560
+RMD160 (kamera-4.14.3.tar.xz) = 3014eb514c4e514904a32d0ad3da8e0e602e42e5
+Size (kamera-4.14.3.tar.xz) = 35324 bytes

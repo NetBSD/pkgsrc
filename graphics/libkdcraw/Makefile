@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2014/11/07 19:39:24 adam Exp $
+# $NetBSD: Makefile,v 1.52 2014/11/13 20:06:29 markd Exp $
 
 DISTNAME=	libkdcraw-${_KDE_VERSION}
-PKGREVISION=	5
 CATEGORIES=	graphics
 COMMENT=	KDE digital camera raw image library wrapper
 
@@ -11,7 +10,7 @@ PKGCONFIG_OVERRIDE+=    libkdcraw.pc.cmake
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 
-.include "../../graphics/lcms/buildlink3.mk"
+.include "../../graphics/libraw/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
