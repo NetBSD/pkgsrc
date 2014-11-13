@@ -1,8 +1,35 @@
-$NetBSD: patch-aa,v 1.4 2010/09/12 12:59:47 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2014/11/13 08:30:16 markd Exp $
 
---- Tk/MMutil.pm.orig	2010-05-12 23:29:42.000000000 +0000
+Workaround behaviour change in ExtUtils::MakeMaker 6.99_10 (PERL
+value is now quoted), which caused build failures (RT #100044).
+
+--- Tk/MMutil.pm.orig	2013-11-15 23:50:03.000000000 +0000
 +++ Tk/MMutil.pm
-@@ -313,10 +313,13 @@ sub const_config
+@@ -115,19 +115,15 @@ sub mTk_CHO
+  $self->{O_FILES} = [grep s/\.c(pp|xx|c)?$/$self->{OBJ_EXT}/i, @o_files] ;
+  $self->{'MTK'}   = $mTk;
+  my $tk = installed_tk();
+- my $perl = $self->{'PERL'};
+- if ($IsWin32 && !-f $perl && -f "$perl.exe")
+-  {
+-   print "perl=$perl X=$^X\n";
+-   $perl = "$perl.exe";
+-   $self->{'PERL'} = $perl;
+-  }
++ my $perl = $^X;
+  foreach my $file (sort keys %$mTk)
+   {
+    unless (-f $file && -M $file < -M $mTk->{$file})
+     {
+      warn "Extracting $file\n";
+-     system($perl,"$tk/pTk/Tcl-pTk",$mTk->{$file},$file);
++     my @cmd = ($perl,"$tk/pTk/Tcl-pTk",$mTk->{$file},$file);
++     system @cmd;
++     die "The command '@cmd' failed with $?" if $? != 0;
+     }
+   }
+ }
+@@ -313,10 +309,13 @@ sub const_config
  #   }
     $self->{'LDFLAGS'} =~ s/-flat_namespace//;
     $self->{'LDFLAGS'} =~ s/-undefined\s+suppress//;
