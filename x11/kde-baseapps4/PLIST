@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/02/01 02:20:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/11/13 10:53:49 markd Exp $
 bin/dolphin
 bin/fsview
 bin/kbookmarkmerger
@@ -85,7 +85,7 @@ lib/libkdeinit4_kfmclient.so
 lib/libkdeinit4_konqueror.so
 lib/libkonq.so
 lib/libkonq.so.5
-lib/libkonq.so.5.11.5
+lib/libkonq.so.5.14.3
 lib/libkonqsidebarplugin.so
 lib/libkonqsidebarplugin.so.4
 lib/libkonqsidebarplugin.so.${PKGVERSION}
@@ -93,6 +93,7 @@ lib/libkonquerorprivate.so.4
 lib/libkonquerorprivate.so.${PKGVERSION}
 man/man1/kbookmarkmerger.1
 man/man1/kfind.1
+share/appdata/dolphin.appdata.xml
 share/applications/kde4/Home.desktop
 share/applications/kde4/dolphin.desktop
 share/applications/kde4/kdepasswd.desktop
@@ -121,6 +122,7 @@ share/doc/kde/HTML/en/dolphin/index.docbook
 share/doc/kde/HTML/en/dolphin/locationbar-breadcrumb.png
 share/doc/kde/HTML/en/dolphin/locationbar-context-menu.png
 share/doc/kde/HTML/en/dolphin/locationbar-editable.png
+share/doc/kde/HTML/en/dolphin/locationbar-kioslaves-menu.png
 share/doc/kde/HTML/en/dolphin/locationbar-places-icon.png
 share/doc/kde/HTML/en/dolphin/nepomuk-search-more-options.png
 share/doc/kde/HTML/en/dolphin/nepomuk-search.png
@@ -392,7 +394,12 @@ share/kde4/services/smb.desktop
 share/kde4/services/useragent.desktop
 share/kde4/services/useragentstrings/android10.desktop
 share/kde4/services/useragentstrings/chrome10onwinnt51.desktop
+share/kde4/services/useragentstrings/chrome22oncurrent.desktop
+share/kde4/services/useragentstrings/chrome23oncurrent.desktop
+share/kde4/services/useragentstrings/chrome24oncurrent.desktop
 share/kde4/services/useragentstrings/chrome50oncurrent.desktop
+share/kde4/services/useragentstrings/firefox15oncurrent.desktop
+share/kde4/services/useragentstrings/firefox16oncurrent.desktop
 share/kde4/services/useragentstrings/firefox20oncurrent.desktop
 share/kde4/services/useragentstrings/firefox30oncurrent.desktop
 share/kde4/services/useragentstrings/firefox36oncurrent.desktop
@@ -403,12 +410,16 @@ share/kde4/services/useragentstrings/ie55onwinnt5.desktop
 share/kde4/services/useragentstrings/ie60oncurrent.desktop
 share/kde4/services/useragentstrings/ie60onwinnt51.desktop
 share/kde4/services/useragentstrings/ie70onwinnt51.desktop
+share/kde4/services/useragentstrings/ie80onwinnt60.desktop
+share/kde4/services/useragentstrings/ie90onwinnt71.desktop
 share/kde4/services/useragentstrings/lynxoncurrent.desktop
 share/kde4/services/useragentstrings/nn301oncurrent.desktop
 share/kde4/services/useragentstrings/nn475oncurrent.desktop
 share/kde4/services/useragentstrings/nn475onwin95.desktop
 share/kde4/services/useragentstrings/ns71oncurrent.desktop
 share/kde4/services/useragentstrings/ns71onwinnt51.desktop
+share/kde4/services/useragentstrings/op1162oncurrent.desktop
+share/kde4/services/useragentstrings/op1202oncurrent.desktop
 share/kde4/services/useragentstrings/op403onwinnt4.desktop
 share/kde4/services/useragentstrings/op85oncurrent.desktop
 share/kde4/services/useragentstrings/op90oncurrent.desktop
@@ -417,6 +428,8 @@ share/kde4/services/useragentstrings/safari20.desktop
 share/kde4/services/useragentstrings/safari30oniphone.desktop
 share/kde4/services/useragentstrings/safari32.desktop
 share/kde4/services/useragentstrings/safari40.desktop
+share/kde4/services/useragentstrings/safari517.desktop
+share/kde4/services/useragentstrings/safari60.desktop
 share/kde4/services/useragentstrings/w3moncurrent.desktop
 share/kde4/services/useragentstrings/wgetoncurrent.desktop
 share/kde4/services/webarchivethumbnail.desktop
