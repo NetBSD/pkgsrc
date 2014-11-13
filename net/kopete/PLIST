@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/11/07 13:03:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/11/13 11:50:26 markd Exp $
 bin/kopete
 bin/kopete_latexconvert.sh
 bin/winpopup-install
@@ -229,6 +229,7 @@ share/icons/oxygen/16x16/actions/account_offline_overlay.png
 share/icons/oxygen/16x16/actions/contact_away_overlay.png
 share/icons/oxygen/16x16/actions/contact_busy_overlay.png
 share/icons/oxygen/16x16/actions/contact_food_overlay.png
+share/icons/oxygen/16x16/actions/contact_freeforchat_overlay.png
 share/icons/oxygen/16x16/actions/contact_invisible_overlay.png
 share/icons/oxygen/16x16/actions/contact_phone_overlay.png
 share/icons/oxygen/16x16/actions/contact_xa_overlay.png
@@ -400,19 +401,6 @@ share/kde/apps/kopete/icons/oxygen/16x16/actions/meanwhile_away.png
 share/kde/apps/kopete/icons/oxygen/16x16/actions/meanwhile_dnd.png
 share/kde/apps/kopete/icons/oxygen/16x16/actions/meanwhile_idle.png
 share/kde/apps/kopete/icons/oxygen/16x16/actions/meanwhile_unknown.png
-share/kde/apps/kopete/icons/oxygen/16x16/actions/skype_blockcontact.png
-share/kde/apps/kopete/icons/oxygen/16x16/actions/skype_call.png
-share/kde/apps/kopete/icons/oxygen/16x16/actions/skype_connecting.mng
-share/kde/apps/kopete/icons/oxygen/16x16/actions/skype_connecting.png
-share/kde/apps/kopete/icons/oxygen/16x16/actions/skype_contact_away.png
-share/kde/apps/kopete/icons/oxygen/16x16/actions/skype_contact_dnd.png
-share/kde/apps/kopete/icons/oxygen/16x16/actions/skype_contact_invisible.png
-share/kde/apps/kopete/icons/oxygen/16x16/actions/skype_contact_not_available.png
-share/kde/apps/kopete/icons/oxygen/16x16/actions/skype_contact_offline.png
-share/kde/apps/kopete/icons/oxygen/16x16/actions/skype_contact_online.png
-share/kde/apps/kopete/icons/oxygen/16x16/actions/skype_contact_skypeme.png
-share/kde/apps/kopete/icons/oxygen/16x16/actions/skype_contact_skypeout.png
-share/kde/apps/kopete/icons/oxygen/16x16/actions/skype_contact_unknown.png
 share/kde/apps/kopete/icons/oxygen/16x16/actions/wlm_away.png
 share/kde/apps/kopete/icons/oxygen/16x16/actions/wlm_blocked.png
 share/kde/apps/kopete/icons/oxygen/16x16/actions/wlm_brb.png
@@ -458,9 +446,6 @@ share/kde/apps/kopete/icons/oxygen/16x16/apps/wlm_protocol.png
 share/kde/apps/kopete/icons/oxygen/16x16/apps/wp_protocol.png
 share/kde/apps/kopete/icons/oxygen/16x16/apps/yahoo_protocol.png
 share/kde/apps/kopete/icons/oxygen/22x22/actions/logging.png
-share/kde/apps/kopete/icons/oxygen/22x22/actions/skype_blockcontact.png
-share/kde/apps/kopete/icons/oxygen/22x22/actions/skype_call.png
-share/kde/apps/kopete/icons/oxygen/22x22/actions/skype_contact_skypeout.png
 share/kde/apps/kopete/icons/oxygen/22x22/actions/yahoo_stealthed.png
 share/kde/apps/kopete/icons/oxygen/22x22/apps/aim_protocol.png
 share/kde/apps/kopete/icons/oxygen/22x22/apps/bonjour_protocol.png
@@ -473,9 +458,6 @@ share/kde/apps/kopete/icons/oxygen/22x22/apps/qq_protocol.png
 share/kde/apps/kopete/icons/oxygen/22x22/apps/skype_protocol.png
 share/kde/apps/kopete/icons/oxygen/22x22/apps/wlm_protocol.png
 share/kde/apps/kopete/icons/oxygen/32x32/actions/logging.png
-share/kde/apps/kopete/icons/oxygen/32x32/actions/skype_blockcontact.png
-share/kde/apps/kopete/icons/oxygen/32x32/actions/skype_call.png
-share/kde/apps/kopete/icons/oxygen/32x32/actions/skype_contact_skypeout.png
 share/kde/apps/kopete/icons/oxygen/32x32/actions/yahoo_stealthed.png
 share/kde/apps/kopete/icons/oxygen/32x32/apps/aim_protocol.png
 share/kde/apps/kopete/icons/oxygen/32x32/apps/bonjour_protocol.png
