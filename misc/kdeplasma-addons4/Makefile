@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2014/11/07 19:39:37 adam Exp $
+# $NetBSD: Makefile,v 1.62 2014/11/13 19:19:08 markd Exp $
 
 DISTNAME=	kdeplasma-addons-${_KDE_VERSION}
 PKGNAME=	${DISTNAME:S/-4/4-4/}
-PKGREVISION=	6
 CATEGORIES=	misc
 COMMENT=	Plasmoids
 
@@ -19,9 +18,10 @@ CMAKE_ARGS+=	-D BUILD_ibus:BOOL=OFF
 .include "../../graphics/libkexiv2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.eigen2+=	eigen2>=2.0.3
 .include "../../math/eigen2/buildlink3.mk"
+.include "../../math/qalculate/buildlink3.mk"
 .include "../../misc/attica/buildlink3.mk"
 .include "../../misc/marble/buildlink3.mk"
-.include "../../misc/nepomuk-core/buildlink3.mk"
+#.include "../../misc/nepomuk-core/buildlink3.mk"
 .include "../../misc/kdepimlibs4/buildlink3.mk"
 .include "../../security/qca2/buildlink3.mk"
 .include "../../security/qoauth/buildlink3.mk"

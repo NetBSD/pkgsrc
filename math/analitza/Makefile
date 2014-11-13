@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2014/11/07 19:39:25 adam Exp $
+# $NetBSD: Makefile,v 1.27 2014/11/13 19:24:23 markd Exp $
 
 DISTNAME=	analitza-${_KDE_VERSION}
-PKGREVISION=	5
 CATEGORIES=	math
 COMMENT=	KDE library for mathematical features
 
@@ -12,6 +11,7 @@ BROKEN_READLINE_DETECTION=	yes
 .include "../../meta-pkgs/kde4/kde4.mk"
 
 .include "../../devel/readline/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

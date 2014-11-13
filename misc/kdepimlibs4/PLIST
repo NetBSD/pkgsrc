@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.10 2013/11/07 12:35:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/11/13 19:19:06 markd Exp $
+bin/akonadi2xml
+bin/akonaditest
 include/KDE/Akonadi/AgentBase
 include/KDE/Akonadi/AgentFactory
 include/KDE/Akonadi/AgentFilterProxyModel
@@ -12,6 +14,7 @@ include/KDE/Akonadi/AgentTypeDialog
 include/KDE/Akonadi/AgentTypeModel
 include/KDE/Akonadi/AgentTypeWidget
 include/KDE/Akonadi/Attribute
+include/KDE/Akonadi/AttributeEntity
 include/KDE/Akonadi/AttributeFactory
 include/KDE/Akonadi/CachePolicy
 include/KDE/Akonadi/Calendar/BlockAlarmsAttribute
@@ -23,10 +26,12 @@ include/KDE/Akonadi/Calendar/FetchJobCalendar
 include/KDE/Akonadi/Calendar/FreeBusyManager
 include/KDE/Akonadi/Calendar/FreeBusyProviderBase
 include/KDE/Akonadi/Calendar/History
+include/KDE/Akonadi/Calendar/ICalImporter
 include/KDE/Akonadi/Calendar/ITIPHandler
 include/KDE/Akonadi/Calendar/IncidenceChanger
 include/KDE/Akonadi/Calendar/PublishDialog
 include/KDE/Akonadi/Calendar/StandardCalendarActionManager
+include/KDE/Akonadi/Calendar/TodoPurger
 include/KDE/Akonadi/ChangeRecorder
 include/KDE/Akonadi/Collection
 include/KDE/Akonadi/CollectionAttributesSynchronizationJob
@@ -76,6 +81,7 @@ include/KDE/Akonadi/Control
 include/KDE/Akonadi/DBusConnectionPool
 include/KDE/Akonadi/ETMViewStateSaver
 include/KDE/Akonadi/Entity
+include/KDE/Akonadi/EntityAnnotationsAttribute
 include/KDE/Akonadi/EntityDisplayAttribute
 include/KDE/Akonadi/EntityHiddenAttribute
 include/KDE/Akonadi/EntityListView
@@ -123,12 +129,24 @@ include/KDE/Akonadi/RecursiveCollectionFilterProxyModel
 include/KDE/Akonadi/RecursiveItemFetchJob
 include/KDE/Akonadi/ResourceBase
 include/KDE/Akonadi/SearchCreateJob
+include/KDE/Akonadi/SearchQuery
 include/KDE/Akonadi/ServerManager
 include/KDE/Akonadi/Session
 include/KDE/Akonadi/SocialUtils/ImageProvider
 include/KDE/Akonadi/SocialUtils/SocialFeedItem
 include/KDE/Akonadi/SocialUtils/SocialNetworkAttributes
 include/KDE/Akonadi/StandardActionManager
+include/KDE/Akonadi/Tag
+include/KDE/Akonadi/TagAttribute
+include/KDE/Akonadi/TagCreateJob
+include/KDE/Akonadi/TagDeleteJob
+include/KDE/Akonadi/TagFetchJob
+include/KDE/Akonadi/TagFetchScope
+include/KDE/Akonadi/TagManagementDialog
+include/KDE/Akonadi/TagModel
+include/KDE/Akonadi/TagModifyJob
+include/KDE/Akonadi/TagSelectionDialog
+include/KDE/Akonadi/TagWidget
 include/KDE/Akonadi/TransactionBeginJob
 include/KDE/Akonadi/TransactionCommitJob
 include/KDE/Akonadi/TransactionRollbackJob
@@ -373,6 +391,8 @@ include/KDE/KPIMTextEdit/TextEdit
 include/KDE/KPIMUtils/Email
 include/KDE/KPIMUtils/KFileIO
 include/KDE/KPIMUtils/LinkLocator
+include/KDE/KPIMUtils/ProgressIndicatorLabel
+include/KDE/KPIMUtils/ProgressIndicatorWidget
 include/KDE/KPIMUtils/SpellingFilter
 include/KDE/KResources/ConfigDialog
 include/KDE/KResources/ConfigPage
@@ -453,6 +473,7 @@ include/akonadi/agenttypemodel.h
 include/akonadi/agenttypewidget.h
 include/akonadi/akonadi_export.h
 include/akonadi/attribute.h
+include/akonadi/attributeentity.h
 include/akonadi/attributefactory.h
 include/akonadi/cachepolicy.h
 include/akonadi/cachepolicypage.h
@@ -466,10 +487,12 @@ include/akonadi/calendar/fetchjobcalendar.h
 include/akonadi/calendar/freebusymanager.h
 include/akonadi/calendar/freebusyproviderbase.h
 include/akonadi/calendar/history.h
+include/akonadi/calendar/icalimporter.h
 include/akonadi/calendar/incidencechanger.h
 include/akonadi/calendar/itiphandler.h
 include/akonadi/calendar/publishdialog.h
 include/akonadi/calendar/standardcalendaractionmanager.h
+include/akonadi/calendar/todopurger.h
 include/akonadi/changerecorder.h
 include/akonadi/collection.h
 include/akonadi/collectionattributessynchronizationjob.h
@@ -484,6 +507,7 @@ include/akonadi/collectionfilterproxymodel.h
 include/akonadi/collectionmodel.h
 include/akonadi/collectionmodifyjob.h
 include/akonadi/collectionmovejob.h
+include/akonadi/collectionpathresolver_p.h
 include/akonadi/collectionpropertiesdialog.h
 include/akonadi/collectionpropertiespage.h
 include/akonadi/collectionquotaattribute.h
@@ -515,6 +539,7 @@ include/akonadi/contact/contactviewerdialog.h
 include/akonadi/contact/emailaddressselection.h
 include/akonadi/contact/emailaddressselectiondialog.h
 include/akonadi/contact/emailaddressselectionwidget.h
+include/akonadi/contact/improtocols.h
 include/akonadi/contact/recentcontactscollectionrequestjob.h
 include/akonadi/contact/standardcontactactionmanager.h
 include/akonadi/contact/standardcontactformatter.h
@@ -523,6 +548,7 @@ include/akonadi/control.h
 include/akonadi/dbusconnectionpool.h
 include/akonadi/differencesalgorithminterface.h
 include/akonadi/entity.h
+include/akonadi/entityannotationsattribute.h
 include/akonadi/entitydeletedattribute.h
 include/akonadi/entitydisplayattribute.h
 include/akonadi/entityhiddenattribute.h
@@ -536,6 +562,7 @@ include/akonadi/entitytreeviewstatesaver.h
 include/akonadi/etmviewstatesaver.h
 include/akonadi/exception.h
 include/akonadi/favoritecollectionsmodel.h
+include/akonadi/gidextractorinterface.h
 include/akonadi/indexpolicyattribute.h
 include/akonadi/item.h
 include/akonadi/itemcopyjob.h
@@ -589,6 +616,7 @@ include/akonadi/resourcebasesettings.h
 include/akonadi/resourcesettings.h
 include/akonadi/resourcesynchronizationjob.h
 include/akonadi/searchcreatejob.h
+include/akonadi/searchquery.h
 include/akonadi/selectionproxymodel.h
 include/akonadi/servermanager.h
 include/akonadi/session.h
@@ -601,6 +629,17 @@ include/akonadi/specialcollectionsdiscoveryjob.h
 include/akonadi/specialcollectionsrequestjob.h
 include/akonadi/standardactionmanager.h
 include/akonadi/statisticsproxymodel.h
+include/akonadi/tag.h
+include/akonadi/tagattribute.h
+include/akonadi/tagcreatejob.h
+include/akonadi/tagdeletejob.h
+include/akonadi/tagfetchjob.h
+include/akonadi/tagfetchscope.h
+include/akonadi/tagmanagementdialog.h
+include/akonadi/tagmodel.h
+include/akonadi/tagmodifyjob.h
+include/akonadi/tagselectiondialog.h
+include/akonadi/tagwidget.h
 include/akonadi/transactionjobs.h
 include/akonadi/transactionsequence.h
 include/akonadi/transportresourcebase.h
@@ -609,6 +648,11 @@ include/akonadi/trashjob.h
 include/akonadi/trashrestorejob.h
 include/akonadi/trashsettings.h
 include/akonadi/unlinkjob.h
+include/akonadi/xml/akonadi-xml_export.h
+include/akonadi/xml/xmldocument.h
+include/akonadi/xml/xmlreader.h
+include/akonadi/xml/xmlwritejob.h
+include/akonadi/xml/xmlwriter.h
 include/gpgme++/assuanresult.h
 include/gpgme++/configuration.h
 include/gpgme++/context.h
@@ -916,6 +960,7 @@ include/kpimutils/kpimutils_export.h
 include/kpimutils/linklocator.h
 include/kpimutils/networkaccesshelper.h
 include/kpimutils/processes.h
+include/kpimutils/progressindicatorlabel.h
 include/kpimutils/progressindicatorwidget.h
 include/kpimutils/spellingfilter.h
 include/kpimutils/supertrait.h
@@ -924,6 +969,7 @@ include/kresources/configpage.h
 include/kresources/configwidget.h
 include/kresources/factory.h
 include/kresources/idmapper.h
+include/kresources/kcmkresources_export.h
 include/kresources/kresources_export.h
 include/kresources/manager.h
 include/kresources/managerimpl.h
@@ -1038,6 +1084,7 @@ lib/cmake/KdepimLibs/KdepimLibsConfig.cmake
 lib/cmake/KdepimLibs/KdepimLibsConfigVersion.cmake
 lib/gpgmepp/GpgmeppConfig.cmake
 lib/gpgmepp/GpgmeppLibraryDepends.cmake
+lib/kde4/akonadi_knut_resource.so
 lib/kde4/akonadi_serializer_socialfeeditem.so
 lib/kde4/kabc_directory.so
 lib/kde4/kabc_file.so
@@ -1082,6 +1129,9 @@ lib/libakonadi-notes.so.${PKGVERSION}
 lib/libakonadi-socialutils.so
 lib/libakonadi-socialutils.so.4
 lib/libakonadi-socialutils.so.${PKGVERSION}
+lib/libakonadi-xml.so
+lib/libakonadi-xml.so.4
+lib/libakonadi-xml.so.${PKGVERSION}
 lib/libgpgme++-pthread.so
 lib/libgpgme++-pthread.so.2
 lib/libgpgme++-pthread.so.2.8.0
@@ -1157,6 +1207,7 @@ lib/libqgpgme.so.1.0.1
 lib/libsyndication.so
 lib/libsyndication.so.4
 lib/libsyndication.so.${PKGVERSION}
+share/akonadi/agents/knutresource.desktop
 share/dbus-1/interfaces/org.kde.KResourcesManager.xml
 share/dbus-1/interfaces/org.kde.pim.IdentityManager.xml
 share/doc/kde/HTML/en/kcontrol/kresources/common
@@ -1184,6 +1235,7 @@ share/doc/kde/HTML/en/kioslave/smtp/common
 share/doc/kde/HTML/en/kioslave/smtp/index.cache.bz2
 share/doc/kde/HTML/en/kioslave/smtp/index.docbook
 share/kde/apps/akonadi-kde/kcfg2dbus.xsl
+share/kde/apps/akonadi/akonadi-xml.xsd
 share/kde/apps/akonadi/contact/data/zone.tab
 share/kde/apps/akonadi/contact/icons/oxygen/16x16/apps/aim_protocol.png
 share/kde/apps/akonadi/contact/icons/oxygen/16x16/apps/gadu_protocol.png
@@ -1198,6 +1250,8 @@ share/kde/apps/akonadi/contact/icons/oxygen/16x16/apps/sms_protocol.png
 share/kde/apps/akonadi/contact/icons/oxygen/16x16/apps/yahoo_protocol.png
 share/kde/apps/akonadi/contact/pics/world.jpg
 share/kde/apps/akonadi/plugins/serializer/akonadi_serializer_socialfeeditem.desktop
+share/kde/apps/akonadi_knut_resource/knut-template.xml
+share/kde/apps/cmake/modules/AkonadiMacros.cmake
 share/kde/apps/cmake/modules/CheckTimezone.cmake
 share/kde/apps/cmake/modules/FindGpgme.cmake
 share/kde/apps/cmake/modules/FindLdap.cmake
@@ -1223,6 +1277,7 @@ share/kde/apps/libkholidays/plan2/holiday_ba-srp_sr
 share/kde/apps/libkholidays/plan2/holiday_ba-srp_sr@ijekavian
 share/kde/apps/libkholidays/plan2/holiday_ba-srp_sr@ijekavianlatin
 share/kde/apps/libkholidays/plan2/holiday_ba-srp_sr@latin
+share/kde/apps/libkholidays/plan2/holiday_bb_en-gb
 share/kde/apps/libkholidays/plan2/holiday_be_fr
 share/kde/apps/libkholidays/plan2/holiday_be_nl
 share/kde/apps/libkholidays/plan2/holiday_be_wa
@@ -1257,6 +1312,7 @@ share/kde/apps/libkholidays/plan2/holiday_gb-sct_en-gb
 share/kde/apps/libkholidays/plan2/holiday_gf_fr
 share/kde/apps/libkholidays/plan2/holiday_gp_fr
 share/kde/apps/libkholidays/plan2/holiday_gr_el
+share/kde/apps/libkholidays/plan2/holiday_gr_el_nameday
 share/kde/apps/libkholidays/plan2/holiday_gt_es
 share/kde/apps/libkholidays/plan2/holiday_hk_en-gb
 share/kde/apps/libkholidays/plan2/holiday_hk_zh-cn

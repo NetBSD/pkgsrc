@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.69 2014/11/07 19:39:37 adam Exp $
+# $NetBSD: Makefile,v 1.70 2014/11/13 19:19:08 markd Exp $
 
-#DISTNAME=	kdepim-${_KDE_VERSION}
-DISTNAME=	kdepim-4.4.11.1
+DISTNAME=	kdepim-${_KDE_VERSION}
 PKGNAME=	${DISTNAME:S/-4/4-4/}
-MASTER_SITES=	${MASTER_SITE_KDE:=kdepim-4.4.11.1/src/}
-PKGREVISION=	38
 CATEGORIES=	misc
 COMMENT=	Personal Information Management tools for the KDE desktop
-EXTRACT_SUFX=	.tar.bz2
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
+USE_TOOLS+=	gmake
+
 # BUILD_MAKE_FLAGS+= VERBOSE=1
 
-CMAKE_ARGS+=-DMAL_BASE:STRING=${BUILDLINK_PREFIX.libmal}
+CMAKE_ARGS+=-DKDEPIM_BUILD_MOBILE=OFF
 
 CHECK_PORTABILITY_SKIP+=ktimetracker/test/booktime-baddate.sh \
 		ktimetracker/test/booktime-badduration.sh \
@@ -27,6 +25,7 @@ CHECK_PORTABILITY_SKIP+=ktimetracker/test/booktime-baddate.sh \
 REPLACE_BASH+=	kmail/kconf_update/kmail-*.sh
 
 REPLACE_PERL+= \
+	agents/mailfilteragent/kconf_update/migrate-kmail-filters.pl \
 	kalarm/kalarm-1.2.1-general.pl \
 	kalarm/kalarm-1.9.5-defaults.pl \
 	kalarm/kalarm-2.0.2-general.pl \
@@ -49,7 +48,9 @@ REPLACE_PERL+= \
 	kmail/kconf_update/upgrade-signature.pl \
 	kmail/kconf_update/upgrade-transport.pl \
 	kresources/kolab/upgrade-resourcetype.pl \
-	libkpgp/kpgp-3.1-upgrade-address-data.pl
+	libkpgp/kconf_update/kpgp-3.1-upgrade-address-data.pl
+
+PLIST_SUBST+=		KDE_VERSION=${_KDE_VERSION}
 
 SUBST_CLASSES+=		perlfix
 SUBST_STAGE.perlfix=	pre-configure
@@ -61,15 +62,16 @@ BUILDLINK_DEPMETHOD.qt4-tools=full
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 
-.include "../../comms/libmal/buildlink3.mk"
-.include "../../comms/libopensync/buildlink3.mk"
-.include "../../comms/pilot-link-libs/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/grantlee/buildlink3.mk"
+.include "../../devel/libkgapi/buildlink3.mk"
+.include "../../devel/qjson/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../misc/kdepimlibs4/buildlink3.mk"
-.include "../../misc/nepomuk-core/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../security/libassuan2/buildlink3.mk"
 .include "../../security/qca2/buildlink3.mk"
+.include "../../sysutils/baloo/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../x11/kde-runtime4/buildlink3.mk"

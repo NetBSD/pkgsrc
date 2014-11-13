@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2013/11/07 12:35:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/11/13 19:19:07 markd Exp $
 bin/parley
 lib/kde4/plasma_applet_parley.so
 lib/kde4/plasma_engine_parley.so
+share/appdata/parley.appdata.xml
 share/applications/kde4/parley.desktop
 share/doc/kde/HTML/en/parley/Configure_blocking.png
 share/doc/kde/HTML/en/parley/Configure_practice.png
@@ -63,6 +64,7 @@ share/doc/kde/HTML/en/parley/Parley_trainer_eng-deu_0-9-4_003.png
 share/doc/kde/HTML/en/parley/Parley_trainer_eng-deu_0-9-4_004.png
 share/doc/kde/HTML/en/parley/Parley_trainer_eng-deu_0-9-4_005.png
 share/doc/kde/HTML/en/parley/Parley_trainer_eng-deu_0-9-4_006.png
+share/doc/kde/HTML/en/parley/Parley_trainer_eng-deu_0-9-4_006b.png
 share/doc/kde/HTML/en/parley/Parley_trainer_eng-deu_0-9-4_007.png
 share/doc/kde/HTML/en/parley/Parley_trainer_eng-deu_0-9-4_008.png
 share/doc/kde/HTML/en/parley/Parley_trainer_eng-deu_0-9-4_009.png
@@ -85,8 +87,8 @@ share/icons/hicolor/scalable/apps/parley-parley.svgz
 share/icons/hicolor/scalable/apps/parley-simple.svgz
 share/icons/hicolor/scalable/apps/parley.svgz
 share/kde/apps/desktoptheme/default/widgets/parley_plasma_card.svg
+share/kde/apps/parley/dashboardui.rc
 share/kde/apps/parley/editorui.rc
-share/kde/apps/parley/icons/oxygen/16x16/actions/advanced-setup.png
 share/kde/apps/parley/icons/oxygen/16x16/actions/cards-block.png
 share/kde/apps/parley/icons/oxygen/16x16/actions/edit-clear.png
 share/kde/apps/parley/icons/oxygen/16x16/actions/edit-entry.png
@@ -101,7 +103,7 @@ share/kde/apps/parley/icons/oxygen/16x16/actions/practice-start.png
 share/kde/apps/parley/icons/oxygen/16x16/actions/practice-stop.png
 share/kde/apps/parley/icons/oxygen/16x16/actions/remove-duplicates.png
 share/kde/apps/parley/icons/oxygen/16x16/actions/set-language.png
-share/kde/apps/parley/icons/oxygen/22x22/actions/advanced-setup.png
+share/kde/apps/parley/icons/oxygen/16x16/actions/specific-setup.png
 share/kde/apps/parley/icons/oxygen/22x22/actions/cards-block.png
 share/kde/apps/parley/icons/oxygen/22x22/actions/edit-clear.png
 share/kde/apps/parley/icons/oxygen/22x22/actions/edit-entry.png
@@ -116,7 +118,7 @@ share/kde/apps/parley/icons/oxygen/22x22/actions/practice-start.png
 share/kde/apps/parley/icons/oxygen/22x22/actions/practice-stop.png
 share/kde/apps/parley/icons/oxygen/22x22/actions/remove-duplicates.png
 share/kde/apps/parley/icons/oxygen/22x22/actions/set-language.png
-share/kde/apps/parley/icons/oxygen/32x32/actions/advanced-setup.png
+share/kde/apps/parley/icons/oxygen/22x22/actions/specific-setup.png
 share/kde/apps/parley/icons/oxygen/32x32/actions/cards-block.png
 share/kde/apps/parley/icons/oxygen/32x32/actions/edit-clear.png
 share/kde/apps/parley/icons/oxygen/32x32/actions/edit-entry.png
@@ -131,7 +133,7 @@ share/kde/apps/parley/icons/oxygen/32x32/actions/practice-start.png
 share/kde/apps/parley/icons/oxygen/32x32/actions/practice-stop.png
 share/kde/apps/parley/icons/oxygen/32x32/actions/remove-duplicates.png
 share/kde/apps/parley/icons/oxygen/32x32/actions/set-language.png
-share/kde/apps/parley/icons/oxygen/48x48/actions/advanced-setup.png
+share/kde/apps/parley/icons/oxygen/32x32/actions/specific-setup.png
 share/kde/apps/parley/icons/oxygen/48x48/actions/cards-block.png
 share/kde/apps/parley/icons/oxygen/48x48/actions/edit-clear.png
 share/kde/apps/parley/icons/oxygen/48x48/actions/edit-entry.png
@@ -147,7 +149,7 @@ share/kde/apps/parley/icons/oxygen/48x48/actions/practice-start.png
 share/kde/apps/parley/icons/oxygen/48x48/actions/practice-stop.png
 share/kde/apps/parley/icons/oxygen/48x48/actions/remove-duplicates.png
 share/kde/apps/parley/icons/oxygen/48x48/actions/set-language.png
-share/kde/apps/parley/icons/oxygen/scalable/actions/advanced-setup.svgz
+share/kde/apps/parley/icons/oxygen/48x48/actions/specific-setup.png
 share/kde/apps/parley/icons/oxygen/scalable/actions/cards-block.svgz
 share/kde/apps/parley/icons/oxygen/scalable/actions/edit-clear.svgz
 share/kde/apps/parley/icons/oxygen/scalable/actions/edit-entry.svgz
@@ -160,6 +162,7 @@ share/kde/apps/parley/icons/oxygen/scalable/actions/practice-setup.svgz
 share/kde/apps/parley/icons/oxygen/scalable/actions/practice-start.svgz
 share/kde/apps/parley/icons/oxygen/scalable/actions/remove-duplicates.svgz
 share/kde/apps/parley/icons/oxygen/scalable/actions/set-language.svgz
+share/kde/apps/parley/icons/oxygen/scalable/actions/specific-setup.svgz
 share/kde/apps/parley/parleyui.rc
 share/kde/apps/parley/plugins/example.desktop
 share/kde/apps/parley/plugins/example.py
@@ -200,7 +203,6 @@ share/kde/apps/parley/themes/theme_reference.desktop
 share/kde/apps/parley/themes/theme_reference.svgz
 share/kde/apps/parley/themes/theme_reference_preview.jpg
 share/kde/apps/parley/tips
-share/kde/apps/parley/welcomescreenui.rc
 share/kde/apps/parley/xslt/flashcards.xsl
 share/kde/apps/parley/xslt/table.xsl
 share/kde/config.kcfg/documentsettings.kcfg

@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2012/03/20 08:27:54 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/11/13 19:19:08 markd Exp $
 bin/step
+share/appdata/step.appdata.xml
 share/applications/kde4/step.desktop
 share/doc/kde/HTML/en/step/circular-motor.png
 share/doc/kde/HTML/en/step/common

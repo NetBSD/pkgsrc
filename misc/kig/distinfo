@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2014/02/01 02:20:49 markd Exp $
+$NetBSD: distinfo,v 1.8 2014/11/13 19:19:08 markd Exp $
 
-SHA1 (kig-4.11.5.tar.xz) = 720238e25095b0b820622e8fdf953f30c23bb251
-RMD160 (kig-4.11.5.tar.xz) = 3b74692dd31645cf0a21b68c2858d81ff3f732ad
-Size (kig-4.11.5.tar.xz) = 1505088 bytes
+SHA1 (kig-4.14.3.tar.xz) = 730a87d7a9b95199385076e7a281712bd278b88a
+RMD160 (kig-4.14.3.tar.xz) = eac3d01e3ed708f6919684e30b59aad4199e43a7
+Size (kig-4.14.3.tar.xz) = 1506492 bytes
+SHA1 (patch-CMakeLists.txt) = 3d0827de25a235368553300e37a35eb6d0eab598
