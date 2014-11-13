@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2014/02/01 02:20:52 markd Exp $
+$NetBSD: distinfo,v 1.3 2014/11/13 11:05:43 markd Exp $
 
-SHA1 (ksystemlog-4.11.5.tar.xz) = c637b7521ebe6a6e61f8b8621084b8e9e8713454
-RMD160 (ksystemlog-4.11.5.tar.xz) = e37e0013a949313c0de165c04f20f562a449dfdf
-Size (ksystemlog-4.11.5.tar.xz) = 381892 bytes
+SHA1 (ksystemlog-4.14.3.tar.xz) = 78a4a45e99d3f6359ddff7cd9a30f12ae812651b
+RMD160 (ksystemlog-4.14.3.tar.xz) = 82aae603df9c7ca82deb2b9e464af1c71d040fc6
+Size (ksystemlog-4.14.3.tar.xz) = 382060 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2014/02/01 02:20:52 markd Exp $
+$NetBSD: distinfo,v 1.3 2014/11/13 11:05:43 markd Exp $
 
-SHA1 (kuser-4.11.5.tar.xz) = fb17246c930f80998be01c88482d358115192c37
-RMD160 (kuser-4.11.5.tar.xz) = 785ef2b1f5d176a997ef9bac178f0984b70173cb
-Size (kuser-4.11.5.tar.xz) = 135452 bytes
+SHA1 (kuser-4.14.3.tar.xz) = 691245fd406fa044453e03f5f38e19575a8f7259
+RMD160 (kuser-4.14.3.tar.xz) = 3cacd62f6d70cc1d185fd4a5df6f97d1837df33c
+Size (kuser-4.14.3.tar.xz) = 134772 bytes
