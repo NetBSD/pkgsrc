@@ -1,13 +1,18 @@
-@comment $NetBSD: PLIST,v 1.2 2013/11/07 13:09:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.1 2014/11/13 11:29:53 markd Exp $
 bin/kwalletmanager
 lib/kde4/kcm_kwallet.so
+lib/kde4/libexec/kcm_kwallet_helper
+share/PolicyKit/policy/org.kde.kcontrol.kcmkwallet.policy
 share/applications/kde4/kwalletmanager-kwalletd.desktop
 share/applications/kde4/kwalletmanager.desktop
+share/dbus-1/system-services/org.kde.kcontrol.kcmkwallet.service
 share/doc/kde/HTML/en/kwallet/application-request-to-open-wallet.png
 share/doc/kde/HTML/en/kwallet/common
+share/doc/kde/HTML/en/kwallet/error-nokey.png
 share/doc/kde/HTML/en/kwallet/first-open-request.png
 share/doc/kde/HTML/en/kwallet/index.cache.bz2
 share/doc/kde/HTML/en/kwallet/index.docbook
+share/doc/kde/HTML/en/kwallet/key-selection.png
 share/doc/kde/HTML/en/kwallet/kwallet-applications.png
 share/doc/kde/HTML/en/kwallet/kwallet-edit.png
 share/doc/kde/HTML/en/kwallet/kwalletmanager.png
@@ -15,6 +20,8 @@ share/doc/kde/HTML/en/kwallet/openwallet-request.png
 share/doc/kde/HTML/en/kwallet/oxygen48-status-wallet-closed.png
 share/doc/kde/HTML/en/kwallet/oxygen48-status-wallet-open.png
 share/doc/kde/HTML/en/kwallet/save-login-information.png
+share/doc/kde/HTML/en/kwallet/wallet-encryption-selection.png
+share/examples/kde4-dbus/org.kde.kcontrol.kcmkwallet.conf
 share/icons/hicolor/128x128/apps/kwalletmanager.png
 share/icons/hicolor/128x128/apps/kwalletmanager2.png
 share/icons/hicolor/16x16/apps/kwalletmanager.png
