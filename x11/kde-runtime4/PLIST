@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/11/07 13:35:56 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/11/13 10:53:49 markd Exp $
 bin/kcmshell4
 bin/kde-cp
 bin/kde-mv
@@ -130,7 +130,6 @@ lib/kde4/kcm_kded.so
 lib/kde4/kcm_kdnssd.so
 lib/kde4/kcm_knotify.so
 lib/kde4/kcm_locale.so
-lib/kde4/kcm_nepomuk.so
 lib/kde4/kcm_phonon.so
 lib/kde4/kcm_trash.so
 lib/kde4/kcmspellchecking.so
@@ -138,7 +137,6 @@ lib/kde4/kded_desktopnotifier.so
 lib/kde4/kded_device_automounter.so
 lib/kde4/kded_kpasswdserver.so
 lib/kde4/kded_ktimezoned.so
-lib/kde4/kded_nepomuksearchmodule.so
 lib/kde4/kded_networkstatus.so
 lib/kde4/kded_networkwatcher.so
 lib/kde4/kded_phononserver.so
@@ -158,17 +156,13 @@ ${PLIST.md5}lib/kde4/kio_fish.so
 lib/kde4/kio_floppy.so
 lib/kde4/kio_info.so
 lib/kde4/kio_man.so
-lib/kde4/kio_nepomuk.so
-lib/kde4/kio_nepomuksearch.so
 lib/kde4/kio_network.so
 lib/kde4/kio_nfs.so
 lib/kde4/kio_recentdocuments.so
 lib/kde4/kio_remote.so
 lib/kde4/kio_settings.so
 ${PLIST.smb}lib/kde4/kio_smb.so
-lib/kde4/kio_tags.so
 lib/kde4/kio_thumbnail.so
-lib/kde4/kio_timeline.so
 lib/kde4/kio_trash.so
 lib/kde4/kshorturifilter.so
 lib/kde4/kuriikwsfilter.so
@@ -269,8 +263,6 @@ lib/libmolletnetwork.so.4
 lib/libmolletnetwork.so.${PKGVERSION}
 man/man1/kdesu.1
 man/man1/plasmapkg.1
-man/man8/nepomukserver.8
-man/man8/nepomukservicestub.8
 share/PolicyKit/policy/org.kde.kcontrol.kcmremotewidgets.policy
 share/applications/kde4/Help.desktop
 share/applications/kde4/knetattach.desktop
@@ -459,6 +451,7 @@ share/doc/kde/HTML/en/kcontrol/khtml-plugins/index.docbook
 share/doc/kde/HTML/en/kcontrol/language/common
 share/doc/kde/HTML/en/kcontrol/language/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/language/index.docbook
+share/doc/kde/HTML/en/kcontrol/language/oxygen-22x22-document-revert.png
 share/doc/kde/HTML/en/kcontrol/nepomuk/common
 share/doc/kde/HTML/en/kcontrol/nepomuk/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/nepomuk/index.docbook
@@ -544,6 +537,9 @@ share/doc/kde/HTML/en/kioslave/man/index.docbook
 share/doc/kde/HTML/en/kioslave/nepomuksearch/common
 share/doc/kde/HTML/en/kioslave/nepomuksearch/index.cache.bz2
 share/doc/kde/HTML/en/kioslave/nepomuksearch/index.docbook
+share/doc/kde/HTML/en/kioslave/network/common
+share/doc/kde/HTML/en/kioslave/network/index.cache.bz2
+share/doc/kde/HTML/en/kioslave/network/index.docbook
 share/doc/kde/HTML/en/kioslave/nfs/common
 share/doc/kde/HTML/en/kioslave/nfs/index.cache.bz2
 share/doc/kde/HTML/en/kioslave/nfs/index.docbook
@@ -570,9 +566,6 @@ share/doc/kde/HTML/en/knetattach/screenshot1.png
 share/doc/kde/HTML/en/knetattach/screenshot2.png
 share/doc/kde/HTML/en/knetattach/screenshot3.png
 share/doc/kde/HTML/en/knetattach/screenshot4.png
-share/doc/kde/HTML/en/network/common
-share/doc/kde/HTML/en/network/index.cache.bz2
-share/doc/kde/HTML/en/network/index.docbook
 share/doc/kde/HTML/en/onlinehelp/common
 share/doc/kde/HTML/en/onlinehelp/index.cache.bz2
 share/doc/kde/HTML/en/onlinehelp/index.docbook
@@ -785,6 +778,7 @@ share/kde/apps/kcmlocale/pics/background.png
 share/kde/apps/kconf_update/devicepreference.upd
 share/kde/apps/kconf_update/drkonqi-rename-config-section.upd
 share/kde/apps/kconf_update/kuriikwsfilter.upd
+share/kde/apps/kconf_update/kwallet-4.13.upd
 share/kde/apps/kde/kde.notifyrc
 share/kde/apps/kglobalaccel/kglobalaccel.notifyrc
 share/kde/apps/khelpcenter/glossary.html.in
@@ -803,12 +797,16 @@ share/kde/apps/khelpcenter/plugins/Manpages/man7.desktop
 share/kde/apps/khelpcenter/plugins/Manpages/man8.desktop
 share/kde/apps/khelpcenter/plugins/Scrollkeeper/.directory
 share/kde/apps/khelpcenter/plugins/Scrollkeeper/scrollkeeper.desktop
+share/kde/apps/khelpcenter/plugins/browsercontrolmodules.desktop
+share/kde/apps/khelpcenter/plugins/filemanagercontrolmodules.desktop
 share/kde/apps/khelpcenter/plugins/fundamentals.desktop
 share/kde/apps/khelpcenter/plugins/info.desktop
 share/kde/apps/khelpcenter/plugins/kcontrolmodules.desktop
 share/kde/apps/khelpcenter/plugins/kicmodules.desktop
 share/kde/apps/khelpcenter/plugins/kioslaves.desktop
+share/kde/apps/khelpcenter/plugins/konquerorcontrolmodules.desktop
 share/kde/apps/khelpcenter/plugins/onlinehelp.desktop
+share/kde/apps/khelpcenter/plugins/othercontrolmodules.desktop
 share/kde/apps/khelpcenter/plugins/plasma.desktop
 share/kde/apps/khelpcenter/searchhandlers/docbook.desktop
 share/kde/apps/khelpcenter/searchhandlers/htdig.desktop
@@ -852,7 +850,6 @@ share/kde4/services/cgi.protocol
 share/kde4/services/comicbookthumbnail.desktop
 share/kde4/services/componentchooser.desktop
 share/kde4/services/cursorthumbnail.desktop
-share/kde4/services/desktop-search.desktop
 share/kde4/services/desktop.protocol
 share/kde4/services/desktopthumbnail.desktop
 share/kde4/services/device_automounter_kcm.desktop
@@ -873,7 +870,6 @@ share/kde4/services/info.protocol
 share/kde4/services/jpegthumbnail.desktop
 share/kde4/services/kcm_attica.desktop
 share/kde4/services/kcm_kdnssd.desktop
-share/kde4/services/kcm_nepomuk.desktop
 share/kde4/services/kcm_phonon.desktop
 share/kde4/services/kcmcgi.desktop
 share/kde4/services/kcmkded.desktop
@@ -883,7 +879,6 @@ share/kde4/services/kded/desktopnotifier.desktop
 share/kde4/services/kded/device_automounter.desktop
 share/kde4/services/kded/kpasswdserver.desktop
 share/kde4/services/kded/ktimezoned.desktop
-share/kde4/services/kded/nepomuksearchmodule.desktop
 share/kde4/services/kded/networkstatus.desktop
 share/kde4/services/kded/networkwatcher.desktop
 share/kde4/services/kded/phononserver.desktop
@@ -904,8 +899,6 @@ share/kde4/services/language.desktop
 share/kde4/services/localdomainurifilter.desktop
 share/kde4/services/lzma.protocol
 share/kde4/services/man.protocol
-share/kde4/services/nepomuk.protocol
-share/kde4/services/nepomuksearch.protocol
 share/kde4/services/network.protocol
 share/kde4/services/nfs.protocol
 share/kde4/services/plasma-containment-newspaper.desktop
@@ -1016,7 +1009,14 @@ share/kde4/services/searchproviders/php.desktop
 share/kde4/services/searchproviders/python.desktop
 share/kde4/services/searchproviders/qt.desktop
 share/kde4/services/searchproviders/qt4.desktop
+share/kde4/services/searchproviders/qwant.desktop
+share/kde4/services/searchproviders/qwant_images.desktop
+share/kde4/services/searchproviders/qwant_news.desktop
+share/kde4/services/searchproviders/qwant_shopping.desktop
+share/kde4/services/searchproviders/qwant_social.desktop
+share/kde4/services/searchproviders/qwant_videos.desktop
 share/kde4/services/searchproviders/rae.desktop
+share/kde4/services/searchproviders/rag.desktop
 share/kde4/services/searchproviders/rfc.desktop
 share/kde4/services/searchproviders/rpmfind.desktop
 share/kde4/services/searchproviders/ruby_application_archive.desktop
@@ -1045,11 +1045,9 @@ share/kde4/services/settings.protocol
 ${PLIST.smb}share/kde4/services/smb.protocol
 share/kde4/services/spellchecking.desktop
 share/kde4/services/svgthumbnail.desktop
-share/kde4/services/tags.protocol
 share/kde4/services/tar.protocol
 share/kde4/services/textthumbnail.desktop
 share/kde4/services/thumbnail.protocol
-share/kde4/services/timeline.protocol
 share/kde4/services/trash.protocol
 share/kde4/services/windowsexethumbnail.desktop
 share/kde4/services/windowsimagethumbnail.desktop
