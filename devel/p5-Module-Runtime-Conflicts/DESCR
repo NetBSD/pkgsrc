@@ -1,0 +1,2 @@
+This module provides conflicts checking for Module::Runtime, which had a
+recent release that broke some versions of Moose.
