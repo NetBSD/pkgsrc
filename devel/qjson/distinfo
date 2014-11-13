@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2014/08/11 11:20:37 wiz Exp $
+$NetBSD: distinfo,v 1.3 2014/11/13 09:07:17 markd Exp $
 
-SHA1 (qjson-0.7.1.tar.bz2) = 19bbef24132b238e99744bb35194c6dadece98f9
-RMD160 (qjson-0.7.1.tar.bz2) = 9b333dda51c70a8994d3203b238fe33ec3281af5
-Size (qjson-0.7.1.tar.bz2) = 38075 bytes
-SHA1 (patch-CMakeLists.txt) = ef9233362a08f458c299b1e0feadb75f10c6f129
+SHA1 (qjson-0.8.1.tar.bz2) = 197ccfd533f17bcf40428e68a82e6622047ed4ab
+RMD160 (qjson-0.8.1.tar.bz2) = b8b76c253bf241de1fccd411b4fbc67ea96b53fd
+Size (qjson-0.8.1.tar.bz2) = 64398 bytes
