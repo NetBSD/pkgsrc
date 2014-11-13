@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/11/07 13:06:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/11/13 11:33:21 markd Exp $
 bin/okular
 include/okular/core/action.h
 include/okular/core/annotations.h
@@ -41,7 +41,6 @@ lib/kde4/okularGenerator_epub.so
 lib/kde4/okularGenerator_fax.so
 lib/kde4/okularGenerator_fb.so
 lib/kde4/okularGenerator_ghostview.so
-lib/kde4/okularGenerator_kimgio.so
 lib/kde4/okularGenerator_ooo.so
 lib/kde4/okularGenerator_plucker.so
 lib/kde4/okularGenerator_poppler.so
@@ -50,8 +49,8 @@ lib/kde4/okularGenerator_txt.so
 lib/kde4/okularGenerator_xps.so
 lib/kde4/okularpart.so
 lib/libokularcore.so
-lib/libokularcore.so.3
-lib/libokularcore.so.3.0.0
+lib/libokularcore.so.5
+lib/libokularcore.so.5.0.0
 man/man1/okular.1
 share/applications/kde4/active-documentviewer_chm.desktop
 share/applications/kde4/active-documentviewer_comicbook.desktop
@@ -61,7 +60,6 @@ share/applications/kde4/active-documentviewer_epub.desktop
 share/applications/kde4/active-documentviewer_fax.desktop
 share/applications/kde4/active-documentviewer_fb.desktop
 share/applications/kde4/active-documentviewer_ghostview.desktop
-share/applications/kde4/active-documentviewer_kimgio.desktop
 share/applications/kde4/active-documentviewer_ooo.desktop
 share/applications/kde4/active-documentviewer_pdf.desktop
 share/applications/kde4/active-documentviewer_plucker.desktop
@@ -77,7 +75,6 @@ share/applications/kde4/okularApplication_epub.desktop
 share/applications/kde4/okularApplication_fax.desktop
 share/applications/kde4/okularApplication_fb.desktop
 share/applications/kde4/okularApplication_ghostview.desktop
-share/applications/kde4/okularApplication_kimgio.desktop
 share/applications/kde4/okularApplication_ooo.desktop
 share/applications/kde4/okularApplication_pdf.desktop
 share/applications/kde4/okularApplication_plucker.desktop
@@ -121,8 +118,11 @@ share/icons/hicolor/48x48/apps/okular.png
 share/icons/hicolor/64x64/apps/okular.png
 share/icons/hicolor/scalable/apps/okular.svgz
 share/kde/apps/kconf_update/okular.upd
+share/kde/apps/okular/icons/hicolor/16x16/apps/okular-fb2.png
 share/kde/apps/okular/icons/hicolor/16x16/apps/okular-gv.png
+share/kde/apps/okular/icons/hicolor/32x32/apps/okular-fb2.png
 share/kde/apps/okular/icons/hicolor/32x32/apps/okular-gv.png
+share/kde/apps/okular/icons/hicolor/48x48/apps/okular-fb2.png
 share/kde/apps/okular/part-viewermode.rc
 share/kde/apps/okular/part.rc
 share/kde/apps/okular/pics/checkmark.png
@@ -134,6 +134,8 @@ share/kde/apps/okular/pics/insert.png
 share/kde/apps/okular/pics/key.png
 share/kde/apps/okular/pics/newparagraph.png
 share/kde/apps/okular/pics/note.png
+share/kde/apps/okular/pics/okular-epub-movie.png
+share/kde/apps/okular/pics/okular-epub-sound-icon.png
 share/kde/apps/okular/pics/paperclip.png
 share/kde/apps/okular/pics/paragraph.png
 share/kde/apps/okular/pics/pushpin.png
@@ -164,7 +166,6 @@ share/kde4/services/libokularGenerator_epub.desktop
 share/kde4/services/libokularGenerator_fax.desktop
 share/kde4/services/libokularGenerator_fb.desktop
 share/kde4/services/libokularGenerator_ghostview.desktop
-share/kde4/services/libokularGenerator_kimgio.desktop
 share/kde4/services/libokularGenerator_ooo.desktop
 share/kde4/services/libokularGenerator_plucker.desktop
 share/kde4/services/libokularGenerator_poppler.desktop
@@ -180,7 +181,6 @@ share/kde4/services/okularEPub.desktop
 share/kde4/services/okularFax.desktop
 share/kde4/services/okularFb.desktop
 share/kde4/services/okularGhostview.desktop
-share/kde4/services/okularKimgio.desktop
 share/kde4/services/okularOoo.desktop
 share/kde4/services/okularPlucker.desktop
 share/kde4/services/okularPoppler.desktop
