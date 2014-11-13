@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2014/08/14 19:26:16 wiz Exp $
+$NetBSD: distinfo,v 1.7 2014/11/13 12:06:45 markd Exp $
 
-SHA1 (ffmpegthumbs-4.11.5.tar.xz) = 8637cb229a092ec1b106b5cc34e93108562f281e
-RMD160 (ffmpegthumbs-4.11.5.tar.xz) = 3104ec45e932022cf91e480783d970dd64306b6a
-Size (ffmpegthumbs-4.11.5.tar.xz) = 20280 bytes
-SHA1 (patch-cmake_FindFFmpeg.cmake) = 52f4bbfc3a7f0838f0d061af21e635c501f7ea0f
+SHA1 (ffmpegthumbs-4.14.3.tar.xz) = 2c49d2afabb0dfaca0863cfcab1aa22ad24e0151
+RMD160 (ffmpegthumbs-4.14.3.tar.xz) = 299c0d6af4e1133e0d9d2e5675abe9410f403dea
+Size (ffmpegthumbs-4.14.3.tar.xz) = 20228 bytes
