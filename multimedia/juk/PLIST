@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2013/11/07 12:49:19 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/11/13 12:06:45 markd Exp $
 bin/juk
+share/appdata/juk.appdata.xml
 share/applications/kde4/juk.desktop
 share/dbus-1/interfaces/org.kde.juk.collection.xml
 share/dbus-1/interfaces/org.kde.juk.player.xml
