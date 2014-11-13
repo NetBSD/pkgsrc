@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2014/02/01 02:20:50 markd Exp $
+$NetBSD: distinfo,v 1.8 2014/11/13 19:19:07 markd Exp $
 
-SHA1 (kwordquiz-4.11.5.tar.xz) = b35347d84c951d59a87def8a73c70a1c5f8b7ebf
-RMD160 (kwordquiz-4.11.5.tar.xz) = 0b61a2f43ab390ae6ee4bf9ad2f81ccec2371dfc
-Size (kwordquiz-4.11.5.tar.xz) = 1197656 bytes
+SHA1 (kwordquiz-4.14.3.tar.xz) = b341ba88986619307163df28130faa485911bd09
+RMD160 (kwordquiz-4.14.3.tar.xz) = 335fea61831d1ff6040e8cfe75d8eab40a062421
+Size (kwordquiz-4.14.3.tar.xz) = 1198472 bytes

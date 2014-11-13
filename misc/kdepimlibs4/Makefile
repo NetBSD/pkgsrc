@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.67 2014/11/07 19:39:25 adam Exp $
+# $NetBSD: Makefile,v 1.68 2014/11/13 19:19:06 markd Exp $
 
 DISTNAME=	kdepimlibs-${_KDE_VERSION}
 PKGNAME=	${DISTNAME:S/-4/4-4/}
-PKGREVISION=	6
 CATEGORIES=	misc
 COMMENT=	Support libraries for PIM for the KDE integrated X11 desktop
 
@@ -28,7 +27,7 @@ BUILDLINK_API_DEPENDS.akonadi+=	akonadi>=1.8.51
 .endif
 .include "../../devel/qjson/buildlink3.mk"
 .include "../../mail/akonadi/buildlink3.mk"
-.include "../../misc/nepomuk-core/buildlink3.mk"
+#.include "../../misc/nepomuk-core/buildlink3.mk"
 .include "../../security/cyrus-sasl/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../time/libical/buildlink3.mk"
