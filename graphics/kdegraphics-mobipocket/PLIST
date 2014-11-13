@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2012/03/20 00:14:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/11/13 20:06:29 markd Exp $
+include/qmobipocket/mobipocket.h
+include/qmobipocket/qfilestream.h
+include/qmobipocket/qmobipocket_export.h
+lib/cmake/QMobipocket/QMobipocketConfig.cmake
 lib/kde4/mobithumbnail.so
-lib/kde4/okularGenerator_mobi.so
+lib/libqmobipocket.so
+lib/libqmobipocket.so.1
+lib/libqmobipocket.so.1.0.0
 lib/strigi/strigila_mobi.so
-share/applications/kde4/okularApplication_mobi.desktop
-share/kde4/services/libokularGenerator_mobi.desktop
 share/kde4/services/mobithumbnail.desktop
-share/kde4/services/okularMobi.desktop
