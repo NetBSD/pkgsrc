@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/11/07 12:35:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/11/13 19:19:08 markd Exp $
 bin/kalzium
 include/libkdeedu/chemicaldataobject.h
 include/libkdeedu/element.h
@@ -21,6 +21,7 @@ lib/libscience.so
 lib/libscience.so.4
 lib/libscience.so.${PKGVERSION}
 man/man1/kalzium.1
+share/appdata/kalzium.appdata.xml
 share/applications/kde4/kalzium.desktop
 share/applications/kde4/kalzium_cml.desktop
 share/doc/kde/HTML/en/kalzium/common

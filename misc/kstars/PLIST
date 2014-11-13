@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2013/11/07 12:35:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/11/13 19:19:07 markd Exp $
 bin/kstars
 lib/libhtmesh.a
+share/appdata/kstars.appdata.xml
 share/applications/kde4/kstars.desktop
 share/doc/kde/HTML/en/kstars/Add_Object_to_Session_plan.png
 share/doc/kde/HTML/en/kstars/Another_way4.png
