@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/11/07 12:35:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/11/13 19:19:06 markd Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kclock.kss
@@ -6627,5 +6627,3 @@ share/kde4/services/ScreenSavers/xmatrix.desktop
 share/kde4/services/ScreenSavers/xrayswarm.desktop
 share/kde4/services/ScreenSavers/xspirograph.desktop
 share/kde4/services/ScreenSavers/zoom.desktop
-share/sounds/KDE_Logout_new.wav
-share/sounds/KDE_Startup_new.wav

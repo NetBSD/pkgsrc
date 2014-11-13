@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2013/11/07 12:35:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/11/13 19:19:08 markd Exp $
 bin/kig
 bin/pykig.py
 lib/kde4/kigpart.so
 man/man1/kig.1
+share/appdata/kig.appdata.xml
 share/applications/kde4/kig.desktop
 share/doc/kde/HTML/en/kig/common
 share/doc/kde/HTML/en/kig/constructed_a_point.png
@@ -42,7 +43,6 @@ share/kde/apps/kig/builtin-macros/circle_by_point_and_diameter.kigt
 share/kde/apps/kig/builtin-macros/equitriangle.kigt
 share/kde/apps/kig/builtin-macros/evolute.kigt
 share/kde/apps/kig/builtin-macros/osculating_circle.kigt
-share/kde/apps/kig/builtin-macros/segment_axis.kigt
 share/kde/apps/kig/builtin-macros/square.kigt
 share/kde/apps/kig/builtin-macros/vector_difference.kigt
 share/kde/apps/kig/icons/hicolor/16x16/actions/kig_xfig.png

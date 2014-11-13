@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2014/11/07 19:39:37 adam Exp $
+# $NetBSD: Makefile,v 1.47 2014/11/13 19:19:06 markd Exp $
 
 DISTNAME=	kdeartwork-${_KDE_VERSION}
 PKGNAME=	${DISTNAME:S/-4/4-4/}
-PKGREVISION=	5
 CATEGORIES=	misc
 COMMENT=	Artwork for the KDE integrated X11 desktop
 
@@ -18,7 +17,7 @@ BUILDLINK_API_DEPENDS.xscreensaver+=  xscreensaver>=5.10
 .include "../../meta-pkgs/kde4/kde4.mk"
 
 .include "../../graphics/libkexiv2/buildlink3.mk"
-.include "../../math/eigen2/buildlink3.mk"
+.include "../../math/eigen3/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../x11/kde-runtime4/buildlink3.mk"
 .include "../../x11/kde-workspace4/buildlink3.mk"
