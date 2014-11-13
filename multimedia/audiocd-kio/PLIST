@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/03 11:13:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/11/13 12:06:45 markd Exp $
 include/audiocdencoder.h
 lib/kde4/kcm_audiocd.so
 lib/kde4/kio_audiocd.so
@@ -14,6 +14,7 @@ share/doc/kde/HTML/en/kioslave/audiocd/index.cache.bz2
 share/doc/kde/HTML/en/kioslave/audiocd/index.docbook
 share/kde/apps/konqsidebartng/virtual_folders/services/audiocd.desktop
 share/kde/apps/solid/actions/solid_audiocd.desktop
+share/kde/config.kcfg/audiocd_flac_encoder.kcfg
 share/kde/config.kcfg/audiocd_lame_encoder.kcfg
 share/kde/config.kcfg/audiocd_vorbis_encoder.kcfg
 share/kde4/services/audiocd.desktop
