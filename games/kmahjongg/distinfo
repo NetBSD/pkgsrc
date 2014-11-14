@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2014/02/01 02:20:46 markd Exp $
+$NetBSD: distinfo,v 1.5 2014/11/14 08:49:39 markd Exp $
 
-SHA1 (kmahjongg-4.11.5.tar.xz) = fd77968cfcd152a0f8a9023f49499166e089ae90
-RMD160 (kmahjongg-4.11.5.tar.xz) = 97dc3986aaaf4e03129ee5b7334b7af8a96dca1f
-Size (kmahjongg-4.11.5.tar.xz) = 1003448 bytes
+SHA1 (kmahjongg-4.14.3.tar.xz) = 8840f0b75c94d7a690ef55edfbb189f0fa50649e
+RMD160 (kmahjongg-4.14.3.tar.xz) = 782dd58b48c662d20ce37d57f86e1222b6aaf3f0
+Size (kmahjongg-4.14.3.tar.xz) = 1007908 bytes

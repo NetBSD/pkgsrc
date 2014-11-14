@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2014/02/01 02:20:46 markd Exp $
+$NetBSD: distinfo,v 1.5 2014/11/14 08:49:40 markd Exp $
 
-SHA1 (konquest-4.11.5.tar.xz) = b1c18a4babdd8e8e9fd62b2a7088c2321652e9e5
-RMD160 (konquest-4.11.5.tar.xz) = c4dcc7a2fe5dbad27138ffae28d330bd51319655
-Size (konquest-4.11.5.tar.xz) = 409300 bytes
+SHA1 (konquest-4.14.3.tar.xz) = dc54cf7696a1b78352d26b3e3bd48e2040976a00
+RMD160 (konquest-4.14.3.tar.xz) = 11ff057d938725665460481fcd81242d3fc619f9
+Size (konquest-4.14.3.tar.xz) = 405168 bytes

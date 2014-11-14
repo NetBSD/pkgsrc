@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/03 12:03:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/11/14 08:49:40 markd Exp $
 bin/kreversi
 share/applications/kde4/kreversi.desktop
 share/doc/kde/HTML/en/kreversi/common
@@ -23,6 +23,14 @@ share/icons/oxygen/scalable/actions/lastmoves.svgz
 share/icons/oxygen/scalable/actions/legalmoves.svgz
 share/kde/apps/kreversi/kreversi.notifyrc
 share/kde/apps/kreversi/kreversiui.rc
+share/kde/apps/kreversi/pics/default_theme.desktop
 share/kde/apps/kreversi/pics/default_theme.svgz
+share/kde/apps/kreversi/qml/Board.qml
+share/kde/apps/kreversi/qml/CanvasItem.qml
+share/kde/apps/kreversi/qml/Cell.qml
+share/kde/apps/kreversi/qml/Chip.qml
+share/kde/apps/kreversi/qml/Popup.qml
+share/kde/apps/kreversi/qml/Table.qml
+share/kde/apps/kreversi/qml/globals.js
 share/kde/apps/kreversi/sounds/reversi-click.wav
 share/kde/apps/kreversi/sounds/reversi-won.wav

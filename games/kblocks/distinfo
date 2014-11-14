@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2014/02/01 02:20:45 markd Exp $
+$NetBSD: distinfo,v 1.5 2014/11/14 08:49:38 markd Exp $
 
-SHA1 (kblocks-4.11.5.tar.xz) = b399aa7b77a322c326e196ed45fb4a3cd8770310
-RMD160 (kblocks-4.11.5.tar.xz) = 75f083fd013d527250a2b66ec3c5a05aa10cd30c
-Size (kblocks-4.11.5.tar.xz) = 1208236 bytes
+SHA1 (kblocks-4.14.3.tar.xz) = eb8d248036f07766c3812b588dc6e3e4d7462b7e
+RMD160 (kblocks-4.14.3.tar.xz) = c207b6d6945f0698fe63f01c273dac81fb8d9973
+Size (kblocks-4.14.3.tar.xz) = 1207276 bytes
