@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4280 2014/11/14 19:03:34 markd Exp $
+$NetBSD: CHANGES-2014,v 1.4281 2014/11/14 19:07:01 markd Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5617,3 +5617,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Added security/libykneomgr version 0.1.6 [pettai 2014-11-14]
 	Updated mail/thunderbird to 31.2.0 [ryoon 2014-11-14]
 	Updated mail/thunderbird-l10n to 31.2.0 [ryoon 2014-11-14]
+	Updated chat/konversation to 1.5.1 [markd 2014-11-14]
+	Updated devel/kdiff3 to 0.9.98 [markd 2014-11-14]
