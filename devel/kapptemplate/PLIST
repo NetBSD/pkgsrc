@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/11/07 10:42:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/11/14 08:03:30 markd Exp $
 bin/kapptemplate
 share/applications/kde4/kapptemplate.desktop
 share/doc/kde/HTML/en/kapptemplate/common
@@ -24,6 +24,7 @@ share/kde/apps/kdevappwizard/template_previews/akonadi-resources.png
 share/kde/apps/kdevappwizard/template_previews/akonadi-serializer.png
 share/kde/apps/kdevappwizard/template_previews/default.png
 share/kde/apps/kdevappwizard/template_previews/kapp4.png
+share/kde/apps/kdevappwizard/template_previews/kde-frameworks5-simple.png
 share/kde/apps/kdevappwizard/template_previews/kde-simple.png
 share/kde/apps/kdevappwizard/template_previews/kderubyapp.png
 share/kde/apps/kdevappwizard/template_previews/konqplugin.png
@@ -40,6 +41,7 @@ share/kde/apps/kdevappwizard/templates/akonadiserializer.tar.bz2
 share/kde/apps/kdevappwizard/templates/flake.tar.bz2
 share/kde/apps/kdevappwizard/templates/kapp4-qml.tar.bz2
 share/kde/apps/kdevappwizard/templates/kapp4.tar.bz2
+share/kde/apps/kdevappwizard/templates/kde-frameworks5-simple.tar.bz2
 share/kde/apps/kdevappwizard/templates/kde-simple.tar.bz2
 share/kde/apps/kdevappwizard/templates/kderubyapp.tar.bz2
 share/kde/apps/kdevappwizard/templates/kofficetext.tar.bz2
