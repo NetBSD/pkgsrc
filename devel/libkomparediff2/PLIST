@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2014/11/14 08:03:31 markd Exp $
+include/libkomparediff2/diff2export.h
+include/libkomparediff2/difference.h
+include/libkomparediff2/diffhunk.h
+include/libkomparediff2/diffmodel.h
+include/libkomparediff2/diffmodellist.h
+include/libkomparediff2/diffsettings.h
+include/libkomparediff2/kompare.h
+include/libkomparediff2/komparemodellist.h
+include/libkomparediff2/marker.h
+include/libkomparediff2/settingsbase.h
+lib/cmake/libkomparediff2/LibKompareDiff2Config.cmake
+lib/cmake/libkomparediff2/LibKompareDiff2Targets-${TARGET}.cmake
+lib/cmake/libkomparediff2/LibKompareDiff2Targets.cmake
+lib/libkomparediff2.so
+lib/libkomparediff2.so.4
+lib/libkomparediff2.so.${PKGVERSION}

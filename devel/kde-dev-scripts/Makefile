@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2014/11/07 19:39:28 adam Exp $
+# $NetBSD: Makefile,v 1.11 2014/11/14 08:03:30 markd Exp $
 
 DISTNAME=	kde-dev-scripts-${_KDE_VERSION}
-PKGREVISION=	6
 CATEGORIES=	devel
 COMMENT=	Scripts useful during development of KDE software
 
@@ -46,6 +45,7 @@ REPLACE_PYTHON+= \
 	kde_generate_export_header \
 	kdelnk2desktop.py \
 	rename_source_files \
+	reviewboard-am \
 	zonetab2pot.py
 
 REPLACE_SH+= \

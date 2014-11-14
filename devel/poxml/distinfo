@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2014/02/01 02:20:44 markd Exp $
+$NetBSD: distinfo,v 1.3 2014/11/14 08:03:31 markd Exp $
 
-SHA1 (poxml-4.11.5.tar.xz) = 073ab7ad98eff46ced66e234adbafa2afdb86138
-RMD160 (poxml-4.11.5.tar.xz) = ffc00d262eeea2d8501ba452f9affe67cd96a18d
-Size (poxml-4.11.5.tar.xz) = 31044 bytes
+SHA1 (poxml-4.14.3.tar.xz) = 3a03eab572698f2dfe4d7c29cf1aeac2cf560712
+RMD160 (poxml-4.14.3.tar.xz) = 4dd66d0c6dabd38d937e54304bca0067e882e949
+Size (poxml-4.14.3.tar.xz) = 31396 bytes
