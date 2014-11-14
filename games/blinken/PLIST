@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2012/03/20 07:20:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/11/14 08:49:38 markd Exp $
 bin/blinken
+share/appdata/blinken.appdata.xml
 share/applications/kde4/blinken.desktop
 share/doc/kde/HTML/en/blinken/blinken1.png
 share/doc/kde/HTML/en/blinken/blinken2.png

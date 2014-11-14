@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2014/02/01 02:20:46 markd Exp $
+$NetBSD: distinfo,v 1.5 2014/11/14 08:49:39 markd Exp $
 
-SHA1 (kigo-4.11.5.tar.xz) = 724fd2af434f715ff63c6dcde3e03e152432cc0d
-RMD160 (kigo-4.11.5.tar.xz) = cda95c06f4e6c9d503e83ae3344d592afc99fe7b
-Size (kigo-4.11.5.tar.xz) = 1361828 bytes
+SHA1 (kigo-4.14.3.tar.xz) = 21ae8f4c9f7abee0fbcf8eaa6767405f057507e3
+RMD160 (kigo-4.14.3.tar.xz) = 4f2e722b5bfeefce71360308a8732de46ec1861a
+Size (kigo-4.14.3.tar.xz) = 1423600 bytes
