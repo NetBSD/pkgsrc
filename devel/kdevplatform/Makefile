@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.54 2014/11/07 19:39:29 adam Exp $
+# $NetBSD: Makefile,v 1.55 2014/11/14 22:43:59 markd Exp $
 #
 
-DISTNAME=	kdevplatform-1.6.0
-PKGREVISION=	8
+DISTNAME=	kdevplatform-1.7.0
 CATEGORIES=	devel kde
-MASTER_SITES=	${MASTER_SITE_KDE:=kdevelop/4.6.0/src/}
+MASTER_SITES=	${MASTER_SITE_KDE:=kdevelop/4.7.0/src/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	frank@fthieme.net
@@ -16,6 +15,9 @@ BUILD_DEPENDS+= automoc4>=0.9.87:../../devel/automoc4
 
 USE_TOOLS+=	pkg-config perl msgfmt bash:run
 USE_LANGUAGES=	c c++
+
+# sublime uses "auto",  -std=c++11 is set
+GCC_REQD+=	4.7
 
 CXXFLAGS.Linux+=	-fpermissive
 LDFLAGS.SunOS+=		-lsocket -lnsl
