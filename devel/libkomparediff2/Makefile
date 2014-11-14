@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2014/11/14 08:03:30 markd Exp $
+# $NetBSD: Makefile,v 1.1 2014/11/14 08:03:31 markd Exp $
 
-DISTNAME=	dolphin-plugins-${_KDE_VERSION}
+DISTNAME=	libkomparediff2-${_KDE_VERSION}
 CATEGORIES=	devel
-COMMENT=	Extra Dolphin plugins
+COMMENT=	Library to compare files and strings
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 
 .include "../../x11/kdelibs4/buildlink3.mk"
-.include "../../x11/kde-baseapps4/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
