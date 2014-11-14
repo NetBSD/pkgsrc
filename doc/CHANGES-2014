@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4283 2014/11/14 21:19:33 pettai Exp $
+$NetBSD: CHANGES-2014,v 1.4284 2014/11/14 21:57:18 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5621,3 +5621,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/kdiff3 to 0.9.98 [markd 2014-11-14]
 	Updated sysutils/k4dirstat to 2.7.8 [markd 2014-11-14]
 	Updated security/ykpers to 1.16.1 [pettai 2014-11-14]
+	Added security/py-yubiauth version 0.3.9 [pettai 2014-11-14]
