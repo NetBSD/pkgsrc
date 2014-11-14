@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/11/07 10:42:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/11/14 08:03:31 markd Exp $
 bin/kompare
 include/kompare/kompareinterface.h
 lib/kde4/komparenavtreepart.so
@@ -6,9 +6,6 @@ lib/kde4/komparepart.so
 lib/libkomparedialogpages.so
 lib/libkomparedialogpages.so.4
 lib/libkomparedialogpages.so.${PKGVERSION}
-lib/libkomparediff2.so
-lib/libkomparediff2.so.4
-lib/libkomparediff2.so.${PKGVERSION}
 lib/libkompareinterface.so
 lib/libkompareinterface.so.4
 lib/libkompareinterface.so.${PKGVERSION}
