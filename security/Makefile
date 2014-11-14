@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.527 2014/11/14 13:36:23 pettai Exp $
+# $NetBSD: Makefile,v 1.528 2014/11/14 21:58:30 pettai Exp $
 #
 
 COMMENT=	Security tools
@@ -378,6 +378,7 @@ SUBDIR+=	py-smbpasswd
 SUBDIR+=	py-stix
 SUBDIR+=	py-tlslite
 SUBDIR+=	py-xmlsec
+SUBDIR+=	py-yubiauth
 SUBDIR+=	pyca
 SUBDIR+=	qca
 SUBDIR+=	qca-tls
