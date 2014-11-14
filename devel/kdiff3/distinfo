@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/04/06 10:20:43 markd Exp $
+$NetBSD: distinfo,v 1.5 2014/11/14 10:08:09 markd Exp $
 
-SHA1 (kdiff3-0.9.97.tar.gz) = 1f2828c4b287b905bac64992b46a3e9231319547
-RMD160 (kdiff3-0.9.97.tar.gz) = cbbac8e0ad39fa3a2403199ceaac6239de94b83e
-Size (kdiff3-0.9.97.tar.gz) = 1803769 bytes
+SHA1 (kdiff3-0.9.98.tar.gz) = 1390b4ca9c58316de49cb0aabb433f14ebf2dc3f
+RMD160 (kdiff3-0.9.98.tar.gz) = 17fc05df3fd8f052e2010834ba8efe2481e4f434
+Size (kdiff3-0.9.98.tar.gz) = 1762715 bytes
