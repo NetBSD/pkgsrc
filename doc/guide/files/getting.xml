@@ -1,4 +1,4 @@
-<!-- $NetBSD: getting.xml,v 1.32 2013/11/07 08:52:43 jnemeth Exp $ -->
+<!-- $NetBSD: getting.xml,v 1.33 2014/11/14 21:51:13 snj Exp $ -->
 
 <chapter id="getting">
 <title>Where to get pkgsrc and how to keep it up-to-date</title>
@@ -21,7 +21,7 @@ and dashes.</para>
 	quarterly basis from the current branch and only gets modified
 	for security updates. The names of the stable branches are built
 	from the year and the quarter, for example
-	<literal>2009Q1</literal>.</para>
+	<literal>2014Q3</literal>.</para>
 
 	<para>The second step is to decide <emphasis>how</emphasis> you
 	want to download pkgsrc. You can get it as a tar file or via CVS.
@@ -29,9 +29,6 @@ and dashes.</para>
 
 	<para>Note that tar archive contains CVS working copy.
 	Thus you can switch to using CVS at any later time.</para>
-
-	<para>Note also that quarterly branch is not frozen in stone.
-	It receives critical updates.</para>
 
 <sect2 id="getting-via-tar">
 <title>As tar archive</title>
@@ -58,9 +55,9 @@ and dashes.</para>
 
 	<para>You can fetch the same files using FTP.</para>
 
-	<para>The tar file for the stable branch 2013Q1 is in the
-	directory <filename>pkgsrc-2013Q1</filename> and is also called <ulink
-	url="ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2013Q1/pkgsrc.tar.gz"><filename>pkgsrc.tar.gz</filename></ulink>.</para>
+	<para>The tar file for the stable branch 2014Q3 is in the
+	directory <filename>pkgsrc-2014Q3</filename> and is also called <ulink
+	url="ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2014Q3/pkgsrc.tar.gz"><filename>pkgsrc.tar.gz</filename></ulink>.</para>
 
 	<para>To download a pkgsrc stable tarball, run:</para>
 
@@ -69,9 +66,9 @@ and dashes.</para>
 
 	<para>Where <replaceable>pkgsrc-20xxQy</replaceable> is the
 	stable branch to be downloaded, for example, 
-	<quote>pkgsrc-2013Q1</quote>.</para>
+	<quote>pkgsrc-2014Q3</quote>.</para>
 
-	<para>You can use fetch it also using "wget", "curl",
+	<para>If you prefer, you can also fetch it using "wget", "curl",
 	or your web browser.</para>
 <!--
 	<para>After downloading the tar file, change to the directory
@@ -81,7 +78,7 @@ and dashes.</para>
 -->
 	<para>Then, extract it with:</para>
 
-<screen>&uprompt; <userinput>tar -xzf <replaceable>pkgsrc-20xxQy</replaceable>.tar.gz -C /usr</userinput></screen>
+<screen>&uprompt; <userinput>tar -xzf pkgsrc.tar.gz -C /usr</userinput></screen>
 
 	<para>This will create the directory <filename>pkgsrc/</filename>
 	in <filename>/usr/</filename> and all the package source will be 
@@ -101,7 +98,7 @@ and dashes.</para>
 </screen>
 
 	<para>Where <replaceable>pkgsrc-20xxQy</replaceable> is the stable 
-	branch to be checked out, for example, <quote>pkgsrc-2009Q1</quote></para>
+	branch to be checked out, for example, <quote>pkgsrc-2014Q3</quote></para>
 
 	<para>This will create the directory <filename>pkgsrc/</filename> 
 	in your <filename>/usr/</filename> directory and all the package source 
@@ -112,7 +109,7 @@ and dashes.</para>
 <screen>&uprompt; <userinput>cd /usr &amp;&amp; cvs -q -z2 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -P pkgsrc</userinput>
 </screen>
 
-	<para>Refer to the <ulink url="http://www.NetBSD.org/mirrors/">list of available mirrors</ulink> to choose a faster CVS mirror, if needed.</para>
+	<para>Refer to the <ulink url="http://www.NetBSD.org/mirrors/#anoncvs">list of available mirrors</ulink> to choose a faster CVS mirror, if needed.</para>
 
 <!-- FIXME: All this CVS magic should move into appendix or so. -->
 	<para>If you get error messages from <literal>rsh</literal>, you need to set CVS_RSH variable. E.g.:</para>
@@ -171,8 +168,8 @@ release -d
 
 	<para>Note that by default the distfiles and the binary packages
 	are saved in the pkgsrc tree, so don't forget to rescue them
-	before updating. You can also configure pkgsrc to use other than
-	the default directories by setting the
+	before updating. You can also configure pkgsrc to store distfiles
+        and packages in directories outside the pkgsrc tree by setting the
 	<varname>DISTDIR</varname> and <varname>PACKAGES</varname>
 	variables. See <xref linkend="configuring"/> for the details.</para>
 
@@ -204,7 +201,7 @@ release -d
 	by adding the option <quote>-A</quote> after the
 	<quote>update</quote> keyword. To switch from the current branch
 	back to the stable branch, add the
-	<quote>-rpkgsrc-2009Q3</quote> option.</para>
+	<quote>-rpkgsrc-2014Q3</quote> option.</para>
 
 </sect3>
 <sect3 id="uptodate-cvs-changes">
