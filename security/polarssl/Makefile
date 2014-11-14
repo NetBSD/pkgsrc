@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2014/07/16 10:03:57 obache Exp $
+# $NetBSD: Makefile,v 1.6 2014/11/14 11:21:12 obache Exp $
 #
 
-DISTNAME=		polarssl-1.2.11-gpl
+DISTNAME=		polarssl-1.2.12-gpl
 PKGNAME=		${DISTNAME:-gpl=}
 CATEGORIES=		security devel
 MASTER_SITES=		https://polarssl.org/download/
