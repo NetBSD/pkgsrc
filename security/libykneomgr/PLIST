@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2014/11/14 13:35:09 pettai Exp $
+bin/ykneomgr
+include/ykneomgr/ykneomgr-types.h
+include/ykneomgr/ykneomgr-version.h
+include/ykneomgr/ykneomgr.h
+lib/libykneomgr.la
+lib/pkgconfig/ykneomgr.pc
+man/man1/ykneomgr.1
+share/gtk-doc/html/libykneomgr/api-index-full.html
+share/gtk-doc/html/libykneomgr/home.png
+share/gtk-doc/html/libykneomgr/index.html
+share/gtk-doc/html/libykneomgr/index.sgml
+share/gtk-doc/html/libykneomgr/intro.html
+share/gtk-doc/html/libykneomgr/left-insensitive.png
+share/gtk-doc/html/libykneomgr/left.png
+share/gtk-doc/html/libykneomgr/libykneomgr-ykneomgr-types.html
+share/gtk-doc/html/libykneomgr/libykneomgr-ykneomgr-version.html
+share/gtk-doc/html/libykneomgr/libykneomgr-ykneomgr.html
+share/gtk-doc/html/libykneomgr/libykneomgr.devhelp2
+share/gtk-doc/html/libykneomgr/right-insensitive.png
+share/gtk-doc/html/libykneomgr/right.png
+share/gtk-doc/html/libykneomgr/style.css
+share/gtk-doc/html/libykneomgr/up-insensitive.png
+share/gtk-doc/html/libykneomgr/up.png
