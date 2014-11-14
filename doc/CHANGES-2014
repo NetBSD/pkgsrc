@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4277 2014/11/14 13:45:52 pettai Exp $
+$NetBSD: CHANGES-2014,v 1.4278 2014/11/14 15:28:12 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5406,3 +5406,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/dhcpcd to 6.6.2 [roy 2014-11-14]
 	Updated net/wireshark to 1.10.11 [tron 2014-11-14]
 	Added security/libykneomgr version 0.1.6 [pettai 2014-11-14]
+	Updated mail/thunderbird to 31.2.0 [ryoon 2014-11-14]
