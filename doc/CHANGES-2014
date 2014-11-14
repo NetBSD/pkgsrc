@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4275 2014/11/14 11:53:01 roy Exp $
+$NetBSD: CHANGES-2014,v 1.4276 2014/11/14 12:06:29 tron Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5404,3 +5404,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/polarssl to 1.2.12 [obache 2014-11-14]
 	Updated devel/ruby-pkg-config to 1.1.6 [obache 2014-11-14]
 	Updated net/dhcpcd to 6.6.2 [roy 2014-11-14]
+	Updated net/wireshark to 1.10.11 [tron 2014-11-14]
