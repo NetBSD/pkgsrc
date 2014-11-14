@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/10/09 20:53:15 jaapb Exp $
+# $NetBSD: Makefile,v 1.21 2014/11/14 14:12:43 joerg Exp $
 
 DISTNAME=		findlib-1.5.3
 CATEGORIES=		devel
@@ -8,6 +8,8 @@ MAINTAINER=		jaapb@NetBSD.org
 HOMEPAGE=		http://www.camlcity.org/
 COMMENT=		Library finder for OCaml
 LICENSE=		mit
+
+MAKE_JOBS_SAFE=		no
 
 .include "../../mk/ocaml.mk"
 
