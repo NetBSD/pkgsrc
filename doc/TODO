@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13816 2014/11/14 11:21:23 obache Exp $
+$NetBSD: TODO,v 1.13817 2014/11/14 20:45:38 markd Exp $
 
 Suggested new packages
 ======================
@@ -704,8 +704,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kbiff-4.0
 	o kchmviewer-7.1
 	o kdbg-2.5.4
-	o kde4-4.14.3
-	o kde4-4.13.2
 	o kdenlive-0.9.8
 	o kdevelop-4.7.0
 	o kismet-2011.03r2 [pkg/45692]
