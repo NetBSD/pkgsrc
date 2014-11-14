@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4273 2014/11/14 11:21:23 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4274 2014/11/14 11:23:47 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5402,3 +5402,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/libsixel to 1.3.4 [obache 2014-11-13]
 	Updated games/MyGoGrinder to 2.1.0 [wiz 2014-11-13]
 	Updated security/polarssl to 1.2.12 [obache 2014-11-14]
+	Updated devel/ruby-pkg-config to 1.1.6 [obache 2014-11-14]
