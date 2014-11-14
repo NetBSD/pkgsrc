@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.18 2014/07/27 20:04:59 ryoon Exp $
+$NetBSD: patch-aa,v 1.19 2014/11/14 15:27:05 ryoon Exp $
 
 --- mozilla/configure.in.orig	2014-07-18 00:05:11.000000000 +0000
 +++ mozilla/configure.in
@@ -227,28 +227,6 @@ $NetBSD: patch-aa,v 1.18 2014/07/27 20:04:59 ryoon Exp $
  dnl enable once Signaling lands
      MOZ_WEBRTC_SIGNALING=1
      AC_DEFINE(MOZ_WEBRTC_SIGNALING)
-@@ -5130,15 +5043,18 @@ AC_SUBST(MOZ_SRTP)
- 
- dnl Use integers over floats for audio on B2G and Android, because audio
- dnl backends for those platforms don't support floats.
--if test "$OS_TARGET" = "Android"; then
-+case "$OS_TARGET" in
-+Android)
-     MOZ_SAMPLE_TYPE_S16=1
-     AC_DEFINE(MOZ_SAMPLE_TYPE_S16)
-     AC_SUBST(MOZ_SAMPLE_TYPE_S16)
--else
-+    ;;
-+*)
-     MOZ_SAMPLE_TYPE_FLOAT32=1
-     AC_DEFINE(MOZ_SAMPLE_TYPE_FLOAT32)
-     AC_SUBST(MOZ_SAMPLE_TYPE_FLOAT32)
--fi
-+    ;;
-+esac
- 
- dnl ========================================================
- dnl = Disable Speech API code
 @@ -5190,6 +5106,63 @@ if test "${ac_cv_c_attribute_aligned}" !
  fi
  
