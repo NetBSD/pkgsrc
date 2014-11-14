@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.52 2014/07/27 20:04:59 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.53 2014/11/14 15:27:04 ryoon Exp $
 bin/thunderbird
 lib/thunderbird/application.ini
 lib/thunderbird/blocklist.xml
@@ -1176,6 +1176,7 @@ lib/thunderbird/chrome/messenger/content/messenger/tabmail.css
 lib/thunderbird/chrome/messenger/content/messenger/tabmail.xml
 lib/thunderbird/chrome/messenger/content/messenger/threadPane.js
 lib/thunderbird/chrome/messenger/content/messenger/threadPaneColumnPicker.xml
+lib/thunderbird/chrome/messenger/content/messenger/toolbarIconColor.js
 lib/thunderbird/chrome/messenger/content/messenger/viewLog.js
 lib/thunderbird/chrome/messenger/content/messenger/viewLog.xul
 lib/thunderbird/chrome/messenger/content/messenger/viewSourceOverlay.xul
