@@ -823,16 +823,13 @@ Before you download any pkgsrc files, you should decide whether you want the
 current branch or the stable branch. The latter is forked on a quarterly basis
 from the current branch and only gets modified for security updates. The names
 of the stable branches are built from the year and the quarter, for example
-2009Q1.
+2014Q3.
 
 The second step is to decide how you want to download pkgsrc. You can get it as
 a tar file or via CVS. Both ways are described here.
 
 Note that tar archive contains CVS working copy. Thus you can switch to using
 CVS at any later time.
-
-Note also that quarterly branch is not frozen in stone. It receives critical
-updates.
 
 2.1.1. As tar archive
 
@@ -849,7 +846,7 @@ published at pkgsrc.tar.bz2 and pkgsrc.tar.xz respectively.
 
 You can fetch the same files using FTP.
 
-The tar file for the stable branch 2013Q1 is in the directory pkgsrc-2013Q1 and
+The tar file for the stable branch 2014Q3 is in the directory pkgsrc-2014Q3 and
 is also called pkgsrc.tar.gz.
 
 To download a pkgsrc stable tarball, run:
@@ -857,13 +854,13 @@ To download a pkgsrc stable tarball, run:
 $ ftp ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-20xxQy/pkgsrc.tar.gz
 
 Where pkgsrc-20xxQy is the stable branch to be downloaded, for example, "
-pkgsrc-2013Q1".
+pkgsrc-2014Q3".
 
-You can use fetch it also using "wget", "curl", or your web browser.
+If you prefer, you can also fetch it using "wget", "curl", or your web browser.
 
 Then, extract it with:
 
-$ tar -xzf pkgsrc-20xxQy.tar.gz -C /usr
+$ tar -xzf pkgsrc.tar.gz -C /usr
 
 This will create the directory pkgsrc/ in /usr/ and all the package source will
 be stored under /usr/pkgsrc/.
@@ -879,7 +876,7 @@ To fetch a specific pkgsrc stable branch, run:
 $ cd /usr && cvs -q -z2 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -r pkgsrc-20xxQy -P pkgsrc
 
 Where pkgsrc-20xxQy is the stable branch to be checked out, for example, "
-pkgsrc-2009Q1"
+pkgsrc-2014Q3"
 
 This will create the directory pkgsrc/ in your /usr/ directory and all the
 package source will be stored under /usr/pkgsrc/.
@@ -936,9 +933,9 @@ strongly recommended.
 
 Note that by default the distfiles and the binary packages are saved in the
 pkgsrc tree, so don't forget to rescue them before updating. You can also
-configure pkgsrc to use other than the default directories by setting the
-DISTDIR and PACKAGES variables. See Chapter 5, Configuring pkgsrc for the
-details.
+configure pkgsrc to store distfiles and packages in directories outside the
+pkgsrc tree by setting the DISTDIR and PACKAGES variables. See Chapter 5, 
+Configuring pkgsrc for the details.
 
 To update pkgsrc from a tar file, download the tar file as explained above.
 Then, make sure that you have not made any changes to the files in the pkgsrc
@@ -961,7 +958,7 @@ When updating pkgsrc, the CVS program keeps track of the branch you selected.
 But if you, for whatever reason, want to switch from the stable branch to the
 current one, you can do it by adding the option "-A" after the "update"
 keyword. To switch from the current branch back to the stable branch, add the "
--rpkgsrc-2009Q3" option.
+-rpkgsrc-2014Q3" option.
 
 2.2.2.2. What happens to my changes when updating?
 
