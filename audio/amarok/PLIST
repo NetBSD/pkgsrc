@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2014/02/01 02:22:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.45 2014/11/14 09:10:37 markd Exp $
 bin/amarok
 bin/amarok_afttagger
 bin/amarokcollectionscanner
@@ -11,7 +11,6 @@ lib/kde4/amarok_collection-ipodcollection.so
 lib/kde4/amarok_collection-mtpcollection.so
 lib/kde4/amarok_collection-mysqlecollection.so
 lib/kde4/amarok_collection-mysqlservercollection.so
-lib/kde4/amarok_collection-nepomukcollection.so
 lib/kde4/amarok_collection-playdarcollection.so
 lib/kde4/amarok_collection-umscollection.so
 lib/kde4/amarok_collection-upnpcollection.so
@@ -56,7 +55,7 @@ lib/libamaroklib.so.1
 lib/libamaroklib.so.1.0.0
 lib/libamarokocsclient.so
 lib/libamarokocsclient.so.4
-lib/libamarokocsclient.so.4.11.5
+lib/libamarokocsclient.so.4.14.3
 lib/libamarokpud.so
 lib/libamarokpud.so.1
 lib/libamarokpud.so.1.0.0
@@ -1026,7 +1025,6 @@ share/kde4/services/amarok_collection-ipodcollection.desktop
 share/kde4/services/amarok_collection-mtpcollection.desktop
 share/kde4/services/amarok_collection-mysqlecollection.desktop
 share/kde4/services/amarok_collection-mysqlservercollection.desktop
-share/kde4/services/amarok_collection-nepomukcollection.desktop
 share/kde4/services/amarok_collection-playdarcollection.desktop
 share/kde4/services/amarok_collection-umscollection.desktop
 share/kde4/services/amarok_collection-upnpcollection.desktop
