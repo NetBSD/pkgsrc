@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2014/02/01 02:20:46 markd Exp $
+$NetBSD: distinfo,v 1.5 2014/11/14 08:49:39 markd Exp $
 
-SHA1 (kiriki-4.11.5.tar.xz) = 91ff7379c0384a1d8e10f6d3964578eed671cc57
-RMD160 (kiriki-4.11.5.tar.xz) = f5ece54dfc28b489cbed31f95ac86e872ab0cdbe
-Size (kiriki-4.11.5.tar.xz) = 117640 bytes
+SHA1 (kiriki-4.14.3.tar.xz) = 929b878227e45f58dba10091ebd2a092ce0bcf6d
+RMD160 (kiriki-4.14.3.tar.xz) = ff1814ddb1395ad7563bfbe2ef0e87bf28a8d535
+Size (kiriki-4.14.3.tar.xz) = 117792 bytes

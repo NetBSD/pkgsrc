@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2014/02/01 02:20:46 markd Exp $
+$NetBSD: distinfo,v 1.5 2014/11/14 08:49:39 markd Exp $
 
-SHA1 (klickety-4.11.5.tar.xz) = 6ab7f06de6fb7fde6e0342cfb16cefdecc767373
-RMD160 (klickety-4.11.5.tar.xz) = 4e55f86e8f13edcc4f966d29cb60990ebb90f759
-Size (klickety-4.11.5.tar.xz) = 783720 bytes
+SHA1 (klickety-4.14.3.tar.xz) = 4dcc4f91e41a44b4e7794f4d996bcc49b402b3c2
+RMD160 (klickety-4.14.3.tar.xz) = 0ce861944441fe355676644794ef9f59e8e32565
+Size (klickety-4.14.3.tar.xz) = 784020 bytes

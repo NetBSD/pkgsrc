@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2014/02/01 02:20:47 markd Exp $
+$NetBSD: distinfo,v 1.5 2014/11/14 08:49:40 markd Exp $
 
-SHA1 (kubrick-4.11.5.tar.xz) = 9d3a6b038ba86d3ae7259d13fdf5d3b77afed899
-RMD160 (kubrick-4.11.5.tar.xz) = a3133574c0cc319efdab157391a87c27bf9c04ed
-Size (kubrick-4.11.5.tar.xz) = 107344 bytes
+SHA1 (kubrick-4.14.3.tar.xz) = df22d2ac7586660fc42c5546c765cd6ddaf9133c
+RMD160 (kubrick-4.14.3.tar.xz) = 40fd60087b99bcfd6b6292a2769f0c64bf57f66a
+Size (kubrick-4.14.3.tar.xz) = 106680 bytes

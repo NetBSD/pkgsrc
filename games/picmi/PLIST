@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/03 12:03:44 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/11/14 08:49:41 markd Exp $
 bin/picmi
 share/applications/kde4/picmi.desktop
 share/doc/kde/HTML/en/picmi/common
@@ -18,6 +18,7 @@ share/kde/apps/picmi/levels/default/baby_chick.xpm
 share/kde/apps/picmi/levels/default/baby_panda.xpm
 share/kde/apps/picmi/levels/default/basketball.xpm
 share/kde/apps/picmi/levels/default/bass_clef.xpm
+share/kde/apps/picmi/levels/default/bike.xpm
 share/kde/apps/picmi/levels/default/bird.xpm
 share/kde/apps/picmi/levels/default/calculator.xpm
 share/kde/apps/picmi/levels/default/camera.xpm
@@ -33,11 +34,13 @@ share/kde/apps/picmi/levels/default/hourglass.xpm
 share/kde/apps/picmi/levels/default/mobile_phone.xpm
 share/kde/apps/picmi/levels/default/panda.xpm
 share/kde/apps/picmi/levels/default/phone.xpm
+share/kde/apps/picmi/levels/default/picmi.xpm
 share/kde/apps/picmi/levels/default/pirate_dog.xpm
 share/kde/apps/picmi/levels/default/policeman.xpm
 share/kde/apps/picmi/levels/default/robot.xpm
 share/kde/apps/picmi/levels/default/santa_claus.xpm
 share/kde/apps/picmi/levels/default/shopping_cart.xpm
+share/kde/apps/picmi/levels/default/soccer.xpm
 share/kde/apps/picmi/levels/default/zebra.xpm
 share/kde/apps/picmi/picmiui.rc
 share/kde/apps/picmi/themes/picmi.desktop

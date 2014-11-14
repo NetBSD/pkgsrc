@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/11/07 11:35:50 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/11/14 08:49:39 markd Exp $
 bin/knetwalk
 share/applications/kde4/knetwalk.desktop
 share/doc/kde/HTML/en/knetwalk/common
@@ -12,6 +12,11 @@ share/icons/hicolor/48x48/apps/knetwalk.png
 share/icons/hicolor/64x64/apps/knetwalk.png
 share/icons/hicolor/scalable/apps/knetwalk.svgz
 share/kde/apps/knetwalk/knetwalkui.rc
+share/kde/apps/knetwalk/qml/Cable.qml
+share/kde/apps/knetwalk/qml/CanvasItem.qml
+share/kde/apps/knetwalk/qml/Cell.qml
+share/kde/apps/knetwalk/qml/logic.js
+share/kde/apps/knetwalk/qml/main.qml
 share/kde/apps/knetwalk/sounds/click.wav
 share/kde/apps/knetwalk/sounds/connect.wav
 share/kde/apps/knetwalk/sounds/start.wav
