@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/11/07 10:42:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/11/14 08:03:30 markd Exp $
 bin/adddebug
 bin/build-progress.sh
 bin/cheatmake
@@ -42,6 +42,7 @@ bin/package_crystalsvg
 bin/png2mng.pl
 bin/pruneemptydirs
 bin/qtdoc
+bin/reviewboard-am
 bin/svn-clean
 bin/svnbackport
 bin/svnchangesince

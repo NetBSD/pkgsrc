@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2013/11/07 10:42:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/11/14 08:03:31 markd Exp $
+bin/po2xml
 bin/split2po
+bin/swappo
 bin/xml2pot
 man/man1/po2xml.1
 man/man1/split2po.1

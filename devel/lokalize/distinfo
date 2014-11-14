@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2014/02/01 02:20:44 markd Exp $
+$NetBSD: distinfo,v 1.3 2014/11/14 08:03:31 markd Exp $
 
-SHA1 (lokalize-4.11.5.tar.xz) = b9ff5690992c3bff79bf52446c97d0187d0cfd4a
-RMD160 (lokalize-4.11.5.tar.xz) = 22b1a0520340c4be16bc49b04b13b1b489461a41
-Size (lokalize-4.11.5.tar.xz) = 846732 bytes
+SHA1 (lokalize-4.14.3.tar.xz) = 6ce02aa67bbcbfa2e1d6beee6080f336cd89de6d
+RMD160 (lokalize-4.14.3.tar.xz) = eeab40bb3861625d9dc56e96b962ee475e403fd0
+Size (lokalize-4.14.3.tar.xz) = 846236 bytes
