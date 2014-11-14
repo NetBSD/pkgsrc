@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.526 2014/11/13 11:30:39 markd Exp $
+# $NetBSD: Makefile,v 1.527 2014/11/14 13:36:23 pettai Exp $
 #
 
 COMMENT=	Security tools
@@ -161,6 +161,7 @@ SUBDIR+=	libssh2
 SUBDIR+=	libtasn1
 SUBDIR+=	libtcpa
 SUBDIR+=	libtomcrypt
+SUBDIR+=	libykneomgr
 SUBDIR+=	libyubikey
 SUBDIR+=	log2timeline
 SUBDIR+=	logcheck
