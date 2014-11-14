@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2014/02/01 02:20:44 markd Exp $
+$NetBSD: distinfo,v 1.3 2014/11/14 08:03:31 markd Exp $
 
-SHA1 (kompare-4.11.5.tar.xz) = 9fecd4244aa63999d58dd7e136701a243e9c6a18
-RMD160 (kompare-4.11.5.tar.xz) = cae2daa01b0fc26ccbd762492933a74464488854
-Size (kompare-4.11.5.tar.xz) = 374484 bytes
+SHA1 (kompare-4.14.3.tar.xz) = 593c1a01bc4db8f5c89cdcb1d5cae9a9d76cdb46
+RMD160 (kompare-4.14.3.tar.xz) = b69acc732e2cc7f92f993b152c3e25edcd316ed4
+Size (kompare-4.14.3.tar.xz) = 344240 bytes
