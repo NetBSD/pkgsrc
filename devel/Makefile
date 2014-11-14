@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2006 2014/11/13 11:15:36 markd Exp $
+# $NetBSD: Makefile,v 1.2007 2014/11/14 09:07:25 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -447,7 +447,8 @@ SUBDIR+=	libinotify
 SUBDIR+=	libixp
 SUBDIR+=	libjit
 SUBDIR+=	libjudy
-SUBDIR+=	libkapi
+SUBDIR+=	libkgapi
+SUBDIR+=	libkomparediff2
 SUBDIR+=	liblangtag
 SUBDIR+=	libltdl
 SUBDIR+=	libmaa
