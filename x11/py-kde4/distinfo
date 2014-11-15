@@ -1,11 +1,7 @@
-$NetBSD: distinfo,v 1.9 2014/08/21 21:34:33 wiz Exp $
+$NetBSD: distinfo,v 1.10 2014/11/15 03:02:27 markd Exp $
 
-SHA1 (pykde4-4.11.5.tar.xz) = c71b0774fcd6385272fb01dd466e6778a904da19
-RMD160 (pykde4-4.11.5.tar.xz) = 311fca73ae8e2a877fe7e72c93f283c56861a8e4
-Size (pykde4-4.11.5.tar.xz) = 2050296 bytes
-SHA1 (patch-CMakeLists.txt) = 7a759c951e80eac4a1260769a45e6586eb296b3e
+SHA1 (pykde4-4.14.3.tar.xz) = 9cc8e70d3b107a876cf579beab1f582861cd2c48
+RMD160 (pykde4-4.14.3.tar.xz) = 3ea2492cd31704e559456cb78dd85660fae7e74c
+Size (pykde4-4.14.3.tar.xz) = 2006504 bytes
+SHA1 (patch-CMakeLists.txt) = dc1e12cc62e4c25f563f1b1c9c5901739f7e8920
 SHA1 (patch-__init__.py) = 721287a0ec82b79ea4a502526ed98ba44c6d979f
-SHA1 (patch-sip_phonon_backendcapabilities.sip) = ed27d219313b8b11f80b17989704fd72f4f6048a
-SHA1 (patch-sip_plasma_glapplet.sip) = 185a9eb2812df1e410493f2f4b91d010cca9be38
-SHA1 (patch-sip_solid_networking.sip) = 9b2ae3e8df88d093ce3f98a76b6de8f11fa9a283
-SHA1 (patch-tools_pykdeuic4_pykdeuic4.py) = 654dded41e86e3c4ec01d8806be3cc49d5a63aff
