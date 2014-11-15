@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4290 2014/11/15 12:12:07 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.4291 2014/11/15 14:36:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5630,3 +5630,11 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/k3b to 2.0.3a [markd 2014-11-15]
 	Updated misc/libreoffice4 to 4.3.4.1 [ryoon 2014-11-15]
 	Updated lang/openjdk7 to 1.7.71nb1 [ryoon 2014-11-15]
+	Updated lang/ruby200-base to 2.0.0p598 [taca 2014-11-15]
+	Updated databases/ruby-gdbm to 2.0.0p598 [taca 2014-11-15]
+	Updated devel/ruby-curses to 2.0.0p598nb1 [taca 2014-11-15]
+	Updated devel/ruby-fiddle to 2.0.0p598 [taca 2014-11-15]
+	Updated devel/ruby-readline to 2.0.0p598nb1 [taca 2014-11-15]
+	Updated x11/ruby-tk to 2.0.0p598nb3 [taca 2014-11-15]
+	Updated lang/ruby200 to 2.0.0p598 [taca 2014-11-15]
+	Updated lang/ruby to 2.0.0p598 [taca 2014-11-15]
