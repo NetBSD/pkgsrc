@@ -1,33 +1,29 @@
-# $NetBSD: Makefile,v 1.6 2014/11/01 04:36:17 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.7 2014/11/15 14:53:03 jaapb Exp $
 #
 
-DISTNAME=	tyxml-2.2.0
-PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
+PKGNAME=	ocaml-tyxml-${VERSION}
+DISTNAME=	${VERSION}
+VERSION=	3.3.0
 CATEGORIES=	textproc
-MASTER_SITES=	http://ocsigen.org/download/
+MASTER_SITES=	https://github.com/ocsigen/tyxml/archive/
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	http://ocsigen.org/download/
+HOMEPAGE=	http://ocsigen.org/tyxml/
 COMMENT=	OCaml XML typing library
 LICENSE=	gnu-lgpl-v2.1 # with openssl exemption
 
-USE_LANGUAGES=	c
-USE_TOOLS=	gmake
-
-DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
 CONFLICTS+=	ocsigen<2.0
 
-MAKE_ENV+=	INSTALLDIR="${DESTDIR}${PREFIX}/lib/ocaml/site-lib"
-INSTALLATION_DIRS=	lib/ocaml/site-lib
+WRKSRC=	${WRKDIR}/tyxml-${VERSION}
+MAKE_ENV+=	INSTALLDIR="${DESTDIR}${PREFIX}/${OCAML_SITELIBDIR}"
 
-PLIST_VARS=	opt
-.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
-    (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "x86_64")
-PLIST.opt=	yes
-.endif
+USE_TOOLS=	gmake
+OCAML_USE_FINDLIB=	yes
+OCAML_USE_OASIS=	yes
 
+
+.include "../../mk/ocaml.mk"
 .include "../../lang/camlp4/buildlink3.mk"
-.include "../../lang/ocaml/buildlink3.mk"
-.include "../../net/ocamlnet/buildlink3.mk"
+.include "../../textproc/ocaml-uutf/buildlink3.mk"
+#.include "../../net/ocamlnet/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
