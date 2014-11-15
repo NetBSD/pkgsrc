@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4287 2014/11/15 02:09:55 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4288 2014/11/15 03:38:12 markd Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5626,3 +5626,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/kdevplatform to 1.7.0 [markd 2014-11-14]
 	Updated net/zeromq to 4.0.5 [obache 2014-11-15]
 	Updated net/py-zmq to 14.4.1 [obache 2014-11-15]
+	Updated print/kbibtex to 0.5.1 [markd 2014-11-15]
+	Updated sysutils/k3b to 2.0.3a [markd 2014-11-15]
