@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4299 2014/11/15 21:20:30 markd Exp $
+$NetBSD: CHANGES-2014,v 1.4300 2014/11/15 22:08:17 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5656,3 +5656,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/libkgeomap to 4.4.0 [markd 2014-11-15]
 	Updated misc/libkvkontakte to 4.4.0 [markd 2014-11-15]
 	Updated www/libmediawiki to 4.4.0 [markd 2014-11-15]
+	Updated www/firefox to 33.1nb1 [szptvlfn 2014-11-15]
