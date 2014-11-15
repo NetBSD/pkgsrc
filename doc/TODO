@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13820 2014/11/15 21:20:30 markd Exp $
+$NetBSD: TODO,v 1.13821 2014/11/15 22:19:02 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -975,7 +975,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o reposurgeon-3.10
 	o resize_image-0.7
 	o rhythmbox-3.1
-	o ricty-ttf-3.2.3 [pkg/49038]
 	o rio500-0.8.1
 	o robodoc-4.99.6
 	o root-5.34.01
