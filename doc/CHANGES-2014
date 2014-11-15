@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4296 2014/11/15 14:55:07 taca Exp $
+$NetBSD: CHANGES-2014,v 1.4297 2014/11/15 15:30:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5642,6 +5642,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/ruby193 to 1.9.3p551 [taca 2014-11-15]
 	Updated lang/ruby21-base to 2.1.5 [taca 2014-11-15]
 	Updated lang/ruby21 to 2.1.5 [taca 2014-11-15]
+	Updated devel/ruby-mode to 2.1.5 [taca 2014-11-15]
 	Updated lang/php54 to 5.4.35 [taca 2014-11-15]
 	Updated textproc/ocaml-tyxml to 3.3.0 [jaapb 2014-11-15]
 	Updated lang/php55 to 5.5.19 [taca 2014-11-15]
