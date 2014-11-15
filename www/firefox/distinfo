@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.168 2014/11/10 20:55:56 ryoon Exp $
+$NetBSD: distinfo,v 1.169 2014/11/15 22:04:59 szptvlfn Exp $
 
 SHA1 (firefox-33.1.source.tar.bz2) = bc87055d3b68e8458f07d0c04503b6aaed3771df
 RMD160 (firefox-33.1.source.tar.bz2) = d9fbb2d4caa4cd2a027c316584892a53fbaa33f5
@@ -13,11 +13,7 @@ SHA1 (patch-b2g_installer_package-manifest.in) = 56d73f510fb807ad11f40b0ceec5096
 SHA1 (patch-bf) = 75c971043e9f693203d6bd670b2c20c4952a7756
 SHA1 (patch-bg) = d6c02294765265d9e85cf49c22320d88573c2e25
 SHA1 (patch-browser_app_nsBrowserApp.cpp) = 00914f7656fff6785d737ce6e569a97fe39aafe8
-SHA1 (patch-browser_app_profile_firefox.js) = 108efbe1ae65669912d2f76caec546753e1ac8f3
 SHA1 (patch-browser_installer_package-manifest.in) = 83a0073525c607e05414688aa07035cc3f08e50a
-SHA1 (patch-browser_locales_en-US_chrome_browser-region_region.properties) = 284d62596718d7f372c4e5214fd05adec043c93a
-SHA1 (patch-browser_locales_en-US_searchplugins_duckduckgo.xml) = 69eca52185ac868e95041b5d87611ee32c2b6330
-SHA1 (patch-browser_locales_en-US_searchplugins_list.txt) = a6677b3a195b6c956858326e4e7474441823a47f
 SHA1 (patch-build_autoconf_compiler-opts.m4) = ccdc06a2b07b7664f9cb91bcc4fb29052dda8b07
 SHA1 (patch-build_autoconf_nss.m4) = bf65db126705a3a1ba294418b9380683ea401fc7
 SHA1 (patch-build_clang-plugin_configure) = eb5bf7774a938766bffd7636811801b96afd2280
