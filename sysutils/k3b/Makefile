@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.75 2014/11/07 19:39:41 adam Exp $
+# $NetBSD: Makefile,v 1.76 2014/11/15 03:35:26 markd Exp $
 
-DISTNAME=		k3b-2.0.2
-PKGREVISION=		31
+DISTNAME=		k3b-2.0.3a
 CATEGORIES=		sysutils
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=k3b/}
-EXTRACT_SUFX=		.tar.bz2
+MASTER_SITES=		${MASTER_SITE_KDE:=k3b/}
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		markd@NetBSD.org
 HOMEPAGE=		http://www.k3b.org/
@@ -30,6 +29,8 @@ SUBST_MESSAGE.pathfix=	Add cdrtools path.
 SUBST_FILES.pathfix=	libk3b/core/k3bexternalbinmanager.cpp
 SUBST_SED.pathfix=	-e 's:"/usr/bin/":"${LOCALBASE}/bin", "/usr/bin/":g'
 
+WRKSRC=			${WRKDIR}/k3b-2.0.3
+
 pre-configure:
 	# buildlink loses this symlink
 	ln -s ${BUILDLINK_PREFIX.qt4-libs}/qt4/mkspecs/default ${BUILDLINK_DIR}/qt4/mkspecs/default
@@ -47,7 +48,7 @@ BUILDLINK_TRANSFORM+=   opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../multimedia/ffmpeg1/buildlink3.mk"
+.include "../../multimedia/ffmpeg2/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../multimedia/libkcddb/buildlink3.mk"
 .include "../../security/polkit-qt/buildlink3.mk"

@@ -1,11 +1,9 @@
-$NetBSD: distinfo,v 1.21 2013/11/09 22:20:36 markd Exp $
+$NetBSD: distinfo,v 1.22 2014/11/15 03:35:26 markd Exp $
 
-SHA1 (k3b-2.0.2.tar.bz2) = 8b30a4d07942e82559b01bc07dea6bcf2defd532
-RMD160 (k3b-2.0.2.tar.bz2) = a0289eb9ccec9607c2bdac3fc7c69102eec5ee40
-Size (k3b-2.0.2.tar.bz2) = 12833321 bytes
-SHA1 (patch-libk3b_jobs_k3bdatatrackreader.cpp) = 124d5ba1a3384d012a8b471f55fd624ffe9df5d4
-SHA1 (patch-libk3b_tools_k3bcdparanoialib.cpp) = a7033c2697abea2d3f7acb2af14a90016483ba2f
-SHA1 (patch-libk3bdevice_k3bdevice.cpp) = 8533f0c08551ef9b8429792f607a52675f79e419
-SHA1 (patch-libk3bdevice_k3bdevicemanager.cpp) = fe07915854808758ab9d989d11b61fdc3b4b95bd
-SHA1 (patch-libk3bdevice_k3bscsicommand_netbsd.cpp) = f2326f21219178443535fc4a80b8bdd46479b1ad
-SHA1 (patch-plugins_decoder_ffmpeg_k3bffmpegwrapper.cpp) = 941f59b0764db37d0356279ffc2e01fe610b04ce
+SHA1 (k3b-2.0.3a.tar.xz) = f1001db3b5b32ef6bdb827742f1ca357c82b216f
+RMD160 (k3b-2.0.3a.tar.xz) = 5f5cd852c2d8368b1899bf80e27f36a3afdc670c
+Size (k3b-2.0.3a.tar.xz) = 9864468 bytes
+SHA1 (patch-libk3b_jobs_k3bdatatrackreader.cpp) = 63e9f83183a7407e775813960fddea410f2a4d2c
+SHA1 (patch-libk3b_tools_k3bcdparanoialib.cpp) = 15ec2a4191770991137a29ef6ca8605c3626374a
+SHA1 (patch-libk3bdevice_k3bdevice.cpp) = b2b06d4e0bfccea9bd2c6020ae9e02f7782883ba
+SHA1 (patch-libk3bdevice_k3bdevicemanager.cpp) = f93f38120a14aa16f857d09ae71e416d116ac421

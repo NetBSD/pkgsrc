@@ -1,54 +1,40 @@
-$NetBSD: patch-libk3b_tools_k3bcdparanoialib.cpp,v 1.1 2013/11/09 22:20:36 markd Exp $
+$NetBSD: patch-libk3b_tools_k3bcdparanoialib.cpp,v 1.2 2014/11/15 03:35:26 markd Exp $
 
-Allow newer versions of libraries to be found.
-Also fix problem where by k3b wont rip the first track when it is not
-alphabetically the first track to be ripped.
-
---- libk3b/tools/k3bcdparanoialib.cpp.orig	2011-01-15 20:47:29.000000000 +0000
+--- libk3b/tools/k3bcdparanoialib.cpp.orig	2014-11-04 18:37:31.000000000 +0000
 +++ libk3b/tools/k3bcdparanoialib.cpp
-@@ -69,7 +69,7 @@ typedef short int int16_t;
+@@ -68,7 +68,7 @@ typedef short int int16_t;
+ #define LIBCDIO_CDDA "cdio_cdda.dll"
  #define LIBCDIO_PARANOIA "cdio_paranoia.dll"
  #else
- #define LIBCDIO_CDDA "libcdio_cdda.so"
--#define LIBCDIO_PARANOIA "libcdio_paranoia.so.0"
-+#define LIBCDIO_PARANOIA "libcdio_paranoia.so"
- #endif
- 
- static bool s_haveLibCdio = false;
-@@ -532,11 +532,11 @@ K3b::CdparanoiaLib* K3b::CdparanoiaLib::
-     if( s_libInterface == 0 ) {
-         s_haveLibCdio = false;
- #ifndef Q_OS_WIN32
--        s_libInterface = dlopen( "libcdda_interface.so.0", RTLD_NOW|RTLD_GLOBAL );
-+        s_libInterface = dlopen( "libcdda_interface.so", RTLD_NOW|RTLD_GLOBAL );
- 
-         // try the redhat & Co. location
-         if( s_libInterface == 0 )
--            s_libInterface = dlopen( "cdda/libcdda_interface.so.0", RTLD_NOW|RTLD_GLOBAL );
-+            s_libInterface = dlopen( "cdda/libcdda_interface.so", RTLD_NOW|RTLD_GLOBAL );
- #endif
-         // try the new cdio lib
-         if( s_libInterface == 0 ) {
-@@ -550,11 +550,11 @@ K3b::CdparanoiaLib* K3b::CdparanoiaLib::
-         }
+-#ifdef __NETBSD__
++#ifdef Q_OS_NETBSD
+ #define CDDA_LIBCDDA_INTERFACE "cdda/libcdda_interace.so"
+ #define CDDA_LIBCDDA_PARANOIA "cdda/libcdda_paranoia.so"
+ #define LIBCDDA_INTERFACE "libcdda_interface.so"
+@@ -555,7 +555,7 @@ K3b::CdparanoiaLib* K3b::CdparanoiaLib::
  
  #ifndef Q_OS_WIN32
--        s_libParanoia = dlopen( "libcdda_paranoia.so.0", RTLD_NOW );
-+        s_libParanoia = dlopen( "libcdda_paranoia.so", RTLD_NOW );
- 
-         // try the redhat & Co. location
-         if( s_libParanoia == 0 )
--            s_libParanoia = dlopen( "cdda/libcdda_paranoia.so.0", RTLD_NOW );
-+            s_libParanoia = dlopen( "cdda/libcdda_paranoia.so", RTLD_NOW );
+         if( !s_libInterface ) {
+-#ifndef __NETBSD__
++#ifndef Q_OS_NETBSD
+             s_libInterface = dlopen( LIBCDIO_CDDA_1, RTLD_NOW|RTLD_GLOBAL );
+             if( !s_libInterface ) {
+                 s_libInterface = dlopen( LIBCDIO_CDDA_0, RTLD_NOW|RTLD_GLOBAL );
+@@ -566,7 +566,7 @@ K3b::CdparanoiaLib* K3b::CdparanoiaLib::
+                     // try the redhat & Co. location
+                     if( !s_libInterface )
+                         s_libInterface = dlopen( CDDA_LIBCDDA_INTERFACE, RTLD_NOW|RTLD_GLOBAL );
+-#ifndef __NETBSD__
++#ifndef Q_OS_NETBSD
+                 }
+             }
  #endif
-         // try the new cdio lib
-         if( s_haveLibCdio && s_libParanoia == 0 )
-@@ -736,7 +736,7 @@ char* K3b::CdparanoiaLib::read( int* sta
- 
-     if( d->currentSector != d->data->sector() ) {
-         kDebug() << "(K3b::CdparanoiaLib) need to seek before read. Looks as if we are reusing the paranoia instance.";
--        if( !d->data->paranoiaSeek( d->currentSector, SEEK_SET ) )
-+        if( d->data->paranoiaSeek( d->currentSector, SEEK_SET ) == -1 )
-             return 0;
-     }
- 
+@@ -581,7 +581,7 @@ K3b::CdparanoiaLib* K3b::CdparanoiaLib::
+ #ifndef Q_OS_WIN32
+         if( s_haveLibCdio ) {
+             s_libParanoia = dlopen( LIBCDIO_PARANOIA, RTLD_NOW );
+-#ifndef __NETBSD__
++#ifndef Q_OS_NETBSD
+             if( !s_libParanoia ) {
+                 s_libParanoia = dlopen( LIBCDIO_PARANOIA_1, RTLD_NOW );
+                 if( !s_libParanoia )
