@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2014/02/01 02:20:46 markd Exp $
+$NetBSD: distinfo,v 1.5 2014/11/15 01:53:03 markd Exp $
 
-SHA1 (killbots-4.11.5.tar.xz) = 14d82851335c93a69ed1b7429966ae0b3401b63f
-RMD160 (killbots-4.11.5.tar.xz) = 1c258e119f0f48827c1e9a83626fb99c9fe34e2a
-Size (killbots-4.11.5.tar.xz) = 961700 bytes
+SHA1 (killbots-4.14.3.tar.xz) = a3f93046aeb22001d331abe4a469eea42af14bbf
+RMD160 (killbots-4.14.3.tar.xz) = a45a4971d65d97cfdd4a20c2e61f1a71d3c1294d
+Size (killbots-4.14.3.tar.xz) = 961756 bytes
