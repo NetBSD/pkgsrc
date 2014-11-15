@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/06/08 23:58:51 rodent Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/11/15 02:09:46 obache Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/zmq/__init__.py
 ${PYSITELIB}/zmq/__init__.pyc
@@ -24,12 +24,14 @@ ${PYSITELIB}/zmq/backend/__init__.pyo
 ${PYSITELIB}/zmq/backend/cffi/__init__.py
 ${PYSITELIB}/zmq/backend/cffi/__init__.pyc
 ${PYSITELIB}/zmq/backend/cffi/__init__.pyo
+${PYSITELIB}/zmq/backend/cffi/_cdefs.h
 ${PYSITELIB}/zmq/backend/cffi/_cffi.py
 ${PYSITELIB}/zmq/backend/cffi/_cffi.pyc
 ${PYSITELIB}/zmq/backend/cffi/_cffi.pyo
 ${PYSITELIB}/zmq/backend/cffi/_poll.py
 ${PYSITELIB}/zmq/backend/cffi/_poll.pyc
 ${PYSITELIB}/zmq/backend/cffi/_poll.pyo
+${PYSITELIB}/zmq/backend/cffi/_verify.c
 ${PYSITELIB}/zmq/backend/cffi/constants.py
 ${PYSITELIB}/zmq/backend/cffi/constants.pyc
 ${PYSITELIB}/zmq/backend/cffi/constants.pyo
@@ -221,6 +223,9 @@ ${PYSITELIB}/zmq/tests/test_device.pyo
 ${PYSITELIB}/zmq/tests/test_error.py
 ${PYSITELIB}/zmq/tests/test_error.pyc
 ${PYSITELIB}/zmq/tests/test_error.pyo
+${PYSITELIB}/zmq/tests/test_etc.py
+${PYSITELIB}/zmq/tests/test_etc.pyc
+${PYSITELIB}/zmq/tests/test_etc.pyo
 ${PYSITELIB}/zmq/tests/test_imports.py
 ${PYSITELIB}/zmq/tests/test_imports.pyc
 ${PYSITELIB}/zmq/tests/test_imports.pyo
@@ -266,6 +271,9 @@ ${PYSITELIB}/zmq/tests/test_stopwatch.pyo
 ${PYSITELIB}/zmq/tests/test_version.py
 ${PYSITELIB}/zmq/tests/test_version.pyc
 ${PYSITELIB}/zmq/tests/test_version.pyo
+${PYSITELIB}/zmq/tests/test_win32_shim.py
+${PYSITELIB}/zmq/tests/test_win32_shim.pyc
+${PYSITELIB}/zmq/tests/test_win32_shim.pyo
 ${PYSITELIB}/zmq/tests/test_z85.py
 ${PYSITELIB}/zmq/tests/test_z85.pyc
 ${PYSITELIB}/zmq/tests/test_z85.pyo
@@ -302,6 +310,9 @@ ${PYSITELIB}/zmq/utils/sixcerpt.pyo
 ${PYSITELIB}/zmq/utils/strtypes.py
 ${PYSITELIB}/zmq/utils/strtypes.pyc
 ${PYSITELIB}/zmq/utils/strtypes.pyo
+${PYSITELIB}/zmq/utils/win32.py
+${PYSITELIB}/zmq/utils/win32.pyc
+${PYSITELIB}/zmq/utils/win32.pyo
 ${PYSITELIB}/zmq/utils/z85.py
 ${PYSITELIB}/zmq/utils/z85.pyc
 ${PYSITELIB}/zmq/utils/z85.pyo
