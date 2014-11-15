@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2014/06/01 16:35:37 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2014/11/15 22:15:30 ryoon Exp $
 
-DISTNAME=	Ricty-3.2.1
-PKGNAME=	ricty-ttf-3.2.1
-PKGREVISION=	1
+RICTYVER=	3.2.3
+DISTNAME=	Ricty-${RICTYVER}
+PKGNAME=	ricty-ttf-${RICTYVER}
 CATEGORIES=	fonts japanese
-MASTER_SITES=	-https://github.com/yascentur/Ricty/archive/3.2.1.zip
+MASTER_SITES=	-https://github.com/yascentur/Ricty/archive/${RICTYVER}.zip
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -15,6 +15,8 @@ LICENSE=	ipafont AND ofl-v1.1 AND public-domain
 BUILD_DEPENDS+=		fontforge-[0-9]*:../../fonts/fontforge
 BUILD_DEPENDS+=		migu-ttf-[0-9]*:../../fonts/migu-ttf
 BUILD_DEPENDS+=		inconsolata-ttf-[0-9]*:../../fonts/inconsolata-ttf
+
+USE_TOOLS+=		bash
 
 # LICESE of generated TTF fonts is "ipafont AND open-font-license",
 # but OPEN FONT LICENSE version 1.1 section 5) require to distribute entirely
@@ -45,7 +47,7 @@ FIND_PREFIX+=	MIGUDIR=migu-ttf
 do-build:
 	set -e; \
 	cd ${WRKSRC}; \
-	./ricty_generator.sh \
+	${BASH} ./ricty_generator.sh \
 	${INCONSOLATADIR}/share/fonts/X11/TTF/Inconsolata.otf \
 	${MIGUDIR}/share/fonts/X11/TTF/migu-1m-regular.ttf \
 	${MIGUDIR}/share/fonts/X11/TTF/migu-1m-bold.ttf
