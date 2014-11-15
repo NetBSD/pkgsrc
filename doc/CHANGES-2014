@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4288 2014/11/15 03:38:12 markd Exp $
+$NetBSD: CHANGES-2014,v 1.4289 2014/11/15 07:33:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5628,3 +5628,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/py-zmq to 14.4.1 [obache 2014-11-15]
 	Updated print/kbibtex to 0.5.1 [markd 2014-11-15]
 	Updated sysutils/k3b to 2.0.3a [markd 2014-11-15]
+	Updated misc/libreoffice4 to 4.3.4.1 [ryoon 2014-11-15]
