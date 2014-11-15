@@ -1,8 +1,8 @@
-$NetBSD: patch-external_coinmp_ExternalProject__coinmp.mk,v 1.1 2014/10/13 21:52:50 ryoon Exp $
+$NetBSD: patch-external_coinmp_ExternalProject__coinmp.mk,v 1.2 2014/11/15 07:31:44 ryoon Exp $
 
 * Use libtool from pkgsrc/devel/libtool
 
---- external/coinmp/ExternalProject_coinmp.mk.orig	2014-09-16 20:10:41.000000000 +0000
+--- external/coinmp/ExternalProject_coinmp.mk.orig	2014-11-10 11:52:56.000000000 +0000
 +++ external/coinmp/ExternalProject_coinmp.mk
 @@ -26,6 +26,7 @@ $(call gb_ExternalProject_get_state_targ
  else

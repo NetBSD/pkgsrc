@@ -1,22 +1,12 @@
-$NetBSD: patch-configure.ac,v 1.6 2014/10/13 21:52:50 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.7 2014/11/15 07:31:44 ryoon Exp $
 
-* Accept non-bash statement, and fix Makefile generation
 * Use gstreamer under OpenBSD
 * Add FreeBSD support (GNU patch is not needed)
 * Detect pkgsrc apache-ant library
 * Fix installation directory
 
---- configure.ac.orig	2014-09-16 20:10:41.000000000 +0000
+--- configure.ac.orig	2014-11-10 11:52:56.000000000 +0000
 +++ configure.ac
-@@ -72,7 +72,7 @@ AbsolutePath()
-     if test -d "$rel" ; then
-         cd "$rel" || AC_MSG_ERROR([absolute path resolution failed for "$rel".])
-         absolute_path="$(pwd)"
--        cd - &> /dev/null
-+        cd - > /dev/null
-     else
-         AC_MSG_ERROR([Failed to resolve absolute path.  "$rel" does not exist or is not a directory.])
-     fi
 @@ -651,6 +651,8 @@ aix*)
  
  openbsd*)
@@ -26,7 +16,7 @@ $NetBSD: patch-configure.ac,v 1.6 2014/10/13 21:52:50 ryoon Exp $
      test_tde=yes
      test_kde=yes
      test_freetype=yes
-@@ -6567,7 +6569,7 @@ if test \( "$_os" != "WINNT" -o "$WITH_M
+@@ -6546,7 +6548,7 @@ if test \( "$_os" != "WINNT" -o "$WITH_M
  
      # Assume visibility is not broken with libc++. The below test is very much designed for libstdc++
      # only.
@@ -35,7 +25,7 @@ $NetBSD: patch-configure.ac,v 1.6 2014/10/13 21:52:50 ryoon Exp $
          dnl gcc#19664, gcc#22482, rhbz#162935
          AC_MSG_CHECKING([if STL headers are visibility safe (GCC bug 22482)])
          AC_EGREP_HEADER(visibility push, string, stlvisok=yes, stlvisok=no)
-@@ -8066,7 +8068,7 @@ no|disable)
+@@ -8045,7 +8047,7 @@ no|disable)
      else
          # Unset variables set by the above AM_PATH_PYTHON so that
          # we actually do check anew.
@@ -44,7 +34,7 @@ $NetBSD: patch-configure.ac,v 1.6 2014/10/13 21:52:50 ryoon Exp $
          AM_PATH_PYTHON([3.3],, [:])
          if test "$PYTHON" = :; then
              AC_MSG_RESULT([internal])
-@@ -8123,9 +8125,9 @@ if test $enable_python = system; then
+@@ -8102,9 +8104,9 @@ if test $enable_python = system; then
      elif test "$cross_compiling" != yes; then
          # Unset variables set by the above AM_PATH_PYTHON so that
          # we actually do check anew.
@@ -56,18 +46,18 @@ $NetBSD: patch-configure.ac,v 1.6 2014/10/13 21:52:50 ryoon Exp $
          python_include=`$PYTHON -c "import distutils.sysconfig; print(distutils.sysconfig.get_config_var('INCLUDEPY'));"`
          python_version=`$PYTHON -c "import distutils.sysconfig; print(distutils.sysconfig.get_config_var('VERSION'));"`
          python_libs=`$PYTHON -c "import distutils.sysconfig; print(distutils.sysconfig.get_config_var('LIBS'));"`
-@@ -9928,8 +9930,8 @@ if test -z "$PATCH"; then
+@@ -9907,8 +9909,8 @@ if test -z "$PATCH"; then
      AC_MSG_ERROR([\"patch\" not found in \$PATH, install it])
  fi
  
 -dnl On Solaris, FreeBSD or MacOS X, check if --with-gnu-patch was used
 -if test "$_os" = "SunOS" -o "$_os" = "FreeBSD" -o "$_os" = "Darwin"; then
-+dnl On Solaris, or MacOS X, check if --with-gnu-patch was used
-+if test "$_os" = "SunOS"  -o "$_os" = "Darwin"; then
++dnl On Solaris or MacOS X, check if --with-gnu-patch was used
++if test "$_os" = "SunOS" -o "$_os" = "Darwin"; then
      if test -z "$with_gnu_patch"; then
          GNUPATCH=$PATCH
      else
-@@ -12194,7 +12196,7 @@ EOF
+@@ -12173,7 +12175,7 @@ EOF
      dnl Checking for ant.jar
      if test "$ANT_HOME" != "NO_ANT_HOME"; then
          AC_MSG_CHECKING([Ant lib directory])
@@ -76,7 +66,7 @@ $NetBSD: patch-configure.ac,v 1.6 2014/10/13 21:52:50 ryoon Exp $
              ANT_LIB="$ANT_HOME/lib"
          else
              if test -f $ANT_HOME/ant.jar; then
-@@ -12625,7 +12627,7 @@ AC_SUBST(MANDIR)
+@@ -12604,7 +12606,7 @@ AC_SUBST(MANDIR)
  DOCDIR=[$(eval echo $(eval echo $docdir))]
  AC_SUBST(DOCDIR)
  
