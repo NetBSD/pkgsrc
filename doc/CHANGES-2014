@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4291 2014/11/15 14:36:07 taca Exp $
+$NetBSD: CHANGES-2014,v 1.4292 2014/11/15 14:40:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5638,3 +5638,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/ruby-tk to 2.0.0p598nb3 [taca 2014-11-15]
 	Updated lang/ruby200 to 2.0.0p598 [taca 2014-11-15]
 	Updated lang/ruby to 2.0.0p598 [taca 2014-11-15]
+	Updated lang/ruby193-base to 1.9.3p551 [taca 2014-11-15]
+	Updated lang/ruby193 to 1.9.3p551 [taca 2014-11-15]
