@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.44 2013/11/10 03:19:26 markd Exp $
+$NetBSD: distinfo,v 1.45 2014/11/15 21:15:18 markd Exp $
 
-SHA1 (digikam-3.5.0.tar.bz2) = 9e44fcf219312cbcbbaee0cc9a7f460a01769224
-RMD160 (digikam-3.5.0.tar.bz2) = 99afee6f47818653a5011f5a3416a04fb3a6a70f
-Size (digikam-3.5.0.tar.bz2) = 65698806 bytes
+SHA1 (digikam-4.4.0.tar.bz2) = 1feb43120addda314e09761440ec2058e430171c
+RMD160 (digikam-4.4.0.tar.bz2) = 540f243361aba3c95b675c05f84d8d60efab1948
+Size (digikam-4.4.0.tar.bz2) = 68871203 bytes
 SHA1 (patch-CMakeLists.txt) = 83bdf0398c3a4120ce6dc83d205ca32c50229ff2
-SHA1 (patch-bootstrap.local) = e1f0bbdd9508d0c32b7a6fd3e3a0b40ca16092ce
-SHA1 (patch-core_digikam_album_albumwatch.cpp) = cf80a12fef5c998efcad1fd5dcb5df3a0e4e5ae0
-SHA1 (patch-core_libs_3rdparty_kmemoryinfo_kmemoryinfo_backend.cpp) = d98ddf66a7d95868e4efa0f03935097f2e8a7795
+SHA1 (patch-core_app_album_albumwatch.cpp) = b43de7db712d3ee59412f350e4dd3cd805600556
+SHA1 (patch-core_libs_3rdparty_kmemoryinfo_kmemoryinfo_backend.cpp) = 050904de646281448da1bba7a9fb1b1b0fad51b1
 SHA1 (patch-core_libs_dimg_filters_icc_iccmanager.h) = 999bd32312fbe840913a8d29613b351384061b65
+SHA1 (patch-core_libs_imageproperties_captionedit.cpp) = a0f181ff4af9f71eee5679aef540a78497a113a9
+SHA1 (patch-core_libs_imageproperties_imagedescedittab.cpp) = a09fa20eaac60bf7dc6bcb2b9a1304891029ccb0
 SHA1 (patch-doc_CMakeLists.txt) = 5b4ba1daa49607b8773c3903d953e11bebc4d661
