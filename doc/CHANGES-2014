@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4297 2014/11/15 15:30:04 taca Exp $
+$NetBSD: CHANGES-2014,v 1.4298 2014/11/15 21:02:52 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5646,3 +5646,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/php54 to 5.4.35 [taca 2014-11-15]
 	Updated textproc/ocaml-tyxml to 3.3.0 [jaapb 2014-11-15]
 	Updated lang/php55 to 5.5.19 [taca 2014-11-15]
+	Updated lang/sun-jre7 to 7.0.72 [ryoon 2014-11-15]
+	Updated lang/sun-jdk7 to 7.0.72 [ryoon 2014-11-15]
