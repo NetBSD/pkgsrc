@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/03/01 08:38:12 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/11/15 01:59:37 obache Exp $
 bin/curve_keygen
 include/zmq.h
 include/zmq_utils.h
@@ -32,6 +32,7 @@ man/man3/zmq_msg_set.3
 man/man3/zmq_msg_size.3
 man/man3/zmq_poll.3
 man/man3/zmq_proxy.3
+man/man3/zmq_proxy_steerable.3
 man/man3/zmq_recv.3
 man/man3/zmq_recvmsg.3
 man/man3/zmq_send.3

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2014/07/07 13:05:35 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2014/11/15 01:59:37 obache Exp $
 #
 
 BUILDLINK_TREE+=	zeromq
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	zeromq
 ZEROMQ_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.zeromq+=	zeromq>=2.0.11
-BUILDLINK_ABI_DEPENDS.zeromq+=	zeromq>=4.0.4nb1
+BUILDLINK_ABI_DEPENDS.zeromq+=	zeromq>=4.0.5
 BUILDLINK_PKGSRCDIR.zeromq?=	../../net/zeromq
 
 .include "../../security/libsodium/buildlink3.mk"
