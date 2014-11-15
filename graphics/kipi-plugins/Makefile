@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.105 2014/11/07 19:39:35 adam Exp $
+# $NetBSD: Makefile,v 1.106 2014/11/15 20:59:33 markd Exp $
 #
 
-PKGNAME=	kipi-plugins-3.5.0
-DISTNAME=	digikam-3.5.0
-PKGREVISION=	10
+PKGNAME=	kipi-plugins-4.4.0
+DISTNAME=	digikam-4.4.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_KDE:=digikam/}
 EXTRACT_SUFX=	.tar.bz2
