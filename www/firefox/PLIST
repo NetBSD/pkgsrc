@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.88 2014/11/10 20:55:56 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.89 2014/11/15 22:04:59 szptvlfn Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -1441,7 +1441,6 @@ lib/firefox/browser/modules/webrtcUI.jsm
 lib/firefox/browser/searchplugins/amazondotcom.xml
 lib/firefox/browser/searchplugins/bing.xml
 lib/firefox/browser/searchplugins/ddg.xml
-lib/firefox/browser/searchplugins/duckduckgo.xml
 lib/firefox/browser/searchplugins/eBay.xml
 lib/firefox/browser/searchplugins/google.xml
 lib/firefox/browser/searchplugins/twitter.xml
