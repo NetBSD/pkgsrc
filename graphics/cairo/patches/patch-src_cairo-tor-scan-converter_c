@@ -1,0 +1,20 @@
+$NetBSD: patch-src_cairo-tor-scan-converter_c,v 1.1 2014/11/15 00:38:08 mef Exp $
+
+dot command segfaults easily to output *.png.
+See http://mail-index.netbsd.org/pkgsrc-users/2014/10/28/msg020603.html
+And this patch is at:
+https://www.mail-archive.com/debian-bugs-dist@lists.debian.org/msg1272017.html
+
+--- src/cairo-tor-scan-converter.c~	2014-10-14 10:46:33.000000000 +0900
++++ src/cairo-tor-scan-converter.c	2014-11-03 21:10:36.000000000 +0900
+@@ -1167,8 +1167,8 @@ can_do_full_row (struct active_list *act
+ 
+ 	if (e->dy) {
+ 	    struct quorem x = e->x;
+-	    x.quo += e->dxdy_full.quo - e->dxdy.quo/2;
+-	    x.rem += e->dxdy_full.rem - e->dxdy.rem/2;
++	    x.quo += e->dxdy_full.quo;
++	    x.rem += e->dxdy_full.rem;
+ 	    if (x.rem < 0) {
+ 		x.quo--;
+ 		x.rem += e->dy;
