@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.443 2014/11/06 15:31:11 jaapb Exp $
+# $NetBSD: Makefile,v 1.444 2014/11/15 03:46:53 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -190,8 +190,6 @@ SUBDIR+=	most
 SUBDIR+=	mousetweaks
 SUBDIR+=	mtail
 SUBDIR+=	multitail
-SUBDIR+=	nepomuk-core
-SUBDIR+=	nepomuk-widgets
 SUBDIR+=	nxtvepg
 SUBDIR+=	ocaml-cudf
 SUBDIR+=	ocaml-opam
