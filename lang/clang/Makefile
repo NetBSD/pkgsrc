@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2014/10/14 16:26:00 taca Exp $
+# $NetBSD: Makefile,v 1.33 2014/11/15 00:04:33 riz Exp $
 
 DISTNAME=	clang-3.5.0
 CATEGORIES=	lang
@@ -18,7 +18,7 @@ WRKSRC=			${WRKDIR}/llvm-${PKGVERSION_NOREV}.src
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		chown gmake groff pod2html pod2man
-GCC_REQD+=		4.7
+GCC_REQD+=		4.7 4.8
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-assertions
 CONFIGURE_ARGS+=	--disable-bindings	# disable OCaml
