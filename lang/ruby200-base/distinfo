@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.15.2.1 2014/11/01 19:17:24 tron Exp $
+$NetBSD: distinfo,v 1.15.2.2 2014/11/16 16:02:54 tron Exp $
 
-SHA1 (ruby-2.0.0-p594.tar.bz2) = 9995087d0857f7c9682297689691d606897333b8
-RMD160 (ruby-2.0.0-p594.tar.bz2) = fb5a2a5bd15a6e0208b75ad50134930356e6905c
-Size (ruby-2.0.0-p594.tar.bz2) = 10756895 bytes
+SHA1 (ruby-2.0.0-p598.tar.bz2) = 992416657832c775ff41452af81c962981ddbde2
+RMD160 (ruby-2.0.0-p598.tar.bz2) = 76f2f261236f820adbe7dcedda9b9714eaf8e178
+Size (ruby-2.0.0-p598.tar.bz2) = 10758882 bytes
 SHA1 (patch-configure) = ed31eee4192457aeba3ded9d42b1ed755a6d0acf
 SHA1 (patch-defs_default__gems) = 28a47952e27c22055bac6ad151d092572b96b1ec
 SHA1 (patch-lib_rdoc_ri_driver.rb) = 53ce4055b4c008c8ee13d38a81334d4846debdbc
