@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/04/29 14:08:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.3.20.1 2014/11/16 14:25:34 tron Exp $
 bin/sprockets
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
@@ -13,6 +13,8 @@ ${GEM_LIBDIR}/lib/sprockets/bundled_asset.rb
 ${GEM_LIBDIR}/lib/sprockets/cache/file_store.rb
 ${GEM_LIBDIR}/lib/sprockets/caching.rb
 ${GEM_LIBDIR}/lib/sprockets/charset_normalizer.rb
+${GEM_LIBDIR}/lib/sprockets/closure_compressor.rb
+${GEM_LIBDIR}/lib/sprockets/compressing.rb
 ${GEM_LIBDIR}/lib/sprockets/context.rb
 ${GEM_LIBDIR}/lib/sprockets/directive_processor.rb
 ${GEM_LIBDIR}/lib/sprockets/eco_template.rb
@@ -30,11 +32,15 @@ ${GEM_LIBDIR}/lib/sprockets/processing.rb
 ${GEM_LIBDIR}/lib/sprockets/processor.rb
 ${GEM_LIBDIR}/lib/sprockets/safety_colons.rb
 ${GEM_LIBDIR}/lib/sprockets/sass_cache_store.rb
+${GEM_LIBDIR}/lib/sprockets/sass_compressor.rb
+${GEM_LIBDIR}/lib/sprockets/sass_functions.rb
 ${GEM_LIBDIR}/lib/sprockets/sass_importer.rb
 ${GEM_LIBDIR}/lib/sprockets/sass_template.rb
 ${GEM_LIBDIR}/lib/sprockets/scss_template.rb
 ${GEM_LIBDIR}/lib/sprockets/server.rb
 ${GEM_LIBDIR}/lib/sprockets/static_asset.rb
+${GEM_LIBDIR}/lib/sprockets/uglifier_compressor.rb
 ${GEM_LIBDIR}/lib/sprockets/utils.rb
 ${GEM_LIBDIR}/lib/sprockets/version.rb
+${GEM_LIBDIR}/lib/sprockets/yui_compressor.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
