@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4307 2014/11/16 12:05:32 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4308 2014/11/16 12:11:37 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5664,3 +5664,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added www/rekonq version 2.4.2 [markd 2014-11-16]
 	Updated www/moodle to 2.8.1 [wen 2014-11-16]
 	Updated devel/p5-App-cpanminus to 1.7015 [wen 2014-11-16]
+	Updated databases/p5-SQL-Abstract to 1.81 [wen 2014-11-16]
