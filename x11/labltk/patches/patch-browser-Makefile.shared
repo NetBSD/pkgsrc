@@ -1,0 +1,15 @@
+$NetBSD: patch-browser-Makefile.shared,v 1.1 2014/11/16 18:08:36 hiramatsu Exp $
+
+Install into DESTDIR.
+--- browser/Makefile.shared.orig	2014-09-18 13:08:33.000000000 +0900
++++ browser/Makefile.shared	2014-11-03 20:47:56.000000000 +0900
+@@ -60,7 +60,8 @@
+ 	echo '";;' >> $@
+ 
+ install:
+-	cp ocamlbrowser$(EXE) $(INSTALLBINDIR)
++	$(BSD_INSTALL_SCRIPT_DIR) $(DESTDIR)$(INSTALLBINDIR)
++	$(BSD_INSTALL_SCRIPT) ocamlbrowser$(EXE) $(DESTDIR)$(INSTALLBINDIR)
+ 
+ clean:
+ 	rm -f *.cm? ocamlbrowser$(EXE) dummy.mli *~ *.orig *.$(O) help.ml
