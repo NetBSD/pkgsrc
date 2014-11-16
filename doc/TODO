@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13824 2014/11/16 15:08:12 wiz Exp $
+$NetBSD: TODO,v 1.13825 2014/11/16 16:11:36 gdt Exp $
 
 Suggested new packages
 ======================
@@ -301,6 +301,10 @@ Suggested new packages
 	jitsi
 	https://jitsi.org/
 	Secure Video Calls and Chat
+
+	retroshare
+	http://retroshare.sourceforge.net/index.html
+	Decentralized social-networking/filesharing blend.
 
 	Missing xorg packages
 	app: constype, intel-gpu-tools
