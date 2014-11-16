@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/05/31 00:36:55 rodent Exp $
-#
+# $NetBSD: Makefile,v 1.2 2014/11/16 20:14:59 wiz Exp $
 
-DISTNAME=	libAppleWM-1.4.0
+DISTNAME=	libAppleWM-1.4.1
 CATEGORIES=	x11 devel
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=	.tar.bz2
