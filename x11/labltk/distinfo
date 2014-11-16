@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2014/11/16 18:08:36 hiramatsu Exp $
+
+SHA1 (labltk-8.06.0.tar.gz) = c7f36b0a88428f707c3cf326bd8b72220149ad13
+RMD160 (labltk-8.06.0.tar.gz) = 383bbe6ed070ac0229f09b400d47ec25f7cc2fad
+Size (labltk-8.06.0.tar.gz) = 368790 bytes
+SHA1 (patch-browser-Makefile.shared) = d0fc57beb5a46848d6d21f9afabb3048fe175bc6
+SHA1 (patch-compiler-Makefile) = f896ff03d2aeb1ad974bb3842b4a1dfb09d7f660
+SHA1 (patch-configure) = ff33df4575e3722bc7bb3e5108886fdf5aacbb43
+SHA1 (patch-lib-Makefile) = 0bab4c0ce4a5961a52a6091375bc7e06776a4521
+SHA1 (patch-suppert-Makefile) = f622059399c32488892b006b55828d0b5ab0fd84

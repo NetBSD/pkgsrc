@@ -1,0 +1,27 @@
+$NetBSD: patch-lib-Makefile,v 1.1 2014/11/16 18:08:36 hiramatsu Exp $
+
+Install into DESTDIR.
+--- lib/Makefile.orig	2014-09-18 13:08:33.000000000 +0900
++++ lib/Makefile	2014-11-03 20:55:51.000000000 +0900
+@@ -78,16 +78,17 @@
+ 	@echo 'exec $(INSTALLDIR)/$(LIBNAME)top$(EXE) -I $(INSTALLDIR) "$$@"' >> $@
+ 
+ install-script: $(LIBNAME)
+-	cp $(LIBNAME) $(INSTALLBINDIR)
+-	chmod 755 $(INSTALLBINDIR)/$(LIBNAME)
++	$(BSD_INSTALL_SCRIPT_DIR) $(DESTDIR)$(INSTALLBINDIR)
++	$(BSD_INSTALL_SCRIPT) $(LIBNAME) $(DESTDIR)$(INSTALLBINDIR)
++#	chmod 755 $(INSTALLBINDIR)/$(LIBNAME)
+ 
+ install-batch:
+ 	cp labltk.bat $(INSTALLBINDIR)
+ 
+-ifeq ($USE_FINDLIB,yes)
++ifeq ($(USE_FINDLIB),yes)
+ install:
+ 	ocamlfind install labltk -add  $(LIBNAME).cma $(LIBNAME)top$(EXE)
+-	chmod 755 $(INSTALLDIR)/$(LIBNAME)top$(EXE)
++#	chmod 755 $(INSTALLDIR)/$(LIBNAME)top$(EXE)
+ 	@case x$(TOOLCHAIN) in \
+ 	  xmingw|xmsvc) $(MAKE) install-batch ;; \
+ 	  *) 		$(MAKE) install-script ;; \

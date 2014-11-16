@@ -1,0 +1,107 @@
+$NetBSD: patch-configure,v 1.1 2014/11/16 18:08:36 hiramatsu Exp $
+
+- Take X11 location from confgure arguments,
+  instead of ${LOCALBASE}/lib/ocaml/Makefile.config.
+- $has_tk is always true.
+
+--- configure.orig	2014-09-18 13:08:33.000000000 +0900
++++ configure	2014-11-04 13:23:58.000000000 +0900
+@@ -63,6 +63,10 @@
+         tk_libs=$2; shift;;
+     -tk-no-x11|--tk-no-x11)
+         tk_x11=no;;
++    -x11include*|--x11include*)
++        x11_include_dir=$2; shift;;
++    -x11lib*|--x11lib*)
++        x11_lib_dir=$2; shift;;
+     -use-findlib|--use-findlib)
+         use_findlib=yes;;
+     -verbose|--verbose)
+@@ -134,8 +138,8 @@
+ ocamlc_where=`ocamlc -where 2> /dev/null`
+ ocamlc_ver=`ocamlc -version 2> /dev/null`
+ ocamlc_opt_ver=`ocamlc.opt -version 2> /dev/null`
+-ocamlopt_ver=`$ocamlopt -version 2> /dev/null`
+-ocamlopt_opt_ver=`$ocamlopt.opt -version 2> /dev/null`
++#ocamlopt_ver=`$ocamlopt -version 2> /dev/null`
++#ocamlopt_opt_ver=`$ocamlopt.opt -version 2> /dev/null`
+ if test x"$where" = x"$ocamlc_where" \
+   && test -n "$ocamlc_opt_ver" && test x"$ocamlc_opt_ver" = x"$ocamlc_ver" \
+   && (test -z "$ocamlopt_ver" || test x"$ocamlopt_ver" = x"$ocamlopt_opt_ver")
+@@ -164,7 +168,7 @@
+ 
+ if test $has_tk = true; then
+   tcl_version=''
+-  tcl_version=`sh ./runtest $tk_defs $tk_x11_include tclversion.c`
++  tcl_version=`sh ./runtest $tk_defs $tk_x11_include_dir tclversion.c`
+   for tk_incs in \
+     "-I/usr/local/include" \
+     "-I/opt/local/include" \
+@@ -183,7 +187,7 @@
+     "-I/usr/include/tcl8.2 -I/usr/include/tk8.2"
+   do if test -z "$tcl_version"; then
+     tk_defs="$tk_incs"
+-    tcl_version=`sh ./runtest $tk_defs $tk_x11_include tclversion.c`
++    tcl_version=`sh ./runtest $tk_defs $tk_x11_include_dir tclversion.c`
+   fi; done
+   if test -n "$tcl_version" && test "x$tcl_version" != "xnone"; then
+     inf "tcl.h and tk.h version $tcl_version found with \"$tk_defs\"."
+@@ -204,9 +208,8 @@
+     has_tk=false
+   fi
+ fi
+-
++has_tk=true
+ system=`cat $where/Makefile.config | grep '^SYSTEM=' | sed -e 's/^SYSTEM=//'`
+-
+ if test $has_tk = true && test -z "$tk_libs"; then
+   tklibdir=""
+   if test -n "$tk_defs"; then
+@@ -229,7 +232,6 @@
+     tk
+   fi
+ fi
+-
+ tkauxlibs="$cclibs"
+ if test $has_tk = true; then
+   if test -n "$tk_libs" && \
+@@ -253,7 +255,7 @@
+     has_tk=false
+   fi
+ fi
+-
++has_tk=true
+ if test $has_tk = true; then
+   if sh ./hasgot $tk_libs $tk_x11_libs $tkauxlibs Tk_SetGrid; then
+     inf "Tcl/Tk libraries found."
+@@ -280,10 +282,17 @@
+   fi
+ fi
+ 
++if test -z "$x11_include_dir" -a -z "$x11_lib_dir"; then
++  if pkg-config --exists x11 2>/dev/null; then
++    x11_include_dir=`pkg-config --cflags x11`
++    x11_lib_dir=`pkg-config --libs x11`
++  fi
++fi
++
+ if test $has_tk = true; then
+   if test $tk_x11 = yes; then
+-    echo "TK_DEFS=$tk_defs "'$(X11_INCLUDES)' >> Makefile
+-    echo "TK_LINK=$tk_libs "'$(X11_LINK)' >> Makefile
++    echo "TK_DEFS=$tk_defs $(x11_include_dir)" >> Makefile
++    echo "TK_LINK=$tk_libs $(x11_lib_dir)" >> Makefile
+   else
+     echo "TK_DEFS=$tk_defs" >> Makefile
+     echo "TK_LINK=$tk_libs" >> Makefile
+@@ -304,8 +313,8 @@
+ if test $has_tk = true; then
+ inf "Configuration for the \"labltk\" library:"
+ inf "        use tcl/tk version ....... $tcl_version"
+-inf "        options for compiling .... $tk_defs $tk_x11_include"
+-inf "        options for linking ...... $tk_libs $tk_x11_libs"
++inf "        options for compiling .... $tk_defs $x11_include_dir"
++inf "        options for linking ...... $tk_libs $x11_lib_dir"
+ inf "        use native compilers ..... $optcomps"
+ else
+ inf "The \"labltk\" library: not supported"
