@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4311 2014/11/16 12:16:49 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4312 2014/11/16 18:09:26 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5668,3 +5668,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/p5-IO-Socket-SSL to 2.005 [wiz 2014-11-16]
 	Updated devel/p5-CPAN-Meta-Requirements to 2.129 [wiz 2014-11-16]
 	Updated graphics/p5-Image-ExifTool to 9.76 [wiz 2014-11-16]
+	Updated x11/labltk to 8.06.0 [hiramatsu 2014-11-16]
