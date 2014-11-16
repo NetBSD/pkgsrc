@@ -1,0 +1,16 @@
+$NetBSD: patch-compiler-Makefile,v 1.1 2014/11/16 18:08:36 hiramatsu Exp $
+
+Install into DESTDIR.
+--- compiler/Makefile.orig	2014-11-03 20:12:13.000000000 +0900
++++ compiler/Makefile	2014-11-03 20:12:16.000000000 +0900
+@@ -61,8 +61,8 @@
+ 	rm -f *.cm*  pplex.ml ppyac.ml ppyac.mli pp$(EXE)
+ 
+ install:
+-	cp tkcompiler$(EXE) $(INSTALLDIR)
+-	cp pp$(EXE) $(INSTALLDIR)
++	$(BSD_INSTALL_SCRIPT) tkcompiler$(EXE) $(DESTDIR)$(INSTALLDIR)
++	$(BSD_INSTALL_SCRIPT) pp$(EXE) $(DESTDIR)$(INSTALLDIR)
+ 
+ .SUFFIXES :
+ .SUFFIXES : .mli .ml .cmi .cmo .mlp
