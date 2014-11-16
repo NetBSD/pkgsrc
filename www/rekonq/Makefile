@@ -1,0 +1,24 @@
+# $NetBSD: Makefile,v 1.1 2014/11/16 05:22:16 markd Exp $
+
+DISTNAME=		rekonq-2.4.2
+CATEGORIES=		www kde
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rekonq/2.0/}
+EXTRACT_SUFX=		.tar.xz
+
+MAINTAINER=		markd@NetBSD.org
+HOMEPAGE=		http://rekonq.kde.org/
+COMMENT=		web browser for KDE based on WebKit
+LICENSE=		gnu-gpl-v2
+
+BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
+
+USE_TOOLS+=		msgfmt
+USE_LANGUAGES=		c c++
+
+.include "../../meta-pkgs/kde4/kde4.mk"
+.include "../../security/qca2/buildlink3.mk"
+.include "../../security/qoauth/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/kactivities/buildlink3.mk"
+.include "../../x11/kdelibs4/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
