@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7.2.1 2014/11/02 17:33:39 tron Exp $
+$NetBSD: distinfo,v 1.7.2.2 2014/11/16 16:45:21 tron Exp $
 
-SHA1 (ruby-2.1.4.tar.bz2) = c80ea0d5dddf1b0e7846b618fa7ae0e0cf7e55df
-RMD160 (ruby-2.1.4.tar.bz2) = 24b8e9950873663e44174d2a5d57fb864dee4fe6
-Size (ruby-2.1.4.tar.bz2) = 11992171 bytes
+SHA1 (ruby-2.1.5.tar.bz2) = d822e022bb8875724852f049f499f101d24a7fe5
+RMD160 (ruby-2.1.5.tar.bz2) = 32019c949a8c9bb716f6683a20f19231da452fda
+Size (ruby-2.1.5.tar.bz2) = 11994454 bytes
 SHA1 (patch-configure) = 40da4aec83fcb9cf026d2b458ff3beb6dcf7776a
 SHA1 (patch-lib_rdoc_ri_driver.rb) = 5bdd3ed6f50a2ea79f643c6bebd7ad0063e79051
 SHA1 (patch-lib_rubygems.rb) = 9d27fa8c96f285461fbb08df7491a0a48ed612e1
