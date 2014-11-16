@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4303 2014/11/15 22:33:37 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.4304 2014/11/16 05:19:24 markd Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5660,3 +5660,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/youtube-dl to 2014.11.15.1 [mrg 2014-11-02]
 	Updated fonts/ricty-ttf to 3.2.3 [ryoon 2014-11-15]
 	Updated fonts/vlgothic-ttf to 20140801 [ryoon 2014-11-15]
+	Updated net/scamper to 20141101 [markd 2014-11-16]
