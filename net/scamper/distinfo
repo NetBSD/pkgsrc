@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2014/01/26 10:28:49 markd Exp $
+$NetBSD: distinfo,v 1.11 2014/11/16 05:17:24 markd Exp $
 
-SHA1 (scamper-cvs-20140122.tar.gz) = a9ede92a49d8e3433cb909a1467a51320d35c5af
-RMD160 (scamper-cvs-20140122.tar.gz) = 346fa7d920138b9058e9195ec90a9d72a89bd6c9
-Size (scamper-cvs-20140122.tar.gz) = 1211605 bytes
+SHA1 (scamper-cvs-20141101.tar.gz) = 564c2cbb60ad0d5ac27cef81e7901ca567b4473c
+RMD160 (scamper-cvs-20141101.tar.gz) = a344841e7ea14e146851294795020ebf02c84fb8
+Size (scamper-cvs-20141101.tar.gz) = 1224353 bytes
