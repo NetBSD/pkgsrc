@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4304 2014/11/16 05:19:24 markd Exp $
+$NetBSD: CHANGES-2014,v 1.4305 2014/11/16 05:24:09 markd Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5661,3 +5661,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated fonts/ricty-ttf to 3.2.3 [ryoon 2014-11-15]
 	Updated fonts/vlgothic-ttf to 20140801 [ryoon 2014-11-15]
 	Updated net/scamper to 20141101 [markd 2014-11-16]
+	Added www/rekonq version 2.4.2 [markd 2014-11-16]
