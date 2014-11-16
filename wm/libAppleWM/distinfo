@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/05/31 00:36:55 rodent Exp $
+$NetBSD: distinfo,v 1.2 2014/11/16 20:14:59 wiz Exp $
 
-SHA1 (libAppleWM-1.4.0.tar.bz2) = 370e9f59e73cf22c3533eb833a4e8493713c18e9
-RMD160 (libAppleWM-1.4.0.tar.bz2) = 07f67a7d651d6a1fd76c39e59c0de89985a08940
-Size (libAppleWM-1.4.0.tar.bz2) = 248470 bytes
+SHA1 (libAppleWM-1.4.1.tar.bz2) = 0db56a17df93683aef16c8e7779cd9527aa0ffc8
+RMD160 (libAppleWM-1.4.1.tar.bz2) = 187f6efc2b1db31c034f1d2d9364b79692a0cf53
+Size (libAppleWM-1.4.1.tar.bz2) = 249868 bytes
