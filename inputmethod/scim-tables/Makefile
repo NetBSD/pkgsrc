@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2014/11/08 11:40:50 obache Exp $
+# $NetBSD: Makefile,v 1.28 2014/11/17 19:04:49 joerg Exp $
 #
 
 DISTNAME=		scim-tables-0.5.14.1
@@ -17,6 +17,8 @@ USE_TOOLS+=		intltool msgfmt pkg-config gmake automake autoconf
 GNU_CONFIGURE=		yes
 
 USE_SCIM_GTKUTILS=	yes
+
+BUILD_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
 
 pre-configure:
 	${RUN}cd ${WRKSRC}; ${SETENV} ${CONFIGURE_ENV} ${SH} bootstrap
