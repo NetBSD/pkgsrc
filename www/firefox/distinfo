@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.169 2014/11/15 22:04:59 szptvlfn Exp $
+$NetBSD: distinfo,v 1.170 2014/11/17 19:08:06 joerg Exp $
 
 SHA1 (firefox-33.1.source.tar.bz2) = bc87055d3b68e8458f07d0c04503b6aaed3771df
 RMD160 (firefox-33.1.source.tar.bz2) = d9fbb2d4caa4cd2a027c316584892a53fbaa33f5
@@ -76,6 +76,7 @@ SHA1 (patch-js_src_frontend_ParseMaps.cpp) = c00117d79b78904bc50a1d664a8fc0e4e33
 SHA1 (patch-js_src_gc_Memory.cpp) = f2ee54f0a05d870651a3235b95bbb346586f3c3c
 SHA1 (patch-js_src_jsmath.cpp) = 7d4993ae91e9b5e6820358165603819aefb586f9
 SHA1 (patch-js_src_vm_WeakMapPtr.cpp) = c1778892afa6fb97de911221715a14f6dd9cab2f
+SHA1 (patch-js_xpconnect_src_xpcprivate.h) = 3406e02342d8a890b83a241ee2cc8cd9b3fefdaa
 SHA1 (patch-media_libcubeb_AUTHORS) = 3db32086f98c2bbe16e9394bb5121d7a95cdb4af
 SHA1 (patch-media_libcubeb_src_Makefile.in) = fe880774789b0be54dec6fd83b89457fc8c2cabc
 SHA1 (patch-media_libcubeb_src_cubeb.c) = effe8771e42adddb478ecb302352ef003bdd01db
