@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.72 2014/11/07 19:39:41 adam Exp $
+# $NetBSD: Makefile,v 1.73 2014/11/17 20:02:20 markd Exp $
 
 DISTNAME=	ktorrent-${KTORRENT_VER}
-PKGREVISION=	27
 CATEGORIES=	net kde
-MASTER_SITES=	http://ktorrent.org/downloads/${KTORRENT_VER}/
+MASTER_SITES=	http://ktorrent.pwsp.net/downloads/${KTORRENT_VER}/
 EXTRACT_SUFX=	.tar.bz2
 
 BUILD_DEPENDS+= automoc4>=0.9.87:../../devel/automoc4
@@ -11,7 +10,7 @@ BUILD_DEPENDS+= automoc4>=0.9.87:../../devel/automoc4
 .include "../../net/libktorrent/Makefile.version"
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ktorrent.org/
+HOMEPAGE=	http://ktorrent.pwsp.net/
 COMMENT=	Graphical BitTorrent client for KDE4
 LICENSE=	gnu-gpl-v2
 
@@ -33,4 +32,5 @@ CHECK_INTERPRETER_SKIP= ${SCRDIR}/auto_remove/auto_remove.py \
 .include "../../misc/kdepimlibs4/buildlink3.mk"
 .include "../../net/libktorrent/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/kde-workspace4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
