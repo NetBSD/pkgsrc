@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13826 2014/11/16 20:15:34 wiz Exp $
+$NetBSD: TODO,v 1.13827 2014/11/17 20:04:23 markd Exp $
 
 Suggested new packages
 ======================
@@ -718,7 +718,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kphotobook-0.0.7
 	o kronolith-4.1.5
 	o krusader-2.0
-	o ktorrent-4.3.1
 	o ktorrent3-3.3.4
 	o lablgtk-2.18.2
 	o lbdb-0.39
