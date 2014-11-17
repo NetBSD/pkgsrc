@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2014/10/07 16:47:25 adam Exp $
+# $NetBSD: Makefile,v 1.32 2014/11/17 19:01:46 joerg Exp $
 #
 
 DISTNAME=	emerillon-0.1.2
@@ -22,20 +22,21 @@ USE_LANGUAGES=		c
 GCONF_SCHEMAS=		emerillon.schemas
 #PKGCONFIG_OVERRIDE=	data/emerillon.pc.in
 
-BUILD_DEPENDS+=	vala-[0-9]*:../../lang/vala
-
-CONFIGURE_ARGS+=	VALAC=${PREFIX}/bin/valac-0.12
+CONFIGURE_ARGS+=	VALAC=${VALAC}
 
 BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
 
-.include "../../textproc/gnome-doc-utils/buildlink3.mk"
+BUILDLINK_DEPMETHOD.vala?=	build
+
 .include "../../devel/GConf/schemas.mk"
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../geography/libchamplain06/buildlink3.mk"
-.include "../../geography/geoclue/buildlink3.mk"
 .include "../../devel/ethos/buildlink3.mk"
-.include "../../textproc/gtk-doc/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../www/librest/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../geography/geoclue/buildlink3.mk"
+.include "../../geography/libchamplain06/buildlink3.mk"
+.include "../../lang/vala/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
+.include "../../textproc/gtk-doc/buildlink3.mk"
+.include "../../www/librest/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
