@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.176 2014/10/04 12:49:06 wiz Exp $
+# $NetBSD: Makefile,v 1.177 2014/11/17 11:38:10 prlw1 Exp $
 
 DISTNAME=		vlc-${VLC_VERSION}
 PKGREVISION=		48
@@ -134,6 +134,7 @@ CHECK_WRKREF_SKIP=	lib/libvlccore.a \
 .include "../../multimedia/ffmpeg010/buildlink3.mk"
 .include "../../multimedia/libdvdplay/buildlink3.mk"
 .include "../../multimedia/libdvbpsi0/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libdvdnav+=	libdvdnav>=5.0
 .include "../../multimedia/libdvdnav/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../multimedia/libmatroska/buildlink3.mk"
@@ -147,6 +148,7 @@ BUILDLINK_API_DEPENDS.libX11+=	libX11>=1.3.5
 BUILDLINK_API_DEPENDS.x264-devel+= x264-devel>=20100201
 .include "../../multimedia/x264-devel/buildlink3.mk"
 
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
