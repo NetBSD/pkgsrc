@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4313 2014/11/16 20:15:34 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4314 2014/11/17 02:56:18 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5670,3 +5670,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/p5-Image-ExifTool to 9.76 [wiz 2014-11-16]
 	Updated x11/labltk to 8.06.0 [hiramatsu 2014-11-16]
 	Updated wm/libAppleWM to 1.4.1 [wiz 2014-11-16]
+	Updated mail/qmail-qfilter to 2.1nb2 [schmonz 2014-11-17]
