@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.92 2014/08/23 20:09:31 wiz Exp $
+$NetBSD: distinfo,v 1.93 2014/11/17 11:54:42 jmcneill Exp $
 
 SHA1 (qt-everywhere-opensource-src-4.8.6.tar.gz) = ddf9c20ca8309a116e0466c42984238009525da6
 RMD160 (qt-everywhere-opensource-src-4.8.6.tar.gz) = 0220d4e76ac761c9ecfb8ddab6f2c1dc6ad70c33
@@ -49,6 +49,7 @@ SHA1 (patch-src_3rdparty_javascriptcore_JavaScriptCore_wtf_TypeTraits.h) = f2343
 SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_heap_MachineStackMarker.cpp) = cbce2e10307d26163a76266c0ceee315a609d63d
 SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_heap_MarkedSpace.cpp) = c7c9c39b11007e7ec3884874a38d000e3238bf64
 SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_heap_MarkedSpace.h) = bf748efe8d150fe636cbc5b20dcd9a7d4945c8c9
+SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_jit_ExecutableAllocator.h) = 67fd733023de92878ed067df0258c3e0c5ccfa5d
 SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_jit_JITStubs.cpp) = bfe38ea1e26fef02dd78e40c95c000cb0cc32a04
 SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_parser_JSParser.cpp) = 95eb0e9aa01aedf148bd0ad53a59a1418081e623
 SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_wtf_Atomics.h) = c79d9ed7f60a63090aadabbe2fa399a911449cd8
