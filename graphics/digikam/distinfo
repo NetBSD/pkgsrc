@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.45 2014/11/15 21:15:18 markd Exp $
+$NetBSD: distinfo,v 1.46 2014/11/17 19:02:30 joerg Exp $
 
 SHA1 (digikam-4.4.0.tar.bz2) = 1feb43120addda314e09761440ec2058e430171c
 RMD160 (digikam-4.4.0.tar.bz2) = 540f243361aba3c95b675c05f84d8d60efab1948
@@ -9,4 +9,6 @@ SHA1 (patch-core_libs_3rdparty_kmemoryinfo_kmemoryinfo_backend.cpp) = 050904de64
 SHA1 (patch-core_libs_dimg_filters_icc_iccmanager.h) = 999bd32312fbe840913a8d29613b351384061b65
 SHA1 (patch-core_libs_imageproperties_captionedit.cpp) = a0f181ff4af9f71eee5679aef540a78497a113a9
 SHA1 (patch-core_libs_imageproperties_imagedescedittab.cpp) = a09fa20eaac60bf7dc6bcb2b9a1304891029ccb0
+SHA1 (patch-core_tests_imgqsort_detectblur_detectblur.cpp) = a2d49329ff9c4d7d05c23d5f0a2a152e9d02d790
+SHA1 (patch-core_tests_imgqsort_detectnoise_detectnoise.cpp) = 62b4f08733475c7eaf95c64747bc8c18a3dbfae3
 SHA1 (patch-doc_CMakeLists.txt) = 5b4ba1daa49607b8773c3903d953e11bebc4d661
