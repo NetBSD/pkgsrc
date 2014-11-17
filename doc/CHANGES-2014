@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4314 2014/11/17 02:56:18 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.4315 2014/11/17 09:05:51 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5671,3 +5671,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/labltk to 8.06.0 [hiramatsu 2014-11-16]
 	Updated wm/libAppleWM to 1.4.1 [wiz 2014-11-16]
 	Updated mail/qmail-qfilter to 2.1nb2 [schmonz 2014-11-17]
+	Updated textproc/xapian to 1.2.19 [schmonz 2014-11-17]
