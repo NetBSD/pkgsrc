@@ -1,0 +1,11 @@
+$NetBSD: patch-libraw__r.pc.in,v 1.1 2014/11/17 19:04:25 joerg Exp $
+
+--- libraw_r.pc.in.orig	2013-05-17 22:56:40.000000000 +0000
++++ libraw_r.pc.in
+@@ -7,5 +7,5 @@ Name: libraw
+ Description: Raw image decoder library (thread-safe)
+ Requires: @PACKAGE_REQUIRES@
+ Version: @PACKAGE_VERSION@
+-Libs: -L${libdir} -lraw_r -lstdc++@PC_OPENMP@
++Libs: -L${libdir} -lraw_r @PC_OPENMP@
+ Cflags: -I${includedir}/libraw

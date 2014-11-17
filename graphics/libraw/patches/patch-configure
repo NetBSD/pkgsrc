@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2014/11/17 19:04:25 joerg Exp $
+
+--- configure.orig	2013-05-24 17:55:19.000000000 +0000
++++ configure
+@@ -16207,7 +16207,7 @@ $as_echo "$as_me: WARNING: Unable to fin
+   fi
+ fi
+ 
+-LIBS="$LIBS -lm -lstdc++"
++LIBS="$LIBS -lm"
+ 
+ LIBRAW_SHLIB_VERSION=9:0:0
+ 
