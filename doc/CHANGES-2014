@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4317 2014/11/17 09:06:31 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.4318 2014/11/17 19:56:47 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5674,3 +5674,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/xapian to 1.2.19 [schmonz 2014-11-17]
 	Updated textproc/xapian-omega to 1.2.19 [schmonz 2014-11-17]
 	Updated textproc/p5-Search-Xapian to 1.2.19.0 [schmonz 2014-11-17]
+	Updated devel/shtk to 1.6 [jmmv 2014-11-17]
