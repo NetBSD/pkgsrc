@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2014/08/14 13:48:21 jmmv Exp $
+$NetBSD: distinfo,v 1.3 2014/11/17 19:55:54 jmmv Exp $
 
-SHA1 (shtk-1.4.tar.gz) = 59f4937d0e0095f9c10c3b3e02f7b67b111f6912
-RMD160 (shtk-1.4.tar.gz) = b954c57879dd451509faaccd7e8e5b2616d5253c
-Size (shtk-1.4.tar.gz) = 79127 bytes
+SHA1 (shtk-1.6.tar.gz) = aa5d1f1290784b3d95a8a2d2e430f2be20d4bae0
+RMD160 (shtk-1.6.tar.gz) = 8089a82463c4e2e502c5252e6db8907ed98b0c11
+Size (shtk-1.6.tar.gz) = 109423 bytes
