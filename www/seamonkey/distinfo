@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.115 2014/11/02 05:40:31 ryoon Exp $
+$NetBSD: distinfo,v 1.116 2014/11/17 19:08:06 joerg Exp $
 
 SHA1 (enigmail-1.7.2.tar.gz) = e72eeff5a47491267981090129b0b2594b5dc96f
 RMD160 (enigmail-1.7.2.tar.gz) = 1dcd10e758321846eb20ac7f1d3ae6465c47bfe7
@@ -86,6 +86,7 @@ SHA1 (patch-mozilla_js_src_gc_Memory.cpp) = 89c6b8d6a35c0168e8d28ea4daa205c154a5
 SHA1 (patch-mozilla_js_src_jsmath.cpp) = 25225d4b9f05766314dfb7a809e8f4cf7ffa1f4b
 SHA1 (patch-mozilla_js_src_vm_SPSProfiler.cpp) = f609c8f2feac9aa6d5a6f37bf4ac0270bde7e8a4
 SHA1 (patch-mozilla_js_src_vm_WeakMapPtr.cpp) = 20712a9e501e127fb82efd11ef24c30a81ca7a78
+SHA1 (patch-mozilla_js_xpconnect_src_xpcprivate.h) = 97777022a1fa87388c83fca03b6ca9fbce621de4
 SHA1 (patch-mozilla_media_libcubeb_AUTHORS) = 1a516754289470319fd181315f0bc7a04a4aaf85
 SHA1 (patch-mozilla_media_libcubeb_src_Makefile.in) = 0adde4ac8f12e65e1e7a9170fcb1123b71fdd948
 SHA1 (patch-mozilla_media_libcubeb_src_cubeb.c) = f4018f850cfd2b73226c66dbddb310e1efe40475
