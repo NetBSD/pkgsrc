@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2012/09/03 10:14:44 marino Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/11/17 20:02:20 markd Exp $
 bin/ktmagnetdownloader
 bin/ktorrent
 bin/ktupnptest
@@ -12,6 +12,7 @@ lib/kde4/ktmediaplayerplugin.so
 lib/kde4/ktscanfolderplugin.so
 lib/kde4/ktscriptingplugin.so
 lib/kde4/ktsearchplugin.so
+lib/kde4/ktshutdownplugin.so
 lib/kde4/ktstatsplugin.so
 lib/kde4/ktsyndicationplugin.so
 lib/kde4/ktupnpplugin.so
@@ -19,9 +20,8 @@ lib/kde4/ktwebinterfaceplugin.so
 lib/kde4/ktzeroconfplugin.so
 lib/kde4/plasma_applet_ktorrent.so
 lib/kde4/plasma_engine_ktorrent.so
-lib/libktcore.so
-lib/libktcore.so.13
-lib/libktcore.so.13.0.1
+lib/libktcore.so.15
+lib/libktcore.so.15.0.0
 share/applications/kde4/ktorrent.desktop
 share/doc/kde/HTML/en/ktorrent/common
 share/doc/kde/HTML/en/ktorrent/index.cache.bz2
@@ -125,6 +125,7 @@ share/kde/apps/ktorrent/ktorrent.notifyrc
 share/kde/apps/ktorrent/ktorrentui.rc
 share/kde/apps/ktorrent/ktscriptingpluginui.rc
 share/kde/apps/ktorrent/ktsearchpluginui.rc
+share/kde/apps/ktorrent/ktshutdownpluginui.rc
 share/kde/apps/ktorrent/ktsyndicationpluginui.rc
 share/kde/apps/ktorrent/kttorrentactivityui.rc
 share/kde/apps/ktorrent/opensearch/bitenova/opensearch.xml
@@ -206,6 +207,7 @@ share/kde4/services/ktmediaplayerplugin.desktop
 share/kde4/services/ktscanfolderplugin.desktop
 share/kde4/services/ktscriptingplugin.desktop
 share/kde4/services/ktsearchplugin.desktop
+share/kde4/services/ktshutdownplugin.desktop
 share/kde4/services/ktstatsplugin.desktop
 share/kde4/services/ktsyndicationplugin.desktop
 share/kde4/services/ktupnpplugin.desktop
