@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.14 2013/04/08 11:17:13 rodent Exp $
+$NetBSD: MESSAGE.NetBSD,v 1.15 2014/11/18 14:38:15 manu Exp $
 
 *** GlusterFS clients ***
 This is required in /etc/sysctl.conf in order to avoid hangs on I/O operations
@@ -8,7 +8,7 @@ This is required in /etc/sysctl.conf in order to avoid hangs on I/O operations
 	net.inet.tcp.recvbuf_max=1048576
 
 In order to use mount -t glusterfs, please install this link
-	ln -s ${PREFIX}/sbin/mount.glusterfs /sbin/mount_glusterfs
+	ln -s ${PREFIX}/sbin/mount_glusterfs /sbin/mount_glusterfs
 
 * Only for netbsd-5 branch (later NetBSD GENERIC kernels have it enabled):
 A kernel with the following option is required:
@@ -18,17 +18,14 @@ A kernel with the following option is required:
 
 *** GlusterFS servers ***
 glusterfs servers will need extended attributes in exported filesystems.
-This require a kernel with the following options:
-	options		UFS_EXTATTR
-
-You will need to create the directories below on exported filesystems' roots,
-and then mount with -o extattr
+This is currently only supported in UFS1 (newfs -O1). You will need to
+create the directories below on exported filesystems' roots, and then 
+mount with -o extattr
 	.attribute/system
 	.attribute/user
-
-* Only for netbsd-5 branch (later NetBSD version do not need that)
-mount -o extattr shall not be used, but the kernel needs options below:
-	options		UFS_EXTATTR_AUTOSTART
-	options		UFS_EXTATTR_AUTOCREATE=1024
+ 
+* For netbsd-6 branch and earlier (later NetBSD GENERIC kernels have it),
+the kernel must have the following option enabled:
+	options		UFS_EXTATTR
 
 ===========================================================================
