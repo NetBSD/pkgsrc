@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13827 2014/11/17 20:04:23 markd Exp $
+$NetBSD: TODO,v 1.13828 2014/11/18 13:21:23 mef Exp $
 
 Suggested new packages
 ======================
@@ -1088,7 +1088,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tetrinetx-1.40c
 	o tex2page-20130325
 	o texlive-2014
-	o texmaker-4.3 [wip]
 	o tfmxplay-1.1.6
 	o tightvnc-2.7.10
 	o tile-0.7.4
