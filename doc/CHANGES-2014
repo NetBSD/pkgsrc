@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4323 2014/11/18 13:21:23 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4324 2014/11/18 13:30:35 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5660,6 +5660,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/youtube-dl to 2014.11.15.1 [mrg 2014-11-02]
 	Updated fonts/ricty-ttf to 3.2.3 [ryoon 2014-11-15]
 	Updated fonts/vlgothic-ttf to 20140801 [ryoon 2014-11-15]
+	Updated graphics/cairo to 1.14.0nb1 [mef 2014-11-15]
 	Updated net/scamper to 20141101 [markd 2014-11-16]
 	Added www/rekonq version 2.4.2 [markd 2014-11-16]
 	Updated www/moodle to 2.8.1 [wen 2014-11-16]
