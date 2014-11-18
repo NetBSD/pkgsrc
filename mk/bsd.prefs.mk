@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.348 2014/08/14 11:08:37 jperkin Exp $
+# $NetBSD: bsd.prefs.mk,v 1.349 2014/11/18 23:36:07 joerg Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -90,15 +90,34 @@ MAKEFLAGS+=		OS_VERSION=${OS_VERSION:Q}
 
 # Preload these for architectures not in all variations of bsd.own.mk,
 # which do not match their GNU names exactly.
+GNU_ARCH.aarch64eb?=	aarch64_be
+GNU_ARCH.coldfire?=	m5407
 GNU_ARCH.arm26?=	arm
 GNU_ARCH.arm32?=	arm
-GNU_ARCH.i486?=		i386
-GNU_ARCH.i586?=		i386
-GNU_ARCH.i686?=		i386
+GNU_ARCH.earm?=		arm
+GNU_ARCH.earmhf?=	arm
+GNU_ARCH.earmeb?=	armeb
+GNU_ARCH.earmhfeb?=	armeb
+GNU_ARCH.earmv4?=	armv4
+GNU_ARCH.earmv4eb?=	armv4eb
+GNU_ARCH.earmv5?=	arm
+GNU_ARCH.earmv5eb?=	armeb
+GNU_ARCH.earmv6?=	armv6
+GNU_ARCH.earmv6hf?=	armv6
+GNU_ARCH.earmv6eb?=	armv6eb
+GNU_ARCH.earmv6hfeb?=	armv6eb
+GNU_ARCH.earmv7?=	armv7
+GNU_ARCH.earmv7hf?=	armv7
+GNU_ARCH.earmv7eb?=	armv7eb
+GNU_ARCH.earmv7hfeb?=	armv7eb
+GNU_ARCH.i386?=		i486
+GNU_ARCH.i586?=		i486
+GNU_ARCH.i686?=		i486
 GNU_ARCH.m68000?=	m68010
 GNU_ARCH.mips?=		mipsel
 GNU_ARCH.sh3eb?=	sh
 GNU_ARCH.sh3el?=	shle
+GNU_ARCH.mips64eb?=	mips64
 NATIVE_MACHINE_GNU_ARCH?=	${GNU_ARCH.${NATIVE_MACHINE_ARCH}:U${NATIVE_MACHINE_ARCH}}
 MACHINE_GNU_ARCH?=		${GNU_ARCH.${MACHINE_ARCH}:U${MACHINE_ARCH}}
 
