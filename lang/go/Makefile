@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2014/10/12 14:51:03 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2014/11/18 20:39:11 bsiegert Exp $
 
-VERSION=	1.3.3
-DISTNAME=	go${VERSION}.src
-PKGNAME=	go-${VERSION}
+.include "version.mk"
+
+DISTNAME=	go${GO_VERSION}.src
+PKGNAME=	go-${GO_VERSION}
 CATEGORIES=	lang
 MASTER_SITES=	https://storage.googleapis.com/golang/
 PATCH_SITES=	https://codereview.appspot.com/download/
@@ -17,24 +18,6 @@ USE_TOOLS+=	bash:run perl:run pax
 
 # uses ulimit -T
 BUILD_DEPENDS+=	bash>=4.2nb3:../../shells/bash
-
-.include "../../mk/bsd.prefs.mk"
-
-# TODO: other arm platforms?
-ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64 *-*-evbarm
-NOT_FOR_PLATFORM=	SunOS-*-i386
-.if ${MACHINE_ARCH} == "i386"
-GOARCH=		386
-GO_COMPILER=	8
-.elif ${MACHINE_ARCH} == "x86_64"
-GOARCH=		amd64
-GO_COMPILER=	6
-.elif ${MACHINE_ARCH} == "evbarm"
-GOARCH=		arm
-GO_COMPILER=	5
-.endif
-PLIST_SUBST+=	GO_PLATFORM=${LOWER_OPSYS:Q}_${GOARCH:Q} GOARCH=${GOARCH:Q}
-PLIST_SUBST+=	GO_COMPILER=${GO_COMPILER:Q}
 
 PLIST_VARS+=	cgo zsyscall
 
