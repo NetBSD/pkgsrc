@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4321 2014/11/18 02:38:11 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.4322 2014/11/18 11:25:40 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5679,3 +5679,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/ktorrent to 4.3.1 [markd 2014-11-17]
 	Updated textproc/pod2mdoc to 0.1 [wiz 2014-11-17]
 	Updated net/haproxy to 1.5.8 [rodent 2014-11-18]
+	Updated net/mikutter to 3.1.0 [obache 2014-11-18]
