@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4327 2014/11/18 15:33:26 tron Exp $
+$NetBSD: CHANGES-2014,v 1.4328 2014/11/18 15:49:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5685,3 +5685,11 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/softhsm to 1.3.7nb2 [he 2014-11-18]
 	Updated filesystems/glusterfs to 3.6.0 [he 2014-11-18]
 	Updated www/firefox to 33.1.1 [tron 2014-11-18]
+	Updated devel/ruby-activesupport32 to 3.2.21 [taca 2014-11-18]
+	Updated devel/ruby-activemodel32 to 3.2.21 [taca 2014-11-18]
+	Updated databases/ruby-activerecord32 to 3.2.21 [taca 2014-11-18]
+	Updated www/ruby-activeresource32 to 3.2.21 [taca 2014-11-18]
+	Updated www/ruby-actionpack32 to 3.2.21 [taca 2014-11-18]
+	Updated mail/ruby-actionmailer32 to 3.2.21 [taca 2014-11-18]
+	Updated devel/ruby-railties32 to 3.2.21 [taca 2014-11-18]
+	Updated www/ruby-rails32 to 3.2.21 [taca 2014-11-18]
