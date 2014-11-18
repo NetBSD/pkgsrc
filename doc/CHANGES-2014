@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4328 2014/11/18 15:49:19 taca Exp $
+$NetBSD: CHANGES-2014,v 1.4329 2014/11/18 22:20:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5693,3 +5693,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/ruby-actionmailer32 to 3.2.21 [taca 2014-11-18]
 	Updated devel/ruby-railties32 to 3.2.21 [taca 2014-11-18]
 	Updated www/ruby-rails32 to 3.2.21 [taca 2014-11-18]
+	Updated graphics/gnuplot to 4.6.6 [adam 2014-11-18]
