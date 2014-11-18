@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/10/14 04:45:28 mef Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/11/18 13:20:35 mef Exp $
 bin/texmaker
 share/applications/texmaker.desktop
 share/pixmaps/texmaker.png
@@ -12,7 +12,10 @@ share/texmaker/README_en_US.txt
 share/texmaker/README_es_ES.txt
 share/texmaker/README_hu_HU.txt
 share/texmaker/README_pl.txt
+share/texmaker/README_pt_PT.txt
 share/texmaker/atd.css
+share/texmaker/ca_CA.aff
+share/texmaker/ca_CA.dic
 share/texmaker/cs_CZ.aff
 share/texmaker/cs_CZ.dic
 share/texmaker/csshttprequest.js
@@ -81,6 +84,8 @@ share/texmaker/nl_NL.aff
 share/texmaker/nl_NL.dic
 share/texmaker/pl_PL.aff
 share/texmaker/pl_PL.dic
+share/texmaker/pt_PT.aff
+share/texmaker/pt_PT.dic
 share/texmaker/qt_cs.qm
 share/texmaker/qt_de.qm
 share/texmaker/qt_es.qm
@@ -120,6 +125,7 @@ share/texmaker/texmaker_sr.qm
 share/texmaker/texmaker_uk.qm
 share/texmaker/texmaker_zh_CN.qm
 share/texmaker/texmaker_zh_TW.qm
+share/texmaker/titlecase.tms
 share/texmaker/usermanual_en.html
 share/texmaker/usermanual_fr.html
 share/texmaker/usermanual_hu.html
