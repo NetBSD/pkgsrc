@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4329 2014/11/18 22:20:42 adam Exp $
+$NetBSD: CHANGES-2014,v 1.4330 2014/11/19 03:37:41 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5694,3 +5694,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/ruby-railties32 to 3.2.21 [taca 2014-11-18]
 	Updated www/ruby-rails32 to 3.2.21 [taca 2014-11-18]
 	Updated graphics/gnuplot to 4.6.6 [adam 2014-11-18]
+	Added mail/dovecot2-antispam-plugin version 20130429 [schmonz 2014-11-19]
