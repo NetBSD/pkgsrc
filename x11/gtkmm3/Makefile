@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2014/09/10 06:30:33 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/11/19 12:54:08 wiz Exp $
 
-DISTNAME=	gtkmm-3.12.0
+DISTNAME=	gtkmm-3.14.0
 PKGNAME=	${DISTNAME:S/gtkmm/gtkmm3/1}
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkmm/3.12/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkmm/3.14/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -23,7 +23,7 @@ PKGCONFIG_OVERRIDE+=	gdk/gdkmm.pc.in
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/atkmm/buildlink3.mk"
 .include "../../graphics/cairomm/buildlink3.mk"
-BUILDLINK_ABI_DEPENDS.gtk3+=	gtk3+>=3.12.0
+BUILDLINK_ABI_DEPENDS.gtk3+=	gtk3+>=3.14.0
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../devel/pangomm/buildlink3.mk"
 BUILDLINK_ABI_DEPENDS.glibmm+=	glibmm>=2.36.0
