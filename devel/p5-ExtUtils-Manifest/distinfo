@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2014/11/09 12:33:48 wiz Exp $
+$NetBSD: distinfo,v 1.8 2014/11/19 12:38:09 wiz Exp $
 
-SHA1 (ExtUtils-Manifest-1.68.tar.gz) = 4e03dc2ccbd68fb8876203136c48ca7981037286
-RMD160 (ExtUtils-Manifest-1.68.tar.gz) = d0f32339d505e1742547255ab3c7b533afef7ed8
-Size (ExtUtils-Manifest-1.68.tar.gz) = 30486 bytes
+SHA1 (ExtUtils-Manifest-1.69.tar.gz) = 82962a90403f54580280ca9bff33eb4cbb942997
+RMD160 (ExtUtils-Manifest-1.69.tar.gz) = fd0f49a6348a0da2e3737877d8e8c6fb0432f4d8
+Size (ExtUtils-Manifest-1.69.tar.gz) = 37631 bytes
