@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.456 2014/09/19 20:46:32 brook Exp $
+# $NetBSD: Makefile,v 1.457 2014/11/19 03:40:09 schmonz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -67,6 +67,7 @@ SUBDIR+=	dnsbl-milter
 SUBDIR+=	dot-forward
 SUBDIR+=	dovecot
 SUBDIR+=	dovecot2
+SUBDIR+=	dovecot2-antispam-plugin
 SUBDIR+=	dovecot2-pigeonhole
 SUBDIR+=	drac
 SUBDIR+=	dspam
