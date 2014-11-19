@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.22 2014/11/04 21:40:05 joerg Exp $
+$NetBSD: patch-aa,v 1.23 2014/11/19 13:49:35 wiz Exp $
 
---- configure.orig	2014-05-19 13:44:03.000000000 +0000
+--- configure.orig	2014-11-12 11:59:57.000000000 +0000
 +++ configure
 @@ -654,6 +654,8 @@ VAX_FALSE
  VAX_TRUE
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.22 2014/11/04 21:40:05 joerg Exp $
  PA64_HPUX_FALSE
  PA64_HPUX_TRUE
  PA_HPUX_FALSE
-@@ -17199,7 +17201,7 @@ case "$host" in
+@@ -17120,7 +17122,7 @@ case "$host" in
  	TARGET=FRV; TARGETDIR=frv
  	;;
  
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.22 2014/11/04 21:40:05 joerg Exp $
  	TARGET=PA_LINUX; TARGETDIR=pa
  	;;
    hppa*64-*-hpux*)
-@@ -17297,10 +17299,10 @@ case "$host" in
+@@ -17218,10 +17220,10 @@ case "$host" in
  	TARGET=METAG; TARGETDIR=metag
  	;;
  
@@ -33,7 +33,7 @@ $NetBSD: patch-aa,v 1.22 2014/11/04 21:40:05 joerg Exp $
  	# Support 128-bit long double for NewABI.
  	HAVE_LONG_DOUBLE='defined(__mips64)'
  	TARGET=MIPS; TARGETDIR=mips
-@@ -17326,7 +17328,7 @@ case "$host" in
+@@ -17251,7 +17253,7 @@ case "$host" in
    powerpc-*-aix* | rs6000-*-aix*)
  	TARGET=POWERPC_AIX; TARGETDIR=powerpc
  	;;
@@ -42,7 +42,7 @@ $NetBSD: patch-aa,v 1.22 2014/11/04 21:40:05 joerg Exp $
  	TARGET=POWERPC_FREEBSD; TARGETDIR=powerpc
  	HAVE_LONG_DOUBLE_VARIANT=1
  	;;
-@@ -17341,7 +17343,7 @@ case "$host" in
+@@ -17266,7 +17268,7 @@ case "$host" in
  	TARGET=S390; TARGETDIR=s390
  	;;
  
@@ -51,7 +51,7 @@ $NetBSD: patch-aa,v 1.22 2014/11/04 21:40:05 joerg Exp $
  	TARGET=SH; TARGETDIR=sh
  	;;
    sh64-*-* | sh5*-*-*)
-@@ -17360,6 +17362,10 @@ case "$host" in
+@@ -17285,6 +17287,10 @@ case "$host" in
  	TARGET=VAX; TARGETDIR=vax
  	;;
  
@@ -62,7 +62,7 @@ $NetBSD: patch-aa,v 1.22 2014/11/04 21:40:05 joerg Exp $
    xtensa*-*)
  	TARGET=XTENSA; TARGETDIR=xtensa
  	;;
-@@ -17677,6 +17683,14 @@ else
+@@ -17610,6 +17616,14 @@ else
    VAX_FALSE=
  fi
  
@@ -77,7 +77,7 @@ $NetBSD: patch-aa,v 1.22 2014/11/04 21:40:05 joerg Exp $
   if test x$TARGET = xXTENSA; then
    XTENSA_TRUE=
    XTENSA_FALSE='#'
-@@ -18597,7 +18611,7 @@ case "$target" in
+@@ -18530,7 +18544,7 @@ case "$target" in
  $as_echo "#define FFI_EXEC_TRAMPOLINE_TABLE 1" >>confdefs.h
  
       ;;
@@ -86,16 +86,9 @@ $NetBSD: patch-aa,v 1.22 2014/11/04 21:40:05 joerg Exp $
  
  $as_echo "#define FFI_MMAP_EXEC_WRIT 1" >>confdefs.h
  
-@@ -18787,19 +18801,14 @@ if test "x$GCC" = "xyes"; then
-   if test -n "$with_cross_host" &&
-      test x"$with_cross_host" != x"no"; then
-     toolexecdir='$(exec_prefix)/$(target_alias)'
--    toolexeclibdir='$(toolexecdir)/lib'
-+    toolexeclibdir='${toolexecdir}/lib'
-   else
-     toolexecdir='$(libdir)/gcc-lib/$(target_alias)'
--    toolexeclibdir='$(libdir)'
-+    toolexeclibdir='${libdir}'
+@@ -18725,11 +18739,6 @@ if test "x$GCC" = "xyes"; then
+     toolexecdir="${libdir}"/gcc-lib/'$(target_alias)'
+     toolexeclibdir="${libdir}"
    fi
 -  multi_os_directory=`$CC $CFLAGS -print-multi-os-directory`
 -  case $multi_os_directory in
@@ -104,12 +97,8 @@ $NetBSD: patch-aa,v 1.22 2014/11/04 21:40:05 joerg Exp $
 -  esac
  
  else
--  toolexeclibdir='$(libdir)'
-+  toolexeclibdir='${libdir}'
- fi
- 
- 
-@@ -19115,6 +19124,10 @@ if test -z "${VAX_TRUE}" && test -z "${V
+   toolexeclibdir="${libdir}"
+@@ -19052,6 +19061,10 @@ if test -z "${VAX_TRUE}" && test -z "${V
    as_fn_error $? "conditional \"VAX\" was never defined.
  Usually this means the macro was only invoked conditionally." "$LINENO" 5
  fi
@@ -120,7 +109,7 @@ $NetBSD: patch-aa,v 1.22 2014/11/04 21:40:05 joerg Exp $
  if test -z "${XTENSA_TRUE}" && test -z "${XTENSA_FALSE}"; then
    as_fn_error $? "conditional \"XTENSA\" was never defined.
  Usually this means the macro was only invoked conditionally." "$LINENO" 5
-@@ -20813,13 +20826,13 @@ s/ [a-zA-Z0-9-]*-all [a-zA-Z0-9-]*-all-a
+@@ -20749,13 +20762,13 @@ s/ [a-zA-Z0-9-]*-all [a-zA-Z0-9-]*-all-a
  /-all-all/d
  a\\
  	@ HOST="\$(HOST)\" \\\\\\
