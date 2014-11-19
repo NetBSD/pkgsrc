@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13832 2014/11/19 13:07:22 wiz Exp $
+$NetBSD: TODO,v 1.13833 2014/11/19 13:49:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -731,7 +731,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libchamplain08-0.12.9
 	o libextractor-1.2 [requires shm_open()]
-	o libffi-3.2.1
 	o libflash-0.4.13
 	o libfolks-0.10.0
 	o libgdata-0.16.1

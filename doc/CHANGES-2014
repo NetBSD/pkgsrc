@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4340 2014/11/19 12:58:04 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4341 2014/11/19 13:49:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5705,3 +5705,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/gtkmm3 to 3.14.0 [wiz 2014-11-19]
 	Updated devel/py-mercurial to 3.2.1 [wiz 2014-11-19]
 	Updated textproc/py-pygments to 2.0 [wiz 2014-11-19]
+	Updated devel/libffi to 3.2.1 [wiz 2014-11-19]
