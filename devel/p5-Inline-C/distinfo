@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2014/11/09 12:44:42 wiz Exp $
+$NetBSD: distinfo,v 1.3 2014/11/19 12:35:19 wiz Exp $
 
-SHA1 (Inline-C-0.65.tar.gz) = e847c4aae67bbb3cd5ff801c8877458bd1234c18
-RMD160 (Inline-C-0.65.tar.gz) = 3f79b64a4f186d4b4b80bc76fb56733fc934417f
-Size (Inline-C-0.65.tar.gz) = 72075 bytes
+SHA1 (Inline-C-0.66.tar.gz) = 49f0777436acde3bc6b27eb0679e9bb1397844cd
+RMD160 (Inline-C-0.66.tar.gz) = 44255f3d836bda04e44b7bb961f618588f4deaeb
+Size (Inline-C-0.66.tar.gz) = 72416 bytes
