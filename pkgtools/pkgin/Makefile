@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2014/10/07 16:47:34 adam Exp $
+# $NetBSD: Makefile,v 1.49 2014/11/19 15:10:32 jmcneill Exp $
 
 GHCOMMIT=		3859170568fbe4fe21b5660dbaeca8d65ac10f1b
 DISTNAME=		${GHCOMMIT}
@@ -20,6 +20,8 @@ OWN_DIRS+=		${PKG_SYSCONFDIR}/${PKGBASE}
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1 ${EGDIR}
 
 WRKSRC=			${WRKDIR}/pkgin-${GHCOMMIT}
+
+BUILD_DEFS+=		PKGIN_REPOSITORY_URL
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
@@ -52,7 +54,10 @@ MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 DEPENDS+=		pkg_install>=20130901:../../pkgtools/pkg_install
 
 # those have official repositories
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "Minix"
+.if !empty(PKGIN_REPOSITORY_URL)
+pre-install:
+	echo ${PKGIN_REPOSITORY_URL} >> ${WRKSRC}/repositories.conf
+.elif ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "Minix"
 pre-install:
 	${GREP} -i ${OPSYS} ${WRKSRC}/REPOSITORIES >> 			\
 		${WRKSRC}/repositories.conf
