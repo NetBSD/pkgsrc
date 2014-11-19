@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.18 2014/11/16 16:45:57 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.19 2014/11/19 11:20:02 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q3 branch:
@@ -80,3 +80,7 @@ Pullup ticket #4548 - requested by taca
 lang/ruby193-base: security update
 Pullup ticket #4549 - requested by taca
 lang/ruby21-base: security update
+Pullup ticket #4550 - requested by taca
+lang/php54: security update
+Pullup ticket #4551 - requested by taca
+lang/php55: security update
