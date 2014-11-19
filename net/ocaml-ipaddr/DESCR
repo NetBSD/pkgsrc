@@ -1,0 +1,2 @@
+Ocaml-ipaddr is a library for manipulation of IP and MAC address
+representations, supporting both IPv4 and IPv6.
