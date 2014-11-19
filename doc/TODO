@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13834 2014/11/19 13:50:09 wiz Exp $
+$NetBSD: TODO,v 1.13835 2014/11/19 15:21:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -567,7 +567,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gaupol-0.25
 	o gbrainy-2.23
 	o gcc47-4.7.4
-	o gcc49-4.9.2
 	o gcin-1.5.5
 	o gcombust-0.1.55
 	o gcompris-14.05

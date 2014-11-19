@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4343 2014/11/19 15:00:16 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4344 2014/11/19 15:21:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5708,3 +5708,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/libffi to 3.2.1 [wiz 2014-11-19]
 	Updated mail/notmuch to 0.19 [wiz 2014-11-19]
 	Updated www/p5-HTML-Strip to 2.01 [wen 2014-11-19]
+	Updated lang/gcc49 to 4.9.2 [wiz 2014-11-19]
