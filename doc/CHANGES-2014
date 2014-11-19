@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4335 2014/11/19 12:38:17 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4336 2014/11/19 12:39:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5700,3 +5700,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added net/ocaml-ipaddr version 1.0.0 [jaapb 2014-11-19]
 	Updated devel/p5-Inline-C to 0.66 [wiz 2014-11-19]
 	Updated devel/p5-ExtUtils-Manifest to 1.69 [wiz 2014-11-19]
+	Updated time/p5-DateTime-TimeZone to 1.80 [wiz 2014-11-19]
