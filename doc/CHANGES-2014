@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4332 2014/11/19 08:33:03 jnemeth Exp $
+$NetBSD: CHANGES-2014,v 1.4333 2014/11/19 12:01:09 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5697,3 +5697,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added mail/dovecot2-antispam-plugin version 20130429 [schmonz 2014-11-19]
 	Updated comms/asterisk18 to 1.8.32.0 [jnemeth 2014-11-19]
 	Updated comms/asterisk to 11.14.0 [jnemeth 2014-11-19]
+	Added net/ocaml-ipaddr version 1.0.0 [jaapb 2014-11-19]
