@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/06/13 14:13:20 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.3.4.1 2014/11/19 11:19:33 tron Exp $
 bin/phar
 bin/phar.phar
 bin/php
@@ -94,6 +94,7 @@ include/php/ext/hash/php_hash_snefru.h
 include/php/ext/hash/php_hash_tiger.h
 include/php/ext/hash/php_hash_types.h
 include/php/ext/hash/php_hash_whirlpool.h
+include/php/ext/libxml/php_libxml.h
 include/php/ext/mysqlnd/config-win.h
 include/php/ext/mysqlnd/mysqlnd.h
 include/php/ext/mysqlnd/mysqlnd_alloc.h
@@ -114,7 +115,6 @@ include/php/ext/mysqlnd/mysqlnd_structs.h
 include/php/ext/mysqlnd/mysqlnd_wireprotocol.h
 include/php/ext/mysqlnd/php_mysqlnd.h
 include/php/ext/mysqlnd/php_mysqlnd_config.h
-include/php/ext/libxml/php_libxml.h
 include/php/ext/pcre/pcrelib/config.h
 include/php/ext/pcre/pcrelib/pcre.h
 include/php/ext/pcre/pcrelib/pcre_internal.h
