@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13831 2014/11/19 12:58:04 wiz Exp $
+$NetBSD: TODO,v 1.13832 2014/11/19 13:07:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -312,7 +312,8 @@ Suggested new packages
 	xf86-input-digitaledge, xf86-input-dmc, xf86-input-dynapro,
 	xf86-input-elo2300, xf86-input-elographics, xf86-input-evdev,
 	xf86-input-fpit, xf86-input-hyperpen, xf86-input-jamstudio,
-	xf86-input-joystick, xf86-input-magellan, xf86-input-magictouch,
+	xf86-input-joystick, xf86-input-libinput, xf86-input-magellan,
+	xf86-input-magictouch,
 	xf86-input-microtouch, xf86-input-mutouch, xf86-input-palmax,
 	xf86-input-spaceorb, xf86-input-summa, xf86-input-synaptics [pkg/47082],
 	xf86-input-tek4957, xf86-input-ur98, xf86-video-amd, xf86-video-dummy,
@@ -436,6 +437,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cinepaint-1.3
 	o cint-5.16
 	o cjk-lyx-1.4.4
+	o clamav-0.98.5
 	o classpath-0.98
 	o cln-1.33
 	o clutter-1.20.0
@@ -647,7 +649,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
 	o gtkglarea-2.1.0
-	o gtkmm-3.14.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtksourceview-3.14
 	o gtl-3.6
@@ -1098,6 +1099,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tomboy-1.4.2 [GNOME 2.32]
 	o tomboy-1.10.2
 	o top-3.8beta1
+	o tor-0.2.5.10
 	o totem-3.4.1
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
