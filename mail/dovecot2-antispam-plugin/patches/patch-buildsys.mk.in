@@ -1,0 +1,15 @@
+$NetBSD: patch-buildsys.mk.in,v 1.1 2014/11/19 03:37:14 schmonz Exp $
+
+Use the configured rpath linker flags.
+
+--- buildsys.mk.in.orig	2013-04-29 12:59:26.000000000 +0000
++++ buildsys.mk.in
+@@ -285,7 +285,7 @@ ${PLUGIN} ${PLUGIN_NOINST}: ${EXT_DEPS} 
+ 		done; \
+ 		cd ..; \
+ 	done; \
+-	if ${LD} -o $@ $$objs ${PLUGIN_LDFLAGS} ${LDFLAGS} ${LIBS}; then \
++	if ${LD} -o $@ $$objs ${PLUGIN_LDFLAGS} ${LDFLAGS} ${LDFLAGS_RPATH} ${LIBS}; then \
+ 		${LINK_OK}; \
+ 	else \
+ 		${LINK_FAILED}; \

@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2014/11/19 03:37:14 schmonz Exp $
+lib/dovecot/lib90_antispam_plugin.${SUFX}
+man/man7/dovecot-antispam.7
