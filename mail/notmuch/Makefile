@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2014/10/27 08:35:59 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2014/11/19 13:06:14 wiz Exp $
 
-DISTNAME=	notmuch-0.18.2
+DISTNAME=	notmuch-0.19
 CATEGORIES=	mail
 MASTER_SITES=	http://notmuchmail.org/releases/
 
@@ -30,7 +30,7 @@ SUBST_SED.gnuld=	-e 's/-Wl,--[^ ]*//g'
 
 LDFLAGS.SunOS+=	-lnsl
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # as of 0.18
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # as of 0.19
 .include "../../lang/python/application.mk"
 .include "../../mail/gmime24/buildlink3.mk"
 .include "../../textproc/xapian/buildlink3.mk"
