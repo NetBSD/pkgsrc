@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2014/11/19 12:00:48 jaapb Exp $
+${OCAML_SITELIB}/ipaddr/META
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ipaddr/ipaddr.a
+${OCAML_SITELIB}/ipaddr/ipaddr.cma
+${OCAML_SITELIB}/ipaddr/ipaddr.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ipaddr/ipaddr.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ipaddr/ipaddr.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ipaddr/ipaddr.cmxs
+${OCAML_SITELIB}/ipaddr/ipaddr.mli
+${OCAML_SITELIB}/ipaddr/macaddr.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ipaddr/macaddr.cmx
+${OCAML_SITELIB}/ipaddr/macaddr.mli
