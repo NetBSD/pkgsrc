@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2014/09/01 09:29:54 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/11/19 13:06:46 wiz Exp $
 
 DISTNAME=       mutt-kz-1.5.22.1-rc1
 PKGNAME=        ${DISTNAME:S/-rc/rc/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=     mail
 MASTER_SITES=   ftp://redcrew.org/pub/mutt-kz/v1.5.22.1/
 
