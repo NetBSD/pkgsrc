@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2014/08/17 10:45:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/11/19 13:06:14 wiz Exp $
 bin/notmuch
 include/notmuch.h
 lib/libnotmuch.so
-lib/libnotmuch.so.3
-lib/libnotmuch.so.3.1.0
+lib/libnotmuch.so.4
+lib/libnotmuch.so.4.1.0
+man/man1/notmuch-address.1
 man/man1/notmuch-compact.1
 man/man1/notmuch-config.1
 man/man1/notmuch-count.1
@@ -27,6 +28,8 @@ ${PLIST.emacs}share/emacs/site-lisp/notmuch-crypto.el
 ${PLIST.emacs}share/emacs/site-lisp/notmuch-crypto.elc
 ${PLIST.emacs}share/emacs/site-lisp/notmuch-hello.el
 ${PLIST.emacs}share/emacs/site-lisp/notmuch-hello.elc
+${PLIST.emacs}share/emacs/site-lisp/notmuch-jump.el
+${PLIST.emacs}share/emacs/site-lisp/notmuch-jump.elc
 ${PLIST.emacs}share/emacs/site-lisp/notmuch-lib.el
 ${PLIST.emacs}share/emacs/site-lisp/notmuch-lib.elc
 ${PLIST.emacs}share/emacs/site-lisp/notmuch-logo.png
