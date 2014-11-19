@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4342 2014/11/19 13:50:08 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4343 2014/11/19 15:00:16 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5707,3 +5707,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/py-pygments to 2.0 [wiz 2014-11-19]
 	Updated devel/libffi to 3.2.1 [wiz 2014-11-19]
 	Updated mail/notmuch to 0.19 [wiz 2014-11-19]
+	Updated www/p5-HTML-Strip to 2.01 [wen 2014-11-19]
