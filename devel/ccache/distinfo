@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2014/10/19 20:25:39 adam Exp $
+$NetBSD: distinfo,v 1.14 2014/11/20 15:20:40 adam Exp $
 
-SHA1 (ccache-3.1.10.tar.xz) = 06264d5838622f30d36a1e4b9f1469c85b7d2c3b
-RMD160 (ccache-3.1.10.tar.xz) = 7dd780616effede22ad29da98ff14f03387aa331
-Size (ccache-3.1.10.tar.xz) = 240932 bytes
+SHA1 (ccache-3.2.tar.xz) = 0feaad22c35ecee7c9782ca51a948be69b242114
+RMD160 (ccache-3.2.tar.xz) = ae04ee8e071d97a112d699026e373ac47d5d3eeb
+Size (ccache-3.2.tar.xz) = 297176 bytes
