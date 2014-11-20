@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13836 2014/11/20 13:08:08 mef Exp $
+$NetBSD: TODO,v 1.13837 2014/11/20 16:03:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -903,7 +903,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o policykit-0.104
 	o polsms-2.1.0
 	o poppass-4.0.14
-	o poppler-0.28.1
 	o postal-0.72
 	o powermanga-0.91
 	o powwow-1.2.16
