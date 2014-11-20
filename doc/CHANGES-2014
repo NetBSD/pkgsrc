@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4351 2014/11/20 09:15:09 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4352 2014/11/20 09:18:13 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5716,3 +5716,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated biology/openbabel to 2.3.2 [mef 2014-11-20]
 	Updated converters/skf to 1.99.10 [obache 2014-11-20]
 	Updated emulators/suse131_libdbus to 13.1nb4 [obache 2014-11-20]
+	Updated graphics/libsixel to 1.3.5 [obache 2014-11-20]
