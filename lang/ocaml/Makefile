@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2014/11/20 15:22:44 joerg Exp $
+# $NetBSD: Makefile,v 1.93 2014/11/20 15:24:57 joerg Exp $
 
 .include "Makefile.common"
 
@@ -28,7 +28,7 @@ PLIST_SRC+=	${PKGDIR}/PLIST.stub
 
 # Optional components built only on certain platforms.
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
-    !empty(MACHINE_ARCH:Marm) || \
+    !empty(MACHINE_ARCH:M*arm*) || \
     (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "x86_64")
 BUILD_TARGET+=	opt opt.opt
 PLIST_SRC+=	${PKGDIR}/PLIST.opt
