@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.70 2014/10/01 15:57:00 wiz Exp $
+# $NetBSD: Makefile.common,v 1.71 2014/11/20 16:03:46 wiz Exp $
 #
 # used by print/poppler/Makefile
 # used by print/poppler-cpp/Makefile
@@ -8,7 +8,7 @@
 # used by print/poppler-qt5/Makefile
 # used by print/poppler-utils/Makefile
 
-POPPLER_VERS=		0.26.5
+POPPLER_VERS=		0.28.1
 DISTNAME=		poppler-${POPPLER_VERS}
 CATEGORIES=		print
 MASTER_SITES=		http://poppler.freedesktop.org/
