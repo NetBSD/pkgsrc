@@ -1,9 +1,9 @@
-$NetBSD: patch-ag,v 1.11 2014/04/29 07:56:48 wiz Exp $
+$NetBSD: patch-ag,v 1.12 2014/11/20 16:03:46 wiz Exp $
 
 Use installed copy of poppler library so we can have a separate
 poppler-glib package.
 
---- qt4/src/Makefile.in.orig	2014-04-24 22:42:56.000000000 +0000
+--- qt4/src/Makefile.in.orig	2014-11-04 18:46:22.000000000 +0000
 +++ qt4/src/Makefile.in
 @@ -129,7 +129,7 @@ am__installdirs = "$(DESTDIR)$(libdir)" 
  LTLIBRARIES = $(lib_LTLIBRARIES)
@@ -14,7 +14,7 @@ poppler-glib package.
  am_libpoppler_qt4_la_OBJECTS = libpoppler_qt4_la-poppler-document.lo \
  	libpoppler_qt4_la-poppler-page.lo \
  	libpoppler_qt4_la-poppler-fontinfo.lo \
-@@ -506,7 +506,7 @@ libpoppler_qt4_la_CXXFLAGS = \
+@@ -505,7 +505,7 @@ libpoppler_qt4_la_CXXFLAGS = \
  	-Dpoppler_qt4_EXPORTS
  
  libpoppler_qt4_la_LIBADD = \
@@ -22,4 +22,4 @@ poppler-glib package.
 +	$(prefix)/lib/libpoppler.la	\
  	$(POPPLER_QT4_LIBS)
  
- libpoppler_qt4_la_LDFLAGS = -version-info 8:0:4 @create_shared_lib@ @auto_import_flags@
+ libpoppler_qt4_la_LDFLAGS = \
