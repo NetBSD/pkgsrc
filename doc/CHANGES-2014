@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4364 2014/11/20 16:07:12 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4365 2014/11/20 16:11:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5729,3 +5729,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/ccache to 3.2 [adam 2014-11-20]
 	Updated print/poppler to 0.28.1 [wiz 2014-11-20]
 	Updated devel/ocaml-findlib to 1.5.5 [wiz 2014-11-20]
+	Updated x11/ocaml-lablgtk to 2.18.3 [wiz 2014-11-20]
