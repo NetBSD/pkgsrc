@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4345 2014/11/20 07:32:58 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4346 2014/11/20 07:41:46 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5710,3 +5710,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-HTML-Strip to 2.01 [wen 2014-11-19]
 	Updated lang/gcc49 to 4.9.2 [wiz 2014-11-19]
 	Updated archivers/lzip to 1.16 [mef 2014-11-20]
+	Updated archivers/gzrecover to 0.8 [mef 2014-11-20]
