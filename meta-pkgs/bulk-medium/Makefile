@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2014/08/12 18:22:38 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2014/11/20 20:49:38 joerg Exp $
 
-DISTNAME=	bulk-medium-20140812
+DISTNAME=	bulk-medium-20141120
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -63,8 +63,6 @@ BUILD_DEPENDS+=	fribidi-[0-9]*:../../converters/fribidi
 BUILD_DEPENDS+=	mysql-client>=5.1<5.5:../../databases/mysql51-client
 BUILD_DEPENDS+=	mysql-client>=5.5:../../databases/mysql55-client
 BUILD_DEPENDS+=	openldap-client-[0-9]*:../../databases/openldap-client
-BUILD_DEPENDS+=	postgresql84-client-[0-9]*:../../databases/postgresql84-client
-BUILD_DEPENDS+=	postgresql91-client-[0-9]*:../../databases/postgresql91-client
 BUILD_DEPENDS+=	git-[0-9]*:../../devel/git
 BUILD_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 BUILD_DEPENDS+=	git-docs-[0-9]*:../../devel/git-docs
