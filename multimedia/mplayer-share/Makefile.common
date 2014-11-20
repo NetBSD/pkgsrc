@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.53 2013/07/06 07:07:18 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.54 2014/11/20 01:41:22 jmcneill Exp $
 # used by multimedia/gmplayer/Makefile
 # used by multimedia/mencoder/Makefile
 # used by multimedia/mplayer/Makefile
@@ -55,7 +55,8 @@ CONFIGURE_ENV+=		TMPDIR=${WRKDIR}
 CONFIGURE_ARGS+=	--enable-big-endian
 .endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-arm)
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-arm*) || \
+    !empty(MACHINE_PLATFORM:MNetBSD-*-earm*)
 # Avoid crash with system include file:
 pre-patch:
 	mv ${WRKSRC}/ffmpeg/libavutil/arm/bswap.h \
