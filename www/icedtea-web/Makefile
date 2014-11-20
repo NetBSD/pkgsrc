@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2014/11/03 12:31:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.37 2014/11/20 09:43:09 ryoon Exp $
 
 # Keep icedtea-web distfile in sync with lang/openjdk7/icedtea-extras.mk
 DISTNAME=	icedtea-web-1.5.1
@@ -10,7 +10,7 @@ HOMEPAGE=	http://icedtea.classpath.org/
 COMMENT=	Java browser plugin and Web Start launcher
 #LICENSE=	# GPL2 + Classpath exception
 
-EXTRACT_USING=	bsdtar
+EXTRACT_USING=	gtar
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
