@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2014/11/18 14:38:15 manu Exp $
+# $NetBSD: Makefile,v 1.45 2014/11/20 16:13:07 wiz Exp $
 
 DISTNAME=	glusterfs-3.6.0
 #PKGREVISION=	1
@@ -84,7 +84,7 @@ post-install:
 	    ${DESTDIR}/${PREFIX}/sbin/mount_glusterfs
 
 # Debug
-CFLAGS+=		-g 
+CFLAGS+=		-g
 INSTALL_UNSTRIPPED=	yes
 CONFIGURE_ARGS+=	--enable-debug
 #.include "../../devel/boehm-gc/buildlink3.mk"
