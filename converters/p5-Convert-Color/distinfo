@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2014/02/06 12:30:20 abs Exp $
+$NetBSD: distinfo,v 1.4 2014/11/20 09:19:39 mef Exp $
 
-SHA1 (Convert-Color-0.10.tar.gz) = cc4bd82dbb849c5f102dfdf3c03e63dea0b78d7f
-RMD160 (Convert-Color-0.10.tar.gz) = 601c7a298323fce7bd9c899025a37797bcc20941
-Size (Convert-Color-0.10.tar.gz) = 37539 bytes
+SHA1 (Convert-Color-0.11.tar.gz) = c555c9e708587022cb2d5cfd12ebc094cee6e708
+RMD160 (Convert-Color-0.11.tar.gz) = dbd10441e5f6218bcd6744648e8f40883fbae2bb
+Size (Convert-Color-0.11.tar.gz) = 37659 bytes
