@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4349 2014/11/20 09:11:05 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4350 2014/11/20 09:11:31 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5714,3 +5714,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated cad/gtkwave to 3.3.63 [mef 2014-11-20]
 	Updated chat/bitlbee to 3.2.2 [mef 2014-11-20]
 	Updated biology/openbabel to 2.3.2 [mef 2014-11-20]
+	Updated converters/skf to 1.99.10 [obache 2014-11-20]
