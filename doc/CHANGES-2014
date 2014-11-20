@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4346 2014/11/20 07:41:46 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4347 2014/11/20 08:34:11 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5711,3 +5711,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/gcc49 to 4.9.2 [wiz 2014-11-19]
 	Updated archivers/lzip to 1.16 [mef 2014-11-20]
 	Updated archivers/gzrecover to 0.8 [mef 2014-11-20]
+	Updated cad/gtkwave to 3.3.63 [mef 2014-11-20]
