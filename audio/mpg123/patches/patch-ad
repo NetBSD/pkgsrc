@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.4 2010/03/14 14:19:19 martin Exp $
+$NetBSD: patch-ad,v 1.5 2014/11/20 13:07:12 mef Exp $
+
+Let device portable over environment
 
 --- src/output/oss.c.orig	2009-12-05 21:26:23.000000000 +0100
 +++ src/output/oss.c	2010-02-06 20:09:39.000000000 +0100
