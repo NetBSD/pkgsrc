@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.18 2014/11/01 11:34:00 adam Exp $
+$NetBSD: distinfo,v 1.19 2014/11/20 21:43:10 bsiegert Exp $
 
 SHA1 (git-2.1.3.tar.xz) = 42a850edee36170f70a1b6231b80c50f77ac237e
 RMD160 (git-2.1.3.tar.xz) = 83dd698c1dadc9c5a45a2094c32536b64c8452d2
 Size (git-2.1.3.tar.xz) = 3542704 bytes
-SHA1 (patch-aa) = 62170081fcf3831ba7316b5914657063c668a80b
+SHA1 (patch-aa) = 8c1096065d26b93a6e10bc6926d3fc3686f711f2
 SHA1 (patch-ac) = 376cdd1c58b143c820ff6395987a8a77cf9b52ba
 SHA1 (patch-ae) = 9bc2e6c7f0a8fbc385b6ffda638d3245a62dc5ca
 SHA1 (patch-af) = d1aae6d9b15f7932912a97457d8a95364b685b07

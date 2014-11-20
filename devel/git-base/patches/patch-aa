@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2014/08/01 19:18:39 schmonz Exp $
+$NetBSD: patch-aa,v 1.4 2014/11/20 21:43:10 bsiegert Exp $
 
 --- Makefile.orig	2014-05-30 21:38:10.000000000 +0000
 +++ Makefile
@@ -36,7 +36,12 @@ $NetBSD: patch-aa,v 1.3 2014/08/01 19:18:39 schmonz Exp $
  
  export DIFF TAR INSTALL DESTDIR SHELL_PATH
  
-@@ -2353,7 +2347,6 @@ ifndef NO_GETTEXT
+@@ -2349,11 +2343,10 @@ install: all
+ ifndef NO_GETTEXT
+	$(INSTALL) -d -m 755 '$(DESTDIR_SQ)$(localedir_SQ)'
+	(cd po/build/locale && $(TAR) cf - .) | \
+-	(cd '$(DESTDIR_SQ)$(localedir_SQ)' && umask 022 && $(TAR) xof -)
++	(cd '$(DESTDIR_SQ)$(localedir_SQ)' && umask 022 && $(TAR) xf -)
  endif
  ifndef NO_PERL
  	$(MAKE) -C perl prefix='$(prefix_SQ)' DESTDIR='$(DESTDIR_SQ)' install
