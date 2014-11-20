@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4358 2014/11/20 11:07:22 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4359 2014/11/20 12:16:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5723,3 +5723,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated pkgtools/pkgsrc-todo to 1.3 [wiz 2014-11-20]
 	Updated converters/p5-JSON-PP to 2.27300 [mef 2014-11-20]
 	Updated converters/p5-Unicode-Collate to 1.07 [mef 2014-11-20]
+	Updated databases/sqlite3 to 3.8.7.2 [wiz 2014-11-20]
