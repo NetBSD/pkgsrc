@@ -1,10 +1,10 @@
-$NetBSD: patch-src_findlib_Makefile,v 1.4 2014/10/09 20:53:15 jaapb Exp $
+$NetBSD: patch-src_findlib_Makefile,v 1.5 2014/11/20 16:07:03 wiz Exp $
 
 Install into DESTDIR, use BSD install commands
---- src/findlib/Makefile.orig	2014-09-16 11:21:46.000000000 +0000
+--- src/findlib/Makefile.orig	2014-10-23 10:08:26.000000000 +0000
 +++ src/findlib/Makefile
-@@ -87,23 +87,24 @@ clean:
- 	#rm -f ocaml_args.ml
+@@ -97,23 +97,24 @@ clean:
+ 	  ocamlfind$(EXEC_SUFFIX) ocamlfind_opt$(EXEC_SUFFIX)
  
  install: all
 -	mkdir -p "$(prefix)$(OCAML_SITELIB)/$(NAME)"
