@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4355 2014/11/20 09:25:58 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4356 2014/11/20 09:33:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5720,3 +5720,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated converters/p5-Convert-Color to 0.11 [mef 2014-11-20]
 	Updated converters/p5-JSON-Any to 1.38 [mef 2014-11-20]
 	Updated converters/p5-JSON-MaybeXS to 1.003002 [mef 2014-11-20]
+	Updated pkgtools/pkgsrc-todo to 1.3 [wiz 2014-11-20]
