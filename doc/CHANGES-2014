@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4360 2014/11/20 13:08:08 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4361 2014/11/20 14:28:40 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5725,3 +5725,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated converters/p5-Unicode-Collate to 1.07 [mef 2014-11-20]
 	Updated databases/sqlite3 to 3.8.7.2 [wiz 2014-11-20]
 	Updated audio/mpg123 to 1.21.0 [mef 2014-11-20]
+	Updated sysutils/intel-microcode-netbsd to 20140913 [msaitoh 2014-11-20]
