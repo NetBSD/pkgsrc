@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/10/10 08:37:49 jaapb Exp $
-#
+# $NetBSD: Makefile,v 1.2 2014/11/20 16:11:16 wiz Exp $
 
-DISTNAME=	lablgtk-2.18.2
+DISTNAME=	lablgtk-2.18.3
 CATEGORIES=	x11
 MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/1456/
 
@@ -14,6 +13,9 @@ LICENSE=	gnu-lgpl-v2
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config
 OCAML_USE_FINDLIB=	yes
+
+# seems to have been forgotten in 2.18.3 release
+WRKSRC=		${WRKDIR}/lablgtk-2.18.2
 
 MAKE_JOBS_SAFE=		no
 BUILD_TARGET=		world
