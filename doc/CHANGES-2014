@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4362 2014/11/20 15:22:12 adam Exp $
+$NetBSD: CHANGES-2014,v 1.4363 2014/11/20 16:03:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5727,3 +5727,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/mpg123 to 1.21.0 [mef 2014-11-20]
 	Updated sysutils/intel-microcode-netbsd to 20140913 [msaitoh 2014-11-20]
 	Updated devel/ccache to 3.2 [adam 2014-11-20]
+	Updated print/poppler to 0.28.1 [wiz 2014-11-20]
