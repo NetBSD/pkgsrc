@@ -1,9 +1,12 @@
-$NetBSD: patch-ar,v 1.6 2014/04/29 07:56:48 wiz Exp $
+$NetBSD: patch-ar,v 1.7 2014/11/20 16:03:46 wiz Exp $
 
 Use installed poppler library so we can have a separate poppler-cpp
 package.
 
---- cpp/Makefile.in.orig	2014-04-24 22:42:56.000000000 +0000
+Do not descend into tests directory to avoid dependency on utils/
+directory.
+
+--- cpp/Makefile.in.orig	2014-11-04 18:46:21.000000000 +0000
 +++ cpp/Makefile.in
 @@ -130,7 +130,7 @@ am__installdirs = "$(DESTDIR)$(libdir)" 
  LTLIBRARIES = $(lib_LTLIBRARIES)
@@ -14,7 +17,16 @@ package.
  am_libpoppler_cpp_la_OBJECTS = libpoppler_cpp_la-poppler-document.lo \
  	libpoppler_cpp_la-poppler-embedded-file.lo \
  	libpoppler_cpp_la-poppler-font.lo \
-@@ -537,7 +537,7 @@ libpoppler_cpp_la_CXXFLAGS = \
+@@ -483,7 +483,7 @@ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ win32_libs = @win32_libs@
+-SUBDIRS = . tests
++SUBDIRS = . 
+ lib_LTLIBRARIES = libpoppler-cpp.la
+ libpoppler_cpp_includedir = $(includedir)/poppler/cpp
+ libpoppler_cpp_include_HEADERS = \
+@@ -536,7 +536,7 @@ libpoppler_cpp_la_CXXFLAGS = \
  	-Dpoppler_cpp_EXPORTS
  
  libpoppler_cpp_la_LIBADD = \
@@ -22,4 +34,4 @@ package.
 +	$(prefix)/lib/libpoppler.la	\
  	$(LIBICONV)
  
- libpoppler_cpp_la_LDFLAGS = -version-info 2:0:2 @create_shared_lib@ @auto_import_flags@
+ libpoppler_cpp_la_LDFLAGS = \
