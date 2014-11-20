@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13837 2014/11/20 16:03:57 wiz Exp $
+$NetBSD: TODO,v 1.13838 2014/11/20 16:07:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -839,7 +839,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nut-19.2
 	o nxtvepg-2.8.1
 	o ocaml-4.02.1
-	o ocaml-findlib-1.5.5
 	o ocaml-lablgtk-2.18.3
 	o ocrad-0.24
 	o octave-3.8.2
