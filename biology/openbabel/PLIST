@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2014/11/20 09:05:56 mef Exp $
-${PLIST.wx-gui}bin/OBGUI
+@comment $NetBSD: PLIST,v 1.3 2014/11/20 09:10:32 mef Exp $
+${PLIST.wx-gui}bin/obgui
 bin/babel
 bin/obabel
 bin/obchiral
@@ -100,6 +100,7 @@ lib/libinchi.so.0.4.1
 lib/libopenbabel.so
 lib/libopenbabel.so.4
 lib/libopenbabel.so.4.0.2
+${PLIST.wx-gui}lib/openbabel/${PKGVERSION}/png2format.so
 lib/openbabel/${PKGVERSION}/APIInterface.so
 lib/openbabel/${PKGVERSION}/CSRformat.so
 lib/openbabel/${PKGVERSION}/MCDLformat.so
