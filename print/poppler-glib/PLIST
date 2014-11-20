@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2014/04/29 07:56:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2014/11/20 16:03:46 wiz Exp $
 include/poppler/glib/poppler-action.h
 include/poppler/glib/poppler-annot.h
 include/poppler/glib/poppler-attachment.h
@@ -40,7 +40,9 @@ share/gtk-doc/html/poppler/index.html
 share/gtk-doc/html/poppler/index.sgml
 share/gtk-doc/html/poppler/left-insensitive.png
 share/gtk-doc/html/poppler/left.png
+share/gtk-doc/html/poppler/poppler-PDF-Utility-functions.html
 share/gtk-doc/html/poppler/poppler-PopplerAction.html
+share/gtk-doc/html/poppler/poppler-PopplerColor.html
 share/gtk-doc/html/poppler/poppler-Version-and-Features-Information.html
 share/gtk-doc/html/poppler/poppler-poppler.html
 share/gtk-doc/html/poppler/poppler.devhelp2
