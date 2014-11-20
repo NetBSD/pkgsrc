@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4347 2014/11/20 08:34:11 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4348 2014/11/20 08:39:09 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5712,3 +5712,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated archivers/lzip to 1.16 [mef 2014-11-20]
 	Updated archivers/gzrecover to 0.8 [mef 2014-11-20]
 	Updated cad/gtkwave to 3.3.63 [mef 2014-11-20]
+	Updated chat/bitlbee to 3.2.2 [mef 2014-11-20]
