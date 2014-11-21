@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.9 2014/11/14 22:43:59 markd Exp $
+$NetBSD: distinfo,v 1.10 2014/11/21 22:16:55 joerg Exp $
 
 SHA1 (kdevelop-4.7.0.tar.xz) = 6c4becf482956334975886963ba0acf158f2aa15
 RMD160 (kdevelop-4.7.0.tar.xz) = 88538dc76c07925e6d191f4e5ac4ac064a78054c
 Size (kdevelop-4.7.0.tar.xz) = 4424240 bytes
+SHA1 (patch-languages_cpp_codegen_adaptsignatureassistant.cpp) = b184ac8deb737be859a8e6644ad3f1eb9ac6a594
