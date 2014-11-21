@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2013/07/01 14:40:18 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/11/21 12:22:46 mef Exp $
 bin/gtick
 man/man1/gtick.1
+share/appdata/gtick.appdata.xml
+share/applications/gtick.desktop
+share/icons/hicolor/64x64/apps/gtick.xpm
 share/locale/af/LC_MESSAGES/gtick.mo
 share/locale/ca/LC_MESSAGES/gtick.mo
 share/locale/cs/LC_MESSAGES/gtick.mo
@@ -16,6 +19,7 @@ share/locale/fi/LC_MESSAGES/gtick.mo
 share/locale/fr/LC_MESSAGES/gtick.mo
 share/locale/ga/LC_MESSAGES/gtick.mo
 share/locale/gl/LC_MESSAGES/gtick.mo
+share/locale/hu/LC_MESSAGES/gtick.mo
 share/locale/id/LC_MESSAGES/gtick.mo
 share/locale/it/LC_MESSAGES/gtick.mo
 share/locale/ko/LC_MESSAGES/gtick.mo
@@ -30,3 +34,4 @@ share/locale/sv/LC_MESSAGES/gtick.mo
 share/locale/uk/LC_MESSAGES/gtick.mo
 share/locale/vi/LC_MESSAGES/gtick.mo
 share/locale/zh_CN/LC_MESSAGES/gtick.mo
+share/pixmaps/gtick_32x32.xpm
