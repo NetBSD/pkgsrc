@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1044 2014/11/19 12:02:05 jaapb Exp $
+# $NetBSD: Makefile,v 1.1045 2014/11/21 09:54:25 he Exp $
 #
 
 COMMENT=	Networking tools
@@ -398,6 +398,7 @@ SUBDIR+=	openwbem
 SUBDIR+=	ortp
 SUBDIR+=	overnet
 SUBDIR+=	p5-Cisco-Abbrev
+SUBDIR+=	p5-DNS-LDNS
 SUBDIR+=	p5-DNS-ZoneParse
 SUBDIR+=	p5-Danga-Socket
 SUBDIR+=	p5-Data-Stream-Bulk
