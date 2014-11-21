@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:17:25 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/11/21 15:45:23 adam Exp $
 bin/mikmod
 man/man1/mikmod.1
+share/mikmod/mikmodrc
