@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2014/05/29 23:35:17 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2014/11/21 12:02:02 mef Exp $
 #
 
-DISTNAME=	centerim-4.22.9
-PKGREVISION=	13
+DISTNAME=	centerim-4.22.10
 CATEGORIES=	chat
 MASTER_SITES=	http://www.centerim.org/download/releases/ \
 		http://transacid.de/centerim/releases/
@@ -13,15 +12,17 @@ COMMENT=	Instant Messenger interface supporting many protocols
 LICENSE=	gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake perl:run
+USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ssl --with-openssl=${SSLBASE:Q}
 LIBS+=			${LDFLAGS}
 
-REPLACE_PERL=		misc/cimconv
+REPLACE_PERL=		misc/cimextracthistory.pl
+REPLACE_PERL+=		misc/cimconv
 REPLACE_PYTHON+=	misc/CenterIMLog2HTML.py
+REPLACE_AWK+=		misc/cimformathistory
 
 INCOMPAT_CURSES+=	NetBSD-1.[45]*-* NetBSD-1.6-* NetBSD-1.6.[1-9]-*
 INCOMPAT_CURSES+=	NetBSD-1.6_*-* NetBSD-1.6.[1-9]_*-* NetBSD-1.6[A-T]-*
