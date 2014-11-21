@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/06/16 09:58:48 shattered Exp $
+$NetBSD: distinfo,v 1.5 2014/11/21 22:59:47 mef Exp $
 
-SHA1 (libdiscid-0.5.0.tar.gz) = e046be72fca56bc1e5dce3568055331b58ee4dfc
-RMD160 (libdiscid-0.5.0.tar.gz) = 306e23457e191c07d906bbb5eb85fec127f1c3a7
-Size (libdiscid-0.5.0.tar.gz) = 366828 bytes
-SHA1 (patch-ab) = 6b626d5f7e2ca0b0bb231418429bdbea7b093dc4
+SHA1 (libdiscid-0.6.1.tar.gz) = 4e682d24bceeb35c19800f9141348d77eae133f2
+RMD160 (libdiscid-0.6.1.tar.gz) = f5e73d00adccab87037786b9c22dff98f9cb6705
+Size (libdiscid-0.6.1.tar.gz) = 366393 bytes
