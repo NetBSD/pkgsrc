@@ -1,11 +1,7 @@
-# $NetBSD: check-perms.mk,v 1.16 2014/10/12 23:39:17 joerg Exp $
+# $NetBSD: check-perms.mk,v 1.17 2014/11/21 10:46:36 obache Exp $
 #
 # This file checks that after installation of a package, all files and
 # directories of that package have sensible permissions set.
-#
-# To use this check in bulk builds, add
-#	BULK_PREREQ+= sysutils/checkperms
-# to your mk.conf file.
 #
 # User-settable variables:
 #
