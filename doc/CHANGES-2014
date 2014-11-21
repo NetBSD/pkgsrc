@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4370 2014/11/21 11:30:07 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4371 2014/11/21 12:02:27 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5736,3 +5736,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/drill to 1.6.17 [he 2014-11-21]
 	Added net/p5-DNS-LDNS version 0.06 [he 2014-11-21]
 	Added databases/kyotocabinet version 1.2.76 [obache 2014-11-21]
+	Updated chat/centerim to 4.22.10 [mef 2014-11-21]
