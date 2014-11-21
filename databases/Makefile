@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.472 2014/11/07 03:41:31 jnemeth Exp $
+# $NetBSD: Makefile,v 1.473 2014/11/21 11:30:52 obache Exp $
 
 COMMENT=	Databases
 
@@ -52,6 +52,7 @@ SUBDIR+=	jdbc-postgresql84
 SUBDIR+=	jdbc-postgresql92
 SUBDIR+=	kmysqladmin
 SUBDIR+=	krecipes
+SUBDIR+=	kyotocabinet
 SUBDIR+=	lbdb
 SUBDIR+=	ldapvi
 SUBDIR+=	libcassandra
