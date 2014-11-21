@@ -1,4 +1,9 @@
-$NetBSD: patch-ae,v 1.1 2010/02/24 18:08:12 drochner Exp $
+$NetBSD: patch-ae,v 1.2 2014/11/21 13:47:47 mef Exp $
+
+(from the commit log)
+date: 2010-02-25 03:08:12 +0900;  author: drochner;  state: Exp;
+-Set the keyboard mode to raw() explicitely. ncurses seems to do
+ this in some magical way, didn't find a hint in documentation.
 
 --- src/ncu.c.orig	2009-09-24 14:05:30.000000000 +0000
 +++ src/ncu.c
