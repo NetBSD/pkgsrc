@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4374 2014/11/21 13:47:54 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4375 2014/11/21 15:47:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5740,3 +5740,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated chat/cgiirc to 0.5.11 [mef 2014-11-21]
 	Updated audio/gtick to 0.5.4 [mef 2014-11-21]
 	Updated audio/ncmpc to 0.24 [mef 2014-11-21]
+	Updated audio/libmikmod to 3.3.7 [adam 2014-11-21]
+	Updated audio/mikmod to 3.2.6 [adam 2014-11-21]
