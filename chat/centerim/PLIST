@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2009/12/15 08:29:35 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/11/21 12:02:02 mef Exp $
 bin/CenterIMLog2HTML.py
 bin/centerim
 bin/cimconv
+bin/cimextracthistory.pl
+bin/cimformathistory
 man/man1/centerim.1
 man/man1/cimconv.1
 share/centerim/email.wav
