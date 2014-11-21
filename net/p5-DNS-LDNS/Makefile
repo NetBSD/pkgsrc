@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/11/21 09:54:25 he Exp $
+# $NetBSD: Makefile,v 1.2 2014/11/21 09:59:35 he Exp $
 
 DISTVERSION=	1.6.17
 PKGVERSION=	0.06
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.nlnetlabs.nl/downloads/ldns/
 MAINTAINER=	he@NetBSD.org
 HOMEPAGE=	http://www.nlnetlabs.nl/projects/ldns/
 COMMENT=	Perl5 bindings for the LDNS library
-LICENSE=	modified-bsd
+LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	c
 
