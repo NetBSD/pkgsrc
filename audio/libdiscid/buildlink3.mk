@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:23:55 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2014/11/21 22:59:47 mef Exp $
 
 BUILDLINK_TREE+=	libdiscid
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libdiscid
 LIBDISCID_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libdiscid+=	libdiscid>=0.1.0
+BUILDLINK_ABI_DEPENDS.libdiscid?=	libdiscid>=0.6.1
 BUILDLINK_PKGSRCDIR.libdiscid?=	../../audio/libdiscid
 .endif # LIBDISCID_BUILDLINK3_MK
 

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2013/06/16 09:58:48 shattered Exp $
+# $NetBSD: Makefile,v 1.10 2014/11/21 22:59:47 mef Exp $
 
-DISTNAME=	libdiscid-0.5.0
+DISTNAME=	libdiscid-0.6.1
 CATEGORIES=	audio
 MASTER_SITES=	http://ftp.musicbrainz.org/pub/musicbrainz/libdiscid/
 
@@ -14,7 +14,7 @@ ONLY_FOR_PLATFORM+=	NetBSD-*-* OpenBSD-*-* SunOS-*-*
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config gmake
 
 PKGCONFIG_OVERRIDE+=	libdiscid.pc.in
 
