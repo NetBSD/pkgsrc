@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2014/06/09 14:18:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.40 2014/11/21 12:22:46 mef Exp $
 #
 
-DISTNAME=	gtick-0.5.2
-PKGREVISION=	7
+DISTNAME=	gtick-0.5.4
 CATEGORIES=	audio
 MASTER_SITES=	http://www.antcom.de/gtick/download/
 
@@ -28,4 +27,7 @@ SUBST_SED.oss=		-e 's|/dev/dsp|${DEVOSSAUDIO}|g'
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"

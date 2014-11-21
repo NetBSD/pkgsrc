@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2013/07/01 14:40:18 ryoon Exp $
+$NetBSD: distinfo,v 1.6 2014/11/21 12:22:46 mef Exp $
 
-SHA1 (gtick-0.5.2.tar.gz) = db98831d5acc659b709228c9155383a3ff7376a7
-RMD160 (gtick-0.5.2.tar.gz) = 0092ace04264e21defd7527d091ca4a048eecfb0
-Size (gtick-0.5.2.tar.gz) = 666039 bytes
+SHA1 (gtick-0.5.4.tar.gz) = 4500d4d79904a422b2ad30aef7bb5787d7c8a396
+RMD160 (gtick-0.5.4.tar.gz) = 8f71e415feaf3043a89d114867ab77c3b2af519d
+Size (gtick-0.5.4.tar.gz) = 641902 bytes
