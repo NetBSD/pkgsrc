@@ -1,4 +1,4 @@
-$NetBSD: patch-modules_src_luacurl_lua-curl-0_3_0_diff,v 1.3 2014/08/18 18:19:29 schmonz Exp $
+$NetBSD: patch-modules_src_luacurl_lua-curl-0_3_0_diff,v 1.4 2014/11/21 22:50:42 schmonz Exp $
 
 Patch the included patch that patches the included lua-curl to fix
 unintended references to /usr/include, and to not choke on certain
@@ -14,15 +14,16 @@ be miffed in a jiff, and you might even get biffed in a tiff.
   
   # Constants genereated starting from the cURL headers:
   
-+@@ -121,17 +46,18 @@
-+		> curl_netrcopt.h
-+
++@@ -119,19 +44,20 @@ curl_netrcopt.h:$(HEADER)
++ 		> curl_netrcopt.h
++ 
 + curl_authopt.h:$(HEADER)
 +-	$(H)cat $(HEADER) | grep "CURLAUTH_" | \
 ++	$(H)cat $(HEADER) | grep "CURLAUTH_" | grep -v "^ \* " | \
 + 		sed "s/#define *CURL/{\"/" | sed "s/ *\/\*.*\*\///" | \
++-		sed "s/ /\",/" | sed "s/$$/},/" > curl_authopt.h
 ++		sed "s/ *\/\*.*$$//" |\
-+ 		sed "s/ /\",/" | sed "s/$$/},/" > curl_authopt.h
+++		sed "s/ /\",/" | sed "s/$$/},/" | sed "s/^},$$//" > curl_authopt.h
 + 
 + curl_ftpauthopt.h:$(HEADER)
 +-	$(H)cat /usr/include/curl/curl.h | grep -B10 '} curl_ftpauth' | \
