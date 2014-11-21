@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4372 2014/11/21 12:10:43 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4373 2014/11/21 12:22:54 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5738,3 +5738,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added databases/kyotocabinet version 1.2.76 [obache 2014-11-21]
 	Updated chat/centerim to 4.22.10 [mef 2014-11-21]
 	Updated chat/cgiirc to 0.5.11 [mef 2014-11-21]
+	Updated audio/gtick to 0.5.4 [mef 2014-11-21]
