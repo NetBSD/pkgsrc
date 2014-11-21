@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2014/10/09 14:06:56 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2014/11/21 01:05:13 obache Exp $
 
 DISTNAME=	tcp_wrappers_7.6-ipv6.4
 PKGNAME=	${DISTNAME:S/_7.6-ipv6/-7.6/}
@@ -20,6 +20,7 @@ PKG_SUGGESTED_OPTIONS=	inet6
 BUILD_TARGET.${OPSYS}?=	generic		# good luck!
 BUILD_TARGET.Darwin=	netbsd
 BUILD_TARGET.Interix=	netbsd
+BUILD_TARGET.Haiku=	netbsd
 BUILD_TARGET.Linux=	${LOWER_OPSYS}
 .if !empty(OPSYS:M*BSD)
 BUILD_TARGET.${OPSYS}=	netbsd
