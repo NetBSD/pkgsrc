@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.7 2013/05/06 15:04:54 joerg Exp $
+$NetBSD: distinfo,v 1.8 2014/11/21 12:02:02 mef Exp $
 
-SHA1 (centerim-4.22.9.tar.gz) = ebe9f4ee2064a2fa10f1084ce26083ccd295673e
-RMD160 (centerim-4.22.9.tar.gz) = 253007e466a211ec740f7843538e4f686ab95cad
-Size (centerim-4.22.9.tar.gz) = 2252262 bytes
+SHA1 (centerim-4.22.10.tar.gz) = 46fbac7a55f33b0d4f42568cca21ed83770650e5
+RMD160 (centerim-4.22.10.tar.gz) = 2514c871388edb98b4a8957f965ccee3450b968f
+Size (centerim-4.22.10.tar.gz) = 2287832 bytes
 SHA1 (patch-aa) = 47ddb8568aa36255ad20b71d999284f023726980
 SHA1 (patch-ac) = 4ef992ed632a57e921661b1b0054beff0c0aa587
-SHA1 (patch-ad) = bfe19ca98facfbb23a87dd28a176980fb4e986de
 SHA1 (patch-av) = 05758183016fb1bb297c9c3d2c0606e6a66f9901
 SHA1 (patch-bb) = 7312d496cdde7f619eff6bfef6025fe9be14529d
 SHA1 (patch-libicq2000_libicq2000_sigslot.h) = a812915ad5b329a6c82ff90835d26f73552eeebb
