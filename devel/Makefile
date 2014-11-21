@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2007 2014/11/14 09:07:25 markd Exp $
+# $NetBSD: Makefile,v 1.2008 2014/11/21 21:40:24 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -33,6 +33,7 @@ SUBDIR+=	acr
 SUBDIR+=	acunia-jam
 SUBDIR+=	adocman
 SUBDIR+=	aegis
+SUBDIR+=	afl
 SUBDIR+=	ald
 SUBDIR+=	allegro
 SUBDIR+=	anjuta
