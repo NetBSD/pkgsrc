@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2014/05/29 23:35:17 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2014/11/21 12:10:35 mef Exp $
 
-DISTNAME=	cgiirc-0.5.10
-#PKGREVISION=	2
-PKGREVISION=	3
+DISTNAME=	cgiirc-0.5.11
 CATEGORIES=	chat
 MASTER_SITES=	http://cgiirc.org/releases/
 
@@ -37,12 +35,13 @@ DOCFILES=	identd.xinetd decode.pl identd.pl viewconnects.pl
 EGFILES=	cgiirc.config.full client.c ipaccess.example
 CGIIRC=		${PREFIX}/share/cgiirc
 
+INSTALLATION_DIRS+=	share/doc/cgiirc
+INSTALLATION_DIRS+=	share/examples/cgiirc
 do-configure:
 	${SED} -e "s|@CGIIRC@|${CGIIRC}|g" ${FILESDIR}/cgiirc.conf	\
 		> ${WRKDIR}/cgiirc.conf
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/cgiirc
 	${INSTALL_DATA_DIR} ${DESTDIR}${CGIIRC}
 	${INSTALL_DATA_DIR} ${DESTDIR}${CGIIRC}/formats
 	${INSTALL_DATA_DIR} ${DESTDIR}${CGIIRC}/images
@@ -52,7 +51,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${CGIIRC}/modules
 	${INSTALL_DATA_DIR} ${DESTDIR}${CGIIRC}/modules/IRC
 	${INSTALL_DATA_DIR} ${DESTDIR}${CGIIRC}/modules/IRC/Channel
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/cgiirc
 
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/cgiirc
 .	for f in ${DOCFILES}
