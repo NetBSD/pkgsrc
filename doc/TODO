@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13839 2014/11/20 16:11:25 wiz Exp $
+$NetBSD: TODO,v 1.13840 2014/11/21 14:54:28 mef Exp $
 
 Suggested new packages
 ======================
@@ -529,6 +529,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ezmlm-idx-7.2.0 [schmonz]
 	o faces-1.7.7
 	o fakeroot-1.6.5
+	o fastjar-0.94 [wip]
 	o fcitx-3.6.2
 	o felt-3.07
 	o fetchmail-6.3.26
@@ -629,6 +630,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
 	o gnuchess-6.1.2
+	o gnuradio-core-3.7.5.1 [wip]
 	o gob-2.0.19
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
@@ -680,7 +682,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hugin-2012.0.0
 	o icc11-13.0
 	o icdprog-0.5
-	o idutils-4.6
+	o idutils-4.6 [wip]
 	o ike-2.0.1 [pkg/37032]
 	o imp-6.1.7
 	o inadyn-1.99.10 [https://github.com/troglobit/inadyn]
@@ -729,6 +731,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libbdplus-0.1.1
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libchamplain08-0.12.9
+	o libdiscid-0.6.1 [wip]
 	o libextractor-1.2 [requires shm_open()]
 	o libflash-0.4.13
 	o libfolks-0.10.0
@@ -972,6 +975,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rep-gtk-0.90.8.1
 	o reposurgeon-3.10
 	o resize_image-0.7
+	o revbump-2.10rc1 [wip]
 	o rhythmbox-3.1
 	o rio500-0.8.1
 	o robodoc-4.99.6
@@ -986,6 +990,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o ruby-ncurses-1.3.1
+	o ruby-review-1.4.0 [wip]
 	o ruby21-2.1.3
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.7
@@ -1174,7 +1179,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xinput-1.6.1
 	o xjman-0.7
 	o xli-2006.11.10
-	o xlog-2.0.12 [tolower problem]
+	o xlog-2.0.12 [wip, tolower problem]
 	o xmbdfed-4.6
 	o xmcd-3.3.2
 	o xml2-0.5
