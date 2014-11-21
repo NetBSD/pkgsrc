@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2013/10/01 17:50:57 drochner Exp $
+# $NetBSD: Makefile,v 1.26 2014/11/21 13:47:46 mef Exp $
 
-DISTNAME=		ncmpc-0.21
+DISTNAME=		ncmpc-0.24
 CATEGORIES=		audio
 #MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=musicpd/}
 MASTER_SITES=		http://www.musicpd.org/download/ncmpc/0/
-EXTRACT_SUFX=           .tar.bz2
+EXTRACT_SUFX=           .tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://mpd.wikia.com/wiki/Client:Ncmpc
