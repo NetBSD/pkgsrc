@@ -1,0 +1,4 @@
+DNS::LDNS is a perl OO-wrapper for the ldns library. For a detailed
+description on how this library works, you are advised to read the ldns
+documentation. For a functional description of the wrapper classes,
+please read the perldoc for DNS::LDNS and subclasses.
