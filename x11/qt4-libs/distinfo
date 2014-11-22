@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.93 2014/11/17 11:54:42 jmcneill Exp $
+$NetBSD: distinfo,v 1.94 2014/11/22 20:34:34 bsiegert Exp $
 
 SHA1 (qt-everywhere-opensource-src-4.8.6.tar.gz) = ddf9c20ca8309a116e0466c42984238009525da6
 RMD160 (qt-everywhere-opensource-src-4.8.6.tar.gz) = 0220d4e76ac761c9ecfb8ddab6f2c1dc6ad70c33
@@ -65,6 +65,7 @@ SHA1 (patch-src_3rdparty_webkit_Source_WebCore_platform_graphics_MediaPlayer.cpp
 SHA1 (patch-src_3rdparty_webkit_Source_WebCore_platform_qt_PlatformKeyboardEventQt.cpp) = b28cf71983f8e71b82b1c634a10b3898ca13ede5
 SHA1 (patch-src_corelib_io_io.pri) = cde98927b524c92fae1e053c2359e77bde2c240a
 SHA1 (patch-src_corelib_io_qfilesystemwatcher.cpp) = bb16b95d20286b1aa069dc25843d7e0067cc0268
+SHA1 (patch-src_gui_kernel_qcocoaapplicationdelegate__mac.mm) = 0caa9b006b3ffee4ab747fca9fd224c7c49211c9
 SHA1 (patch-src_network_ssl_qsslsocket__openssl__symbols.cpp) = 3ad682b86d2e9bd2b282caa298508dc3e9dd8566
 SHA1 (patch-src_network_ssl_qsslsocket__openssl__symbols__p.h) = 417846ba9edab8638cafa41a54ef60029467ef80
 SHA1 (patch-src_plugins_accessible_widgets_itemviews.cpp) = 1456fbaacef33f3b2422158d758d02990845048a
