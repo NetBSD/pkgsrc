@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4387 2014/11/22 14:47:19 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4388 2014/11/22 14:50:23 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5754,3 +5754,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated inputmethod/ibus-table-others to 1.3.6 [obache 2014-11-22]
 	Updated mail/p5-Email-Simple to 2.203 [mef 2014-11-22]
 	Updated mail/p5-Catalyst-View-Email to 0.34 [mef 2014-11-22]
+	Updated mail/p5-Email-Folder to 0.859 [mef 2014-11-22]
