@@ -1,36 +1,36 @@
-$NetBSD: patch-pkgs_tdbcmysql1.0.1_configure,v 1.1 2014/10/31 21:11:18 adam Exp $
+$NetBSD: patch-pkgs_itcl4.0.2_configure,v 1.1 2014/11/22 15:57:17 adam Exp $
 
 Add support for DragonFly.
 
---- pkgs/tdbcmysql1.0.1/configure.orig	2014-08-14 17:46:47.000000000 +0000
-+++ pkgs/tdbcmysql1.0.1/configure
-@@ -7776,7 +7776,6 @@ fi
- 		    CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
+--- pkgs/itcl4.0.2/configure.orig	2014-10-20 19:25:24.000000000 +0000
++++ pkgs/itcl4.0.2/configure
+@@ -9224,7 +9224,6 @@ fi
  fi
+ 
  		LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
--		SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so.${SHLIB_VERSION}'
+-		SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so${SHLIB_VERSION}'
  		LDFLAGS="-Wl,-export-dynamic"
  		;;
  	    esac
-@@ -7797,8 +7796,6 @@ fi
- 
+@@ -9246,8 +9245,6 @@ fi
  fi
+ 
  	    # OpenBSD doesn't do version numbers with dots.
 -	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
 -	    TCL_LIB_VERSIONS_OK=nodots
  	    ;;
  	NetBSD-*)
  	    # NetBSD has ELF and can use 'cc -shared' to build shared libs
-@@ -7820,7 +7817,7 @@ fi
- 
+@@ -9271,7 +9268,7 @@ fi
  fi
+ 
  	    ;;
 -	FreeBSD-*)
 +	FreeBSD-*|DragonFly-*)
  	    # This configuration from FreeBSD Ports.
  	    SHLIB_CFLAGS="-fPIC"
  	    SHLIB_LD="${CC} -shared"
-@@ -7843,10 +7840,6 @@ fi
+@@ -9295,10 +9292,6 @@ fi
  	    case $system in
  	    FreeBSD-3.*)
  		# Version numbers are dot-stripped by system policy.
@@ -41,7 +41,7 @@ Add support for DragonFly.
  		;;
  	    esac
  	    ;;
-@@ -8457,7 +8450,7 @@ fi
+@@ -10149,7 +10142,7 @@ fi
  	    BSD/OS*) ;;
  	    CYGWIN_*|MINGW32_*) ;;
  	    IRIX*) ;;

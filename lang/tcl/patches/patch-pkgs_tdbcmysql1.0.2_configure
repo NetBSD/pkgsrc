@@ -1,18 +1,18 @@
-$NetBSD: patch-pkgs_sqlite3.8.6_configure,v 1.1 2014/10/31 21:11:18 adam Exp $
+$NetBSD: patch-pkgs_tdbcmysql1.0.2_configure,v 1.1 2014/11/22 15:57:17 adam Exp $
 
 Add support for DragonFly.
 
---- pkgs/sqlite3.8.6/configure.orig	2014-08-15 14:09:19.000000000 +0000
-+++ pkgs/sqlite3.8.6/configure
-@@ -7241,7 +7241,6 @@ fi
+--- pkgs/tdbcmysql1.0.2/configure.orig	2014-10-23 20:04:27.000000000 +0000
++++ pkgs/tdbcmysql1.0.2/configure
+@@ -7793,7 +7793,6 @@ fi
  		    CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
  fi
  		LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
--		SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so.${SHLIB_VERSION}'
+-		SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so${SHLIB_VERSION}'
  		LDFLAGS="-Wl,-export-dynamic"
  		;;
  	    esac
-@@ -7262,8 +7261,6 @@ fi
+@@ -7814,8 +7813,6 @@ fi
  
  fi
  	    # OpenBSD doesn't do version numbers with dots.
@@ -21,7 +21,7 @@ Add support for DragonFly.
  	    ;;
  	NetBSD-*)
  	    # NetBSD has ELF and can use 'cc -shared' to build shared libs
-@@ -7285,7 +7282,7 @@ fi
+@@ -7837,7 +7834,7 @@ fi
  
  fi
  	    ;;
@@ -30,18 +30,18 @@ Add support for DragonFly.
  	    # This configuration from FreeBSD Ports.
  	    SHLIB_CFLAGS="-fPIC"
  	    SHLIB_LD="${CC} -shared"
-@@ -7305,10 +7302,6 @@ fi
- 		LDFLAGS="$LDFLAGS $PTHREAD_LIBS"
- fi
- 	    # Version numbers are dot-stripped by system policy.
--	    TCL_TRIM_DOTS=`echo ${PACKAGE_VERSION} | tr -d .`
--	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
--	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so.1'
--	    TCL_LIB_VERSIONS_OK=nodots
+@@ -7859,10 +7856,6 @@ fi
+ 	    case $system in
+ 	    FreeBSD-3.*)
+ 		# Version numbers are dot-stripped by system policy.
+-		TCL_TRIM_DOTS=`echo ${PACKAGE_VERSION} | tr -d .`
+-		UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
+-		SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so.1'
+-		TCL_LIB_VERSIONS_OK=nodots
+ 		;;
+ 	    esac
  	    ;;
- 	Darwin-*)
- 	    CFLAGS_OPTIMIZE="-Os"
-@@ -7917,7 +7910,7 @@ fi
+@@ -8473,7 +8466,7 @@ fi
  	    BSD/OS*) ;;
  	    CYGWIN_*|MINGW32_*) ;;
  	    IRIX*) ;;
