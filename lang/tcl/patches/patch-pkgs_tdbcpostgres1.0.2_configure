@@ -1,18 +1,18 @@
-$NetBSD: patch-pkgs_tdbcpostgres1.0.1_configure,v 1.1 2014/10/31 21:11:18 adam Exp $
+$NetBSD: patch-pkgs_tdbcpostgres1.0.2_configure,v 1.1 2014/11/22 15:57:17 adam Exp $
 
 Add support for DragonFly.
 
---- pkgs/tdbcpostgres1.0.1/configure.orig	2014-08-14 17:59:04.000000000 +0000
-+++ pkgs/tdbcpostgres1.0.1/configure
-@@ -7770,7 +7770,6 @@ fi
+--- pkgs/tdbcpostgres1.0.2/configure.orig	2014-10-23 20:08:52.000000000 +0000
++++ pkgs/tdbcpostgres1.0.2/configure
+@@ -7787,7 +7787,6 @@ fi
  		    CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
  fi
  		LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
--		SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so.${SHLIB_VERSION}'
+-		SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so${SHLIB_VERSION}'
  		LDFLAGS="-Wl,-export-dynamic"
  		;;
  	    esac
-@@ -7791,8 +7790,6 @@ fi
+@@ -7808,8 +7807,6 @@ fi
  
  fi
  	    # OpenBSD doesn't do version numbers with dots.
@@ -21,7 +21,7 @@ Add support for DragonFly.
  	    ;;
  	NetBSD-*)
  	    # NetBSD has ELF and can use 'cc -shared' to build shared libs
-@@ -7814,7 +7811,7 @@ fi
+@@ -7831,7 +7828,7 @@ fi
  
  fi
  	    ;;
@@ -30,7 +30,7 @@ Add support for DragonFly.
  	    # This configuration from FreeBSD Ports.
  	    SHLIB_CFLAGS="-fPIC"
  	    SHLIB_LD="${CC} -shared"
-@@ -7837,10 +7834,6 @@ fi
+@@ -7853,10 +7850,6 @@ fi
  	    case $system in
  	    FreeBSD-3.*)
  		# Version numbers are dot-stripped by system policy.
@@ -41,7 +41,7 @@ Add support for DragonFly.
  		;;
  	    esac
  	    ;;
-@@ -8451,7 +8444,7 @@ fi
+@@ -8467,7 +8460,7 @@ fi
  	    BSD/OS*) ;;
  	    CYGWIN_*|MINGW32_*) ;;
  	    IRIX*) ;;
