@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4380 2014/11/22 03:02:16 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4381 2014/11/22 03:07:31 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5747,3 +5747,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/rcs to 5.9.3 [mef 2014-11-22]
 	Updated mail/bogofilter to 1.2.4 [mef 2014-11-22]
 	Updated mail/avenger to 0.8.4 [mef 2014-11-22]
+	Updated mail/dnsbl-milter to 6.44 [mef 2014-11-22]
