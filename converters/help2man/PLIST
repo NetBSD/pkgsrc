@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.8 2014/10/01 12:12:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/11/22 14:59:59 bsiegert Exp $
 bin/help2man
-info/help2man-de.info
-info/help2man-fr.info
-info/help2man-pl.info
-info/help2man-uk.info
+${PLIST.nls}info/help2man-de.info
+${PLIST.nls}info/help2man-fr.info
+${PLIST.nls}info/help2man-pl.info
+${PLIST.nls}info/help2man-uk.info
 info/help2man.info
 ${PLIST.nls}lib/bindtextdomain.so
 ${PLIST.nls}man/de/man1/help2man.1
