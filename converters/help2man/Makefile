@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2014/11/22 14:59:59 bsiegert Exp $
+# $NetBSD: Makefile,v 1.29 2014/11/22 20:01:57 dholland Exp $
 
 DISTNAME=	help2man-1.46.4
 PKGREVISION=	1
@@ -39,9 +39,9 @@ PLIST_VARS+=		nls
 
 .if ${OPSYS} == "Darwin"
 _STRIPFLAG_INSTALL=
+.endif
 USE_PKGLOCALEDIR=	yes
 PLIST.nls=		yes
-.endif
 
 post-patch:
 	${TOUCH} -r ${WRKSRC}/help2man.PL.orig ${WRKSRC}/help2man.PL
