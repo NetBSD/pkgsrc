@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4382 2014/11/22 03:47:41 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4383 2014/11/22 03:52:58 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5749,3 +5749,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/avenger to 0.8.4 [mef 2014-11-22]
 	Updated mail/dnsbl-milter to 6.44 [mef 2014-11-22]
 	Updated mail/gmime to 2.6.20 [mef 2014-11-22]
+	Updated mail/gmime20 to 2.2.27 [mef 2014-11-22]
