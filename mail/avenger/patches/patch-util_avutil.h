@@ -1,4 +1,6 @@
-$NetBSD: patch-util_avutil.h,v 1.1 2012/02/16 19:00:14 hans Exp $
+$NetBSD: patch-util_avutil.h,v 1.2 2014/11/22 03:01:33 mef Exp $
+
+Fix build on SunOS.
 
 --- util/avutil.h.orig	2008-05-20 20:48:23.000000000 +0200
 +++ util/avutil.h	2012-01-27 11:02:13.469861902 +0100
