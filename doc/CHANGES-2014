@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4384 2014/11/22 05:13:31 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4385 2014/11/22 11:55:01 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5751,3 +5751,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/gmime to 2.6.20 [mef 2014-11-22]
 	Updated mail/gmime20 to 2.2.27 [mef 2014-11-22]
 	Updated devel/p5-Class-Accessor-Grouped to 0.10012 [wen 2014-11-22]
+	Updated inputmethod/ibus-table-others to 1.3.6 [obache 2014-11-22]
