@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4391 2014/11/22 15:34:06 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4392 2014/11/22 16:02:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5758,3 +5758,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/p5-Email-MessageID to 1.405 [mef 2014-11-22]
 	Updated mail/p5-Email-Sender to 1.300016 [mef 2014-11-22]
 	Updated ham/xnec2c to 3.1 [mef 2014-11-22]
+	Updated lang/tcl to 8.6.3 [adam 2014-11-22]
+	Updated x11/tk to 8.6.3 [adam 2014-11-22]
