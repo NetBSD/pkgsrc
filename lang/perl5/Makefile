@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.232 2014/11/22 03:01:52 wiz Exp $
+# $NetBSD: Makefile,v 1.233 2014/11/22 03:04:31 wiz Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -248,6 +248,7 @@ REPLACE_PERL+=		cpan/version/lib/version.pm
 REPLACE_PERL+=		dist/bignum/lib/Math/BigFloat/Trace.pm
 REPLACE_PERL+=		dist/bignum/lib/Math/BigInt/Trace.pm
 REPLACE_PERL+=		dist/ExtUtils-ParseXS/lib/ExtUtils/xsubpp
+REPLACE_PERL+=		ext/ExtUtils-Miniperl/lib/ExtUtils/Miniperl.pm
 REPLACE_PERL+=		ext/File-DosGlob/lib/File/DosGlob.pm
 REPLACE_PERL+=		lib/unicore/mktables
 
