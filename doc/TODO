@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13843 2014/11/22 03:09:55 mef Exp $
+$NetBSD: TODO,v 1.13844 2014/11/22 04:15:14 mef Exp $
 
 Suggested new packages
 ======================
@@ -478,6 +478,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dasher-4.11
 	o dateutils-0.3.0
 	o dbench-4.0
+	o dbmail-3.2.0
 	o dcc-1.3.147 [ask OWNER first]
 	o dd_rescue-1.45
 	o ddclient-3.7.3
@@ -485,6 +486,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o delegate-9.9.9
 	o denemo-1.1.8
 	o dhid-5.3
+	o dk-milter-1.0.2 [wip]
 	o doclifter-2.15
 	o dolphin-4.0.2
 	o dri-7.8.2 [wip]
@@ -958,6 +960,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-suds-0.4.1
 	o py-sybase-0.37
 	o py-tlslite-0.4.6
+	o py-trytond-stock-3.4.0
 	o py-wxWidgets-3.0.0
 	o py-zconfig-3.0.3
 	o qnetwalk-1.4
@@ -1039,6 +1042,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o spidermonkey-1.8.5
 	o spl-1.0pre6
 	o sqwebmail-5.7.2
+	o squeak-4.5
 	o srp_client-1.7.5
 	o ssh-askpass-1.2.4.1
 	o sslh-1.16 [pkg/49257]
