@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.231 2014/10/01 07:17:02 adam Exp $
+# $NetBSD: Makefile,v 1.232 2014/11/22 03:01:52 wiz Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -244,13 +244,12 @@ SUBST_MESSAGE.mirbsd-paths=	Do not use non-pkgsrc paths on MirBSD.
 # Replace our perl as the interpreter
 REPLACE_PERL+=		cpan/Config-Perl-V/V.pm
 REPLACE_PERL+=		cpan/Getopt-Long/lib/Getopt/Long.pm
+REPLACE_PERL+=		cpan/version/lib/version.pm
 REPLACE_PERL+=		dist/bignum/lib/Math/BigFloat/Trace.pm
 REPLACE_PERL+=		dist/bignum/lib/Math/BigInt/Trace.pm
 REPLACE_PERL+=		dist/ExtUtils-ParseXS/lib/ExtUtils/xsubpp
 REPLACE_PERL+=		ext/File-DosGlob/lib/File/DosGlob.pm
-REPLACE_PERL+=		lib/File/DosGlob.pm
 REPLACE_PERL+=		lib/unicore/mktables
-REPLACE_PERL+=		lib/version.pm
 
 # And replace a perl interpreter during the pre-install stage
 # I think this may be a bootstrap script, so can't use REPLACE_PERL
