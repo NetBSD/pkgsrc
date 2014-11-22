@@ -1,4 +1,4 @@
-#	$NetBSD: Darwin.bsd.lib.mk,v 1.4 2013/10/25 13:53:03 jperkin Exp $
+#	$NetBSD: Darwin.bsd.lib.mk,v 1.5 2014/11/22 16:32:13 bsiegert Exp $
 #	@(#)bsd.lib.mk	8.3 (Berkeley) 4/22/94
 
 .if !target(__initialized__)
@@ -370,6 +370,14 @@ lib${LIB}_p.a:: ${POBJS} __archivebuild
 lib${LIB}_pic.a:: ${SOBJS} __archivebuild
 	@echo building shared object ${LIB} library
 
+.if empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
+_OPSYS_WHOLE_ARCHIVE_FLAG= -Wl,-force_load
+_OPSYS_NO_WHOLE_ARCHIVE_FLAG= 
+.else
+_OPSYS_WHOLE_ARCHIVE_FLAG= --whole-archive
+_OPSYS_NO_WHOLE_ARCHIVE_FLAG= --no-whole-archive
+.endif
+
 lib${LIB}.so.${SHLIB_FULLVERSION}: ${SOLIB} ${DPADD} \
     ${SHLIB_LDSTARTFILE} ${SHLIB_LDENDFILE}
 	@echo building shared ${LIB} library \(version ${SHLIB_FULLVERSION}\)
@@ -377,14 +385,15 @@ lib${LIB}.so.${SHLIB_FULLVERSION}: ${SOLIB} ${DPADD} \
 .if defined(DESTDIR)
 	$(CC) -nostdlib -shared ${SHLIB_SHFLAGS} -o ${.TARGET} \
 	    ${SHLIB_LDSTARTFILE} \
-	    --whole-archive ${SOLIB} \
-	    --no-whole-archive ${LDADD} \
+	    ${_OPSYS_WHOLE_ARCHIVE_FLAG} ${SOLIB} \
+	    ${_OPSYS_NO_WHOLE_ARCHIVE_FLAG) ${LDADD} \
 	    -L${DESTDIR}${LIBDIR} -R${LIBDIR} \
 	    ${SHLIB_LDENDFILE}
 .else
 	$(CC) -shared ${SHLIB_SHFLAGS} -o ${.TARGET} \
 	    ${SHLIB_LDSTARTFILE} \
-	    --whole-archive ${SOLIB} --no-whole-archive ${LDADD} \
+	    ${_OPSYS_WHOLE_ARCHIVE_FLAG} ${SOLIB} \
+	    ${_OPSYS_NO_WHOLE_ARCHIVE_FLAG} ${LDADD} \
 	    ${SHLIB_LDENDFILE}
 .endif
 .if ${OBJECT_FMT} == "ELF"

@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.63 2014/08/17 08:32:32 tron Exp $
+# $NetBSD: Darwin.mk,v 1.64 2014/11/22 16:32:13 bsiegert Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -122,8 +122,13 @@ _OPSYS_PREFER.mit-krb5?=	native
 
 # flags passed to the linker to extract all symbols from static archives.
 # this is GNU ld.
+.if empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
+_OPSYS_WHOLE_ARCHIVE_FLAG=	-Wl,-force-load
+_OPSYS_NO_WHOLE_ARCHIVE_FLAG=	
+.else
 _OPSYS_WHOLE_ARCHIVE_FLAG=	-Wl,--whole-archive
 _OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,--no-whole-archive
+.endif
 
 _OPSYS_CAN_CHECK_SHLIBS=	no # can't use readelf in check/bsd.check-vars.mk
 
