@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4378 2014/11/22 01:26:24 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4379 2014/11/22 01:36:52 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5745,3 +5745,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/afl version 0.62b [wiz 2014-11-21]
 	Updated audio/libdiscid to 0.6.1 [mef 2014-11-21]
 	Updated devel/rcs to 5.9.3 [mef 2014-11-22]
+	Updated mail/bogofilter to 1.2.4 [mef 2014-11-22]
