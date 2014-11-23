@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.1.2.2 2014/11/23 13:29:31 tron Exp $
+
+Use -Wl,-R instead of just -R to avoid breaking the build on FreeBSD.
+From Dennis Lindroos in PR 49375.
+
+--- configure~	2014-02-11 15:38:00.000000000 +0000
++++ configure
+@@ -8837,7 +8837,7 @@ fi
+   fi
+   if test "X$ltrpathdirs" != "X"; then
+             for found_dir in $ltrpathdirs; do
+-      LTLIBINTL="${LTLIBINTL}${LTLIBINTL:+ }-R$found_dir"
++      LTLIBINTL="${LTLIBINTL}${LTLIBINTL:+ }-Wl,-R$found_dir"
+     done
+   fi
+ 
