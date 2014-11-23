@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/12/11 23:35:37 gdt Exp $
+$NetBSD: distinfo,v 1.2 2014/11/23 16:10:50 gdt Exp $
 
-SHA1 (libgeotiff-1.4.0.tar.gz) = 4c6f405869826bb7d9f35f1d69167e3b44a57ef0
-RMD160 (libgeotiff-1.4.0.tar.gz) = e665d077303961454cb0663af564942b5b808a49
-Size (libgeotiff-1.4.0.tar.gz) = 1517881 bytes
+SHA1 (libgeotiff-1.4.1.tar.gz) = bc9e2bb43f3877b795b4b191e7aec6267f4a1c7e
+RMD160 (libgeotiff-1.4.1.tar.gz) = e10c25f1749d6886a35c808f7a0bf86f37e944c9
+Size (libgeotiff-1.4.1.tar.gz) = 1674928 bytes
