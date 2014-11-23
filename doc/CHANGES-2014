@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4452 2014/11/23 16:40:56 taca Exp $
+$NetBSD: CHANGES-2014,v 1.4453 2014/11/23 17:17:58 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5831,3 +5831,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/netpbm to 10.68.02 [wiz 2014-11-23]
 	Updated www/drupal6 to 6.34 [taca 2014-11-23]
 	Updated www/drupal7 to 7.34 [taca 2014-11-23]
+	Updated geography/viking to 1.5.1 [gdt 2014-11-23]
