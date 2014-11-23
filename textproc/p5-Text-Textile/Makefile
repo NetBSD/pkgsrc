@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.10 2014/05/29 23:37:44 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2014/11/23 14:41:58 schmonz Exp $
 #
 
-DISTNAME=	Text-Textile-2.12
+DISTNAME=	Text-Textile-2.13
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Text-Textile/
-COMMENT=	Perl impementation of the Textile formatting language
+COMMENT=	Perl implementation of the Textile formatting language
 LICENSE=	${PERL5_LICENSE}
 
 PERL5_PACKLIST=		auto/Text/Textile/.packlist
