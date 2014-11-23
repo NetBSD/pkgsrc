@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2014/05/09 07:36:56 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2014/11/23 10:06:41 mef Exp $
 #
 
 .include "../../comms/gammu/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 COMMENT=	Python bindings for gammu
 
 DISTINFO_FILE=	${.CURDIR}/../../comms/gammu/distinfo
