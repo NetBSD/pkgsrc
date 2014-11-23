@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.7 2011/04/01 09:12:04 obache Exp $
+$NetBSD: distinfo,v 1.8 2014/11/23 05:59:45 mef Exp $
 
-SHA1 (gnus-5.10.8.tar.gz) = 58ca5ca174140bc824b5e9533a869ae1d3596dc1
-RMD160 (gnus-5.10.8.tar.gz) = 4a2fdea20961d7a714670b59f4d34864ebcaa930
-Size (gnus-5.10.8.tar.gz) = 2496529 bytes
+SHA1 (gnus-5.10.10.tar.gz) = b03c7bba0b67c6fbc30bc1ef4c92e7a583481818
+RMD160 (gnus-5.10.10.tar.gz) = 8289bb37f067c59c50f647ae516f535a2f50bee7
+Size (gnus-5.10.10.tar.gz) = 2569569 bytes
 SHA1 (patch-aa) = f8e6a69610745e16c2fdf319294cf6931e31fe70
-SHA1 (patch-etc_Makefile.in) = 883261477be7bf5214e1e97d08a3238d26f38f77
-SHA1 (patch-lisp_Makefile.in) = a12f6c3b01e2ed64a44cc5634ee0b2cb3c902e98
-SHA1 (patch-texi_Makefile.in) = e2f916f91f98c65f1cd38fe4de1abb42fcde749b
