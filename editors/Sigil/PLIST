@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/12/13 14:46:10 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/11/23 19:27:29 wiz Exp $
 bin/sigil
 share/applications/sigil.desktop
 share/pixmaps/sigil.png
@@ -20,16 +20,30 @@ share/sigil/hunspell_dictionaries/hyph_en_GB.dic
 share/sigil/hunspell_dictionaries/hyph_en_US.dic
 share/sigil/hunspell_dictionaries/hyph_es.dic
 share/sigil/hunspell_dictionaries/hyph_fr.dic
+share/sigil/plugin_launchers/python/bookcontainer.py
+share/sigil/plugin_launchers/python/compatibility_utils.py
+share/sigil/plugin_launchers/python/epub_utils.py
+share/sigil/plugin_launchers/python/inputcontainer.py
+share/sigil/plugin_launchers/python/launcher.py
+share/sigil/plugin_launchers/python/opf_parser.py
+share/sigil/plugin_launchers/python/outputcontainer.py
+share/sigil/plugin_launchers/python/quickparser.py
+share/sigil/plugin_launchers/python/unipath.py
+share/sigil/plugin_launchers/python/wrapper.py
+share/sigil/translations/sigil_bg.qm
 share/sigil/translations/sigil_ca.qm
+share/sigil/translations/sigil_cmn.qm
 share/sigil/translations/sigil_cs.qm
 share/sigil/translations/sigil_da_DK.qm
 share/sigil/translations/sigil_de.qm
 share/sigil/translations/sigil_el_GR.qm
 share/sigil/translations/sigil_en.qm
 share/sigil/translations/sigil_es.qm
+share/sigil/translations/sigil_es_419.qm
 share/sigil/translations/sigil_fi.qm
 share/sigil/translations/sigil_fr.qm
 share/sigil/translations/sigil_gl.qm
+share/sigil/translations/sigil_he.qm
 share/sigil/translations/sigil_hu_HU.qm
 share/sigil/translations/sigil_id_ID.qm
 share/sigil/translations/sigil_is.qm
@@ -46,6 +60,7 @@ share/sigil/translations/sigil_pt_BR.qm
 share/sigil/translations/sigil_ro_RO.qm
 share/sigil/translations/sigil_ru.qm
 share/sigil/translations/sigil_sk.qm
+share/sigil/translations/sigil_sv.qm
 share/sigil/translations/sigil_tr_TR.qm
 share/sigil/translations/sigil_ug.qm
 share/sigil/translations/sigil_uk.qm
