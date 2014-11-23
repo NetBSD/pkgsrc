@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.8 2010/11/13 21:08:54 shattered Exp $
+# $NetBSD: Makefile.common,v 1.9 2014/11/23 09:46:49 mef Exp $
 #
 # used by comms/gammu/Makefile
 # used by comms/py-gammu/Makefile
 
-DISTNAME=	gammu-1.26.1
+DISTNAME=	gammu-1.33.0
 CATEGORIES=	comms
 MASTER_SITES=	http://dl.cihar.com/gammu/releases/ \
 		http://dl.cihar.com.nyud.net/gammu/releases/
