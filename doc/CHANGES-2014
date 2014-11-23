@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4419 2014/11/23 13:17:32 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4420 2014/11/23 13:17:40 tron Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5789,3 +5789,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-CPAN-Meta-Requirements to 2.130 [wiz 2014-11-23]
 	Updated security/p5-IO-Socket-SSL to 2.006 [wiz 2014-11-23]
 	Updated devel/ProjectCenter to 0.6.2 [mef 2014-11-23]
+	Updated databases/phpmyadmin to 4.2.12 [tron 2014-11-23]
