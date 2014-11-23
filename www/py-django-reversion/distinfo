@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2014/10/09 10:09:22 adam Exp $
+$NetBSD: distinfo,v 1.9 2014/11/23 13:11:25 adam Exp $
 
-SHA1 (django-reversion-1.8.4.tar.gz) = f4aceb243e67df3c3897b05d846741ab340bcf75
-RMD160 (django-reversion-1.8.4.tar.gz) = 8db54eaf5c4271334ecd55b5e652b8938994bf94
-Size (django-reversion-1.8.4.tar.gz) = 57114 bytes
+SHA1 (django-reversion-1.8.5.tar.gz) = 41edccc1663dbd4e04653a5fe611c0f2abe6d0f9
+RMD160 (django-reversion-1.8.5.tar.gz) = 2aef07fb89bd6ce1abc9426981de77deaca843d7
+Size (django-reversion-1.8.5.tar.gz) = 57656 bytes
