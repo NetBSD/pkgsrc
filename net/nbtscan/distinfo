@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.7 2009/01/25 14:21:13 obache Exp $
+$NetBSD: distinfo,v 1.8 2014/11/23 00:05:30 dholland Exp $
 
 SHA1 (nbtscan-1.5.1.tar.gz) = 4041d8f6b592fa310b8d3c79c56a2d3263dba82f
 RMD160 (nbtscan-1.5.1.tar.gz) = 5130d9e6decd3346859281f45f8a179aa0286a42
 Size (nbtscan-1.5.1.tar.gz) = 82107 bytes
-SHA1 (patch-ac) = 93ea55a27cb434de567033acd883da08e7225646
+SHA1 (nbtscan-jumbo-patch-20141122.gz) = 1bd2b2e9fa89095822070c70d5ffbf3693a0b9b1
+RMD160 (nbtscan-jumbo-patch-20141122.gz) = 29c8587f16a270f73ec3e8203544c146fe69566d
+Size (nbtscan-jumbo-patch-20141122.gz) = 6069 bytes

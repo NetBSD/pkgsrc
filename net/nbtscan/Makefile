@@ -1,10 +1,14 @@
-# $NetBSD: Makefile,v 1.14 2012/10/23 17:18:40 asau Exp $
+# $NetBSD: Makefile,v 1.15 2014/11/23 00:05:30 dholland Exp $
 #
 
 DISTNAME=	nbtscan-1.5.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://www.inetcat.net/software/
+
+PATCHFILES=	nbtscan-jumbo-patch-20141122.gz
+PATCH_SITES=	http://www.NetBSD.org/~dholland/patchkits/nbtscan/
+PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.inetcat.net/software/nbtscan.html
