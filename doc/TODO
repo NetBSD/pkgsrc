@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13848 2014/11/23 12:21:13 mef Exp $
+$NetBSD: TODO,v 1.13849 2014/11/23 12:23:14 mef Exp $
 
 Suggested new packages
 ======================
@@ -846,7 +846,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o olvwm-4.5
 	o oo2c-2.1.7
 	o opal-3.8.0 [pkg/42942]
-	o opal-3.8.3
+	o opal-3.10.10
 	o open-vm-tools-2010.09.19.301124
 	o openmortal-0.7.1
 	o openmpi-1.8.1
