@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.196 2014/10/23 23:41:32 fhajny Exp $
+# $NetBSD: Makefile,v 1.197 2014/11/23 14:38:34 gson Exp $
 
 DISTNAME=	netpbm-10.67.05
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	#
 # manually created from svn checkout of
