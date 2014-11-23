@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4408 2014/11/23 12:21:13 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4409 2014/11/23 12:36:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5777,3 +5777,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated comms/py-gammu to 1.33.0 [mef 2014-11-23]
 	Updated comms/openobex to 1.7.1 [mef 2014-11-23]
 	Updated devel/libusbx to 1.0.18 [mef 2014-11-23]
+	Updated archivers/libunrar to 5.2.2 [adam 2014-11-23]
+	Updated archivers/unrar to 5.2.2 [adam 2014-11-23]
