@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4423 2014/11/23 13:46:55 prlw1 Exp $
+$NetBSD: CHANGES-2014,v 1.4424 2014/11/23 13:57:30 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5793,3 +5793,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated ham/fldigi to 3.22.01 [mef 2014-11-23]
 	Updated databases/p5-DBIx-Class-Schema-Loader to 0.07042 [wen 2014-11-23]
 	Updated x11/gtksourceview3 to 3.14.2 [prlw1 2014-11-23]
+	Updated editors/gedit3 to 3.14.1 [prlw1 2014-11-23]
