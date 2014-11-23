@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4418 2014/11/23 13:06:48 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4419 2014/11/23 13:17:32 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5788,3 +5788,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/p5-DateTime-TimeZone to 1.81 [wiz 2014-11-23]
 	Updated devel/p5-CPAN-Meta-Requirements to 2.130 [wiz 2014-11-23]
 	Updated security/p5-IO-Socket-SSL to 2.006 [wiz 2014-11-23]
+	Updated devel/ProjectCenter to 0.6.2 [mef 2014-11-23]
