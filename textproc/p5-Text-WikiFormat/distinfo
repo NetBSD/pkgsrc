@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2013/01/23 10:29:20 rhaen Exp $
+$NetBSD: distinfo,v 1.6 2014/11/23 14:44:01 schmonz Exp $
 
-SHA1 (Text-WikiFormat-0.80.tar.gz) = c3e7fdd7c29570d23bd913f83bbf9472e5d73f57
-RMD160 (Text-WikiFormat-0.80.tar.gz) = 90422a58645e8bf5911b46ef992794b0082641ca
-Size (Text-WikiFormat-0.80.tar.gz) = 28845 bytes
+SHA1 (Text-WikiFormat-0.81.tar.gz) = 41a5d961919c6104b85af04d833d5ede52edb489
+RMD160 (Text-WikiFormat-0.81.tar.gz) = fea36f200cb04eddda7299de2391667e25821a6a
+Size (Text-WikiFormat-0.81.tar.gz) = 34409 bytes
