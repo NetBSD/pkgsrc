@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2014/10/18 21:28:58 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2014/11/23 12:52:31 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-aeson
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-aeson
 HS_AESON_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-aeson+=	hs-aeson>=0.7.0
-BUILDLINK_ABI_DEPENDS.hs-aeson+=	hs-aeson>=0.7.0.6nb2
+BUILDLINK_ABI_DEPENDS.hs-aeson+=	hs-aeson>=0.7.0.6nb3
 BUILDLINK_PKGSRCDIR.hs-aeson?=	../../converters/hs-aeson
 
 .include "../../textproc/hs-attoparsec/buildlink3.mk"
