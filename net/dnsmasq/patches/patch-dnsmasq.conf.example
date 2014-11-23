@@ -1,0 +1,15 @@
+$NetBSD: patch-dnsmasq.conf.example,v 1.1 2014/11/23 13:10:03 cheusov Exp $
+
+--- dnsmasq.conf.example.orig	2013-10-25 09:37:30.000000000 +0000
++++ dnsmasq.conf.example
+@@ -84,8 +84,8 @@
+ 
+ # If you want dnsmasq to change uid and gid to something other
+ # than the default, edit the following lines.
+-#user=
+-#group=
++#user=dnsmasq
++#group=dnsmasq
+ 
+ # If you want dnsmasq to listen for DHCP and DNS requests only on
+ # specified interfaces (and the loopback) give the name of the
