@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13844 2014/11/22 04:15:14 mef Exp $
+$NetBSD: TODO,v 1.13845 2014/11/23 06:05:48 mef Exp $
 
 Suggested new packages
 ======================
@@ -390,7 +390,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o asymptote-2.32
 	o aterm-1.0.1
 	o aubio-0.4.0
-	o auctex-11.88
 	o audacity-2.0.5 [wip (audacity-devel)]
 	o autoconf-archive-20141015
 	o autoconvert-0.3.16
