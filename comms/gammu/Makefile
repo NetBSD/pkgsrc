@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2014/02/12 23:17:38 tron Exp $
+# $NetBSD: Makefile,v 1.12 2014/11/23 09:45:57 mef Exp $
 #
 
 .include "Makefile.common"
-PKGREVISION=	5
 
 COMMENT=	Command line utility and library to work with mobile phones
 
@@ -24,6 +23,10 @@ CMAKE_ARGS+=	-DWITH_LibDBI:BOOL=OFF
 CMAKE_ARGS+=	-DBASH_BIN:FILEPATH=
 #CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
 
+# silence warning
+CMAKE_ARGS+=    -Wno-dev
+CMAKE_ARGS+=    -DINSTALL_DOC=ON
+
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash:run msgfmt
 REPLACE_BASH=	utils/gammu-config utils/jadmaker
@@ -32,6 +35,10 @@ REPLACE_BASH=	utils/gammu-config utils/jadmaker
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
 LDFLAGS.SunOS+=	-lintl
+
+# Remove garbage under PaxHeaders.* directory
+post-install:
+	(cd ${DESTDIR}${PREFIX}/share/doc/gammu/manual; ${RM} -r */PaxHeaders*)
 
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
