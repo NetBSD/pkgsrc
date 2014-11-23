@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.21 2014/11/23 13:29:43 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.22 2014/11/23 23:29:16 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q3 branch:
@@ -86,5 +86,8 @@ Pullup ticket #4551 - requested by taca
 lang/php55: security update
 Pullup ticket #4552 - requested by taca
 www/ruby-rails32: security update
-Pullup ticket #4553 - requested by dholland
-shells/bash: build fix
+Pullup ticket #4543 - requested by tron
+net/wireshark: security update
+Pullup ticket #4554 - requested by tron
+databases/phpmyadmin: security update
+
