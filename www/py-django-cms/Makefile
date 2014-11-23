@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2014/08/24 08:04:18 adam Exp $
+# $NetBSD: Makefile,v 1.25 2014/11/23 14:07:47 adam Exp $
 
-DISTNAME=	django-cms-3.0.5
+DISTNAME=	django-cms-3.0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	http://pypi.python.org/packages/source/d/django-cms/
@@ -25,10 +25,6 @@ EGG_NAME=		${DISTNAME:S/-/_/}
 USE_LANGUAGES=		# empty
 
 REPLACE_SH=	cms/static/cms/js/select2/release.sh
-
-# XXX remove garbage
-post-extract:
-	find ${WRKSRC} -name .DS_Store | xargs rm
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
