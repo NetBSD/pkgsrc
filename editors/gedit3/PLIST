@@ -1,32 +1,32 @@
-@comment $NetBSD: PLIST,v 1.3 2014/02/12 01:49:10 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/11/23 13:57:02 prlw1 Exp $
 bin/gedit
 bin/gnome-text-editor
-include/gedit-3.0/gedit/gedit-app-activatable.h
-include/gedit-3.0/gedit/gedit-app.h
-include/gedit-3.0/gedit/gedit-commands.h
-include/gedit-3.0/gedit/gedit-debug.h
-include/gedit-3.0/gedit/gedit-document.h
-include/gedit-3.0/gedit/gedit-encodings-combo-box.h
-include/gedit-3.0/gedit/gedit-encodings.h
-include/gedit-3.0/gedit/gedit-message-bus.h
-include/gedit-3.0/gedit/gedit-message.h
-include/gedit-3.0/gedit/gedit-panel.h
-include/gedit-3.0/gedit/gedit-progress-info-bar.h
-include/gedit-3.0/gedit/gedit-statusbar.h
-include/gedit-3.0/gedit/gedit-tab.h
-include/gedit-3.0/gedit/gedit-utils.h
-include/gedit-3.0/gedit/gedit-view-activatable.h
-include/gedit-3.0/gedit/gedit-view.h
-include/gedit-3.0/gedit/gedit-window-activatable.h
-include/gedit-3.0/gedit/gedit-window.h
+include/gedit-3.12/gedit/gedit-app-activatable.h
+include/gedit-3.12/gedit/gedit-app.h
+include/gedit-3.12/gedit/gedit-commands.h
+include/gedit-3.12/gedit/gedit-debug.h
+include/gedit-3.12/gedit/gedit-document.h
+include/gedit-3.12/gedit/gedit-encodings-combo-box.h
+include/gedit-3.12/gedit/gedit-menu-extension.h
+include/gedit-3.12/gedit/gedit-message-bus.h
+include/gedit-3.12/gedit/gedit-message.h
+include/gedit-3.12/gedit/gedit-progress-info-bar.h
+include/gedit-3.12/gedit/gedit-statusbar.h
+include/gedit-3.12/gedit/gedit-tab.h
+include/gedit-3.12/gedit/gedit-utils.h
+include/gedit-3.12/gedit/gedit-view-activatable.h
+include/gedit-3.12/gedit/gedit-view.h
+include/gedit-3.12/gedit/gedit-window-activatable.h
+include/gedit-3.12/gedit/gedit-window.h
 lib/gedit/girepository-1.0/Gedit-3.0.typelib
-lib/gedit/libgedit-private.la
-lib/gedit/plugins/changecase.plugin
+lib/gedit/libgedit.la
 lib/gedit/plugins/docinfo.plugin
 lib/gedit/plugins/externaltools.plugin
 lib/gedit/plugins/externaltools/__init__.py
 lib/gedit/plugins/externaltools/__init__.pyc
 lib/gedit/plugins/externaltools/__init__.pyo
+lib/gedit/plugins/externaltools/appactivatable.pyc
+lib/gedit/plugins/externaltools/appactivatable.pyo
 lib/gedit/plugins/externaltools/capture.pyc
 lib/gedit/plugins/externaltools/capture.pyo
 lib/gedit/plugins/externaltools/filelookup.pyc
@@ -43,6 +43,7 @@ lib/gedit/plugins/externaltools/outputpanel.pyc
 lib/gedit/plugins/externaltools/outputpanel.pyo
 lib/gedit/plugins/externaltools/windowactivatable.pyc
 lib/gedit/plugins/externaltools/windowactivatable.pyo
+lib/gedit/plugins/externaltools/appactivatable.py
 lib/gedit/plugins/externaltools/capture.py
 lib/gedit/plugins/externaltools/filelookup.py
 lib/gedit/plugins/externaltools/functions.py
@@ -52,7 +53,6 @@ lib/gedit/plugins/externaltools/manager.py
 lib/gedit/plugins/externaltools/outputpanel.py
 lib/gedit/plugins/externaltools/windowactivatable.py
 lib/gedit/plugins/filebrowser.plugin
-lib/gedit/plugins/libchangecase.la
 lib/gedit/plugins/libdocinfo.la
 lib/gedit/plugins/libfilebrowser.la
 lib/gedit/plugins/libmodelines.la
@@ -143,8 +143,8 @@ ${PYSITELIB}/gi/overrides/Gedit.pyo
 libexec/gedit/gedit-bugreport.sh
 man/man1/gedit.1
 share/GConf/gsettings/gedit.convert
-share/appdata/gedit.appdata.xml
-share/applications/gedit.desktop
+share/appdata/org.gnome.gedit.appdata.xml
+share/applications/org.gnome.gedit.desktop
 share/dbus-1/services/org.gnome.gedit.service
 share/gedit/gir-1.0/Gedit-3.0.gir
 share/gedit/logo/gedit-logo.png
@@ -152,6 +152,7 @@ share/gedit/plugins/externaltools/tools/build
 share/gedit/plugins/externaltools/tools/open-terminal-here
 share/gedit/plugins/externaltools/tools/remove-trailing-spaces
 share/gedit/plugins/externaltools/tools/run-command
+share/gedit/plugins/externaltools/tools/send-to-fpaste
 share/gedit/plugins/externaltools/ui/outputpanel.ui
 share/gedit/plugins/externaltools/ui/tools.ui
 share/gedit/plugins/modelines/language-mappings
@@ -195,18 +196,17 @@ share/gtk-doc/html/gedit/GeditMessage.html
 share/gtk-doc/html/gedit/GeditMessageBus.html
 share/gtk-doc/html/gedit/GeditViewActivatable.html
 share/gtk-doc/html/gedit/GeditWindowActivatable.html
+share/gtk-doc/html/gedit/annotation-glossary.html
+share/gtk-doc/html/gedit/api-index-3-14.html
+share/gtk-doc/html/gedit/api-index-deprecated.html
+share/gtk-doc/html/gedit/api-index-full.html
 share/gtk-doc/html/gedit/ch01.html
-share/gtk-doc/html/gedit/gedit-GeditMessageType.html
-share/gtk-doc/html/gedit/gedit-GeditPrintJob.html
+share/gtk-doc/html/gedit/gedit-GeditCommands.html
 share/gtk-doc/html/gedit/gedit-gedit-app.html
 share/gtk-doc/html/gedit/gedit-gedit-debug.html
 share/gtk-doc/html/gedit/gedit-gedit-document.html
 share/gtk-doc/html/gedit/gedit-gedit-encodings-combo-box.html
-share/gtk-doc/html/gedit/gedit-gedit-encodings.html
-share/gtk-doc/html/gedit/gedit-gedit-file-chooser-dialog.html
-share/gtk-doc/html/gedit/gedit-gedit-help.html
-share/gtk-doc/html/gedit/gedit-gedit-panel.html
-share/gtk-doc/html/gedit/gedit-gedit-print-job-preview.html
+share/gtk-doc/html/gedit/gedit-gedit-menu-extension.html
 share/gtk-doc/html/gedit/gedit-gedit-progress-info-bar.html
 share/gtk-doc/html/gedit/gedit-gedit-statusbar.html
 share/gtk-doc/html/gedit/gedit-gedit-tab.html
@@ -219,6 +219,7 @@ share/gtk-doc/html/gedit/index.html
 share/gtk-doc/html/gedit/index.sgml
 share/gtk-doc/html/gedit/left-insensitive.png
 share/gtk-doc/html/gedit/left.png
+share/gtk-doc/html/gedit/object-tree.html
 share/gtk-doc/html/gedit/right-insensitive.png
 share/gtk-doc/html/gedit/right.png
 share/gtk-doc/html/gedit/style.css
@@ -255,7 +256,6 @@ share/help/C/gedit/gedit-plugins-pyconsole.page
 share/help/C/gedit/gedit-plugins-quick-open.page
 share/help/C/gedit/gedit-plugins-snippets.page
 share/help/C/gedit/gedit-plugins-sort.page
-share/help/C/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/C/gedit/gedit-printing-order.page
 share/help/C/gedit/gedit-printing-select.page
 share/help/C/gedit/gedit-printing.page
@@ -266,6 +266,7 @@ share/help/C/gedit/gedit-search.page
 share/help/C/gedit/gedit-shortcut-keys.page
 share/help/C/gedit/gedit-spellcheck.page
 share/help/C/gedit/gedit-syntax-highlighting.page
+share/help/C/gedit/gedit-tab-groups.page
 share/help/C/gedit/gedit-tabs-moving.page
 share/help/C/gedit/gedit-tabs.page
 share/help/C/gedit/gedit-undo-recent-action.page
@@ -303,7 +304,6 @@ share/help/ar/gedit/gedit-plugins-pyconsole.page
 share/help/ar/gedit/gedit-plugins-quick-open.page
 share/help/ar/gedit/gedit-plugins-snippets.page
 share/help/ar/gedit/gedit-plugins-sort.page
-share/help/ar/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/ar/gedit/gedit-printing-order.page
 share/help/ar/gedit/gedit-printing-select.page
 share/help/ar/gedit/gedit-printing.page
@@ -314,6 +314,7 @@ share/help/ar/gedit/gedit-search.page
 share/help/ar/gedit/gedit-shortcut-keys.page
 share/help/ar/gedit/gedit-spellcheck.page
 share/help/ar/gedit/gedit-syntax-highlighting.page
+share/help/ar/gedit/gedit-tab-groups.page
 share/help/ar/gedit/gedit-tabs-moving.page
 share/help/ar/gedit/gedit-tabs.page
 share/help/ar/gedit/gedit-undo-recent-action.page
@@ -351,7 +352,6 @@ share/help/bg/gedit/gedit-plugins-pyconsole.page
 share/help/bg/gedit/gedit-plugins-quick-open.page
 share/help/bg/gedit/gedit-plugins-snippets.page
 share/help/bg/gedit/gedit-plugins-sort.page
-share/help/bg/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/bg/gedit/gedit-printing-order.page
 share/help/bg/gedit/gedit-printing-select.page
 share/help/bg/gedit/gedit-printing.page
@@ -362,6 +362,7 @@ share/help/bg/gedit/gedit-search.page
 share/help/bg/gedit/gedit-shortcut-keys.page
 share/help/bg/gedit/gedit-spellcheck.page
 share/help/bg/gedit/gedit-syntax-highlighting.page
+share/help/bg/gedit/gedit-tab-groups.page
 share/help/bg/gedit/gedit-tabs-moving.page
 share/help/bg/gedit/gedit-tabs.page
 share/help/bg/gedit/gedit-undo-recent-action.page
@@ -399,7 +400,6 @@ share/help/ca/gedit/gedit-plugins-pyconsole.page
 share/help/ca/gedit/gedit-plugins-quick-open.page
 share/help/ca/gedit/gedit-plugins-snippets.page
 share/help/ca/gedit/gedit-plugins-sort.page
-share/help/ca/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/ca/gedit/gedit-printing-order.page
 share/help/ca/gedit/gedit-printing-select.page
 share/help/ca/gedit/gedit-printing.page
@@ -410,6 +410,7 @@ share/help/ca/gedit/gedit-search.page
 share/help/ca/gedit/gedit-shortcut-keys.page
 share/help/ca/gedit/gedit-spellcheck.page
 share/help/ca/gedit/gedit-syntax-highlighting.page
+share/help/ca/gedit/gedit-tab-groups.page
 share/help/ca/gedit/gedit-tabs-moving.page
 share/help/ca/gedit/gedit-tabs.page
 share/help/ca/gedit/gedit-undo-recent-action.page
@@ -447,7 +448,6 @@ share/help/cs/gedit/gedit-plugins-pyconsole.page
 share/help/cs/gedit/gedit-plugins-quick-open.page
 share/help/cs/gedit/gedit-plugins-snippets.page
 share/help/cs/gedit/gedit-plugins-sort.page
-share/help/cs/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/cs/gedit/gedit-printing-order.page
 share/help/cs/gedit/gedit-printing-select.page
 share/help/cs/gedit/gedit-printing.page
@@ -458,6 +458,7 @@ share/help/cs/gedit/gedit-search.page
 share/help/cs/gedit/gedit-shortcut-keys.page
 share/help/cs/gedit/gedit-spellcheck.page
 share/help/cs/gedit/gedit-syntax-highlighting.page
+share/help/cs/gedit/gedit-tab-groups.page
 share/help/cs/gedit/gedit-tabs-moving.page
 share/help/cs/gedit/gedit-tabs.page
 share/help/cs/gedit/gedit-undo-recent-action.page
@@ -495,7 +496,6 @@ share/help/da/gedit/gedit-plugins-pyconsole.page
 share/help/da/gedit/gedit-plugins-quick-open.page
 share/help/da/gedit/gedit-plugins-snippets.page
 share/help/da/gedit/gedit-plugins-sort.page
-share/help/da/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/da/gedit/gedit-printing-order.page
 share/help/da/gedit/gedit-printing-select.page
 share/help/da/gedit/gedit-printing.page
@@ -506,6 +506,7 @@ share/help/da/gedit/gedit-search.page
 share/help/da/gedit/gedit-shortcut-keys.page
 share/help/da/gedit/gedit-spellcheck.page
 share/help/da/gedit/gedit-syntax-highlighting.page
+share/help/da/gedit/gedit-tab-groups.page
 share/help/da/gedit/gedit-tabs-moving.page
 share/help/da/gedit/gedit-tabs.page
 share/help/da/gedit/gedit-undo-recent-action.page
@@ -543,7 +544,6 @@ share/help/de/gedit/gedit-plugins-pyconsole.page
 share/help/de/gedit/gedit-plugins-quick-open.page
 share/help/de/gedit/gedit-plugins-snippets.page
 share/help/de/gedit/gedit-plugins-sort.page
-share/help/de/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/de/gedit/gedit-printing-order.page
 share/help/de/gedit/gedit-printing-select.page
 share/help/de/gedit/gedit-printing.page
@@ -554,6 +554,7 @@ share/help/de/gedit/gedit-search.page
 share/help/de/gedit/gedit-shortcut-keys.page
 share/help/de/gedit/gedit-spellcheck.page
 share/help/de/gedit/gedit-syntax-highlighting.page
+share/help/de/gedit/gedit-tab-groups.page
 share/help/de/gedit/gedit-tabs-moving.page
 share/help/de/gedit/gedit-tabs.page
 share/help/de/gedit/gedit-undo-recent-action.page
@@ -591,7 +592,6 @@ share/help/el/gedit/gedit-plugins-pyconsole.page
 share/help/el/gedit/gedit-plugins-quick-open.page
 share/help/el/gedit/gedit-plugins-snippets.page
 share/help/el/gedit/gedit-plugins-sort.page
-share/help/el/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/el/gedit/gedit-printing-order.page
 share/help/el/gedit/gedit-printing-select.page
 share/help/el/gedit/gedit-printing.page
@@ -602,6 +602,7 @@ share/help/el/gedit/gedit-search.page
 share/help/el/gedit/gedit-shortcut-keys.page
 share/help/el/gedit/gedit-spellcheck.page
 share/help/el/gedit/gedit-syntax-highlighting.page
+share/help/el/gedit/gedit-tab-groups.page
 share/help/el/gedit/gedit-tabs-moving.page
 share/help/el/gedit/gedit-tabs.page
 share/help/el/gedit/gedit-undo-recent-action.page
@@ -639,7 +640,6 @@ share/help/es/gedit/gedit-plugins-pyconsole.page
 share/help/es/gedit/gedit-plugins-quick-open.page
 share/help/es/gedit/gedit-plugins-snippets.page
 share/help/es/gedit/gedit-plugins-sort.page
-share/help/es/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/es/gedit/gedit-printing-order.page
 share/help/es/gedit/gedit-printing-select.page
 share/help/es/gedit/gedit-printing.page
@@ -650,6 +650,7 @@ share/help/es/gedit/gedit-search.page
 share/help/es/gedit/gedit-shortcut-keys.page
 share/help/es/gedit/gedit-spellcheck.page
 share/help/es/gedit/gedit-syntax-highlighting.page
+share/help/es/gedit/gedit-tab-groups.page
 share/help/es/gedit/gedit-tabs-moving.page
 share/help/es/gedit/gedit-tabs.page
 share/help/es/gedit/gedit-undo-recent-action.page
@@ -687,7 +688,6 @@ share/help/eu/gedit/gedit-plugins-pyconsole.page
 share/help/eu/gedit/gedit-plugins-quick-open.page
 share/help/eu/gedit/gedit-plugins-snippets.page
 share/help/eu/gedit/gedit-plugins-sort.page
-share/help/eu/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/eu/gedit/gedit-printing-order.page
 share/help/eu/gedit/gedit-printing-select.page
 share/help/eu/gedit/gedit-printing.page
@@ -698,6 +698,7 @@ share/help/eu/gedit/gedit-search.page
 share/help/eu/gedit/gedit-shortcut-keys.page
 share/help/eu/gedit/gedit-spellcheck.page
 share/help/eu/gedit/gedit-syntax-highlighting.page
+share/help/eu/gedit/gedit-tab-groups.page
 share/help/eu/gedit/gedit-tabs-moving.page
 share/help/eu/gedit/gedit-tabs.page
 share/help/eu/gedit/gedit-undo-recent-action.page
@@ -735,7 +736,6 @@ share/help/fi/gedit/gedit-plugins-pyconsole.page
 share/help/fi/gedit/gedit-plugins-quick-open.page
 share/help/fi/gedit/gedit-plugins-snippets.page
 share/help/fi/gedit/gedit-plugins-sort.page
-share/help/fi/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/fi/gedit/gedit-printing-order.page
 share/help/fi/gedit/gedit-printing-select.page
 share/help/fi/gedit/gedit-printing.page
@@ -746,6 +746,7 @@ share/help/fi/gedit/gedit-search.page
 share/help/fi/gedit/gedit-shortcut-keys.page
 share/help/fi/gedit/gedit-spellcheck.page
 share/help/fi/gedit/gedit-syntax-highlighting.page
+share/help/fi/gedit/gedit-tab-groups.page
 share/help/fi/gedit/gedit-tabs-moving.page
 share/help/fi/gedit/gedit-tabs.page
 share/help/fi/gedit/gedit-undo-recent-action.page
@@ -783,7 +784,6 @@ share/help/fr/gedit/gedit-plugins-pyconsole.page
 share/help/fr/gedit/gedit-plugins-quick-open.page
 share/help/fr/gedit/gedit-plugins-snippets.page
 share/help/fr/gedit/gedit-plugins-sort.page
-share/help/fr/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/fr/gedit/gedit-printing-order.page
 share/help/fr/gedit/gedit-printing-select.page
 share/help/fr/gedit/gedit-printing.page
@@ -794,6 +794,7 @@ share/help/fr/gedit/gedit-search.page
 share/help/fr/gedit/gedit-shortcut-keys.page
 share/help/fr/gedit/gedit-spellcheck.page
 share/help/fr/gedit/gedit-syntax-highlighting.page
+share/help/fr/gedit/gedit-tab-groups.page
 share/help/fr/gedit/gedit-tabs-moving.page
 share/help/fr/gedit/gedit-tabs.page
 share/help/fr/gedit/gedit-undo-recent-action.page
@@ -831,7 +832,6 @@ share/help/gl/gedit/gedit-plugins-pyconsole.page
 share/help/gl/gedit/gedit-plugins-quick-open.page
 share/help/gl/gedit/gedit-plugins-snippets.page
 share/help/gl/gedit/gedit-plugins-sort.page
-share/help/gl/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/gl/gedit/gedit-printing-order.page
 share/help/gl/gedit/gedit-printing-select.page
 share/help/gl/gedit/gedit-printing.page
@@ -842,6 +842,7 @@ share/help/gl/gedit/gedit-search.page
 share/help/gl/gedit/gedit-shortcut-keys.page
 share/help/gl/gedit/gedit-spellcheck.page
 share/help/gl/gedit/gedit-syntax-highlighting.page
+share/help/gl/gedit/gedit-tab-groups.page
 share/help/gl/gedit/gedit-tabs-moving.page
 share/help/gl/gedit/gedit-tabs.page
 share/help/gl/gedit/gedit-undo-recent-action.page
@@ -879,7 +880,6 @@ share/help/hu/gedit/gedit-plugins-pyconsole.page
 share/help/hu/gedit/gedit-plugins-quick-open.page
 share/help/hu/gedit/gedit-plugins-snippets.page
 share/help/hu/gedit/gedit-plugins-sort.page
-share/help/hu/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/hu/gedit/gedit-printing-order.page
 share/help/hu/gedit/gedit-printing-select.page
 share/help/hu/gedit/gedit-printing.page
@@ -890,6 +890,7 @@ share/help/hu/gedit/gedit-search.page
 share/help/hu/gedit/gedit-shortcut-keys.page
 share/help/hu/gedit/gedit-spellcheck.page
 share/help/hu/gedit/gedit-syntax-highlighting.page
+share/help/hu/gedit/gedit-tab-groups.page
 share/help/hu/gedit/gedit-tabs-moving.page
 share/help/hu/gedit/gedit-tabs.page
 share/help/hu/gedit/gedit-undo-recent-action.page
@@ -927,7 +928,6 @@ share/help/id/gedit/gedit-plugins-pyconsole.page
 share/help/id/gedit/gedit-plugins-quick-open.page
 share/help/id/gedit/gedit-plugins-snippets.page
 share/help/id/gedit/gedit-plugins-sort.page
-share/help/id/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/id/gedit/gedit-printing-order.page
 share/help/id/gedit/gedit-printing-select.page
 share/help/id/gedit/gedit-printing.page
@@ -938,6 +938,7 @@ share/help/id/gedit/gedit-search.page
 share/help/id/gedit/gedit-shortcut-keys.page
 share/help/id/gedit/gedit-spellcheck.page
 share/help/id/gedit/gedit-syntax-highlighting.page
+share/help/id/gedit/gedit-tab-groups.page
 share/help/id/gedit/gedit-tabs-moving.page
 share/help/id/gedit/gedit-tabs.page
 share/help/id/gedit/gedit-undo-recent-action.page
@@ -975,7 +976,6 @@ share/help/it/gedit/gedit-plugins-pyconsole.page
 share/help/it/gedit/gedit-plugins-quick-open.page
 share/help/it/gedit/gedit-plugins-snippets.page
 share/help/it/gedit/gedit-plugins-sort.page
-share/help/it/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/it/gedit/gedit-printing-order.page
 share/help/it/gedit/gedit-printing-select.page
 share/help/it/gedit/gedit-printing.page
@@ -986,6 +986,7 @@ share/help/it/gedit/gedit-search.page
 share/help/it/gedit/gedit-shortcut-keys.page
 share/help/it/gedit/gedit-spellcheck.page
 share/help/it/gedit/gedit-syntax-highlighting.page
+share/help/it/gedit/gedit-tab-groups.page
 share/help/it/gedit/gedit-tabs-moving.page
 share/help/it/gedit/gedit-tabs.page
 share/help/it/gedit/gedit-undo-recent-action.page
@@ -1023,7 +1024,6 @@ share/help/ja/gedit/gedit-plugins-pyconsole.page
 share/help/ja/gedit/gedit-plugins-quick-open.page
 share/help/ja/gedit/gedit-plugins-snippets.page
 share/help/ja/gedit/gedit-plugins-sort.page
-share/help/ja/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/ja/gedit/gedit-printing-order.page
 share/help/ja/gedit/gedit-printing-select.page
 share/help/ja/gedit/gedit-printing.page
@@ -1034,6 +1034,7 @@ share/help/ja/gedit/gedit-search.page
 share/help/ja/gedit/gedit-shortcut-keys.page
 share/help/ja/gedit/gedit-spellcheck.page
 share/help/ja/gedit/gedit-syntax-highlighting.page
+share/help/ja/gedit/gedit-tab-groups.page
 share/help/ja/gedit/gedit-tabs-moving.page
 share/help/ja/gedit/gedit-tabs.page
 share/help/ja/gedit/gedit-undo-recent-action.page
@@ -1071,7 +1072,6 @@ share/help/ko/gedit/gedit-plugins-pyconsole.page
 share/help/ko/gedit/gedit-plugins-quick-open.page
 share/help/ko/gedit/gedit-plugins-snippets.page
 share/help/ko/gedit/gedit-plugins-sort.page
-share/help/ko/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/ko/gedit/gedit-printing-order.page
 share/help/ko/gedit/gedit-printing-select.page
 share/help/ko/gedit/gedit-printing.page
@@ -1082,6 +1082,7 @@ share/help/ko/gedit/gedit-search.page
 share/help/ko/gedit/gedit-shortcut-keys.page
 share/help/ko/gedit/gedit-spellcheck.page
 share/help/ko/gedit/gedit-syntax-highlighting.page
+share/help/ko/gedit/gedit-tab-groups.page
 share/help/ko/gedit/gedit-tabs-moving.page
 share/help/ko/gedit/gedit-tabs.page
 share/help/ko/gedit/gedit-undo-recent-action.page
@@ -1119,7 +1120,6 @@ share/help/lv/gedit/gedit-plugins-pyconsole.page
 share/help/lv/gedit/gedit-plugins-quick-open.page
 share/help/lv/gedit/gedit-plugins-snippets.page
 share/help/lv/gedit/gedit-plugins-sort.page
-share/help/lv/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/lv/gedit/gedit-printing-order.page
 share/help/lv/gedit/gedit-printing-select.page
 share/help/lv/gedit/gedit-printing.page
@@ -1130,6 +1130,7 @@ share/help/lv/gedit/gedit-search.page
 share/help/lv/gedit/gedit-shortcut-keys.page
 share/help/lv/gedit/gedit-spellcheck.page
 share/help/lv/gedit/gedit-syntax-highlighting.page
+share/help/lv/gedit/gedit-tab-groups.page
 share/help/lv/gedit/gedit-tabs-moving.page
 share/help/lv/gedit/gedit-tabs.page
 share/help/lv/gedit/gedit-undo-recent-action.page
@@ -1167,7 +1168,6 @@ share/help/oc/gedit/gedit-plugins-pyconsole.page
 share/help/oc/gedit/gedit-plugins-quick-open.page
 share/help/oc/gedit/gedit-plugins-snippets.page
 share/help/oc/gedit/gedit-plugins-sort.page
-share/help/oc/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/oc/gedit/gedit-printing-order.page
 share/help/oc/gedit/gedit-printing-select.page
 share/help/oc/gedit/gedit-printing.page
@@ -1178,6 +1178,7 @@ share/help/oc/gedit/gedit-search.page
 share/help/oc/gedit/gedit-shortcut-keys.page
 share/help/oc/gedit/gedit-spellcheck.page
 share/help/oc/gedit/gedit-syntax-highlighting.page
+share/help/oc/gedit/gedit-tab-groups.page
 share/help/oc/gedit/gedit-tabs-moving.page
 share/help/oc/gedit/gedit-tabs.page
 share/help/oc/gedit/gedit-undo-recent-action.page
@@ -1215,7 +1216,6 @@ share/help/pt_BR/gedit/gedit-plugins-pyconsole.page
 share/help/pt_BR/gedit/gedit-plugins-quick-open.page
 share/help/pt_BR/gedit/gedit-plugins-snippets.page
 share/help/pt_BR/gedit/gedit-plugins-sort.page
-share/help/pt_BR/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/pt_BR/gedit/gedit-printing-order.page
 share/help/pt_BR/gedit/gedit-printing-select.page
 share/help/pt_BR/gedit/gedit-printing.page
@@ -1226,6 +1226,7 @@ share/help/pt_BR/gedit/gedit-search.page
 share/help/pt_BR/gedit/gedit-shortcut-keys.page
 share/help/pt_BR/gedit/gedit-spellcheck.page
 share/help/pt_BR/gedit/gedit-syntax-highlighting.page
+share/help/pt_BR/gedit/gedit-tab-groups.page
 share/help/pt_BR/gedit/gedit-tabs-moving.page
 share/help/pt_BR/gedit/gedit-tabs.page
 share/help/pt_BR/gedit/gedit-undo-recent-action.page
@@ -1263,7 +1264,6 @@ share/help/ru/gedit/gedit-plugins-pyconsole.page
 share/help/ru/gedit/gedit-plugins-quick-open.page
 share/help/ru/gedit/gedit-plugins-snippets.page
 share/help/ru/gedit/gedit-plugins-sort.page
-share/help/ru/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/ru/gedit/gedit-printing-order.page
 share/help/ru/gedit/gedit-printing-select.page
 share/help/ru/gedit/gedit-printing.page
@@ -1274,6 +1274,7 @@ share/help/ru/gedit/gedit-search.page
 share/help/ru/gedit/gedit-shortcut-keys.page
 share/help/ru/gedit/gedit-spellcheck.page
 share/help/ru/gedit/gedit-syntax-highlighting.page
+share/help/ru/gedit/gedit-tab-groups.page
 share/help/ru/gedit/gedit-tabs-moving.page
 share/help/ru/gedit/gedit-tabs.page
 share/help/ru/gedit/gedit-undo-recent-action.page
@@ -1311,7 +1312,6 @@ share/help/sl/gedit/gedit-plugins-pyconsole.page
 share/help/sl/gedit/gedit-plugins-quick-open.page
 share/help/sl/gedit/gedit-plugins-snippets.page
 share/help/sl/gedit/gedit-plugins-sort.page
-share/help/sl/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/sl/gedit/gedit-printing-order.page
 share/help/sl/gedit/gedit-printing-select.page
 share/help/sl/gedit/gedit-printing.page
@@ -1322,6 +1322,7 @@ share/help/sl/gedit/gedit-search.page
 share/help/sl/gedit/gedit-shortcut-keys.page
 share/help/sl/gedit/gedit-spellcheck.page
 share/help/sl/gedit/gedit-syntax-highlighting.page
+share/help/sl/gedit/gedit-tab-groups.page
 share/help/sl/gedit/gedit-tabs-moving.page
 share/help/sl/gedit/gedit-tabs.page
 share/help/sl/gedit/gedit-undo-recent-action.page
@@ -1359,7 +1360,6 @@ share/help/sv/gedit/gedit-plugins-pyconsole.page
 share/help/sv/gedit/gedit-plugins-quick-open.page
 share/help/sv/gedit/gedit-plugins-snippets.page
 share/help/sv/gedit/gedit-plugins-sort.page
-share/help/sv/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/sv/gedit/gedit-printing-order.page
 share/help/sv/gedit/gedit-printing-select.page
 share/help/sv/gedit/gedit-printing.page
@@ -1370,6 +1370,7 @@ share/help/sv/gedit/gedit-search.page
 share/help/sv/gedit/gedit-shortcut-keys.page
 share/help/sv/gedit/gedit-spellcheck.page
 share/help/sv/gedit/gedit-syntax-highlighting.page
+share/help/sv/gedit/gedit-tab-groups.page
 share/help/sv/gedit/gedit-tabs-moving.page
 share/help/sv/gedit/gedit-tabs.page
 share/help/sv/gedit/gedit-undo-recent-action.page
@@ -1407,7 +1408,6 @@ share/help/te/gedit/gedit-plugins-pyconsole.page
 share/help/te/gedit/gedit-plugins-quick-open.page
 share/help/te/gedit/gedit-plugins-snippets.page
 share/help/te/gedit/gedit-plugins-sort.page
-share/help/te/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/te/gedit/gedit-printing-order.page
 share/help/te/gedit/gedit-printing-select.page
 share/help/te/gedit/gedit-printing.page
@@ -1418,6 +1418,7 @@ share/help/te/gedit/gedit-search.page
 share/help/te/gedit/gedit-shortcut-keys.page
 share/help/te/gedit/gedit-spellcheck.page
 share/help/te/gedit/gedit-syntax-highlighting.page
+share/help/te/gedit/gedit-tab-groups.page
 share/help/te/gedit/gedit-tabs-moving.page
 share/help/te/gedit/gedit-tabs.page
 share/help/te/gedit/gedit-undo-recent-action.page
@@ -1455,7 +1456,6 @@ share/help/th/gedit/gedit-plugins-pyconsole.page
 share/help/th/gedit/gedit-plugins-quick-open.page
 share/help/th/gedit/gedit-plugins-snippets.page
 share/help/th/gedit/gedit-plugins-sort.page
-share/help/th/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/th/gedit/gedit-printing-order.page
 share/help/th/gedit/gedit-printing-select.page
 share/help/th/gedit/gedit-printing.page
@@ -1466,6 +1466,7 @@ share/help/th/gedit/gedit-search.page
 share/help/th/gedit/gedit-shortcut-keys.page
 share/help/th/gedit/gedit-spellcheck.page
 share/help/th/gedit/gedit-syntax-highlighting.page
+share/help/th/gedit/gedit-tab-groups.page
 share/help/th/gedit/gedit-tabs-moving.page
 share/help/th/gedit/gedit-tabs.page
 share/help/th/gedit/gedit-undo-recent-action.page
@@ -1503,7 +1504,6 @@ share/help/uk/gedit/gedit-plugins-pyconsole.page
 share/help/uk/gedit/gedit-plugins-quick-open.page
 share/help/uk/gedit/gedit-plugins-snippets.page
 share/help/uk/gedit/gedit-plugins-sort.page
-share/help/uk/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/uk/gedit/gedit-printing-order.page
 share/help/uk/gedit/gedit-printing-select.page
 share/help/uk/gedit/gedit-printing.page
@@ -1514,6 +1514,7 @@ share/help/uk/gedit/gedit-search.page
 share/help/uk/gedit/gedit-shortcut-keys.page
 share/help/uk/gedit/gedit-spellcheck.page
 share/help/uk/gedit/gedit-syntax-highlighting.page
+share/help/uk/gedit/gedit-tab-groups.page
 share/help/uk/gedit/gedit-tabs-moving.page
 share/help/uk/gedit/gedit-tabs.page
 share/help/uk/gedit/gedit-undo-recent-action.page
@@ -1551,7 +1552,6 @@ share/help/zh_CN/gedit/gedit-plugins-pyconsole.page
 share/help/zh_CN/gedit/gedit-plugins-quick-open.page
 share/help/zh_CN/gedit/gedit-plugins-snippets.page
 share/help/zh_CN/gedit/gedit-plugins-sort.page
-share/help/zh_CN/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/zh_CN/gedit/gedit-printing-order.page
 share/help/zh_CN/gedit/gedit-printing-select.page
 share/help/zh_CN/gedit/gedit-printing.page
@@ -1562,6 +1562,7 @@ share/help/zh_CN/gedit/gedit-search.page
 share/help/zh_CN/gedit/gedit-shortcut-keys.page
 share/help/zh_CN/gedit/gedit-spellcheck.page
 share/help/zh_CN/gedit/gedit-syntax-highlighting.page
+share/help/zh_CN/gedit/gedit-tab-groups.page
 share/help/zh_CN/gedit/gedit-tabs-moving.page
 share/help/zh_CN/gedit/gedit-tabs.page
 share/help/zh_CN/gedit/gedit-undo-recent-action.page
@@ -1599,7 +1600,6 @@ share/help/zh_HK/gedit/gedit-plugins-pyconsole.page
 share/help/zh_HK/gedit/gedit-plugins-quick-open.page
 share/help/zh_HK/gedit/gedit-plugins-snippets.page
 share/help/zh_HK/gedit/gedit-plugins-sort.page
-share/help/zh_HK/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/zh_HK/gedit/gedit-printing-order.page
 share/help/zh_HK/gedit/gedit-printing-select.page
 share/help/zh_HK/gedit/gedit-printing.page
@@ -1610,6 +1610,7 @@ share/help/zh_HK/gedit/gedit-search.page
 share/help/zh_HK/gedit/gedit-shortcut-keys.page
 share/help/zh_HK/gedit/gedit-spellcheck.page
 share/help/zh_HK/gedit/gedit-syntax-highlighting.page
+share/help/zh_HK/gedit/gedit-tab-groups.page
 share/help/zh_HK/gedit/gedit-tabs-moving.page
 share/help/zh_HK/gedit/gedit-tabs.page
 share/help/zh_HK/gedit/gedit-undo-recent-action.page
@@ -1647,7 +1648,6 @@ share/help/zh_TW/gedit/gedit-plugins-pyconsole.page
 share/help/zh_TW/gedit/gedit-plugins-quick-open.page
 share/help/zh_TW/gedit/gedit-plugins-snippets.page
 share/help/zh_TW/gedit/gedit-plugins-sort.page
-share/help/zh_TW/gedit/gedit-plugins-zeitgeist-dataprovider.page
 share/help/zh_TW/gedit/gedit-printing-order.page
 share/help/zh_TW/gedit/gedit-printing-select.page
 share/help/zh_TW/gedit/gedit-printing.page
@@ -1658,6 +1658,7 @@ share/help/zh_TW/gedit/gedit-search.page
 share/help/zh_TW/gedit/gedit-shortcut-keys.page
 share/help/zh_TW/gedit/gedit-spellcheck.page
 share/help/zh_TW/gedit/gedit-syntax-highlighting.page
+share/help/zh_TW/gedit/gedit-tab-groups.page
 share/help/zh_TW/gedit/gedit-tabs-moving.page
 share/help/zh_TW/gedit/gedit-tabs.page
 share/help/zh_TW/gedit/gedit-undo-recent-action.page
