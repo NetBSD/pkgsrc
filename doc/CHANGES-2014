@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4421 2014/11/23 13:39:12 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4422 2014/11/23 13:41:40 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5791,3 +5791,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/ProjectCenter to 0.6.2 [mef 2014-11-23]
 	Updated databases/phpmyadmin to 4.2.12 [tron 2014-11-23]
 	Updated ham/fldigi to 3.22.01 [mef 2014-11-23]
+	Updated databases/p5-DBIx-Class-Schema-Loader to 0.07042 [wen 2014-11-23]
