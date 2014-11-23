@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2014/10/19 21:27:08 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.6 2014/11/23 12:52:33 szptvlfn Exp $
 
 DISTNAME=	network-2.5.0.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 
 MAINTAINER=	pho@cielonegro.org
