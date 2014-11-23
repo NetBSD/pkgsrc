@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2010/07/12 01:27:45 dholland Exp $
+@comment $NetBSD: PLIST,v 1.10 2014/11/23 05:59:45 mef Exp $
 share/doc/gnus/info/emacs-mime
 share/doc/gnus/info/gnus
 share/doc/gnus/info/gnus-1
@@ -10,13 +10,10 @@ share/doc/gnus/info/message
 share/doc/gnus/info/pgg
 share/doc/gnus/info/sieve
 share/gnus/gnus-tut.txt
-share/gnus/images/gnus/bar.xbm
-share/gnus/images/gnus/bar.xpm
 share/gnus/images/gnus/catchup.pbm
 share/gnus/images/gnus/catchup.xpm
 share/gnus/images/gnus/cu-exit.pbm
 share/gnus/images/gnus/cu-exit.xpm
-share/gnus/images/gnus/dead.xpm
 share/gnus/images/gnus/describe-group.pbm
 share/gnus/images/gnus/describe-group.xpm
 share/gnus/images/gnus/exit-gnus.pbm
@@ -104,6 +101,7 @@ share/gnus/images/gnus/kill-group.pbm
 share/gnus/images/gnus/kill-group.xpm
 share/gnus/images/gnus/mail-reply.pbm
 share/gnus/images/gnus/mail-reply.xpm
+share/gnus/images/gnus/mail-send.xpm
 share/gnus/images/gnus/next-ur.pbm
 share/gnus/images/gnus/next-ur.xpm
 share/gnus/images/gnus/post.pbm
@@ -117,7 +115,6 @@ share/gnus/images/gnus/reply-wo.pbm
 share/gnus/images/gnus/reply-wo.xpm
 share/gnus/images/gnus/reply.pbm
 share/gnus/images/gnus/reply.xpm
-share/gnus/images/gnus/reverse-smile.xpm
 share/gnus/images/gnus/rot13.pbm
 share/gnus/images/gnus/rot13.xpm
 share/gnus/images/gnus/save-aif.pbm
@@ -139,6 +136,7 @@ share/gnus/images/smilies/blink.pbm
 share/gnus/images/smilies/blink.xpm
 share/gnus/images/smilies/braindamaged.xpm
 share/gnus/images/smilies/cry.xpm
+share/gnus/images/smilies/dead.xpm
 share/gnus/images/smilies/evil.xpm
 share/gnus/images/smilies/forced.xpm
 share/gnus/images/smilies/frown.pbm
@@ -173,6 +171,8 @@ ${EMACS_LISPPREFIX}/gnus/flow-fill.el
 ${EMACS_LISPPREFIX}/gnus/flow-fill.elc
 ${EMACS_LISPPREFIX}/gnus/format-spec.el
 ${EMACS_LISPPREFIX}/gnus/format-spec.elc
+${EMACS_LISPPREFIX}/gnus/gmm-utils.el
+${EMACS_LISPPREFIX}/gnus/gmm-utils.elc
 ${EMACS_LISPPREFIX}/gnus/gnus-agent.el
 ${EMACS_LISPPREFIX}/gnus/gnus-agent.elc
 ${EMACS_LISPPREFIX}/gnus/gnus-art.el
@@ -216,6 +216,7 @@ ${EMACS_LISPPREFIX}/gnus/gnus-int.elc
 ${EMACS_LISPPREFIX}/gnus/gnus-kill.el
 ${EMACS_LISPPREFIX}/gnus/gnus-kill.elc
 ${EMACS_LISPPREFIX}/gnus/gnus-load.el
+${FOR_emacs21}${EMACS_LISPPREFIX}/gnus/gnus-load.elc
 ${EMACS_LISPPREFIX}/gnus/gnus-logic.el
 ${EMACS_LISPPREFIX}/gnus/gnus-logic.elc
 ${FOR_emacs}${EMACS_LISPPREFIX}/gnus/gnus-mh.el
@@ -434,8 +435,8 @@ ${EMACS_LISPPREFIX}/gnus/spam-report.el
 ${EMACS_LISPPREFIX}/gnus/spam-report.elc
 ${EMACS_LISPPREFIX}/gnus/spam-stat.el
 ${EMACS_LISPPREFIX}/gnus/spam-stat.elc
-${EMACS_LISPPREFIX}/gnus/spam.el
-${EMACS_LISPPREFIX}/gnus/spam.elc
+${FOR_emacs22}${FOR_emacs23}${FOR_emacs24}${FOR_emacs25}${EMACS_LISPPREFIX}/gnus/spam.el
+${FOR_emacs22}${FOR_emacs23}${FOR_emacs24}${FOR_emacs25}${EMACS_LISPPREFIX}/gnus/spam.elc
 ${EMACS_LISPPREFIX}/gnus/starttls.el
 ${EMACS_LISPPREFIX}/gnus/starttls.elc
 ${EMACS_LISPPREFIX}/gnus/time-date.el
