@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4448 2014/11/23 15:55:38 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4449 2014/11/23 16:11:25 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5827,3 +5827,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/gst-plugins1-libav to 1.4.4 [wiz 2014-11-23]
 	Updated databases/p5-DBIx-Class-Fixtures to 1.001024 [wen 2014-11-23]
 	Updated pkgtools/pkglint to 4.148 [mef 2014-11-23]
+	Updated geography/libgeotiff to 1.4.1 [gdt 2014-11-23]
