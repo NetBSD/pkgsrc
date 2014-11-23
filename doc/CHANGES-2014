@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4427 2014/11/23 14:12:23 adam Exp $
+$NetBSD: CHANGES-2014,v 1.4428 2014/11/23 14:15:45 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5802,3 +5802,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-django-south to 1.0.1 [adam 2014-11-23]
 	Updated www/py-djangocms-admin-style to 0.2.3 [adam 2014-11-23]
 	Updated www/py-django-cms to 3.0.6 [adam 2014-11-23]
+	Added devel/p5-Type-Tiny-XS version 0.012 [schmonz 2014-11-23]
