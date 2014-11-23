@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4394 2014/11/22 22:20:45 mrg Exp $
+$NetBSD: CHANGES-2014,v 1.4395 2014/11/23 00:06:28 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5762,3 +5762,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/tk to 8.6.3 [adam 2014-11-22]
 	Updated pkgtools/bootstrap-mk-files to 20141122 [bsiegert 2014-11-22]
 	Updated chat/ircII to 20141122 [mrg 2014-11-22]
+	Updated net/nbtscan to 1.5.1nb2 [dholland 2014-11-23]
