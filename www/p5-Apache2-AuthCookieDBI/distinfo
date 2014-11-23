@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2011/12/15 05:54:44 hiramatsu Exp $
+$NetBSD: distinfo,v 1.5 2014/11/23 07:06:28 mef Exp $
 
-SHA1 (Apache2-AuthCookieDBI-2.14.tar.gz) = 924b0d08387806348cd9f4dcf3cb8e592449100a
-RMD160 (Apache2-AuthCookieDBI-2.14.tar.gz) = c16a01e7420f73ba4e195a5112745f47f9dab9fa
-Size (Apache2-AuthCookieDBI-2.14.tar.gz) = 38259 bytes
+SHA1 (Apache2-AuthCookieDBI-2.17.tar.gz) = 9c99dc4aef039c949a1984aa9f35ae6d2c0e0e5d
+RMD160 (Apache2-AuthCookieDBI-2.17.tar.gz) = 834ee7de6c48ddb23082719503db796b6e00c188
+Size (Apache2-AuthCookieDBI-2.17.tar.gz) = 41911 bytes
