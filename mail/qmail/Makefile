@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2014/10/09 14:06:40 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2014/11/23 19:08:22 schmonz Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}
@@ -120,16 +120,16 @@ PKG_HOME.${user}=	${QMAILDIR}
 .endfor
 PKG_HOME.alias=		${QMAILDIR}/alias
 
-QMAIL_ROOT_ONLY_READABLE=	qmail-clean qmail-getpw qmail-local qmail-popup
-QMAIL_ROOT_ONLY_READABLE+=	qmail-pw2u qmail-remote qmail-rspawn qmail-send
-QMAIL_ROOT_ONLY_READABLE+=	splogger
-QMAIL_ROOT_ONLY_EVERYTHING=	qmail-lspawn qmail-newmrh qmail-newu qmail-start
+QMAIL_ROOT_ONLY_READABLES=	qmail-clean qmail-getpw qmail-local qmail-popup
+QMAIL_ROOT_ONLY_READABLES+=	qmail-pw2u qmail-remote qmail-rspawn qmail-send
+QMAIL_ROOT_ONLY_READABLES+=	splogger
+QMAIL_ROOT_ONLY_EVERYTHINGS=	qmail-lspawn qmail-newmrh qmail-newu qmail-start
 
 SPECIAL_PERMS+=		${PREFIX}/bin/qmail-queue qmailq qmail 4555
-.for f in ${QMAIL_ROOT_ONLY_READABLE}
+.for f in ${QMAIL_ROOT_ONLY_READABLES}
 SPECIAL_PERMS+=		${PREFIX}/bin/${f} root qmail 0711
 .endfor
-.for f in ${QMAIL_ROOT_ONLY_EVERYTHING}
+.for f in ${QMAIL_ROOT_ONLY_EVERYTHINGS}
 SPECIAL_PERMS+=		${PREFIX}/bin/${f} root qmail 0700
 .endfor
 
@@ -165,7 +165,7 @@ pre-install:
 post-install: post-install-viruscan
 	# allow packaging as non-root, fix at install time with SPECIAL_PERMS
 	${CHMOD} 0755 ${DESTDIR}${PREFIX}/bin/qmail-queue
-.	for f in ${QMAIL_ROOT_ONLY_READABLE} ${QMAIL_ROOT_ONLY_EVERYTHING}
+.	for f in ${QMAIL_ROOT_ONLY_READABLES} ${QMAIL_ROOT_ONLY_EVERYTHINGS}
 	  ${CHMOD} 0755 ${DESTDIR}${PREFIX}/bin/${f}
 .	endfor
 	# qmail's installer sets strange permissions, set them back
