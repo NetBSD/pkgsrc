@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2014/10/19 22:27:45 alnsn Exp $
+# $NetBSD: Makefile,v 1.25 2014/11/23 06:06:49 markd Exp $
 
 DISTNAME=	ptlib-2.10.7
 PKGREVISION=	8
@@ -37,6 +37,7 @@ CONFIGURE_ARGS+=	--disable-sunaudio
 CONFIGURE_ARGS+=	--disable-alsa
 CONFIGURE_ARGS+=	--disable-avc
 CONFIGURE_ARGS+=	--disable-dc
+CONFIGURE_ARGS+=	--disable-pulse
 PTHREAD_OPTS+=		require
 
 .include "../../mk/bsd.prefs.mk"
