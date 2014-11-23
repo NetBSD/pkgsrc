@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/05 16:41:34 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/11/23 06:08:29 mef Exp $
 ${EMACS_INFOPREFIX}/mailcrypt.info
 ${EMACS_LISPPREFIX}/expect.el
 ${EMACS_LISPPREFIX}/expect.elc
@@ -10,6 +10,8 @@ ${EMACS_LISPPREFIX}/mc-pgp.el
 ${EMACS_LISPPREFIX}/mc-pgp.elc
 ${EMACS_LISPPREFIX}/mc-pgp5.el
 ${EMACS_LISPPREFIX}/mc-pgp5.elc
+${EMACS_LISPPREFIX}/mc-pgp6.el
+${EMACS_LISPPREFIX}/mc-pgp6.elc
 ${EMACS_LISPPREFIX}/mc-remail.el
 ${EMACS_LISPPREFIX}/mc-remail.elc
 ${EMACS_LISPPREFIX}/mc-setversion.el
