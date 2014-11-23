@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.11 2013/04/08 07:13:07 mef Exp $
+$NetBSD: distinfo,v 1.12 2014/11/23 06:13:37 mef Exp $
 
 SHA1 (riece-9.0.0.tar.gz) = 62c295a17488a0dfc1f0751fd41fbecedc8bdb40
 RMD160 (riece-9.0.0.tar.gz) = 21b1737802c149983e6c34ef275fa42c787a4294
 Size (riece-9.0.0.tar.gz) = 438553 bytes
+SHA1 (patch-riece-ctlseq.el) = 37e1fe8f1337f3e5e2b4d7f64523c44d7925747a
+SHA1 (patch-riece-highlight.el) = 5876583ad9c02ec04a3c24de358b9d654f719ae5
+SHA1 (patch-riece-shrink-buffer.el) = 7de3f8a0be34c4686254246c23840503c554f730
+SHA1 (patch-riece-twitter.el) = 551b76821421e4df3fe1af45e1ec3bd0aae9a59a
