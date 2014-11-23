@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2010/12/05 21:25:55 hauke Exp $
+$NetBSD: distinfo,v 1.7 2014/11/23 08:51:26 mef Exp $
 
-SHA1 (conserver-8.1.18.tar.gz) = 54336e8ce7f48a2d8d51e93f4df492b3e426a192
-RMD160 (conserver-8.1.18.tar.gz) = aad60ba5aa8d2860dd4fde505c93b6bf2c118002
-Size (conserver-8.1.18.tar.gz) = 323247 bytes
+SHA1 (conserver-8.1.20.tar.gz) = f96d143be1716a2bec1da1c17f06bca033f007b3
+RMD160 (conserver-8.1.20.tar.gz) = b17ae3efc0d8c659d39dbbea5e047f3f48fb76ef
+Size (conserver-8.1.20.tar.gz) = 334147 bytes
 SHA1 (patch-aa) = d0eebea0d126c611f6f60035730a0c2f97280b01
 SHA1 (patch-ab) = 7a507e428277cc6ccf14b961c44d4e6fd3abcde3
