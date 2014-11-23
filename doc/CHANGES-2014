@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4406 2014/11/23 10:07:15 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4407 2014/11/23 11:33:44 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5775,3 +5775,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated comms/conserver8 to 8.2.0 [mef 2014-11-23]
 	Updated comms/gammu to 1.33.0 [mef 2014-11-23]
 	Updated comms/py-gammu to 1.33.0 [mef 2014-11-23]
+	Updated comms/openobex to 1.7.1 [mef 2014-11-23]
