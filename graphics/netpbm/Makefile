@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.197 2014/11/23 14:38:34 gson Exp $
+# $NetBSD: Makefile,v 1.198 2014/11/23 16:12:10 wiz Exp $
 
-DISTNAME=	netpbm-10.67.05
-PKGREVISION=	5
+DISTNAME=	netpbm-10.68.02
 CATEGORIES=	graphics
 MASTER_SITES=	#
 # manually created from svn checkout of
@@ -12,7 +11,7 @@ MASTER_SITES=	#
 # svn checkout http://svn.code.sf.net/p/netpbm/code/userguide netpbm-userguide
 # cd netpbm-userguide && for i in *.html; do python2.7 ../netpbm/buildtools/makeman $i; done && cd ..
 # tar -cvzf /archive/distfiles/netpbm-docs-r${SVN_REVISION}.tar.gz netpbm-userguide/*.[0-9]
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} netpbm-docs-r2273${EXTRACT_SUFX}
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} netpbm-docs-r2313${EXTRACT_SUFX}
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://netpbm.sourceforge.net/
@@ -46,17 +45,6 @@ SUBST_FILES.rgb_txt=	pm_config.in.h
 SUBST_SED.rgb_txt+=	-e 's,/usr/share/netpbm/rgb.txt,${PREFIX}/share/netpbm/rgb.txt,'
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-SUBST_CLASSES+=		xopen
-SUBST_STAGE.xopen=	pre-configure
-SUBST_FILES.xopen=	converter/other/jpeg2000/jpeg2ktopam.c
-SUBST_FILES.xopen+=	converter/other/jpeg2000/pamtojpeg2k.c
-SUBST_FILES.xopen+=	buildtools/libopt.c
-SUBST_FILES.xopen+=	lib/libppmcolor.c lib/libpamcolor.c lib/libpm.c
-SUBST_FILES.xopen+=	lib/pmfileio.c lib/libpam.c lib/colorname.c
-SUBST_SED.xopen=	-e '/define.*_XOPEN_SOURCE/s/600/500/g'
-.endif
 
 # only used if NEED_RUNTIME_PATH is set, so set it unconditionally
 MAKE_FLAGS+=	NETPBMLIB_RUNTIME_PATH=${PREFIX}
