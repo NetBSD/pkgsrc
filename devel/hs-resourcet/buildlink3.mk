@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2014/09/12 21:10:09 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2014/11/23 12:52:32 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-resourcet
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-resourcet
 HS_RESOURCET_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-resourcet+=	hs-resourcet>=1.1.2
-BUILDLINK_ABI_DEPENDS.hs-resourcet+=	hs-resourcet>=1.1.2.3
+BUILDLINK_ABI_DEPENDS.hs-resourcet+=	hs-resourcet>=1.1.2.3nb1
 BUILDLINK_PKGSRCDIR.hs-resourcet?=	../../devel/hs-resourcet
 
 .include "../../devel/hs-exceptions/buildlink3.mk"

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/09/12 21:10:09 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2014/11/23 12:52:32 szptvlfn Exp $
 
 DISTNAME=	resourcet-1.1.2.3
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@NetBSD.org
