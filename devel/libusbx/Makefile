@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/02/07 10:19:27 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/11/23 12:21:03 mef Exp $
 
-DISTNAME=	libusbx-1.0.11
+DISTNAME=	libusbx-1.0.18
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libusbx/}
 EXTRACT_SUFX=	.tar.bz2
