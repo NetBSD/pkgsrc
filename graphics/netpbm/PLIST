@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2014/10/09 18:58:18 gson Exp $
+@comment $NetBSD: PLIST,v 1.13 2014/11/23 16:12:10 wiz Exp $
 bin/411toppm
 bin/anytopnm
 bin/asciitopgm
@@ -49,6 +49,7 @@ bin/pambackground
 bin/pambayer
 bin/pamchannel
 bin/pamcomp
+bin/pamcrater
 bin/pamcut
 bin/pamdeinterlace
 bin/pamdepth
@@ -79,6 +80,7 @@ bin/pamrgbatopng
 bin/pamrubber
 bin/pamscale
 bin/pamseq
+bin/pamshadedrelief
 bin/pamsharpmap
 bin/pamsharpness
 bin/pamsistoaglyph
@@ -379,7 +381,7 @@ include/netpbm/shhopt.h
 lib/libnetpbm.a
 lib/libnetpbm.so
 lib/libnetpbm.so.11
-lib/libnetpbm.so.11.67
+lib/libnetpbm.so.11.68
 man/man1/411toppm.1
 man/man1/anytopnm.1
 man/man1/asciitopgm.1
