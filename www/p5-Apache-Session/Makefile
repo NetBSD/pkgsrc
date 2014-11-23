@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.34 2014/10/09 13:45:02 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2014/11/23 06:50:06 mef Exp $
 #
 
-DISTNAME=		Apache-Session-1.88
+DISTNAME=		Apache-Session-1.93
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		5
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Apache/}
-EXTRACT_SUFX=		.zip
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Apache-Session/
 COMMENT=		Perl5 module to provide persistent storage
-LICENSE=		gnu-gpl-v2 # OR artistic
+LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-Test-Deep>=0.082:../../devel/p5-Test-Deep
 DEPENDS+=		p5-Test-Exception>=0.15:../../devel/p5-Test-Exception
