@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/16 14:54:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/11/23 19:33:16 wiz Exp $
 bin/mp3fs
-share/doc/fuse-mp3fs/README
+man/man1/mp3fs.1
+share/doc/fuse-mp3fs/README.md
