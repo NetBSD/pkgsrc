@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4447 2014/11/23 15:30:55 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4448 2014/11/23 15:55:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5820,5 +5820,10 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/musicpd to 0.18.18 [wiz 2014-11-23]
 	Updated devel/p5-Test-Compile to 1.2.0 [wen 2014-11-23]
 	Updated devel/py-tortoisehg to 3.2.1 [wiz 2014-11-23]
+	Updated multimedia/gst-plugins1-base to 1.4.4 [wiz 2014-11-23]
+	Updated multimedia/gst-plugins1-good to 1.4.4 [wiz 2014-11-23]
+	Updated multimedia/gst-plugins1-bad to 1.4.4 [wiz 2014-11-23]
+	Updated multimedia/gst-plugins1-ugly to 1.4.4 [wiz 2014-11-23]
+	Updated multimedia/gst-plugins1-libav to 1.4.4 [wiz 2014-11-23]
 	Updated databases/p5-DBIx-Class-Fixtures to 1.001024 [wen 2014-11-23]
 	Updated pkgtools/pkglint to 4.148 [mef 2014-11-23]
