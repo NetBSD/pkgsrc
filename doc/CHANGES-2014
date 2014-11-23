@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4415 2014/11/23 13:03:07 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4416 2014/11/23 13:04:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5785,3 +5785,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/afl to 0.65b [wiz 2014-11-23]
 	Updated mail/p5-MailTools to 2.14 [wiz 2014-11-23]
 	Updated devel/p5-Bit-Vector to 7.4 [wiz 2014-11-23]
+	Updated time/p5-DateTime-TimeZone to 1.81 [wiz 2014-11-23]
