@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4439 2014/11/23 14:49:16 gson Exp $
+$NetBSD: CHANGES-2014,v 1.4440 2014/11/23 15:07:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5814,3 +5814,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/p5-Text-Textile to 2.13 [schmonz 2014-11-23]
 	Updated textproc/p5-Text-WikiFormat to 0.81 [schmonz 2014-11-23]
 	Updated graphics/netpbm to 10.67.05nb5 [gson 2014-11-23]
+	Updated textproc/py-lxml to 3.4.1 [wiz 2014-11-23]
