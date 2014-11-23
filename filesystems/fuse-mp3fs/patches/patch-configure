@@ -1,0 +1,20 @@
+$NetBSD: patch-configure,v 1.1 2014/11/23 19:33:16 wiz Exp $
+
+Fix unportable test(1) comparison operator.
+
+--- configure.orig	2014-05-14 19:48:57.000000000 +0000
++++ configure
+@@ -5259,11 +5259,11 @@ else
+ fi
+ 
+ 
+-if test "$with_mp3" == no; then :
++if test "$with_mp3" = no; then :
+   as_fn_error $? "No encoders enabled. Ensure --with-mp3 is given." "$LINENO" 5
+ fi
+ 
+-if test "$with_flac" == no; then :
++if test "$with_flac" = no; then :
+   as_fn_error $? "No decoders enabled. Ensure --with-flac is given." "$LINENO" 5
+ fi
+ 
