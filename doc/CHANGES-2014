@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4401 2014/11/23 06:52:24 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4402 2014/11/23 07:07:05 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5770,3 +5770,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Apache2-AuthCookie to 3.22 [mef 2014-11-23]
 	Updated www/p5-Apache-Session-Wrapper to 0.34 [mef 2014-11-23]
 	Updated www/p5-Apache-Session to 1.93 [mef 2014-11-23]
+	Updated www/p5-Apache2-AuthCookieDBI to 2.17 [mef 2014-11-23]
