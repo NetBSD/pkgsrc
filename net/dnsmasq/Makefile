@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2013/11/12 12:12:45 roy Exp $
+# $NetBSD: Makefile,v 1.25 2014/11/23 13:10:03 cheusov Exp $
 #
 
 DISTNAME=		dnsmasq-2.67
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://www.thekelleys.org.uk/dnsmasq/
 LICENSE=		gnu-gpl-v3
@@ -13,6 +14,19 @@ COMMENT=		Lightweight, easy to configure DNS forwarder
 RCD_SCRIPTS=		dnsmasq
 CONF_FILES=		${PREFIX}/share/examples/dnsmasq/dnsmasq.conf.example \
 			${PKG_SYSCONFDIR}/dnsmasq.conf
+
+.include "../../mk/bsd.prefs.mk"
+
+DNSMASQ_USER?=		dnsmasq
+.if ${OPSYS} == "Interix"
+DNSMASQ_GROUP?=		nogroup
+.else
+DNSMASQ_GROUP?=		dnsmasq
+.endif
+
+PKG_GROUPS=		${DNSMASQ_GROUP}
+PKG_USERS=		${DNSMASQ_USER}:${DNSMASQ_GROUP}
+PKG_GECOS.${DNSMASQ_USER}=	DNS\ forwarder\ user
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dnsmasq
 PKG_SUPPORTED_OPTIONS=	dbus inet6
