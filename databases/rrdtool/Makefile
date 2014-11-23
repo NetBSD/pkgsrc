@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2014/10/07 10:23:41 adam Exp $
+# $NetBSD: Makefile,v 1.115 2014/11/23 06:39:36 markd Exp $
 #
 # Please, also update databases/ruby-rrdtool
 
@@ -22,6 +22,7 @@ CONFIGURE_ARGS+=	--disable-tcl
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--disable-ruby
 CONFIGURE_ARGS+=	--disable-lua
+CONFIGURE_ARGS+=	--disable-libdbi
 
 PTHREAD_OPTS+=		require
 PERL5_CONFIGURE=	no
