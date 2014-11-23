@@ -1,0 +1,15 @@
+$NetBSD: patch-surfraw.IN,v 1.1 2014/11/23 22:02:44 wiz Exp $
+
+Fix pattern so it works with NetBSD's sed.
+
+--- surfraw.IN.orig	2013-12-10 17:07:06.000000000 +0000
++++ surfraw.IN
+@@ -324,7 +324,7 @@ w3_parse_option_hook () {
+ 
+ list_elvi() {
+     local dir="$1"
+-    sed -n 's/^.*elvis:[ 	]\+\(.*\)$/\1/p' $(find "$dir" ! -type d ! -type l ! -name '*~' | sort)
++    sed -n 's/^.*elvis:[ 	]*\(.*\)$/\1/p' $(find "$dir" ! -type d ! -type l ! -name '*~' | sort)
+     for script in $(find "$dir" ! -type d -type l | sort) ; do
+ 	printf '%-16s--> %s\n' $(basename "$script") $(basename $(readlink "${script}"))
+     done
