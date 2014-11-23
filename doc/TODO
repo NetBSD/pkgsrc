@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13849 2014/11/23 12:23:14 mef Exp $
+$NetBSD: TODO,v 1.13850 2014/11/23 15:04:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -462,7 +462,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o crossfire-client-gtk2-1.60.0
 	o cssc-1.4.0
 	o cuisine-0.6.5
-	o cups-2.0.0
+	o cups-2.0.1
 	o cvs-fast-export-1.11
 	o cvs2p4-2.5.5 [schmonz]
 	o cwm-5.1
@@ -597,7 +597,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glu-10.3.2
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-3.14.1
+	o gnome-3.14.2
 	o gnome-applets-3.14.0
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-chess-3.12.3
@@ -647,6 +647,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o groff-1.22.3
 	o gsharutils-4.14
 	o gss-1.0.3
+	o gst-plugins1-base-1.4.4
 	o gthumb-3.2.8
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
@@ -666,6 +667,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o handbrake-0.9.9
 	o hanzim-3.5
+	o harfbuzz-0.9.36
 	o haskell-mode-1.45
 	o hatari-1.8.0
 	o hdf-4.2.7
@@ -819,7 +821,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o munin-node-1.4.6
 	o munin-server-1.4.6
 	o muse-0.9.2
-	o musicpd-0.19.3
+	o musicpd-0.18.18
+	o musicpd-0.19.4
 	o mypaint-1.1.0
 	o nano-2.3.2
 	o nap-1.5.3
@@ -935,6 +938,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-lasso-2.4.0
 	o py-logilab-astng-0.24.3
 	o py-logilab-common-0.60.1
+	o py-lxml-3.4.1
 	o py-markdown-2.3.1
 	o py-matplotlib-1.4.2
 	o py-mezzanine-3.0.5
@@ -946,6 +950,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-pendrell-0.3.7
 	o py-pexpect-3.0
 	o py-ptt-1.10.2
+	o py-pygments-2.0.1
 	o py-qt5-5.3.1
 	o py-reportlab-3.0
 	o py-rope-0.9.4
@@ -956,6 +961,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-suds-0.4.1
 	o py-sybase-0.37
 	o py-tlslite-0.4.6
+	o py-tortoisehg-3.2.1
 	o py-trytond-stock-3.4.0
 	o py-wxWidgets-3.0.0
 	o py-zconfig-3.0.3
@@ -1134,7 +1140,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
 	o webalizer-2.23.05
-	o webkit-gtk-2.6.3
+	o webkit-gtk-2.6.4
 	o webmin-1.690
 	o websvn-2.3.2
 	o windowlab-1.40
@@ -1150,7 +1156,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wwwoffle-2.9i
 	o wxRemind-101
 	o wyrd-1.4.6
-	o x264-devel-20141115
+	o x264-devel-20141122
 	o xbindkeys-1.8.6
 	o xbindkeys-tk-1.8.0
 	o xboard-4.8.0
