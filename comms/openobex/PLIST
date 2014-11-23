@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.8 2014/04/28 12:14:27 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/11/23 11:33:33 mef Exp $
 include/openobex/obex.h
 include/openobex/obex_const.h
 include/openobex/version.h
-lib/cmake/OpenObex-1.7/openobex-config-version.cmake
-lib/cmake/OpenObex-1.7/openobex-config.cmake
-lib/cmake/OpenObex-1.7/openobex-target-release.cmake
-lib/cmake/OpenObex-1.7/openobex-target.cmake
+lib/cmake/OpenObex-${PKGVERSION}/openobex-config-version.cmake
+lib/cmake/OpenObex-${PKGVERSION}/openobex-config.cmake
+lib/cmake/OpenObex-${PKGVERSION}/openobex-target-release.cmake
+lib/cmake/OpenObex-${PKGVERSION}/openobex-target.cmake
 lib/libopenobex.so
-lib/libopenobex.so.1.7
+lib/libopenobex.so.${PKGVERSION}
 lib/libopenobex.so.2
 lib/pkgconfig/openobex.pc
 share/doc/openobex/html/annotated.html
