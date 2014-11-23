@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4454 2014/11/23 19:27:38 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4455 2014/11/23 19:33:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5833,3 +5833,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/drupal7 to 7.34 [taca 2014-11-23]
 	Updated geography/viking to 1.5.1 [gdt 2014-11-23]
 	Updated editors/Sigil to 0.8.1 [wiz 2014-11-23]
+	Updated filesystems/fuse-mp3fs to 0.91 [wiz 2014-11-23]
