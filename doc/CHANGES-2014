@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4411 2014/11/23 12:49:45 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4412 2014/11/23 12:52:02 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5781,3 +5781,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated archivers/unrar to 5.2.2 [adam 2014-11-23]
 	Updated databases/p5-SQL-Translator to 0.11020 [wen 2014-11-23]
 	Updated databases/p5-DBIx-Class to 0.082810 [wen 2014-11-23]
+	Updated devel/hs-transformers to 0.4.2.0 [szptvlfn 2014-11-23]
