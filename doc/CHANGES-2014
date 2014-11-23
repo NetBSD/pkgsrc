@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4414 2014/11/23 13:01:46 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4415 2014/11/23 13:03:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5784,3 +5784,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/hs-transformers to 0.4.2.0 [szptvlfn 2014-11-23]
 	Updated devel/afl to 0.65b [wiz 2014-11-23]
 	Updated mail/p5-MailTools to 2.14 [wiz 2014-11-23]
+	Updated devel/p5-Bit-Vector to 7.4 [wiz 2014-11-23]
