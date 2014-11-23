@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/11/23 06:35:20 mef Exp $
+# $NetBSD: Makefile,v 1.13 2014/11/23 07:04:28 mef Exp $
 
 DISTNAME=	Apache-AuthCookie-3.22
 PKGNAME=	p5-${DISTNAME:S/Apache/Apache2/}
@@ -12,7 +12,7 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-CGI>=3.12:../../www/p5-CGI
 
-PERL5_PACKLIST=		auto/Apache2/AuthCookie/.packlist
+PERL5_PACKLIST=		auto/Apache/AuthCookie/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../www/ap2-perl/buildlink3.mk"
