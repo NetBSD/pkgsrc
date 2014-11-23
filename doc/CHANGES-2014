@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4455 2014/11/23 19:33:24 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4456 2014/11/23 21:27:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5834,3 +5834,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated geography/viking to 1.5.1 [gdt 2014-11-23]
 	Updated editors/Sigil to 0.8.1 [wiz 2014-11-23]
 	Updated filesystems/fuse-mp3fs to 0.91 [wiz 2014-11-23]
+	Updated net/youtube-dl to 20141123.1 [wiz 2014-11-23]
