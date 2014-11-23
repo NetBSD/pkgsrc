@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4398 2014/11/23 06:08:37 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4399 2014/11/23 06:14:29 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5766,3 +5766,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/gnus to 5.10.10 [mef 2014-11-23]
 	Updated print/auctex to 11.88 [mef 2014-11-23]
 	Updated mail/mailcrypt to 3.5.9 [mef 2014-11-23]
+	Updated chat/riece to 9.0.0nb1 [mef 2014-11-23]
