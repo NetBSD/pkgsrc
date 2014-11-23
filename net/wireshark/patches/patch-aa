@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.13 2013/12/18 11:52:25 tron Exp $
+$NetBSD: patch-aa,v 1.13.8.1 2014/11/23 22:20:47 spz Exp $
 
 Fix build.
 
---- ui/time_shift.c.orig	2013-07-04 20:20:31.000000000 +0000
-+++ ui/time_shift.c
-@@ -29,6 +29,9 @@
+--- ui/time_shift.c.orig	2014-11-12 18:49:17.000000000 +0000
++++ ui/time_shift.c	2014-11-14 10:08:51.000000000 +0000
+@@ -28,6 +28,9 @@
+ #include <stdio.h>
  #include <string.h>
- #include <ctype.h>
  #include <math.h>
 +#ifndef HAVE_FLOORL
 +#define floorl(a) floor((double)(a))
