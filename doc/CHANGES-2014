@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4449 2014/11/23 16:11:25 gdt Exp $
+$NetBSD: CHANGES-2014,v 1.4450 2014/11/23 16:12:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5828,3 +5828,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/p5-DBIx-Class-Fixtures to 1.001024 [wen 2014-11-23]
 	Updated pkgtools/pkglint to 4.148 [mef 2014-11-23]
 	Updated geography/libgeotiff to 1.4.1 [gdt 2014-11-23]
+	Updated graphics/netpbm to 10.68.02 [wiz 2014-11-23]
