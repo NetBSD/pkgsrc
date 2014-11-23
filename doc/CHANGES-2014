@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4395 2014/11/23 00:06:28 dholland Exp $
+$NetBSD: CHANGES-2014,v 1.4396 2014/11/23 06:00:01 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5763,3 +5763,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated pkgtools/bootstrap-mk-files to 20141122 [bsiegert 2014-11-22]
 	Updated chat/ircII to 20141122 [mrg 2014-11-22]
 	Updated net/nbtscan to 1.5.1nb2 [dholland 2014-11-23]
+	Updated mail/gnus to 5.10.10 [mef 2014-11-23]
