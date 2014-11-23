@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4436 2014/11/23 14:39:26 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.4437 2014/11/23 14:42:04 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5811,3 +5811,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Test-Trap to 0.2.5 [schmonz 2014-11-23]
 	Updated textproc/p5-Encode to 2.64 [schmonz 2014-11-23]
 	Updated textproc/p5-Text-CSV_XS to 1.12 [schmonz 2014-11-23]
+	Updated textproc/p5-Text-Textile to 2.13 [schmonz 2014-11-23]
