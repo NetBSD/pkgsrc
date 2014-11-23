@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.35 2014/07/04 03:34:43 schmonz Exp $
+# $NetBSD: options.mk,v 1.36 2014/11/23 19:08:22 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qmail
 PKG_OPTIONS_OPTIONAL_GROUPS=	rcpt
@@ -85,6 +85,7 @@ SUBST_MESSAGE.load=	Setting linker flags for syncdir.
 .endif
 
 PLIST_VARS+=		viruscan
+.PHONY: post-extract-viruscan post-install-viruscan
 .if !empty(PKG_OPTIONS:Mqmail-viruscan)
 VIRUSCAN_PATCH=		qmail-smtpd-viruscan-1.3.patch
 VIRUSCAN_LOG_PATCH=	qmail-smtpd-viruscan-logging.patch
