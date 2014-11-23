@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4409 2014/11/23 12:36:17 adam Exp $
+$NetBSD: CHANGES-2014,v 1.4410 2014/11/23 12:39:29 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5779,3 +5779,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/libusbx to 1.0.18 [mef 2014-11-23]
 	Updated archivers/libunrar to 5.2.2 [adam 2014-11-23]
 	Updated archivers/unrar to 5.2.2 [adam 2014-11-23]
+	Updated databases/p5-SQL-Translator to 0.11020 [wen 2014-11-23]
