@@ -1,0 +1,2 @@
+This module is optionally used by Type::Tiny 0.045_03 and above to
+provide faster, C-based implementations of some type constraints.
