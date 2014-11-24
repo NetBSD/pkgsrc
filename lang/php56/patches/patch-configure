@@ -1,0 +1,146 @@
+$NetBSD: patch-configure,v 1.1 2014/11/24 15:37:08 taca Exp $
+
+--- configure.orig	2014-11-13 10:07:25.000000000 +0000
++++ configure
+@@ -8310,27 +8310,6 @@ EOF
+     ;;
+   esac
+ 
+-  if test "$APACHE_VERSION" -lt 2004001; then
+-    APXS_MPM=`$APXS -q MPM_NAME`
+-    if test "$APXS_MPM" != "prefork" && test "$APXS_MPM" != "peruser" && test "$APXS_MPM" != "itk"; then
+-
+-  enable_maintainer_zts=yes
+-  if test "$pthreads_working" != "yes"; then
+-    as_fn_error $? "ZTS currently requires working POSIX threads. We were unable to verify that your system supports Pthreads." "$LINENO" 5
+-  fi
+-
+-    fi
+-  else
+-    APACHE_THREADED_MPM=`$APXS_HTTPD -V | grep 'threaded:.*yes'`
+-    if test -n "$APACHE_THREADED_MPM"; then
+-
+-  enable_maintainer_zts=yes
+-  if test "$pthreads_working" != "yes"; then
+-    as_fn_error $? "ZTS currently requires working POSIX threads. We were unable to verify that your system supports Pthreads." "$LINENO" 5
+-  fi
+-
+-    fi
+-  fi
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
+ 
+@@ -9134,27 +9113,6 @@ EOF
+     ;;
+   esac
+ 
+-  if test "$APACHE_VERSION" -lt 2004001; then
+-    APXS_MPM=`$APXS -q MPM_NAME`
+-    if test "$APXS_MPM" != "prefork" && test "$APXS_MPM" != "peruser" && test "$APXS_MPM" != "itk"; then
+-
+-  enable_maintainer_zts=yes
+-  if test "$pthreads_working" != "yes"; then
+-    as_fn_error $? "ZTS currently requires working POSIX threads. We were unable to verify that your system supports Pthreads." "$LINENO" 5
+-  fi
+-
+-    fi
+-  else
+-    APACHE_THREADED_MPM=`$APXS_HTTPD -V | grep 'threaded:.*yes'`
+-    if test -n "$APACHE_THREADED_MPM"; then
+-
+-  enable_maintainer_zts=yes
+-  if test "$pthreads_working" != "yes"; then
+-    as_fn_error $? "ZTS currently requires working POSIX threads. We were unable to verify that your system supports Pthreads." "$LINENO" 5
+-  fi
+-
+-    fi
+-  fi
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
+ 
+@@ -24596,7 +24554,7 @@ fi
+     if test "$found_openssl" = "no"; then
+ 
+     if test "$PHP_OPENSSL_DIR" = "yes"; then
+-      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl"
++      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl /"
+     fi
+ 
+     for i in $PHP_OPENSSL_DIR; do
+@@ -26751,7 +26709,7 @@ $as_echo "yes" >&6; }
+     PHP_SQLITE3_CFLAGS="-I@ext_srcdir@/libsqlite $other_flags $threadsafe_flags $debug_flags"
+ 
+ 
+-    for header_file in ext/sqlite3/libsqlite/sqlite3.h; do
++    for header_file; do
+ 
+ 
+   unique=`echo $header_file|$SED 's/[^a-zA-Z0-9]/_/g'`
+@@ -37864,7 +37822,7 @@ fi
+     if test "$found_openssl" = "no"; then
+ 
+     if test "$PHP_OPENSSL_DIR" = "yes"; then
+-      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl"
++      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl /"
+     fi
+ 
+     for i in $PHP_OPENSSL_DIR; do
+@@ -49266,7 +49224,7 @@ fi
+     if test "$found_openssl" = "no"; then
+ 
+     if test "$PHP_OPENSSL_DIR" = "yes"; then
+-      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl"
++      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl /"
+     fi
+ 
+     for i in $PHP_OPENSSL_DIR; do
+@@ -66188,7 +66146,7 @@ rm -f core *.core core.conftest.* gmon.o
+ fi
+ 
+ 
+-if test "$flock_type" == "unknown"; then
++if test "$flock_type" = "unknown"; then
+ 	as_fn_error $? "Don't know how to define struct flock on this system, set --enable-opcache=no" "$LINENO" 5
+ fi
+ 
+@@ -106720,12 +106678,7 @@ old_CC=$CC
+ if test "$PHP_THREAD_SAFETY" = "yes" && test -n "$ac_cv_pthreads_cflags"; then
+   CXXFLAGS="$CXXFLAGS $ac_cv_pthreads_cflags"
+   INLINE_CFLAGS="$INLINE_CFLAGS $ac_cv_pthreads_cflags"
+-  cat >meta_ccld<<EOF
+-#! /bin/sh
+-exec $CC $ac_cv_pthreads_cflags \$@
+-EOF
+-  CC="$abs_builddir/meta_ccld"
+-  chmod +x meta_ccld
++  CPPFLAGS="$CPPFLAGS $ac_cv_pthreads_cflags"
+ fi
+ 
+ if test "$PHP_THREAD_SAFETY" = "yes" && test "$PHP_MYSQL" = "yes"; then
+@@ -110497,7 +110450,7 @@ freebsd* | dragonfly*)
+     objformat=`/usr/bin/objformat`
+   else
+     case $host_os in
+-    freebsd[123]*) objformat=aout ;;
++    freebsd[123]|freebsd[123].*) objformat=aout ;;
+     *) objformat=elf ;;
+     esac
+   fi
+@@ -112577,7 +112530,7 @@ if test -z "$aix_libpath"; then aix_libp
+ 	;;
+     esac
+     ;;
+-  freebsd[12]*)
++  freebsd[12]|freebsd[12].*)
+     # C++ shared libraries reported to be fairly broken before switch to ELF
+     ld_shlibs_CXX=no
+     ;;
+@@ -114130,7 +114083,7 @@ freebsd* | dragonfly*)
+     objformat=`/usr/bin/objformat`
+   else
+     case $host_os in
+-    freebsd[123]*) objformat=aout ;;
++    freebsd[123]|freebsd[123].*) objformat=aout ;;
+     *) objformat=elf ;;
+     esac
+   fi
