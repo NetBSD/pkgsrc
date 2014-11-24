@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/11/24 14:45:53 wiz Exp $
+
+SHA1 (google-api-python-client-1.3.1.tar.gz) = 9eb4870691c3cb4526295f8fdf51bc5b5530798f
+RMD160 (google-api-python-client-1.3.1.tar.gz) = 1ec27cf4a89f5f63eb679d8117ff02539d1cdac8
+Size (google-api-python-client-1.3.1.tar.gz) = 1480269 bytes
