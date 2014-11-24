@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2014/11/24 21:22:37 szptvlfn Exp $
+lib/timezone-series-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/LocalTime/TimeZone/Series.hi
+lib/timezone-series-${PKGVERSION}/${HASKELL_VERSION}/HStimezone-series-${PKGVERSION}.o
+lib/timezone-series-${PKGVERSION}/${HASKELL_VERSION}/libHStimezone-series-${PKGVERSION}.a
+lib/timezone-series-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/timezone-series-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/timezone-series-${PKGVERSION}/html/Data-Time-LocalTime-TimeZone-Series.html
+${PLIST.doc}share/doc/timezone-series-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/timezone-series-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/timezone-series-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/timezone-series-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/timezone-series-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/timezone-series-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/timezone-series-${PKGVERSION}/html/mini_Data-Time-LocalTime-TimeZone-Series.html
+${PLIST.doc}share/doc/timezone-series-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/timezone-series-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/timezone-series-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/timezone-series-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/timezone-series-${PKGVERSION}/html/timezone-series.haddock
