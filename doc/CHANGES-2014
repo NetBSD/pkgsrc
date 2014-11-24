@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4481 2014/11/24 14:05:36 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4482 2014/11/24 14:06:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5862,3 +5862,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Dancer2 to 0.154000 [wen 2014-11-24]
 	Updated www/p5-HTML-Mason to 1.56 [wen 2014-11-24]
 	Updated devel/p5-Test-CleanNamespaces to 0.16 [wen 2014-11-24]
+	Added textproc/py-uritemplate version 0.6 [wiz 2014-11-24]
