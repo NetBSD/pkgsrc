@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2014/06/01 16:35:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/11/24 14:18:51 mef Exp $
+share/doc/tamsyn-font/LICENSE
+share/doc/tamsyn-font/README
 share/fonts/X11/tamsyn-font/Tamsyn10x20b.pcf
 share/fonts/X11/tamsyn-font/Tamsyn10x20b.psf.gz
 share/fonts/X11/tamsyn-font/Tamsyn10x20r.pcf
@@ -11,6 +13,10 @@ share/fonts/X11/tamsyn-font/Tamsyn6x12b.pcf
 share/fonts/X11/tamsyn-font/Tamsyn6x12b.psf.gz
 share/fonts/X11/tamsyn-font/Tamsyn6x12r.pcf
 share/fonts/X11/tamsyn-font/Tamsyn6x12r.psf.gz
+share/fonts/X11/tamsyn-font/Tamsyn7x13b.pcf
+share/fonts/X11/tamsyn-font/Tamsyn7x13b.psf.gz
+share/fonts/X11/tamsyn-font/Tamsyn7x13r.pcf
+share/fonts/X11/tamsyn-font/Tamsyn7x13r.psf.gz
 share/fonts/X11/tamsyn-font/Tamsyn7x14b.pcf
 share/fonts/X11/tamsyn-font/Tamsyn7x14b.psf.gz
 share/fonts/X11/tamsyn-font/Tamsyn7x14r.pcf
@@ -19,9 +25,7 @@ share/fonts/X11/tamsyn-font/Tamsyn8x15b.pcf
 share/fonts/X11/tamsyn-font/Tamsyn8x15b.psf.gz
 share/fonts/X11/tamsyn-font/Tamsyn8x15r.pcf
 share/fonts/X11/tamsyn-font/Tamsyn8x15r.psf.gz
-share/fonts/X11/tamsyn-font/Tamsyn8x17b.pcf
-share/fonts/X11/tamsyn-font/Tamsyn8x17b.psf.gz
-share/fonts/X11/tamsyn-font/Tamsyn8x17r.pcf
-share/fonts/X11/tamsyn-font/Tamsyn8x17r.psf.gz
-share/doc/tamsyn-font/LICENSE
-share/doc/tamsyn-font/README
+share/fonts/X11/tamsyn-font/Tamsyn8x16b.pcf
+share/fonts/X11/tamsyn-font/Tamsyn8x16b.psf.gz
+share/fonts/X11/tamsyn-font/Tamsyn8x16r.pcf
+share/fonts/X11/tamsyn-font/Tamsyn8x16r.psf.gz
