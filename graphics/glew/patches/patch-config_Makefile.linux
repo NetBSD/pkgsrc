@@ -1,8 +1,8 @@
-$NetBSD: patch-config_Makefile.linux,v 1.4 2013/12/12 10:21:07 markd Exp $
+$NetBSD: patch-config_Makefile.linux,v 1.5 2014/11/24 20:06:21 adam Exp $
 
 Don't install into $PREFIX/lib64
 
---- config/Makefile.linux.orig	2013-07-22 14:11:22.000000000 +0000
+--- config/Makefile.linux.orig	2014-08-11 14:14:56.000000000 +0000
 +++ config/Makefile.linux
 @@ -11,12 +11,12 @@ ifeq (ppc64,${M_ARCH})
  endif
@@ -14,8 +14,8 @@ Don't install into $PREFIX/lib64
    LDFLAGS.EXTRA = -L/usr/X11R6/lib -L/usr/lib
    LIBDIR = $(GLEW_DEST)/lib
  endif
--LDFLAGS.GL = -lXmu -lXi -lGL -lXext -lX11
-+LDFLAGS.GL = -lXmu -lXi -lGL -lXext -lX11 -lpthread
+-LDFLAGS.GL = -lGL -lX11
++LDFLAGS.GL = -lGL -lX11 -lpthread
  LDFLAGS.STATIC = -Wl,-Bstatic
  LDFLAGS.DYNAMIC = -Wl,-Bdynamic
  NAME = GLEW
