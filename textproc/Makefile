@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.808 2014/11/08 16:22:03 schmonz Exp $
+# $NetBSD: Makefile,v 1.809 2014/11/24 11:28:41 obache Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -840,6 +840,7 @@ SUBDIR+=	xqilla
 SUBDIR+=	xslide
 SUBDIR+=	xt
 SUBDIR+=	yamcha
+SUBDIR+=	yaml-cpp
 SUBDIR+=	yelp-xsl
 SUBDIR+=	yodl
 SUBDIR+=	zoem
