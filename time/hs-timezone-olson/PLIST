@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2014/11/24 21:24:01 szptvlfn Exp $
+lib/timezone-olson-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/LocalTime/TimeZone/Olson.hi
+lib/timezone-olson-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/LocalTime/TimeZone/Olson/Parse.hi
+lib/timezone-olson-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/LocalTime/TimeZone/Olson/Render.hi
+lib/timezone-olson-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/LocalTime/TimeZone/Olson/Types.hi
+lib/timezone-olson-${PKGVERSION}/${HASKELL_VERSION}/HStimezone-olson-${PKGVERSION}.o
+lib/timezone-olson-${PKGVERSION}/${HASKELL_VERSION}/libHStimezone-olson-${PKGVERSION}.a
+lib/timezone-olson-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/timezone-olson-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/timezone-olson-${PKGVERSION}/html/Data-Time-LocalTime-TimeZone-Olson.html
+${PLIST.doc}share/doc/timezone-olson-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/timezone-olson-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/timezone-olson-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/timezone-olson-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/timezone-olson-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/timezone-olson-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/timezone-olson-${PKGVERSION}/html/mini_Data-Time-LocalTime-TimeZone-Olson.html
+${PLIST.doc}share/doc/timezone-olson-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/timezone-olson-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/timezone-olson-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/timezone-olson-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/timezone-olson-${PKGVERSION}/html/timezone-olson.haddock
