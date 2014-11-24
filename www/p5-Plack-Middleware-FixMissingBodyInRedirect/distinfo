@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/11/24 13:22:38 wen Exp $
+
+SHA1 (Plack-Middleware-FixMissingBodyInRedirect-0.12.tar.gz) = adb0d38304c78731dbb9ecd3f63a641786d646ea
+RMD160 (Plack-Middleware-FixMissingBodyInRedirect-0.12.tar.gz) = 7b9320eee383cd2ee7abc1e3c2fa492ba22bfc17
+Size (Plack-Middleware-FixMissingBodyInRedirect-0.12.tar.gz) = 11361 bytes
