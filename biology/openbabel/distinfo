@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2014/11/20 09:05:56 mef Exp $
+$NetBSD: distinfo,v 1.6 2014/11/24 00:47:48 joerg Exp $
 
 SHA1 (openbabel-2.3.2.tar.gz) = b8831a308617d1c78a790479523e43524f07d50d
 RMD160 (openbabel-2.3.2.tar.gz) = dc9aa026a81b987b08c60709a624a192418ee7fb
@@ -6,3 +6,4 @@ Size (openbabel-2.3.2.tar.gz) = 20509105 bytes
 SHA1 (patch-doc_CMakeLists.txt) = ce39c53c4edfec2f557e785f750e09a62a209d05
 SHA1 (patch-include_openbabel_obmolecformat.h) = e12a42b67106899d5285651f27e4830e0cc42fe2
 SHA1 (patch-include_openbabel_shared__ptr.h) = 92a16f7bcdd10cf44cf6c9302d80670563074c2c
+SHA1 (patch-src_ops_unique.cpp) = 80b9e7ca8a405ea7024bbca832b16a8013c12e18
