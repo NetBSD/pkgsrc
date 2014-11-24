@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2012/08/31 00:30:53 wen Exp $
+$NetBSD: distinfo,v 1.9 2014/11/24 14:15:20 mef Exp $
 
-SHA1 (Font-TTF-1.02.tar.gz) = 754993633f899a81a6177d6030601f3cfe9fed08
-RMD160 (Font-TTF-1.02.tar.gz) = 3785277dcc65ec5bc4bbbd99ce639931a6b6c750
-Size (Font-TTF-1.02.tar.gz) = 220317 bytes
+SHA1 (Font-TTF-1.04.tar.gz) = 3fcc0d97aa0fd484815846eed1d26a4a9fccd67f
+RMD160 (Font-TTF-1.04.tar.gz) = d5b0d11da41ce3d6f2d71cd8356fdc63b4237910
+Size (Font-TTF-1.04.tar.gz) = 251656 bytes
