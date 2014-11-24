@@ -1,16 +1,16 @@
-.\"	$NetBSD: lintpkgsrc.1,v 1.3 2014/11/24 09:41:25 bsiegert Exp $
+.\"	$NetBSD: lintpkgsrc.1,v 1.4 2014/11/24 09:50:34 wiz Exp $
 .\"
 .\" Copyright (c) 1999 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
 .\"
-.Dd November 8, 2005
+.Dd November 24, 2014
 .Dt LINTPKGSRC 1
 .Sh NAME
 .Nm lintpkgsrc
 .Nd verifier for the pkgsrc tree
 .Sh SYNOPSIS
 .Nm
-.Op Fl BDLORSVdhilmopruyz
+.Op Fl BDdLlmOopRrSuVyz
 .Op Fl E Ar file
 .Op Fl g Ar pkgsrcmap
 .Op Fl I Ar file
@@ -24,7 +24,7 @@ tries to verify the entire contents of the pkgsrc tree.
 .Nm
 uses simple regular-expression matching for verifying
 files that make up a pkgsrc directory.
-Note that it does NOT implement complete Makefile parser.
+Note that it does NOT implement a complete Makefile parser.
 .Ss Options
 .Bl -tag -width xxxxxxxxxxxx
 .It Fl B
@@ -82,7 +82,7 @@ Note: lintpkgsrc treats
 .Em PACKAGES
 slightly differently to the pkgsrc build system.
 .Fl p ,
-.Fl R
+.Fl R ,
 and
 .Fl V
 check for
@@ -107,7 +107,8 @@ Set directory for distfiles, defaults to
 .Pa ${PKGSRCDIR}/distfiles .
 .It Fl m
 For each current distfile, verify its checksum against the appropriate
-package's distinfo file. Also report if any package's distinfo file references
+package's distinfo file.
+Also report if any package's distinfo file references
 the same distfile with a different distinfo checksum.
 .It Fl O
 Report any binary packages in any subdirs of
@@ -136,8 +137,8 @@ This is intended to help those making binary packages available for ftp.
 .It Fl r
 Remove distfiles which are not referenced from any package's distinfo file,
 or have an incorrect checksum (usually due to an interrupted download),
-and any old binary packages. To remove any given type, additionally
-specify the
+and any old binary packages.
+To remove any given type, additionally specify the
 .Fl o ,
 .Fl m ,
 or
@@ -162,7 +163,7 @@ List any prebuilt packages in any subdirs of
 with known vulnerabilities, based on the data in
 .Pa ${PKGSRCDIR}/distfiles/pkg-vulnerabilities .
 .It Fl y
-Remove orphaned distfiles, i.e. those that do not belong to any
+Remove orphaned distfiles, i.e., those that do not belong to any
 currently installed package.
 .It Fl z
 Remove distfiles for currently installed packages.
@@ -178,7 +179,8 @@ and
 options default to using
 .Em PACKAGES
 as the base directory from which to
-search for binary packages. If this includes OS or architecture information
+search for binary packages.
+If this includes OS or architecture information
 then packages for other OS/architecture combinations will be missed.
 In this case
 .Em PACKAGES
@@ -194,6 +196,7 @@ The
 algorithm used to obtain package versions
 and DEPENDS information is geared towards speed rather than
 perfection, though it has got somewhat better over time, it only
-parses the simplest Makefile conditionals. (a == b, no \*[Am]\*[Am] etc).
+parses the simplest Makefile conditionals.
+(a == b, no \*[Am]\*[Am] etc).
 .Pp
 Potentially others, but non serious to date.
