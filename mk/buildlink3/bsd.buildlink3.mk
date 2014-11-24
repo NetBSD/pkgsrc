@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.229 2014/11/24 00:32:31 joerg Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.230 2014/11/24 09:59:07 joerg Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1026,7 +1026,7 @@ _CWRAPPERS_TRANSFORM+=	I:${_dir_}:${_dir_}
 .endfor
 .for _dir_ in ${COMPILER_LIB_DIRS}
 _BLNK_TRANSFORM+=	opt-sub:-L${_dir_}:-L${_BLNK_MANGLE_DIR.${_dir_}}
-+_CWRAPPERS_TRANSFORM+=	L:${_dir_}:${_dir_}
+_CWRAPPERS_TRANSFORM+=	L:${_dir_}:${_dir_}
 .endfor
 #
 # Change any buildlink directories in runtime library search paths into
