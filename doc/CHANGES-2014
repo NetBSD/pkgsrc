@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4478 2014/11/24 13:38:31 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4479 2014/11/24 13:43:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5859,3 +5859,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/contao32 to 3.2.16 [taca 2014-11-24]
 	Updated www/contao33 to 3.3.7 [taca 2014-11-24]
 	Added www/p5-Plack-Middleware-RemoveRedundantBody version 0.05 [wen 2014-11-24]
+	Updated www/p5-Dancer2 to 0.154000 [wen 2014-11-24]
