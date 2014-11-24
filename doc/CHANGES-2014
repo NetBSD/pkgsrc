@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4494 2014/11/24 15:44:06 taca Exp $
+$NetBSD: CHANGES-2014,v 1.4495 2014/11/24 16:08:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5876,3 +5876,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/gssdp to 0.14.9nb2 [wiz 2014-11-24]
 	Added lang/php56 version 5.6.3 [taca 2014-11-24]
 	Added meta-pkgs/php56-extensions version 5.6.3 [taca 2014-11-24]
+	Updated graphics/shotwell-gtk3 to 0.20.2 [wiz 2014-11-24]
