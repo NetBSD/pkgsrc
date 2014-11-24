@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.809 2014/11/24 11:28:41 obache Exp $
+# $NetBSD: Makefile,v 1.810 2014/11/24 14:07:04 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -680,6 +680,7 @@ SUBDIR+=	py-sphinx
 SUBDIR+=	py-sphinx-theme-cloud
 SUBDIR+=	py-textile
 SUBDIR+=	py-tinycss
+SUBDIR+=	py-uritemplate
 SUBDIR+=	py-validators
 SUBDIR+=	py-vobject
 SUBDIR+=	py-xlrd
