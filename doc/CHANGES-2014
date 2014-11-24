@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4485 2014/11/24 14:18:58 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4486 2014/11/24 14:21:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5866,3 +5866,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated fonts/cantarell-fonts to 0.0.16 [mef 2014-11-24]
 	Updated fonts/p5-Font-TTF to 1.04 [mef 2014-11-24]
 	Updated fonts/tamsyn-font to 1.10 [mef 2014-11-24]
+	Added security/py-asn1-modules version 0.0.5 [wiz 2014-11-24]
