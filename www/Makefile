@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1073 2014/11/24 13:36:09 wen Exp $
+# $NetBSD: Makefile,v 1.1074 2014/11/24 14:46:31 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -603,6 +603,7 @@ SUBDIR+=	py-flup3
 SUBDIR+=	py-furl
 SUBDIR+=	py-gdata
 SUBDIR+=	py-genshi
+SUBDIR+=	py-google-api-python-client
 SUBDIR+=	py-gunicorn
 SUBDIR+=	py-http-parser
 SUBDIR+=	py-httpie
