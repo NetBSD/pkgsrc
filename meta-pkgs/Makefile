@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2014/07/05 12:25:31 rodent Exp $
+# $NetBSD: Makefile,v 1.76 2014/11/24 15:43:16 taca Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -40,6 +40,7 @@ SUBDIR+=	p5-gnome-bindings
 SUBDIR+=	php53-extensions
 SUBDIR+=	php54-extensions
 SUBDIR+=	php55-extensions
+SUBDIR+=	php56-extensions
 SUBDIR+=	pkg_developer
 SUBDIR+=	pkgsrc-guide-tools
 SUBDIR+=	pulseaudio-tools
