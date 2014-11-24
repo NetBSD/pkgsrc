@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2011/03/06 16:02:30 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2014/11/24 15:21:49 joerg Exp $
 #
 
-DISTNAME=	windowmaker-desktop-1.2
-PKGREVISION=	4
+DISTNAME=	windowmaker-desktop-1.3
 CATEGORIES=	meta-pkgs x11 windowmaker
 MASTER_SITES=	# empty
 
@@ -13,7 +12,6 @@ COMMENT=	Provides a desktop based on the WindowMaker wm
 DEPENDS+=	windowmaker>=0.80.0:../../wm/windowmaker
 DEPENDS+=	wterm-[0-9]*:../../x11/wterm
 DEPENDS+=	wmextra-[0-9]*:../../wm/wmextra
-DEPENDS+=	wmthemes-[0-9]*:../../wm/wmthemes
 DEPENDS+=	wmakerconf-[0-9]*:../../wm/wmakerconf
 DEPENDS+=	asclock-[0-9]*:../../time/asclock
 DEPENDS+=	wmcpuload-[0-9]*:../../sysutils/wmcpuload
