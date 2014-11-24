@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2014/10/31 03:55:22 wen Exp $
+# $NetBSD: Makefile,v 1.15 2014/11/24 13:42:38 wen Exp $
 
-DISTNAME=	Dancer2-0.153002
+DISTNAME=	Dancer2-0.154000
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/X/XS/XSAWYERX/}
@@ -38,6 +38,8 @@ DEPENDS+=	p5-MooX-Types-MooseLike>=0.16:../../devel/p5-MooX-Types-MooseLike
 DEPENDS+=	p5-MooX-Types-MooseLike-Numeric>=0:../../devel/p5-MooX-Types-MooseLike-Numeric
 DEPENDS+=	p5-Path-Class>=0:../../devel/p5-Path-Class
 DEPENDS+=	p5-Plack>=0:../../www/p5-Plack
+DEPENDS+=	p5-Plack-Middleware-FixMissingBodyInRedirect>=0:../../www/p5-Plack-Middleware-FixMissingBodyInRedirect
+DEPENDS+=	p5-Plack-Middleware-RemoveRedundantBody>=0:../../www/p5-Plack-Middleware-RemoveRedundantBody
 DEPENDS+=	p5-Return-MultiLevel>=0:../../devel/p5-Return-MultiLevel
 DEPENDS+=	p5-Safe-Isa>=0:../../devel/p5-Safe-Isa
 DEPENDS+=	p5-Template-Tiny>=0:../../textproc/p5-Template-Tiny
