@@ -1,0 +1,4 @@
+This is a small but growing collection of ASN.1 data structures
+expressed in Python terms using the pyasn1 data model.
+
+It's thought to be useful to protocol developers and testers.
