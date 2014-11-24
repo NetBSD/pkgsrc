@@ -1,4 +1,4 @@
-$NetBSD: patch-kccommon.h,v 1.1 2014/11/21 11:29:52 obache Exp $
+$NetBSD: patch-kccommon.h,v 1.2 2014/11/24 00:48:18 joerg Exp $
 
 * NetBSD also missing modfl(3)
 
@@ -13,3 +13,12 @@ $NetBSD: patch-kccommon.h,v 1.1 2014/11/21 11:29:52 obache Exp $
  inline long double modfl(long double val, long double* iptr) {
    double integ;
    double fract = std::modf(val, &integ);
+@@ -82,7 +82,7 @@ using ::modfl;
+ using ::snprintf;
+ }
+ 
+-#if __cplusplus > 199711L || defined(__GXX_EXPERIMENTAL_CXX0X__) || defined(_MSC_VER)
++#if __cplusplus > 199711L || defined(__GXX_EXPERIMENTAL_CXX0X__) || defined(_MSC_VER) || defined(_LIBCPP_VERSION)
+ 
+ #include <unordered_map>
+ #include <unordered_set>
