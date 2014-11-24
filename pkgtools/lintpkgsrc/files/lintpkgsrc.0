@@ -1,10 +1,11 @@
-LINTPKGSRC(1)           NetBSD General Commands Manual           LINTPKGSRC(1)
+
+LINTPKGSRC(1)             BSD General Commands Manual            LINTPKGSRC(1)
 
 NNAAMMEE
      lliinnttppkkggssrrcc -- verifier for the pkgsrc tree
 
 SSYYNNOOPPSSIISS
-     lliinnttppkkggssrrcc [--BBDDLLOORRSSVVddhhiillmmoopprruu] [--EE _f_i_l_e] [--gg _p_k_g_s_r_c_m_a_p] [--II _f_i_l_e]
+     lliinnttppkkggssrrcc [--BBDDLLOORRSSVVddhhiillmmoopprruuyyzz] [--EE _f_i_l_e] [--gg _p_k_g_s_r_c_m_a_p] [--II _f_i_l_e]
                 [--KK _P_A_C_K_A_G_E_S] [--MM _D_I_S_T_D_I_R] [--PP _P_K_G_S_R_C_D_I_R] [_m_a_k_e_f_i_l_e _._._.]
 
 DDEESSCCRRIIPPTTIIOONN
@@ -111,8 +112,13 @@ DDEESSCCRRIIPPTTIIOONN
                    known vulnerabilities, based on the data in
                    _$_{_P_K_G_S_R_C_D_I_R_}_/_d_i_s_t_f_i_l_e_s_/_p_k_g_-_v_u_l_n_e_r_a_b_i_l_i_t_i_e_s.
 
+     --yy            Remove orphaned distfiles, i.e. those that do not belong to
+                   any currently installed package.
+
+     --zz            Remove distfiles for currently installed packages.
+
 AAUUTTHHOORRSS
-     David Brownlee <abs@netbsd.org>
+     David Brownlee <_a_b_s_@_n_e_t_b_s_d_._o_r_g>
 
 BBUUGGSS
      The --RR, --VV, and --pp options default to using _P_A_C_K_A_G_E_S as the base direc-
@@ -128,4 +134,4 @@ BBUUGGSS
 
      Potentially others, but non serious to date.
 
-pkgsrc                         November 8, 2005                        pkgsrc
+                               November 8, 2005
