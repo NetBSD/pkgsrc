@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4483 2014/11/24 14:13:12 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4484 2014/11/24 14:15:28 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5864,3 +5864,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Test-CleanNamespaces to 0.16 [wen 2014-11-24]
 	Added textproc/py-uritemplate version 0.6 [wiz 2014-11-24]
 	Updated fonts/cantarell-fonts to 0.0.16 [mef 2014-11-24]
+	Updated fonts/p5-Font-TTF to 1.04 [mef 2014-11-24]
