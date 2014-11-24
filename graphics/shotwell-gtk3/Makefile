@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.32 2014/11/03 18:45:43 prlw1 Exp $
+# $NetBSD: Makefile,v 1.33 2014/11/24 16:08:38 wiz Exp $
 
-DISTNAME=		shotwell-0.15.1
-PKGREVISION=		6
+DISTNAME=		shotwell-0.20.2
 CATEGORIES=		graphics
-MASTER_SITES=		http://yorba.org/download/shotwell/0.15/
+MASTER_SITES=		https://download.gnome.org/sources/shotwell/0.20/
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgrsc-users@NetBSD.org
-HOMEPAGE=		http://yorba.org/shotwell/
+HOMEPAGE=		https://wiki.gnome.org/Apps/Shotwell
 COMMENT=		Shotwell is a photo organizer for the GNOME desktop
 LICENSE=		gnu-lgpl-v2.1
+
+BUILD_DEPENDS+=		gnome-doc-utils-[0-9]*:../../textproc/gnome-doc-utils
 
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		gmake bash pkg-config msgfmt
@@ -38,7 +39,7 @@ BUILDLINK_ABI_DEPENDS.libraw+= libraw>=0.13.2
 # Required for dealing with .svg icons. Spotted on a clean box
 .include "../../graphics/librsvg/buildlink3.mk"
 BUILDLINK_DEPMETHOD.vala= build
-.include "../../lang/vala020/buildlink3.mk"
+.include "../../lang/vala/buildlink3.mk"
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"

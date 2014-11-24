@@ -1,16 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2013/12/04 12:57:47 drochner Exp $
+$NetBSD: patch-aa,v 1.5 2014/11/24 16:08:38 wiz Exp $
 
 --- Makefile.orig	2013-11-19 02:16:36.000000000 +0000
 +++ Makefile
-@@ -10,7 +10,7 @@ BUILD_ROOT = 1
- ifndef VALAC
- VALAC := $(shell which valac)
- else
--VALAC := $(shell which $VALAC)
-+#VALAC := $(shell which $VALAC)
- endif
- 
- VALAC_VERSION := `$(VALAC) --version | awk '{print $$2}'`
 @@ -315,7 +315,6 @@ EXT_PKGS = \
  	gstreamer-base-1.0 \
  	gstreamer-pbutils-1.0 \
@@ -45,7 +36,7 @@ $NetBSD: patch-aa,v 1.4 2013/12/04 12:57:47 drochner Exp $
  misc/shotwell-viewer.desktop: misc/shotwell-viewer.desktop.head $(EXPANDED_CORE_PO_FILES)
  	cp misc/shotwell-viewer.desktop.head misc/shotwell-viewer.desktop
  	$(foreach lang,$(CORE_SUPPORTED_LANGUAGES), echo X-GNOME-FullName[$(lang)]=`TEXTDOMAINDIR=locale-langpack \
-@@ -736,7 +734,6 @@ $(PLUGINS_SO) $(EXTRA_PLUGINS_SO): $(PLU
+@@ -736,7 +732,6 @@ $(PLUGINS_SO) $(EXTRA_PLUGINS_SO): $(PLU
  
  .PHONY: $(PLUGINS_DIR)
  $(PLUGINS_DIR): $(PLUGIN_VAPI) $(PLUGIN_HEADER) $(PLUGIN_DEPS)
