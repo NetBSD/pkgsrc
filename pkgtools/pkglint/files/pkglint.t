@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.t,v 1.11 2014/11/23 19:14:40 schmonz Exp $
+# $NetBSD: pkglint.t,v 1.12 2014/11/24 16:31:34 schmonz Exp $
 #
 
 require 'pkglint.pl';			# so we can test its internals
@@ -130,14 +130,14 @@ sub test_pkglint_main {
 	@ARGV = ('-h');
 	test_unit($unit, undef, 0, '^usage: pkglint ', '^$');
 
-	@ARGV = ();
-	test_unit($unit, undef, 1, '^ERROR:.+how to check', '^$');
+	@ARGV = ('..');
+	test_unit($unit, undef, 0, '^looks fine', '^$');
 
 	@ARGV = ('.');
 	test_unit($unit, undef, 1, '^ERROR:.+how to check', '^$');
 
-	@ARGV = ('..');
-	test_unit($unit, undef, 1, '^ERROR:.+LICENSE', '^$');
+	@ARGV = ();
+	test_unit($unit, undef, 1, '^ERROR:.+how to check', '^$');
 
 	@ARGV = ('/does/not/exist');
 	test_unit($unit, undef, 1, '^ERROR:.+not exist', '^$');
