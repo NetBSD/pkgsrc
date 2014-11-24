@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2014/06/01 16:35:37 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2014/11/24 14:18:51 mef Exp $
 #
 
-DISTNAME=	tamsyn-font-1.9
-PKGREVISION=	1
+DISTNAME=	tamsyn-font-1.10
 CATEGORIES=	fonts x11
 MASTER_SITES=	http://www.fial.com/~scott/tamsyn-font/download/
 
