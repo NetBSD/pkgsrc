@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 16:08:30 asau Exp $
+# $NetBSD: Makefile,v 1.10 2014/11/24 13:19:12 mef Exp $
 #
 
-DISTNAME=		fuse-2.8.4
-PKGREVISION=		2
+DISTNAME=		fuse-2.9.3
 CATEGORIES=		filesystems
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fuse/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://fuse.sourceforge.net/
 COMMENT=		Filesystem in Userspace
+LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 GNU_CONFIGURE=		yes
 
