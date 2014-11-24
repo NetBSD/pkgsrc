@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2004 2014/10/12 23:39:17 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2005 2014/11/24 00:32:31 joerg Exp $
 #
 # This file is in the public domain.
 #
@@ -429,6 +429,10 @@ ALL_ENV+=		HOME=${FAKEHOMEDIR}
 fake-home: ${FAKEHOMEDIR}
 ${FAKEHOMEDIR}:
 	${RUN} ${MKDIR} ${.TARGET}
+
+.if ${USE_CWRAPPERS:tl} != "no"
+.include "cwrappers.mk"
+.endif
 
 .include "wrapper/bsd.wrapper.mk"
 
