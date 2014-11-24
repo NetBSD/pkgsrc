@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4487 2014/11/24 14:38:26 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4488 2014/11/24 14:43:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5868,3 +5868,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated fonts/tamsyn-font to 1.10 [mef 2014-11-24]
 	Added security/py-asn1-modules version 0.0.5 [wiz 2014-11-24]
 	Added security/py-rsa version 3.1.4 [wiz 2014-11-24]
+	Added security/py-oauth2client version 1.4.1 [wiz 2014-11-24]
