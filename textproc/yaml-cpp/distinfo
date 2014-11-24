@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/11/24 11:27:52 obache Exp $
+
+SHA1 (yaml-cpp-0.5.1.tar.gz) = 9c5414b4090491e96d1b808fe8628b31e625fdaa
+RMD160 (yaml-cpp-0.5.1.tar.gz) = e9c4f9c95bc59df88ed2840f2b92078d984f5b67
+Size (yaml-cpp-0.5.1.tar.gz) = 118244 bytes
