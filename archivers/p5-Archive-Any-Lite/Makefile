@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2014/10/09 14:05:53 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/11/24 11:55:29 mef Exp $
 
-DISTNAME=	Archive-Any-Lite-0.07
+DISTNAME=	Archive-Any-Lite-0.10
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	archivers perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Archive/}
 
@@ -11,15 +10,10 @@ HOMEPAGE=	http://search.cpan.org/dist/Archive-Any-Lite/
 COMMENT=	Simple CPAN package extractor
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=		{perl>=5.9.3,p5-Archive-Tar>=0}:../../archivers/p5-Archive-Tar
-DEPENDS+=		p5-Archive-Zip>=0:../../archivers/p5-Archive-Zip
-DEPENDS+=		p5-PathTools>=0:../../devel/p5-PathTools
-DEPENDS+=		{perl>=5.9.3,p5-IO-Zlib>=0}:../../devel/p5-IO-Zlib
-DEPENDS+=		{perl>=5.10.1,p5-IO-Compress>=0}:../../devel/p5-IO-Compress	# IO::Uncompress::Bunzip2>=0
+DEPENDS+=	p5-Module-CPANfile>=0:../../devel/p5-Module-CPANfile
+DEPENDS+=	p5-ExtUtils-MakeMaker-CPANfile>=0:../../devel/p5-ExtUtils-MakeMaker-CPANfile
 
-BUILD_DEPENDS+=		p5-Test-UseAllModules>=0:../../devel/p5-Test-UseAllModules
-
-PERL5_PACKLIST=		auto/Archive/Any/Lite/.packlist
+PERL5_PACKLIST=	auto/Archive/Any/Lite/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
