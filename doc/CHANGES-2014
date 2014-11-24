@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4491 2014/11/24 15:03:09 adam Exp $
+$NetBSD: CHANGES-2014,v 1.4492 2014/11/24 15:08:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5873,3 +5873,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/vmips to 1.5 [mef 2014-11-24]
 	Updated graphics/pngcrush to 1.7.81 [adam 2014-11-24]
 	Updated databases/mysql-connector-c++ to 1.1.4 [adam 2014-11-24]
+	Updated net/gssdp to 0.14.9nb2 [wiz 2014-11-24]
