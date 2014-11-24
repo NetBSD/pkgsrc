@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2014/06/11 12:57:23 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2014/11/24 04:45:05 mef Exp $
 #
 
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME}
-PKGREVISION=	2
 
 COMMENT=	Simple Common Gateway Interface for Apache
+LICENSE=	cnri-license
 
 DEPENDS+=	${PYPKGPREFIX}-scgi-[0-9]*:../../www/py-scgi
 
