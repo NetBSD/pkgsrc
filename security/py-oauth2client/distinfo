@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/11/24 14:43:12 wiz Exp $
+
+SHA1 (oauth2client-1.4.1.tar.gz) = 94dc0545a5a1f8aadfb45f0ad51c2442a0549ce6
+RMD160 (oauth2client-1.4.1.tar.gz) = 7de6c60509983ede6a74a92a0d116ec7bf441963
+Size (oauth2client-1.4.1.tar.gz) = 1028321 bytes
