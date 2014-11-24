@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.4 2011/03/11 18:03:21 drochner Exp $
+$NetBSD: patch-ac,v 1.5 2014/11/24 05:03:43 mef Exp $
+
+[check-portability.awk] configure: if test "$prefix" == "NONE"; ...
 
 --- configure.orig	2010-02-15 13:56:55.000000000 +0000
 +++ configure
