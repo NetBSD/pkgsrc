@@ -1,6 +1,7 @@
-$NetBSD: patch-kccommon.h,v 1.2 2014/11/24 00:48:18 joerg Exp $
+$NetBSD: patch-kccommon.h,v 1.3 2014/11/24 07:05:49 obache Exp $
 
 * NetBSD also missing modfl(3)
+* XXX: (will be removed in future update).
 
 --- kccommon.h.orig	2012-05-24 16:27:59.000000000 +0000
 +++ kccommon.h
