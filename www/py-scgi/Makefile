@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2014/05/09 07:37:26 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/11/24 04:45:05 mef Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 
 COMMENT=	Simple Common Gateway Interface
+LICENSE=	cnri-license
 
 DEPENDS+=	${PYPKGPREFIX}-quixote-[0-9]*:../../devel/py-quixote
 
