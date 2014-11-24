@@ -1,6 +1,6 @@
 #! @PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.3 2013/02/09 18:51:56 mspo Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.4 2014/11/24 09:41:25 bsiegert Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -42,7 +42,7 @@ $ENV{PATH} .=
   ":/bin:/usr/bin:/sbin:/usr/sbin:${conf_prefix}/sbin:${conf_prefix}/bin";
 
 if (
-       !getopts( 'BDE:I:K:LM:OP:RSVdg:himopru', \%opt )
+       !getopts( 'BDE:I:K:LM:OP:RSVdg:himopruyz', \%opt )
     || $opt{h}
     || !(
            defined $opt{d}
@@ -60,6 +60,8 @@ if (
         || defined $opt{S}
         || defined $opt{V}
         || defined $opt{E}
+        || defined $opt{y}
+        || defined $opt{z}
     )
   )
 {
@@ -118,6 +120,127 @@ sub main() {
             }
         }
     }
+
+    # Remove all distfiles that are / are not part of an installed package
+    if ($opt{y} || $opt{z})
+	{
+	my(@pkgs, @installed, %distfiles, @pkgdistfiles, @dldistfiles);
+	my(@tmpdistfiles, @orphan, $found, @parent);
+
+	@pkgs = list_installed_packages();
+	scan_pkgsrc_makefiles($pkgsrcdir);
+
+	# list the installed packages and the directory they live in
+	foreach my $pkgname (sort @pkgs)
+ 	    {	
+	    if ($pkgname =~ /^([^*?[]+)-([\d*?[].*)/)
+	        {
+		foreach my $pkgver ($pkglist->pkgver($1))
+		    {
+		    $pkgver->var('dir') =~ /-current/ && next;
+		    push(@installed, $pkgver);
+		    last;
+		    }
+	        }
+	    }
+
+	# distfiles belonging to the currently installed packages
+	foreach my $pkgver (sort @installed)
+	    {
+	    if (open(DISTINFO, "$pkgsrcdir/" .$pkgver->var('dir'). "/distinfo")) 
+		{
+		while( <DISTINFO> )
+		    {
+		    if (m/^(\w+) ?\(([^\)]+)\) = (\S+)/)
+			{
+			my($dn);
+			if ($2 =~ /^patch-[a-z0-9]+$/)
+			    { next; }
+			$dn = $2;
+			# Strip leading ./ which sometimes gets added
+			# because of DISTSUBDIR=.
+			$dn =~ s/^(\.\/)*//;
+			if (!defined $distfiles{$dn})
+			    {
+			    $distfiles{$dn}{name} = $dn;
+			    push (@pkgdistfiles, $dn);
+			    }
+			}
+		    }
+		close(DISTINFO);
+		}
+	    }
+	
+	# distfiles downloaded on the current system
+	@tmpdistfiles = listdir("$pkgdistdir");
+	foreach my $tmppkg (@tmpdistfiles)
+	    {
+	    if ($tmppkg ne "pkg-vulnerabilities")
+	       { push (@dldistfiles, $tmppkg); }
+	    }
+
+	# sort the two arrays to make searching a bit faster
+	@dldistfiles = sort { $a cmp $b } @dldistfiles;
+	@pkgdistfiles = sort { $a cmp $b } @pkgdistfiles;
+
+	if ($opt{y})
+	    {
+	    # looking for files that are downloaded on the current system
+	    # but do not belong to any currently installed package i.e. orphaned
+	    $found = 0;
+	    foreach my $dldf (@dldistfiles)
+	        {
+                foreach my $pkgdf (@pkgdistfiles)
+		    {
+                    if ($dldf eq $pkgdf)
+		        { $found = 1; }
+		    }
+		    if ($found != 1)
+		        { 
+			push (@orphan, $dldf); 
+		        print "Orphaned file: $dldf\n";
+			}
+	            $found = 0;
+		}
+
+	if ($opt{r})
+	    {
+	    safe_chdir("$pkgdistdir");
+	    verbose("Unlinking 'orphaned' distfiles\n");
+	    foreach my $distfile (@orphan)
+	        { unlink($distfile) }
+	    }
+	}
+
+        if ($opt{z})
+	    {
+	    # looking for files that are downloaded on the current system
+	    # but belong to a currently installed package i.e. parented
+	    $found = 0;
+	    foreach my $pkgdf (@pkgdistfiles)
+		{
+		foreach my $dldf (@dldistfiles)
+		    {
+		    if ($pkgdf eq $dldf)
+			{ $found = 1; }
+		    }
+		    if ($found == 1)
+			{ 
+			push (@parent, $pkgdf); 
+		        print "Parented file: $pkgdf\n";
+			}
+		    $found = 0;
+		}
+	    }
+
+	if ($opt{r})
+	    {
+	    safe_chdir("$pkgdistdir");
+	    verbose("Unlinking 'parented' distfiles\n");
+	    foreach my $distfile (@parent)
+	        { unlink($distfile) }
+	    }
+        }
 
     # List BROKEN packages
     if ( $opt{B} ) {
@@ -1608,6 +1731,8 @@ opts:
 Installed package options:		Distfile options:
   -i : Check version against pkgsrc	  -m : List distinfo mismatches
   -u : As -i + fetch dist (may change)	  -o : List obsolete (no distinfo)
+					  -y : Remove orphan distfiles
+					  -z : Remove installed distfiles
 
 Prebuilt package options:		Makefile options:
   -p : List old/obsolete		  -B : List packages marked as 'BROKEN'
