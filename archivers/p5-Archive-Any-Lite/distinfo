@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/08/25 06:17:35 wen Exp $
+$NetBSD: distinfo,v 1.2 2014/11/24 11:55:29 mef Exp $
 
-SHA1 (Archive-Any-Lite-0.07.tar.gz) = 0c4b9dd34bcdb28aa868c27f9ca6d645e8883cf4
-RMD160 (Archive-Any-Lite-0.07.tar.gz) = d72e03aa03d8136eeff270a9bf701eed385a4a9f
-Size (Archive-Any-Lite-0.07.tar.gz) = 21207 bytes
+SHA1 (Archive-Any-Lite-0.10.tar.gz) = 01c3a32c8ff1696316a1846d89c9398e40a150d1
+RMD160 (Archive-Any-Lite-0.10.tar.gz) = 9cac40ecda76c2c19962d31f35818c46b789a8bd
+Size (Archive-Any-Lite-0.10.tar.gz) = 28966 bytes
