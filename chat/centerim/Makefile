@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2014/11/21 12:02:02 mef Exp $
+# $NetBSD: Makefile,v 1.26 2014/11/24 00:08:22 mef Exp $
 #
 
 DISTNAME=	centerim-4.22.10
@@ -12,7 +12,7 @@ COMMENT=	Instant Messenger interface supporting many protocols
 LICENSE=	gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl:run
 USE_LANGUAGES=		c c++
 
 GNU_CONFIGURE=		yes
