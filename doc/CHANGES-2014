@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4462 2014/11/24 05:03:52 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4463 2014/11/24 05:23:27 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5842,3 +5842,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/ap-scgi to 1.14 [mef 2014-11-24]
 	Updated www/py-scgi to 1.14 [mef 2014-11-24]
 	Updated www/bluefish to 2.2.6 [mef 2014-11-24]
+	Updated www/cgilib to 0.7 [mef 2014-11-24]
