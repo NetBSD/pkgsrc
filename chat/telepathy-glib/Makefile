@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2014/09/07 23:00:55 prlw1 Exp $
+# $NetBSD: Makefile,v 1.39 2014/11/24 16:31:19 wiz Exp $
 
 DISTNAME=	telepathy-glib-0.24.1
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-glib/
 
@@ -29,7 +30,7 @@ BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.36
 BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=1.30.0
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/vala024/buildlink3.mk"
+.include "../../lang/vala/buildlink3.mk"
 BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.90
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.dbus+=		dbus>=0.95
