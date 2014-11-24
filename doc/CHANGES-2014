@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4473 2014/11/24 12:53:29 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4474 2014/11/24 13:25:46 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5854,3 +5854,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/ruby-rcairo to 1.14.0 [obache 2014-11-24]
 	Updated audio/picard to 1.3 [mef 2014-11-24]
 	Updated devel/libusb-compat to 0.1.5 [mef 2014-11-24]
+	Added www/p5-Plack-Middleware-FixMissingBodyInRedirect version 0.12 [wen 2014-11-24]
