@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4460 2014/11/24 02:09:34 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.4461 2014/11/24 04:47:02 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5839,3 +5839,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Removed wm/wmthemes [joerg 2014-11-24]
 	Updated pkgtools/pbulk to 0.53 [asau 2014-11-24]
 	Updated inputmethod/skk to 15.2 [ryoon 2014-11-24]
+	Updated www/ap-scgi to 1.14 [mef 2014-11-24]
+	Updated www/py-scgi to 1.14 [mef 2014-11-24]
