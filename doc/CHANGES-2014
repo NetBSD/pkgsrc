@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4500 2014/11/24 19:10:06 morr Exp $
+$NetBSD: CHANGES-2014,v 1.4501 2014/11/24 20:07:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5882,3 +5882,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated chat/telepathy-glib to 0.24.1nb1 [wiz 2014-11-24]
 	Removed lang/vala024 [wiz 2014-11-24]
 	Updated www/wordpress to 4.0.1 [morr 2014-11-24]
+	Updated graphics/glew to 1.11.0 [adam 2014-11-24]
