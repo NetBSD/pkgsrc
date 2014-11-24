@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST.common,v 1.1 2010/08/25 08:02:21 manu Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2014/11/24 13:23:10 mef Exp $
 include/fuse.h
+include/fuse/cuse_lowlevel.h
 include/fuse/fuse.h
 include/fuse/fuse_common.h
 include/fuse/fuse_common_compat.h
@@ -7,8 +8,10 @@ include/fuse/fuse_compat.h
 include/fuse/fuse_lowlevel.h
 include/fuse/fuse_lowlevel_compat.h
 include/fuse/fuse_opt.h
-include/fuse/cuse_lowlevel.h
 include/ulockmgr.h
 lib/libfuse.la
 lib/libulockmgr.la
 lib/pkgconfig/fuse.pc
+man/man1/fusermount.1
+man/man1/ulockmgr_server.1
+man/man8/mount.fuse.8
