@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4475 2014/11/24 13:29:11 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4476 2014/11/24 13:29:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5856,3 +5856,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/libusb-compat to 0.1.5 [mef 2014-11-24]
 	Added www/p5-Plack-Middleware-FixMissingBodyInRedirect version 0.12 [wen 2014-11-24]
 	Updated filesystems/fuse to 2.9.3 [mef 2014-11-24]
+	Updated www/contao32 to 3.2.16 [taca 2014-11-24]
