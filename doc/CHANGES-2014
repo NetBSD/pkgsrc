@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4457 2014/11/23 22:02:52 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4458 2014/11/24 00:36:41 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5836,3 +5836,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated filesystems/fuse-mp3fs to 0.91 [wiz 2014-11-23]
 	Updated net/youtube-dl to 20141123.1 [wiz 2014-11-23]
 	Updated www/surfraw to 2.2.9nb2 [wiz 2014-11-23]
+	Removed wm/wmthemes [joerg 2014-11-24]
