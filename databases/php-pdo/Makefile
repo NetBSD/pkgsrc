@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/02 21:25:39 asau Exp $
+# $NetBSD: Makefile,v 1.13 2014/11/24 15:40:32 taca Exp $
 
 MODNAME=		pdo
 CATEGORIES+=		databases
@@ -15,7 +15,13 @@ CONFIGURE_ARGS+=	--with-${MODNAME}
 INSTALLATION_DIRS+=	include/php/ext/pdo
 
 PDO_INCLUDES=		php_pdo_driver.h php_pdo.h
+PLIST_VARS+=		php56
 PLIST_SRC+=		${.CURDIR}/../../databases/php-pdo/PLIST.pdo
+
+.if ${PKG_PHP_VERSION} == "56"
+PDO_INCLUDES+=		php_pdo_error.h
+PLIST.php56=		yes
+.endif
 
 post-install:
 .for inc in ${PDO_INCLUDES}
