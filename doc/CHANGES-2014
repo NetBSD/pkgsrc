@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4496 2014/11/24 16:17:54 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4497 2014/11/24 16:28:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5878,3 +5878,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added meta-pkgs/php56-extensions version 5.6.3 [taca 2014-11-24]
 	Updated graphics/shotwell-gtk3 to 0.20.2 [wiz 2014-11-24]
 	Updated www/midori to 0.4.9nb17 [wiz 2014-11-24]
+	Removed lang/vala020 [wiz 2014-11-24]
