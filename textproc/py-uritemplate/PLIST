@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2014/11/24 14:06:12 wiz Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/uritemplate/__init__.py
+${PYSITELIB}/uritemplate/__init__.pyc
+${PYSITELIB}/uritemplate/__init__.pyo
