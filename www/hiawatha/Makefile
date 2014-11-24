@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2014/09/25 19:46:26 jperkin Exp $
+# $NetBSD: Makefile,v 1.31 2014/11/24 00:48:42 joerg Exp $
 #
 
 DISTNAME=	hiawatha
@@ -51,7 +51,7 @@ do-install:
 	cd ${WRKSRC} && pax -s '/^WEBROOT/pault.com/' -rw WEBROOT ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${FILESDIR}/index.xml ${DESTDIR}${EGDIR}/WEBROOT
 	${INSTALL_DATA} ${FILESDIR}/index.xsl ${DESTDIR}${EGDIR}/WEBROOT
-	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif ${DESTDIR}${EGDIR}/WEBROOT/images
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/sitedrivenby.gif ${DESTDIR}${EGDIR}/WEBROOT/images
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
