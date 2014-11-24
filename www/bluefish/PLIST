@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2013/03/15 18:32:01 drochner Exp $
+@comment $NetBSD: PLIST,v 1.26 2014/11/24 05:03:43 mef Exp $
 bin/bluefish
 lib/bluefish/about.la
 lib/bluefish/charmap.la
@@ -8,6 +8,7 @@ lib/bluefish/infbrowser.la
 lib/bluefish/snippets.la
 lib/bluefish/zencoding.la
 man/man1/bluefish.1
+share/appdata/bluefish.appdata.xml
 share/applications/bluefish.desktop
 share/bluefish/bflang/JQuery.bfinc
 share/bluefish/bflang/ada.bflang2
@@ -21,6 +22,7 @@ share/bluefish/bflang/asp.bflang2
 share/bluefish/bflang/bflang2.bflang2
 share/bluefish/bflang/c.bflang2
 share/bluefish/bflang/cfml.bflang2
+share/bluefish/bflang/chuck.bflang2
 share/bluefish/bflang/clojure.bflang2
 share/bluefish/bflang/cpp.bflang2
 share/bluefish/bflang/css-rules.bfinc
@@ -81,6 +83,7 @@ share/bluefish/cssmin.py
 share/bluefish/default_accelmap
 share/bluefish/encodings
 share/bluefish/jsbeautifier/__init__.py
+share/bluefish/jsbeautifier/__version__.py
 share/bluefish/jsbeautifier/unpackers/__init__.py
 share/bluefish/jsbeautifier/unpackers/evalbased.py
 share/bluefish/jsbeautifier/unpackers/javascriptobfuscator.py
@@ -153,6 +156,14 @@ share/icons/hicolor/96x96/apps/bluefish.png
 share/icons/hicolor/96x96/mimetypes/application-x-bluefish-project.png
 share/icons/hicolor/scalable/apps/bluefish-icon.svg
 share/icons/hicolor/scalable/mimetypes/bluefish-project.svg
+share/locale/ar/LC_MESSAGES/bluefish.mo
+share/locale/ar/LC_MESSAGES/bluefish_plugin_about.mo
+share/locale/ar/LC_MESSAGES/bluefish_plugin_charmap.mo
+share/locale/ar/LC_MESSAGES/bluefish_plugin_entities.mo
+share/locale/ar/LC_MESSAGES/bluefish_plugin_htmlbar.mo
+share/locale/ar/LC_MESSAGES/bluefish_plugin_infbrowser.mo
+share/locale/ar/LC_MESSAGES/bluefish_plugin_snippets.mo
+share/locale/ar/LC_MESSAGES/bluefish_plugin_zencoding.mo
 share/locale/bg/LC_MESSAGES/bluefish.mo
 share/locale/bg/LC_MESSAGES/bluefish_plugin_about.mo
 share/locale/bg/LC_MESSAGES/bluefish_plugin_charmap.mo
