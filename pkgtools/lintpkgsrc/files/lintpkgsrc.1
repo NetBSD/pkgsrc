@@ -1,4 +1,4 @@
-.\"	$NetBSD: lintpkgsrc.1,v 1.2 2013/07/20 21:50:53 wiz Exp $
+.\"	$NetBSD: lintpkgsrc.1,v 1.3 2014/11/24 09:41:25 bsiegert Exp $
 .\"
 .\" Copyright (c) 1999 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -10,7 +10,7 @@
 .Nd verifier for the pkgsrc tree
 .Sh SYNOPSIS
 .Nm
-.Op Fl BDLORSVdhilmopru
+.Op Fl BDLORSVdhilmopruyz
 .Op Fl E Ar file
 .Op Fl g Ar pkgsrcmap
 .Op Fl I Ar file
@@ -161,6 +161,11 @@ List any prebuilt packages in any subdirs of
 .Em PACKAGES
 with known vulnerabilities, based on the data in
 .Pa ${PKGSRCDIR}/distfiles/pkg-vulnerabilities .
+.It Fl y
+Remove orphaned distfiles, i.e. those that do not belong to any
+currently installed package.
+.It Fl z
+Remove distfiles for currently installed packages.
 .El
 .Sh AUTHORS
 .An David Brownlee Aq Mt abs@netbsd.org
