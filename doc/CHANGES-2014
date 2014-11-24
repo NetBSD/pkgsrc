@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4467 2014/11/24 11:28:04 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4468 2014/11/24 11:58:29 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5847,3 +5847,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/libsixel to 1.3.6 [obache 2014-11-24]
 	Updated emulators/suse131_openssl to 13.1nb11 [obache 2014-11-24]
 	Added textproc/yaml-cpp version 0.5.1 [obache 2014-11-24]
+	Added p5-ExtUtils-MakeMaker-CPANfile version 0.06 [mef 2014-11-24]
+	Updated archivers/p5-Archive-Any-Lite to 0.10 [mef 2014-11-24]
