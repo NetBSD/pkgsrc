@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4459 2014/11/24 01:09:12 asau Exp $
+$NetBSD: CHANGES-2014,v 1.4460 2014/11/24 02:09:34 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5838,3 +5838,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/surfraw to 2.2.9nb2 [wiz 2014-11-23]
 	Removed wm/wmthemes [joerg 2014-11-24]
 	Updated pkgtools/pbulk to 0.53 [asau 2014-11-24]
+	Updated inputmethod/skk to 15.2 [ryoon 2014-11-24]
