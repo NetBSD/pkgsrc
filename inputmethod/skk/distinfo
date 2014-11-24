@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2013/03/16 14:59:49 ryoon Exp $
+$NetBSD: distinfo,v 1.10 2014/11/24 02:08:51 ryoon Exp $
 
-SHA1 (ddskk-15.1.tar.gz) = df4e7305c94cb8966e843dff9a0c9f1fabdcb082
-RMD160 (ddskk-15.1.tar.gz) = 30cc05ff1ebb082a0b0d3c351678cc093041093f
-Size (ddskk-15.1.tar.gz) = 837942 bytes
+SHA1 (ddskk-15.2.tar.gz) = 23b7c83dfa4997a0be47fca8cfd316e68f4342ec
+RMD160 (ddskk-15.2.tar.gz) = 4673d842973b66e07a654a03a5f2e7b52f6c3616
+Size (ddskk-15.2.tar.gz) = 850305 bytes
