@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4498 2014/11/24 16:31:27 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4499 2014/11/24 16:32:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5880,3 +5880,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/midori to 0.4.9nb17 [wiz 2014-11-24]
 	Removed lang/vala020 [wiz 2014-11-24]
 	Updated chat/telepathy-glib to 0.24.1nb1 [wiz 2014-11-24]
+	Removed lang/vala024 [wiz 2014-11-24]
