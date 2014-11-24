@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2013/08/21 15:39:43 drochner Exp $
+$NetBSD: distinfo,v 1.9 2014/11/24 12:22:17 mef Exp $
 
-SHA1 (picard-1.2.tar.gz) = 323e22adef321a8fb80d617eb86a880f7d546fca
-RMD160 (picard-1.2.tar.gz) = a092bcf7ae02ab49abd9cefbcba37bfae84d2bf3
-Size (picard-1.2.tar.gz) = 1679532 bytes
+SHA1 (picard-1.3.tar.gz) = dade79ecd7a158a89ecd7c59aa1ab9744071b20c
+RMD160 (picard-1.3.tar.gz) = 696f71eab3ce441b588a1161a95df4441f0c151e
+Size (picard-1.3.tar.gz) = 2021097 bytes
