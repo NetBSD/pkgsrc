@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1072 2014/11/24 13:24:08 wen Exp $
+# $NetBSD: Makefile,v 1.1073 2014/11/24 13:36:09 wen Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -445,6 +445,7 @@ SUBDIR+=	p5-Plack-Middleware-File-Sass
 SUBDIR+=	p5-Plack-Middleware-FixMissingBodyInRedirect
 SUBDIR+=	p5-Plack-Middleware-Header
 SUBDIR+=	p5-Plack-Middleware-JSConcat
+SUBDIR+=	p5-Plack-Middleware-RemoveRedundantBody
 SUBDIR+=	p5-Plack-Middleware-ReverseProxy
 SUBDIR+=	p5-Plack-Middleware-Session
 SUBDIR+=	p5-Plack-Middleware-Test-StashWarnings
