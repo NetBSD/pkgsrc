@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2014/05/05 00:48:31 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2014/11/25 11:58:53 wiz Exp $
 
 BUILDLINK_TREE+=	libdesktop-agnostic
 
@@ -9,7 +9,7 @@ BUILDLINK_API_DEPENDS.libdesktop-agnostic+=	libdesktop-agnostic>=0.3.92
 BUILDLINK_ABI_DEPENDS.libdesktop-agnostic+=	libdesktop-agnostic>=0.3.92nb14
 BUILDLINK_PKGSRCDIR.libdesktop-agnostic?=	../../x11/libdesktop-agnostic
 
-.include "../../lang/vala014/buildlink3.mk"
+.include "../../lang/vala/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/py-gobject/buildlink3.mk"
