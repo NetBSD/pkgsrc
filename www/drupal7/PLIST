@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2014/08/08 15:53:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.10.2.1 2014/11/25 14:30:41 tron Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/COPYRIGHT.txt
 share/doc/drupal/INSTALL.mysql.txt
@@ -143,6 +143,8 @@ share/drupal/misc/tabledrag.js
 share/drupal/misc/tableheader.js
 share/drupal/misc/tableselect.js
 share/drupal/misc/textarea.js
+share/drupal/misc/throbber-active.gif
+share/drupal/misc/throbber-inactive.png
 share/drupal/misc/throbber.gif
 share/drupal/misc/timezone.js
 share/drupal/misc/tree-bottom.png
@@ -732,6 +734,7 @@ share/drupal/modules/simpletest/tests/theme_test.template_test.tpl.php
 share/drupal/modules/simpletest/tests/themes/test_basetheme/test_basetheme.info
 share/drupal/modules/simpletest/tests/themes/test_subtheme/test_subtheme.info
 share/drupal/modules/simpletest/tests/themes/test_theme/template.php
+share/drupal/modules/simpletest/tests/themes/test_theme/templates/node--1.tpl.php
 share/drupal/modules/simpletest/tests/themes/test_theme/test_theme.info
 share/drupal/modules/simpletest/tests/unicode.test
 share/drupal/modules/simpletest/tests/update.test
