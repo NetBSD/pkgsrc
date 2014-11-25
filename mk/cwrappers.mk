@@ -1,4 +1,4 @@
-# $NetBSD: cwrappers.mk,v 1.2 2014/11/25 18:23:49 joerg Exp $
+# $NetBSD: cwrappers.mk,v 1.3 2014/11/25 18:24:12 joerg Exp $
 #
 # This Makefile fragment implements integration of pkgtools/cwrappers.
 
@@ -41,11 +41,11 @@ CWRAPPERS_WRAPPEE.ld=	${LD:Ufalse}
 CWRAPPERS_WRAPPEE.libtool=	${PREFIX}/bin/libtool
 CWRAPPERS_WRAPPEE.shlibtool=	${PREFIX}/bin/shlibtool
 
-.PHONY: generate-cwrapper
+.PHONY: generate-cwrappers
 
-do-wrapper: generate-cwrapper
+do-wrapper: generate-cwrappers
 
-generate-cwrapper:
+generate-cwrappers:
 	${RUN}${MKDIR} ${CWRAPPERS_CONFIG_DIR} ${CWRAPPERS_BIN_DIR}
 .for wrappee in as cxx cc cpp f77 imake ld libtool shlibtool
 	${RUN}echo worklog=${WRKLOG:Q} > ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
