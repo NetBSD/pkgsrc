@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.4 2014/10/09 19:08:28 jaapb Exp $
+# $NetBSD: hacks.mk,v 1.5 2014/11/25 11:09:51 obache Exp $
 
 .if !defined(OCAML_HACKS_MK)
 OCAML_HACKS_MK=	defined
@@ -6,7 +6,7 @@ OCAML_HACKS_MK=	defined
 .include "../../mk/compiler.mk"
 
 ### [Fri Jan 17 18:06:18 JST 2014 : pho]
-### The linker comes with Darwin 9 does not recognize the option
+### The linker that comes with Darwin 9 & prior does not recognize the option
 ### "-no_compact_unwind" since compact unwind information is only
 ### introduced (and made default) as of Darwin 10.  Note that this
 ### can't be worked around with transformation
@@ -14,7 +14,7 @@ OCAML_HACKS_MK=	defined
 ### into utils/config.ml and will later be used by the OCaml compiler
 ### itself.
 ###
-.if !empty(MACHINE_PLATFORM:MDarwin-9.*)
+.if !empty(MACHINE_PLATFORM:MDarwin-[0-9].*-*)
 PKG_HACKS+=	no_compact_unwind
 SUBST_CLASSES+=	no_compact_unwind
 SUBST_MESSAGE.no_compact_unwind= Removing -no_compact_unwind from linker options
