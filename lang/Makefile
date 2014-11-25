@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.391 2014/11/24 16:31:50 wiz Exp $
+# $NetBSD: Makefile,v 1.392 2014/11/25 10:09:14 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -227,7 +227,6 @@ SUBDIR+=	ucblogo
 SUBDIR+=	umb-scheme
 SUBDIR+=	utilisp
 SUBDIR+=	vala
-SUBDIR+=	vala012
 SUBDIR+=	vala014
 SUBDIR+=	vala018
 SUBDIR+=	vscm
