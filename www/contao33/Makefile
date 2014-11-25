@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/07/30 03:28:34 taca Exp $
+# $NetBSD: Makefile,v 1.5.2.1 2014/11/25 15:01:15 tron Exp $
 #
 
 DISTNAME=	contao-${CT_PKGVER}
@@ -60,9 +60,9 @@ REPLACE.php.old=	.*php[^ ]*
 REPLACE.php.new=	${PREFIX}/bin/php
 REPLACE_FILES.php=	system/bin/automator system/bin/filesync \
 	system/bin/ide_compat system/bin/txpurge system/bin/version \
-	vendor/bin/pscss vendor/contao/tcpdf/tools/tcpdf_addfont.php \
+	vendor/bin/pscss vendor/tecnick.com/tcpdf/tools/tcpdf_addfont.php \
 	vendor/leafo/lessphp/lessify vendor/leafo/lessphp/plessc \
-	vendor/leafo/scssphp/pscss
+	vendor/leafo/scssphp/bin/pscss
 
 SUBST_CLASSES+=		conf
 SUBST_FILES.conf+=	${WRKDIR}/contao.conf
