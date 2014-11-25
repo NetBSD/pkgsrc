@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.37 2014/10/17 17:07:44 fhajny Exp $
+$NetBSD: distinfo,v 1.38 2014/11/25 14:54:22 joerg Exp $
 
 SHA1 (mysql-5.5.40.tar.gz) = b93a1b14ab2de390014e99b4293e7835da133196
 RMD160 (mysql-5.5.40.tar.gz) = a0b6b9a390ba8a3abc889155d756656b28b98f70
@@ -28,6 +28,7 @@ SHA1 (patch-mysys_my__getopt.c) = 6d03782c2ed50e9dc4cb57de9590d6734afa7d43
 SHA1 (patch-mysys_stacktrace.c) = 294b043984f740b99ba25abc8256ce8ad54d84c3
 SHA1 (patch-scripts_CMakeLists.txt) = 17ec1d8d5f0c9e453c64f2b59e757e645a3a1a59
 SHA1 (patch-scripts_mysqld_safe.sh) = cc34d8b4a8d4b34a6766a1123782ce3d0ad64478
+SHA1 (patch-sql-common_client__plugin.c) = d0e0b1c1aa7c3fcec28a9414f04e0c8601c4e4ff
 SHA1 (patch-sql_CMakeLists.txt) = c4e72a0a93eb94a94501c267e2a43aedf8de2c76
 SHA1 (patch-sql_log_event.h) = 43a52ea2f410aa51b99f2f7e1f293a579e13f9c8
 SHA1 (patch-sql_mysqld.cc) = 7e2cfb58f6af8531920dd9128f7b3a35735d7d2c
