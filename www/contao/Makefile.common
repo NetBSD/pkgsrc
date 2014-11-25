@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.81.2.1 2014/11/25 14:53:03 tron Exp $
+# $NetBSD: Makefile.common,v 1.81.2.2 2014/11/25 15:01:15 tron Exp $
 #
 # used by www/contao32/Makefile
 # used by www/contao33/Makefile
 
 # current release
 CT32_VERSION=	3.2.16
-CT33_VERSION=	3.3.5
+CT33_VERSION=	3.3.7
 
 CT_VERS?=	32
 
