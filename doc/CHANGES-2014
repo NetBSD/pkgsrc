@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4515 2014/11/25 20:19:55 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.4516 2014/11/25 23:42:55 tez Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5898,3 +5898,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/libksba to 1.3.2 [wiz 2014-11-25]
 	Added www/contao34 version 3.4.0 [taca 2014-11-25]
 	Updated textproc/grep to 2.21 [ryoon 2014-11-25]
+	Updated security/mit-krb5 to 1.10.7nb4 [tez 2014-11-25]
