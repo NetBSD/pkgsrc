@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4511 2014/11/25 12:04:29 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4512 2014/11/25 13:34:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5894,3 +5894,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/avant-window-navigator to 0.4.0nb17 [wiz 2014-11-25]
 	Removed lang/vala014 [wiz 2014-11-25]
 	Updated math/gnome-calculator to 3.14.1 [wiz 2014-11-25]
+	Removed lang/vala018 [wiz 2014-11-25]
