@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/10/25 19:00:14 prlw1 Exp $
-#
+# $NetBSD: Makefile,v 1.2 2014/11/25 12:04:55 wiz Exp $
 
 DISTNAME=	libgee-0.6.8
 PKGNAME=	${DISTNAME:S/libgee/libgee0.6/}
@@ -18,7 +17,7 @@ USE_TOOLS+=		pkg-config gmake
 
 # to regenerate after patches
 #BUILDLINK_DEPMETHOD.vala:= build
-#.include "../../lang/vala018/buildlink3.mk"
+#.include "../../lang/vala/buildlink3.mk"
 
 PKGCONFIG_OVERRIDE+=	gee-1.0.pc.in
 
