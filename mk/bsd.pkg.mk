@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2005 2014/11/24 00:32:31 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2006 2014/11/25 18:27:17 joerg Exp $
 #
 # This file is in the public domain.
 #
@@ -430,11 +430,11 @@ fake-home: ${FAKEHOMEDIR}
 ${FAKEHOMEDIR}:
 	${RUN} ${MKDIR} ${.TARGET}
 
+.include "wrapper/bsd.wrapper.mk"
+
 .if ${USE_CWRAPPERS:tl} != "no"
 .include "cwrappers.mk"
 .endif
-
-.include "wrapper/bsd.wrapper.mk"
 
 .if defined(ABI_DEPENDS) || defined(BUILD_ABI_DEPENDS)
 .  if !empty(USE_ABI_DEPENDS:M[yY][eE][sS])
