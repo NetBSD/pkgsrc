@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4507 2014/11/25 10:08:23 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4508 2014/11/25 11:59:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5890,3 +5890,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/eekboard to 1.0.8nb3 [wiz 2014-11-25]
 	Removed graphics/shotwell [wiz 2014-11-25]
 	Moved graphics/shotwell-gtk3 to graphics/shotwell [wiz 2014-11-25]
+	Updated x11/libdesktop-agnostic to 0.3.92nb15 [wiz 2014-11-25]
