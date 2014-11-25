@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2004/01/25 22:29:50 kleink Exp $
+$NetBSD: patch-aa,v 1.2 2014/11/25 14:35:37 wiz Exp $
+
+Add rpath entry.
 
 --- src/ksba-config.in.orig	2003-11-12 15:48:53.000000000 +0100
 +++ src/ksba-config.in	2004-01-25 22:39:50.000000000 +0100
