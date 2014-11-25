@@ -1,11 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2014/01/25 12:35:19 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/11/25 12:04:19 wiz Exp $
 bin/gcalccmd
 bin/gnome-calculator
+libexec/gnome-calculator-search-provider
 man/man1/gcalccmd.1
 man/man1/gnome-calculator.1
 share/appdata/gnome-calculator.appdata.xml
-share/applications/gcalctool.desktop
+share/applications/gnome-calculator.desktop
+share/dbus-1/services/org.gnome.Calculator.SearchProvider.service
 share/glib-2.0/schemas/org.gnome.calculator.gschema.xml
+share/gnome-shell/search-providers/gnome-calculator-search-provider.ini
 share/help/C/gnome-calculator/absolute.page
 share/help/C/gnome-calculator/base.page
 share/help/C/gnome-calculator/boolean.page
@@ -783,7 +786,6 @@ share/locale/el/LC_MESSAGES/gnome-calculator.mo
 share/locale/en@shaw/LC_MESSAGES/gnome-calculator.mo
 share/locale/en_CA/LC_MESSAGES/gnome-calculator.mo
 share/locale/en_GB/LC_MESSAGES/gnome-calculator.mo
-share/locale/en_US/LC_MESSAGES/gnome-calculator.mo
 share/locale/eo/LC_MESSAGES/gnome-calculator.mo
 share/locale/es/LC_MESSAGES/gnome-calculator.mo
 share/locale/et/LC_MESSAGES/gnome-calculator.mo
@@ -792,6 +794,7 @@ share/locale/fa/LC_MESSAGES/gnome-calculator.mo
 share/locale/fi/LC_MESSAGES/gnome-calculator.mo
 share/locale/fr/LC_MESSAGES/gnome-calculator.mo
 share/locale/ga/LC_MESSAGES/gnome-calculator.mo
+share/locale/gd/LC_MESSAGES/gnome-calculator.mo
 share/locale/gl/LC_MESSAGES/gnome-calculator.mo
 share/locale/gu/LC_MESSAGES/gnome-calculator.mo
 share/locale/he/LC_MESSAGES/gnome-calculator.mo

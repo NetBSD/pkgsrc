@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/01/25 12:35:19 prlw1 Exp $
+$NetBSD: distinfo,v 1.2 2014/11/25 12:04:19 wiz Exp $
 
-SHA1 (gnome-calculator-3.10.2.tar.xz) = dd3f3a0cb007d5b42707910c6b79135e16c85fa6
-RMD160 (gnome-calculator-3.10.2.tar.xz) = fc422ce39e2ab73f6b033cd90445bc28265554d7
-Size (gnome-calculator-3.10.2.tar.xz) = 1086400 bytes
+SHA1 (gnome-calculator-3.14.1.tar.xz) = 11098cf3d3693b602ba20a363931aec10cc52bed
+RMD160 (gnome-calculator-3.14.1.tar.xz) = 0709c10c4f19b23743a984989dc98f5d14b6829b
+Size (gnome-calculator-3.14.1.tar.xz) = 1302628 bytes
