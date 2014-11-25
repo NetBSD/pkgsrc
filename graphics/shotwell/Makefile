@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.62 2014/10/29 09:18:50 prlw1 Exp $
+# $NetBSD: Makefile,v 1.63 2014/11/25 10:07:18 wiz Exp $
 
-DISTNAME=		shotwell-0.11.6
-PKGREVISION=		28
+DISTNAME=		shotwell-0.20.2
 CATEGORIES=		graphics
-MASTER_SITES=		http://yorba.org/download/shotwell/0.11/
-EXTRACT_SUFX=		.tar.bz2
+MASTER_SITES=		https://download.gnome.org/sources/shotwell/0.20/
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgrsc-users@NetBSD.org
-HOMEPAGE=		http://yorba.org/shotwell/
+HOMEPAGE=		https://wiki.gnome.org/Apps/Shotwell
 COMMENT=		Shotwell is a photo organizer for the GNOME desktop
 LICENSE=		gnu-lgpl-v2.1
+
+BUILD_DEPENDS+=		gnome-doc-utils-[0-9]*:../../textproc/gnome-doc-utils
 
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		gmake bash pkg-config msgfmt
@@ -22,29 +23,30 @@ MAKE_ENV+=		VALAC=${VALAC}
 
 REPLACE_SH+=		configure
 
+.include "../../multimedia/gstreamer1/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
-.include "../../devel/libgee0.6/buildlink3.mk"
+.include "../../devel/libgee/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libgexiv2+= libgexiv2>=0.4.1
 .include "../../graphics/libgexiv2/buildlink3.mk"
 # 0.13.2 added shared libs
 BUILDLINK_ABI_DEPENDS.libraw+= libraw>=0.13.2
-.include "../../graphics/libraw013/buildlink3.mk"
+.include "../../graphics/libraw/buildlink3.mk"
 # Required for dealing with .svg icons. Spotted on a clean box
 .include "../../graphics/librsvg/buildlink3.mk"
-BUILDLINK_API_DEPENDS.vala+= vala012>=0.11.7
-BUILDLINK_API_DEPENDS.vala+= vala012<0.14
 BUILDLINK_DEPMETHOD.vala= build
-.include "../../lang/vala012/buildlink3.mk"
+.include "../../lang/vala/buildlink3.mk"
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
-.include "../../www/webkit1-gtk/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/libunique/buildlink3.mk"
+.include "../../www/webkit1-gtk3/buildlink3.mk"
+.include "../../www/librest07/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
+.include "../../x11/libunique3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
