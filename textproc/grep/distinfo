@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2014/05/27 06:31:28 adam Exp $
+$NetBSD: distinfo,v 1.16 2014/11/25 20:19:03 ryoon Exp $
 
-SHA1 (grep-2.19.tar.xz) = f491d4ad903ecd80b46c5e8cbf2e92f0f7652922
-RMD160 (grep-2.19.tar.xz) = a5f8c03b92dd7313ddbd55764e0d87eff67decac
-Size (grep-2.19.tar.xz) = 1234676 bytes
+SHA1 (grep-2.21.tar.xz) = c7e6525c5c5aaa1bc3c1774db1697f42b11c2d85
+RMD160 (grep-2.21.tar.xz) = 2e4eb132e5188d298631b45217d23b024dd31614
+Size (grep-2.21.tar.xz) = 1261548 bytes
