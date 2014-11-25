@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2014/05/09 07:37:26 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2014/11/25 11:59:25 wiz Exp $
 
 DISTNAME=	avant-window-navigator-0.4.0
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	x11
 MASTER_SITES=	https://launchpad.net/awn/0.4/0.4.0/+download/
 
@@ -46,7 +46,7 @@ PYTHON_VERSIONED_DEPENDENCIES=	cairo:link
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2
 
 .include "../../devel/GConf/schemas.mk"
-.include "../../lang/vala014/buildlink3.mk"
+.include "../../lang/vala/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/py-dbus/buildlink3.mk"
