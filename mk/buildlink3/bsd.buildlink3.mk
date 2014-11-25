@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.230 2014/11/24 09:59:07 joerg Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.231 2014/11/25 19:01:02 joerg Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -979,7 +979,7 @@ MAKEVARS+=	_BLNK_PHYSICAL_PATH.${_var_}
 # Add any package specified transformations (l:, etc.)
 #
 _BLNK_TRANSFORM+=	${BUILDLINK_TRANSFORM}
-_CWRAPPERS_TRANFORM+=	${BUILDLINK_TRANSFORM}
+_CWRAPPERS_TRANSFORM+=	${BUILDLINK_TRANSFORM}
 # Transform all references to the physical paths to some important
 # directories into their given names.
 #
