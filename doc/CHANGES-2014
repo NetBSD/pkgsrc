@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4505 2014/11/25 09:53:39 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4506 2014/11/25 09:59:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5887,3 +5887,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added time/hs-timezone-olson version 0.1.4 [szptvlfn 2014-11-24]
 	Updated www/py-flask-wtf to 0.10.3 [kleink 2014-11-25]
 	Removed devel/valide [wiz 2014-11-25]
+	Updated x11/eekboard to 1.0.8nb3 [wiz 2014-11-25]
