@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2011/10/22 13:51:02 gls Exp $
+$NetBSD: patch-ab,v 1.6 2014/11/25 10:07:18 wiz Exp $
 
---- src/camera/CameraTable.vala.orig	2011-10-13 19:22:54.000000000 +0000
+--- src/camera/CameraTable.vala.orig	2012-03-28 22:35:57.000000000 +0000
 +++ src/camera/CameraTable.vala
 @@ -26,7 +26,6 @@ public class CameraTable {
      
@@ -50,13 +50,13 @@ $NetBSD: patch-ab,v 1.5 2011/10/22 13:51:02 gls Exp $
          return cameras;
      }
      
-@@ -204,24 +177,6 @@ public class CameraTable {
+@@ -206,24 +179,6 @@ public class CameraTable {
              "/dev/bus/usb/%s".printf(port.substring(4).replace(",", "/")) : null;
      }
      
 -    private string? get_name_for_uuid(string uuid) {
 -        foreach (Volume volume in volume_monitor.get_volumes()) {
--            if (volume.get_identifier(VOLUME_IDENTIFIER_KIND_UUID) == uuid) {
+-            if (volume.get_identifier(VolumeIdentifier.UUID) == uuid) {
 -                return volume.get_name();
 -            }
 -        }
@@ -65,7 +65,7 @@ $NetBSD: patch-ab,v 1.5 2011/10/22 13:51:02 gls Exp $
 -    
 -    private GLib.Icon? get_icon_for_uuid(string uuid) {
 -        foreach (Volume volume in volume_monitor.get_volumes()) {
--            if (volume.get_identifier(VOLUME_IDENTIFIER_KIND_UUID) == uuid) {
+-            if (volume.get_identifier(VolumeIdentifier.UUID) == uuid) {
 -                return volume.get_icon();
 -            }
 -        }
@@ -75,7 +75,7 @@ $NetBSD: patch-ab,v 1.5 2011/10/22 13:51:02 gls Exp $
      private void update_camera_table() throws GPhotoError {
          // need to do this because virtual ports come and go in the USB world (and probably others)
          GPhoto.PortInfoList port_info_list;
-@@ -311,23 +266,6 @@ public class CameraTable {
+@@ -313,23 +268,6 @@ public class CameraTable {
                  continue;
              }
              
@@ -99,7 +99,7 @@ $NetBSD: patch-ab,v 1.5 2011/10/22 13:51:02 gls Exp $
              if (null == display_name) {
                  // Default to GPhoto detected name.
                  display_name = name;
-@@ -365,14 +303,6 @@ public class CameraTable {
+@@ -367,14 +305,6 @@ public class CameraTable {
          }
      }
      
