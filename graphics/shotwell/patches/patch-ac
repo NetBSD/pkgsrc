@@ -1,14 +1,17 @@
-$NetBSD: patch-ac,v 1.5 2012/02/09 19:17:13 drochner Exp $
+$NetBSD: patch-ac,v 1.6 2014/11/25 10:07:18 wiz Exp $
 
---- plugins/Makefile.plugin.mk.orig	2011-11-03 21:25:02.000000000 +0000
-+++ plugins/Makefile.plugin.mk
-@@ -10,7 +10,9 @@
- # NOTE: This file is called from the cwd of each directory, hence the relative paths should be
- # read as such.
+--- configure.orig	2013-11-19 02:02:29.000000000 +0000
++++ configure
+@@ -176,10 +176,10 @@ done
  
-+ifndef VALAC
- VALAC := valac
-+endif
- MAKE_FILES := Makefile ../Makefile.plugin.mk ../plugins.mk
- HEADER_FILES := ../shotwell-plugin-dev-1.0.vapi ../shotwell-plugin-dev-1.0.h \
- 	../shotwell-plugin-dev-1.0.deps
+ # detect version of libgphoto2 the compilation host has installed
+ pkg-config --atleast-version 2.5 libgphoto2
+-if [ $? == 1 ]
++if [ $? = 1 ]
+ then 
+     pkg-config --atleast-version 2.4 libgphoto2
+-    if [ $? == 1 ]
++    if [ $? = 1 ]
+     then
+         printf "No compatible libGPhoto installation found. Configuration cannot continue.\n";
+         exit 1
