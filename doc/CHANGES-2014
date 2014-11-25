@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4514 2014/11/25 17:08:41 taca Exp $
+$NetBSD: CHANGES-2014,v 1.4515 2014/11/25 20:19:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5897,3 +5897,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Removed lang/vala018 [wiz 2014-11-25]
 	Updated security/libksba to 1.3.2 [wiz 2014-11-25]
 	Added www/contao34 version 3.4.0 [taca 2014-11-25]
+	Updated textproc/grep to 2.21 [ryoon 2014-11-25]
