@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.22 2014/11/23 23:29:16 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.23 2014/11/25 15:04:45 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q3 branch:
@@ -91,3 +91,13 @@ net/wireshark: security update
 Pullup ticket #4554 - requested by tron
 databases/phpmyadmin: security update
 
+Pullup ticket #4555 - requested by taca
+www/drupal6: security update
+Pullup ticket #4556 - requested by taca
+www/drupal7: security update
+Pullup ticket #4557 - requested by taca
+www/contao32: security update
+Pullup ticket #4558 - requested by taca
+www/contao33: security update
+Pullup ticket #4559 - requested by morr
+www/wordpress: security update
