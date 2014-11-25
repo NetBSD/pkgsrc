@@ -1,4 +1,4 @@
-# $NetBSD: cwrappers.mk,v 1.1 2014/11/24 00:32:31 joerg Exp $
+# $NetBSD: cwrappers.mk,v 1.2 2014/11/25 18:23:49 joerg Exp $
 #
 # This Makefile fragment implements integration of pkgtools/cwrappers.
 
@@ -66,6 +66,8 @@ generate-cwrapper:
 .  endfor
 .endfor
 
+.if defined(USE_LIBTOOL)
 _LIBTOOL=		${CWRAPPERS_BIN_DIR}/libtool
 _SHLIBTOOL=		${CWRAPPERS_BIN_DIR}/shlibtool
+.endif
 PREPEND_PATH+=		${CWRAPPERS_BIN_DIR}
