@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.90 2014/11/24 00:32:31 joerg Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.91 2014/11/25 18:27:49 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -745,8 +745,10 @@ wrapper-message:
 
 .PHONY: pre-wrapper do-wrapper post-wrapper
 
-.if !target(do-wrapper)
 do-wrapper: generate-wrappers
+
+.if !target(do-wrapper)
+do-wrapper:
 	@${DO_NADA}
 .endif
 
