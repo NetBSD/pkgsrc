@@ -1,0 +1,17 @@
+$NetBSD: patch-tests_CMakeLists.txt,v 1.1 2014/11/26 12:25:49 joerg Exp $
+
+More a compiler memory test than a functional test otherwise
+with functions larger than 500KB+.
+
+--- tests/CMakeLists.txt.orig	2014-10-26 20:17:55.000000000 +0000
++++ tests/CMakeLists.txt
+@@ -101,8 +101,7 @@ target_link_libraries( searchbar_test
+ ########### vimode test ###############
+ 
+ kde4_add_unit_test(vimode_test TESTNAME kate-vimode_test vimode_test.cpp)
+-
+-
++set_source_files_properties(vimode_test.cpp PROPERTIES COMPILE_FLAGS -O0)
+ 
+ target_link_libraries( vimode_test
+   ${KDE4_KDEUI_LIBS}
