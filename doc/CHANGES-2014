@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4517 2014/11/26 02:11:26 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4518 2014/11/26 12:10:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5900,3 +5900,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/grep to 2.21 [ryoon 2014-11-25]
 	Updated security/mit-krb5 to 1.10.7nb4 [tez 2014-11-25]
 	Updated benchmarks/httperf to 0.9.0 [mef 2014-11-26]
+	Updated devel/p5-Algorithm-Diff to 1.1903 [wiz 2014-11-26]
