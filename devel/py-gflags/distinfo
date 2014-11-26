@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/11/26 15:01:12 wiz Exp $
+
+SHA1 (python-gflags-2.0.tar.gz) = db309e6964b102ff36de319ce551db512a78281e
+RMD160 (python-gflags-2.0.tar.gz) = b54a08bbb4dfb79cea17aef60e65f0847aab0a26
+Size (python-gflags-2.0.tar.gz) = 64929 bytes
