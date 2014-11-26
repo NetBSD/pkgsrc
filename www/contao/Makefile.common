@@ -1,11 +1,13 @@
-# $NetBSD: Makefile.common,v 1.85 2014/11/24 13:30:49 taca Exp $
+# $NetBSD: Makefile.common,v 1.86 2014/11/26 09:26:26 taca Exp $
 #
 # used by www/contao32/Makefile
 # used by www/contao33/Makefile
+# used by www/contao34/Makefile
 
 # current release
 CT32_VERSION=	3.2.16
 CT33_VERSION=	3.3.7
+CT34_VERSION=	3.4.0
 
 CT_VERS?=	32
 
@@ -13,6 +15,8 @@ CT_VERS?=	32
 CT_VERSION=	${CT32_VERSION}
 .elif ${CT_VERS} == "33"
 CT_VERSION=	${CT33_VERSION}
+.elif ${CT_VERS} == "34"
+CT_VERSION=	${CT34_VERSION}
 .else
 .error "Illegal version specified: ${CT_VERS}"
 .endif
