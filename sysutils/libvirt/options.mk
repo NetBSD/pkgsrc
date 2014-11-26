@@ -1,10 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2014/07/26 20:25:03 schnoebe Exp $
+# $NetBSD: options.mk,v 1.2 2014/11/26 23:34:55 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libvirt
 
 # Common options.
-# PKG_SUPPORTED_OPTIONS+=xen3 xen33 xen41 xen42
-PKG_SUPPORTED_OPTIONS+=	xen4 libssh2 lvm hal dbus avahi
+PKG_SUPPORTED_OPTIONS+=	xen libssh2 lvm hal dbus avahi
 PKG_SUGGESTED_OPTIONS=	libssh2 
 
 .include "../../mk/bsd.options.mk"
@@ -13,6 +12,7 @@ PKG_SUGGESTED_OPTIONS=	libssh2
 # the include files
 PLIST_VARS+= xen hal
 
+# xen means xen 4.2.
 .if !empty(PKG_OPTIONS:Mxen)
 PLIST.xen = yes
 CONFIGURE_ARGS+=	--without-xen
