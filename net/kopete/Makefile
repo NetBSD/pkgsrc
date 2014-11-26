@@ -1,8 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2014/11/13 11:50:26 markd Exp $
+# $NetBSD: Makefile,v 1.15 2014/11/26 12:26:45 joerg Exp $
 
 DISTNAME=	kopete-${_KDE_VERSION}
 CATEGORIES=	net
 COMMENT=	Multi-protocol instant messenger client
+
+# Race on translatorplugin.h
+MAKE_JOBS_SAFE=	no
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
