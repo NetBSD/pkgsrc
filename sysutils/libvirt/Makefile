@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2014/11/26 23:48:03 gdt Exp $
+# $NetBSD: Makefile,v 1.29 2014/11/26 23:52:54 gdt Exp $
 
 DISTNAME=		libvirt-1.2.9
 PKGREVISION=		2
@@ -48,6 +48,7 @@ RCD_SCRIPTS=            libvirtd
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/yajl/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/cyrus-sasl/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
