@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/10/19 08:48:07 agc Exp $
+# $NetBSD: Makefile,v 1.27 2014/11/26 22:55:01 gdt Exp $
 
 DISTNAME=		libvirt-1.2.9
 CATEGORIES=		sysutils
@@ -44,6 +44,7 @@ RCD_SCRIPTS=            libvirtd
 .include "../../lang/python/extension.mk"
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/yajl/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/cyrus-sasl/buildlink3.mk"
