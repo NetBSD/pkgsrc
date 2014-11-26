@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2014/11/26 15:01:12 wiz Exp $
+bin/gflags2man.py
+${PYSITELIB}/gflags.py
+${PYSITELIB}/gflags.pyc
+${PYSITELIB}/gflags.pyo
+${PYSITELIB}/gflags_validators.py
+${PYSITELIB}/gflags_validators.pyc
+${PYSITELIB}/gflags_validators.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
