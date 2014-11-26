@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2011 2014/11/25 09:53:08 wiz Exp $
+# $NetBSD: Makefile,v 1.2012 2014/11/26 15:01:24 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1563,6 +1563,7 @@ SUBDIR+=	py-flexmock
 SUBDIR+=	py-funcparserlib
 SUBDIR+=	py-game
 SUBDIR+=	py-generate
+SUBDIR+=	py-gflags
 SUBDIR+=	py-gobject
 SUBDIR+=	py-gobject-shared
 SUBDIR+=	py-gobject3
