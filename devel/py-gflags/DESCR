@@ -1,0 +1,11 @@
+GFlags defines a *distributed* command line system, replacing
+systems like getopt(), optparse and manual argument processing.
+Rather than an application having to define all flags in or near
+main(), each python module defines flags that are useful to it.
+When one python module imports another, it gains access to the
+other's flags.
+
+It includes the ability to define flag types (boolean, float,
+interger, list), autogeneration of help (in both human and machine
+readable format) and reading arguments from a file. It also includes
+the ability to automatically generate man pages from the help flags.
