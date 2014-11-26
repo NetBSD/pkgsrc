@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4521 2014/11/26 15:01:34 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4522 2014/11/26 16:09:40 roy Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5904,3 +5904,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Inline-C to 0.67 [wiz 2014-11-26]
 	Updated net/dhcpcd to 6.6.3 [roy 2014-11-26]
 	Added devel/py-gflags version 2.0 [wiz 2014-11-26]
+	Updated net/dhcpcd to 6.6.4 [roy 2014-11-26]
