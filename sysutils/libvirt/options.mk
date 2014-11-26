@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.2 2014/11/26 23:34:55 gdt Exp $
+# $NetBSD: options.mk,v 1.3 2014/11/26 23:40:15 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libvirt
 
 # Common options.
 PKG_SUPPORTED_OPTIONS+=	xen libssh2 lvm hal dbus avahi
-PKG_SUGGESTED_OPTIONS=	libssh2 
+PKG_SUGGESTED_OPTIONS=	libssh2
 
 .include "../../mk/bsd.options.mk"
 
