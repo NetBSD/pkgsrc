@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2014/10/19 08:48:07 agc Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/11/26 23:48:03 gdt Exp $
 bin/virsh
 bin/virt-host-validate
 bin/virt-pki-validate
@@ -7,7 +7,6 @@ include/libvirt/libvirt-lxc.h
 include/libvirt/libvirt-qemu.h
 include/libvirt/libvirt.h
 include/libvirt/virterror.h
-lib/charset.alias
 lib/libvirt-lxc.la
 lib/libvirt-qemu.la
 lib/libvirt.la
