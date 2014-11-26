@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/11/07 12:35:43 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/11/26 12:26:23 joerg Exp $
 bin/rocs
 include/rocs/ConsoleModule.h
 include/rocs/CoreTypes.h
@@ -31,6 +31,7 @@ lib/librocscore.so.${PKGVERSION}
 lib/librocsvisualeditor.so
 lib/librocsvisualeditor.so.4
 lib/librocsvisualeditor.so.${PKGVERSION}
+share/appdata/rocs.appdata.xml
 share/applications/kde4/rocs.desktop
 share/doc/kde/HTML/en/rocs/apiConsole.docbook
 share/doc/kde/HTML/en/rocs/apiDatastructure.docbook
