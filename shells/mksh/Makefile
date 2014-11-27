@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/10/09 14:06:56 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2014/11/27 13:38:15 joerg Exp $
 
 DISTNAME=			mksh-R50d
 PKGNAME=			${DISTNAME:S/-R/-/}
@@ -24,8 +24,7 @@ LIBS.Interix+=			-lcrypt
 INSTALLATION_DIRS=		bin ${PKGMANDIR}/man1 share/examples/mksh
 
 do-build:
-	cd ${WRKBUILD} && LIBS=${LIBS:Q} CC=${CC:Q} CFLAGS=${CFLAGS:Q} \
-	    CPPFLAGS=${CPPFLAGS:Q} LDFLAGS=${LDFLAGS:Q} \
+	cd ${WRKBUILD} && ${SETENV} ${MAKE_ENV} LIBS=${LIBS:Q} \
 	    ${TOOLS_SHELL} ${WRKSRC}/Build.sh -r
 
 do-install:
