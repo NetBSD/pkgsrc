@@ -1,4 +1,4 @@
-# $NetBSD: cwrappers.mk,v 1.9 2014/11/27 20:33:58 joerg Exp $
+# $NetBSD: cwrappers.mk,v 1.10 2014/11/27 20:34:55 joerg Exp $
 #
 # This Makefile fragment implements integration of pkgtools/cwrappers.
 
@@ -38,8 +38,8 @@ CWRAPPERS_WRAPPEE.cpp=		${CPP:Ufalse}
 CWRAPPERS_WRAPPEE.f77=		${F77:Ufalse}
 CWRAPPERS_WRAPPEE.imake=	${IMAKE:Ufalse}
 CWRAPPERS_WRAPPEE.ld=		${LD:Ufalse}
-CWRAPPERS_WRAPPEE.libtool=	${PREFIX}/bin/libtool
-CWRAPPERS_WRAPPEE.shlibtool=	${PREFIX}/bin/shlibtool
+CWRAPPERS_WRAPPEE.libtool=	${PKG_LIBTOOL:Ufalse}
+CWRAPPERS_WRAPPEE.shlibtool=	${PKG_SHLIBTOOL:Ufalse}
 
 .if defined(USE_IMAKE) || !empty(USE_TOOLS:Mimake)
 CWRAPPERS_TRANSFORM.imake+=	I:${PREFIX}/lib/X11/config:${PREFIX}/lib/X11/config
