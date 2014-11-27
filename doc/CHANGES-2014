@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4529 2014/11/27 11:19:51 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4530 2014/11/27 11:46:51 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5909,3 +5909,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated chat/prosody to 0.9.7 [fhajny 2014-11-27]
 	Updated archivers/pigz to 2.3.1 [wiz 2014-11-27]
 	Updated devel/meld to 3.12.2 [wiz 2014-11-27]
+	Updated sysutils/pciutils to 3.3.0 [msaitoh 2014-11-27]
