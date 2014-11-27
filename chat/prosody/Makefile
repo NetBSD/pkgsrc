@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2014/10/19 22:27:43 alnsn Exp $
+# $NetBSD: Makefile,v 1.18 2014/11/27 10:18:20 fhajny Exp $
 #
 
-DISTNAME=		prosody-0.9.4
-PKGREVISION=		2
+DISTNAME=		prosody-0.9.7
 CATEGORIES=		chat
 MASTER_SITES=		http://prosody.im/downloads/source/
 
@@ -11,18 +10,16 @@ HOMEPAGE=		http://prosody.im/
 COMMENT=		Flexible communications server for Jabber/XMPP written in Lua
 LICENSE=		mit
 
-DEPENDS+=	${LUA_PKGPREFIX}-filesystem>=1.0:../../devel/lua-filesystem
-DEPENDS+=	${LUA_PKGPREFIX}-expat>=1.2:../../textproc/lua-expat
-DEPENDS+=	${LUA_PKGPREFIX}-sec>=0.3.3:../../security/lua-sec
-DEPENDS+=	${LUA_PKGPREFIX}-socket>=2.0:../../net/lua-socket
+DEPENDS+=		${LUA_PKGPREFIX}-expat>=1.2:../../textproc/lua-expat
+DEPENDS+=		${LUA_PKGPREFIX}-filesystem>=1.0:../../devel/lua-filesystem
+DEPENDS+=		${LUA_PKGPREFIX}-sec>=0.3.3:../../security/lua-sec
+DEPENDS+=		${LUA_PKGPREFIX}-socket>=2.0:../../net/lua-socket
 
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 BUILD_DEFS+=		VARBASE
 
-CONFIGURE_ARGS+=	--with-lua-include=${PREFIX}/${LUA_INCDIR}
-
-RCD_SCRIPTS=		prosody
+LUA_VERSIONS_ACCEPTED=	51
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -32,7 +29,6 @@ PROSODY_DATA?=		${VARBASE}/db/prosody
 PROSODY_LOG?=		${VARBASE}/log/prosody
 PROSODY_RUN?=		${VARBASE}/run/prosody
 
-OWN_DIRS+=		${PROSODY_DATA} ${PROSODY_LOG} ${PROSODY_RUN}
 OWN_DIRS_PERMS+=	${PROSODY_DATA} ${PROSODY_USER} ${PROSODY_GROUP} 0770
 OWN_DIRS_PERMS+=	${PROSODY_LOG} ${PROSODY_USER} ${PROSODY_GROUP} 0770
 OWN_DIRS_PERMS+=	${PROSODY_RUN} ${PROSODY_USER} ${PROSODY_GROUP} 0770
@@ -56,34 +52,29 @@ CONF_FILES+=		${EGDIR}/certs/localhost.cnf ${PKG_SYSCONFDIR}/certs/localhost.cnf
 CONF_FILES+=		${EGDIR}/certs/localhost.crt ${PKG_SYSCONFDIR}/certs/localhost.crt
 CONF_FILES+=		${EGDIR}/certs/localhost.key ${PKG_SYSCONFDIR}/certs/localhost.key
 
-CFLAGS+=		-fPIC -Wall -DLUA_COMPAT_MODULE
-
 REPLACE_LUA+=		prosody prosodyctl
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+SUBST_CLASSES+=		path
+SUBST_MESSAGE.path=	Fixing default paths
+SUBST_STAGE.path=	pre-configure
+SUBST_FILES.path=	Makefile man/prosodyctl.man prosody.cfg.lua.dist
+SUBST_SED.path=		-e 's,/etc/prosody,${PKG_SYSCONFDIR},g'
+SUBST_VARS.path=	EGDIR PROSODY_DATA PROSODY_LOG PROSODY_RUN
+
+CONFIGURE_ARGS+=	--cflags=${CFLAGS:Q}
 CONFIGURE_ARGS+=	--datadir=${PROSODY_DATA}
 CONFIGURE_ARGS+=	--ldflags="${COMPILER_RPATH_FLAG}${PREFIX}/lib -shared"
-CONFIGURE_ARGS+=	--cflags=${CFLAGS:Q}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-lua-include=${PREFIX}/${LUA_INCDIR}
 
-SUBST_CLASSES+=		eg
-SUBST_MESSAGE.eg=	Fixing examples/configuration directories
-SUBST_STAGE.eg=		post-patch
-SUBST_FILES.eg=		Makefile man/prosodyctl.man
-SUBST_SED.eg=		-e 's,@EGDIR@,${EGDIR},g'
-SUBST_SED.eg+=		-e 's,/etc/prosody,${PKG_SYSCONFDIR},g'
+CFLAGS+=		-fPIC -Wall -DLUA_COMPAT_MODULE
+MAKE_ENV+=		SOCKET_LIB=-lsocket
 
-SUBST_CLASSES+=		config
-SUBST_MESSAGE.config=	Configure POSIX functionality
-SUBST_STAGE.config=	pre-configure
-SUBST_FILES.config=	prosody.cfg.lua.dist
-SUBST_SED.config=	-e 's,@PROSODY_DATA@,${PROSODY_DATA},'
-SUBST_SED.config+=	-e 's,@PROSODY_LOG@,${PROSODY_LOG},'
-SUBST_SED.config+=	-e 's,@PROSODY_RUN@,${PROSODY_RUN},'
+RCD_SCRIPTS=		prosody
 
 .include "../../lang/lua/application.mk"
 .include "../../lang/lua/tool.mk"
-
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
