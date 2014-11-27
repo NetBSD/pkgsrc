@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4534 2014/11/27 15:32:47 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4535 2014/11/27 15:38:27 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5914,3 +5914,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/mess to 0.156 [wiz 2014-11-27]
 	Updated net/tor to 0.2.5.10 [wiz 2014-11-27]
 	Updated misc/kchmviewer to 7.1 [wiz 2014-11-27]
+	Updated sysutils/xenkernel41 to 4.1.6.1nb13 [bouyer 2014-11-27]
+	Updated sysutils/xenkernel42 to 4.2.5nb2 [bouyer 2014-11-27]
