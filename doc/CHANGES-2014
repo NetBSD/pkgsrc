@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4523 2014/11/26 22:32:48 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4524 2014/11/27 01:16:28 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5904,3 +5904,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/dhcpcd to 6.6.3 [roy 2014-11-26]
 	Added devel/py-gflags version 2.0 [wiz 2014-11-26]
 	Updated net/dhcpcd to 6.6.4 [roy 2014-11-26]
+	Updated devel/libwnck3 to 3.14.0 [prlw1 2014-11-27]
