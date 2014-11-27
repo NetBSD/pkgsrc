@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4524 2014/11/27 01:16:28 prlw1 Exp $
+$NetBSD: CHANGES-2014,v 1.4525 2014/11/27 01:58:43 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5905,3 +5905,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/py-gflags version 2.0 [wiz 2014-11-26]
 	Updated net/dhcpcd to 6.6.4 [roy 2014-11-26]
 	Updated devel/libwnck3 to 3.14.0 [prlw1 2014-11-27]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.424 [obache 2014-11-27]
