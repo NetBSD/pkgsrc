@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2014/02/12 23:18:31 tron Exp $
+# $NetBSD: Makefile,v 1.50 2014/11/27 13:31:07 joerg Exp $
 
 DISTNAME=	dirmngr-1.1.0
 PKGREVISION=	8
@@ -54,7 +54,7 @@ OWN_DIRS_PERMS+=	${PREFIX}/libdata/dirmngr/extra-certs ${DIRMNGR_PERMS}
 INSTALLATION_DIRS=	sbin
 
 post-build:
-	${SETENV} ${BUILDENV} ${CC} ${CFLAGS} -DDIRMNGR_USER='"${DIRMNGR_USER}"' -DDIRMNGR_PATH='"${PREFIX}/bin/dirmngr"' -o ${WRKDIR}/runDirmngr ${FILESDIR}/runDirmngr.c
+	${SETENV} ${MAKE_ENV} ${CC} ${CFLAGS} -DDIRMNGR_USER='"${DIRMNGR_USER}"' -DDIRMNGR_PATH='"${PREFIX}/bin/dirmngr"' -o ${WRKDIR}/runDirmngr ${FILESDIR}/runDirmngr.c
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/runDirmngr ${DESTDIR}${PREFIX}/sbin
