@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2014/11/07 19:39:30 adam Exp $
-#
+# $NetBSD: Makefile,v 1.21 2014/11/27 11:19:18 wiz Exp $
 
 DISTNAME=	holtz-1.3.1
 PKGREVISION=	18
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=holtz/}
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://holtz.sourceforge.net/
 COMMENT=	Engine for the abstract strategy games Zèrtz and Dvonn
 LICENSE=	gnu-gpl-v2
