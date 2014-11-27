@@ -1,17 +1,15 @@
-$Id: patch-aa,v 1.10 2014/06/09 04:05:34 rodent Exp $
-
---- Makefile.orig	2013-11-10 21:22:09.000000000 +0900
-+++ Makefile	2014-05-22 18:50:07.000000000 +0900
+--- Makefile.orig	2014-11-10 22:37:47.000000000 +0900
++++ Makefile	2014-11-26 14:10:21.000000000 +0900
 @@ -1,8 +1,7 @@
  # Makefile for The PCI Utilities
- # (c) 1998--2013 Martin Mares <mj@ucw.cz>
+ # (c) 1998--2014 Martin Mares <mj@ucw.cz>
  
 -OPT=-O2
 -CFLAGS=$(OPT) -Wall -W -Wno-parentheses -Wstrict-prototypes -Wmissing-prototypes
 +CFLAGS=-Wall -W -Wno-parentheses -Wstrict-prototypes -Wmissing-prototypes
  
- VERSION=3.2.1
- DATE=2013-11-10
+ VERSION=3.3.0
+ DATE=2014-11-10
 @@ -13,7 +12,7 @@
  CROSS_COMPILE=
  
@@ -21,7 +19,7 @@ $Id: patch-aa,v 1.10 2014/06/09 04:05:34 rodent Exp $
  
  # Support for resolving ID's by DNS (yes/no, default: detect)
  DNS=
-@@ -26,23 +25,23 @@
+@@ -29,23 +28,23 @@
  
  # ABI version suffix in the name of the shared library
  # (as we use proper symbol versioning, this seldom needs changing)
@@ -54,7 +52,7 @@ $Id: patch-aa,v 1.10 2014/06/09 04:05:34 rodent Exp $
  AR=$(CROSS_COMPILE)ar
  RANLIB=$(CROSS_COMPILE)ranlib
  
-@@ -107,12 +106,18 @@
+@@ -110,12 +109,18 @@
  
  install: all
  # -c is ignored on Linux, but required on FreeBSD
@@ -77,9 +75,9 @@ $Id: patch-aa,v 1.10 2014/06/09 04:05:34 rodent Exp $
 +	done
 +	$(BSD_INSTALL_MAN) pcilib.7 $(DESTDIR)$(MANDIR)/man7
  ifeq ($(SHARED),yes)
- 	ln -sf $(PCILIB) $(DESTDIR)$(LIBDIR)/$(LIBNAME).so$(ABI_VERSION)
- endif
-@@ -122,13 +127,14 @@
+ ifeq ($(LIBEXT),dylib)
+ 	ln -sf $(PCILIB) $(DESTDIR)$(LIBDIR)/$(LIBNAME)$(ABI_VERSION).$(LIBEXT)
+@@ -129,13 +134,14 @@
  endif
  
  install-pcilib: lib/$(PCILIB)
@@ -97,5 +95,5 @@ $Id: patch-aa,v 1.10 2014/06/09 04:05:34 rodent Exp $
 +	$(BSD_INSTALL_DATA) $(PCIINC_INS) $(DESTDIR)$(INCDIR)
 +	$(BSD_INSTALL_DATA) lib/$(PCILIBPC) $(DESTDIR)$(PKGCFDIR)
  ifeq ($(SHARED),yes)
- 	ln -sf $(LIBNAME).so$(ABI_VERSION) $(DESTDIR)$(LIBDIR)/$(LIBNAME).so
- endif
+ ifeq ($(LIBEXT),dylib)
+ 	ln -sf $(LIBNAME)$(ABI_VERSION).$(LIBEXT) $(DESTDIR)$(LIBDIR)/$(LIBNAME).$(LIBEXT)
