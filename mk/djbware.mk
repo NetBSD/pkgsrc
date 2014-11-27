@@ -1,4 +1,4 @@
-# $NetBSD: djbware.mk,v 1.23 2010/03/15 17:27:32 schmonz Exp $
+# $NetBSD: djbware.mk,v 1.24 2014/11/27 20:31:22 joerg Exp $
 #
 # Makefile fragment for packages with djb-style build machinery
 #
@@ -79,7 +79,7 @@ do-configure:
 
 .if !target(do-build) && !empty(DJB_SLASHPACKAGE:M[yY][eE][sS])
 do-build:
-	cd ${WRKSRC} && package/compile ${DJB_BUILD_ARGS}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} package/compile ${DJB_BUILD_ARGS}
 .endif
 
 PKG_SUPPORTED_OPTIONS+=	djbware-errno-hack
