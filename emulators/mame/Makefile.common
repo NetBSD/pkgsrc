@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2014/09/24 20:33:31 wiz Exp $
+# $NetBSD: Makefile.common,v 1.18 2014/11/27 12:46:59 wiz Exp $
 #
 # used by emulators/mame/Makefile
 # used by emulators/mess/Makefile
@@ -73,9 +73,9 @@ post-extract:
 
 .include "../../lang/python/application.mk"
 .include "../../devel/GConf/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
-.include "../../devel/SDL_ttf/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../fonts/SDL2_ttf/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
