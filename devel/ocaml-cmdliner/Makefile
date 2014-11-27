@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/10/09 20:07:36 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2014/11/27 13:38:15 joerg Exp $
 
 PKGNAME=	ocaml-${DISTNAME}
 DISTNAME=	cmdliner-0.9.4
@@ -23,7 +23,7 @@ PLIST.opt=	yes
 .endif
 
 do-build:
-	cd ${WRKSRC} && ./pkg/build ${OPTARG}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./pkg/build ${OPTARG}
 
 do-install:
 	for i in `cat ${WRKSRC}/cmdliner.program`; do \
