@@ -1,7 +1,7 @@
-$NetBSD: configuration.txt,v 1.1 2014/09/17 12:40:56 joerg Exp $
+$NetBSD: configuration.txt,v 1.2 2014/11/27 20:36:43 joerg Exp $
 
 The configuration of the wrapper framework depends on two variables.
-The environment variable WRAPPER_CONFIG_DIR points to a directory
+The environment variable CWRAPPERS_CONFIG_DIR points to a directory
 with one configuration file per wrapper.
 
 The configuration file consists of simple key=value pairs.  It is

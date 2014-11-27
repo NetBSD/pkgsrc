@@ -1,4 +1,4 @@
-/* $NetBSD: common.c,v 1.1 2014/09/17 12:40:56 joerg Exp $ */
+/* $NetBSD: common.c,v 1.2 2014/11/27 20:36:43 joerg Exp $ */
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -173,9 +173,9 @@ parse_config(const char *wrapper)
 	ssize_t llen;
 	FILE *fp;
 
-	config_dir = getenv("WRAPPER_CONFIG_DIR");
+	config_dir = getenv("CWRAPPERS_CONFIG_DIR");
 	if (config_dir == NULL)
-		errx(255, "WRAPPER_CONFIG_DIR is missing from environment");
+		errx(255, "CWRAPPERS_CONFIG_DIR is missing from environment");
 
 	config_file = xasprintf("%s/%s", config_dir, wrapper);
 	fp = fopen(config_file, "r");
