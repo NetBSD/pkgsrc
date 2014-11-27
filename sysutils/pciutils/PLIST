@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:16:12 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/11/27 11:45:56 msaitoh Exp $
 include/pciutils/config.h
 include/pciutils/header.h
 include/pciutils/pci.h
