@@ -1,15 +1,15 @@
-# $NetBSD: cwrappers.mk,v 1.10 2014/11/27 20:34:55 joerg Exp $
+# $NetBSD: cwrappers.mk,v 1.11 2014/11/27 20:36:44 joerg Exp $
 #
 # This Makefile fragment implements integration of pkgtools/cwrappers.
 
-BUILD_DEPENDS+=		cwrappers>=20100308:../../pkgtools/cwrappers
+BUILD_DEPENDS+=		cwrappers>=20141127:../../pkgtools/cwrappers
 
 CWRAPPERS_SRC_DIR=	${PREFIX}/libexec/cwrappers
 CWRAPPERS_BIN_DIR=	${WRKDIR}/.cwrapper/bin
 CWRAPPERS_CONFIG_DIR=	${WRKDIR}/.cwrapper/config
-CONFIGURE_ENV+=		WRAPPER_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR}
-MAKE_ENV+=		WRAPPER_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR}
-ALL_ENV+=		WRAPPER_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR}
+CONFIGURE_ENV+=		CWRAPPERS_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR}
+MAKE_ENV+=		CWRAPPERS_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR}
+ALL_ENV+=		CWRAPPERS_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR}
 
 CWRAPPERS_CONFIG.as=		as
 CWRAPPERS_CONFIG.cc=		cc
