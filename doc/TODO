@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13874 2014/11/27 12:50:08 wiz Exp $
+$NetBSD: TODO,v 1.13875 2014/11/27 15:32:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -709,7 +709,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kaffe-1.1.9
 	o kapooka-0.3
 	o kbiff-4.0
-	o kchmviewer-7.1
 	o kdbg-2.5.4
 	o kdenlive-0.9.8
 	o kismet-2011.03r2 [pkg/45692]
