@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4527 2014/11/27 10:44:29 darcy Exp $
+$NetBSD: CHANGES-2014,v 1.4528 2014/11/27 11:16:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5907,3 +5907,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/libwnck3 to 3.14.0 [prlw1 2014-11-27]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.424 [obache 2014-11-27]
 	Updated chat/prosody to 0.9.7 [fhajny 2014-11-27]
+	Updated archivers/pigz to 2.3.1 [wiz 2014-11-27]
