@@ -1,4 +1,4 @@
-* Set WRAPPER_CONFIG_DIR to a test location, then look at work.log.
+* Set CWRAPPERS_CONFIG_DIR to a test location, then look at work.log.
 * Hook in these old GSoC pkgsrc/pkgtools/wrapper tests.
 * Convert them to atf-c-api(3).
 * Add more tests for the rules described in doc/{cleanup,normalise}.txt.
