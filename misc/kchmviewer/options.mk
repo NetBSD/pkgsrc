@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2012/03/29 08:44:41 markd Exp $
+# $NetBSD: options.mk,v 1.8 2014/11/27 15:32:38 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kchmviewer
 PKG_SUPPORTED_OPTIONS=	kde4
@@ -18,9 +18,13 @@ PLIST.kde4=		yes
 
 INSTALLATION_DIRS=	bin
 
-do-build:
+do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QTDIR}/bin/qmake
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE}
+	cd ${WRKSRC}/lib && ${SETENV} ${MAKE_ENV} ${QTDIR}/bin/qmake
+	cd ${WRKSRC}/lib/libebook && ${SETENV} ${MAKE_ENV} ${QTDIR}/bin/qmake
+
+do-build:
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKEFLAGS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/kchmviewer ${DESTDIR}${PREFIX}/bin
