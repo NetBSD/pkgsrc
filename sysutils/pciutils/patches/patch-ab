@@ -1,9 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2008/11/03 22:01:29 bjs Exp $
-
---- lib/configure.orig	2008-09-19 14:04:37.000000000 -0400
-+++ lib/configure
-@@ -179,7 +179,7 @@ else
- 		echo >>$m 'SONAME=-Wl,-soname,$(LIBNAME).so$(ABI_VERSION)'
+--- lib/configure.orig	2014-11-02 19:09:25.000000000 +0900
++++ lib/configure	2014-11-26 14:15:03.000000000 +0900
+@@ -260,7 +260,7 @@
+ 		echo >>$m 'SONAME=-Wl,-soname,$(LIBNAME).$(LIBEXT)$(ABI_VERSION)'
  	fi
  fi
 -echo >>$m 'PCILIBPC=$(LIBNAME).pc'
