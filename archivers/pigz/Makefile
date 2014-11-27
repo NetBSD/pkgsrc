@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2012/09/11 19:47:00 asau Exp $
-#
+# $NetBSD: Makefile,v 1.6 2014/11/27 11:16:19 wiz Exp $
 
-DISTNAME=	pigz-2.2.5
+DISTNAME=	pigz-2.3.1
 CATEGORIES=	archivers
 MASTER_SITES=	http://zlib.net/pigz/
 
@@ -12,6 +11,7 @@ LICENSE=	modified-bsd
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/pigz
 
+USE_TOOLS+=	gmake
 BUILD_TARGET=		pigz
 
 do-install:
