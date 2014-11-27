@@ -1,6 +1,6 @@
-$NetBSD: patch-po_kchmviewer_it.po,v 1.1 2012/03/29 08:44:42 markd Exp $
+$NetBSD: patch-po_kchmviewer_it.po,v 1.2 2014/11/27 15:32:38 wiz Exp $
 
---- po/kchmviewer_it.po.orig	2012-03-29 08:35:14.000000000 +0000
+--- po/kchmviewer_it.po.orig	2011-12-19 07:22:45.000000000 +0000
 +++ po/kchmviewer_it.po
 @@ -9,6 +9,7 @@ msgstr ""
  "POT-Creation-Date: 2009-07-19 20:41-0700\n"
