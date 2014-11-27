@@ -1,4 +1,4 @@
-# $NetBSD: cwrappers.mk,v 1.11 2014/11/27 20:36:44 joerg Exp $
+# $NetBSD: cwrappers.mk,v 1.12 2014/11/27 23:44:10 joerg Exp $
 #
 # This Makefile fragment implements integration of pkgtools/cwrappers.
 
@@ -60,7 +60,7 @@ generate-cwrappers:
 	${RUN}echo reorder=${cmd:S/^reorder://:Q} >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
 .  endfor
 .  for cmd in ${CWRAPPERS_TRANSFORM.${wrappee}} ${_CWRAPPERS_TRANSFORM}
-	${RUN}echo transform=${cmd:Q} >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
+	${RUN}echo transform=${cmd:u:Q} >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
 .  endfor
 .  for cmd in ${CWRAPPERS_APPEND.${wrappee}:U}
 	${RUN}echo append=${cmd:Q} >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
