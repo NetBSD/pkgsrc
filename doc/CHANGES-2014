@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4525 2014/11/27 01:58:43 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4526 2014/11/27 10:18:39 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5906,3 +5906,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/dhcpcd to 6.6.4 [roy 2014-11-26]
 	Updated devel/libwnck3 to 3.14.0 [prlw1 2014-11-27]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.424 [obache 2014-11-27]
+	Updated chat/prosody to 0.9.7 [fhajny 2014-11-27]
