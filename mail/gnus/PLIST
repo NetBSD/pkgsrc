@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2014/11/23 05:59:45 mef Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/11/27 04:29:45 mef Exp $
 share/doc/gnus/info/emacs-mime
 share/doc/gnus/info/gnus
 share/doc/gnus/info/gnus-1
@@ -435,8 +435,8 @@ ${EMACS_LISPPREFIX}/gnus/spam-report.el
 ${EMACS_LISPPREFIX}/gnus/spam-report.elc
 ${EMACS_LISPPREFIX}/gnus/spam-stat.el
 ${EMACS_LISPPREFIX}/gnus/spam-stat.elc
-${FOR_emacs22}${FOR_emacs23}${FOR_emacs24}${FOR_emacs25}${EMACS_LISPPREFIX}/gnus/spam.el
-${FOR_emacs22}${FOR_emacs23}${FOR_emacs24}${FOR_emacs25}${EMACS_LISPPREFIX}/gnus/spam.elc
+${NOTFOR_emacs21}${EMACS_LISPPREFIX}/gnus/spam.el
+${NOTFOR_emacs21}${EMACS_LISPPREFIX}/gnus/spam.elc
 ${EMACS_LISPPREFIX}/gnus/starttls.el
 ${EMACS_LISPPREFIX}/gnus/starttls.elc
 ${EMACS_LISPPREFIX}/gnus/time-date.el
