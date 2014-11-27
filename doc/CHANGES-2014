@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4530 2014/11/27 11:46:51 msaitoh Exp $
+$NetBSD: CHANGES-2014,v 1.4531 2014/11/27 12:47:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5910,3 +5910,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated archivers/pigz to 2.3.1 [wiz 2014-11-27]
 	Updated devel/meld to 3.12.2 [wiz 2014-11-27]
 	Updated sysutils/pciutils to 3.3.0 [msaitoh 2014-11-27]
+	Updated emulators/mame to 0.156 [wiz 2014-11-27]
