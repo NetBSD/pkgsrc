@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4532 2014/11/27 12:48:52 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4533 2014/11/27 12:50:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5912,3 +5912,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/pciutils to 3.3.0 [msaitoh 2014-11-27]
 	Updated emulators/mame to 0.156 [wiz 2014-11-27]
 	Updated emulators/mess to 0.156 [wiz 2014-11-27]
+	Updated net/tor to 0.2.5.10 [wiz 2014-11-27]
