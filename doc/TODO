@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13869 2014/11/27 03:46:28 mef Exp $
+$NetBSD: TODO,v 1.13870 2014/11/27 11:18:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -494,7 +494,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o drivel-3.0.3
 	o dvtm-0.11
 	o easymenu-0.7.2p1
-	o easytag-2.2.4
+	o easytag-2.2.5
 	o eboard-1.1.1
 	o eclipse-3.2.0
 	o ed-1.10
@@ -784,6 +784,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mailutis-2.2 [wip]
 	o maketool-0.8.4
 	o makeztxt-1.60
+	o mame-0.156
 	o manedit-1.2.1
 	o maradns-2.0.09
 	o matchbox-panel-0.9.3
@@ -791,12 +792,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mcabber-0.10.3
 	o mcsim-5.5.0
 	o mednafen-0.9.36.4
+	o meld-3.12.2
 	o mergeant-0.67
+	o mess-0.156
 	o mesure-0.7.2
 	o metacity-3.14.2
 	o metis-5.1.0
 	o mgetty+sendfax-1.1.35
-	o midori-0.5.8
+	o midori-0.5.9
 	o mined-2014.24.2
 	o minicom-2.7
 	o minivmac-3.2.3
