@@ -1,4 +1,4 @@
-# $NetBSD: cwrappers.mk,v 1.7 2014/11/27 20:32:41 joerg Exp $
+# $NetBSD: cwrappers.mk,v 1.8 2014/11/27 20:33:32 joerg Exp $
 #
 # This Makefile fragment implements integration of pkgtools/cwrappers.
 
@@ -41,6 +41,10 @@ CWRAPPERS_WRAPPEE.ld=	${LD:Ufalse}
 CWRAPPERS_WRAPPEE.libtool=	${PREFIX}/bin/libtool
 CWRAPPERS_WRAPPEE.shlibtool=	${PREFIX}/bin/shlibtool
 
+.if defined(USE_IMAKE) || !empty(USE_TOOLS:Mimake)
+CWRAPPERS_TRANSFORM.imake+=	I:${PREFIX}/lib/X11/config:${PREFIX}/lib/X11/config
+.endif
+
 .PHONY: generate-cwrappers
 
 do-wrapper: generate-cwrappers
@@ -55,7 +59,7 @@ generate-cwrappers:
 .  for cmd in ${WRAPPER_REORDER_CMDS}
 	${RUN}echo reorder=${cmd:S/^reorder://:Q} >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
 .  endfor
-.  for cmd in ${_CWRAPPERS_TRANSFORM}
+.  for cmd in ${CWRAPPERS_TRANSFORM.${wrappee}} ${_CWRAPPERS_TRANSFORM}
 	${RUN}echo transform=${cmd:Q} >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
 .  endfor
 .  for cmd in ${CWRAPPERS_APPEND.${wrappee}:U}
