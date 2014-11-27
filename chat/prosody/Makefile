@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2014/11/27 10:18:20 fhajny Exp $
+# $NetBSD: Makefile,v 1.19 2014/11/27 11:21:40 fhajny Exp $
 #
 
 DISTNAME=		prosody-0.9.7
@@ -69,7 +69,9 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-lua-include=${PREFIX}/${LUA_INCDIR}
 
 CFLAGS+=		-fPIC -Wall -DLUA_COMPAT_MODULE
+.if ${OPSYS} == "SunOS"
 MAKE_ENV+=		SOCKET_LIB=-lsocket
+.endif
 
 RCD_SCRIPTS=		prosody
 
