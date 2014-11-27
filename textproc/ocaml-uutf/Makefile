@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/11/06 14:47:56 jaapb Exp $
+# $NetBSD: Makefile,v 1.3 2014/11/27 13:38:15 joerg Exp $
 
 DISTNAME=	uutf-0.9.3
 CATEGORIES=	textproc
@@ -17,9 +17,9 @@ OCAML_USE_FINDLIB=	yes
 
 do-build:
 .if ${OCAML_USE_OPT_COMPILER} == "yes"
-	cd ${WRKSRC} && ./pkg/build true
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./pkg/build true
 .else
-	cd ${WRKSRC} && ./pkg/build false
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./pkg/build false
 .endif
 
 do-install:

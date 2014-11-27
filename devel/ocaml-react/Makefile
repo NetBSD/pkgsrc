@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/10/09 21:38:49 jaapb Exp $
+# $NetBSD: Makefile,v 1.7 2014/11/27 13:38:15 joerg Exp $
 
 DISTNAME=	react-1.2.0
 CATEGORIES=	devel
@@ -23,9 +23,9 @@ INSTALLATION_DIRS+=	${OCAML_SITELIBDIR}/react
 
 do-build:
 .if ${OCAML_USE_OPT_COMPILER} == yes
-	cd ${WRKSRC} && ocaml pkg/build.ml native=true native-dynlink=true
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ocaml pkg/build.ml native=true native-dynlink=true
 .else
-	cd ${WRKSRC} && ocaml pkg/build.ml
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ocaml pkg/build.ml
 .endif
 
 do-install:

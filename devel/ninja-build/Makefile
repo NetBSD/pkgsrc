@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/09/08 09:41:08 obache Exp $
+# $NetBSD: Makefile,v 1.3 2014/11/27 13:38:15 joerg Exp $
 
 NINJAVER=	1.5.1
 DISTNAME=	ninja-${NINJAVER}
@@ -22,7 +22,7 @@ SUBST_VARS.prefix=	PREFIX
 INSTALLATION_DIRS=	bin share/doc/ninja share/ninja
 
 do-build:
-	cd ${WRKSRC} && ${PYTHONBIN} ./bootstrap.py --verbose
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} ./bootstrap.py --verbose
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ninja \
