@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2013/11/14 08:01:01 apb Exp $
+# $NetBSD: Makefile,v 1.5 2014/11/28 10:45:27 bsiegert Exp $
 #
 
-DISTNAME=	sslh-1.15
-PKGREVISION=	1
+DISTNAME=	v1.16
+PKGNAME=	sslh-1.16
 CATEGORIES=	net
-MASTER_SITES=	http://www.rutschle.net/tech/
+MASTER_SITES=	https://github.com/yrutschle/sslh/archive/
+EXTRACT_SUFX=	.zip
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rutschle.net/tech/sslh.shtml
@@ -23,6 +25,7 @@ CONF_FILES=	${EGDIR}/basic.cfg ${PKG_SYSCONFDIR}/sslh.cfg
 RCD_SCRIPTS=	sslh
 
 AUTO_MKDIRS=	yes
+REPLACE_SH+=	genver.sh
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sslh-fork ${DESTDIR}${PREFIX}/sbin/sslh
@@ -31,7 +34,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/scripts/* ${DESTDIR}${EGDIR}/scripts
 	${INSTALL_DATA} ${WRKSRC}/example.cfg ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/basic.cfg ${DESTDIR}${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.MacOSX ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${DESTDIR}${PREFIX}/${DOCDIR}
 
