@@ -1,8 +1,8 @@
-$NetBSD: patch-echosrv.c,v 1.1 2013/11/08 13:33:55 obache Exp $
+$NetBSD: patch-echosrv.c,v 1.2 2014/11/28 10:45:28 bsiegert Exp $
 
 * getopt_long_only does not exist on NetBSD getopt.
 
---- echosrv.c.orig	2013-07-27 14:25:04.000000000 +0000
+--- echosrv.c.orig	2014-02-11 21:06:01.000000000 +0000
 +++ echosrv.c
 @@ -64,7 +64,7 @@ void parse_cmdline(int argc, char* argv[
      };
