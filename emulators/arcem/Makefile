@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2013/11/11 16:44:45 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2014/11/28 11:58:50 bsiegert Exp $
 #
 
 DISTNAME=	arcem-1.50-src
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arcem/}
@@ -39,6 +40,22 @@ do-install:
 		${DESTDIR}${PREFIX}/share/arcem/dot.arcemrc
 	${INSTALL_DATA} ${WRKSRC}/hexcmos \
 		${DESTDIR}${PREFIX}/share/arcem/hexcmos
+	${INSTALL_DATA} ${WRKSRC}/support_modules/hostfs/hostfs,ffa \
+		${DESTDIR}${PREFIX}/share/arcem/hostfs,ffa
+	${INSTALL_DATA} ${WRKSRC}/support_modules/hostfs/hostfsfiler,ffa \
+		${DESTDIR}${PREFIX}/share/arcem/hostfsfiler,ffa
+	${INSTALL_DATA} ${WRKSRC}/support_modules/modes/ArcemModes,ffa \
+		${DESTDIR}${PREFIX}/share/arcem/ArcemModes,ffa
+	${INSTALL_DATA} ${WRKSRC}/support_modules/modes/MakeModes,ffb \
+		${DESTDIR}${PREFIX}/share/arcem/MakeModes,ffb
+	${INSTALL_DATA} ${WRKSRC}/support_modules/modes/ModeGen,ffb \
+		${DESTDIR}${PREFIX}/share/arcem/ModeGen,ffb
+	${INSTALL_DATA} ${WRKSRC}/support_modules/modes/README \
+		${DESTDIR}${PREFIX}/share/arcem/README.Modes
+	${INSTALL_DATA} ${WRKSRC}/support_modules/scrollwheel/scrollwheel,ffa \
+		${DESTDIR}${PREFIX}/share/arcem/scrollwheel,ffa
+	${INSTALL_DATA} ${WRKSRC}/support_modules/support/support,ffa \
+		${DESTDIR}${PREFIX}/share/arcem/support,ffa
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
