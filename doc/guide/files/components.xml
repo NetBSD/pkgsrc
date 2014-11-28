@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.49 2014/10/09 13:46:57 wiz Exp $ -->
+<!-- $NetBSD: components.xml,v 1.50 2014/11/28 12:11:24 bsiegert Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -71,7 +71,7 @@ converters    games         mbone         print         x11
   <para>The second section contains information about separately
   downloaded patches, if any.
   <itemizedlist>
-    <listitem><para><varname>PATCHFILES:</varname>
+    <listitem><para><varname>PATCHFILES</varname>:
     Name(s) of additional files that contain distribution patches.
     There is no default. pkgsrc will look for them at
     <varname>PATCH_SITES</varname>.
@@ -81,7 +81,12 @@ converters    games         mbone         print         x11
     </listitem>
     <listitem><para><varname>PATCH_SITES</varname>:
     Primary location(s) for distribution patch files (see
-    <varname>PATCHFILES</varname> below) if not found locally.</para>
+    <varname>PATCHFILES</varname> above) if not found locally.</para>
+    </listitem>
+    <listitem><para><varname>PATCH_DIST_STRIP</varname>:
+    an argument to &man.patch.1; that sets the pathname strip count to
+    help find the correct files to patch. It defaults to
+    <command>-p0</command>.</para>
     </listitem>
   </itemizedlist></para>
   <para>The third section contains the following variables.
