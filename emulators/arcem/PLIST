@@ -1,9 +1,17 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:51:01 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/11/28 11:58:50 bsiegert Exp $
 bin/arcem
+share/arcem/ArcemModes,ffa
 share/arcem/HardImage1
+share/arcem/MakeModes,ffb
+share/arcem/ModeGen,ffb
+share/arcem/README.Modes
 share/arcem/ROM
 share/arcem/dot.arcemrc
 share/arcem/hexcmos
+share/arcem/hostfs,ffa
+share/arcem/hostfsfiler,ffa
+share/arcem/scrollwheel,ffa
+share/arcem/support,ffa
 @comment share/arcem/hexcmos.2
 @comment share/arcem/README
 @comment share/arcem/README.OrElse
