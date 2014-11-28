@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4535 2014/11/27 15:38:27 bouyer Exp $
+$NetBSD: CHANGES-2014,v 1.4536 2014/11/28 10:46:27 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5916,3 +5916,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/kchmviewer to 7.1 [wiz 2014-11-27]
 	Updated sysutils/xenkernel41 to 4.1.6.1nb13 [bouyer 2014-11-27]
 	Updated sysutils/xenkernel42 to 4.2.5nb2 [bouyer 2014-11-27]
+	Updated net/sslh to 1.16 [bsiegert 2014-11-28]
