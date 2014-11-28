@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2004/12/03 15:15:23 skrll Exp $
+$NetBSD: MESSAGE,v 1.5 2014/11/28 11:58:50 bsiegert Exp $
 
 When you run arcem, you need to be in a directory containing the
 arcem files and the ROM file. The distribution is supplied with the
@@ -7,10 +7,17 @@ Linux ROM and Hard Drive files from Dave Gilbert's site. The hard drive
 file needs to be writable by you. For example:
 
   $ mkdir ~/Archimedes
-  $ cp ${PREFIX}/share/arcem/* ~/Archimedes
+  $ cp -p ${PREFIX}/share/arcem/* ~/Archimedes
   $ cp ~/Archimedes/dot.arcemrc ~/.arcemrc
   $ cd ~/Archimedes
   $ chmod +w HardImage1
+  $ mkdir extnrom hostfs        # note [1]
+  $ mv *,ffa extnrom            # note [1]
+  $ mv *,ffb hostfs             # note [1]
   $ arcem
+
+[1] If you run RiscOS, you can use the HostFS file system.
+Files from the hostfs file will be visible.
+
 
 ===========================================================================
