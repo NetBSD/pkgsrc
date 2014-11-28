@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2013/11/08 13:33:55 obache Exp $
+$NetBSD: distinfo,v 1.3 2014/11/28 10:45:27 bsiegert Exp $
 
-SHA1 (sslh-1.15.tar.gz) = eaf255fcbc0aa35f1274240e619636ad3af2e3b2
-RMD160 (sslh-1.15.tar.gz) = 03fb637fe06c5b1e4010547017ef39d7265ae503
-Size (sslh-1.15.tar.gz) = 33241 bytes
-SHA1 (patch-echosrv.c) = d235b5053aa597746f4cc8d1b13b8fc20ffa9c4f
-SHA1 (patch-sslh-main.c) = 39e9de71028c28de3e6bc5510b395409c99b73d1
+SHA1 (v1.16.zip) = 19f3931ce8d98895e85b2da2d6995b489f123bd2
+RMD160 (v1.16.zip) = 29da00f88db489c88f8ec76e14ce1131f0766ee7
+Size (v1.16.zip) = 46395 bytes
+SHA1 (patch-echosrv.c) = 611044fd7ed1fd52c44e2d8ff393091c35478e17
+SHA1 (patch-sslh-main.c) = 996bbec53dbb3c92c3485b1f210853c7ed368519
