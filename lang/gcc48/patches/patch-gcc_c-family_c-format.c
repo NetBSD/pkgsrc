@@ -1,27 +1,22 @@
-$NetBSD: patch-gcc_c-family_c-format.c,v 1.1 2014/05/31 13:06:25 ryoon Exp $
+$NetBSD: patch-gcc_c-family_c-format.c,v 1.2 2014/11/28 09:57:32 obache Exp $
 
 --- gcc/c-family/c-format.c.orig	2013-01-10 20:38:27.000000000 +0000
 +++ gcc/c-family/c-format.c
-@@ -38,6 +38,7 @@ along with GCC; see the file COPYING3.  
+@@ -38,6 +38,9 @@ along with GCC; see the file COPYING3.  
     format_type_error.  Target-specific format types do not have
     matching enum values.  */
  enum format_type { printf_format_type, asm_fprintf_format_type,
++#ifdef __OpenBSD__
 +		   kprintf_format_type, syslog_format_type,
++#endif
  		   gcc_diag_format_type, gcc_tdiag_format_type,
  		   gcc_cdiag_format_type,
  		   gcc_cxxdiag_format_type, gcc_gfc_format_type,
-@@ -51,6 +52,7 @@ typedef struct function_format_info
-   unsigned HOST_WIDE_INT first_arg_num;	/* number of first arg (zero for varargs) */
- } function_format_info;
- 
-+
- static bool decode_format_attr (tree, function_format_info *, int);
- static int decode_format_type (const char *);
- 
-@@ -417,6 +419,15 @@ static const format_length_info gcc_diag
+@@ -417,6 +420,17 @@ static const format_length_info gcc_diag
    { NO_FMT, NO_FMT, 0 }
  };
  
++#ifdef __OpenBSD__
 +static const format_length_info kprintf_length_specs[] =
 +{
 +  { "h", FMT_LEN_h, STD_C89, NO_FMT, 0 },
@@ -30,22 +25,16 @@ $NetBSD: patch-gcc_c-family_c-format.c,v 1.1 2014/05/31 13:06:25 ryoon Exp $
 +  { "L", FMT_LEN_L, STD_C89, NO_FMT, 0 },
 +  { NO_FMT, NO_FMT, 0 }
 +};
++#endif
 +
  /* The custom diagnostics all accept the same length specifiers.  */
  #define gcc_tdiag_length_specs gcc_diag_length_specs
  #define gcc_cdiag_length_specs gcc_diag_length_specs
-@@ -597,7 +608,6 @@ static const format_flag_pair strfmon_fl
-   { 0, 0, 0, 0 }
- };
- 
--
- static const format_char_info print_char_table[] =
- {
-   /* C89 conversion specifiers.  */
-@@ -641,6 +651,44 @@ static const format_char_info asm_fprint
+@@ -641,6 +655,46 @@ static const format_char_info asm_fprint
    { NULL,  0, STD_C89, NOLENGTHS, NULL, NULL, NULL }
  };
  
++#ifdef __OpenBSD__
 +static const format_char_info kprint_char_table[] =
 +{
 +  /* C89 conversion specifiers.  */
@@ -83,14 +72,16 @@ $NetBSD: patch-gcc_c-family_c-format.c,v 1.1 2014/05/31 13:06:25 ryoon Exp $
 +  { "m",   0, STD_C89, { T89_V,   BADLEN,  BADLEN,  BADLEN,  BADLEN,  BADLEN,  BADLEN,  BADLEN,  BADLEN  }, "-wp",      "", NULL   },
 +  { NULL,  0, STD_C89, NOLENGTHS, NULL, NULL, NULL }
 +};
++#endif
 +
  static const format_char_info gcc_diag_char_table[] =
  {
    /* C89 conversion specifiers.  */
-@@ -817,6 +865,18 @@ static const format_kind_info format_typ
+@@ -817,6 +871,20 @@ static const format_kind_info format_typ
      'w', 0, 'p', 0, 'L', 0,
      NULL, NULL
    },
++#ifdef __OpenBSD__
 +  { "kprintf", kprintf_length_specs, kprint_char_table, " +#0-'I", NULL,
 +    printf_flag_specs, printf_flag_pairs,
 +    FMT_FLAG_ARG_CONVERT|FMT_FLAG_DOLLAR_MULTIPLE|FMT_FLAG_USE_DOLLAR|FMT_FLAG_EMPTY_PREC_OK,
@@ -103,6 +94,7 @@ $NetBSD: patch-gcc_c-family_c-format.c,v 1.1 2014/05/31 13:06:25 ryoon Exp $
 +    'w', 0, 'p', 0, 'L', 0,
 +    &integer_type_node, &integer_type_node
 +  },
++#endif
    { "gcc_diag",   gcc_diag_length_specs,  gcc_diag_char_table, "q+#", NULL,
      gcc_diag_flag_specs, gcc_diag_flag_pairs,
      FMT_FLAG_ARG_CONVERT,
