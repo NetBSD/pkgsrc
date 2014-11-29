@@ -1,4 +1,4 @@
-# $NetBSD: cwrappers.mk,v 1.12 2014/11/27 23:44:10 joerg Exp $
+# $NetBSD: cwrappers.mk,v 1.13 2014/11/29 00:51:56 joerg Exp $
 #
 # This Makefile fragment implements integration of pkgtools/cwrappers.
 
@@ -10,6 +10,9 @@ CWRAPPERS_CONFIG_DIR=	${WRKDIR}/.cwrapper/config
 CONFIGURE_ENV+=		CWRAPPERS_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR}
 MAKE_ENV+=		CWRAPPERS_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR}
 ALL_ENV+=		CWRAPPERS_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR}
+
+# TODO: Fix direct calls to CC and LIBTOOL to provide correct environment.
+.export CWRAPPERS_CONFIG_DIR
 
 CWRAPPERS_CONFIG.as=		as
 CWRAPPERS_CONFIG.cc=		cc
