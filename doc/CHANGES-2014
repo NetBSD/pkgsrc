@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4548 2014/11/29 17:55:29 prlw1 Exp $
+$NetBSD: CHANGES-2014,v 1.4549 2014/11/29 20:20:42 agc Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5931,3 +5931,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added print/pmw version 4.28 [prlw1 2014-11-29]
 	Updated databases/mysql-connector-c++ to 1.1.5 [adam 2014-11-29]
 	Updated devel/glib2 to 2.42.1 [prlw1 2014-11-29]
+	Updated security/netpgpverify to 20141129 [agc 2014-11-29]
