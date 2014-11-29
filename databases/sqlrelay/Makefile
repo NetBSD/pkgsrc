@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2014/07/18 18:16:30 fhajny Exp $
+# $NetBSD: Makefile,v 1.40 2014/11/29 00:47:35 joerg Exp $
 
 COMMENT=		Database connection pooling middleware and API
 
@@ -57,6 +57,7 @@ RCD_SCRIPT_SRC.sqlrcachemanager=	${WRKSRC}/init/rc.sqlrcachemanager
 
 .if !empty(PKGSRC_COMPILER:Mclang)
 _WRAP_EXTRA_ARGS.CXX+=	-Wno-error=unused-private-field -Wno-error=mismatched-tags
+CWRAPPERS_APPEND.cxx+=	-Wno-error=unused-private-field -Wno-error=mismatched-tags
 .endif
 
 post-install:
