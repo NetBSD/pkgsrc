@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.593 2014/10/01 20:01:41 joerg Exp $
+# $NetBSD: Makefile,v 1.594 2014/11/29 15:53:10 prlw1 Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -110,6 +110,7 @@ SUBDIR+=	pdfmod
 SUBDIR+=	pdfshuffler
 SUBDIR+=	pdvipsk
 SUBDIR+=	php-pdflib
+SUBDIR+=	pmw
 SUBDIR+=	pnm2ppa
 SUBDIR+=	podofo
 SUBDIR+=	poppler
