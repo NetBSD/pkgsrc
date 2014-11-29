@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.174 2014/11/29 12:05:34 jmcneill Exp $
+# $NetBSD: Makefile,v 1.175 2014/11/29 12:08:44 jmcneill Exp $
 #
 
 COMMENT=	Communication programs
 
-SUBDIR+=	amsn
 SUBDIR+=	anope
 SUBDIR+=	atheme
 SUBDIR+=	bitchbot
