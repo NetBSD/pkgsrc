@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/07/12 04:56:09 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/11/29 03:23:01 ryoon Exp $
 bin/gitolite
 ${PERL5_SUB_INSTALLVENDORARCH}/Gitolite/Cache.pm
 ${PERL5_SUB_INSTALLVENDORARCH}/Gitolite/Common.pm
@@ -30,6 +30,7 @@ libexec/gitolite/VREF/EMAIL-CHECK
 libexec/gitolite/VREF/FILETYPE
 libexec/gitolite/VREF/MAX_NEWBIN_SIZE
 libexec/gitolite/VREF/MERGE-CHECK
+libexec/gitolite/VREF/NAME_NC
 libexec/gitolite/VREF/VOTES
 libexec/gitolite/VREF/lock
 libexec/gitolite/VREF/partial-copy

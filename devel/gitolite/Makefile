@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2014/07/12 04:56:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2014/11/29 03:23:01 ryoon Exp $
 
-GLVER=		3.6.1
+GLVER=		3.6.2
 DISTNAME=	gitolite-${GLVER}
 CATEGORIES=	devel net
 MASTER_SITES=	-https://github.com/sitaramc/gitolite/archive/v${GLVER}.tar.gz
@@ -46,7 +46,7 @@ do-install:
 
 	${INSTALL_DATA} ${WRKSRC}/CHANGELOG ${DESTDIR}${PREFIX}/share/gitolite
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/share/gitolite
-	${INSTALL_DATA} ${WRKSRC}/README.txt ${DESTDIR}${PREFIX}/share/gitolite
+	${INSTALL_DATA} ${WRKSRC}/README.markdown ${DESTDIR}${PREFIX}/share/gitolite
 
 	cd ${WRKSRC}/src/lib && pax -rw -pmp Gitolite \
 		${DESTDIR}${PERL5_INSTALLVENDORARCH}
