@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/11/22 14:35:56 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2014/11/29 12:26:16 ryoon Exp $
 
-SHA1 (basercms-2.1.2.zip) = 5a4e9345eec787486e0978705b4be45a45a6794f
-RMD160 (basercms-2.1.2.zip) = 277225b4eba97cc3fb337d278c5650192964d684
-Size (basercms-2.1.2.zip) = 5901937 bytes
+SHA1 (basercms-3.0.6.1.zip) = 89ad55f1abcbd0e7a3f69a1e5d9a0d80366e771d
+RMD160 (basercms-3.0.6.1.zip) = edaa35ff77e21ca7df68b0640d3c5a242f978319
+Size (basercms-3.0.6.1.zip) = 12822051 bytes

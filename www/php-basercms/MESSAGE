@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2013/11/22 14:35:56 ryoon Exp $
+$NetBSD: MESSAGE,v 1.2 2014/11/29 12:26:16 ryoon Exp $
 
 To use baserCMS, you will need to perform the following steps.
 
@@ -8,35 +8,35 @@ To use baserCMS, you will need to perform the following steps.
 
 2. Create database for baserCMS.
 	# mysql -u root -p
-	mysql> grant all on *.* to baser@localhost IDENTIFIED BY 'baser-password';
+	mysql> grant all on *.* to baser@localhost identified by 'baser-password';
 	mysql> create database basercms character set utf8 ;
-	mysql> GRANT ALL PRIVILEGES ON basercms.* TO baser@localhost IDENTIFIED BY 'baser-password';
+	mysql> grant all privileges on basercms.* to baser@localhost identified by 'baser-password';
 
-2. Install apache httpd server, for example www/apache24 and www/ap-php.
+2. Install apache httpd server, for example www/apache22 and www/ap-php.
 
 3. Be sure to have the following lines in ${PREFIX}/etc/httpd/httpd.conf
 
-	Alias / ${PREFIX}/share/basercms
+	Alias / ${PREFIX}/share/basercms/
 	<Directory "${PREFIX}/share/basercms">
 		DirectoryIndex index.php
-		Options All
-		Allow from All
 		AllowOverride All
-		Require all granted
+		Order allow,deny
+		Allow from All
 	</Directory>
 
 4. Be sure to have the following lines in ${PREFIX}/etc/php.ini.
 
 	extension=gd.so
+	extension=json.so
 	extension=mbstring.so
 
-	extension=mysql.so ;if you select MySQL backend.
-	extension=pdo.so ;if you select sqlite backend.
+	extension=pdo.so ;if you select sqlite or mysql backend.
+	extension=pdo_mysql.so ;if you select MySQL backend.
 	extension=pdo_sqlite.so ;if you select sqlite backend.
-	extension=pgsql.so ;if you select PostgreSQL backend.
+	extension=pdo_pgsql.so ;if you select PostgreSQL backend.
 
 5. Start apache httpd.
 
 6. Access http://localhost/ and setup with userID/password =
-   baser/paser-password for MySQL database.
+   baser/baser-password for MySQL database.
 ===========================================================================
