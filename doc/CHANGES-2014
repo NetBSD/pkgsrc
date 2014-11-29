@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4547 2014/11/29 16:42:23 adam Exp $
+$NetBSD: CHANGES-2014,v 1.4548 2014/11/29 17:55:29 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5930,3 +5930,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-django-cms to 3.0.7 [adam 2014-11-29]
 	Added print/pmw version 4.28 [prlw1 2014-11-29]
 	Updated databases/mysql-connector-c++ to 1.1.5 [adam 2014-11-29]
+	Updated devel/glib2 to 2.42.1 [prlw1 2014-11-29]
