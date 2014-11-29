@@ -1,0 +1,14 @@
+$NetBSD: patch-Makefile.in,v 1.1 2014/11/29 15:53:11 prlw1 Exp $
+
+Move message to MESSAGE.
+
+--- Makefile.in.orig	2013-03-12 12:22:19.000000000 +0000
++++ Makefile.in
+@@ -65,7 +65,6 @@ install:        build
+ 		$(INSTALL_DATA) psfonts/PMW-Alpha $(DATADIR)/psfonts
+ 		$(INSTALL_DATA) fontmetrics/* $(DATADIR)/fontmetrics
+ 		$(INSTALL_DATA) doc/pmw.1 $(MANDIR)/man1
+-		./post-install "$(BINDIR)" "$(DATADIR)" "$(MANDIR)"
+ 
+ uninstall:;     rm -rf \
+ 		$(BINDIR)/pmw \
