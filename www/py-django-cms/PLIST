@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2014/11/23 14:07:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2014/11/29 15:06:12 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -162,6 +162,8 @@ ${PYSITELIB}/cms/locale/en/LC_MESSAGES/django.mo
 ${PYSITELIB}/cms/locale/en/LC_MESSAGES/django.po
 ${PYSITELIB}/cms/locale/en/LC_MESSAGES/djangojs.mo
 ${PYSITELIB}/cms/locale/en/LC_MESSAGES/djangojs.po
+${PYSITELIB}/cms/locale/eo/LC_MESSAGES/django.po
+${PYSITELIB}/cms/locale/eo/LC_MESSAGES/djangojs.po
 ${PYSITELIB}/cms/locale/es/LC_MESSAGES/django.mo
 ${PYSITELIB}/cms/locale/es/LC_MESSAGES/django.po
 ${PYSITELIB}/cms/locale/es/LC_MESSAGES/djangojs.mo
@@ -198,6 +200,8 @@ ${PYSITELIB}/cms/locale/fr/LC_MESSAGES/django.mo
 ${PYSITELIB}/cms/locale/fr/LC_MESSAGES/django.po
 ${PYSITELIB}/cms/locale/fr/LC_MESSAGES/djangojs.mo
 ${PYSITELIB}/cms/locale/fr/LC_MESSAGES/djangojs.po
+${PYSITELIB}/cms/locale/fr_FR/LC_MESSAGES/django.po
+${PYSITELIB}/cms/locale/fr_FR/LC_MESSAGES/djangojs.po
 ${PYSITELIB}/cms/locale/ga/LC_MESSAGES/django.mo
 ${PYSITELIB}/cms/locale/ga/LC_MESSAGES/django.po
 ${PYSITELIB}/cms/locale/ga/LC_MESSAGES/djangojs.mo
@@ -286,6 +290,8 @@ ${PYSITELIB}/cms/locale/mn_MN/LC_MESSAGES/django.mo
 ${PYSITELIB}/cms/locale/mn_MN/LC_MESSAGES/django.po
 ${PYSITELIB}/cms/locale/mn_MN/LC_MESSAGES/djangojs.mo
 ${PYSITELIB}/cms/locale/mn_MN/LC_MESSAGES/djangojs.po
+${PYSITELIB}/cms/locale/ms/LC_MESSAGES/django.po
+${PYSITELIB}/cms/locale/ms/LC_MESSAGES/djangojs.po
 ${PYSITELIB}/cms/locale/mt/LC_MESSAGES/django.mo
 ${PYSITELIB}/cms/locale/mt/LC_MESSAGES/django.po
 ${PYSITELIB}/cms/locale/mt/LC_MESSAGES/djangojs.mo
@@ -314,6 +320,8 @@ ${PYSITELIB}/cms/locale/pt_BR/LC_MESSAGES/django.mo
 ${PYSITELIB}/cms/locale/pt_BR/LC_MESSAGES/django.po
 ${PYSITELIB}/cms/locale/pt_BR/LC_MESSAGES/djangojs.mo
 ${PYSITELIB}/cms/locale/pt_BR/LC_MESSAGES/djangojs.po
+${PYSITELIB}/cms/locale/pt_PT/LC_MESSAGES/django.po
+${PYSITELIB}/cms/locale/pt_PT/LC_MESSAGES/djangojs.po
 ${PYSITELIB}/cms/locale/ro/LC_MESSAGES/django.mo
 ${PYSITELIB}/cms/locale/ro/LC_MESSAGES/django.po
 ${PYSITELIB}/cms/locale/ro/LC_MESSAGES/djangojs.mo
@@ -1184,6 +1192,9 @@ ${PYSITELIB}/cms/test_utils/project/placeholderapp/cms_toolbar.pyo
 ${PYSITELIB}/cms/test_utils/project/placeholderapp/migrations_django/0001_initial.py
 ${PYSITELIB}/cms/test_utils/project/placeholderapp/migrations_django/0001_initial.pyc
 ${PYSITELIB}/cms/test_utils/project/placeholderapp/migrations_django/0001_initial.pyo
+${PYSITELIB}/cms/test_utils/project/placeholderapp/migrations_django/0002_charpksexample.py
+${PYSITELIB}/cms/test_utils/project/placeholderapp/migrations_django/0002_charpksexample.pyc
+${PYSITELIB}/cms/test_utils/project/placeholderapp/migrations_django/0002_charpksexample.pyo
 ${PYSITELIB}/cms/test_utils/project/placeholderapp/migrations_django/__init__.py
 ${PYSITELIB}/cms/test_utils/project/placeholderapp/migrations_django/__init__.pyc
 ${PYSITELIB}/cms/test_utils/project/placeholderapp/migrations_django/__init__.pyo
