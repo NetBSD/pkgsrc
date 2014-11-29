@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2014/10/17 17:07:44 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.33 2014/11/29 10:01:29 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -2907,6 +2907,7 @@ share/mysql/test/suite/funcs_2/t/suite.opt
 share/mysql/test/suite/innodb/r/blob-update-debug.result
 share/mysql/test/suite/innodb/r/create-index.result
 share/mysql/test/suite/innodb/r/foreign-keys.result
+share/mysql/test/suite/innodb/r/foreign-keys.result.moved
 share/mysql/test/suite/innodb/r/innodb-analyze.result
 share/mysql/test/suite/innodb/r/innodb-autoinc-18274.result
 share/mysql/test/suite/innodb/r/innodb-autoinc-44030.result
@@ -3004,10 +3005,14 @@ share/mysql/test/suite/innodb/r/innodb_prefix_index_restart_server.result
 share/mysql/test/suite/innodb/r/innodb_replace.result
 share/mysql/test/suite/innodb/r/innodb_timeout_rollback.result
 share/mysql/test/suite/innodb/r/innodb_trx_weight.result
+share/mysql/test/suite/innodb/r/insert_debug.result
+share/mysql/test/suite/innodb/r/sp_temp_table.result
+share/mysql/test/suite/innodb/r/strict_mode.result
 share/mysql/test/suite/innodb/t/blob-update-debug.test
 share/mysql/test/suite/innodb/t/create-index.test
 share/mysql/test/suite/innodb/t/disabled.def
 share/mysql/test/suite/innodb/t/foreign-keys.test
+share/mysql/test/suite/innodb/t/foreign-keys.test.moved
 share/mysql/test/suite/innodb/t/innodb-analyze.test
 share/mysql/test/suite/innodb/t/innodb-autoinc-18274.test
 share/mysql/test/suite/innodb/t/innodb-autoinc-44030-master.opt
@@ -3132,6 +3137,9 @@ share/mysql/test/suite/innodb/t/innodb_replace.test
 share/mysql/test/suite/innodb/t/innodb_timeout_rollback-master.opt
 share/mysql/test/suite/innodb/t/innodb_timeout_rollback.test
 share/mysql/test/suite/innodb/t/innodb_trx_weight.test
+share/mysql/test/suite/innodb/t/insert_debug.test
+share/mysql/test/suite/innodb/t/sp_temp_table.test
+share/mysql/test/suite/innodb/t/strict_mode.test
 share/mysql/test/suite/innodb_zip/r/innodb-create-options.result
 share/mysql/test/suite/innodb_zip/r/innodb-zip.result
 share/mysql/test/suite/innodb_zip/r/innodb_bug36169.result
