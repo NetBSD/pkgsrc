@@ -1,0 +1,28 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2014/11/29 15:53:11 prlw1 Exp $
+
+The pmw command has been installed in ${BINDIR}. The PostScript header
+file, the PostScript music fonts, and the fontmetrics files have been
+installed in ${DATADIR}. The man page has been installed in
+${MANDIR}.
+
+If you use the -includefont option with the pmw command, the output file
+includes the PMW-Music font (and the PMW-Alpha font, if it was referenced),
+and you should be able to view the output using Ghostscript without any
+special configuration.
+
+If you want to be able to use GhostScript to view music without having
+to include the music fonts in every output file, you have to make the
+fonts available to Ghostscript. To do this, run the command
+
+  ${GS} -h
+
+and find a suitable font directory in the 'Search path' data. Then
+
+  ln -s ${DATADIR}/psfonts/PMW-Alpha /that/dir/PMW-Alpha
+  ln -s ${DATADIR}/psfonts/PMW-Music.pfa /that/dir/PMW-Music.pfa
+
+If that does not work, you may have an older version of Ghostscript.
+Refer to the PMW manual ${SPECPDF} for further
+information.
+===========================================================================
