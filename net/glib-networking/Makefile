@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/01/01 11:52:28 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2014/11/29 00:47:35 joerg Exp $
 #
 
 DISTNAME=	glib-networking-2.36.2
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+= 	--disable-more-warnings
 
 .if !empty(PKGSRC_COMPILER:Mclang)
 _WRAP_EXTRA_ARGS.CC+=	-Wno-error=format-nonliteral
+CWRAPPERS_APPEND.cc+=	-Wno-error=format-nonliteral
 .endif
 
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.32.1
