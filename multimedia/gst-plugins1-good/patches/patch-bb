@@ -1,4 +1,6 @@
-$NetBSD: patch-bb,v 1.3 2014/11/29 13:47:34 jmcneill Exp $
+$NetBSD: patch-bb,v 1.4 2014/11/29 21:55:40 wiz Exp $
+
+NetBSD compatibility for v4l2.
 
 --- sys/v4l2/v4l2_calls.h.orig	2014-10-19 11:41:09.000000000 +0000
 +++ sys/v4l2/v4l2_calls.h
