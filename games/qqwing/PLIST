@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2014/11/29 13:42:30 prlw1 Exp $
+bin/qqwing
+include/qqwing.hpp
+lib/libqqwing.la
+lib/pkgconfig/qqwing.pc
+man/man1/qqwing.1
