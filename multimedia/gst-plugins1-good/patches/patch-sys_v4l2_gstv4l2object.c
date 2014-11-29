@@ -1,6 +1,7 @@
-$NetBSD: patch-sys_v4l2_gstv4l2object.c,v 1.3 2014/08/08 21:28:06 wiz Exp $
+$NetBSD: patch-sys_v4l2_gstv4l2object.c,v 1.4 2014/11/29 23:07:19 wiz Exp $
 
 * take care some video standard macros added by V4L2
+https://bugzilla.gnome.org/show_bug.cgi?id=740905
 
 --- sys/v4l2/gstv4l2object.c.orig	2013-04-26 09:30:32.000000000 +0000
 +++ sys/v4l2/gstv4l2object.c
