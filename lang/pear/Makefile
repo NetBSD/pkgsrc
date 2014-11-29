@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2014/10/14 16:27:48 taca Exp $
+# $NetBSD: Makefile,v 1.28 2014/11/29 07:58:10 obache Exp $
 #
 
 DISTNAME=	PEAR-1.9.5
@@ -21,6 +21,7 @@ USE_TOOLS+=	gzcat
 
 CONFLICTS+=	php<5.2.1nb2
 
+PKG_SYSCONFVAR=	php
 CONF_FILES=	${PREFIX}/share/examples/pear/pear.conf \
 		${PKG_SYSCONFDIR}/pear.conf
 
