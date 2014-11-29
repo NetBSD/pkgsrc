@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/11/24 15:00:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/11/29 16:41:25 adam Exp $
 include/cppconn/build_config.h
 include/cppconn/config.h
 include/cppconn/connection.h
@@ -12,6 +12,8 @@ include/cppconn/resultset.h
 include/cppconn/resultset_metadata.h
 include/cppconn/sqlstring.h
 include/cppconn/statement.h
+include/cppconn/variant.h
+include/cppconn/version_info.h
 include/cppconn/warning.h
 include/mysql_connection.h
 include/mysql_driver.h
