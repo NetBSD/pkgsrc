@@ -1,8 +1,8 @@
-# $NetBSD: cwrappers.mk,v 1.14 2014/11/29 00:53:13 joerg Exp $
+# $NetBSD: cwrappers.mk,v 1.15 2014/11/29 22:20:40 joerg Exp $
 #
 # This Makefile fragment implements integration of pkgtools/cwrappers.
 
-BUILD_DEPENDS+=		cwrappers>=20141127:../../pkgtools/cwrappers
+BUILD_DEPENDS+=		cwrappers>=20141129:../../pkgtools/cwrappers
 
 CWRAPPERS_SRC_DIR=	${PREFIX}/libexec/cwrappers
 CWRAPPERS_BIN_DIR=	${WRKDIR}/.cwrapper/bin
@@ -63,6 +63,7 @@ generate-cwrappers:
 	${RUN}echo worklog=${WRKLOG:Q} > ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
 	${RUN}echo wrksrc=${WRKSRC:Q} >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
 	${RUN}case ${wrappee} in *libtool) ;; *) echo path=${_PATH_ORIG:Q} >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}};; esac
+	${RUN}echo exec_path=${CWRAPPERS_BIN_DIR}/${CWRAPPERS_ALIASES.${wrappee}:[0]} >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
 	${RUN}echo exec=${CWRAPPERS_WRAPPEE.${wrappee}:Q} >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
 .  for cmd in ${WRAPPER_REORDER_CMDS}
 	${RUN}echo reorder=${cmd:S/^reorder://:Q} >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
