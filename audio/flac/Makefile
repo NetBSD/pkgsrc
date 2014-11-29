@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2014/10/09 14:05:55 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2014/11/29 20:42:12 adam Exp $
 
-DISTNAME=	flac-1.3.0
+DISTNAME=	flac-1.3.1
 CATEGORIES=	audio archivers
 MASTER_SITES=	http://downloads.xiph.org/releases/flac/
 EXTRACT_SUFX=	.tar.xz
