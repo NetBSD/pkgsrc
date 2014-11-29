@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2014/11/24 15:00:52 adam Exp $
+$NetBSD: distinfo,v 1.3 2014/11/29 16:41:25 adam Exp $
 
-SHA1 (mysql-connector-c++-1.1.4.tar.gz) = f10a054e6b96275bbab48ad726daf08bb5e048a0
-RMD160 (mysql-connector-c++-1.1.4.tar.gz) = 0231cebd1137e7dd41f3c589847077deaec5bf40
-Size (mysql-connector-c++-1.1.4.tar.gz) = 506106 bytes
+SHA1 (mysql-connector-c++-1.1.5.tar.gz) = 0b33f74049227d330da0a37ce919b8cd695a9584
+RMD160 (mysql-connector-c++-1.1.5.tar.gz) = f429bc23bc78a8adc382706f61c032a7010caa3d
+Size (mysql-connector-c++-1.1.5.tar.gz) = 519440 bytes
