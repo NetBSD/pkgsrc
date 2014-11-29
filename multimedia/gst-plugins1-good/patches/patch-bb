@@ -1,6 +1,7 @@
-$NetBSD: patch-bb,v 1.4 2014/11/29 21:55:40 wiz Exp $
+$NetBSD: patch-bb,v 1.5 2014/11/29 23:07:19 wiz Exp $
 
 NetBSD compatibility for v4l2.
+https://bugzilla.gnome.org/show_bug.cgi?id=740905
 
 --- sys/v4l2/v4l2_calls.h.orig	2014-10-19 11:41:09.000000000 +0000
 +++ sys/v4l2/v4l2_calls.h
