@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.377 2014/11/29 13:55:16 prlw1 Exp $
+# $NetBSD: Makefile,v 1.378 2014/11/29 14:16:47 prlw1 Exp $
 #
 
 COMMENT=	Games
@@ -123,6 +123,7 @@ SUBDIR+=	gltron
 SUBDIR+=	gnome-games
 SUBDIR+=	gnome-games-extra-data
 SUBDIR+=	gnome-mastermind
+SUBDIR+=	gnome-sudoku
 SUBDIR+=	gnuchess
 SUBDIR+=	gnuchess-book
 SUBDIR+=	gnuchess-book-medium
