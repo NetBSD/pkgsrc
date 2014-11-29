@@ -1,4 +1,4 @@
-/* $NetBSD: common.h,v 1.1 2014/09/17 12:40:56 joerg Exp $ */
+/* $NetBSD: common.h,v 1.2 2014/11/29 22:19:55 joerg Exp $ */
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -38,6 +38,7 @@
 #include <stdio.h>
 
 extern const char library_name_chars[];
+extern char *exec_path;
 extern char *exec_name;
 extern char *wrksrc;
 extern int debug;
