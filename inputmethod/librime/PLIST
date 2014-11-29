@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2014/11/29 09:31:49 obache Exp $
+bin/rime_deployer
+bin/rime_dict_manager
+include/rime_api.h
+lib/librime.so
+lib/librime.so.1
+lib/librime.so.${PKGVERSION}.0
+lib/pkgconfig/rime.pc
+share/cmake/rime/RimeConfig.cmake
