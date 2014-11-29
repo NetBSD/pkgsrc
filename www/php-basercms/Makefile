@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2013/11/22 14:35:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2014/11/29 12:26:16 ryoon Exp $
 
-DISTNAME=	basercms-2.1.2
+BASERVER=	3.0.6.1
+DISTNAME=	basercms-${BASERVER}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	-http://basercms.net/packages/download/basercms/2.1.2
+MASTER_SITES=	-http://basercms.net/packages/download/basercms/${BASERVER}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -21,8 +22,8 @@ USE_TOOLS+=	pax
 
 NO_BUILD=	yes
 
-CHECK_INTERPRETER_SKIP+=	share/basercms/cake/console/cake.php
-CHECK_INTERPRETER_SKIP+=	share/basercms/cake/console/cake
+CHECK_INTERPRETER_SKIP+=	share/basercms/app/Console/*
+CHECK_INTERPRETER_SKIP+=	share/basercms/lib/Cake/Console/*
 
 BC_DIR=		share/basercms
 INSTALLATION_DIRS+=	${BC_DIR}
