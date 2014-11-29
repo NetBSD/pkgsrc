@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4538 2014/11/29 05:13:47 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4539 2014/11/29 12:06:17 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5919,3 +5919,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/sslh to 1.16 [bsiegert 2014-11-28]
 	Updated devel/gitolite to 3.6.2 [ryoon 2014-11-29]
 	Updated www/mediawiki to 1.24.0 [wen 2014-11-29]
+	Removed chat/msn-pecan [jmcneill 2014-11-29]
