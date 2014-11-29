@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.376 2014/11/29 13:42:30 prlw1 Exp $
+# $NetBSD: Makefile,v 1.377 2014/11/29 13:55:16 prlw1 Exp $
 #
 
 COMMENT=	Games
@@ -140,6 +140,7 @@ SUBDIR+=	gtkmagnetic
 SUBDIR+=	gturing
 SUBDIR+=	heretic2-demo
 SUBDIR+=	hex-a-hop
+SUBDIR+=	hitori
 SUBDIR+=	holtz
 SUBDIR+=	hugo
 SUBDIR+=	icbm3d
