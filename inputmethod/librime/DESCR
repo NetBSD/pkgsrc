@@ -1,0 +1,11 @@
+RIME: Rime Input Method Engine
+
+features:
+  - supporting varieties of input methods, either shape-based or phonetic-based,
+    including those for Chinese dialects
+  - a built-in dictionary in traditional Chinese, easily converting to
+    simplified Chinese via opencc
+  - a modulized, extensible input method framework to create innovative input
+    schemata in YAML syntax
+  - cross-platform core library in C++, built on top of open-source technologies
+  - OS-specific wrappers working consistently on Windows, Linux and OS X

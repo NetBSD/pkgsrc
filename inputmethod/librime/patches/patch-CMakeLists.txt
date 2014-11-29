@@ -1,0 +1,24 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2014/11/29 09:31:49 obache Exp $
+
+* No reason to restrct only for Linux. 
+
+--- CMakeLists.txt.orig	2013-11-10 10:20:21.000000000 +0000
++++ CMakeLists.txt
+@@ -98,7 +98,7 @@ if(NOT DEFINED BIN_INSTALL_DIR)
+     set(BIN_INSTALL_DIR ${CMAKE_INSTALL_PREFIX}/bin)
+ endif()
+ 
+-if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
++#if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+   # uninstall target
+   configure_file(
+     "${CMAKE_CURRENT_SOURCE_DIR}/cmake/cmake_uninstall.cmake.in"
+@@ -125,7 +125,7 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+     file(GLOB supplement_schema ${PROJECT_SOURCE_DIR}/data/supplement/*.yaml)
+     install(FILES ${supplement_schema} DESTINATION ${pkgdatadir})
+   endif(BUILD_DATA)
+-endif(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
++#endif(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+ 
+ if(BUILD_SHARED_LIBS)
+   set(RIME_LIBRARY rime)
