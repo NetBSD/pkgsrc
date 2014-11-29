@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/10/30 10:40:36 fhajny Exp $
+# $NetBSD: Makefile,v 1.30 2014/11/29 00:47:35 joerg Exp $
 #
 
 DISTNAME=		rudiments-0.48
@@ -20,6 +20,7 @@ PTHREAD_AUTO_VARS=	YES
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 _WRAP_EXTRA_ARGS.CXX+=	-Wno-error=unused-private-field
+CWRAPPERS_APPEND.cxx+=	-Wno-error=unused-private-field
 .endif
 
 .include "../../devel/pcre/buildlink3.mk"
