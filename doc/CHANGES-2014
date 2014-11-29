@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4540 2014/11/29 12:09:06 jmcneill Exp $
+$NetBSD: CHANGES-2014,v 1.4541 2014/11/29 12:32:20 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5921,3 +5921,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/mediawiki to 1.24.0 [wen 2014-11-29]
 	Removed chat/msn-pecan [jmcneill 2014-11-29]
 	Removed chat/amsn [jmcneill 2014-11-29]
+	Updated www/php-basercms to 3.0.6.1 [ryoon 2014-11-29]
