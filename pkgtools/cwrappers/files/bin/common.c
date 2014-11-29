@@ -1,4 +1,4 @@
-/* $NetBSD: common.c,v 1.2 2014/11/27 20:36:43 joerg Exp $ */
+/* $NetBSD: common.c,v 1.3 2014/11/29 22:19:55 joerg Exp $ */
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -40,6 +40,7 @@
 
 static char *worklog_path;
 static char *real_path;
+char *exec_path;
 char *exec_name;
 char *wrksrc;
 int debug;
@@ -199,6 +200,11 @@ parse_config(const char *wrapper)
 			real_path = xstrdup(line + 5);
 			continue;
 		}
+		if (strncmp(line, "exec_path=", 10) == 0) {
+			free(exec_path);
+			exec_path = xstrdup(line + 10);
+			continue;
+		}
 		if (strncmp(line, "exec=", 5) == 0) {
 			free(exec_name);
 			exec_name = xstrdup(line + 5);
@@ -243,6 +249,8 @@ parse_config(const char *wrapper)
 		errx(255, "worklog path has not been set");
 	if (exec_name == NULL)
 		errx(255, "executable name has not been set");
+	if (exec_path == NULL)
+		errx(255, "executable path has not been set");
 }
 
 FILE *

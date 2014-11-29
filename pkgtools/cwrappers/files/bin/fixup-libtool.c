@@ -1,4 +1,4 @@
-/* $NetBSD: fixup-libtool.c,v 1.1 2014/09/17 12:40:56 joerg Exp $ */
+/* $NetBSD: fixup-libtool.c,v 1.2 2014/11/29 22:19:55 joerg Exp $ */
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -92,7 +92,8 @@ struct processing_option {
 };
 
 static void
-process_option(struct processing_option *opt, const char *line, size_t len)
+process_option(struct processing_option *opt, const char *line, size_t len,
+    int in_relink)
 {
 	struct unwrap_rule *r;
 	struct argument *arg;
@@ -103,10 +104,16 @@ process_option(struct processing_option *opt, const char *line, size_t len)
 	if (opt->in_lai && opt->last_opt && opt->last_len == len &&
 	    strncmp(opt->last_opt, line, len) == 0)
 		return;
-	if (len >= 11 && strncmp(line, "-Wl,-rpath,", 11) == 0)
-		return; /* No rpath... */
-	if (len >= 15 && strncmp(line, "-Wl,-rpath-link,", 15) == 0)
-		return; /* Still no rpath... */
+	if (len >= 11 && strncmp(line, "-Wl,-rpath,", 11) == 0) {
+		if (in_relink)
+			goto print_option;
+		return;
+	}
+	if (len >= 15 && strncmp(line, "-Wl,-rpath-link,", 15) == 0) {
+		if (in_relink)
+			goto print_option;
+		return;
+	}
 	if (len > 2 && strncmp(line, "-D", 2) == 0)
 		return; /* No preprocessor options */
 	if (len > 2 && strncmp(line, "-I", 2) == 0)
@@ -126,7 +133,8 @@ process_option(struct processing_option *opt, const char *line, size_t len)
 				len -= r->src_len + 2;
 				tmp = xasprintf("-L%s%*.*s", r->dst,
 				    (int)len, (int)len, line);
-				process_option(opt, tmp, strlen(tmp));
+				process_option(opt, tmp, strlen(tmp),
+				    in_relink);
 				free(tmp);
 				return;
 			}
@@ -179,16 +187,18 @@ process_option(struct processing_option *opt, const char *line, size_t len)
 			if (strncmp(eol + 1, "lib", 3) == 0) {
 				tmp = xasprintf("-L%s%*.*s", r->dst,
 				    (int)(eol - line), (int)(eol - line), line);
-				process_option(opt, tmp, strlen(tmp));
+				process_option(opt, tmp, strlen(tmp),
+				    in_relink);
 				free(tmp);
 				eol += 4;
 				len = line + len - eol - 3;
-				fprintf(opt->output, " -l%*.*s", (int)len, (int)len,
-				    eol);
+				fprintf(opt->output, " -l%*.*s", (int)len,
+				    (int)len, eol);
 			} else {
 				tmp = xasprintf("%s%*.*s", r->dst,
 				    (int)len, (int)len, line);
-				process_option(opt, tmp, strlen(tmp));
+				process_option(opt, tmp, strlen(tmp),
+				    in_relink);
 				free(tmp);
 			}
 			return;
@@ -203,14 +213,14 @@ process_option(struct processing_option *opt, const char *line, size_t len)
 		goto print_option;
 
 	if (*line != '/' && line == eol) {
-		process_option(opt, "-L./.libs", 9);
+		process_option(opt, "-L./.libs", 9, in_relink);
 		goto print_option;
 	}
 
 	if (*line != '/') {
 		tmp = xasprintf("-L%*.*s/.libs", (int)(eol - line),
 		    (int)(eol - line), line);
-		process_option(opt, tmp, strlen(tmp));
+		process_option(opt, tmp, strlen(tmp), in_relink);
 		free(tmp);
 		goto print_option;
 	}
@@ -226,7 +236,7 @@ process_option(struct processing_option *opt, const char *line, size_t len)
 
 	tmp = xasprintf("-L%*.*s/.libs", (int)(eol - line),
 	    (int)(eol - line), line);
-	process_option(opt, tmp, strlen(tmp));
+	process_option(opt, tmp, strlen(tmp), in_relink);
 	free(tmp);
 
 print_option:
@@ -263,7 +273,7 @@ process_variable(FILE *output, const char *lafile, const char *line,
 			errx(255, "Unrecognizable relink format");
 		++command;
 		fwrite(line, command - line, 1, output);
-		fputs(" libtool", output); /* XXX Use full path here? */
+		fprintf(output, " %s", exec_path);
 
 		/* XXX document this logic */
 		line = command + 1;
@@ -292,7 +302,7 @@ process_variable(FILE *output, const char *lafile, const char *line,
 		len = strcspn(line, " \t");
 		if (len == 0)
 			break;
-		process_option(&opt, line, len);
+		process_option(&opt, line, len, in_relink);
 	}
 
 	for (i = 0; i < LIBPATH_HASH; ++i) {
@@ -306,11 +316,12 @@ fixup_libtool_la(const char *lafile, int in_lai)
 {
 	static const char dep_lib[] = "dependency_libs='";
 	static const char relink_cmd[] = "relink_command=\"";
+	static const char relink_marker_cmd[] = "# buildlink modification\n";
 	struct stat st;
 	FILE *fp, *output;
 	char *line, *opt_start, *tmp_name;
 	const char *pass_lafile, *cur_option;
-	int in_relink;
+	int in_relink, ignore_relink;
 	char delimiter;
 	size_t len;
 	ssize_t cur;
@@ -333,20 +344,33 @@ fixup_libtool_la(const char *lafile, int in_lai)
 	line = NULL;
 	len = 0;
 	while ((cur = getline(&line, &len, fp)) > 0) {
+		if (strcmp(line, relink_marker_cmd) == 0) {
+			fwrite(line, 1, cur, output);
+			ignore_relink = 1;
+			continue;
+		}
 		if (strncmp(line, relink_cmd, sizeof(relink_cmd) - 1) == 0) {
+			if (ignore_relink) {
+				fwrite(line, 1, cur, output);
+				ignore_relink = 0;
+				continue;
+			}
 			cur_option = relink_cmd;
 			opt_start = line + sizeof(relink_cmd) - 1;
 			pass_lafile = lafile;
 			delimiter='\"';
 			in_relink = 1;
+			ignore_relink = 0;
 		} else if (strncmp(line, dep_lib, sizeof(dep_lib) - 1) == 0) {
 			cur_option = dep_lib;
 			opt_start = line + sizeof(dep_lib) - 1;
 			pass_lafile = NULL;
 			delimiter='\'';
 			in_relink = 0;
+			ignore_relink = 0;
 		} else {
 			fwrite(line, 1, cur, output);
+			ignore_relink = 0;
 			continue;
 		}
 
@@ -357,7 +381,7 @@ fixup_libtool_la(const char *lafile, int in_lai)
 			    output);
 			fwrite(line, 1, cur, output);
 		} else {
-			fputs("# buildlink modification\n", output);
+			fputs(relink_marker_cmd, output);
 		}
 		fputs(cur_option, output);
 		line[cur - 2] = '\0';
