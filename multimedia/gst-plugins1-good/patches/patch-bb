@@ -1,13 +1,13 @@
-$NetBSD: patch-bb,v 1.2 2014/08/08 21:28:06 wiz Exp $
+$NetBSD: patch-bb,v 1.3 2014/11/29 13:47:34 jmcneill Exp $
 
---- sys/v4l2/v4l2_calls.h.orig	2014-05-10 07:30:15.000000000 +0000
+--- sys/v4l2/v4l2_calls.h.orig	2014-10-19 11:41:09.000000000 +0000
 +++ sys/v4l2/v4l2_calls.h
 @@ -29,7 +29,11 @@
  #ifdef HAVE_LIBV4L2
  #  include <libv4l2.h>
  #else
 +#ifdef __NetBSD__
-+#include <sys/videoio.h>
++#  include "ext/videodev2.h"
 +#else
  #  include <linux/videodev2.h>
 +#endif
