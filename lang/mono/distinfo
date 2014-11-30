@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.97 2014/11/30 08:40:50 spz Exp $
+$NetBSD: distinfo,v 1.98 2014/11/30 08:50:26 spz Exp $
 
 SHA1 (mono-3.10.0.tar.bz2) = 74e43604ea48e941c39a43ebc153abee4ddba56c
 RMD160 (mono-3.10.0.tar.bz2) = 93312568ec4963cf6be1d5d29e5d634c5a7a4bf2
@@ -46,7 +46,7 @@ SHA1 (patch-mono_unit-tests_Makefile.in) = 98cb082e2e0ad53c36b513a7bce9568c26e14
 SHA1 (patch-mono_utils_Makefile.in) = 08c5d8c2cb64b526b5596f15a590260630bd67c6
 SHA1 (patch-mono_utils_mono-compiler.h) = 210062c167c00500f6a9176ef94c8cd96d39c730
 SHA1 (patch-mono_utils_mono-mmap.c) = 869c24a57861fcfb1bdc8a04ed0e0d1fd5a0e0b5
-SHA1 (patch-mono_utils_mono-threads-dragonfly.c) = 05adc3d75f620a6e1a297d2b05978afbeb3ac58a
+SHA1 (patch-mono_utils_mono-threads-dragonfly.c) = d41c7735d5ba0224ff4a4cf70308fb835ec00bbe
 SHA1 (patch-mono_utils_mono-threads-freebsd.c) = 029a6b14255edd8c298c9c8d1f5018bc6efc5866
 SHA1 (patch-mono_utils_mono-threads-netbsd.c) = 29d7bdb4906bca4e2f5a0a94b7e70e04570df8ee
 SHA1 (patch-mono_utils_mono-threads-posix.c) = d0cb2b1be62cbafe86a3efa817b8120af4ab1086
