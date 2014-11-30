@@ -1,16 +1,15 @@
-$NetBSD: patch-mono_utils_mono-threads-dragonfly.c,v 1.1 2014/11/30 08:40:51 spz Exp $
+$NetBSD: patch-mono_utils_mono-threads-dragonfly.c,v 1.2 2014/11/30 08:50:26 spz Exp $
 
 --- mono/utils/mono-threads-dragonfly.c.orig	2014-11-29 21:20:20.000000000 +0000
 +++ mono/utils/mono-threads-dragonfly.c
-@@ -0,0 +1,25 @@
+@@ -0,0 +1,24 @@
 +#include <config.h>
 +
-+#if defined(__FreeBSD__)
++#if defined(__DragonFly__)
 +
 +#include <mono/utils/mono-threads.h>
 +#include <pthread.h>
 +#include <pthread_np.h>
-+
 +
 +void
 +mono_threads_core_get_stack_bounds (guint8 **staddr, size_t *stsize)
