@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2014/11/07 19:39:25 adam Exp $
+# $NetBSD: Makefile,v 1.33 2014/11/30 02:34:31 markd Exp $
 
 OIIOVER=	1.4.10
 DISTNAME=	oiio-Release-${OIIOVER}
@@ -17,11 +17,13 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 
 CXXFLAGS+=		-std=c++0x
+CXXFLAGS.Linux+=	-pthread
 
 CMAKE_ARGS+=		-DILMBASE_HOME:STRING=${BUILDLINK_PREFIX.ilmbase}
 CMAKE_ARGS+=		-DOPENJPEG_HOME:STRING=${BUILDLINK_PREFIX.openjpeg15}
 CMAKE_ARGS+=		-DOPENEXR_HOME:STRING=${BUILDLINK_PREFIX.openexr}
 CMAKE_ARGS+=		-DINSTALL_DOCS:BOOL=OFF
+CMAKE_ARGS+=		-DUSE_LIBRAW:BOOL=OFF
 
 # For redefinition of _rotl macro.
 BUILDLINK_TRANSFORM+=	rm:-Werror
