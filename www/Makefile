@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1075 2014/11/25 17:08:06 taca Exp $
+# $NetBSD: Makefile,v 1.1076 2014/11/30 10:18:37 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -576,6 +576,14 @@ SUBDIR+=	py-django-tagging
 SUBDIR+=	py-django-tastypie
 SUBDIR+=	py-django14
 SUBDIR+=	py-djangocms-admin-style
+SUBDIR+=	py-djangocms-file
+SUBDIR+=	py-djangocms-flash
+SUBDIR+=	py-djangocms-googlemap
+SUBDIR+=	py-djangocms-inherit
+SUBDIR+=	py-djangocms-picture
+SUBDIR+=	py-djangocms-teaser
+SUBDIR+=	py-djangocms-text-ckeditor
+SUBDIR+=	py-djangocms-video
 SUBDIR+=	py-djangorestframework
 SUBDIR+=	py-flask
 SUBDIR+=	py-flask-admin

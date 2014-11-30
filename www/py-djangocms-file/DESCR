@@ -1,0 +1,2 @@
+A file plugin for django CMS. Allows you to upload a file. A filetype icon will
+be assigned based on the file extension.
