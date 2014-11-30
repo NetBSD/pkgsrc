@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4560 2014/11/30 13:27:06 tsutsui Exp $
+$NetBSD: CHANGES-2014,v 1.4561 2014/11/30 15:51:49 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5953,3 +5953,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-CGI to 4.10 [wiz 2014-11-30]
 	Updated textproc/p5-YAML-LibYAML to 0.54 [wiz 2014-11-30]
 	Updated x11/mlterm to 3.4.0nb1 [tsutsui 2014-11-30]
+	Updated net/haproxy to 1.5.9 [rodent 2014-11-30]
