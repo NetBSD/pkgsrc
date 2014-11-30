@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/09/14 13:11:39 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.10 2014/11/30 16:26:58 cheusov Exp $
 bin/mkc_check_common.sh
 bin/mkc_check_compiler
 bin/mkc_check_custom
@@ -30,6 +30,10 @@ share/doc/mk-configure/README
 share/doc/mk-configure/TODO
 share/doc/mk-configure/presentation.pdf
 share/examples/mk-configure/Makefile.inc
+share/examples/mk-configure/check_compiler_opts/Makefile
+share/examples/mk-configure/check_compiler_opts/expect.out
+share/examples/mk-configure/check_compiler_opts/hello_world.c
+share/examples/mk-configure/check_compiler_opts/test.mk
 share/examples/mk-configure/hello_RBTREE/Makefile
 share/examples/mk-configure/hello_RBTREE/expect.out
 share/examples/mk-configure/hello_RBTREE/hello_RBTREE.c
@@ -115,6 +119,7 @@ share/examples/mk-configure/hello_cxx/seven.c
 share/examples/mk-configure/hello_cxx/seven.h
 share/examples/mk-configure/hello_cxx/test.mk
 share/examples/mk-configure/hello_cxxlib/Makefile
+share/examples/mk-configure/hello_cxxlib/Makefile.inc
 share/examples/mk-configure/hello_cxxlib/cxxapp/Makefile
 share/examples/mk-configure/hello_cxxlib/cxxapp/cxxapp.cc
 share/examples/mk-configure/hello_cxxlib/cxxlib/Makefile
@@ -157,6 +162,7 @@ share/examples/mk-configure/hello_dictd/libmaa/prime.c
 share/examples/mk-configure/hello_dictd/libmaa/set.c
 share/examples/mk-configure/hello_dictd/test.mk
 share/examples/mk-configure/hello_errwarn/Makefile
+share/examples/mk-configure/hello_errwarn/Makefile.inc
 share/examples/mk-configure/hello_errwarn/expect.out
 share/examples/mk-configure/hello_errwarn/hello.c
 share/examples/mk-configure/hello_errwarn/test.mk
@@ -408,6 +414,7 @@ share/examples/mk-configure/tools2/tools/prog3/Makefile
 share/examples/mk-configure/tools2/tools/prog3/prog3.c
 share/examples/mk-configure/tools2/tools/prog4/Makefile
 share/examples/mk-configure/tools2/tools/prog4/prog4.c
+share/mk-configure/builtins/easy.c
 share/mk-configure/builtins/endianness
 share/mk-configure/builtins/prog_bison
 share/mk-configure/builtins/prog_flex
