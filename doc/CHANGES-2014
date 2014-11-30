@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4556 2014/11/30 10:49:37 markd Exp $
+$NetBSD: CHANGES-2014,v 1.4557 2014/11/30 13:16:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5949,3 +5949,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/phonon-backend-gstreamer to 4.8.0 [markd 2014-11-30]
 	Updated multimedia/phonon-backend-vlc to 0.8.1 [markd 2014-11-30]
 	Updated net/argus to 3.7 [markd 2014-11-30]
+	Updated security/p5-IO-Socket-SSL to 2.007 [wiz 2014-11-30]
