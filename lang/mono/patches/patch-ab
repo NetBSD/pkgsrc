@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.33 2014/08/21 07:49:56 wiz Exp $
+$NetBSD: patch-ab,v 1.34 2014/11/30 08:40:51 spz Exp $
 
---- configure.orig	2014-08-12 16:51:03.000000000 +0000
+--- configure.orig	2014-10-04 09:29:01.000000000 +0000
 +++ configure
-@@ -4018,7 +4018,7 @@ $as_echo "#define PLATFORM_NO_SYMLINKS 1
+@@ -4027,7 +4027,7 @@ $as_echo "#define PLATFORM_NO_SYMLINKS 1
  		mono_cv_clang=no
  		if test "x$cross_compiling" = "xno"; then
  			target_win32=yes
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.33 2014/08/21 07:49:56 wiz Exp $
  
  $as_echo "#define TARGET_WIN32 1" >>confdefs.h
  
-@@ -4054,12 +4054,15 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
+@@ -4064,10 +4064,13 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
  		CPPFLAGS="$CPPFLAGS -DPLATFORM_BSD"
  		libmono_ldflags="-pthread"
  		need_link_unlink=yes
@@ -24,12 +24,18 @@ $NetBSD: patch-ab,v 1.33 2014/08/21 07:49:56 wiz Exp $
 +#define PTHREAD_POINTER_ID 1
 +_ACEOF
  		;;
+ 	*-*-kfreebsd*-gnu)
+ 		host_win32=no
+@@ -4080,7 +4083,7 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
+ 		with_sigaltstack=no
+ 		use_sigposix=yes
+ 		;;
 -	*-*-*freebsd*)
 +	*-*-*freebsd* | *-*-*dragonfly*)
  		host_win32=no
  		if test "x$PTHREAD_CFLAGS" = "x"; then
  			CPPFLAGS="$CPPFLAGS -DGC_FREEBSD_THREADS"
-@@ -4075,7 +4078,8 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
+@@ -4096,7 +4099,8 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
  			LDFLAGS="$LDFLAGS $PTHREAD_LIBS -L/usr/local/lib"
  			libmono_ldflags="$PTHREAD_LIBS"
  		fi
@@ -39,7 +45,7 @@ $NetBSD: patch-ab,v 1.33 2014/08/21 07:49:56 wiz Exp $
  		need_link_unlink=yes
  
  $as_echo "#define PTHREAD_POINTER_ID 1" >>confdefs.h
-@@ -21735,6 +21739,7 @@ $as_echo_n "checking for Solaris XPG4 su
+@@ -21722,6 +21726,7 @@ $as_echo_n "checking for Solaris XPG4 su
  			if test -f /usr/lib/libxnet.so; then
  				CPPFLAGS="$CPPFLAGS -D_XOPEN_SOURCE=500"
  	    			CPPFLAGS="$CPPFLAGS -D__EXTENSIONS__"
@@ -47,7 +53,7 @@ $NetBSD: patch-ab,v 1.33 2014/08/21 07:49:56 wiz Exp $
  				CPPFLAGS="$CPPFLAGS -D_XOPEN_SOURCE_EXTENDED=1"
             			LIBS="$LIBS -lxnet"
    	    			{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
-@@ -24934,7 +24939,7 @@ $as_echo_n "checking LLVM version... " >
+@@ -24940,7 +24945,7 @@ $as_echo_n "checking LLVM version... " >
     { $as_echo "$as_me:${as_lineno-$LINENO}: result: $llvm_version" >&5
  $as_echo "$llvm_version" >&6; }
     if echo $llvm_version | grep -q 'mono'; then
@@ -56,16 +62,16 @@ $NetBSD: patch-ab,v 1.33 2014/08/21 07:49:56 wiz Exp $
  	  	 if test "$llvm_version" != "$expected_llvm_version"; then
  	  	 	as_fn_error $? "Expected llvm version $expected_llvm_version, but llvm-config --version returned $llvm_version\"" "$LINENO" 5
  	  	 fi
-@@ -25010,7 +25015,7 @@ LIBC="libc.so.6"
+@@ -25016,7 +25021,7 @@ LIBC="libc.so.6"
  INTL="libc.so.6"
  SQLITE="libsqlite.so.0"
  SQLITE3="libsqlite3.so.0"
 -X11="libX11.so"
-+X11="@X11BASE@/lib/libX11.so"
- XINERAMA="libXinerama.so"
- 
- sizeof_register="SIZEOF_VOID_P"
-@@ -25116,6 +25121,11 @@ $as_echo "#define __mono_ilp32__ 1" >>co
++X11="/usr/X11R7/lib/libX11.so"
+ GDKX11="libgdk-x11-2.0.so.0"
+ GTKX11="libgtk-x11-2.0.so.0"
+ XINERAMA="libXinerama.so.1"
+@@ -25124,6 +25129,11 @@ $as_echo "#define __mono_ilp32__ 1" >>co
  			sizeof_register=8
  		fi
  		case $host_os in
@@ -77,8 +83,8 @@ $NetBSD: patch-ab,v 1.33 2014/08/21 07:49:56 wiz Exp $
  		  linux*)
  			sgen_supported=true
  			AOT_SUPPORTED="yes"
-@@ -25246,13 +25256,17 @@ fi
- 	    CPPFLAGS_FOR_LIBGC="$CPPFLAGS_FOR_LIBGC"
+@@ -25259,13 +25269,17 @@ fi
+ 		CPPFLAGS="$CPPFLAGS -D__ARM_EABI__"
  		sgen_supported=true
  		;;
 -	arm*-linux*)
@@ -98,8 +104,8 @@ $NetBSD: patch-ab,v 1.33 2014/08/21 07:49:56 wiz Exp $
  		CPPFLAGS="$CPPFLAGS -D__ARM_EABI__"
  		;;
  # TODO: make proper support for NaCl host.
-@@ -25641,10 +25655,12 @@ case "$host" in
- 	X11="libX11.dylib"
+@@ -25655,15 +25669,17 @@ case "$host" in
+ 	GTKX11="libgtk-x11-2.0.dylib"
  	;;
       *-*-*netbsd*)
 -	LIBC="libc.so.12"
@@ -109,12 +115,17 @@ $NetBSD: patch-ab,v 1.33 2014/08/21 07:49:56 wiz Exp $
 +	SQLITE="libsqlite.so"
 +	SQLITE3="libsqlite3.so"
  	;;
+      *-*-kfreebsd*-gnu)
+ 	LIBC="libc.so.0.1"
+ 	INTL="libc.so.0.1"
+ 	X11="libX11.so.6"
+ 	;;
 -    *-*-*freebsd*)
 +    *-*-*freebsd* | *-*-*dragonfly*)
      	LIBC="libc.so"
  	INTL="libintl.so"
  	SQLITE="libsqlite.so"
-@@ -26684,7 +26700,6 @@ else
+@@ -26704,7 +26720,6 @@ else
  fi
  
  

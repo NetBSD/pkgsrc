@@ -1,0 +1,38 @@
+$NetBSD: patch-mono_utils_Makefile.in,v 1.1 2014/11/30 08:40:51 spz Exp $
+
+--- mono/utils/Makefile.in.orig	2014-10-04 09:29:01.000000000 +0000
++++ mono/utils/Makefile.in
+@@ -144,6 +144,7 @@ am__libmonoutils_la_SOURCES_DIST = mono-
+ 	mono-threads-mach.c mono-threads-mach-helper.c \
+ 	mono-threads-windows.c mono-threads-linux.c \
+ 	mono-threads-freebsd.c mono-threads-openbsd.c \
++	mono-threads-netbsd.c mono-threads-dragonfly.c \
+ 	mono-threads-android.c mono-threads.h mono-tls.h mono-tls.c \
+ 	linux_magic.h mono-memory-model.h atomic.h atomic.c \
+ 	mono-hwcap.h mono-hwcap.c bsearch.h bsearch.c \
+@@ -170,6 +171,7 @@ am__objects_1 = mono-md5.lo mono-sha1.lo
+ 	mono-threads-mach.lo mono-threads-mach-helper.lo \
+ 	mono-threads-windows.lo mono-threads-linux.lo \
+ 	mono-threads-freebsd.lo mono-threads-openbsd.lo \
++	mono-threads-netbsd.lo mono-threads-dragonfly.lo \
+ 	mono-threads-android.lo mono-tls.lo atomic.lo mono-hwcap.lo \
+ 	bsearch.lo mono-conc-hashtable.lo sha1.lo
+ @CROSS_COMPILE_FALSE@@X86_TRUE@am__objects_2 = mach-support-x86.lo
+@@ -585,6 +587,8 @@ monoutils_sources = \
+ 	mono-threads-linux.c	\
+ 	mono-threads-freebsd.c	\
+ 	mono-threads-openbsd.c	\
++	mono-threads-netbsd.c	\
++	mono-threads-dragonfly.c	\
+ 	mono-threads-android.c	\
+ 	mono-threads.h	\
+ 	mono-tls.h	\
+@@ -726,6 +730,8 @@ distclean-compile:
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/mono-threads-mach-helper.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/mono-threads-mach.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/mono-threads-openbsd.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/mono-threads-netbsd.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/mono-threads-dragonfly.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/mono-threads-posix.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/mono-threads-windows.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/mono-threads.Plo@am__quote@

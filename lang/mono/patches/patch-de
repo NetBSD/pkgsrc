@@ -1,5 +1,5 @@
-$NetBSD: patch-de,v 1.4 2013/05/29 11:11:12 wiz Exp $
---- ikvm-native/jni.c.orig	2012-12-05 17:44:37.000000000 +0000
+$NetBSD: patch-de,v 1.5 2014/11/30 08:40:51 spz Exp $
+--- ikvm-native/jni.c.orig	2014-09-22 13:23:05.000000000 +0000
 +++ ikvm-native/jni.c
 @@ -28,7 +28,7 @@
  #include <malloc.h>

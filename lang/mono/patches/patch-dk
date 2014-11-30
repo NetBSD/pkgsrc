@@ -1,8 +1,8 @@
-$NetBSD: patch-dk,v 1.3 2013/05/29 11:11:12 wiz Exp $
+$NetBSD: patch-dk,v 1.4 2014/11/30 08:40:51 spz Exp $
 
---- libgc/include/gc.h.orig	2012-12-05 17:44:36.000000000 +0000
+--- libgc/include/gc.h.orig	2014-09-22 13:23:05.000000000 +0000
 +++ libgc/include/gc.h
-@@ -521,6 +521,7 @@ GC_API GC_PTR GC_malloc_atomic_ignore_of
+@@ -526,6 +526,7 @@ GC_API GC_PTR GC_malloc_atomic_ignore_of
  /* This may also be desirable if it is possible but expensive to	*/
  /* retrieve the call chain.						*/
  #if (defined(__linux__) || defined(__NetBSD__) || defined(__OpenBSD__) \

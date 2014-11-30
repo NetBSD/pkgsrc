@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.7 2014/08/21 07:49:56 wiz Exp $
---- data/config.in.orig	2014-08-12 16:50:38.000000000 +0000
+$NetBSD: patch-al,v 1.8 2014/11/30 08:40:51 spz Exp $
+--- data/config.in.orig	2014-10-04 09:27:43.000000000 +0000
 +++ data/config.in
-@@ -19,7 +19,7 @@
+@@ -21,7 +21,7 @@
  	<dllmap dll="libXinerama" target="@XINERAMA@" os="!windows" />
  	<dllmap dll="libcairo-2.dll" target="libcairo.so.2" os="!windows"/>
  	<dllmap dll="libcairo-2.dll" target="libcairo.2.dylib" os="osx"/>

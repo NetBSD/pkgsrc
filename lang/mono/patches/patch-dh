@@ -1,7 +1,7 @@
-$NetBSD: patch-dh,v 1.4 2014/08/21 07:49:56 wiz Exp $
---- mono/mini/mini-x86.c.orig	2014-08-12 16:50:38.000000000 +0000
+$NetBSD: patch-dh,v 1.5 2014/11/30 08:40:51 spz Exp $
+--- mono/mini/mini-x86.c.orig	2014-10-04 09:27:43.000000000 +0000
 +++ mono/mini/mini-x86.c
-@@ -239,7 +239,7 @@ static const guint32 *callconv_param_reg
+@@ -242,7 +242,7 @@ static const guint32 *callconv_param_reg
  	}
  }
  
