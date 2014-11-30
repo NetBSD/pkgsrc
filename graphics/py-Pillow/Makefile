@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2014/10/07 16:47:27 adam Exp $
+# $NetBSD: Makefile,v 1.15 2014/11/30 10:11:31 adam Exp $
 
-DISTNAME=	Pillow-2.5.3
+DISTNAME=	Pillow-2.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	https://pypi.python.org/packages/source/P/Pillow/
 EXTRACT_SUFX=	.zip
@@ -13,7 +12,7 @@ COMMENT=	Python Imaging Library (Fork)
 
 CONFLICTS+=	${PYPKGPREFIX}-imaging-[0-9]*
 
-SUBST_CLASSES=		fix-path
+SUBST_CLASSES+=		fix-path
 SUBST_MESSAGE.fix-path=	Fixing paths.
 SUBST_STAGE.fix-path=	pre-configure
 SUBST_FILES.fix-path=	setup.py

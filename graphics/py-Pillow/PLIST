@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2014/07/06 12:15:53 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/11/30 10:11:31 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/PIL/BdfFontFile.py
 ${PYSITELIB}/PIL/BdfFontFile.pyc
 ${PYSITELIB}/PIL/BdfFontFile.pyo
@@ -164,6 +169,9 @@ ${PYSITELIB}/PIL/MicImagePlugin.pyo
 ${PYSITELIB}/PIL/MpegImagePlugin.py
 ${PYSITELIB}/PIL/MpegImagePlugin.pyc
 ${PYSITELIB}/PIL/MpegImagePlugin.pyo
+${PYSITELIB}/PIL/MpoImagePlugin.py
+${PYSITELIB}/PIL/MpoImagePlugin.pyc
+${PYSITELIB}/PIL/MpoImagePlugin.pyo
 ${PYSITELIB}/PIL/MspImagePlugin.py
 ${PYSITELIB}/PIL/MspImagePlugin.pyc
 ${PYSITELIB}/PIL/MspImagePlugin.pyo
@@ -261,8 +269,3 @@ ${PYSITELIB}/PIL/_util.py
 ${PYSITELIB}/PIL/_util.pyc
 ${PYSITELIB}/PIL/_util.pyo
 ${PYSITELIB}/PIL/_webp.so
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_INFODIR}/zip-safe
