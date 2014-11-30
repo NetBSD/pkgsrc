@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.4 2014/07/02 13:49:06 adam Exp $
+# $NetBSD: options.mk,v 1.5 2014/11/30 19:08:50 adam Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg2
-PKG_SUPPORTED_OPTIONS=	faac lame ass libvpx theora vorbis x264 x265 xvid \
-			opencore-amr
+PKG_SUPPORTED_OPTIONS=	ass faac fdk-aac lame libvpx opencore-amr theora \
+			vorbis x264 x265 xvid
 PKG_SUGGESTED_OPTIONS=	lame ass libvpx theora vorbis x264 xvid
 
 # Add VDPAU if it is available
@@ -40,6 +40,16 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 CONFIGURE_ARGS+=	--enable-libfaac
 CONFIGURE_ARGS+=	--enable-nonfree
 .include "../../audio/faac/buildlink3.mk"
+.endif
+
+# Fraunhofer FDK AAC codec support
+.if !empty(PKG_OPTIONS:Mfdk-aac)
+RESTRICTED=		This software may require the payment of patent royalties
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+CONFIGURE_ARGS+=	--enable-libfdk_aac
+CONFIGURE_ARGS+=	--enable-nonfree
+.include "../../audio/fdk-aac/buildlink3.mk"
 .endif
 
 # opencore-amr option
