@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/11/30 10:32:57 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/11/30 18:22:11 markd Exp $
 bin/firefox31
 lib/firefox31/application.ini
 lib/firefox31/browser/blocklist.xml
@@ -6,7 +6,8 @@ lib/firefox31/browser/chrome.manifest
 ${PLIST.nobranding}lib/firefox31/browser/chrome/browser/content/branding/about-background.png
 lib/firefox31/browser/chrome/browser/content/branding/about-logo.png
 lib/firefox31/browser/chrome/browser/content/branding/about-logo@2x.png
-lib/firefox31/browser/chrome/browser/content/branding/about-wordmark.svg
+${PLIST.branding}lib/firefox31/browser/chrome/browser/content/branding/about-wordmark.png
+${PLIST.nobranding}lib/firefox31/browser/chrome/browser/content/branding/about-wordmark.svg
 lib/firefox31/browser/chrome/browser/content/branding/about.png
 lib/firefox31/browser/chrome/browser/content/branding/aboutDialog.css
 lib/firefox31/browser/chrome/browser/content/branding/icon128.png
