@@ -1,0 +1,2 @@
+A inherit plugin for django CMS. Displays all plugins of another page or
+another language. Great if you always need the same plugins on a lot of pages.
