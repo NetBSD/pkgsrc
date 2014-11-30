@@ -1,8 +1,8 @@
-$NetBSD: patch-mono_utils_mono-threads-posix.c,v 1.1 2014/08/21 07:49:56 wiz Exp $
+$NetBSD: patch-mono_utils_mono-threads-posix.c,v 1.2 2014/11/30 08:40:51 spz Exp $
 
---- mono/utils/mono-threads-posix.c.orig	2014-08-09 11:10:44.000000000 +0000
+--- mono/utils/mono-threads-posix.c.orig	2014-10-04 09:27:43.000000000 +0000
 +++ mono/utils/mono-threads-posix.c
-@@ -543,13 +543,21 @@ mono_threads_core_set_name (MonoNativeTh
+@@ -420,13 +420,21 @@ mono_threads_core_set_name (MonoNativeTh
  {
  #ifdef HAVE_PTHREAD_SETNAME_NP
  	if (!name) {
