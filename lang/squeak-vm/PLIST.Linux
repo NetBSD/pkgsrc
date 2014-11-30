@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST.Linux,v 1.1.1.1 2010/02/11 00:58:19 asau Exp $
-lib/squeak/${PKGVERSION}/UUIDPlugin
-lib/squeak/${PKGVERSION}/vm-display-fbdev
-lib/squeak/${PKGVERSION}/vm-sound-ALSA
+@comment $NetBSD: PLIST.Linux,v 1.2 2014/11/30 02:40:18 markd Exp $
+lib/squeak/${PKGVERSION}/so.CameraPlugin
+lib/squeak/${PKGVERSION}/so.MIDIPlugin
+lib/squeak/${PKGVERSION}/so.WeDoPlugin
+lib/squeak/${PKGVERSION}/so.vm-display-fbdev
+lib/squeak/${PKGVERSION}/so.vm-sound-ALSA
