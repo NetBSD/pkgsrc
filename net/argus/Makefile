@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2014/05/29 23:37:02 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2014/11/30 10:09:09 markd Exp $
 
-DISTNAME=	argus-3.6
-PKGREVISION=	4
+DISTNAME=	argus-3.7
 CATEGORIES=	net
 MASTER_SITES=	http://www.tcp4me.com/code/argus-archive/
 EXTRACT_SUFX=	.tgz
@@ -28,6 +27,7 @@ CONFIGURE_ARGS+=	--sbin_dir ${PREFIX}/sbin
 CONFIGURE_ARGS+=	--lib_dir ${PREFIX}/lib/argus
 CONFIGURE_ARGS+=	--cgi_dir ${PREFIX}/libexec/cgi-bin
 CONFIGURE_ARGS+=	--data_dir ${VARBASE}/argus
+CONFIGURE_ARGS+=	--www_dir ${VARBASE}/argus/www/htdocs
 CONFIGURE_ENV+=		PERL=${TOOLS_PERL5:Q}
 
 REPLACE_PERL+=		${WRKSRC}/built/argus-config

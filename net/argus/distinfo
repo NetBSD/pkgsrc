@@ -1,6 +1,13 @@
-$NetBSD: distinfo,v 1.6 2009/07/25 11:44:49 markd Exp $
+$NetBSD: distinfo,v 1.7 2014/11/30 10:09:09 markd Exp $
 
-SHA1 (argus-3.6.tgz) = 132b0ee35a0c4523a65c93673ba838ce8dbe9e09
-RMD160 (argus-3.6.tgz) = a53283ef6162c94864438d90d79de43916032b0f
-Size (argus-3.6.tgz) = 380302 bytes
+SHA1 (argus-3.7.tgz) = 3aaf2d6db097441fa79cde2e272fcf543a439aa6
+RMD160 (argus-3.7.tgz) = f8f9eeb6ca5451475594262efcdd571bda931f32
+Size (argus-3.7.tgz) = 435683 bytes
 SHA1 (patch-aa) = 85725be47608b8f7a7f675c50e90b763fb6cfbe9
+SHA1 (patch-src_web_about.pl) = 88a627c60f667dfc8640c358fa18f37f27bfdc19
+SHA1 (patch-src_web_graph.pl) = 4b87bc3a4cac48b05d72112b9d669af94ad32875
+SHA1 (patch-src_web_login.pl) = b025eae58b1a92f4573fd519bf79d088e8f6ffc9
+SHA1 (patch-src_web_notify.pl) = 9abee193d3df127092dc530e577860c3371e19a2
+SHA1 (patch-src_web_override.pl) = dd403b9f57b6551e2dba6750081acd49d8d1644c
+SHA1 (patch-src_web_page.pl) = e8cf75abf9baa4a1fc80d047ef31fb23e1c34f99
+SHA1 (patch-src_web_utils.pl) = cac3477ce20c5d22754bdf965a9e0093fd886cb2
