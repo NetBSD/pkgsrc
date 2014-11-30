@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2014/11/27 21:33:27 joerg Exp $
+# $NetBSD: Makefile,v 1.51 2014/11/30 02:31:22 markd Exp $
 
 DISTNAME=	opencv-2.4.9
 PKGREVISION=	2
@@ -39,7 +39,7 @@ CXXFLAGS+=	-std=c++11
 
 PLIST_VARS+=	opencl
 
-.if ${OPSYS} == "Darwin" || ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS" || ${OPSYS} == "Linux"
 PLIST.opencl=	yes
 .endif
 
