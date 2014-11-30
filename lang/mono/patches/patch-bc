@@ -1,8 +1,8 @@
-$NetBSD: patch-bc,v 1.7 2013/05/29 11:11:12 wiz Exp $
+$NetBSD: patch-bc,v 1.8 2014/11/30 08:40:51 spz Exp $
 
---- mono/mini/Makefile.in.orig	2012-12-05 17:50:32.000000000 +0000
+--- mono/mini/Makefile.in.orig	2014-10-04 09:29:00.000000000 +0000
 +++ mono/mini/Makefile.in
-@@ -3915,15 +3915,15 @@ mbench: test.exe
+@@ -3018,15 +3018,15 @@ mbench: test.exe
  
  stat1: mono bench.exe
  	$(RUNTIME) --verbose --statfile stats.pl --regression bench.exe

@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.13 2013/05/29 11:11:12 wiz Exp $
---- mono/metadata/Makefile.in.orig	2012-12-05 17:50:29.000000000 +0000
+$NetBSD: patch-af,v 1.14 2014/11/30 08:40:51 spz Exp $
+--- mono/metadata/Makefile.in.orig	2014-10-04 09:29:00.000000000 +0000
 +++ mono/metadata/Makefile.in
-@@ -159,7 +159,7 @@ libmonoruntime_static_la_LINK = $(LIBTOO
+@@ -213,7 +213,7 @@ libmonoruntime_static_la_LINK = $(LIBTOO
  	$(libmonoruntime_static_la_CFLAGS) $(CFLAGS) \
  	$(libmonoruntime_static_la_LDFLAGS) $(LDFLAGS) -o $@
  @DISABLE_EXECUTABLES_FALSE@@SUPPORT_BOEHM_TRUE@am_libmonoruntime_static_la_rpath =
