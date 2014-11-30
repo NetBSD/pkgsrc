@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/10/01 12:08:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/11/30 18:43:41 adam Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -72,6 +72,7 @@ libexec/git-core/git-index-pack
 libexec/git-core/git-init
 libexec/git-core/git-init-db
 libexec/git-core/git-instaweb
+libexec/git-core/git-interpret-trailers
 libexec/git-core/git-log
 libexec/git-core/git-ls-files
 libexec/git-core/git-ls-remote
@@ -166,6 +167,7 @@ libexec/git-core/git-web--browse
 libexec/git-core/git-whatchanged
 libexec/git-core/git-write-tree
 libexec/git-core/mergetools/araxis
+libexec/git-core/mergetools/bc
 libexec/git-core/mergetools/bc3
 libexec/git-core/mergetools/codecompare
 libexec/git-core/mergetools/deltawalker
