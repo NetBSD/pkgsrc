@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2014/11/26 12:26:45 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2014/11/30 03:14:45 markd Exp $
 
 DISTNAME=	kopete-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	net
 COMMENT=	Multi-protocol instant messenger client
 
@@ -29,6 +30,7 @@ REPLACE_SH+= \
 .include "../../audio/alsa-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libmsn+=  libmsn>=4.1
 .include "../../chat/libmsn/buildlink3.mk"
+.include "../../chat/libotr/buildlink3.mk"
 .include "../../chat/meanwhile/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
