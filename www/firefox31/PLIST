@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/03 12:18:31 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/11/30 10:32:57 markd Exp $
 bin/firefox31
 lib/firefox31/application.ini
 lib/firefox31/browser/blocklist.xml
@@ -2249,6 +2249,7 @@ lib/firefox31/modules/PopupNotifications.jsm
 lib/firefox31/modules/Preferences.jsm
 lib/firefox31/modules/PriorityUrlProvider.jsm
 lib/firefox31/modules/PrivateBrowsingUtils.jsm
+${PLIST.sps}lib/firefox31/modules/Profiler.jsm
 lib/firefox31/modules/Promise-backend.js
 lib/firefox31/modules/Promise.jsm
 lib/firefox31/modules/PropertyListUtils.jsm
