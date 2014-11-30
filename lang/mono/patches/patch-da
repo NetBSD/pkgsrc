@@ -1,8 +1,8 @@
-$NetBSD: patch-da,v 1.5 2013/09/13 20:47:55 jperkin Exp $
+$NetBSD: patch-da,v 1.6 2014/11/30 08:40:51 spz Exp $
 
 Support 64-bit SunOS.
 
---- libgc/include/private/gcconfig.h.orig	2013-04-25 09:01:57.000000000 +0000
+--- libgc/include/private/gcconfig.h.orig	2014-09-22 13:23:05.000000000 +0000
 +++ libgc/include/private/gcconfig.h
 @@ -169,6 +169,11 @@
  #    define SUNOS5
@@ -59,7 +59,7 @@ Support 64-bit SunOS.
  #     define HEURISTIC2
  #     ifdef __ELF__
  #	define DATASTART GC_data_start
-@@ -1383,6 +1403,10 @@
+@@ -1390,6 +1410,10 @@
  #   endif
  #   ifdef NETBSD
  #	define OS_TYPE "NETBSD"
@@ -70,7 +70,7 @@ Support 64-bit SunOS.
  #	ifdef __ELF__
  #	    define DYNAMIC_LOADING
  #	endif
-@@ -1544,6 +1568,10 @@
+@@ -1551,6 +1575,10 @@
  #   if defined(NETBSD)
  #     define ALIGNMENT 4
  #     define OS_TYPE "NETBSD"
@@ -81,7 +81,7 @@ Support 64-bit SunOS.
  #     define HEURISTIC2
  #     define USE_GENERIC_PUSH_REGS
  #     ifdef __ELF__
-@@ -1670,6 +1698,10 @@
+@@ -1677,6 +1705,10 @@
  #   endif
  #   ifdef NETBSD
  #	define OS_TYPE "NETBSD"
@@ -92,7 +92,7 @@ Support 64-bit SunOS.
  #	define HEURISTIC2
  #	define DATASTART GC_data_start
  #	define ELFCLASS32 32
-@@ -1937,6 +1969,10 @@
+@@ -1944,6 +1976,10 @@
  #   define ALIGNMENT 4
  #   ifdef NETBSD
  #       define OS_TYPE "NETBSD"
@@ -103,7 +103,7 @@ Support 64-bit SunOS.
  #       define HEURISTIC2
  #	ifdef __ELF__
  #          define DATASTART GC_data_start
-@@ -2034,6 +2070,10 @@
+@@ -2041,6 +2077,10 @@
  #   endif
  #   ifdef NETBSD
  #      define OS_TYPE "NETBSD"
@@ -114,7 +114,7 @@ Support 64-bit SunOS.
  #      define HEURISTIC2
  #      define DATASTART GC_data_start
  #       define USE_GENERIC_PUSH_REGS
-@@ -2145,6 +2185,10 @@
+@@ -2159,6 +2199,10 @@
  #   endif
  #   ifdef NETBSD
  #	define OS_TYPE "NETBSD"
@@ -125,7 +125,7 @@ Support 64-bit SunOS.
  #	ifdef __ELF__
  #	    define DYNAMIC_LOADING
  #	endif
-@@ -2152,6 +2196,29 @@
+@@ -2166,6 +2210,29 @@
  	extern char etext[];
  #	define SEARCH_FOR_DATA_START
  #   endif

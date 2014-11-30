@@ -1,5 +1,5 @@
-$NetBSD: patch-ap,v 1.4 2013/05/29 11:11:12 wiz Exp $
---- mcs/jay/Makefile.orig	2012-12-05 17:45:59.000000000 +0000
+$NetBSD: patch-ap,v 1.5 2014/11/30 08:40:51 spz Exp $
+--- mcs/jay/Makefile.orig	2014-09-22 13:23:09.000000000 +0000
 +++ mcs/jay/Makefile
 @@ -21,19 +21,19 @@ ifndef NO_INSTALL
  install-local:

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.20 2014/09/10 12:17:15 joerg Exp $
+@comment $NetBSD: PLIST.common,v 1.21 2014/11/30 08:40:50 spz Exp $
 bin/al
 bin/al2
 bin/caspol
@@ -1180,6 +1180,7 @@ lib/mono/xbuild-frameworks/.NETFramework/v3.5/RedistList/FrameworkList.xml
 lib/mono/xbuild-frameworks/.NETFramework/v4.0/Profile/Client/RedistList/FrameworkList.xml
 lib/mono/xbuild-frameworks/.NETFramework/v4.0/RedistList/FrameworkList.xml
 lib/mono/xbuild-frameworks/.NETFramework/v4.5/RedistList/FrameworkList.xml
+lib/mono/xbuild-frameworks/.NETFramework/v4.5.1/RedistList/FrameworkList.xml
 lib/mono/xbuild/12.0/bin/MSBuild/Microsoft.Build.CommonTypes.xsd
 lib/mono/xbuild/12.0/bin/MSBuild/Microsoft.Build.Core.xsd
 lib/mono/xbuild/12.0/bin/Microsoft.Build.Engine.dll

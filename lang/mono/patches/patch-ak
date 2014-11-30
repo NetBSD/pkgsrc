@@ -1,5 +1,5 @@
-$NetBSD: patch-ak,v 1.10 2013/05/29 11:11:12 wiz Exp $
---- libgc/pthread_support.c.orig	2012-12-05 17:44:36.000000000 +0000
+$NetBSD: patch-ak,v 1.11 2014/11/30 08:40:51 spz Exp $
+--- libgc/pthread_support.c.orig	2014-09-22 13:23:05.000000000 +0000
 +++ libgc/pthread_support.c
 @@ -71,7 +71,7 @@
        defined(GC_DARWIN_THREADS) || defined(GC_AIX_THREADS)) || \
@@ -10,7 +10,7 @@ $NetBSD: patch-ak,v 1.10 2013/05/29 11:11:12 wiz Exp $
  #   define USE_PTHREAD_SPECIFIC
  # endif
  #endif
-@@ -1280,6 +1280,22 @@ void GC_end_blocking(void) {
+@@ -1282,6 +1282,22 @@ void GC_end_blocking(void) {
  #define __d10_sleep sleep
  #endif /* GC_DGUX386_THREADS */
  
