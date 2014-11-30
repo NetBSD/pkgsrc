@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2014/11/14 15:27:04 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.54 2014/11/30 10:23:29 markd Exp $
 bin/thunderbird
 lib/thunderbird/application.ini
 lib/thunderbird/blocklist.xml
@@ -2095,6 +2095,7 @@ lib/thunderbird/modules/PopupNotifications.jsm
 lib/thunderbird/modules/Preferences.jsm
 lib/thunderbird/modules/PriorityUrlProvider.jsm
 lib/thunderbird/modules/PrivateBrowsingUtils.jsm
+${PLIST.sps}lib/thunderbird/modules/Profiler.jsm
 lib/thunderbird/modules/Promise-backend.js
 lib/thunderbird/modules/Promise.jsm
 lib/thunderbird/modules/PropertyListUtils.jsm
