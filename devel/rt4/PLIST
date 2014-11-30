@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/07/06 06:32:32 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/11/30 00:20:44 ryoon Exp $
 share/examples/rt4/RT_Config.pm
 share/examples/rt4/RT_SiteConfig.pm
 share/rt4/bin/rt
@@ -1230,6 +1230,10 @@ share/rt4/etc/upgrade/4.2.1/content
 share/rt4/etc/upgrade/4.2.2/content
 share/rt4/etc/upgrade/4.2.2/schema.mysql
 share/rt4/etc/upgrade/4.2.4/content
+share/rt4/etc/upgrade/4.2.6/content
+share/rt4/etc/upgrade/4.2.6/schema.mysql
+share/rt4/etc/upgrade/4.2.7/content
+share/rt4/etc/upgrade/4.2.8/content
 share/rt4/etc/upgrade/generate-rtaddressregexp
 share/rt4/etc/upgrade/sanity-check-stylesheets.pl
 share/rt4/etc/upgrade/shrink_cgm_table.pl
@@ -1255,6 +1259,7 @@ share/rt4/lib/RT/Action/Notify.pm
 share/rt4/lib/RT/Action/NotifyAsComment.pm
 share/rt4/lib/RT/Action/NotifyGroup.pm
 share/rt4/lib/RT/Action/NotifyGroupAsComment.pm
+share/rt4/lib/RT/Action/NotifyOwnerOrAdminCc.pm
 share/rt4/lib/RT/Action/OpenOnStarted.pm
 share/rt4/lib/RT/Action/RecordComment.pm
 share/rt4/lib/RT/Action/RecordCorrespondence.pm
