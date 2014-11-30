@@ -1,8 +1,8 @@
-$NetBSD: patch-mono_utils_mono-mmap.c,v 1.1 2013/06/05 17:03:55 jperkin Exp $
+$NetBSD: patch-mono_utils_mono-mmap.c,v 1.2 2014/11/30 08:40:51 spz Exp $
 
 Use posix_madvise on SunOS.
 
---- mono/utils/mono-mmap.c.orig	2013-04-25 09:01:42.000000000 +0000
+--- mono/utils/mono-mmap.c.orig	2014-09-22 13:23:09.000000000 +0000
 +++ mono/utils/mono-mmap.c
 @@ -431,7 +431,7 @@ mono_mprotect (void *addr, size_t length
  			memset (addr, 0, length);

@@ -1,14 +1,17 @@
-$NetBSD: patch-bd,v 1.5 2014/08/21 07:49:56 wiz Exp $
+$NetBSD: patch-bd,v 1.6 2014/11/30 08:40:51 spz Exp $
 
 Add MANDIR, but don't hardcode it (fixed in post-patch by SUBST_*).
 
---- mcs/build/config-default.make.orig	2014-08-09 11:10:40.000000000 +0000
+--- mcs/build/config-default.make.orig	2014-09-22 13:23:05.000000000 +0000
 +++ mcs/build/config-default.make
-@@ -19,6 +19,7 @@ CFLAGS = -g -O2
+@@ -17,8 +17,9 @@ LIBRARY_FLAGS = /noconfig
+ ifndef CFLAGS
+ CFLAGS = -g -O2
  endif
- prefix = /usr/local
+-prefix = /usr/local
++prefix = /usr/pkg
  exec_prefix = $(prefix)
-+mandir = $(prefix)/MANDIR
++mandir = $(prefix)/man
  mono_libdir = $(exec_prefix)/lib
  sysconfdir = $(prefix)/etc
  #RUNTIME = mono
