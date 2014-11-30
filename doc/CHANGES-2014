@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4554 2014/11/30 01:10:27 cheusov Exp $
+$NetBSD: CHANGES-2014,v 1.4555 2014/11/30 10:21:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5937,3 +5937,12 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/php-owncloud to 7.0.3 [ryoon 2014-11-30]
 	Updated devel/rt4 to 4.2.9 [ryoon 2014-11-30]
 	Updated pkgtools/nih to 0.13.0 [cheusov 2014-11-30]
+	Updated graphics/py-Pillow to 2.6.1 [adam 2014-11-30]
+	Added www/py-djangocms-file version 0.1 [adam 2014-11-30]
+	Added www/py-djangocms-flash version 0.1 [adam 2014-11-30]
+	Added www/py-djangocms-googlemap version 0.2 [adam 2014-11-30]
+	Added www/py-djangocms-inherit version 0.1 [adam 2014-11-30]
+	Added www/py-djangocms-picture version 0.1 [adam 2014-11-30]
+	Added www/py-djangocms-teaser version 0.1 [adam 2014-11-30]
+	Added www/py-djangocms-text-ckeditor version 0.1 [adam 2014-11-30]
+	Added www/py-djangocms-video version 0.1 [adam 2014-11-30]
