@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2014/11/18 02:37:06 rodent Exp $
+# $NetBSD: Makefile,v 1.18 2014/11/30 15:51:15 rodent Exp $
 
-DISTNAME=	haproxy-1.5.8
+DISTNAME=	haproxy-1.5.9
 CATEGORIES=	net www
 MASTER_SITES=	http://haproxy.1wt.eu/download/1.5/src/
 
