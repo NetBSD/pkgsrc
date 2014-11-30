@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2014/11/30 18:58:43 adam Exp $
+include/fdk-aac/FDK_audio.h
+include/fdk-aac/aacdecoder_lib.h
+include/fdk-aac/aacenc_lib.h
+include/fdk-aac/genericStds.h
+include/fdk-aac/machine_type.h
+lib/libfdk-aac.la
+lib/pkgconfig/fdk-aac.pc
