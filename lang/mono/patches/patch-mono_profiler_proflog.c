@@ -1,10 +1,10 @@
-$NetBSD: patch-mono_profiler_proflog.c,v 1.1 2013/06/05 17:03:55 jperkin Exp $
+$NetBSD: patch-mono_profiler_proflog.c,v 1.2 2014/11/30 08:40:51 spz Exp $
 
 SunOS libelf does not support largefile.
 
---- mono/profiler/proflog.c.orig	2013-04-25 09:01:57.000000000 +0000
+--- mono/profiler/proflog.c.orig	2014-09-22 13:23:09.000000000 +0000
 +++ mono/profiler/proflog.c
-@@ -36,6 +36,10 @@
+@@ -38,6 +38,10 @@
  #ifdef HAVE_EXECINFO_H
  #include <execinfo.h>
  #endif

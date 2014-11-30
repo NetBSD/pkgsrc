@@ -1,8 +1,8 @@
-$NetBSD: patch-mono_io-layer_sockets.c,v 1.1 2013/05/29 11:11:12 wiz Exp $
+$NetBSD: patch-mono_io-layer_sockets.c,v 1.2 2014/11/30 08:40:51 spz Exp $
 
 Use getprotoent() instead of hardcoding SOL_TCP on NetBSD.
 
---- mono/io-layer/sockets.c.orig	2012-12-05 17:44:35.000000000 +0000
+--- mono/io-layer/sockets.c.orig	2014-09-22 13:23:09.000000000 +0000
 +++ mono/io-layer/sockets.c
 @@ -46,6 +46,9 @@
  #include <netinet/in.h>

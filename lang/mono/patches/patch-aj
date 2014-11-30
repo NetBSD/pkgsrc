@@ -1,7 +1,7 @@
-$NetBSD: patch-aj,v 1.9 2014/08/21 07:49:56 wiz Exp $
---- data/net_2_0/Browsers/Makefile.in.orig	2014-08-12 16:51:00.000000000 +0000
+$NetBSD: patch-aj,v 1.10 2014/11/30 08:40:51 spz Exp $
+--- data/net_2_0/Browsers/Makefile.in.orig	2014-10-04 09:28:58.000000000 +0000
 +++ data/net_2_0/Browsers/Makefile.in
-@@ -347,7 +347,7 @@ target_vendor = @target_vendor@
+@@ -351,7 +351,7 @@ target_vendor = @target_vendor@
  top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@

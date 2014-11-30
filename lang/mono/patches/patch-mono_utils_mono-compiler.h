@@ -1,9 +1,9 @@
-$NetBSD: patch-mono_utils_mono-compiler.h,v 1.2 2013/05/29 11:11:12 wiz Exp $
+$NetBSD: patch-mono_utils_mono-compiler.h,v 1.3 2014/11/30 08:40:51 spz Exp $
 
 Make sure that TLS variables are actually emitted, since the compiler
 doesn't see all references.
 
---- mono/utils/mono-compiler.h.orig	2012-12-05 17:44:35.000000000 +0000
+--- mono/utils/mono-compiler.h.orig	2014-10-04 09:27:43.000000000 +0000
 +++ mono/utils/mono-compiler.h
 @@ -36,7 +36,7 @@
  #if defined(PIC)
