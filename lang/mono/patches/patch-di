@@ -1,7 +1,7 @@
-$NetBSD: patch-di,v 1.5 2013/05/29 11:11:12 wiz Exp $
---- mono/tests/libtest.c.orig	2012-12-05 17:44:31.000000000 +0000
+$NetBSD: patch-di,v 1.6 2014/11/30 08:40:51 spz Exp $
+--- mono/tests/libtest.c.orig	2014-09-22 13:23:09.000000000 +0000
 +++ mono/tests/libtest.c
-@@ -3297,7 +3297,7 @@ mono_test_marshal_ccw_itest (MonoComObje
+@@ -3463,7 +3463,7 @@ mono_test_marshal_ccw_itest (MonoComObje
   * mono_method_get_unmanaged_thunk tests
   */
  
