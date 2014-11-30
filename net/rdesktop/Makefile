@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2014/02/12 23:18:25 tron Exp $
+# $NetBSD: Makefile,v 1.44 2014/11/30 03:17:49 markd Exp $
 
 DISTNAME=		rdesktop-1.8.1
 PKGREVISION=		1
@@ -29,6 +29,11 @@ SUBST_MESSAGE.audio=	Fixing hardcoded audio device.
 
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--with-sound=oss
+.endif
+
+.if ${OPSYS} == "Linux"
+CONFIGURE_ARGS+=	--with-sound=alsa
+.include "../../audio/alsa-lib/buildlink3.mk"
 .endif
 
 .include "../../mk/oss.buildlink3.mk"
