@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4558 2014/11/30 13:17:06 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4559 2014/11/30 13:18:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5951,3 +5951,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/argus to 3.7 [markd 2014-11-30]
 	Updated security/p5-IO-Socket-SSL to 2.007 [wiz 2014-11-30]
 	Updated www/p5-CGI to 4.10 [wiz 2014-11-30]
+	Updated textproc/p5-YAML-LibYAML to 0.54 [wiz 2014-11-30]
