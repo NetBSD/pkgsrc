@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/11/13 10:53:49 markd Exp $
+# $NetBSD: Makefile,v 1.30 2014/11/30 03:25:54 markd Exp $
 
 DISTNAME=	kactivities-4.13.3
 CATEGORIES=	x11
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_KDE:=4.13.3/src/}
 
 # Needs C++11 features for kactivitymanager
 GCC_REQD+=	4.5
+
+CMAKE_ARGS+=	-DWITH_NepomukCore:BOOL=OFF
 
 PKGCONFIG_OVERRIDE+=	lib/libkactivities.pc.cmake
 
