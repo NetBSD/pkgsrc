@@ -1,0 +1,2 @@
+A teaser plugin for django CMS. Displays a teaser box for another page or
+a URL. A picture and a description can be added.

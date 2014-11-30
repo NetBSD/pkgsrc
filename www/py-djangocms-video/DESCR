@@ -1,0 +1,3 @@
+A video plugin for django CMS. Plays Video Files or Youtube / Vimeo Videos.
+Uses the OSFlashVideoPlayer. When uploading videos use either .flv files or
+h264 encoded video files.
