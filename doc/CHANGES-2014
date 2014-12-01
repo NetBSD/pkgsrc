@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4583 2014/12/01 14:52:24 adam Exp $
+$NetBSD: CHANGES-2014,v 1.4584 2014/12/01 18:17:04 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5977,3 +5977,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Added www/cgit version 0.10.2 [wiz 2014-12-01]
 	Updated mail/mopher to 0.5.1 [gdt 2014-12-01]
 	Updated emulators/hatari to 1.8.0 [adam 2014-12-01]
+	Updated www/firefox to 34.0.5 [ryoon 2014-12-01]
+	Updated www/firefox-l10n to 34.0.5 [ryoon 2014-12-01]
