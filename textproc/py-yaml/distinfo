@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2014/05/04 17:13:31 wiz Exp $
+$NetBSD: distinfo,v 1.6 2014/12/01 11:54:48 joerg Exp $
 
 SHA1 (PyYAML-3.11.tar.gz) = 1a2d5df8b31124573efb9598ec6d54767f3c4cd4
 RMD160 (PyYAML-3.11.tar.gz) = 9515e7573c7e021190198b242a415f2b55d50938
 Size (PyYAML-3.11.tar.gz) = 248685 bytes
+SHA1 (patch-setup.py) = 8718125829210a220c8eaf2d87744cc05f024b38
