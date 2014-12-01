@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2014/10/07 16:47:17 adam Exp $
+# $NetBSD: Makefile,v 1.19 2014/12/01 11:30:41 joerg Exp $
 
 PKGNAME=	qt5-qtwebkit-${QTVERSION}
 PKGREVISION=	4
@@ -17,7 +17,11 @@ MAKE_ENV+=		QTDIR=${QTDIR}
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 INSTALLATION_DIRS+=	lib/pkgconfig
 
+.if ${USE_CWRAPPERS:Uno} == "yes"
+BUILDLINK_TRANSFORM+=	R:${WRKSRC}/qtwebkit/lib:${QTDIR}/lib
+.else
 BUILDLINK_TRANSFORM+=	rpath:${WRKSRC}/qtwebkit/lib:${QTDIR}/lib
+.endif
 QTPKGCONFIGPC=		Qt5WebKit.pc Qt5WebKitWidgets.pc
 
 BROKEN_FILES+=		qt5/lib/pkgconfig/Qt5WebKit.pc \
