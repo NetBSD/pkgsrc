@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13886 2014/12/01 11:27:18 wiz Exp $
+$NetBSD: TODO,v 1.13887 2014/12/01 11:28:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -949,7 +949,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-simpletal-5.1
 	o py-smb-1.1.8
 	o py-sphinx-theme-cloud-1.6
-	o py-sqlparse-0.1.14
 	o py-suds-0.4.1
 	o py-sybase-0.37
 	o py-tlslite-0.4.6
