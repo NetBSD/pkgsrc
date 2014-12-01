@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4578 2014/12/01 11:28:04 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4579 2014/12/01 11:29:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5972,3 +5972,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/musicpd to 0.18.19 [wiz 2014-12-01]
 	Updated time/py-pytz to 2014.10 [wiz 2014-12-01]
 	Updated databases/py-sqlparse to 0.1.14 [wiz 2014-12-01]
+	Updated multimedia/ffmpeg2 to 2.4.4 [adam 2014-12-01]
