@@ -1,0 +1,10 @@
+The mail gopher (mopher) is an extension to all mail transfer agents
+that implement the Sendmail Milter API.  It reads a list of rules and
+acts on each incoming mail delivery attempt based on various criteria
+and existing states.
+
+Mopher supports indiscriminate and selective grey- and whitelisting of
+either individual addresses or whole domains (based on reverse lookups
+and rules provided by Mozilla's Public Suffix List).  Access to tables
+and state-related data passes through a generic interface and is then
+translated by one of the available backend drivers.
