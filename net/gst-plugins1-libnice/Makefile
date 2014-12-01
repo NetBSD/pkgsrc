@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/10/12 14:49:08 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2014/12/01 12:39:17 joerg Exp $
 
 DISTNAME=	libnice-0.1.8
 PKGNAME=	gst-plugins1-${DISTNAME}
@@ -35,6 +35,7 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .if !empty(PKGSRC_COMPILER:Mclang)
 _WRAP_EXTRA_ARGS.CC+=	-Wunused-but-set-variable
+CWRAPPERS_APPEND.cc+=	-Wunused-but-set-variable
 .endif
 
 .include "../../devel/glib2/buildlink3.mk"

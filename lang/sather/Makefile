@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2014/06/29 05:12:42 dholland Exp $
+# $NetBSD: Makefile,v 1.59 2014/12/01 12:39:17 joerg Exp $
 
 DISTNAME=		sather-1.2.3
 PKGREVISION=		10
@@ -102,6 +102,7 @@ do-install:
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 _WRAP_EXTRA_ARGS.CC+=	-Wno-error=return-type -Wno-comment -Wno-parentheses-equality
+CWRAPPERS_APPEND.cc+=	-Wno-error=return-type -Wno-comment -Wno-parentheses-equality
 .endif
 
 .include "../../devel/boehm-gc/buildlink3.mk"
