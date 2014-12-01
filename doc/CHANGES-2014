@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4567 2014/12/01 08:45:14 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4568 2014/12/01 08:59:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5961,3 +5961,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added converters/opencc version 0.4.2 [obache 2014-12-01]
 	Added databases/mysql-cluster version 7.3.7 [jnemeth 2014-12-01]
 	Updated graphics/graphviz to 2.38.0nb3 [wiz 2014-12-01]
+	Updated x11/xterm to 313 [wiz 2014-12-01]
