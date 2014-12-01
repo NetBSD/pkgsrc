@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2014/12/01 13:58:15 gdt Exp $
+${PLIST.mysql}lib/mopher/sakila.so
+${PLIST.spf}lib/mopher/spf.so
+lib/mopher/bdb.so
+lib/mopher/cast.so
+lib/mopher/counter.so
+lib/mopher/dblog.so
+lib/mopher/dnsbl.so
+lib/mopher/memdb.so
+lib/mopher/random.so
+lib/mopher/spamd.so
+lib/mopher/string.so
+man/man5/mopherd.acl.5
+man/man5/mopherd.conf.5
+man/man7/mopher.7
+man/man8/mopherctl.8
+man/man8/mopherd.8
+sbin/mopherctl
+sbin/mopherd
+share/examples/mopher/effective_tld_names.dat
+share/examples/mopher/mopherd.acl
+share/examples/mopher/mopherd.acl.example
+share/examples/mopher/mopherd.conf
+share/examples/mopher/mopherd.conf.example
