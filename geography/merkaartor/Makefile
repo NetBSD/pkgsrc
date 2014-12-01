@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2014/06/07 12:11:23 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2014/12/01 12:39:17 joerg Exp $
 #
 
 DISTNAME=	merkaartor-0.17.2
@@ -35,6 +35,7 @@ do-configure:
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 _WRAP_EXTRA_ARGS.CXX+=	-std=c++11
+CWRAPPERS_APPEND.cxx+=	-std=c++11
 .endif
 
 .include "../../devel/boost-headers/buildlink3.mk"

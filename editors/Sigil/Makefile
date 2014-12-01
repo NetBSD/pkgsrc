@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2014/11/23 19:27:29 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2014/12/01 12:39:17 joerg Exp $
 
 DISTNAME=	Sigil-0.8.1
 CATEGORIES=	editors
@@ -33,6 +33,7 @@ REPLACE_PYTHON+=	src/Sigil/Resource_Files/plugin_launchers/python/*.py
 # GCC 4.4 and above needs this
 .if !empty(PKGSRC_COMPILER:Mgcc) && !empty(CC_VERSION:Mgcc-4.[4-9]*)
 _WRAP_EXTRA_ARGS.CXX+=	-std=c++0x
+CWRAPPERS_APPEND.cxx+=	-std=c++0x
 .endif
 
 .include "../../textproc/xerces-c/buildlink3.mk"

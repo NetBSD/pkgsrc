@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2014/04/17 12:28:56 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2014/12/01 12:39:17 joerg Exp $
 
 DISTNAME=	libdvbpsi-1.2.0
 CATEGORIES=	multimedia
@@ -20,6 +20,8 @@ LIBS.SunOS+=	-lsocket -lnsl
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 _WRAP_EXTRA_ARGS.CC+=	-Wno-error=tautological-constant-out-of-range-compare \
+			-Wno-error=tautological-compare
+CWRAPPERS_APPEND.cc+=	-Wno-error=tautological-constant-out-of-range-compare \
 			-Wno-error=tautological-compare
 .endif
 

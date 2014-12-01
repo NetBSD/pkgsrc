@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2014/11/07 19:39:27 adam Exp $
+# $NetBSD: Makefile,v 1.31 2014/12/01 12:39:16 joerg Exp $
 #
 
 PKGNAME=	openscad-2011.12
@@ -38,6 +38,7 @@ pre-build:
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 _WRAP_EXTRA_ARGS.CXX+=	-std=c++11 -Wno-c++11-narrowing
+CWRAPPERS_APPEND.cxx+=	-std=c++11 -Wno-c++11-narrowing
 .endif
 
 # DragonFly requires FlexLexer.h from pkgsrc - base doesn't cut it.

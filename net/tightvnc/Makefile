@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2014/06/01 18:04:07 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2014/12/01 12:39:18 joerg Exp $
 
 DISTNAME=		tightvnc-1.3.10
 PKGREVISION=		12
@@ -36,6 +36,7 @@ CPPFLAGS+=		-Wno-error=return-type
 # seem to pick it up. Someone with strong X-fu needs to look at it.
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64)
 _WRAP_EXTRA_ARGS.CC+=	-DDDXTIME -D_XSERVER64 -DGCCUSESGAS
+CWRAPPERS_APPEND.cc+=	-DDDXTIME -D_XSERVER64 -DGCCUSESGAS
 .endif
 
 .if ${X11_TYPE} == "modular"
