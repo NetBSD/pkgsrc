@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13885 2014/12/01 11:26:25 wiz Exp $
+$NetBSD: TODO,v 1.13886 2014/12/01 11:27:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -943,7 +943,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-pendrell-0.3.7
 	o py-pexpect-3.0
 	o py-ptt-1.10.2
-	o py-pytz-2014.10
 	o py-qt5-5.3.1
 	o py-reportlab-3.0
 	o py-rope-0.9.4
