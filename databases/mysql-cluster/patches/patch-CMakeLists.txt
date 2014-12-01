@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1.1.1 2014/12/01 05:58:03 jnemeth Exp $
+
+Fix for DTrace on newer platforms, taken from
+
+https://bugs.launchpad.net/percona-server/+bug/1196460
+--- CMakeLists.txt.orig	2014-07-02 09:22:14.000000000 +0000
++++ CMakeLists.txt
+@@ -207,6 +207,7 @@ IF(DISABLE_SHARED)
+   SET(WITHOUT_DYNAMIC_PLUGINS 1)
+ ENDIF()
+ OPTION(ENABLED_PROFILING "Enable profiling" ON)
++OPTION(ENABLE_DTRACE "Include support for DTrace probes" OFF)
+ OPTION(CYBOZU "" OFF)
+ OPTION(BACKUP_TEST "" OFF)
+ OPTION(WITHOUT_SERVER OFF)

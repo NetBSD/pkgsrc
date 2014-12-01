@@ -1,0 +1,15 @@
+$NetBSD: patch-scripts_mysql__install__db.pl.in,v 1.1.1.1 2014/12/01 05:58:03 jnemeth Exp $
+
+Correct location to my.cnf
+
+--- scripts/mysql_install_db.pl.in.orig	2014-07-02 09:22:14.000000000 +0000
++++ scripts/mysql_install_db.pl.in
+@@ -460,7 +460,7 @@ my $copy_cfg_file;
+ 
+ my $cnfext = ( $^O =~ m/^(MSWin32|cygwin)$/ ) ? "ini" : "cnf";
+ 
+-$config_file= "$basedir/my.$cnfext";
++$config_file= "@PKG_SYSCONFDIR@/my.$cnfext";
+ 
+ my $cfg_template= find_in_basedir($opt,"file","my-default.$cnfext",
+ 				  ".", "share","share/mysql","support-files");

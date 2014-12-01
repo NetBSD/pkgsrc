@@ -1,0 +1,13 @@
+$NetBSD: patch-storage_myisammrg_CMakeLists.txt,v 1.1.1.1 2014/12/01 05:58:03 jnemeth Exp $
+
+Build with newer DTrace.
+
+--- storage/myisammrg/CMakeLists.txt.orig	2013-11-17 18:02:53.000000000 +0000
++++ storage/myisammrg/CMakeLists.txt
+@@ -20,4 +20,5 @@ SET(MYISAMMRG_SOURCES  myrg_close.c myrg
+ 				myrg_rprev.c myrg_rrnd.c myrg_rsame.c myrg_static.c myrg_update.c
+ 				myrg_write.c myrg_records.c)
+ 
+-MYSQL_ADD_PLUGIN(myisammrg ${MYISAMMRG_SOURCES} STORAGE_ENGINE MANDATORY RECOMPILE_FOR_EMBEDDED)
++MYSQL_ADD_PLUGIN(myisammrg ${MYISAMMRG_SOURCES} STORAGE_ENGINE MANDATORY
++                 RECOMPILE_FOR_EMBEDDED DTRACE_INSTRUMENTED)

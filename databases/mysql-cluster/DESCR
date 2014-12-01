@@ -1,0 +1,8 @@
+MySQL Cluster is a highly scalable, real-time, ACID-compliant
+transactional database, combining 99.999% availability with the
+low TCO of open source.
+
+Designed around a distributed, multi-master architecture with no
+single point of failure, MySQL Cluster scales horizontally on
+commodity hardware to serve read and write intensive workloads,
+accessed via SQL and NoSQL interfaces.
