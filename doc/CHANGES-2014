@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4580 2014/12/01 11:37:36 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4581 2014/12/01 12:32:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5974,3 +5974,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/py-sqlparse to 0.1.14 [wiz 2014-12-01]
 	Updated multimedia/ffmpeg2 to 2.4.4 [adam 2014-12-01]
 	Updated time/py-vdirsyncer to 0.3.1 [wiz 2014-12-01]
+	Added www/cgit version 0.10.2 [wiz 2014-12-01]
