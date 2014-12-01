@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4565 2014/12/01 00:05:57 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4566 2014/12/01 05:59:38 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5959,3 +5959,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/opencore-amr to 0.1.3 [adam 2014-11-30]
 	Added audio/fdk-aac version 0.1.3 [adam 2014-11-30]
 	Added converters/opencc version 0.4.2 [obache 2014-12-01]
+	Added databases/mysql-cluster version 7.3.7 [jnemeth 2014-12-01]
