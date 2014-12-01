@@ -1,0 +1,29 @@
+$NetBSD: patch-scripts_CMakeLists.txt,v 1.1.1.1 2014/12/01 05:58:03 jnemeth Exp $
+
+Fix paths.
+
+--- scripts/CMakeLists.txt.orig	2013-01-22 16:54:49.000000000 +0000
++++ scripts/CMakeLists.txt
+@@ -182,22 +182,14 @@ ENDIF(UNIX)
+ # i.e. makes access relative the current directory. This matches
+ # the documentation, so better not change this.
+ 
+-IF(INSTALL_LAYOUT MATCHES "STANDALONE")
+-  SET(prefix ".")
+-ELSE()
+   SET(prefix "${CMAKE_INSTALL_PREFIX}")
+-ENDIF()
+ 
+ SET(bindir ${prefix}/${INSTALL_BINDIR})
+ SET(sbindir ${prefix}/${INSTALL_SBINDIR})
+ SET(scriptdir ${prefix}/${INSTALL_BINDIR})
+ SET(libexecdir ${prefix}/${INSTALL_SBINDIR})
+ SET(pkgdatadir ${prefix}/${INSTALL_MYSQLSHAREDIR})
+-IF(INSTALL_LAYOUT MATCHES "STANDALONE")
+-  SET(localstatedir ${prefix}/data)
+-ELSE()
+   SET(localstatedir ${MYSQL_DATADIR})
+-ENDIF()
+ 
+ IF(UNIX)
+   SET(EXT)
