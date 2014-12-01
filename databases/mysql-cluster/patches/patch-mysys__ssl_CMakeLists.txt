@@ -1,0 +1,12 @@
+$NetBSD: patch-mysys__ssl_CMakeLists.txt,v 1.1.1.1 2014/12/01 05:58:03 jnemeth Exp $
+
+--- mysys_ssl/CMakeLists.txt.orig	2014-10-09 13:46:25.000000000 +0000
++++ mysys_ssl/CMakeLists.txt
+@@ -60,7 +60,6 @@ SET(MYSYS_SSL_SOURCES
+ 
+ ADD_CONVENIENCE_LIBRARY(mysys_ssl ${MYSYS_SSL_SOURCES})
+ TARGET_LINK_LIBRARIES(mysys_ssl dbug strings ${SSL_LIBRARIES} ${ZLIB_LIBRARY})
+-DTRACE_INSTRUMENT(mysys_ssl)
+ 
+ IF(MSVC)
+    INSTALL_DEBUG_TARGET(mysys_ssl DESTINATION ${INSTALL_LIBDIR}/debug)
