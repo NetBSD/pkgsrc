@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1076 2014/11/30 10:18:37 adam Exp $
+# $NetBSD: Makefile,v 1.1077 2014/12/01 12:32:39 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -73,6 +73,7 @@ SUBDIR+=	camping
 SUBDIR+=	cgic
 SUBDIR+=	cgicc
 SUBDIR+=	cgilib
+SUBDIR+=	cgit
 SUBDIR+=	checkbot
 SUBDIR+=	cherokee
 SUBDIR+=	clearsilver
