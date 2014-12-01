@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2014/10/09 14:05:53 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2014/12/01 12:43:43 wiz Exp $
 
 DISTNAME=	p7zip_9.20.1_src_all
 PKGNAME=	p7zip-9.20.1
@@ -7,7 +7,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=p7zip/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://p7zip.sourceforge.net/
 COMMENT=	File archiver with high compression
 LICENSE=	gnu-lgpl-v2.1 AND unrar-license
