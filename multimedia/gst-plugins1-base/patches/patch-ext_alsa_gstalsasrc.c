@@ -1,6 +1,7 @@
-$NetBSD: patch-ext_alsa_gstalsasrc.c,v 1.1 2012/11/29 08:22:29 ryoon Exp $
+$NetBSD: patch-ext_alsa_gstalsasrc.c,v 1.2 2014/12/01 08:13:04 wiz Exp $
 
 * NetBSD has no ESTRPIPE
+https://bugzilla.gnome.org/show_bug.cgi?id=740952
 
 --- ext/alsa/gstalsasrc.c.orig	2012-09-10 10:08:34.000000000 +0000
 +++ ext/alsa/gstalsasrc.c
