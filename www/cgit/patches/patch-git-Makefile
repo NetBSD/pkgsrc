@@ -1,0 +1,15 @@
+$NetBSD: patch-git-Makefile,v 1.1 2014/12/01 12:32:27 wiz Exp $
+
+Don't put HOME into binaries.
+
+--- git/Makefile.orig	2014-06-25 19:21:11.000000000 +0000
++++ git/Makefile
+@@ -365,7 +365,7 @@ STRIP ?= strip
+ #   htmldir
+ # This can help installing the suite in a relocatable way.
+ 
+-prefix = $(HOME)
++prefix = $(PREFIX)
+ bindir_relative = bin
+ bindir = $(prefix)/$(bindir_relative)
+ mandir = $(prefix)/share/man
