@@ -1,0 +1,72 @@
+$NetBSD: patch-cgitrc,v 1.1 2014/12/01 12:32:27 wiz Exp $
+
+Example config file.
+
+--- cgitrc.orig	2013-03-02 15:55:23.000000000 +0000
++++ cgitrc
+@@ -0,0 +1,65 @@
++##
++## cgitrc: template for /etc/cgitrc
++##
++
++## repositories
++#repo.url=name
++#repo.path=/var/git/repository.git
++#repo.desc=repository description
++#repo.owner=your@email
++
++
++## base for virtual urls. If specified, rewrite rules must be added to 
++## httpd.conf. Possible rules for /git/ when cgit.cgi is accessed as /cgit.cgi:
++##
++##   RewriteRule ^/git/$ /cgit.cgi                            [L,QSA]
++##   RewriteRule ^/git/([^/]+)/$ /cgit.cgi?r=$1               [L,QSA]
++##   RewriteRule ^/git/([^/]+)/([^/]+)/$ /cgit.cgi?r=$1&p=$2  [L,QSA]
++##
++#virtual-root=/git
++
++
++## page title for the root page (repo listing)
++#root-title=Git repository browser
++
++
++## link to css file
++#css=/cgit.css
++
++
++## link to logo file
++#logo=/cgit.png
++
++
++## url loaded when clicking the logo
++#logo-link=http://www.kernel.org/pub/software/scm/git/docs/
++
++
++## set number of initial chars to show of commit subject message in log views
++#max-message-length=60
++
++
++## Set to 1 to deactivate caching of generated pages
++#nocache=0
++
++
++## root path for cached output
++#cache-root=/var/cache/cgit
++
++
++##
++## Time-To-Live settings: specify how long (in minutes) different pages should
++## be cached. Specify 0 for instant expiration and -1 for immortal pages
++##
++
++## ttl for root page (repo listing)
++#cache-root-ttl=5
++
++## ttl for repo summary page
++#cache-repo-ttl=5
++
++## ttl for other dynamic pages 
++#cache-dynamic-ttl=5
++
++## ttl for static pages (addressed by SHA-1)
++#cache-static-ttl=-1
