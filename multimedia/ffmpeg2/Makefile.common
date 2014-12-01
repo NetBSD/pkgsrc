@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.24 2014/11/02 08:10:29 adam Exp $
+# $NetBSD: Makefile.common,v 1.25 2014/12/01 11:26:49 adam Exp $
 # used by multimedia/ffmpeg2/Makefile
 # used by multimedia/ffplay2/Makefile
 
-DISTNAME=	ffmpeg-2.4.3
+DISTNAME=	ffmpeg-2.4.4
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.ffmpeg.org/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -41,8 +41,8 @@ PLIST.opencl=		yes
 .endif
 
 .if ${OPSYS} == "SunOS"
-USE_TOOLS+= bash:build
-CONFIG_SHELL=   ${TOOLS_PATH.bash}
+USE_TOOLS+=	bash:build
+CONFIG_SHELL=	${TOOLS_PATH.bash}
 .endif
 
 CONFIGURE_ARGS+=	--enable-runtime-cpudetect
