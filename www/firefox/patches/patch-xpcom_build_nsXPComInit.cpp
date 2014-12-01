@@ -1,8 +1,8 @@
-$NetBSD: patch-xpcom_build_nsXPComInit.cpp,v 1.1 2014/06/11 00:41:36 ryoon Exp $
+$NetBSD: patch-xpcom_build_nsXPComInit.cpp,v 1.2 2014/12/01 18:11:14 ryoon Exp $
 
---- xpcom/build/nsXPComInit.cpp.orig	2014-05-29 23:31:50.000000000 +0000
+--- xpcom/build/nsXPComInit.cpp.orig	2014-11-21 03:37:53.000000000 +0000
 +++ xpcom/build/nsXPComInit.cpp
-@@ -128,7 +128,9 @@ extern nsresult nsStringInputStreamConst
+@@ -138,7 +138,9 @@ extern nsresult nsStringInputStreamConst
  #include "mozilla/VisualEventTracer.h"
  #endif
  
@@ -12,17 +12,17 @@ $NetBSD: patch-xpcom_build_nsXPComInit.cpp,v 1.1 2014/06/11 00:41:36 ryoon Exp $
  #if defined(MOZ_VPX) && !defined(MOZ_VPX_NO_MEM_REPORTING)
  #include "vpx_mem/vpx_mem.h"
  #endif
-@@ -564,11 +566,13 @@ NS_InitXPCOM2(nsIServiceManager* *result
-     // this oddness.
-     mozilla::SetICUMemoryFunctions();
+@@ -652,11 +654,13 @@ NS_InitXPCOM2(nsIServiceManager** aResul
+   // this oddness.
+   mozilla::SetICUMemoryFunctions();
  
 +#ifndef MOZ_OGG_NO_MEM_REPORTING
-     // Do the same for libogg.
-     ogg_set_mem_functions(OggReporter::CountingMalloc,
-                           OggReporter::CountingCalloc,
-                           OggReporter::CountingRealloc,
-                           OggReporter::CountingFree);
+   // Do the same for libogg.
+   ogg_set_mem_functions(OggReporter::CountingMalloc,
+                         OggReporter::CountingCalloc,
+                         OggReporter::CountingRealloc,
+                         OggReporter::CountingFree);
 +#endif
  
  #if defined(MOZ_VPX) && !defined(MOZ_VPX_NO_MEM_REPORTING)
-     // And for VPX.
+   // And for VPX.
