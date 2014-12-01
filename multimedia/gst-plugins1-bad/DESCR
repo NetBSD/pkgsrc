@@ -8,5 +8,5 @@ simple plugin with a clean, generic interface.
 
 GStreamer is released under the LGPL.
 
-This package is part of the bad GStreamer plugins; that is, those that
-might pose some legal problems.
+This package is part of the bad GStreamer plugins; that is, those
+that need more quality, testing or documentation.
