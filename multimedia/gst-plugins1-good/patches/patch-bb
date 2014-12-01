@@ -1,19 +1,16 @@
-$NetBSD: patch-bb,v 1.5 2014/11/29 23:07:19 wiz Exp $
+$NetBSD: patch-bb,v 1.6 2014/12/01 08:08:57 wiz Exp $
 
 NetBSD compatibility for v4l2.
-https://bugzilla.gnome.org/show_bug.cgi?id=740905
+http://cgit.freedesktop.org/gstreamer/gst-plugins-good/commit/?h=1.4&id=b3e132d2d7a759215cc3b183102b7d0e6f678699
 
 --- sys/v4l2/v4l2_calls.h.orig	2014-10-19 11:41:09.000000000 +0000
 +++ sys/v4l2/v4l2_calls.h
-@@ -29,7 +29,11 @@
+@@ -29,7 +29,7 @@
  #ifdef HAVE_LIBV4L2
  #  include <libv4l2.h>
  #else
-+#ifdef __NetBSD__
+-#  include <linux/videodev2.h>
 +#  include "ext/videodev2.h"
-+#else
- #  include <linux/videodev2.h>
-+#endif
  #  include <sys/ioctl.h>
  #  include <sys/mman.h>
  #  include <unistd.h>
