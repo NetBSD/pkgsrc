@@ -1,0 +1,7 @@
+# $NetBSD: mopherd.acl,v 1.1 2014/12/01 13:58:15 gdt Exp $
+#
+#	minimal mopherd.acl(5) for pkgsrc
+#
+# Greylist unknown senders for 5 minutes or 3 retries.
+
+envrcpt counter_penpal == null greylist delay 5m attempts 3 deadline 2h visa 7d
