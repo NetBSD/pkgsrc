@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/08/25 10:06:41 obache Exp $
+# $NetBSD: Makefile,v 1.21 2014/12/01 12:39:17 joerg Exp $
 #
 
 DISTNAME=		synergy-1.4.12-Source
@@ -50,6 +50,7 @@ do-install:
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 _WRAP_EXTRA_ARGS.CXX+=	-std=c++11
+CWRAPPERS_APPEND.cxx+=	-std=c++11
 .endif
 
 # tools/cryptopp562/GNUmakefile

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2014/06/27 00:07:27 asau Exp $
+# $NetBSD: Makefile,v 1.54 2014/12/01 12:39:17 joerg Exp $
 #
 
 DISTNAME=		tme-0.8
@@ -28,10 +28,18 @@ _WRAP_EXTRA_ARGS.CC+=	-Wno-error=tautological-compare \
 			-Wno-error=sometimes-uninitialized \
 			-Wno-error=unused-function \
 			-Wno-error=absolute-value
+CWRAPPERS_APPEND.cc+=	-Wno-error=tautological-compare \
+			-Wno-error=sometimes-uninitialized \
+			-Wno-error=unused-function \
+			-Wno-error=absolute-value
 .elif !empty(CC_VERSION:Mgcc-4.8.*)
 _WRAP_EXTRA_ARGS.CC+=	-Wno-error=unused-but-set-variable	\
 	-Wno-error=array-bounds					\
 	-fno-strict-aliasing
+CWRAPPERS_APPEND.cc+=	-Wno-error=unused-but-set-variable	\
+	-Wno-error=array-bounds					\
+	-fno-strict-aliasing
+
 .endif
 
 PLIST_VARS+=	bsd

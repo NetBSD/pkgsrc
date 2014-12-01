@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2014/08/21 13:21:33 jperkin Exp $
+# $NetBSD: Makefile,v 1.90 2014/12/01 12:39:17 joerg Exp $
 #
 
 DISTNAME=	mail-notification-5.4
@@ -55,6 +55,7 @@ CONFIGURE_ARGS+=	ssl=no
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 _WRAP_EXTRA_ARGS.CC+=	-Wno-unused-function
+CWRAPPERS_APPEND.cc+=	-Wno-unused-function
 .endif
 
 do-build:

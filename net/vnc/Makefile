@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2014/05/29 23:37:13 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2014/12/01 12:39:18 joerg Exp $
 
 DISTNAME=		vnc-3.3.3r2
 PKGNAME=		vnc-3.3.3.2
@@ -58,6 +58,7 @@ INSTALLATION_DIRS=	bin share/doc/vnc
 
 .if ${OPSYS} == "SunOS"
 _WRAP_EXTRA_ARGS.CC+=	-D_POSIX_SOURCE
+CWRAPPERS_APPEND.cc+=	-D_POSIX_SOURCE
 SPECIAL_PERMS+=	bin/Xvnc ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 2555
 .endif
 

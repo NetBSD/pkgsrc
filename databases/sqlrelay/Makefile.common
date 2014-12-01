@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2014/10/30 11:51:34 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.6 2014/12/01 12:39:16 joerg Exp $
 # used by databases/p5-sqlrelay/Makefile
 # used by databases/php-sqlrelay/Makefile
 # used by databases/py-sqlrelay/Makefile
@@ -41,6 +41,7 @@ EGDIR=			${PREFIX}/share/examples/sqlrelay
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 _WRAP_EXTRA_ARGS.CXX+=	-Wno-error=overloaded-virtual
+CWRAPPERS_APPEND.cxx+=	-Wno-error=overloaded-virtual
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2014/10/07 16:47:38 adam Exp $
+# $NetBSD: Makefile,v 1.44 2014/12/01 12:39:18 joerg Exp $
 
 DISTNAME=	Preferences-1.2.0
 PKGNAME=	gnustep-${DISTNAME:S/P/p/}
@@ -30,6 +30,7 @@ SUBST_SED.gnustep_installation_dir+=	-e 's|\$$(GNUSTEP_SYSTEM_ROOT)/Library/Pref
 
 .if !empty(PKGSRC_COMPILER:Mclang)
 _WRAP_EXTRA_ARGS.CC+=	-Wno-unused-const-variable
+CWRAPPERS_APPEND.cc+=	-Wno-unused-const-variable
 .endif
 
 .include "../../x11/gnustep-back/buildlink3.mk"
