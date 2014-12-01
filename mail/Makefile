@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.457 2014/11/19 03:40:09 schmonz Exp $
+# $NetBSD: Makefile,v 1.458 2014/12/01 13:58:59 gdt Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -160,6 +160,7 @@ SUBDIR+=	mimedefang
 SUBDIR+=	mimp
 SUBDIR+=	mini_sendmail
 SUBDIR+=	minimalist
+SUBDIR+=	mopher
 SUBDIR+=	mpop
 SUBDIR+=	msmtp
 SUBDIR+=	mush
