@@ -1,6 +1,6 @@
-$NetBSD: patch-xpcom_reflect_xptcall_md_unix_xptcstubs__arm__netbsd.cpp,v 1.2 2014/11/26 14:56:28 ryoon Exp $
+$NetBSD: patch-xpcom_reflect_xptcall_md_unix_xptcstubs__arm__netbsd.cpp,v 1.3 2014/12/01 18:11:14 ryoon Exp $
 
---- xpcom/reflect/xptcall/md/unix/xptcstubs_arm_netbsd.cpp.orig	2014-11-13 22:50:21.000000000 +0000
+--- xpcom/reflect/xptcall/md/unix/xptcstubs_arm_netbsd.cpp.orig	2014-11-26 12:30:27.000000000 +0000
 +++ xpcom/reflect/xptcall/md/unix/xptcstubs_arm_netbsd.cpp
 @@ -6,15 +6,32 @@
  /* Implement shared vtbl methods. */
@@ -82,7 +82,7 @@ $NetBSD: patch-xpcom_reflect_xptcall_md_unix_xptcstubs__arm__netbsd.cpp,v 1.2 20
  
      if(dispatchParams != paramBuffer)
          delete [] dispatchParams;
-@@ -82,26 +95,118 @@ PrepareAndDispatch(nsXPTCStubBase* self,
+@@ -82,26 +95,116 @@ PrepareAndDispatch(nsXPTCStubBase* self,
  }
  
  /*
@@ -120,7 +120,6 @@ $NetBSD: patch-xpcom_reflect_xptcall_md_unix_xptcstubs__arm__netbsd.cpp,v 1.2 20
 +         ".text\n"
 +         ".align 2\n"
 +         "SharedStub:\n"
-+         ".fnstart\n"
 +         CFI(".cfi_startproc\n")
 +         "stmfd	sp!, {r1, r2, r3}\n"
 +         ".save	{r1, r2, r3}\n"
@@ -136,8 +135,7 @@ $NetBSD: patch-xpcom_reflect_xptcall_md_unix_xptcstubs__arm__netbsd.cpp,v 1.2 20
 +         "mov	r1, ip\n"
 +         "bl	_PrepareAndDispatch\n"
 +         "ldr	pc, [sp], #16\n"
-+         CFI(".cfi_endproc\n")
-+         ".fnend");
++         CFI(".cfi_endproc\n"));
 +
 +/*
 + * Create sets of stubs to call the SharedStub.

@@ -1,8 +1,8 @@
-$NetBSD: patch-config_external_moz.build,v 1.4 2014/10/05 01:59:08 ryoon Exp $
+$NetBSD: patch-config_external_moz.build,v 1.5 2014/12/01 18:11:14 ryoon Exp $
 
---- config/external/moz.build.orig	2014-09-24 01:05:10.000000000 +0000
+--- config/external/moz.build.orig	2014-11-21 03:37:23.000000000 +0000
 +++ config/external/moz.build
-@@ -15,13 +15,19 @@ if CONFIG['MOZ_UPDATER']:
+@@ -16,13 +16,19 @@ if CONFIG['MOZ_UPDATER']:
      if not CONFIG['MOZ_NATIVE_BZ2']:
          external_dirs += ['modules/libbz2']
  
@@ -25,7 +25,7 @@ $NetBSD: patch-config_external_moz.build,v 1.4 2014/10/05 01:59:08 ryoon Exp $
      external_dirs += ['media/libopus']
  
  if CONFIG['MOZ_WEBM']:
-@@ -36,14 +42,16 @@ if CONFIG['MOZ_VPX'] and not CONFIG['MOZ
+@@ -37,14 +43,16 @@ if CONFIG['MOZ_VPX'] and not CONFIG['MOZ
  if not CONFIG['MOZ_NATIVE_PNG']:
      external_dirs += ['media/libpng']
  
@@ -45,4 +45,4 @@ $NetBSD: patch-config_external_moz.build,v 1.4 2014/10/05 01:59:08 ryoon Exp $
 -    'media/libsoundtouch',
  ]
  
- PARALLEL_DIRS += ['../../' + i for i in external_dirs]
+ DIRS += ['../../' + i for i in external_dirs]
