@@ -1,20 +1,13 @@
-$NetBSD: patch-content_media_AudioStream.h,v 1.9 2014/10/17 16:49:09 joerg Exp $
+$NetBSD: patch-content_media_AudioStream.h,v 1.10 2014/12/01 18:11:14 ryoon Exp $
 
---- content/media/AudioStream.h.orig	2014-10-11 09:06:20.000000000 +0000
+--- content/media/AudioStream.h.orig	2014-11-21 03:37:24.000000000 +0000
 +++ content/media/AudioStream.h
-@@ -17,6 +17,7 @@
- #include "mozilla/RefPtr.h"
- 
- #include "cubeb/cubeb.h"
-+#include "soundtouch/SoundTouch.h"
- 
- template <>
- class nsAutoRefTraits<cubeb_stream> : public nsPointerRefTraits<cubeb_stream>
-@@ -26,7 +27,6 @@ public:
- };
+@@ -17,7 +17,7 @@
+ #include "CubebUtils.h"
  
  namespace soundtouch {
 -class SoundTouch;
++class MOZ_IMPORT_API SoundTouch;
  }
  
  namespace mozilla {

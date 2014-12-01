@@ -1,0 +1,11 @@
+$NetBSD: patch-netwerk_dns_moz.build,v 1.1 2014/12/01 18:11:14 ryoon Exp $
+
+--- netwerk/dns/moz.build.orig	2014-11-21 03:37:46.000000000 +0000
++++ netwerk/dns/moz.build
+@@ -63,3 +63,6 @@ GENERATED_FILES = [
+ LOCAL_INCLUDES += [
+     '../base/src',
+ ]
++
++if CONFIG['MOZ_NATIVE_HARFBUZZ']:
++    CXXFLAGS += CONFIG['MOZ_HARFBUZZ_CFLAGS']
