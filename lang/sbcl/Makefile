@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2014/10/09 14:06:38 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2014/12/01 11:29:26 joerg Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-1.2.0
@@ -70,12 +70,6 @@ SUBST_STAGE.fix-nm=		pre-configure
 SUBST_FILES.fix-nm=		src/runtime/Config.x86-64-sunos
 SUBST_FILES.fix-nm+=		src/runtime/Config.x86-sunos
 SUBST_SED.fix-nm=		-e 's,nm ,/usr/bin/nm ,'
-
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-# Missing support for .end
-_WRAP_EXTRA_ARGS.CC+=	-no-integrated-as
-.endif
 
 .if !empty(MACHINE_PLATFORM:MSunOS-*-i386)
 SBCL_ARCH_ARGS=		"--arch=x86"
