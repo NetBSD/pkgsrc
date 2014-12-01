@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2014/10/07 16:47:13 adam Exp $
+# $NetBSD: Makefile,v 1.64 2014/12/01 12:39:17 joerg Exp $
 
 DISTNAME=	libsoup-2.44.2
 PKGNAME=	${DISTNAME:S/libsoup/libsoup24/}
@@ -33,10 +33,12 @@ TEST_TARGET=	check
 CONFIGURE_ARGS+= 	--disable-more-warnings
 .elif !emptry(CC_VERSION:Mgcc-4.[8].*)
 _WRAP_EXTRA_ARGS.CC+=	-Wno-error=format-zero-length
+CWRAPPERS_APPEND.cc+=	-Wno-error=format-zero-length
 .endif
 
 .if !empty(PKGSRC_COMPILER:Mclang)
 _WRAP_EXTRA_ARGS.CC+=	-Wno-error=format-nonliteral
+CWRAPPERS_APPEND.cc+=	-Wno-error=format-nonliteral
 .endif
 
 REPLACE_PYTHON= libsoup/tld-parser.py
