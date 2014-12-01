@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.213 2014/09/01 12:29:58 jperkin Exp $
+# $NetBSD: bootstrap,v 1.214 2014/12/01 13:43:55 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -58,6 +58,7 @@ usage="Usage: $0 "'
     [ --binary-kit <tarball> ]
     [ --binary-macpkg <pkg> ]
     [ --compiler <compiler> ]
+    [ --cwrappers ]
     [ --full ]
     [ --gzip-binary-kit <tarball> ]
     [ --help ]
@@ -389,11 +390,12 @@ pkgmandir=
 sysconfdir=
 varbase=
 
-make_jobs=1
-full=no
 compiler=""
-quiet=no
+cwrappers=no
+full=no
+make_jobs=1
 mk_fragment=
+quiet=no
 
 while [ $# -gt 0 ]; do
 	case $1 in
@@ -415,6 +417,7 @@ while [ $# -gt 0 ]; do
 	--compiler)	compiler="$2"; shift ;;
 	--abi=*)	abi=`get_optarg "$1"` ;;
 	--abi)		abi="$2"; shift ;;
+	--cwrappers)	cwrappers=yes ;;
 	--unprivileged | --ignore-user-check) unprivileged=yes ;;
 	--prefer-pkgsrc=*)
 			prefer_pkgsrc=`get_optarg "$1"` ;;
@@ -1032,6 +1035,13 @@ fi
 BOOTSTRAP_MKCONF=${wrkdir}/mk.conf
 cp ${TARGET_MKCONF} ${BOOTSTRAP_MKCONF}
 
+case "$cwrappers" in
+yes)
+	echo "USE_CWRAPPERS=		yes" >> ${TARGET_MKCONF}
+	echo "" >> ${TARGET_MKCONF}
+	;;
+esac
+
 # On all Debian GNU/kFreeBSD 7, /bin/sh is a symlink to /bin/dash, and
 # use /bin/bash.
 if [ "$opsys" = "GNUkFreeBSD" -a "$bootstrap_sh_set" != "set" ]; then
@@ -1258,6 +1268,9 @@ case "$need_extras" in
 yes)	build_package "pkgtools/bootstrap-extras";;
 esac
 build_package "pkgtools/pkg_install"
+case "$cwrappers" in
+yes)	build_package "pkgtools/cwrappers";;
+esac
 
 etc_mk_conf="$sysconfdir/mk.conf"
 
