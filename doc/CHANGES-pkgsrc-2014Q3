@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.24 2014/11/27 08:19:09 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.25 2014/12/01 22:49:11 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q3 branch:
@@ -103,3 +103,5 @@ Pullup ticket #4559 - requested by morr
 www/wordpress: security update
 Pullup ticket #4560 - requested by he
 www/curl: security update
+Pullup ticket #4561 - requested by wiz
+graphics/graphviz: security patch
