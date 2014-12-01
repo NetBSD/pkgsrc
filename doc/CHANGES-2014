@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4570 2014/12/01 10:08:37 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4571 2014/12/01 10:20:58 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5964,3 +5964,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/graphviz to 2.38.0nb3 [wiz 2014-12-01]
 	Updated x11/xterm to 313 [wiz 2014-12-01]
 	Updated devel/global to 6.3.3 [wiz 2014-12-01]
+	Updated devel/valgrind to 3.10.1 [alnsn 2014-12-01]
