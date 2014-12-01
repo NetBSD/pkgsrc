@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.1 2011/01/11 15:27:26 drochner Exp $
+$NetBSD: patch-al,v 1.2 2014/12/01 11:49:48 jmcneill Exp $
 
 --- configure.orig	2010-11-15 16:04:30.000000000 +0000
 +++ configure
@@ -13,3 +13,12 @@ $NetBSD: patch-al,v 1.1 2011/01/11 15:27:26 drochner Exp $
  
  install-gsettings-schemas: $(gsettings_SCHEMAS:.xml=.valid) $(gsettings__enum_file)
  	@$(NORMAL_INSTALL)
+@@ -13901,7 +13901,7 @@ if test -n "$BRASERO_SM_LIBS"; then
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+   pkg_cv_BRASERO_SM_LIBS=`$PKG_CONFIG --libs "\
+-	sm" 2>/dev/null`
++	ice sm" 2>/dev/null`
+ else
+   pkg_failed=yes
+ fi
