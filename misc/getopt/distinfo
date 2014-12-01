@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2013/04/12 22:26:44 drochner Exp $
+$NetBSD: distinfo,v 1.7 2014/12/01 10:57:02 wiz Exp $
 
-SHA1 (getopt-1.1.5.tar.gz) = 9090eb46ac92f2fd2749ca4121e81aaad40f325d
-RMD160 (getopt-1.1.5.tar.gz) = 5cdef902ada45ba5e8a66a1357be8189b0cc634f
-Size (getopt-1.1.5.tar.gz) = 51794 bytes
+SHA1 (getopt-1.1.6.tar.gz) = 98725b4878d19ab6b126cd16263fed1f6090f6a7
+RMD160 (getopt-1.1.6.tar.gz) = 6ef3666d386450fa5ce249e7748805df5c8482c9
+Size (getopt-1.1.6.tar.gz) = 58926 bytes
 SHA1 (patch-aa) = 5967a6ec48a7a69078fc1e0fca26645fd9870f77
 SHA1 (patch-ab) = 8591f15916b47d3569c79639e6ee9aa82df07f6a
