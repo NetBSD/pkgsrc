@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2013/10/15 14:44:42 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2014/12/01 12:39:17 joerg Exp $
 
 DISTNAME=	milter-regex-1.7
 PKGREVISION=	2
@@ -33,6 +33,7 @@ SUBST_SED.var=		-e 's|/var/spool|${VARBASE}|g'
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 _WRAP_EXTRA_ARGS.CC+=	-Wno-unused-const-variable
+CWRAPPERS_APPEND.cc+=	-Wno-unused-const-variable
 .endif
 
 do-install:
