@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2013/09/12 14:31:58 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.16 2014/12/01 14:51:41 adam Exp $
 bin/atari-hd-image
 bin/gst2ascii
 bin/hatari
@@ -7,9 +7,9 @@ bin/hatariui
 bin/hmsa
 bin/zip2st
 man/man1/atari-hd-image.1
-man/man1/gst2ascii.1.gz
+man/man1/gst2ascii.1
 man/man1/hatari.1
-man/man1/hatari_profile.1.gz
+man/man1/hatari_profile.1
 man/man1/hatariui.1
 man/man1/hconsole.1
 man/man1/hmsa.1
