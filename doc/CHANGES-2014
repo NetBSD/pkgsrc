@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4582 2014/12/01 13:59:18 gdt Exp $
+$NetBSD: CHANGES-2014,v 1.4583 2014/12/01 14:52:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5976,3 +5976,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/py-vdirsyncer to 0.3.1 [wiz 2014-12-01]
 	Added www/cgit version 0.10.2 [wiz 2014-12-01]
 	Updated mail/mopher to 0.5.1 [gdt 2014-12-01]
+	Updated emulators/hatari to 1.8.0 [adam 2014-12-01]
