@@ -1,0 +1,51 @@
+<?xml version='1.0'?>
+<!DOCTYPE service_bundle SYSTEM '/usr/share/lib/xml/dtd/service_bundle.dtd.1'>
+<service_bundle type='manifest' name='@SMF_NAME@'>
+  <service name='@SMF_PREFIX@/@SMF_NAME@' type='service' version='1'>
+    <dependency name='fs' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/system/filesystem/local' />
+    </dependency>
+    <dependency name='net' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/network/loopback' />
+    </dependency>
+    <dependency name='config' grouping='require_all' restart_on='none' type='path'>
+      <service_fmri value='file://@PKG_SYSCONFDIR@/my.cnf'/>
+    </dependency>
+    <method_context project='mysql' resource_pool=':default' working_directory='@MYSQL_DATADIR@'>
+      <method_credential user='@MYSQL_USER@' group='@MYSQL_GROUP@' limit_privileges=':default' privileges=':default' supp_groups=':default'/>
+      <method_environment>
+        <envvar name='LD_PRELOAD_32' value='/usr/lib/extendedFILE.so.1' />
+      </method_environment>
+    </method_context>
+    <instance name='mysqld' enabled='false'>
+      <exec_method name='start' type='method' exec='@PREFIX@/@SMF_METHOD_FILE.mysqld@ start' timeout_seconds='0' />
+      <exec_method name='stop' type='method' exec='@PREFIX@/@SMF_METHOD_FILE.mysqld@ stop' timeout_seconds='0' />
+      <property_group name='mysqld' type='application'>
+        <propval name='ndb_connectstring' type='astring' value='none'/>
+      </property_group>
+    </instance>
+    <instance name='ndbd' enabled='false'>
+      <exec_method name='start' type='method' exec='@PREFIX@/@SMF_METHOD_FILE.ndbd@ start' timeout_seconds='0' />
+      <exec_method name='stop' type='method' exec=':kill' timeout_seconds='0' />
+      <property_group name='ndbd' type='application'>
+        <propval name='ndb_connectstring' type='astring' value='none'/>
+      </property_group>
+    </instance>
+    <instance name='ndb_mgmd' enabled='false'>
+      <dependency name='config' grouping='require_all' restart_on='error' type='path'>
+        <service_fmri value='file://@PKG_SYSCONFDIR@/mysql-cluster.ini'/>
+      </dependency>
+      <exec_method name='start' type='method' exec='@LOCALBASE@/sbin/ndb_mgmd --reload -f @PKG_SYSCONFDIR@/mysql-cluster.ini' timeout_seconds='0' />
+      <exec_method name='stop' type='method' exec=':kill' timeout_seconds='0' />
+    </instance>
+    <stability value='Evolving' />
+    <template>
+      <common_name>
+        <loctext xml:lang='C'>MySQL Cluster</loctext>
+      </common_name>
+      <documentation>
+        <doc_link name='mysql.com' uri='http://www.mysql.com/products/cluster/' />
+      </documentation>
+    </template>
+  </service>
+</service_bundle>
