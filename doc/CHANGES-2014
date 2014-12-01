@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4573 2014/12/01 10:59:48 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4574 2014/12/01 11:01:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5967,3 +5967,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/valgrind to 3.10.1 [alnsn 2014-12-01]
 	Updated misc/getopt to 1.1.6 [wiz 2014-12-01]
 	Updated sysutils/dbus to 1.8.12 [wiz 2014-12-01]
+	Updated devel/afl to 0.80b [wiz 2014-12-01]
