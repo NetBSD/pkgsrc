@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2014/10/07 16:47:14 adam Exp $
+# $NetBSD: Makefile,v 1.56 2014/12/01 11:49:48 jmcneill Exp $
 #
 
 DISTNAME=	brasero-2.32.1
@@ -40,6 +40,7 @@ BUILDLINK_API_DEPENDS.gstreamer0.10+=		gstreamer0.10>=0.10.15
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libunique/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../mk/bsd.pkg.mk"
