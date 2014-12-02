@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.173 2014/12/01 18:11:14 ryoon Exp $
+$NetBSD: distinfo,v 1.174 2014/12/02 12:14:39 ryoon Exp $
 
 SHA1 (firefox-34.0.5.source.tar.bz2) = 33654d38268d1d1f71105f48bbe97cf720f47be2
 RMD160 (firefox-34.0.5.source.tar.bz2) = a246a94fe7c921a732b64034b6ff0d5164628e5f
@@ -163,7 +163,7 @@ SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcinvoke__gcc__x86__unix.cpp) = 8cb7
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcinvoke__netbsd__m68k.cpp) = b6dc5d54eeaa908d914116429e61f4b65a6a5f8e
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcinvoke__ppc__netbsd.cpp) = 71a33723a557a6153405f6baec8404b25f841608
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcinvoke__sparc64__netbsd.cpp) = 0792c2c626d906e71c5183994cb32bf8cdb3e239
-SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcstubs__arm__netbsd.cpp) = bb0c80db483776fc07682e5939b652578f33eb17
+SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcstubs__arm__netbsd.cpp) = 3a902eb9a23b3b5737f3c8cb5f96a5ad9a98a189
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcstubs__asm__mips.S) = 79a4686d368132aff804f217baa685b2e06bc396
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcstubs__asm__sparc64__netbsd.s) = 522bc237bc90d85c98b61a467a431fddd91d8c3c
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcstubs__gcc__x86__unix.cpp) = d246f0695eb43d43bfd5571297945a4b7a88f72c
