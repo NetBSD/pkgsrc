@@ -1,4 +1,4 @@
-$NetBSD: patch-xpcom_reflect_xptcall_md_unix_xptcstubs__arm__netbsd.cpp,v 1.3 2014/12/01 18:11:14 ryoon Exp $
+$NetBSD: patch-xpcom_reflect_xptcall_md_unix_xptcstubs__arm__netbsd.cpp,v 1.4 2014/12/02 12:14:40 ryoon Exp $
 
 --- xpcom/reflect/xptcall/md/unix/xptcstubs_arm_netbsd.cpp.orig	2014-11-26 12:30:27.000000000 +0000
 +++ xpcom/reflect/xptcall/md/unix/xptcstubs_arm_netbsd.cpp
@@ -82,7 +82,7 @@ $NetBSD: patch-xpcom_reflect_xptcall_md_unix_xptcstubs__arm__netbsd.cpp,v 1.3 20
  
      if(dispatchParams != paramBuffer)
          delete [] dispatchParams;
-@@ -82,26 +95,116 @@ PrepareAndDispatch(nsXPTCStubBase* self,
+@@ -82,26 +95,114 @@ PrepareAndDispatch(nsXPTCStubBase* self,
  }
  
  /*
@@ -122,14 +122,12 @@ $NetBSD: patch-xpcom_reflect_xptcall_md_unix_xptcstubs__arm__netbsd.cpp,v 1.3 20
 +         "SharedStub:\n"
 +         CFI(".cfi_startproc\n")
 +         "stmfd	sp!, {r1, r2, r3}\n"
-+         ".save	{r1, r2, r3}\n"
 +         CFI(".cfi_def_cfa_offset 12\n")
 +         CFI(".cfi_offset r3, -4\n")
 +         CFI(".cfi_offset r2, -8\n")
 +         CFI(".cfi_offset r1, -12\n")
 +         "mov	r2, sp\n"
 +         "str	lr, [sp, #-4]!\n"
-+         ".save	{lr}\n"
 +         CFI(".cfi_def_cfa_offset 16\n")
 +         CFI(".cfi_offset lr, -16\n")
 +         "mov	r1, ip\n"
