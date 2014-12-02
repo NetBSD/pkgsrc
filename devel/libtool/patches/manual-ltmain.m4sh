@@ -1,0 +1,17 @@
+$NetBSD: manual-ltmain.m4sh,v 1.1 2014/12/02 10:56:24 joerg Exp $
+
+--- libltdl/config/ltmain.m4sh.orig	2014-11-27 21:09:59.000000000 +0000
++++ libltdl/config/ltmain.m4sh
+@@ -6112,7 +6112,11 @@ func_mode_link ()
+ 	    # Finalize command for both is simple: just hardcode it.
+ 	    if test "$hardcode_direct" = yes &&
+ 	       test "$hardcode_direct_absolute" = no; then
+-	      add="$libdir/$linklib"
++	      if test -f "$inst_prefix_dir$libdir/$linklib"; then
++	        add="$inst_prefix_dir$libdir/$linklib"
++	      else
++	        add="$libdir/$linklib"
++	      fi
+ 	    elif test "$hardcode_minus_L" = yes; then
+ 	      add_dir="-L$libdir"
+ 	      add="-l$name"
