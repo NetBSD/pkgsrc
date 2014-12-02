@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2014/03/11 14:05:10 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.15 2014/12/02 20:22:14 gdt Exp $
 include/quagga/buffer.h
 include/quagga/checksum.h
 include/quagga/command.h
@@ -10,6 +10,7 @@ include/quagga/if.h
 include/quagga/if_rmap.h
 include/quagga/jhash.h
 include/quagga/keychain.h
+include/quagga/libospf.h
 include/quagga/linklist.h
 include/quagga/log.h
 include/quagga/md5.h
