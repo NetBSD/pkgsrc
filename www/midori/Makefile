@@ -1,33 +1,30 @@
-# $NetBSD: Makefile,v 1.75 2014/11/24 16:16:59 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2014/12/02 10:07:23 snj Exp $
 
-DISTNAME=	midori-0.4.9
-PKGREVISION=	17
+DISTNAME=	midori_0.5.9_all_
+PKGNAME=	${DISTNAME:S/_all_//:S/_/-/}
 CATEGORIES=	www
-MASTER_SITES=	http://archive.xfce.org/src/apps/midori/0.4/
+MASTER_SITES=	http://midori-browser.org/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.twotoasts.de/index.php?/pages/midori_summary.html
+HOMEPAGE=	http://midori-browser.org/
 COMMENT=	Lightweight web browser using WebKit
+LICENSE=	gnu-lgpl-v2.1
 EXTRACT_SUFX=	.tar.bz2
 
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+
 HAS_CONFIGURE=	yes
-USE_LIBTOOL=	yes
+USE_CMAKE=	yes
 USE_TOOLS+=	gmake intltool msgfmt pkg-config
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--disable-zeitgeist
+CMAKE_ARGS+=		-DUSE_ZEITGEIST=OFF
+CMAKE_ARGS+=		-DPREFIX=${PREFIX}
 
-CHECK_PORTABILITY_SKIP+= win32/x86-mingw32-opensuse/install.sh
+CHECK_PORTABILITY_SKIP+= win32/old/x86-mingw32-opensuse/install.sh
 CHECK_PORTABILITY_SKIP+= win32/makedist/makedist.midori
 
-PYTHON_FOR_BUILD_ONLY=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.4.9
-
-REPLACE_PYTHON=		waf wscript docs/api/wscript_build
-REPLACE_PYTHON+=	tests/wscript_build extensions/wscript_build
-REPLACE_PYTHON+=	icons/wscript_build midori/wscript_build
-
-BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.4:../../textproc/py-docutils
 BUILD_DEPENDS+=		librsvg>=2.18:../../graphics/librsvg
 
 DEPENDS+=		gnome-themes-[0-9]*:../../x11/gnome-themes
@@ -44,37 +41,16 @@ CONF_FILES+=	${EGDIR}/extensions/adblock/config \
 
 CONFIGURE_ENV=	VALAC=${VALAC}
 
-# XXX stupid hack. python has a marshal.h that gets included before
-# the local marshal.h
-SUBST_CLASSES+=		marshal marshal2
-SUBST_STAGE.marshal=	pre-configure
-SUBST_MESSAGE.marshal=	Gross hack (part one) in progress
-SUBST_FILES.marshal=	midori/midori-locationaction.c midori/midori-panel.c
-SUBST_FILES.marshal+=	midori/midori-view.c midori/midori-searchaction.c
-SUBST_FILES.marshal+=	midori/midori-browser.c
-SUBST_FILES.marshal+=	katze/katze-array.c katze/katze-arrayaction.c
-SUBST_SED.marshal=	-e 's/"marshal/"marshallocal/'
-SUBST_STAGE.marshal2=	pre-configure
-SUBST_MESSAGE.marshal2=	Gross hack (part two) in progress
-SUBST_FILES.marshal2=	midori/wscript_build
-SUBST_SED.marshal2=	-e s/\'marshal/\'marshallocal/
-
-pre-configure:
-	${MV} ${WRKSRC}/midori/marshal.list ${WRKSRC}/midori/marshallocal.list
-
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
-.include "../../devel/libsexy/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
-.include "../../lang/python/application.mk"
-BUILDLINK_API_DEPENDS.libsoup24+=libsoup24>=2.26.0
 .include "../../net/libsoup24/buildlink3.mk"
 #.include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
-.include "../../x11/libunique/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.vala= build

@@ -1,0 +1,23 @@
+$NetBSD: patch-config_CMakeLists.txt,v 1.1 2014/12/02 10:07:24 snj Exp $
+
+Put config files to examples dir.
+
+--- config/CMakeLists.txt.orig	2014-11-10 15:30:22.000000000 -0800
++++ config/CMakeLists.txt	2014-12-01 23:04:42.000000000 -0800
+@@ -10,14 +10,5 @@ if (${CMAKE_INSTALL_PREFIX} STREQUAL "/u
+     set(CMAKE_INSTALL_SYSCONFDIR "/etc")
+ endif()
+ 
+-foreach (FILE ${CONFIG_FILES})
+-    string (FIND ${FILE} "adblock" ADBLOCK_CONF)
+-    if (ADBLOCK_CONF GREATER -1)
+-        string (REPLACE "config" "" dirname ${FILE})
+-        install (FILES ${FILE}
+-            DESTINATION "${CMAKE_INSTALL_SYSCONFDIR}/${XDG_CONFIG_DIR}/${dirname}")
+-    else ()
+-        install (FILES ${FILE}
+-            DESTINATION "${CMAKE_INSTALL_SYSCONFDIR}/${XDG_CONFIG_DIR}")
+-    endif ()
+-endforeach ()
++install (FILES "search" DESTINATION "${PREFIX}/share/examples/midori")
++install (FILES "extensions/adblock/config" DESTINATION "${PREFIX}/share/examples/midori/extensions/adblock")
