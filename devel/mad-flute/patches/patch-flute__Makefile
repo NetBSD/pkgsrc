@@ -1,0 +1,67 @@
+$NetBSD: patch-flute__Makefile,v 1.1 2014/12/02 21:49:23 agc Exp $
+
+Request from joerg to link with the right lib path
+
+--- flute/Makefile	2014/12/02 21:39:38	1.1
++++ flute/Makefile	2014/12/02 21:40:35
+@@ -1,29 +1,31 @@
+-CC = gcc
+-#CC = ccmalloc g++
+-
+-CFLAGS += -Wall -O3 -g -DLINUX -D_LARGE_FILE_API -D_LARGEFILE64_SOURCE -D_ISOC99_SOURCE -D_XOPEN_SOURCE=500 \
+-	-I../flutelib \
+-	-I/usr/local/ssl/include \
+-	-I/usr/include
+-
+-LFLAGS += -L../lib -lflutelib -lalc -lsdp \
+-	-lexpat -lpthread -lm -lz -lcurl \
+-	-L/usr/local/ssl/lib -lcrypto
+-
+-SOURCES = main.c
+-
+-OBJECTS = $(SOURCES:%.c=%.o)
+-
+-%.o: %.c
+-	$(CC) -c $(CFLAGS) -o $@ $<
+-
+-all: flute
+-
+-flute: $(OBJECTS)
+-	$(CC) -o ../bin/flute $(OBJECTS) $(LFLAGS)
+-
+-clean:
+-	rm -f ../bin/flute *.o *~
+-
+-main.c: ../flutelib/flute.h ../flutelib/http_file_repair.h \
+-	../flutelib/flute_file_repair.h ../flutelib/apd.h
++CC = gcc
++#CC = ccmalloc g++
++
++CFLAGS += -Wall -O3 -g -DLINUX -D_LARGE_FILE_API -D_LARGEFILE64_SOURCE -D_ISOC99_SOURCE -D_XOPEN_SOURCE=500 \
++	-I../flutelib \
++	-I/usr/local/ssl/include \
++	-I/usr/include
++
++LFLAGS += -L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib \
++	-L../lib -Wl,-rpath,../lib \
++	-lflutelib -lalc -lsdp \
++	-lexpat -lpthread -lm -lz -lcurl \
++	-L/usr/local/ssl/lib -lcrypto
++
++SOURCES = main.c
++
++OBJECTS = $(SOURCES:%.c=%.o)
++
++%.o: %.c
++	$(CC) -c $(CFLAGS) -o $@ $<
++
++all: flute
++
++flute: $(OBJECTS)
++	$(CC) -o ../bin/flute $(OBJECTS) $(LFLAGS)
++
++clean:
++	rm -f ../bin/flute *.o *~
++
++main.c: ../flutelib/flute.h ../flutelib/http_file_repair.h \
++	../flutelib/flute_file_repair.h ../flutelib/apd.h
