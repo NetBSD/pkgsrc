@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/05/02 04:43:11 agc Exp $
+$NetBSD: distinfo,v 1.2 2014/12/02 21:49:23 agc Exp $
 
 SHA1 (mad_fcl_v1.7_src.tar.gz) = e2157b42e1006167224fbaea7bec46d438e6a41c
 RMD160 (mad_fcl_v1.7_src.tar.gz) = 6aeaf046f16818fc591702371feeab11c02d4ce7
@@ -16,3 +16,5 @@ SHA1 (patch-aj) = ba74bc1ab51c19449953c5a4e4837223d3859054
 SHA1 (patch-ak) = 845bcf4cad65fbb73b8ad847f7fccbd385858a16
 SHA1 (patch-al) = 757ff7f015b9b60edae79d1372227553621590f3
 SHA1 (patch-am) = 198d7ec12fcbe1328408d8928d13710cb380dff2
+SHA1 (patch-flute__Makefile) = fc42130de7639386de75f41063d72577c47ec8f6
+SHA1 (patch-multis_flute__Makefile) = b872a7ece7681da7638594e65a809f25a9f5511c
