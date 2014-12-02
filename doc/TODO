@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13889 2014/12/01 14:52:24 adam Exp $
+$NetBSD: TODO,v 1.13890 2014/12/02 10:07:57 snj Exp $
 
 Suggested new packages
 ======================
@@ -793,7 +793,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o metacity-3.14.2
 	o metis-5.1.0
 	o mgetty+sendfax-1.1.35
-	o midori-0.5.9
 	o mined-2014.24.2
 	o minicom-2.7
 	o minivmac-3.2.3
