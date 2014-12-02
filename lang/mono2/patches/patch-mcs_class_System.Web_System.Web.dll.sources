@@ -1,0 +1,16 @@
+$NetBSD: patch-mcs_class_System.Web_System.Web.dll.sources,v 1.1.2.2 2014/12/02 22:59:51 tron Exp $
+
+patch for CVE-2012-3543 taken from
+https://github.com/mono/mono/commit/2ab1a051058fee5ea3aec2e071fba7000b693488
+part 2
+
+--- mcs/class/System.Web/System.Web.dll.sources.orig	2012-01-30 18:01:22.000000000 +0000
++++ mcs/class/System.Web/System.Web.dll.sources
+@@ -1174,6 +1174,7 @@ System.Web.Util/IWebPropertyAccessor.cs
+ System.Web.Util/MachineKeySectionUtils.cs
+ System.Web.Util/RuntimeHelpers.cs
+ System.Web.Util/SearchPattern.cs
++System.Web.Util/SecureHashCodeProvider.cs
+ System.Web.Util/SerializationHelper.cs
+ System.Web.Util/StrUtils.cs
+ System.Web.Util/TimeUtil.cs
