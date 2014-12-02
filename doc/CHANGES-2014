@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4585 2014/12/01 18:24:51 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.4586 2014/12/02 10:07:57 snj Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5980,3 +5980,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/firefox to 34.0.5 [ryoon 2014-12-01]
 	Updated www/firefox-l10n to 34.0.5 [ryoon 2014-12-01]
 	Updated devel/nss to 3.17.3 [ryoon 2014-12-01]
+	Updated www/midori to 0.5.9 [snj 2014-12-02]
