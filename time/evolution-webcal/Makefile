@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2014/10/07 16:47:36 adam Exp $
+# $NetBSD: Makefile,v 1.79 2014/12/02 10:45:40 jmcneill Exp $
 #
 
 DISTNAME=	evolution-webcal-2.32.0
@@ -19,7 +19,8 @@ USE_PKGLOCALEDIR=	YES
 GCONF_SCHEMAS=		evolution-webcal.schemas
 
 LDFLAGS.DragonFly=	-lgthread-2.0
-LDFLAGS.SunOS+=	-lgthread-2.0
+LDFLAGS.SunOS+=		-lgthread-2.0
+LDFLAGS.NetBSD+=	-lgthread-2.0
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
