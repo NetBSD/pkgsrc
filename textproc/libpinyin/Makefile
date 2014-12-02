@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/06/01 13:25:55 obache Exp $
+# $NetBSD: Makefile,v 1.2 2014/12/02 09:57:33 jperkin Exp $
 
 DISTNAME=	libpinyin-1.0.0
 CATEGORIES=	textproc
@@ -15,6 +15,10 @@ USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE+=	libpinyin.pc.in
+
+OPSYSVARS+=	BUILDLINK_TRANSFORM
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=./libpinyin.ver
 
 .include "../../databases/db4/buildlink3.mk"
 BUILDLINK_TRANSFORM+=	l:db:db4
