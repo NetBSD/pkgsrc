@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.33 2014/09/10 10:44:58 richard Exp $
+$NetBSD: patch-ac,v 1.34 2014/12/02 10:56:24 joerg Exp $
 
 --- libltdl/config/ltmain.sh.orig	Mon Oct 17 10:19:11 2011
 +++ libltdl/config/ltmain.sh
@@ -14,7 +14,20 @@ $NetBSD: patch-ac,v 1.33 2014/09/10 10:44:58 richard Exp $
  : ${CP="cp -f"}
  test "${ECHO+set}" = set || ECHO=${as_echo-'printf %s\n'}
  : ${MAKE="make"}
-@@ -7391,6 +7392,7 @@ func_mode_link ()
+@@ -6899,7 +6900,11 @@ func_mode_link ()
+ 	    # Finalize command for both is simple: just hardcode it.
+ 	    if test "$hardcode_direct" = yes &&
+ 	       test "$hardcode_direct_absolute" = no; then
+-	      add="$libdir/$linklib"
++	      if test -f "$inst_prefix_dir$libdir/$linklib"; then
++	        add="$inst_prefix_dir$libdir/$linklib"
++	      else
++	        add="$libdir/$linklib"
++	      fi
+ 	    elif test "$hardcode_minus_L" = yes; then
+ 	      add_dir="-L$libdir"
+ 	      add="-l$name"
+@@ -7391,6 +7396,7 @@ func_mode_link ()
  	# Calculate the version variables.
  	major=
  	versuffix=
@@ -22,7 +35,7 @@ $NetBSD: patch-ac,v 1.33 2014/09/10 10:44:58 richard Exp $
  	verstring=
  	case $version_type in
  	none) ;;
-@@ -7451,6 +7453,7 @@ func_mode_link ()
+@@ -7451,6 +7457,7 @@ func_mode_link ()
  	  func_arith $current - $age
  	  major=.$func_arith_result
  	  versuffix="$major.$age.$revision"
@@ -30,7 +43,7 @@ $NetBSD: patch-ac,v 1.33 2014/09/10 10:44:58 richard Exp $
  	  ;;
  
  	osf)
-@@ -7511,8 +7514,10 @@ func_mode_link ()
+@@ -7511,8 +7518,10 @@ func_mode_link ()
  	  esac
  	  if test "$need_version" = no; then
  	    versuffix=
@@ -41,7 +54,7 @@ $NetBSD: patch-ac,v 1.33 2014/09/10 10:44:58 richard Exp $
  	  fi
  	fi
  
-@@ -7520,6 +7525,7 @@ func_mode_link ()
+@@ -7520,6 +7529,7 @@ func_mode_link ()
  	if test "$avoid_version" = yes && test "$need_version" = no; then
  	  major=
  	  versuffix=
@@ -49,7 +62,7 @@ $NetBSD: patch-ac,v 1.33 2014/09/10 10:44:58 richard Exp $
  	  verstring=""
  	fi
  
-@@ -7630,7 +7636,7 @@ func_mode_link ()
+@@ -7630,7 +7640,7 @@ func_mode_link ()
  	  *-*-netbsd*)
  	    # Don't link with libc until the a.out ld.so is fixed.
  	    ;;
@@ -58,7 +71,7 @@ $NetBSD: patch-ac,v 1.33 2014/09/10 10:44:58 richard Exp $
  	    # Do not include libc due to us having libc/libc_r.
  	    ;;
  	  *-*-sco3.2v5* | *-*-sco5v6*)
-@@ -7653,6 +7659,7 @@ func_mode_link ()
+@@ -7653,12 +7663,14 @@ func_mode_link ()
  	libname_save=$libname
  	release_save=$release
  	versuffix_save=$versuffix
@@ -66,7 +79,6 @@ $NetBSD: patch-ac,v 1.33 2014/09/10 10:44:58 richard Exp $
  	major_save=$major
  	# I'm not sure if I'm treating the release correctly.  I think
  	# release should show up in the -l (ie -lgmp5) so we don't want to
-@@ -7659,6 +7666,7 @@ func_mode_link ()
  	# add it in twice.  Is that correct?
  	release=""
  	versuffix=""
@@ -74,7 +86,7 @@ $NetBSD: patch-ac,v 1.33 2014/09/10 10:44:58 richard Exp $
  	major=""
  	newdeplibs=
  	droppeddeps=no
-@@ -7935,6 +7943,7 @@ EOF
+@@ -7935,6 +7947,7 @@ EOF
  	  ;;
  	esac
  	versuffix=$versuffix_save
