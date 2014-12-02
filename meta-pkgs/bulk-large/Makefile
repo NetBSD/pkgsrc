@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2014/11/20 20:49:58 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2014/12/02 04:26:19 snj Exp $
 
 DISTNAME=	bulk-large-20141120
 CATEGORIES=	meta-pkgs
@@ -20,7 +20,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2
 # Note: the primary purpose of this package is to build the most
 # popular/useful packages out of the set of all packages in pkgsrc.
 # On a fast build machine this whole meta-package should build in less
-# than 24 hous, assuming that bulk-medium is already built.
+# than 24 hours, assuming that bulk-medium is already built.
 #
 # The guideline for adding stuff to this package is: if you had only
 # a day or so to build 1/3 of pkgsrc, which 1/3 would be most useful
