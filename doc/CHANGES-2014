@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4587 2014/12/02 10:56:37 joerg Exp $
+$NetBSD: CHANGES-2014,v 1.4588 2014/12/02 12:16:39 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5982,3 +5982,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/nss to 3.17.3 [ryoon 2014-12-01]
 	Updated www/midori to 0.5.9 [snj 2014-12-02]
 	Updated devel/libtool-base to 2.4.2nb9 [joerg 2014-12-02]
+	Updated editors/texmaker to 4.4.1 [mef 2014-12-02]
