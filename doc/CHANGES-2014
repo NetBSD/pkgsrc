@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4591 2014/12/02 20:22:30 gdt Exp $
+$NetBSD: CHANGES-2014,v 1.4592 2014/12/02 22:49:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5987,3 +5987,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/mysql56-client to 5.6.22 [adam 2014-12-02]
 	Updated databases/mysql56-server to 5.6.22 [adam 2014-12-02]
 	Updated net/quagga to 0.99.23.1 [gdt 2014-12-02]
+	Updated devel/py-mercurial to 3.2.2 [wiz 2014-12-02]
