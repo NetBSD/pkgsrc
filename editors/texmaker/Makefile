@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2014/11/20 16:04:14 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2014/12/02 12:16:29 mef Exp $
 
-DISTNAME=	texmaker-4.3
-PKGREVISION=	1
+DISTNAME=	texmaker-4.4.1
 CATEGORIES=	editors
 MASTER_SITES=	http://www.xm1math.net/texmaker/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,9 +17,8 @@ USE_LIBTOOL=	yes
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 
 do-configure:
-	cd ${WRKSRC} && ${PKGSRC_ENV} ${CONFIGURE_ENV} \
-	${QTDIR}/bin/qmake PREFIX=${PREFIX} texmaker.pro \
-	DESKTOPDIR=${PREFIX}/share/applications ICONDIR=${PREFIX}/share/pixmaps
+	cd ${WRKSRC} && env ${CONFIGURE_ENV} \
+	${QTDIR}/bin/qmake PREFIX=${PREFIX} texmaker.pro DESKTOPDIR=${PREFIX}/share/applications ICONDIR=${PREFIX}/share/pixmaps
 
 .include "options.mk"
 
