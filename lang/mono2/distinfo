@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.5 2014/06/10 19:25:58 wiz Exp $
+$NetBSD: distinfo,v 1.5.4.1 2014/12/02 22:59:50 tron Exp $
 
 SHA1 (mono-2.10.9.tar.bz2) = 1a6e8c5a0c3d88d87982259aa04402e028a283de
 RMD160 (mono-2.10.9.tar.bz2) = ac9784c413eb2cdb490750a86a96cce5c11ad5bd
 Size (mono-2.10.9.tar.bz2) = 34038017 bytes
+SHA1 (patch-CVE-2012-3382) = f2c35a69c6c4db2ca3576fdc10ce5465f081b686
 SHA1 (patch-aa) = f3c88247c143cba6d0475f1dabb653adbc841bdb
 SHA1 (patch-ab) = 10eb6f4453c626f0bedce4b0ce6519ba6aea4d5f
 SHA1 (patch-ac) = 78f3b0786480e066959cc191e3f45d3f773220e2
@@ -43,5 +44,9 @@ SHA1 (patch-dm) = bac9172f419630f817702e15dd3761cb4f60e0a0
 SHA1 (patch-dn) = 9a55bd9c492b64ec9feadb45419b4bec37900b89
 SHA1 (patch-do) = 6ccd5598198fc04e638ec5bc5e03c92e16206c92
 SHA1 (patch-man_mprof-report.1) = e175943bc63780d907b4ceab08e7f9ad6a1a7ac8
+SHA1 (patch-mcs_class_System.Web_System.Web.UI_Page.cs) = 986874319e849b93a2c89b7eb360e53f18fa7ca4
+SHA1 (patch-mcs_class_System.Web_System.Web.Util_SecureHashCodeProvider.cs) = d82d9737efb07a8095acc5bf78d9cc522d24632d
+SHA1 (patch-mcs_class_System.Web_System.Web.dll.sources) = 751139d6dc4bf8f2cda767e8e6d8a3ed2dd2ecd8
+SHA1 (patch-mcs_class_System.Web_System.Web_WebROCollection.cs) = ff95c3898df3aa4809d1222c29f9bf81e87e9af1
 SHA1 (patch-mono_profiler_proflog.c) = 2f7826873ab7fdb858db3d39606028ee87a34a46
 SHA1 (patch-mono_utils_mono-compiler.h) = 0dce7994bdb350f7080464f416b725cbe3e7e293
