@@ -1,17 +1,19 @@
-$NetBSD: patch-aa,v 1.2 2010/01/21 13:50:55 is Exp $
+$NetBSD: patch-aa,v 1.3 2014/12/03 14:03:21 joerg Exp $
 
 --- src/Makefile.orig	2010-01-17 05:47:28.000000000 +0100
 +++ src/Makefile
-@@ -27,7 +27,7 @@ SCRIPTS = update.sh srTest.sh cmdIntfcTe
+@@ -27,7 +27,9 @@ SCRIPTS = update.sh srTest.sh cmdIntfcTe
  ALL_FILES = ${SRC} ${HDRS} ${SCRIPTS} Makefile
  
  ord : ${OBJS}
 -	g++ -g ${OBJS} -lgmp -lgmpxx -lreadline -lncurses \
-+	${LIBTOOL} --mode=link ${CXX} -g ${OBJS} -lgmp -lgmpxx -lreadline -lncurses \
++	${LIBTOOL} --mode=link ${CXX} -g ${OBJS} \
++		${COMPILER_RPATH_FLAG}${PREFIX}/lib -L${PREFIX}/lib \
++		-lgmp -lgmpxx -lreadline -lncurses \
  		-o ord 
  
  DOC : ord
-@@ -37,7 +37,7 @@ ALL : ord
+@@ -37,7 +39,7 @@ ALL : ord
  	bash update.sh
  
  TEST test.log : ord
