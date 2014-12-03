@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2013/01/18 15:40:14 wen Exp $
+$NetBSD: distinfo,v 1.6 2014/12/03 07:37:17 wen Exp $
 
-SHA1 (Method-Signatures-Simple-1.05.tar.gz) = fa8f6804f8e8e03bc47d4434539fc740b008b849
-RMD160 (Method-Signatures-Simple-1.05.tar.gz) = ce3d06d671b34bc26ef0e003f8fe8dbe703e604a
-Size (Method-Signatures-Simple-1.05.tar.gz) = 13561 bytes
+SHA1 (Method-Signatures-Simple-1.07.tar.gz) = f7aaacdb5adf549f660143e737259ca87f2422da
+RMD160 (Method-Signatures-Simple-1.07.tar.gz) = 5bc5e5d18299954d6826eca4827d3a981ff6065b
+Size (Method-Signatures-Simple-1.07.tar.gz) = 13733 bytes
