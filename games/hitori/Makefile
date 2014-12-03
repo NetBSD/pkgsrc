@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/11/29 13:55:16 prlw1 Exp $
+# $NetBSD: Makefile,v 1.2 2014/12/03 13:59:33 joerg Exp $
 
 DISTNAME=	hitori-3.14.1
 CATEGORIES=	games gnome
@@ -14,6 +14,8 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
+
+BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
 .include "../../devel/glib2/schemas.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
