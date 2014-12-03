@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4602 2014/12/03 07:07:55 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4603 2014/12/03 07:10:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5998,3 +5998,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Plack-Middleware-Test-StashWarnings to 0.08 [wen 2014-12-03]
 	Updated www/p5-Mojolicious to 5.68 [wen 2014-12-03]
 	Updated devel/p5-Module-Build-Tiny to 0.039 [wen 2014-12-03]
+	Updated textproc/po4a to 0.45 [ryoon 2014-12-03]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13890 2014/12/02 10:07:57 snj Exp $
+$NetBSD: TODO,v 1.13891 2014/12/03 07:10:18 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -893,7 +893,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o planner-0.14.6
 	o plasma-5.0.2
 	o ploticus-examples-230
-	o po4a-0.45
 	o pokerth-1.0.1
 	o policykit-0.104
 	o polsms-2.1.0
