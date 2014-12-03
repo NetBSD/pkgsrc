@@ -1,4 +1,4 @@
-<!-- $NetBSD: makefile.xml,v 1.23 2007/06/01 11:07:25 rillig Exp $ -->
+<!-- $NetBSD: makefile.xml,v 1.24 2014/12/03 07:05:05 ryoon Exp $ -->
 
 <chapter id="makefile"> <?dbhtml filename="makefile.html"?>
   <title>Programming in <filename>Makefile</filename>s</title>
@@ -209,7 +209,7 @@ EXT_LIST+=      ${i:Q}""
 	nastiness.</para>
 
 <programlisting>
-STRING=         foo bar <    > * `date` $$HOME ' "
+STRING=         foo bar &lt;    &gt; * `date` $$HOME ' "
 EXT_LIST=       string=${STRING:Q} x=second\ item
 
 all:
