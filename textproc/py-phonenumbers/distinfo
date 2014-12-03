@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2014/10/05 22:08:30 rodent Exp $
+$NetBSD: distinfo,v 1.4 2014/12/03 22:41:09 rodent Exp $
 
-SHA1 (phonenumbers-6.3.0.tar.gz) = 60871fa304229b5f3cfebe1bfb2961e8c91f1a67
-RMD160 (phonenumbers-6.3.0.tar.gz) = 995bb8881ceaf50ab950d753948ac7d7da1ea452
-Size (phonenumbers-6.3.0.tar.gz) = 2062366 bytes
+SHA1 (phonenumbers-7.0.1.tar.gz) = 11452b878141865c29dab96733ff16e992be4767
+RMD160 (phonenumbers-7.0.1.tar.gz) = 614f8474355b6a1267719e5ad4bf127155c90050
+Size (phonenumbers-7.0.1.tar.gz) = 2062044 bytes
