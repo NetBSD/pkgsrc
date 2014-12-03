@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:45:24 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/12/03 13:01:47 joerg Exp $
 bin/httperf
+bin/idleconn
 man/man1/httperf.1
