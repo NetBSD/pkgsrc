@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2014/12/03 11:06:21 jmcneill Exp $
+
+--- configure.orig	2010-11-13 12:25:07.000000000 +0000
++++ configure
+@@ -13347,7 +13347,7 @@ if test "${with_smclient+set}" = set; th
+   withval=$with_smclient;
+ else
+   case "$GDK_TARGET" in
+-    x11) with_smclient=xsmp SMCLIENT_PKGS="sm" ;;
++    x11) with_smclient=xsmp SMCLIENT_PKGS="sm ice" ;;
+     win32|quartz) with_smclient=$GDK_TARGET ;;
+     *) with_smclient=no ;;
+    esac
