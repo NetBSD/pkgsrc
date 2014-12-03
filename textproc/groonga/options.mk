@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2014/11/08 11:24:28 obache Exp $
+# $NetBSD: options.mk,v 1.15 2014/12/03 08:47:11 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.groonga
@@ -23,17 +23,8 @@ CONFIGURE_ARGS+=	--without-mecab
 CONFIGURE_ARGS+=	--with-cutter
 USE_TOOLS+=		gmake
 TEST_TARGET=		check
-TEST_ENV+=		RUBYOPT="-Ku"
-.include "../../lang/ruby/buildlink3.mk"
 BUILDLINK_API_DEPENDS.cutter+=		cutter>=1.1.6
 .include "../../devel/cutter/buildlink3.mk"
-RUBY_JSON_REQD=		1.8.0:build
-BUILD_DEPENDS+=		${RUBY_PKGPREFIX}-bundler-[0-9]*:../../misc/ruby-bundler
-BUILD_DEPENDS+=		${RUBY_PKGPREFIX}-msgpack>=0.5.6:../../devel/ruby-msgpack
-BUILD_DEPENDS+=		${RUBY_PKGPREFIX}-test-unit>=2.5.5:../../devel/ruby-test-unit
-BUILD_DEPENDS+=		${RUBY_PKGPREFIX}-test-unit-notify>=1.0.1:../../devel/ruby-test-unit-notify
-RUBY_JSON_REQD=		0:build
-.include "../../lang/ruby/json.mk"
 .else
 CONFIGURE_ARGS+=	--without-cutter
 .endif
@@ -101,7 +92,7 @@ CONF_FILES+=	share/examples/${PKGBASE}/httpd/win-utf \
 
 SUBST_CLASSES+=		confpath
 SUBST_STAGE.confpath=	post-configure
-SUBST_FILES.confpath=	vendor/nginx-1.7.6/objs/Makefile
+SUBST_FILES.confpath=	vendor/nginx-1.7.7/objs/Makefile
 SUBST_SED.confpath=	-e 's,\$$(DESTDIR)${PKG_SYSCONFDIR}/httpd,\$$(DESTDIR)${PREFIX}/share/examples/${PKGBASE}/httpd,g'
 .else
 CONFIGURE_ARGS+=	--disable-groonga-httpd
