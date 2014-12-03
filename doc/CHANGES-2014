@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4605 2014/12/03 07:19:32 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4606 2014/12/03 07:34:23 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6001,3 +6001,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/po4a to 0.45 [ryoon 2014-12-03]
 	Updated devel/p5-MooseX-Declare to 0.40 [wen 2014-12-03]
 	Updated devel/p5-Module-CoreList to 5.20141120 [wen 2014-12-03]
+	Updated devel/p5-Method-Signatures to 20141021 [wen 2014-12-03]
