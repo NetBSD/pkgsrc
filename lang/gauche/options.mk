@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2008/04/12 22:43:02 jlam Exp $
+# $NetBSD: options.mk,v 1.8 2014/12/03 14:00:57 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gauche
 PKG_OPTIONS_OPTIONAL_GROUPS=	multibyte
@@ -20,7 +20,9 @@ PLIST_VARS+=	gdbm
 .if !empty(PKG_OPTIONS:Mgdbm)
 .  include "../../databases/gdbm/buildlink3.mk"
 PLIST.gdbm=	yes
-MAKE_ENV+=	GDBM_LDFLAGS=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gdbm}/lib
+GDBM_LDFLAGS=	-L${BUILDLINK_PREFIX.gdbm}/lib \
+		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gdbm}/lib
+MAKE_ENV+=	GDBM_LDFLAGS=${GDBM_LDFLAGS:Q}
 .endif
 
 ###
