@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4600 2014/12/03 06:47:09 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4601 2014/12/03 06:56:11 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5996,3 +5996,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/libsixel to 1.4.1 [obache 2014-12-03]
 	Updated chat/p5-POE-Component-IRC to 6.88 [wen 2014-12-03]
 	Updated www/p5-Plack-Middleware-Test-StashWarnings to 0.08 [wen 2014-12-03]
+	Updated www/p5-Mojolicious to 5.68 [wen 2014-12-03]
