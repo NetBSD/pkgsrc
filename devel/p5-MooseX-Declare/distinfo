@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2014/08/28 10:05:49 wen Exp $
+$NetBSD: distinfo,v 1.13 2014/12/03 07:13:22 wen Exp $
 
-SHA1 (MooseX-Declare-0.39.tar.gz) = cba8283580f3d352f3dc9301389bf7771162a999
-RMD160 (MooseX-Declare-0.39.tar.gz) = a70e28d64bac129c1ae07806ce9e75956cb82e0b
-Size (MooseX-Declare-0.39.tar.gz) = 57885 bytes
+SHA1 (MooseX-Declare-0.40.tar.gz) = eee19539eebe15064b1f7df65d4d274036bee1b1
+RMD160 (MooseX-Declare-0.40.tar.gz) = 7a19fc46abb6e6093b0148db89ba908992b2bc7d
+Size (MooseX-Declare-0.40.tar.gz) = 59653 bytes
