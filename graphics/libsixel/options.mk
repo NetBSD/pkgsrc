@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2014/11/09 07:19:54 obache Exp $
+# $NetBSD: options.mk,v 1.3 2014/12/03 06:36:49 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libsixel
 PKG_SUPPORTED_OPTIONS=	curl gd gdk-pixbuf2 jpeg png
@@ -15,7 +15,7 @@ CONFIGURE_ARGS+=	--without-libcurl
 
 .if !empty(PKG_OPTIONS:Mjpeg)
 CONFIGURE_ARGS+=	--with-jpeg
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-jpeg
 .endif
