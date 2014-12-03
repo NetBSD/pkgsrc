@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/10/29 13:05:34 adam Exp $
+# $NetBSD: Makefile,v 1.14 2014/12/03 14:05:55 joerg Exp $
 
 DISTNAME=	miniupnpd-1.8.20141022
 CATEGORIES=	net
@@ -11,6 +11,9 @@ LICENSE=	modified-bsd
 
 EGDIR=		${PREFIX}/share/examples/miniupnpd
 CONF_FILES=	${EGDIR}/miniupnpd.conf ${PKG_SYSCONFDIR}/miniupnpd.conf
+
+# miniupnpd.c:8:10: fatal error: 'config.h' file not found
+MAKE_JOBS_SAFE=	no
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
