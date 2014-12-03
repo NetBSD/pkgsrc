@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2010/02/19 15:12:04 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2014/12/03 14:07:56 joerg Exp $
 
 --- Makefile.orig	2006-01-15 11:10:01.000000000 +0000
 +++ Makefile
@@ -9,7 +9,7 @@ $NetBSD: patch-aa,v 1.2 2010/02/19 15:12:04 joerg Exp $
  ssss-split: ssss.c
 -	$(CC) -W -Wall -O2 -lgmp -o ssss-split ssss.c
 -	strip ssss-split
-+	$(CC) -W -Wall ${CFLAGS} -Wl,-rpath,${PREFIX}/lib -o ssss-split ssss.c -lgmp
++	$(CC) -W -Wall ${CFLAGS} -L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib -o ssss-split ssss.c -lgmp
  
  ssss-combine: ssss-split
  	ln -f ssss-split ssss-combine
