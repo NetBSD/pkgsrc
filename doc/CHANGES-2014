@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4597 2014/12/03 06:32:59 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4598 2014/12/03 06:38:39 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5993,3 +5993,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated comms/asterisk to 11.14.1 [jnemeth 2014-12-03]
 	Updated www/p5-Dancer2 to 0.155002 [wen 2014-12-03]
 	Updated devel/p5-Inline to 0.78 [wen 2014-12-03]
+	Updated graphics/libsixel to 1.4.1 [obache 2014-12-03]
