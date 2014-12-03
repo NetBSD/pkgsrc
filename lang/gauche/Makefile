@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2014/08/28 17:45:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.66 2014/12/03 14:00:57 joerg Exp $
 #
 
 DISTNAME=	Gauche-0.9.4
@@ -31,8 +31,10 @@ CHECK_BUILTIN.iconv:=	no
 
 .if !empty(USE_BUILTIN.iconv:M[nN][oO])
 CONFIGURE_ARGS+=	--with-iconv-lib=${BUILDLINK_LIBNAME.iconv}
+ICONV_LDFLAGS=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.iconv}/lib \
+		-L${BUILDLINK_PREFIX.iconv}/lib
 ALL_ENV+=		\
-	ICONV_LDFLAGS="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.iconv}/lib"
+	ICONV_LDFLAGS=${ICONV_LDFLAGS:Q}
 .endif
 
 USE_LANGUAGES=	c c99
