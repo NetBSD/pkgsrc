@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4608 2014/12/03 08:47:23 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4609 2014/12/03 10:09:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6004,3 +6004,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Method-Signatures to 20141021 [wen 2014-12-03]
 	Updated devel/p5-Method-Signatures-Simple to 1.07 [wen 2014-12-03]
 	Updated textproc/groonga to 4.0.8 [obache 2014-12-03]
+	Updated net/openvpn to 2.3.6 [wiz 2014-12-03]
