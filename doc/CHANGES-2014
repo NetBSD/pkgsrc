@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4613 2014/12/03 22:08:44 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.4614 2014/12/03 22:17:24 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6010,3 +6010,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-ExtUtils-MakeMaker to 7.04 [wiz 2014-12-03]
 	Removed net/skype1 [rodent 2014-12-03]
 	Removed net/skype21 [rodent 2014-12-03]
+	Updated databases/py-sqlalchemy-utils to 0.27.9 [rodent 2014-12-03]
