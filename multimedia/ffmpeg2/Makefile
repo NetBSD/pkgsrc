@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2014/10/01 16:09:16 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2014/12/03 15:06:11 bouyer Exp $
 
 PKGNAME=	${DISTNAME:S/ffmpeg/ffmpeg2/}
+PKGREVISION=	1
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ffmpeg.mplayerhq.hu/
 COMMENT=	Decoding, encoding and streaming software (v2.x)
@@ -38,15 +39,14 @@ post-install:
 .include "../../mk/compiler.mk"
 
 # disable asm on i386 for non-gcc and gcc < 4.2
-# no alignment options needed for gcc >= 4.6 on i386
 .if ${MACHINE_ARCH} == "i386"
 .  if !empty(MACHINE_PLATFORM:MDarwin-*-i386) \
    || !empty(MACHINE_PLATFORM:MSunOS-*-i386) \
    || !empty(CC_VERSION:Mgcc-[123]*) \
-   || !empty(CC_VERSION:Mgcc-4.[01]*) \
+   || !empty(CC_VERSION:Mgcc-4.[01].*) \
    || empty(CC_VERSION:Mgcc*)
 CONFIGURE_ARGS+=	--disable-asm
-.  elif !empty(CC_VERSION:Mgcc-4.[2345]*)
+.  elif !empty(CC_VERSION:Mgcc-4.*)
 CFLAGS+=		-mstackrealign -mpreferred-stack-boundary=4
 .  endif
 .endif
