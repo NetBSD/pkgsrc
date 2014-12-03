@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4603 2014/12/03 07:10:18 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.4604 2014/12/03 07:15:44 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -5999,3 +5999,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Mojolicious to 5.68 [wen 2014-12-03]
 	Updated devel/p5-Module-Build-Tiny to 0.039 [wen 2014-12-03]
 	Updated textproc/po4a to 0.45 [ryoon 2014-12-03]
+	Updated devel/p5-MooseX-Declare to 0.40 [wen 2014-12-03]
