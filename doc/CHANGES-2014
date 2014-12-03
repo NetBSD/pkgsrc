@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4612 2014/12/03 15:12:30 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4613 2014/12/03 22:08:44 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6008,3 +6008,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-CGI to 4.11 [wiz 2014-12-03]
 	Updated devel/p5-Date-Manip to 6.48 [wiz 2014-12-03]
 	Updated devel/p5-ExtUtils-MakeMaker to 7.04 [wiz 2014-12-03]
+	Removed net/skype1 [rodent 2014-12-03]
+	Removed net/skype21 [rodent 2014-12-03]
