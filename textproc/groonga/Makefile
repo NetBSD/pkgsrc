@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2014/11/15 02:13:19 obache Exp $
+# $NetBSD: Makefile,v 1.48 2014/12/03 08:47:11 obache Exp $
 #
 
-DISTNAME=	groonga-4.0.7
-PKGREVISION=	1
+DISTNAME=	groonga-4.0.8
 CATEGORIES=	textproc
 MASTER_SITES=	http://packages.groonga.org/source/groonga/
 
@@ -26,7 +25,7 @@ EXTRACT_USING=	bsdtar
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ARGS+=	--with-ruby19=${RUBY}
+CONFIGURE_ARGS+=	--with-ruby=${RUBY}
 
 PKGCONFIG_OVERRIDE+=	groonga.pc.in
 
@@ -38,6 +37,8 @@ INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples
 
 CONF_FILES+=		share/examples/${PKGBASE}/groonga.conf \
 			${PKG_SYSCONFDIR}/groonga.conf
+CONF_FILES+=		share/examples/groonga/synonyms.tsv \
+			${PKG_SYSCONFDIR}/synonyms.tsv
 
 OWN_DIRS+=		${VARBASE}/log/${PKGBASE}
 
