@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2014/05/29 23:37:49 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2014/12/03 07:08:36 ryoon Exp $
 
-DISTNAME=		po4a-0.23
-PKGREVISION=		12
+DISTNAME=		po4a-0.45
 CATEGORIES=		textproc
-MASTER_SITES=		http://alioth.debian.org/download.php/1317/
+MASTER_SITES=		https://alioth.debian.org/frs/download.php/file/3942/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://po4a.alioth.debian.org/
@@ -18,23 +17,9 @@ USE_TOOLS+=		pkg-config perl:run msgmerge:run msgfmt:run
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/po4a/.packlist
-REPLACE_PERL=		msguntypot po4a po4a-gettextize po4a-normalize
+REPLACE_PERL=		scripts/msguntypot po4a po4a-gettextize po4a-normalize
 REPLACE_PERL+=		po4a-translate po4a-updatepo
-REPLACE_PERL+=		lib/Locale/Po4a/Chooser.pm
-REPLACE_PERL+=		lib/Locale/Po4a/Common.pm
-REPLACE_PERL+=		lib/Locale/Po4a/Dia.pm
-REPLACE_PERL+=		lib/Locale/Po4a/Docbook.pm
-REPLACE_PERL+=		lib/Locale/Po4a/Guide.pm
-REPLACE_PERL+=		lib/Locale/Po4a/KernelHelp.pm
-REPLACE_PERL+=		lib/Locale/Po4a/LaTeX.pm
-REPLACE_PERL+=		lib/Locale/Po4a/Man.pm
-REPLACE_PERL+=		lib/Locale/Po4a/Po.pm
-REPLACE_PERL+=		lib/Locale/Po4a/Pod.pm
-REPLACE_PERL+=		lib/Locale/Po4a/Sgml.pm
-REPLACE_PERL+=		lib/Locale/Po4a/TeX.pm
-REPLACE_PERL+=		lib/Locale/Po4a/Text.pm
-REPLACE_PERL+=		lib/Locale/Po4a/TransTractor.pm
-REPLACE_PERL+=		lib/Locale/Po4a/Xml.pm
+REPLACE_PERL+=		lib/Locale/Po4a/*
 
 MAKE_ENV+=		COLUMNS=76
 
