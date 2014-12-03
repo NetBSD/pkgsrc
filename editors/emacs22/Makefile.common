@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2013/10/27 20:47:53 joerg Exp $
+# $NetBSD: Makefile.common,v 1.6 2014/12/03 13:58:57 joerg Exp $
 #
 # used by editors/emacs22/Makefile
 # used by editors/emacs22-nox11/Makefile
@@ -72,6 +72,7 @@ CONFIGURE_ENV+=	CPP=${CPP:Q}
 # NetBSD with native Clang doesn't provide libgcc, everything is in libc.
 pre-configure: fake-libgcc
 
+LDFLAGS+=	-L${PREFIX}/lib
 fake-libgcc:
 	${AR} q ${BUILDLINK_DIR}/lib/libgcc.a
 .endif
