@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4624 2014/12/04 01:18:49 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4625 2014/12/04 01:20:40 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6021,3 +6021,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/hebcal to 3.11 [mef 2014-12-04]
 	Updated time/p5-Data-ICal-DateTime to 0.81 [mef 2014-12-04]
 	Updated time/p5-DateTime-Event-ICal to 0.12 [mef 2014-12-04]
+	Updated time/p5-DateTime-Format-Flexible to 0.26 [mef 2014-12-04]
