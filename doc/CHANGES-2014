@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4647 2014/12/04 09:30:08 he Exp $
+$NetBSD: CHANGES-2014,v 1.4648 2014/12/04 10:08:23 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6058,3 +6058,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/p5-DBD-ODBC to 1.50 [mef 2014-12-04]
 	Updated databases/p5-DBD-Sybase to 1.15 [mef 2014-12-04]
 	Updated graphics/ImageMagick to 6.9.0.0 [he 2014-12-04]
+	Updated ham/fldigi to 3.22.02 [mef 2014-12-04]
