@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/12/01 00:05:38 obache Exp $
+# $NetBSD: Makefile,v 1.2 2014/12/04 12:03:28 obache Exp $
 
 DISTNAME=	opencc-0.4.2
-CATEGORIES=	converters
+CATEGORIES=	converters chinese
 MASTER_SITES=	http://dl.bintray.com/byvoid/opencc/
 
 MAINTAINER=	obache@NetBSD.org
