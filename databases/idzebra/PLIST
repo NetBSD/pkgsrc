@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/25 01:11:29 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/12/04 07:41:38 mef Exp $
+bin/idzebra-abs2dom
 bin/idzebra-config-2.0
 bin/zebraidx
 bin/zebraidx-2.0
@@ -27,6 +28,7 @@ lib/idzebra-2.0/modules/mod-grs-xml.la
 lib/idzebra-2.0/modules/mod-safari.la
 lib/idzebra-2.0/modules/mod-text.la
 lib/libidzebra-2.0.la
+man/man1/idzebra-abs2dom.1
 man/man1/idzebra-config-2.0.1
 man/man1/idzebra-config.1
 man/man1/zebraidx-2.0.1
@@ -57,6 +59,7 @@ share/doc/idzebra-2.0/grs-extended-marc-indexing.html
 share/doc/idzebra-2.0/grs-internal-representation.html
 share/doc/idzebra-2.0/grs.html
 share/doc/idzebra-2.0/icuchain-files.html
+share/doc/idzebra-2.0/idzebra-abs2dom.html
 share/doc/idzebra-2.0/idzebra-config.html
 share/doc/idzebra-2.0/index.html
 share/doc/idzebra-2.0/indexdata.html
