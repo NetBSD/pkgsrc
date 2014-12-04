@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2014/06/10 19:45:17 wiz Exp $
+# $NetBSD: Makefile,v 1.72.4.1 2014/12/04 19:28:20 tron Exp $
 
-DISTNAME=	pcre-8.35
+DISTNAME=	pcre-8.36
 PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/ \
