@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 19:14:55 wiz Exp $
+$NetBSD: distinfo,v 1.5 2014/12/04 04:28:36 mef Exp $
 
-SHA1 (pclock0.7.tgz) = f0bd6d5c73d84805362304cc29f657def2622284
-RMD160 (pclock0.7.tgz) = 5f5a487ea6dd4301c9d6067db5e228e6f88e9f3f
-Size (pclock0.7.tgz) = 17644 bytes
-SHA1 (patch-aa) = 572e374535f1c63ec571a563b5466226951fda08
-SHA1 (patch-ab) = d102aa199415cdbdab8aac3f2ac41de38620e8ea
-SHA1 (patch-ac) = 15c8bf81052744574dd005e8d64a58d63bc47406
+SHA1 (pclock0.9.tgz) = 0d455e47cfb1ce43cb0c75a1d274a2869f77a79e
+RMD160 (pclock0.9.tgz) = 179d4195bc22a3458354820907163bf7c7c718a7
+Size (pclock0.9.tgz) = 19754 bytes
+SHA1 (patch-aa) = f1627a4ff458170cd77b1e8e585f41f6ace52c12
+SHA1 (patch-ab) = d3bd23f114d85cac7cfca7ac51cf4d05a4ac72bc
+SHA1 (patch-ac) = 74dd633f740e645b4bed7c12dd70bad6384430f1
