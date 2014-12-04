@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4652 2014/12/04 12:38:40 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.4653 2014/12/04 12:59:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6063,3 +6063,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added inputmethod/brise version 0.30 [obache 2014-12-04]
 	Updated emulators/suse131_libdbus to 13.1nb5 [obache 2014-12-04]
 	Updated net/rabbitmq to 3.4.2 [fhajny 2014-12-04]
+	Added inputmethod/ibus-rime version 1.0 [obache 2014-12-04]
