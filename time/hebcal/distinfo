@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2009/03/05 03:18:44 smb Exp $
+$NetBSD: distinfo,v 1.2 2014/12/04 01:05:34 mef Exp $
 
-SHA1 (hebcal-3.7.tar.gz) = 3f11b75b66047961199a129d1b2cda04d648f426
-RMD160 (hebcal-3.7.tar.gz) = 93a171e57dedde53be5eee78e5fc5950c4267bc2
-Size (hebcal-3.7.tar.gz) = 205106 bytes
+SHA1 (hebcal-3.11.tar.gz) = 5c9fc9c8fd65f6128c8afc7563e486b46cc5f767
+RMD160 (hebcal-3.11.tar.gz) = 3a0d21bde2eefa9299fc62ab2eaef34685adb7af
+Size (hebcal-3.11.tar.gz) = 226647 bytes
