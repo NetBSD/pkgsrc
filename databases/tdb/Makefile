@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.23 2014/05/09 07:36:58 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2014/12/04 11:13:25 mef Exp $
 
-DISTNAME=	tdb-1.2.12
+DISTNAME=	tdb-1.3.3
 CATEGORIES=	databases
 MASTER_SITES=	http://www.samba.org/ftp/tdb/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/tdb/
 COMMENT=	Small database system which uses files to store data
+LICENSE=	gnu-gpl-v3
 
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
