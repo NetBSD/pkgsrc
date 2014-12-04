@@ -318,6 +318,7 @@ kerberos4		Enable Kerberos4 support.
 kermit-suid-uucp	Install kermit setuid uucp.
 klash			Install Konqueror flash plugin.
 kqueue			Enable support for kernel event notification mechanism.
+l10n			Enable language localization.
 lablgtk			Use lablgtk.
 lablgtk1		Use lablgtk1 (GTK1).
 ladspa			Enable Linux Audio Developers Simple Plugin API support.
