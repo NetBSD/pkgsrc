@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/05/09 12:22:41 agc Exp $
+$NetBSD: patch-ab,v 1.2 2014/12/04 04:28:36 mef Exp $
+
+Use wish from tk, instead of wishx (added by mef) 
 
 --- pclock.sh	2002/05/09 12:07:01	1.1
 +++ pclock.sh	2002/05/09 12:07:17

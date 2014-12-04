@@ -1,4 +1,10 @@
-$NetBSD: patch-ac,v 1.1 2004/02/15 23:24:36 lukem Exp $
+$NetBSD: patch-ac,v 1.2 2014/12/04 04:28:36 mef Exp $
+
+Prevent error dialog when the cursor has disappeared whilst displaying
+a popup `tip', as can happen when running x11/unclutter and leave the
+mouse over an item with a tip; the tip is displayed, the mouse hides,
+and now pck-timer doesn't barf when the mouse reappears.
+Fix from Ben Elliston, who knows much more tcl than I do.
 
 --- tips.tcl.~1~	2001-01-24 14:22:46.000000000 +1100
 +++ tips.tcl
