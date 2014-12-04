@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2014/12/02 09:57:33 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2014/12/04 12:06:10 obache Exp $
 
 DISTNAME=	libpinyin-1.0.0
-CATEGORIES=	textproc
+CATEGORIES=	textproc chinese
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpinyin/}
 
 MAINTAINER=	obache@NetBSD.org
