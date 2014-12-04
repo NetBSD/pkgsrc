@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.215 2014/09/01 20:53:24 shattered Exp $
+# $NetBSD: Makefile,v 1.216 2014/12/04 19:57:01 rodent Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -174,6 +174,7 @@ SUBDIR+=	suse121_32_expat
 SUBDIR+=	suse121_32_fontconfig
 SUBDIR+=	suse121_32_freetype2
 SUBDIR+=	suse121_32_glx
+SUBDIR+=	suse121_32_gstreamer
 SUBDIR+=	suse121_32_gtk2
 SUBDIR+=	suse121_32_krb5
 SUBDIR+=	suse121_32_libcups
@@ -189,6 +190,7 @@ SUBDIR+=	suse121_32_openmotif
 SUBDIR+=	suse121_32_openssl
 SUBDIR+=	suse121_32_qt4
 SUBDIR+=	suse121_32_slang
+SUBDIR+=	suse121_32_sqlite3
 SUBDIR+=	suse121_32_x11
 SUBDIR+=	suse121_alsa
 SUBDIR+=	suse121_aspell
@@ -198,6 +200,7 @@ SUBDIR+=	suse121_expat
 SUBDIR+=	suse121_fontconfig
 SUBDIR+=	suse121_freetype2
 SUBDIR+=	suse121_glx
+SUBDIR+=	suse121_gstreamer
 SUBDIR+=	suse121_gtk2
 SUBDIR+=	suse121_krb5
 SUBDIR+=	suse121_libcups
@@ -214,6 +217,7 @@ SUBDIR+=	suse121_openmotif
 SUBDIR+=	suse121_openssl
 SUBDIR+=	suse121_qt4
 SUBDIR+=	suse121_slang
+SUBDIR+=	suse121_sqlite3
 SUBDIR+=	suse121_x11
 SUBDIR+=	suse131_32_alsa
 SUBDIR+=	suse131_32_aspell
