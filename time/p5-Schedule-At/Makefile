@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2014/05/29 23:37:53 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/12/04 02:04:09 mef Exp $
 
-DISTNAME=	Schedule-At-1.14
+DISTNAME=	Schedule-At-1.15
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Schedule/}
 
