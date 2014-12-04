@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2014/11/20 09:14:58 obache Exp $
+# $NetBSD: Makefile,v 1.8 2014/12/04 12:18:31 obache Exp $
 
 PKGNAME=	suse_libdbus-${SUSE_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	emulators
-RPMUPDPKGS+=	dbus-1-1.8.10-4.24.2.${SUSE_ARCH}
-RPMUPDPKGS+=	libdbus-1-3-1.8.10-4.24.1.${SUSE_ARCH}
+RPMUPDPKGS+=	dbus-1-1.8.12-4.28.2.${SUSE_ARCH}
+RPMUPDPKGS+=	libdbus-1-3-1.8.12-4.28.1.${SUSE_ARCH}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Linux compatibility package for DBus
