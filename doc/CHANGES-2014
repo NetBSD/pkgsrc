@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4627 2014/12/04 01:26:28 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4628 2014/12/04 01:28:42 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6024,3 +6024,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/p5-DateTime-Format-Flexible to 0.26 [mef 2014-12-04]
 	Updated time/p5-DateTime-Format-HTTP to 0.42 [mef 2014-12-04]
 	Updated time/p5-DateTime-Format-MySQL to 0.05 [mef 2014-12-04]
+	Updated time/p5-DateTime-Format-Pg to 0.16010 [mef 2014-12-04]
