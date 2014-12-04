@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4662 2014/12/04 19:55:21 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.4663 2014/12/04 20:09:52 agc Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6077,3 +6077,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added emulators/suse121_32_sqlite3 version 12.1 [rodent 2014-12-04]
 	Added emulators/suse121_gstreamer version 12.1 [rodent 2014-12-04]
 	Added emulators/suse121_32_gstreamer version 12.1 [rodent 2014-12-04]
+	Updated security/netpgpverify to 20141204 [agc 2014-12-04]
