@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4630 2014/12/04 02:04:18 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4631 2014/12/04 02:14:47 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6027,3 +6027,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/p5-DateTime-Format-Pg to 0.16010 [mef 2014-12-04]
 	Updated time/p5-DateTime-Set to 0.3400 [mef 2014-12-04]
 	Updated time/p5-Schedule-At to 1.15 [mef 2014-12-04]
+	Updated time/p5-Schedule-Cron-Events to 1.93 [mef 2014-12-04]
