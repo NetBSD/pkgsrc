@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4658 2014/12/04 18:59:32 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.4659 2014/12/04 19:47:20 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6073,3 +6073,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/suse121_qt4 to 12.1nb4 [rodent 2014-12-04]
 	Updated www/ikiwiki to 3.20141016nb1 [schmonz 2014-12-04]
 	Updated emulators/suse131_qt4 to 13.1nb3 [rodent 2014-12-04]
+	Added emulators/suse121_sqlite3 version 12.1 [rodent 2014-12-04]
