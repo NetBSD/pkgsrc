@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4655 2014/12/04 15:58:53 he Exp $
+$NetBSD: CHANGES-2014,v 1.4656 2014/12/04 16:38:26 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6070,3 +6070,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/p5-Mail-Audit to 2.228 [mef 2014-12-04]
 	Updated mail/p5-Mail-Box to 2.117 [mef 2014-12-04]
 	Updated security/opendnssec to 1.4.7 [he 2014-12-04]
+	Updated emulators/suse121_qt4 to 12.1nb4 [rodent 2014-12-04]
