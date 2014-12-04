@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.2 2014/04/22 14:45:32 asau Exp $
+$NetBSD: distinfo,v 1.3 2014/12/04 07:41:38 mef Exp $
 
-SHA1 (idzebra-2.0.47.tar.gz) = 03453e7ce345a488b7151099c28a0924cd5c2cf7
-RMD160 (idzebra-2.0.47.tar.gz) = ab03071ce1b83a95e719d8a8f6526dfea3a6fedd
-Size (idzebra-2.0.47.tar.gz) = 1775645 bytes
-SHA1 (patch-configure) = 37b22715dd268fca6668201cd713467843bd6e9d
-SHA1 (patch-m4_libtool.m4) = 8528ec074d3c3a83e335545208d2568e5b333bbf
+SHA1 (idzebra-2.0.59.tar.gz) = 1573927c2bf5aee1b393f3641cf3a79a02c2b2f4
+RMD160 (idzebra-2.0.59.tar.gz) = 94c4ede3261bba13233fc5991f9d811e15827dac
+Size (idzebra-2.0.59.tar.gz) = 1933993 bytes
