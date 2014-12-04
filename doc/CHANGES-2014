@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4636 2014/12/04 02:42:00 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4637 2014/12/04 02:46:03 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6033,3 +6033,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/p5-Time-Clock to 1.03 [mef 2014-12-04]
 	Updated time/p5-Time-Duration-Parse to 0.11 [mef 2014-12-04]
 	Updated time/p5-Time-Format to 1.12 [mef 2014-12-04]
+	Updated time/p5-Time-Piece to 1.29 [mef 2014-12-04]
