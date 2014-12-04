@@ -1,0 +1,10 @@
+La brise: the official Rime schema repository.
+
+providing:
+  - default.yaml: Rime default settings
+  - symbols.yaml: punctuation and special characters
+  - essay: a vocabulary and language model
+  - preset schemata: luna_pinyin, terra_pinyin, bopomofo, cangjie5, stroke
+  - supplemental schemata: wubi86, quick5, double_pinyin, combo_pinyin,
+    jyutping, wugniu, ipa_xsampa, sampheng, zyenpheng
+  - extra schemata: (included in the source package but not installed)
