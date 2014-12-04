@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2008/11/17 23:27:42 he Exp $
+$NetBSD: distinfo,v 1.4 2014/12/04 13:17:55 mef Exp $
 
-SHA1 (MIME-Lite-HTML-1.23.tar.gz) = 0a46cf56f0aa7438bedaf412f6d9731a374e961b
-RMD160 (MIME-Lite-HTML-1.23.tar.gz) = 0f48e266470b7de2d5fcbf991d6cbb336b63d59f
-Size (MIME-Lite-HTML-1.23.tar.gz) = 62687 bytes
+SHA1 (MIME-Lite-HTML-1.24.tar.gz) = 1fdb2bda700a2e7eb81eb46113447173f87b6e01
+RMD160 (MIME-Lite-HTML-1.24.tar.gz) = 2b92a5953850d59476a6febcf1a93fcc73ef00a3
+Size (MIME-Lite-HTML-1.24.tar.gz) = 63640 bytes
