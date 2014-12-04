@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4618 2014/12/03 22:56:00 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.4619 2014/12/04 00:23:58 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6015,3 +6015,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/py-phonenumbers to 7.0.1 [rodent 2014-12-03]
 	Removed chat/msnre [rodent 2014-12-03]
 	Updated www/py-django-tastypie to 0.12.1 [rodent 2014-12-03]
+	Updated databases/p5-DBIx-Abstract to 1.04 [wen 2014-12-04]
