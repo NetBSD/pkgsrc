@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4623 2014/12/04 01:16:33 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4624 2014/12/04 01:18:49 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6020,3 +6020,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/guile-lib to 0.2.2 [gdt 2014-12-04]
 	Updated time/hebcal to 3.11 [mef 2014-12-04]
 	Updated time/p5-Data-ICal-DateTime to 0.81 [mef 2014-12-04]
+	Updated time/p5-DateTime-Event-ICal to 0.12 [mef 2014-12-04]
