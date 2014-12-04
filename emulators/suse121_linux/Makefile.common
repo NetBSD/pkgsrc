@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2014/10/05 16:41:06 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2014/12/04 22:06:03 rodent Exp $
 #
 # used by emulators/suse121_alsa/Makefile
 # used by emulators/suse121_alsa/Makefile
@@ -16,6 +16,8 @@
 # used by emulators/suse121_freetype2/Makefile
 # used by emulators/suse121_glx/Makefile
 # used by emulators/suse121_glx/Makefile
+# used by emulators/suse121_gstreamer/Makefile
+# used by emulators/suse121_gstreamer/Makefile
 # used by emulators/suse121_gtk2/Makefile
 # used by emulators/suse121_gtk2/Makefile
 # used by emulators/suse121_krb5/Makefile
@@ -46,6 +48,8 @@
 # used by emulators/suse121_qt4/Makefile
 # used by emulators/suse121_slang/Makefile
 # used by emulators/suse121_slang/Makefile
+# used by emulators/suse121_sqlite3/Makefile
+# used by emulators/suse121_sqlite3/Makefile
 # used by emulators/suse121_x11/Makefile
 # used by emulators/suse121_x11/Makefile
 # used by meta-pkgs/suse121/Makefile
