@@ -35,8 +35,6 @@
 
 #include "verify.h"
 
-#include "array.h"
-
 /* print the time nicely */
 static void
 ptime(int64_t secs)
@@ -95,6 +93,7 @@ verify_data(pgpv_t *pgp, const char *cmd, const char *inname, char *in, ssize_t 
 	size_t		 size;
 	size_t		 cookie;
 	char		*data;
+	int		 el;
 
 	memset(&cursor, 0x0, sizeof(cursor));
 	if (strcasecmp(cmd, "cat") == 0) {
@@ -109,7 +108,8 @@ verify_data(pgpv_t *pgp, const char *cmd, const char *inname, char *in, ssize_t 
 		if (pgpv_verify(&cursor, pgp, in, cc)) {
 			printf("Good signature for %s made ", inname);
 			ptime(cursor.sigtime);
-			pentry(pgp, ARRAY_ELEMENT(cursor.found, 0), modifiers);
+			el = pgpv_get_cursor_element(&cursor, 0);
+			pentry(pgp, el, modifiers);
 			return 1;
 		}
 		fprintf(stderr, "Signature did not match contents -- %s\n", cursor.why);
@@ -122,7 +122,6 @@ verify_data(pgpv_t *pgp, const char *cmd, const char *inname, char *in, ssize_t 
 int
 main(int argc, char **argv)
 {
-	const char	*modifiers;
 	const char	*keyring;
 	const char	*cmd;
 	ssize_t		 cc;
@@ -138,7 +137,6 @@ main(int argc, char **argv)
 	ssh = 0;
 	ok = 1;
 	cmd = "verify";
-	modifiers = NULL;
 	while ((i = getopt(argc, argv, "S:c:k:v")) != -1) {
 		switch(i) {
 		case 'S':
