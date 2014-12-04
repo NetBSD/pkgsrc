@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4645 2014/12/04 06:56:00 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4646 2014/12/04 08:19:57 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6054,3 +6054,6 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/p5-CatalystX-CRUD to 0.56 [mef 2014-12-04]
 	Updated databases/p5-CatalystX-CRUD-Model-RDBO to 0.30.2 [mef 2014-12-04]
 	Updated databases/p5-CatalystX-CRUD-ModelAdapter-DBIC to 0.13 [mef 2014-12-04]
+	Updated databases/p5-DBD-CSV to 0.46 [mef 2014-12-04]
+	Updated databases/p5-DBD-ODBC to 1.50 [mef 2014-12-04]
+	Updated databases/p5-DBD-Sybase to 1.15 [mef 2014-12-04]
