@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/12/04 19:51:42 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2014/12/04 22:03:01 rodent Exp $
 
 PKGNAME=	suse_gstreamer-${SUSE_VERSION}
 CATEGORIES=	emulators
@@ -10,6 +10,8 @@ RPMPKGS+=	libgstrtspserver-0_10-0-0.10.8-14.1.2.${SUSE_ARCH}
 
 MAINTAINER=	rodent@NetBSD.org
 COMMENT=	Linux compatibility package for gstreamer
+
+EMUL_MODULES.linux=	base
 
 PLIST_SRC=	${RPM2PKG_PLIST}
 
