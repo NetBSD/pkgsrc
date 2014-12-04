@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4621 2014/12/04 01:05:40 gdt Exp $
+$NetBSD: CHANGES-2014,v 1.4622 2014/12/04 01:05:43 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6018,3 +6018,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/p5-DBIx-Abstract to 1.04 [wen 2014-12-04]
 	Updated databases/p5-DBIx-Class-Candy to 0.002107 [wen 2014-12-04]
 	Updated devel/guile-lib to 0.2.2 [gdt 2014-12-04]
+	Updated time/hebcal to 3.11 [mef 2014-12-04]
