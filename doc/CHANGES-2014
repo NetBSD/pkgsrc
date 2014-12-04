@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4634 2014/12/04 02:34:09 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4635 2014/12/04 02:38:54 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6031,3 +6031,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/p5-Template-Plugin-DateTime to 0.06.002 [mef 2014-12-04]
 	Updated time/p5-Test-MockTime to 0.13 [mef 2014-12-04]
 	Updated time/p5-Time-Clock to 1.03 [mef 2014-12-04]
+	Updated time/p5-Time-Duration-Parse to 0.11 [mef 2014-12-04]
