@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4649 2014/12/04 11:13:34 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4650 2014/12/04 12:10:18 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6060,3 +6060,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/ImageMagick to 6.9.0.0 [he 2014-12-04]
 	Updated ham/fldigi to 3.22.02 [mef 2014-12-04]
 	Updated databases/tdb to 1.3.3 [mef 2014-12-04]
+	Added inputmethod/brise version 0.30 [obache 2014-12-04]
