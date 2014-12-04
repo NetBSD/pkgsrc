@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.8 2012/03/10 08:03:57 sbd Exp $
+$NetBSD: patch-ab,v 1.8.22.1 2014/12/04 19:28:20 tron Exp $
 
 Remove a feeble attempt at providing ABI compatibility for the C++ portion
 of the PCRE library. Relying on the C++ compiler to crunch symbols in a
@@ -6,9 +6,9 @@ particular way is platform dependent at best, and the comments indicate
 that this was done for OSX.
 Also, the test misfired on SunOS leading to breakage (PR pkg/38768).
 
---- configure.orig	2012-02-04 12:55:43.000000000 +0000
+--- configure.orig	2014-09-26 09:06:46.000000000 +0000
 +++ configure
-@@ -16189,6 +16189,8 @@ ac_compile='$CXX -c $CXXFLAGS $CPPFLAGS
+@@ -17603,6 +17603,8 @@ ac_compile='$CXX -c $CXXFLAGS $CPPFLAGS 
  ac_link='$CXX -o conftest$ac_exeext $CXXFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS >&5'
  ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
  
@@ -17,7 +17,7 @@ Also, the test misfired on SunOS leading to breakage (PR pkg/38768).
  
  # Older versions of pcre defined pcrecpp::no_arg, but in new versions
  # it's called pcrecpp::RE::no_arg.  For backwards ABI compatibility,
-@@ -16231,6 +16233,9 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -17645,6 +17647,9 @@ rm -f core conftest.err conftest.$ac_obj
  done
  LDFLAGS="$OLD_LDFLAGS"
  
@@ -27,7 +27,7 @@ Also, the test misfired on SunOS leading to breakage (PR pkg/38768).
  # We could be more clever here, given we're doing AC_SUBST with this
  # (eg set a var to be the name of the include file we want). But we're not
  # so it's easy to change back to 'regular' autoconf vars if we needed to.
-@@ -17014,6 +17019,10 @@ if test "$enable_pcretest_libreadline" =
+@@ -18952,6 +18957,10 @@ elif test "$enable_pcretest_libreadline"
  
  $as_echo "#define SUPPORT_LIBREADLINE /**/" >>confdefs.h
  
