@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2014/06/01 16:35:33 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.3 2014/12/04 23:41:39 wiz Exp $
 
 DISTNAME=	evermono
-VERSION=	6.2.1
+VERSION=	7.0.0
 PKGNAME=	evermono-ttf-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.evertype.com/emono/
 EXTRACT_SUFX=	.zip
