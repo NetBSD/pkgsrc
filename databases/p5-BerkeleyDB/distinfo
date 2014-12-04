@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2012/03/22 08:38:27 sno Exp $
+$NetBSD: distinfo,v 1.18 2014/12/04 06:02:16 mef Exp $
 
-SHA1 (BerkeleyDB-0.51.tar.gz) = 913b0b361e3de1967c821a21a4db823f6179e2b3
-RMD160 (BerkeleyDB-0.51.tar.gz) = 354389fe70cfbaa01baffb22dbb51a0652a2f4d5
-Size (BerkeleyDB-0.51.tar.gz) = 196814 bytes
+SHA1 (BerkeleyDB-0.54.tar.gz) = eda2b2420544876dbcc9578e508f3cfb82f1f2ed
+RMD160 (BerkeleyDB-0.54.tar.gz) = b6c78bb9203cb5184c03606d99630acbdf8f4eb7
+Size (BerkeleyDB-0.54.tar.gz) = 202422 bytes
