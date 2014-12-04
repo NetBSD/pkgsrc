@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2013/08/23 00:56:03 wen Exp $
+$NetBSD: distinfo,v 1.15 2014/12/04 06:40:51 mef Exp $
 
-SHA1 (CatalystX-CRUD-0.55.tar.gz) = 2fd82a05fbce4991178ec2ac760d9e21901e256b
-RMD160 (CatalystX-CRUD-0.55.tar.gz) = 5e55b445d51153dd4748838ed98be51253286be0
-Size (CatalystX-CRUD-0.55.tar.gz) = 41926 bytes
+SHA1 (CatalystX-CRUD-0.56.tar.gz) = ccc8c6a9d12ec011099470711ed58c31cfc601ca
+RMD160 (CatalystX-CRUD-0.56.tar.gz) = c6fcf31116323eb517b1b97745e85964a360656b
+Size (CatalystX-CRUD-0.56.tar.gz) = 42204 bytes
