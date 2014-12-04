@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4632 2014/12/04 02:28:03 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4633 2014/12/04 02:32:11 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6029,3 +6029,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/p5-Schedule-At to 1.15 [mef 2014-12-04]
 	Updated time/p5-Schedule-Cron-Events to 1.93 [mef 2014-12-04]
 	Updated time/p5-Template-Plugin-DateTime to 0.06.002 [mef 2014-12-04]
+	Updated time/p5-Test-MockTime to 0.13 [mef 2014-12-04]
