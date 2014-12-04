@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4653 2014/12/04 12:59:38 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4654 2014/12/04 14:09:29 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6064,3 +6064,8 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/suse131_libdbus to 13.1nb5 [obache 2014-12-04]
 	Updated net/rabbitmq to 3.4.2 [fhajny 2014-12-04]
 	Added inputmethod/ibus-rime version 1.0 [obache 2014-12-04]
+	Updated mail/p5-Email-Stuff to 2.105 [mef 2014-12-04]
+	Updated mail/p5-IMAP-Admin to 1.6.7 [mef 2014-12-04]
+	Updated mail/p5-MIME-Lite-HTML to 1.24 [mef 2014-12-04]
+	Updated mail/p5-Mail-Audit to 2.228 [mef 2014-12-04]
+	Updated mail/p5-Mail-Box to 2.117 [mef 2014-12-04]
