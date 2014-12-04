@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.82 2014/10/13 09:08:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.83 2014/12/04 09:28:24 he Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/MagickCore-config
@@ -125,6 +125,7 @@ include/ImageMagick-${IM_MAJOR_LIB_VER}/magick/transform.h
 include/ImageMagick-${IM_MAJOR_LIB_VER}/magick/type.h
 include/ImageMagick-${IM_MAJOR_LIB_VER}/magick/utility.h
 include/ImageMagick-${IM_MAJOR_LIB_VER}/magick/version.h
+include/ImageMagick-${IM_MAJOR_LIB_VER}/magick/vision.h
 include/ImageMagick-${IM_MAJOR_LIB_VER}/magick/widget.h
 include/ImageMagick-${IM_MAJOR_LIB_VER}/magick/xml-tree.h
 include/ImageMagick-${IM_MAJOR_LIB_VER}/magick/xwindow.h
@@ -216,6 +217,9 @@ share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/logo-sm.png
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/logo.jpg
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/logo.png
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/montage.jpg
+share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/objects.gif
+share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/objects.jpg
+share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/objects.png
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/navy.png
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/patterns/bricks.png
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/images/patterns/checkerboard.png
@@ -1120,6 +1124,7 @@ share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/compare.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/compose.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/composite.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/conjure.html
+share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/connected-components.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/contact.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/convert.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/display.html
