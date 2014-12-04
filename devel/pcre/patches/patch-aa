@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.15 2012/03/02 15:24:48 wiz Exp $
+$NetBSD: patch-aa,v 1.15.22.1 2014/12/04 19:28:20 tron Exp $
 
 Use pkgsrc's COMPILER_RPATH_FLAG variable, so this works on all pkgsrc platforms.
 
---- pcre-config.in.orig	2012-01-21 16:00:28.000000000 +0000
+--- pcre-config.in.orig	2014-01-31 14:32:51.000000000 +0000
 +++ pcre-config.in
-@@ -28,15 +28,7 @@ if test $# -eq 0; then
+@@ -32,15 +32,7 @@ if test $# -eq 0; then
        exit 1
  fi
  
