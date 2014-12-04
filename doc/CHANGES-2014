@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4657 2014/12/04 17:28:50 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.4658 2014/12/04 18:59:32 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6072,3 +6072,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/opendnssec to 1.4.7 [he 2014-12-04]
 	Updated emulators/suse121_qt4 to 12.1nb4 [rodent 2014-12-04]
 	Updated www/ikiwiki to 3.20141016nb1 [schmonz 2014-12-04]
+	Updated emulators/suse131_qt4 to 13.1nb3 [rodent 2014-12-04]
