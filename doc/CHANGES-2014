@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4643 2014/12/04 05:24:19 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.4644 2014/12/04 05:36:56 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6043,3 +6043,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/firefox31-l10n to 31.3.0 [ryoon 2014-12-04]
 	Updated mail/thunderbird to 31.3.0 [ryoon 2014-12-04]
 	Updated mail/thunderbird-l10n to 31.3.0 [ryoon 2014-12-04]
+	Updated www/firefox24 to 24.8.1 [ryoon 2014-12-04]
+	Updated www/firefox24-l10n to 24.8.1 [ryoon 2014-12-04]
+	Updated mail/thunderbird24 to 24.8.1 [ryoon 2014-12-04]
+	Updated mail/thunderbird24-l10n to 24.8.1 [ryoon 2014-12-04]
