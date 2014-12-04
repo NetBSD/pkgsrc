@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2014/06/05 05:04:38 obache Exp $
+# $NetBSD: Makefile,v 1.66 2014/12/04 07:15:32 jnemeth Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -52,6 +52,7 @@ SUBDIR+=	kinput2
 SUBDIR+=	libchewing
 SUBDIR+=	libchewing02
 SUBDIR+=	libhangul
+SUBDIR+=	librime
 SUBDIR+=	libskk
 SUBDIR+=	libtabe
 SUBDIR+=	m17n-im-config
