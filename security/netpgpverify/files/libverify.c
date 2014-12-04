@@ -56,6 +56,14 @@
 #define USE_ARG(x)	/*LINTED*/(void)&(x)
 #endif
 
+#ifndef __dead
+#define __dead				__attribute__((__noreturn__))
+#endif
+
+#ifndef __printflike
+#define __printflike(n, m)		__attribute__((format(printf,n,m)))
+#endif
+
 #define BITS_TO_BYTES(b)		(((b) + (CHAR_BIT - 1)) / CHAR_BIT)
 
 /* packet types */
@@ -151,7 +159,7 @@
 
 /* Forward declarations */
 static int read_all_packets(pgpv_t */*pgp*/, pgpv_mem_t */*mem*/, const char */*op*/);
-static int read_binary_file(pgpv_t */*pgp*/, const char */*op*/, const char */*fmt*/, ...);
+static int read_binary_file(pgpv_t */*pgp*/, const char */*op*/, const char */*fmt*/, ...) __printflike(3, 4);
 static int read_binary_memory(pgpv_t */*pgp*/, const char */*op*/, const void */*memory*/, size_t /*size*/);
 
 /* read a file into the pgpv_mem_t struct */
@@ -1994,7 +2002,7 @@ setup_data(pgpv_cursor_t *cursor, pgpv_t *pgp, const void *p, ssize_t size)
 		if (is_armored(buf, sizeof(buf))) {
 			read_ascii_armor_file(cursor, p);
 		} else {
-			read_binary_file(pgp, "signature", "%s", p);
+			read_binary_file(pgp, "signature", "%s", (const char *)p);
 		}
 		fclose(fp);
 	} else {
@@ -2221,7 +2229,7 @@ findstr(str_t *array, const char *name)
 }
 
 /* read public key from the ssh pubkey file */
-static int
+static __printflike(3, 4) int
 read_ssh_file(pgpv_t *pgp, pgpv_primarykey_t *primary, const char *fmt, ...)
 {
 	pgpv_signed_userid_t	 userid;
@@ -2589,6 +2597,16 @@ match_sig_id(pgpv_cursor_t *cursor, pgpv_signature_t *signature, pgpv_litdata_t 
 	return match_sig(cursor, signature, pubkey, data, insize);
 }
 
+/* get an element from the found array */
+int
+pgpv_get_cursor_element(pgpv_cursor_t *cursor, size_t element)
+{
+	if (cursor && element < ARRAY_COUNT(cursor->found)) {
+		return (int)ARRAY_ELEMENT(cursor->found, element);
+	}
+	return -1;
+}
+
 /* verify the signed packets we have */
 size_t
 pgpv_verify(pgpv_cursor_t *cursor, pgpv_t *pgp, const void *p, ssize_t size)
@@ -2672,7 +2690,7 @@ pgpv_read_pubring(pgpv_t *pgp, const void *keyring, ssize_t size)
 	if (keyring) {
 		return (size > 0) ?
 			read_binary_memory(pgp, "pubring", keyring, (size_t)size) :
-			read_binary_file(pgp, "pubring", "%s", keyring);
+			read_binary_file(pgp, "pubring", "%s", (const char *)keyring);
 	}
 	return read_binary_file(pgp, "pubring", "%s/%s", nonnull_getenv("HOME"), ".gnupg/pubring.gpg");
 }
@@ -2687,10 +2705,10 @@ pgpv_read_ssh_pubkeys(pgpv_t *pgp, const void *keyring, ssize_t size)
 		return 0;
 	}
 	if (keyring) {
-		if (!read_ssh_file(pgp, &primary, "%s", keyring)) {
+		if (!read_ssh_file(pgp, &primary, "%s", (const char *)keyring)) {
 			return 0;
 		}
-	} else if (!read_ssh_file(pgp, &primary, "pubring", "%s/%s", nonnull_getenv("HOME"), ".ssh/id_rsa.pub")) {
+	} else if (!read_ssh_file(pgp, &primary, "%s/%s", nonnull_getenv("HOME"), ".ssh/id_rsa.pub")) {
 		return 0;
 	}
 	ARRAY_APPEND(pgp->primaries, primary);
