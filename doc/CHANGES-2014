@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4642 2014/12/04 04:55:20 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4643 2014/12/04 05:24:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6039,3 +6039,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/projclock to 0.9 [mef 2014-12-04]
 	Updated time/wyrd to 1.4.6 [mef 2014-12-04]
 	Updated time/xdaliclock to 2.41 [mef 2014-12-04]
+	Updated www/firefox31 to 31.3.0 [ryoon 2014-12-04]
+	Updated www/firefox31-l10n to 31.3.0 [ryoon 2014-12-04]
+	Updated mail/thunderbird to 31.3.0 [ryoon 2014-12-04]
+	Updated mail/thunderbird-l10n to 31.3.0 [ryoon 2014-12-04]
