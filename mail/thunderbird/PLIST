@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.54 2014/11/30 10:23:29 markd Exp $
+@comment $NetBSD: PLIST,v 1.55 2014/12/04 05:22:05 ryoon Exp $
 bin/thunderbird
 lib/thunderbird/application.ini
 lib/thunderbird/blocklist.xml
@@ -1816,6 +1816,7 @@ lib/thunderbird/components/SiteSpecificUserAgent.js
 lib/thunderbird/components/TCPServerSocket.js
 lib/thunderbird/components/TCPSocket.js
 lib/thunderbird/components/TCPSocketParentIntermediary.js
+lib/thunderbird/components/TelemetryStartup.js
 lib/thunderbird/components/Webapps.js
 lib/thunderbird/components/aboutRedirector.js
 lib/thunderbird/components/addonManager.js
