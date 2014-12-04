@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.214 2014/12/01 13:43:55 jperkin Exp $
+# $NetBSD: bootstrap,v 1.215 2014/12/04 10:36:02 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -1268,9 +1268,6 @@ case "$need_extras" in
 yes)	build_package "pkgtools/bootstrap-extras";;
 esac
 build_package "pkgtools/pkg_install"
-case "$cwrappers" in
-yes)	build_package "pkgtools/cwrappers";;
-esac
 
 etc_mk_conf="$sysconfdir/mk.conf"
 
