@@ -1,4 +1,4 @@
-# $NetBSD: emulator.mk,v 1.7 2014/04/08 08:20:06 obache Exp $
+# $NetBSD: emulator.mk,v 1.8 2014/12/04 19:42:17 rodent Exp $
 #
 # This file is included by linux-suse.mk in the emulator framework.
 #
@@ -31,6 +31,7 @@ DEPENDS_suse-12.1.expat?=	suse_expat${_SUSE_VERSION_REQD}:../../emulators/suse12
 DEPENDS_suse-12.1.fontconfig?=	suse_fontconfig${_SUSE_VERSION_REQD}:../../emulators/suse121_fontconfig
 DEPENDS_suse-12.1.freetype2?=	suse_freetype2${_SUSE_VERSION_REQD}:../../emulators/suse121_freetype2
 DEPENDS_suse-12.1.glx?=		suse_glx${_SUSE_VERSION_REQD}:../../emulators/suse121_glx
+DEPENDS_suse-12.1.gstreamer?=	suse_gstreamer${_SUSE_VERSION_REQD}:../../emulators/suse121_gstreamer
 DEPENDS_suse-12.1.gtk2?=	suse_gtk2${_SUSE_VERSION_REQD}:../../emulators/suse121_gtk2
 DEPENDS_suse-12.1.jpeg?=	suse_libjpeg${_SUSE_VERSION_REQD}:../../emulators/suse121_libjpeg
 DEPENDS_suse-12.1.krb5?=	suse_krb5${_SUSE_VERSION_REQD}:../../emulators/suse121_krb5
@@ -41,6 +42,7 @@ DEPENDS_suse-12.1.openssl?=	suse_openssl${_SUSE_VERSION_REQD}:../../emulators/su
 DEPENDS_suse-12.1.png?=		suse_libpng${_SUSE_VERSION_REQD}:../../emulators/suse121_libpng
 DEPENDS_suse-12.1.qt4?=		suse_qt4${_SUSE_VERSION_REQD}:../../emulators/suse121_qt4
 DEPENDS_suse-12.1.slang?=	suse_slang${_SUSE_VERSION_REQD}:../../emulators/suse121_slang
+DEPENDS_suse-12.1.sqlite3?=	suse_sqlite3${_SUSE_VERSION_REQD}:../../emulators/suse121_sqlite3
 DEPENDS_suse-12.1.tiff?=	suse_libtiff${_SUSE_VERSION_REQD}:../../emulators/suse121_libtiff
 DEPENDS_suse-12.1.x11?=		suse_x11${_SUSE_VERSION_REQD}:../../emulators/suse121_x11
 DEPENDS_suse-12.1.xml2?=	suse_libxml2${_SUSE_VERSION_REQD}:../../emulators/suse121_libxml2
