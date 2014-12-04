@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4641 2014/12/04 04:51:18 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4642 2014/12/04 04:55:20 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6038,3 +6038,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/p5-Time-modules to 2013.0912 [mef 2014-12-04]
 	Updated time/projclock to 0.9 [mef 2014-12-04]
 	Updated time/wyrd to 1.4.6 [mef 2014-12-04]
+	Updated time/xdaliclock to 2.41 [mef 2014-12-04]
