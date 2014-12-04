@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2014/11/30 10:34:56 markd Exp $
+$NetBSD: distinfo,v 1.4 2014/12/04 05:18:58 ryoon Exp $
 
-SHA1 (firefox-31.2.0esr.source.tar.bz2) = 9ddfde95fcd19633446f859c5bca77c62815d390
-RMD160 (firefox-31.2.0esr.source.tar.bz2) = 51d1600f1f2ee84cdef97a343b0ab03c8a0e4859
-Size (firefox-31.2.0esr.source.tar.bz2) = 147362334 bytes
+SHA1 (firefox-31.3.0esr.source.tar.bz2) = 88b4c4de59e0c379e50ac28a8a9c289662e7a064
+RMD160 (firefox-31.3.0esr.source.tar.bz2) = 006a5e98190d59f63fb7592cb90fcdcf2f687b0c
+Size (firefox-31.3.0esr.source.tar.bz2) = 148022631 bytes
 SHA1 (patch-aa) = 381ec50c3e66a2637f19401ac2c5ec4a29dc5627
 SHA1 (patch-ak) = 971ddb1f12b14bcee604c9d7e72da5e7bf47d9be
 SHA1 (patch-al) = cca5df21d018bb9f428ad26d00718f33afe88ec5
