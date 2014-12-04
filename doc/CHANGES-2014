@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4644 2014/12/04 05:36:56 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.4645 2014/12/04 06:56:00 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6047,3 +6047,10 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/firefox24-l10n to 24.8.1 [ryoon 2014-12-04]
 	Updated mail/thunderbird24 to 24.8.1 [ryoon 2014-12-04]
 	Updated mail/thunderbird24-l10n to 24.8.1 [ryoon 2014-12-04]
+	Updated databases/p5-BerkeleyDB to 0.54 [mef 2014-12-04]
+	Updated databases/p5-Apache-DBI to 1.12 [mef 2014-12-04]
+	Updated databases/p5-BDB to 1.91 [mef 2014-12-04]
+	Updated databases/p5-Catalyst-Model-DBIC-Schema to 0.65 [mef 2014-12-04]
+	Updated databases/p5-CatalystX-CRUD to 0.56 [mef 2014-12-04]
+	Updated databases/p5-CatalystX-CRUD-Model-RDBO to 0.30.2 [mef 2014-12-04]
+	Updated databases/p5-CatalystX-CRUD-ModelAdapter-DBIC to 0.13 [mef 2014-12-04]
