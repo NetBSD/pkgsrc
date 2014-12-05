@@ -1,11 +1,14 @@
-$NetBSD: patch-aa,v 1.1.1.1 2011/01/11 20:42:34 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2014/12/05 17:20:56 rodent Exp $
 
---- setup.py.orig	2010-03-23 10:30:49.000000000 +0000
-+++ setup.py	2010-05-05 09:48:51.000000000 +0000
-@@ -149,13 +149,6 @@
+Don't creat this file for pkgsrc.
+
+--- setup.py.orig	2013-04-17 09:38:31.000000000 +0000
++++ setup.py
+@@ -109,14 +109,6 @@ class MyInstallLib(install_lib.install_l
+     def run(self):
          """overridden from install_lib class"""
          install_lib.install_lib.run(self)
-         # create Products.__init__.py if needed
+-        # create Products.__init__.py if needed
 -        if subpackage_of:
 -            product_init = join(self.install_dir, subpackage_of, '__init__.py')
 -            if not exists(product_init):
@@ -13,6 +16,6 @@ $NetBSD: patch-aa,v 1.1.1.1 2011/01/11 20:42:34 drochner Exp $
 -                stream = open(product_init, 'w')
 -                stream.write(EMPTY_FILE)
 -                stream.close()
-         # manually install included directories if any
-         if include_dirs:
-             if subpackage_of:
+ 
+ 
+ class MyBuildPy(build_py):
