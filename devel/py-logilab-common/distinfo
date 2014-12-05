@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/01/11 20:41:00 drochner Exp $
+$NetBSD: distinfo,v 1.2 2014/12/05 17:07:49 rodent Exp $
 
-SHA1 (logilab-common-0.53.0.tar.gz) = 5994b48c36a1c55abfd484a98cc340634fce9e4c
-RMD160 (logilab-common-0.53.0.tar.gz) = bbdfcd4e9046435b84403f746040d325a2722db0
-Size (logilab-common-0.53.0.tar.gz) = 189679 bytes
-SHA1 (patch-aa) = 4ec3db688cb48b6ec0561edf5c0e588c7f726240
+SHA1 (logilab-common-0.63.2.tar.gz) = ca448e76467f6c7b59ce820947734467c7b18d4d
+RMD160 (logilab-common-0.63.2.tar.gz) = 43f3e51ee7aac55ee6e973080cebe59d8fea05b4
+Size (logilab-common-0.63.2.tar.gz) = 196789 bytes
+SHA1 (patch-aa) = 2572e69c17062751558dcfda99dfb8b4dcb4cba8
