@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2014/12/05 14:52:52 rodent Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/colorama/__init__.py
+${PYSITELIB}/colorama/__init__.pyc
+${PYSITELIB}/colorama/__init__.pyo
+${PYSITELIB}/colorama/ansi.py
+${PYSITELIB}/colorama/ansi.pyc
+${PYSITELIB}/colorama/ansi.pyo
+${PYSITELIB}/colorama/ansitowin32.py
+${PYSITELIB}/colorama/ansitowin32.pyc
+${PYSITELIB}/colorama/ansitowin32.pyo
+${PYSITELIB}/colorama/initialise.py
+${PYSITELIB}/colorama/initialise.pyc
+${PYSITELIB}/colorama/initialise.pyo
+${PYSITELIB}/colorama/win32.py
+${PYSITELIB}/colorama/win32.pyc
+${PYSITELIB}/colorama/win32.pyo
+${PYSITELIB}/colorama/winterm.py
+${PYSITELIB}/colorama/winterm.pyc
+${PYSITELIB}/colorama/winterm.pyo
