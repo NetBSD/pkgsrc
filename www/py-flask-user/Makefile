@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2014/11/12 00:14:14 rodent Exp $
+# $NetBSD: Makefile,v 1.7 2014/12/05 03:01:20 rodent Exp $
 
 DISTNAME=	Flask-User-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	python www
 MASTER_SITES=	https://pypi.python.org/packages/source/F/Flask-User/
-DIST_SUBDIR=	${PKGBASE:S/${PYPKGPREFIX}/py/1}
+DIST_SUBDIR=	${PKGBASE:tl:S/${PYPKGPREFIX}/py/1}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://github.com/lingthio/Flask-User
