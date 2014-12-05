@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4675 2014/12/05 17:21:31 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.4676 2014/12/05 17:22:41 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6090,3 +6090,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added comms/py-colorama version 0.3.2 [rodent 2014-12-05]
 	Updated devel/py-logilab-common to 0.63.2 [rodent 2014-12-05]
 	Updated devel/py-logilab-astng to 0.24.3 [rodent 2014-12-05]
+	Updated databases/mysql51-server to 5.1.72nb2 [schmonz 2014-12-05]
