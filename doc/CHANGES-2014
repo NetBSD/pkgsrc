@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4673 2014/12/05 14:53:51 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.4674 2014/12/05 17:10:23 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6088,3 +6088,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated math/mpfr to 3.1.2pl11 [wiz 2014-12-05]
 	Added security/snoopy version 2.1.0 [imil 2014-12-05]
 	Added comms/py-colorama version 0.3.2 [rodent 2014-12-05]
+	Updated devel/py-logilab-common to 0.63.2 [rodent 2014-12-05]
