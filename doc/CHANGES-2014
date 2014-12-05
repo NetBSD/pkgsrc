@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4680 2014/12/05 18:59:53 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.4681 2014/12/05 21:41:12 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6095,3 +6095,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/mysql56-server to 5.6.22nb1 [schmonz 2014-12-05]
 	Added mail/py-validate-email-address version 1 [rodent 2014-12-05]
 	Updated security/py-oauth2client to 1.4.2 [rodent 2014-12-05]
+	Added www/py-google-api-python-client-py3 version 1.2 [rodent 2014-12-05]
