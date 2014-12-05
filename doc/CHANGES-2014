@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4664 2014/12/04 23:41:48 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4665 2014/12/05 01:42:26 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6079,3 +6079,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added emulators/suse121_32_gstreamer version 12.1 [rodent 2014-12-04]
 	Updated security/netpgpverify to 20141204 [agc 2014-12-04]
 	Updated fonts/evermono-ttf to 7.0.0 [wiz 2014-12-04]
+	Updated time/fet to 5.23.4 [mef 2014-12-05]
