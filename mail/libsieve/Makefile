@@ -1,23 +1,20 @@
-# $NetBSD: Makefile,v 1.13 2012/10/08 12:19:14 asau Exp $
+# $NetBSD: Makefile,v 1.14 2014/12/05 08:48:49 obache Exp $
 #
 
-DISTNAME=		libsieve-2.2.7
+DISTNAME=		libsieve-2.3.1
 CATEGORIES=		mail
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libsieve/}
+MASTER_SITES=		https://github.com/downloads/sodabrew/libsieve/
 
 MAINTAINER=		obache@NetBSD.org
-HOMEPAGE=		http://libsieve.sourceforge.net/
+HOMEPAGE=		http://sodabrew.com/libsieve/
 COMMENT=		Library for parsing, sorting and filtering mail
 LICENSE=		gnu-lgpl-v2.1
 
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
-USE_TOOLS+=		flex bison
 GNU_CONFIGURE=		yes
 
-CONFIGURE_DIRS=		src
-
-PKGCONFIG_OVERRIDE+=	src/libsieve.pc.in
+PKGCONFIG_OVERRIDE+=	libsieve.pc.in
 
 SUBST_CLASSES+=			stripcr
 SUBST_STAGE.stripcr=		post-extract
