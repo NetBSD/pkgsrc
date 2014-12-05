@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/10/07 16:47:36 adam Exp $
+# $NetBSD: Makefile,v 1.4 2014/12/05 01:42:15 mef Exp $
 
-DISTNAME=	fet-5.23.2
-PKGREVISION=	1
+DISTNAME=	fet-5.23.4
 CATEGORIES=	time
 MASTER_SITES=	http://lalescu.ro/liviu/fet/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -25,7 +24,8 @@ pre-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fet ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/fet-cl ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/doc/fet.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/man/fet.1.gz ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/man/fet-cl.1.gz ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/fet
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
