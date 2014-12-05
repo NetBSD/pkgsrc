@@ -1,10 +1,10 @@
-# $NetBSD: builtin.mk,v 1.12 2013/11/23 11:29:35 obache Exp $
+# $NetBSD: builtin.mk,v 1.13 2014/12/05 14:06:28 pettai Exp $
 
 BUILTIN_PKG:=	libevent
 
 BUILTIN_FIND_HEADERS_VAR:=		H_LIBEVENT H_LIBEVENTCONFIG
 BUILTIN_FIND_HEADERS.H_LIBEVENT=	event.h
-BUILTIN_FIND_HEADERS.H_LIBEVENTCONFIG=	event-config.h
+BUILTIN_FIND_HEADERS.H_LIBEVENTCONFIG=	event-config.h event2/event-config.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -32,7 +32,11 @@ _BLTN_EVENT_1_4_11!= \
 	${GREP} -c 1.4.11-stable ${H_LIBEVENTCONFIG} || ${TRUE}
 _BLTN_EVENT_1_4_12!= \
 	${GREP} -c 1.4.12-stable ${H_LIBEVENTCONFIG} || ${TRUE}
-.    if ${_BLTN_EVENT_1_4_12} == "1"
+_BLTN_EVENT_2_0_21!= \
+	${GREP} -c 2.0.21-stable ${H_LIBEVENTCONFIG} || ${TRUE}
+.    if ${_BLTN_EVENT_2_0_21} == "1"
+BUILTIN_VERSION.libevent=	2.0.21
+.    elif ${_BLTN_EVENT_1_4_12} == "1"
 BUILTIN_VERSION.libevent=	1.4.12
 .    elif ${_BLTN_EVENT_1_4_11} == "1"
 BUILTIN_VERSION.libevent=	1.4.11
