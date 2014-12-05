@@ -1,0 +1,2 @@
+bin/pytest.py @PREFIX@/bin/pytest@PYVERSSUFFIX@.py
+man/man1/pytest.1 @PREFIX@/man/man1/pytest@PYVERSSUFFIX@.1
