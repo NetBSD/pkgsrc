@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2014/12/05 16:00:23 christos Exp $
+Search also for __res_ninit on NetBSD because of namespace protection
+
+--- configure.ac.orig	2014-12-05 10:53:36.000000000 -0500
++++ configure.ac	2014-12-05 10:53:51.000000000 -0500
+@@ -126,6 +126,9 @@
+ AC_SEARCH_LIBS(res_ninit, resolv,
+ 	AC_DEFINE(HAVE_RES_NINIT, 1,
+ 	[Define to 1 if you have the `res_ninit()' function.]))
++AC_SEARCH_LIBS(__res_ninit, resolv,
++	AC_DEFINE(HAVE_RES_NINIT, 1,
++	[Define to 1 if you have the `res_ninit()' function.]))
+ AC_CHECK_LIB(idn, idn_free)
+ AC_CHECK_LIB(rt, nanosleep)
+ AC_SEARCH_LIBS(inet_addr, nsl)
