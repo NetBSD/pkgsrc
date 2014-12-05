@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.149 2014/10/10 11:40:15 adam Exp $
+# $NetBSD: Makefile,v 1.150 2014/12/05 12:25:42 khorben Exp $
 
-DISTNAME=	gnutls-3.2.18
+DISTNAME=	gnutls-3.2.19
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://ftp.gnutls.org/gcrypt/gnutls/v3.2/
 EXTRACT_SUFX=	.tar.xz
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2.1
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake perl pkg-config
+USE_TOOLS+=		gmake gsed perl pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-p11-kit
 # this library duplicates (and conflicts with) openssl
