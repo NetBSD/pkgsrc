@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4667 2014/12/05 08:49:01 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4668 2014/12/05 11:52:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6082,3 +6082,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/fet to 5.23.4 [mef 2014-12-05]
 	Updated www/py-flask-user to 0.6.1nb2 [rodent 2014-12-05]
 	Updated mail/libsieve to 2.3.1 [obache 2014-12-05]
+	Added devel/capstone version 3.0 [wiz 2014-12-05]
