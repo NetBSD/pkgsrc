@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2009/02/02 12:34:59 joerg Exp $
+$NetBSD: MESSAGE,v 1.6 2014/12/05 14:31:07 schmonz Exp $
 
 You may wish to have the vulnerabilities file downloaded daily so that
 it remains current.  This may be done by adding an appropriate entry
@@ -27,7 +27,7 @@ crontab(5) file. e.g.:
 
 Both pkg_admin subcommands can be run as as an unprivileged user,
 as long as the user chosen has permission to read the pkgdb and to write
-the pkg-vulnerabilites to ${PKGVULNDIR}.
+the pkg-vulnerabilities to ${PKGVULNDIR}.
 
 The behavior of pkg_admin and pkg_add can be customised with
 pkg_install.conf.  Please see pkg_install.conf(5) for details.
