@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: mysqld.sh,v 1.2 2014/04/14 00:02:50 rodent Exp $
+# $NetBSD: mysqld.sh,v 1.3 2014/12/05 17:22:16 schmonz Exp $
 #
 # PROVIDE: mysqld
 # REQUIRE: DAEMON LOGIN mountall
@@ -76,7 +76,9 @@ mysqld_start()
 	cd @PREFIX@
 	${command} --user=${mysqld_user} --datadir=${mysqld_datadir} \
 		   --pid-file=${mysqld_pidfile} ${mysqld_flags} \
-		   ${thread_flags} &
+		   ${thread_flags} \
+		   2>&1 | logger -t nbmysqld_safe \
+		   &
 }
 
 if [ -f /etc/rc.subr -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
