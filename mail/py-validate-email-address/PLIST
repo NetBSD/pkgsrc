@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2014/12/05 18:35:39 rodent Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/validate_email_address.py
+${PYSITELIB}/validate_email_address.pyc
+${PYSITELIB}/validate_email_address.pyo
