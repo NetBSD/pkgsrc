@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4677 2014/12/05 17:22:56 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.4678 2014/12/05 17:23:09 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6092,3 +6092,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-logilab-astng to 0.24.3 [rodent 2014-12-05]
 	Updated databases/mysql51-server to 5.1.72nb2 [schmonz 2014-12-05]
 	Updated databases/mysql55-server to 5.5.41nb1 [schmonz 2014-12-05]
+	Updated databases/mysql56-server to 5.6.22nb1 [schmonz 2014-12-05]
