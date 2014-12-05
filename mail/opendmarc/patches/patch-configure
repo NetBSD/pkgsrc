@@ -1,0 +1,70 @@
+$NetBSD: patch-configure,v 1.1 2014/12/05 16:00:23 christos Exp $
+Search also for __res_ninit on NetBSD because of namespace protection
+
+--- configure.orig	2014-12-05 10:53:31.000000000 -0500
++++ configure	2014-12-05 10:54:50.000000000 -0500
+@@ -12969,6 +12969,64 @@
+ 
+ fi
+ 
++{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for library containing __res_ninit" >&5
++$as_echo_n "checking for library containing __res_ninit... " >&6; }
++if ${ac_cv_search___res_ninit+:} false; then :
++  $as_echo_n "(cached) " >&6
++else
++  ac_func_search_save_LIBS=$LIBS
++cat confdefs.h - <<_ACEOF >conftest.$ac_ext
++/* end confdefs.h.  */
++
++/* Override any GCC internal prototype to avoid an error.
++   Use char because int might match the return type of a GCC
++   builtin and then its argument prototype would still apply.  */
++#ifdef __cplusplus
++extern "C"
++#endif
++char __res_ninit ();
++int
++main ()
++{
++return __res_ninit ();
++  ;
++  return 0;
++}
++_ACEOF
++for ac_lib in '' resolv; do
++  if test -z "$ac_lib"; then
++    ac_res="none required"
++  else
++    ac_res=-l$ac_lib
++    LIBS="-l$ac_lib  $ac_func_search_save_LIBS"
++  fi
++  if ac_fn_c_try_link "$LINENO"; then :
++  ac_cv_search___res_ninit=$ac_res
++fi
++rm -f core conftest.err conftest.$ac_objext \
++    conftest$ac_exeext
++  if ${ac_cv_search___res_ninit+:} false; then :
++  break
++fi
++done
++if ${ac_cv_search___res_ninit+:} false; then :
++
++else
++  ac_cv_search___res_ninit=no
++fi
++rm conftest.$ac_ext
++LIBS=$ac_func_search_save_LIBS
++fi
++{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_search___res_ninit" >&5
++$as_echo "$ac_cv_search___res_ninit" >&6; }
++ac_res=$ac_cv_search___res_ninit
++if test "$ac_res" != no; then :
++  test "$ac_res" = "none required" || LIBS="$ac_res $LIBS"
++
++$as_echo "#define HAVE_RES_NINIT 1" >>confdefs.h
++
++fi
++
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for idn_free in -lidn" >&5
+ $as_echo_n "checking for idn_free in -lidn... " >&6; }
+ if ${ac_cv_lib_idn_idn_free+:} false; then :
