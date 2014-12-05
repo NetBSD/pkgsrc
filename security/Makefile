@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.531 2014/11/24 14:43:33 wiz Exp $
+# $NetBSD: Makefile,v 1.532 2014/12/05 14:48:24 imil Exp $
 #
 
 COMMENT=	Security tools
@@ -430,6 +430,7 @@ SUBDIR+=	sleuthkit
 SUBDIR+=	smaSHeM
 SUBDIR+=	smtpd
 SUBDIR+=	sniff
+SUBDIR+=	snoopy
 SUBDIR+=	snortsnarf
 SUBDIR+=	snow
 SUBDIR+=	softhsm
