@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2014/12/05 14:47:02 imil Exp $
+bin/snoopy-test-output
+lib/libsnoopy.la
+sbin/snoopy-disable
+sbin/snoopy-enable
