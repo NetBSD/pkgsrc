@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.3 2014/09/27 19:30:12 pettai Exp $
+$NetBSD: distinfo,v 1.4 2014/12/05 16:00:23 christos Exp $
 
 SHA1 (opendmarc-1.3.0.tar.gz) = 7d50e8319934b96ba67ae038f6dfc78eacbc0072
 RMD160 (opendmarc-1.3.0.tar.gz) = f33cd5de045e800fcdb44cd9ab6199bef5d34baf
 Size (opendmarc-1.3.0.tar.gz) = 640017 bytes
+SHA1 (patch-configure) = 15abea1f890249c46eb0b969133fc809507feb6a
+SHA1 (patch-configure.ac) = b7ee9ae49e04fceaf2872dac7e2f60a15d3c9aa0
