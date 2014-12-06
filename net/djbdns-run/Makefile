@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.23 2014/10/09 14:06:44 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2014/12/06 09:41:04 schmonz Exp $
 #
 
-DISTNAME=		djbdns-run-20140415
+DISTNAME=		djbdns-run-20141206
 CATEGORIES=		net
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
 MAINTAINER=		schmonz@NetBSD.org
 COMMENT=		Configures djbdns to cache and serve queries
+LICENSE=		2-clause-bsd
 
 DEPENDS_DJBDNS=		djbdns>=1.05nb5:../../net/djbdns
 DEPENDS+=		${DEPENDS_DJBDNS}
@@ -16,6 +17,7 @@ DEPENDS+=		ucspi-tcp-[0-9]*:../../net/ucspi-tcp
 
 WRKSRC=			${WRKDIR}
 NO_BUILD=		yes
+NO_CHECKSUM=		yes
 
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/axfrdns
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/dnscache/ip
