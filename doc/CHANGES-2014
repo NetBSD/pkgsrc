@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4682 2014/12/06 03:13:01 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.4683 2014/12/06 03:14:53 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6097,3 +6097,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/py-oauth2client to 1.4.2 [rodent 2014-12-05]
 	Added www/py-google-api-python-client-py3 version 1.2 [rodent 2014-12-05]
 	Added devel/py-rednose version 0.4.1 [rodent 2014-12-06]
+	Updated fonts/umefont-ttf to 0.467 [ryoon 2014-12-06]
