@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2014/07/02 03:20:43 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.24.2.1 2014/12/06 16:57:53 tron Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -356,15 +356,15 @@ libdata/asterisk/phoneprov/000000000000.cfg
 libdata/asterisk/phoneprov/polycom.xml
 libdata/asterisk/phoneprov/polycom_line.xml
 libdata/asterisk/phoneprov/snom-mac.xml
-libdata/asterisk/sounds/en/.asterisk-core-sounds-en-gsm-1.4.25
+libdata/asterisk/sounds/en/.asterisk-core-sounds-en-gsm-1.4.26
 libdata/asterisk/sounds/en/1-for-am-2-for-pm.gsm
 libdata/asterisk/sounds/en/1-yes-2-no.gsm
-libdata/asterisk/sounds/en/CHANGES-asterisk-core-en-1.4.25
-libdata/asterisk/sounds/en/CHANGES-asterisk-extra-en-1.4.14
-libdata/asterisk/sounds/en/CREDITS-asterisk-core-en-1.4.25
-libdata/asterisk/sounds/en/CREDITS-asterisk-extra-en-1.4.14
-libdata/asterisk/sounds/en/LICENSE-asterisk-core-en-1.4.25
-libdata/asterisk/sounds/en/LICENSE-asterisk-extra-en-1.4.14
+libdata/asterisk/sounds/en/CHANGES-asterisk-core-en-1.4.26
+libdata/asterisk/sounds/en/CHANGES-asterisk-extra-en-1.4.15
+libdata/asterisk/sounds/en/CREDITS-asterisk-core-en-1.4.26
+libdata/asterisk/sounds/en/CREDITS-asterisk-extra-en-1.4.15
+libdata/asterisk/sounds/en/LICENSE-asterisk-core-en-1.4.26
+libdata/asterisk/sounds/en/LICENSE-asterisk-extra-en-1.4.15
 libdata/asterisk/sounds/en/OfficeSpace.gsm
 libdata/asterisk/sounds/en/Randulo-allison.gsm
 libdata/asterisk/sounds/en/SIP_Test_Failure.gsm
