@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/10/01 16:09:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/12/06 09:18:41 adam Exp $
 bin/ffmpeg2
 bin/ffprobe2
 bin/ffserver2
@@ -11,6 +11,7 @@ include/ffmpeg2/libavcodec/vaapi.h
 include/ffmpeg2/libavcodec/vda.h
 include/ffmpeg2/libavcodec/vdpau.h
 include/ffmpeg2/libavcodec/version.h
+include/ffmpeg2/libavcodec/vorbis_parser.h
 include/ffmpeg2/libavcodec/xvmc.h
 include/ffmpeg2/libavdevice/avdevice.h
 include/ffmpeg2/libavdevice/version.h
@@ -38,6 +39,7 @@ include/ffmpeg2/libavutil/blowfish.h
 include/ffmpeg2/libavutil/bprint.h
 include/ffmpeg2/libavutil/bswap.h
 include/ffmpeg2/libavutil/buffer.h
+include/ffmpeg2/libavutil/cast5.h
 include/ffmpeg2/libavutil/channel_layout.h
 include/ffmpeg2/libavutil/common.h
 include/ffmpeg2/libavutil/cpu.h
@@ -55,7 +57,6 @@ include/ffmpeg2/libavutil/hash.h
 include/ffmpeg2/libavutil/hmac.h
 include/ffmpeg2/libavutil/imgutils.h
 include/ffmpeg2/libavutil/intfloat.h
-include/ffmpeg2/libavutil/intfloat_readwrite.h
 include/ffmpeg2/libavutil/intreadwrite.h
 include/ffmpeg2/libavutil/lfg.h
 include/ffmpeg2/libavutil/log.h
@@ -96,27 +97,27 @@ include/ffmpeg2/libswscale/version.h
 lib/ffmpeg2/libavcodec.a
 lib/ffmpeg2/libavcodec.so
 lib/ffmpeg2/libavcodec.so.56
-lib/ffmpeg2/libavcodec.so.56.1.100
+lib/ffmpeg2/libavcodec.so.56.13.100
 lib/ffmpeg2/libavdevice.a
 lib/ffmpeg2/libavdevice.so
 lib/ffmpeg2/libavdevice.so.56
-lib/ffmpeg2/libavdevice.so.56.0.100
+lib/ffmpeg2/libavdevice.so.56.3.100
 lib/ffmpeg2/libavfilter.a
 lib/ffmpeg2/libavfilter.so
 lib/ffmpeg2/libavfilter.so.5
-lib/ffmpeg2/libavfilter.so.5.1.100
+lib/ffmpeg2/libavfilter.so.5.2.103
 lib/ffmpeg2/libavformat.a
 lib/ffmpeg2/libavformat.so
 lib/ffmpeg2/libavformat.so.56
-lib/ffmpeg2/libavformat.so.56.4.101
+lib/ffmpeg2/libavformat.so.56.15.102
 lib/ffmpeg2/libavutil.a
 lib/ffmpeg2/libavutil.so
 lib/ffmpeg2/libavutil.so.54
-lib/ffmpeg2/libavutil.so.54.7.100
+lib/ffmpeg2/libavutil.so.54.15.100
 lib/ffmpeg2/libpostproc.a
 lib/ffmpeg2/libpostproc.so
 lib/ffmpeg2/libpostproc.so.53
-lib/ffmpeg2/libpostproc.so.53.0.100
+lib/ffmpeg2/libpostproc.so.53.3.100
 lib/ffmpeg2/libswresample.a
 lib/ffmpeg2/libswresample.so
 lib/ffmpeg2/libswresample.so.1
@@ -124,7 +125,7 @@ lib/ffmpeg2/libswresample.so.1.1.100
 lib/ffmpeg2/libswscale.a
 lib/ffmpeg2/libswscale.so
 lib/ffmpeg2/libswscale.so.3
-lib/ffmpeg2/libswscale.so.3.0.100
+lib/ffmpeg2/libswscale.so.3.1.101
 lib/ffmpeg2/pkgconfig/libavcodec.pc
 lib/ffmpeg2/pkgconfig/libavdevice.pc
 lib/ffmpeg2/pkgconfig/libavfilter.pc
