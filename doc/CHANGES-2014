@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4691 2014/12/06 09:14:24 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4692 2014/12/06 09:19:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6106,3 +6106,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/clamav to 0.98.5 [khorben 2014-12-06]
 	Updated www/librest07 to 0.7.92 [obache 2014-12-06]
 	Added net/corebird version 0.9 [obache 2014-12-06]
+	Updated multimedia/ffmpeg2 to 2.5 [adam 2014-12-06]
+	Updated multimedia/ffplay2 to 2.5 [adam 2014-12-06]
