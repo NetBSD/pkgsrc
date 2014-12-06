@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dnscache.sh,v 1.5 2014/04/15 23:07:21 schmonz Exp $
+# $NetBSD: dnscache.sh,v 1.6 2014/12/06 09:41:04 schmonz Exp $
 #
 # @PKGNAME@ script to control dnscache (caching DNS resolver)
 #
@@ -36,7 +36,14 @@ dnscache_precmd()
 	if [ -f /etc/rc.subr ]; then
 		checkyesno dnscache_log || dnscache_logcmd=${dnscache_nologcmd}
 	fi
- 	command="@SETENV@ - ${dnscache_postenv} ROOT=@PKG_SYSCONFDIR@/dnscache IP=${dnscache_ip} IPSEND=${dnscache_ipsend} CACHESIZE=${dnscache_size} @LOCALBASE@/bin/envuidgid dnscache @LOCALBASE@/bin/softlimit -o250 -d ${dnscache_datalimit} @LOCALBASE@/bin/dnscache </dev/random 2>&1 | @LOCALBASE@/bin/setuidgid dnslog ${dnscache_logcmd}"
+	if [ ! -f @PKG_SYSCONFDIR@/dnscache/seed ]; then
+		old_umask=$(umask)
+		umask 066
+		dd if=/dev/urandom bs=128 count=1 of=@PKG_SYSCONFDIR@/dnscache/seed
+		umask ${old_umask}
+	fi
+	required_files="${required_files} @PKG_SYSCONFDIR@/dnscache/seed"
+	command="@SETENV@ - ${dnscache_postenv} ROOT=@PKG_SYSCONFDIR@/dnscache IP=${dnscache_ip} IPSEND=${dnscache_ipsend} CACHESIZE=${dnscache_size} @LOCALBASE@/bin/envuidgid dnscache @LOCALBASE@/bin/softlimit -o250 -d ${dnscache_datalimit} @LOCALBASE@/bin/dnscache <@PKG_SYSCONFDIR@/dnscache/seed 2>&1 | @LOCALBASE@/bin/setuidgid dnslog ${dnscache_logcmd}"
 	command_args="&"
 	rc_flags=""
 }
