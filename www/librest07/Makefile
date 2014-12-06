@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.13 2014/10/07 16:47:15 adam Exp $
+# $NetBSD: Makefile,v 1.14 2014/12/06 07:41:16 obache Exp $
 #
 
-DISTNAME=	rest-0.7.12
-PKGNAME=	librest07-0.7.12
-PKGREVISION=	10
+DISTNAME=	rest-0.7.92
+PKGNAME=	${DISTNAME:S/rest/librest07/}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/rest/0.7/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://moblin.org/projects/librest
+HOMEPAGE=	http://wiki.gnome.org/Projects/Librest
 COMMENT=	Library for "RESTful" web services
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -19,7 +18,11 @@ USE_TOOLS+=	pkg-config gmake
 # see pkgsrc/security/mozilla-rootcerts
 CONFIGURE_ARGS+= --with-ca-certificates=/etc/ssl/certs/ca-certificates.crt
 
-PKGCONFIG_OVERRIDE+=	rest.pc.in
+PKGCONFIG_OVERRIDE+=	rest.pc.in rest-extras.pc.in
+
+TEST_TARGET=	check
+
+.include "options.mk"
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../net/libsoup24/buildlink3.mk"

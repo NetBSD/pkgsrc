@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/04/11 11:40:18 drochner Exp $
+$NetBSD: distinfo,v 1.2 2014/12/06 07:41:16 obache Exp $
 
-SHA1 (rest-0.7.12.tar.xz) = a773ec89227dd441b4fb2bb6d0fcd1cdefc529d4
-RMD160 (rest-0.7.12.tar.xz) = 377175439158bc9c7ad65dc107b33143f76f86d5
-Size (rest-0.7.12.tar.xz) = 299480 bytes
+SHA1 (rest-0.7.92.tar.xz) = e8cb955148745e75313766a6b5fb7a0da6bf42e8
+RMD160 (rest-0.7.92.tar.xz) = 5d0a9c31094ebc5ead442df9019c1b714a09b18e
+Size (rest-0.7.92.tar.xz) = 321580 bytes
+SHA1 (patch-rest_oauth-proxy-call.c) = 102dcfab3f08272feb4e8536abbecb983dc3df11
+SHA1 (patch-rest_rest-xml-parser.c) = 23c5c77a146d86afb5c85e18a557374c2a017d79
