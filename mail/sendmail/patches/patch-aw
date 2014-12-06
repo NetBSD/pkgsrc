@@ -1,6 +1,6 @@
-$NetBSD: patch-aw,v 1.3 2014/06/20 16:26:55 jnemeth Exp $
+$NetBSD: patch-aw,v 1.4 2014/12/06 23:22:20 jnemeth Exp $
 
---- sendmail/readcf.c.orig	2014-05-16 20:40:15.000000000 +0000
+--- sendmail/readcf.c.orig	2014-10-22 16:33:53.000000000 +0000
 +++ sendmail/readcf.c
 @@ -20,6 +20,10 @@ SM_RCSID("@(#)$Id: readcf.c,v 8.692 2013
  # include <arpa/inet.h>
@@ -13,32 +13,7 @@ $NetBSD: patch-aw,v 1.3 2014/06/20 16:26:55 jnemeth Exp $
  
  #define SECONDS
  #define MINUTES	* 60
-@@ -124,6 +128,14 @@ readcf(cfname, safe, e)
- 		| SSL_OP_NO_TICKET
- #endif
- 		;
-+#ifdef SSL_OP_TLSEXT_PADDING
-+	/* 
-+	 * For now disable SSL_OP_TLSEXT_PADDING: with OpenSSL 1.0.1g
-+	 * and 1.0.1h it breaks compatibility with some sites.
-+	 */
-+	Srv_SSL_Options &= ~SSL_OP_TLSEXT_PADDING;
-+	Clt_SSL_Options &= ~SSL_OP_TLSEXT_PADDING;
-+#endif
- #endif /* STARTTLS */
- 	if (DontLockReadFiles)
- 		sff |= SFF_NOLOCK;
-@@ -2406,6 +2418,9 @@ static struct ssl_options
- #ifdef SSL_OP_CRYPTOPRO_TLSEXT_BUG
- 	{ "SSL_OP_CRYPTOPRO_TLSEXT_BUG",	SSL_OP_CRYPTOPRO_TLSEXT_BUG	},
- #endif
-+#ifdef SSL_OP_TLSEXT_PADDING
-+	{ "SSL_OP_TLSEXT_PADDING",	SSL_OP_TLSEXT_PADDING	},
-+#endif
- 	{ NULL,		0		}
- };
- #endif /* STARTTLS && _FFR_TLS_1 */
-@@ -2810,13 +2825,13 @@ setoption(opt, val, safe, sticky, e)
+@@ -2999,13 +3003,13 @@ setoption(opt, val, safe, sticky, e)
  			if (rfp->rf_name == NULL)
  				syserr("readcf: I option value %s unrecognized", q);
  			else if (clearmode)
