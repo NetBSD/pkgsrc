@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/12/06 03:19:01 rodent Exp $
+
+SHA1 (python-termstyle-0.1.10.tar.gz) = 04427e30a01cfec3b07e410f25776b55432f603f
+RMD160 (python-termstyle-0.1.10.tar.gz) = 6a136e3328094b3c8a39d037ac2555b3fd58b0e5
+Size (python-termstyle-0.1.10.tar.gz) = 4131 bytes
