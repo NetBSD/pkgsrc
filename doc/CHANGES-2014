@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4689 2014/12/06 07:32:44 khorben Exp $
+$NetBSD: CHANGES-2014,v 1.4690 2014/12/06 07:41:31 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6104,3 +6104,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated fonts/migu-ttf to 20130617 [ryoon 2014-12-06]
 	Updated fonts/ricty-ttf to 3.2.3nb1 [ryoon 2014-12-06]
 	Updated security/clamav to 0.98.5 [khorben 2014-12-06]
+	Updated www/librest07 to 0.7.92 [obache 2014-12-06]
