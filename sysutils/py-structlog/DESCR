@@ -1,0 +1,3 @@
+structlog makes structured logging in Python easy by augmenting your existing
+logger. It allows you to split your log entries up into key/value pairs and
+build them incrementally without annoying boilerplate code.
