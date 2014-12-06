@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.26 2014/10/09 14:06:40 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2014/12/06 22:14:27 schmonz Exp $
 #
 
-DISTNAME=		qmail-run-20140912
+DISTNAME=		qmail-run-20141206
 CATEGORIES=		mail
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
 MAINTAINER=		schmonz@NetBSD.org
 COMMENT=		Configures qmail to receive and deliver mail
+LICENSE=		2-clause-bsd
 
 DEPENDS_QMAIL=		qmail>=1.03nb8:../../mail/qmail
 DEPENDS+=		${DEPENDS_QMAIL}
@@ -16,6 +17,7 @@ CONFLICTS+=		qmail-qfilter-1.5nb1
 
 WRKSRC=			${WRKDIR}
 NO_BUILD=		yes
+NO_CHECKSUM=		yes
 
 FILES_SUBST+=		QMAIL_QUEUE_EXTRA=${QMAIL_QUEUE_EXTRA:Q}
 FILES_SUBST+=		PKGNAME=${PKGNAME:Q}
@@ -39,10 +41,18 @@ MAKEVARS+=	PKG_SYSCONFDIR.qmail-run
 .  endif
 .endif
 
+QMAIL_TOOLS=		checkpassword daemontools fastforward procmail
+QMAIL_TOOLS+=		qmail qmail-qfilter ucspi-tcp
+
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	mailer.conf qmail-procmail qmail-qfilter-queue
 SUBST_FILES.paths+=	qmail-qread-client
-SUBST_SED.paths+=	-e 's,@LOCALBASE@,${LOCALBASE},g'
+.for i in ${QMAIL_TOOLS}
+QMAIL_TOOL_VAR.${i}=	${i:S/-/_/g:tu}_PREFIX
+EVAL_PREFIX+=		${QMAIL_TOOL_VAR.${i}}=${i}
+FILES_SUBST+=		${QMAIL_TOOL_VAR.${i}}=${${QMAIL_TOOL_VAR.${i}}:Q}
+SUBST_SED.paths+=	-e 's,@${QMAIL_TOOL_VAR.${i}}@,${${QMAIL_TOOL_VAR.${i}}},g'
+.endfor
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_SED.paths+=	-e 's,@ECHO@,${ECHO},g'
