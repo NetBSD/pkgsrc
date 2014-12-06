@@ -1,6 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2011/05/14 20:19:47 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2014/12/06 18:47:01 dholland Exp $
 
---- gcc/config.gcc.orig	2010-10-09 09:35:53.000000000 +0000
+- add dfly support
+- stdint fixes for netbsd x86
+- add svr4.h for netbsd ppc, per PR 49453 from Frank Wille
+
+--- gcc/config.gcc.orig	2011-02-27 01:06:15.000000000 +0000
 +++ gcc/config.gcc
 @@ -499,6 +499,33 @@ case ${target} in
    # need_64bit_hwint=yes # system compiler has this for all arch!
@@ -44,7 +48,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2011/05/14 20:19:47 wiz Exp $
    ;;
  *-*-openbsd*)
    tmake_file="t-libc-ok t-openbsd t-libgcc-pic"
-@@ -1117,17 +1145,23 @@ x86_64-*-freebsd*)
+@@ -1118,17 +1146,23 @@ x86_64-*-freebsd*)
  	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h ${fbsd_tm_file} i386/x86-64.h i386/freebsd.h i386/freebsd64.h"
  	tmake_file="${tmake_file} i386/t-crtstuff"
  	;;
@@ -71,3 +75,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2011/05/14 20:19:47 wiz Exp $
  	tmake_file="${tmake_file} i386/t-crtstuff"
  	;;
  i[34567]86-*-openbsd2.*|i[34567]86-*openbsd3.[0123])
+@@ -1950,7 +1984,7 @@ powerpc*-*-freebsd*)
+ 	extra_options="${extra_options} rs6000/sysv4.opt"
+ 	;;
+ powerpc-*-netbsd*)
+-	tm_file="${tm_file} dbxelf.h elfos.h netbsd.h netbsd-elf.h freebsd-spec.h rs6000/sysv4.h rs6000/netbsd.h"
++	tm_file="${tm_file} dbxelf.h elfos.h netbsd.h netbsd-elf.h svr4.h freebsd-spec.h rs6000/sysv4.h rs6000/netbsd.h"
+ 	tmake_file="${tmake_file} rs6000/t-netbsd"
+ 	extra_options="${extra_options} rs6000/sysv4.opt"
+ 	;;
