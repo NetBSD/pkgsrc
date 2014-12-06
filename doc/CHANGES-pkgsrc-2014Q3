@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.29 2014/12/04 19:28:32 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.30 2014/12/06 16:58:05 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q3 branch:
@@ -113,3 +113,6 @@ Pullup ticket #4564 - requested by wiz
 textproc/antiword: security patch
 Pullup ticket #4565 - requested by he
 devel/pcre: security update
+Pullup ticket #4566 - requested by jnemeth
+comms/asterisk:: security update
+comms/asterisk18: security update
