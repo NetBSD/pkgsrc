@@ -1,4 +1,4 @@
-/* $NetBSD: fixup-libtool.c,v 1.2 2014/11/29 22:19:55 joerg Exp $ */
+/* $NetBSD: fixup-libtool.c,v 1.3 2014/12/06 22:35:24 riz Exp $ */
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -321,7 +321,7 @@ fixup_libtool_la(const char *lafile, int in_lai)
 	FILE *fp, *output;
 	char *line, *opt_start, *tmp_name;
 	const char *pass_lafile, *cur_option;
-	int in_relink, ignore_relink;
+	int in_relink, ignore_relink = 0;
 	char delimiter;
 	size_t len;
 	ssize_t cur;
