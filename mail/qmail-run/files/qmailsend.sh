@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailsend.sh,v 1.6 2005/04/15 05:17:02 schmonz Exp $
+# $NetBSD: qmailsend.sh,v 1.7 2014/12/06 22:14:27 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-send (local and outgoing mail).
 #
@@ -12,11 +12,11 @@
 name="qmailsend"
 
 # User-settable rc.conf variables and their default values:
-: ${qmailsend_postenv:="PATH=@LOCALBASE@/bin:$PATH"}
+: ${qmailsend_postenv:="PATH=@QMAIL_PREFIX@/bin:$PATH"}
 : ${qmailsend_defaultdelivery:="`@HEAD@ -1 @PKG_SYSCONFDIR@/control/defaultdelivery`"}
 : ${qmailsend_log:="YES"}
 : ${qmailsend_logcmd:="logger -t nb${name} -p mail.info"}
-: ${qmailsend_nologcmd:="@LOCALBASE@/bin/multilog -*"}
+: ${qmailsend_nologcmd:="@DAEMONTOOLS_PREFIX@/bin/multilog -*"}
 
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
@@ -25,7 +25,7 @@ fi
 rcvar=${name}
 required_files="@PKG_SYSCONFDIR@/control/defaultdelivery"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/me"
-command="@LOCALBASE@/bin/qmail-send"
+command="@QMAIL_PREFIX@/bin/qmail-send"
 start_precmd="qmailsend_precmd"
 extra_commands="stat pause cont doqueue reload queue alrm flush hup"
 stat_cmd="qmailsend_stat"
@@ -81,14 +81,14 @@ qmailsend_doqueue()
 		return 1
 	fi
 	@ECHO@ "Flushing timeout table and sending ALRM signal to qmail-send."
-	@LOCALBASE@/bin/qmail-tcpok
+	@QMAIL_PREFIX@/bin/qmail-tcpok
 	kill -ALRM $rc_pid
 }
 
 qmailsend_queue()
 {
-	@LOCALBASE@/bin/qmail-qstat
-	@LOCALBASE@/bin/qmail-qread
+	@QMAIL_PREFIX@/bin/qmail-qstat
+	@QMAIL_PREFIX@/bin/qmail-qread
 }
 
 qmailsend_hup()
