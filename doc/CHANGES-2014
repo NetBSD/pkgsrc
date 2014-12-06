@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4693 2014/12/06 09:41:11 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.4694 2014/12/06 15:19:10 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6109,3 +6109,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/ffmpeg2 to 2.5 [adam 2014-12-06]
 	Updated multimedia/ffplay2 to 2.5 [adam 2014-12-06]
 	Updated net/djbdns-run to 20141206 [schmonz 2014-12-06]
+	Added geography/py-pycountry version 1.10 [rodent 2014-12-06]
