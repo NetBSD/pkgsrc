@@ -1,4 +1,4 @@
-# $NetBSD: egg.mk,v 1.17 2014/01/26 00:41:07 wiz Exp $
+# $NetBSD: egg.mk,v 1.18 2014/12/06 15:17:08 rodent Exp $
 #
 # Common logic to handle Python Eggs
 #
@@ -10,6 +10,7 @@
 # which creates an egg-info file; those should use distutils.mk
 
 EGG_NAME?=	${DISTNAME}
+EGG_INFODIR?=	${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
 
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
@@ -20,12 +21,13 @@ PY_PATCHPLIST=	yes
 # the egg information in an egg comprises multiple files in an
 # egg-info directory.
 
-# XXX The PLIST substitution of EGG_NAME does not appear to be
-# necessary.  Either it should be removed or a comment added
-# explaining why it is necessary.
+# The PLIST substitution of EGG_NAME is not necessary. However, it
+# is convenient. See lang/ruby/gem.mk and PLIST files for ruby gem
+# packages to understand other examples of this feature in non-python
+# packages.
 
 PLIST_SUBST+=	EGG_NAME=${EGG_NAME}-py${PYVERSSUFFIX}
-PLIST_SUBST+=	EGG_INFODIR=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
+PLIST_SUBST+=	EGG_INFODIR=${EGG_INFODIR}
 PRINT_PLIST_AWK+=	{ gsub(/${EGG_NAME}-py${PYVERSSUFFIX}.egg-info/, \
 			       "$${EGG_INFODIR}") }
 PRINT_PLIST_AWK+=	{ gsub(/${EGG_NAME}-py${PYVERSSUFFIX}-nspkg.pth/, \
