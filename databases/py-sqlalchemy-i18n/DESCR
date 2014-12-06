@@ -1,0 +1,7 @@
+Internationalization extension for SQLAlchemy models. Features:
+
+ * Stores translations in separate tables.
+ * Reflects translation table structures based on parent model table structure.
+ * Supports forcing of given locale.
+ * Good performance (uses proxy dicts and other advanced SQLAlchemy concepts for
+   performance optimization).
