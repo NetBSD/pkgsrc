@@ -1,6 +1,6 @@
-$NetBSD: patch-az,v 1.1 2014/06/15 20:48:50 jnemeth Exp $
+$NetBSD: patch-az,v 1.2 2014/12/06 23:22:20 jnemeth Exp $
 
---- sendmail/srvrsmtp.c.orig	2014-05-16 20:40:15.000000000 +0000
+--- sendmail/srvrsmtp.c.orig	2014-11-12 03:02:04.000000000 +0000
 +++ sendmail/srvrsmtp.c
 @@ -46,6 +46,10 @@ static bool	tls_ok_srv = false;
  static bool	NotFirstDelivery = false;
@@ -13,7 +13,7 @@ $NetBSD: patch-az,v 1.1 2014/06/15 20:48:50 jnemeth Exp $
  /* server features */
  #define SRV_NONE	0x0000	/* none... */
  #define SRV_OFFER_TLS	0x0001	/* offer STARTTLS */
-@@ -3731,8 +3735,8 @@ smtp_data(smtp, e)
+@@ -3983,8 +3987,8 @@ smtp_data(smtp, e)
  	id = e->e_id;
  
  #if NAMED_BIND
@@ -23,4 +23,4 @@ $NetBSD: patch-az,v 1.1 2014/06/15 20:48:50 jnemeth Exp $
 +	sm_res.retrans = TimeOuts.res_retrans[RES_TO_FIRST];
  #endif /* NAMED_BIND */
  
- 
+ #if _FFR_PROXY

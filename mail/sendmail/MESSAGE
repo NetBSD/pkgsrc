@@ -1,5 +1,28 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.7 2012/12/20 20:38:46 jnemeth Exp $
+$NetBSD: MESSAGE,v 1.8 2014/12/06 23:22:20 jnemeth Exp $
+
+INCOMPATIBLE CONFIG CHANGE
+
+If you are updating from a previous version to 8.15.1 or later,
+note that there has been an incompatible config change for IPv6
+addresses:
+
+        Incompatible Change: Use uncompressed IPv6 addresses by default,
+                i.e., they will not contain "::".  For example,
+                instead of ::1 it will be 0:0:0:0:0:0:0:1.  This
+                permits a zero subnet to have a more specific match,
+                such as different map entries for IPv6:0:0 vs IPv6:0.
+                This change requires that configuration data
+                (including maps, files, classes, custom ruleset,
+                etc) must use the same format, so make certain such
+                configuration data is updated before using 8.15.
+                As a very simple check search for patterns like
+                'IPv6:[0-9a-fA-F:]*::' and 'IPv6::'. If necessary,
+                the prior format can be retained by compiling with:
+                APPENDDEF(`conf_sendmail_ENVDEF', `-DIPV6_FULL=0')
+                in your devtools/Site/site.config.m4 file.
+
+===========================================================================
 
 To use "${PKGNAME}" as the system's mail transport agent you have
 to install "${PREFIX}/share/examples/sendmail/mailer.conf" as global
