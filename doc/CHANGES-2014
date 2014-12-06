@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4700 2014/12/06 22:21:38 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.4701 2014/12/06 23:22:33 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6116,3 +6116,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated editors/gedit3 to 3.14.2 [prlw1 2014-12-06]
 	Updated mail/qmail-run to 20141206 [schmonz 2014-12-06]
 	Updated pkgtools/pkglint to 4.149 [schmonz 2014-12-06]
+	Updated mail/sendmail to 8.15.1 [jnemeth 2014-12-06]
