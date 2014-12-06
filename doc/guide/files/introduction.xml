@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.30 2013/08/22 13:54:51 ryoon Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.31 2014/12/06 03:24:49 ryoon Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -19,7 +19,7 @@ packages for himself, which is a time-costly task.</para>
 
     <itemizedlist>
       <listitem>
-	<para><filename role="pkg">www/apache</filename> - The Apache
+	<para><filename role="pkg">www/apache22</filename> - The Apache
 	  web server</para>
       </listitem>
 
@@ -34,7 +34,7 @@ packages for himself, which is a time-costly task.</para>
       </listitem>
 
       <listitem>
-	<para><filename role="pkg">meta-pkgs/kde3</filename> - The K
+	<para><filename role="pkg">meta-pkgs/kde4</filename> - The K
 	  Desktop Environment</para>
       </listitem>
     </itemizedlist>
