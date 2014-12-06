@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.618 2014/11/13 11:08:04 markd Exp $
+# $NetBSD: Makefile,v 1.619 2014/12/06 16:21:40 rodent Exp $
 #
 
 COMMENT=	System utilities
@@ -404,6 +404,7 @@ SUBDIR+=	py-notify-python
 SUBDIR+=	py-pefile
 SUBDIR+=	py-psutil
 SUBDIR+=	py-setproctitle
+SUBDIR+=	py-structlog
 SUBDIR+=	py-xattr
 SUBDIR+=	qlogtools
 SUBDIR+=	radeontool
