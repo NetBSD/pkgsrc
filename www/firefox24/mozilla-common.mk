@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.9 2014/05/09 07:37:24 wiz Exp $
+# $NetBSD: mozilla-common.mk,v 1.10 2014/12/06 06:09:22 khorben Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -167,10 +167,10 @@ CONFIGURE_ENV+=	ac_cv_sqlite_secure_delete=yes	# c.f. patches/patch-al
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.10.2
+BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.10.7
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nss+=	nss>=3.15.3
+BUILDLINK_API_DEPENDS.nss+=	nss>=3.16.2
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
