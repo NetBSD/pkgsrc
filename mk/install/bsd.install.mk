@@ -1,4 +1,4 @@
-# $NetBSD: bsd.install.mk,v 1.14 2013/05/23 13:18:56 obache Exp $
+# $NetBSD: bsd.install.mk,v 1.15 2014/12/06 23:28:18 agc Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to installing packages.
@@ -24,8 +24,10 @@ _COOKIE.install=	${WRKDIR}/.install_done
 .PHONY: install
 .if ${_USE_DESTDIR} == "no"
 install: stage-install
-.else
+.elif ${_KEEP_BIN_PKGS} == "no"
 install: stage-package-install
+.else
+install: package-install
 .endif
 
 ######################################################################
