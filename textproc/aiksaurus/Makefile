@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/10/09 14:07:01 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2014/12/06 19:04:13 dholland Exp $
 #
 
 DISTNAME=	aiksaurus-1.2.1
@@ -12,7 +12,8 @@ COMMENT=	English-language thesaurus
 USE_LIBTOOL=	YES
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+=	--without-gtk
 PKGCONFIG_OVERRIDE=	base/aiksaurus-1.0.pc.in
+
+.include "options.mk"
 
 .include "../../mk/bsd.pkg.mk"

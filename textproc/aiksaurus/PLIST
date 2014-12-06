@@ -1,9 +1,14 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:17:12 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/12/06 19:04:13 dholland Exp $
 bin/aiksaurus
 bin/caiksaurus
+${PLIST.gtk}bin/gaiksaurus
 include/Aiksaurus/Aiksaurus.h
 include/Aiksaurus/AiksaurusC.h
+${PLIST.gtk}include/Aiksaurus/AiksaurusGTK-C.h
+${PLIST.gtk}include/Aiksaurus/AiksaurusGTK.h
 lib/libAiksaurus.la
+${PLIST.gtk}lib/libAiksaurusGTK.la
 lib/pkgconfig/aiksaurus-1.0.pc
+${PLIST.gtk}lib/pkgconfig/gaiksaurus-1.0.pc
 share/aiksaurus/meanings.dat
 share/aiksaurus/words.dat

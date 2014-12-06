@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.5 2011/01/29 20:51:34 markd Exp $
+$NetBSD: distinfo,v 1.6 2014/12/06 19:04:13 dholland Exp $
 
 SHA1 (aiksaurus-1.2.1.tar.gz) = b9e98650bc5257673d5b1507f3e0edbc0cb6a0b5
 RMD160 (aiksaurus-1.2.1.tar.gz) = 0f46c121adb6222f0b4709787162cb6f0a0ff35e
 Size (aiksaurus-1.2.1.tar.gz) = 928893 bytes
 SHA1 (patch-aa) = f8a63f0b7f7cdfa67b1de58f450e8aa93ab301d0
+SHA1 (patch-gtk_src_Display.cpp) = 7f1703c30294fb9145adcf253229101a511bfab2
+SHA1 (patch-gtk_src_gtkAiksaur.t.cpp) = c50bbb17454b5b53cf46512d8d9e9b49ff736adf
