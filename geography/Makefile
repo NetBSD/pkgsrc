@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2014/09/19 20:55:08 brook Exp $
+# $NetBSD: Makefile,v 1.44 2014/12/06 15:20:22 rodent Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -40,6 +40,7 @@ SUBDIR+=	proj-doc
 SUBDIR+=	proj-swig
 SUBDIR+=	py-geojson
 SUBDIR+=	py-proj
+SUBDIR+=	py-pycountry
 SUBDIR+=	py-trytond-country
 SUBDIR+=	qgis
 SUBDIR+=	qlandkartegt
