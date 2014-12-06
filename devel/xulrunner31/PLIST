@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/03 12:21:29 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/12/06 03:08:18 ryoon Exp $
 bin/xulrunner31
 include/xulrunner31/AbstractMediaDecoder.h
 include/xulrunner31/AccEvent.h
@@ -4643,7 +4643,9 @@ lib/xulrunner31/components/contentSecurityPolicy.js
 lib/xulrunner31/components/crypto-SDR.js
 lib/xulrunner31/components/interfaces.xpt
 lib/xulrunner31/components/jsconsole-clhandler.js
+${PLIST.gnome}lib/xulrunner31/components/libdbusservice.so
 lib/xulrunner31/components/libmozgnome.so
+${PLIST.gnome}lib/xulrunner31/components/libnkgnomevfs.so
 lib/xulrunner31/components/marionettecomponent.js
 lib/xulrunner31/components/messageWakeupService.js
 lib/xulrunner31/components/nsBlocklistService.js
