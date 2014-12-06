@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4687 2014/12/06 03:43:43 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.4688 2014/12/06 03:45:52 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6102,3 +6102,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/php-ja-wordpress to 4.0.1 [ryoon 2014-12-06]
 	Added databases/py-sqlalchemy-i18n version 1.0.1 [rodent 2014-12-06]
 	Updated fonts/migu-ttf to 20130617 [ryoon 2014-12-06]
+	Updated fonts/ricty-ttf to 3.2.3nb1 [ryoon 2014-12-06]
