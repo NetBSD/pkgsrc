@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2014/11/23 13:57:02 prlw1 Exp $
+$NetBSD: distinfo,v 1.6 2014/12/06 20:41:36 prlw1 Exp $
 
-SHA1 (gedit-3.14.1.tar.xz) = c53d7d6167e5c2c517074e5cb9cf59bb3ded2660
-RMD160 (gedit-3.14.1.tar.xz) = a96f09aacd124e4a50b1388d41af7cef1a825c30
-Size (gedit-3.14.1.tar.xz) = 2882804 bytes
+SHA1 (gedit-3.14.2.tar.xz) = c4bd3f22b8cd750e9de0d7914a572788dc1ac8b7
+RMD160 (gedit-3.14.2.tar.xz) = 48418bb69fff1412ab29dd4ba0b812c2275eb9e0
+Size (gedit-3.14.2.tar.xz) = 2884188 bytes
