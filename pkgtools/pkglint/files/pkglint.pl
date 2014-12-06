@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.873 2014/10/09 13:54:47 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.874 2014/12/06 22:21:30 schmonz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3930,7 +3930,7 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 		},
 
 		Dependency => sub {
-			if ($value =~ m"^(${regex_pkgbase})(<|=|>|<=|>=|!=)(${regex_pkgversion})$") {
+			if ($value =~ m"^(${regex_pkgbase})(<|=|>|<=|>=|!=|-)(${regex_pkgversion})$") {
 				my ($depbase, $depop, $depversion) = ($1, $2, $3);
 
 			} elsif ($value =~ m"^(${regex_pkgbase})-(?:\[(.*)\]\*|(\d+(?:\.\d+)*(?:\.\*)?)(\{,nb\*\}|\*|)|(.*))?$") {
