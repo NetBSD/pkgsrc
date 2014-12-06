@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/05/09 07:37:00 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/12/06 11:00:52 obache Exp $
 
 DISTNAME=	astroid-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,10 +10,11 @@ HOMEPAGE=	http://bitbucket.org/logilab/astroid
 COMMENT=	Rebuild a new abstract syntax tree from Python's ast
 LICENSE=	gnu-lgpl-v3
 
+DEPENDS+=	${PYPKGPREFIX}-logilab-common-[0-9]*:../../devel/py-logilab-common
+
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-mxDateTime via py-logilab-common
 
-.include "../../devel/py-logilab-common/buildlink3.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

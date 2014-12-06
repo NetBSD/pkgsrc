@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/05/09 07:37:02 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/12/06 11:00:52 obache Exp $
 
 DISTNAME=	pylint-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,7 @@ LICENSE=    	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 DEPENDS+=	${PYPKGPREFIX}-astroid>=1.0.1:../../devel/py-astroid
+DEPENDS+=	${PYPKGPREFIX}-logilab-common>=0.53.0:../../devel/py-logilab-common
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-mxDateTime via py-logilab-common
 
@@ -36,8 +37,6 @@ post-install:
 		${DESTDIR}${PREFIX}/bin/symilar${PYVERSSUFFIX}
 	${INSTALL_MAN} ${WRKSRC}/man/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-BUILDLINK_API_DEPENDS.py-logilab-common+= ${PYPKGPREFIX}-logilab-common>=0.53.0
-.include "../../devel/py-logilab-common/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
