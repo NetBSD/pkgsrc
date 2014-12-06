@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1046 2014/12/03 22:04:20 rodent Exp $
+# $NetBSD: Makefile,v 1.1047 2014/12/06 10:45:34 obache Exp $
 #
 
 COMMENT=	Networking tools
@@ -81,6 +81,7 @@ SUBDIR+=	coda
 SUBDIR+=	coherence
 SUBDIR+=	coilmq
 SUBDIR+=	connect
+SUBDIR+=	corebird
 SUBDIR+=	corkscrew
 SUBDIR+=	couriertcpd
 SUBDIR+=	csup
