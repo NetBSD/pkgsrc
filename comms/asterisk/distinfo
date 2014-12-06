@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.66 2014/09/20 19:12:16 jnemeth Exp $
+$NetBSD: distinfo,v 1.66.2.1 2014/12/06 16:57:53 tron Exp $
 
-SHA1 (asterisk-11.12.1/asterisk-11.12.1.tar.gz) = b5df9ede712446fdc061b87ae7559a94456d45d0
-RMD160 (asterisk-11.12.1/asterisk-11.12.1.tar.gz) = fa7ddd678926c062716fab8931e741e4a7ae4d9b
-Size (asterisk-11.12.1/asterisk-11.12.1.tar.gz) = 34862194 bytes
-SHA1 (asterisk-11.12.1/asterisk-extra-sounds-en-gsm-1.4.14.tar.gz) = 14403cd023e812565085c8232210b8b439274ecf
-RMD160 (asterisk-11.12.1/asterisk-extra-sounds-en-gsm-1.4.14.tar.gz) = 675fc1f3cedd0e17b62a8285f9f0527783cfb1d3
-Size (asterisk-11.12.1/asterisk-extra-sounds-en-gsm-1.4.14.tar.gz) = 4386590 bytes
+SHA1 (asterisk-11.14.1/asterisk-11.14.1.tar.gz) = 10f1ac8c282bbb99c07eaa13c93f994294dd552f
+RMD160 (asterisk-11.14.1/asterisk-11.14.1.tar.gz) = 6f7bcde4be32a35bfc9b5c23c6f021fcfc52e205
+Size (asterisk-11.14.1/asterisk-11.14.1.tar.gz) = 34966823 bytes
+SHA1 (asterisk-11.14.1/asterisk-extra-sounds-en-gsm-1.4.15.tar.gz) = fbb94494e31fc08eee8fdf2ce7d12eb274018050
+RMD160 (asterisk-11.14.1/asterisk-extra-sounds-en-gsm-1.4.15.tar.gz) = 53656a3d6771602504f220ad312093e3503e1150
+Size (asterisk-11.14.1/asterisk-extra-sounds-en-gsm-1.4.15.tar.gz) = 4409969 bytes
 SHA1 (patch-Makefile) = ed581d46026e8e89ed8be374c7085efca19911d2
 SHA1 (patch-apps_app__confbridge.c) = c815905994355a19c32e8e3e2eb5dc9f1679eb29
 SHA1 (patch-apps_app__dial.c) = 0f78d2571af88384a2d472ece08bf4b06f9ad211
@@ -21,7 +21,6 @@ SHA1 (patch-channels_chan__oss.c) = 0be259a83c4425d08b693a54c43896da039df721
 SHA1 (patch-channels_chan__sip.c) = 61c67e6d7e0a6e27e98614f6d4de15b64c73e7e1
 SHA1 (patch-configure) = 88619fe9072ff69ed8da0a1917ac3852d10998a4
 SHA1 (patch-configure.ac) = 2fdae524cfc95f152b86a32405b80f6edae6fa20
-SHA1 (patch-contrib_scripts_autosupport) = c6c1d917dd0544c4f54ae760f68cbcd1f35030f4
 SHA1 (patch-contrib_scripts_vmail.cgi) = 650b9bbf3e322d1ad351932cfe6f747baa8f35e4
 SHA1 (patch-funcs_func__strings.c) = 4c1db693d845691492b77bbf489764d362de2087
 SHA1 (patch-include_asterisk_autoconfig.h.in) = 09a8f8d5398612fdadba25f221b16c19429f81e2
