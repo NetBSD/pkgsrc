@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2014/06/22 11:42:35 hauke Exp $
+@comment $NetBSD: PLIST,v 1.23 2014/12/06 23:22:20 jnemeth Exp $
 bin/hoststat
 bin/mailq
 bin/newaliases
@@ -96,6 +96,7 @@ share/sendmail/feature/allmasquerade.m4
 share/sendmail/feature/always_add_domain.m4
 share/sendmail/feature/authinfo.m4
 share/sendmail/feature/badmx.m4
+share/sendmail/feature/bcc.m4
 share/sendmail/feature/bestmx_is_local.m4
 share/sendmail/feature/bitdomain.m4
 share/sendmail/feature/blacklist_recipients.m4
@@ -123,9 +124,11 @@ share/sendmail/feature/msp.m4
 share/sendmail/feature/mtamark.m4
 share/sendmail/feature/no_default_msa.m4
 share/sendmail/feature/nocanonify.m4
+share/sendmail/feature/nopercenthack.m4
 share/sendmail/feature/notsticky.m4
 share/sendmail/feature/nouucp.m4
 share/sendmail/feature/nullclient.m4
+share/sendmail/feature/prefixmod.m4
 share/sendmail/feature/preserve_local_plus_detail.m4
 share/sendmail/feature/preserve_luser_host.m4
 share/sendmail/feature/promiscuous_relay.m4
@@ -147,6 +150,7 @@ share/sendmail/feature/uucpdomain.m4
 share/sendmail/feature/virtuser_entire_domain.m4
 share/sendmail/feature/virtusertable.m4
 share/sendmail/hack/cssubdomain.m4
+share/sendmail/hack/xconnect.m4
 share/sendmail/m4/cf.m4
 share/sendmail/m4/cfhead.m4
 share/sendmail/m4/proto.m4
