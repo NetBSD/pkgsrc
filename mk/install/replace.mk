@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.15 2013/05/23 13:18:56 obache Exp $
+# $NetBSD: replace.mk,v 1.16 2014/12/06 23:28:18 agc Exp $
 #
 # Public targets:
 #
@@ -27,8 +27,10 @@
 
 .if ${_USE_DESTDIR} == "no"
 _REPLACE_TARGETS+=	${_PKGSRC_BUILD_TARGETS}
-.else
+.elif ${_KEEP_BIN_PKGS} == "no"
 _REPLACE_TARGETS+=	stage-package-create
+.else
+_REPLACE_TARGETS+=	package
 .endif
 _REPLACE_TARGETS+=	replace-message
 _REPLACE_TARGETS+=	unprivileged-install-hook
