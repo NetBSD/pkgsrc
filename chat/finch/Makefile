@@ -1,24 +1,12 @@
-# $NetBSD: Makefile,v 1.59 2014/05/29 23:35:18 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2014/12/07 08:45:59 obache Exp $
 
 PKGNAME=	finch-${PIDGIN_VERSION}
-PKGREVISION=	1
 
 COMMENT=	Multi-protocol Instant Messaging client console frontend
-
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2.10.8
-# finch/libgnt/gntwm.c needs
-# -       PyObject *pp = PySys_GetObject("path"), *dirobj = PyString_FromString(dir);
-# +       PyObject *pp = PySys_GetObject("path"), *dirobj = PyBytes_FromString(dir);
 
 .include		"../../chat/libpurple/Makefile.common"
 
 USE_TOOLS+=	intltool msgfmt perl
-
-PKGCONFIG_OVERRIDE+=	finch/finch.pc.in
-PKGCONFIG_OVERRIDE+=	finch/libgnt/gnt.pc.in
-PKGCONFIG_OVERRIDE+=	gaim.pc.in
-PKGCONFIG_OVERRIDE+=	libpurple/purple.pc.in
-PKGCONFIG_OVERRIDE+=	pidgin/pidgin.pc.in
 
 CONFIGURE_ARGS+=	--enable-consoleui
 CONFIGURE_ENV+=		ac_cv_path_pythonpath=
