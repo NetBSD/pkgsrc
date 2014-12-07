@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4705 2014/12/07 04:33:38 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.4706 2014/12/07 08:48:01 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6121,3 +6121,8 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated fonts/vlgothic-ttf to 20141206 [ryoon 2014-12-07]
 	Updated games/asciiquarium to 1.1 [mef 2014-12-07]
 	Updated net/djbdns-run to 20141207 [schmonz 2014-12-07]
+	Updated chat/libpurple to 2.10.11 [obache 2014-12-07]
+	Updated chat/finch to 2.10.11 [obache 2014-12-07]
+	Updated chat/pidgin to 2.10.11 [obache 2014-12-07]
+	Updated chat/pidgin-sametime to 2.10.11 [obache 2014-12-07]
+	Updated chat/pidgin-silc to 2.10.11 [obache 2014-12-07]
