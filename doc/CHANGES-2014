@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4714 2014/12/07 17:27:33 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4715 2014/12/07 17:41:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6134,3 +6134,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/afl to 0.87b [wiz 2014-12-07]
 	Updated x11/luit to 2.0.20141204 [wiz 2014-12-07]
 	Updated textproc/py-html2text to 2014.12.5 [wiz 2014-12-07]
+	Updated time/py-vdirsyncer to 0.3.2 [wiz 2014-12-07]
