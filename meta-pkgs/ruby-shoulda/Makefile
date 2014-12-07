@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/08/14 16:10:08 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2014/12/07 19:38:59 rodent Exp $
 
 DISTNAME=	shoulda-3.5.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-shoulda-matchers>=1.4.1<3.0:../../devel/ruby-shoulda
 USE_LANGUAGES=	# none
 
 RUBY_VERSION_SUPPORTED=	200 193 21
+
+META_PACKAGE=	yes
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
