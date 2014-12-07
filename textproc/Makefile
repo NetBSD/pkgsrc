@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.811 2014/12/06 16:15:08 rodent Exp $
+# $NetBSD: Makefile,v 1.812 2014/12/07 09:53:50 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -653,7 +653,6 @@ SUBDIR+=	py-empy
 SUBDIR+=	py-enchant
 SUBDIR+=	py-expat
 SUBDIR+=	py-feedparser
-SUBDIR+=	py-ftfy
 SUBDIR+=	py-gnosis-utils
 SUBDIR+=	py-html2text
 SUBDIR+=	py-html5lib
