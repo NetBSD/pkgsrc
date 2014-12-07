@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4710 2014/12/07 12:34:45 imil Exp $
+$NetBSD: CHANGES-2014,v 1.4711 2014/12/07 12:38:06 tron Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6130,3 +6130,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/gcc-aux to 20140422nb4 [ryoon 2014-12-07]
 	Updated cad/ghdl to 0.32rc1 [ryoon 2014-12-07]
 	Updated devel/py-requests to 2.5.0 [imil 2014-12-07]
+	Updated databases/phpmyadmin to 4.2.13.1 [tron 2014-12-07]
