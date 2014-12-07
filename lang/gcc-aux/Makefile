@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2014/05/29 23:36:42 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2014/12/07 10:45:32 ryoon Exp $
 #
 
 PKGNAME=	gcc-aux-${SNAPSHOT}
 DISTNAME=	gcc-${GCC_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 DISTFILES=	${DISTNAME}.tar.bz2
@@ -57,6 +57,8 @@ BOOTSTRAP_COMPILER=	ada-bootstrap.${GARCH}.freebsd.100B.tar.bz2
 .if ${OPSYS} == NetBSD
 .if !empty(OS_VERSION:M6.99.*)
    NSUFF=	7.0_DEV
+.elif !empty(OS_VERSION:M7.99.*)
+   NSUFF=	8.0_DEV
 .else
    NSUFF=	${OS_VERSION}
 .endif
@@ -64,7 +66,9 @@ BOOTSTRAP_COMPILER=	ada-bootstrap.${GARCH}.freebsd.100B.tar.bz2
    NELF=	elf
 .endif
 XLDF=			-lm
+.if empty(OS_VERSION:M7.99.*)
 MODERN_BINUTILS=	yes
+.endif
 BOOTSTRAP_COMPILER=	ada-bootstrap.${GARCH}.netbsd.614.tar.bz2
 BLD_TARGET=		${MACHINE_ARCH}-aux-netbsd${NELF}${NSUFF}
 .endif
@@ -79,7 +83,7 @@ EXTRA_CONFARGS+=	--enable-multilib
 COMPILER_ABI_SWITCH=	-m32
 .  endif
 MY_CONFIGURE_ENV+=	OBJDUMP=${PREFIX}/bin/gobjdump
-MODERN_BINUTILS=x	yes
+MODERN_BINUTILS=	yes
 NATIVE_LINKER!=		which ld
 .endif
 
