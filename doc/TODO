@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13897 2014/12/07 08:48:01 obache Exp $
+$NetBSD: TODO,v 1.13898 2014/12/07 10:49:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -420,7 +420,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
 	o calibre-2.2.0 [wip]
-	o calibre-2.11.0
+	o calibre-2.12.0
 	o calligra-2.4.3 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -484,7 +484,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ddclient-3.7.3
 	o defendguin-0.0.11
 	o delegate-9.9.9
-	o denemo-1.1.8
+	o denemo-1.2.0
 	o dhid-5.3
 	o dk-milter-1.0.2 [wip]
 	o doclifter-2.15
@@ -586,6 +586,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gforth-0.7.3
 	o gfract-0.33
 	o ghc-7.8.1
+	o ghostscript-9.14
 	o gimp-docs-2.8.2
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
@@ -757,6 +758,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libthrift-0.8.0
 	o libtool-2.4.4
 	o libusb-1.0.19
+	o libuv-1.0.1 [pkg/49442]
 	o libv4l-0.8.5
 	o libvdpau-0.8
 	o libxdg-basedir-1.2.0
