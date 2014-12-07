@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/12/01 13:58:15 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2014/12/07 23:39:13 gdt Exp $
 
-DISTNAME=		mopher-0.5.1
+DISTNAME=		mopher-0.5.2
 CATEGORIES=		mail
 MASTER_SITES=		http://mopher.org/download/
 
