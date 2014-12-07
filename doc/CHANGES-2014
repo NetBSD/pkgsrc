@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4706 2014/12/07 08:48:01 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4707 2014/12/07 09:20:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6126,3 +6126,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated chat/pidgin to 2.10.11 [obache 2014-12-07]
 	Updated chat/pidgin-sametime to 2.10.11 [obache 2014-12-07]
 	Updated chat/pidgin-silc to 2.10.11 [obache 2014-12-07]
+	Updated games/lgogdownloader to 2.20 [wiz 2014-12-07]
