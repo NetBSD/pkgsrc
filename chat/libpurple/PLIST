@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2014/01/31 06:32:16 obache Exp $
+@comment $NetBSD: PLIST,v 1.29 2014/12/07 08:42:07 obache Exp $
 include/libpurple/account.h
 include/libpurple/accountopt.h
 include/libpurple/blist.h
@@ -228,9 +228,3 @@ ${PLIST.dbus}include/libpurple/dbus-useful.h
 ${PLIST.dbus}lib/libpurple-client.la
 ${PLIST.dbus}lib/purple-2/dbus-example.la
 ${PLIST.perl}lib/purple-2/perl.la
-${PLIST.perl}lib/purple-2/perl/Purple.pm
-${PLIST.perl}lib/purple-2/perl/auto/Purple/.packlist
-${PLIST.perl}lib/purple-2/perl/auto/Purple/Purple.bs
-${PLIST.perl}lib/purple-2/perl/auto/Purple/Purple.so
-${PLIST.perl}lib/purple-2/perl/auto/Purple/autosplit.ix
-${PLIST.perl}man/man3/Purple.3
