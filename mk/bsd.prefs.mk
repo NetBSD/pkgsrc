@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.351 2014/12/06 23:28:18 agc Exp $
+# $NetBSD: bsd.prefs.mk,v 1.352 2014/12/07 06:22:52 obache Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -529,7 +529,7 @@ DESTDIR=
 # default is no (to preserve settings since 2013/05/23, prior to that it
 # was yes)
 _KEEP_BIN_PKGS?= no
-.if !empty(PKGSRC_KEEP_BIN_PKGS:M[Yy][Ee][Ss])
+.if !empty(PKGSRC_KEEP_BIN_PKGS:U:M[Yy][Ee][Ss])
 _KEEP_BIN_PKGS=	yes
 .endif
 
