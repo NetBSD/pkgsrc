@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13896 2014/12/06 07:33:51 khorben Exp $
+$NetBSD: TODO,v 1.13897 2014/12/07 08:48:01 obache Exp $
 
 Suggested new packages
 ======================
@@ -882,7 +882,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o php-tiki6-6.10
 	o php-tt-rss-1.14
 	o picp-0.6.8
-	o pidgin-2.10.10
 	o pim6dd-20040819a
 	o pim6sd-20040824a
 	o pinfo-0.6.10
