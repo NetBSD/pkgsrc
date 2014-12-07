@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2014/08/25 18:33:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/12/07 12:34:09 imil Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/requests/__init__.py
 ${PYSITELIB}/requests/__init__.pyc
@@ -218,6 +219,9 @@ ${PYSITELIB}/requests/packages/urllib3/util/request.pyo
 ${PYSITELIB}/requests/packages/urllib3/util/response.py
 ${PYSITELIB}/requests/packages/urllib3/util/response.pyc
 ${PYSITELIB}/requests/packages/urllib3/util/response.pyo
+${PYSITELIB}/requests/packages/urllib3/util/retry.py
+${PYSITELIB}/requests/packages/urllib3/util/retry.pyc
+${PYSITELIB}/requests/packages/urllib3/util/retry.pyo
 ${PYSITELIB}/requests/packages/urllib3/util/ssl_.py
 ${PYSITELIB}/requests/packages/urllib3/util/ssl_.pyc
 ${PYSITELIB}/requests/packages/urllib3/util/ssl_.pyo
