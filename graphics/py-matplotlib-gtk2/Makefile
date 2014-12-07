@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2014/05/09 07:37:08 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2014/12/07 17:09:09 rodent Exp $
 
 DISTNAME=		matplotlib-1.3.1
 PKGNAME=		${PYPKGPREFIX}-matplotlib-gtk-1.3.1
@@ -30,7 +30,7 @@ post-patch:
 	${ECHO} "macosx = False" ) > ${WRKSRC}/setup.cfg
 
 post-install:
-	${RM} -r ${DESTDIR}/${PREFIX}/${PYSITELIB}/${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
+	${RM} -r ${DESTDIR}/${PREFIX}/${PYSITELIB}/${EGG_INFODIR}
 
 .include "../../lang/python/egg.mk"
 .include "../../graphics/py-matplotlib/buildlink3.mk"
