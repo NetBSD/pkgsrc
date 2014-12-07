@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/12/01 13:58:15 gdt Exp $
+$NetBSD: distinfo,v 1.2 2014/12/07 23:39:13 gdt Exp $
 
-SHA1 (mopher-0.5.1.tar.gz) = 26b60fd04c8a2b40557555f8a60bd1b91f185491
-RMD160 (mopher-0.5.1.tar.gz) = 40eae10656a45b719bebb2de696fe087839f75b0
-Size (mopher-0.5.1.tar.gz) = 192071 bytes
+SHA1 (mopher-0.5.2.tar.gz) = dc1d97ecccf9412101cc365e040fc94319c89335
+RMD160 (mopher-0.5.2.tar.gz) = 5397e06ef2de0dc572d146cea7b985c7d0765cb6
+Size (mopher-0.5.2.tar.gz) = 194088 bytes
