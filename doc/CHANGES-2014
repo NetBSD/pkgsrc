@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4702 2014/12/06 23:32:12 agc Exp $
+$NetBSD: CHANGES-2014,v 1.4703 2014/12/07 00:05:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6118,3 +6118,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated pkgtools/pkglint to 4.149 [schmonz 2014-12-06]
 	Updated mail/sendmail to 8.15.1 [jnemeth 2014-12-06]
 	mk/bsd.pkg.mk: Added PKGSRC_KEEP_BIN_PKGS defintion [agc 2014-12-06]
+	Updated fonts/vlgothic-ttf to 20141206 [ryoon 2014-12-07]
