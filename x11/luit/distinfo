@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2013/05/26 20:08:54 wiz Exp $
+$NetBSD: distinfo,v 1.7 2014/12/07 17:25:30 wiz Exp $
 
-SHA1 (luit-20130217.tgz) = 487d608f7ad23c40dc1f03e8c1766c530367c67e
-RMD160 (luit-20130217.tgz) = eb4ba0710017f33b530feb3bbd566d49755a3475
-Size (luit-20130217.tgz) = 181709 bytes
+SHA1 (luit-20141204.tgz) = 4811c18987832c3f9afe5ebce53efb80be9d4a5a
+RMD160 (luit-20141204.tgz) = 5295cede44fa55a5ea6eecf0e432eb3e49a39f3d
+Size (luit-20141204.tgz) = 182461 bytes
