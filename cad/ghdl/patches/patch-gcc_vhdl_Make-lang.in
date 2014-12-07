@@ -1,15 +1,15 @@
-$NetBSD: patch-gcc_vhdl_Make-lang.in,v 1.1 2013/11/23 15:10:26 ryoon Exp $
+$NetBSD: patch-gcc_vhdl_Make-lang.in,v 1.2 2014/12/07 10:48:12 ryoon Exp $
 
 * Fix rpath of ghdl1
 
---- gcc/vhdl/Make-lang.in.orig	2010-01-09 14:32:26.000000000 +0000
+--- gcc/vhdl/Make-lang.in.orig	2014-12-07 05:19:03.000000000 +0000
 +++ gcc/vhdl/Make-lang.in
-@@ -132,7 +132,7 @@ ghdl1$(exeext): $(AGCC_OBJS) $(AGCC_DEPS
- 	 -cargs $(CFLAGS) $(GHDL_ADAFLAGS)
+@@ -85,7 +85,7 @@ ghdl1$(exeext): force $(GHDL1_OBJS) $(BA
  	$(GNATMAKE) -o $@ -aI$(srcdir)/vhdl -aOvhdl ortho_gcc-main \
  	 -bargs -E -cargs $(CFLAGS) $(GHDL_ADAFLAGS) \
--	 -largs $(AGCC_OBJS) $(LIBS) $(GMPLIBS)
-+	 -largs $(AGCC_OBJS) $(LIBS) $(GMPLIBS) ${LDFLAGS}
+ 	 -largs --LINK=$(LLINKER) $(ALL_LINKERFLAGS) $(LDFLAGS) $(GHDL1_OBJS) \
+-	 $(filter-out main.o,$(BACKEND)) $(LIBS) $(BACKENDLIBS)
++	 $(filter-out main.o,$(BACKEND)) $(LIBS) $(BACKENDLIBS) ${LDFLAGS}
  
- # The driver for ghdl.
- ghdl$(exeext): force
+ vhdl/default_pathes.ads: Makefile
+ 	echo "--  DO NOT EDIT" > tmp-dpathes.ads

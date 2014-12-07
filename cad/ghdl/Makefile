@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2013/11/23 15:10:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2014/12/07 10:48:12 ryoon Exp $
 
-DISTNAME=	ghdl-0.29
+GCCVER=		4.9.2
+DISTNAME=	ghdl-0.32rc1
 CATEGORIES=	cad
-MASTER_SITES=	http://ghdl.free.fr/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
-DISTFILES+=	${DISTNAME}${EXTRACT_SUFX} gcc-core-4.3.4.tar.bz2
-SITES.gcc-core-4.3.4.tar.bz2=	${MASTER_SITE_GNU:=gcc/gcc-4.3.4/}
+GCCDISTNAME=	gcc-${GCCVER}.tar.bz2
+DISTFILES+=	${DISTNAME}${EXTRACT_SUFX} ${GCCDISTNAME}
+SITES.${GCCDISTNAME}=	${MASTER_SITE_GNU:=gcc/gcc-${GCCVER}/}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://ghdl.free.fr/
@@ -17,9 +19,9 @@ LICENSE=	gnu-gpl-v2
 TOOL_DEPENDS+=		gtexinfo>=5.1:../../devel/gtexinfo
 TOOLS_PLATFORM.makeinfo=
 
-WRKSRC=		${WRKDIR}/gcc-4.3.4
+WRKSRC=		${WRKDIR}/gcc-${GCCVER}
 
-USE_LANGUAGES=	c ada
+USE_LANGUAGES=	c c++ ada
 
 MAKE_JOBS_SAFE=	no
 
@@ -38,9 +40,9 @@ CONFIGURE_ARGS+=	--with-mpfr=${BUILDLINK_PREFIX.mpfr}
 ## Build outside ${WRKSRC}
 OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
-CONFIGURE_SCRIPT=	../gcc-4.3.4/configure
+CONFIGURE_SCRIPT=	../gcc-${GCCVER}/configure
 
-GCC_PKGNAME=		gcc43-ghdl
+GCC_PKGNAME=		gcc49-ghdl
 GCC_SUBPREFIX=		${GCC_PKGNAME}
 GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
 GNU_CONFIGURE_PREFIX=	${GCC_PREFIX}
@@ -49,14 +51,14 @@ CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX:Q}
 
 INSTALLATION_DIRS+=	bin
 
-post-extract:
-	cd ${WRKDIR} && mv ${DISTNAME}/vhdl gcc-4.3.4/gcc
+ post-extract:
+	cd ${WRKDIR} && ${MV} ${DISTNAME}/vhdl gcc-${GCCVER}/gcc
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${LN} -fs ../gcc43-ghdl/bin/ghdl .
+	cd ${DESTDIR}${PREFIX}/bin && ${LN} -fs ../gcc49-ghdl/bin/ghdl .
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
