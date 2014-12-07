@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/12/01 11:01:10 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/12/07 17:24:00 wiz Exp $
 
-DISTNAME=	afl-0.80b
+DISTNAME=	afl-0.87b
 CATEGORIES=	devel
 MASTER_SITES=	http://lcamtuf.coredump.cx/afl/releases/
 EXTRACT_SUFX=	.tgz
