@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.138 2014/11/23 13:17:21 tron Exp $
+# $NetBSD: Makefile,v 1.139 2014/12/07 12:37:54 tron Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}-all-languages
 PKGNAME=	phpmyadmin-${DIST_VERSION:S/-//}
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpmyadmin/}
-EXTRACT_SUFX=	.tar.xz
+#EXTRACT_SUFX=	.tar.xz
 
 OWNER=		tron@NetBSD.org
 HOMEPAGE=	http://www.phpmyadmin.net/
@@ -28,7 +28,7 @@ MESSAGE_SUBST+=	CONF_INC_PHP=${CONF_INC_PHP} PMCONFFILE=${PMCONFFILE:Q} \
 		EXDIR=${EXDIR:Q}
 
 CONF_INC_PHP=	${PREFIX}/share/phpmyadmin/config.inc.php
-DIST_VERSION=	4.2.12
+DIST_VERSION=	4.2.13.1
 DOC_FILES=	ChangeLog LICENSE README RELEASE-DATE-${DIST_VERSION}
 
 APACHE_USER?=	www
