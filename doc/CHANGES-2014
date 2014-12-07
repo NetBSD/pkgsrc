@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4717 2014/12/07 21:57:36 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4718 2014/12/07 22:14:54 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6137,3 +6137,9 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/py-vdirsyncer to 0.3.2 [wiz 2014-12-07]
 	Updated meta-pkgs/suse121 to 12.1nb1 [rodent 2014-12-07]
 	Updated databases/p5-DBIx-Class-Fixtures to 1.001026 [mef 2014-12-07]
+	Updated databases/p5-DBIx-Class-Helpers to 2.024001 [mef 2014-12-07]
+	Updated databases/p5-DBIx-Class-RDBOHelpers to 0.11 [mef 2014-12-07]
+	Updated databases/p5-DBIx-Introspector to 0.001004 [mef 2014-12-07]
+	Updated databases/p5-DBIx-SearchBuilder to 1.66 [mef 2014-12-07]
+	Updated databases/p5-DBIx-Class-EncodedColumn to 0.00013 [mef 2014-12-07]
+
