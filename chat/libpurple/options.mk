@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.27 2014/12/07 08:42:07 obache Exp $
+# $NetBSD: options.mk,v 1.28 2014/12/07 08:45:59 obache Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libpurple
 PKG_SUPPORTED_OPTIONS+=		avahi dbus debug farsight gnome gnutls
@@ -60,7 +60,6 @@ CONFIGURE_ARGS+=	--with-tclconfig=${BUILDLINK_PREFIX.tcl}/lib
 .if !empty(PKG_OPTIONS:Mdbus)
 CONFIGURE_ARGS+=	--enable-dbus
 CONFIGURE_ARGS+=	--with-python=${PYTHONBIN}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2.10.8
 PLIST.dbus=		yes
 REPLACE_SH+=		libpurple/purple-send
 REPLACE_SH+=		libpurple/purple-send-async
