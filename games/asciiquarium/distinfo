@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/02/23 19:15:21 drochner Exp $
+$NetBSD: distinfo,v 1.2 2014/12/07 02:51:35 mef Exp $
 
-SHA1 (asciiquarium_1.0.tar.gz) = 727982002f7b03849359019aa1550aa73bdf3c0c
-RMD160 (asciiquarium_1.0.tar.gz) = 25253c2fe4b46c21598378668b8bb09680bf5b11
-Size (asciiquarium_1.0.tar.gz) = 13904 bytes
+SHA1 (asciiquarium_1.1.tar.gz) = 6742a88380718f942256c8aed41e9d389fbb7f79
+RMD160 (asciiquarium_1.1.tar.gz) = 9110961aede59de7c1837236e5ed4305146a227e
+Size (asciiquarium_1.1.tar.gz) = 15436 bytes
