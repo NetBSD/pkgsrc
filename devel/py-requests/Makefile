@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2014/08/25 18:33:21 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/12/07 12:34:09 imil Exp $
 
-DISTNAME=	v2.3.0
+DISTNAME=	v2.5.0
 EGG_NAME=	requests-${DISTNAME:S/v//}
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
 CATEGORIES=	devel www
