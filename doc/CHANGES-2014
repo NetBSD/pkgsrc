@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4716 2014/12/07 19:43:25 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.4717 2014/12/07 21:57:36 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6136,3 +6136,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/py-html2text to 2014.12.5 [wiz 2014-12-07]
 	Updated time/py-vdirsyncer to 0.3.2 [wiz 2014-12-07]
 	Updated meta-pkgs/suse121 to 12.1nb1 [rodent 2014-12-07]
+	Updated databases/p5-DBIx-Class-Fixtures to 1.001026 [mef 2014-12-07]
