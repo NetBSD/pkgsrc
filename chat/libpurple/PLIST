@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2014/12/07 08:42:07 obache Exp $
+@comment $NetBSD: PLIST,v 1.30 2014/12/07 08:45:59 obache Exp $
 include/libpurple/account.h
 include/libpurple/accountopt.h
 include/libpurple/blist.h
@@ -91,6 +91,7 @@ lib/purple-2/log_reader.la
 lib/purple-2/newline.la
 lib/purple-2/offlinemsg.la
 lib/purple-2/psychic.la
+${PLIST.nss}lib/purple-2/nss-prefs.la
 ${PLIST.gnutls}lib/purple-2/ssl-gnutls.la
 ${PLIST.nss}lib/purple-2/ssl-nss.la
 lib/purple-2/ssl.la
@@ -132,23 +133,23 @@ share/locale/he/LC_MESSAGES/pidgin.mo
 share/locale/hi/LC_MESSAGES/pidgin.mo
 share/locale/hr/LC_MESSAGES/pidgin.mo
 share/locale/hu/LC_MESSAGES/pidgin.mo
-share/locale/hy/LC_MESSAGES/pidgin.mo
 share/locale/id/LC_MESSAGES/pidgin.mo
 share/locale/it/LC_MESSAGES/pidgin.mo
 share/locale/ja/LC_MESSAGES/pidgin.mo
 share/locale/ka/LC_MESSAGES/pidgin.mo
+share/locale/kk/LC_MESSAGES/pidgin.mo
 share/locale/km/LC_MESSAGES/pidgin.mo
 share/locale/kn/LC_MESSAGES/pidgin.mo
 share/locale/ko/LC_MESSAGES/pidgin.mo
 share/locale/ku/LC_MESSAGES/pidgin.mo
-share/locale/lo/LC_MESSAGES/pidgin.mo
+share/locale/ku_IQ/LC_MESSAGES/pidgin.mo
 share/locale/lt/LC_MESSAGES/pidgin.mo
+share/locale/lv/LC_MESSAGES/pidgin.mo
 share/locale/mai/LC_MESSAGES/pidgin.mo
 share/locale/mhr/LC_MESSAGES/pidgin.mo
 share/locale/mk/LC_MESSAGES/pidgin.mo
 share/locale/mn/LC_MESSAGES/pidgin.mo
 share/locale/mr/LC_MESSAGES/pidgin.mo
-share/locale/ms_MY/LC_MESSAGES/pidgin.mo
 share/locale/my_MM/LC_MESSAGES/pidgin.mo
 share/locale/nb/LC_MESSAGES/pidgin.mo
 share/locale/ne/LC_MESSAGES/pidgin.mo
@@ -175,6 +176,7 @@ share/locale/ta/LC_MESSAGES/pidgin.mo
 share/locale/te/LC_MESSAGES/pidgin.mo
 share/locale/th/LC_MESSAGES/pidgin.mo
 share/locale/tr/LC_MESSAGES/pidgin.mo
+share/locale/tt/LC_MESSAGES/pidgin.mo
 share/locale/uk/LC_MESSAGES/pidgin.mo
 share/locale/ur/LC_MESSAGES/pidgin.mo
 share/locale/vi/LC_MESSAGES/pidgin.mo
@@ -204,9 +206,9 @@ share/purple/ca-certs/Thawte_Premium_Server_CA.pem
 share/purple/ca-certs/Thawte_Primary_Root_CA.pem
 share/purple/ca-certs/ValiCert_Class_2_VA.pem
 share/purple/ca-certs/VeriSign_Class3_Extended_Validation_CA.pem
-share/purple/ca-certs/VeriSign_Class_3_Public_Primary_Certification_Authority_-_G2.pem
-share/purple/ca-certs/VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5.pem
-share/purple/ca-certs/VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5_2.pem
+share/purple/ca-certs/VeriSign_Class_3_Primary_CA-G2.pem
+share/purple/ca-certs/VeriSign_Class_3_Primary_CA-G5-2.pem
+share/purple/ca-certs/VeriSign_Class_3_Primary_CA-G5.pem
 share/purple/ca-certs/VeriSign_International_Server_Class_3_CA.pem
 share/purple/ca-certs/Verisign_Class3_Primary_CA.pem
 share/sounds/purple/alert.wav

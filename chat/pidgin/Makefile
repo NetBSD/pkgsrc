@@ -1,16 +1,10 @@
-# $NetBSD: Makefile,v 1.62 2014/05/09 07:36:55 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2014/12/07 08:45:59 obache Exp $
 
-PKGREVISION=		1
 COMMENT=		Multi-protocol Instant Messaging client GTK frontend
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2.10.8 (finch)
 
 .include		"../../chat/libpurple/Makefile.common"
 
 USE_TOOLS+=		msgfmt intltool
-
-PKGCONFIG_OVERRIDE+=	gaim.pc.in
-PKGCONFIG_OVERRIDE+=	libpurple/purple.pc.in
-PKGCONFIG_OVERRIDE+=	pidgin/pidgin.pc.in
 
 CONFIGURE_ARGS+=	--enable-gtkui
 
@@ -26,13 +20,8 @@ pre-build:
 	# XXX Find a cleaner way.
 	${TEST} -r ${WRKSRC}/libpurple/libpurple.la || \
 	  ln -s ${BUILDLINK_DIR}/lib/libpurple.la ${WRKSRC}/libpurple/.
-	cd ${WRKSRC} && ${BUILD_MAKE_CMD} pidgin.desktop
 
 INSTALL_DIRS=		pidgin doc
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/pidgin.desktop \
-	  ${DESTDIR}${PREFIX}/share/applications
 
 .include "../../chat/libpurple/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

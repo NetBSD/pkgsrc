@@ -1,27 +1,18 @@
-# $NetBSD: Makefile,v 1.67 2014/05/29 23:35:18 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2014/12/07 08:45:59 obache Exp $
 
 PKGNAME=	libpurple-${PIDGIN_VERSION}
-PKGREVISION=	3
 
 COMMENT=	Multi-protocol Instant Messaging client backend
 
 .include		"../../chat/libpurple/Makefile.common"
 
 USE_TOOLS+=		msgfmt intltool
-CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
-MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
-
-PKGCONFIG_OVERRIDE+=	gaim.pc.in
-PKGCONFIG_OVERRIDE+=	libpurple/purple.pc.in
 
 CPPFLAGS.SunOS+=	-D__SunOS
 
 .include "options.mk"
 
 BUILD_DIRS=	m4macros libpurple po share/ca-certs share/sounds
-
-## #post-build:
-## #	cp ${WRKSRC}/libpurple/gconf/purple.schemas ${WRKSRC}/purple.schemas
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
