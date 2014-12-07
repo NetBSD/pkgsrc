@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/10/05 22:13:52 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2014/12/07 17:09:09 rodent Exp $
 
 DISTNAME=	pyquery-1.2.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-cssselect-[0-9]*:../../textproc/py-cssselect
 USE_LANGUAGES=	# none
 
 post-install:
-	${CHMOD} -x ${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_NAME}-py${PYVERSSUFFIX}.egg-info/*
+	${CHMOD} -x ${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_INFODIR}/*
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
