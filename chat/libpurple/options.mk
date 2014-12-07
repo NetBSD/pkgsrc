@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.26 2014/05/09 07:36:55 wiz Exp $
+# $NetBSD: options.mk,v 1.27 2014/12/07 08:42:07 obache Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libpurple
 PKG_SUPPORTED_OPTIONS+=		avahi dbus debug farsight gnome gnutls
@@ -44,6 +44,9 @@ CONFIGURE_ARGS+= --with-nss-libs=${BUILDLINK_PREFIX.nss}/lib/nss
 PLIST.perl=		yes
 CONFIGURE_ARGS+=	--enable-perl
 USE_TOOLS+=		perl:run
+PERL5_PACKLIST_DIR=	${PREFIX}/lib/purple-2/perl
+PERL5_PACKLIST=		auto/Purple/.packlist
+.  include "../../lang/perl5/packlist.mk"
 .  include "../../lang/perl5/buildlink3.mk"
 .endif
 
