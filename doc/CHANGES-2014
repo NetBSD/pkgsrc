@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4718 2014/12/07 22:14:54 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4719 2014/12/07 23:39:30 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6143,3 +6143,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/p5-DBIx-SearchBuilder to 1.66 [mef 2014-12-07]
 	Updated databases/p5-DBIx-Class-EncodedColumn to 0.00013 [mef 2014-12-07]
 
+	Updated mail/mopher to 0.5.2 [gdt 2014-12-07]
