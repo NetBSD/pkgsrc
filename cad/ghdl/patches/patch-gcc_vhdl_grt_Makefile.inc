@@ -1,20 +1,18 @@
-$NetBSD: patch-gcc_vhdl_Makefile.in,v 1.2 2014/12/07 10:48:12 ryoon Exp $
+$NetBSD: patch-gcc_vhdl_grt_Makefile.inc,v 1.1 2014/12/07 10:48:12 ryoon Exp $
 
---- gcc/vhdl/Makefile.in.orig	2014-12-07 06:34:27.000000000 +0000
-+++ gcc/vhdl/Makefile.in
-@@ -477,6 +477,16 @@ ifeq ($(filter-out x86_64 linux,$(arch) 
+--- gcc/vhdl/grt/Makefile.inc.orig	2014-12-07 04:08:50.000000000 +0000
++++ gcc/vhdl/grt/Makefile.inc
+@@ -53,6 +53,14 @@ ifeq ($(filter-out x86_64 linux,$(arch) 
    GRT_TARGET_OBJS=amd64.o linux.o times.o
    GRT_EXTRA_LIB=-ldl -lm $(GRT_ELF_OPTS)
  endif
-+ifeq ($(filter-out i%86 netbsd%,$(arch) $(osys)),)
++ifeq ($(filter-out i%86 netbsd,$(arch) $(osys)),)
 +  GRT_TARGET_OBJS=i386.o linux.o times.o
 +  GRT_EXTRA_LIB=-lm $(GRT_ELF_OPTS)
-+  ADAC=ada
 +endif
-+ifeq ($(filter-out x86_64 netbsd%,$(arch) $(osys)),)
++ifeq ($(filter-out x86_64 netbsd,$(arch) $(osys)),)
 +  GRT_TARGET_OBJS=amd64.o linux.o times.o
 +  GRT_EXTRA_LIB=-lm $(GRT_ELF_OPTS)
-+  ADAC=ada
 +endif
  ifeq ($(filter-out i%86 freebsd%,$(arch) $(osys)),)
    GRT_TARGET_OBJS=i386.o linux.o times.o
