@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dnscache.sh,v 1.6 2014/12/06 09:41:04 schmonz Exp $
+# $NetBSD: dnscache.sh,v 1.7 2014/12/07 04:33:31 schmonz Exp $
 #
 # @PKGNAME@ script to control dnscache (caching DNS resolver)
 #
@@ -19,7 +19,7 @@ name="dnscache"
 : ${dnscache_datalimit:="3000000"}
 : ${dnscache_log:="YES"}
 : ${dnscache_logcmd:="logger -t nb${name} -p daemon.info"}
-: ${dnscache_nologcmd:="@LOCALBASE@/bin/multilog -*"}
+: ${dnscache_nologcmd:="@DAEMONTOOLS_PREFIX@/bin/multilog -*"}
 
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
@@ -28,7 +28,7 @@ fi
 rcvar=${name}
 required_dirs="@PKG_SYSCONFDIR@/dnscache/ip @PKG_SYSCONFDIR@/dnscache/servers"
 required_files="@PKG_SYSCONFDIR@/dnscache/servers/@"
-command="@LOCALBASE@/bin/${name}"
+command="@DJBDNS_PREFIX@/bin/${name}"
 start_precmd="dnscache_precmd"
 
 dnscache_precmd()
@@ -36,14 +36,7 @@ dnscache_precmd()
 	if [ -f /etc/rc.subr ]; then
 		checkyesno dnscache_log || dnscache_logcmd=${dnscache_nologcmd}
 	fi
-	if [ ! -f @PKG_SYSCONFDIR@/dnscache/seed ]; then
-		old_umask=$(umask)
-		umask 066
-		dd if=/dev/urandom bs=128 count=1 of=@PKG_SYSCONFDIR@/dnscache/seed
-		umask ${old_umask}
-	fi
-	required_files="${required_files} @PKG_SYSCONFDIR@/dnscache/seed"
-	command="@SETENV@ - ${dnscache_postenv} ROOT=@PKG_SYSCONFDIR@/dnscache IP=${dnscache_ip} IPSEND=${dnscache_ipsend} CACHESIZE=${dnscache_size} @LOCALBASE@/bin/envuidgid dnscache @LOCALBASE@/bin/softlimit -o250 -d ${dnscache_datalimit} @LOCALBASE@/bin/dnscache <@PKG_SYSCONFDIR@/dnscache/seed 2>&1 | @LOCALBASE@/bin/setuidgid dnslog ${dnscache_logcmd}"
+	command="@SETENV@ - ${dnscache_postenv} ROOT=@PKG_SYSCONFDIR@/dnscache IP=${dnscache_ip} IPSEND=${dnscache_ipsend} CACHESIZE=${dnscache_size} @DAEMONTOOLS_PREFIX@/bin/envuidgid dnscache @DAEMONTOOLS_PREFIX@/bin/softlimit -o250 -d ${dnscache_datalimit} @DJBDNS_PREFIX@/bin/dnscache </dev/urandom 2>&1 | @DAEMONTOOLS_PREFIX@/bin/setuidgid dnslog ${dnscache_logcmd}"
 	command_args="&"
 	rc_flags=""
 }

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2014/12/06 09:41:04 schmonz Exp $
+# $NetBSD: Makefile,v 1.25 2014/12/07 04:33:30 schmonz Exp $
 #
 
-DISTNAME=		djbdns-run-20141206
+DISTNAME=		djbdns-run-20141207
 CATEGORIES=		net
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -49,6 +49,14 @@ PKG_SYSCONFDIR.djbdns-run!=						\
 MAKEVARS+=	PKG_SYSCONFDIR.djbdns-run
 .  endif
 .endif
+
+DJBDNS_TOOLS=		daemontools djbdns ucspi-tcp
+
+.for i in ${DJBDNS_TOOLS}
+DJBDNS_TOOL_VAR.${i}=	${i:S/-/_/g:tu}_PREFIX
+EVAL_PREFIX+=		${DJBDNS_TOOL_VAR.${i}}=${i}
+FILES_SUBST+=		${DJBDNS_TOOL_VAR.${i}}=${${DJBDNS_TOOL_VAR.${i}}:Q}
+.endfor
 
 do-install:
 	${INSTALL_DATA} ${FILESDIR}/README.pkgsrc ${DESTDIR}${PREFIX}/share/doc/djbdns-run
