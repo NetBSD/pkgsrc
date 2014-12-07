@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2012/04/04 13:20:06 obache Exp $
+@comment $NetBSD: PLIST,v 1.22 2014/12/07 08:45:59 obache Exp $
 bin/pidgin
 include/pidgin/gtkaccount.h
 include/pidgin/gtkblist-theme-loader.h
@@ -72,6 +72,7 @@ lib/pidgin/xmppconsole.la
 lib/pidgin/xmppdisco.la
 lib/pkgconfig/pidgin.pc
 man/man1/pidgin.1
+share/appdata/pidgin.appdata.xml
 share/applications/pidgin.desktop
 share/icons/hicolor/16x16/apps/pidgin.png
 share/icons/hicolor/22x22/apps/pidgin.png
