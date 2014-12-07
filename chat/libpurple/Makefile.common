@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.42 2014/02/04 09:04:30 obache Exp $
+# $NetBSD: Makefile.common,v 1.43 2014/12/07 08:45:59 obache Exp $
 #
 # used by chat/finch/Makefile
 # used by chat/libpurple/Makefile
@@ -6,7 +6,7 @@
 # used by chat/pidgin-sametime/Makefile
 # used by chat/pidgin-silc/Makefile
 
-PIDGIN_VERSION=	2.10.9
+PIDGIN_VERSION=	2.10.11
 DISTNAME=	pidgin-${PIDGIN_VERSION}
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pidgin/}
@@ -41,3 +41,11 @@ CONFIGURE_ARGS+=	--disable-cyrus-sasl
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--disable-nm
 CONFIGURE_ARGS+=	--disable-vv
+
+PKGCONFIG_OVERRIDE+=	finch/finch.pc.in
+PKGCONFIG_OVERRIDE+=	finch/libgnt/gnt.pc.in
+PKGCONFIG_OVERRIDE+=	gaim.pc.in
+PKGCONFIG_OVERRIDE+=	libpurple/data/purple.pc.in
+PKGCONFIG_OVERRIDE+=	libpurple/data/purple-2.pc.in
+PKGCONFIG_OVERRIDE+=	pidgin/data/pidgin.pc.in
+PKGCONFIG_OVERRIDE+=	pidgin/data/pidgin-2.pc.in
