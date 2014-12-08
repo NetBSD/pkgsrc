@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2014/12/03 06:27:20 wen Exp $
+# $NetBSD: Makefile,v 1.17 2014/12/08 08:08:19 wen Exp $
 
-DISTNAME=	Dancer2-0.155002
+DISTNAME=	Dancer2-0.156000
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/X/XS/XSAWYERX/}
