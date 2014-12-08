@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2014/07/11 10:10:10 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2014/12/08 13:03:19 wiz Exp $
 #
 # used by net/transmission/Makefile
 # used by net/transmission-gtk/Makefile
@@ -35,6 +35,8 @@ CPPFLAGS+=		-DBSD
 LDFLAGS+=		-framework CoreFoundation
 .endif
 
+ALL_ENV+=	LIBEVENT_CFLAGS=-I${BUILDLINK_PREFIX.libevent}/include
+ALL_ENV+=	LIBEVENT_LIBS="-L${BUILDLINK_PREFIX.libevent}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libevent}/lib -levent"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0.10
 .include "../../devel/libevent/buildlink3.mk"
 ALL_ENV+=	"OPENSSL_CFLAGS=-I${SSLBASE}/include"
