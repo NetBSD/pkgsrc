@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2014/11/07 19:28:38 adam Exp $
+# $NetBSD: Makefile.common,v 1.48 2014/12/08 03:50:02 rodent Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -39,7 +39,9 @@ USE_TOOLS+=		pax
 USE_LANGUAGES=		c c++
 # GCC 4.5 or later is required to build, and GCC 4.5 is not provided for OpenBSD
 .  if ${OPSYS} == "OpenBSD"
+.    if ${MACHINE_ARCH} != "sparc64"
 GCC_REQD+=		4.6
+.    endif
 .  else
 GCC_REQD+=		4.5
 .  endif
