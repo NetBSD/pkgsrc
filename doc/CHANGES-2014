@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4721 2014/12/08 08:12:15 wen Exp $
+$NetBSD: CHANGES-2014,v 1.4722 2014/12/08 08:31:14 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6145,3 +6145,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/mopher to 0.5.2 [gdt 2014-12-07]
 	Updated misc/less to 470 [rodent 2014-12-08]
 	Updated www/p5-Dancer2 to 0.156000 [wen 2014-12-08]
+	Updated devel/p5-Moose to 2.1403 [wen 2014-12-08]
