@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.3 2013/06/16 10:11:58 shattered Exp $
+$NetBSD: patch-aa,v 1.4 2014/12/08 14:04:57 mef Exp $
 
---- Makefile.orig	2007-12-24 12:18:02.000000000 +0000
-+++ Makefile
+--- Makefile.orig	2014-05-06 18:56:43.000000000 +0900
++++ Makefile	2014-12-08 22:30:07.000000000 +0900
 @@ -3,9 +3,9 @@
  # (C) 1997-2007 Nelson Murilo, Pangeia Informatica, AMS Foundation and others.
  #
  
--CC       = gcc
+-CC       = cc
 -CFLAGS	 = -DHAVE_LASTLOG_H
 -STATIC   = -static
-+#CC       = gcc
++#CC       = cc
 +#CFLAGS	 = -DHAVE_LASTLOG_H
 +#STATIC   = -static
  
