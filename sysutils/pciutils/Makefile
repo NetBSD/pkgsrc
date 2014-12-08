@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2014/11/27 11:45:56 msaitoh Exp $
+# $NetBSD: Makefile,v 1.25 2014/12/08 04:50:17 obache Exp $
 
 DISTNAME=	pciutils-3.3.0
 CATEGORIES=	sysutils
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 MAKE_JOBS_SAFE=		no
 ONLY_FOR_PLATFORM=	AIX-*-* FreeBSD-*-* Linux-*-* NetBSD-*-*
-ONLY_FOR_PLATFORM+=	DragonFly-*-* OpenBSD-*-* SunOS-5.11-*
+ONLY_FOR_PLATFORM+=	DragonFly-*-* OpenBSD-*-* SunOS-5.11-* Haiku-*-*
 
 INSTALL_TARGET=		install install-lib
 USE_TOOLS+=		gmake pkg-config
