@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.812 2014/12/07 09:53:50 wiz Exp $
+# $NetBSD: Makefile,v 1.813 2014/12/08 09:21:17 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -493,6 +493,7 @@ SUBDIR+=	p5-Text-FindIndent
 SUBDIR+=	p5-Text-Format
 SUBDIR+=	p5-Text-German
 SUBDIR+=	p5-Text-Glob
+SUBDIR+=	p5-Text-Hunspell
 SUBDIR+=	p5-Text-Kakasi
 SUBDIR+=	p5-Text-LevenshteinXS
 SUBDIR+=	p5-Text-Markdown
