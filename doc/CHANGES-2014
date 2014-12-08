@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4725 2014/12/08 09:21:28 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4726 2014/12/08 12:58:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6149,3 +6149,6 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Session-Storage-Secure to 0.010 [wen 2014-12-08]
 	Updated www/p5-Dancer-Session-Cookie to 0.25 [wen 2014-12-08]
 	Added textproc/p5-Text-Hunspell version 2.09 [wiz 2014-12-08]
+	Updated databases/sqlite3 to 3.8.7.3 [adam 2014-12-08]
+	Updated databases/sqlite3-docs to 3.8.7.3 [adam 2014-12-08]
+	Updated databases/sqlite3-tcl to 3.8.7.3 [adam 2014-12-08]
