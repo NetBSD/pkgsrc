@@ -1,10 +1,10 @@
-$NetBSD: patch-src_include_refcount__ptr.h,v 1.1 2012/11/23 22:43:09 alnsn Exp $
+$NetBSD: patch-src_include_refcount__ptr.h,v 1.2 2014/12/08 20:55:19 ryoon Exp $
 
---- src/include/refcount_ptr.h.orig	2010-02-14 09:33:54.000000000 +0000
+--- src/include/refcount_ptr.h.orig	2014-08-17 08:45:13.000000000 +0000
 +++ src/include/refcount_ptr.h
-@@ -28,6 +28,8 @@
-  *  SUCH DAMAGE.
-  */
+@@ -33,6 +33,8 @@ template <class T>
+ class refcount_ptr;
+ 
  
 +#include <stddef.h>
 +
