@@ -1,4 +1,4 @@
-# $NetBSD: pkgformat-vars.mk,v 1.3 2013/05/09 23:37:26 riastradh Exp $
+# $NetBSD: pkgformat-vars.mk,v 1.4 2014/12/08 02:43:25 agc Exp $
 #
 # This Makefile fragment is included indirectly by bsd.prefs.mk and
 # defines some variables which must be defined earlier than where
@@ -86,7 +86,7 @@ PKG_INFO?=	${PKG_INFO_CMD} ${PKGTOOLS_ARGS}
 PKG_VIEW?=	${PKG_VIEW_CMD} ${PKG_VIEW_ARGS}
 LINKFARM?=	${LINKFARM_CMD}
 
-HOST_PKG_ADD?=		${PKG_ADD_CMD} ${HOST-PKGTOOLS_ARGS}
+HOST_PKG_ADD?=		${PKG_ADD_CMD} ${HOST_PKGTOOLS_ARGS}
 HOST_PKG_ADMIN?=	${PKG_ADMIN_CMD} ${HOST_PKGTOOLS_ARGS}
 HOST_PKG_CREATE?=	${PKG_CREATE_CMD} ${HOST_PKGTOOLS_ARGS}
 HOST_PKG_DELETE?=	${PKG_DELETE_CMD} ${HOST_PKGTOOLS_ARGS}
