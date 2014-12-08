@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2014/10/09 14:06:51 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2014/12/08 14:04:57 mef Exp $
 #
 
-DISTNAME=		chkrootkit-0.49
-#KGREVISION=		1
+DISTNAME=		chkrootkit-0.50
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.pangeia.com.br/pub/seg/pac/
 
