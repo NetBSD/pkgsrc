@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4720 2014/12/08 00:56:43 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.4721 2014/12/08 08:12:15 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6142,6 +6142,6 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/p5-DBIx-Introspector to 0.001004 [mef 2014-12-07]
 	Updated databases/p5-DBIx-SearchBuilder to 1.66 [mef 2014-12-07]
 	Updated databases/p5-DBIx-Class-EncodedColumn to 0.00013 [mef 2014-12-07]
-
 	Updated mail/mopher to 0.5.2 [gdt 2014-12-07]
 	Updated misc/less to 470 [rodent 2014-12-08]
+	Updated www/p5-Dancer2 to 0.156000 [wen 2014-12-08]
