@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4727 2014/12/08 13:00:04 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4728 2014/12/08 14:05:10 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6153,3 +6153,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/sqlite3-docs to 3.8.7.3 [adam 2014-12-08]
 	Updated databases/sqlite3-tcl to 3.8.7.3 [adam 2014-12-08]
 	Updated audio/musicpd to 0.18.19nb1 [wiz 2014-12-08]
+	Updated security/chkrootkit to 0.50 [mef 2014-12-08]
