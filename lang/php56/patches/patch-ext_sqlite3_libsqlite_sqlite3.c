@@ -1,4 +1,5 @@
-$NetBSD: patch-ext_sqlite3_libsqlite_sqlite3.c,v 1.1 2014/11/24 15:37:08 taca Exp $$
+$NetBSD: patch-ext_sqlite3_libsqlite_sqlite3.c,v 1.2 2014/12/09 15:11:36 joerg Exp $
+
 Don't redefine _XOPEN_SOURCE, it is already set from php.
 
 --- ext/sqlite3/libsqlite/sqlite3.c.orig	2014-11-12 13:52:21.000000000 +0000
