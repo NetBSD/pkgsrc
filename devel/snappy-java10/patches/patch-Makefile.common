@@ -1,4 +1,6 @@
-$NetBSD: patch-Makefile.common,v 1.1 2014/04/24 16:15:43 ryoon Exp $
+$NetBSD: patch-Makefile.common,v 1.2 2014/12/09 13:22:56 fhajny Exp $
+
+Add NetBSD and SunOS support.
 
 --- Makefile.common.orig	2013-03-28 06:27:26.000000000 +0000
 +++ Makefile.common
@@ -32,11 +34,11 @@ $NetBSD: patch-Makefile.common,v 1.1 2014/04/24 16:15:43 ryoon Exp $
  # os=Default is meant to be generic unix/linux
  
 -known_os_archs := Linux-i386 Linux-amd64 Linux-arm Linux-armhf Mac-i386 Mac-x86_64 FreeBSD-amd64 Windows-x86 Windows-amd64
-+known_os_archs := Linux-i386 Linux-amd64 Linux-arm Linux-armhf Mac-i386 Mac-x86_64 FreeBSD-amd64 NetBSD-amd64 Windows-x86 Windows-amd64
++known_os_archs := Linux-i386 Linux-amd64 Linux-arm Linux-armhf Mac-i386 Mac-x86_64 FreeBSD-amd64 NetBSD-amd64 SunOS-x86 SunOS-amd64 Windows-x86 Windows-amd64
  os_arch := $(OS_NAME)-$(OS_ARCH)
  
  ifeq (,$(findstring $(strip $(os_arch)),$(known_os_archs)))
-@@ -112,6 +112,13 @@ FreeBSD-amd64_LINKFLAGS    := -shared -s
+@@ -112,6 +112,27 @@ FreeBSD-amd64_LINKFLAGS    := -shared -s
  FreeBSD-amd64_LIBNAME      := libsnappyjava.so
  FreeBSD-amd64_SNAPPY_FLAGS := 
  
@@ -47,10 +49,24 @@ $NetBSD: patch-Makefile.common,v 1.1 2014/04/24 16:15:43 ryoon Exp $
 +NetBSD-amd64_LIBNAME      := libsnappyjava.so
 +NetBSD-amd64_SNAPPY_FLAGS := 
 +
++SunOS-x86_CXX          := $(CROSS_PREFIX)g++
++SunOS-x86_STRIP        := $(CROSS_PREFIX)strip
++SunOS-x86_CXXFLAGS     := -I$(JAVA_HOME)/include -Ilib/inc_mac -O2 -fPIC -fvisibility=hidden
++SunOS-x86_LINKFLAGS    := -shared -static-libgcc -static-libstdc++
++SunOS-x86_LIBNAME      := libsnappyjava.so
++SunOS-x86_SNAPPY_FLAGS := 
++
++SunOS-amd64_CXX          := $(CROSS_PREFIX)g++
++SunOS-amd64_STRIP        := $(CROSS_PREFIX)strip
++SunOS-amd64_CXXFLAGS     := -I$(JAVA_HOME)/include -Ilib/inc_mac -O2 -fPIC -fvisibility=hidden
++SunOS-amd64_LINKFLAGS    := -shared -static-libgcc -static-libstdc++
++SunOS-amd64_LIBNAME      := libsnappyjava.so
++SunOS-amd64_SNAPPY_FLAGS := 
++
  Windows-x86_CXX          := $(CROSS_PREFIX)g++
  Windows-x86_STRIP        := $(CROSS_PREFIX)strip
  Windows-x86_CXXFLAGS     := -Ilib/inc_win -O2 
-@@ -138,6 +145,6 @@ SNAPPY_FLAGS := $($(os_arch)_SNAPPY_FLAG
+@@ -138,6 +159,6 @@ SNAPPY_FLAGS := $($(os_arch)_SNAPPY_FLAG
  
  CXXFLAGS := $(CXXFLAGS) -Ilib/include  
  ifneq ($(jni_include),)
