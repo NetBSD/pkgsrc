@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/05/15 11:17:29 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/12/09 11:43:40 fhajny Exp $
 bin/mvn
 lib/java/maven/aether-api-0.9.0.M2.jar
 lib/java/maven/aether-connector-wagon-0.9.0.M2.jar
@@ -43,5 +43,6 @@ lib/java/maven/wagon-provider-api-2.6.jar
 share/doc/java/maven/LICENSE
 share/doc/java/maven/NOTICE
 share/doc/java/maven/README.txt
+share/examples/maven/logging/simplelogger.properties
 share/examples/maven/m2.conf
 share/examples/maven/settings.xml
