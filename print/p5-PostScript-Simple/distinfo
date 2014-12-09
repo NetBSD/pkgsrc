@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/05/01 21:57:17 sno Exp $
+$NetBSD: distinfo,v 1.2 2014/12/09 07:25:14 mef Exp $
 
-SHA1 (PostScript-Simple-0.07.tar.gz) = 6fe1fd4576465d4dad09703052328382aee1a4eb
-RMD160 (PostScript-Simple-0.07.tar.gz) = 4af72f254b7e6efcdfe468ba09e602cfe054b3f1
-Size (PostScript-Simple-0.07.tar.gz) = 41874 bytes
+SHA1 (PostScript-Simple-0.09.tar.gz) = 5a9167b36bde9b24099727acd31d161dd1bf61dd
+RMD160 (PostScript-Simple-0.09.tar.gz) = 45428a9b5648ebb2e878f9dd32516b293b8012d1
+Size (PostScript-Simple-0.09.tar.gz) = 35450 bytes
