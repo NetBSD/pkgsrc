@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/11/29 14:16:47 prlw1 Exp $
+# $NetBSD: Makefile,v 1.2 2014/12/09 13:20:43 joerg Exp $
 
 DISTNAME=	gnome-sudoku-3.14.2
 CATEGORIES=	games
@@ -15,6 +15,8 @@ USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
+
+BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/libgee/buildlink3.mk"
