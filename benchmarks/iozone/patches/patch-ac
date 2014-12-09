@@ -1,8 +1,10 @@
-$NetBSD: patch-ac,v 1.1 2008/08/25 19:35:30 bjs Exp $
+$NetBSD: patch-ac,v 1.2 2014/12/09 13:53:13 mef Exp $
 
---- libbif.c.orig	2008-07-17 11:07:10.000000000 -0400
-+++ libbif.c
-@@ -20,11 +20,11 @@
+Add NetBSD
+
+--- libbif.c.orig	2014-08-12 04:39:14.000000000 +0900
++++ libbif.c	2014-12-09 22:18:29.000000000 +0900
+@@ -23,11 +23,11 @@
  #include <sys/fcntl.h>
  #endif
  
@@ -11,8 +13,8 @@ $NetBSD: patch-ac,v 1.1 2008/08/25 19:35:30 bjs Exp $
  #include <string.h>
  #endif
  
--#if defined(linux) || defined(__DragonFly__) || defined(macosx)
-+#if defined(linux) || defined(__DragonFly__) || defined(macosx) || defined(__NetBSD__)
+-#if defined(linux) || defined(__DragonFly__) || defined(IOZ_macosx)
++#if defined(linux) || defined(__DragonFly__) || defined(IOZ_macosx) || defined(__NetBSD__)
  #include <unistd.h>
  #include <stdlib.h>
  #endif
