@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.3 2014/12/09 13:26:40 khorben Exp $
+$NetBSD: distinfo,v 1.4 2014/12/09 14:37:06 khorben Exp $
 
-SHA1 (pev-0.60.tar.gz) = 8d5e0bafb6dd4da0dcda6837928ad4babb6c8a94
-RMD160 (pev-0.60.tar.gz) = f585355f5971e72f208b56ad0db1ca8ba603f3cd
-Size (pev-0.60.tar.gz) = 212932 bytes
-SHA1 (patch-lib_libpe_Makefile) = 5adf4a60f3320da9deddf74a740dd152b1810f0a
-SHA1 (patch-src_Makefile) = 3a2aed9ed69b4ce0e6a297d39eb81010f24cab48
-SHA1 (patch-src_pepack.c) = 189b2c40a72453e3b1f3cc6efbbebda373bb37b0
+SHA1 (pev-0.70.tar.gz) = b2d1191c3b57049c78ef77b8f54f7f78838af129
+RMD160 (pev-0.70.tar.gz) = 9ffe6dccecdfbeba09e34f9a212c2abcf3861ef0
+Size (pev-0.70.tar.gz) = 254821 bytes
+SHA1 (patch-Makefile) = 39b31541b2f51e82e9807aed36723105959aa26c
+SHA1 (patch-lib_libpe_Makefile) = 11d1beba07b313a4baf2e95b5b56dfd7da4787f9
+SHA1 (patch-src_Makefile) = 2f04a23d40c1859ba1094a00822c0a0294fe3e5b
+SHA1 (patch-src_pepack.c) = acb6dc0d1d9b20c13a61275b4f08f5903fec14f9
