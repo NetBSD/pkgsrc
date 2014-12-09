@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4735 2014/12/09 13:57:12 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4736 2014/12/09 14:17:21 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6164,3 +6164,6 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/freetype2 to 2.5.4 [adam 2014-12-09]
 	Updated devel/apache-maven to 3.2.3 [fhajny 2014-12-09]
 	Updated benchmarks/iozone to 3.429 [mef 2014-12-09]
+	Updated converters/p5-Unicode-Collate to 1.08 [mef 2014-12-09]
+	Updated converters/bibtex2html to 1.98 [mef 2014-12-09]
+	Updated converters/p5-JSON-MaybeXS to 1.003003 [mef 2014-12-09]
