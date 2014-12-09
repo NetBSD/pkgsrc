@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4732 2014/12/09 10:46:51 he Exp $
+$NetBSD: CHANGES-2014,v 1.4733 2014/12/09 10:54:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6161,3 +6161,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated print/p5-PostScript-MailLabels to 2.32 [mef 2014-12-09]
 	Updated print/p5-PostScript-Simple to 0.09 [mef 2014-12-09]
 	Updated mbone/dbeacon to 0.3.9.1nb3 [he 2014-12-09]
+	Updated graphics/freetype2 to 2.5.4 [adam 2014-12-09]
