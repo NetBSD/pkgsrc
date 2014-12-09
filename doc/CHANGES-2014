@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4736 2014/12/09 14:17:21 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4737 2014/12/09 14:45:37 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6167,3 +6167,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated converters/p5-Unicode-Collate to 1.08 [mef 2014-12-09]
 	Updated converters/bibtex2html to 1.98 [mef 2014-12-09]
 	Updated converters/p5-JSON-MaybeXS to 1.003003 [mef 2014-12-09]
+	Updated security/pev to 0.70 [khorben 2014-12-09]
