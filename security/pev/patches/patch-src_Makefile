@@ -1,10 +1,10 @@
-$NetBSD: patch-src_Makefile,v 1.1 2014/08/02 14:11:08 khorben Exp $
+$NetBSD: patch-src_Makefile,v 1.2 2014/12/09 13:26:40 khorben Exp $
 
 Fixed DESTDIR support
 
---- src/Makefile.orig	2012-10-31 03:59:14.000000000 +0000
+--- src/Makefile.orig	2013-01-23 12:37:31.000000000 +0000
 +++ src/Makefile
-@@ -20,9 +20,9 @@ RM = rm -f
+@@ -20,15 +20,17 @@ RM = rm -f
  SOURCES = output.c
  PROGS = readpe pedis pepack pescan rva2ofs pesec ofs2rva pestr pehash pestr
  INSTALL = install -m 0755
@@ -16,3 +16,11 @@ Fixed DESTDIR support
  
  ####### Build rules
  
+ # 'make' will compile all binaries
+ all: $(PROGS)
+ 
++pepack: CPPFLAGS += -DPREFIX=\"$(PREFIX)\"
++
+ pestr: CPPFLAGS += -D_GNU_SOURCE=1
+ pestr: LDFLAGS += -lpcre
+ pestr: pestr.c
