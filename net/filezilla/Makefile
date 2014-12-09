@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2014/10/07 16:47:32 adam Exp $
+# $NetBSD: Makefile,v 1.57 2014/12/09 13:29:19 abs Exp $
 
 VERSION=	3.9.0.3
 DISTNAME=	FileZilla_${VERSION}_src
@@ -21,6 +21,9 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CONFIGURE_ARGS+=	--disable-autoupdatecheck
 # avoid xdg-utils dependency
 CONFIGURE_ENV+=		ac_cv_path_xdgopen=firefox
+
+# GCC 4.7 is required to support C++11.
+GCC_REQD+=		4.7
 
 .include "options.mk"
 
