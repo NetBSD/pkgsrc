@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.44 2014/03/19 10:16:33 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.45 2014/12/09 10:50:04 adam Exp $
 
 BUILDLINK_TREE+=	freetype2
 
@@ -26,9 +26,9 @@ CHECK_BUILTIN.freetype2:=	yes
 .include "../../graphics/freetype2/builtin.mk"
 CHECK_BUILTIN.freetype2:=	no
 
-.if empty(USE_BUILTIN.freetype2:M[yY][eE][sS])
-.include "../../graphics/png/buildlink3.mk"
-.endif
+.  if empty(USE_BUILTIN.freetype2:M[yY][eE][sS])
+.  include "../../graphics/png/buildlink3.mk"
+.  endif
 .endif
 
 .endif # FREETYPE2_BUILDLINK3_MK
