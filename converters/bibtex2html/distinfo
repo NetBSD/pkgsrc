@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2012/02/10 17:12:48 minskim Exp $
+$NetBSD: distinfo,v 1.15 2014/12/09 14:08:35 mef Exp $
 
-SHA1 (bibtex2html-1.97.tar.gz) = 970cb972eb88ff4cd01f247c0d8a6b821473f243
-RMD160 (bibtex2html-1.97.tar.gz) = 08187f4682eeff269d18f245193f34e2a3338d4f
-Size (bibtex2html-1.97.tar.gz) = 94887 bytes
+SHA1 (bibtex2html-1.98.tar.gz) = daaa082885a30dae38263614565298d4862b8331
+RMD160 (bibtex2html-1.98.tar.gz) = f47dda14108c3f53bca64352bfb7455f1b79d964
+Size (bibtex2html-1.98.tar.gz) = 92719 bytes
