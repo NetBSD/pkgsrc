@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:39:52 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/12/09 15:10:47 mef Exp $
 bin/atasm
 man/man1/atasm.1
-share/doc/atasm/atasm.txt
+share/doc/atasm/atasm.blurb
+share/doc/atasm/atasm.pdf
+share/examples/atasm/iomac.lib
+share/examples/atasm/sample.m65
+share/examples/atasm/sysequ.m65
+share/examples/atasm/test.m65
