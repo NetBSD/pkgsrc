@@ -1,4 +1,4 @@
-$NetBSD: patch-bin_mvn,v 1.2 2013/05/18 05:37:03 markd Exp $
+$NetBSD: patch-bin_mvn,v 1.3 2014/12/09 11:43:40 fhajny Exp $
 
 Follow pkgsrc path convention.
 
@@ -9,7 +9,7 @@ Follow pkgsrc path convention.
  fi
  
 +if [ "$JAVA_HOME" = "" ] ; then
-+  JAVA_HOME=@JAVA_HOME@
++  JAVA_HOME=@PKG_JAVA_HOME@
 +fi
 +
 +if [ "$M2_HOME" = "" ] ; then
@@ -27,10 +27,10 @@ Follow pkgsrc path convention.
 -  -classpath "${M2_HOME}"/boot/plexus-classworlds-*.jar \
 -  "-Dclassworlds.conf=${M2_HOME}/bin/m2.conf" \
 +  -classpath "${M2_HOME}"/lib/java/maven/boot/plexus-classworlds-*.jar \
-+  "-Dclassworlds.conf=@SYSCONFDIR@/m2.conf" \
++  "-Dclassworlds.conf=@PKG_SYSCONFDIR@/m2.conf" \
    "-Dmaven.home=${M2_HOME}"  \
 -  ${CLASSWORLDS_LAUNCHER} "$@"
 \ No newline at end of file
-+  "-Dorg.apache.maven.global-settings=@SYSCONFDIR@/settings.xml" \
-+  "-Dorg.apache.maven.global-plugin-registry=@SYSCONFDIR@/plugin-registry.xml" \
++  "-Dorg.apache.maven.global-settings=@PKG_SYSCONFDIR@/settings.xml" \
++  "-Dorg.apache.maven.global-plugin-registry=@PKG_SYSCONFDIR@/plugin-registry.xml" \
 +  ${CLASSWORLDS_LAUNCHER} "$@"
