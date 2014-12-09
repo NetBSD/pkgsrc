@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4730 2014/12/08 22:00:24 taca Exp $
+$NetBSD: CHANGES-2014,v 1.4731 2014/12/09 07:36:54 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6157,3 +6157,6 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/gxemul to 0.6.0.1 [ryoon 2014-12-08]
 	Updated net/bind99 to 9.9.6pl1 [taca 2014-12-08]
 	Updated net/bind910 to 9.10.1pl1 [taca 2014-12-08]
+	Updated print/mpage to 2.5.6 [mef 2014-12-09]
+	Updated print/p5-PostScript-MailLabels to 2.32 [mef 2014-12-09]
+	Updated print/p5-PostScript-Simple to 0.09 [mef 2014-12-09]
