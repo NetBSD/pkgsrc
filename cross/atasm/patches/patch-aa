@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.2 2011/11/29 06:11:53 sbd Exp $
+$NetBSD: patch-aa,v 1.3 2014/12/09 15:10:47 mef Exp $
 
 Honor CC, CFLAGS and LDFLAGS from pkgsrc.
 
---- Makefile.orig	2003-08-23 00:53:29.000000000 +0000
-+++ Makefile
-@@ -16,10 +16,10 @@ ZLIB    = -lz
- UNIX    = -DUNIX
+--- Makefile.orig	2009-03-18 05:39:26.000000000 +0900
++++ src/Makefile	2014-12-09 23:26:41.000000000 +0900
+@@ -17,10 +17,10 @@ UNIX    = -DUNIX
  
  # Compiler flags, if you are using egcs, pgcs, or gcc >2.8.1 use:
+ #CFLAGS  = -g -Wall $(USEZ) $(DOS) $(UNIX) 
 -CFLAGS  = -Wall $(USEZ) $(DOS) $(UNIX) -O3 -fomit-frame-pointer -march=pentiumpro 
-+CFLAGS  += $(USEZ) $(DOS) $(UNIX)
++CFLAGS+  = $(USEZ) $(DOS) $(UNIX)
  
  L       =  $(ZLIB) 
 -CC      = gcc
@@ -17,12 +17,13 @@ Honor CC, CFLAGS and LDFLAGS from pkgsrc.
  DESTDIR	= /usr/local/bin
  MANDIR	= /usr/local/man/man1
  DOCDIR	= /usr/local/doc/atasm
-@@ -37,7 +37,7 @@ setparse.o: symbol.h
- inc_path.o: inc_path.h inc_path.c
+@@ -42,7 +42,8 @@ symbol.o: symbol.h inc_path.h atasm_err.
  
  prog : $(OBJS)
--	$(CC) -o atasm $(OBJS) $(L)
+ 	$(CC) -o atasm $(OBJS) $(L)
+-  
 +	$(CC) $(LDFLAGS) -o atasm $(OBJS) $(L)
-   
++
  clean:  
  	rm -f *.rej *.o *~ atasm atasm.1 atasm.exe
+ 	cd ../tests && make clean
