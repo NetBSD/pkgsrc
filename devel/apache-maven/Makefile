@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2014/05/15 11:17:29 fhajny Exp $
+# $NetBSD: Makefile,v 1.10 2014/12/09 11:43:40 fhajny Exp $
 #
 
-DISTNAME=	apache-maven-3.2.1
+DISTNAME=	apache-maven-3.2.3
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_APACHE:=maven/maven-3/${PKGVERSION_NOREV}/binaries/}
 DISTFILES=	${DISTNAME}-bin${EXTRACT_SUFX}
@@ -19,21 +19,26 @@ NO_BUILD=	yes
 SUBST_CLASSES+=		maven
 SUBST_FILES.maven=	bin/mvn
 SUBST_STAGE.maven=	pre-configure
-SUBST_SED.maven=	-e 's,@JAVA_HOME@,${PKG_JAVA_HOME},g'
-SUBST_SED.maven+=	-e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.maven+=	-e 's,@SYSCONFDIR@,${PKG_SYSCONFDIR},g'
+SUBST_VARS.maven=	PKG_JAVA_HOME PKG_SYSCONFDIR PREFIX
 
-INSTALLATION_DIRS=	bin etc/maven lib/java/maven lib/java/maven/boot
-INSTALLATION_DIRS+=	share/doc/java/maven share/examples/maven
+INSTALLATION_DIRS=	bin etc/maven lib/java/maven lib/java/maven/boot \
+			share/doc/java/maven share/examples/maven \
+			share/examples/maven/logging
 
 PKG_SYSCONFSUBDIR=	maven
-CONF_FILES+=	share/examples/maven/m2.conf ${PKG_SYSCONFDIR}/m2.conf
-CONF_FILES+=	share/examples/maven/settings.xml ${PKG_SYSCONFDIR}/settings.xml
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/logging
+CONF_FILES=		share/examples/maven/m2.conf \
+			${PKG_SYSCONFDIR}/m2.conf
+CONF_FILES+=		share/examples/maven/settings.xml \
+			${PKG_SYSCONFDIR}/settings.xml
+CONF_FILES+=		share/examples/maven/logging/simplelogger.properties \
+			${PKG_SYSCONFDIR}/logging/simplelogger.properties
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/mvn ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/bin/m2.conf ${DESTDIR}${PREFIX}/share/examples/maven
 	${INSTALL_DATA} ${WRKSRC}/conf/settings.xml ${DESTDIR}${PREFIX}/share/examples/maven
+	${INSTALL_DATA} ${WRKSRC}/conf/logging/simplelogger.properties ${DESTDIR}${PREFIX}/share/examples/maven/logging
 	${INSTALL_DATA} ${WRKSRC}/boot/*.jar ${DESTDIR}${PREFIX}/lib/java/maven/boot
 	${INSTALL_DATA} ${WRKSRC}/lib/*.jar ${DESTDIR}${PREFIX}/lib/java/maven
 	${INSTALL_DATA} ${WRKSRC}/README.txt ${DESTDIR}${PREFIX}/share/doc/java/maven
