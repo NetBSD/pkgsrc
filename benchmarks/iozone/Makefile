@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2014/12/09 13:53:13 mef Exp $
+# $NetBSD: Makefile,v 1.53 2014/12/09 13:56:44 mef Exp $
 
 DISTNAME=	iozone3_429
-PKGNAME=	${DISTNAME:S/3_/-3-/}
+PKGNAME=	${DISTNAME:S/3_/-3./}
 CATEGORIES=	benchmarks
 MASTER_SITES=	http://www.iozone.org/src/current/
 EXTRACT_SUFX=	.tar
