@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2014/12/01 12:39:17 joerg Exp $
+# $NetBSD: Makefile,v 1.55 2014/12/09 22:37:11 joerg Exp $
 #
 
 DISTNAME=		tme-0.8
@@ -27,11 +27,13 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 _WRAP_EXTRA_ARGS.CC+=	-Wno-error=tautological-compare \
 			-Wno-error=sometimes-uninitialized \
 			-Wno-error=unused-function \
-			-Wno-error=absolute-value
+			-Wno-error=absolute-value \
+			-Wno-error=pointer-bool-conversion
 CWRAPPERS_APPEND.cc+=	-Wno-error=tautological-compare \
 			-Wno-error=sometimes-uninitialized \
 			-Wno-error=unused-function \
-			-Wno-error=absolute-value
+			-Wno-error=absolute-value \
+			-Wno-error=pointer-bool-conversion
 .elif !empty(CC_VERSION:Mgcc-4.8.*)
 _WRAP_EXTRA_ARGS.CC+=	-Wno-error=unused-but-set-variable	\
 	-Wno-error=array-bounds					\
