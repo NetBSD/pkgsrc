@@ -1,4 +1,4 @@
-$NetBSD: patch-makefile,v 1.1.1.1 2011/11/14 19:43:21 ryoon Exp $
+$NetBSD: patch-makefile,v 1.2 2014/12/09 13:19:44 joerg Exp $
 
 * Dynamically linked to libalac
 * Add install target
@@ -23,7 +23,7 @@ $NetBSD: patch-makefile,v 1.1.1.1 2011/11/14 19:43:21 ryoon Exp $
  alacconvert:	$(OBJS)
 -	(cd $(CODECDIR); $(MAKE))
 -	$(CC) $(LFLAGS) $(OBJS) -o alacconvert
-+	$(CC)  -Wl,-R ${PREFIX}/lib $(LFLAGS) $(OBJS) -o alacconvert
++	$(CC)  -Wl,-R${PREFIX}/lib $(LFLAGS) $(OBJS) -o alacconvert
  
  main.o : main.cpp
  	$(CC) -I $(INCLUDES) $(CFLAGS) main.cpp
