@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/12/09 11:43:40 fhajny Exp $
+# $NetBSD: Makefile,v 1.11 2014/12/09 11:52:03 fhajny Exp $
 #
 
 DISTNAME=	apache-maven-3.2.3
@@ -17,7 +17,7 @@ USE_TOOLS+=	pax
 NO_BUILD=	yes
 
 SUBST_CLASSES+=		maven
-SUBST_FILES.maven=	bin/mvn
+SUBST_FILES.maven=	bin/m2.conf bin/mvn
 SUBST_STAGE.maven=	pre-configure
 SUBST_VARS.maven=	PKG_JAVA_HOME PKG_SYSCONFDIR PREFIX
 
