@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.9 2007/10/14 07:51:19 adam Exp $
+$NetBSD: patch-ab,v 1.10 2014/12/09 13:20:17 joerg Exp $
 
 --- configure.orig	2007-01-01 12:34:49.000000000 +0100
 +++ configure
@@ -63,7 +63,7 @@ $NetBSD: patch-ab,v 1.9 2007/10/14 07:51:19 adam Exp $
        conftest$ac_exeext conftest.$ac_ext
   \
 -				MODULE_LDFLAGS="$MODULE_LDFLAGS -l$lib"; \
-+				MODULE_LDFLAGS="$MODULE_LDFLAGS -l$lib -Wl,-R${X11BASE}/lib"; \
++				MODULE_LDFLAGS="$MODULE_LDFLAGS -L${X11BASE}/lib -l$lib -Wl,-R${X11BASE}/lib"; \
  			done && \
  			for hdr in $MODULE_INCLUDES; do \
  
