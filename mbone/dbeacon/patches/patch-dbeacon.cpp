@@ -1,6 +1,7 @@
-$NetBSD: patch-dbeacon.cpp,v 1.1 2014/10/06 10:04:17 he Exp $
+$NetBSD: patch-dbeacon.cpp,v 1.2 2014/12/09 10:45:51 he Exp $
 
 Fix pidfile option handling (in configuration file case).
+Also, export log() for use elsewhere.
 
 --- dbeacon.cpp.orig	2007-07-13 13:52:14.000000000 +0000
 +++ dbeacon.cpp
@@ -13,6 +14,15 @@ Fix pidfile option handling (in configuration file case).
  
  static void next_event(timeval *);
  static void insert_event(uint32_t, uint32_t);
+@@ -270,7 +270,7 @@ static void logv(int level, const char *
+ 	}
+ }
+ 
+-static void log(int level, const char *format, ...)
++void log(int level, const char *format, ...)
+ {
+ 	va_list vl;
+ 	va_start(vl, format);
 @@ -464,8 +464,8 @@ int main(int argc, char **argv) {
  			perror("Failed to daemon()ize.");
  			return -1;
