@@ -1,12 +1,12 @@
-$NetBSD: patch-src_pepack.c,v 1.1 2014/12/09 13:26:40 khorben Exp $
+$NetBSD: patch-src_pepack.c,v 1.2 2014/12/09 14:37:06 khorben Exp $
 
 Fixed the path to userdb.txt (see pkg/49458)
 
---- src/pepack.c.orig	2012-10-31 03:59:14.000000000 +0000
+--- src/pepack.c.orig	2013-12-27 10:39:49.000000000 +0000
 +++ src/pepack.c
 @@ -21,6 +21,13 @@
  
- #include "pepack.h"
+ #include "common.h"
  
 +#ifndef PREFIX
 +# define PREFIX "/usr"
@@ -15,15 +15,15 @@ Fixed the path to userdb.txt (see pkg/49458)
 +# define DATADIR PREFIX "/share"
 +#endif
 +
- struct options config;
- static int ind;
+ #define PROGRAM "pepack"
+ #define MAX_SIG_SIZE 2048
  
-@@ -119,7 +126,7 @@ bool loaddb(FILE **fp)
+@@ -133,7 +140,7 @@ static bool loaddb(FILE **fp, const opti
  	*fp = fopen(dbfile, "r");	
- 
- 	if (!*fp)
+ 	if (!*fp) {
+ 		// TODO(jweyrich): This might change - Should we use a config.h with a constant from $(SHAREDIR)?
 -		*fp = fopen("/usr/share/pev/userdb.txt", "r");
 +		*fp = fopen(DATADIR "/pev/userdb.txt", "r");
+ 	}
  
- 	return (*fp != NULL);
- }
+ 	return *fp != NULL;
