@@ -1,4 +1,4 @@
-$NetBSD: patch-gambatte__sdl_SConstruct,v 1.1 2013/06/26 21:25:02 joerg Exp $
+$NetBSD: patch-gambatte__sdl_SConstruct,v 1.2 2014/12/10 23:23:36 joerg Exp $
 
 --- gambatte_sdl/SConstruct.orig	2013-06-26 20:25:50.000000000 +0000
 +++ gambatte_sdl/SConstruct
@@ -14,7 +14,7 @@ $NetBSD: patch-gambatte__sdl_SConstruct,v 1.1 2013/06/26 21:25:02 joerg Exp $
                    CFLAGS = global_cflags + global_defines,
 -                  CXXFLAGS = global_cxxflags + global_defines)
 +                  CXXFLAGS = global_cxxflags + global_defines,
-+                  ENV = { 'PATH': os.environ['PATH'] })
++                  ENV = os.environ)
  
  env.ParseConfig('sdl-config --cflags --libs')
  
