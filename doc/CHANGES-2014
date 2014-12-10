@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4747 2014/12/10 09:02:19 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4748 2014/12/10 10:20:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6180,3 +6180,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/mirmon to 2.10 [mef 2014-12-10]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.425 [obache 2014-12-10]
 	Updated graphics/libsixel to 1.4.2 [obache 2014-12-10]
+	Updated www/squid3 to 3.4.10 [adam 2014-12-10]
