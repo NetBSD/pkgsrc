@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2014/12/10 02:27:43 mef Exp $
+# $NetBSD: Makefile.common,v 1.2 2014/12/10 10:22:27 mef Exp $
 # -*- Makefile -*-
 # used by security/pinentry/Makefile
 # used by security/pinentry-gtk/Makefile
@@ -6,7 +6,7 @@
 # used by security/pinentry-qt/Makefile
 # used by security/pinentry-qt4/Makefile
 
-PINENTRY_VERSION=	0.8.3
+PINENTRY_VERSION=	0.8.4
 DISTNAME=		pinentry-${PINENTRY_VERSION}
 
 CATEGORIES=		security
@@ -17,7 +17,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		ftp://ftp.gnupg.org/gcrypt/pinentry/
 LICENSE=		gnu-gpl-v2
 
-#PATCHDIR=		${.CURDIR}/../../security/pinentry/patches
+PATCHDIR=		${.CURDIR}/../../security/pinentry/patches
 DISTINFO_FILE=		${.CURDIR}/../../security/pinentry/distinfo
 
 GNU_CONFIGURE=		yes
