@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2014/12/10 20:07:02 wiz Exp $
+bin/tmin
+share/doc/tmin/README
