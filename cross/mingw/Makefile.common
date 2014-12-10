@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2010/03/15 18:34:36 asau Exp $
+# $NetBSD: Makefile.common,v 1.2 2014/12/10 23:21:40 joerg Exp $
 #
 # used by cross/mingw-gcc/buildlink3.mk
 # used by cross/mingw-binutils/Makefile
@@ -16,7 +16,7 @@ PLIST_SUBST+=		MINGW_TARGET=${MINGW_TARGET:Q}
 MAKE_ENV+=		MINGW_TARGET=${MINGW_TARGET:Q}
 CONFIGURE_ENV+=		MINGW_TARGET=${MINGW_TARGET:Q}
 
-PATH:=			${CROSSBASE}/bin:${PATH}
+PREPEND_PATH+=		${CROSSBASE}/bin
 
 .if defined(GNU_CONFIGURE)
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
