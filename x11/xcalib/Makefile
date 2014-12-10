@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/02/08 12:59:31 wiedi Exp $
+# $NetBSD: Makefile,v 1.5 2014/12/10 23:27:31 joerg Exp $
 #
 
 DISTNAME=	xcalib-source-0.8
@@ -22,8 +22,10 @@ CFLAGS.SunOS+=		-Du_int16_t=uint16_t
 do-build:
 	cd ${WRKSRC} && ${LIBTOOL} --mode=compile ${CC} ${CFLAGS} -c xcalib.c
 	cd ${WRKSRC} && ${LIBTOOL} --mode=link ${CC} \
-		${LINKER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib \
-		${LINKER_RPATH_FLAG}${BUILDLINK_PREFIX.libXxf86vm}/lib \
+		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib \
+		-L${BUILDLINK_PREFIX.libX11}/lib \
+		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libXxf86vm}/lib \
+		-L${BUILDLINK_PREFIX.libXxf86vm}/lib \
 		-lm -lX11 -lXxf86vm \
 		-o xcalib xcalib.lo
 
