@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2005/12/09 14:45:05 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2014/12/10 06:57:25 mef Exp $
+
+Use only _SC_PAGESIZE on DragonFly, _SC_PAGE_SIZE does't exist.
 
 --- heme.c.orig	2005-12-09 14:34:15.000000000 +0000
 +++ heme.c
