@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/10/09 14:06:08 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2014/12/10 23:22:05 joerg Exp $
 
 DISTNAME=	elftoolchain-0.5.1
 PKGREVISION=	1
@@ -21,7 +21,7 @@ MAKE_FLAGS+=		MKPROFILE=yes
 
 CWARNFLAGS.clang=	-Wno-error=missing-noreturn \
 			-Wno-error=constant-logical-operand \
-			-Wno-error=conversion
+			-Wno-error=conversion -Wno-error=cast-qual
 MAKE_FLAGS+=		CWARNFLAGS.clang=${CWARNFLAGS.clang:Q}
 
 INSTALLATION_DIRS=	bin lib
