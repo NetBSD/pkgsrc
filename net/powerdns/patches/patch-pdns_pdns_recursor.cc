@@ -1,63 +1,103 @@
-$NetBSD: patch-pdns_pdns_recursor.cc,v 1.2 2013/05/09 20:06:53 joerg Exp $
+$NetBSD: patch-pdns_pdns_recursor.cc,v 1.3 2014/12/10 14:50:09 fhajny Exp $
 
---- pdns/pdns_recursor.cc.orig	2012-01-05 13:54:51.000000000 +0000
+Resolve boost symbol ambiguity.
+--- pdns/pdns_recursor.cc.orig	2014-10-30 10:18:22.000000000 +0000
 +++ pdns/pdns_recursor.cc
-@@ -67,10 +67,11 @@ StatBag S;
- FDMultiplexer* g_fdm;
- unsigned int g_maxTCPPerClient;
+@@ -80,9 +80,9 @@ uint64_t g_latencyStatSize;
  bool g_logCommonErrors;
--shared_ptr<PowerDNSLua> g_pdl;
-+boost::shared_ptr<PowerDNSLua> g_pdl;
- using namespace boost;
+ bool g_anyToTcp;
+ uint16_t g_udpTruncationThreshold;
+-__thread shared_ptr<RecursorLua>* t_pdl;
++__thread boost::shared_ptr<RecursorLua>* t_pdl;
+ __thread RemoteKeeper* t_remotes;
+-__thread shared_ptr<Regex>* t_traceRegex;
++__thread boost::shared_ptr<Regex>* t_traceRegex;
  
--#ifdef __FreeBSD__           // see cvstrac ticket #26
-+// see cvstrac ticket #26
-+#if defined(__FreeBSD__) || defined(__DragonFly__)
- #include <pthread.h>
- #include <semaphore.h>
- #endif
-@@ -578,7 +579,7 @@ void startDoResolve(void *p)
- 	    IpToU32(i->content, &ip);
- 	    pw.xfr32BitInt(htonl(ip));
- 	  } else {
--	    shared_ptr<DNSRecordContent> drc(DNSRecordContent::mastermake(i->qtype.getCode(), i->qclass, i->content)); 
-+	    boost::shared_ptr<DNSRecordContent> drc(DNSRecordContent::mastermake(i->qtype.getCode(), i->qclass, i->content)); 
- 	    drc->toPacket(pw);
- 	  }
- 	  if(!dc->d_tcp && pw.size() > maxudpsize) {
-@@ -1553,7 +1554,7 @@ void parseAuthAndForwards()
-     if(!rfp)
-       throw AhuException("Error opening forward-zones-file '"+::arg()["forward-zones-file"]+"': "+stringerror());
+ RecursorControlChannel s_rcc; // only active in thread 0
  
--    shared_ptr<FILE> fp=shared_ptr<FILE>(rfp, fclose);
-+    boost::shared_ptr<FILE> fp=boost::shared_ptr<FILE>(rfp, fclose);
+@@ -152,7 +152,7 @@ struct DNSComboWriter {
+   ComboAddress d_remote;
+   bool d_tcp;
+   int d_socket;
+-  shared_ptr<TCPConnection> d_tcpConnection;
++  boost::shared_ptr<TCPConnection> d_tcpConnection;
+ };
+ 
+ 
+@@ -606,7 +606,7 @@ void startDoResolve(void *p)
+             IpToU32(i->content, &ip);
+             pw.xfr32BitInt(htonl(ip));
+           } else {
+-            shared_ptr<DNSRecordContent> drc(DNSRecordContent::mastermake(i->qtype.getCode(), i->qclass, i->content)); 
++            boost::shared_ptr<DNSRecordContent> drc(DNSRecordContent::mastermake(i->qtype.getCode(), i->qclass, i->content)); 
+             drc->toPacket(pw);
+           }
+           if(pw.size() > maxanswersize) {
+@@ -748,7 +748,7 @@ void makeControlChannelSocket(int proces
+ 
+ void handleRunningTCPQuestion(int fd, FDMultiplexer::funcparam_t& var)
+ {
+-  shared_ptr<TCPConnection> conn=any_cast<shared_ptr<TCPConnection> >(var);
++  boost::shared_ptr<TCPConnection> conn=any_cast<boost::shared_ptr<TCPConnection> >(var);
+ 
+   if(conn->state==TCPConnection::BYTE0) {
+     int bytes=recv(conn->getFD(), conn->data, 2, 0);
+@@ -852,7 +852,7 @@ void handleNewTCPQuestion(int fd, FDMult
+     }
      
-     char line[1024];
-     int linenum=0;
-@@ -1630,7 +1631,7 @@ string doReloadLuaScript(vector<string>:
-   try {
-     if(begin==end) {
-       if(!fname.empty()) 
--	g_pdl = shared_ptr<PowerDNSLua>(new PowerDNSLua(fname));
-+	g_pdl = boost::shared_ptr<PowerDNSLua>(new PowerDNSLua(fname));
-       else
- 	throw runtime_error("Asked to reload lua scripts, but no name passed and no default ('lua-dns-script') defined");
+     Utility::setNonBlocking(newsock);
+-    shared_ptr<TCPConnection> tc(new TCPConnection(newsock, addr));
++    boost::shared_ptr<TCPConnection> tc(new TCPConnection(newsock, addr));
+     tc->state=TCPConnection::BYTE0;
+     
+     t_fdm->addReadFD(tc->getFD(), handleRunningTCPQuestion, tc);
+@@ -1582,7 +1582,7 @@ string* doReloadLuaScript()
+       return new string("unloaded\n");
      }
-@@ -1642,7 +1643,7 @@ string doReloadLuaScript(vector<string>:
- 	return "unloaded current lua script\n";
-       }
-       else {
--	g_pdl = shared_ptr<PowerDNSLua>(new PowerDNSLua(fname));
-+	g_pdl = boost::shared_ptr<PowerDNSLua>(new PowerDNSLua(fname));
- 	::arg().set("lua-dns-script")=fname;
-       }
+     else {
+-      *t_pdl = shared_ptr<RecursorLua>(new RecursorLua(fname));
++      *t_pdl = boost::shared_ptr<RecursorLua>(new RecursorLua(fname));
      }
-@@ -1766,7 +1767,7 @@ int serviceMain(int argc, char*argv[])
- 
+   }
+   catch(std::exception& e) {
+@@ -1610,7 +1610,7 @@ try
+     return new string("unset\n");
+   }
+   else {
+-    (*t_traceRegex) = shared_ptr<Regex>(new Regex(newRegex));
++    (*t_traceRegex) = boost::shared_ptr<Regex>(new Regex(newRegex));
+     return new string("ok\n");
+   }
+ }
+@@ -1939,11 +1939,11 @@ try
+   
+   L<<Logger::Warning<<"Done priming cache with root hints"<<endl;
+     
+-  t_pdl = new shared_ptr<RecursorLua>();
++  t_pdl = new boost::shared_ptr<RecursorLua>();
+   
    try {
      if(!::arg()["lua-dns-script"].empty()) {
--      g_pdl = shared_ptr<PowerDNSLua>(new PowerDNSLua(::arg()["lua-dns-script"]));
-+      g_pdl = boost::shared_ptr<PowerDNSLua>(new PowerDNSLua(::arg()["lua-dns-script"]));
+-      *t_pdl = shared_ptr<RecursorLua>(new RecursorLua(::arg()["lua-dns-script"]));
++      *t_pdl = boost::shared_ptr<RecursorLua>(new RecursorLua(::arg()["lua-dns-script"]));
        L<<Logger::Warning<<"Loaded 'lua' script from '"<<::arg()["lua-dns-script"]<<"'"<<endl;
      }
      
+@@ -1953,7 +1953,7 @@ try
+     exit(99);
+   }
+   
+-  t_traceRegex = new shared_ptr<Regex>();
++  t_traceRegex = new boost::shared_ptr<Regex>();
+   
+   
+   t_remotes = new RemoteKeeper();
+@@ -2011,7 +2011,7 @@ try
+       expired_t expired=t_fdm->getTimeouts(g_now);
+         
+       for(expired_t::iterator i=expired.begin() ; i != expired.end(); ++i) {
+-        shared_ptr<TCPConnection> conn=any_cast<shared_ptr<TCPConnection> >(i->second);
++        boost::shared_ptr<TCPConnection> conn=any_cast<boost::shared_ptr<TCPConnection> >(i->second);
+         if(g_logCommonErrors)
+           L<<Logger::Warning<<"Timeout from remote TCP client "<< conn->d_remote.toString() <<endl;
+         t_fdm->removeReadFD(i->first);
