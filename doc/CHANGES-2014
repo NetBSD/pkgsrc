@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4745 2014/12/10 06:44:51 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4746 2014/12/10 08:56:16 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6178,3 +6178,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/sys161 to 1.99.10 [dholland 2014-12-10]
 	Updated mbone/rtptools to 1.20 [mef 2014-12-10]
 	Updated misc/mirmon to 2.10 [mef 2014-12-10]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.425 [obache 2014-12-10]
