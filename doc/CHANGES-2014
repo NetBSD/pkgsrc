@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4757 2014/12/10 20:34:43 tron Exp $
+$NetBSD: CHANGES-2014,v 1.4758 2014/12/10 22:00:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6198,3 +6198,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/afl to 0.89b [wiz 2014-12-10]
 	Added devel/tmin version 0.05 [wiz 2014-12-10]
 	Updated databases/phpmyadmin to 4.3.1 [tron 2014-12-10]
+	Updated devel/p5-Test-Fatal to 0.014 [wiz 2014-12-10]
