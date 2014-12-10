@@ -1,19 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2013/11/11 16:44:45 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2014/12/10 23:23:09 joerg Exp $
 
 --- Makefile.orig	2012-12-12 23:41:33.000000000 +0000
 +++ Makefile
-@@ -48,7 +48,9 @@ endif
- 
- CC=gcc
- LD=gcc
--LDFLAGS=
-+LDFLAGS= ${COMPILER_RPATH_FLAG}${LOCALBASE}/lib \
-+    ${COMPILER_RPATH_FLAG}${X11BASE}/lib
-+
- 
- WARN = -Wall -Wno-return-type -Wno-unknown-pragmas -Wshadow \
-    -Wpointer-arith -Wcast-align -Wstrict-prototypes \
-@@ -63,13 +65,13 @@ ifeq ($(DEBUG),yes)
+@@ -63,7 +63,7 @@ ifeq ($(DEBUG),yes)
  CFLAGS += -O0 -g
  else
  CFLAGS = -O3 -funroll-loops -fexpensive-optimizations -ffast-math \
@@ -22,10 +11,17 @@ $NetBSD: patch-aa,v 1.5 2013/11/11 16:44:45 joerg Exp $
  endif
  endif
  
- CFLAGS += \
-     $(CFL) $(WARN) \
--    -I$(SYSTEM) -Iarch -I.
-+    -I$(SYSTEM) -Iarch -I. \
+@@ -174,11 +174,11 @@ riscpkg: $(TARGET)
+ endif
  
- prefix=/usr/local
- 
+ ifeq (${SYSTEM},X)
+-CFLAGS += -DSYSTEM_X -I/usr/X11R6/include
++CFLAGS += -DSYSTEM_X -I${X11BASE}/include
+ ifneq ($(shell uname),Darwin)
+ CFLAGS += -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
+ endif
+-LIBS += -L/usr/X11R6/lib -lXext -lX11
++LIBS += ${COMPILER_RPATH_FLAG}${X11BASE}/lib -L${X11BASE}/lib -lXext -lX11
+ OBJS += X/true.o X/pseudo.o
+ #SOUND_SUPPORT = yes
+ endif
