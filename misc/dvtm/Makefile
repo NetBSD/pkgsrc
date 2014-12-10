@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2013/11/24 07:38:41 dholland Exp $
+# $NetBSD: Makefile,v 1.11 2014/12/10 04:52:55 mef Exp $
 
-DISTNAME=	dvtm-0.9
-PKGREVISION=	1
+DISTNAME=	dvtm-0.13
 CATEGORIES=	misc
 MASTER_SITES=	http://www.brain-dump.org/projects/dvtm/
 
