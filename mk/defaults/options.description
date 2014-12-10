@@ -1,3 +1,4 @@
+dblatex-fig             Enable fig support in dblatex.
 aalib			Enable aalib support.
 abook			Enable abook support.
 acl			Enable POSIX ACL support.
