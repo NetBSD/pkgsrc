@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4746 2014/12/10 08:56:16 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4747 2014/12/10 09:02:19 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6179,3 +6179,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mbone/rtptools to 1.20 [mef 2014-12-10]
 	Updated misc/mirmon to 2.10 [mef 2014-12-10]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.425 [obache 2014-12-10]
+	Updated graphics/libsixel to 1.4.2 [obache 2014-12-10]
