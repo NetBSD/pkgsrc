@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/12/10 20:07:02 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/12/10 20:07:45 wiz Exp $
 
 DISTNAME=	tmin-0.05
 CATEGORIES=	devel
@@ -7,7 +7,7 @@ MASTER_SITES=	https://tmin.googlecode.com/files/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://code.google.com/p/tmin/
 COMMENT=	Tool for minimizing complex test cases in security testing
-#LICENSE=	apache-2.0
+LICENSE=	apache-2.0
 
 WRKSRC=	${WRKDIR}/tmin
 
