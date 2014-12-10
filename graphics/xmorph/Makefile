@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/06 14:11:26 asau Exp $
+# $NetBSD: Makefile,v 1.11 2014/12/10 23:19:50 joerg Exp $
 
 DISTNAME=	xmorph_20060817
 PKGNAME=	xmorph-20060817
@@ -17,6 +17,8 @@ USE_LANGUAGES=	c c++ fortran77
 USE_LIBTOOL=	yes
 USE_TOOLS+=	msgfmt
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${X11BASE}/lib -L${X11BASE}/lib
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
