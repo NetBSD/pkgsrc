@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4741 2014/12/10 01:18:59 gdt Exp $
+$NetBSD: CHANGES-2014,v 1.4742 2014/12/10 01:42:41 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6172,3 +6172,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/dhcpcd to 6.6.5 [roy 2014-12-09]
 	Removed textproc/tex2page [gdt 2014-12-10]
 	Removed lang/guile16 [gdt 2014-12-10]
+	Updated misc/ruby-mini_portile to 0.6.1 [schmonz 2014-12-10]
