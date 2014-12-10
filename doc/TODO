@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13908 2014/12/10 11:34:47 mef Exp $
+$NetBSD: TODO,v 1.13909 2014/12/10 13:22:22 mef Exp $
 
 Suggested new packages
 ======================
@@ -488,6 +488,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dolphin-4.0.2
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
+	o e2fsprogs-1.42.12 [wip]
 	o easymenu-0.7.2p1
 	o easytag-2.2.5
 	o eboard-1.1.1
@@ -530,7 +531,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fakeroot-1.6.5
 	o fastjar-0.94 [wip]
 	o fcitx-3.6.2
-	o felt-3.07
+	o felt-3.07 [wip]
 	o fetchmail-6.3.26
 	o fetchyahoo-2.14.0
 	o fillets-ng-0.7.4
@@ -542,7 +543,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o flpsed-0.4.4
 	o fltk2-2.0pre8323
 	o fluxbox-1.3.5
-	o fmsx-3.8
+	o fmsx-4.0
 	o fotoxx-14.06
 	o fox-1.6.41
 	o frama-c-20140301
