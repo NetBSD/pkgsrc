@@ -1,8 +1,8 @@
-$NetBSD: patch-lib_lwres_getnameinfo.c,v 1.1.1.1 2012/03/07 14:25:00 taca Exp $
+$NetBSD: patch-lib_lwres_getnameinfo.c,v 1.1.1.1.22.1 2014/12/10 09:24:28 tron Exp $
 
 * Add fix for KAME based implementation.
 
---- lib/lwres/getnameinfo.c.orig	2011-08-30 23:46:53.000000000 +0000
+--- lib/lwres/getnameinfo.c.orig	2014-09-16 19:27:20.000000000 +0000
 +++ lib/lwres/getnameinfo.c
 @@ -121,6 +121,10 @@
  #include <lwres/netdb.h>
