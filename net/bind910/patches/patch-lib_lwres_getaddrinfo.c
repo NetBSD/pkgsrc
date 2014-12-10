@@ -1,12 +1,12 @@
-$NetBSD: patch-lib_lwres_getaddrinfo.c,v 1.1.1.1 2014/07/02 02:42:58 jnemeth Exp $
+$NetBSD: patch-lib_lwres_getaddrinfo.c,v 1.1.1.1.2.1 2014/12/10 19:53:09 tron Exp $
 
 * Add fix for KAME based implementation.
 
---- lib/lwres/getaddrinfo.c.orig	2008-11-25 23:47:23.000000000 +0000
+--- lib/lwres/getaddrinfo.c.orig	2014-09-16 19:27:15.000000000 +0000
 +++ lib/lwres/getaddrinfo.c
 @@ -142,6 +142,10 @@
- #include <lwres/netdb.h>
  #include <lwres/stdlib.h>
+ #include <lwres/string.h>
  
 +#ifdef __KAME__
 +#include <net/if.h>
