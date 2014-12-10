@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4751 2014/12/10 13:37:06 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.4752 2014/12/10 14:05:48 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6188,3 +6188,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/adtool to 1.3.3 [mef 2014-12-10]
 	Updated security/pinentry to 0.8.4 [mef 2014-12-10]
 	Updated databases/redis to 2.8.18 [fhajny 2014-12-10]
+	Updated x11/keylaunch to 1.3.9 [mef 2014-12-10]
