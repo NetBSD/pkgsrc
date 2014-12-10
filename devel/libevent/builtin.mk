@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.13 2014/12/05 14:06:28 pettai Exp $
+# $NetBSD: builtin.mk,v 1.14 2014/12/10 21:11:10 pettai Exp $
 
 BUILTIN_PKG:=	libevent
 
@@ -130,3 +130,35 @@ USE_BUILTIN.libevent!=							\
 .  endif  # PREFER.libevent
 .endif
 MAKEVARS+=	USE_BUILTIN.libevent
+
+# Fake pkg-config for builtin libevent on NetBSD
+
+.if !empty(USE_BUILTIN.libevent:M[yY][eE][sS])
+.  if !empty(USE_TOOLS:C/:.*//:Mpkg-config)
+do-configure-pre-hook: override-libevent-pkgconfig
+
+BLKDIR_PKGCFG=	${BUILDLINK_DIR}/lib/pkgconfig
+LIBEVENT_PKGCFGF=	libevent.pc
+
+override-libevent-pkgconfig: override-message-libevent-pkgconfig
+override-message-libevent-pkgconfig:
+	@${STEP_MSG} "Magical transformations for libevent on NetBSD."
+
+override-libevent-pkgconfig:
+	${RUN}						\
+	${MKDIR} ${BLKDIR_PKGCFG};			\
+	{						\
+	${ECHO} "prefix=${LIBEVENT_PREFIX}";		\
+	${ECHO} "exec_prefix=\$${prefix}";		\
+	${ECHO} "libdir=\$${exec_prefix}/lib";		\
+	${ECHO} "includedir=\$${prefix}/include";	\
+	${ECHO} "";					\
+	${ECHO} "Name: libevent";			\
+	${ECHO} "Description: libevent is an asynchronous notification event loop library"; \
+	${ECHO} "Version: ${BUILTIN_VERSION.libevent}";	\
+	${ECHO} "Libs: -Wl,-R\$${libdir} -L\$${libdir} -levent";	\
+	${ECHO} "Cflags: -I\$${includedir}";		\
+	} >> ${BLKDIR_PKGCFG}/${LIBEVENT_PKGCFGF};
+.  endif
+.endif
+
