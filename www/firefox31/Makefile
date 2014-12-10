@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2014/12/04 05:18:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2014/12/10 13:43:31 abs Exp $
 
 FIREFOX_VER=	${MOZ_BRANCH}${MOZ_BRANCH_MINOR}esr
+# Also update MOZ_BRANCH= in devel/xulrunner31/Makefile
 MOZ_BRANCH=	31.3
 MOZ_BRANCH_MINOR=	.0
 
