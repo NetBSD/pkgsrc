@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4743 2014/12/10 05:21:13 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4744 2014/12/10 05:46:44 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6175,3 +6175,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/ruby-mini_portile to 0.6.1 [schmonz 2014-12-10]
 	Updated misc/cstream to 3.1.1 [mef 2014-12-10]
 	Updated misc/dvtm to 0.13 [mef 2014-12-10]
+	Updated emulators/sys161 to 1.99.10 [dholland 2014-12-10]
