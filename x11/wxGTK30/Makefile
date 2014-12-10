@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/09/19 08:35:41 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2014/12/10 14:02:32 joerg Exp $
 
 VERSION=	3.0.1
 PKGREVISION=	3
@@ -59,6 +59,9 @@ PLIST_VARS+=		notdarwin
 .if ${OPSYS} != "Darwin"
 PLIST.notdarwin=	yes
 .endif
+
+post-configure:
+	echo 'install_qadll: install_xmldll' >> ${WRKSRC}/Makefile
 
 post-build:
 	set -e; cd ${WRKSRC}/locale; \
