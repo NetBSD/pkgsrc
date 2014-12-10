@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/09/22 11:49:42 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2014/12/10 23:20:20 joerg Exp $
 
 PKGNAME=	bossa-20140109
 DISTNAME=	b-o-s-s-a-code-05bfcc39bc0453c3028b1161175b95a81af7a901
@@ -12,6 +12,10 @@ COMMENT=	Open source SAM-BA compatible Atmel ARM programmer
 LICENSE=	gnu-gpl-v3
 
 INSTALLATION_DIRS=      bin
+
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.readline}/lib \
+		-L${BUILDLINK_PREFIX.readline}/lib
+ALL_ENV+=	COMMON_LDFLAGS=${LDFLAGS:Q}
 
 post-patch:
 	${CP} files/NetBSD* ${WRKSRC}/src/
