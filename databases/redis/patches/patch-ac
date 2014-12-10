@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.2 2014/01/02 17:26:19 fhajny Exp $
+$NetBSD: patch-ac,v 1.3 2014/12/10 13:36:54 fhajny Exp $
 
 Sane defaults for the config file.
---- redis.conf.orig	2013-12-11 14:31:57.000000000 +0000
+--- redis.conf.orig	2014-12-04 10:36:52.000000000 +0000
 +++ redis.conf
-@@ -14,11 +14,11 @@
+@@ -34,11 +34,11 @@
  
  # By default Redis does not run as a daemon. Use 'yes' if you need it.
  # Note that Redis will write a pid file in /var/run/redis.pid when daemonized.
@@ -17,7 +17,7 @@ Sane defaults for the config file.
  
  # Accept connections on the specified port, default is 6379.
  # If port 0 is specified Redis will not listen on a TCP socket.
-@@ -71,7 +71,7 @@ loglevel notice
+@@ -100,7 +100,7 @@ loglevel notice
  # Specify the log file name. Also the empty string can be used to force
  # Redis to log on the standard output. Note that if you use standard
  # output for logging but daemonize, logs will be sent to /dev/null
@@ -26,12 +26,12 @@ Sane defaults for the config file.
  
  # To enable logging to the system logger, just set 'syslog-enabled' to yes,
  # and optionally update the other syslog parameters to suit your needs.
-@@ -155,7 +155,7 @@ dbfilename dump.rdb
+@@ -184,7 +184,7 @@ dbfilename dump.rdb
  # The Append Only File will also be created inside this directory.
- # 
+ #
  # Note that you must specify a directory here, not a file name.
 -dir ./
-+dir @REDIS_DATADIR@
++dir @REDIS_DATADIR@ 
  
  ################################# REPLICATION #################################
  
