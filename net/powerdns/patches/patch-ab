@@ -1,8 +1,9 @@
-$NetBSD: patch-ab,v 1.3 2011/11/23 23:32:17 joerg Exp $
+$NetBSD: patch-ab,v 1.4 2014/12/10 14:50:09 fhajny Exp $
 
---- pdns/pdns.conf-dist.orig	2007-04-21 13:56:36.000000000 +0000
+Default paths.
+--- pdns/pdns.conf-dist.orig	2014-10-28 10:41:09.000000000 +0000
 +++ pdns/pdns.conf-dist
-@@ -27,7 +27,7 @@
+@@ -52,7 +52,7 @@
  #################################
  # config-dir	Location of configuration directory (pdns.conf)
  #
@@ -11,12 +12,12 @@ $NetBSD: patch-ab,v 1.3 2011/11/23 23:32:17 joerg Exp $
  
  #################################
  # config-name	Name of this virtual configuration - will rename the binary image
-@@ -157,7 +157,7 @@
+@@ -287,7 +287,7 @@
  #################################
  # module-dir	Default directory for modules
  #
--# module-dir=/usr/local/lib
+-# module-dir=/usr/local/lib/pdns
 +# module-dir=@PREFIX@/lib/pdns
  
  #################################
- # negquery-cache-ttl	Seconds to store packets in the PacketCache
+ # negquery-cache-ttl	Seconds to store negative query results in the QueryCache
