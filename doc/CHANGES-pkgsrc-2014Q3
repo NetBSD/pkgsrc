@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.30 2014/12/06 16:58:05 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.31 2014/12/10 09:24:44 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q3 branch:
@@ -116,3 +116,5 @@ devel/pcre: security update
 Pullup ticket #4566 - requested by jnemeth
 comms/asterisk:: security update
 comms/asterisk18: security update
+Pullup ticket #4569 - requested by taca
+net/bind99: security update
