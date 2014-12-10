@@ -14,6 +14,7 @@
       <method_credential user='@PGUSER@' group='@PGGROUP@' />
       <method_environment>
         <envvar name="LD_PRELOAD_32" value="/usr/lib/extendedFILE.so.1" />
+        <envvar name='PATH' value='@PREFIX@/bin:@PREFIX@/sbin:/usr/bin:/usr/sbin:/bin:/sbin'/>
       </method_environment>
     </method_context>
     <exec_method type='method' name='start' exec='@PREFIX@/@SMF_METHOD_FILE.postgresql@ start' timeout_seconds='300' />
