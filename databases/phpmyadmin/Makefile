@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2014/12/07 14:27:29 tron Exp $
+# $NetBSD: Makefile,v 1.141 2014/12/10 20:34:34 tron Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}-all-languages
 PKGNAME=	phpmyadmin-${DIST_VERSION:S/-//}
@@ -28,7 +28,7 @@ MESSAGE_SUBST+=	CONF_INC_PHP=${CONF_INC_PHP} PMCONFFILE=${PMCONFFILE:Q} \
 		EXDIR=${EXDIR:Q}
 
 CONF_INC_PHP=	${PREFIX}/share/phpmyadmin/config.inc.php
-DIST_VERSION=	4.2.13.1
+DIST_VERSION=	4.3.1
 DOC_FILES=	ChangeLog LICENSE README RELEASE-DATE-${DIST_VERSION}
 
 APACHE_USER?=	www
@@ -60,18 +60,19 @@ INSTALL_DIRS=	doc/html
 INSTALL_DIRS+=	doc/html/_static
 INSTALL_DIRS+=	js
 INSTALL_DIRS+=	js/canvg
-INSTALL_DIRS+=	js/jqplot
-INSTALL_DIRS+=	js/jqplot/plugins
 INSTALL_DIRS+=	js/codemirror
 INSTALL_DIRS+=	js/codemirror/addon
+INSTALL_DIRS+=	js/codemirror/addon/hint
 INSTALL_DIRS+=	js/codemirror/addon/runmode
 INSTALL_DIRS+=	js/codemirror/lib
 INSTALL_DIRS+=	js/codemirror/mode
 INSTALL_DIRS+=	js/codemirror/mode/sql
+INSTALL_DIRS+=	js/jqplot
+INSTALL_DIRS+=	js/jqplot/plugins
 INSTALL_DIRS+=	js/jquery
 INSTALL_DIRS+=	js/jquery/src
-INSTALL_DIRS+=	js/jquery/src/jquery-ui
 INSTALL_DIRS+=	js/jquery/src/jquery
+INSTALL_DIRS+=	js/jquery/src/jquery-ui
 INSTALL_DIRS+=	js/jquery/src/jquery/ajax
 INSTALL_DIRS+=	js/openlayers
 INSTALL_DIRS+=	js/openlayers/img
@@ -127,6 +128,7 @@ INSTALL_DIRS+=	js/openlayers/theme/default
 INSTALL_DIRS+=	js/openlayers/theme/default/img
 INSTALL_DIRS+=	js/pmd
 INSTALL_DIRS+=	js/tracekit
+INSTALL_DIRS+=	js/transformations
 INSTALL_DIRS+=	libraries
 INSTALL_DIRS+=	libraries/PHPExcel
 INSTALL_DIRS+=	libraries/PHPExcel/PHPExcel
@@ -178,8 +180,15 @@ INSTALL_DIRS+=	libraries/plugins/auth/swekey
 INSTALL_DIRS+=	libraries/plugins/export
 INSTALL_DIRS+=	libraries/plugins/import
 INSTALL_DIRS+=	libraries/plugins/import/upload
+INSTALL_DIRS+=	libraries/plugins/schema
+INSTALL_DIRS+=	libraries/plugins/schema/dia
+INSTALL_DIRS+=	libraries/plugins/schema/eps
+INSTALL_DIRS+=	libraries/plugins/schema/pdf
+INSTALL_DIRS+=	libraries/plugins/schema/svg
 INSTALL_DIRS+=	libraries/plugins/transformations
 INSTALL_DIRS+=	libraries/plugins/transformations/abstract
+INSTALL_DIRS+=	libraries/plugins/transformations/input
+INSTALL_DIRS+=	libraries/plugins/transformations/output
 INSTALL_DIRS+=	libraries/properties
 INSTALL_DIRS+=	libraries/properties/options
 INSTALL_DIRS+=	libraries/properties/options/groups
@@ -199,6 +208,8 @@ INSTALL_DIRS+=	libraries/transformations
 INSTALL_DIRS+=	locale
 INSTALL_DIRS+=	locale/ar
 INSTALL_DIRS+=	locale/ar/LC_MESSAGES
+INSTALL_DIRS+=	locale/az
+INSTALL_DIRS+=	locale/az/LC_MESSAGES
 INSTALL_DIRS+=	locale/be
 INSTALL_DIRS+=	locale/be/LC_MESSAGES
 INSTALL_DIRS+=	locale/be@latin
@@ -235,6 +246,8 @@ INSTALL_DIRS+=	locale/hr
 INSTALL_DIRS+=	locale/hr/LC_MESSAGES
 INSTALL_DIRS+=	locale/hu
 INSTALL_DIRS+=	locale/hu/LC_MESSAGES
+INSTALL_DIRS+=	locale/ia
+INSTALL_DIRS+=	locale/ia/LC_MESSAGES
 INSTALL_DIRS+=	locale/id
 INSTALL_DIRS+=	locale/id/LC_MESSAGES
 INSTALL_DIRS+=	locale/it
@@ -243,6 +256,8 @@ INSTALL_DIRS+=	locale/ja
 INSTALL_DIRS+=	locale/ja/LC_MESSAGES
 INSTALL_DIRS+=	locale/ka
 INSTALL_DIRS+=	locale/ka/LC_MESSAGES
+INSTALL_DIRS+=	locale/ko
+INSTALL_DIRS+=	locale/ko/LC_MESSAGES
 INSTALL_DIRS+=	locale/lt
 INSTALL_DIRS+=	locale/lt/LC_MESSAGES
 INSTALL_DIRS+=	locale/mn
@@ -253,6 +268,7 @@ INSTALL_DIRS+=	locale/nl
 INSTALL_DIRS+=	locale/nl/LC_MESSAGES
 INSTALL_DIRS+=	locale/pl
 INSTALL_DIRS+=	locale/pl/LC_MESSAGES
+INSTALL_DIRS+=	locale/pt/LC_MESSAGES
 INSTALL_DIRS+=	locale/pt_BR
 INSTALL_DIRS+=	locale/pt_BR/LC_MESSAGES
 INSTALL_DIRS+=	locale/ro
@@ -321,6 +337,7 @@ do-install:
 	${MV} ${DESTDIR}${PREFIX}/share/phpmyadmin/config.sample.inc.php \
 	  ${DESTDIR}${EXDIR}/config.inc.php
 	${INSTALL_DATA} ${WRKSRC}/examples/* ${DESTDIR}${EXDIR}
+	${LN} -fs ${EXDIR} ${DESTDIR}${PREFIX}/share/phpmyadmin/examples
 
 	for dir in ${INSTALL_DIRS}; do					\
 		for file in ${WRKSRC}/$$dir/*; do			\
