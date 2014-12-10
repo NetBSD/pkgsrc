@@ -1,22 +1,12 @@
-# $NetBSD: Makefile,v 1.29 2014/02/12 23:18:35 tron Exp $
+# $NetBSD: Makefile,v 1.30 2014/12/10 02:27:44 mef Exp $
 #
 
-DISTNAME=		pinentry-0.8.3
-PKGNAME=		pinentry-qt4-0.8.3
+PKGNAME=		${DISTNAME:S/pinentry-/pinentry-qt4-/}
 PKGREVISION=		2
-CATEGORIES=		security
-MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/pinentry/
-EXTRACT_SUFX=		.tar.bz2
+COMMENT=		Applications for entering PINs or Passphrases, qt4 enabled
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		ftp://ftp.gnupg.org/gcrypt/pinentry/
-COMMENT=		Applications for entering PINs or Passphrases
+.include		"../../security/pinentry/Makefile.common"
 
-PATCHDIR=		${.CURDIR}/../../security/pinentry/patches
-DISTINFO_FILE=		${.CURDIR}/../../security/pinentry/distinfo
-
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--enable-pinentry-qt4
 CONFIGURE_ARGS+=	--with-qt-dir=${QTDIR:Q}
 CONFIGURE_ARGS+=	--with-qt-includes=${BUILDLINK_PREFIX.qt4-libs}/qt4/include
@@ -29,7 +19,6 @@ CONFIGURE_ARGS+=	--disable-pinentry-qt
 
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		pkg-config gmake
-INFO_FILES=		yes
 
 INSTALL_DIRS=		qt4
 
@@ -40,9 +29,7 @@ post-configure:
 
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.0.0
 .include "../../x11/qt4-libs/buildlink3.mk"
-.include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
 #.include "../../security/libgpg-error/buildlink3.mk"
 #.include "../../security/libksba/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
