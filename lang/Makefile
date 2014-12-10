@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.394 2014/11/25 13:34:22 wiz Exp $
+# $NetBSD: Makefile,v 1.395 2014/12/10 15:32:16 gdt Exp $
 #
 
 COMMENT=	Programming languages
@@ -77,7 +77,6 @@ SUBDIR+=	go
 SUBDIR+=	gpc
 SUBDIR+=	gprolog
 SUBDIR+=	guile
-SUBDIR+=	guile16
 SUBDIR+=	guile20
 SUBDIR+=	gwydion-dylan
 SUBDIR+=	heirloom-awk
