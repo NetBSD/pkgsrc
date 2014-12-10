@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4761 2014/12/10 22:03:45 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4762 2014/12/10 22:04:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6202,3 +6202,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/p5-DBD-SQLite to 1.46 [wiz 2014-12-10]
 	Updated devel/p5-ExtUtils-PkgConfig to 1.15 [wiz 2014-12-10]
 	Updated devel/p5-Compress-Raw-Zlib to 2.067 [wiz 2014-12-10]
+	Updated devel/p5-Compress-Raw-Bzip2 to 2.067 [wiz 2014-12-10]
