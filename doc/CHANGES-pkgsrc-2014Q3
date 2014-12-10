@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.32 2014/12/10 19:53:36 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.33 2014/12/10 20:02:20 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q3 branch:
@@ -120,3 +120,5 @@ Pullup ticket #4569 - requested by taca
 net/bind99: security update
 Pullup ticket #4570 - requested by taca
 net/bind910: security update
+Pullup ticket #4568 - requested by pettai
+net/unbound: security patch
