@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/12/07 17:24:00 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/12/10 19:55:19 wiz Exp $
 
-DISTNAME=	afl-0.87b
+DISTNAME=	afl-0.89b
 CATEGORIES=	devel
 MASTER_SITES=	http://lcamtuf.coredump.cx/afl/releases/
 EXTRACT_SUFX=	.tgz
@@ -11,5 +11,6 @@ COMMENT=	American Fuzzy Lop, a fuzzing tool for finding bugs by random input
 LICENSE=	apache-2.0
 
 USE_TOOLS+=	gmake
+REPLACE_SH=	afl-plot
 
 .include "../../mk/bsd.pkg.mk"
