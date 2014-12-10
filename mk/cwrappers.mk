@@ -1,4 +1,4 @@
-# $NetBSD: cwrappers.mk,v 1.16 2014/12/09 12:50:24 joerg Exp $
+# $NetBSD: cwrappers.mk,v 1.17 2014/12/10 14:29:21 schmonz Exp $
 #
 # This Makefile fragment implements integration of pkgtools/cwrappers.
 
@@ -26,7 +26,7 @@ CWRAPPERS_CONFIG.shlibtool=	shlibtool
 
 CWRAPPERS_ALIASES.as=		as
 CWRAPPERS_ALIASES.cc=		cc gcc clang
-CWRAPPERS_ALIASES.cxx=		c++ g++ CC cxx clang++
+CWRAPPERS_ALIASES.cxx=		c++ g++ cxx clang++
 CWRAPPERS_ALIASES.cpp=		cpp clang-cpp
 CWRAPPERS_ALIASES.f77=		f77 g77
 CWRAPPERS_ALIASES.imake=	imake
