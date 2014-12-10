@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.23 2014/03/12 16:16:00 pettai Exp $
+$NetBSD: distinfo,v 1.23.6.1 2014/12/10 20:02:00 tron Exp $
 
+SHA1 (patch_cve_2014_8602.diff) = 0763e20cdea3063cbbfae67662b9f240b15ed09e
+RMD160 (patch_cve_2014_8602.diff) = e983db14db36e4c310aa84b037e08d183d334c42
+Size (patch_cve_2014_8602.diff) = 4836 bytes
 SHA1 (unbound-1.4.22.tar.gz) = a56e31e2f3a2fefa3caaad9200dd943d174ca81e
 RMD160 (unbound-1.4.22.tar.gz) = e9b4ded75308ac2f2ed9ae6783e29411428626fc
 Size (unbound-1.4.22.tar.gz) = 4735801 bytes
