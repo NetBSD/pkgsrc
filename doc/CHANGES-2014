@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4755 2014/12/10 19:55:28 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4756 2014/12/10 20:07:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6196,3 +6196,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Removed net/powerdns-sqlite [fhajny 2014-12-10]
 	Removed net/powerdns-sqlite3 [fhajny 2014-12-10]
 	Updated devel/afl to 0.89b [wiz 2014-12-10]
+	Added devel/tmin version 0.05 [wiz 2014-12-10]
