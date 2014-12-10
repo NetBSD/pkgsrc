@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/05/29 08:58:24 darcy Exp $
+# $NetBSD: Makefile,v 1.18 2014/12/10 12:27:27 wiz Exp $
 
 DISTNAME=	dblatex-0.3.2
 PKGREVISION=	3
@@ -13,11 +13,13 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX3-bin
-DEPENDS+=	transfig-[0-9]*:../../print/transfig
 DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 DEPENDS+=	tex-ifxetex-[0-9]*:../../print/tex-ifxetex
 
 USE_LANGUAGES=	# none
+USE_TOOLS+=	gmake
+
+.include "options.mk"
 
 REPLACE_PYTHON+=	scripts/dblatex lib/dbtexmf/dblatex/xetex/*.py
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.3.2
