@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4742 2014/12/10 01:42:41 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.4743 2014/12/10 05:21:13 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6173,3 +6173,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Removed textproc/tex2page [gdt 2014-12-10]
 	Removed lang/guile16 [gdt 2014-12-10]
 	Updated misc/ruby-mini_portile to 0.6.1 [schmonz 2014-12-10]
+	Updated misc/cstream to 3.1.1 [mef 2014-12-10]
+	Updated misc/dvtm to 0.13 [mef 2014-12-10]
