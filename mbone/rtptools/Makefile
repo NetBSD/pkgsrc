@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2012/10/08 09:25:50 asau Exp $
+# $NetBSD: Makefile,v 1.10 2014/12/10 05:28:27 mef Exp $
 #
 
-DISTNAME=		rtptools-1.18
+DISTNAME=		rtptools-1.20
 CATEGORIES=		mbone
 MASTER_SITES=		http://www.cs.columbia.edu/IRT/software/rtptools/download/
 
