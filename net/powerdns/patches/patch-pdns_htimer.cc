@@ -1,8 +1,9 @@
-$NetBSD: patch-pdns_htimer.cc,v 1.1 2013/05/09 20:06:53 joerg Exp $
+$NetBSD: patch-pdns_htimer.cc,v 1.2 2014/12/10 14:50:09 fhajny Exp $
 
---- pdns/htimer.cc.orig	2013-05-09 15:25:46.000000000 +0000
+Resolve boost symbol ambiguity.
+--- pdns/htimer.cc.orig	2013-12-17 17:42:51.000000000 +0000
 +++ pdns/htimer.cc
-@@ -132,7 +132,7 @@ int main()
+@@ -128,7 +128,7 @@ int main()
      HTimerSentinel hts=htloop.getSentinel();
      for(int i=0; i < 1000; ++i)
      {

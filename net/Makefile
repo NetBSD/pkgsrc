@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1047 2014/12/06 10:45:34 obache Exp $
+# $NetBSD: Makefile,v 1.1048 2014/12/10 14:50:08 fhajny Exp $
 #
 
 COMMENT=	Networking tools
@@ -540,8 +540,6 @@ SUBDIR+=	powerdns-ldap
 SUBDIR+=	powerdns-mysql
 SUBDIR+=	powerdns-pgsql
 SUBDIR+=	powerdns-recursor
-SUBDIR+=	powerdns-sqlite
-SUBDIR+=	powerdns-sqlite3
 SUBDIR+=	pppd
 SUBDIR+=	pptp
 SUBDIR+=	proftpd
