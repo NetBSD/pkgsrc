@@ -1,0 +1,13 @@
+$NetBSD: patch-moo_Makefile.in,v 1.1 2014/12/11 22:07:47 joerg Exp $
+
+--- moo/Makefile.in.orig	2014-12-11 21:04:06.000000000 +0000
++++ moo/Makefile.in
+@@ -84,7 +84,7 @@ DIST_COMMON = $(srcdir)/Makefile.am $(sr
+ # -I$(moo_srcdir)/moolua/lua
+ @MOO_OS_DARWIN_TRUE@am__append_8 = -DLUA_USE_MACOSX
+ @MOO_OS_DARWIN_FALSE@@MOO_OS_WIN32_FALSE@am__append_9 = -DLUA_USE_POSIX -DLUA_USE_DLOPEN
+-@MOO_OS_DARWIN_FALSE@@MOO_OS_WIN32_FALSE@am__append_10 = -ldl
++@MOO_OS_DARWIN_FALSE@@MOO_OS_WIN32_FALSE@am__append_10 = ${DL_LDFLAGS}
+ @MOO_DEV_MODE_TRUE@am__append_11 = moolua/moo-lua-api.cpp \
+ @MOO_DEV_MODE_TRUE@	moolua/gtk-lua-api.cpp
+ @MOO_ENABLE_PYTHON_TRUE@am__append_12 = $(moo_python_ini_in_files) $(moo_python_ini_files)
