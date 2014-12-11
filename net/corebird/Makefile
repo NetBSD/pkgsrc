@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/12/06 09:14:11 obache Exp $
+# $NetBSD: Makefile,v 1.2 2014/12/11 22:14:21 joerg Exp $
 
 DISTNAME=	corebird-0.9
 CATEGORIES=	net
@@ -9,6 +9,7 @@ HOMEPAGE=	http://corebird.baedert.org/
 COMMENT=	Native Gtk+ Twitter Client
 LICENSE=	gnu-gpl-v3
 
+USE_LIBTOOL=	yes
 USE_LANGUAGES=	c
 GNU_CONFIGURE=	yes
 CONFIGURE_SCRIPT=	autogen.sh
