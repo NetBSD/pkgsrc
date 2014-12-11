@@ -1,0 +1,13 @@
+$NetBSD: patch-xlators_mgmt_glusterd_src_Makefile.in,v 1.1 2014/12/11 22:08:22 joerg Exp $
+
+--- xlators/mgmt/glusterd/src/Makefile.in.orig	2014-12-10 15:18:18.000000000 +0000
++++ xlators/mgmt/glusterd/src/Makefile.in
+@@ -356,7 +356,7 @@ noinst_HEADERS = glusterd.h glusterd-uti
+ 	glusterd-mgmt.h glusterd-messages.h glusterd-peer-utils.h
+ 
+ AM_CPPFLAGS = $(GF_CPPFLAGS) -I$(top_srcdir)/libglusterfs/src \
+-	-I$(rpclibdir) -I$(CONTRIBDIR)/rbtree \
++	-I$(CONTRIBDIR)/rbtree \
+ 	-I$(top_srcdir)/rpc/xdr/src -I$(top_srcdir)/rpc/rpc-lib/src \
+ 	-I$(CONTRIBDIR)/uuid -I$(CONTRIBDIR)/mount \
+ 	-DSBIN_DIR=\"$(sbindir)\" -DDATADIR=\"$(localstatedir)\" \
