@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/05/29 23:35:17 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2014/12/11 22:06:08 joerg Exp $
 
 DISTNAME=	mpqc-2.3.1
 PKGREVISION=	3
@@ -12,7 +12,7 @@ COMMENT=	The Massively Parallel Quantum Chemistry Program
 
 USE_LANGUAGES=	c c++ fortran77
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	--with-libdirs="$(COMPILER_RPATH_FLAG)$(PREFIX)/lib"	# fixme
+CONFIGURE_ARGS+=	--with-libdirs="-L${PREFIX}/lib $(COMPILER_RPATH_FLAG)$(PREFIX)/lib"	# fixme
 #CONFIGURE_ARGS=	-without-f77	# this doesn't work out of the box
 CONFIGURE_ENV=	ac_cv_prog_WISH=$(REPLACE.wish.new)
 USE_TOOLS+=	perl:run
