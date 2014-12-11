@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4767 2014/12/11 09:05:19 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4768 2014/12/11 12:25:14 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6208,3 +6208,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/p5-XML-RSS to 1.56 [wiz 2014-12-10]
 	Updated www/p5-HTML-Strip to 2.08 [schmonz 2014-12-11]
 	Updated mail/milter-manager to 2.0.5 [obache 2014-12-11]
+	Updated devel/hs-resourcet to 1.1.3.1 [szptvlfn 2014-12-11]
