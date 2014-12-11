@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4766 2014/12/11 00:15:33 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.4767 2014/12/11 09:05:19 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6207,3 +6207,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/p5-DB_File to 1.833 [wiz 2014-12-10]
 	Updated textproc/p5-XML-RSS to 1.56 [wiz 2014-12-10]
 	Updated www/p5-HTML-Strip to 2.08 [schmonz 2014-12-11]
+	Updated mail/milter-manager to 2.0.5 [obache 2014-12-11]
