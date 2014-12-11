@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2014/12/11 22:10:35 joerg Exp $
+
+--- configure.orig	2014-12-10 17:08:34.000000000 +0000
++++ configure
+@@ -5604,7 +5604,7 @@ _ACEOF
+ 
+ fi
+ 
+-LDFLAGS='-lm'
++LDFLAGS="$LDFLAGS -lm"
+ 
+ 
+ 
