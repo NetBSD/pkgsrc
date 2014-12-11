@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2014/08/21 07:54:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/12/11 15:27:03 wiz Exp $
 bin/MyGoGrinder.sh
 share/MyGoGrinder/MyGoGrinder.jar
 share/MyGoGrinder/Tags list English.txt
 share/MyGoGrinder/Tags-Liste Deutsch.txt
 share/doc/MyGoGrinder/GNU LICENSE v.2 (1991).txt
+share/doc/MyGoGrinder/docs/DEMO.WGF
 share/doc/MyGoGrinder/docs/collections.html
 share/doc/MyGoGrinder/docs/docs.html
 share/doc/MyGoGrinder/docs/download.html
@@ -40,7 +41,6 @@ share/doc/MyGoGrinder/docs/tips.html
 share/doc/MyGoGrinder/docs/wgf.html
 share/doc/MyGoGrinder/readme.txt
 share/examples/MyGoGrinder/Xuan-Xuan-Qi-Jing-(problems).zip
-share/examples/MyGoGrinder/demo.wgf
 share/pixmaps/Grinder128.png
 share/pixmaps/Grinder32.png
 share/pixmaps/Grinder48.png
