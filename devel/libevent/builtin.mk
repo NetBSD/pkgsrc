@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.14 2014/12/10 21:11:10 pettai Exp $
+# $NetBSD: builtin.mk,v 1.15 2014/12/11 08:10:50 obache Exp $
 
 BUILTIN_PKG:=	libevent
 
@@ -156,7 +156,7 @@ override-libevent-pkgconfig:
 	${ECHO} "Name: libevent";			\
 	${ECHO} "Description: libevent is an asynchronous notification event loop library"; \
 	${ECHO} "Version: ${BUILTIN_VERSION.libevent}";	\
-	${ECHO} "Libs: -Wl,-R\$${libdir} -L\$${libdir} -levent";	\
+	${ECHO} "Libs: ${COMPILER_RPATH_FLAG}\$${libdir} -L\$${libdir} -levent";	\
 	${ECHO} "Cflags: -I\$${includedir}";		\
 	} >> ${BLKDIR_PKGCFG}/${LIBEVENT_PKGCFGF};
 .  endif
