@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2014/05/09 07:37:04 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2014/12/11 22:07:47 joerg Exp $
 
 DISTNAME=	medit-1.2.0
 PKGREVISION=	1
@@ -32,5 +32,4 @@ CONFIGURE_ENV+=	MOO_PYTHON=${PYTHONBIN}
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
-BUILDLINK_TRANSFORM+=		rename:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../mk/bsd.pkg.mk"
