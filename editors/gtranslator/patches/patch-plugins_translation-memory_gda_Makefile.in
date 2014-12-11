@@ -1,0 +1,12 @@
+$NetBSD: patch-plugins_translation-memory_gda_Makefile.in,v 1.1 2014/12/11 22:07:07 joerg Exp $
+
+--- plugins/translation-memory/gda/Makefile.in.orig	2014-12-11 20:56:22.000000000 +0000
++++ plugins/translation-memory/gda/Makefile.in
+@@ -307,7 +307,6 @@ INCLUDES = \
+ 	-I$(top_srcdir)/src \
+ 	-I$(top_builddir)/src \
+ 	-I$(top_srcdir)/plugins/translation-memory \
+-	-I$(headerdir) \
+ 	$(GTRANSLATOR_CFLAGS) \
+ 	$(WARN_CFLAGS) \
+ 	$(DISABLE_DEPRECATED)
