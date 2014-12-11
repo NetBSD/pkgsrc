@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2013/10/22 12:45:29 tron Exp $
+$NetBSD: distinfo,v 1.4 2014/12/11 22:13:58 joerg Exp $
 
 SHA1 (ffmpeg2theora-0.29.tar.bz2) = 7e78c5ddb8740b33a6ae4c9da76047bd8e662791
 RMD160 (ffmpeg2theora-0.29.tar.bz2) = 1dfb5bd0c404d2a23b5818a7aab82e6ebe802e72
 Size (ffmpeg2theora-0.29.tar.bz2) = 90143 bytes
+SHA1 (patch-SConstruct) = 55803eedd7cb6603344a213ac54791b3b849649b
 SHA1 (patch-src_ffmpeg2theora.c) = 405803782d070fa9b28032701c52379609b66015
