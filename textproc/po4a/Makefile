@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/12/03 07:08:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.23 2014/12/11 23:17:17 joerg Exp $
 
 DISTNAME=		po4a-0.45
 CATEGORIES=		textproc
@@ -21,7 +21,10 @@ REPLACE_PERL=		scripts/msguntypot po4a po4a-gettextize po4a-normalize
 REPLACE_PERL+=		po4a-translate po4a-updatepo
 REPLACE_PERL+=		lib/Locale/Po4a/*
 
+DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+
 MAKE_ENV+=		COLUMNS=76
 
 .include "../../lang/perl5/module.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
