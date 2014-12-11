@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.132 2014/10/14 21:00:15 snj Exp $
+# $NetBSD: Makefile,v 1.133 2014/12/11 14:04:59 ryoon Exp $
 
-DISTNAME=	qemu-2.1.2
+DISTNAME=	qemu-2.2.0
 CATEGORIES=	emulators
 MASTER_SITES=	http://wiki.qemu.org/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -54,7 +54,7 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/doc/qemu
 
 UE_ARCHS+=		alpha arm armeb cris i386 m68k microblaze mips mipsel
 UE_ARCHS+=		or32 ppc ppc64 ppc64abi32 sh4 sh4eb sparc sparc32plus
-UE_ARCHS+=		sparc64 x86_64 microblazeel s390x unicore32
+UE_ARCHS+=		sparc64 x86_64 microblazeel s390x tricore unicore32
 
 .if ${OPSYS} == "NetBSD"
 .  if (!empty(OS_VERSION:M5.99.*) || !empty(OS_VERSION:M[6-9].*))
