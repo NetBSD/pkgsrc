@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2014/12/09 10:11:27 pettai Exp $
+# $NetBSD: Makefile,v 1.33 2014/12/11 14:26:16 pettai Exp $
 
-DISTNAME=	unbound-1.4.22
+DISTNAME=	unbound-1.5.1
 CATEGORIES=	net
 MASTER_SITES=	http://www.unbound.net/downloads/
 
@@ -8,10 +8,6 @@ MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://www.unbound.net/
 COMMENT=	DNS resolver and recursive server
 LICENSE=	modified-bsd
-
-PKGREVISION=	1
-PATCHFILES=	patch_cve_2014_8602.diff
-PATCH_SITES=	http://unbound.net/downloads/
 
 BUILD_DEFS+=	VARBASE
 
