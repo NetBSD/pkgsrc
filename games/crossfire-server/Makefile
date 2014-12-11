@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2014/05/29 23:36:35 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2014/12/11 22:08:53 joerg Exp $
 
 DISTNAME=	crossfire-1.11.0
 PKGNAME=	crossfire-server-1.11.0
@@ -19,6 +19,8 @@ USE_TOOLS+=		gmake perl:run bash:run csh:run
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/games
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/lib
+CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include
 CONFIGURE_ENV+=		ac_cv_path_GZIP=${GZIP_CMD:Q}
 PLIST_SRC=		${WRKDIR}/PLIST PLIST
 
