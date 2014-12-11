@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.35 2014/11/18 14:38:15 manu Exp $
+$NetBSD: distinfo,v 1.36 2014/12/11 22:08:22 joerg Exp $
 
 SHA1 (glusterfs-3.6.0.tar.gz) = fe19bf7128c955207f633261b9f0f87ac7341cfc
 RMD160 (glusterfs-3.6.0.tar.gz) = a0078c5a08617f981e09e96eed6eaa2f622dc4b5
@@ -13,3 +13,4 @@ SHA1 (patch-rpc_rpc-lib_src_rpcsvc.c) = a174a78d3daec9b784966b4c4502b335e4561558
 SHA1 (patch-xlator_cluster_dht_src_dht-common.c) = 835a240358948f310205c19514088cf93930b888
 SHA1 (patch-xlator_features_glupy_src_Makefile.in) = b338b98789d70f7c896ee29534a8dbae0ee93f08
 SHA1 (patch-xlator_storage_posix_src_posix.c) = 1ca56830afac7cda2fb4fc119fdd6161134eb8b5
+SHA1 (patch-xlators_mgmt_glusterd_src_Makefile.in) = 48f2cbb46ad9d08c3500e23ce93586b265e1f5f5
