@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4773 2014/12/11 20:20:33 tez Exp $
+$NetBSD: CHANGES-2014,v 1.4774 2014/12/11 21:46:54 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6214,3 +6214,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated games/MyGoGrinder to 2.2.0 [wiz 2014-12-11]
 	Updated net/powerdns-recursor to 3.3nb5 [roy 2014-12-11]
 	Updated graphics/jasper to 1.900.1nb8 [tez 2014-12-11]
+	Updated net/unbound to 1.5.1 [pettai 2014-12-11]
