@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2012/01/23 09:39:52 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2014/12/12 06:45:34 mef Exp $
+
+Add Darwin and DragonFly support
 
 --- fileio.c.orig	2004-12-13 02:47:59.000000000 +0000
 +++ fileio.c

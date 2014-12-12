@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.16 2014/10/09 14:05:58 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2014/12/12 06:45:34 mef Exp $
 
-DISTNAME=	dbench-3.04
-PKGREVISION=	1
+DISTNAME=	dbench-4.0
 CATEGORIES=	benchmarks
 MASTER_SITES=	http://samba.org/ftp/tridge/dbench/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://samba.org/ftp/tridge/dbench/README
 COMMENT=	Simulation of the Ziff-Davis netbench benchmark
+LICENSE=	gnu-gpl-v3
 
-GNU_CONFIGURE=		yes
+GNU_CONFIGURE=	yes
+USE_TOOLS=	autoconf
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -29,7 +30,11 @@ SUBST_SED.path=		-e 's|/usr/share/|${PREFIX}/share/|g'
 
 INSTALLATION_DIRS=	share/doc/dbench
 
+pre-configure:
+	(cd ${WRKSRC}; autoconf)
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/dbench
 
+.include "../../devel/popt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
