@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.13 2013/05/09 20:05:35 joerg Exp $
+$NetBSD: distinfo,v 1.14 2014/12/12 08:32:42 mef Exp $
 
-SHA1 (CSSC-1.3.0.tar.gz) = 5f9d7338c58efd9fed7b774843045433b61aed12
-RMD160 (CSSC-1.3.0.tar.gz) = 4318632f0c243ee59639ea9226e0a3d2409e9763
-Size (CSSC-1.3.0.tar.gz) = 1608481 bytes
-SHA1 (patch-aa) = 3f29e0b6835b85129088e36e3fd415a9535772df
-SHA1 (patch-ad) = aecbc9bc595bb48c090ce3bad87631400ce0a34b
-SHA1 (patch-unit-tests_googletest_include_gtest_internal_gtest-port.h) = 8cc87780d3d37999b9b497180ac84b75f735060b
+SHA1 (CSSC-1.4.0.tar.gz) = 9c1509f4da99d10081d3bd5489d272fdab8bc35a
+RMD160 (CSSC-1.4.0.tar.gz) = 6619af3566de003ed171bd9f3f2a0c216f47e99a
+Size (CSSC-1.4.0.tar.gz) = 2012122 bytes
+SHA1 (patch-ad) = d5b5f575d35c092a9b1d03cd744d948fc55a8f58
+SHA1 (patch-unit-tests_googletest_include_gtest_internal_gtest-port.h) = c7f9be5a756c41ff5a6da9c164093156600edf06
