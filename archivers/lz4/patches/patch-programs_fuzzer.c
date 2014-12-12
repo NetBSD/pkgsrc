@@ -1,11 +1,11 @@
-$NetBSD: patch-programs_fuzzer.c,v 1.2 2014/10/02 08:52:41 fhajny Exp $
+$NetBSD: patch-programs_fuzzer.c,v 1.3 2014/12/12 11:20:56 fhajny Exp $
 
 Add portable code for ftime for NetBSD.
 
 Based on https://code.google.com/p/lz4/source/detail?r=81.
---- programs/fuzzer.c.orig	2014-09-25 12:03:36.000000000 +0000
+--- programs/fuzzer.c.orig	2014-11-06 18:39:42.000000000 +0000
 +++ programs/fuzzer.c
-@@ -30,6 +30,7 @@
+@@ -30,6 +30,7 @@ Remove Visual warning messages
  #  pragma warning(disable : 4127)        /* disable: C4127: conditional expression is constant */
  #  pragma warning(disable : 4146)        /* disable: C4146: minus unsigned expression */
  #  pragma warning(disable : 4310)        /* disable: C4310: constant char value > 127 */
@@ -13,7 +13,7 @@ Based on https://code.google.com/p/lz4/source/detail?r=81.
  #endif
  
  
-@@ -38,12 +39,17 @@
+@@ -38,12 +39,18 @@ Includes
  **************************************/
  #include <stdlib.h>
  #include <stdio.h>      // fgets, sscanf
@@ -29,23 +29,24 @@ Based on https://code.google.com/p/lz4/source/detail?r=81.
 +#else
 +#  include <sys/time.h>    // gettimeofday
 +#endif
++
  
  /**************************************
-    Basic Types
-@@ -104,8 +110,11 @@ static int displayLevel = 2;
+ Basic Types
+@@ -99,8 +106,11 @@ static U32 g_time = 0;
  /*********************************************************
    Fuzzer functions
  *********************************************************/
 +#if defined(BMK_LEGACY_TIMER)
 +
- static int FUZ_GetMilliStart(void)
+ static U32 FUZ_GetMilliStart(void)
  {
-+   // Based on Legacy ftime()
-    struct timeb tb;
-    int nCount;
-    ftime( &tb );
-@@ -113,6 +122,20 @@ static int FUZ_GetMilliStart(void)
-    return nCount;
++    // Based on Legacy ftime()
+     struct timeb tb;
+     U32 nCount;
+     ftime( &tb );
+@@ -108,6 +118,21 @@ static U32 FUZ_GetMilliStart(void)
+     return nCount;
  }
  
 +#else
@@ -62,6 +63,7 @@ Based on https://code.google.com/p/lz4/source/detail?r=81.
 +}
 +
 +#endif
- 
- static int FUZ_GetMilliSpan( int nTimeStart )
++
+ static U32 FUZ_GetMilliSpan(U32 nTimeStart)
  {
+     U32 nCurrent = FUZ_GetMilliStart();
