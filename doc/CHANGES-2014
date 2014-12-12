@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4792 2014/12/12 15:43:50 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4793 2014/12/12 19:54:51 imil Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6253,3 +6253,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Removed security/pinentry-gtk [mef 2014-12-12]
 	Removed security/pinentry-qt [mef 2014-12-12]
 	Updated ham/xdx to 2.4.3 [mef 2014-12-12]
+	Updated devel/py-requests to 2.5.0nb1 [imil 2014-12-12]
