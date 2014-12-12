@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2014/06/14 10:14:06 wiedi Exp $
+# $NetBSD: Makefile,v 1.40 2014/12/12 07:44:08 obache Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -56,7 +56,8 @@ PTHREAD_OPTS+=		native
 PTHREAD_AUTO_VARS=	yes
 
 FILES_SUBST+=		BIND_GROUP=${BIND_GROUP:Q} \
-			BIND_USER=${BIND_USER:Q} PAX=${PAX:Q}
+			BIND_USER=${BIND_USER:Q} PAX=${PAX:Q} \
+			SSLBASE=${SSLBASE:Q}
 MESSAGE_SUBST+=		BIND_DIR=${BIND_DIR} BIND_USER=${BIND_USER}
 DOCDIR=			${DESTDIR}${PREFIX}/share/doc/bind9
 MISCDOC=		dnssec ipv6 migration migration-4to9 options \
