@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2014/12/03 08:47:11 obache Exp $
+# $NetBSD: options.mk,v 1.16 2014/12/12 01:13:40 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.groonga
@@ -21,7 +21,6 @@ CONFIGURE_ARGS+=	--without-mecab
 
 .if !empty(PKG_OPTIONS:Mtests)
 CONFIGURE_ARGS+=	--with-cutter
-USE_TOOLS+=		gmake
 TEST_TARGET=		check
 BUILDLINK_API_DEPENDS.cutter+=		cutter>=1.1.6
 .include "../../devel/cutter/buildlink3.mk"
