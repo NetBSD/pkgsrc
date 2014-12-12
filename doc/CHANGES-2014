@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4779 2014/12/12 08:52:54 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4780 2014/12/12 08:54:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6228,3 +6228,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/dovecot2 to 2.2.15nb1 [wiz 2014-12-12]
 	Updated shells/zsh to 5.0.7 [wiz 2014-12-12]
 	Updated editors/Sigil to 0.8.2 [wiz 2014-12-12]
+	Updated net/wget to 1.16.1 [wiz 2014-12-12]
