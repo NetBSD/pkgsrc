@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2014/09/13 22:04:41 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2014/12/12 22:04:22 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-blaze-markup
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-blaze-markup
 HS_BLAZE_MARKUP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-blaze-markup+=	hs-blaze-markup>=0.6.1
-BUILDLINK_ABI_DEPENDS.hs-blaze-markup+=	hs-blaze-markup>=0.6.1.1
+BUILDLINK_ABI_DEPENDS.hs-blaze-markup+=	hs-blaze-markup>=0.6.1.1nb1
 BUILDLINK_PKGSRCDIR.hs-blaze-markup?=	../../textproc/hs-blaze-markup
 
 .include "../../devel/hs-blaze-builder/buildlink3.mk"
