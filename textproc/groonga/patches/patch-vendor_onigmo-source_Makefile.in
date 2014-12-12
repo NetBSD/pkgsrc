@@ -1,0 +1,13 @@
+$NetBSD: patch-vendor_onigmo-source_Makefile.in,v 1.3 2014/12/12 13:02:13 joerg Exp $
+
+--- vendor/onigmo-source/Makefile.in.orig	2014-12-11 20:49:27.000000000 +0000
++++ vendor/onigmo-source/Makefile.in
+@@ -1428,7 +1428,7 @@ uninstall-am: uninstall-binSCRIPTS unins
+ onig-config: onig-config.in
+ 
+ oniguruma.pc: $(srcdir)/oniguruma.pc.in Makefile
+-	$(do_subst) < $(<) > $(@)
++	$(do_subst) < $(srcdir)/oniguruma.pc.in > $(@)
+ 
+ dll:
+ 	$(CXX) -shared -Wl,--output-def,libonig.def -o libonig.dll *.o \
