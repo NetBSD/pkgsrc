@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2014/11/23 12:52:33 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2014/12/12 22:04:23 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-parsec
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-parsec
 HS_PARSEC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-parsec+=	hs-parsec>=3.1.7
-BUILDLINK_ABI_DEPENDS.hs-parsec+=	hs-parsec>=3.1.7nb1
+BUILDLINK_ABI_DEPENDS.hs-parsec+=	hs-parsec>=3.1.7nb2
 BUILDLINK_PKGSRCDIR.hs-parsec?=	../../textproc/hs-parsec
 
 .include "../../devel/hs-mtl/buildlink3.mk"
