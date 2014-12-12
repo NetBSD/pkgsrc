@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/07/03 18:24:06 sno Exp $
+$NetBSD: distinfo,v 1.3 2014/12/12 04:56:43 mef Exp $
 
-SHA1 (Dancer-Plugin-DBIC-0.1802.tar.gz) = d2e678600a704b83185fc9bdb9b9b3ed4c024fbb
-RMD160 (Dancer-Plugin-DBIC-0.1802.tar.gz) = 242a45abb45758a9e89658cfb0ec938248b211ef
-Size (Dancer-Plugin-DBIC-0.1802.tar.gz) = 14470 bytes
+SHA1 (Dancer-Plugin-DBIC-0.2100.tar.gz) = d3786f42fae1aff10e523357129a5f8651b85511
+RMD160 (Dancer-Plugin-DBIC-0.2100.tar.gz) = 414c524ffa767a3d2264d4a28bd17fd53335cb65
+Size (Dancer-Plugin-DBIC-0.2100.tar.gz) = 17507 bytes
