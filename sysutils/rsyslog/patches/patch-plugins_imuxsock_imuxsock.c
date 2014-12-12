@@ -1,8 +1,8 @@
-$NetBSD: patch-plugins_imuxsock_imuxsock.c,v 1.1 2014/09/05 07:15:41 fhajny Exp $
+$NetBSD: patch-plugins_imuxsock_imuxsock.c,v 1.2 2014/12/12 12:47:46 fhajny Exp $
 
 Define _XPG4_2 on SunOS to pick up CMSG_* macros.
 
---- plugins/imuxsock/imuxsock.c.orig	2014-08-18 09:14:06.000000000 +0000
+--- plugins/imuxsock/imuxsock.c.orig	2014-12-02 10:15:16.000000000 +0000
 +++ plugins/imuxsock/imuxsock.c
 @@ -25,6 +25,9 @@
   *

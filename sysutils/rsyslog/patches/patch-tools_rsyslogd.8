@@ -1,0 +1,31 @@
+$NetBSD: patch-tools_rsyslogd.8,v 1.1 2014/12/12 12:47:46 fhajny Exp $
+
+Default PID file path.
+--- tools/rsyslogd.8.orig	2014-12-02 10:15:16.000000000 +0000
++++ tools/rsyslogd.8
+@@ -130,14 +130,14 @@ reacts to a set of signals.  You may eas
+ using the following:
+ .IP
+ .nf
+-kill -SIGNAL $(cat /var/run/rsyslogd.pid)
++kill -SIGNAL $(cat @RSYSLOG_PIDDIR@/rsyslogd.pid)
+ .fi
+ .PP
+ Note that -SIGNAL must be replaced with the actual signal
+ you are trying to send, e.g. with HUP. So it then becomes:
+ .IP
+ .nf
+-kill -HUP $(cat /var/run/rsyslogd.pid)
++kill -HUP $(cat @RSYSLOG_PIDDIR@/rsyslogd.pid)
+ .fi
+ .PP
+ .TP
+@@ -218,7 +218,7 @@ for exact information.
+ .I /dev/log
+ The Unix domain socket to from where local syslog messages are read.
+ .TP
+-.I /var/run/rsyslogd.pid
++.I @RSYSLOG_PIDDIR@/rsyslogd.pid
+ The file containing the process id of 
+ .BR rsyslogd .
+ .TP
