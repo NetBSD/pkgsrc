@@ -1,4 +1,11 @@
-$NetBSD: patch-ac,v 1.2 2006/03/16 23:00:08 minskim Exp $
+$NetBSD: patch-ac,v 1.3 2014/12/12 06:45:34 mef Exp $
+
+Make this package build on Darwin.  getxattr(2) and setxattr(2) on Darwin
+require additional arguments related to the resource fork attribute.
+
+Use O_FSYNC instead of O_SYNC on DragonFly. Disable extattr_get_file
+on DragonFly, the semantic is different and it isn't very useful
+in the current form.
 
 --- system.c.orig	2004-12-12 17:37:43.000000000 -0800
 +++ system.c
