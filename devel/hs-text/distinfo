@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2014/09/13 22:03:04 szptvlfn Exp $
+$NetBSD: distinfo,v 1.4 2014/12/12 22:02:19 szptvlfn Exp $
 
-SHA1 (text-1.2.0.0.tar.gz) = 8b2f6121c3318c25834058e93d7c6fc6a08b1ecb
-RMD160 (text-1.2.0.0.tar.gz) = f415aac99c0af3ceaf687486b93cacc197e4ac9e
-Size (text-1.2.0.0.tar.gz) = 144296 bytes
+SHA1 (text-1.2.0.2.tar.gz) = 890ed6abd935a146b47cca916eca00b78c418cb0
+RMD160 (text-1.2.0.2.tar.gz) = fec55ae8e71b3720b02092af5224d5b6100a88e5
+Size (text-1.2.0.2.tar.gz) = 144669 bytes
