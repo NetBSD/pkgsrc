@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/06 02:16:02 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2014/12/12 00:24:42 rodent Exp $
 
 DISTNAME=	xfwp-1.0.3
 CATEGORIES=	net
@@ -12,6 +12,12 @@ LICENSE=	x11
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if ${OPSYS} == "Linux"
+CONFIGURE_ARGS+=	--disable-strict-compilation --disable-selective-werror
+.endif
 
 .include "../../x11/xproxymanagementprotocol/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
