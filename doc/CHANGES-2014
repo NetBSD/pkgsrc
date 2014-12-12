@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4777 2014/12/12 07:34:23 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4778 2014/12/12 08:27:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6226,3 +6226,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/p5-Rose-DBx-Object-MoreHelpers to 0.100 [mef 2014-12-12]
 	Updated benchmarks/dbench to 4.0 [mef 2014-12-12]
 	Updated mail/dovecot2 to 2.2.15nb1 [wiz 2014-12-12]
+	Updated shells/zsh to 5.0.7 [wiz 2014-12-12]
