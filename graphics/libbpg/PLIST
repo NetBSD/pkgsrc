@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2014/12/12 22:05:04 agc Exp $
+bin/bpgenc
+bin/bpgdec
