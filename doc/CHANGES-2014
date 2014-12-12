@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4774 2014/12/11 21:46:54 pettai Exp $
+$NetBSD: CHANGES-2014,v 1.4775 2014/12/12 05:14:11 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6215,3 +6215,12 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/powerdns-recursor to 3.3nb5 [roy 2014-12-11]
 	Updated graphics/jasper to 1.900.1nb8 [tez 2014-12-11]
 	Updated net/unbound to 1.5.1 [pettai 2014-12-11]
+	Updated databases/p5-DBM-Deep to 2.0011 [mef 2014-12-12]
+	Updated databases/p5-Data-Table to 1.70 [mef 2014-12-12]
+	Updated databases/p5-Jifty-DBI to 0.77 [mef 2014-12-12]
+	Updated databases/p5-MLDBM-Serializer-JSON to 0.002 [mef 2014-12-12]
+	Updated databases/p5-Dancer-Plugin-DBIC to 0.2100 [mef 2014-12-12]
+	Updated databases/p5-Redis to 1.976 [mef 2014-12-12]
+	Updated databases/p5-Rose-DB-Object to 0.813 [mef 2014-12-12]
+	Updated databases/p5-Rose-DBx-Garden-Catalyst to 0.180 [mef 2014-12-12]
+	Updated databases/p5-Rose-DBx-Object-MoreHelpers to 0.100 [mef 2014-12-12]
