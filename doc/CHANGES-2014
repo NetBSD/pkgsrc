@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4784 2014/12/12 11:32:20 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4785 2014/12/12 11:35:21 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6241,3 +6241,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-B-Hooks-Parser to 0.12 [mef 2014-12-12]
 	Updated devel/p5-B-Keywords to 1.13 [mef 2014-12-12]
 	Updated devel/p5-B-Utils to 0.25 [mef 2014-12-12]
+	Updated databases/mongo-c-driver to 1.0.2 [fhajny 2014-12-12]
