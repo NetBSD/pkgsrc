@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4789 2014/12/12 12:48:01 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.4790 2014/12/12 12:53:55 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6246,3 +6246,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-argcomplete to 0.8.4 [fhajny 2014-12-12]
 	Updated textproc/sphinxsearch to 2.2.6 [fhajny 2014-12-12]
 	Updated sysutils/rsyslog to 8.6.0 [fhajny 2014-12-12]
+	Added finance/magento version 1.9.1.0 [fhajny 2014-12-12]
