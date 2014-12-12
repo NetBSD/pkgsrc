@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2014/12/07 12:34:09 imil Exp $
+# $NetBSD: Makefile,v 1.9 2014/12/12 19:54:31 imil Exp $
 
-DISTNAME=	v2.5.0
-EGG_NAME=	requests-${DISTNAME:S/v//}
-PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
+DISTNAME=	requests-2.5.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel www
-MASTER_SITES=	https://github.com/kennethreitz/requests/archive/
+MASTER_SITES=	https://pypi.python.org/packages/source/r/requests/
 
 MAINTAINER=	imil@NetBSD.org
 HOMEPAGE=	http://docs.python-requests.org/en/latest/
