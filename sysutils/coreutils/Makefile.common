@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2014/02/02 07:08:24 richard Exp $
+# $NetBSD: Makefile.common,v 1.8 2014/12/12 00:28:10 rodent Exp $
 # used by sysutils/coreutils/Makefile
 # used by misc/gnuls/Makefile
 
@@ -31,6 +31,10 @@ CONFIGURE_ENV+=		ac_list_mounted_fs=found
 
 .if ${OPSYS} == "DragonFly"
 CONFIGURE_ENV+= 	gl_cv_search_pthread_join=-lpthread
+.endif
+
+.if ${OPSYS} == "Linux"
+CONFIGURE_ENV+=		FORCE_UNSAFE_CONFIGURE=1
 .endif
 
 .if !empty(MACHINE_PLATFORM:MDarwin-[9].*-*)
