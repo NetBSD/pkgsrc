@@ -1,6 +1,6 @@
-$NetBSD: patch-programs_frametest.c,v 1.1 2014/10/15 22:11:24 joerg Exp $
+$NetBSD: patch-programs_frametest.c,v 1.2 2014/12/12 11:20:56 fhajny Exp $
 
---- programs/frametest.c.orig	2014-10-15 12:42:00.000000000 +0000
+--- programs/frametest.c.orig	2014-11-06 18:39:42.000000000 +0000
 +++ programs/frametest.c
 @@ -42,7 +42,7 @@
  **************************************/
