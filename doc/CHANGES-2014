@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4787 2014/12/12 11:45:17 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.4788 2014/12/12 11:58:02 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6244,3 +6244,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/mongo-c-driver to 1.0.2 [fhajny 2014-12-12]
 	Updated databases/py-peewee to 2.4.4 [fhajny 2014-12-12]
 	Updated devel/py-argcomplete to 0.8.4 [fhajny 2014-12-12]
+	Updated textproc/sphinxsearch to 2.2.6 [fhajny 2014-12-12]
