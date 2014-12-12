@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.695 2014/11/25 10:07:18 wiz Exp $
+# $NetBSD: Makefile,v 1.696 2014/12/12 22:05:50 agc Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -262,6 +262,7 @@ SUBDIR+=	lensfun
 SUBDIR+=	leptonica
 SUBDIR+=	lib3ds
 SUBDIR+=	libart
+SUBDIR+=	libbpg
 SUBDIR+=	libcaca
 SUBDIR+=	libexif
 SUBDIR+=	libexif-gtk
