@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2014/11/18 20:39:11 bsiegert Exp $
+# $NetBSD: Makefile,v 1.22 2014/12/12 09:41:40 wiz Exp $
 
 .include "version.mk"
 
@@ -41,42 +41,43 @@ REPLACE_BASH+=	doc/articles/wiki/test.bash
 REPLACE_BASH+=	doc/codewalk/run
 REPLACE_BASH+=	doc/progs/run
 REPLACE_BASH+=	doc/progs/update.bash
+REPLACE_BASH+=	lib/time/update.bash
 REPLACE_BASH+=	misc/arm/a
 REPLACE_BASH+=	misc/benchcmp
+REPLACE_BASH+=	misc/cgo/errors/test.bash
+REPLACE_BASH+=	misc/cgo/testcdefs/test.bash
+REPLACE_BASH+=	misc/cgo/testgodefs/test.bash
 REPLACE_BASH+=	misc/cgo/testso/test.bash
 REPLACE_BASH+=	misc/makerelease/darwin/scripts/postinstall
 REPLACE_BASH+=	misc/makerelease/darwin/scripts/preinstall
 REPLACE_BASH+=	misc/nacl/go_nacl_386_exec
 REPLACE_BASH+=	misc/nacl/go_nacl_amd64p32_exec
+REPLACE_BASH+=	misc/nacl/go_nacl_arm_exec
 REPLACE_BASH+=	misc/vim/ftplugin/go/test.sh
 REPLACE_BASH+=	misc/xcode/4/go4xcode.sh
 REPLACE_BASH+=	src/all.bash
+REPLACE_BASH+=	src/androidtest.bash
 REPLACE_BASH+=	src/clean.bash
+REPLACE_BASH+=	src/cmd/go/mkdoc.sh
 REPLACE_BASH+=	src/cmd/go/test.bash
 REPLACE_BASH+=	src/make.bash
 REPLACE_BASH+=	src/nacltest.bash
-REPLACE_BASH+=	src/pkg/runtime/mknacl.sh
-REPLACE_BASH+=	src/pkg/syscall/mkall.sh
-REPLACE_BASH+=	src/pkg/syscall/mkerrors.sh
 REPLACE_BASH+=	src/race.bash
 REPLACE_BASH+=	src/run.bash
+REPLACE_BASH+=	src/runtime/mknacl.sh
 REPLACE_BASH+=	src/sudo.bash
+REPLACE_BASH+=	src/syscall/mkall.sh
+REPLACE_BASH+=	src/syscall/mkerrors.sh
+REPLACE_BASH+=	src/syscall/mksysnum_plan9.sh
 REPLACE_BASH+=	test/bench/shootout/timing.sh
 REPLACE_BASH+=	test/run
 
 REPLACE_PERL+=	misc/pprof
 REPLACE_PERL+=	misc/xcode/4/go4xcode.sh
+REPLACE_PERL+=	src/net/http/cgi/testdata/test.cgi
 REPLACE_PERL+=	src/pkg/net/http/cgi/testdata/test.cgi
-REPLACE_PERL+=	src/pkg/regexp/syntax/make_perl_groups.pl
-REPLACE_PERL+=	src/pkg/syscall/mksyscall.pl
-REPLACE_PERL+=	src/pkg/syscall/mksyscall_solaris.pl
-REPLACE_PERL+=	src/pkg/syscall/mksysctl_openbsd.pl
-REPLACE_PERL+=	src/pkg/syscall/mksysnum_darwin.pl
-REPLACE_PERL+=	src/pkg/syscall/mksysnum_dragonfly.pl
-REPLACE_PERL+=	src/pkg/syscall/mksysnum_freebsd.pl
-REPLACE_PERL+=	src/pkg/syscall/mksysnum_linux.pl
-REPLACE_PERL+=	src/pkg/syscall/mksysnum_netbsd.pl
-REPLACE_PERL+=	src/pkg/syscall/mksysnum_openbsd.pl
+REPLACE_PERL+=	src/regexp/syntax/make_perl_groups.pl
+REPLACE_PERL+=	src/syscall/*.pl
 REPLACE_PERL+=	test/errchk
 
 # uses /bin/rc (for Plan 9)
