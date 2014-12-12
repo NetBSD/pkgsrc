@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/10/02 10:23:23 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2014/12/12 11:35:05 fhajny Exp $
 
-DISTNAME=	mongo-c-driver-1.0.0
+DISTNAME=	mongo-c-driver-1.0.2
 CATEGORIES=	databases
 MASTER_SITES=	https://github.com/mongodb/mongo-c-driver/releases/download/${PKGVERSION_NOREV}/
 
@@ -28,6 +28,6 @@ CONFIGURE_ARGS+=		--enable-man-pages=yes
 PKGCONFIG_OVERRIDE+=	src/libmongoc-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	src/libmongoc-ssl-1.0.pc.in
 
-BUILDLINK_API_DEPENDS.libbson+=	libbson>=1.0.0
+BUILDLINK_API_DEPENDS.libbson+=	libbson>=1.0.2
 .include "../../devel/libbson/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
