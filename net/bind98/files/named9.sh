@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: named9.sh,v 1.2 2012/05/20 09:10:44 marino Exp $
+# $NetBSD: named9.sh,v 1.3 2014/12/12 07:44:08 obache Exp $
 #
 
 # PROVIDE: named
@@ -49,12 +49,12 @@ named_precmd()
 		    @CP@ -p /etc/localtime "${named_chrootdir}/etc/localtime"
 	fi
 
-	if [ -f /usr/lib/engines/libgost.so ]; then
-		if [ ! -d ${named_chrootdir}/usr/lib/engines ]; then
-			@MKDIR@ ${named_chrootdir}/usr/lib/engines
+	if [ -f @SSLBASE@/lib/engines/libgost.so ]; then
+		if [ ! -d ${named_chrootdir}@SSLBASE@/lib/engines ]; then
+			@MKDIR@ ${named_chrootdir}@SSLBASE@/lib/engines
 		fi
-		@CMP@ -s /usr/lib/engines/libgost.so "${named_chrootdir}/usr/lib/engines/libgost.so" || \
-		    @CP@ -p /usr/lib/engines/libgost.so "${named_chrootdir}/usr/lib/engines/libgost.so"
+		@CMP@ -s @SSLBASE@/lib/engines/libgost.so "${named_chrootdir}@SSLBASE@/lib/engines/libgost.so" || \
+		    @CP@ -p /usr/lib/engines/libgost.so "${named_chrootdir}@SSLBASE@/lib/engines/libgost.so"
 	fi
 
        	if [ ! -d ${named_chrootdir}@VARBASE@/run/named ]; then 
