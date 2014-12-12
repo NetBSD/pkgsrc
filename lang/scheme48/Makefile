@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2014/06/17 22:23:40 asau Exp $
+# $NetBSD: Makefile,v 1.40 2014/12/12 10:52:33 joerg Exp $
 
 DISTNAME=		scheme48-1.9
 PKGREVISION=		1
@@ -42,6 +42,8 @@ SUBST_SED.pthr= 	-e 's,pthreads_done=\"no\",pthreads_done=\"yes\"; CFLAGS=\"$$CF
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
+# -O2 needs more than 2GB memory, just disabling value propagation
+# results in segmentation faults during build.
 CFLAGS+= -O0
 .endif
 
