@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2014/12/12 22:04:23 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2014/12/12 22:55:26 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-tagsoup
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-tagsoup
 HS_TAGSOUP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-tagsoup+=	hs-tagsoup>=0.13.1
-BUILDLINK_ABI_DEPENDS.hs-tagsoup+=	hs-tagsoup>=0.13.1nb3
+BUILDLINK_ABI_DEPENDS.hs-tagsoup+=	hs-tagsoup>=0.13.1nb4
 BUILDLINK_PKGSRCDIR.hs-tagsoup?=	../../textproc/hs-tagsoup
 
 .include "../../devel/hs-text/buildlink3.mk"
