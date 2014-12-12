@@ -1,0 +1,24 @@
+$NetBSD: patch-Makefile,v 1.1.1.1 2014/12/12 22:05:04 agc Exp $
+
+install into the right place
+
+--- Makefile	2014/12/12 21:39:59	1.1
++++ Makefile	2014/12/12 21:40:53
+@@ -15,7 +15,7 @@
+ # Enable for compilation on MacOS X
+ #CONFIG_APPLE=y
+ # Installation prefix
+-prefix=/usr/local
++prefix=${DESTDIR}${PREFIX}
+ 
+ 
+ #################################
+@@ -133,7 +133,7 @@
+ LIBS+=-lm -lpthread
+ endif # !CONFIG_WIN32
+ 
+-BPGENC_LIBS+=-lpng -ljpeg $(LIBS)
++BPGENC_LIBS+=-L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib -lpng -ljpeg $(LIBS)
+ 
+ bpgenc.o: CFLAGS+=-Wno-unused-but-set-variable
+ 
