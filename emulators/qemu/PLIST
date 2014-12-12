@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2014/12/11 14:04:59 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.41 2014/12/12 15:36:03 ryoon Exp $
 ${PLIST.alpha}bin/qemu-alpha
 ${PLIST.arm}bin/qemu-arm
 ${PLIST.armeb}bin/qemu-armeb
@@ -23,7 +23,7 @@ ${PLIST.sh4eb}bin/qemu-sh4eb
 ${PLIST.sparc}bin/qemu-sparc
 ${PLIST.sparc32plus}bin/qemu-sparc32plus
 ${PLIST.sparc64}bin/qemu-sparc64
-${PLIST.tricore}bin/qemu-system-tricore
+${PLIST.tricore}bin/qemu-tricore
 ${PLIST.unicore32}bin/qemu-unicore32
 bin/qemu-system-aarch64
 bin/qemu-system-alpha
@@ -48,6 +48,7 @@ bin/qemu-system-sh4
 bin/qemu-system-sh4eb
 bin/qemu-system-sparc
 bin/qemu-system-sparc64
+bin/qemu-system-tricore
 bin/qemu-system-unicore32
 bin/qemu-system-x86_64
 bin/qemu-system-xtensa
