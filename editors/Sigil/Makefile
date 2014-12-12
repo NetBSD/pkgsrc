@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2014/12/01 12:39:17 joerg Exp $
+# $NetBSD: Makefile,v 1.65 2014/12/12 08:52:42 wiz Exp $
 
-DISTNAME=	Sigil-0.8.1
+DISTNAME=	Sigil-0.8.2
 CATEGORIES=	editors
 MASTER_SITES=	-https://github.com/user-none/Sigil/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
