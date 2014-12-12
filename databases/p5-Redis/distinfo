@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/01/19 11:53:55 wen Exp $
+$NetBSD: distinfo,v 1.5 2014/12/12 04:59:45 mef Exp $
 
-SHA1 (Redis-1.958.tar.gz) = 3ae20618d25984119a2e481a5801d1ba894f4824
-RMD160 (Redis-1.958.tar.gz) = b5a86750ad965b0167393548984a3370a71ad993
-Size (Redis-1.958.tar.gz) = 34989 bytes
+SHA1 (Redis-1.976.tar.gz) = e931200980c714a1be80f0b49a8849eac8e4f718
+RMD160 (Redis-1.976.tar.gz) = 48c35dd45e5a16839d2527afc2eb5e2521504218
+Size (Redis-1.976.tar.gz) = 41598 bytes
