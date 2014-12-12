@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2009/08/01 18:56:03 zafer Exp $
+$NetBSD: distinfo,v 1.6 2014/12/12 15:43:39 mef Exp $
 
-SHA1 (xdx-2.4.2.tar.gz) = 73ee995618e44e248fe5bce9bb545c48ea674044
-RMD160 (xdx-2.4.2.tar.gz) = 2575fc2d4db0290cbdcf8207860f1ce69f46c699
-Size (xdx-2.4.2.tar.gz) = 284792 bytes
-SHA1 (patch-aa) = a0ffc7b43b1cba7c5876392451aa43d53df9f792
+SHA1 (xdx-2.4.3.tar.gz) = 6dd1981742a424690f0ecf12adb2fa4c1bd7e207
+RMD160 (xdx-2.4.3.tar.gz) = b207b01dc9e0f6459886e2bd232586bab292cb00
+Size (xdx-2.4.3.tar.gz) = 324178 bytes
