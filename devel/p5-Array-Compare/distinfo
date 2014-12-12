@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2012/02/20 12:26:17 sno Exp $
+$NetBSD: distinfo,v 1.11 2014/12/12 11:05:56 mef Exp $
 
-SHA1 (Array-Compare-2.02.tar.gz) = 4f9f4ec12e43ae3306ea98c2c3df96ffe474a0f5
-RMD160 (Array-Compare-2.02.tar.gz) = ec1c5ddf1b8660ce60c2cf714ca04aa403538fa2
-Size (Array-Compare-2.02.tar.gz) = 9554 bytes
+SHA1 (Array-Compare-2.11.tar.gz) = 60b03c1f297abc1d99052a3a7ee9c6febbe2c45e
+RMD160 (Array-Compare-2.11.tar.gz) = dcae86a0c80c181a57ac444a07f9d42e0303cc29
+Size (Array-Compare-2.11.tar.gz) = 9653 bytes
