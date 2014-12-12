@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2014/12/12 22:04:21 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2014/12/12 22:55:24 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-cpphs
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-cpphs
 HS_CPPHS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-cpphs+=	hs-cpphs>=1.18.6
-BUILDLINK_ABI_DEPENDS.hs-cpphs+=	hs-cpphs>=1.18.6nb1
+BUILDLINK_ABI_DEPENDS.hs-cpphs+=	hs-cpphs>=1.18.6nb2
 BUILDLINK_PKGSRCDIR.hs-cpphs?=	../../devel/hs-cpphs
 
 .include "../../textproc/hs-polyparse/buildlink3.mk"

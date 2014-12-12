@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2014/12/12 22:04:22 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2014/12/12 22:55:24 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-unordered-containers
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-unordered-containers
 HS_UNORDERED_CONTAINERS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-unordered-containers+=	hs-unordered-containers>=0.2.5
-BUILDLINK_ABI_DEPENDS.hs-unordered-containers+=	hs-unordered-containers>=0.2.5.0nb3
+BUILDLINK_ABI_DEPENDS.hs-unordered-containers+=	hs-unordered-containers>=0.2.5.0nb4
 BUILDLINK_PKGSRCDIR.hs-unordered-containers?=	../../devel/hs-unordered-containers
 
 .include "../../devel/hs-hashable/buildlink3.mk"
