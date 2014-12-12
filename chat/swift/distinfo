@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.2 2014/09/19 07:05:24 wiz Exp $
+$NetBSD: distinfo,v 1.3 2014/12/12 10:50:49 joerg Exp $
 
 SHA1 (swift-2.0.tar.gz) = b04ba098fffb1edc2ef0215957371c249458f0be
 RMD160 (swift-2.0.tar.gz) = f1e8f38e650a3178e236ec8d6f3cb97fecb4910d
 Size (swift-2.0.tar.gz) = 8816954 bytes
+SHA1 (patch-BuildTools_SCons_SConscript.boot) = dadfab9a521d9ef1c1e5de0a8bec080d0a7b3e63
+SHA1 (patch-BuildTools_SCons_SConstruct) = 3a6bc4e3a931c8fa0e299edac65c3e8101f661bc
 SHA1 (patch-BuildTools_SCons_Tools_qt4.py) = 9c1f20a0dae15f73db02bbfe0d11e077176f2fcc
 SHA1 (patch-Swift_QtUI_UserSearch_QtUserSearchWindow.cpp) = 1bb39d5b89bbd0d1d77c8cda7db55c3fbec066b8
 SHA1 (patch-Swiften_EventLoop_EventLoop.cpp) = a840ad43cd5082c3f511c6efd1a49e910c3fb6ea
