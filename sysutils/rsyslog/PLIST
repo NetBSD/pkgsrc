@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/09/05 07:15:41 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/12/12 12:47:46 fhajny Exp $
 lib/rsyslog/imdiag.la
 lib/rsyslog/imfile.la
 ${PLIST.klog}lib/rsyslog/imklog.la
@@ -27,6 +27,5 @@ man/man8/rsyslogd.8
 sbin/msggen
 sbin/rsyslog_diag_hostname
 sbin/rsyslogd
-sbin/zpipe
 share/examples/rc.d/rsyslogd
 share/examples/rsyslog/rsyslog.conf

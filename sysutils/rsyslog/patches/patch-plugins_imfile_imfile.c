@@ -1,9 +1,9 @@
-$NetBSD: patch-plugins_imfile_imfile.c,v 1.1 2014/09/05 07:15:41 fhajny Exp $
+$NetBSD: patch-plugins_imfile_imfile.c,v 1.2 2014/12/12 12:47:46 fhajny Exp $
 
 Avoid unresolved symbol on inotify-less platforms.
---- plugins/imfile/imfile.c.orig	2014-07-15 13:34:03.000000000 +0000
+--- plugins/imfile/imfile.c.orig	2014-12-02 10:15:16.000000000 +0000
 +++ plugins/imfile/imfile.c
-@@ -1348,11 +1348,14 @@ BEGINrunInput
+@@ -1709,11 +1709,14 @@ BEGINrunInput
  CODESTARTrunInput
  	DBGPRINTF("imfile: working in %s mode\n", 
  		 (runModConf->opMode == OPMODE_POLLING) ? "polling" : "inotify");

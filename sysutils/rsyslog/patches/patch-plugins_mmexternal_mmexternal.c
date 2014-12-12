@@ -1,7 +1,7 @@
-$NetBSD: patch-plugins_mmexternal_mmexternal.c,v 1.1 2014/09/05 07:15:41 fhajny Exp $
+$NetBSD: patch-plugins_mmexternal_mmexternal.c,v 1.2 2014/12/12 12:47:46 fhajny Exp $
 
 Fix build on BSD.
---- plugins/mmexternal/mmexternal.c.orig	2014-08-18 09:14:06.000000000 +0000
+--- plugins/mmexternal/mmexternal.c.orig	2014-11-25 15:45:35.000000000 +0000
 +++ plugins/mmexternal/mmexternal.c
 @@ -31,7 +31,7 @@
  #include <errno.h>
