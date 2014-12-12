@@ -1,0 +1,13 @@
+$NetBSD: patch-BuildTools_SCons_SConstruct,v 1.1 2014/12/12 10:50:49 joerg Exp $
+
+--- BuildTools/SCons/SConstruct.orig	2014-12-11 23:38:09.000000000 +0000
++++ BuildTools/SCons/SConstruct
+@@ -194,7 +194,7 @@ if env["PLATFORM"] != "win32" and env["P
+ 	gconf_env = conf_env.Clone()
+ 	conf = Configure(gconf_env, custom_tests = {"CheckPKG": CheckPKG})
+ 	if conf.CheckPKG("gconf-2.0") :
+-		gconf_bare_env = Environment()
++		gconf_bare_env = Environment(ENV=os.environ)
+ 		gconf_bare_env.ParseConfig('pkg-config --cflags gconf-2.0 gobject-2.0 --libs gconf-2.0 gobject-2.0')
+ 		gconf_flags = {
+ 				"LIBS": gconf_bare_env["LIBS"],
