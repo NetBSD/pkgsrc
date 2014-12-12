@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4782 2014/12/12 11:21:08 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.4783 2014/12/12 11:29:45 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6231,3 +6231,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/wget to 1.16.1 [wiz 2014-12-12]
 	Updated lang/go to 1.4 [wiz 2014-12-12]
 	Updated archivers/lz4 to 124 [fhajny 2014-12-12]
+	Updated devel/libbson to 1.0.2 [fhajny 2014-12-12]
