@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2014/12/03 08:47:11 obache Exp $
+# $NetBSD: Makefile,v 1.49 2014/12/12 01:13:40 obache Exp $
 #
 
 DISTNAME=	groonga-4.0.8
@@ -17,7 +17,7 @@ DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	gmake pkg-config
 # for long file name
 EXTRACT_USING=	bsdtar
 
