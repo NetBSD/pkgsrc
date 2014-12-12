@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4791 2014/12/12 15:10:54 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4792 2014/12/12 15:43:50 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6252,3 +6252,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/pinentry-qt4 to 0.9.0 [mef 2014-12-12]
 	Removed security/pinentry-gtk [mef 2014-12-12]
 	Removed security/pinentry-qt [mef 2014-12-12]
+	Updated ham/xdx to 2.4.3 [mef 2014-12-12]
