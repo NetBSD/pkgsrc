@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4783 2014/12/12 11:29:45 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.4784 2014/12/12 11:32:20 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6232,3 +6232,12 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/go to 1.4 [wiz 2014-12-12]
 	Updated archivers/lz4 to 124 [fhajny 2014-12-12]
 	Updated devel/libbson to 1.0.2 [fhajny 2014-12-12]
+	Updated devel/check to 0.9.14 [mef 2014-12-12]
+	Updated devel/cssc to 1.4.0 [mef 2014-12-12]
+	Updated devel/p5-App-cpanoutdated to 0.24 [mef 2014-12-12]
+	Updated devel/p5-Array-Compare to 2.11 [mef 2014-12-12]
+	Updated devel/p5-Async-Interrupt to 1.20 [mef 2014-12-12]
+	Updated devel/p5-B-Compiling to 0.04 [mef 2014-12-12]
+	Updated devel/p5-B-Hooks-Parser to 0.12 [mef 2014-12-12]
+	Updated devel/p5-B-Keywords to 1.13 [mef 2014-12-12]
+	Updated devel/p5-B-Utils to 0.25 [mef 2014-12-12]
