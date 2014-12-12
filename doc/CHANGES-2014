@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4796 2014/12/12 22:03:31 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.4797 2014/12/12 22:06:48 agc Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6257,3 +6257,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-requests to 2.5.0nb2 [imil 2014-12-12]
 	Updated devel/hs-text to 1.2.0.2 [szptvlfn 2014-12-12]
 	Updated devel/hs-hashable to 1.2.3.0 [szptvlfn 2014-12-12]
+	Added graphics/libbpg version 0.9.2 [agc 2014-12-12]
