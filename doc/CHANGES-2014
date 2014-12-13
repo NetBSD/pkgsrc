@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4800 2014/12/13 00:27:42 jmcneill Exp $
+$NetBSD: CHANGES-2014,v 1.4801 2014/12/13 04:24:15 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6261,3 +6261,14 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated comms/asterisk to 11.14.2 [jnemeth 2014-12-12]
 	Updated devel/hs-text to 1.2.0.3 [szptvlfn 2014-12-12]
 	Updated net/ddclient to 3.8.2 [jmcneill 2014-12-12]
+	Updated misc/ascii to 3.14 [mef 2014-12-13]
+	Updated misc/mousetweaks to 2.32.1 [mef 2014-12-13]
+	Updated misc/p5-Business-CreditCard to 0.33 [mef 2014-12-13]
+	Updated misc/p5-Business-UPS to 2.01 [mef 2014-12-13]
+	Updated misc/p5-File-MMagic to 1.30 [mef 2014-12-13]
+	Updated misc/p5-File-MMagic-XS to 0.09008 [mef 2014-12-13]
+	Updated misc/p5-File-Tail to 1.0 [mef 2014-12-13]
+	Updated misc/p5-Locale-Codes to 3.33 [mef 2014-12-13]
+	Updated misc/p5-Locale-Maketext to 1.26 [mef 2014-12-13]
+	Updated misc/p5-Locale-Maketext-Lexicon to 1.00 [mef 2014-12-13]
+	Updated misc/p5-Mac-PropertyList to 1.41 [mef 2014-12-13]
