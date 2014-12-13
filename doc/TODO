@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13917 2014/12/13 08:10:01 mef Exp $
+$NetBSD: TODO,v 1.13918 2014/12/13 11:16:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1114,7 +1114,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vinagre-3.14.2
 	o vino-3.14.1
 	o visual-regexp-3.1
-	o vlc-2.1.5 [wip]
 	o vm-8.0.7.522 [pkg/37707]
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vte-0.36.0
