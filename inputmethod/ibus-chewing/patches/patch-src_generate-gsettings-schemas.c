@@ -1,10 +1,10 @@
-$NetBSD: patch-src_generate-gconf-schemas.c,v 1.2 2014/12/13 06:33:15 obache Exp $
+$NetBSD: patch-src_generate-gsettings-schemas.c,v 1.1 2014/12/13 06:33:15 obache Exp $
 
 * PKGLOCALEDIR support
 
---- src/generate-gconf-schemas.c.orig	2014-12-09 06:13:50.000000000 +0000
-+++ src/generate-gconf-schemas.c
-@@ -172,7 +172,7 @@ int main(gint argc, gchar * argv[])
+--- src/generate-gsettings-schemas.c.orig	2014-12-09 06:13:50.000000000 +0000
++++ src/generate-gsettings-schemas.c
+@@ -67,7 +67,7 @@ int main(gint argc, gchar * argv[])
  
      /* Init i18n messages */
      setlocale(LC_ALL, "");
