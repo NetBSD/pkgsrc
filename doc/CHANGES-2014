@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4813 2014/12/13 14:42:25 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4814 2014/12/13 15:53:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6298,3 +6298,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/whoson to 2.05 [mef 2014-12-13]
 	Updated net/wgetpaste to 2.25 [mef 2014-12-13]
 	Updated net/tcpdump to 4.6.2 [mef 2014-12-13]
+	Updated textproc/mdocml to 1.13.2 [wiz 2014-12-13]
