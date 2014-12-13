@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/06/03 14:18:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2014/12/13 16:38:06 tsutsui Exp $
 
-DISTNAME=	userstream-1.3.0
+DISTNAME=	userstream-1.4.0
 CATEGORIES=	net
 
 MAINTAINER=	tsutsui@NetBSD.org
