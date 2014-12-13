@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/08/11 08:43:45 obache Exp $
+$NetBSD: distinfo,v 1.2 2014/12/13 14:27:35 mef Exp $
 
-SHA1 (wgetpaste-2.20.tar.bz2) = a50a5ecb236b4f7bbd4188e47a3b892b1dc90595
-RMD160 (wgetpaste-2.20.tar.bz2) = a12a9c468b249b6e59eb155e872363181deada9f
-Size (wgetpaste-2.20.tar.bz2) = 10104 bytes
+SHA1 (wgetpaste-2.25.tar.bz2) = 4f2220714522c724928dee67ed1c5d7feed1c207
+RMD160 (wgetpaste-2.25.tar.bz2) = 97c533349f4fbb594bcea9948119e64384eb716e
+Size (wgetpaste-2.25.tar.bz2) = 11107 bytes
