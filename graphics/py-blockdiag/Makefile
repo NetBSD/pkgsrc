@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2014/08/26 11:44:50 obache Exp $
+# $NetBSD: Makefile,v 1.18 2014/12/13 06:50:23 obache Exp $
 
-DISTNAME=	blockdiag-1.4.3
+DISTNAME=	blockdiag-1.4.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	http://pypi.python.org/packages/source/b/blockdiag/
@@ -10,6 +10,7 @@ HOMEPAGE=	http://blockdiag.com/
 COMMENT=	Generate block-diagram image file from spec-text file
 LICENSE=	apache-2.0
 
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=2.2.1:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-funcparserlib>=0.3.6:../../devel/py-funcparserlib
 DEPENDS+=	${PYPKGPREFIX}-webcolors-[0-9]*:../../www/py-webcolors
