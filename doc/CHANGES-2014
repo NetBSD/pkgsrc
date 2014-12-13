@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4803 2014/12/13 06:50:32 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4804 2014/12/13 06:53:20 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6274,3 +6274,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/p5-Mac-PropertyList to 1.41 [mef 2014-12-13]
 	Updated inputmethod/ibus-chewing to 1.4.12 [obache 2014-12-13]
 	Updated graphics/py-blockdiag to 1.4.7 [obache 2014-12-13]
+	Updated graphics/py-seqdiag to 0.9.4 [obache 2014-12-13]
