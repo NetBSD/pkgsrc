@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2014/09/10 19:00:04 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2014/12/13 08:56:08 obache Exp $
 
 DISTNAME=	furl-0.3.95
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	python www
 MASTER_SITES=	https://pypi.python.org/packages/source/f/furl/
 
@@ -16,8 +17,5 @@ DEPENDS+=	${PYPKGPREFIX}-orderedmultidict>=0.7.1:../../databases/py-orderedmulti
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONED_DEPENDENCIES=	unittest2
-
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
