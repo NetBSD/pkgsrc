@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.13 2012/10/08 09:57:15 asau Exp $
+# $NetBSD: Makefile,v 1.14 2014/12/13 01:05:44 mef Exp $
 #
 
-DISTNAME=	ascii-3.8
+DISTNAME=	ascii-3.14
 CATEGORIES=	misc
 MASTER_SITES=	${HOMEPAGE}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.catb.org/~esr/ascii/
 COMMENT=	ASCII character table program
+LICENSE=	modified-bsd
 
 USE_TOOLS=		gmake
 USE_LIBTOOL=		yes
