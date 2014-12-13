@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13916 2014/12/13 07:42:11 mef Exp $
+$NetBSD: TODO,v 1.13917 2014/12/13 08:10:01 mef Exp $
 
 Suggested new packages
 ======================
@@ -487,8 +487,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dk-milter-1.0.2 [wip]
 	o doclifter-2.15
 	o dolphin-4.0.2
-	o dri-7.8.2 [wip]
-	o drivel-3.0.3
+	o drivel-3.0.5
 	o e2fsprogs-1.42.12 [wip]
 	o easymenu-0.7.2p1
 	o easytag-2.2.5
@@ -590,7 +589,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
-	o gl-7.8.2 [pkgrc-wip]
 	o glade3-3.18.3
 	o glade3-3.8.5 [GNOME 2.34]
 	o gle-4.2.4
@@ -743,7 +741,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
 	o libjit-1.0.2
 	o libmcs-0.7.2
-	o libmicrohttpd-0.9.37
+	o libmicrohttpd-0.9.38
 	o libnasl-2.3.1
 	o liboobs-2.32.0 [GNOME 2.32]
 	o libpcap-1.5.1
@@ -829,6 +827,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nessus-4.4.1
 	o netatalk-3.1.0 [wip]
 	o netramet-50
+	o netsurf-3.2
 	o nettle-3.0 [breaks gnutls-3.2.15, wait for newer version]
 	o newmail-1.0.2
 	o nfdump-1.6.12 [pkg/49332]
