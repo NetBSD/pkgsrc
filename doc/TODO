@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13914 2014/12/12 09:41:49 wiz Exp $
+$NetBSD: TODO,v 1.13915 2014/12/13 03:25:35 mef Exp $
 
 Suggested new packages
 ======================
@@ -808,8 +808,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o modular-xorg-server-1.16.2
 	o molden-4.8 [after which PR 40252 can be closed]
 	o moserial-2.30.0 [GNOME 2.30]
-	o mousetweaks-2.32.1 [GNOME 2.32]
-	o mousetweaks-3.12.0
+	o mousetweaks-2.32.1 [GNOME 2.32] [mousetweaks-3.12.0 [wip]]
 	o mp3splt-2.6.2
 	o mp3splt-gtk-0.9.0
 	o mpeg4ip-1.6.1
