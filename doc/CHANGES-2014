@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4799 2014/12/12 22:54:02 szptvlfn Exp $
+$NetBSD: CHANGES-2014,v 1.4800 2014/12/13 00:27:42 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6260,3 +6260,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added graphics/libbpg version 0.9.2 [agc 2014-12-12]
 	Updated comms/asterisk to 11.14.2 [jnemeth 2014-12-12]
 	Updated devel/hs-text to 1.2.0.3 [szptvlfn 2014-12-12]
+	Updated net/ddclient to 3.8.2 [jmcneill 2014-12-12]
