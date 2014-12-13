@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2013/05/22 09:39:35 fhajny Exp $
-#
+# $NetBSD: Makefile,v 1.22 2014/12/13 09:20:02 wiz Exp $
 
-DISTNAME=	live.2012.02.04
+DISTNAME=	live.2014.12.11
 PKGNAME=	lib${DISTNAME:S/./-/:S/.//g}
 CATEGORIES=	net
 MASTER_SITES=	http://www.live555.com/liveMedia/public/
@@ -9,13 +8,16 @@ MASTER_SITES=	http://www.live555.com/liveMedia/public/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.live555.com/liveMedia/
 COMMENT=	Set of C++ libraries for multimedia streaming
+LICENSE=	gnu-lgpl-v2.1
 
 WRKSRC=		${WRKDIR}/live
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	YES
 
-INSTALLATION_DIRS=	bin lib
+INSTALLATION_DIRS=	bin lib include/BasicUsageEnvironment include/UsageEnvironment
+INSTALLATION_DIRS+=	include/groupsock include/liveMedia
+INSTALLATION_DIRS+=	share/examples/liblive
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -39,7 +41,6 @@ do-install:
 .for lib in BasicUsageEnvironment UsageEnvironment groupsock liveMedia
 	cd ${WRKSRC}/${lib} &&						\
 	${LIBTOOL} --mode=install ${INSTALL_LIB} lib${lib}.la ${DESTDIR}${PREFIX}/lib
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/${lib}
 	cd ${WRKSRC}/${lib}/include &&					\
 	for i in *.h *.hh ; do						\
 		[ ! -f $$i ] ||						\
@@ -47,13 +48,12 @@ do-install:
 			${DESTDIR}${PREFIX}/include/${lib} ;		\
 	done
 .endfor
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/liblive
 .for bin in testMP3Streamer testMPEG1or2VideoStreamer 			\
 	testMPEG1or2AudioVideoStreamer testMPEG2TransportStreamer 	\
 	testMPEG4VideoStreamer testWAVAudioStreamer testAMRAudioStreamer\
 	vobStreamer testMP3Receiver testMPEG1or2VideoReceiver sapWatch 	\
-	testRelay testOnDemandRTSPServer testMPEG1or2AudioVideoToDarwin \
-	testMPEG4VideoToDarwin  openRTSP playSIP testMPEG1or2Splitter 	\
+	testRelay testOnDemandRTSPServer \
+	openRTSP playSIP testMPEG1or2Splitter 	\
 	testMPEG1or2ProgramToTransportStream
 	cd ${WRKSRC}/testProgs &&					\
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} 			\

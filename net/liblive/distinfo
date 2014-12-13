@@ -1,11 +1,9 @@
-$NetBSD: distinfo,v 1.14 2013/05/22 09:39:35 fhajny Exp $
+$NetBSD: distinfo,v 1.15 2014/12/13 09:20:02 wiz Exp $
 
-SHA1 (live.2012.02.04.tar.gz) = 26e06f8ec296c3494bc118b7ffde4ad7082e8f80
-RMD160 (live.2012.02.04.tar.gz) = 0ff1f656d7244b94820a7ee299d7c96003791b00
-Size (live.2012.02.04.tar.gz) = 541332 bytes
-SHA1 (patch-aa) = ecbf7f9a0d9835fbdb8208d296640570b8770e93
-SHA1 (patch-ba) = dc6fa32b1fa2fcfb84d4917f49c966ea5f938568
-SHA1 (patch-ca) = 20d35409d7fe63e0088d3105d5cd54809da13097
-SHA1 (patch-cb) = ed98aa446cc4c6cf3c861101637e619d32cc9e95
+SHA1 (live.2014.12.11.tar.gz) = 7cd752ad76618611ea366e84aa6ca774646a18f7
+RMD160 (live.2014.12.11.tar.gz) = eea3d511123a8c7034e8e4b970d733bed4b96853
+Size (live.2014.12.11.tar.gz) = 628708 bytes
+SHA1 (patch-aa) = 67d1928f6d085749aa19b6486b5fe841b76d4364
+SHA1 (patch-ba) = f240968640449457506c19d790fe4f5c2c60fe4e
 SHA1 (patch-cc) = 1e968b8742c913f67654d83612bafe4fe01364c0
-SHA1 (patch-config.solaris-64bit) = a353d599817eca52a35589aea598c993d9b210d0
+SHA1 (patch-config.solaris-64bit) = b2ac5b05f9eb7a8ac41adfb9a2326820268531ca
