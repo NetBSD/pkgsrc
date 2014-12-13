@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/02/21 12:38:58 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/12/13 09:20:02 wiz Exp $
 include/BasicUsageEnvironment/BasicHashTable.hh
 include/BasicUsageEnvironment/BasicUsageEnvironment.hh
 include/BasicUsageEnvironment/BasicUsageEnvironment0.hh
@@ -37,6 +37,7 @@ include/liveMedia/AudioRTPSink.hh
 include/liveMedia/Base64.hh
 include/liveMedia/BasicUDPSink.hh
 include/liveMedia/BasicUDPSource.hh
+include/liveMedia/BitVector.hh
 include/liveMedia/ByteStreamFileSource.hh
 include/liveMedia/ByteStreamMemoryBufferSource.hh
 include/liveMedia/ByteStreamMultiFileSource.hh
@@ -64,6 +65,16 @@ include/liveMedia/H264VideoRTPSink.hh
 include/liveMedia/H264VideoRTPSource.hh
 include/liveMedia/H264VideoStreamDiscreteFramer.hh
 include/liveMedia/H264VideoStreamFramer.hh
+include/liveMedia/H264or5VideoFileSink.hh
+include/liveMedia/H264or5VideoRTPSink.hh
+include/liveMedia/H264or5VideoStreamDiscreteFramer.hh
+include/liveMedia/H264or5VideoStreamFramer.hh
+include/liveMedia/H265VideoFileServerMediaSubsession.hh
+include/liveMedia/H265VideoFileSink.hh
+include/liveMedia/H265VideoRTPSink.hh
+include/liveMedia/H265VideoRTPSource.hh
+include/liveMedia/H265VideoStreamDiscreteFramer.hh
+include/liveMedia/H265VideoStreamFramer.hh
 include/liveMedia/InputFile.hh
 include/liveMedia/JPEGVideoRTPSink.hh
 include/liveMedia/JPEGVideoRTPSource.hh
@@ -76,7 +87,6 @@ include/liveMedia/MP3ADUTranscoder.hh
 include/liveMedia/MP3ADUinterleaving.hh
 include/liveMedia/MP3AudioFileServerMediaSubsession.hh
 include/liveMedia/MP3FileSource.hh
-include/liveMedia/MP3HTTPSource.hh
 include/liveMedia/MP3Transcoder.hh
 include/liveMedia/MPEG1or2AudioRTPSink.hh
 include/liveMedia/MPEG1or2AudioRTPSource.hh
@@ -117,9 +127,13 @@ include/liveMedia/MediaSink.hh
 include/liveMedia/MediaSource.hh
 include/liveMedia/MultiFramedRTPSink.hh
 include/liveMedia/MultiFramedRTPSource.hh
+include/liveMedia/OggFile.hh
+include/liveMedia/OggFileServerDemux.hh
+include/liveMedia/OggFileSink.hh
 include/liveMedia/OnDemandServerMediaSubsession.hh
 include/liveMedia/OutputFile.hh
 include/liveMedia/PassiveServerMediaSubsession.hh
+include/liveMedia/ProxyServerMediaSession.hh
 include/liveMedia/QCELPAudioRTPSource.hh
 include/liveMedia/QuickTimeFileSink.hh
 include/liveMedia/QuickTimeGenericRTPSource.hh
@@ -129,6 +143,7 @@ include/liveMedia/RTPSink.hh
 include/liveMedia/RTPSource.hh
 include/liveMedia/RTSPClient.hh
 include/liveMedia/RTSPCommon.hh
+include/liveMedia/RTSPRegisterSender.hh
 include/liveMedia/RTSPServer.hh
 include/liveMedia/RTSPServerSupportingHTTPStreaming.hh
 include/liveMedia/SIPClient.hh
@@ -139,8 +154,12 @@ include/liveMedia/StreamReplicator.hh
 include/liveMedia/T140TextRTPSink.hh
 include/liveMedia/TCPStreamSink.hh
 include/liveMedia/TextRTPSink.hh
+include/liveMedia/TheoraVideoRTPSink.hh
+include/liveMedia/TheoraVideoRTPSource.hh
 include/liveMedia/VP8VideoRTPSink.hh
 include/liveMedia/VP8VideoRTPSource.hh
+include/liveMedia/VP9VideoRTPSink.hh
+include/liveMedia/VP9VideoRTPSource.hh
 include/liveMedia/VideoRTPSink.hh
 include/liveMedia/VorbisAudioRTPSink.hh
 include/liveMedia/VorbisAudioRTPSource.hh
@@ -148,6 +167,7 @@ include/liveMedia/WAVAudioFileServerMediaSubsession.hh
 include/liveMedia/WAVAudioFileSource.hh
 include/liveMedia/liveMedia.hh
 include/liveMedia/liveMedia_version.hh
+include/liveMedia/ourMD5.hh
 include/liveMedia/uLawAudioFilter.hh
 lib/libBasicUsageEnvironment.la
 lib/libUsageEnvironment.la
@@ -160,14 +180,12 @@ share/examples/liblive/testAMRAudioStreamer
 share/examples/liblive/testMP3Receiver
 share/examples/liblive/testMP3Streamer
 share/examples/liblive/testMPEG1or2AudioVideoStreamer
-share/examples/liblive/testMPEG1or2AudioVideoToDarwin
 share/examples/liblive/testMPEG1or2ProgramToTransportStream
 share/examples/liblive/testMPEG1or2Splitter
 share/examples/liblive/testMPEG1or2VideoReceiver
 share/examples/liblive/testMPEG1or2VideoStreamer
 share/examples/liblive/testMPEG2TransportStreamer
 share/examples/liblive/testMPEG4VideoStreamer
-share/examples/liblive/testMPEG4VideoToDarwin
 share/examples/liblive/testOnDemandRTSPServer
 share/examples/liblive/testRelay
 share/examples/liblive/testWAVAudioStreamer

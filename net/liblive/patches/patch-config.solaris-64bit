@@ -1,11 +1,11 @@
-$NetBSD: patch-config.solaris-64bit,v 1.1 2013/02/22 14:40:07 jperkin Exp $
+$NetBSD: patch-config.solaris-64bit,v 1.2 2014/12/13 09:20:02 wiz Exp $
 
 Make 64-bit Solaris work.
 
---- config.solaris-64bit.orig	2012-02-04 11:01:47.000000000 +0000
+--- config.solaris-64bit.orig	2014-12-11 10:33:47.000000000 +0000
 +++ config.solaris-64bit
 @@ -1,17 +1,20 @@
--COMPILE_OPTS =          $(INCLUDES) -m64 -I. -O -DSOLARIS -DSOCKLEN_T=socklen_t
+-COMPILE_OPTS =          $(INCLUDES) -m64 -I. -O -DSOLARIS -DXLOCALE_NOT_USED -DSOCKLEN_T=socklen_t
 +.SUFFIXES: .la .lo .cpp
 +COMPILE_OPTS =          $(INCLUDES) -I. ${CPPFLAGS} -DSOLARIS -DSOCKLEN_T=socklen_t -DXLOCALE_NOT_USED=1
  C =                     c
