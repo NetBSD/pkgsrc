@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2014/12/13 06:33:15 obache Exp $
+
+* variable name mismatch with fedora-cmake.
+
+--- CMakeLists.txt.orig	2014-12-11 12:13:51.000000000 +0000
++++ CMakeLists.txt
+@@ -170,7 +170,7 @@ ADD_DEFINITIONS("-DCHEWING_VERSION_MAJOR
+     )
+ 
+ ## In case CHEWING_DATADIR is incorrect
+-FOREACH(d ${CHEWING_DATADIR} /usr/share/chewing ${CHEWING_LIBDIR}/libchewing)
++FOREACH(d ${CHEWING_chewing_DATADIR} /usr/share/chewing ${CHEWING_LIBDIR}/libchewing)
+     IF(EXISTS "${d}/symbols.dat")
+ 	SET(CHEWING_DATADIR_REAL "${d}" CACHE STRING "CHEWING_DATADIR_REAL")
+ 	BREAK()
