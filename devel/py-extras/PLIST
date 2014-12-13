@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2014/12/13 08:02:43 obache Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/extras/__init__.py
+${PYSITELIB}/extras/__init__.pyc
+${PYSITELIB}/extras/__init__.pyo
+${PYSITELIB}/extras/tests/__init__.py
+${PYSITELIB}/extras/tests/__init__.pyc
+${PYSITELIB}/extras/tests/__init__.pyo
+${PYSITELIB}/extras/tests/test_extras.py
+${PYSITELIB}/extras/tests/test_extras.pyc
+${PYSITELIB}/extras/tests/test_extras.pyo
