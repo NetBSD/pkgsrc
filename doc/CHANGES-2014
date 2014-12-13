@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4815 2014/12/13 16:39:13 tsutsui Exp $
+$NetBSD: CHANGES-2014,v 1.4816 2014/12/13 16:56:35 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6300,3 +6300,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/tcpdump to 4.6.2 [mef 2014-12-13]
 	Updated textproc/mdocml to 1.13.2 [wiz 2014-12-13]
 	Updated www/ruby-userstream to 1.4.0 [tsutsui 2014-12-13]
+	Updated x11/mlterm to 3.4.1 [tsutsui 2014-12-13]
