@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4812 2014/12/13 11:16:26 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4813 2014/12/13 14:42:25 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6294,3 +6294,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/py-dateutil to 2.3 [obache 2014-12-13]
 	Updated multimedia/vlc2 to 2.0.9nb15 [wiz 2014-12-13]
 	Added multimedia/vlc21 version 2.1.5nb1 [wiz 2014-12-13]
+	Updated net/lldpd to 0.7.12 [mef 2014-12-13]
+	Updated net/whoson to 2.05 [mef 2014-12-13]
+	Updated net/wgetpaste to 2.25 [mef 2014-12-13]
+	Updated net/tcpdump to 4.6.2 [mef 2014-12-13]
