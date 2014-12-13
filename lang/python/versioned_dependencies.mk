@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.16 2014/12/05 21:44:10 rodent Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.17 2014/12/13 09:05:30 obache Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -26,7 +26,6 @@ _SUPPORTED_PACKAGES+=flup www/py-flup www/py-flup3
 _SUPPORTED_PACKAGES+=google-api-python-client www/py-google-api-python-client www/py-google-api-python-client-py3
 _SUPPORTED_PACKAGES+=jsonlib textproc/py-jsonlib textproc/py-jsonlib3
 _SUPPORTED_PACKAGES+=python-digest www/py-python-digest www/py-python3-digest
-_SUPPORTED_PACKAGES+=unittest2 devel/py-unittest2 devel/py-unittest2py3k
 
 .for pattern in ${PYTHON_VERSIONED_DEPENDENCIES}
 _PKG_MATCHED=	no
