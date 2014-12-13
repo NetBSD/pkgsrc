@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4806 2014/12/13 08:02:57 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4807 2014/12/13 08:36:16 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6288,3 +6288,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/p5-Mac-PropertyList to 1.41 [mef 2014-12-13]
 	Updated misc/tellico to 2.3.9 [mef 2014-12-13]
 	Added devel/py-extras version 0.0.3 [obache 2014-12-13]
+	Updated devel/py-unittest2 to 0.8.0 [obache 2014-12-13]
