@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2014/06/23 10:43:45 rodent Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/12/13 08:36:03 obache Exp $
 bin/unit2-${PYVERSSUFFIX}
-bin/unit2-${PYVERSSUFFIX}.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/unittest2/__init__.py
 ${PYSITELIB}/unittest2/__init__.pyc
@@ -42,6 +42,9 @@ ${PYSITELIB}/unittest2/suite.pyo
 ${PYSITELIB}/unittest2/test/__init__.py
 ${PYSITELIB}/unittest2/test/__init__.pyc
 ${PYSITELIB}/unittest2/test/__init__.pyo
+${PYSITELIB}/unittest2/test/_test_unittest2_with.py
+${PYSITELIB}/unittest2/test/_test_unittest2_with.pyc
+${PYSITELIB}/unittest2/test/_test_unittest2_with.pyo
 ${PYSITELIB}/unittest2/test/dummy.py
 ${PYSITELIB}/unittest2/test/dummy.pyc
 ${PYSITELIB}/unittest2/test/dummy.pyo
