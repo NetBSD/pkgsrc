@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/05/02 13:30:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/12/13 09:28:01 obache Exp $
 ${PYSITELIB}/dateutil/__init__.py
 ${PYSITELIB}/dateutil/__init__.pyc
 ${PYSITELIB}/dateutil/__init__.pyo
@@ -23,9 +23,10 @@ ${PYSITELIB}/dateutil/tzwin.pyo
 ${PYSITELIB}/dateutil/zoneinfo/__init__.py
 ${PYSITELIB}/dateutil/zoneinfo/__init__.pyc
 ${PYSITELIB}/dateutil/zoneinfo/__init__.pyo
-${PYSITELIB}/dateutil/zoneinfo/zoneinfo-2010g.tar.gz
+${PYSITELIB}/dateutil/zoneinfo/dateutil-zoneinfo.tar.gz
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
