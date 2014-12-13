@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4810 2014/12/13 09:28:14 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4811 2014/12/13 11:11:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6292,3 +6292,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-testtools to 1.5.0 [obache 2014-12-13]
 	Updated net/liblive to 20141211 [wiz 2014-12-13]
 	Updated time/py-dateutil to 2.3 [obache 2014-12-13]
+	Updated multimedia/vlc2 to 2.0.9nb15 [wiz 2014-12-13]
