@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2014/10/09 14:06:45 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2014/12/13 14:14:49 mef Exp $
 
-DISTNAME=		lldpd-0.7.10
+DISTNAME=		lldpd-0.7.12
 CATEGORIES=		net
 MASTER_SITES=		http://media.luffy.cx/files/lldpd/
 
@@ -24,6 +24,11 @@ CONFIGURE_ARGS+=	--with-privsep-chroot=${PKG_HOME._lldpd}
 CONFIGURE_ARGS+=       --localstatedir=${VARBASE}
 BUILD_DEFS+=		VARBASE
 
+CONF_FILES=		${EXAMPLE_DIR}/README.conf etc/lldpd.d/README.conf
+CONF_FILES+=		${EXAMPLE_DIR}/lldpcli.bash-completion \
+	         etc/bash_completion.d/lldpcli.bash-completion
+EXAMPLE_DIR=		${PREFIX}/share/${PKGBASE}/conf
+
 #  CCLD     lldpd
 #  ld: cannot find -lperl
 LDFLAGS+=		-L${PREFIX}/${PERL5_SUB_INSTALLARCHLIB}/CORE
@@ -37,8 +42,14 @@ OWN_DIRS=		${VARBASE}/chroot/lldpd
 AUTO_MKDIRS=		yes
 
 INSTALLATION_DIRS+=	sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
+INSTALLATION_DIRS+=	share/${PKGBASE}/conf
 
 .include "options.mk"
+
+post-install:
+.for i in etc/lldpd.d/README.conf etc/bash_completion.d/lldpcli.bash-completion
+	 ${MV} ${DESTDIR}${PREFIX}/${i} ${DESTDIR}${EXAMPLE_DIR}
+.endfor
 
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0.5
 .include "../../devel/libevent/buildlink3.mk"
