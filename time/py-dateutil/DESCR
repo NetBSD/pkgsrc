@@ -1,5 +1,5 @@
-The dateutil module provides powerful extensions to the standard datetime
-module, available in Python 2.3+.
+The `dateutil` module provides powerful extensions to the standard `datetime`
+module, available in Python.
 
 Features
 
@@ -12,10 +12,9 @@ Features
 * Timezone (tzinfo) implementations for tzfile(5) format files
   (/etc/localtime, /usr/share/zoneinfo, etc), TZ environment string (in all
   known formats), iCalendar format files, given ranges (with help from
-  relative deltas), local machine timezone, fixed offset timezone, and UTC
-  timezone.
+  relative deltas), local machine timezone, fixed offset timezone, UTC
+  timezone, and Windows registry-based time zones.
+* Internal up-to-date world timezone information based on Olson's database.
 * Computing of Easter Sunday dates for any given year, using Western, Orthodox
   or Julian algorithms;
 * More than 400 test cases.
-
-This package contains the Python-2.x version of the module.
