@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2014/12/12 09:41:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2014/12/13 15:14:26 fhajny Exp $
 bin/go
 bin/gofmt
 go/AUTHORS
@@ -2565,7 +2565,7 @@ go/src/runtime/cgo/gcc_linux_386.c
 go/src/runtime/cgo/gcc_linux_amd64.c
 go/src/runtime/cgo/gcc_linux_arm.c
 go/src/runtime/cgo/gcc_netbsd_386.c
-go/src/runtime/cgo/gcc_${GO_PLATFORM}.c
+go/src/runtime/cgo/gcc_netbsd_amd64.c
 go/src/runtime/cgo/gcc_netbsd_arm.c
 go/src/runtime/cgo/gcc_openbsd_386.c
 go/src/runtime/cgo/gcc_openbsd_amd64.c
@@ -2625,8 +2625,8 @@ go/src/runtime/defs_nacl_arm.h
 go/src/runtime/defs_netbsd.go
 go/src/runtime/defs_netbsd_386.go
 go/src/runtime/defs_netbsd_386.h
-go/src/runtime/defs_${GO_PLATFORM}.go
-go/src/runtime/defs_${GO_PLATFORM}.h
+go/src/runtime/defs_netbsd_amd64.go
+go/src/runtime/defs_netbsd_amd64.h
 go/src/runtime/defs_netbsd_arm.go
 go/src/runtime/defs_netbsd_arm.h
 go/src/runtime/defs_openbsd.go
@@ -2736,7 +2736,7 @@ go/src/runtime/os_netbsd.c
 go/src/runtime/os_netbsd.go
 go/src/runtime/os_netbsd.h
 go/src/runtime/os_netbsd_386.c
-go/src/runtime/os_${GO_PLATFORM}.c
+go/src/runtime/os_netbsd_amd64.c
 go/src/runtime/os_netbsd_arm.c
 go/src/runtime/os_openbsd.c
 go/src/runtime/os_openbsd.go
@@ -2814,7 +2814,7 @@ go/src/runtime/rt0_nacl_386.s
 go/src/runtime/rt0_nacl_amd64p32.s
 go/src/runtime/rt0_nacl_arm.s
 go/src/runtime/rt0_netbsd_386.s
-go/src/runtime/rt0_${GO_PLATFORM}.s
+go/src/runtime/rt0_netbsd_amd64.s
 go/src/runtime/rt0_netbsd_arm.s
 go/src/runtime/rt0_openbsd_386.s
 go/src/runtime/rt0_openbsd_amd64.s
@@ -2853,7 +2853,7 @@ go/src/runtime/signal_nacl_386.h
 go/src/runtime/signal_nacl_amd64p32.h
 go/src/runtime/signal_nacl_arm.h
 go/src/runtime/signal_netbsd_386.h
-go/src/runtime/signal_${GO_PLATFORM}.h
+go/src/runtime/signal_netbsd_amd64.h
 go/src/runtime/signal_netbsd_arm.h
 go/src/runtime/signal_openbsd_386.h
 go/src/runtime/signal_openbsd_amd64.h
@@ -2904,7 +2904,7 @@ go/src/runtime/sys_nacl_386.s
 go/src/runtime/sys_nacl_amd64p32.s
 go/src/runtime/sys_nacl_arm.s
 go/src/runtime/sys_netbsd_386.s
-go/src/runtime/sys_${GO_PLATFORM}.s
+go/src/runtime/sys_netbsd_amd64.s
 go/src/runtime/sys_netbsd_arm.s
 go/src/runtime/sys_openbsd_386.s
 go/src/runtime/sys_openbsd_amd64.s
@@ -2936,8 +2936,8 @@ go/src/runtime/vlrt.c
 go/src/runtime/vlrt.go
 go/src/runtime/zaexperiment.h
 go/src/runtime/zasm_${GO_PLATFORM}.h
-go/src/runtime/zgoarch_amd64.go
-go/src/runtime/zgoos_netbsd.go
+go/src/runtime/zgoarch_${GOARCH}.go
+go/src/runtime/zgoos_${LOWER_OPSYS}.go
 go/src/runtime/zruntime_defs_${GO_PLATFORM}.go
 go/src/runtime/zsys_${GO_PLATFORM}.s
 go/src/runtime/zversion.go
@@ -3035,7 +3035,7 @@ go/src/syscall/asm_nacl_386.s
 go/src/syscall/asm_nacl_amd64p32.s
 go/src/syscall/asm_nacl_arm.s
 go/src/syscall/asm_netbsd_386.s
-go/src/syscall/asm_${GO_PLATFORM}.s
+go/src/syscall/asm_netbsd_amd64.s
 go/src/syscall/asm_netbsd_arm.s
 go/src/syscall/asm_openbsd_386.s
 go/src/syscall/asm_openbsd_amd64.s
@@ -3117,7 +3117,7 @@ go/src/syscall/syscall_nacl_amd64p32.go
 go/src/syscall/syscall_nacl_arm.go
 go/src/syscall/syscall_netbsd.go
 go/src/syscall/syscall_netbsd_386.go
-go/src/syscall/syscall_${GO_PLATFORM}.go
+go/src/syscall/syscall_netbsd_amd64.go
 go/src/syscall/syscall_netbsd_arm.go
 go/src/syscall/syscall_no_getwd.go
 go/src/syscall/syscall_openbsd.go
@@ -3157,7 +3157,7 @@ go/src/syscall/zerrors_linux_386.go
 go/src/syscall/zerrors_linux_amd64.go
 go/src/syscall/zerrors_linux_arm.go
 go/src/syscall/zerrors_netbsd_386.go
-go/src/syscall/zerrors_${GO_PLATFORM}.go
+go/src/syscall/zerrors_netbsd_amd64.go
 go/src/syscall/zerrors_netbsd_arm.go
 go/src/syscall/zerrors_openbsd_386.go
 go/src/syscall/zerrors_openbsd_amd64.go
@@ -3181,7 +3181,7 @@ go/src/syscall/zsyscall_nacl_386.go
 go/src/syscall/zsyscall_nacl_amd64p32.go
 go/src/syscall/zsyscall_nacl_arm.go
 go/src/syscall/zsyscall_netbsd_386.go
-go/src/syscall/zsyscall_${GO_PLATFORM}.go
+go/src/syscall/zsyscall_netbsd_amd64.go
 go/src/syscall/zsyscall_netbsd_arm.go
 go/src/syscall/zsyscall_openbsd_386.go
 go/src/syscall/zsyscall_openbsd_amd64.go
@@ -3201,7 +3201,7 @@ go/src/syscall/zsysnum_linux_386.go
 go/src/syscall/zsysnum_linux_amd64.go
 go/src/syscall/zsysnum_linux_arm.go
 go/src/syscall/zsysnum_netbsd_386.go
-go/src/syscall/zsysnum_${GO_PLATFORM}.go
+go/src/syscall/zsysnum_netbsd_amd64.go
 go/src/syscall/zsysnum_netbsd_arm.go
 go/src/syscall/zsysnum_openbsd_386.go
 go/src/syscall/zsysnum_openbsd_amd64.go
