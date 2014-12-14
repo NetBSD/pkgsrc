@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4829 2014/12/14 15:34:30 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4830 2014/12/14 15:35:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6324,3 +6324,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/ruby-tk to 2.0.0p598nb4 [taca 2014-12-14]
 	Updated databases/p5-DB_File to 1.834 [wiz 2014-12-14]
 	Updated textproc/p5-XML-Parser to 2.43 [wiz 2014-12-14]
+	Updated textproc/p5-YAML-Syck to 1.28 [wiz 2014-12-14]
