@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4828 2014/12/14 15:33:18 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4829 2014/12/14 15:34:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6323,3 +6323,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated print/xpdf-turkish to 20110815 [mef 2014-12-14]
 	Updated x11/ruby-tk to 2.0.0p598nb4 [taca 2014-12-14]
 	Updated databases/p5-DB_File to 1.834 [wiz 2014-12-14]
+	Updated textproc/p5-XML-Parser to 2.43 [wiz 2014-12-14]
