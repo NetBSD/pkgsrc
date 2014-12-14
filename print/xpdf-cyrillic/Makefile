@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2012/10/08 13:45:49 asau Exp $
+# $NetBSD: Makefile,v 1.20 2014/12/14 13:47:49 mef Exp $
 #
 
-DISTNAME=	xpdf-cyrillic-2003-jun-28
-PKGNAME=	xpdf-cyrillic-20030628
-PKGREVISION=	2
+DISTNAME=	xpdf-cyrillic-2011-aug-15
+PKGNAME=	xpdf-cyrillic-20110815
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/ \
 		http://gd.tuwien.ac.at/publishing/xpdf/
@@ -11,6 +10,7 @@ MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.foolabs.com/xpdf/
 COMMENT=	Xpdf support files for Cyrillic
+LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 DEPENDS+=	xpdf>=2.02:../../print/xpdf
 
