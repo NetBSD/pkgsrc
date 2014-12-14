@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2010/04/27 01:14:32 obache Exp $
+$NetBSD: patch-ab,v 1.6 2014/12/14 07:53:54 obache Exp $
+
+* portability fix
 
 --- configure.orig	2010-04-14 05:13:26.000000000 +0000
 +++ configure
