@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13920 2014/12/14 08:40:09 obache Exp $
+$NetBSD: TODO,v 1.13921 2014/12/14 15:35:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -584,6 +584,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gforth-0.7.3
 	o gfract-0.33
 	o ghc-7.8.1
+	o gif2png-2.5.10
 	o gimp-docs-2.8.2
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
@@ -810,12 +811,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mpeg4ip-1.6.1
 	o mpop-1.0.29
 	o mserv-devel-0.41
+	o mtr-0.86
 	o multitail-6.2
 	o munin-doc-1.4.6
 	o munin-node-1.4.6
 	o munin-server-1.4.6
 	o muse-0.9.2
-	o musicpd-0.19.5
+	o musicpd-0.18.20
+	o musicpd-0.19.6
 	o mypaint-1.1.0
 	o nano-2.3.2
 	o nap-1.5.3
@@ -940,6 +943,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-qt5-5.3.1
 	o py-reportlab-3.0
 	o py-rope-0.9.4
+	o py-setuptools-8.0.1
 	o py-simpletal-5.1
 	o py-simpy-3.0.5
 	o py-smb-1.1.8
@@ -948,6 +952,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-sybase-0.37
 	o py-tlslite-0.4.6
 	o py-trytond-stock-3.4.0
+	o py-vdirsyncer-0.3.4
 	o py-wxWidgets-3.0.0
 	o py-zconfig-3.0.3
 	o qnetwalk-1.4
@@ -1137,7 +1142,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9i
 	o wxRemind-101
-	o x264-devel-20141206
+	o x264-devel-20141213
 	o xbindkeys-1.8.6
 	o xbindkeys-tk-1.8.0
 	o xboard-4.8.0
