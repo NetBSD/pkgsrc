@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4830 2014/12/14 15:35:21 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4831 2014/12/14 15:40:56 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6325,3 +6325,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/p5-DB_File to 1.834 [wiz 2014-12-14]
 	Updated textproc/p5-XML-Parser to 2.43 [wiz 2014-12-14]
 	Updated textproc/p5-YAML-Syck to 1.28 [wiz 2014-12-14]
+	Updated devel/p5-Pegex to 0.58 [schmonz 2014-12-14]
