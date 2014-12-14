@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.25 2014/12/08 12:59:53 wiz Exp $
+# $NetBSD: options.mk,v 1.26 2014/12/14 15:47:03 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
 PKG_SUPPORTED_OPTIONS=	adplug audiofile avahi bzip2 curl faad ffmpeg flac fluidsynth id3 inet6 libao lame jack libmms libmpdclient libwildmidi mikmod modplug mpg123 musepack musicpd-soundcloud openal opus pulseaudio shout sqlite3 tremor twolame vorbis wavpack zziplib
@@ -61,7 +61,6 @@ CONFIGURE_ARGS+=	--disable-aac
 .endif
 
 .if !empty(PKG_OPTIONS:Mffmpeg)
-BUILDLINK_API_DEPENDS.ffmpeg2+=	ffmpeg2>=2.5
 .  include "../../multimedia/ffmpeg2/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-ffmpeg
 .else
