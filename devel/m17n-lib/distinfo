@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.9 2013/01/12 07:26:04 obache Exp $
+$NetBSD: distinfo,v 1.10 2014/12/14 07:53:53 obache Exp $
 
-SHA1 (m17n-lib-1.6.4.tar.gz) = 83f2fc4facfd70a580bb95d9381eac7472d85171
-RMD160 (m17n-lib-1.6.4.tar.gz) = a15057981fdf215e5ba9569283842c59cfdb595d
-Size (m17n-lib-1.6.4.tar.gz) = 1034422 bytes
-SHA1 (patch-aa) = b5968890245e1679734abe0f4ca77d39d8ae06e3
-SHA1 (patch-ab) = 1de680f683b895bf24aff90e0635d461cd7c8d83
-SHA1 (patch-ac) = 8ab1e6c62b6a57e1d0dfd9973efe81b3a89f7d4f
-SHA1 (patch-ad) = 45063876c023625ebd363f5dce341e84e1a4441d
-SHA1 (patch-ae) = f9a272534d2af3d3490fede7bf508a2cc10a0903
-SHA1 (patch-af) = c6015cc9290928a97af42fd5a88c368048b7bc9e
+SHA1 (m17n-lib-1.7.0.tar.gz) = 6ebc98680ffb575c5f58190f054d60fdb8b0f301
+RMD160 (m17n-lib-1.7.0.tar.gz) = 0cea262546a185768946b74e0ac340a6656cdc35
+Size (m17n-lib-1.7.0.tar.gz) = 1063169 bytes
+SHA1 (patch-aa) = 412b0cd68241e334c7d5a9d0e98c672089e4f19d
+SHA1 (patch-ab) = 9069402aa83fe6248914363eadfa917cda6d607e
+SHA1 (patch-ac) = 56e719f3c7fb6fb1018c66cff9261d31d7c3c329
+SHA1 (patch-ad) = 92ab488679a65618389528ddc3e02e31ec3a8026
+SHA1 (patch-ae) = 94eaee7662cdba55c227712ecfdb45b41df60bb3
+SHA1 (patch-af) = 5cdbbb6efb86db8bc0ae7a9ee8175922b7add673

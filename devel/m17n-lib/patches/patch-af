@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.5 2009/11/25 06:12:32 obache Exp $
+$NetBSD: patch-af,v 1.6 2014/12/14 07:53:54 obache Exp $
+
+* fixes required libraries
 
 --- example/Makefile.in.orig	2009-07-29 08:16:34.000000000 +0000
 +++ example/Makefile.in
