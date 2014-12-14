@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/12/14 23:11:08 pettai Exp $
+@comment $NetBSD: PLIST,v 1.10 2014/12/14 23:19:05 pettai Exp $
 bin/dt-danechk
 bin/dt-getaddr
 bin/dt-gethost
@@ -17,7 +17,6 @@ include/validator/validator.h
 lib/libsres.la
 lib/libval-threads.la
 lib/libval_shim.la
-${PERL5_SUB_INSTALLARCHLIB}/perllocal.pod
 ${PERL5_SUB_INSTALLVENDORLIB}/Net/DNS/SEC/Tools/Donuts.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Net/DNS/SEC/Tools/Donuts/Output.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Net/DNS/SEC/Tools/Donuts/Output/Format.pm
