@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2014/10/27 08:40:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2014/12/14 15:52:42 wiz Exp $
 bin/easy_install-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -22,6 +22,27 @@ ${PYSITELIB}/pkg_resources.pyo
 ${PYSITELIB}/setuptools/__init__.py
 ${PYSITELIB}/setuptools/__init__.pyc
 ${PYSITELIB}/setuptools/__init__.pyo
+${PYSITELIB}/setuptools/_vendor/__init__.py
+${PYSITELIB}/setuptools/_vendor/__init__.pyc
+${PYSITELIB}/setuptools/_vendor/__init__.pyo
+${PYSITELIB}/setuptools/_vendor/packaging/__about__.py
+${PYSITELIB}/setuptools/_vendor/packaging/__about__.pyc
+${PYSITELIB}/setuptools/_vendor/packaging/__about__.pyo
+${PYSITELIB}/setuptools/_vendor/packaging/__init__.py
+${PYSITELIB}/setuptools/_vendor/packaging/__init__.pyc
+${PYSITELIB}/setuptools/_vendor/packaging/__init__.pyo
+${PYSITELIB}/setuptools/_vendor/packaging/_compat.py
+${PYSITELIB}/setuptools/_vendor/packaging/_compat.pyc
+${PYSITELIB}/setuptools/_vendor/packaging/_compat.pyo
+${PYSITELIB}/setuptools/_vendor/packaging/_structures.py
+${PYSITELIB}/setuptools/_vendor/packaging/_structures.pyc
+${PYSITELIB}/setuptools/_vendor/packaging/_structures.pyo
+${PYSITELIB}/setuptools/_vendor/packaging/specifiers.py
+${PYSITELIB}/setuptools/_vendor/packaging/specifiers.pyc
+${PYSITELIB}/setuptools/_vendor/packaging/specifiers.pyo
+${PYSITELIB}/setuptools/_vendor/packaging/version.py
+${PYSITELIB}/setuptools/_vendor/packaging/version.pyc
+${PYSITELIB}/setuptools/_vendor/packaging/version.pyo
 ${PYSITELIB}/setuptools/archive_util.py
 ${PYSITELIB}/setuptools/archive_util.pyc
 ${PYSITELIB}/setuptools/archive_util.pyo
