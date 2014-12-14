@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2011/08/21 11:03:07 obache Exp $
+$NetBSD: distinfo,v 1.11 2014/12/14 15:34:21 wiz Exp $
 
-SHA1 (XML-Parser-2.41.tar.gz) = 68c7ee61b413c2e8255699b1987fca598e0a39d8
-RMD160 (XML-Parser-2.41.tar.gz) = 61252e5f33b205246f51c668180311e6cbd60111
-Size (XML-Parser-2.41.tar.gz) = 238441 bytes
-SHA1 (patch-aa) = 55a07b1e06a9aac11572ee7e6b41878f71e7151c
+SHA1 (XML-Parser-2.43.tar.gz) = c9bb4540b66f43ebe1d2544e4dffcf2a2ef4974f
+RMD160 (XML-Parser-2.43.tar.gz) = ca63fd2dd3d7d487329e703a982a45dc454b157c
+Size (XML-Parser-2.43.tar.gz) = 237304 bytes
