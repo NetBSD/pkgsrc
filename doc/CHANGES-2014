@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4833 2014/12/14 15:48:54 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4834 2014/12/14 15:49:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6328,3 +6328,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Pegex to 0.58 [schmonz 2014-12-14]
 	Updated audio/musicpd to 0.18.20 [wiz 2014-12-14]
 	Updated net/mtr to 0.86 [wiz 2014-12-14]
+	Updated graphics/gif2png to 2.5.10 [wiz 2014-12-14]
