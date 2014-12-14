@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2014/12/13 00:26:48 jmcneill Exp $
+$NetBSD: patch-aa,v 1.7 2014/12/14 15:35:49 schmonz Exp $
+
+Use pkgsrc paths.
 
 --- ddclient.orig	2013-12-26 09:04:25.000000000 +0000
 +++ ddclient
