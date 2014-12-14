@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/03/03 10:40:12 shattered Exp $
+$NetBSD: distinfo,v 1.5 2014/12/14 05:08:14 mef Exp $
 
-SHA1 (photopc-3.05.tar.gz) = 0eaccf2af0e5d7d1c1060a777e7a7e60b1cbbb6d
-RMD160 (photopc-3.05.tar.gz) = 5e636c9f4dc83d5c1b981312d3302f879a5d89b3
-Size (photopc-3.05.tar.gz) = 122059 bytes
+SHA1 (photopc-3.07.tar.gz) = 6200ee71d19dfc98c9d754a3a99a4b9627c716f0
+RMD160 (photopc-3.07.tar.gz) = 01b429e058ac038decd52aed67b882981b39b358
+Size (photopc-3.07.tar.gz) = 183668 bytes
