@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.444 2014/11/15 03:46:53 markd Exp $
+# $NetBSD: Makefile,v 1.445 2014/12/14 08:01:42 obache Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -176,7 +176,6 @@ SUBDIR+=	loco
 SUBDIR+=	logsurfer
 SUBDIR+=	lookup
 SUBDIR+=	lv
-SUBDIR+=	m17n-contrib
 SUBDIR+=	m17n-db
 SUBDIR+=	m17n-docs
 SUBDIR+=	marble
