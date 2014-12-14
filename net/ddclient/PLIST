@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.8 2014/12/13 00:26:48 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/12/14 15:35:49 schmonz Exp $
 sbin/ddclient
 share/doc/ddclient/COPYING
 share/doc/ddclient/COPYRIGHT
 share/doc/ddclient/README.cisco
 share/doc/ddclient/README.md
 share/doc/ddclient/README.ssl
+share/examples/ddclient/sample-ddclient-wrapper.sh
 share/examples/ddclient/sample-etc_cron.d_ddclient
 share/examples/ddclient/sample-etc_ddclient.conf
 share/examples/ddclient/sample-etc_dhclient-exit-hooks
@@ -13,3 +14,4 @@ share/examples/ddclient/sample-etc_ppp_ip-up.local
 share/examples/ddclient/sample-etc_rc.d_init.d_ddclient
 share/examples/ddclient/sample-etc_rc.d_init.d_ddclient.lsb
 share/examples/ddclient/sample-etc_rc.d_init.d_ddclient.redhat
+share/examples/ddclient/sample-etc_rc.d_init.d_ddclient.ubuntu

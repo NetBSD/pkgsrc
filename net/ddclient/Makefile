@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2014/12/13 00:26:48 jmcneill Exp $
+# $NetBSD: Makefile,v 1.35 2014/12/14 15:35:49 schmonz Exp $
 
 DISTNAME=	ddclient-3.8.2
 CATEGORIES=	net
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ddclient.sourceforge.net/
 COMMENT=	Client to update dynamic DNS entries
+LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=		perl:run
 USE_LANGUAGES=		# empty
@@ -19,6 +20,12 @@ RCD_SCRIPTS=		ddclient
 CONF_FILES_PERMS=	${EGDIR}/sample-etc_ddclient.conf		\
 			${PKG_SYSCONFDIR}/ddclient.conf			\
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0600
+
+REPLACE_INTERPRETER+=	sh
+REPLACE.sh.old=		.*/bin/bash
+REPLACE.sh.new=		/bin/sh
+REPLACE_FILES.sh=	sample-ddclient-wrapper.sh
+REPLACE_FILES.sh+=	sample-etc_rc.d_init.d_ddclient
 
 INSTALLATION_DIRS=	sbin share/doc/ddclient share/examples/ddclient
 
