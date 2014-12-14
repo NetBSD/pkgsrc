@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2013/09/16 17:42:09 abs Exp $
+# $NetBSD: Makefile,v 1.16 2014/12/14 08:39:56 obache Exp $
 
-DISTNAME=		darkstat-3.0.717
+DISTNAME=		darkstat-3.0.718
 CATEGORIES=		net
 MASTER_SITES=		http://unix4lyfe.org/darkstat/
 EXTRACT_SUFX=		.tar.bz2
@@ -13,13 +13,8 @@ LICENSE=		gnu-gpl-v2
 BUILD_TARGET=		darkstat
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-chroot-dir=${PREFIX}/share/darkstat/chroot
 
 RCD_SCRIPTS=		darkstat
-
-post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/darkstat
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/darkstat/chroot
 
 .include "../../devel/zlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.6.0
