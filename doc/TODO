@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13918 2014/12/13 11:16:27 wiz Exp $
+$NetBSD: TODO,v 1.13919 2014/12/14 07:51:39 obache Exp $
 
 Suggested new packages
 ======================
@@ -773,7 +773,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lsh-2.1
 	o lwm-1.2.3
 	o lyx-2.1.0
-	o m17n-db-1.6.5 [icon location incompatible, fixed in upstream]
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
 	o magic-8.1.23
