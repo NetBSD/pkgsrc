@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2011/11/08 15:24:59 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2014/12/14 14:01:23 taca Exp $
 ${RUBY_VENDORLIB}/multi-tk.rb
 ${RUBY_VENDORLIB}/remote-tk.rb
 ${RUBY_VENDORLIB}/tcltk.rb
@@ -61,6 +61,7 @@ ${RUBY_VENDORLIB}/tk/textmark.rb
 ${RUBY_VENDORLIB}/tk/texttag.rb
 ${RUBY_VENDORLIB}/tk/textwindow.rb
 ${RUBY_VENDORLIB}/tk/timer.rb
+${PLIST.ruby19}${RUBY_VENDORLIB}/tk/tk_mac.rb
 ${RUBY_VENDORLIB}/tk/toplevel.rb
 ${RUBY_VENDORLIB}/tk/ttk_selector.rb
 ${RUBY_VENDORLIB}/tk/txtwin_abst.rb
@@ -251,6 +252,7 @@ ${RUBY_VENDORLIB}/tkextlib/tcllib/tablelist_tile.rb
 ${RUBY_VENDORLIB}/tkextlib/tcllib/tkpiechart.rb
 ${PLIST.ruby19}${RUBY_VENDORLIB}/tkextlib/tcllib/toolbar.rb
 ${RUBY_VENDORLIB}/tkextlib/tcllib/tooltip.rb
+${PLIST.ruby19}${RUBY_VENDORLIB}/tkextlib/tcllib/validator.rb
 ${RUBY_VENDORLIB}/tkextlib/tcllib/widget.rb
 ${RUBY_VENDORLIB}/tkextlib/tclx.rb
 ${RUBY_VENDORLIB}/tkextlib/tclx/setup.rb
@@ -287,6 +289,7 @@ ${RUBY_VENDORLIB}/tkextlib/tkHTML/htmlwidget.rb
 ${RUBY_VENDORLIB}/tkextlib/tkHTML/setup.rb
 ${RUBY_VENDORLIB}/tkextlib/tkimg.rb
 ${RUBY_VENDORLIB}/tkextlib/tkimg/bmp.rb
+${PLIST.ruby19}${RUBY_VENDORLIB}/tkextlib/tkimg/dted.rb
 ${RUBY_VENDORLIB}/tkextlib/tkimg/gif.rb
 ${RUBY_VENDORLIB}/tkextlib/tkimg/ico.rb
 ${RUBY_VENDORLIB}/tkextlib/tkimg/jpeg.rb
@@ -295,6 +298,7 @@ ${RUBY_VENDORLIB}/tkextlib/tkimg/pixmap.rb
 ${RUBY_VENDORLIB}/tkextlib/tkimg/png.rb
 ${RUBY_VENDORLIB}/tkextlib/tkimg/ppm.rb
 ${RUBY_VENDORLIB}/tkextlib/tkimg/ps.rb
+${PLIST.ruby19}${RUBY_VENDORLIB}/tkextlib/tkimg/raw.rb
 ${RUBY_VENDORLIB}/tkextlib/tkimg/setup.rb
 ${RUBY_VENDORLIB}/tkextlib/tkimg/sgi.rb
 ${RUBY_VENDORLIB}/tkextlib/tkimg/sun.rb
