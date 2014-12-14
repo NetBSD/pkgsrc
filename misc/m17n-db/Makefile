@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/12/14 07:51:27 obache Exp $
+# $NetBSD: Makefile,v 1.21 2014/12/14 07:56:04 obache Exp $
 #
 
 DISTNAME=	m17n-db-1.7.0
@@ -11,6 +11,7 @@ COMMENT=	The m17n database used by the m17n library
 LICENSE=	gnu-lgpl-v2.1
 
 CONFLICTS+=	m17n-contrib-[0-9]*
+SUPERSEDES+=	m17n-contrib-[0-9]*
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake msgfmt pkg-config awk:run
