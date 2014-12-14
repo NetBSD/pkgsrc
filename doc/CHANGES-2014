@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4824 2014/12/14 09:16:50 tron Exp $
+$NetBSD: CHANGES-2014,v 1.4825 2014/12/14 11:58:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6308,3 +6308,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Removed misc/m17n-contrib successor misc/m17n-db [obache 2014-12-14]
 	Updated net/darkstat to 3.0.718 [obache 2014-12-14]
 	Updated databases/phpmyadmin to 4.3.2 [tron 2014-12-14]
+	Updated www/typo3_45 to 4.5.39 [taca 2014-12-14]
