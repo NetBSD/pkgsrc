@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.34 2014/12/14 08:29:06 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.35 2014/12/14 09:53:19 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q3 branch:
@@ -124,3 +124,7 @@ Pullup ticket #4568 - requested by pettai
 net/unbound: security patch
 Pullup ticket #4567 - requested by tron
 databases/phpmyadmin: security update
+Pullup ticket #4571 - requested by snj
+security/libksba: security patch
+Pullup ticket #4572 - requested by jnemeth
+comms/asterisk: security update
