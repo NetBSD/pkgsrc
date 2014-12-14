@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2014/12/13 00:26:48 jmcneill Exp $
+$NetBSD: distinfo,v 1.10 2014/12/14 15:35:49 schmonz Exp $
 
 SHA1 (ddclient-3.8.2.tar.bz2) = 8c887c06a580773c48a1eaced82a08c3077e1325
 RMD160 (ddclient-3.8.2.tar.bz2) = 126f773ce2fa15c8b0dd6229646afdce018d0c7b
 Size (ddclient-3.8.2.tar.bz2) = 41996 bytes
-SHA1 (patch-aa) = 878ee072fa867f5c3cccf78849d3c658745b3e95
+SHA1 (patch-aa) = de1ae69e4b89cc4d1a4146ef3856283c21aa6d76
