@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4826 2014/12/14 13:57:07 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4827 2014/12/14 14:03:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6321,3 +6321,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated print/xpdf-latin2 to 20110815 [mef 2014-12-14]
 	Updated print/xpdf-thai to 20110815 [mef 2014-12-14]
 	Updated print/xpdf-turkish to 20110815 [mef 2014-12-14]
+	Updated x11/ruby-tk to 2.0.0p598nb4 [taca 2014-12-14]
