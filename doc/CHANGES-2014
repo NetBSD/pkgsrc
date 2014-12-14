@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4818 2014/12/14 05:47:45 tsutsui Exp $
+$NetBSD: CHANGES-2014,v 1.4819 2014/12/14 07:51:39 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6303,3 +6303,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/mlterm to 3.4.1 [tsutsui 2014-12-13]
 	Removed time/py-dateutil2 successor time/py-dateutil [wiz 2014-12-14]
 	Updated net/ruby-tw to 1.0.9nb1 [tsutsui 2014-12-14]
+	Updated misc/m17n-db to 1.7.0 [obache 2014-12-14]
