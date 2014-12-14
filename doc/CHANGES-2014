@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4816 2014/12/13 16:56:35 tsutsui Exp $
+$NetBSD: CHANGES-2014,v 1.4817 2014/12/14 02:39:36 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6301,3 +6301,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/mdocml to 1.13.2 [wiz 2014-12-13]
 	Updated www/ruby-userstream to 1.4.0 [tsutsui 2014-12-13]
 	Updated x11/mlterm to 3.4.1 [tsutsui 2014-12-13]
+	Removed time/py-dateutil2 successor time/py-dateutil [wiz 2014-12-14]
