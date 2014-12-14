@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13923 2014/12/14 15:43:45 rodent Exp $
+$NetBSD: TODO,v 1.13924 2014/12/14 15:47:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -816,7 +816,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o munin-node-1.4.6
 	o munin-server-1.4.6
 	o muse-0.9.2
-	o musicpd-0.18.20
 	o musicpd-0.19.6
 	o mypaint-1.1.0
 	o nano-2.3.2
