@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.31 2014/12/09 11:42:10 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.32 2014/12/14 07:25:34 obache Exp $
 
 BUILDLINK_TREE+=	gd
 
@@ -9,6 +9,15 @@ BUILDLINK_API_DEPENDS.gd+=	gd>=2.0.15nb1
 BUILDLINK_ABI_DEPENDS.gd+=	gd>=2.1.0
 BUILDLINK_PKGSRCDIR.gd?=	../../graphics/gd
 
+_GD_PRE_LIBVPX_OPTION!= \
+	if ${PKG_INFO} -qe 'gd<=2.1.0nb1'; then			\
+		${ECHO} yes;						\
+	else								\
+		${ECHO} no;						\
+	fi
+
+pkgbase := imlib2
+.include "../../mk/pkg-build-options.mk"
 pkgbase := gd
 .include "../../mk/pkg-build-options.mk"
 
@@ -21,7 +30,7 @@ pkgbase := gd
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.if !empty(PKG_BUILD_OPTIONS.gd:Mlibvpx)
+.if ${_GD_PRE_LIBVPX_OPTION} == "yes" || !empty(PKG_BUILD_OPTIONS.gd:Mlibvpx)
 .include "../../multimedia/libvpx/buildlink3.mk"
 .endif
 .include "../../mk/jpeg.buildlink3.mk"
