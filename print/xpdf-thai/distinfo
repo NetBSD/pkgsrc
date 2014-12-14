@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/10/12 11:17:57 wiz Exp $
+$NetBSD: distinfo,v 1.5 2014/12/14 13:47:49 mef Exp $
 
-SHA1 (xpdf-thai-2002-jan-16.tar.gz) = 93de04cb2211a7451d6e8f62ddef1748d2fa37f4
-RMD160 (xpdf-thai-2002-jan-16.tar.gz) = 5bb942b4a50cf1ff9758dbfbb9cd6e3310c059c3
-Size (xpdf-thai-2002-jan-16.tar.gz) = 1873 bytes
+SHA1 (xpdf-thai-2011-aug-15.tar.gz) = d8bf58d960121508fb823c7bc7475bc0008b670e
+RMD160 (xpdf-thai-2011-aug-15.tar.gz) = 16eead3ef7fc64d4c37a379e705b9146498a7484
+Size (xpdf-thai-2011-aug-15.tar.gz) = 1878 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/10/12 11:08:19 wiz Exp $
+$NetBSD: distinfo,v 1.5 2014/12/14 13:47:49 mef Exp $
 
-SHA1 (xpdf-hebrew-2003-feb-16.tar.gz) = b37d7b969b63e55aaf4bdaac1d518fba9922e32b
-RMD160 (xpdf-hebrew-2003-feb-16.tar.gz) = 77f33aadf3602767ba2a2ed3c9b5c38ab00988c5
-Size (xpdf-hebrew-2003-feb-16.tar.gz) = 1314 bytes
+SHA1 (xpdf-hebrew-2011-aug-15.tar.gz) = 2820c90b1f303849ed24aabd9afd8581daba095b
+RMD160 (xpdf-hebrew-2011-aug-15.tar.gz) = 66ddcdf3a4b00f388ebdec07b500ec52717d25e0
+Size (xpdf-hebrew-2011-aug-15.tar.gz) = 1317 bytes

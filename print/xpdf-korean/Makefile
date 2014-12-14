@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2014/06/01 18:07:15 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2014/12/14 13:47:49 mef Exp $
 
-DISTNAME=	xpdf-korean-2005-jul-07
-PKGNAME=	xpdf-korean-20050707
-PKGREVISION=	3
+DISTNAME=	xpdf-korean-2011-sep-02
+PKGNAME=	xpdf-korean-20110902
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/ \
 		http://gd.tuwien.ac.at/publishing/xpdf/
@@ -10,6 +9,7 @@ MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.foolabs.com/xpdf/
 COMMENT=	Xpdf support files for Korean
+LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 DEPENDS+=	xpdf>=2.02:../../print/xpdf
 DEPENDS+=	baekmuk-ttf>=1.0:../../fonts/baekmuk-ttf

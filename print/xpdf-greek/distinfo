@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 12:51:45 agc Exp $
+$NetBSD: distinfo,v 1.5 2014/12/14 13:47:49 mef Exp $
 
-SHA1 (xpdf-greek-2003-jun-28.tar.gz) = 600d576c2aed29bd51135a1aad2f2342449f255f
-RMD160 (xpdf-greek-2003-jun-28.tar.gz) = 95c8abaab369a302b857d95f9f1d139d91b066ff
-Size (xpdf-greek-2003-jun-28.tar.gz) = 1263 bytes
+SHA1 (xpdf-greek-2011-aug-15.tar.gz) = 0e968c80d21352a36fcded0916b8a623af02ec40
+RMD160 (xpdf-greek-2011-aug-15.tar.gz) = f43612bac1dc430f6034ca65335d36cbec4bcf51
+Size (xpdf-greek-2011-aug-15.tar.gz) = 1259 bytes
