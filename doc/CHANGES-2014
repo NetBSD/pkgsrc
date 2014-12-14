@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4825 2014/12/14 11:58:58 taca Exp $
+$NetBSD: CHANGES-2014,v 1.4826 2014/12/14 13:57:07 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6309,3 +6309,15 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/darkstat to 3.0.718 [obache 2014-12-14]
 	Updated databases/phpmyadmin to 4.3.2 [tron 2014-12-14]
 	Updated www/typo3_45 to 4.5.39 [taca 2014-12-14]
+	Updated graphics/photopc to 3.07 [mef 2014-12-14]
+	Updated print/xpdf-arabic to 20110815 [mef 2014-12-14]
+	Updated print/xpdf-chinese-simplified to 20110902 [mef 2014-12-14]
+	Updated print/xpdf-chinese-traditional to 20110902 [mef 2014-12-14]
+	Updated print/xpdf-cyrillic to 20110815 [mef 2014-12-14]
+	Updated print/xpdf-greek to 20110815 [mef 2014-12-14]
+	Updated print/xpdf-hebrew to 20110815 [mef 2014-12-14]
+	Updated print/xpdf-japanese to 20110902 [mef 2014-12-14]
+	Updated print/xpdf-korean to 20110902 [mef 2014-12-14]
+	Updated print/xpdf-latin2 to 20110815 [mef 2014-12-14]
+	Updated print/xpdf-thai to 20110815 [mef 2014-12-14]
+	Updated print/xpdf-turkish to 20110815 [mef 2014-12-14]
