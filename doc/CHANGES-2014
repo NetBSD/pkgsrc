@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4835 2014/12/14 15:52:51 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4836 2014/12/14 15:55:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6330,3 +6330,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/mtr to 0.86 [wiz 2014-12-14]
 	Updated graphics/gif2png to 2.5.10 [wiz 2014-12-14]
 	Updated devel/py-setuptools to 8.0.1 [wiz 2014-12-14]
+	Updated time/py-vdirsyncer to 0.3.4 [wiz 2014-12-14]
