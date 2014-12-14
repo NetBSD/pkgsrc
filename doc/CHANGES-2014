@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4821 2014/12/14 07:57:35 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4822 2014/12/14 08:01:41 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6305,3 +6305,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/ruby-tw to 1.0.9nb1 [tsutsui 2014-12-14]
 	Updated misc/m17n-db to 1.7.0 [obache 2014-12-14]
 	Updated devel/m17n-lib to 1.7.0 [obache 2014-12-14]
+	Removed misc/m17n-contrib successor misc/m17n-db [obache 2014-12-14]
