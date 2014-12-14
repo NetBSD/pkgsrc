@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2013/03/19 12:15:24 drochner Exp $
+# $NetBSD: Makefile,v 1.20 2014/12/14 07:51:27 obache Exp $
 #
 
-DISTNAME=	m17n-db-1.6.4
+DISTNAME=	m17n-db-1.7.0
 CATEGORIES=	misc
 MASTER_SITES=	http://download.savannah.gnu.org/releases/m17n/
 
@@ -10,20 +10,18 @@ HOMEPAGE=	http://www.nongnu.org/m17n/
 COMMENT=	The m17n database used by the m17n library
 LICENSE=	gnu-lgpl-v2.1
 
+CONFLICTS+=	m17n-contrib-[0-9]*
+
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config awk:run
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c
 
 PKGCONFIG_OVERRIDE+=	m17n-db.pc.in
 
-.include "../../mk/bsd.prefs.mk"
+REPLACE_AWK=		tbl2mim.awk
 
-#XXX: FS size of one-true-awk 20070501 is limited to 10.  Use gawk instead.
-.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M4.99*) || \
-    ${OPSYS} == "DragonFly" && (!empty(OS_VERSION:M1.1[0-9]*) || !empty(OS_VERSION:M2.*))
-USE_TOOLS+=		gawk
-.endif
+.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "Linux"
 GLIBC=			glibc-2.3.6
