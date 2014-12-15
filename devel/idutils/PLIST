@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/05 19:53:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/12/15 11:35:42 mef Exp $
 bin/aid
 bin/defid
 bin/eid
@@ -9,9 +9,32 @@ bin/lid
 bin/mkid
 bin/xtokid
 info/idutils.info
+lib/charset.alias
+man/man1/aid.1
+man/man1/defid.1
+man/man1/eid.1
+man/man1/fid.1
+man/man1/fnid.1
+man/man1/gid.1
+man/man1/lid.1
+man/man1/mkid.1
+man/man1/xtokid.1
 share/emacs/site-lisp/idutils.el
 share/id-lang.map
+share/locale/da/LC_MESSAGES/idutils.mo
 share/locale/de/LC_MESSAGES/idutils.mo
+share/locale/fi/LC_MESSAGES/idutils.mo
 share/locale/fr/LC_MESSAGES/idutils.mo
+share/locale/ga/LC_MESSAGES/idutils.mo
+share/locale/hu/LC_MESSAGES/idutils.mo
+share/locale/id/LC_MESSAGES/idutils.mo
+share/locale/it/LC_MESSAGES/idutils.mo
 share/locale/nl/LC_MESSAGES/idutils.mo
 share/locale/pl/LC_MESSAGES/idutils.mo
+share/locale/pt_BR/LC_MESSAGES/idutils.mo
+share/locale/ro/LC_MESSAGES/idutils.mo
+share/locale/ru/LC_MESSAGES/idutils.mo
+share/locale/sv/LC_MESSAGES/idutils.mo
+share/locale/tr/LC_MESSAGES/idutils.mo
+share/locale/vi/LC_MESSAGES/idutils.mo
+share/locale/zh_CN/LC_MESSAGES/idutils.mo

@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2006/08/05 19:53:26 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2014/12/15 11:35:42 mef Exp $
 
---- libidu/idfile.h.orig	2005-11-01 04:18:33.000000000 -0500
-+++ libidu/idfile.h	2006-08-03 13:00:35.159831999 -0400
-@@ -147,7 +147,7 @@
+--- libidu/idfile.h.orig	2012-01-31 21:22:05.000000000 +0900
++++ libidu/idfile.h	2014-11-20 22:57:11.000000000 +0900
+@@ -145,7 +145,7 @@ extern struct hash_table dev_ino_table;
  
  #define token_string(buf) (buf)
- extern unsigned int token_flags (char const *buf);
--extern unsigned short token_count (char const *buf);
-+extern unsigned int token_count (char const *buf);
- extern unsigned char const *token_hits_addr (char const *buf);
+ extern unsigned int token_flags (char const *buf) _GL_ATTRIBUTE_PURE;
+-extern unsigned short token_count (char const *buf) _GL_ATTRIBUTE_PURE;
++extern unsigned int token_count (char const *buf) _GL_ATTRIBUTE_PURE;
+ extern unsigned char const *token_hits_addr (char const *buf)
+   _GL_ATTRIBUTE_PURE;
  
- #define MAYBE_RETURN_PREFIX_MATCH(arg, str, val) do { \

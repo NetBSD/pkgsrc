@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/08/05 19:53:26 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2014/12/15 11:35:42 mef Exp $
+
+To avoid using alloca.h
 
 --- libidu/fnprint.c.orig	2005-12-27 00:21:33.000000000 -0500
 +++ libidu/fnprint.c	2006-08-03 12:58:44.026747335 -0400

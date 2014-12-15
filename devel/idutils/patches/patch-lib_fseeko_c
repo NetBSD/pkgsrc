@@ -1,0 +1,17 @@
+$NetBSD: patch-lib_fseeko_c,v 1.1 2014/12/15 11:35:42 mef Exp $
+
+fseeko.c:127:22: error: incompatible types when assigning to type '__off_t' from type 'fpos_t'
+         fp_->_offset = u.f;
+                      ^
+
+--- lib/fseeko.c~	2012-01-29 01:26:04.000000000 +0900
++++ lib/fseeko.c	2014-11-20 23:51:55.000000000 +0900
+@@ -124,7 +124,7 @@ fseeko (FILE *fp, off_t offset, int when
+             off_t o;
+           } u;
+         u.o = pos;
+-        fp_->_offset = u.f;
++        fp_->_offset = u.f._pos;
+       }
+ # endif
+       fp_->_flags |= __SOFF;

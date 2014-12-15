@@ -1,0 +1,17 @@
+$NetBSD: patch-lib_fflush_c,v 1.1 2014/12/15 11:35:42 mef Exp $
+
+fflush.c:108:16: error: incompatible types when assigning to type '__off_t' from type 'fpos_t'
+   fp_->_offset = u.f;
+                ^
+
+--- lib/fflush.c.orig	2012-01-29 01:22:33.000000000 +0900
++++ lib/fflush.c	2014-11-20 23:50:41.000000000 +0900
+@@ -105,7 +105,7 @@ update_fpos_cache (FILE *fp, off_t pos)
+       off_t o;
+     } u;
+   u.o = pos;
+-  fp_->_offset = u.f;
++  fp_->_offset = u.f._pos;
+ # endif
+   fp_->_flags |= __SOFF;
+ #endif
