@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/31 11:16:43 asau Exp $
+# $NetBSD: Makefile,v 1.12 2014/12/15 05:52:01 mef Exp $
 #
 
 DISTNAME=	byacc-20050813
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://invisible-island.net/byacc/byacc.html
 COMMENT=	Berkeley Yacc
+LICENSE=	public-domain
 
 GNU_CONFIGURE=	YES
 MAKE_FILE=	makefile
