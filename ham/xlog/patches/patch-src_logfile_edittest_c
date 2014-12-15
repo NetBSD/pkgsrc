@@ -1,0 +1,15 @@
+$NetBSD: patch-src_logfile_edittest_c,v 1.1 2014/12/15 08:36:40 mef Exp $
+
+error: array subscript has type 'char' [-Werror=char-subscripts]
+
+--- src/logfile/editest.c~	2012-11-04 00:46:05.000000000 +0900
++++ src/logfile/editest.c	2014-11-17 20:26:23.000000000 +0900
+@@ -268,7 +268,7 @@ editest_qso_foreach (LOGDB * handle,
+ 		break;
+               case LOCATOR:
+ 		/* HF logs don't have locator, but useless NR */
+-		qfield = g_strdup ( isalpha(field[0]) ? field : "");
++		qfield = g_strdup ( isalpha((unsigned char) field[0]) ? field : "");
+ 		break;
+ 	      default:
+ 		qfield = g_strdup (field);
