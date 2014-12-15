@@ -1,0 +1,15 @@
+$NetBSD: patch-src_logfile_logfile_c,v 1.1 2014/12/15 08:36:40 mef Exp $
+
+error: array subscript has type 'char' [-Werror=char-subscripts]
+
+--- src/logfile/logfile.c~	2012-12-05 09:12:54.000000000 +0900
++++ src/logfile/logfile.c	2014-11-17 20:26:54.000000000 +0900
+@@ -304,7 +304,7 @@ scan_month (const gchar * s)
+ 	}
+ 
+ 	/* fall back to english abreviations */
+-	switch (tolower (s[0]))
++	switch (tolower ((unsigned char) s[0]))
+ 	{
+ 		case 'j':
+ 			if (s[1] == 'a')

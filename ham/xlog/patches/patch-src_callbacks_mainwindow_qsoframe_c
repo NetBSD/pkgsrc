@@ -1,0 +1,35 @@
+$NetBSD: patch-src_callbacks_mainwindow_qsoframe_c,v 1.1 2014/12/15 08:36:40 mef Exp $
+
+error: array subscript has type 'char' [-Werror=char-subscripts]
+
+--- src/callbacks_mainwindow_qsoframe.c~	2012-11-04 00:46:05.000000000 +0900
++++ src/callbacks_mainwindow_qsoframe.c	2014-11-18 09:09:57.000000000 +0900
+@@ -111,11 +111,11 @@ void
+ on_callentry_insert_text (GtkEditable * editable, gchar * new_text,
+ 	gint new_text_length, gpointer position, gpointer user_data)
+ {
+-	gint i;
++	unsigned int i;
+ 	gchar *result = g_new (gchar, new_text_length);
+ 
+ 	for (i = 0; i < new_text_length; i++)
+-result[i] = islower (new_text[i]) ? toupper (new_text[i]) : new_text[i];
++	  result[i] = islower ((unsigned int) new_text[i]) ? toupper ((unsigned int) new_text[i]) : new_text[i];
+ 
+ /* insert the new callsign and block insert_text, so we don't call this twice */
+ 	g_signal_handlers_block_by_func
+@@ -132,11 +132,12 @@ void
+ on_awardsentry_insert_text (GtkEditable * editable, gchar * new_text,
+ 	gint new_text_length, gpointer position, gpointer user_data)
+ {
+-	gint i;
++	unsigned int i;
+ 	gchar *result = g_new (gchar, new_text_length);
+ 
+ 	for (i = 0; i < new_text_length; i++)
+-result[i] = islower (new_text[i]) ? toupper (new_text[i]) : new_text[i];
++ result[i] = islower ((unsigned char) new_text[i]) ?
++   toupper ((unsigned char) new_text[i]) : new_text[i];
+ 
+ 	g_signal_handlers_block_by_func
+ 		(GTK_OBJECT (editable),	on_awardsentry_insert_text, user_data);
