@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.2 2012/09/20 08:38:40 apb Exp $
+# $NetBSD: hacks.mk,v 1.3 2014/12/15 11:46:36 jperkin Exp $
 
 ### [Wed Aug  3 12:18:16 UTC 2011 : tron]
 ### If "qmake" is build with "-O2" or better with "g++" under Mac OS X the
@@ -7,7 +7,7 @@
 .  include "../../mk/compiler.mk"
 .  if !empty(CC_VERSION:Mgcc*)
 PKG_HACKS+=		macosx-codegen
-BUILDLINK_TRANSFORM+=	rename:-O[0-9]*:-O1
+BUILDLINK_TRANSFORM+=	opt:-O[0-9]*:-O1
 .  endif
 .endif
 
