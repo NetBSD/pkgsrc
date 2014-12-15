@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.1.1.1 2006/08/05 19:53:26 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2014/12/15 11:35:42 mef Exp $
 
---- libidu/idread.c.orig	2005-12-27 00:23:18.000000000 -0500
-+++ libidu/idread.c	2006-08-03 12:27:38.779542243 -0400
-@@ -211,12 +211,12 @@
- #define TOK_COUNT_ADDR(buf) ((unsigned char const *)(TOK_FLAGS_ADDR (buf) + 1))
- #define TOK_HITS_ADDR(buf) ((unsigned char const *)(TOK_COUNT_ADDR (buf) + 2))
+--- libidu/idread.c.orig	2012-01-29 01:54:33.000000000 +0900
++++ libidu/idread.c	2014-11-20 22:58:01.000000000 +0900
+@@ -210,12 +210,12 @@ token_flags (char const *buf)
+   return *(unsigned char const *)&buf[strlen (buf) + 1];
+ }
  
 -unsigned short
 +unsigned int
