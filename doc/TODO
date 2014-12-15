@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13931 2014/12/15 06:04:22 mef Exp $
+$NetBSD: TODO,v 1.13932 2014/12/15 11:38:51 mef Exp $
 
 Suggested new packages
 ======================
@@ -472,7 +472,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o darcs-2.4
 	o darktable-1.4
 	o dasher-4.11
-	o dateutils-0.3.0
 	o dbmail-3.2.0
 	o dcc-1.3.147 [ask OWNER first]
 	o dd_rescue-1.45
@@ -678,7 +677,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hugin-2012.0.0
 	o icc11-13.0
 	o icdprog-0.5
-	o idutils-4.6 [wip]
 	o ike-2.0.1 [pkg/37032]
 	o imp-6.1.7
 	o inadyn-1.99.10 [https://github.com/troglobit/inadyn]
@@ -1164,7 +1162,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xinput-1.6.1
 	o xjman-0.7
 	o xli-2006.11.10
-	o xlog-2.0.12 [wip, tolower problem]
 	o xmbdfed-4.6
 	o xmcd-3.3.2
 	o xml2-0.5
