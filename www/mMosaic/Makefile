@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2013/02/16 11:24:54 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2014/12/15 11:46:36 jperkin Exp $
 #
 
 DISTNAME=	mMosaic-3.7.2
@@ -39,7 +39,7 @@ MAKEFLAGS+=	sysconfigflags='-DLINUX -Dlinux -DMOTIF1_2'
 MAKEFLAGS+=	sysconfigflags='-DSVR4 -DIRIX -DMOTIF1_2'
 
 .elif ${OPSYS} == "Darwin"
-BUILDLINK_TRANSFORM+=	rename:-shared:-c
+BUILDLINK_TRANSFORM+=	opt:-shared:-c
 .endif
 
 .include "../../x11/libXmu/buildlink3.mk"
