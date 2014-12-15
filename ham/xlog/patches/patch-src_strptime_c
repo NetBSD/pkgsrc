@@ -1,0 +1,27 @@
+$NetBSD: patch-src_strptime_c,v 1.1 2014/12/15 08:36:40 mef Exp $
+
+error: array subscript has type 'char' [-Werror=char-subscripts]
+
+--- src/strptime.c~	2012-11-04 00:46:05.000000000 +0900
++++ src/strptime.c	2014-11-18 09:02:47.000000000 +0900
+@@ -287,9 +287,9 @@ strptime_internal (rp, fmt, tm, decided,
+     {
+       /* A white space in the format string matches 0 more or white
+ 	 space in the input string.  */
+-      if (isspace (*fmt))
++      if (isspace ((unsigned char) *fmt))
+ 	{
+-	  while (isspace (*rp))
++	  while (isspace ((unsigned char) *rp))
+ 	    ++rp;
+ 	  ++fmt;
+ 	  continue;
+@@ -510,7 +510,7 @@ strptime_internal (rp, fmt, tm, decided,
+ 	case 'n':
+ 	case 't':
+ 	  /* Match any white space.  */
+-	  while (isspace (*rp))
++	  while (isspace ((unsigned char) *rp))
+ 	    ++rp;
+ 	  break;
+ 	case 'p':
