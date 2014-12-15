@@ -1,10 +1,16 @@
-$NetBSD: patch-aa,v 1.3 2014/12/09 15:10:47 mef Exp $
+$NetBSD: patch-aa,v 1.4 2014/12/15 12:37:01 jperkin Exp $
 
 Honor CC, CFLAGS and LDFLAGS from pkgsrc.
 
---- Makefile.orig	2009-03-18 05:39:26.000000000 +0900
-+++ src/Makefile	2014-12-09 23:26:41.000000000 +0900
-@@ -17,10 +17,10 @@ UNIX    = -DUNIX
+--- src/Makefile.orig	2009-03-17 20:39:26.000000000 +0000
++++ src/Makefile
+@@ -12,15 +12,15 @@
+ # if you are compiling under UNIX, change the above lines to 
+ # reflect the location of zlib.  I use:
+ USEZ    = -DZLIB_CAPABLE 
+-ZLIB    = -lz
++#ZLIB    = -lz
+ UNIX    = -DUNIX
  
  # Compiler flags, if you are using egcs, pgcs, or gcc >2.8.1 use:
  #CFLAGS  = -g -Wall $(USEZ) $(DOS) $(UNIX) 

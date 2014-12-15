@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2014/12/09 15:10:47 mef Exp $
+$NetBSD: distinfo,v 1.6 2014/12/15 12:37:01 jperkin Exp $
 
 SHA1 (atasm106.zip) = c016c2f6ee611e001dbd026923c29ce509979f1c
 RMD160 (atasm106.zip) = e9935d0e202bc668114af9d11fdbf396399cb6d3
 Size (atasm106.zip) = 368360 bytes
-SHA1 (patch-aa) = d87376db3b9babe3578b8cc614a418066c3488f3
+SHA1 (patch-aa) = e040580b87e68fc7ec2230fb22bc45b5d168ca83
 SHA1 (patch-ab) = 18c516a98ae5cbae3f8df7f38ca87bd1f47b9664
