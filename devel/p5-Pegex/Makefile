@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/12/14 15:40:49 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2014/12/15 00:39:44 wiz Exp $
 
 DISTNAME=		Pegex-0.58
 PKGNAME=		p5-${DISTNAME}
@@ -11,6 +11,7 @@ COMMENT=		Create equivalent parsers in lots of programming languages
 LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-YAML-LibYAML-[0-9]*:../../textproc/p5-YAML-LibYAML
+DEPENDS+=		p5-File-ShareDir-Install-[0-9]*:../../devel/p5-File-ShareDir-Install
 
 PERL5_PACKLIST=		auto/Pegex/.packlist
 
