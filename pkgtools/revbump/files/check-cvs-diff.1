@@ -1,0 +1,77 @@
+.\"	$NetBSD: check-cvs-diff.1,v 1.1 2014/12/15 23:25:54 mef Exp $
+.\"
+.\" Copyright (c) 2003, 2004, 2005 The NetBSD Foundation, Inc.
+.\"
+.\" This code was originally contributed to the NetBSD Foundation, Inc.
+.\" by Makoto Fujiwara <mef@NetBSD.org>.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, this list of conditions and the following disclaimer.
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in
+.\"    the documentation and/or other materials provided with the
+.\"    distribution.
+.\" 3. Neither the name of author nor the names of its contributors may
+.\"    be used to endorse or promote products derived from this software
+.\"    without specific prior written permission.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND
+.\" CONTRIBUTORS ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES,
+.\" INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+.\" MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+.\" IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS BE LIABLE FOR ANY
+.\" DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+.\" DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+.\" GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+.\" INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
+.\" IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+.\" OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+.\" IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+.\"
+.Dd December 14, 2014    
+.Dt CHECK-CVS-DIFF 1
+.Os
+.Sh NAME
+.Nm check-cvs-diff
+.Nd tool to check if revbump process described in revbump(1) results including py27, py34 or ruby200
+in the files. And then replaces the strings by the variable notation.
+.Sh SYNOPSIS
+.Nm
+.Op Fl h
+.Op Fl p Ar pkgsrcdir
+.Op Fl v
+cvs-diff-u_output-file
+.Sh DESCRIPTION
+.Nm
+is a perl script for pkgsrc developers that simplifies checking and replacing fixed
+version number in revbump resultant tree, Makefile and buildlink3.mk files.
+It reads `cvs diff -u' output written in named file, and if above mentioned strings found in the diff, replaces it in corresponding file by apropriate variable notation.
+.Pp
+.Nm Fl h
+displays a short usage.
+.Pp
+If
+.Fl p
+is given,
+.Ar pkgsrcdir
+is used instead of the default
+.Pa /usr/pkgsrc .
+.Pp
+If
+.Fl v
+is given,
+it outputs some verbose information.
+
+.Nm
+prints the package name
+(in
+.Ar category/package
+form) on stdout for each package where it failed, but usually none.
+
+.Sh SEE ALSO
+.Xr revbump 1 ,
+.Xr finddepends 1 ,
+.Xr replace-commonbump 1
