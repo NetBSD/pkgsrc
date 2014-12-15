@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2014/12/15 09:31:53 obache Exp $
+# $NetBSD: Makefile,v 1.3 2014/12/15 09:37:42 obache Exp $
 
 DISTNAME=	Test-YAML-1.05
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	perl5 textproc
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/I/IN/INGY/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Test-YAML/
