@@ -11,6 +11,3 @@ maintained and enhanced by a loose knit group of programmers on the
 Internet led by Tom Horsley <Tom.Horsley@mail.hcsc.com>.  Tom released
 `mkid2' on comp.sources.unix in March, 1991.  Since then, Greg McGary
 has resumed maintenance and is releasing an improved version 3 under GPL.
-
-Version 3 is an interim release.  Version 4 will follow in the coming
-months and include a cscope clone plus other improvements.
