@@ -1,22 +1,7 @@
-$NetBSD: patch-ab,v 1.12 2014/12/15 08:58:52 obache Exp $
+$NetBSD: patch-ab,v 1.13 2014/12/15 09:00:32 obache Exp $
 
 --- configure.orig	2012-08-15 11:45:19.000000000 +0000
 +++ configure
-@@ -3794,12 +3794,12 @@ static char *f (char * (*g) (char **, in
-    proper ANSI mode.  Curiously '\x00'!='x' always comes out true, for an
-    array size at least.  It's necessary to write '\x00'==0 to get something
-    that's true only with -std.  */
--int osf4_cc_array ['\x00' == 0 ? 1 : -1];
-+int osf4_cc_array ['\x00' = 0 ? 1 : -1];
- 
- /* IBM C 6 for AIX is almost-ANSI by default, but it replaces macro parameters
-    inside strings and character constants.  */
- #define FOO(x) 'x'
--int xlc6_cc_array[FOO(a) == 'x' ? 1 : -1];
-+int xlc6_cc_array[FOO(a) = 'x' ? 1 : -1];
- 
- int test (int i, double x);
- struct s1 {int (*f) (int a);};
 @@ -6006,7 +6006,7 @@ if test "${enable_double_buffer+set}" = 
    enableval=$enable_double_buffer;
  else
