@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.5 2014/11/25 11:09:51 obache Exp $
+# $NetBSD: hacks.mk,v 1.6 2014/12/15 11:46:35 jperkin Exp $
 
 .if !defined(OCAML_HACKS_MK)
 OCAML_HACKS_MK=	defined
@@ -31,7 +31,7 @@ SUBST_STAGE.no_compact_unwind=	pre-configure
 #.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
 #.  if !empty(CC_VERSION:Mgcc-4.4.*)
 #PKG_HACKS+=		optimisation
-#BUILDLINK_TRANSFORM+=	rename:-O[0-9]*:-O
+#BUILDLINK_TRANSFORM+=	opt:-O[0-9]*:-O
 #.  endif
 #.endif
 
