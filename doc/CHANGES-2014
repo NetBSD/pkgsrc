@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4837 2014/12/14 16:09:41 gdt Exp $
+$NetBSD: CHANGES-2014,v 1.4838 2014/12/15 02:31:38 asau Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6332,3 +6332,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-setuptools to 8.0.1 [wiz 2014-12-14]
 	Updated time/py-vdirsyncer to 0.3.4 [wiz 2014-12-14]
 	Updated graphics/gimp-ufraw to 0.20 [gdt 2014-12-14]
+	Updated lang/squeak to 4.5 [asau 2014-12-15]
