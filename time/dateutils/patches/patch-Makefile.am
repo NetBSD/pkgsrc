@@ -1,0 +1,16 @@
+$NetBSD: patch-Makefile.am,v 1.1 2014/12/15 08:45:47 mef Exp $
+
+Previous version (at least 0.27) installs libdut.a, while 0.31
+does not. Add that one.
+
+--- lib/Makefile.am~	2014-10-07 23:57:32.000000000 +0900
++++ lib/Makefile.am	2014-12-15 16:13:40.000000000 +0900
+@@ -9,7 +9,7 @@
+ noinst_HEADERS =
+ noinst_LIBRARIES =
+ pkgdata_DATA =
+-lib_LIBRARIES =
++lib_LIBRARIES = libdut.a
+ BUILT_SOURCES =
+ CLEANFILES =
+ DISTCLEANFILES =
