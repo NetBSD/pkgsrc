@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.7 2014/03/10 11:05:53 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.8 2014/12/15 11:46:36 jperkin Exp $
 
 BUILTIN_PKG:=	pixman
 PKGCONFIG_FILE.pixman=	${X11BASE}/lib/pkgconfig/pixman-1.pc
@@ -14,5 +14,5 @@ CHECK_BUILTIN.pixman?=	no
 .if !empty(CHECK_BUILTIN.pixman:M[nN][oO]) && \
     !empty(USE_BUILTIN.pixman:M[Yy][Ee][Ss]) && \
     !empty(MACHINE_PLATFORM:MDarwin-9.*-*)
-BUILDLINK_TRANSFORM+=	rename:-lpixman-1.0.10.0:-lpixman-1
+BUILDLINK_TRANSFORM+=	opt:-lpixman-1.0.10.0:-lpixman-1
 .endif

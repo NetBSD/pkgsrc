@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.6 2011/07/21 01:37:19 tron Exp $
+# $NetBSD: hacks.mk,v 1.7 2014/12/15 11:46:34 jperkin Exp $
 
 .if !defined(EMACS_HACKS_MK)
 EMACS_HACKS_MK=	defined
@@ -12,7 +12,7 @@ EMACS_HACKS_MK=	defined
 .  if !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
 .    if !empty(CC_VERSION:Mgcc-4.5.*)
 PKG_HACKS+=		optimisation
-BUILDLINK_TRANSFORM+=	rename:-O[0-9]*:-O0
+BUILDLINK_TRANSFORM+=	opt:-O[0-9]*:-O0
 .    endif
 .  endif
 
