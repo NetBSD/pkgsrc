@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4843 2014/12/15 11:38:51 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4844 2014/12/15 23:26:04 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6340,3 +6340,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated ham/xlog to 2.0.12 [mef 2014-12-15]
 	Updated time/dateutils to 0.3.1 [mef 2014-12-15]
 	Updated devel/idutils to 4.6 [mef 2014-12-15]
+	Updated pkgtools/revbump to 2.10 [mef 2014-12-15]
