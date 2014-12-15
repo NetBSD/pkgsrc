@@ -1,8 +1,10 @@
-$NetBSD: patch-ad,v 1.1.1.1 2006/08/05 19:53:26 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2014/12/15 11:35:42 mef Exp $
 
---- libidu/scanners.c.orig	2006-02-15 01:29:03.000000000 -0500
-+++ libidu/scanners.c	2006-08-03 15:57:57.169635912 -0400
-@@ -77,11 +77,16 @@
+More file types to support
+
+--- libidu/scanners.c.orig	2014-11-20 22:55:49.000000000 +0900
++++ libidu/scanners.c	2014-11-20 23:00:17.000000000 +0900
+@@ -77,11 +77,16 @@ static struct language languages_0[] =
  {
    { "C", parse_args_c, get_token_c, help_me_c },
    { "C++", parse_args_c, get_token_c, help_me_cpp },
@@ -16,7 +18,50 @@ $NetBSD: patch-ad,v 1.1.1.1 2006/08/05 19:53:26 wiz Exp $
    { "perl", parse_args_perl, get_token_perl, help_me_perl },
 -  { "lisp", parse_args_lisp, get_token_lisp, help_me_lisp }
 +  { "lisp", parse_args_lisp, get_token_lisp, help_me_lisp },
-+  { "make", parse_args_text, get_token_text, help_me_text },
++  { "make", parse_args_text, get_token_text, help_me_text }
  };
- struct language const *languages_N = &languages_0[cardinalityof (languages_0)];
- 
+ static struct language const *languages_N
+   = &languages_0[cardinalityof (languages_0)];
+@@ -1711,8 +1716,9 @@ get_token_lisp (FILE *in_FILE, void cons
+ 	{
+ 	  while (is_LETTER (c = getc (in_FILE)))
+ 	    *id++ = c;
+-	  if (c != EOF)
+-	    ungetc (c, in_FILE);
++          if (c == EOF)
++	    goto out;
++	  ungetc (c, in_FILE);
+ 	  *flags = TOK_LITERAL;
+ 	  obstack_grow0 (&tokens_obstack, scanner_buffer, id - scanner_buffer);
+ 	  return (struct token *) obstack_finish (&tokens_obstack);
+@@ -1729,13 +1735,17 @@ get_token_lisp (FILE *in_FILE, void cons
+ 		  break;
+ 	      }
+ 	  } while (c != EOF);
++          if (c == EOF)
++	    goto out;
+ 	  goto top;
+ 	}
+       else if (c == '@')	/* #@LENGTH ...^_ EMACS byte-code comment */
+ 	{
+ 	  do {
+ 	    c = getc (in_FILE);
+-	  } while ( (c != EOF) && (c != '\037'));
++            if (c == EOF)
++	      goto out;
++	  } while (c != '\037');
+ 	  goto top;
+ 	}
+       else if (c == '[')	/* #[ ... ] EMACS byte-code object */
+@@ -1787,8 +1797,9 @@ get_token_lisp (FILE *in_FILE, void cons
+ 	  *id++ = c;
+ 	  while (is_NUMBER (c = getc (in_FILE)))
+ 	    *id++ = c;
+-	  if (c != EOF)
+-	    ungetc (c, in_FILE);
++          if (c == EOF)
++	    goto out;
++	  ungetc (c, in_FILE);
+ 	  *flags = TOK_NUMBER | TOK_LITERAL;
+ 	  obstack_grow0 (&tokens_obstack, scanner_buffer, id - scanner_buffer);
+ 	  return (struct token *) obstack_finish (&tokens_obstack);

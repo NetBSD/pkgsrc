@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.2 2006/08/06 23:10:30 wiz Exp $
+$NetBSD: patch-ai,v 1.3 2014/12/15 11:35:42 mef Exp $
 
---- src/fid.c.orig	2006-03-05 05:24:21.000000000 -0500
-+++ src/fid.c	2006-08-03 12:49:29.089070087 -0400
+--- src/fid.c.orig	2012-01-01 18:16:06.000000000 +0900
++++ src/fid.c	2014-11-20 23:08:54.000000000 +0900
 @@ -23,7 +23,6 @@
  #include <unistd.h>
  #include <stdlib.h>
@@ -10,12 +10,12 @@ $NetBSD: patch-ai,v 1.2 2006/08/06 23:10:30 wiz Exp $
  #include <error.h>
  #include <pathmax.h>
  #include <xalloc.h>
-@@ -211,7 +210,7 @@
+@@ -211,7 +210,7 @@ get_file_index (char *file_name)
    struct file_link **members;
    struct file_link **end = &members_0[idh.idh_files];
    struct file_link *fn_flink = 0;
 -  char *file_name_buf = alloca (PATH_MAX);
 +  char file_name_buf[PATH_MAX];
    int has_slash = (strchr (file_name, '/') != 0);
-   int file_name_length = strlen (file_name);
+   size_t file_name_length = strlen (file_name);
    int idx = -1;

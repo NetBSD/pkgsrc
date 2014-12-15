@@ -1,16 +1,16 @@
-$NetBSD: patch-ae,v 1.1 2006/08/06 23:10:30 wiz Exp $
+$NetBSD: patch-ae,v 1.2 2014/12/15 11:35:42 mef Exp $
 
---- src/fnid.c.orig	2006-04-29 15:52:12.000000000 +0000
-+++ src/fnid.c
-@@ -24,7 +24,6 @@
- #include <errno.h>
+--- src/fnid.c.orig	2012-01-01 18:16:06.000000000 +0900
++++ src/fnid.c	2014-11-20 23:05:37.000000000 +0900
+@@ -23,7 +23,6 @@
+ #include <string.h>
  #include <stdlib.h>
  #include <errno.h>
 -#include <alloca.h>
  #include <xalloc.h>
  #include <pathmax.h>
  #include <error.h>
-@@ -167,7 +166,7 @@ main (int argc, char **argv)
+@@ -166,7 +165,7 @@ main (int argc, char **argv)
      char **patv_0 = xmalloc (sizeof(char *) * (argc * 2));
      char **patv_N;
      char **patv = patv_0;
