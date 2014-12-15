@@ -1,4 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2008/07/24 17:13:00 tonnerre Exp $
+$NetBSD: patch-aa,v 1.4 2014/12/15 05:52:01 mef Exp $
+
+(from cvs log)
+date: 2008-07-25 02:13:00 +0900;  author: tonnerre;  state: Exp;  lines: +23 -14;
+Fix denial of sevice vulnerability in Berkeley yacc (CVE-2008-3196).
 
 --- skeleton.c.orig	2005-05-05 01:39:36.000000000 +0200
 +++ skeleton.c
