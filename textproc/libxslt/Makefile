@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2014/10/09 14:07:02 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2014/12/15 11:46:36 jperkin Exp $
 
 DISTNAME=	libxslt-1.1.28
 PKGREVISION=	3
@@ -31,7 +31,7 @@ post-extract:
 	cp ${WRKSRC}/libxslt/libxslt.syms ${WRKSRC}/libxslt/libxslt_solaris.syms
 
 .if ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+=	rename:-Wl,./libxslt.syms:-Wl,./libxslt_solaris.syms
+BUILDLINK_TRANSFORM+=	opt:-Wl,./libxslt.syms:-Wl,./libxslt_solaris.syms
 .endif
 
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.6.27

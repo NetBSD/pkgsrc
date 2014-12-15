@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.13 2014/06/04 09:19:56 obache Exp $
+# $NetBSD: hacks.mk,v 1.14 2014/12/15 11:46:35 jperkin Exp $
 
 .if !defined(PERL5_HACKS_MK)
 PERL5_HACKS_MK=	defined
@@ -61,7 +61,7 @@ CFLAGS+=	-fno-cse-skip-blocks
 
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "m68k"
 PKG_HACKS+=		m68k-codegen
-BUILDLINK_TRANSFORM+=	rename:-O[0-9]*:-Os
+BUILDLINK_TRANSFORM+=	opt:-O[0-9]*:-Os
 .endif
 
 ### [Fri Jan 31 11:09:04 CST 2014 : schnoebe]
@@ -71,7 +71,7 @@ BUILDLINK_TRANSFORM+=	rename:-O[0-9]*:-Os
 	&& !empty(CC_VERSION:Mgcc-4.*.*)
 # XXX: is there any good way to replace the default -O2 with multiple args?
 PKG_HACKS+=		alpha-optimisation
-#BUILDLINK_TRANSFORM+=  rename:-O[2-9]*:-O2 -fno-tree-ter
+#BUILDLINK_TRANSFORM+=  opt:-O[2-9]*:-O2 -fno-tree-ter
 CFLAGS+=-fno-tree-ter
 .endif
 

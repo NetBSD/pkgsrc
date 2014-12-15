@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2006/07/26 20:00:27 jlam Exp $
+# $NetBSD: hacks.mk,v 1.2 2014/12/15 11:46:35 jperkin Exp $
 
 .include "../../mk/compiler.mk"
 
@@ -9,5 +9,5 @@
 ###
 .if !empty(CC_VERSION:Mgcc*) && !empty(MACHINE_PLATFORM:MNetBSD-*-alpha)
 PKG_HACKS+=		alpha-codegen
-BUILDLINK_TRANSFORM+=	rename:-O[0-9]*:-O
+BUILDLINK_TRANSFORM+=	opt:-O[0-9]*:-O
 .endif

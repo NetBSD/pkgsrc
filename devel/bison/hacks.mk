@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.5 2013/11/09 05:32:46 ryoon Exp $
+# $NetBSD: hacks.mk,v 1.6 2014/12/15 11:46:34 jperkin Exp $
 
 .if !defined(BISON_HACKS_MK)
 BISON_HACKS_MK=	defined
@@ -19,7 +19,7 @@ BUILDLINK_TRANSFORM+=	rm:-O[0-9]*
 ### -O seems enough for workaround in this case.
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-*arm*) && !empty(CC_VERSION:Mgcc-4.5.*)
 PKG_HACKS+=		optimisation
-BUILDLINK_TRANSFORM+=	rename:-O[0-9]*:-O
+BUILDLINK_TRANSFORM+=	opt:-O[0-9]*:-O
 .endif
 
 .endif	# BISON_HACKS_MK

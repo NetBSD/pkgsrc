@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.2 2013/04/08 11:17:12 rodent Exp $
+# $NetBSD: hacks.mk,v 1.3 2014/12/15 11:46:34 jperkin Exp $
 
 .if !defined(XEMACS_HACKS_MK)
 XEMACS_HACKS_MK=	defined
@@ -12,7 +12,7 @@ XEMACS_HACKS_MK=	defined
 ###
 .if !empty(CC_VERSION:Mgcc*) && !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc)
 PKG_HACKS+=		powerpc-codegen
-BUILDLINK_TRANSFORM+=	rename:-O[0-9]*:-Os
+BUILDLINK_TRANSFORM+=	opt:-O[0-9]*:-Os
 .endif
 
 .endif  # XEMACS_HACKS_MK
