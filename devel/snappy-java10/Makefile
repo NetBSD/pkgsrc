@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/10/17 16:45:46 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2014/12/15 13:24:21 fhajny Exp $
 
 SNAPPYVER=	1.0.5
 PKGNAME=	snappy-java10-${SNAPPYVER}
@@ -27,6 +27,7 @@ USE_JAVA2=	6
 INSTALLATION_DIRS+=	lib/java/snappy-java
 
 MAKE_FLAGS+=	JAVA_HOME=${PKG_JAVA_HOME}
+MAKE_JOBS_SAFE=	no
 
 pre-build:
 	${MKDIR} ${WRKSRC}/target
