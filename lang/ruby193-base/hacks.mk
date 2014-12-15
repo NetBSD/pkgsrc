@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.5 2013/02/12 12:47:18 taca Exp $
+# $NetBSD: hacks.mk,v 1.6 2014/12/15 11:46:35 jperkin Exp $
 
 .if !defined(RUBY193_BASE_HACKS_MK)
 RUBY193_BASE_HACKS_MK=	defined
@@ -21,7 +21,7 @@ BUILDLINK_TRANSFORM+=	rm:-O[0-9]*
 ### Using -O1 works around.
 .  if !empty(CC_VERSION:Mgcc-4.5.*)
 PKG_HACKS+=		optimisation
-BUILDLINK_TRANSFORM+=	rename:-O2:-O1
+BUILDLINK_TRANSFORM+=	opt:-O2:-O1
 .  endif
 .endif
 
@@ -31,7 +31,7 @@ BUILDLINK_TRANSFORM+=	rename:-O2:-O1
 # and -O1 works around.
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-sh3*) && !empty(CC_VERSION:Mgcc-4.5.*)
 PKG_HACKS+=		optimisation
-BUILDLINK_TRANSFORM+=	rename:-Os:-O1 rm:-freorder-blocks
+BUILDLINK_TRANSFORM+=	opt:-Os:-O1 rm:-freorder-blocks
 .endif
 
 .endif	# RUBY193_BASE_HACKS_MK

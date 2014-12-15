@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.48 2014/12/08 03:50:02 rodent Exp $
+# $NetBSD: Makefile.common,v 1.49 2014/12/15 11:46:35 jperkin Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -65,7 +65,7 @@ SUBST_SED.darwin=	-e 's,-install_name ",-install_name "${PREFIX}/lib/,g'
 TOOLS_PLATFORM.tar=	#empty
 .    include "../../mk/compiler.mk"
 .    if !empty(CC_VERSION:Mgcc-4.[6-9]*)
-BUILDLINK_TRANSFORM+=	rename:-D_XOPEN_SOURCE=500:-D_XOPEN_SOURCE=600
+BUILDLINK_TRANSFORM+=	opt:-D_XOPEN_SOURCE=500:-D_XOPEN_SOURCE=600
 .    endif
 .  endif
 

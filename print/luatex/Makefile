@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2014/11/20 16:04:16 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2014/12/15 11:46:36 jperkin Exp $
 
 DISTNAME=	luatex-beta-0.76.0-source
 PKGNAME=	${DISTNAME:S/-beta//:S/-source//}
@@ -114,7 +114,7 @@ INSTALLATION_DIRS+=	bin
 
 # Native clang crashes on FreeBSD 10:
 .if $(OPSYS) == "FreeBSD"
-BUILDLINK_TRANSFORM+=	rename:-O*:-O0
+BUILDLINK_TRANSFORM+=	opt:-O*:-O0
 .endif
 
 .include "../../archivers/zziplib/buildlink3.mk"
