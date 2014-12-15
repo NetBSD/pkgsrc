@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4841 2014/12/15 09:32:06 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4842 2014/12/15 09:36:48 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6336,3 +6336,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/ccache to 3.2.1 [mef 2014-12-15]
 	Updated devel/byacc to 20141128 [mef 2014-12-15]
 	Updated textproc/p5-Test-YAML to 1.05nb1 [obache 2014-12-15]
+	Updated textproc/p5-YAML to 1.13nb1 [obache 2014-12-15]
