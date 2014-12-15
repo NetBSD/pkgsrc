@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4840 2014/12/15 06:04:21 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4841 2014/12/15 09:32:06 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6335,3 +6335,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/squeak to 4.5 [asau 2014-12-15]
 	Updated devel/ccache to 3.2.1 [mef 2014-12-15]
 	Updated devel/byacc to 20141128 [mef 2014-12-15]
+	Updated textproc/p5-Test-YAML to 1.05nb1 [obache 2014-12-15]
