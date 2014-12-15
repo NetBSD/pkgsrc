@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2014/12/15 08:58:52 obache Exp $
+# $NetBSD: Makefile,v 1.43 2014/12/15 09:05:32 obache Exp $
 
 DISTNAME=	xcircuit-3.7.50
 PKGREVISION=	2
@@ -18,7 +18,6 @@ GNU_CONFIGURE=	yes
 .include "../../lang/tcl/Makefile.version"
 .include "../../x11/tk/Makefile.version"
 
-CONFIGURE_ARGS+=--prefix=${PREFIX}
 CONFIGURE_ARGS+=--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
 CONFIGURE_ARGS+=--with-tk=${BUILDLINK_PREFIX.tk}/lib
 CONFIGURE_ARGS+=--with-tclincls=${BUILDLINK_PREFIX.tcl}/include
@@ -26,9 +25,6 @@ CONFIGURE_ARGS+=--with-tcllibs=${BUILDLINK_PREFIX.tcl}/lib
 CONFIGURE_ARGS+=--with-tkincls=${BUILDLINK_PREFIX.tk}/include
 CONFIGURE_ARGS+=--with-tklibs=${BUILDLINK_PREFIX.tk}/lib
 #CFLAGS+=	-DBUILTINS_DIR=${PREFIX}/lib/${DISTNAME:C/\.[^\.]*$//}
-LDFLAGS+= 	-ltcl${TCL_VERSION:C/\.[^\.]*$//:C/\.//g}
-LDFLAGS+=	-ltk${TK_VERSION:C/\.[^\.]*$//:C/\.//g}
-LDFLAGS+=	-L${LOCALBASE}/lib
 
 BUILD_TARGET=	tcl
 INSTALL_TARGET= install-tcl
