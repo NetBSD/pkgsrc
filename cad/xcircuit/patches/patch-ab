@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.11 2013/06/11 13:31:58 ryoon Exp $
+$NetBSD: patch-ab,v 1.12 2014/12/15 08:58:52 obache Exp $
 
 --- configure.orig	2012-08-15 11:45:19.000000000 +0000
 +++ configure
@@ -50,3 +50,14 @@ $NetBSD: patch-ab,v 1.11 2013/06/11 13:31:58 ryoon Exp $
      for dir in \
       ${TCL_PREFIX}/include/tcl${TCL_MAJOR_VERSION}.${TCL_MINOR_VERSION} \
       ${TCL_PREFIX}/include \
+@@ -6689,8 +6689,8 @@ if test "x$xc_with_tcl" != "x" ; then
+       TK_LIB_NAME="tk${TK_MAJOR_VERSION}${TK_MINOR_VERSION}"
+       ;;
+     *)
+-      TCL_LIB_NAME="tcl${TCL_MAJOR_VERSION}.${TCL_MINOR_VERSION}"
+-      TK_LIB_NAME="tk${TK_MAJOR_VERSION}.${TK_MINOR_VERSION}"
++      TCL_LIB_NAME="tcl${TCL_MAJOR_VERSION}${TCL_MINOR_VERSION}"
++      TK_LIB_NAME="tk${TK_MAJOR_VERSION}${TK_MINOR_VERSION}"
+       ;;
+   esac
+ 
