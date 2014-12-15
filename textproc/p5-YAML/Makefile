@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2014/12/15 09:25:16 obache Exp $
+# $NetBSD: Makefile,v 1.37 2014/12/15 09:33:21 obache Exp $
 
 DISTNAME=	YAML-1.13
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Filter-[0-9]*:../../textproc/p5-Filter
 BUILD_DEPENDS+=	p5-Test-YAML>=1.05:../../textproc/p5-Test-YAML
-BUILD_DEPENDS+=	p5-Test-Base-[0-9]*:../../devel/p5-Test-Base
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/YAML/.packlist
