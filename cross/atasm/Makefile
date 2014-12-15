@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/12/09 15:10:47 mef Exp $
+# $NetBSD: Makefile,v 1.12 2014/12/15 12:37:01 jperkin Exp $
 #
 
 DISTNAME=	atasm106
@@ -15,6 +15,7 @@ LICENSE=	gnu-gpl-v2
 WRKSRC=		${WRKDIR}/${DISTNAME}
 NO_CONFIGURE=	YES
 BUILD_DIRS=	src
+MAKE_ENV=	ZLIB="-L${BUILDLINK_PREFIX.zlib}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.zlib}/lib -lz"
 
 DOCDIR=		${PREFIX}/share/doc/atasm
 EXAMPLE_DIR=	${PREFIX}/share/examples/atasm
