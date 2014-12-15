@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2012/06/17 00:10:40 tron Exp $
+# $NetBSD: hacks.mk,v 1.2 2014/12/15 11:46:36 jperkin Exp $
 
 ### [Sun 17 Jun 2012 00:05:38 UTC : tron]
 ### GCC 4.2.1 (Based on Apple Inc. build 5658) as shipped with
@@ -7,5 +7,5 @@
 
 .if !empty(MACHINE_PLATFORM:MDarwin-11.*-i386)
 PKG_HACKS+=		macosx-lion-compiler-hang
-BUILDLINK_TRANSFORM+=	rename:-O2:-O1
+BUILDLINK_TRANSFORM+=	opt:-O2:-O1
 .endif
