@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2014/01/11 14:42:01 adam Exp $
+# $NetBSD: Makefile,v 1.41 2014/12/15 08:36:15 obache Exp $
 
 DISTNAME=	xcircuit-3.7.50
 PKGREVISION=	1
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	shaun@inerd.com
 HOMEPAGE=	http://opencircuitdesign.com/xcircuit/
 COMMENT=	Drawing program for X11 (especially for circuits)
+LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_TOOLS+=	gmake gs:run
