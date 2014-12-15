@@ -1,4 +1,11 @@
-$NetBSD: CHANGES-2014,v 1.4844 2014/12/15 23:26:04 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4845 2014/12/15 23:42:24 agc Exp $
+
+# Please note that we are now in a FREEZE for new functionality in
+# pkgsrc.  That means no new packages, please, and no changes to the
+# infrastructure (this means thinks under pkgsrc/mk, and things under
+# pkgsrc/pkgtools).
+# 
+# Thanks for your understanding.
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6341,3 +6348,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/dateutils to 0.3.1 [mef 2014-12-15]
 	Updated devel/idutils to 4.6 [mef 2014-12-15]
 	Updated pkgtools/revbump to 2.10 [mef 2014-12-15]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2014Q4 branch [agc 2014-12-15]
