@@ -1,0 +1,106 @@
+.\"	$NetBSD: replace-commonbump.1,v 1.1 2014/12/15 23:25:54 mef Exp $
+.\"
+.\" Copyright (c) 2014 The NetBSD Foundation, Inc.
+.\"
+.\" This code was originally contributed to the NetBSD Foundation, Inc.
+.\" by Makoto Fujiwara <mef@NetBSD.org>.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, this list of conditions and the following disclaimer.
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in
+.\"    the documentation and/or other materials provided with the
+.\"    distribution.
+.\" 3. Neither the name of author nor the names of its contributors may
+.\"    be used to endorse or promote products derived from this software
+.\"    without specific prior written permission.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND
+.\" CONTRIBUTORS ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES,
+.\" INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+.\" MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+.\" IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS BE LIABLE FOR ANY
+.\" DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+.\" DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+.\" GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+.\" INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
+.\" IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+.\" OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+.\" IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+.\"
+.Dd December 14, 2014
+.Dt REPLACE-COMMONBUMP 1
+.Os
+.Sh NAME
+.Nm replace-commonbump
+.Nd tool to help expanding (replacing) commonbump file to the real list of Makefile's.
+.Sh SYNOPSIS
+.Nm
+.Op Fl a
+.Op Fl h
+.Op Fl p Ar pkgsrcdir
+.Op Fl T Ar list_file
+.Sh DESCRIPTION
+.Nm
+is a perl script for pkgsrc developers. It simplifies the process expanding
+`commonbump' file into `commonbump-replace'. Commonbump file is to be created by the first stage of revbump process, as is described in revbump(1).
+.Pp
+.Nm Fl h
+displays a short usage.
+.Pp
+If
+.Fl p
+is given,
+.Ar pkgsrcdir
+is used instead of the default
+.Pa /usr/pkgsrc .
+.Pp
+If
+.Fl a
+is given,
+check all pkgsrc tree, disregard neither to
+.Fl T
+option nor to the default `commonbump' file.
+It will check if "# used by" is included or not, usually in Makefile.common in the package.
+.Pp
+If
+.Fl T
+is given,
+.Ar list_file
+is used instead of the default
+.Pa `commonbump' .
+.Pp
+.Nm
+prints the package name
+(in
+.Ar category/package
+form) on stdout for each package where it failed, but usually none.
+
+The internal process is divided into three stages.
+
+.item
+(1)
+Read entire pkgsrc tree and check a
+.Ar referer -> referenced
+relation,
+then internally keeps (opposite)
+.Ar referenced -> referer
+relation table.
+
+.item
+(2) Read a file, named `commonbump' or the other name given with -T, which
+usually lists Makefile.common or *common.mk files to be expanded.
+
+.item
+(3) Now expands the filename listed in `commonbump' into the list of packagename/Makefile by
+referenced -> referer relation. It then outputs to the file
+`commonbump.replaced' (currently the name is fixed).
+
+.Sh SEE ALSO
+.Xr revbump 1 ,
+.Xr blbump 1 ,
+.Xr check-cvs-diff 1 ,
+.Xr finddepends 1
