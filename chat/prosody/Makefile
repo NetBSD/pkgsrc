@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/11/27 11:21:40 fhajny Exp $
+# $NetBSD: Makefile,v 1.20 2014/12/15 11:49:50 fhajny Exp $
 #
 
 DISTNAME=		prosody-0.9.7
@@ -63,7 +63,7 @@ SUBST_VARS.path=	EGDIR PROSODY_DATA PROSODY_LOG PROSODY_RUN
 
 CONFIGURE_ARGS+=	--cflags=${CFLAGS:Q}
 CONFIGURE_ARGS+=	--datadir=${PROSODY_DATA}
-CONFIGURE_ARGS+=	--ldflags="${COMPILER_RPATH_FLAG}${PREFIX}/lib -shared"
+CONFIGURE_ARGS+=	--ldflags="-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib -shared"
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-lua-include=${PREFIX}/${LUA_INCDIR}
