@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2012/09/11 19:47:00 asau Exp $
+# $NetBSD: Makefile,v 1.55 2014/12/16 15:47:33 mef Exp $
 #
 
 DISTNAME=	# overridden
@@ -7,7 +7,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	http://www.rarlabs.com/rar/
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://www.rarlabs.com/rar/
+HOMEPAGE=	http://www.rarlabs.com/
 COMMENT=	RAR file archiver (binary)
 LICENSE=	rar-license
 
