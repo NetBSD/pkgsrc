@@ -1,4 +1,4 @@
-.\"	$NetBSD: check-cvs-diff.1,v 1.1 2014/12/15 23:25:54 mef Exp $
+.\"	$NetBSD: check-cvs-diff.1,v 1.2 2014/12/16 11:38:54 wiz Exp $
 .\"
 .\" Copyright (c) 2003, 2004, 2005 The NetBSD Foundation, Inc.
 .\"
@@ -31,24 +31,26 @@
 .\" OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 .\" IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd December 14, 2014    
+.Dd December 14, 2014
 .Dt CHECK-CVS-DIFF 1
 .Os
 .Sh NAME
 .Nm check-cvs-diff
-.Nd tool to check if revbump process described in revbump(1) results including py27, py34 or ruby200
-in the files. And then replaces the strings by the variable notation.
+.Nd clean up unintended revbump(1) replacements
 .Sh SYNOPSIS
 .Nm
-.Op Fl h
+.Op Fl hv
 .Op Fl p Ar pkgsrcdir
-.Op Fl v
-cvs-diff-u_output-file
+.Ar cvs-diff-u_output-file
 .Sh DESCRIPTION
 .Nm
 is a perl script for pkgsrc developers that simplifies checking and replacing fixed
-version number in revbump resultant tree, Makefile and buildlink3.mk files.
-It reads `cvs diff -u' output written in named file, and if above mentioned strings found in the diff, replaces it in corresponding file by apropriate variable notation.
+version number in
+.Xr revbump 1
+resultant tree, Makefile and buildlink3.mk files.
+It reads `cvs diff -u' output written in named file, and if above
+mentioned strings are found in the diff, replaces them in corresponding
+file by the appropriate variables.
 .Pp
 .Nm Fl h
 displays a short usage.
@@ -63,15 +65,15 @@ is used instead of the default
 If
 .Fl v
 is given,
-it outputs some verbose information.
-
+.Nm
+outputs more verbose information.
+.Pp
 .Nm
 prints the package name
 (in
 .Ar category/package
 form) on stdout for each package where it failed, but usually none.
-
 .Sh SEE ALSO
-.Xr revbump 1 ,
 .Xr finddepends 1 ,
-.Xr replace-commonbump 1
+.Xr replace-commonbump 1 ,
+.Xr revbump 1
