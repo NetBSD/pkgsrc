@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/25 10:30:29 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/12/16 13:25:27 wiz Exp $
 
 DISTNAME=	cc23b715b120
 PKGNAME=	${PYPKGPREFIX}-flup-1.0.3pre1
@@ -11,7 +11,7 @@ COMMENT=	WSGI support modules (python-3.x version)
 LICENSE=	2-clause-bsd
 
 DIST_SUBDIR=	py-flup
-EGG_NAME=	flup-1.0.3.dev
+EGG_NAME=	flup-1.0.3.dev0
 WRKSRC=		${WRKDIR}/flup-py3-0-${DISTNAME}
 
 USE_LANGUAGES=	# empty
