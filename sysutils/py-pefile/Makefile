@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/06/03 08:59:33 khorben Exp $
+# $NetBSD: Makefile,v 1.3 2014/12/16 23:03:31 wiz Exp $
 
 PEFILE_VERSION=	1.2.10-139
 DISTNAME=	pefile-${PEFILE_VERSION}
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34
 
-EGG_NAME=	pefile-${PEFILE_VERSION:S/-/_/}
+EGG_NAME=	pefile-${PEFILE_VERSION:S/-/.post/}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
