@@ -1,0 +1,16 @@
+$NetBSD: patch-Makefile.in,v 1.1 2014/12/16 01:51:35 mef Exp $
+
+Previous version (at least 0.27) installs libdut.a, while 0.31
+does not. Add that one.
+
+--- lib/Makefile.in.orig	2014-12-16 10:31:51.000000000 +0900
++++ lib/Makefile.in	2014-12-16 10:34:41.000000000 +0900
+@@ -332,7 +332,7 @@
+ noinst_HEADERS = 
+ noinst_LIBRARIES = libdut.a
+ pkgdata_DATA = $(am__append_6) $(am__append_9)
+-lib_LIBRARIES = 
++lib_LIBRARIES = libdut.a 
+ BUILT_SOURCES = ltrcc.yucc version.c fmt-special.c leapseconds.def \
+ 	tzmap.yucc $(am__append_3)
+ CLEANFILES = $(am__append_7) $(am__append_10)
