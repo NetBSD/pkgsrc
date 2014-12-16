@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2014/10/30 13:41:44 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/12/16 07:00:52 obache Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PLIST.py26}${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/argh/__init__.py
 ${PYSITELIB}/argh/__init__.pyc
