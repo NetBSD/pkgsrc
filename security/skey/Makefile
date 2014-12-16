@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.29 2014/05/29 23:37:26 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2014/12/16 03:26:49 mef Exp $
 #
 
 DISTNAME=		skey-1.1.5
 PKGREVISION=		7
 CATEGORIES=		security
 MASTER_SITES=		http://www.sparc.spb.su/solaris/skey/
+#MASTER_SITES=		ftp://ftp.math.ethz.ch/hg/pub/opie/
+#DIST_SUBDIR=		skey-1.1.5
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		${MASTER_SITES}
+HOMEPAGE=		https://github.com/weiyeh/skey
 COMMENT=		Port of OpenBSD s/key implementation
 
 USE_TOOLS+=		gmake perl:run
