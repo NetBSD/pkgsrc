@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2014/12/16 23:37:48 dholland Exp $
+# $NetBSD: Makefile,v 1.25 2014/12/16 23:51:57 dholland Exp $
 
 DISTNAME=	xpdf-korean-2011-sep-02
 PKGNAME=	xpdf-korean-20110902
@@ -21,12 +21,13 @@ NO_BUILD=	yes
 
 INSTALLATION_DIRS+=	share/xpdf/korean/CMap
 
-post-patch:
-	${MV} ${WRKSRC}/add-to-xpdfrc ${WRKSRC}/add-to-xpdfrc.orig
-	${SED} -e 's:/usr/local:'${PREFIX}':g' < ${WRKSRC}/add-to-xpdfrc.orig > ${WRKSRC}/add-to-xpdfrc
-	${ECHO} "displayCIDFontTT	Adobe-Korea1	${PREFIX}/share/fonts/X11/TTF/batang.ttf" >> ${WRKSRC}/add-to-xpdfrc
-	${ECHO} "displayCIDFontTT	Unidocs-Korea1	${PREFIX}/share/fonts/X11/TTF/batang.ttf" >> ${WRKSRC}/add-to-xpdfrc
-
+SUBST_CLASSES+=		xpdfrc
+SUBST_MESSAGE.xpdfrc=	Adjusting xpdfrc wedge.
+SUBST_STAGE.xpdfrc=	post-patch
+SUBST_FILES.xpdfrc=	add-to-xpdfrc
+SUBST_SED.xpdfrc+=	-e 's,/usr/\.\.\.\.,'${PREFIX}'/share/fonts/X11/TTF,' \
+			-e 's:/usr/local:'${PREFIX}':g' \
+			-e '/^.fontFileCC/{;s/^.//;s/.$$//;};'
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/Adobe-Korea1.cidToUnicode \
 	    ${WRKSRC}/ISO-2022-KR.unicodeMap ${WRKSRC}/add-to-xpdfrc \

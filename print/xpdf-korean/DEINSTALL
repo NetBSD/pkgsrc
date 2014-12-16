@@ -1,12 +1,12 @@
-# $NetBSD: DEINSTALL,v 1.4 2005/10/12 11:39:12 wiz Exp $
+# $NetBSD: DEINSTALL,v 1.5 2014/12/16 23:51:57 dholland Exp $
 
 XPDFRC=${PKG_SYSCONFDIR}/xpdfrc
 
 case ${STAGE} in
 POST-DEINSTALL)
-	${SED} -e "/orean/d" ${XPDFRC} > ${XPDFRC}.tmp
-	${SED} -e "/ksc5601/d" ${XPDFRC}.tmp > ${XPDFRC}
-	${SED} -e "/displayCIDFontTT.*Korea/d" ${XPDFRC}.tmp > ${XPDFRC}
-	${RM} -f ${XPDFRC}.tmp
+	${SED} -e '
+  /^#----- begin Korean support package/,/^#----- end Korean support package/d
+	' ${XPDFRC} > ${XPDFRC}.tmp || exit 1
+	${MV} ${XPDFRC}.tmp ${XPDFRC} || exit 1
 	;;
 esac
