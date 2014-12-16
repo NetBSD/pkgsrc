@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.54 2013/06/06 12:53:41 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2014/12/16 12:08:44 mef Exp $
 
 DISTNAME=	fox-1.6.33
 PKGREVISION=	11
 CATEGORIES=	x11
-MASTER_SITES=	http://www.fox-toolkit.org/ftp/
+MASTER_SITES=	ftp://www.fox-toolkit.org/pub/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fox-toolkit.org/
