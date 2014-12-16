@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/07/15 23:31:13 obache Exp $
+# $NetBSD: Makefile,v 1.4 2014/12/16 23:02:28 wiz Exp $
 
 DISTNAME=	mcomix-1.00
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,6 +17,7 @@ DEPENDS+=	{${PYPKGPREFIX}-imaging>=1.1.5,${PYPKGPREFIX}-Pillow-[0-9]*}:../../gra
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2
+EGG_NAME=	${DISTNAME:S/00/0/}
 
 PYTHON_SELF_CONFLICT=	yes
 
