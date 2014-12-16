@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.70 2014/12/12 22:12:56 jnemeth Exp $
+$NetBSD: distinfo,v 1.71 2014/12/16 01:00:22 jnemeth Exp $
 
-SHA1 (asterisk-11.14.2/asterisk-11.14.2.tar.gz) = 92c1d5e37bc0978351045fcb09075035077ab3da
-RMD160 (asterisk-11.14.2/asterisk-11.14.2.tar.gz) = 63fadeca5f8351e55559e8933077fa1a8655e700
-Size (asterisk-11.14.2/asterisk-11.14.2.tar.gz) = 34967655 bytes
-SHA1 (asterisk-11.14.2/asterisk-extra-sounds-en-gsm-1.4.15.tar.gz) = fbb94494e31fc08eee8fdf2ce7d12eb274018050
-RMD160 (asterisk-11.14.2/asterisk-extra-sounds-en-gsm-1.4.15.tar.gz) = 53656a3d6771602504f220ad312093e3503e1150
-Size (asterisk-11.14.2/asterisk-extra-sounds-en-gsm-1.4.15.tar.gz) = 4409969 bytes
+SHA1 (asterisk-11.15.0/asterisk-11.15.0.tar.gz) = 95d4bf6ceda14dd9a3e9fffe02be866a07ff5a1c
+RMD160 (asterisk-11.15.0/asterisk-11.15.0.tar.gz) = 7f5f9a3dee879bde265f6e4094e53c501fc7b77a
+Size (asterisk-11.15.0/asterisk-11.15.0.tar.gz) = 34981005 bytes
+SHA1 (asterisk-11.15.0/asterisk-extra-sounds-en-gsm-1.4.15.tar.gz) = fbb94494e31fc08eee8fdf2ce7d12eb274018050
+RMD160 (asterisk-11.15.0/asterisk-extra-sounds-en-gsm-1.4.15.tar.gz) = 53656a3d6771602504f220ad312093e3503e1150
+Size (asterisk-11.15.0/asterisk-extra-sounds-en-gsm-1.4.15.tar.gz) = 4409969 bytes
 SHA1 (patch-Makefile) = ed581d46026e8e89ed8be374c7085efca19911d2
 SHA1 (patch-apps_app__confbridge.c) = c815905994355a19c32e8e3e2eb5dc9f1679eb29
 SHA1 (patch-apps_app__dial.c) = 0f78d2571af88384a2d472ece08bf4b06f9ad211
@@ -36,7 +36,7 @@ SHA1 (patch-main_config__options.c) = e49a946da99546684e8988ca4301bcacbb415987
 SHA1 (patch-main_features.c) = 1c11207c60ce53c1101141e07ae04d0ddb838450
 SHA1 (patch-main_format.c) = a6d446c3de883cf3ef768d03d39e8d8db068b750
 SHA1 (patch-main_http.c) = 1d3d6b47d1ced22faf79fb17c56e7a3067b7c892
-SHA1 (patch-main_manager.c) = 8affce24e74e923dac612c072a60444971fab42c
+SHA1 (patch-main_manager.c) = 83c8a8b88a0d1b08d2e5f21c8a69ac89461536d4
 SHA1 (patch-main_named__acl.c) = 48c23ed0e558299679bbfc9e564383f9f7dd181f
 SHA1 (patch-main_netsock.c) = 015796266b9806425180c9bb05a1907116ef086d
 SHA1 (patch-main_sched.c) = 73759369470b575e73ca78f9cff096ebb477c9b1
