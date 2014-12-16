@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2014/12/15 08:45:47 mef Exp $
+$NetBSD: distinfo,v 1.4 2014/12/16 01:51:35 mef Exp $
 
-SHA1 (dateutils/v0.3.1.tar.gz) = 166b94597a112aff0c1bd227c4e2d8f8f5b46f25
-RMD160 (dateutils/v0.3.1.tar.gz) = 4f495a63c619d662fd2894862b9555348386cc0c
-Size (dateutils/v0.3.1.tar.gz) = 247307 bytes
+SHA1 (dateutils-0.3.1.tar.xz) = 07884be555998aa649733401e65f073ada89ac08
+RMD160 (dateutils-0.3.1.tar.xz) = a45ed9fb1c5d5107883fb3cfdf3f43d238e0497c
+Size (dateutils-0.3.1.tar.xz) = 586848 bytes
 SHA1 (patch-Makefile.am) = 936ad7f986ff5cb8bec5f85c96a17657fca2774f
+SHA1 (patch-Makefile.in) = ff5aaffb2046f17189b9074090c68295df5fb57a
