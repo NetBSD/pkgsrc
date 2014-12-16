@@ -1,26 +1,17 @@
-$NetBSD: distinfo,v 1.47 2014/11/02 13:31:11 spz Exp $
+$NetBSD: distinfo,v 1.48 2014/12/16 07:07:32 chopps Exp $
 
-SHA1 (Python-2.7.8.tar.xz) = 9c6281eeace0c3646fa556c8087bb1b7e033c9c4
-RMD160 (Python-2.7.8.tar.xz) = 04d7d55ea65074a9b419e5d0920414e54691d907
-Size (Python-2.7.8.tar.xz) = 10525244 bytes
-SHA1 (patch-Include_node.h) = 673d148b625711ac47e4bfeb0f5b0d5b31f94d7e
+SHA1 (Python-2.7.9.tar.xz) = 3172f6e957713c2d9fca462cc16068222fd1b9d3
+RMD160 (Python-2.7.9.tar.xz) = 2b047c3b56987b473c3ca957ad87f5582c37d6f6
+Size (Python-2.7.9.tar.xz) = 12164712 bytes
 SHA1 (patch-Include_pyerrors.h) = 3eba043c83b1d1df4918524f7b53047a6ed372ae
 SHA1 (patch-Include_pyport.h) = 971c7c548b92595712d0d70a0917a0ccc83b6c7e
 SHA1 (patch-Lib_distutils_unixccompiler.py) = 39b967dc2ae648143d5841f22602a21063b4d5ea
 SHA1 (patch-Lib_multiprocessing_process.py) = b47ad4cbeddbcfb4342c08c84d0d515a793815d4
-SHA1 (patch-Lib_poplib.py) = 5d7f64b028abd2fd43651f27a7f2ce7efe5b0859
-SHA1 (patch-Lib_smtplib.py) = f1118bbc53b4e292eb9a28ef3ef10eb4aa553bc3
-SHA1 (patch-Lib_test_test__poplib.py) = 1bdef76b687d042272e35c08521d4244d2c7fbe1
-SHA1 (patch-Lib_test_test_smtplib.py) = 9e8a7f826c7d0f493746718b49fc27ac97c2cbb1
-SHA1 (patch-Misc_NEWS) = 262f9cb316d0f7ce1fb85296a07302f4cb2dd1a5
-SHA1 (patch-Modules___ssl.c) = aaddaea5bcd6c84d3d896c7c37f710933b8228bc
 SHA1 (patch-Modules_getaddrinfo.c) = 696c58c4c4bbb710fb1508d7d88864d0b08cfc79
 SHA1 (patch-Modules_getpath.c) = aa8a54717a85f831e3ceaad19d96c43bc38aef10
 SHA1 (patch-Modules_mmapmodule.c) = 87ea76e6d8263045c1ca794ff5c75ed631a74b6d
 SHA1 (patch-Modules_posixmodule.c) = b8960592611499202bb5ff8521d619e0637177b6
 SHA1 (patch-Modules_socketmodule.c) = 960ce4af2a142c471c707de446f2d390044bbc13
-SHA1 (patch-Objects_unicodeobject.c) = 7edf7d2b553569bc66c883b1fd516dceb13c8cde
-SHA1 (patch-Python_codecs.c) = fce9d5f2745773b76074a8ae7389aa88fbbe4f9e
 SHA1 (patch-aa) = 990e4025bb6a37715e1f5df1831499f0ab08acfa
 SHA1 (patch-ab) = 6a38874aaaccc878541554546835ccbf6136bbd5
 SHA1 (patch-ad) = 061aefac15fe3834271770f0fd225e12f84d961a
