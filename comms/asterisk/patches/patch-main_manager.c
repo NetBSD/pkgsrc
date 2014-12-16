@@ -1,8 +1,8 @@
-$NetBSD: patch-main_manager.c,v 1.3 2014/07/02 03:06:24 jnemeth Exp $
+$NetBSD: patch-main_manager.c,v 1.4 2014/12/16 01:00:22 jnemeth Exp $
 
---- main/manager.c.orig	2014-06-12 16:54:15.000000000 +0000
+--- main/manager.c.orig	2014-11-21 18:47:12.000000000 +0000
 +++ main/manager.c
-@@ -1871,7 +1871,7 @@ static char *handle_showmanconn(struct a
+@@ -1886,7 +1886,7 @@ static char *handle_showmanconn(struct a
  	struct mansession_session *session;
  	time_t now = time(NULL);
  #define HSMCONN_FORMAT1 "  %-15.15s  %-55.55s  %-10.10s  %-10.10s  %-8.8s  %-8.8s  %-5.5s  %-5.5s\n"
@@ -11,7 +11,7 @@ $NetBSD: patch-main_manager.c,v 1.3 2014/07/02 03:06:24 jnemeth Exp $
  	int count = 0;
  	struct ao2_iterator i;
  
-@@ -1897,8 +1897,8 @@ static char *handle_showmanconn(struct a
+@@ -1912,8 +1912,8 @@ static char *handle_showmanconn(struct a
  			ao2_lock(session);
  			ast_cli(a->fd, HSMCONN_FORMAT2, session->username,
  				ast_sockaddr_stringify_addr(&session->addr),
@@ -22,7 +22,7 @@ $NetBSD: patch-main_manager.c,v 1.3 2014/07/02 03:06:24 jnemeth Exp $
  				session->fd,
  				session->inuse,
  				session->readperm,
-@@ -5692,11 +5692,13 @@ static void append_channel_vars(struct a
+@@ -5735,11 +5735,13 @@ static void append_channel_vars(struct a
  AST_THREADSTORAGE(manager_event_buf);
  #define MANAGER_EVENT_BUF_INITSIZE   256
  
@@ -36,8 +36,8 @@ $NetBSD: patch-main_manager.c,v 1.3 2014/07/02 03:06:24 jnemeth Exp $
 +	RAII_VAR(struct ao2_container *, sessions, ao2_global_obj_ref(mgr_sessions));
  	struct mansession_session *session;
  	struct manager_custom_hook *hook;
- 	struct ast_str *auth = ast_str_alloca(80);
-@@ -7313,9 +7315,11 @@ static char *handle_manager_show_events(
+ 	struct ast_str *auth = ast_str_alloca(MAX_AUTH_PERM_STRING);
+@@ -7361,9 +7363,11 @@ static char *handle_manager_show_events(
  	return CLI_SUCCESS;
  }
  
