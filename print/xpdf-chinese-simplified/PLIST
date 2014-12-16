@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.7 2010/01/27 15:14:00 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/12/16 23:37:48 dholland Exp $
 share/xpdf/chinese-simplified/Adobe-GB1.cidToUnicode
 share/xpdf/chinese-simplified/CMap/Adobe-GB1-0
 share/xpdf/chinese-simplified/CMap/Adobe-GB1-1
 share/xpdf/chinese-simplified/CMap/Adobe-GB1-2
 share/xpdf/chinese-simplified/CMap/Adobe-GB1-3
 share/xpdf/chinese-simplified/CMap/Adobe-GB1-4
+share/xpdf/chinese-simplified/CMap/Adobe-GB1-5
 share/xpdf/chinese-simplified/CMap/Adobe-GB1-UCS2
 share/xpdf/chinese-simplified/CMap/GB-EUC-H
 share/xpdf/chinese-simplified/CMap/GB-EUC-V
@@ -31,6 +32,8 @@ share/xpdf/chinese-simplified/CMap/UniGB-UCS2-H
 share/xpdf/chinese-simplified/CMap/UniGB-UCS2-V
 share/xpdf/chinese-simplified/CMap/UniGB-UTF16-H
 share/xpdf/chinese-simplified/CMap/UniGB-UTF16-V
+share/xpdf/chinese-simplified/CMap/UniGB-UTF32-H
+share/xpdf/chinese-simplified/CMap/UniGB-UTF32-V
 share/xpdf/chinese-simplified/CMap/UniGB-UTF8-H
 share/xpdf/chinese-simplified/CMap/UniGB-UTF8-V
 share/xpdf/chinese-simplified/EUC-CN.unicodeMap
