@@ -1,4 +1,4 @@
-.\"	$NetBSD: replace-commonbump.1,v 1.1 2014/12/15 23:25:54 mef Exp $
+.\"	$NetBSD: replace-commonbump.1,v 1.2 2014/12/16 11:38:54 wiz Exp $
 .\"
 .\" Copyright (c) 2014 The NetBSD Foundation, Inc.
 .\"
@@ -36,17 +36,25 @@
 .Os
 .Sh NAME
 .Nm replace-commonbump
-.Nd tool to help expanding (replacing) commonbump file to the real list of Makefile's.
+.Nd tool to help expanding (replacing) commonbump file to the real list of Makefiles
 .Sh SYNOPSIS
 .Nm
-.Op Fl a
-.Op Fl h
+.Op Fl ah
 .Op Fl p Ar pkgsrcdir
 .Op Fl T Ar list_file
 .Sh DESCRIPTION
 .Nm
-is a perl script for pkgsrc developers. It simplifies the process expanding
-`commonbump' file into `commonbump-replace'. Commonbump file is to be created by the first stage of revbump process, as is described in revbump(1).
+is a perl script for pkgsrc developers.
+It simplifies the process expanding
+.Pa commonbump
+file into
+.Pa commonbump-replace .
+The
+.Pa commonbump
+file is to be created by the first stage of the
+.Dv PKGREVISION
+bump process as described in
+.Xr revbump 1 .
 .Pp
 .Nm Fl h
 displays a short usage.
@@ -61,46 +69,59 @@ is used instead of the default
 If
 .Fl a
 is given,
-check all pkgsrc tree, disregard neither to
+check the whole pkgsrc tree, disregard both the
 .Fl T
-option nor to the default `commonbump' file.
-It will check if "# used by" is included or not, usually in Makefile.common in the package.
+option and the default
+.Pa commonbump
+file.
+It will check if
+.Dq # used by
+is included or not, usually in Makefile.common in the package.
 .Pp
 If
 .Fl T
 is given,
 .Ar list_file
 is used instead of the default
-.Pa `commonbump' .
+.Pa commonbump .
 .Pp
 .Nm
 prints the package name
 (in
 .Ar category/package
 form) on stdout for each package where it failed, but usually none.
-
+.Pp
 The internal process is divided into three stages.
-
-.item
-(1)
-Read entire pkgsrc tree and check a
+.Bl -enum
+.It
+Read entire pkgsrc tree and check the
 .Ar referer -> referenced
 relation,
 then internally keeps (opposite)
 .Ar referenced -> referer
 relation table.
-
-.item
-(2) Read a file, named `commonbump' or the other name given with -T, which
-usually lists Makefile.common or *common.mk files to be expanded.
-
-.item
-(3) Now expands the filename listed in `commonbump' into the list of packagename/Makefile by
-referenced -> referer relation. It then outputs to the file
-`commonbump.replaced' (currently the name is fixed).
-
+.It
+Read a file, named
+.Pa commonbump
+or the argument given with
+.Fl T ,
+which usually lists
+.Pa Makefile.common
+or
+.Pa *common.mk
+files to be expanded.
+.It
+Expand the filenames listed in
+.Pa commonbump
+into the list of packagename/Makefile by the
+referenced -> referer relation.
+.Nm
+then outputs to the file
+.Pa commonbump.replaced
+(currently the name is fixed).
+.El
 .Sh SEE ALSO
-.Xr revbump 1 ,
 .Xr blbump 1 ,
 .Xr check-cvs-diff 1 ,
-.Xr finddepends 1
+.Xr finddepends 1 ,
+.Xr revbump 1
