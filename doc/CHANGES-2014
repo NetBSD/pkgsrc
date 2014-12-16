@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4847 2014/12/16 01:51:38 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4848 2014/12/16 01:59:20 obache Exp $
 
 # Please note that we are now in a FREEZE for new functionality in
 # pkgsrc.  That means no new packages, please, and no changes to the
@@ -6351,3 +6351,4 @@ Changes to the packages collection and infrastructure in 2014:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2014Q4 branch [agc 2014-12-15]
 	Updated comms/asterisk to 11.15.0 [jnemeth 2014-12-16]
 	Updated net/mikutter to 3.1.1 [obache 2014-12-16]
+	Updated emulators/suse131_gtk2 to 13.1nb4 [obache 2014-12-16]
