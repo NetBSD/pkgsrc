@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.11 2014/07/02 09:53:16 adam Exp $
+@comment $NetBSD: PLIST.common,v 1.12 2014/12/16 08:45:12 chopps Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1431,6 +1431,17 @@ lib/python${PY_VER_SUFFIX}/encodings/uu_codec.pyo
 lib/python${PY_VER_SUFFIX}/encodings/zlib_codec.py
 lib/python${PY_VER_SUFFIX}/encodings/zlib_codec.pyc
 lib/python${PY_VER_SUFFIX}/encodings/zlib_codec.pyo
+lib/python${PY_VER_SUFFIX}/ensurepip/__init__.py
+lib/python${PY_VER_SUFFIX}/ensurepip/__init__.pyc
+lib/python${PY_VER_SUFFIX}/ensurepip/__init__.pyo
+lib/python${PY_VER_SUFFIX}/ensurepip/__main__.py
+lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyc
+lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-1.5.6-py2.py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-7.0-py2.py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
+lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyc
+lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyo
 lib/python${PY_VER_SUFFIX}/filecmp.py
 lib/python${PY_VER_SUFFIX}/filecmp.pyc
 lib/python${PY_VER_SUFFIX}/filecmp.pyo
@@ -1709,6 +1720,9 @@ lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_calltips.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_config_name.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_config_name.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_config_name.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_configdialog.py
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_configdialog.pyc
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_configdialog.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_delegator.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_delegator.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_delegator.pyo
@@ -1733,6 +1747,9 @@ lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_pathbrowser.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_rstrip.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_rstrip.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_rstrip.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_searchdialogbase.py
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_searchdialogbase.pyc
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_searchdialogbase.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_searchengine.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_searchengine.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_searchengine.pyo
@@ -1745,6 +1762,9 @@ lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_textview.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_warning.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_warning.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_warning.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_widgetredir.py
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_widgetredir.pyc
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_widgetredir.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idlever.py
 lib/python${PY_VER_SUFFIX}/idlelib/idlever.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idlever.pyo
@@ -1957,6 +1977,9 @@ lib/python${PY_VER_SUFFIX}/lib-tk/test/runtktests.pyo
 lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/__init__.py
 lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/__init__.pyc
 lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/__init__.pyo
+lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/test_font.py
+lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/test_font.pyc
+lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/test_font.pyo
 lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/test_geometry_managers.py
 lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/test_geometry_managers.pyc
 lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/test_geometry_managers.pyo
@@ -2048,6 +2071,9 @@ lib/python${PY_VER_SUFFIX}/lib2to3/fixes/__init__.pyo
 lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_apply.py
 lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_apply.pyc
 lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_apply.pyo
+lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_asserts.py
+lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_asserts.pyc
+lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_asserts.pyo
 lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_basestring.py
 lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_basestring.pyc
 lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_basestring.pyo
@@ -2649,6 +2675,9 @@ lib/python${PY_VER_SUFFIX}/test/Sine-1000Hz-300ms.aif
 lib/python${PY_VER_SUFFIX}/test/__init__.py
 lib/python${PY_VER_SUFFIX}/test/__init__.pyc
 lib/python${PY_VER_SUFFIX}/test/__init__.pyo
+lib/python${PY_VER_SUFFIX}/test/_mock_backport.py
+lib/python${PY_VER_SUFFIX}/test/_mock_backport.pyc
+lib/python${PY_VER_SUFFIX}/test/_mock_backport.pyo
 lib/python${PY_VER_SUFFIX}/test/audiodata/pluck-pcm16.aiff
 lib/python${PY_VER_SUFFIX}/test/audiodata/pluck-pcm16.au
 lib/python${PY_VER_SUFFIX}/test/audiodata/pluck-pcm16.wav
@@ -2662,10 +2691,10 @@ lib/python${PY_VER_SUFFIX}/test/audiodata/pluck-pcm8.au
 lib/python${PY_VER_SUFFIX}/test/audiodata/pluck-pcm8.wav
 lib/python${PY_VER_SUFFIX}/test/audiodata/pluck-ulaw.aifc
 lib/python${PY_VER_SUFFIX}/test/audiodata/pluck-ulaw.au
+lib/python${PY_VER_SUFFIX}/test/audiotest.au
 lib/python${PY_VER_SUFFIX}/test/audiotests.py
 lib/python${PY_VER_SUFFIX}/test/audiotests.pyc
 lib/python${PY_VER_SUFFIX}/test/audiotests.pyo
-lib/python${PY_VER_SUFFIX}/test/audiotest.au
 lib/python${PY_VER_SUFFIX}/test/autotest.py
 lib/python${PY_VER_SUFFIX}/test/autotest.pyc
 lib/python${PY_VER_SUFFIX}/test/autotest.pyo
@@ -2685,6 +2714,10 @@ lib/python${PY_VER_SUFFIX}/test/badsyntax_nocaret.py
 lib/python${PY_VER_SUFFIX}/test/buffer_tests.py
 lib/python${PY_VER_SUFFIX}/test/buffer_tests.pyc
 lib/python${PY_VER_SUFFIX}/test/buffer_tests.pyo
+lib/python${PY_VER_SUFFIX}/test/capath/4e1295a3.0
+lib/python${PY_VER_SUFFIX}/test/capath/5ed36f99.0
+lib/python${PY_VER_SUFFIX}/test/capath/6e88d7b8.0
+lib/python${PY_VER_SUFFIX}/test/capath/99d0fa06.0
 lib/python${PY_VER_SUFFIX}/test/cfgparser.1
 lib/python${PY_VER_SUFFIX}/test/check_soundcard.vbs
 lib/python${PY_VER_SUFFIX}/test/cjkencodings/big5-utf8.txt
@@ -2865,6 +2898,7 @@ lib/python${PY_VER_SUFFIX}/test/decimaltestdata/testall.decTest
 lib/python${PY_VER_SUFFIX}/test/decimaltestdata/tointegral.decTest
 lib/python${PY_VER_SUFFIX}/test/decimaltestdata/tointegralx.decTest
 lib/python${PY_VER_SUFFIX}/test/decimaltestdata/xor.decTest
+lib/python${PY_VER_SUFFIX}/test/dh512.pem
 lib/python${PY_VER_SUFFIX}/test/doctest_aliases.py
 lib/python${PY_VER_SUFFIX}/test/doctest_aliases.pyc
 lib/python${PY_VER_SUFFIX}/test/doctest_aliases.pyo
@@ -2904,13 +2938,20 @@ lib/python${PY_VER_SUFFIX}/test/inspect_fodder.pyo
 lib/python${PY_VER_SUFFIX}/test/inspect_fodder2.py
 lib/python${PY_VER_SUFFIX}/test/inspect_fodder2.pyc
 lib/python${PY_VER_SUFFIX}/test/inspect_fodder2.pyo
+lib/python${PY_VER_SUFFIX}/test/keycert.passwd.pem
 lib/python${PY_VER_SUFFIX}/test/keycert.pem
+lib/python${PY_VER_SUFFIX}/test/keycert2.pem
+lib/python${PY_VER_SUFFIX}/test/keycert3.pem
+lib/python${PY_VER_SUFFIX}/test/keycert4.pem
 lib/python${PY_VER_SUFFIX}/test/list_tests.py
 lib/python${PY_VER_SUFFIX}/test/list_tests.pyc
 lib/python${PY_VER_SUFFIX}/test/list_tests.pyo
 lib/python${PY_VER_SUFFIX}/test/lock_tests.py
 lib/python${PY_VER_SUFFIX}/test/lock_tests.pyc
 lib/python${PY_VER_SUFFIX}/test/lock_tests.pyo
+lib/python${PY_VER_SUFFIX}/test/make_ssl_certs.py
+lib/python${PY_VER_SUFFIX}/test/make_ssl_certs.pyc
+lib/python${PY_VER_SUFFIX}/test/make_ssl_certs.pyo
 lib/python${PY_VER_SUFFIX}/test/mapping_tests.py
 lib/python${PY_VER_SUFFIX}/test/mapping_tests.pyc
 lib/python${PY_VER_SUFFIX}/test/mapping_tests.pyo
@@ -2930,6 +2971,7 @@ lib/python${PY_VER_SUFFIX}/test/pickletester.pyo
 lib/python${PY_VER_SUFFIX}/test/profilee.py
 lib/python${PY_VER_SUFFIX}/test/profilee.pyc
 lib/python${PY_VER_SUFFIX}/test/profilee.pyo
+lib/python${PY_VER_SUFFIX}/test/pycacert.pem
 lib/python${PY_VER_SUFFIX}/test/pyclbr_input.py
 lib/python${PY_VER_SUFFIX}/test/pyclbr_input.pyc
 lib/python${PY_VER_SUFFIX}/test/pyclbr_input.pyo
@@ -2957,6 +2999,7 @@ lib/python${PY_VER_SUFFIX}/test/relimport.pyo
 lib/python${PY_VER_SUFFIX}/test/reperf.py
 lib/python${PY_VER_SUFFIX}/test/reperf.pyc
 lib/python${PY_VER_SUFFIX}/test/reperf.pyo
+lib/python${PY_VER_SUFFIX}/test/revocation.crl
 lib/python${PY_VER_SUFFIX}/test/sample_doctest.py
 lib/python${PY_VER_SUFFIX}/test/sample_doctest.pyc
 lib/python${PY_VER_SUFFIX}/test/sample_doctest.pyo
@@ -2969,6 +3012,7 @@ lib/python${PY_VER_SUFFIX}/test/sample_doctest_no_doctests.pyo
 lib/python${PY_VER_SUFFIX}/test/script_helper.py
 lib/python${PY_VER_SUFFIX}/test/script_helper.pyc
 lib/python${PY_VER_SUFFIX}/test/script_helper.pyo
+lib/python${PY_VER_SUFFIX}/test/selfsigned_pythontestdotnet.pem
 lib/python${PY_VER_SUFFIX}/test/seq_tests.py
 lib/python${PY_VER_SUFFIX}/test/seq_tests.pyc
 lib/python${PY_VER_SUFFIX}/test/seq_tests.pyo
@@ -2977,6 +3021,12 @@ lib/python${PY_VER_SUFFIX}/test/sha256.pem
 lib/python${PY_VER_SUFFIX}/test/sortperf.py
 lib/python${PY_VER_SUFFIX}/test/sortperf.pyc
 lib/python${PY_VER_SUFFIX}/test/sortperf.pyo
+lib/python${PY_VER_SUFFIX}/test/ssl_cert.pem
+lib/python${PY_VER_SUFFIX}/test/ssl_key.passwd.pem
+lib/python${PY_VER_SUFFIX}/test/ssl_key.pem
+lib/python${PY_VER_SUFFIX}/test/ssl_servers.py
+lib/python${PY_VER_SUFFIX}/test/ssl_servers.pyc
+lib/python${PY_VER_SUFFIX}/test/ssl_servers.pyo
 lib/python${PY_VER_SUFFIX}/test/string_tests.py
 lib/python${PY_VER_SUFFIX}/test/string_tests.pyc
 lib/python${PY_VER_SUFFIX}/test/string_tests.pyo
@@ -3339,6 +3389,9 @@ lib/python${PY_VER_SUFFIX}/test/test_email_codecs.pyo
 lib/python${PY_VER_SUFFIX}/test/test_email_renamed.py
 lib/python${PY_VER_SUFFIX}/test/test_email_renamed.pyc
 lib/python${PY_VER_SUFFIX}/test/test_email_renamed.pyo
+lib/python${PY_VER_SUFFIX}/test/test_ensurepip.py
+lib/python${PY_VER_SUFFIX}/test/test_ensurepip.pyc
+lib/python${PY_VER_SUFFIX}/test/test_ensurepip.pyo
 lib/python${PY_VER_SUFFIX}/test/test_enumerate.py
 lib/python${PY_VER_SUFFIX}/test/test_enumerate.pyc
 lib/python${PY_VER_SUFFIX}/test/test_enumerate.pyo
@@ -3924,12 +3977,12 @@ lib/python${PY_VER_SUFFIX}/test/test_sqlite.pyo
 lib/python${PY_VER_SUFFIX}/test/test_ssl.py
 lib/python${PY_VER_SUFFIX}/test/test_ssl.pyc
 lib/python${PY_VER_SUFFIX}/test/test_ssl.pyo
-lib/python${PY_VER_SUFFIX}/test/test_stat.py
-lib/python${PY_VER_SUFFIX}/test/test_stat.pyc
-lib/python${PY_VER_SUFFIX}/test/test_stat.pyo
 lib/python${PY_VER_SUFFIX}/test/test_startfile.py
 lib/python${PY_VER_SUFFIX}/test/test_startfile.pyc
 lib/python${PY_VER_SUFFIX}/test/test_startfile.pyo
+lib/python${PY_VER_SUFFIX}/test/test_stat.py
+lib/python${PY_VER_SUFFIX}/test/test_stat.pyc
+lib/python${PY_VER_SUFFIX}/test/test_stat.pyo
 lib/python${PY_VER_SUFFIX}/test/test_str.py
 lib/python${PY_VER_SUFFIX}/test/test_str.pyc
 lib/python${PY_VER_SUFFIX}/test/test_str.pyo
