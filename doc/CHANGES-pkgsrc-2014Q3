@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.35 2014/12/14 09:53:19 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2014Q3,v 1.1.2.36 2014/12/16 23:23:43 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2014Q3 branch:
@@ -128,3 +128,5 @@ Pullup ticket #4571 - requested by snj
 security/libksba: security patch
 Pullup ticket #4572 - requested by jnemeth
 comms/asterisk: security update
+Pullup ticket #4573 - requested by roy
+net/powerdns-recursor: security patch
