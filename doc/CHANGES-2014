@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4850 2014/12/16 07:41:05 chopps Exp $
+$NetBSD: CHANGES-2014,v 1.4851 2014/12/16 08:45:37 chopps Exp $
 
 # Please note that we are now in a FREEZE for new functionality in
 # pkgsrc.  That means no new packages, please, and no changes to the
@@ -6352,5 +6352,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated comms/asterisk to 11.15.0 [jnemeth 2014-12-16]
 	Updated net/mikutter to 3.1.1 [obache 2014-12-16]
 	Updated emulators/suse131_gtk2 to 13.1nb4 [obache 2014-12-16]
-	Updated lang/python27 to 2.7.9 [chopps 2014-12-16]
 	Updated lang/python27 to 2.7.9 [chopps 2014-12-16]
