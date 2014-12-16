@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.61 2010/11/24 20:26:20 drochner Exp $
+$NetBSD: distinfo,v 1.62 2014/12/16 10:46:32 prlw1 Exp $
 
 SHA1 (gnome-panel-2.32.1.tar.bz2) = 561ec56307854b5cbd6b0d0a0b7f9e0e6c2a0127
 RMD160 (gnome-panel-2.32.1.tar.bz2) = 03a440cee7e219b42a0375ae2d2d53fbd17b604b
@@ -7,3 +7,4 @@ SHA1 (patch-ab) = 2bea1a4fe4b68b45988e2d1e88eeb488d14ac0e1
 SHA1 (patch-ad) = c24a5d0a8c1c88d46edfa3e8fc3e4528637a8d31
 SHA1 (patch-ae) = d85575dc403c67a4fcb0818904ab9b0517f7b8e0
 SHA1 (patch-af) = ca6947149c9cb2557814da51122fe5ce202469b1
+SHA1 (patch-libpanel-applet_panel-applet-factory.c) = 6425f0ceeec62c377bbb8fddd4e189846da0c64e

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.173 2014/10/07 16:47:15 adam Exp $
+# $NetBSD: Makefile,v 1.174 2014/12/16 10:46:32 prlw1 Exp $
 
 DISTNAME=		gnome-panel-2.32.1
-PKGREVISION=		40
+PKGREVISION=		41
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-panel/2.32/}
 EXTRACT_SUFX=		.tar.bz2
@@ -76,6 +76,7 @@ BUILDLINK_API_DEPENDS.libgweather+=	libgweather>=2.24.1
 #.include "../../security/policykit/buildlink3.mk"
 #.include "../../security/policykit-gnome/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 BUILDLINK_API_DEPENDS.gnome-menus+= gnome-menus>=2.28.0
 .include "../../sysutils/gnome-menus/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
