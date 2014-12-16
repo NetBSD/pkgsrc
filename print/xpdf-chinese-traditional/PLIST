@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.6 2010/01/27 15:14:00 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/12/16 23:37:48 dholland Exp $
 share/xpdf/chinese-traditional/Adobe-CNS1.cidToUnicode
 share/xpdf/chinese-traditional/Big5.unicodeMap
 share/xpdf/chinese-traditional/CMap/Adobe-CNS1-0
 share/xpdf/chinese-traditional/CMap/Adobe-CNS1-1
 share/xpdf/chinese-traditional/CMap/Adobe-CNS1-2
 share/xpdf/chinese-traditional/CMap/Adobe-CNS1-3
+share/xpdf/chinese-traditional/CMap/Adobe-CNS1-4
+share/xpdf/chinese-traditional/CMap/Adobe-CNS1-5
+share/xpdf/chinese-traditional/CMap/Adobe-CNS1-6
 share/xpdf/chinese-traditional/CMap/Adobe-CNS1-UCS2
 share/xpdf/chinese-traditional/CMap/B5-H
 share/xpdf/chinese-traditional/CMap/B5-V
@@ -41,6 +44,8 @@ share/xpdf/chinese-traditional/CMap/UniCNS-UCS2-H
 share/xpdf/chinese-traditional/CMap/UniCNS-UCS2-V
 share/xpdf/chinese-traditional/CMap/UniCNS-UTF16-H
 share/xpdf/chinese-traditional/CMap/UniCNS-UTF16-V
+share/xpdf/chinese-traditional/CMap/UniCNS-UTF32-H
+share/xpdf/chinese-traditional/CMap/UniCNS-UTF32-V
 share/xpdf/chinese-traditional/CMap/UniCNS-UTF8-H
 share/xpdf/chinese-traditional/CMap/UniCNS-UTF8-V
 share/xpdf/chinese-traditional/add-to-xpdfrc
