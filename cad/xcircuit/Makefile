@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2014/12/15 09:05:32 obache Exp $
+# $NetBSD: Makefile,v 1.44 2014/12/17 06:35:13 obache Exp $
 
 DISTNAME=	xcircuit-3.7.50
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	cad graphics
 MASTER_SITES=	http://opencircuitdesign.com/xcircuit/archive/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	shaun@inerd.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://opencircuitdesign.com/xcircuit/
 COMMENT=	Drawing program for X11 (especially for circuits)
 LICENSE=	gnu-gpl-v2
