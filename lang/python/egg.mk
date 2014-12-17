@@ -1,4 +1,4 @@
-# $NetBSD: egg.mk,v 1.18 2014/12/06 15:17:08 rodent Exp $
+# $NetBSD: egg.mk,v 1.19 2014/12/17 07:23:04 wiz Exp $
 #
 # Common logic to handle Python Eggs
 #
@@ -38,7 +38,7 @@ _PYSETUPTOOLSINSTALLARGS=	--single-version-externally-managed
 _PYSETUPTOOLSINSTALLARGS+=	--root=/
 .endif
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=0.6c9:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=0.8:../../devel/py-setuptools
 
 INSTALLATION_DIRS+=	${PYSITELIB}
 
