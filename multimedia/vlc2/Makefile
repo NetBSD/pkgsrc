@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2014/12/13 11:11:50 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2014/12/17 16:08:58 abs Exp $
 
 DISTNAME=		vlc-${VLC_VERSION}
 PKGREVISION=		15
@@ -26,7 +26,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-kde-solid=${PREFIX}/share/kde/apps/solid/actions
 PTHREAD_OPTS+=		require
 USE_LANGUAGES=		c99 c++
-PLIST_VARS+=		x86simd altivec v4l2 oss
+PLIST_VARS+=		x86simd altivec v4l2 oss rtsp
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
