@@ -1,0 +1,20 @@
+$NetBSD: distinfo,v 1.1 2014/12/17 01:35:07 rodent Exp $
+
+SHA1 (suse131/gstreamer-plugin-gstclutter-2.0.8-3.1.i586.rpm) = baa434a399e71be94db40e892f306ed85f59bbcd
+RMD160 (suse131/gstreamer-plugin-gstclutter-2.0.8-3.1.i586.rpm) = 393d43603ee1ef58164ca3cc6b96fcf71a67705c
+Size (suse131/gstreamer-plugin-gstclutter-2.0.8-3.1.i586.rpm) = 30493 bytes
+SHA1 (suse131/gstreamer-plugins-bad-1.0.10-2.5.4.i586.rpm) = 4b88b7941ba6a3292b7b1bdc00630ca37b0a67fd
+RMD160 (suse131/gstreamer-plugins-bad-1.0.10-2.5.4.i586.rpm) = bac29b3b7bf4beb7963f6913ca7dd795a7d764cb
+Size (suse131/gstreamer-plugins-bad-1.0.10-2.5.4.i586.rpm) = 801089 bytes
+SHA1 (suse131/gstreamer-plugins-base-1.0.10-2.4.1.i586.rpm) = c2d8608dd0eaafa77e4b4f1b87a2703adf2a200b
+RMD160 (suse131/gstreamer-plugins-base-1.0.10-2.4.1.i586.rpm) = d4f253d0b48ad5813f100e4f3285a5f3b5007107
+Size (suse131/gstreamer-plugins-base-1.0.10-2.4.1.i586.rpm) = 619206 bytes
+SHA1 (suse131/gstreamer-plugin-gstclutter-2.0.8-3.1.x86_64.rpm) = 9f350ee47f17161c688b9f04918c2acdf069c937
+RMD160 (suse131/gstreamer-plugin-gstclutter-2.0.8-3.1.x86_64.rpm) = a9f551254c2f781b4ecc839d5ccc9df418315027
+Size (suse131/gstreamer-plugin-gstclutter-2.0.8-3.1.x86_64.rpm) = 31379 bytes
+SHA1 (suse131/gstreamer-plugins-bad-1.0.10-2.5.4.x86_64.rpm) = 3c71c70f0f3ec911ad2fadb42983bda75dc9f24e
+RMD160 (suse131/gstreamer-plugins-bad-1.0.10-2.5.4.x86_64.rpm) = e0db8f506d0886d708eb731154b7520fe1fd24b2
+Size (suse131/gstreamer-plugins-bad-1.0.10-2.5.4.x86_64.rpm) = 822009 bytes
+SHA1 (suse131/gstreamer-plugins-base-1.0.10-2.4.1.x86_64.rpm) = 270c5bc90fea14f460ac4e0c955e6fa6d6ef12fb
+RMD160 (suse131/gstreamer-plugins-base-1.0.10-2.4.1.x86_64.rpm) = c684cd35a6231a34b963670ed883f0cbae79f631
+Size (suse131/gstreamer-plugins-base-1.0.10-2.4.1.x86_64.rpm) = 630359 bytes
