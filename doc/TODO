@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13933 2014/12/15 23:26:04 mef Exp $
+$NetBSD: TODO,v 1.13934 2014/12/17 09:46:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -335,8 +335,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o DarwinStreamingServer-6.0.3
 	o ETL-0.2.1a
 	o GMT-5.1.1
-	o Mesa-10.3.3 [do not update since it removes support for DRI features needed by NetBSD]
-	o MesaLib-10.3.3 [do not update since it removes support for DRI features needed by NetBSD]
+	o Mesa-10.4 [do not update since it removes support for DRI features needed by NetBSD]
+	o MesaLib-10.4 [do not update since it removes support for DRI features needed by NetBSD]
 	o PAM-0.99.7.1
 	o R-3.1.2
 	o RBTools-0.5.5
@@ -590,7 +590,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glade3-3.8.5 [GNOME 2.34]
 	o gle-4.2.4
 	o glom-1.14.2 [GNOME 2.26]
-	o glu-10.3.3
+	o glu-10.4
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.14.2
@@ -640,7 +640,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o grilo-0.2.11
 	o grilo-plugins-0.2.13
 	o groff-1.22.3
-	o gsharutils-4.14
+	o gsharutils-4.14.2
 	o gss-1.0.3
 	o gthumb-3.2.8
 	o gtk-gnutella-0.98.4
@@ -876,6 +876,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pen-0.17.3
 	o pev-0.70
 	o pessulus-2.30.3 [GNOME 2.28]
+	o phonon-4.8.3
 	o php-jpgraph-3.0.6
 	o php-owncloud-7
 	o php-tiki6-6.10
@@ -1073,7 +1074,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tile-0.7.4
 	o tinc-1.0.24
 	o tk85-8.5.16
-	o tkgate-1.8.7
+	o tkgate-1.8.7 [pkg/49482]
 	o tkhylafax-3.2
 	o tkpasman-2.2b
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
@@ -1104,7 +1105,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vicq-0.4.2
 	o viewvc-1.1.22
 	o vifm-0.7.7
-	o vinagre-3.14.2
+	o vinagre-3.14.3
 	o vino-3.14.1
 	o visual-regexp-3.1
 	o vm-8.0.7.522 [pkg/37707]
@@ -1122,7 +1123,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o websvn-2.3.2
 	o windowlab-1.40
 	o wine-1.7.30
-	o wine-devel-1.7.32
+	o wine-devel-1.7.33
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wml-2.0.11
