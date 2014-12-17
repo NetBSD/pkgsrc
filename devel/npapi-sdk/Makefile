@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2013/01/05 11:44:07 obache Exp $
+# $NetBSD: Makefile,v 1.5 2014/12/17 11:16:32 obache Exp $
 #
 
 DISTNAME=	npapi-sdk-0.27.2
 CATEGORIES=	devel
-MASTER_SITES=	http://cdn.bitbucket.org/mgorny/npapi-sdk/downloads/
+MASTER_SITES=	https://bitbucket.org/mgorny/npapi-sdk/downloads/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	obache@NetBSD.org
