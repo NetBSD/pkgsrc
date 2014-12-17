@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4853 2014/12/17 01:33:53 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.4854 2014/12/17 01:35:58 rodent Exp $
 
 # Please note that we are now in a FREEZE for new functionality in
 # pkgsrc.  That means no new packages, please, and no changes to the
@@ -6355,3 +6355,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/python27 to 2.7.9 [chopps 2014-12-16]
 	Updated x11/gnome-panel to 2.32.1nb41 [prlw1 2014-12-16]
 	Added emulators/suse131_32_gstreamer version 13.1 [rodent 2014-12-17]
+	Added emulators/suse131_gstreamer version 13.1 [rodent 2014-12-17]
