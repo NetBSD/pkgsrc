@@ -1,4 +1,4 @@
-# $NetBSD: linux.mk,v 1.26 2014/08/22 17:24:28 tron Exp $
+# $NetBSD: linux.mk,v 1.27 2014/12/17 01:03:37 rodent Exp $
 #
 # Linux binary emulation framework
 #
@@ -76,6 +76,7 @@ _EMUL_MODULES+=		fontconfig
 _EMUL_MODULES+=		freetype2
 _EMUL_MODULES+=		glib2
 _EMUL_MODULES+=		glx
+_EMUL_MODULES+=		gstreamer
 _EMUL_MODULES+=		gtk2
 _EMUL_MODULES+=		jpeg
 _EMUL_MODULES+=		krb5
@@ -100,6 +101,7 @@ _EMUL_MODULES+=		pulseaudio
 _EMUL_MODULES+=		qt4
 _EMUL_MODULES+=		resmgr
 _EMUL_MODULES+=		slang
+_EMUL_MODULES+=		sqlite3
 _EMUL_MODULES+=		tiff
 _EMUL_MODULES+=		x11
 _EMUL_MODULES+=		xml2
