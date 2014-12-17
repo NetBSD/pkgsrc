@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.216 2014/12/04 19:57:01 rodent Exp $
+# $NetBSD: Makefile,v 1.217 2014/12/17 01:40:51 rodent Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -230,6 +230,7 @@ SUBDIR+=	suse131_32_fontconfig
 SUBDIR+=	suse131_32_freetype2
 SUBDIR+=	suse131_32_glib2
 SUBDIR+=	suse131_32_glx
+SUBDIR+=	suse131_32_gstreamer
 SUBDIR+=	suse131_32_gtk2
 SUBDIR+=	suse131_32_krb5
 SUBDIR+=	suse131_32_libSDL
@@ -259,6 +260,7 @@ SUBDIR+=	suse131_32_openssl
 SUBDIR+=	suse131_32_pulseaudio
 SUBDIR+=	suse131_32_qt4
 SUBDIR+=	suse131_32_slang
+SUBDIR+=	suse131_32_sqlite3
 SUBDIR+=	suse131_32_x11
 SUBDIR+=	suse131_alsa
 SUBDIR+=	suse131_aspell
@@ -271,6 +273,7 @@ SUBDIR+=	suse131_fontconfig
 SUBDIR+=	suse131_freetype2
 SUBDIR+=	suse131_glib2
 SUBDIR+=	suse131_glx
+SUBDIR+=	suse131_gstreamer
 SUBDIR+=	suse131_gtk2
 SUBDIR+=	suse131_krb5
 SUBDIR+=	suse131_libSDL
@@ -301,6 +304,7 @@ SUBDIR+=	suse131_openssl
 SUBDIR+=	suse131_pulseaudio
 SUBDIR+=	suse131_qt4
 SUBDIR+=	suse131_slang
+SUBDIR+=	suse131_sqlite3
 SUBDIR+=	suse131_x11
 SUBDIR+=	swarm
 SUBDIR+=	sys161
