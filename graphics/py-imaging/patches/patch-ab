@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.7 2011/01/03 12:17:31 adam Exp $
+$NetBSD: patch-ab,v 1.8 2014/12/17 15:22:44 joerg Exp $
 
 --- setup.py.orig	2009-11-15 17:06:10.000000000 +0100
 +++ setup.py
@@ -14,7 +14,42 @@ $NetBSD: patch-ab,v 1.7 2011/01/03 12:17:31 adam Exp $
  
  def add_directory(path, dir, where=None):
      if dir and os.path.isdir(dir) and dir not in path:
-@@ -331,7 +328,7 @@ class pil_build_ext(build_ext):
+@@ -228,20 +225,9 @@ class pil_build_ext(build_ext):
+             zlib = jpeg = tiff = freetype = tcl = tk = lcms = None
+         feature = feature()
+ 
+-        if find_include_file(self, "zlib.h"):
+-            if find_library_file(self, "z"):
+-                feature.zlib = "z"
+-            elif sys.platform == "win32" and find_library_file(self, "zlib"):
+-                feature.zlib = "zlib" # alternative name
+-
+-        if find_include_file(self, "jpeglib.h"):
+-            if find_library_file(self, "jpeg"):
+-                feature.jpeg = "jpeg"
+-            elif sys.platform == "win32" and find_library_file(self, "libjpeg"):
+-                feature.jpeg = "libjpeg" # alternative name
+-
+-        if find_library_file(self, "tiff"):
+-            feature.tiff = "tiff"
++        feature.zlib = "z"
++        feature.jpeg = "jpeg"
++        feature.tiff = "tiff"
+ 
+         if find_library_file(self, "freetype"):
+             # look for freetype2 include files
+@@ -264,9 +250,7 @@ class pil_build_ext(build_ext):
+                 if dir:
+                     add_directory(self.compiler.include_dirs, dir, 0)
+ 
+-        if find_include_file(self, "lcms.h"):
+-            if find_library_file(self, "lcms"):
+-                feature.lcms = "lcms"
++        feature.lcms = "lcms"
+ 
+         if _tkinter and find_include_file(self, "tk.h"):
+             # the library names may vary somewhat (e.g. tcl84 or tcl8.4)
+@@ -331,7 +315,7 @@ class pil_build_ext(build_ext):
                  "_imagingcms", ["_imagingcms.c"], libraries=["lcms"] + extra
                  ))
  
@@ -23,7 +58,7 @@ $NetBSD: patch-ab,v 1.7 2011/01/03 12:17:31 adam Exp $
              # locate Tcl/Tk frameworks
              frameworks = []
              framework_roots = [
-@@ -481,7 +478,7 @@ if __name__ == "__main__":
+@@ -481,7 +465,7 @@ if __name__ == "__main__":
          package_dir={"": "PIL"},
          packages=[""],
          platforms="Python 1.5.2 and later.",
