@@ -1,0 +1,22 @@
+$NetBSD: patch-Makefile.local,v 1.1 2014/12/18 12:26:51 joerg Exp $
+
+--- Makefile.local.orig	2014-12-15 20:14:52.000000000 +0000
++++ Makefile.local
+@@ -46,7 +46,7 @@ PV_FILE=bindings/python/notmuch/version.
+ # Smash together user's values with our extra values
+ FINAL_CFLAGS = -DNOTMUCH_VERSION=$(VERSION) $(CPPFLAGS) $(CFLAGS) $(WARN_CFLAGS) $(extra_cflags) $(CONFIGURE_CFLAGS)
+ FINAL_CXXFLAGS = $(CPPFLAGS) $(CXXFLAGS) $(WARN_CXXFLAGS) $(extra_cflags) $(extra_cxxflags) $(CONFIGURE_CXXFLAGS)
+-FINAL_NOTMUCH_LDFLAGS = $(LDFLAGS) -Lutil -lutil -Llib -lnotmuch
++FINAL_NOTMUCH_LDFLAGS = $(LDFLAGS) -Lutil -lmyutil -Llib -lnotmuch
+ ifeq ($(LIBDIR_IN_LDCONFIG),0)
+ FINAL_NOTMUCH_LDFLAGS += $(RPATH_LDFLAGS)
+ endif
+@@ -297,7 +297,7 @@ notmuch_client_modules = $(notmuch_clien
+ 
+ notmuch.o: version.stamp
+ 
+-notmuch: $(notmuch_client_modules) lib/libnotmuch.a util/libutil.a parse-time-string/libparse-time-string.a
++notmuch: $(notmuch_client_modules) lib/libnotmuch.a util/libmyutil.a parse-time-string/libparse-time-string.a
+ 	$(call quiet,CXX $(CFLAGS)) $^ $(FINAL_LIBNOTMUCH_LDFLAGS) -o $@
+ 
+ notmuch-shared: $(notmuch_client_modules) lib/$(LINKER_NAME)
