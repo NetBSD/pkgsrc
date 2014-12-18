@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2014/05/09 07:37:17 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2014/12/18 13:36:48 wiz Exp $
 
 DISTNAME=	prelude-correlator-0.9.0-beta8
 PKGNAME=	prelude-correlator-${DISTNAME:S/-beta/beta/:C/.*-//}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	security
 MASTER_SITES=	http://www.prelude-ids.com/download/releases/prelude-correlator/
 
@@ -49,9 +49,9 @@ CONF_FILES+=		${EGDIR}/spamhaus_drop.dat ${PRELUDE_HOME}/spamhaus_drop.dat
 REQD_DIRS+=		${PRELUDE_HOME}
 REQD_DIRS_PERMS+=	${PRELUDE_HOME} ${PRELUDE_USER} ${PRELUDE_GROUP} 0700
 
-REPLACE_PYTHON=		${WRKSRC}/*.py
+REPLACE_PYTHON=		PreludeCorrelator/main.py
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.9.0beta8
-EGG_NAME=		prelude_correlator-0.9.0_beta8
+EGG_NAME=		prelude_correlator-0.9.0b8
 
 pre-patch:
 	${CP} ${FILESDIR}/run-prelude-correlator.c ${WRKSRC}
@@ -67,5 +67,6 @@ post-install:
 	    ${DESTDIR}${EGDIR}
 
 .include "../../security/libprelude-python/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
