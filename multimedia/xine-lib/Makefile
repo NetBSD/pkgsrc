@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.132 2014/10/01 16:09:34 wiz Exp $
+# $NetBSD: Makefile,v 1.133 2014/12/18 12:33:21 wiz Exp $
 
 .include "Makefile.common"
 
 COMMENT=		Multimedia player library
-PKGREVISION=		6
+PKGREVISION=		7
 
 CONFLICTS+=		xine-xcb-[0-9]*
 
@@ -51,6 +51,12 @@ LDFLAGS.SunOS+=		-lresolv
 # flac is supported internally; don't know what the plugin is good for
 # but until autodetection is turned off, force external flac for now.
 .include "../../audio/flac/buildlink3.mk"
+.include "../../audio/faac/buildlink3.mk"
+.include "../../audio/faad2/buildlink3.mk"
+.include "../../audio/liba52/buildlink3.mk"
+.include "../../audio/libdca/buildlink3.mk"
+.include "../../audio/libmad/buildlink3.mk"
+#.include "../../audio/libmpcdec/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/speex/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -63,6 +69,16 @@ CONFIGURE_ARGS+=	--disable-opengl
 .include "../../graphics/mng/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
+# this doesn't faze xine at all -- it does not use pkgsrc libdvdnav/libdvdread
+# even if told explicitly
+#CONFIGURE_ARGS+=	DVDREAD_CFLAGS="-I${BUILDLINK_PREFIX.libdvdread}/include"
+#DVDREAD_LIBS=	-L${BUILDLINK_PREFIX.libdvdread}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libdvdread}/lib -ldvdread
+#CONFIGURE_ARGS+=	DVDREAD_LIBS=${DVDREAD_LIBS:Q}
+#CONFIGURE_ARGS+=	DVDNAV_CFLAGS="-I${BUILDLINK_PREFIX.libdvdnav}/include"
+#DVDNAV_LIBS=		-L${BUILDLINK_PREFIX.libdvdnav}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libdvdnav}/lib -ldvdnav -lpthread
+#CONFIGURE_ARGS+=	DVDNAV_LIBS=${DVDNAV_LIBS:Q}
+#.include "../../multimedia/libdvdnav/buildlink3.mk"
+#.include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
 .include "../../sysutils/vcdimager-devel/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
