@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2014/11/19 13:06:14 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/12/18 10:52:58 joerg Exp $
 
 DISTNAME=	notmuch-0.19
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://notmuchmail.org/releases/
 
@@ -35,6 +36,5 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # as of 0.19
 .include "../../mail/gmime24/buildlink3.mk"
 .include "../../textproc/xapian/buildlink3.mk"
 .include "../../devel/talloc/buildlink3.mk"
-BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.5.2
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
