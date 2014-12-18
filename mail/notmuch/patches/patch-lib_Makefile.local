@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_Makefile.local,v 1.1 2014/09/01 08:14:07 wiz Exp $
+$NetBSD: patch-lib_Makefile.local,v 1.2 2014/12/18 10:52:58 joerg Exp $
 
 * On Mac OS X (Darwin), for the install_name of the notmuch shared
   library, use the full path rather than just the file name.  This
@@ -9,9 +9,11 @@ $NetBSD: patch-lib_Makefile.local,v 1.1 2014/09/01 08:14:07 wiz Exp $
 
     http://notmuchmail.org/pipermail/notmuch/2014/018956.html
 
---- lib/Makefile.local.orig	2014-06-25 05:30:10.000000000 -0500
-+++ lib/Makefile.local	2014-08-29 10:09:41.000000000 -0500
-@@ -27,7 +27,7 @@
+* Don't overlap with BSD's libutil.
+
+--- lib/Makefile.local.orig	2014-11-14 19:35:40.000000000 +0000
++++ lib/Makefile.local
+@@ -27,7 +27,7 @@ LIBRARY_SUFFIX = dylib
  LINKER_NAME = libnotmuch.$(LIBRARY_SUFFIX)
  SONAME = libnotmuch.$(LIBNOTMUCH_VERSION_MAJOR).$(LIBRARY_SUFFIX)
  LIBNAME = libnotmuch.$(LIBNOTMUCH_VERSION_MAJOR).$(LIBNOTMUCH_VERSION_MINOR).$(LIBNOTMUCH_VERSION_RELEASE).$(LIBRARY_SUFFIX)
@@ -20,3 +22,14 @@ $NetBSD: patch-lib_Makefile.local,v 1.1 2014/09/01 08:14:07 wiz Exp $
  else
  LIBRARY_SUFFIX = so
  LINKER_NAME = libnotmuch.$(LIBRARY_SUFFIX)
+@@ -76,8 +76,8 @@ libnotmuch_modules := $(libnotmuch_c_src
+ $(dir)/libnotmuch.a: $(libnotmuch_modules)
+ 	$(call quiet,AR) rcs $@ $^
+ 
+-$(dir)/$(LIBNAME): $(libnotmuch_modules) notmuch.sym util/libutil.a parse-time-string/libparse-time-string.a
+-	$(call quiet,CXX $(CXXFLAGS)) $(libnotmuch_modules) $(FINAL_LIBNOTMUCH_LDFLAGS) $(LIBRARY_LINK_FLAG) -o $@ util/libutil.a parse-time-string/libparse-time-string.a
++$(dir)/$(LIBNAME): $(libnotmuch_modules) notmuch.sym util/libmyutil.a parse-time-string/libparse-time-string.a
++	$(call quiet,CXX $(CXXFLAGS)) $(libnotmuch_modules) $(FINAL_LIBNOTMUCH_LDFLAGS) $(LIBRARY_LINK_FLAG) -o $@ util/libmyutil.a parse-time-string/libparse-time-string.a
+ 
+ notmuch.sym: $(srcdir)/$(dir)/notmuch.h $(libnotmuch_modules)
+ 	sh $(srcdir)/$(lib)/gen-version-script.sh $< $(libnotmuch_modules) > $@

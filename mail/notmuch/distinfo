@@ -1,9 +1,13 @@
-$NetBSD: distinfo,v 1.5 2014/11/19 13:06:14 wiz Exp $
+$NetBSD: distinfo,v 1.6 2014/12/18 10:52:58 joerg Exp $
 
 SHA1 (notmuch-0.19.tar.gz) = df023988f67e329357a5e8d00c4f6fc71249b89f
 RMD160 (notmuch-0.19.tar.gz) = 850fb63960abf5f5d4433683ce21e80cdf1205cb
 Size (notmuch-0.19.tar.gz) = 659038 bytes
-SHA1 (patch-aa) = d439fe1539c14524832e0059ad8201f8131e3b04
+SHA1 (patch-Makefile.local) = 4759dff68d23b47b5bf32ee34477defb3e586a57
+SHA1 (patch-aa) = e60ea5f6ad2f14ddfde6c795775aeb537e13489e
 SHA1 (patch-doc_Makefile.local) = 3c066de7c4686e1fd513437415bfa61ecf4f2cce
 SHA1 (patch-doc_prerst2man.py) = 90e0dd66e19ee4247b63872ebc8b1b9a5e02748c
-SHA1 (patch-lib_Makefile.local) = b6aff48b540419af21c673f1c9882a471cebcb9c
+SHA1 (patch-lib_Makefile.local) = 965f8722958017cc86b6eaf955cfd7f4db322114
+SHA1 (patch-notmuch-dump.c) = d85095239da2c7247113143d2668d6ca47bc324f
+SHA1 (patch-notmuch-restore.c) = 5f908d2ee146e29bd025eee36adb5997d897e9ea
+SHA1 (patch-util_Makefile.local) = 1dcf152c0aba329e5e309c98042bd14f9a733714
