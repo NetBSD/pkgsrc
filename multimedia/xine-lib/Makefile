@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.133 2014/12/18 12:33:21 wiz Exp $
+# $NetBSD: Makefile,v 1.134 2014/12/18 23:26:06 wiz Exp $
 
 .include "Makefile.common"
 
 COMMENT=		Multimedia player library
-PKGREVISION=		7
+PKGREVISION=		8
 
 CONFLICTS+=		xine-xcb-[0-9]*
 
@@ -69,16 +69,8 @@ CONFIGURE_ARGS+=	--disable-opengl
 .include "../../graphics/mng/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
-# this doesn't faze xine at all -- it does not use pkgsrc libdvdnav/libdvdread
-# even if told explicitly
-#CONFIGURE_ARGS+=	DVDREAD_CFLAGS="-I${BUILDLINK_PREFIX.libdvdread}/include"
-#DVDREAD_LIBS=	-L${BUILDLINK_PREFIX.libdvdread}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libdvdread}/lib -ldvdread
-#CONFIGURE_ARGS+=	DVDREAD_LIBS=${DVDREAD_LIBS:Q}
-#CONFIGURE_ARGS+=	DVDNAV_CFLAGS="-I${BUILDLINK_PREFIX.libdvdnav}/include"
-#DVDNAV_LIBS=		-L${BUILDLINK_PREFIX.libdvdnav}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libdvdnav}/lib -ldvdnav -lpthread
-#CONFIGURE_ARGS+=	DVDNAV_LIBS=${DVDNAV_LIBS:Q}
-#.include "../../multimedia/libdvdnav/buildlink3.mk"
-#.include "../../multimedia/libdvdread/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-external-dvdnav
+.include "../../multimedia/libdvdnav/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
 .include "../../sysutils/vcdimager-devel/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
