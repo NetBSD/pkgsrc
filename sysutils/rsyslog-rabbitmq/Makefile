@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/09/05 07:15:41 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2014/12/18 18:06:02 fhajny Exp $
 #
 
 RSYSLOG_MOD=	rabbitmq
@@ -10,7 +10,7 @@ DEPENDS+=	rsyslog>=${PKGVERSION_NOREV}:../../sysutils/rsyslog
 
 CONFIGURE_ARGS+=	--enable-omrabbitmq
 
-BUILD_DIRS=		plugins/omrabbitmq
+BUILD_DIRS=		contrib/omrabbitmq
 
 .include "../../net/rabbitmq-c/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
