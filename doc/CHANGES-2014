@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4855 2014/12/17 01:39:24 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.4856 2014/12/18 12:33:30 wiz Exp $
 
 # Please note that we are now in a FREEZE for new functionality in
 # pkgsrc.  That means no new packages, please, and no changes to the
@@ -6358,3 +6358,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added emulators/suse131_gstreamer version 13.1 [rodent 2014-12-17]
 	Added emulators/suse131_32_sqlite3 version 13.1 [rodent 2014-12-17]
 	Added emulators/suse131_sqlite3 version 13.1 [rodent 2014-12-17]
+	Updated multimedia/xine-lib to 1.2.5nb7 [wiz 2014-12-18]
