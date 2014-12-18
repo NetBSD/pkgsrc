@@ -1,10 +1,23 @@
-$NetBSD: patch-aa,v 1.2 2014/07/03 15:01:46 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2014/12/18 10:52:58 joerg Exp $
 
 Install completion files into example directory.
+Accept zlib 1.2.3.
 
 --- configure.orig	2014-05-06 07:27:29.000000000 +0000
 +++ configure
-@@ -418,7 +418,7 @@ else
+@@ -349,9 +349,9 @@ if ! pkg-config --exists zlib; then
+   rm -f compat/gen_zlib_pc
+ fi
+ 
+-printf "Checking for zlib (>= 1.2.5.2)... "
++printf "Checking for zlib (>= 1.2.3)... "
+ have_zlib=0
+-if pkg-config --atleast-version=1.2.5.2 zlib; then
++if pkg-config --atleast-version=1.2.3 zlib; then
+     printf "Yes.\n"
+     have_zlib=1
+     zlib_cflags=$(pkg-config --cflags zlib)
+@@ -436,7 +436,7 @@ else
      have_sphinx=0
  
      printf "Checking if rst2man is available... "
@@ -13,7 +26,16 @@ Install completion files into example directory.
         printf "Yes.\n"
         have_rst2man=1
      else
-@@ -824,10 +824,10 @@ HAVE_RST2MAN=${have_rst2man}
+@@ -527,7 +527,7 @@ EOF
+ 	echo "	http://xapian.org/"
+     fi
+     if [ $have_zlib -eq 0 ]; then
+-	echo "	zlib library (>= version 1.2.5.2, including development files such as headers)"
++	echo "	zlib library (>= version 1.2.3, including development files such as headers)"
+ 	echo "	http://zlib.net/"
+ 	echo
+     fi
+@@ -835,10 +835,10 @@ HAVE_DOXYGEN=${have_doxygen}
  desktop_dir = \$(prefix)/share/applications
  
  # The directory to which bash completions files should be installed
