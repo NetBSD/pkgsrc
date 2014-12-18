@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/05/09 07:37:00 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/12/18 10:51:02 joerg Exp $
 
 DISTNAME=	libhid-0.2.16
 PKGREVISION=	1
@@ -20,8 +20,8 @@ USE_LIBTOOL=	yes
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.2.16
 
-.include "../../lang/python/pyversion.mk"
-.include "../../lang/${PYPACKAGE}/buildlink3.mk"
+CONFIGURE_ENV+=	PYTHON_LDFLAGS="-L${PREFIX}/lib -lpython${PYVERSSUFFIX}"
+
 .include "../../lang/python/application.mk"
 # PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 #.include "../../lang/python/extension.mk"
