@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2012/10/06 11:54:40 asau Exp $
+# $NetBSD: Makefile,v 1.21 2014/12/19 06:50:16 mef Exp $
 #
 
 DISTNAME=	gemdropx-0.9
 PKGREVISION=	5
 CATEGORIES=	games x11
-MASTER_SITES=	ftp://ftp.billsgames.com/unix/x/gemdropx/src/
+MASTER_SITES=	ftp://ftp.tuxpaint.org/unix/x/gemdropx/src/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.newbreedsoftware.com/gemdropx/
