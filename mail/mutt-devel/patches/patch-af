@@ -1,10 +1,14 @@
-$NetBSD: patch-af,v 1.1 2009/08/10 14:18:12 apb Exp $
+$NetBSD: patch-af,v 1.2 2014/12/19 20:45:53 tron Exp $
 
-On some systems, curses.h defines TRUE and FALSE, so conditionalise
-them here to avoid compiler complaints about duplicate definitions.
+1.) On some systems, curses.h defines TRUE and FALSE, so conditionalise
+    them here to avoid compiler complaints about duplicate definitions.
 
---- lib.h.orig	2009-06-01 18:29:32.000000000 +0200
-+++ lib.h
+2.) Fix CVE-2014-9116, patch take from here:
+
+    http://dev.mutt.org/trac/attachment/ticket/3716/ticket-3716-dev.patch
+
+--- lib.h.orig	2014-03-12 16:03:45.000000000 +0000
++++ lib.h	2014-12-19 20:41:07.000000000 +0000
 @@ -54,8 +54,12 @@
  #  define N_(a) a
  # endif
@@ -20,3 +24,12 @@ them here to avoid compiler complaints about duplicate definitions.
  
  # define HUGE_STRING	5120
  # define LONG_STRING     1024
+@@ -98,7 +102,7 @@
+    on some systems */
+ # define SKIPWS(c) while (*(c) && isspace ((unsigned char) *(c))) c++;
+ 
+-#define EMAIL_WSP " \t\r\n"
++#define EMAIL_WSP " \t"
+ 
+ /* skip over WSP as defined by RFC5322.  This is used primarily for parsing
+  * header fields. */
