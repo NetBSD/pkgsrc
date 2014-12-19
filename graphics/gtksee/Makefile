@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2013/02/16 11:22:06 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2014/12/19 08:33:20 mef Exp $
 #
 
 DISTNAME=		gtksee-0.5.6
 PKGREVISION=		11
 CATEGORIES=		graphics x11
-MASTER_SITES=		http://download.berlios.de/gtksee/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gtksee.berlios/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://developer.berlios.de/projects/gtksee/
