@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.28 2013/04/06 20:27:17 rodent Exp $
+# $NetBSD: Makefile,v 1.29 2014/12/19 08:49:37 obache Exp $
 
 DISTNAME=		gcc-core-3.1
 PKGNAME=		cross-h8300-hms-gcc-3.1
 PKGREVISION=		6
 CATEGORIES=		cross
-MASTER_SITES=		ftp://ftp.gnu.org/gnu/gcc/gcc-3.1/ \
-			ftp://sources.redhat.com/pub/newlib/
+MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-3.1/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			${DISTNAME:S/-core-/-g++-/}${EXTRACT_SUFX} \
 			newlib-1.10.0.tar.gz
 
+SITES.newlib-1.10.0.tar.gz=	ftp://sources.redhat.com/pub/newlib/
 PATCH_SITES=		${MASTER_SITE_SOURCEFORGE:=h8300-hms/}
 PATCHFILES=		h8300-hms-gcc-3.1-1.patch
 PATCH_DIST_ARGS=	-d ${SRCDIR} -E -p1
