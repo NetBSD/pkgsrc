@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4865 2014/12/19 16:11:15 taca Exp $
+$NetBSD: CHANGES-2014,v 1.4866 2014/12/19 16:13:25 taca Exp $
 
 # Please note that we are now in a FREEZE for new functionality in
 # pkgsrc.  That means no new packages, please, and no changes to the
@@ -6373,3 +6373,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/nss to 3.17.3nb1 [ryoon 2014-12-19]
 	Updated lang/php54 to 5.4.36 [taca 2014-12-19]
 	Updated lang/php55 to 5.5.20 [taca 2014-12-19]
+	Updated lang/php56 to 5.6.4 [taca 2014-12-19]
