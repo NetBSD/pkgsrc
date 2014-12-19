@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4860 2014/12/19 01:09:02 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.4861 2014/12/19 03:32:33 taca Exp $
 
 # Please note that we are now in a FREEZE for new functionality in
 # pkgsrc.  That means no new packages, please, and no changes to the
@@ -6368,3 +6368,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/git-gitk to 2.2.1 [schmonz 2014-12-19]
 	Updated devel/git-svn to 2.2.1 [schmonz 2014-12-19]
 	Updated www/gitweb to 2.2.1 [schmonz 2014-12-19]
+	Updated mail/roundcube to 1.0.4 [taca 2014-12-19]
