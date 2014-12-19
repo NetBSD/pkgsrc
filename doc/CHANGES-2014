@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4862 2014/12/19 11:37:13 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4863 2014/12/19 14:22:58 ryoon Exp $
 
 # Please note that we are now in a FREEZE for new functionality in
 # pkgsrc.  That means no new packages, please, and no changes to the
@@ -6370,3 +6370,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/gitweb to 2.2.1 [schmonz 2014-12-19]
 	Updated mail/roundcube to 1.0.4 [taca 2014-12-19]
 	Updated devel/py-mercurial to 3.2.3 [wiz 2014-12-19]
+	Updated devel/nss to 3.17.3nb1 [ryoon 2014-12-19]
