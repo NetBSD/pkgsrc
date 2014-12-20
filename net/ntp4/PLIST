@@ -1,12 +1,15 @@
-@comment $NetBSD: PLIST,v 1.15 2014/03/11 14:05:09 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.16 2014/12/20 09:45:46 taca Exp $
 bin/sntp
 man/man1/sntp.1
 man/man5/ntp.conf.5
 man/man5/ntp.keys.5
+${PLIST.tickadj}man/man8/calc_tickadj.8
 man/man8/ntp-keygen.8
+man/man8/ntp-wait.8
 man/man8/ntpd.8
 man/man8/ntpdc.8
 man/man8/ntpq.8
+man/man8/ntptrace.8
 ${PLIST.tickadj}sbin/calc_tickadj
 sbin/ntp-keygen
 sbin/ntp-wait
@@ -68,6 +71,7 @@ share/doc/ntp4/drivers/driver42.html
 share/doc/ntp4/drivers/driver43.html
 share/doc/ntp4/drivers/driver44.html
 share/doc/ntp4/drivers/driver45.html
+share/doc/ntp4/drivers/driver46.html
 share/doc/ntp4/drivers/driver5.html
 share/doc/ntp4/drivers/driver6.html
 share/doc/ntp4/drivers/driver7.html
@@ -163,6 +167,7 @@ share/doc/ntp4/html/drivers/driver42.html
 share/doc/ntp4/html/drivers/driver43.html
 share/doc/ntp4/html/drivers/driver44.html
 share/doc/ntp4/html/drivers/driver45.html
+share/doc/ntp4/html/drivers/driver46.html
 share/doc/ntp4/html/drivers/driver5.html
 share/doc/ntp4/html/drivers/driver6.html
 share/doc/ntp4/html/drivers/driver7.html
@@ -303,8 +308,10 @@ share/doc/ntp4/html/pic/rabbit.gif
 share/doc/ntp4/html/pic/radio2.jpg
 share/doc/ntp4/html/pic/sheepb.jpg
 share/doc/ntp4/html/pic/stack1a.jpg
+share/doc/ntp4/html/pic/stats.gif
 share/doc/ntp4/html/pic/sx5.gif
 share/doc/ntp4/html/pic/thunderbolt.jpg
+share/doc/ntp4/html/pic/time1.gif
 share/doc/ntp4/html/pic/tonea.gif
 share/doc/ntp4/html/pic/tribeb.gif
 share/doc/ntp4/html/pic/wingdorothy.gif
@@ -441,8 +448,10 @@ share/doc/ntp4/pic/rabbit.gif
 share/doc/ntp4/pic/radio2.jpg
 share/doc/ntp4/pic/sheepb.jpg
 share/doc/ntp4/pic/stack1a.jpg
+share/doc/ntp4/pic/stats.gif
 share/doc/ntp4/pic/sx5.gif
 share/doc/ntp4/pic/thunderbolt.jpg
+share/doc/ntp4/pic/time1.gif
 share/doc/ntp4/pic/tonea.gif
 share/doc/ntp4/pic/tribeb.gif
 share/doc/ntp4/pic/wingdorothy.gif
