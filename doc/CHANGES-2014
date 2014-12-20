@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4869 2014/12/20 04:59:31 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4870 2014/12/20 07:51:10 ryoon Exp $
 
 # Please note that we are now in a FREEZE for new functionality in
 # pkgsrc.  That means no new packages, please, and no changes to the
@@ -6377,3 +6377,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/mutt-devel to 1.5.23nb2 [tron 2014-12-19]
 	Updated www/mediawiki to 1.24.1 [wen 2014-12-20]
 	Updated graphics/libsixel to 1.4.3 [obache 2014-12-20]
+	Updated www/apache-tomcat7 to 7.0.57 [ryoon 2014-12-20]
