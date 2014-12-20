@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4872 2014/12/20 09:46:16 taca Exp $
+$NetBSD: CHANGES-2014,v 1.4873 2014/12/20 21:04:41 wiz Exp $
 
 # Please note that we are now in a FREEZE for new functionality in
 # pkgsrc.  That means no new packages, please, and no changes to the
@@ -6380,3 +6380,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/apache-tomcat7 to 7.0.57 [ryoon 2014-12-20]
 	Updated devel/subversion to 1.8.11 [obache 2014-12-20]
 	Updated net/ntp4 to 4.2.8 [taca 2014-12-20]
+	Updated textproc/libyaml to 0.1.6nb1 [wiz 2014-12-20]
