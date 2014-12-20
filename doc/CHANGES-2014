@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4867 2014/12/19 20:46:33 tron Exp $
+$NetBSD: CHANGES-2014,v 1.4868 2014/12/20 02:28:26 wen Exp $
 
 # Please note that we are now in a FREEZE for new functionality in
 # pkgsrc.  That means no new packages, please, and no changes to the
@@ -6375,3 +6375,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/php55 to 5.5.20 [taca 2014-12-19]
 	Updated lang/php56 to 5.6.4 [taca 2014-12-19]
 	Updated mail/mutt-devel to 1.5.23nb2 [tron 2014-12-19]
+	Updated www/mediawiki to 1.24.1 [wen 2014-12-20]
