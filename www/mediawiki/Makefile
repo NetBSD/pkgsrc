@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2014/11/29 05:08:33 wen Exp $
+# $NetBSD: Makefile,v 1.50 2014/12/20 02:26:59 wen Exp $
 
 DISTNAME=	mediawiki-${VER}.${PVER}
 CATEGORIES=	www
@@ -22,7 +22,7 @@ INSTALLATION_DIRS=	${EGDIR} share/mediawiki
 .include "options.mk"
 
 VER=			1.24
-PVER=			0
+PVER=			1
 
 APACHE_USER?=		www
 APACHE_GROUP?=		www
@@ -72,7 +72,6 @@ SUBST_CLASSES+=		python
 SUBST_STAGE.python=	post-patch
 SUBST_MESSAGE.python=	Fixing python path
 SUBST_FILES.python+=	extensions/ConfirmEdit/captcha.py
-+SUBST_FILES.python+=	maintenance/cssjanus/cssjanus.py maintenance/cssjanus/csslex.py
 SUBST_SED.python=	-e "s,/usr/bin/python,${PYTHONBIN},"
 
 SUBST_CLASSES+=		python2
