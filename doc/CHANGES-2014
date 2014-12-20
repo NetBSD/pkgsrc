@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4871 2014/12/20 09:25:36 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4872 2014/12/20 09:46:16 taca Exp $
 
 # Please note that we are now in a FREEZE for new functionality in
 # pkgsrc.  That means no new packages, please, and no changes to the
@@ -6379,3 +6379,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/libsixel to 1.4.3 [obache 2014-12-20]
 	Updated www/apache-tomcat7 to 7.0.57 [ryoon 2014-12-20]
 	Updated devel/subversion to 1.8.11 [obache 2014-12-20]
+	Updated net/ntp4 to 4.2.8 [taca 2014-12-20]
