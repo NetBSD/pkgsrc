@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2014/11/29 05:08:33 wen Exp $
+@comment $NetBSD: PLIST,v 1.22 2014/12/20 02:26:59 wen Exp $
 share/examples/mediawiki/mediawiki.conf
 share/mediawiki/COPYING
 share/mediawiki/CREDITS
@@ -5445,6 +5445,7 @@ share/mediawiki/maintenance/postgres/archives/patch-valid_tag.sql
 share/mediawiki/maintenance/postgres/compare_schemas.pl
 share/mediawiki/maintenance/postgres/mediawiki_mysql2postgres.pl
 share/mediawiki/maintenance/postgres/tables.sql
+share/mediawiki/maintenance/postgres/update-keys.sql
 share/mediawiki/maintenance/preprocessDump.php
 share/mediawiki/maintenance/preprocessorFuzzTest.php
 share/mediawiki/maintenance/protect.php
