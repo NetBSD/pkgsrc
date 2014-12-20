@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2013/04/06 20:27:16 rodent Exp $
+# $NetBSD: Makefile,v 1.11 2014/12/20 22:12:20 mef Exp $
 
 DISTNAME=	festdoc-1.4.0.1
 PKGNAME=	festival-doc-1.4.0.1
 PKGREVISION=	2
 CATEGORIES=	audio
-MASTER_SITES=	http://www.speech.cs.cmu.edu/festival/cstr/festival/1.4.1/
+MASTER_SITES=	http://festvox.org/packed/festival/1.4.1/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival/
