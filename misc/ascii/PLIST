@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:07:18 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/12/20 23:51:52 mef Exp $
 bin/ascii
 man/man1/ascii.1
-share/examples/ascii/ascii.cgi
