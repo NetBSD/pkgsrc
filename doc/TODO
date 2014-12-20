@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13936 2014/12/19 14:08:12 wiz Exp $
+$NetBSD: TODO,v 1.13937 2014/12/20 21:54:49 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -850,7 +850,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o openscad-2013.06
 	o openslp-2.0.0
 	o openssh-6.7p1 (Note: it drop tcp_wrappers support!!)
-	o openttd-1.4.1
 	o opera-26
 	o opus-1.1
 	o oroborus-2.0.18
