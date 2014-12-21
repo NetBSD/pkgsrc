@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4880 2014/12/21 13:49:38 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.4881 2014/12/21 16:03:27 wiz Exp $
 
 # Please note that we are now in a FREEZE for new functionality in
 # pkgsrc.  That means no new packages, please, and no changes to the
@@ -6388,3 +6388,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/gnat_util to 20140422nb1 [obache 2014-12-21]
 	Updated www/php-owncloud to 7.0.4 [ryoon 2014-12-21]
 	Updated net/mirall to 1.7.1 [ryoon 2014-12-21]
+	Updated x11/modular-xorg-server to 1.12.4nb6 [wiz 2014-12-21]
