@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.5 2013/04/08 11:17:17 rodent Exp $
+# $NetBSD: Makefile,v 1.6 2014/12/21 12:12:42 mef Exp $
 #
 
 DISTNAME=	tstools-1_11
 PKGNAME=	${DISTNAME:S/_/./}
 CATEGORIES=	multimedia
-MASTER_SITES=	http://download.berlios.de/tstools/
+MASTER_SITES=	https://tstools.googlecode.com/files/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tech-multimedia@NetBSD.org
-HOMEPAGE=	http://tstools.berlios.de/
+HOMEPAGE=	https://code.google.com/p/tstools/
 COMMENT=	Cross-platform command line tools for working with MPEG data
+LICENSE=	mpl-1.1
 
 MAKE_JOBS_SAFE=		no
 
