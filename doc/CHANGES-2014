@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4875 2014/12/21 00:33:12 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.4876 2014/12/21 00:44:37 ryoon Exp $
 
 # Please note that we are now in a FREEZE for new functionality in
 # pkgsrc.  That means no new packages, please, and no changes to the
@@ -6384,3 +6384,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated games/openttd to 1.4.4 [ryoon 2014-12-20]
 	Updated games/openttd-data to 0.5.0 [ryoon 2014-12-20]
 	Updated devel/z80-asm to 2.3.7 [ryoon 2014-12-21]
+	Updated devel/dev86 to 0.16.21 [ryoon 2014-12-21]
