@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2013/04/06 03:59:24 rodent Exp $
+# $NetBSD: Makefile,v 1.15 2014/12/21 12:33:27 mef Exp $
 
 DISTNAME=		#
 PKGNAME=		cnprint-3.30b
@@ -23,7 +23,7 @@ DISTFILES+=		cnprint330b.c \
 			hbf.tar.gz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.neurophys.wisc.edu/~cai/software/index.html
+HOMEPAGE=		http://www.ywpw.com/cai/software/
 COMMENT=		Print & convert CJK style text to PostScript
 
 DIST_SUBDIR=		${PKGNAME_NOREV}
