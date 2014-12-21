@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.53 2014/12/21 16:03:17 wiz Exp $
+$NetBSD: distinfo,v 1.54 2014/12/21 16:09:00 wiz Exp $
 
 SHA1 (xorg-server-1.12.4.tar.bz2) = 6d616874f9c7677bda08dc073c03f83e78fbc585
 RMD160 (xorg-server-1.12.4.tar.bz2) = 4907b5dc42efd6b3fb6bf9d64f1441080a6a6983
@@ -42,7 +42,7 @@ SHA1 (patch-glx_singlepix.c) = 72ac42939b37ae0d57fc06453344ca76cdf2c856
 SHA1 (patch-glx_singlepixswap.c) = 1e3d54d3082a59d21edd81276980b953efc39ebb
 SHA1 (patch-glx_swap__interval.c) = 2ff4e2e7d2793dd8558b04c1f72abfa81998f2c6
 SHA1 (patch-glx_unpack.h) = 5ae5c10c93835cb51c08f5dae05c5a5e2afaad98
-SHA1 (patch-hw_xfree86_common_compiler.h) = 55d8b82a77a27cb2c7c2ccaff784c8721afe2951
+SHA1 (patch-hw_xfree86_common_compiler.h) = 88de747715b80b22f448869ab32dce1641bcb6db
 SHA1 (patch-hw_xfree86_dri2_dri2ext.c) = bc2b57e4bef5ae386d1d3a015c01d243f8880ab4
 SHA1 (patch-hw_xfree86_os-support_xf86__OSlib.h) = 7c2760509610b44915da077b22899bef9c338cc1
 SHA1 (patch-include_dix.h) = ab0dc2debd87f29c0ac7f971a3cad4850b239c3a
