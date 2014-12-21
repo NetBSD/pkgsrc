@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.1 2007/01/12 14:12:17 rillig Exp $
+$NetBSD: patch-aa,v 1.2 2014/12/21 00:31:56 ryoon Exp $
 
 Solaris is kind of UNIX-like, but does not have the cfmakeraw function.
 
---- console.c.orig	2003-01-20 14:53:08.000000000 +0100
-+++ console.c	2007-01-12 15:06:02.202678144 +0100
+--- console.c.orig	2004-06-09 13:20:13.000000000 +0000
++++ console.c
 @@ -7,6 +7,7 @@
  #include <stdio.h>
  #include <stdarg.h>
@@ -12,12 +12,12 @@ Solaris is kind of UNIX-like, but does not have the cfmakeraw function.
  
  #ifdef DOS
   #include <conio.h>
-@@ -33,7 +34,7 @@ c_refresh(void)
+@@ -191,7 +192,7 @@ c_bell(void)
  void
- c_init(void)
+ c_init(char a)
  {
 -#ifdef UNIX
 +#if defined(UNIX) && !defined(__sun)
   struct termios t;
- 
-  console_ok=0;
+  fd_in=fileno(stdin);
+  fd_out=fileno(stdout);
