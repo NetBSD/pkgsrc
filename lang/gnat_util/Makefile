@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/04/30 16:25:20 marino Exp $
+# $NetBSD: Makefile,v 1.2 2014/12/21 02:39:24 obache Exp $
 
 PKGNAME=	gnat_util-${SNAPSHOT}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 DISTFILES=	gcc-${GCC_VERSION}.tar.bz2
