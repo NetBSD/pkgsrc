@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.14 2012/10/23 17:18:15 asau Exp $
+# $NetBSD: Makefile,v 1.15 2014/12/21 08:14:11 mef Exp $
 
 DISTNAME=	connect
 PKGNAME=	${DISTNAME}-1.95
 PKGREVISION=	1
 CATEGORIES=	net security
 MASTER_SITES=	http://zippo.taiyo.co.jp/~gotoh/ssh/
+#MASTER_SITES= -https://bitbucket.org/gotoh/connect/src/
 EXTRACT_SUFX=	.c
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://zippo.taiyo.co.jp/~gotoh/ssh/connect.html
+HOMEPAGE=	https://bitbucket.org/gotoh/connect/wiki/Home
 COMMENT=	Open a TCP connection using a SOCKS4/5 or HTTP proxy server
 LICENSE=	gnu-gpl-v2
 
