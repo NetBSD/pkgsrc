@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13937 2014/12/20 21:54:49 ryoon Exp $
+$NetBSD: TODO,v 1.13938 2014/12/21 02:28:58 mef Exp $
 
 Suggested new packages
 ======================
@@ -523,7 +523,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o evolution-exchange-3.5.2
 	o evolution-mapi-0.32.2 [GNOME 2.32]
 	o ex-20050325
-	o exaile-3.4.1
+	o exaile-3.4.3
 	o exiftool-9.74
 	o ezmlm-idx-7.2.0 [schmonz]
 	o faces-1.7.7
@@ -582,7 +582,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gerbv-2.6.1
 	o gforth-0.7.3
 	o gfract-0.33
-	o ghc-7.8.1
+	o ghc-7.8.3
 	o gimp-docs-2.8.2
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
@@ -969,6 +969,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o root-5.34.01
 	o root-tail-1.2
 	o rosegarden4-1.7.0 [replacing audio/rosegarden|pkgsrc-wip]
+	o rosegarden-14.12
 	o rox-session-0.29
 	o roxirc-2.0
 	o rp-l2tp-0.4
@@ -989,7 +990,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sbcl-1.2.1
 	o scamper-20141101 [pkg/49353]
 	o scew-0.4.0
-	o scilab-5.5.0
+	o scilab-5.5.1
 	o scipy-0.13.3
 	o scm-5e7
 	o scribus-1.4.4
