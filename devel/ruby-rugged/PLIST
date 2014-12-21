@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2014/10/01 13:21:52 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/12/21 03:00:04 obache Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/rugged/rugged.${RUBY_DLEXT}
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/ext/rugged/extconf.rb
