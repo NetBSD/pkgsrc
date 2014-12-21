@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2013/11/07 14:01:47 obache Exp $
+# $NetBSD: Makefile,v 1.8 2014/12/21 00:43:38 ryoon Exp $
 #
 
-DISTNAME=	Dev86src-0.16.19
-PKGNAME=	${DISTNAME:tl:S/src-/-/}
+DISTNAME=	dev86-0.16.21
 CATEGORIES=	devel
-MASTER_SITES=	http://www.debath.co.uk/dev86/
+MASTER_SITES=	-https://github.com/lkundrak/dev86/archive/v0.16.21.tar.gz
 
 MAINTAINER=	pierrick@bs-network.net
 HOMEPAGE=	http://www.debath.co.uk/

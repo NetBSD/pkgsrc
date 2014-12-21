@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2013/11/07 14:01:47 obache Exp $
+$NetBSD: distinfo,v 1.4 2014/12/21 00:43:38 ryoon Exp $
 
-SHA1 (Dev86src-0.16.19.tar.gz) = 9e8c2949c408ce8ebdade3af3eee775ebac3cab5
-RMD160 (Dev86src-0.16.19.tar.gz) = 9d30cfb50653d7c567e05c355cbc7944c1a6023c
-Size (Dev86src-0.16.19.tar.gz) = 713688 bytes
+SHA1 (dev86-0.16.21.tar.gz) = 0f5b54a36fe24f90b4cc8b62517d00b32c04b34e
+RMD160 (dev86-0.16.21.tar.gz) = 592eec1f68b62b8a4717428f133e2a6106b12b81
+Size (dev86-0.16.21.tar.gz) = 711473 bytes
 SHA1 (patch-aa) = fb72158f52b13b12aed20e36b615e3ef0fde894e
 SHA1 (patch-unproto_tok__io.c) = 3f5a9ae5269ed44a22989e121400e367e2a514d0
