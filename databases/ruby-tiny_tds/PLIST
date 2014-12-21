@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/12/21 03:03:58 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/12/21 03:06:40 obache Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/tiny_tds/tiny_tds.${RUBY_DLEXT}
 ${GEM_LIBDIR}/CHANGELOG
@@ -40,4 +40,3 @@ ${GEM_LIBDIR}/test/schema_test.rb
 ${GEM_LIBDIR}/test/test_helper.rb
 ${GEM_LIBDIR}/test/thread_test.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/ruby/gems/2.0.0/build_info
