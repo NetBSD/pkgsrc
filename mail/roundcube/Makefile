@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2014/07/23 15:25:28 adam Exp $
+# $NetBSD: Makefile,v 1.63.2.1 2014/12/21 09:52:54 tron Exp $
 
-DISTNAME=	roundcubemail-1.0.2-dep
+DISTNAME=	roundcubemail-1.0.4-dep
 PKGNAME=	${DISTNAME:S/mail-/-/:S/-dep//}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundcubemail/}
@@ -94,10 +94,9 @@ SUBST_MESSAGE.files=	Fixing configuration files.
 REPLACE_INTERPRETER+=	php
 REPLACE.php.old=	/usr/bin/env php
 REPLACE.php.new=	${PREFIX}/bin/php
-REPLACE_FILES.php=	bin/cleandb.sh bin/decrypt.sh bin/exportgettext.sh \
-			bin/gc.sh bin/importgettext.sh bin/indexcontacts.sh \
-			bin/installto.sh bin/moduserprefs.sh bin/msgexport.sh \
-			bin/msgimport.sh bin/package2composer.sh \
+REPLACE_FILES.php=	bin/cleandb.sh bin/decrypt.sh bin/gc.sh \
+			bin/indexcontacts.sh bin/installto.sh \
+			bin/moduserprefs.sh bin/msgexport.sh bin/msgimport.sh \
 			bin/update.sh bin/updatecss.sh bin/updatedb.sh
 
 REPLACE_PYTHON=		plugins/password/helpers/chpass-wrapper.py
