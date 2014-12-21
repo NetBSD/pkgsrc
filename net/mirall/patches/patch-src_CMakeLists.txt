@@ -1,18 +1,12 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.2 2014/12/21 13:46:24 ryoon Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.3 2014/12/21 20:19:50 ryoon Exp $
 
---- src/CMakeLists.txt.orig	2014-12-18 11:45:49.000000000 +0000
+--- src/CMakeLists.txt.orig	2013-10-21 12:05:25.000000000 +0000
 +++ src/CMakeLists.txt
-@@ -22,11 +25,11 @@ if ( APPLE )
-     )
- endif()
+@@ -140,7 +140,6 @@ qt4_wrap_cpp(syncMoc ${libsync_HEADERS})
+ list(APPEND libsync_LINK_TARGETS
+     ${QT_LIBRARIES}
+     ${CSYNC_LIBRARY}
+-    dl
+ )
  
--IF(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
-+IF(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD" OR ${CMAKE_SYSTEM_NAME} MATCHES "NetBSD")
-     list(APPEND OS_SPECIFIC_LINK_LIBRARIES
- 	inotify
-     )
--ENDIF(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
-+ENDIF(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD" OR ${CMAKE_SYSTEM_NAME} MATCHES "NetBSD")
- 
- if(SPARKLE_FOUND AND NOT BUILD_LIBRARIES_ONLY)
-     list (APPEND OS_SPECIFIC_LINK_LIBRARIES ${SPARKLE_LIBRARY})
+ if(QTKEYCHAIN_FOUND)
