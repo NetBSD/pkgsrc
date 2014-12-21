@@ -1,7 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/20 19:33:45 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/12/21 00:31:56 ryoon Exp $
 bin/z80-asm
-bin/z80-dis
+bin/z80-mon
 man/man1/z80-asm.1
-man/man1/z80-dis.1
+man/man1/z80-mon.1
+man/man3/z80-cpu.3
+man/man3/z80-memory.3
 man/man5/z80-asm.5
+man/man5/z80-banks.5
 man/man5/z80-file.5
+man/man5/z80-keyboard.5
+man/man5/z80-memory.5
+man/man5/z80-ports.5
