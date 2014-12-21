@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2014/12/21 16:03:17 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2014/12/21 16:13:42 wiz Exp $
 
 DISTNAME=	xorg-server-1.12.4
 PKGNAME=	modular-${DISTNAME}
@@ -55,15 +55,15 @@ CONFIGURE_ARGS+=	--enable-xorg
 
 CONFIGURE_ARGS+=	--with-fontrootdir=${PREFIX}/share/fonts/X11
 
-LEGACY_FONT_PATH=
-DEFAULT_FONT_PATH=
+LEGACY_FONT_PATHS=
+DEFAULT_FONT_PATHS=
 .for f in misc TTF OTF Type1 100dpi 75dpi cyrillic
-DEFAULT_FONT_PATH+=	${PREFIX}/share/fonts/X11/${f}
-LEGACY_FONT_PATH+=	${PREFIX}/lib/X11/fonts/${f}
+DEFAULT_FONT_PATHS+=	${PREFIX}/share/fonts/X11/${f}
+LEGACY_FONT_PATHS+=	${PREFIX}/lib/X11/fonts/${f}
 .endfor
-FONT_PATH=		${DEFAULT_FONT_PATH} ${LEGACY_FONT_PATH}
+FONT_PATHS=		${DEFAULT_FONT_PATHS} ${LEGACY_FONT_PATHS}
 
-CONFIGURE_ARGS+=	--with-default-font-path=${FONT_PATH:ts,:Q}
+CONFIGURE_ARGS+=	--with-default-font-path=${FONT_PATHS:ts,:Q}
 
 CONFIGURE_ARGS+=	--disable-config-hal
 CONFIGURE_ARGS+=	--disable-dmx
