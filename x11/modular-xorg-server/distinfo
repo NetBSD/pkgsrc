@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.54 2014/12/21 16:09:00 wiz Exp $
+$NetBSD: distinfo,v 1.55 2014/12/21 16:14:05 wiz Exp $
 
 SHA1 (xorg-server-1.12.4.tar.bz2) = 6d616874f9c7677bda08dc073c03f83e78fbc585
 RMD160 (xorg-server-1.12.4.tar.bz2) = 4907b5dc42efd6b3fb6bf9d64f1441080a6a6983
@@ -27,6 +27,7 @@ SHA1 (patch-dbe_dbe.c) = 7c31812b30613b42e509677b6a430d261046a77a
 SHA1 (patch-dix_dispatch.c) = 454ce12b27d3906b22f32d7d4c1a3a6a6fb549e3
 SHA1 (patch-dix_dixfonts.c) = 2f1fd51c538eab12c06b85c4ddab18af25338174
 SHA1 (patch-dix_region.c) = 0a7fe6f67c4780c003f1e662be20e2294a7562f2
+SHA1 (patch-exa_exa__render.c) = e20fd4a8d30162d3d7b084ed2dbd46779387f25a
 SHA1 (patch-glx_glxcmds.c) = 2566885001178f47eb151a2ef84450b60137f3c1
 SHA1 (patch-glx_glxcmdsswap.c) = b9a0d5386ba928d2db95885f0b68414ffbae71ef
 SHA1 (patch-glx_glxserver.h) = 47bd1cc49dbf761c042f00adc6db8cec2a038501
@@ -50,6 +51,7 @@ SHA1 (patch-include_regionstr.h) = c6f3e3b263593b622e7087d3ebe2b470cf9526e3
 SHA1 (patch-os_access.c) = 94ee087d68bc9ba713dbe42102f971a1b8e6a3c4
 SHA1 (patch-os_rpcauth.c) = 6617d5ef0e3cc5e9e10cd8db74f87e347e52ebe3
 SHA1 (patch-randr_rrsdispatch.c) = 13a2e819fea3ab8fa4caee7f9450a518ac41e517
+SHA1 (patch-render_picture.h) = ec7085022e2c896daaa91378632003aabd957f5e
 SHA1 (patch-render_render.c) = f86496fc392681d2fba3c50bbd37b24b78bed682
 SHA1 (patch-test_Makefile.am) = 77caa0c25103307d5bd30178f72e552dbae9555a
 SHA1 (patch-test_misc.c) = 1615c03ceb595fa976a571455723665025c14aa0
