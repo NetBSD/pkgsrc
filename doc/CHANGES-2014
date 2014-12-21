@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4877 2014/12/21 02:39:39 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4878 2014/12/21 10:40:04 darcy Exp $
 
 # Please note that we are now in a FREEZE for new functionality in
 # pkgsrc.  That means no new packages, please, and no changes to the
@@ -6306,7 +6306,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/wgetpaste to 2.25 [mef 2014-12-13]
 	Updated net/tcpdump to 4.6.2 [mef 2014-12-13]
 	Updated textproc/mdocml to 1.13.2 [wiz 2014-12-13]
-	Updated www/ruby-userstream to 1.4.0 [tsutsui 2014-12-13]
+	Updated net/ruby-userstream to 1.4.0 [tsutsui 2014-12-13]
 	Updated x11/mlterm to 3.4.1 [tsutsui 2014-12-13]
 	Removed time/py-dateutil2 successor time/py-dateutil [obache 2014-12-14]
 	Updated net/ruby-tw to 1.0.9nb1 [tsutsui 2014-12-14]
