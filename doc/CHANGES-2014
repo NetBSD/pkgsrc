@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4878 2014/12/21 10:40:04 darcy Exp $
+$NetBSD: CHANGES-2014,v 1.4879 2014/12/21 13:40:58 ryoon Exp $
 
 # Please note that we are now in a FREEZE for new functionality in
 # pkgsrc.  That means no new packages, please, and no changes to the
@@ -6386,3 +6386,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/z80-asm to 2.3.7 [ryoon 2014-12-21]
 	Updated devel/dev86 to 0.16.21 [ryoon 2014-12-21]
 	Updated lang/gnat_util to 20140422nb1 [obache 2014-12-21]
+	Updated www/php-owncloud to 7.0.4 [ryoon 2014-12-21]
