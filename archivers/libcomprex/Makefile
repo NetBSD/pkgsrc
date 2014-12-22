@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2014/10/09 14:05:52 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2014/12/22 01:06:48 mef Exp $
 
 DISTNAME=	libcomprex-0.3.3
 PKGREVISION=	8
@@ -6,7 +6,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnupdate/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnupdate.org/components/libcomprex/index.xml
+HOMEPAGE=	http://gnupdate.sourceforge.net/components/libcomprex/index.xml
 COMMENT=	Library to handle (de)compression of files
 
 USE_LIBTOOL=		yes
