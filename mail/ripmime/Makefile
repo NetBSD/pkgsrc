@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/08/30 16:53:45 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2014/12/22 19:35:51 shattered Exp $
 #
 
 DISTNAME=	ripmime-1.4.0.10
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.pldaniels.com/ripmime/
 COMMENT=	Extract the attached files out of a MIME encoded email package
 
 MAKE_JOBS_SAFE=		no
-MAKE_ENV+=	LIBS=${BUILDLINK_LDADD.iconv}
+MAKE_ENV+=	LIBS="${BUILDLINK_LDFLAGS} ${BUILDLINK_LDADD.iconv}"
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
