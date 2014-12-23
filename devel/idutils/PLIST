@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/12/15 11:35:42 mef Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/12/23 04:49:11 obache Exp $
 bin/aid
 bin/defid
 bin/eid
@@ -9,7 +9,6 @@ bin/lid
 bin/mkid
 bin/xtokid
 info/idutils.info
-lib/charset.alias
 man/man1/aid.1
 man/man1/defid.1
 man/man1/eid.1
