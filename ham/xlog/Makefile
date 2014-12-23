@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2014/12/15 08:36:40 mef Exp $
+# $NetBSD: Makefile,v 1.63 2014/12/23 18:52:54 joerg Exp $
 #
 
 DISTNAME=	xlog-2.0.12
@@ -17,6 +17,13 @@ USE_PKGLOCALEDIR=yes
 USE_TOOLS+=	gmake pkg-config
 
 CONFIGURE_ARGS+=	--enable-hamlib
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+BUILDLINK_TRANSFORM+=	rm:-Wno-unused-but-set-variable
+_WRAP_EXTRA_ARGS.CC+=	-Wno-error=parentheses-equality -Wno-error=tautological-compare
+CWRAPPERS_APPEND.cc+=	-Wno-error=parentheses-equality -Wno-error=tautological-compare
+.endif
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../ham/hamlib/buildlink3.mk"
