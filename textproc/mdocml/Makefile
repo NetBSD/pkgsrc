@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2014/12/23 01:58:43 obache Exp $
+# $NetBSD: Makefile,v 1.47 2014/12/23 02:30:32 obache Exp $
 
 DISTNAME=	mdocml-1.13.2
 CATEGORIES=	textproc devel
@@ -23,6 +23,14 @@ SUBST_SED.roff=		-e 's,Xr roff,Xr mandoc-roff,g'
 
 post-extract:
 	${ECHO} PREFIX=${PREFIX} > ${WRKSRC}/configure.local
+	${ECHO} MANDIR=${PREFIX}/${PKGMANDIR} >> ${WRKSRC}/configure.local
+	${ECHO} "CFLAGS=${CFLAGS:Q}" >> ${WRKSRC}/configure.local
+	${ECHO} DBLIB=\"${LDFLAGS} -lsqlite3\" >> ${WRKSRC}/configure.local
+	${ECHO} "INSTALL=${INSTALL:Q}" >> ${WRKSRC}/configure.local
+	${ECHO} "INSTALL_PROGRAM=${INSTALL_PROGRAM:Q}" >> ${WRKSRC}/configure.local
+	${ECHO} "INSTALL_LIB=${INSTALL_DATA:Q}" >> ${WRKSRC}/configure.local
+	${ECHO} "INSTALL_MAN=${INSTALL_MAN:Q}" >> ${WRKSRC}/configure.local
+	${ECHO} "INSTALL_DATA=${INSTALL_DATA:Q}" >> ${WRKSRC}/configure.local
 	${ECHO} MANM_ROFF="mandoc-roff" >> ${WRKSRC}/configure.local
 # Mac OS X and Solaris 10 and newer do not support static binaries.
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
