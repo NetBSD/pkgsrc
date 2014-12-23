@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4884 2014/12/23 07:54:30 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4885 2014/12/23 23:09:20 khorben Exp $
 
 # Please note that we are now in a FREEZE for new functionality in
 # pkgsrc.  That means no new packages, please, and no changes to the
@@ -6390,3 +6390,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/modular-xorg-server to 1.12.4nb6 [wiz 2014-12-21]
 	Updated x11/modular-xorg-server to 1.12.4nb7 [wiz 2014-12-21]
 	Updated graphics/png to 1.6.16 [wiz 2014-12-23]
+	Updated net/synergy to 1.4.14 [khorben 2014-12-24]
