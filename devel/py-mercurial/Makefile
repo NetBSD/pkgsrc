@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/06/19 07:58:57 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/12/23 17:50:29 wiz Exp $
 
 DISTNAME=	mercurial-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,6 +19,9 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 INSTALLATION_DIRS+=	share/doc/mercurial
 
 .include "Makefile.version"
+
+do-test:
+	cd ${WRKSRC} && make tests PYTHON=${PYTHONBIN}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/*.1  ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
