@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4886 2014/12/24 13:00:32 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.4887 2014/12/24 13:08:05 nonaka Exp $
 
 # Please note that we are now in a FREEZE for new functionality in
 # pkgsrc.  That means no new packages, please, and no changes to the
@@ -6392,3 +6392,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/png to 1.6.16 [wiz 2014-12-23]
 	Updated net/synergy to 1.4.14 [khorben 2014-12-24]
 	Updated misc/libreoffice4 to 4.3.5.2 [ryoon 2014-12-24]
+	Updated fonts/koruri-ttf to 20141224 [nonaka 2014-12-24]
