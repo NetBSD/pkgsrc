@@ -1,0 +1,20 @@
+$NetBSD: patch-configure,v 1.1 2014/12/25 17:39:58 joerg Exp $
+
+--- configure.orig	2014-12-23 20:56:39.000000000 +0000
++++ configure
+@@ -120,15 +120,6 @@ cat >tmp.c <<EOF 
+ #include <iostream.h>
+ int main(){return 0;}
+ EOF
+-if test -n "${CC}"; then
+-   printf %s "Checking for user-supplied C++... " 1>&5
+-   if `${CC} tmp.c 2>/dev/null` 2>/dev/null; then
+-     echo "yes" 1>&5
+-   else
+-     echo "no" 1>&5
+-     CC=
+-   fi
+-fi
+ if test -z "${CC}"; then
+     printf %s "Looking for a C++ compiler... " 1>&5
+     if `g++ tmp.c 2>/dev/null` 2>/dev/null; then
