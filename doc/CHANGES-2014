@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4890 2014/12/25 05:37:02 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.4891 2014/12/25 06:29:04 obache Exp $
 
 # Please note that we are now in a FREEZE for new functionality in
 # pkgsrc.  That means no new packages, please, and no changes to the
@@ -6396,3 +6396,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/ser to 0.8.14nb3 [obache 2014-12-25]
 	Updated graphics/ivtools to 1.2.8nb3 [obache 2014-12-25]
 	Updated devel/p5-Test-BDD-Cucumber to 0.32 [schmonz 2014-12-25]
+	Updated math/blitz++ to 0.8nb3 [obache 2014-12-25]
