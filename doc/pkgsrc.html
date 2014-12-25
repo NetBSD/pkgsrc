@@ -2220,7 +2220,10 @@ works.</p>
 	    By default, dependencies are only installed, and no binary
 	    package is created for them. You can set this variable to
 	    <code class="literal">package-install</code> to automatically create binary
-	    packages after installing dependencies.</p></li>
+	    packages after installing dependencies. Please note that the
+	    <code class="varname">PKGSRC_KEEP_BIN_PKGS</code>can be set to
+	    <code class="literal">yes</code> to preserve binary packages when
+	    using the <code class="literal">install</code> as well.</p></li>
 </ul></div>
 </div>
 <div class="sect1">
@@ -4020,7 +4023,7 @@ converters    games         mbone         print         x11
   downloaded patches, if any.
   </p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p><code class="varname">PATCHFILES:</code>
+<li class="listitem"><p><code class="varname">PATCHFILES</code>:
     Name(s) of additional files that contain distribution patches.
     There is no default. pkgsrc will look for them at
     <code class="varname">PATCH_SITES</code>.
@@ -4029,7 +4032,11 @@ converters    games         mbone         print         x11
     <code class="filename">.Z</code>.</p></li>
 <li class="listitem"><p><code class="varname">PATCH_SITES</code>:
     Primary location(s) for distribution patch files (see
-    <code class="varname">PATCHFILES</code> below) if not found locally.</p></li>
+    <code class="varname">PATCHFILES</code> above) if not found locally.</p></li>
+<li class="listitem"><p><code class="varname">PATCH_DIST_STRIP</code>:
+    an argument to <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?patch+1+NetBSD-5.0.1+i386"><span class="citerefentry"><span class="refentrytitle">patch</span>(1)</span></a> that sets the pathname strip count to
+    help find the correct files to patch. It defaults to
+    <span class="command"><strong>-p0</strong></span>.</p></li>
 </ul></div>
 <p>The third section contains the following variables.
   </p>
@@ -7341,7 +7348,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="tools.questions"></a>18.4. Questions regarding the tools</h2></div></div></div>
 <div class="qandaset">
-<a name="idm77778064"></a><dl>
+<a name="idm75771792"></a><dl>
 <dt>18.4.1. <a href="#tools.new">How do I add a new tool?</a>
 </dt>
 <dt>18.4.2. <a href="#tools.listall">How do I get a list of all available
@@ -7360,7 +7367,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="idm77777680"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="idm75771408"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7370,7 +7377,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="idm77776656"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="idm75770384"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7381,7 +7388,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="idm77775632"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="idm75769232"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -7870,25 +7877,26 @@ DEPENDS+=	{perl&gt;=5.10.0,p5-version-[0-9]*}:../../devel/p5-version
 <p>Your package may conflict with other packages a user might
     already have installed on his system, e.g. if your package
     installs the same set of files as another package in the pkgsrc
-    tree.</p>
-<p>In this case you can set <code class="varname">CONFLICTS</code> to a
+    tree or has the same <code class="varname">PKGNAME</code>.</p>
+<p>These cases are handled automatically by the packaging tools
+    at package installation time and do not need to be handled
+    manually.</p>
+<p>In case the conflicts can not be recognized automatically
+    (e.g., packages using the same config file location but no other
+    shared files), you can set <code class="varname">CONFLICTS</code> to a
     space-separated list of packages (including version string) your
     package conflicts with.</p>
-<p>For example, <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/x11/Xaw3d/README.html" target="_top"><code class="filename">x11/Xaw3d</code></a>
-    and <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/x11/Xaw-Xpm/README.html" target="_top"><code class="filename">x11/Xaw-Xpm</code></a>
-    install the same shared library, thus you set in
-    <code class="filename">pkgsrc/x11/Xaw3d/Makefile</code>:</p>
+<p>For example, if both <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/foo/bar/README.html" target="_top"><code class="filename">foo/bar</code></a>
+    and <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/foo/baz/README.html" target="_top"><code class="filename">foo/baz</code></a>
+    use the same config file, you would set in
+    <code class="filename">foo/bar/Makefile</code>:</p>
 <pre class="programlisting">
-CONFLICTS=      Xaw-Xpm-[0-9]*
+CONFLICTS=      baz-[0-9]*
     </pre>
-<p>and in <code class="filename">pkgsrc/x11/Xaw-Xpm/Makefile</code>:</p>
+<p>and in <code class="filename">pkgsrc/foo/baz/Makefile</code>:</p>
 <pre class="programlisting">
-CONFLICTS=      Xaw3d-[0-9]*
+CONFLICTS=      bar-[0-9]*
     </pre>
-<p>Packages will automatically conflict with other packages
-    with the name prefix and a different version
-    string. <span class="quote">&#8220;<span class="quote">Xaw3d-1.5</span>&#8221;</span> e.g. will automatically
-    conflict with the older version <span class="quote">&#8220;<span class="quote">Xaw3d-1.3</span>&#8221;</span>.</p>
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
@@ -9463,7 +9471,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm77219600"></a><dl>
+<a name="idm77310992"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9508,7 +9516,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm77219216"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm77310608"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9524,7 +9532,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm77211024"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idm77302416"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9542,7 +9550,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm77206672"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm77298064"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9560,7 +9568,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm77202448"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm77293840"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9573,7 +9581,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm77200272"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm77291664"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9589,7 +9597,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm77197200"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm77288464"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9613,7 +9621,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm77180944"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm77272208"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9638,7 +9646,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm77177104"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm77268496"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9686,7 +9694,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm77170704"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm77261968"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
