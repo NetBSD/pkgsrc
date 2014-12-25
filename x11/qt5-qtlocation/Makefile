@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2014/04/23 07:05:32 adam Exp $
+# $NetBSD: Makefile,v 1.7 2014/12/25 13:51:14 wiz Exp $
 
 PKGNAME=	qt5-qtlocation-${QTVERSION}
 COMMENT=	Qt5 module for qtlocation
-
-.include "../../x11/qt5-qtbase/Makefile.common"
 
 USE_LIBTOOL=		yes
 CONFIGURE_ARGS+=	-I${QTDIR}/include -L${QTDIR}/lib
@@ -16,6 +14,8 @@ INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 INSTALLATION_DIRS+=	lib/pkgconfig
 
 PC_FILES=		Qt5Positioning.pc
+
+.include "../../x11/qt5-qtbase/Makefile.common"
 
 post-install:
 .for i in ${PC_FILES}

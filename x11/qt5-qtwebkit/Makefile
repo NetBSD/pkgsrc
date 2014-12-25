@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2014/12/01 11:30:41 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2014/12/25 13:51:14 wiz Exp $
 
 PKGNAME=	qt5-qtwebkit-${QTVERSION}
 PKGREVISION=	4
 COMMENT=	Qt5 WebView module
-
-.include "../../x11/qt5-qtbase/Makefile.common"
 
 BUILD_DEPENDS+=		gperf-[0-9]*:../../devel/gperf
 
@@ -29,6 +27,8 @@ BROKEN_FILES+=		qt5/lib/pkgconfig/Qt5WebKit.pc \
 			qt5/lib/libQt5WebKitWidgets.la \
 			qt5/qml/QtWebKit/experimental/libqmlwebkitexperimentalplugin.la \
 			qt5/qml/QtWebKit/libqmlwebkitplugin.la
+
+.include "../../x11/qt5-qtbase/Makefile.common"
 
 post-install:
 # Fix broken files
