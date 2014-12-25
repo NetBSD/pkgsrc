@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2014/12/25 04:57:25 obache Exp $
+@comment $NetBSD: PLIST,v 1.12 2014/12/25 05:10:38 obache Exp $
 bin/comdraw
 bin/comterp
 bin/comtest
@@ -205,6 +205,7 @@ include/IV-2_6/InterViews/world.h
 include/IV-2_6/_enter.h
 include/IV-2_6/_leave.h
 include/IV-2_6/_names.h
+include/IV-3_1/InterViews
 include/IV-X11/Xdefs.h
 include/IV-X11/Xext.h
 include/IV-X11/Xlib.h
@@ -844,4 +845,3 @@ man/man3/transfns.3
 man/man3/transforms.3
 man/man3/uctrls.3
 man/man3/viewcmds.3
-@pkgdir include/IV-3_1
