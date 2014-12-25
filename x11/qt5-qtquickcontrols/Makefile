@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/04/23 07:05:32 adam Exp $
-
-.include "../../x11/qt5-qtbase/Makefile.common"
+# $NetBSD: Makefile,v 1.7 2014/12/25 13:51:14 wiz Exp $
 
 PKGNAME=	qt5-qtquickcontrols-${QTVERSION}
 COMMENT=	Qt5 module for QuickControls
@@ -13,6 +11,8 @@ BUILD_DIRS=		qtquickcontrols
 MAKE_ENV+=		QTDIR=${QTDIR}
 
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
+
+.include "../../x11/qt5-qtbase/Makefile.common"
 
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
