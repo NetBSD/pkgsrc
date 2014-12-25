@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/09/11 23:04:35 asau Exp $
+# $NetBSD: Makefile,v 1.23 2014/12/25 23:28:50 mef Exp $
 #
 
 DISTNAME=	xgap4r16
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/share/
 EXTRACT_SUFX=	.zoo
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gap-system.org/Share/xgap.html
+HOMEPAGE=	http://www.gap-system.org/Packages/xgap.html
 COMMENT=	GUI for GAP
 
 WRKSRC=		${WRKDIR}/${GAP_PKG_NAME}
