@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2010/04/05 22:52:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/12/25 04:57:25 obache Exp $
 bin/comdraw
 bin/comterp
 bin/comtest
@@ -617,7 +617,7 @@ lib/ivtools/config/alpha3.0-gcc.mk
 lib/ivtools/config/alpha3.2-gcc.mk
 lib/ivtools/config/alpha4-gcc.mk
 lib/ivtools/config/arch.def
-lib/ivtools/config/config-netbsd-gcc.defs
+lib/ivtools/config/config-${LOWER_OPSYS}-gcc.defs
 lib/ivtools/config/config.defs.in
 lib/ivtools/config/config.mk
 lib/ivtools/config/config.null.mk
