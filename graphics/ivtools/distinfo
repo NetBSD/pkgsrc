@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.23 2012/12/25 21:09:08 joerg Exp $
+$NetBSD: distinfo,v 1.24 2014/12/25 04:53:14 obache Exp $
 
 SHA1 (ivtools-1.2.8.tgz) = b494c726cf8784e0a5ca3a4092e5831d2d5b2bba
 RMD160 (ivtools-1.2.8.tgz) = 7f63f2b491202ba81c6d24234760d17d7f95ebc6
 Size (ivtools-1.2.8.tgz) = 2168627 bytes
 SHA1 (patch-aa) = 191619b7db43c47d7cc991bc33787434f0ef6948
-SHA1 (patch-ab) = 3d3f9b7a821a666c4e0aade1f0236e6ee48f69b8
+SHA1 (patch-ab) = 4d47be6b806f76d66eb83e2f32b0507c56ae8530
 SHA1 (patch-ac) = 2b9b8065194dc0badcafdabe22079101416515aa
 SHA1 (patch-ad) = f5e19829367fb8d0406077934d2ccc222497b9aa
 SHA1 (patch-ae) = 64d0b99a868baf4be3ffd55f387ee1cd4f07747e

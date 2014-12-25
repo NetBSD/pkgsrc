@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2007/02/15 18:26:14 joerg Exp $
+$NetBSD: patch-ab,v 1.5 2014/12/25 04:53:14 obache Exp $
 
 --- configure.orig	2005-10-10 18:35:27.000000000 +0000
 +++ configure
@@ -6,7 +6,7 @@ $NetBSD: patch-ab,v 1.4 2007/02/15 18:26:14 joerg Exp $
      *hpux*10*20) platform_part=hpux10.20 ;;
      *hpux* ) platform_part=hpux ;;
      *netbsd* ) platform_part=netbsd ;;
-+    *dragonfly* ) platform_part=netbsd ;;
++    *dragonfly* ) platform_part=dragonfly ;;
      *linux* ) platform_part=linux ;;
      m88k-*-sysv4 ) platform_part=m88k-sysv4 ;;
      m88k-*-sysv3 ) platform_part=m88k-sysv3 ;;
