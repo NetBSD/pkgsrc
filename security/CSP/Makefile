@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2014/05/29 23:37:18 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2014/12/25 02:34:53 obache Exp $
 #
 
 DISTNAME=	CSP-0.32
@@ -26,7 +26,7 @@ PERL5_PACKLIST=	auto/CSP/.packlist
 CSPHOME=	${VARBASE}/csp
 OPENSSLBIN=	${BUILDLINK_PREFIX.openssl}/bin/openssl
 OWN_DIRS=	${CSPHOME}
-INSTALLATION_DIRS=	share/doc/csp ${CSPHOME}
+INSTALLATION_DIRS=	share/doc/csp
 
 BUILD_DEFS+=	CSPHOME
 
@@ -37,6 +37,7 @@ SUBST_SED.csp+=		-e s,@@OPENSSL@@,${OPENSSLBIN},
 SUBST_STAGE.csp=	post-patch
 
 post-install:
+	${INSTALL_DATA_DIR} ${DESTDIR}${CSPHOME}
 	cd ${WRKSRC}/ca && ${FIND} . -type f | pax -rw ${DESTDIR}${CSPHOME}
 	${INSTALL_DATA} ${DISTDIR}/${CSPGUIDE} ${DESTDIR}${PREFIX}/share/doc/csp
 
