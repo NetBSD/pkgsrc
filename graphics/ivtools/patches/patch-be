@@ -1,4 +1,7 @@
-$NetBSD: patch-be,v 1.1 2010/04/05 22:52:23 markd Exp $
+$NetBSD: patch-be,v 1.2 2014/12/25 05:10:38 obache Exp $
+
+* DESTDIR support
+* Assume cp as GNU cp only for Linux.
 
 --- config/rules.def.orig	2005-10-11 21:21:17.000000000 +0000
 +++ config/rules.def
@@ -153,8 +156,12 @@ $NetBSD: patch-be,v 1.1 2010/04/05 22:52:23 markd Exp $
  #endif
  #endif
  
-@@ -1095,19 +1095,19 @@ uninstall::								@@\
- #if !defined(SVR4) && !defined(DarwinArchitecture)
+@@ -1092,22 +1092,22 @@ uninstall::								@@\
+ #if InstallRelative
+ #define InstallSymLink(dir, file) /**/
+ #else
+-#if !defined(SVR4) && !defined(DarwinArchitecture)
++#if defined(LinuxArchitecture)
  #define InstallSymLink(dir, file)					@@\
  install::								@@\
 -	MakeDir(dir)							@@\
