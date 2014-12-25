@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2013/03/02 20:33:32 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2014/12/25 02:50:27 obache Exp $
 #
 
 DISTNAME=	ser-0.8.14_src
 PKGNAME=	ser-0.8.14
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net comms
 MASTER_SITES=	ftp://ftp.berlios.de/pub/ser/0.8.14/src/
 
@@ -32,6 +32,10 @@ CHECK_PORTABILITY_SKIP+=	scripts/sc
 INSTALLATION_DIRS+=	${EGDIR}
 
 .include "options.mk"
+
+# modules/*/README will be installed.
+post-extract:
+	${RUN}cd ${WRKSRC}/modules/mediaproxy && ${MV} Readme README;
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
