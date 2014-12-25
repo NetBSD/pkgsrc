@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:09:42 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/12/25 02:50:27 obache Exp $
 sbin/ser
 sbin/serctl
 sbin/ser_mysql.sh
@@ -51,6 +51,7 @@ share/doc/ser/README.exec
 share/doc/ser/README.ext
 share/doc/ser/README.group
 share/doc/ser/README.mangler
+share/doc/ser/README.mediaproxy
 share/doc/ser/README.maxfwd
 share/doc/ser/README.msilo
 share/doc/ser/README.nathelper
