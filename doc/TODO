@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13942 2014/12/25 14:49:06 mef Exp $
+$NetBSD: TODO,v 1.13943 2014/12/25 23:59:48 mef Exp $
 
 Suggested new packages
 ======================
@@ -403,6 +403,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bbweather-0.6.3
 	o benchfft-3.1
 	o blender-2.72
+	o bliz++-0.10
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bochs-2.6.7
@@ -415,6 +416,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bzr-2.6.0
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
+	o calcoo-2.1.0
 	o calibre-2.2.0 [wip]
 	o calibre-2.13.0
 	o calligra-2.4.3 [in wip; koffice successor]
