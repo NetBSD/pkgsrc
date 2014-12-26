@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13943 2014/12/25 23:59:48 mef Exp $
+$NetBSD: TODO,v 1.13944 2014/12/26 00:31:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -402,6 +402,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bbsload-0.2.8
 	o bbweather-0.6.3
 	o benchfft-3.1
+	o binutils-2.25
 	o blender-2.72
 	o bliz++-0.10
 	o blur6ex-0.3.462
@@ -465,7 +466,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cssc-1.4.0
 	o cuisine-0.6.5
 	o cups-2.0.1
-	o cvs-fast-export-1.11
+	o cvs-fast-export-1.29
 	o cvs2p4-2.5.5 [schmonz]
 	o cwm-5.1
 	o cxref-1.6e
@@ -753,7 +754,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmicrohttpd-0.9.38
 	o libnasl-2.3.1
 	o liboobs-2.32.0 [GNOME 2.32]
-	o libopenmpt-0.2.4667
+	o libopenmpt-0.2.4667 [wiz]
 	o libpcap-1.5.1
 	o libplist-1.11
 	o libprelude-1.1.0
