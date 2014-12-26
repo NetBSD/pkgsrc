@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/09/11 23:04:25 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/12/26 23:53:08 mef Exp $
 #
 
 DISTNAME=	openfst-1.1
 CATEGORIES=	math
-MASTER_SITES=	http://mohri-lt.cs.nyu.edu/twiki/pub/FST/FstDownload/
+MASTER_SITES=	http://www.openfst.org/twiki/pub/FST/FstDownload/
 
 MAINTAINER=	pallegra@gmail.com
 HOMEPAGE=	http://www.openfst.org/
