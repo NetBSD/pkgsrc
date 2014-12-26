@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.111 2014/08/21 16:06:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.112 2014/12/26 23:21:10 mef Exp $
 
 DISTNAME=	xsane-0.998
 PKGNAME=	xsane-0.99.8
 PKGREVISION=	19
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.xsane.org/download/old/ \
+MASTER_SITES=	http://www.xsane.org/download/ \
 		ftp://ftp.u-aizu.ac.jp/pub/misc/device/scsi/scanner/sane/xsane/ \
 		ftp://sunsite.uio.no/pub/sane/xsane/ \
 		ftp://ftp.informatik.uni-oldenburg.de/pub/sane/xsane/
