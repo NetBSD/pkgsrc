@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13944 2014/12/26 00:31:22 wiz Exp $
+$NetBSD: TODO,v 1.13945 2014/12/26 07:20:40 mef Exp $
 
 Suggested new packages
 ======================
@@ -754,6 +754,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmicrohttpd-0.9.38
 	o libnasl-2.3.1
 	o liboobs-2.32.0 [GNOME 2.32]
+	o libofx-0.9.10
 	o libopenmpt-0.2.4667 [wiz]
 	o libpcap-1.5.1
 	o libplist-1.11
@@ -964,6 +965,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-sybase-0.37
 	o py-tlslite-0.4.6
 	o py-tortoisehg-3.2.2
+	o py-trytond-account-3.4.1	
 	o py-trytond-stock-3.4.0
 	o py-wxWidgets-3.0.0
 	o py-zconfig-3.0.3
