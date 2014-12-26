@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.30 2014/05/31 14:22:38 obache Exp $
+# $NetBSD: options.mk,v 1.31 2014/12/26 08:37:14 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uim
 PKG_SUPPORTED_OPTIONS=	anthy canna curl eb expat ffi gnome gnome3 gtk gtk3 m17nlib openssl prime sj3 sqlite uim-fep wnn4 xim
@@ -182,7 +182,7 @@ CONFIGURE_ARGS+=	--disable-kde4-applet
 
 .if !empty(PKG_OPTIONS:Mm17nlib)
 .  include "../../devel/m17n-lib/buildlink3.mk"
-DEPENDS+=		m17n-contrib-[0-9]*:../../misc/m17n-contrib
+DEPENDS+=		{m17n-db>=1.6.5,m17n-contrib-[0-9]*}:../../misc/m17n-db
 PLIST.m17nlib=		yes
 INSTALL_TEMPLATES+=	INSTALL.m17nlib
 DEINSTALL_TEMPLATES+=	DEINSTALL.m17nlib
