@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.31 2014/12/26 08:37:14 obache Exp $
+# $NetBSD: options.mk,v 1.32 2014/12/26 08:43:27 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uim
 PKG_SUPPORTED_OPTIONS=	anthy canna curl eb expat ffi gnome gnome3 gtk gtk3 m17nlib openssl prime sj3 sqlite uim-fep wnn4 xim
@@ -100,7 +100,7 @@ PLIST.curl=		yes
 .if !empty(PKG_OPTIONS:Meb)
 .include "../../textproc/eb/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-eb
-CONFIGURE_ARGS+=	--with-eb-conf=${PKG_SYSCONFDIR}/eb.conf
+CONFIGURE_ARGS+=	--with-eb-conf=${PKG_SYSCONFBASE}/eb.conf
 PLIST.eb=		yes
 .endif
 
