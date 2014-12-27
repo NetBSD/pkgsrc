@@ -1,0 +1,135 @@
+$NetBSD: patch-ao,v 1.4.4.2 2014/12/27 11:59:22 plunky Exp $
+
+--- src/hcidump.c.orig	2011-06-13 01:54:33.000000000 +0000
++++ src/hcidump.c
+@@ -50,6 +50,10 @@
+ #include "parser/parser.h"
+ #include "parser/sdp.h"
+ 
++#ifndef AI_ADDRCONFIG
++#define AI_ADDRCONFIG	0
++#endif
++
+ #define SNAP_LEN 	HCI_MAX_FRAME_SIZE
+ #define DEFAULT_PORT	"10839";
+ 
+@@ -146,7 +150,7 @@ static inline int write_n(int fd, char *
+ 	return t;
+ }
+ 
+-static int process_frames(int dev, int sock, int fd, unsigned long flags)
++static int process_frames(char *dev, int sock, int fd, unsigned long flags)
+ {
+ 	struct cmsghdr *cmsg;
+ 	struct msghdr msg;
+@@ -188,7 +192,7 @@ static int process_frames(int dev, int s
+ 	if (dev == HCI_DEV_NONE)
+ 		printf("system: ");
+ 	else
+-		printf("device: hci%d ", dev);
++		printf("device: %s ", dev);
+ 
+ 	printf("snap_len: %d filter: 0x%lx\n", snap_len, parser.filter);
+ 
+@@ -530,10 +534,13 @@ static int open_file(char *file, int mod
+ 	return fd;
+ }
+ 
+-static int open_socket(int dev, unsigned long flags)
++static int open_socket(char *dev, unsigned long flags)
+ {
+-	struct sockaddr_hci addr;
++	struct sockaddr_bt addr;
+ 	struct hci_filter flt;
++#if 1
++	int sk, opt;
++#else
+ 	struct hci_dev_info di;
+ 	int sk, dd, opt;
+ 
+@@ -559,6 +566,7 @@ static int open_socket(int dev, unsigned
+ 
+ 		hci_close_dev(dd);
+ 	}
++#endif
+ 
+ 	/* Create HCI socket */
+ 	sk = socket(AF_BLUETOOTH, SOCK_RAW, BTPROTO_HCI);
+@@ -574,12 +582,13 @@ static int open_socket(int dev, unsigned
+ 	}
+ 
+ 	opt = 1;
+-	if (setsockopt(sk, SOL_HCI, HCI_TIME_STAMP, &opt, sizeof(opt)) < 0) {
++	if (setsockopt(sk, SOL_SOCKET, SO_TIMESTAMP, &opt, sizeof(opt)) < 0) {
+ 		perror("Can't enable time stamp");
+ 		return -1;
+ 	}
+ 
+ 	/* Setup filter */
++#if 0
+ 	hci_filter_clear(&flt);
+ 	hci_filter_all_ptypes(&flt);
+ 	hci_filter_all_events(&flt);
+@@ -587,13 +596,34 @@ static int open_socket(int dev, unsigned
+ 		perror("Can't set filter");
+ 		return -1;
+ 	}
++#else
++	memset(&flt, 0xff, sizeof(flt));
++	if (setsockopt(sk, BTPROTO_HCI, SO_HCI_EVT_FILTER, &flt, sizeof(flt)) < 0) {
++		perror("Can't set event filter");
++		exit(1);
++	}
++
++	if (setsockopt(sk, BTPROTO_HCI, SO_HCI_PKT_FILTER, &flt, sizeof(flt)) < 0) {
++		perror("Can't set packet filter");
++		exit(1);
++	}
++#endif
+ 
+ 	/* Bind socket to the HCI device */
+ 	memset(&addr, 0, sizeof(addr));
++#if 0
+ 	addr.hci_family = AF_BLUETOOTH;
+ 	addr.hci_dev = dev;
++#else
++	addr.bt_len = sizeof(addr);
++	addr.bt_family = AF_BLUETOOTH;
++	if (dev != HCI_DEV_NONE && !bt_devaddr(dev, &addr.bt_bdaddr)) {
++		perror("device");
++		exit(1);
++	}
++#endif
+ 	if (bind(sk, (struct sockaddr *) &addr, sizeof(addr)) < 0) {
+-		printf("Can't attach to device hci%d. %s(%d)\n", 
++		printf("Can't attach to device %s. %s(%d)\n", 
+ 					dev, strerror(errno), errno);
+ 		return -1;
+ 	}
+@@ -770,7 +800,7 @@ static int wait_connection(char *addr, c
+ 	return -1;
+ }
+ 
+-static int run_server(int dev, char *addr, char *port, unsigned long flags)
++static int run_server(char *dev, char *addr, char *port, unsigned long flags)
+ {
+ 	while (1) {
+ 		int dd, sk;
+@@ -902,7 +932,7 @@ int main(int argc, char *argv[])
+ {
+ 	unsigned long flags = 0;
+ 	unsigned long filter = 0;
+-	int device = 0;
++	char *device = HCI_DEV_NONE;
+ 	int defpsm = 0;
+ 	int defcompid = DEFAULT_COMPID;
+ 	int opt, pppdump_fd = -1, audio_fd = -1;
+@@ -911,7 +941,7 @@ int main(int argc, char *argv[])
+ 		switch(opt) {
+ 		case 'i':
+ 			if (strcasecmp(optarg, "none") && strcasecmp(optarg, "system"))
+-				device = atoi(optarg + 3);
++				device = optarg;
+ 			else
+ 				device = HCI_DEV_NONE;
+ 			break;
