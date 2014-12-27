@@ -1,8 +1,11 @@
-$NetBSD: patch-ae,v 1.5 2011/04/30 11:46:15 asau Exp $
+$NetBSD: patch-ae,v 1.6 2014/12/27 00:13:28 dholland Exp $
 
---- configure.orig	2010-04-21 14:03:23.000000000 +0400
-+++ configure	2010-05-02 22:52:09.000000000 +0400
-@@ -15539,7 +15539,8 @@
+- add more functions to check for (XXX: why is half the line duplicated?)
+- update for readline API changes
+
+--- configure.orig	2011-03-21 18:12:58.000000000 +0000
++++ configure
+@@ -16069,7 +16069,8 @@ fi
  
  for ac_func in putenv strdup strerror strsignal mkstemp getpagesize \
  	getdtablesize strstr ftruncate floorl ceill sqrtl frexpl ldexpl asinl \
@@ -12,3 +15,12 @@ $NetBSD: patch-ae,v 1.5 2011/04/30 11:46:15 asau Exp $
          lrint trunc strsep strpbrk symlink mkdtemp
  do :
    as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
+@@ -17737,7 +17738,7 @@ main()
+ {
+   rl_bind_key ('\t', rl_insert);
+   /* This is missing in BSD libedit!  */
+-  rl_filename_quoting_function = (CPFunction *) readline_quote_filename;
++  rl_filename_quoting_function = (rl_quote_func_t *) readline_quote_filename;
+   exit(0);
+ }
+ EOF
