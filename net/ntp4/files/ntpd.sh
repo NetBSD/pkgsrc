@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: ntpd.sh,v 1.3 2014/03/05 12:24:43 obache Exp $
+# $NetBSD: ntpd.sh,v 1.4 2014/12/27 02:48:27 taca Exp $
 #
 
 # PROVIDE: ntpd
@@ -42,6 +42,22 @@ ntpd_precmd()
 		( cd /dev ; /bin/pax -rw -pe clockctl "${ntpd_chrootdir}/dev" )
 	fi
 	ln -fs "${ntpd_chrootdir}/var/db/ntp.drift" /var/db/ntp.drift
+
+	if [ ! -d "${ntpd_chrootdir}/etc" ]; then
+		mkdir "${ntpd_chrootdir}/etc"
+	fi
+	if [ ! -f "${ntpd_chrootdir}/etc/services" ]; then
+		(echo "ntp		123/udp"
+		 echo "ntp		123/tcp") \
+			> "${ntpd_chrootdir}/etc/services"
+	fi
+	if [ ! -d "${ntpd_chrootdir}/var/db" ]; then
+		mkdir -p "${ntpd_chrootdir}/var/db"
+	fi
+	if [ ! -f "${ntpd_chrootdir}/var/db/services.cdb" ]; then
+		services_mkdb -o "${ntpd_chrootdir}/var/db/services.cdb" \
+			"${ntpd_chrootdir}/etc/services"
+	fi
 
 	#	Change run_rc_commands()'s internal copy of $ntpd_flags
 	#
