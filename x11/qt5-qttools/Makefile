@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2014/10/07 16:47:17 adam Exp $
+# $NetBSD: Makefile,v 1.12 2014/12/27 22:57:13 wiz Exp $
 
 PKGNAME=	qt5-qttools-${QTVERSION}
 PKGREVISION=	2
 COMMENT=	Qt5 tools
-
-.include "../../x11/qt5-qtbase/Makefile.common"
 
 DEPENDS+=		xdg-utils-[0-9]*:../../misc/xdg-utils
 
@@ -17,19 +15,12 @@ MAKE_ENV+=		QTDIR=${QTDIR}
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 INSTALLATION_DIRS+=	lib/pkgconfig
 
-QTPROG_BIN=		assistant linguist qcollectiongenerator \
-			designer lrelease qhelpconverter \
-			lconvert lupdate qhelpgenerator
+.include "../../x11/qt5-qtbase/Makefile.common"
 
 QTPKGCONFIGPC=		Qt5CLucene.pc Qt5DesignerComponents.pc Qt5UiTools.pc \
 			Qt5Designer.pc Qt5Help.pc
 
 post-install:
-.for prog in ${QTPROG_BIN}
-	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \
-		${WRKSRC}/${BUILD_DIRS}/bin/${prog} \
-		${DESTDIR}${QTPREFIX}/bin/${prog}
-.endfor
 .for i in ${QTPKGCONFIGPC}
 	${RM} -f ${DESTDIR}${PREFIX}/lib/pkgconfig/${i} && \
 		cd ${DESTDIR}${PREFIX}/lib/pkgconfig && \
