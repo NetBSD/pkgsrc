@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4893 2014/12/27 00:14:21 dholland Exp $
+$NetBSD: CHANGES-2014,v 1.4894 2014/12/27 00:21:28 dholland Exp $
 
 # Please note that we are now in a FREEZE for new functionality in
 # pkgsrc.  That means no new packages, please, and no changes to the
@@ -6399,3 +6399,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated math/blitz++ to 0.8nb3 [obache 2014-12-25]
 	Updated archivers/unzip to 6.0nb2 [wiz 2014-12-25]
 	Updated lang/smalltalk to 3.2.4nb20 [dholland 2014-12-27]
+	Updated mail/exmh to 2.7.2nb6 [dholland 2014-12-27]
