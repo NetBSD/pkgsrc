@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2014/12/07 08:45:59 obache Exp $
+# $NetBSD: Makefile.common,v 1.44 2014/12/27 02:21:26 dholland Exp $
 #
 # used by chat/finch/Makefile
 # used by chat/libpurple/Makefile
@@ -41,6 +41,9 @@ CONFIGURE_ARGS+=	--disable-cyrus-sasl
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--disable-nm
 CONFIGURE_ARGS+=	--disable-vv
+
+CPPFLAGS.SunOS+=       -D__EXTENSIONS__
+CFLAGS.SunOS+=	       -Wno-error=implicit-function-declaration
 
 PKGCONFIG_OVERRIDE+=	finch/finch.pc.in
 PKGCONFIG_OVERRIDE+=	finch/libgnt/gnt.pc.in
