@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2013/10/09 17:39:01 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2014/12/27 14:51:54 mef Exp $
 #
 
 DISTNAME=		qscintilla-1.65-gpl-1.6
@@ -8,7 +8,7 @@ CATEGORIES=		x11
 MASTER_SITES=		http://www.river-bank.demon.co.uk/download/QScintilla/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.riverbankcomputing.co.uk/qscintilla/
+HOMEPAGE=		http://www.riverbankcomputing.co.uk/software/qscintilla/intro
 COMMENT=		Scintilla C++ editor class for Qt
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/qt
