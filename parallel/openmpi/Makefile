@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2014/05/29 23:37:14 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2014/12/27 02:10:19 dholland Exp $
 
 DISTNAME=	openmpi-1.6.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.open-mpi.org/software/ompi/v1.6/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -38,6 +38,7 @@ USE_TOOLS+=		perl:run
 TEST_TARGET=	check
 
 .if ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD" || \
+    ${OPSYS} == "Linux" || \
     (${OPSYS} == "NetBSD" && exists(/var/shm))
 PLIST_SRC+=		PLIST.shm
 .endif
