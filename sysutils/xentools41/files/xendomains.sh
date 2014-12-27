@@ -28,7 +28,7 @@
 . /etc/rc.subr
 
 name="xendomains"
-ctl_command="@PREFIX@/sbin/xl"
+ctl_command="@PREFIX@/sbin/xm"
 start_cmd="xendomains_start"
 stop_cmd="xendomains_stop"
 list_cmd="xendomains_list"
