@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1.8.2 2014/12/27 11:59:22 plunky Exp $
+man/cat8/hcidump.0
+man/man8/hcidump.8
+sbin/hcidump
