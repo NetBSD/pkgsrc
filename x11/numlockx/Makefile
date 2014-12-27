@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.11 2012/10/29 05:06:41 asau Exp $
+# $NetBSD: Makefile,v 1.12 2014/12/27 14:45:45 mef Exp $
 #
 
 DISTNAME=		numlockx-1.1
 PKGREVISION=		1
 CATEGORIES=		x11
-MASTER_SITES=		http://ktown.kde.org/~seli/numlockx/
+MASTER_SITES=		http://home.kde.org/~seli/numlockx/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://ktown.kde.org/~seli/numlockx/
+HOMEPAGE		http://home.kde.org/~seli/numlockx/
 COMMENT=		Allows you to start X with numlock turned on
 
 GNU_CONFIGURE=		yes
