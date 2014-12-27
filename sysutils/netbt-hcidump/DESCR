@@ -1,0 +1,7 @@
+HCIdump reads raw HCI data coming from and going to a Bluetooth device and
+prints to screen commands, events and data in a human-readable form.
+Optionally, the dump can be written to a file rather than parsed, and the dump
+file can be parsed in a subsequent moment.
+
+This is a patched standalone version not requiring bluez-libs, suitable
+for use with the netbt Bluetooth stack [originating] in NetBSD.
