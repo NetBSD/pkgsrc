@@ -1,0 +1,58 @@
+$NetBSD: patch-mailx.1,v 1.1 2014/12/28 14:16:14 bsiegert Exp $
+
+Imported Debian package fixes:
+- remove SSL2 references since it is no longer supported by OpenSSL.
+- fixed Lintian warning (warning: macro `N' not defined)
+- document that address expansion is disabled unless the expandaddr binary
+  option is set.  This has been assigned CVE-2014-7844 for BSD mailx, but it
+  is not a vulnerability in Heirloom mailx because this feature was documented.
+
+
+--- mailx.1.orig	2011-04-26 21:23:22.000000000 +0000
++++ mailx.1
+@@ -656,6 +656,14 @@ but any reply returned to the machine
+ will have the system wide alias expanded
+ as all mail goes through sendmail.
+ .SS "Recipient address specifications"
++If the
++.I expandaddr
++option is not set (the default), recipient addresses must be names of
++local mailboxes or Internet mail addresses.
++.PP
++If the
++.I expandaddr
++option is set, the following rules apply:
+ When an address is used to name a recipient
+ (in any of To, Cc, or Bcc),
+ names of local mail folders
+@@ -2391,6 +2399,12 @@ and exits immediately.
+ If this option is set,
+ \fImailx\fR starts even with an empty mailbox.
+ .TP
++.B expandaddr
++Causes
++.I mailx
++to expand message recipient addresses, as explained in the section,
++Recipient address specifications.
++.TP
+ .B flipr
+ Exchanges the
+ .I Respond
+@@ -3575,7 +3589,7 @@ Only applicable if SSL/TLS support is bu
+ .TP
+ .B ssl-method
+ Selects a SSL/TLS protocol version;
+-valid values are `ssl2', `ssl3', and `tls1'.
++valid values are `ssl3', and `tls1'.
+ If unset, the method is selected automatically,
+ if possible.
+ .TP
+@@ -3781,7 +3795,7 @@ you could examine the first message by g
+ .sp
+ .fi
+ which might cause
+-.N mailx
++.I mailx
+ to respond with, for example:
+ .nf
+ .sp
