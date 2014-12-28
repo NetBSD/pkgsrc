@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2014/12/28 17:16:54 wiz Exp $
+$NetBSD: distinfo,v 1.13 2014/12/28 22:47:59 wiz Exp $
 
 SHA1 (mercurial-3.2.3.tar.gz) = 7c870aebcfd7720813c53c75b0939cee8a0e1168
 RMD160 (mercurial-3.2.3.tar.gz) = 76b09015bfb9c84968264a0e419ef5c1b2cd1972
@@ -8,3 +8,4 @@ SHA1 (patch-tests_test-convert-cvs-detectmerge.t) = cc1a846e6fa090149a1ee5d5a916
 SHA1 (patch-tests_test-convert-cvs-synthetic.t) = 6978a6a513f04ef1a24b1026642aa03e2d9869e6
 SHA1 (patch-tests_test-convert-cvs.t) = 69f9210d59066a2bfb8f2f6fce7642a7c9009dc1
 SHA1 (patch-tests_test-convert-cvsnt-mergepoints.t) = 4bfdeb98ece867ea1bb16c0b1dd0db65fc9412a1
+SHA1 (patch-tests_test-run-tests.t) = dbf53354652831bf67a22b60e9000356269c0ef6
