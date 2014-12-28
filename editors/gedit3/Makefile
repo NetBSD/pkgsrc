@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2014/12/06 20:41:36 prlw1 Exp $
+# $NetBSD: Makefile,v 1.18 2014/12/28 22:07:26 prlw1 Exp $
 
 DISTNAME=	gedit-3.14.2
+PKGREVISION=	1
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gedit/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -27,6 +28,8 @@ CONFIGURE_ARGS+=	--disable-maintainer-mode
 .include "options.mk"
 
 BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
+
+DEPENDS+=	adwaita-icon-theme-[0-9]*:../../graphics/adwaita-icon-theme
 
 .include "../../devel/gobject-introspection/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libpeas+=	libpeas>=1.7.0
