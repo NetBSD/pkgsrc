@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.29 2013/06/06 12:53:40 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2014/12/28 15:17:47 mef Exp $
 #
 
 DISTNAME=	libmatchbox-1.9
 PKGREVISION=	7
 CATEGORIES=	devel
-MASTER_SITES=	http://matchbox-project.org/sources/libmatchbox/1.9/
+MASTER_SITES=	http://downloads.yoctoproject.org/releases/matchbox/libmatchbox/1.9/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://matchbox-project.org/
+HOMEPAGE=	https://www.yoctoproject.org/tools-resources/projects/matchbox/
 COMMENT=	Library for matchbox window manager for computers with small displays
 
 USE_LIBTOOL=	yes
