@@ -1,11 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4898 2014/12/28 17:46:30 fhajny Exp $
-
-# Please note that we are now in a FREEZE for new functionality in
-# pkgsrc.  That means no new packages, please, and no changes to the
-# infrastructure (this means thinks under pkgsrc/mk, and things under
-# pkgsrc/pkgtools).
-# 
-# Thanks for your understanding.
+$NetBSD: CHANGES-2014,v 1.4899 2014/12/29 23:49:17 agc Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6404,3 +6397,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/ntp4 to 4.2.8nb1 [taca 2014-12-27]
 	Updated mail/heirloom-mailx to 12.5 [bsiegert 2014-12-28]
 	Updated lang/nodejs to 0.10.35 [fhajny 2014-12-28]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2014Q4 branch [agc 2014-12-29]
