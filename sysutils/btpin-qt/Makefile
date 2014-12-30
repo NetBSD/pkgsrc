@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.28 2014/02/12 23:18:38 tron Exp $
+# $NetBSD: Makefile,v 1.29 2014/12/30 08:58:57 plunky Exp $
 
 DISTNAME=		btpin-qt-1.5
 PKGREVISION=		12
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.galant.ukfsn.org/
+MASTER_SITES=		http://www.NetBSD.org/~plunky/
 
-MAINTAINER=		plunky@rya-online.net
+MAINTAINER=		plunky@NetBSD.org
 COMMENT=		Bluetooth PIN Client
-
 LICENSE=		2-clause-bsd
 
 ONLY_FOR_PLATFORM=	NetBSD-[4-9].*-*
