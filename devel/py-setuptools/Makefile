@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2014/12/30 14:10:36 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2014/12/30 17:31:56 wiz Exp $
 
 EGG_VERSION=		8.3
 DISTNAME=		setuptools-${EGG_VERSION}
-EGG_NAME=		setuptools-${EGG_VERSION}
 PKGNAME=		${PYPKGPREFIX}-setuptools-${EGG_VERSION}
 CATEGORIES=		devel python
 MASTER_SITES=		https://pypi.python.org/packages/source/s/setuptools/
@@ -14,23 +13,11 @@ LICENSE=		python-software-foundation OR zpl
 
 DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
-PYDISTUTILSPKG=			yes
-
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX} PYPKGPREFIX=${PYPKGPREFIX}
-PLIST_SUBST+=	EGG_NAME=${EGGNAME}
-PLIST_SUBST+=	EGG_INFODIR=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
-PRINT_PLIST_AWK+=	{ gsub(/${EGG_NAME}-py${PYVERSSUFFIX}.egg-info/, \
-			       "$${EGG_INFODIR}") }
+PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
+PLIST_SUBST+=		EGG_INFODIR=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
 
 REPLACE_PYTHON=		setuptools/command/easy_install.py
 REPLACE_PYTHON+=	setuptools/tests/test_resources.py
-
-.include "../../mk/bsd.fast.prefs.mk"
-
-PYSETUPINSTALLARGS=	--single-version-externally-managed
-.if ${_USE_DESTDIR} == "no"
-PYSETUPINSTALLARGS+=	--root=/
-.endif
 
 # upstream often forgets deleting files, and packages on Windows,
 # so permissions are usually wrong
@@ -40,5 +27,5 @@ post-install:
 	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/${PYSITELIB}/setuptools/*.tmpl
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
