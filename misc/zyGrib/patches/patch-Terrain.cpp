@@ -1,8 +1,8 @@
-$NetBSD: patch-Terrain.cpp,v 1.2 2012/07/01 07:21:35 plunky Exp $
+$NetBSD: patch-Terrain.cpp,v 1.3 2014/12/30 08:50:55 plunky Exp $
 
---- Terrain.cpp.orig	2012-06-03 21:03:41.000000000 +0000
+--- Terrain.cpp.orig	2014-11-02 00:01:52.000000000 +0000
 +++ Terrain.cpp
-@@ -1032,7 +1032,7 @@ void Terrain::paintEvent(QPaintEvent * /
+@@ -1109,7 +1109,7 @@ void Terrain::paintEvent(QPaintEvent *)
              
              if (showOrthodromie)
              {
