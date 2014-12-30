@@ -1,68 +1,39 @@
-# $NetBSD: Makefile,v 1.20 2014/12/25 13:51:14 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2014/12/30 17:23:47 adam Exp $
 
+DISTNAME=	qtwebkit-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtwebkit-${QTVERSION}
-PKGREVISION=	4
 COMMENT=	Qt5 WebView module
 
 BUILD_DEPENDS+=		gperf-[0-9]*:../../devel/gperf
 
-USE_LIBTOOL=		yes
 USE_TOOLS+=		bison flex pkg-config sed
+REPLACE_PERL+=		Source/WebKit2/Scripts/generate-forwarding-headers.pl
 
-BUILD_DIRS=		qtwebkit
 MAKE_ENV+=		QTDIR=${QTDIR}
-
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 INSTALLATION_DIRS+=	lib/pkgconfig
 
 .if ${USE_CWRAPPERS:Uno} == "yes"
-BUILDLINK_TRANSFORM+=	R:${WRKSRC}/qtwebkit/lib:${QTDIR}/lib
+BUILDLINK_TRANSFORM+=	R:${WRKSRC}/lib:${QTDIR}/lib
 .else
-BUILDLINK_TRANSFORM+=	rpath:${WRKSRC}/qtwebkit/lib:${QTDIR}/lib
+BUILDLINK_TRANSFORM+=	rpath:${WRKSRC}/lib:${QTDIR}/lib
 .endif
-QTPKGCONFIGPC=		Qt5WebKit.pc Qt5WebKitWidgets.pc
-
-BROKEN_FILES+=		qt5/lib/pkgconfig/Qt5WebKit.pc \
-			qt5/lib/libQt5WebKit.la \
-			qt5/lib/libQt5WebKitWidgets.la \
-			qt5/qml/QtWebKit/experimental/libqmlwebkitexperimentalplugin.la \
-			qt5/qml/QtWebKit/libqmlwebkitplugin.la
 
 .include "../../x11/qt5-qtbase/Makefile.common"
 
 post-install:
-# Fix broken files
-.for i in ${BROKEN_FILES}
-	${CP} -f ${DESTDIR}${PREFIX}/${i} \
-		${DESTDIR}${PREFIX}/${i}.1
-	${SED} -e 's,${WRKSRC}/[^[:space:]]*,,g' \
-		< ${DESTDIR}${PREFIX}/${i}.1 \
-		| ${SED} -e 's/-lWebKit1 //' \
-		| ${SED} -e 's/-lWebKit2 //' \
-		| ${SED} -e 's/-lWebCore //' \
-		| ${SED} -e 's/-lANGLE //' \
-		| ${SED} -e 's/-lJavaScriptCore //' \
-		| ${SED} -e 's/-lWTF //' \
-		> ${DESTDIR}${PREFIX}/${i}
-	${RM} -f ${DESTDIR}${PREFIX}/${i}.1
-.endfor
-.for i in ${QTPKGCONFIGPC}
-	${RM} -f ${DESTDIR}${PREFIX}/lib/pkgconfig/${i} && \
-		cd ${DESTDIR}${PREFIX}/lib/pkgconfig && \
-		ln -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
+.for i in Qt5WebKit.pc Qt5WebKitWidgets.pc
+	cd ${DESTDIR}${PREFIX}/lib/pkgconfig && \
+	ln -f -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
 .endfor
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .endif
-.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
-.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
 .endif
