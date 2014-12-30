@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2014/12/21 20:19:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2014/12/30 22:11:44 ryoon Exp $
 
-DISTNAME=	mirall-1.4.2
-PKGREVISION=	4
+DISTNAME=	mirall-1.7.1
 CATEGORIES=	net
 MASTER_SITES=	http://download.owncloud.com/desktop/stable/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,6 +10,9 @@ HOMEPAGE=	http://owncloud.org/sync-clients/
 COMMENT=	Graphicsl file synchronization program for OwnCloud
 LICENSE=	gnu-gpl-v2
 
+# Do not use libocsync.so from net/ocsync.
+CONFLICTS=	ocsync-[0-9]*
+
 USE_LANGUAGES=	c c++
 
 USE_CMAKE=	yes
@@ -18,32 +20,32 @@ OBJDIR=		../build
 CONFIGURE_DIRS=	${OBJDIR}
 CMAKE_ARG_PATH=	../${DISTNAME}
 
-FIND_PREFIX:=   OCSYNCDIR=ocsync
-.include "../../mk/find-prefix.mk"
-
-CMAKE_ARGS+=	-DCSYNC_BUILD_PATH=${OCSYNCDIR}/bin
-CMAKE_ARGS+=	-DCSYNC_LIBRARY_PATH=${OCSYNCDIR}/lib
-CMAKE_ARGS+=	-DCSYNC_INCLUDE_PATH=${OCSYNCDIR}/include/ocsync
-
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 
-LDFLAGS.NetBSD+=	-linotify
+# I have no idea about CMake...
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/owncloud
 
-ETCDIR=			etc/OwnCloud
+ETCDIR=			etc/ownCloud
 MAKE_DIRS+=		${ETCDIR}
-INSTALLATION_DIRS=	${ETCDIR}
 EGDIR=		${PREFIX}/share/examples/mirall
+INSTALLATION_DIRS=	${ETCDIR} share/examples/mirall
 CONF_FILES+=	${EGDIR}/sync-exclude.lst \
-		${PKG_SYSCONFDIR}/OwnCloud/sync-exclude.lst
+		${PKG_SYSCONFDIR}/ownCloud/sync-exclude.lst
 
 pre-configure:
 	cd ${WRKSRC} && mkdir ${OBJDIR}
 
+post-install:
+	mv ${DESTDIR}${PKG_SYSCONFDIR}/ownCloud/sync-exclude.lst \
+		${DESTDIR}${EGDIR}/sync-exclude.lst
+
 .include "../../mk/dlopen.buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libinotify/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../net/ocsync/buildlink3.mk"
+.include "../../security/qt4-qtkeychain/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../www/neon/buildlink3.mk"
 .include "../../x11/qt4-qdbus/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
