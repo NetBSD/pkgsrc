@@ -1,4 +1,4 @@
-<!-- $NetBSD: buildlink.xml,v 1.37 2014/12/30 15:13:19 wiz Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.38 2014/12/30 15:18:59 wiz Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -321,7 +321,7 @@ BUILDLINK_TREE+=	-tiff
 	    <varname>BUILDLINK_CONTENTS_FILTER.<replaceable>pkg</replaceable></varname>
 	    outputs the contents of the <filename>include</filename>
 	    and <filename>lib</filename> directories in the package
-	    <filename>+CONTENTS</filename>.
+	    <filename>+CONTENTS</filename>.</para>
 	</listitem>
 
 	<listitem>
