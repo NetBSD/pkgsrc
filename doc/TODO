@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13948 2014/12/30 06:44:57 adam Exp $
+$NetBSD: TODO,v 1.13949 2014/12/30 13:08:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -354,7 +354,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o adns-1.5.0
 	o adocman-0.13
 	o aewm++-1.0.27
-	o afl-1.05b
 	o akonadi-1.10.3
 	o alacarte-0.13.2
 	o album-4.12
