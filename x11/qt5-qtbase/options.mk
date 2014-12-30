@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2014/06/18 09:26:12 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2014/12/30 17:23:45 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qt5
 PKG_SUPPORTED_OPTIONS=	cups debug gtk2
@@ -13,7 +13,6 @@ CONFIGURE_ARGS+=	-no-cups
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtk2)
-.  include "../../devel/glib2/buildlink3.mk"
 .  include "../../x11/gtk2/buildlink3.mk"
 CONFIGURE_ARGS+=	-gtkstyle
 .else

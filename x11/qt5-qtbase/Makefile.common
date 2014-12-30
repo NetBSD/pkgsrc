@@ -1,6 +1,4 @@
-
-
-# $NetBSD: Makefile.common,v 1.12 2014/12/25 13:51:13 wiz Exp $
+# $NetBSD: Makefile.common,v 1.13 2014/12/30 17:23:45 adam Exp $
 # used by x11/qt5-dbus/Makefile
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
@@ -11,6 +9,7 @@
 # used by x11/qt5-qtgraphicaleffects/Makefile
 # used by x11/qt5-qtimageformats/Makefile
 # used by x11/qt5-qtlocation/Makefile
+# used by x11/qt5-qtmacextras/Makefile
 # used by x11/qt5-qtmultimedia/Makefile
 # used by x11/qt5-qtquick1/Makefile
 # used by x11/qt5-qtquickcontrols/Makefile
@@ -25,37 +24,17 @@
 # used by x11/qt5-qtxmlpatterns/Makefile
 # used by x11/qt5-sqlite3/Makefile
 
-DISTNAME=	qt-everywhere-opensource-src-${QTDISTVER}
-CATEGORIES=	x11
-MASTER_SITES=	http://download.qt-project.org/official_releases/qt/${QTDISTVER:R}/${QTDISTVER}/single/
-EXTRACT_SUFX=	.tar.xz
-EXTRACT_USING=	bsdtar
-
 .include "../../x11/qt5/Makefile.common"
 .include "options.mk"
-
-DISTINFO_FILE=	${.CURDIR}/../../x11/qt5-qtbase/distinfo
-FILESDIR=	${.CURDIR}/../../x11/qt5-qtbase/files
-PATCHDIR=	${.CURDIR}/../../x11/qt5-qtbase/patches
-
-.if defined(MAKE_JOBS)
-.  if !defined(MAKE_JOBS_SAFE) || empty(MAKE_JOBS_SAFE:M[nN][oO])
-CONFIGURE_ENV+=		MAKE_FLAGS=-j${MAKE_JOBS:Q}
-.  endif
-.endif
 
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 
-HAS_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl:build pkg-config
 
 CONFIG_SHELL=		${PERL5}
-
-REPLACE_PERL+=		qtbase/bin/syncqt.pl
-REPLACE_PERL+=		qtwebkit/Source/WebKit2/Scripts/generate-forwarding-headers.pl
 
 # wcstof(3) etc. is used in C++ code.
 CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
@@ -63,149 +42,20 @@ CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
 # for GL_GLEXT_LEGACY with GL/gl.h error, GL_ARB_shader_objects is not defined.
 BUILDLINK_TRANSFORM+=	rm:-Wundef
 
-CONFIGURE_ARGS+=	-optimized-qmake
-CONFIGURE_ARGS+=	-prefix "${QTPREFIX}"
-CONFIGURE_ARGS+=	${CFLAGS:M-I*} ${LDFLAGS:M-L*} ${LDFLAGS:M-l*}
-CONFIGURE_ARGS+=	-opensource -confirm-license
-CONFIGURE_ARGS+=	-accessibility
-CONFIGURE_ARGS+=	-fontconfig
-CONFIGURE_ARGS+=	-icu
-CONFIGURE_ARGS+=	-openssl-linked
-CONFIGURE_ARGS+=	-nomake examples
-CONFIGURE_ARGS+=	-nomake tests
-CONFIGURE_ARGS+=	-no-pch
-CONFIGURE_ARGS+=	-no-strip
-CONFIGURE_ARGS+=	-system-libjpeg
-CONFIGURE_ARGS+=	-system-libpng
-CONFIGURE_ARGS+=	-system-sqlite
-CONFIGURE_ARGS+=	-system-pcre
-CONFIGURE_ARGS+=	-system-zlib
-CONFIGURE_ARGS+=	-no-dbus
-CONFIGURE_ARGS+=	-no-sql-mysql
-CONFIGURE_ARGS+=	-no-sql-psql
-CONFIGURE_ARGS+=	-no-sql-sqlite
-OPSYSVARS+=		CONFIGURE_ARGS
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} != "Darwin"
-CONFIGURE_ARGS+=	-iconv
-.  if ${OPSYS} != "SunOS"
-CONFIGURE_ARGS+=	-reduce-relocations
-.  endif
-.endif
-
 MAKE_ENV+=		QTPREFIX=${QTPREFIX:Q}
 PLIST_VARS+=		mac unix
 .if ${OPSYS} == "Darwin"
 PLIST.mac=		yes
-QMAKE_CONF=		qmake.conf.mac
 .else
 PLIST.unix=		yes
-QMAKE_CONF=		qmake.conf
 .endif
 
 # avoid creating a .qt directory in the users home directory
 SCRIPTS_ENV+=		HOME=${WRKDIR}
 
-.include "../../mk/compiler.mk"
-
-.if ${OPSYS} == "SunOS"
-.  if !empty(CC_VERSION:Mgcc*)
-.    if ${ABI:U} == "64"
-CONFIGURE_ARGS+=	-platform solaris-g++-64
-.    else
-CONFIGURE_ARGS+=	-platform solaris-g++
-.    endif
-.  else
-.    if ${ABI:U} == "64"
-CONFIGURE_ARGS+=	-platform solaris-cc-64
-.    else
-CONFIGURE_ARGS+=	-platform solaris-cc
-.    endif
-.  endif
-SYS_LIBS=		-lresolv -lsocket -lnsl -lrt
-.elif ${OPSYS} == "Interix"
-CONFIGURE_ARGS+=	-platform interix-g++
-CFLAGS+=		-I/usr/local/include/bind
-LDFLAGS+=		-L/usr/local/lib/bind -lbind
-BUILDLINK_PASSTHRU_DIRS+=/usr/local/include/bind /usr/local/lib/bind
-SYS_LIBS=		-lbind -ldb -ldl
-.elif ${OPSYS} == "DragonFly"
-CONFIGURE_ARGS+=	-platform freebsd-g++
-.elif ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=	-platform macx-clang
-CONFIGURE_ARGS+=	-no-framework
-.  if exists(/usr/lib/libresolv.dylib)
-LDFLAGS+=		-lresolv
-.  endif
-.elif ${OPSYS} == "Linux"
-LDFLAGS+=		-ldl
+.if empty(PKGPATH:Mx11/qt5-qtbase) && empty(PKGPATH:Mx11/qt5-dbus) \
+	&& empty(PKGPATH:Mx11/qt5-odbc) && empty(PKGPATH:Mx11/qt5-mysql) \
+	&& empty(PKGPATH:Mx11/qt5-psql) && empty(PKGPATH:Mx11/qt5-sqlite3)
+do-configure:
+	cd ${WRKSRC} && ${QTPREFIX}/bin/qmake -o Makefile
 .endif
-
-remove-3rdparty-libs:
-.for i in freetype  libjpeg libpng xcb zlib
-	${RM} -f -r ${WRKSRC}/qtbase/src/3rdparty/${i}
-.endfor
-
-set-qmake-conf:
-	${SED}  -e 's:@LOCALBASE@:${LOCALBASE}:g' \
-		-e 's:@X11BASE@:${X11BASE}:g' \
-		-e 's:@X11PREFIX@:${X11PREFIX}:g' \
-		-e 's:@LIBTOOL@:${LIBTOOL:Q}:g' \
-		-e 's:@CC@:${CC:Q}:g' \
-		-e 's:@CXX@:${CXX:Q}:g' \
-		-e 's:@LDFLAGS@:${LDFLAGS:Q}:g' \
-		-e 's:@CFLAGS@:${CFLAGS:Q}:g' \
-		-e 's:@CXXFLAGS@:${CXXFLAGS:Q}:g' \
-		-e 's:@SYS_LIBS@:${SYS_LIBS:Q}:g' \
-		-e 's:@LEX@:${LEX}:g' \
-		-e 's:@YACC@:${TOOLS_CMDLINE_YACC:Q}:g' \
-		-e 's:@AR@:${AR:Q}:g' \
-		-e 's:@MKDIR@:${MKDIR}:g' \
-		-e 's:@LIBQT@:${LIBQT:Q}:g' \
-		-e 's:@PTHREAD_LDFLAGS@:${PTHREAD_LDFLAGS:Q}:g' \
-		-e 's:@PTHREAD_LIBS@:${PTHREAD_LIBS:Q}:g' \
-		-e 's:@COMPILER_RPATH_FLAG@:${COMPILER_RPATH_FLAG}:g' \
-		-e 's:@QMAKE_RANLIB@:${QMAKE_RANLIB:Q}:g' \
-		${FILESDIR}/${QMAKE_CONF} > ${WRKSRC}/qmake.conf
-		for dir in ${WRKSRC}/qtbase/mkspecs/*; do \
-			cp ${WRKSRC}/qmake.conf $${dir}; \
-			rm -f $${dir}/*.orig; \
-		done
-	${RM} -f ${WRKSRC}/qtbase/mkspecs/features/mac/default_pre.prf
-	${RM} -f ${WRKSRC}/qtbase/mkspecs/features/mac/objective_c.prf.orig
-
-no-qmake-build:
-	cd ${WRKSRC} && ${PATCH} < ${FILESDIR}/patch-qtbase_configure.no-qmake
-	${LN} -sf ${QTPREFIX}/bin/moc ${WRKSRC}/qtbase/bin/moc
-	${LN} -sf ${QTPREFIX}/bin/qmake ${WRKSRC}/qtbase/bin/qmake
-	${LN} -sf ${QTPREFIX}/bin/rcc ${WRKSRC}/qtbase/bin/rcc
-	${LN} -sf ${QTPREFIX}/bin/uic ${WRKSRC}/qtbase/bin/uic
-
-.if empty(PKGPATH:Mx11/qt5-qtbase)
-pre-configure: remove-3rdparty-libs set-qmake-conf no-qmake-build
-.else
-pre-configure: remove-3rdparty-libs set-qmake-conf
-.endif
-
-.if empty(PKGPATH:Mx11/qt5-qtbase) && empty(PKGPATH:Mx11/qt5-sqlite3) \
-	&& empty(PKGPATH:Mx11/qt5-mysql) && empty(PKGPATH:Mx11/qt5-psql) \
-	&& empty(PKGPATH:Mx11/qt5-odbc)
-post-configure:
-.for d in ${BUILD_DIRS}
-	cd ${WRKSRC}/${d} && \
-	${PKGSRC_SETENV} ${_CONFIGURE_SCRIPT_ENV} ${QTPREFIX}/bin/qmake -o Makefile
-.endfor
-.endif
-
-.include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
-.include "../../textproc/icu/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"

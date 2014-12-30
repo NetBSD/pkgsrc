@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2013/12/13 14:38:36 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/12/30 17:23:47 adam Exp $
 qt5/qml/QtQuick/Controls/ApplicationWindow.qml
 qt5/qml/QtQuick/Controls/BusyIndicator.qml
 qt5/qml/QtQuick/Controls/Button.qml
+qt5/qml/QtQuick/Controls/Calendar.qml
 qt5/qml/QtQuick/Controls/CheckBox.qml
 qt5/qml/QtQuick/Controls/ComboBox.qml
 qt5/qml/QtQuick/Controls/GroupBox.qml
@@ -10,12 +11,20 @@ qt5/qml/QtQuick/Controls/Menu.qml
 qt5/qml/QtQuick/Controls/MenuBar.qml
 qt5/qml/QtQuick/Controls/Private/AbstractCheckable.qml
 qt5/qml/QtQuick/Controls/Private/BasicButton.qml
+qt5/qml/QtQuick/Controls/Private/CalendarHeaderModel.qml
+qt5/qml/QtQuick/Controls/Private/CalendarUtils.js
 qt5/qml/QtQuick/Controls/Private/ColumnMenuContent.qml
+qt5/qml/QtQuick/Controls/Private/ContentItem.qml
 qt5/qml/QtQuick/Controls/Private/Control.qml
+qt5/qml/QtQuick/Controls/Private/EditMenu.qml
+qt5/qml/QtQuick/Controls/Private/EditMenu_base.qml
+qt5/qml/QtQuick/Controls/Private/EditMenu_ios.qml
 qt5/qml/QtQuick/Controls/Private/FastGlow.qml
 qt5/qml/QtQuick/Controls/Private/FocusFrame.qml
+qt5/qml/QtQuick/Controls/Private/HoverButton.qml
 qt5/qml/QtQuick/Controls/Private/MenuContentItem.qml
 qt5/qml/QtQuick/Controls/Private/MenuContentScroller.qml
+qt5/qml/QtQuick/Controls/Private/MenuItemSubControls.qml
 qt5/qml/QtQuick/Controls/Private/ModalPopupBehavior.qml
 qt5/qml/QtQuick/Controls/Private/ScrollBar.qml
 qt5/qml/QtQuick/Controls/Private/ScrollViewHelper.qml
@@ -23,9 +32,13 @@ qt5/qml/QtQuick/Controls/Private/SourceProxy.qml
 qt5/qml/QtQuick/Controls/Private/StackView.js
 qt5/qml/QtQuick/Controls/Private/StackViewSlideDelegate.qml
 qt5/qml/QtQuick/Controls/Private/Style.qml
+qt5/qml/QtQuick/Controls/Private/SystemPaletteSingleton.qml
 qt5/qml/QtQuick/Controls/Private/TabBar.qml
 qt5/qml/QtQuick/Controls/Private/TableViewSelection.qml
+qt5/qml/QtQuick/Controls/Private/TextHandle.qml
+qt5/qml/QtQuick/Controls/Private/TextInputWithHandles.qml
 qt5/qml/QtQuick/Controls/Private/TextSingleton.qml
+qt5/qml/QtQuick/Controls/Private/ToolMenuButton.qml
 qt5/qml/QtQuick/Controls/Private/qmldir
 qt5/qml/QtQuick/Controls/Private/style.js
 qt5/qml/QtQuick/Controls/ProgressBar.qml
@@ -38,8 +51,10 @@ qt5/qml/QtQuick/Controls/StackView.qml
 qt5/qml/QtQuick/Controls/StackViewDelegate.qml
 qt5/qml/QtQuick/Controls/StackViewTransition.qml
 qt5/qml/QtQuick/Controls/StatusBar.qml
+qt5/qml/QtQuick/Controls/Styles/Base/ApplicationWindowStyle.qml
 qt5/qml/QtQuick/Controls/Styles/Base/BusyIndicatorStyle.qml
 qt5/qml/QtQuick/Controls/Styles/Base/ButtonStyle.qml
+qt5/qml/QtQuick/Controls/Styles/Base/CalendarStyle.qml
 qt5/qml/QtQuick/Controls/Styles/Base/CheckBoxStyle.qml
 qt5/qml/QtQuick/Controls/Styles/Base/ComboBoxStyle.qml
 qt5/qml/QtQuick/Controls/Styles/Base/FocusFrameStyle.qml
@@ -75,7 +90,9 @@ qt5/qml/QtQuick/Controls/Styles/Base/images/editbox.png
 qt5/qml/QtQuick/Controls/Styles/Base/images/focusframe.png
 qt5/qml/QtQuick/Controls/Styles/Base/images/groupbox.png
 qt5/qml/QtQuick/Controls/Styles/Base/images/header.png
+qt5/qml/QtQuick/Controls/Styles/Base/images/leftanglearrow.png
 qt5/qml/QtQuick/Controls/Styles/Base/images/progress-indeterminate.png
+qt5/qml/QtQuick/Controls/Styles/Base/images/rightanglearrow.png
 qt5/qml/QtQuick/Controls/Styles/Base/images/scrollbar-handle-horizontal.png
 qt5/qml/QtQuick/Controls/Styles/Base/images/scrollbar-handle-transient.png
 qt5/qml/QtQuick/Controls/Styles/Base/images/scrollbar-handle-vertical.png
@@ -86,8 +103,10 @@ qt5/qml/QtQuick/Controls/Styles/Base/images/spinner_medium.png
 qt5/qml/QtQuick/Controls/Styles/Base/images/spinner_small.png
 qt5/qml/QtQuick/Controls/Styles/Base/images/tab.png
 qt5/qml/QtQuick/Controls/Styles/Base/images/tab_selected.png
+qt5/qml/QtQuick/Controls/Styles/Desktop/ApplicationWindowStyle.qml
 qt5/qml/QtQuick/Controls/Styles/Desktop/BusyIndicatorStyle.qml
 qt5/qml/QtQuick/Controls/Styles/Desktop/ButtonStyle.qml
+qt5/qml/QtQuick/Controls/Styles/Desktop/CalendarStyle.qml
 qt5/qml/QtQuick/Controls/Styles/Desktop/CheckBoxStyle.qml
 qt5/qml/QtQuick/Controls/Styles/Desktop/ComboBoxStyle.qml
 qt5/qml/QtQuick/Controls/Styles/Desktop/FocusFrameStyle.qml
@@ -122,6 +141,14 @@ qt5/qml/QtQuick/Controls/ToolButton.qml
 qt5/qml/QtQuick/Controls/libqtquickcontrolsplugin.la
 qt5/qml/QtQuick/Controls/plugins.qmltypes
 qt5/qml/QtQuick/Controls/qmldir
+qt5/qml/QtQuick/Dialogs/Private/libdialogsprivateplugin.la
+qt5/qml/QtQuick/Dialogs/Private/qmldir
+qt5/qml/QtQuick/Dialogs/libdialogplugin.la
+qt5/qml/QtQuick/Dialogs/plugins.qmltypes
+qt5/qml/QtQuick/Dialogs/qmldir
 qt5/qml/QtQuick/Layouts/libqquicklayoutsplugin.la
 qt5/qml/QtQuick/Layouts/plugins.qmltypes
 qt5/qml/QtQuick/Layouts/qmldir
+qt5/qml/QtQuick/PrivateWidgets/libwidgetsplugin.la
+qt5/qml/QtQuick/PrivateWidgets/plugins.qmltypes
+qt5/qml/QtQuick/PrivateWidgets/qmldir
