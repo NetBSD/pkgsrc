@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4910 2014/12/30 12:55:34 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4911 2014/12/30 12:56:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6432,3 +6432,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added www/h2o version 0.9.0 [wiz 2014-12-30]
 	Updated devel/p5-Devel-Symdump to 2.1400 [wiz 2014-12-30]
 	Updated security/p5-Mozilla-CA to 20141217 [wiz 2014-12-30]
+	Updated security/p5-IO-Socket-SSL to 2.008 [wiz 2014-12-30]
