@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.1 2014/08/21 21:35:06 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2014/12/30 14:40:30 wiz Exp $
 #
 # used by x11/qt4-qscintilla/Makefile
 # used by x11/py-qt4-qscintilla/Makefile
 
-DISTNAME=	QScintilla-gpl-2.8.3
+DISTNAME=	QScintilla-gpl-2.8.4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyqt/}
 
