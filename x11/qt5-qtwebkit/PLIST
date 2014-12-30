@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/08/24 09:38:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/12/30 17:23:47 adam Exp $
 lib/pkgconfig/Qt5WebKit.pc
 lib/pkgconfig/Qt5WebKitWidgets.pc
 qt5/include/QtWebKit/${PKGVERSION}/QtWebKit/private/bytearraytestdata.h
@@ -13,6 +13,7 @@ qt5/include/QtWebKit/${PKGVERSION}/QtWebKit/private/qquickwebview_p_p.h
 qt5/include/QtWebKit/${PKGVERSION}/QtWebKit/private/qrawwebview_p.h
 qt5/include/QtWebKit/${PKGVERSION}/QtWebKit/private/qrawwebview_p_p.h
 qt5/include/QtWebKit/${PKGVERSION}/QtWebKit/private/qtwebsecurityorigin_p.h
+qt5/include/QtWebKit/${PKGVERSION}/QtWebKit/private/qwebchannelwebkittransport_p.h
 qt5/include/QtWebKit/${PKGVERSION}/QtWebKit/private/qwebdatabase_p.h
 qt5/include/QtWebKit/${PKGVERSION}/QtWebKit/private/qwebdownloaditem_p.h
 qt5/include/QtWebKit/${PKGVERSION}/QtWebKit/private/qwebdownloaditem_p_p.h
@@ -103,16 +104,18 @@ qt5/lib/libWebKit1.la
 qt5/lib/libWebKit1.prl
 qt5/lib/libWebKit2.la
 qt5/lib/libWebKit2.prl
+qt5/lib/libleveldb.la
+qt5/lib/libleveldb.prl
 qt5/lib/pkgconfig/Qt5WebKit.pc
 qt5/lib/pkgconfig/Qt5WebKitWidgets.pc
-qt5/libexec/QtWebPluginProcess
 qt5/libexec/QtWebProcess
+${PLIST.unix}qt5/libexec/QtWebPluginProcess
 qt5/mkspecs/modules/qt_lib_webkit.pri
 qt5/mkspecs/modules/qt_lib_webkit_private.pri
 qt5/mkspecs/modules/qt_lib_webkitwidgets.pri
 qt5/mkspecs/modules/qt_lib_webkitwidgets_private.pri
-qt5/plugins/webkit/libplatformplugin.la
 qt5/qml/QtWebKit/experimental/libqmlwebkitexperimentalplugin.la
 qt5/qml/QtWebKit/experimental/qmldir
 qt5/qml/QtWebKit/libqmlwebkitplugin.la
+qt5/qml/QtWebKit/plugins.qmltypes
 qt5/qml/QtWebKit/qmldir
