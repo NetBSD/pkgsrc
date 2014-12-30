@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4915 2014/12/30 13:02:46 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4916 2014/12/30 13:04:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6437,3 +6437,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/p5-YAML-Syck to 1.29 [wiz 2014-12-30]
 	Updated www/p5-CGI to 4.13 [wiz 2014-12-30]
 	Updated time/p5-DateTime-TimeZone to 1.83 [wiz 2014-12-30]
+	Updated security/p5-GnuPG-Interface to 0.51 [wiz 2014-12-30]
