@@ -1,4 +1,4 @@
-/* $NetBSD: create.h,v 1.14 2009/11/05 16:22:32 joerg Exp $ */
+/* $NetBSD: create.h,v 1.15 2014/12/30 15:13:20 wiz Exp $ */
 
 /* from FreeBSD Id: create.h,v 1.13 1997/10/08 07:46:19 charnier Exp */
 
@@ -58,7 +58,6 @@ extern const char *CompressionType;
 extern int PlistOnly;
 extern int RelativeLinks;
 extern int update_pkgdb;
-extern int create_views;
 
 void    check_list(package_t *, const char *);
 void    copy_plist(char *, package_t *);

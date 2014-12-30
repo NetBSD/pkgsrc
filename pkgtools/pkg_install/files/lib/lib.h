@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.64 2010/06/16 23:02:49 joerg Exp $ */
+/* $NetBSD: lib.h,v 1.65 2014/12/30 15:13:21 wiz Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -116,9 +116,6 @@ enum {
 #define SIZE_PKG_FNAME		"+SIZE_PKG"
 #define SIZE_ALL_FNAME		"+SIZE_ALL"
 #define PRESERVE_FNAME		"+PRESERVE"
-#define VIEWS_FNAME		"+VIEWS"
-#define VIEWS_FNAME_TMP		"+VIEWS.tmp"
-#define DEPOT_FNAME		"+DEPOT"
 
 /* The names of special variables */
 #define AUTOMATIC_VARNAME	"automatic"
@@ -363,7 +360,6 @@ const char   *pkgdb_get_dir(void);
  * 1 config file
  * 2 environment
  * 3 command line
- * 4 destdir/views reset
  */
 void	pkgdb_set_dir(const char *, int);
 char   *pkgdb_pkg_dir(const char *);
