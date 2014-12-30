@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4925 2014/12/30 14:08:53 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4926 2014/12/30 14:10:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6447,3 +6447,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added sysutils/augeas version 1.3.0 [bsiegert 2014-12-30]
 	Updated finance/gnucash to 2.6.5 [wiz 2014-12-30]
 	Updated devel/waf to 1.8.5 [wiz 2014-12-30]
+	Updated devel/py-setuptools to 8.3 [wiz 2014-12-30]
