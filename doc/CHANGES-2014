@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4945 2014/12/30 22:12:23 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.4946 2014/12/30 22:20:10 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6506,3 +6506,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/qt5-sqlite3 to 5.4.0 [adam 2014-12-30]
 	Added security/qt4-qtkeychain version 0.4.0 [ryoon 2014-12-30]
 	Updated net/mirall to 1.7.1 [ryoon 2014-12-30]
+	Updated devel/gputils to 1.4.0 [ryoon 2014-12-30]
