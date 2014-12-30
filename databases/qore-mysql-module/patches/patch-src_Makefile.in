@@ -1,0 +1,13 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2014/12/30 15:42:25 wiz Exp $
+* delete the .a file as well as the .la file
+--- src/Makefile.in.orig	2012-11-18 16:27:36.000000000 +0000
++++ src/Makefile.in
+@@ -596,7 +596,7 @@ uninstall-am: uninstall-libLTLIBRARIES
+ 
+ install-exec-hook:
+ 	mv $(DESTDIR)$(libdir)/$(MNAME).$(MODULE_SUFFIX) $(DESTDIR)$(libdir)/$(MNAME)-api-$(MODULE_API).qmod
+-	rm -f $(DESTDIR)$(libdir)/$(MNAME).la $(RM_OTHER)
++	rm -f $(DESTDIR)$(libdir)/$(MNAME).la $(RM_OTHER) $(DESTDIR)$(libdir)/$(MNAME).a
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
