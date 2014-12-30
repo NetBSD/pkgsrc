@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4941 2014/12/30 16:05:47 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4942 2014/12/30 17:05:57 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6477,3 +6477,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Added security/qore-asn1-module version 0.0.3nb1 [wiz 2014-12-30]
 	Added security/qore-ssh2-module version 0.9.9nb4 [wiz 2014-12-30]
 	Added security/qore-xmlsec-module version 0.0.2nb4 [wiz 2014-12-30]
+	Added sysutils/p5-Config-Augeas version 1.000 [bsiegert 2014-12-30]
+	Added sysutils/py-augeas version 0.5.0 [bsiegert 2014-12-30]
