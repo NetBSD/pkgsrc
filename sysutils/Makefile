@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.619 2014/12/06 16:21:40 rodent Exp $
+# $NetBSD: Makefile,v 1.620 2014/12/30 13:55:01 bsiegert Exp $
 #
 
 COMMENT=	System utilities
@@ -22,6 +22,7 @@ SUBDIR+=	apcupsd
 SUBDIR+=	asapm
 SUBDIR+=	atitvout
 SUBDIR+=	attr
+SUBDIR+=	augeas
 SUBDIR+=	bacula
 SUBDIR+=	bacula-clientonly
 SUBDIR+=	bacula-doc
