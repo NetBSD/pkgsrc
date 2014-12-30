@@ -1,0 +1,20 @@
+$NetBSD: patch-tools_parser_Makefile,v 1.1 2014/12/30 08:39:13 plunky Exp $
+
+make a libparser.a file to link with, to avoid filename conflicts
+
+--- tools/parser/Makefile.orig	2014-12-28 13:02:12.000000000 +0000
++++ tools/parser/Makefile
+@@ -0,0 +1,13 @@
++#
++
++LIBISPRIVATE=yes
++
++LIB=	parser
++
++SRCS=	amp.c att.c avctp.c avdtp.c avrcp.c bnep.c bpa.c capi.c		\
++	cmtp.c csr.c ericsson.c hci.c hcrp.c hidp.c l2cap.c lmp.c	\
++	obex.c parser.c ppp.c rfcomm.c sap.c sdp.c smp.c tcpip.c
++
++CPPFLAGS+= -I../..
++
++.include <bsd.lib.mk>
