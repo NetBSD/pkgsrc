@@ -1,4 +1,4 @@
-# $NetBSD: pkgformat.mk,v 1.1 2011/10/15 00:23:09 reed Exp $
+# $NetBSD: pkgformat.mk,v 1.2 2014/12/30 15:13:20 wiz Exp $
 #
 # This Makefile fragment provides variable and target overrides that are
 # specific to the pkgsrc native package format.
@@ -22,6 +22,5 @@ PKG_FILELIST_CMD=	${SED} -e "/^@/d" -e "s|^|${PREFIX}/|" ${_DEPENDS_PLIST}
 .include "deinstall.mk"
 .include "replace.mk"
 .include "package.mk"
-.include "views.mk"
 
 .include "utility.mk"
