@@ -40,5 +40,3 @@ Libtool:
 
 - Drop -L, -l, -Wl,* if not in link mode
   -> see first point
-
-- pkgviews support
