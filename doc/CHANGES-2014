@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4942 2014/12/30 17:05:57 bsiegert Exp $
+$NetBSD: CHANGES-2014,v 1.4943 2014/12/30 17:28:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6479,3 +6479,28 @@ Changes to the packages collection and infrastructure in 2014:
 	Added security/qore-xmlsec-module version 0.0.2nb4 [wiz 2014-12-30]
 	Added sysutils/p5-Config-Augeas version 1.000 [bsiegert 2014-12-30]
 	Added sysutils/py-augeas version 0.5.0 [bsiegert 2014-12-30]
+	Updated x11/qt5 to 5.4.0 [adam 2014-12-30]
+	Updated x11/qt5-dbus to 5.4.0 [adam 2014-12-30]
+	Updated x11/qt5-mysql to 5.4.0 [adam 2014-12-30]
+	Updated x11/qt5-odbc to 5.4.0 [adam 2014-12-30]
+	Updated x11/qt5-psql to 5.4.0 [adam 2014-12-30]
+	Updated x11/qt5-qtbase to 5.4.0 [adam 2014-12-30]
+	Updated x11/qt5-qtdeclarative to 5.4.0 [adam 2014-12-30]
+	Updated x11/qt5-qtdoc to 5.4.0 [adam 2014-12-30]
+	Updated x11/qt5-qtgraphicaleffects to 5.4.0 [adam 2014-12-30]
+	Updated x11/qt5-qtimageformats to 5.4.0 [adam 2014-12-30]
+	Updated x11/qt5-qtlocation to 5.4.0 [adam 2014-12-30]
+	Added x11/qt5-qtmacextras version 5.4.0 [adam 2014-12-30]
+	Updated x11/qt5-qtmultimedia to 5.4.0 [adam 2014-12-30]
+	Updated x11/qt5-qtquick1 to 5.4.0 [adam 2014-12-30]
+	Updated x11/qt5-qtquickcontrols to 5.4.0 [adam 2014-12-30]
+	Updated x11/qt5-qtscript to 5.4.0 [adam 2014-12-30]
+	Updated x11/qt5-qtsensors to 5.4.0 [adam 2014-12-30]
+	Updated x11/qt5-qtserialport to 5.4.0 [adam 2014-12-30]
+	Updated x11/qt5-qtsvg to 5.4.0 [adam 2014-12-30]
+	Updated x11/qt5-qttools to 5.4.0 [adam 2014-12-30]
+	Updated x11/qt5-qttranslations to 5.4.0 [adam 2014-12-30]
+	Updated x11/qt5-qtwebkit to 5.4.0 [adam 2014-12-30]
+	Updated x11/qt5-qtx11extras to 5.4.0 [adam 2014-12-30]
+	Updated x11/qt5-qtxmlpatterns to 5.4.0 [adam 2014-12-30]
+	Updated x11/qt5-sqlite3 to 5.4.0 [adam 2014-12-30]
