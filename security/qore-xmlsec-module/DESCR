@@ -1,0 +1,2 @@
+The Qore xmlsec module gives Qore programs the possibility to support
+XML signature(xmldsig) and XML encryption(xmlenc) as defined by W3C.
