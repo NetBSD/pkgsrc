@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/12/30 17:04:15 bsiegert Exp $
+
+SHA1 (Config-Augeas-1.000.tar.gz) = b411fac8e6a4c7ded7c993cdf1f086439886b9a6
+RMD160 (Config-Augeas-1.000.tar.gz) = fe71e61c86d0fa8ed2ddf2d8d67945de35b5f319
+Size (Config-Augeas-1.000.tar.gz) = 65327 bytes
