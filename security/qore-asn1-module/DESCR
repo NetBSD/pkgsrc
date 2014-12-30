@@ -1,0 +1,3 @@
+ASN.1(Abstract Syntax Notation One) module for Qore provides an API to
+dynamically create, parse and convert ASN.1 data structures to concrete
+output formats (like DER).
