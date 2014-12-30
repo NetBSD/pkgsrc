@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1080 2014/12/30 07:58:41 obache Exp $
+# $NetBSD: Makefile,v 1.1081 2014/12/30 12:50:41 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -127,6 +127,7 @@ SUBDIR+=	goaccess
 SUBDIR+=	gtkasp2php
 SUBDIR+=	gtkhtml314
 SUBDIR+=	gwt
+SUBDIR+=	h2o
 SUBDIR+=	haskell-cgi
 SUBDIR+=	heel
 SUBDIR+=	hiawatha
