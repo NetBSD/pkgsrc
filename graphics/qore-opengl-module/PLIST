@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2014/12/30 15:57:09 wiz Exp $
+${QORE_MODULE_DIR}/opengl-api-${QORE_MODULE_API}.qmod
+share/doc/${PKGBASE}/opengl-module-doc.html
