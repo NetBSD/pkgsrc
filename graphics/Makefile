@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.696 2014/12/12 22:05:50 agc Exp $
+# $NetBSD: Makefile,v 1.697 2014/12/30 15:58:36 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -421,6 +421,8 @@ SUBDIR+=	qcomicbook
 SUBDIR+=	qimageblitz
 SUBDIR+=	qiv
 SUBDIR+=	qiviewer
+SUBDIR+=	qore-glut-module
+SUBDIR+=	qore-opengl-module
 SUBDIR+=	quesoglc
 SUBDIR+=	qvplay
 SUBDIR+=	rabbit
