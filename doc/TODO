@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13952 2014/12/30 13:41:02 wiz Exp $
+$NetBSD: TODO,v 1.13953 2014/12/30 13:48:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -536,7 +536,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o felt-3.07 [wip]
 	o fetchmail-6.3.26
 	o fetchyahoo-2.14.0
-	o ffmpeg1-1.2.11
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.2
@@ -752,7 +751,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmicrohttpd-0.9.38
 	o libnasl-2.3.1
 	o liboobs-2.32.0 [GNOME 2.32]
-	o libopenmpt-0.2.4667 [wiz]
 	o libpcap-1.5.1
 	o libplist-1.11
 	o libprelude-1.1.0

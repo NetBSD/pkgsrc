@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4920 2014/12/30 13:41:02 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4921 2014/12/30 13:48:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6442,3 +6442,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated finance/libofx to 0.9.10 [wiz 2014-12-30]
 	Updated multimedia/xine-lib to 1.2.6 [wiz 2014-12-30]
 	Updated audio/musicpd to 0.18.21 [wiz 2014-12-30]
+	Updated multimedia/ffmpeg1 to 1.2.11 [wiz 2014-12-30]
