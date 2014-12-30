@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.93 2014/12/16 01:51:25 obache Exp $
+# $NetBSD: Makefile,v 1.94 2014/12/30 08:05:17 obache Exp $
 #
 
-DISTNAME=	mikutter.3.1.1
+DISTNAME=	mikutter.3.2.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/./-/}
 CATEGORIES=	net
 MASTER_SITES=	http://mikutter.hachune.net/bin/
@@ -23,6 +23,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-memoize>=1.3:../../devel/ruby-memoize
 DEPENDS+=	${RUBY_PKGPREFIX}-hmac>=0.4:../../security/ruby-hmac
 DEPENDS+=	${RUBY_PKGPREFIX}-typed-array>=0.1:../../misc/ruby-typed-array
 DEPENDS+=	${RUBY_PKGPREFIX}-delayer-[0-9]*:../../devel/ruby-delayer
+DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri-[0-9]*:../../textproc/ruby-nokogiri
+DEPENDS+=	${RUBY_PKGPREFIX}-httpclient-[0-9]*:../../www/ruby-httpclient
 DEPENDS+=	${RUBY_PKGPREFIX}-moneta>=0.7:../../databases/ruby-moneta
 
 WRKSRC=		${WRKDIR}/mikutter
