@@ -1,6 +1,8 @@
-$NetBSD: patch-al,v 1.3 2012/02/15 09:30:23 plunky Exp $
+$NetBSD: patch-lib_bluetooth.c,v 1.1 2014/12/30 08:39:13 plunky Exp $
 
---- lib/bluetooth.c.orig	2011-12-22 00:18:58.000000000 +0000
+Not much of the original library is needed.
+
+--- lib/bluetooth.c.orig	2014-12-26 17:54:42.000000000 +0000
 +++ lib/bluetooth.c
 @@ -48,6 +48,7 @@ void baswap(bdaddr_t *dst, const bdaddr_
  		d[i] = s[5-i];
@@ -25,28 +27,12 @@ $NetBSD: patch-al,v 1.3 2012/02/15 09:30:23 plunky Exp $
 +#if 0
  int str2ba(const char *str, bdaddr_t *ba)
  {
- 	bdaddr_t b;
-@@ -175,6 +178,7 @@ int basnprintf(char *str, size_t size, c
- 
- 	return len;
- }
-+#endif
- 
- void *bt_malloc(size_t size)
- {
-@@ -186,6 +190,7 @@ void bt_free(void *ptr)
- 	free(ptr);
- }
- 
-+#if 0
- /* Bluetooth error codes to Unix errno mapping */
- int bt_error(uint16_t code)
- {
-@@ -260,6 +265,7 @@ int bt_error(uint16_t code)
+ 	int i;
+@@ -257,6 +260,7 @@ int bt_error(uint16_t code)
  		return ENOSYS;
  	}
  }
 +#endif
  
- char *bt_compidtostr(int compid)
+ const char *bt_compidtostr(int compid)
  {

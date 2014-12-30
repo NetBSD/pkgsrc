@@ -1,19 +1,15 @@
-$NetBSD: patch-ao,v 1.7 2012/05/21 07:01:32 plunky Exp $
+$NetBSD: patch-tools_hcidump.c,v 1.1 2014/12/30 08:39:13 plunky Exp $
 
---- src/hcidump.c.orig	2012-04-20 19:28:19.000000000 +0000
-+++ src/hcidump.c
-@@ -48,6 +48,10 @@
- #include "lib/hci.h"
- #include "lib/hci_lib.h"
- 
-+#ifndef AI_ADDRCONFIG
-+#define AI_ADDRCONFIG	0
-+#endif
-+
- #define SNAP_LEN	HCI_MAX_FRAME_SIZE
- #define DEFAULT_PORT   "10839"
- 
-@@ -144,7 +148,7 @@ static inline int write_n(int fd, char *
+changes here, are that netbt stack
+ - uses a string for the device address
+ - uses sockaddr_bt throughout
+ - provides event and packet filters separately
+
+Also, the BSDs provide a socket level TIMESTAMP option
+
+--- tools/hcidump.c.orig	2014-10-05 19:31:20.000000000 +0000
++++ tools/hcidump.c
+@@ -135,7 +135,7 @@ static inline int write_n(int fd, char *
  	return t;
  }
  
@@ -22,7 +18,7 @@ $NetBSD: patch-ao,v 1.7 2012/05/21 07:01:32 plunky Exp $
  {
  	struct cmsghdr *cmsg;
  	struct msghdr msg;
-@@ -186,7 +190,7 @@ static int process_frames(int dev, int s
+@@ -177,7 +177,7 @@ static int process_frames(int dev, int s
  	if (dev == HCI_DEV_NONE)
  		printf("system: ");
  	else
@@ -31,7 +27,7 @@ $NetBSD: patch-ao,v 1.7 2012/05/21 07:01:32 plunky Exp $
  
  	printf("snap_len: %d filter: 0x%lx\n", snap_len, parser.filter);
  
-@@ -528,10 +532,13 @@ static int open_file(char *file, int mod
+@@ -522,9 +522,9 @@ static int open_file(char *file, int mod
  	return fd;
  }
  
@@ -41,21 +37,9 @@ $NetBSD: patch-ao,v 1.7 2012/05/21 07:01:32 plunky Exp $
 -	struct sockaddr_hci addr;
 +	struct sockaddr_bt addr;
  	struct hci_filter flt;
-+#if 1
-+	int sk, opt;
-+#else
- 	struct hci_dev_info di;
- 	int sk, dd, opt;
+ 	int sk, opt;
  
-@@ -557,6 +564,7 @@ static int open_socket(int dev, unsigned
- 
- 		hci_close_dev(dd);
- 	}
-+#endif
- 
- 	/* Create HCI socket */
- 	sk = socket(AF_BLUETOOTH, SOCK_RAW, BTPROTO_HCI);
-@@ -572,12 +580,13 @@ static int open_socket(int dev, unsigned
+@@ -542,12 +542,13 @@ static int open_socket(int dev, unsigned
  	}
  
  	opt = 1;
@@ -70,7 +54,7 @@ $NetBSD: patch-ao,v 1.7 2012/05/21 07:01:32 plunky Exp $
  	hci_filter_clear(&flt);
  	hci_filter_all_ptypes(&flt);
  	hci_filter_all_events(&flt);
-@@ -585,13 +594,34 @@ static int open_socket(int dev, unsigned
+@@ -555,13 +556,34 @@ static int open_socket(int dev, unsigned
  		perror("Can't set filter");
  		return -1;
  	}
@@ -78,12 +62,12 @@ $NetBSD: patch-ao,v 1.7 2012/05/21 07:01:32 plunky Exp $
 +	memset(&flt, 0xff, sizeof(flt));
 +	if (setsockopt(sk, BTPROTO_HCI, SO_HCI_EVT_FILTER, &flt, sizeof(flt)) < 0) {
 +		perror("Can't set event filter");
-+		exit(1);
++		return -1;
 +	}
 +
 +	if (setsockopt(sk, BTPROTO_HCI, SO_HCI_PKT_FILTER, &flt, sizeof(flt)) < 0) {
 +		perror("Can't set packet filter");
-+		exit(1);
++		return -1;
 +	}
 +#endif
  
@@ -97,25 +81,16 @@ $NetBSD: patch-ao,v 1.7 2012/05/21 07:01:32 plunky Exp $
 +	addr.bt_family = AF_BLUETOOTH;
 +	if (dev != HCI_DEV_NONE && !bt_devaddr(dev, &addr.bt_bdaddr)) {
 +		perror("device");
-+		exit(1);
++		return -1;
 +	}
 +#endif
  	if (bind(sk, (struct sockaddr *) &addr, sizeof(addr)) < 0) {
--		printf("Can't attach to device hci%d. %s(%d)\n", 
-+		printf("Can't attach to device %s. %s(%d)\n", 
+-		printf("Can't attach to device hci%d. %s(%d)\n",
++		printf("Can't attach to device %s. %s(%d)\n",
  					dev, strerror(errno), errno);
  		return -1;
  	}
-@@ -768,7 +798,7 @@ static int wait_connection(char *addr, c
- 	return -1;
- }
- 
--static int run_server(int dev, char *addr, char *port, unsigned long flags)
-+static int run_server(char *dev, char *addr, char *port, unsigned long flags)
- {
- 	while (1) {
- 		int dd, sk;
-@@ -904,7 +934,7 @@ int main(int argc, char *argv[])
+@@ -672,7 +694,7 @@ int main(int argc, char *argv[])
  {
  	unsigned long flags = 0;
  	unsigned long filter = 0;
@@ -124,7 +99,7 @@ $NetBSD: patch-ao,v 1.7 2012/05/21 07:01:32 plunky Exp $
  	int defpsm = 0;
  	int defcompid = DEFAULT_COMPID;
  	int opt, pppdump_fd = -1, audio_fd = -1;
-@@ -916,7 +946,7 @@ int main(int argc, char *argv[])
+@@ -684,7 +706,7 @@ int main(int argc, char *argv[])
  		switch(opt) {
  		case 'i':
  			if (strcasecmp(optarg, "none") && strcasecmp(optarg, "system"))

@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile,v 1.1 2014/12/30 08:39:13 plunky Exp $
+
+The native build system is for the full system on Linux, so
+we provide a custom BSD style one to build just hcidump.
+
+--- Makefile.orig	2014-12-28 13:02:11.000000000 +0000
++++ Makefile
+@@ -0,0 +1,5 @@
++#
++
++SUBDIR=	lib tools/parser .WAIT tools
++
++.include <bsd.subdir.mk>

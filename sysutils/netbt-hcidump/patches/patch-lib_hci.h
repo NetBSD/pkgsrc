@@ -1,6 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2012/05/21 07:01:32 plunky Exp $
+$NetBSD: patch-lib_hci.h,v 1.1 2014/12/30 08:39:13 plunky Exp $
 
---- lib/hci.h.orig	2012-02-29 18:23:20.000000000 +0000
+Not much of the original library is needed.
+
+--- lib/hci.h.orig	2014-12-26 17:54:42.000000000 +0000
 +++ lib/hci.h
 @@ -39,6 +39,7 @@ extern "C" {
  #define HCI_MAX_EVENT_SIZE	260
@@ -32,7 +34,7 @@ $NetBSD: patch-ac,v 1.4 2012/05/21 07:01:32 plunky Exp $
  
  #ifndef __NO_HCI_DEFS
  
-@@ -2262,6 +2266,7 @@ typedef struct {
+@@ -2328,6 +2332,7 @@ typedef struct {
  
  #endif /* _NO_HCI_DEFS */
  
@@ -40,7 +42,7 @@ $NetBSD: patch-ac,v 1.4 2012/05/21 07:01:32 plunky Exp $
  /* HCI Socket options */
  #define HCI_DATA_DIR	1
  #define HCI_FILTER	2
-@@ -2374,6 +2379,12 @@ struct hci_inquiry_req {
+@@ -2441,6 +2446,12 @@ struct hci_inquiry_req {
  	uint8_t  num_rsp;
  };
  #define IREQ_CACHE_FLUSH 0x0001
