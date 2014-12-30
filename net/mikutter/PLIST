@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2014/11/18 11:25:08 obache Exp $
+@comment $NetBSD: PLIST,v 1.30 2014/12/30 08:05:17 obache Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -416,6 +416,9 @@ share/mikutter/core/plugin/openimg/po/vi/openimg.po
 share/mikutter/core/plugin/openimg/po/zh/openimg.po
 share/mikutter/core/plugin/openimg/po/zh_CN/openimg.po
 share/mikutter/core/plugin/openimg/po/zh_TW/openimg.po
+share/mikutter/core/plugin/photo_support/.mikutter.yml
+share/mikutter/core/plugin/photo_support/Gemfile
+share/mikutter/core/plugin/photo_support/photo_support.rb
 share/mikutter/core/plugin/profile/.mikutter.yml
 share/mikutter/core/plugin/profile/po/ar/profile.po
 share/mikutter/core/plugin/profile/po/de/profile.po
@@ -560,6 +563,8 @@ share/mikutter/core/plugin/shortcutkey/po/zh_CN/shortcutkey.po
 share/mikutter/core/plugin/shortcutkey/po/zh_TW/shortcutkey.po
 share/mikutter/core/plugin/shortcutkey/shortcutkey.rb
 share/mikutter/core/plugin/shortcutkey/shortcutkey_listview.rb
+share/mikutter/core/plugin/skin/.mikutter.yml
+share/mikutter/core/plugin/skin/skin.rb
 share/mikutter/core/plugin/smartthread/.mikutter.yml
 share/mikutter/core/plugin/smartthread/po/ar/smartthread.po
 share/mikutter/core/plugin/smartthread/po/de/smartthread.po
@@ -637,6 +642,7 @@ share/mikutter/core/skin/data/etc.png
 share/mikutter/core/skin/data/fav.png
 share/mikutter/core/skin/data/followers.png
 share/mikutter/core/skin/data/followings.png
+share/mikutter/core/skin/data/forward.png
 share/mikutter/core/skin/data/icon.png
 share/mikutter/core/skin/data/icon_alternative.png
 share/mikutter/core/skin/data/list.png
