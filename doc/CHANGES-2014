@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4937 2014/12/30 14:47:36 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4938 2014/12/30 14:47:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6459,3 +6459,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/py-qt4-qscintilla to 2.8.4 [wiz 2014-12-30]
 	Updated textproc/py-html2text to 2014.12.24 [wiz 2014-12-30]
 	Updated www/links to 2.9 [wiz 2014-12-30]
+	Updated www/links-gui to 2.9 [wiz 2014-12-30]
