@@ -1,0 +1,3 @@
+The ssh2 module provides Qore the possibility to communicate with sshd
+servers via the ssh2 protocol; the underlying functionality is provided
+by libssh2.
