@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.97 2014/12/14 15:47:03 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2014/12/30 13:40:51 wiz Exp $
 
-DISTNAME=		mpd-0.18.20
+DISTNAME=		mpd-0.18.21
 PKGNAME=		${DISTNAME:S/mpd/musicpd/}
 CATEGORIES=		audio
 MASTER_SITES=		http://www.musicpd.org/download/mpd/0.18/
@@ -38,14 +38,6 @@ RCD_SCRIPTS=		mpd
 
 FILES_SUBST+=		DEVOSSAUDIO=${DEVOSSAUDIO:Q}
 LDFLAGS+=		${LIBOSSAUDIO}
-
-SUBST_CLASSES+=		config paths
-SUBST_STAGE.config=	pre-configure
-SUBST_FILES.config=	src/cmdline.c
-SUBST_SED.config=	-e s,/etc/mpd.conf,${PKG_SYSCONFDIR}/mpd.conf,
-SUBST_STAGE.paths=	post-patch
-SUBST_FILES.paths=	mpd.conf
-SUBST_SED.paths=	-e 's,@DEVOSSAUDIO@,${DEVOSSAUDIO},'
 
 INSTALLATION_DIRS=	${EGDIR}
 
