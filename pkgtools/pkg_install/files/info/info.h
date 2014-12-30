@@ -1,4 +1,4 @@
-/* $NetBSD: info.h,v 1.21 2009/09/11 18:00:13 joerg Exp $ */
+/* $NetBSD: info.h,v 1.22 2014/12/30 15:13:20 wiz Exp $ */
 
 /* from FreeBSD Id: info.h,v 1.10 1997/02/22 16:09:40 peter Exp */
 
@@ -68,7 +68,6 @@ struct pkg_meta {
 	char *meta_install;
 	char *meta_deinstall;
 	char *meta_preserve;
-	char *meta_views;
 	char *meta_installed_info;
 	int is_installed;
 };

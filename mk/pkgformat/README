@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.1 2011/10/15 00:23:09 reed Exp $
+$NetBSD: README,v 1.2 2014/12/30 15:13:19 wiz Exp $
 
 = Introduction =
 
@@ -38,7 +38,6 @@ ones are useful. Document them.)
 * PKG_CREATE
 * PKG_DELETE
 * PKG_INFO
-* PKG_VIEW
 * LINKFARM
 * PKG_BEST_EXISTS
 

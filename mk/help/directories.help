@@ -1,4 +1,4 @@
-# $NetBSD: directories.help,v 1.1 2008/01/19 22:41:48 rillig Exp $
+# $NetBSD: directories.help,v 1.2 2014/12/30 15:13:19 wiz Exp $
 #
 # This file contains some short documentation on the directories that
 # are used within pkgsrc.
@@ -6,7 +6,7 @@
 # PREFIX
 #	This is the directory where the package should install its
 #	files. The actual value depends on the variables
-#	PKG_INSTALLATION_TYPE, USE_X11BASE and USE_CROSSBASE.
+#	USE_X11BASE and USE_CROSSBASE.
 #
 #	Tags: read-only, system-defined, non-overridable, etc.
 #
@@ -14,8 +14,7 @@
 #		CROSSBASE,
 #		INSTALLATION_PREFIX,
 #		LOCALBASE,
-#		X11PREFIX,
-#		PKG_INSTALLATION_TYPE.
+#		X11PREFIX.
 #
 
 # LOCALBASE
@@ -45,7 +44,6 @@
 #	point to a subdirectory of PKG_SYSCONFBASE.
 #
 
-# TODO:PKG_SYSCONFDEPOTBASE
 # TODO:PKG_SYSCONFBASEDIR
 #
 
