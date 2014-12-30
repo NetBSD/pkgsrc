@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4903 2014/12/30 08:41:11 plunky Exp $
+$NetBSD: CHANGES-2014,v 1.4904 2014/12/30 08:48:45 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6404,3 +6404,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added www/ruby-httpclient version 2.3.4.1 [obache 2014-12-30]
 	Updated net/mikutter to 3.2.0 [obache 2014-12-30]
 	Updated sysutils/netbt-hcidump to 5.27 [plunky 2014-12-30]
+	Added geography/libnova version 0.13.0 [plunky 2014-12-30]
