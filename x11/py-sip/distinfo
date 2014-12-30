@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.36 2014/08/21 21:32:38 wiz Exp $
+$NetBSD: distinfo,v 1.37 2014/12/30 06:43:59 adam Exp $
 
-SHA1 (sip-4.16.2.tar.gz) = 4d3ebce6ec7c31d8a862a6ee307a5f6c3e67349b
-RMD160 (sip-4.16.2.tar.gz) = 5bdc04a4c93deed92dc0838baf590b938ea333eb
-Size (sip-4.16.2.tar.gz) = 793663 bytes
+SHA1 (sip-4.16.5.tar.gz) = d5d7b6765de8634eccf48a250dbd915f01b2a771
+RMD160 (sip-4.16.5.tar.gz) = a7ed8f728ad8cc50b1838be837e3967f69d9cd68
+Size (sip-4.16.5.tar.gz) = 859672 bytes
 SHA1 (patch-aa) = 813eeed9d8608a2049e3cc819d31876afdada3aa
 SHA1 (patch-ab) = 044f78528dc67f7585c15b0fb3ec116ff11e31a6
 SHA1 (patch-siputils.py) = 8e5cccfb5e17df54550fc352df35c4065ef36b65
