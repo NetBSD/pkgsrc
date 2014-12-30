@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2014/09/10 12:24:13 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/12/30 17:23:47 adam Exp $
 lib/pkgconfig/Qt5Declarative.pc
+${PLIST.mac}qt5/bin/QMLViewer
 qt5/bin/qml1plugindump
 qt5/bin/qmlviewer
 qt5/imports/Qt/labs/folderlistmodel/libqmlfolderlistmodelplugin.la
@@ -235,6 +236,9 @@ qt5/include/QtDeclarative/qtdeclarativeglobal.h
 qt5/include/QtDeclarative/qtdeclarativeversion.h
 qt5/lib/cmake/Qt5Declarative/Qt5DeclarativeConfig.cmake
 qt5/lib/cmake/Qt5Declarative/Qt5DeclarativeConfigVersion.cmake
+qt5/lib/cmake/Qt5Declarative/Qt5Declarative_QTcpServerConnection.cmake
+qt5/lib/cmake/Qt5Declarative/Qt5Declarative_QtQuick1Plugin.cmake
+qt5/lib/cmake/Qt5Designer/Qt5Designer_QDeclarativeViewPlugin.cmake
 qt5/lib/libQt5Declarative.la
 qt5/lib/libQt5Declarative.prl
 qt5/lib/pkgconfig/Qt5Declarative.pc

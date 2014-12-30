@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2014/04/23 07:05:31 adam Exp $
+# $NetBSD: Makefile,v 1.5 2014/12/30 17:23:45 adam Exp $
 
 DISTNAME=	qt5-${QTVERSION}
 CATEGORIES=	x11
 MASTER_SITES=	# none
 
-COMMENT=	"meta-package" forversion 5 of the QT GUI C++ toolkit
+COMMENT=	"meta-package" for version 5 of the QT GUI C++ toolkit
 
 META_PACKAGE=	yes
 
@@ -30,10 +30,14 @@ DEPENDS+=	qt5-qtsvg-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtsvg
 DEPENDS+=	qt5-qttools-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qttools
 DEPENDS+=	qt5-qttranslations-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qttranslations
 DEPENDS+=	qt5-qtwebkit-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtwebkit
-DEPENDS+=	qt5-qtx11extras-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtx11extras
 DEPENDS+=	qt5-qtxmlpatterns-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtxmlpatterns
 DEPENDS+=	qt5-sqlite3-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-sqlite3
 #DEPENDS+=	qt5-ibus-${QTVERSION}{,nb[0-9]*}:../../inputmethod/qt5-ibus
-DEPENDS+=	qt5-uim-[0-9]*:../../inputmethod/qt5-uim
+#DEPENDS+=	qt5-uim-[0-9]*:../../inputmethod/qt5-uim
+.if ${OPSYS} == "Darwin"
+DEPENDS+=	qt5-qtmacextras-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtmacextras
+.else
+DEPENDS+=	qt5-qtx11extras-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtx11extras
+.endif
 
 .include "../../mk/bsd.pkg.mk"
