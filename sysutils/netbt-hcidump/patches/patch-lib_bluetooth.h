@@ -1,6 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2012/03/19 12:09:00 plunky Exp $
+$NetBSD: patch-lib_bluetooth.h,v 1.1 2014/12/30 08:39:13 plunky Exp $
 
---- lib/bluetooth.h.orig	2012-02-29 18:23:20.000000000 +0000
+Not much of the original library is needed.
+
+--- lib/bluetooth.h.orig	2014-12-12 13:38:33.000000000 +0000
 +++ lib/bluetooth.h
 @@ -30,6 +30,7 @@
  extern "C" {
@@ -10,7 +12,7 @@ $NetBSD: patch-ab,v 1.5 2012/03/19 12:09:00 plunky Exp $
  #include <stdio.h>
  #include <stdint.h>
  #include <string.h>
-@@ -135,6 +136,20 @@ enum {
+@@ -153,6 +154,20 @@ enum {
  #else
  #error "Unknown byte order"
  #endif
@@ -31,7 +33,7 @@ $NetBSD: patch-ab,v 1.5 2012/03/19 12:09:00 plunky Exp $
  
  /* Bluetooth unaligned access */
  #define bt_get_unaligned(ptr)			\
-@@ -217,6 +232,7 @@ static inline uint16_t bt_get_be16(const
+@@ -296,6 +311,7 @@ static inline void bt_put_be16(uint16_t 
  #error "Unknown byte order"
  #endif
  
@@ -39,7 +41,7 @@ $NetBSD: patch-ab,v 1.5 2012/03/19 12:09:00 plunky Exp $
  /* BD Address */
  typedef struct {
  	uint8_t b[6];
-@@ -225,6 +241,7 @@ typedef struct {
+@@ -309,6 +325,7 @@ typedef struct {
  #define BDADDR_ANY   (&(bdaddr_t) {{0, 0, 0, 0, 0, 0}})
  #define BDADDR_ALL   (&(bdaddr_t) {{0xff, 0xff, 0xff, 0xff, 0xff, 0xff}})
  #define BDADDR_LOCAL (&(bdaddr_t) {{0, 0, 0, 0xff, 0xff, 0xff}})
@@ -47,7 +49,7 @@ $NetBSD: patch-ab,v 1.5 2012/03/19 12:09:00 plunky Exp $
  
  /* Copy, swap, convert BD Address */
  static inline int bacmp(const bdaddr_t *ba1, const bdaddr_t *ba2)
-@@ -237,9 +254,12 @@ static inline void bacpy(bdaddr_t *dst, 
+@@ -321,9 +338,12 @@ static inline void bacpy(bdaddr_t *dst, 
  }
  
  void baswap(bdaddr_t *dst, const bdaddr_t *src);
@@ -60,18 +62,11 @@ $NetBSD: patch-ab,v 1.5 2012/03/19 12:09:00 plunky Exp $
  int str2ba(const char *str, bdaddr_t *ba);
  int ba2oui(const bdaddr_t *ba, char *oui);
  int bachk(const char *str);
-@@ -248,11 +268,14 @@ int baprintf(const char *format, ...);
- int bafprintf(FILE *stream, const char *format, ...);
- int basprintf(char *str, const char *format, ...);
- int basnprintf(char *str, size_t size, const char *format, ...);
-+#endif
- 
- void *bt_malloc(size_t size);
+@@ -337,6 +357,7 @@ void *bt_malloc(size_t size);
  void bt_free(void *ptr);
  
-+#if 0
  int bt_error(uint16_t code);
 +#endif
- char *bt_compidtostr(int id);
+ const char *bt_compidtostr(int id);
  
  typedef struct {

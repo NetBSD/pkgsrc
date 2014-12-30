@@ -1,8 +1,10 @@
-$NetBSD: patch-ah,v 1.4 2013/09/10 14:44:03 joerg Exp $
+$NetBSD: patch-tools_parser_parser.h,v 1.1 2014/12/30 08:39:13 plunky Exp $
 
---- parser/parser.h.orig	2012-11-30 08:29:41.000000000 +0000
-+++ parser/parser.h
-@@ -36,7 +36,7 @@ struct frame {
+the device ID is a string on netbt stack
+
+--- tools/parser/parser.h.orig	2014-03-25 20:53:42.000000000 +0000
++++ tools/parser/parser.h
+@@ -37,7 +37,7 @@ struct frame {
  	uint32_t	data_len;
  	void		*ptr;
  	uint32_t	len;
@@ -11,7 +13,7 @@ $NetBSD: patch-ah,v 1.4 2013/09/10 14:44:03 joerg Exp $
  	uint8_t		in;
  	uint8_t		master;
  	uint16_t	handle;
-@@ -134,9 +134,9 @@ static inline void p_indent(int level, s
+@@ -135,9 +135,9 @@ static inline void p_indent(int level, s
  				localtime_r(&t, &tm);
  				printf("%04d-%02d-%02d %02d:%02d:%02d.%06lu ",
  					tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday,

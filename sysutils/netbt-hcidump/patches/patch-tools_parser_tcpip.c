@@ -1,7 +1,9 @@
-$NetBSD: patch-aj,v 1.2 2012/02/15 09:30:23 plunky Exp $
+$NetBSD: patch-tools_parser_tcpip.c,v 1.1 2014/12/30 08:39:13 plunky Exp $
 
---- parser/tcpip.c.orig	2011-12-22 00:18:58.000000000 +0000
-+++ parser/tcpip.c
+BSD vs Linux differences
+
+--- tools/parser/tcpip.c.orig	2012-12-24 17:46:55.000000000 +0000
++++ tools/parser/tcpip.c
 @@ -31,8 +31,9 @@
  #include <stdlib.h>
  #include <string.h>
