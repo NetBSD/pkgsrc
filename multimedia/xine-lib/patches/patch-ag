@@ -1,12 +1,8 @@
-$NetBSD: patch-ag,v 1.27 2014/05/18 15:38:18 wiz Exp $
+$NetBSD: patch-ag,v 1.28 2014/12/30 13:34:59 wiz Exp $
 
 1. chunk:
 https://bugs.xine-project.org/show_bug.cgi?id=536
-2. chunk:
-https://bugs.xine-project.org/show_bug.cgi?id=532
-3. chunk:
-https://bugs.xine-project.org/show_bug.cgi?id=526
-4. chunk
+2. chunk
 https://bugs.xine-project.org/show_bug.cgi?id=531
 
 --- configure.ac.orig	2012-06-09 17:30:18.000000000 +0000
@@ -20,28 +16,6 @@ https://bugs.xine-project.org/show_bug.cgi?id=531
  AC_CONFIG_SRCDIR([src/xine-engine/xine.c])
  AC_CONFIG_MACRO_DIR([m4])
  AC_CONFIG_LIBOBJ_DIR([lib])
-@@ -272,6 +272,10 @@
- AC_CHECK_LIB([resolv], [hstrerror],     [NET_LIBS="-lresolv $NET_LIBS"])
- AC_SUBST(NET_LIBS)
- 
-+WINE_LIBS=""
-+AC_CHECK_LIB(i386, i386_set_ldt, WINE_LIBS="-li386 $WINE_LIBS",)
-+AC_SUBST(WINE_LIBS)
-+
- AC_CHECK_LIB([rt], [clock_getres],
-              [RT_LIBS="-lrt"
-               AC_DEFINE(HAVE_POSIX_TIMERS, 1, [Define this if you have POSIX timers.])], 
-@@ -361,6 +365,10 @@
- esac
- AC_CHECK_HEADERS([sys/dvdio.h sys/cdio.h sys/scsiio.h])
- 
-+dnl ----------------------------------------------
-+dnl Check for NetBSD DTV headers
-+dnl ----------------------------------------------
-+AC_CHECK_HEADERS([dev/dtv/dtvio.h])
- 
- dnl ----------------
- dnl checks for types
 @@ -905,6 +913,7 @@
  
  AC_FUNC_FSEEKO
