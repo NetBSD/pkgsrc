@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/12/30 22:05:46 ryoon Exp $
+
+SHA1 (qtkeychain-0.4.0.tar.gz) = 869ed20d15cc78ab3903701faf3100d639c3da57
+RMD160 (qtkeychain-0.4.0.tar.gz) = 72196eb012390a1f068bc50b1b424b663a4d99ba
+Size (qtkeychain-0.4.0.tar.gz) = 18236 bytes
