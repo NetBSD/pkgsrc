@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2014/07/18 08:56:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.14.4.1 2014/12/30 19:26:39 tron Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-gpl/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ghostscript/}
 MASTER_SITES+=	http://ghostscript.com/releases/
