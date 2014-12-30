@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4909 2014/12/30 12:54:24 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4910 2014/12/30 12:55:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6431,3 +6431,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/libopenmpt to 0.2.4667beta9 [wiz 2014-12-30]
 	Added www/h2o version 0.9.0 [wiz 2014-12-30]
 	Updated devel/p5-Devel-Symdump to 2.1400 [wiz 2014-12-30]
+	Updated security/p5-Mozilla-CA to 20141217 [wiz 2014-12-30]
