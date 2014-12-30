@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2016 2014/12/13 08:03:36 obache Exp $
+# $NetBSD: Makefile,v 1.2017 2014/12/30 15:54:53 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1660,6 +1660,7 @@ SUBDIR+=	qbzr
 SUBDIR+=	qconf
 SUBDIR+=	qjson
 SUBDIR+=	qof
+SUBDIR+=	qore-uuid-module
 SUBDIR+=	qtscriptgenerator
 SUBDIR+=	quilt
 SUBDIR+=	ragel
