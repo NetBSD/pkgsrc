@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2012/10/08 09:57:42 asau Exp $
+# $NetBSD: Makefile,v 1.10 2014/12/30 14:47:45 plunky Exp $
 #
 
 DISTNAME=	zyGrib-maps-2.4
-PKGREVISION=	4
+PKGREVISION=	6
 CATEGORIES=	misc
 MASTER_SITES=	http://www.zygrib.org/getfile.php?file=
 DISTFILES=	zyGrib_maps2.4.tgz
 
-MAINTAINER=	plunky@rya-online.net
+MAINTAINER=	plunky@NetBSD.org
 HOMEPAGE=	http://www.zygrib.org/
 COMMENT=	High resolution map files for zyGrib
 LICENSE=	gnu-gpl-v3
