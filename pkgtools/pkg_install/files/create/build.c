@@ -1,4 +1,4 @@
-/*	$NetBSD: build.c,v 1.15 2010/04/20 00:39:13 joerg Exp $	*/
+/*	$NetBSD: build.c,v 1.16 2014/12/30 15:13:20 wiz Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: build.c,v 1.15 2010/04/20 00:39:13 joerg Exp $");
+__RCSID("$NetBSD: build.c,v 1.16 2014/12/30 15:13:20 wiz Exp $");
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -93,7 +93,6 @@ static struct memory_file *build_info_file;
 static struct memory_file *size_pkg_file;
 static struct memory_file *size_all_file;
 static struct memory_file *preserve_file;
-static struct memory_file *views_file;
 
 static void
 write_meta_file(struct memory_file *file, struct archive *archive)
@@ -292,8 +291,6 @@ make_dist(const char *pkg, const char *suffix, const package_t *plist)
 		write_meta_file(size_all_file, archive);
 	if (Preserve)
 		write_meta_file(preserve_file, archive);
-	if (create_views)
-		write_meta_file(views_file, archive);
 
 	initial_cwd = getcwd(NULL, 0);
 
@@ -407,8 +404,6 @@ pkg_build(const char *pkg, const char *full_pkg, const char *suffix,
 		preserve_file = load_and_add(plist, Preserve,
 		    PRESERVE_FNAME, 0444);
 	}
-	if (create_views)
-		views_file = make_and_add(plist, VIEWS_FNAME, xstrdup(""), 0444);
 
 	/* Finally, write out the packing list */
 	stringify_plist(plist, &plist_buf, &plist_len, realprefix);

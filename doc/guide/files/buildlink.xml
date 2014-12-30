@@ -1,4 +1,4 @@
-<!-- $NetBSD: buildlink.xml,v 1.36 2013/07/30 07:14:09 wiz Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.37 2014/12/30 15:13:19 wiz Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -317,13 +317,11 @@ BUILDLINK_TREE+=	-tiff
 	    <filename>+CONTENTS</filename> input into a list of files
 	    relative to
 	    <filename>${BUILDLINK_PREFIX.<replaceable>pkg</replaceable>}</filename>
-	    on stdout.  By default for overwrite packages,
+	    on stdout.  By default,
 	    <varname>BUILDLINK_CONTENTS_FILTER.<replaceable>pkg</replaceable></varname>
 	    outputs the contents of the <filename>include</filename>
 	    and <filename>lib</filename> directories in the package
-	    <filename>+CONTENTS</filename>, and for pkgviews packages,
-	    it outputs any libtool archives in
-	    <filename>lib</filename> directories.</para>
+	    <filename>+CONTENTS</filename>.
 	</listitem>
 
 	<listitem>
