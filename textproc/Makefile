@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.814 2014/12/10 00:58:33 gdt Exp $
+# $NetBSD: Makefile,v 1.815 2014/12/30 15:52:17 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -689,6 +689,9 @@ SUBDIR+=	py-xlwt
 SUBDIR+=	py-xml
 SUBDIR+=	py-yamcha
 SUBDIR+=	py-yaml
+SUBDIR+=	qore-json-module
+SUBDIR+=	qore-xml-module
+SUBDIR+=	qore-yaml-module
 SUBDIR+=	qprint
 SUBDIR+=	qsubst
 SUBDIR+=	queequeg
