@@ -1,0 +1,2 @@
+XML module for the Qore language that provides (de)serialization, Soap
+support and XmlRpcHandler and other things.
