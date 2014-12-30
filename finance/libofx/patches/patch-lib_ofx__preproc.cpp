@@ -1,6 +1,7 @@
-$NetBSD: patch-lib_ofx__preproc.cpp,v 1.1 2014/12/30 13:13:21 wiz Exp $
+$NetBSD: patch-lib_ofx__preproc.cpp,v 1.2 2014/12/30 13:20:29 wiz Exp $
 
 Fix build on NetBSD where iconv has a different prototype.
+http://sourceforge.net/p/libofx/bugs/44/
 
 --- lib/ofx_preproc.cpp.orig	2014-09-12 19:26:30.000000000 +0000
 +++ lib/ofx_preproc.cpp
