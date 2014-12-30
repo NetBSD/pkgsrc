@@ -1,0 +1,2 @@
+The Qore openldap module makes it possible for Qore programs to
+communicate with LDAP servers.
