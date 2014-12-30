@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2014/12/30 15:41:23 wiz Exp $
+${QORE_MODULE_DIR}/freetds-api-${QORE_LATEST_MODULE_API}.qmod
+share/doc/qore-freetds-module/freetds-module-doc.html

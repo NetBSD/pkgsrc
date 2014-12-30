@@ -1,0 +1,13 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2014/12/30 15:41:24 wiz Exp $
+* delete .a file as well as .la file.
+--- src/Makefile.in.orig	2014-02-11 16:46:02.000000000 +0000
++++ src/Makefile.in
+@@ -708,7 +708,7 @@ install-exec-hook:
+ @COND_SYBASE_TRUE@	mv $(DESTDIR)$(libdir)/sybase.$(MODULE_SUFFIX) $(DESTDIR)$(libdir)/sybase-api-$(MODULE_API).qmod
+ @COND_SYBASE_TRUE@	rm -f $(DESTDIR)$(libdir)/sybase.la
+ @COND_FREETDS_TRUE@	mv $(DESTDIR)$(libdir)/freetds.$(MODULE_SUFFIX) $(DESTDIR)$(libdir)/freetds-api-$(MODULE_API).qmod
+-@COND_FREETDS_TRUE@	rm -f $(DESTDIR)$(libdir)/freetds.la
++@COND_FREETDS_TRUE@	rm -f $(DESTDIR)$(libdir)/freetds.la $(DESTDIR)$(libdir)/freetds.a
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
