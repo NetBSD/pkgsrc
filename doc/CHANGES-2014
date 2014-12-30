@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4939 2014/12/30 14:51:13 plunky Exp $
+$NetBSD: CHANGES-2014,v 1.4940 2014/12/30 15:21:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6461,3 +6461,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/links to 2.9 [wiz 2014-12-30]
 	Updated www/links-gui to 2.9 [wiz 2014-12-30]
 	Updated lang/pcc-current to 20141228 [plunky 2014-12-30]
+	Updated pkgtools/pkg_install to 20141227 [wiz 2014-12-30]
