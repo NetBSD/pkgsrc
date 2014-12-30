@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4947 2014/12/30 22:24:04 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.4948 2014/12/30 23:49:26 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6508,3 +6508,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/mirall to 1.7.1 [ryoon 2014-12-30]
 	Updated devel/gputils to 1.4.0 [ryoon 2014-12-30]
 	Updated devel/sdcc3 to 3.4.0 [ryoon 2014-12-30]
+	Updated lang/openjdk7 to 1.7.71nb2 [ryoon 2014-12-30]
