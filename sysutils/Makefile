@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.620 2014/12/30 13:55:01 bsiegert Exp $
+# $NetBSD: Makefile,v 1.621 2014/12/30 17:04:15 bsiegert Exp $
 #
 
 COMMENT=	System utilities
@@ -347,6 +347,7 @@ SUBDIR+=	open-vm-tools
 SUBDIR+=	openstack_init
 SUBDIR+=	openxenmanager
 SUBDIR+=	osname
+SUBDIR+=	p5-Config-Augeas
 SUBDIR+=	p5-Config-Simple
 SUBDIR+=	p5-File-Copy-Recursive
 SUBDIR+=	p5-File-Inplace
@@ -396,6 +397,7 @@ SUBDIR+=	pstree
 SUBDIR+=	puppet
 SUBDIR+=	pv
 SUBDIR+=	pwgen
+SUBDIR+=	py-augeas
 SUBDIR+=	py-dbus
 SUBDIR+=	py-gnome-menus
 SUBDIR+=	py-kazoo
