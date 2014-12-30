@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1079 2014/12/11 20:14:49 wiz Exp $
+# $NetBSD: Makefile,v 1.1080 2014/12/30 07:58:41 obache Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -680,6 +680,7 @@ SUBDIR+=	ruby-http
 SUBDIR+=	ruby-http-cookie
 SUBDIR+=	ruby-http_parser.rb
 SUBDIR+=	ruby-http_router
+SUBDIR+=	ruby-httpclient
 SUBDIR+=	ruby-innate
 SUBDIR+=	ruby-jekyll
 SUBDIR+=	ruby-journey
