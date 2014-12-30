@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2014/12/30 17:23:46 adam Exp $
+lib/pkgconfig/Qt5MacExtras.pc
+qt5/include/QtMacExtras/${PKGVERSION}/QtMacExtras/private/qmacfunctions_p.h
+qt5/include/QtMacExtras/${PKGVERSION}/QtMacExtras/private/qmactoolbar_p.h
+qt5/include/QtMacExtras/${PKGVERSION}/QtMacExtras/private/qmactoolbardelegate_p.h
+qt5/include/QtMacExtras/${PKGVERSION}/QtMacExtras/private/qmactoolbaritem_p.h
+qt5/include/QtMacExtras/${PKGVERSION}/QtMacExtras/private/qnstoolbar_p.h
+qt5/include/QtMacExtras/QMacPasteboardMime
+qt5/include/QtMacExtras/QMacToolBar
+qt5/include/QtMacExtras/QMacToolBarItem
+qt5/include/QtMacExtras/QtMac
+qt5/include/QtMacExtras/QtMacExtras
+qt5/include/QtMacExtras/QtMacExtrasDepends
+qt5/include/QtMacExtras/QtMacExtrasVersion
+qt5/include/QtMacExtras/qmacextrasglobal.h
+qt5/include/QtMacExtras/qmacfunctions.h
+qt5/include/QtMacExtras/qmacpasteboardmime.h
+qt5/include/QtMacExtras/qmactoolbar.h
+qt5/include/QtMacExtras/qmactoolbaritem.h
+qt5/include/QtMacExtras/qtmacextrasversion.h
+qt5/lib/cmake/Qt5MacExtras/Qt5MacExtrasConfig.cmake
+qt5/lib/cmake/Qt5MacExtras/Qt5MacExtrasConfigVersion.cmake
+qt5/lib/libQt5MacExtras.la
+qt5/lib/libQt5MacExtras.prl
+qt5/lib/pkgconfig/Qt5MacExtras.pc
+qt5/mkspecs/modules/qt_lib_macextras.pri
+qt5/mkspecs/modules/qt_lib_macextras_private.pri
