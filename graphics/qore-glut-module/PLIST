@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2014/12/30 15:58:20 wiz Exp $
+${QORE_MODULE_DIR}/glut-api-${QORE_MODULE_API}.qmod
