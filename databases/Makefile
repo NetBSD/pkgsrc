@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.475 2014/12/06 03:27:51 rodent Exp $
+# $NetBSD: Makefile,v 1.476 2014/12/30 15:45:32 wiz Exp $
 
 COMMENT=	Databases
 
@@ -369,6 +369,11 @@ SUBDIR+=	py-tokyocabinet
 SUBDIR+=	qdbm
 SUBDIR+=	qdbm-cgi
 SUBDIR+=	qdbm-plus
+SUBDIR+=	qore-freetds-module
+SUBDIR+=	qore-mysql-module
+SUBDIR+=	qore-openldap-module
+SUBDIR+=	qore-pgsql-module
+SUBDIR+=	qore-sqlite3-module
 SUBDIR+=	quicklist
 SUBDIR+=	rdb
 SUBDIR+=	redis
