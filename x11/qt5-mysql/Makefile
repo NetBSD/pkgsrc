@@ -1,26 +1,22 @@
-# $NetBSD: Makefile,v 1.7 2014/12/25 13:51:13 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/12/30 17:23:45 adam Exp $
 
+DISTNAME=	qtbase-opensource-src-${QTVERSION}
 PKGNAME=	qt5-mysql-${QTVERSION}
-PKGREVISION=	1
 COMMENT=	Qt5 MySQL plugin
-
-USE_LIBTOOL=		yes
-CONFIGURE_ARGS+=	-I${QTDIR}/include -L${QTDIR}/lib
 
 CFLAGS+=		-I${BUILDLINK_PREFIX.mysql-client}/include/mysql
 
-BUILD_DIRS=		qtbase/src/plugins/sqldrivers
+BUILD_DIRS=		src/plugins/sqldrivers
 MAKE_ENV+=		QTDIR=${QTDIR}
-
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 
 .include "../../x11/qt5-qtbase/Makefile.common"
 
-post-configure:
+do-configure:
+	${RM} -f -r ${WRKSRC}/mkspecs
 	cd ${WRKSRC}/${BUILD_DIRS} && \
-		${QTDIR}/bin/qmake "sql-plugins=mysql" -o Makefile
+	${QTDIR}/bin/qmake "sql-plugins=mysql" -o Makefile
 
-.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

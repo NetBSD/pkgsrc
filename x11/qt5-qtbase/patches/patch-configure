@@ -1,0 +1,52 @@
+$NetBSD: patch-configure,v 1.1 2014/12/30 17:23:46 adam Exp $
+
+* Don't use SDKs on OS X
+* Add NetBSD/sparc{,64} support
+
+--- configure.orig	2014-02-01 20:37:23.000000000 +0000
++++ configure
+@@ -319,7 +319,6 @@ getQMakeConf()
+ {
+     if [ -z "$specvals" ]; then
+         specvals=`expandQMakeConf "$QMAKESPEC/qmake.conf" | extractQMakeVariables "host_build"`
+-        if [ "$BUILD_ON_MAC" = "yes" ]; then specvals=$(macSDKify "$specvals"); fi
+     fi
+     getSingleQMakeVariable "$1" "$specvals"
+ }
+@@ -328,7 +327,6 @@ getXQMakeConf()
+ {
+     if [ -z "$xspecvals" ]; then
+         xspecvals=`expandQMakeConf "$XQMAKESPEC/qmake.conf" | extractQMakeVariables "!host_build"`
+-        if [ "$XPLATFORM_MAC" = "yes" ]; then xspecvals=$(macSDKify "$xspecvals"); fi
+     fi
+     getSingleQMakeVariable "$1" "$xspecvals"
+ }
+@@ -2679,6 +2677,19 @@ if [ -z "$PLATFORM" ]; then
+      UNIX_SV:*)
+         PLATFORM=unixware-g++
+         ;;
++    NetBSD:*:sparc)
++        if [ "$OPT_VERBOSE" = "yes" ]; then
++            echo "    NetBSD on SPARC"
++        fi
++        CFG_HOST_ARCH=sparc
++        ;;
++    NetBSD:*:sparc64)
++        if [ "$OPT_VERBOSE" = "yes" ]; then
++            echo "    NetBSD on SPARC64"
++        fi
++        CFG_HOST_ARCH=sparc
++        CFG_HOST_BITSIZE=64
++        ;;
+      QNX:*)
+         PLATFORM=unsupported/qnx-g++
+         ;;
+@@ -6263,7 +6274,7 @@ QMakeVar set sql-plugins "$SQL_PLUGINS"
+ [ "$CFG_PNG" != "yes" ]      && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_IMAGEFORMAT_PNG"
+ [ "$CFG_JPEG" != "yes" ]     && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_IMAGEFORMAT_JPEG"
+ [ "$CFG_ZLIB" != "yes" ]     && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_ZLIB"
+-[ "$CFG_DBUS" = "no" ]      && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_DBUS"
++#[ "$CFG_DBUS" = "no" ]      && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_DBUS"
+ 
+ # X11/Unix/Mac only configs
+ [ "$CFG_CUPS" = "no" ]       && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_CUPS"
