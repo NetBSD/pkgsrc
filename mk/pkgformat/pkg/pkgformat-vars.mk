@@ -1,4 +1,4 @@
-# $NetBSD: pkgformat-vars.mk,v 1.4 2014/12/08 02:43:25 agc Exp $
+# $NetBSD: pkgformat-vars.mk,v 1.5 2014/12/30 15:13:20 wiz Exp $
 #
 # This Makefile fragment is included indirectly by bsd.prefs.mk and
 # defines some variables which must be defined earlier than where
@@ -21,20 +21,14 @@ PKG_DBDIR?=		/var/db/pkg
 # _PKG_DBDIR is the actual packages database directory where we register
 # packages.
 #
-.if ${PKG_INSTALLATION_TYPE} == "overwrite"
 _PKG_DBDIR=		${_CROSS_DESTDIR}${PKG_DBDIR}
 _HOST_PKG_DBDIR=	${HOST_PKG_DBDIR:U${PKG_DBDIR}}
-.elif ${PKG_INSTALLATION_TYPE} == "pkgviews"
-_PKG_DBDIR=		${_CROSS_DESTDIR}${DEPOTBASE}
-_HOST_PKG_DBDIR=	${HOST_DEPOTBASE:U${DEPOTBASE}}
-.endif
 
 PKG_ADD_CMD?=		${PKG_TOOLS_BIN}/pkg_add
 PKG_ADMIN_CMD?=		${PKG_TOOLS_BIN}/pkg_admin
 PKG_CREATE_CMD?=	${PKG_TOOLS_BIN}/pkg_create
 PKG_DELETE_CMD?=	${PKG_TOOLS_BIN}/pkg_delete
 PKG_INFO_CMD?=		${PKG_TOOLS_BIN}/pkg_info
-PKG_VIEW_CMD?=		${PKG_TOOLS_BIN}/pkg_view
 LINKFARM_CMD?=		${PKG_TOOLS_BIN}/linkfarm
 
 # Latest versions of tools required for correct pkgsrc operation.
@@ -71,19 +65,11 @@ _AUDIT_CONFIG_OPTION=	IGNORE_URL
 PKGTOOLS_ARGS?=		-K ${_PKG_DBDIR}
 HOST_PKGTOOLS_ARGS?=	-K ${_HOST_PKG_DBDIR}
 
-# Views are rooted in ${LOCALBASE}, all packages are depoted in
-# ${DEPOTBASE}, and the package database directory for the default view
-# is in ${PKG_DBDIR}.
-#
-PKG_VIEW_ARGS?=		-W ${LOCALBASE} -d ${DEPOTBASE} -k ${_CROSS_DESTDIR}${PKG_DBDIR}
-HOST_PKG_VIEW_ARGS?=	-W ${LOCALBASE} -d ${DEPOTBASE} -k ${PKG_DBDIR}
-
 PKG_ADD?=	${PKG_ADD_CMD} ${PKGTOOLS_ARGS}
 PKG_ADMIN?=	${PKG_ADMIN_CMD} ${PKGTOOLS_ARGS}
 PKG_CREATE?=	${PKG_CREATE_CMD} ${PKGTOOLS_ARGS}
 PKG_DELETE?=	${PKG_DELETE_CMD} ${PKGTOOLS_ARGS}
 PKG_INFO?=	${PKG_INFO_CMD} ${PKGTOOLS_ARGS}
-PKG_VIEW?=	${PKG_VIEW_CMD} ${PKG_VIEW_ARGS}
 LINKFARM?=	${LINKFARM_CMD}
 
 HOST_PKG_ADD?=		${PKG_ADD_CMD} ${HOST_PKGTOOLS_ARGS}
@@ -91,7 +77,6 @@ HOST_PKG_ADMIN?=	${PKG_ADMIN_CMD} ${HOST_PKGTOOLS_ARGS}
 HOST_PKG_CREATE?=	${PKG_CREATE_CMD} ${HOST_PKGTOOLS_ARGS}
 HOST_PKG_DELETE?=	${PKG_DELETE_CMD} ${HOST_PKGTOOLS_ARGS}
 HOST_PKG_INFO?=		${PKG_INFO_CMD} ${HOST_PKGTOOLS_ARGS}
-HOST_PKG_VIEW?=		${PKG_VIEW_CMD} ${HOST_PKG_VIEW_ARGS}
 HOST_LINKFARM?=		${LINKFARM_CMD}
 
 # "${_PKG_BEST_EXISTS} pkgpattern" prints out the name of the installed
