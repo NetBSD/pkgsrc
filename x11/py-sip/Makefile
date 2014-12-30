@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.43 2014/08/21 21:32:38 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2014/12/30 06:43:59 adam Exp $
 
-DISTNAME=	sip-4.16.2
+DISTNAME=	sip-4.16.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	x11 devel python
-#MASTER_SITES=	http://www.riverbankcomputing.com/static/Downloads/sip4/
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyqt/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.riverbankcomputing.com/software/sip/intro
+HOMEPAGE=	http://www.riverbankcomputing.com/software/sip/
 COMMENT=	Tool to create Python bindings for C++ libraries
 
 CONFLICTS+=	${PYPKGPREFIX}-qt2-sip-* ${PYPKGPREFIX}-qt3-sip-*
 
-USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -25,11 +24,13 @@ CONFIGURE_ARGS+=	-v ${PREFIX}/share/sip${PYVERSSUFFIX}
 .if ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	-p freebsd-g++
 .endif
+CONFIGURE_ARGS+=	CFLAGS=${CFLAGS:Q}
+CONFIGURE_ARGS+=	CXXFLAGS=${CXXFLAGS:Q}
 CONFIGURE_ARGS+=	INCDIR=${PREFIX}/include
 CONFIGURE_ARGS+=	LIBDIR=${PREFIX}/lib
 
-PY_PATCHPLIST=	yes
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
+PY_PATCHPLIST=		yes
+PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 .include "../../mk/compiler.mk"
 
@@ -52,7 +53,6 @@ CONFIGURE_ARGS+=	LFLAGS_SHLIB="-shared"
 .if ${MACHINE_ARCH} == "sparc64" && !empty(CC_VERSION:Mgcc*)
 BUILDLINK_TRANSFORM+=	rm:-O2
 .endif
-
 
 SUBST_CLASSES+=		pyversfx
 SUBST_STAGE.pyversfx=	pre-configure
