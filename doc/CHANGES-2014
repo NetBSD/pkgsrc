@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4899 2014/12/29 23:49:17 agc Exp $
+$NetBSD: CHANGES-2014,v 1.4900 2014/12/30 06:44:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6398,3 +6398,6 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated mail/heirloom-mailx to 12.5 [bsiegert 2014-12-28]
 	Updated lang/nodejs to 0.10.35 [fhajny 2014-12-28]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2014Q4 branch [agc 2014-12-29]
+	Updated archivers/xz to 5.2.0 [adam 2014-12-30]
+	Updated multimedia/ffmpeg2 to 2.5.2 [adam 2014-12-30]
+	Updated x11/py-sip to 4.16.5 [adam 2014-12-30]
