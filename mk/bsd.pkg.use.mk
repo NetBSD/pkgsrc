@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.57 2014/10/01 19:14:21 joerg Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.58 2014/12/30 15:13:19 wiz Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -55,22 +55,14 @@ MAKE_FLAGS+=		CC=${CC:Q} CXX=${CXX:Q}
 .  include "x11.buildlink3.mk"
 .endif
 
-.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-PREFIX=			${DEPOTBASE}/${PKGNAME}
-.elif ${PKG_INSTALLATION_TYPE} == "overwrite"
-.  if defined(INSTALLATION_PREFIX)
+.if defined(INSTALLATION_PREFIX)
 PREFIX=			${INSTALLATION_PREFIX}
-.  elif defined(USE_X11BASE)
+.elif defined(USE_X11BASE)
 PREFIX=			${X11PREFIX}
-.  elif defined(USE_CROSSBASE)
+.elif defined(USE_CROSSBASE)
 PREFIX=			${CROSSBASE}
-.  else
+.else
 PREFIX=			${LOCALBASE}
-.  endif
-.endif
-
-.if (${PKG_INSTALLATION_TYPE} == "pkgviews") && defined(INSTALLATION_PREFIX)
-PKG_FAIL_REASON=	"INSTALLATION_PREFIX can't be used in a pkgviews package"
 .endif
 
 ############################################################################

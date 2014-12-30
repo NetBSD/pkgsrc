@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.352 2014/12/07 06:22:52 obache Exp $
+# $NetBSD: bsd.prefs.mk,v 1.353 2014/12/30 15:13:19 wiz Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -577,27 +577,6 @@ APPEND_ELF=		elf
 .  endif
 .endif
 
-PKG_INSTALLATION_TYPES?= overwrite
-# This is a whitespace-separated list of installation types supported
-# by the package.
-#
-# *NOTE*: This variable *must* be set in the package Makefile *before*
-#         the inclusion of bsd.prefs.mk.
-#
-# Possible: any of: overwrite, pkgviews
-# Default: overwrite
-
-# Set the style of installation to be performed for the package.  The
-# funky make variable modifiers just select the first word of the value
-# stored in the referenced variable.
-#
-.for _pref_ in ${PKG_INSTALLATION_PREFS}
-.  if !empty(PKG_INSTALLATION_TYPES:M${_pref_})
-PKG_INSTALLATION_TYPE?=	${PKG_INSTALLATION_TYPES:M${_pref_}:S/^/_pkginsttype_/1:M_pkginsttype_*:S/^_pkginsttype_//}
-.  endif
-.endfor
-PKG_INSTALLATION_TYPE?=	none
-
 # if the system is IPv6-ready, compile with IPv6 support turned on.
 .if empty(_OPSYS_HAS_INET6:M[nN][oO])
 IPV6_READY=		YES
@@ -667,9 +646,6 @@ IMAKE_GAMEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}6
 IMAKE_MISCMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}7
 IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
 IMAKE_MANINSTALL?=	maninstall
-
-DEPOT_SUBDIR?=		packages
-DEPOTBASE=		${LOCALBASE}/${DEPOT_SUBDIR}
 
 # LINK_RPATH_FLAG publicly exports the linker flag used to set the
 # run-time library search path.

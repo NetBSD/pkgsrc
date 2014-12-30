@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.27 2010/09/14 22:26:18 gdt Exp $	*/
+/*	$NetBSD: main.c,v 1.28 2014/12/30 15:13:20 wiz Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: main.c,v 1.27 2010/09/14 22:26:18 gdt Exp $");
+__RCSID("$NetBSD: main.c,v 1.28 2014/12/30 15:13:20 wiz Exp $");
 
 /*
  *
@@ -39,14 +39,11 @@ __RCSID("$NetBSD: main.c,v 1.27 2010/09/14 22:26:18 gdt Exp $");
 #include "lib.h"
 #include "add.h"
 
-static char Options[] = "AC:DIK:LP:RVW:fhm:np:t:Uuvw:";
+static char Options[] = "AC:DIK:P:RVfhm:np:t:Uuv";
 
 char   *Destdir = NULL;
 char   *OverrideMachine = NULL;
 char   *Prefix = NULL;
-char   *View = NULL;
-char   *Viewbase = NULL;
-Boolean NoView = FALSE;
 Boolean NoInstall = FALSE;
 Boolean NoRecord = FALSE;
 Boolean Automatic = FALSE;
@@ -66,9 +63,8 @@ static void
 usage(void)
 {
 	(void) fprintf(stderr, "%s\n%s\n%s\n%s\n",
-	    "usage: pkg_add [-AfhILnRuVv] [-C config] [-P destdir] [-K pkg_dbdir]",
-	    "               [-m machine] [-p prefix] [-s verification-type",
-	    "               [-W viewbase] [-w view]\n",
+	    "usage: pkg_add [-AfhInRuVv] [-C config] [-P destdir] [-K pkg_dbdir]",
+	    "               [-m machine] [-p prefix] [-s verification-type]\n",
 	    "               [[ftp|http]://[user[:password]@]host[:port]][/path/]pkg-name ...");
 	exit(1);
 }
@@ -112,10 +108,6 @@ main(int argc, char **argv)
 			pkgdb_set_dir(optarg, 3);
 			break;
 
-		case 'L':
-			NoView = TRUE;
-			break;
-
 		case 'R':
 			NoRecord = TRUE;
 			break;
@@ -148,14 +140,6 @@ main(int argc, char **argv)
 
 		case 'v':
 			Verbose = TRUE;
-			break;
-
-		case 'W':
-			Viewbase = optarg;
-			break;
-
-		case 'w':
-			View = optarg;
 			break;
 
 		case 'h':

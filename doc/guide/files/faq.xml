@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.50 2014/02/03 16:09:34 wiz Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.51 2014/12/30 15:13:19 wiz Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -56,17 +56,6 @@ it contains items for both pkgsrc users and developers.</para>
 
 <para>Archives for all these mailing lists are available from
 <ulink url="http://mail-index.NetBSD.org/"/>.</para>
-
-</sect1>
-
-<!-- ================================================================== -->
-
-<sect1 id="pkgviews-docs">
-<title>Where's the pkgviews documentation?</title>
-
-<para>Pkgviews is tightly integrated with buildlink.  You can find a
-pkgviews User's guide in
-<filename>pkgsrc/mk/buildlink3/PKGVIEWS_UG</filename>.</para>
 
 </sect1>
 

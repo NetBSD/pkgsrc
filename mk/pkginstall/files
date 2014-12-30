@@ -1,4 +1,4 @@
-# $NetBSD: files,v 1.8 2012/04/21 10:22:32 wiz Exp $
+# $NetBSD: files,v 1.9 2014/12/30 15:13:20 wiz Exp $
 #
 # Generate a +FILES script that reference counts config files that are
 # required for the proper functioning of the package.
@@ -11,7 +11,6 @@ UNPACK,|UNPACK,+FILES)
 # +FILES - reference-counted configuration file management script
 #
 # Usage: ./+FILES ADD|REMOVE|PERMS [metadatadir]
-#        ./+FILES VIEW-REMOVE depotdir viewdir
 #        ./+FILES CHECK-ADD|CHECK-REMOVE|CHECK-PERMS [metadatadir]
 #
 # This script supports two actions, ADD and REMOVE, that will add or
@@ -22,8 +21,7 @@ UNPACK,|UNPACK,+FILES)
 # any files needed by the package still exist, and print an informative
 # message noting those files.  The CHECK-ADD and CHECK-REMOVE actions
 # return non-zero if they detect either missing or existing files,
-# respectively.  The VIEW-REMOVE action will remove from <viewdir> the
-# links to the configuration files in <depotdir>.  The PERMS action
+# respectively.  The PERMS action
 # will correct any ownership or permission discrepancies between the
 # existing files and the data in this script, and the CHECK-PERMS
 # action will check whether any files have the wrong ownership or
@@ -98,21 +96,12 @@ case "${PKG_RCD_SCRIPTS:-@PKG_RCD_SCRIPTS@}" in
 	;;
 esac
 
-case $ACTION in
-VIEW-REMOVE)
-	DEPOTDIR="$2"
-	VIEWDIR="$3"
-	${TEST} -n "${DEPOTDIR}" -a -n "${VIEWDIR}" || exit 0
-	;;
-*)
-	CURDIR=`${PWD_CMD}`
-	PKG_METADATA_DIR="${2-${CURDIR}}"
-	: ${PKGNAME=${PKG_METADATA_DIR##*/}}
-	: ${PKG_DBDIR=${PKG_METADATA_DIR%/*}}
-	: ${PKG_REFCOUNT_DBDIR=${PKG_DBDIR}.refcount}
-	PKG_REFCOUNT_FILES_DBDIR="${PKG_REFCOUNT_DBDIR}/files"
-	;;
-esac
+CURDIR=`${PWD_CMD}`
+PKG_METADATA_DIR="${2-${CURDIR}}"
+: ${PKGNAME=${PKG_METADATA_DIR##*/}}
+: ${PKG_DBDIR=${PKG_METADATA_DIR%/*}}
+: ${PKG_REFCOUNT_DBDIR=${PKG_DBDIR}.refcount}
+PKG_REFCOUNT_FILES_DBDIR="${PKG_REFCOUNT_DBDIR}/files"
 
 exitcode=0
 case $ACTION in
@@ -251,22 +240,6 @@ PERMS)
 		"")	;;
 		*)	${CHMOD} $f_mode $file ;;
 		esac
-	done
-	;;
-
-VIEW-REMOVE)
-	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" ${SELF} | ${SORT} -ru |
-	while read file f_flags f_eg f_mode f_user f_group; do
-		case $file in
-		${DEPOTDIR}/*)	link="${VIEWDIR}/${file#${DEPOTDIR}/}" ;;
-		[!/]*)		link="${VIEWDIR}/$file" ;;
-		*)		continue ;;
-		esac
-		dir="${link%[^/]*}"
-		if ${TEST} -h "$link"; then
-			${RM} -f $link
-			${RMDIR} -p $dir 2>/dev/null || ${TRUE}
-		fi
 	done
 	;;
 
@@ -431,7 +404,6 @@ CHECK-PERMS)
 
 *)
 	${ECHO} "Usage: ./+FILES ADD|REMOVE|PERMS [metadatadir]"
-	${ECHO} "       ./+FILES VIEW-REMOVE depotdir viewdir"
 	${ECHO} "       ./+FILES CHECK-ADD|CHECK-REMOVE|CHECK-PERMS [metadatadir]"
 	;;
 esac

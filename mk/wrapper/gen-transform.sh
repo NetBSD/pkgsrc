@@ -1,6 +1,6 @@
 #! @WRAPPER_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.9 2014/09/02 14:23:00 jperkin Exp $
+# $NetBSD: gen-transform.sh,v 1.10 2014/12/30 15:13:20 wiz Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -71,16 +71,6 @@ gen()
 	_cmd="$1"; shift
 
 	case $_cmd in
-        ###############################################################
-	# depot:src:dst
-	#	Change "src/<dir>/*" into "dst/*", and the same in -I and
-	#	-L options.
-        ###############################################################
-	depot)
-		gen $_action "opt-depot:$1:$2"
-		gen $_action "opt-depot:-I$1:-I$2"
-		gen $_action "opt-depot:-L$1:-L$2"
-		;;
         ###############################################################
         # I:src:dst
         #       Change "src" into "dst" and "src/*" into "dst/*" in -I
@@ -218,27 +208,6 @@ gen()
 			$echo "s|\([$_sep]\)$1$|\1$2|g"
 			$echo "s|^$1\([$_sep]\)|$2\1|g"
 			$echo "s|^$1$|$2|g"
-			;;
-		esac
-		;;
-        ###############################################################
-	# opt-depot:src:dst
-	#	Change "src/<dir>/*" into "dst/*".
-        ###############################################################
-	opt-depot)
-		case $_action in
-		transform)
-			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
-			$echo "s|^$1/[^/$_sep]*\(/[^$_sep]*[$_sep]\)|$2\1|g"
-			$echo "s|^$1/[^/$_sep]*\(/[^$_sep]*\)$|$2\1|g"
-			;;
-		untransform)
-			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
-			$echo "s|\([$_sep]\)$1/[^/$_sep]*\(/[^$_sep]*[$_sep]\)|\1$2\2|g"
-			$echo "s|\([$_sep]\)$1/[^/$_sep]*\(/[^$_sep]*[$_sep]\)|\1$2\2|g"
-			$echo "s|\([$_sep]\)$1/[^/$_sep]*\(/[^$_sep]*\)$|\1$2\2|g"
-			$echo "s|^$1/[^/$_sep]*\(/[^$_sep]*[$_sep]\)|$2\1|g"
-			$echo "s|^$1/[^/$_sep]*\(/[^$_sep]*\)$|$2\1|g"
 			;;
 		esac
 		;;
