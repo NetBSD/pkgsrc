@@ -1,0 +1,3 @@
+The Freetds DB driver for qore gives Qore programs the possibility to
+communicate with databases that use the TDS(Tabular Data Stream)
+protocol for access such as MS SQL Server and Sybase databases.
