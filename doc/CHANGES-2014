@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4918 2014/12/30 13:13:29 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4919 2014/12/30 13:35:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6440,3 +6440,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/p5-GnuPG-Interface to 0.51 [wiz 2014-12-30]
 	Updated devel/afl to 1.05b [wiz 2014-12-30]
 	Updated finance/libofx to 0.9.10 [wiz 2014-12-30]
+	Updated multimedia/xine-lib to 1.2.6 [wiz 2014-12-30]
