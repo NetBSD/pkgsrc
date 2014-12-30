@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4943 2014/12/30 17:28:40 adam Exp $
+$NetBSD: CHANGES-2014,v 1.4944 2014/12/30 22:06:41 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6504,3 +6504,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/qt5-qtx11extras to 5.4.0 [adam 2014-12-30]
 	Updated x11/qt5-qtxmlpatterns to 5.4.0 [adam 2014-12-30]
 	Updated x11/qt5-sqlite3 to 5.4.0 [adam 2014-12-30]
+	Added security/qt4-qtkeychain version 0.4.0 [ryoon 2014-12-30]
