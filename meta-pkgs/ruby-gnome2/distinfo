@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.41 2014/11/09 06:27:02 obache Exp $
+$NetBSD: distinfo,v 1.42 2014/12/30 08:53:44 obache Exp $
 
-SHA1 (ruby-gnome2-all-2.2.3.tar.gz) = cc492f6fb533df59c090777bae347d621c313a0a
-RMD160 (ruby-gnome2-all-2.2.3.tar.gz) = efe650b7a890c72a16614aea3b8804ecf4e040dc
-Size (ruby-gnome2-all-2.2.3.tar.gz) = 1657315 bytes
+SHA1 (ruby-gnome2-all-2.2.4.tar.gz) = 818d35be43ea24efd50b9f17c5d186261ebca3b3
+RMD160 (ruby-gnome2-all-2.2.4.tar.gz) = b3653cf98086bb2ef82f0f90c831e927d0f44ad4
+Size (ruby-gnome2-all-2.2.4.tar.gz) = 1699429 bytes
 SHA1 (patch-glib2_lib_mkmf-gnome2.rb) = 7ea9f2066aae905e64d8477f500245e3e3b5df9e
