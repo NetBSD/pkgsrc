@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4906 2014/12/30 09:09:15 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4907 2014/12/30 12:48:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6428,3 +6428,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/ruby-gnome2-vte to 2.2.4 [obache 2014-12-30]
 	Updated x11/ruby-gnome2-gtksourceview2 to 2.2.4 [obache 2014-12-30]
 	Updated x11/ruby-gnome2-gtksourceview3 to 2.2.4 [obache 2014-12-30]
+	Updated audio/libopenmpt to 0.2.4667beta9 [wiz 2014-12-30]
