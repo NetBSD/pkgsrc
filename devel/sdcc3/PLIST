@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/10/21 15:12:38 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/12/30 22:23:27 ryoon Exp $
 bin/as2gbmap
 bin/makebin
 bin/packihx
@@ -10,6 +10,8 @@ bin/sdas6808
 bin/sdas8051
 bin/sdasgb
 bin/sdasrab
+bin/sdasstm8
+bin/sdastlcs90
 bin/sdasz80
 bin/sdcc
 bin/sdcclib
@@ -25,6 +27,8 @@ bin/sdnm
 bin/sdobjcopy
 bin/sdranlib
 bin/shc08
+bin/sst7
+bin/sstm8
 bin/sz80
 lib/libiberty.a
 share/doc/sdcc/INSTALL.txt
@@ -84,6 +88,8 @@ share/sdcc/sdcc/include/asm/pic14/features.h
 share/sdcc/sdcc/include/asm/pic16/features.h
 share/sdcc/sdcc/include/asm/r2k/features.h
 share/sdcc/sdcc/include/asm/r3ka/features.h
+share/sdcc/sdcc/include/asm/stm8/features.h
+share/sdcc/sdcc/include/asm/tlcs90/features.h
 share/sdcc/sdcc/include/asm/z180/features.h
 share/sdcc/sdcc/include/asm/z80/features.h
 share/sdcc/sdcc/include/assert.h
@@ -518,6 +524,9 @@ share/sdcc/sdcc/lib/small/liblong.lib
 share/sdcc/sdcc/lib/small/liblonglong.lib
 share/sdcc/sdcc/lib/small/libsdcc.lib
 share/sdcc/sdcc/lib/small/mcs51.lib
+share/sdcc/sdcc/lib/stm8/stm8.lib
+share/sdcc/sdcc/lib/tlcs90/crt0.rel
+share/sdcc/sdcc/lib/tlcs90/tlcs90.lib
 share/sdcc/sdcc/lib/z180/crt0.rel
 share/sdcc/sdcc/lib/z180/z180.lib
 share/sdcc/sdcc/lib/z80/crt0.rel
@@ -585,6 +594,8 @@ share/sdcc/sdcc/non-free/include/pic14/pic16f1518.h
 share/sdcc/sdcc/non-free/include/pic14/pic16f1519.h
 share/sdcc/sdcc/non-free/include/pic14/pic16f1526.h
 share/sdcc/sdcc/non-free/include/pic14/pic16f1527.h
+share/sdcc/sdcc/non-free/include/pic14/pic16f1704.h
+share/sdcc/sdcc/non-free/include/pic14/pic16f1708.h
 share/sdcc/sdcc/non-free/include/pic14/pic16f1782.h
 share/sdcc/sdcc/non-free/include/pic14/pic16f1783.h
 share/sdcc/sdcc/non-free/include/pic14/pic16f1784.h
@@ -643,6 +654,7 @@ share/sdcc/sdcc/non-free/include/pic14/pic16f73.h
 share/sdcc/sdcc/non-free/include/pic14/pic16f737.h
 share/sdcc/sdcc/non-free/include/pic14/pic16f74.h
 share/sdcc/sdcc/non-free/include/pic14/pic16f747.h
+share/sdcc/sdcc/non-free/include/pic14/pic16f753.h
 share/sdcc/sdcc/non-free/include/pic14/pic16f76.h
 share/sdcc/sdcc/non-free/include/pic14/pic16f767.h
 share/sdcc/sdcc/non-free/include/pic14/pic16f77.h
@@ -677,6 +689,9 @@ share/sdcc/sdcc/non-free/include/pic14/pic16f917.h
 share/sdcc/sdcc/non-free/include/pic14/pic16f946.h
 share/sdcc/sdcc/non-free/include/pic14/pic16fam.h
 share/sdcc/sdcc/non-free/include/pic14/pic16hv616.h
+share/sdcc/sdcc/non-free/include/pic14/pic16hv753.h
+share/sdcc/sdcc/non-free/include/pic14/pic16lf1704.h
+share/sdcc/sdcc/non-free/include/pic14/pic16lf1708.h
 share/sdcc/sdcc/non-free/include/pic14/pic16lf1902.h
 share/sdcc/sdcc/non-free/include/pic14/pic16lf1903.h
 share/sdcc/sdcc/non-free/include/pic14/pic16lf1904.h
@@ -985,6 +1000,8 @@ share/sdcc/sdcc/non-free/lib/pic14/pic16f1518.lib
 share/sdcc/sdcc/non-free/lib/pic14/pic16f1519.lib
 share/sdcc/sdcc/non-free/lib/pic14/pic16f1526.lib
 share/sdcc/sdcc/non-free/lib/pic14/pic16f1527.lib
+share/sdcc/sdcc/non-free/lib/pic14/pic16f1704.lib
+share/sdcc/sdcc/non-free/lib/pic14/pic16f1708.lib
 share/sdcc/sdcc/non-free/lib/pic14/pic16f1782.lib
 share/sdcc/sdcc/non-free/lib/pic14/pic16f1783.lib
 share/sdcc/sdcc/non-free/lib/pic14/pic16f1784.lib
@@ -1043,6 +1060,7 @@ share/sdcc/sdcc/non-free/lib/pic14/pic16f73.lib
 share/sdcc/sdcc/non-free/lib/pic14/pic16f737.lib
 share/sdcc/sdcc/non-free/lib/pic14/pic16f74.lib
 share/sdcc/sdcc/non-free/lib/pic14/pic16f747.lib
+share/sdcc/sdcc/non-free/lib/pic14/pic16f753.lib
 share/sdcc/sdcc/non-free/lib/pic14/pic16f76.lib
 share/sdcc/sdcc/non-free/lib/pic14/pic16f767.lib
 share/sdcc/sdcc/non-free/lib/pic14/pic16f77.lib
@@ -1076,6 +1094,9 @@ share/sdcc/sdcc/non-free/lib/pic14/pic16f916.lib
 share/sdcc/sdcc/non-free/lib/pic14/pic16f917.lib
 share/sdcc/sdcc/non-free/lib/pic14/pic16f946.lib
 share/sdcc/sdcc/non-free/lib/pic14/pic16hv616.lib
+share/sdcc/sdcc/non-free/lib/pic14/pic16hv753.lib
+share/sdcc/sdcc/non-free/lib/pic14/pic16lf1704.lib
+share/sdcc/sdcc/non-free/lib/pic14/pic16lf1708.lib
 share/sdcc/sdcc/non-free/lib/pic14/pic16lf1902.lib
 share/sdcc/sdcc/non-free/lib/pic14/pic16lf1903.lib
 share/sdcc/sdcc/non-free/lib/pic14/pic16lf1904.lib
@@ -1095,6 +1116,7 @@ share/sdcc/sdcc/non-free/lib/pic16/libdev18f2320.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f2321.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f2331.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f23k20.lib
+share/sdcc/sdcc/non-free/lib/pic16/libdev18f23k22.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f2410.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f242.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f2420.lib
@@ -1110,6 +1132,7 @@ share/sdcc/sdcc/non-free/lib/pic16/libdev18f24j10.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f24j11.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f24j50.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f24k20.lib
+share/sdcc/sdcc/non-free/lib/pic16/libdev18f24k22.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f24k50.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f2510.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f2515.lib
@@ -1127,6 +1150,7 @@ share/sdcc/sdcc/non-free/lib/pic16/libdev18f25j10.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f25j11.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f25j50.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f25k20.lib
+share/sdcc/sdcc/non-free/lib/pic16/libdev18f25k22.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f25k50.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f25k80.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f2610.lib
@@ -1139,6 +1163,7 @@ share/sdcc/sdcc/non-free/lib/pic16/libdev18f26j13.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f26j50.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f26j53.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f26k20.lib
+share/sdcc/sdcc/non-free/lib/pic16/libdev18f26k22.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f26k80.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f27j13.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f27j53.lib
@@ -1148,6 +1173,7 @@ share/sdcc/sdcc/non-free/lib/pic16/libdev18f4320.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f4321.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f4331.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f43k20.lib
+share/sdcc/sdcc/non-free/lib/pic16/libdev18f43k22.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f4410.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f442.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f4420.lib
@@ -1163,6 +1189,7 @@ share/sdcc/sdcc/non-free/lib/pic16/libdev18f44j10.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f44j11.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f44j50.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f44k20.lib
+share/sdcc/sdcc/non-free/lib/pic16/libdev18f44k22.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f4510.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f4515.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f452.lib
@@ -1179,6 +1206,7 @@ share/sdcc/sdcc/non-free/lib/pic16/libdev18f45j10.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f45j11.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f45j50.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f45k20.lib
+share/sdcc/sdcc/non-free/lib/pic16/libdev18f45k22.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f45k50.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f45k80.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f4610.lib
@@ -1191,6 +1219,7 @@ share/sdcc/sdcc/non-free/lib/pic16/libdev18f46j13.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f46j50.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f46j53.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f46k20.lib
+share/sdcc/sdcc/non-free/lib/pic16/libdev18f46k22.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f46k80.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f47j13.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f47j53.lib
@@ -1313,3 +1342,4 @@ share/sdcc/sdcc/non-free/lib/pic16/libdev18f96j94.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f96j99.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f97j60.lib
 share/sdcc/sdcc/non-free/lib/pic16/libdev18f97j94.lib
+@pkgdir share/sdcc/sdcc/lib/src
