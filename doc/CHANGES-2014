@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4930 2014/12/30 14:26:42 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4931 2014/12/30 14:30:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6452,3 +6452,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-tortoisehg to 3.2.2 [wiz 2014-12-30]
 	Updated devel/py-cython to 0.21.2 [wiz 2014-12-30]
 	Updated devel/py-virtualenv to 12.0.4 [wiz 2014-12-30]
+	Updated fonts/harfbuzz to 0.9.37 [wiz 2014-12-30]

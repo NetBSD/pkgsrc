@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13961 2014/12/30 14:26:42 wiz Exp $
+$NetBSD: TODO,v 1.13962 2014/12/30 14:30:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -667,7 +667,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o handbrake-0.10.0
 	o hanzim-3.5
-	o harfbuzz-0.9.37
 	o haskell-mode-1.45
 	o hdf-4.2.7
 	o hesiod-3.1.0
