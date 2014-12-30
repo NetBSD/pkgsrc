@@ -1,6 +1,8 @@
-$NetBSD: patch-am,v 1.4 2012/03/19 12:09:00 plunky Exp $
+$NetBSD: patch-lib_hci.c,v 1.1 2014/12/30 08:39:13 plunky Exp $
 
---- lib/hci.c.orig	2012-02-29 18:23:20.000000000 +0000
+Not much of the original library is needed.
+
+--- lib/hci.c.orig	2014-12-26 17:54:42.000000000 +0000
 +++ lib/hci.c
 @@ -71,6 +71,7 @@ static char *hci_bit2str(hci_map *m, uns
  	return str;
@@ -82,7 +84,7 @@ $NetBSD: patch-am,v 1.4 2012/03/19 12:09:00 plunky Exp $
  
  /* Version mapping */
  static hci_map ver_map[] = {
-@@ -657,16 +668,19 @@ char *hci_vertostr(unsigned int ver)
+@@ -659,16 +670,19 @@ char *hci_vertostr(unsigned int ver)
  	return hci_uint2str(ver_map, ver);
  }
  
@@ -102,7 +104,7 @@ $NetBSD: patch-am,v 1.4 2012/03/19 12:09:00 plunky Exp $
  int lmp_strtover(char *str, unsigned int *ver)
  {
  	return hci_str2uint(ver_map, str, ver);
-@@ -2911,3 +2925,4 @@ int hci_le_conn_update(int dd, uint16_t 
+@@ -3113,3 +3127,4 @@ int hci_le_read_remote_features(int dd, 
  
  	return 0;
  }

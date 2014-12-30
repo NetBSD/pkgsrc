@@ -1,0 +1,35 @@
+$NetBSD: patch-tools_hcidump.1,v 1.1 2014/12/30 08:39:13 plunky Exp $
+
+adjust the manual page
+
+--- tools/hcidump.1.orig	2012-12-24 17:46:55.000000000 +0000
++++ tools/hcidump.1
+@@ -12,8 +12,8 @@ hcidump \- Parse HCI data
+ hcidump
+ reads raw HCI data coming from and going to a Bluetooth device (which can be
+ specified with the option
+-.BR -i ,
+-default is the first available one) and prints to screen commands, events and
++.BR -i )
++and prints to screen commands, events and
+ data in a human-readable form. Optionally, the dump can be written to a file
+ rather than parsed, and the dump file can be parsed in a subsequent moment.
+ .SH OPTIONS
+@@ -21,14 +21,14 @@ rather than parsed, and the dump file ca
+ .BI -h
+ Prints usage info and exits
+ .TP
+-.BI -i " <hciX>"
++.BI -i " <device>"
+ Data is read from
+-.IR hciX ,
++.IR device,
+ which must be the name of an installed Bluetooth device. If not specified,
+ and if
+ .B
+ -r
+-option is not set, data is read from the first available Bluetooth device.
++option is not set, data is read from all available Bluetooth devices.
+ .TP
+ .BI -l " <len>" "\fR,\fP \-\^\-snap-len=" "<len>"
+ Sets max length of processed packets to
