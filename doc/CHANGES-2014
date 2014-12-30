@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4940 2014/12/30 15:21:32 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4941 2014/12/30 16:05:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6462,3 +6462,18 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/links-gui to 2.9 [wiz 2014-12-30]
 	Updated lang/pcc-current to 20141228 [plunky 2014-12-30]
 	Updated pkgtools/pkg_install to 20141227 [wiz 2014-12-30]
+	Added lang/qore version 0.8.11nb2 [wiz 2014-12-30]
+	Added databases/qore-freetds-module version 1.0.3nb4 [wiz 2014-12-30]
+	Added databases/qore-mysql-module version 2.0.1nb4 [wiz 2014-12-30]
+	Added databases/qore-openldap-module version 1.0nb4 [wiz 2014-12-30]
+	Added databases/qore-pgsql-module version 2.3nb4 [wiz 2014-12-30]
+	Added databases/qore-sqlite3-module version 1.0.1nb4 [wiz 2014-12-30]
+	Added textproc/qore-json-module version 1.4nb4 [wiz 2014-12-30]
+	Added textproc/qore-xml-module version 1.2nb4 [wiz 2014-12-30]
+	Added textproc/qore-yaml-module version 0.4nb4 [wiz 2014-12-30]
+	Added devel/qore-uuid-module version 1.3nb1 [wiz 2014-12-30]
+	Added graphics/qore-opengl-module version 0.0.3nb4 [wiz 2014-12-30]
+	Added graphics/qore-glut-module version 0.0.3nb3 [wiz 2014-12-30]
+	Added security/qore-asn1-module version 0.0.3nb1 [wiz 2014-12-30]
+	Added security/qore-ssh2-module version 0.9.9nb4 [wiz 2014-12-30]
+	Added security/qore-xmlsec-module version 0.0.2nb4 [wiz 2014-12-30]
