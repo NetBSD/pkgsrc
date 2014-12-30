@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4901 2014/12/30 07:57:58 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4902 2014/12/30 08:05:25 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6402,3 +6402,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/ffmpeg2 to 2.5.2 [adam 2014-12-30]
 	Updated x11/py-sip to 4.16.5 [adam 2014-12-30]
 	Added www/ruby-httpclient version 2.3.4.1 [obache 2014-12-30]
+	Updated net/mikutter to 3.2.0 [obache 2014-12-30]
