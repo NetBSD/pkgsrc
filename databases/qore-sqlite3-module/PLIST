@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2014/12/30 15:45:04 wiz Exp $
+${QORE_MODULE_DIR}/sqlite3-api-${QORE_MODULE_API}.qmod
+share/doc/${PKGBASE}/sqlite3-module-doc.html
