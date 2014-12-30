@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2014/10/12 13:07:11 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/12/30 06:37:35 adam Exp $
 bin/lzcat
 bin/lzcmp
 bin/lzdiff
@@ -33,7 +33,7 @@ include/lzma/filter.h
 include/lzma/hardware.h
 include/lzma/index.h
 include/lzma/index_hash.h
-include/lzma/lzma.h
+include/lzma/lzma12.h
 include/lzma/stream_flags.h
 include/lzma/version.h
 include/lzma/vli.h
@@ -73,6 +73,7 @@ share/doc/xz/examples/00_README.txt
 share/doc/xz/examples/01_compress_easy.c
 share/doc/xz/examples/02_decompress.c
 share/doc/xz/examples/03_compress_custom.c
+share/doc/xz/examples/04_compress_easy_mt.c
 share/doc/xz/examples/Makefile
 share/doc/xz/examples_old/xz_pipe_comp.c
 share/doc/xz/examples_old/xz_pipe_decomp.c
@@ -85,3 +86,4 @@ ${PLIST.nls}share/locale/de/LC_MESSAGES/xz.mo
 ${PLIST.nls}share/locale/fr/LC_MESSAGES/xz.mo
 ${PLIST.nls}share/locale/it/LC_MESSAGES/xz.mo
 ${PLIST.nls}share/locale/pl/LC_MESSAGES/xz.mo
+${PLIST.nls}share/locale/vi/LC_MESSAGES/xz.mo
