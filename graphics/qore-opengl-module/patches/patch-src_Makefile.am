@@ -1,0 +1,11 @@
+$NetBSD: patch-src_Makefile.am,v 1.1 2014/12/30 15:57:10 wiz Exp $
+* Remove .a file in destdir not in root.
+http://sourceforge.net/p/qore/code/6297/
+--- src/Makefile.am.orig	2014-10-27 13:51:29.000000000 +0000
++++ src/Makefile.am
+@@ -24,4 +24,4 @@ endif
+ 
+ install-exec-hook:
+ 	mv $(DESTDIR)$(libdir)/opengl.$(MODULE_SUFFIX) $(DESTDIR)$(libdir)/opengl-api-$(MODULE_API).qmod
+-	rm -f $(DESTDIR)$(libdir)/opengl.la $(libdir)/opengl.a
++	rm -f $(DESTDIR)$(libdir)/opengl.la $(DESTDIR)$(libdir)/opengl.a
