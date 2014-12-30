@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4924 2014/12/30 14:07:55 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4925 2014/12/30 14:08:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6446,3 +6446,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/ffplay1 to 1.2.11 [wiz 2014-12-30]
 	Added sysutils/augeas version 1.3.0 [bsiegert 2014-12-30]
 	Updated finance/gnucash to 2.6.5 [wiz 2014-12-30]
+	Updated devel/waf to 1.8.5 [wiz 2014-12-30]
