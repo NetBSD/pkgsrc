@@ -1,6 +1,8 @@
-$NetBSD: patch-ad,v 1.2 2012/02/15 09:30:23 plunky Exp $
+$NetBSD: patch-lib_hci__lib.h,v 1.1 2014/12/30 08:39:13 plunky Exp $
 
---- lib/hci_lib.h.orig	2011-12-22 00:18:58.000000000 +0000
+Not much of the original library is needed.
+
+--- lib/hci_lib.h.orig	2014-12-26 17:54:42.000000000 +0000
 +++ lib/hci_lib.h
 @@ -30,6 +30,7 @@
  extern "C" {
@@ -10,7 +12,7 @@ $NetBSD: patch-ad,v 1.2 2012/02/15 09:30:23 plunky Exp $
  struct hci_request {
  	uint16_t ogf;
  	uint16_t ocf;
-@@ -142,11 +143,15 @@ char *hci_bustostr(int bus);
+@@ -149,11 +150,15 @@ char *hci_bustostr(int bus);
  char *hci_typetostr(int type);
  char *hci_dtypetostr(int type);
  char *hci_dflagstostr(uint32_t flags);
@@ -26,7 +28,7 @@ $NetBSD: patch-ad,v 1.2 2012/02/15 09:30:23 plunky Exp $
  int hci_strtolp(char *str, unsigned int *val);
  char *hci_lmtostr(unsigned int ptype);
  int hci_strtolm(char *str, unsigned int *val);
-@@ -154,9 +159,13 @@ int hci_strtolm(char *str, unsigned int 
+@@ -161,9 +166,13 @@ int hci_strtolm(char *str, unsigned int 
  char *hci_cmdtostr(unsigned int cmd);
  char *hci_commandstostr(uint8_t *commands, char *pref, int width);
  
@@ -38,9 +40,9 @@ $NetBSD: patch-ad,v 1.2 2012/02/15 09:30:23 plunky Exp $
  char *lmp_vertostr(unsigned int ver);
 +#if 0
  int lmp_strtover(char *str, unsigned int *ver);
- 
- char *lmp_featurestostr(uint8_t *features, char *pref, int width);
-@@ -225,6 +234,7 @@ static inline int hci_filter_test_opcode
+ char *pal_vertostr(unsigned int ver);
+ int pal_strtover(char *str, unsigned int *ver);
+@@ -234,6 +243,7 @@ static inline int hci_filter_test_opcode
  {
  	return (f->opcode == opcode);
  }
