@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.60 2014/10/12 23:44:32 joerg Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.61 2014/12/30 15:13:20 wiz Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -86,7 +86,6 @@ HEADER_TEMPLATES?=	# empty
     empty(HEADER_TEMPLATES:M${PKGDIR}/HEADER)
 HEADER_TEMPLATES+=	${PKGDIR}/HEADER
 .endif
-_DEINSTALL_PRE_TMPL?=	${.CURDIR}/../../mk/pkginstall/deinstall-pre
 DEINSTALL_TEMPLATES?=	# empty
 .if exists(${PKGDIR}/DEINSTALL) && \
     empty(DEINSTALL_TEMPLATES:M${PKGDIR}/DEINSTALL)
@@ -100,7 +99,6 @@ INSTALL_TEMPLATES?=	# empty
     empty(INSTALL_TEMPLATES:M${PKGDIR}/INSTALL)
 INSTALL_TEMPLATES+=	${PKGDIR}/INSTALL
 .endif
-_INSTALL_POST_TMPL?=	${.CURDIR}/../../mk/pkginstall/install-post
 _INSTALL_DATA_TMPL?=	# empty
 _FOOTER_TMPL?=		${.CURDIR}/../../mk/pkginstall/footer
 
@@ -112,7 +110,6 @@ _FOOTER_TMPL?=		${.CURDIR}/../../mk/pkginstall/footer
 #	template files minus any user-supplied templates.
 #
 _DEINSTALL_TEMPLATES=	${_HEADER_TMPL} ${HEADER_TEMPLATES}		\
-			${_DEINSTALL_PRE_TMPL}				\
 			${DEINSTALL_TEMPLATES}				\
 			${_DEINSTALL_TMPL}				\
 			${_FOOTER_TMPL}
@@ -120,17 +117,14 @@ _INSTALL_TEMPLATES=	${_HEADER_TMPL} ${HEADER_TEMPLATES}		\
 			${_INSTALL_UNPACK_TMPL}				\
 			${_INSTALL_TMPL}				\
 			${INSTALL_TEMPLATES}				\
-			${_INSTALL_POST_TMPL}				\
 			${_FOOTER_TMPL}					\
 			${_INSTALL_DATA_TMPL}				\
 
 _DEINSTALL_TEMPLATES_DFLT=	${_HEADER_TMPL}				\
-				${_DEINSTALL_PRE_TMPL}			\
 				${_DEINSTALL_TMPL}			\
 				${_FOOTER_TMPL}
 _INSTALL_TEMPLATES_DFLT=	${_HEADER_TMPL}				\
 				${_INSTALL_TMPL}			\
-				${_INSTALL_POST_TMPL}			\
 				${_FOOTER_TMPL}
 
 # These are the list of source files that are concatenated to form the
@@ -145,15 +139,12 @@ INSTALL_SRC?=		${_INSTALL_TEMPLATES}
 FILES_SUBST+=		PREFIX=${PREFIX:Q}
 FILES_SUBST+=		LOCALBASE=${LOCALBASE:Q}
 FILES_SUBST+=		X11BASE=${X11BASE:Q}
-FILES_SUBST+=		DEPOTBASE=${DEPOTBASE:Q}
 FILES_SUBST+=		VARBASE=${VARBASE:Q}
 FILES_SUBST+=		PKG_SYSCONFBASE=${PKG_SYSCONFBASE:Q}
-FILES_SUBST+=		PKG_SYSCONFDEPOTBASE=${PKG_SYSCONFDEPOTBASE:Q}
 FILES_SUBST+=		PKG_SYSCONFBASEDIR=${PKG_SYSCONFBASEDIR:Q}
 FILES_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 FILES_SUBST+=		CONF_DEPENDS=${CONF_DEPENDS:C/:.*//:Q}
 FILES_SUBST+=		PKGBASE=${PKGBASE:Q}
-FILES_SUBST+=		PKG_INSTALLATION_TYPE=${PKG_INSTALLATION_TYPE:Q}
 
 # PKG_USERS represents the users to create for the package.  It is a
 #	space-separated list of elements of the form

@@ -1,4 +1,4 @@
-/* $NetBSD: fixup-libtool.c,v 1.3 2014/12/06 22:35:24 riz Exp $ */
+/* $NetBSD: fixup-libtool.c,v 1.4 2014/12/30 15:13:20 wiz Exp $ */
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -145,7 +145,6 @@ process_option(struct processing_option *opt, const char *line, size_t len,
 				    strncmp(line + 2, wrksrc, wlen) == 0 &&
 				    (line[wlen + 2] == '/' || wlen + 2 == len))
 					return;
-				/* XXX Check for DEPOTBASE */
 			}
 		}
 		i = wrapper_hash2(line, len) & (LIBPATH_HASH - 1);

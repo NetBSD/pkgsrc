@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.61 2010/02/20 04:40:03 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.62 2014/12/30 15:13:20 wiz Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -13,7 +13,7 @@
 #if HAVE_SYS_WAIT_H
 #include <sys/wait.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.61 2010/02/20 04:40:03 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.62 2014/12/30 15:13:20 wiz Exp $");
 
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -110,9 +110,8 @@ __RCSID("$NetBSD: perform.c,v 1.61 2010/02/20 04:40:03 joerg Exp $");
 #define	LOAD_SIZE_PKG		(1 << 9)
 #define	LOAD_SIZE_ALL		(1 << 10)
 #define	LOAD_PRESERVE		(1 << 11)
-#define	LOAD_VIEWS		(1 << 12)
-#define	LOAD_REQUIRED_BY	(1 << 13)
-#define	LOAD_INSTALLED_INFO	(1 << 14)
+#define	LOAD_REQUIRED_BY	(1 << 12)
+#define	LOAD_INSTALLED_INFO	(1 << 13)
 
 static const struct pkg_meta_desc {
 	size_t entry_offset;
@@ -144,8 +143,6 @@ static const struct pkg_meta_desc {
 	    LOAD_SIZE_ALL, 0 },
 	{ offsetof(struct pkg_meta, meta_preserve), PRESERVE_FNAME,
 	    LOAD_PRESERVE, 0 },
-	{ offsetof(struct pkg_meta, meta_views), VIEWS_FNAME,
-	    LOAD_VIEWS, 0 },
 	{ offsetof(struct pkg_meta, meta_required_by), REQUIRED_BY_FNAME,
 	    LOAD_REQUIRED_BY, 0 },
 	{ offsetof(struct pkg_meta, meta_installed_info), INSTALLED_INFO_FNAME,

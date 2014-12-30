@@ -1,4 +1,4 @@
-# $NetBSD: can-be-built-here.mk,v 1.6 2008/11/05 08:24:23 rillig Exp $
+# $NetBSD: can-be-built-here.mk,v 1.7 2014/12/30 15:13:19 wiz Exp $
 #
 # This file checks whether a package can be built in the current pkgsrc
 # environment. It checks the following variables:
@@ -127,17 +127,6 @@ _CBBH_MSGS.skip=	"This package has set PKG_SKIP_REASON:" ${PKG_SKIP_REASON}
 _CBBH.skip=		yes
 .if defined(PKG_SKIP_REASON) && !empty(PKG_SKIP_REASON)
 _CBBH.skip=		no
-.endif
-
-# Check PKG_INSTALLATION_TYPES
-_CBBH_CHECKS+=		pkgviews
-_CBBH_MSGS.pkgviews=	"This package is not available for pkgviews."
-
-_CBBH.pkgviews=		yes
-.if ${PKG_INSTALLATION_PREFS} == "pkgviews overwrite"
-.  if empty(PKG_INSTALLATION_TYPES:Mpkgviews)
-_CBBH.pkgviews=		no
-.  endif
 .endif
 
 # Collect and combine the results

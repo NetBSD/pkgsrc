@@ -10,8 +10,6 @@ pkg_admin	perform various pkgsrc administrative tasks
 pkg_create	create software package distributions
 pkg_delete	delete installed packages
 pkg_info	display information about installed or binary packages
-pkg_view	manage package views
-linkfarm	manage symbolic links for package views
 
 For the following tools compatibility wrappers are included:
 

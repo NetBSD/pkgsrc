@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2006 2014/11/25 18:27:17 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2007 2014/12/30 15:13:19 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -121,17 +121,6 @@ _INSTALL_UNSTRIPPED=	# set (flag used by platform/*.mk)
 PKG_FAIL_REASON+=	"Out-dated buildlink3.mk detected, please update"
 .endif
 
-# PKG_INSTALLATION_TYPE can only be one of two values: "pkgviews" or
-# "overwrite".
-.if (${PKG_INSTALLATION_TYPE} != "pkgviews") && \
-    (${PKG_INSTALLATION_TYPE} != "overwrite")
-PKG_FAIL_REASON+=	"PKG_INSTALLATION_TYPE must be \`\`pkgviews'' or \`\`overwrite''."
-.endif
-
-.if empty(PKG_INSTALLATION_TYPES:M${PKG_INSTALLATION_TYPE})
-PKG_FAIL_REASON+=	"This package doesn't support PKG_INSTALLATION_TYPE=${PKG_INSTALLATION_TYPE}."
-.endif
-
 .if !defined(CATEGORIES)
 PKG_FAIL_REASON+='CATEGORIES are mandatory.'
 .endif
@@ -214,10 +203,6 @@ _BUILD_DEFS+=		_USE_DESTDIR
 #
 .if defined(PKG_SUPPORTED_OPTIONS) && defined(PKG_OPTIONS)
 _BUILD_DEFS+=            PKG_OPTIONS
-.endif
-
-.if empty(DEPOT_SUBDIR)
-PKG_FAIL_REASON+=	"DEPOT_SUBDIR may not be empty."
 .endif
 
 # Store the build options for multi-packages, i.e. packages that can
@@ -349,19 +334,7 @@ FAIL?=			${SH} ${PKGSRCDIR}/mk/scripts/fail
 #
 PKG_SYSCONFVAR?=	${PKGBASE}
 PKG_SYSCONFSUBDIR?=	# empty
-.if ${PKG_INSTALLATION_TYPE} == "overwrite"
-PKG_SYSCONFDEPOTBASE=	# empty
 PKG_SYSCONFBASEDIR=	${PKG_SYSCONFBASE}
-.else
-.  if !empty(PKG_SYSCONFBASE:M${PREFIX}) || \
-      !empty(PKG_SYSCONFBASE:M${PREFIX}/*)
-PKG_SYSCONFDEPOTBASE=	# empty
-PKG_SYSCONFBASEDIR=	${PKG_SYSCONFBASE}
-.  else
-PKG_SYSCONFDEPOTBASE=	${PKG_SYSCONFBASE}/${DEPOT_SUBDIR}
-PKG_SYSCONFBASEDIR=	${PKG_SYSCONFDEPOTBASE}/${PKGNAME}
-.  endif
-.endif
 .if empty(PKG_SYSCONFSUBDIR)
 DFLT_PKG_SYSCONFDIR:=	${PKG_SYSCONFBASEDIR}
 .else
@@ -371,7 +344,6 @@ PKG_SYSCONFDIR=		${DFLT_PKG_SYSCONFDIR}
 .if defined(PKG_SYSCONFDIR.${PKG_SYSCONFVAR})
 PKG_SYSCONFDIR=		${PKG_SYSCONFDIR.${PKG_SYSCONFVAR}}
 PKG_SYSCONFBASEDIR=	${PKG_SYSCONFDIR.${PKG_SYSCONFVAR}}
-PKG_SYSCONFDEPOTBASE=	# empty
 .endif
 PKG_SYSCONFDIR_PERMS?=	${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
 
@@ -662,9 +634,6 @@ lint:
 # List of flags to pass to pkg_add(1) for bin-install:
 
 BIN_INSTALL_FLAGS?= 	# -v
-.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-PKG_ARGS_ADD=		-W ${LOCALBASE} -w ${DEFAULT_VIEW}
-.endif
 _BIN_INSTALL_FLAGS=	${BIN_INSTALL_FLAGS}
 .if defined(_AUTOMATIC) && !empty(_AUTOMATIC:M[Yy][Ee][Ss])
 _BIN_INSTALL_FLAGS+=	-A

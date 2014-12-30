@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.6 2014/12/07 05:09:02 obache Exp $
+# $NetBSD: package.mk,v 1.7 2014/12/30 15:13:20 wiz Exp $
 
 .if defined(PKG_SUFX)
 WARNINGS+=		"PKG_SUFX is deprecated, please use PKG_COMPRESSION"
@@ -67,9 +67,6 @@ _PKG_ARGS_PACKAGE+=	-I ${PREFIX} -p ${DESTDIR}${PREFIX}
 .  if ${_USE_DESTDIR} == "user-destdir"
 _PKG_ARGS_PACKAGE+=	-u ${REAL_ROOT_USER} -g ${REAL_ROOT_GROUP}
 .  endif
-.endif
-.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-_PKG_ARGS_PACKAGE+=	-E
 .endif
 
 ${STAGE_PKGFILE}: ${_CONTENTS_TARGETS}

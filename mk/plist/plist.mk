@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.47 2014/10/09 13:44:51 wiz Exp $
+# $NetBSD: plist.mk,v 1.48 2014/12/30 15:13:20 wiz Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -50,9 +50,6 @@ PLIST_VARS?=		# empty
 PLIST_AWK?=		# empty
 PLIST_AWK_ENV?=		# empty
 
-.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-PLIST_TYPE?=	dynamic
-.endif
 PLIST_TYPE?=	static
 
 ######################################################################
@@ -227,22 +224,6 @@ GENERATE_PLIST?=	${ECHO} "@comment "${PKGNAME:Q}" has no files.";
 GENERATE_PLIST?=	${TRUE};
 .endif
 
-.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-#
-# _PLIST_IGNORE_FILES basically mirrors the list of ignored files found
-# in pkg_views(1).  It's used by the dynamic PLIST generator to skip
-# adding the named files to the PLIST.
-#
-_PLIST_IGNORE_FILES+=	+*			# package metadata files
-.  if defined(INFO_FILES)
-_PLIST_IGNORE_FILES+=	${PKGINFODIR}/dir
-.  endif
-_PLIST_IGNORE_FILES+=	*[~\#] *.OLD *.orig *,v	# scratch config files
-.  if !empty(CONF_DEPENDS)
-_PLIST_IGNORE_FILES+=	${PKG_SYSCONFDIR:S,^${PREFIX}/,,}
-.  endif
-_PLIST_IGNORE_FILES+=	${PLIST_IGNORE_FILES}
-.endif
 _BUILD_DEFS+=		_PLIST_IGNORE_FILES
 
 .if ${PLIST_TYPE} == "dynamic"

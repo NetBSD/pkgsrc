@@ -1,4 +1,4 @@
-# $NetBSD: libtool-fix-la,v 1.8 2006/11/09 02:07:59 rillig Exp $
+# $NetBSD: libtool-fix-la,v 1.9 2014/12/30 15:13:19 wiz Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -46,13 +46,9 @@
 # For the *.lai files, in the "dependency_libs" line, we remove
 # redundant -Ldir and -llib options.  We also make sure that we don't
 # ever reference other .la files, only referring to other libraries
-# via the usual "-L/path -llib" and making sure that /path is always
-# somewhere under the default view.  This makes wildcard dependencies
-# work for "overwrite" packages by letting libtool find libraries in
-# the default view.
+# via the usual "-L/path -llib".
 
 BUILDLINK_DIR="@BUILDLINK_DIR@"
-DEPOTBASE="@DEPOTBASE@"
 LOCALBASE="@LOCALBASE@"
 WRKSRC="@WRKSRC@"
 
@@ -257,26 +253,13 @@ if $test -f $lafile; then
 					;;
 				######################################
 				# Skip directories that should never
-				# appear in the -L<dir> flags.  Also
-				# modify directories in ${DEPOTBASE} to
-				# point to somewhere in the default view
-				# ${LOCALBASE}, since we want "overwrite"
-				# packages to think the libraries really
-				# do just exist through the default view.
+				# appear in the -L<dir> flags.
 				######################################
 				-L*)
 					case $i in
 					-L${BUILDLINK_DIR}/*)
 						;;
 					-L${WRKSRC}|-L${WRKSRC}/*)
-						;;
-					-L${DEPOTBASE}/*)
-						i=`$echo "$i" | $sed -e "s,-L${DEPOTBASE}/[^/]*/,-L${LOCALBASE}/,"`
-						case $L in
-						*"$i "*) ;;
-						*"$i") ;;
-						*) L="$L $i" ;;
-						esac
 						;;
 					*)
 						case $L in
@@ -299,17 +282,11 @@ if $test -f $lafile; then
 				######################################
 				# Libtool archives should be changed from
 				# "/path/libfoo.la" to "-L/path -lfoo",
-				# where /path is appropriately modified
-				# so that the depot directory is changed
-				# to the views directory.  This allows
-				# the .la files to be used by either
-				# "overwrite" or "pkgviews" packages and
-				# works correctly with wildcard
+				# This works correctly with wildcard
 				# dependencies.
 				######################################
 				*.la)
-					dirbase=`$dirname $i`
-					dir=`$echo "X$dirbase" | $Xsed -e "s,^${DEPOTBASE}/[^/]*/,${LOCALBASE}/,"`
+					dir=`$dirname $i`
 					case $L in
 					*"-L$dir "*) ;;
 					*"-L$dir") ;;

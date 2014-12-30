@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.105 2013/09/02 10:28:44 jperkin Exp $	*/
+/*	$NetBSD: perform.c,v 1.106 2014/12/30 15:13:20 wiz Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.105 2013/09/02 10:28:44 jperkin Exp $");
+__RCSID("$NetBSD: perform.c,v 1.106 2014/12/30 15:13:20 wiz Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -75,7 +75,6 @@ struct pkg_meta {
 	char *meta_install;
 	char *meta_deinstall;
 	char *meta_preserve;
-	char *meta_views;
 	char *meta_installed_info;
 };
 
@@ -121,7 +120,6 @@ static const struct pkg_meta_desc {
 	{ offsetof(struct pkg_meta, meta_size_pkg), SIZE_PKG_FNAME, 0, 0444 },
 	{ offsetof(struct pkg_meta, meta_size_all), SIZE_ALL_FNAME, 0, 0444 },
 	{ offsetof(struct pkg_meta, meta_preserve), PRESERVE_FNAME, 0, 0444 },
-	{ offsetof(struct pkg_meta, meta_views), VIEWS_FNAME, 0, 0444 },
 	{ offsetof(struct pkg_meta, meta_required_by), REQUIRED_BY_FNAME, 0, 0644 },
 	{ offsetof(struct pkg_meta, meta_installed_info), INSTALLED_INFO_FNAME, 0, 0644 },
 	{ 0, NULL, 0, 0 },
@@ -1179,30 +1177,6 @@ check_dependencies(struct pkg_task *pkg)
 	return status;
 }
 
-/*
- * If this package uses pkg_views, register it in the default view.
- */
-static void
-pkg_register_views(struct pkg_task *pkg)
-{
-	if (Fake || NoView || pkg->meta_data.meta_views == NULL)
-		return;
-
-	if (Verbose) {
-		printf("%s/pkg_view -d %s %s%s %s%s %sadd %s\n",
-			BINDIR, pkgdb_get_dir(),
-			View ? "-w " : "", View ? View : "",
-			Viewbase ? "-W " : "", Viewbase ? Viewbase : "",
-			Verbose ? "-v " : "", pkg->pkgname);
-	}
-
-	fexec_skipempty(BINDIR "/pkg_view", "-d", pkgdb_get_dir(),
-			View ? "-w " : "", View ? View : "",
-			Viewbase ? "-W " : "", Viewbase ? Viewbase : "",
-			Verbose ? "-v " : "", "add", pkg->pkgname,
-			(void *)NULL);
-}
-
 static int
 preserve_meta_data_file(struct pkg_task *pkg, const char *name)
 {
@@ -1433,12 +1407,7 @@ pkg_do(const char *pkgpath, int mark_automatic, int top_level)
 	if (pkg->meta_data.meta_mtree != NULL)
 		warnx("mtree specification in pkg `%s' ignored", pkg->pkgname);
 
-	if (pkg->meta_data.meta_views != NULL) {
-		pkg->logdir = xstrdup(pkg->prefix);
-		pkgdb_set_dir(dirname_of(pkg->logdir), 4);
-	} else {
-		pkg->logdir = xasprintf("%s/%s", config_pkg_dbdir, pkg->pkgname);
-	}
+	pkg->logdir = xasprintf("%s/%s", config_pkg_dbdir, pkg->pkgname);
 
 	if (Destdir != NULL)
 		pkg->install_logdir = xasprintf("%s/%s", Destdir, pkg->logdir);
@@ -1538,8 +1507,6 @@ pkg_do(const char *pkgpath, int mark_automatic, int top_level)
 
 	if (pkg->meta_data.meta_display != NULL)
 		fputs(pkg->meta_data.meta_display, stdout);
-
-	pkg_register_views(pkg);
 
 	status = 0;
 	goto clean_memory;

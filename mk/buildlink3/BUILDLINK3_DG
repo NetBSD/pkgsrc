@@ -1,4 +1,4 @@
-$NetBSD: BUILDLINK3_DG,v 1.7 2005/03/24 17:46:01 tv Exp $
+$NetBSD: BUILDLINK3_DG,v 1.8 2014/12/30 15:13:19 wiz Exp $
 
  0 Developer's guide to buildlink3
  =================================
@@ -41,19 +41,6 @@ The second difference is that buildlink3.mk files keep track of how
 dependencies on packages encountered at depth 1.  This means that
 packages that want to add a dependency must directly include the
 buildlink3.mk file for that dependency.
-
-
- 1.3 Support for pkgviews
- ========================
-
-When building pkgviews packages, buildlink3 doesn't symlink files
-into ${BUILDLINK_DIR} since it can safely refer to only a specific
-package's files by passing the appropriate -I<dir> and -L<dir> flags
-to the compiler, where <dir> points to a location in the package's
-depot directory.  When building "overwrite" packages, buildlink3 will
-act and feel very much like buildlink2 but with more advanced wrapper
-scripts, and there are provisions for allowing an "overwrite" package
-to build against the viewed instance of a depoted package.
 
 
  2 Troubleshooting

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.54 2014/05/29 07:57:07 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.55 2014/12/30 15:13:19 wiz Exp $
 
 BUILDLINK_TREE+=	perl
 
@@ -34,7 +34,6 @@ PERL5_OPTIONS?=		# empty
 INSTALL_TEMPLATES+=	${.CURDIR}/../../lang/perl5/files/install_threads.tmpl
 .endif
 
-.if ${PKG_INSTALLATION_TYPE} == "overwrite"
 #
 # Perl keeps headers and odd libraries in an odd path not caught by the
 # default BUILDLINK_FILES_CMD, so name them to be symlinked into
@@ -42,7 +41,6 @@ INSTALL_TEMPLATES+=	${.CURDIR}/../../lang/perl5/files/install_threads.tmpl
 #
 .include "../../lang/perl5/vars.mk"
 BUILDLINK_FILES.perl=	${PERL5_SUB_INSTALLARCHLIB}/CORE/*
-.endif
 .endif # PERL_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-perl

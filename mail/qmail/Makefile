@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2014/11/23 19:08:22 schmonz Exp $
+# $NetBSD: Makefile,v 1.73 2014/12/30 15:13:19 wiz Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}
@@ -169,17 +169,15 @@ post-install: post-install-viruscan
 	  ${CHMOD} 0755 ${DESTDIR}${PREFIX}/bin/${f}
 .	endfor
 	# qmail's installer sets strange permissions, set them back
-.	if (${PKG_INSTALLATION_TYPE} == "overwrite")
-.	  for i in bin boot
-	    ${CHGRP} ${BINGRP} ${DESTDIR}${QMAILDIR}/${i}
-.	  endfor
-.	  for i in doc
-	    ${CHGRP} ${SHAREGRP} ${DESTDIR}${QMAILDIR}/${i}
-.	  endfor
-.	  for i in ${MANDIRS}
-	    ${CHGRP} ${MANGRP} ${DESTDIR}${QMAILDIR}/${i}
-.	  endfor
-.	endif
+.	for i in bin boot
+	  ${CHGRP} ${BINGRP} ${DESTDIR}${QMAILDIR}/${i}
+.	endfor
+.	for i in doc
+	  ${CHGRP} ${SHAREGRP} ${DESTDIR}${QMAILDIR}/${i}
+.	endfor
+.	for i in ${MANDIRS}
+	  ${CHGRP} ${MANGRP} ${DESTDIR}${QMAILDIR}/${i}
+.	endfor
 
 	${INSTALL_DATA} ${WRKSRC}/README.pkgsrc ${DESTDIR}${DOCDIR}
 
