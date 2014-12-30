@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.42 2014/02/12 23:18:16 tron Exp $
+# $NetBSD: Makefile,v 1.43 2014/12/30 08:50:55 plunky Exp $
 #
 
-DISTNAME=	zyGrib-6.0.1
-PKGREVISION=	10
+DISTNAME=	zyGrib-6.2.4
 CATEGORIES=	misc
 MASTER_SITES=	http://www.zygrib.org/getfile.php?file=
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	plunky@rya-online.net
+MAINTAINER=	plunky@NetBSD.org
 HOMEPAGE=	http://www.zygrib.org/
 COMMENT=	GRIB file viewer for weather data
 LICENSE=	gnu-gpl-v3
@@ -24,7 +23,7 @@ SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
 SUBST_MESSAGE.paths=	Fixing shared data paths.
 SUBST_FILES.paths=	util/Util.h
-SUBST_SED.paths+=	-e "s|\"data/|\"${PREFIX}/share/zyGrib/|"
+SUBST_VARS.paths=	PREFIX
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/zyGrib/colors
@@ -37,6 +36,7 @@ INSTALLATION_DIRS+=	share/zyGrib/tr
 
 INSTALL_FILES+=	colors/colors_binary.txt
 INSTALL_FILES+=	colors/colors_cape_jkg.txt
+INSTALL_FILES+=	colors/colors_cin_jkg.txt
 INSTALL_FILES+=	colors/colors_clouds_black_pc.txt
 INSTALL_FILES+=	colors/colors_clouds_white_pc.txt
 INSTALL_FILES+=	colors/colors_current_kts.txt
@@ -45,9 +45,12 @@ INSTALL_FILES+=	colors/colors_humidrel_pc.txt
 INSTALL_FILES+=	colors/colors_rain_mmh.txt
 INSTALL_FILES+=	colors/colors_snowdepth_m.txt
 INSTALL_FILES+=	colors/colors_temp_celcius.txt
+INSTALL_FILES+=	colors/colors_thetae_celcius.txt
+INSTALL_FILES+=	colors/colors_thetae_celcius_1.txt
 INSTALL_FILES+=	colors/colors_waveheight_m.txt
 INSTALL_FILES+=	colors/colors_whitecap_prb.txt
 INSTALL_FILES+=	colors/colors_whitecap_prb.txt.colors
+INSTALL_FILES+=	colors/colors_wind_jet_kts.txt
 INSTALL_FILES+=	colors/colors_wind_kts.txt
 INSTALL_FILES+=	gis/cities_10k-more.txt.gz
 INSTALL_FILES+=	gis/cities_3k-10k.txt.gz
@@ -59,6 +62,7 @@ INSTALL_FILES+=	img/1leftarrow.png
 INSTALL_FILES+=	img/1rightarrow.png
 INSTALL_FILES+=	img/2leftarrow.png
 INSTALL_FILES+=	img/2rightarrow.png
+INSTALL_FILES+=	img/airport.png
 INSTALL_FILES+=	img/anim.png
 INSTALL_FILES+=	img/back.png
 INSTALL_FILES+=	img/connect_no.png
@@ -92,8 +96,11 @@ INSTALL_FILES+=	img/player_playlist.png
 INSTALL_FILES+=	img/player_rew.png
 INSTALL_FILES+=	img/player_start.png
 INSTALL_FILES+=	img/player_stop.png
+INSTALL_FILES+=	img/printer.png
 INSTALL_FILES+=	img/reload.png
 INSTALL_FILES+=	img/resource.rc
+INSTALL_FILES+=	img/spreadsheet.png
+INSTALL_FILES+=	img/time_icon.png
 INSTALL_FILES+=	img/up.png
 INSTALL_FILES+=	img/viewmag+.png
 INSTALL_FILES+=	img/viewmag-.png
@@ -152,6 +159,7 @@ do-install:
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../geography/libnova/buildlink3.mk"
 .include "../../geography/proj/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
