@@ -1,9 +1,0 @@
-$NetBSD: patch-aa,v 1.4 2012/05/21 07:01:32 plunky Exp $
-
---- Makefile.orig	2012-05-21 06:50:14.000000000 +0000
-+++ Makefile
-@@ -0,0 +1,4 @@
-+
-+SUBDIR=	lib .WAIT src
-+
-+.include <bsd.subdir.mk>
