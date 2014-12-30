@@ -1,0 +1,2 @@
+Plugin for the Qore programming language that provides conversion from
+native Qore data to YAML strings.
