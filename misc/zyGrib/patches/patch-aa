@@ -1,24 +1,25 @@
-$NetBSD: patch-aa,v 1.8 2012/07/01 07:21:35 plunky Exp $
+$NetBSD: patch-aa,v 1.9 2014/12/30 08:50:55 plunky Exp $
 
-libbz2, libz and libproj are all provided by the buildlink3.mk
-framework; no need to use private versions.
+libraries are provided by the buildlink3.mk framework;
+no need to provide paths
 
---- zyGrib.pro.orig	2012-06-03 21:03:41.000000000 +0000
+--- zyGrib.pro.orig	2014-11-02 00:01:52.000000000 +0000
 +++ zyGrib.pro
 @@ -5,7 +5,7 @@ TEMPLATE = app
  TARGET   = zyGrib
  
  DEPENDPATH  += . util map GUI
--INCLUDEPATH += . util map GUI bzip2 zlib-1.2.3 proj-4.6.0/src
-+INCLUDEPATH += . util map GUI
- INCLUDEPATH += curvedrawer
+-INCLUDEPATH += . util map GUI curvedrawer qwt-6.0.1/src
++INCLUDEPATH += . util map GUI curvedrawer
  
- # LIBS += -Lbzip2 -lbz2 -Lzlib-1.2.3 -lz -Lproj-4.6.0/src -lproj
-@@ -31,7 +31,6 @@ macx {
- 	ICON = ../data/img/zyGrib.icns
+ # ----------------------------------------------------
+ # platform specific
+@@ -26,7 +26,7 @@ macx {
  }
  else {
--	INCLUDEPATH += /usr/include/qwt
- 	LIBS += -lbz2 -lz -lproj -lqwt
  	DESTDIR = .
+-	LIBS += -lbz2 -lz -lproj -lnova -Lqwt-6.0.1/lib/ -lqwt
++	LIBS += -lbz2 -lz -lproj -lnova -lqwt
  }
+ }
+ # ----------------------------------------------------
