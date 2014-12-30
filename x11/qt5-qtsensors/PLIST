@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2013/12/15 09:42:44 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/12/30 17:23:47 adam Exp $
 lib/pkgconfig/Qt5Sensors.pc
 qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qaccelerometer_p.h
 qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qaltimeter_p.h
 qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qambientlightsensor_p.h
 qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qambienttemperaturesensor_p.h
 qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qcompass_p.h
+qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qdistancesensor_p.h
 qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qgyroscope_p.h
 qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qholstersensor_p.h
 qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qirproximitysensor_p.h
@@ -37,6 +38,9 @@ qt5/include/QtSensors/QAmbientTemperatureSensor
 qt5/include/QtSensors/QCompass
 qt5/include/QtSensors/QCompassFilter
 qt5/include/QtSensors/QCompassReading
+qt5/include/QtSensors/QDistanceFilter
+qt5/include/QtSensors/QDistanceReading
+qt5/include/QtSensors/QDistanceSensor
 qt5/include/QtSensors/QGyroscope
 qt5/include/QtSensors/QGyroscopeFilter
 qt5/include/QtSensors/QGyroscopeReading
@@ -90,6 +94,7 @@ qt5/include/QtSensors/qaltimeter.h
 qt5/include/QtSensors/qambientlightsensor.h
 qt5/include/QtSensors/qambienttemperaturesensor.h
 qt5/include/QtSensors/qcompass.h
+qt5/include/QtSensors/qdistancesensor.h
 qt5/include/QtSensors/qgyroscope.h
 qt5/include/QtSensors/qholstersensor.h
 qt5/include/QtSensors/qirproximitysensor.h
@@ -113,7 +118,9 @@ qt5/include/QtSensors/qtiltsensor.h
 qt5/include/QtSensors/qtsensorsversion.h
 qt5/lib/cmake/Qt5Sensors/Qt5SensorsConfig.cmake
 qt5/lib/cmake/Qt5Sensors/Qt5SensorsConfigVersion.cmake
-qt5/lib/cmake/Qt5Sensors/Qt5Sensors_.cmake
+qt5/lib/cmake/Qt5Sensors/Qt5Sensors_QShakeSensorGesturePlugin.cmake
+qt5/lib/cmake/Qt5Sensors/Qt5Sensors_QtSensorGesturePlugin.cmake
+qt5/lib/cmake/Qt5Sensors/Qt5Sensors_dummySensorPlugin.cmake
 qt5/lib/cmake/Qt5Sensors/Qt5Sensors_genericSensorPlugin.cmake
 qt5/lib/libQt5Sensors.la
 qt5/lib/libQt5Sensors.prl

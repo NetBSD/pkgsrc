@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2014/12/25 13:51:14 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/12/30 17:23:48 adam Exp $
 
+DISTNAME=	qtx11extras-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtx11extras-${QTVERSION}
 COMMENT=	Qt5 module for X11 extras
 
-USE_LIBTOOL=		yes
-CONFIGURE_ARGS+=	-I${QTDIR}/include -L${QTDIR}/lib
-
-BUILD_DIRS=		qtx11extras
-
+BUILD_TARGET=		sub-src
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 INSTALLATION_DIRS+=	lib/pkgconfig
 
@@ -15,9 +12,8 @@ INSTALLATION_DIRS+=	lib/pkgconfig
 
 post-install:
 .for i in Qt5X11Extras.pc
-	${RM} -f ${DESTDIR}${PREFIX}/lib/pkgconfig/${i} && \
-		cd ${DESTDIR}${PREFIX}/lib/pkgconfig && \
-		ln -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
+	cd ${DESTDIR}${PREFIX}/lib/pkgconfig && \
+	ln -f -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
 .endfor
 
 .include "../../x11/qt5-qtxmlpatterns/buildlink3.mk"
