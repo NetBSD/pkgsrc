@@ -1,15 +1,18 @@
-# $NetBSD: Makefile.common,v 1.3 2014/04/23 07:05:31 adam Exp $
+# $NetBSD: Makefile.common,v 1.4 2014/12/30 17:23:45 adam Exp $
 # used by x11/qt5-qtbase/Makefile.common
 # used by inputmethod/qt5-uim/Makefile
 
-QTDISTVER=	5.2.1
-QTVERSION=	${QTDISTVER:S/-rc/rc/}
+QTVERSION=	5.4.0
 
 .include "../../mk/bsd.prefs.mk"
 
+CATEGORIES=	x11
+MASTER_SITES=	http://download.qt-project.org/official_releases/qt/${QTVERSION:R}/${QTVERSION}/submodules/
+EXTRACT_SUFX=	.tar.xz
+EXTRACT_USING=	bsdtar
+
 MAINTAINER?=	ryoon@NetBSD.org
 HOMEPAGE=	http://qt-project.org/
-
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v3
 
 QTPREFIX=	${LOCALBASE}/qt5
