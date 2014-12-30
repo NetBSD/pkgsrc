@@ -1,4 +1,4 @@
-PKG_INSTALL.CONF(5)       NetBSD File Formats Manual       PKG_INSTALL.CONF(5)
+PKG_INSTALL.CONF(5)           File Formats Manual          PKG_INSTALL.CONF(5)
 
 NNAAMMEE
      ppkkgg__iinnssttaallll..ccoonnff -- configuration file for package installation tools
@@ -18,21 +18,21 @@ DDEESSCCRRIIPPTTIIOONN
      The following variables are supported:
 
      ACCEPTABLE_LICENSES
-             Space-separared list of licenses packages are allowed to carry.
+             Space-separated list of licenses packages are allowed to carry.
              License names are case-sensitive.
 
      ACTIVE_FTP
              Force the use of active FTP.
 
      CACHE_INDEX
-             Cache directory listenings in memory.  This avoids retransfers of
+             Cache directory listings in memory.  This avoids retransfers of
              the large directory index for HTTP and is enabled by default.
 
      CERTIFICATE_ANCHOR_PKGS
              Path to the file containing the certificates used for validating
              binary packages.  A package is trusted when a certificate chain
-             ends in one of the certificates contained in this file.  The cer-
-             tificates must be PEM-encoded.
+             ends in one of the certificates contained in this file.  The
+             certificates must be PEM-encoded.
 
      CERTIFICATE_ANCHOR_PKGVULN
              Analogous to CERTIFICATE_ANCHOR_PKGS.  The _p_k_g_-_v_u_l_n_e_r_a_b_i_l_i_t_i_e_s is
@@ -60,6 +60,10 @@ DDEESSCCRRIIPPTTIIOONN
              During vulnerability checks, consider packages that have reached
              end-of-life as vulnerable.  This option is enabled by default.
 
+     CHECK_OSABI
+             If "no", osabi package does not check OS version.  The default is
+             "yes".
+
      CHECK_VULNERABILITIES
              Check for vulnerabilities when installing packages.  Supported
              values are:
@@ -74,19 +78,20 @@ DDEESSCCRRIIPPTTIIOONN
                             of vulnerable packages.
 
      CONFIG_CACHE_CONNECTIONS
-             Limit the global connection cache to this value.  For FTP this is
-             the number of sessions without active command.  For HTTP this is
-             the number of connections open with keep-alive.
+             Limit the global connection cache to this value.  For FTP, this
+             is the number of sessions without active command.  For HTTP, this
+             is the number of connections open with keep-alive.
 
      CONFIG_CACHE_CONNECTIONS_HOST
-             Like CONFIG_CACHE_CONNECTIONS, but limit the number of connec-
-             tions to the host as well.  See fetch(3) for further details
+             Like CONFIG_CACHE_CONNECTIONS, but limit the number of
+             connections to the host as well.  See fetch(3) for further
+             details
 
      DEFAULT_ACCEPTABLE_LICENSES
              Space-separated list of common Free and Open Source licenses
-	     packages are allowed to carry.  The default value contains all
-	     OSI approved licenses in pkgsrc on the date pkg_install was
-	     released.  License names are case-sensitive.
+             packages are allowed to carry.  The default value contains all
+             OSI approved licenses in pkgsrc on the date pkg_install was
+             released.  License names are case-sensitive.
 
      GPG     Path to gpg(1), which can be used to verify the signature in the
              _p_k_g_-_v_u_l_n_e_r_a_b_i_l_i_t_i_e_s file when running
@@ -103,8 +108,8 @@ DDEESSCCRRIIPPTTIIOONN
              Non-default keyring to use for signing packages with GPG.
 
      GPG_KEYRING_VERIFY
-             Non-default keyring to use for verifying GPG signature of pack-
-             ages.
+             Non-default keyring to use for verifying GPG signature of
+             packages.
 
      GPG_SIGN_AS
              User-id to use for signing packages.
@@ -119,12 +124,12 @@ DDEESSCCRRIIPPTTIIOONN
              value.
 
      PKG_DBDIR (*)
-             Location of the packages database.  This option is always overri-
-             den by the argument of the --KK option.
+             Location of the packages database.  This option is always
+             overriden by the argument of the --KK option.
 
      PKG_PATH (*)
-             Search path for packages.  The entries are separated by semi-
-             colon.  Each entry specifies a directory or URL to search for
+             Search path for packages.  The entries are separated by
+             semicolon.  Each entry specifies a directory or URL to search for
              packages.
 
      PKG_REFCOUNT_DBDIR (*)
@@ -139,8 +144,8 @@ DDEESSCCRRIIPPTTIIOONN
              URL which is used for updating the local _p_k_g_-_v_u_l_n_e_r_a_b_i_l_i_t_i_e_s file
              when running
                    ppkkgg__aaddmmiinn ffeettcchh--ppkkgg--vvuullnneerraabbiilliittiieess
-             The default location is ftp.NetBSD.org using HTTP.  _N_o_t_e: Usu-
-             ally, only the compression type should be changed.  Currently
+             The default location is ftp.NetBSD.org using HTTP.  _N_o_t_e:
+             Usually, only the compression type should be changed.  Currently
              supported are uncompressed files and files compressed by bzip2(1)
              (_._b_z_2) or gzip(1) (_._g_z).
 
@@ -164,10 +169,10 @@ DDEESSCCRRIIPPTTIIOONN
                             installing a package.
 
 FFIILLEESS
-     @SYSCONFDIR@/pkg_install.conf  Default location for the file described in
-                                    this manual page.
+     _@_S_Y_S_C_O_N_F_D_I_R_@_/_p_k_g___i_n_s_t_a_l_l_._c_o_n_f      Default location for the file
+                                        described in this manual page.
 
 SSEEEE AALLSSOO
-     pkg_add(1), pkg_admin(1) pkg_create(1), pkg_delete(1), pkg_info(1)
+     pkg_add(1), pkg_admin(1), pkg_create(1), pkg_delete(1), pkg_info(1)
 
-NetBSD 5.0                     February 22, 2012                    NetBSD 5.0
+pkgsrc                         October 28, 2014                         pkgsrc

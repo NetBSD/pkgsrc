@@ -1,4 +1,4 @@
-PKG_SUMMARY(5)            NetBSD File Formats Manual            PKG_SUMMARY(5)
+PKG_SUMMARY(5)                File Formats Manual               PKG_SUMMARY(5)
 
 NNAAMMEE
      ppkkgg__ssuummmmaarryy -- summary of binary package repository
@@ -17,24 +17,28 @@ DDEESSCCRRIIPPTTIIOONN
              (required) The date and time when the package was built.
 
      CATEGORIES
-             (required) A list of categories which this package fits in, sepa-
-             rated by space.
+             (required) A list of categories which this package fits in,
+             separated by space.
 
      COMMENT
              (required) A one-line description of the package.
 
      CONFLICTS
-             (optional) A list of dewey patterns of packages the package con-
-             flicts with, one per line.  If missing, this package has no con-
-             flicts.
+             (optional) A list of dewey patterns of packages the package
+             conflicts with, one per line.  If missing, this package has no
+             conflicts.
 
      DEPENDS
              (optional) A list of dewey patterns of packages the package
-             depends on, one per line.  If missing, this package has no depen-
-             dencies.
+             depends on, one per line.  If missing, this package has no
+             dependencies.
 
      DESCRIPTION
              (required) A more detailed description of the package.
+
+     FILE_CKSUM
+             (optional) A checksum type supported by digest(1) and checksum
+             separated by space character.
 
      FILE_NAME
              (optional) The name of the binary package file.  If not given,
@@ -54,12 +58,12 @@ DDEESSCCRRIIPPTTIIOONN
      MACHINE_ARCH
              (required) The architecture on which the package was compiled.
 
-     OPSYS   (required) The operating system on which the package was com-
-             piled.
+     OPSYS   (required) The operating system on which the package was
+             compiled.
 
      OS_VERSION
-             (required) The version of the operating system on which the pack-
-             age was compiled.
+             (required) The version of the operating system on which the
+             package was compiled.
 
      PKG_OPTIONS
              (optional) Any options selected to compile this package.  If
@@ -95,19 +99,19 @@ DDEESSCCRRIIPPTTIIOONN
 
      SUPERSEDES
              (optional) A list of dewey patterns of previous packages this
-             package replaces, one per line.  This is used for package renam-
-             ing.
+             package replaces, one per line.  This is used for package
+             renaming.
 
      The ppkkgg__ssuummmmaarryy file can be generated using the pkg_info(1) --XX option.
-     For example, the following will list this data for all installed pack-
-     ages:
+     For example, the following will list this data for all installed
+     packages:
 
            pkg_info -X -a
 
 SSEEEE AALLSSOO
-     pkg_info(1)
+     digest(1), pkg_info(1)
 
 HHIISSTTOORRYY
      The ppkkgg__ssuummmmaarryy format was first officially documented in April 2006.
 
-NetBSD 5.0                      April 11, 2009                      NetBSD 5.0
+pkgsrc                          April 11, 2009                          pkgsrc
