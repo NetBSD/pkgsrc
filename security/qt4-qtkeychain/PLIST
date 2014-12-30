@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2014/12/30 22:05:46 ryoon Exp $
+include/qtkeychain/keychain.h
+include/qtkeychain/qkeychain_export.h
+lib/cmake/QtKeychain/QtKeychainConfig.cmake
+lib/cmake/QtKeychain/QtKeychainConfigVersion.cmake
+lib/cmake/QtKeychain/QtKeychainLibraryDepends-noconfig.cmake
+lib/cmake/QtKeychain/QtKeychainLibraryDepends.cmake
+lib/libqtkeychain.so
+lib/libqtkeychain.so.0
+lib/libqtkeychain.so.${PKGVERSION}
+qt4/translations/qtkeychain_de.qm
+qt4/translations/qtkeychain_ro.qm
