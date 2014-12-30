@@ -1,0 +1,24 @@
+$NetBSD: patch-configure.ac,v 1.1 2014/12/30 15:57:10 wiz Exp $
+pkgsrc does not use lib64 so don't set it (fixes build on linux).
+http://sf.net/p/qoe/code/6817/
+BSD systems don't have alloca.h but have alloca in stdlib.h.
+http://sourceforge.net/p/qore/code/6300/
+--- configure.ac.orig	2009-09-21 11:55:18.000000000 +0000
++++ configure.ac
+@@ -129,8 +129,6 @@ if test "$enable_64bit" = "yes"; then
+       *linux*)	if test "$GXX" = "yes"; then
+ 		   CXXFLAGS="$CXXFLAGS -m64"
+ 		fi
+-		LIBSUFFIX=64
+-		AC_SUBST(LIBSUFFIX)
+ 		;;
+       *hpux*)	if test "$host_cpu" = "ia64"; then
+                     if test -n "`echo $CXX|grep aCC`"; then
+@@ -579,6 +577,7 @@ AC_CHECK_MEMBERS([struct stat.st_rdev])
+ AC_HEADER_TIME
+ AC_STRUCT_TM
+ AC_C_VOLATILE
++AC_CHECK_HEADERS([alloca.h])
+ 
+ # turn on optimizations if we know how
+ if test "$enable_optimization" = "yes"; then

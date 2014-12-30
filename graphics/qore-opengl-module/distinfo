@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2014/12/30 15:57:09 wiz Exp $
+
+SHA1 (qore-opengl-module-0.0.3.tar.gz) = 9e730b267c89d3aac7a381482285232f86823ce7
+RMD160 (qore-opengl-module-0.0.3.tar.gz) = e48d135ee8559cae944cf33a265170194b7d9b92
+Size (qore-opengl-module-0.0.3.tar.gz) = 503304 bytes
+SHA1 (patch-configure.ac) = 421a2832c43db25f98028626e60ba816c1e9f706
+SHA1 (patch-src_Makefile.am) = 376d6e4cf8a84493a868e51582976213a031d37c
+SHA1 (patch-src_opengl.cc) = a09b937d312d71e94eea1eee5c66c2a8be316fcb
