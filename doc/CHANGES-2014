@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4913 2014/12/30 13:00:11 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4914 2014/12/30 13:01:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6435,3 +6435,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/p5-IO-Socket-SSL to 2.008 [wiz 2014-12-30]
 	Updated devel/p5-List-MoreUtils to 0.402 [wiz 2014-12-30]
 	Updated textproc/p5-YAML-Syck to 1.29 [wiz 2014-12-30]
+	Updated www/p5-CGI to 4.13 [wiz 2014-12-30]
