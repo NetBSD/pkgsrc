@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2014/12/30 15:52:04 wiz Exp $
+
+SHA1 (qore-yaml-module-0.4.tar.bz2) = f25685d08fae5e856eda05bf7f00853c6fee11d3
+RMD160 (qore-yaml-module-0.4.tar.bz2) = 8f09b44abfa6d150d31759d39ed5edcb65f7a5f5
+Size (qore-yaml-module-0.4.tar.bz2) = 529023 bytes
+SHA1 (patch-configure) = c1b05c303d0ae9eb1c6e7e2c729efa6122da8d76
+SHA1 (patch-src_Makefile.in) = fe5669255ad9d1b7a93369d8dbae346c9b293b9b
