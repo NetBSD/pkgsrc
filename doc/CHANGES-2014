@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4959 2014/12/31 13:38:51 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4960 2014/12/31 14:12:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6520,3 +6520,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-CGI-Application-Plugin-DBH to 4.04 [mef 2014-12-31]
 	Added textproc/py-jsonschema version 2.4.0 [bsiegert 2014-12-31]
 	Updated www/p5-CGI-Compile to 0.18 [mef 2014-12-31]
+	Updated fonts/bdftopcf to 1.0.5 [wiz 2014-12-31]
