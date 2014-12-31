@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4954 2014/12/31 10:23:18 adam Exp $
+$NetBSD: CHANGES-2014,v 1.4955 2014/12/31 11:25:17 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6515,3 +6515,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/libsixel to 1.4.5 [obache 2014-12-31]
 	Updated www/p5-Apache-Test to 1.38 [mef 2014-12-31]
 	Updated net/net-snmp to 5.7.3 [adam 2014-12-31]
+	Updated www/p5-App-Nopaste to 1.002 [mef 2014-12-31]
