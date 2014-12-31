@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4962 2014/12/31 14:28:36 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4963 2014/12/31 14:34:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6523,3 +6523,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated fonts/bdftopcf to 1.0.5 [wiz 2014-12-31]
 	Updated x11/xproto to 7.0.27 [wiz 2014-12-31]
 	Updated devel/meld to 3.13.0 [wiz 2014-12-31]
+	Updated devel/p5-Compress-Raw-Zlib to 2.068 [wiz 2014-12-31]
