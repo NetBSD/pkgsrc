@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/01/25 10:30:12 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/12/31 13:57:28 wiz Exp $
 
 VER=		1.0
 DISTNAME=	sendmail-admin-${VER}
@@ -15,8 +15,6 @@ LICENSE=	2-clause-bsd
 PYTHON_SELF_CONFLICT=		yes
 
 USE_LANGUAGES=	# none
-
-EGG_NAME=	${DISTNAME:S/-/_/}
 
 .include "../../lang/python/distutils.mk"
 .include "../../lang/python/application.mk"

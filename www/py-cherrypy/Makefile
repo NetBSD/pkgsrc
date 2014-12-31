@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/09/14 16:58:49 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2014/12/31 13:57:30 wiz Exp $
 
 DISTNAME=	CherryPy-3.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,7 +11,6 @@ COMMENT=	CherryPy is a pythonic, object-oriented HTTP framework
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=		# none
-EGG_NAME=		${DISTNAME}
 
 REPLACE_PYTHON=		cherrypy/cherryd
 REPLACE_PYTHON+=	cherrypy/test/sessiondemo.py

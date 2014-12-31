@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/01/08 19:28:12 kleink Exp $
+# $NetBSD: Makefile,v 1.2 2014/12/31 13:57:33 wiz Exp $
 
 DISTNAME=	Flask-REST-1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://github.com/ametaireau/flask-rest/
 COMMENT=	Simple REST toolkit for Flask
 LICENSE=	modified-bsd
 
-EGG_NAME=	${DISTNAME:S/-/_/}
 USE_LANGUAGES=	# empty
 
 DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask

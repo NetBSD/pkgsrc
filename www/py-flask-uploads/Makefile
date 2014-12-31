@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/01/08 18:06:29 kleink Exp $
+# $NetBSD: Makefile,v 1.2 2014/12/31 13:57:33 wiz Exp $
 
 DISTNAME=	Flask-Uploads-0.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,8 +11,6 @@ COMMENT=	Flexible and efficient upload handling for Flask
 LICENSE=	mit
 
 USE_LANGUAGES=	#empty
-
-EGG_NAME=	${DISTNAME:S/-/_/}
 
 DEPENDS+=	${PYPKGPREFIX}-flask>=0.5:../../www/py-flask
 

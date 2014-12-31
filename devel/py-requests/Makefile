@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/12/12 20:01:29 imil Exp $
+# $NetBSD: Makefile,v 1.11 2014/12/31 13:57:27 wiz Exp $
 
 DISTNAME=	requests-2.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-markupsafe-[0-9]*:../../textproc/py-markupsafe
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.1.3:../../textproc/py-sphinx
 
-WRKSRC=		${WRKDIR}/${EGG_NAME}
 USE_LANGUAGES=	c
 REPLACE_PYTHON=	requests/certs.py requests/packages/chardet/chardetect.py
 

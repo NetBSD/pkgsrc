@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/05/09 07:37:09 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/12/31 13:57:27 wiz Exp $
 
 DISTNAME=	ibus-tegaki-0.3.1
 PKGREVISION=	2
@@ -21,7 +21,6 @@ SUBST_STAGE.epython=	pre-configure
 SUBST_FILES.epython=	ibus-engine-tegaki.in
 SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
 
-EGG_NAME=		${DISTNAME:S/-/_/}
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2 via py-ibus-python
 
 .include "../../lang/python/distutils.mk"

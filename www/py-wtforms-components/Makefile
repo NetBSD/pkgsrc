@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/11/10 18:46:40 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2014/12/31 13:57:34 wiz Exp $
 
 DISTNAME=	WTForms-Components-0.9.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -20,8 +20,6 @@ DEPENDS+=	${PYPKGPREFIX}-intervals>=0.2.0:../../math/py-intervals
 USE_LANGUAGES=	# none
 
 .include "options.mk"
-
-EGG_NAME=	${DISTNAME:S/-/_/1}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

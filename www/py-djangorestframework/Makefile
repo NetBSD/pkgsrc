@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/05/09 07:37:25 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2014/12/31 13:57:32 wiz Exp $
 
 DISTNAME=	djangorestframework-0.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 
-EGG_NAME=		${DISTNAME}
 USE_LANGUAGES=		# empty
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.2.3
 

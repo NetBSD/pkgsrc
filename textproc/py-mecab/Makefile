@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/05/09 07:37:22 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/12/31 13:57:30 wiz Exp $
 
 .include "../../textproc/mecab/Makefile.common"
 
@@ -10,8 +10,6 @@ COMMENT=	MeCab python module
 LICENSE=	gnu-gpl-v2 OR gnu-lgpl-v2.1 OR modified-bsd
 
 USE_LANGUAGES=	c c++
-
-EGG_NAME=	${DISTNAME:S/-/_/}
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC:Q}/build/lib.${LOWER_OPSYS}-${OS_VERSION}-${MACHINE_ARCH}-${PYVERSSUFFIX}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/04/12 10:10:27 adam Exp $
+# $NetBSD: Makefile,v 1.4 2014/12/31 13:57:30 wiz Exp $
 
 DISTNAME=	easy-thumbnails-1.5
 PKGNAME=	${PYPKGPREFIX}-django-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 
-EGG_NAME=		${DISTNAME:S/-/_/}
 USE_LANGUAGES=		# empty
 
 .include "../../lang/python/egg.mk"

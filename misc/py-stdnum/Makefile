@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/05/09 07:37:12 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/12/31 13:57:28 wiz Exp $
 
 DISTNAME=	python-stdnum-0.9
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
@@ -11,7 +11,6 @@ COMMENT=	Python module to handle standardized numbers and codes
 LICENSE=	gnu-lgpl-v3
 
 USE_LANGUAGES=	# none
-EGG_NAME=	${DISTNAME:S/python-/python_/}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-suds
 

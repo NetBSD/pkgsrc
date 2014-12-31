@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/05/09 07:37:09 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2014/12/31 13:57:28 wiz Exp $
 
 DISTNAME=	tegaki-recognize-0.3.1.2
 PKGREVISION=	1
@@ -16,8 +16,6 @@ USE_LANGUAGES=	# none
 
 REPLACE_PYTHON=	bin/tegaki-recognize
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.3.1.2
-
-EGG_NAME=	${DISTNAME:S/-/_/}
 
 .include "../../lang/python/distutils.mk"
 .include "../../lang/python/application.mk"

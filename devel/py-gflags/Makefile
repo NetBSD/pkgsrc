@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/11/26 15:01:12 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/12/31 13:57:27 wiz Exp $
 
 DISTNAME=	python-gflags-2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -11,8 +11,6 @@ COMMENT=	Python equivalent of gflags, a commandline flag implementation
 LICENSE=	modified-bsd
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # as of 2.0
-
-EGG_NAME=		${DISTNAME:S/-/_/}
 
 REPLACE_PYTHON+=	*.py
 

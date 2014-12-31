@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2014/06/06 12:48:35 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2014/12/31 13:57:29 wiz Exp $
 
 DISTNAME=	apache-libcloud-0.14.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-EGG_NAME=	${DISTNAME:S,-,_,}
 CATEGORIES=	net
 MASTER_SITES=	https://pypi.python.org/packages/source/a/apache-libcloud/
 
