@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/21 21:41:09 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/12/31 01:25:22 mef Exp $
 bin/zcat
 bin/zcmp
 bin/zdiff
@@ -6,10 +6,12 @@ bin/zegrep
 bin/zfgrep
 bin/zgrep
 bin/ztest
-bin/zutils
+bin/zupdate
 info/zutils.info
 man/man1/zcat.1
 man/man1/zcmp.1
 man/man1/zdiff.1
 man/man1/zgrep.1
 man/man1/ztest.1
+man/man1/zupdate.1
+share/examples/zutils/zutilsrc
