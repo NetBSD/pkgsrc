@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.135 2014/12/30 13:34:59 wiz Exp $
+# $NetBSD: Makefile,v 1.136 2014/12/31 16:10:41 rumko Exp $
 
 .include "Makefile.common"
 
@@ -31,6 +31,13 @@ SUBST_MESSAGE.w32path=	Fixing win32 dll path.
 
 # Needed to fix build problems under, at least, NetBSD/amd64.
 BUILDLINK_API_DEPENDS.libcdio+=	libcdio>=0.75
+
+.if ${OPSYS} == "FreeBSD"
+PLIST_VARS+=	vidix
+.if ${MACHINE_ARCH} == "i386"
+PLIST.vidix=	yes
+.endif
+.endif
 
 PLIST_VARS+=	qtw32
 .if empty(MACHINE_PLATFORM:MDarwin-*-i386)
