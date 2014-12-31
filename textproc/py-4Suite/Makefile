@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/05/09 07:37:21 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2014/12/31 13:57:29 wiz Exp $
 
 VER=		1.0.2
 DISTNAME=	4Suite-XML-${VER}
@@ -12,8 +12,6 @@ COMMENT=	Open-source platform for XML and RDF processing
 LICENSE=	apache-1.1
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-
-EGG_NAME=	${DISTNAME:S/-/_/}
 
 SUBST_CLASSES+=		python
 SUBST_FILES.python=	build/scripts.*/4xml

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/05/09 07:37:10 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/12/31 13:57:28 wiz Exp $
 
 VERSION=	2.0.8
 DISTNAME=	pyspf-${VERSION}
@@ -12,8 +12,6 @@ COMMENT=	Python implementation of the RFC 4408 SPF protocol
 LICENSE=	python-software-foundation
 
 DEPENDS+=	${PYPKGPREFIX}-dns>=0:../../net/py-dns
-
-EGG_NAME=	pyspf-${VERSION}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-dns
 

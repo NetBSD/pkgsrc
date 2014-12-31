@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/25 10:30:24 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/12/31 13:57:30 wiz Exp $
 
 DISTNAME=	jsonlib-python3-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python3//}
@@ -11,8 +11,6 @@ COMMENT=	JSON serializer/deserializer for Python (python-3.x version)
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c
-
-EGG_NAME=	${DISTNAME:S/b-p/b_p/}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	26 27
 

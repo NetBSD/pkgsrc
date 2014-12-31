@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/12/13 09:28:01 obache Exp $
+# $NetBSD: Makefile,v 1.13 2014/12/31 13:57:30 wiz Exp $
 
 DISTNAME=	python-dateutil-2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -11,8 +11,6 @@ COMMENT=	Extensions to the standard datetime module
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-
-EGG_NAME=	${DISTNAME:S/-/_/}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
