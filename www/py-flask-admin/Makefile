@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/04/26 17:44:52 kleink Exp $
+# $NetBSD: Makefile,v 1.10 2014/12/31 13:57:32 wiz Exp $
 
 DISTNAME=	Flask-Admin-1.0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -12,8 +12,6 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# empty
 USE_TOOLS+=	pax
-
-EGG_NAME=	${DISTNAME:S/-/_/}
 
 DEPENDS+=	${PYPKGPREFIX}-flask>=0.7:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-wtforms-[0-9]*:../../www/py-wtforms

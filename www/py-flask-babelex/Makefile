@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/07/21 11:23:09 kleink Exp $
+# $NetBSD: Makefile,v 1.5 2014/12/31 13:57:32 wiz Exp $
 
 DISTNAME=	Flask-BabelEx-0.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,8 +11,6 @@ COMMENT=	Adds i18n and l10n support for Flask based on Babel and pytz
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# empty
-
-EGG_NAME=	${DISTNAME:S/-/_/}
 
 DEPENDS+=	${PYPKGPREFIX}-babel>=1.0:../../devel/py-babel
 DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask

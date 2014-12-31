@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/05/09 07:37:09 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2014/12/31 13:57:28 wiz Exp $
 
 DISTNAME=	tegaki-wagomu-0.3.1
 PKGREVISION=	6
@@ -29,7 +29,6 @@ SUBST_STAGE.fixver=	pre-configure
 SUBST_FILES.fixver=	tegakiwagomu.py
 SUBST_SED.fixver=	-e 's|0\.3|${PKGVERSION_NOREV}|'
 
-EGG_NAME=	${DISTNAME:S/-/_/}
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.3.1
 
 .include "../../devel/glib2/buildlink3.mk"

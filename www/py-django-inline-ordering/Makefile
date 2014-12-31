@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/01/28 21:07:15 adam Exp $
+# $NetBSD: Makefile,v 1.2 2014/12/31 13:57:30 wiz Exp $
 
 DISTNAME=	django-inline-ordering-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://github.com/centralniak/django-inline-ordering
 COMMENT=	Django app to ease ordering of related data
 LICENSE=	modified-bsd
 
-EGG_NAME=		${DISTNAME:S/-/_/:S/-/_/}
 USE_LANGUAGES=		# empty
 
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
