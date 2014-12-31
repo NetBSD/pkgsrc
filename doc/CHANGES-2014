@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4950 2014/12/31 01:39:32 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.4951 2014/12/31 02:36:06 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6511,3 +6511,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/openjdk7 to 1.7.71nb2 [ryoon 2014-12-30]
 	Updated archivers/zutils to 1.3 [mef 2014-12-31]
 	Updated net/aria2 to 1.18.8 [ryoon 2014-12-31]
+	Updated textproc/groonga to 4.0.9 [obache 2014-12-31]
