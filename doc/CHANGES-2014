@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4952 2014/12/31 02:46:56 obache Exp $
+$NetBSD: CHANGES-2014,v 1.4953 2014/12/31 09:05:33 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6513,3 +6513,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/aria2 to 1.18.8 [ryoon 2014-12-31]
 	Updated textproc/groonga to 4.0.9 [obache 2014-12-31]
 	Updated graphics/libsixel to 1.4.5 [obache 2014-12-31]
+	Updated www/p5-Apache-Test to 1.38 [mef 2014-12-31]
