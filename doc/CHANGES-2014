@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4971 2014/12/31 15:12:52 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4972 2014/12/31 19:32:18 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6401,6 +6401,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated archivers/xz to 5.2.0 [adam 2014-12-30]
 	Updated multimedia/ffmpeg2 to 2.5.2 [adam 2014-12-30]
 	Updated x11/py-sip to 4.16.5 [adam 2014-12-30]
+	Updated print/ghostscript-gpl to 9.06nb3 [dholland 2014-12-30]
 	Added www/ruby-httpclient version 2.3.4.1 [obache 2014-12-30]
 	Updated net/mikutter to 3.2.0 [obache 2014-12-30]
 	Updated sysutils/netbt-hcidump to 5.27 [plunky 2014-12-30]
