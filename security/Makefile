@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.534 2014/12/30 22:07:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.535 2014/12/31 13:57:03 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -388,6 +388,9 @@ SUBDIR+=	qca2-gnupg
 SUBDIR+=	qca2-ossl
 SUBDIR+=	qident
 SUBDIR+=	qoauth
+SUBDIR+=	qore-asn1-module
+SUBDIR+=	qore-ssh2-module
+SUBDIR+=	qore-xmlsec-module
 SUBDIR+=	qt4-qtkeychain
 SUBDIR+=	racoon2
 SUBDIR+=	rainbowcrack
