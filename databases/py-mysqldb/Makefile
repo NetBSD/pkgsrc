@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2014/05/09 07:36:57 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2014/12/31 13:57:26 wiz Exp $
 
 DISTNAME=	MySQL-python-1.2.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/MySQL-python/mysqldb/}
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v2
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.2.5
 
-EGG_NAME=		${DISTNAME:S/MySQL-/MySQL_/}
 USE_LANGUAGES=		c
 
 # These files must not be world-writable.

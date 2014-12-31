@@ -1,4 +1,4 @@
-# $NetBSD: distutils.mk,v 1.6 2012/04/23 13:02:06 obache Exp $
+# $NetBSD: distutils.mk,v 1.7 2014/12/31 13:57:28 wiz Exp $
 #
 # Common logic for python distributions that use distutils.
 #
@@ -19,7 +19,7 @@ PYDISTUTILSPKG=	yes
 # this norm and will work with all python versions.
 
 # Set the egg file basename.
-EGG_NAME?=	${DISTNAME}
+EGG_NAME?=	${DISTNAME:C/-([^0-9])/_\1/g}
 
 # Python distutils will create an eggfile.
 PY_NO_EGG?=	no

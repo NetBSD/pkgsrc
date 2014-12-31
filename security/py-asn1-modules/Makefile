@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/11/24 14:21:01 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/12/31 13:57:29 wiz Exp $
 
 DISTNAME=		pyasn1-modules-0.0.5
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -11,8 +11,6 @@ COMMENT=		Modules for ITU Abstract Syntax Notification for Python
 LICENSE=		2-clause-bsd
 
 DEPENDS+=		${PYPKGPREFIX}-asn1>=0.1.5:../../security/py-asn1
-
-EGG_NAME=		${DISTNAME:S/-/_/}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

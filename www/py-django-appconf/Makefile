@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/04/27 10:50:13 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.6 2014/12/31 13:57:30 wiz Exp $
 
 DISTNAME=	django-appconf-0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,8 +11,6 @@ COMMENT=	Helper class for handling configuration defaults of Django
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
-
-EGG_NAME=	${DISTNAME:S/-/_/}
 
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 

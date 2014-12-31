@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/12/05 21:40:40 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2014/12/31 13:57:33 wiz Exp $
 
 DISTNAME=	google-api-python-client-py3-1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,6 @@ USE_LANGUAGES=			# none
 PYTHON_VERSIONS_INCOMPATIBLE=	26 27 # won't CONFLICT with the 2.x version
 
 REPLACE_PYTHON+=	apiclient/*.py oauth2client/*.py
-EGG_NAME=		${DISTNAME:S/-/_/g:S/3_/3-/1}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

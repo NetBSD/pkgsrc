@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/11/23 13:59:41 adam Exp $
+# $NetBSD: Makefile,v 1.6 2014/12/31 13:57:26 wiz Exp $
 
 DISTNAME=	mysql-connector-python-2.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python//}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://dev.mysql.com/downloads/connector/python/
 COMMENT=	Standardized mysql database driver for Python development
 LICENSE=	gnu-gpl-v2
-
-EGG_NAME=	${DISTNAME:S/-/_/:S/-/_/}
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/mysql.buildlink3.mk"

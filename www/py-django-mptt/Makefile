@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/06/09 09:58:21 adam Exp $
+# $NetBSD: Makefile,v 1.7 2014/12/31 13:57:31 wiz Exp $
 
 DISTNAME=	django-mptt-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Utilities for implementing Modified Preorder Tree Traversal
 LICENSE=	mit
 
 USE_LANGUAGES=		# empty
-EGG_NAME=		${DISTNAME:S/-/_/}
 
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 

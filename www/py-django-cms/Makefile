@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/11/29 15:06:12 adam Exp $
+# $NetBSD: Makefile,v 1.27 2014/12/31 13:57:30 wiz Exp $
 
 DISTNAME=	django-cms-3.0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,6 @@ DEPENDS+=	${PYPKGPREFIX}-djangocms-admin-style-[0-9]*:../../www/py-djangocms-adm
 DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
-EGG_NAME=		${DISTNAME:S/-/_/}
 USE_LANGUAGES=		# empty
 
 REPLACE_SH=	cms/static/cms/js/select2/release.sh

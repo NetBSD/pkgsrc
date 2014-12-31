@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2014/05/09 07:37:05 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2014/12/31 13:57:27 wiz Exp $
 
 VERSION=	1.10.0
 PKGREVISION=	2
 DISTNAME=	allmydata-tahoe-${VERSION}
-EGG_NAME=	allmydata_tahoe-${VERSION}
 PKGNAME=	tahoe-lafs-${VERSION}
 CATEGORIES=	filesystems
 MASTER_SITES=	https://tahoe-lafs.org/source/tahoe-lafs/releases/

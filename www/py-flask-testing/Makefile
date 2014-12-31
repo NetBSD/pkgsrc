@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/08/07 02:29:08 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2014/12/31 13:57:33 wiz Exp $
 
 DISTNAME=	Flask-Testing-0.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,8 +13,6 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=	# none
 
 .include "options.mk"
-
-EGG_NAME=	${DISTNAME:S,-,_,}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

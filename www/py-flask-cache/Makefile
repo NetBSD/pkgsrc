@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/04/26 17:01:50 kleink Exp $
+# $NetBSD: Makefile,v 1.4 2014/12/31 13:57:32 wiz Exp $
 
 DISTNAME=	Flask-Cache-0.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -13,8 +13,6 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask
 
 USE_LANGUAGES=	# empty
-
-EGG_NAME=	${DISTNAME:S/-/_/}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

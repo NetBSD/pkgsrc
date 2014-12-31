@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2014/05/09 07:36:59 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2014/12/31 13:57:26 wiz Exp $
 
 DISTNAME=	hg-git-0.4.0
-EGG_NAME=	${DISTNAME:S/hg-/hg_/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
