@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4970 2014/12/31 15:03:56 mef Exp $
+$NetBSD: CHANGES-2014,v 1.4971 2014/12/31 15:12:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6533,3 +6533,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-CGI-Cookie-Splitter to 0.04 [mef 2014-12-31]
 	Updated www/p5-CGI-Emulate-PSGI to 0.20 [mef 2014-12-31]
 	Updated www/p5-CGI-Fast to 2.05 [mef 2014-12-31]
+	Updated time/py-vdirsyncer to 0.4.0 [wiz 2014-12-31]
