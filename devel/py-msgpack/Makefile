@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/06/08 23:17:37 rodent Exp $
+# $NetBSD: Makefile,v 1.11 2014/12/31 13:57:27 wiz Exp $
 
 DISTNAME=	msgpack-python-0.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python-/-/}
@@ -11,8 +11,6 @@ COMMENT=	MessagePack (de)serializer for Python
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=	c c++
-
-EGG_NAME=	${DISTNAME:S/-/_/}
 
 .include "../../devel/msgpack/buildlink3.mk"
 .include "../../lang/python/egg.mk"

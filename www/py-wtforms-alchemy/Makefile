@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/11/10 18:36:49 rodent Exp $
+# $NetBSD: Makefile,v 1.5 2014/12/31 13:57:34 wiz Exp $
 
 DISTNAME=	WTForms-Alchemy-0.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -21,8 +21,6 @@ DEPENDS+=	${PYPKGPREFIX}-ordereddict>=1.1:../../devel/py-ordereddict
 .endif
 
 USE_LANGUAGES=	# none
-
-EGG_NAME=	${DISTNAME:S/-/_/1}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

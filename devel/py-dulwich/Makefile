@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2014/05/09 07:37:01 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/12/31 13:57:26 wiz Exp $
 
 DISTNAME=	dulwich-0.9.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-EGG_NAME=	${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	https://pypi.python.org/packages/source/d/dulwich/
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/05/09 07:37:25 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/12/31 13:57:31 wiz Exp $
 
 DISTNAME=	django-tagging-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 
 USE_LANGUAGES=		# none
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.3.1
-EGG_NAME=	${DISTNAME:S/-/_/}
 
 INSTALLATION_DIRS+=	share/doc/py-django-tagging
 

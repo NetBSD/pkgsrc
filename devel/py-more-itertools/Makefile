@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2014/05/13 17:08:44 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2014/12/31 13:57:27 wiz Exp $
 
 DISTNAME=	more-itertools-2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-EGG_NAME=	${DISTNAME:C,-,_,}
 CATEGORIES=	devel
 MASTER_SITES=	https://pypi.python.org/packages/source/m/more-itertools/
 
