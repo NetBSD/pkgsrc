@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2014/12/13 15:14:26 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.15 2014/12/31 11:40:14 bsiegert Exp $
 bin/go
 bin/gofmt
 go/AUTHORS
@@ -537,10 +537,10 @@ go/pkg/${GO_PLATFORM}/time.a
 go/pkg/${GO_PLATFORM}/unicode.a
 go/pkg/${GO_PLATFORM}/unicode/utf16.a
 go/pkg/${GO_PLATFORM}/unicode/utf8.a
-go/pkg/tool/${GO_PLATFORM}/${GO_COMPILER}a
-go/pkg/tool/${GO_PLATFORM}/${GO_COMPILER}c
-go/pkg/tool/${GO_PLATFORM}/${GO_COMPILER}g
-go/pkg/tool/${GO_PLATFORM}/${GO_COMPILER}l
+go/pkg/tool/${GO_PLATFORM}/${GOCHAR}a
+go/pkg/tool/${GO_PLATFORM}/${GOCHAR}c
+go/pkg/tool/${GO_PLATFORM}/${GOCHAR}g
+go/pkg/tool/${GO_PLATFORM}/${GOCHAR}l
 go/pkg/tool/${GO_PLATFORM}/addr2line
 go/pkg/tool/${GO_PLATFORM}/cgo
 go/pkg/tool/${GO_PLATFORM}/dist
