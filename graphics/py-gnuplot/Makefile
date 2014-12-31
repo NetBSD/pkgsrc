@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/05/09 07:37:07 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2014/12/31 13:57:27 wiz Exp $
 
 DISTNAME=	gnuplot-py-1.8
 PKGNAME=	${PYPKGPREFIX}-gnuplot-1.8
@@ -14,7 +14,6 @@ LICENSE=	gnu-lgpl-v2.1
 DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 
 USE_LANGUAGES=	# empty
-EGG_NAME=	${DISTNAME:S/-/_/}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.8
 
