@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/12/05 03:01:20 rodent Exp $
+# $NetBSD: Makefile,v 1.8 2014/12/31 13:57:33 wiz Exp $
 
 DISTNAME=	Flask-User-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,8 +24,6 @@ DEPENDS+=	${PYPKGPREFIX}-flask-wtf-[0-9]*:../../www/py-flask-wtf
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
-
-EGG_NAME=	${DISTNAME:S/-/_/1}
 
 post-install:
 	${CHMOD} -x ${DESTDIR}${PREFIX}/${PYSITELIB}/flask_user/translations/zh/LC_MESSAGES/flask_user.mo

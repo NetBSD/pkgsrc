@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/12/03 22:16:52 rodent Exp $
+# $NetBSD: Makefile,v 1.6 2014/12/31 13:57:26 wiz Exp $
 
 DISTNAME=	SQLAlchemy-Utils-0.27.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -16,8 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.9.3:../../databases/py-sqlalchemy
 USE_LANGUAGES=	# none
 
 .include "options.mk"
-
-EGG_NAME=	${DISTNAME:S/-/_/1}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

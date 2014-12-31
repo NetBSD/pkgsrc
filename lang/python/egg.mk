@@ -1,4 +1,4 @@
-# $NetBSD: egg.mk,v 1.19 2014/12/17 07:23:04 wiz Exp $
+# $NetBSD: egg.mk,v 1.20 2014/12/31 13:57:28 wiz Exp $
 #
 # Common logic to handle Python Eggs
 #
@@ -9,7 +9,7 @@
 # use setuptools to create an egg.  Some distributions use distutils,
 # which creates an egg-info file; those should use distutils.mk
 
-EGG_NAME?=	${DISTNAME}
+EGG_NAME?=	${DISTNAME:C/-([^0-9])/_\1/g}
 EGG_INFODIR?=	${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
 
 PYDISTUTILSPKG=	yes
