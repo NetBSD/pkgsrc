@@ -1,69 +1,69 @@
-$NetBSD: patch-agent_mibgroup_hardware_memory_memory__netbsd.c,v 1.2 2013/04/04 19:59:07 christos Exp $
+$NetBSD: patch-agent_mibgroup_hardware_memory_memory__netbsd.c,v 1.3 2014/12/31 10:06:57 adam Exp $
 
---- agent/mibgroup/hardware/memory/memory_netbsd.c.orig	2012-10-09 18:28:58.000000000 -0400
-+++ agent/mibgroup/hardware/memory/memory_netbsd.c	2013-04-04 15:09:23.000000000 -0400
-@@ -48,8 +48,8 @@
+--- agent/mibgroup/hardware/memory/memory_netbsd.c.orig	2014-12-08 20:23:22.000000000 +0000
++++ agent/mibgroup/hardware/memory/memory_netbsd.c
+@@ -48,8 +48,8 @@ int netsnmp_mem_arch_load( netsnmp_cache
      int             uvmexp_mib[] = { CTL_VM, VM_UVMEXP };
      int             total_mib[] = { CTL_VM, VM_METER };
  #else
--    unsigned int    bufspace;
--    unsigned int    maxbufspace;
+-    unsigned long   bufspace;
+-    unsigned long   maxbufspace;
 +    uint64_t        bufspace;
 +    uint64_t        maxbufspace;
      size_t          buf_size  = sizeof(bufspace);
  #endif
  
-@@ -102,6 +102,7 @@
+@@ -102,6 +102,7 @@ int netsnmp_mem_arch_load( netsnmp_cache
          mem->units = pagesize;
          mem->size  = phys_mem/pagesize;
          mem->free  = total.t_free;
-+	mem->other = -1;
++        mem->other = -1;
      }
  
      mem = netsnmp_memory_get_byIdx( NETSNMP_MEM_TYPE_USERMEM, 1 );
-@@ -113,6 +114,7 @@
+@@ -113,6 +114,7 @@ int netsnmp_mem_arch_load( netsnmp_cache
          mem->units = pagesize;
          mem->size  = user_mem/pagesize;
          mem->free  = uvmexp.free;
-+	mem->other = -1;
++        mem->other = -1;
      }
  
  #if 1
-@@ -125,6 +127,7 @@
+@@ -125,6 +127,7 @@ int netsnmp_mem_arch_load( netsnmp_cache
          mem->units = pagesize;
          mem->size  = total.t_vm;
          mem->free  = total.t_avm;
-+	mem->other = -1;
++        mem->other = -1;
      }
  
      mem = netsnmp_memory_get_byIdx( NETSNMP_MEM_TYPE_SHARED, 1 );
-@@ -136,6 +139,7 @@
+@@ -136,6 +139,7 @@ int netsnmp_mem_arch_load( netsnmp_cache
          mem->units = pagesize;
          mem->size  = total.t_vmshr;
          mem->free  = total.t_avmshr;
-+	mem->other = -1;
++        mem->other = -1;
      }
  
      mem = netsnmp_memory_get_byIdx( NETSNMP_MEM_TYPE_SHARED2, 1 );
-@@ -147,6 +151,7 @@
+@@ -147,6 +151,7 @@ int netsnmp_mem_arch_load( netsnmp_cache
          mem->units = pagesize;
          mem->size  = total.t_rmshr;
          mem->free  = total.t_armshr;
-+	mem->other = -1;
++        mem->other = -1;
      }
  #endif
  
-@@ -174,7 +179,8 @@
+@@ -174,7 +179,8 @@ int netsnmp_mem_arch_load( netsnmp_cache
               mem->descr = strdup("Memory buffers");
          mem->units = 1024;
          mem->size  =  maxbufspace            /1024;
 -        mem->size  = (maxbufspace - bufspace)/1024;
 +        mem->free  = (maxbufspace - bufspace)/1024;
-+	mem->other = -1;
++        mem->other = -1;
      }
  #endif
  
-@@ -199,18 +205,28 @@
+@@ -199,18 +205,28 @@ swapinfo(long pagesize)
           * If there's only one swap device, don't bother
           */
      n = swapctl( SWAP_NSWAP, NULL, 0 );
@@ -98,7 +98,7 @@ $NetBSD: patch-agent_mibgroup_hardware_memory_memory__netbsd.c,v 1.2 2013/04/04 
              sprintf(buf, "swap %s",  s[i].se_path);
              mem->descr = strdup( buf );
          }
-@@ -219,5 +235,6 @@
+@@ -219,5 +235,6 @@ swapinfo(long pagesize)
          mem->free  = s[i].se_nblks - s[i].se_inuse;
          mem->other = -1;
      }
