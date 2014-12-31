@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/05/09 07:37:24 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/12/31 13:57:31 wiz Exp $
 
 DISTNAME=	grappelli-safe-0.2.11
 PKGNAME=	${PYPKGPREFIX}-django-mezzanine-${DISTNAME:S/-safe//}
@@ -16,8 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
-
-EGG_NAME=	${DISTNAME:S/-/_/}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.2.11
 

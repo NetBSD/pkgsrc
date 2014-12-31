@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2014/05/09 07:36:58 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2014/12/31 13:57:26 wiz Exp $
 
 DISTNAME=	bzr-svn-${VER}
 CATEGORIES=	devel scm
@@ -25,7 +25,6 @@ USE_LANGUAGES=	#none
 #TEST_DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
 #TEST_TARGET=	check-verbose
 
-EGG_NAME=	${DISTNAME:S/-/_/}
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-subvertpy, py-paramiko
 
 .include "../../devel/bzr/plugin.mk"

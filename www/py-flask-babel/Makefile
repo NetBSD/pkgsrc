@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/12 10:46:55 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2014/12/31 13:57:32 wiz Exp $
 
 DISTNAME=	Flask-Babel-0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -12,8 +12,6 @@ LICENSE=	modified-bsd
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
-
-EGG_NAME=	${DISTNAME:S/-/_/1}
 
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.5:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-speaklater>=1.2:../../devel/py-speaklater
