@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.4966 2014/12/31 14:38:21 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.4967 2014/12/31 14:39:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -6527,3 +6527,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Compress-Raw-Bzip2 to 2.068 [wiz 2014-12-31]
 	Updated devel/p5-IO-Compress to 2.068 [wiz 2014-12-31]
 	Updated textproc/p5-Filter to 1.53 [wiz 2014-12-31]
+	Updated databases/p5-DB_File to 1.835 [wiz 2014-12-31]
