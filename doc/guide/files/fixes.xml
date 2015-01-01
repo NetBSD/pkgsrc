@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.125 2014/12/25 12:37:05 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.126 2015/01/01 06:07:12 dholland Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -512,9 +512,20 @@ CONFLICTS=      bar-[0-9]*
     <para>There are several reasons why a package might be
     instructed to not build under certain circumstances.  If the
     package builds and runs on most platforms, the exceptions
-    should be noted with <varname>NOT_FOR_PLATFORM</varname>.  If
+    should be noted with <varname>BROKEN_ON_PLATFORM</varname>.  If
     the package builds and runs on a small handful of platforms,
-    set <varname>ONLY_FOR_PLATFORM</varname> instead.
+    set <varname>BROKEN_EXCEPT_ON_PLATFORM</varname> instead.
+    Both <varname>BROKEN_ON_PLATFORM</varname> and
+    <varname>BROKEN_EXCEPT_ON_PLATFORM</varname> are OS triples
+    (OS-version-platform) that can use glob-style
+    wildcards.</para>
+    <para>If a package is not appropriate for some platforms (as
+    oopposed to merely broken), a different set of variables should be
+    used as this affects failure reporting and statistics.
+    If the package is appropriate for most platforms, the exceptions
+    should be noted with <varname>NOT_FOR_PLATFORM</varname>.  If
+    the package is appropriate for only a small handful of platforms
+    (often exactly one), set <varname>ONLY_FOR_PLATFORM</varname> instead.
     Both <varname>ONLY_FOR_PLATFORM</varname> and
     <varname>NOT_FOR_PLATFORM</varname> are OS triples
     (OS-version-platform) that can use glob-style
