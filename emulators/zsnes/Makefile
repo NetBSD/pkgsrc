@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2013/02/16 11:21:09 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2015/01/01 10:18:42 dholland Exp $
 
 DISTNAME=	zsnes151src
 PKGNAME=	zsnes-1.51
@@ -14,7 +14,12 @@ LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=		nasm-[0-9]*:../../devel/nasm
 
+# Makes heavy use of 32-bit x86 assembler.
 ONLY_FOR_PLATFORM=	*-*-i386
+# Theoretically we can build a 32-bit binary on amd64 NetBSD, but we'd
+# need 32-bit SDL and png and pkgsrc doesn't currently have
+# infrastructure for that.
+#ONLY_FOR_PLATFORM+=	NetBSD-*-x86_64
 
 WRKSRC=			${WRKDIR}/zsnes_1_51/src
 USE_LANGUAGES=		c c++
