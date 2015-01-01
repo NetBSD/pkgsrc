@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.23 2015/01/01 13:00:12 bsiegert Exp $
+$NetBSD: CHANGES-2015,v 1.24 2015/01/01 14:33:22 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -23,3 +23,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/mikutter to 3.2.1 [obache 2015-01-01]
 	Updated textproc/py-pygments to 2.0.1nb1 [wiz 2015-01-01]
 	Added security/py-pycrypto version 2.6.1 [bsiegert 2015-01-01]
+	Updated www/p5-CGI-Simple to 1.115 [mef 2015-01-01]
