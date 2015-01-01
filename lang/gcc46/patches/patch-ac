@@ -1,7 +1,9 @@
-$NetBSD: patch-ac,v 1.4 2014/05/15 12:04:41 pho Exp $
+$NetBSD: patch-ac,v 1.5 2015/01/01 01:29:56 ryoon Exp $
 
 Add gcc libdir to a programs rpath so that _this gcc's_ support libraries
 are found.
+
+NOTE: the %M spec string is added by patch-gcc_gcc.c
 
 --- gcc/Makefile.in.orig	2004-06-17 15:56:58.000000000 -0600
 +++ gcc/Makefile.in
@@ -9,7 +11,7 @@ are found.
  # Language-independent files.
  
  DRIVER_DEFINES = \
-+  -DLINK_LIBGCC_SPEC="\"%D $(LINKER_RPATH_FLAG)$(exec_prefix)/lib\"" \
++  -DLINK_LIBGCC_SPEC="\"%D $(LINKER_RPATH_FLAG)$(prefix)/@GCC_TARGET_MACHINE@/lib/%M $(LINKER_RPATH_FLAG)$(libdir)/%M \"" \
    -DSTANDARD_STARTFILE_PREFIX=\"$(unlibsubdir)/\" \
    -DSTANDARD_EXEC_PREFIX=\"$(libdir)/gcc/\" \
    -DSTANDARD_LIBEXEC_PREFIX=\"$(libexecdir)/gcc/\" \
