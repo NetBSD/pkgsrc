@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.17 2015/01/01 04:07:46 mef Exp $
+$NetBSD: CHANGES-2015,v 1.18 2015/01/01 05:54:26 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -17,3 +17,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-Cookie-Baker to 0.05 [mef 2015-01-01]
 	Updated www/p5-FCGI-ProcManager to 0.25 [mef 2015-01-01]
 	Updated www/p5-HTML-FillInForm to 2.21 [mef 2015-01-01]
+	Updated textproc/mdoclint to 1.32 [jnemeth 2015-01-01]
