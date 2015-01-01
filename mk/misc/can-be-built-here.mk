@@ -1,10 +1,11 @@
-# $NetBSD: can-be-built-here.mk,v 1.7 2014/12/30 15:13:19 wiz Exp $
+# $NetBSD: can-be-built-here.mk,v 1.8 2015/01/01 06:06:06 dholland Exp $
 #
 # This file checks whether a package can be built in the current pkgsrc
 # environment. It checks the following variables:
 #
 # * NOT_FOR_COMPILER, ONLY_FOR_COMPILER
 # * NOT_FOR_PLATFORM, ONLY_FOR_PLATFORM
+# * BROKEN_ON_PLATFORM, BROKEN_EXCEPT_ON_PLATFORM
 # * NOT_FOR_BULK_PLATFORM
 # * NOT_FOR_UNPRIVILEGED, ONLY_FOR_UNPRIVILEGED
 # * PKG_FAIL_REASON, PKG_SKIP_REASON
@@ -85,6 +86,31 @@ _CBBH.oplat=		no
 .  for p in ${ONLY_FOR_PLATFORM}
 .    if !empty(MACHINE_PLATFORM:M${p})
 _CBBH.oplat=		yes
+.    endif
+.  endfor
+.endif
+
+# Check BROKEN_ON_PLATFORM
+_CBBH_CHECKS+=		bplat
+_CBBH_MSGS.bplat=	"This package is broken on these platforms: "${BROKEN_ON_PLATFORM:Q}"."
+
+_CBBH.bplat=		yes
+.for p in ${BROKEN_ON_PLATFORM}
+.  if !empty(MACHINE_PLATFORM:M${p})
+_CBBH.bplat=		no
+.  endif
+.endfor
+
+# Check BROKEN_EXCEPT_ON_PLATFORM
+_CBBH_CHECKS+=		beplat
+_CBBH_MSGS.beplat=	"This package is broken except on these platforms: "${BROKEN_EXCEPT_ON_PLATFORM:Q}"."
+
+_CBBH.beplat=		yes
+.if defined(BROKEN_EXCEPT_ON_PLATFORM) && !empty(BROKEN_EXCEPT_ON_PLATFORM)
+_CBBH.beplat=		no
+.  for p in ${BROKEN_EXCEPT_ON_PLATFORM}
+.    if !empty(MACHINE_PLATFORM:M${p})
+_CBBH.beplat=		yes
 .    endif
 .  endfor
 .endif
