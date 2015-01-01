@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2008 2015/01/01 06:06:06 dholland Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2009 2015/01/01 07:51:47 dholland Exp $
 #
 # This file is in the public domain.
 #
@@ -463,20 +463,20 @@ X11BASE:=		/usr
 
 .if !defined(NO_SKIP)
 .  if (defined(NO_BIN_ON_CDROM) && defined(FOR_CDROM))
-PKG_FAIL_REASON+= "${PKGNAME} may not be placed in binary form on a CDROM:" \
+PKG_SKIP_REASON+= "${PKGNAME} may not be placed in binary form on a CDROM:" \
          "    "${NO_BIN_ON_CDROM:Q}
 .  endif
 .  if (defined(NO_SRC_ON_CDROM) && defined(FOR_CDROM))
-PKG_FAIL_REASON+= "${PKGNAME} may not be placed in source form on a CDROM:" \
+PKG_SKIP_REASON+= "${PKGNAME} may not be placed in source form on a CDROM:" \
          "    "${NO_SRC_ON_CDROM:Q}
 .  endif
 .  if (defined(RESTRICTED) && defined(NO_RESTRICTED))
-PKG_FAIL_REASON+= "${PKGNAME} is restricted:" \
+PKG_SKIP_REASON+= "${PKGNAME} is restricted:" \
 	 "    "${RESTRICTED:Q}
 .  endif
 .  if !(${MKCRYPTO} == "YES" || ${MKCRYPTO} == yes)
 .    if defined(CRYPTO)
-PKG_FAIL_REASON+= "${PKGNAME} may not be built, because it utilizes strong cryptography"
+PKG_SKIP_REASON+= "${PKGNAME} may not be built, because it utilizes strong cryptography"
 .    endif
 .  endif
 .  if defined(USE_X11) && (${X11_TYPE} == "native") && !exists(${X11BASE})

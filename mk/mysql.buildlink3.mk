@@ -1,4 +1,4 @@
-# $NetBSD: mysql.buildlink3.mk,v 1.18 2013/09/13 11:53:24 obache Exp $
+# $NetBSD: mysql.buildlink3.mk,v 1.19 2015/01/01 07:51:47 dholland Exp $
 #
 # This file is included by packages that require some version of the
 # MySQL database client.
@@ -123,7 +123,7 @@ PKG_FAIL_REASON+=	"[mysql.buildlink3.mk] ${_MYSQL_VERSION} is not a valid mysql 
 #
 .if defined(_MYSQL_VERSION_INSTALLED)
 .  if ${_MYSQL_VERSION} != ${_MYSQL_VERSION_INSTALLED}
-PKG_SKIP_REASON+=	"${PKGBASE} requires mysql-${_MYSQL_VERSION}, but mysql-${_MYSQL_VERSION_INSTALLED} is already installed."
+PKG_FAIL_REASON+=	"${PKGBASE} requires mysql-${_MYSQL_VERSION}, but mysql-${_MYSQL_VERSION_INSTALLED} is already installed."
 .  endif
 .endif
 
