@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.25 2015/01/01 18:47:34 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.26 2015/01/01 18:53:34 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -25,3 +25,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added security/py-pycrypto version 2.6.1 [bsiegert 2015-01-01]
 	Updated www/p5-CGI-Simple to 1.115 [mef 2015-01-01]
 	Updated www/php-ja-wordpress to 4.1 [ryoon 2015-01-01]
+	Added databases/db6 version 6.1.19 [ryoon 2015-01-01]
