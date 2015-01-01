@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/10/09 14:07:02 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/01/01 11:36:38 dholland Exp $
 #
 
 DISTNAME=	lq-sp-1.3.4.12
@@ -10,9 +10,6 @@ HOMEPAGE=	http://www.htmlhelp.com/tools/validator/offline/
 COMMENT=	Modified SP package
 
 USE_LANGUAGES=	c c++
-
-# doesn't build (LP64 bugs)
-NOT_FOR_PLATFORM=	*-*-alpha
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
