@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2014/11/23 15:08:11 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2015/01/01 11:36:07 wiz Exp $
 
 DISTNAME=	Pygments-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	http://pypi.python.org/packages/source/P/Pygments/
 
@@ -11,6 +12,7 @@ COMMENT=	Python syntax highlighter
 LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=		#none
+PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -18,6 +20,9 @@ USE_LANGUAGES=		#none
 BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 TEST_TARGET=	test
 .endif
+
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/bin/pygmentize ${DESTDIR}${PREFIX}/bin/pygmentize${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
