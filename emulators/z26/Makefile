@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/05/29 23:36:33 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2015/01/01 10:46:32 dholland Exp $
 #
 
 DISTNAME=		z26v213
@@ -13,6 +13,7 @@ COMMENT=		Atari 2600 Emulator
 
 BUILD_DEPENDS+=		nasm-[0-9]*:../../devel/nasm
 
+# Uses i386 assembler.
 ONLY_FOR_PLATFORM+=	*-*-i386
 
 WRKSRC=			${WRKDIR}/z26_snapshot-20040523
