@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/12/25 11:41:25 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/01 09:35:17 dholland Exp $
 #
 
 DISTNAME=	lirc-0.9.0
@@ -38,7 +38,7 @@ post-install:
 
 .include "available.mk"
 .if ${LIRC_AVAILABLE} == no
-PKG_FAIL_REASON=	"lirc is not available for this platform"
+PKG_SKIP_REASON=	"lirc is not available for this platform"
 .endif
 
 .include "options.mk"
