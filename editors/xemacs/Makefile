@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2014/02/12 23:17:52 tron Exp $
+# $NetBSD: Makefile,v 1.111 2015/01/01 09:53:50 dholland Exp $
 
 PKGNAME?=	${DISTNAME}
 COMMENT?=	XEmacs text editor version 21
@@ -15,7 +15,7 @@ CONFLICTS+=	gnuserv-[0-9]*
 CONFLICTS+=	xemacs-[0-9]*
 CONFLICTS+=	xemacs-nox11-[0-9]*
 
-NOT_FOR_PLATFORM=	*-*-mips*	# fails purespace dumping
+BROKEN_ON_PLATFORM=	*-*-mips*	# fails purespace dumping
 
 USE_TOOLS+=	makeinfo
 
