@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2014/10/09 14:05:55 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2015/01/01 08:05:21 dholland Exp $
 #
 
 DISTNAME=	cdparanoia-III-10.2
@@ -13,7 +13,9 @@ HOMEPAGE=	http://www.xiph.org/paranoia/
 COMMENT=	CDDA reading utility with extra data verification features
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
-ONLY_FOR_PLATFORM=	FreeBSD-*-* NetBSD-*-* Linux-*-* DragonFly-*-* Darwin-*-* SunOS-*-*
+# If this is not *supportable* on other platforms, please document why here.
+BROKEN_EXCEPT_ON_PLATFORM=	NetBSD-*-* FreeBSD-*-* DragonFly-*-*
+BROKEN_EXCEPT_ON_PLATFORM+=	Linux-*-* Darwin-*-* SunOS-*-*
 
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	YES
