@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/06/12 11:00:57 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/01/01 19:00:15 wiz Exp $
 bin/acr
 bin/acr-cat
 bin/acr-install
@@ -9,29 +9,9 @@ man/man1/acr.1
 man/man1/amr.1
 man/man5/configure.acr.5
 man/man5/configure.amr.5
-share/acr/examples/and.acr
-share/acr/examples/chaos.acr
-share/acr/examples/check.acr
-share/acr/examples/chklibdl.acr
-share/acr/examples/contexts.acr
-share/acr/examples/cpu.acr
-share/acr/examples/endian.acr
-share/acr/examples/if.acr
-share/acr/examples/ifeqval.acr
-share/acr/examples/perl.acr
-share/acr/examples/pkgcfg.acr
-share/acr/examples/python.acr
-share/acr/examples/ruby.acr
-share/acr/examples/sdl.acr
-share/acr/examples/sizeof.acr
-share/acr/examples/x11.acr
 share/acr/modules/csharp.acr
 share/acr/modules/java-gtk.acr
 share/acr/modules/sizes.acr
-share/acr/vim/ftplugin/acr.vim
-share/acr/vim/install.sh
-share/acr/vim/syntax/acr.vim
-share/acr/vim/vimrc
 share/doc/acr/amr-tutorial
 share/doc/acr/backup
 share/doc/acr/check-user
@@ -44,6 +24,23 @@ share/doc/acr/developers/string-mode
 share/doc/acr/developers/unit-tests
 share/doc/acr/developers/using_cvs
 share/doc/acr/endian
+share/doc/acr/examples/and.acr
+share/doc/acr/examples/chaos.acr
+share/doc/acr/examples/check.acr
+share/doc/acr/examples/chklibdl.acr
+share/doc/acr/examples/contexts.acr
+share/doc/acr/examples/cpu.acr
+share/doc/acr/examples/endian.acr
+share/doc/acr/examples/if.acr
+share/doc/acr/examples/ifeqval.acr
+share/doc/acr/examples/perl.acr
+share/doc/acr/examples/pkgcfg.acr
+share/doc/acr/examples/python.acr
+share/doc/acr/examples/ruby.acr
+share/doc/acr/examples/sdl.acr
+share/doc/acr/examples/sizeof.acr
+share/doc/acr/examples/vala.acr
+share/doc/acr/examples/x11.acr
 share/doc/acr/flag-arguments
 share/doc/acr/gnumake
 share/doc/acr/hello_world
@@ -53,3 +50,7 @@ share/doc/acr/make-tips
 share/doc/acr/pkg-config
 share/doc/acr/sandbox
 share/doc/acr/syntax
+share/doc/acr/vim/ftplugin/acr.vim
+share/doc/acr/vim/install.sh
+share/doc/acr/vim/syntax/acr.vim
+share/doc/acr/vim/vimrc
