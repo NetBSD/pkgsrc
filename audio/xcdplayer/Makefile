@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/10/02 23:48:13 asau Exp $
+# $NetBSD: Makefile,v 1.28 2015/01/01 09:09:15 dholland Exp $
 
 DISTNAME=	xcdplayer-2.2
 PKGREVISION=	6
@@ -9,7 +9,11 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	CD player for X
 
-ONLY_FOR_PLATFORM=	SunOS-*-* IRIX-*-* DragonFly-*-* FreeBSD-*-* NetBSD-*-* OpenBSD-*-*
+# cdrom interface code only exists for Solaris, SGI, and BSD.
+# (and note that the BSD code doesn't come with but is in files/)
+BROKEN_EXCEPT_ON_PLATFORM=	SunOS-*-* IRIX-*-* \
+				DragonFly-*-* FreeBSD-*-* \
+				NetBSD-*-* OpenBSD-*-*
 
 USE_IMAKE=	yes
 
