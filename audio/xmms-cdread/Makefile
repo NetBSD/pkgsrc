@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/02 23:48:14 asau Exp $
+# $NetBSD: Makefile,v 1.8 2015/01/01 07:58:11 dholland Exp $
 #
 
 DISTNAME=		xmms-cdread-0.14a
@@ -16,7 +16,7 @@ NOT_FOR_PLATFORM=	Interix-*-*
 # The BSD cdrom access code ostensibly for FreeBSD requires:
 #   - CDIOREADTOCENTRY ioctl, which NetBSD and OpenBSD don't have
 #   - CDIOCREADAUDIO ioctl, which only Dragonfly has
-NOT_FOR_PLATFORM+=	NetBSD-*-* FreeBSD-*-* OpenBSD-*-*
+BROKEN_ON_PLATFORM+=	NetBSD-*-* FreeBSD-*-* OpenBSD-*-*
 ONLY_FOR_COMPILER=	gcc clang
 
 GNU_CONFIGURE=		yes
