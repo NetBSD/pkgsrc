@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2015/01/01 07:00:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/01 07:02:58 ryoon Exp $
 
-DISTNAME=	zanata-python-client-1.3.18
+ZANATACVER=	1.3.18
+DISTNAME=	zanata-python-client-${ZANATACVER}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://github.com/zanata/zanata-python-client
+MASTER_SITES=	-https://github.com/zanata/zanata-python-client/archive/v${ZANATACVER}.tar.gz
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://zanata.org/
