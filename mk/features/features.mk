@@ -1,4 +1,4 @@
-# $NetBSD: features.mk,v 1.7 2012/03/02 16:19:17 hans Exp $
+# $NetBSD: features.mk,v 1.8 2015/01/01 07:51:47 dholland Exp $
 #
 # This file is included by bsd.pkg.mk.
 #
@@ -21,7 +21,7 @@
 #
 .  if !empty(USE_FEATURES:Minet6)
 .    if !empty(MISSING_FEATURES:Minet6)
-PKG_FAIL_REASON+=	"${PKGNAME} requires IPv6 support"
+PKG_SKIP_REASON+=	"${PKGNAME} requires IPv6 support"
 .    endif
 .  endif
 

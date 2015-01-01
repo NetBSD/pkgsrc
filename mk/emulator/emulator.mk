@@ -1,4 +1,4 @@
-# $NetBSD: emulator.mk,v 1.11 2009/04/04 12:16:45 rillig Exp $
+# $NetBSD: emulator.mk,v 1.12 2015/01/01 07:51:47 dholland Exp $
 #
 # This file is included by bsd.pkg.mk.
 #
@@ -59,7 +59,7 @@
 #
 
 .if empty(EMUL_PLATFORMS:M${EMUL_PLATFORM})
-PKG_FAIL_REASON+=	"${PKGNAME} is not available for ${MACHINE_PLATFORM}"
+PKG_SKIP_REASON+=	"${PKGNAME} requires emulation that is not available for ${MACHINE_PLATFORM}"
 .endif
 
 .if ${EMUL_PLATFORM} == "none"
