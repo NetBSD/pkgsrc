@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.126 2015/01/01 06:07:12 dholland Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.127 2015/01/01 06:08:00 dholland Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1204,6 +1204,7 @@ Haiku       __HAIKU__
 Interix     __INTERIX
 IRIX        __sgi (TODO: get a definite source for this)
 Linux       linux, __linux, __linux__
+Mac OS X    __APPLE__
 MirBSD      __MirBSD__ (__OpenBSD__ is also defined)
 Minix3      __minix
 NetBSD      __NetBSD__
