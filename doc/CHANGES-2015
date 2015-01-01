@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.26 2015/01/01 18:53:34 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.27 2015/01/01 19:00:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -26,3 +26,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-CGI-Simple to 1.115 [mef 2015-01-01]
 	Updated www/php-ja-wordpress to 4.1 [ryoon 2015-01-01]
 	Added databases/db6 version 6.1.19 [ryoon 2015-01-01]
+	Updated devel/acr to 0.9.9 [wiz 2015-01-01]
