@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2007 2014/12/30 15:13:19 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2008 2015/01/01 06:06:06 dholland Exp $
 #
 # This file is in the public domain.
 #
@@ -488,7 +488,24 @@ PKG_FAIL_REASON+= "${PKGNAME} is marked as broken:" ${BROKEN:Q}
 
 .include "license.mk"
 
-# Define __PLATFORM_OK only if the OS matches the pkg's allowed list.
+#
+# Check for packages broken or inappropriate on this platform.
+# Set __PLATFORM_OK and __PLATFORM_WORKS only if the platform passes
+# both the NOT_FOR/ONLY_FOR and BROKEN_ON lists (respectively).
+#
+
+# 1. BROKEN_EXCEPT_ON_PLATFORM
+.  if defined(BROKEN_EXCEPT_ON_PLATFORM) && !empty(BROKEN_EXCEPT_ON_PLATFORM)
+.    for __tmp__ in ${BROKEN_EXCEPT_ON_PLATFORM}
+.      if ${MACHINE_PLATFORM:M${__tmp__}} != ""
+__PLATFORM_WORKS?=	yes
+.      endif	# MACHINE_PLATFORM
+.    endfor	# __tmp__
+.  else	# !BROKEN_EXCEPT_ON_PLATFORM
+__PLATFORM_WORKS?=	yes
+.  endif	# BROKEN_EXCEPT_ON_PLATFORM
+
+# 2. ONLY_FOR_PLATFORM
 .  if defined(ONLY_FOR_PLATFORM) && !empty(ONLY_FOR_PLATFORM)
 .    for __tmp__ in ${ONLY_FOR_PLATFORM}
 .      if ${MACHINE_PLATFORM:M${__tmp__}} != ""
@@ -498,15 +515,30 @@ __PLATFORM_OK?=	yes
 .  else	# !ONLY_FOR_PLATFORM
 __PLATFORM_OK?=	yes
 .  endif	# ONLY_FOR_PLATFORM
+
+# 3. BROKEN_ON_PLATFORM
+.  for __tmp__ in ${BROKEN_ON_PLATFORM}
+.    if ${MACHINE_PLATFORM:M${__tmp__}} != ""
+.      undef __PLATFORM_WORKS
+.    endif	# MACHINE_PLATFORM
+.  endfor	# __tmp__
+
+# 4. NOT_FOR_PLATFORM
 .  for __tmp__ in ${NOT_FOR_PLATFORM}
 .    if ${MACHINE_PLATFORM:M${__tmp__}} != ""
 .      undef __PLATFORM_OK
 .    endif	# MACHINE_PLATFORM
 .  endfor	# __tmp__
+
+# Check OK (NOT_FOR/ONLY_FOR) before WORKS (BROKEN_ON)
 .  if !defined(__PLATFORM_OK)
-PKG_FAIL_REASON+= "${PKGNAME} is not available for ${MACHINE_PLATFORM}"
+PKG_SKIP_REASON+= "${PKGNAME} is not available for ${MACHINE_PLATFORM}"
 .  endif	# !__PLATFORM_OK
-.endif
+.  if !defined(__PLATFORM_WORKS)
+PKG_FAIL_REASON+= "${PKGNAME} is marked broken on ${MACHINE_PLATFORM}"
+.  endif	# !__PLATFORM_WORKS
+
+.endif # NO_SKIP
 
 # Add these defs to the ones dumped into +BUILD_DEFS
 _BUILD_DEFS+=	PKGPATH
