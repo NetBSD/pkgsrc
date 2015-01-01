@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2013/10/27 20:47:53 joerg Exp $
+# $NetBSD: Makefile,v 1.51 2015/01/01 09:54:25 dholland Exp $
 
 DISTNAME=	emacs-20.7
 PKGNAME=	${DISTNAME:S/emacs/emacs20/}
@@ -30,7 +30,7 @@ MAINTAINER=	dholland@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
 COMMENT=	GNU editing macros (editor)
 
-NOT_FOR_PLATFORM=	Darwin-*-* DragonFly-*-*
+BROKEN_ON_PLATFORM=	Darwin-*-* DragonFly-*-*
 
 CONFLICTS=	mule-[0-9]*
 
