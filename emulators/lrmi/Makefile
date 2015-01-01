@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/03 12:55:15 asau Exp $
+# $NetBSD: Makefile,v 1.14 2015/01/01 10:31:01 dholland Exp $
 #
 
 DISTNAME=		lrmi-0.8
@@ -10,6 +10,9 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sourceforge.net/projects/lrmi/
 COMMENT=		Wrapper to the i386 vm86 mode
 
+# Inherently x86-specific.
+# (XXX: should this be enabled on amd64 and ia64? it won't currently
+# work, but it probably ought to.)
 ONLY_FOR_PLATFORM=	*-*-i386
 NOT_FOR_PLATFORM+=	Interix-*-* # cannot call real mode from Windows
 
