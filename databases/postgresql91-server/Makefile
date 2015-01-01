@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2014/03/12 17:01:57 gdt Exp $
+# $NetBSD: Makefile,v 1.14 2015/01/01 09:48:58 dholland Exp $
 
 PKGNAME=	${DISTNAME:C/-/91-server-/}
 COMMENT=	PostgreSQL database server programs
 
 # mips has no TAS implementation
-NOT_FOR_PLATFORM=	*-*-mips
+BROKEN_ON_PLATFORM=	*-*-mips
 
 .include "../../databases/postgresql91/Makefile.common"
 
