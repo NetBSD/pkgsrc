@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/12/12 11:35:05 fhajny Exp $
+# $NetBSD: Makefile,v 1.6 2015/01/01 09:50:31 dholland Exp $
 
 DISTNAME=	mongo-c-driver-1.0.2
 CATEGORIES=	databases
@@ -13,7 +13,7 @@ BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
 # Requires shm_open()
-NOT_FOR_PLATFORM+=	NetBSD-*-* OpenBSD-*-*
+NOT_FOR_PLATFORM+=	OpenBSD-*-*
 
 .include "options.mk"
 
