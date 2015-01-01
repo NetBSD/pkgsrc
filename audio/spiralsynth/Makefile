@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2013/02/16 11:20:22 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2015/01/01 09:01:37 dholland Exp $
 #
 
 DISTNAME=		SpiralSynth-2.0.0
@@ -12,9 +12,7 @@ HOMEPAGE=		http://www.pawfal.org/Software/SpiralSynth/
 COMMENT=		Polyphonic analogue softsynth
 
 # only runs correctly on little-endian machines
-ONLY_FOR_PLATFORM=	*-*-alpha *-*-arc *-*-cobalt *-*-dreamcast \
-			*-*-hpcmips *-*-hpcsh *-*-i386 *-*-pc532 *-*-pmax \
-			*-*-vax *-*-x86_64
+BROKEN_EXCEPT_ON_PLATFORM=	${LITTLEENDIANPLATFORMS}
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
