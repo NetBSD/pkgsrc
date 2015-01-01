@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.14 2015/01/01 03:55:41 mef Exp $
+$NetBSD: CHANGES-2015,v 1.15 2015/01/01 03:58:01 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -14,3 +14,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-CatalystX-CRUD-Controller-REST to 0.004 [mef 2015-01-01]
 	Updated www/p5-CatalystX-CRUD-YUI to 0.031 [mef 2015-01-01]
 	Updated www/p5-Continuity to 1.6 [mef 2015-01-01]
+	Updated www/p5-Cookie-Baker to 0.05 [mef 2015-01-01]
