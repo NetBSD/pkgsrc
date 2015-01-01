@@ -1,0 +1,103 @@
+$NetBSD: patch-dist_configure,v 1.1 2015/01/01 18:52:52 ryoon Exp $
+
+--- dist/configure.orig	2014-06-10 15:32:54.000000000 +0000
++++ dist/configure
+@@ -5235,7 +5235,7 @@ bsdi3*)	CC=${CC-"shlicc2"}
+ 	LIBSO_LIBS="$LIBSO_LIBS -lipc";;
+ cygwin*)
+ 	CPPFLAGS="$CPPFLAGS -D_GNU_SOURCE -D_REENTRANT";;
+-freebsd*)
++freebsd*|dragonfly*)
+ 	CPPFLAGS="$CPPFLAGS -D_THREAD_SAFE"
+ 	LDFLAGS="$LDFLAGS -pthread";;
+ gnu*|k*bsd*-gnu|linux*)
+@@ -7031,7 +7031,7 @@ fi
+ # we're using.
+ case "$host_os" in
+ sysv5UnixWare*|sysv5OpenUNIX8*)
+-	if test "$GCC" == "yes"; then
++	if test "$GCC" = "yes"; then
+ 		CPPFLAGS="$CPPFLAGS -pthread"
+ 		LDFLAGS="$LDFLAGS -pthread"
+ 	else
+@@ -12353,7 +12353,7 @@ fi
+       hardcode_shlibpath_var=no
+       ;;
+ 
+-    freebsd1*)
++    freebsd1*|freebsd1.*)
+       ld_shlibs=no
+       ;;
+ 
+@@ -13347,7 +13347,7 @@ dgux*)
+   shlibpath_var=LD_LIBRARY_PATH
+   ;;
+ 
+-freebsd1*)
++freebsd1*|freebsd1.*)
+   dynamic_linker=no
+   ;;
+ 
+@@ -13358,7 +13358,7 @@ freebsd* | dragonfly*)
+     objformat=`/usr/bin/objformat`
+   else
+     case $host_os in
+-    freebsd[123]*) objformat=aout ;;
++    freebsd[123]*|freebsd[123].*) objformat=aout ;;
+     *) objformat=elf ;;
+     esac
+   fi
+@@ -15316,7 +15316,7 @@ fi
+         esac
+         ;;
+ 
+-      freebsd[12]*)
++      freebsd[12]*|freebsd[12].*)
+         # C++ shared libraries reported to be fairly broken before
+ 	# switch to ELF
+         ld_shlibs_CXX=no
+@@ -17180,7 +17180,7 @@ dgux*)
+   shlibpath_var=LD_LIBRARY_PATH
+   ;;
+ 
+-freebsd1*)
++freebsd1*|freebsd1.*)
+   dynamic_linker=no
+   ;;
+ 
+@@ -17191,7 +17191,7 @@ freebsd* | dragonfly*)
+     objformat=`/usr/bin/objformat`
+   else
+     case $host_os in
+-    freebsd[123]*) objformat=aout ;;
++    freebsd[123]*|freebsd[123].*) objformat=aout ;;
+     *) objformat=elf ;;
+     esac
+   fi
+@@ -17838,7 +17838,7 @@ LIBTOOL="./libtool"
+ INSTALLER="\$(LIBTOOL) --mode=install cp -p"
+ 
+ MAKEFILE_CC="\$(LIBTOOL) --mode=compile ${MAKEFILE_CC}"
+-MAKEFILE_SOLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CCLINK} -avoid-version"
++MAKEFILE_SOLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CCLINK}"
+ MAKEFILE_CCLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CCLINK}"
+ MAKEFILE_CXX="\$(LIBTOOL) --mode=compile ${MAKEFILE_CXX}"
+ MAKEFILE_XSOLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CXXLINK} -avoid-version"
+@@ -18571,7 +18571,7 @@ if test "$_JTOPDIR" != "/usr"; then
+ 	aix*)		_JNI_INC_SUBDIRS="aix";;
+ 	bsdi*)		_JNI_INC_SUBDIRS="bsdos";;
+ 	cygwin*)	_JNI_INC_SUBDIRS="win32";;
+-	freebsd*)	_JNI_INC_SUBDIRS="freebsd";;
++	freebsd*|dragonfly*)	_JNI_INC_SUBDIRS="freebsd";;
+ 	hp*)		_JNI_INC_SUBDIRS="hp-ux";;
+ 	linux*)		_JNI_INC_SUBDIRS="linux genunix";;
+ 	osf*)		_JNI_INC_SUBDIRS="alpha";;
+@@ -20755,7 +20755,7 @@ if test "$db_cv_mutex" = no; then
+ 		# avoid these probes for multiprocess pthreads.
+ 		;;
+ 	    *)
+-		if test "$db_cv_mutex" = no -o "$db_cv_mutex" = posix_only; then
++		if test "$ac_cv_lib_pthread_main" = yes -a "$db_cv_mutex" = no -o "$db_cv_mutex" = posix_only; then
+ 			LIBS="$LIBS -lpthread"
+ 
+ if test "$cross_compiling" = yes; then :
