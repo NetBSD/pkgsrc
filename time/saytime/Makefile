@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/08 13:04:29 asau Exp $
+# $NetBSD: Makefile,v 1.6 2015/01/01 11:27:37 dholland Exp $
 #
 
 DISTNAME=		saytime_11nov1995
@@ -12,7 +12,8 @@ COMMENT=		Talking clock
 
 USE_TOOLS+=	pax
 
-ONLY_FOR_PLATFORM=	NetBSD-*-* OpenBSD-*-* SunOS-*-*
+# Needs /dev/audio.
+NOT_FOR_PLATFORM=	Interix-*-*
 
 WRKSRC=			${WRKDIR}/saytime
 
