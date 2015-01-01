@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2014/10/09 19:14:04 jaapb Exp $
+# $NetBSD: Makefile,v 1.94 2015/01/01 11:08:46 dholland Exp $
 #
 
 DISTNAME=	${SCIBASE}-src
@@ -18,7 +18,7 @@ SCIBASE=	scilab-4.1
 # SCIBASE is updated.
 WRKSRC=		${WRKDIR}/${SCIBASE}
 
-NOT_FOR_PLATFORM+=	${LP64PLATFORMS}
+BROKEN_ON_PLATFORM+=	${LP64PLATFORMS}
 
 USE_LANGUAGES=		c fortran77
 USE_X11BASE=		yes
