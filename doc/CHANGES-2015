@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.11 2015/01/01 02:49:36 mef Exp $
+$NetBSD: CHANGES-2015,v 1.12 2015/01/01 02:56:41 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -11,3 +11,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-Catalyst-Plugin-StatusMessage to 1.002000 [mef 2015-01-01]
 	Updated www/p5-Catalyst-View-Mason to 0.19 [mef 2015-01-01]
 	Updated www/p5-Catalyst-View-TT to 0.42 [mef 2015-01-01]
+	Updated www/p5-CatalystX-CRUD-Controller-REST to 0.004 [mef 2015-01-01]
