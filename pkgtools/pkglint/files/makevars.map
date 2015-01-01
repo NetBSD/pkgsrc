@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.258 2014/11/23 15:30:08 mef Exp $
+# $NetBSD: makevars.map,v 1.259 2015/01/01 06:10:10 dholland Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -153,6 +153,8 @@ BINOWN			UserGroupName [$system]
 BOOTSTRAP_DEPENDS	InternalList of DependencyWithPath [c:a,m:a,o:a,*.mk:a]
 BROKEN			Message []
 BROKEN_GETTEXT_DETECTION	YesNo [$package]
+BROKEN_EXCEPT_ON_PLATFORM	List of PlatformTriple [$package_list]
+BROKEN_ON_PLATFORM	InternalList of PlatformTriple [$package_list]
 BSD_MAKE_ENV		List of ShellWord [$system]
 BUILDLINK_ABI_DEPENDS.*	InternalList of Dependency [*:a]
 BUILDLINK_API_DEPENDS.*	InternalList of Dependency [*:a]
