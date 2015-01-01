@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.354 2015/01/01 06:06:06 dholland Exp $
+# $NetBSD: bsd.prefs.mk,v 1.355 2015/01/01 08:57:23 dholland Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -802,5 +802,25 @@ _SYS_VARS.dirs=		WRKDIR DESTDIR PKG_SYSCONFBASEDIR
 # Keywords: BROKEN_ON_PLATFORM 64bit
 #
 LP64PLATFORMS=		*-*-alpha *-*-sparc64 *-*-x86_64 *-*-amd64
+
+# Lists of big-endian and little-endian platforms, to be used with
+# BROKEN_ON_PLATFORM.
+#
+# Keywords: BROKEN_ON_PLATFORM little-endian big-endian endian
+#
+_BIGENDIANCPUS=		coldfire hppa m68000 m68k mips64eb mipseb or1k \
+			powerpc powerpc64 sh3eb sparc sparc64
+_LITTLEENDIANCPUS=	alpha i386 ia64 mips64el mipsel riscv32 riscv64 \
+			sh3el vax x86_64 amd64
+
+# piles of ARM variants
+_ARMCPUS+=		arm earm earmhf earmv4 earmv5 earmv6 earmv6hf
+_ARMCPUS+=		earmv7 earmv7hf aarch64
+_BIGENDIANCPUS+=	${_ARMCPUS:S/$/eb/}
+_LITTLEENDIANCPUS+=	${_ARMCPUS}
+
+BIGENDIANPLATFORMS=	${_BIGENDIANCPUS:S/^/*-*-/}
+LITTLEENDIANPLATFORMS=	${_LITTLEENDIANCPUS:S/^/*-*-/}
+
 
 .endif	# BSD_PKG_MK
