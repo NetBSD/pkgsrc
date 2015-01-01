@@ -1,0 +1,29 @@
+# $NetBSD: Makefile,v 1.1 2015/01/01 07:00:00 ryoon Exp $
+
+DISTNAME=	zanata-python-client-1.3.18
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	devel
+MASTER_SITES=	https://github.com/zanata/zanata-python-client
+
+MAINTAINER=	ryoon@NetBSD.org
+HOMEPAGE=	http://zanata.org/
+COMMENT=	Zanata translation service client written in Python
+LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2.1
+
+DEPENDS+=	${PYPKGPREFIX}-httplib2:../../www/py-httplib2
+DEPENDS+=	${PYPKGPREFIX}-polib:../../devel/py-polib
+
+USE_LANGUAGES=	# none
+
+SUBST_CLASSES+=			version
+SUBST_STAGE.version=		pre-configure
+SUBST_MESSAGE.version=		Setting version
+SUBST_FILES.version+=		VERSION-GEN
+SUBST_VARS.version+=		PKGVERSION_NOREV
+
+# Generate version file to avoid runtime error.
+pre-configure:
+	cd ${WRKSRC}/zanataclient && ${SH} ../VERSION-GEN > VERSION-FILE
+
+.include "../../lang/python/egg.mk"
+.include "../../mk/bsd.pkg.mk"
