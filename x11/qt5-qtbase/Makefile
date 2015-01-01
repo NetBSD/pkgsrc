@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/12/30 17:23:45 adam Exp $
+# $NetBSD: Makefile,v 1.16 2015/01/01 21:05:13 wiz Exp $
 
 DISTNAME=	qtbase-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
@@ -153,10 +153,6 @@ post-configure:
 	cd ${WRKSRC} && ./bin/qmake -o Makefile
 
 post-install:
-.for prog in moc qdoc rcc uic
-	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \
-		${WRKSRC}/bin/${prog} ${DESTDIR}${QTPREFIX}/bin/
-.endfor
 .for i in ${PC_FILES}
 	cd ${DESTDIR}${PREFIX}/lib/pkgconfig && \
 	ln -f -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
