@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/09/11 23:59:22 asau Exp $
+# $NetBSD: Makefile,v 1.8 2015/01/01 08:15:51 dholland Exp $
 #
 
 PKGNAME=		akode-plugins-sun-${AKODE_VERSION}
@@ -8,7 +8,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Sun audio output plugin for akode framework
 LICENSE=		gnu-lgpl-v2
 
-ONLY_FOR_PLATFORM+=	NetBSD-*-* OpenBSD-*-* SunOS-*-*
+# no support for the sun audio interface
+NOT_FOR_PLATFORM+=	DragonFly-*-* FreeBSD-*-* Linux-*-*
 
 .include "../../audio/akode/Makefile.common"
 
