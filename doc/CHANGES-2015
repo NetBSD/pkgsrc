@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.8 2015/01/01 02:34:49 mef Exp $
+$NetBSD: CHANGES-2015,v 1.9 2015/01/01 02:37:48 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8,3 +8,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-Catalyst-Plugin-Authorization-ACL to 0.16 [mef 2015-01-01]
 	Updated www/p5-Catalyst-Plugin-ConfigLoader to 0.34 [mef 2015-01-01]
 	Updated www/p5-Catalyst-Plugin-Static-Simple to 0.33 [mef 2015-01-01]
+	Updated www/p5-Catalyst-Plugin-StatusMessage to 1.002000 [mef 2015-01-01]
