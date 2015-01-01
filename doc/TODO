@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13970 2015/01/01 22:29:40 wiz Exp $
+$NetBSD: TODO,v 1.13971 2015/01/01 22:36:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -792,7 +792,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mcabber-0.10.3
 	o mcsim-5.5.0
 	o mednafen-0.9.36.5
-	o meld-3.12.3
 	o mergeant-0.67
 	o mesure-0.7.2
 	o metacity-3.14.2
@@ -962,7 +961,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o radiance-3.7.2
 	o rails-4.1.5
 	o rainbowcrack-1.5
-	o raine-0.63.11
+	o raine-0.64
 	o rat-4.2.25
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rdesktop-1.8.2
