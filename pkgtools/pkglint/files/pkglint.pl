@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.874 2014/12/06 22:21:30 schmonz Exp $
+# $NetBSD: pkglint.pl,v 1.875 2015/01/01 06:10:10 dholland Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -545,6 +545,8 @@ sub get_regex_plurals() {
 		.*_SUBST
 		.*_TARGET
 		.*_TMPL
+		BROKEN_EXCEPT_ON_PLATFORM
+		BROKEN_ON_PLATFORM
 		BUILDLINK_DEPMETHOD
 		BUILDLINK_TRANSFORM
 		EVAL_PREFIX
@@ -4985,6 +4987,8 @@ sub checklines_package_Makefile_varorder($) {
 		],
 		[ "Technical restrictions", optional,
 			[
+				[ "BROKEN_EXCEPT_ON_PLATFORM", many ],
+				[ "BROKEN_ON_PLATFORM", many ],
 				[ "NOT_FOR_PLATFORM", many ],
 				[ "ONLY_FOR_PLATFORM", many ],
 				[ "NOT_FOR_COMPILER", many ],
