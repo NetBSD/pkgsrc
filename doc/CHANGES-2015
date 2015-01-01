@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.28 2015/01/01 20:13:04 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.29 2015/01/01 21:40:41 he Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -28,3 +28,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added databases/db6 version 6.1.19 [ryoon 2015-01-01]
 	Updated devel/acr to 0.9.9 [wiz 2015-01-01]
 	Updated fonts/umefont-ttf to 0.468 [ryoon 2015-01-01]
+	Updated lang/python33 to 3.3.6 [he 2015-01-01]
