@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.153 2014/11/03 13:06:39 ryoon Exp $
+# $NetBSD: gcc.mk,v 1.154 2015/01/01 01:33:05 ryoon Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -825,7 +825,9 @@ PREPEND_PATH+=	${_GCC_DIR}/bin
 .if (defined(_USE_GCC_SHLIB) && !empty(_USE_GCC_SHLIB:M[Yy][Ee][Ss])) && !empty(USE_PKGSRC_GCC_RUNTIME:M[Yy][Ee][Ss])
 #  Special case packages which are themselves a dependency of gcc runtime.
 .  if empty(PKGPATH:Mdevel/libtool-base) && empty(PKGPATH:Mdevel/binutils) && empty(PKGPATH:Mlang/gcc??)
-.    if !empty(CC_VERSION:Mgcc-4.7*)
+.    if !empty(CC_VERSION:Mgcc-4.6*)
+.      include "../../lang/gcc46-libs/buildlink3.mk"
+.    elif !empty(CC_VERSION:Mgcc-4.7*)
 .      include "../../lang/gcc47-libs/buildlink3.mk"
 .    elif !empty(CC_VERSION:Mgcc-4.8*)
 .      include "../../lang/gcc48-libs/buildlink3.mk"
