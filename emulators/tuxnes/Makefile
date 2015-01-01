@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 12:55:19 asau Exp $
+# $NetBSD: Makefile,v 1.13 2015/01/01 10:56:23 dholland Exp $
 #
 
 DISTNAME=		tuxnes-0.75
@@ -11,6 +11,7 @@ HOMEPAGE=		http://tuxnes.sourceforge.net/
 COMMENT=		NES emulator
 LICENSE=		gnu-gpl-v2 # or later
 
+# Uses i386 assembler, and has an i386-targeted dynamic recompiler.
 ONLY_FOR_PLATFORM=	*-*-i386
 
 USE_TOOLS+=		gmake
