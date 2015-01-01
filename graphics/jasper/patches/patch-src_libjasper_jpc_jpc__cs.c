@@ -1,4 +1,6 @@
-$NetBSD: patch-ai,v 1.2 2011/12/22 16:17:57 drochner Exp $
+$NetBSD: patch-src_libjasper_jpc_jpc__cs.c,v 1.1 2015/01/01 14:15:27 he Exp $
+
+Add fixes for CVE-2011-4516 and CVE-2011-4517.
 
 --- src/libjasper/jpc/jpc_cs.c.orig	2007-01-19 21:43:07.000000000 +0000
 +++ src/libjasper/jpc/jpc_cs.c
