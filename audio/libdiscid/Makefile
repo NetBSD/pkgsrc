@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/11/21 22:59:47 mef Exp $
+# $NetBSD: Makefile,v 1.11 2015/01/01 08:23:53 dholland Exp $
 
 DISTNAME=	libdiscid-0.6.1
 CATEGORIES=	audio
@@ -8,9 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://musicbrainz.org/doc/libdiscid
 COMMENT=	Library for creating MusicBrainz DiscIDs
 LICENSE=	gnu-lgpl-v2.1
-
-ONLY_FOR_PLATFORM=	Darwin-*-* DragonFly-*-* FreeBSD-*-* Linux-*-*
-ONLY_FOR_PLATFORM+=	NetBSD-*-* OpenBSD-*-* SunOS-*-*
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
