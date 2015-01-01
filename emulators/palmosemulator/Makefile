@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2014/05/29 23:36:33 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2015/01/01 09:57:54 dholland Exp $
 #
 
 DISTNAME=	emulator_src_${POSE_VERSION}
@@ -14,6 +14,9 @@ MAINTAINER=	dsainty@NetBSD.org
 COMMENT=	Palm OS Emulator
 #LICENSE=       GPL
 
+# This package doesn't draw a clear distinction between host and guest
+# addresses, so 64-bit host addresses give it fits. If you want to try
+# to make it work, contact dholland@, who has partial patches.
 NOT_FOR_PLATFORM=	${LP64PLATFORMS}
 
 POSE_VERSION=	3.5
