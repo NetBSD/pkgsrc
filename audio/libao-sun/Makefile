@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/04/06 15:46:34 rodent Exp $
+# $NetBSD: Makefile,v 1.9 2015/01/01 08:15:51 dholland Exp $
 
 .include "../../audio/libao/Makefile.common"
 
@@ -6,7 +6,8 @@ PKGNAME=	${DISTNAME:S/libao/libao-sun/}
 
 COMMENT+=	(Sun audio plugin)
 
-ONLY_FOR_PLATFORM+=	NetBSD-*-* SunOS-*-*
+# no support for the sun audio interface
+NOT_FOR_PLATFORM+=	DragonFly-*-* FreeBSD-*-* Linux-*-*
 
 CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/ENABLE_SUN_AUDIO=no/ENABLE_SUN_AUDIO=yes/g}
 BUILD_DIRS=		src/plugins/sun
