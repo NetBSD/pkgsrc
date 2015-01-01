@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2017 2014/12/30 15:54:53 wiz Exp $
+# $NetBSD: Makefile,v 1.2018 2015/01/01 07:03:43 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -1653,6 +1653,7 @@ SUBDIR+=	py-usb
 SUBDIR+=	py-virtualenv
 SUBDIR+=	py-windbg
 SUBDIR+=	py-xdg
+SUBDIR+=	py-zanata-python-client
 SUBDIR+=	py-zconfig
 SUBDIR+=	python-mode
 SUBDIR+=	pythontidy
