@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/04/06 03:45:26 rodent Exp $
+# $NetBSD: Makefile,v 1.6 2015/01/01 11:31:12 dholland Exp $
 
 DISTNAME=	zonetab-0
 CATEGORIES=	time
@@ -9,7 +9,7 @@ COMMENT=	NetBSD zone.tab file
 
 NO_BUILD=	yes
 
-# install path is hardwired
+# Installs NetBSD's zone data, not probably that useful elsewhere.
 ONLY_FOR_PLATFORM=	NetBSD-*-*
 
 ZTDIR=	${PREFIX}/share/examples/zoneinfo
