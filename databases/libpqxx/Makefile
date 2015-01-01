@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2014/05/09 07:36:56 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2015/01/01 09:43:44 dholland Exp $
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 4.0.1
 
@@ -6,7 +6,11 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 4.0.1
 
 COMMENT=		C++ interface to postgresql-lib
 
-NOT_FOR_PLATFORM=	NetBSD-*-pc532
+# Apparently (at least as of 2004) this package's shared libraries are
+# messed up on a.out platforms. But AFAIK we don't have any in pkgsrc
+# any more. Leave this here for documentation just in case.
+#   - dholland 20150101
+#NOT_FOR_PLATFORM=	${AOUTPLATFORMS}
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
