@@ -1,0 +1,7 @@
+Zanata Python client is a client that communicates with a Zanata
+server to push text for translation (from publican documents or
+gettext-based software), and pull translated text back for inclusion
+in software or documentation builds.
+
+It also provides support for creating projects/versions in Zanata
+and retrieving information about projects.
