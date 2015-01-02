@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.40 2015/01/02 15:54:45 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.41 2015/01/02 15:55:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -38,3 +38,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added security/password-store version 1.6.3 [imil 2015-01-02]
 	Updated emulators/mame to 0.157 [wiz 2015-01-02]
 	Updated emulators/mess to 0.157 [wiz 2015-01-02]
+	Updated emulators/mame to 0.157 [wiz 2015-01-02]
