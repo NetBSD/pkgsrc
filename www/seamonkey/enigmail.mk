@@ -1,4 +1,4 @@
-# $NetBSD: enigmail.mk,v 1.14 2014/11/02 05:40:31 ryoon Exp $
+# $NetBSD: enigmail.mk,v 1.15 2015/01/02 04:26:21 ryoon Exp $
 #
 # This Makefile fragment hooks the Enigmail OpenPGP extension
 # (see http://www.mozilla-enigmail.org/ ) into the build.
@@ -44,10 +44,10 @@ post-build: enigmail-post-build
 .PHONY: enigmail-post-build
 enigmail-post-build:
 	rm -rf ${WRKSRC}/${OBJDIR}/mozilla/dist.save
-	cd ${WRKSRC}/${OBJDIR}/mozilla/dist && pax -rwpe . ../dist.save
+	cd ${WRKSRC}/${OBJDIR}/dist && pax -rwpe . ../dist.save
 	cd ${WRKSRC}/${OBJDIR}/mailnews/extensions/enigmail && \
 		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} all xpi
 	${CP} ${WRKSRC}/${OBJDIR}/mailnews/extensions/enigmail/build/enigmail*.xpi \
 	  ${WRKDIR}/enigmail.xpi
-	rm -rf ${WRKSRC}/${OBJDIR}/mozilla/dist
-	cd ${WRKSRC}/${OBJDIR}/mozilla/dist.save && pax -rwpe . ../dist
+	rm -rf ${WRKSRC}/${OBJDIR}/dist
+	cd ${WRKSRC}/${OBJDIR}/dist.save && pax -rwpe . ../dist
