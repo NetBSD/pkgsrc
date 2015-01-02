@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/01/02 12:56:37 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/01/02 22:34:02 wiz Exp $
 
 DISTNAME=	idutils-4.6
 CATEGORIES=	devel
@@ -13,8 +13,7 @@ LICENSE=	gnu-gpl-v3
 CONFLICTS=	sh-utils>=2.0nb2 coreutils-[0-9]*
 
 USE_PKGLOCALEDIR=	yes
-# autoconf needed for 4.6; see PR 49522; can probably be removed on next update
-USE_TOOLS+=		autoconf msgfmt
+USE_TOOLS+=		msgfmt
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		ac_cv_prog_EMACS=no
@@ -26,9 +25,6 @@ MAKE_FLAGS+=		elc_SCRIPTS=
 
 LISPDIR=		${PREFIX}/share/emacs/site-lisp
 INSTALLATION_DIRS=	${LISPDIR}
-
-pre-configure:
-	cd ${WRKSRC} && autoconf
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/lisp/idutils.el ${DESTDIR}${LISPDIR}
