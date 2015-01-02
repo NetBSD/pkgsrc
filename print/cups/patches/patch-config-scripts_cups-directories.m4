@@ -1,4 +1,4 @@
-$NetBSD: patch-an,v 1.12 2014/06/07 07:34:05 wiz Exp $
+$NetBSD: patch-config-scripts_cups-directories.m4,v 1.1 2015/01/02 02:03:42 christos Exp $
 
 The '$' while loops expand the variables as long as possible so that no
 references to other variables occur. This is necessary because fontpath
@@ -9,9 +9,9 @@ loop.
 I'm also sure that this is not the Right Way to fix it, but at least it
 works.
 
---- config-scripts/cups-directories.m4.orig	2013-04-09 20:10:23.000000000 +0000
-+++ config-scripts/cups-directories.m4
-@@ -103,12 +103,12 @@ dnl Fix "libdir" variable...
+--- config-scripts/cups-directories.m4.orig	2014-03-21 12:42:53.000000000 -0400
++++ config-scripts/cups-directories.m4	2014-12-24 14:25:53.000000000 -0500
+@@ -103,7 +103,7 @@
  if test "$libdir" = "\${exec_prefix}/lib"; then
  	case "$uname" in
  		Linux*)
@@ -20,13 +20,7 @@ works.
  				libdir="$exec_prefix/lib64"
  			fi
  			;;
- 		HP-UX*)
--			if test -d /usr/lib/hpux32; then
-+			if test -d /usr/lib/hpux32 && false; then
- 				libdir="$exec_prefix/lib/hpux32"
- 			fi
- 			;;
-@@ -298,7 +298,15 @@ AC_SUBST(CUPS_CACHEDIR)
+@@ -180,7 +180,15 @@
  
  # Data files
  CUPS_DATADIR="$datadir/cups"
@@ -43,7 +37,7 @@ works.
  AC_SUBST(CUPS_DATADIR)
  
  # Icon directory
-@@ -307,7 +315,11 @@ AC_ARG_WITH(icondir, [  --with-icondir  
+@@ -189,7 +197,11 @@
  if test "x$icondir" = x -a -d /usr/share/icons; then
  	ICONDIR="/usr/share/icons"
  else
@@ -56,7 +50,7 @@ works.
  fi
  
  AC_SUBST(ICONDIR)
-@@ -318,7 +330,11 @@ AC_ARG_WITH(menudir, [  --with-menudir  
+@@ -200,7 +212,11 @@
  if test "x$menudir" = x -a -d /usr/share/applications; then
  	MENUDIR="/usr/share/applications"
  else
@@ -69,7 +63,7 @@ works.
  fi
  
  AC_SUBST(MENUDIR)
-@@ -333,7 +349,15 @@ else
+@@ -215,7 +231,15 @@
  	CUPS_DOCROOT="$docdir"
  fi
  
@@ -86,7 +80,7 @@ works.
  AC_SUBST(CUPS_DOCROOT)
  
  # Fonts
-@@ -345,8 +369,16 @@ else
+@@ -227,8 +251,16 @@
  	CUPS_FONTPATH="$fontpath"
  fi
  
@@ -104,7 +98,7 @@ works.
  
  # Locale data
  if test "$localedir" = "\${datarootdir}/locale"; then
-@@ -368,6 +400,14 @@ else
+@@ -246,6 +278,14 @@
  	CUPS_LOCALEDIR="$localedir"
  fi
  
@@ -119,7 +113,7 @@ works.
  AC_DEFINE_UNQUOTED(CUPS_LOCALEDIR, "$CUPS_LOCALEDIR")
  AC_SUBST(CUPS_LOCALEDIR)
  
-@@ -376,7 +416,6 @@ AC_ARG_WITH(logdir, [  --with-logdir    
+@@ -254,7 +294,6 @@
  
  if test x$logdir = x; then
  	CUPS_LOGDIR="$localstatedir/log/cups"
@@ -127,7 +121,7 @@ works.
  else
  	CUPS_LOGDIR="$logdir"
  fi
-@@ -385,10 +424,13 @@ AC_SUBST(CUPS_LOGDIR)
+@@ -263,10 +302,13 @@
  
  # Longer-term spool data
  CUPS_REQUESTS="$localstatedir/spool/cups"
@@ -142,7 +136,7 @@ works.
  case "$uname" in
  	*BSD* | Darwin*)
  		# *BSD and Darwin (MacOS X)
-@@ -401,6 +443,10 @@ case "$uname" in
+@@ -279,6 +321,10 @@
  		CUPS_SERVERBIN="$exec_prefix/lib/cups"
  		;;
  esac
@@ -153,7 +147,7 @@ works.
  
  AC_DEFINE_UNQUOTED(CUPS_SERVERBIN, "$CUPS_SERVERBIN")
  AC_SUBST(CUPS_SERVERBIN)
-@@ -408,7 +454,7 @@ AC_SUBST(INSTALL_SYSV)
+@@ -286,7 +332,7 @@
  
  # Configuration files
  CUPS_SERVERROOT="$sysconfdir/cups"
