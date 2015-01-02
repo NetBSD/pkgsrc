@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.7 2009/10/11 10:25:24 plunky Exp $
+$NetBSD: patch-ab,v 1.8 2015/01/02 04:38:20 schmonz Exp $
 
---- doc/nullmailer-send.8.orig	2007-10-09 17:35:44.000000000 +0100
+--- doc/nullmailer-send.8.orig	2013-03-28 23:08:05.000000000 +0000
 +++ doc/nullmailer-send.8
-@@ -94,16 +94,16 @@ If this is set to
+@@ -115,16 +115,16 @@ If this is set to
  will wait forever for messages to complete sending.
  .SH FILES
  .TP
