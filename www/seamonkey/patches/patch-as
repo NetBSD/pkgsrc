@@ -1,11 +1,11 @@
-$NetBSD: patch-as,v 1.18 2014/11/02 05:40:31 ryoon Exp $
+$NetBSD: patch-as,v 1.19 2015/01/02 04:26:21 ryoon Exp $
 
 * Fix _res is not supported for multi-threaded programs. error.
 * Treat DragonFly like FreeBSD.
 
---- mozilla/js/src/configure.in.orig	2014-10-14 06:36:15.000000000 +0000
+--- mozilla/js/src/configure.in.orig	2014-12-03 06:22:48.000000000 +0000
 +++ mozilla/js/src/configure.in
-@@ -2088,8 +2088,7 @@ AC_LANG_CPLUSPLUS
+@@ -2089,8 +2089,7 @@ AC_LANG_CPLUSPLUS
  
  MOZ_CXX11
  
@@ -15,16 +15,7 @@ $NetBSD: patch-as,v 1.18 2014/11/02 05:40:31 ryoon Exp $
  dnl ===============================================================
  if test "$GNU_CC" -a "$OS_TARGET" != WINNT; then
    AC_DEFINE(HAVE_VISIBILITY_HIDDEN_ATTRIBUTE)
-@@ -2155,7 +2154,7 @@ dnl Quota support
- MOZ_CHECK_HEADERS(sys/quota.h)
- MOZ_CHECK_HEADERS(linux/quota.h)
- 
--AC_ARG_ENABLE(dtrace,
-+MOZ_ARG_ENABLE_BOOL(dtrace,
-               [  --enable-dtrace         build with dtrace support if available (default=no)],
-               [enable_dtrace="yes"],)
- if test "x$enable_dtrace" = "xyes"; then
-@@ -3011,7 +3010,7 @@ if test "$MOZ_MEMORY"; then
+@@ -3004,7 +3003,7 @@ if test "$MOZ_MEMORY"; then
    *-darwin*)
      AC_DEFINE(MOZ_MEMORY_DARWIN)
      ;;
@@ -33,7 +24,7 @@ $NetBSD: patch-as,v 1.18 2014/11/02 05:40:31 ryoon Exp $
      AC_DEFINE(MOZ_MEMORY_BSD)
      ;;
    *-android*|*-linuxandroid*)
-@@ -3925,6 +3924,16 @@ MOZ_SUBCONFIGURE_ICU()
+@@ -3924,6 +3923,16 @@ MOZ_SUBCONFIGURE_ICU()
  dnl ========================================================
  dnl JavaScript shell
  dnl ========================================================
